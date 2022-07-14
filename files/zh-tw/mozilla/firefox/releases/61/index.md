@@ -3,137 +3,122 @@ title: Firefox 61 技術變動摘要
 slug: Mozilla/Firefox/Releases/61
 translation_of: Mozilla/Firefox/Releases/61
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>此文章提供 Firefox 61 中與開發者較為相關之變動資訊。Firefox 61 預定於 <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">2018 年 6 月 26 日正式發表</a>。</p>
+此文章提供 Firefox 61 中與開發者較為相關之變動資訊。Firefox 61 預定於 [2018 年 6 月 26 日正式發表](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates)。
 
-<h2 id="Web_開發相關變動">Web 開發相關變動</h2>
+## Web 開發相關變動
 
-<h3 id="開發者工具">開發者工具</h3>
+### 開發者工具
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>{{SVGElement("a")}} 元素（{{domxref("SVGAElement")}}）新增 <code>ping</code>、<code>rel</code>、<code>referrerPolicy</code>、<code>relList</code>、<code>hreflang</code>、<code>type</code> 及 <code>text</code> 等屬性，以便與 HTML {{HTMLElement("a")}} 元素抱持一致。（{{bug("1451823")}}）</li>
- <li>{{SVGElement("textPath")}} 元素（{{domxref("SVGTextPathElement")}}）現在支援 SVG2 的 <code>path</code> 及 <code>side</code> 屬性。（{{bug("1446617")}} 與 {{bug("1446650")}}）</li>
- <li>除 {{SVGElement("path")}}  之外，現在有更多元素支援{{domxref("SVGGeometryElement")}} 。（{{bug("1325320")}}）</li>
-</ul>
+- {{SVGElement("a")}} 元素（{{domxref("SVGAElement")}}）新增 `ping`、`rel`、`referrerPolicy`、`relList`、`hreflang`、`type` 及 `text` 等屬性，以便與 HTML {{HTMLElement("a")}} 元素抱持一致。（{{bug("1451823")}}）
+- {{SVGElement("textPath")}} 元素（{{domxref("SVGTextPathElement")}}）現在支援 SVG2 的 `path` 及 `side` 屬性。（{{bug("1446617")}} 與 {{bug("1446650")}}）
+- 除 {{SVGElement("path")}} 之外，現在有更多元素支援{{domxref("SVGGeometryElement")}} 。（{{bug("1325320")}}）
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>已實作 {{jsxref("String.prototype.trimStart()")}} 及 {{jsxref("String.prototype.trimEnd()")}} 方法（參考 {{bug(1434007)}}。為了確保相容性，將保留 <code>trimLeft</code> 和 <code>trimRight</code> 作為別名。</li>
-</ul>
+- 已實作 {{jsxref("String.prototype.trimStart()")}} 及 {{jsxref("String.prototype.trimEnd()")}} 方法（參考 {{bug(1434007)}}。為了確保相容性，將保留 `trimLeft` 和 `trimRight` 作為別名。
 
-<h3 id="API">API</h3>
+### API
 
-<h4 id="新_API">新 API</h4>
+#### 新 API
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li>The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ({{bug(1415588)}}).</li>
- <li>The {{domxref("Node.getUserData()")}} and {{domxref("Node.setUserData()")}} methods have been removed from the platform completely ({{bug(749981)}}).</li>
- <li>{{domxref("DOMTokenList.replace()")}} now returns a {{domxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ({{bug(1444909)}}).</li>
-</ul>
+- The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ({{bug(1415588)}}).
+- The {{domxref("Node.getUserData()")}} and {{domxref("Node.setUserData()")}} methods have been removed from the platform completely ({{bug(749981)}}).
+- {{domxref("DOMTokenList.replace()")}} now returns a {{domxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ({{bug(1444909)}}).
 
-<h4 id="DOM_事件">DOM 事件</h4>
+#### DOM 事件
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h4 id="Service_workers">Service workers</h4>
+#### Service workers
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h4 id="Media_及_WebRTC">Media 及 WebRTC</h4>
+#### Media 及 WebRTC
 
-<p>{{domxref("AudioContext.AudioContext", "AudioContext()")}} 建構式現在可以選擇性傳入一個 {{domxref("AudioContextOptions")}} 型態的 <code>options</code> 參數，用以調整新的 AudioContext 下偏好的延遲時間及取樣率。</p>
+{{domxref("AudioContext.AudioContext", "AudioContext()")}} 建構式現在可以選擇性傳入一個 {{domxref("AudioContextOptions")}} 型態的 `options` 參數，用以調整新的 AudioContext 下偏好的延遲時間及取樣率。
 
-<h4 id="Canvas_及_WebGL">Canvas 及 WebGL</h4>
+#### Canvas 及 WebGL
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="CSSOM">CSSOM</h3>
+### CSSOM
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
- <li>已實作 cookie 管理中的 <code><strong>SameSite</strong></code>，見 <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a> 及 <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a>。（{{bug(795346)}}）</li>
-</ul>
+- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) 及 [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)。（{{bug(795346)}}）
 
-<h3 id="安全性">安全性</h3>
+### 安全性
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="外掛程式">外掛程式</h3>
+### 外掛程式
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="其他">其他</h3>
+### 其他
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h2 id="Web_平台中移除的項目">Web 平台中移除的項目</h2>
+## Web 平台中移除的項目
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="CSS_2">CSS</h3>
+### CSS
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<p><em>無變動。</em></p>
+_無變動。_
 
-<h3 id="SVG_2">SVG</h3>
+### SVG
 
-<ul>
- <li>從未良好實作且已為標準所廢棄的 {{domxref("SVGViewElement")}}<code>.viewTarget</code> 屬性已經移除。（{{bug(1455763)}}）</li>
- <li>在標準規格中廢棄的下列屬性已經自 {{domxref("SVGSVGElement")}} 移除（{{bug(1133172)}}）：
-  <ul>
-   <li><code>pixelUnitToMillimeterX</code></li>
-   <li><code>pixelUnitToMillimeterY</code></li>
-   <li><code>screenPixelToMillimeterX</code></li>
-   <li><code>screenPixelToMillimeterY</code></li>
-  </ul>
- </li>
- <li>不在標準規格內的 <code>SVGNumber()</code> 建構式已經移除。（{{bug("1455940")}}）</li>
-</ul>
+- 從未良好實作且已為標準所廢棄的 {{domxref("SVGViewElement")}}`.viewTarget` 屬性已經移除。（{{bug(1455763)}}）
+- 在標準規格中廢棄的下列屬性已經自 {{domxref("SVGSVGElement")}} 移除（{{bug(1133172)}}）：
 
-<h3 id="其他_2">其他</h3>
+  - `pixelUnitToMillimeterX`
+  - `pixelUnitToMillimeterY`
+  - `screenPixelToMillimeterX`
+  - `screenPixelToMillimeterY`
 
-<p><em>無變動。</em></p>
+- 不在標準規格內的 `SVGNumber()` 建構式已經移除。（{{bug("1455940")}}）
 
-<h2 id="附加元件及_Mozilla_軟體開發相關變動">附加元件及 Mozilla 軟體開發相關變動</h2>
+### 其他
 
-<h3 id="WebExtensions">WebExtensions</h3>
+_無變動。_
 
-<p><em>無變動。</em></p>
+## 附加元件及 Mozilla 軟體開發相關變動
 
-<h2 id="請參見">請參見</h2>
+### WebExtensions
 
-<ul>
- <li>Firefox 61 網站相容資訊</li>
-</ul>
+_無變動。_
 
-<h2 id="舊版資訊">舊版資訊</h2>
+## 請參見
 
-<p>{{Firefox_for_developers(60)}}</p>
+- Firefox 61 網站相容資訊
 
-<p> </p>
+## 舊版資訊
+
+{{Firefox_for_developers(60)}}

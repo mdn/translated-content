@@ -3,50 +3,47 @@ title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>{{WebExtAPIRef("cookies")}} API 的 <code>CookieStore</code> 型別代表瀏覽器中的 cookie 存放空間。</p>
+{{WebExtAPIRef("cookies")}} API 的 `CookieStore` 型別代表瀏覽器中的 cookie 存放空間。
 
-<p>不同瀏覽模式（browsing mode）的視窗，有不同的 cookie 存放空間：例如隱私/隱身模式的視窗，會使用來自非隱私/隱身模式視窗的個別 cookie 存放空間。</p>
+不同瀏覽模式（browsing mode）的視窗，有不同的 cookie 存放空間：例如隱私/隱身模式的視窗，會使用來自非隱私/隱身模式視窗的個別 cookie 存放空間。
 
-<h2 id="型別">型別</h2>
+## 型別
 
-<p>此型別的值都是物件，並包含以下屬性：</p>
+此型別的值都是物件，並包含以下屬性：
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>，代表 cookie 存放空間內的唯一識別號（identifier）。</dd>
- <dt><code>tabIds</code></dt>
- <dd><code>integers</code> 的 <code>array</code>，識別所有分享此 cookie 存放空間的瀏覽頁籤。</dd>
-</dl>
+- `id`
+  - : `string`，代表 cookie 存放空間內的唯一識別號（identifier）。
+- `tabIds`
+  - : `integers` 的 `array`，識別所有分享此 cookie 存放空間的瀏覽頁籤。
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("webextensions.api.cookies.CookieStore")}}</p>
+{{Compat("webextensions.api.cookies.CookieStore")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>在以下程式碼片段內，{{WebExtAPIRef("cookies.getAllCookieStores()")}} 用來查找瀏覽器內，所有目前能用 cookie 存放空間，並列出每個 cookie 存放空間的 ID、還有分享此 cookie 存放空間的頁籤。</p>
+在以下程式碼片段內，{{WebExtAPIRef("cookies.getAllCookieStores()")}} 用來查找瀏覽器內，所有目前能用 cookie 存放空間，並列出每個 cookie 存放空間的 ID、還有分享此 cookie 存放空間的頁籤。
 
-<pre class="brush: js">function logStores(cookieStores) {
+```js
+function logStores(cookieStores) {
   for(store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
 var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);</pre>
+getting.then(logStores);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>備註：</strong> 此 API 基於 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API 而來，文件改作自 Chromium 程式碼裡的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a>。</p>
+> **備註：** 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+>
+> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
 
-<p>Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,5 +70,4 @@ getting.then(logStores);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

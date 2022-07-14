@@ -3,148 +3,114 @@ title: Firefox 11 技術文件
 slug: Mozilla/Firefox/Releases/11
 translation_of: Mozilla/Firefox/Releases/11
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 11 shipped on March 13, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.</p>
+Firefox 11 shipped on March 13, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The attributes <code>muted</code> and <code>loop</code> on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements have been implemented.</li>
-</ul>
+- The attributes `muted` and `loop` on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements have been implemented.
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<ul>
- <li>The {{domxref("element.outerHTML")}} property is now supported on HTML elements.</li>
- <li><a href="/en-US/docs/HTML_in_XMLHttpRequest"><code>XMLHttpRequest</code> supports HTML parsing</a>.</li>
- <li>Removed support for using the {{domxref("XMLHttpRequest")}} <code>responseType</code> and <code>withCredentials</code> attributes when performing synchronous requests. Attempting to do so throws an <code>NS_ERROR_DOM_INVALID_ACCESS_ERR</code> exception. This change has been proposed to the W3C for standardization.</li>
- <li>The new {{domxref("window.navigator.mozVibrate()")}} method lets you vibrate the device where supported; this is implemented as <code>mozVibrate()</code> on Gecko.</li>
- <li>{{domxref("window.navigator.mozApps")}} returns an <a href="/en-US/docs/DOM/Apps"><code>Apps</code></a> object you can use to install and manage <a href="/en-US/docs/Apps">open web applications</a>.</li>
- <li><code>MozBeforePaint</code> events are no longer fired. {{domxref("window.requestAnimationFrame", "mozRequestAnimationFrame()")}} consumers who used these should pass a callback function instead.</li>
- <li>Support for canceling animation frame requests has been added; {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} now returns a request ID value, which you can pass to {{domxref("window.cancelAnimationFrame", "window.mozCancelAnimationFrame()")}} to cancel the request.</li>
- <li>Several {{domxref("Event")}} constructors (<code>Event</code>, HTML events, <code>UIEvent</code>, and <code>MouseEvent</code>) introduced in DOM4 specifications are now supported.</li>
- <li>The {{domxref("window.navigator.mozBattery", "Battery API")}} is now enabled by default.</li>
- <li>Support for the <a href="/en-US/docs/DOM/HTMLMediaElement"><code>defaultMuted</code></a>, <code><a href="/en-US/docs/DOM/HTMLMediaElement">loop</a></code> and <a href="/en-US/docs/DOM/HTMLMediaElement"><code>muted</code></a> properties on <a href="/en-US/docs/DOM/HTMLMediaElement"><code>HTMLMediaElement</code></a> has been added.</li>
- <li>Calling {{domxref("document.mozCancelFullScreen()")}} now restores the previously full-screen element if some other element was in full-screen mode when the current element's {{domxref("element.mozRequestFullScreen()")}} method was called.</li>
- <li>The {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} method no longer supports a no-argument form. This form was not used much and is unlikely to become part of the standard.</li>
- <li>SVG-as-an-image can now be drawn into a canvas without <a href="/en-US/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the canvas</a>.</li>
- <li>The non-standard <code>countryCode</code> property of the <code>GeoPositionAddress</code> interface has been removed; see <code>nsIDOMGeoPositionAddress</code>.</li>
- <li><a href="/en-US/docs/Server-sent_events">Server-sent events</a> now support <a href="/en-US/docs/HTTP_access_control">CORS</a>.</li>
- <li>In the past, when the user followed a link, the values set on the {{domxref("window.navigator")}} object were retained by the new page. Now a new <code>navigator</code> object is created for the new page. This makes Firefox behave like all other browsers.</li>
-</ul>
+- The {{domxref("element.outerHTML")}} property is now supported on HTML elements.
+- [`XMLHttpRequest` supports HTML parsing](/en-US/docs/HTML_in_XMLHttpRequest).
+- Removed support for using the {{domxref("XMLHttpRequest")}} `responseType` and `withCredentials` attributes when performing synchronous requests. Attempting to do so throws an `NS_ERROR_DOM_INVALID_ACCESS_ERR` exception. This change has been proposed to the W3C for standardization.
+- The new {{domxref("window.navigator.mozVibrate()")}} method lets you vibrate the device where supported; this is implemented as `mozVibrate()` on Gecko.
+- {{domxref("window.navigator.mozApps")}} returns an [`Apps`](/en-US/docs/DOM/Apps) object you can use to install and manage [open web applications](/en-US/docs/Apps).
+- `MozBeforePaint` events are no longer fired. {{domxref("window.requestAnimationFrame", "mozRequestAnimationFrame()")}} consumers who used these should pass a callback function instead.
+- Support for canceling animation frame requests has been added; {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} now returns a request ID value, which you can pass to {{domxref("window.cancelAnimationFrame", "window.mozCancelAnimationFrame()")}} to cancel the request.
+- Several {{domxref("Event")}} constructors (`Event`, HTML events, `UIEvent`, and `MouseEvent`) introduced in DOM4 specifications are now supported.
+- The {{domxref("window.navigator.mozBattery", "Battery API")}} is now enabled by default.
+- Support for the [`defaultMuted`](/en-US/docs/DOM/HTMLMediaElement), [`loop`](/en-US/docs/DOM/HTMLMediaElement) and [`muted`](/en-US/docs/DOM/HTMLMediaElement) properties on [`HTMLMediaElement`](/en-US/docs/DOM/HTMLMediaElement) has been added.
+- Calling {{domxref("document.mozCancelFullScreen()")}} now restores the previously full-screen element if some other element was in full-screen mode when the current element's {{domxref("element.mozRequestFullScreen()")}} method was called.
+- The {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} method no longer supports a no-argument form. This form was not used much and is unlikely to become part of the standard.
+- SVG-as-an-image can now be drawn into a canvas without [tainting the canvas](/en-US/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- The non-standard `countryCode` property of the `GeoPositionAddress` interface has been removed; see `nsIDOMGeoPositionAddress`.
+- [Server-sent events](/en-US/docs/Server-sent_events) now support [CORS](/en-US/docs/HTTP_access_control).
+- In the past, when the user followed a link, the values set on the {{domxref("window.navigator")}} object were retained by the new page. Now a new `navigator` object is created for the new page. This makes Firefox behave like all other browsers.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>the <a href="/en-US/docs/CSS/text-size-adjust"><code>text-size-adjust</code></a> property is now supported</li>
- <li><a href="/en-US/docs/CSS/CSS3">CSS3</a> <a href="/en-US/docs/CSS/CSS3#Conditional_Rules">Conditional Rules</a> are now better supported: nested statements can now be added to <a href="/en-US/docs/CSS/@media">@media</a>, <a href="/en-US/docs/CSS/@document">@-moz-document</a>. (See <a href="/en-US/docs/CSS/Syntax">CSS Syntax</a> and <a href="/en-US/docs/CSS/At-rule">CSS at-rules</a>).</li>
-</ul>
+- the [`text-size-adjust`](/en-US/docs/CSS/text-size-adjust) property is now supported
+- [CSS3](/en-US/docs/CSS/CSS3) [Conditional Rules](/en-US/docs/CSS/CSS3#Conditional_Rules) are now better supported: nested statements can now be added to [@media](/en-US/docs/CSS/@media), [@-moz-document](/en-US/docs/CSS/@document). (See [CSS Syntax](/en-US/docs/CSS/Syntax) and [CSS at-rules](/en-US/docs/CSS/At-rule)).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p><em>No change.</em></p>
+_No change._
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>The {{domxref("SVGSVGElement")}} DOM interface now support the <code>getElementById</code> method.</li>
-</ul>
+- The {{domxref("SVGSVGElement")}} DOM interface now support the `getElementById` method.
 
-<h3 id="WebSocket">WebSocket</h3>
+### WebSocket
 
-<ul>
- <li><a href="/en-US/docs/WebSockets">WebSocket</a> API now supports binary messages (see {{bug("676439")}}).</li>
- <li>Both the protocol and the API has been updated to the latest draft of the specification and the API has been unprefixed (see {{bug("666349")}} and {{bug("695635")}}).</li>
- <li>Previously, messages sent and received using WebSockets in Firefox were limited to 16 MB in size; they may now be up to 2 GB (although memory capacity limitations may prevent them from being that large, Firefox supports it).</li>
-</ul>
+- [WebSocket](/en-US/docs/WebSockets) API now supports binary messages (see {{bug("676439")}}).
+- Both the protocol and the API has been updated to the latest draft of the specification and the API has been unprefixed (see {{bug("666349")}} and {{bug("695635")}}).
+- Previously, messages sent and received using WebSockets in Firefox were limited to 16 MB in size; they may now be up to 2 GB (although memory capacity limitations may prevent them from being that large, Firefox supports it).
 
-<h3 id="IndexedDB">IndexedDB</h3>
+### IndexedDB
 
-<ul>
- <li>The support for <a href="/en-US/docs/IndexedDB/IDBFactory#cmp%28%29">IDBFactory.cmp()</a> has been added.</li>
- <li>An <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#section_6">IndexedDB key</a> can also be of one of the following types: Date, Arrays and Float (and not only String and Integer).</li>
-</ul>
+- The support for [IDBFactory.cmp()](/en-US/docs/IndexedDB/IDBFactory#cmp%28%29) has been added.
+- An [IndexedDB key](/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#section_6) can also be of one of the following types: Date, Arrays and Float (and not only String and Integer).
 
-<h3 id="Network">Network</h3>
+### Network
 
-<ul>
- <li>The change in Firefox 8 that removed support for double quote characters as delimiters for {{rfc(2231)}} and {{rfc(5987)}} has been reverted, as this broke some sites, including Outlook Web Access.</li>
- <li>The user agent string in HTTP headers now includes an identifier that <a href="/en-US/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators">lets the server know if the Firefox accessing it is a phone or a tablet</a>.</li>
-</ul>
+- The change in Firefox 8 that removed support for double quote characters as delimiters for {{rfc(2231)}} and {{rfc(5987)}} has been reverted, as this broke some sites, including Outlook Web Access.
+- The user agent string in HTTP headers now includes an identifier that [lets the server know if the Firefox accessing it is a phone or a tablet](/en-US/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators).
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>The <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> now offers a <a href="/en-US/docs/Tools/Page_Inspector/3D_view">3D view</a> if your system supports <a href="/en-US/docs/WebGL">WebGL</a>.</li>
- <li>The new <a href="/en-US/docs/Tools/Style_Editor">Style Editor</a> provides a free-form way to edit and compose CSS style sheets in real-time.</li>
- <li>The <a href="/en-US/docs/View_source">View Source feature</a> now uses the new HTML5 parser instead of the old HTML parser.</li>
-</ul>
+- The [Page Inspector](/en-US/docs/Tools/Page_Inspector) now offers a [3D view](/en-US/docs/Tools/Page_Inspector/3D_view) if your system supports [WebGL](/en-US/docs/WebGL).
+- The new [Style Editor](/en-US/docs/Tools/Style_Editor) provides a free-form way to edit and compose CSS style sheets in real-time.
+- The [View Source feature](/en-US/docs/View_source) now uses the new HTML5 parser instead of the old HTML parser.
 
-<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+## Changes for Mozilla and add-on developers
 
-<h3 id="JavaScript_code_modules">JavaScript code modules</h3>
+### JavaScript code modules
 
-<h4 id="NetUtil.jsm">NetUtil.jsm</h4>
+#### NetUtil.jsm
 
-<ul>
- <li><a href="/en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()"><code>readInputStreamToString()</code></a> has a new, optional, parameter to configure the character set interpretation while reading the input stream.</li>
-</ul>
+- [`readInputStreamToString()`](</en-US/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) has a new, optional, parameter to configure the character set interpretation while reading the input stream.
 
-<h4 id="New_JavaScript_code_modules">New JavaScript code modules</h4>
+#### New JavaScript code modules
 
-<dl>
- <dt>
-  <a href="/en-US/docs/JavaScript_code_modules/source-editor.jsm"><code>source-editor.jsm</code></a></dt>
- <dd>
-  Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by <a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a> and other developer tools integrated into Firefox.</dd>
-</dl>
+- [`source-editor.jsm`](/en-US/docs/JavaScript_code_modules/source-editor.jsm)
+  - : Provides a convenient, easy-to-use source code editor that you can use in your add-ons. This is the same editor used by [Scratchpad](/en-US/docs/Tools/Scratchpad) and other developer tools integrated into Firefox.
 
-<h3 id="Interface_changes">Interface changes</h3>
+### Interface changes
 
-<ul>
- <li>The <code>mozIAsyncHistory</code> interface has a new method <code>mozIAsyncHistory.isURIVisited()</code> to check if a URI has been visited.</li>
- <li>A new interface <code>mozIVisitStatusCallback</code> has been added to provide callback handling functionality for <code>mozIAsyncHistory.isURIVisited()</code>.</li>
- <li>The <code>nsIMacDockSupport</code> interface now supports adding a text badge to the application's icon in the Dock using its new <code>badgeText</code> attribute.</li>
- <li>In the <code>nsINavHistoryResultObserver</code> interface, you now need to implement <code>nsINavHistoryResultObserver.containerStateChanged()</code> instead of the obsolete <code>containerOpened()</code> and <code>containerClosed()</code> methods.</li>
-</ul>
+- The `mozIAsyncHistory` interface has a new method `mozIAsyncHistory.isURIVisited()` to check if a URI has been visited.
+- A new interface `mozIVisitStatusCallback` has been added to provide callback handling functionality for `mozIAsyncHistory.isURIVisited()`.
+- The `nsIMacDockSupport` interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
+- In the `nsINavHistoryResultObserver` interface, you now need to implement `nsINavHistoryResultObserver.containerStateChanged()` instead of the obsolete `containerOpened()` and `containerClosed()` methods.
 
-<h4 id="Removed_interfaces">Removed interfaces</h4>
+#### Removed interfaces
 
-<p>The following interfaces were implementation details that are no longer needed:</p>
-<ul>
- <li><code>nsICharsetResolver</code></li>
- <li><code>nsIDOMNSElement</code>, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=707576">bug707576</a>, use <code>nsIDOMElement</code> instead.</li>
-</ul>
+The following interfaces were implementation details that are no longer needed:
 
-<h3 id="Theme-related_changes">Theme-related changes</h3>
+- `nsICharsetResolver`
+- `nsIDOMNSElement`, see [bug707576](https://bugzilla.mozilla.org/show_bug.cgi?id=707576), use `nsIDOMElement` instead.
 
-<ul>
- <li>The <code>omni.jar</code> file is now called <a href="/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)"><code>omni.ja</code></a>.</li>
-</ul>
+### Theme-related changes
 
-<h3 id="Preference_changes">Preference changes</h3>
+- The `omni.jar` file is now called [`omni.ja`](</en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)>).
 
-<dl>
- <dt><code>ui.tooltipDelay</code></dt>
- <dd>
-  Specifies the delay, in milliseconds, between the mouse cursor beginning to hover and the display of a tooltip.</dd>
-</dl>
+### Preference changes
 
-<h3 id="Build_system_changes">Build system changes</h3>
+- `ui.tooltipDelay`
+  - : Specifies the delay, in milliseconds, between the mouse cursor beginning to hover and the display of a tooltip.
 
-<ul>
- <li>The <code>--enable-tracejit</code> build option has been removed.</li>
-</ul>
+### Build system changes
 
-<h3 id="Other_changes">Other changes</h3>
+- The `--enable-tracejit` build option has been removed.
 
-<ul>
- <li>Add-ons that have not been updated in a long time are no longer assumed to be compatible by default; this is currently add-ons that indicate a <code>maxVersion</code> of 4.0.</li>
-</ul>
+### Other changes
 
-<h2 id="See_also">See also</h2>
+- Add-ons that have not been updated in a long time are no longer assumed to be compatible by default; this is currently add-ons that indicate a `maxVersion` of 4.0.
 
-<div>{{Firefox_for_developers('10')}}</div>
+## See also
+
+{{Firefox_for_developers('10')}}

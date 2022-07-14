@@ -3,37 +3,35 @@ title: 作者
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/author
 ---
-<div>
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">型別</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">強制</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">範例</th>
-   <td>
-    <pre class="brush: json">"author": "cool puppy"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">型別</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">強制</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">範例</th>
+      <td><pre class="brush: json">"author": "cool puppy"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>套件作者，用來顯示在瀏覽器的用戶介面中。如果有提供 <a href="/en-US/Add-ons/WebExtensions/manifest.json/developer">developer</a> 鍵而且裡面包含 "name" 屬性，那會覆蓋author鍵。不能指定多個作者。</p>
+套件作者，用來顯示在瀏覽器的用戶介面中。如果有提供 [developer](/en-US/Add-ons/WebExtensions/manifest.json/developer) 鍵而且裡面包含 "name" 屬性，那會覆蓋 author 鍵。不能指定多個作者。
 
-<p>這是一個<a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">可侷限的屬性</a>。</p>
-</div>
+這是一個[可侷限的屬性](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)。
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<pre class="brush: json">"author": "cool puppy"</pre>
+```json
+"author": "cool puppy"
+```
 
-<h2 id="瀏覽器兼容">瀏覽器兼容</h2>
+## 瀏覽器兼容
 
-<p>{{Compat("webextensions.manifest.author")}}</p>
+{{Compat("webextensions.manifest.author")}}

@@ -3,87 +3,77 @@ title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>{{WebExtAPIRef("cookies")}} API 的 <code>onChanged</code> 事件會在 cookie 設定或刪除時觸發。</p>
+{{WebExtAPIRef("cookies")}} API 的 `onChanged` 事件會在 cookie 設定或刪除時觸發。
 
-<p>請注意，更新 cookie 的屬性要透過以下兩個步驟實做：</p>
+請注意，更新 cookie 的屬性要透過以下兩個步驟實做：
 
-<ol>
- <li>首先，要更新的 cookie 會先被刪掉，並產生一個 <code>overwrite</code> 的 {{WebExtAPIRef("cookies.OnChangedCause")}} 提醒。</li>
- <li>接著，帶著更新數值的新 cookie 會被寫進去，並產生第二個 <code>explicit</code> 的 {{WebExtAPIRef("cookies.OnChangedCause")}} 提醒。</li>
-</ol>
+1.  首先，要更新的 cookie 會先被刪掉，並產生一個 `overwrite` 的 {{WebExtAPIRef("cookies.OnChangedCause")}} 提醒。
+2.  接著，帶著更新數值的新 cookie 會被寫進去，並產生第二個 `explicit` 的 {{WebExtAPIRef("cookies.OnChangedCause")}} 提醒。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="brush: js">browser.cookies.onChanged.addListener(listener)
+```js
+browser.cookies.onChanged.addListener(listener)
 browser.cookies.onChanged.removeListener(listener)
 browser.cookies.onChanged.hasListener(listener)
-</pre>
+```
 
-<p>此 API 也能以 <code>browser.cookies.onChanged.*</code> 運行。</p>
+此 API 也能以 `browser.cookies.onChanged.*` 運行。
 
-<p>此事件有以下函式：</p>
+此事件有以下函式：
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>給此事件添加監聽器（listener）。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>停止監聽此事件。<code>listener</code> 參數是要移除的監聽器。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>檢查此事件的 <code>listener</code> 是否被監聽了。若有監聽，回傳 <code>true</code>，否則回傳 <code>false</code>。</dd>
-</dl>
+- `addListener(callback)`
+  - : 給此事件添加監聽器（listener）。
+- `removeListener(listener)`
+  - : 停止監聽此事件。`listener` 參數是要移除的監聽器。
+- `hasListener(listener)`
+  - : 檢查此事件的 `listener` 是否被監聽了。若有監聽，回傳 `true`，否則回傳 `false`。
 
-<h2 id="addListener_語法">addListener 語法</h2>
+## addListener 語法
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>能被呼叫的 callback 函式會在此事件發生的時候觸發。函式會 passed 以下參數：</p>
+- `callback`
 
- <dl>
-  <dt><code>changeInfo</code></dt>
-  <dd>一個含有觸發事件資訊的 <code>object</code>。它有兩個屬性：
-  <dl>
-   <dt><code>removed</code></dt>
-   <dd>一個 <code>boolean</code>。如果 cookie 被刪除則為 <code>true</code>，否則為 <code>false</code>。</dd>
-   <dt><code>cookie</code></dt>
-   <dd>一個 {{WebExtAPIRef('cookies.Cookie')}} 物件。含有被設定、或被刪除的 cookie 資訊。</dd>
-   <dt><code>cause</code></dt>
-   <dd>一個 {{WebExtAPIRef('cookies.OnChangedCause')}} 數值。含有 cookie被改變的潛在原因。</dd>
-  </dl>
-  </dd>
- </dl>
- </dd>
-</dl>
+  - : 能被呼叫的 callback 函式會在此事件發生的時候觸發。函式會 passed 以下參數：
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+    - `changeInfo`
 
-<p>{{Compat("webextensions.api.cookies.onChanged")}}</p>
+      - : 一個含有觸發事件資訊的 `object`。它有兩個屬性：
 
-<h2 id="示例">示例</h2>
+        - `removed`
+          - : 一個 `boolean`。如果 cookie 被刪除則為 `true`，否則為 `false`。
+        - `cookie`
+          - : 一個 {{WebExtAPIRef('cookies.Cookie')}} 物件。含有被設定、或被刪除的 cookie 資訊。
+        - `cause`
+          - : 一個 {{WebExtAPIRef('cookies.OnChangedCause')}} 數值。含有 cookie 被改變的潛在原因。
 
-<p>本範例監聽 <code>onChanged</code> 事件並紀錄由 <code>changeInfo</code> 參數傳來的資訊：</p>
+## 瀏覽器相容性
 
-<pre class="brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
+{{Compat("webextensions.api.cookies.onChanged")}}
+
+## 示例
+
+本範例監聽 `onChanged` 事件並紀錄由 `changeInfo` 參數傳來的資訊：
+
+```js
+browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +
               '\n * Removed: ' + changeInfo.removed);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>備註：</strong> 此 API 基於 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API 而來，文件改作自 Chromium 程式碼裡的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a>。</p>
+> **備註：** 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+>
+> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
 
-<p>Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,5 +100,4 @@ browser.cookies.onChanged.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

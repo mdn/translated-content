@@ -3,163 +3,129 @@ title: Firefox 5 技術文件
 slug: Mozilla/Firefox/Releases/5
 translation_of: Mozilla/Firefox/Releases/5
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 5，基於 Gecko 5.0，在 2011 年六月21日發行。本文將提供這次發行會對開發者所生影響之資訊。</p>
+Firefox 5，基於 Gecko 5.0，在 2011 年六月 21 日發行。本文將提供這次發行會對開發者所生影響之資訊。
 
-<h2 id="網路開發者的改變">網路開發者的改變</h2>
+## 網路開發者的改變
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>所有的 HTML 元素現在都有 {{ domxref("element.accessKey", "accessKey") }} 屬性，{{ domxref("element.blur()", "blur()") }}、{{ domxref("element.click()", "click()") }}、{{ domxref("element.focus()", "focus()") }} 方法也是。這些都在 {{ domxref("HTMLElement") }} 介面受到規範化。</li>
- <li>為了遵從 HTML5 規範，移除了針對 UTF-7 與 UTF-32 <a href="/zh-TW/Character_Sets_Supported_by_Gecko">字符集</a>的支援。</li>
- <li>處於怪異模式（quirks mode）的時候，空白的 {{ HTMLElement("map") }} 支持非空匹配時，再也不跳過。需要更多資訊，請參閱 <a href="/zh-TW/HTML/Element/map#Gecko_notes">Gecko notes</a> 的 {{ HTMLElement("map") }} 元素。</li>
- <li>針對 Android 的 Firefox mobile，{{ cssxref("@font-face") }} 現在支援 WOFF 字型。</li>
- <li>出於安全考量，WebGL <a href="/zh-TW/WebGL/Cross-Domain_Textures">再也不加載來自其他網域的紋理</a>。<a href="/zh-TW/HTTP_access_control">HTTP access control</a> support should be coming sometime in the future to make this possible more securely.</li>
-</ul>
+- 所有的 HTML 元素現在都有 {{ domxref("element.accessKey", "accessKey") }} 屬性，{{ domxref("element.blur()", "blur()") }}、{{ domxref("element.click()", "click()") }}、{{ domxref("element.focus()", "focus()") }} 方法也是。這些都在 {{ domxref("HTMLElement") }} 介面受到規範化。
+- 為了遵從 HTML5 規範，移除了針對 UTF-7 與 UTF-32 [字符集](/zh-TW/Character_Sets_Supported_by_Gecko)的支援。
+- 處於怪異模式（quirks mode）的時候，空白的 {{ HTMLElement("map") }} 支持非空匹配時，再也不跳過。需要更多資訊，請參閱 [Gecko notes](/zh-TW/HTML/Element/map#Gecko_notes) 的 {{ HTMLElement("map") }} 元素。
+- 針對 Android 的 Firefox mobile，{{ cssxref("@font-face") }} 現在支援 WOFF 字型。
+- 出於安全考量，WebGL [再也不加載來自其他網域的紋理](/zh-TW/WebGL/Cross-Domain_Textures)。[HTTP access control](/zh-TW/HTTP_access_control) support should be coming sometime in the future to make this possible more securely.
 
-<h4 id="Canvas_improvements">Canvas improvements</h4>
+#### Canvas improvements
 
-<ul>
- <li>The {{ HTMLElement("canvas") }} 2D drawing context now supports specifying an <code>ImageData</code> object as the input to the <code>createImageData()</code> method; this <a href="/En/HTML/Canvas/Pixel_manipulation_with_canvas#Creating_an_ImageData_object">creates a new <code>ImageData</code> object</a> initialized with the same dimensions as the specified object, but still with all pixels preset to transparent black. This was documented as implemented already but was not.</li>
- <li>Specifying non-finite values when adding color stops through a call to the {{ domxref("CanvasGradient") }} method <code>addColorStop()</code> now correctly throws <code>INDEX_SIZE_ERR</code> instead of <code>SYNTAX_ERR</code>.</li>
- <li>The {{ domxref("HTMLCanvasElement") }} method <code>toDataURL()</code> now correctly lower-cases the specified MIME type before matching.</li>
- <li><code>getImageData()</code> now correctly accepts rectangles that extend beyond the bounds of the canvas; pixels outside the canvas are returned as transparent black.</li>
- <li><code>drawImage()</code> and <code>createImageData()</code> now handle negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis. <strong>We need an article about <a href="http://dev.w3.org/csswg/css3-images/#default-sizing">CSS sizing</a> and how this works.</strong></li>
- <li>Specifying non-finite values when calling <code>createImageData()</code> now properly throws a <code>NOT_SUPPORTED_ERR</code> exception.</li>
- <li><code>createImageData()</code> and <code>getImageData()</code> now correctly return at least one pixel's worth of image data if a rectangle smaller than one pixel is specified.</li>
- <li>Specifying a negative radius when calling <code>createRadialGradient()</code> now correctly throws <code>INDEX_SIZE_ERR</code>.</li>
- <li>Specifying a <code>null</code> or <code>undefined</code> image when calling <code>createPattern()</code> or <code>drawImage()</code> now correctly throws a <code>TYPE_MISMATCH_ERR</code> exception.</li>
- <li>Specifying invalid values for <code>globalAlpha</code> no longer throws a <code>SYNTAX_ERR</code> exception; these are now correctly silently ignored.</li>
- <li>Specifying invalid values when calling <code>translate()</code>, <code>transform()</code>, <code>rect()</code>, <code>clearRect()</code>, <code>fillRect()</code>, <code>strokeRect()</code>, <code>lineTo()</code>, <code>moveTo()</code>, <code>quadraticCurveTo()</code>, or <code>arc()</code> no longer throws an exception; these calls are now correctly silently ignored.</li>
- <li>Setting the value of <code>shadowOffsetX</code>, <code>shadowOffsetY</code>, or <code>shadowBlur</code> to an invalid value is now silently ignored.</li>
- <li>Setting the value of <code>rotate</code> or <code>scale</code> to an invalid value is now silently ignored.</li>
-</ul>
+- The {{ HTMLElement("canvas") }} 2D drawing context now supports specifying an `ImageData` object as the input to the `createImageData()` method; this [creates a new `ImageData` object](/En/HTML/Canvas/Pixel_manipulation_with_canvas#Creating_an_ImageData_object) initialized with the same dimensions as the specified object, but still with all pixels preset to transparent black. This was documented as implemented already but was not.
+- Specifying non-finite values when adding color stops through a call to the {{ domxref("CanvasGradient") }} method `addColorStop()` now correctly throws `INDEX_SIZE_ERR` instead of `SYNTAX_ERR`.
+- The {{ domxref("HTMLCanvasElement") }} method `toDataURL()` now correctly lower-cases the specified MIME type before matching.
+- `getImageData()` now correctly accepts rectangles that extend beyond the bounds of the canvas; pixels outside the canvas are returned as transparent black.
+- `drawImage()` and `createImageData()` now handle negative arguments in accordance with the specification, by flipping the rectangle around the appropriate axis. **We need an article about [CSS sizing](http://dev.w3.org/csswg/css3-images/#default-sizing) and how this works.**
+- Specifying non-finite values when calling `createImageData()` now properly throws a `NOT_SUPPORTED_ERR` exception.
+- `createImageData()` and `getImageData()` now correctly return at least one pixel's worth of image data if a rectangle smaller than one pixel is specified.
+- Specifying a negative radius when calling `createRadialGradient()` now correctly throws `INDEX_SIZE_ERR`.
+- Specifying a `null` or `undefined` image when calling `createPattern()` or `drawImage()` now correctly throws a `TYPE_MISMATCH_ERR` exception.
+- Specifying invalid values for `globalAlpha` no longer throws a `SYNTAX_ERR` exception; these are now correctly silently ignored.
+- Specifying invalid values when calling `translate()`, `transform()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, or `arc()` no longer throws an exception; these calls are now correctly silently ignored.
+- Setting the value of `shadowOffsetX`, `shadowOffsetY`, or `shadowBlur` to an invalid value is now silently ignored.
+- Setting the value of `rotate` or `scale` to an invalid value is now silently ignored.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<dl>
- <dt><a href="/en/CSS/CSS_animations">CSS animations</a></dt>
- <dd>Support for CSS animations has been added, using the <code>-moz-</code> prefix for now.</dd>
-</dl>
+- [CSS animations](/en/CSS/CSS_animations)
+  - : Support for CSS animations has been added, using the `-moz-` prefix for now.
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<ul>
- <li>The {{ domxref("selection") }} object's <a href="/en/DOM/Selection/modify"><code>modify()</code></a> method has been changed so that the "word" selection granularity no longer includes trailing spaces; this makes it more consistent across platforms and matches the behavior of WebKit's implementation.</li>
- <li>The {{ domxref("window.setTimeout()") }} method now clamps to send no more than one timeout per second in inactive tabs. In addition, it now clamps nested timeouts to the smallest value allowed by the HTML5 specification: 4 ms (instead of the 10 ms it used to clamp to).</li>
- <li>Similarly, the {{ domxref("window.setInterval()") }} method now clamps to no more than one interval per second in inactive tabs.</li>
- <li><a href="/en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a> now <a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Detecting_any_load_end_condition">supports the <code>loadend</code> event</a> for progress listeners. This is sent after any transfer is finished (that is, after the <code>abort</code>, <code>error</code>, or <code>load</code> event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.</li>
- <li>The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' <code>slice()</code> method has been removed and replaced with a new, proposed syntax that makes it more consistent with <a href="/en/JavaScript/Reference/Global_Objects/Array/slice"><code>Array.slice()</code></a> and <a href="/en/JavaScript/Reference/Global_Objects/String/slice"><code>String.slice()</code></a> methods in JavaScript. This method is named <a href="/en/DOM/Blob#mozSlice()"><code>mozSlice()</code></a> for now.</li>
- <li>The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the <code>Accept-Language</code> <a href="/en/HTTP/Headers">HTTP header</a>.</li>
- <li>The {{ domxref("Node.prefix") }} property is now read only, as required by the DOM specification.</li>
- <li>The {{ domxref("HTMLVideoElement") }} now supports experimental properties to get information about video paint statistics like frame rates.</li>
-</ul>
+- The {{ domxref("selection") }} object's [`modify()`](/en/DOM/Selection/modify) method has been changed so that the "word" selection granularity no longer includes trailing spaces; this makes it more consistent across platforms and matches the behavior of WebKit's implementation.
+- The {{ domxref("window.setTimeout()") }} method now clamps to send no more than one timeout per second in inactive tabs. In addition, it now clamps nested timeouts to the smallest value allowed by the HTML5 specification: 4 ms (instead of the 10 ms it used to clamp to).
+- Similarly, the {{ domxref("window.setInterval()") }} method now clamps to no more than one interval per second in inactive tabs.
+- [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) now [supports the `loadend` event](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Detecting_any_load_end_condition) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
+- The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' `slice()` method has been removed and replaced with a new, proposed syntax that makes it more consistent with [`Array.slice()`](/en/JavaScript/Reference/Global_Objects/Array/slice) and [`String.slice()`](/en/JavaScript/Reference/Global_Objects/String/slice) methods in JavaScript. This method is named [`mozSlice()`](</en/DOM/Blob#mozSlice()>) for now.
+- The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en/HTTP/Headers).
+- The {{ domxref("Node.prefix") }} property is now read only, as required by the DOM specification.
+- The {{ domxref("HTMLVideoElement") }} now supports experimental properties to get information about video paint statistics like frame rates.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>Regular expressions are no longer callable as if they were functions; this change has been made in concert with the WebKit team to ensure compatibility (see {{ WebkitBug(28285) }}. This feature had existed for a long time but was never documented (at least, not here on MDC).</li>
- <li>The <a href="/en/JavaScript/Reference/Global_Objects/Function/isGenerator"><code>Function.prototype.isGenerator()</code></a> method is now supported; this lets you determine if a function is a <a href="/en/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators">generator</a>.</li>
- <li>The following <a href="/en/JavaScript/Reference/Reserved_Words">reserved words</a> were previously only treated as reserved when in strict mode; now they're always treated as reserved: <code>class</code>, <code>enum</code>, <code>export</code>, <code>extends</code>, <code>import</code>, and <code>super</code>.</li>
- <li>DOM documents created in chrome code may no longer be exposed to sandboxed scripts.</li>
- <li>The JSON parser has been re-written for improved speed and compliance. This includes a fix for {{ bug("572279") }}.</li>
-</ul>
+- Regular expressions are no longer callable as if they were functions; this change has been made in concert with the WebKit team to ensure compatibility (see {{ WebkitBug(28285) }}. This feature had existed for a long time but was never documented (at least, not here on MDC).
+- The [`Function.prototype.isGenerator()`](/en/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/en/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators).
+- The following [reserved words](/en/JavaScript/Reference/Reserved_Words) were previously only treated as reserved when in strict mode; now they're always treated as reserved: `class`, `enum`, `export`, `extends`, `import`, and `super`.
+- DOM documents created in chrome code may no longer be exposed to sandboxed scripts.
+- The JSON parser has been re-written for improved speed and compliance. This includes a fix for {{ bug("572279") }}.
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>The {{ SVGAttr("class") }} SVG attribute can now be animated.</li>
- <li>The following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a <code>length</code> property indicating the number of items in the lists: {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, {{ domxref("SVGPathSegList") }}, and {{ domxref("SVGPointList") }}.</li>
-</ul>
+- The {{ SVGAttr("class") }} SVG attribute can now be animated.
+- The following SVG-related DOM interfaces representing lists of objects are now indexable and can be accessed like arrays; in addition, they have a `length` property indicating the number of items in the lists: {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, {{ domxref("SVGPathSegList") }}, and {{ domxref("SVGPointList") }}.
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
- <li>Firefox no longer sends the <code>Keep-Alive</code> HTTP header; we weren't formatting it correctly, and it was redundant since we were also sending the {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header with the value "keep-alive" anyway.</li>
- <li>The HTTP transaction model has been updated to be more intelligent about reusing connections in the persistent connection pool; instead of treating the pool as a {{ interwiki("wikipedia", "FIFO") }} queue, Necko now attempts to sort the pool with connections with the largest {{ interwiki("wikipedia", "congestion window") }} (CWND) first. This can reduce the round-trip time (RTT) of HTTP transactions by avoiding the need to grow connections' windows in many cases.</li>
- <li>Firefox now handles the <code>Content-Disposition</code> HTTP response header more effectively if both the <code>filename</code> and <code>filename*</code> parameters are provided; it looks through all provided names, using the <code>filename*</code> parameter if one is available, even if a <code>filename</code> parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See {{ bug(588781) }}.</li>
-</ul>
+- Firefox no longer sends the `Keep-Alive` HTTP header; we weren't formatting it correctly, and it was redundant since we were also sending the {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header with the value "keep-alive" anyway.
+- The HTTP transaction model has been updated to be more intelligent about reusing connections in the persistent connection pool; instead of treating the pool as a {{ interwiki("wikipedia", "FIFO") }} queue, Necko now attempts to sort the pool with connections with the largest {{ interwiki("wikipedia", "congestion window") }} (CWND) first. This can reduce the round-trip time (RTT) of HTTP transactions by avoiding the need to grow connections' windows in many cases.
+- Firefox now handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See {{ bug(588781) }}.
 
-<h3 id="MathML">MathML</h3>
+### MathML
 
-<ul>
- <li>Support for <a href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3">embellished operators</a></li>
-</ul>
+- Support for [embellished operators](http://www.w3.org/TR/MathML3/chapter3.html#id.3.2.5.7.3)
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>The <a href="/en/Using_the_Web_Console#The_console_object">Web Console's <code>Console</code> object</a> now has a <code>debug()</code> method, which is an alias for its <code>log()</code> method; this improves compatibility with certain existing sites.</li>
-</ul>
+- The [Web Console's `Console` object](/en/Using_the_Web_Console#The_console_object) now has a `debug()` method, which is an alias for its `log()` method; this improves compatibility with certain existing sites.
 
-<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+## Changes for Mozilla and add-on developers
 
-<p>For a guide to updating your add-on for Firefox 5, please see <a href="/en/Firefox/Updating_add-ons_for_Firefox_5">Updating add-ons for Firefox 5</a>.</p>
+For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en/Firefox/Updating_add-ons_for_Firefox_5).
 
-<div class="note"><p><strong>備註：</strong> Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See <a href="/En/Developer_Guide/Interface_Compatibility#Binary_Interfaces">Binary Interfaces</a> for details.</p></div>
+> **備註：** Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/En/Developer_Guide/Interface_Compatibility#Binary_Interfaces) for details.
 
-<h3 id="Changes_to_JavaScript_code_modules">Changes to JavaScript code modules</h3>
+### Changes to JavaScript code modules
 
-<h4 id="New_JavaScript_code_modules">New JavaScript code modules</h4>
+#### New JavaScript code modules
 
-<ul>
- <li>The <a href="/en/JavaScript_code_modules/Dict.jsm"><code>Dict.jsm</code></a> code module was added; it provides an API for dictionaries of key/value pairs.</li>
-</ul>
+- The [`Dict.jsm`](/en/JavaScript_code_modules/Dict.jsm) code module was added; it provides an API for dictionaries of key/value pairs.
 
-<h4 id="NetUtil.jsm">NetUtil.jsm</h4>
+#### NetUtil.jsm
 
-<ul>
- <li>The <a href="/en/JavaScript_code_modules/NetUtil.jsm#asyncFetch()"><code>asyncFetch()</code></a> method now supports specifying the input source as an <code>nsIInputStream</code>.</li>
-</ul>
+- The [`asyncFetch()`](</en/JavaScript_code_modules/NetUtil.jsm#asyncFetch()>) method now supports specifying the input source as an `nsIInputStream`.
 
-<h3 id="Interface_changes">Interface changes</h3>
+### Interface changes
 
-<ul>
- <li>The <code>nsIHttpChannelInternal</code> interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.</li>
- <li>The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see <a href="/en/DOM/HTMLCanvasElement"><code>HTMLCanvasElement</code></a>).</li>
- <li>The <code>nsIAppStartup2</code> and <code>nsIAppStartup_MOZILLA_2_0</code> interfaces have been merged into the <code>nsIAppStartup</code> interface.</li>
- <li>The <code>nsIDocShell_MOZILLA_2_0_BRANCH</code> interface has been merged into the <code>nsIDocShell</code> interface.</li>
- <li>The <code>nsIFocusManager_MOZILLA_2_0_BRANCH</code> interface has been merged into the <code>nsIFocusManager</code> interface.</li>
- <li>The <code>nsIHTMLEditor_MOZILLA_2_0_BRANCH</code> interface has been merged into the <code>nsIHTMLEditor</code> interface.</li>
-</ul>
+- The `nsIHttpChannelInternal` interface has new attributes providing access to information about the channels' endpoints' addresses and ports. This information is provided primarily for debugging purposes.
+- The {{ HTMLElement("canvas") }} element's {{ htmlattrxref("width", "canvas") }} and {{ htmlattrxref("height", "canvas") }} attributes are now reflected in IDL as unsigned integers instead of signed (see [`HTMLCanvasElement`](/en/DOM/HTMLCanvasElement)).
+- The `nsIAppStartup2` and `nsIAppStartup_MOZILLA_2_0` interfaces have been merged into the `nsIAppStartup` interface.
+- The `nsIDocShell_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIDocShell` interface.
+- The `nsIFocusManager_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIFocusManager` interface.
+- The `nsIHTMLEditor_MOZILLA_2_0_BRANCH` interface has been merged into the `nsIHTMLEditor` interface.
 
-<h4 id="New_interfaces">New interfaces</h4>
+#### New interfaces
 
-<ul>
- <li><code>nsIDOMAnimationEvent</code> added. {{domxref("AnimationEvent")}}</li>
-</ul>
+- `nsIDOMAnimationEvent` added. {{domxref("AnimationEvent")}}
 
-<h4 id="Removed_interfaces">Removed interfaces</h4>
+#### Removed interfaces
 
-<p>The following interfaces were implementation details that are no longer needed:</p>
+The following interfaces were implementation details that are no longer needed:
 
-<ul>
- <li><code>nsICiter</code> (see {{ bug("633066") }})</li>
- <li><code>nsIDOM3Document</code> (see {{ bug("639849") }})</li>
- <li><code>nsIFIXptrEvaluator</code></li>
- <li><code>nsISelectElement</code> (see {{ bug("619996") }})</li>
-</ul>
+- `nsICiter` (see {{ bug("633066") }})
+- `nsIDOM3Document` (see {{ bug("639849") }})
+- `nsIFIXptrEvaluator`
+- `nsISelectElement` (see {{ bug("619996") }})
 
-<h3 id="Debugging_aids">Debugging aids</h3>
+### Debugging aids
 
-<ul>
- <li>The new <a href="/En/Namespace/Mozilla/DebugOnly%3CT%3E">"><code>DebugOnly&lt;T&gt;</code></a> helper makes it possible to declare variables only for <code>DEBUG</code> builds.</li>
-</ul>
+- The new [">`DebugOnly<T>`](/En/Namespace/Mozilla/DebugOnly%3CT%3E) helper makes it possible to declare variables only for `DEBUG` builds.
 
-<h3 id="JavaScript_API_(SpiderMonkey)">JavaScript API (SpiderMonkey)</h3>
+### JavaScript API (SpiderMonkey)
 
-<ul>
- <li><a href="/en/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32"><code>JS_DoubleToInt32()</code></a> and <a href="/en/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32"><code>JS_DoubleToUint32()</code></a> have been added, for converting <code><a href="/en/SpiderMonkey/JSAPI_Reference/jsdouble">jsdouble</a></code> values into C integers and unsigned integers.</li>
-</ul>
+- [`JS_DoubleToInt32()`](/en/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) and [`JS_DoubleToUint32()`](/en/SpiderMonkey/JSAPI_Reference/JS_DoubleToInt32) have been added, for converting [`jsdouble`](/en/SpiderMonkey/JSAPI_Reference/jsdouble) values into C integers and unsigned integers.
 
-<h3 id="Build_system_changes">Build system changes</h3>
+### Build system changes
 
-<ul>
- <li>You can now build Firefox without a <code>mozconfig</code> file; the <a href="/en/Configuring_Build_Options#Choose_an_application"><code>--enable-application</code> setting</a> now defaults to "browser". After pulling or downloading the code, you can simply <code>configure &amp;&amp; make</code> (or <code>make -f client.mk</code>) to build Firefox.</li>
-</ul>
+- You can now build Firefox without a `mozconfig` file; the [`--enable-application` setting](/en/Configuring_Build_Options#Choose_an_application) now defaults to "browser". After pulling or downloading the code, you can simply `configure && make` (or `make -f client.mk`) to build Firefox.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<div>{{Firefox_for_developers('4')}}</div>
+{{Firefox_for_developers('4')}}

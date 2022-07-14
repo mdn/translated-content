@@ -7,26 +7,26 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div>
-<p>JavaScript APIs for WebExtensions can be used inside the extension's <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a> and in any other documents bundled with the extension, including <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action">browser action</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions">page action</a> popups, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sidebars">sidebars</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Options_pages">options pages</a>, or <a href="/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides">new tab pages</a>. A few of these APIs can also be accessed by an extension's <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">content scripts</a> (see the <a href="/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs">list in the content script guide</a>).</p>
+JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the extension, including [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
 
-<p>To use the more powerful APIs you need to <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions">request permission</a> in your extension's manifest.json.</p>
+To use the more powerful APIs you need to [request permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions) in your extension's manifest.json.
 
-<p>You can access the APIs using the <code>browser</code> namespace:</p>
+You can access the APIs using the `browser` namespace:
 
-<pre class="brush: js">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs);</pre>
-</div>
+browser.tabs.query({currentWindow: true}, logTabs);
+```
 
-<div>
-<p>Many of the APIs are asynchronous, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:</p>
+Many of the APIs are asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
-<pre class="brush: js">function logCookie(c) {
+```js
+function logCookie(c) {
   console.log(c);
 }
 
@@ -37,17 +37,15 @@ function logError(e) {
 var setCookie = browser.cookies.set(
   {url: "https://developer.mozilla.org/"}
 );
-setCookie.then(logCookie, logError);</pre>
-</div>
+setCookie.then(logCookie, logError);
+```
 
-<div>
-<p>Note that this is different from Google Chrome's extension system, which uses the <code>chrome</code> namespace instead of <code>browser</code>, and which uses callbacks instead of promises for asynchronous functions. As a porting aid, the Firefox implementation of WebExtensions APIs supports <code>chrome</code> and callbacks as well as <code>browser</code> and promises. Mozilla has also written a polyfill which enables code that uses <code>browser</code> and promises to work unchanged in Chrome: <a href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>
+Note that this is different from Google Chrome's extension system, which uses the `chrome` namespace instead of `browser`, and which uses callbacks instead of promises for asynchronous functions. As a porting aid, the Firefox implementation of WebExtensions APIs supports `chrome` and callbacks as well as `browser` and promises. Mozilla has also written a polyfill which enables code that uses `browser` and promises to work unchanged in Chrome: <https://github.com/mozilla/webextension-polyfill>.
 
-<p>Firefox also implements these APIs under the <code>chrome</code> namespace using callbacks. This allows code written for Chrome to run largely unchanged in Firefox for the APIs documented here.</p>
+Firefox also implements these APIs under the `chrome` namespace using callbacks. This allows code written for Chrome to run largely unchanged in Firefox for the APIs documented here.
 
-<p>Microsoft Edge uses the <code>browser</code> namespace, but doesn't yet support promise-based asynchronous APIs. In Edge, for the time being, asynchronous APIs must use callbacks.</p>
+Microsoft Edge uses the `browser` namespace, but doesn't yet support promise-based asynchronous APIs. In Edge, for the time being, asynchronous APIs must use callbacks.
 
-<p>Not all browsers support all the APIs: for the details, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a>.</p>
-</div>
+Not all browsers support all the APIs: for the details, see [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
 
-<div>{{SubpagesWithSummaries}}</div>
+{{SubpagesWithSummaries}}
