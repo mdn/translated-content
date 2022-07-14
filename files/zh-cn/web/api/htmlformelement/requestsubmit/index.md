@@ -17,7 +17,7 @@ translation_of: Web/api/HTMLFormElement/requestSubmit
 ---
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLFormElement")}} 的 **`requestSubmit()`** 方法请求时，使用一个指定的提交按钮提交表单。
+{{domxref("HTMLFormElement")}} 的 **`requestSubmit()`** 方法要求使用一个指定的提交按钮提交表单。
 
 ## 语法
 
