@@ -3,52 +3,49 @@ title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>{{WebExtAPIRef("cookies")}} API 的 <code>OnChangedCause</code> 型別，代表觸發 cookie 資料變動的原因。</p>
+{{WebExtAPIRef("cookies")}} API 的 `OnChangedCause` 型別，代表觸發 cookie 資料變動的原因。
 
-<h2 id="型別">型別</h2>
+## 型別
 
-<p>此型別的所有值都是字串（string）。可用值包括：</p>
+此型別的所有值都是字串（string）。可用值包括：
 
-<dl>
- <dt><code>evicted</code></dt>
- <dd>由於垃圾回收（garbage collection）而被刪除的 cookie。</dd>
- <dt><code>expired</code></dt>
- <dd>由於過期而被刪除的 cookie。</dd>
- <dt><code>explicit</code></dt>
- <dd>透過顯式呼叫（explicit call）{{WebExtAPIRef("cookies.remove()")}} 而被插入或刪除的 cookie。</dd>
- <dt><code>expired_overwrite</code></dt>
- <dd>被已過期（already-expired expiration date）cookie 所覆寫的 cookie。</dd>
- <dt><code>overwrite</code></dt>
- <dd>A call to {{WebExtAPIRef("cookies.set()")}} overwrote this cookie with a different one.</dd>
-</dl>
+- `evicted`
+  - : 由於垃圾回收（garbage collection）而被刪除的 cookie。
+- `expired`
+  - : 由於過期而被刪除的 cookie。
+- `explicit`
+  - : 透過顯式呼叫（explicit call）{{WebExtAPIRef("cookies.remove()")}} 而被插入或刪除的 cookie。
+- `expired_overwrite`
+  - : 被已過期（already-expired expiration date）cookie 所覆寫的 cookie。
+- `overwrite`
+  - : A call to {{WebExtAPIRef("cookies.set()")}} overwrote this cookie with a different one.
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("webextensions.api.cookies.OnChangedCause")}}</p>
+{{Compat("webextensions.api.cookies.OnChangedCause")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>你可以在 cookie 變更的時候監聽被通知的 {{WebExtAPIRef("cookies.onChanged")}} 事件。此監聽器 passed 含有 <code>cause</code> 屬性，值為 <code>OnChangeCaused</code> 字串的 <code>changeInfo</code> 物件：</p>
+你可以在 cookie 變更的時候監聽被通知的 {{WebExtAPIRef("cookies.onChanged")}} 事件。此監聽器 passed 含有 `cause` 屬性，值為 `OnChangeCaused` 字串的 `changeInfo` 物件：
 
-<pre class="brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
+```js
+browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +
               '\n * Removed: ' + changeInfo.removed);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>備註：</strong> 此 API 基於 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API 而來，文件改作自 Chromium 程式碼裡的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a>。</p>
+> **備註：** 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+>
+> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
 
-<p>Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -75,5 +72,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

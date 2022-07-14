@@ -9,31 +9,32 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>manifest.json 是所有採用 WebExtension API 的擴充功能中、唯一一個必須包含的檔案。</p>
+manifest.json 是所有採用 WebExtension API 的擴充功能中、唯一一個必須包含的檔案。
 
-<p>你可透過 manifest.json 為擴充功能指定名稱（name）、版本（version）這類的基本元資料（metadata），也可指定擴充功能的一些相關功能，例如像是背景腳本（background scripts）、內容腳本（content scripts）、瀏覽器動作（browser actions）等等。</p>
+你可透過 manifest.json 為擴充功能指定名稱（name）、版本（version）這類的基本元資料（metadata），也可指定擴充功能的一些相關功能，例如像是背景腳本（background scripts）、內容腳本（content scripts）、瀏覽器動作（browser actions）等等。
 
-<p>這是個採用 <a href="/en-US/docs/Glossary/JSON">JSON</a> 格式的檔案，但有個例外：它可接受含有 "<code>//</code>" 這種格式的註解文字。</p>
+這是個採用 [JSON](/en-US/docs/Glossary/JSON) 格式的檔案，但有個例外：它可接受含有 "`//`" 這種格式的註解文字。
 
-<p>manifest.json 可採用的鍵值如下所列：</p>
+manifest.json 可採用的鍵值如下所列：
 
-<div class="twocolumns">{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}</div>
+{{ ListSubpages ("/en-US/Add-ons/WebExtensions/manifest.json") }}
 
-<div class="twocolumns"> </div>
+`"manifest_version"`、`"version"` 和 `"name"` 是一定要設定的鍵值。另外，如果有設定 "\_locales" directory ，就一定要設定 `"default_locale"` ，否則就是這兩個鍵值都不做設定。 Google Chrome, 並不支援 `"applications"` ，但針對 Firefox 48 之前及 Android 的版本，則必須設置這個鍵值。
 
-<p><code>"manifest_version"</code>、<code>"version"</code> 和 <code>"name"</code> 是一定要設定的鍵值。另外，如果有設定 "_locales" directory ，就一定要設定 <code>"default_locale"</code> ，否則就是這兩個鍵值都不做設定。 Google Chrome, 並不支援 <code>"applications"</code> ，但針對 Firefox 48 之前及 Android 的版本，則必須設置這個鍵值。</p>
+你可透過擴充功能中的 JavaScript，藉由 {{WebExtAPIRef("runtime.getManifest()")}} 這個函式來存取擴充功能裡的 manifest ：
 
-<p>你可透過擴充功能中的 JavaScript，藉由 {{WebExtAPIRef("runtime.getManifest()")}} 這個函式來存取擴充功能裡的 manifest ：</p>
+```js
+browser.runtime.getManifest().version;
+```
 
-<pre class="brush: js">browser.runtime.getManifest().version;</pre>
+## 範例
 
-<h2 id="範例">範例</h2>
+以下程式碼顯示的是一般 manifest 鍵值的基本語法。請注意，這個範例並不是讓你用來直接複製貼上的，你必須根據所開發的擴充功能，填入相應的鍵值、關於擴充功能的完整範例，請參見 [擴充功能範例](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)。
 
-<p>以下程式碼顯示的是一般 manifest 鍵值的基本語法。請注意，這個範例並不是讓你用來直接複製貼上的，你必須根據所開發的擴充功能，填入相應的鍵值、關於擴充功能的完整範例，請參見 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">擴充功能範例</a>。</p>
-
-<pre class="brush: json">{
+```json
+{
   "applications": {
     "gecko": {
       "id": "addon@example.com",
@@ -102,10 +103,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
   "version": "0.1",
 
   "web_accessible_resources": ["images/my-image.png"]
-}</pre>
+}
+```
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>若想對所有的 manifest 鍵值及其子健有個完整的概念，可參見 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">完整 manifest.json 瀏覽器相容表</a>。</p>
+若想對所有的 manifest 鍵值及其子健有個完整的概念，可參見 [完整 manifest.json 瀏覽器相容表](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)。
 
-<p>{{Compat("webextensions.manifest")}}</p>
+{{Compat("webextensions.manifest")}}

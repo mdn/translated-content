@@ -3,225 +3,192 @@ title: Firefox 4 技術文件
 slug: Mozilla/Firefox/Releases/4
 translation_of: Mozilla/Firefox/Releases/4
 ---
-<div>{{FirefoxSidebar}}</div><p>2010 年六月起進入 Beta 測試期的 Firefox 4，增進了效能、加強針對 HTML 5 及其他創新網際科技的支援程度，也更加安全。本文為網頁、附加元件、Gecko 平台開發者們提供這一版的簡要技術相關資訊。</p>
+{{FirefoxSidebar}}
 
-<div>
-<p>Gecko 1.9.3 即將更名為 Gecko 2，但許多文件還沒有針對此點更新，在接下來的幾個星期中才會有所更動。</p>
-</div>
+2010 年六月起進入 Beta 測試期的 Firefox 4，增進了效能、加強針對 HTML 5 及其他創新網際科技的支援程度，也更加安全。本文為網頁、附加元件、Gecko 平台開發者們提供這一版的簡要技術相關資訊。
 
-<p>以下大部分的功能都已經可以在 <a href="http://nightly.mozilla.org/">逐日建置版</a>中試用。</p>
+Gecko 1.9.3 即將更名為 Gecko 2，但許多文件還沒有針對此點更新，在接下來的幾個星期中才會有所更動。
 
-<div class="note"><p><strong>備註：</strong> 本文、以及本文所連結的其他文件仍持續編修中，很多文件的名稱只是暫定、有些主題的文件也可能會拆成幾份子文件以方便閱讀。中文團隊的目標將僅翻譯這份概覽，其他子文件則有待大家的幫忙。</p></div>
+以下大部分的功能都已經可以在 [逐日建置版](http://nightly.mozilla.org/)中試用。
 
-<h2 id="Features_for_web_developers">Features for web developers</h2>
+> **備註：** 本文、以及本文所連結的其他文件仍持續編修中，很多文件的名稱只是暫定、有些主題的文件也可能會拆成幾份子文件以方便閱讀。中文團隊的目標將僅翻譯這份概覽，其他子文件則有待大家的幫忙。
 
-<p>Gecko now uses the <a href="/en/HTML/HTML5">HTML5</a> parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed <a href="/en/SVG">SVG</a> and <a href="/en/MathML">MathML</a> directly in the HTML markup.</p>
+## Features for web developers
 
-<h3 id="HTML">HTML</h3>
+Gecko now uses the [HTML5](/en/HTML/HTML5) parser, which fixes bugs, improves interoperability, and improves performance. It also lets content embed [SVG](/en/SVG) and [MathML](/en/MathML) directly in the HTML markup.
 
-<dl>
- <dt>Introduction to the HTML5 parser</dt>
- <dd>A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.</dd>
- <dt><a href="/en/HTML/HTML5/Forms_in_HTML5">Forms in HTML5</a></dt>
- <dd>A look at improvements to web forms in HTML5.</dd>
- <dt><a href="/en/Sections_and_Outlines_of_an_HTML5_document">HTML5 Sections</a></dt>
- <dd>Gecko now supports the new HTML5 elements related to sections in a document: {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }} and {{ HTMLElement("footer") }}.</dd>
- <dt>Other HTML5 elements</dt>
- <dd>Gecko now also supports the following new HTML5 elements: {{ HTMLElement("mark") }}, {{ HTMLElement("figure") }} and  {{ HTMLElement("figcaption") }}.</dd>
- <dt>WebSockets</dt>
- <dd>A guide to using the new WebSockets API for real-time communication between a web application and a server.</dd>
-</dl>
+### HTML
 
-<h4 id="Miscellaneous_HTML_changes">Miscellaneous HTML changes</h4>
+- Introduction to the HTML5 parser
+  - : A look at what the HTML5 parser means to you, and how to embed SVG and MathML into your content inline.
+- [Forms in HTML5](/en/HTML/HTML5/Forms_in_HTML5)
+  - : A look at improvements to web forms in HTML5.
+- [HTML5 Sections](/en/Sections_and_Outlines_of_an_HTML5_document)
+  - : Gecko now supports the new HTML5 elements related to sections in a document: {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }} and {{ HTMLElement("footer") }}.
+- Other HTML5 elements
+  - : Gecko now also supports the following new HTML5 elements: {{ HTMLElement("mark") }}, {{ HTMLElement("figure") }} and {{ HTMLElement("figcaption") }}.
+- WebSockets
+  - : A guide to using the new WebSockets API for real-time communication between a web application and a server.
 
-<ul>
- <li>{{ HTMLElement("textarea") }} elements are now resizable by default; you can use the {{ cssxref("resize") }} CSS property to disable this.</li>
- <li><code>canvas.getContext</code> and <code>canvas.toDataURL</code> no longer throw an exception when called with unrecognized arguments.</li>
- <li><code>canvas2dcontext.globalCompositeOperation</code>, <code>canvas2dcontext.lineCap</code> and <code>canvas2dcontext.lineJoin</code> no longer throw an exception when set to an unrecognized value.</li>
-</ul>
+#### Miscellaneous HTML changes
 
-<h3 id="CSS">CSS</h3>
+- {{ HTMLElement("textarea") }} elements are now resizable by default; you can use the {{ cssxref("resize") }} CSS property to disable this.
+- `canvas.getContext` and `canvas.toDataURL` no longer throw an exception when called with unrecognized arguments.
+- `canvas2dcontext.globalCompositeOperation`, `canvas2dcontext.lineCap` and `canvas2dcontext.lineJoin` no longer throw an exception when set to an unrecognized value.
 
-<dl>
- <dt><a href="/en/CSS/CSS_transitions">CSS transitions</a></dt>
- <dd>New CSS transitions support is available in Firefox 4.</dd>
- <dt>Computed values in CSS</dt>
- <dd>Support for<code> calc() </code>to compute values in CSS is in progress. See {{ bug(363249) }}.</dd>
- <dt>Selector grouping</dt>
- <dd>Support for {{ cssxref(":-moz-any") }} to group selectors and factorize combinators.</dd>
- <dt>Background image subrectangle support</dt>
- <dd>The {{ cssxref("-moz-image-rect") }} property makes it possible to use subrectangles of images as a background image.</dd>
- <dt>CSS touch properties</dt>
- <dd>Support for touch properties is added. Details, and real article names, to come later.</dd>
- <dt><a href="/en/CSS/Privacy_and_the_:visited_selector">Privacy and the :visited selector</a></dt>
- <dd>Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.</dd>
-</dl>
+### CSS
 
-<h4 id="Miscellaneous_CSS_changes">Miscellaneous CSS changes</h4>
+- [CSS transitions](/en/CSS/CSS_transitions)
+  - : New CSS transitions support is available in Firefox 4.
+- Computed values in CSS
+  - : Support for` calc() `to compute values in CSS is in progress. See {{ bug(363249) }}.
+- Selector grouping
+  - : Support for {{ cssxref(":-moz-any") }} to group selectors and factorize combinators.
+- Background image subrectangle support
+  - : The {{ cssxref("-moz-image-rect") }} property makes it possible to use subrectangles of images as a background image.
+- CSS touch properties
+  - : Support for touch properties is added. Details, and real article names, to come later.
+- [Privacy and the :visited selector](/en/CSS/Privacy_and_the_:visited_selector)
+  - : Changes have been made to what information can be obtained about the style of visited links using CSS selectors. This may affect some web applications.
 
-<ul>
- <li>The {{ cssxref("text-shadow") }} property now caps the blur radius to 300px for sanity and performance reasons.</li>
- <li>The {{ cssxref(":-moz-window-inactive") }} pseudoclass has been implemented.</li>
- <li>The {{ cssxref("-moz-tab-size") }} property lets you specify the width in space characters of a tab character (U+0009) when rendering text.</li>
- <li>The CSS3 {{ cssxref("resize") }} property has been implemented.</li>
- <li>The<code> -moz-background-size </code>property has been renamed to its final {{ cssxref("background-size") }} naming; <code>-moz-background-size</code> is no longer supported.</li>
- <li>The {{ cssxref("oveflow") }} property no longer applies to table-group elements ({{ HTMLElement("thead") }}, {{ HTMLElement("tbody") }}, and {{ HTMLElement("tfoot") }}).</li>
-</ul>
+#### Miscellaneous CSS changes
 
-<h3 id="Graphics_and_video">Graphics and video</h3>
+- The {{ cssxref("text-shadow") }} property now caps the blur radius to 300px for sanity and performance reasons.
+- The {{ cssxref(":-moz-window-inactive") }} pseudoclass has been implemented.
+- The {{ cssxref("-moz-tab-size") }} property lets you specify the width in space characters of a tab character (U+0009) when rendering text.
+- The CSS3 {{ cssxref("resize") }} property has been implemented.
+- The` -moz-background-size `property has been renamed to its final {{ cssxref("background-size") }} naming; `-moz-background-size` is no longer supported.
+- The {{ cssxref("oveflow") }} property no longer applies to table-group elements ({{ HTMLElement("thead") }}, {{ HTMLElement("tbody") }}, and {{ HTMLElement("tfoot") }}).
 
-<dl>
- <dt> </dt>
- <dt><a href="/en/WebGL">WebGL</a></dt>
- <dd>The developing WebGL standard is now supported by Firefox.</dd>
- <dt>Optimizing graphics performance</dt>
- <dd>Tips and tricks for getting the most out of graphics and video performance in Firefox 4.</dd>
- <dt><a href="/En/Media_formats_supported_by_the_audio_and_video_elements#WebM">Support for WebM video</a></dt>
- <dd>The new open <a href="http://www.webmproject.org/">WebM</a> video format is supported by Gecko 1.9.3; support is included in nightlies as of 9 June.</dd>
- <dt>Full screen API</dt>
- <dd>Details coming soon.</dd>
- <dt>SMIL animation</dt>
- <dd>Support for SMIL animation of SVG is now available. See {{ bug(482402) }}.</dd>
- <dt>Using SVG as images and as CSS backgrounds</dt>
- <dd>You can now use SVG with the {{ htmlelement("img") }} element, as well as the background image in CSS. See {{ bug(272288) }}, {{ bug(276431) }} and {{ bug(231179) }}.</dd>
-</dl>
+### Graphics and video
 
-<h3 id="DOM">DOM</h3>
+- [WebGL](/en/WebGL)
 
-<dl>
- <dt>Obtaining boundary rectangles for ranges</dt>
- <dd>The Range object now has <code>getClientRects()</code> and <code>getBoundingClientRect()</code> methods. See {{ bug(396392) }}.</dd>
- <dt>Capturing mouse events on arbitrary elements</dt>
- <dd>Support for the Internet Explorer-originated <code>setCapture()</code> and <code>releaseCapture()</code> APIs has been added. See {{ bug(503943) }}.</dd>
- <dt><a href="/en/DOM/Manipulating_the_browser_history">Manipulating the browser history</a></dt>
- <dd>The existing document history object, available through the {{ domxref("window.history") }} object, now supports the new HTML5 <code>pushState()</code> and <code>replaceState()</code> methods.</dd>
- <dt>Touch and multi-touch events</dt>
- <dd>Support has been added for touch and multi-touch events.</dd>
- <dt><a href="/en/IndexedDB">IndexedDB</a></dt>
- <dd>The proposed IndexedDB standard, which provides a local database store for web applications, will be supported by Firefox 4.</dd>
-</dl>
+  - : The developing WebGL standard is now supported by Firefox.
 
-<h4 id="Miscellaneous_DOM_changes">Miscellaneous DOM changes</h4>
+- Optimizing graphics performance
+  - : Tips and tricks for getting the most out of graphics and video performance in Firefox 4.
+- [Support for WebM video](/En/Media_formats_supported_by_the_audio_and_video_elements#WebM)
+  - : The new open [WebM](http://www.webmproject.org/) video format is supported by Gecko 1.9.3; support is included in nightlies as of 9 June.
+- Full screen API
+  - : Details coming soon.
+- SMIL animation
+  - : Support for SMIL animation of SVG is now available. See {{ bug(482402) }}.
+- Using SVG as images and as CSS backgrounds
+  - : You can now use SVG with the {{ htmlelement("img") }} element, as well as the background image in CSS. See {{ bug(272288) }}, {{ bug(276431) }} and {{ bug(231179) }}.
 
-<ul>
- <li>The wrapping of a {{ HTMLElement("textarea") }} element can now be controlled via the DOM, via the <code>wrap</code> DOM attribute. {{ bug(41464) }}</li>
- <li>DOM {{ domxref("file") }} objects now offer a <code>url</code> property.</li>
- <li>DOM {{ domxref("file") }} objects now have a new <code>click()</code> method. (Note: not done yet, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=36619">bug 36619</a>.)</li>
- <li><a href="/En/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects">FormData</a> support for XMLHttpRequest.</li>
- <li>The {{ domxref("element.isContentEditable") }} property has been implemented.</li>
- <li>Added the <a href="/En/DragDrop/DataTransfer#mozSourceNode"><code>mozSourceNode</code></a> property to the <a href="/En/DragDrop/DataTransfer"><code>DragTransfer</code></a> object.</li>
- <li>Added the <a href="/en/DOM/Selection/modify"><code>selection.modify()</code></a> method to the {{ domxref("Selection") }} object; this lets you easily alter the current text selection or cursor position in a browser window.</li>
- <li>Support for the <code>window.directories</code> object and the <code>directories</code> feature for {{ domxref("window.open") }}, which are not supported in any other browser, has been removed. Use <code>personalbar</code> instead. {{ Bug(474058) }}</li>
- <li>The {{ domxref("event.mozInputSource") }} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.</li>
- <li>The {{ domxref("document.onreadystatechange") }} event has been implemented.</li>
- <li>The {{ domxref("document.createElement") }} method no longer accepts <code>&lt;</code> and <code>&gt;</code> around the tag name in quirks mode.</li>
-</ul>
+### DOM
 
-<h3 id="Security">Security</h3>
+- Obtaining boundary rectangles for ranges
+  - : The Range object now has `getClientRects()` and `getBoundingClientRect()` methods. See {{ bug(396392) }}.
+- Capturing mouse events on arbitrary elements
+  - : Support for the Internet Explorer-originated `setCapture()` and `releaseCapture()` APIs has been added. See {{ bug(503943) }}.
+- [Manipulating the browser history](/en/DOM/Manipulating_the_browser_history)
+  - : The existing document history object, available through the {{ domxref("window.history") }} object, now supports the new HTML5 `pushState()` and `replaceState()` methods.
+- Touch and multi-touch events
+  - : Support has been added for touch and multi-touch events.
+- [IndexedDB](/en/IndexedDB)
+  - : The proposed IndexedDB standard, which provides a local database store for web applications, will be supported by Firefox 4.
 
-<dl>
- <dt><a href="/en/Security/CSP/Introducing_Content_Security_Policy">Introducing Content Security Policy</a></dt>
- <dd>Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their web sites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.</dd>
- <dt>ForceTLS</dt>
- <dd>Details soon.</dd>
- <dt>The Account Manager</dt>
- <dd>Details soon.</dd>
-</dl>
+#### Miscellaneous DOM changes
 
-<h3 id="JavaScript">JavaScript</h3>
+- The wrapping of a {{ HTMLElement("textarea") }} element can now be controlled via the DOM, via the `wrap` DOM attribute. {{ bug(41464) }}
+- DOM {{ domxref("file") }} objects now offer a `url` property.
+- DOM {{ domxref("file") }} objects now have a new `click()` method. (Note: not done yet, see [bug 36619](https://bugzilla.mozilla.org/show_bug.cgi?id=36619).)
+- [FormData](/En/XMLHttpRequest/Using_XMLHttpRequest#Using_FormData_objects) support for XMLHttpRequest.
+- The {{ domxref("element.isContentEditable") }} property has been implemented.
+- Added the [`mozSourceNode`](/En/DragDrop/DataTransfer#mozSourceNode) property to the [`DragTransfer`](/En/DragDrop/DataTransfer) object.
+- Added the [`selection.modify()`](/en/DOM/Selection/modify) method to the {{ domxref("Selection") }} object; this lets you easily alter the current text selection or cursor position in a browser window.
+- Support for the `window.directories` object and the `directories` feature for {{ domxref("window.open") }}, which are not supported in any other browser, has been removed. Use `personalbar` instead. {{ Bug(474058) }}
+- The {{ domxref("event.mozInputSource") }} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
+- The {{ domxref("document.onreadystatechange") }} event has been implemented.
+- The {{ domxref("document.createElement") }} method no longer accepts `<` and `>` around the tag name in quirks mode.
 
-<p>For an overview of the changes implemented in JavaScript 1.8.5, see <a href="/en/JavaScript/New_in_JavaScript/1.8.5">New in JavaScript 1.8.5</a>. JavaScript in Firefox 4 will have additional adherence to the ECMAScript 5 standard.</p>
+### Security
 
-<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+- [Introducing Content Security Policy](/en/Security/CSP/Introducing_Content_Security_Policy)
+  - : Content Security Policy (CSP) is a Mozilla proposal designed to help web designers and server administrators specify how content on their web sites interacts. The goal is to help detect and mitigate attacks including cross-site scripting and data injection attacks.
+- ForceTLS
+  - : Details soon.
+- The Account Manager
+  - : Details soon.
 
-<p>For helpful tips on updating existing extensions for Firefox 4, see <a href="/en/Extensions/Updating_extensions_for_Firefox_4">Updating extensions for Firefox 4</a>.</p>
+### JavaScript
 
-<h3 id="JavaScript_code_modules">JavaScript code modules</h3>
+For an overview of the changes implemented in JavaScript 1.8.5, see [New in JavaScript 1.8.5](/en/JavaScript/New_in_JavaScript/1.8.5). JavaScript in Firefox 4 will have additional adherence to the ECMAScript 5 standard.
 
-<dl>
- <dt><a href="/en/JavaScript_code_modules/Services.jsm">Services.jsm</a></dt>
- <dd>The <code>Services.jsm</code> code module provides getters that make it easy to obtain references to commonly-used services, such as the preferences service or the window mediator, among others.</dd>
-</dl>
+## Changes for Mozilla and add-on developers
 
-<dl>
- <dt><a href="/en/JavaScript_code_modules/ctypes.jsm">JS-ctypes API</a></dt>
- <dd>The JS-ctypes API makes it possible to call C-compatible foreign library functions without using XPCOM.</dd>
- <dt><a href="/en/Addons/Add-on_Manager">Add-ons Manager</a></dt>
- <dd>The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.</dd>
- <dt><a href="/en/JavaScript_code_modules/Using#Locating_the_code_module">Loading code modules from chrome: URLs</a></dt>
- <dd>You can now load JavaScript code modules using <strong>chrome:</strong> URLs, even inside JAR files.</dd>
-</dl>
+For helpful tips on updating existing extensions for Firefox 4, see [Updating extensions for Firefox 4](/en/Extensions/Updating_extensions_for_Firefox_4).
 
-<h3 id="DOM_changes">DOM changes</h3>
+### JavaScript code modules
 
-<dl>
- <dt>{{ domxref("ChromeWorker") }}</dt>
- <dd>A new type of worker for privileged code; this lets you use things like <a href="/en/js-ctypes">js-ctypes</a> from workers in extensions and application code.</dd>
-</dl>
+- [Services.jsm](/en/JavaScript_code_modules/Services.jsm)
+  - : The `Services.jsm` code module provides getters that make it easy to obtain references to commonly-used services, such as the preferences service or the window mediator, among others.
 
-<h3 id="XUL">XUL</h3>
+<!---->
 
-<h4 id="tabbrowser_(gBrowser)_changes">tabbrowser (gBrowser) changes</h4>
+- [JS-ctypes API](/en/JavaScript_code_modules/ctypes.jsm)
+  - : The JS-ctypes API makes it possible to call C-compatible foreign library functions without using XPCOM.
+- [Add-ons Manager](/en/Addons/Add-on_Manager)
+  - : The new Add-ons Manager provides information about installed add-ons, support for managing them, and provides ways to install and remove add-ons.
+- [Loading code modules from chrome: URLs](/en/JavaScript_code_modules/Using#Locating_the_code_module)
+  - : You can now load JavaScript code modules using **chrome:** URLs, even inside JAR files.
 
-<p>Several changes were made to the {{ XULElem("tabbrowser") }} element that impact extensions that interact with tabs.</p>
+### DOM changes
 
-<ul>
- <li>TabClose/TabSelect/TabOpen events no longer bubble up to the {{ XULElem("tabbrowser") }} element (gBrowser). Event listeners for those events should be added to gBrowser.tabContainer rather than to gBrowser directly.</li>
- <li>The tab context menu is no longer an anonymous child of the {{ XULElem("tabbrowser") }}. It can therefore be overlaid directly with <a href="/en/XUL_Overlays">XUL overlays</a>. It can also be accessed more directly in JS via gBrowser.tabContextMenu. See <a href="http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/">this blog post</a> for more details.</li>
-</ul>
+- {{ domxref("ChromeWorker") }}
+  - : A new type of worker for privileged code; this lets you use things like [js-ctypes](/en/js-ctypes) from workers in extensions and application code.
 
-<h4 id="Miscellaneous_XUL_changes">Miscellaneous XUL changes</h4>
+### XUL
 
-<ul>
- <li>The {{ xulattr("readonly") }} attribute now correctly works for fields.</li>
- <li>The {{ xulelem("resizer") }} element now lets you use the {{ xulattr("element") }} attribute to specify an element to resize, instead of resizing the window.</li>
- <li>The "active" attribute no longer gets set on active XUL windows. Instead, you can use the new {{ cssxref(":-moz-window-inactive") }} pseudoclass in order to assign different styles to background windows.</li>
- <li>The {{ xulattr("emptytext") }} attribute is now deprecated; you should use {{ xulattr("placeholder") }} instead.</li>
- <li>The {{ xulelem("popup") }} element is no longer supported; you should use {{ xulelem("menupopup") }} instead.</li>
-</ul>
+#### tabbrowser (gBrowser) changes
 
-<h3 id="Storage">Storage</h3>
+Several changes were made to the {{ XULElem("tabbrowser") }} element that impact extensions that interact with tabs.
 
-<h4 id="Miscellaneous_storage_API_changes">Miscellaneous storage API changes</h4>
+- TabClose/TabSelect/TabOpen events no longer bubble up to the {{ XULElem("tabbrowser") }} element (gBrowser). Event listeners for those events should be added to gBrowser.tabContainer rather than to gBrowser directly.
+- The tab context menu is no longer an anonymous child of the {{ XULElem("tabbrowser") }}. It can therefore be overlaid directly with [XUL overlays](/en/XUL_Overlays). It can also be accessed more directly in JS via gBrowser.tabContextMenu. See [this blog post](http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
 
-<ul>
- <li>The <code>mozIStorageBindingParamsArray</code> interface now has a length attribute that indicates the number of <code>mozIStorageBindingParams</code> objects in the array.</li>
- <li>The <code>mozIStorageStatement.bindParameters()</code> now returns an error if the specified <code>mozIStorageBindingParamsArray</code> is empty.</li>
-</ul>
+#### Miscellaneous XUL changes
 
-<h3 id="XPCOM">XPCOM</h3>
+- The {{ xulattr("readonly") }} attribute now correctly works for fields.
+- The {{ xulelem("resizer") }} element now lets you use the {{ xulattr("element") }} attribute to specify an element to resize, instead of resizing the window.
+- The "active" attribute no longer gets set on active XUL windows. Instead, you can use the new {{ cssxref(":-moz-window-inactive") }} pseudoclass in order to assign different styles to background windows.
+- The {{ xulattr("emptytext") }} attribute is now deprecated; you should use {{ xulattr("placeholder") }} instead.
+- The {{ xulelem("popup") }} element is no longer supported; you should use {{ xulelem("menupopup") }} instead.
 
-<dl>
- <dt><a href="/en/Extensions/Updating_extensions_for_Firefox_4">XPCOM changes in Gecko 1.9.3</a></dt>
- <dd>Details about changes to XPCOM that impact compatibility in Firefox 4.</dd>
- <dt><a href="/en/Components.utils.getGlobalForObject">Components.utils.getGlobalForObject()</a></dt>
- <dd>This new method returns the global object with which an object is associated; this replaces a common use case of the now-removed <code>__parent__</code>.</dd>
-</dl>
+### Storage
 
-<h3 id="Memory_management">Memory management</h3>
+#### Miscellaneous storage API changes
 
-<dl>
- <dt><a href="/en/Infallible_memory_allocation">Infallible memory allocation</a></dt>
- <dd>Mozilla now provides infallible memory allocators that are guaranteed not to return null. You should read this article to learn how they work and how to explicitly request fallible versus infallible memory allocation.</dd>
-</dl>
+- The `mozIStorageBindingParamsArray` interface now has a length attribute that indicates the number of `mozIStorageBindingParams` objects in the array.
+- The `mozIStorageStatement.bindParameters()` now returns an error if the specified `mozIStorageBindingParamsArray` is empty.
 
-<h2 id="Other_changes">Other changes</h2>
+### XPCOM
 
-<dl>
- <dt>Gopher support removed</dt>
- <dd>The Gopher protocol is no longer supported natively. Continued support is available via the <a href="https://addons.mozilla.org/addon/7685/">OverbiteFF</a> extension.</dd>
- <dt>Default plugin removed</dt>
- <dd>The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=533891">bug 533891</a>.</dd>
- <dt>Extension Manager replaced with AddonManager</dt>
- <dd><a href="/en/XPCOM_Interface_Reference/nsIExtensionManager">nsIExtensionManager</a> has been replaced by <a href="/en/Addons/Add-on_Manager/AddonManager">AddonManager</a>. Since there is apparently no way at present to obtain the install location from a given extension ID, the closest workaround is to use the directory service to find the profile directory and append "extensions" to it (though this approach will not catch extensions outside of the profile directory or those which are aliased to another location).</dd>
-</dl>
+- [XPCOM changes in Gecko 1.9.3](/en/Extensions/Updating_extensions_for_Firefox_4)
+  - : Details about changes to XPCOM that impact compatibility in Firefox 4.
+- [Components.utils.getGlobalForObject()](/en/Components.utils.getGlobalForObject)
+  - : This new method returns the global object with which an object is associated; this replaces a common use case of the now-removed `__parent__`.
 
-<h2 id="參考">參考</h2>
+### Memory management
 
-<ul>
- <li><a href="/en/Firefox_3.6_for_developers">Firefox 3.6 for developers</a></li>
- <li><a href="/En/Firefox_3.5_for_developers">Firefox 3.5 for developers</a></li>
- <li><a href="/en/Firefox_3_for_developers">Firefox 3 for developers</a></li>
- <li><a href="/en/Firefox_2_for_developers">Firefox 2 for developers</a></li>
- <li><a href="/en/Firefox_1.5_for_developers">Firefox 1.5 for developers</a></li>
-</ul>
+- [Infallible memory allocation](/en/Infallible_memory_allocation)
+  - : Mozilla now provides infallible memory allocators that are guaranteed not to return null. You should read this article to learn how they work and how to explicitly request fallible versus infallible memory allocation.
+
+## Other changes
+
+- Gopher support removed
+  - : The Gopher protocol is no longer supported natively. Continued support is available via the [OverbiteFF](https://addons.mozilla.org/addon/7685/) extension.
+- Default plugin removed
+  - : The default plugin has been removed. The application plugins folder has also been removed by default, however support for installing plugins via this folder still exists. See [bug 533891](https://bugzilla.mozilla.org/show_bug.cgi?id=533891).
+- Extension Manager replaced with AddonManager
+  - : [nsIExtensionManager](/en/XPCOM_Interface_Reference/nsIExtensionManager) has been replaced by [AddonManager](/en/Addons/Add-on_Manager/AddonManager). Since there is apparently no way at present to obtain the install location from a given extension ID, the closest workaround is to use the directory service to find the profile directory and append "extensions" to it (though this approach will not catch extensions outside of the profile directory or those which are aliased to another location).
+
+## 參考
+
+- [Firefox 3.6 for developers](/en/Firefox_3.6_for_developers)
+- [Firefox 3.5 for developers](/En/Firefox_3.5_for_developers)
+- [Firefox 3 for developers](/en/Firefox_3_for_developers)
+- [Firefox 2 for developers](/en/Firefox_2_for_developers)
+- [Firefox 1.5 for developers](/en/Firefox_1.5_for_developers)

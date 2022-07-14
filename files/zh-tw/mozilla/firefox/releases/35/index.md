@@ -3,73 +3,112 @@ title: Firefox 35 技術文件
 slug: Mozilla/Firefox/Releases/35
 translation_of: Mozilla/Firefox/Releases/35
 ---
-{{FirefoxSidebar}}
-<div>{{ ReleaseChannelInfo("35", "35", "January 2015", "Aurora") }}</div>
-<p>Want to help document Firefox 35? See the <a href="http://beta.elchi3.de/doctracker/#list=fx&amp;version=35.0">list of bugs that need to be written about</a> and pitch in!</p>
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
-<h3 id="Developer_Tools">Developer Tools</h3>
-<p>Highlights:</p>
-<ul>
- <li><a href="/en-US/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter">See ::before and ::after pseudo elements in the Page Inspector</a></li>
- <li><a href="/en-US/docs/Tools/Style_Editor#Source_map_support">CSS source maps are now enabled by default</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Element_popup_menu_2">"Show DOM Properties" from the Page Inspector</a></li>
-</ul>
-<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-10-13&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-09-02&amp;chfieldvalue=FIXED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20Timeline&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;component=Simulator&amp;product=Firefox&amp;product=Firefox%20OS&amp;list_id=11184176">All devtools bugs fixed between Firefox 34 and Firefox 35</a>.</p>
-<h3 id="CSS">CSS</h3>
-<ul>
- <li>The <a href="/zh-TW/docs/Web/CSS/mask-type"><code>mask-type</code></a> property has been activated by default (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1058519">bug 1058519</a>).</li>
- <li>The <a href="/zh-TW/docs/Web/CSS/filter"><code>filter</code></a> property is now activated by default (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1057180">bug 1057180</a>).</li>
- <li>The <a href="/zh-TW/docs/Web/CSS/@font-face"><code>@font-face</code></a> at-rule now supports WOFF2 fonts (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1064737">bug 1064737</a>).</li>
-</ul>
-<h3 id="HTML">HTML</h3>
-<ul>
- <li>The obsolete and non-conforming <code>bottommargin</code>, <code>leftmargin</code>, <code>rightmargin</code> and <code>topmargin</code> attributes of the <code><a href="/zh-TW/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a> element</code> have been activated in non-quirks mode (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=95530">bug 95530</a>).</li>
-</ul>
-<h3 id="JavaScript">JavaScript</h3>
-<ul>
- <li>The "<a href="/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">temporal dead zone</a>" for <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> declarations has been implemented. In conformance with ES6 <code>let</code> semantics, the following situations<br>
-  now throw errors. See also this<a href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds"> newsgroup announcement</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1001090">bug 1001090</a>.
-  <ul>
-   <li>Redeclaring existing variables or arguments using <code>let</code> within the same scope in function bodies is now a syntax error.</li>
-   <li>Using a variable declared using <code>let</code> in function bodies before the declaration is reached and evaluated is now a runtime error.</li>
-  </ul>
- </li>
- <li>ES6 <a href="/zh-TW/docs/Web/JavaScript/Reference/Symbols"><code>Symbols</code></a> (only available in the Nightly channel) have been updated to conform with recent specification changes:
-  <ul>
-   <li><code>String(Symbol("1"))</code> now no longer throws a <a href="/zh-TW/docs/Web/JavaScript/Reference/TypeError"><code>TypeError</code></a>; instead a string (<code>"Symbol(1)"</code>) gets returned (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1058396">bug 1058396</a>).</li>
-  </ul>
- </li>
- <li>The various <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects"><em>TypedArray</em> constructors</a> now have as their <code>[[Prototype]]</code> a single function, denoted <code>%TypedArray%</code>  in ES6 (but otherwise not directly exposed).  Each typed array prototype now inherits from <code>%TypedArray%.prototype</code>.  (<code>%TypedArray%</code> and <code>%TypedArray%.prototype</code> inherit from <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype"><code>Function.prototype</code></a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype"><code>Object.prototype</code></a>, respectively, so that typed array constructors and instances still have the properties found on those objects.)  Typed array function properties now reside on <code>%TypedArray%.prototype</code> and work on any typed array.  See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description"><em>TypedArray</em></a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=896116">bug 896116</a> for more information.</li>
- <li>ES6 semantics for <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation">prototype mutations using object literals</a> have been implemented (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1061853">bug 1061853</a>).
-  <ul>
-   <li>Now only a single member notated as <code>__proto__:value</code> will mutate the <code>[[Prototype]]</code> in the object literal syntax.</li>
-   <li>Method members like <code>__proto__() {}</code> will not overwrite the <code>[[Prototype]]</code> anymore.</li>
-  </ul>
- </li>
-</ul>
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
-<ul>
- <li>The <a href="/zh-TW/docs/Web/API/NavigatorLanguage"><code>NavigatorLanguage</code></a> interface is now available to workers on <a href="/zh-TW/docs/Web/API/WorkerNavigator"><code>WorkerNavigator</code></a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=925849">bug 925849</a>).</li>
- <li>The <a href="/zh-TW/docs/Web/API/Element/closest"><code>Element.closest</code></a> method returns the closest ancestor of the current element (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1055533">bug 1055533</a>).</li>
-</ul>
-<h3 id="MathML">MathML</h3>
-<ul>
- <li>The <code>dtls</code> OpenType feature (via the CSS <a href="/zh-TW/docs/Web/CSS/font-feature-settings"><code>font-feature-settings</code></a> on the default stylesheet) is now applied automatically to MathML elements when positioning scripts over it (e.g. dotless i with mathematical hat).</li>
-</ul>
-<h3 id="SVG">SVG</h3>
-<p><em>No change.</em></p>
-<h3 id="AudioVideo">Audio/Video</h3>
-<p><em>No change.</em></p>
-<h2 id="Security">Security</h2>
-<ul>
- <li>The <a href="/en-US/docs/Web/Security/Public_Key_Pinning">Public Key Pinning</a> Extension for HTTP (HPKP) has been implemented. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=787133">bug 787133</a>)</li>
-</ul>
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
-<h3 id="XUL">XUL</h3>
-<ul>
- <li>The private <code>_getTabForBrowser()</code> method on the <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/tabbrowser">tabbrowser</a></code> element has been deprecated. In its place, we've added a new, public, method called <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/Method/getTabForBrowser">getTabForBrowser</a></code>. This returns, predictably, the <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/tab">tab</a></code> element that contains the specified <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/browser">browser</a></code>.</li>
-</ul>
-<h2 id="Older_versions">Older versions</h2>
+{{FirefoxSidebar}}{{ ReleaseChannelInfo("35", "35", "January 2015", "Aurora") }}
 
-<ul>
-<li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/34">Firefox 34 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/33">Firefox 33 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/32">Firefox 32 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/31">Firefox 31 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/30">Firefox 30 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/29">Firefox 29 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/28">Firefox 28 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/27">Firefox 27 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/26">Firefox 26 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/25">Firefox 25 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/24">Firefox 24 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/23">Firefox 23 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/22">Firefox 22 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/21">Firefox 21 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/20">Firefox 20 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/19">Firefox 19 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/18">Firefox 18 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/17">Firefox 17 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/16">Firefox 16 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/15">Firefox 15 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/14">Firefox 14 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/13">Firefox 13 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/12">Firefox 12 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/11">Firefox 11 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/10">Firefox 10 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/9">Firefox 9 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/8">Firefox 8 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/6">Firefox 6 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/5">Firefox 5 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/4">Firefox 4 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/2">Firefox 2 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5 for developers</a></li></ul>
+Want to help document Firefox 35? See the [list of bugs that need to be written about](http://beta.elchi3.de/doctracker/#list=fx&version=35.0) and pitch in!
+
+## Changes for Web developers
+
+### Developer Tools
+
+Highlights:
+
+- [See ::before and ::after pseudo elements in the Page Inspector](/en-US/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter)
+- [CSS source maps are now enabled by default](/en-US/docs/Tools/Style_Editor#Source_map_support)
+- ["Show DOM Properties" from the Page Inspector](/en-US/docs/Tools/Page_Inspector#Element_popup_menu_2)
+
+[All devtools bugs fixed between Firefox 34 and Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
+
+### CSS
+
+- The [`mask-type`](/zh-TW/docs/Web/CSS/mask-type) property has been activated by default ([bug 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519)).
+- The [`filter`](/zh-TW/docs/Web/CSS/filter) property is now activated by default ([bug 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180)).
+- The [`@font-face`](/zh-TW/docs/Web/CSS/@font-face) at-rule now supports WOFF2 fonts ([bug 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737)).
+
+### HTML
+
+- The obsolete and non-conforming `bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributes of the `<body> element` have been activated in non-quirks mode ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
+
+### JavaScript
+
+- The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES6 `let` semantics, the following situations
+  now throw errors. See also this[ newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
+
+  - Redeclaring existing variables or arguments using `let` within the same scope in function bodies is now a syntax error.
+  - Using a variable declared using `let` in function bodies before the declaration is reached and evaluated is now a runtime error.
+
+- ES6 [`Symbols`](/zh-TW/docs/Web/JavaScript/Reference/Symbols) (only available in the Nightly channel) have been updated to conform with recent specification changes:
+
+  - `String(Symbol("1"))` now no longer throws a [`TypeError`](/zh-TW/docs/Web/JavaScript/Reference/TypeError); instead a string (`"Symbol(1)"`) gets returned ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
+
+- The various [_TypedArray_ constructors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) now have as their `[[Prototype]]` a single function, denoted `%TypedArray%` in ES6 (but otherwise not directly exposed). Each typed array prototype now inherits from `%TypedArray%.prototype`. (`%TypedArray%` and `%TypedArray%.prototype` inherit from [`Function.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) and [`Object.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype), respectively, so that typed array constructors and instances still have the properties found on those objects.) Typed array function properties now reside on `%TypedArray%.prototype` and work on any typed array. See [_TypedArray_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) and [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) for more information.
+- ES6 semantics for [prototype mutations using object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation) have been implemented ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
+
+  - Now only a single member notated as `__proto__:value` will mutate the `[[Prototype]]` in the object literal syntax.
+  - Method members like `__proto__() {}` will not overwrite the `[[Prototype]]` anymore.
+
+### Interfaces/APIs/DOM
+
+- The [`NavigatorLanguage`](/zh-TW/docs/Web/API/NavigatorLanguage) interface is now available to workers on [`WorkerNavigator`](/zh-TW/docs/Web/API/WorkerNavigator) ([bug 925849](https://bugzilla.mozilla.org/show_bug.cgi?id=925849)).
+- The [`Element.closest`](/zh-TW/docs/Web/API/Element/closest) method returns the closest ancestor of the current element ([bug 1055533](https://bugzilla.mozilla.org/show_bug.cgi?id=1055533)).
+
+### MathML
+
+- The `dtls` OpenType feature (via the CSS [`font-feature-settings`](/zh-TW/docs/Web/CSS/font-feature-settings) on the default stylesheet) is now applied automatically to MathML elements when positioning scripts over it (e.g. dotless i with mathematical hat).
+
+### SVG
+
+_No change._
+
+### Audio/Video
+
+_No change._
+
+## Security
+
+- The [Public Key Pinning](/en-US/docs/Web/Security/Public_Key_Pinning) Extension for HTTP (HPKP) has been implemented. ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133))
+
+## Changes for add-on and Mozilla developers
+
+### XUL
+
+- The private `_getTabForBrowser()` method on the [`tabbrowser`](/zh-TW/docs/Mozilla/Tech/XUL/tabbrowser) element has been deprecated. In its place, we've added a new, public, method called [`getTabForBrowser`](/zh-TW/docs/Mozilla/Tech/XUL/Method/getTabForBrowser). This returns, predictably, the [`tab`](/zh-TW/docs/Mozilla/Tech/XUL/tab) element that contains the specified [`browser`](/zh-TW/docs/Mozilla/Tech/XUL/browser).
+
+## Older versions
+
+- [Firefox 34 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/34)
+- [Firefox 33 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/33)
+- [Firefox 32 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/32)
+- [Firefox 31 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/31)
+- [Firefox 30 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/30)
+- [Firefox 29 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/29)
+- [Firefox 28 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/28)
+- [Firefox 27 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/27)
+- [Firefox 26 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/26)
+- [Firefox 25 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/25)
+- [Firefox 24 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/24)
+- [Firefox 23 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/23)
+- [Firefox 22 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/22)
+- [Firefox 21 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/21)
+- [Firefox 20 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/20)
+- [Firefox 19 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/19)
+- [Firefox 18 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/18)
+- [Firefox 17 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/17)
+- [Firefox 16 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/16)
+- [Firefox 15 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/15)
+- [Firefox 14 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/14)
+- [Firefox 13 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/13)
+- [Firefox 12 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/12)
+- [Firefox 11 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/11)
+- [Firefox 10 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/10)
+- [Firefox 9 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/9)
+- [Firefox 8 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/8)
+- [Firefox 7 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/7)
+- [Firefox 6 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/6)
+- [Firefox 5 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/5)
+- [Firefox 4 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/4)
+- [Firefox 3.6 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/3.6)
+- [Firefox 3.5 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/1.5)

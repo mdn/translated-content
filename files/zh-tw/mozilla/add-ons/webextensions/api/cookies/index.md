@@ -17,113 +17,87 @@ tags:
   - 非標準
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}讓擴充套件可以取得、設定 cookies 資訊，並監控其變動。
 
-<div>讓擴充套件可以取得、設定 cookies 資訊，並監控其變動。</div>
+使用此 API 前，必須先在 [manifest.json ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)檔案中加入「cookies」這項 [API 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，也必須以 [host 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)將要存取 Cookies 的網站列入。參見 [Cookie 權限](/en-US/Add-ons/WebExtensions/API/cookies#Permissions)一節。
 
-<div> </div>
+## 型別
 
-<p>使用此 API 前，必須先在 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json </a>檔案中加入「cookies」這項 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 權限宣告</a>，也必須以 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host 權限宣告</a>將要存取 Cookies 的網站列入。參見 <a href="/en-US/Add-ons/WebExtensions/API/cookies#Permissions">Cookie 權限</a>一節。</p>
+- {{WebExtAPIRef("cookies.Cookie")}}
+  - : 代表一個 HTTP cookie 的相關資訊。
+- {{WebExtAPIRef("cookies.CookieStore")}}
+  - : 代表瀏覽器中的 cookie 存放空間。
+- {{WebExtAPIRef("cookies.OnChangedCause")}}
+  - : 代表觸發 cookie 資料變動的原因。
 
-<h2 id="型別">型別</h2>
+## 方法
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.Cookie")}}</dt>
- <dd>代表一個 HTTP cookie 的相關資訊。</dd>
- <dt>{{WebExtAPIRef("cookies.CookieStore")}}</dt>
- <dd>代表瀏覽器中的 cookie 存放空間。</dd>
- <dt>{{WebExtAPIRef("cookies.OnChangedCause")}}</dt>
- <dd>代表觸發 cookie 資料變動的原因。</dd>
-</dl>
+- {{WebExtAPIRef("cookies.get()")}}
+  - : 取回單一 cookie 的相關資訊。
+- {{WebExtAPIRef("cookies.getAll()")}}
+  - : 取回符合設定條件的所有 cookies 資訊。
+- {{WebExtAPIRef("cookies.set()")}}
+  - : 為 cookie 設定資料。如果目前已有相同的 cookies，則會覆寫原本的 cookie 資料。
+- {{WebExtAPIRef("cookies.remove()")}}
+  - : 刪除某特定名稱的 cookie。
+- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
+  - : 列出目前所有的 cookie 存放空間。
 
-<h2 id="方法">方法</h2>
+## 事件處理程序
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.get()")}}</dt>
- <dd>取回單一 cookie 的相關資訊。</dd>
- <dt>{{WebExtAPIRef("cookies.getAll()")}}</dt>
- <dd>取回符合設定條件的所有 cookies 資訊。</dd>
- <dt>{{WebExtAPIRef("cookies.set()")}}</dt>
- <dd>為 cookie 設定資料。如果目前已有相同的 cookies，則會覆寫原本的 cookie 資料。</dd>
- <dt>{{WebExtAPIRef("cookies.remove()")}}</dt>
- <dd>刪除某特定名稱的 cookie。</dd>
- <dt>{{WebExtAPIRef("cookies.getAllCookieStores()")}}</dt>
- <dd>列出目前所有的 cookie 存放空間。</dd>
-</dl>
+- {{WebExtAPIRef("cookies.onChanged")}}
+  - : 當 cookie 設定或刪除時觸發。
 
-<h2 id="事件處理程序">事件處理程序</h2>
+## 權限
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.onChanged")}}</dt>
- <dd>當 cookie 設定或刪除時觸發。</dd>
-</dl>
+使用此 API 前，擴充套件應於 manifest.json 設定檔中指明需要「cookies」[API 權限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，亦須以 [host 權限宣告](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)指明需要存取 cookies 的網站清單。此後，符合 host 權限宣告的 URL 所能讀寫的任何 cookies，該擴充套件即可讀取。比方說：
 
-<h2 id="權限">權限</h2>
+- `http://*.example.com/`
 
-<p>使用此 API 前，擴充套件應於 manifest.json 設定檔中指明需要「cookies」<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 權限</a>，亦須以 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host 權限宣告</a>指明需要存取 cookies 的網站清單。此後，符合 host 權限宣告的 URL 所能讀寫的任何 cookies，該擴充套件即可讀取。比方說：</p>
+  - : 若套件有這樣的 host 權限宣告，即可：
 
-<dl>
- <dt><code>http://*.example.com/</code></dt>
- <dd>
- <p>若套件有這樣的 host 權限宣告，即可：</p>
+    - 讀取 `www.example.com` 任何路徑下的非安全 cookie。
+    - 寫入 `www.example.com` 任何路徑下的安全或非安全 cookie。
 
- <ul>
-  <li>讀取 <code>www.example.com</code> 任何路徑下的非安全 cookie。</li>
-  <li>寫入 <code>www.example.com</code> 任何路徑下的安全或非安全 cookie。</li>
- </ul>
+    但*不能*：
 
- <p>但<em>不能</em>：</p>
+    - 讀取 `www.example.com` 下的安全 cookie。
 
- <ul>
-  <li>讀取 <code>www.example.com</code> 下的安全 cookie。</li>
- </ul>
- </dd>
- <dt><code>http://www.example.com/</code></dt>
- <dd>
- <p>若套件有這樣的 host 權限宣告，即可：</p>
+- `http://www.example.com/`
 
- <ul>
-  <li>讀取 <code>www.example.com</code> 任何路徑下的非安全 cookie。</li>
-  <li>讀取 <code>.example.com</code> 任何路徑下的非安全 cookie。</li>
-  <li>寫入 <code>www.example.com</code> 任何路徑下的安全或非安全 cookie。</li>
-  <li>寫入 <code>.example.com</code> 任何路徑下的安全或非安全 cookie。</li>
- </ul>
+  - : 若套件有這樣的 host 權限宣告，即可：
 
- <p>但<em>不能</em>：</p>
+    - 讀取 `www.example.com` 任何路徑下的非安全 cookie。
+    - 讀取 `.example.com` 任何路徑下的非安全 cookie。
+    - 寫入 `www.example.com` 任何路徑下的安全或非安全 cookie。
+    - 寫入 `.example.com` 任何路徑下的安全或非安全 cookie。
 
- <ul>
-  <li>寫入 <code>foo.example.com</code> 的 cookie。</li>
-  <li>寫入 <code>foo.www.example.com</code> 的 cookie。</li>
- </ul>
- </dd>
- <dt><code>*://*.example.com/</code></dt>
- <dd>
- <p>若套件有這樣的 host 權限宣告，即可：</p>
+    但*不能*：
 
- <ul>
-  <li>讀、寫 <code>www.example.com</code> 任何路徑下的安全或非安全 cookie。</li>
- </ul>
- </dd>
-</dl>
+    - 寫入 `foo.example.com` 的 cookie。
+    - 寫入 `foo.www.example.com` 的 cookie。
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+- `*://*.example.com/`
 
-<p>{{Compat}}</p>
+  - : 若套件有這樣的 host 權限宣告，即可：
 
-<h3 id="Edge_不相容資訊">Edge 不相容資訊</h3>
+    - 讀、寫 `www.example.com` 任何路徑下的安全或非安全 cookie。
 
-<p>Edge 不支援 promises，請使用回呼（callback）函式處理。</p>
+## 瀏覽器相容性
 
-<p> {{WebExtExamples("h2")}}</p>
+{{Compat}}
 
-<div class="note">
-<p><strong>備註：</strong> 此 API 基於 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API 而來，文件改作自 Chromium 程式碼裡的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a>。</p>
+### Edge 不相容資訊
 
-<p>Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。</p>
-</div>
+Edge 不支援 promises，請使用回呼（callback）函式處理。
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{WebExtExamples("h2")}}
+
+> **備註：** 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+>
+> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -150,5 +124,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

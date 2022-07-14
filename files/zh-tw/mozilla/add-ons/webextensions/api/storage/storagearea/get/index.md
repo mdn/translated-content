@@ -3,92 +3,100 @@ title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>從儲存空間內檢查一個或多個單元（item）。</p>
+從儲存空間內檢查一個或多個單元（item）。
 
-<p>這個非同步函式會回傳 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>。</p>
+這個非同步函式會回傳 [`Promise`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
-<h2 id="語法">語法</h2>
+## 語法
 
-<pre class="syntaxbox">let gettingItem = browser.storage.&lt;storageType&gt;.get(
-  keys    // null, string, object or array of strings
-)
-</pre>
+    let gettingItem = browser.storage.<storageType>.get(
+      keys    // null, string, object or array of strings
+    )
 
-<p><code>&lt;storageType&gt;</code> 會是以下可覆寫的儲存類型之一：{{WebExtAPIRef("storage.sync")}} 或 {{WebExtAPIRef("storage.local")}}。</p>
+`<storageType>` 會是以下可覆寫的儲存類型之一：{{WebExtAPIRef("storage.sync")}} 或 {{WebExtAPIRef("storage.local")}}。
 
-<h3 id="參數">參數</h3>
+### 參數
 
-<dl>
- <dt><code>keys</code></dt>
- <dd>用來識別要檢查單元的 key（單個為字串；多個為陣列、或指定預設值的物件）。如果把這裡留空（空字串、空陣列、空物件都可以），就會取得空物件。如果是 <code>null</code> 或 undefined，則會取得所有儲存的內容。</dd>
-</dl>
+- `keys`
+  - : 用來識別要檢查單元的 key（單個為字串；多個為陣列、或指定預設值的物件）。如果把這裡留空（空字串、空陣列、空物件都可以），就會取得空物件。如果是 `null` 或 undefined，則會取得所有儲存的內容。
 
-<h3 id="回傳值">回傳值</h3>
+### 回傳值
 
-<p><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a <code>results</code> object containing every object in <code>keys</code> that was found in the storage area. If the operation failed, the promise will be rejected with an error message.</p>
+[`Promise`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `results` object containing every object in `keys` that was found in the storage area. If the operation failed, the promise will be rejected with an error message.
 
-<div class="warning">
-<p><strong>警告：</strong> When used within a content script in Firefox versions prior to 52, the Promise returned by <code>browser.storage.local.get()</code> is fulfilled with an Array containing one Object. The Object in the Array contains the <code>keys</code> found in the storage area, as described above. The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as <code>chrome.storage.local.get()</code>, it correctly passes an Object to the callback function.</p>
-</div>
+> **警告：** When used within a content script in Firefox versions prior to 52, the Promise returned by `browser.storage.local.get()` is fulfilled with an Array containing one Object. The Object in the Array contains the `keys` found in the storage area, as described above. The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.). When this API is used as `chrome.storage.local.get()`, it correctly passes an Object to the callback function.
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("webextensions.api.storage.StorageArea.get")}}</p>
+{{Compat("webextensions.api.storage.StorageArea.get")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>假設儲存空間有以下單元：</p>
+假設儲存空間有以下單元：
 
-<pre class="brush: js">// 兩個單元：「kitten」與「monster」
+```js
+// 兩個單元：「kitten」與「monster」
 browser.storage.local.set({
   kitten:  {name:"Mog", eats:"mice"},
   monster: {name:"Kraken", eats:"people"}
-});</pre>
+});
+```
 
-<p>Define success and failure handlers for the promise:</p>
+Define success and failure handlers for the promise:
 
-<pre class="brush: js">function onGot(item) {
+```js
+function onGot(item) {
   console.log(item);
 }
 
 function onError(error) {
   console.log(`Error: ${error}`);
-}</pre>
+}
+```
 
-<p>With no <code>keys</code> argument, retrieve everything:</p>
+With no `keys` argument, retrieve everything:
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get();
+```js
+let gettingItem = browser.storage.local.get();
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object, monster: Object }</pre>
+// -> Object { kitten: Object, monster: Object }
+```
 
-<p>With an empty keys argument, return nothing:</p>
+With an empty keys argument, return nothing:
 
-<pre class="brush: js">// with an empty array, retrieve nothing
+```js
+// with an empty array, retrieve nothing
 let gettingItem = browser.storage.local.get([]);
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { }</pre>
+// -> Object { }
+```
 
-<p>With the name of an object, retrieve the match:</p>
+With the name of an object, retrieve the match:
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get("kitten");
+```js
+let gettingItem = browser.storage.local.get("kitten");
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object }</pre>
+// -> Object { kitten: Object }
+```
 
-<p>With an array of object names, retrieve all matches:</p>
+With an array of object names, retrieve all matches:
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+```js
+let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
 gettingItem.then(onGot, onError);
 
-// -&gt; Object { kitten: Object, monster: Object } </pre>
+// -> Object { kitten: Object, monster: Object }
+```
 
-<p>With an object with object names as keys and the default value as value:</p>
+With an object with object names as keys and the default value as value:
 
-<pre class="brush: js">let gettingItem = browser.storage.local.get({
+```js
+let gettingItem = browser.storage.local.get({
   kitten: "no kitten",
   monster: "no monster",
   grapefruit: {
@@ -97,25 +105,27 @@ gettingItem.then(onGot, onError);
   }
 });
 
-// -&gt; Object { kitten: Object, monster: Object, grapefruit: Object }
-</pre>
+// -> Object { kitten: Object, monster: Object, grapefruit: Object }
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h3 id="Chrome_示例">Chrome 示例</h3>
+### Chrome 示例
 
-<pre class="brush: js">chrome.storage.local.get("kitten", function(items){
-  console.log(items.kitten);  // -&gt; {name:"Mog", eats:"mice"}
-});</pre>
+```js
+chrome.storage.local.get("kitten", function(items){
+  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+});
+```
 
-<p>Or with an arrow function</p>
+Or with an arrow function
 
-<pre class="brush: js">chrome.storage.local.get("kitten", items=&gt;{
-  console.log(items.kitten); // -&gt; {name:"Mog", eats:"mice"}
-});</pre>
+```js
+chrome.storage.local.get("kitten", items=>{
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
+});
+```
 
-<div class="note">
-<p><strong>備註：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **備註：** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

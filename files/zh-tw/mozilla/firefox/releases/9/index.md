@@ -5,173 +5,147 @@ translation_of: Mozilla/Firefox/Releases/9
 ---
 {{FirefoxSidebar}}
 
-<p>Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.</p>
+Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The <code>value</code> attribute of <a href="/zh-TW/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a> now can be negative as specified in HTML5. Previously negative values were converted to 0.</li>
- <li>You can now <a href="/en-US/docs/Using_HTML5_audio_and_video#Specifying_playback_range">specify the start and stop time of media</a> in the URI of the media when using <a href="/zh-TW/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> and <a href="/zh-TW/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> elements.</li>
- <li><a href="/zh-TW/docs/Web/HTML/Element/input"> element is used to create interactive controls for web-based forms in order to accept data from the user."><code>&lt;input&gt;</code></a> and <a href="/zh-TW/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> elements <a href="/en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language">now respect the value of the <code>lang</code> attribute</a> when invoking the spell checker.</li>
- <li>Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the <a href="/zh-TW/docs/Web/HTML/Element/input"> element is used to create interactive controls for web-based forms in order to accept data from the user."><code>&lt;input&gt;</code></a> element is used with <code>type="file"</code> and <code>accept="image/*"</code>.</li>
- <li>Windows Vista style PNG ICO images are now supported.</li>
- <li>Drawing images that use the <a href="/en-US/docs/HTML/CORS_settings_attributes"><code>crossorigin</code></a> attribute to request CORS access no longer incorrectly <a href="/en-US/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">taint the canvas</a> when CORS is granted.</li>
- <li>The value of the <code><a href="/zh-TW/docs/Web/HTML/Element/td#attr-rowspan">rowspan</a></code> attribute may now be as large as 65,534, up from 8190.</li>
-</ul>
+- The `value` attribute of [`<li>`](/zh-TW/docs/Web/HTML/Element/li) now can be negative as specified in HTML5. Previously negative values were converted to 0.
+- You can now [specify the start and stop time of media](/en-US/docs/Using_HTML5_audio_and_video#Specifying_playback_range) in the URI of the media when using [`<audio>`](/zh-TW/docs/Web/HTML/Element/audio) and [`<video>`](/zh-TW/docs/Web/HTML/Element/video) elements.
+- [element is used to create interactive controls for web-based forms in order to accept data from the user.">`<input>`](/zh-TW/docs/Web/HTML/Element/input) and [`<textarea>`](/zh-TW/docs/Web/HTML/Element/textarea) elements [now respect the value of the `lang` attribute](/en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language) when invoking the spell checker.
+- Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the [element is used to create interactive controls for web-based forms in order to accept data from the user.">`<input>`](/zh-TW/docs/Web/HTML/Element/input) element is used with `type="file"` and `accept="image/*"`.
+- Windows Vista style PNG ICO images are now supported.
+- Drawing images that use the [`crossorigin`](/en-US/docs/HTML/CORS_settings_attributes) attribute to request CORS access no longer incorrectly [taint the canvas](/en-US/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F) when CORS is granted.
+- The value of the [`rowspan`](/zh-TW/docs/Web/HTML/Element/td#attr-rowspan) attribute may now be as large as 65,534, up from 8190.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>The <a href="/zh-TW/docs/Web/CSS/font-stretch"><code>font-stretch</code></a> property is now supported.</li>
- <li>The <a href="/zh-TW/docs/Web/CSS/columns"><code>columns</code></a> property is now supported, with the <code>-moz</code> prefix. This is a shorthand for the following properties: <a href="/zh-TW/docs/Web/CSS/column-width"><code>column-width</code></a> and <a href="/zh-TW/docs/Web/CSS/column-count"><code>column-count</code></a>.</li>
- <li>When a stylesheet included using the <a href="/zh-TW/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> element has been fully loaded and parsed (but not yet applied to the document), a <a href="/en-US/docs/HTML/Element/link#Stylesheet_load_events"><code>load</code> event</a> is now fired. Also, if an error occurs processing a style sheet, an <code>error</code> event is fired.</li>
- <li>You can now specify overflow settings for both the left and right edges of content using a new two-value syntax for <a href="/zh-TW/docs/Web/CSS/text-overflow"><code>text-overflow</code></a>.</li>
-</ul>
+- The [`font-stretch`](/zh-TW/docs/Web/CSS/font-stretch) property is now supported.
+- The [`columns`](/zh-TW/docs/Web/CSS/columns) property is now supported, with the `-moz` prefix. This is a shorthand for the following properties: [`column-width`](/zh-TW/docs/Web/CSS/column-width) and [`column-count`](/zh-TW/docs/Web/CSS/column-count).
+- When a stylesheet included using the [`<link>`](/zh-TW/docs/Web/HTML/Element/link) element has been fully loaded and parsed (but not yet applied to the document), a [`load` event](/en-US/docs/HTML/Element/link#Stylesheet_load_events) is now fired. Also, if an error occurs processing a style sheet, an `error` event is fired.
+- You can now specify overflow settings for both the left and right edges of content using a new two-value syntax for [`text-overflow`](/zh-TW/docs/Web/CSS/text-overflow).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p><em>No change.</em></p>
+_No change._
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<dl>
- <dt><a href="/en-US/docs/DOM/Using_full-screen_mode">Using full-screen mode</a></dt>
- <dd>The new full-screen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.</dd>
-</dl>
+- [Using full-screen mode](/en-US/docs/DOM/Using_full-screen_mode)
+  - : The new full-screen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.
 
-<ul>
- <li>The <a href="/zh-TW/docs/Web/API/Node/contains"><code>Node.contains()</code></a> method is now implemented; this lets you determine if a given node is a descendant of another node.</li>
- <li>The <a href="/zh-TW/docs/Web/API/Node/parentElement"><code>Node.parentElement</code></a> attribute has been implemented; this returns the parent <a href="/zh-TW/docs/Web/API/Element"><code>Element</code></a> of a DOM node, or <code>null</code> if the parent isn't an element.</li>
- <li>DOM Level 3 <a href="/en-US/docs/DOM/CompositionEvent">composition events</a> are now supported.</li>
- <li>The <a href="/zh-TW/docs/Web/API/Document/scripts"><code>Document.scripts</code></a> attribute has been implemented; this returns an <a href="/zh-TW/docs/Web/API/HTMLCollection"><code>HTMLCollection</code></a> of all the <a href="/zh-TW/docs/Web/HTML/Element/script"> 元素能嵌入或引用要執行的程式碼。最常見的用途是嵌入或引用 JavaScript 程式碼。"><code>&lt;script&gt;</code></a> elements on the document.</li>
- <li>The <a href="/zh-TW/docs/Web/API/Document/queryCommandSupported"><code>Document.queryCommandSupported()</code></a> method has been implemented.</li>
- <li>The set of events that can be listened for on <a href="/zh-TW/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a> elements has been revised to match the latest draft of the HTML5 specification. The list of events in the <a href="/en-US/docs/DOM/DOM_event_reference">DOM event reference</a> reflects which events can be listened for on <a href="/zh-TW/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a>.</li>
- <li>The <code>readystatechange</code> event is now fired only on the <a href="/zh-TW/docs/Web/API/Document"><code>Document</code></a>, as intended.</li>
- <li>Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but <a href="/en-US/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9">there are exceptions</a>.</li>
- <li>A new response type, "<code>moz-json</code>", has been added to <code>XMLHttpRequest</code>, letting <code>XMLHttpRequest</code> automatically parse <a href="/en-US/docs/JSON">JSON</a> strings for you; when you request this type, a returned JSON string is parsed, so that the value of the <code>response</code> property is the resulting JavaScript object.</li>
- <li><a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress"><code>XMLHttpRequest</code> "progress" events</a> are now reliably sent for every chunk of data received; in the past it was possible for the last chunk of data received to not fire a "progress" event. Now you can track progress by following only "progress" events, instead of also having to monitor "load" events to detect the receipt of the last chunk of data.</li>
- <li>In the past, calling <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> with a <code>null</code> listener would throw an exception. Now it returns without error and with no effect.</li>
- <li>The new <a href="/zh-TW/docs/Web/API/Navigator/doNotTrack"><code>navigator.doNotTrack</code></a> property lets your content easily determine whether or not the user has enabled their do-no-track preference; if this value is "yes", you should not track the user.</li>
- <li><a href="/zh-TW/docs/Web/API/Range"><code>Range</code></a> and <a href="/zh-TW/docs/Web/API/Selection"><code>Selection</code></a> objects now behave according to their specifications when <a href="/zh-TW/docs/Web/API/Text/splitText"><code>splitText()</code></a> and <a href="/zh-TW/docs/Web/API/Node/normalize"><code>normalize()</code></a> are called.</li>
- <li>The value of <a href="/zh-TW/docs/Web/API/Node/ownerDocument"><code>Node.ownerDocument</code></a> for doctype nodes is now the document on which <a href="/en-US/docs/DOM/DOMImplementation.createDocumentType"><code>createDocumentType()</code></a> was called to create the node, instead of <code>null</code>.</li>
- <li><code>window.navigator.taintEnabled</code> has been removed; it has not been supported in many years.</li>
-</ul>
+<!---->
 
-<h3 id="Workers">Workers</h3>
+- The [`Node.contains()`](/zh-TW/docs/Web/API/Node/contains) method is now implemented; this lets you determine if a given node is a descendant of another node.
+- The [`Node.parentElement`](/zh-TW/docs/Web/API/Node/parentElement) attribute has been implemented; this returns the parent [`Element`](/zh-TW/docs/Web/API/Element) of a DOM node, or `null` if the parent isn't an element.
+- DOM Level 3 [composition events](/en-US/docs/DOM/CompositionEvent) are now supported.
+- The [`Document.scripts`](/zh-TW/docs/Web/API/Document/scripts) attribute has been implemented; this returns an [`HTMLCollection`](/zh-TW/docs/Web/API/HTMLCollection) of all the [元素能嵌入或引用要執行的程式碼。最常見的用途是嵌入或引用 JavaScript 程式碼。">`<script>`](/zh-TW/docs/Web/HTML/Element/script) elements on the document.
+- The [`Document.queryCommandSupported()`](/zh-TW/docs/Web/API/Document/queryCommandSupported) method has been implemented.
+- The set of events that can be listened for on [`<body>`](/zh-TW/docs/Web/HTML/Element/body) elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM event reference](/en-US/docs/DOM/DOM_event_reference) reflects which events can be listened for on [`<body>`](/zh-TW/docs/Web/HTML/Element/body).
+- The `readystatechange` event is now fired only on the [`Document`](/zh-TW/docs/Web/API/Document), as intended.
+- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but [there are exceptions](/en-US/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9).
+- A new response type, "`moz-json`", has been added to `XMLHttpRequest`, letting `XMLHttpRequest` automatically parse [JSON](/en-US/docs/JSON) strings for you; when you request this type, a returned JSON string is parsed, so that the value of the `response` property is the resulting JavaScript object.
+- [`XMLHttpRequest` "progress" events](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress) are now reliably sent for every chunk of data received; in the past it was possible for the last chunk of data received to not fire a "progress" event. Now you can track progress by following only "progress" events, instead of also having to monitor "load" events to detect the receipt of the last chunk of data.
+- In the past, calling [`addEventListener()`](/en-US/docs/DOM/element.addEventListener) with a `null` listener would throw an exception. Now it returns without error and with no effect.
+- The new [`navigator.doNotTrack`](/zh-TW/docs/Web/API/Navigator/doNotTrack) property lets your content easily determine whether or not the user has enabled their do-no-track preference; if this value is "yes", you should not track the user.
+- [`Range`](/zh-TW/docs/Web/API/Range) and [`Selection`](/zh-TW/docs/Web/API/Selection) objects now behave according to their specifications when [`splitText()`](/zh-TW/docs/Web/API/Text/splitText) and [`normalize()`](/zh-TW/docs/Web/API/Node/normalize) are called.
+- The value of [`Node.ownerDocument`](/zh-TW/docs/Web/API/Node/ownerDocument) for doctype nodes is now the document on which [`createDocumentType()`](/en-US/docs/DOM/DOMImplementation.createDocumentType) was called to create the node, instead of `null`.
+- `window.navigator.taintEnabled` has been removed; it has not been supported in many years.
 
-<ul>
- <li>Workers implemented in blob URLs were broken in Firefox 8, and work again starting in Firefox 9.</li>
-</ul>
+### Workers
 
-<h3 id="WebGL">WebGL</h3>
+- Workers implemented in blob URLs were broken in Firefox 8, and work again starting in Firefox 9.
 
-<ul>
- <li>The <a href="/en-US/docs/WebGL">WebGL</a> context <code>drawingBufferWidth</code> and <code>drawingBufferHeight</code> attributes are now supported.</li>
-</ul>
+### WebGL
 
-<h3 id="MathML">MathML</h3>
+- The [WebGL](/en-US/docs/WebGL) context `drawingBufferWidth` and `drawingBufferHeight` attributes are now supported.
 
-<ul>
- <li>The non-standard <code>restyle</code> value for the <code>actiontype</code> attribute on <code><a href="/zh-TW/docs/Web/MathML/Element/maction">">&lt;maction&gt;</a></code> elements has been removed.</li>
- <li>While still unsupported, using the <code><a href="/zh-TW/docs/Web/MathML/Element/mlabeledtr">">&lt;mlabeledtr&gt;</a></code> element no longer breaks rendering completely. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=689641">bug 689641</a> for progress on actual support of this element.</li>
-</ul>
+### MathML
 
-<h3 id="Networking">Networking</h3>
+- The non-standard `restyle` value for the `actiontype` attribute on [`"><maction>`](/zh-TW/docs/Web/MathML/Element/maction) elements has been removed.
+- While still unsupported, using the [`"><mlabeledtr>`](/zh-TW/docs/Web/MathML/Element/mlabeledtr) element no longer breaks rendering completely. See [bug 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) for progress on actual support of this element.
 
-<ul>
- <li>You can now send the contents of <a href="/en-US/docs/JavaScript_typed_arrays">JavaScript typed arrays</a> (that is, the contents of an <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> object) <a href="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data">using XMLHttpRequest</a>.</li>
- <li>WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.</li>
- <li>The HTTP <code>Accept</code> header for XSLT requests has been changed to simply "*/*" for simplicity. Since fetching XSLT has always fallen back to "*/*" anyway, it made sense to simplify the initial request.</li>
- <li>Attempts by a server to use the <code>301 Moved Permanently</code> or <code>307 Temporary Redirect</code> response codes to redirect the user to a <code>javascript:</code> URI now <a href="/en-US/docs/HTTP#More_on_redirection_responses">result in a "bad connection" error</a> instead of actually redirecting. This prevents certain types of cross-site scripting attacks.</li>
- <li>Content served with an empty <a href="/zh-TW/docs/Web/HTTP/Headers/Content-Disposition"><code>Content-Disposition</code></a> were previously treated as if the <a href="/zh-TW/docs/Web/HTTP/Headers/Content-Disposition"><code>Content-Disposition</code></a> were "attachment"; this didn't always work as expected. These are now handled as if the <a href="/zh-TW/docs/Web/HTTP/Headers/Content-Disposition"><code>Content-Disposition</code></a> were "inline".</li>
- <li>The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.</li>
-</ul>
+### Networking
 
-<h3 id="Developer_tools">Developer tools</h3>
+- You can now send the contents of [JavaScript typed arrays](/en-US/docs/JavaScript_typed_arrays) (that is, the contents of an [`ArrayBuffer`](/en-US/docs/JavaScript_typed_arrays/ArrayBuffer) object) [using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data).
+- WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
+- The HTTP `Accept` header for XSLT requests has been changed to simply "\*/\*" for simplicity. Since fetching XSLT has always fallen back to "\*/\*" anyway, it made sense to simplify the initial request.
+- Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/en-US/docs/HTTP#More_on_redirection_responses) instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
+- Content served with an empty [`Content-Disposition`](/zh-TW/docs/Web/HTTP/Headers/Content-Disposition) were previously treated as if the [`Content-Disposition`](/zh-TW/docs/Web/HTTP/Headers/Content-Disposition) were "attachment"; this didn't always work as expected. These are now handled as if the [`Content-Disposition`](/zh-TW/docs/Web/HTTP/Headers/Content-Disposition) were "inline".
+- The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
 
-<ul>
- <li>The web console now supports basic <a href="/en-US/docs/Using_the_Web_Console#String_substitutions">string substitutions</a> in its logging methods.</li>
- <li>You can now <a href="/en-US/docs/Using_the_Web_Console#Using_groups_in_the_console">create visually nested blocks of output</a> in the web console, to help make it easier to read.</li>
-</ul>
+### Developer tools
 
-<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+- The web console now supports basic [string substitutions](/en-US/docs/Using_the_Web_Console#String_substitutions) in its logging methods.
+- You can now [create visually nested blocks of output](/en-US/docs/Using_the_Web_Console#Using_groups_in_the_console) in the web console, to help make it easier to read.
 
-<p>See <a href="/en-US/docs/Firefox/Updating_add-ons_for_Firefox_9">Updating add-ons for Firefox 9</a> for an overview of the changes you may need to make to get your add-ons working in Firefox 9.</p>
+## Changes for Mozilla and add-on developers
 
-<h3 id="XUL">XUL</h3>
+See [Updating add-ons for Firefox 9](/en-US/docs/Firefox/Updating_add-ons_for_Firefox_9) for an overview of the changes you may need to make to get your add-ons working in Firefox 9.
 
-<ul>
- <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/tab">tab</a></code> element now has a <code id="a-pending"><a href="/zh-TW/docs/Mozilla/Tech/XUL/Attribute/pending">pending</a></code> attribute, whose value is <code>true</code>, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.</li>
- <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/tab">tab</a></code> element now has an <code id="a-unread"><a href="/zh-TW/docs/Mozilla/Tech/XUL/Attribute/unread">unread</a></code> attribute, whose value is <code>true</code>, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.</li>
- <li>You can now use a <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/panel">panel</a></code> as a drag image for DOM drag and drop operations. This lets you use the standard drag &amp; drop API for <a href="/en-US/docs/DragDrop/Drag_Operations#Using_XUL_panels_as_drag_images">drag and drop of XUL content</a>.</li>
- <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/notificationbox">notificationbox</a></code> element's <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/Method/appendNotification">appendNotification</a></code> method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.</li>
-</ul>
+### XUL
 
-<h3 id="JavaScript_code_module_changes">JavaScript code module changes</h3>
+- The [`tab`](/zh-TW/docs/Mozilla/Tech/XUL/tab) element now has a [`pending`](/zh-TW/docs/Mozilla/Tech/XUL/Attribute/pending) attribute, whose value is `true`, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.
+- The [`tab`](/zh-TW/docs/Mozilla/Tech/XUL/tab) element now has an [`unread`](/zh-TW/docs/Mozilla/Tech/XUL/Attribute/unread) attribute, whose value is `true`, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.
+- You can now use a [`panel`](/zh-TW/docs/Mozilla/Tech/XUL/panel) as a drag image for DOM drag and drop operations. This lets you use the standard drag & drop API for [drag and drop of XUL content](/en-US/docs/DragDrop/Drag_Operations#Using_XUL_panels_as_drag_images).
+- The [`notificationbox`](/zh-TW/docs/Mozilla/Tech/XUL/notificationbox) element's [`appendNotification`](/zh-TW/docs/Mozilla/Tech/XUL/Method/appendNotification) method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
 
-<ul>
- <li><a href="/en-US/docs/JavaScript_code_modules/FileUtils.jsm"><code>FileUtils.jsm</code></a> now has a <code>File</code> constructor that returns an <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile">nsIFile</a></code> object representing a file specified by its pathname.</li>
-</ul>
+### JavaScript code module changes
 
-<h3 id="Service_changes">Service changes</h3>
+- [`FileUtils.jsm`](/en-US/docs/JavaScript_code_modules/FileUtils.jsm) now has a `File` constructor that returns an [`nsIFile`](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile) object representing a file specified by its pathname.
 
-<ul>
- <li>The content preference service now <a href="/en-US/docs/Using_content_preferences#private-browsing">handles private mode browsing</a> (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=679784">bug 679784</a>).</li>
-</ul>
+### Service changes
 
-<h3 id="NSPR">NSPR</h3>
+- The content preference service now [handles private mode browsing](/en-US/docs/Using_content_preferences#private-browsing) (see [bug 679784](https://bugzilla.mozilla.org/show_bug.cgi?id=679784)).
 
-<ul>
- <li>NSPR now has an "append" module, which lets you append new data to the end of an existing log.</li>
-</ul>
+### NSPR
 
-<h3 id="Interface_changes">Interface changes</h3>
+- NSPR now has an "append" module, which lets you append new data to the end of an existing log.
 
-<h4 id="Removed_interfaces">Removed interfaces</h4>
+### Interface changes
 
-<ul>
- <li><code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIGlobalHistory3">nsIGlobalHistory3</a></code> has been removed during streamlining of the Places and DocShell code.</li>
-</ul>
+#### Removed interfaces
 
-<h4 id="Miscellaneous_interface_changes">Miscellaneous interface changes</h4>
+- [`nsIGlobalHistory3`](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIGlobalHistory3) has been removed during streamlining of the Places and DocShell code.
 
-<ul>
- <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISound">nsISound</a></code> interface has a new constant, <code>EVENT_EDITOR_MAX_LEN</code>. The allows for playing the system sound for when more characters than the maximum allowed are typed into a text field. Currently, this is only used on Windows.</li>
- <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptError2">nsIScriptError2</a></code> interface has new <code>timeStamp</code> and <code>innerWindowID</code> properties; in addition, the <code>initWithWindowID()</code> method now takes an inner window ID instead of an outer window ID.</li>
- <li>The <code><a href="/zh-TW/docs/XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards">nsIBidiKeyboard.haveBidiKeyboards</a></code> attribute has been added; this lets you determine if the system has at least one keyboard installed for each direction: left-to-right and right-to-left.</li>
- <li>The new <code><a href="/zh-TW/docs/XPCOM_Interface_Reference/nsIEditor#isSelectionEditable">nsIEditor.isSelectionEditable</a></code> attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.</li>
- <li>The <code><a href="/zh-TW/docs/XPCOM_Interface_Reference/nsIBrowserHistory#registerOpenPage()">nsIBrowserHistory.registerOpenPage()</a></code> and <code><a href="/zh-TW/docs/XPCOM_Interface_Reference/nsIBrowserHistory#unregisterOpenPage()">nsIBrowserHistory.unregisterOpenPage()</a></code> methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIPlacesAutoComplete">mozIPlacesAutoComplete</a></code> instead.</li>
- <li>The <code><a href="/zh-TW/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils#wrapDOMFile()">nsIDOMWindowUtils.wrapDOMFile()</a></code> method has been added; this returns a DOM <a href="/zh-TW/docs/Web/API/File"><code>File</code></a> object for a given <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile">nsIFile</a></code>.</li>
- <li>The <code><a href="/zh-TW/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#removeDelayedFrameScript()">nsIChromeFrameMessageManager.removeDelayedFrameScript()</a></code> method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using <code><a href="/zh-TW/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#loadFrameScript()">nsIChromeFrameMessageManager.loadFrameScript()</a></code> with the delayed load flag set. This is exposed to add-ons as <code>browser.messageManager.removeDelayedFrameScript()</code>.</li>
- <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppStartup">nsIAppStartup</a></code> interface has a new <code>interrupted</code> attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.</li>
- <li>The <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEditorSpellCheck">nsIEditorSpellCheck</a></code> interface has been revised to support per-site selection of spell checker dictionaries.</li>
-</ul>
+#### Miscellaneous interface changes
 
-<h3 id="IDL_parser">IDL parser</h3>
+- The [`nsISound`](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISound) interface has a new constant, `EVENT_EDITOR_MAX_LEN`. The allows for playing the system sound for when more characters than the maximum allowed are typed into a text field. Currently, this is only used on Windows.
+- The [`nsIScriptError2`](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptError2) interface has new `timeStamp` and `innerWindowID` properties; in addition, the `initWithWindowID()` method now takes an inner window ID instead of an outer window ID.
+- The [`nsIBidiKeyboard.haveBidiKeyboards`](/zh-TW/docs/XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards) attribute has been added; this lets you determine if the system has at least one keyboard installed for each direction: left-to-right and right-to-left.
+- The new [`nsIEditor.isSelectionEditable`](/zh-TW/docs/XPCOM_Interface_Reference/nsIEditor#isSelectionEditable) attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.
+- The [`nsIBrowserHistory.registerOpenPage()`](</zh-TW/docs/XPCOM_Interface_Reference/nsIBrowserHistory#registerOpenPage()>) and [`nsIBrowserHistory.unregisterOpenPage()`](</zh-TW/docs/XPCOM_Interface_Reference/nsIBrowserHistory#unregisterOpenPage()>) methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in [`mozIPlacesAutoComplete`](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIPlacesAutoComplete) instead.
+- The [`nsIDOMWindowUtils.wrapDOMFile()`](</zh-TW/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils#wrapDOMFile()>) method has been added; this returns a DOM [`File`](/zh-TW/docs/Web/API/File) object for a given [`nsIFile`](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile).
+- The [`nsIChromeFrameMessageManager.removeDelayedFrameScript()`](</zh-TW/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#removeDelayedFrameScript()>) method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using [`nsIChromeFrameMessageManager.loadFrameScript()`](</zh-TW/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#loadFrameScript()>) with the delayed load flag set. This is exposed to add-ons as `browser.messageManager.removeDelayedFrameScript()`.
+- The [`nsIAppStartup`](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppStartup) interface has a new `interrupted` attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.
+- The [`nsIEditorSpellCheck`](/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEditorSpellCheck) interface has been revised to support per-site selection of spell checker dictionaries.
 
-<p>The IDL parser no longer includes support for the never fully-implemented notion of unique pointers.</p>
+### IDL parser
 
-<h3 id="Build_system_changes">Build system changes</h3>
+The IDL parser no longer includes support for the never fully-implemented notion of unique pointers.
 
-<ul>
- <li>The <code>--enable-application=standalone</code> option for building standalone XPConnect has been removed; it hasn't worked since 2007 anyway.</li>
- <li>Support for building Necko and Transformiix XSLT standalone has been removed; you can no longer use <code>--enable-application=network</code> or <code>--enable-application=content/xslt</code>.</li>
- <li>The build system now looks for <code>.mozconfig</code> at <code>$topsrcdir/.mozconfig</code> or <code>$topsrcdir/mozconfig</code>, and nowhere else, unless you override the <code>.mozconfig</code> path using the <code>MOZCONFIG</code> environment variable.</li>
- <li>The <code>xpidl</code> utility has been replaced in the SDK with <a href="/en-US/docs/XPIDL/pyxpidl">pyxpidl</a>.</li>
-</ul>
+### Build system changes
 
-<h3 id="Other_changes">Other changes</h3>
+- The `--enable-application=standalone` option for building standalone XPConnect has been removed; it hasn't worked since 2007 anyway.
+- Support for building Necko and Transformiix XSLT standalone has been removed; you can no longer use `--enable-application=network` or `--enable-application=content/xslt`.
+- The build system now looks for `.mozconfig` at `$topsrcdir/.mozconfig` or `$topsrcdir/mozconfig`, and nowhere else, unless you override the `.mozconfig` path using the `MOZCONFIG` environment variable.
+- The `xpidl` utility has been replaced in the SDK with [pyxpidl](/en-US/docs/XPIDL/pyxpidl).
 
-<ul>
- <li>The spell checker no longer has an arbitrary 130-character word-length limit on the length of words it will attempt to spell check. This limit was previously in place to prevent crashes that were occurring in the spell checker, but the underlying bugs have since been fixed.</li>
- <li>You can now register components to add features to the <a href="/zh-TW/docs/Web/API/Window/navigator"><code>window.navigator</code></a> object by using the "JavaScript-navigator-property" category. See <a href="/en-US/docs/Developer_Guide/Adding_APIs_to_the_navigator_object">Adding APIs to the navigator object</a> for details and examples.</li>
-</ul>
+### Other changes
 
-<h2 id="See_also">See also</h2>
+- The spell checker no longer has an arbitrary 130-character word-length limit on the length of words it will attempt to spell check. This limit was previously in place to prevent crashes that were occurring in the spell checker, but the underlying bugs have since been fixed.
+- You can now register components to add features to the [`window.navigator`](/zh-TW/docs/Web/API/Window/navigator) object by using the "JavaScript-navigator-property" category. See [Adding APIs to the navigator object](/en-US/docs/Developer_Guide/Adding_APIs_to_the_navigator_object) for details and examples.
 
-<div>
-<ul>
-<li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/8">Firefox 8 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/6">Firefox 6 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/5">Firefox 5 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/4">Firefox 4 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/2">Firefox 2 for developers</a></li><li><a href="/zh-TW/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5 for developers</a></li></ul>
-</div>
+## See also
+
+- [Firefox 8 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/8)
+- [Firefox 7 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/7)
+- [Firefox 6 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/6)
+- [Firefox 5 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/5)
+- [Firefox 4 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/4)
+- [Firefox 3.6 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/3.6)
+- [Firefox 3.5 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/1.5)

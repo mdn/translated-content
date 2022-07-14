@@ -3,54 +3,47 @@ title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>代表 <code>local</code> 儲存空間。通常 <code>local</code> 裡面的東西，會放在套件安裝的地方。</p>
+代表 `local` 儲存空間。通常 `local` 裡面的東西，會放在套件安裝的地方。
 
-<p>瀏覽器可能會限制套件本地可儲存的資料數量：</p>
+瀏覽器可能會限制套件本地可儲存的資料數量：
 
-<ul>
- <li>Chrome 限制套件內用到此 API 資料的上限為 5MB，除非有 <a href="/zh-TW/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage">unlimitedStorage</a> 權限。</li>
- <li>56 版以後的 Firefox 將能要求 unlimitedStorage 權限。目前 Firefox 還沒有限制套件內的資料上限，但這功能會在未來引入：因此，如果可能會儲存大容量的資料，最好要實做 unlimitedStorage 的請求。</li>
-</ul>
+- Chrome 限制套件內用到此 API 資料的上限為 5MB，除非有 [unlimitedStorage](/zh-TW/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage) 權限。
+- 56 版以後的 Firefox 將能要求 unlimitedStorage 權限。目前 Firefox 還沒有限制套件內的資料上限，但這功能會在未來引入：因此，如果可能會儲存大容量的資料，最好要實做 unlimitedStorage 的請求。
 
-<p>如果套件被移除、相關的儲存資料也會一併移除。</p>
+如果套件被移除、相關的儲存資料也會一併移除。
 
-<p>在 Firefox 內，你可以透過 about:config 內設定 keepUuidOnUninstall 與 keepStorageOnUninstall 為 <code>true</code> 以避免瀏覽器在移除套件時，一併移除相關的儲存資料。這個功能是為了方便開發者除錯，套件本身無法改變這個設定。</p>
+在 Firefox 內，你可以透過 about:config 內設定 keepUuidOnUninstall 與 keepStorageOnUninstall 為 `true` 以避免瀏覽器在移除套件時，一併移除相關的儲存資料。這個功能是為了方便開發者除錯，套件本身無法改變這個設定。
 
-<p>雖然這 API 與 {{domxref("Window.localStorage")}} 相似，但不建議在套件內使用 <code>Window.localStorage</code>。在某些情況下，用戶會出於隱私上的理由，要求 Firefox 清理瀏覽紀錄與資料，這其中就包含使用 localStorage API 的資料。另一方面，storage.local API 的資料，在這種情況下會予以保留。</p>
+雖然這 API 與 {{domxref("Window.localStorage")}} 相似，但不建議在套件內使用 `Window.localStorage`。在某些情況下，用戶會出於隱私上的理由，要求 Firefox 清理瀏覽紀錄與資料，這其中就包含使用 localStorage API 的資料。另一方面，storage.local API 的資料，在這種情況下會予以保留。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><code>local</code> 物件實做了定義於 {{WebExtAPIRef("storage.StorageArea")}} 類別的方法：</p>
+`local` 物件實做了定義於 {{WebExtAPIRef("storage.StorageArea")}} 類別的方法：
 
-<dl>
- <dt>{{WebExtAPIRef("storage.StorageArea.get()")}}</dt>
- <dd>取得一個或多個源自儲存空間的項目。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}</dt>
- <dd>取得儲存空間內，一個或多個已為項目所使用的容量。單位為 byte。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.set()")}}</dt>
- <dd>Stores one or more items in the storage area. If the item already exists, its value will be updated. When you set a value, the {{WebExtAPIRef("storage.onChanged")}} event will fire.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.remove()")}}</dt>
- <dd>刪除一個或多個儲存空間內的項目。</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.clear()")}}</dt>
- <dd>刪除所有儲存空間內的項目。</dd>
-</dl>
+- {{WebExtAPIRef("storage.StorageArea.get()")}}
+  - : 取得一個或多個源自儲存空間的項目。
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
+  - : 取得儲存空間內，一個或多個已為項目所使用的容量。單位為 byte。
+- {{WebExtAPIRef("storage.StorageArea.set()")}}
+  - : Stores one or more items in the storage area. If the item already exists, its value will be updated. When you set a value, the {{WebExtAPIRef("storage.onChanged")}} event will fire.
+- {{WebExtAPIRef("storage.StorageArea.remove()")}}
+  - : 刪除一個或多個儲存空間內的項目。
+- {{WebExtAPIRef("storage.StorageArea.clear()")}}
+  - : 刪除所有儲存空間內的項目。
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
-<p>{{Compat("webextensions.api.storage.local")}}</p>
+{{Compat("webextensions.api.storage.local")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>備註：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage#property-local"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
+> **備註：** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-local) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,5 +70,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
