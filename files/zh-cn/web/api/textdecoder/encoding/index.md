@@ -80,4 +80,4 @@ translation_of: Web/api/TextDecoder/encoding
 
 ## 参见
 
-- The {{DOMxRef("TextDecoder")}} interface it belongs to.
+- 属于 {{DOMxRef("TextDecoder")}} 接口。
