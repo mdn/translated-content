@@ -951,8 +951,8 @@
 /fr/docs/DOM/element.offsetWidth	/fr/docs/Web/API/HTMLElement/offsetWidth
 /fr/docs/DOM/element.onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/DOM/element.onchange	/fr/docs/Web/API/HTMLElement/change_event
-/fr/docs/DOM/element.onclick	/fr/docs/conflicting/Web/API/Element/click_event
-/fr/docs/DOM/element.ondblclick	/fr/docs/conflicting/Web/API/Element/dblclick_event
+/fr/docs/DOM/element.onclick	/fr/docs/Web/API/Element/click_event
+/fr/docs/DOM/element.ondblclick	/fr/docs/Web/API/Element/dblclick_event
 /fr/docs/DOM/element.onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/DOM/element.onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/DOM/element.onkeypress	/fr/docs/Web/API/Element/keypress_event
@@ -1109,8 +1109,8 @@
 /fr/docs/DOM:element.offsetWidth	/fr/docs/Web/API/HTMLElement/offsetWidth
 /fr/docs/DOM:element.onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/DOM:element.onchange	/fr/docs/Web/API/HTMLElement/change_event
-/fr/docs/DOM:element.onclick	/fr/docs/conflicting/Web/API/Element/click_event
-/fr/docs/DOM:element.ondblclick	/fr/docs/conflicting/Web/API/Element/dblclick_event
+/fr/docs/DOM:element.onclick	/fr/docs/Web/API/Element/click_event
+/fr/docs/DOM:element.ondblclick	/fr/docs/Web/API/Element/dblclick_event
 /fr/docs/DOM:element.onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/DOM:element.onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/DOM:element.onkeypress	/fr/docs/Web/API/Element/keypress_event
@@ -1878,7 +1878,7 @@
 /fr/docs/HTML/Element/audio	/fr/docs/Web/HTML/Element/audio
 /fr/docs/HTML/Element/b	/fr/docs/Web/HTML/Element/b
 /fr/docs/HTML/Element/base	/fr/docs/Web/HTML/Element/base
-/fr/docs/HTML/Element/basefont	/fr/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95
+/fr/docs/HTML/Element/basefont	/fr/docs/Web/CSS/CSS_Fonts
 /fr/docs/HTML/Element/bdi	/fr/docs/Web/HTML/Element/bdi
 /fr/docs/HTML/Element/bdo	/fr/docs/Web/HTML/Element/bdo
 /fr/docs/HTML/Element/bgsound	/fr/docs/Web/HTML/Element/bgsound
@@ -3729,8 +3729,8 @@
 /fr/docs/Web/API/Element.offsetWidth	/fr/docs/Web/API/HTMLElement/offsetWidth
 /fr/docs/Web/API/Element.onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/Web/API/Element.onchange	/fr/docs/Web/API/HTMLElement/change_event
-/fr/docs/Web/API/Element.onclick	/fr/docs/conflicting/Web/API/Element/click_event
-/fr/docs/Web/API/Element.ondblclick	/fr/docs/conflicting/Web/API/Element/dblclick_event
+/fr/docs/Web/API/Element.onclick	/fr/docs/Web/API/Element/click_event
+/fr/docs/Web/API/Element.ondblclick	/fr/docs/Web/API/Element/dblclick_event
 /fr/docs/Web/API/Element.onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/Web/API/Element.onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/Web/API/Element.onkeypress	/fr/docs/Web/API/Element/keypress_event
@@ -3795,9 +3795,9 @@
 /fr/docs/Web/API/GlobalEventHandlers/onauxclick	/fr/docs/Web/API/Element/auxclick_event
 /fr/docs/Web/API/GlobalEventHandlers/onblur	/fr/docs/Web/API/Window/blur_event
 /fr/docs/Web/API/GlobalEventHandlers/onchange	/fr/docs/Web/API/HTMLElement/change_event
-/fr/docs/Web/API/GlobalEventHandlers/onclick	/fr/docs/conflicting/Web/API/Element/click_event
+/fr/docs/Web/API/GlobalEventHandlers/onclick	/fr/docs/Web/API/Element/click_event
 /fr/docs/Web/API/GlobalEventHandlers/onclose	/fr/docs/Web/API/HTMLDialogElement/close_event
-/fr/docs/Web/API/GlobalEventHandlers/ondblclick	/fr/docs/conflicting/Web/API/Element/dblclick_event
+/fr/docs/Web/API/GlobalEventHandlers/ondblclick	/fr/docs/Web/API/Element/dblclick_event
 /fr/docs/Web/API/GlobalEventHandlers/onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeypress	/fr/docs/Web/API/Element/keypress_event
@@ -3813,7 +3813,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onselect	/fr/docs/Web/API/HTMLInputElement/select_event
 /fr/docs/Web/API/GlobalEventHandlers/onwheel	/fr/docs/Web/API/Element/wheel_event
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
-/fr/docs/Web/API/HTMLBaseFontElement	/fr/docs/conflicting/Web/CSS/CSS_Fonts
+/fr/docs/Web/API/HTMLBaseFontElement	/fr/docs/Web/CSS/CSS_Fonts
 /fr/docs/Web/API/HTMLElement/animationend_event	/fr/docs/Web/API/Element/animationend_event
 /fr/docs/Web/API/HTMLElement/animationiteration_event	/fr/docs/Web/API/Element/animationiteration_event
 /fr/docs/Web/API/HTMLElement/animationstart_event	/fr/docs/Web/API/Element/animationstart_event
@@ -4670,7 +4670,7 @@
 /fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
 /fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
 /fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
-/fr/docs/Web/HTML/Element/basefont	/fr/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95
+/fr/docs/Web/HTML/Element/basefont	/fr/docs/Web/CSS/CSS_Fonts
 /fr/docs/Web/HTML/Element/h1	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h2	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h3	/fr/docs/Web/HTML/Element/Heading_Elements
@@ -6157,6 +6157,8 @@
 /fr/docs/conflicting/Web/API/Document_Object_Model	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10	/fr/docs/Web/API/Document_Object_Model
+/fr/docs/conflicting/Web/API/Element/click_event	/fr/docs/Web/API/Element/click_event
+/fr/docs/conflicting/Web/API/Element/dblclick_event	/fr/docs/Web/API/Element/dblclick_event
 /fr/docs/conflicting/Web/API/Element/getBoundingClientRect	/fr/docs/Web/API/Element/getBoundingClientRect
 /fr/docs/conflicting/Web/API/Element/keypress_event	/fr/docs/Web/API/Element/keypress_event
 /fr/docs/conflicting/Web/API/Element/mousedown_event	/fr/docs/Web/API/Element/mousedown_event
@@ -6240,6 +6242,8 @@
 /fr/docs/conflicting/Web/CSS/CSS_Color	/fr/docs/Web/CSS/CSS_Colors
 /fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
+/fr/docs/conflicting/Web/CSS/CSS_Fonts	/fr/docs/Web/CSS/CSS_Fonts
+/fr/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95	/fr/docs/Web/CSS/CSS_Fonts
 /fr/docs/conflicting/Web/CSS/CSS_Scroll_Snap	/fr/docs/Web/CSS/CSS_Scroll_Snap
 /fr/docs/conflicting/Web/CSS/Filter_Effects	/fr/docs/Web/CSS/Filter_Effects
 /fr/docs/conflicting/Web/CSS/Mozilla_Extensions	/fr/docs/Web/CSS/Mozilla_Extensions
