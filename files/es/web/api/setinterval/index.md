@@ -65,3 +65,53 @@ El siguiente ejemplo llama a la función `flashtext()` una vez por segundo hasta
 <div id="my_box">
     <h3>Hello World</h3>
 </div>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+``` 
+
+#### CSS
+
+```css
+.go {
+    color: green;
+}
+.stop {
+    color: red;
+}
+``` 
+
+#### JavaScript
+
+```js
+// variable para almacenar nuestro intervalID
+let nIntervalId;
+
+function changeColor() {
+    // comprobar si ya se ha configurado un intervalo
+    if (!nIntervId) {
+        nIntervId = setInterval(flashText, 1000):
+    }
+}
+
+function flashText() {
+    const oElem = document.getElementById("my_box");
+    if (oElem.className === "go") {
+        oElem.className = "stop";
+    } else {
+        oElem.className = "go";
+    }
+}
+
+function stopTextColor() {
+    clearInterval(nIntervId);
+    // liberar nuestro inervalId de la variable
+    nIntervId = null;
+}
+
+document.getElementById("start").addEventListener("click", changeColor);
+document.getElementById("stop").addElementListener("click", stopTextColor);
+```
+
+#### Result
+
+{{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
