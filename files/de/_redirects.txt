@@ -689,6 +689,7 @@
 /de/docs/Web/JavaScript/Reference/Anweisungen/for...in	/de/docs/Web/JavaScript/Reference/Statements/for...in
 /de/docs/Web/JavaScript/Reference/Anweisungen/let	/de/docs/Web/JavaScript/Reference/Statements/let
 /de/docs/Web/JavaScript/Reference/Anweisungen/var	/de/docs/Web/JavaScript/Reference/Statements/var
+/de/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/de/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /de/docs/Web/JavaScript/Reference/Fehler	/de/docs/Web/JavaScript/Reference/Errors
 /de/docs/Web/JavaScript/Reference/Fehler/Already_has_pragma	/de/docs/Web/JavaScript/Reference/Errors/Already_has_pragma
 /de/docs/Web/JavaScript/Reference/Fehler/Array_sort_argument	/de/docs/Web/JavaScript/Reference/Errors/Array_sort_argument
@@ -698,7 +699,7 @@
 /de/docs/Web/JavaScript/Reference/Fehler/Bad_return_or_yield	/de/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield
 /de/docs/Web/JavaScript/Reference/Fehler/Called_on_incompatible_type	/de/docs/Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 /de/docs/Web/JavaScript/Reference/Fehler/Cant_access_lexical_declaration_before_init	/de/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-/de/docs/Web/JavaScript/Reference/Fehler/Cant_access_property	/de/docs/Web/JavaScript/Reference/Errors/Cant_access_property
+/de/docs/Web/JavaScript/Reference/Fehler/Cant_access_property	/de/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /de/docs/Web/JavaScript/Reference/Fehler/Cant_define_property_object_not_extensible	/de/docs/Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 /de/docs/Web/JavaScript/Reference/Fehler/Cant_delete	/de/docs/Web/JavaScript/Reference/Errors/Cant_delete
 /de/docs/Web/JavaScript/Reference/Fehler/Cant_redefine_property	/de/docs/Web/JavaScript/Reference/Errors/Cant_redefine_property
