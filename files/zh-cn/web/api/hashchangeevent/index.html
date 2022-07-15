@@ -69,7 +69,7 @@ window.addEventListener('hashchange', locationHashChanged);
 
 <h2 id="回落方法（Polyfill）">回落方法（Polyfill）</h2>
 
-<p>在 <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">Modernizr GitHub page</a> 中列出了几种回落（fallback）脚本。基本上，这些脚本每隔一段时间检查以此 {{domxref("HTMLHyperlinkElementUtils.hash", "location.hash")}}。这里是其中一个版本，其仅允许一个处理程序（handler）绑定在 {{domxref("WindowEventHandlers.onhashchange", "onhashchange")}} 属性上：</p>
+<p>在 <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">Modernizr GitHub page</a> 中列出了几种回落（fallback）脚本。基本上，这些脚本每隔一段时间检查以此 {{domxref("HTMLHyperlinkElementUtils.hash", "location.hash")}}。这里是其中一个版本，其仅允许一个处理程序（handler）绑定在 {{domxref("Window/hashchange_event", "onhashchange")}} 属性上：</p>
 
 <pre class="brush:js;">(function(window) {
 

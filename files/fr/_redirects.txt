@@ -963,7 +963,7 @@
 /fr/docs/DOM/element.onmouseover	/fr/docs/Web/API/Element/mouseover_event
 /fr/docs/DOM/element.onmouseup	/fr/docs/Web/API/Element/mouseup_event
 /fr/docs/DOM/element.onresize	/fr/docs/Web/API/Window/resize_event
-/fr/docs/DOM/element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
+/fr/docs/DOM/element.onscroll	/fr/docs/Web/API/Element/scroll_event
 /fr/docs/DOM/element.ownerDocument	/fr/docs/Web/API/Node/ownerDocument
 /fr/docs/DOM/element.parentNode	/fr/docs/Web/API/Node/parentNode
 /fr/docs/DOM/element.prefix	/fr/docs/Web/API/Element/prefix
@@ -1121,7 +1121,7 @@
 /fr/docs/DOM:element.onmouseover	/fr/docs/Web/API/Element/mouseover_event
 /fr/docs/DOM:element.onmouseup	/fr/docs/Web/API/Element/mouseup_event
 /fr/docs/DOM:element.onresize	/fr/docs/Web/API/Window/resize_event
-/fr/docs/DOM:element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
+/fr/docs/DOM:element.onscroll	/fr/docs/Web/API/Element/scroll_event
 /fr/docs/DOM:element.ownerDocument	/fr/docs/Web/API/Node/ownerDocument
 /fr/docs/DOM:element.parentNode	/fr/docs/Web/API/Node/parentNode
 /fr/docs/DOM:element.prefix	/fr/docs/Web/API/Element/prefix
@@ -3660,6 +3660,7 @@
 /fr/docs/Web/API/Document/onfullscreenchange	/fr/docs/Web/API/Document/fullscreenchange_event
 /fr/docs/Web/API/Document/onoffline	/fr/docs/Web/API/Window/offline_event
 /fr/docs/Web/API/Document/ononline	/fr/docs/Web/API/Window/online_event
+/fr/docs/Web/API/Document/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
@@ -3740,7 +3741,7 @@
 /fr/docs/Web/API/Element.onmouseover	/fr/docs/Web/API/Element/mouseover_event
 /fr/docs/Web/API/Element.onmouseup	/fr/docs/Web/API/Element/mouseup_event
 /fr/docs/Web/API/Element.onresize	/fr/docs/Web/API/Window/resize_event
-/fr/docs/Web/API/Element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
+/fr/docs/Web/API/Element.onscroll	/fr/docs/Web/API/Element/scroll_event
 /fr/docs/Web/API/Element.outerHTML	/fr/docs/Web/API/Element/outerHTML
 /fr/docs/Web/API/Element.parentNode	/fr/docs/Web/API/Node/parentNode
 /fr/docs/Web/API/Element.prefix	/fr/docs/Web/API/Element/prefix
@@ -3808,6 +3809,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onmouseup	/fr/docs/Web/API/Element/mouseup_event
 /fr/docs/Web/API/GlobalEventHandlers/onreset	/fr/docs/Web/API/HTMLFormElement/reset_event
 /fr/docs/Web/API/GlobalEventHandlers/onresize	/fr/docs/Web/API/Window/resize_event
+/fr/docs/Web/API/GlobalEventHandlers/onscroll	/fr/docs/Web/API/Element/scroll_event
 /fr/docs/Web/API/GlobalEventHandlers/onselect	/fr/docs/Web/API/HTMLInputElement/select_event
 /fr/docs/Web/API/GlobalEventHandlers/onwheel	/fr/docs/Web/API/Element/wheel_event
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
@@ -3815,6 +3817,7 @@
 /fr/docs/Web/API/HTMLElement/animationend_event	/fr/docs/Web/API/Element/animationend_event
 /fr/docs/Web/API/HTMLElement/animationiteration_event	/fr/docs/Web/API/Element/animationiteration_event
 /fr/docs/Web/API/HTMLElement/animationstart_event	/fr/docs/Web/API/Element/animationstart_event
+/fr/docs/Web/API/HTMLElement/transitionend_event	/fr/docs/conflicting/Web/API/Element/transitionend_event
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
 /fr/docs/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
@@ -4197,7 +4200,7 @@
 /fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Mises_en_page_avancees_avec_flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
-/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Rétrocompatibilite_de_flexbox	/fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Rétrocompatibilite_de_flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /fr/docs/Web/CSS/CSS_Flow_Layout/Dans_le_flux_ou_en_dehors	/fr/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 /fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal	/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
@@ -4282,7 +4285,7 @@
 /fr/docs/Web/CSS/Disposition_flexbox_CSS	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligning_Items_in_a_Flex_Container	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-/fr/docs/Web/CSS/Disposition_flexbox_CSS/Backwards_Compatibility_of_Flexbox	/fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+/fr/docs/Web/CSS/Disposition_flexbox_CSS/Backwards_Compatibility_of_Flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Boîtes_flexibles_pour_applications_web	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Cas_utilisation_flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
@@ -4293,7 +4296,7 @@
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Mixins	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordering_Flex_Items	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordonner_éléments_flexibles	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
-/fr/docs/Web/CSS/Disposition_flexbox_CSS/Rétrocompatibilite_de_flexbox	/fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+/fr/docs/Web/CSS/Disposition_flexbox_CSS/Rétrocompatibilite_de_flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/Web/CSS/Disposition_flexbox_CSS/Utilisation_des_flexbox_en_CSS	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /fr/docs/Web/CSS/Extensions_CSS_Microsoft	/fr/docs/Web/CSS/Microsoft_Extensions
 /fr/docs/Web/CSS/Extensions_Mozilla	/fr/docs/Web/CSS/Mozilla_Extensions
@@ -4385,7 +4388,7 @@
 /fr/docs/Web/CSS/auto	/fr/docs/Web/CSS/width
 /fr/docs/Web/CSS/calc()	/fr/docs/Web/CSS/calc
 /fr/docs/Web/CSS/clamp()	/fr/docs/Web/CSS/clamp
-/fr/docs/Web/CSS/color-adjust	/fr/docs/conflicting/Web/CSS/print-color-adjust
+/fr/docs/Web/CSS/color-adjust	/fr/docs/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/conic-gradient	/fr/docs/Web/CSS/gradient/conic-gradient
 /fr/docs/Web/CSS/conic-gradient()	/fr/docs/Web/CSS/gradient/conic-gradient
 /fr/docs/Web/CSS/counter()	/fr/docs/Web/CSS/counter
@@ -4466,8 +4469,7 @@
 /fr/docs/Web/CSS/transform-function/scaleZ()	/fr/docs/Web/CSS/transform-function/scaleZ
 /fr/docs/Web/CSS/transform-function/skew()	/fr/docs/Web/CSS/transform-function/skew
 /fr/docs/Web/CSS/transform-function/skewX()	/fr/docs/Web/CSS/transform-function/skewX
-/fr/docs/Web/CSS/transform-function/skewY	/fr/docs/conflicting/Web/CSS/transform-function/skewX
-/fr/docs/Web/CSS/transform-function/skewY()	/fr/docs/conflicting/Web/CSS/transform-function/skewX
+/fr/docs/Web/CSS/transform-function/skewY()	/fr/docs/Web/CSS/transform-function/skewY
 /fr/docs/Web/CSS/transform-function/translate()	/fr/docs/Web/CSS/transform-function/translate
 /fr/docs/Web/CSS/transform-function/translate3d()	/fr/docs/Web/CSS/transform-function/translate3d
 /fr/docs/Web/CSS/transform-function/translateX()	/fr/docs/Web/CSS/transform-function/translateX
@@ -4547,7 +4549,7 @@
 /fr/docs/Web/Events/storage	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/Events/submit	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/Events/touchend	/fr/docs/Web/API/Document/touchend_event
-/fr/docs/Web/Events/transitionend	/fr/docs/Web/API/HTMLElement/transitionend_event
+/fr/docs/Web/Events/transitionend	/fr/docs/conflicting/Web/API/Element/transitionend_event
 /fr/docs/Web/Events/unload	/fr/docs/Web/API/Window/unload_event
 /fr/docs/Web/Guide/AJAX/Communauté	/fr/docs/Web/Guide/AJAX/Community
 /fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX/Getting_Started
@@ -4797,7 +4799,7 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/Bad_return_or_yield	/fr/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield
 /fr/docs/Web/JavaScript/Reference/Erreurs/Called_on_incompatible_type	/fr/docs/Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_before_init	/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_property	/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_property
+/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_property	/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_assign_to_property	/fr/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_define_property_object_not_extensible	/fr/docs/Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_delete	/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete
@@ -4865,6 +4867,7 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/in_operator_no_object	/fr/docs/Web/JavaScript/Reference/Errors/in_operator_no_object
 /fr/docs/Web/JavaScript/Reference/Erreurs/invalid_right_hand_side_instanceof_operand	/fr/docs/Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 /fr/docs/Web/JavaScript/Reference/Erreurs/is_not_iterable	/fr/docs/Web/JavaScript/Reference/Errors/is_not_iterable
+/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/Web/JavaScript/Reference/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -6237,6 +6240,7 @@
 /fr/docs/conflicting/Web/CSS/@viewport_ff9d4f4f351256d9fdb3d21397eb3880	/fr/docs/Web/CSS/@viewport
 /fr/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /fr/docs/conflicting/Web/CSS/CSS_Color	/fr/docs/Web/CSS/CSS_Colors
+/fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /fr/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /fr/docs/conflicting/Web/CSS/CSS_Fonts	/fr/docs/Web/CSS/CSS_Fonts
 /fr/docs/conflicting/Web/CSS/CSS_Fonts_25d4b407d3e5044aeffb97faa9669a95	/fr/docs/Web/CSS/CSS_Fonts
@@ -6253,8 +6257,10 @@
 /fr/docs/conflicting/Web/CSS/float	/fr/docs/Web/CSS/float
 /fr/docs/conflicting/Web/CSS/font-variant	/fr/docs/Web/CSS/font-variant
 /fr/docs/conflicting/Web/CSS/mask-image	/fr/docs/Web/CSS/mask-image
+/fr/docs/conflicting/Web/CSS/print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
 /fr/docs/conflicting/Web/CSS/scroll-snap-type	/fr/docs/Web/CSS/scroll-snap-type
 /fr/docs/conflicting/Web/CSS/shape-outside	/fr/docs/Web/CSS/shape-outside
+/fr/docs/conflicting/Web/CSS/transform-function/skewX	/fr/docs/Web/CSS/transform-function/skewY
 /fr/docs/conflicting/Web/CSS/url()	/fr/docs/Web/CSS/url
 /fr/docs/conflicting/Web/CSS/url()_168028c4e5edd9e19c061adb4b604d4f	/fr/docs/Web/CSS/url
 /fr/docs/conflicting/Web/CSS/user-select	/fr/docs/Web/CSS/user-select

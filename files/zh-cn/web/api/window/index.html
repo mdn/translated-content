@@ -33,7 +33,7 @@ translation_of: Web/API/Window
 
 <dl>
  <dt>{{domxref("DOMParser")}}</dt>
- <dd><code>DOMParser</code> can parse XML or HTML source stored in a string into a DOM <a href="https://developer.mozilla.org/en-US/docs/DOM/document" title="document">Document</a>. <code>DOMParser</code> is specified in <a href="https://w3c.github.io/DOM-Parsing/" title="http://html5.org/specs/dom-parsing.html">DOM Parsing and Serialization</a>.</dd>
+ <dd><code>DOMParser</code> can parse XML or HTML source stored in a string into a DOM <a href="/en-US/docs/DOM/document" title="document">Document</a>. <code>DOMParser</code> is specified in <a href="https://w3c.github.io/DOM-Parsing/" title="http://html5.org/specs/dom-parsing.html">DOM Parsing and Serialization</a>.</dd>
  <dt>{{domxref("Window.GeckoActiveXObject")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Image")}}</dt>
@@ -56,7 +56,7 @@ translation_of: Web/API/Window
 
 <h2 id="属性">属性</h2>
 
-<p>这个接口从 {{domxref("EventTarget")}} 接口继承属性，也从 <code>WindowOrWorkerGlobalScope</code> 和 {{domxref("WindowEventHandlers")}} 这两个 mixin 中继承属性。</p>
+<p>这个接口从 {{domxref("EventTarget")}} 接口继承属性，也从 <code>WindowOrWorkerGlobalScope</code> 这个 mixin 中继承属性。</p>
 
 <p>注意，对象类型的属性（例如：覆盖内建元素的原型）被列于下面单独的小节之中。</p>
 
@@ -358,7 +358,7 @@ translation_of: Web/API/Window
 
 <p>These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.</p>
 
-<p><em>This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface inherits event handlers from the {{domxref("EventTarget")}} interface.</em></p>
 
 <div class="note">
 <p><strong>Note:</strong> Starting in {{Gecko("9.0")}}, you can now use the syntax <code>if ("onabort" in window)</code> to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See <a href="/en-US/docs/DOM/DOM_event_handlers">DOM event handlers</a> for details.</p>
@@ -502,7 +502,7 @@ translation_of: Web/API/Window
  Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/languagechange_event">languagechange</a></code></dt>
  <dd>Fired at the global scope object when the user's preferred language changes.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">onlanguagechange</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/languagechange_event">onlanguagechange</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/orientationchange_event">orientationchange</a></code></dt>
  <dd>Fired when the orientation of the device has changed.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/Window/onorientationchange">onorientationchange</a></code> 属性。</dd>
@@ -515,7 +515,7 @@ translation_of: Web/API/Window
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onresize">onresize</a></code> 属性。</dd>
  <dt><code>{{domxref("Document/defaultView/storage_event", "storage")}}</code></dt>
  <dd>Fired when a storage area (<code>localStorage</code> or <code>sessionStorage</code>) has been modified in the context of another document.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onstorage">onstorage</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/storage_event">onstorage</a></code> 属性。</dd>
 </dl>
 
 <h3 id="Animation_events">Animation events</h3>
@@ -542,13 +542,13 @@ translation_of: Web/API/Window
  <dd>Fired when the system clipboard content changes.</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/copy_event">copy</a></code></dt>
  <dd>Fired when the user initiates a copy action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncopy"><code>oncopy</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/HTMLElement/oncopy"><code>oncopy</code></a> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/cut_event">cut</a></code></dt>
  <dd>Fired when the user initiates a cut action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncut"><code>oncut</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/HTMLElement/oncut"><code>oncut</code></a> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/paste_event">paste</a></code></dt>
  <dd>Fired when the user initiates a paste action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onpaste"><code>onpaste</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/HTMLElement/onpaste"><code>onpaste</code></a> 属性。</dd>
 </dl>
 
 <h3 id="Connection_events">Connection events</h3>
@@ -567,10 +567,10 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/blur_event">blur</a></code></dt>
  <dd>Fired when an element has lost focus.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur"><code>onblur</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/GlobalEventHandlers/onblur"><code>onblur</code></a> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/focus_event">focus</a></code></dt>
  <dd>Fired when an element has gained focus.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onfocus"><code>onfocus</code></a> property</dd>
+ Also available via the <a href="/en-US/docs/Web/API/GlobalEventHandlers/onfocus"><code>onfocus</code></a> property</dd>
 </dl>
 
 <h3 id="Gamepad_events">Gamepad events</h3>
@@ -589,7 +589,7 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/hashchange_event">hashchange</a></code></dt>
  <dd>Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the <code>#</code> symbol).<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onhashchange">onhashchange</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/hashchange_event">onhashchange</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code></dt>
  <dd>Sent when the browser hides the current document while in the process of switching to displaying in its palce a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.<br>
  Also available through the <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/onpagehide">onpagehide</a></code> event handler 属性。</dd>
@@ -598,7 +598,7 @@ translation_of: Web/API/Window
  Also available using the <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/onpageshow">onpageshow</a></code> event handler 属性。</dd>
  <dt><code>{{domxref("Document/defaultView/popstate_event", "popstate")}}</code></dt>
  <dd>Fired when the active history entry changes.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onpopstate">onpopstate</a></code> event handler 属性。</dd>
+ Also available using the <code><a href="/en-US/docs/Web/API/Window/popstate_event">onpopstate</a></code> event handler 属性。</dd>
 </dl>
 
 <h3 id="Load_unload_events">Load &amp; unload events</h3>
@@ -606,7 +606,7 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code></dt>
  <dd>Fired when the window, the document and its resources are about to be unloaded.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload">onbeforeunload</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">onbeforeunload</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></code></dt>
  <dd>Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code></dt>
@@ -614,7 +614,7 @@ translation_of: Web/API/Window
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onload">onload</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code></dt>
  <dd>Fired when the document or a child resource is being unloaded.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunload">onunload</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/unload_event">onunload</a></code> 属性。</dd>
 </dl>
 
 <h3 id="Manifest_events">Manifest events</h3>
@@ -633,10 +633,10 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/message_event">message</a></code></dt>
  <dd>Fired when the window receives a message, for example from a call to <code><a href="/en-US/docs/Web/API/Window/postMessage">Window.postMessage()</a></code> from another browsing context.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage">onmessage</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/message_event">onmessage</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/messageerror_event">messageerror</a></code></dt>
  <dd>Fired when a <code>Window</code> object receives a message that can't be deserialized.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">onmessageerror</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/messageerror_event">onmessageerror</a></code> 属性。</dd>
 </dl>
 
 <h3 id="Print_events">Print events</h3>
@@ -644,10 +644,10 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/afterprint_event">afterprint</a></code></dt>
  <dd>Fired after the associated document has started printing or the print preview has been closed.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onafterprint"><code>onafterprint</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/Window/afterprint_event"><code>onafterprint</code></a> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/beforeprint_event">beforeprint</a></code></dt>
  <dd>Fired when the associated document is about to be printed or previewed for printing.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint"><code>onbeforeprint</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/Window/beforeprint_event"><code>onbeforeprint</code></a> 属性。</dd>
 </dl>
 
 <h3 id="Promise_rejection_events">Promise rejection events</h3>
@@ -655,26 +655,26 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code></dt>
  <dd>Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.<br>
- Also available through the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled">onrejectionhandled</a></code> event handler 属性。</dd>
+ Also available through the <code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">onrejectionhandled</a></code> event handler 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code></dt>
  <dd>Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">onunhandledrejection</a></code> event handler 属性。</dd>
+ Also available using the <code><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">onunhandledrejection</a></code> event handler 属性。</dd>
 </dl>
 
 <h3 id="Transition_events">Transition events</h3>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/transitioncancel_event">transitioncancel</a></code></dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is canceled.<br>
+ <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is canceled.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">ontransitioncancel</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/transitionend_event">transitionend</a></code></dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed.<br>
+ <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">ontransitionend</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/transitionrun_event">transitionrun</a></code></dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is first created.<br>
+ <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is first created.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun">ontransitionrun</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/transitionstart_event">transitionstart</a></code></dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started.<br>
+ <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart">ontransitionstart</a></code> 属性。</dd>
 </dl>
 

@@ -5965,6 +5965,12 @@
       "Grijander81"
     ]
   },
+  "Web/API/Element/scroll_event": {
+    "modified": "2019-03-23T22:33:14.134Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
   "Web/API/Element/setAttribute": {
     "modified": "2019-03-23T23:58:09.577Z",
     "contributors": [
@@ -6002,6 +6008,22 @@
     "modified": "2019-03-23T22:32:02.059Z",
     "contributors": [
       "AlePerez92"
+    ]
+  },
+  "Web/API/Element/transitioncancel_event": {
+    "modified": "2019-04-30T14:14:15.478Z",
+    "contributors": [
+      "wbamberg",
+      "ExE-Boss",
+      "juan-ferrer-toribio"
+    ]
+  },
+  "Web/API/Element/transitionend_event": {
+    "modified": "2019-03-23T22:04:18.976Z",
+    "contributors": [
+      "ExE-Boss",
+      "fscholz",
+      "juan-ferrer-toribio"
     ]
   },
   "Web/API/Element/wheel_event": {
@@ -6453,12 +6475,6 @@
       "SoftwareRVG"
     ]
   },
-  "Web/API/GlobalEventHandlers/onscroll": {
-    "modified": "2019-03-23T22:33:14.134Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
   "Web/API/HTMLAnchorElement": {
     "modified": "2019-03-18T21:42:27.257Z",
     "contributors": [
@@ -6605,22 +6621,6 @@
       "SphinxKnight",
       "Facu50196",
       "jvas28"
-    ]
-  },
-  "Web/API/HTMLElement/transitioncancel_event": {
-    "modified": "2019-04-30T14:14:15.478Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "juan-ferrer-toribio"
-    ]
-  },
-  "Web/API/HTMLElement/transitionend_event": {
-    "modified": "2019-03-23T22:04:18.976Z",
-    "contributors": [
-      "ExE-Boss",
-      "fscholz",
-      "juan-ferrer-toribio"
     ]
   },
   "Web/API/HTMLFormElement": {

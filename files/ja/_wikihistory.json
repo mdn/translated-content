@@ -12119,30 +12119,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/Document/transitioncancel_event": {
-    "modified": "2020-10-15T22:15:27.299Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/Document/transitionend_event": {
-    "modified": "2020-10-15T22:15:28.111Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/Document/transitionrun_event": {
-    "modified": "2020-10-15T22:15:27.462Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/Document/transitionstart_event": {
-    "modified": "2020-10-15T22:15:28.274Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/Document/visibilityState": {
     "modified": "2020-10-15T22:28:48.519Z",
     "contributors": [
@@ -13234,6 +13210,30 @@
       "isdh"
     ]
   },
+  "Web/API/Element/transitioncancel_event": {
+    "modified": "2020-10-15T22:15:27.299Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/API/Element/transitionend_event": {
+    "modified": "2020-10-15T22:15:28.111Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/API/Element/transitionrun_event": {
+    "modified": "2020-10-15T22:15:27.462Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/API/Element/transitionstart_event": {
+    "modified": "2020-10-15T22:15:28.274Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "Web/API/Element/wheel_event": {
     "modified": "2020-10-15T22:32:24.323Z",
     "contributors": [
@@ -14291,28 +14291,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/GlobalEventHandlers/onscroll": {
-    "modified": "2020-10-15T21:36:48.856Z",
-    "contributors": [
-      "mfuji09",
-      "Kenju"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontransitioncancel": {
-    "modified": "2020-10-15T22:15:05.668Z",
-    "contributors": [
-      "mpcjazz",
-      "mfuji09",
-      "Uemmra3",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontransitionend": {
-    "modified": "2020-10-15T22:32:49.907Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/HTMLAnchorElement": {
     "modified": "2020-10-15T22:22:52.350Z",
     "contributors": [
@@ -14855,36 +14833,6 @@
       "fscholz",
       "AshfaqHossain",
       "ethertank"
-    ]
-  },
-  "Web/API/HTMLElement/transitioncancel_event": {
-    "modified": "2020-10-15T22:15:07.888Z",
-    "contributors": [
-      "mfuji09",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/HTMLElement/transitionend_event": {
-    "modified": "2020-10-15T22:15:08.009Z",
-    "contributors": [
-      "mfuji09",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/HTMLElement/transitionrun_event": {
-    "modified": "2020-12-05T23:50:43.326Z",
-    "contributors": [
-      "mfuji09",
-      "takaneichinose"
-    ]
-  },
-  "Web/API/HTMLElement/transitionstart_event": {
-    "modified": "2020-10-15T22:15:07.508Z",
-    "contributors": [
-      "Uemmra3",
-      "dskmori",
-      "mfuji09",
-      "takaneichinose"
     ]
   },
   "Web/API/HTMLEmbedElement": {
@@ -23349,30 +23297,6 @@
       "khalid32",
       "ethertank",
       "Potappo"
-    ]
-  },
-  "Web/API/Window/transitioncancel_event": {
-    "modified": "2020-10-15T22:27:28.906Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/Window/transitionend_event": {
-    "modified": "2020-10-15T22:27:26.567Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/Window/transitionrun_event": {
-    "modified": "2020-10-15T22:27:27.284Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/Window/transitionstart_event": {
-    "modified": "2020-10-15T22:27:26.934Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/API/Window/unhandledrejection_event": {
@@ -36126,12 +36050,6 @@
       "YuichiNukiyama"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Cant_access_property": {
-    "modified": "2020-03-12T19:48:11.857Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Cant_assign_to_property": {
     "modified": "2020-03-12T19:49:09.329Z",
     "contributors": [
@@ -46655,6 +46573,13 @@
       "Wind1808"
     ]
   },
+  "conflicting/Web/API/Element/scroll_event": {
+    "modified": "2020-10-15T21:36:48.856Z",
+    "contributors": [
+      "mfuji09",
+      "Kenju"
+    ]
+  },
   "conflicting/Web/API/Element/touchcancel_event": {
     "modified": "2020-11-13T00:53:08.096Z",
     "contributors": [
@@ -46669,6 +46594,75 @@
   },
   "conflicting/Web/API/Element/touchstart_event": {
     "modified": "2020-11-13T00:27:45.060Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/transitioncancel_event": {
+    "modified": "2020-10-15T22:15:05.668Z",
+    "contributors": [
+      "mpcjazz",
+      "mfuji09",
+      "Uemmra3",
+      "takaneichinose"
+    ]
+  },
+  "conflicting/Web/API/Element/transitioncancel_event_6c3f7338ed349236e714745d68a3870f": {
+    "modified": "2020-10-15T22:27:28.906Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/transitioncancel_event_889a917200575d302e6d0ef27f28732d": {
+    "modified": "2020-10-15T22:15:07.888Z",
+    "contributors": [
+      "mfuji09",
+      "takaneichinose"
+    ]
+  },
+  "conflicting/Web/API/Element/transitionend_event": {
+    "modified": "2020-10-15T22:32:49.907Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/transitionend_event_1cef74320990132816739f25e93b24d4": {
+    "modified": "2020-10-15T22:27:26.567Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/transitionend_event_48a599243416afba09d6096b95902ca0": {
+    "modified": "2020-10-15T22:15:08.009Z",
+    "contributors": [
+      "mfuji09",
+      "takaneichinose"
+    ]
+  },
+  "conflicting/Web/API/Element/transitionrun_event": {
+    "modified": "2020-12-05T23:50:43.326Z",
+    "contributors": [
+      "mfuji09",
+      "takaneichinose"
+    ]
+  },
+  "conflicting/Web/API/Element/transitionrun_event_e47d3d54fca58c53ac88be72b9319a1f": {
+    "modified": "2020-10-15T22:27:27.284Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Element/transitionstart_event": {
+    "modified": "2020-10-15T22:15:07.508Z",
+    "contributors": [
+      "Uemmra3",
+      "dskmori",
+      "mfuji09",
+      "takaneichinose"
+    ]
+  },
+  "conflicting/Web/API/Element/transitionstart_event_ae637d084189a172c6f6156e1c075b64": {
+    "modified": "2020-10-15T22:27:26.934Z",
     "contributors": [
       "mfuji09"
     ]
@@ -47258,6 +47252,12 @@
     "modified": "2019-03-18T21:43:46.251Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
+    "modified": "2020-03-12T19:48:11.857Z",
+    "contributors": [
+      "YuichiNukiyama"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {

@@ -1612,6 +1612,7 @@
 /es/docs/Web/API/GlobalEventHandlers/onkeydown	/es/docs/conflicting/Web/API/Element/keydown_event
 /es/docs/Web/API/GlobalEventHandlers/onkeyup	/es/docs/conflicting/Web/API/Element/keyup_event
 /es/docs/Web/API/GlobalEventHandlers/onresize	/es/docs/Web/API/Window/resize_event
+/es/docs/Web/API/GlobalEventHandlers/onscroll	/es/docs/Web/API/Element/scroll_event
 /es/docs/Web/API/GlobalEventHandlers/onselect	/es/docs/Web/API/HTMLInputElement/select_event
 /es/docs/Web/API/GlobalEventHandlers/onselectstart	/es/docs/Web/API/Document/selectstart_event
 /es/docs/Web/API/GlobalEventHandlers/onsubmit	/es/docs/Web/API/HTMLFormElement/submit_event
@@ -1620,6 +1621,8 @@
 /es/docs/Web/API/HTMLElement/animationend_event	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
+/es/docs/Web/API/HTMLElement/transitioncancel_event	/es/docs/Web/API/Element/transitioncancel_event
+/es/docs/Web/API/HTMLElement/transitionend_event	/es/docs/Web/API/Element/transitionend_event
 /es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/IDBObjectStore.add	/es/docs/Web/API/IDBObjectStore/add
 /es/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -1828,8 +1831,8 @@
 /es/docs/Web/Events/scroll	/es/docs/Web/API/Document/scroll_event
 /es/docs/Web/Events/tecla	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/Events/timeupdate	/es/docs/Web/API/HTMLMediaElement/timeupdate_event
-/es/docs/Web/Events/transitioncancel	/es/docs/Web/API/HTMLElement/transitioncancel_event
-/es/docs/Web/Events/transitionend	/es/docs/Web/API/HTMLElement/transitionend_event
+/es/docs/Web/Events/transitioncancel	/es/docs/Web/API/Element/transitioncancel_event
+/es/docs/Web/Events/transitionend	/es/docs/Web/API/Element/transitionend_event
 /es/docs/Web/Events/wheel	/es/docs/Web/API/Element/wheel_event
 /es/docs/Web/Guide/AJAX/Comunidad	/es/docs/Web/Guide/AJAX/Community
 /es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/Web/Guide/AJAX/Getting_Started
@@ -2616,8 +2619,8 @@
 /es/docs/Web/Reference/Events/scroll	/es/docs/Web/API/Document/scroll_event
 /es/docs/Web/Reference/Events/tecla	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/Reference/Events/timeupdate	/es/docs/Web/API/HTMLMediaElement/timeupdate_event
-/es/docs/Web/Reference/Events/transitioncancel	/es/docs/Web/API/HTMLElement/transitioncancel_event
-/es/docs/Web/Reference/Events/transitionend	/es/docs/Web/API/HTMLElement/transitionend_event
+/es/docs/Web/Reference/Events/transitioncancel	/es/docs/Web/API/Element/transitioncancel_event
+/es/docs/Web/Reference/Events/transitionend	/es/docs/Web/API/Element/transitionend_event
 /es/docs/Web/Reference/Events/wheel	/es/docs/Web/API/Element/wheel_event
 /es/docs/Web/SVG/Element/glifo	/es/docs/Web/SVG/Element/glyph
 /es/docs/Web/SVG/Index	/es/docs/conflicting/Web/SVG
