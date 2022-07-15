@@ -25,7 +25,7 @@ setInterval(func, delay, arg0, arg1, /* ..., */ argN);
     - : una función {{jsxref("function")}} que se ejecuta cada cierto tiempo. El tiempo lo determina `delay`, estando éste en milisegundos. La primera ejecución ocurre tras el tiempo determinado por `delay` .
 
 - `code`
-    - : una sintaxis especial que permite incluir una cadena en lugar de una función, la cual es compilada y ejecutada cada `delay` segundos. Se recomienda no usar esta sintaxis, por la misma razón que hace que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo de seguridad.
+    - : Una sintaxis especial que permite incluir una cadena en lugar de una función, la cual es compilada y ejecutada cada `delay` milisegundos. Se recomienda no usar esta sintaxis, por la misma razón que hace que el uso de {{jsxref("Global_Objects/eval", "eval()")}} sea un riesgo de seguridad.
 
 - `delay` {{optional_inline}}
     - : el tiempo en milisegundos (milésimas de segundo) que el temporizador debe retrasar cada ejecución de la función o código especificado. Si no se especifica ninguno, por defecto es 0. Ver el apartado [Delay restrictions](#delay_restrictions) descrito más abajo para más detalles sobre el rango de valores de retardo (delay) permitido.
