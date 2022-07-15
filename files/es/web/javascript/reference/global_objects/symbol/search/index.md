@@ -44,3 +44,4 @@ console.log('foobar'.search(new caseInsensitiveSearch('BaR')));
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.split")}}
 - {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+
