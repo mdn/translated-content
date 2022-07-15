@@ -37,7 +37,7 @@ setInterval(func, delay, arg0, arg1, /* ..., */ argN);
 
 El `intervalID` devuelto es un valor numérico, diferente a 0, que identifica el temporizador creado para poder realizar la llamada a `setInterval()` . Este valor puede ser pasado a {{domxref("clearInterval()")}} para cancelar el intervalo.
 
-Puede ser útil tener en cuenta que `setInterval()` y {{domxref("setTimeout()")}} comparten el mismo grupo de IDs. También es importante saber que `clearInterval()` y {{domxref("clearTimeout", "clearTimeout()")}} técnicamente pueden ser utilizados indistintamente. Sin embargo, para mayor claridad simpre debe tratar de hacerlos coincidir, evitando así confusiones al mantener su código.
+Puede ser útil tener en cuenta que `setInterval()` y {{domxref("setTimeout()")}} comparten el mismo grupo de IDs. También es importante saber que `clearInterval()` y {{domxref("clearTimeout", "clearTimeout()")}} técnicamente pueden ser utilizados indistintamente. Sin embargo, para mayor claridad siempre debe tratar de hacerlos coincidir, evitando así confusiones al mantener su código.
 
 > **Nota:** El argumento `delay` se convierte en un número entero de 32 bits con signo. Efectivamente, esto limita `delay` a 2.147,483,647 milisegundos, ya que es especificado en el IDL  como un número entero con signo.
 
