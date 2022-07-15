@@ -40781,20 +40781,6 @@
       "Pitoutompoilu"
     ]
   },
-  "conflicting/Web/API/Element/transitionend_event": {
-    "modified": "2020-10-15T21:58:39.030Z",
-    "contributors": [
-      "Voulto",
-      "fscholz",
-      "dominiquevilain"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
-    "modified": "2019-04-06T12:38:31.267Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "conflicting/Web/CSS/CSS_Fonts": {
     "modified": "2020-10-15T22:35:14.285Z",
     "contributors": [
@@ -40807,26 +40793,6 @@
       "SphinxKnight",
       "fscholz",
       "tregagnon"
-    ]
-  },
-  "conflicting/Web/CSS/print-color-adjust": {
-    "modified": "2020-10-15T22:07:37.043Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Web/CSS/transform-function/skewX": {
-    "modified": "2020-11-30T10:28:12.012Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "prayash"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
-    "modified": "2020-03-12T19:48:15.165Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
