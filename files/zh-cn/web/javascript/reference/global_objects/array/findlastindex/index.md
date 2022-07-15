@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 ---
 {{JSRef}}
 
-**`findLastIndex()`** 方法返回数组中满足提供的测试函数条件的最后一个元素的值。若没有找到对应元素，则返回-1。
+**`findLastIndex()`** 方法返回数组中满足提供的测试函数条件的最后一个元素的索引。若没有找到对应元素，则返回 -1。
 
 {{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
 
@@ -52,14 +52,14 @@ findLastIndex(function(element, index, array) { /* ... */ }, thisArg)
     - `array`
       - : 调用 `findLast()` 的数组本身。
 
-     回调必须返回一个 [真值](/zh-CN/docs/Glossary/Truthy)，表示发现一个适当的元素。然后这个元素的索引由 `findLastIndex()` 返回。
+     回调必须返回一个[真值](/zh-CN/docs/Glossary/Truthy)，表示发现一个适当的元素。然后这个元素的索引由 `findLastIndex()` 返回。
 
 - `thisArg` {{optional_inline}}
   - : 执行 `callbackFn` 时，用作 {{jsxref("Operators/this", "this")}} 的对象。
 
 ### 返回值
 
-数组中通过测试的最后一个元素（最高的索引）。如果没有任何元素匹配，则返回 -1。
+数组中通过测试的最后一个元素（最大的索引）。如果没有任何元素匹配，则返回 -1。
 
 ## 描述
 
