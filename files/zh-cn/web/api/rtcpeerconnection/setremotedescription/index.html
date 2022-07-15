@@ -11,7 +11,7 @@ translation_of: Web/API/RTCPeerConnection/setRemoteDescription
 
 <p>连接的 offer 通常来自于负责匹配的服务器所发送的数据。执行者应调用此方法设置远程描述，然后生成发送到对端计算机的 answer。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre>aPromise = pc.setRemoteDescription(<em>sessionDescription</em>);
 
@@ -20,7 +20,7 @@ translation_of: Web/API/RTCPeerConnection/setRemoteDescription
 
 <p><em>这个方法没有返回值。</em></p>
 
-<h3 id="Example" name="Example">参数</h3>
+<h3 id="Example">参数</h3>
 
 <dl>
  <dt><em>sessionDescription</em></dt>
@@ -35,7 +35,7 @@ translation_of: Web/API/RTCPeerConnection/setRemoteDescription
  </dd>
 </dl>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example">Example</h2>
 
 <pre class="brush: js">var pc = new PeerConnection();
 pc.setRemoteDescription( new RTCSessionDescription( offer ), function() {
@@ -47,7 +47,7 @@ pc.setRemoteDescription( new RTCSessionDescription( offer ), function() {
 });
 </pre>
 
-<h2 id="Specifications" name="Specifications">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table" style="height: 49px; width: 1000px;">
  <thead>

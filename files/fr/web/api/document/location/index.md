@@ -20,8 +20,10 @@ Si le document courant n'est pas un contexte de navigation, la valeur renvoyée 
 
 ## Syntaxe
 
-    locationObj = document.location
-    document.location = 'http://www.mozilla.org' // équivalent à document.location.href = 'http://www.mozilla.org'
+```js
+locationObj = document.location
+document.location = 'http://www.mozilla.org' // équivalent à document.location.href = 'http://www.mozilla.org'
+```
 
 ## Exemple
 

@@ -45,6 +45,7 @@ vertical-align: initial;
 vertical-align: revert;
 vertical-align: unset;
 ```
+
 La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
 
 ### Valeurs pour les éléments en lignes
@@ -223,7 +224,6 @@ td {
 #### Résultat
 
 {{EmbedLiveSample("", '100%', 230)}}
-
 
 ## Spécifications
 

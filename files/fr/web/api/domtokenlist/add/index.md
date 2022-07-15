@@ -9,7 +9,9 @@ La méthode **`add()`** de l'interface {{domxref("DOMTokenList")}} ajoute le _to
 
 ## Syntaxe
 
-    tokenList.add(token1[, token2[, ...]]);
+```js
+tokenList.add(token1[, token2[, ...]]);
+```
 
 ### Paramètres
 

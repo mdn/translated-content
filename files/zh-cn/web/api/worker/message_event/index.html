@@ -50,7 +50,7 @@ worker.onmessage = (event) =&gt; {
     console.log(`Received message from worker: ${event.data}`)
 };</pre>
 
-<p>worker 使用  <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">self.postMessage()</a></code> 发出消息：</p>
+<p>worker 使用 <code><a href="/en-US/docs/Web/API/DedicatedWorkerGlobalScope/postMessage">self.postMessage()</a></code> 发出消息：</p>
 
 <pre class="brush: js">// static/scripts/worker.js
 
@@ -58,18 +58,7 @@ self.postMessage('I\'m alive!');</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'indices.html#event-message')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

@@ -1,0 +1,50 @@
+---
+title: Date.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
+tags:
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Date/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<h2 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h2>
+
+<p>Zwraca łańcuch znaków reprezentujący kod źródłowy obiektu.</p>
+
+<h2 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h2>
+
+<pre class="syntaxbox"><code><var>dateObj</var>.toSource()
+Date.toSource()</code></pre>
+
+<h3 id="Parametry" name="Parametry">Parametry</h3>
+
+<p>Brak.</p>
+
+<h3 id="Opis" name="Opis">Opis</h3>
+
+<p>Metoda <code>toSource()</code> zwraca następującą wartość:</p>
+
+<ul>
+ <li>Dla wewnętrznej budowy obiekt {{jsxref("Date")}}, <code>toSource()</code> zwraca następujący łańcuch znaków sygnalizując, który kod źródłowy jest nieosiągalny:</li>
+</ul>
+
+<pre class="brush: js">function Date() {
+   [native code]
+}
+</pre>
+
+<ul>
+ <li>Dla instancji {{jsxref("Date")}}, <code>toSource()</code> zwraca łańcuch znaków reprezentujący kod źródłowy.</li>
+</ul>
+
+<p>Ta metoda jest często nazywana wewnętrzną metodą JavaScript i jest nie wyraźna w kodzie.</p>
+
+<h2 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

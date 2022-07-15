@@ -5,11 +5,11 @@ translation_of: Web/API/Window/frames
 ---
 <p>{{ApiRef("Window")}}</p>
 
-<h2 id="Summary" name="Summary">概要</h2>
+<h2 id="Summary">概要</h2>
 
 <p>返回当前窗口，一个类数组对象，列出了当前窗口的所有直接子窗口。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="eval"><em>frameList</em> = window.frames;
 </pre>
@@ -21,7 +21,7 @@ translation_of: Web/API/Window/frames
  <li>有关返回值的更多详细信息，请参考 <a class="external" href="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&amp;ie=UTF-8&amp;oe=utf-8&amp;q=window.frames&amp;pli=1" title="http://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&amp;ie=UTF-8&amp;oe=utf-8&amp;q=window.frames&amp;pli=1">thread on mozilla.dev.platform</a> 。</li>
 </ul>
 
-<h2 id="Example" name="Example">实例</h2>
+<h2 id="Example">实例</h2>
 
 <pre class="brush: js">var frames = window.frames; // 或 // var frames = window.parent.frames;
 for (var i = 0; i &lt; frames.length; i++) {
@@ -31,26 +31,10 @@ for (var i = 0; i &lt; frames.length; i++) {
 }
 </pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="规范">规范</h2>
 
-<p>{{ DOM0() }}</p>
+{{Specifications}}
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','browsers.html#dom-frames','Window.frames')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-frames', 'Window.frames')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat}}

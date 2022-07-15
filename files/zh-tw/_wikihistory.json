@@ -2933,12 +2933,6 @@
       "kenttsai"
     ]
   },
-  "Web/API/DOMString": {
-    "modified": "2019-03-23T22:48:01.923Z",
-    "contributors": [
-      "Shiyou"
-    ]
-  },
   "Web/API/DOMTokenList": {
     "modified": "2019-03-23T22:30:39.565Z",
     "contributors": [
@@ -3065,14 +3059,6 @@
     "contributors": [
       "jackblackevo",
       "Shiyou"
-    ]
-  },
-  "Web/API/Document/keyup_event": {
-    "modified": "2019-04-18T03:52:12.531Z",
-    "contributors": [
-      "irenesmith",
-      "fscholz",
-      "JoanneWu"
     ]
   },
   "Web/API/Document/querySelector": {
@@ -3226,6 +3212,14 @@
     "contributors": [
       "akccakcctw",
       "NoobTW"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2019-04-18T03:52:12.531Z",
+    "contributors": [
+      "irenesmith",
+      "fscholz",
+      "JoanneWu"
     ]
   },
   "Web/API/Element/querySelectorAll": {
@@ -3670,18 +3664,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2019-08-27T10:57:49.300Z",
-    "contributors": [
-      "StanleyDing"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2019-03-23T22:13:45.424Z",
-    "contributors": [
-      "StanleyDing"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:48:19.691Z",
     "contributors": [
@@ -3707,6 +3689,12 @@
     "modified": "2020-10-15T22:09:39.473Z",
     "contributors": [
       "qwer5656"
+    ]
+  },
+  "Web/API/HTMLDialogElement/close_event": {
+    "modified": "2019-03-23T22:13:45.424Z",
+    "contributors": [
+      "StanleyDing"
     ]
   },
   "Web/API/HTMLDocument": {
@@ -4464,18 +4452,6 @@
     "modified": "2019-03-23T22:03:03.633Z",
     "contributors": [
       "IsaacSchemm"
-    ]
-  },
-  "Web/API/WindowEventHandlers": {
-    "modified": "2019-03-23T22:30:52.273Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2020-10-15T22:29:08.795Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/API/XMLHttpRequest": {
@@ -7196,12 +7172,6 @@
       "iigmir"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-03-12T19:44:24.320Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/parseInt": {
     "modified": "2020-10-15T21:48:43.179Z",
     "contributors": [
@@ -7303,6 +7273,12 @@
       "kuolun",
       "liuderchi",
       "roycrxtw"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-03-12T19:44:24.320Z",
+    "contributors": [
+      "jackblackevo"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {
@@ -7808,6 +7784,12 @@
       "jackblackevo"
     ]
   },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2019-08-27T10:57:49.300Z",
+    "contributors": [
+      "StanleyDing"
+    ]
+  },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {
     "modified": "2019-03-23T22:36:14.585Z",
     "contributors": [
@@ -7847,18 +7829,6 @@
     "contributors": [
       "teoli",
       "Kennyluck"
-    ]
-  },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T22:30:45.308Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a": {
-    "modified": "2019-03-18T21:16:54.761Z",
-    "contributors": [
-      "jackblackevo"
     ]
   },
   "conflicting/Web/CSS/@viewport": {
@@ -8209,6 +8179,12 @@
       "bine139488"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
+    "modified": "2019-03-23T22:48:01.923Z",
+    "contributors": [
+      "Shiyou"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Operators": {
     "modified": "2020-10-15T22:18:48.252Z",
     "contributors": [
@@ -8347,17 +8323,6 @@
       "wbamberg",
       "Astrid-GitHub",
       "RSyehann"
-    ]
-  },
-  "orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽": {
-    "modified": "2019-04-23T03:28:52.095Z",
-    "contributors": [
-      "jackblackevo",
-      "wbamberg",
-      "SphinxKnight",
-      "irvinfly",
-      "teoli",
-      "BobChao"
     ]
   },
   "orphaned/Tools/Web_Console/Keyboard_shortcuts": {

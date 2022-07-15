@@ -15,7 +15,7 @@ translation_of: Web/API/Event/initEvent
 <p>可以使用特定的 event 构造器函数，比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 <a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Creating and triggering events</a> .</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>event</em>.initEvent(<em>type</em>, <em>bubbles</em>, <em>cancelable</em>);</pre>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/Event/initEvent
  <dd>一个 {{jsxref("Boolean")}} 值，决定该事件的默认动作是否可以被取消。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。</dd>
 </dl>
 
-<h2 id="Example" name="Example">范例</h2>
+<h2 id="Example">范例</h2>
 
 <pre><code>// 创建事件。
 var event = document.createEvent('Event');
@@ -45,29 +45,11 @@ elem.addEventListener('click', function (e) {
 elem.dispatchEvent(event);</code>
 </pre>
 
-<h2 id="规格">规格</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>From {{SpecName('DOM2 Events')}}, deprecated it, superseded by event constructors.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}}</td>
-   <td>{{Spec2('DOM2 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容</h2>
+<h2 id="Browser_compatibility">浏览器兼容</h2>
 
 {{Compat("api.Event.initEvent")}}
 

@@ -80,34 +80,34 @@ i32a.copyWithin(0, 2);
 <h2 id="Polyfill">Polyfill</h2>
 
 <pre class="brush: js">if (!Array.prototype.copyWithin) {
-  Array.prototype.copyWithin =
-  // Array: Number[, Number[, Number]]
-  function copyWithin(target, start, stop) {
-    var positiveT = target &gt;= 0,
-        positiveS = (start = start | 0) &gt;= 0,
-        length    = this.length,
-        zero      = 0,
-        r         = function() {return ((+new Date) * Math.random()).toString(36)},
-        delimiter = "\b" + r() + "-" + r() + "-" + r() + "\b",
-        hold;
+  Array.prototype.copyWithin =
+  // Array: Number[, Number[, Number]]
+  function copyWithin(target, start, stop) {
+    var positiveT = target &gt;= 0,
+        positiveS = (start = start | 0) &gt;= 0,
+        length    = this.length,
+        zero      = 0,
+        r         = function() {return ((+new Date) * Math.random()).toString(36)},
+        delimiter = "\b" + r() + "-" + r() + "-" + r() + "\b",
+        hold;
 
-    stop = stop || this.length;
-    hold = this.slice.apply(this,
-      positiveT?
-        [start, stop]:
-      positiveS?
-        [start, -target]:
-      [start])
-    .join(delimiter);
+    stop = stop || this.length;
+    hold = this.slice.apply(this,
+      positiveT?
+        [start, stop]:
+      positiveS?
+        [start, -target]:
+      [start])
+    .join(delimiter);
 
-    return this.splice.apply(this,
-      positiveT?
-        [target, stop - start, hold]:
-      positiveS?
-        [target, stop, hold]:
-      [target, start, hold]),
-            this.join(delimiter).split(delimiter).slice(zero, length);
-  }
+    return this.splice.apply(this,
+      positiveT?
+        [target, stop - start, hold]:
+      positiveS?
+        [target, stop, hold]:
+      [target, start, hold]),
+            this.join(delimiter).split(delimiter).slice(zero, length);
+  }
 }
 </pre>
 

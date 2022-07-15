@@ -15,13 +15,11 @@ La propriété en lecture seule **`Node.lastChild`** renvoie le dernier enfant d
 
 ## Syntaxe
 
-    var childNode = node.lastChild;
-
-
+```js
+var childNode = node.lastChild;
+```
 
 ## Exemple
-
-
 
 ```js
 var tr = document.getElementById("row1");

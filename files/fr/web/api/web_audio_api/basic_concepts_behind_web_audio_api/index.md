@@ -11,11 +11,11 @@ La Web Audio API implique d'effectuer le traitement du son dans un **contexte** 
 
 Les noeuds audio sont liés au niveau de leur entrée et leur sortie, formant une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds, et se termine avec une sortie spécifique (bien qu'il ne soit pas nécessaire de spécifier une sortie si, par exemple, vous souhaitez seulement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci&nbsp;:
 
-1.  Création d'un contexte audio
-2.  Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
-3.  Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
-4.  Choix final de la sortie audio, par exemple les enceintes du système
-5.  Connection des sources aux effets, et des effets à la sortie.
+1. Création d'un contexte audio
+2. Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
+3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
+4. Choix final de la sortie audio, par exemple les enceintes du système
+5. Connection des sources aux effets, et des effets à la sortie.
 
 ![Diagramme simple composé de trois rectangles intitulés Sources, Effets et Sortie, reliés par des flèches, de gauche à droite, qui indiquent le sens du flux d'informations audio.](webaudioapi_en.svg)
 
@@ -83,13 +83,17 @@ Ce code génère une mémoire tampon mono (un seul canal) qui, lorsqu'elle est l
 
 La Web Audio API utilise un format de mémoire tampon linéaire : les canaux gauche et droite sont stockés de la façon suivante :
 
-    LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (pour un buffer de 16 trames)
+```
+LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (pour un buffer de 16 trames)
+```
 
 C'est assez courant dans le traitement audio, car cela permet de traiter facilement chaque canal de façon indépendante.
 
 L'alternative est d'utiliser un format entrelacé:
 
-    LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (pour un buffer de 16 trames)
+```
+LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (pour un buffer de 16 trames)
+```
 
 Ce format est communément utilisé pour stocker et lire du son avec très peu de traitement, comme par exemple pour un flux de MP3 décodé.
 

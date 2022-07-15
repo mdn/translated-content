@@ -14,13 +14,13 @@ translation_of: Learn/Server-side/Express_Nodejs/routes
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p>本节将为 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> 站点中所需的资源端点（Endpoint）配置路由。先用空的处理函数搭建起路由处理的模块结构（下节会将它们扩充为真实的处理函数）。并详细介绍了 Express 路由模块的创建方法。</p>
+<p>本节将为 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> 站点中所需的资源端点（Endpoint）配置路由。先用空的处理函数搭建起路由处理的模块结构（下节会将它们扩充为真实的处理函数）。并详细介绍了 Express 路由模块的创建方法。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>回顾 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node 入门</a>。完成本教程之前小节（<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express 教程 3：使用数据库 (Mongoose)</a> 等）。了解服务器端编程，了解正则表达式。</td>
+   <td>回顾 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node 入门</a>。完成本教程之前小节（<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express 教程 3：使用数据库 (Mongoose)</a> 等）。了解服务器端编程，了解正则表达式。</td>
   </tr>
   <tr>
    <th scope="row">学习目标：</th>
@@ -31,7 +31,7 @@ translation_of: Learn/Server-side/Express_Nodejs/routes
 
 <h2 id="概览">概览</h2>
 
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose">上节</a> 定义了与数据库交互的 Mongoose 模型，使用一个（独立）脚本创建了一些初始记录。现在可以编写代码来向用户展示这些信息。首先要确定页面中应显示哪些信息，然后定义适当的 URL 来返回这些资源。随后应创建路由（URL 处理器）和视图（模板）来显示这些页面。</p>
+<p><a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose">上节</a> 定义了与数据库交互的 Mongoose 模型，使用一个（独立）脚本创建了一些初始记录。现在可以编写代码来向用户展示这些信息。首先要确定页面中应显示哪些信息，然后定义适当的 URL 来返回这些资源。随后应创建路由（URL 处理器）和视图（模板）来显示这些页面。</p>
 
 <p>下图展示了 HTTP 请求/响应处理的主数据流和需要实现的行为。图中除视图（View）和路由（Route）外，还展示了控制器（Controller），它们是实际的请求处理函数，与路由请求代码是分开的。</p>
 
@@ -56,7 +56,7 @@ translation_of: Learn/Server-side/Express_Nodejs/routes
 <p>创建路由有几种方法。本教程将使 <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> 中间件，因为使用它可以将站点特定部分的路由处理程序打包，并使用通用路由前缀访问它们。我们会将所有与图书馆有关的路由保存在 <code>catalog</code> 模块中，在添加处理帐户或其他功能的路由时，可以分开保存。</p>
 
 <div class="note">
-<p><strong>注：</strong><a href="https://developer.mozilla.org/zh-CN/docs/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%88Route_handler%EF%BC%89">Express 简介 &gt; 创建路由处理程序</a> 简要讨论了 Express 应用的路由机制。使用 <code>Router</code> 可以保证更好的模块化（下文所述），且用法与直接在 Express 应用对象定义路由非常类似。</p>
+<p><strong>注：</strong><a href="/zh-CN/docs/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%88Route_handler%EF%BC%89">Express 简介 &gt; 创建路由处理程序</a> 简要讨论了 Express 应用的路由机制。使用 <code>Router</code> 可以保证更好的模块化（下文所述），且用法与直接在 Express 应用对象定义路由非常类似。</p>
 </div>
 
 <p>本段以下内容介绍使用 <code>Router</code> 定义路由的方法。</p>
@@ -108,7 +108,7 @@ app.use('/wiki', wiki);</pre>
 <p>该回调有三个参数（通常命名为：<code>req</code>、<code>res</code>、<code>next</code>），分别是：HTTP 请求对象、HTTP 响应、中间件链中的下一个函数。</p>
 
 <div class="note">
-<p><strong>注：</strong>路由函数就是 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware">Express 中间件</a>，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 <code>next</code> 函数。上述示例使用<code>send()</code> 完成了请求，所以没有使用 <code>next</code> 参数（参数表中将其省略）。</p>
+<p><strong>注：</strong>路由函数就是 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#Using_middleware">Express 中间件</a>，这意味着它们必须（通过响应）结束请求，否则必须调用链中的 <code>next</code> 函数。上述示例使用<code>send()</code> 完成了请求，所以没有使用 <code>next</code> 参数（参数表中将其省略）。</p>
 
 <p>上述路由函数只需要一个回调，可以根据需要指定任意数量的回调参数，或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。</p>
 </div>

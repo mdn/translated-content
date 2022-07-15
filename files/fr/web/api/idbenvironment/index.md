@@ -10,8 +10,6 @@ translation_of: Web/API/IDBEnvironment
 ---
 {{APIRef}}
 
-> **Attention :** À partir de Firefox 52, la propriété définie dans ce _mixin_ a été déplacée vers {{domxref("WindowOrWorkerGlobalScope")}} et d'autres navigateurs implémenteront également cette décision. Voir {{domxref("WindowOrWorkerGlobalScope")}} pour des informations à jour.
-
 L'utilitaire **`IDBEnvironment`**, lié à l'interface [IndexedDB API](/fr/docs/Web/API/API_IndexedDB), contient la propriété `indexedDB` qui permet d'accéder aux fonctionnalités de l'API IndexedDB. C'est l'interface de haut niveau implémentée par les objets {{domxref("window")}} et {{domxref("Worker")}}.
 
 {{AvailableInWorkers}}

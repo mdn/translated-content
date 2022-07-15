@@ -18,8 +18,10 @@ La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("Ev
 
 ## Syntaxe
 
-    target.removeEventListener(type, listener[, options]);
-    target.removeEventListener(type, listener[, useCapture]);
+```js
+target.removeEventListener(type, listener[, options]);
+target.removeEventListener(type, listener[, useCapture]);
+```
 
 ### Paramètres
 

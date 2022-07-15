@@ -18,7 +18,9 @@ Le type de donnée CSS **`<shape>`** permet de représenter des formes. Ces form
 
 Les valeurs de type `<shape>` sont construites grâce à la notation fonctionnelle `rect()` qui permet de créer une zone en forme de rectangle.
 
-    rect(haut, droite, bas, gauche)
+```
+rect(haut, droite, bas, gauche)
+```
 
 #### Valeurs
 

@@ -33,25 +33,25 @@ translation_of: Learn/JavaScript/First_steps/Math
 <p>在程式裡，即使眾所周知的十進位數字系統也比您想像的要複雜。我們使用不同的術語來描述不同類型的十進位數字，例如：</p>
 
 <ul>
- <li><strong>Integers </strong>是整數，如：10，400，或 -5。</li>
+ <li><strong>Integers </strong>是整數，如：10，400，或 -5。</li>
  <li><strong>Floating point numbers</strong> (floats) 浮點數具有小數點跟小數位，例如12.5和56.7786543。</li>
- <li><strong>Doubles</strong> 是一種特定型態的浮點數 that have greater precision than standard floating point numbers (meaning that they are accurate to a greater number of decimal places).</li>
+ <li><strong>Doubles</strong> 是一種特定型態的浮點數 that have greater precision than standard floating point numbers (meaning that they are accurate to a greater number of decimal places).</li>
 </ul>
 
 <p>我們甚至有不同類型的號碼系統！十進位以10為單位（表示每列使用0–9），但是也有像這些：</p>
 
 <ul>
- <li><strong>二進位</strong> —計算機的最底層語言；0和1。</li>
- <li><strong>八進位</strong> —以8為單位，每列使用0–7。</li>
- <li><strong>十六進位</strong> —以16為單位，在每列中使用0–9，然後使用a–f。<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com.tw&amp;sl=en&amp;sp=nmt4&amp;tl=zh-TW&amp;u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&amp;usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values">在CSS中</a>設置<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com.tw&amp;sl=en&amp;sp=nmt4&amp;tl=zh-TW&amp;u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&amp;usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values">顏色</a>之前，您可能已經遇到過這些數字。</li>
+ <li><strong>二進位</strong> —計算機的最底層語言；0和1。</li>
+ <li><strong>八進位</strong> —以8為單位，每列使用0–7。</li>
+ <li><strong>十六進位</strong> —以16為單位，在每列中使用0–9，然後使用a–f。<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com.tw&amp;sl=en&amp;sp=nmt4&amp;tl=zh-TW&amp;u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&amp;usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values">在CSS中</a>設置<a href="https://translate.googleusercontent.com/translate_c?depth=1&amp;pto=aue&amp;rurl=translate.google.com.tw&amp;sl=en&amp;sp=nmt4&amp;tl=zh-TW&amp;u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&amp;usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values">顏色</a>之前，您可能已經遇到過這些數字。</li>
 </ul>
 
-<p><strong>在開始擔心大腦融化之前，先等等！</strong>首先，我們將在整個課程中完全使用十進位數；您很少會想到其他類型的需求，如果有的話。 </p>
+<p><strong>在開始擔心大腦融化之前，先等等！</strong>首先，我們將在整個課程中完全使用十進位數；您很少會想到其他類型的需求，如果有的話。 </p>
 
-<p>第二個好消息是JavaScript只有一種數字資料類型 ，猜對了！就是{{jsxref("Number")}}。這代表無論你在JavaScript需要處理哪種數字，處理方法都是一樣的。</p>
+<p>第二個好消息是JavaScript只有一種數字資料類型 ，猜對了！就是{{jsxref("Number")}}。這代表無論你在JavaScript需要處理哪種數字，處理方法都是一樣的。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 事實上, JavaScript 有第二種數字型態， {{Glossary("BigInt")}}, 用於非常、非常、非常大的整數。但這節課我只需要擔心 <code>Number</code> 的值。</p>
+<p><strong>Note</strong>: 事實上, JavaScript 有第二種數字型態， {{Glossary("BigInt")}}, 用於非常、非常、非常大的整數。但這節課我只需要擔心 <code>Number</code> 的值。</p>
 </div>
 
 <h3 id="我怎麼看都是些數字!">我怎麼看都是些數字!</h3>
@@ -65,7 +65,7 @@ var myFloat = 6.667;
 myInt;
 myFloat;</pre>
  </li>
- <li>數字的值不需要引號框起來 — 試著宣告和賦予更多初始值為數字的變數，在繼續下去之前。</li>
+ <li>數字的值不需要引號框起來 — 試著宣告和賦予更多初始值為數字的變數，在繼續下去之前。</li>
  <li>現在，來確認Now let's check that both our original variables are of the same datatype. There is an operator called {{jsxref("Operators/typeof", "typeof")}} in JavaScript that does this. Enter the below two lines as shown:
   <pre class="brush: js notranslate">typeof myInt;
 typeof myFloat;</pre>
@@ -121,8 +121,8 @@ typeof myFloat;</pre>
   <tr>
    <td>**</td>
    <td>指數</td>
-   <td>Raises a <code>base</code> number to the <code>exponent</code> power, that is, the <code>base</code> number multiplied by itself, <code>exponent</code> times. It was first Introduced in EcmaScript 2016.</td>
-   <td><code>5 ** 2</code> (5的2次方得 <code>25</code>，跟 <code>5 * 5</code>結果相同)</td>
+   <td>Raises a <code>base</code> number to the <code>exponent</code> power, that is, the <code>base</code> number multiplied by itself, <code>exponent</code> times. It was first Introduced in EcmaScript 2016.</td>
+   <td><code>5 ** 2</code> (5的2次方得 <code>25</code>，跟 <code>5 * 5</code>結果相同)</td>
   </tr>
  </tbody>
 </table>
@@ -131,7 +131,7 @@ typeof myFloat;</pre>
 <p><strong>Note</strong>: You'll sometimes see numbers involved in sums referred to as {{Glossary("Operand", "operands")}}.</p>
 </div>
 
-<p><strong>Note</strong>: You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in <code>Math.pow(7, 3)</code>, <code>7</code> is the base and <code>3</code> is the exponent, so the result of the expression is <code>343</code>. <code>Math.pow(7, 3)</code> is equivalent to <code>7**3</code>.</p>
+<p><strong>Note</strong>: You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in <code>Math.pow(7, 3)</code>, <code>7</code> is the base and <code>3</code> is the exponent, so the result of the expression is <code>343</code>. <code>Math.pow(7, 3)</code> is equivalent to <code>7**3</code>.</p>
 
 <p>We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">developer tools JavaScript console</a>, or use the simple built in console seen earlier if you'd prefer, to familiarize yourself with the syntax.</p>
 
@@ -164,9 +164,9 @@ num2 + num1 / 8 + 2;</pre>
 
 <p>As a human being, you may read this as <em>"50 plus 10 equals 60"</em>, then <em>"8 plus 2 equals 10"</em>, and finally <em>"60 divided by 10 equals 6"</em>.</p>
 
-<p>But the browser does <em>"10 divided by 8 equals 1.25"</em>, then <em>"50 plus 1.25 plus 2 equals 53.25"</em>.</p>
+<p>But the browser does <em>"10 divided by 8 equals 1.25"</em>, then <em>"50 plus 1.25 plus 2 equals 53.25"</em>.</p>
 
-<p>This is because of <strong>operator precedence</strong> — some operators will be applied before others when calculating the result of a sum (referred to as an expression, in programming).  Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the sum is always evaluated from left to right).</p>
+<p>This is because of <strong>operator precedence</strong> — some operators will be applied before others when calculating the result of a sum (referred to as an expression, in programming).  Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the sum is always evaluated from left to right).</p>
 
 <p>If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:</p>
 
@@ -180,7 +180,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <h2 id="遞增和遞減運算符">遞增和遞減運算符</h2>
 
-<p>Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (<code>++</code>) and decrement(<code>--</code>) operators. We used <code>++</code> in our  "Guess the number" game back in our <a href="/en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash">first splash into JavaScript</a> article, when we added 1 to our <code>guessCount</code> variable to keep track of how many guesses the user has left after each turn.</p>
+<p>Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (<code>++</code>) and decrement(<code>--</code>) operators. We used <code>++</code> in our  "Guess the number" game back in our <a href="/en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash">first splash into JavaScript</a> article, when we added 1 to our <code>guessCount</code> variable to keep track of how many guesses the user has left after each turn.</p>
 
 <pre class="brush: js notranslate">guessCount++;</pre>
 
@@ -285,24 +285,24 @@ x *= y; // x now contains the value 12</pre>
 
 <h2 id="Active_learning_sizing_a_canvas_box">Active learning: sizing a canvas box</h2>
 
-<p>In this exercise, you will manipulate some numbers and operators to change the size of a box. The box is drawn using a browser API called the {{domxref("Canvas API", "", "", "true")}}. There is no need to worry about how this works — just concentrate on the math for now. The width and height of the box (in pixels) are defined by the variables <code>x</code> and <code>y</code>, which are initially both given a value of 50.</p>
+<p>In this exercise, you will manipulate some numbers and operators to change the size of a box. The box is drawn using a browser API called the {{domxref("Canvas API", "", "", "true")}}. There is no need to worry about how this works — just concentrate on the math for now. The width and height of the box (in pixels) are defined by the variables <code>x</code> and <code>y</code>, which are initially both given a value of 50.</p>
 
 <p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 620)}}</p>
 
 <p><strong><a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html">Open in new window</a></strong></p>
 
-<p>In the editable code box above, there are two lines marked with a comment that we'd like you to update to make the box grow/shrink to certain sizes, using certain operators and/or values in each case. Let's try the following:</p>
+<p>In the editable code box above, there are two lines marked with a comment that we'd like you to update to make the box grow/shrink to certain sizes, using certain operators and/or values in each case. Let's try the following:</p>
 
 <ul>
  <li>Change the line that calculates x so the box is still 50px wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.</li>
- <li>Change the line that calculates y so the box is 75px high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.</li>
+ <li>Change the line that calculates y so the box is 75px high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.</li>
  <li>Change the line that calculates x so the box is 250px wide, but the 250 is calculated using two numbers and the remainder (modulo) operator.</li>
- <li>Change the line that calculates y so the box is 150px high, but the 150 is calculated using three numbers and the subtraction and division operators.</li>
- <li>Change the line that calculates x so the box is 200px wide, but the 200 is calculated using the number 4 and an assignment operator.</li>
+ <li>Change the line that calculates y so the box is 150px high, but the 150 is calculated using three numbers and the subtraction and division operators.</li>
+ <li>Change the line that calculates x so the box is 200px wide, but the 200 is calculated using the number 4 and an assignment operator.</li>
  <li>Change the line that calculates y so the box is 200px high, but the 200 is calculated using the numbers 50 and 3, the multiplication operator, and the addition assignment operator.</li>
 </ul>
 
-<p>Don't worry if you totally mess the code up. You can always press the Reset button to get things working again. After you've answered all the above questions correctly, feel free to play with the code some more or create your own challenges.</p>
+<p>Don't worry if you totally mess the code up. You can always press the Reset button to get things working again. After you've answered all the above questions correctly, feel free to play with the code some more or create your own challenges.</p>
 
 <h2 id="比較運算符">比較運算符</h2>
 
@@ -356,16 +356,16 @@ x *= y; // x now contains the value 12</pre>
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: You may see some people using <code>==</code> and <code>!=</code> in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from <code>===</code>/<code>!==</code>. The former versions test whether the values are the same but not whether the values' datatypes are the same. The latter, strict versions test the equality of both the values and their datatypes. The strict versions tend to result in fewer errors, so we recommend you use them.</p>
+<p><strong>Note</strong>: You may see some people using <code>==</code> and <code>!=</code> in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from <code>===</code>/<code>!==</code>. The former versions test whether the values are the same but not whether the values' datatypes are the same. The latter, strict versions test the equality of both the values and their datatypes. The strict versions tend to result in fewer errors, so we recommend you use them.</p>
 </div>
 
 <p>If you try entering some of these values in a console, you'll see that they all return <code>true</code>/<code>false</code> values — those booleans we mentioned in the last article. These are very useful, as they allow us to make decisions in our code, and they are used every time we want to make a choice of some kind. For example, booleans can be used to:</p>
 
 <ul>
- <li>Display the correct text label on a button depending on whether a feature is turned on or off</li>
- <li>Display a game over message if a game is over or a victory message if the game has been won</li>
- <li>Display the correct seasonal greeting depending what holiday season it is</li>
- <li>Zoom a map in or out depending on what zoom level is selected</li>
+ <li>Display the correct text label on a button depending on whether a feature is turned on or off</li>
+ <li>Display a game over message if a game is over or a victory message if the game has been won</li>
+ <li>Display the correct seasonal greeting depending what holiday season it is</li>
+ <li>Zoom a map in or out depending on what zoom level is selected</li>
 </ul>
 
 <p>We'll look at how to code such logic when we look at conditional statements in a future article. For now, let's look at a quick example:</p>
@@ -393,7 +393,7 @@ function updateBtn() {
 
 <p><strong><a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html">Open in new window</a></strong></p>
 
-<p>You can see the equality operator being used just inside the <code>updateBtn()</code> function. In this case, we are not testing if two mathemetical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to  "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.</p>
+<p>You can see the equality operator being used just inside the <code>updateBtn()</code> function. In this case, we are not testing if two mathemetical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to  "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Such a control that swaps between two states is generally referred to as a <strong>toggle</strong>. It toggles between one state and another — light on, light off, etc.</p>
@@ -403,7 +403,7 @@ function updateBtn() {
 
 <p>In this article we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers used again and again, all the way through your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people that doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.</p>
 
-<p>In the next article, we'll explore text and how JavaScript allows us to manipulate it.</p>
+<p>In the next article, we'll explore text and how JavaScript allows us to manipulate it.</p>
 
 <div class="note">
 <p><strong>Note</strong>: If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our <a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates">Numbers and dates</a> and <a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">Expressions and operators</a> articles.</p>

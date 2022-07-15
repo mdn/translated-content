@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLBodyElement
 
 L'interface **`HTMLBodyElement`** des propriétés particulières (au-delà de celles de l'interface {{ domxref("HTMLElement") }} dont-elle hérite également) pour manipuler les éléments.
 
-## propriétés
+## Propriétés
 
 _Propriétés hérite de son parent, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 
@@ -29,7 +29,7 @@ _Propriétés hérite de son parent, {{domxref("HTMLElement")}} et de {{domxref(
 - {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
   - : Est un {{ domxref("DOMString") }} qui représente la couleur des liens visités.
 
-## méthodes
+## Méthodes
 
 _Aucune méthode spécifique; méthodes hérite de ses parents, {{domxref("HTMLElement")}} et de {{domxref("WindowEventHandlers")}}._
 

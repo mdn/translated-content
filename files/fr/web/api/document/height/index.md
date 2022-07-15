@@ -13,7 +13,9 @@ Retourne la hauteur de l'objet {{domxref("document")}}. Dans la plupart des cas,
 
 ## Syntaxe
 
-    height_value = document.height
+```js
+height_value = document.height
+```
 
 ## Exemple
 
@@ -24,9 +26,11 @@ alert(document.height);
 
 ## Alternatives
 
-    document.body.clientHeight
-    document.documentElement.clientHeight
-    document.documentElement.scrollHeight
+```js
+document.body.clientHeight
+document.documentElement.clientHeight
+document.documentElement.scrollHeight
+```
 
 ## Spécification
 

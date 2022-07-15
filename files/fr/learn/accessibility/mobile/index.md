@@ -67,16 +67,16 @@ Pour l'activer, sélectionnez Paramètres> Accessibilité> TalkBack, puis appuye
 
 Lorsque TalkBack est activé, les commandes de base de votre appareil Android seront un peu différentes. Par exemple:
 
-1.  Une simple pression sur une application la sélectionne et l'appareil lit en quoi elle consiste.
-2.  Glisser vers la gauche ou la droite permet de se déplacer entre les applications, ou les boutons / contrôles si vous êtes dans une barre de contrôle. L'appareil lira chaque option.
-3.  Double-cliquer n'importe où ouvrira l'application / sélectionner l'option.
-4.  Vous pouvez également "explorer par le toucher" - maintenez votre doigt appuyé sur l'écran et faites-le glisser, et votre appareil lira les différentes applications / éléments que vous déplacez.
+1. Une simple pression sur une application la sélectionne et l'appareil lit en quoi elle consiste.
+2. Glisser vers la gauche ou la droite permet de se déplacer entre les applications, ou les boutons / contrôles si vous êtes dans une barre de contrôle. L'appareil lira chaque option.
+3. Double-cliquer n'importe où ouvrira l'application / sélectionner l'option.
+4. Vous pouvez également "explorer par le toucher" - maintenez votre doigt appuyé sur l'écran et faites-le glisser, et votre appareil lira les différentes applications / éléments que vous déplacez.
 
 Si vous souhaitez désactiver TalkBack:
 
-1.  Accédez à votre application Paramètres en utilisant les gestes ci-dessus.
-2.  Accédez à Accessibilité> TalkBack .
-3.  Accédez au commutateur et activez-le pour le désactiver. .
+1. Accédez à votre application Paramètres en utilisant les gestes ci-dessus.
+2. Accédez à Accessibilité> TalkBack .
+3. Accédez au commutateur et activez-le pour le désactiver. .
 
 **Note:** Vous pouvez accéder à votre écran d'accueil à tout moment en glissant vers le haut et à gauche dans un mouvement fluide. Si vous avez plus d'un écran d'accueil, vous pouvez passer d'un écran à l'autre en faisant glisser deux doigts vers la gauche et vers la droite. .
 
@@ -96,10 +96,10 @@ TalkBack vous permet d'accéder aux menus contextuels globaux et locaux, où que
 
 #### **Pour accéder à ces menus**:
 
-1.  Accédez au menu global en glissant rapidement vers le bas, puis à droite .
-2.  Accédez au menu local en balayant rapidement vers le haut, puis à droite.
-3.  Balayez vers la gauche et la droite pour naviguer entre les différentes options. .
-4.  Une fois que vous avez sélectionné l'option de votre choix, double-cliquez dessus pour la choisir.
+1. Accédez au menu global en glissant rapidement vers le bas, puis à droite .
+2. Accédez au menu local en balayant rapidement vers le haut, puis à droite.
+3. Balayez vers la gauche et la droite pour naviguer entre les différentes options. .
+4. Une fois que vous avez sélectionné l'option de votre choix, double-cliquez dessus pour la choisir.
 
 Pour plus de détails sur toutes les options disponibles dans les menus contextuels global et local, voir  [Use global and local context menus](https://support.google.com/accessibility/android/answer/6007066).
 
@@ -109,19 +109,19 @@ Vous pouvez utiliser le menu contextuel local dans un navigateur Web pour recher
 
 Par exemple, avec TalkBack activé:
 
-1.  Ouvrez votre navigateur web.
-2.  Activer la barre d'URL.
-3.  Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
+1. Ouvrez votre navigateur web.
+2. Activer la barre d'URL.
+3. Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
 
     - Sélectionnez la barre d’URL en glissant gauche / droite jusqu’à ce que vous y arriviez, puis en double tapant .
     - Maintenez votre doigt appuyé sur le clavier virtuel jusqu'à obtenir le caractère souhaité, puis relâchez-le pour le saisir. Répétez pour chaque caractère.
     - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
 
-4.  Balayez vers la gauche et la droite pour vous déplacer entre différents éléments de la page. .
-5.  Faites glisser votre doigt vers le haut et vers la droite avec un mouvement fluide pour accéder au menu de contenu local.
-6.  Balayez vers la droite jusqu'à ce que vous trouviez l'option "En-têtes et points de repère".
-7.  Appuyez deux fois pour le sélectionner. Vous pouvez maintenant glisser à gauche et à droite pour vous déplacer entre les rubriques et les points de repère ARIA.
-8.  Pour revenir au mode par défaut, entrez de nouveau dans le menu contextuel local en balayant l'écran vers le haut, le curseur à droite, sélectionnez "Par défaut", puis tapez deux fois pour l'activer.
+4. Balayez vers la gauche et la droite pour vous déplacer entre différents éléments de la page. .
+5. Faites glisser votre doigt vers le haut et vers la droite avec un mouvement fluide pour accéder au menu de contenu local.
+6. Balayez vers la droite jusqu'à ce que vous trouviez l'option "En-têtes et points de repère".
+7. Appuyez deux fois pour le sélectionner. Vous pouvez maintenant glisser à gauche et à droite pour vous déplacer entre les rubriques et les points de repère ARIA.
+8. Pour revenir au mode par défaut, entrez de nouveau dans le menu contextuel local en balayant l'écran vers le haut, le curseur à droite, sélectionnez "Par défaut", puis tapez deux fois pour l'activer.
 
 **Note:**  Voir aussi [Get started on Android with TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) pour obtenir une documentation plus complète.
 
@@ -133,11 +133,11 @@ Pour l'activer, accédez à l'application _Paramètres_, puis sélectionnez _Gé
 
 Une fois que VoiceOver est activé, les gestes de contrôle de base de l'iOS seront un peu différents :
 
-1.  Un simple tapement entraînera la sélection de l'élément sur lequel vous appuyez; votre appareil parlera de l'élément sur lequel vous avez tapé.
-2.  Vous pouvez également parcourir les éléments à l’écran en balayant vers la gauche ou vers la droite pour les déplacer, ou en faisant glisser votre doigt sur l’écran pour naviguer entre les différents éléments (lorsque vous trouvez l’élément souhaité, vous pouvez le retirer pour le sélectionner).
-3.  Pour activer l'élément sélectionné (par exemple, ouvrir une application sélectionnée), appuyez deux fois n'importe où sur l'écran.
-4.  Faites glisser votre doigt avec trois doigts pour faire défiler une page.
-5.  Appuyez avec deux doigts pour effectuer une action liée au contexte - par exemple, prendre une photo alors que vous êtes dans l'application Appareil photo.
+1. Un simple tapement entraînera la sélection de l'élément sur lequel vous appuyez; votre appareil parlera de l'élément sur lequel vous avez tapé.
+2. Vous pouvez également parcourir les éléments à l’écran en balayant vers la gauche ou vers la droite pour les déplacer, ou en faisant glisser votre doigt sur l’écran pour naviguer entre les différents éléments (lorsque vous trouvez l’élément souhaité, vous pouvez le retirer pour le sélectionner).
+3. Pour activer l'élément sélectionné (par exemple, ouvrir une application sélectionnée), appuyez deux fois n'importe où sur l'écran.
+4. Faites glisser votre doigt avec trois doigts pour faire défiler une page.
+5. Appuyez avec deux doigts pour effectuer une action liée au contexte - par exemple, prendre une photo alors que vous êtes dans l'application Appareil photo.
 
 Pour le désactiver à nouveau, revenez à _Paramètres_> _Général_> _Accessibilité_> _VoiceOver_ en utilisant les gestes ci-dessus, puis basculez le curseur _VoiceOver_ sur Désactivé.
 
@@ -149,8 +149,8 @@ Pour déverrouiller le téléphone, vous devez appuyer sur le bouton d'accueil (
 
 Lorsque VoiceOver est activé, vous disposez d'une fonction de navigation appelée Rotor, qui vous permet de choisir rapidement parmi un certain nombre d'options utiles courantes. Pour l'utiliser:
 
-1.  Tournez deux doigts sur l’écran comme si vous tourniez un cadran. Chaque option sera lue à voix haute au fur et à mesure que vous tournez. Vous pouvez aller et venir pour parcourir les options.
-2.  Une fois que vous avez trouvé l'option que vous voulez:
+1. Tournez deux doigts sur l’écran comme si vous tourniez un cadran. Chaque option sera lue à voix haute au fur et à mesure que vous tournez. Vous pouvez aller et venir pour parcourir les options.
+2. Une fois que vous avez trouvé l'option que vous voulez:
 
     - Relâchez vos doigts pour le sélectionner.
     - S'il s'agit d'une option dont vous pouvez parcourir la valeur (telle que le volume ou la vitesse de parole), vous pouvez effectuer un balayage vers le haut ou le bas pour augmenter ou diminuer la valeur de l'élément sélectionné.
@@ -161,17 +161,17 @@ Les options disponibles sous Rotor dépendent du contexte. Elles diffèrent en f
 
 Essayons la navigation Web avec VoiceOver:
 
-1.  Ouvrez votre navigateur web.
-2.  Activer la barre d'URL.
-3.  Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
+1. Ouvrez votre navigateur web.
+2. Activer la barre d'URL.
+3. Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
 
     - Sélectionnez la barre d’URL en glissant gauche / droite jusqu’à ce que vous y arriviez, puis en double-tapant.
     - Pour chaque caractère, maintenez votre doigt appuyé sur le clavier virtuel jusqu'à ce que vous obteniez le caractère souhaité, puis relâchez votre doigt pour le sélectionner. Appuyez deux fois pour le taper.
     - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
 
-4.  Balayez vers la gauche et la droite pour vous déplacer entre les éléments de la page. Vous pouvez appuyer deux fois sur un élément pour le sélectionner (par exemple, suivre un lien).
-5.  Par défaut, l’option de rotor sélectionnée sera Speaking Rate; vous pouvez actuellement balayer de haut en bas pour augmenter ou diminuer le débit.
-6.  Maintenant, tournez deux doigts autour de l'écran comme un cadran pour afficher le rotor et passez d'une option à l'autre. Voici quelques exemples d'options disponibles:
+4. Balayez vers la gauche et la droite pour vous déplacer entre les éléments de la page. Vous pouvez appuyer deux fois sur un élément pour le sélectionner (par exemple, suivre un lien).
+5. Par défaut, l’option de rotor sélectionnée sera Speaking Rate; vous pouvez actuellement balayer de haut en bas pour augmenter ou diminuer le débit.
+6. Maintenant, tournez deux doigts autour de l'écran comme un cadran pour afficher le rotor et passez d'une option à l'autre. Voici quelques exemples d'options disponibles:
 
     - _Taux de parole_ : Modifiez le taux de parole.
     - _Conteneurs_ : déplacez-vous entre différents conteneurs sémantiques de la page.
@@ -180,7 +180,7 @@ Essayons la navigation Web avec VoiceOver:
     - _Contrôles de formulaire_ : déplacez-vous entre les contrôles de formulaire de la page.
     - _Langue_ : déplacez-vous entre différentes traductions, si elles sont disponibles.
 
-7.  S*électionnez les en-têtes*. Vous pouvez maintenant glisser de haut en bas pour vous déplacer entre les titres de la page.
+7. S*électionnez les en-têtes*. Vous pouvez maintenant glisser de haut en bas pour vous déplacer entre les titres de la page.
 
 **Note:**  Pour une référence plus complète couvrant les gestes VoiceOver disponibles et d'autres astuces sur le test d'accessibilité sur iOS, voir aussi [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
 

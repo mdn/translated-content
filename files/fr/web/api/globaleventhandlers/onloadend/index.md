@@ -15,7 +15,9 @@ La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} est
 
 ## Syntaxe
 
-    img.onloadend = funcRef;
+```js
+img.onloadend = funcRef;
+```
 
 ### Valeur
 

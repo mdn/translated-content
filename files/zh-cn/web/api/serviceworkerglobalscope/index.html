@@ -13,7 +13,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 
 <p>此外，在 service worker 中，同步请求是被禁止的 - 只有异步请求，如方法{{domxref("GlobalFetch.fetch", "fetch()")}} 才被允许。</p>
 
-<p>该接口继承自 {{domxref("WorkerGlobalScope")}} 接口，以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, 和 {{domxref("WindowEventHandlers")}}.</p>
+<p>该接口继承自 {{domxref("WorkerGlobalScope")}} 接口，以及其父类 {{domxref("EventTarget")}}, 因此继承属性来自 {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}.</p>
 
 <p>{{InheritanceDiagram(700, 85, 20)}}</p>
 
@@ -98,40 +98,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-global-scope', 'ServiceWorkerGlobalScope')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch', '#concept-fetch', 'Fetch')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Adds the {{domxref("ServiceWorkerGlobalScope.fetch", "fetch")}} method.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#widl-ServiceWorkerGlobalScope-onpush', 'onpush')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>Adds the {{domxref("ServiceWorkerGlobalScope.onpush", "onpush")}} and {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange", "onpushsubscriptionchange")}} event handlers.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications','#dom-serviceworkerglobalscope-onnotificationclick','onnotificationclick')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Adds the {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}} event handler.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Background Sync','#sync-event','onsync')}}</td>
-   <td>{{Spec2('Background Sync')}}</td>
-   <td>Adds the {{domxref("ServiceWorkerGlobalScope.onsync","onsync")}} event.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

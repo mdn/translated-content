@@ -58,7 +58,7 @@ var importObj = {
 };
 ```
 
-<p>最後に {{jsxref("WebAssembly.instantiateStreaming()")}} を使用して wasm モジュール (table2.wasm) をロード し、インスタンス化します。table2.wasm モジュールは2の関数を持っていて (1つは42を、もう1つは83を返す) 、インポートされたテーブルの0、1番目に両方の要素が格納されます (<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>を参照) 。そして、インスタンス化された後、テーブルの長さは2のままです。しかし、今はJSから呼び出し可能な <a href="/en-US/docs/WebAssembly/Exported_functions">エクスポートされたWebAssembly関数</a> が含まれています。</p>
+<p>最後に {{jsxref("WebAssembly.instantiateStreaming()")}} を使用して wasm モジュール (table2.wasm) をロード し、インスタンス化します。table2.wasm モジュールは2の関数を持っていて (1つは42を、もう1つは83を返す) 、インポートされたテーブルの0、1番目に両方の要素が格納されます (<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat">text representation</a>を参照) 。そして、インスタンス化された後、テーブルの長さは2のままです。しかし、今はJSから呼び出し可能な <a href="/ja/docs/WebAssembly/Exported_functions">エクスポートされたWebAssembly関数</a> が含まれています。</p>
 
 <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
 .then(function(obj) {

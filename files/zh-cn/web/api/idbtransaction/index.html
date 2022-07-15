@@ -36,8 +36,6 @@ objectStore1.put("1", "key");
  <li>User agent crash</li>
 </ul>
 
-<p> </p>
-
 <p>{{AvailableInWorkers}}</p>
 
 <p>{{InheritanceDiagram}}</p>
@@ -85,9 +83,9 @@ objectStore1.put("1", "key");
  <dd>返回表示作为此事务作用域一部分的 object store 的 {{domxref("IDBObjectStore")}} 对象。</dd>
 </dl>
 
-<h2 id="Constants" name="Constants">模式常量</h2>
+<h2 id="Constants">模式常量</h2>
 
-<div>{{ obsolete_header(25) }}</div>
+<div>{{deprecated_header}}</div>
 
 <div class="warning">
 <p>这些常量将不再可用——它们在 Gecko 25 中被移除。 你应该直接使用字符串常量来作为替代。 ({{ bug(888598) }})</p>
@@ -95,7 +93,7 @@ objectStore1.put("1", "key");
 
 <p>Transactions 可使用以下三种模式中的一种：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">常量</th>
@@ -192,22 +190,9 @@ function addData() {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 {{Compat("api.IDBTransaction")}}
 

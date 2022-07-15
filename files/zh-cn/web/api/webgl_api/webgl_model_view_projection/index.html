@@ -23,7 +23,7 @@ translation_of: Web/API/WebGL_API/WebGL_model_view_projection
 
 <p>在 WebGL 程序中，数据通常上传到具有自己的坐标系统的 GPU 上，然后顶点着色器将这些点转换到一个称为<strong>裁剪空间</strong>的特殊坐标系上。延展到裁剪空间之外的任何数据都会被剪裁并且不会被渲染。如果一个三角形超出了该空间的边界，则将其裁切成新的三角形，并且仅保留新三角形在裁剪空间中的部分。</p>
 
-<p><img alt="A 3d graph showing clip space in WebGL." src="https://mdn.mozillademos.org/files/11371/clip-space-graph.svg" style="height: 432px; width: 500px;"></p>
+<p><img alt="A 3d graph showing clip space in WebGL." src="clip-space-graph.svg"></p>
 
 <p>上面的图像裁剪空间的可视化，所有点都必须被包含在其中。它是一个角在 (-1, -1, -1)，对角在 (1, 1, 1)，中心点在 (0, 0, 0) 的每边 2 个单位的立方体。裁剪空间使用的这个两个立方米坐标系称为归一化设备坐标（NDC）。在研究和使用 WebGL 代码时，你可能时不时的会使用这个术语。</p>
 
@@ -187,7 +187,7 @@ void main() {
 
 <p><a href="https://jsfiddle.net/2x03hdc8">在 JSFiddle 中查看</a></p>
 
-<p><img alt="The results of drawing to clip space using WebGL." src="https://mdn.mozillademos.org/files/11373/part1.png" style="height: 530px; width: 800px;"></p>
+<p><img alt="The results of drawing to clip space using WebGL." src="part1.png"></p>
 
 <h4 id="练习">练习</h4>
 
@@ -316,7 +316,7 @@ void main() {
 
 <p><a href="https://jsfiddle.net/mff99yu">在 JSFiddle 中查看</a></p>
 
-<h3 id="sect1"><img alt="The results of using homogeneous coordinates to move the boxes around in WebGL." src="https://mdn.mozillademos.org/files/11375/part2.png" style="height: 530px; width: 800px;"></h3>
+<h3 id="sect1"><img alt="The results of using homogeneous coordinates to move the boxes around in WebGL." src="part2.png"></h3>
 
 <h3 id="练习_2">练习</h3>
 
@@ -382,7 +382,7 @@ void main() {
 
 <p><a href="https://jsfiddle.net/5jofzgsh">在 JSFiddle 中查看</a></p>
 
-<p><img alt="Using a model matrix" src="https://mdn.mozillademos.org/files/11377/part3.png" style="height: 530px; width: 800px;"></p>
+<p><img alt="Using a model matrix" src="part3.png"></p>
 
 <p>此时，变换点的 w 值仍为 1.0。立方体仍然没有什么角度。下一节将进行此设置并修改 w 值以提供一些透视效果。</p>
 
@@ -419,7 +419,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 <p><a href="https://jsfiddle.net/vk9r8h2c">在 JSFiddle 中查看</a></p>
 
-<p><img alt="Filling the W component and creating some projection." src="https://mdn.mozillademos.org/files/11379/part4.png" style="height: 531px; width: 800px;"></p>
+<p><img alt="Filling the W component and creating some projection." src="part4.png"></p>
 
 <p>看到那个深蓝色的小三角形吗？那是添加到对象上的另一个面，因为形状的旋转导致了该角延伸到裁剪空间之外，从而导致该角被裁剪掉。有关如何使用更复杂的矩阵来帮助控制和防止裁剪的介绍，请参照下面的 <a href="#perspective_matrix">Perspective matrix</a>。</p>
 
@@ -516,7 +516,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p><a href="https://jsfiddle.net/zwyLLcbw">在 JSFiddle 中查看</a></p>
 
-<p><img alt="A simple projection matrix" src="https://mdn.mozillademos.org/files/11381/part5.png" style="height: 531px; width: 800px;"></p>
+<p><img alt="A simple projection matrix" src="part5.png"></p>
 
 <h2 id="透视矩阵">透视矩阵</h2>
 
@@ -591,7 +591,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p><a href="https://jsfiddle.net/Lzxw7e1q">在 JSFiddle 中查看</a></p>
 
-<p><img alt="A true perspective matrix" src="https://mdn.mozillademos.org/files/11383/part6.png" style="height: 531px; width: 800px;"></p>
+<p><img alt="A true perspective matrix" src="part6.png"></p>
 
 <h3 id="练习_5">练习</h3>
 
@@ -656,7 +656,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p><a href="https://jsfiddle.net/86fd797g">在 JSFiddle 中查看</a></p>
 
-<p><img alt="The view matrix" src="https://mdn.mozillademos.org/files/11385/part7.png" style="height: 531px; width: 800px;"></p>
+<p><img alt="The view matrix" src="part7.png"></p>
 
 <h3 id="相关坐标系">相关坐标系</h3>
 

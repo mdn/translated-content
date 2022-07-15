@@ -37,8 +37,6 @@ translation_of: Web/API/HTMLCanvasElement
  <dd>Crea un objeto {{domxref("Blob")}} representando la imagen contenida en el canvas; este archivo puede ser cacheado en disco o bien almacenado en memoria, lo cual dependerá del "user-agent"(especificación del navegador).</dd>
  <dt>{{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Retorna un objeto {{domxref("File")}} representando una imagen contenida en el canvas; este archivo es del tipo memory-based, con su nombre especificado. Si el tipo no se especifica, el tipo usado por defecto es <code>image/png</code>.</dd>
- <dt>{{domxref("HTMLCanvasElement.mozFetchAsStream()")}} {{non-standard_inline}}</dt>
- <dd>Crea un nuevo flujo de entrada, el cual una vez listo, proveerá los contenidos del canvas como datos de imagen. Cuando el nuevo flujo está listo, la retrollamada específica el método {{ifmethod("nsIInputStreamCallback", "onInputStreamReady")}} es invocada. Si no se especifica el tipo, el tipo de imagen por defecto es <code>image/png.</code>
  <div class="note"><strong>Nota:</strong> Sólo puede ser invocado desde Chrome.</div>
  </dd>
 </dl>

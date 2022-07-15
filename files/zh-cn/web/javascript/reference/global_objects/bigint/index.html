@@ -119,7 +119,7 @@ const rounded = 5n / 2n;
 mixed.sort();
 // ↪ [-12n, 0, 0n, 10, 4n, 4, 6]</pre>
 
-<p>注意被  <code>Object</code> 包装的 <code>BigInt</code>s 使用 object 的比较规则进行比较，只用同一个对象在比较时才会相等。</p>
+<p>注意被  <code>Object</code> 包装的 <code>BigInt</code> 使用 object 的比较规则进行比较，只用同一个对象在比较时才会相等。</p>
 
 <pre class="brush: js"><code>0n === Object(0n); // false
 Object(0n) === Object(0n); // false

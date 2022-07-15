@@ -41,24 +41,26 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universe
 
 Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `ins`. On peut le rendre annonçable via la propriété CSS {{cssxref("content")}} et grâce aux pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}.
 
-    ins::before,
-    ins::after {
-      clip-path: inset(100%);
-      clip: rect(1px, 1px, 1px, 1px);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-    }
+```css
+ins::before,
+ins::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
-    ins::before {
-      content: " [Début de l'insertion]";
-    }
+ins::before {
+  content: " [Début de l'insertion]";
+}
 
-    ins::after {
-      content: " [Fin de l'insertion] ";
-    }
+ins::after {
+  content: " [Fin de l'insertion] ";
+}
+```
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été inséré.
 

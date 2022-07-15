@@ -1,0 +1,92 @@
+---
+title: Public-Key-Pins-Report-Only
+slug: conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
+tags:
+  - HPKP
+  - HTTP
+  - 头部
+  - 安全
+translation_of: Web/HTTP/Headers/Public-Key-Pins-Report-Only
+original_slug: Web/HTTP/Headers/Public-Key-Pins-Report-Only
+---
+<div>HTTP 响应头部<code><strong>Public-Key-Pins-Report-Only</strong></code>用于设置在公钥固定不匹配时，发送错误信息到<code>report-uri。</code> 但和{{HTTPHeader("Public-Key-Pins")}}不同的是，即便公钥固定异常，其允许浏览器继续访问服务器。</div>
+
+<p> </p>
+
+<p>更多信息可以查看{{HTTPHeader("Public-Key-Pins")}}参考页面和<a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning</a>文章</p>
+
+<p> </p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Header type</th>
+   <td>{{Glossary("Response header")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">{{Glossary("Forbidden header name")}}</th>
+   <td>no</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">Public-Key-Pins-Report-Only: pin-sha256="&lt;pin-value&gt;";
+                             max-age=&lt;expire-time&gt;;
+                             includeSubDomains;
+                             report-uri="&lt;uri&gt;"</pre>
+
+<h2 id="指令">指令</h2>
+
+<dl>
+ <dt><code>pin-sha256="&lt;pin-value&gt;"</code></dt>
+ <dd>引号里面的是内容是以 Base64 编码的 {{Glossary("SPKI")}}(公钥) 指纹。你可以为多个不同的公钥都设定对应的 pins。 一些浏览器将来可能也支持非 SHA-256 的哈希算法。</dd>
+ <dt>max-age=&lt;expire-time&gt;</dt>
+ <dd>该指令对 Public-Key-Pins-Report-Only 无效，客户端会忽略也不会缓存此头部。</dd>
+ <dt> </dt>
+ <dt><code>includeSubDomains </code>{{optional_inline}}</dt>
+ <dd>如果该选项被指定，该规则也会应用到网站的所有子域名</dd>
+ <dt><code>report-uri="&lt;uri&gt;"</code></dt>
+</dl>
+
+<p>     设置 Pin 验证失败报告的 URL 地址。这个指令应该和该头部一起使用，否则这个头部将是一个空操作。</p>
+
+<dl>
+ <dt> </dt>
+</dl>
+
+<h2 id="例子">例子</h2>
+
+<pre>Public-Key-Pins-Report-Only:
+  pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=";
+  pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE=";
+  includeSubDomains;
+  report-uri="https://www.example.org/hpkp-report"</pre>
+
+<p>在这个例子里面，<strong>pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs=" </strong>固定了该服务器的公钥.。第二个声明<strong>pin-sha256="M8HztCzM3elUxkcjR2S5P4hhyBNf6lHkmjAHKhpGPWE="</strong> 也固定了服务器的备用公钥。同时通过<strong>includeSubDomains</strong> 的声明使得该设置对所有子域名都生效。最后， <strong>report-uri="https://www.example.org/hpkp-report"</strong> 则是定义了在验证失败时将异常信息发送到该服务器。</p>
+
+<h2 id="标准">标准</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Title</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7469", "Public-Key-Pins-Report-Only", "2.1")}}</td>
+   <td>Public Key Pinning Extension for HTTP</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容">浏览器兼容</h2>
+
+<p>{{Compat("http.headers.Public-Key-Pins-Report-Only")}}</p>
+
+<h2 id="更多">更多</h2>
+
+<ul>
+ <li>{{HTTPHeader("Public-Key-Pins")}}</li>
+</ul>

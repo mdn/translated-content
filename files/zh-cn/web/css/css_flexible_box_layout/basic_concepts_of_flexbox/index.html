@@ -28,21 +28,21 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <p>如果你选择了 <code>row</code> 或者 <code>row-reverse</code>，你的主轴将沿着 <strong>inline </strong>方向延伸。</p>
 
-<p><img alt="If flex-direction is set to row the main axis runs along the row in the inline direction." src="https://mdn.mozillademos.org/files/15614/Basics1.png" style="display: block; height: 152px; margin: 0px auto; width: 522px;"></p>
+<p><img alt="If flex-direction is set to row the main axis runs along the row in the inline direction." src="basics1.png"></p>
 
 <p>选择 <code>column</code> 或者 <code>column-reverse</code> 时，你的主轴会沿着上下方向延伸 — 也就是 <strong>block 排列的方向。</strong></p>
 
-<p><img alt="If flex-direction is set to column the main axis runs in the block direction." src="https://mdn.mozillademos.org/files/15615/Basics2.png" style="display: block; height: 227px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="If flex-direction is set to column the main axis runs in the block direction." src="basics2.png"></p>
 
 <h3 id="交叉轴">交叉轴</h3>
 
 <p>交叉轴垂直于主轴，所以如果你的<code>flex-direction</code> (主轴) 设成了 <code>row</code> 或者 <code>row-reverse</code> 的话，交叉轴的方向就是沿着列向下的。</p>
 
-<p><img alt="If flex-direction is set to row then the cross axis runs in the block direction." src="https://mdn.mozillademos.org/files/15616/Basics3.png" style="display: block; height: 125px; margin: 0px auto; width: 666px;"></p>
+<p><img alt="If flex-direction is set to row then the cross axis runs in the block direction." src="basics3.png"></p>
 
 <p>如果主轴方向设成了 <code>column</code> 或者 <code>column-reverse</code>，交叉轴就是水平方向。</p>
 
-<p><img alt="If flex-direction is set to column then the cross axis runs in the inline direction." src="https://mdn.mozillademos.org/files/15617/Basics4.png" style="display: block; height: 244px; margin: 0px auto; width: 523px;"></p>
+<p><img alt="If flex-direction is set to column then the cross axis runs in the inline direction." src="basics4.png"></p>
 
 <p>理解主轴和交叉轴的概念对于对齐 flexbox 里面的元素是很重要的；flexbox 的特性是沿着主轴或者交叉轴对齐之中的元素。</p>
 
@@ -54,11 +54,11 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <p>如果 <code>flex-direction</code> 是 <code>row</code> ，并且我是在书写英文，那么主轴的起始线是左边，终止线是右边。</p>
 
-<p><img alt="Working in English the start edge is on the left." src="https://mdn.mozillademos.org/files/15618/Basics5.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Working in English the start edge is on the left." src="basics5.png"></p>
 
 <p>如果我在书写阿拉伯文，那么主轴的起始线是右边，终止线是左边。</p>
 
-<p><img alt="The start edge in a RTL language is on the right." src="https://mdn.mozillademos.org/files/15619/Basics6.png" style="display: block; height: 152px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="The start edge in a RTL language is on the right." src="basics6.png"></p>
 
 <p>在这两种情况下，交叉轴的起始线是 flex 容器的顶部，终止线是底部，因为两种语言都是水平书写模式。</p>
 
@@ -125,7 +125,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <p>假设在 1 个 500px 的容器中，我们有 3 个 100px 宽的元素，那么这 3 个元素需要占 300px 的宽，剩下 200px 的可用空间。在默认情况下，flexbox 的行为会把这 200px 的空间留在最后一个元素的后面。</p>
 
-<p><img alt="This flex container has available space after laying out the items." src="https://mdn.mozillademos.org/files/15620/Basics7.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="This flex container has available space after laying out the items." src="basics7.png"></p>
 
 <p>如果期望这些元素能自动地扩展去填充满剩下的空间，那么我们需要去控制可用空间在这几个元素间如何分配，这就是元素上的那些 <code>flex</code> 属性要做的事。 </p>
 

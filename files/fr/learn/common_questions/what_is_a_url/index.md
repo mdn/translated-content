@@ -51,15 +51,19 @@ _Il n'y a pour le moment pas d'élément de pédagogie active. [N'hésitez pas �
 
 Voici quelques exemples d'URL :
 
-    https://developer.mozilla.org
-    https://developer.mozilla.org/fr/docs/Apprendre/
-    https://developer.mozilla.org/fr/search?q=URL
+```
+https://developer.mozilla.org
+https://developer.mozilla.org/fr/docs/Apprendre/
+https://developer.mozilla.org/fr/search?q=URL
+```
 
 Vous pouvez saisir chacune de ces URL dans la barre d'adresse de votre navigateur afin que celui chaque la ressource associée (ici des pages HTML).
 
 Une URL se compose de différents fragments dont certains sont obligatoires et d'autres optionnels. Pour commencer, voyons les parties les plus importantes d'une URL :
 
-    http://www.exemple.com:80/chemin/vers/monfichier.html?clé1=valeur1&clé2=valeur2#QuelquePartDansLeDocument
+```
+http://www.exemple.com:80/chemin/vers/monfichier.html?clé1=valeur1&clé2=valeur2#QuelquePartDansLeDocument
+```
 
 - ![Protocol](protocole_1.png)
   - : `http://` correspond au protocole. Ce fragment indique au navigateur le protocole qui doit être utilisé pour récupérer le contenu. Généralement, ce protocole sera HTTP ou sa version sécurisée : HTTPS. Le « Web » fonctionne autour de ces deux protocoles mais le navigateur peut parfois gérer d'autres protocoles comme `mailto:` (qui permet d'ouvrir un client de messagerie électronique) ou `ftp:` qui permet de transférer des fichiers. Ne soyez pas surpris donc si vous rencontrez ces autres protocoles.
@@ -107,13 +111,17 @@ Prenons quelques exemples concrets pour illustrer le concept.
 
   - : Exemple :
 
-        https://developer.mozilla.org/fr/docs/Apprendre
+    ```
+    https://developer.mozilla.org/fr/docs/Apprendre
+    ```
 
 - Protocole implicite
 
   - : Exemple :
 
-        //developer.mozilla.org/fr/docs/Apprendre
+    ```
+    //developer.mozilla.org/fr/docs/Apprendre
+    ```
 
     Dans ce cas, le navigateur saura que l'URL utilise le même protocole que celui utilisé pour charger le document qui contient cette URL.
 
@@ -121,7 +129,9 @@ Prenons quelques exemples concrets pour illustrer le concept.
 
   - : Exemple :
 
-        /fr/docs/Apprendre
+    ```
+    /fr/docs/Apprendre
+    ```
 
     Voici le cas le plus fréquent d'une URL absolue dans un document HTML. Le navigateur utilisera alors le même protocole et le même nom de domaine que ceux utilisés pour charger le document qui contient l'URL.
 
@@ -135,7 +145,9 @@ Pour mieux comprendre les exemples qui suivent, nous nous placerons dans le cont
 
   - : Exemple :
 
-        Compétences/Infrastructure/Comprendre_les_URL
+    ```
+    Compétences/Infrastructure/Comprendre_les_URL
+    ```
 
     L'URL ne commence pas par `/`, le navigateur essaiera de trouver le document visé dans un sous-répertoire de la ressource actuelle. Dans cet exemple, l'URL absolue correspondante du document auquel on souhaite accéder est : `https://developer.mozilla.org/fr/docs/Apprendre/Compétences/Infrastructure/Comprendre_les_URL`
 
@@ -143,7 +155,9 @@ Pour mieux comprendre les exemples qui suivent, nous nous placerons dans le cont
 
   - : Exemple :
 
-        ../CSS/display
+    ```
+    ../CSS/display
+    ```
 
     Dans ce cas, on utilise la convention, héritée du monde UNIX :  `../` indique au navigateur de remonter d'un répertoire dans l'arborescence. L'URL absolue correspodante à la ressource visée est ici `https://developer.mozilla.org/fr/docs/Apprendre/../CSS/display`, qui peut être simplifiée en : `https://developer.mozilla.org/fr/docs/CSS/display`
 

@@ -1,0 +1,49 @@
+---
+title: Date.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
+translation_of: Web/JavaScript/Reference/Global_Objects/Date/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p><strong><code>toSource() </code></strong>返回表示源代码的字符串。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><var>dateObj</var>.toSource()
+Date.toSource()</pre>
+
+<h3 id="返回值">返回值</h3>
+
+<p> 表示{{jsxref("Global_Objects/Date", "Date")}} 源代码的字符串</p>
+
+<h2 id="描述">描述</h2>
+
+<p><code>toSource()</code> 返回以下参数：</p>
+
+<ul>
+ <li>对于内置的 {{jsxref("Date")}} 对象，<code>toSource()</code> 返回以下字符串，表示源代码不可用：
+
+  <pre class="brush: js">function Date() {
+    [native code]
+}
+</pre>
+ </li>
+ <li>对于{{jsxref("Date")}}的实例，<code>toSource()</code> 返回表示该日期源代码的字符串。</li>
+</ul>
+
+<p>此方法通常由 JavaScript 内部调用，而不是在代码中显式调用。</p>
+
+<h2 id="规范">规范</h2>
+
+<p>暂无标准，在 JavaScript 1.3 中实现。</p>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat("javascript.builtins.Date.toSource")}}</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

@@ -60,7 +60,7 @@ React는 많은 패턴에 모던 JavaScript의 특징을 이용합니다. JavaSc
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-이 heading 상수는 <b>JSX 표현식(JSX expression)</b> 으로 알려져 있습니다. React는 애플리케이션에 [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 태그를 렌더링할 때 이 표현식을 사용할 수 있습니다.
+이 heading 상수는 **JSX 표현식(JSX expression)** 으로 알려져 있습니다. React는 애플리케이션에 [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 태그를 렌더링할 때 이 표현식을 사용할 수 있습니다.
 
 [`<header>`](/en-US/docs/Web/HTML/Element/header) 태그로 heading을 감싸고 싶다고 가정해보겠습니다. JSX는 HTML에서 하던 것처럼 요소를 다른 요소 안에 중첩할 수 있습니다.
 
@@ -74,7 +74,6 @@ const header = (
 
 <div class="notecard note">
     <p><strong>참고</strong>: 위의 스니펫에 있는 괄호는 JSX에 유일하지도 않고, 여러분의 애플리케이션에 어떠한 영향을 주지도 않습니다. 이들은 여러 줄의 코드가 동일한 표현식의 부분이라는 것을 당신(과 컴퓨터)에게 알려줍니다. header 표현식은 다음과 같이도 쓸 수도 있습니다.</p>
-
 
 ```js
 const header = <header>
@@ -140,7 +139,6 @@ npx create-react-app moz-todo-react
 <div class="notecard note">
     <p><strong>참고</strong>: yarn package manager를 설치했다면, create-react-app은 그것을 npm 대신 기본으로 사용할 것입니다. 두 패키지 매니저가 모두 설치되어있고 NPM을 명시적으로 사용하길 원한다면, create-react-app을 실행할 때 플래그 <code>--use-npm</code>을 사용하면 됩니다.</p>
 
-
 ```bash
 npx create-react-app moz-todo-react --use-npm
 ```
@@ -186,11 +184,9 @@ moz-todo-react
 
 `package.json` 파일은 Node.js/npm가 프로젝트를 조직하기 위해 사용하는, 프로젝트에 관련한 정보를 포함하고 있습니다. 이 파일은 React 애플리케이션에 유일하지 않은데요; create-react-app이 이 파일을 수정합니다. 튜토리얼을 완성하기 위해 이 파일을 이해할 필요는 전혀 없지만, 더 자세히 알고 싶다면 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 을 참고해주세요. [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) 에서도 다루고 있답니다.
 
-
-
 ## 첫번째 React 컴포넌트 `</App>` 탐색하기
 
-React에서, <b>컴포넌트(component)</b>는 앱의 일부를 렌더링하는 재사용가능한 모듈입니다. 이 부분들은 클 수도 작을 수도 있지만, 대개 정확하게 정의됩니다; 이들은 단일하고 명확한 목적만을 위해 일합니다.
+React에서, **컴포넌트(component)**는 앱의 일부를 렌더링하는 재사용가능한 모듈입니다. 이 부분들은 클 수도 작을 수도 있지만, 대개 정확하게 정의됩니다; 이들은 단일하고 명확한 목적만을 위해 일합니다.
 
 `src/App.js`를 열어봅시다. 이 파일은 첫번째 컴포넌트 `App`과 몇 줄의 코드를 포함하고 있습니다.
 
@@ -222,7 +218,7 @@ function App() {
 export default App;
 ```
 
-`App.js` 파일은 세 개의 부분으로 나눌 수 있습니다: 상단의 [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) 문들, 중앙의 `App` 컴포넌트, 그리고 하단의 [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) 문들. 많은 React 컴포넌트들이 이 패턴을 따르고 있습니다. 
+`App.js` 파일은 세 개의 부분으로 나눌 수 있습니다: 상단의 [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) 문들, 중앙의 `App` 컴포넌트, 그리고 하단의 [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) 문들. 많은 React 컴포넌트들이 이 패턴을 따르고 있습니다.
 
 ### Import 문
 
@@ -241,8 +237,6 @@ import './App.css';
 `React` 모듈을 불러올 때는 경로나 익스텐션을 쓰지 않습니다. 이것들은 로컬 파일이 아니라, `package.json`의 의존성 목록에 포함되어 있습니다. 로컬과 이들의 구분을 꼭 주의하세요!
 
 세 번째 명령문은 `App` 컴포넌트에 관련된 CSS를 불러옵니다. 어떤 변수 이름이나 `from`  지시가 없다는 것을 주목해주세요. 이 특별한 import 구문은 JavaScript 모듈 구문이 아니라 웹팩(Webpack)으로부터 온 것입니다. 웹팩은 create-react-app이 우리의 모든 JavaScript 파일을 함께 번들하고 브라우저에 제공하기 위해 사용하는 도구입니다.
-
-
 
 ### `App` 컴포넌트
 
@@ -406,7 +400,7 @@ function App() {
 
 ### 컴포넌트 props
 
-<b>prop</b>는 React 컴포넌트에 전달되는 모든 데이터를 뜻합니다. React props는 HTML 속성과 비교할 수 있습니다. HTML 요소는 속성을 가지고 있고 React 컴포넌트는 props를 가지고 있습니다. props는 컴포넌트 호출 안에 쓰이며 `prop="value"`와 같이 HTML 속성과 동일한 구문을 씁니다. React에서, 데이터의 흐름은 단방향(unidirectional)입니다: props는 오직 부모 컴포넌트에서 자식 컴포넌트로 내려갑니다. 그리고 props는 오로지 읽기 전용입니다.
+**prop**는 React 컴포넌트에 전달되는 모든 데이터를 뜻합니다. React props는 HTML 속성과 비교할 수 있습니다. HTML 요소는 속성을 가지고 있고 React 컴포넌트는 props를 가지고 있습니다. props는 컴포넌트 호출 안에 쓰이며 `prop="value"`와 같이 HTML 속성과 동일한 구문을 씁니다. React에서, 데이터의 흐름은 단방향(unidirectional)입니다: props는 오직 부모 컴포넌트에서 자식 컴포넌트로 내려갑니다. 그리고 props는 오로지 읽기 전용입니다.
 
 `index.js`를 열고 `<App />` 호출에 첫 번째 prop를 전달해봅시다.
 
@@ -473,7 +467,7 @@ React에서는:
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
 <ul>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>

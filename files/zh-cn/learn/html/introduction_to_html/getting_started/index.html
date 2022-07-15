@@ -1,6 +1,6 @@
 ---
 title: 开始学习 HTML
-slug: learn/HTML/Introduction_to_HTML/Getting_started
+slug: Learn/HTML/Introduction_to_HTML/Getting_started
 tags:
   - HTML
   - 元素
@@ -31,11 +31,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 <p>{{glossary("HTML")}} (HyperText Markup Language) 不是一门编程语言，而是一种用来告知浏览器如何组织页面的<strong>标记语言</strong>。HTML 可复杂、可简单，一切取决于开发者。它由一系列的<strong>元素（{{Glossary("Element", "elements")}}）</strong>组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对标签（ {{Glossary("Tag", "tags")}}）可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如下面一行内容：</p>
 
-<pre>我的猫咪脾气爆:)</pre>
+<pre>My cat is very grumpy</pre>
 
 <p>可以将这行文字封装成一个段落（Paragraph）{{htmlelement("p")}}元素来使其在单独一行呈现：</p>
 
-<pre class="brush: html">&lt;p&gt;我的猫咪脾气爆:)&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;My cat is very grumpy&lt;/p&gt;</pre>
 
 <div class="note">
 <p><strong>注：</strong>HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 {{htmlelement("title")}} 写作<code>&lt;title&gt;、</code><code>&lt;TITLE&gt;</code>、<code>&lt;Title&gt;</code>、<code>&lt;TiTlE&gt;</code>，等等都可以正常工作。不过，从一致性、可读性来说，最好仅使用小写字母。</p>
@@ -45,7 +45,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 <p>让我们进一步探讨我们的段落元素：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16475/element.png" style="display: block; height: 255px; margin: 0px auto; width: 821px;"></p>
+<p><img src="grumpy-cat-small.png"></p>
 
 <p>这个元素的主要部分有：</p>
 
@@ -165,13 +165,13 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 <h3 id="嵌套元素">嵌套元素</h3>
 
-<p>你也可以把元素放到其它元素之中——这被称作嵌套。如果我们想要表明我们的小猫脾气很暴躁，可以将<strong>“爆”</strong>嵌套在{{htmlelement("strong")}} 中，意味着这个单词被着重强调：</p>
+<p>你也可以把元素放到其它元素之中——这被称作嵌套。如果我们想要表明我们的小猫脾气很暴躁，可以将<strong>“very”</strong>嵌套在{{htmlelement("strong")}} 中，意味着这个单词被着重强调：</p>
 
-<pre class="brush: html">&lt;p&gt;我的猫咪脾气&lt;strong&gt;爆&lt;/strong&gt;:)&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</pre>
 
 <p>你需要确保元素被正确的嵌套：在上面的例子中我们先打开{{htmlelement("p")}}元素，然后才打开{{htmlelement("strong")}}元素，因此必须先将{{htmlelement("strong")}}元素关闭，然后再去关闭{{htmlelement("p")}}元素。下面的例子是错误的：</p>
 
-<pre class="example-bad brush: html">&lt;p&gt;我的猫咪脾气&lt;strong&gt;爆:)&lt;/p&gt;&lt;/strong&gt;</pre>
+<pre class="example-bad brush: html">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</pre>
 
 <p>所有的元素都需要正确的打开和关闭，这样才能按你所想的方式展现。如果像上述的例子一样进行了错误的嵌套，那么浏览器会去猜测你想要表达的意思，但很有可能会得出错误的结果。所以永远不要这么做！</p>
 
@@ -200,11 +200,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 </div>
 
 <div class="note">
-<p><strong>注</strong>: 在这篇文章中提到的“块”和“内联”，不应该与 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">the types of CSS boxes</a> 中的同名术语相混淆。尽管他们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。</p>
+<p><strong>注</strong>: 在这篇文章中提到的“块”和“内联”，不应该与 <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">the types of CSS boxes</a> 中的同名术语相混淆。尽管他们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。</p>
 </div>
 
 <div class="note">
-<p><strong>注</strong>: 你可以查阅包含了块级元素和内联元素列表的参考页面—see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">Block-level elements</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">Inline elements</a>.</p>
+<p><strong>注</strong>: 你可以查阅包含了块级元素和内联元素列表的参考页面—see <a href="/en-US/docs/Web/HTML/Block-level_elements">Block-level elements</a> and <a href="/en-US/docs/Web/HTML/Inline_elements">Inline elements</a>.</p>
 </div>
 
 <h3 id="空元素">空元素</h3>
@@ -225,7 +225,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 <p>元素也可以拥有属性，如下：</p>
 
-<p><img alt='&amp;amp;amp;lt;p class="editor-note">我的猫咪脾气爆&amp;amp;amp;lt;/p>' src="https://mdn.mozillademos.org/files/16476/attribute.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt='&amp;amp;amp;lt;p class="editor-note">我的猫咪脾气爆&amp;amp;amp;lt;/p>' src="grumpy-cat-attribute-small.png"></p>
 
 <p>属性包含元素的额外信息，这些信息不会出现在实际的内容中。在上述例子中，这个 class 属性给元素赋了一个识别的名字（id），这个名字此后可以被用来识别此元素的样式信息和其他信息。</p>
 
@@ -355,7 +355,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 <p>{{ EmbedLiveSample('Playable_code2', 700, 350, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="blockIndicator note">
-<p><strong>译注：</strong>可到 Github 在线使用这个“<a class="external external-icon" href="https://roy-tian.github.io/learning-area/extras/tools/playable-code">代码操场</a>”。</p>
+<p><strong>译注：</strong>可到 Github 在线使用这个“<a href="https://roy-tian.github.io/learning-area/extras/tools/playable-code">代码操场</a>”。</p>
 </div>
 
 <h3 id="布尔属性">布尔属性</h3>
@@ -458,14 +458,14 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 
 <p>你可以打开浏览器看看这段代码的效果是什么样的，然后改变代码刷新浏览器看看新的结果。最开始的代码是这样的效果：</p>
 
-<p><img alt="A simple HTML page that says This is my page" src="https://mdn.mozillademos.org/files/12279/template-screenshot.png" style="display: block; height: 365px; margin: 0px auto; width: 595px;">所以在这段练习中，你可以用你的电脑在本地编写运行代码，如上所述，你也可以在下面的简单可编辑窗口编辑它 (此时这个简单的可编辑窗口仅显示&lt;body&gt;标签内的内容.) 我们希望你能够实践以下步骤：</p>
+<p><img alt="A simple HTML page that says This is my page" src="template-screenshot.png">所以在这段练习中，你可以用你的电脑在本地编写运行代码，如上所述，你也可以在下面的简单可编辑窗口编辑它 (此时这个简单的可编辑窗口仅显示&lt;body&gt;标签内的内容.) 我们希望你能够实践以下步骤：</p>
 
 <ul>
  <li>就在{{htmlelement("body")}} 元素开始标签下方，为这个文档添加一个主标题。这个主标题应该被包含在<code>&lt;h1&gt;</code>开始标签和<code>&lt;/h1&gt;</code>结束标签之间。</li>
  <li>编辑这个段落以包含一些你感兴趣的文本。</li>
  <li>把字词包含在开始标记<code>&lt;strong&gt;</code>和结束标记<code>&lt;/strong&gt;</code>之间可以使他们以粗体显示，从而突出任何重要的字词。</li>
- <li>在你的文档中添加一个超文本链接，<a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5%EF%BC%9A%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7">如前所述</a>。</li>
- <li>在段落下方向你的文档添加一张图片，<a href="https://developer.mozilla.org/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#%E7%A9%BA%E5%85%83%E7%B4%A0">如前所述</a>。如果你尝试对不同的图片 (在你的本地电脑或是在 Web 的其他位置上) 添加链接，那你就更棒了。</li>
+ <li>在你的文档中添加一个超文本链接，<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5%EF%BC%9A%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0%E6%B7%BB%E5%8A%A0%E5%B1%9E%E6%80%A7">如前所述</a>。</li>
+ <li>在段落下方向你的文档添加一张图片，<a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#%E7%A9%BA%E5%85%83%E7%B4%A0">如前所述</a>。如果你尝试对不同的图片 (在你的本地电脑或是在 Web 的其他位置上) 添加链接，那你就更棒了。</li>
 </ul>
 
 <p>如果写错了，可随时按【重置】按钮重新开始，如果实在想不出来，可按【显示答案】按钮查看答案。</p>
@@ -663,7 +663,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 <p>你已经来到了这篇文章的结尾 —— 希望你享受你的基础的 HTML 学习的旅程。在这里你应该可以理解 HTML 语言的全貌，它在基础的级别是如何工作，而且可以使用一些元素和属性。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且介绍一些新的 HTML 的特性。未完待续！</p>
 
 <div class="note">
-<p><strong>提示</strong>: 现在，你将开始学习更多关于 HTML 的知识，你可能也想了解一些层叠样式列表（<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS">CSS</a>）的基础知识。CSS 是一种用来设计网页样式的语言（比如，用它改变字体、颜色或页面布局等）。你很快就会发现，HTML 和 CSS 能很好地协调配合。</p>
+<p><strong>提示</strong>: 现在，你将开始学习更多关于 HTML 的知识，你可能也想了解一些层叠样式列表（<a href="/zh-CN/docs/Learn/CSS">CSS</a>）的基础知识。CSS 是一种用来设计网页样式的语言（比如，用它改变字体、颜色或页面布局等）。你很快就会发现，HTML 和 CSS 能很好地协调配合。</p>
 </div>
 
 <div>{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}</div>
