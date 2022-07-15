@@ -15,7 +15,7 @@ translation_of: Web/api/TextDecoder/TextDecoder
 
 **`TextDecoder()`** 构造函数使用指定的参数编码返回一个新创建的 {{DOMxRef("TextDecoder")}} 对象。
 
-如果*utfLabel* 值是未知的，或者是导致“`replacement`“算法（“`iso-2022-cn`“或“`iso-2022-cn-ext`”）的两个值之一，则会抛出 {{jsxref("RangeError")}}。
+如果 _utfLabel_ 值是未知的，或者是导致“`replacement`”算法（“`iso-2022-cn`”或“`iso-2022-cn-ext`”）的两个值之一，则会抛出 {{jsxref("RangeError")}}。
 
 ## 语法
 
