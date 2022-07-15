@@ -8,90 +8,72 @@ tags:
   - Releases
 translation_of: Mozilla/Firefox/Releases/77
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p class="summary">このページでは、開発者に影響する Firefox 77 の変更点をまとめています。Firefox 77 は、<a href="https://wiki.mozilla.org/RapidRelease/Calendar">2020 年 6 月 2 日</a> にリリースされました。</p>
+この記事では、開発者に影響する Firefox 77 の変更点をまとめています。 Firefox 77 は、[2020 年 6 月 2 日](https://wiki.mozilla.org/RapidRelease/Calendar) にリリースされました。
 
-<p class="summary"><strong>付随する hacks ブログの記事「<a href="https://hacks.mozilla.org/2020/06/new-in-firefox-77-devtool-improvements-and-web-platform-updates/">New in Firefox 77: DevTool improvements and web platform updates</a>」もご覧ください。</strong></p>
+**付随する hacks ブログの記事「[New in Firefox 77: DevTool improvements and web platform updates](https://hacks.mozilla.org/2020/06/new-in-firefox-77-devtool-improvements-and-web-platform-updates/)」もご覧ください。**
 
-<h2 id="Changes_for_web_developers" name="Changes_for_web_developers">ウェブ開発者向けの変更点一覧</h2>
+## ウェブ開発者向けの変更点一覧
 
-<h3 id="Developer_Tools" name="Developer_Tools">開発者ツール</h3>
+### 開発者ツール
 
-<ul>
- <li>Firefox Developer Edition のインスペクターで、ページで使用している CSS プロパティをサポートするブラウザーを表示する <a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Compatibility_view">互換性パネル</a> を提供します ({{bug("1625134")}})。</li>
- <li>デバッガーの <a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Toolbar">ツールバーに設定メニュー</a> を追加しました。メニューの項目は (まだ) <strong>JavaScript を無効化</strong> だけです ({{bug("1630957")}})。</li>
- <li><a href="/ja/docs/Tools/Network_Monitor/toolbar">ネットワークモニターのツールバー</a> に、ログデータを管理する <strong>アクション</strong> メニューを追加しました ({{bug("1459175")}}):
-  <ul>
-   <li><strong>永続ログ</strong></li>
-   <li><strong>HAR ファイルのインポート</strong></li>
-   <li><strong>HAR 形式ですべて保存</strong></li>
-   <li><strong>HAR 形式ですべてコピー</strong></li>
-  </ul>
- </li>
- <li>ネットワークモニターの <a href="/ja/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs">要求ブロックパネル</a> に、すべての要求ブロック項目を有効化・無効化・削除するコンテキストメニューを追加しました ({{bug("1588076")}})。</li>
- <li>デバッガーの <a href="/ja/docs/Tools/Debugger/UI_Tour#Call_stack">コールスタック</a> にあるフレーム内をクリックして選択行を変更した場合に、<strong>ステップオーバー</strong> (<kbd>F10</kbd>) をクリックすると、デバッガーが新たに選択した行に達するまで実行するようになりました (デバッガーがもともと停止していた行は無視します) ({{bug("1630642")}})。</li>
- <li>値の取得 ("get") や設定 ("set") と同様に、値を <a href="/ja/docs/Tools/Debugger/How_to/Use_watchpoints#Set_a_watchpoint">取得または設定 ("get または set")</a> したときに実行停止するウォッチポイントを設定できるようになりました ({{bug("1580585")}})。</li>
-</ul>
+- Firefox Developer Edition のインスペクターで、ページで使用している CSS プロパティをサポートするブラウザーを表示する [互換性パネル](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#compatibility-view) を提供します ({{bug("1625134")}})。
+- デバッガーの [ツールバーに設定メニュー](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#toolbar) を追加しました。メニューの項目は (まだ) **JavaScript を無効化** だけです ({{bug("1630957")}})。
+- [ネットワークモニターのツールバー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/toolbar/index.html) に、ログデータを管理する **アクション** メニューを追加しました ({{bug("1459175")}})。
 
-<h3 id="HTML" name="HTML">HTML</h3>
+  - **永続ログ**
+  - **HAR ファイルのインポート**
+  - **HAR 形式ですべて保存**
+  - **HAR 形式ですべてコピー**
 
-<ul>
- <li>{{HTMLElement("option")}} 要素の内容物が空であるときに、<a href="/ja/docs/web/HTML/element/option#Browser_compatibility">label 属性の値</a> を表示するようになりました ({{bug("40545")}})。</li>
-</ul>
+- ネットワークモニターの [要求ブロックパネル](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#blocking-specific-urls) に、すべての要求ブロック項目を有効化・無効化・削除するコンテキストメニューを追加しました ({{bug("1588076")}})。
+- デバッガーの [コールスタック](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call-stack) にあるフレーム内をクリックして選択行を変更した場合に、**ステップオーバー** (`F10`) をクリックすると、デバッガーが新たに選択した行に達するまで実行するようになりました (デバッガーがもともと停止していた行は無視します) ({{bug("1630642")}})。
+- 値の取得 ("get") や設定 ("set") と同様に、値を [取得または設定 ("get または set")](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_watchpoints/index.html#set-a-watchpoint) したときに実行停止するウォッチポイントを設定できるようになりました ({{bug("1580585")}})。
 
-<h3 id="SVG" name="SVG">SVG</h3>
+### HTML
 
-<ul>
- <li>{{SVGAttr("transform-origin")}} プレゼンテーション属性をサポートしました ({{bug(1581691)}})。</li>
-</ul>
+- {{HTMLElement("option")}} 要素の内容物が空であるときに、[label 属性の値](/ja/docs/Web/HTML/Element/option#browser_compatibility) を表示するようになりました ({{bug("40545")}})。
 
-<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
+### SVG
 
-<ul>
- <li>{{JSxRef("String.prototype.replaceAll()")}} をサポートしました ({{bug(1608168)}})。</li>
-</ul>
+- {{SVGAttr("transform-origin")}} プレゼンテーション属性に対応しました ({{bug(1581691)}})。
 
-<h3 id="APIs" name="APIs">API</h3>
+### JavaScript
 
-<h4 id="IndexedDB" name="IndexedDB">IndexedDB</h4>
+- {{JSxRef("String.prototype.replaceAll()")}} に対応しました ({{bug(1608168)}})。
 
-<ul>
- <li>{{DOMxRef("IDBCursor.request")}} プロパティを実装しました ({{bug(1536540)}})。</li>
-</ul>
+### API
 
-<h3 id="WebDriver_conformance_Marionette" name="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+#### IndexedDB
 
-<ul>
- <li>ウィンドウをクリックして閉じるなど、現在選択中のトップレベルのブラウジングコンテキストが削除されたとき、いくつかのコマンドが Marionette をハングアップさせていた問題を修正しました ({{bug(1619481)}})。</li>
- <li>既知の問題: Firefox 77 での変更により、現在のページから移動する際に、開いているユーザープロンプトが早く閉じられる場合があります。この問題は Firefox 78 で修正する予定です ({{bug(1631362)}})。</li>
-</ul>
+- {{DOMxRef("IDBCursor.request")}} プロパティを実装しました ({{bug(1536540)}})。
 
-<h2 id="Changes_for_add-on_developers" name="Changes_for_add-on_developers">アドオン開発者向けの変更点</h2>
+### WebDriver への適合性 (Marionette)
 
-<h3 id="API_changes" name="API_changes">API の変更点</h3>
+- ウィンドウをクリックして閉じるなど、現在選択中の最上位の閲覧コンテキストが削除されたとき、いくつかのコマンドが Marionette をハングアップさせていた問題を修正しました ({{bug(1619481)}})。
+- 既知の問題: Firefox 77 での変更により、現在のページから移動する際に、開いているユーザープロンプトが早く閉じられる場合があります。この問題は Firefox 78 で修正する予定です ({{bug(1631362)}})。
 
-<ul>
- <li>{{WebExtAPIRef("tabs.goBack")}} および {{WebExtAPIRef("tabs.goForward")}} をサポートしました ({{bug(1603796)}})。</li>
- <li><code>serviceWorkers</code> および <code>indexedDB</code> タイプの {{WebExtAPIRef("browsingData.remove")}} で、ホスト名による削除をサポートしました ({{bug(1632990)}} および {{bug(1551301)}})。</li>
- <li>{{WebExtAPIRef("tabs.duplicate")}} API で <code>duplicateProperties</code> をサポートしました。複製したタブの位置やアクティブ状態を指定できます ({{bug(1560218)}})。</li>
- <li>{{WebExtAPIRef("permissions")}} API の {{WebExtAPIRef("permissions.onAdded")}} および {{WebExtAPIRef("permissions.onRemoved")}} イベントをサポートしました ({{bug(1444294)}})。</li>
- <li>{{WebExtAPIRef("webRequest.onHeadersReceived")}} で複数の <code>Content-Security-Policy</code> ヘッダーを変更する要求が統合されるようになりました ({{bug(1462989 )}})。</li>
-</ul>
+## アドオン開発者向けの変更点
 
-<h3 id="Manifest_changes" name="Manifest_changes">マニフェストの変更点</h3>
+### API の変更点
 
-<ul>
- <li>以下のパーミッションが要求可能になりました。これらは <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> マニフェストキーで指定可能であり、{{WebExtAPIRef("permissions")}} API を使用して要求できます: <code>browsingData</code> ({{bug(1630417)}})、<code>pkcs11</code> ({{bug(1630418)}})、<code>proxy</code> ({{bug(1548011)}}), and <code>sessions</code> ({{bug(1630414)}})。</li>
-</ul>
+- {{WebExtAPIRef("tabs.goBack")}} および {{WebExtAPIRef("tabs.goForward")}} に対応しました ({{bug(1603796)}})。
+- `serviceWorkers` および `indexedDB` タイプの {{WebExtAPIRef("browsingData.remove")}} で、ホスト名による削除に対応しました ({{bug(1632990)}} および {{bug(1551301)}})。
+- {{WebExtAPIRef("tabs.duplicate")}} API で `duplicateProperties` に対応しました。複製したタブの位置やアクティブ状態を指定できます ({{bug(1560218)}})。
+- {{WebExtAPIRef("permissions")}} API の {{WebExtAPIRef("permissions.onAdded")}} および {{WebExtAPIRef("permissions.onRemoved")}} イベントに対応しました ({{bug(1444294)}})。
+- {{WebExtAPIRef("webRequest.onHeadersReceived")}} で複数の `Content-Security-Policy` ヘッダーを変更する要求が統合されるようになりました ({{bug(1462989 )}})。
+- {{WebExtAPIRef("webRequest")}} イベントは `data:` URL URL では発行されなくなります。 ({{bug(1631933)}})
 
-<h3 id="Other" name="Other">その他</h3>
+### マニフェストの変更点
 
-<ul>
- <li><code>unlimitedStorage</code> パーミッションを使用することを、拡張機能のインストールや更新の際に表示しないようになりました。詳しくは <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/">Requesting the right permissions</a> をご覧ください ({{bug(1630413)}})。</li>
- <li><a href="/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite">SameSite cookie</a> に関する変更により、拡張機能のページのホスト向けのトラッキング防止機能をバイパスする <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host パーミッション</a> を設定するときに、フルドメインまたはワイルドカードをつけて指定しなければなりません。ただし Content スクリプトのトラッキング防止は、フルドメインで指定したホストに限りバイパスできます。</li>
-</ul>
+- 以下のパーミッションが要求可能になりました。これらは [`optional_permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) マニフェストキーで指定可能であり、{{WebExtAPIRef("permissions")}} API の `browsingData` ({{bug(1630417)}})、`pkcs11` ({{bug(1630418)}})、`proxy` ({{bug(1548011)}})、`sessions` ({{bug(1630414)}}) を使用して要求できます、。
 
-<h2 id="Older_versions" name="Older_versions">過去のバージョン</h2>
+### その他
 
-<p>{{Firefox_for_developers(76)}}</p>
+- `unlimitedStorage` パーミッションを使用することを、拡張機能のインストールや更新の際に表示しないようになりました。詳しくは [Requesting the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/) をご覧ください ({{bug(1630413)}})。
+- [SameSite cookie](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) に関する変更により、拡張機能のページのホスト向けのトラッキング防止機能をバイパスする [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) を設定するときに、フルドメインまたはワイルドカードをつけて指定しなければなりません。ただし Content スクリプトのトラッキング防止は、フルドメインで指定したホストに限りバイパスできます。
+
+## 過去のバージョン
+
+{{Firefox_for_developers(76)}}
