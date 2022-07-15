@@ -1,0 +1,56 @@
+---
+title: 'TypeError: can''t access property "x" of "y"'
+slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+translation_of: Web/JavaScript/Reference/Errors/Cant_access_property
+original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="消息">消息</h2>
+
+<pre class="syntaxbox">TypeError: Unable to get property {x} of undefined or null reference (Edge)
+TypeError: can't access property {x} of {y} (Firefox)
+TypeError: {y} is undefined, can't access property {x} of it (Firefox)
+TypeError: {y} is null, can't access property {x} of it (Firefox)
+
+Examples:
+TypeError: x is undefined, can't access property "prop" of it
+TypeError: x is null, can't access property "prop" of it
+TypeError: can't access property "prop" of undefined
+TypeError: can't access property "prop" of null
+</pre>
+
+<h2 id="错误类型">错误类型</h2>
+
+<p>{{jsxref("TypeError")}}.</p>
+
+<h2 id="哪里出错了">哪里出错了？</h2>
+
+<p>访问了 {{jsxref("undefined")}} 或{{jsxref("null")}} 值的属性。</p>
+
+<h2 id="例子">例子</h2>
+
+<h3 id="无效情形">无效情形</h3>
+
+<pre class="brush: js example-bad">// 对于 undefined 以及 null 值， substring 方法无法正常工作
+var foo = undefined;
+foo.substring(1); // TypeError: x is undefined, can't access property "substring" of it
+
+var foo = null;
+foo.substring(1); // TypeError: x is null, can't access property "substring" of it
+</pre>
+
+<h3 id="解决问题">解决问题</h3>
+
+<p>为了解决<code>undefined</code> 或 <code>null</code> 值的空指针问题，你可以使用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 操作符，比如。</p>
+
+<pre class="brush: js">if (typeof foo !== 'undefined') {
+  // 现在已经确认 foo 已定义，可以进一步操作。
+}</pre>
+
+<h2 id="参考更多">参考更多</h2>
+
+<ul>
+ <li>{{jsxref("undefined")}}</li>
+ <li>{{jsxref("null")}}</li>
+</ul>

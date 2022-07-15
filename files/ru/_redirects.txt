@@ -411,12 +411,14 @@
 /ru/docs/Web/API/GlobalEventHandlers/onkeypress	/ru/docs/conflicting/Web/API/Element/keypress_event
 /ru/docs/Web/API/GlobalEventHandlers/onmousedown	/ru/docs/conflicting/Web/API/Element/mousedown_event
 /ru/docs/Web/API/GlobalEventHandlers/onmouseup	/ru/docs/conflicting/Web/API/Element/mouseup_event
+/ru/docs/Web/API/GlobalEventHandlers/onscroll	/ru/docs/Web/API/Element/scroll_event
 /ru/docs/Web/API/GlobalEventHandlers/onselect	/ru/docs/Web/API/HTMLInputElement/select_event
 /ru/docs/Web/API/GlobalEventHandlers/onsubmit	/ru/docs/Web/API/HTMLFormElement/submit_event
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLBaseFontElement	/ru/docs/conflicting/Web/CSS/CSS_Fonts
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLElement/pointerover_event	/ru/docs/Web/API/Element/pointerover_event
+/ru/docs/Web/API/HTMLElement/transitionend_event	/ru/docs/Web/API/Element/transitionend_event
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/host	/ru/docs/Web/API/HTMLAnchorElement/host
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hostname	/ru/docs/Web/API/HTMLAnchorElement/hostname
@@ -574,7 +576,7 @@
 /ru/docs/Web/Events/resize	/ru/docs/Web/API/Window/resize_event
 /ru/docs/Web/Events/scroll	/ru/docs/Web/API/Document/scroll_event
 /ru/docs/Web/Events/storage	/ru/docs/Web/API/Window/storage_event
-/ru/docs/Web/Events/transitionend	/ru/docs/Web/API/HTMLElement/transitionend_event
+/ru/docs/Web/Events/transitionend	/ru/docs/Web/API/Element/transitionend_event
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/Guide/AJAX/С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
@@ -693,6 +695,7 @@
 /ru/docs/Web/JavaScript/JavaScript_шеллы	/ru/docs/Web/JavaScript/Shells
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
+/ru/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /ru/docs/Web/JavaScript/Reference/Errors/Переменные_скрывают_аргумент	/ru/docs/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов	/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes

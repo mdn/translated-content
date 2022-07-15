@@ -476,6 +476,7 @@
 /ko/docs/Web/API/GlobalEventHandlers/onkeydown	/ko/docs/conflicting/Web/API/Element/keydown_event
 /ko/docs/Web/API/GlobalEventHandlers/onkeyup	/ko/docs/conflicting/Web/API/Element/keyup_event
 /ko/docs/Web/API/GlobalEventHandlers/onpointerenter	/ko/docs/Web/API/Element/pointerenter_event
+/ko/docs/Web/API/GlobalEventHandlers/onscroll	/ko/docs/Web/API/Element/scroll_event
 /ko/docs/Web/API/GlobalEventHandlers/onsubmit	/ko/docs/Web/API/HTMLFormElement/submit_event
 /ko/docs/Web/API/GlobalEventHandlers/ontouchstart	/ko/docs/Web/API/Element/touchstart_event
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href

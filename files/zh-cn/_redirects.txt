@@ -399,7 +399,7 @@
 /zh-CN/docs/DOM/element.onmouseover	/zh-CN/docs/Web/API/Element/mouseover_event
 /zh-CN/docs/DOM/element.onmouseup	/zh-CN/docs/conflicting/Web/API/Element/mouseup_event
 /zh-CN/docs/DOM/element.onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
-/zh-CN/docs/DOM/element.onscroll	/zh-CN/docs/Web/API/GlobalEventHandlers/onscroll
+/zh-CN/docs/DOM/element.onscroll	/zh-CN/docs/Web/API/Element/scroll_event
 /zh-CN/docs/DOM/element.outerHTML	/zh-CN/docs/Web/API/Element/outerHTML
 /zh-CN/docs/DOM/element.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/DOM/element.removeAttribute	/zh-CN/docs/Web/API/Element/removeAttribute
@@ -1170,7 +1170,7 @@
 /zh-CN/docs/Mozilla_event_reference/popstate	/zh-CN/docs/Web/API/Window/popstate_event
 /zh-CN/docs/Mozilla_event_reference/touchend	/zh-CN/docs/Web/API/Document/touchend_event
 /zh-CN/docs/Mozilla_event_reference/touchstart	/zh-CN/docs/Web/API/Element/touchstart_event
-/zh-CN/docs/Mozilla_event_reference/transitionend	/zh-CN/docs/Web/API/HTMLElement/transitionend_event
+/zh-CN/docs/Mozilla_event_reference/transitionend	/zh-CN/docs/conflicting/Web/API/Element/transitionend_event
 /zh-CN/docs/Mozilla_event_reference/unload	/zh-CN/docs/Web/API/Window/unload_event
 /zh-CN/docs/Mozilla_event_reference/visibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
 /zh-CN/docs/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
@@ -1456,7 +1456,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmouseout	/zh-CN/docs/conflicting/Web/API/Element/mouseout_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmouseover	/zh-CN/docs/Web/API/Element/mouseover_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmouseup	/zh-CN/docs/conflicting/Web/API/Element/mouseup_event
-/zh-CN/docs/Web/API/GlobalEventHandlers.onscroll	/zh-CN/docs/Web/API/GlobalEventHandlers/onscroll
+/zh-CN/docs/Web/API/GlobalEventHandlers.onscroll	/zh-CN/docs/Web/API/Element/scroll_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onselect	/zh-CN/docs/conflicting/Web/API/HTMLInputElement/select_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onsubmit	/zh-CN/docs/conflicting/Web/API/HTMLFormElement/submit_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onabort	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/abort_event
@@ -1501,6 +1501,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onpointerup	/zh-CN/docs/Web/API/Element/pointerup_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onreset	/zh-CN/docs/conflicting/Web/API/HTMLFormElement/reset_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onresize	/zh-CN/docs/conflicting/Web/API/Window/resize_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onscroll	/zh-CN/docs/Web/API/Element/scroll_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onselect	/zh-CN/docs/conflicting/Web/API/HTMLInputElement/select_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onselectionchange	/zh-CN/docs/Web/API/HTMLInputElement/selectionchange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onselectstart	/zh-CN/docs/conflicting/Web/API/Document/selectstart_event
@@ -1508,6 +1509,8 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/ontouchcancel	/zh-CN/docs/conflicting/Web/API/Element/touchcancel_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ontouchmove	/zh-CN/docs/Web/API/Element/touchmove_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ontouchstart	/zh-CN/docs/conflicting/Web/API/Element/touchstart_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/ontransitioncancel	/zh-CN/docs/Web/API/Element/transitioncancel_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/ontransitionend	/zh-CN/docs/Web/API/Element/transitionend_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onwheel	/zh-CN/docs/conflicting/Web/API/Element/wheel_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/动画效果	/zh-CN/docs/Web/API/Element/animationend_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/时长改变	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
@@ -1533,6 +1536,8 @@
 /zh-CN/docs/Web/API/HTMLElement/oncut	/zh-CN/docs/Web/API/HTMLElement/cut_event
 /zh-CN/docs/Web/API/HTMLElement/onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
 /zh-CN/docs/Web/API/HTMLElement/pointercancel_event	/zh-CN/docs/conflicting/Web/API/Element/pointercancel_event
+/zh-CN/docs/Web/API/HTMLElement/transitionend_event	/zh-CN/docs/conflicting/Web/API/Element/transitionend_event
+/zh-CN/docs/Web/API/HTMLElement/transitionstart_event	/zh-CN/docs/Web/API/Element/transitionstart_event
 /zh-CN/docs/Web/API/HTMLFormElement.elements	/zh-CN/docs/Web/API/HTMLFormElement/elements
 /zh-CN/docs/Web/API/HTMLFormElement.reset	/zh-CN/docs/Web/API/HTMLFormElement/reset
 /zh-CN/docs/Web/API/HTMLFormElement.submit	/zh-CN/docs/Web/API/HTMLFormElement/submit
@@ -2111,7 +2116,7 @@
 /zh-CN/docs/Web/Events/touchend	/zh-CN/docs/Web/API/Document/touchend_event
 /zh-CN/docs/Web/Events/touchmove	/zh-CN/docs/Web/API/Document/touchmove_event
 /zh-CN/docs/Web/Events/touchstart	/zh-CN/docs/Web/API/Element/touchstart_event
-/zh-CN/docs/Web/Events/transitionend	/zh-CN/docs/Web/API/HTMLElement/transitionend_event
+/zh-CN/docs/Web/Events/transitionend	/zh-CN/docs/conflicting/Web/API/Element/transitionend_event
 /zh-CN/docs/Web/Events/unhandledrejection	/zh-CN/docs/Web/API/Window/unhandledrejection_event
 /zh-CN/docs/Web/Events/unload	/zh-CN/docs/Web/API/Window/unload_event
 /zh-CN/docs/Web/Events/visibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
@@ -2307,6 +2312,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Date/setTime	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime
 /zh-CN/docs/Web/JavaScript/Reference/Date/toJSON	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /zh-CN/docs/Web/JavaScript/Reference/Date/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /zh-CN/docs/Web/JavaScript/Reference/Errors/不能添加属性	/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /zh-CN/docs/Web/JavaScript/Reference/Function	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function
 /zh-CN/docs/Web/JavaScript/Reference/Function/apply	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply

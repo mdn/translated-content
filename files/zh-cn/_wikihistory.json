@@ -12019,6 +12019,16 @@
       "Eason.Wu"
     ]
   },
+  "Web/API/Element/scroll_event": {
+    "modified": "2019-05-07T07:06:53.573Z",
+    "contributors": [
+      "faliye",
+      "Ende93",
+      "teoli",
+      "jsx",
+      "ziyunfei"
+    ]
+  },
   "Web/API/Element/setAttribute": {
     "modified": "2020-10-15T21:30:03.484Z",
     "contributors": [
@@ -12135,6 +12145,18 @@
       "zhaosource",
       "ziyunfei",
       "jtyjty99999"
+    ]
+  },
+  "Web/API/Element/transitioncancel_event": {
+    "modified": "2020-10-15T22:29:33.060Z",
+    "contributors": [
+      "zhanghengxin"
+    ]
+  },
+  "Web/API/Element/transitionend_event": {
+    "modified": "2020-10-15T22:08:08.111Z",
+    "contributors": [
+      "Hopsken"
     ]
   },
   "Web/API/Element/wheel_event": {
@@ -13354,28 +13376,6 @@
       "283375"
     ]
   },
-  "Web/API/GlobalEventHandlers/onscroll": {
-    "modified": "2019-05-07T07:06:53.573Z",
-    "contributors": [
-      "faliye",
-      "Ende93",
-      "teoli",
-      "jsx",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontransitioncancel": {
-    "modified": "2020-10-15T22:29:33.060Z",
-    "contributors": [
-      "zhanghengxin"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ontransitionend": {
-    "modified": "2020-10-15T22:08:08.111Z",
-    "contributors": [
-      "Hopsken"
-    ]
-  },
   "Web/API/HTMLAnchorElement": {
     "modified": "2019-03-23T22:49:30.797Z",
     "contributors": [
@@ -13909,18 +13909,6 @@
       "liuhe",
       "teoli",
       "AlexChao"
-    ]
-  },
-  "Web/API/HTMLElement/transitionend_event": {
-    "modified": "2019-11-15T05:44:51.899Z",
-    "contributors": [
-      "joshchiucn",
-      "fscholz",
-      "zhuangyin",
-      "SeriousL",
-      "dlengks",
-      "ziyunfei",
-      "jtyjty99999"
     ]
   },
   "Web/API/HTMLFieldSetElement": {
@@ -34977,12 +34965,6 @@
       "WayneCui"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Cant_access_property": {
-    "modified": "2020-03-12T19:48:25.216Z",
-    "contributors": [
-      "zangguodong"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Cant_assign_to_property": {
     "modified": "2020-03-12T19:49:02.016Z",
     "contributors": [
@@ -45723,6 +45705,18 @@
       "Cybs"
     ]
   },
+  "conflicting/Web/API/Element/transitionend_event": {
+    "modified": "2019-11-15T05:44:51.899Z",
+    "contributors": [
+      "joshchiucn",
+      "fscholz",
+      "zhuangyin",
+      "SeriousL",
+      "dlengks",
+      "ziyunfei",
+      "jtyjty99999"
+    ]
+  },
   "conflicting/Web/API/Element/wheel_event": {
     "modified": "2019-07-28T09:31:36.029Z",
     "contributors": [
@@ -46715,6 +46709,12 @@
     "modified": "2020-10-30T11:36:06.394Z",
     "contributors": [
       "phone-burner"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
+    "modified": "2020-03-12T19:48:25.216Z",
+    "contributors": [
+      "zangguodong"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
