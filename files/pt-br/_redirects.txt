@@ -573,6 +573,7 @@
 /pt-BR/docs/Web/API/GlobalEventHandlers/oncontextmenu	/pt-BR/docs/Web/API/Element/contextmenu_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onfocus	/pt-BR/docs/Web/API/Window/focus_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onkeyup	/pt-BR/docs/conflicting/Web/API/Element/keyup_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onscroll	/pt-BR/docs/Web/API/Element/scroll_event
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -801,6 +802,7 @@
 /pt-BR/docs/Web/JavaScript/Guide/Usando_promises	/pt-BR/docs/Web/JavaScript/Guide/Using_promises
 /pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types
 /pt-BR/docs/Web/JavaScript/Outras_ferramentas_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
+/pt-BR/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Fata_parênteses_após_lista_argumento	/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Fecha_chaves_esquecida_apos_lista_propriedades	/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 /pt-BR/docs/Web/JavaScript/Reference/Errors/NãoNomeado_funcão_declaração	/pt-BR/docs/Web/JavaScript/Reference/Errors/Unnamed_function_statement

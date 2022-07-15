@@ -4304,6 +4304,12 @@
       "hooriza"
     ]
   },
+  "Web/API/Element/scroll_event": {
+    "modified": "2020-10-15T22:22:09.396Z",
+    "contributors": [
+      "rodeck826"
+    ]
+  },
   "Web/API/Element/tagName": {
     "modified": "2020-10-15T22:29:51.547Z",
     "contributors": [
@@ -4726,12 +4732,6 @@
       "alattalatta",
       "cs09g",
       "jwhitlock"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onscroll": {
-    "modified": "2020-10-15T22:22:09.396Z",
-    "contributors": [
-      "rodeck826"
     ]
   },
   "Web/API/HTMLAnchorElement/href": {

@@ -963,7 +963,7 @@
 /fr/docs/DOM/element.onmouseover	/fr/docs/Web/API/Element/mouseover_event
 /fr/docs/DOM/element.onmouseup	/fr/docs/Web/API/Element/mouseup_event
 /fr/docs/DOM/element.onresize	/fr/docs/Web/API/Window/resize_event
-/fr/docs/DOM/element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
+/fr/docs/DOM/element.onscroll	/fr/docs/Web/API/Element/scroll_event
 /fr/docs/DOM/element.ownerDocument	/fr/docs/Web/API/Node/ownerDocument
 /fr/docs/DOM/element.parentNode	/fr/docs/Web/API/Node/parentNode
 /fr/docs/DOM/element.prefix	/fr/docs/Web/API/Element/prefix
@@ -1121,7 +1121,7 @@
 /fr/docs/DOM:element.onmouseover	/fr/docs/Web/API/Element/mouseover_event
 /fr/docs/DOM:element.onmouseup	/fr/docs/Web/API/Element/mouseup_event
 /fr/docs/DOM:element.onresize	/fr/docs/Web/API/Window/resize_event
-/fr/docs/DOM:element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
+/fr/docs/DOM:element.onscroll	/fr/docs/Web/API/Element/scroll_event
 /fr/docs/DOM:element.ownerDocument	/fr/docs/Web/API/Node/ownerDocument
 /fr/docs/DOM:element.parentNode	/fr/docs/Web/API/Node/parentNode
 /fr/docs/DOM:element.prefix	/fr/docs/Web/API/Element/prefix
@@ -3660,6 +3660,7 @@
 /fr/docs/Web/API/Document/onfullscreenchange	/fr/docs/Web/API/Document/fullscreenchange_event
 /fr/docs/Web/API/Document/onoffline	/fr/docs/Web/API/Window/offline_event
 /fr/docs/Web/API/Document/ononline	/fr/docs/Web/API/Window/online_event
+/fr/docs/Web/API/Document/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
@@ -3740,7 +3741,7 @@
 /fr/docs/Web/API/Element.onmouseover	/fr/docs/Web/API/Element/mouseover_event
 /fr/docs/Web/API/Element.onmouseup	/fr/docs/Web/API/Element/mouseup_event
 /fr/docs/Web/API/Element.onresize	/fr/docs/Web/API/Window/resize_event
-/fr/docs/Web/API/Element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
+/fr/docs/Web/API/Element.onscroll	/fr/docs/Web/API/Element/scroll_event
 /fr/docs/Web/API/Element.outerHTML	/fr/docs/Web/API/Element/outerHTML
 /fr/docs/Web/API/Element.parentNode	/fr/docs/Web/API/Node/parentNode
 /fr/docs/Web/API/Element.prefix	/fr/docs/Web/API/Element/prefix
@@ -3808,6 +3809,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onmouseup	/fr/docs/Web/API/Element/mouseup_event
 /fr/docs/Web/API/GlobalEventHandlers/onreset	/fr/docs/Web/API/HTMLFormElement/reset_event
 /fr/docs/Web/API/GlobalEventHandlers/onresize	/fr/docs/Web/API/Window/resize_event
+/fr/docs/Web/API/GlobalEventHandlers/onscroll	/fr/docs/Web/API/Element/scroll_event
 /fr/docs/Web/API/GlobalEventHandlers/onselect	/fr/docs/Web/API/HTMLInputElement/select_event
 /fr/docs/Web/API/GlobalEventHandlers/onwheel	/fr/docs/Web/API/Element/wheel_event
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/fetch
@@ -3815,6 +3817,7 @@
 /fr/docs/Web/API/HTMLElement/animationend_event	/fr/docs/Web/API/Element/animationend_event
 /fr/docs/Web/API/HTMLElement/animationiteration_event	/fr/docs/Web/API/Element/animationiteration_event
 /fr/docs/Web/API/HTMLElement/animationstart_event	/fr/docs/Web/API/Element/animationstart_event
+/fr/docs/Web/API/HTMLElement/transitionend_event	/fr/docs/conflicting/Web/API/Element/transitionend_event
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
 /fr/docs/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
@@ -4547,7 +4550,7 @@
 /fr/docs/Web/Events/storage	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/Events/submit	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/Events/touchend	/fr/docs/Web/API/Document/touchend_event
-/fr/docs/Web/Events/transitionend	/fr/docs/Web/API/HTMLElement/transitionend_event
+/fr/docs/Web/Events/transitionend	/fr/docs/conflicting/Web/API/Element/transitionend_event
 /fr/docs/Web/Events/unload	/fr/docs/Web/API/Window/unload_event
 /fr/docs/Web/Guide/AJAX/Communauté	/fr/docs/Web/Guide/AJAX/Community
 /fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX/Getting_Started
@@ -4797,7 +4800,7 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/Bad_return_or_yield	/fr/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield
 /fr/docs/Web/JavaScript/Reference/Erreurs/Called_on_incompatible_type	/fr/docs/Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_before_init	/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_property	/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_property
+/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_property	/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_assign_to_property	/fr/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_define_property_object_not_extensible	/fr/docs/Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_delete	/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete
@@ -4865,6 +4868,7 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/in_operator_no_object	/fr/docs/Web/JavaScript/Reference/Errors/in_operator_no_object
 /fr/docs/Web/JavaScript/Reference/Erreurs/invalid_right_hand_side_instanceof_operand	/fr/docs/Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 /fr/docs/Web/JavaScript/Reference/Erreurs/is_not_iterable	/fr/docs/Web/JavaScript/Reference/Errors/is_not_iterable
+/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/Web/JavaScript/Reference/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions

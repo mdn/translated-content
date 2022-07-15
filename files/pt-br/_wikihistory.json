@@ -4511,6 +4511,13 @@
       "joaovinicius"
     ]
   },
+  "Web/API/Element/scroll_event": {
+    "modified": "2020-10-15T22:23:08.144Z",
+    "contributors": [
+      "marlonveiga-santos",
+      "Antonio.Carvalho"
+    ]
+  },
   "Web/API/Element/setAttribute": {
     "modified": "2019-03-23T22:31:48.961Z",
     "contributors": [
@@ -4979,13 +4986,6 @@
     "modified": "2020-10-15T22:22:03.373Z",
     "contributors": [
       "mdeamf"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onscroll": {
-    "modified": "2020-10-15T22:23:08.144Z",
-    "contributors": [
-      "marlonveiga-santos",
-      "Antonio.Carvalho"
     ]
   },
   "Web/API/HTMLCanvasElement": {
@@ -11578,12 +11578,6 @@
       "ViniciusMatias"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Cant_access_property": {
-    "modified": "2020-03-12T19:48:10.197Z",
-    "contributors": [
-      "igormmatos"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
     "modified": "2020-03-12T19:46:42.577Z",
     "contributors": [
@@ -16112,6 +16106,12 @@
     "contributors": [
       "teoli",
       "fernando.karpinski"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
+    "modified": "2020-03-12T19:48:10.197Z",
+    "contributors": [
+      "igormmatos"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
