@@ -5,7 +5,7 @@ browser-compat: javascript.builtins.Symbol.species
 ---
 {{JSRef}}
 
-El conocido símbolo como **`Symbol.species`** especifica una propiedad con valor de función que la función constructora utiliza para crear objetos derivados.
+El símbolo conocido como **`Symbol.species`** especifica una propiedad con valor de función que la función constructora utiliza para crear objetos derivados.
 
 {{EmbedInteractiveExample("pages/js/symbol-species.html")}}
 
