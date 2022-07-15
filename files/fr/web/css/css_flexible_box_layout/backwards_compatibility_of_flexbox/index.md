@@ -16,7 +16,7 @@ Les boîtes flexibles ont été implémentées de façon expérimentale dans plu
 
 [En 2009](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/), la spécification était plutôt différente. Pour créer un conteneur flexible, il fallait utiliser `display: box` et on disposait ensuite de différentes propriétés `box-*` qui permettaient d'obtenir des résultats semblables à ceux qu'offrent les boîtes flexibles actuelles.
 
-Vint ensuite [une mise à jour de la spécification](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/) pour mettre à jour la syntaxe : `display: flexbox`. Là encore, ces valeurs étaient préfixées.
+Vint ensuite [une mise à jour de la spécification](https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/) pour mettre à jour la syntaxe `display: flexbox`. Là encore, ces valeurs étaient préfixées.
 
 Enfin, la spécification a été mise à jour pour définir `display: flex` comme façon de créer un conteneur flexible. La prise en charge des navigateurs sur la version à jour de la spécification est excellent à partir de ce moment.
 
@@ -46,7 +46,7 @@ Si vous souhaitez inclure de très anciens navigateurs prenant en charge les bo�
 }
 ```
 
-[Autoprefixer Online](https://autoprefixer.github.io/) est un outil utile pour déterminer quels préfixes sont recommandés selon les versions des navigateurs qu'on souhaite prendre en charge. Vous pouvez également consulter [<i lang="en">Can I Use</i>](https://caniuse.com/#feat=flexbox)  ou les tableaux de compatibilité en bas des pages de référence MDN pour savoir quand les préfixes ont été retirés des navigateurs.
+[<i lang="en">Autoprefixer Online</i>](https://autoprefixer.github.io/) est un outil utile pour déterminer quels préfixes sont recommandés selon les versions des navigateurs qu'on souhaite prendre en charge. Vous pouvez également consulter [<i lang="en">Can I Use</i>](https://caniuse.com/#feat=flexbox) ou les tableaux de compatibilité en bas des pages de référence MDN pour savoir quand les préfixes ont été retirés des navigateurs.
 
 ## Techniques de recours
 
@@ -94,8 +94,8 @@ Il est possible d'utiliser [`@supports`](/fr/docs/Web/CSS/@supports) afin de dé
 
 ```css
 @supports (display: flex) {
-  // code utilisé pour les navigateurs qui
-  // prennent en charge cette fonctionnalité
+  /* code utilisé pour les navigateurs qui
+     prennent en charge cette fonctionnalité */
 }
 ```
 
@@ -103,8 +103,8 @@ On notera qu'Internet Explorer 11 ne prend pas en charge les requêtes de foncti
 
 ```css
 @supports (display: flex) or (display: -webkit-box) {
-  // code pour les navigateurs qui
-  // prennent en charge cette fonctionnalité
+  /* code pour les navigateurs qui
+     prennent en charge cette fonctionnalité */
 }
 ```
 
