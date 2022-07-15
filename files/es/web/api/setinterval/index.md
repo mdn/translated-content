@@ -34,6 +34,7 @@ setInterval(func, delay, arg0, arg1, /* ..., */ argN);
     - : Argumentos adicionales que se pasan a la función especificada por _func_ una vez que el temporizador expira.
 
 ### Valor de retorno
+
 El `ID de intervalo` devuelto es un valor numérico, diferente a 0, que identifica el temporizador creado para poder realizar la llamada a `setInterval()` . Este valor puede ser pasado a {{domxref("clearInterval()")}} para cancelar el intervalo.
 
 Puede ser útil tener en cuenta que `setInterval()` y {{domxref("setTimeout()")}} comparten el mismo grupo de IDs. También es importante saber que `clearInterval()` y {{domxref("clearTimeout", "clearTimeout()")}} técnicamente pueden ser utilizados indistintamente. Sin embargo, para mayor claridad simpre debe tratar de hacerlos coincidir, evitando así confusiones al mantener su código.
