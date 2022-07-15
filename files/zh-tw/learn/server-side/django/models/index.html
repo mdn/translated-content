@@ -60,7 +60,7 @@ translation_of: Learn/Server-side/Django/Models
 
 <h3 id="模型定義">模型定義</h3>
 
-<p>模型通常在 app 中的 <strong style='background-color: #ffffff; border: 0px; color: #333333; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: medium; font-style: normal; letter-spacing: normal; margin: 0px; padding: 0px; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;'>models.py</strong> 檔案中定義。它們是繼承自  <code>django.db.models.Model</code>的子類， 可以包括屬性，方法和描述性資料(metadata)。下面區段為一個名為<code>MyModelName</code>的「典型」模型範例碼：</p>
+<p>模型通常在 app 中的 <strong>models.py</strong> 檔案中定義。它們是繼承自  <code>django.db.models.Model</code>的子類， 可以包括屬性，方法和描述性資料(metadata)。下面區段為一個名為<code>MyModelName</code>的「典型」模型範例碼：</p>
 
 <pre class="notranslate">from django.db import models
 
@@ -116,7 +116,7 @@ class MyModelName(models.Model):
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#verbose-name">verbose_name</a> :字段標籤中的可讀性名稱，如果沒有被指定，Django將從字段名稱推斷默認的詳細名稱。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#default">default</a> :該字段的默認值。這可以是值或可呼叫物件(callable object)，在這種情況下，每次創建新紀錄時都將呼叫該物件。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#null">null</a>：如為 <code>True</code>，即允許 Django 於資料庫該欄位寫入 <code>NULL</code>（但欄位型態如為 <code>CharField</code> 則會寫入空字串）。預設值是 <code>False</code>。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#blank">blank</a> :如果<code><strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">True</strong></code>，表單中的字段被允許為空白。默認是<code>False</code>，這意味著Django的表單驗證將強制你輸入一個值。這通常搭配 <code>NULL=True</code> 使用，因為如果要允許空值，你還希望數據庫能夠適當地表示它們。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#blank">blank</a> :如果<code><strong>True</strong></code>，表單中的字段被允許為空白。默認是<code>False</code>，這意味著Django的表單驗證將強制你輸入一個值。這通常搭配 <code>NULL=True</code> 使用，因為如果要允許空值，你還希望數據庫能夠適當地表示它們。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#choices">choices</a> :這是給此字段的一組選項。如果提供這一項，預設對應的表單部件是「該組選項的列表」，而不是原先的標准文本字段。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#primary-key">primary_key</a> :如果是True，將當前字段設置為模型的主鍵（主鍵是被指定用來唯一辨識所有不同表記錄的特殊數據庫欄位(column)）。如果沒有指定字段作為主鍵，則Django將自動為此添加一個字段。</li>
 </ul>
@@ -134,7 +134,7 @@ class MyModelName(models.Model):
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield">DateField</a> 和<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield">DateTimeField</a> 用於存儲／表示日期和日期／時間信息（分別是<code>Python.datetime.date</code> 和 <code>datetime.datetime</code> 對象）。這些字段可以另外表明（互斥）參數 <code>auto_now=Ture</code> （在每次保存模型時將該字段設置為當前日期），<code>auto_now_add</code>（僅設置模型首次創建時的日期）和 <code>default</code>（設置默認日期，可以被用戶覆蓋）。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield">EmailField</a> 用於存儲和驗證電子郵件地址。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield">FileField</a> 和<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield">ImageField</a> 分別用於上傳文件和圖像（<code>ImageField</code> 只需添加上傳的文件是圖像的附加驗證）。這些參數用於定義上傳文件的存儲方式和位置。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#autofield">AutoField</a> 是一種 <strong style="border: 0px; font-style: normal !important; margin: 0px; padding: 0px;">IntegerField </strong>自動遞增的特殊類型。如果你沒有明確指定一個主鍵，則此類型的主鍵將自動添加到模型中。</li>
+ <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#autofield">AutoField</a> 是一種 <strong>IntegerField </strong>自動遞增的特殊類型。如果你沒有明確指定一個主鍵，則此類型的主鍵將自動添加到模型中。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#foreignkey">ForeignKey</a> 用於指定與另一個數據庫模型的一對多關係（例如，汽車有一個製造商，但製造商可以製作許多汽車）。關係的“一”側是包含密鑰的模型。</li>
  <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield">ManyToManyField</a> 用於指定<a href="https://docs.djangoproject.com/en/1.10/ref/models/fields/#manytomanyfield">多對多</a>關係（例如，一本書可以有幾種類型，每種類型可以包含幾本書）。在我們的圖書館應用程序中，我們將非常類似地使用它們 ForeignKeys，但是可以用更複雜的方式來描述組之間的關係。這些具有參數 <code>on_delete</code> 來定義關聯記錄被刪除時會發生什麼（例如，值 <code>models.SET_NULL</code> 將簡單地設置為值 NULL ）。</li>
 </ul>
@@ -186,7 +186,7 @@ class MyModelName(models.Model):
 </pre>
 
 <div class="note">
-<p><strong style="border: 0px; font-style: normal; font-weight: 700; margin: 0px; padding: 0px;">注意</strong> :假設你將使用URL<code>/myapplication/mymodelname/2</code> 來顯示模型的單個記錄（其中“2”是id特定記錄），則需要創建一個URL映射器來將響應和id傳遞給“模型詳細視圖” （這將做出顯示記錄所需的工作）。以上示例中，<code>reverse()</code>函數可以“反轉”你的url映射器（在上訴命名為“model-detail-view”的案例中，以創建正確格式的URL。</p>
+<p><strong>注意</strong> :假設你將使用URL<code>/myapplication/mymodelname/2</code> 來顯示模型的單個記錄（其中“2”是id特定記錄），則需要創建一個URL映射器來將響應和id傳遞給“模型詳細視圖” （這將做出顯示記錄所需的工作）。以上示例中，<code>reverse()</code>函數可以“反轉”你的url映射器（在上訴命名為“model-detail-view”的案例中，以創建正確格式的URL。</p>
 
 <p>當然要做這個工作，你還是要寫URL映射，視圖和模版！</p>
 </div>

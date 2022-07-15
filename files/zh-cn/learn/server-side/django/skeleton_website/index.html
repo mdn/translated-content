@@ -30,7 +30,7 @@ translation_of: Learn/Server-side/Django/skeleton_website
 
 <ol>
  <li>使用 django-admin 工具创建工程的文件夹，基本的文件模板和工程管理脚本（<strong>manage.py</strong>）。</li>
- <li>用<strong style="line-height: 1.5;">manage.py</strong> 创建一个或多个应用。
+ <li>用<strong>manage.py</strong> 创建一个或多个应用。
   <div class="note">
   <p><strong>注意：</strong>一个网站可能由多个部分组成，比如，主要页面，博客，wiki，下载区域等。Django 鼓励将这些部分作为分开的应用开发。如果这样的话，在需要可以在不同的工程中复用这些应用。</p>
   </div>
@@ -74,7 +74,7 @@ cd locallibrary</pre>
 <ul>
  <li><strong>settings.py</strong> 包含所有的网站设置。这是可以注册所有创建的应用的地方，也是静态文件，数据库配置的地方，等等。</li>
  <li><strong>urls.py </strong>定义了网站 url 到 view 的映射<strong>。</strong>虽然这里可以包含所有的 url，但是更常见的做法是把应用相关的 url 包含在相关应用中，你可以在接下来的教程里看到。</li>
- <li><strong style="line-height: 1.5;">wsgi.py</strong> 帮助 Django 应用和网络服务器间的通讯。你可以把这个当作模板。</li>
+ <li><strong>wsgi.py</strong> 帮助 Django 应用和网络服务器间的通讯。你可以把这个当作模板。</li>
 </ul>
 
 <p><strong>manage.py</strong>脚本可以创建应用，和数据库通讯，启动开发用网络服务器。</p>

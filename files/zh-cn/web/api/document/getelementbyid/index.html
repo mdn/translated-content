@@ -89,7 +89,7 @@ translation_of: Web/API/Document/getElementById
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>如果没有查找到对应的元素，方法会返回 null。注意 ID 参数是大小写敏感的，所以 document.getElementById("<strong style="font-family: consolas,monaco,andale mono,monospace;">M</strong>ain") 无法获取到元素&lt;div id="<strong style="font-family: consolas,monaco,andale mono,monospace;">m</strong>ain"&gt;，因为'M'和'm'是不一样的。</p>
+<p>如果没有查找到对应的元素，方法会返回 null。注意 ID 参数是大小写敏感的，所以 document.getElementById("<strong>M</strong>ain") 无法获取到元素&lt;div id="<strong>m</strong>ain"&gt;，因为'M'和'm'是不一样的。</p>
 
 <p>getElementById 方法不会搜索<strong>不在文档中的元素。</strong>当创建一个元素，并且分配 ID 后，你必须要使用<a href="/en-US/docs/DOM/Node.insertBefore">insertBefore</a>或其他类似的方法把元素插入到文档中，之后才能使用 getElementById 获取到：</p>
 

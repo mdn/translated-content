@@ -218,7 +218,7 @@ ctx.stroke();</pre>
  <dt>{{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}</dt>
  <dd>将当前或给定的路径滚动到窗口。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.clip()")}}</dt>
- <dd>从当前路径创建一个剪切路径。在  <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">clip() </strong>调用之后，绘制的所有信息只会出现在剪切路径内部。例如：参见 Canvas 教程中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">剪切路径</a> 。</dd>
+ <dd>从当前路径创建一个剪切路径。在  <strong>clip() </strong>调用之后，绘制的所有信息只会出现在剪切路径内部。例如：参见 Canvas 教程中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">剪切路径</a> 。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.isPointInPath()")}}</dt>
  <dd>判断当前路径是否包含检测点。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}</dt>
@@ -227,7 +227,7 @@ ctx.stroke();</pre>
 
 <h2 id="变换">变换</h2>
 
-<p>在 <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">CanvasRenderingContext2D </strong>渲染背景中的对象会有一个当前的变换矩阵，一些方法可以对其进行控制。当创建当前的默认路径，绘制文本、图形和{{domxref("Path2D")}}对象的时候，会应用此变换矩阵。下面列出的方法保持历史和兼容性的原因，是为了{{domxref("SVGMatrix")}}对象现在能够应用于大部分 API ，将来会被替换。</p>
+<p>在 <strong>CanvasRenderingContext2D </strong>渲染背景中的对象会有一个当前的变换矩阵，一些方法可以对其进行控制。当创建当前的默认路径，绘制文本、图形和{{domxref("Path2D")}}对象的时候，会应用此变换矩阵。下面列出的方法保持历史和兼容性的原因，是为了{{domxref("SVGMatrix")}}对象现在能够应用于大部分 API ，将来会被替换。</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.currentTransform")}}</dt>
@@ -241,7 +241,7 @@ ctx.stroke();</pre>
  <dt>{{domxref("CanvasRenderingContext2D.transform()")}}</dt>
  <dd>使用方法参数描述的矩阵多次叠加当前的变换矩阵。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.setTransform()")}}</dt>
- <dd>重新设置当前的变换为单位矩阵，并使用同样的变量调用 <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">transform() </strong>方法。</dd>
+ <dd>重新设置当前的变换为单位矩阵，并使用同样的变量调用 <strong>transform() </strong>方法。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.resetTransform()")}} {{experimental_inline}}</dt>
  <dd>使用单位矩阵重新设置当前的变换。</dd>
 </dl>
@@ -284,13 +284,13 @@ ctx.stroke();</pre>
 
 <h2 id="canvas_状态">canvas 状态</h2>
 
-<p><strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">C</strong><strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">anvasRenderingContext2D</strong>渲染环境包含了多种绘图的样式状态（属性有线的样式、填充样式、阴影样式、文本样式）。下面的方法会帮助你使用这些状态：</p>
+<p><strong>C</strong><strong>anvasRenderingContext2D</strong>渲染环境包含了多种绘图的样式状态（属性有线的样式、填充样式、阴影样式、文本样式）。下面的方法会帮助你使用这些状态：</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.save()")}}</dt>
- <dd>使用栈保存当前的绘画样式状态，你可以使用 <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">restore()</strong> 恢复任何改变。</dd>
+ <dd>使用栈保存当前的绘画样式状态，你可以使用 <strong>restore()</strong> 恢复任何改变。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.restore()")}}</dt>
- <dd>恢复到最近的绘制样式状态，此状态是通过 <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">save()</strong> 保存到”状态栈“中最新的元素。</dd>
+ <dd>恢复到最近的绘制样式状态，此状态是通过 <strong>save()</strong> 保存到”状态栈“中最新的元素。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.canvas")}}</dt>
  <dd>对 {{domxref("HTMLCanvasElement")}} 只读的反向引用。如果和 {{HTMLElement("canvas")}} 元素没有联系，可能为{{jsxref("null")}}。</dd>
 </dl>
@@ -404,9 +404,9 @@ ctx.stroke();</pre>
 
 <dl>
  <dt>{{non-standard_inline}} {{domxref("CanvasRenderingContext2D.asyncDrawXULElement()")}}</dt>
- <dd>在 <strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">canvas</strong> 内渲染一个 XUL 元素的区域。</dd>
+ <dd>在 <strong>canvas</strong> 内渲染一个 XUL 元素的区域。</dd>
  <dt>{{non-standard_inline}} {{domxref("CanvasRenderingContext2D.drawWindow()")}}</dt>
- <dd>在 <strong style="font-family: courier new,andale mono,monospace;">canvas</strong> 内渲染一个窗口的区域。窗口可视区的内容被渲染，忽略窗口的剪切和滚动。</dd>
+ <dd>在 <strong>canvas</strong> 内渲染一个窗口的区域。窗口可视区的内容被渲染，忽略窗口的剪切和滚动。</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.demote()</code></dt>
  <dd>这个方法会引起当前的上下文使用后端的硬件加速作为软件的备选方案。所有的状态都会被保留。</dd>
 </dl>
