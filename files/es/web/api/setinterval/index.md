@@ -8,7 +8,7 @@ browser-compat: api-setInterval
 
 El método **`setInterval()`** , ofrecido en las interfaces {{domxref("Window")}} y {{domxref("Worker")}} , llama a una función o ejecuta un fragmento de código de forma reiterada, con un retardo de tiempo fijo entre cada llamada.
 
-Este método devuelve un ID de intervalo que lo identifica de forma única. de ese modo, el intervalo puede ser eliminado más tarde llamando a {{domxref("clearInterval", "clearInterval()")}} .
+Este método devuelve un ID de intervalo que lo identifica de forma única, de ese modo, el intervalo puede ser eliminado más tarde llamando a {{domxref("clearInterval", "clearInterval()")}} .
 
 ## Sintaxis
 ```js
