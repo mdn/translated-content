@@ -13,7 +13,7 @@ translation_of: Web/api/Request/formData
 ---
 {{APIRef("Fetch")}}
 
-{{domxref("Request")}} 接口的 **`formData()`** 方法读取请求体并且返回一个 promise，该 promise 兑现之后为一个 {{domxref("FormData")}} 对象。
+{{domxref("Request")}} 接口的 **`formData()`** 方法读取请求体并将其作为 promise 返回，该 promise 兑现之后为一个 {{domxref("FormData")}} 对象。
 
 ## 语法
 
