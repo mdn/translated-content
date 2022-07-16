@@ -13,7 +13,7 @@ translation_of: Web/API/Request/text
 ---
 {{APIRef("Fetch")}}
 
-{{domxref("Request")}} 接口的 **`text()`** 方法读取请求体并且将其作为一个 promise 返回，该 promise 兑现之后是一个 {{jsxref("String")}}。响应*总是*使用 UTF-8 解码。
+{{domxref("Request")}} 接口的 **`text()`** 方法读取请求体并且将其作为一个 promise 返回，该 promise 将兑现一个 {{jsxref("String")}}。响应*总是*使用 UTF-8 解码。
 
 ## 语法
 
@@ -27,9 +27,9 @@ text()
 
 ### 返回值
 
-一个 promise，兑现之后为一个 {{jsxref("String")}}。
+一个 promise，会兑现一个 {{jsxref("String")}}。
 
-## Examples
+## 示例
 
 ```js
 const text = "Hello world";
