@@ -11,7 +11,7 @@ El símbolo conocido como **`Symbol.species`** especifica una propiedad con valo
 
 ## Descripción
 
-La propiedad accessor `species` permite a las subclases anular el constructor por defecto de los objetos.
+La propiedad de acceso `species` permite a las subclases anular el constructor por defecto de los objetos.
 
 {{js_property_attributes(0,0,0)}}
 
