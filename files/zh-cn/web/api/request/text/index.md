@@ -9,7 +9,7 @@ tags:
   - Reference
   - Text
   - Request
-translation_of: Web/api/Request/text
+translation_of: Web/API/Request/text
 ---
 {{APIRef("Fetch")}}
 
