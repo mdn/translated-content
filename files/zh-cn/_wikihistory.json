@@ -1937,6 +1937,15 @@
       "micblo"
     ]
   },
+  "Glossary/Safe/HTTP": {
+    "modified": "2020-02-12T10:37:33.808Z",
+    "contributors": [
+      "RainSlide",
+      "shersty",
+      "joy-yu",
+      "maicss"
+    ]
+  },
   "Glossary/Same-origin_policy": {
     "modified": "2020-06-01T19:24:49.887Z",
     "contributors": [
@@ -2381,15 +2390,6 @@
     "modified": "2019-03-18T21:15:22.955Z",
     "contributors": [
       "mySoul"
-    ]
-  },
-  "Glossary/safe": {
-    "modified": "2020-02-12T10:37:33.808Z",
-    "contributors": [
-      "RainSlide",
-      "shersty",
-      "joy-yu",
-      "maicss"
     ]
   },
   "Glossary/speculative_parsing": {
