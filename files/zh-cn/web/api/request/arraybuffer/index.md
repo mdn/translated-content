@@ -13,7 +13,7 @@ translation_of: Web/api/Request/arrayBuffer
 ---
 {{APIRef("Fetch")}}
 
-{{domxref("Request")}} 接口的 **`arrayBuffer()`** 方法读取请求体，并且返回一个 promise，兑现之后为一个 {{jsxref("ArrayBuffer")}}。
+{{domxref("Request")}} 接口的 **`arrayBuffer()`** 方法读取请求体，并且返回一个 promise，该 promise 兑现之后为一个 {{jsxref("ArrayBuffer")}}。
 
 ## 语法
 
