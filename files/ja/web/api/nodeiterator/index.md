@@ -1,175 +1,85 @@
 ---
 title: NodeIterator
 slug: Web/API/NodeIterator
+page-type: web-api-interface
 tags:
   - API
   - DOM
+browser-compat: api.NodeIterator
 translation_of: Web/API/NodeIterator
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary"><strong><code>NodeIterator</code></strong> インターフェイスは、DOM のサブツリー内に存在するノードのリストのメンバーに対するイテレーターを表します。ノードは文書内に現れる順番で返されます。</span></p>
+**`NodeIterator`** インターフェイスは、DOM のサブツリー内に存在するノードのリストのメンバーに対する反復子を表します。ノードは文書内に現れる順番で返されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p>以下のように {{domxref("Document.createNodeIterator()")}} メソッドを用いると <code>NodeIterator</code> オブジェクトを作成することができます:</p>
+ `NodeIterator` は、以下のように {{domxref("Document.createNodeIterator()")}} メソッドを用いて作成することができます。
 
-<pre class="syntaxbox notranslate">const <var>nodeIterator</var> = document.createNodeIterator(<var>root</var>, <var>whatToShow</var>, <var>filter</var>);</pre>
+```js
+const nodeIterator = document.createNodeIterator(root, whatToShow, filter);
+```
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>このインターフェイスが継承するプロパティはありません。</em></p>
+_このインターフェイスが継承するプロパティはありません。_
 
-<dl>
- <dt>{{domxref("NodeIterator.root")}} {{readonlyInline}}</dt>
- <dd><code>NodeIterator</code> を作成したときに指定したルートノードを表す {{domxref("Node")}} を返します。</dd>
- <dt>{{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}</dt>
- <dd>
- <p>提供しなければならない {{domxref("Node")}} の型を表す定数で構成されるビットマスクである <code>unsigned long</code> を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。</p>
+- {{domxref("NodeIterator.root")}} {{readonlyInline}}
+  - : `NodeIterator` を作成したときに指定したルートノードを表す {{domxref("Node")}} を返します。
+- {{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}
 
- <p>使用できる値は以下のとおりです。</p>
+  - : 提供しなければならない {{domxref("Node")}} の型を表す定数で構成されるビットマスクである `unsigned long` を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。
 
- <table class="standard-table">
-  <thead>
-   <tr>
-    <td class="header">定数</td>
-    <td class="header">数値</td>
-    <td class="header">説明</td>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>NodeFilter.SHOW_ALL</code></td>
-    <td><code>-1</code> (<code>unsigned long</code> の最大値)</td>
-    <td>すべてのノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{obsolete_inline}}</td>
-    <td><code>2</code></td>
-    <td>属性の {{domxref("Attr")}} ノードを表示します。これはルートとして {{domxref("Attr")}} を含む {{domxref("NodeIterator")}} を作成する場合に限り、意味があります。この場合は、イテレーションやトラバーサルの最初の位置に属性ノードが現れることを意味します。属性はほかのノードの子ではありませんので、ドキュメントツリーをトラバーサルするときは出現しません。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{obsolete_inline}}</td>
-    <td><code>8</code></td>
-    <td>{{domxref("CDATASection")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_COMMENT</code></td>
-    <td><code>128</code></td>
-    <td>{{domxref("Comment")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
-    <td><code>256</code></td>
-    <td>{{domxref("Document")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
-    <td><code>1024</code></td>
-    <td>{{domxref("DocumentFragment")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
-    <td><code>512</code></td>
-    <td>{{domxref("DocumentType")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ELEMENT</code></td>
-    <td><code>1</code></td>
-    <td>{{domxref("Element")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ENTITY</code> {{obsolete_inline}}</td>
-    <td><code>32</code></td>
-    <td>{{domxref("Entity")}} ノードを表示します。これはルートとして {{domxref("Entity")}} を含む {{domxref("NodeIterator")}} を作成する場合に限り、意味があります。この場合は、イテレーションやトラバーサルの最初の位置に {{domxref("Entity")}} ノードが現れることを意味します。エンティティはドキュメントツリーの一部ではありませんので、ドキュメントツリーをトラバーサルするときは出現しません。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{obsolete_inline}}</td>
-    <td><code>16</code></td>
-    <td>{{domxref("EntityReference")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_NOTATION</code> {{obsolete_inline}}</td>
-    <td><code>2048</code></td>
-    <td>{{domxref("Notation")}} ノードを表示します。これはルートとして {{domxref("Notation")}} を含む {{domxref("NodeIterator")}} を作成する場合に限り、意味があります。この場合は、イテレーションやトラバーサルの最初の位置に {{domxref("Notation")}} ノードが現れることを意味します。エンティティはドキュメントツリーの一部ではありませんので、ドキュメントツリーをトラバーサルするときは出現しません。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
-    <td><code>64</code></td>
-    <td>{{domxref("ProcessingInstruction")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_TEXT</code></td>
-    <td><code>4</code></td>
-    <td>{{domxref("Text")}} ノードを表示します。</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("NodeIterator.filter")}} {{readonlyInline}}</dt>
- <dd>関連するノードを選択するために使用した {{domxref("NodeFilter")}} を返します。</dd>
- <dt>{{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}} {{deprecated_inline}}</dt>
- <dd>{{domxref("EntityReference")}} を破棄するとき、同時にサブツリー全体も破棄するかを示す {{domxref("Boolean")}} です。</dd>
- <dt>{{domxref("NodeIterator.referenceNode")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>イテレーターが固定されている {{domxref("Node")}} を返します。</dd>
- <dt>{{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{experimental_inline}}</dt>
- <dd>{{domxref("NodeIterator")}} が前に固定されるかを示す {{domxref("Boolean")}} フラグを返します。前に固定される場合は <code>true</code>、後に固定される場合は <code>false</code> になります。</dd>
-</dl>
+    使用できる値は以下のとおりです。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+    | 定数                                                        | 数値                                 | 説明                                                                                                                                                                                                                                                                                                                                                                                                                        |
+    | --------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                           | `4294967295` （すなわち `unsigned long` の最大値） | すべてのノードを表示します。                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                             | 属性の {{domxref("Attr")}} ノードを表示します。これはルートとして {{domxref("Attr")}} を含む {{domxref("NodeIterator")}} を作成する場合に限り、意味があります。この場合は、反復処理や走査の最初の位置に属性ノードが現れることを意味します。属性はほかのノードの子ではありませんので、文書ツリーを走査するときは出現しません。 |
+    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                             | {{domxref("CDATASection")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                              |
+    | `NodeFilter.SHOW_COMMENT`                                       | `128`                                           | {{domxref("Comment")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                                      |
+    | `NodeFilter.SHOW_DOCUMENT`                                      | `256`                                           | {{domxref("Document")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                                      |
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                             | `1024`                                          | {{domxref("DocumentFragment")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                          |
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                                 | `512`                                           | {{domxref("DocumentType")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                              |
+    | `NodeFilter.SHOW_ELEMENT`                                       | `1`                                             | {{domxref("Element")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                                      |
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                            | 古いもので、もう使用されません。                                                                                                                                                                                                                                                                                                                                                                                                              |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                            | 古いもので、もう使用されません。                                                                                                                                                                                                                                                                                                                                                                                                              |
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                          | 古いもので、もう使用されません。                                                                                                                                                                                                                                                                                                                                                                                                              |
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | {{domxref("ProcessingInstruction")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                      |
+    | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | {{domxref("Text")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                                          |
 
-<p><em>このインターフェイスが継承するメソッドはありません。</em></p>
+- {{domxref("NodeIterator.filter")}} {{readonlyInline}}
+  - : 関連するノードを選択するために使用した {{domxref("NodeFilter")}} を返します。
+- {{domxref("NodeIterator.referenceNode")}} {{readonlyInline}}
+  {{experimental_inline() }}
+  - : 反復子が固定されている {{domxref("Node")}} を返します。
+- {{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{
+  experimental_inline() }}
+  - : 論理値のフラグで、 {{domxref("NodeIterator")}} が前に固定されるかどうかを示します。前に固定される場合は `true`、後に固定される場合は `false` になります。
 
-<dl>
- <dt>{{domxref("NodeIterator.detach()")}} {{obsolete_inline}}</dt>
- <dd>この操作は no-op です。これは何も行いません。以前は <code>NodeIterator</code> を使用しなくなったことをエンジンに伝えていましたが、現在は不要です。</dd>
- <dt>{{domxref("NodeIterator.previousNode()")}}</dt>
- <dd>文書内で前の {{domxref("Node")}} を返します。ノードがない場合は <code>null</code> を返します。</dd>
- <dt>{{domxref("NodeIterator.nextNode()")}}</dt>
- <dd>文書内で次の {{domxref("Node")}} を返します。ノードがない場合は <code>null</code> を返します。</dd>
-</dl>
+## メソッド
 
-<h2 id="Specification" name="Specification">仕様</h2>
+_このインターフェイスが継承するメソッドはありません。_
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#nodeiterator', 'NodeIterator')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td><code>referenceNode</code> および <code>pointerBeforeReferenceNode</code> プロパティを追加。<br>
-    <code>expandEntityReferences</code> プロパティを削除。<br>
-    <code>detach()</code> メソッドを no-op に変更。<br>
-    <code>previousNode()</code> および <code>nextNode()</code> メソッドを例外が発生しないように変更。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Iterator-overview', 'NodeIterator')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("NodeIterator.detach()")}} {{deprecated_inline}}
+  - : これは無操作です。です。これは何も行いません。以前は `NodeIterator` を使用しなくなったことをエンジンに伝えていましたが、現在は不要です。
+- {{domxref("NodeIterator.previousNode()")}}
+  - : 文書内で前の {{domxref("Node")}} を返します。ノードがない場合は `null` を返します。
+- {{domxref("NodeIterator.nextNode()")}}
+  - : 文書内で次の {{domxref("Node")}} を返します。ノードがない場合は `null` を返します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## 仕様書
 
+{{Specifications}}
 
+## ブラウザーの互換性
 
-<p>{{Compat("api.NodeIterator")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>作成するメソッド: {{domxref("Document.createNodeIterator()")}}</li>
- <li>関連インターフェイス
-  <ul>
-   <li>{{domxref("NodeFilter")}}</li>
-   <li>{{domxref("TreeWalker")}}</li>
-  </ul>
- </li>
-</ul>
+- 作成するメソッド: {{domxref("Document.createNodeIterator()")}}
+- 関連インターフェイス
+
+  - {{domxref("NodeFilter")}}
+  - {{domxref("TreeWalker")}}
