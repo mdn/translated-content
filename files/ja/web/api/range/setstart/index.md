@@ -1,66 +1,124 @@
 ---
-title: Range.setStart
+title: Range.setStart()
 slug: Web/API/Range/setStart
+page-type: web-api-instance-method
+tags:
+  - API
+  - DOM
+  - Method
+  - Range
+browser-compat: api.Range.setStart
 translation_of: Web/API/Range/setStart
 ---
-<p>{{ apiref("Range") }}</p>
+{{ApiRef("DOM")}}
 
-<p><strong><code>Range.setStart()</code></strong> メソッドは{{ domxref("Range") }}の開始位置を指定します。</p>
+**`Range.setStart()`** メソッドは{{ domxref("Range") }}の開始位置を設定します。
 
-<p><code>startNode</code> が <code>Text</code>, <code>Comment</code>, あるいは <code>CDATASection</code> タイプの {{ domxref("Node") }}  であるとき、<code>startOffset</code>は<code>startNode</code>の開始位置からの文字数です。その他の<code>Node</code>タイプの場合、 <code>startOffset</code>は<code>startNode</code>からの子ノード数です。</p>
+`startNode` の {{domxref("Node")}} の型が {{domxref("Text")}}, {{domxref("Comment")}}, {{domxref("CDataSection")}} のいずれかであるとき、 `startOffset` は `startNode` の開始位置からの文字数です。その他の `Node` 型の場合、 `startOffset` は `startNode` からの子ノード数です。
 
-<p>開始位置を終了位置よりも下（ドキュメントよりも下）に指定すると <code>ERROR_ILLEGAL_VALUE</code> {{domxref("DOMException")}} 例外が投げられます。</p>
+始点を終点より下（文書の下層側）に設定すると、始点と終点の両方が指定された開始位置に設定され、折りたたまれた範囲となります。
 
-<h2 id="Syntax" name="Syntax">Syntax</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>range</em>.setStart(<em>startNode</em>, <em>startOffset</em>);
-</pre>
+```js
+setStart(startNode, startOffset)
+```
 
-<h3 id="Parameters" name="Parameters">Parameters</h3>
+### 引数
 
-<dl>
- <dt><em>startNode</em></dt>
- <dd>{{ domxref("Range") }} を開始する {{ domxref("Node") }}</dd>
- <dt><em>startOffset</em><code> </code></dt>
- <dd>{{ domxref("Range") }}の開始位置を示す<code>startNode</code>オフセット（非負整数）</dd>
-</dl>
+- `startNode`
+  - : {{ domxref("Range") }} を開始する {{ domxref("Node") }}。
+- `startOffset`
+  - : `startNode` の始点からの {{ domxref("Range") }} のオフセットを表す 0 以上の整数。
 
-<h2 id="Example" name="Example">Example</h2>
+### 返値
 
-<pre class="brush: js notranslate">var range = document.createRange();
-var startNode = document.getElementsByTagName("p").item(2);
-var startOffset = 0;
-range.setStart(startNode,startOffset);
-</pre>
+なし ({{jsxref("undefined")}})。
 
-<h2 id="Specification" name="Specification">Specifications</h2>
+## 例
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart', 'Range.setStart()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+### 要素の一部を強調表示
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+この例では、 `Range.setStart()` と {{domxref("Range.setEnd()")}} メソッドを使用して、住所の一部を範囲に追加しています。そして、選択された範囲は {{domxref("Range.surroundContents()")}} を使用して強調表示します。
 
-<p>{{Compat("api.Range.setStart")}}</p>
+住所は、 5 つのテキストノードと、 4 つの {{htmlElement("br")}} 要素の合計 9 つのノードを含んでいます。
 
-<h2 id="See_also">See also</h2>
+#### HTML
 
-<ul>
- <li><a href="/ja/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+```html
+<p id="address">Wyatt Earp<br>
+101 E. Main St.<br>
+Dodge City, KS<br>
+67801<br>
+USA</p>
+
+<hr>
+<p>Nodes in the original address:</p>
+<ol id="log"></ol>
+```
+
+#### JavaScript
+
+```js
+const address = document.getElementById('address');
+const log = document.getElementById('log');
+
+// Log info
+address.childNodes.forEach(node => {
+  const li = document.createElement('li');
+  li.textContent = `${node.nodeName}, ${node.nodeValue}`;
+  log.appendChild(li);
+});
+
+// Highlight the street and city
+const startOffset = 2;  // Start at third node: 101 E. Main St.
+const endOffset = 5;    // End at fifth node: Dodge City, KS
+const range = document.createRange();
+range.setStart(address, startOffset);
+range.setEnd(address, endOffset);
+
+const mark = document.createElement('mark');
+range.surroundContents(mark);
+```
+
+#### 結果
+
+{{EmbedLiveSample("Highlight_part_of_an_element", 700, 400)}}
+
+### テキストノードから文字を取得する
+
+この例では、`Range.setStart()` と {{domxref("Range.setEnd()")}} メソッドを使用して、範囲の内容を定義しています。結果として得られる範囲は、テキストノード内の 1 文字目から 5 文字目を含んでいます。
+
+#### HTML
+
+```html
+<p id="content">0123456789</p>
+<p id="log"></p>
+```
+
+#### JavaScript
+
+```js
+const element = document.getElementById('content');
+const textNode = element.childNodes[0];
+const range = document.createRange();
+range.setStart(textNode, 0);  // Start at first character
+range.setEnd(textNode, 5);    // End at fifth character
+document.getElementById('log').textContent = range;
+```
+
+#### 結果
+
+{{EmbedLiveSample("Get_characters_from_a_text_node", 700, 100)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)
