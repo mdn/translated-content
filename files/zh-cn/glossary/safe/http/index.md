@@ -1,6 +1,6 @@
 ---
-title: Safe（安全）
-slug: Glossary/safe
+title: 安全（HTTP 方法）
+slug: Glossary/Safe/HTTP
 tags:
   - Glossary
   - HTTP
