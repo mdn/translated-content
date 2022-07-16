@@ -10,7 +10,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angula
 <table>
   <tbody>
     <tr>
-      <th scope="row">必备知识：</th>
+      <th scope="row">必备条件：</th>
       <td>
         熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a>,
         <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
@@ -29,7 +29,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angula
     </tr>
   </tbody>
 </table>
-## 什么是 Angular？
+## Angular 是什么？
 
 Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.org/)。作为一个平台，Angular 包含了：
 
@@ -78,41 +78,41 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
   </tbody>
 </table>
 
-You'll find the Angular CLI to be a valuable tool for building out your applications.
+你将会发现 Angular 的命令行界面是一个用于构建应用程序的宝贵工具。
 
-## What you'll build
+## 你将要搭建什么？
 
-This tutorial series guides you through building a to-do list application. Via this application you'll learn how to use Angular to manage, edit, add, delete, and filter items.
+本教程系列将指导您完成构建待办事项列表应用程序的过程。通过这个应用程序，您将学习如何使用 Angular 来管理、编辑、添加、删除和过滤项目。
 
-## Prerequisites
+## 必备条件
 
-To install Angular on your local system, you need the following:
+为了在你的本地系统中安装 Angular，你需要：
 
 - **Node.js**
 
-  Angular requires a [current, active LTS, or maintenance LTS](https://nodejs.org/about/releases) version of Node.js. For information about specific version requirements, see the `engines` key in the [package.json](https://unpkg.com/@angular/cli/package.json) file.
+  Angular 需要一个 Node.js 的[目前可用（active）的长期支持版本（LTS）或者一个维护（maintenance）的长期支持版本](https://nodejs.org/about/releases)。有关特定版本要求的信息，参见在 [package.json](https://unpkg.com/@angular/cli/package.json) 文件中的 `engines` 键值。
 
-  For more information on installing Node.js, see [nodejs.org](https://nodejs.org).
-  If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.
+  更多安装 Node.js 的信息，参见 [nodejs.org](https://nodejs.org)。
+  如果您不确定在系统上运行哪个版本的 Node.js，请在终端窗口中运行 `node -v`。
 
 - **npm package manager**
 
-  Angular, the Angular CLI, and Angular applications depend on [npm packages](https://docs.npmjs.com/getting-started/what-is-npm/) for many features and functions.
-  To download and install npm packages, you need an npm package manager.
-  This guide uses the [npm client](https://docs.npmjs.com/cli/install/) command line interface, which is installed with `Node.js` by default.
-  To check that you have the npm client installed, run `npm -v` in a terminal window.
+  Angular、Angular 的命令行界面和 Angular 应用基于 [npm packages](https://docs.npmjs.com/getting-started/what-is-npm/) 实现许多特性和功能。
+  若要下载安装 npm packages，就需要一个 npm packages 管理器。
+  这个教程使用在安装 `Node.js` 时默认安装的 [npm 终端](https://docs.npmjs.com/cli/install/)命令行界面
+  若要检查是否已安装 npm 客户端，请在终端窗口中运行 `npm -v`。
 
-## Set up your application
+## 设置你的应用程序
 
-You can use the Angular CLI to run commands in your terminal for generating, building, testing, and deploying Angular applications.
-To install the Angular CLI, run the following command in your terminal:
+你可以使用 Angular 命令行界面来运行用于生成、构建、测试和部署 Angular 应用程序终端的命令。
+为了安装 Angular 命令行界面，在你的终端运行以下命令：
 
 ```js
 npm install -g @angular/cli
 ```
 
-Angular CLI commands all start with `ng`, followed by what you'd like the CLI to do.
-In the Desktop directory, use the following `ng new` command to create a new application called `todo`:
+Angular 命令行界面命令均以 `ng` 开头, 随后是您希望命令行界面执行的操作。
+在桌面目录中，使用以下 `ng new` 命令创建一个名为 `todo` 的新应用程序：
 
 ```js
 ng new todo --routing=false --style=css
