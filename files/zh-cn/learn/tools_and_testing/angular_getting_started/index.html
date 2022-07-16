@@ -95,7 +95,7 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
   更多安装 Node.js 的信息，参见 [nodejs.org](https://nodejs.org)。
   如果您不确定在系统上运行哪个版本的 Node.js，请在终端窗口中运行 `node -v`。
 
-- **npm package manager**
+- **npm package 管理器**
 
   Angular、Angular 的命令行界面和 Angular 应用基于 [npm packages](https://docs.npmjs.com/getting-started/what-is-npm/) 实现许多特性和功能。
   若要下载安装 npm packages，就需要一个 npm packages 管理器。
@@ -118,36 +118,36 @@ Angular 命令行界面命令均以 `ng` 开头, 随后是您希望命令行界�
 ng new todo --routing=false --style=css
 ```
 
-The `ng new` command creates a minimal starter Angular application on your Desktop.
-The additional flags, `--routing` and `--style`, define how to handle navigation and styles in the application.
-This tutorial describes these features later in more detail.
+`ng new` 命令会在桌面上创建一个最小的入门 Angular 应用程序。
+附加属性 `--routing` 和 `--style` 规定了如何处理应用程序中的导航和样式。
+本教程稍后将会更详细地介绍这些功能。
 
-If you are prompted to enforce stricter type checking, you can respond with yes.
+如果系统提示你强制执行更严格的类型检查，则可以使用 yes 进行响应。
 
-Navigate into your new project with the following `cd` command:
+使用以下 `cd` 命令导航到新项目：
 
 ```js
 cd todo
 ```
 
-To run your `todo` application, use `ng serve`:
+要运行 `todo` 应用程序，请使用 `ng serve`：
 
 ```js
 ng serve
 ```
 
-When the CLI prompts you about analytics, answer `no`.
+当命令行界面提示您有关分析的信息时，请回答 `no`。
 
-In the browser, navigate to `http://localhost:4200/` to see your new starter application.
-If you change any of the source files, the application automatically reloads.
+在浏览器中，导航到 `http://localhost:4200/` 以查看新的入门应用程序。
+如果你更改了任何源文件，应用程序都将自动重新加载。
 
-While `ng serve` is running, you might want to open a second terminal tab or window in order to run commands.
-If at any point you would like to stop serving your application, press `Ctrl+c` while in the terminal.
+当 `ng serve` 命令正在运行时，您可能希望打开另一个终端选项卡或窗口以运行新命令。
+如果您在任何时候想要停止提供应用程序，请在终端中按 `Ctrl + c`。
 
-## Get familiar with your Angular application
+## 熟悉您的 Angular 应用程序
 
-The application source files that this tutorial focuses on are in `src/app`.
-Key files that the CLI generates automatically include the following:
+本教程重点介绍的应用程序源文件位于 `src/app` 中。
+命令行界面自动生成的关键文件包含：
 
 1. `app.module.ts`: Specifies the files that the application uses.
     This file acts as a central hub for the other files in your application.
