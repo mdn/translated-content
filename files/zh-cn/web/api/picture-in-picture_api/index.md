@@ -23,7 +23,7 @@ translation_of: Web/API/Picture-in-Picture_API
 ## 接口
 
 - {{DOMxRef("PictureInPictureWindow")}}
-  - : 表示浮动的视频窗口;包含 {{domxref("PictureInPictureWindow/width", "width")}} 和 {{domxref("PictureInPictureWindow/height", "height")}} 属性，以及一个 {{domxref("PictureInPictureWindow/onresize", "onresize")}} 事件处理程序属性。
+  - : 表示浮动的视频窗口；包含 {{domxref("PictureInPictureWindow/width", "width")}} 和 {{domxref("PictureInPictureWindow/height", "height")}} 属性，以及一个 {{domxref("PictureInPictureWindow/onresize", "onresize")}} 事件处理程序属性。
 
 ## 方法
 
@@ -73,7 +73,7 @@ _画中画 API 定义了三个事件，它们可以被用来检测何时画中�
 
 ## 控制样式
 
-[`:picture-in-picture`](/zh-CN/docs/Web/CSS/:picture-in-picture) [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 匹配当前进入画中画模式的视频元素，允许你配置样式表，以便视频来回在画中画或者传统演示模式切换时去自动适应大小，样式或布局内容。
+[CSS](/zh-CN/docs/Web/CSS) 的[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) [`:picture-in-picture`](/zh-CN/docs/Web/CSS/:picture-in-picture) 匹配当前进入画中画模式的视频元素，并允许你配置样式表，以便视频在画中画或者传统演示模式来回切换时去自动适应大小，样式或布局内容。
 
 ## 控制权限
 
