@@ -1,57 +1,41 @@
 ---
 title: Range.endContainer
 slug: Web/API/Range/endContainer
+page-type: web-api-instance-property
+tags:
+  - API
+  - DOM
+  - Property
+  - Range
+browser-compat: api.Range.endContainer
 translation_of: Web/API/Range/endContainer
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>The <strong><code>Range.endContainer</code></strong> は読み取り専用プロパティで、{{domxref("Range")}} 終了位置の中の{{domxref("Node")}} を返します。ノードの終了位置を変更するために {{domxref("Range.setEnd()")}} または同様のメソッドを利用します。</p>
+**`Range.endContainer`** は読み取り専用プロパティで、 {{domxref("Range")}} の終了位置にあるノード ({{domxref("Node")}}) を返します。ノードの終了位置を変更するために {{domxref("Range.setEnd()")}} または同様のメソッドを利用します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate"><em>endRangeNode</em> = <em>range</em>.endContainer;
-</pre>
+{{domxref("Node")}} オブジェクト。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js notranslate">var range = document.createRange();
+```js
+const range = document.createRange();
 
 range.setStart(startNode,startOffset);
 range.setEnd(endNode,endOffset);
 endRangeNode = range.endContainer;
+```
 
-</pre>
+## 仕様書
 
-<h2 id="Specification" name="Specification">仕様</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-endcontainer', 'Range.endContainer')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level-2-Range-attr-endParent', 'Range.endContainer')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>初期仕様</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+{{Compat}}
 
+## 関連情報
 
-
-<p>{{Compat("api.Range.endContainer")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [DOM インターフェイス索引](/ja/docs/Web/API/Document_Object_Model)

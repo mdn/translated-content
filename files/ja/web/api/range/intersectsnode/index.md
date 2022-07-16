@@ -1,47 +1,53 @@
 ---
-title: range.intersectsNode
+title: Range.intersectsNode()
 slug: Web/API/Range/intersectsNode
+page-type: web-api-instance-method
 tags:
+  - API
   - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - Experimental
+  - Method
+  - Range
+  - Reference
+browser-compat: api.Range.intersectsNode
 translation_of: Web/API/Range/intersectsNode
 ---
-<div>
- {{ApiRef}} {{Obsolete_header}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>指定ノードが range と交差するか否かを示すブール値を返します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox notranslate">bool = range.intersectsNode( referenceNode )
-</pre>
-<h3 id="Parameters" name="Parameters">引数</h3>
-<dl>
- <dt>
-  referenceNode</dt>
- <dd>
-  <code>Range</code> と比較する <code>Node</code></dd>
-</dl>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js notranslate">var range = document.createRange();
+{{ApiRef("DOM")}} {{SeeCompatTable}}
+
+**`Range.intersectsNode()`** メソッドは、指定された {{domxref("Node")}} が {{domxref("Range")}} と交差しているかどうかを示す論理値を返します。
+
+## 構文
+
+```js
+intersectsNode( referenceNode )
+```
+
+### 引数
+
+- `referenceNode`
+  - : この {{domxref("Range")}} と比較する {{domxref("Node")}} です。
+
+### 返値
+
+論理値です。
+
+## 例
+
+```js
+const range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
-var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));</pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>このメソッドは廃止されました。代わりに W3C DOM Range メソッドを用います（※参照: <code><a href="/ja/docs/DOM/range.compareBoundaryPoints">compareBoundaryPoints()</a></code> ）</p>
-<div class="warning">
- <b>注意:</b> このメソッドは <a href="/ja/docs/Gecko">Gecko</a> 1.9 より<a href="/ja/docs/Gecko_1.9_Changes_affecting_websites">削除されています</a>。もし既にこのメソッドを用いている場合、出来るだけ早く、 <code>compareBoundaryPoints()</code> に切り替えて下さい。</div>
-<p>次の関数を代替として用いる事が出来ます。</p>
-<pre class="brush:js notranslate">function rangeIntersectsNode(range, node) {
-  var nodeRange = node.ownerDocument.createRange();
-  try {
-    nodeRange.selectNode(node);
-  }
-  catch (e) {
-    nodeRange.selectNodeContents(node);
-  }
+const intersectingNode = range.intersectsNode(document.getElementsByTagName("p").item(0));
+```
 
-  return range.compareBoundaryPoints(Range.END_TO_START, nodeRange) == -1 &amp;&amp;
-         range.compareBoundaryPoints(Range.START_TO_END, nodeRange) == 1;
-}</pre>
-<h2 id="Specification" name="Specification">仕様</h2>
-<p>このメソッドは仕様書には含まれていません。</p>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)
