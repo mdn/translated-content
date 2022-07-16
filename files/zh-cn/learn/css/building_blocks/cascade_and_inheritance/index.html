@@ -87,23 +87,24 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 
 <h3 id="控制继承">控制继承</h3>
 
-<p>CSS 为控制继承提供了四个特殊的通用属性值。每个 css 属性都接收这些值。</p>
+<p>CSS 为控制继承提供了五个特殊的通用属性值。每个 css 属性都接收这些值。</p>
 
 <dl>
  <dt>{{cssxref("inherit")}}</dt>
  <dd>设置该属性会使子元素属性和父元素相同。实际上，就是 "开启继承".</dd>
  <dt>{{cssxref("initial")}}</dt>
  <dd>设置属性值和浏览器默认样式相同。如果浏览器默认样式中未设置且该属性是自然继承的，那么会设置为 <code>inherit</code> 。</dd>
+ <dt>{{cssxref("revert")}}</dt>
+ <dd>将应用于选定元素的属性值重置为浏览器的默认样式，而不是应用于该属性的默认值。在许多情况下，此值的作用类似于 <code>unset</code>。</dd>
+ <dt>{{cssxref("revert-layer")}}</dt>
+ <dd>将应用于选定元素的属性值重置为在上一个<a href="/zh-CN/docs/Web/CSS/@layer">层叠层</a>中建立的值。</dd>
  <dt>{{cssxref("unset")}}</dt>
- <dd>将属性重置为自然值，也就是如果属性是自然继承那么就是 <code>inherit</code>，否则和 <code>initial</code>一样</dd>
+ <dd>将属性重置为自然值，也就是如果属性是自然继承那么就是 <code>inherit</code>，否则和 <code>initial</code> 一样</dd>
 </dl>
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: 还有一个新的属性， {{cssxref("revert")}}， 只有很少的浏览器支持。</p>
-</div>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: 见 {{SectionOnPage("/zh-CN/docs/Web/CSS/Cascade", "Origin of CSS declarations")}} 有更多信息和具体是怎么工作的。</p>
+<p><strong>备注：</strong> 见 {{SectionOnPage("/zh-CN/docs/Web/CSS/Cascade", "CSS 声明的源")}} 有更多信息和具体是怎么工作的。</p>
 </div>
 
 <p>下面的例子你可以通过修改 css 来查看它们的功能，写代码是掌握 html 和 css 最好的办法。</p>
