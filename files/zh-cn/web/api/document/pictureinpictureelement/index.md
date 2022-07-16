@@ -13,7 +13,7 @@ tags:
   - Reference
   - pictureInPictureElement
   - pip
-translation_of: Web/api/Document/pictureInPictureElement
+translation_of: Web/API/Document/pictureInPictureElement
 ---
 {{ApiRef("Fullscreen API")}}
 
