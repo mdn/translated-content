@@ -45,34 +45,34 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
   <tbody>
     <tr>
       <td>
-        <code><a href="https://angular.io/cli/build">ng build</a></code>
+        <code><a href="https://angular.cn/cli/build">ng build</a></code>
       </td>
-      <td>Compiles an Angular app into an output directory.</td>
+      <td>将 Angular 应用程序或库编译到给定输出到输出目录中。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="https://angular.io/cli/serve">ng serve</a></code>
+        <code><a href="https://angular.cn/cli/serve">ng serve</a></code>
       </td>
-      <td>Builds and serves your application, rebuilding on file changes.</td>
+      <td>构建你的应用并启动开发服务器，当有文件变化时就重新构建。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="https://angular.io/cli/generate">ng generate</a></code>
+        <code><a href="https://angular.cn/cli/generate">ng generate</a></code>
       </td>
-      <td>Generates or modifies files based on a schematic.</td>
+      <td>基于某个原理图生成和（或）修改文件。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="https://angular.io/cli/test">ng test</a></code>
+        <code><a href="https://angular.cn/cli/test">ng test</a></code>
       </td>
-      <td>Runs unit tests on a given project.</td>
+      <td>运行某个项目中的单元测试。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="https://angular.io/cli/e2e">ng e2e</a></code>
+        <code><a href="https://angular.cn/cli/e2e">ng e2e</a></code>
       </td>
       <td>
-        Builds and serves an Angular application, then runs end-to-end tests.
+        构建一个 Angular 应用并启动开发服务器，然后运行端到端测试。
       </td>
     </tr>
   </tbody>
