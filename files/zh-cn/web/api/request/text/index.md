@@ -9,11 +9,11 @@ tags:
   - Reference
   - Text
   - Request
-browser-compat: api.Request.text
+translation_of: Web/api/Request/text
 ---
 {{APIRef("Fetch")}}
 
-{{domxref("Request")}} 接口的 **`text()`** 方法读取请求体并且返回一个 promise，该 promise 兑现之后是一个 {{jsxref("String")}}。响应*总是*使用 UTF-8 解码。
+{{domxref("Request")}} 接口的 **`text()`** 方法读取请求体并且将其作为一个 promise 返回，该 promise 兑现之后是一个 {{jsxref("String")}}。响应*总是*使用 UTF-8 解码。
 
 ## 语法
 
