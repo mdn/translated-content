@@ -9,7 +9,7 @@ tags:
   - Method
   - Reference
   - Request
-translation_of: Web/api/Request/json
+translation_of: Web/API/Request/json
 ---
 {{APIRef("Fetch API")}}
 
