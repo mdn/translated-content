@@ -95,10 +95,10 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
   更多安装 Node.js 的信息，参见 [nodejs.org](https://nodejs.org)。
   如果您不确定在系统上运行哪个版本的 Node.js，请在终端窗口中运行 `node -v`。
 
-- **npm package 管理器**
+- **npm 包管理器**
 
-  Angular、Angular 的命令行界面和 Angular 应用基于 [npm packages](https://docs.npmjs.com/getting-started/what-is-npm/) 实现许多特性和功能。
-  若要下载安装 npm packages，就需要一个 npm packages 管理器。
+  Angular、Angular 的命令行界面和 Angular 应用基于 [npm 包](https://docs.npmjs.com/getting-started/what-is-npm/)实现许多特性和功能。
+  若要下载安装 npm 包，就需要一个 npm 包管理器。
   这个教程使用在安装 `Node.js` 时默认安装的 [npm 终端](https://docs.npmjs.com/cli/install/)命令行界面
   若要检查是否已安装 npm 客户端，请在终端窗口中运行 `npm -v`。
 
