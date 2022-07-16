@@ -9,7 +9,7 @@ tags:
   - Method
   - Reference
   - Request
-translation_of: Web/api/Request/arrayBuffer
+translation_of: Web/API/Request/arrayBuffer
 ---
 {{APIRef("Fetch")}}
 
