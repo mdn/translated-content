@@ -9,7 +9,7 @@ tags:
   - FormData
   - Method
   - Reference
-translation_of: Web/api/Request/formData
+translation_of: Web/API/Request/formData
 ---
 {{APIRef("Fetch")}}
 
