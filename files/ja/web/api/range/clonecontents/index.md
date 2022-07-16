@@ -1,59 +1,54 @@
 ---
 title: Range.cloneContents()
 slug: Web/API/Range/cloneContents
+page-type: web-api-instance-method
+tags:
+  - API
+  - DOM
+  - Method
+  - Range
+browser-compat: api.Range.cloneContents
 translation_of: Web/API/Range/cloneContents
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><strong><code>Range.cloneContents()</code></strong>は、{{ domxref("Range") }}に含まれる{{ domxref("Node") }}タイプのオブジェクトをコピーする{{ domxref("DocumentFragment") }}を返します。</p>
+**`Range.cloneContents()`** は、 {{ domxref("Range") }} に含まれる {{ domxref("Node") }} 型のオブジェクトをコピーした {{ domxref("DocumentFragment") }} を返します。
 
-<p>DOMイベントを使用して追加されたイベントリスナーは、複製中にコピーされません。 HTML属性イベントは、DOM Core cloneNodeメソッドの場合と同様に複製されます。 HTML id属性も複製されるため、複製によって無効なドキュメントが作成される可能性があります。</p>
+{{domxref("EventTarget.addEventListener()", "addEventListener()")}} を使用して追加されたイベントリスナーは、クローン作成中には複製されません。 HTML 属性のイベントは、 {{ domxref("Node.cloneNode()") }} メソッドの場合と同様に複製されます。メソッドと同じです。 HTML の `id` 属性も複製されますが、これは複製によって無効な文書になる可能性があります。
 
-<p>部分的に選択されたノードには、ドキュメントフラグメントを有効にするために必要な親タグが含まれます。</p>
+部分的に選択されたノードは、文書フラグメントを有効にするために必要な親タグが含まれます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><em>documentFragment </em>= <em>range</em>.cloneContents();
-</pre>
+```js
+cloneContents()
+```
 
-<h2 id="Example" name="Example">例</h2>
+### 引数
 
-<pre class="brush: js notranslate">range = document.createRange();
+なし。
+
+### 返値
+
+{{domxref("DocumentFragment") }} オブジェクトです。
+
+## 例
+
+```js
+range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 documentFragment = range.cloneContents();
 document.body.appendChild(documentFragment);
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-range-clonecontents', 'Range.cloneContents()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-cloneContents', 'Range.cloneContents()')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>初期仕様</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.Range.cloneContents")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
-</ul>
+- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)
