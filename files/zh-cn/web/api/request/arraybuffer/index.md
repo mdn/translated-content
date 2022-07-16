@@ -1,0 +1,57 @@
+---
+title: Request.arrayBuffer()
+slug: Web/API/Request/arrayBuffer
+page-type: web-api-instance-method
+tags:
+  - API
+  - ArrayBuffer
+  - Fetch
+  - Method
+  - Reference
+  - Request
+translation_of: Web/api/Request/arrayBuffer
+---
+{{APIRef("Fetch")}}
+
+{{domxref("Request")}} 接口的 **`arrayBuffer()`** 方法读取请求体，并且返回一个 promise，兑现之后为一个 {{jsxref("ArrayBuffer")}}。
+
+## 语法
+
+```js
+arrayBuffer()
+```
+
+### 参数
+
+无。
+
+### 返回值
+
+一个 promise，兑现之后为一个 {{jsxref("ArrayBuffer")}}。
+
+## 示例
+
+```js
+const myArray = new Uint8Array(10);
+
+const request = new Request('/myEndpoint', {
+  method: 'POST',
+  body: myArray
+});
+
+request.arrayBuffer().then(function(buffer) {
+  // do something with the buffer sent in the request
+});
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Response.arrayBuffer()")}}
