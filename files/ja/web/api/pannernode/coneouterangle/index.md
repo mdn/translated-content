@@ -1,66 +1,40 @@
 ---
 title: PannerNode.coneOuterAngle
 slug: Web/API/PannerNode/coneOuterAngle
+page-type: web-api-instance-property
 tags:
   - API
   - PannerNode
   - Property
   - Reference
-  - Référence(2)
   - Web Audio API
   - coneOuterAngle
+browser-compat: api.PannerNode.coneOuterAngle
 translation_of: Web/API/PannerNode/coneOuterAngle
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<p>{{ domxref("PannerNode") }} インターフェイスの <code>coneOuterAngle</code> プロパティは、音量が一定値まで低減される範囲を外側に持つコーンの角度が、実数値 (倍精度) で参照できます。低減は  <code>coneOuterGain</code> 属性の値に従います。</p>
+`coneOuterAngle` は {{ domxref("PannerNode") }} インターフェイスのプロパティで、倍精度実数値で円錐の外側の体積を一定値だけ減少させる角度を、度単位で記述します。
 
-<div>
-<p><code>coneOuterAngle</code> プロパティのデフォルトの値は <code>0</code> です。</p>
-</div>
+`coneOuterAngle` プロパティの既定の値は `0` です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.coneOuterAngle = 0;</pre>
+倍精度浮動小数点数。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-<p>A double.</p>
+[`PannerNode.orientationX`](/ja/docs/Web/API/PannerNode/orientationX#例) の例で、 {{domxref("PannerNode")}} の向きの引数を {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} と {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}} の組み合わせで変更した場合の音量への影響の例を示しています。
 
-<h2 id="Example" name="Example">例</h2>
+## 仕様書
 
-<p>{{page("/ja/docs/Web/API/PannerNode/orientationX","Example")}}</p>
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#dom-pannernode-coneouterangle', 'coneOuterAngle')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## 関連情報
 
-<div>
-
-
-<p>{{Compat("api.PannerNode.coneOuterAngle")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio spatialisation basics</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブ音声空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
