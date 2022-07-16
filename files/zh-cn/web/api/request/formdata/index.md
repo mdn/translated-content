@@ -1,0 +1,61 @@
+---
+title: Request.formData()
+slug: Web/API/Request/formData
+page-type: web-api-instance-method
+tags:
+  - API
+  - Fetch
+  - Fetch API
+  - FormData
+  - Method
+  - Reference
+translation_of: Web/api/Request/formData
+---
+{{APIRef("Fetch")}}
+
+{{domxref("Request")}} 接口的 **`formData()`** 方法读取请求体并且返回一个 promise，该 promise 兑现之后为一个 {{domxref("FormData")}} 对象。
+
+## 语法
+
+```js
+formData()
+```
+
+### 参数
+
+无。
+
+### 返回值
+
+一个 {{jsxref("Promise")}}，兑现之后为一个 {{domxref("FormData")}} 对象。
+
+## 示例
+
+```js
+const formData = new FormData();
+const fileField = document.querySelector('input[type="file"]');
+
+formData.append('username', 'abc123');
+formData.append('avatar', fileField.files[0]);
+
+const request = new Request('/myEndpoint', {
+  method: 'POST',
+  body: formData
+});
+
+request.formData().then(function(data) {
+  // do something with the formdata sent in the request
+});
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Response.formData()")}}
