@@ -23,6 +23,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angula
     </tr>
   </tbody>
 </table>
+
 ## Angular 是什么？
 
 Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.org/)。作为一个平台，Angular 包含了：
