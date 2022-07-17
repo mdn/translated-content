@@ -22,7 +22,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angula
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目标：</th>
       <td>
         要设置本地 Angular 的开发环境，创建一个新手应用，并理解它工作原理的基础知识。
       </td>
