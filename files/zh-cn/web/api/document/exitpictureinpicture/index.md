@@ -48,7 +48,7 @@ document.onclick = function (event) {
 }
 ```
 
-注意，如果你想要去跟踪你页面上正在以画中画模式播放的视频，你应该在有问题的 {{DOMxRef("HTMLVideoElement")}} 元素上监听 `enterpictureinpicture` 和 `exitpictureinpicture` 事件。或者，你可以检查 {{DOMxRef("Document.pictureInPictureElement")}} 元素是否引用了当前的 {{DOMxRef("HTMLVideoElement")}} 元素。
+注意，如果你想要跟踪页面上正在以画中画模式播放的视频，你应该在有问题的 {{DOMxRef("HTMLVideoElement")}} 元素上监听 `enterpictureinpicture` 和 `exitpictureinpicture` 事件。或者，你可以检查 {{DOMxRef("Document.pictureInPictureElement")}} 元素是否引用了当前的 {{DOMxRef("HTMLVideoElement")}} 元素。
 
 ## 规范
 
