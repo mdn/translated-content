@@ -10,7 +10,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angula
 <table>
   <tbody>
     <tr>
-      <th scope="row">必备条件：</th>
+      <th scope="row">预备知识：</th>
       <td>
         熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a>,
         <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
