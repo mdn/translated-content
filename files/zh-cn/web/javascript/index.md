@@ -12,7 +12,7 @@ translation_of: Web/JavaScript
 
 **JavaScript**（**JS**）是一种具有{{Glossary("First-class Function", "函数优先")}}特性的轻量级、解释型或者说[即时编译型](https://zh.wikipedia.org/wiki/即時編譯)的编程语言。虽然作为 Web 页面中的脚本语言被人所熟知，但是它也被用到了很多[非浏览器环境](https://en.wikipedia.org/wiki/JavaScript#Other_usage)中，例如 {{Glossary("Node.js")}}、[Apache CouchDB](https://couchdb.apache.org)、[Adobe Acrobat](https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/) 等。进一步说，JavaScript 是一种{{Glossary("Prototype-based_programming", "基于原型")}}、多范式、单线程的动态语言，并且支持面向对象、命令式和声明式（如函数式编程）风格。了解更多[关于 JavaScript](/zh-CN/docs/Web/JavaScript/About_JavaScript)。
 
-本部分文档将专注于 JavaScript 语言本身，而非局限于网页或其他运行环境。想要了解网页中特有的 {{Glossary("API")}} ，请参考 [Web API](/zh-CN/docs/Web/API) 以及 {{Glossary("DOM")}}。
+本部分文档将专注于 JavaScript 语言本身，而非局限于网页或其他运行环境。想要了解网页中特有的 {{Glossary("API")}}，请参考 [Web API](/zh-CN/docs/Web/API) 以及 {{Glossary("DOM")}}。
 
 [ECMAScript 语言规范（ECMAScript Language Specification）](https://tc39.es/ecma262/)（ECMA-262）和[ECMAScript 国际化 API 规范（ECMAScript Internationalization API specification）](https://tc39.es/ecma262/)（ECMA-402）是 Javascript 的标准。当某个 [ECMAScript 新特性的提案](https://github.com/tc39/proposals)已经被一些浏览器实现时，MDN 上的文档或示例就可能会涉及到这些新特性。大多数时候，处在 [stages](https://tc39.es/process-document/) 3 和 4 的新特性会被收录到文档中，且收录时间通常早于其正式发布的时间。
 
@@ -39,7 +39,7 @@ translation_of: Web/JavaScript
 - [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
   - : 如果你想进一步使用它撰写更有效率的代码，理解 JavaScript 面向对象的特性是很重要的，因此我们提供了该模块来帮助你理解它。
 - [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
-  - : 介绍异步 Javascript，解释为什么这个特性是重要的，以及如何借助这个特性，有效解决诸如从服务器抓取资源这类潜在的阻塞操作
+  - : 介绍异步 Javascript，解释为什么这个特性是重要的，以及如何借助这个特性，有效解决诸如从服务器抓取资源这类潜在的阻塞操作。
 - [客户端 web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
   - : 了解 API 是什么，以及如何使用那些在开发工作中常见的 API。
 
@@ -108,6 +108,6 @@ translation_of: Web/JavaScript
 - [Codepen](https://codepen.io/)
   - : Codepen 也是一个 Web 协作工具，可用作展示实时结果的 playground。
 - [StackBlitz](https://stackblitz.com/)
-  - : StackBlitz 同样是一个支持调试的在线 playground，它支持部署使用了 React、Angular等技术的全栈应用
+  - : StackBlitz 同样是一个支持调试的在线 playground，它支持部署使用了 React、Angular 等技术的全栈应用
 - [RunJS](https://runjs.app/)
-  - : RunJS 是一个桌面端便笺式 playground，可提供实时执行结果并支持调用 Node 与 浏览器 API。
+  - : RunJS 是一个桌面端便笺式 playground，可提供实时执行结果并支持调用 Node 与浏览器 API。
