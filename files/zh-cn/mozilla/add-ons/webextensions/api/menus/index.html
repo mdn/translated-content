@@ -59,7 +59,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 <p>你可以使用以下代码创建一个这样的子菜单：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.menus.create({
+<pre class="brush: js">browser.menus.create({
   id: "remove-me",
   title: browser.i18n.getMessage("menuItemRemoveMe"),
   contexts: ["all"]
@@ -109,7 +109,7 @@ browser.menus.create({
   title: browser.i18n.getMessage("menuItemUncheckMe"),
   contexts: ["all"],
   checked: checkedState
-}, onCreated);</code></pre>
+}, onCreated);</pre>
 
 <h2 id="类型">类型</h2>
 
@@ -155,9 +155,8 @@ browser.menus.create({
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>致谢</strong>
-
-<p>此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> API. 此文档来自于 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a>。</p>
+<div class="note">
+<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> API. 此文档来自于 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a>。</p>
 </div>
 
 <div class="hidden">

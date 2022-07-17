@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 
 <h2 id="使用语法">使用语法</h2>
 
-<pre class="syntaxbox brush:js">browser.alarms.create(
+<pre class="brush: js">browser.alarms.create(
   name,              // 可选的字符串 (string) 类型
   alarmInfo          // 可选的对象 (object) 类型
 )
@@ -29,9 +29,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 
 <dl>
  <dt><code>name</code>{{optional_inline}}</dt>
- <dd>字符串类型。alarm 的名称。默认为空的字符串。</dd>
- <dd>alarm 的名称可以在{{WebExtAPIRef('alarms.get()')}}方法和{{WebExtAPIRef('alarms.clear()')}}方法中引用。同时它也可以通过{{WebExtAPIRef('alarms.onAlarm')}}监听方法传入的参数对象{{WebExtAPIRef('alarms.Alarm')}}的 name 属性访问到。</dd>
- <dd>Alarm 的名称是唯一的 (在单个附件范围内). 如果传入了已经在这个附件存在的名称， 原来的同名 alarm 会被移除并且没有警告。</dd>
+ <dd>字符串类型。alarm 的名称。默认为空的字符串。alarm 的名称可以在{{WebExtAPIRef('alarms.get()')}}方法和{{WebExtAPIRef('alarms.clear()')}}方法中引用。同时它也可以通过{{WebExtAPIRef('alarms.onAlarm')}}监听方法传入的参数对象{{WebExtAPIRef('alarms.Alarm')}}的 name 属性访问到。Alarm 的名称是唯一的 (在单个附件范围内). 如果传入了已经在这个附件存在的名称， 原来的同名 alarm 会被移除并且没有警告。</dd>
  <dt><code>alarmInfo</code>{{optional_inline}}</dt>
  <dd>
  <p><code>对象(object)类型</code>. 你可以对过它来指定什么时间 alarm 会开始触发，其值可以是一个具体的时间值或者是一个延时（从 alarm 设置开始）。为了让 alarm 能复现，需要指定 <code>periodInMinutes</code>。</p>
@@ -39,9 +37,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
  <p>在 Chrome 浏览器上，除非附件以非打包 (unpackaged) 方式加载，alarm 的创建每分钟不允许超过一次。如果附件尝试设置 <code>delayInMinutes</code> 为小于1的值，alarm 只能在到达1分钟之后才会触发，并且会变成每分钟触发一次。</p>
 
  <p><code>alarmInfo</code> 对象可以设置以下属性：</p>
- </dd>
- <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>when</code>{{optional_inline}}</dt>
   <dd><code>double类型</code>。alarm 第一次触发的时间，值为自 1970-01-01 00:00:00 UTC 过去的毫秒数。请使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></code> 来获取 <code>1970-01-01 00:00:00 UTC</code> 到当前时间过去的毫秒数。如果你设置了when属性，请不要设置 delayInMinutes 属性。</dd>
   <dt><code>delayInMinutes</code>{{optional_inline}}</dt>
@@ -86,9 +82,8 @@ browser.alarms.create("my-periodic-alarm", {
   periodInMinutes
 });</pre>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

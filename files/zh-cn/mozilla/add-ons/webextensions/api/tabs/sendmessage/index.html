@@ -5,15 +5,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>从 background scripts 中发送单个消息 (or other privileged scripts, such as popup scripts or options page scripts) 到任何 content scripts that belong to the extension and are running in the specified tab.</p>
+<p>从 background scripts 中发送单个消息 (or other privileged scripts, such as popup scripts or options page scripts) 到任何 content scripts that belong to the extension and are running in the specified tab.</p>
 
-<p>这个消息将被 content scripts 中 {{WebExtAPIRef("runtime.onMessage")}} 事件的所有监听者收到，然后它们可以选择通过使用 <code>sendResponse</code> 这个方法发送一个 response 到 background scripts。</p>
+<p>这个消息将被 content scripts 中 {{WebExtAPIRef("runtime.onMessage")}} 事件的所有监听者收到，然后它们可以选择通过使用 <code>sendResponse</code> 这个方法发送一个 response 到 background scripts。</p>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var sending = browser.tabs.sendMessage(
+<pre class="brush:js">var sending = browser.tabs.sendMessage(
   tabId,                   // integer
   message,                 // any
   options                  // optional object
@@ -28,9 +28,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
  <dt><code>message</code></dt>
  <dd><code>any</code>. An object that can be serialized to JSON.</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
- <dd><code>object</code>.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><code>object</code>.
+ <dl>
   <dt><code>frameId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Sends the message to a specific frame identified by <code>frameId</code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="/en-US/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of manifest.json.</dd>
  </dl>
@@ -88,9 +87,8 @@ browser.runtime.onMessage.addListener(request =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-sendMessage"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-sendMessage"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

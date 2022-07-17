@@ -30,7 +30,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox brush:js">browser.clipboard.setImageData(<em>imageData</em>, <em>imageType</em>)
+<pre class="brush:js">browser.clipboard.setImageData(<em>imageData</em>, <em>imageType</em>)
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -54,7 +54,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData
 
 <p>Copy a remote image:</p>
 
-<pre class="brush: js" id="ct-71">// requires:
+<pre class="brush: js">// requires:
 // * the host permission for "<a href="https://cdn.mdn.mozilla.net/">https://cdn.mdn.mozilla.net/</a>*"
 // * the API permission "clipboardWrite"
 
@@ -64,7 +64,7 @@ fetch('<a href="https://cdn.mdn.mozilla.net/static/img/favicon144.png">https://c
 
 <p>Copy an image that was bundled with the extension:</p>
 
-<pre class="brush: js" id="ct-70">// requires the API permission "clipboardWrite"
+<pre class="brush: js">// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
 .then(response =&gt; response.arrayBuffer())
@@ -72,7 +72,6 @@ fetch(browser.runtime.getURL('image.png'))
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>说明</strong>
-
-<p> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a> API.</p>
+<div class="note">
+<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a> API.</p>
 </div>

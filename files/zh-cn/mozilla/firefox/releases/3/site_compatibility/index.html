@@ -9,10 +9,10 @@ translation_of: Mozilla/Firefox/Releases/3/Site_compatibility
 <h3 id=".E6.8D.95.E8.8E.B7_load_.E4.BA.8B.E4.BB.B6.E7.9B.91.E5.90.AC">捕获 load 事件监听</h3>
 <p>在 Gecko 1.8 中，不能在图片上设置 load 事件监听。在 Gecko 1.9 中，已在 {{ Bug(234455) }} 中修复。但是在某些网站中，由于捕获 load 事件的事件监听器不正确而导致问题。参见 {{ Bug(335251) }} 中的讨论。要修复这个问题，出错的页面不再需要设置事件监听器。</p>
 <p>例如，如下：</p>
-<pre class="eval">window.addEventListener('load', yourFunction, true);
+<pre class="brush: js">window.addEventListener('load', yourFunction, true);
 </pre>
 <p>应该更改为：</p>
-<pre class="eval">window.addEventListener('load', yourFunction, false);
+<pre class="brush: js">window.addEventListener('load', yourFunction, false);
 </pre>
 <p>事件捕获如何工作的解释，参见 <a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture">DOM Level 2 事件捕获</a></p>
 <h3 id="preventBubble_.E5.B7.B2.E8.A2.AB.E7.A7.BB.E5.87.BA">preventBubble 已被移出</h3>

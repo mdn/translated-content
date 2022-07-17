@@ -16,10 +16,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>使用 <code>history</code> API 与浏览器历史记录进行交互。</p>
+<p>使用 <code>history</code> API 与浏览器历史记录进行交互。</p>
 
 <div class="note">
-<p>注意：下载也被当做一个 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem"><code>HistoryItem</code></a> 对象。因此，<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited">history.onVisited</a></code>等事件也会被下载所触发。</p>
+<p><strong>备注：</strong> 下载也被当做一个 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem"><code>HistoryItem</code></a> 对象。因此，<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited">history.onVisited</a></code>等事件也会被下载所触发。</p>
 </div>
 
 <p>浏览器历史记录是对用户所访问的页面按时间顺序进行的记录和保存。history API 可以帮你实现以下功能：</p>
@@ -38,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
  <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteRange">移除给定期间内任意页面的访问记录的集合</a></li>
 </ul>
 
-<p>使用该 API 之前，扩展程序必须在其 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 文件中获取 history 的<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">许可</a>。</p>
+<p>使用该 API 之前，扩展程序必须在其 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 文件中获取 history 的<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">许可</a>。</p>
 
 <h2 id="类型">类型</h2>
 
@@ -80,7 +80,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
  <div>当用户访问的页面标题被记录时触发。</div>
  </dd>
  <dt>{{WebExtAPIRef("history.onVisited")}}</dt>
- <dd>每次用户访问页面时会触发，并提供该页面的 {{WebExtAPIRef("history.HistoryItem")}} 数据。</dd>
+ <dd>每次用户访问页面时会触发，并提供该页面的 {{WebExtAPIRef("history.HistoryItem")}} 数据。</dd>
  <dt>{{WebExtAPIRef("history.onVisitRemoved")}}</dt>
  <dd>
  <p>当一个 URL 被彻底从浏览器历史记录中移除时触发。</p>
@@ -93,9 +93,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>致谢</strong>
-
-<p>该 API 基于 Chromium 的<a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a> API。该文档由 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a>衍生而来。</p>
+<div class="note">
+<p><strong>备注：</strong> 该 API 基于 Chromium 的<a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a> API。该文档由 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a>衍生而来。</p>
 
 <p>微软 Edge 兼容性数据由微软公司提供并包含在如下证书中—— Creative Commons Attribution 3.0 United States License.</p>
 </div>

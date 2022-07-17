@@ -11,7 +11,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 
 <p>这个类型的值是对象，包含了以下属性：</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>byExtensionId</code>{{optional_inline}}</dt>
  <dd>一个代表了触发此下载的扩展的 ID 的 <code>string</code> （如果是被扩展触发的话）。一旦设置，不会改变。如果下载不是由扩展触发的，则为 undefined。</dd>
  <dt><code>byExtensionName</code>{{optional_inline}}</dt>
@@ -29,7 +29,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
  <dt><code>estimatedEndTime</code>{{optional_inline}}</dt>
  <dd>A <code>string</code> (in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format) representing the estimated number of milliseconds between the UNIX epoch and when this download is estimated to be completed. This is undefined if it is not known (in particular, it is undefined in the <code>DownloadItem</code> that's passed into {{WebExtAPIRef("downloads.onCreated")}}).</dd>
  <dt><code>exists</code></dt>
- <dd>A <code>boolean</code> indicating whether a downloaded file still exists (<code>true</code>) or not (<code>false</code>). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.</dd>
+ <dd>A <code>boolean</code> indicating whether a downloaded file still exists (<code>true</code>) or not (<code>false</code>). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.</dd>
  <dt><code>filename</code></dt>
  <dd>A <code>string</code> representing the file's absolute local path.</dd>
  <dt><code>fileSize</code></dt>
@@ -60,9 +60,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#type-DownloadItem"><code>chrome.downloads</code></a> API.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#type-DownloadItem"><code>chrome.downloads</code></a> API.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

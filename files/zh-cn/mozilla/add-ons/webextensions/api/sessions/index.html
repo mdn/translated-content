@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 
 <p>Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.</p>
 
-<p>The {{WebExtAPIRef("sessions.getRecentlyClosed()")}} function returns an array of {{WebExtAPIRef("tabs.Tab")}} and {{WebExtAPIRef("windows.Window")}} objects, representing tabs and windows that have been closed since the browser was running, up to the maximum defined in {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.</p>
+<p>The {{WebExtAPIRef("sessions.getRecentlyClosed()")}} function returns an array of {{WebExtAPIRef("tabs.Tab")}} and {{WebExtAPIRef("windows.Window")}} objects, representing tabs and windows that have been closed since the browser was running, up to the maximum defined in {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.</p>
 
 <p>You can then restore a window or tab using the {{WebExtAPIRef("sessions.restore()")}} function. Restoring doesn't just reopen the tab: it also restores the tab's navigation history so the back/forward buttons will work.</p>
 
@@ -97,9 +97,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a> API.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a> API.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

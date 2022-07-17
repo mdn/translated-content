@@ -8,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>检查扩展名是否具有给定 {{WebExtAPIRef("permissions.Permissions")}}  对象中列出的权限。</p>
+<p>检查扩展名是否具有给定 {{WebExtAPIRef("permissions.Permissions")}}  对象中列出的权限。</p>
 
 <p>The <code>Permissions</code> argument may contain either an origins property, which is an array of <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a>, or a <code>permissions</code> property, which is an array of <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permissions</a>, or both.</p>
 
@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js notranslate">var getContains = browser.permissions.contains(
+<pre class="brush:js notranslate">var getContains = browser.permissions.contains(
   permissions                // Permissions object
 )
 </pre>
@@ -51,8 +51,8 @@ browser.permissions.contains(testPermissions1).then((result) =&gt; {
 });
 
 var testPermissions2 = {
-  origins: ["*://mozilla.org/"],
-  permissions: ["tabs", "alarms"]
+  origins: ["*://mozilla.org/"],
+  permissions: ["tabs", "alarms"]
 };
 
 browser.permissions.contains(testPermissions2).then((result) =&gt; {
@@ -60,8 +60,8 @@ browser.permissions.contains(testPermissions2).then((result) =&gt; {
 });
 
 var testPermissions3 = {
-  origins: ["https://developer.mozilla.org/"],
-  permissions: ["tabs", "webRequest"]
+  origins: ["https://developer.mozilla.org/"],
+  permissions: ["tabs", "webRequest"]
 };
 
 browser.permissions.contains(testPermissions3).then((result) =&gt; {
@@ -69,7 +69,7 @@ browser.permissions.contains(testPermissions3).then((result) =&gt; {
 });                      // matches: "*://*.mozilla.org/*"
 
 var testPermissions4 = {
-  origins: ["https://example.org/"]
+  origins: ["https://example.org/"]
 };
 
 browser.permissions.contains(testPermissions4).then((result) =&gt; {
@@ -80,13 +80,8 @@ browser.permissions.contains(testPermissions4).then((result) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a> API.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a> API.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div id="gtx-trans" style="position: absolute; left: 677px; top: 46px;">
-<div class="gtx-trans-icon"></div>
 </div>

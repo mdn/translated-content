@@ -35,11 +35,11 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 <p>在四大主流浏览器中，有两个 API 命名空间正在使用：</p>
 
 <ul>
- <li><code>browser.* </code>是 Firefox 和 Edge 使用的扩展 API 的标准</li>
- <li><code>chrome.*</code> 是 Chrome 和 Opera 使用的扩展 API 的标准</li>
+ <li><code>browser.* </code>是 Firefox 和 Edge 使用的扩展 API 的标准</li>
+ <li><code>chrome.*</code> 是 Chrome 和 Opera 使用的扩展 API 的标准</li>
 </ul>
 
-<p>Firefox 也支持 Chrome 浏览器的 <code>chrome.*</code> 名称空间，主要用于协助扩展移植。然而，首选应该使用浏览器 <code>browser.*</code> 命名空间。除了被提议的标准外， <code>browser.*</code> 使用 promises ーー一种现代化且简单的处理异步事件机制。</p>
+<p>Firefox 也支持 Chrome 浏览器的 <code>chrome.*</code> 名称空间，主要用于协助扩展移植。然而，首选应该使用浏览器 <code>browser.*</code> 命名空间。除了被提议的标准外， <code>browser.*</code> 使用 promises ーー一种现代化且简单的处理异步事件机制。</p>
 
 <p>只有在非常小的扩展中，命名空间才可能是唯一的跨平台问题。因此，如果你遇到了且试图专门解决这个问题的话，可能很少会有帮助。最好的方法是通过异步事件处理来解决这个问题。</p>
 
@@ -49,13 +49,13 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <ul>
  <li>promises 是 Firefox 使用的扩展 API 的标准</li>
- <li>callbacks 是 Chrome、Edge 和 Opera 使用的扩展 API 的标准</li>
+ <li>callbacks 是 Chrome、Edge 和 Opera 使用的扩展 API 的标准</li>
 </ul>
 
-<p>Firefox 还支持 <code>chrome.*</code> 命名空间中的 callbacks 风格的 API，这主要是为了便于从 Chrome <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">迁移</a>。然而，应该首选使用 promises（以及 <code>browser.*</code> 命名空间），它已被采纳为拟议标准的一部分。它极大地简化了异步事件处理，特别是在需要将事件链接在一起的情况下。</p>
+<p>Firefox 还支持 <code>chrome.*</code> 命名空间中的 callbacks 风格的 API，这主要是为了便于从 Chrome <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">迁移</a>。然而，应该首选使用 promises（以及 <code>browser.*</code> 命名空间），它已被采纳为拟议标准的一部分。它极大地简化了异步事件处理，特别是在需要将事件链接在一起的情况下。</p>
 
 <div class="blockIndicator note">
-<p>如果你对这两种方法之间的差异不熟悉，可以看一下 <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">了解异步 JavaScript: Callbacks、Promises 和 Async/Await </a>或者 MDN 的 <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> 页面。</p>
+<p><strong>备注：</strong> 如果你对这两种方法之间的差异不熟悉，可以看一下 <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">了解异步 JavaScript: Callbacks、Promises 和 Async/Await </a>或者 MDN 的 <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> 页面。</p>
 </div>
 
 <h4 id="浏览器扩展_API_的垫片（Polyfill）">浏览器扩展 API 的垫片（Polyfill）</h4>
@@ -66,12 +66,12 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
  <br>
  要使用 polyfill，可以使用 npm 安装到开发环境中，或者直接从 <a href="https://github.com/mozilla/webextension-polyfill/releases">GitHub Relase</a> 页面下载。</p>
 
-<p>然后，引入 <code>browser-polyfill.js</code> 到：</p>
+<p>然后，引入 <code>browser-polyfill.js</code> 到：</p>
 
 <ul>
  <li><code>manifest.json</code>，修改后使它可以用于 background 和 content 脚本</li>
- <li>HTML 文件，例如 <code>browserAction</code> 弹出窗口或标签页</li>
- <li>使用 <code>tabs.executeScript</code> 上的 <code>executeScript</code> 动态注入脚本（不需要事先在 manifest.json 的 <code>content_scripts</code> 中申明</li>
+ <li>HTML 文件，例如 <code>browserAction</code> 弹出窗口或标签页</li>
+ <li>使用 <code>tabs.executeScript</code> 上的 <code>executeScript</code> 动态注入脚本（不需要事先在 manifest.json 的 <code>content_scripts</code> 中申明</li>
 </ul>
 
 <p>例如，这个 <code>manifest.json</code> 代码让你的后台脚本可以使用 polyfill:</p>
@@ -89,7 +89,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 <p>您的目标是确保在任何其他扩展脚本执行 <code>browser.*</code> API 前执行 polyfill。</p>
 
 <div class="blockIndicator note">
-<p>关于如何使用模块打包器使用 polyfill 的更多细节和信息，请参阅 <a href="https://github.com/mozilla/webextension-polyfill/blob/master/README.md">GitHub 上的项目自述文件</a>。</p>
+<p><strong>备注：</strong> 关于如何使用模块打包器使用 polyfill 的更多细节和信息，请参阅 <a href="https://github.com/mozilla/webextension-polyfill/blob/master/README.md">GitHub 上的项目自述文件</a>。</p>
 </div>
 
 <p>还有其他的 polyfill 选项，但是在撰写本文时，没有一个提供浏览器扩展 API polyfill 的覆盖范围。所以，如果你没有把 Firefox 作为你的首选，你的选择就是接受 polyfills 的限制，移植到 Firefox 并添加跨浏览器的支持，或者开发你自己的 polyfill。</p>
@@ -104,7 +104,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
  <li><strong>专有功能，支持特定于浏览器的特性。</strong>例如，在撰写本文时，容器是一个特定于 firefox 的特性，由 <code>contextualidentity</code> 函数支持。</li>
 </ul>
 
-<p>你可以在 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Mozilla Developer Network 浏览器对 JavaScript API 页面的支持</a>上找到 4 个主要浏览器对扩展 API 的支持细节，以及 Firefox for Android 对扩展 API 的支持细节。浏览器兼容性信息也包含在每个函数及其方法、类型和事件的 Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a> 参考页面中。</p>
+<p>你可以在 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Mozilla Developer Network 浏览器对 JavaScript API 页面的支持</a>上找到 4 个主要浏览器对扩展 API 的支持细节，以及 Firefox for Android 对扩展 API 的支持细节。浏览器兼容性信息也包含在每个函数及其方法、类型和事件的 Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a> 参考页面中。</p>
 
 <h4 id="处理_API_差异">处理 API 差异</h4>
 
@@ -125,9 +125,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 <p>4 个主要浏览器支持的 <code><a href="/zh-CN/docs//zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">manifest.json</a></code> 文件字段的差异大致可分为三类：</p>
 
 <ul>
- <li><strong>扩展信息属性。</strong>例如，在撰写本文时，Firefox 和 Opera 包含和 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code> 地位相等的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility">developer</a></code> 关键字，以获取扩展的开发者和作者的详细信息。</li>
- <li><strong>扩展功能。</strong>例如，在编写本文时，Edge 不支持扩展定义快捷键的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility">commands</a></code> 字段。</li>
- <li><strong>字段可选性。</strong>例如，在编写本文时，在 Edge 中 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code> 字段是必需的，但在其他主要浏览器中是可选的。</li>
+ <li><strong>扩展信息属性。</strong>例如，在撰写本文时，Firefox 和 Opera 包含和 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code> 地位相等的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility">developer</a></code> 关键字，以获取扩展的开发者和作者的详细信息。</li>
+ <li><strong>扩展功能。</strong>例如，在编写本文时，Edge 不支持扩展定义快捷键的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility">commands</a></code> 字段。</li>
+ <li><strong>字段可选性。</strong>例如，在编写本文时，在 Edge 中 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code> 字段是必需的，但在其他主要浏览器中是可选的。</li>
 </ul>
 
 <p>浏览器兼容性信息包含在 Mozilla Developer Network <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 页的每个字段中。</p>
@@ -139,7 +139,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 <p>通过浏览器扩展商店打包和分发扩展相对简单。</p>
 
 <ul>
- <li>火狐、Chrome 和 Opera 都使用简单的 zip 格式打包，同时需要 <code>manifest.json</code> 文件位于压缩包的根目录。</li>
+ <li>火狐、Chrome 和 Opera 都使用简单的 zip 格式打包，同时需要 <code>manifest.json</code> 文件位于压缩包的根目录。</li>
  <li>但是，提交到 Microsoft 扩展商店需要对扩展文件进行额外打包。</li>
 </ul>
 
@@ -241,9 +241,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
  </tbody>
 </table>
 
-<p><sup>1</sup> 在发布后会延期进行一次人工审查，如果发现了需要解决的问题，可能导致扩展被暂停。</p>
+<p><sup>1</sup> 在发布后会延期进行一次人工审查，如果发现了需要解决的问题，可能导致扩展被暂停。</p>
 
-<p><sup>2</sup> 在撰写本文时，微软只允许发布预先批准的扩展。</p>
+<p><sup>2</sup> 在撰写本文时，微软只允许发布预先批准的扩展。</p>
 
 <h3 id="其他考虑">其他考虑</h3>
 
@@ -257,7 +257,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h4 id="在不同的实现中共享资源">在不同的实现中共享资源</h4>
 
-<p>即使你要支持的平台中包括 Safari，仍然可以在对于不同浏览器的实现中共享许多资源。其中包括：</p>
+<p>即使你要支持的平台中包括 Safari，仍然可以在对于不同浏览器的实现中共享许多资源。其中包括：</p>
 
 <ul>
  <li>Images</li>
@@ -267,7 +267,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h2 id="总结">总结</h2>
 
-<p>在进行跨平台扩展开发时，可以通过对标 Firefox 和使用 <a href="https://github.com/mozilla/webextension-polyfill/">WebExtension API Polyfill</a> 来解决扩展 API 之间的根本差异。遵循这种方法，您将在使用与提议的 WebExtension API 标准紧密结合的 API 特性中受益，并使用 promises 来简单的处理异步事件。</p>
+<p>在进行跨平台扩展开发时，可以通过对标 Firefox 和使用 <a href="https://github.com/mozilla/webextension-polyfill/">WebExtension API Polyfill</a> 来解决扩展 API 之间的根本差异。遵循这种方法，您将在使用与提议的 WebExtension API 标准紧密结合的 API 特性中受益，并使用 promises 来简单的处理异步事件。</p>
 
 <p>跨平台工作的主要重点可能是处理主要浏览器支持的 API 特性之间的差异。创建你的 <code>manifest.json</code> 文件应该是相对简单的，你可以手动完成。然后，您将需要考虑扩展包中的打包差异，以及提交到每个扩展商店的过程差异。</p>
 

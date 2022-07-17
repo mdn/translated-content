@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox brush:js">var downloading = browser.downloads.download(
+<pre class="brush:js">var downloading = browser.downloads.download(
   options                   // object
 )
 </pre>
@@ -33,9 +33,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 
 <dl>
  <dt><code>options</code></dt>
- <dd>一个 <code>object</code> ，用来指定你想要下载的文件和其他想要在下载时设置的首选项。可以包含以下属性：</dd>
- <dd>
- <dl class="reference-values">
+ <dd>一个 <code>object</code> ，用来指定你想要下载的文件和其他想要在下载时设置的首选项。可以包含以下属性：
+ <dl>
   <dt><code>allowHttpErrors</code>{{optional_inline}}</dt>
   <dd>一个 <code>boolean</code>，启用后即使遇到 HTTP 错误仍然继续下载。例如，可以使用该标志下载服务错误页面。默认值为<code>false</code>. 当设置为以下值时：
   <ul>
@@ -62,7 +61,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
   <p>如果该选项省略，浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在 about:preferences 里为"每次都问您要存到哪" ，或者 about:config 里 <code>browser.download.useDownloadDir</code> )。</p>
 
   <div class="note">
-  <p><strong>Note</strong>: 如果 <code>saveAs</code> 被设置为 <code>true</code>，Firefox for Android 将会引发一个错误。当 <code>saveAs</code> 为 <code>false</code> 或空时这个参数会被忽略。</p>
+  <p><strong>备注：</strong> 如果 <code>saveAs</code> 被设置为 <code>true</code>，Firefox for Android 将会引发一个错误。当 <code>saveAs</code> 为 <code>false</code> 或空时这个参数会被忽略。</p>
   </div>
   </dd>
   <dt><code>url</code></dt>
@@ -105,9 +104,8 @@ downloading.then(onStartedDownload, onFailed);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>这个 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> API.</p>
+<div class="note">
+<p><strong>备注：</strong> 这个 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> API.</p>
 </div>
 
 <div class="hidden">

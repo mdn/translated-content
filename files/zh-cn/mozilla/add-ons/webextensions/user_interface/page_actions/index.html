@@ -57,26 +57,26 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>
 
 <h2 id="定义地址栏按钮">定义地址栏按钮</h2>
 
 <p>你可以在 manifest.json 中使用 page_action 键定义地址栏按钮的属性：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json">"page_action": {
+<pre class="brush: json">"page_action": {
   "browser_style": true,
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
   },
   "default_title": "Whereami?"
-}</code></pre>
+}</pre>
 
 <p>仅 default_icon 是强制（必需）的。</p>
 
 <p>有两种方式定义地址栏按钮：带 popup 窗口和无 popup 窗口。如果你没有指定一个 popup，则当用户点击此按钮时，事件被派送到使用<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked">pageAction.onClicked</a>侦听器的扩展：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">browser.pageAction.onClicked.addListener(handleClick);</code></pre>
+<pre class="brush: js">browser.pageAction.onClicked.addListener(handleClick);</pre>
 
 <p>如果你指定了一个 popup，则点击事件不被派送，在用户点击按钮时显示 popup。用户可以与 popup 进行交互，并且当用户点击 popup 以外区域时，popup 自动关闭。参见<a href="/en-US/Add-ons/WebExtensions/Popups">Popup</a>可获得创建和管理 popups 更详细内容。</p>
 
