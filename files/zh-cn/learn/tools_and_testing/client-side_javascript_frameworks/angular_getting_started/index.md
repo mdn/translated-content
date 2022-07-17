@@ -32,9 +32,7 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
 - 集成良好的库（library），涵盖各种功能，包括路由、表单管理、客户端-服务器通信等
 - 开发人员工具，可帮助您开发、构建、测试和更新代码
 
-当你用 Angular 搭建一个应用，您正在利用一个可以从单开发人员项目扩展到企业级应用程序的平台。Angular 被设计用来使版本迭代尽可能简单。因此，您可以毫不费力地利用最新成果（developments）。最为重要的是，Angular 的生态系统由多达 170 万的开发人员、库（library）作者和内容创作者组成的多元化群体组成。
-
-在你开始探索 Angular 平台之前，你需要了解 Angular 的命令行界面（CLI）。Angular 的命令行界面是最快、最简单、也最值得推荐的开发 Angular 应用的方法。Angular 的命令行界面使许多任务变得简单。以下是一些示例：
+当你用 Angular 搭建一个应用，您正在利用一个可以从单开发人员项目扩展到企业级应用程序的平台。Angular 被设计用来使版本迭代尽可能简单。因此，您可以毫不费力地利用最新成果（developments）。最为重要的是，Angular 的生态系统由多达 170 万的开发人员、库（library）作者和内容创作者组成的多元化群体组成。在你开始探索 Angular 平台之前，你需要了解 Angular 的命令行界面（CLI）。Angular 的命令行界面是最快、最简单、也最值得推荐的开发 Angular 应用的方法。Angular 的命令行界面使许多任务变得简单。以下是一些示例：
 
 <table class="standard-table">
   <tbody>
@@ -107,9 +105,7 @@ Angular 命令行界面命令均以 `ng` 开头, 其后是您希望命令行界�
 ng new todo --routing=false --style=css
 ```
 
-`ng new` 命令会在桌面上创建一个最小的入门 Angular 应用程序。附加属性 `--routing` 和 `--style` 规定了如何处理应用程序中的导航和样式。本教程稍后将会更详细地介绍这些功能。
-
-如果系统提示你强制执行更严格的类型检查，则可以使用 yes 进行响应。
+`ng new` 命令会在桌面上创建一个最小的入门 Angular 应用程序。附加属性 `--routing` 和 `--style` 规定了如何处理应用程序中的导航和样式。本教程稍后将会更详细地介绍这些功能。如果系统提示你强制执行更严格的类型检查，则可以使用 yes 进行响应。
 
 使用以下 `cd` 命令导航到新项目：
 
@@ -123,18 +119,11 @@ cd todo
 ng serve
 ```
 
-当命令行界面提示您有关分析的信息时，请回答 `no`。
-
-在浏览器中，导航到 `http://localhost:4200/` 以查看新的入门应用程序。
-如果你更改了任何源文件，应用程序都将自动重新加载。
-
-当 `ng serve` 命令正在运行时，您可能希望打开另一个终端选项卡或窗口以运行新命令。
-如果您在任何时候想要停止提供（serving）应用程序，请在终端中按 `Ctrl + c`。
+当命令行界面提示您有关分析的信息时，请回答 `no`。在浏览器中，导航到 `http://localhost:4200/` 以查看新的入门应用程序。如果你更改了任何源文件，应用程序都将自动重新加载。当 `ng serve` 命令正在运行时，您可能希望打开另一个终端选项卡或窗口以运行新命令。如果您在任何时候想要停止提供（serving）应用程序，请在终端中按 `Ctrl + c`。
 
 ## 熟悉您的 Angular 应用程序
 
-本教程重点介绍的应用程序源文件位于 `src/app` 中。
-命令行界面自动生成的关键文件包含：
+本教程重点介绍的应用程序源文件位于 `src/app` 中。命令行界面自动生成的关键文件包含：
 
 1. `app.module.ts`：指定应用程序使用的文件。
     此文件充当应用程序中其他文件的中心枢纽。
@@ -143,9 +132,7 @@ ng serve
     模板将确定视图或您在浏览器中看到的内容。
 4. `app.component.css`: 包含 `AppComponent` 的样式。如果要定义仅适用于特定组件的样式（而不是整个应用程序），则可以使用此文件。
 
-Angular 中的组件由三个主要部分组成：模板、样式和类。例如，`app.component.ts`、`app.component.html` 和 `app.component.css` 共同构成了 `AppComponent`。此结构将逻辑、视图和样式分开，使应用程序更易于维护和缩放。通过这种方式，您从一开始就使用最佳实践。
-
-Angular 的命令行界面同时也生成一个叫作 `app.component.spec.ts` 的用于组件测试的文件。但本教程不进行测试，因此你可以忽略这个文件。每当您生成组件时，命令行界面都会使用你指定的名称在目录中创建这四个文件。
+Angular 中的组件由三个主要部分组成：模板、样式和类。例如，`app.component.ts`、`app.component.html` 和 `app.component.css` 共同构成了 `AppComponent`。此结构将逻辑、视图和样式分开，使应用程序更易于维护和缩放。通过这种方式，您从一开始就使用最佳实践。Angular 的命令行界面同时也生成一个叫作 `app.component.spec.ts` 的用于组件测试的文件。但本教程不进行测试，因此你可以忽略这个文件。每当您生成组件时，命令行界面都会使用你指定的名称在目录中创建这四个文件。
 
 ## Angular 应用程序的结构
 
@@ -173,9 +160,7 @@ export class ItemComponent {
 
 ### The HTML template
 
-每个组件都会有一个 HTML 模板，用于声明该组件的呈现方式。您可以内联或按文件路径定义此模板。
-
-若要引用外部 HTML 文件，请使用 `templateUrl` 属性：
+每个组件都会有一个 HTML 模板，用于声明该组件的呈现方式。您可以内联或按文件路径定义此模板。若要引用外部 HTML 文件，请使用 `templateUrl` 属性：
 
 ```js
 @Component({
@@ -225,10 +210,7 @@ export class AppComponent {
 
 ### 样式
 
-组件可以从应用程序的 `styles.css` 文件中继承全局样式，并使用自己的样式扩充或覆盖它们。
-您可以直接在 `@Component()` 修饰器中编写特定于组件的样式，也可以指定 CSS 文件的路径。
-
-若要将样式直接包含在组件修饰器中，请使用 `styles` 属性：
+组件可以从应用程序的 `styles.css` 文件中继承全局样式，并使用自己的样式扩充或覆盖它们。您可以直接在 `@Component()` 修饰器中编写特定于组件的样式，也可以指定 CSS 文件的路径。若要将样式直接包含在组件修饰器中，请使用 `styles` 属性：
 
 ```js
 @Component({
@@ -258,55 +240,55 @@ export class AppComponent {
 
 ## 本模块的其它内容
 
-- [Introduction to client-side frameworks](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [客户端框架简介](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [框架的主要特点](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [React 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [开始我们的 React 待办清单](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [组件化我们的 React 应用程序](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [反应交互性：事件和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React 交互性：编辑、过滤和条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [React 中的可访问性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
-  - [Getting started with Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Ember 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember 应用结构和组件化](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember 交互性：事件、类和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember 交互性：页脚功能和条件呈现](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Ember 路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember 资源和故障排除](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
 - Vue
 
-  - [Getting started with Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Vue 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [创建我们的第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [渲染 Vue 组件列表](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [添加新的待办事项表单：Vue 事件、方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [使用 CSS 设置 Vue 组件的样式](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [使用 Vue 计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue 条件渲染：编辑现有待办事项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [使用 Vue 引用进行焦点管理](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
 
 - Svelte
 
-  - [Getting started with Svelte](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Svelte 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [创建我们的 Svelte 待办事项应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Svelte 中的动态行为：使用变量和道具](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [组件化我们的 Svelte 应用程序](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [高级 Svelte：反应性、生命周期、可访问性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [用 Svelte 商店工作](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript 在 Svelte 的支持](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [部署和后续步骤](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
 
 - Angular
 
-  - [Getting started with Angular](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Angular 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [开始我们的 Angular 待办事项应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [设置我们的 Angular 应用程序样式](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [创建项组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [过滤我们的待办事项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [构建 Angular 应用程序和其他资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
