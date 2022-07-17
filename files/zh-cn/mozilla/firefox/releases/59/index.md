@@ -7,119 +7,105 @@ tags:
   - 火狐
 translation_of: Mozilla/Firefox/Releases/59
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>本文提供了有关 Firefox 59 中会影响开发人员的更改的信息。Firefox 59 已于 2018 年 3 月 13 日发布。</p>
+本文提供了有关 Firefox 59 中会影响开发人员的更改的信息。Firefox 59 已于 2018 年 3 月 13 日发布。
 
-<h2 id="Web开发者应该注意的变化">Web 开发者应该注意的变化</h2>
+## Web 开发者应该注意的变化
 
-<h3 id="开发工具">开发工具</h3>
+### 开发工具
 
-<ul>
- <li><a href="/en-US/docs/Tools/Network_Monitor">网络监视器</a> 响应标签现在显示一个 <a href="/en-US/docs/Tools/Network_Monitor#HTML_preview">已渲染网页的预览</a>  — 如果响应是一个 HTML 的话 ({{bug(1353319)}}).</li>
- <li>存储探查器显示的 Cookie 信息  (见 <a href="/en-US/docs/Tools/Storage_Inspector#Cookies">Cookies</a>) 现在包括一列 <em>“同站”</em> 显示每个 cookie 的同站状态 ({{bug(1298370)}})。</li>
- <li><a href="/en-US/docs/Tools/Rulers">标尺</a> 工具 现在包含了一个 readout 来显示当前视角的维度 ({{bug(1402633)}})。</li>
- <li>在<a href="/en-US/docs/Tools/Responsive_Design_Mode">响应式设计模式 </a>, 您现在可以使用光标键设置屏幕尺寸 ({{bug(1421663)}})。详见 <a href="/en-US/docs/Tools/Responsive_Design_Mode#Setting_screen_size">Setting screen size</a> 。</li>
- <li>The <em>Raw headers</em> display in the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> <em>Headers</em> tab now includes the response's status code ({{bug(1419401)}}).</li>
-</ul>
+- [网络监视器](/en-US/docs/Tools/Network_Monitor) 响应标签现在显示一个 [已渲染网页的预览](/en-US/docs/Tools/Network_Monitor#HTML_preview) — 如果响应是一个 HTML 的话 ({{bug(1353319)}}).
+- 存储探查器显示的 Cookie 信息 (见 [Cookies](/en-US/docs/Tools/Storage_Inspector#Cookies)) 现在包括一列 _“同站”_ 显示每个 cookie 的同站状态 ({{bug(1298370)}})。
+- [标尺](/en-US/docs/Tools/Rulers) 工具 现在包含了一个 readout 来显示当前视角的维度 ({{bug(1402633)}})。
+- 在[响应式设计模式 ](/en-US/docs/Tools/Responsive_Design_Mode), 您现在可以使用光标键设置屏幕尺寸 ({{bug(1421663)}})。详见 [Setting screen size](/en-US/docs/Tools/Responsive_Design_Mode#Setting_screen_size) 。
+- The _Raw headers_ display in the [Network Monitor](/en-US/docs/Tools/Network_Monitor) _Headers_ tab now includes the response's status code ({{bug(1419401)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>实现了{{HTMLElement("textarea")}} 元素的 {{htmlattrxref("autocomplete", "textarea")}}属性 . 这使得你可以启用或禁用元素的表单自动填写。</li>
-</ul>
+- 实现了{{HTMLElement("textarea")}} 元素的 {{htmlattrxref("autocomplete", "textarea")}}属性 . 这使得你可以启用或禁用元素的表单自动填写。
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="新增API">新增 API</h4>
+#### 新增 API
 
-<ul>
- <li>在 nightly 中默认启用 <a href="/en-US/docs/Web/Web_Components/Custom_Elements">Custom elements</a> v1  ({{bug(1406825)}}).</li>
-</ul>
+- 在 nightly 中默认启用 [Custom elements](/en-US/docs/Web/Web_Components/Custom_Elements) v1 ({{bug(1406825)}}).
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h4 id="DOM_事件">DOM 事件</h4>
+#### DOM 事件
 
-<ul>
- <li>实现了 {{domxref("EventTarget.EventTarget()")}} 构造函数 ({{bug(1379688)}}).</li>
-</ul>
+- 实现了 {{domxref("EventTarget.EventTarget()")}} 构造函数 ({{bug(1379688)}}).
 
-<h4 id="多媒体_和_WebRTC">多媒体 和 WebRTC</h4>
+#### 多媒体 和 WebRTC
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h4 id="Canvas_和_WebGL">Canvas 和 WebGL</h4>
+#### Canvas 和 WebGL
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h3 id="安全">安全</h3>
+### 安全
 
-<ul>
- <li>顶部导航 URI <code>data://</code> 已经被屏蔽了 {{bug(1401895)}}.</li>
- <li>修改了 {{httpheader("X-Frame-Options")}} 报头的 <code>SAMEORIGIN</code> 指令，现在它不仅会检查顶级 IFrame 是否来自同一来源 , 也会检查它的祖先。 ({{bug(725490)}}).</li>
-</ul>
+- 顶部导航 URI `data://` 已经被屏蔽了 {{bug(1401895)}}.
+- 修改了 {{httpheader("X-Frame-Options")}} 报头的 `SAMEORIGIN` 指令，现在它不仅会检查顶级 IFrame 是否来自同一来源 , 也会检查它的祖先。 ({{bug(725490)}}).
 
-<h3 id="插件">插件</h3>
+### 插件
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h3 id="其他">其他</h3>
+### 其他
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h2 id="Web平台的删减">Web 平台的删减</h2>
+## Web 平台的删减
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h3 id="CSS_2">CSS</h3>
+### CSS
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h3 id="APIs_2">APIs</h3>
+### APIs
 
-<ul>
- <li>不标准的方法 <code>Event.getPreventDefault()</code> 已经被移除了。请使用 {{domxref("Event.defaultPrevented")}} 来决定在{{domxref("Event")}}中是否要调用{{domxref("Event.preventDefault", "preventDefault()")}} 。</li>
- <li>专用属性 <code><a href="/en-US/docs/Archive/API/Navigator/mozNotification">Navigator.mozNotification</a></code> 和 <code>DesktopNotification</code> 接口已被移除 , 推荐使用标准的 <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> ({{bug(952453)}}).</li>
- <li>专用方法 <code>window.external.addSearchEngine()</code>已被移除  ({{bug("862147")}})。欲了解更多细节，参见 {{domxref("Window.sidebar")}} 。</li>
-</ul>
+- 不标准的方法 `Event.getPreventDefault()` 已经被移除了。请使用 {{domxref("Event.defaultPrevented")}} 来决定在{{domxref("Event")}}中是否要调用{{domxref("Event.preventDefault", "preventDefault()")}} 。
+- 专用属性 [`Navigator.mozNotification`](/en-US/docs/Archive/API/Navigator/mozNotification) 和 `DesktopNotification` 接口已被移除 , 推荐使用标准的 [Notifications API](/en-US/docs/Web/API/Notifications_API) ({{bug(952453)}}).
+- 专用方法 `window.external.addSearchEngine()`已被移除 ({{bug("862147")}})。欲了解更多细节，参见 {{domxref("Window.sidebar")}} 。
 
-<h3 id="SVG_2">SVG</h3>
+### SVG
 
-<p><em>无变化</em></p>
+_无变化_
 
-<h2 id="Mozilla和附加组件开发者应该注意的变化">Mozilla 和附加组件开发者应该注意的变化</h2>
+## Mozilla 和附加组件开发者应该注意的变化
 
-<h3 id="WebExtensions">WebExtensions</h3>
+### WebExtensions
 
-<p><em>无变化</em></p>
+_无变化_
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li>Firefox 59 的站点兼容性</li>
-</ul>
+- Firefox 59 的站点兼容性
 
-<h2 id="历史版本">历史版本</h2>
+## 历史版本
 
-<p>{{Firefox_for_developers(58)}}</p>
+{{Firefox_for_developers(58)}}

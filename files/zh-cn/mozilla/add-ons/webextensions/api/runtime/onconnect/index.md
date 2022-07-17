@@ -3,59 +3,52 @@ title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>当使用扩展处理或 content script 建立连接时触发。</p>
+当使用扩展处理或 content script 建立连接时触发。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.runtime.onConnect.addListener(listener)
+```js
+browser.runtime.onConnect.addListener(listener)
 browser.runtime.onConnect.removeListener(listener)
 browser.runtime.onConnect.hasListener(listener)
-</pre>
+```
 
-<p>事件有三个方法：</p>
+事件有三个方法：
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>为 这个事件添加一个监听器。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>停止监听这个事件。<code>listener</code> 参数就是要移除的监听器。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>检查监听器是否已经注册到这个事件上。如果已经监听，则返回 <code>true</code> 否则返回 <code>false</code>.</dd>
-</dl>
+- `addListener(callback)`
+  - : 为 这个事件添加一个监听器。
+- `removeListener(listener)`
+  - : 停止监听这个事件。`listener` 参数就是要移除的监听器。
+- `hasListener(listener)`
+  - : 检查监听器是否已经注册到这个事件上。如果已经监听，则返回 `true` 否则返回 `false`.
 
-<h2 id="addListener_语法">addListener 语法</h2>
+## addListener 语法
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `function`
 
- <dl>
-  <dt><code>port</code></dt>
-  <dd>A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.</dd>
- </dl>
- </dd>
-</dl>
+  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `port`
+      - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.
 
-<p>{{Compat("webextensions.api.runtime.onConnect")}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat("webextensions.api.runtime.onConnect")}}
 
-<p>This content script:</p>
+## Examples
 
-<ul>
- <li>connects to the background script, and stores the <code>Port</code> in a variable <code>myPort</code></li>
- <li>listens for messages on <code>myPort</code>, and logs them</li>
- <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document</li>
-</ul>
+This content script:
 
-<pre class="brush: js">// content-script.js
+- connects to the background script, and stores the `Port` in a variable `myPort`
+- listens for messages on `myPort`, and logs them
+- sends messages to the background script, using `myPort`, when the user clicks the document
+
+```js
+// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -67,23 +60,22 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</pre>
+});
+```
 
-<p>The corresponding background script:</p>
+The corresponding background script:
 
-<ul>
- <li>listens for connection attempts from the content script</li>
- <li>when it receives a connection attempt:
-  <ul>
-   <li>stores the port in a variable named <code>portFromCS</code></li>
-   <li>sends the content script a message using the port</li>
-   <li>starts listening to messages received on the port, and logs them</li>
-  </ul>
- </li>
- <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action</li>
-</ul>
+- listens for connection attempts from the content script
+- when it receives a connection attempt:
 
-<pre class="brush: js">// background-script.js
+  - stores the port in a variable named `portFromCS`
+  - sends the content script a message using the port
+  - starts listening to messages received on the port, and logs them
+
+- sends messages to the content script, using `portFromCS`, when the user clicks the extension's browser action
+
+```js
+// background-script.js
 
 var portFromCS;
 
@@ -100,18 +92,16 @@ browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -138,5 +128,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

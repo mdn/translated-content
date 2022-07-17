@@ -3,80 +3,69 @@ title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}当窗体的活动标签变化时触发。请注意事件触发时标签的 URL 可能尚未设置，但是你可以通过监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件在 URL 被设置后得到通知。
 
-<div>当窗体的活动标签变化时触发。请注意事件触发时标签的 URL 可能尚未设置，但是你可以通过监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件在 URL 被设置后得到通知。</div>
+## 语法
 
-<h2 id="语法">语法</h2>
-
-<pre class="brush:js">browser.tabs.onActivated.addListener(listener)
+```js
+browser.tabs.onActivated.addListener(listener)
 browser.tabs.onActivated.removeListener(listener)
 browser.tabs.onActivated.hasListener(listener)
-</pre>
+```
 
-<p>此事件有三个方法：</p>
+此事件有三个方法：
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>向此事件添加一个监听。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>停止监听此事件。 <code>listener</code> 参数是将要移除的监听。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>检查 <code>listener</code> 是否在此事件中注册。如果正在监听返回 <code>true</code> ，否则 <code>false。</code></dd>
-</dl>
+- `addListener(callback)`
+  - : 向此事件添加一个监听。
+- `removeListener(listener)`
+  - : 停止监听此事件。 `listener` 参数是将要移除的监听。
+- `hasListener(listener)`
+  - : 检查 `listener` 是否在此事件中注册。如果正在监听返回 `true` ，否则 `false。`
 
-<h2 id="addListener_语法">addListener 语法</h2>
+## addListener 语法
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>事件发生时被执行的方法。以下参数会被传递至该方法：</p>
+- `callback`
 
- <dl>
-  <dt><code>activeInfo</code></dt>
-  <dd><a href="#activeInfo"><code>object</code></a>. 被激活标签的 ID , 以及它的窗体的 ID。</dd>
- </dl>
- </dd>
-</dl>
+  - : 事件发生时被执行的方法。以下参数会被传递至该方法：
 
-<h2 id="额外的对象">额外的对象</h2>
+    - `activeInfo`
+      - : [`object`](#activeInfo). 被激活标签的 ID , 以及它的窗体的 ID。
 
-<h3 id="activeInfo">activeInfo</h3>
+## 额外的对象
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. 被激活的标签的 ID。</dd>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. 此标签的窗体的 ID。</dd>
-</dl>
+### activeInfo
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+- `tabId`
+  - : `integer`. 被激活的标签的 ID。
+- `windowId`
+  - : `integer`. 此标签的窗体的 ID。
 
-<p>{{Compat("webextensions.api.tabs.onActivated")}}</p>
+## 浏览器兼容性
 
-<h2 id="示例">示例</h2>
+{{Compat("webextensions.api.tabs.onActivated")}}
 
-<p>监听并记录标签激活事件：</p>
+## 示例
 
-<pre class="brush: js">function handleActivated(activeInfo) {
+监听并记录标签激活事件：
+
+```js
+function handleActivated(activeInfo) {
   console.log("Tab " + activeInfo.tabId +
               " was activated");
 }
 
-browser.tabs.onActivated.addListener(handleActivated);</pre>
+browser.tabs.onActivated.addListener(handleActivated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onActivated"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onActivated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,5 +92,4 @@ browser.tabs.onActivated.addListener(handleActivated);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

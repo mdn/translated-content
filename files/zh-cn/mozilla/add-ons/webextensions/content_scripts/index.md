@@ -3,62 +3,59 @@ title: Content scripts
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Content script 是你扩展的一部分，运行于一个特定的网页环境（而并不是后台脚本，后台脚本是扩展的一部分，也不是该网页利用 {{HTMLElement("script")}} 加载的一个脚本，{{HTMLElement("script")}} 加载的脚本是网页的一部分）。</p>
+Content script 是你扩展的一部分，运行于一个特定的网页环境（而并不是后台脚本，后台脚本是扩展的一部分，也不是该网页利用 {{HTMLElement("script")}} 加载的一个脚本，{{HTMLElement("script")}} 加载的脚本是网页的一部分）。
 
-<p>后台脚本可以访问所有 WebExtension JavaScript APIS，但是他们不能直接访问网页的内容，所以如果你需要 Content Scripts 来做到这点。</p>
+后台脚本可以访问所有 WebExtension JavaScript APIS，但是他们不能直接访问网页的内容，所以如果你需要 Content Scripts 来做到这点。
 
-<p>就像通常的网页加载的脚本一样，Content Scripts 可以使用 standard DOM APIS 读取和修改页面内容。</p>
+就像通常的网页加载的脚本一样，Content Scripts 可以使用 standard DOM APIS 读取和修改页面内容。
 
-<p>Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它们可以使用通信系统与后台脚本进行通信，从而间接的访问 WebExtension APIS。</p>
+Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它们可以使用通信系统与后台脚本进行通信，从而间接的访问 WebExtension APIS。
 
-<div class="note">
-<p><strong>备注：</strong> content scripts 在 addons.mozilla.org 现在已被禁止，如果你在这个域名尝试插入一个 Content script 将会失败而这个页面会 LOG 一个 CSP 错误。</p>
-</div>
+> **备注：** content scripts 在 addons.mozilla.org 现在已被禁止，如果你在这个域名尝试插入一个 Content script 将会失败而这个页面会 LOG 一个 CSP 错误。
 
-<h2 id="加载Content_scripts">加载 Content scripts</h2>
+## 加载 Content scripts
 
-<p>你可以通过两种方法之一在一个页面加载 Content script：</p>
+你可以通过两种方法之一在一个页面加载 Content script：
 
-<ul>
- <li><strong>声明式</strong>: 在你的 manifest.json 中使用 content_scripts 关键字，你可以要求浏览器每当加载一个与指定正则表达式匹配的网页时加载一个 Content Script。</li>
- <li><strong>程序式</strong>: 使用 <code><a href="/en-US/Add-ons/WebExtensions/API/Tabs/executeScript">tabs.executeScript()</a></code> API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。</li>
-</ul>
+- **声明式**: 在你的 manifest.json 中使用 content_scripts 关键字，你可以要求浏览器每当加载一个与指定正则表达式匹配的网页时加载一个 Content Script。
+- **程序式**: 使用 [`tabs.executeScript()`](/en-US/Add-ons/WebExtensions/API/Tabs/executeScript) API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。
 
-<p>在每一个 extension 的每一个 frame 中，只有一个全局作用域。所以在一个 content script 中的变量可以被另外的 content script 访问到，而与 content script 如何被加载无关。</p>
+在每一个 extension 的每一个 frame 中，只有一个全局作用域。所以在一个 content script 中的变量可以被另外的 content script 访问到，而与 content script 如何被加载无关。
 
-<h2 id="Content_script_环境">Content script 环境</h2>
+## Content script 环境
 
-<h3 id="DOM_访问">DOM 访问</h3>
+### DOM 访问
 
-<p>Content scripts 可以访问和修改页面的 DOM，就像普通的页面脚本一样。他们也可以察觉页面脚本对页面做出的任何修改。</p>
+Content scripts 可以访问和修改页面的 DOM，就像普通的页面脚本一样。他们也可以察觉页面脚本对页面做出的任何修改。
 
-<p>不过，content scripts 得到的是一个“干净的 DOM 视图”，这意味着：</p>
+不过，content scripts 得到的是一个“干净的 DOM 视图”，这意味着：
 
-<ul>
- <li>content scripts 不能看见页面脚本定义的 javascript 变量。</li>
- <li>如果一个页面脚本重定义了一个 DOM 内置属性，content scripts 将获取到这个属性的原始版本，而不是重定义版本。</li>
-</ul>
+- content scripts 不能看见页面脚本定义的 javascript 变量。
+- 如果一个页面脚本重定义了一个 DOM 内置属性，content scripts 将获取到这个属性的原始版本，而不是重定义版本。
 
-<p>在 Gecko（译者注：Gecko 是由 Mozilla 工程开发出的布局引擎的名字）, 这种行为被称为射线视觉。</p>
+在 Gecko（译者注：Gecko 是由 Mozilla 工程开发出的布局引擎的名字）, 这种行为被称为射线视觉。
 
-<p>举个例子，考虑一个网页如下：</p>
+举个例子，考虑一个网页如下：
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
-  &lt;/head&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  </head>
 
-  &lt;body&gt;
-    &lt;script src="page-scripts/page-script.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+  <body>
+    <script src="page-scripts/page-script.js"></script>
+  </body>
+</html>
+```
 
-<p>脚本文件“page-script.js”如下：</p>
+脚本文件“page-script.js”如下：
 
-<pre class="brush: js">// page-script.js
+```js
+// page-script.js
 
 // add a new element to the DOM
 var p = document.createElement("p");
@@ -72,11 +69,13 @@ window.foo = "This global variable was added by a page script";
 // redefine the built-in window.confirm() function
 window.confirm = function() {
   alert("The page script has also redefined 'confirm'");
-}</pre>
+}
+```
 
-<p>现在一个扩展插入一个 content script 如下：</p>
+现在一个扩展插入一个 content script 如下：
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 // can access and modify the DOM
 var pageScriptPara = document.getElementById("page-script-para");
@@ -86,95 +85,117 @@ pageScriptPara.style.backgroundColor = "blue";
 console.log(window.foo);  // undefined
 
 // sees the original form of redefined properties
-window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
+window.confirm("Are you sure?"); // calls the original window.confirm()
+```
 
-<p>相反的情况也是成立的：页面脚本不能察觉到通过 content scripts 添加的 JavaScript 属性。</p>
+相反的情况也是成立的：页面脚本不能察觉到通过 content scripts 添加的 JavaScript 属性。
 
-<p>这意味着 content script 可以依靠 DOM 属性获取可预期的行为</p>
+这意味着 content script 可以依靠 DOM 属性获取可预期的行为
 
-<p>这种行为造成的一个结果是 content script 不能获取任何通过页面加载的 Javascript 库。所以，如果这个页面包含 JQuery，content script 将不会在意它。</p>
+这种行为造成的一个结果是 content script 不能获取任何通过页面加载的 Javascript 库。所以，如果这个页面包含 JQuery，content script 将不会在意它。
 
-<p>如果一个 content script 想要使用 Javascript 库，这个库本身就必须像一个 content script 一样在这个 content script 旁被插入：</p>
+如果一个 content script 想要使用 Javascript 库，这个库本身就必须像一个 content script 一样在这个 content script 旁被插入：
 
-<pre class="brush: json">"content_scripts": [
+```json
+"content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["jquery.js", "content-script.js"]
   }
-]</pre>
+]
+```
 
-<h3 id="WebExtension_APIs">WebExtension APIs</h3>
+### WebExtension APIs
 
-<p>除了 standard DOM APIS，content script 还能使用以下 WebExtension APIS:</p>
+除了 standard DOM APIS，content script 还能使用以下 WebExtension APIS:
 
-<p>From <code><a href="/en-US/Add-ons/WebExtensions/API/extension">extension</a></code>:</p>
+From [`extension`](/en-US/Add-ons/WebExtensions/API/extension):
 
-<ul>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/extension#getURL()">getURL()</a></code></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/extension#inIncognitoContext">inIncognitoContext</a></code></li>
-</ul>
+- [`getURL()`](</en-US/Add-ons/WebExtensions/API/extension#getURL()>)
+- [`inIncognitoContext`](/en-US/Add-ons/WebExtensions/API/extension#inIncognitoContext)
 
-<p>From <code><a href="/en-US/Add-ons/WebExtensions/API/runtime">runtime</a></code>:</p>
+From [`runtime`](/en-US/Add-ons/WebExtensions/API/runtime):
 
-<ul>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/runtime#connect()">connect()</a></code></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/runtime#getManifest()">getManifest()</a></code></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/runtime#getURL()">getURL()</a></code></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/runtime#onConnect">onConnect</a></code></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/runtime#onMessage">onMessage</a></code></li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/runtime#sendMessage()">sendMessage()</a></code></li>
-</ul>
+- [`connect()`](</en-US/Add-ons/WebExtensions/API/runtime#connect()>)
+- [`getManifest()`](</en-US/Add-ons/WebExtensions/API/runtime#getManifest()>)
+- [`getURL()`](</en-US/Add-ons/WebExtensions/API/runtime#getURL()>)
+- [`onConnect`](/en-US/Add-ons/WebExtensions/API/runtime#onConnect)
+- [`onMessage`](/en-US/Add-ons/WebExtensions/API/runtime#onMessage)
+- [`sendMessage()`](</en-US/Add-ons/WebExtensions/API/runtime#sendMessage()>)
 
-<p>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code>:</p>
+From [`i18n`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n):
 
-<ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage">getMessage()</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages">getAcceptLanguages()</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage">getUILanguage()</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage">detectLanguage()</a></code></li>
-</ul>
+- [`getMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage)
+- [`getAcceptLanguages()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages)
+- [`getUILanguage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage)
+- [`detectLanguage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage)
 
-<p>所有 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code>.</p>
+所有 [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage).
 
-<h3 id="跨域名权限">跨域名权限</h3>
+### 跨域名权限
 
-<p>content scripts 拥有与扩展剩余部分一致的权限：所以如果这个扩展已在 manifest.json 文件中使用 permission 关键字请求跨域权限，其 content script 将能很好获取某些跨域权限。</p>
+content scripts 拥有与扩展剩余部分一致的权限：所以如果这个扩展已在 manifest.json 文件中使用 permission 关键字请求跨域权限，其 content script 将能很好获取某些跨域权限。
 
-<h2 id="后台脚本通信">后台脚本通信</h2>
+## 后台脚本通信
 
-<p>尽管 content scripts 不能直接使用大部分 WebExtension APIS，但他们可以通过使用 messaging APIS 与扩展的后台脚本通信，然后便能够间接地调用所有的后台脚本能够调用的 APIS。</p>
+尽管 content scripts 不能直接使用大部分 WebExtension APIS，但他们可以通过使用 messaging APIS 与扩展的后台脚本通信，然后便能够间接地调用所有的后台脚本能够调用的 APIS。
 
-<p>在 background script 和 content script 中有两种基本的通讯方式：你可以发送带有可选回复的一次性的消息，或者在两者之间建立一个长期活动的连接并用这个连接来进行信息交换。</p>
+在 background script 和 content script 中有两种基本的通讯方式：你可以发送带有可选回复的一次性的消息，或者在两者之间建立一个长期活动的连接并用这个连接来进行信息交换。
 
-<h3 id="一次性消息">一次性消息</h3>
+### 一次性消息
 
-<p>为了发送一个带有可选回复选项的一次性消息，你能使用以下 APIS:</p>
+为了发送一个带有可选回复选项的一次性消息，你能使用以下 APIS:
 
 <table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="row"> </th>
-   <th scope="col">In content script</th>
-   <th scope="col">In background script</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Send a message</th>
-   <td><code><a href="/en-US/Add-ons/WebExtensions/API/runtime#sendMessage()">browser.runtime.sendMessage()</a></code></td>
-   <td><code><a href="/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage">browser.tabs.sendMessage()</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Receive a message</th>
-   <td><code><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code></td>
-   <td><code><a href="/en-US/Add-ons/WebExtensions/API/runtime#onMessage">browser.runtime.onMessage</a></code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="row"></th>
+      <th scope="col">In content script</th>
+      <th scope="col">In background script</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Send a message</th>
+      <td>
+        <code
+          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#sendMessage()"
+            >browser.runtime.sendMessage()</a
+          ></code
+        >
+      </td>
+      <td>
+        <code
+          ><a href="/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage"
+            >browser.tabs.sendMessage()</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Receive a message</th>
+      <td>
+        <code
+          ><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage"
+            >browser.runtime.onMessage</a
+          ></code
+        >
+      </td>
+      <td>
+        <code
+          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#onMessage"
+            >browser.runtime.onMessage</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>举例，这里是一个监听点击事件的 content script，如果点击发生在一个链接上，他将会将该链接的地址发送给后台脚本：</p>
+举例，这里是一个监听点击事件的 content script，如果点击发生在一个链接上，他将会将该链接的地址发送给后台脚本：
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.addEventListener("click", notifyExtension);
 
@@ -183,11 +204,13 @@ function notifyExtension(e) {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});
-}</pre>
+}
+```
 
-<p>后台脚本监听这个消息然后使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API 显示一个通知：</p>
+后台脚本监听这个消息然后使用[`notifications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API 显示一个通知：
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 browser.runtime.onMessage.addListener(notify);
 
@@ -199,37 +222,32 @@ function notify(message) {
     "message": message.url
   });
 }
-</pre>
+```
 
-<p>这个示范代码从 Github 上的 <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> 例子 修改而来。</p>
+这个示范代码从 Github 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) 例子 修改而来。
 
-<h3 id="Connection-based_messaging">Connection-based messaging</h3>
+### Connection-based messaging
 
-<p>如果你将在一个 content script 和 后台脚本间交换大量的消息，一次性消息会变得笨重而缓慢。所以一个更好的方案是在两个脚本间建立一个长久连接，然后使用该连接交换消息。</p>
+如果你将在一个 content script 和 后台脚本间交换大量的消息，一次性消息会变得笨重而缓慢。所以一个更好的方案是在两个脚本间建立一个长久连接，然后使用该连接交换消息。
 
-<p>每个脚本都有一个 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 对象用以交换消息。</p>
+每个脚本都有一个 [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) 对象用以交换消息。
 
-<p>建立过程：:</p>
+建立过程：:
 
-<ul>
- <li>
-  <p>在一个脚本中使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> 监听连接</p>
- </li>
- <li>另一个脚本中调用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> (如果连接 content script) or <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> (如果连接后台脚本). 这会返回一个 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 对象。</li>
- <li> <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code>  传递它自己的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> 对象。</li>
-</ul>
+- 在一个脚本中使用 [`runtime.onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) 监听连接
+- 另一个脚本中调用 [`tabs.connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (如果连接 content script) or [`runtime.connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (如果连接后台脚本). 这会返回一个 [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) 对象。
+- [`runtime.onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) 传递它自己的 [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) 对象。
 
-<p>每个脚本都拥有一个 port，两个脚本可以使用 runtime.Port.postMessage() 来发送消息，runtime.Port.onMessage 来接收消息</p>
+每个脚本都拥有一个 port，两个脚本可以使用 runtime.Port.postMessage() 来发送消息，runtime.Port.onMessage 来接收消息
 
-<p>比如，当加载该 content script 时：</p>
+比如，当加载该 content script 时：
 
-<ul>
- <li>连接到后台脚本，存取 Port 对象至 <code>myPort</code></li>
- <li>监听 myPort 上的消息，并记录。</li>
- <li>当用户点击网页是发送消息至后台脚本。</li>
-</ul>
+- 连接到后台脚本，存取 Port 对象至 `myPort`
+- 监听 myPort 上的消息，并记录。
+- 当用户点击网页是发送消息至后台脚本。
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -241,23 +259,22 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</pre>
+});
+```
 
-<p>对应的后台脚本：</p>
+对应的后台脚本：
 
-<ul>
- <li>监听 content script 的所有连接企图。</li>
- <li>当收到连接请求后：
-  <ul>
-   <li>存贮 Port 对象至 <code>portFromCS</code></li>
-   <li>使用 portFromCS 发送一个消息到 content script</li>
-   <li>开始监听消息并记录它们。</li>
-  </ul>
- </li>
- <li>当用户点击浏览器的某些扩展按钮或动作后，发送一个消息到 content script。</li>
-</ul>
+- 监听 content script 的所有连接企图。
+- 当收到连接请求后：
 
-<pre class="brush: js">// background-script.js
+  - 存贮 Port 对象至 `portFromCS`
+  - 使用 portFromCS 发送一个消息到 content script
+  - 开始监听消息并记录它们。
+
+- 当用户点击浏览器的某些扩展按钮或动作后，发送一个消息到 content script。
+
+```js
+// background-script.js
 
 var portFromCS;
 
@@ -275,20 +292,18 @@ browser.runtime.onConnect.addListener(connected);
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
-</pre>
+```
 
-<p> <a href="https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui">inpage-toolbar-ui</a> 例子使用了 connection-based messaging.</p>
+[inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui) 例子使用了 connection-based messaging.
 
-<ul>
-</ul>
+## 网页通信
 
-<h2 id="网页通信">网页通信</h2>
+尽管 content script 通常不能获取由网页脚本创建的对象，但他们可以通过 [`window.postMessage`](/en-US/docs/Web/API/Window/postMessage) 和 [`window.addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) APIs 与网页脚本进行通信。
 
-<p>尽管 content script 通常不能获取由网页脚本创建的对象，但他们可以通过 <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> 和 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">window.addEventListener</a></code> APIs 与网页脚本进行通信。</p>
+比如：
 
-<p>比如：</p>
-
-<pre class="brush: js">// page-script.js
+```js
+// page-script.js
 
 var messenger = document.getElementById("from-page-script");
 
@@ -298,131 +313,137 @@ function messageContentScript() {
   window.postMessage({
     direction: "from-page-script",
     message: "Message from the page"
-  }, "*");</pre>
+  }, "*");
+```
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.addEventListener("message", function(event) {
-  if (event.source == window &amp;&amp;
-      event.data.direction &amp;&amp;
+  if (event.source == window &&
+      event.data.direction &&
       event.data.direction == "from-page-script") {
     alert("Content script received message: \"" + event.data.message + "\"");
   }
-});</pre>
+});
+```
 
-<p>完整的例子请访问该链接，<a href="https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html">visit the demo page on GitHub</a> 并且观看以下介绍。</p>
+完整的例子请访问该链接，[visit the demo page on GitHub](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html) 并且观看以下介绍。
 
-<div class="warning">
-<p><strong>警告：</strong> 需要注意的是当你用该方法与一些不被信任的网页进行交互式需要特别小心。WebExtensions 拥有高等级权限，而一些恶意页面可以很轻松的获取这些权限。</p>
+> **警告：** 需要注意的是当你用该方法与一些不被信任的网页进行交互式需要特别小心。WebExtensions 拥有高等级权限，而一些恶意页面可以很轻松的获取这些权限。
+>
+> 做一个微小的示范，假定有如下 content script 代码：
+>
+> ```js
+> // content-script.js
+>
+> window.addEventListener("message", function(event) {
+>   if (event.source == window &&
+>       event.data.direction &&
+>       event.data.direction == "from-page-script") {
+>     eval(event.data.message);
+>   }
+> });
+> ```
+>
+> 现在网页脚本可以在 content script 权限范围内运行任何代码。
 
-<p>做一个微小的示范，假定有如下 content script 代码：</p>
+## 与页面脚本共享对象
 
-<pre class="brush: js">// content-script.js
+> **备注：** 这个部分的技术描述只适用于 49 版本后的 Firefox
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &amp;&amp;
-      event.data.direction &amp;&amp;
-      event.data.direction == "from-page-script") {
-    eval(event.data.message);
-  }
-});</pre>
+> **警告：** 作为一个插件开发者你必须考虑脚本运行在任何伺机偷取用户个人隐私，破坏他们的电脑，或者使用其他方式攻击的网页上。
+>
+> 隔离 content script 和 页面脚本 便是为了使恶意网页的攻击变得更加困难。
+>
+> 这部分的技术打破了这个隔离，它们从根本上是危险的而应该被谨慎使用。
 
-<p>现在网页脚本可以在 content script 权限范围内运行任何代码。</p>
-</div>
+我们在 [DOM access](/en-US/Add-ons/WebExtensions/Content_scripts#DOM_access) 中看到 content scripts 不会察觉到通过网页脚本修改的某些属性。这意味着，如果一个网页加载了一个库比如 JQuery，content script 将不会使用它，而不得不加载它自己的一个复制。相反的，网页加载的脚本也不能获知 content script 的修改。
 
-<h2 id="与页面脚本共享对象">与页面脚本共享对象</h2>
+然而，Firefox 提供了一些 APIS 可以使得 content script 能够：
 
-<div class="note">
-<p><strong>备注：</strong> 这个部分的技术描述只适用于 49 版本后的 Firefox</p>
-</div>
+- 访问页面脚本创建的 Javascript 对象
+- 暴露他们自己的 JavaScript 对象给页面脚本。
 
-<div class="warning">
-<p><strong>警告：</strong> 作为一个插件开发者你必须考虑脚本运行在任何伺机偷取用户个人隐私，破坏他们的电脑，或者使用其他方式攻击的网页上。</p>
+### Xray vision in Firefox
 
-<p>隔离 content script 和 页面脚本 便是为了使恶意网页的攻击变得更加困难。</p>
+在 Firefox 中，隔离 content script 和页面脚本通过使用一种称为“Xray vision”的功能实现。当一个处于更高权限的脚本访问一个被定义于一个更低权限版本的域中时，它将只能看见这个对象的原始版本。
 
-<p>这部分的技术打破了这个隔离，它们从根本上是危险的而应该被谨慎使用。</p>
-</div>
+任何 [expando](/en-US/docs/Glossary/Expando) 属性都是不可见得，而且如果对象的任何属性被重定义，他也只能能看见原始的实现而不是重定义的实现。
 
-<p>我们在 <a href="/en-US/Add-ons/WebExtensions/Content_scripts#DOM_access">DOM access</a> 中看到 content scripts 不会察觉到通过网页脚本修改的某些属性。这意味着，如果一个网页加载了一个库比如 JQuery，content script 将不会使用它，而不得不加载它自己的一个复制。相反的，网页加载的脚本也不能获知 content script 的修改。</p>
+这个功能的目的是为了让低权限的脚本不至于因为重定义原始对象属性而使高权限脚本行为异常。
 
-<p>然而，Firefox 提供了一些 APIS 可以使得 content script 能够：</p>
+让我们来举个例子，当一个 content script 访问一个页面的 [window](/en-US/docs/Web/API/Window) 类，他不会看见任何该页面脚本对这个 window 添加的任何属性，如果页面脚本重定义了任何已存在的属性，content script 将只能看见该属性的原始版本。
 
-<ul>
- <li>访问页面脚本创建的 Javascript 对象</li>
- <li>暴露他们自己的 JavaScript 对象给页面脚本。</li>
-</ul>
+更多信心请查看 [Xray vision](/en-US/docs/Mozilla/Tech/Xray_vision) 和 [Script security](/en-US/docs/Mozilla/Gecko/Script_security).
 
-<h3 id="Xray_vision_in_Firefox">Xray vision in Firefox</h3>
+### 从 content script 中访问 页面脚本对象
 
-<p>在 Firefox 中，隔离 content script 和页面脚本通过使用一种称为“Xray vision”的功能实现。当一个处于更高权限的脚本访问一个被定义于一个更低权限版本的域中时，它将只能看见这个对象的原始版本。</p>
+在 Firefox 中，content script 中的 DOM 对象会获得一个额外的属性 wrappedJSObject。这是一个会包含任何由页面脚本所造成修改的”未包裹“对象。
 
-<p>任何 <a href="/en-US/docs/Glossary/Expando">expando</a> 属性都是不可见得，而且如果对象的任何属性被重定义，他也只能能看见原始的实现而不是重定义的实现。</p>
+让我们来看一个简单的例子，假定一个页面载入脚本如下：
 
-<p>这个功能的目的是为了让低权限的脚本不至于因为重定义原始对象属性而使高权限脚本行为异常。</p>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
+```
 
-<p>让我们来举个例子，当一个 content script 访问一个页面的 <a href="/en-US/docs/Web/API/Window">window</a> 类，他不会看见任何该页面脚本对这个 window 添加的任何属性，如果页面脚本重定义了任何已存在的属性，content script 将只能看见该属性的原始版本。</p>
+`这个脚本添加一个全局的属性到全局window`:
 
-<p>更多信心请查看 <a href="/en-US/docs/Mozilla/Tech/Xray_vision">Xray vision</a> 和 <a href="/en-US/docs/Mozilla/Gecko/Script_security">Script security</a>.</p>
+```js
+// main.js
 
-<h3 id="从content_script_中访问_页面脚本对象">从 content script 中访问 页面脚本对象</h3>
+var foo = "I'm defined in a page script!";
+```
 
-<p>在 Firefox 中，content script 中的 DOM 对象会获得一个额外的属性 wrappedJSObject。这是一个会包含任何由页面脚本所造成修改的”未包裹“对象。</p>
+Xray vision 意味着 如果一个 content script 尝试访问 foo，它将是未定义的：
 
-<p>让我们来看一个简单的例子，假定一个页面载入脚本如下：</p>
+```js
+// content-script.js
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script type="text/javascript" src="main.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+console.log(window.foo); // undefined
+```
 
-<p><code>这个脚本添加一个全局的属性到全局window</code>:</p>
+在 Firefox，content script 可以使用 window\.wrappedJSObject 来看见全局属性：
 
-<pre class="brush: js">// main.js
+```js
+// content-script.js
 
-var foo = "I'm defined in a page script!";</pre>
+console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"
+```
 
-<p>Xray vision 意味着 如果一个 content script 尝试访问 foo，它将是未定义的：</p>
+注意因为这个原因，你最好不在依赖该对象的任何属性或方法 建立或执行某些操作，你所期望的，它们，甚至 setter 和 getter 都可能被不被信任的代码重定义。
 
-<pre class="brush: js">// content-script.js
+同时注意 unwarapping 是及物的：当你使用 wrappedJSObject，该未包裹对象的任何属性都是未包裹的（同时都是不可靠的），所以 一个好的建议是只在你需要时获取这个对象，重新包裹他，你能这样做：
 
-console.log(window.foo); // undefined</pre>
+```js
+XPCNativeWrapper(window.wrappedJSObject.foo);
+```
 
-<p>在 Firefox，content script 可以使用 window.wrappedJSObject 来看见全局属性：</p>
+查看 [Xray vision ](/en-US/docs/Mozilla/Tech/Xray_vision)文档获取更多。
 
-<pre class="brush: js">// content-script.js
+### 与页面脚本共享 content script 对象
 
-console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"</pre>
+Firefox 同样提供 APIS 允许 content scripts 是对象对于页面脚本可用。这里是两个主要的 APIS:
 
-<p>注意因为这个原因，你最好不在依赖该对象的任何属性或方法 建立或执行某些操作，你所期望的，它们，甚至 setter 和 getter 都可能被不被信任的代码重定义。</p>
+- [`exportFunction()`](/en-US/Add-ons/WebExtensions/Content_scripts#exportFunction): 导出一个函数至页面脚本
+- [`cloneInto()`](/en-US/Add-ons/WebExtensions/Content_scripts#cloneInto): 导出一个对象至页面脚本
 
-<p>同时注意 unwarapping 是及物的：当你使用 wrappedJSObject，该未包裹对象的任何属性都是未包裹的（同时都是不可靠的），所以 一个好的建议是只在你需要时获取这个对象，重新包裹他，你能这样做：</p>
+#### exportFunction
 
-<pre class="brush: js">XPCNativeWrapper(window.wrappedJSObject.foo);</pre>
+给予一个定义于 content script 中的方法，exportFunction（）导出他至页面脚本域，然后脚本可以调用它。
 
-<p>查看 <a href="/en-US/docs/Mozilla/Tech/Xray_vision">Xray vision </a>  文档获取更多。</p>
+比如，让我们考虑一个 WebExtension 有一个后台脚本如下：
 
-<h3 id="与页面脚本共享content_script_对象">与页面脚本共享 content script 对象</h3>
-
-<p>Firefox 同样提供 APIS 允许 content scripts 是对象对于页面脚本可用。这里是两个主要的 APIS:</p>
-
-<ul>
- <li><code><a href="/en-US/Add-ons/WebExtensions/Content_scripts#exportFunction">exportFunction()</a></code>: 导出一个函数至页面脚本</li>
- <li><code><a href="/en-US/Add-ons/WebExtensions/Content_scripts#cloneInto">cloneInto()</a></code>: 导出一个对象至页面脚本</li>
-</ul>
-
-<h4 id="exportFunction">exportFunction</h4>
-
-<p>给予一个定义于 content script 中的方法，exportFunction（）导出他至页面脚本域，然后脚本可以调用它。</p>
-
-<p>比如，让我们考虑一个 WebExtension 有一个后台脚本如下：</p>
-
-<pre class="brush: js">/*
+```js
+/*
 Execute content script in the active tab.
 */
 function loadContentScript() {
@@ -441,24 +462,24 @@ browser.browserAction.onClicked.addListener(loadContentScript);
 Show a notification when we get messages from
 the content script.
 */
-browser.runtime.onMessage.addListener((message) =&gt; {
+browser.runtime.onMessage.addListener((message) => {
   browser.notifications.create({
     type: "basic",
     title: "Message from the page",
     message: message.content
   });
-});</pre>
+});
+```
 
-<p>该脚本做了两件事：</p>
+该脚本做了两件事：
 
-<ul>
- <li>当用户点击浏览器按钮时，在当前标签执行一个 content script。</li>
- <li>监听从 content script 传递的消息，并在消息到达时显示一个通知。</li>
-</ul>
+- 当用户点击浏览器按钮时，在当前标签执行一个 content script。
+- 监听从 content script 传递的消息，并在消息到达时显示一个通知。
 
-<p>content script 如下：</p>
+content script 如下：
 
-<pre class="brush: js">/*
+```js
+/*
 Define a function in the content script's scope, then export it
 into the page script's scope.
 */
@@ -466,21 +487,25 @@ function notify(message) {
   browser.runtime.sendMessage({content: "Function call: " + message});
 }
 
-exportFunction(notify, window, {defineAs:'notify'});</pre>
+exportFunction(notify, window, {defineAs:'notify'});
+```
 
-<p>该脚本定义了一个函数 notify（）用以发送其参数到后台脚本，而后他导出了这个函数至页面脚本域。现在页面脚本可以调用该函数：</p>
+该脚本定义了一个函数 notify（）用以发送其参数到后台脚本，而后他导出了这个函数至页面脚本域。现在页面脚本可以调用该函数：
 
-<pre class="brush: js">window.notify("Message from the page script!");</pre>
+```js
+window.notify("Message from the page script!");
+```
 
-<p>更详细的信息请看，<code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction">Components.utils.exportFunction</a></code>.</p>
+更详细的信息请看，[`Components.utils.exportFunction`](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction).
 
-<h4 id="cloneInto">cloneInto</h4>
+#### cloneInto
 
-<p>给予一个定义于 content script 的对象，该技术可以创建该对象的一个复制到页面脚本域，从而使该复制可以被页面脚本访问。通常使用 <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clone algorithm</a> 复制对象，这意味着该对象中的方法不会被复制为了复制方法，需要传递 cloneFunction 选项。</p>
+给予一个定义于 content script 的对象，该技术可以创建该对象的一个复制到页面脚本域，从而使该复制可以被页面脚本访问。通常使用 [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 复制对象，这意味着该对象中的方法不会被复制为了复制方法，需要传递 cloneFunction 选项。
 
-<p>比如，这里有一个 content script 定义了一个包含方法的对象，然后复制他们至页面脚本域：</p>
+比如，这里有一个 content script 定义了一个包含方法的对象，然后复制他们至页面脚本域：
 
-<pre class="brush: js">/*
+```js
+/*
 Create an object that contains functions in
 the content script's scope, then clone it
 into the page script's scope.
@@ -500,28 +525,30 @@ var messenger = {
 window.wrappedJSObject.messenger = cloneInto(
   messenger,
   window,
-  {cloneFunctions: true});</pre>
+  {cloneFunctions: true});
+```
 
-<p><code>现在页面脚本将看到新的含有notify方法的属性</code>:</p>
+`现在页面脚本将看到新的含有notify方法的属性`:
 
-<pre class="brush: js">window.messenger.notify("Message from the page script!");</pre>
+```js
+window.messenger.notify("Message from the page script!");
+```
 
-<p>详情请看 <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto">Components.utils.cloneInto</a></code>.</p>
+详情请看 [`Components.utils.cloneInto`](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto).
 
-<h2 id="在content_script中使用_eval()">在 content script 中使用 eval()</h2>
+## 在 content script 中使用 eval()
 
-<p>在 Chrome 中，<code>eval()</code> 总是在 content script 的上下文环境中运行，而不是在页面的上下文环境中运行。</p>
+在 Chrome 中，`eval()` 总是在 content script 的上下文环境中运行，而不是在页面的上下文环境中运行。
 
-<p>在 Firefox 中：</p>
+在 Firefox 中：
 
-<ul>
- <li>如果你调用<code>eval()</code>，它在 content script 的上下文中运行</li>
- <li>如果你调用<code>window.eval()</code>，它在页面的上下文中运行</li>
-</ul>
+- 如果你调用`eval()`，它在 content script 的上下文中运行
+- 如果你调用`window.eval()`，它在页面的上下文中运行
 
-<p>比如，有一个 content script 如下：</p>
+比如，有一个 content script 如下：
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.eval('window.x = 1;');
 eval('window.y = 2');
@@ -531,45 +558,56 @@ console.log(`In content script, window.y: ${window.y}`);
 
 window.postMessage({
   message: "check"
-}, "*");</pre>
+}, "*");
+```
 
-<p>这段代码仅仅通过调用<code>window.eval()</code> 和 <code>eval()</code>创建了变量 x 和 y。然后记录它们的值并通知页面更新。</p>
+这段代码仅仅通过调用`window.eval()` 和 `eval()`创建了变量 x 和 y。然后记录它们的值并通知页面更新。
 
-<p>接收到消息后页面的脚本记录下这些变量：</p>
+接收到消息后页面的脚本记录下这些变量：
 
-<pre class="brush: js">window.addEventListener("message", function(event) {
-  if (event.source === window &amp;&amp; event.data &amp;&amp; event.data.message === "check") {
+```js
+window.addEventListener("message", function(event) {
+  if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
   }
-});</pre>
+});
+```
 
-<p>在 Chrome 中，输出类似下面所示：</p>
+在 Chrome 中，输出类似下面所示：
 
-<pre class="brush: plain">In content script, window.x: 1
+```plain
+In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
-In page script, window.y: undefined</pre>
+In page script, window.y: undefined
+```
 
-<p>在 Firefox 中，输出类似下面所示：</p>
+在 Firefox 中，输出类似下面所示：
 
-<pre class="brush: plain">In content script, window.x: undefined
+```plain
+In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1
-In page script, window.y: undefined</pre>
+In page script, window.y: undefined
+```
 
-<p>上述内容同样适用于 <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code>, <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>.</p>
+上述内容同样适用于 [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInterval()`](/en-US/docs/Web/API/setInterval), and [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
-<p>当在页面的上下文中运行代码时，适用于上面所提到的"<a href="/en-US/Add-ons/WebExtensions/Content_scripts#Sharing_objects_with_page_scripts">Sharing content script objects with page scripts</a>" 这一部分的警告：页面的环境可能会被恶意的网页所控制，这可能会导致你所交互的对象会有意想不到的行为：</p>
+当在页面的上下文中运行代码时，适用于上面所提到的"[Sharing content script objects with page scripts](/en-US/Add-ons/WebExtensions/Content_scripts#Sharing_objects_with_page_scripts)" 这一部分的警告：页面的环境可能会被恶意的网页所控制，这可能会导致你所交互的对象会有意想不到的行为：
 
-<pre class="brush: js">// page.js redefines console.log
+```js
+// page.js redefines console.log
 
 var original = console.log;
 
 console.log = function() {
   original(true);
-}</pre>
+}
+```
 
-<pre class="brush: js">// content-script.js calls the redefined version
+```js
+// content-script.js calls the redefined version
 
-window.eval('console.log(false)');</pre>
+window.eval('console.log(false)');
+```

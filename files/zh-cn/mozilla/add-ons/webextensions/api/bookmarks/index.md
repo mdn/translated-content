@@ -3,97 +3,86 @@ title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>此<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。您可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。</p>
+此[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。您可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。
 
-<p>欲使用此 API，一个附件组件必须请求"bookmarks" <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>在它的<code><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>文件当中。</p>
+欲使用此 API，一个附件组件必须请求"bookmarks" [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)在它的[`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件当中。
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}</dt>
- <dd>表示在书签树中的一个书签或者文件夹。</dd>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}</dt>
- <dd>一个描述在树中的一个节点是否是一个书签，一个文件夹或是一个分割符的 {{jsxref("String")}} 枚举类型。</dd>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}</dt>
- <dd>一个说明了为什么一个书签或者文件夹是不可修改的 {{jsxref("String")}} 枚举类型。</dd>
- <dt>{{WebExtAPIRef("bookmarks.CreateDetails")}}</dt>
- <dd>当创建一个新书签时，包含被传递给这个 {{WebExtAPIRef("bookmarks.create()")}} 函数的信息。</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
+  - : 表示在书签树中的一个书签或者文件夹。
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
+  - : 一个描述在树中的一个节点是否是一个书签，一个文件夹或是一个分割符的 {{jsxref("String")}} 枚举类型。
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
+  - : 一个说明了为什么一个书签或者文件夹是不可修改的 {{jsxref("String")}} 枚举类型。
+- {{WebExtAPIRef("bookmarks.CreateDetails")}}
+  - : 当创建一个新书签时，包含被传递给这个 {{WebExtAPIRef("bookmarks.create()")}} 函数的信息。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.create()")}}</dt>
- <dd>创建一个书签或文件夹。</dd>
- <dt>{{WebExtAPIRef("bookmarks.get()")}}</dt>
- <dd>获得一个或者多个{{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}，提供一个书签的编号或者一个书签编号的数组。</dd>
- <dt>{{WebExtAPIRef("bookmarks.getChildren()")}}</dt>
- <dd>获取指定{{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}节点的所有子节点。</dd>
- <dt>{{WebExtAPIRef("bookmarks.getRecent()")}}</dt>
- <dd>获取最近添加的几个书签。</dd>
- <dt>{{WebExtAPIRef("bookmarks.getSubTree()")}}</dt>
- <dd>获取从指定节点开始的部分书签树。</dd>
- <dt>{{WebExtAPIRef("bookmarks.getTree()")}}</dt>
- <dd>获取整个书签树。</dd>
- <dt>{{WebExtAPIRef("bookmarks.search()")}}</dt>
- <dd>搜索书签树节点，找出匹配的结果。如果以对象方式指定查询，得到的 BookmarkTreeNodes 匹配所有指定的属性。</dd>
- <dt>{{WebExtAPIRef("bookmarks.create()")}}</dt>
- <dd>在指定的上一级文件夹下创建新的书签或文件夹。如果 url 为 null 或者省略，则创建文件夹。</dd>
- <dt>{{WebExtAPIRef("bookmarks.move()")}}</dt>
- <dd>将指定的书签树节点移到指定位置</dd>
- <dt>{{WebExtAPIRef("bookmarks.update()")}}</dt>
- <dd>更新书签或文件夹的属性。只需要指定您需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。</dd>
- <dt>{{WebExtAPIRef("bookmarks.remove()")}}</dt>
- <dd>删除书签或者空文件夹。</dd>
- <dt>{{WebExtAPIRef("bookmarks.removeTree()")}}</dt>
- <dd>删除整个书签文件夹。</dd>
- <dt>{{WebExtAPIRef("bookmarks.import()")}}</dt>
- <dd>从一个 html 书签文件导入书签</dd>
- <dt>{{WebExtAPIRef("bookmarks.export()")}}</dt>
- <dd>导出书签为一个 html 书签文件</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.create()")}}
+  - : 创建一个书签或文件夹。
+- {{WebExtAPIRef("bookmarks.get()")}}
+  - : 获得一个或者多个{{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}，提供一个书签的编号或者一个书签编号的数组。
+- {{WebExtAPIRef("bookmarks.getChildren()")}}
+  - : 获取指定{{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}节点的所有子节点。
+- {{WebExtAPIRef("bookmarks.getRecent()")}}
+  - : 获取最近添加的几个书签。
+- {{WebExtAPIRef("bookmarks.getSubTree()")}}
+  - : 获取从指定节点开始的部分书签树。
+- {{WebExtAPIRef("bookmarks.getTree()")}}
+  - : 获取整个书签树。
+- {{WebExtAPIRef("bookmarks.search()")}}
+  - : 搜索书签树节点，找出匹配的结果。如果以对象方式指定查询，得到的 BookmarkTreeNodes 匹配所有指定的属性。
+- {{WebExtAPIRef("bookmarks.create()")}}
+  - : 在指定的上一级文件夹下创建新的书签或文件夹。如果 url 为 null 或者省略，则创建文件夹。
+- {{WebExtAPIRef("bookmarks.move()")}}
+  - : 将指定的书签树节点移到指定位置
+- {{WebExtAPIRef("bookmarks.update()")}}
+  - : 更新书签或文件夹的属性。只需要指定您需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。
+- {{WebExtAPIRef("bookmarks.remove()")}}
+  - : 删除书签或者空文件夹。
+- {{WebExtAPIRef("bookmarks.removeTree()")}}
+  - : 删除整个书签文件夹。
+- {{WebExtAPIRef("bookmarks.import()")}}
+  - : 从一个 html 书签文件导入书签
+- {{WebExtAPIRef("bookmarks.export()")}}
+  - : 导出书签为一个 html 书签文件
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.onCreated")}}</dt>
- <dd>当书签或文件夹创建时产生。</dd>
- <dt>{{WebExtAPIRef("bookmarks.onRemoved")}}</dt>
- <dd>当删除书签或文件夹时产生。当删除整个文件夹（包括其中所有内容）时，仅为该文件夹发送通知，不为其中任何内容发送通知。</dd>
- <dt>{{WebExtAPIRef("bookmarks.onChanged")}}</dt>
- <dd>一个书签或文件夹更改时发生。注意：目前只有标题和 URL 更改时会触发这一事件。</dd>
- <dt>{{WebExtAPIRef("bookmarks.onMoved")}}</dt>
- <dd>当书签或文件夹移动到另一个父文件夹中时产生。</dd>
- <dt>{{WebExtAPIRef("bookmarks.onChildrenReordered")}}</dt>
- <dd>文件夹中的子节点在用户界面中调整顺序时产生。调用 move() 不会触发该事件。</dd>
- <dt>{{WebExtAPIRef("bookmarks.onImportBegan")}}</dt>
- <dd>开始导入书签时产生。复杂的事件处理函数在这一事件产生后不应该再处理 onCreated 事件，直到 onImportEnded 事件产生，在此过程中其他事件仍然应该立即处理。</dd>
- <dt>{{WebExtAPIRef("bookmarks.onImportEnded")}}</dt>
- <dd>书签导入结束时产生。</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.onCreated")}}
+  - : 当书签或文件夹创建时产生。
+- {{WebExtAPIRef("bookmarks.onRemoved")}}
+  - : 当删除书签或文件夹时产生。当删除整个文件夹（包括其中所有内容）时，仅为该文件夹发送通知，不为其中任何内容发送通知。
+- {{WebExtAPIRef("bookmarks.onChanged")}}
+  - : 一个书签或文件夹更改时发生。注意：目前只有标题和 URL 更改时会触发这一事件。
+- {{WebExtAPIRef("bookmarks.onMoved")}}
+  - : 当书签或文件夹移动到另一个父文件夹中时产生。
+- {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
+  - : 文件夹中的子节点在用户界面中调整顺序时产生。调用 move() 不会触发该事件。
+- {{WebExtAPIRef("bookmarks.onImportBegan")}}
+  - : 开始导入书签时产生。复杂的事件处理函数在这一事件产生后不应该再处理 onCreated 事件，直到 onImportEnded 事件产生，在此过程中其他事件仍然应该立即处理。
+- {{WebExtAPIRef("bookmarks.onImportEnded")}}
+  - : 书签导入结束时产生。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.bookmarks")}}</p>
+{{Compat("webextensions.api.bookmarks")}}
 
-<div class="note">
-<p><strong>备注：</strong> The "Chrome incompatibilities" section is included from <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro.
+>
+> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
-<p>If you need to update this content, edit <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
-</div>
+{{WebExtExamples("h2")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,5 +109,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

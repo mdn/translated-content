@@ -12,81 +12,57 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}Enables extensions to request extra permissions at runtime, after they have been installed.
 
-<div>Enables extensions to request extra permissions at runtime, after they have been installed.</div>
+Extensions need permissions to access more powerful WebExtension APIs. They can ask for permissions at install time, by including the permissions they need in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest.json key. The main advantages of asking for permissions at install time are:
 
+- The user is only asked once, so it's less disruptive for them, and a simpler decision.
+- The extension can rely on the access to the APIs it needs, because if already running, the permissions have been granted.
 
+There is not yet a simple GUI, for users to view permissions of their installed WebExtension Add-ons. Users must use about:debugging, go to the Add-ons section, then use the "Manifest Url" link for this Add-on. This shows raw json, which includes a "permissions" block, showing the permissions used by this addon.
 
-<p>Extensions need permissions to access more powerful WebExtension APIs. They can ask for permissions at install time, by including the permissions they need in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> manifest.json key. The main advantages of asking for permissions at install time are:</p>
+With the permissions API, an extension can ask for additional permissions at runtime. These permissions need to be listed in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key. Note that some permissions are not allowed in `optional_permissions`. The main advantages of this are:
 
-<ul>
-	<li>The user is only asked once, so it's less disruptive for them, and a simpler decision.</li>
-	<li>The extension can rely on the access to the APIs it needs, because if already running, the permissions have been granted.</li>
-</ul>
+- The extension can run with a smaller set of permissions, except when it actually needs them.
+- The extension can handle permission denial in a graceful manner, instead of presenting the user with a global "all or nothing" choice at install time. You can still get a lot out of that map extension, without giving it access to your location, for example.
+- The extension may need [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), but not know at install time which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime, can be an alternative to asking for "\<all_urls>" at install time.
 
-<p>There is not yet a simple GUI, for users to view permissions of their installed WebExtension Add-ons.  Users must use about:debugging, go to the Add-ons section, then use the "Manifest Url" link for this Add-on. This shows raw json, which includes a "permissions" block, showing the permissions used by this addon.</p>
+To use the permissions API, decide which permissions your extension can request at runtime, and list them in [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions). After this, you can request any permissions that were included in `optional_permissions`. Requests may only be made in the handler for a user action (for example, a click handler).For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see [Request permissions at runtime](/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions#Request_permissions_at_runtime).
 
-<p>With the permissions API, an extension can ask for additional permissions at runtime. These permissions need to be listed in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> manifest.json key. Note that some permissions are not allowed in <code>optional_permissions</code>. The main advantages of this are:</p>
+## Types
 
-<ul>
-	<li>The extension can run with a smaller set of permissions, except when it actually needs them.</li>
-	<li>The extension can handle permission denial in a graceful manner, instead of presenting the user with a global "all or nothing" choice at install time. You can still get a lot out of that map extension, without giving it access to your location, for example.</li>
-	<li>
-	<p>The extension may need <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a>, but not know at install time which host permissions it needs. For example, the list of hosts may be a user setting. In this scenario, asking for a more specific range of hosts at runtime, can be an alternative to asking for "&lt;all_urls&gt;" at install time.</p>
-	</li>
-</ul>
+- {{WebExtAPIRef("permissions.Permissions")}}
+  - : Represents a set of permissions.
 
-<div>To use the permissions API, decide which permissions your extension can request at runtime, and list them in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code>. After this, you can request any permissions that were included in <code>optional_permissions</code>. Requests may only be made in the handler for a user action (for example, a click handler).</div>
+## Methods
 
+- {{WebExtAPIRef("permissions.contains()")}}
+  - : Discover an extension's given set of permissions.
+- {{WebExtAPIRef("permissions.getAll()")}}
+  - : Get all the permissions this extension currently has.
+- {{WebExtAPIRef("permissions.remove()")}}
+  - : Give up a set of permissions.
+- {{WebExtAPIRef("permissions.request()")}}
+  - : Ask for a set of permissions.
 
+## Event handlers
 
-<div>For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions#Request_permissions_at_runtime">Request permissions at runtime</a>.</div>
+- {{WebExtAPIRef("permissions.onAdded")}}
+  - : Fired when a new permission is granted.
+- {{WebExtAPIRef("permissions.onRemoved")}}
+  - : Fired when a permission is removed.
 
-<h2 id="Types">Types</h2>
+## Browser compatibility
 
-<dl>
-	<dt>{{WebExtAPIRef("permissions.Permissions")}}</dt>
-	<dd>Represents a set of permissions.</dd>
-</dl>
+{{Compat("webextensions.api.permissions")}}
 
-<h2 id="Methods">Methods</h2>
+## See also
 
-<dl>
-	<dt>{{WebExtAPIRef("permissions.contains()")}}</dt>
-	<dd>Discover an extension's given set of permissions.</dd>
-	<dt>{{WebExtAPIRef("permissions.getAll()")}}</dt>
-	<dd>Get all the permissions this extension currently has.</dd>
-	<dt>{{WebExtAPIRef("permissions.remove()")}}</dt>
-	<dd>Give up a set of permissions.</dd>
-	<dt>{{WebExtAPIRef("permissions.request()")}}</dt>
-	<dd>Ask for a set of permissions.</dd>
-</dl>
+- `manifest.json` [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) property
+- `manifest.json` [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) property
 
-<h2 id="Event_handlers">Event handlers</h2>
+{{WebExtExamples("h2")}}
 
-<dl>
-	<dt>{{WebExtAPIRef("permissions.onAdded")}}</dt>
-	<dd>Fired when a new permission is granted.</dd>
-	<dt>{{WebExtAPIRef("permissions.onRemoved")}}</dt>
-	<dd>Fired when a permission is removed.</dd>
-</dl>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat("webextensions.api.permissions")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
-	<li><code>manifest.json</code> <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> property</li>
-	<li><code>manifest.json</code> <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> property</li>
-</ul>
-
-<p>{{WebExtExamples("h2")}}</p>
-
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **备注：** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

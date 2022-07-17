@@ -12,29 +12,24 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/types
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Defines the <code>BrowserSetting</code> type, which is used to represent a browser setting.</p>
+Defines the `BrowserSetting` type, which is used to represent a browser setting.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("types.BrowserSetting")}}</dt>
- <dd>Represents a browser setting.</dd>
-</dl>
+- {{WebExtAPIRef("types.BrowserSetting")}}
+  - : Represents a browser setting.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a> API.</p>
+> **备注：** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -61,5 +56,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/types
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -10,79 +10,74 @@ tags:
   - 页面扩展
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p> <strong><code>tabs.Tab</code></strong> 包含有关标签页的信息 . 这样可以访问有关标签页中的内容，内容有多大，特殊状态或限制有效的信息等等。</p>
+**`tabs.Tab`** 包含有关标签页的信息 . 这样可以访问有关标签页中的内容，内容有多大，特殊状态或限制有效的信息等等。
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<p>这种类型的值是对象。它包含以下属性：</p>
+这种类型的值是对象。它包含以下属性：
 
-<dl>
- <dt><code>active</code></dt>
- <dd><code>boolean</code>. 该标签页是否在其窗口中处于活动状态。即使标签的窗口当前没有被关注，也可能是 true。</dd>
- <dt><code>audible</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. 如果标签页没有静音：标签页是否正在发出声音。如果标签页被静音：如果没有静音标签页是否会发出声音。</dd>
- <dt><code>autoDiscardable</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. 资源不足时浏览器是否可以自动丢弃该标签页。</dd>
- <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
- <dd><code>string</code>. 该标签页的 Cookie 存储。如果不同的标签可以有不同的 cookie 存储 (例如，支持 <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">contextual identity</a>), 你可以将此作为 <code>storeId</code> 选项传递给 {{WebExtAPIRef("cookies")}} API 的各种方法，设置和获取与此标签页的 Cookie 存储关联的 Cookie。只有在扩展具有“cookies”<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>的情况下才会出现。</dd>
- <dt><code>discarded</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. 是否丢弃的标签页。被丢弃的标签页是其内容已经从内存中卸载的标签页，但在标签页条中仍可见。它的内容在下一次被激活时被重新加载。</dd>
- <dt><code>favIconUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. 该标签的图标的网址。只有在扩展具有“cookies”<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>的情况下才会出现。如果标签页正在加载中，该值可以为空字符串</dd>
- <dt><code>height</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. 标签页的像素单位高度。</dd>
- <dt><code>highlighted</code></dt>
- <dd><code>boolean</code>. 标签页是否突出显示。</dd>
- <dt><code>id</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. 标签页的 ID. 标签 ID 在浏览器的会话中是唯一的。在浏览器窗口中不包含内容的标签页 (例如，devtools 窗口),标签 ID 也可以设置为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}} 。</dd>
- <dt><code>incognito</code></dt>
- <dd><code>boolean</code>. 该标签页是否在隐私浏览窗口中。</dd>
- <dt><code>index</code></dt>
- <dd><code>integer</code>. 窗口中的标签页从零开始的索引。</dd>
- <dt><code>isArticle</code></dt>
- <dd><code>boolean</code>. 如果标签页可以在<a href="/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode"> Reader 模式下呈现</a>，则返回 true，否则返回 false。</dd>
- <dt><code>isInReaderMode</code></dt>
- <dd><code>boolean</code>. 如果标签页正在<a href="/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode"> Reader 模式下呈现</a>，则返回 true，否则返回 false。</dd>
- <dt><code>lastAccessed</code></dt>
- <dd><code>double</code>. 上次访问该标签页的时间 , 参考 <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>mutedInfo</code> {{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.MutedInfo')}}.标签页的当前静音状态以及上次状态更改的原因。</dd>
- <dt><code>openerTabId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. 打开此标签页的标签页 ID（如果有）。如果开启者标签页仍然存在，该属性才会出现。</dd>
- <dt><code>pinned</code></dt>
- <dd><code>boolean</code>. 标签页是否被固定</dd>
- <dt><code>selected</code> {{deprecated_inline}}</dt>
- <dd><code>boolean</code>.标签页是否被选中</dd>
- <dt><code>sessionId</code> {{optional_inline}}</dt>
- <dd><code>string</code>. 从{{WebExtAPIRef('sessions')}} API 获取的标签页的唯一标识会话 ID.</dd>
- <dt><code>status</code> {{optional_inline}}</dt>
- <dd><code>string</code>.<em>加载</em> 或 <em>完成</em>.</dd>
- <dt><code>title</code> {{optional_inline}}</dt>
- <dd><code>string</code>. 标签页的标题。只有当扩展具有 <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a> 时才会出现。</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. 该选项卡正在显示的文档的 URL。只有当扩展具有 <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a> 时才会出现。</dd>
- <dt><code>width</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. 标签页的像素单位宽度。</dd>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. 包含此标签页的窗口 ID。</dd>
-</dl>
+- `active`
+  - : `boolean`. 该标签页是否在其窗口中处于活动状态。即使标签的窗口当前没有被关注，也可能是 true。
+- `audible` {{optional_inline}}
+  - : `boolean`. 如果标签页没有静音：标签页是否正在发出声音。如果标签页被静音：如果没有静音标签页是否会发出声音。
+- `autoDiscardable` {{optional_inline}}
+  - : `boolean`. 资源不足时浏览器是否可以自动丢弃该标签页。
+- `cookieStoreId` {{optional_inline}}
+  - : `string`. 该标签页的 Cookie 存储。如果不同的标签可以有不同的 cookie 存储 (例如，支持 [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), 你可以将此作为 `storeId` 选项传递给 {{WebExtAPIRef("cookies")}} API 的各种方法，设置和获取与此标签页的 Cookie 存储关联的 Cookie。只有在扩展具有“cookies”[权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。
+- `discarded` {{optional_inline}}
+  - : `boolean`. 是否丢弃的标签页。被丢弃的标签页是其内容已经从内存中卸载的标签页，但在标签页条中仍可见。它的内容在下一次被激活时被重新加载。
+- `favIconUrl` {{optional_inline}}
+  - : `string`. 该标签的图标的网址。只有在扩展具有“cookies”[权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。如果标签页正在加载中，该值可以为空字符串
+- `height` {{optional_inline}}
+  - : `integer`. 标签页的像素单位高度。
+- `highlighted`
+  - : `boolean`. 标签页是否突出显示。
+- `id` {{optional_inline}}
+  - : `integer`. 标签页的 ID. 标签 ID 在浏览器的会话中是唯一的。在浏览器窗口中不包含内容的标签页 (例如，devtools 窗口),标签 ID 也可以设置为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}} 。
+- `incognito`
+  - : `boolean`. 该标签页是否在隐私浏览窗口中。
+- `index`
+  - : `integer`. 窗口中的标签页从零开始的索引。
+- `isArticle`
+  - : `boolean`. 如果标签页可以在[ Reader 模式下呈现](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
+- `isInReaderMode`
+  - : `boolean`. 如果标签页正在[ Reader 模式下呈现](/en-US/Add-ons/WebExtensions/API/tabs/toggleReaderMode)，则返回 true，否则返回 false。
+- `lastAccessed`
+  - : `double`. 上次访问该标签页的时间 , 参考 [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `mutedInfo` {{optional_inline}}
+  - : {{WebExtAPIRef('tabs.MutedInfo')}}.标签页的当前静音状态以及上次状态更改的原因。
+- `openerTabId` {{optional_inline}}
+  - : `integer`. 打开此标签页的标签页 ID（如果有）。如果开启者标签页仍然存在，该属性才会出现。
+- `pinned`
+  - : `boolean`. 标签页是否被固定
+- `selected` {{deprecated_inline}}
+  - : `boolean`.标签页是否被选中
+- `sessionId` {{optional_inline}}
+  - : `string`. 从{{WebExtAPIRef('sessions')}} API 获取的标签页的唯一标识会话 ID.
+- `status` {{optional_inline}}
+  - : `string`._加载_ 或 _完成_.
+- `title` {{optional_inline}}
+  - : `string`. 标签页的标题。只有当扩展具有 `"tabs"` [权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 时才会出现。
+- `url` {{optional_inline}}
+  - : `string`. 该选项卡正在显示的文档的 URL。只有当扩展具有 `"tabs"` [权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 时才会出现。
+- `width` {{optional_inline}}
+  - : `integer`. 标签页的像素单位宽度。
+- `windowId`
+  - : `integer`. 包含此标签页的窗口 ID。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.tabs.Tab", 10)}}</p>
+{{Compat("webextensions.api.tabs.Tab", 10)}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/tabs#type-Tab"><code>chrome.tabs</code></a> API. 本文档来源于 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a>.</p>
+> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-Tab) API. 本文档来源于 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json).
+>
+> Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 美国许可证下。
 
-<p>Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 美国许可证下。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +104,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

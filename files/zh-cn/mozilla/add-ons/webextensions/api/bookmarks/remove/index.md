@@ -14,43 +14,41 @@ tags:
   - 移除
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p> <strong><code>bookmarks.remove()</code></strong> 方法用于删除单个书签或一个空的书签文件夹。</p>
+**`bookmarks.remove()`** 方法用于删除单个书签或一个空的书签文件夹。
 
-<div class="blockIndicator warning">
-<p><strong>警告：</strong> 如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。</p>
-</div>
+> **警告：** 如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。
 
-<p><code>这是一个异步方法，返回<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>对象。</code></p>
+`这是一个异步方法，返回Promise对象。`
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var removingBookmark = browser.bookmarks.remove(
+```js
+var removingBookmark = browser.bookmarks.remove(
   id                 // 字符串
 )
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>id</code></dt>
- <dd>{{jsxref("string")}} 要删除的书签或空书签文件夹的 id 标识</dd>
-</dl>
+- `id`
+  - : {{jsxref("string")}} 要删除的书签或空书签文件夹的 id 标识
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>若方法执行完成，返回一个无参的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>对象。</code></p>
+若方法执行完成，返回一个无参的 `Promise对象。`
 
-<p>若未找到该书签或该空书签文件夹，将返回一个带有错误信息的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>对象。</code></p>
+若未找到该书签或该空书签文件夹，将返回一个带有错误信息的`Promise对象。`
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.bookmarks.remove")}}</p>
+{{Compat("webextensions.api.bookmarks.remove")}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("Removed!");
 }
 
@@ -61,18 +59,16 @@ function onRejected(error) {
 var bookmarkId = "abcdefghijkl";
 
 var removingBookmark = browser.bookmarks.remove(bookmarkId);
-removingBookmark.then(onRemoved, onRejected);</pre>
+removingBookmark.then(onRemoved, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-remove"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
+> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-remove) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,5 +95,4 @@ removingBookmark.then(onRemoved, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

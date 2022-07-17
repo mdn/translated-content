@@ -3,47 +3,47 @@ title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>丢弃一个或多个标签页。</p>
+丢弃一个或多个标签页。
 
-<p>一些浏览器会自动“丢弃”它们认为近期不再被用户所需要的标签页。这些标签页会在标签栏中保持可见，浏览器会记住它们的状态，所以，如果用户选中了被丢弃的标签页，它会立即还原到被丢弃之前的状态。</p>
+一些浏览器会自动“丢弃”它们认为近期不再被用户所需要的标签页。这些标签页会在标签栏中保持可见，浏览器会记住它们的状态，所以，如果用户选中了被丢弃的标签页，它会立即还原到被丢弃之前的状态。
 
-<p>对于不同的浏览器，被丢弃内容的详细内容是有所不同的，但是从大体上来说，丢弃一个标签页允许浏览器释放一些该标签页所占用的内存。</p>
+对于不同的浏览器，被丢弃内容的详细内容是有所不同的，但是从大体上来说，丢弃一个标签页允许浏览器释放一些该标签页所占用的内存。
 
-<p>The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a <code><a href="/en-US/docs/Web/Events/beforeunload">beforeunload</a></code> listener that would display a prompt.</p>
+The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a [`beforeunload`](/en-US/docs/Web/Events/beforeunload) listener that would display a prompt.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:js">var discarding = browser.tabs.discard(
+```js
+var discarding = browser.tabs.discard(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><code><code>integer</code></code> or <code><code>array</code></code> of <code><code><code>integer</code></code></code>. The IDs of the tab or tabs to discard.</dd>
-</dl>
+- `tabIds`
+  - : `integer` or `array` of `integer`. The IDs of the tab or tabs to discard.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.
 
-<p>If the ID of the active tab is passed in, it will not be discarded, but the promise will be fulfilled and any other tabs passed in will be discarded.</p>
+If the ID of the active tab is passed in, it will not be discarded, but the promise will be fulfilled and any other tabs passed in will be discarded.
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.tabs.discard", 10)}}</p>
+{{Compat("webextensions.api.tabs.discard", 10)}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>丢弃一个标签页：</p>
+丢弃一个标签页：
 
-<pre class="brush: js">function onDiscarded() {
+```js
+function onDiscarded() {
   console.log(`Discarded`);
 }
 
@@ -52,11 +52,13 @@ function onError(error) {
 }
 
 var discarding = browser.tabs.discard(2);
-discarding.then(onDiscarded, onError);</pre>
+discarding.then(onDiscarded, onError);
+```
 
-<p>丢弃多个标签页：</p>
+丢弃多个标签页：
 
-<pre class="brush: js">function onDiscarded() {
+```js
+function onDiscarded() {
   console.log(`Discarded`);
 }
 
@@ -65,16 +67,14 @@ function onError(error) {
 }
 
 var discarding = browser.tabs.discard([15, 14, 1]);
-discarding.then(onDiscarded, onError);</pre>
+discarding.then(onDiscarded, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-discard"><code>chrome.tabs</code></a> API.</p>
-</div>
+> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-discard) API.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,5 +101,4 @@ discarding.then(onDiscarded, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

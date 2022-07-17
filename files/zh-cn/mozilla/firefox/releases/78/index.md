@@ -3,108 +3,84 @@ title: 对于开发人员的 Firefox 78
 slug: Mozilla/Firefox/Releases/78
 translation_of: Mozilla/Firefox/Releases/78
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>本文提供了有关 Firefox 78 中将影响开发人员的更改的信息。Firefox 78 发布于<a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/">2020 年 6 月 30 日</a>.</p>
+本文提供了有关 Firefox 78 中将影响开发人员的更改的信息。Firefox 78 发布于[2020 年 6 月 30 日](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/).
 
-<p>另请参阅 Firefox 78 中的新增功能：<a href="https://hacks.mozilla.org/2020/06/new-in-firefox-78/">DevTools 的改进，新的正则表达式引擎以及 Mozilla hacks 上大量的 Web 平台更新。</a></p>
+另请参阅 Firefox 78 中的新增功能：[DevTools 的改进，新的正则表达式引擎以及 Mozilla hacks 上大量的 Web 平台更新。](https://hacks.mozilla.org/2020/06/new-in-firefox-78/)
 
-<h2 id="对于Web开发人员的更改">对于 Web 开发人员的更改</h2>
+## 对于 Web 开发人员的更改
 
-<h3 id="开发者工具">开发者工具</h3>
+### 开发者工具
 
-<h4 id="调试器">调试器</h4>
+#### 调试器
 
-<ul>
- <li>现在，您可以从<a href="/en-US/docs/Tools/about:debugging#Connecting_to_a_remote_device">关于：调试</a>面板更改远程设备访问的 URL。({{bug("1617237")}})</li>
- <li>现在，<a href="/en-US/docs/Tools/Debugger/UI_Tour">调试器</a>中的 <strong>禁用 JavaScript</strong> 菜单项仅影响当前选项卡，并且在关闭“开发人员工具”后会重置。({{bug("1640318")}})</li>
- <li>如果在<a href="/en-US/docs/Tools/Debugger/UI_Tour#Scopes">作用域</a>中启用<strong>映射</strong>，则<a href="/en-US/docs/Tools/Debugger/Set_a_logpoint">日志点</a>可以将源映射代码中的变量名称映射回其原始名称。({{bug("1536857")}})</li>
-</ul>
+- 现在，您可以从[关于：调试](/en-US/docs/Tools/about:debugging#Connecting_to_a_remote_device)面板更改远程设备访问的 URL。({{bug("1617237")}})
+- 现在，[调试器](/en-US/docs/Tools/Debugger/UI_Tour)中的 **禁用 JavaScript** 菜单项仅影响当前选项卡，并且在关闭“开发人员工具”后会重置。({{bug("1640318")}})
+- 如果在[作用域](/en-US/docs/Tools/Debugger/UI_Tour#Scopes)中启用**映射**，则[日志点](/en-US/docs/Tools/Debugger/Set_a_logpoint)可以将源映射代码中的变量名称映射回其原始名称。({{bug("1536857")}})
 
-<h4 id="网络监控器">网络监控器</h4>
+#### 网络监控器
 
-<ul>
- <li>In the <a href="/en-US/docs/Tools/Network_Monitor/request_list#Network_request_columns">Network Monitor</a>, you can now resize the columns of the request list by dragging the column borders anywhere in the table. ({{bug("1618409")}})</li>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor/request_details">request details panel</a> in the Network Monitor has some UX improvements. ({{bug("1631302")}}, {{bug("1631295")}})</li>
- <li>If a request was blocked, the <a href="/en-US/docs/Tools/Network_Monitor/request_list">request list</a> now shows the reason, such as an add-on, CSP, CORS, or Enhanced Tracking Protection. ({{bug("1555057")}}, {{bug("1445637")}}, {{bug("1556451")}})</li>
-</ul>
+- In the [Network Monitor](/en-US/docs/Tools/Network_Monitor/request_list#Network_request_columns), you can now resize the columns of the request list by dragging the column borders anywhere in the table. ({{bug("1618409")}})
+- The [request details panel](/en-US/docs/Tools/Network_Monitor/request_details) in the Network Monitor has some UX improvements. ({{bug("1631302")}}, {{bug("1631295")}})
+- If a request was blocked, the [request list](/en-US/docs/Tools/Network_Monitor/request_list) now shows the reason, such as an add-on, CSP, CORS, or Enhanced Tracking Protection. ({{bug("1555057")}}, {{bug("1445637")}}, {{bug("1556451")}})
 
-<h4 id="其他工具">其他工具</h4>
+#### 其他工具
 
-<ul>
- <li>The <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility</a> inspector is out of beta. You can use it to check for various accessibility issues on your site. ({{bug("1602075")}})</li>
- <li>Uncaught promise errors now provide all details in the Console, including their name and stack. ({{bug("1636590")}})</li>
-</ul>
+- The [Accessibility](/en-US/docs/Tools/Accessibility_inspector) inspector is out of beta. You can use it to check for various accessibility issues on your site. ({{bug("1602075")}})
+- Uncaught promise errors now provide all details in the Console, including their name and stack. ({{bug("1636590")}})
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>The {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes are now enabled by default ({{bug(1632646)}}).</li>
- <li>The {{CSSxRef(":read-only")}} and {{CSSxRef(":read-write")}} pseudo-classes are now supported without prefixes ({{bug(312971)}}).
-  <ul>
-   <li>In addition, <code>:read-write</code> styles are no longer applied to disabled <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> elements, which was a violation of <a href="https://html.spec.whatwg.org/#selector-read-write">the HTML spec</a> ({{bug(888884)}}).</li>
-  </ul>
- </li>
-</ul>
+- The {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes are now enabled by default ({{bug(1632646)}}).
+- The {{CSSxRef(":read-only")}} and {{CSSxRef(":read-write")}} pseudo-classes are now supported without prefixes ({{bug(312971)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+  - In addition, `:read-write` styles are no longer applied to disabled [`<input>`](/en-US/docs/Web/HTML/Element/input) and [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) elements, which was a violation of [the HTML spec](https://html.spec.whatwg.org/#selector-read-write) ({{bug(888884)}}).
 
-<ul>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat">Intl.ListFormat</a></code> API is now supported ({{bug(1589095)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat">Intl.NumberFormat()</a></code> constructor has been extended to support new options specified in the <a href="https://github.com/tc39/proposal-unified-intl-numberformat">Intl.NumberFormat Unified API Proposal</a> ({{bug(1633836)}}). This includes among other things:
-  <ul>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Scientific_engineering_or_compact_notations">Support for scientific notations</a></li>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Unit_formatting">Unit</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Currency_formatting">currency</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Displaying_signs">sign display</a> formatting</li>
-  </ul>
- </li>
- <li>The {{JSxRef("RegExp")}} engine <a href="https://hacks.mozilla.org/2020/06/a-new-regexp-engine-in-spidermonkey/">has been updated</a> and now supports all new features introduced in ECMAScript 2018:
-  <ul>
-   <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Lookbehind assertions</a> ({{bug(1225665)}})</li>
-   <li>{{JSxRef("RegExp.prototype.dotAll")}} ({{bug(1361856)}})</li>
-   <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode property escapes</a> ({{bug(1361876)}})</li>
-   <li><a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Named capture groups</a> ({{bug(1362154)}})</li>
-  </ul>
- </li>
- <li>Due to a <a href="https://github.com/heycam/webidl/pull/357">WebIDL spec change</a> in mid-2020, we've <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#toStringTag_available_on_all_DOM_prototype_objects">added a <code>Symbol.toStringTag</code> property to all DOM prototype objects</a> ({{bug(1277799)}}).</li>
- <li>The garbage collection of {{jsxref("WeakMap")}} objects has been improved. <code>WeakMaps</code> are now marked incrementally ({{bug(1167452)}}).</li>
-</ul>
+### JavaScript
 
-<h3 id="一些API">一些 API</h3>
+- The [`Intl.ListFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat) API is now supported ({{bug(1589095)}}).
+- The [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) constructor has been extended to support new options specified in the [Intl.NumberFormat Unified API Proposal](https://github.com/tc39/proposal-unified-intl-numberformat) ({{bug(1633836)}}). This includes among other things:
 
-<h4 id="DOM">DOM</h4>
+  - [Support for scientific notations](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Scientific_engineering_or_compact_notations)
+  - [Unit](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Unit_formatting), [currency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Currency_formatting) and [sign display](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#Displaying_signs) formatting
 
-<ul>
- <li>The {{DOMxRef("ParentNode.replaceChildren()")}} method has been implemented ({{bug(1626015)}}).</li>
-</ul>
+- The {{JSxRef("RegExp")}} engine [has been updated](https://hacks.mozilla.org/2020/06/a-new-regexp-engine-in-spidermonkey/) and now supports all new features introduced in ECMAScript 2018:
 
-<h4 id="服务工作者">服务工作者</h4>
+  - [Lookbehind assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) ({{bug(1225665)}})
+  - {{JSxRef("RegExp.prototype.dotAll")}} ({{bug(1361856)}})
+  - [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) ({{bug(1361876)}})
+  - [Named capture groups](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) ({{bug(1362154)}})
 
-<ul>
- <li><a href="https://www.mozilla.org/en-US/firefox/organizations/">Extended Support Releases (ESR)</a>: Firefox 78 is the first ESR release that supports <a href="/en-US/docs/Web/API/Service_Worker_API">Service workers</a> (and the <a href="/en-US/docs/Web/API/Push_API">Push API</a>). Earlier ESR releases had no support ({{bug(1547023)}}).</li>
-</ul>
+- Due to a [WebIDL spec change](https://github.com/heycam/webidl/pull/357) in mid-2020, we've [added a `Symbol.toStringTag` property to all DOM prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#toStringTag_available_on_all_DOM_prototype_objects) ({{bug(1277799)}}).
+- The garbage collection of {{jsxref("WeakMap")}} objects has been improved. `WeakMaps` are now marked incrementally ({{bug(1167452)}}).
 
-<h3 id="Web组装">Web 组装</h3>
+### 一些 API
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/">Wasm Multi-value</a> is now supported, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values ({{bug(1628321)}}).</li>
- <li>WebAssembly now supports import and export of 64-bit integer function parameters (i64) using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt">BigInt</a></code> from JavaScript ({{bug(1608770)}}).</li>
-</ul>
+#### DOM
 
-<h3 id="TLS_1.0和1.1已被移除">TLS 1.0 和 1.1 已被移除</h3>
+- The {{DOMxRef("ParentNode.replaceChildren()")}} method has been implemented ({{bug(1626015)}}).
 
-<ul>
- <li>所有浏览器都不再支持<a href="/en-US/docs/Web/Security/Transport_Layer_Security">传输层安全</a> (TLS) 协议的 1.0 和 1.1 版本。阅读<a href="https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/">TLS 1.0 和 1.1 删除更新</a>以获取先前的公告，以及如果受到影响应采取的措施 ({{bug(1643229)}}).</li>
-</ul>
+#### 服务工作者
 
-<h2 id="对于附加组件开发人员的更改">对于附加组件开发人员的更改</h2>
+- [Extended Support Releases (ESR)](https://www.mozilla.org/en-US/firefox/organizations/): Firefox 78 is the first ESR release that supports [Service workers](/en-US/docs/Web/API/Service_Worker_API) (and the [Push API](/en-US/docs/Web/API/Push_API)). Earlier ESR releases had no support ({{bug(1547023)}}).
 
-<ul>
- <li>{{WebExtAPIRef("browsingData.removeCache")}} 和 {{WebExtAPIRef("browsingData.removePluginData")}} 现在支持按主机名删除。({{bug(1636784)}}).</li>
- <li>使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest">proxy.onRequest</a></code>时，现在可以正确应用基于选项卡 ID 或窗口 ID 限制的过滤器。这对于希望仅在一个窗口中提供代理功能的加载项很有用。</li>
- <li>现在，从“所有选项卡”下拉菜单中<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked">单击上下文菜单</a>即可传递适当的选项卡对象。过去，活动选项卡被错误地传递了。</li>
- <li>当使用带有另存为选项的<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download">downloads.download</a></code>时，可以记住最近使用的目录。尽管此信息对开发人员用处不大，但对用户而言却非常方便。</li>
-</ul>
+### Web 组装
 
-<h2 id="旧版本">旧版本</h2>
+- [Wasm Multi-value](https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/) is now supported, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values ({{bug(1628321)}}).
+- WebAssembly now supports import and export of 64-bit integer function parameters (i64) using [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) from JavaScript ({{bug(1608770)}}).
 
-<p>{{Firefox_for_developers(77)}}</p>
+### TLS 1.0 和 1.1 已被移除
+
+- 所有浏览器都不再支持[传输层安全](/en-US/docs/Web/Security/Transport_Layer_Security) (TLS) 协议的 1.0 和 1.1 版本。阅读[TLS 1.0 和 1.1 删除更新](https://hacks.mozilla.org/2019/05/tls-1-0-and-1-1-removal-update/)以获取先前的公告，以及如果受到影响应采取的措施 ({{bug(1643229)}}).
+
+## 对于附加组件开发人员的更改
+
+- {{WebExtAPIRef("browsingData.removeCache")}} 和 {{WebExtAPIRef("browsingData.removePluginData")}} 现在支持按主机名删除。({{bug(1636784)}}).
+- 使用[`proxy.onRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest)时，现在可以正确应用基于选项卡 ID 或窗口 ID 限制的过滤器。这对于希望仅在一个窗口中提供代理功能的加载项很有用。
+- 现在，从“所有选项卡”下拉菜单中[单击上下文菜单](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked)即可传递适当的选项卡对象。过去，活动选项卡被错误地传递了。
+- 当使用带有另存为选项的[`downloads.download`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)时，可以记住最近使用的目录。尽管此信息对开发人员用处不大，但对用户而言却非常方便。
+
+## 旧版本
+
+{{Firefox_for_developers(77)}}

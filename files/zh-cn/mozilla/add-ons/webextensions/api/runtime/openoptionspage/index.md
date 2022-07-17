@@ -7,38 +7,32 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
-<div> </div>
+假如你的页面有[options page](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)（设置页面）的定义，使用此方法打开它。这是一个异步方法，返回一个 `Promise对象`
 
-<div>假如你的页面有<a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">options page</a>（设置页面）的定义，使用此方法打开它。</div>
+## 语法
 
-<div> </div>
+```js
+var openingPage = browser.runtime.openOptionsPage()
+```
 
-<div>这是一个异步方法，返回一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>对象</code></div>
+### 参数
 
-<div> </div>
+无
 
-<h2 id="语法">语法</h2>
+### 返回值
 
-<pre class="brush:js">var openingPage = browser.runtime.openOptionsPage()
-</pre>
+当设置页面成功创建，执行[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)的无参成功回调方法，否则执行[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)的失败回调方法，参数为错误信息。
 
-<h3 id="参数">参数</h3>
+## 浏览器兼容性
 
-<p>无</p>
+{{Compat("webextensions.api.runtime.openOptionsPage")}}
 
-<h3 id="返回值">返回值</h3>
+## 例子
 
-<p>当设置页面成功创建，执行<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>的无参成功回调方法，否则执行<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>的失败回调方法，参数为错误信息。</p>
+当用户点击浏览器行为图标时，打开一个设置页面。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p>{{Compat("webextensions.api.runtime.openOptionsPage")}}</p>
-
-<h2 id="例子">例子</h2>
-
-<p>当用户点击浏览器行为图标时，打开一个设置页面。</p>
-
-<pre class="brush: js">function onOpened() {
+```js
+function onOpened() {
   console.log(`Options page opened`);
 }
 
@@ -47,18 +41,16 @@ function onError(error) {
 }
 
 var opening = browser.runtime.openOptionsPage();
-opening.then(onOpened, onError);</pre>
+opening.then(onOpened, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-openOptionsPage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -85,5 +77,4 @@ opening.then(onOpened, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

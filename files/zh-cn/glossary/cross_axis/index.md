@@ -31,8 +31,6 @@ original_slug: Glossary/交叉轴
 - CSS 弹性容器指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
 - CSS 弹性容器指南：_[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
 
-<!---->
-
 - [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
 
   - {{Glossary("Cross Axis")}}

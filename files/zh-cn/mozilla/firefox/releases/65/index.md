@@ -5,117 +5,102 @@ tags:
   - '65'
 translation_of: Mozilla/Firefox/Releases/65
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>本文提供了有关 Firefox 65 中将影响开发者的更改信息。Firefox 65 是当前的 <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Nightly 版本</a>, 将于 2019 年 1 月 29 日发布。</p>
+本文提供了有关 Firefox 65 中将影响开发者的更改信息。Firefox 65 是当前的 [Nightly 版本](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), 将于 2019 年 1 月 29 日发布。
 
-<h2 id="为网页开发者带来的改变">为网页开发者带来的改变</h2>
+## 为网页开发者带来的改变
 
-<h3 id="开发者工具">开发者工具</h3>
+### 开发者工具
 
-<h4 id="移除">移除</h4>
+#### 移除
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>事件现在可以在禁用状态下的 HTML 元素上进行分发，如设置了 <code>disabled</code> 属性的 {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}}，和 {{htmlelement("textarea")}} ({{bug(329509)}})。</p>
+事件现在可以在禁用状态下的 HTML 元素上进行分发，如设置了 `disabled` 属性的 {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}}，和 {{htmlelement("textarea")}} ({{bug(329509)}})。
 
-<h4 id="移除_2">移除</h4>
+#### 移除
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>已去除 {{cssxref("image-rendering")}} 属性的 <code>crisp-edges</code> 值的前缀 ({{bug(1496617)}}) 。</li>
- <li>{{cssxref("scrollbar-color")}} 的 <code>auto</code> 值现在现在被解析为 <code>auto</code>，而不是两种颜色 ({{bug(1501418)}})。</li>
-</ul>
+- 已去除 {{cssxref("image-rendering")}} 属性的 `crisp-edges` 值的前缀 ({{bug(1496617)}}) 。
+- {{cssxref("scrollbar-color")}} 的 `auto` 值现在现在被解析为 `auto`，而不是两种颜色 ({{bug(1501418)}})。
 
-<h4 id="移除_3">移除</h4>
+#### 移除
 
-<ul>
- <li><code>layout.css.shape-outside.enabled</code> 设置已被移除；{{cssxref("shape-outside")}}, {{cssxref("shape-margin")}}，和 {{cssxref("shape-image-threshold")}} 不再支持关闭 ({{bug(1504387)}})。</li>
- <li>
-  Firefox 用户{{cssxref("user-select")}}的几个仅限的属性已被删除：<code>-moz-all</code>, <code>tri-state</code>, <code>element</code>, <code>elements</code>, 和 <code>toggle</code>. Firefox 仅限 <code>-moz-text</code> 属性仍在内部使用，故只是在 Web 内容中禁用 参见 {{bug(1492958)}}.</li>
-</ul>
+- `layout.css.shape-outside.enabled` 设置已被移除；{{cssxref("shape-outside")}}, {{cssxref("shape-margin")}}，和 {{cssxref("shape-image-threshold")}} 不再支持关闭 ({{bug(1504387)}})。
+- Firefox 用户{{cssxref("user-select")}}的几个仅限的属性已被删除：`-moz-all`, `tri-state`, `element`, `elements`, 和 `toggle`. Firefox 仅限 `-moz-text` 属性仍在内部使用，故只是在 Web 内容中禁用 参见 {{bug(1492958)}}.
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h4 id="移除_4">移除</h4>
+#### 移除
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<h4 id="移除_5">移除</h4>
+#### 移除
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h4 id="新的_APIs">新的 APIs</h4>
+#### 新的 APIs
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li>{{domxref("Performance.toJSON()")}} has been exposed to <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> ({{bug(1504958)}}).</li>
- <li>{{domxref("XMLHttpRequest")}} requests will now throw a <code>NetworkError</code> if the requested content type is a <code>Blob</code>, and the request method is not <code>GET</code> ({{bug(1502599)}}).</li>
-</ul>
+- {{domxref("Performance.toJSON()")}} has been exposed to [Web Workers](/en-US/docs/Web/API/Web_Workers_API) ({{bug(1504958)}}).
+- {{domxref("XMLHttpRequest")}} requests will now throw a `NetworkError` if the requested content type is a `Blob`, and the request method is not `GET` ({{bug(1502599)}}).
 
-<h4 id="DOM_events">DOM events</h4>
+#### DOM events
 
-<ul>
- <li>Going forward, only one {{domxref("Window.open()")}} call is allowed per event ({{bug(675574)}}).</li>
-</ul>
+- Going forward, only one {{domxref("Window.open()")}} call is allowed per event ({{bug(675574)}}).
 
-<h4 id="Service_workers">Service workers</h4>
+#### Service workers
 
-<ul>
- <li>The {{domxref("Response.redirect()")}} method now correctly throws a <code>TypeError</code> if a non-valid URL is specified as the first parameter ({{bug(1503276)}}).</li>
- <li>The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types">JavaScript MIME type</a> ({{bug(1354577)}}).</li>
-</ul>
+- The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ({{bug(1503276)}}).
+- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#JavaScript_types) ({{bug(1354577)}}).
 
-<h4 id="Media_Web_Audio_和_WebRTC">Media, Web Audio, 和 WebRTC</h4>
+#### Media, Web Audio, 和 WebRTC
 
-<ul>
- <li>增加了对 <a href="/en-US/docs/Glossary/webp">WebP</a> Google 压缩图像文件的支持 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1294490">bug 1294490</a>) 。</li>
-</ul>
+- 增加了对 [WebP](/en-US/docs/Glossary/webp) Google 压缩图像文件的支持 ([bug 1294490](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490)) 。
 
-<h4 id="Canvas_和_WebGL">Canvas 和 WebGL</h4>
+#### Canvas 和 WebGL
 
-<h4 id="移除_6">移除</h4>
+#### 移除
 
-<ul>
- <li><a href="/en-US/docs/Web/Guide/Events/Mutation_events">Mutation events</a> 在 shadow trees 上已经被禁用 ({{bug(1489858)}}).</li>
- <li>The non-standard {{domxref("MediaStream")}} property <code>currentTime</code> has been removed ({{bug(1502927)}}).</li>
- <li>The obsolete {{domxref("BasicCardRequest.supportedTypes")}} property is no longer supported by the Payment Request API; instead of requiring the web app or site to figure out what type of card is being used, it's now the server's job to deal with it ({{bug(1504032)}}).</li>
-</ul>
+- [Mutation events](/en-US/docs/Web/Guide/Events/Mutation_events) 在 shadow trees 上已经被禁用 ({{bug(1489858)}}).
+- The non-standard {{domxref("MediaStream")}} property `currentTime` has been removed ({{bug(1502927)}}).
+- The obsolete {{domxref("BasicCardRequest.supportedTypes")}} property is no longer supported by the Payment Request API; instead of requiring the web app or site to figure out what type of card is being used, it's now the server's job to deal with it ({{bug(1504032)}}).
 
-<h3 id="安全">安全</h3>
+### 安全
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h4 id="移除_7">移除</h4>
+#### 移除
 
-<h3 id="插件">插件</h3>
+### 插件
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h4 id="移除_8">移除</h4>
+#### 移除
 
-<h3 id="其他">其他</h3>
+### 其他
 
-<p><em>无变化。</em></p>
+_无变化。_
 
-<h4 id="移除_9">移除</h4>
+#### 移除
 
-<h2 id="为附加组件开发者带来的改变">为附加组件开发者带来的改变</h2>
+## 为附加组件开发者带来的改变
 
-<h3 id="API_变化">API 变化</h3>
+### API 变化
 
-<h4 id="移除_10">移除</h4>
+#### 移除
 
-<h3 id="Manifest_变化">Manifest 变化</h3>
+### Manifest 变化
 
-<h4 id="移除_11">移除</h4>
+#### 移除
 
-<h2 id="更早期的版本">更早期的版本</h2>
+## 更早期的版本
 
-<p>{{Firefox_for_developers(65)}}</p>
+{{Firefox_for_developers(65)}}

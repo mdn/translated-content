@@ -6,54 +6,50 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="blockIndicator note">
-<p><strong>备注：</strong> 本文描述的是适用于 WebExtensions 的 manifest.json。若您正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：<a href="/zh-CN/docs/Web/Manifest">Web App Manifest</a>。</p>
-</div>
+> **备注：** 本文描述的是适用于 WebExtensions 的 manifest.json。若您正在寻找适用于 PWA 的 manifest.json 的有关信息，请参考这篇文章：[Web App Manifest](/zh-CN/docs/Web/Manifest)。
 
-<div><code>manifest.json</code> 是每个 WebExtension 唯一必须包含的元数据文件。</div>
+`manifest.json` 是每个 WebExtension 唯一必须包含的元数据文件。
 
-<p>通过使用 <code>manifest.json</code>，您可以指定扩展的基本元数据，例如名称和版本，还可以指定扩展各个方面的功能（例如后台脚本，内容脚本和某些浏览器行为）。</p>
+通过使用 `manifest.json`，您可以指定扩展的基本元数据，例如名称和版本，还可以指定扩展各个方面的功能（例如后台脚本，内容脚本和某些浏览器行为）。
 
+它是一个允许使用 "`//`" 撰写单行注释的、特殊的 [JSON](/zh-CN/docs/Glossary/JSON) 文件。
 
-<p>它是一个允许使用 "<code>//</code>" 撰写单行注释的、特殊的 <a href="/zh-CN/docs/Glossary/JSON">JSON</a> 文件。</p>
+## manifest.json 键列表
 
-<h2 id="manifest.json_键列表">manifest.json 键列表</h2>
+支持的 `manifest.json` 键如下所示：
 
-<p>支持的 <code>manifest.json</code> 键如下所示：</p>
+### 简体中文内容
 
-<h3 id="简体中文内容">简体中文内容</h3>
+{{ListSubpages("/zh-CN/Add-ons/WebExtensions/manifest.json")}}
 
-<div>{{ListSubpages("/zh-CN/Add-ons/WebExtensions/manifest.json")}}</div>
+### 英文内容
 
-<h3 id="英文内容">英文内容</h3>
+{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}
 
-<div>{{ListSubpages("/en-US/Add-ons/WebExtensions/manifest.json")}}</div>
+- `"manifest_version"`，`"version"`，和 `"name"` 是唯一的强制必填键。
+- 如果 "\_locales" 目录存在的话，"`default_locale"` 也必须相应存在，否则不应存在。
+- Google Chrome 不支持 `"browser_specific_settings"`
 
-<ul>
- <li><code>"manifest_version"</code>，<code>"version"</code>，和 <code>"name"</code> 是唯一的强制必填键。</li>
- <li>如果 "_locales" 目录存在的话，"<code>default_locale"</code> 也必须相应存在，否则不应存在。</li>
- <li>Google Chrome 不支持 <code>"browser_specific_settings"</code></li>
-</ul>
+### 在运行时访问 manifest.json 键
 
-<h3 id="在运行时访问_manifest.json_键">在运行时访问 manifest.json 键</h3>
+你可以在拓展的 JavaScript 代码中通过 {{WebExtAPIRef("runtime.getManifest()")}} 函数访问拓展的 manifest 数据：
 
-<p>你可以在拓展的 JavaScript 代码中通过 {{WebExtAPIRef("runtime.getManifest()")}} 函数访问拓展的 manifest 数据：</p>
+```js
+browser.runtime.getManifest().version;
+```
 
-<pre class="brush: js; no-line-numbers">browser.runtime.getManifest().version;</pre>
+## 示例
 
-<h2 id="示例">示例</h2>
+The block below shows the basic syntax for some common manifest keys.
 
-<p>The block below shows the basic syntax for some common manifest keys.</p>
+> **备注：** This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.</p>
-</div>
+For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples).
 
-<p>For complete example extensions, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a>.</p>
-
-<pre class="brush: json;">{
+```json
+{
   "browser_specific_settings": {
     "gecko": {
       "id": "addon@example.com",
@@ -125,16 +121,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
   },
 
   "web_accessible_resources": ["images/my-image.png"]
-}</pre>
+}
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>For a full overview of all manifest keys and their sub-keys, see the<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json"> full <code>manifest.json</code> browser compatibility table</a>.</p>
+For a full overview of all manifest keys and their sub-keys, see the[ full `manifest.json` browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
+{{Compat("webextensions.manifest")}}
 
+## 参见
 
-<p>{{Compat("webextensions.manifest")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<p>{{WebExtAPIRef("permissions")}} JavaScript API</p>
+{{WebExtAPIRef("permissions")}} JavaScript API

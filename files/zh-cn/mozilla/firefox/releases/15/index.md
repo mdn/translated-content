@@ -7,116 +7,96 @@ tags:
   - Gecko 15
 translation_of: Mozilla/Firefox/Releases/15
 ---
-<div>{{FirefoxSidebar}}</div><p>Firefox 15 shipped on August 28, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.</p>
+{{FirefoxSidebar}}
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+Firefox 15 shipped on August 28, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
-<h3 id="HTML">HTML</h3>
+## Changes for Web developers
 
-<ul>
- <li>The <code>size</code> attribute of the {{ HTMLElement("font") }} element is now handled according the HTML5 spec. It means that all integer greater than 10 or smaller than -10 are now considered equivalent to 10, respectively -10.</li>
- <li>Support for <code>font-weight</code> and <code>point-size</code> attributes on the <code>&lt;font&gt;</code> element has been removed; these were non-standard and Gecko was the only engine supporting them.</li>
- <li>The <a href="http://www.opus-codec.org/">Opus codec</a> is now supported for audio in Ogg containers for the HTML {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements.</li>
- <li>The {{ HTMLElement("source") }} element now supports the <code>media</code> attribute.</li>
- <li>The {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements now support the played attribute, which provides a {{ domxref("TimeRanges") }} object listing the time ranges of the media that have been played back so far.</li>
-</ul>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+- The `size` attribute of the {{ HTMLElement("font") }} element is now handled according the HTML5 spec. It means that all integer greater than 10 or smaller than -10 are now considered equivalent to 10, respectively -10.
+- Support for `font-weight` and `point-size` attributes on the `<font>` element has been removed; these were non-standard and Gecko was the only engine supporting them.
+- The [Opus codec](http://www.opus-codec.org/) is now supported for audio in Ogg containers for the HTML {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements.
+- The {{ HTMLElement("source") }} element now supports the `media` attribute.
+- The {{ HTMLElement("audio") }} and {{ HTMLElement("video") }} elements now support the played attribute, which provides a {{ domxref("TimeRanges") }} object listing the time ranges of the media that have been played back so far.
 
-<ul>
- <li>The {{ cssxref("font-feature-settings") }} property has been updated to the latest syntax: <code>font-feature-settings: "lnum" 1;</code></li>
- <li>The CSS {{ cssxref("text-transform") }} property has been extended to correctly handle Unicode ligature characters (like <code>?</code>).</li>
- <li>The CSS {{ cssxref("word-break") }} property has been implemented.</li>
- <li>The {{ cssxref("border-image") }} property has been updated to match the latest Specification and properties have been unprefixed. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=713643">bug 713643</a>)</li>
- <li>The <code>skew()</code> {{cssxref("transform")}} function dropped in Firefox 14 has been restored due to existing site compatibility. Authors are however, advised to use <code>skewX()</code> and <code>skewY(</code>) functions instead.</li>
- <li>The value <code>plaintext</code> of CSS {{cssxref("unicode-bidi")}} property now applies to inline elements too. ({{bug("746987")}}).</li>
-</ul>
+### CSS
 
-<h3 id="DOM">DOM</h3>
+- The {{ cssxref("font-feature-settings") }} property has been updated to the latest syntax: `font-feature-settings: "lnum" 1;`
+- The CSS {{ cssxref("text-transform") }} property has been extended to correctly handle Unicode ligature characters (like `?`).
+- The CSS {{ cssxref("word-break") }} property has been implemented.
+- The {{ cssxref("border-image") }} property has been updated to match the latest Specification and properties have been unprefixed. ([bug 713643](https://bugzilla.mozilla.org/show_bug.cgi?id=713643))
+- The `skew()` {{cssxref("transform")}} function dropped in Firefox 14 has been restored due to existing site compatibility. Authors are however, advised to use `skewX()` and `skewY(`) functions instead.
+- The value `plaintext` of CSS {{cssxref("unicode-bidi")}} property now applies to inline elements too. ({{bug("746987")}}).
 
-<ul>
- <li>The DOM Events Level 3 methods <a href="/zh-cn/DOM/KeyboardEvent#getModifierState%28%29"><code>KeyboardEvent.getModifierState()</code></a> and <a href="/zh-cn/DOM/MouseEvent#getModifierState%28%29"><code>MouseEvent.getModifierState()</code></a>, which let you query the state of modifier keys, like <code>Ctrl</code> or <code>Shift</code>, have been implemented (bugs <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=630811">630811</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=731878">731878</a>). But the behavior conforms to the latest D3E draft. So, some modifier key names are different from IE ({{ bug("769190") }}).</li>
- <li>On mouse events, support for querying the state of the mouse buttons using the <a href="/zh-cn/DOM/MouseEvent"><code>MouseEvent.buttons</code></a> attribute, has been implemented.</li>
- <li>On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the <a href="/zh-cn/DOM/KeyboardEvent#Attributes_location">KeyboardEvent.location</a> attribute, has been implemented ({{ bug("166240") }}).</li>
- <li>KeyboardEvent.keycode result has been computed from better rules which were almost same on Windows/Linux/Mac. And now they are available on some keyboard layouts which are not ASCII capable layouts on Linux and Mac, such as Arabic, Cyrillic, Thai and so on. See <a href="/zh-cn/DOM/KeyboardEvent#Virtual_key_codes">the document for virtual key codes</a>.</li>
- <li>The <a href="/zh-cn/DOM/range.detach"><code>range.detach()</code></a> method has been transformed in a no-op and will probably be removed in the future.</li>
- <li>The method <code>HTMLVideoElement.mozHasAudio()</code> has been implemented. It indicates if there is an audio track associated to a given video element. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=480376">bug </a><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=480376">480376</a>)</li>
- <li>The <code>Performance</code> API has a new method, <code>now()</code>, supporting high resolution timers of type<code> DOMHighResTimeStamp</code>. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=539095">bug 539095</a>).</li>
- <li>The <code>Window.java</code> and <code>Window.packages</code> attributes has been removed. These were never documented, and hopefully you're not using them!</li>
- <li>The <a href="/zh-cn/API/WebSMS">WebSMS API</a> has been updated and now supports a <code>read </code>attribute indicating whether an SMS text message is read or unread.</li>
- <li>The <a href="https://wiki.mozilla.org/WebAPI/FileHandleAPI">FileHandle API</a> has been implemented.</li>
- <li>The <a href="/zh-cn/DOM/Blob"><code>Blob</code></a> constructor now takes <code>ArrayBufferView</code> as a member of <code><var>blobParts</var></code> parameter in addition to <code>ArrayBuffer</code>. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=752402">bug 752402</a>)</li>
- <li>The {{domxref("DeviceLightEvent")}} specified in the <a href="http://www.w3.org/TR/ambient-light/">Ambient Light Events Working Draft</a> has been implemented.</li>
- <li>The {{domxref("DeviceProximityEvent")}} and {{domxref("UserProximityEvent")}} <a href="http://www.w3.org/TR/proximity/">Proximity Events</a> have been implemented.</li>
- <li>The {{domxref("File")}} <code>lastModifiedDate</code> property has been implemented. ({{bug("673586")}})</li>
-</ul>
+### DOM
 
-<h3 id="JavaScript">JavaScript</h3>
+- The DOM Events Level 3 methods [`KeyboardEvent.getModifierState()`](/zh-cn/DOM/KeyboardEvent#getModifierState%28%29) and [`MouseEvent.getModifierState()`](/zh-cn/DOM/MouseEvent#getModifierState%28%29), which let you query the state of modifier keys, like `Ctrl` or `Shift`, have been implemented (bugs [630811](https://bugzilla.mozilla.org/show_bug.cgi?id=630811) and [731878](https://bugzilla.mozilla.org/show_bug.cgi?id=731878)). But the behavior conforms to the latest D3E draft. So, some modifier key names are different from IE ({{ bug("769190") }}).
+- On mouse events, support for querying the state of the mouse buttons using the [`MouseEvent.buttons`](/zh-cn/DOM/MouseEvent) attribute, has been implemented.
+- On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the [KeyboardEvent.location](/zh-cn/DOM/KeyboardEvent#Attributes_location) attribute, has been implemented ({{ bug("166240") }}).
+- KeyboardEvent.keycode result has been computed from better rules which were almost same on Windows/Linux/Mac. And now they are available on some keyboard layouts which are not ASCII capable layouts on Linux and Mac, such as Arabic, Cyrillic, Thai and so on. See [the document for virtual key codes](/zh-cn/DOM/KeyboardEvent#Virtual_key_codes).
+- The [`range.detach()`](/zh-cn/DOM/range.detach) method has been transformed in a no-op and will probably be removed in the future.
+- The method `HTMLVideoElement.mozHasAudio()` has been implemented. It indicates if there is an audio track associated to a given video element. ([bug ](https://bugzilla.mozilla.org/show_bug.cgi?id=480376)[480376](https://bugzilla.mozilla.org/show_bug.cgi?id=480376))
+- The `Performance` API has a new method, `now()`, supporting high resolution timers of type` DOMHighResTimeStamp`. ([bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)).
+- The `Window.java` and `Window.packages` attributes has been removed. These were never documented, and hopefully you're not using them!
+- The [WebSMS API](/zh-cn/API/WebSMS) has been updated and now supports a `read `attribute indicating whether an SMS text message is read or unread.
+- The [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) has been implemented.
+- The [`Blob`](/zh-cn/DOM/Blob) constructor now takes `ArrayBufferView` as a member of `blobParts` parameter in addition to `ArrayBuffer`. ([bug 752402](https://bugzilla.mozilla.org/show_bug.cgi?id=752402))
+- The {{domxref("DeviceLightEvent")}} specified in the [Ambient Light Events Working Draft](http://www.w3.org/TR/ambient-light/) has been implemented.
+- The {{domxref("DeviceProximityEvent")}} and {{domxref("UserProximityEvent")}} [Proximity Events](http://www.w3.org/TR/proximity/) have been implemented.
+- The {{domxref("File")}} `lastModifiedDate` property has been implemented. ({{bug("673586")}})
 
-<ul>
- <li>Support for the <a href="/zh-cn/JavaScript_typed_arrays/DataView"><code>DataView</code></a> interface from the Typed Arrays specification has been added. This provides low-level access to the data contained in an <a href="/zh-cn/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a>.</li>
- <li>Support for new ECMAScript 2015 built-ins:  <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Number/isNaN"><code>Number.isNaN()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger"><code>Number.toInteger()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger"><code>Number.isInteger()</code></a>, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite"><code>Number.isFinite()</code></a> has been added. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 749818</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 761495</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=749818">bug 761480</a>).</li>
- <li>添加了对<code>ES6中的<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a></code>的支持。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=757676">bug 757676</a>)</li>
- <li>添加了对<code>ES6中的<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a></code>的支持.(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=574132">bug 574132</a>)</li>
-</ul>
+### JavaScript
 
-<h3 id="WebGL">WebGL</h3>
+- Support for the [`DataView`](/zh-cn/JavaScript_typed_arrays/DataView) interface from the Typed Arrays specification has been added. This provides low-level access to the data contained in an [`ArrayBuffer`](/zh-cn/JavaScript_typed_arrays/ArrayBuffer).
+- Support for new ECMAScript 2015 built-ins: [`Number.isNaN()`](/en-US/docs/JavaScript/Reference/Global_Objects/Number/isNaN), [`Number.toInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger), [`Number.isInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger), [`Number.isFinite()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite) has been added. ([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=749818), [bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=749818)).
+- 添加了对`ES6中的默认参数`的支持。([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
+- 添加了对`ES6中的剩余参数`的支持.([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
 
-<ul>
- <li>Support for the <a href="/zh-cn/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc"><code>WEBGL_compressed_texture_s3tc</code></a> extension has been added. Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.</li>
-</ul>
+### WebGL
 
-<h3 id="MathML">MathML</h3>
+- Support for the [`WEBGL_compressed_texture_s3tc`](/zh-cn/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc) extension has been added. Compressed textures reduce the amount of memory needed to store a texture on the GPU, allowing for higher resolution textures or more of the same resolution textures.
 
-<ul>
- <li>Mathematical operators can now use downloadable fonts specified with {{ cssxref("@font-face") }}. This makes the <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/">MathML-fonts add-on</a> work with stretchy operators too.</li>
- <li>The <code>selection</code> attribute of the {{ MathMLElement("maction") }} is now only taken into account with the <code>toggle</code> actiontype.</li>
- <li><a href="http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1">Deprecated namedspace binding</a> has been removed ({{ bug("673759") }}).</li>
- <li>Supported syntax for <a href="/zh-cn/MathML/Attributes/Values">Length</a> and {{ MathMLElement("mpadded") }} values have been made closer to the one specified in MathML3 spec.</li>
-</ul>
+### MathML
 
-<h3 id="SVG">SVG</h3>
+- Mathematical operators can now use downloadable fonts specified with {{ cssxref("@font-face") }}. This makes the [MathML-fonts add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) work with stretchy operators too.
+- The `selection` attribute of the {{ MathMLElement("maction") }} is now only taken into account with the `toggle` actiontype.
+- [Deprecated namedspace binding](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) has been removed ({{ bug("673759") }}).
+- Supported syntax for [Length](/zh-cn/MathML/Attributes/Values) and {{ MathMLElement("mpadded") }} values have been made closer to the one specified in MathML3 spec.
 
-<ul>
- <li>Added support for the {{SVGElement("view")}} element ({{bug("512525")}}).</li>
-</ul>
+### SVG
 
-<h3 id="Network">Network</h3>
+- Added support for the {{SVGElement("view")}} element ({{bug("512525")}}).
 
-<ul>
- <li>Support for the SPDY v3 protocol has landed. It is disabled by default and can be enabled by setting the preference <code>network.http.spdy.enabled.v3</code> to true. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=737470">bug 737470</a>)</li>
-</ul>
+### Network
 
-<h2 id="附加组件开发变更">附加组件开发变更</h2>
+- Support for the SPDY v3 protocol has landed. It is disabled by default and can be enabled by setting the preference `network.http.spdy.enabled.v3` to true. ([bug 737470](https://bugzilla.mozilla.org/show_bug.cgi?id=737470))
 
-<h3 id="接口变更">接口变更</h3>
+## 附加组件开发变更
 
-<dl>
- <dt><code>nsIDOMWindowUtils</code></dt>
- <dd><code>aModifiers</code> of <code>sendMouseEvent()</code>, <code>sendTouchEvent()</code>, <code>sendMouseEventToWindow()</code>, <code>sendMouseScrollEvent()</code> and <code>sendKeyEvent()</code> supports all modifier keys which are supported by <a href="/zh-cn/DOM/KeyboardEvent#getModifierState%28%29"><code>KeyboardEvent.getModifierState()</code></a>. Use <code>MODIFIER_*</code> values. And now the 5th parameter of <code>sendKeyEvent()</code> is changed from <code>boolean</code> to <code>unsigned long</code>. For backward compatibility, if caller passes <code>true</code> or <code>false</code> to it, the behavior isn't changed. This change allows callers to specify the key's location.</dd>
- <dt><code>nsIBrowserHistory</code></dt>
- <dd>The <code>hidePage()</code> method was never implemented, and has been removed entirely in this release. The <code>addPageWithDetails()</code> method has also been removed as part of the ongoing work to make all <a href="/zh-cn/Places">Places</a> APIs asynchronous; use <code>mozIAsyncHistory.updatePlaces()</code> instead. Also, the <code>count</code> attribute was removed; it had not returned an actual count in some time (instead, it was simply indicating whether or not any entries existed). You can use <code>nsINavHistoryService.hasHistoryEntries</code> instead.</dd>
- <dt><code>inIDOMUtils</code></dt>
- <dd>The <code>inlDOMUtils.parseStyleSheet()</code> method has been added and allows the (re-)parsing of Cascading Style Sheets.</dd>
- <dt><code>nsIINIParserWriter</code></dt>
- <dd>The <code>nsIINIParserWriter.writeFile()</code> method now accepts a <code>flags</code>property. This currently offers only one option: you can now tell it to write the file in UTF-16 format instead of UTF-8, for better compatibility with Windows and certain installers.</dd>
-</dl>
+### 接口变更
 
-<h4 id="新增接口">新增接口</h4>
+- `nsIDOMWindowUtils`
+  - : `aModifiers` of `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` and `sendKeyEvent()` supports all modifier keys which are supported by [`KeyboardEvent.getModifierState()`](/zh-cn/DOM/KeyboardEvent#getModifierState%28%29). Use `MODIFIER_*` values. And now the 5th parameter of `sendKeyEvent()` is changed from `boolean` to `unsigned long`. For backward compatibility, if caller passes `true` or `false` to it, the behavior isn't changed. This change allows callers to specify the key's location.
+- `nsIBrowserHistory`
+  - : The `hidePage()` method was never implemented, and has been removed entirely in this release. The `addPageWithDetails()` method has also been removed as part of the ongoing work to make all [Places](/zh-cn/Places) APIs asynchronous; use `mozIAsyncHistory.updatePlaces()` instead. Also, the `count` attribute was removed; it had not returned an actual count in some time (instead, it was simply indicating whether or not any entries existed). You can use `nsINavHistoryService.hasHistoryEntries` instead.
+- `inIDOMUtils`
+  - : The `inlDOMUtils.parseStyleSheet()` method has been added and allows the (re-)parsing of Cascading Style Sheets.
+- `nsIINIParserWriter`
+  - : The `nsIINIParserWriter.writeFile()` method now accepts a `flags`property. This currently offers only one option: you can now tell it to write the file in UTF-16 format instead of UTF-8, for better compatibility with Windows and certain installers.
 
-<dl>
- <dt><code>nsISpeculativeConnect</code></dt>
- <dd>Provides a way to hint to the networking layer that you are likely to ask to open a connection to a given URI sometime in the near future. This lets the network layer begin the sometimes high-latency process of opening a new network connection ahead of time.</dd>
-</dl>
+#### 新增接口
 
-<h4 id="移除接口">移除接口</h4>
+- `nsISpeculativeConnect`
+  - : Provides a way to hint to the networking layer that you are likely to ask to open a connection to a given URI sometime in the near future. This lets the network layer begin the sometimes high-latency process of opening a new network connection ahead of time.
 
-<p>The following interfaces have been removed.</p>
+#### 移除接口
 
-<ul>
- <li><code>nsIGlobalHistory</code></li>
-</ul>
+The following interfaces have been removed.
 
-<h2 id="相关链接">相关链接</h2>
+- `nsIGlobalHistory`
 
-<p>{{Firefox_for_developers('14')}}</p>
+## 相关链接
+
+{{Firefox_for_developers('14')}}

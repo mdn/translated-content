@@ -6,46 +6,42 @@ tags:
   - 附加组件
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}该方法会获取一个完整的主文件 [manifest.json ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), 并返回一个序列化后的 JSON 对象。
 
-<div>该方法会获取一个完整的主文件 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json </a>, 并返回一个序列化后的 JSON 对象。</div>
+## 语法
 
-<div> </div>
+```js
+browser.runtime.getManifest()
+```
 
-<h2 id="语法">语法</h2>
+### 参数
 
-<pre class="brush:js">browser.runtime.getManifest()
-</pre>
+无。
 
-<h3 id="参数">参数</h3>
+### 返回值
 
-<p>无。</p>
+是一个能表示主文件所有信息的 JSON 对象。
 
-<h3 id="返回值">返回值</h3>
+## 浏览器兼容性
 
-<p>是一个能表示主文件所有信息的 JSON 对象。</p>
+{{Compat("webextensions.api.runtime.getManifest")}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 示例
 
-<p>{{Compat("webextensions.api.runtime.getManifest")}}</p>
+取得主文件中的 name 特性的值，并输出到控制台：
 
-<h2 id="示例">示例</h2>
+```js
+var manifest = browser.runtime.getManifest();
+console.log(manifest.name);
+```
 
-<p>取得主文件中的 name 特性的值，并输出到控制台：</p>
+{{WebExtExamples}}
 
-<pre class="brush: js">var manifest = browser.runtime.getManifest();
-console.log(manifest.name);</pre>
+> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-getManifest) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>{{WebExtExamples}}</p>
-
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-getManifest"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -72,5 +68,4 @@ console.log(manifest.name);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

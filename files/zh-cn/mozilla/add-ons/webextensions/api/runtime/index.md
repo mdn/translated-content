@@ -14,126 +14,107 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>该模块提供关于附加组件以及运行环境的信息。</p>
+该模块提供关于附加组件以及运行环境的信息。
 
-<p>它提供一组消息通信 API，允许你：</p>
+它提供一组消息通信 API，允许你：
 
-<ul>
- <li>在附加组件的不同模块间通信。</li>
- <li>和其它的附加组件通信。</li>
- <li>和 native 应用通信。</li>
-</ul>
+- 在附加组件的不同模块间通信。
+- 和其它的附加组件通信。
+- 和 native 应用通信。
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("runtime.Port")}}</dt>
- <dd>表示两个特定上下文之间的连接的一端，可用于交换消息。</dd>
- <dt>{{WebExtAPIRef("runtime.MessageSender")}}</dt>
- <dd>
- <p>包含有关消息或连接请求的发件人的信息。</p>
- </dd>
- <dt>{{WebExtAPIRef("runtime.PlatformOs")}}</dt>
- <dd>标识浏览器的操作系统。</dd>
- <dt>{{WebExtAPIRef("runtime.PlatformArch")}}</dt>
- <dd>标识浏览器的处理器架构。</dd>
- <dt>{{WebExtAPIRef("runtime.PlatformInfo")}}</dt>
- <dd>包含有关浏览器正在运行的平台的信息。</dd>
- <dt>{{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}</dt>
- <dd>{{WebExtAPIRef("runtime.requestUpdateCheck()")}} 的返回结果。</dd>
- <dt>{{WebExtAPIRef("runtime.OnInstalledReason")}}</dt>
- <dd>{{WebExtAPIRef("runtime.onInstalled")}} 事件被触发的原因。</dd>
- <dt>{{WebExtAPIRef("runtime.OnRestartRequiredReason")}}</dt>
- <dd>{{WebExtAPIRef("runtime.onRestartRequired")}} 事件被触发的原因。</dd>
-</dl>
+- {{WebExtAPIRef("runtime.Port")}}
+  - : 表示两个特定上下文之间的连接的一端，可用于交换消息。
+- {{WebExtAPIRef("runtime.MessageSender")}}
+  - : 包含有关消息或连接请求的发件人的信息。
+- {{WebExtAPIRef("runtime.PlatformOs")}}
+  - : 标识浏览器的操作系统。
+- {{WebExtAPIRef("runtime.PlatformArch")}}
+  - : 标识浏览器的处理器架构。
+- {{WebExtAPIRef("runtime.PlatformInfo")}}
+  - : 包含有关浏览器正在运行的平台的信息。
+- {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
+  - : {{WebExtAPIRef("runtime.requestUpdateCheck()")}} 的返回结果。
+- {{WebExtAPIRef("runtime.OnInstalledReason")}}
+  - : {{WebExtAPIRef("runtime.onInstalled")}} 事件被触发的原因。
+- {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
+  - : {{WebExtAPIRef("runtime.onRestartRequired")}} 事件被触发的原因。
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("runtime.lastError")}}</dt>
- <dd>当异步方法执行时发生了错误，它需要向其调用方报告时，该值会被设置。</dd>
- <dt>{{WebExtAPIRef("runtime.id")}}</dt>
- <dd>当前扩展的 ID。</dd>
-</dl>
+- {{WebExtAPIRef("runtime.lastError")}}
+  - : 当异步方法执行时发生了错误，它需要向其调用方报告时，该值会被设置。
+- {{WebExtAPIRef("runtime.id")}}
+  - : 当前扩展的 ID。
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("runtime.getBackgroundPage()")}}</dt>
- <dd>取得当前扩展的后台页的 <a href="/zh-CN/docs/Web/API/Window">Window</a> 对象。</dd>
- <dt>{{WebExtAPIRef("runtime.openOptionsPage()")}}</dt>
- <dd>
- <p>打开你的扩展的 <a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">选项页面</a>。</p>
- </dd>
- <dt>{{WebExtAPIRef("runtime.getManifest()")}}</dt>
- <dd>获得完整的 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 声明文件的序列化对象。</dd>
- <dt>{{WebExtAPIRef("runtime.getURL()")}}</dt>
- <dd>给定某个打包在扩展中的资源的基于 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 相对路径，返回一个完整有效的 URL。</dd>
- <dt>{{WebExtAPIRef("runtime.setUninstallURL()")}}</dt>
- <dd>指定一个此扩展被卸载后打开的 URL。</dd>
- <dt>{{WebExtAPIRef("runtime.reload()")}}</dt>
- <dd>重新加载此扩展。</dd>
- <dt>{{WebExtAPIRef("runtime.requestUpdateCheck()")}}</dt>
- <dd>检查此扩展的更新。</dd>
- <dt>{{WebExtAPIRef("runtime.connect()")}}</dt>
- <dd>建立一个页面脚本到扩展主进程，或扩展主进程到页面脚本之间的通信连接。</dd>
- <dt>{{WebExtAPIRef("runtime.connectNative()")}}</dt>
- <dd>
- <div>建立一个浏览器扩展与用户电脑上的原生应用的通信连接。</div>
- </dd>
- <dt>{{WebExtAPIRef("runtime.sendMessage()")}}</dt>
- <dd>发送一条消息到此扩展或其他扩展的事件监听器，类似于  {{WebExtAPIRef('runtime.connect')}} 但只能发送一条消息，以及可选的响应处理函数。</dd>
- <dt>{{WebExtAPIRef("runtime.sendNativeMessage()")}}</dt>
- <dd>从扩展发送一条消息到原生应用。</dd>
- <dt>{{WebExtAPIRef("runtime.getPlatformInfo()")}}</dt>
- <dd>返回当前所在平台的信息。</dd>
- <dt>{{WebExtAPIRef("runtime.getBrowserInfo()")}}</dt>
- <dd>返回此扩展所在的浏览器的信息。</dd>
- <dt>{{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}</dt>
- <dd>返回此扩展所在目录的 DirectoryEntry。</dd>
-</dl>
+- {{WebExtAPIRef("runtime.getBackgroundPage()")}}
+  - : 取得当前扩展的后台页的 [Window](/zh-CN/docs/Web/API/Window) 对象。
+- {{WebExtAPIRef("runtime.openOptionsPage()")}}
+  - : 打开你的扩展的 [选项页面](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)。
+- {{WebExtAPIRef("runtime.getManifest()")}}
+  - : 获得完整的 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 声明文件的序列化对象。
+- {{WebExtAPIRef("runtime.getURL()")}}
+  - : 给定某个打包在扩展中的资源的基于 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 相对路径，返回一个完整有效的 URL。
+- {{WebExtAPIRef("runtime.setUninstallURL()")}}
+  - : 指定一个此扩展被卸载后打开的 URL。
+- {{WebExtAPIRef("runtime.reload()")}}
+  - : 重新加载此扩展。
+- {{WebExtAPIRef("runtime.requestUpdateCheck()")}}
+  - : 检查此扩展的更新。
+- {{WebExtAPIRef("runtime.connect()")}}
+  - : 建立一个页面脚本到扩展主进程，或扩展主进程到页面脚本之间的通信连接。
+- {{WebExtAPIRef("runtime.connectNative()")}}
+  - : 建立一个浏览器扩展与用户电脑上的原生应用的通信连接。
+- {{WebExtAPIRef("runtime.sendMessage()")}}
+  - : 发送一条消息到此扩展或其他扩展的事件监听器，类似于 {{WebExtAPIRef('runtime.connect')}} 但只能发送一条消息，以及可选的响应处理函数。
+- {{WebExtAPIRef("runtime.sendNativeMessage()")}}
+  - : 从扩展发送一条消息到原生应用。
+- {{WebExtAPIRef("runtime.getPlatformInfo()")}}
+  - : 返回当前所在平台的信息。
+- {{WebExtAPIRef("runtime.getBrowserInfo()")}}
+  - : 返回此扩展所在的浏览器的信息。
+- {{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}
+  - : 返回此扩展所在目录的 DirectoryEntry。
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("runtime.onStartup")}}</dt>
- <dd>当一个拥有此扩展的账户第一次启动时触发，注意若处于隐私模式中则不会触发。</dd>
- <dt>{{WebExtAPIRef("runtime.onInstalled")}}</dt>
- <dd>当扩展第一次安装，扩展更新，浏览器更新后触发。</dd>
- <dt>{{WebExtAPIRef("runtime.onSuspend")}}</dt>
- <dd>当扩展将被停止前触发，使得扩展可以执行一些清理工作。</dd>
- <dt>{{WebExtAPIRef("runtime.onSuspendCanceled")}}</dt>
- <dd>在此事件 {{WebExtAPIRef("runtime.onSuspend")}} 后触发，表明扩展最终没有被停止。</dd>
- <dt>{{WebExtAPIRef("runtime.onUpdateAvailable")}}</dt>
- <dd>当扩展更新可用时触发，注意若扩展运行中，更新不会马上被安装。</dd>
- <dt>{{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}}</dt>
- <dd>当浏览器更新可用时触发，注意浏览器需要重启才能安装更新。</dd>
- <dt>{{WebExtAPIRef("runtime.onConnect")}}</dt>
- <dd>与扩展进程或页面脚本（content script）建立通信连接时触发。</dd>
- <dt>{{WebExtAPIRef("runtime.onConnectExternal")}}</dt>
- <dd>与其他扩展建立通信连接时触发。</dd>
- <dt>{{WebExtAPIRef("runtime.onMessage")}}</dt>
- <dd>当收到扩展进程或页面脚本（content script）的消息时触发。</dd>
- <dt>{{WebExtAPIRef("runtime.onMessageExternal")}}</dt>
- <dd>当收到其他扩展的消息时触发，不能在页面脚本（content script）中使用。</dd>
- <dt>{{WebExtAPIRef("runtime.onRestartRequired")}}</dt>
- <dd>当设备要重启时触发。</dd>
-</dl>
+- {{WebExtAPIRef("runtime.onStartup")}}
+  - : 当一个拥有此扩展的账户第一次启动时触发，注意若处于隐私模式中则不会触发。
+- {{WebExtAPIRef("runtime.onInstalled")}}
+  - : 当扩展第一次安装，扩展更新，浏览器更新后触发。
+- {{WebExtAPIRef("runtime.onSuspend")}}
+  - : 当扩展将被停止前触发，使得扩展可以执行一些清理工作。
+- {{WebExtAPIRef("runtime.onSuspendCanceled")}}
+  - : 在此事件 {{WebExtAPIRef("runtime.onSuspend")}} 后触发，表明扩展最终没有被停止。
+- {{WebExtAPIRef("runtime.onUpdateAvailable")}}
+  - : 当扩展更新可用时触发，注意若扩展运行中，更新不会马上被安装。
+- {{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}}
+  - : 当浏览器更新可用时触发，注意浏览器需要重启才能安装更新。
+- {{WebExtAPIRef("runtime.onConnect")}}
+  - : 与扩展进程或页面脚本（content script）建立通信连接时触发。
+- {{WebExtAPIRef("runtime.onConnectExternal")}}
+  - : 与其他扩展建立通信连接时触发。
+- {{WebExtAPIRef("runtime.onMessage")}}
+  - : 当收到扩展进程或页面脚本（content script）的消息时触发。
+- {{WebExtAPIRef("runtime.onMessageExternal")}}
+  - : 当收到其他扩展的消息时触发，不能在页面脚本（content script）中使用。
+- {{WebExtAPIRef("runtime.onRestartRequired")}}
+  - : 当设备要重启时触发。
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}} {{WebExtExamples("h2")}}</p>
+{{Compat}} {{WebExtExamples("h2")}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -160,5 +141,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -3,56 +3,52 @@ title: What next?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
 translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>You will now be ready to start turning your idea for a browser extension into reality. Before you start that journey, it's worth being aware of a few things that will help to make it a smooth one.</p>
+You will now be ready to start turning your idea for a browser extension into reality. Before you start that journey, it's worth being aware of a few things that will help to make it a smooth one.
 
-<h2 id="你的开发环境">你的开发环境</h2>
+## 你的开发环境
 
-<p>你不需要任何特殊的开发或构建环境工具来创建浏览器扩展：只需要一个简单的文本编辑器就可以创建出很好的浏览器扩展。当然，你可能一直在做 web 开发有一套你想去配置的开发工具和环境。如果是这样，你需要意识到一些事情。</p>
+你不需要任何特殊的开发或构建环境工具来创建浏览器扩展：只需要一个简单的文本编辑器就可以创建出很好的浏览器扩展。当然，你可能一直在做 web 开发有一套你想去配置的开发工具和环境。如果是这样，你需要意识到一些事情。
 
-<p>如果你使用了打包压缩工具来交付你最终的代码，你需要提交你的源码到<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_$translate?tolocale=zh-CN#The_review_process"> AMO </a>审查。此外，用于压缩、混淆、构建的工具需要是开源的 (或提供无限的免费使用), 并且可以在审阅者的计算机（Windows、Mac 或 Linux）上运行。主要是，我们的审阅者无法使用商业或基于 Web 的工具。</p>
+如果你使用了打包压缩工具来交付你最终的代码，你需要提交你的源码到[ AMO ](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_next_$translate?tolocale=zh-CN#The_review_process)审查。此外，用于压缩、混淆、构建的工具需要是开源的 (或提供无限的免费使用), 并且可以在审阅者的计算机（Windows、Mac 或 Linux）上运行。主要是，我们的审阅者无法使用商业或基于 Web 的工具。
 
-<p> </p>
+[学习更多关于构建工具](/en-US/Add-ons/Source_Code_Submission#About_build_tools)
 
-<p><a href="/en-US/Add-ons/Source_Code_Submission#About_build_tools">学习更多关于构建工具</a></p>
+## Third-party libraries
 
-<h2 id="Third-party_libraries">Third-party libraries</h2>
+Third-party libraries are a great way to add complex features or functionality to your browser extensions quickly. When you submit an extension to the [AMO review process](#The_review_processv), the process will also consider any third-party libraries used. To streamline the review, make sure you always download third-party libraries from their official website or repository, and if the library is minified provide a link to the source code. Please note that third-party libraries cannot be modified in any way.
 
-<p>Third-party libraries are a great way to add complex features or functionality to your browser extensions quickly. When you submit an extension to the <a href="#The_review_processv">AMO review process</a>, the process will also consider any third-party libraries used. To streamline the review, make sure you always download third-party libraries from their official website or repository, and if the library is minified provide a link to the source code. Please note that third-party libraries cannot be modified in any way.</p>
+[Learn more about submitting source code](/en-US/Add-ons/Source_Code_Submission)
 
-<p><a href="/en-US/Add-ons/Source_Code_Submission">Learn more about submitting source code</a></p>
+## The Firefox Add-on Distribution Agreement
 
-<h2 id="The_Firefox_Add-on_Distribution_Agreement">The Firefox Add-on Distribution Agreement</h2>
+Browser extensions need to be signed to install into the release or beta versions of Firefox. Signing takes place in addons.mozilla.org (AMO) and is subject to the terms and conditions of the Firefox Add-on Distribution Agreement. The goal of the agreement is to ensure Firefox users get access to well supported, quality add-ons that enhance the Firefox experience.
 
-<p>Browser extensions need to be signed to install into the release or beta versions of Firefox. Signing takes place in addons.mozilla.org (AMO) and is subject to the terms and conditions of the Firefox Add-on Distribution Agreement. The goal of the agreement is to ensure Firefox users get access to well supported, quality add-ons that enhance the Firefox experience.</p>
+[Read the agreement](/Add-ons/AMO/Policy/Agreement)
 
-<p><a href="/Add-ons/AMO/Policy/Agreement">Read the agreement</a></p>
+[Learn more about signing](/en-US/Add-ons/WebExtensions/Distribution)
 
-<p><a href="/en-US/Add-ons/WebExtensions/Distribution">Learn more about signing</a></p>
+## The review process
 
-<h2 id="The_review_process">The review process</h2>
+When a browser extension is submitted for signing, it's subject to automated review. It may also be subject to a manual review, when the automated review determines that a manual review is needed. Your browser extension won't be signed until it’s passed the automated review and may have its signing revoked if it fails to pass the manual review. The review process follows a strict set of guidelines, so it’s easy to check and avoid any likely review problems.
 
-<p>When a browser extension is submitted for signing, it's subject to automated review. It may also be subject to a manual review, when the automated review determines that a manual review is needed. Your browser extension won't be signed until it’s passed the automated review and may have its signing revoked if it fails to pass the manual review. The review process follows a strict set of guidelines, so it’s easy to check and avoid any likely review problems.</p>
+[Check out the review policy and guidelines](/en-US/Add-ons/AMO/Policy/Reviews)
 
-<p><a href="/en-US/Add-ons/AMO/Policy/Reviews">Check out the review policy and guidelines</a></p>
+## AMO featured browser extensions
 
-<h2 id="AMO_featured_browser_extensions">AMO featured browser extensions</h2>
+If you choose to list your browser extension on AMO, your extension could be featured on the AMO website, in the Firefox browser’s add-on manager, or elsewhere on a Mozilla website. We've compiled a list of guidelines about how extensions are selected for featuring, by following these guidelines you give your extension the best chance of being featured.
 
-<p>If you choose to list your browser extension on AMO, your extension could be featured on the AMO website, in the Firefox browser’s add-on manager, or elsewhere on a Mozilla website. We've compiled a list of guidelines about how extensions are selected for featuring, by following these guidelines you give your extension the best chance of being featured.</p>
+[Learn more about getting your add-ons featured](/en-US/Add-ons/AMO/Policy/Featured)
 
-<p><a href="/en-US/Add-ons/AMO/Policy/Featured">Learn more about getting your add-ons featured</a></p>
+## Continue your learning experience
 
-<h2 id="Continue_your_learning_experience">Continue your learning experience</h2>
+Now you know what lies ahead, it's time to dive into more details about browser extension development. In the sections that follow, you’ll discover:
 
-<p>Now you know what lies ahead, it's time to dive into more details about browser extension development. In the sections that follow, you’ll discover:</p>
-
-<ul>
- <li>More about the fundamental concepts behind browser extensions, starting with details on how to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs">use the JavaScript APIs</a>.</li>
- <li>A guide to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface">user interface components</a> available to your browser extensions.</li>
- <li>A collection of how-to guides on achieving key tasks in your extensions or making use of the JavaScript APIs.</li>
- <li>Information on how to port other browser extensions to Firefox.</li>
- <li>Details about the Firefox specific workflows you can use to develop browser extensions.</li>
- <li>A full reference guide to the JavaScript APIs.</li>
- <li>A full reference guide to the Manifest keys.</li>
-</ul>
+- More about the fundamental concepts behind browser extensions, starting with details on how to [use the JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs).
+- A guide to the [user interface components](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface) available to your browser extensions.
+- A collection of how-to guides on achieving key tasks in your extensions or making use of the JavaScript APIs.
+- Information on how to port other browser extensions to Firefox.
+- Details about the Firefox specific workflows you can use to develop browser extensions.
+- A full reference guide to the JavaScript APIs.
+- A full reference guide to the Manifest keys.

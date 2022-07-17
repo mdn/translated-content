@@ -6,36 +6,35 @@ tags:
   - 附加组件
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/name
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row" style="width: 30%;">值类型</th>
-   <td><code>字符串（String）</code></td>
-  </tr>
-  <tr>
-   <th scope="row">强制性</th>
-   <td>强制</td>
-  </tr>
-  <tr>
-   <th scope="row">示例</th>
-   <td>
-    <pre class="brush: json">
-"name": "附加组件的名称"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row" style="width: 30%">值类型</th>
+      <td><code>字符串（String）</code></td>
+    </tr>
+    <tr>
+      <th scope="row">强制性</th>
+      <td>强制</td>
+    </tr>
+    <tr>
+      <th scope="row">示例</th>
+      <td><pre class="brush: json">"name": "附加组件的名称"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>附加组件的名称。用于在用户界面和 addons.mozilla.org 网站上显示标识名称。</p>
+附加组件的名称。用于在用户界面和 addons.mozilla.org 网站上显示标识名称。
 
-<p>关于本地化，可查看 <a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
+关于本地化，可查看 [localizable property](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: json">"name": "插件的名称"</pre>
+```json
+"name": "插件的名称"
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("webextensions.manifest.name")}}</p>
+{{Compat("webextensions.manifest.name")}}

@@ -71,8 +71,6 @@ Each interface will have its own page too. It will describe the purpose of the i
 - Slug: _Web/API/AudioContext_
 - Tags: must include the API name as a tag (here _Web Audio API_), as well as _Interface._
 
-<!---->
-
 - Title: _AudioNode_
 - Slug: _Web/API/AudioNode_
 - Tags: must include the API name as a tag (here _Web Audio API_), as well as _Interface_.

@@ -3,82 +3,69 @@ title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}向你的扩展或其他扩展发送单条消息。如果想发给你自己的扩展，则省略 `extensionId` 参数。扩展中所有页面的{{WebExtAPIRef('runtime.onMessage')}}将会被触发，除了调用`runtime.sendMessage的页面。`
 
-<div>向你的扩展或其他扩展发送单条消息。</div>
+如果发送给其他扩展，则将参数 `extensionId` 设置为其他扩展的 ID。其他扩展的 {{WebExtAPIRef('runtime.onMessageExternal')}} 将会被触发。
 
-<div>如果想发给你自己的扩展，则省略 <code>extensionId</code> 参数。扩展中所有页面的{{WebExtAPIRef('runtime.onMessage')}}将会被触发，除了调用<code>runtime.sendMessage的页面。</code></div>
+此接口不能给 content script 发消息，如果要给 content script 发消息，请使用 {{WebExtAPIRef('tabs.sendMessage')}}。
 
-<p>如果发送给其他扩展，则将参数 <code>extensionId</code> 设置为其他扩展的 ID。其他扩展的 {{WebExtAPIRef('runtime.onMessageExternal')}} 将会被触发。</p>
+这是个异步方法，将返回一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
-<p>此接口不能给 content script 发消息，如果要给 content script 发消息，请使用 {{WebExtAPIRef('tabs.sendMessage')}}。</p>
+Syntax
 
-<p>这是个异步方法，将返回一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>。</p>
-
-<p>Syntax</p>
-
-<pre class="brush:js">var sending = browser.runtime.sendMessage(
+```js
+var sending = browser.runtime.sendMessage(
   extensionId,             // optional string
   message,                 // any
   options                  // optional object
 )
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. 若你想要发给不同的扩展，这里传入接收方的扩展 ID。The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a> key in manifest.json, then <code>extensionId</code> should have this value. Otherwise it should be have the ID that was generated for the intended recipient. 若此省略此参数，则发送给自己的扩展。</dd>
- <dt><code>message</code></dt>
- <dd><code>any</code>. 任何可以序列化成 JSON 的东西。</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd><code>object</code>.
- <dl>
-  <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.</dd>
-  <dt><code>toProxyScript{{optional_inline}}</code></dt>
-  <dd><code>boolean</code>. Must be True if the message is intended for a PAC file loaded using the {{WebExtAPIRef("proxy")}} API.</dd>
- </dl>
- </dd>
-</dl>
+- `extensionId`{{optional_inline}}
+  - : `string`. 若你想要发给不同的扩展，这里传入接收方的扩展 ID。The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) key in manifest.json, then `extensionId` should have this value. Otherwise it should be have the ID that was generated for the intended recipient. 若此省略此参数，则发送给自己的扩展。
+- `message`
+  - : `any`. 任何可以序列化成 JSON 的东西。
+- `options`{{optional_inline}}
+  - : `object`.
+    - `includeTlsChannelId`{{optional_inline}}
+      - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.
+    - `toProxyScript` {{optional_inline}}
+      - : `boolean`. Must be True if the message is intended for a PAC file loaded using the {{WebExtAPIRef("proxy")}} API.
 
-<p>根据给出的参数不同，API 遵循如下规则：</p>
+根据给出的参数不同，API 遵循如下规则：
 
-<ul>
- <li><strong>只有 1 个参数：</strong>将会被当做 message 发送给自己的扩展。</li>
- <li><strong>有 2 个参数：</strong>
-  <ul>
-   <li>若第二个参数符合下面的规则，将会被当做 <code>(message, options)</code>，将消息发送给自己的扩展：
-    <ol>
-     <li>一个合法的配置对象（也就是说这个对象只包含 options 参数支持的属性）</li>
-     <li>null</li>
-     <li>undefined</li>
-    </ol>
-   </li>
-   <li>否则，将会被当做 <code>(extensionId, message)。</code>消息将会给发送给 <code>extensionId</code> 指定 ID 的扩展</li>
-  </ul>
- </li>
- <li><strong>有 3 个参数：</strong>将会被当做 <code>(extensionId, message, options)</code>. 消息将会给发送给 <code>extensionId</code> 指定 ID 的扩展</li>
-</ul>
+- **只有 1 个参数**：将会被当做 message 发送给自己的扩展。
+- **有 2 个参数**：
 
-<div class="note">
-<p><strong>备注：</strong> 在 Firefox 55 之前，只给出 2 个参数时，规则会有所不同：<br>
- Under the old rules, if the first argument was a string, it was treated as the <code>extensionId</code>, with the message as the second argument. This meant that if you called <code>sendMessage()</code> with arguments like <code>("my-message", {})</code>, then it would send an empty message to the extension identified by "my-message". Under the new rules, with these arguments you would send the message "my-message" internally, with an empty options object.</p>
-</div>
+  - 若第二个参数符合下面的规则，将会被当做 `(message, options)`，将消息发送给自己的扩展：
 
-<h3 id="Return_value">Return value</h3>
+    1.  一个合法的配置对象（也就是说这个对象只包含 options 参数支持的属性）
+    2.  null
+    3.  undefined
 
-<p>返回一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>。若接收方响应，Promise 将会变为 fulfilled 并且返回接收方响应的 JSON 对象（数字、字符串、数组、true/false 都是合法的 JSON 对象）。否则，Promise 会变为 fulfilled 但是不返回任何参数。如果发生了连接错误，Promise 将会变为 rejected 并返回一个错误消息。</p>
+  - 否则，将会被当做 `(extensionId, message)。`消息将会给发送给 `extensionId` 指定 ID 的扩展
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- **有 3 个参数**：将会被当做 `(extensionId, message, options)`. 消息将会给发送给 `extensionId` 指定 ID 的扩展
 
-<p>{{Compat("webextensions.api.runtime.sendMessage")}}</p>
+> **备注：** 在 Firefox 55 之前，只给出 2 个参数时，规则会有所不同：
+> Under the old rules, if the first argument was a string, it was treated as the `extensionId`, with the message as the second argument. This meant that if you called `sendMessage()` with arguments like `("my-message", {})`, then it would send an empty message to the extension identified by "my-message". Under the new rules, with these arguments you would send the message "my-message" internally, with an empty options object.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>Here's a content script that sends a message to the background script when the user clicks the content window. The message payload is <code>{greeting: "Greeting from the content script"}</code>, and the sender also expects to get a response, which is handled in the <code>handleResponse</code> function:</p>
+返回一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。若接收方响应，Promise 将会变为 fulfilled 并且返回接收方响应的 JSON 对象（数字、字符串、数组、true/false 都是合法的 JSON 对象）。否则，Promise 会变为 fulfilled 但是不返回任何参数。如果发生了连接错误，Promise 将会变为 rejected 并返回一个错误消息。
 
-<pre class="brush: js">// content-script.js
+## Browser compatibility
+
+{{Compat("webextensions.api.runtime.sendMessage")}}
+
+## Examples
+
+Here's a content script that sends a message to the background script when the user clicks the content window. The message payload is `{greeting: "Greeting from the content script"}`, and the sender also expects to get a response, which is handled in the `handleResponse` function:
+
+```js
+// content-script.js
 
 function handleResponse(message) {
   console.log(`Message from the background script:  ${message.response}`);
@@ -95,11 +82,13 @@ function notifyBackgroundPage(e) {
   sending.then(handleResponse, handleError);
 }
 
-window.addEventListener("click", notifyBackgroundPage);</pre>
+window.addEventListener("click", notifyBackgroundPage);
+```
 
-<p>The corresponding background script looks like this:</p>
+The corresponding background script looks like this:
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function handleMessage(request, sender, sendResponse) {
   console.log("Message from the content script: " +
@@ -107,18 +96,16 @@ function handleMessage(request, sender, sendResponse) {
   sendResponse({response: "Response from background script"});
 }
 
-browser.runtime.onMessage.addListener(handleMessage);</pre>
+browser.runtime.onMessage.addListener(handleMessage);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-sendMessage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-sendMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -145,5 +132,4 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

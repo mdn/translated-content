@@ -3,48 +3,50 @@ title: Toolbar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>常说的 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">浏览器动作（browser action）</a>, 指通过在工具栏上上添加新按钮，提供用户互动选项，用户可点击按钮与你的扩展进行互动。<br>
- <img src="browser-action.png"></p>
+常说的 [浏览器动作（browser action）](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), 指通过在工具栏上上添加新按钮，提供用户互动选项，用户可点击按钮与你的扩展进行互动。
+![](browser-action.png)
 
-<p>工具栏按钮（browser action）与地址栏按钮（page action）极为相似。区分其不同点及使用，请参看 <a href="/en-US/Add-ons/WebExtensions/user_interface/Page_actions#Page_actions_and_browser_actions">Page actions and browser actions</a>.</p>
+工具栏按钮（browser action）与地址栏按钮（page action）极为相似。区分其不同点及使用，请参看 [Page actions and browser actions](/en-US/Add-ons/WebExtensions/user_interface/Page_actions#Page_actions_and_browser_actions).
 
-<h2 id="指定浏览器动作">指定浏览器动作</h2>
+## 指定浏览器动作
 
-<p>通过 manifest.json 里的关键字<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> 来定义浏览器动作的属性：</p>
+通过 manifest.json 里的关键字[`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 来定义浏览器动作的属性：
 
-<pre class="brush: json">"browser_action": {
+```json
+"browser_action": {
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
   },
   "default_title": "Whereami?"
-}</pre>
+}
+```
 
-<p>必须定义的键是 <code>default_icon</code>.</p>
+必须定义的键是 `default_icon`.
 
-<p>有两种方法来指定浏览器动作：带弹出框（<a href="/en-US/Add-ons/WebExtensions/Popups">popup</a>）和不带弹出框（<a href="/en-US/Add-ons/WebExtensions/Popups">popup</a>）。</p>
+有两种方法来指定浏览器动作：带弹出框（[popup](/en-US/Add-ons/WebExtensions/Popups)）和不带弹出框（[popup](/en-US/Add-ons/WebExtensions/Popups)）。
 
-<p>如果不指定弹出框，当用户点击按钮时，点击事件将被发送至扩展，而扩展可用以下函数来捕获 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked"><code>browserAction.onClicked</code></a>:</p>
+如果不指定弹出框，当用户点击按钮时，点击事件将被发送至扩展，而扩展可用以下函数来捕获 [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(handleClick);</pre>
+```js
+browser.browserAction.onClicked.addListener(handleClick);
+```
 
-<p>如果指定了弹出框，当用户点击按钮时，点击事件将不会被发送，而是显示出弹出框。用户能够通过弹出框进行互动，并且点击框外区域时弹出框会自动关闭。请参看文章 <a href="/en-US/Add-ons/WebExtensions/Popups">Popup </a>来了解更多关于创建和管理弹出框的细节。</p>
+如果指定了弹出框，当用户点击按钮时，点击事件将不会被发送，而是显示出弹出框。用户能够通过弹出框进行互动，并且点击框外区域时弹出框会自动关闭。请参看文章 [Popup ](/en-US/Add-ons/WebExtensions/Popups)来了解更多关于创建和管理弹出框的细节。
 
-<p>注意一个扩展只能指定一个浏览器动作。</p>
+注意一个扩展只能指定一个浏览器动作。
 
-<p>可通过<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API 在程序里更改你的浏览器动作的属性。</p>
+可通过[`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API 在程序里更改你的浏览器动作的属性。
 
-<h2 id="图标">图标</h2>
+## 图标
 
-<p>想了解更多关于如何创建浏览器动作图标信息，请参看<a href="https://design.firefox.com/photon/index.html">Photon Design System</a> 文档里的 <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> 部分。</p>
+想了解更多关于如何创建浏览器动作图标信息，请参看[Photon Design System](https://design.firefox.com/photon/index.html) 文档里的 [Iconography](https://design.firefox.com/photon/visuals/iconography.html) 部分。
 
-<h2 id="范例">范例</h2>
+## 范例
 
-<p>在 Github 上的扩展范例库 <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> 中有两个实现浏览器动作的例子：</p>
+在 Github 上的扩展范例库 [webextensions-examples](https://github.com/mdn/webextensions-examples) 中有两个实现浏览器动作的例子：
 
-<ul>
- <li><a href="https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/">bookmark-it</a> uses a browser action without a popup.</li>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a> uses a browser action with a popup.</li>
-</ul>
+- [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) uses a browser action without a popup.
+- [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) uses a browser action with a popup.
