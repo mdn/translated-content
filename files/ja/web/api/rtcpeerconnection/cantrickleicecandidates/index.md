@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
+page-type: web-api-instance-property
 tags:
   - API
   - ICE
@@ -13,87 +14,61 @@ tags:
   - WebRTC
   - WebRTC API
   - canTrickleIceCandidates
+browser-compat: api.RTCPeerConnection.canTrickleIceCandidates
 translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
-<div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary">読み取り専用の <strong>{{domxref("RTCPeerConnection")}}</strong> プロパティ <code><strong>canTrickleIceCandidates</strong></code> は、リモート・ピアが <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice">trickled ICE 候補</a>を受け入れることができるかどうかを示す {{jsxref("Boolean")}} を返します。</span></p>
+{{APIRef("WebRTC")}}
 
-<p><strong>ICE トリックリング</strong>とは、最初のオファーや回答がすでに相手に送られた後も、候補者を送り続けるプロセスのことです。</p>
+**{{domxref("RTCPeerConnection")}}** は読み取り専用のプロパティで、リモートピアーが[トリクル ICE 候補](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice)を受け入れることができるかどうかを示す論理値を返します。
 
-<p>This property is only set after having called {{domxref("RTCPeerConnection.setRemoteDescription()")}}.  Ideally, your signaling protocol provides a way to detect trickling support, so that you don't need to rely on this property. A WebRTC browser will always support trickle ICE. If trickling isn't supported, or you aren't able to tell, you can check for a falsy value for this property and then wait until the value of {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} changes to <code>"completed"</code> before creating and sending the initial offer. That way, the offer contains all of the candidates.</p>
+**ICE トリクリング**とは、最初の提案や回答がすでに相手に送られた後も、候補を送り続けるプロセスのことです。
 
-<h2 id="Syntax">Syntax</h2>
+このプロパティは {{domxref("RTCPeerConnection.setRemoteDescription()")}} を呼び出した後にのみ設定されます。理想的には、シグナルプロトコルがトリクルサポートを検出する方法を提供し、このプロパティに依存する必要がないようにすることです。　WebRTC ブラウザーは、常にトリクル ICE に対応しています。トリクリングに対応していない場合、または指示することができない場合は、このプロパティの偽値をチェックし、 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} の値が `"completed" ` に変わるまで待ってから最初の提案を作成し送信することができます。そうすることで、提案にすべての候補が含まれるようになります。
 
-<pre class="syntaxbox"> var <em>canTrickle</em> = <em>RTCPeerConnection</em>.canTrickleIceCandidates;</pre>
+## 値
 
-<h3 id="Value">Value</h3>
+論理値で、リモートピアーがトリクル ICE 候補を受け入れることができる場合は `true`、受け入れることができない場合は `false` となります。リモートピアーが確立されていない場合、この値は `null` となります。
 
-<p>A {{jsxref("Boolean")}} that is <code>true</code> if the remote peer can accept trickled ICE candidates and <code>false</code> if it cannot. If no remote peer has been established, this value is <code>null</code>.</p>
+> **Note:** このプロパティの値は、ローカルピアーが {{domxref("RTCPeerConnection.setRemoteDescription()") }}を呼び出した時点で決定されます。
+ICE　エージェントがリモートピアーがトリクル ICE 候補に対応しているかどうかを判断するために、指定された説明が使用されます。
 
-<div class="note">
-<p><strong>Note:</strong> This property's value is determined once the local peer has called {{domxref("RTCPeerConnection.setRemoteDescription()")}}; the provided description is used by the ICE agent to determine whether or not the remote peer supports trickled ICE candidates.</p>
-</div>
+## 例
 
-<h2 id="Example">Example</h2>
+```js
+const pc = new RTCPeerConnection();
 
-<pre class="brush: js">var pc = new RTCPeerConnection();
+function waitToCompleteIceGathering(pc) {
+    return new Promise(resolve => {
+        pc.addEventListener('icegatheringstatechange', e => (e.target.iceGatheringState === 'complete') && resolve(pc.localDescription));
+    });
+}
+
 // The following code might be used to handle an offer from a peer when
 // it isn't known whether it supports trickle ICE.
-pc.setRemoteDescription(remoteOffer)
-  .then(_ =&gt; pc.createAnswer())
-  .then(answer =&gt; pc.setLocalDescription(answer))
-  .then(_ =&gt;
-    if (pc.canTrickleIceCandidates) {
-      return pc.localDescription;
-    }
-    return new Promise(r =&gt; {
-      pc.addEventListener('icegatheringstatechange', e =&gt; {
-        if (e.target.iceGatheringState === 'complete') {
-          r(pc.localDescription);
-        }
-      });
-    });
-  })
-  .then(answer =&gt; sendAnswerToPeer(answer)) // signaling message
-  .catch(e =&gt; handleError(e));
+async function newPeer(remoteOffer) {
+    await pc.setRemoteDescription(remoteOffer);
+    const offer = await pc.createOffer();
+    await pc.setLocalDescription(offer);
+    if (pc.canTrickleIceCandidates) return pc.localDescription;
+    const answer = await waitToCompleteIceGathering(pc);
+    sendAnswerToPeer(answer); //To peer via signaling channel
+}
+// Handle error with try/catch
 
-pc.addEventListener('icecandidate', e =&gt; {
-  if (pc.canTrickleIceCandidates) {
-    sendCandidateToPeer(e.candidate); // signaling message
-  }
-});
-</pre>
+pc.addEventListener('icecandidate', e => (pc.canTrickleIceCandidates) && sendCandidateToPeer(e.candidate));
+```
 
-<h2 id="Specifications">Specifications</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-cantrickleicecandidates', 'RTCPeerConnection.canTrickleIceCandidates') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.RTCPeerConnection.canTrickleIceCandidates")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/Guide/API/WebRTC">WebRTC</a></li>
- <li>{{domxref("RTCPeerConnection.addIceCandidate()")}}</li>
- <li><a href="/ja/docs/Web/API/WebRTC_API/Session_lifetime">Lifetime of a WebRTC session</a></li>
-</ul>
+- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection.addIceCandidate()")}}
+- [WebRTC セッションの寿命](/ja/docs/Web/API/WebRTC_API/Session_lifetime)
