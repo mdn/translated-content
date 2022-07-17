@@ -12,8 +12,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angula
     <tr>
       <th scope="row">预备知识：</th>
       <td>
-        熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言的核心，
-        <a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">终端命令行</a>的知识。
+        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，以及<a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">终端命令行</a>的知识。
       </td>
     </tr>
     <tr>
