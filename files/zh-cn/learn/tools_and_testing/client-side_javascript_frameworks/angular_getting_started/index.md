@@ -32,7 +32,7 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
 - 集成良好的库（library），涵盖各种功能，包括路由、表单管理、客户端-服务器通信等
 - 开发人员工具，可帮助您开发、构建、测试和更新代码
 
-当你用 Angular 搭建一个应用，你正在利用一个可以从单开发人员项目扩展到企业级应用程序的平台。Angular 被设计用来使版本迭代尽可能简单。因此，您可以毫不费力地利用最新成果（developments）。最为重要的是，Angular 的生态系统由多达 170 万的开发人员、库（library）作者和内容创作者组成的多元化群体组成。
+当你用 Angular 搭建一个应用，你正在利用一个可以从单开发人员项目扩展到企业级应用程序的平台。Angular 被设计用来使版本迭代尽可能简单。因此，你可以毫不费力地利用最新成果（developments）。最为重要的是，Angular 的生态系统由多达 170 万的开发人员、库（library）作者和内容创作者组成的多元化群体组成。
 
 在你开始探索 Angular 平台之前，你需要了解 Angular 的命令行界面（CLI）。Angular 的命令行界面是最快、最简单、也最值得推荐的开发 Angular 应用的方法。Angular 的命令行界面使许多任务变得简单。以下是一些示例：
 
@@ -67,7 +67,7 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
         <code><a href="https://angular.cn/cli/e2e">ng e2e</a></code>
       </td>
       <td>
-        构建一个 Angular 应用并启动开发服务器，然后运行端到端测试。
+      构建一个 Angular 应用并启动开发服务器，然后运行端到端测试。
       </td>
     </tr>
   </tbody>
@@ -129,7 +129,7 @@ ng serve
     此文件充当应用程序中其他文件的中心枢纽。
 2. `app.component.ts`：也称为类，包含着应用程序主页的逻辑。
 3. `app.component.html`：包含 `AppComponent` 的 HTML。此文件的内容也被称为模板。
-    模板将确定视图或您在浏览器中看到的内容。
+    模板将确定视图或你在浏览器中看到的内容。
 4. `app.component.css`: 包含 `AppComponent` 的样式。如果要定义仅适用于特定组件的样式（而不是整个应用程序），则可以使用此文件。
 
 Angular 中的组件由三个主要部分组成：模板、样式和类。例如，`app.component.ts`、`app.component.html` 和 `app.component.css` 共同构成了 `AppComponent`。此结构将逻辑、视图和样式分开，使应用程序更易于维护和缩放。通过这种方式，你从一开始就使用最佳实践。Angular 的命令行界面同时也生成一个叫作 `app.component.spec.ts` 的用于组件测试的文件。但本教程不进行测试，因此你可以忽略这个文件。每当你生成组件时，命令行界面都会使用你指定的名称在目录中创建这四个文件。
