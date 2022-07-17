@@ -15,13 +15,13 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <p>我们有必要先从这门语言的历史谈起。在 1995 年 Netscape 一位名为 Brendan Eich 的工程师创造了 JavaScript，随后在 1996 年初，JavaScript 首先被应用于 Netscape 2 浏览器上。最初的 JavaScript 名为 LiveScript，但是因为一个糟糕的营销策略而被重新命名，该策略企图利用 Sun Microsystem 的 Java 语言的流行性，将它的名字从最初的 LiveScript 更改为 JavaScript——尽管两者之间并没有什么共同点。这便是之后混淆产生的根源。</p>
 
-<p>几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 <a href="http://www.ecma-international.org">Ecma International</a>（一个欧洲标准化组织）， {{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第三版</a>的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。</p>
+<p>几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 <a href="http://www.ecma-international.org">Ecma International</a>（一个欧洲标准化组织），{{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第三版</a>的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。</p>
 
 <div class="note">
 <p><strong>备注：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
 </div>
 
-<p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，<a href="http://nodejs.org">Node.js</a> 之类的服务器端环境，NoSQL 数据库（如开源的 <a href="http://couchdb.apache.org">Apache CouchDB</a>）、嵌入式计算机，以及包括 <a href="http://www.gnome.org">GNOME</a> （注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
+<p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，<a href="http://nodejs.org">Node.js</a> 之类的服务器端环境，NoSQL 数据库（如开源的 <a href="http://couchdb.apache.org">Apache CouchDB</a>）、嵌入式计算机，以及包括 <a href="http://www.gnome.org">GNOME</a>（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
 
 <h2 id="概览">概览</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
  <li>{{jsxref("Symbol")}}（ES2015 新增）</li>
 </ul>
 
-<p>…哦，还有看上去有些…奇怪的 {{jsxref("undefined")}}（未定义）类型和 {{jsxref("null")}}（空）类型。此外还有{{jsxref("Array")}}（数组）类型，以及分别用于表示日期和正则表达式的 {{jsxref("Date")}}（日期）和 {{jsxref("RegExp")}}（正则表达式），这三种类型都是特殊的对象。严格意义上说，Function（函数）也是一种特殊的对象。所以准确来说，JavaScript 中的类型应该包括这些：</p>
+<p>…哦，还有看上去有些…奇怪的 {{jsxref("undefined")}}（未定义）类型和 {{jsxref("null")}}（空）类型。此外还有 {{jsxref("Array")}}（数组）类型，以及分别用于表示日期和正则表达式的 {{jsxref("Date")}}（日期）和 {{jsxref("RegExp")}}（正则表达式），这三种类型都是特殊的对象。严格意义上说，Function（函数）也是一种特殊的对象。所以准确来说，JavaScript 中的类型应该包括这些：</p>
 
 <ul>
  <li>{{jsxref("Number")}}（数字）</li>
