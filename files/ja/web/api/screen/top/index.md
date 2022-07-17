@@ -1,35 +1,35 @@
 ---
 title: Screen.top
 slug: Web/API/Screen/top
+page-type: web-api-instance-property
 tags:
   - API
-  - 'API:Microsoft Extensions'
-  - 'API:Mozilla Extensions'
-  - 'API:WebKit Extensions'
+  - API:Microsoft Extensions
+  - API:Mozilla Extensions
+  - API:WebKit Extensions
   - DOM
   - Non-standard
   - Property
   - Window
+browser-compat: api.Screen.top
 translation_of: Web/API/Screen/top
 ---
-<p>{{APIRef("CSSOM")}}{{Non-standard_Header}}</p>
+{{APIRef("CSSOM")}}{{deprecated_header}}{{Non-standard_Header}}
 
-<p>現在の画面の上端からの距離をピクセル単位で返します。</p>
+現在の画面の上端からの距離をピクセル単位で返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">let <var>top</var> = window.screen.top;</pre>
+数値です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>仕様書の一部ではありません。</p>
+仕様書の一部ではありません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Screen.left")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{DOMxRef("Screen.left")}}</li>
-</ul>
+- {{DOMxRef("Screen.left")}}

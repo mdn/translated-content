@@ -1,58 +1,44 @@
 ---
 title: Screen.pixelDepth
 slug: Web/API/Screen/pixelDepth
+page-type: web-api-instance-property
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
-  - screen
+  - API
+  - CSSOM View
+  - NeedsMarkupWork
+  - Property
+  - Reference
+browser-compat: api.Screen.pixelDepth
 translation_of: Web/API/Screen/pixelDepth
 ---
-<p>{{APIRef("CSSOM")}}</p>
+{{APIRef("CSSOM")}}
 
-<p>画面のビット深度を返します。CSSOM により、互換性の理由から <code>24</code> を返す実装もあります。そうでないものについては、<a href="#browser_compatibility">ブラウザーの互換性</a>の節を参照してください。</p>
+画面のビット深度を返します。 CSSOM により、互換性の理由から `24` を返す実装もあります。そうでないものについては、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">let <var>depth</var> = window.screen.pixelDepth</pre>
+数値です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js; notranslate">// if there is not adequate bit depth
-// choose a simpler color
-if ( window.screen.pixelDepth &gt; 8 ) {
+```js
+// ビット深度が十分でない場合、
+// より簡単な色を選択します。
+if ( window.screen.pixelDepth > 8 ) {
   document.style.color = "#FAEBD7";
 } else {
   document.style.color = "#FFFFFF";
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-screen-pixeldepth', 'Screen.pixelDepth')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Screen.pixelDepth")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{DOMxRef("Screen.colorDepth")}}</li>
-</ul>
+- {{DOMxRef("Screen.colorDepth")}}

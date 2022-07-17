@@ -1,32 +1,30 @@
 ---
 title: Screen.left
 slug: Web/API/Screen/left
+page-type: web-api-instance-property
 tags:
   - API
-  - 'API:Microsoft Extensions'
-  - 'API:Mozilla Extensions'
-  - 'API:WebKit Extensions'
+  - API:Microsoft Extensions
+  - API:Mozilla Extensions
+  - API:WebKit Extensions
   - DOM
   - Non-standard
   - Property
-  - プロパティ
+browser-compat: api.Screen.left
 translation_of: Web/API/Screen/left
 ---
-<p>{{APIRef("CSSOM")}}{{Non-standard_Header}}</p>
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-<p>メイン画面の左端から現在の画面の左端までの距離をピクセル単位で返します。</p>
+メイン画面の左端から現在の画面の左端までの距離をピクセル単位で返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">var <var>left</var> = window.screen.left;
-</pre>
+数値です。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Screen.left")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{DOMxRef("screen.top")}}</li>
-</ul>
+- {{DOMxRef("screen.top")}}
