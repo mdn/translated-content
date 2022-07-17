@@ -5,82 +5,64 @@ tags:
   - 附加组件连接本地应用程序
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}该方法能够把附加组件和用户计算机上的一个本地应用程序相连接。同时我们需要本地应用程序的名称作为参数。当启动本地应用程序的时候会返回一个{{WebExtAPIRef("runtime.Port")}} 对象给调用者。之后可以通过该对象的 Port.onMessage() 和 Port.postMessage() 方法来和本地应用程序进行信息交互。本地应用程序会一直运行直到退出，除非调用了 `Port.disconnect()`方法，亦或创建该 Port 对象的页面被摧毁了。一旦 Port 对象断开连接，浏览器会给该进程几秒的时间以便安全优雅的退出和释放，之后如果发现该进程没退出的话就直接暴力干掉。
 
-<div>该方法能够把附加组件和用户计算机上的一个本地应用程序相连接。</div>
+更多信息，请查看 [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
 
-<div> </div>
+## 语法
 
-<div>同时我们需要本地应用程序的名称作为参数。当启动本地应用程序的时候会返回一个{{WebExtAPIRef("runtime.Port")}} 对象给调用者。</div>
-
-<div> </div>
-
-<div>之后可以通过该对象的 Port.onMessage() 和 Port.postMessage() 方法来和本地应用程序进行信息交互。</div>
-
-<div> </div>
-
-<div>本地应用程序会一直运行直到退出，除非调用了 <code>Port.disconnect()</code>方法，亦或创建该 Port 对象的页面被摧毁了。一旦 Port 对象断开连接，浏览器会给该进程几秒的时间以便安全优雅的退出和释放，之后如果发现该进程没退出的话就直接暴力干掉。</div>
-
-<div> </div>
-
-<p>更多信息，请查看 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>.</p>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush:js">var port = browser.runtime.connectNative(
+```js
+var port = browser.runtime.connectNative(
   application // 这是一个字符串
 )
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>application</code></dt>
- <dd><code>值类型为string</code>. 该参数的值为要连接的本地应用程序的名称。必须要跟 <a href="/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest">native application's manifest file</a> 中的"name"特性的值一致。</dd>
-</dl>
+- `application`
+  - : `值类型为string`. 该参数的值为要连接的本地应用程序的名称。必须要跟 [native application's manifest file](/en-US/Add-ons/WebExtensions/Native_messaging#App_manifest) 中的"name"特性的值一致。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>是一个 {{WebExtAPIRef('runtime.Port')}} 对象。该对象是用来跟本地应用程序进行消息交互的。</p>
+是一个 {{WebExtAPIRef('runtime.Port')}} 对象。该对象是用来跟本地应用程序进行消息交互的。
 
-<h2 id="浏览器的兼容性">浏览器的兼容性</h2>
+## 浏览器的兼容性
 
-<p>{{Compat("webextensions.api.runtime.connectNative")}}</p>
+{{Compat("webextensions.api.runtime.connectNative")}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>本示例中连接了本地应用程序"ping_pong"并且启动了监听以便接收消息。当用户单击浏览器上的操作按钮时它会发送一个本地应用程序的消息：</p>
+本示例中连接了本地应用程序"ping_pong"并且启动了监听以便接收消息。当用户单击浏览器上的操作按钮时它会发送一个本地应用程序的消息：
 
-<pre class="brush: js">/*
+```js
+/*
 启动时，连接"ping_pong"本地应用程序。
 */
-var port = <code class="language-js">browser</code>.runtime.connectNative("ping_pong");
+var port = browser.runtime.connectNative("ping_pong");
 
 /*
 监听 (接收) 来自"ping_pong"本地应用程序的消息。
 */
-port.onMessage.addListener((response) =&gt; {
+port.onMessage.addListener((response) => {
   console.log("Received: " + response);
 });
 
 /*
 当浏览器上的单击操作被触发时，发送一个消息给本地应用程序。
 */
-<code class="language-js">browser</code>.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
   port.postMessage("ping");
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> 该 API 是基于 Chromium 的 <a href="https://developer.chrome.com/extensions/runtime#method-connectNative"><code>chrome.runtime</code></a> API. 本文档采自 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a>.</p>
+> **备注：** 该 API 是基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-connectNative) API. 本文档采自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json).
+>
+> Microsoft Edge 的兼容性数据由微软公司提供，并被列入以下许可证 Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge 的兼容性数据由微软公司提供，并被列入以下许可证 Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,5 +89,4 @@ port.onMessage.addListener((response) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

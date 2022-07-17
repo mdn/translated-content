@@ -3,69 +3,63 @@ title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>使用指定的搜索引擎或默认搜索引擎进行搜索。</p>
+使用指定的搜索引擎或默认搜索引擎进行搜索。
 
-<p>结果将显示在一个新的选项卡中，或者如果给出了 tabId 参数，则显示在由此标识的选项卡中。</p>
+结果将显示在一个新的选项卡中，或者如果给出了 tabId 参数，则显示在由此标识的选项卡中。
 
-<p>要在扩展程序中使用此功能，您必须要求<code>"search"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">有明确许可</a>.</p>
+要在扩展程序中使用此功能，您必须要求`"search"` [有明确许可](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<p>获取安装的搜索引擎，请使用 {{WebExtAPIRef("search.get()")}}.</p>
+获取安装的搜索引擎，请使用 {{WebExtAPIRef("search.get()")}}.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:js notranslate">browser.search.search(
+```js
+browser.search.search(
   searchProperties       // object
 )
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>searchProperties</code></dt>
- <dd>
- <p><code>object</code>. 拥有以下属性的对象：</p>
+- `searchProperties`
 
- <dl>
-  <dt><code>query</code></dt>
-  <dd><code>字符串</code>. 进行查询的内容。</dd>
-  <dt><code>engine</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>字符串。</code>.搜索引擎的名称。如果指定的搜索引擎名称不存在，该函数将引发错误。如果省略此属性，则使用默认的搜索引擎。</p>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd>
-  <p>整型。用于显示搜索结果的选项卡。如果省略此属性，搜索结果将显示在新选项卡中。</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. 拥有以下属性的对象：
 
-<h3 id="返回值">返回值</h3>
+    - `query`
+      - : `字符串`. 进行查询的内容。
+    - `engine`{{optional_inline}}
+      - : `字符串。`.搜索引擎的名称。如果指定的搜索引擎名称不存在，该函数将引发错误。如果省略此属性，则使用默认的搜索引擎。
+    - `tabId`{{optional_inline}}
+      - : 整型。用于显示搜索结果的选项卡。如果省略此属性，搜索结果将显示在新选项卡中。
 
-<p>无。</p>
+### 返回值
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+无。
 
-<p>{{Compat("webextensions.api.search.search", 10)}}</p>
+## 浏览器兼容
 
-<h2 id="例子">例子</h2>
+{{Compat("webextensions.api.search.search", 10)}}
 
-<p>使用默认搜索引擎进行搜索。结果显示在新选项卡中：</p>
+## 例子
 
-<pre class="brush: js no-line-numbers notranslate">function search() {
+使用默认搜索引擎进行搜索。结果显示在新选项卡中：
+
+```js
+function search() {
   browser.search.search({
     query: "styracosaurus"
   });
 }
 
 browser.browserAction.onClicked.addListener(search);
-</pre>
+```
 
-<p>使用维基百科进行搜索。结果显示在新选项卡中：</p>
+使用维基百科进行搜索。结果显示在新选项卡中：
 
-<pre class="brush: js no-line-numbers notranslate">function search() {
+```js
+function search() {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)"
@@ -73,11 +67,12 @@ browser.browserAction.onClicked.addListener(search);
 }
 
 browser.browserAction.onClicked.addListener(search);
-</pre>
+```
 
-<p>使用维基百科进行搜索。结果将显示在活动选项卡中：</p>
+使用维基百科进行搜索。结果将显示在活动选项卡中：
 
-<pre class="brush: js no-line-numbers notranslate">function search(tab) {
+```js
+function search(tab) {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)",
@@ -86,6 +81,6 @@ browser.browserAction.onClicked.addListener(search);
 }
 
 browser.browserAction.onClicked.addListener(search);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

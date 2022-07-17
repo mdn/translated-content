@@ -4,38 +4,41 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/主页地址
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">值类型</th>
-   <td>字符串（<code>String</code>）</td>
-  </tr>
-  <tr>
-   <th scope="row">强制性</th>
-   <td>非强制</td>
-  </tr>
-  <tr>
-   <th scope="row">示例</th>
-   <td>
-    <pre class="brush: json">
-"homepage_url": "https://example.org/my-addon"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">值类型</th>
+      <td>字符串（<code>String</code>）</td>
+    </tr>
+    <tr>
+      <th scope="row">强制性</th>
+      <td>非强制</td>
+    </tr>
+    <tr>
+      <th scope="row">示例</th>
+      <td>
+        <pre class="brush: json">
+"homepage_url": "https://example.org/my-addon"</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>该扩展的主页地址。</p>
+该扩展的主页地址。
 
-<p>如果 <a href="/en-US/Add-ons/WebExtensions/manifest.json/developer">developer</a> 键存在且包含“url”属性，它将会覆盖 <code>homepage_url</code> 键。</p>
+如果 [developer](/en-US/Add-ons/WebExtensions/manifest.json/developer) 键存在且包含“url”属性，它将会覆盖 `homepage_url` 键。
 
-<p>这是一个 <a href="/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json">localizable property</a>.</p>
+这是一个 [localizable property](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: json">"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"</pre>
+```json
+"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.manifest.homepage_url")}}</p>
+{{Compat("webextensions.manifest.homepage_url")}}

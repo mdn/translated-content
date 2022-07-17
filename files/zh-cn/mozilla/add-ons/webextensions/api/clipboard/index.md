@@ -8,29 +8,25 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard
 original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>WebExtention 的 <code>clipboard</code> API 增加了一个将图像复制到剪贴板的函数。目前，这个 API 仅支持复制图像，但我们期望它未来支持复制文本和 HTML（译者注：原文如此，可能是指被支持复制富内容之后的标准剪贴板 API 取代）。</p>
+WebExtention 的 `clipboard` API 增加了一个将图像复制到剪贴板的函数。目前，这个 API 仅支持复制图像，但我们期望它未来支持复制文本和 HTML（译者注：原文如此，可能是指被支持复制富内容之后的标准剪贴板 API 取代）。
 
-<p>这个  WebExtension API 之所以存在，主要是因为标准的 Web 剪贴板 API <a href="/zh-CN/docs/Web/API/Clipboard_API">Clipboard API</a> 不支持将图像写入剪贴板。一旦标准剪贴板 API 对非文本剪贴板内容的支持进入通用状态，则此 API 可能会被弃用。</p>
+这个 WebExtension API 之所以存在，主要是因为标准的 Web 剪贴板 API [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API) 不支持将图像写入剪贴板。一旦标准剪贴板 API 对非文本剪贴板内容的支持进入通用状态，则此 API 可能会被弃用。
 
-<p>Reading from the clipboard is not supported by this API, because the clipboard can already be read using the standard web platform APIs. See <a href="/zh-CN/Add-ons/WebExtensions/Interact_with_the_clipboard#Reading_from_the_clipboard">Interacting with the clipboard</a>.</p>
+Reading from the clipboard is not supported by this API, because the clipboard can already be read using the standard web platform APIs. See [Interacting with the clipboard](/zh-CN/Add-ons/WebExtensions/Interact_with_the_clipboard#Reading_from_the_clipboard).
 
-<p>This API is based on Chrome's <code><a href="https://developer.chrome.com/apps/clipboard">clipboard</a></code> API, but that API is only available for Chrome apps, not extensions.</p>
+This API is based on Chrome's [`clipboard`](https://developer.chrome.com/apps/clipboard) API, but that API is only available for Chrome apps, not extensions.
 
-<p>To use this API you need the <code>"clipboardWrite"</code> extension <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you need the `"clipboardWrite"` extension [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="函数">函数</h2>
+## 函数
 
-<dl>
- <dt>{{WebExtAPIRef("clipboard.setImageData()")}}</dt>
- <dd>复制图像到剪切板。</dd>
-</dl>
+- {{WebExtAPIRef("clipboard.setImageData()")}}
+  - : 复制图像到剪切板。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.clipboard")}} {{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.clipboard")}} {{WebExtExamples("h2")}}
 
-<div class="note">
-<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a> API.</p>
-</div>
+> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

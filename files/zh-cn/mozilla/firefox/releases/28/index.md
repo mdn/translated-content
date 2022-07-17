@@ -6,112 +6,90 @@ tags:
   - Firefox 28
 translation_of: Mozilla/Firefox/Releases/28
 ---
-<div>{{FirefoxSidebar}}</div><p>Firefox 28 was released on March 18, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+{{FirefoxSidebar}}
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+Firefox 28 was released on March 18, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+## Changes for Web developers
 
-<ul>
- <li>The {{domxref("console.exception")}} property has been added ({{bug("922214")}}).</li>
- <li>The {{domxref("console.assert")}} property has been added ({{bug("760193")}}).</li>
- <li>App Manager: a new Manifest Editor was added.</li>
- <li>App Manager: the toolbox used for debugging apps is now embedded in the app manager UI.</li>
- <li>Web Console: added a "split console" mode - press Escape to quickly open the console in any other tool.</li>
- <li>Web Console: added a dark theme for the output.</li>
- <li>Debugger: pretty-print minified JavaScript.</li>
- <li>Debugger: simply hover over any variable or click on it to bring up a pop-up that displays the current value.</li>
- <li>Inspector: added a color picker in rules view and various tooltips.</li>
- <li>Browser Toolbox: allows add-on and platform developers to use almost all of the developer tools while targeting the browser itself.</li>
-</ul>
+### Developer Tools
 
-<p>More details in <a href="https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/">this post</a>.</p>
+- The {{domxref("console.exception")}} property has been added ({{bug("922214")}}).
+- The {{domxref("console.assert")}} property has been added ({{bug("760193")}}).
+- App Manager: a new Manifest Editor was added.
+- App Manager: the toolbox used for debugging apps is now embedded in the app manager UI.
+- Web Console: added a "split console" mode - press Escape to quickly open the console in any other tool.
+- Web Console: added a dark theme for the output.
+- Debugger: pretty-print minified JavaScript.
+- Debugger: simply hover over any variable or click on it to bring up a pop-up that displays the current value.
+- Inspector: added a color picker in rules view and various tooltips.
+- Browser Toolbox: allows add-on and platform developers to use almost all of the developer tools while targeting the browser itself.
 
-<h3 id="CSS">CSS</h3>
+More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/).
 
-<ul>
- <li>Support for multi-line <a href="/en-US/docs/Web/Guide/CSS/Flexible_boxes">flexbox</a> has been added ({{bug("939901")}}).</li>
- <li>Longhand East Asian <a href="/en-US/docs/Web/CSS/list-style-type">counter styles</a> have been implemented ({{bug("934072")}}).</li>
- <li>Experimental support for the {{cssxref("background-blend-mode")}} property has been added, but is disabled by default ({{bug("841601")}}).</li>
- <li>The <code>none</code> value has been added to {{cssxref("font-variant-ligatures")}} ({{bug("913264")}}).</li>
- <li>Support for the :hover user action pseudo-class on pseudo-elements({{bug("922669")}}).</li>
-</ul>
+### CSS
 
-<h3 id="HTML">HTML</h3>
+- Support for multi-line [flexbox](/en-US/docs/Web/Guide/CSS/Flexible_boxes) has been added ({{bug("939901")}}).
+- Longhand East Asian [counter styles](/en-US/docs/Web/CSS/list-style-type) have been implemented ({{bug("934072")}}).
+- Experimental support for the {{cssxref("background-blend-mode")}} property has been added, but is disabled by default ({{bug("841601")}}).
+- The `none` value has been added to {{cssxref("font-variant-ligatures")}} ({{bug("913264")}}).
+- Support for the :hover user action pseudo-class on pseudo-elements({{bug("922669")}}).
 
-<ul>
- <li><code>&lt;input type=color&gt;</code> and <code>&lt;input type=number&gt;</code> have been implemented, disabled by default.</li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- `<input type=color>` and `<input type=number>` have been implemented, disabled by default.
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla">ECMAScript 2015</a> implementation continues:
+### JavaScript
 
-  <ul>
-   <li>New <code>Array</code> methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ({{bug("894658")}}).</li>
-  </ul>
- </li>
- <li>A bug causing that {{jsxref("Object.getOwnPropertyNames()")}} did not see unresolved properties of {{jsxref("Error")}} objects has been fixed ({{bug("724768")}}).</li>
-</ul>
+- [ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues:
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+  - New `Array` methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ({{bug("894658")}}).
 
-<ul>
- <li><code>HTMLVideoElement.canPlayType('video/webm')</code> now reports <code>maybe</code>.({{bug("884275")}}).</li>
- <li>The {{domxref("DocumentFragment.getElementById()")}} method has been implemented. E.g. <code>document.createDocumentFragment().getElementById()</code>({{bug("933193")}}).</li>
- <li>The {{domxref("KeyboardEvent.repeat")}} attribute has been implemented ({{bug("600117")}}).</li>
- <li>The {{domxref("File")}} constructor, e.g. <code>new File(["foo"], "foo.txt")</code> has been implemented. ({{bug("819900")}}).</li>
- <li>The {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ({{bug(757726)}}).</li>
- <li>The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ({{bug(943668)}}).</li>
- <li>The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference <code>canvas.focusring.enabled</code> must be set to <code>true</code> to activate both ({{bug(540456)}}).</li>
- <li>The <code>willReadFrequently</code> context attribute for "<code>2d</code>" canvas contexts has been implemented (see {{domxref("HTMLCanvasElement.getContext()")}}) ({{bug(884226)}}).</li>
- <li>The following attributes and methods of {{domxref("NavigatorID")}} have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, and {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} ({{bug(925847)}}).</li>
- <li>The {{domxref("NonDocumentTypeChildNode.previousElementSibling" , "previousElementSibling")}} and {domxref("NonDocumentTypeChildNode.nextElementSibling" , "nextElementSibling")}} properties has been removed from {{domxref("DocumentType")}}, because of compatibility problems ({{bug(932501)}}).</li>
-</ul>
+- A bug causing that {{jsxref("Object.getOwnPropertyNames()")}} did not see unresolved properties of {{jsxref("Error")}} objects has been fixed ({{bug("724768")}}).
 
-<h3 id="MathML">MathML</h3>
+### Interfaces/APIs/DOM
 
-<ul>
- <li>Support of “mathvariant” attribute ({{bug("114365")}}).</li>
-</ul>
+- `HTMLVideoElement.canPlayType('video/webm')` now reports `maybe`.({{bug("884275")}}).
+- The {{domxref("DocumentFragment.getElementById()")}} method has been implemented. E.g. `document.createDocumentFragment().getElementById()`({{bug("933193")}}).
+- The {{domxref("KeyboardEvent.repeat")}} attribute has been implemented ({{bug("600117")}}).
+- The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ({{bug("819900")}}).
+- The {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ({{bug(757726)}}).
+- The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ({{bug(943668)}}).
+- The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference `canvas.focusring.enabled` must be set to `true` to activate both ({{bug(540456)}}).
+- The `willReadFrequently` context attribute for "`2d`" canvas contexts has been implemented (see {{domxref("HTMLCanvasElement.getContext()")}}) ({{bug(884226)}}).
+- The following attributes and methods of {{domxref("NavigatorID")}} have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, and {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} ({{bug(925847)}}).
+- The {{domxref("NonDocumentTypeChildNode.previousElementSibling" , "previousElementSibling")}} and {domxref("NonDocumentTypeChildNode.nextElementSibling" , "nextElementSibling")}} properties has been removed from {{domxref("DocumentType")}}, because of compatibility problems ({{bug(932501)}}).
 
-<h3 id="SVG">SVG</h3>
+### MathML
 
-<p><em>No change.</em></p>
+- Support of “mathvariant” attribute ({{bug("114365")}}).
 
-<h3 id="AudioVideo">Audio/Video</h3>
+### SVG
 
-<ul>
- <li>Support Opus in WebM ({{bug("887978")}}).</li>
- <li>Support VP9 video decoder ({{bug("833023")}}).</li>
-</ul>
+_No change._
 
-<h3 id="Network">Network</h3>
+### Audio/Video
 
-<ul>
- <li>Support of <code>SPDY/2</code> has been removed.</li>
-</ul>
+- Support Opus in WebM ({{bug("887978")}}).
+- Support VP9 video decoder ({{bug("833023")}}).
 
-<h2 id="Changes_for_addon_and_Mozilla_developers">Changes for addon and Mozilla developers</h2>
+### Network
 
-<ul>
- <li>The interface of <a href="/en-US/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm">DeferredTask.jsm</a> has been changed, and the <code>isPending()</code>, <code>start()</code>, <code>flush()</code>, and <code>cancel()</code> methods have been removed ({{bug("940408")}}).</li>
-</ul>
+- Support of `SPDY/2` has been removed.
 
-<h2 id="Security">Security</h2>
+## Changes for addon and Mozilla developers
 
-<ul>
- <li>CSP was not enforced in sandboxed iframes. This has been fixed ({{bug(886164)}}).</li>
- <li>The CSP 1.1 experimental <code>script-nonce</code> directive has been implemented. The preference <code>security.csp.experimentalEnabled</code> should be set to <code>true</code> to enable this functionality ({{bug(855326)}}).</li>
-</ul>
+- The interface of [DeferredTask.jsm](/en-US/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm) has been changed, and the `isPending()`, `start()`, `flush()`, and `cancel()` methods have been removed ({{bug("940408")}}).
 
-<h2 id="See_also">See also</h2>
+## Security
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/28/Site_Compatibility">Site Compatibility for Firefox 28</a></li>
-</ul>
+- CSP was not enforced in sandboxed iframes. This has been fixed ({{bug(886164)}}).
+- The CSP 1.1 experimental `script-nonce` directive has been implemented. The preference `security.csp.experimentalEnabled` should be set to `true` to enable this functionality ({{bug(855326)}}).
 
-<h3 id="Older_versions">Older versions</h3>
+## See also
 
-<p>{{Firefox_for_developers('27')}}</p>
+- [Site Compatibility for Firefox 28](/en-US/docs/Mozilla/Firefox/Releases/28/Site_Compatibility)
+
+### Older versions
+
+{{Firefox_for_developers('27')}}

@@ -105,8 +105,6 @@ MDN 将创建一个标题为“FooBar”的新页面并且打开编辑器让你�
 1.  确保您已经登陆 MDN，并且拥有创建新页面的权限。
 2.  在您的浏览器中输入以下 URL 并回车。
 
-<!---->
-
     https://developer.mozilla.org/en-US/docs/new
 
 此时，MDN 创建新页面时有一个地方专门用来填写标题，打开编辑器后您就可以添加内容到这个新页面。请参考本文中[编辑一个已存在的页面](/zh-CN/docs/MDN/Contribute/Howto/Create_and_edit_pages$edit#Editing_an_existing_page)的小节来学习如何使用编辑器模式。

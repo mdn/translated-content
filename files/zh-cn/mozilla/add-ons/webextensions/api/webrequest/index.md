@@ -14,141 +14,116 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}为发出的 HTTP 请求在不同阶段添加事件监听器。事件监听器可以接收到请求的详细信息，也可以修改或取消请求。
 
-<div>为发出的 HTTP 请求在不同阶段添加事件监听器。事件监听器可以接收到请求的详细信息，也可以修改或取消请求。</div>
+## 概况
 
-<h2 id="概况">概况</h2>
+每个事件都会在请求的特定阶段触发。事件的顺序大概是这样的：
 
-<p>每个事件都会在请求的特定阶段触发。事件的顺序大概是这样的：</p>
+在请求过程中的任意时间，{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 可以被触发。虽然有时候触发的事件顺序不同，举个例子，在火狐浏览器中的 HSTS 过程，在 onBeforeRequest 事件执行后，onBeforeRedirect 事件会被立即触发。
 
-<p>在请求过程中的任意时间，{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 可以被触发。虽然有时候触发的事件顺序不同，举个例子，在火狐浏览器中的 HSTS 过程，在 onBeforeRequest 事件执行后，onBeforeRedirect 事件会被立即触发。</p>
+所有的事件，接受`onErrorOccurred事件`, `addListener()`有三个参数 :
 
-<p>所有的事件，接受<code>onErrorOccurred事件</code>, <code>addListener()</code>有三个参数 :</p>
+- 监听本身
+- 一个 {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，所以你仅可以被特定请求或特定的资源类型提醒
+- 一个可选的`extraInfoSpec`对象。你可以使用这个对象添加特定的事件命令
 
-<ul>
- <li>监听本身</li>
- <li>一个 {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，所以你仅可以被特定请求或特定的资源类型提醒</li>
- <li>一个可选的<code>extraInfoSpec</code>对象。你可以使用这个对象添加特定的事件命令</li>
-</ul>
+这个监听函数接收一个`details`对象，这个对象包含这个请求的信息。他包含一个请求 ID, 在插件中这个 ID 可以关联唯一个请求事件。这个 ID 是浏览器会话和插件上下文中唯一的。他始终在同一个请求中，贯穿着转发和授权等事件中。
 
-<p>这个监听函数接收一个<code>details</code>对象，这个对象包含这个请求的信息。他包含一个请求 ID, 在插件中这个 ID 可以关联唯一个请求事件。这个 ID 是浏览器会话和插件上下文中唯一的。他始终在同一个请求中，贯穿着转发和授权等事件中。</p>
+在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 和 [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions). 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。
 
-<p>在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> 和 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>. 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。</p>
+这个 webRequest API 不能让你进入一些安全敏感的请求，比如[update checks and OCSP checks](https://bugzilla.mozilla.org/show_bug.cgi?id=1279371).
 
-<p>这个 webRequest API 不能让你进入一些安全敏感的请求，比如<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1279371">update checks and OCSP checks</a>.</p>
+### Modifying requests
 
-<h3 id="Modifying_requests">Modifying requests</h3>
+在下边这些事件中，你可以修改请求。比如一些特别的操作：
 
-<p>在下边这些事件中，你可以修改请求。比如一些特别的操作：</p>
+- 取消请求：
 
-<ul>
- <li>取消请求：
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}</li>
-   <li>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}</li>
-   <li>{{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}</li>
-  </ul>
- </li>
- <li>重定向请求：
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}</li>
-   <li>{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}</li>
-  </ul>
- </li>
- <li>修改请求头：
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}</li>
-  </ul>
- </li>
- <li>修改响应头：
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}</li>
-  </ul>
- </li>
- <li>加入认证功能：
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}</li>
-  </ul>
- </li>
-</ul>
+  - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
+  - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
+  - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
-<p>为了完成这些操作，你需要在<code>extraInfoSpec</code>参数中添加"blocking"的值到事件的<code>addListener()</code>。这将使得监听器变成同步执行。在监听器中，你可以返回一个表明需要作修改的{{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}对象：比如说，你想要发送的修改后的请求头。</p>
+- 重定向请求：
 
-<p>从 Firefox 52 开始，监听器会返回一个<code>resolve(BlockingResponse)</code> 的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>，而不是直接返回一个<code>BlockingResponse</code>。这使得监听器可以异步地处理请求。</p>
+  - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
+  - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
-<h2 id="Types">Types</h2>
+- 修改请求头：
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.ResourceType")}}</dt>
- <dd>Represents a particular kind of resource fetched in a web request.</dd>
- <dt>{{WebExtAPIRef("webRequest.RequestFilter")}}</dt>
- <dd>An object describing filters to apply to webRequest events.</dd>
- <dt>{{WebExtAPIRef("webRequest.HttpHeaders")}}</dt>
- <dd>An array of HTTP headers. Each header is represented as an object with two properties: <code>name</code> and either <code>value</code> or <code>binaryValue</code>.</dd>
- <dt>{{WebExtAPIRef("webRequest.BlockingResponse")}}</dt>
- <dd>
- <p>An object of this type is returned by event listeners that have set <code>"blocking"</code> in their <code>extraInfoSpec</code> argument. By setting particular properties in <code>BlockingResponse</code>, the listener can modify network requests.</p>
- </dd>
- <dt>{{WebExtAPIRef("webRequest.UploadData")}}</dt>
- <dd>Contains data uploaded in a URL request.</dd>
-</dl>
+  - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
-<h2 id="Properties">Properties</h2>
+- 修改响应头：
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}</dt>
- <dd>The maximum number of times that <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged"><code>handlerBehaviorChanged()</code></a> can be called in a 10 minute period.</dd>
-</dl>
+  - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
-<h2 id="Functions">Functions</h2>
+- 加入认证功能：
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.handlerBehaviorChanged()")}}</dt>
- <dd>This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.</dd>
-</dl>
+  - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
-<h2 id="Events">Events</h2>
+为了完成这些操作，你需要在`extraInfoSpec`参数中添加"blocking"的值到事件的`addListener()`。这将使得监听器变成同步执行。在监听器中，你可以返回一个表明需要作修改的{{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}对象：比如说，你想要发送的修改后的请求头。
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.onBeforeRequest")}}</dt>
- <dd>Fired when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.</dd>
- <dt>{{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}</dt>
- <dd>Fired before sending any HTTP data, but after HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.</dd>
- <dt>{{WebExtAPIRef("webRequest.onSendHeaders")}}</dt>
- <dd>Fired just before sending headers. If your add-on or some other add-on modified headers in <code>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}</code>, you'll see the modified version here.</dd>
- <dt>{{WebExtAPIRef("webRequest.onHeadersReceived")}}</dt>
- <dd>Fired when the HTTP response headers associated with a request have been received. You can use this event to modify HTTP response headers.</dd>
- <dt>{{WebExtAPIRef("webRequest.onAuthRequired")}}</dt>
- <dd>Fired when the server asks the client to provide authentication credentials. The listener can do nothing, cancel the request, or supply authentication credentials.</dd>
- <dt>{{WebExtAPIRef("webRequest.onResponseStarted")}}</dt>
- <dd>Fired when the first byte of the response body is received. For HTTP requests, this means that the status line and response headers are available.</dd>
- <dt>{{WebExtAPIRef("webRequest.onBeforeRedirect")}}</dt>
- <dd>Fired when a server-initiated redirect is about to occur.</dd>
- <dt>{{WebExtAPIRef("webRequest.onCompleted")}}</dt>
- <dd>Fired when a request is completed.</dd>
- <dt>{{WebExtAPIRef("webRequest.onErrorOccurred")}}</dt>
- <dd>Fired when an error occurs.</dd>
-</dl>
+从 Firefox 52 开始，监听器会返回一个`resolve(BlockingResponse)` 的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)，而不是直接返回一个`BlockingResponse`。这使得监听器可以异步地处理请求。
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Types
 
-<p>{{Compat("webextensions.api.webRequest")}}</p>
+- {{WebExtAPIRef("webRequest.ResourceType")}}
+  - : Represents a particular kind of resource fetched in a web request.
+- {{WebExtAPIRef("webRequest.RequestFilter")}}
+  - : An object describing filters to apply to webRequest events.
+- {{WebExtAPIRef("webRequest.HttpHeaders")}}
+  - : An array of HTTP headers. Each header is represented as an object with two properties: `name` and either `value` or `binaryValue`.
+- {{WebExtAPIRef("webRequest.BlockingResponse")}}
+  - : An object of this type is returned by event listeners that have set `"blocking"` in their `extraInfoSpec` argument. By setting particular properties in `BlockingResponse`, the listener can modify network requests.
+- {{WebExtAPIRef("webRequest.UploadData")}}
+  - : Contains data uploaded in a URL request.
 
-<h3 id="Edge_incompatibilities">Edge incompatibilities</h3>
+## Properties
 
-<p>Promises are not supported in Edge. Use callbacks instead.</p>
+- {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
+  - : The maximum number of times that [`handlerBehaviorChanged()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) can be called in a 10 minute period.
 
-<p>{{Compat("webextensions.api.webRequest")}} {{WebExtExamples("h2")}}</p>
+## Functions
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+- {{WebExtAPIRef("webRequest.handlerBehaviorChanged()")}}
+  - : This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+## Events
 
-<div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+- {{WebExtAPIRef("webRequest.onBeforeRequest")}}
+  - : Fired when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.
+- {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}
+  - : Fired before sending any HTTP data, but after HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.
+- {{WebExtAPIRef("webRequest.onSendHeaders")}}
+  - : Fired just before sending headers. If your add-on or some other add-on modified headers in `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, you'll see the modified version here.
+- {{WebExtAPIRef("webRequest.onHeadersReceived")}}
+  - : Fired when the HTTP response headers associated with a request have been received. You can use this event to modify HTTP response headers.
+- {{WebExtAPIRef("webRequest.onAuthRequired")}}
+  - : Fired when the server asks the client to provide authentication credentials. The listener can do nothing, cancel the request, or supply authentication credentials.
+- {{WebExtAPIRef("webRequest.onResponseStarted")}}
+  - : Fired when the first byte of the response body is received. For HTTP requests, this means that the status line and response headers are available.
+- {{WebExtAPIRef("webRequest.onBeforeRedirect")}}
+  - : Fired when a server-initiated redirect is about to occur.
+- {{WebExtAPIRef("webRequest.onCompleted")}}
+  - : Fired when a request is completed.
+- {{WebExtAPIRef("webRequest.onErrorOccurred")}}
+  - : Fired when an error occurs.
+
+## Browser compatibility
+
+{{Compat("webextensions.api.webRequest")}}
+
+### Edge incompatibilities
+
+Promises are not supported in Edge. Use callbacks instead.
+
+{{Compat("webextensions.api.webRequest")}} {{WebExtExamples("h2")}}
+
+> **备注：** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -175,5 +150,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

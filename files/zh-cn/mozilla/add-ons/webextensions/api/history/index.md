@@ -14,93 +14,70 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>使用 <code>history</code> API 与浏览器历史记录进行交互。</p>
+使用 `history` API 与浏览器历史记录进行交互。
 
-<div class="note">
-<p><strong>备注：</strong> 下载也被当做一个 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem"><code>HistoryItem</code></a> 对象。因此，<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited">history.onVisited</a></code>等事件也会被下载所触发。</p>
-</div>
+> **备注：** 下载也被当做一个 [`HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) 对象。因此，[`history.onVisited`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited)等事件也会被下载所触发。
 
-<p>浏览器历史记录是对用户所访问的页面按时间顺序进行的记录和保存。history API 可以帮你实现以下功能：</p>
+浏览器历史记录是对用户所访问的页面按时间顺序进行的记录和保存。history API 可以帮你实现以下功能：
 
-<ul>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/search">查找浏览器历史记录中出现过的页面</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteUrl">移除浏览器历史记录中的单个页面</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/addUrl">向浏览器历史记录中添加页面</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteAll">移除所有浏览器历史记录中的页面</a></li>
-</ul>
+- [查找浏览器历史记录中出现过的页面](/en-US/Add-ons/WebExtensions/API/history/search)
+- [移除浏览器历史记录中的单个页面](/en-US/Add-ons/WebExtensions/API/history/deleteUrl)
+- [向浏览器历史记录中添加页面](/en-US/Add-ons/WebExtensions/API/history/addUrl)
+- [移除所有浏览器历史记录中的页面](/en-US/Add-ons/WebExtensions/API/history/deleteAll)
 
-<p>然而，用户可能多次访问单个页面，因此 API 中有访问集合“visits”的概念。所以，该 API 还可以做如下使用：</p>
+然而，用户可能多次访问单个页面，因此 API 中有访问集合“visits”的概念。所以，该 API 还可以做如下使用：
 
-<ul>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/getVisits">获取用户对单个页面的所有访问记录的集合</a></li>
- <li><a href="/en-US/Add-ons/WebExtensions/API/history/deleteRange">移除给定期间内任意页面的访问记录的集合</a></li>
-</ul>
+- [获取用户对单个页面的所有访问记录的集合](/en-US/Add-ons/WebExtensions/API/history/getVisits)
+- [移除给定期间内任意页面的访问记录的集合](/en-US/Add-ons/WebExtensions/API/history/deleteRange)
 
-<p>使用该 API 之前，扩展程序必须在其 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> 文件中获取 history 的<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">许可</a>。</p>
+使用该 API 之前，扩展程序必须在其 [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中获取 history 的[许可](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<dl>
- <dt>{{WebExtAPIRef("history.TransitionType")}}</dt>
- <dd>描述浏览器如何转到特定页面。</dd>
- <dt>{{WebExtAPIRef("history.HistoryItem")}}</dt>
- <dd>
- <p>提供浏览器历史记录中单个特定页面的详细信息。</p>
- </dd>
- <dt>{{WebExtAPIRef("history.VisitItem")}}</dt>
- <dd>
- <p>描述对一个页面的单次访问。</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("history.TransitionType")}}
+  - : 描述浏览器如何转到特定页面。
+- {{WebExtAPIRef("history.HistoryItem")}}
+  - : 提供浏览器历史记录中单个特定页面的详细信息。
+- {{WebExtAPIRef("history.VisitItem")}}
+  - : 描述对一个页面的单次访问。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{WebExtAPIRef("history.search()")}}</dt>
- <dd>在浏览器历史记录中查找符合给定条件的<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem">history.HistoryItem</a></code></dd>
- <dt>{{WebExtAPIRef("history.getVisits()")}}</dt>
- <dd>获取指定页面的访问集信息。</dd>
- <dt>{{WebExtAPIRef("history.addUrl()")}}</dt>
- <dd>为浏览器历史记录添加一个指定页面的访问。</dd>
- <dt>{{WebExtAPIRef("history.deleteUrl()")}}</dt>
- <dd>移除浏览器历史记录中所有对指定 URL 的访问。</dd>
- <dt>{{WebExtAPIRef("history.deleteRange()")}}</dt>
- <dd>移除指定时间段内对用户指定页面的访问。</dd>
- <dt>{{WebExtAPIRef("history.deleteAll()")}}</dt>
- <dd>移除浏览器历史记录中的所有访问。</dd>
-</dl>
+- {{WebExtAPIRef("history.search()")}}
+  - : 在浏览器历史记录中查找符合给定条件的[`history.HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem)
+- {{WebExtAPIRef("history.getVisits()")}}
+  - : 获取指定页面的访问集信息。
+- {{WebExtAPIRef("history.addUrl()")}}
+  - : 为浏览器历史记录添加一个指定页面的访问。
+- {{WebExtAPIRef("history.deleteUrl()")}}
+  - : 移除浏览器历史记录中所有对指定 URL 的访问。
+- {{WebExtAPIRef("history.deleteRange()")}}
+  - : 移除指定时间段内对用户指定页面的访问。
+- {{WebExtAPIRef("history.deleteAll()")}}
+  - : 移除浏览器历史记录中的所有访问。
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{WebExtAPIRef("history.onTitleChanged")}}</dt>
- <dd>
- <div>当用户访问的页面标题被记录时触发。</div>
- </dd>
- <dt>{{WebExtAPIRef("history.onVisited")}}</dt>
- <dd>每次用户访问页面时会触发，并提供该页面的 {{WebExtAPIRef("history.HistoryItem")}} 数据。</dd>
- <dt>{{WebExtAPIRef("history.onVisitRemoved")}}</dt>
- <dd>
- <p>当一个 URL 被彻底从浏览器历史记录中移除时触发。</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("history.onTitleChanged")}}
+  - : 当用户访问的页面标题被记录时触发。
+- {{WebExtAPIRef("history.onVisited")}}
+  - : 每次用户访问页面时会触发，并提供该页面的 {{WebExtAPIRef("history.HistoryItem")}} 数据。
+- {{WebExtAPIRef("history.onVisitRemoved")}}
+  - : 当一个 URL 被彻底从浏览器历史记录中移除时触发。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.history")}}</p>
+{{Compat("webextensions.api.history")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note">
-<p><strong>备注：</strong> 该 API 基于 Chromium 的<a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a> API。该文档由 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a>衍生而来。</p>
+> **备注：** 该 API 基于 Chromium 的[`chrome.history`](https://developer.chrome.com/extensions/history) API。该文档由 Chromium 代码中的[`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json)衍生而来。
+>
+> 微软 Edge 兼容性数据由微软公司提供并包含在如下证书中—— Creative Commons Attribution 3.0 United States License.
 
-<p>微软 Edge 兼容性数据由微软公司提供并包含在如下证书中—— Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -127,5 +104,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

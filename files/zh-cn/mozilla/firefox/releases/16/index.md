@@ -6,109 +6,85 @@ tags:
   - Firefox 16
 translation_of: Mozilla/Firefox/Releases/16
 ---
-<div>{{FirefoxSidebar}}</div><p>Firefox 16 shipped on October 9, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.</p>
+{{FirefoxSidebar}}
 
-<h2 id="Web开发">Web 开发</h2>
+Firefox 16 shipped on October 9, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
-<h3 id="HTML">HTML</h3>
+## Web 开发
 
-<ul>
- <li>The {{HTMLElement("meter")}} element is now supported.</li>
- <li>Support for the HTML Microdata API has been added. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=591467">bug 591467</a>)</li>
- <li>{{HTMLElement("canvas")}} now supports the CSS <code>currentColor</code> in all case. ({{bug("629882")}})</li>
- <li>{{HTMLElement("input")}} now allows filtering based on arbitrary mimetypes in <code>accept</code> ({{bug("565274")}}).</li>
- <li>Two new attributes, <code>width</code> and <code>height</code> have been added to the {{HTMLElement("input")}} element (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=683855">bug 683855</a>).</li>
-</ul>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+- The {{HTMLElement("meter")}} element is now supported.
+- Support for the HTML Microdata API has been added. ([bug 591467](https://bugzilla.mozilla.org/show_bug.cgi?id=591467))
+- {{HTMLElement("canvas")}} now supports the CSS `currentColor` in all case. ({{bug("629882")}})
+- {{HTMLElement("input")}} now allows filtering based on arbitrary mimetypes in `accept` ({{bug("565274")}}).
+- Two new attributes, `width` and `height` have been added to the {{HTMLElement("input")}} element ([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855)).
 
-<ul>
- <li>实现了标准的不带前缀的 <a href="/En/CSS/Using_CSS_transforms">CSS Transforms</a>. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=745523">bug 745523</a>)</li>
- <li>Support for reverse animation direction (keywords <code>reverse</code> and <code>alternate-reverse</code> on the {{cssxref("animation-direction")}} property) has been added. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=655920">bug 655920</a>).</li>
- <li>You can now animate the CSS {{cssxref("height")}} and {{cssxref("width")}} properties.</li>
- <li>The {{cssxref("animation-duration")}} and {{cssxref("transition-duration")}} CSS properties now reject negative values (and do not handle them as <code>0s</code> anymore) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=773102">bug 773102</a>).</li>
- <li>Support for the standard, unprefixed version of <a href="/en-US/docs/CSS/Using_CSS_transforms">CSS Transforms</a> has been landed (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=745523">bug 745523</a>). {{cssxref("&lt;length&gt;")}} cannot be used for translation values in <code>matrix()</code> and <code>matrix3d()</code> anymore ({{bug(719054)}}).</li>
- <li>Support for the standard, unprefixed version of <a href="/en-US/docs/CSS/Using_CSS_gradients">CSS Gradients</a> has been landed. Note that the syntax has changed significantly since the prefixed version, so you should read up on this (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=752187">bug 752187</a>).</li>
- <li>The {{cssxref("box-sizing", "-moz-box-sizing")}} implementation has been updated to apply to table cells too (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=338554">bug 338554</a>).</li>
- <li>Support for the standard, unprefixed version of {{cssxref("calc")}} has been landed (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=771678">bug 771678</a>).</li>
- <li>The {{cssxref("&lt;resolution&gt;")}} CSS data type has been extended to support the <code>dppx</code>(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=741644">bug 741644</a>).</li>
- <li>On screen, for <a href="/en-US/docs/CSS/Media_queries">media queries</a>, <code>dppx</code>, <code>dpi</code>, and <code>dpcm</code> are now representing values based on CSS pixels and no more with the physical units (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=771390">bug 771390</a>).</li>
- <li>Three new pseudo-classes <code>:-moz-meter-optimum</code>, <code>:-moz-meter-sub-optimum</code>, and <code>:-moz-meter-sub-sub-optimum</code> have been added for accessing/styling a {{HTMLElement("meter")}} element in a paraticular state (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=660238">bug 660238</a>).</li>
- <li>The {{cssxref("-moz-appearance")}} property gains two new values: <code>meterbar</code> and <code>meterchunk</code>. They represent components inside the {{HTMLElement("meter")}} element (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=659999">bug 659999</a>).</li>
- <li>The {{cssxref("min-width")}} and {{cssxref("min-height")}} now supports the <code>auto</code>keyword for flex items (and resolves to <code>0</code> for other items) ({{bug("763689")}}).</li>
-</ul>
+### CSS
 
-<h3 id="APIDOM">API/DOM</h3>
+- 实现了标准的不带前缀的 [CSS Transforms](/En/CSS/Using_CSS_transforms). ([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523))
+- Support for reverse animation direction (keywords `reverse` and `alternate-reverse` on the {{cssxref("animation-direction")}} property) has been added. ([bug 655920](https://bugzilla.mozilla.org/show_bug.cgi?id=655920)).
+- You can now animate the CSS {{cssxref("height")}} and {{cssxref("width")}} properties.
+- The {{cssxref("animation-duration")}} and {{cssxref("transition-duration")}} CSS properties now reject negative values (and do not handle them as `0s` anymore) ([bug 773102](https://bugzilla.mozilla.org/show_bug.cgi?id=773102)).
+- Support for the standard, unprefixed version of [CSS Transforms](/en-US/docs/CSS/Using_CSS_transforms) has been landed ([bug 745523](https://bugzilla.mozilla.org/show_bug.cgi?id=745523)). {{cssxref("&lt;length&gt;")}} cannot be used for translation values in `matrix()` and `matrix3d()` anymore ({{bug(719054)}}).
+- Support for the standard, unprefixed version of [CSS Gradients](/en-US/docs/CSS/Using_CSS_gradients) has been landed. Note that the syntax has changed significantly since the prefixed version, so you should read up on this ([bug 752187](https://bugzilla.mozilla.org/show_bug.cgi?id=752187)).
+- The {{cssxref("box-sizing", "-moz-box-sizing")}} implementation has been updated to apply to table cells too ([bug 338554](https://bugzilla.mozilla.org/show_bug.cgi?id=338554)).
+- Support for the standard, unprefixed version of {{cssxref("calc")}} has been landed ([bug 771678](https://bugzilla.mozilla.org/show_bug.cgi?id=771678)).
+- The {{cssxref("&lt;resolution&gt;")}} CSS data type has been extended to support the `dppx`([bug 741644](https://bugzilla.mozilla.org/show_bug.cgi?id=741644)).
+- On screen, for [media queries](/en-US/docs/CSS/Media_queries), `dppx`, `dpi`, and `dpcm` are now representing values based on CSS pixels and no more with the physical units ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390)).
+- Three new pseudo-classes `:-moz-meter-optimum`, `:-moz-meter-sub-optimum`, and `:-moz-meter-sub-sub-optimum` have been added for accessing/styling a {{HTMLElement("meter")}} element in a paraticular state ([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238)).
+- The {{cssxref("-moz-appearance")}} property gains two new values: `meterbar` and `meterchunk`. They represent components inside the {{HTMLElement("meter")}} element ([bug 659999](https://bugzilla.mozilla.org/show_bug.cgi?id=659999)).
+- The {{cssxref("min-width")}} and {{cssxref("min-height")}} now supports the `auto`keyword for flex items (and resolves to `0` for other items) ({{bug("763689")}}).
 
-<ul>
- <li>在{{ domxref("HTMLInputElement") }} 接口上添加了两个新的 <code>width</code> 和 <code>height</code>属性 . (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=683855">bug 683855</a>)</li>
- <li>IndexedDB 属性和方法取消前缀。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=726378">bug 726378</a>)</li>
- <li>The <a href="/en-US/docs/DOM/window.navigator.battery">Battery API</a> is now unprefixed.</li>
- <li>The Vibration API has been unprefixed.</li>
- <li>The non-standard <code>Keyboard</code> interface, prefixed as <code>mozKeyboard</code>, now has the <code>Keyboard.setSelectedOption()</code> and <code>Keyboard.setValue()</code> methods, as well as the <code>Keyboard.onfocuschange</code>. <em>This interface, only available for Firefox OS, has been removed in Firefox 31.</em></li>
- <li>The <a href="/en-US/docs/LiveConnect_Reference/java"><code>java</code></a> and <a href="/en-US/docs/LiveConnect_Reference/Packages"><code>Packages</code></a> global objects have been removed. See <a href="/en-US/docs/LiveConnect">LiveConnect</a>.</li>
- <li>The <code>CSSRule.type</code> associated with {{domxref("CSSNamespaceRule")}} has been updated from <code>UNKNOWN_RULE</code> (<code>0</code>) to <code>NAMESPACE_RULE</code> (<code>10</code>) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=765590">bug 765590</a>).</li>
- <li>WebSMS API: {{domxref("SmsRequest")}} has been superseded by the more general {{domxref("DOMRequest")}}.</li>
- <li>The non-standard {{domxref("Element.scrollTopMax")}} and {{domxref("Element.scrollLeftMax")}} read-only properties have been added ({{bug(766937)}}).</li>
- <li>The second parameter of {{domxref("Blob.blob", "Blob()")}}, when set to <code>null</code> or <code>undefined</code>, is now being handled as an empty dictionary ({{bug(7691119)}}).</li>
-</ul>
+### API/DOM
 
-<h3 id="JavaScript">JavaScript</h3>
+- 在{{ domxref("HTMLInputElement") }} 接口上添加了两个新的 `width` 和 `height`属性 . ([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
+- IndexedDB 属性和方法取消前缀。([bug 726378](https://bugzilla.mozilla.org/show_bug.cgi?id=726378))
+- The [Battery API](/en-US/docs/DOM/window.navigator.battery) is now unprefixed.
+- The Vibration API has been unprefixed.
+- The non-standard `Keyboard` interface, prefixed as `mozKeyboard`, now has the `Keyboard.setSelectedOption()` and `Keyboard.setValue()` methods, as well as the `Keyboard.onfocuschange`. _This interface, only available for Firefox OS, has been removed in Firefox 31._
+- The [`java`](/en-US/docs/LiveConnect_Reference/java) and [`Packages`](/en-US/docs/LiveConnect_Reference/Packages) global objects have been removed. See [LiveConnect](/en-US/docs/LiveConnect).
+- The `CSSRule.type` associated with {{domxref("CSSNamespaceRule")}} has been updated from `UNKNOWN_RULE` (`0`) to `NAMESPACE_RULE` (`10`) ([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590)).
+- WebSMS API: {{domxref("SmsRequest")}} has been superseded by the more general {{domxref("DOMRequest")}}.
+- The non-standard {{domxref("Element.scrollTopMax")}} and {{domxref("Element.scrollLeftMax")}} read-only properties have been added ({{bug(766937)}}).
+- The second parameter of {{domxref("Blob.blob", "Blob()")}}, when set to `null` or `undefined`, is now being handled as an empty dictionary ({{bug(7691119)}}).
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a> objects now offer <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite">isFinite</a>()</code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger">toInteger</a>()</code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger">isInteger</a>()</code> methods. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=761480">bug 761480</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=761495">bug 761495</a>)</li>
- <li>The Harmony <a href="http://wiki.ecmascript.org/doku.php?id=harmony:spread">spread operator</a> is now supported in <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> initializers (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=574130">bug 574130</a>). Note it is not yet supported in calls (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=762363">bug 762363</a>).</li>
- <li>The experimental {{jsxref("TypedArray.prototype.move()")}} method has been added (available in Aurora and Nightly channels only) ({{bug(730873)}}).</li>
-</ul>
+### JavaScript
 
-<h3 id="WebGL">WebGL</h3>
+- [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) objects now offer `isFinite()`, `toInteger()`, and `isInteger()` methods. ([bug 761480](https://bugzilla.mozilla.org/show_bug.cgi?id=761480), [bug 761495](https://bugzilla.mozilla.org/show_bug.cgi?id=761495))
+- The Harmony [spread operator](http://wiki.ecmascript.org/doku.php?id=harmony:spread) is now supported in [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array) initializers ([bug 574130](https://bugzilla.mozilla.org/show_bug.cgi?id=574130)). Note it is not yet supported in calls ([bug 762363](https://bugzilla.mozilla.org/show_bug.cgi?id=762363)).
+- The experimental {{jsxref("TypedArray.prototype.move()")}} method has been added (available in Aurora and Nightly channels only) ({{bug(730873)}}).
 
-<p><em>No change</em></p>
+### WebGL
 
-<h3 id="SVG">SVG</h3>
+_No change_
 
-<p><em>No change</em></p>
+### SVG
 
-<h3 id="MathML">MathML</h3>
+_No change_
 
-<p> </p>
+### MathML
 
-<ul>
- <li>The <code>lspace</code> and <code>rspace</code> attributes of {{MathMLElement("mo")}} now correctly default to <code>thickmathspace</code>.</li>
-</ul>
+- The `lspace` and `rspace` attributes of {{MathMLElement("mo")}} now correctly default to `thickmathspace`.
 
-<p> </p>
+### 网络
 
-<h3 id="网络">网络</h3>
+### Developer tools
 
-<p> </p>
+- There's now a handy developer toolbar you can access by going to Tools > Web Developer > Developer Toolbar, or by pressing Ctrl-Shift-V (Cmd-Opt-V on Mac OS X). This toolbar offers a command line interface as well as buttons for quickly accessing useful tools. The graphical command line interface ([GCLI](/en-US/docs/Tools/GCLI)) is easy to expand and additional commands are expected in the future. Type "help" to get a list of supported commands.
+- The Web Console now displays an error count so you can quickly see how much work you have ahead of you.
+- The Scratchpad now offers a list of recently opened files.
 
-<h3 id="Developer_tools">Developer tools</h3>
+## Changes for Open Web App developers
 
-<p> </p>
+- Initial [Open Web App support](/en-US/docs/Apps/Getting_Started) has been implemented in the desktop versions of Firefox (that is, on Windows, Mac OS X, and Linux).
 
-<ul>
- <li>There's now a handy developer toolbar you can access by going to Tools &gt; Web Developer &gt; Developer Toolbar, or by pressing Ctrl-Shift-V (Cmd-Opt-V on Mac OS X). This toolbar offers a command line interface as well as buttons for quickly accessing useful tools. The graphical command line interface (<a href="/en-US/docs/Tools/GCLI">GCLI</a>) is easy to expand and additional commands are expected in the future. Type "help" to get a list of supported commands.</li>
- <li>The Web Console now displays an error count so you can quickly see how much work you have ahead of you.</li>
- <li>The Scratchpad now offers a list of recently opened files.</li>
-</ul>
+## 附加组件开发变更
 
-<p> </p>
+### 修改接口
 
-<p> </p>
+`nsIPrivateDOMEvent` has been merged into `nsIDOMEvent`. ({{bug("761613")}})
 
-<h2 id="Changes_for_Open_Web_App_developers">Changes for Open Web App developers</h2>
+#### 新增接口
 
-<ul>
- <li>Initial <a href="/en-US/docs/Apps/Getting_Started">Open Web App support</a> has been implemented in the desktop versions of Firefox (that is, on Windows, Mac OS X, and Linux).</li>
-</ul>
-
-<h2 id="附加组件开发变更">附加组件开发变更</h2>
-
-<h3 id="修改接口">修改接口</h3>
-
-<p><code>nsIPrivateDOMEvent</code> has been merged into <code>nsIDOMEvent</code>. ({{bug("761613")}})</p>
-
-<h4 id="新增接口">新增接口</h4>
-
-<h4 id="废弃接口">废弃接口</h4>
+#### 废弃接口

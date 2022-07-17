@@ -3,105 +3,101 @@ title: Content Security Policy
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div>
-<p>使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的<strong><a href="/en-US/docs/Web/HTML/Element/script"> </a></strong><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a> 和 <a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> 的资源来源，并且禁止了潜在的不安全用法如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>.</p>
+使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的**[ ](/en-US/docs/Web/HTML/Element/script)**[\<script>](/en-US/docs/Web/HTML/Element/script) 和 [\<object>](/en-US/docs/Web/HTML/Element/object) 的资源来源，并且禁止了潜在的不安全用法如 [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
-<p>这篇文章简单地解释了 CSP 是什么，默认的策略是什么，这对插件来说意味着什么，以及插件如何改变默认 CSP。</p>
-</div>
+这篇文章简单地解释了 CSP 是什么，默认的策略是什么，这对插件来说意味着什么，以及插件如何改变默认 CSP。
 
-<p><a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy</a> (CSP) 是一种避免网站意外执行包含有恶意的内容的机制。网站通过使用服务端发送的 HTTP 头指定 CSP。CSP 主要关注指定各种内容的合法来源，如脚本和嵌入式插件。例如，网站可以使用它来告诉浏览器应该只执行来自网站自身的 JavaScript，而不腻执行其他来源的脚本。CSP 还可以指导浏览器禁止潜在危险行为，如<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>的使用。</p>
+[Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) 是一种避免网站意外执行包含有恶意的内容的机制。网站通过使用服务端发送的 HTTP 头指定 CSP。CSP 主要关注指定各种内容的合法来源，如脚本和嵌入式插件。例如，网站可以使用它来告诉浏览器应该只执行来自网站自身的 JavaScript，而不腻执行其他来源的脚本。CSP 还可以指导浏览器禁止潜在危险行为，如[`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)的使用。
 
-<p>和网页一样，插件可以加载其他来源的内容。例如浏览器的弹出窗口可以指定为一个 HTML 文档，它同样可以包含不同来源的 JavaScript 和 CSS，就像一个普通的网页一样。</p>
+和网页一样，插件可以加载其他来源的内容。例如浏览器的弹出窗口可以指定为一个 HTML 文档，它同样可以包含不同来源的 JavaScript 和 CSS，就像一个普通的网页一样。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-  &lt;/head&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
 
-  &lt;body&gt;
+  <body>
 
-    &lt;!--Some HTML content here--&gt;
+    <!--Some HTML content here-->
 
-    &lt;!--
+    <!--
       Include a third-party script.
       See also https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity.
-    --&gt;
-    &lt;script
+    -->
+    <script
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous"&gt;
-    &lt;/script&gt;
+      crossorigin="anonymous">
+    </script>
 
-    &lt;!-- Include my popup's own script--&gt;
-    &lt;script src="popup.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
+    <!-- Include my popup's own script-->
+    <script src="popup.js"></script>
+  </body>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<p>和网站相比，插件可以访问特权 API，因此一旦它们被恶意代码破坏，风险就更大。因此：</p>
+和网站相比，插件可以访问特权 API，因此一旦它们被恶意代码破坏，风险就更大。因此：
 
-<ul>
- <li>插件默认运行在一个相当严格的安全策略下。参考 <a href="/en-US/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy">default content security policy</a>.</li>
- <li>插件的作者可以通过使用 manifest.json 中的 <code>content_security_policy</code> 关键词改变这种默认策略，但是允许的策略仍然有一定的限制。参考 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code>.</li>
-</ul>
+- 插件默认运行在一个相当严格的安全策略下。参考 [default content security policy](/en-US/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy).
+- 插件的作者可以通过使用 manifest.json 中的 `content_security_policy` 关键词改变这种默认策略，但是允许的策略仍然有一定的限制。参考 [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy).
 
-<h2 id="默认内容安全策略">默认内容安全策略</h2>
+## 默认内容安全策略
 
-<p>对插件的默认内容安全策略如下：</p>
+对插件的默认内容安全策略如下：
 
-<pre>"script-src 'self'; object-src 'self';"</pre>
+    "script-src 'self'; object-src 'self';"
 
-<p>这会被应用在任何没有明确在 manifest.json 中的<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> 项设置自己的内容安全策略的插件中。它有以下几种效果：</p>
+这会被应用在任何没有明确在 manifest.json 中的[`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) 项设置自己的内容安全策略的插件中。它有以下几种效果：
 
-<ul>
- <li>
-  <p><a href="/en-US/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources">你只能将本地的 &lt;script&gt; 和 &lt;object&gt; 资源加载到插件中。</a></p>
- </li>
- <li>
-  <p><a href="/en-US/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends">插件无法将字符串转换为 JavaScript 执行。</a></p>
- </li>
- <li>
-  <p><a href="/en-US/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript">内联 JavaScript 不会被执行。</a></p>
- </li>
-</ul>
+- [你只能将本地的 \<script> 和 \<object> 资源加载到插件中。](/en-US/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources)
+- [插件无法将字符串转换为 JavaScript 执行。](</en-US/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends>)
+- [内联 JavaScript 不会被执行。](/en-US/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript)
 
-<h3 id="script_和_object资源的位置">script 和 object 资源的位置</h3>
+### script 和 object 资源的位置
 
-<p>在默认 CSP 下你只能加载相对插件来说本地的 <a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a> 和 <a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> 资源。例如假设插件文档中存在这样一条语句：</p>
+在默认 CSP 下你只能加载相对插件来说本地的 [\<script>](/en-US/docs/Web/HTML/Element/script) 和 [\<object>](/en-US/docs/Web/HTML/Element/object) 资源。例如假设插件文档中存在这样一条语句：
 
-<pre class="brush: html"> &lt;script src="https://code.jquery.com/jquery-2.2.4.js"&gt;&lt;/script&gt;</pre>
+```html
+ <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+```
 
-<p>这不会加载请求的资源：它会安静地失败，并且你所期望看到的任何来自该资源的对象都不会出现。对于这种情况有两种解决办法：</p>
+这不会加载请求的资源：它会安静地失败，并且你所期望看到的任何来自该资源的对象都不会出现。对于这种情况有两种解决办法：
 
-<ul>
- <li>
-  <p>下载该资源，打包进你的插件，然后引用它。</p>
- </li>
- <li>
-  <p>使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></code> 允许你所需要的资源。</p>
- </li>
-</ul>
+- 下载该资源，打包进你的插件，然后引用它。
+- 使用 [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) 允许你所需要的资源。
 
-<h3 id="eval_和friends">eval() 和 friends</h3>
+### eval() 和 friends
 
-<p>默认 CSP 下插件不被允许像 JavaScript 一样执行字符串。这意味着以下情况都被禁止：</p>
+默认 CSP 下插件不被允许像 JavaScript 一样执行字符串。这意味着以下情况都被禁止：
 
-<pre class="brush: js">eval("console.log('some output');");</pre>
+```js
+eval("console.log('some output');");
+```
 
-<pre class="brush: js">window.setTimeout("alert('Hello World!');", 500);</pre>
+```js
+window.setTimeout("alert('Hello World!');", 500);
+```
 
-<pre class="brush: js">var f = new Function("console.log('foo');");</pre>
+```js
+var f = new Function("console.log('foo');");
+```
 
-<h3 id="内联_JavaScript">内联 JavaScript</h3>
+### 内联 JavaScript
 
-<p>默认 CSP 下内联 JavaScript 不被执行。这不仅不允许将 JavaScript 直接放在 <code>&lt;script&gt;</code> 标签中间，也不允许内联事件句柄。即以下内容被禁止：</p>
+默认 CSP 下内联 JavaScript 不被执行。这不仅不允许将 JavaScript 直接放在 `<script>` 标签中间，也不允许内联事件句柄。即以下内容被禁止：
 
-<pre class="brush: html">&lt;script&gt;console.log("foo");&lt;/script&gt;</pre>
+```html
+<script>console.log("foo");</script>
+```
 
-<pre class="brush: html">&lt;div onclick="console.log('click')"&gt;Click me!&lt;/div&gt;</pre>
+```html
+<div onclick="console.log('click')">Click me!</div>
+```
 
-<p>如果你正在使用类似 <code>&lt;body onload="main()"&gt;</code> 的代码在页面加载时运行你的脚本，请使用监听器监听<a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> 或者 <a href="/en-US/docs/Web/Events/load">load</a> 代替。</p>
+如果你正在使用类似 `<body onload="main()">` 的代码在页面加载时运行你的脚本，请使用监听器监听[DOMContentLoaded](/en-US/docs/Web/Events/DOMContentLoaded) 或者 [load](/en-US/docs/Web/Events/load) 代替。

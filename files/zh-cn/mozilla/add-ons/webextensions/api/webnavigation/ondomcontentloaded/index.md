@@ -8,77 +8,69 @@ tags:
   - webNavigation.onDOMContentLoaded
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>在页面中触发<a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a> 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像，样式表和子框架（subframes））可能尚未被加载。</p>
+在页面中触发[DOMContentLoaded](/en-US/docs/Web/Events/DOMContentLoaded) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像，样式表和子框架（subframes））可能尚未被加载。
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.webNavigation.onDOMContentLoaded.addListener(
+```js
+browser.webNavigation.onDOMContentLoaded.addListener(
   listener,                   // function
   filter                      // optional object
 )
 browser.webNavigation.onDOMContentLoaded.removeListener(listener)
 browser.webNavigation.onDOMContentLoaded.hasListener(listener)
-</pre>
+```
 
-<p>事件有三个方法：</p>
+事件有三个方法：
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>为此事件添加监听方法。</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>停止监听此事件。<code>listener</code> 参数为需要移出的监听方法。</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>检测是否有 <code>listener</code> 被注册在事件上。如果有返回 <code>true</code> , 否则返回<code>false</code> .</dd>
-</dl>
+- `addListener(callback)`
+  - : 为此事件添加监听方法。
+- `removeListener(listener)`
+  - : 停止监听此事件。`listener` 参数为需要移出的监听方法。
+- `hasListener(listener)`
+  - : 检测是否有 `listener` 被注册在事件上。如果有返回 `true` , 否则返回`false` .
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>为当此事件发生是需要被调用的函数. 该函数将传递以下参数：</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><a href="#details"><code>object</code></a>. 有关导航（navigation）事件的详细信息。</dd>
- </dl>
- </dd>
- <dt><code>filter</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. 包含单个属性 <code>url</code> 的对象，  这是一个  {{WebExtAPIRef("events.UrlFilter")}} 数组对象. 如果包含此参数，则该事件将仅触发转换为与数组中至少一个<code>UrlFilter</code>匹配的 URL。在数组中。如果您省略此参数，则该事件将触发所有转换。</p>
- </dd>
-</dl>
+  - : 为当此事件发生是需要被调用的函数. 该函数将传递以下参数：
 
-<h2 id="Additional_objects">Additional objects</h2>
+    - `details`
+      - : [`object`](#details). 有关导航（navigation）事件的详细信息。
 
-<h3 id="details">details</h3>
+- `filter`{{optional_inline}}
+  - : `object`. 包含单个属性 `url` 的对象， 这是一个 {{WebExtAPIRef("events.UrlFilter")}} 数组对象. 如果包含此参数，则该事件将仅触发转换为与数组中至少一个`UrlFilter`匹配的 URL。在数组中。如果您省略此参数，则该事件将触发所有转换。
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. The ID of the tab in which the navigation has occurred.</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. The URL to which the given frame has navigated.</dd>
- <dt><code>processId</code></dt>
- <dd><code>integer</code>. The ID of the process in which this tab is being rendered.</dd>
- <dt><code>frameId</code></dt>
- <dd><code>integer</code>. Frame in which the navigation is occurring. 0 indicates that navigation happens in the tab's top-level browsing context, not in a nested <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. The time at which <code>DOMContentLoaded</code> was fired, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
-</dl>
+## Additional objects
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### details
 
-<p>{{Compat("webextensions.api.webNavigation.onDOMContentLoaded")}}</p>
+- `tabId`
+  - : `integer`. The ID of the tab in which the navigation has occurred.
+- `url`
+  - : `string`. The URL to which the given frame has navigated.
+- `processId`
+  - : `integer`. The ID of the process in which this tab is being rendered.
+- `frameId`
+  - : `integer`. Frame in which the navigation is occurring. 0 indicates that navigation happens in the tab's top-level browsing context, not in a nested [iframe](/en-US/docs/Web/HTML/Element/iframe). A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
+- `timeStamp`
+  - : `number`. The time at which `DOMContentLoaded` was fired, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Logs the target URLs for <code>onDOMContentLoaded</code>, if the target URL's hostname contains "example.com" or starts with "developer".</p>
+{{Compat("webextensions.api.webNavigation.onDOMContentLoaded")}}
 
-<pre class="brush: js">var filter = {
+## Examples
+
+Logs the target URLs for `onDOMContentLoaded`, if the target URL's hostname contains "example.com" or starts with "developer".
+
+```js
+var filter = {
   url:
   [
     {hostContains: "example.com"},
@@ -90,20 +82,16 @@ function logOnDOMContentLoaded(details) {
   console.log("onDOMContentLoaded: " + details.url);
 }
 
-browser.webNavigation.<code>onDOMContentLoaded</code>.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **备注：** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -130,5 +118,4 @@ browser.webNavigation.<code>onDOMContentLoaded</code>.addListener(logOnDOMConten
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -6,149 +6,125 @@ tags:
   - Firefox 31
 translation_of: Mozilla/Firefox/Releases/32
 ---
-<div>{{FirefoxSidebar}}</div><h2 id="普通_Web_开发者应该注意的变化">普通 Web 开发者应该注意的变化</h2>
+{{FirefoxSidebar}}
 
-<h3 id="开发者工具">开发者工具</h3>
+## 普通 Web 开发者应该注意的变化
 
-<p>Highlights:</p>
+### 开发者工具
 
-<ul>
- <li><a href="/en-US/docs/Tools/Web_Audio_Editor">Web Audio Editor</a></li>
- <li><a href="/en-US/docs/Tools/Scratchpad#Code_completion_and_inline_documentation">Code completion and inline documentation in Scratchpad</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Rules_view">User agent styles in the Inspector's Rules view</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Firefox_32_onwards_2">Element picker button has moved</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#Firefox_32_onwards">Node dimensions added to the Inspector's infobar</a></li>
- <li><a href="/en-US/docs/Tools/Tools_Toolbox#Extra_tools">Full page screenshot button added</a></li>
- <li>HiDPI images added to the tools</li>
- <li>Nodes that have <code>display:none</code> are shown differently in the Inspector</li>
-</ul>
+Highlights:
 
-<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2014-06-09&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-04-28&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20App%20Manager&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;product=Firefox">All devtools bugs fixed between Firefox 31 and Firefox 32</a>.</p>
+- [Web Audio Editor](/en-US/docs/Tools/Web_Audio_Editor)
+- [Code completion and inline documentation in Scratchpad](/en-US/docs/Tools/Scratchpad#Code_completion_and_inline_documentation)
+- [User agent styles in the Inspector's Rules view](/en-US/docs/Tools/Page_Inspector#Rules_view)
+- [Element picker button has moved](/en-US/docs/Tools/Page_Inspector#Firefox_32_onwards_2)
+- [Node dimensions added to the Inspector's infobar](/en-US/docs/Tools/Page_Inspector#Firefox_32_onwards)
+- [Full page screenshot button added](/en-US/docs/Tools/Tools_Toolbox#Extra_tools)
+- HiDPI images added to the tools
+- Nodes that have `display:none` are shown differently in the Inspector
 
-<h3 id="CSS">CSS</h3>
+[All devtools bugs fixed between Firefox 31 and Firefox 32](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox).
 
-<ul>
- <li>默认开启 {{cssxref("mix-blend-mode")}} ({{Bug(952643)}})。</li>
- <li>在正式版本中默认开启 <code>position:sticky</code> (之前只在 Nightly 和 Aurora 版本中才会开启) ({{Bug(916315)}})。</li>
- <li>implement box-decoration-break: Left/right part of a box-shadow should only be drawn on the first/last continuation of an inline box ({{Bug(613659)}}).</li>
- <li>允许  {{cssxref("flex-grow")}} / {{cssxref("flex-shrink")}} 在 0 和非 0 值之间作 transition ,  like 'flex-grow: 0.6'({{Bug(996945)}}).</li>
-</ul>
+### CSS
 
-<h3 id="HTML">HTML</h3>
+- 默认开启 {{cssxref("mix-blend-mode")}} ({{Bug(952643)}})。
+- 在正式版本中默认开启 `position:sticky` (之前只在 Nightly 和 Aurora 版本中才会开启) ({{Bug(916315)}})。
+- implement box-decoration-break: Left/right part of a box-shadow should only be drawn on the first/last continuation of an inline box ({{Bug(613659)}}).
+- 允许 {{cssxref("flex-grow")}} / {{cssxref("flex-shrink")}} 在 0 和非 0 值之间作 transition , like 'flex-grow: 0.6'({{Bug(996945)}}).
 
-<ul>
- <li>Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it  set <code>dom.image.srcset.enable</code> to <code>true</code> ({{Bug(870021)}}).</li>
- <li><a href="/en-US/docs/Web/HTML/Global_attributes/id"><strong>id</strong></a> and <a href="/en-US/docs/Web/HTML/Global_attributes/class"><strong>class</strong></a> are now true <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a> and also apply to XML elements, in a namespace or not ({{bug(741295)}}).</li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it set `dom.image.srcset.enable` to `true` ({{Bug(870021)}}).
+- [**id**](/en-US/docs/Web/HTML/Global_attributes/id) and [**class**](/en-US/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/en-US/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ({{bug(741295)}}).
 
-<ul>
- <li>The following new ECMAScript 2015 built-in methods got implemented:</li>
- <li>{{jsxref("Array.from()")}} ({{bug(904723)}}),</li>
- <li>{{jsxref("Array.prototype.copyWithin()")}} ({{bug(934423)}}),</li>
- <li>{{jsxref("Number.isSafeInteger()")}} ({{bug(1003764)}}).</li>
-</ul>
+### JavaScript
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+- The following new ECMAScript 2015 built-in methods got implemented:
+- {{jsxref("Array.from()")}} ({{bug(904723)}}),
+- {{jsxref("Array.prototype.copyWithin()")}} ({{bug(934423)}}),
+- {{jsxref("Number.isSafeInteger()")}} ({{bug(1003764)}}).
 
-<ul>
- <li>实现了 {{domxref("NavigatorLanguage.languages", "navigator.languages")}} 属性和 <a href="/zh-CN/docs/Web/Reference/Events/languagechange">languagechange</a> 事件。 ({{Bug(889335)}})。</li>
- <li>The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ({{bug(1014581)}}).</li>
- <li>{{domxref("KeyboardEvent.getModifierState")}}() 和 {{domxref("MouseEvent.getModifierState")}}() 支持了 "Accel" 虚拟修饰符 ({{Bug(1009388)}})。</li>
- <li>实现了 {{domxref("KeyboardEvent.code")}} 属性，不过目前在正式版本中还是禁用状态 ({{Bug(865649)}})。</li>
- <li>Scoped selectors for {{domxref("Document.querySelector()")}} and  {{domxref("Document.querySelectorAll()")}}, for example <code>querySelector(":scope &gt; li")</code>have been implemented ({{Bug(528456)}}).</li>
- <li>The experimental implementation of the  {{domxref("Document.timeline")}} interface, related to the <a href="http://dev.w3.org/fxtf/web-animations/">Web Animation API</a>, has been added ({{bug("998246")}}). It is controlled by <code>layout.web-animations.api.enabled</code> preference, enabled only on Nightly and Aurora for the moment.</li>
- <li>The <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a> has been made available to <a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Web Workers</a> ({{bug("949325")}}). It still is only activated for certified applications.</li>
- <li>The <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a> {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ({{ Bug("967264") }}).</li>
- <li> The <a href="/en-US/docs/Web/API/MSISDN_Verification_API">MSISDN Verification API</a>, only activated for privileged apps, has been added ({{ Bug("988469") }}).</li>
- <li>The <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> is now supported on Firefox for Android ({{bug(852935)}}).</li>
- <li>To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with <code>'--'</code> and the second dash must not be escaped. Also vendor identifier are no more escaped. ({{bug(1008719)}})</li>
- <li>To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ({{bug(979692)}}).</li>
- <li>The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ({{bug(1004579)}}).</li>
- <li>The {{domxref("Navigator.doNotTrack")}} properties now returns <code>'1'</code> or <code>'0'</code>, reflecting the HTTP value, instead of  <code>'yes'</code> or <code>'no'</code> ({{bug(887703)}}).</li>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest/responseURL">XMLHttpRequest.responseURL</a> was implemented ({{bug(998076)}}).</li>
-</ul>
+### Interfaces/APIs/DOM
 
-<h3 id="MathML">MathML</h3>
+- 实现了 {{domxref("NavigatorLanguage.languages", "navigator.languages")}} 属性和 [languagechange](/zh-CN/docs/Web/Reference/Events/languagechange) 事件。 ({{Bug(889335)}})。
+- The {{domxref("Navigator.vibrate()")}} method behavior has been adapted to the latest specification: too long vibrations are now truncated ({{bug(1014581)}}).
+- {{domxref("KeyboardEvent.getModifierState")}}() 和 {{domxref("MouseEvent.getModifierState")}}() 支持了 "Accel" 虚拟修饰符 ({{Bug(1009388)}})。
+- 实现了 {{domxref("KeyboardEvent.code")}} 属性，不过目前在正式版本中还是禁用状态 ({{Bug(865649)}})。
+- Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")`have been implemented ({{Bug(528456)}}).
+- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](http://dev.w3.org/fxtf/web-animations/), has been added ({{bug("998246")}}). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
+- The [Data Store API](/en-US/docs/Web/API/Data_Store_API) has been made available to [Web Workers](/en-US/docs/Web/Guide/Performance/Using_web_workers) ({{bug("949325")}}). It still is only activated for certified applications.
+- The [ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API) {{domxref("InstallPhaseEvent")}} and {{domxref("InstallEvent")}} interfaces have been implemented ({{ Bug("967264") }}).
+- The [MSISDN Verification API](/en-US/docs/Web/API/MSISDN_Verification_API), only activated for privileged apps, has been added ({{ Bug("988469") }}).
+- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now supported on Firefox for Android ({{bug(852935)}}).
+- To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ({{bug(1008719)}})
+- To complete our Hit Regions implementation, {{domxref("MouseEvent.region")}} has been implemented ({{bug(979692)}}).
+- The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ({{bug(1004579)}}).
+- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ({{bug(887703)}}).
+- [XMLHttpRequest.responseURL](/en-US/docs/Web/API/XMLHttpRequest/responseURL) was implemented ({{bug(998076)}}).
 
-<ul>
- <li>实现了 menclose 标记 <code>phasorangle</code>。</li>
-</ul>
+### MathML
 
-<h3 id="SVG">SVG</h3>
+- 实现了 menclose 标记 `phasorangle`。
 
-<p><em>No change.</em></p>
+### SVG
 
-<h3 id="WebRTC">WebRTC</h3>
+_No change._
 
-<ul>
- <li>New constraints for <a href="/en-US/docs/Glossary/WebRTC">WebRTC</a>'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, <code>width</code>, <code>height</code>, and <code>framerate</code>,  have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
+### WebRTC
 
-  <pre>{
-  mandatory: {
-    width: { min: 640 },
-    height: { min: 480 }
-  },
-  optional: [
-    { width: 650 },
-    { width: { min: 650 }},
-    { frameRate: 60 },
-    { width: { max: 800 }},
-  ]
-}</pre>
- </li>
- <li>WebRTC methods which previously used callback functions as input parameters are now also available using JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>.</li>
-</ul>
+- New constraints for [WebRTC](/en-US/docs/Glossary/WebRTC)'s {{domxref("NavigatorUserMedia.getUserMedia", "getUserMedia()")}}, `width`, `height`, and `framerate`, have been added, to limit stream dimensions and frame rate ({{bug("907352")}}):
 
-<h3 id="AudioVideo">Audio/Video</h3>
+      {
+        mandatory: {
+          width: { min: 640 },
+          height: { min: 480 }
+        },
+        optional: [
+          { width: 650 },
+          { width: { min: 650 }},
+          { frameRate: 60 },
+          { width: { max: 800 }},
+        ]
+      }
 
-<p><em>No change.</em></p>
+- WebRTC methods which previously used callback functions as input parameters are now also available using JavaScript [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Security">Security</h2>
+### Audio/Video
 
-<ul>
- <li><a href="/en-US/docs/Xray_vision#Xray_semantics_for_Object_and_Array">Privileged code now gets Xray vision for JavaScript <code>Object</code> and <code>Array</code> instances</a>.</li>
-</ul>
+_No change._
 
-<h2 id="附加组件_和_Mozilla_开发者应该注意的变化">附加组件 和 Mozilla 开发者应该注意的变化</h2>
+## Security
 
-<p>Xray vision is now applied to JavaScript objects that are not themselves DOM objects: <a href="/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects">Xrays for JavaScript objects</a>.</p>
+- [Privileged code now gets Xray vision for JavaScript `Object` and `Array` instances](/en-US/docs/Xray_vision#Xray_semantics_for_Object_and_Array).
 
-<p>A <code><a href="/en-US/Add-ons/Add-on_Manager/Addon#getDataDirectory()">getDataDirectory()</a></code> method has been added to <code><a href="/en-US/Add-ons/Add-on_Manager/Addon">Addon</a></code> instances. This method returns the preferred location, within the current profile, for add-ons to store data.</p>
+## 附加组件 和 Mozilla 开发者应该注意的变化
 
-<p> </p>
+Xray vision is now applied to JavaScript objects that are not themselves DOM objects: [Xrays for JavaScript objects](/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects).
 
-<h3 id="Add-on_SDK">Add-on SDK</h3>
+A [`getDataDirectory()`](</en-US/Add-ons/Add-on_Manager/Addon#getDataDirectory()>) method has been added to [`Addon`](/en-US/Add-ons/Add-on_Manager/Addon) instances. This method returns the preferred location, within the current profile, for add-ons to store data.
 
-<h4 id="Highlights">Highlights</h4>
+### Add-on SDK
 
-<ul>
- <li>Added <a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29"><code>exclude</code></a> option to <code>PageMod</code>.</li>
- <li>Added <a href="/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29"><code>anonymous</code></a> option to <code>Request</code>.</li>
- <li><a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a> now includes a Console and a Scratchpad.</li>
-</ul>
+#### Highlights
 
-<h4 id="Details">Details</h4>
+- Added [`exclude`](/en-US/Add-ons/SDK/High-Level_APIs/page-mod#PageMod%28options%29) option to `PageMod`.
+- Added [`anonymous`](/en-US/Add-ons/SDK/High-Level_APIs/request#Request%28options%29) option to `Request`.
+- [Add-on Debugger](/en-US/Add-ons/Add-on_Debugger) now includes a Console and a Scratchpad.
 
-<p><a href="https://github.com/mozilla/addon-sdk/compare/firefox31...firefox32">GitHub commits made between Firefox 31 and Firefox 32</a>. This will not include any uplifts made after this release entered Aurora.</p>
+#### Details
 
-<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-06-09&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-04-28&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;product=Add-on%20SDK&amp;list_id=10493962">Bugs fixed between Firefox 31 and Firefox 32</a>. This will not include any uplifts made after this release entered Aurora.</p>
+[GitHub commits made between Firefox 31 and Firefox 32](https://github.com/mozilla/addon-sdk/compare/firefox31...firefox32). This will not include any uplifts made after this release entered Aurora.
 
-<h3 id="XPCOM">XPCOM</h3>
+[Bugs fixed between Firefox 31 and Firefox 32](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-06-09&chfield=resolution&query_format=advanced&chfieldfrom=2014-04-28&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
 
-<ul>
- <li>The <code>nsIUDPSocket</code> interface now provides multicast support through the addition of the new <code>nsIUDPSocket.multicastLoopback</code>, <code>nsIUDPSocket.multicastInterface</code>, and <code>nsIUDPSocket.multicastInterfaceAddr</code> attributes, as well as the <code>nsIUDPSocket.joinMulticast()</code> and <code>nsIUDPSocket.leaveMulticast()</code> methods.</li>
-</ul>
+### XPCOM
 
-<p> </p>
+- The `nsIUDPSocket` interface now provides multicast support through the addition of the new `nsIUDPSocket.multicastLoopback`, `nsIUDPSocket.multicastInterface`, and `nsIUDPSocket.multicastInterfaceAddr` attributes, as well as the `nsIUDPSocket.joinMulticast()` and `nsIUDPSocket.leaveMulticast()` methods.
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/32/Site_Compatibility">Site Compatibility for Firefox 32</a></li>
-</ul>
+- [Site Compatibility for Firefox 32](/en-US/docs/Mozilla/Firefox/Releases/32/Site_Compatibility)
 
-<h3 id="Older_versions">Older versions</h3>
+### Older versions
 
-<p>{{Firefox_for_developers('31')}}</p>
+{{Firefox_for_developers('31')}}

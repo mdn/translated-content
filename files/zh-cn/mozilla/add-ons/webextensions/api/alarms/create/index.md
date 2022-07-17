@@ -13,83 +13,83 @@ tags:
   - 非标准
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>创建一个新的 alarm.</p>
+创建一个新的 alarm.
 
-<h2 id="使用语法">使用语法</h2>
+## 使用语法
 
-<pre class="brush: js">browser.alarms.create(
+```js
+browser.alarms.create(
   name,              // 可选的字符串 (string) 类型
   alarmInfo          // 可选的对象 (object) 类型
 )
-</pre>
+```
 
-<h3 id="参数介绍">参数介绍</h3>
+### 参数介绍
 
-<dl>
- <dt><code>name</code>{{optional_inline}}</dt>
- <dd>字符串类型。alarm 的名称。默认为空的字符串。alarm 的名称可以在{{WebExtAPIRef('alarms.get()')}}方法和{{WebExtAPIRef('alarms.clear()')}}方法中引用。同时它也可以通过{{WebExtAPIRef('alarms.onAlarm')}}监听方法传入的参数对象{{WebExtAPIRef('alarms.Alarm')}}的 name 属性访问到。Alarm 的名称是唯一的 (在单个附件范围内). 如果传入了已经在这个附件存在的名称， 原来的同名 alarm 会被移除并且没有警告。</dd>
- <dt><code>alarmInfo</code>{{optional_inline}}</dt>
- <dd>
- <p><code>对象(object)类型</code>. 你可以对过它来指定什么时间 alarm 会开始触发，其值可以是一个具体的时间值或者是一个延时（从 alarm 设置开始）。为了让 alarm 能复现，需要指定 <code>periodInMinutes</code>。</p>
+- `name`{{optional_inline}}
+  - : 字符串类型。alarm 的名称。默认为空的字符串。alarm 的名称可以在{{WebExtAPIRef('alarms.get()')}}方法和{{WebExtAPIRef('alarms.clear()')}}方法中引用。同时它也可以通过{{WebExtAPIRef('alarms.onAlarm')}}监听方法传入的参数对象{{WebExtAPIRef('alarms.Alarm')}}的 name 属性访问到。Alarm 的名称是唯一的 (在单个附件范围内). 如果传入了已经在这个附件存在的名称， 原来的同名 alarm 会被移除并且没有警告。
+- `alarmInfo`{{optional_inline}}
 
- <p>在 Chrome 浏览器上，除非附件以非打包 (unpackaged) 方式加载，alarm 的创建每分钟不允许超过一次。如果附件尝试设置 <code>delayInMinutes</code> 为小于1的值，alarm 只能在到达1分钟之后才会触发，并且会变成每分钟触发一次。</p>
+  - : `对象(object)类型`. 你可以对过它来指定什么时间 alarm 会开始触发，其值可以是一个具体的时间值或者是一个延时（从 alarm 设置开始）。为了让 alarm 能复现，需要指定 `periodInMinutes`。
 
- <p><code>alarmInfo</code> 对象可以设置以下属性：</p>
- <dl>
-  <dt><code>when</code>{{optional_inline}}</dt>
-  <dd><code>double类型</code>。alarm 第一次触发的时间，值为自 1970-01-01 00:00:00 UTC 过去的毫秒数。请使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></code> 来获取 <code>1970-01-01 00:00:00 UTC</code> 到当前时间过去的毫秒数。如果你设置了when属性，请不要设置 delayInMinutes 属性。</dd>
-  <dt><code>delayInMinutes</code>{{optional_inline}}</dt>
-  <dd><code>double类型</code>. alarm 设置好到第一次触发之间的分钟数。如果你设置了 <code>delayInMinutes</code> 属性，请不要设置 when 属性。</dd>
-  <dt><code>periodInMinutes</code>{{optional_inline}}</dt>
-  <dd><code>double类型</code>. 如果设置此属性，alarm 会从第一次触发开始每隔 <code>periodInMinutes</code> 分钟再次触发。如果你没有设置when及delayInMinutes属性，alarm会在alarm设置好之后periodInMinutes分钟第一次触发。如果periodInMinutes属性没有设置，则alarm只会触发一次。</dd>
- </dl>
- </dd>
-</dl>
+    在 Chrome 浏览器上，除非附件以非打包 (unpackaged) 方式加载，alarm 的创建每分钟不允许超过一次。如果附件尝试设置 `delayInMinutes` 为小于 1 的值，alarm 只能在到达 1 分钟之后才会触发，并且会变成每分钟触发一次。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+    `alarmInfo` 对象可以设置以下属性：
 
-<p>{{Compat("webextensions.api.alarms.create")}}</p>
+    - `when`{{optional_inline}}
+      - : `double类型`。alarm 第一次触发的时间，值为自 1970-01-01 00:00:00 UTC 过去的毫秒数。请使用 [`Date.now()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now) 来获取 `1970-01-01 00:00:00 UTC` 到当前时间过去的毫秒数。如果你设置了 when 属性，请不要设置 delayInMinutes 属性。
+    - `delayInMinutes`{{optional_inline}}
+      - : `double类型`. alarm 设置好到第一次触发之间的分钟数。如果你设置了 `delayInMinutes` 属性，请不要设置 when 属性。
+    - `periodInMinutes`{{optional_inline}}
+      - : `double类型`. 如果设置此属性，alarm 会从第一次触发开始每隔 `periodInMinutes` 分钟再次触发。如果你没有设置 when 及 delayInMinutes 属性，alarm 会在 alarm 设置好之后 periodInMinutes 分钟第一次触发。如果 periodInMinutes 属性没有设置，则 alarm 只会触发一次。
 
-<h2 id="示例">示例</h2>
+## 浏览器兼容性
 
-<p>Create a one-time delay-based alarm with "" for the name:</p>
+{{Compat("webextensions.api.alarms.create")}}
 
-<pre class="brush: js">const delayInMinutes = 5;
+## 示例
+
+Create a one-time delay-based alarm with "" for the name:
+
+```js
+const delayInMinutes = 5;
 
 browser.alarms.create({
   delayInMinutes
-});</pre>
+});
+```
 
-<p>Create a periodic delay-based alarm named "my-periodic-alarm":</p>
+Create a periodic delay-based alarm named "my-periodic-alarm":
 
-<pre class="brush: js">const delayInMinutes = 5;
+```js
+const delayInMinutes = 5;
 const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
   periodInMinutes
-});</pre>
+});
+```
 
-<p>Create a periodic absolute alarm named "my-periodic-alarm":</p>
+Create a periodic absolute alarm named "my-periodic-alarm":
 
-<pre class="brush: js">const when = 1545696000;
+```js
+const when = 1545696000;
 const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
   periodInMinutes
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
+> **备注：** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,5 +116,4 @@ browser.alarms.create("my-periodic-alarm", {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

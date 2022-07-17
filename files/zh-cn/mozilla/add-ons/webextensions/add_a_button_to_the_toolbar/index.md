@@ -3,29 +3,24 @@ title: Add a button to the toolbar
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}工具栏按钮是 webextensions 的一种主要 UI 组件，它在浏览器的工具栏中作为图标显示。当用户点击图标时，就会发生下面两种事件中的一样：
 
-<div>工具栏按钮是 webextensions 的一种主要 UI 组件，它在浏览器的工具栏中作为图标显示。当用户点击图标时，就会发生下面两种事件中的一样：</div>
+- 如果按钮有弹出菜单，则显示该弹出。弹出菜单是一个临时对话，它必须使用 HTML，CSS，JavaScript 语言表示。
+- 如果没有弹出菜单，则生成一个单击事件，你可以在代码中监听该事件并执行其他响应。
 
-<ul>
- <li>如果按钮有弹出菜单，则显示该弹出。弹出菜单是一个临时对话，它必须使用 HTML，CSS，JavaScript 语言表示。</li>
- <li>如果没有弹出菜单，则生成一个单击事件，你可以在代码中监听该事件并执行其他响应。</li>
-</ul>
+在 WebExtensions 中这种按钮被称为浏览器行为按钮，它们可以像下面这样生成：
 
-<p>在 WebExtensions 中这种按钮被称为浏览器行为按钮，它们可以像下面这样生成：</p>
+- manifest.json 文件中的键 [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 被用来定义按钮。
+- JavaScript 接口 [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) 被用来监听单击和更改按钮，或通过代码执行操作。
 
-<ul>
- <li>manifest.json 文件中的键 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> 被用来定义按钮。</li>
- <li>JavaScript 接口 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> 被用来监听单击和更改按钮，或通过代码执行操作。</li>
-</ul>
+## 一个简单的按钮
 
-<h2 id="一个简单的按钮">一个简单的按钮</h2>
+在这一节中我们将创建一个工具栏按钮的 WebExtension。当用户单击按钮时，会打开一个<https://developer.mozilla.org> 的新标签页。
 
-<p>在这一节中我们将创建一个工具栏按钮的 WebExtension。当用户单击按钮时，会打开一个<a href="https://developer.mozilla.org">https://developer.mozilla.org</a> 的新标签页。</p>
+首先，新建名为 "button"的文件夹，在该文件夹下创建名为"manifest.json" 的文件，内容如下：
 
-<p>首先，新建名为 "button"的文件夹，在该文件夹下创建名为"manifest.json" 的文件，内容如下：</p>
-
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
@@ -43,53 +38,55 @@ translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
     }
   }
 
-}</pre>
+}
+```
 
-<p>上面内容显示有一个名为“background.js”后台脚本，以及在“icons”文件夹下的浏览器行为按钮图标。</p>
+上面内容显示有一个名为“background.js”后台脚本，以及在“icons”文件夹下的浏览器行为按钮图标。
 
-<div>
-<div>These icons are from the <a href="https://www.iconfinder.com/iconsets/bitsies">bitsies!</a> iconset created by Recep Kütük.</div>
-</div>
+These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
 
-<p>接下来，在"buttons" 文件夹下创建 "icons" 文件夹，在该文件夹下存放下面的图标文件：</p>
+接下来，在"buttons" 文件夹下创建 "icons" 文件夹，在该文件夹下存放下面的图标文件：
 
-<ul>
- <li>"page-16.png" (<img src="page-16.png">)</li>
- <li>"page-32.png" (<img src="page-32.png">).</li>
-</ul>
+- "page-16.png" (![](page-16.png))
+- "page-32.png" (![](page-32.png)).
 
-<p>我们有两个图标，大图标用于在高分辨率状态下显示。浏览器会自动选择合适的图标。</p>
+我们有两个图标，大图标用于在高分辨率状态下显示。浏览器会自动选择合适的图标。
 
-<p>接着，在附加组件的根目录下创建 "background.js"文件 , 内容如下：</p>
+接着，在附加组件的根目录下创建 "background.js"文件 , 内容如下：
 
-<pre class="brush: js">function openPage() {
+```js
+function openPage() {
   browser.tabs.create({
     url: "https://developer.mozilla.org"
   });
 }
 
-browser.browserAction.onClicked.addListener(openPage);</pre>
+browser.browserAction.onClicked.addListener(openPage);
+```
 
-<p>该文件用来监听浏览器单击事件。当单击事件发生时运行 <code>openPage()</code> 函数，这个函数通过使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></code> 接口加载指定的页面。</p>
+该文件用来监听浏览器单击事件。当单击事件发生时运行 `openPage()` 函数，这个函数通过使用[`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) 接口加载指定的页面。
 
-<p>现在完整的附加组件看上去应该像下面这样：</p>
+现在完整的附加组件看上去应该像下面这样：
 
-<pre class="brush: plain">button/
+```plain
+button/
     icons/
         page-16.png
         page-32.png
     background.js
-    manifest.json</pre>
+    manifest.json
+```
 
-<p>安装这个<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">WebExtension</a> ，然后单击按钮：</p>
+安装这个[WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
 
-<p>{{EmbedYouTube("kwwTowgT-Ys")}}</p>
+{{EmbedYouTube("kwwTowgT-Ys")}}
 
-<h2 id="添加一个弹出菜单">添加一个弹出菜单</h2>
+## 添加一个弹出菜单
 
-<p>尝试在按钮上添加一个弹出菜单。修改 "manifest.json"如下：</p>
+尝试在按钮上添加一个弹出菜单。修改 "manifest.json"如下：
 
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
@@ -105,40 +102,42 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
     }
   }
 
-}</pre>
+}
+```
 
-<p>我们把原文件做了三处改变：</p>
+我们把原文件做了三处改变：
 
-<ul>
- <li>我们不需要引用“background.js”文件，因为会在弹出菜单的脚本中处理该行为 (你也可以使用“background.js“来运行一个弹出窗口，只是现在我们不需要这么做).</li>
- <li>我们添加了<code>"browser_style": true</code>, 使弹出样式看上去更像是浏览器的一部分。</li>
- <li>最后，我们添加 <code>"default_popup": "popup/choose_page.html"</code>, 告诉浏览器按钮被单击时弹出菜单，菜单的内容则在"popup/choose_page.html"页面中。</li>
-</ul>
+- 我们不需要引用“background.js”文件，因为会在弹出菜单的脚本中处理该行为 (你也可以使用“background.js“来运行一个弹出窗口，只是现在我们不需要这么做).
+- 我们添加了`"browser_style": true`, 使弹出样式看上去更像是浏览器的一部分。
+- 最后，我们添加 `"default_popup": "popup/choose_page.html"`, 告诉浏览器按钮被单击时弹出菜单，菜单的内容则在"popup/choose_page.html"页面中。
 
-<p>现在我们要创建弹出菜单。新建名为 "popup" 的文件夹，然后在文件夹内创建"choose_page.html" 文件，该文件内容如下：</p>
+现在我们要创建弹出菜单。新建名为 "popup" 的文件夹，然后在文件夹内创建"choose_page.html" 文件，该文件内容如下：
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;link rel="stylesheet" href="choose_page.css"/&gt;
-  &lt;/head&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_page.css"/>
+  </head>
 
-&lt;body&gt;
-  &lt;div class="page-choice"&gt;developer.mozilla.org&lt;/div&gt;
-  &lt;div class="page-choice"&gt;support.mozilla.org&lt;/div&gt;
-  &lt;div class="page-choice"&gt;addons.mozilla.org&lt;/div&gt;
-  &lt;script src="choose_page.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
+<body>
+  <div class="page-choice">developer.mozilla.org</div>
+  <div class="page-choice">support.mozilla.org</div>
+  <div class="page-choice">addons.mozilla.org</div>
+  <script src="choose_page.js"></script>
+</body>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<p>你会发现这是一个普通的 HTML 页面，它包含三个 {{htmlelement("div")}}元素，在每个元素中有一个 Mozilla 页面地址。另外还包括一个 CSS 文件和一个 JavaScript 文件，我们会在后面添加它们。</p>
+你会发现这是一个普通的 HTML 页面，它包含三个 {{htmlelement("div")}}元素，在每个元素中有一个 Mozilla 页面地址。另外还包括一个 CSS 文件和一个 JavaScript 文件，我们会在后面添加它们。
 
-<p>在 "popup" 文件夹下，创建名为 "choose_page.css" 的文件，内容如下：</p>
+在 "popup" 文件夹下，创建名为 "choose_page.css" 的文件，内容如下：
 
-<pre class="brush: css">html, body {
+```css
+html, body {
   width: 300px;
 }
 
@@ -152,13 +151,15 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 .page-choice:hover {
   background-color: #CFF2F2;
-}</pre>
+}
+```
 
-<p>这是我们弹出菜单的部分样式。</p>
+这是我们弹出菜单的部分样式。
 
-<p>接着，在 "popup" 文件夹下，创建名为 "choose_page.js" 的文件，内容如下：</p>
+接着，在 "popup" 文件夹下，创建名为 "choose_page.js" 的文件，内容如下：
 
-<pre class="brush: js">document.addEventListener("click", function(e) {
+```js
+document.addEventListener("click", function(e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
@@ -168,51 +169,47 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
     url: chosenPage
   });
 
-});</pre>
+});
+```
 
-<p>在我们的脚本中，我们会监听单击的弹出项。首先检查单击的对象是否在给出的页面选择项中，如果不在，则不做任何处理；如果在，则从单击的页面选择项中获取 URL 地址，然后打开一个对应页面的新标签页。注意：我们在弹出脚本中使用 WebExtension 接口，和在后台脚本中使用接口一样。</p>
+在我们的脚本中，我们会监听单击的弹出项。首先检查单击的对象是否在给出的页面选择项中，如果不在，则不做任何处理；如果在，则从单击的页面选择项中获取 URL 地址，然后打开一个对应页面的新标签页。注意：我们在弹出脚本中使用 WebExtension 接口，和在后台脚本中使用接口一样。
 
-<p>附加组件的结构最后看上去应该像下面这样：</p>
+附加组件的结构最后看上去应该像下面这样：
 
-<pre>button/
-    icons/
-        page-16.png
-        page-32.png
-    popup/
-        choose_page.css
-        choose_page.html
-        choose_page.js
-    manifest.json</pre>
+    button/
+        icons/
+            page-16.png
+            page-32.png
+        popup/
+            choose_page.css
+            choose_page.html
+            choose_page.js
+        manifest.json
 
-<p>重新加载附加组件，再次单击按钮，并尝试在弹出菜单中单击某个选择项：</p>
+重新加载附加组件，再次单击按钮，并尝试在弹出菜单中单击某个选择项：
 
-<p>{{EmbedYouTube("QPEh1L1xq0Y")}}</p>
+{{EmbedYouTube("QPEh1L1xq0Y")}}
 
-<h2 id="页面行为">页面行为</h2>
+## 页面行为
 
-<p>页面行为<a href="/en-US/Add-ons/WebExtensions/User_interface_components#Page_actions">（Page actions）</a> 类似浏览器行为，只是页面行为仅针对特定页面，而浏览器行为则全局有效。</p>
+页面行为[（Page actions）](/en-US/Add-ons/WebExtensions/User_interface_components#Page_actions) 类似浏览器行为，只是页面行为仅针对特定页面，而浏览器行为则全局有效。
 
-<p>由于浏览器行为总是发生，而页面行为只在特定页面显示。所以页面行为按钮在 URL 地址栏中显示，而浏览器行为按钮则在浏览器工具栏中显示。</p>
+由于浏览器行为总是发生，而页面行为只在特定页面显示。所以页面行为按钮在 URL 地址栏中显示，而浏览器行为按钮则在浏览器工具栏中显示。
 
-<h2 id="了解更多">了解更多</h2>
+## 了解更多
 
-<ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> manifest key</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API</li>
- <li>Browser action examples:
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a></li>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it">Bookmark it!</a></li>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite-colour</a></li>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui">inpage-toolbar-ui</a></li>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button">open-my-page-button</a></li>
-  </ul>
- </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> manifest key</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code> API</li>
- <li>Page action examples:
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill-out</a></li>
-  </ul>
- </li>
-</ul>
+- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
+- [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
+- Browser action examples:
+
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
+  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
+  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+
+- [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
+- [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
+- Page action examples:
+
+  - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

@@ -8,58 +8,43 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}在浏览器菜单中添加条目。此 API 基于 Chrome 的“contextMenus”API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 `browser.menus` API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。在 Firefox 55 之前，这个 API 最初也被命名为`contextMenus`，并且这个名字被保留为别名，所以你可以使用`contextMenus`编写在 Firefox 和其他浏览器中工作的代码。你需要拥有“menus”（或别名" contextMenus "）权限来使用此 API。
 
-<div>在浏览器菜单中添加条目。</div>
+## 创建菜单项
 
+使用 {{WebExtAPIRef("menus.create()")}}方法创建一个菜单项。你需要传递一个包含条目选项的对象，它包括条目的 id，类型，和需要显示出来的文本值。
 
+绑定一个监听器到{{WebExtAPIRef("contextMenus.onClicked")}}事件来监听你菜单项目的点击事件。此监听器会传递一个{{WebExtAPIRef("contextMenus.OnClickData")}}，它包含该事件的详细信息。
 
-<div>此 API 基于 Chrome 的“contextMenus”API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 <code>browser.menus</code> API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。</div>
+你可以根据在调用`create()`时所传递的参数中使用不同的`type`值来创建四种不同类型的菜单：
 
+- "normal"：只显示为一个标签的菜单项
+- "checkbox"：一个表示二进制状态的菜单项。它在菜单项旁边显示一个复选标记。点击该菜单项切换复选标记。监听器会被传递两个额外的属性：“checked”，指示当前是否被选中，以及“wasChecked”，指示在此点击事件发生前是否被选中。
+- "radio"：表示一组选项之一的上下文菜单项。类似于复选框，它也在菜单项旁边显示一个复选标记，监听它的监听器也会被传递“checked”和“wasChecked”。但是，如果您创建多个单选项，则这些项目将作为一组单选：组内只能选择一项，点击菜单项来选中它。
+- "separator"：用于分割菜单的分割线。
 
+如果您创建了多个上下文菜单项目或多个工具菜单项目，则这些项目将被放置在子菜单中。子菜单的父项将标有扩展名。例如，下面是一个名为“Menu Demo”的扩展，添加了两个上下文菜单项：
 
-<div>在 Firefox 55 之前，这个 API 最初也被命名为<code>contextMenus</code>，并且这个名字被保留为别名，所以你可以使用<code>contextMenus</code>编写在 Firefox 和其他浏览器中工作的代码。</div>
+![](menus-1.png)
 
+## 图标
 
+如果你使用 ["icons" manifest key](/en-US/Add-ons/WebExtensions/manifest.json/icons) 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：
 
-<div>你需要拥有“menus”（或别名" contextMenus "）权限来使用此 API。</div>
+![](menus-2.png) 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。
 
-<h2 id="创建菜单项">创建菜单项</h2>
+![](menus-3.png)
 
-<p>使用 {{WebExtAPIRef("menus.create()")}}方法创建一个菜单项。你需要传递一个包含条目选项的对象，它包括条目的 id，类型，和需要显示出来的文本值。</p>
+## 例子
 
-<p>绑定一个监听器到{{WebExtAPIRef("contextMenus.onClicked")}}事件来监听你菜单项目的点击事件。此监听器会传递一个{{WebExtAPIRef("contextMenus.OnClickData")}}，它包含该事件的详细信息。</p>
+下面是一个包含四个项目的菜单，他们分别是：一个普通选项，两个周围有分割线的单选，和一个复选框。单选框使用了自定义图标。
 
-<p>你可以根据在调用<code>create()</code>时所传递的参数中使用不同的<code>type</code>值来创建四种不同类型的菜单：</p>
+![](menus-4.png)
 
-<ul>
- <li>"normal"：只显示为一个标签的菜单项</li>
- <li>"checkbox"：一个表示二进制状态的菜单项。它在菜单项旁边显示一个复选标记。点击该菜单项切换复选标记。监听器会被传递两个额外的属性：“checked”，指示当前是否被选中，以及“wasChecked”，指示在此点击事件发生前是否被选中。</li>
- <li>"radio"：表示一组选项之一的上下文菜单项。类似于复选框，它也在菜单项旁边显示一个复选标记，监听它的监听器也会被传递“checked”和“wasChecked”。但是，如果您创建多个单选项，则这些项目将作为一组单选：组内只能选择一项，点击菜单项来选中它。</li>
- <li>"separator"：用于分割菜单的分割线。</li>
-</ul>
+你可以使用以下代码创建一个这样的子菜单：
 
-<p>如果您创建了多个上下文菜单项目或多个工具菜单项目，则这些项目将被放置在子菜单中。子菜单的父项将标有扩展名。例如，下面是一个名为“Menu Demo”的扩展，添加了两个上下文菜单项：</p>
-
-<p><img src="menus-1.png"></p>
-
-<h2 id="图标">图标</h2>
-
-<p>如果你使用 <a href="/en-US/Add-ons/WebExtensions/manifest.json/icons">"icons" manifest key</a> 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：</p>
-
-<p><img src="menus-2.png"> 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。</p>
-
-<p><img src="menus-3.png"></p>
-
-<h2 id="例子">例子</h2>
-
-<p>下面是一个包含四个项目的菜单，他们分别是：一个普通选项，两个周围有分割线的单选，和一个复选框。单选框使用了自定义图标。</p>
-
-<p><img src="menus-4.png"></p>
-
-<p>你可以使用以下代码创建一个这样的子菜单：</p>
-
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "remove-me",
   title: browser.i18n.getMessage("menuItemRemoveMe"),
   contexts: ["all"]
@@ -109,58 +94,48 @@ browser.menus.create({
   title: browser.i18n.getMessage("menuItemUncheckMe"),
   contexts: ["all"],
   checked: checkedState
-}, onCreated);</pre>
+}, onCreated);
+```
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<dl>
- <dt>{{WebExtAPIRef("contextMenus.ContextType")}}</dt>
- <dd>菜单里可以出现的不同内容。可能的值有："all", "audio", "browser_action", "editable", "frame", "image", "link", "page", "page_action", "password", "selection", "tab", "video".</dd>
- <dt>{{WebExtAPIRef("contextMenus.ItemType")}}</dt>
- <dd>菜单项的类别有："normal", "checkbox", "radio", "separator".</dd>
- <dt>{{WebExtAPIRef("contextMenus.OnClickData")}}</dt>
- <dd>当菜单项被点击时发送的信息。</dd>
-</dl>
+- {{WebExtAPIRef("contextMenus.ContextType")}}
+  - : 菜单里可以出现的不同内容。可能的值有："all", "audio", "browser_action", "editable", "frame", "image", "link", "page", "page_action", "password", "selection", "tab", "video".
+- {{WebExtAPIRef("contextMenus.ItemType")}}
+  - : 菜单项的类别有："normal", "checkbox", "radio", "separator".
+- {{WebExtAPIRef("contextMenus.OnClickData")}}
+  - : 当菜单项被点击时发送的信息。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{WebExtAPIRef("contextMenus.ACTION_MENU_TOP_LEVEL_LIMIT")}}</dt>
- <dd>可以被添加进上下文菜单项的顶级扩展项的最大值，其 ContextType 可以是"browser_action" 或者 "page_action".</dd>
-</dl>
+- {{WebExtAPIRef("contextMenus.ACTION_MENU_TOP_LEVEL_LIMIT")}}
+  - : 可以被添加进上下文菜单项的顶级扩展项的最大值，其 ContextType 可以是"browser_action" 或者 "page_action".
 
-<h2 id="函数">函数</h2>
+## 函数
 
-<dl>
- <dt>{{WebExtAPIRef("contextMenus.create()")}}</dt>
- <dd>创建一个新的上下文菜单项目。</dd>
- <dt>{{WebExtAPIRef("contextMenus.update()")}}</dt>
- <dd>更新一个已经创建了的上下文菜单项目。</dd>
- <dt>{{WebExtAPIRef("contextMenus.remove()")}}</dt>
- <dd>删除一个上下文菜单项目。</dd>
- <dt>{{WebExtAPIRef("contextMenus.removeAll()")}}</dt>
- <dd>移除该插件创建的所有上下文菜单项目。</dd>
-</dl>
+- {{WebExtAPIRef("contextMenus.create()")}}
+  - : 创建一个新的上下文菜单项目。
+- {{WebExtAPIRef("contextMenus.update()")}}
+  - : 更新一个已经创建了的上下文菜单项目。
+- {{WebExtAPIRef("contextMenus.remove()")}}
+  - : 删除一个上下文菜单项目。
+- {{WebExtAPIRef("contextMenus.removeAll()")}}
+  - : 移除该插件创建的所有上下文菜单项目。
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{WebExtAPIRef("contextMenus.onClicked")}}</dt>
- <dd>当一个上下文菜单项被点击时触发。</dd>
-</dl>
+- {{WebExtAPIRef("contextMenus.onClicked")}}
+  - : 当一个上下文菜单项被点击时触发。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{ Compat("webextensions.api.menus", 1, "true") }}</p>
+{{ Compat("webextensions.api.menus", 1, "true") }}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note">
-<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> API. 此文档来自于 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a>。</p>
-</div>
+> **备注：** 此 API 基于 Chromium 的 [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. 此文档来自于 Chromium 代码中的[`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)。
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -187,5 +162,4 @@ browser.menus.create({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

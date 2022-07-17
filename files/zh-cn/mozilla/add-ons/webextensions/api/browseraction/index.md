@@ -3,88 +3,75 @@ title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>添加按钮到浏览器的工具栏。</p>
+添加按钮到浏览器的工具栏。
 
-<p>您可以为该按钮指派一个弹出窗。弹出窗可采用 HTML、CSS 和 JavaScript 编写，就像是一个普通的网页。运行在该弹出窗中的 JavaScript 可以同您的后台脚本一样访问所有的 WebExtension API，但它的全局上下文是该弹出窗，而不是浏览器中的当前页面。要影响网页，您需要通过<a href="/en-US/Add-ons/WebExtensions/Modify_a_web_page#Messaging">消息</a>通信。</p>
+您可以为该按钮指派一个弹出窗。弹出窗可采用 HTML、CSS 和 JavaScript 编写，就像是一个普通的网页。运行在该弹出窗中的 JavaScript 可以同您的后台脚本一样访问所有的 WebExtension API，但它的全局上下文是该弹出窗，而不是浏览器中的当前页面。要影响网页，您需要通过[消息](/en-US/Add-ons/WebExtensions/Modify_a_web_page#Messaging)通信。
 
-<p>如果您指定了弹出窗，它将显示——内容将在用户点击该图标时被加载。如果您没有指定一个弹出窗，用户单击该图标的事件将派发到您的扩展。</p>
+如果您指定了弹出窗，它将显示——内容将在用户点击该图标时被加载。如果您没有指定一个弹出窗，用户单击该图标的事件将派发到您的扩展。
 
-<p>您可以用 manifest.json 中的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> 键值声明定义大多数浏览器动作属性。</p>
+您可以用 manifest.json 中的 [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 键值声明定义大多数浏览器动作属性。
 
-<p>使用 <code>browserAction</code> API，您可以：</p>
+使用 `browserAction` API，您可以：
 
-<ul>
- <li>使用 {{WebExtAPIRef("browserAction.onClicked")}} 监听该图标的点击事件。</li>
- <li>获取和设置该图标的属性——图标、标题、弹出窗等。You can get and set these globally across all tabs, or for a specific tab by passing the tab ID as an additional argument.</li>
-</ul>
+- 使用 {{WebExtAPIRef("browserAction.onClicked")}} 监听该图标的点击事件。
+- 获取和设置该图标的属性——图标、标题、弹出窗等。You can get and set these globally across all tabs, or for a specific tab by passing the tab ID as an additional argument.
 
-<p>另见<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components">用户界面组件</a>中的浏览器动作章节。</p>
+另见[用户界面组件](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components)中的浏览器动作章节。
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.ColorArray")}}</dt>
- <dd>0-255 范围内的四个整数的数组，定义 RGBA 颜色。</dd>
- <dt>{{WebExtAPIRef("browserAction.ImageDataType")}}</dt>
- <dd>一个图像的像素数据。必须为一个 <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> 对象（例如，来自一个 {{htmlelement("canvas")}} 元素）。</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.ColorArray")}}
+  - : 0-255 范围内的四个整数的数组，定义 RGBA 颜色。
+- {{WebExtAPIRef("browserAction.ImageDataType")}}
+  - : 一个图像的像素数据。必须为一个 [`ImageData`](/en-US/docs/Web/API/ImageData) 对象（例如，来自一个 {{htmlelement("canvas")}} 元素）。
 
-<h2 id="函数">函数</h2>
+## 函数
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.setTitle()")}}</dt>
- <dd>设置浏览器动作的标题。这将在工具提示（鼠标悬停时）显示。</dd>
- <dt>{{WebExtAPIRef("browserAction.getTitle()")}}</dt>
- <dd>获取浏览器动作的标题。</dd>
- <dt>{{WebExtAPIRef("browserAction.setIcon()")}}</dt>
- <dd>设置浏览器动作的图标。</dd>
- <dt>{{WebExtAPIRef("browserAction.setPopup()")}}</dt>
- <dd>设置 HTML 文档作为浏览器动作图标被用户点击时显示的弹出窗。</dd>
- <dt>{{WebExtAPIRef("browserAction.getPopup()")}}</dt>
- <dd>获取作为浏览器动作的弹出窗的 HTML 文档。</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeText()")}}</dt>
- <dd>设置浏览器动作的徽章文本。该徽章显示在图标上方。</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeText()")}}</dt>
- <dd>获取浏览器动作的徽章文本。</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}</dt>
- <dd>设置徽章的后台颜色。</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}</dt>
- <dd>获取徽章的后台颜色。</dd>
- <dt>{{WebExtAPIRef("browserAction.enable()")}}</dt>
- <dd>为一个标签页启用浏览器动作。默认情况下，浏览器动作为所有标签页启用。</dd>
- <dt>{{WebExtAPIRef("browserAction.disable()")}}</dt>
- <dd>为一个标签页禁用浏览器动作，使该标签页为活动时无法单击它。</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.setTitle()")}}
+  - : 设置浏览器动作的标题。这将在工具提示（鼠标悬停时）显示。
+- {{WebExtAPIRef("browserAction.getTitle()")}}
+  - : 获取浏览器动作的标题。
+- {{WebExtAPIRef("browserAction.setIcon()")}}
+  - : 设置浏览器动作的图标。
+- {{WebExtAPIRef("browserAction.setPopup()")}}
+  - : 设置 HTML 文档作为浏览器动作图标被用户点击时显示的弹出窗。
+- {{WebExtAPIRef("browserAction.getPopup()")}}
+  - : 获取作为浏览器动作的弹出窗的 HTML 文档。
+- {{WebExtAPIRef("browserAction.setBadgeText()")}}
+  - : 设置浏览器动作的徽章文本。该徽章显示在图标上方。
+- {{WebExtAPIRef("browserAction.getBadgeText()")}}
+  - : 获取浏览器动作的徽章文本。
+- {{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}
+  - : 设置徽章的后台颜色。
+- {{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}
+  - : 获取徽章的后台颜色。
+- {{WebExtAPIRef("browserAction.enable()")}}
+  - : 为一个标签页启用浏览器动作。默认情况下，浏览器动作为所有标签页启用。
+- {{WebExtAPIRef("browserAction.disable()")}}
+  - : 为一个标签页禁用浏览器动作，使该标签页为活动时无法单击它。
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.onClicked")}}</dt>
- <dd>在浏览器动作图标点击时被触发。如果浏览器动作有弹出窗，则该事件不会触发。</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.onClicked")}}
+  - : 在浏览器动作图标点击时被触发。如果浏览器动作有弹出窗，则该事件不会触发。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.browserAction")}}</p>
+{{Compat("webextensions.api.browserAction")}}
 
-<div class="note">
-<p><strong>备注：</strong> "Chrome 兼容性"是从 <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> 包含，使用<a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a>宏。</p>
+> **备注：** "Chrome 兼容性"是从 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) 包含，使用[WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat)宏。
+>
+> 如果你需要更新此章节，编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities)，然后刷新查看更改。
 
-<p>如果你需要更新此章节，编辑 <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>，然后刷新查看更改。</p>
-</div>
+{{WebExtExamples("h2")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+> **备注：** 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) API。此文档派生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+>
+> Microsoft Edge 兼容性数据由微软公司提供，并以 知识共享 署名 3.0 美国版 许可。
 
-<div class="note">
-<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a> API。此文档派生自 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a>。</p>
-
-<p>Microsoft Edge 兼容性数据由微软公司提供，并以 知识共享 署名 3.0 美国版 许可。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +98,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

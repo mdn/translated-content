@@ -37,8 +37,6 @@ Flexbox 还可以对齐主轴或交叉轴上的项目，从而提供对一组项
 - CSS Flexbox Guide: _[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
 - CSS Flexbox Guide: _[Typical use cases of flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)_
 
-<!---->
-
 - [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
 
   - {{Glossary("Flex")}}

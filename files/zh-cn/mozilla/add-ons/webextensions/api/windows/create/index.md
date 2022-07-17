@@ -3,68 +3,63 @@ title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>创建一个新的窗口。</p>
+创建一个新的窗口。
 
-<p>当你创建一个窗口时，你可以：</p>
+当你创建一个窗口时，你可以：
 
-<ul>
- <li>加载一个或多个新的标签到该窗口中。</li>
- <li>将一个现有窗口的。标签移动到新的窗口中</li>
- <li>设置窗口的大小和位置</li>
- <li>创建一个面板样式的窗口，它没有浏览器的默认样式（地址栏，工具栏等）</li>
- <li>设置窗口的多种属性，像是获得焦点或是为隐私窗口。</li>
-</ul>
+- 加载一个或多个新的标签到该窗口中。
+- 将一个现有窗口的。标签移动到新的窗口中
+- 设置窗口的大小和位置
+- 创建一个面板样式的窗口，它没有浏览器的默认样式（地址栏，工具栏等）
+- 设置窗口的多种属性，像是获得焦点或是为隐私窗口。
 
-<p>这是一个异步的方法返回一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+这是一个异步的方法返回一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:js">var creating = browser.windows.create(
+```js
+var creating = browser.windows.create(
   createData            // optional object
 )
-</pre>
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>createData</code>{{optional_inline}}</dt>
- <dd><code>object</code>.
- <dl>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code><code>字符串或字符串数组</code></code>. 一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。<code>http://www.google.com</code>, not <code>www.google.com</code>). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。</dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. 如果设置了该值，将该 tab 从一个现有的窗口中移到新窗口中。</dd>
-  <dt><code>left</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. 窗口左边到屏幕左边缘的距离。如果没有设定，新窗口将按上一个焦点窗口定位水平位置。对于 panel 样式窗口，该值不起作用。</dd>
-  <dt><code>top</code>{{optional_inline}}</dt>
-  <dd>窗口顶部到屏幕的顶部距离。如果没有设定，新窗口将按上一个焦点窗口定位垂直位置。对于 panel 样式窗口，该值不起作用。</dd>
-  <dt><code>width</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. 新窗口的宽度，包含框架。未设定则使用默认宽度。.</dd>
-  <dt><code>height</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. 新窗口的高度，包含框架。未设定则使用默认高度。.</dd>
-  <dt><code>focused</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>.如果 为<code>true</code>, 新窗口将获取焦点。否则新窗口当在后台打开并且当前焦点窗口继续保持焦点.。.默认为 true</dd>
-  <dt><code>incognito</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. 是否打开为一个隐私窗口。<code>如果设定为隐私窗口并且引入了tabId</code>, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。</dd>
-  <dt><code>type</code>{{optional_inline}}</dt>
-  <dd>一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型。<code>panel</code> 或者<code>popup</code> 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。</dd>
-  <dt><code>state</code>{{optional_inline}}</dt>
-  <dd>一个 {{WebExtAPIRef('windows.WindowState')}} 值，窗口的祲状态。最小化、最大化、全屏状态不能与<code>left</code>, <code>top</code>, <code>width</code>, or <code>height</code>属性一起使用。</dd>
- </dl>
- </dd>
-</dl>
+- `createData`{{optional_inline}}
+  - : `object`.
+    - `url`{{optional_inline}}
+      - : 字符串或字符串数组. 一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。`http://www.google.com`, not `www.google.com`). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。
+    - `tabId`{{optional_inline}}
+      - : `integer`. 如果设置了该值，将该 tab 从一个现有的窗口中移到新窗口中。
+    - `left`{{optional_inline}}
+      - : `integer`. 窗口左边到屏幕左边缘的距离。如果没有设定，新窗口将按上一个焦点窗口定位水平位置。对于 panel 样式窗口，该值不起作用。
+    - `top`{{optional_inline}}
+      - : 窗口顶部到屏幕的顶部距离。如果没有设定，新窗口将按上一个焦点窗口定位垂直位置。对于 panel 样式窗口，该值不起作用。
+    - `width`{{optional_inline}}
+      - : `integer`. 新窗口的宽度，包含框架。未设定则使用默认宽度。
+    - `height`{{optional_inline}}
+      - : `integer`. 新窗口的高度，包含框架。未设定则使用默认高度。
+    - `focused`{{optional_inline}}
+      - : `boolean`.如果 为`true`, 新窗口将获取焦点。否则新窗口当在后台打开并且当前焦点窗口继续保持焦点。默认为 true
+    - `incognito`{{optional_inline}}
+      - : `boolean`. 是否打开为一个隐私窗口。`如果设定为隐私窗口并且引入了tabId`, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。
+    - `type`{{optional_inline}}
+      - : 一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型。`panel` 或者`popup` 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。
+    - `state`{{optional_inline}}
+      - : 一个 {{WebExtAPIRef('windows.WindowState')}} 值，窗口的祲状态。最小化、最大化、全屏状态不能与`left`, `top`, `width`, or `height`属性一起使用。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API,  如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.</p>
+一个 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API, 如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>打开一个包含两个标签的窗口</p>
+打开一个包含两个标签的窗口
 
-<pre class="brush: js">function onCreated(windowInfo) {
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -72,17 +67,19 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
     url: ["https://developer.mozilla.org",
           "https://addons.mozilla.org"]
   });
   creating.then(onCreated, onError);
-});</pre>
+});
+```
 
-<p>当用户点击一个 browser action 打开一个窗口，并且将当前活跃的标签移动其中</p>
+当用户点击一个 browser action 打开一个窗口，并且将当前活跃的标签移动其中
 
-<pre class="brush: js">function onCreated(windowInfo) {
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -90,16 +87,18 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
     tabId: tab.id
   });
   creating.then(onCreated, onError);
-});</pre>
+});
+```
 
-<p>打开一个小面板样式的窗口，并且加载一个本地包中的文件到其中</p>
+打开一个小面板样式的窗口，并且加载一个本地包中的文件到其中
 
-<pre class="brush: js">function onCreated(windowInfo) {
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -107,7 +106,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
 
   var popupURL = browser.extension.getURL("popup/popup.html");
 
@@ -119,22 +118,20 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
   });
   creating.then(onCreated, onError);
 
-});</pre>
+});
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-create"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
+> **备注：** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -161,5 +158,4 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -3,62 +3,48 @@ title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
+> **警告：** 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 [Proxy Auto-Configuration (PAC) file](/en-US/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification). 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。
 
+使用 proxy API 来代理 web 请求。你可以使用**`{{WebExtAPIRef("proxy.onRequest")}}`**事件监听器来拦截 web 请求，并且返回一个可以描述是否代理并且怎样代理它们的对象。
 
-<div class="blockIndicator warning">
-<p><strong>警告：</strong> 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 <a href="/en-US/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification">Proxy Auto-Configuration (PAC) file</a>. 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。</p>
-</div>
+{{WebExtAPIRef("proxy.onRequest")}}的好处在于，用于实现你拦截策略的代码在你的扩展的后台脚本运行，所以，它可以让**`WebExtension APIs`**能够完全的访问你的扩展 (举例来说，可以访问你扩展的`storage`和像 dns 等类似的网络 api)
 
-<p>使用 proxy API 来代理 web 请求。你可以使用<code><strong>{{WebExtAPIRef("proxy.onRequest")}}</strong></code>事件监听器来拦截 web 请求，并且返回一个可以描述是否代理并且怎样代理它们的对象。</p>
+除了这个 api，扩展也能够使用**[`browserSettings.proxyConfig`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig)**属性来重新编辑你全局的`proxy`设置
 
-<p>{{WebExtAPIRef("proxy.onRequest")}}的好处在于，用于实现你拦截策略的代码在你的扩展的后台脚本运行，所以，它可以让<code><strong>WebExtension APIs</strong></code>能够完全的访问你的扩展 (举例来说，可以访问你扩展的<code>storage</code>和像 dns 等类似的网络 api)</p>
+Chrome 浏览器提供了一个叫做`'proxy'的`api 扩展，它的功能跟这个 api 类似，在 chrome 的 api 中也可以用来实现一个`拦截策略。`然而，Chrome 的 API 的设计跟这个 API 设计完全不同。因为这个 API 跟谷歌的`proxy`的 API 完全不同， 这个 API 只能通过'browser'命名空间访问
 
-<p>除了这个 api，扩展也能够使用<strong><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig">browserSettings.proxyConfig</a></code></strong>属性来重新编辑你全局的<code>proxy</code>设置</p>
+如果你想用这个 API 你需要得到'`proxy`'的[permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).并且，如果你想拦截一个请求，你同样也需要当前拦截请求的 url 的 [host permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-<p>Chrome 浏览器提供了一个叫做<code><a href="https://developer.chrome.com/extensions/proxy">'proxy'</a>的</code>api 扩展，它的功能跟这个 api 类似，在 chrome 的 api 中也可以用来实现一个<code>拦截策略。</code>然而，Chrome 的 API 的设计跟这个 API 设计完全不同。因为这个 API 跟谷歌的<code>proxy</code>的 API 完全不同， 这个 API 只能通过'browser'命名空间访问</p>
+## Types
 
-<p>如果你想用这个 API 你需要得到'<code>proxy</code>'的<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.并且，如果你想拦截一个请求，你同样也需要当前拦截请求的 url 的 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">host permission</a>。</p>
+- {{WebExtAPIRef("proxy.ProxyInfo")}}
+  - : Describes a proxy.
+- {{WebExtAPIRef("proxy.RequestDetails")}}
+  - : Contains information about a web request that the browser is about to make.
 
-<h2 id="Types">Types</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.ProxyInfo")}}</dt>
- <dd>Describes a proxy.</dd>
- <dt>{{WebExtAPIRef("proxy.RequestDetails")}}</dt>
- <dd>
- <p>Contains information about a web request that the browser is about to make.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("proxy.settings")}}
+  - : Get and set proxy settings.
 
-<h2 id="Properties">Properties</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.settings")}}</dt>
- <dd>Get and set proxy settings.</dd>
-</dl>
+- {{WebExtAPIRef("proxy.register()")}} {{Deprecated_Inline}}
+  - : Registers the given proxy script.
+- {{WebExtAPIRef("proxy.unregister()")}} {{Deprecated_Inline}}
+  - : Unregisters the proxy script.
 
-<h2 id="Functions">Functions</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.register()")}} {{Deprecated_Inline}}</dt>
- <dd>Registers the given proxy script.</dd>
- <dt>{{WebExtAPIRef("proxy.unregister()")}} {{Deprecated_Inline}}</dt>
- <dd>Unregisters the proxy script.</dd>
-</dl>
+- {{WebExtAPIRef("proxy.onError")}}
+  - : Fired when the system encounters an error running the PAC script or the `onRequest` listener.
+- {{WebExtAPIRef("proxy.onRequest")}}
+  - : Fired when a web request is about to be made, giving the extension an opportunity to proxy it.
 
-<h2 id="Events">Events</h2>
+{{WebExtExamples("h2")}}
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.onError")}}</dt>
- <dd>Fired when the system encounters an error running the PAC script or the <code>onRequest</code> listener.</dd>
- <dt>{{WebExtAPIRef("proxy.onRequest")}}</dt>
- <dd>Fired when a web request is about to be made, giving the extension an opportunity to proxy it.</dd>
-</dl>
+## Browser compatibility
 
-<p>{{WebExtExamples("h2")}}</p>
-
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat("webextensions.api.proxy")}}</p>
+{{Compat("webextensions.api.proxy")}}

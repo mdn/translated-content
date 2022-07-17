@@ -6,84 +6,72 @@ tags:
   - Firefox 22
 translation_of: Mozilla/Firefox/Releases/22
 ---
-<div>{{FirefoxSidebar}}</div><h2 id="Web开发者需要注意的变化">Web 开发者需要注意的变化</h2>
+{{FirefoxSidebar}}
 
-<h3 id="HTML">HTML</h3>
+## Web 开发者需要注意的变化
 
-<ul>
- <li>实现了 HTML5 中的{{HTMLElement("data")}}元素 ({{bug(839371)}}).</li>
- <li>The HTML5 {{HTMLElement("time")}} element has been implemented ({{bug(629801)}}).</li>
- <li>The <code>range</code> state of the {{HTMLElement("input")}} element (<code>&lt;input type="range"&gt;</code>) has been implemented, behind the preference <code>dom.experimental_forms_range</code>, only enabled by default on Nightly and Aurora channel ({{bug(841948)}}).</li>
- <li>The support for the {{HTMLElement("template")}} element, part of the Web component specification has been implemented ({{bug(818976)}}).</li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- 实现了 HTML5 中的{{HTMLElement("data")}}元素 ({{bug(839371)}}).
+- The HTML5 {{HTMLElement("time")}} element has been implemented ({{bug(629801)}}).
+- The `range` state of the {{HTMLElement("input")}} element (`<input type="range">`) has been implemented, behind the preference `dom.experimental_forms_range`, only enabled by default on Nightly and Aurora channel ({{bug(841948)}}).
+- The support for the {{HTMLElement("template")}} element, part of the Web component specification has been implemented ({{bug(818976)}}).
 
-<ul>
- <li><a href="http://asmjs.org/spec/latest/">Asm.js </a>optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.</li>
- <li>实现了 ES6 中的<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭头函数</a>({{bug(846406)}}).</li>
- <li>The new <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a> function has been added ({{bug(839979)}}).</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code> in generator expressions is now inherited from enclosing lexical scope ({{bug(848051)}}).</li>
- <li>The ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "preventExtensions")}} trap have been implemented ({{bug(789897)}}).</li>
-</ul>
+### JavaScript
 
-<h3 id="DOM">DOM</h3>
+- [Asm.js ](http://asmjs.org/spec/latest/)optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.
+- 实现了 ES6 中的[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)({{bug(846406)}}).
+- The new [Object.is](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) function has been added ({{bug(839979)}}).
+- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) in generator expressions is now inherited from enclosing lexical scope ({{bug(848051)}}).
+- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "preventExtensions")}} trap have been implemented ({{bug(789897)}}).
 
-<ul>
- <li>不再支持<code>XMLHttpRequest中的</code><code>multipart属性和</code><code>multipart/x-mixed-replac</code>响应。这是一个 Gecko 独有的特性，从来没被标准化过。你可以使用<a href="/en-US/docs/Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/WebSockets">Web Sockets</a>或者在 progress 事件中查看<code>responseText</code>属性的变化来实现同样的效果。</li>
- <li>实现了<a href="http://notifications.spec.whatwg.org/">Web Notifications</a> ({{bug(782211)}}).</li>
- <li>{{domxref("XMLHttpRequest/FormData", "FormData")}}对象的<code>append</code>方法现在开始接受第三个参数<code>filename</code>({{bug(690659)}}).</li>
- <li>移除了{{domxref("Node.isSupported")}}方法 ({{bug(801562)}}).</li>
- <li>{{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).</li>
- <li>The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ({{bug("844134")}}).</li>
- <li>实现了 Mac OS X 中的{{domxref("DeviceLightEvent", "Ambient Light Events")}}后端。</li>
- <li>Elements in the HTML namespace with local names {{HTMLElement("bgsound")}}, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface.  {{HTMLElement("bgsound")}} and {{HTMLElement("bgsound")}} implement {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.</li>
- <li>The {{ domxref("NodeIterator.detach") }} method has been changed to do nothing ({{bug("823549")}}).</li>
- <li>The {{domxref("BlobEvent")}} interface has been implemented ({{bug("834165")}}).</li>
- <li>The properties <code>HTMLMediaElement.crossorigin</code> and <code>HTMLInputElement.inputmode</code> has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and <code>HTMLInputElement.inputMode</code>, respectively ({{bug("847370")}} and {{bug("850346")}}).</li>
- <li>WebRTC: the Media Stream API and Peer Connection API are now supported by default.</li>
- <li>Web Components: the {{domxref("Document.register")}} method has been implemented ({{bug("783129")}}).</li>
- <li>The {{domxref("ProgressEvent.initProgressEvent()")}} constructor method has been removed. Uses the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construc and initialize {{domxref("ProgressEvent")}} ({{bug("843489")}}).</li>
- <li>Manipulated data associated with a {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ({{bug("407983")}}).</li>
- <li>The {{domxref("HTMLTimeElement")}} interface has been implemented ({{bug("629801")}}).</li>
- <li>When a {{domxref("Worker")}} constructor is passed an invalid URL, it now throws {{domxref("DOMException")}} of type <code>SECURITY_ERR</code> ({{bug("587251")}}).</li>
-</ul>
+### DOM
 
-<h3 id="CSS">CSS</h3>
+- 不再支持` XMLHttpRequest中的``multipart属性和``multipart/x-mixed-replac `响应。这是一个 Gecko 独有的特性，从来没被标准化过。你可以使用[Server-Sent Events](/en-US/docs/Server-sent_events), [Web Sockets](/en-US/docs/WebSockets)或者在 progress 事件中查看`responseText`属性的变化来实现同样的效果。
+- 实现了[Web Notifications](http://notifications.spec.whatwg.org/) ({{bug(782211)}}).
+- {{domxref("XMLHttpRequest/FormData", "FormData")}}对象的`append`方法现在开始接受第三个参数`filename`({{bug(690659)}}).
+- 移除了{{domxref("Node.isSupported")}}方法 ({{bug(801562)}}).
+- {{domxref("Node.setUserData")}} and {{domxref("Node.getUserData")}} has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).
+- The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ({{bug("844134")}}).
+- 实现了 Mac OS X 中的{{domxref("DeviceLightEvent", "Ambient Light Events")}}后端。
+- Elements in the HTML namespace with local names {{HTMLElement("bgsound")}}, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface. {{HTMLElement("bgsound")}} and {{HTMLElement("bgsound")}} implement {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.
+- The {{ domxref("NodeIterator.detach") }} method has been changed to do nothing ({{bug("823549")}}).
+- The {{domxref("BlobEvent")}} interface has been implemented ({{bug("834165")}}).
+- The properties `HTMLMediaElement.crossorigin` and `HTMLInputElement.inputmode` has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and `HTMLInputElement.inputMode`, respectively ({{bug("847370")}} and {{bug("850346")}}).
+- WebRTC: the Media Stream API and Peer Connection API are now supported by default.
+- Web Components: the {{domxref("Document.register")}} method has been implemented ({{bug("783129")}}).
+- The {{domxref("ProgressEvent.initProgressEvent()")}} constructor method has been removed. Uses the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construc and initialize {{domxref("ProgressEvent")}} ({{bug("843489")}}).
+- Manipulated data associated with a {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ({{bug("407983")}}).
+- The {{domxref("HTMLTimeElement")}} interface has been implemented ({{bug("629801")}}).
+- When a {{domxref("Worker")}} constructor is passed an invalid URL, it now throws {{domxref("DOMException")}} of type `SECURITY_ERR` ({{bug("587251")}}).
 
-<ul>
- <li>Support for <a href="/en-US/docs/CSS/Tutorials/Using_CSS_flexible_boxes">CSS Flexbox layout</a> has been enabled by default ({{bug("841876")}}).</li>
- <li>Following a spec change, the initial value for {{cssxref("min-width")}} and {{cssxref("min-height")}} has been changed back to <code>0</code>, even on flex items ({{bug("848539")}}).</li>
- <li>Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports")}}) has been enabled by default ({{bug("855455")}}).</li>
- <li>Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ({{bug("570896")}}).</li>
-</ul>
+### CSS
 
-<h2 id="附加组件和Mozilla开发者需要注意的变化">附加组件和 Mozilla 开发者需要注意的变化</h2>
+- Support for [CSS Flexbox layout](/en-US/docs/CSS/Tutorials/Using_CSS_flexible_boxes) has been enabled by default ({{bug("841876")}}).
+- Following a spec change, the initial value for {{cssxref("min-width")}} and {{cssxref("min-height")}} has been changed back to `0`, even on flex items ({{bug("848539")}}).
+- Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports")}}) has been enabled by default ({{bug("855455")}}).
+- Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ({{bug("570896")}}).
 
-<ul>
- <li>移除了下面这些方法中的<code>properties</code>参数：<code>nsITreeView.getCellProperties()</code>, <code>nsITreeView.getColumnProperties()</code> and <code>nsITreeView.getRowProperties()</code> methods of <code>nsITreeView</code>. These methods should now return a string of space-separated property names. ({{bug('407956')}})</li>
- <li>The <code>inIDOMUtils.getCSSPropertyNames()</code> method has been implemented and will return all supported <a href="/en-US/docs/CSS/CSS_Reference">CSS property</a> names.</li>
- <li>See <a href="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/">here </a>for more changes.</li>
-</ul>
+## 附加组件和 Mozilla 开发者需要注意的变化
 
-<h3 id="Firefox_Developer_Tools">Firefox Developer Tools</h3>
+- 移除了下面这些方法中的`properties`参数：`nsITreeView.getCellProperties()`, `nsITreeView.getColumnProperties()` and `nsITreeView.getRowProperties()` methods of `nsITreeView`. These methods should now return a string of space-separated property names. ({{bug('407956')}})
+- The `inIDOMUtils.getCSSPropertyNames()` method has been implemented and will return all supported [CSS property](/en-US/docs/CSS/CSS_Reference) names.
+- See [here ](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)for more changes.
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/">Font inspector</a> shows which fonts on your computer are applied to the page.</li>
- <li>Visual paint feedback mode shows when and where a page is repainted.</li>
- <li>The dev tools may now be docked to the right side, not just the bottom of the browser.</li>
- <li>Some panes within the dev tools have switched from <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875727">XUL to HTML</a>. For example, the css rule viewer is now chrome://browser/content/devtools/cssruleview.xhtml, not <code>cssruleview.xul</code>. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these html documents.</li>
- <li>The stack trace is now shown as a breadcrumb near the top, and the script listing is now at the left panel of the debugger.</li>
-</ul>
+### Firefox Developer Tools
 
-<h2 id="相关链接">相关链接</h2>
+- [Font inspector](https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/) shows which fonts on your computer are applied to the page.
+- Visual paint feedback mode shows when and where a page is repainted.
+- The dev tools may now be docked to the right side, not just the bottom of the browser.
+- Some panes within the dev tools have switched from [XUL to HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). For example, the css rule viewer is now chrome://browser/content/devtools/cssruleview\.xhtml, not `cssruleview.xul`. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these html documents.
+- The stack trace is now shown as a breadcrumb near the top, and the script listing is now at the left panel of the debugger.
 
-<ul>
- <li><a href="http://www.mozilla.org/en-US/firefox/22.0a1/auroranotes/">Firefox 22 Aurora Release Notes</a></li>
- <li><a href="/en-US/docs/Site_Compatibility_for_Firefox_22">Site Compatibility for Firefox 22</a></li>
- <li><a href="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/">Add-on Compatibility for Firefox 22</a></li>
-</ul>
+## 相关链接
 
-<h3 id="Older_versions">Older versions</h3>
+- [Firefox 22 Aurora Release Notes](http://www.mozilla.org/en-US/firefox/22.0a1/auroranotes/)
+- [Site Compatibility for Firefox 22](/en-US/docs/Site_Compatibility_for_Firefox_22)
+- [Add-on Compatibility for Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
 
-<p>{{Firefox_for_developers('21')}}</p>
+### Older versions
+
+{{Firefox_for_developers('21')}}
