@@ -13,9 +13,9 @@ translation_of: Web/api/TextDecoder/TextDecoder
 ---
 {{APIRef("Encoding API")}}
 
-**`TextDecoder()`** 构造函数使用指定的参数编码返回一个新创建的 {{DOMxRef("TextDecoder")}} 对象。
+**`TextDecoder()`** 构造函数使用参数中指定的编码返回一个新创建的 {{DOMxRef("TextDecoder")}} 对象。
 
-如果 _utfLabel_ 值是未知的，或者是使用了“`replacement`”算法（“`iso-2022-cn`”或“`iso-2022-cn-ext`”）的两个值之一，则会抛出 {{jsxref("RangeError")}}。
+如果 _utfLabel_ 值是未知的，或是使用了“`replacement`”编码（“`iso-2022-cn`”或“`iso-2022-cn-ext`”）的两个值之一，则会抛出 {{jsxref("RangeError")}}。
 
 ## 语法
 
@@ -34,7 +34,7 @@ new TextDecoder(utfLabel, options)
   - : 一个具有属性的 `TextDecoderOptions` 对象：
 
     - `fatal`
-      - : 一个 [`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)，表示当一个编码发生错误时，{{DOMxRef("TextDecoder.decode()")}} 方法必须抛出 {{jsxref("TypeError")}}。默认是 `false`。
+      - : 一个 [`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)，表示当遇到一个编码错误时，{{DOMxRef("TextDecoder.decode()")}} 方法是否必须抛出 {{jsxref("TypeError")}}。默认是 `false`。
 
 ## 示例
 
@@ -55,4 +55,4 @@ var textDecoder4 = new TextDecoder("iso-2022-cn"); // Throw a RangeError excepti
 
 ## 参见
 
-- The {{DOMxRef("TextDecoder")}} interface it belongs to.
+- 属于 {{DOMxRef("TextDecoder")}} 接口。
