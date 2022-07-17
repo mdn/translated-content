@@ -65,7 +65,7 @@ ID 为 `"pip-video"` 的 {{HTMLElement("video")}} 会根据是否在画中画浮
 
 ## 参见
 
-- [Picture-in-picture API](/en-US/docs/Web/API/Picture-in-Picture_API)
+- [Picture-in-picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API)
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
 - {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
