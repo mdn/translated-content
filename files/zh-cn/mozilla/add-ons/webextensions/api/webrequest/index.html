@@ -24,17 +24,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>在请求过程中的任意时间，{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 可以被触发。虽然有时候触发的事件顺序不同，举个例子，在火狐浏览器中的 HSTS 过程，在 onBeforeRequest 事件执行后，onBeforeRedirect 事件会被立即触发。</p>
 
-<p>所有的事件，接受<code>onErrorOccurred事件</code>, <code>addListener()</code>有三个参数 :</p>
+<p>所有的事件，接受<code>onErrorOccurred事件</code>, <code>addListener()</code>有三个参数 :</p>
 
 <ul>
  <li>监听本身</li>
- <li>一个{{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，所以你仅可以被特定请求或特定的资源类型提醒</li>
+ <li>一个 {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，所以你仅可以被特定请求或特定的资源类型提醒</li>
  <li>一个可选的<code>extraInfoSpec</code>对象。你可以使用这个对象添加特定的事件命令</li>
 </ul>
 
 <p>这个监听函数接收一个<code>details</code>对象，这个对象包含这个请求的信息。他包含一个请求 ID, 在插件中这个 ID 可以关联唯一个请求事件。这个 ID 是浏览器会话和插件上下文中唯一的。他始终在同一个请求中，贯穿着转发和授权等事件中。</p>
 
-<p>在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> 和 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>. 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。</p>
+<p>在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> 和 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a>. 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。</p>
 
 <p>这个 webRequest API 不能让你进入一些安全敏感的请求，比如<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1279371">update checks and OCSP checks</a>.</p>
 
@@ -75,7 +75,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>为了完成这些操作，你需要在<code>extraInfoSpec</code>参数中添加"blocking"的值到事件的<code>addListener()</code>。这将使得监听器变成同步执行。在监听器中，你可以返回一个表明需要作修改的{{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}对象：比如说，你想要发送的修改后的请求头。</p>
 
-<p>从 Firefox 52 开始，监听器会返回一个<code>resolve(BlockingResponse)</code> 的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>，而不是直接返回一个<code>BlockingResponse</code>。这使得监听器可以异步地处理请求。</p>
+<p>从 Firefox 52 开始，监听器会返回一个<code>resolve(BlockingResponse)</code> 的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>，而不是直接返回一个<code>BlockingResponse</code>。这使得监听器可以异步地处理请求。</p>
 
 <h2 id="Types">Types</h2>
 
@@ -98,7 +98,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <dl>
  <dt>{{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}</dt>
- <dd>The maximum number of times that <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged"><code>handlerBehaviorChanged()</code></a></code> can be called in a 10 minute period.</dd>
+ <dd>The maximum number of times that <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged"><code>handlerBehaviorChanged()</code></a> can be called in a 10 minute period.</dd>
 </dl>
 
 <h2 id="Functions">Functions</h2>
@@ -135,21 +135,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>{{Compat("webextensions.api.webRequest")}}</p>
 
-<div class="hidden note">
-<p>The "Chrome incompatibilities" section is included from <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
-
-<p>If you need to update this content, edit <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
-</div>
-
 <h3 id="Edge_incompatibilities">Edge incompatibilities</h3>
 
 <p>Promises are not supported in Edge. Use callbacks instead.</p>
 
 <p>{{Compat("webextensions.api.webRequest")}} {{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

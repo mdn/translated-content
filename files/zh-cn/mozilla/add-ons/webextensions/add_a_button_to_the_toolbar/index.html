@@ -47,8 +47,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 
 <p>上面内容显示有一个名为“background.js”后台脚本，以及在“icons”文件夹下的浏览器行为按钮图标。</p>
 
-<div class="pull-aside">
-<div class="moreinfo">These icons are from the <a href="https://www.iconfinder.com/iconsets/bitsies">bitsies!</a> iconset created by Recep Kütük.</div>
+<div>
+<div>These icons are from the <a href="https://www.iconfinder.com/iconsets/bitsies">bitsies!</a> iconset created by Recep Kütük.</div>
 </div>
 
 <p>接下来，在"buttons" 文件夹下创建 "icons" 文件夹，在该文件夹下存放下面的图标文件：</p>
@@ -57,8 +57,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
  <li>"page-16.png" (<img src="page-16.png">)</li>
  <li>"page-32.png" (<img src="page-32.png">).</li>
 </ul>
-
-<div style=""> </div>
 
 <p>我们有两个图标，大图标用于在高分辨率状态下显示。浏览器会自动选择合适的图标。</p>
 
@@ -76,12 +74,12 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 <p>现在完整的附加组件看上去应该像下面这样：</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">button/
+<pre class="brush: plain">button/
     icons/
         page-16.png
         page-32.png
     background.js
-    manifest.json</code></pre>
+    manifest.json</pre>
 
 <p>安装这个<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">WebExtension</a> ，然后单击按钮：</p>
 

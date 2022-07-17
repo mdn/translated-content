@@ -46,11 +46,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 <p>"content_scripts"指出符合 URL 格式的页面地址，然后让浏览器加载脚本 (“page-eater.js“) 到匹配的 URL 页面 (<a href="/">https://developer.mozilla.org/</a> )。</p>
 
 <div class="note">
-<p>由于 <code>content_scripts</code> 的 <code>"js"</code> 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。</p>
+<p><strong>备注：</strong> 由于 <code>content_scripts</code> 的 <code>"js"</code> 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。</p>
 </div>
 
 <div class="note">
-<p><code>content_scripts</code> 键还具有一个 <code>"css"</code> 属性，可以使用它来注入 CSS 样式表。</p>
+<p><strong>备注：</strong> <code>content_scripts</code> 键还具有一个 <code>"css"</code> 属性，可以使用它来注入 CSS 样式表。</p>
 </div>
 
 <p>在 "modify-page" 文件夹下创建“page-eater.js”文件，内容如下：</p>
@@ -66,7 +66,7 @@ document.body.appendChild(header);</pre>
 <p>{{EmbedYouTube("lxf2Tkg6U1M")}}</p>
 
 <div class="note">
-<p>请注意，虽然此视频显示在 <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> 工作的 content scripts，但目前该网站已禁止 content scripts。</p>
+<p><strong>备注：</strong> 请注意，虽然此视频显示在 <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> 工作的 content scripts，但目前该网站已禁止 content scripts。</p>
 </div>
 
 <h2 id="通过程序修改页面">通过程序修改页面</h2>
@@ -119,27 +119,27 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>现在，附加组件看起来像这样：</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">modify-page/
+<pre class="brush: plain">modify-page/
     background.js
     manifest.json
-    page-eater.js</code></pre>
+    page-eater.js</pre>
 
 <p>重新加载<a href="/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">WebExtension</a>, 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：</p>
 
 <p>{{EmbedYouTube("zX4Bcv8VctA")}}</p>
 
 <div class="note">
-<p>请注意，虽然此视频显示在 <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> 工作的 content scripts，但目前该网站已禁止 content scripts。</p>
+<p><strong>备注：</strong> 请注意，虽然此视频显示在 <a href="https://addons.mozilla.org/en-US/firefox/">addons.mozilla.org</a> 工作的 content scripts，但目前该网站已禁止 content scripts。</p>
 </div>
 
 <h2 id="消息">消息</h2>
 
 <p>内容脚本和后台脚本不能直接相互访问，但可以通过发送消息进行通信。当一端设置一个消息侦听器时，另一个端就可以发送消息了。下面的表格总结了通信时的 api 接口：</p>
 
-<table class=" fullwidth-table standard-table">
+<table class="fullwidth-table standard-table">
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th scope="col">在内容脚本中</th>
    <th scope="col">在后台脚本中</th>
   </tr>
@@ -186,7 +186,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 });
 </pre>
 
-<p> 注入 "page-eater.js"后，通过使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code> 获取当前活动标签页，然后使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code> 将消息发送到该标签页中的内容脚本。该消息的内容 <code>{replacement: "Message from the add-on!"}。</code></p>
+<p> 注入 "page-eater.js"后，通过使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code> 获取当前活动标签页，然后使用<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">tabs.sendMessage()</a></code> 将消息发送到该标签页中的内容脚本。该消息的内容 <code>{replacement: "Message from the add-on!"}。</code></p>
 
 <p>接下来，修改 "page-eater.js" 如下：</p>
 
@@ -206,7 +206,7 @@ browser.runtime.onMessage.addListener(eatPage);
 <p>如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> ，其他与上面的过程相反。</p>
 
 <div class="note">
-<p>这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> 函数。</p>
+<p><strong>备注：</strong> 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS()</a></code> 函数。</p>
 </div>
 
 <h2 id="了解更多">了解更多</h2>
@@ -236,4 +236,4 @@ browser.runtime.onMessage.addListener(eatPage);
  </li>
 </ul>
 
-<p> </p>
+<p> </p>

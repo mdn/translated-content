@@ -19,23 +19,23 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <ul>
  <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本">后台脚本</a>: 执行一个长时间运行的逻辑。</li>
- <li><a>图标</a>: 用于扩展插件和任何它可能定义的按钮儿。</li>
+ <li>图标: 用于扩展插件和任何它可能定义的按钮儿。</li>
  <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面">侧边栏，弹出窗口，选项页</a>: 为各式各样用户界面组件提供内容的 HTML 文件。</li>
  <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本">内容脚本</a>: 扩展中包含的 JavaScript，你可以注入它们到网页中。</li>
  <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源">网络可访问资源</a>: 使打包好的内容可用于网页与内容脚本中。</li>
 </ul>
 
-<p><img alt="" src="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension/webextension-anatomy.png" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
+<p><img src="webextension-anatomy.png"></p>
 
 <p>浏览其他的详细信息请到 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 。</p>
 
-<p>除了这些 manifest 中已经列举的项之外，扩展也可以携带额外的 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a> 和支持的文件。</p>
+<p>除了这些 manifest 中已经列举的项之外，扩展也可以携带额外的 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a> 和支持的文件。</p>
 
 <h2 id="后台脚本">后台脚本</h2>
 
 <p>扩展常常需要独立于任何浏览器窗口或特定网页来维持一种长期的状态或者执行长期的操作。这就是后台脚本（background scripts）的职责。</p>
 
-<p>后台脚本将在扩展加载完毕后开始运行，直到扩展被禁用或卸载。只要获得了相应的<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，你就可以在脚本中使用任何 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
+<p>后台脚本将在扩展加载完毕后开始运行，直到扩展被禁用或卸载。只要获得了相应的<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，你就可以在脚本中使用任何 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
 
 <h3 id="指定后台脚本">指定后台脚本</h3>
 
@@ -61,13 +61,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 }</pre>
 
 <p><strong>background-page.html</strong></p>
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;script type="module" src="background-script.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h3 id="后台脚本的运行环境">后台脚本的运行环境</h3>
 

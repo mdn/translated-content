@@ -17,15 +17,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 
 <p>在 Chrome 中，扩展通过使用 <code>chrome</code> 命名空间来访问私有 JavaScript API：</p>
 
-<pre class="brush: js line-numbers  language-js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+<pre class="brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
 
 <p>WebExtensions 通过使用 <code>browser</code> 命名空间来访问等价的 API：</p>
 
-<pre class="brush: js line-numbers  language-js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
+<pre class="brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
 
 <p>许多 API 是异步的。在 Chrome 中，异步的 API 使用回调来返回值，使用 {{WebExtAPIRef("runtime.lastError")}} 来与传达错误：</p>
 
-<pre class="brush: js line-numbers  language-js">function logCookie(c) {
+<pre class="brush: js">function logCookie(c) {
   if (chrome.extension.lastError) {
     console.error(chrome.extension.lastError);
   } else {
@@ -54,7 +54,7 @@ var setCookie = browser.cookies.set(
 setCookie.then(logCookie, logError);
 </pre>
 
-<h3 id="Firefox_支持_chrome_和_browser_命名空间">Firefox 支持 <code>chrome</code> 和 <code>browser</code> 命名空间</h3>
+<h3 id="Firefox_支持_chrome_和_browser_命名空间">Firefox 支持 <code>chrome</code> 和 <code>browser</code> 命名空间</h3>
 
 <p>为了帮助移植，Firefox 的 WebExtension 实现支持 <code>chrome</code> 与回调和 <code>browser</code> 与 promise。这意味着许多 Chrome 扩展无须修改就能在 Firefox 上运行。然而并不是 WebExtension 标准的一部分，也许不会被所有兼容 WebExtension 的浏览器支持。</p>
 
@@ -79,7 +79,7 @@ setCookie.then(logCookie, logError);
 <h4 id="proxy"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy">proxy</a></h4>
 
 <ul>
- <li>This API is completely different to the design of the Chrome API. With Chrome's API an extension can register a PAC file, but can also define explicit proxying rules. Since this is also possible using the extended PAC files, this API only supports the PAC file approach. Because this API is incompatible with the Chrome <code>proxy</code> API, this API is only available through the <code>browser</code> namespace.</li>
+ <li>This API is completely different to the design of the Chrome API. With Chrome's API an extension can register a PAC file, but can also define explicit proxying rules. Since this is also possible using the extended PAC files, this API only supports the PAC file approach. Because this API is incompatible with the Chrome <code>proxy</code> API, this API is only available through the <code>browser</code> namespace.</li>
 </ul>
 
 <h4 id="tabs"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></h4>
@@ -98,7 +98,7 @@ setCookie.then(logCookie, logError);
 <ul>
  <li>在 Firefx 中，只有原网址使用 <code>http:</code> <code>或 https:</code> 协议时所请求的重定向才有效。</li>
  <li>In Firefox, events are not fired for system requests (for example, extension upgrades or searchbar suggestions). From Firefox 57 onwards, Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
- <li>In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's manifest.json file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.</li>
+ <li>In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's manifest.json file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.</li>
 </ul>
 
 <h4 id="windows"><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows">windows</a></h4>
@@ -111,7 +111,7 @@ setCookie.then(logCookie, logError);
 
 <h4 id="CSS_中的_URL">CSS 中的 URL</h4>
 
-<p>Firefox 解析 CSS 中嵌入的 URL  时，若 URL 时相对地址，将是相对 CSS 文件，而不是被嵌入的网页文件。</p>
+<p>Firefox 解析 CSS 中嵌入的 URL  时，若 URL 时相对地址，将是相对 CSS 文件，而不是被嵌入的网页文件。</p>
 
 <h4 id="更多不兼容情况">更多不兼容情况</h4>
 
@@ -129,26 +129,26 @@ setCookie.then(logCookie, logError);
 
 <h4 id="Content_script_requests_happen_in_the_context_of_extension_not_content_page">Content script requests happen in the context of extension, not content page</h4>
 
-<p>In Chrome when request is called (for example, using <code><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code>) to relative URL like <code>/api</code> from content script, it will be sent to <code>https://example.com/api</code>. In Firefox you have to provide absolute URLs. </p>
+<p>In Chrome when request is called (for example, using <code><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code>) to relative URL like <code>/api</code> from content script, it will be sent to <code>https://example.com/api</code>. In Firefox you have to provide absolute URLs. </p>
 
 <h2 id="manifest.json_键">manifest.json 键</h2>
 
-<p>The main <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> page includes a table describing browser support for manifest.json keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>
+<p>The main <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> page includes a table describing browser support for manifest.json keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>
 
-<p>These tables are generated from compatibility data stored as <a href="https://github.com/mdn/browser-compat-data">JSON files in GitHub</a>.</p>
+<p>These tables are generated from compatibility data stored as <a href="https://github.com/mdn/browser-compat-data">JSON files in GitHub</a>.</p>
 
 <h2 id="Native_messaging">Native messaging</h2>
 
 <h3 id="Command-line_arguments">Command-line arguments</h3>
 
-<p>On Linux and Mac, Chrome passes one argument to the native app, which is the origin of the extension that started it, in the form: <code>chrome-extension://[extensionID]</code>. This enables the app to identify the extension.</p>
+<p>On Linux and Mac, Chrome passes one argument to the native app, which is the origin of the extension that started it, in the form: <code>chrome-extension://[extensionID]</code>. This enables the app to identify the extension.</p>
 
 <p>On Windows, Chrome passes two arguments: the first is the origin of the extension, and the second is a handle to the Chrome native window that started the app.</p>
 
 <h3 id="allowed_extensions">allowed_extensions</h3>
 
-<p>In Chrome, the <code>allowed_extensions</code> key in the app manifest is called <code>allowed_origins</code> instead.</p>
+<p>In Chrome, the <code>allowed_extensions</code> key in the app manifest is called <code>allowed_origins</code> instead.</p>
 
 <h3 id="App_manifest_location">App manifest location</h3>
 
-<p>Chrome expects to find the app manifest in a different place. See <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">Native messaging host location</a> in the Chrome docs. </p>
+<p>Chrome expects to find the app manifest in a different place. See <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">Native messaging host location</a> in the Chrome docs. </p>

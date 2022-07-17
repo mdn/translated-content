@@ -6353,13 +6353,6 @@
       "ziyunfei"
     ]
   },
-  "Mozilla/Firefox/Releases/19/Site_compatibility": {
-    "modified": "2019-01-16T17:00:07.852Z",
-    "contributors": [
-      "wbamberg",
-      "ziyunfei"
-    ]
-  },
   "Mozilla/Firefox/Releases/20": {
     "modified": "2019-01-16T16:54:50.861Z",
     "contributors": [
@@ -6374,13 +6367,6 @@
       "wbamberg",
       "ziyunfei",
       "ethertank"
-    ]
-  },
-  "Mozilla/Firefox/Releases/21/Site_compatibility": {
-    "modified": "2019-01-16T17:20:04.063Z",
-    "contributors": [
-      "wbamberg",
-      "ziyunfei"
     ]
   },
   "Mozilla/Firefox/Releases/22": {
@@ -6399,13 +6385,6 @@
       "ziyunfei"
     ]
   },
-  "Mozilla/Firefox/Releases/24/Site_compatibility": {
-    "modified": "2019-01-16T17:27:30.001Z",
-    "contributors": [
-      "wbamberg",
-      "ziyunfei"
-    ]
-  },
   "Mozilla/Firefox/Releases/25": {
     "modified": "2019-01-16T17:41:39.671Z",
     "contributors": [
@@ -6413,22 +6392,8 @@
       "ziyunfei"
     ]
   },
-  "Mozilla/Firefox/Releases/25/Site_Compatibility": {
-    "modified": "2019-01-16T17:41:38.257Z",
-    "contributors": [
-      "wbamberg",
-      "ziyunfei"
-    ]
-  },
   "Mozilla/Firefox/Releases/26": {
     "modified": "2019-01-16T17:45:32.245Z",
-    "contributors": [
-      "wbamberg",
-      "ziyunfei"
-    ]
-  },
-  "Mozilla/Firefox/Releases/26/Site_Compatibility": {
-    "modified": "2019-01-16T17:48:36.057Z",
     "contributors": [
       "wbamberg",
       "ziyunfei"
@@ -6447,13 +6412,6 @@
       "wbamberg",
       "Ende93",
       "Zefling"
-    ]
-  },
-  "Mozilla/Firefox/Releases/28/Site_Compatibility": {
-    "modified": "2019-01-16T18:02:00.053Z",
-    "contributors": [
-      "wbamberg",
-      "ziyunfei"
     ]
   },
   "Mozilla/Firefox/Releases/3": {

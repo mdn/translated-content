@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.runtime.onConnect.addListener(listener)
+<pre class="brush:js">browser.runtime.onConnect.addListener(listener)
 browser.runtime.onConnect.removeListener(listener)
 browser.runtime.onConnect.hasListener(listener)
 </pre>
@@ -34,7 +34,7 @@ browser.runtime.onConnect.hasListener(listener)
  <dd>
  <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>port</code></dt>
   <dd>A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.</dd>
  </dl>
@@ -55,7 +55,7 @@ browser.runtime.onConnect.hasListener(listener)
  <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document</li>
 </ul>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -67,7 +67,7 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</code></pre>
+});</pre>
 
 <p>The corresponding background script:</p>
 
@@ -83,7 +83,7 @@ document.body.addEventListener("click", function() {
  <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action</li>
 </ul>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 var portFromCS;
 
@@ -100,13 +100,12 @@ browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
-});</code></pre>
+});</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onConnect"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>
@@ -140,87 +139,4 @@ browser.browserAction.onClicked.addListener(function() {
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-</div>
-
-<div id="SL_balloon_obj" style="display: block;">
-<div class="SL_ImTranslatorLogo" id="SL_button" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%; opacity: 1; display: none; left: -8px; top: -25px;"> </div>
-
-<div id="SL_shadow_translation_result2" class="hidden"> </div>
-
-<div id="SL_shadow_translator" class="hidden">
-<div id="SL_planshet">
-<div id="SL_arrow_up" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
-
-<div id="SL_Bproviders">
-<div class="SL_BL_LABLE_ON" id="SL_P0" title="Google">G</div>
-
-<div class="SL_BL_LABLE_ON" id="SL_P1" title="Microsoft">M</div>
-
-<div class="SL_BL_LABLE_ON" id="SL_P2" title="Translator">T</div>
-</div>
-
-<div id="SL_alert_bbl" class="hidden">
-<div id="SLHKclose" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
-
-<div id="SL_alert_cont"> </div>
-</div>
-
-<div id="SL_TB">
-<table id="SL_tables">
- <tbody>
-  <tr>
-   <td class="SL_td"><input></td>
-   <td class="SL_td"><select><option value="auto">检测语言</option><option value="eo">世界语</option><option value="zh-CN">中文简体</option><option value="zh-TW">中文繁体</option><option value="da">丹麦语</option><option value="uk">乌克兰语</option><option value="uz">乌兹别克语</option><option value="ur">乌尔都语</option><option value="hy">亚美尼亚语</option><option value="ig">伊博语</option><option value="ru">俄语</option><option value="bg">保加利亚语</option><option value="si">僧伽罗语</option><option value="hr">克罗地亚语</option><option value="is">冰岛语</option><option value="gl">加利西亚语</option><option value="ca">加泰罗尼亚语</option><option value="hu">匈牙利语</option><option value="zu">南非祖鲁语</option><option value="kn">卡纳达语</option><option value="hi">印地语</option><option value="su">印尼巽他语</option><option value="jw">印尼爪哇语</option><option value="id">印尼语</option><option value="gu">古吉拉特语</option><option value="kk">哈萨克语</option><option value="tr">土耳其语</option><option value="tg">塔吉克语</option><option value="sr">塞尔维亚语</option><option value="st">塞索托语</option><option value="cy">威尔士语</option><option value="bn">孟加拉语</option><option value="ceb">宿务语</option><option value="ne">尼泊尔语</option><option value="eu">巴斯克语</option><option value="af">布尔语 (南非荷兰语)</option><option value="iw">希伯来语</option><option value="el">希腊语</option><option value="de">德语</option><option value="it">意大利语</option><option value="yi">意第绪语</option><option value="la">拉丁语</option><option value="lv">拉脱维亚语</option><option value="no">挪威语</option><option value="cs">捷克语</option><option value="sk">斯洛伐克语</option><option value="sl">斯洛文尼亚语</option><option value="sw">斯瓦希里语</option><option value="pa">旁遮普语</option><option value="ja">日语</option><option value="ka">格鲁吉亚语</option><option value="mi">毛利语</option><option value="fr">法语</option><option value="pl">波兰语</option><option value="bs">波斯尼亚语</option><option value="fa">波斯语</option><option value="te">泰卢固语</option><option value="ta">泰米尔语</option><option value="th">泰语</option><option value="ht">海地克里奥尔语</option><option value="ga">爱尔兰语</option><option value="et">爱沙尼亚语</option><option value="sv">瑞典语</option><option value="be">白俄罗斯语</option><option value="lt">立陶宛语</option><option value="so">索马里语</option><option value="yo">约鲁巴语</option><option value="my">缅甸语</option><option value="ro">罗马尼亚语</option><option value="lo">老挝语</option><option value="fi">芬兰语</option><option value="hmn">苗语</option><option value="en">英语</option><option value="nl">荷兰语</option><option value="tl">菲律宾语</option><option value="pt">葡萄牙语</option><option value="mn">蒙古语</option><option value="es">西班牙语</option><option value="ha">豪萨语</option><option value="vi">越南语</option><option value="az">阿塞拜疆语</option><option value="sq">阿尔巴尼亚语</option><option value="ar">阿拉伯语</option><option value="ko">韩语</option><option value="mk">马其顿语</option><option value="mg">马尔加什语</option><option value="mr">马拉地语</option><option value="ml">马拉雅拉姆语</option><option value="ms">马来语</option><option value="mt">马耳他语</option><option value="km">高棉语</option><option value="ny">齐切瓦语</option></select></td>
-   <td class="SL_td">
-    <div id="SL_switch_b" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="切换语言"> </div>
-   </td>
-   <td class="SL_td"><select><option value="eo">世界语</option><option value="zh-CN">中文简体</option><option value="zh-TW">中文繁体</option><option value="da">丹麦语</option><option value="uk">乌克兰语</option><option value="uz">乌兹别克语</option><option value="ur">乌尔都语</option><option value="hy">亚美尼亚语</option><option value="ig">伊博语</option><option value="ru">俄语</option><option value="bg">保加利亚语</option><option value="si">僧伽罗语</option><option value="hr">克罗地亚语</option><option value="is">冰岛语</option><option value="gl">加利西亚语</option><option value="ca">加泰罗尼亚语</option><option value="hu">匈牙利语</option><option value="zu">南非祖鲁语</option><option value="kn">卡纳达语</option><option value="hi">印地语</option><option value="su">印尼巽他语</option><option value="jw">印尼爪哇语</option><option value="id">印尼语</option><option value="gu">古吉拉特语</option><option value="kk">哈萨克语</option><option value="tr">土耳其语</option><option value="tg">塔吉克语</option><option value="sr">塞尔维亚语</option><option value="st">塞索托语</option><option value="cy">威尔士语</option><option value="bn">孟加拉语</option><option value="ceb">宿务语</option><option value="ne">尼泊尔语</option><option value="eu">巴斯克语</option><option value="af">布尔语 (南非荷兰语)</option><option value="iw">希伯来语</option><option value="el">希腊语</option><option value="de">德语</option><option value="it">意大利语</option><option value="yi">意第绪语</option><option value="la">拉丁语</option><option value="lv">拉脱维亚语</option><option value="no">挪威语</option><option value="cs">捷克语</option><option value="sk">斯洛伐克语</option><option value="sl">斯洛文尼亚语</option><option value="sw">斯瓦希里语</option><option value="pa">旁遮普语</option><option value="ja">日语</option><option value="ka">格鲁吉亚语</option><option value="mi">毛利语</option><option value="fr">法语</option><option value="pl">波兰语</option><option value="bs">波斯尼亚语</option><option value="fa">波斯语</option><option value="te">泰卢固语</option><option value="ta">泰米尔语</option><option value="th">泰语</option><option value="ht">海地克里奥尔语</option><option value="ga">爱尔兰语</option><option value="et">爱沙尼亚语</option><option value="sv">瑞典语</option><option value="be">白俄罗斯语</option><option value="lt">立陶宛语</option><option value="so">索马里语</option><option value="yo">约鲁巴语</option><option value="my">缅甸语</option><option value="ro">罗马尼亚语</option><option value="lo">老挝语</option><option value="fi">芬兰语</option><option value="hmn">苗语</option><option selected value="en">英语</option><option value="nl">荷兰语</option><option value="tl">菲律宾语</option><option value="pt">葡萄牙语</option><option value="mn">蒙古语</option><option value="es">西班牙语</option><option value="ha">豪萨语</option><option value="vi">越南语</option><option value="az">阿塞拜疆语</option><option value="sq">阿尔巴尼亚语</option><option value="ar">阿拉伯语</option><option value="ko">韩语</option><option value="mk">马其顿语</option><option value="mg">马尔加什语</option><option value="mr">马拉地语</option><option value="ml">马拉雅拉姆语</option><option value="ms">马来语</option><option value="mt">马耳他语</option><option value="km">高棉语</option><option value="ny">齐切瓦语</option></select></td>
-   <td class="SL_td">
-    <div id="SL_TTS_voice" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="聆听翻译"> </div>
-   </td>
-   <td class="SL_td">
-    <div class="SL_copy" id="SL_copy" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="复制译文"> </div>
-   </td>
-   <td class="SL_td">
-    <div id="SL_bbl_font_patch"> </div>
-
-    <div class="SL_bbl_font" id="SL_bbl_font" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="字体大小"> </div>
-   </td>
-   <td class="SL_td">
-    <div id="SL_bbl_help" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="帮助"> </div>
-   </td>
-   <td class="SL_td">
-    <div class="SL_pin_off" id="SL_pin" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="固定弹出窗口"> </div>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-</div>
-
-<div id="SL_shadow_translation_result" style=""> </div>
-
-<div class="SL_loading" id="SL_loading" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
-
-<div id="SL_player2"> </div>
-
-<div id="SL_alert100">文本转语音功能仅限 200 个字符</div>
-
-<div id="SL_Balloon_options" style="background: rgb(255, 255, 255)  repeat scroll 0% 0%;">
-<div id="SL_arrow_down" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
-
-<table id="SL_tbl_opt" style="width: 100%;">
- <tbody>
-  <tr>
-   <td><input></td>
-   <td>
-    <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="显示翻译器的按钮 3 秒"> </div>
-   </td>
-   <td><a class="SL_options" title="显示选项">选项</a> : <a class="SL_options" title="翻译历史记录">历史</a> : <a class="SL_options" title="反馈">反馈</a> : <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2">Donate</a></td>
-   <td>关闭</td>
-  </tr>
- </tbody>
-</table>
-</div>
-</div>
 </div>

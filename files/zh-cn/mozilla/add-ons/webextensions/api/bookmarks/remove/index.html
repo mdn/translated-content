@@ -16,17 +16,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p> <strong><code>bookmarks.remove()</code></strong> 方法用于删除单个书签或一个空的书签文件夹。</p>
+<p> <strong><code>bookmarks.remove()</code></strong> 方法用于删除单个书签或一个空的书签文件夹。</p>
 
 <div class="blockIndicator warning">
-<p>如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。</p>
+<p><strong>警告：</strong> 如果你的扩展尝试从书签树的根节点中移除一个书签，该调用将会引发一个“书签根不能被修改的”的错误信息并且这个书签不会被移除。</p>
 </div>
 
 <p><code>这是一个异步方法，返回<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>对象。</code></p>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox brush:js">var removingBookmark = browser.bookmarks.remove(
+<pre class="brush: js">var removingBookmark = browser.bookmarks.remove(
   id                 // 字符串
 )
 </pre>
@@ -65,9 +65,8 @@ removingBookmark.then(onRemoved, onRejected);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-remove"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-remove"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

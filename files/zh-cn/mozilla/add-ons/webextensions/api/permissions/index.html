@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
 	<li>The extension can rely on the access to the APIs it needs, because if already running, the permissions have been granted.</li>
 </ul>
 
-<p>There is not yet a simple GUI, for users to view permissions of their installed WebExtension Add-ons.  Users must use about:debugging, go to the Add-ons section, then use the "Manifest Url" link for this Add-on. This shows raw json, which includes a "permissions" block, showing the permissions used by this addon.</p>
+<p>There is not yet a simple GUI, for users to view permissions of their installed WebExtension Add-ons.  Users must use about:debugging, go to the Add-ons section, then use the "Manifest Url" link for this Add-on. This shows raw json, which includes a "permissions" block, showing the permissions used by this addon.</p>
 
 <p>With the permissions API, an extension can ask for additional permissions at runtime. These permissions need to be listed in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> manifest.json key. Note that some permissions are not allowed in <code>optional_permissions</code>. The main advantages of this are:</p>
 
@@ -85,9 +85,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a> API.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a> API.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

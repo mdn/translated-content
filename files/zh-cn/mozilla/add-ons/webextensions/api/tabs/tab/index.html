@@ -12,13 +12,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p> <strong><code>tabs.Tab</code></strong> 包含有关标签页的信息 . 这样可以访问有关标签页中的内容，内容有多大，特殊状态或限制有效的信息等等。</p>
+<p> <strong><code>tabs.Tab</code></strong> 包含有关标签页的信息 . 这样可以访问有关标签页中的内容，内容有多大，特殊状态或限制有效的信息等等。</p>
 
 <h2 id="类型">类型</h2>
 
 <p>这种类型的值是对象。它包含以下属性：</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>active</code></dt>
  <dd><code>boolean</code>. 该标签页是否在其窗口中处于活动状态。即使标签的窗口当前没有被关注，也可能是 true。</dd>
  <dt><code>audible</code> {{optional_inline}}</dt>
@@ -26,7 +26,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
  <dt><code>autoDiscardable</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. 资源不足时浏览器是否可以自动丢弃该标签页。</dd>
  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
- <dd><code>string</code>. 该标签页的 Cookie 存储。如果不同的标签可以有不同的 cookie 存储 (例如，支持 <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">contextual identity</a>), you can pass this as the <code>storeId</code> option into various methods of the {{WebExtAPIRef("cookies")}} API, 设置和获取与此标签页的 Cookie 存储关联的 Cookie。只有在扩展名具有“cookies”<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权</a></dd>
  <dd><code>string</code>. 该标签页的 Cookie 存储。如果不同的标签可以有不同的 cookie 存储 (例如，支持 <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">contextual identity</a>), 你可以将此作为 <code>storeId</code> 选项传递给 {{WebExtAPIRef("cookies")}} API 的各种方法，设置和获取与此标签页的 Cookie 存储关联的 Cookie。只有在扩展具有“cookies”<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>的情况下才会出现。</dd>
  <dt><code>discarded</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. 是否丢弃的标签页。被丢弃的标签页是其内容已经从内存中卸载的标签页，但在标签页条中仍可见。它的内容在下一次被激活时被重新加载。</dd>
@@ -76,9 +75,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>感谢</strong>
-
-<p>此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/tabs#type-Tab"><code>chrome.tabs</code></a> API. 本文档来源于 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a>.</p>
+<div class="note">
+<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/tabs#type-Tab"><code>chrome.tabs</code></a> API. 本文档来源于 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a>.</p>
 
 <p>Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 美国许可证下。</p>
 </div>

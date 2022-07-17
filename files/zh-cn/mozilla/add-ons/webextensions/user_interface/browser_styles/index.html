@@ -12,24 +12,24 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>扩展程序包含的某些 UI 组件，例如： <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popups</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebars</a>, <a href="/en-US/Add-ons/WebExtensions/user_interface/Options_pages">options pages</a> ，实际上可以用如下方式统一定义：</p>
+<p>扩展程序包含的某些 UI 组件，例如： <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popups</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebars</a>, <a href="/en-US/Add-ons/WebExtensions/user_interface/Options_pages">options pages</a> ，实际上可以用如下方式统一定义：</p>
 
 <ol>
  <li>创建一个 HTML 文件用于描述该 UI 组件的页面结构</li>
- <li>在 manifest.json 中添加字段 (<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>, 或 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code>) 以指向其对应的页面</li>
+ <li>在 manifest.json 中添加字段 (<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code>, 或 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code>) 以指向其对应的页面</li>
 </ol>
 
-<p>这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的 UI 表现与浏览器的 UI 风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 <code>browser_sytle</code> ，如果设置了这个字段并且值为 <code>true</code> ,  那么该 UI 组件的 HTML 将会被插入一个或多个样式表，样式表会使你的扩展程序的 UI 表现与浏览器的风格一致 (并且与其它同样应用了这个字段的扩展程序一致)。</p>
+<p>这种方式面临的一个挑战是如何使用浏览器自带的样式，以使得组件的 UI 表现与浏览器的 UI 风格相符。要解决这个问题，可以在该字段的配置中增加一个可字段 <code>browser_sytle</code> ，如果设置了这个字段并且值为 <code>true</code> ,  那么该 UI 组件的 HTML 将会被插入一个或多个样式表，样式表会使你的扩展程序的 UI 表现与浏览器的风格一致 (并且与其它同样应用了这个字段的扩展程序一致)。</p>
 
-<p>若使用了 <code>browser_style: true</code> , 你需要在不同的浏览器主题中测试你的扩展程序，以确保其 UI 表现和期望的一致。 </p>
+<p>若使用了 <code>browser_style: true</code> , 你需要在不同的浏览器主题中测试你的扩展程序，以确保其 UI 表现和期望的一致。 </p>
 
 <div class="blockIndicator note">
-<p><strong>谷歌浏览器 Google Chrome</strong> 和 欧朋浏览器 <strong>Opera</strong> 使用字段名 <code>chrome_style</code> 而非<code>browser_style</code>, 因此如果要适配它们，你需要同时添加这两个字段。</p>
+<p><strong>备注：</strong> 谷歌浏览器 <strong>Google Chrome</strong> 和 欧朋浏览器 <strong>Opera</strong> 使用字段名 <code>chrome_style</code> 而非<code>browser_style</code>, 因此如果要适配它们，你需要同时添加这两个字段。</p>
 </div>
 
-<p>在火狐浏览器中，这个样式文件可以在 <code>chrome://browser/content/extension.css</code>查看。为 Mac OS X 系统额外准备的样式文件也可以在  <code>chrome://browser/content/extension-mac.css</code> 查看。</p>
+<p>在火狐浏览器中，这个样式文件可以在 <code>chrome://browser/content/extension.css</code>查看。为 Mac OS X 系统额外准备的样式文件也可以在  <code>chrome://browser/content/extension-mac.css</code> 查看。</p>
 
-<p>大多数样式是自动应用的，但是某些元素需要添加非标准的类名 <code style="white-space: nowrap;">browser-style</code> 来获得其样式，如下表所示：</p>
+<p>大多数样式是自动应用的，但是某些元素需要添加非标准的类名 <code>browser-style</code> 来获得其样式，如下表所示：</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -42,7 +42,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
   <tr>
    <td><code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;button class="browser-style"&gt;Click me&lt;/button&gt;</pre>
    </td>
   </tr>
@@ -51,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
     <p><code><a href="/en-US/docs/Web/HTML/Element/select">&lt;select&gt;</a></code></p>
    </td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;select class="browser-style" name="select"&gt;
   &lt;option value="value1"&gt;Value 1&lt;/option&gt;
   &lt;option value="value2" selected&gt;Value 2&lt;/option&gt;
@@ -62,14 +62,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
   <tr>
    <td><code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;textarea class="browser-style"&gt;Write here&lt;/textarea&gt;</pre>
    </td>
   </tr>
   <tr>
    <td>Parent of an <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;div class="browser-style"&gt;
   &lt;input type="radio" id="op1" name="choices" value="op1"/&gt;
   &lt;label for="op1"&gt;Option 1&lt;/label&gt;
@@ -83,23 +83,22 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 </table>
 
 <div class="blockIndicator note">
-<p>查看 {{bug(1465256)}} 以了解相关修订</p>
+<p><strong>备注：</strong> 查看 {{bug(1465256)}} 以了解相关修订</p>
 </div>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("webextensions.browser_style")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="火狐面板组件Firefox_Panel_Components">火狐面板组件 Firefox Panel Components</h2>
+<h2 id="火狐面板组件Firefox_Panel_Components">火狐面板组件 Firefox Panel Components</h2>
 
-<div class="blockIndicator nonStandard">
-<p><strong>非标准</strong><br>
- 此功能不是通用标准，仅支持在 firefox 中使用</p>
+<div class="note">
+<p><strong>备注：</strong> 此功能不是通用标准，仅支持在 firefox 中使用</p>
 </div>
 
 <p><code>chrome://browser/content/extension.css</code> 样式文件中也包含了火狐面板组件的样式</p>
 
-<p><a href="https://firefoxux.github.io/StyleGuide/#/navigation">legacy Firefox Style Guide</a> 使用示例</p>
+<p><a href="https://firefoxux.github.io/StyleGuide/#/navigation">legacy Firefox Style Guide</a> 使用示例</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -212,7 +211,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
  </tbody>
 </table>
 
-<h3 id="Example">Example</h3>
+<h3 id="示例">示例</h3>
 
 <h4 id="HTML">HTML</h4>
 
@@ -263,10 +262,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
   &lt;button class="panel-section-footer-button default"&gt;Confirm&lt;/button&gt;
 &lt;/footer&gt;</pre>
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">/* Global */
+<pre class="brush: css hidden">/* Global */
 html,
 body {
   background: white;
@@ -434,8 +430,7 @@ button.panel-section-tabs-button {
   z-index: 99;
 }</pre>
 
-<hr>
-<pre class="brush: css">/* Example specific – not part of chrome://browser/content/extension.css */
+<pre class="brush: css hidden">/* Example specific – not part of chrome://browser/content/extension.css */
 body {
   background: #fcfcfc;
   background-clip: padding-box;
@@ -457,8 +452,7 @@ html &gt; body {
 .icon-section-header {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGZpbGw9IiMzNjM5NTkiIGN4PSIxNSIgY3k9IjE1IiByPSIxNSIvPjwvc3ZnPg==");
 }</pre>
-</div>
 
-<h4 id="Result若查看失败，请切回英文版查看">Result(若查看失败，请切回英文版查看)</h4>
+<h4 id="结果">结果</h4>
 
-<p>{{EmbedLiveSample("Example","640","360")}}</p>
+<p>{{EmbedLiveSample("示例","640","360")}}</p>

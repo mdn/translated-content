@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox brush:js">var creating = browser.windows.create(
+<pre class="brush:js">var creating = browser.windows.create(
   createData            // optional object
 )
 </pre>
@@ -30,9 +30,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 
 <dl>
  <dt><code>createData</code>{{optional_inline}}</dt>
- <dd><code>object</code>.</dd>
- <dd>
- <dl class="reference-values">
+ <dd><code>object</code>.
+ <dl>
   <dt><code>url</code>{{optional_inline}}</dt>
   <dd><code><code>字符串或字符串数组</code></code>. 一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。<code>http://www.google.com</code>, not <code>www.google.com</code>). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。</dd>
   <dt><code>tabId</code>{{optional_inline}}</dt>
@@ -59,11 +58,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/create
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API,  如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.</p>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p>{{Compat("webextensions.api.windows.create", 10)}}</p>
+<p>一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 其中传入一个包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。这个{{WebExtAPIRef('windows.Window')}} 有自己的 tabs 属性集 ,而不像 {{WebExtAPIRef("windows.get()")}}返回的窗口对象和相似的 API,  如果传递了 populate 项其仅仅包含 tabs. 如果发生了错误 promise will be rejected with an error message.</p>
 
 <h2 id="示例">示例</h2>
 
@@ -126,11 +121,14 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 });</pre>
 
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat}}</p>
+
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-create"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-create"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

@@ -9,17 +9,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 
 <div>当 document 的标题更改时触发</div>
 
-<div> </div>
-
 <div>你可以使用 {{WebExtAPIRef("history.onVisited")}}去进行监听。However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time <code>history.onVisited</code> is sent.</div>
-
-<div> </div>
 
 <div>Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The history.onTitleChanged event is fired at that time. So if you need to know the titles of pages as they are visited, listen for <code>history.onTitleChanged</code>.</div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.history.onTitleChanged.addListener(listener)
+<pre class="brush:js">browser.history.onTitleChanged.addListener(listener)
 browser.history.onTitleChanged.removeListener(listener)
 browser.history.onTitleChanged.hasListener(listener)
 </pre>
@@ -44,7 +40,7 @@ browser.history.onTitleChanged.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed an object with the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>url</code></dt>
   <dd><code>String</code>. URL of the page visited.</dd>
   <dt><code>title</code></dt>
@@ -70,9 +66,8 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#event-onVisited"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#event-onVisited"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

@@ -46,7 +46,7 @@ translation_of: Mozilla/Firefox/Releases/19
 <h2 id="附加组件和Mozilla开发者需要注意的变化">附加组件和 Mozilla 开发者需要注意的变化</h2>
 
 <div class="note">
-<p><strong>注：</strong> A key change in Firefox 19 is that <a href="/zh-CN/docs/XPCOM_API_Reference/nsresult"><code>nsresult</code></a> is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.</p>
+<p><strong>备注：</strong> A key change in Firefox 19 is that <a href="/zh-CN/docs/XPCOM_API_Reference/nsresult"><code>nsresult</code></a> is now strongly typed. This will help make it easier to detect bugs that are caused by mishandling of return values, but may cause existing code to break if it's making incorrect assumptions in this regard.</p>
 </div>
 
 <ul>
@@ -60,13 +60,13 @@ translation_of: Mozilla/Firefox/Releases/19
  <dt><code>nsIImgLoadingContent</code></dt>
  <dd>The parameter (aObserver) of <code>addObserver()</code> method changes from <code>imgIDecoderObserver</code> to <code>imgINotificationObserver</code>. The <code>notify()</code> method of <code>imgINotificationObserver</code> is not scriptable, so you need to use <code>createScriptedObserver()</code> from <code>imgITools</code>.</dd>
  <dt><code>nsIChannel</code></dt>
- <dd> <code>contentLength</code> 属性的类型由<code> long</code> 改成 <code>int64_t</code>.</dd>
+ <dd> <code>contentLength</code> 属性的类型由<code> long</code> 改成 <code>int64_t</code>.</dd>
 </dl>
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="http://www.mozilla.org/zh-CN/firefox/19.0/releasenotes/">Firefox 19 发行说明</a></li>
+ <li><a href="http://www.mozilla.org/zh-CN/firefox/19.0/releasenotes/">Firefox 19 发行说明</a></li>
  <li><a href="/zh-CN/docs/Site_Compatibility_for_Firefox_19">Firefox 19 网站兼容性</a></li>
  <li><a href="https://blog.mozilla.org/addons/2013/02/07/compatibility-for-firefox-19/">Firefox 19 附加组件兼容性</a></li>
 </ul>

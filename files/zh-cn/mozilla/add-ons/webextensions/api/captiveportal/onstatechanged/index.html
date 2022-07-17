@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.captivePortal.onStateChanged.addListener(callback)
+<pre class="brush:js">browser.captivePortal.onStateChanged.addListener(callback)
 browser.captivePortal.onStateChanged.removeListener(listener)
 browser.captivePortal.onStateChanged.hasListener(listener)
 </pre>
@@ -34,7 +34,7 @@ browser.captivePortal.onStateChanged.hasListener(listener)
  <dd>
  <p>Function that is called when this event occurs. The function is passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd>
   <p><code>string</code> The captive portal state, being one of <code>unknown</code>, <code>not_captive</code>, <code>unlocked_portal</code>, or <code>locked_portal</code>.</p>
