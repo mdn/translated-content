@@ -88,7 +88,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
   }
 ]</pre>
 
-<p>如何向用户展示其中一个任务？我们想将每个任务表示为一个列表项 – 无序列表元素 (<code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code>) 中的一个 HTML <code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> 元素。我们该如何实现？可以像下面这样：</p>
+<p>如何向用户展示其中一个任务？我们想将每个任务表示为一个列表项——无序列表元素（<code><a href="/zh-CN/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code>）中的一个 HTML <code><a href="/zh-CN/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> 元素。我们该如何实现？可以像下面这样：</p>
 
 <pre class="brush: js notranslate">function buildTodoItemEl(id, name) {
   const item = document.createElement('li');
@@ -104,7 +104,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
   return item;
 }</pre>
 
-<p>在这里，我们使用 <code><a href="/en-US/docs/Web/API/Document/createElement">document.createElement()</a></code> 方法来创建我们的 <code>&lt;li&gt;</code> 元素，以及另外几行代码来创建它需要的属性和子元素。</p>
+<p>在这里，我们使用 <code><a href="/zh-CN/docs/Web/API/Document/createElement">document.createElement()</a></code> 方法来创建我们的 <code>&lt;li&gt;</code> 元素，以及另外几行代码来创建它需要的属性和子元素。</p>
 
 <p>该代码片段的第十行引用了另一个构建函数：<code>buildDeleteButtonEl()</code>。它遵循与我们用来构建列表项元素时类似的模式：</p>
 
@@ -133,11 +133,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
   todoListEl.appendChild(frag);
 }</pre>
 
-<p>我们现在已经有超过30行 <em>仅</em> 服务于 UI 的代码 – <em>只</em> 作用于在 DOM 中渲染某些内容的步骤 – 并且我们不会再添加类 - 随后可以用来设置列表项样式的类！</p>
+<p>我们现在已经有超过30行<em>仅</em>服务于 UI 的代码——<em>只</em>作用于在 DOM 中渲染某些内容的步骤——并且我们不会再添加类，可以随后设置列表项样式的类！</p>
 
 <p>如本例所示，直接使用 DOM，我们需要了解有关 DOM 工作原理的许多内容：如何创建元素；如何改变它们的属性；如何将元素放在一起；如何让它们出现在页面上。这些代码实际上都没有处理用户交互，或添加/删除任务。如果我们添加这些功能，我们必须记得在正确的时间以正确的方式更新我们的 UI。</p>
 
-<p>JavaScript 框架的出现是为了使这些工作变得更容易 — 它们的存在是为了提供更好的 <em>开发人员体验</em>。它们没有给 JavaScript 带来新的功能；但它们使你可以更轻松地使用 JavaScript，因此你可以构建当下的web。</p>
+<p>JavaScript 框架的出现是为了使这些工作变得更容易——它们的存在是为了提供更好的<em>开发体验</em>。它们没有给 JavaScript 带来新的功能；但它们使你可以更轻松地使用 JavaScript 来构建现代的 web。</p>
 
 <p>如果你想查看本节中的代码示例，可以查看 <a href="https://codepen.io/dengeist/pen/XWbPNmw">CodePen 上该应用的可用版本</a>, 该版本还允许用户添加和删除新任务。</p>
 
