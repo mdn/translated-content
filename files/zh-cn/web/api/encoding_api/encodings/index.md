@@ -13,7 +13,7 @@ translation-of: Web/API/Encoding_API/Encodings
 
 {{domxref("TextDecoder")}} 和 {{domxref("TextDecoderStream")}} 构造函数可以传递一个可选的 `label`，表示使用的编码。默认是 `UTF-8`。
 
-以下表格列表列出了用户代理一定支持的所有编码的名称和 label，正如编码规范中定义的。这些通常适用于使用字符编码的任何地方。
+以下表格列出了用户代理一定支持的所有编码的名称和 label，这是在编码规范中定义的。这些编码通常适用于需要使用字符编码的任何地方。
 
 <table class="no-markdown">
   <thead>
@@ -237,8 +237,7 @@ translation-of: Web/API/Encoding_API/Encodings
     </tr>
     <tr>
       <td>
-        "<code>cp1253</code>"、"<code>windows-1253</code>"、
-        "<code>x-cp1253</code>"
+        "<code>cp1253</code>"、"<code>windows-1253</code>"、"<code>x-cp1253</code>"
       </td>
       <td>
         <code
