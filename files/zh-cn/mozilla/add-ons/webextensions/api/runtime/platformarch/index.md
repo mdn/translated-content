@@ -6,37 +6,32 @@ tags:
   - 附加组件
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>当前浏览器所在的计算机的处理器架构。</p>
+当前浏览器所在的计算机的处理器架构。
 
-<h2 id="值类型">值类型</h2>
+## 值类型
 
-<p>该值的类型是字符串。可能的值如下：</p>
+该值的类型是字符串。可能的值如下：
 
-<dl>
- <dt><code>"arm"</code></dt>
- <dd>标识平台基于 arm 架构。</dd>
- <dt><code>"x86-32"</code></dt>
- <dd>表示平台基于 x86 32-bit 架构。</dd>
- <dt><code>"x86-64"</code></dt>
- <dd>表示平台基于 x86 64-bit 架构。</dd>
-</dl>
+- `"arm"`
+  - : 标识平台基于 arm 架构。
+- `"x86-32"`
+  - : 表示平台基于 x86 32-bit 架构。
+- `"x86-64"`
+  - : 表示平台基于 x86 64-bit 架构。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.runtime.PlatformArch")}}</p>
+{{Compat("webextensions.api.runtime.PlatformArch")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#type-PlatformArch"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+> **备注：** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-PlatformArch) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -63,5 +58,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformArch
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

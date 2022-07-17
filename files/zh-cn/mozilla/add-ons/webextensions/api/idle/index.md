@@ -9,51 +9,40 @@ tags:
   - 性能优化
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>找出用户系统何时处于空闲，锁定或活动状态。</p>
+找出用户系统何时处于空闲，锁定或活动状态。
 
-<p>要使用此 API，您需要具有“空闲”<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>。</p>
+要使用此 API，您需要具有“空闲”[权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<dl>
- <dt>{{WebExtAPIRef("idle.IdleState")}}</dt>
- <dd>
- <p>描述设备空闲状态的字符串。</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("idle.IdleState")}}
+  - : 描述设备空闲状态的字符串。
 
-<h2 id="函数">函数</h2>
+## 函数
 
-<dl>
- <dt>{{WebExtAPIRef("idle.queryState()")}}</dt>
- <dd>如果系统被锁定则返回“已锁定”，如果用户未在指定的秒数内生成任何输入，则返回“空闲”，否则返回“活动”。</dd>
- <dt>{{WebExtAPIRef("idle.setDetectionInterval()")}}</dt>
- <dd>设置用于确定系统何时处于 {{WebExtAPIRef("idle.onStateChanged")}}  事件的空闲状态的时间间隔。</dd>
-</dl>
+- {{WebExtAPIRef("idle.queryState()")}}
+  - : 如果系统被锁定则返回“已锁定”，如果用户未在指定的秒数内生成任何输入，则返回“空闲”，否则返回“活动”。
+- {{WebExtAPIRef("idle.setDetectionInterval()")}}
+  - : 设置用于确定系统何时处于 {{WebExtAPIRef("idle.onStateChanged")}} 事件的空闲状态的时间间隔。
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{WebExtAPIRef("idle.onStateChanged")}}</dt>
- <dd>当系统改变状态时触发。</dd>
-</dl>
+- {{WebExtAPIRef("idle.onStateChanged")}}
+  - : 当系统改变状态时触发。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.idle")}}</p>
+{{Compat("webextensions.api.idle")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note">
-<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/idle"><code>chrome.idle</code></a> API。本文档源自 Chromium 代码中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json"><code>idle.json</code></a> 。</p>
+> **备注：** 此 API 基于 Chromium 的 [`chrome.idle`](https://developer.chrome.com/extensions/idle) API。本文档源自 Chromium 代码中的 [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) 。
+>
+> Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 United States License 下。
 
-<p>Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 United States License 下。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,17 +69,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
 
+### 了解更多：
 
-
-<h3 id="了解更多">了解更多：</h3>
-
-<div><a href="/zh-CN/docs/Web/API/Window/requestIdleCallback">https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback </a></div>
-
-
-
-
-
-<div>...</div>
+[https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback](/zh-CN/docs/Web/API/Window/requestIdleCallback)...

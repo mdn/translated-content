@@ -4,76 +4,73 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 ---
-<div>[阿登侧边栏（）]</div>
+\[阿登侧边栏（）]
 
-<p>获取具有指定属性的所有选项卡，如果未指定任何属性，则获取所有选项卡。</p>
+获取具有指定属性的所有选项卡，如果未指定任何属性，则获取所有选项卡。
 
-<p>这是返回 的异步函数。<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code></p>
+这是返回 的异步函数。[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:js notranslate">let querying = browser.tabs.query(<var>queryObj</var>)
-</pre>
+```js
+let querying = browser.tabs.query(queryObj)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>queryObj</var></code></dt>
- <dd>
- <p><code>object</code>.函数将仅获取其属性与此处包含的属性匹配的选项卡。<code>query()</code></p>
+- `queryObj`
 
- <p>请参阅 \WebExtAPIRef（"选项卡"）。Tab"）=文档以了解有关这些属性的详细信息。</p>
+  - : `object`.函数将仅获取其属性与此处包含的属性匹配的选项卡。`query()`
 
- <dl>
-  <dt><code>active</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.选项卡是否在窗口中处于活动状态。</dd>
-  <dt><code>audible</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.标签是否可听见。</dd>
-  <dt><code>autoDiscardable</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.当资源不足时，浏览器是否可以自动丢弃选项卡。</dd>
-  <dt><code>cookieStoreId</code>[optional_inline]</dt>
-  <dd><code>string</code>.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">才可用</a>。<code>cookieStoreId</code><code>"cookies"</code></dd>
-  <dt><code>currentWindow</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.选项卡是否在当前窗口中。</dd>
-  <dt><code>discarded</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.是否丢弃选项卡。丢弃的选项卡是其内容已从内存中卸载，但仍在选项卡条中可见的选项卡。下次激活时，其内容将重新加载。</dd>
-  <dt><code>hidden</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.选项卡是否隐藏。</dd>
-  <dt><code>highlighted</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.选项卡是否突出显示。</dd>
-  <dt><code>index</code>[optional_inline]</dt>
-  <dd><code>integer</code>.选项卡在其窗口中的位置。</dd>
-  <dt><code>muted</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.选项卡是否为静音。</dd>
-  <dt><code>lastFocusedWindow</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.选项卡是否在上一个焦点窗口中。</dd>
-  <dt><code>pinned</code>[optional_inline]</dt>
-  <dd><code>boolean</code>.选项卡是否固定。</dd>
-  <dt><code>status</code>[optional_inline]</dt>
-  <dd>{WebExtAPIRef（'选项卡。TabStatus '）=。选项卡是否已完成加载。</dd>
-  <dt><code>title</code>[optional_inline]</dt>
-  <dd><code>string</code>.将页面标题与图案匹配。</dd>
-  <dt><code>url</code>[optional_inline]</dt>
-  <dd><code><code>string</code></code>或。将选项卡与一个或多个匹配<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">模式匹配</a>。请注意，片段标识符不匹配。<code><code>array</code> of <code><code>string</code></code></code></dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.<code>id</code></dd>
-  <dt><code>windowType</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('tabs.WindowType')}}. The type of window the tabs are in.</dd>
- </dl>
- </dd>
-</dl>
+    请参阅 \WebExtAPIRef（"选项卡"）。Tab"）=文档以了解有关这些属性的详细信息。
 
-<h3 id="Return_value">Return value</h3>
+    - `active`\[optional_inline]
+      - : `boolean`.选项卡是否在窗口中处于活动状态。
+    - `audible`\[optional_inline]
+      - : `boolean`.标签是否可听见。
+    - `autoDiscardable`\[optional_inline]
+      - : `boolean`.当资源不足时，浏览器是否可以自动丢弃选项卡。
+    - `cookieStoreId`\[optional_inline]
+      - : `string`.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时[才可用](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。` cookieStoreId``"cookies" `
+    - `currentWindow`\[optional_inline]
+      - : `boolean`.选项卡是否在当前窗口中。
+    - `discarded`\[optional_inline]
+      - : `boolean`.是否丢弃选项卡。丢弃的选项卡是其内容已从内存中卸载，但仍在选项卡条中可见的选项卡。下次激活时，其内容将重新加载。
+    - `hidden`\[optional_inline]
+      - : `boolean`.选项卡是否隐藏。
+    - `highlighted`\[optional_inline]
+      - : `boolean`.选项卡是否突出显示。
+    - `index`\[optional_inline]
+      - : `integer`.选项卡在其窗口中的位置。
+    - `muted`\[optional_inline]
+      - : `boolean`.选项卡是否为静音。
+    - `lastFocusedWindow`\[optional_inline]
+      - : `boolean`.选项卡是否在上一个焦点窗口中。
+    - `pinned`\[optional_inline]
+      - : `boolean`.选项卡是否固定。
+    - `status`\[optional_inline]
+      - : {WebExtAPIRef（'选项卡。TabStatus '）=。选项卡是否已完成加载。
+    - `title`\[optional_inline]
+      - : `string`.将页面标题与图案匹配。
+    - `url`\[optional_inline]
+      - : `string`或。将选项卡与一个或多个匹配[模式匹配](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)。请注意，片段标识符不匹配。`array of string`
+    - `windowId`{{optional_inline}}
+      - : `integer`. The of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.`id`
+    - `windowType`{{optional_inline}}
+      - : {{WebExtAPIRef('tabs.WindowType')}}. The type of window the tabs are in.
 
-<p>A that will be fulfilled with an of objects, containing information about each matching tab.<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code><code>array</code><code>{{WebExtAPIRef('tabs.Tab')}}</code></p>
+### Return value
 
-<p>If any error occurs, the promise will be rejected with an error message.</p>
+A that will be fulfilled with an of objects, containing information about each matching tab.[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)` array``{{WebExtAPIRef('tabs.Tab')}} `
 
-<h2 id="Examples">Examples</h2>
+If any error occurs, the promise will be rejected with an error message.
 
-<p>Get all tabs:</p>
+## Examples
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+Get all tabs:
+
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -85,11 +82,13 @@ function onError(error) {
 }
 
 let querying = browser.tabs.query({});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Get all tabs in the current window:</p>
+Get all tabs in the current window:
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -101,11 +100,13 @@ function onError(error) {
 }
 
 let querying = browser.tabs.query({currentWindow: true});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Get the active tab in the current window:</p>
+Get the active tab in the current window:
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   // tabs[0].url requires the `tabs` permission
   console.log(tabs[0].url);
 }
@@ -115,11 +116,13 @@ function onError(error) {
 }
 
 let querying = browser.tabs.query({currentWindow: true, active: true});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Get tabs for all HTTP and HTTPS URLs under or any of its subdomains:<code>"mozilla.org"</code></p>
+Get tabs for all HTTP and HTTPS URLs under or any of its subdomains:`"mozilla.org"`
 
-<pre class="brush: js notranslate">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission
     console.log(tab.url);
@@ -131,24 +134,20 @@ function onError(error) {
 }
 
 let querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("webextensions.api.tabs.query")}}
 
+> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>{{Compat("webextensions.api.tabs.query")}}</p>
-
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-query"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -175,5 +174,4 @@ querying.then(logTabs, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

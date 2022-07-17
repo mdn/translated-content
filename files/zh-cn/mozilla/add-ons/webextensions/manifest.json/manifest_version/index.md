@@ -7,37 +7,35 @@ tags:
   - 附加组件
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">值类型</th>
-   <td><code>Number</code></td>
-  </tr>
-  <tr>
-   <th scope="row">强制性</th>
-   <td>强制</td>
-  </tr>
-  <tr>
-   <th scope="row">示例</th>
-   <td>
-    <pre class="brush: json">
-"manifest_version": 2</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">值类型</th>
+      <td><code>Number</code></td>
+    </tr>
+    <tr>
+      <th scope="row">强制性</th>
+      <td>强制</td>
+    </tr>
+    <tr>
+      <th scope="row">示例</th>
+      <td><pre class="brush: json">"manifest_version": 2</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>此键指定扩展使用的 manifest.json 的版本。</p>
+此键指定扩展使用的 manifest.json 的版本。
 
-<p>目前，此值必须为 2。</p>
+目前，此值必须为 2。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: json">"manifest_version": 2
-</pre>
+```json
+"manifest_version": 2
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.manifest.manifest_version")}}</p>
+{{Compat("webextensions.manifest.manifest_version")}}

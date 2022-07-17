@@ -14,153 +14,138 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>与浏览器标签系统进行交互。</p>
+与浏览器标签系统进行交互。
 
-<p>你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行 打开，刷新，移动，重载，移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} APIs，来插入 javascript 和 CSS。</p>
+你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行 打开，刷新，移动，重载，移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} APIs，来插入 javascript 和 CSS。
 
-<p>你可以在不需要任何特殊权限的情况下使用该 APIS 的大部分，除了：</p>
+你可以在不需要任何特殊权限的情况下使用该 APIS 的大部分，除了：
 
-<ul>
- <li>获取 <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>, 你需要拥有 "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>. 在火狐，这也意味着你需要 "tabs" ，来通过 URL 使用 {{WebExtAPIRef("tabs.query", "query")}}。</li>
- <li>使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> 。</li>
-</ul>
+- 获取 `Tab.url`, `Tab.title`, and `Tab.favIconUrl`, 你需要拥有 "tabs" [权限](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). 在火狐，这也意味着你需要 "tabs" ，来通过 URL 使用 {{WebExtAPIRef("tabs.query", "query")}}。
+- 使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有 [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 。
 
-<p>或者你可以仅仅只为当前的活动标签临时的获取这些权限并且仅仅只响应一个显示的用户行为，请查看 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">"activeTab" permission</a>.</p>
+或者你可以仅仅只为当前的活动标签临时的获取这些权限并且仅仅只响应一个显示的用户行为，请查看 ["activeTab" permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
 
-<h2 id="枚举值">枚举值</h2>
+## 枚举值
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.MutedInfoReason")}}</dt>
- <dd>确定一个标签静音与否的原因（用户修改，扩展修改）。</dd>
- <dt>{{WebExtAPIRef("tabs.MutedInfo")}}</dt>
- <dd>该对象包含一个布尔值只是该标签是否静音，以及最近一次静音的原因。</dd>
- <dt>{{WebExtAPIRef("tabs.Tab")}}</dt>
- <dd>该值包含了一个标签的信息。</dd>
- <dt>{{WebExtAPIRef("tabs.TabStatus")}}</dt>
- <dd>指示某个标签是否已经加载完成</dd>
- <dt>{{WebExtAPIRef("tabs.WindowType")}}</dt>
- <dd>包含该标签的窗口类型。</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettingsMode")}}</dt>
- <dd>定义缩放由浏览器控制或是扩展，或者禁用。</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettingsScope")}}</dt>
- <dd>定义缩放将对某个网址持续生效，或者仅仅只针对该标签。</dd>
- <dt>{{WebExtAPIRef("tabs.ZoomSettings")}}</dt>
- <dd>定义缩放设置。 {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, 和默认缩放比例。</dd>
-</dl>
+- {{WebExtAPIRef("tabs.MutedInfoReason")}}
+  - : 确定一个标签静音与否的原因（用户修改，扩展修改）。
+- {{WebExtAPIRef("tabs.MutedInfo")}}
+  - : 该对象包含一个布尔值只是该标签是否静音，以及最近一次静音的原因。
+- {{WebExtAPIRef("tabs.Tab")}}
+  - : 该值包含了一个标签的信息。
+- {{WebExtAPIRef("tabs.TabStatus")}}
+  - : 指示某个标签是否已经加载完成
+- {{WebExtAPIRef("tabs.WindowType")}}
+  - : 包含该标签的窗口类型。
+- {{WebExtAPIRef("tabs.ZoomSettingsMode")}}
+  - : 定义缩放由浏览器控制或是扩展，或者禁用。
+- {{WebExtAPIRef("tabs.ZoomSettingsScope")}}
+  - : 定义缩放将对某个网址持续生效，或者仅仅只针对该标签。
+- {{WebExtAPIRef("tabs.ZoomSettings")}}
+  - : 定义缩放设置。 {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, 和默认缩放比例。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.TAB_ID_NONE")}}</dt>
- <dd>给予非浏览器标签的一个特殊 ID 值（比如，在开发工具中的标签）。</dd>
-</dl>
+- {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
+  - : 给予非浏览器标签的一个特殊 ID 值（比如，在开发工具中的标签）。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.connect()")}}</dt>
- <dd>在运行于该标签的任何 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts </a> 和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。</dd>
- <dt>{{WebExtAPIRef("tabs.create()")}}</dt>
- <dd>创建一个新标签。</dd>
- <dt>{{WebExtAPIRef("tabs.captureVisibleTab()")}}</dt>
- <dd>创意一个数据统一资源标识符解码在规定窗口中当前活动标签的可视区域重的一个图片。</dd>
- <dt>{{WebExtAPIRef("tabs.detectLanguage()")}}</dt>
- <dd>检查在一个标签中的主要语言。</dd>
- <dt>{{WebExtAPIRef("tabs.duplicate()")}}</dt>
- <dd>复制一个标签</dd>
- <dt>{{WebExtAPIRef("tabs.executeScript()")}}</dt>
- <dd>向一个页面注入脚本。</dd>
- <dt>{{WebExtAPIRef("tabs.get()")}}</dt>
- <dd>取回制定标签的详细信息。</dd>
- <dt>{{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}</dt>
- <dd>获取指定窗口所有标签的详细信息。</dd>
- <dt>{{WebExtAPIRef("tabs.getCurrent()")}}</dt>
- <dd>返回一个 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab"><code>tabs.Tab</code></a> 对象包含了该脚本当前的宿主标签的信息。</dd>
- <dt>{{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}</dt>
- <dd>获取在指定窗口被选定的标签。</dd>
- <dt>{{WebExtAPIRef("tabs.getZoom()")}}</dt>
- <dd>获取制定标签的缩放系数。</dd>
- <dt>{{WebExtAPIRef("tabs.getZoomSettings()")}}</dt>
- <dd>获取指定标签的缩放设置。</dd>
- <dt>{{WebExtAPIRef("tabs.highlight()")}}</dt>
- <dd>高亮显示一个或多个标签。</dd>
- <dt>{{WebExtAPIRef("tabs.insertCSS()")}}</dt>
- <dd>向一个页面注入 CSS。</dd>
- <dt>{{WebExtAPIRef("tabs.removeCSS()")}}</dt>
- <dd>移除之前调用{{WebExtAPIRef("tabs.insertCSS()")}} 注入的一个 css。</dd>
- <dt>{{WebExtAPIRef("tabs.move()")}}</dt>
- <dd>移动一个或多个标签页到同一窗口的一个新的位置或是到不同窗口。</dd>
- <dt>{{WebExtAPIRef("tabs.query()")}}</dt>
- <dd>获取所有包含指定属性的标签，如果没有属性则获取所有标签。</dd>
- <dt>{{WebExtAPIRef("tabs.reload()")}}</dt>
- <dd>重载一个标签，可选的可以绕过本地缓存。</dd>
- <dt>{{WebExtAPIRef("tabs.remove()")}}</dt>
- <dd>关闭一个或多个标签。</dd>
- <dt>{{WebExtAPIRef("tabs.sendMessage()")}}</dt>
- <dd>向一个指定标签的 content script 发送单个消息。</dd>
- <dt>{{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}</dt>
- <dd>向一个指定标签的 content script 发送一个单一请求。 <strong>过时</strong>: 请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。</dd>
- <dt>{{WebExtAPIRef("tabs.setZoom()")}}</dt>
- <dd>缩放指定标签。</dd>
- <dt>{{WebExtAPIRef("tabs.setZoomSettings()")}}</dt>
- <dd>为一个制定标签设置缩放选项。</dd>
- <dt>{{WebExtAPIRef("tabs.update()")}}</dt>
- <dd>导航一个标签到新的地址，或是修改其它的属性。</dd>
-</dl>
+- {{WebExtAPIRef("tabs.connect()")}}
+  - : 在运行于该标签的任何 [content scripts ](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。
+- {{WebExtAPIRef("tabs.create()")}}
+  - : 创建一个新标签。
+- {{WebExtAPIRef("tabs.captureVisibleTab()")}}
+  - : 创意一个数据统一资源标识符解码在规定窗口中当前活动标签的可视区域重的一个图片。
+- {{WebExtAPIRef("tabs.detectLanguage()")}}
+  - : 检查在一个标签中的主要语言。
+- {{WebExtAPIRef("tabs.duplicate()")}}
+  - : 复制一个标签
+- {{WebExtAPIRef("tabs.executeScript()")}}
+  - : 向一个页面注入脚本。
+- {{WebExtAPIRef("tabs.get()")}}
+  - : 取回制定标签的详细信息。
+- {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
+  - : 获取指定窗口所有标签的详细信息。
+- {{WebExtAPIRef("tabs.getCurrent()")}}
+  - : 返回一个 [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab) 对象包含了该脚本当前的宿主标签的信息。
+- {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
+  - : 获取在指定窗口被选定的标签。
+- {{WebExtAPIRef("tabs.getZoom()")}}
+  - : 获取制定标签的缩放系数。
+- {{WebExtAPIRef("tabs.getZoomSettings()")}}
+  - : 获取指定标签的缩放设置。
+- {{WebExtAPIRef("tabs.highlight()")}}
+  - : 高亮显示一个或多个标签。
+- {{WebExtAPIRef("tabs.insertCSS()")}}
+  - : 向一个页面注入 CSS。
+- {{WebExtAPIRef("tabs.removeCSS()")}}
+  - : 移除之前调用{{WebExtAPIRef("tabs.insertCSS()")}} 注入的一个 css。
+- {{WebExtAPIRef("tabs.move()")}}
+  - : 移动一个或多个标签页到同一窗口的一个新的位置或是到不同窗口。
+- {{WebExtAPIRef("tabs.query()")}}
+  - : 获取所有包含指定属性的标签，如果没有属性则获取所有标签。
+- {{WebExtAPIRef("tabs.reload()")}}
+  - : 重载一个标签，可选的可以绕过本地缓存。
+- {{WebExtAPIRef("tabs.remove()")}}
+  - : 关闭一个或多个标签。
+- {{WebExtAPIRef("tabs.sendMessage()")}}
+  - : 向一个指定标签的 content script 发送单个消息。
+- {{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}
+  - : 向一个指定标签的 content script 发送一个单一请求。 **过时**: 请使用 {{WebExtAPIRef("tabs.sendMessage()")}} 替代。
+- {{WebExtAPIRef("tabs.setZoom()")}}
+  - : 缩放指定标签。
+- {{WebExtAPIRef("tabs.setZoomSettings()")}}
+  - : 为一个制定标签设置缩放选项。
+- {{WebExtAPIRef("tabs.update()")}}
+  - : 导航一个标签到新的地址，或是修改其它的属性。
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("tabs.onActivated")}}</dt>
- <dd>当窗口活动标签改变时触发，注意当该消息触发时，标签地址可能没有被设置。</dd>
- <dt>{{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}</dt>
- <dd> <strong>已过时：</strong> 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。</dd>
- <dt>{{WebExtAPIRef("tabs.onAttached")}}</dt>
- <dd>当一个标签被附加到一个窗口时触发，因为他可能在窗口间移动。</dd>
- <dt>{{WebExtAPIRef("tabs.onCreated")}}</dt>
- <dd>当一个标签被创建时触发，注意当该事件触发时可能没有设置地址。</dd>
- <dt>{{WebExtAPIRef("tabs.onDetached")}}</dt>
- <dd>当一个标签脱离一个窗口时被触发。</dd>
- <dt>{{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}</dt>
- <dd><strong>过时：</strong> 请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。</dd>
- <dt>{{WebExtAPIRef("tabs.onHighlighted")}}</dt>
- <dd>当一个标签被高亮显示或是被选中时触发。</dd>
- <dt>{{WebExtAPIRef("tabs.onMoved")}}</dt>
- <dd>当一个标签在一个窗口内移动时被触发。</dd>
- <dt>{{WebExtAPIRef("tabs.onRemoved")}}</dt>
- <dd>当一个标签关闭时被触发。</dd>
- <dt>{{WebExtAPIRef("tabs.onReplaced")}}</dt>
- <dd>当一个标签因为预载取代另一个标签时被触发。</dd>
- <dt>{{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}</dt>
- <dd> <strong>以过时：</strong> 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。</dd>
- <dt>{{WebExtAPIRef("tabs.onUpdated")}}</dt>
- <dd>当一个标签被更新时触发。</dd>
- <dt>{{WebExtAPIRef("tabs.onZoomChange")}}</dt>
- <dd>当一个标签被缩放时触发</dd>
-</dl>
+- {{WebExtAPIRef("tabs.onActivated")}}
+  - : 当窗口活动标签改变时触发，注意当该消息触发时，标签地址可能没有被设置。
+- {{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}
+  - : **已过时：** 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
+- {{WebExtAPIRef("tabs.onAttached")}}
+  - : 当一个标签被附加到一个窗口时触发，因为他可能在窗口间移动。
+- {{WebExtAPIRef("tabs.onCreated")}}
+  - : 当一个标签被创建时触发，注意当该事件触发时可能没有设置地址。
+- {{WebExtAPIRef("tabs.onDetached")}}
+  - : 当一个标签脱离一个窗口时被触发。
+- {{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}
+  - : **过时：** 请使用 {{WebExtAPIRef("tabs.onHighlighted")}} 代替。
+- {{WebExtAPIRef("tabs.onHighlighted")}}
+  - : 当一个标签被高亮显示或是被选中时触发。
+- {{WebExtAPIRef("tabs.onMoved")}}
+  - : 当一个标签在一个窗口内移动时被触发。
+- {{WebExtAPIRef("tabs.onRemoved")}}
+  - : 当一个标签关闭时被触发。
+- {{WebExtAPIRef("tabs.onReplaced")}}
+  - : 当一个标签因为预载取代另一个标签时被触发。
+- {{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}
+  - : **以过时：** 请使用 {{WebExtAPIRef("tabs.onActivated")}} 代替。
+- {{WebExtAPIRef("tabs.onUpdated")}}
+  - : 当一个标签被更新时触发。
+- {{WebExtAPIRef("tabs.onZoomChange")}}
+  - : 当一个标签被缩放时触发
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("webextensions.api.tabs")}}</p>
+{{Compat("webextensions.api.tabs")}}
 
-<div class="note">
-<p><strong>备注：</strong> The "Chrome incompatibilities" section is included from <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro.
+>
+> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
-<p>If you need to update this content, edit <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
-</div>
+{{WebExtExamples("h2")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -187,5 +172,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

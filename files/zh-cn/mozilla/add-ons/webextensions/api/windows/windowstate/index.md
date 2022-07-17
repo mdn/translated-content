@@ -3,36 +3,31 @@ title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>浏览器窗口的状态。</p>
+浏览器窗口的状态。
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<p>类型的值是字符串类型。可能的值如下：</p>
+类型的值是字符串类型。可能的值如下：
 
-<ul>
- <li><code>"normal"</code></li>
- <li><code>"minimized"</code></li>
- <li><code>"maximized"</code></li>
- <li><code>"fullscreen"</code></li>
- <li><code>"docked"</code></li>
-</ul>
+- `"normal"`
+- `"minimized"`
+- `"maximized"`
+- `"fullscreen"`
+- `"docked"`
 
-<h2 id="浏览器适配">浏览器适配</h2>
+## 浏览器适配
 
-<p>{{Compat("webextensions.api.windows.WindowState")}}</p>
+{{Compat("webextensions.api.windows.WindowState")}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> 此 API 基于谷歌浏览器 <a href="https://developer.chrome.com/extensions/windows#type-WindowState"><code>chrome.windows</code></a> API。此文档源于谷歌源码 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> .</p>
+> **备注：** 此 API 基于谷歌浏览器 [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API。此文档源于谷歌源码 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) .
+>
+> 微软 Edge 浏览器兼容性数据由微软公司提供，并包含在美国 Creative Commons Attribution 3.0 许可证下。
 
-<p>微软 Edge 浏览器兼容性数据由微软公司提供，并包含在美国 Creative Commons Attribution 3.0 许可证下。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -59,5 +54,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

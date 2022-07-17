@@ -3,82 +3,69 @@ title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>与浏览器窗口互动。您可以使用此 API 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。您也可以监听窗口的打开、关闭和其激活事件。</p>
+与浏览器窗口互动。您可以使用此 API 获取有关已打开窗口的信息，以及打开、修改和关闭窗口。您也可以监听窗口的打开、关闭和其激活事件。
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<dl>
- <dt>{{WebExtAPIRef("windows.WindowType")}}</dt>
- <dd>浏览器窗口的类型。</dd>
- <dt>{{WebExtAPIRef("windows.WindowState")}}</dt>
- <dd>浏览器窗口的状态。</dd>
- <dt>{{WebExtAPIRef("windows.Window")}}</dt>
- <dd>有关一个浏览器窗口的信息。</dd>
- <dt>{{WebExtAPIRef("windows.CreateType")}}</dt>
- <dd>指定要创建的浏览器窗口的类型。</dd>
-</dl>
+- {{WebExtAPIRef("windows.WindowType")}}
+  - : 浏览器窗口的类型。
+- {{WebExtAPIRef("windows.WindowState")}}
+  - : 浏览器窗口的状态。
+- {{WebExtAPIRef("windows.Window")}}
+  - : 有关一个浏览器窗口的信息。
+- {{WebExtAPIRef("windows.CreateType")}}
+  - : 指定要创建的浏览器窗口的类型。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{WebExtAPIRef("windows.WINDOW_ID_NONE")}}</dt>
- <dd><code>windowId</code> 值表示不存在浏览器窗口。</dd>
- <dt>{{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}</dt>
- <dd><code>windowId</code> 值表示当前窗口。</dd>
-</dl>
+- {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
+  - : `windowId` 值表示不存在浏览器窗口。
+- {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
+  - : `windowId` 值表示当前窗口。
 
-<h2 id="函数">函数</h2>
+## 函数
 
-<dl>
- <dt>{{WebExtAPIRef("windows.get()")}}</dt>
- <dd>指定其 ID，获取一个窗口的细节。</dd>
- <dt>{{WebExtAPIRef("windows.getCurrent()")}}</dt>
- <dd>获取当前窗口。</dd>
- <dt>{{WebExtAPIRef("windows.getLastFocused()")}}</dt>
- <dd>获取最近获得焦点的窗口，通常它是“顶部”的窗口。</dd>
- <dt>{{WebExtAPIRef("windows.getAll()")}}</dt>
- <dd>获取所有窗口。</dd>
- <dt>{{WebExtAPIRef("windows.create()")}}</dt>
- <dd>
- <p>创建新窗口。</p>
- </dd>
- <dt>{{WebExtAPIRef("windows.update()")}}</dt>
- <dd>更新一个窗口的属性。使用此项对移动、调整大小、聚焦/取消聚焦等。</dd>
- <dt>{{WebExtAPIRef("windows.remove()")}}</dt>
- <dd>关闭一个窗口及其所有标签页。</dd>
-</dl>
+- {{WebExtAPIRef("windows.get()")}}
+  - : 指定其 ID，获取一个窗口的细节。
+- {{WebExtAPIRef("windows.getCurrent()")}}
+  - : 获取当前窗口。
+- {{WebExtAPIRef("windows.getLastFocused()")}}
+  - : 获取最近获得焦点的窗口，通常它是“顶部”的窗口。
+- {{WebExtAPIRef("windows.getAll()")}}
+  - : 获取所有窗口。
+- {{WebExtAPIRef("windows.create()")}}
+  - : 创建新窗口。
+- {{WebExtAPIRef("windows.update()")}}
+  - : 更新一个窗口的属性。使用此项对移动、调整大小、聚焦/取消聚焦等。
+- {{WebExtAPIRef("windows.remove()")}}
+  - : 关闭一个窗口及其所有标签页。
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{WebExtAPIRef("windows.onCreated")}}</dt>
- <dd>一个窗口创建时触发。</dd>
- <dt>{{WebExtAPIRef("windows.onRemoved")}}</dt>
- <dd>一个窗口关闭时触发。</dd>
- <dt>{{WebExtAPIRef("windows.onFocusChanged")}}</dt>
- <dd>当前有焦点的窗口改变时触发。</dd>
-</dl>
+- {{WebExtAPIRef("windows.onCreated")}}
+  - : 一个窗口创建时触发。
+- {{WebExtAPIRef("windows.onRemoved")}}
+  - : 一个窗口关闭时触发。
+- {{WebExtAPIRef("windows.onFocusChanged")}}
+  - : 当前有焦点的窗口改变时触发。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.windows")}}</p>
+{{Compat("webextensions.api.windows")}}
 
-<h3 id="Edge_的不兼容">Edge 的不兼容</h3>
+### Edge 的不兼容
 
-<p>Edge 中不支持 Promises。需使用回调。</p>
+Edge 中不支持 Promises。需使用回调。
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note">
-<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a> API。此文档基于 Chromium 代码中的<a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code> windows.json</code></a>。</p>
+> **备注：** 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.com/extensions/windows) API。此文档基于 Chromium 代码中的[` windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+>
+> Microsoft Edge 兼容性数据由微软公司提供，并包含在创作共用 署名 3.0 美国许可证下。
 
-<p>Microsoft Edge 兼容性数据由微软公司提供，并包含在创作共用 署名 3.0 美国许可证下。</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,5 +92,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -11,67 +11,66 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>将图像复制到剪贴板。在将图像写入剪贴板之前，会对图像进行重新编码。如果图像无效，则不会修改剪贴板。</p>
+将图像复制到剪贴板。在将图像写入剪贴板之前，会对图像进行重新编码。如果图像无效，则不会修改剪贴板。
 
-<p>图像被作为包含经过编码的图像的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> 提供。支持 JPEG 和 PNG 格式。</p>
+图像被作为包含经过编码的图像的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 提供。支持 JPEG 和 PNG 格式。
 
-<p>基于 Chrome 的 <code><a href="https://developer.chrome.com/apps/clipboard">clipboard.setImageData()</a></code> API，但存在一些差异：</p>
+基于 Chrome 的 [`clipboard.setImageData()`](https://developer.chrome.com/apps/clipboard) API，但存在一些差异：
 
-<ul>
- <li>Chrome API 仅适用于应用，不适用于扩展程序。</li>
- <li>此 API 需要 <code>"clipboardWrite"</code> 权限，Chrome 版本需要 <code>"clipboard"</code> 权限。</li>
- <li>Chrome 的 API 使用回调，此 API 使用 Promise。</li>
- <li>此 API 不支持 <code>additionalItems</code> 参数。</li>
-</ul>
+- Chrome API 仅适用于应用，不适用于扩展程序。
+- 此 API 需要 `"clipboardWrite"` 权限，Chrome 版本需要 `"clipboard"` 权限。
+- Chrome 的 API 使用回调，此 API 使用 Promise。
+- 此 API 不支持 `additionalItems` 参数。
 
-<p>这是一个返回 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> 的异步函数。</p>
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush:js">browser.clipboard.setImageData(<em>imageData</em>, <em>imageType</em>)
-</pre>
+```js
+browser.clipboard.setImageData(imageData, imageType)
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code>imageData</code></dt>
- <dd>An <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the encoded image data to copy to the clipboard.</dd>
- <dt><code>imageType</code></dt>
- <dd>A {{domxref("DOMString")}} indicating the type of image contained in <code>imageData</code>: <code>"png"</code> or <code>"jpeg"</code>.</dd>
-</dl>
+- `imageData`
+  - : An [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the encoded image data to copy to the clipboard.
+- `imageType`
+  - : A {{domxref("DOMString")}} indicating the type of image contained in `imageData`: `"png"` or `"jpeg"`.
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>A <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).</p>
+A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.clipboard.setImageData", 10)}}</p>
+{{Compat("webextensions.api.clipboard.setImageData", 10)}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>Copy a remote image:</p>
+Copy a remote image:
 
-<pre class="brush: js">// requires:
-// * the host permission for "<a href="https://cdn.mdn.mozilla.net/">https://cdn.mdn.mozilla.net/</a>*"
+```js
+// requires:
+// * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('<a href="https://cdn.mdn.mozilla.net/static/img/favicon144.png">https://cdn.mdn.mozilla.net/static/img/favicon144.png</a>')
-.then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
+fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
+.then(response => response.arrayBuffer())
+.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+```
 
-<p>Copy an image that was bundled with the extension:</p>
+Copy an image that was bundled with the extension:
 
-<pre class="brush: js">// requires the API permission "clipboardWrite"
+```js
+// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
-.then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
+.then(response => response.arrayBuffer())
+.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> 此 API 基于 Chromium 的 <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a> API.</p>
-</div>
+> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

@@ -14,95 +14,84 @@ tags:
   - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}启用与浏览器的下载管理器交互的扩展。你可以使用这个 API 模块来下载文件、取消、暂停、恢复下载和在文件管理器中显示下载的文件。
 
-<div>启用与浏览器的下载管理器交互的扩展。你可以使用这个 API 模块来下载文件、取消、暂停、恢复下载和在文件管理器中显示下载的文件。</div>
+为使用此 API，你需要在你的 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中声明 "downloads" [API 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)。
 
-<p>为使用此 API，你需要在你的 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 文件中声明 "downloads" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API 权限</a>。</p>
+## Types
 
-<h2 id="Types">Types</h2>
+- {{WebExtAPIRef("downloads.FilenameConflictAction")}}
+  - : 定义当一个下载的文件与现存的文件命名冲突时要做什么。
+- {{WebExtAPIRef("downloads.InterruptReason")}}
+  - : 定义一系列中断下载的可能理由。
+- {{WebExtAPIRef("downloads.DangerType")}}
+  - : 定义一组与可下载文件相关的潜在危险的常见警告。
+- {{WebExtAPIRef("downloads.State")}}
+  - : 定义当前下载可能处于的不同状态。
+- {{WebExtAPIRef("downloads.DownloadItem")}}
+  - : 代表下载的文件。
+- {{WebExtAPIRef("downloads.StringDelta")}}
+  - : 表示两个字符串之间的差异。
+- {{WebExtAPIRef("downloads.DoubleDelta")}}
+  - : 代表两个双精度浮点数之间的差异。
+- {{WebExtAPIRef("downloads.BooleanDelta")}}
+  - : 代表两个布尔数之间的差异。
+- {{WebExtAPIRef("downloads.DownloadTime")}}
+  - : 代表一个下载将会花费的时间。
+- {{WebExtAPIRef("downloads.DownloadQuery")}}
+  - : 定义一组参数，可用于在下载管理器中搜索一组特定的下载。
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.FilenameConflictAction")}}</dt>
- <dd>定义当一个下载的文件与现存的文件命名冲突时要做什么。</dd>
- <dt>{{WebExtAPIRef("downloads.InterruptReason")}}</dt>
- <dd>定义一系列中断下载的可能理由。</dd>
- <dt>{{WebExtAPIRef("downloads.DangerType")}}</dt>
- <dd>定义一组与可下载文件相关的潜在危险的常见警告。</dd>
- <dt>{{WebExtAPIRef("downloads.State")}}</dt>
- <dd>定义当前下载可能处于的不同状态。</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadItem")}}</dt>
- <dd>代表下载的文件。</dd>
- <dt>{{WebExtAPIRef("downloads.StringDelta")}}</dt>
- <dd>表示两个字符串之间的差异。</dd>
- <dt>{{WebExtAPIRef("downloads.DoubleDelta")}}</dt>
- <dd>代表两个双精度浮点数之间的差异。</dd>
- <dt>{{WebExtAPIRef("downloads.BooleanDelta")}}</dt>
- <dd>代表两个布尔数之间的差异。</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadTime")}}</dt>
- <dd>代表一个下载将会花费的时间。</dd>
- <dt>{{WebExtAPIRef("downloads.DownloadQuery")}}</dt>
- <dd>定义一组参数，可用于在下载管理器中搜索一组特定的下载。</dd>
-</dl>
+## Functions
 
-<h2 id="Functions">Functions</h2>
+- {{WebExtAPIRef("downloads.download()")}}
+  - : 下载一个文件，给出它的 URL 和其他可选的参数。
+- {{WebExtAPIRef("downloads.search()")}}
+  - : 查询 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} 是否在浏览器的下载管理器中可用，返回匹配指定的搜索标准的条目。
+- {{WebExtAPIRef("downloads.pause()")}}
+  - : 暂停一个下载。
+- {{WebExtAPIRef("downloads.resume()")}}
+  - : 恢复一个暂停的下载。
+- {{WebExtAPIRef("downloads.cancel()")}}
+  - : 取消一个下载。
+- {{WebExtAPIRef("downloads.getFileIcon()")}}
+  - : 检索指定下载的图标。
+- {{WebExtAPIRef("downloads.open()")}}
+  - : 用下载的文件相关联的程序打开它。
+- {{WebExtAPIRef("downloads.show()")}}
+  - : 打开当前平台的文件管理应用来在它包含的文件夹中显示下载的文件。
+- {{WebExtAPIRef("downloads.showDefaultFolder()")}}
+  - : 用当前平台的文件管理应用显示默认下载文件夹。
+- {{WebExtAPIRef("downloads.erase()")}}
+  - : 擦除浏览器的下载历史中匹配 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} 的下载记录，不会在磁盘中删除文件。
+- {{WebExtAPIRef("downloads.removeFile()")}}
+  - : 从磁盘中移除下载的文件，但不从浏览器的下载历史中去除。
+- {{WebExtAPIRef("downloads.acceptDanger()")}}
+  - : 提示用户接受或取消危险的下载。
+- {{WebExtAPIRef("downloads.drag()")}}
+  - : 将下载的文件拖动到另一个应用程序。
+- {{WebExtAPIRef("downloads.setShelfEnabled()")}}
+  - : 启用或禁用与当前浏览器配置文件关联的每个窗口底部的灰色架子。只要至少一个扩展名已禁用该架子，它就会被禁用。
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.download()")}}</dt>
- <dd>下载一个文件，给出它的 URL 和其他可选的参数。</dd>
- <dt>{{WebExtAPIRef("downloads.search()")}}</dt>
- <dd>查询 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} 是否在浏览器的下载管理器中可用，返回匹配指定的搜索标准的条目。</dd>
- <dt>{{WebExtAPIRef("downloads.pause()")}}</dt>
- <dd>暂停一个下载。</dd>
- <dt>{{WebExtAPIRef("downloads.resume()")}}</dt>
- <dd>恢复一个暂停的下载。</dd>
- <dt>{{WebExtAPIRef("downloads.cancel()")}}</dt>
- <dd>取消一个下载。</dd>
- <dt>{{WebExtAPIRef("downloads.getFileIcon()")}}</dt>
- <dd>检索指定下载的图标。</dd>
- <dt>{{WebExtAPIRef("downloads.open()")}}</dt>
- <dd>用下载的文件相关联的程序打开它。</dd>
- <dt>{{WebExtAPIRef("downloads.show()")}}</dt>
- <dd>打开当前平台的文件管理应用来在它包含的文件夹中显示下载的文件。</dd>
- <dt>{{WebExtAPIRef("downloads.showDefaultFolder()")}}</dt>
- <dd>用当前平台的文件管理应用显示默认下载文件夹。</dd>
- <dt>{{WebExtAPIRef("downloads.erase()")}}</dt>
- <dd>擦除浏览器的下载历史中匹配 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} 的下载记录，不会在磁盘中删除文件。</dd>
- <dt>{{WebExtAPIRef("downloads.removeFile()")}}</dt>
- <dd>从磁盘中移除下载的文件，但不从浏览器的下载历史中去除。</dd>
- <dt>{{WebExtAPIRef("downloads.acceptDanger()")}}</dt>
- <dd>提示用户接受或取消危险的下载。</dd>
- <dt>{{WebExtAPIRef("downloads.drag()")}}</dt>
- <dd>   将下载的文件拖动到另一个应用程序。</dd>
- <dt>{{WebExtAPIRef("downloads.setShelfEnabled()")}}</dt>
- <dd>启用或禁用与当前浏览器配置文件关联的每个窗口底部的灰色架子。只要至少一个扩展名已禁用该架子，它就会被禁用。</dd>
-</dl>
+## Events
 
-<h2 id="Events">Events</h2>
+- {{WebExtAPIRef("downloads.onCreated")}}
+  - : 当一个下载开始时被 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 对象触发。
+- {{WebExtAPIRef("downloads.onErased")}}
+  - : 当一个下载从历史中擦除时被 Fires with the `downloadId` 触发。
+- {{WebExtAPIRef("downloads.onChanged")}}
+  - : 当任意一个 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的属性期望 `bytesReceived` 改变时，此事件被这个 \`downloadId\` 和包含了变化属性的对象触发。
 
-<dl>
- <dt>{{WebExtAPIRef("downloads.onCreated")}}</dt>
- <dd>当一个下载开始时被 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 对象触发。</dd>
- <dt>{{WebExtAPIRef("downloads.onErased")}}</dt>
- <dd>当一个下载从历史中擦除时被 Fires with the <code>downloadId</code> 触发。</dd>
- <dt>{{WebExtAPIRef("downloads.onChanged")}}</dt>
- <dd>当任意一个 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的属性期望 <code>bytesReceived</code> 改变时，此事件被这个 `downloadId` 和包含了变化属性的对象触发。</dd>
-</dl>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat("webextensions.api.downloads")}}
 
-<p>{{Compat("webextensions.api.downloads")}}</p>
+{{WebExtExamples("h2")}}
 
-<p>{{WebExtExamples("h2")}}</p>
+> **备注：** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -129,5 +118,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

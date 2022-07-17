@@ -3,183 +3,150 @@ title: Firefox 62 for developers
 slug: Mozilla/Firefox/Releases/62
 translation_of: Mozilla/Firefox/Releases/62
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">September 5, 2018</a>.</p>
+This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [September 5, 2018](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>You now have four options for the location of the Developer Tools. In addition to the default location on the bottom of the window, you can choose to locate the tools on either the left or right sides of the main window or in a separate window.</li>
- <li>You can now split the Rules view out into its own pane, separate from the other tabs on the CSS pane. See <a href="/en-US/docs/Tools/Page_Inspector/3-pane_mode">Page inspector 3-pane mode</a> for more details.</li>
- <li>The Grid inspector has updated features, and all new documentation — see <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">CSS Grid Inspector: Examine grid layouts</a>.</li>
- <li>The <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility inspector</a> has had a couple of minor updates:
-  <ul>
-   <li>It no longer exposes the <code>help</code> property, which isn't properly implemented in Gecko ({{bug(1467643)}}).</li>
-   <li>The <code>keyboardShortcut</code> property now correctly exposes any keyboard shortcut available to activate the currently inspected node ({{bug(1467381)}}).</li>
-  </ul>
- </li>
-</ul>
+- You now have four options for the location of the Developer Tools. In addition to the default location on the bottom of the window, you can choose to locate the tools on either the left or right sides of the main window or in a separate window.
+- You can now split the Rules view out into its own pane, separate from the other tabs on the CSS pane. See [Page inspector 3-pane mode](/en-US/docs/Tools/Page_Inspector/3-pane_mode) for more details.
+- The Grid inspector has updated features, and all new documentation — see [CSS Grid Inspector: Examine grid layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts).
+- The [Accessibility inspector](/en-US/docs/Tools/Accessibility_inspector) has had a couple of minor updates:
 
-<h3 id="HTML">HTML</h3>
+  - It no longer exposes the `help` property, which isn't properly implemented in Gecko ({{bug(1467643)}}).
+  - The `keyboardShortcut` property now correctly exposes any keyboard shortcut available to activate the currently inspected node ({{bug(1467381)}}).
 
-<p><em>没有变化。</em></p>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+_没有变化。_
 
-<ul>
- <li><code>:-moz-selection</code> has been unprefixed ({{bug(509958)}}).</li>
- <li><code>x</code> is now supported as a unit for the <code><a href="/en-US/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code> type ({{bug(1460655)}}).</li>
- <li><code><a href="/en-US/docs/Web/CSS/shape-margin">shape-margin</a></code>, <code><a href="/en-US/docs/Web/CSS/shape-outside">shape-outside</a></code>, and <code><a href="/en-US/docs/Web/CSS/shape-image-threshold">shape-image-threshold</a></code> are now enabled by default ({{bug(1457297)}}).</li>
-</ul>
+### CSS
 
-<h3 id="SVG">SVG</h3>
+- `:-moz-selection` has been unprefixed ({{bug(509958)}}).
+- `x` is now supported as a unit for the [`<resolution>`](/en-US/docs/Web/CSS/resolution) type ({{bug(1460655)}}).
+- [`shape-margin`](/en-US/docs/Web/CSS/shape-margin), [`shape-outside`](/en-US/docs/Web/CSS/shape-outside), and [`shape-image-threshold`](/en-US/docs/Web/CSS/shape-image-threshold) are now enabled by default ({{bug(1457297)}}).
 
-<p><em>No changes.</em></p>
+### SVG
 
-<h3 id="JavaScript">JavaScript</h3>
+_No changes._
 
-<ul>
- <li>The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ({{bug(1435813)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import.meta">import.meta</a></code> property has been implemented to expose context-specific metadata to a JavaScript module ({{bug(1427610)}}).</li>
- <li>JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals">string literals</a> may now directly contain U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR.  As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see {{bug(1435828)}} and the tc39 proposal <a href="https://github.com/tc39/proposal-json-superset">json-superset</a>).</li>
- <li>For out-of-bounds <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return <code>false</code> instead of <code>true</code> ({{bug(1308735)}}).</li>
-</ul>
+### JavaScript
 
-<h3 id="APIs">APIs</h3>
+- The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ({{bug(1435813)}}).
+- The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ({{bug(1427610)}}).
+- JavaScript [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) may now directly contain U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see {{bug(1435828)}} and the tc39 proposal [json-superset](https://github.com/tc39/proposal-json-superset)).
+- For out-of-bounds [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return `false` instead of `true` ({{bug(1308735)}}).
 
-<h4 id="New_APIs">New APIs</h4>
+### APIs
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/Web_Speech_API">Speech Synthesis API (Text-to-Speech)</a> is now enabled by default on Firefox for Android ({{bug(1463496)}}).</li>
-</ul>
+#### New APIs
 
-<h4 id="DOM">DOM</h4>
+- The [Speech Synthesis API (Text-to-Speech)](/en-US/docs/Web/API/Web_Speech_API) is now enabled by default on Firefox for Android ({{bug(1463496)}}).
 
-<ul>
- <li>The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with {{domxref("DOMPointInit")}}. This function is also available on {{domxref("DOMPoint")}} ({{bug(1186265)}}).</li>
- <li>Related to the previous item, the <code>DOMPoint</code> and <code>DOMPointReadOnly</code> constructors no longer support an input parameter of type <code>DOMPointInit</code>; the values of the properties must be specified using the <code>x</code>, <code>y</code>, <code>z</code>, and <code>w</code> parameters ({{bug(1186265)}}).</li>
- <li>The {{domxref("URL.createObjectURL()")}} method no longer supports creating object URLs to represent a {{domxref("MediaStream")}}. This capability has been obsolete for some time now, since you can simply set {{domxref("HTMLMediaElement.srcObject")}} to the <code>MediaStream</code> directly now ({{bug(1454889)}}).</li>
- <li>For compatibility purposes, the {{domxref("Event.srcElement")}} property is now supported. It is an alias for {{domxref("Event.target")}} ({{bug(453968)}}).</li>
- <li>{{domxref("Navigator.registerProtocolHandler()")}} now must only be called from a secure context ({{bug(1460506)}}).</li>
- <li>The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ({{bug(1460481)}}).</li>
-</ul>
+#### DOM
 
-<h4 id="DOM_events">DOM events</h4>
+- The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with {{domxref("DOMPointInit")}}. This function is also available on {{domxref("DOMPoint")}} ({{bug(1186265)}}).
+- Related to the previous item, the `DOMPoint` and `DOMPointReadOnly` constructors no longer support an input parameter of type `DOMPointInit`; the values of the properties must be specified using the `x`, `y`, `z`, and `w` parameters ({{bug(1186265)}}).
+- The {{domxref("URL.createObjectURL()")}} method no longer supports creating object URLs to represent a {{domxref("MediaStream")}}. This capability has been obsolete for some time now, since you can simply set {{domxref("HTMLMediaElement.srcObject")}} to the `MediaStream` directly now ({{bug(1454889)}}).
+- For compatibility purposes, the {{domxref("Event.srcElement")}} property is now supported. It is an alias for {{domxref("Event.target")}} ({{bug(453968)}}).
+- {{domxref("Navigator.registerProtocolHandler()")}} now must only be called from a secure context ({{bug(1460506)}}).
+- The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ({{bug(1460481)}}).
 
-<p><em>No changes.</em></p>
+#### DOM events
 
-<h4 id="Service_workers">Service workers</h4>
+_No changes._
 
-<p><em>No changes.</em></p>
+#### Service workers
 
-<h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
+_No changes._
 
-<ul>
- <li>The <code>"media.autoplay.enabled"</code> preference now controls automatic playback of both audio and video media, instead of just video media ({{bug(1413098)}}).</li>
- <li>The {{domxref("ChannelSplitterNode")}} has been fixed to correctly default to having 6 channels with the <code>channelInterpretation</code> set to <code>"discrete"</code> and the <code>channelCountMode</code> set to <code>"explicit"</code> per the specification ({{bug(1456265)}}).</li>
-</ul>
+#### Media, Web Audio, and WebRTC
 
-<h4 id="Canvas_and_WebGL">Canvas and WebGL</h4>
+- The `"media.autoplay.enabled"` preference now controls automatic playback of both audio and video media, instead of just video media ({{bug(1413098)}}).
+- The {{domxref("ChannelSplitterNode")}} has been fixed to correctly default to having 6 channels with the `channelInterpretation` set to `"discrete"` and the `channelCountMode` set to `"explicit"` per the specification ({{bug(1456265)}}).
 
-<p><em>No changes.</em></p>
+#### Canvas and WebGL
 
-<ul>
-</ul>
+_No changes._
 
-<h3 id="CSSOM">CSSOM</h3>
+### CSSOM
 
-<ul>
- <li>Support for <code><a href="/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyCSSValue">CSSStyleDeclaration.getPropertyCSSValue()</a></code> has been removed ({{bug(1408301)}}).</li>
- <li>Support for <code><a href="/en-US/docs/Web/API/CSSValue">CSSValue</a></code>, <code><a href="/en-US/docs/Web/API/CSSPrimitiveValue">CSSPrimitiveValue</a></code>, and <code><a href="/en-US/docs/Web/API/CSSValueList">CSSValueList</a></code> has been removed ({{bug()}}).</li>
- <li><code><a href="/en-US/docs/Web/API/Window/getComputedStyle">window.getComputedStyle()</a></code> no longer returns <code>null</code> when called on a <code>Window</code> which has no presentation ({{bug(1467722)}}).</li>
-</ul>
+- Support for [`CSSStyleDeclaration.getPropertyCSSValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyCSSValue) has been removed ({{bug(1408301)}}).
+- Support for [`CSSValue`](/en-US/docs/Web/API/CSSValue), [`CSSPrimitiveValue`](/en-US/docs/Web/API/CSSPrimitiveValue), and [`CSSValueList`](/en-US/docs/Web/API/CSSValueList) has been removed ({{bug()}}).
+- [`window.getComputedStyle()`](/en-US/docs/Web/API/Window/getComputedStyle) no longer returns `null` when called on a `Window` which has no presentation ({{bug(1467722)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
- <li>The deprecated CSP {{CSP("referrer")}} directive has been removed. Please use the  {{HTTPHeader("Referrer-Policy")}} header instead ({{bug(1302449)}}).</li>
-</ul>
+- The deprecated CSP {{CSP("referrer")}} directive has been removed. Please use the {{HTTPHeader("Referrer-Policy")}} header instead ({{bug(1302449)}}).
 
-<h3 id="Security">Security</h3>
+### Security
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="Plugins">Plugins</h3>
+### Plugins
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="Other">Other</h3>
+### Other
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h2 id="Removals_from_the_web_platform">Removals from the web platform</h2>
+## Removals from the web platform
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="CSS_2">CSS</h3>
+### CSS
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="APIs_2">APIs</h3>
+### APIs
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="SVG_2">SVG</h3>
+### SVG
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="Other_2">Other</h3>
+### Other
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+## Changes for add-on and Mozilla developers
 
-<h3 id="WebExtensions">WebExtensions</h3>
+### WebExtensions
 
-<h4 id="API_changes">API changes</h4>
+#### API changes
 
-<ul>
- <li><code><a href="/en-US/Add-ons/WebExtensions/API/webRequest/getSecurityInfo">webRequest.getSecurityInfo()</a></code> API to examine details of TLS connections ({{bug(1322748)}}).</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition">browserSettings.newTabPosition</a></code> to customize where new tabs open ({{bug(1344749)}}).</li>
- <li><code>windowTypes</code> has been deprecated in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/get">windows.get()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent">windows.getCurrent()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused">windows.getLastFocused()</a></code> ({{bug(1419132)}}).</li>
- <li>It's now possible to modify a browser action on a per-window basis ({{bug(1419893)}}).</li>
-</ul>
+- [`webRequest.getSecurityInfo()`](/en-US/Add-ons/WebExtensions/API/webRequest/getSecurityInfo) API to examine details of TLS connections ({{bug(1322748)}}).
+- [`browserSettings.newTabPosition`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition) to customize where new tabs open ({{bug(1344749)}}).
+- `windowTypes` has been deprecated in [`windows.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/get), [`windows.getCurrent()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getCurrent) and [`windows.getLastFocused()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused) ({{bug(1419132)}}).
+- It's now possible to modify a browser action on a per-window basis ({{bug(1419893)}}).
 
-<h4 id="Manifest_changes">Manifest changes</h4>
+#### Manifest changes
 
-<ul>
- <li>New <code>open_at_install</code> property of the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> manifest key enables extensions to control whether their sidebars should open automatically on install or not ({{bug(1460910)}}).</li>
- <li>Changed to the <code>browser_style</code> property of various manifest keys:
-  <ul>
-   <li>in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> it defaults to false</li>
-   <li>in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> it defaults to true.</li>
-  </ul>
- </li>
-</ul>
+- New `open_at_install` property of the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key enables extensions to control whether their sidebars should open automatically on install or not ({{bug(1460910)}}).
+- Changed to the `browser_style` property of various manifest keys:
 
-<h4 id="Theme_changes">Theme changes</h4>
+  - in [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) and [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) it defaults to false
+  - in [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) and [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) it defaults to true.
 
-<ul>
- <li>New <code>tab_background_separator</code> property of the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></code> manifest key enables extensions to change the color of the tab separator.</li>
-</ul>
+#### Theme changes
 
-<h4 id="Other_changes">Other changes</h4>
+- New `tab_background_separator` property of the [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key enables extensions to change the color of the tab separator.
 
-<ul>
- <li>Support for unpacked sideloaded extensions has been removed ({{bug(1385057)}}).</li>
-</ul>
+#### Other changes
 
-<h2 id="See_also">See also</h2>
+- Support for unpacked sideloaded extensions has been removed ({{bug(1385057)}}).
 
-<ul>
- <li>Site compatibility for Firefox 62</li>
-</ul>
+## See also
 
-<h2 id="Older_versions">Older versions</h2>
+- Site compatibility for Firefox 62
 
-<p>{{Firefox_for_developers(61)}}</p>
+## Older versions
+
+{{Firefox_for_developers(61)}}

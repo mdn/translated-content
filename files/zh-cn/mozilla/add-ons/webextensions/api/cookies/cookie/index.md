@@ -3,52 +3,51 @@ title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>Cookie</code> type of the {{WebExtAPIRef("cookies")}} API represents information about an HTTP cookie.</p>
+The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information about an HTTP cookie.
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<p>这玩意是一个 Object，可以包含以下的属性：</p>
+这玩意是一个 Object，可以包含以下的属性：
 
-<dl>
- <dt><code>domain</code></dt>
- <dd>储存这个 cookie 对应网站的字符串 (例如 "www.tengxun.com")。</dd>
- <dt><code>expirationDate</code>{{optional_inline}}</dt>
- <dd>A <code>number</code> representing the expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.</dd>
- <dt><code>firstPartyDomain</code></dt>
- <dd>A <code>string</code> representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See <a href="/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation">First-party isolation</a>.</dd>
- <dt><code>hostOnly</code></dt>
- <dd>A <code>boolean</code>, <code>true</code> if the cookie is a host-only cookie (i.e. the request's host must exactly match the domain of the cookie), or <code>false</code> otherwise.</dd>
- <dt><code>httpOnly</code></dt>
- <dd>A <code>boolean</code>, <code>true</code> if the cookie is marked as HttpOnly (i.e. the cookie is inaccessible to client-side scripts), or <code>false</code> otherwise.</dd>
- <dt><code>name</code></dt>
- <dd>A <code>string</code> representing the name of the cookie.</dd>
- <dt><code>path</code></dt>
- <dd>A <code>string</code> representing the path of the cookie.</dd>
- <dt><code>secure</code></dt>
- <dd>A <code>boolean</code>, <code>true</code> if the cookie is marked as secure (i.e. its scope is limited to secure channels, typically HTTPS), or <code>false</code> otherwise.</dd>
- <dt><code>session</code></dt>
- <dd>A <code>boolean</code>, <code>true</code> if the cookie is a session cookie, or <code>false</code> if it is a persistent cookie with an expiration date.</dd>
- <dt><code>sameSite</code></dt>
- <dd>A {{WebExtAPIRef("cookies.SameSiteStatus")}} value that indicates the SameSite state of the cookie.</dd>
- <dt><code>storeId</code></dt>
- <dd>A <code>string</code> representing the ID of the cookie store containing this cookie, as provided by {{WebExtAPIRef("cookies.getAllCookieStores()")}}.</dd>
- <dt><code>value</code></dt>
- <dd>代表 cookie 的值的一个字符串。</dd>
-</dl>
+- `domain`
+  - : 储存这个 cookie 对应网站的字符串 (例如 "www\.tengxun.com")。
+- `expirationDate`{{optional_inline}}
+  - : A `number` representing the expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
+- `firstPartyDomain`
+  - : A `string` representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation).
+- `hostOnly`
+  - : A `boolean`, `true` if the cookie is a host-only cookie (i.e. the request's host must exactly match the domain of the cookie), or `false` otherwise.
+- `httpOnly`
+  - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e. the cookie is inaccessible to client-side scripts), or `false` otherwise.
+- `name`
+  - : A `string` representing the name of the cookie.
+- `path`
+  - : A `string` representing the path of the cookie.
+- `secure`
+  - : A `boolean`, `true` if the cookie is marked as secure (i.e. its scope is limited to secure channels, typically HTTPS), or `false` otherwise.
+- `session`
+  - : A `boolean`, `true` if the cookie is a session cookie, or `false` if it is a persistent cookie with an expiration date.
+- `sameSite`
+  - : A {{WebExtAPIRef("cookies.SameSiteStatus")}} value that indicates the SameSite state of the cookie.
+- `storeId`
+  - : A `string` representing the ID of the cookie store containing this cookie, as provided by {{WebExtAPIRef("cookies.getAllCookieStores()")}}.
+- `value`
+  - : 代表 cookie 的值的一个字符串。
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("webextensions.api.cookies.Cookie")}}</p>
+{{Compat("webextensions.api.cookies.Cookie")}}
 
-<h2 id="举例">举例</h2>
+## 举例
 
-<p>Cookies API 中的大多数方法都将 <code>Cookie</code> 对象用作输入参数或用作返回值的一部分。例如调用 {{WebExtAPIRef("cookies.getAll()")}} 将会返回一个 <code>Cookie</code> 对象的数组。</p>
+Cookies API 中的大多数方法都将 `Cookie` 对象用作输入参数或用作返回值的一部分。例如调用 {{WebExtAPIRef("cookies.getAll()")}} 将会返回一个 `Cookie` 对象的数组。
 
-<p>在下面的例子中我们将会获取所有的 cookie，然后 <code>console.log()</code> 出这些 <code>Cookie</code> 对象所对应的值。</p>
+在下面的例子中我们将会获取所有的 cookie，然后 `console.log()` 出这些 `Cookie` 对象所对应的值。
 
-<pre class="brush: js notranslate">function logCookies(cookies) {
+```js
+function logCookies(cookies) {
   for (cookie of cookies) {
     console.log(`Domain: ${cookie.domain}`);
     console.log(`Name: ${cookie.name}`);
@@ -58,18 +57,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 }
 
 var gettingAll = browser.cookies.getAll({});
-gettingAll.then(logCookies);</pre>
+gettingAll.then(logCookies);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>备注：</strong> 这 API 是基于 Chromium 的 <a href="https://developer.chrome.com/extensions/cookies#type-Cookie"><code>chrome.cookies</code></a> API 的。这个文档来自于 Chromium code 中的 <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> 。</p>
+> **备注：** 这 API 是基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API 的。这个文档来自于 Chromium code 中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) 。
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre class="notranslate">// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,5 +93,4 @@ gettingAll.then(logCookies);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

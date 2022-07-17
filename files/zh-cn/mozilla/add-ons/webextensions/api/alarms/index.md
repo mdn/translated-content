@@ -3,55 +3,45 @@ title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>在未来一个特定的时间运行的计划任务代码。这很像<code><a href="/zh-CN/docs/Web/API/WindowTimers/setTimeout">setTimeout()</a></code>和<code><a href="/zh-CN/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code>，不过这些函数仅可以按需使用而不能在后台页面工作。</p>
+在未来一个特定的时间运行的计划任务代码。这很像[`setTimeout()`](/zh-CN/docs/Web/API/WindowTimers/setTimeout)和[`setInterval()`](/zh-CN/docs/Web/API/WindowTimers/setInterval)，不过这些函数仅可以按需使用而不能在后台页面工作。
 
-<p>想要使用这个 API，您需要获取"alarms"的<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>。</p>
+想要使用这个 API，您需要获取"alarms"的[permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-<h2 id="类型">类型</h2>
+## 类型
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.Alarm")}}</dt>
- <dd>Information about a particular alarm.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.Alarm")}}
+  - : Information about a particular alarm.
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.create()")}}</dt>
- <dd>创建新的 alarm.</dd>
- <dt>{{WebExtAPIRef("alarms.get()")}}</dt>
- <dd>通过名称获取指定的 alarm.</dd>
- <dt>{{WebExtAPIRef("alarms.getAll()")}}</dt>
- <dd>获取所有的 alarm.</dd>
- <dt>{{WebExtAPIRef("alarms.clear()")}}</dt>
- <dd>清除指定名称的 alarm.</dd>
- <dt>{{WebExtAPIRef("alarms.clearAll()")}}</dt>
- <dd>清除所有的 alarm.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.create()")}}
+  - : 创建新的 alarm.
+- {{WebExtAPIRef("alarms.get()")}}
+  - : 通过名称获取指定的 alarm.
+- {{WebExtAPIRef("alarms.getAll()")}}
+  - : 获取所有的 alarm.
+- {{WebExtAPIRef("alarms.clear()")}}
+  - : 清除指定名称的 alarm.
+- {{WebExtAPIRef("alarms.clearAll()")}}
+  - : 清除所有的 alarm.
 
-<h2 id="事件">事件</h2>
+## 事件
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.onAlarm")}}</dt>
- <dd>当 alarm 发生的时候触发。</dd>
-</dl>
+- {{WebExtAPIRef("alarms.onAlarm")}}
+  - : 当 alarm 发生的时候触发。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("webextensions.api.alarms")}}</p>
+{{Compat("webextensions.api.alarms")}}
 
-<div class="note">
-<p><strong>备注：</strong> The "Chrome incompatibilities" section is included from <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro.
+>
+> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
-<p>If you need to update this content, edit <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
-</div>
+{{WebExtExamples("h2")}}
 
-<p>{{WebExtExamples("h2")}}</p>
-
-<div class="note">
-<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **备注：** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
