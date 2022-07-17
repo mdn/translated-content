@@ -1,5 +1,5 @@
 ---
-title: Encoding API Encodings
+title: Encoding API 编码
 slug: Web/API/Encoding_API/Encodings
 page-type: guide
 tags:
