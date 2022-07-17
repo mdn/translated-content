@@ -89,7 +89,7 @@ _画中画 API 定义了三个事件，它们可以被用来检测何时画中�
 
 ### 切换画中画模式
 
-当使用者点击“Toggle Picture-in-Picture”按钮时，这段代码由一个点击处理程序调用：
+当使用者点击“Toggle Picture-in-Picture”按钮时，这段代码将会由一个点击处理程序调用：
 
 ```js
 function togglePictureInPicture() {
@@ -103,7 +103,7 @@ function togglePictureInPicture() {
 }
 ```
 
-该块首先查看 {{DOMxRef("Document", "document")}} `pictureInPictureElement` 属性的值。
+该块首先会查看 {{DOMxRef("Document", "document")}} `pictureInPictureElement` 属性的值。
 
 如果值不是 `null`，则它是当前处于画中画模式并在浮动窗口的元素。我们调用 {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} 将视频带进它初始的大小。
 
