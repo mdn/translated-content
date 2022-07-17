@@ -1,6 +1,7 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
+page-type: web-api-interface
 tags:
   - API
   - Audio
@@ -15,353 +16,184 @@ tags:
   - Video
   - WebRTC
   - WebRTC API
+browser-compat: api.RTCPeerConnection
 translation_of: Web/API/RTCPeerConnection
 ---
-<p>{{APIRef('WebRTC')}}</p>
+{{APIRef('WebRTC')}}
 
-<p><span class="seoSummary"><strong><code>RTCPeerConnection</code></strong> インターフェイスはローカルコンピューターとリモートピア間の WebRTC コネクションを表現します。このインターフェイスはリモートピアへ接続や、その接続の保守や監視するメソッド、さらに、不要になった接続を閉じるメソッドを提供します。</span></p>
+**`RTCPeerConnection`** インターフェイスは、ローカルコンピューターとリモートピアの間の WebRTC 接続を表します。リモートピアに接続したり、接続を維持・監視したり、不要になったら接続を切断したりするためのメソッドを提供します。
 
-<p>{{InheritanceDiagram}}</p>
+{{InheritanceDiagram}}
 
-<h3 id="Obsolete_method" name="Obsolete_method">廃止されたメソッド</h3>
+## コンストラクター
 
-<p>以下のメソッドは廃止されており、すべての主要なブラウザーで未実装です。</p>
+- {{DOMxRef("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}}
+  - : ローカルデバイスとリモートピア間の接続を表す、新しく作成された `RTCPeerConnection` を返します。
 
-<dl>
- <dt>{{domxref("RTCPeerConnection.createDTMFSender()")}} {{obsolete_inline}}</dt>
- <dd>特定の {{domxref("MediaStreamTrack")}} と関連付けられた新たな {{domxref("RTCDTMFSender")}} を生成します。これにより、その接続において {{Glossary("DTMF")}} 音（電話のトーン信号、プッシュ音）を送れるようになるでしょう。</dd>
-</dl>
+## 静的メソッド
 
-<h2 id="Events" name="Events">イベント</h2>
+- {{DOMxRef("RTCPeerConnection.generateCertificate", "generateCertificate()")}}
+  - : X.509 証明書とそれに対応する秘密鍵を作成し、それが生成されると新しい {{DOMxRef("RTCCertificate")}} で解決される {{jsxref("Promise")}} を返します。
 
-<p>これらのイベントを待ち受けするには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの <code>on<em>イベント名</em></code> プロパティに代入するかしてください。</p>
+## プロパティ
 
-<dl>
- <dt>{{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}</dt>
- <dd><code>RTCPeerConnection</code> の全体的な接続ステータスが変更されると、 <code>RTCPeerConnection</code> オブジェクトに送信されます。<br>
- {{domxref("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}} イベントハンドラプロパティからも使用できます。</dd>
- <dt>{{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}</dt>
- <dd>Sent to the <code>RTCPeerConnection</code> object when the remote peer adds an {{domxref("RTCDataChannel")}} to the connection.<br>
- Also available through the {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}</dt>
- <dd>Sent to the peer connection to request that the specified candidate be transmitted to the remote peer.<br>
- Also available through the {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}</dt>
- <dd>An error of type {{domxref("RTCPeerConnectionIceErrorEvent")}} which is sent to the connection if an error occurred during ICE candidate gathering. The event's properties describe the error.<br>
- Also available through the {{domxref("RTCPeerConnection.onicecandidateerror", "onicecandidateerror")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}</dt>
- <dd>Sent to the <code>RTCPeerConnection</code> when the state of the ICE connection changes, such as when it disconnects.<br>
- Also available using the {{domxref("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}</dt>
- <dd>Sent to the <code>RTCPeerConnection</code> when the ICE layer's gathering state, reflected by {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}, changes. This indicates whether ICE negotiation has not yet begun (<code>new</code>), has begun gathering candidates (<code>gathering</code>), or has completed (<code>complete</code>).<br>
- Also available using the {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.isolationchange_event", "isolationchange")}}</dt>
- <dd>Sent to the <code>RTCPeerConnection</code> when the {{domxref("MediaStreamTrack.isolated", "isolated")}} property on one of the {{domxref("MediaStreamTrack")}} objects associated with the connection changes value. A track is {{domxref("MediaStreamTrack.isolated", "isolated")}} if its content cannot be accessed by the owning document due to lack of authentication or if the track comes from a cross-origin source.<br>
- Also available through the {{domxref("RTCPeerConnection.onisolationchange", "onisolationchange")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}</dt>
- <dd>Sent to the <code>RTCPeerConnection</code> when negotiation or renegotiation of the ICE connection needs to be performed; this can happen both when first opening a connection as well as when it's neccessary to adapt to changing network conditions. The receiver should respond by creating an offer and sending it to the other peer.<br>
- Also available as the {{domxref("RTCPeerConnection.onnegotiationneeded", "onnegotiationneeded")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}</dt>
- <dd>The <code>signalingstatechange</code> event is sent to the <code>RTCPeerConnection</code> when the connection's ICE signaling state changes.<br>
- Also available through the {{domxref("RTCPeerConnection.onsignalingstatechange", "onsignalingstatechange")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.statsended_event", "statsended")}}</dt>
- <dd>The <code>statsended</code> event is sent when a statistics object being monitored is deleted. The {{domxref("RTCStatsEvent")}} includes the final report on the deleted object (or objects, if multiple objects have been deleted since the last report was delivered). A statistics object is deleted, for example, when the connection is closed and deleted.<br>
- Available as the {{domxref("RTCPeerConnection.onstatsended", "onstatsended")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.track_event", "track")}}</dt>
- <dd>The <code>track</code> event is sent after a new track has been added to one of the {{domxref("RTCRtpReceiver")}} instances which comprise the connection.<br>
- Available as the {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler property.</dd>
-</dl>
+_{{DOMxRef("EventTarget")}} から継承したプロパティもあります。_
 
-<h3 id="Obsolete_events" name="Obsolete_events">廃止されたイベント</h3>
+- {{DOMxRef("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} {{ReadOnlyInline}}
+  - : 論理値で、リモートピアが[トリクル ICE 候補](https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-trickle-ice)を受け入れることができるかどうかを返します。
+- {{DOMxRef("RTCPeerConnection.connectionState", "connectionState")}} {{ReadOnlyInline}}
+  - : ピア接続の現在の状態を示します。 `new`, `connecting`, `connected`, `disconnected`, `failed`, `closed` のいずれかの文字列を返します。
+- {{DOMxRef("RTCPeerConnection.currentLocalDescription", "currentLocalDescription")}} {{ReadOnlyInline}}
+  - : この `RTCPeerConnection` がリモートピアとの交渉を終了してから、直近で交渉に成功した接続のローカル側を記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
+    また、この記述で表される提案や回答が最初にインスタンス化されて以降、 ICE エージェントによってすでに生成された可能性のある ICE 候補のリストも含まれます。
+- {{DOMxRef("RTCPeerConnection.currentRemoteDescription", "currentRemoteDescription")}} {{ReadOnlyInline}}
+  - : この `RTCPeerConnection` がリモートピアとの交渉を終了してから、直近で交渉に成功した接続のリモート側を記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
+    また、この記述で表される提案や回答が最初にインスタンス化されて以降、 ICE エージェントによってすでに生成された可能性のある ICE 候補のリストも含まれます。
+- {{DOMxRef("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} {{ReadOnlyInline}}
+  - : この RTCPeerConnection に関連する ICE エージェントの状態を文字列で返します。
+    `new`, `checking`, `connected`, `completed`, `failed`, `disconnected`, `closed` の何れかの値になります。
+- {{DOMxRef("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} {{ReadOnlyInline}}
+  - : 接続の ICE 収集状態を表す文字列を返します。これにより、例えば ICE 候補の収集が終了したことを検出することができます。
+    取りうる値は、 `new`, `gathering`, `complete` の何れかです。
+- {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
+  - : 接続のローカル側のセッションを記述した {{DOMxRef("RTCSessionDescription")}} を返します。
+    まだ設定されていない場合は、 `null` を返します。
+- {{DOMxRef("RTCPeerConnection.peerIdentity", "peerIdentity")}} {{ReadOnlyInline}}
+  - : リモートピアを識別する文字列を含む {{DOMxRef("RTCIdentityAssertion")}} に解決する {{jsxref("Promise")}} を返します。
+    このプロミスが正常に解決されると、結果として得られる ID がターゲットピア ID になり、接続の間、変更されることはありません。
+- {{DOMxRef("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} {{ReadOnlyInline}}
+  - : 接続のローカル側で保留中の設定変更を記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
+    これは、現在の接続を記述するのではなく、近い将来に存在する可能性のある接続を記述します。
+- {{DOMxRef("RTCPeerConnection.pendingRemoteDescription", "pendingRemoteDescription")}} {{ReadOnlyInline}}
+  - : 接続のリモート側で保留中の設定変更を記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
+    これは、現在の接続を記述するのではなく、近い将来に存在する可能性のある接続を説明します。
+- {{DOMxRef("RTCPeerConnection.remoteDescription", "remoteDescription")}} {{ReadOnlyInline}}
+  - : 接続のリモート側の、設定とメディア情報を含むセッションを記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
+    まだ設定されていない場合は、`null`を返します。
+- {{DOMxRef("RTCPeerConnection.sctp", "sctp")}} {{ReadOnlyInline}}
+  - : SCTP データを送受信するトランスポート層の {{Glossary("SCTP")}} を記述した  {{DOMxRef("RTCSctpTransport")}} オブジェクトを返します。
+    SCTP が交渉されていない場合、この値は `null` です。
+- {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} {{ReadOnlyInline}}
+  - : 他のピアに接続中または再接続中の、ローカル側のシグナリングプロセスの状態を記述した文字列を返します。
+    値は `stable`, `have-local-offer`, `have-remote-offer`, `have-local-pranswer`, `have-remote-pranswer`, `closed` のうちのいずれかになります。
 
-<dl>
- <dt>{{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{obsolete_inline}}</dt>
- <dd>Sent when a new {{domxref("MediaStream")}} has been added to the connection. Instead of watching for this obsolete event, you should watch each for {{domxref("RTCPeerConnection.track_event", "track")}} events; one is sent for each {{domxref("MediaStreamTrack")}} added to the connection.<br>
- Available as the {{domxref("RTCPeerConnection.onaddstream", "onaddstream")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.identityresult_event", "identityresult")}} {{obsolete_inline}}</dt>
- <dd>In old versions of the WebRTC specification, this event was used to indicate that an identity assertion is available. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.<br>
- Also available using the {{domxref("RTCPeerConnection.onidentityresult", "onidentityresult")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.idpassertionerror_event", "idpassertionerror")}} {{obsolete_inline}}</dt>
- <dd>In old versions of the WebRTC specification, this event was used to indicate that an error occurred while attempting to generate an identity assertion. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to be rejected with an error.<br>
- Also available as the {{domxref("RTCPeerConnection.onidpassertionerror", "onidpinsertionerror")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.idpvalidationerror_event", "idpvalidationerror")}} {{obsolete_inline}}</dt>
- <dd>In old versions of the WebRTC specification, this event was used to indicate that an error occurred while attempting to validate an identity assertion. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to be rejected with an error.<br>
- Also available using the {{domxref("RTCPeerConnection.onpeeridentity", "onpeerdentity")}} event handler property.</dd>
- <dt>{{domxref("RTCPeerConnection.peeridentity_event", "peeridentity")}} {{obsolete_inline}}</dt>
- <dd>In old versions of the WebRTC specification, this event was used to deliver a received identity. Now, you should instead wait for a the promise returned by {{domxref("RTCPeerConnection.peerIdentity", "peerIdentity")}} to resolve with an identity.</dd>
- <dt>{{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{obsolete_inline}}</dt>
- <dd>Sent to the <code>RTCPeerConnection</code> when a {{domxref("MediaStream")}} is removed from the connection. Instead of watching for this obsolete event, you should watch each stream for {{domxref("MediaStream.removetrack_event", "removetrack")}} events on each stream within the <code>RTCPeerConnection</code>.<br>
- Also available as the {{domxref("RTCPeerConnection.onremovestream", "onaddstream")}} event handler property.</dd>
-</dl>
+## メソッド
 
-<h2 id="Constants" name="Constants">定数</h2>
+_{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
 
-<h3 id="RTCBundlePolicy_列挙型">RTCBundlePolicy 列挙型</h3>
+- {{DOMxRef("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
+  - : `RTCPeerConnection` のリモート記述に新しいリモート候補を追加し、リモート側の接続の状態を記述します。
+- {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}}
+  - : 新しい {{DOMxRef("MediaStreamTrack")}} を、相手側に送信されるトラックのセットに追加します。
+- {{DOMxRef("RTCPeerConnection.addTransceiver", "addTransceiver()")}}
+  - : 新しい {{DOMxRef("RTCRtpTransceiver")}} を作成し、接続に関連付けられたトランシーバーのセットに追加します。
+    トランシーバーはそれぞれ、 {{DOMxRef("RTCRtpSender")}} と {{DOMxRef("RTCRtpReceiver")}} が関連付けられた両方向のストリームを表します。
+- {{DOMxRef("RTCPeerConnection.close", "close()")}}
+  - : 現在のピア接続を終了します。
+- {{DOMxRef("RTCPeerConnection.createAnswer", "createAnswer()")}}
+  - : WebRTC 接続の提案/回答交渉中にリモートピアから受け取った提案に対する {{Glossary("SDP")}} 回答の作成を開始します。
+    回答には、ブラウザーが対応しているコーデック、オプション、セッションにすでに接続されているメディア、すでに収集されている {{Glossary("ICE")}} 候補に関する情報が含まれます。
+- {{DOMxRef("RTCPeerConnection.createDataChannel", "createDataChannel()")}}
+  - : リモートピアとリンクした新しいチャネルの作成を開始し、その上であらゆる種類のデータを転送することができます。
+    これは、画像、ファイル転送、テキストチャット、ゲームアップデートパケットなどのバックチャネルコンテンツに便利です。
+- {{DOMxRef("RTCPeerConnection.createOffer", "createOffer()")}}
+  - : リモートピアとの新しい WebRTC 接続を開始するために、{{Glossary("SDP")}} 提案 の作成を開始する。
+    SDP提案には、WebRTCセッションにすでにアタッチされている{{DOMxRef("MediaStreamTrack")}} オブジェクト、コーデック、ブラウザーが対応しているオプションに関する情報、および {{Glossary("ICE")}} エージェントがすでに収集している候補が含まれており、シグナルチャネルを介して、接続を要求または既存の接続の構成を更新するために相手候補 に送信されます。
+- {{DOMxRef("RTCPeerConnection.getConfiguration", "getConfiguration()")}}
+  - : 接続の現在の構成を示すオブジェクトを返す。
+- {{DOMxRef("RTCPeerConnection.getIdentityAssertion", "getIdentityAssertion()")}}
+  - : ID アサーションの収集を開始し、文字列としてエンコードされた ID アサーションに解決する {{jsxref("Promise")}} を返します。
+    これは {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} が `closed` でない場合のみ効果を持ちます。
+- {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}}
+  - : {{DOMxRef("RTCRtpReceiver")}} オブジェクトの配列を返します。各オブジェクトは 1 つの {{Glossary("RTP")}} レシーバーを表します。
+- {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}
+  - : 各オブジェクトは、 1 つのトラックのデータ送信に責任を負う {{Glossary("RTP")}} 送信者を表す {{DOMxRef("RTCRtpSender")}} オブジェクトの配列を返します。
+- {{DOMxRef("RTCPeerConnection.getStats", "getStats()")}}
+  - : 接続全体または指定された {{DOMxRef("MediaStreamTrack")}} に関する統計データを解決する {{jsxref("Promise")}} を返します。
+- {{DOMxRef("RTCPeerConnection.getTransceivers", "getTransceivers()")}}
+  - : 接続上のデータの送受信に使用されているすべての {{DOMxRef("RTCRtpTransceiver")}} オブジェクトのリストを返します。
+- {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}}
+  - : {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}} によって報告される送信者リストから対応する {{DOMxRef("RTCRtpSender")}} を実際に削除せずに、指定したトラックからのメディア送信を停止するよう接続のローカル側に指示します。
+    トラックがすでに停止している場合、または接続の送信者リストにない場合、このメソッドは何の効果も持ちません。
+- {{DOMxRef("RTCPeerConnection.restartIce", "restartIce()")}}
+  - : ICE 候補の収集を、接続の両端でやり直すよう簡単に要求できるようにします。
+    これにより、 {{Glossary("ICE")}} の再起動を発生させるために、呼び出し側または受信側のどちらかが同じメソッドを使用することができ、プロセスが簡素化されます。
+- {{DOMxRef("RTCPeerConnection.setConfiguration", "setConfiguration()")}}
+  - : 指定されたオブジェクトに含まれる値に基づいて、接続の現在の構成を設定します。
+    これにより、接続が使用する {{Glossary("ICE")}} サーバーや、使用するトランスポートポリシーを変更することができます。
+- {{DOMxRef("RTCPeerConnection.setIdentityProvider", "setIdentityProvider()")}}
+  - : Identity Provider (IdP) を引数で指定された 3 つの要素に設定します。
+    その名前、そのプロバイダーとの通信に使用するプロトコル、そしてユーザー名です。
+    プロトコルおよびユーザー名は省略可能です。
+- {{DOMxRef("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}
+  - : 接続に関連するローカルの説明を変更します。
+    この説明は、メディア形式を含む、接続のローカル側のプロパティを指定します。
+    これは {{jsxref("Promise")}} を返し、非同期に説明が変更されると履行されます。
+- {{DOMxRef("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}
+  - : 指定されたセッション記述をリモートピアの現在の提案または回答として設定します。
+    説明は、メディア形式を含む、接続のリモート側のプロパティを指定します。
+    これは {{jsxref("Promise")}} を返し、非同期に説明が変更されると履行されます。
 
-<p>この <code>RTCBundlePolicy</code> 列挙型は、リモートピアが、単一の転送リンクにおいて複数のメディアストリームをまとめるための <a href="https://webrtcstandards.info/sdp-bundle/">SDP BUNDLE standard</a> と互換していない場合に、ICEの候補を収集するために特定のポリシーを要求する時に使用される文字列定数を定義します。</p>
+### 廃止されたメソッド
 
-<div class="note">
-<p><strong>Note:</strong> In technical terms, a BUNDLE lets all media flow between two peers flow across a single <strong>5-tuple</strong>; that is, from the same IP and port on one peer to the same IP and port on the other peer, using the same transport protocol.</p>
-</div>
+- {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{deprecated_inline}}
+  - : 音声または映像のローカルソースとして {{DOMxRef("MediaStream")}} を追加します。
+    この古いメソッドを使用する代わりに、リモートピアに送信したいトラックごとに {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}} を 1 回使用する必要があります。
+- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{deprecated_inline}}
+  - : 特定の {{DOMxRef("MediaStreamTrack")}} と関連付けられた新たな {{DOMxRef("RTCDTMFSender")}} を生成します。これにより、その接続において {{Glossary("DTMF")}} 音（電話のトーン信号、プッシュ音）を送れるようになります。
+- {{DOMxRef("RTCPeerConnection.getStreamById", "getStreamById()")}} {{deprecated_inline}}
+  - : 接続のローカルまたはリモート側に関連する、指定された ID の {{DOMxRef("MediaStream")}} を返します。
+    このプロパティは {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}} と {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}} メソッドに置き換えられました。
+- {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{deprecated_inline}}
+  - : 音声または映像のローカルソースとして {{DOMxRef("MediaStream")}} を削除します。
+    このメソッドは廃止されたため、代わりに {{DOMxRef("RTCPeerConnection.removeTrack", "removeTrack()")}} を使用してください。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"balanced"</code></td>
-   <td>On BUNDLE-aware connections, the ICE agent should gather candidates for all of the media types in use (audio, video, and data). Otherwise, the ICE agent should only negotiate one audio and video track on separate transports.</td>
-  </tr>
-  <tr>
-   <td><code>"max-compat"</code></td>
-   <td>The ICE agent should gather candidates for each track, using separate transports to negotiate all media tracks for connections which aren't BUNDLE-compatible.</td>
-  </tr>
-  <tr>
-   <td><code>"max-bundle"</code></td>
-   <td>The ICE agent should gather candidates for just one track. If the connection isn't BUNDLE-compatible, then the ICE agent should negotiate just one media track.</td>
-  </tr>
- </tbody>
-</table>
+## イベント
 
-<h3 id="RTCIceConnectionState_列挙型">RTCIceConnectionState 列挙型</h3>
+これらのイベントを待ち受けするには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `on<em>イベント名</em>` プロパティに代入するかしてください。
 
-<p>The <code>RTCIceConnectionState</code> enum defines the string constants used to describe the current state of the ICE agent and its connection to the ICE server (that is, the {{Glossary("STUN")}} or {{Glossary("TURN")}} server).</p>
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
+  - : `RTCPeerConnection` の全体的な接続状態が変化したときに送信されます。
+- {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
+  - : リモートピアが接続に {{domxref("RTCDataChannel")}} を追加したときに送信されます。
+- {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
+  - : 指定された候補をリモートピアに送信することを要求するために送信されます。
+- {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
+  - : {{Glossary("ICE")}} 候補の収集中にエラーが発生した場合に接続先に送信されます。イベントには、エラーの内容が記述さ れます。
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
+  - : 切断時など、 {{Glossary("ICE")}} の接続状態が変化したときに送信されます。
+- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
+  - : {{Glossary("ICE")}} レイヤーの収集状態 ({{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} が変化したときに送信されます。
+    これは、 ICE 交渉がまだ始まっていないか (`new`)、候補の収集を始めたか (`gathering`)、終了したか (`complete`) を示します。
+- {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+  - : {{Glossary("ICE")}} 接続の交渉または再交渉を行う必要があるときに送信されます。
+    これは、最初に接続を開くときにも、変化するネットワーク条件に適応する必要があるときにも発生します。
+    受信側は、オファーを作成し、相手ピアに送信することで応答する必要があります。
+- {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
+  - : この接続の {{Glossary("ICE")}} 信号の状態が変化したときに送信されます。
+- {{domxref("RTCPeerConnection.track_event", "track")}}
+  - : 接続を構成する {{domxref("RTCRtpReceiver")}} インスタンスのいずれかに新しいトラックが追加された後に送信されます。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>The ICE agent is gathering addresses or is waiting to be given remote candidates through calls to {{domxref("RTCPeerConnection.addIceCandidate()")}} (or both).</td>
-  </tr>
-  <tr>
-   <td><code>"checking"</code></td>
-   <td>The ICE agent has been given one or more remote candidates and is checking pairs of local and remote candidates against one another to try to find a compatible match, but has not yet found a pair which will allow the peer connection to be made. It's possible that gathering of candidates is also still underway.</td>
-  </tr>
-  <tr>
-   <td><code>"connected"</code></td>
-   <td>A usable pairing of local and remote candidates has been found for all components of the connection, and the connection has been established. It's possible that gathering is still underway, and it's also possible that the ICE agent is still checking candidates against one another looking for a better connection to use.</td>
-  </tr>
-  <tr>
-   <td><code>"completed"</code></td>
-   <td>The ICE agent has finished gathering candidates, has checked all pairs against one another, and has found a connection for all components.</td>
-  </tr>
-  <tr>
-   <td><code>"failed"</code></td>
-   <td>The ICE candidate has checked all candidates pairs against one another and has failed to find compatible matches for all components of the connection. It is, however, possible that the ICE agent did find compatible connections for some components.</td>
-  </tr>
-  <tr>
-   <td><code>"disconnected"</code></td>
-   <td>Checks to ensure that components are still connected failed for at least one component of the {{domxref("RTCPeerConnection")}}. This is a less stringent test than <code>"failed"</code> and may trigger intermittently and resolve just as spontaneously on less reliable networks, or during temporary disconnections. When the problem resolves, the connection may return to the <code>"connected"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code></td>
-   <td>The ICE agent for this {{domxref("RTCPeerConnection")}} has shut down and is no longer handling requests.</td>
-  </tr>
- </tbody>
-</table>
+### 廃止されたイベント
 
-<h3 id="RTCIceGatheringState_列挙型">RTCIceGatheringState 列挙型</h3>
+- {{domxref("RTCPeerConnection.addstream_event", "addstream")}} {{deprecated_inline}}
+  - : 新しい {{domxref("MediaStream")}} が接続に追加されたときに送信されます。
+    この古いイベントを待ち受けるのではなく、 {{domxref("RTCPeerConnection.track_event", "track")}} イベントを待ち受けるために使用する必要があります。
+    接続に追加された {{domxref("MediaStreamTrack")}} ごとに 1 つ送信されます。
+- {{domxref("RTCPeerConnection.removestream_event", "removestream")}} {{deprecated_inline}}
+  - : domxref("MediaStream")}} が接続から削除されたときに送信されます。
+    この古いイベントを待ち受けるのではなく、それぞれのストリームの {{domxref("MediaStream.removetrack_event", "removetrack")}} イベントを待ち受けるために使用する必要があります。
 
-<p>The <code>RTCIceGatheringState</code> enum defines string constants which reflect the current status of ICE gathering, as returned using the {{domxref("RTCPeerConnection.iceGatheringState")}} property. You can detect when this value changes by watching for an event of type {{event("icegatheringstatechange")}}.</p>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>The peer connection was just created and hasn't done any networking yet.</td>
-  </tr>
-  <tr>
-   <td><code>"gathering"</code></td>
-   <td>The ICE agent is in the process of gathering candidates for the connection.</td>
-  </tr>
-  <tr>
-   <td><code>"complete"</code></td>
-   <td>The ICE agent has finished gathering candidates. If something happens that requires collecting new candidates, such as a new interface being added or the addition of a new ICE server, the state will revert to "gathering" to gather those candidates.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h3 id="RTCIceTransportPolicy_列挙型">RTCIceTransportPolicy 列挙型</h3>
+## ブラウザーの互換性
 
-<p>The <code>RTCIceTransportPolicy</code> enum defines string constants which can be used to limit the transport policies of the ICE candidates to be considered during the connection process.</p>
+{{Compat}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"all"</code></td>
-   <td>All ICE candidates will be considered.</td>
-  </tr>
-  <tr>
-   <td><code>"public" </code>{{obsolete_inline}}</td>
-   <td>Only ICE candidates with public IP addresses will be considered. <em>Removed from the specification's May 13, 2016 working draft.</em></td>
-  </tr>
-  <tr>
-   <td><code>"relay"</code></td>
-   <td>Only ICE candidates whose IP addresses are being relayed, such as those being passed through a TURN server, will be considered.</td>
-  </tr>
- </tbody>
-</table>
+## 関連情報
 
-<h3 id="RTCPeerConnectionState_列挙型">RTCPeerConnectionState 列挙型</h3>
-
-<p>The <code>RTCPeerConnectionState</code> enum defines string constants which describe states in which the <code>RTCPeerConnection</code> may be. These values are returned by the {{domxref("RTCPeerConnection.connectionState", "connectionState")}} property. This state essentially represents the aggregate state of all ICE transports (which are of type {{domxref("RTCIceTransport")}} or {{domxref("RTCDtlsTransport")}}) being used by the connection.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"new"</code></td>
-   <td>At least one of the connection's ICE transports ({{domxref("RTCIceTransport")}}s or {{domxref("RTCDtlsTransport")}}s) are in the <code>"new"</code> state, and none of them are in one of the following states: <code>"connecting"</code>, <code>"checking"</code>, <code>"failed"</code>, or <code>"disconnected"</code>, <em>or</em> all of the connection's transports are in the <code>"closed"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"connecting"</code></td>
-   <td>One or more of the ICE transports are currently in the process of establishing a connection; that is, their <code>RTCIceConnectionState</code> is either <code>"checking"</code> or <code>"connected"</code>, and no transports are in the <code>"failed"</code> state. <strong>&lt;&lt;&lt; Make this a link once I know where that will be documented</strong></td>
-  </tr>
-  <tr>
-   <td><code>"connected"</code></td>
-   <td>Every ICE transport used by the connection is either in use (state <code>"connected"</code> or <code>"completed"</code>) or is closed (state <code>"closed"</code>); in addition, at least one transport is either <code>"connected"</code> or <code>"completed"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"disconnected"</code></td>
-   <td>At least one of the ICE transports for the connection is in the <code>"disconnected"</code> state and none of the other transports are in the state <code>"failed"</code>, <code>"connecting"</code>, or <code>"checking"</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"failed"</code></td>
-   <td>One or more of the ICE transports on the connection is in the <code>"failed"</code> state.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code></td>
-   <td>
-    <p>The <code>RTCPeerConnection</code> is closed.</p>
-
-    <p>This value was in the <a href="#RTCSignalingState_enum"><code>RTCSignalingState</code> enum</a> (and therefore found by reading the value of the {{domxref("RTCPeerConnection.signalingState", "signalingState")}}) property until the May 13, 2016 draft of the specification.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="RTCRtcpMuxPolicy_列挙型">RTCRtcpMuxPolicy 列挙型</h3>
-
-<p>The <code>RTCRtcpMuxPolicy</code> enum defines string constants which specify what ICE candidates are gathered to support non-multiplexed RTCP. <strong>&lt;&lt;&lt;add a link to info about multiplexed RTCP.</strong></p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"negotiate"</code></td>
-   <td>Instructs the ICE agent to gather both {{Glossary("RTP")}} and {{Glossary("RTCP")}} candidates. If the remote peer can multiplex RTCP, then RTCP candidates are multiplexed atop the corresponding RTP candidates. Otherwise, both the RTP and RTCP candidates are returned, separately.</td>
-  </tr>
-  <tr>
-   <td><code>"require"</code></td>
-   <td>Tells the ICE agent to gather ICE candidates for only RTP, and to multiplex RTCP atop them. If the remote peer doesn't support RTCP multiplexing, then session negotiation fails.</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="RTCSignalingState_列挙型">RTCSignalingState 列挙型</h3>
-
-<p>The <code>RTCSignalingState</code> enum specifies the possible values of {{domxref("RTCPeerConnection.signalingState")}}, which indicates where in the process of signaling the exchange of offer and answer the connection currently is.</p>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Constant</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>"stable"</code></td>
-   <td>There is no ongoing exchange of offer and answer underway. This may mean that the {{domxref("RTCPeerConnection")}} object is new, in which case both the {{domxref("RTCPeerConnection.localDescription", "localDescription")}} and {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} are <code>null</code>; it may also mean that negotiation is complete and a connection has been established.</td>
-  </tr>
-  <tr>
-   <td><code>"have-local-offer"</code></td>
-   <td>The local peer has called {{domxref("RTCPeerConnection.setLocalDescription()")}}, passing in SDP representing an offer (usually created by calling {{domxref("RTCPeerConnection.createOffer()")}}), and the offer has been applied successfully.</td>
-  </tr>
-  <tr>
-   <td><code>"have-remote-offer"</code></td>
-   <td>The remote peer has created an offer and used the signaling server to deliver it to the local peer, which has set the offer as the remote description by calling {{domxref("RTCPeerConnection.setRemoteDescription()")}}.</td>
-  </tr>
-  <tr>
-   <td><code>"have-local-pranswer"</code></td>
-   <td>The offer sent by the remote peer has been applied and an answer has been created (usually by calling {{domxref("RTCPeerConnection.createAnswer()")}}) and applied by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. This provisional answer describes the supported media formats and so forth, but may not have a complete set of ICE candidates included. Further candidates will be delivered separately later.</td>
-  </tr>
-  <tr>
-   <td><code>"have-remote-pranswer"</code></td>
-   <td>A provisional answer has been received and successfully applied in response to an offer previously sent and established by calling <code>setLocalDescription()</code>.</td>
-  </tr>
-  <tr>
-   <td><code>"closed"</code> {{obsolete_inline}}</td>
-   <td>
-    <p>The connection is closed.</p>
-
-    <div class="note">
-    <p><strong>Note:</strong> This value moved into the <a href="#RTCPeerConnectionState_enum"><code>RTCPeerConnectionState</code> enum</a> in the May 13, 2016 draft of the specification, as it reflects the state of the <code>RTCPeerConnection</code>, not the signaling connection. You now detect a closed connection by checking for {{domxref("RTCPeerConnection.connectionState", "connectionState")}} to be <code>"closed"</code> instead.</p>
-    </div>
-   </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0', '#interface-definition', 'RTCPeerConnection')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("api.RTCPeerConnection")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js">https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple">http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple</a></li>
- <li><a href="https://github.com/chrisjohndigital/TutorRoom">TutorRoom</a>: Node.js HTML5 video capture, peer-to-peer video and filesharing application (<a href="https://github.com/chrisjohndigital/TutorRoom">source on GitHub</a>)</li>
-</ul>
+- <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
+- [http://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple](https://www.html5rocks.com/en/tutorials/webrtc/basics/#toc-simple)
+- [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML5 video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
