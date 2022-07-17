@@ -28,7 +28,7 @@ translation_of: Web/CSS/:picture-in-picture
 
 ## 示例
 
-在此示例中，当视频在浮动窗口显示时，会有盒阴影。
+在此示例中，当视频在浮动窗口显示时，会有盒状阴影。
 
 ### HTML
 
