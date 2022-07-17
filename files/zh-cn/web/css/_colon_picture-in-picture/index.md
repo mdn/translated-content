@@ -14,7 +14,7 @@ translation_of: Web/CSS/:picture-in-picture
 ---
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的[伪类](/en-US/docs/Web/CSS/Pseudo-classes) **`:picture-in-picture`** 匹配当前处于画中画的元素。
+[CSS](/zh-CN/docs/Web/CSS) 的[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:picture-in-picture`** 匹配当前处于画中画的元素。
 
 ## 语法
 
@@ -24,7 +24,7 @@ translation_of: Web/CSS/:picture-in-picture
 
 ## 用法说明
 
-`:picture-in-picture` 伪类允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时去自动适应大小，样式或布局内容。
+`:picture-in-picture` 伪类允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时去自动适应大小、样式或布局内容。
 
 ## 示例
 
@@ -43,7 +43,7 @@ translation_of: Web/CSS/:picture-in-picture
 <video id="pip-video"></video>
 ```
 
-ID 为 `"pip-video"` 的 {{HTMLElement("video")}} 会根据是否在画中画浮动窗口中而在是否带有一个红色的阴影之间变换。
+ID 为 `“pip-video”` 的 {{HTMLElement("video")}} 会根据是否在画中画浮动窗口中而在是否带有一个红色的阴影之间变换。
 
 ### CSS
 
