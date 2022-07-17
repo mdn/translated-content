@@ -1,6 +1,7 @@
 ---
-title: Screen.onorientationchange
+title: 'Screen: orientationchange イベント'
 slug: Web/API/Screen/orientationchange_event
+page-type: web-api-event
 tags:
   - API
   - CSSOM View
@@ -8,50 +9,38 @@ tags:
   - Event Handler
   - Property
   - Screen Orientation
-translation_of: Web/API/Screen/onorientationchange
+browser-compat: api.Screen.orientationchange_event
+translation_of: Web/API/Screen/orientationchange_event
 original_slug: Web/API/Screen/onorientationchange
 ---
-<p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
+{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
-<div class="blockIndicator warning">
-<p><strong>警告:</strong> これは標準外で非推奨の機能であり、 Firefox だけが異なる名前で実装されていました。代わりに {{DOMxRef("ScreenOrientation.onchange")}} を使用してください。</p>
-</div>
+`orientationchange` イベントは、端末の向きが変化したときに発行されます。
 
-<p>Screen オブジェクトに送信される {{domxref("Window/orientationchange_event", "orientationchange")}} イベントのイベントハンドラーです。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<pre class="syntaxbox notranslate">screen.onorientationchange = <var>funcRef</var>;
-</pre>
+```js
+addEventListener('orientationchange', event => { });
 
-<p>ここで <code>funcRef</code> は関数への参照です。</p>
+onorientationchange = event => { };
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## イベント型
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Screen Orientation', 'published/20140220.html#extensions-to-the-screen-interface', 'onorientationchange')}}</td>
-   <td>{{Spec2('Screen Orientation')}}</td>
-   <td>初回定義 (草稿には既に存在しません)</td>
-  </tr>
- </tbody>
-</table>
+一般的な {{domxref("Event")}} です。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 仕様書
 
-<p>{{Compat("api.Screen.onorientationchange")}}</p>
+この機能は、どの仕様にも含まれていません。標準化の予定はありません。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+代わりに {{domxref("ScreenOrientation.onchange")}} を使用してください。
 
-<ul>
- <li>{{event("orientationchange")}}</li>
- <li><a href="/ja/docs/Managing_screen_orientation">画面の向きの管理</a></li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

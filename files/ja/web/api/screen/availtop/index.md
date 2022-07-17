@@ -1,36 +1,37 @@
 ---
 title: Screen.availTop
 slug: Web/API/Screen/availTop
+page-type: web-api-instance-property
 tags:
   - API
-  - 'API:Mozilla Extensions'
-  - 'API:WebKit Extensions'
+  - API:Mozilla Extensions
+  - API:WebKit Extensions
   - DOM
   - Non-standard
   - Property
-  - プロパティ
+browser-compat: api.Screen.availTop
 translation_of: Web/API/Screen/availTop
 ---
-<p>{{APIRef("CSSOM")}}{{Non-standard_Header}}</p>
+{{APIRef("CSSOM")}}{{Non-standard_Header}}
 
-<p>固定あるいは半固定されているユーザーインターフェイス部分を含まない、最初のピクセルの y 座標を示します。</p>
+固定あるいは半固定されているユーザーインターフェイス部分を含まない、最初のピクセルの Y 座標を示します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">let <var>availTop</var> = <var>window</var>.screen.availTop;
-</pre>
+数値です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js; notranslate">let setX = window.screen.width - window.screen.availLeft;
+```js
+let setX = window.screen.width - window.screen.availLeft;
 let setY = window.screen.height - window.screen.availTop;
 window.moveTo(setX, setY);
-</pre>
+```
 
-<h2 id="Notes" name="Notes">注</h2>
+## メモ
 
-<p>ほとんどの場合において、このプロパティは、 <code>0</code> を返します。</p>
+ほとんどの場合において、このプロパティは、 `0` を返します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Screen.availTop")}}</p>
+{{Compat}}

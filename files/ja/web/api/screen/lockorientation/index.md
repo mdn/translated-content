@@ -1,113 +1,104 @@
 ---
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
+page-type: web-api-instance-method
 tags:
   - API
   - CSSOM View
+  - Deprecated
   - Method
   - NeedsUpdate
   - Screen Orientation
   - screen
-  - メソッド
+browser-compat: api.Screen.lockOrientation
 translation_of: Web/API/Screen/lockOrientation
 ---
-<p>{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}</p>
+{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
-<p><strong><code>lockOrientation()</code></strong> は {{DOMxRef("Screen")}} インターフェイスのメソッドで、画面を特定の方向にロックします。代わりに {{DOMxRef("ScreenOrientation.lock()")}} メソッドを使用してください。</p>
+**`lockOrientation()`** は {{DOMxRef("Screen")}} インターフェイスのメソッドで、画面を特定の方向にロックします。
 
-<div class="note">
-<p><strong>注:</strong> このメソッドはインストールされたウェブアプリまたは<a href="/ja/docs/Web/Guide/DOM/Using_full_screen_mode">全画面モード</a>のウェブページでのみ動作します。</p>
-</div>
+> **Warning:** この機能は非推奨であり、仕様をさけてください。代わりに {{DOMxRef("ScreenOrientation.lock()")}} メソッドを使用してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+> **Note:** このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
 
-<pre class="syntaxbox notranslate"><var>lockAllowed</var> = window.screen.lockOrientation(<var>orientation</var>);</pre>
+## 構文
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+```js
+lockOrientation(orientation)
+```
 
-<dl>
- <dt><code><var>orientation</var></code></dt>
- <dd>画面をロックする向きです。文字列または文字列の配列で指定します。複数の文字列を渡したときは、選択した向きでのみ回転できるようになります。</dd>
-</dl>
+### 引数
 
-<p>以下の文字列表現が向きとして指定できます。</p>
+- `orientation`
 
-<dl>
- <dt><code>portrait-primary</code></dt>
- <dd>メインのポートレートモードであるスクリーンの向きを表します。メインのポートレートモードとは、デバイスを通常の向きが縦向きの場合と、デバイスの通常の位置が横向きの場合に時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、デバイスによって異なります。</dd>
- <dt><code>portrait-secondary</code></dt>
- <dd>2番目のポートレートモードであるスクリーンの向きを表します。2番目のポートレートモードとは、デバイスを通常の向きが縦向きでそこから 180° 回転させた場合と、デバイスの通常の位置が横向きの場合に反時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、デバイスによって異なります。</dd>
- <dt><code>landscape-primary</code></dt>
- <dd>メインのランドスケープモードであるスクリーンの向きを表します。メインのランドスケープモードとは、デバイスを通常の向きが横向きの場合と、デバイスの通常の位置が縦向きの場合に時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、デバイスによって異なります。</dd>
- <dt><code>landscape-secondary</code></dt>
- <dd>2番目のランドスケープモードであるスクリーンの向きを表します。2番目のランドスケープモードとは、デバイスを通常の向きが横向きでそこから 180° 回転させた場合と、デバイスの通常の位置が縦向きの場合に反時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、デバイスによって異なります。</dd>
- <dt><code>portrait</code></dt>
- <dd><code>portrait-primary</code> と <code>portrait-secondary</code> の両方を表します。</dd>
- <dt><code>landscape</code></dt>
- <dd><code>landscape-primary</code> と <code>landscape-secondary</code> の両方を表します。</dd>
- <dt><code>default</code></dt>
- <dd>デバイスに自然な向きによって <code>portrait-primary</code> または <code>landscape-primary</code> が選ばれます。たとえば、ディスプレイの解像度が 1280*800 なら、 <code>default</code> は <code>landscape</code> になるでしょうし、800*1280 なら、 <code>default</code> は <code>portrait</code> になるでしょう。</dd>
-</dl>
+  - : 画面をロックする向きです。文字列または文字列の配列で指定します。複数の文字列を渡したときは、選択した向きでのみ回転できるようになります。
 
-<div class="note">
-<p><strong>注:</strong> 複数のロックが同時に指定されることがあります。そのため、1つの向きにのみロックがセットされた場合には、スクリーンの向きはロックが解除されるまで決して変更されません。もしそうでなければ、デバイスがロックされた向きを含む複数の向きの間で、スクリーンの向きが1つの向きから別の向きへと移り変わってしまうことになります。</p>
-</div>
+    以下の文字列表現が向きとして指定できます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    - `portrait-primary`
+      - : 第一ポートレートモードである画面の向きを表します。
+        第一ポートレートモードとは、端末を通常の向きが縦向きの場合と、端末の通常の位置が横向きの場合に時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、端末によって異なります。
+    - `portrait-secondary`
+      - : 第二ポートレートモードである画面の向きを表します。
+        第二ポートレートモードとは、端末を通常の向きが縦向きでそこから 180° 回転させた場合と、端末の通常の位置が横向きの場合に反時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、端末によって異なります。
+    - `landscape-primary`
+      - : 第一ランドスケープモードである画面の向きを表します。
+        第一ランドスケープモードとは、端末を通常の向きが横向きの場合と、端末の通常の位置が縦向きの場合に時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、端末によって異なります。
+    - `landscape-secondary`
+      - : 第二ランドスケープモードである画面の向きを表します。
+        第二ランドスケープモードとは、端末を通常の向きが横向きでそこから 180° 回転させた場合と、端末の通常の位置が縦向きの場合に反時計回りに 90° 回転させた向きの場合です。どの向きが通常の向きであるかは、端末によって異なります。
+    - `portrait`
+      - : `portrait-primary` と `portrait-secondary` の両方を表します。
+    - `landscape`
+      - : `landscape-primary` と `landscape-secondary` の両方を表します。
+    - `default`
+      - : 端末に自然な向きによって `portrait-primary` または `landscape-primary` が選ばれます。たとえば、ディスプレイの解像度が 1280\*800 なら、 `default` は `landscape` になるでしょうし、800\*1280 なら、 `default` は `portrait` になるでしょう。
 
-<p>向きの固定が許可された場合には <code>true</code> が返り、向きのロックが拒否された場合には <code>false</code> が返ります。返値は、必ずしもスクリーンの向きが実際にロックされていることを示すわけではないことに注意してください。遅延がある可能性があるからです。</p>
+> **Note:** 複数のロックが同時に指定されることがあります。そのため、 1 つの向きにのみロックがセットされた場合には、画面の向きはロックが解除されるまで決して変更されません。もしそうでなければ、端末がロックされた向きを含む複数の向きの間で、画面の向きが 1 つの向きから別の向きへと移り変わってしまうことになります。
 
-<h2 id="Examples" name="Examples">例</h2>
+### 返値
 
-<h3 id="Usage_with_a_DOMString_argument" name="Usage_with_a_DOMString_argument"><code>DOMString</code> 引数での使用方法</h3>
+向きの固定が許可された場合には `true` が返り、向きのロックが拒否された場合には `false` が返ります。返値は、必ずしも画面の向きが実際にロックされていることを示すわけではないことに注意してください。遅延がある可能性があるからです。
 
-<pre class="brush: js; notranslate">screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+## 例
+
+### 文字列引数での使用方法
+
+```js
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal("landscape-primary")) {
   // 向きがロックされた
 } else {
   // 向きのロックに失敗した
 }
-</pre>
+```
 
-<h3 id="Usage_with_an_Array_argument" name="Usage_with_an_Array_argument"><code>Array</code> 引数での使用方法</h3>
+### `Array` 引数での使用方法
 
-<pre class="brush: js; notranslate">screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+```js
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
 if (screen.lockOrientationUniversal(["landscape-primary", "landscape-secondary"])) {
   // 向きがロックされた
 } else {
   // 向きのロックに失敗した
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Screen Orientation', 'published/20140220.html#extensions-to-the-screen-interface', 'lockOrientation()')}}</td>
-   <td>{{Spec2('Screen Orientation')}}</td>
-   <td>初回定義 (もう草稿には存在しません)</td>
-  </tr>
- </tbody>
-</table>
+この機能は、どの仕様書にも含まれていません。標準化される予定はありません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+代わりに {{domxref("ScreenOrientation.lock()")}} を使用してください。
 
-<p>{{Compat("api.Screen.lockOrientation")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{DOMxRef("Screen.orientation")}}</li>
- <li>{{DOMxRef("Screen.unlockOrientation()")}}</li>
- <li>{{DOMxRef("Screen.onorientationchange")}}</li>
- <li><a href="/ja/docs/Managing_screen_orientation">画面の向きの管理</a></li>
-</ul>
+## 関連情報
+
+- {{DOMxRef("Screen.orientation")}}
+- {{DOMxRef("Screen.unlockOrientation()")}}
+- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
+- [画面の向きの管理](/ja/docs/Managing_screen_orientation)

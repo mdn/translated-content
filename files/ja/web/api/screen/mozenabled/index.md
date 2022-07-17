@@ -1,28 +1,30 @@
 ---
 title: Screen.mozEnabled
 slug: Web/API/Screen/mozEnabled
+page-type: web-api-instance-property
 tags:
   - API
-  - 'API:Mozilla Extensions'
+  - API:Mozilla Extensions
   - DOM
   - Deprecated
   - Non-standard
   - Property
   - Reference
+browser-compat: api.Screen.mozEnabled
 translation_of: Web/API/Screen/mozEnabled
 ---
-<p>{{APIRef("CSSOM")}}{{Non-standard_Header}}{{Deprecated_Header}}</p>
+{{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-<p>これは論理値で、端末の画面を制御します。 <code>false</code> に設定すると画面をオフにします。</p>
+これは論理値で、端末の画面を制御します。 `false` に設定すると画面をオフにします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">let <var>screenEnabled</var> = window.screen.mozEnabled</pre>
+論理値です。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<p>仕様書の一部ではありません。</p>
+仕様書の一部ではありません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Screen.mozEnabled")}}</p>
+{{Compat}}
