@@ -204,8 +204,7 @@ Angular 使用其他语法扩展 HTML，允许您从组件中插入动态值。A
 <h1>\{{ title }}</h1>
 ```
 
-双大括号指示 Angular 插入其中的内容。
-`title` 的值来自组件类：
+双大括号指示 Angular 插入其中的内容。`title` 的值来自组件类：
 
 ```js
 import { Component } from '@angular/core';
