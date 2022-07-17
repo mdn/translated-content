@@ -43,7 +43,7 @@ translation_of: Web/CSS/:picture-in-picture
 <video id="pip-video"></video>
 ```
 
-ID 为 `“pip-video”` 的 {{HTMLElement("video")}} 会根据是否在画中画浮动窗口中而在是否带有一个红色的阴影之间变换。
+ID 为 `"pip-video"` 的 {{HTMLElement("video")}} 会根据是否在画中画浮动窗口中而在是否带有一个红色的阴影之间变换。
 
 ### CSS
 
