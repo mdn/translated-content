@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Headers/Feature-Policy/picture-in-picture
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-HTTP 的头部字段 {{HTTPHeader("Feature-Policy")}} 设置 `picture-in-picture` 指令表示是否允许当前的文档通过相应的 API 以画中画模式视频。
+HTTP 的标头字段 {{HTTPHeader("Feature-Policy")}} 设置 `picture-in-picture` 指令表示是否允许当前的文档通过相应的 API 以画中画模式视频。
 
 ## 语法
 
@@ -37,6 +37,6 @@ Feature-Policy: picture-in-picture <allowlist>;
 
 ## 参见
 
-- {{HTTPHeader("Feature-Policy")}} header
+- {{HTTPHeader("Feature-Policy")}} 标头
 - [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy)
 - [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
