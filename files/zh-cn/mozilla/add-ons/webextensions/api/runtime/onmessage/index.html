@@ -19,14 +19,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 <p>To send a message that is received by the <code>onMessage</code> listener, use {{WebExtAPIRef("runtime.sendMessage()")}} or (to send a message to a content script) {{WebExtAPIRef("tabs.sendMessage()")}}.</p>
 
 <div class="blockIndicator note">
-<p>Avoid creating multiple <code>onMessage</code> listeners for the same type of message, as the order in which multiple listeners will fire is not guaranteed. Where you want to guarantee the delivery of a message to a specific end point, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p><strong>备注：</strong> Avoid creating multiple <code>onMessage</code> listeners for the same type of message, as the order in which multiple listeners will fire is not guaranteed. Where you want to guarantee the delivery of a message to a specific end point, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
 
 <p>Along with the message itself, the listener is passed:</p>
 
 <ul>
  <li>a <code>sender</code> object giving details about the message sender.</li>
- <li>a <code>sendResponse</code> function that can be used to send a response back to the sender.</li>
+ <li>a <code>sendResponse</code> function that can be used to send a response back to the sender.</li>
 </ul>
 
 <p>You can send a synchronous response to the message by calling the <code>sendResponse</code> function inside your listener. <a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response">See an example</a>.</p>
@@ -39,16 +39,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 </ul>
 
 <div class="warning">
-<p>Returning a <code>Promise</code> is now preferred as <code>sendResponse</code> <a href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">will be removed from the W3C spec</a>. The popular <a href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> library has already removed the <code>sendResponse</code> function from its implementation.</p>
+<p><strong>警告：</strong> Returning a <code>Promise</code> is now preferred as <code>sendResponse</code> <a href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">will be removed from the W3C spec</a>. The popular <a href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> library has already removed the <code>sendResponse</code> function from its implementation.</p>
 </div>
 
 <div class="blockIndicator note">
-<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p><strong>备注：</strong> You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.runtime.onMessage.addListener(listener)
+<pre class="brush:js">browser.runtime.onMessage.addListener(listener)
 browser.runtime.onMessage.removeListener(listener)
 browser.runtime.onMessage.hasListener(listener)
 </pre>
@@ -73,17 +73,11 @@ browser.runtime.onMessage.hasListener(listener)
  <dd>
  <p>A listener function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>message</code></dt>
   <dd><code>object</code>. The message itself. This is a JSON-ifiable object.</dd>
- </dl>
-
- <dl class="reference-values">
   <dt><code>sender</code></dt>
   <dd>A {{WebExtAPIRef('runtime.MessageSender')}} object representing the sender of the message.</dd>
- </dl>
-
- <dl class="reference-values">
   <dt><code>sendResponse</code></dt>
   <dd>
   <p>A function to call, at most once, to send a response to the message. The function takes a single argument, which may be any JSON-ifiable object. This argument is passed back to the message sender.</p>
@@ -102,9 +96,9 @@ browser.runtime.onMessage.hasListener(listener)
  <p>The listener function can return either a Boolean or a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
  <div class="blockIndicator warning">
- <p>Do not call <code>addListener</code> using the <code>async</code> function, as in:</p>
+ <p><strong>警告：</strong> Do not call <code>addListener</code> using the <code>async</code> function, as in:</p>
 
- <pre><code>browser.runtime.onMessage.addListener(async (data, sender) =&gt; {
+ <pre class="brush: js"><code>browser.runtime.onMessage.addListener(async (data, sender) =&gt; {
   if (data.type === 'handle_me') return 'done';
 });
 </code></pre>
@@ -113,7 +107,7 @@ browser.runtime.onMessage.hasListener(listener)
 
  <p>If you want to take an asynchronous approach, use a promise instead, as in:</p>
 
- <pre><code>browser.runtime.onMessage.addListener(data, sender) =&gt; {
+ <pre class="brush: js"><code>browser.runtime.onMessage.addListener(data, sender) =&gt; {
   if (data.type === 'handle_me') return Promise.resolve('done');
 });
 </code></pre>
@@ -131,7 +125,7 @@ browser.runtime.onMessage.hasListener(listener)
 
 <p>This content script listens for click events on the web page. If the click was on a link, it messages the background page with the target URL:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// content-script.js
+<pre class="brush: js">// content-script.js
 
 window.addEventListener("click", notifyExtension);
 
@@ -140,12 +134,12 @@ function notifyExtension(e) {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});
-}</code>
+}
 </pre>
 
 <p>The background script listens for these messages and displays a notification using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// background-script.js
+<pre class="brush: js">// background-script.js
 
 browser.runtime.onMessage.addListener(notify);
 
@@ -156,7 +150,7 @@ function notify(message) {
     "title": "You clicked a link!",
     "message": message.url
   });
-}</code></pre>
+}</pre>
 
 <h3 id="Sending_a_synchronous_response">Sending a synchronous response</h3>
 
@@ -266,9 +260,8 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onMessage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onMessage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

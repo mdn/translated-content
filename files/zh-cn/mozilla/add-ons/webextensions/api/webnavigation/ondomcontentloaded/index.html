@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoad
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">browser.webNavigation.onDOMContentLoaded.addListener(
+<pre class="brush:js">browser.webNavigation.onDOMContentLoaded.addListener(
   listener,                   // function
   filter                      // optional object
 )
@@ -30,7 +30,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
  <dt><code>removeListener(listener)</code></dt>
  <dd>停止监听此事件。<code>listener</code> 参数为需要移出的监听方法。</dd>
  <dt><code>hasListener(listener)</code></dt>
- <dd>检测是否有 <code>listener</code> 被注册在事件上。如果有返回 <code>true</code> , 否则返回<code>false</code> .</dd>
+ <dd>检测是否有 <code>listener</code> 被注册在事件上。如果有返回 <code>true</code> , 否则返回<code>false</code> .</dd>
 </dl>
 
 <h2 id="addListener_syntax">addListener syntax</h2>
@@ -40,16 +40,16 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 <dl>
  <dt><code>callback</code></dt>
  <dd>
- <p>为当此事件发生是需要被调用的函数. 该函数将传递以下参数：</p>
+ <p>为当此事件发生是需要被调用的函数. 该函数将传递以下参数：</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. 有关导航（navigation）事件的详细信息。</dd>
  </dl>
  </dd>
  <dt><code>filter</code>{{optional_inline}}</dt>
  <dd>
- <p><code>object</code>. 包含单个属性 <code>url</code> 的对象，  这是一个  {{WebExtAPIRef("events.UrlFilter")}} 数组对象. 如果包含此参数，则该事件将仅触发转换为与数组中至少一个<code>UrlFilter</code>匹配的 URL。在数组中。如果您省略此参数，则该事件将触发所有转换。</p>
+ <p><code>object</code>. 包含单个属性 <code>url</code> 的对象，  这是一个  {{WebExtAPIRef("events.UrlFilter")}} 数组对象. 如果包含此参数，则该事件将仅触发转换为与数组中至少一个<code>UrlFilter</code>匹配的 URL。在数组中。如果您省略此参数，则该事件将触发所有转换。</p>
  </dd>
 </dl>
 
@@ -57,7 +57,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 
 <h3 id="details">details</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>tabId</code></dt>
  <dd><code>integer</code>. The ID of the tab in which the navigation has occurred.</dd>
  <dt><code>url</code></dt>
@@ -96,9 +96,8 @@ browser.webNavigation.<code>onDOMContentLoaded</code>.addListener(logOnDOMConten
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

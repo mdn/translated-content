@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox brush:js">var executing = browser.tabs.executeScript(
+<pre class="brush:js">var executing = browser.tabs.executeScript(
   tabId,                 // optional integer
   details                // object
 )
@@ -46,17 +46,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
  <dt><code>tabId</code> {{optional_inline}}</dt>
  <dd><code>integer</code>. The ID of the tab in which to run the script. Defaults to the active tab of the current window.</dd>
  <dt><code>details</code></dt>
- <dd>An object describing the script to run. It contains the following properties:</dd>
- <dd>
- <dl class="reference-values">
+ <dd>An object describing the script to run. It contains the following properties:
+ <dl>
   <dt><code>allFrames</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, the code will be injected into all frames of the current page. If <code>true</code> and <code>frameId</code> is set, then it will raise an error,  frameId and allFrames are mutually exclusive. If it is <code>false</code>, code is only injected into the top frame. Defaults to <code>false</code>.</dd>
+  <dd><code>boolean</code>. If <code>true</code>, the code will be injected into all frames of the current page. If <code>true</code> and <code>frameId</code> is set, then it will raise an error,  frameId and allFrames are mutually exclusive. If it is <code>false</code>, code is only injected into the top frame. Defaults to <code>false</code>.</dd>
   <dt><code>code</code> {{optional_inline}}</dt>
   <dd><code>string</code>. Code to inject, as a text string. <strong>Warning:</strong> Don’t use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.</dd>
   <dt><code>file</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Path to a file containing the code to inject. In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: <code>"/path/to/script.js"</code>.</dd>
+  <dd><code>string</code>. Path to a file containing the code to inject. In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: <code>"/path/to/script.js"</code>.</dd>
   <dt><code>frameId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. The frame where the code should be injected. Defaults to <code>0</code> (the top-level frame).</dd>
+  <dd><code>integer</code>. The frame where the code should be injected. Defaults to <code>0</code> (the top-level frame).</dd>
   <dt><code>matchAboutBlank</code> {{optional_inline}}</dt>
   <dd><code>boolean</code>. If <code>true</code>, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to <code>false</code>.</dd>
   <dt><code>runAt</code> {{optional_inline}}</dt>
@@ -134,9 +133,8 @@ executing.then(onExecuted, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 </div>
 
 <div class="hidden">

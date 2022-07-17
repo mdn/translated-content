@@ -1198,9 +1198,6 @@
 /zh-CN/docs/Server-sent_events/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/error_event
 /zh-CN/docs/Server-sent_events/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/open_event
 /zh-CN/docs/Server-sent_events/Using_server-sent_events	/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events
-/zh-CN/docs/Site_Compatibility_for_Firefox_19	/zh-CN/docs/Mozilla/Firefox/Releases/19/Site_compatibility
-/zh-CN/docs/Site_Compatibility_for_Firefox_21	/zh-CN/docs/Mozilla/Firefox/Releases/21/Site_compatibility
-/zh-CN/docs/Site_Compatibility_for_Firefox_24	/zh-CN/docs/Mozilla/Firefox/Releases/24/Site_compatibility
 /zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /zh-CN/docs/Tools-840092-dup/Remote_Debugging	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html

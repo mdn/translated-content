@@ -33,15 +33,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
  <dd>表示两个特定上下文之间的连接的一端，可用于交换消息。</dd>
  <dt>{{WebExtAPIRef("runtime.MessageSender")}}</dt>
  <dd>
- <div class="trans-right">
- <div class="output-wrap small-font">
- <div class="output-mod ordinary-wrap">
- <div class="output-bd" dir="ltr" style="padding-bottom: 0px;">
  <p>包含有关消息或连接请求的发件人的信息。</p>
- </div>
- </div>
- </div>
- </div>
  </dd>
  <dt>{{WebExtAPIRef("runtime.PlatformOs")}}</dt>
  <dd>标识浏览器的操作系统。</dd>
@@ -70,7 +62,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 
 <dl>
  <dt>{{WebExtAPIRef("runtime.getBackgroundPage()")}}</dt>
- <dd>取得当前扩展的后台页的 <a href="/zh-CN/docs/Web/API/Window">Window</a> 对象。</dd>
+ <dd>取得当前扩展的后台页的 <a href="/zh-CN/docs/Web/API/Window">Window</a> 对象。</dd>
  <dt>{{WebExtAPIRef("runtime.openOptionsPage()")}}</dt>
  <dd>
  <p>打开你的扩展的 <a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages">选项页面</a>。</p>
@@ -92,7 +84,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
  <div>建立一个浏览器扩展与用户电脑上的原生应用的通信连接。</div>
  </dd>
  <dt>{{WebExtAPIRef("runtime.sendMessage()")}}</dt>
- <dd>发送一条消息到此扩展或其他扩展的事件监听器，类似于  {{WebExtAPIRef('runtime.connect')}} 但只能发送一条消息，以及可选的响应处理函数。</dd>
+ <dd>发送一条消息到此扩展或其他扩展的事件监听器，类似于  {{WebExtAPIRef('runtime.connect')}} 但只能发送一条消息，以及可选的响应处理函数。</dd>
  <dt>{{WebExtAPIRef("runtime.sendNativeMessage()")}}</dt>
  <dd>从扩展发送一条消息到原生应用。</dd>
  <dt>{{WebExtAPIRef("runtime.getPlatformInfo()")}}</dt>
@@ -132,19 +124,10 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("webextensions.api.runtime")}}</p>
+<p>{{Compat}} {{WebExtExamples("h2")}}</p>
 
-<div class="hidden note">
-<p>The "Chrome incompatibilities" section is included from <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
-
-<p>If you need to update this content, edit <a href="/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
-</div>
-
-<p>{{Compat("webextensions.api.runtime")}} {{WebExtExamples("h2")}}</p>
-
-<div class="note"><strong>Acknowledgements</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+<div class="note">
+<p><strong>备注：</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

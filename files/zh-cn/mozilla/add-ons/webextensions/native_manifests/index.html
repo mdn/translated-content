@@ -5,8 +5,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
 <div>{{AddonSidebar}}</div>
 
-<p> </p>
-
 <p>原生应用清单是一个符合特定规则的 JSON 文件，它应该使用与 extension 不同的安装方式存放在用户的计算机上。举个例子，原生应用清单是由设备管理员或者通过原生应用安装器提供的。</p>
 
 <p>有三种不同的原生应用清单：</p>
@@ -14,9 +12,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 <table class="standard-table">
  <tbody>
   <tr>
-   <td style="width: 40%;"><a href="#原生应用通信清单">原生应用通信清单</a></td>
+   <td><a href="#原生应用通信清单">原生应用通信清单</a></td>
    <td>
-    <p>定义关于 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">与本地应用通信</a> 的功能：哪一个 extension 可以与本机的原生应用交换信息。</p>
+    <p>定义关于<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">与本地应用通信</a>的功能：哪一个 extension 可以与本机的原生应用交换信息。</p>
    </td>
   </tr>
   <tr>
@@ -36,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
 <p>对于所有的原生应用清单，你需要做一些工作以便于浏览器可以找到它们。这些规则在 <a href="#清单路径">清单路径</a><a href="#Manifest_location"> </a>章节。</p>
 
-<h2 id="原生应用通信清单_2">原生应用通信清单<a id="原生应用通信清单" name="原生应用通信清单"></a></h2>
+<h2 id="原生应用通信清单_2">原生应用通信清单</h2>
 
 <p>原生应用通信清单中包含单个 JSON 对象，对象具有如下属性：</p>
 
@@ -61,7 +59,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
     <p>在 Windows 中，它必须和你创建的包含原生应用清单路径的注册表一致。</p>
 
-    <p>它必须符合正则表达式  "^\w+(\.\w+)*$"。这意味着它只能包含小写字母、数字、下划线和 <code>.</code> ，并且不允许开头或结束是 <code>.</code> ，并且 <code>.</code> 后面不能是 <code>.</code> 。</p>
+    <p>它必须符合正则表达式  "^\w+(\.\w+)*$"。这意味着它只能包含小写字母、数字、下划线和 <code>.</code> ，并且不允许开头或结束是 <code>.</code> ，并且 <code>.</code> 后面不能是 <code>.</code> 。</p>
    </td>
   </tr>
   <tr>
@@ -115,7 +113,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
 <p>清单表示：它允许 ID 为 ping_pong@example.org 的 extension 通过传入 ping_pong 给 {{WebExtAPIRef("runtime")}} 与自己连接。原生应用自身在 /path/to/native-messaging/app/ping_pong.py 中。</p>
 
-<h2 id="存储管理清单_2">存储管理清单<a id="存储管理清单" name="存储管理清单"></a></h2>
+<h2 id="存储管理清单_2">存储管理清单</h2>
 
 <p>存储管理清单中包含单个 JSON 对象，对象具有如下属性：</p>
 
@@ -163,7 +161,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
 
 <p>举个例子：</p>
 
-<pre class="brush: json line-numbers  language-json"><code class="language-json">{
+<pre class="brush: json">{
   "name": "favourite-colour-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
@@ -171,16 +169,16 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
   {
     "colour": "management thinks it should be blue!"
   }
-}</code></pre>
+}</pre>
 
 <p>在给出的清单文件中，ID 为 favourite-colour-examples@mozilla.org 的 extension 有权限使用清单中的 data 字段中的数据，代码如下：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var storageItem = browser.storage.managed.get('colour');
+<pre class="brush: js">var storageItem = browser.storage.managed.get('colour');
 storageItem.then((res) =&gt; {
   console.log(`Managed colour is: ${res.colour}`);
-});</code></pre>
+});</pre>
 
-<h2 id="PKCS_11_清单">PKCS #11 清单<a id="PKCS #11 清单" name="PKCS #11 清单"></a></h2>
+<h2 id="PKCS_11_清单">PKCS #11 清单</h2>
 
 <p>PKCS #11 清单中包含单个 JSON 对象，对象具有如下属性：</p>
 
@@ -205,7 +203,7 @@ storageItem.then((res) =&gt; {
 
     <p>在 Windows 中，它必须和你创建的包含原生应用清单路径的注册表一致。</p>
 
-    <p>它必须符合正则表达式  "^\w+(\.\w+)*$"。这意味着它只能包含小写字母、数字、下划线和 <code>.</code> ，并且不允许开头或结束是 <code>.</code> ，并且 <code>.</code> 后面不能是 <code>.</code> 。</p>
+    <p>它必须符合正则表达式  "^\w+(\.\w+)*$"。这意味着它只能包含小写字母、数字、下划线和 <code>.</code> ，并且不允许开头或结束是 <code>.</code> ，并且 <code>.</code> 后面不能是 <code>.</code> 。</p>
    </td>
   </tr>
   <tr>
@@ -247,19 +245,19 @@ storageItem.then((res) =&gt; {
 
 <p>举个例子：</p>
 
-<pre class="brush: json line-numbers  language-json">{
-  "name": "my_module",
-  "description": "My test module",
-  "type": "pkcs11",
-  "path": "/path/to/libpkcs11testmodule.dylib",
-  "allowed_extensions": ["my-extension@mozilla.org"]
+<pre class="brush: json">{
+  "name": "my_module",
+  "description": "My test module",
+  "type": "pkcs11",
+  "path": "/path/to/libpkcs11testmodule.dylib",
+  "allowed_extensions": ["my-extension@mozilla.org"]
 }</pre>
 
-<p>给出的这个 JSON 清单，保存为 my_module.json，ID 为 my-extension@mozilla.org 的 extension 就能够使用类似于如下代码安装 /path/to/libpkcs11testmodule.dylib 安全模块：</p>
+<p>给出的这个 JSON 清单，保存为 my_module.json，ID 为 my-extension@mozilla.org 的 extension 就能够使用类似于如下代码安装 /path/to/libpkcs11testmodule.dylib 安全模块：</p>
 
-<pre class="brush: js line-numbers  language-js">browser.pkcs11.installModule("my_module");</pre>
+<pre class="brush: js">browser.pkcs11.installModule("my_module");</pre>
 
-<h2 id="清单路径_2">清单路径<a id="清单路径" name="清单路径"></a></h2>
+<h2 id="清单路径_2">清单路径</h2>
 
 <p>在 Linux 和 Mac OS X 中，你需要将清单文件存在特定的位置。在 Windows 中，你需要创建一个注册表来指向清单文件。</p>
 
@@ -269,25 +267,25 @@ storageItem.then((res) =&gt; {
 
 <p>如果想要全局可见，使用下面的路径创建注册表：</p>
 
-<pre>HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\&lt;name&gt;
+<pre class="brush: plain">HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\&lt;name&gt;
 
-HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\<code class="language-html">ManagedStorage</code>\&lt;name&gt;
+HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\&lt;name&gt;
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>注册表应该有单个默认值，值里存放“到清单文件的路径”。比如为原生应用通信清单建立的注册表差不多是这样：</p>
 
-<p><img alt="为原生应用通信清单建立的注册表" src="https://mdn.mozillademos.org/files/15643/native-message-regkey-exaple.png" style="height: 308px; width: 1027px;"></p>
+<p><img alt="为原生应用通信清单建立的注册表" src="https://mdn.mozillademos.org/files/15643/native-message-regkey-exaple.png"></p>
 
 <div class="note">
-<p><em>对于原生应用清单，即使原生应用是 32 位的，也不能在 <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a> 下创建注册表。浏览器将总会在 native 视图下寻找注册表的，而不是 32 位放在环境。确保注册表的创建在原生视图中，你可以键入 KEY_WOW64_64KEY 或 KEY_WOW64_32KEY  到 RegCreateKeyEx。请参考：<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a></em></p>
+<p><strong>备注：</strong> 对于原生应用清单，即使原生应用是 32 位的，也不能在 <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a> 下创建注册表。浏览器将总会在 native 视图下寻找注册表的，而不是 32 位放在环境。确保注册表的创建在原生视图中，你可以键入 KEY_WOW64_64KEY 或 KEY_WOW64_32KEY  到 RegCreateKeyEx。请参考：<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a></p>
 </div>
 
 <p>如果想要用户级别的可见，使用下面的路径创建注册表：</p>
 
-<pre>HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\&lt;name&gt;
+<pre class="brush: plain">HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\&lt;name&gt;
 
-HKEY_CURRENT_USER\SOFTWARE\Mozilla\<code class="language-html">ManagedStorage</code>\&lt;name&gt;
+HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\&lt;name&gt;
 
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
@@ -297,7 +295,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>如果想要全局可见，将清单文件存放在：</p>
 
-<pre>/Library/Application Support/Mozilla/NativeMessagingHosts/&lt;name&gt;.json
+<pre class="brush: plain">/Library/Application Support/Mozilla/NativeMessagingHosts/&lt;name&gt;.json
 
 /Library/Application Support/Mozilla/<code class="language-html">ManagedStorage</code>/&lt;name&gt;.json
 
@@ -305,7 +303,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>如果想要用户级别的可见，将清单文件存放在：</p>
 
-<pre>~/Library/Application Support/Mozilla/NativeMessagingHosts/&lt;name&gt;.json
+<pre class="brush: plain">~/Library/Application Support/Mozilla/NativeMessagingHosts/&lt;name&gt;.json
 
 ~/Library/Application Support/Mozilla/<code class="language-html">ManagedStorage</code>/&lt;name&gt;.json
 
@@ -316,7 +314,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>如果想要全局可见，将清单文件存放在：</p>
 
-<pre>/usr/lib/mozilla/native-messaging-hosts/&lt;name&gt;.json
+<pre class="brush: plain">/usr/lib/mozilla/native-messaging-hosts/&lt;name&gt;.json
 
 /usr/lib/mozilla/<code class="language-html">managed-storage</code>/&lt;name&gt;.json
 
@@ -325,7 +323,7 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>或者：</p>
 
-<pre>/usr/lib64/mozilla/native-messaging-hosts/&lt;name&gt;.json
+<pre class="brush: plain">/usr/lib64/mozilla/native-messaging-hosts/&lt;name&gt;.json
 
 /usr/lib64/mozilla/<code class="language-html">managed-storage</code>/&lt;name&gt;.json
 
@@ -333,12 +331,8 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\&lt;name&gt;</pre>
 
 <p>如果想要用户级别的可见，将清单文件存放在：</p>
 
-<pre>~/.mozilla/native-messaging-hosts/&lt;name&gt;.json
+<pre class="brush: plain">~/.mozilla/native-messaging-hosts/&lt;name&gt;.json
 
 ~/.mozilla/<code class="language-html">managed-storage</code>/&lt;name&gt;.json
 
 ~/.mozilla/pkcs11-modules/&lt;name&gt;.json</pre>
-
-<p> </p>
-
-<p> </p>

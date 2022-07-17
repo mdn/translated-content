@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 <p>和 Chrome 相比，WebExtensions 所支持的 native messaging 有 2 个主要区别：</p>
 
 <ul>
- <li>在 WebExtensions 中，原生应用的清单中的 "allowed_extensions" 字段是一个由 extension ID 组成的数组，而在 Chrome 中，清单中的 "allowed_origins" 字段是一个由 "chrome-extension" URLs 组成的数组</li>
+ <li>在 WebExtensions 中，原生应用的清单中的 "allowed_extensions" 字段是一个由 extension ID 组成的数组，而在 Chrome 中，清单中的 "allowed_origins" 字段是一个由 "chrome-extension" URLs 组成的数组</li>
  <li>原生应用清单的存储位置不一样</li>
 </ul>
 
@@ -74,11 +74,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 
 <p>关于原生应用清单的详细语法和路径规则，可参考 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">原生应用清单</a>。</p>
 
-<blockquote>
 <div class="warning">
-<p>除清单外，原生应用还<strong>必需</strong>配置路径规则，你可以参考 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">原生应用清单 </a>来配置路径。</p>
+<p><strong>警告：</strong> 除清单外，原生应用还<strong>必需</strong>配置路径规则，你可以参考 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">原生应用清单 </a>来配置路径。</p>
 </div>
-</blockquote>
 
 <p>这有一个例子，是关于 "ping_pong" 原生应用的清单：</p>
 
@@ -98,7 +96,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 </ul>
 
 <div class="note">
-<p><strong>对于 Windows</strong>: 在上面的例子中，原生应用是一个 Python 脚本，它在 Windows 下可能是无法运行的。一个代替方案是提供一个 .bat 文件，并且在清单中指向这个 .bat 文件：</p>
+<p><strong>备注：</strong> 对于 Windows：在上面的例子中，原生应用是一个 Python 脚本，它在 Windows 下可能是无法运行的。一个代替方案是提供一个 .bat 文件，并且在清单中指向这个 .bat 文件：</p>
 
 <pre class="brush: json">{
   "name": "ping_pong",
@@ -113,12 +111,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Native_messaging
 <pre class="brush: bash">@echo off
 
 python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"</pre>
-
-<p> </p>
 </div>
-
-<ul>
-</ul>
 
 <h2 id="交换信息">交换信息</h2>
 
@@ -263,7 +256,7 @@ while True:
 
 <ul>
  <li>在 *nix 系统比如 OS X 和 Linux 中，浏览器会向原生应用发送 SIGTERM 信号让其可以优雅的退出，然后再发送 SIGKILL 信号。这些信号将会传递给每一个子进程，除非它们分裂成一个新的进程组。</li>
- <li>在 Windows 中，浏览器会向原生应用的进程发送一个 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms684161(v=vs.85).aspx">Job object</a> 并杀死任务，如果原生应用启动任何的额外进程并希望它们能在原生应用被杀死后继续保持运行，原生应用需要在启动进程时使用 <code><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms684863(v=vs.85).aspx">CREATE_BREAKAWAY_FROM_JOB</a></code> 标记。</li>
+ <li>在 Windows 中，浏览器会向原生应用的进程发送一个 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms684161(v=vs.85).aspx">Job object</a> 并杀死任务，如果原生应用启动任何的额外进程并希望它们能在原生应用被杀死后继续保持运行，原生应用需要在启动进程时使用 <code><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms684863(v=vs.85).aspx">CREATE_BREAKAWAY_FROM_JOB</a></code> 标记。</li>
 </ul>
 
 <h2 id="常见问题_Troubleshooting">常见问题 Troubleshooting</h2>
@@ -272,7 +265,7 @@ while True:
 
 <p>如果你没有配置好原生应用，你应该会看到一些错误信息。</p>
 
-<pre>"No such native application &lt;name&gt;"</pre>
+<pre class="brush: plain">"No such native application &lt;name&gt;"</pre>
 
 <ul>
  <li>检查 <code>runtime.connectNative()</code> 传入的名称与应用程序清单中的名称一致</li>
@@ -281,19 +274,19 @@ while True:
  <li>Windows：检查注册中给出的路径是否指向的是原生应用清单</li>
 </ul>
 
-<pre>"Error: Invalid application &lt;name&gt;"</pre>
+<pre class="brush: plain">"Error: Invalid application &lt;name&gt;"</pre>
 
 <ul>
  <li>检查原生应用的名称是否有非法字符</li>
 </ul>
 
-<pre>"'python' is not recognized as an internal or external command, ..."</pre>
+<pre class="brush: plain">"'python' is not recognized as an internal or external command, ..."</pre>
 
 <ul>
  <li>Windows：如果你的应用是一个 Python script，检查你是否已经安装过 Python，并为其配置好路径</li>
 </ul>
 
-<pre>"File at path &lt;path&gt; does not exist, or is not executable"</pre>
+<pre class="brush: plain">"File at path &lt;path&gt; does not exist, or is not executable"</pre>
 
 <ul>
  <li>如果你看见它，意味着应用程序清单已经被找到了</li>
@@ -303,19 +296,19 @@ while True:
  <li>检查原生应用是否可执行</li>
 </ul>
 
-<pre>"This extension does not have permission to use native application &lt;name&gt;"</pre>
+<pre class="brush: plain">"This extension does not have permission to use native application &lt;name&gt;"</pre>
 
 <ul>
  <li>检查原生应用清单中的 "allowed_extensions" 字段中是否包含了 extension 的 ID。</li>
 </ul>
 
-<pre>"TypeError: browser.runtime.connectNative is not a function"</pre>
+<pre class="brush: plain">"TypeError: browser.runtime.connectNative is not a function"</pre>
 
 <ul>
  <li>检查 extension 是否已经拥有了 nativeMessaging 权限</li>
 </ul>
 
-<pre>"[object Object]       NativeMessaging.jsm:218"</pre>
+<pre class="brush: plain">"[object Object]       NativeMessaging.jsm:218"</pre>
 
 <ul>
  <li>这是一个启动原生应用时的问题。</li>
