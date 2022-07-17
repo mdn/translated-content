@@ -32,7 +32,9 @@ browser-compat: http.headers.Sec-CH-UA
   </tbody>
 </table>
 
-**`Sec-CH-UA`** 头在以逗号分隔的列表中提供与浏览器关联的每个品牌的品牌和重要版本。品牌是用户代理的商业名称，例如：Chromium、Opera、Google Chrome、Microsoft Edge、Firefox 和 Safari。用户代理可能有多个关联的品牌。例如，Opera、Chrome 和 Edge 都基于 Chromium，并将在 **`Sec-CH-UA`** 标题中提供这两个品牌。_significant version_ 是`营销`版本标识符，用于区分品牌的主要版本。例如，版本 _full version number_“96.0.4664.45”的 Chromium 版本具有重要的版本号“96”。因此，标头允许服务器根据共享品牌及其各自特定自定义版本来自定义其响应。`Sec-CH-UA` 是一个[低熵提示](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints)。除非被用户代理权限策略阻止，否则默认情况下会发送它，而服务器不会通过发送 {{HTTPHeader("Accept-CH")}} 来选择加入。标头可以包含任何位置和任何名称的“假冒”品牌。此功能旨在防止服务器直接拒绝未知的用户代理，迫使用户代理在品牌标识上撒谎。
+**`Sec-CH-UA`** 头在以逗号分隔的列表中提供与浏览器关联的每个品牌的品牌和重要版本。品牌是用户代理的商业名称，例如：Chromium、Opera、Google Chrome、Microsoft Edge、Firefox 和 Safari。用户代理可能有多个关联的品牌。例如，Opera、Chrome 和 Edge 都基于 Chromium，并将在 **`Sec-CH-UA`** 标题中提供这两个品牌。_significant version_ 是`营销`版本标识符，用于区分品牌的主要版本。例如，版本 _full version number_“96.0.4664.45”的 Chromium 版本具有重要的版本号“96”。因此，标头允许服务器根据共享品牌及其各自特定自定义版本来自定义其响应。
+
+`Sec-CH-UA` 是一个[低熵提示](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints)。除非被用户代理权限策略阻止，否则默认情况下会发送它，而服务器不会通过发送 {{HTTPHeader("Accept-CH")}} 来选择加入。标头可以包含任何位置和任何名称的“假冒”品牌。此功能旨在防止服务器直接拒绝未知的用户代理，迫使用户代理在品牌标识上撒谎。
 
 > **注意：** {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} 与 **`Sec-CH-UA`** 相同，但包括完整版本号，而不是每个品牌的有效版本号。
 
