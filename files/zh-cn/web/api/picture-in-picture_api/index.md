@@ -27,7 +27,7 @@ translation_of: Web/API/Picture-in-Picture_API
 
 ## 方法
 
-画中画 API 添加了 {{DOMxRef("HTMLVideoElement")}} 和 {{DOMxRef("Document")}} 接口的方法，以允许切换浮动视频窗口。
+画中画 API 添加了 {{DOMxRef("HTMLVideoElement")}} 和 {{DOMxRef("Document")}} 接口的方法，以便允许切换浮动视频窗口。
 
 ### HTMLVideoElement 接口的方法
 
