@@ -50,7 +50,7 @@ Asynchronous Javascript는 상당히 고급 주제에 속하고, 시도해보기
 ## 평가
 
 - [Sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
-  - : 프로미스를 사용하여 특정 시퀀스에서 에니메이션 세트를 재생하는 평가입니다.
+  - : 프로미스를 사용하여 특정 시퀀스에서 애니메이션 세트를 재생하는 평가입니다.
 
 ## 같이 보기
 
