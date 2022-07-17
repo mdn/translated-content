@@ -88,7 +88,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
   }
 ]</pre>
 
-<p>How do we show one of those tasks to our user? We want to represent each task as a list item – an HTML <code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> element inside of an unordered list element (a <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code>). How do we make it? That could look something like this:</p>
+<p>如何向用户展示其中一个任务？我们想将每个任务表示为一个列表项——无序列表元素（<code><a href="/zh-CN/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code>）中的一个 HTML <code><a href="/zh-CN/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> 元素。我们该如何实现？可以像下面这样：</p>
 
 <pre class="brush: js notranslate">function buildTodoItemEl(id, name) {
   const item = document.createElement('li');
@@ -104,9 +104,9 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
   return item;
 }</pre>
 
-<p>Here, we use the <code><a href="/en-US/docs/Web/API/Document/createElement">document.createElement()</a></code> method to make our <code>&lt;li&gt;</code>, and several more lines of code to create the properties and children it needs.</p>
+<p>在这里，我们使用 <code><a href="/zh-CN/docs/Web/API/Document/createElement">document.createElement()</a></code> 方法来创建我们的 <code>&lt;li&gt;</code> 元素，以及另外几行代码来创建它需要的属性和子元素。</p>
 
-<p>The tenth line of this snippet references another build function: <code>buildDeleteButtonEl()</code>. It follows a similar pattern to the one we used to build a list item element:</p>
+<p>该代码片段的第十行引用了另一个构建函数：<code>buildDeleteButtonEl()</code>。它遵循与我们用来构建列表项元素时类似的模式：</p>
 
 <pre class="brush: js notranslate">function buildDeleteButtonEl(id) {
   const button = document.createElement('button');
@@ -118,7 +118,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
   return button;
 }</pre>
 
-<p>This button doesn't do anything yet, but it will later once we decide to implement our delete feature. The code that will render our items on the page might read something like this:</p>
+<p>这个按钮只有当我们决定实现删除功能时，才会生效。要在页面上渲染我们的列表项，代码看起来可能是这样的：</p>
 
 <pre class="brush: js notranslate">function renderTodoList() {
   const frag = document.createDocumentFragment();
@@ -133,13 +133,13 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
   todoListEl.appendChild(frag);
 }</pre>
 
-<p>We've now got well over thirty lines of code dedicated <em>just</em> to the UI – <em>just</em> to the step of rendering something in the DOM – and at no point do we add classes that we could use later to style our list-items!</p>
+<p>我们现在已经有超过30行<em>仅</em>服务于 UI 的代码——<em>只</em>作用于在 DOM 中渲染某些内容的步骤——并且我们不会再添加类，可以随后设置列表项样式的类！</p>
 
-<p>Working directly with the DOM, as in this example, requires understanding many things about how the DOM works: how to make elements; how to change their properties; how to put elements inside of each other; how to get them on the page. None of this code actually handles user interactions, or addresses adding or deleting a task. If we add those features, we have to remember to update our UI in the right time and in the right way.</p>
+<p>如本例所示，直接使用 DOM，我们需要了解有关 DOM 工作原理的许多内容：如何创建元素；如何改变它们的属性；如何将元素放在一起；如何让它们出现在页面上。这些代码实际上都没有处理用户交互，或添加/删除任务。如果我们添加这些功能，我们必须记得在正确的时间以正确的方式更新我们的 UI。</p>
 
-<p>JavaScript frameworks were created to make this kind of work a little easier — they exist to provide a better <em>developer experience</em>. They don't bring brand-new powers to JavaScript; they give you easier access to JavaScript's powers so you can build for today's web.</p>
+<p>JavaScript 框架的出现是为了使这些工作变得更容易——它们的存在是为了提供更好的<em>开发体验</em>。它们没有给 JavaScript 带来新的功能；但它们使你可以更轻松地使用 JavaScript 来构建现代的 web。</p>
 
-<p>If you want to see code samples from this section in action, you can check out a <a href="https://codepen.io/dengeist/pen/XWbPNmw">working version of the app on CodePen</a>, which also allows users to add and delete new tasks.</p>
+<p>如果你想查看本节中的代码示例，可以查看 <a href="https://codepen.io/dengeist/pen/XWbPNmw">CodePen 上该应用的可用版本</a>, 该版本还允许用户添加和删除新任务。</p>
 
 <p>有关本节中使用的 JavaScript 的更多信息：</p>
 
