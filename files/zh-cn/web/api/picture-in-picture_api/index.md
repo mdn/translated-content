@@ -41,7 +41,7 @@ translation_of: Web/API/Picture-in-Picture_API
 
 ## 属性
 
-*画中画 API 添加了* {{DOMxRef("HTMLVideoElement")}}、{{DOMxRef("Document")}} 和 {{DOMxRef("ShadowRoot")}} 接口的属性，这些属性用于决定是否浮动的视频窗口是受支持和可用的，是否当前画中画模式是处于激活状态并且哪个视频是浮动的。
+*画中画 API 添加了* {{DOMxRef("HTMLVideoElement")}}、{{DOMxRef("Document")}} 和 {{DOMxRef("ShadowRoot")}} 接口的属性，这些属性用于决定是否浮动的视频窗口是受支持和可用的、是否当前画中画模式是处于激活状态并且哪个视频是浮动的。
 
 ### HTMLVideoElement 接口的属性
 
