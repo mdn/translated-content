@@ -79,7 +79,7 @@ _画中画 API 定义了三个事件，它们可以被用来检测何时画中�
 
 可以使用 [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy) 控制画中画的可用性。全屏模式的功能由字符串 `"picture-in-picture"` 标识，默认的允许列表的值是 `"self"`，意味着在顶级文档上下文以及从最顶层文档相同的来源加载的嵌套浏览上下文中允许画中画模式。
 
-参见 [使用 Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) 去了解关于使用 Feature Policy 控制对 API 访问的更多信息。
+参见[使用 Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)，了解关于使用 Feature Policy 控制对 API 访问的更多信息。
 
 ## 示例
 
