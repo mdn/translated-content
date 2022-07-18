@@ -11,7 +11,9 @@ Pour obtenir la valeur actuelle d'un attribut, utilisez {{domxref("Element.getAt
 
 ## Syntaxe
 
-    Element.setAttribute(name, value);
+```js
+Element.setAttribute(name, value);
+```
 
 ### Paramètres
 

@@ -45,7 +45,9 @@ Le destinataire final de la demande doit renvoyer au client le message reçu, à
 
 ## Syntaxe
 
-    TRACE /index.html
+```
+TRACE /index.html
+```
 
 ## Specifications
 

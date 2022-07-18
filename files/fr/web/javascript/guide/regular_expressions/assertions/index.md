@@ -9,7 +9,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 original_slug: Web/JavaScript/Guide/Expressions_régulières/Assertions
 ---
-{{jsSidebar("JavaScript Guide")}}{{draft}}
+{{jsSidebar("JavaScript Guide")}}
 
 Les assertions indiquent les conditions selon lesquelles il est possible d'avoir une correspondance (contenu situé avant la correspondance, situé après ou expressions conditionnelles).
 

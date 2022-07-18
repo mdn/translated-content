@@ -12,9 +12,11 @@ L'élément `<xsl:text>` écrit un texte littéral dans l'arbre de sortie. Il pe
 
 ### Syntaxe
 
-    <xsl:text disable-output-escaping="yes" | "no">
-    	TEXTE
-    </xsl:text>
+```xml
+<xsl:text disable-output-escaping="yes" | "no">
+  TEXTE
+</xsl:text>
+```
 
 ### Attributs obligatoires
 

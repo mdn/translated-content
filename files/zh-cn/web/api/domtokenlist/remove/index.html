@@ -24,7 +24,7 @@ translation_of: Web/API/DOMTokenList/remove
 
 <h2 id="示例">示例</h2>
 
-<p>在下面的示例中，我们使用 {{domxref("Element.classList")}} 检索 {{htmlelement("span")}} 元素上设置的class列表作为DOMTokenList。然后从列表中删除一个标记，并将该列表写入<code>&lt;span&gt;</code>的 {{domxref("Node.textContent")}} 中。</p>
+<p>在下面的示例中，我们使用 {{domxref("Element.classList")}} 检索 {{htmlelement("span")}} 元素上设置的 class 列表作为 DOMTokenList。然后从列表中删除一个标记，并将该列表写入<code>&lt;span&gt;</code>的 {{domxref("Node.textContent")}} 中。</p>
 
 <p>HTML:</p>
 
@@ -42,7 +42,7 @@ span.textContent = classes;
 
 <p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
 
-<p>要一次删除多个class，可以提供多个标记。书写顺序不必与它们在列表中出现的顺序匹配：</p>
+<p>要一次删除多个 class，可以提供多个标记。书写顺序不必与它们在列表中出现的顺序匹配：</p>
 
 <pre class="brush: js">let span = document.getElementsByTagName("span")[0],
   classes = span.classList;
@@ -53,22 +53,7 @@ span.textContent = classes;
 
 <h2 id="描述">描述</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-remove','remove()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

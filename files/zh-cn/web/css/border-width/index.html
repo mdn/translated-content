@@ -7,7 +7,7 @@ translation_of: Web/CSS/border-width
 
 <h2 id="概要">概要</h2>
 
-<p> <strong><code>border-width</code></strong> 属性可以设置盒子模型的边框宽度。</p>
+<p><strong><code>border-width</code></strong> 属性可以设置盒子模型的边框宽度。</p>
 
 <p>{{EmbedInteractiveExample("pages/css/border-width.html")}}</p>
 
@@ -26,7 +26,7 @@ translation_of: Web/CSS/border-width
 border-width: 2px 1.5em;
 /* 当给定三个宽度时，该宽度分别依次作用于选定元素的上横边、纵边、下横边 */
 border-width: 1px 2em 1.5cm;
-/* 当给定四个宽度时，该宽度分别依次作用于选定元素的上横边、右纵边、下横边、左纵边 （即按顺时针依次作用） */
+/* 当给定四个宽度时，该宽度分别依次作用于选定元素的上横边、右纵边、下横边、左纵边（即按顺时针依次作用） */
 border-width: 1px 2em 0 4rem;
 
 /* 用法二：使用全局关键字 */
@@ -84,14 +84,14 @@ border-width: thick;
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>提示：</strong>规范并没有规定关键字的实际值故在不同浏览器效果是不一样的，但显然thin≤medium≤thick，并且值在单个文档中是恒定的</p>
+<p><strong>提示：</strong>规范并没有规定关键字的实际值故在不同浏览器效果是不一样的，但显然 thin≤medium≤thick，并且值在单个文档中是恒定的</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="A_mix_of_values_and_lengths" name="A_mix_of_values_and_lengths">A mix of values and lengths</h3>
+<h3 id="A_mix_of_values_and_lengths">A mix of values and lengths</h3>
 
-<p id="A_mix_of_values_and_lengths">HTML</p>
+<p>HTML</p>
 
 <pre class="brush: html">&lt;p id="sval"&gt;
     one value: 6px wide border on all 4 sides&lt;/p&gt;
@@ -132,36 +132,11 @@ p {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-width')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>No direct change, the {{cssxref("&lt;length&gt;")}} CSS data type extension has an effect on this property.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-width')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Added the constraint that values' meaning must be constant inside a document.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border-width', 'border-width')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("css.properties.border-width")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参考">参考</h2>
 

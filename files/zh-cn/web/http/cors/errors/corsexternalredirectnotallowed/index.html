@@ -7,22 +7,22 @@ translation_of: Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed
 
 <h2 id="原因">原因</h2>
 
-<pre class="syntaxbox">原因： CORS不允许请求外部重定向</pre>
+<pre class="syntaxbox">原因： CORS 不允许请求外部重定向</pre>
 
 <h2 id="哪里错了？">哪里错了？</h2>
 
-<p>{{Glossary("CORS")}} 请求被服务器响应了一个HTTP重定向到与原始请求的Origin不同的URL上，这在CORS请求中是不允许的。</p>
+<p>{{Glossary("CORS")}} 请求被服务器响应了一个 HTTP 重定向到与原始请求的 Origin 不同的 URL 上，这在 CORS 请求中是不允许的。</p>
 
-<p>例如，如果请求 <code>https://service.tld/fetchdata</code> ，但服务器的HTTP响应是 "301 永久移动"， "307 暂时重定向"，或 "308 永久重定向" 并且 <code>Location</code> 是<code>https://anotherservice.net/getdata</code>，那么CORS请求将会失败。</p>
+<p>例如，如果请求 <code>https://service.tld/fetchdata</code> ，但服务器的 HTTP 响应是 "301 永久移动"， "307 暂时重定向"，或 "308 永久重定向" 并且 <code>Location</code> 是<code>https://anotherservice.net/getdata</code>，那么 CORS 请求将会失败。</p>
 
-<p>要解决此问题，请更新代码以使用重定向报告的新URL，从而避免重定向。</p>
+<p>要解决此问题，请更新代码以使用重定向报告的新 URL，从而避免重定向。</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/zh-cn/docs/Web/HTTP/CORS/Errors">HTTP访问控制（CORS）错误</a></li>
+ <li><a href="/zh-cn/docs/Web/HTTP/CORS/Errors">HTTP 访问控制（CORS）错误</a></li>
  <li>Glossary: {{Glossary("CORS")}}</li>
  <li>
-  <p><a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">HTTP访问控制（CORS）</a></p>
+  <p><a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">HTTP 访问控制（CORS）</a></p>
  </li>
 </ul>

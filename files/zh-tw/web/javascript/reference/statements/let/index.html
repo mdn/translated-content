@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Statements/let
 
 <h2 id="描述">描述</h2>
 
-<p><code>let</code> 可以宣告只能在目前區塊、階段或表達式中作用的變數。而 <code><a href="https://developer.mozilla.org/zh-TW/docs/JavaScript/Reference/Statements/var" title="JavaScript/Reference/Statements/var">var</a> 則是定義了一個全域變數，或是在整個 function 而不管該區塊範圍。</code></p>
+<p><code>let</code> 可以宣告只能在目前區塊、階段或表達式中作用的變數。而 <code><a href="/zh-TW/docs/JavaScript/Reference/Statements/var">var</a> 則是定義了一個全域變數，或是在整個 function 而不管該區塊範圍。</code></p>
 
 <h3 id="Scoping_rules">Scoping rules</h3>
 
@@ -116,7 +116,7 @@ thing.showPrivate();
   let foo = 2;
 }</pre>
 
-<p>你可能會在 <a href="https://developer.mozilla.org/zh-TW/docs/JavaScript/Reference/Statements/switch" title="switch"><code>switch</code></a> 中遇到錯誤，因為所有的 <code>case</code> 都屬於同樣的區塊中。</p>
+<p>你可能會在 <a href="/zh-TW/docs/JavaScript/Reference/Statements/switch"><code>switch</code></a> 中遇到錯誤，因為所有的 <code>case</code> 都屬於同樣的區塊中。</p>
 
 <pre class="brush: js">switch (x) {
   case 0:
@@ -210,29 +210,9 @@ console.log(b); // 2</pre>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition. Does not specify let expressions or let blocks.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
-
-
 
 <p>{{Compat("javascript.statements.let")}}</p>
 

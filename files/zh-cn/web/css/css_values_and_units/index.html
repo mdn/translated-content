@@ -5,7 +5,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><span class="seoSummary">所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。</span> 下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。</p>
+<p>所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。 下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。</p>
 
 <h2 id="文本数据类型">文本数据类型</h2>
 
@@ -72,7 +72,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 
 <h3 id="URLs">URLs</h3>
 
-<p>{{cssxref("&lt;url&gt;")}} 类型使用一个函数符号，接收一个<code>&lt;string&gt;</code>类型的URL。这个URL可以是绝对地址或者相对地址。例如，如果你想要设置一张背景图片，那么你可以采用如下两种做法：</p>
+<p>{{cssxref("&lt;url&gt;")}} 类型使用一个函数符号，接收一个<code>&lt;string&gt;</code>类型的 URL。这个 URL 可以是绝对地址或者相对地址。例如，如果你想要设置一张背景图片，那么你可以采用如下两种做法：</p>
 
 <pre class="brush: css notranslate"><code>.box {
   background-image: url("images/my-background.png");
@@ -83,7 +83,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 }</code>
 </pre>
 
-<p><code>url()</code>的参数可以也可以不使用引号。如果使用引号包围了URL，那么它会被解析为一个<code>&lt;url-token&gt;</code>，包含对某些字符的额外转义。查看 {{cssxref("&lt;url&gt;")}} 以获取更多信息。</p>
+<p><code>url()</code>的参数可以也可以不使用引号。如果使用引号包围了 URL，那么它会被解析为一个<code>&lt;url-token&gt;</code>，包含对某些字符的额外转义。查看 {{cssxref("&lt;url&gt;")}} 以获取更多信息。</p>
 
 <h2 id="数值数据类型">数值数据类型</h2>
 
@@ -120,7 +120,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 
 <h4 id="距离单位">距离单位</h4>
 
-<p>一个距离单位，或这也称为长度（length），允许作为属性的值。它被描述为 {{cssxref("&lt;length&gt;")}} 类型。CSS中有两种长度：相对和绝对。</p>
+<p>一个距离单位，或这也称为长度（length），允许作为属性的值。它被描述为 {{cssxref("&lt;length&gt;")}} 类型。CSS 中有两种长度：相对和绝对。</p>
 
 <p>相对长度单位基于其它元素的长度。例如 <code>em</code> 基于该元素的字号大小，<code>vh</code> 则与设备视口的高度有关。</p>
 
@@ -141,7 +141,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
   </tr>
   <tr>
    <td><code>ex</code></td>
-   <td>字体的X字高（x-height）</td>
+   <td>字体的 X 字高（x-height）</td>
   </tr>
   <tr>
    <td><code>cap</code></td>
@@ -153,7 +153,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
   </tr>
   <tr>
    <td><code>ic</code></td>
-   <td>Average character advance of a full width glyph in the element’s font, as represented by the “水” (CJK water ideograph, U+6C34) glyph.</td>
+   <td>Average character advance of a full width glyph in the element’s font, as represented by the“水” (CJK water ideograph, U+6C34) glyph.</td>
   </tr>
   <tr>
    <td><code>rem</code></td>
@@ -426,64 +426,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values")}}</td>
-   <td>{{Spec2("CSS4 Values")}}</td>
-   <td>Adds the <code>vi</code>, <code>vb</code>, <code>ic</code>, <code>cap</code>, <code>lh</code> and <code>rlh</code> units.<br>
-    Adds the <code>min()</code>, <code>max()</code> and <code>clamp()</code> functional notation<br>
-    Adds <code>toggle()</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Values")}}</td>
-   <td>{{Spec2("CSS3 Values")}}</td>
-   <td>Adds <code>calc()</code>, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code>Q</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Colors")}}</td>
-   <td>{{Spec2("CSS4 Colors")}}</td>
-   <td>Adds commaless syntaxes for the <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, and <code>hsla()</code> functions. Allows alpha values in <code>rgb()</code> and <code>hsl()</code>, turning <code>rgba()</code> and <code>hsla()</code> into (deprecated) aliases for them.<br>
-    Adds color keyword <code>rebeccapurple</code>.<br>
-    Adds 4- and 8-digit hex color values, where the last digit(s) represents the alpha value.<br>
-    Adds <code>hwb()</code>, <code>device-cmyk()</code>, and <code>color()</code> functions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Colors")}}</td>
-   <td>{{Spec2("CSS3 Colors")}}</td>
-   <td>Deprecates system-colors. Adds SVG colors. Adds the <code>rgba()</code>, <code>hsl()</code>, and <code>hsla()</code> functions.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Images")}}</td>
-   <td>{{Spec2("CSS4 Images")}}</td>
-   <td>
-    <p>Adds <code>element()</code>, <code>image()</code>, <code>image-set()</code>, <code>conic-gradient()</code></p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Images")}}</td>
-   <td>{{Spec2("CSS3 Images")}}</td>
-   <td>Initial definition of image.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="See_also">See also</h2>
 
@@ -491,7 +434,3 @@ translation_of: Web/CSS/CSS_Values_and_Units
  <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS Basic Data Types</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">Introduction to CSS: Values and Units </a></li>
 </ul>
-
-<div id="gtx-trans" style="position: absolute; left: 296px; top: 4116.4px;">
-<div class="gtx-trans-icon"></div>
-</div>

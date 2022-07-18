@@ -16,7 +16,9 @@ La propriété **`Attr.localName`**, en lecture seule, renvoie la partie locale 
 
 ## Syntaxe
 
-    name = attribute.localName
+```js
+name = attribute.localName
+```
 
 ### Valeur renvoyée
 

@@ -12,9 +12,9 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}
 
-Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
+Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
 
 Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.
 
@@ -306,29 +306,28 @@ Donc, voici le résultat avec les trois états :
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Basic state</th>
-      <th scope="col" style="text-align: center">Active state</th>
-      <th scope="col" style="text-align: center">Open state</th>
+      <th scope="col">État initial</th>
+      <th scope="col">État actif</th>
+      <th scope="col">État ouvert</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample('Basic_state',120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample('État_initial',120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample("État_actif",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample("État_ouvert",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
-      <td colspan="3" style="text-align: center">
+      <td colspan="3">
         <a
-          href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          >Check out the source code</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -345,8 +344,6 @@ Maintenant que le design et la structure sont prêts, nous pouvons écrire le co
 
 ### Pourquoi ne fonctionne-t-il pas ?
 
-
-
 Avant de commencer, il est important de se rappeler quelque chose de très important à propos de JavaScript : dans un navigateur, c'est une technique peu fiable. Lorsque vous créez des widgets personnalisés, vous êtes obligé de faire appel à JavaScript parce que c'est un fil nécessaire pour tout lier ensemble. Cependant, il existe de nombreux cas dans lesquels JavaScript n'est pas capable de s'exécuter dans le navigateur :
 
 - L'utilisateur a désactivé le JavaScript : c'est un cas assez inhabituel, peu de personnes désactivent le JavaScript de nos jours.
@@ -356,17 +353,11 @@ Avant de commencer, il est important de se rappeler quelque chose de très impor
 - Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « [No script](https://addons.mozilla.org/fr/firefox/addon/noscript/) » de Firefox ou « [Scripts »](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) de Chrome).
 - L'utilisateur utilise un navigateur ancien et l'une des fonctions dont vous avez besoin n'est pas prise en charge. Cela se produira fréquemment lorsque vous utiliserez des API de pointe.s.
 
-
-
-
-
 En raison de ces aléas, il est vraiment important de considérer avec sérieux ce qui se passe si JavaScript ne fonctionne pas. Traiter en détail cette question est hors de la portée de cet article parce qu'elle est étroitement liée à la façon dont vous voulez rendre votre script générique et réutilisable, mais nous prendrons en considération les bases de ce sujet dans notre exemple.
 
 Ainsi, si notre code JavaScript ne s'exécute pas, nous reviendrons à l'affichage d'un élément  {{HTMLElement("select")}} standard. Pour y parvenir, nous avons besoin de deux choses.
 
 Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} régulier avant chaque utilisation de notre widget personnalisé. Ceci est également nécessaire pour pouvoir envoyer les données de notre widget personnalisé avec le reste de nos données du formulaire ; nous reviendrons sur ce point plus tard.
-
-
 
 ```html
 <body class="no-widget">
@@ -394,8 +385,6 @@ Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} réguli
 </body>
 ```
 
-
-
 Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre de cacher l'élément qui ne sert pas (c'est-à-dire l'élément{{HTMLElement("select")}} « réel »  si notre script ne fonctionne pas, ou le widget personnalisé s'il fonctionne). Notez que par défaut, le code HTML cache le widget personnalisé.
 
 ```css
@@ -412,13 +401,7 @@ Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre d
 }
 ```
 
-
-
 Maintenant nous avons juste besoin d'un commutateur JavaScript pour déterminer si le script est en cours d'exécution ou non. Cette bascule est très simple : si au moment du chargement de la page notre script est en cours d'exécution, il supprime la classe no-widget et ajoute la classe widget, échangeant ainsi la visibilité de l'élément {{HTMLElement("select")}} et du widget personnalisé.
-
-
-
-
 
 ```js
 window.addEventListener("load", function () {
@@ -430,25 +413,24 @@ window.addEventListener("load", function () {
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Sans JavaScript</th>
-      <th scope="col" style="text-align: center">Avec JavaScript</th>
+      <th scope="col">Sans JavaScript</th>
+      <th scope="col">Avec JavaScript</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}
+        {{EmbedLiveSample("Sans_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
-      <td colspan="2" style="text-align: center">
+      <td colspan="2">
         <a
-          href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          >Testez le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -459,18 +441,16 @@ window.addEventListener("load", function () {
 
 ### Rendre le travail plus facile
 
-
-
 Dans le code que nous sommes sur le point de construire, nous utiliserons l'API standard DOM pour faire tout le travail dont nous avons besoin. Cependant, bien que la prise en charge de l'API DOM se soit améliorée dans les navigateurs, il y a toujours des problèmes avec les anciens navigateurs (surtout avec le bon vieux navigateur Internet Explorer).
 
 Si vous voulez éviter les problèmes avec les navigateurs anciens, il y a deux façons de le faire : en utilisant un framework dédié tel que jQuery, $dom, prototype, Dojo, YUI ou similaire, ou bien en remplissant la fonctionnalité manquante que vous voulez utiliser (ce qui peut facilement être fait par un chargement conditionnel, avec la bibliothèque yepnope par exemple).
 
 Les fonctionnalités que nous prévoyons d'utiliser sont les suivantes (classées de la plus risquée à la plus sûre) :
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener")}}
-3.  [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (ce n'est pas du DOM mais du JavaScript moderne)
-4.  {{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener")}}
+3. [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (ce n'est pas du DOM mais du JavaScript moderne)
+4. {{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}
 
 Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). C'est important, car les objets  `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach"), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
 
@@ -620,21 +600,20 @@ A ce stade, notre widget change d'état comme nous l'avons conçu, mais sa valeu
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -642,8 +621,6 @@ A ce stade, notre widget change d'état comme nous l'avons conçu, mais sa valeu
 </table>
 
 ### Gérer la valeur du widget
-
-
 
 Maintenant que notre widget fonctionne, nous devons ajouter du code pour mettre à jour la valeur en fonction des entrées utilisateur et envoyer cette valeur avec les données du formulaire.
 
@@ -744,21 +721,20 @@ Et voilà, nous avons terminé ! Voici le résultat :
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -768,8 +744,6 @@ Et voilà, nous avons terminé ! Voici le résultat :
 Mais attendez, avons‑nous vraiment terminé ?
 
 ## Le rendre « accessible »
-
-
 
 Nous venons de faire quelque chose qui fonctionne, même si nous sommes loin d'avoir une boîte de sélection avec toutes les fonctionnalités, elle fonctionne parfaitement. Mais ce que nous avons fait n'est rien de plus que de jouer avec les DOM. Elle n'a pas de sémantique réelle, et même si elle ressemble à une boîte de sélection, du point de vue du navigateur, ce n'en est pas une, de sorte que les technologies d'assistance ne pourront pas comprendre que c'est une boîte de sélection. Bref, cette jolie nouvelle boîte de sélection n'est pas accessible !
 
@@ -832,21 +806,20 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_5")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_5"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -866,18 +839,16 @@ Voici quelques bibliothèques à prendre en considération avant de coder les v�
 
 Si vous voulez aller plus loin, le code de cet exemple mérite quelques amélioration avant de devenir générique et réutilisable. C'est un exercice que vous pouvez essayer de faire. Deux conseils pour vous aider : le premier argument pour toutes nos fonctions est le même, ce qui signifie que ces fonctions ont besoin du même contexte. Il serait avisé de construire un objet pour partager ce contexte. En outre, vous devrez éprouver ses fonctionnalités, c'est-à-dire qu'il doit pouvoir fonctionner avec les divers navigateurs dont la compatibilité avec les normes Web qu'ils utilisent varie. Amusez-vous bien !
 
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}
-
 ## Dans ce module
 
-- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets)
+- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
+- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
+- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
+- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
+- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

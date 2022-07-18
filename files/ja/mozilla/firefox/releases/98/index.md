@@ -48,7 +48,6 @@ tags:
 - {{WebExtAPIRef("webRequest")}} を使用するウェブ拡張機能は Firefox が起動している間、初期に開始していました。これを、{{WebExtAPIRef("webRequest")}} ブロッキング呼び出しを使用する拡張機能に限って早期スタートアップするように変更しました。ブロッキングでない呼出では、拡張機能の早期スタートアップが発生しません ({{bug(1749871)}})。
 - {{WebExtAPIRef("userScripts.register")}} に `cookieStoreId` を追加しました。これは、拡張機能がコンテナー特有のユーザースクリプトを登録できるようにします ({{bug(1738567)}})。
 
-
 ## 過去のバージョン
 
 {{Firefox_for_developers(97)}}

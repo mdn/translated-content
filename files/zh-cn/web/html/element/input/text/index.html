@@ -12,11 +12,10 @@ translation_of: Web/HTML/Element/input/text
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><code>{{HTMLElement("input")}}</code> 元素的<code><strong>text</strong></code> 类型创建基础的单行文本框。</span></p>
+<p><code>{{HTMLElement("input")}}</code> 元素的<code><strong>text</strong></code> 类型创建基础的单行文本框。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">交互示例的资源储存在一个 github 的仓库。如果你想为示例项目做贡献，请 clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并给我们发送 pull request.</p>
 
 <table class="properties">
  <tbody>
@@ -99,7 +98,7 @@ translation_of: Web/HTML/Element/input/text
 
 <p>用户可以输入<code>文本</code>输入框中的最大字符 (参考 UTF-16 编码单元) 数。 必须为整数，值等于 0 或者更大。 如果没有规定 <code>maxlength</code> ， 或者规定的值无效，文本输入框就没有最大值。这个值也必须更大或者等于<code>minlength</code>的值。</p>
 
-<p>如果文本框中的字符数大于 <code><font color="#333333" face="Consolas">maxlength</font></code><span style="background-color: transparent; color: #333333; display: inline !important; float: none; font-family: Arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: 0px; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;"> UTF-16 编码单元，输入框的</span><a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">验证</a>就会失败。 约束验证仅作用于用户输入值的时候。</p>
+<p>如果文本框中的字符数大于 <code>maxlength</code> UTF-16 编码单元，输入框的<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">验证</a>就会失败。 约束验证仅作用于用户输入值的时候。</p>
 
 <h3 id="minlength">minlength</h3>
 
@@ -452,5 +451,5 @@ input:valid+span:after {
  <li><a href="/en-US/docs/Learn/HTML/Forms">HTML Forms</a></li>
  <li>{{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
- <li>{{HTMLElement("textarea")}}: Multi-line text input<font face="Consolas">maxlength</font></li>
+ <li>{{HTMLElement("textarea")}}: Multi-line text inputmaxlength</li>
 </ul>

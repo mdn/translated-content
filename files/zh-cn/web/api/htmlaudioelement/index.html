@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLAudioElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>HTMLAudioElement</code></strong> 接口提供对 {{HTMLElement("audio")}} 元素的属性访问及一系列操控它的方法，</span>它基于并从 {{domxref("HTMLMediaElement")}} 接口继承属性和方法。</p>
+<p><strong><code>HTMLAudioElement</code></strong> 接口提供对 {{HTMLElement("audio")}} 元素的属性访问及一系列操控它的方法，它基于并从 {{domxref("HTMLMediaElement")}} 接口继承属性和方法。</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -29,11 +29,11 @@ translation_of: Web/API/HTMLAudioElement
 <p><em>以下方法是未标准化的，请勿使用.</em></p>
 
 <dl>
- <dt>{{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAudioElement.mozCurrentSampleOffset", "mozCurrentSampleOffset()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Returns the number of samples form the beginning of the stream that have been written so far into the audio stream created by calling {{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}}.</dd>
- <dt>{{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAudioElement.mozSetup", "mozSetup()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Sets up the audio stream to allow writing, given the number of audio channels (1 or 2) and the sample rate in kHz.</dd>
- <dt>{{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAudioElement.mozWriteAudio", "mozWriteAudio()")}} {{non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Writes a batch of audio frames to the stream at the current offset, returning the number of bytes actually written to the stream.</dd>
 </dl>
 
@@ -71,27 +71,7 @@ audioElement.addEventListener('loadeddata', () =&gt; {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#htmlaudioelement", "HTMLAudioElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-audio-element", "HTMLAudioElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

@@ -40,7 +40,7 @@ maMap.size // 3
 | {{SpecName('ES2015', '#sec-get-map.prototype.size', 'Map.prototype.size')}} | {{Spec2('ES2015')}}     | Définition initiale. |
 | {{SpecName('ESDraft', '#sec-get-map.prototype.size', 'Map.prototype.size')}} | {{Spec2('ESDraft')}} |                      |
 
-## Compatibliité des navigateurs
+## Compatibilité des navigateurs
 
 {{Compat("javascript.builtins.Map.size")}}
 

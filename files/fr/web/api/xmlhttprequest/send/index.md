@@ -25,7 +25,9 @@ Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("
 
 ## Syntaxe
 
-    XMLHttpRequest.send(body)
+```js
+XMLHttpRequest.send(body)
+```
 
 ### Paramètres
 

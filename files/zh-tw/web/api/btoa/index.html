@@ -1,14 +1,14 @@
 ---
-title: WindowOrWorkerGlobalScope.btoa()
+title: btoa()
 slug: Web/API/btoa
-translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
+translation_of: Web/API/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>The <code><strong>WindowOrWorkerGlobalScope.btoa()</strong></code> method creates a {{glossary("Base64")}}-encoded ASCII string from a <a href="/en-US/docs/Web/API/DOMString/Binary">binary string</a> (i.e., a {{jsxref("String")}} object in which each character in the string is treated as a byte of binary data).</p>
+<p>The <code><strong>btoa()</strong></code> method creates a {{glossary("Base64")}}-encoded ASCII string from a <a href="/en-US/docs/Web/API/DOMString/Binary">binary string</a> (i.e., a {{jsxref("String")}} object in which each character in the string is treated as a byte of binary data).</p>
 
-<p>You can use this method to encode data which may otherwise cause communication problems, transmit it, then use the {{domxref("WindowOrWorkerGlobalScope.atob", "atob()")}} method to decode the data again. For example, you can encode control characters such as ASCII values 0 through 31.</p>
+<p>You can use this method to encode data which may otherwise cause communication problems, transmit it, then use the {{domxref("atob()")}} method to decode the data again. For example, you can encode control characters such as ASCII values 0 through 31.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -94,44 +94,15 @@ console.log(original);                // ☸☹☺☻☼☾☿
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Method moved to the <code>WindowOrWorkerGlobalScope</code> mixin in the latest spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of {{SpecName("HTML WHATWG")}}. Creation of <code>WindowBase64</code> (properties where on the target before it).</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
-<p>{{Compat("api.WindowOrWorkerGlobalScope.btoa")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs"><code>data</code> URIs</a></li>
- <li>{{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}</li>
+ <li>{{domxref("atob()")}}</li>
 </ul>

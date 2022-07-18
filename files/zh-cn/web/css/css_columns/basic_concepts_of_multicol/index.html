@@ -5,13 +5,13 @@ translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">多列布局（通常称为multicol）是一种规范，用于将内容布置到一组列框中，就像报纸中的列一样。本指南解释了规范如何与一些常见的用例示例一起使用。</p>
+<p>多列布局（通常称为 multicol）是一种规范，用于将内容布置到一组列框中，就像报纸中的列一样。本指南解释了规范如何与一些常见的用例示例一起使用。</p>
 
 <h2 id="关键概念和术语">关键概念和术语</h2>
 
 <p> </p>
 
-<p>Multicol与CSS中的任何其他布局方法不同，它将内容（包括所有后代元素）分段为列。这与在使用CSS Paged Media时将内容分段为页面的方式相同，例如通过创建打印样式表。</p>
+<p>Multicol 与 CSS 中的任何其他布局方法不同，它将内容（包括所有后代元素）分段为列。这与在使用 CSS Paged Media 时将内容分段为页面的方式相同，例如通过创建打印样式表。</p>
 
 <p>规范定义的属性有：</p>
 
@@ -28,29 +28,29 @@ translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
  <li>{{cssxref("column-gap")}}</li>
 </ul>
 
-<p>通过给一个元素添加 column-count 或 column-width,该元素变成了多列容器,或简称为 multicol 容器。这些列是都是匿名的盒子，在规范中描述为列盒子。</p>
+<p>通过给一个元素添加 column-count 或 column-width，该元素变成了多列容器，或简称为 multicol 容器。这些列是都是匿名的盒子，在规范中描述为列盒子。</p>
 
 <h2 id="columns_定义">columns 定义</h2>
 
-<p>创建一个 multicol 容器必须使用至少一个 column-* 属性,这些就是 column-count 和 column-width。</p>
+<p>创建一个 multicol 容器必须使用至少一个 column-* 属性，这些就是 column-count 和 column-width。</p>
 
 <h3 id="column-count_属性"><code>column-count</code> 属性</h3>
 
 <p><code>column-count </code>属性指定你想要显示内容的列的数量。浏览器会将正确分配的空间给每列并创建需要的列数。</p>
 
-<p>在以下示例中,我们使用 column-count 属性在.container 元素上创建三列 。.container 元素的内容包括其子元素都会分裂成三列。</p>
+<p>在以下示例中，我们使用 column-count 属性在 <code>.container</code> 元素上创建三列。 <code>.container</code> 元素的内容包括其子元素都会分裂成三列。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}</p>
 
-<p>在上面的例子中内容被段落 p 标签的默认样式包裹。因此,每段都有一个间距。你可以看到这个间距引起第一行文本被推了下来。这是因为 multicol 容器创建了一个新的块格式化上下文（BFC)，这意味着子元素的间距不会与父容器的间距互相重叠。</p>
+<p>在上面的例子中内容被段落 p 标签的默认样式包裹。因此，每段都有一个间距。你可以看到这个间距引起第一行文本被推了下来。这是因为 multicol 容器创建了一个新的块格式化上下文（BFC)，这意味着子元素的间距不会与父容器的间距互相重叠。</p>
 
 <h3 id="column-width_属性"> <code>column-width</code> 属性</h3>
 
-<p><code>column-width</code> 属性用于给每列设置一个最佳宽度。如果你声明 <code>column-width</code>,浏览器将算出 该宽度在multicol 容器能分多少列，并且把额外的的空间填充到这些列当中。因此,应将列宽视为最小宽度,因为由于额外的空间，列可能而更宽。</p>
+<p><code>column-width</code> 属性用于给每列设置一个最佳宽度。如果你声明 <code>column-width</code>,浏览器将算出 该宽度在 multicol 容器能分多少列，并且把额外的的空间填充到这些列当中。因此，应将列宽视为最小宽度，因为由于额外的空间，列可能而更宽。</p>
 
 <p>当单个列的可用宽度小于 column-width 的值的情况下，列的宽度会缩小为小于所声明的列宽。</p>
 
-<p>在以下示例中，我们使用 column-width 属性值为200 px。但最终为了适配容器，列的宽度却大于200像素，额外的空间被平均分配了。</p>
+<p>在以下示例中，我们使用 column-width 属性值为 200 px。但最终为了适配容器，列的宽度却大于 200 像素，额外的空间被平均分配了。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/multicol/basics/column-width.html", '100%', 550)}}</p>
 
@@ -68,19 +68,19 @@ translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 
 <p>您可以使用 columns 缩写来设置 <code>column-count</code> 和 <code>column-width</code>。如果设置长度单位，这将用于 <code>column-width</code>，设置一个整数，它将用于 <code>column-count</code>。您可以设置两者，用空格分隔这两个值。</p>
 
-<p>此 CSS 结果与示例1相同，column-count 设置为3。</p>
+<p>此 CSS 结果与示例 1 相同，column-count 设置为 3。</p>
 
 <pre>.container {
   columns: 3;
 }</pre>
 
-<p>此 CSS 结果与示例2相同，column-width 为200px。</p>
+<p>此 CSS 结果与示例 2 相同，column-width 为 200px。</p>
 
 <pre>.container {
   columns: 200px;
 }</pre>
 
-<p>此 CSS 结果与示例3相同，同时设置 column-count 和 column-width。</p>
+<p>此 CSS 结果与示例 3 相同，同时设置 column-count 和 column-width。</p>
 
 <pre>.container {
   columns: 2 200px;

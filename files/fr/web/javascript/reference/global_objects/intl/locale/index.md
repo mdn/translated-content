@@ -18,7 +18,9 @@ Le constructeur **`Intl.Locale`** est une propriété native de l'objet `Intl` r
 
 ## Syntaxe
 
-    new Intl.Locale([tag[, options]])
+```js
+new Intl.Locale([tag[, options]])
+```
 
 ### Paramètres
 

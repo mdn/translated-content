@@ -1,0 +1,53 @@
+---
+title: GlobalEventHandlers.onselectionchange
+slug: Web/API/HTMLInputElement/selectionchange_event
+translation_of: Web/API/GlobalEventHandlers/onselectionchange
+original_slug: Web/API/GlobalEventHandlers/onselectionchange
+---
+<div>{{ApiRef('DOM')}}{{SeeCompatTable}}</div>
+
+<p><code><strong>GlobalEventHandlers.onselectionchange</strong></code>  属性表示当一个 {{event("selectstart")}} 事件被触发，比如在页面上选中文字变化时，会执行绑定的事件处理器</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>obj</em>.onselectionchange = <em>function</em>;
+</pre>
+
+<h2 id="Example">Example</h2>
+
+<pre class="brush: js">var selection;
+
+document.onselectionchange = function() {
+  console.log('New selection made');
+  selection = document.getSelection();
+};</pre>
+
+<p>完整例子请参阅<a href="https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live">Key quote generator</a> demo.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Selection API','#dom-globaleventhandlers-onselectionchange','GlobalEventHandlers.onselectionchange')}}</td>
+   <td>{{Spec2('Selection API')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+{{Compat("api.GlobalEventHandlers.onselectionchange")}}
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{event("selectionchange")}}</li>
+ <li>{{domxref("GlobalEventHandlers.onselectstart")}}</li>
+</ul>

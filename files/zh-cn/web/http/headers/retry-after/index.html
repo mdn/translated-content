@@ -7,7 +7,7 @@ translation_of: Web/HTTP/Headers/Retry-After
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>在HTTP协议中，响应首部 <strong><code>Retry-After</code></strong> 表示用户代理需要等待多长时间之后才能继续发送请求。这个首部主要应用于以下两种场景：</p>
+<p>在 HTTP 协议中，响应首部 <strong><code>Retry-After</code></strong> 表示用户代理需要等待多长时间之后才能继续发送请求。这个首部主要应用于以下两种场景：</p>
 
 <ul>
  <li>当与 {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在) 响应一起发送的时候，表示服务下线的预期时长。</li>
@@ -37,7 +37,7 @@ Retry-After: &lt;delay-seconds&gt;
 
 <dl>
  <dt>&lt;http-date&gt;</dt>
- <dd>表示在此时间之后可以重新尝试。参见  {{HTTPHeader("Date")}}  首部来获取HTTP协议中关于日期格式的细节信息。</dd>
+ <dd>表示在此时间之后可以重新尝试。参见  {{HTTPHeader("Date")}}  首部来获取 HTTP 协议中关于日期格式的细节信息。</dd>
  <dt>&lt;delay-seconds&gt;</dt>
  <dd>一个非负的十进制整数，表示在重试之前需要等待的秒数。</dd>
 </dl>

@@ -284,15 +284,15 @@ Une propriété est un ensemble non-ordonné de composants uniques sensibles à 
 
 **Les composants** sont des chaînes de caractères ou des URL. Un objet est appelé un objet typé si c'est une URL. Les chaînes ne peuvent pas contenir de point ou de deux points.
 
-1.  Si un objet est un objet typé, il doit être :
+1. Si un objet est un objet typé, il doit être :
 
-    1.  Un nom de propriété autorisé par la spécification qui définit les types pertinents pour un objet ou
-    2.  Une URL valide qui est une URL absolue qui définit un nom faisant partie de la spécification du vocabulaire ou
-    3.  Une URL valide qui est une URL absolue utilisée comme un nom propriétaire ou
+    1. Un nom de propriété autorisé par la spécification qui définit les types pertinents pour un objet ou
+    2. Une URL valide qui est une URL absolue qui définit un nom faisant partie de la spécification du vocabulaire ou
+    3. Une URL valide qui est une URL absolue utilisée comme un nom propriétaire ou
 
-2.  Si un objet n'est pas un objet typé, le nom doit être :
+2. Si un objet n'est pas un objet typé, le nom doit être :
 
-    1.  Une chaîne qui ne contient pas de caractères "**.**" (U+002E FULL STOP) ou "**:**" (U+003A COLON) et qui est utilisée comme un nom « propriétaire » pour la propriété (c'est-à-dire avec un nom qui n'est pas défini dans une spécification publique).
+    1. Une chaîne qui ne contient pas de caractères "**.**" (U+002E FULL STOP) ou "**:**" (U+003A COLON) et qui est utilisée comme un nom « propriétaire » pour la propriété (c'est-à-dire avec un nom qui n'est pas défini dans une spécification publique).
 
 > **Note :** Les caractères « : » sont interdits pour les valeurs qui ne sont pas des URL afin de pouvoir distinguer les URL du reste. Les valeurs avec les caractères « . » sont réservés pour de futurs ajouts et les blancs ne sont pas autorisés car les valeurs seraient analysées comme plusieurs valeurs distinctes.
 
@@ -382,7 +382,9 @@ L'ordre des noms n'a pas d'importance mais si une propriété possède plusieurs
 
 ### Syntaxe formelle
 
-    itemprop = "name", value
+```
+itemprop = "name", value
+```
 
 ## Exemples
 

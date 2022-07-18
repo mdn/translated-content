@@ -18,7 +18,7 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 <p id="To_another_MDN_page_or_its_section_(anch_SectionOnPage_manch_Link_LinkItem_LinkItemDL)">대개, 임의(arbitrary) 링크 생성을 위해 매크로를 사용할 필요가 없습니다. 링크를 만들기 위해 에디터 인터페이스의 <strong>링크</strong> 버튼을 사용하세요</p>
 
 <ul>
- <li>{{TemplateLink("Glossary")}} 매크로는 MDN <a href="/ko/docs/Glossary" title="glossary">용어사전</a> 내 지정된 용어(term) 항목에 대한 링크를 만듭니다. 이 매크로는 하나는 필수며 둘은 선택인 매개변수를 취합니다:
+ <li><code>\{{Glossary}}</code> 매크로는 MDN <a href="/ko/docs/Glossary" title="glossary">용어사전</a> 내 지정된 용어(term) 항목에 대한 링크를 만듭니다. 이 매크로는 하나는 필수며 둘은 선택인 매개변수를 취합니다:
 
   <ol>
    <li>용어명 (가령 "HTML").</li>
@@ -41,15 +41,15 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 <p>MDN의 특정 참고서(reference) 영역 내 페이지에 링크하는 다양한 매크로가 있습니다.</p>
 
 <ul>
- <li>{{TemplateLink("cssxref")}}는 <a href="/ko/docs/Web/CSS/CSS_Reference" title="CSS Reference">CSS 참고서</a> 내 페이지에 링크합니다.<br>
+ <li><code>\{{cssxref}}</code>는 <a href="/ko/docs/Web/CSS/CSS_Reference" title="CSS Reference">CSS 참고서</a> 내 페이지에 링크합니다.<br>
   예: <code>\{{cssxref("cursor")}}</code>, 결과: {{ cssxref("cursor") }}.</li>
- <li>{{TemplateLink("domxref")}}는 DOM 참고서 내 페이지에 링크합니다; 끝에 괄호를 포함하는 경우, 템플릿은 함수 이름처럼 보이도록 표시해야 함을 압니다. 예를 들어, <span class="plain"><span class="nowiki">\{{domxref("document.getElementsByName()")}}</span></span>은 {{ domxref("document.getElementsByName()") }}이 되고 <code>\{\{domxref("Node")\}\}</code>는 {{ domxref("Node") }}가 됩니다.</li>
- <li>{{TemplateLink("event")}}는 DOM Event 참고서 내 페이지에 링크합니다, 예: \{{event("change")}}는 {{event("change")}}가 됩니다.</li>
- <li>{{TemplateLink("HTMLElement")}}는 HTML 참고서 내 HTML 요소(element)에 링크합니다.</li>
- <li>{{TemplateLink("htmlattrxref")}}는 HTML attribute, 전역 attribute 설명 (attribute명만 지정한 경우) 또는 (attribute명 및 요소명을 지정한 경우) 지정 요소와 관련된 attribute에 링크합니다. 예를 들어, <code>\{\{htmlattrxref("lang")\}\}</code>은 이 링크를 만듭니다: {{htmlattrxref("lang")}}.<code> </code> <code>\{\{htmlattrxref("type","input")\}\}</code>은 이 링크를 만듭니다: {{htmlattrxref("type","input")}}.</li>
- <li>{{TemplateLink("jsxref")}}는 <a href="/ko/docs/Web/JavaScript/Reference" title="JavaScript Reference">JavaScript 참고서</a> 내 페이지에 링크합니다.</li>
- <li>{{TemplateLink("SVGAttr")}}은 특정 SVG attribute에 링크합니다. 예를 들어, <code>\{\{SVGAttr("d")\}\}</code>은 이 링크를 생성합니다: {{SVGAttr("d")}}.</li>
- <li>{{TemplateLink("SVGElement")}}는 SVG 참고서 내 SVG 요소에 링크합니다.</li>
+ <li><code>\{{domxref}}</code>는 DOM 참고서 내 페이지에 링크합니다; 끝에 괄호를 포함하는 경우, 템플릿은 함수 이름처럼 보이도록 표시해야 함을 압니다. 예를 들어, <span class="plain"><span class="nowiki">\{{domxref("document.getElementsByName()")}}</span></span>은 {{ domxref("document.getElementsByName()") }}이 되고 <code>\{\{domxref("Node")\}\}</code>는 {{ domxref("Node") }}가 됩니다.</li>
+ <li><code>\{{event}}</code>는 DOM Event 참고서 내 페이지에 링크합니다, 예: \{{event("change")}}는 {{event("change")}}가 됩니다.</li>
+ <li><code>\{{HTMLElement}}</code>는 HTML 참고서 내 HTML 요소(element)에 링크합니다.</li>
+ <li><code>\{{htmlattrxref}}</code>는 HTML attribute, 전역 attribute 설명 (attribute명만 지정한 경우) 또는 (attribute명 및 요소명을 지정한 경우) 지정 요소와 관련된 attribute에 링크합니다. 예를 들어, <code>\{\{htmlattrxref("lang")\}\}</code>은 이 링크를 만듭니다: {{htmlattrxref("lang")}}.<code> </code> <code>\{\{htmlattrxref("type","input")\}\}</code>은 이 링크를 만듭니다: {{htmlattrxref("type","input")}}.</li>
+ <li><code>\{{jsxref}}</code>는 <a href="/ko/docs/Web/JavaScript/Reference" title="JavaScript Reference">JavaScript 참고서</a> 내 페이지에 링크합니다.</li>
+ <li><code>\{{SVGAttr}}</code>은 특정 SVG attribute에 링크합니다. 예를 들어, <code>\{\{SVGAttr("d")\}\}</code>은 이 링크를 생성합니다: {{SVGAttr("d")}}.</li>
+ <li><code>\{{SVGElement}}</code>는 SVG 참고서 내 SVG 요소에 링크합니다.</li>
 </ul>
 
 <h3 id="버그_및_IRC에_링크하기">버그 및 IRC에 링크하기</h3>
@@ -57,31 +57,31 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 <ul>
  <li>버그
   <ul>
-   <li>{{TemplateLink("bug")}}는 다음 구문을 사용하여 쉽게 bugzilla.mozilla.org의 버그에 링크할 수 있습니다: <code>\{\{Bug(123456)\}\}</code> 이 구문의 결과는: {{ Bug(123456) }}.</li>
-   <li>{{TemplateLink("WebkitBug")}}는 WebKit 버그 데이터베이스 내 버그로 링크를 삽입합니다. 예를 들어, <code>\{\{WebkitBug(31277)\}\}</code>은 {{ WebkitBug(31277) }}를 삽입합니다.</li>
+   <li><code>\{{bug}}</code>는 다음 구문을 사용하여 쉽게 bugzilla.mozilla.org의 버그에 링크할 수 있습니다: <code>\{\{Bug(123456)\}\}</code> 이 구문의 결과는: {{ Bug(123456) }}.</li>
+   <li><code>\{{WebkitBug}}</code>는 WebKit 버그 데이터베이스 내 버그로 링크를 삽입합니다. 예를 들어, <code>\{\{WebkitBug(31277)\}\}</code>은 {{ WebkitBug(31277) }}를 삽입합니다.</li>
   </ul>
  </li>
- <li>{{TemplateLink("IRCLink")}}는 지정된 IRC 채널로의 링크를 삽입합니다, 하는 일과 IRC 클라이언트가 필요함을 말하는 툴팁을 갖춘.</li>
+ <li><code>\{{IRCLink}}</code>는 지정된 IRC 채널로의 링크를 삽입합니다, 하는 일과 IRC 클라이언트가 필요함을 말하는 툴팁을 갖춘.</li>
 </ul>
 
 <h3 id="여러_페이지_안내서를_위한_내비게이션_보조">여러 페이지 안내서를 위한 내비게이션 보조</h3>
 
-<p>{{TemplateLink("Previous")}}, {{TemplateLink("Next")}} 및 {{TemplateLink("PreviousNext")}}는 연속글의 일부인 글을 위한 내비게이션 컨트롤을 제공합니다. 단방향 템플릿의 경우, 필요한 유일한 매개변수는 연속글의 이전 또는 다음 글의 위키 주소입니다. {{TemplateLink("PreviousNext")}}의 경우, 필요한 두 매개변수는 해당 글의 위키 주소입니다. 첫 번째 매개변수는 이전 글이고 두 번째는 다음 글입니다.</p>
+<p><code>\{{Previous}}</code>, <code>\{{Next}}</code> 및 <code>\{{PreviousNext}}</code>는 연속글의 일부인 글을 위한 내비게이션 컨트롤을 제공합니다. 단방향 템플릿의 경우, 필요한 유일한 매개변수는 연속글의 이전 또는 다음 글의 위키 주소입니다. <code>\{{PreviousNext}}</code>의 경우, 필요한 두 매개변수는 해당 글의 위키 주소입니다. 첫 번째 매개변수는 이전 글이고 두 번째는 다음 글입니다.</p>
 
 <h2 id="코드_샘플">코드 샘플</h2>
 
 <h3 id="실시간_샘플">실시간 샘플</h3>
 
 <ul>
- <li>{{TemplateLink("EmbedLiveSample")}}은 페이지 상에 코드 샘플의 출력을 포함할 수 있습니다, <a href="/ko/docs/MDN/Contribute/Structures/Live_samples" title="Live samples">실시간 샘플</a>에 설명된 대로.</li>
- <li>{{TemplateLink("LiveSampleLink")}}는 페이지 상에 코드 샘플의 출력을 포함하는 페이지로의 링크를 만듭니다, <a href="/ko/docs/MDN/Contribute/Structures/Live_samples" title="Live samples">실시간 샘플</a>에 설명된 대로.</li>
+ <li><code>\{{EmbedLiveSample}}</code>은 페이지 상에 코드 샘플의 출력을 포함할 수 있습니다, <a href="/ko/docs/MDN/Contribute/Structures/Live_samples" title="Live samples">실시간 샘플</a>에 설명된 대로.</li>
+ <li><code>\{{LiveSampleLink}}</code>는 페이지 상에 코드 샘플의 출력을 포함하는 페이지로의 링크를 만듭니다, <a href="/ko/docs/MDN/Contribute/Structures/Live_samples" title="Live samples">실시간 샘플</a>에 설명된 대로.</li>
 </ul>
 
 <h3 id="첨부된_샘플_파일">첨부된 샘플 파일</h3>
 
 <ul>
- <li>{{TemplateLink("Embed_text")}} 템플릿은 글 본문 내에 첨부된 텍스트 파일을 삽입할 수 있습니다. 이는 다운로드 가능하지만 글의 콘텐츠에 표시되기도 하는 코드 조각을 갖고 싶은 경우 유용합니다. 구문 강조를 위한 언어를 선택 사항으로 지정할 수도 있습니다; 지정하지 않은 경우, 텍스트는 강조 없이 삽입됩니다. 첫 번째 매개변수는 삽입할 첨부 파일명입니다; 두 번째는, 제공되는 경우 구문 강조기를 적용할 언어입니다, 가령 "javascript", "svg" 또는 "cpp".</li>
- <li>{{TemplateLink("EmbedSVG")}}는 SVG 이미지로서 첨부된 XML 파일을 삽입합니다, 페이지 위에다. 첨부된 SVG 파일의 파일명을 지정하세요. 소스 그리고 같은 파일의 렌더링된 출력을 표시하기 위해 {{TemplateLink("Embed_text")}}와 동시에 이를 사용할 수 있습니다.</li>
+ <li><code>\{{Embed_text}}</code> 템플릿은 글 본문 내에 첨부된 텍스트 파일을 삽입할 수 있습니다. 이는 다운로드 가능하지만 글의 콘텐츠에 표시되기도 하는 코드 조각을 갖고 싶은 경우 유용합니다. 구문 강조를 위한 언어를 선택 사항으로 지정할 수도 있습니다; 지정하지 않은 경우, 텍스트는 강조 없이 삽입됩니다. 첫 번째 매개변수는 삽입할 첨부 파일명입니다; 두 번째는, 제공되는 경우 구문 강조기를 적용할 언어입니다, 가령 "javascript", "svg" 또는 "cpp".</li>
+ <li><code>\{{EmbedSVG}}</code>는 SVG 이미지로서 첨부된 XML 파일을 삽입합니다, 페이지 위에다. 첨부된 SVG 파일의 파일명을 지정하세요. 소스 그리고 같은 파일의 렌더링된 출력을 표시하기 위해 <code>\{{Embed_text}}</code>와 동시에 이를 사용할 수 있습니다.</li>
 </ul>
 
 <h2 id="사이드바_생성">사이드바 생성</h2>
@@ -89,16 +89,16 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 <p>거의 모든 대규모 페이지 컬렉션 용 템플릿이 있습니다. 보통은 참고서/안내서(guide)/지도서(tutorial)의 메인 페이지로 다시 링크하고 (이동 경로 표시(breadcrumb)가 때때로 이를 수행할 수 없기에 종종 필요함) 글을 적절한 항목(category)에 둡니다.</p>
 
 <ul>
- <li>{{TemplateLink("CSSRef")}}는 CSS 참고서 페이지 용 사이드바를 생성합니다.</li>
- <li>{{TemplateLink("HTMLRef")}}는 HTML 참고서 페이지 용 사이드바를 생성합니다.</li>
- <li>{{TemplateLink("APIRef")}}는 Web API 참고서 페이지 용 사이드바를 생성합니다.</li>
+ <li><code>\{{CSSRef}}</code>는 CSS 참고서 페이지 용 사이드바를 생성합니다.</li>
+ <li><code>\{{HTMLRef}}</code>는 HTML 참고서 페이지 용 사이드바를 생성합니다.</li>
+ <li><code>\{{APIRef}}</code>는 Web API 참고서 페이지 용 사이드바를 생성합니다.</li>
 </ul>
 
 <h2 id="범용_형식">범용 형식</h2>
 
 <h3 id="API_문서용_인라인_지시자indicator">API 문서용 인라인 지시자(indicator)</h3>
 
-<p>{{TemplateLink("optional_inline")}} 및 {{TemplateLink("ReadOnlyInline")}}은 API 문서에서 보통 객체의 속성 목록 또는 함수의 매개변수를 기술할 때 사용됩니다.</p>
+<p><code>\{{optional_inline}}</code> 및 <code>\{{ReadOnlyInline}}</code>은 API 문서에서 보통 객체의 속성 목록 또는 함수의 매개변수를 기술할 때 사용됩니다.</p>
 
 <p>용법: <code>\{{optional_inline()}}</code> 또는 <code>\{{ReadOnlyInline()}}</code>. 예:</p>
 
@@ -115,7 +115,7 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 
 <h4 id="비표준">비표준</h4>
 
-<p>{{TemplateLink("non-standard_inline")}}은 API가 표준화되지 않았고 표준 트랙에 없음을 나타내는 인라인 표시를 삽입합니다.</p>
+<p><code>\{{non-standard-inline}}</code>은 API가 표준화되지 않았고 표준 트랙에 없음을 나타내는 인라인 표시를 삽입합니다.</p>
 
 <h5 id="구문"><strong>구문</strong></h5>
 
@@ -129,7 +129,7 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 
 <h4 id="실험용">실험용</h4>
 
-<p>{{TemplateLink("experimental_inline")}}은 API가 널리 구현되지 않고 앞으로 변경될 수 있음을 나타내는 인라인 표시를 삽입합니다.</p>
+<p><code>\{{experimental_inline}}</code>은 API가 널리 구현되지 않고 앞으로 변경될 수 있음을 나타내는 인라인 표시를 삽입합니다.</p>
 
 <h5 id="구문_2">구문</h5>
 
@@ -147,7 +147,7 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 
 <h4 id="Deprecated">Deprecated</h4>
 
-<p>{{TemplateLink("deprecated_inline")}}은 공식으로 사라질 API의 사용을 삼가도록 인라인 사라질(deprecated) 표시를 삽입합니다. <strong>주의:</strong> "사라질"은 더 이상 사용되지 않지만 여전히 기능함을 뜻합니다. 전혀 작동하지 않음을 뜻하는 경우, 용어 "안 씀(obsolete)"을 쓰세요.</p>
+<p><code>\{{deprecated_inline}}</code>은 공식으로 사라질 API의 사용을 삼가도록 인라인 사라질(deprecated) 표시를 삽입합니다. <strong>주의:</strong> "사라질"은 더 이상 사용되지 않지만 여전히 기능함을 뜻합니다. 전혀 작동하지 않음을 뜻하는 경우, 용어 "안 씀(obsolete)"을 쓰세요.</p>
 
 <p>모든 브라우저에 쓰일 수 있는 영역(HTML, API, JS, CSS, …)에는 매개변수를 사용하지 마세요.</p>
 
@@ -162,26 +162,9 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
  <li>배지: {{deprecated_inline("gecko5")}}</li>
 </ul>
 
-<h4 id="Obsolete">Obsolete</h4>
-
-<p>{{TemplateLink("obsolete_inline")}}은 공식으로 안 쓰는(obsolete) 예를 들어 함수, 메서드 또는 속성이 사용을 막기 위해 인라인 안 씀 표시를 삽입합니다.</p>
-
-<p>모든 브라우저에 쓰일 수 있는 영역(HTML, API, JS, CSS, …)에는 매개변수를 사용하지 마세요.</p>
-
-<h5 id="구문_4">구문</h5>
-
-<p><code>\{{obsolete_inline}}</code> 또는 <code>\{{obsolete_inline("js1.8.5")}}</code></p>
-
-<h5 id="예_4">예</h5>
-
-<ul>
- <li>아이콘: {{obsolete_inline}}</li>
- <li>배지: {{obsolete_inline("js1.8.5")}}</li>
-</ul>
-
 <h3 id="템플릿_배지">템플릿 배지</h3>
 
-<p>이 매크로는 대부분 <a href="/ko/docs/WebAPI">WebAPI</a> 페이지에 사용됩니다. 새 배지 생성 정보는 {{anch("Creating new badges")}} 참조.</p>
+<p>이 매크로는 대부분 <a href="/ko/docs/WebAPI">WebAPI</a> 페이지에 사용됩니다. 새 배지 생성 정보는 <a href="#creating_new_badges">Creating new badges</a> 참조.</p>
 
 <h3 id="페이지_또는_절_표제_지시자">페이지 또는 절 표제 지시자</h3>
 
@@ -189,16 +172,14 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 
 <ul>
  <li>{{TemplateLink("non-standard_header")}}: <code>\{{Non-standard_header()}}</code> {{ Non-standard_header() }}</li>
- <li>{{TemplateLink("SeeCompatTable")}}은 "브라우저 호환성" 절을 제공하는 페이지에 사용되어야 합니다. 예: <code>\{{SeeCompatTable()}}</code> {{ SeeCompatTable() }}</li>
- <li>{{TemplateLink("deprecated_header")}}: <code>\{{deprecated_header()}}</code> {{ Deprecated_header() }}</li>
- <li>매개변수 있는 {{TemplateLink("deprecated_header")}}: <code>\{{deprecated_header("gecko5")}}</code> {{ Deprecated_header("gecko5") }} 모든 브라우저에 쓰일 수 있는 영역(HTML, APIs, JS, CSS, …)에는 매개변수를 사용하지 마세요.</li>
- <li>{{TemplateLink("obsolete_header")}}: <code>\{{obsolete_header()}}</code> {{ Obsolete_header() }}</li>
- <li>매개변수 있는 {{TemplateLink("obsolete_header")}}: <code>\{{obsolete_header("gecko30")}}</code> {{ Obsolete_header("gecko30") }} 모든 브라우저에 쓰일 수 있는 영역(HTML, APIs, JS, CSS, …)에는 매개변수를 사용하지 마세요.</li>
+ <li><code>\{{SeeCompatTable}}</code>은 "브라우저 호환성" 절을 제공하는 페이지에 사용되어야 합니다. 예: <code>\{{SeeCompatTable()}}</code> {{ SeeCompatTable() }}</li>
+ <li><code>\{{deprecated_header}}</code>: <code>\{{deprecated_header()}}</code> {{ Deprecated_header() }}</li>
+ <li>매개변수 있는 <code>\{{deprecated_header}}</code>: <code>\{{deprecated_header("gecko5")}}</code> {{ Deprecated_header("gecko5") }} 모든 브라우저에 쓰일 수 있는 영역(HTML, APIs, JS, CSS, …)에는 매개변수를 사용하지 마세요.</li>
 </ul>
 
 <h3 id="기능을_웹_워커에서_이용가능한_지_나타내기">기능을 웹 워커에서 이용가능한 지 나타내기</h3>
 
-<p>{{TemplateLink("AvailableInWorkers")}} 매크로 기능이 <a href="/ko/docs/Web/API/Web_Workers_API">웹 워커</a> 컨텍스트에서 이용 가능한지를 나타내는 지역화된 메모 상자를 삽입합니다.</p>
+<p><code>\{{AvailableInWorkers}}</code> 매크로 기능이 <a href="/ko/docs/Web/API/Web_Workers_API">웹 워커</a> 컨텍스트에서 이용 가능한지를 나타내는 지역화된 메모 상자를 삽입합니다.</p>
 
 <ol>
 </ol>

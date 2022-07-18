@@ -19,7 +19,9 @@ La méthode **`set()`** ajoute un nouvel élément avec une `clé` et une `valeu
 
 ## Syntaxe
 
-    maMap.set(clé, valeur);
+```js
+maMap.set(clé, valeur);
+```
 
 ### Paramètres
 

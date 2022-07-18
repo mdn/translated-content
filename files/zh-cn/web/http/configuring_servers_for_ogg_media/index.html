@@ -7,7 +7,7 @@ translation_of: Web/HTTP/Configuring_servers_for_Ogg_media
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安装任何插件或软件即可播放媒体文件。本指南包括了一些服务器配置修改，这些修改对于web服务器提供 Ogg 媒体文件是必要的。 这些信息在遇到服务器未配置为可识别的其他媒体类型文件时也可能提供帮助。</p>
+<p>HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安装任何插件或软件即可播放媒体文件。本指南包括了一些服务器配置修改，这些修改对于 web 服务器提供 Ogg 媒体文件是必要的。 这些信息在遇到服务器未配置为可识别的其他媒体类型文件时也可能提供帮助。</p>
 
 <h2 id="为媒体提供正确的_MIME_类型">为媒体提供正确的 MIME 类型</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/HTTP/Configuring_servers_for_Ogg_media
 
 <p>如果不确定 Ogg 文件是否包含音频或视频，可以和 MIME 类型 <code>application/ogg</code>一起提供，浏览器会将其视为视频文件。</p>
 
-<p>默认情况下，大多数服务器不为Ogg媒体提供正确的MIME类型，因此可能需要为此添加适当的配置。</p>
+<p>默认情况下，大多数服务器不为 Ogg 媒体提供正确的 MIME 类型，因此可能需要为此添加适当的配置。</p>
 
 <p>对于 Apache，可添加如下配置：</p>
 

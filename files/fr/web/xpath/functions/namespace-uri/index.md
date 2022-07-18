@@ -12,7 +12,9 @@ La fonction `namespace-uri` retourne une chaîne représentant l'URI de l'espace
 
 ### Syntaxe
 
-    namespace-uri( [ensemble-de-nœuds] )
+```
+namespace-uri( [ensemble-de-nœuds] )
+```
 
 ### Arguments
 

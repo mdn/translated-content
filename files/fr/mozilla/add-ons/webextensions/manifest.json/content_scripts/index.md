@@ -269,10 +269,10 @@ Les deux adresses `http://example.org/` et `http://example.com/` correspondront.
 
 Étant donné que `matches` est la seule clé obligatoire, les trois autres clés sont utilisées pour limiter davantage les URL qui correspondent. Pour associer la clé dans son ensemble, une URL doit&nbsp;:
 
-1.  Correspondre à la propriété `matches`&nbsp;;
-2.  ET associer à la propriété `include_globs`, si présent&nbsp;;
-3.  ET NE PAS correspondre à la propriété `exclude_matches`, si présent&nbsp;;
-4.  ET NE PAS correspondre à la propriété `exclude_globs`, si présent.
+1. Correspondre à la propriété `matches`&nbsp;;
+2. ET associer à la propriété `include_globs`, si présent&nbsp;;
+3. ET NE PAS correspondre à la propriété `exclude_matches`, si présent&nbsp;;
+4. ET NE PAS correspondre à la propriété `exclude_globs`, si présent.
 
 ### globs
 

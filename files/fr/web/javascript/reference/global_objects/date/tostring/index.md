@@ -18,7 +18,9 @@ La méthode **`toString()`** renvoie une chaîne de caractères représentant l'
 
 ## Syntaxe
 
-    dateObj.toString()
+```js
+dateObj.toString()
+```
 
 ### Valeur de retour
 

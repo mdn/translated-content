@@ -22,7 +22,9 @@ La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en
 
 ## Syntaxe
 
-    var donneesEncodees = scope.btoa(chaineAEncoder);
+```js
+var donneesEncodees = scope.btoa(chaineAEncoder);
+```
 
 ### Paramètres
 
@@ -37,12 +39,14 @@ Une chaîne contenant la représentation Base64 de la `chaineAEncoder`.
 
 ## Exemple
 
-    var donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne
-    var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
+```js
+var donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne
+var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
+```
 
 ## Notes
 
-Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}} pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
+Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode [`atob()`](/fr/docs/Web/API/atob) pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
 
 `btoa()` est également disponible pour les composants XPCOM implémentés en JavaScript, même si {domxref("Window")}} n'est pas l'objet global dans les composants.
 
@@ -52,20 +56,22 @@ Dans la plupart des navigateurs, l'appel de `btoa()` sur une chaîne Unicode eng
 
 Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html)&nbsp;:
 
-    // Chaîne ucs-2 en ascii encodé en base64
-    function uena(chn) {
-        return window.btoa(unescape(encodeURIComponent(chn)));
-    }
-    // Ascii encodé en base64 en chaîne ucs-2
-    function aenu(chn) {
-        return decodeURIComponent(escape(window.atob(chn)));
-    }
-    // Usage :
-    uena('✓ à la mode'); // 4pyTIMOgIGxhIG1vZGU=
-    aenu('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
+```js
+// Chaîne ucs-2 en ascii encodé en base64
+function uena(chn) {
+  return window.btoa(unescape(encodeURIComponent(chn)));
+}
+// Ascii encodé en base64 en chaîne ucs-2
+function aenu(chn) {
+  return decodeURIComponent(escape(window.atob(chn)));
+}
+// Usage :
+uena('✓ à la mode'); // 4pyTIMOgIGxhIG1vZGU=
+aenu('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 
-    uena('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
-    aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"
+uena('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
+aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"
+```
 
 Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/D%C3%A9coder_encoder_en_base64).
 
@@ -86,5 +92,5 @@ Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des
 
 - [Base64 encoding and decoding](/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
 - [Les URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
-- {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}
+- [`atob()`](/fr/docs/Web/API/atob)
 - [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)

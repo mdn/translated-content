@@ -7,19 +7,19 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 
 <div> </div>
 
-<p><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> 规范详细说明了对齐(alignment)在各种布局方法中的工作原理; 在此页面中，我们将探讨盒子对齐（box aligment）在Flexbox环境中的工作原理。 由于此页面旨在详细说明特定于Flexbox和框对齐的内容，因此应与<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> 页面一起阅读，该页面详细说明了不同布局方法的框对齐的常见方法。</p>
+<p><a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> 规范详细说明了对齐 (alignment) 在各种布局方法中的工作原理; 在此页面中，我们将探讨盒子对齐（box aligment）在 Flexbox 环境中的工作原理。由于此页面旨在详细说明特定于 Flexbox 和框对齐的内容，因此应与<a href="/en-US/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a> 页面一起阅读，该页面详细说明了不同布局方法的框对齐的常见方法。</p>
 
 <h2 id="基础示例">基础示例</h2>
 
-<p>在此示例中，使用{{cssxref("justify-content")}}在主轴上对齐三个弹性元素（flex items），并使用{{cssxref("align-items")}}在十字轴上对齐。 第一个元素通过将{{cssxref("align-self")}}设置为居中来覆盖在父元素设置的align-items值。</p>
+<p>在此示例中，使用{{cssxref("justify-content")}}在主轴上对齐三个弹性元素（flex items），并使用{{cssxref("align-items")}}在十字轴上对齐。第一个元素通过将{{cssxref("align-self")}}设置为居中来覆盖在父元素设置的 align-items 值。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}</p>
 
 <h2 id="轴_与_flex-direction">轴 与 flex-direction</h2>
 
-<p>Flexbox与文档的写入模式有关，因此如果您使用英语并将{{cssxref("justify-content")}}设置为flex-end，则会将项目对齐到Flex容器的末尾。 如果您将{{cssxref("flex-direction")}}设置为行，则此对齐将处于内联方向。</p>
+<p>Flexbox 与文档的写入模式有关，因此如果您使用英语并将{{cssxref("justify-content")}}设置为 flex-end，则会将项目对齐到 Flex 容器的末尾。如果您将{{cssxref("flex-direction")}}设置为行，则此对齐将处于内联方向。</p>
 
-<p>但是，在Flexbox中，您可以通过将flex-direction设置为column来更改主轴。 在这种情况下，justify-content将在块方向上对齐项目。 因此，在Flexbox中工作时最容易考虑主轴和纵轴，如下所示：</p>
+<p>但是，在 Flexbox 中，您可以通过将 flex-direction 设置为 column 来更改主轴。在这种情况下，justify-content 将在块方向上对齐项目。因此，在 Flexbox 中工作时最容易考虑主轴和纵轴，如下所示：</p>
 
 <ul>
  <li>主轴由<code>flex-direction</code>设置方向，通过<code>justify-content</code> 属性对齐</li>
@@ -40,19 +40,19 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
  <li>{{cssxref("align-content")}}</li>
 </ul>
 
-<h3 id="justify-self_在_Flexbox布局中失效">justify-self 在 Flexbox布局中失效</h3>
+<h3 id="justify-self_在_Flexbox布局中失效">justify-self 在 Flexbox 布局中失效</h3>
 
-<p>在主轴上，Flexbox将我们的内容作为一个组进行处理。 计算布置子元素所需的空间量，然后剩余空间可用于分配。 <code>justify-content</code>属性控制剩余空间的使用方式。 设置<code>justify-content：flex-end</code>，额外空间放在所有子元素之前，<code>justify-content：space-around</code>，它放在该维度的子元素的两侧，等等。</p>
+<p>在主轴上，Flexbox 将我们的内容作为一个组进行处理。计算布置子元素所需的空间量，然后剩余空间可用于分配。 <code>justify-content</code>属性控制剩余空间的使用方式。设置<code>justify-content：flex-end</code>，额外空间放在所有子元素之前，<code>justify-content：space-around</code>，它放在该维度的子元素的两侧，等等。</p>
 
-<p>这意味着在Flexbox中，<code>justify-self</code>属性没有意义，因为我们总是处理移动整个元素组。</p>
+<p>这意味着在 Flexbox 中，<code>justify-self</code>属性没有意义，因为我们总是处理移动整个元素组。</p>
 
-<p>在十字轴上，<code>align-self</code>是有意义的，因为我们可能在该维度中的flex容器中有额外的空间，其中单个元素可以移动到开始和结束位置。</p>
+<p>在十字轴上，<code>align-self</code>是有意义的，因为我们可能在该维度中的 flex 容器中有额外的空间，其中单个元素可以移动到开始和结束位置。</p>
 
 <h2 id="对齐_与_auto_margins">对齐 与 auto margins</h2>
 
-<p>在Flexbox中有一个特定的用例，我们可能会认为<code>justify-self</code>是我们需要的，这就是我们想要分割一组flex items，也许是为了创建一个分割导航模式。 对于此用例，我们可以使用自动边距。 设置为auto的边距将吸收其维度中的所有可用空间。 这就是以自动边距为中心的块的工作原理。 通过将左右边距设置为auto，我们块的两侧都会尝试占用所有可用空间，因此将盒子推入中心。</p>
+<p>在 Flexbox 中有一个特定的用例，我们可能会认为<code>justify-self</code>是我们需要的，这就是我们想要分割一组 flex items，也许是为了创建一个分割导航模式。对于此用例，我们可以使用自动边距。设置为 auto 的边距将吸收其维度中的所有可用空间。这就是以自动边距为中心的块的工作原理。通过将左右边距设置为 auto，我们块的两侧都会尝试占用所有可用空间，因此将盒子推入中心。</p>
 
-<p>通过在一组弹性项目中的一个项目上设置auto的{{cssxref("margin")}}全部对齐以开始，我们可以创建拆分导航。 这适用于Flexbox和对齐属性。 一旦没有可用于自动边距的空间，该项目的行为与所有其他弹性项目的行为相同，并且收缩以尝试适合空间。</p>
+<p>通过在一组弹性项目中的一个项目上设置 auto 的{{cssxref("margin")}}全部对齐以开始，我们可以创建拆分导航。这适用于 Flexbox 和对齐属性。一旦没有可用于自动边距的空间，该项目的行为与所有其他弹性项目的行为相同，并且收缩以尝试适合空间。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}</p>
 
@@ -71,7 +71,7 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 <p>在纵轴上，<code>row-gap</code>属性将在相邻的子元素之间创建间距，因此还必须将<code>flex-wrap</code>设置为<code>wrap</code>,以使其具有任何效果。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 从Firefox 63开始，Firefox是唯一实现Flexbox gap属性的浏览器。</p>
+<p><strong>注意</strong>: 从 Firefox 63 开始，Firefox 是唯一实现 Flexbox gap 属性的浏览器。</p>
 </div>
 
 <h2 id="Reference">Reference</h2>

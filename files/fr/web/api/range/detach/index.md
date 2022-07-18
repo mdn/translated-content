@@ -9,7 +9,9 @@ La méthode **`Range.detach()`** n'a aucun effet. Elle permet de désactiver l'o
 
 ## Syntaxe
 
-    range.detach();
+```js
+range.detach();
+```
 
 ## Exemple
 

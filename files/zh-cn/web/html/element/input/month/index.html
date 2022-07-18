@@ -18,11 +18,11 @@ original_slug: Web/HTML/Element/Input/月份
 
 <p>对于那些使用不支持的浏览器的用户，Chrome / Opera 月份控制如下图所示。单击右侧的向下箭头会显示日期选择器，以便您选择日期;你必须手动输入时间。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15391/month-control-chrome.png" style="display: block; height: 216px; margin: 0px auto; width: 273px;"></p>
+<p><img src="month-control-chrome.png"></p>
 
 <p>Edge 的 <code>month</code> 看起来像这样的：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15393/month-control-edge.png" style="display: block; height: 389px; margin: 0px auto; width: 227px;"></p>
+<p><img src="month-control-edge.png"></p>
 
 <table class="properties">
  <tbody>
@@ -204,7 +204,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>Here's'a screenshot for those of you who aren't using a supporting browser:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15395/month-required.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="month-required.png"></p>
 
 <p>Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.</p>
 
@@ -241,7 +241,7 @@ input:valid+span:after {
 
 <p>As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the <code>month</code> picker on Chrome for Android looks like this:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15397/month-android.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="month-android.png"></p>
 
 <p>Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.</p>
 

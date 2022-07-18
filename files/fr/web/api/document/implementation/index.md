@@ -14,7 +14,9 @@ Retourne un objet {{domxref("DOMImplementation")}} associé avec le document cou
 
 ## Syntaxe
 
-    DOMImpObj = document.implementation;
+```js
+DOMImpObj = document.implementation;
+```
 
 ## Exemple
 

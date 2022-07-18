@@ -12,7 +12,7 @@ translation_of: Web/HTTP
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><strong><dfn>超文本传输​​协议（HTTP）</dfn></strong>是一个用于传输超媒体文档（例如 HTML）的<a href="https://en.wikipedia.org/wiki/Application_Layer">应用层</a>协议。它是为 Web 浏览器与 Web 服务器之间的通信而设计的，但也可以用于其他目的。HTTP 遵循经典的<a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">客户端-服务端模型</a>，客户端打开一个连接以发出请求，然后等待直到收到服务器端响应。HTTP 是<a href="http://en.wikipedia.org/wiki/Stateless_protocol">无状态协议</a>，这意味着服务器不会在两个请求之间保留任何数据（状态）。尽管通常基于 TCP/IP 层，但它可以在任何可靠的<a href="https://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E5%B1%82">传输层</a>上使用，也就是说，该协议不会像 UDP 那样静默的丢失消息。<a href="https://en.wikipedia.org/wiki/Reliable_User_Datagram_Protocol">RUDP</a>——作为 UDP 的可靠化升级版本——是一种合适的替代选择。</p>
+<p><strong><dfn>超文本传输协议（HTTP）</dfn></strong>是一个用于传输超媒体文档（例如 HTML）的<a href="https://en.wikipedia.org/wiki/Application_Layer">应用层</a>协议。它是为 Web 浏览器与 Web 服务器之间的通信而设计的，但也可以用于其他目的。HTTP 遵循经典的<a href="https://en.wikipedia.org/wiki/Client%E2%80%93server_model">客户端 - 服务端模型</a>，客户端打开一个连接以发出请求，然后等待直到收到服务器端响应。HTTP 是<a href="http://en.wikipedia.org/wiki/Stateless_protocol">无状态协议</a>，这意味着服务器不会在两个请求之间保留任何数据（状态）。尽管通常基于 TCP/IP 层，但它可以在任何可靠的<a href="https://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E5%B1%82">传输层</a>上使用，也就是说，该协议不会像 UDP 那样静默的丢失消息。<a href="https://en.wikipedia.org/wiki/Reliable_User_Datagram_Protocol">RUDP</a>——作为 UDP 的可靠化升级版本——是一种合适的替代选择。</p>
 
 <div class="column-container">
 <div class="column-half">
@@ -22,12 +22,12 @@ translation_of: Web/HTTP
 
 <dl>
  <dt><a href="/zh-CN/docs/Web/HTTP/Overview">HTTP 概述</a></dt>
- <dd>介绍了客户端-服务器端协议的基本特征：它能够做什么以及它的设计意图。</dd>
+ <dd>介绍了客户端 - 服务器端协议的基本特征：它能够做什么以及它的设计意图。</dd>
  <dt><a href="/zh-CN/docs/Web/HTTP/Caching_FAQ">HTTP 缓存</a></dt>
  <dd>缓存对高速 Web 站点来说是非常之重要的。这篇文章阐述了不同种类的缓存以及如何配置 HTTP Headers 来控制它们。</dd>
  <dt><a href="/zh-CN/docs/Web/HTTP/Cookies">HTTP Cookie</a></dt>
- <dd><a href="http://tools.ietf.org/html/rfc6265">RFC 6265</a> 定义了 cookie 的工作方式。<font><font>在处理 HTTP 请求时，服务器可以在 HTTP 响应头中通过</font></font>HTTP Headers<font><font> </font></font><code>Set-Cookie</code> <font><font>为客户端设置  cookie。</font></font>然后，对于同一服务器发起的每一个请求，客户端都会在 HTTP 请求头中以字段 <code>Cookie</code> 的形式将 cookie 的值发送过去。也可以将 cookie 设置为在特定日期过期，或限制为特定的域和路径。</dd>
- <dt><a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">跨域资源共享（CORS） </a></dt>
+ <dd><a href="http://tools.ietf.org/html/rfc6265">RFC 6265</a> 定义了 cookie 的工作方式。在处理 HTTP 请求时，服务器可以在 HTTP 响应头中通过 HTTP Headers <code>Set-Cookie</code> 为客户端设置  cookie。然后，对于同一服务器发起的每一个请求，客户端都会在 HTTP 请求头中以字段 <code>Cookie</code> 的形式将 cookie 的值发送过去。也可以将 cookie 设置为在特定日期过期，或限制为特定的域和路径。</dd>
+ <dt><a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">跨域资源共享（CORS）</a></dt>
  <dd><strong>跨站点 HTTP 请求</strong>就是从<strong>另一个域名</strong>，而不是资源所在的域名发起的 HTTP 请求。举例来说，在域名 A (<code>http://domaina.example/</code>) 的 HTML 页面上使用 <code>img</code> 元素 (<code>&lt;img src="http://domainb.foo/image.jpg"&gt;</code>) 来请求域名 B (http://domainb.foo/) 上的图片资源。这在当今的 Web 页面上是很常见的 —— 加载跨站点资源，包括 CSS 样式表，图片，脚本和其他资源。CORS 允许 Web 开发人员控制其站点对跨站点请求的反应。</dd>
  <dt><a href="/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP">HTTP 的演变</a></dt>
  <dd>简单描述了从早期版本的 HTTP 到现代 HTTP/2，新兴的 HTTP/3 以及未来版本的 HTTP 这个过程中发生的变更。</dd>
@@ -49,7 +49,7 @@ translation_of: Web/HTTP
 
 <dl>
  <dt><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 头</a></dt>
- <dd>HTTP 消息头用于描述资源或服务器或客户端的行为。<font><font>可以使用 </font></font><code>X-</code><font><font> 前缀添加自定义专有头。</font></font>其他的可以在 <a class="external" href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers">IANA registry</a> 中找到，其原始定义在 <a class="external" href="https://tools.ietf.org/html/rfc4229">RFC 4229</a>。IANA 同时也维护着一份 <a class="external" href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers">registry of proposed new HTTP message headers</a>。</dd>
+ <dd>HTTP 消息头用于描述资源或服务器或客户端的行为。可以使用 <code>X-</code> 前缀添加自定义专有头。其他的可以在 <a class="external" href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers">IANA registry</a> 中找到，其原始定义在 <a class="external" href="https://tools.ietf.org/html/rfc4229">RFC 4229</a>。IANA 同时也维护着一份 <a class="external" href="https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers">registry of proposed new HTTP message headers</a>。</dd>
  <dt><a href="/zh-CN/docs/Web/HTTP/Methods">HTTP 请求方式</a></dt>
  <dd>可以使用 HTTP: {{HTTPMethod("GET")}}，{{HTTPMethod("POST")}} 方式来完成不同操作，或是一些不太常见的请求方式，像是： {{HTTPMethod("OPTIONS")}}，{{HTTPMethod("DELETE")}} 和 {{HTTPMethod("TRACE")}}。</dd>
  <dt><a href="/zh-CN/docs/Web/HTTP/Response_codes">HTTP 状态码 </a></dt>

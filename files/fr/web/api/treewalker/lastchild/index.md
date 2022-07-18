@@ -15,7 +15,9 @@ La méthode **`TreeWalker.lastChild()`** déplace le {{domxref("Node")}} courant
 
 ## Syntaxe
 
-    node = treeWalker.lastChild();
+```js
+node = treeWalker.lastChild();
+```
 
 ## Exemple
 

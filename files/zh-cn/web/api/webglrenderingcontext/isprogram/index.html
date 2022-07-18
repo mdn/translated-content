@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/isProgram
 ---
 <p>{{APIRef("WebGL")}}</p>
 
-<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>中的<strong><code>WebGLRenderingContext.isProgram()</code></strong> 函数 将会在{{domxref("WebGLProgram")}}是一个合法的着色器程序(program)时返回 <code>true</code> , 而在其他情况返回<code>false</code></p>
+<p> <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a>中的<strong><code>WebGLRenderingContext.isProgram()</code></strong> 函数 将会在{{domxref("WebGLProgram")}}是一个合法的着色器程序 (program) 时返回 <code>true</code> , 而在其他情况返回<code>false</code></p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,11 +21,11 @@ translation_of: Web/API/WebGLRenderingContext/isProgram
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个表示program是否有效的 {{domxref("GLboolean")}} 值.</p>
+<p>一个表示 program 是否有效的 {{domxref("GLboolean")}} 值。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="检查一个program是否有效">检查一个program是否有效</h3>
+<h3 id="检查一个program是否有效">检查一个 program 是否有效</h3>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');
@@ -38,25 +38,7 @@ gl.isProgram(program);
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.9", "isProgram")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glIsProgram.xml", "glIsProgram")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Man page of the OpenGL API.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

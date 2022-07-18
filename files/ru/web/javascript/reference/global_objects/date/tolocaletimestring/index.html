@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 
 <h3 id="Example:_Using_toLocaleTimeString">Пример: использование метода <code>toLocaleTimeString()</code></h3>
 <p>При базовом использовании без указания локали возвращается строка, отформатированная в соответствии с локалью и опциями по умолчанию.</p>
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
+<pre class="brush: js">const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // Вывод toLocaleTimeString() без аргументов зависит от реализации,
 // локали по умолчанию и часового пояса по умолчанию
@@ -49,7 +49,7 @@ console.log(date.toLocaleTimeString());
 
 <h3 id="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
 <p>Этот пример показывает некоторые локализованные форматы времени. Для получения формата языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Форматирование ниже предполагает, что местный часовой пояс равен
 // America/Los_Angeles для локали США
@@ -78,10 +78,10 @@ console.log(date.toLocaleTimeString(['ban', 'id']));
 
 <h3 id="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
 <p>Результат, предоставляемый методом <code>toLocaleTimeString()</code>, может быть настроен с помощью аргумента <code>options</code>:</p>
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Приложение может захотеть использовать UTC и показать это
-var options = { timeZone: 'UTC', timeZoneName: 'short' };
+const options = { timeZone: 'UTC', timeZoneName: 'short' };
 console.log(date.toLocaleTimeString('en-US', options));
 // → "3:00:00 AM GMT"
 

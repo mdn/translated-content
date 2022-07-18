@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 
 <p><strong><code>RegExp</code></strong> 对象用于将文本与一个模式匹配。</p>
 
-<p>有关正则表达式的介绍，请阅读 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/">JavaScript指南</a>中的<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式章节</a>。</p>
+<p>有关正则表达式的介绍，请阅读 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/">JavaScript 指南</a>中的<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式章节</a>。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 
 <dl>
  <dt>字面量</dt>
- <dd>由斜杠(/)包围而不是引号包围。</dd>
+ <dd>由斜杠 (/) 包围而不是引号包围。</dd>
  <dt>构造函数的字符串参数</dt>
  <dd>由引号而不是斜杠包围。</dd>
 </dl>
@@ -38,9 +38,9 @@ new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数</pre>
 
 <p>而正则表达式对象的构造函数，如 <code>new RegExp('ab+c')</code> 提供了正则表达式运行时编译（runtime compilation）。如果你知道正则表达式模式将会改变，或者你事先不知道什么模式，而是从另一个来源获取，如用户输入，这些情况都可以使用构造函数。</p>
 
-<h3 id="构造函数中的标志参数flags">构造函数中的标志参数(flags)</h3>
+<h3 id="构造函数中的标志参数flags">构造函数中的标志参数 (flags)</h3>
 
-<p>从 ECMAScript 6 开始，当第一个参数为正则表达式而第二个标志参数存在时，<code>new RegExp(/ab+c/, 'i')</code> 不再抛出 {{jsxref("TypeError")}} （<code>"从另一个RegExp构造一个RegExp时无法提供标志"</code>）的异常，取而代之，将使用这些参数创建一个新的正则表达式。</p>
+<p>从 ECMAScript 6 开始，当第一个参数为正则表达式而第二个标志参数存在时，<code>new RegExp(/ab+c/, 'i')</code> 不再抛出 {{jsxref("TypeError")}}（<code>"从另一个 RegExp 构造一个 RegExp 时无法提供标志"</code>）的异常，取而代之，将使用这些参数创建一个新的正则表达式。</p>
 
 <p>当使用构造函数创造正则对象时，需要常规的字符转义规则（在前面加反斜杠 <code>\</code>）。</p>
 
@@ -51,7 +51,7 @@ var re = /\w+/;</pre>
 
 <h3 id="Perl-like_RegExp_属性">Perl-like RegExp 属性</h3>
 
-<p>请注意，{{jsxref("RegExp")}}属性有长名称和短名称（类似Perl）。两个名称总是引用同一个值。（Perl是JavaScript为其正则表达式建模的编程语言）。另请参见<a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties">不推荐使用的RegExp属性。</a></p>
+<p>请注意，{{jsxref("RegExp")}}属性有长名称和短名称（类似 Perl）。两个名称总是引用同一个值。（Perl 是 JavaScript 为其正则表达式建模的编程语言）。另请参见<a href="/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#RegExp_Properties">不推荐使用的 RegExp 属性。</a></p>
 
 <h2 id="构造函数">构造函数</h2>
 
@@ -119,7 +119,7 @@ var re = /\w+/;</pre>
 
 <p>下例使用  {{jsxref("Global_Objects/String", "String")}} 的 {{jsxref("String.prototype.replace()", "replace()")}} 方法去匹配姓名 <em>first last </em>输出新的格式 <em>last</em>, <em>first</em>。</p>
 
-<p>在替换的文本中，脚本中使用 <code>$1</code> 和 <code>$2</code> 指明括号里先前的匹配.</p>
+<p>在替换的文本中，脚本中使用 <code>$1</code> 和 <code>$2</code> 指明括号里先前的匹配。</p>
 
 <pre class="brush: js">let re = /(\w+)\s(\w+)/;
 let str = "John Smith";
@@ -131,7 +131,7 @@ console.log(newstr);
 
 <h3 id="使用正则来划分带有多种行结束符和换行符的文本">使用正则来划分带有多种行结束符和换行符的文本</h3>
 
-<p>对于不同的平台（Unix，Windows等等），其默认的行结束符是不一样的. 而下面的划分方式适用于所有平台。</p>
+<p>对于不同的平台（Unix，Windows 等等），其默认的行结束符是不一样的。而下面的划分方式适用于所有平台。</p>
 
 <pre>let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
 let lines = text.split(/\r\n|\r|\n/)
@@ -175,7 +175,7 @@ while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 // [ '3', index: 2, input: '123 456', groups: undefined ] AND re.lastIndex 3
 //   ... and no more match.</pre>
 
-<p>如果使用带有全局标志<code>g</code>的正则表达式<code>re</code>，就会捕获字符串中的所有6个数字，而非3个</p>
+<p>如果使用带有全局标志<code>g</code>的正则表达式<code>re</code>，就会捕获字符串中的所有 6 个数字，而非 3 个</p>
 
 <h3 id="Browser_Compatibility">使用正则表达式和 Unicode 字符</h3>
 
@@ -198,7 +198,7 @@ console.log(regex.lastIndex);  // prints "15"
 
 // and so on</pre>
 
-<p><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode属性转义特性</a>引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：<a href="http://kourge.net/projects/regexp-unicode-block" title="http://kourge.net/projects/regexp-unicode-block">Regexp-unicode-block</a></p>
+<p><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode 属性转义特性</a>引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：<a href="http://kourge.net/projects/regexp-unicode-block" title="http://kourge.net/projects/regexp-unicode-block">Regexp-unicode-block</a></p>
 
 <h3 id="从_URL_中提取子域名">从 URL 中提取子域名</h3>
 
@@ -208,7 +208,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong>使用浏览器内建的<a href="/en-US/docs/Web/API/URL_API">URL API</a>而非正则表达式来解析URL是更好的做法</p>
+<p><strong>备注：</strong>使用浏览器内建的<a href="/en-US/docs/Web/API/URL_API">URL API</a>而非正则表达式来解析 URL 是更好的做法</p>
 </div>
 
 <h2 id="规范">规范</h2>
@@ -256,12 +256,12 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
   console.log("'group:" + group + "'");
 }); // 'group:undefined'</code></pre>
 
-<p>注意，由于web兼容性 <code>RegExp.$N</code> 仍会返回一个空的字符串代替 <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
+<p>注意，由于 web 兼容性 <code>RegExp.$N</code> 仍会返回一个空的字符串代替 <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript指南</a>中的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>一节</li>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript 指南</a>中的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>一节</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match">String.prototype.match()</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">String.prototype.replace()</a></li>
 </ul>

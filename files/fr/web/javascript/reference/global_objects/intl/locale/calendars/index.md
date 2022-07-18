@@ -66,6 +66,7 @@ console.log(arEG.calendars); // affiche ["gregory", "coptic", "islamic", "islami
 let jaJP = new Intl.Locale("ja-JP");
 console.log(jaJP.calendars); // affiche ["gregory", "japanese"]
 ```
+
 ## Spécifications
 
 {{Specifications}}

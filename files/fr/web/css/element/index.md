@@ -18,7 +18,9 @@ Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("d
 
 ## Syntaxe
 
-    element(id)
+```
+element(id)
+```
 
 ### Paramètres
 

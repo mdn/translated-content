@@ -11,19 +11,19 @@ translation_of: Web/API/Notification/requestPermission
 
 <h2 id="语法">语法</h2>
 
-<p>最新的规范已将此方法更新为基于promise的语法，工作原理如下：</p>
+<p>最新的规范已将此方法更新为基于 promise 的语法，工作原理如下：</p>
 
 <pre class="brush: js">Notification.requestPermission().then(function(permission) { ... });</pre>
 
 <p>以前，语法是基于一个简单的回调；此版本现<s style="color: red;">已弃用</s>：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">Notification<span class="punctuation token">.</span><span class="function token">requestPermission</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">Notification.requestPermission(callback);</code></pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>callback</code> {{optional_inline}} {{deprecated_inline("gecko46")}}</dt>
- <dd>一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用Promise的语法。</dd>
+ <dd>一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 Promise 的语法。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -46,22 +46,9 @@ translation_of: Web/API/Notification/requestPermission
   // Do something with the granted permission.
 });</pre>
 
-<h2 id="标准">标准</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>Living standard</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -70,5 +57,5 @@ translation_of: Web/API/Notification/requestPermission
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/API/notification/Using_Web_Notifications">使用Web Notifications</a></li>
+ <li><a href="/zh-CN/docs/Web/API/notification/Using_Web_Notifications">使用 Web Notifications</a></li>
 </ul>

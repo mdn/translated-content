@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 
 <h2 id="描述">描述</h2>
 
-<p>操作数被转换为32位二进制表示（0和1）。超过32位的数字将丢弃其最高有效位。如下例子中，超过32位的整数转换为32位整数：</p>
+<p>操作数被转换为 32 位二进制表示（0 和 1）。超过 32 位的数字将丢弃其最高有效位。如下例子中，超过 32 位的整数转换为 32 位整数：</p>
 
 <pre class="brush: js">Before: 11100110111110100000000000000110000000000001
 After:              10100000000000000110000000000001</pre>
@@ -33,7 +33,7 @@ After:              10100000000000000110000000000001</pre>
 
 <p>将运算符应用于每对位，然后按位构造结果。</p>
 
-<p>非运算的真值表:</p>
+<p>非运算的真值表：</p>
 
 <table class="standard-table">
  <thead>
@@ -59,11 +59,11 @@ After:              10100000000000000110000000000001</pre>
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 </pre>
 
-<p>按位非运算时，任何数字<code>x的运算结果都是</code><code>-(x + 1)</code>。例如，<code>〜-5</code>运算结果为<code>4</code>。</p>
+<p>按位非运算时，任何数字 <code>x</code> 的运算结果都是 <code>-(x + 1)</code>。例如，<code>〜-5</code> 运算结果为 <code>4</code>。</p>
 
 <p>Note that due to using 32-bit representation for numbers both <code>~-1</code> and <code>~4294967295</code> (2^32 - 1) results in <code>0</code>.</p>
 
-<p>请注意，由于对数字<code>~-1</code>和<code>~4294967295</code> (2^32 - 1) 使用32位表示形式，结果均为0。</p>
+<p>请注意，由于对数字<code>~-1</code>和<code>~4294967295</code> (2^32 - 1) 使用 32 位表示形式，结果均为 0。</p>
 
 <h2 id="例子">例子</h2>
 

@@ -22,18 +22,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
 
 <h2 id="Description">说明</h2>
 
-<p><code>由于 Math.abs()</code> <code>是</code> <code>Math</code> 中的一个静态方法，你应该通过 <code>Math.abs()</code> <code>调用。</code>（Math 不是构造器）</p>
+<p>由于 <code>Math.abs()</code> 是 <code>Math</code> 中的一个静态方法，你应该通过 <code>Math.abs()</code> 调用。（Math 不是构造器）</p>
 
 <h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Math.abs_behavior"><code>Math.abs()函数的行为</code></h3>
+<h3 id="Example:_Math.abs_behavior">Math.abs() 函数的行为</h3>
 
-<p>传入一个非数字形式的字符串或者 undefined/empty 变量，将返回 <code>NaN</code>。传入 null 将返回 0。</p>
+<p>传入一个非数字形式的字符串或者 {{jsxref("undefined")}}/empty 变量，将返回 {{jsxref("NaN")}}。传入 {{jsxref("null")}} 将返回 0。</p>
 
 <pre class="brush:js">Math.abs('-1');     // 1
 Math.abs(-2);       // 2
 Math.abs(null);     // 0
-Math.abs("string"); // NaN
+Math.abs('');       // 0
+Math.abs([]);       // 0
+Math.abs([2]);      // 2
+Math.abs([1,2]);    // NaN
+Math.abs({});       // NaN
+Math.abs('string'); // NaN
 Math.abs();         // NaN</pre>
 
 <h2 id="规范">规范</h2>

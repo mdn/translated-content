@@ -35,8 +35,10 @@ Except for the standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}}, {{HTTP
 
 ## Syntaxe
 
-    Connection: keep-alive
-    Connection: close
+```
+Connection: keep-alive
+Connection: close
+```
 
 ## Directives
 

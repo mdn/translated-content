@@ -11,7 +11,7 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 <p>目前浏览器的排版引擎使用三种模式：怪异模式（Quirks mode）、接近标准模式（Almost standards mode）、以及标准模式（Standards mode）。在<strong>怪异模式</strong>下，排版会模拟 Navigator 4 与 Internet Explorer 5 的非标准行为。为了支持在网络标准被广泛采用前，就已经建好的网站，这么做是必要的。在<strong>标准模式</strong>下，行为即（但愿如此）由 HTML 与 CSS 的规范描述的行为。在<strong>接近标准模式</strong>下，只有少数的怪异行为被实现。</p>
 
-<h2 id="How_does_Mozilla_determine_which_mode_to_use.3F" name="How_does_Mozilla_determine_which_mode_to_use.3F"><strong>浏览器如何决定使用哪个模式？</strong></h2>
+<h2 id="How_does_Mozilla_determine_which_mode_to_use.3F">浏览器如何决定使用哪个模式？</h2>
 
 <p>对 <a href="/en-US/docs/HTML" title="/en-US/docs/HTML">HTML</a> 文件来说，浏览器使用文件开头的 DOCTYPE 来决定用怪异模式处理或标准模式处理。为了确保你的页面使用标准模式，请确认你的页面如同本范例一样拥有 DOCTYPE：</p>
 
@@ -39,12 +39,12 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 <p>如果你的类 XHTML 网页使用 <code>text/html</code> MIME 类型，浏览器会将其视为 HTML，这时就需要使用 DOCTYPE 启用标准模式。</p>
 
-<h2 id="What_are_the_differences_between_the_modes.3F" name="What_are_the_differences_between_the_modes.3F"><strong>我要如何知道目前是哪个模式？</strong></h2>
+<h2 id="What_are_the_differences_between_the_modes.3F">我要如何知道目前是哪个模式？</h2>
 
 <p>在 Firefox 中，请从右键菜单选择 <em>查看页面信息</em>，然后查看 <em>渲染模式</em>。</p>
 
 <p>在 Internet Explorer 中，请按下 <kbd>F12</kbd>，然后查看 <em>文档模式</em>。</p>
 
-<h2 id="What_are_the_differences_between_the_modes.3F" name="What_are_the_differences_between_the_modes.3F"><strong>这些模式有何不同？</strong></h2>
+<h2 id="What_are_the_differences_between_the_modes.3F">这些模式有何不同？</h2>
 
 <p>请参阅 <a href="/en-US/docs/Mozilla_Quirks_Mode_Behavior" title="Mozilla_Quirks_Mode_Behavior">list of quirks</a> 和 <a href="/en-US/docs/Gecko's_&quot;Almost_Standards&quot;_Mode" title="Gecko%27s_%22Almost_Standards%22_Mode">almost standards mode</a> 以了解这些模式之间的差别。</p>

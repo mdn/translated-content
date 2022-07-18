@@ -8,7 +8,7 @@ translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.quadraticCurveTo()</code></strong> 是 Canvas 2D API 新增二次贝塞尔曲线路径的方法。它需要2个点。 第一个点是控制点，第二个点是终点。 起始点是当前路径最新的点，当创建二次贝赛尔曲线之前，可以使用 <code>moveTo()</code> 方法进行改变。</p>
+<p><strong><code>CanvasRenderingContext2D.quadraticCurveTo()</code></strong> 是 Canvas 2D API 新增二次贝塞尔曲线路径的方法。它需要 2 个点。第一个点是控制点，第二个点是终点。起始点是当前路径最新的点，当创建二次贝赛尔曲线之前，可以使用 <code>moveTo()</code> 方法进行改变。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 
 <h3 id="quadraticCurveTo_如何工作"><code>quadraticCurveTo</code> 如何工作</h3>
 
-<p>这是一段绘制二次贝赛尔曲线的简单的代码片段。 <span style="color: red;">控制点是红色</span>，<span style="color: blue;">起点和终点是蓝色。</span></p>
+<p>这是一段绘制二次贝赛尔曲线的简单的代码片段。控制点是红色，起点和终点是蓝色。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -100,7 +100,7 @@ ctx.fill();</pre>
 
 <h3 id="简单的二次曲线">简单的二次曲线</h3>
 
-<p>此示例使用<code>quadraticCurveTo()</code>绘制了简单的二次Bézier曲线。</p>
+<p>此示例使用<code>quadraticCurveTo()</code>绘制了简单的二次 Bézier 曲线。</p>
 
 <h4 id="HTML_3">HTML</h4>
 
@@ -109,7 +109,7 @@ ctx.fill();</pre>
 
 <h4 id="JavaScript_3">JavaScript</h4>
 
-<p>曲线从<code>moveTo()</code>指定的点开始: (20, 110)。 控制点位于(230, 150)。 曲线在(250, 20)处结束。</p>
+<p>曲线从<code>moveTo()</code>指定的点开始：(20, 110)。控制点位于 (230, 150)。曲线在 (250, 20) 处结束。</p>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -185,20 +185,7 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

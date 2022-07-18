@@ -7,7 +7,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 <p>{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>
 
-<p>在本演示中，我们以上一个示例为基础，将静态纹理替换为正在播放的mp4视频文件的帧。实际上，这很容易做到，而且观看起来很有趣，所以让我们开始吧。您可以使用类似的代码来使用任何类型的数据（例如 {{ HTMLElement("canvas") }}) 作为纹理的源。</p>
+<p>在本演示中，我们以上一个示例为基础，将静态纹理替换为正在播放的 mp4 视频文件的帧。实际上，这很容易做到，而且观看起来很有趣，所以让我们开始吧。您可以使用类似的代码来使用任何类型的数据（例如 {{ HTMLElement("canvas") }}) 作为纹理的源。</p>
 
 <h2 id="获取视频">获取视频</h2>
 
@@ -52,7 +52,7 @@ function setupVideo(url) {
 }
 </pre>
 
-<p>首先，我们创建一个视频元素。我们将其设置为自动播放，静音和循环播放视频。然后，我们设置了两个事件以确保视频正在播放并且时间轴已更新。我们需要进行这两项检查，因为如果将视频上传到WebGL尚无可用数据，它将产生错误。检查这两个事件可确保有可用数据，并且可以安全地开始将视频上传到WebGL纹理。在上面的代码中，我们确认是否同时发生了这两个事件。如果是这样，我们将全局变量设置 <code>copyVideo</code> 为 true，以表示可以安全地开始将视频复制到纹理。</p>
+<p>首先，我们创建一个视频元素。我们将其设置为自动播放，静音和循环播放视频。然后，我们设置了两个事件以确保视频正在播放并且时间轴已更新。我们需要进行这两项检查，因为如果将视频上传到 WebGL 尚无可用数据，它将产生错误。检查这两个事件可确保有可用数据，并且可以安全地开始将视频上传到 WebGL 纹理。在上面的代码中，我们确认是否同时发生了这两个事件。如果是这样，我们将全局变量设置 <code>copyVideo</code> 为 true，以表示可以安全地开始将视频复制到纹理。</p>
 
 <p>最后，我们将 <code>src</code> 属性设置为 start 并调用 <code>play</code> 以开始加载和播放视频。</p>
 
@@ -101,7 +101,7 @@ function setupVideo(url) {
                 srcFormat, srcType, video);
 }</pre>
 
-<p>您之前已经看过此代码。它与上一个示例中的image onload函数几乎相同-除非我们调用 <code>texImage2D()</code>，不是传递 <code>Image</code> 对象，而是传递 {{ HTMLElement("video") }} 元素。WebGL知道如何拉出当前帧并将其用作纹理。</p>
+<p>您之前已经看过此代码。它与上一个示例中的 image onload 函数几乎相同 - 除非我们调用 <code>texImage2D()</code>，不是传递 <code>Image</code> 对象，而是传递 {{ HTMLElement("video") }} 元素。WebGL 知道如何拉出当前帧并将其用作纹理。</p>
 
 <p>然后，在 <code>main()</code> 代替通话，以 <code>loadTexture()</code> 在前面的例子中，我们调用 <code>initTexture()</code> 之后 <code>setupVideo()</code>。</p>
 
@@ -129,11 +129,11 @@ function setupVideo(url) {
   }
   requestAnimationFrame(render);</pre>
 
-<p>下面是结果:</p>
+<p>下面是结果：</p>
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}</p>
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">查看完整的代码</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">在新页中打开这个demo</a></p>
+<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8">查看完整的代码</a> | <a href="https://mdn.github.io/webgl-examples/tutorial/sample8/">在新页中打开这个 demo</a></p>
 
 <h2 id="参见">参见</h2>
 

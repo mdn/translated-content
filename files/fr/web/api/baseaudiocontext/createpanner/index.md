@@ -20,7 +20,9 @@ Le _panner node_ est spatialisé en relation avec l'{{domxref("AudioListener") }
 
 ## Syntaxe
 
-    baseAudioCtx.createPanner();
+```js
+baseAudioCtx.createPanner();
+```
 
 ### Retourne
 

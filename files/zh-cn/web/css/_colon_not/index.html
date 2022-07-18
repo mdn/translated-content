@@ -26,7 +26,7 @@ translation_of: 'Web/CSS/:not'
  <li>可以利用这个伪类写一个完全没有用处的选择器。例如， <code>:not(*)</code> 匹配任何非元素的元素，因此，这个规则将永远不会被应用。</li>
  <li>可以利用这个伪类提高规则的<a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a>。例如， <code>#foo:not(#bar)</code> 和 <code>#foo</code> 会匹配相同的元素，但是前者的优先级更高。</li>
  <li><code>:not(.foo)</code> 将匹配任何非 <code>.foo</code> 的元素，<em>包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}</em>。</li>
- <li>这个选择器只会应用在一个元素上，无法用它来排除所有父元素。比如， <code>body :not(table) a</code> 依旧会应用到表格元素 {{HTMLElement("table")}} 内部的 {{HTMLElement("a")}} 上, 因为 {{HTMLElement("tr")}}将会被 <code>:not(table)</code> 这部分选择器匹配。</li>
+ <li>这个选择器只会应用在一个元素上，无法用它来排除所有父元素。比如， <code>body :not(table) a</code> 依旧会应用到表格元素 {{HTMLElement("table")}} 内部的 {{HTMLElement("a")}} 上，因为 {{HTMLElement("tr")}}将会被 <code>:not(table)</code> 这部分选择器匹配。</li>
 </ul>
 </div>
 
@@ -82,27 +82,7 @@ body :not(.crazy, .fancy) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#negation', ':not()')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>拓展标准，以允许使用一些复杂的选择器。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#negation', ':not()')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>初始定义。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

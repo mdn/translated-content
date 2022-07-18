@@ -19,7 +19,9 @@ La méthode **`Object.isExtensible()`** permet de déterminer si un objet est ex
 
 ## Syntaxe
 
-    Object.isExtensible(obj)
+```js
+Object.isExtensible(obj)
+```
 
 ### Paramètres
 

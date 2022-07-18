@@ -16,6 +16,7 @@ La fonction CSS **`sepia()`** convertit une image en sépia, lui donnant un aspe
 ```css
 sepia(multiplicateur)
 ```
+
 ### Paramètres
 
 - `multiplicateur`

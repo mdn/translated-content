@@ -16,7 +16,9 @@ La propriété en lecture seule **`AnimationEvent.animationName`** est une {{dom
 
 ## Syntaxe
 
-    nom = AnimationEvent.animationName
+```js
+nom = AnimationEvent.animationName
+```
 
 ## Spécifications
 
