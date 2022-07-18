@@ -30,7 +30,7 @@ exitPictureInPicture()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，一旦 {{Glossary("user agent")}} 完成兑现画中画模式，将其兑现。如果在尝试退出全屏模式时发生错误，promise 将调用 `catch()` 处理程序。
+一个 {{jsxref("Promise")}}，在{{Glossary("user agent", "用户代理")}}退出画中画模式时兑现。如果在尝试退出全屏模式时发生错误，将会调用 promise 的 `catch()` 处理程序。
 
 ## 示例
 
@@ -48,7 +48,7 @@ document.onclick = function (event) {
 }
 ```
 
-注意，如果你想要跟踪页面上正在以画中画模式播放的视频，你应该在有问题的 {{DOMxRef("HTMLVideoElement")}} 元素上监听 `enterpictureinpicture` 和 `exitpictureinpicture` 事件。或者，你可以检查 {{DOMxRef("Document.pictureInPictureElement")}} 元素是否引用了当前的 {{DOMxRef("HTMLVideoElement")}} 元素。
+注意，如果你想要跟踪页面上正在以画中画模式播放的视频，你应该在 {{DOMxRef("HTMLVideoElement")}} 元素上监听 `enterpictureinpicture` 和 `exitpictureinpicture` 事件。或者，你可以检查 {{DOMxRef("Document.pictureInPictureElement")}} 元素是否引用了当前的 {{DOMxRef("HTMLVideoElement")}} 元素。
 
 ## 规范
 
