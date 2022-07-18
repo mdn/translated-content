@@ -1,96 +1,91 @@
 ---
 title: ScriptProcessorNode
 slug: Web/API/ScriptProcessorNode
+page-type: web-api-interface
+tags:
+  - API
+  - Deprecated
+  - Interface
+  - Reference
+  - ScriptProcessorNode
+  - Web Audio API
+browser-compat: api.ScriptProcessorNode
 translation_of: Web/API/ScriptProcessorNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
-<div class="note">
-<p><strong>Note</strong>: 2014/8/29のWeb Audio API仕様公開にて、本機能は廃止対象となり<a href="/ja/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a>の機能によって置き換えられる予定です.</p>
-</div>
+`ScriptProcessorNode` インターフェイスは、JavaScript を使って音声を生成、処理、または分析することを可能にします。
 
-<div>
-<p>The <code>ScriptProcessorNode</code> interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the input audio data, one containing the processed output audio data. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.</p>
-</div>
+{{InheritanceDiagram}}
 
-<p><img alt="The ScriptProcessorNode stores the input in a buffer, send the audioprocess event. The EventHandler takes the input buffer and fill the output buffer which is sent to the output by the ScriptProcessorNode." src="https://mdn.mozillademos.org/files/5157/WebAudioScriptProcessingNode.png" style="display: block; height: 174px; margin: 0px auto; width: 306px;"></p>
+> **Note:** この機能は [AudioWorklets](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
-<p>The size of the input and output buffer are defined at the creation time, when the {{domxref("AudioContext.createScriptProcessor()")}} method is called (both are defined by {{domxref("AudioContext.createScriptProcessor()")}}'s <code>bufferSize</code> parameter). The buffer size must be a power of 2 between <code>256</code> and <code>16384</code>, that is <code>256</code>, <code>512</code>, <code>1024</code>, <code>2048</code>, <code>4096</code>, <code>8192</code> or <code>16384</code>. Small numbers lower the <em>latency</em>, but large number may be necessary to avoid audio breakup and glitches.</p>
+`ScriptProcessorNode` インターフェイスは {{domxref("AudioNode")}} 音声処理モジュールであり、入力音声データを含む 2 つのバッファーと処理後の出力音声データを含む 1 つのバッファーにリンクされています。入力バッファーに新しいデータが入るたびに {{domxref("AudioProcessingEvent")}} インターフェイスを実装したイベントがオブジェクトに送られ、出力バッファーがデータでいっぱいになるとイベントハンドラーは終了します。
 
-<p>If the buffer size is not defined, which is recommended, the browser will pick one that its heuristic deems appropriate.</p>
+![ScriptProcessorNode は、入力をバッファーに格納し、 audioprocess イベントを送信します。 EventHandler は入力バッファーを受け取り、出力バッファーを満たし、 ScriptProcessorNode によって出力に送信されます。](webaudioscriptprocessingnode.png)
+
+入力バッファーと出力バッファーのサイズは {{domxref("BaseAudioContext.createScriptProcessor")}} メソッドが呼び出されたときの作成時に定義します（どちらも {{domxref("BaseAudioContext.createScriptProcessor")}} の `bufferSize` 引数で定義されます）。バッファサイズは `256` から `16384` までの 2 の累乗、つまり `256`、`512`、`1024`、`2048`、`4096`、`8192`、`16384` のいずれかでなければなりません。小さい数値のほうが遅延を低減させますが、音声の途切れやグリッチを避けるために大きな値が必要な場合もあります。
+
+もしバッファーサイズが定義されていない場合、これが推奨ですが、ブラウザーは経験則的に適切と思われるものを選びます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Number of inputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count mode</th>
-   <td><code>"max"</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Channel count</th>
-   <td><code>2</code> (not used in the default count mode)</td>
-  </tr>
-  <tr>
-   <th scope="row">Channel interpretation</th>
-   <td><code>"speakers"</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">入力数</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">出力数</th>
+      <td><code>1</code></td>
+    </tr>
+    <tr>
+      <th scope="row">チャンネルカウントモード</th>
+      <td><code>"max"</code></td>
+    </tr>
+    <tr>
+      <th scope="row">チャンネルカウント</th>
+      <td><code>2</code> (既定のカウントモードで使用しない)</td>
+    </tr>
+    <tr>
+      <th scope="row">チャンネルの解釈</th>
+      <td><code>"speakers"</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Properties">Properties</h2>
+## プロパティ
 
-<p><em>Inherits properties from its parent, </em><em>{{domxref("AudioNode")}}</em>.</p>
+_親である {{domxref("AudioNode")}} からプロパティを継承しています_。
 
-<dl>
- <dt>{{domxref("ScriptProcessorNode.bufferSize")}} {{readonlyInline}}</dt>
- <dd>Returns an integer representing both the input and output buffer size. Its value can be a power of 2 value in the range <code>256</code>–<code>16384</code>.</dd>
-</dl>
+- {{domxref("ScriptProcessorNode.bufferSize")}} {{readonlyInline}}
+  - : 入力と出力の両方のバッファーサイズを表す整数を返します。この値は、 `256` から `16384` までの範囲の 2 のべき乗の値です。
 
-<h3 id="Event_handlers">Event handlers</h3>
+## メソッド
 
-<dl>
- <dt>{{domxref("ScriptProcessorNode.onaudioprocess")}}</dt>
- <dd>Represents the {{event("Event_handlers", "event handler")}} to be called.</dd>
-</dl>
+_固有のメソッドはありません。親である {{domxref("AudioNode")}} からメソッドを継承しています_。
 
-<h2 id="Methods">Methods</h2>
+## イベント
 
-<p><em>No specific methods; inherits methods from its parent, </em><em>{{domxref("AudioNode")}}</em>.</p>
+これらのイベントは [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使って、あるいはこのインターフェイスの `onイベント名` プロパティにイベントリスナーを割り当てることで待ち受けます。
 
-<h2 id="Example">Example</h2>
+- [`audioprocess`](/ja/docs/Web/API/ScriptProcessorNode/audioprocess_event)
+  - : ScriptProcessorNode` の入力バッファーが処理可能な状態になったときに発行されます。
+    また、`onaudioprocess` イベントハンドラープロパティでも利用可能です。
 
-<p>{{page("/en-US/docs/Web/API/AudioContext.createScriptProcessor","Example")}}</p>
+## 例
 
-<h2 id="Specifications">Specifications</h2>
+コード例については [`BaseAudioContext.createScriptProcessor()`](/ja/docs/Web/API/BaseAudioContext/createScriptProcessor#example) を参照してください。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-scriptprocessornode-interface---deprecated', 'ScriptProcessorNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+2014 年 8 月 29 日の[ウェブ音声 API 仕様書](https://www.w3.org/TR/webaudio/#ScriptProcessorNode)の公開以降、この機能は非推奨となりました。標準化される予定はなくなりました。
 
-<p>{{Compat("api.ScriptProcessorNode")}}</p>
+[AudioWorklets](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
-<h2 id="See_also">See also</h2>
+## ブラウザーの互換性
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
