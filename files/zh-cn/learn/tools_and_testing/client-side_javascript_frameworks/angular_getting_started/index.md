@@ -117,7 +117,7 @@ cd todo
 
 要运行 `todo` 应用程序，请使用 `ng serve`：
 
-```js
+```bash
 ng serve
 ```
 
