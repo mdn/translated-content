@@ -48,7 +48,7 @@ myIterable[Symbol.iterator] = function* () {
 [...myIterable] // [1, 2, 3]
 ```
 
-または、[計算されたプロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)を使用して、クラスやオブジェクト内で反復可能オブジェクトを直接定義できます。
+または、[計算されたプロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)を使用して、クラスやオブジェクト内で反復可能オブジェクトを直接定義できます。
 
 ```js
 class Foo {
