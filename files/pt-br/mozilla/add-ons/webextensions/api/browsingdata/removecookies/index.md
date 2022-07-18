@@ -73,7 +73,7 @@ Remove todos os cookies:
 
 ```js
 function onRemoved() {
-  console.log("removed");
+  console.log("removido");
 }
 
 function onError(error) {
