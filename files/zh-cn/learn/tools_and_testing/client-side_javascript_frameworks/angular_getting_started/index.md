@@ -101,7 +101,7 @@ npm install -g @angular/cli
 
 Angular 命令行界面命令均以 `ng` 开头, 其后是你希望命令行界面执行的操作。在桌面目录中，使用以下 `ng new` 命令创建一个名为 `todo` 的应用程序：
 
-```js
+```bash
 ng new todo --routing=false --style=css
 ```
 
