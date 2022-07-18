@@ -32,7 +32,7 @@ translation_of: Web/API/Picture-in-Picture_API
 ### HTMLVideoElement 接口的方法
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-  - : 请求用户代理将视频进入画中画模式。
+  - : 请求用户代理将视频切换为画中画模式。
 
 ### Document 接口的方法
 
