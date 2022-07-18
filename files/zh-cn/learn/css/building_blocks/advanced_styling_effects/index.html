@@ -248,7 +248,7 @@ button:active {
 
 <h3 id="mix-blend-mode">mix-blend-mode</h3>
 
-<p>现在让我们看一看 {{cssxref("mix-blend-mode")}}。 这里我们将给出两个相同的<code>&lt;div&gt;</code>s，但是每个都位于一个有着紫色背景的简单的<code>&lt;div&gt;</code>上，来向你展示元素们将会怎样混合在一起：</p>
+<p>现在让我们看一看 {{cssxref("mix-blend-mode")}}。 这里我们将给出两个相同的<code>&lt;div&gt;</code>，但是每个都位于一个有着紫色背景的简单的<code>&lt;div&gt;</code>上，来向你展示元素们将会怎样混合在一起：</p>
 
 <pre class="brush: html">&lt;article&gt;
   No mix blend mode
@@ -312,31 +312,31 @@ article div:last-child {
 <p>你可以看到，多层混合（mix-blend）不仅混合了两种背景图像，还混合了在<code>&lt;div&gt;</code>下面的颜色。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果您不理解上面的一些布局属性，请不要担心，像 {{cssxref("position")}}， {{cssxref("top")}}， {{cssxref("bottom")}}， {{cssxref("z-index")}}等。我们将在<a href="/zh-CN/docs/Learn/CSS/CSS_layout">CSS Layout</a>模块中详细地介绍这些内容。</p>
+<p><strong>备注：</strong> 如果你不理解上面的一些布局属性，请不要担心，像 {{cssxref("position")}}、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("z-index")}} 等。我们将在 <a href="/zh-CN/docs/Learn/CSS/CSS_layout">CSS Layout</a> 模块中详细地介绍这些内容。</p>
 </div>
 
 <h2 id="-webkit-background-clip_text">-webkit-background-clip: text</h2>
 
-<p>另一个我们认为在继续之前会提到的新特性 (目前支持 Chrome、Safari 和 Opera，和在 Firefox 正在实现) 是{{cssxref("background-clip")}}的 <code>text</code> 值。当与专有 <code>-webkit-text-fill-color: transparent;</code> 特性一起使用时，这允许您将背景图像剪贴到元素文本的形状，从而产生一些不错的效果。这不是一个正式的标准，但是已经在多个浏览器中实现了，因为它很流行，并且被开发人员广泛使用。在这种情况下，这两种属性都需要一个<code>-webkit-</code>供应商前缀，甚至对于非 webkit/Chrome-based 的浏览器来说也是如此。</p>
+<p>另一个我们认为在继续之前会提到的新特性 (目前支持 Chrome、Safari 和 Opera，和 Firefox 正在实现) 是{{cssxref("background-clip")}}的 <code>text</code> 值。当与专有 <code>-webkit-text-fill-color: transparent;</code> 特性一起使用时，这允许您将背景图像剪贴到元素文本的形状，从而产生一些不错的效果。这不是一个正式的标准，但是已经在多个浏览器中实现了，因为它很流行，并且被开发人员广泛使用。在这种情况下，这两种属性都需要一个<code>-webkit-</code>供应商前缀，甚至对于非 webkit/Chrome-based 的浏览器来说也是如此。</p>
 
 <pre class="brush: css">.text-clip {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }</pre>
 
-<p>那么为什么其他浏览器会实现一个<code>-webkit-</code>前缀？主要是为了浏览器兼容性——许多 web 开发人员已经开始使用<code>-webkit-</code>前缀来实现 web 站点，它开始看起来像其他的浏览器一样被破坏了，而实际上他们遵循的是标准。因此，他们被迫实施了一些这样的功能。这就凸显了在你的工作中使用非标准和/或带前缀的 CSS 特性的危险——这不仅会导致浏览器兼容性问题，而且还会发生变化，因此你的代码随时可能崩溃。坚持标准要好得多。</p>
+<p>那么为什么其他浏览器会实现一个 <code>-webkit-</code> 前缀？主要是为了浏览器兼容性——许多 web 开发人员已经开始使用 <code>-webkit-</code> 前缀来实现 web 站点，它开始看起来像其他的浏览器一样被破坏了，而实际上他们遵循的是标准。因此，他们被迫实施了一些这样的功能。这就凸显了在你的工作中使用非标准和/或带前缀的 CSS 特性的危险——这不仅会导致浏览器兼容性问题，而且还会发生变化，因此你的代码随时可能崩溃。坚持标准要好得多。</p>
 
 <p>如果您确实希望在您的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。</p>
 
 <div class="note">
-<p><strong>注意：</strong>对于一个完整的<code>-webkit-background-clip: text</code>代码示例，见<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a>（也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">源码</a>）。</p>
+<p><strong>注意：</strong>对于一个完整的 <code>-webkit-background-clip: text</code> 代码示例，见<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a>（也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">源码</a>）。</p>
 </div>
 
 <h2 id="自主学习尝试一些效果">自主学习：尝试一些效果</h2>
 
 <p>现在轮到你了。对于这种自主学习，我们希望您使用下面所提供的代码来试验上面所读到的一些效果。</p>
 
-<p>如果你犯了一个错误，你可以用<em>Reset</em>按钮来重置这个例子。</p>
+<p>如果你犯了一个错误，你可以用 <em>Reset</em> 按钮来重置这个例子。</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -361,7 +361,7 @@ article div:last-child {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+  &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
