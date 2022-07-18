@@ -36,7 +36,7 @@ browser-compat: http.headers.Sec-CH-UA
 
 `Sec-CH-UA` 是一个[低熵提示](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints)。除非被用户代理权限策略阻止，否则默认情况下会发送它，而服务器不会通过发送 {{HTTPHeader("Accept-CH")}} 来选择加入。标头可以包含任何位置和任何名称的“假冒”品牌。此功能旨在防止服务器直接拒绝未知的用户代理，迫使用户代理在品牌标识上撒谎。
 
-> **注意：** {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} 与 **`Sec-CH-UA`** 相同，但包括完整版本号，而不是每个品牌的有效版本号。
+> **备注：** {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} 与 **`Sec-CH-UA`** 相同，但包括完整版本号，而不是每个品牌的有效版本号。
 
 ## 语法
 
