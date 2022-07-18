@@ -55,7 +55,7 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 
 ## 示例
 
-`Sec-CH-UA` 是一个[低熵提示](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints)。除非被用户代理策略明确阻止，否则它将在所有请求中发送（无需服务器通过发送{{HTTPHeader("Accept-CH")}}来选择加入）。来自 Chromium、Chrome、Edge 和 Opera 桌面浏览器的字符串如下所示。请注意，它们都共享“Chromium”品牌，但有一个额外的品牌表明其来源。它们还具有故意不正确的品牌字符串，该字符串可能出现在任何位置并具有不同的文本。
+`Sec-CH-UA` 是一个[低熵提示](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints)。除非被用户代理策略明确阻止，否则它将在所有请求中发送（无需服务器通过发送 {{HTTPHeader("Accept-CH")}} 来选择加入）。来自 Chromium、Chrome、Edge 和 Opera 桌面浏览器的字符串如下所示。请注意，它们都共享“Chromium”品牌，但有一个额外的品牌表明其来源。它们还具有故意不正确的品牌字符串，该字符串可能出现在任何位置并具有不同的文本。
 
 ```http
 Sec-CH-UA: "(Not(A:Brand";v="8", "Chromium";v="98"
