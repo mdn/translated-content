@@ -1,6 +1,8 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
+translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
+original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 browser-compat: javascript.builtins.Symbol.split
 ---
 {{JSRef}}
