@@ -85,6 +85,6 @@ Sec-CH-UA: "Opera";v="81", " Not;A Brand";v="99", "Chromium";v="95"
 
 - [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
-- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://web.dev/user-agent-client-hints/) (web.dev)
+- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://web.dev/user-agent-client-hints/)（web.dev）
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP 缓存 > 不同的相应](/zh-CN/docs/Web/HTTP/Caching#varying_responses) 和 {{HTTPHeader("Vary")}}
