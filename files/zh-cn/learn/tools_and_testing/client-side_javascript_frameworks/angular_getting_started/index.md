@@ -111,7 +111,7 @@ ng new todo --routing=false --style=css
 
 使用以下 `cd` 命令导航到新项目：
 
-```js
+```bash
 cd todo
 ```
 
