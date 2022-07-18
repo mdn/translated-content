@@ -1,6 +1,7 @@
 ---
 title: 'Document: dragleave イベント'
 slug: Web/API/Document/dragleave_event
+page-type: web-api-event
 tags:
   - API
   - DOM
@@ -11,88 +12,130 @@ tags:
   - Web
   - drag and drop
   - dragleave
-  - イベント
-  - ウェブ
-  - ドラッグ＆ドロップ
+browser-compat: api.Document.dragleave_event
 translation_of: Web/API/Document/dragleave_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>dragleave</code> イベントは、ドラッグしている要素や選択中のテキストが妥当なドロップターゲットを離れたときに発生します。</p>
+`dragleave` イベントは、ドラッグしている要素や選択中のテキストが妥当なドロップターゲットを離れたときに発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>いいえ</td>
-  </tr>
-  <tr>
-   <th scope="row">既定のアクション</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("DragEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/ondragleave", "ondragleave")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">既定のアクション</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("DragEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/ondragleave", "ondragleave")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>サンプルコードは {{domxref("Document/drag_event", "drag")}} イベント、またはこの <a class="external external-icon" href="http://jsfiddle.net/zfnj5rv4/" rel="noopener">JSFiddle デモ</a>をご覧ください。</p>
+### dragleave でドロップゾーンのスタイルをリセット
 
-<p>{{EmbedLiveSample('Examples', '300', '200', '', 'Web/API/Document/drag_event')}}</p>
+この例では、コンテナーの中にドラッグ可能な要素を入れています。要素を掴んで他のコンテナーの上にドラッグし、そして放してみましょう。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+ドラッグ可能な要素が他のコンテナーの上にある間は、他のコンテナーの背景を紫色にし、ドラッグ可能な要素がコンテナーの上にドロップされる可能性があることを知らせます。ドラッグ可能な要素がコンテナーからドラッグされたときにコンテナーの背景をリセットするために、 `dragleave` イベントを待ち受けています。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragleave")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+ドラッグ＆ドロップの完全な例については、 [`drag`](/ja/docs/Web/API/Document/drag_event) イベントのページを参照してください。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+#### HTML
 
-<p>{{Compat("api.Document.dragleave_event")}}</p>
+```html
+<div class="dropzone">
+  <div id="draggable" draggable="true">
+    This div is draggable
+  </div>
+</div>
+<div class="dropzone"></div>
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+#### CSS
 
-<ul>
- <li>その他のドラッグ＆ドロップイベント:
-  <ul>
-   <li>{{domxref("Document/drag_event", "drag")}}</li>
-   <li>{{domxref("Document/dragstart_event", "dragstart")}}</li>
-   <li>{{domxref("Document/dragend_event", "dragend")}}</li>
-   <li>{{domxref("Document/dragover_event", "dragover")}}</li>
-   <li>{{domxref("Document/dragenter_event", "dragenter")}}</li>
-   <li>{{domxref("Document/dragexit_event", "dragexit")}}</li>
-   <li>{{domxref("Document/drop_event", "drop")}}</li>
-  </ul>
- </li>
- <li>他のターゲットにおけるこのイベント:
-  <ul>
-   <li>{{domxref("Window")}}: {{domxref("Window/dragleave_event", "dragleave")}} イベント</li>
-   <li>{{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベント</li>
-   <li>{{domxref("SVGElement")}}: {{domxref("SVGElement/dragleave_event", "dragleave")}} イベント</li>
-  </ul>
- </li>
-</ul>
+```css
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+.dropzone {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  margin: 10px;
+  padding: 10px;
+}
+
+.dropzone.dragover {
+  background-color: purple;
+}
+```
+
+#### JavaScript
+
+```js
+document.addEventListener("dragenter", event => {
+  // highlight potential drop target when the draggable element enters it
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.add("dragover");
+  }
+});
+
+document.addEventListener("dragleave", event => {
+  // reset background of potential drop target when the draggable element leaves it
+  if (event.target.classList.contains("dropzone")) {
+    event.target.classList.remove("dragover");
+  }
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample('Resetting drop zone styles on dragleave')}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- その他のドラッグ＆ドロップイベント:
+
+  - {{domxref("Document/drag_event", "drag")}}
+  - {{domxref("Document/dragstart_event", "dragstart")}}
+  - {{domxref("Document/dragend_event", "dragend")}}
+  - {{domxref("Document/dragover_event", "dragover")}}
+  - {{domxref("Document/dragenter_event", "dragenter")}}
+  - {{domxref("Document/drop_event", "drop")}}
+
+- 他のターゲットにおけるこのイベント:
+
+  - {{domxref("Window")}}: {{domxref("Window/dragleave_event", "dragleave")}} イベント
+  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragleave_event", "dragleave")}} イベント
+  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragleave_event", "dragleave")}} イベント
