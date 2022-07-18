@@ -48,7 +48,7 @@ translation_of: Web/API/Picture-in-Picture_API
 - {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
   - : 当用户切换标签页和（或）应用程序时，`autoPictureInPicture` 属性将自动进入或离开视频元素的画中画模式。
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-  - : `disablePictureInPicture` 属性将提供一个用户代理不向用户建议使用画中画或者自动请求它的提示。
+  - : `disablePictureInPicture` 属性将指示用户代理是否应该向用户建议画中画的功能，或者自动请求该功能。
 
 ### Document 接口的属性
 
