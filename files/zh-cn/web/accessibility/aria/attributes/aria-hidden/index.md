@@ -12,82 +12,68 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 ---
-<p>本文用来说明如何使用 aria-hidden 属性。aria-hidden 属性可以用来控制一系列可访问 API 中的非交互内容的显示或隐藏。</p>
+本文用来说明如何使用 aria-hidden 属性。aria-hidden 属性可以用来控制一系列可访问 API 中的非交互内容的显示或隐藏。
 
-<h2 id="描述">描述</h2>
+## 描述
 
-<div>
-<p>把 <code>aria-hidden="true"</code> 加到元素上会把该元素和它的所有子元素从可访问性树上移除。这样做可以通过隐藏下列内容来提升使用辅助技术的用户体验：</p>
+把 `aria-hidden="true"` 加到元素上会把该元素和它的所有子元素从可访问性树上移除。这样做可以通过隐藏下列内容来提升使用辅助技术的用户体验：
 
-<ul>
- <li>纯装饰性的内容，如图标、图片</li>
- <li>重复的内容，如重复的文本</li>
- <li>屏幕外或被折叠的内容，如菜单</li>
-</ul>
+- 纯装饰性的内容，如图标、图片
+- 重复的内容，如重复的文本
+- 屏幕外或被折叠的内容，如菜单
 
-<p>根据<a href="https://www.w3.org/TR/using-aria/#fourth">可访问性的第四条规则</a>，<code>aria-hidden="true"</code> 不应该被用在可聚焦的元素上。 而且，由于这个属性是可以被子元素继承的，它也不应该被用在可聚焦元素的父元素上。</p>
+根据[可访问性的第四条规则](https://www.w3.org/TR/using-aria/#fourth)，`aria-hidden="true"` 不应该被用在可聚焦的元素上。 而且，由于这个属性是可以被子元素继承的，它也不应该被用在可聚焦元素的父元素上。
 
-<p>如果父元素带有 <code>aria-hidden="true"</code> ，那么即使使用 <code>aria-hidden="false"</code> 也无法将该元素显示出来。</p>
-</div>
+如果父元素带有 `aria-hidden="true"` ，那么即使使用 `aria-hidden="false"` 也无法将该元素显示出来。
 
-<div class="blockIndicator warning">
-<p><strong>警告：</strong> WAI-ARIA Authoring Practices 1.1 提示 <code>aria-hidden="false"</code> 在现阶段 <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-hidden">各个浏览器中表现不同</a>.</p>
-</div>
+> **警告：** WAI-ARIA Authoring Practices 1.1 提示 `aria-hidden="false"` 在现阶段 [各个浏览器中表现不同](https://www.w3.org/TR/wai-aria-1.1/#aria-hidden).
 
-<h3 id="比较_aria-hiddentrue，_rolepresentation_和_rolenone">比较 <code>aria-hidden="true"</code>， <code>role="presentation" 和 </code><code>role="none"</code></h3>
+### 比较 `aria-hidden="true"`， ` role="presentation" 和 ``role="none"`
 
-<p>表面上，<code>aria-hidden="true"</code>，<code>role="presentation"</code>，和<code>role="none"</code> 很相似，因为这三者都有以下特性：</p>
+表面上，`aria-hidden="true"`，`role="presentation"`，和`role="none"` 很相似，因为这三者都有以下特性：
 
-<ul>
- <li>根据辅助即使隐藏页面内容</li>
- <li>无法在可聚焦元素上使用</li>
- <li>无法在可互动元素的父级元素上使用</li>
-</ul>
+- 根据辅助即使隐藏页面内容
+- 无法在可聚焦元素上使用
+- 无法在可互动元素的父级元素上使用
 
-<p>尽管有上面这些相同点，但是各个属性的意图是不同的。</p>
+尽管有上面这些相同点，但是各个属性的意图是不同的。
 
-<ul>
- <li><code>aria-hidden="true"</code> 会把整个元素从可访问性 API 中移除</li>
- <li><code>role="presentation"</code> 和<code>role="none"</code> 会将元素从语义上移除，仍然会将元素暴露给辅助技术。</li>
-</ul>
+- `aria-hidden="true"` 会把整个元素从可访问性 API 中移除
+- `role="presentation"` 和`role="none"` 会将元素从语义上移除，仍然会将元素暴露给辅助技术。
 
-<h3 id="可选值">可选值</h3>
+### 可选值
 
-<dl>
- <dt><code>false</code></dt>
- <dd>（默认）元素会暴露给可访问性 API。</dd>
- <dt><code>true</code></dt>
- <dd>元素不会暴露给可访问性 API。</dd>
- <dt><code>undefined</code></dt>
- <dd>（默认）客户端决定元素是否暴露给可访问性 API。</dd>
-</dl>
+- `false`
+  - : （默认）元素会暴露给可访问性 API。
+- `true`
+  - : 元素不会暴露给可访问性 API。
+- `undefined`
+  - : （默认）客户端决定元素是否暴露给可访问性 API。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: html"> &lt;i class="icon" <code>aria-hidden="true" /&gt;</code>
- </pre>
+```html
+ <i class="icon" aria-hidden="true" />
 
-<h2 id="无障碍问题">无障碍问题</h2>
+```
 
-<h2 id="最佳实践">最佳实践</h2>
+## 无障碍问题
 
-<p> <code>aria-hidden="true"</code> 在以下场景不应该被使用：</p>
+## 最佳实践
 
-<ul>
- <li>HTML 的<code>hidden</code>属性被设置了</li>
- <li>祖先元素被<code>display: none</code>属性设置成不显示状态</li>
- <li>祖先元素被<code>visibility: hidden</code>属性设置成不显示状态</li>
-</ul>
+`aria-hidden="true"` 在以下场景不应该被使用：
 
-<p>在以上三个场景中，元素已经被隐藏，从可访问树种移除了，无需再添加<code>aria-hidden="true"</code>属性。</p>
+- HTML 的`hidden`属性被设置了
+- 祖先元素被`display: none`属性设置成不显示状态
+- 祖先元素被`visibility: hidden`属性设置成不显示状态
 
-<h2 id="规范">规范</h2>
+在以上三个场景中，元素已经被隐藏，从可访问树种移除了，无需再添加`aria-hidden="true"`属性。
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="另见">另见</h2>
+## 另见
 
-<ul>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role">使用展示角色</a></li>
- <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role">role="none"</a></li>
-</ul>
+- [使用展示角色](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
+- [role="none"](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role)

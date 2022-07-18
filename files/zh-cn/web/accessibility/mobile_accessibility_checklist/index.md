@@ -9,91 +9,66 @@ tags:
   - 移动端
 translation_of: Web/Accessibility/Mobile_accessibility_checklist
 ---
-<div>
-<p>该文档为移动应用开发者提供一个无障碍需求的简要清单。此文档将随着技术模式的发展而不断演进。</p>
-</div>
+该文档为移动应用开发者提供一个无障碍需求的简要清单。此文档将随着技术模式的发展而不断演进。
 
-<h2 id="颜色">颜色</h2>
+## 颜色
 
-<ul>
- <li>颜色对比度<strong>必须</strong>遵循 <a href="http://www.w3.org/TR/WCAG/">WCAG 2.0</a> AA 等级需求：
+- 颜色对比度**必须**遵循 [WCAG 2.0](http://www.w3.org/TR/WCAG/) AA 等级需求：
 
-  <ul>
-   <li>普通文本的对比率为 4.5:1（小于 18 磅或黑体 14 磅）</li>
-   <li>大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）【译者注：字体单位为 point、PT】</li>
-  </ul>
- </li>
- <li>颜色传递的信息，<strong>必须</strong>也通过其它方式标明（例如，链接文本中的下划线）</li>
-</ul>
+  - 普通文本的对比率为 4.5:1（小于 18 磅或黑体 14 磅）
+  - 大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）【译者注：字体单位为 point、PT】
 
-<div class="note">
-<p><strong>备注：</strong> Jon Snook 开发的 <a href="http://snook.ca/technical/colour_contrast/colour.html">颜色对比度检查器 - Colour Contrast Checker</a> 可以轻松检查前景和背景的对比度。同样，<a href="http://contrast-finder.tanaguru.com/">Tanaguru Contrast-Finder</a> 这个工具能做类似的检查，并且会推荐你考虑使用类似的更好的对比度</p>
-</div>
+- 颜色传递的信息，**必须**也通过其它方式标明（例如，链接文本中的下划线）
 
-<h2 id="可视化">可视化</h2>
+> **备注：** Jon Snook 开发的 [颜色对比度检查器 - Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 可以轻松检查前景和背景的对比度。同样，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 这个工具能做类似的检查，并且会推荐你考虑使用类似的更好的对比度
 
-<ul>
- <li><strong>不</strong>使用用于隐藏内容的技巧处理视觉效果，例如，不透明度为零，z-index 规则，离屏位置。</li>
- <li>当前可见的屏幕之外的内容，<strong>必须</strong>是不可见的。（特别是单一页面应用中包含多个卡片选项）:
-  <ul>
-   <li><strong>使用</strong> <code>hidden</code> 特性或 <code>visibility</code> 或 <code>display</code> 样式属性。</li>
-   <li>除非不可避免，<strong>不应该</strong>使用 <code>aria-hidden</code> 特性。</li>
-  </ul>
- </li>
-</ul>
+## 可视化
 
-<h2 id="焦点">焦点</h2>
+- **不**使用用于隐藏内容的技巧处理视觉效果，例如，不透明度为零，z-index 规则，离屏位置。
+- 当前可见的屏幕之外的内容，**必须**是不可见的。（特别是单一页面应用中包含多个卡片选项）:
 
-<ul>
- <li>所有可激活元素<strong>必须</strong>可被聚焦：
+  - **使用** `hidden` 特性或 `visibility` 或 `display` 样式属性。
+  - 除非不可避免，**不应该**使用 `aria-hidden` 特性。
 
-  <ul>
-   <li>标准控件，如链接、按钮、表单域默认可被聚焦。</li>
-   <li>非标准控件<strong>必须</strong>分配给它们一个适当的 <a href="http://www.w3.org/TR/wai-aria/roles">ARIA Role</a> 如 <code>button</code>，<code>link</code> 或者 <code>checkbox</code>。</li>
-  </ul>
- </li>
- <li>焦点应该是有逻辑顺序，且方式一致。</li>
-</ul>
+## 焦点
 
-<h2 id="文本等效">文本等效</h2>
+- 所有可激活元素**必须**可被聚焦：
 
-<ul>
- <li>应用中，每个展示的非文本元素都<strong>必须</strong>提供等效文本。
+  - 标准控件，如链接、按钮、表单域默认可被聚焦。
+  - 非标准控件**必须**分配给它们一个适当的 [ARIA Role](http://www.w3.org/TR/wai-aria/roles) 如 `button`，`link` 或者 `checkbox`。
 
-  <ul>
-   <li>恰当的位置使用 <em>alt</em> 和 <em>title</em> （请参考 Steve Faulkner 的帖子 - 关于 <a href="http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a> 。）</li>
-   <li>如果上面的特性不适用，使用恰当的<a href="http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header">ARIA Properties</a>，比如 <code>aria-label</code>, <code>aria-labelledby</code>, 或 <code>aria-describedby</code>.</li>
-  </ul>
- </li>
- <li><strong>必须</strong>避免文本图像。</li>
- <li>所有的表单控件<strong>必须</strong>有标签 ({{ htmlelement("label") }} elements) ，以便于读屏用户的使用。</li>
-</ul>
+- 焦点应该是有逻辑顺序，且方式一致。
 
-<h2 id="状态处理">状态处理</h2>
+## 文本等效
 
-<ul>
- <li>标准控件，如单选按钮和复选是通过操作系统处理的，而其它自定义控件的状态改变需要通过 <a href="http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header">ARIA States</a> ，如<code> aria-checked</code>, <code>aria-disabled</code>, <code>aria-selected</code>, <code>aria-expanded</code>,和 <code>aria-pressed</code>.</li>
-</ul>
+- 应用中，每个展示的非文本元素都**必须**提供等效文本。
 
-<h2 id="General_Guidelines常规指南">General Guidelines 常规指南</h2>
+  - 恰当的位置使用 _alt_ 和 _title_ （请参考 Steve Faulkner 的帖子 - 关于 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 。）
+  - 如果上面的特性不适用，使用恰当的[ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)，比如 `aria-label`, `aria-labelledby`, 或 `aria-describedby`.
 
-<ul>
- <li>应用必须提供标题。【译者注：此处的标题为 title】</li>
- <li>标题<strong>不能</strong>破坏层次结构。【译者注：此处的标题为 headings】
-  <pre class="brush: html">&lt;h1&gt;Top level heading&lt;/h1&gt;
-  &lt;h2&gt;Secondary heading&lt;/h2&gt;
-  &lt;h2&gt;Another secondary heading&lt;/h2&gt;
-    &lt;h3&gt;Low level heading&lt;/h3&gt;</pre>
- </li>
- <li>应使用 <a href="http://www.w3.org/TR/wai-aria/roles#landmark_roles_header">ARIA Landmark Roles</a> 描述应用或文档的结构，如 <code>banner</code>, <code>complementary</code>, <code>contentinfo</code>, <code>main</code>, <code>navigation</code>, <code>search</code>.</li>
- <li>触摸事件处理器，只能通过 <code>touchend</code> 事件触发。</li>
- <li>触摸目标必须足够大，方便用户交互 (参考 <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size">BBC Mobile Accessibility Guidelines</a> 关于触摸目标尺寸的指南)</li>
-</ul>
+- **必须**避免文本图像。
+- 所有的表单控件**必须**有标签 ({{ htmlelement("label") }} elements) ，以便于读屏用户的使用。
 
-<div class="note">
-<p><strong>备注：</strong> <a href="http://www.tanaguru.com/">Tanaguru's automated accessibility testing service</a> 提供一个有效的方法，排查网页上的，或者是可安装的 Web 应用中无障碍问题（如，Firefox OS）。<a href="http://tanaguru.org/">tanaguru.org</a>，你可以参与该项目或者发现更多技术实现。</p>
-</div>
+## 状态处理
 
-<div class="note">
-<p><strong>备注：</strong> The 该文档的最初版本 - <a href="http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html">original version of this document</a> 是由 <a href="http://yzen.github.io/">Yura Zenevich</a> 完成。</p>
-</div>
+- 标准控件，如单选按钮和复选是通过操作系统处理的，而其它自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如` aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
+
+## General Guidelines 常规指南
+
+- 应用必须提供标题。【译者注：此处的标题为 title】
+- 标题**不能**破坏层次结构。【译者注：此处的标题为 headings】
+
+  ```html
+  <h1>Top level heading</h1>
+    <h2>Secondary heading</h2>
+    <h2>Another secondary heading</h2>
+      <h3>Low level heading</h3>
+  ```
+
+- 应使用 [ARIA Landmark Roles](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header) 描述应用或文档的结构，如 `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- 触摸事件处理器，只能通过 `touchend` 事件触发。
+- 触摸目标必须足够大，方便用户交互 (参考 [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) 关于触摸目标尺寸的指南)
+
+> **备注：** [Tanaguru's automated accessibility testing service](http://www.tanaguru.com/) 提供一个有效的方法，排查网页上的，或者是可安装的 Web 应用中无障碍问题（如，Firefox OS）。[tanaguru.org](http://tanaguru.org/)，你可以参与该项目或者发现更多技术实现。
+
+> **备注：** The 该文档的最初版本 - [original version of this document](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) 是由 [Yura Zenevich](http://yzen.github.io/) 完成。
