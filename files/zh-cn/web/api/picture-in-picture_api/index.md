@@ -1,5 +1,5 @@
 ---
-title: Picture-in-Picture API
+title: 画中画（Picture-in-Picture）API
 slug: Web/API/Picture-in-Picture_API
 page-type: web-api-overview
 tags:
