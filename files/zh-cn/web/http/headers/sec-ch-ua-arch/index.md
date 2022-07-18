@@ -64,7 +64,7 @@ Sec-CH-UA-Platform: "Windows"
 Sec-CH-UA-Arch: "x86"
 ```
 
-请注意，即使服务器响应中未指定，[低熵标头](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints) 也会被添加到请求中。
+请注意，即使服务器响应中未指定，[低熵标头](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints)也会被添加到请求中。
 
 ## 规范
 
