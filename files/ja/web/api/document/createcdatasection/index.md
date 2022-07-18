@@ -1,65 +1,56 @@
 ---
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
   - Method
   - Reference
+browser-compat: api.Document.createCDATASection
 translation_of: Web/API/Document/createCDATASection
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>createCDATASection()</code></strong> は、新規 CDATA セクションを生成し返します。</p>
+**`createCDATASection()`** は、新しい CDATA セクションを生成して返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>CDATASectionNode</var> = <var>document</var>.createCDATASection(<var>data</var>);
-</pre>
+```js
+createCDATASection(data)
+```
 
-<ul>
- <li><var>CDATASectionNode</var> は <a href="/ja/docs/Web/API/CDATASection">CDATA セクション</a>のノードです。</li>
- <li><var>data</var> は CDATA セクションに追加するデータを含む文字列です。</li>
-</ul>
+### 引数
 
-<h2 id="Example" name="Example">例</h2>
+- `data`
+  - : CDATA セクションに追加されるデータを含む文字列です。
 
-<pre class="brush:js notranslate">var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;', 'application/xml')
+### 返値
 
-var cdata = docu.createCDATASection('Some &lt;CDATA&gt; data &amp; then some');
+[CDATA セクション](/ja/docs/Web/API/CDATASection)ノードです。
+
+## 例
+
+```js
+var docu = new DOMParser().parseFromString('<xml></xml>', 'application/xml')
+
+var cdata = docu.createCDATASection('Some <CDATA> data & then some');
 
 docu.getElementsByTagName('xml')[0].appendChild(cdata);
 
 alert(new XMLSerializer().serializeToString(docu));
-// 表示結果: &lt;xml&gt;&lt;![CDATA[Some &lt;CDATA&gt; data &amp; then some]]&gt;&lt;/xml&gt;
-</pre>
+// 表示結果: <xml><![CDATA[Some <CDATA> data & then some]]></xml>
+```
 
-<h2 id="Notes" name="Notes">注</h2>
+## メモ
 
-<ul>
- <li>これは HTML ではなく、 XML の文書のみで動作します (HTML 文書は CDATA セクションに対応していません)。 HTML 文書でこれを用いた場合、 <code>NOT_SUPPORTED_ERR</code> がスローされます。</li>
- <li>引数として渡す文字列データの一部に CDATA を閉じるシーケンス ("<code>]]&gt;</code>") が含まれている場合、 <code>NS_ERROR_DOM_INVALID_CHARACTER_ERR</code> 例外がスローされます。もしこの様な文字列が含まれる可能性がある場合、 {{domxref("document.createTextNode","createTextNode()")}} を用いることでこの問題を回避することが出来ます。</li>
-</ul>
+- これは XML でのみ動作し、 HTML 文書では動作しません（HTML 文書は CDATA セクションに対応していません）。 HTML 文書でこれを用いた場合、 `NOT_SUPPORTED_ERR` が発生します。
+- 引数として渡す文字列データの一部に CDATA を閉じるシーケンス ("`]]>`") が含まれている場合、 `NS_ERROR_DOM_INVALID_CHARACTER_ERR` 例外が発生します。エスケープされていないユーザー提供のデータは、このメソッドで例外処理を行わないと、安全に使用できません（多くの場合は {{domxref("document.createTextNode","createTextNode()")}} で代用できます）。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-document-createcdatasection', 'document.createCDATASection')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.createCDATASection")}}</p>
+{{Compat}}
