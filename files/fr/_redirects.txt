@@ -3817,7 +3817,7 @@
 /fr/docs/Web/API/HTMLElement/animationend_event	/fr/docs/Web/API/Element/animationend_event
 /fr/docs/Web/API/HTMLElement/animationiteration_event	/fr/docs/Web/API/Element/animationiteration_event
 /fr/docs/Web/API/HTMLElement/animationstart_event	/fr/docs/Web/API/Element/animationstart_event
-/fr/docs/Web/API/HTMLElement/transitionend_event	/fr/docs/conflicting/Web/API/Element/transitionend_event
+/fr/docs/Web/API/HTMLElement/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/Web/API/HTMLElement/blur
 /fr/docs/Web/API/HTMLOrForeignElement/dataset	/fr/docs/Web/API/HTMLElement/dataset
@@ -4549,7 +4549,7 @@
 /fr/docs/Web/Events/storage	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/Events/submit	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/Events/touchend	/fr/docs/Web/API/Document/touchend_event
-/fr/docs/Web/Events/transitionend	/fr/docs/conflicting/Web/API/Element/transitionend_event
+/fr/docs/Web/Events/transitionend	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/Web/Events/unload	/fr/docs/Web/API/Window/unload_event
 /fr/docs/Web/Guide/AJAX/Communauté	/fr/docs/Web/Guide/AJAX/Community
 /fr/docs/Web/Guide/AJAX/Premiers_pas	/fr/docs/Web/Guide/AJAX/Getting_Started
@@ -4799,7 +4799,7 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/Bad_return_or_yield	/fr/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield
 /fr/docs/Web/JavaScript/Reference/Erreurs/Called_on_incompatible_type	/fr/docs/Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_before_init	/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_property	/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_access_property	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_assign_to_property	/fr/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_define_property_object_not_extensible	/fr/docs/Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 /fr/docs/Web/JavaScript/Reference/Erreurs/Cant_delete	/fr/docs/Web/JavaScript/Reference/Errors/Cant_delete
@@ -4867,7 +4867,7 @@
 /fr/docs/Web/JavaScript/Reference/Erreurs/in_operator_no_object	/fr/docs/Web/JavaScript/Reference/Errors/in_operator_no_object
 /fr/docs/Web/JavaScript/Reference/Erreurs/invalid_right_hand_side_instanceof_operand	/fr/docs/Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 /fr/docs/Web/JavaScript/Reference/Erreurs/is_not_iterable	/fr/docs/Web/JavaScript/Reference/Errors/is_not_iterable
-/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+/fr/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/Web/JavaScript/Reference/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode	/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées	/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -6166,6 +6166,7 @@
 /fr/docs/conflicting/Web/API/Element/mouseout_event	/fr/docs/Web/API/Element/mouseout_event
 /fr/docs/conflicting/Web/API/Element/mouseover_event	/fr/docs/Web/API/Element/mouseover_event
 /fr/docs/conflicting/Web/API/Element/mouseup_event	/fr/docs/Web/API/Element/mouseup_event
+/fr/docs/conflicting/Web/API/Element/transitionend_event	/fr/docs/Web/API/Element/transitionend_event
 /fr/docs/conflicting/Web/API/EventTarget/addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/conflicting/Web/API/File_and_Directory_Entries_API	/fr/docs/Web/API/File_and_Directory_Entries_API
 /fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects	/fr/docs/Web/API/FormData/Using_FormData_Objects
@@ -6282,6 +6283,7 @@
 /fr/docs/conflicting/Web/JavaScript/Guide/Introduction_6f341ba6db4b060ccbd8dce4a0d5214b	/fr/docs/Web/JavaScript/Guide/Introduction
 /fr/docs/conflicting/Web/JavaScript/Guide/Regular_Expressions/Assertions	/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /fr/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain	/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+/fr/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type	/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects	/fr/docs/Web/JavaScript/Reference/Global_Objects
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer	/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
