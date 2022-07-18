@@ -55,7 +55,7 @@ function step(timestamp) {
   element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
 
   if (elapsed &lt; 2000) { // 在两秒后停止动画
-    window.requestAnimationFrame(step);
+    window.cancelAnimationFrame(step);
   }
 }
 
