@@ -70,7 +70,7 @@ La relación de contraste de color se determina comparando la luminosidad del te
 #### HTML
 
 ```html
-<p>Mi contorno es azul, como puedes ver.</p>
+<p>Como puedes ver, mi contorno es azul.</p>
 ```
 
 #### CSS
