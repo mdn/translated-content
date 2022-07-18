@@ -1,21 +1,21 @@
 ---
-title: Sec-CH-UA-Arch
-slug: Web/HTTP/Headers/Sec-CH-UA-Arch
-translation_of: Web/HTTP/Headers/Sec-CH-UA-Arch
+title: Sec-CH-UA-Bitness
+slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
 tags:
-  - Sec-CH-UA-Arch
+  - Sec-CH-UA-Bitness
   - Client hint
   - HTTP
   - HTTP Header
   - Reference
   - Request header
   -  Experimental
+browser-compat: http.headers.Sec-CH-UA-Bitness
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-**`Sec-CH-UA-Arch`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供了用户代理的底层 CPU 架构，例如 ARM 或 x86。
+**`Sec-CH-UA-Bitness`** [用户代理客户端](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理底层 CPU 架构（architecture）的“位数”。这是一种以位为单位的指示内存地址大小的整数，通常为 64 位或 32 位。
 
-例如，服务器可以使用它来选择并提供可执行文件的正确二进制格式供用户下载。
+这个标头可能被服务器用作类似选择并提供可执行文件的正确二进制格式供用户下载等用途。
 
 <table class="properties">
   <tbody>
@@ -36,24 +36,24 @@ tags:
 ## 语法
 
 ```http
-Sec-CH-UA-Arch: <arch>
+Sec-CH-UA-Bitness: <bitness>
 ```
 
-### 指令
+## 指令
 
-- `<arch>`
-  - : 指示底层平台架构的字符串，例如 `"x86"`、`"ARM"`、`"[arm64-v8a, armeabi-v7a, armeabi]"` 等。
+- `<bitness>`
+  - : 指示基础平台架构位数的字符串，例如：`“64”`、`“32”`。
 
 ## 示例
 
-服务器通过在响应客户端的某些请求时包含 {{HTTPHeader("Accept-CH")}} 来请求 `Sec-CH-UA-Arch` 标头，并使用所需标头的名称作为令牌：
+服务器通过在来自客户端的任何请求的 _response_ 中包含 {{HTTPHeader("Accept-CH")}} 来请求 `Sec-CH-UA-Bitness` 标头，并使用所需标头的名称作为令牌：
 
 ```http
 HTTP/1.1 200 OK
-Accept-CH: Sec-CH-UA-Arch
+Accept-CH: Sec-CH-UA-Bitness
 ```
 
-客户端可以选择提供提示，并将 `Sec-CH-UA-Arch` 标头添加到后续请求中。例如，在基于 Windows X86 的计算机上，客户端可能会添加如下所示标头：
+客户端可以选择提供提示，并将 `Sec-CH-UA-Bitness` 标头添加到后续请求中。例如，在基于 Windows 的 64 位计算机上，客户端可能会添加标头，如下所示：
 
 ```http
 GET /GET /my/page HTTP/1.1
@@ -61,10 +61,8 @@ Host: example.site
 Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
 Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "Windows"
-Sec-CH-UA-Arch: "x86"
+Sec-CH-UA-Bitness: "64"
 ```
-
-请注意，即使服务器响应中未指定，[低熵标头](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints)也会被添加到请求中。
 
 ## 规范
 
