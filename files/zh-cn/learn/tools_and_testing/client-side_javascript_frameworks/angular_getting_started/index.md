@@ -95,7 +95,7 @@ Angular 是一个开发平台，基于 [TypeScript](https://www.typescriptlang.o
 
 你可以使用 Angular 命令行界面来运行用于生成、构建、测试和部署 Angular 应用程序终端的命令。为了安装 Angular 命令行界面，在你的终端运行以下命令：
 
-```js
+```bash
 npm install -g @angular/cli
 ```
 
