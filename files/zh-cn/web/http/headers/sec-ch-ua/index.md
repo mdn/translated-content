@@ -10,7 +10,6 @@ tags:
   - Reference
   - Request header
   -  Experimental
-browser-compat: http.headers.Sec-CH-UA
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
