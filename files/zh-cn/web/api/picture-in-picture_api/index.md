@@ -103,7 +103,7 @@ function togglePictureInPicture() {
 }
 ```
 
-该块首先会查看 {{DOMxRef("Document", "document")}} `pictureInPictureElement` 属性的值。
+该块首先会查询 {{DOMxRef("Document", "document")}} `pictureInPictureElement` 属性的值。
 
 如果值不是 `null`，则它是当前处于画中画模式并在浮动窗口的元素。我们调用 {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} 将视频带进它初始的大小。
 
