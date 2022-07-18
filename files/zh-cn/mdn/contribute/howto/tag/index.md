@@ -157,8 +157,6 @@ MDN 有这么几种方法来使用标签：
 - `{{Tag("NeedsCompatTable")}}`
   - : 文章需要一个表来指定跨浏览器特性的兼容性，有关促进浏览器兼容性的指南参见[此处](/zh-CN/docs/MDN/Contribute/Structures/Compatibility_tables)。
 
-<!---->
-
 - `{{Tag("NeedsContent")}}`
   - : 文章是一个存根，或者是缺乏其他信息。这个标签意味着有人应该审查的内容，并添加更多的细节和/或完成写作的文章。
 - `{{Tag("NeedsExample")}}`

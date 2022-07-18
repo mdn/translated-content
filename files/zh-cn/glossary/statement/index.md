@@ -14,5 +14,3 @@ translation_of: Glossary/Statement
 ### 技术参考
 
 - [JavaScript statements and declarations](/zh-CN/docs/Web/JavaScript/Reference/Statements)
-
-<!---->
