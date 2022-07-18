@@ -13,7 +13,7 @@ tags:
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-**`Sec-CH-UA-Bitness`** [用户代理客户端](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理底层 CPU 架构（architecture）的“位数”。这是一种以位为单位的指示内存地址大小的整数，通常为 64 位或 32 位。
+**`Sec-CH-UA-Bitness`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理底层 CPU 架构（architecture）的“位数”。这是一种以位为单位的指示内存地址大小的整数，通常为 64 位或 32 位。
 
 这个标头可能被服务器用作类似选择并提供可执行文件的正确二进制格式供用户下载等用途。
 
@@ -22,8 +22,7 @@ tags:
     <tr>
       <th scope="row">标头类型</th>
       <td>
-        {{Glossary("Request header")}},
-        <a href="/zh-CN/docs/Web/HTTP/Client_hints">客户端提示</a>
+        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Client_hints">客户端提示</a>
       </td>
     </tr>
     <tr>
@@ -42,11 +41,11 @@ Sec-CH-UA-Bitness: <bitness>
 ## 指令
 
 - `<bitness>`
-  - : 指示基础平台架构位数的字符串，例如：`“64”`、`“32”`。
+  - : 指示基础平台架构位数的字符串，例如：`"64"`、`"32"`。
 
 ## 示例
 
-服务器通过在来自客户端的任何请求的 _response_ 中包含 {{HTTPHeader("Accept-CH")}} 来请求 `Sec-CH-UA-Bitness` 标头，并使用所需标头的名称作为令牌：
+服务器通过在来自客户端的任何请求的*响应*中包含 {{HTTPHeader("Accept-CH")}} 来请求 `Sec-CH-UA-Bitness` 标头，并使用所需标头的名称作为令牌：
 
 ```http
 HTTP/1.1 200 OK
@@ -76,7 +75,7 @@ Sec-CH-UA-Bitness: "64"
 ## 参见
 
 - [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
-- [用户代理端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
-- [通过用户代理端提示改善用户隐私和开发人员体验](https://web.dev/user-agent-client-hints/)（web.dev）
+- [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
+- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://web.dev/user-agent-client-hints/)（web.dev）
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}
