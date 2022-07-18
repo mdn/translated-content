@@ -105,7 +105,7 @@ function togglePictureInPicture() {
 
 该块首先会查询 {{DOMxRef("Document", "document")}} `pictureInPictureElement` 属性的值。
 
-如果值不是 `null`，则它是当前处于画中画模式并在浮动窗口的元素。我们调用 {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} 将视频带进它初始的大小。
+如果值不是 `null`，则它是当前处于画中画模式并在浮动窗口的元素。我们调用 {{DOMxRef("Document.exitPictureInPicture", "document.exitPictureInPicture()")}} 将视频带进它初始的盒子。
 
 如果值是 `null`，浮动窗口没有视频。所以我们可以请求视频进入画中画模式。我们可以在 {{HTMLElement("video")}} 元素上调用 {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}} 来实现。
 
