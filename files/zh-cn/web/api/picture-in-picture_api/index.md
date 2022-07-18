@@ -41,14 +41,14 @@ translation_of: Web/API/Picture-in-Picture_API
 
 ## 属性
 
-*画中画 API 添加了* {{DOMxRef("HTMLVideoElement")}}、{{DOMxRef("Document")}} 和 {{DOMxRef("ShadowRoot")}} 接口的属性，这些属性用于决定是否浮动的视频窗口是受支持和可用、是否当前画中画模式处于激活状态并且哪个视频是浮动的。
+*画中画 API 添加了* {{DOMxRef("HTMLVideoElement")}}、{{DOMxRef("Document")}} 和 {{DOMxRef("ShadowRoot")}} 接口的属性，这些属性用于决定浮动的视频窗口是否是受支持和可用的、当前画中画模式是否处于激活状态并且哪个视频是浮动的。
 
 ### HTMLVideoElement 接口的属性
 
 - {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
   - : 当用户切换标签页和（或）应用程序时，`autoPictureInPicture` 属性将自动进入或离开视频元素的画中画模式。
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-  - : `disablePictureInPicture` 属性将指示用户代理是否应该向用户建议画中画的功能，或者自动请求该功能。
+  - : `disablePictureInPicture` 属性将指示用户代理是否应该向用户建议画中画的功能。
 
 ### Document 接口的属性
 
@@ -65,11 +65,11 @@ translation_of: Web/API/Picture-in-Picture_API
 _画中画 API 定义了三个事件，它们可以用来检测画中画模式何时被切换或者浮动窗口大小何时被调整。_
 
 - {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
-  - : 当 {{DOMxRef("HTMLVideoElement")}} 进入画中画模式发送给它。
+  - : 当 {{DOMxRef("HTMLVideoElement")}} 进入画中画模式时触发该事件。
 - {{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : 当 {{DOMxRef("HTMLVideoElement")}} 离开画中画模式发送给它。
+  - : 当 {{DOMxRef("HTMLVideoElement")}} 离开画中画模式时触发该事件。
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
-  - : 当 {{DOMxRef("PictureInPictureWindow")}} 大小改变时发送给它。
+  - : 当 {{DOMxRef("PictureInPictureWindow")}} 大小改变时触发该事件。
 
 ## 控制样式
 
