@@ -37,7 +37,7 @@ translation_of: Web/API/Picture-in-Picture_API
 ### Document 接口的方法
 
 - {{DOMxRef("Document.exitPictureInPicture()")}}
-  - : 请求用户代理将元素的画中画模式返回到它的原始大小。
+  - : 请求用户代理将元素由画中画模式切换回到它的原始盒子。
 
 ## 属性
 
