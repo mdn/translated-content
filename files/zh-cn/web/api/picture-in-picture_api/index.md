@@ -23,7 +23,7 @@ translation_of: Web/API/Picture-in-Picture_API
 ## 接口
 
 - {{DOMxRef("PictureInPictureWindow")}}
-  - : 表示浮动的视频窗口；包含 {{domxref("PictureInPictureWindow/width", "width")}} 和 {{domxref("PictureInPictureWindow/height", "height")}} 属性，以及一个 {{domxref("PictureInPictureWindow/onresize", "onresize")}} 事件处理程序属性。
+  - : 表示浮动的视频窗口；包含 {{domxref("PictureInPictureWindow/width", "width")}} 和 {{domxref("PictureInPictureWindow/height", "height")}} 属性，以及一个 {{domxref("PictureInPictureWindow/onresize", "onresize")}} 事件处理器属性。
 
 ## 方法
 
