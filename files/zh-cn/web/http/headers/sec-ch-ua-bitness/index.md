@@ -1,6 +1,7 @@
 ---
 title: Sec-CH-UA-Bitness
 slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
+translation_of: Web/HTTP/Headers/Sec-CH-UA-Bitness
 tags:
   - Sec-CH-UA-Bitness
   - Client hint
