@@ -1,94 +1,131 @@
 ---
 title: 'Document: dragstart イベント'
 slug: Web/API/Document/dragstart_event
+page-type: web-api-event
 tags:
-  - API
   - DOM
-  - Document
-  - DragEvent
   - Event
   - Reference
   - drag and drop
-  - ドラッグ＆ドロップ
+browser-compat: api.Document.dragstart_event
 translation_of: Web/API/Document/dragstart_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>dragstart</code> イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。</p>
+`dragstart` イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル可能</th>
-   <td>はい</td>
-  </tr>
-  <tr>
-   <th scope="row">既定のアクション</th>
-   <td>ドラッグ＆ドロップ操作を始める。</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("DragEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/ondragstart", "ondragstart")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>可</td>
+    </tr>
+    <tr>
+      <th scope="row">既定のアクション</th>
+      <td>ドラッグ＆ドロップ操作を始める。</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("DragEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/ondragstart", "ondragstart")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>サンプルコードは {{domxref("Document/drag_event", "drag")}} イベント、またはこの <a class="external external-icon" href="http://jsfiddle.net/zfnj5rv4/" rel="noopener">JSFiddle デモ</a>をご覧ください。</p>
+### ドラッグ開始時に半透明を設定
 
-<p>{{EmbedLiveSample('Examples', '300', '200', '', 'Web/API/Document/drag_event')}}</p>
+この例では、コンテナーの中にドラッグ可能な要素を入れています。要素を掴んでドラッグし、そして放してみましょう。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+ドラッグしている間、要素を半透明化するために `dragstart` イベントを待ち受けます。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragstart")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+ドラッグ＆ドロップの完全な例については、[`drag`](/ja/docs/Web/API/Document/drag_event) イベントのページを参照してください。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+#### HTML
 
-<p>{{Compat("api.Document.dragstart_event")}}</p>
+```html
+<div id="container">
+  <div id="draggable" draggable="true">
+    This div is draggable
+  </div>
+</div>
+<div class="dropzone"></div>
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+#### CSS
 
-<ul>
- <li>その他のドラッグ＆ドロップイベント:
-  <ul>
-   <li>{{domxref("Document/drag_event", "drag")}}</li>
-   <li>{{domxref("Document/dragend_event", "dragend")}}</li>
-   <li>{{domxref("Document/dragover_event", "dragover")}}</li>
-   <li>{{domxref("Document/dragenter_event", "dragenter")}}</li>
-   <li>{{domxref("Document/dragleave_event", "dragleave")}}</li>
-   <li>{{domxref("Document/dragexit_event", "dragexit")}}</li>
-   <li>{{domxref("Document/drop_event", "drop")}}</li>
-  </ul>
- </li>
- <li>他のターゲットにおけるこのイベント:
-  <ul>
-   <li>{{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} イベント</li>
-   <li>{{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベント</li>
-   <li>{{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} イベント</li>
-  </ul>
- </li>
-</ul>
+```css
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
+#draggable {
+  text-align: center;
+  background: white;
+}
+
+#container {
+  width: 200px;
+  height: 20px;
+  background: blueviolet;
+  padding: 10px;
+}
+
+.dragging {
+  opacity: .5;
+}
+```
+
+#### JavaScript
+
+```js
+document.addEventListener("dragstart", event => {
+  // make it half transparent
+  event.target.classList.add("dragging");
+});
+
+document.addEventListener("dragend", event => {
+  // reset the transparency
+  event.target.classList.remove("dragging");
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample('Setting opacity on drag start')}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- その他のドラッグ＆ドロップイベント:
+
+  - {{domxref("Document/drag_event", "drag")}}
+  - {{domxref("Document/dragend_event", "dragend")}}
+  - {{domxref("Document/dragover_event", "dragover")}}
+  - {{domxref("Document/dragenter_event", "dragenter")}}
+  - {{domxref("Document/dragleave_event", "dragleave")}}
+  - {{domxref("Document/drop_event", "drop")}}
+
+- 他のターゲットにおけるこのイベント:
+
+  - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} イベント
+  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベント
+  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} イベント
