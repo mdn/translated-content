@@ -75,7 +75,7 @@ _画中画 API 定义了三个事件，它们可以被用来检测何时画中�
 
 [CSS](/zh-CN/docs/Web/CSS) 的[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) [`:picture-in-picture`](/zh-CN/docs/Web/CSS/:picture-in-picture) 匹配当前进入画中画模式的视频元素，并允许你配置样式表，以便视频在画中画或者传统播放模式来回切换时去自动适应大小，样式或布局内容。
 
-## 控制权限
+## 控制访问权限
 
 可以使用 [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy) 控制画中画的可用性。全屏模式的功能由字符 `"picture-in-picture"` 标识，默认允许的列表值是 `"self"`，意味着在顶级文档上下文以及从最顶层文档相同的来源加载的嵌套浏览上下文中允许画中画模式。
 
