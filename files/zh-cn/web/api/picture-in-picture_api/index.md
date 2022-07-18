@@ -62,14 +62,14 @@ translation_of: Web/API/Picture-in-Picture_API
 
 ## 事件
 
-_画中画 API 定义了三个事件，它们可以被用来检测何时画中画模式被切换或者何时浮动窗口大小被调整。_
+_画中画 API 定义了三个事件，它们可以用来检测画中画模式何时被切换或者浮动窗口大小何时被调整。_
 
 - {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
-  - : 进入画中画模式发送到 {{DOMxRef("HTMLVideoElement")}}。
+  - : 进入画中画模式发送给 {{DOMxRef("HTMLVideoElement")}}。
 - {{domxref("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : 离开画中画模式发送到 {{DOMxRef("HTMLVideoElement")}}。
+  - : 离开画中画模式发送给 {{DOMxRef("HTMLVideoElement")}}。
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
-  - : 当它大小改变时发送到 {{DOMxRef("PictureInPictureWindow")}}。
+  - : 当它大小改变时发送给 {{DOMxRef("PictureInPictureWindow")}}。
 
 ## 控制样式
 
