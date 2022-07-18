@@ -58,6 +58,7 @@ Accept-CH: Sec-CH-UA-Arch
 ```http
 GET /GET /my/page HTTP/1.1
 Host: example.site
+
 Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
 Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "Windows"
