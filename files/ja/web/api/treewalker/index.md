@@ -1,165 +1,104 @@
 ---
 title: TreeWalker
 slug: Web/API/TreeWalker
+page-type: web-api-interface
 tags:
   - API
   - DOM
+browser-compat: api.TreeWalker
 translation_of: Web/API/TreeWalker
 ---
-<div>{{APIRef("DOM")}}</div>
+{{ APIRef("DOM") }}
 
-<p><strong><code>TreeWalker</code></strong> オブジェクトは、文書のサブツリーのノード及びその位置を表します。</p>
+**`TreeWalker`** オブジェクトは、文書のサブツリーのノードおよびその位置を表します。
 
-<p><code>TreeWalker</code> は <a href="/ja/docs/Web/API/document"><code>document</code></a> オブジェクトの {{domxref("Document.createTreeWalker()")}} メソッドを使用して作成可能です。</p>
+`TreeWalker` は [`document`](/ja/docs/Web/API/document) オブジェクトの {{domxref("Document.createTreeWalker()")}} メソッドを使用して作成可能です。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em>このインターフェイスが継承するプロパティはありません。</em></p>
+_このインターフェイスが継承するプロパティはありません。_
 
-<dl>
- <dt>{{domxref("TreeWalker.root")}} {{readonlyInline}}</dt>
- <dd><code>TreeWalker</code> を作成したときに指定したルートノードを表す {{domxref("Node")}} を返します。</dd>
- <dt>{{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}</dt>
- <dd>提供しなければならない {{domxref("Node")}} の型を表す定数で構成されるビットマスクである <code>unsigned long</code> を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。使用できる値は以下のとおりです:
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td class="header">定数</td>
-    <td class="header">数値</td>
-    <td class="header">説明</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ALL</code></td>
-    <td><code>4294967295</code> (<code>unsigned long</code> の最大値)</td>
-    <td>すべてのノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ATTRIBUTE</code> {{deprecated_inline}}</td>
-    <td><code>2</code></td>
-    <td>属性の {{domxref("Attr")}} ノードを表示します。これはルートとして {{domxref("Attr")}} を含む {{domxref("TreeWalker")}} を作成する場合に限り、意味があります。この場合は、イテレーションやトラバーサルの最初の位置に属性ノードが現れることを意味します。属性はほかのノードの子ではありませんので、ドキュメントツリーをトラバーサルするときは出現しません。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{deprecated_inline}}</td>
-    <td><code>8</code></td>
-    <td>{{domxref("CDATASection")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_COMMENT</code></td>
-    <td><code>128</code></td>
-    <td>{{domxref("Comment")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
-    <td><code>256</code></td>
-    <td>{{domxref("Document")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT_FRAGMENT</code></td>
-    <td><code>1024</code></td>
-    <td>{{domxref("DocumentFragment")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
-    <td><code>512</code></td>
-    <td>{{domxref("DocumentType")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ELEMENT</code></td>
-    <td><code>1</code></td>
-    <td>{{domxref("Element")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ENTITY</code> {{deprecated_inline}}</td>
-    <td><code>32</code></td>
-    <td>{{domxref("Entity")}} ノードを表示します。これはルートとして {{domxref("Entity")}} を含む {{domxref("TreeWalker")}} を作成する場合に限り、意味があります。この場合は、イテレーションやトラバーサルの最初の位置に {{domxref("Entity")}} ノードが現れることを意味します。エンティティはドキュメントツリーの一部ではありませんので、ドキュメントツリーをトラバーサルするときは出現しません。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{deprecated_inline}}</td>
-    <td><code>16</code></td>
-    <td>{{domxref("EntityReference")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_NOTATION</code> {{deprecated_inline}}</td>
-    <td><code>2048</code></td>
-    <td>{{domxref("Notation")}} ノードを表示します。これはルートとして {{domxref("Notation")}} を含む {{domxref("TreeWalker")}} を作成する場合に限り、意味があります。この場合は、イテレーションやトラバーサルの最初の位置に {{domxref("Notation")}} ノードが現れることを意味します。エンティティはドキュメントツリーの一部ではありませんので、ドキュメントツリーをトラバーサルするときは出現しません。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
-    <td><code>64</code></td>
-    <td>{{domxref("ProcessingInstruction")}} ノードを表示します。</td>
-   </tr>
-   <tr>
-    <td><code>NodeFilter.SHOW_TEXT</code></td>
-    <td><code>4</code></td>
-    <td>{{domxref("Text")}} ノードを表示します。</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt>{{domxref("TreeWalker.filter")}} {{readonlyInline}}</dt>
- <dd>関連するノードを選択するために使用した {{domxref("NodeFilter")}} を返します。</dd>
- <dt>{{domxref("TreeWalker.expandEntityReferences")}} {{readonlyInline}}{{obsolete_inline}}</dt>
- <dd>{{domxref("EntityReference")}} を破棄するとき、同時にサブツリー全体も破棄するかを示す {{domxref("Boolean")}} です。</dd>
- <dt>{{domxref("TreeWalker.currentNode")}}</dt>
- <dd><code>TreeWalker</code> の現在の位置の {{domxref("Node")}} です。</dd>
-</dl>
+- {{domxref("TreeWalker.root")}} {{readonlyInline}}
+  - : `TreeWalker` を作成したときに指定したルートノードを表す {{domxref("Node")}} を返します。
+- {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+  - : 提供しなければならない {{domxref("Node")}} の型を表す定数で構成されるビットマスクである `unsigned long` を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。使用できる値は以下のとおりです。
 
-<p><em>このインターフェイスが継承するメソッドはありません。</em></p>
+    | 定数                                                        | 数値                                 | 説明                                                                                                                                                                                                                                                                                                                                                                                                            |
+    | --------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                           | `4294967295` (`unsigned long` の最大値) | すべてのノードを表示します。                                                                                                                                                                                                                                                                                                                                                                                                       |
+    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                             | 属性の {{domxref("Attr")}} ノードを表示します。これはルートとして {{domxref("Attr")}} を含む {{domxref("TreeWalker")}} を作成する場合に限り、意味があります。この場合は、反復処理や走査処理の最初の位置に属性ノードが現れることを意味します。属性はほかのノードの子ではありませんので、文書ツリーを走査処理するときは出現しません。 |
+    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                             | {{ domxref("CDATASection") }} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                  |
+    | `NodeFilter.SHOW_COMMENT`                                       | `128`                                           | {{domxref("Comment")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                          |
+    | `NodeFilter.SHOW_DOCUMENT`                                      | `256`                                           | {{domxref("Document")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                          |
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                             | `1024`                                          | {{domxref("DocumentFragment")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                              |
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                                 | `512`                                           | {{domxref("DocumentType")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                  |
+    | `NodeFilter.SHOW_ELEMENT`                                       | `1`                                             | {{domxref("Element")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                          |
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                            | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                                                                                                                |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                            | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                                                                                                                |
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                          | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                                                                                                                |
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                        | `64`                                            | {{domxref("ProcessingInstruction")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                      |
+    | `NodeFilter.SHOW_TEXT`                                          | `4`                                             | {{domxref("Text")}} ノードを表示します。                                                                                                                                                                                                                                                                                                                                                                              |
 
-<div class="note">
-<p><em>TreeWalker は可視状態の DOM ノードのみ考慮します。</em></p>
-</div>
+- {{domxref("TreeWalker.filter")}} {{readonlyInline}}
+  - : 関連するノードを選択するために使用した {{domxref("NodeFilter")}} を返します。
+- {{domxref("TreeWalker.currentNode")}}
+  - : `TreeWalker` の現在の位置の {{domxref("Node")}} です。
 
-<dl>
- <dt>{{domxref("TreeWalker.parentNode()")}}</dt>
- <dd>現在の {{domxref("Node")}} を文書内の順序で最初の<em>可視状態である</em>祖先ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した<em>ルートノード</em>より前にある場合は、<code>null</code> を返して現在のノードは変更しません。</dd>
- <dt>{{domxref("TreeWalker.firstChild()")}}</dt>
- <dd>現在の {{domxref("Node")}} を現在のノードで最初の<em>可視状態である</em>子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、<code>null</code> を返して現在のノードは変更しません。</dd>
- <dt>{{domxref("TreeWalker.lastChild()")}}</dt>
- <dd>現在の {{domxref("Node")}} を現在のノードで最後の<em>可視状態である</em>子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、<code>null</code> を返して現在のノードは変更しません。</dd>
- <dt>{{domxref("TreeWalker.previousSibling()")}}</dt>
- <dd>現在の {{domxref("Node")}} を前の兄弟に移動して、発見した兄弟ノードを返します。該当するノードがない場合は、<code>null</code> を返して現在のノードは変更しません。</dd>
- <dt>{{domxref("TreeWalker.nextSibling()")}}</dt>
- <dd>現在の {{domxref("Node")}} を次の兄弟に移動して、発見した兄弟ノードを返します。該当するノードがない場合は、<code>null</code> を返して現在のノードは変更しません。</dd>
- <dt>{{domxref("TreeWalker.previousNode()")}}</dt>
- <dd>現在の {{domxref("Node")}} を文書内の順序で前の<em>可視状態である</em>ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した<em>ルートノード</em>より前にある場合は、<code>null</code> を返して現在のノードは変更しません。</dd>
- <dt>{{domxref("TreeWalker.nextNode()")}}</dt>
- <dd>現在の {{domxref("Node")}} を文書内の順序で次の<em>可視状態である</em>ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない場合は、<code>null</code> を返して現在のノードは変更しません。</dd>
-</dl>
+## メソッド
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+_このインターフェイスが継承しているメソッドはありません。_
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-treewalker', 'TreeWalker')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td><code>expandEntityReferences</code> プロパティを削除。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker', 'TreeWalker')}}</td>
-   <td>{{Spec2('DOM2 Traversal_Range')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+> **Note:** `TreeWalker` のコンテキストでは、 `whatToShow` と `filter` 引数で決定される論理ビューにノードが存在する場合、ノードは*可視状態*となります。(ノードが画面上に表示されているかどうかは関係ありません)。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+- {{domxref("TreeWalker.parentNode()")}}
+  - : 現在の {{domxref("Node")}} を文書内の順序で最初の*可視状態*である祖先ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した*ルートノード*より前にある場合は、`null` を返して現在のノードは変更しません。
+- {{domxref("TreeWalker.firstChild()")}}
+  - : 現在の {{domxref("Node")}} を現在のノードで最初の*可視状態*である子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、`null` を返して現在のノードは変更しません。なお、 `firstChild()` が返すノードは、 `TreeWalker` オブジェクトのインスタンス化時に設定された `whatToShow` の値に依存することに注意してください。次のような HTML ツリーを想定して、 `whatToShow` を `NodeFilter.SHOW_ALL` に設定して `firstChild()` を呼び出すと、`HTMLDivElement` オブジェクトではなく `Text` ノードが返されます。
 
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <head><title>Demo</title>
+      <body>
+        <div id="container"></div>
+      </body>
+    </html>
+    ```
 
+    ```js
+    let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL);
+    let node = walker.firstChild(); // nodeName: "#text"
+    ```
 
-<p>{{Compat("api.TreeWalker")}}</p>
+    しかし、次のようにすることができます。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+    ```js
+    let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
+    let node = walker.firstChild(); // nodeName: "DIV"
+    ```
 
-<ul>
- <li>作成するメソッド: {{domxref("Document.createTreeWalker()")}}</li>
- <li>関連インターフェイス: {{domxref("NodeFilter")}}, {{domxref("NodeIterator")}}</li>
-</ul>
+    同じことが `nextSibling()`, `previousSibling()`, `firstChild()`, `lastChild()` でも言えます。
+- {{domxref("TreeWalker.lastChild()")}}
+  - : 現在の {{domxref("Node")}} を現在のノードで最後の*可視状態*である子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、`null` を返して現在のノードは変更しません。
+- {{domxref("TreeWalker.previousSibling()")}}
+  - : 現在の {{domxref("Node")}} を前の兄弟に移動して、発見した兄弟ノードを返します。該当するノードがない場合は、 `null` を返して現在のノードは変更しません。
+- {{domxref("TreeWalker.nextSibling()")}}
+  - : 現在の {{domxref("Node")}} を次の兄弟に移動して、発見した兄弟ノードを返します。該当するノードがない場合は、 `null` を返して現在のノードは変更しません。
+- {{domxref("TreeWalker.previousNode()")}}
+  - : 現在の {{domxref("Node")}} を文書内の順序で前の<em>可視状態である</em>ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した<em>ルートノード</em>より前にある場合は、`null` を返して現在のノードは変更しません。
+- {{domxref("TreeWalker.nextNode()")}}
+  - : 現在の {{domxref("Node")}} を文書内の順序で次の<em>可視状態である</em>ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない場合は、`null` を返して現在のノードは変更しません。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- 作成するメソッド: {{domxref("Document.createTreeWalker()")}}
+- 関連インターフェイス: {{domxref("NodeFilter")}}, {{domxref("NodeIterator")}}
