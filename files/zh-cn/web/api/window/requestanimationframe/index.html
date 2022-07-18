@@ -15,7 +15,7 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <p><strong><code>window.requestAnimationFrame()</code></strong> 告诉浏览器——你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行</p>
 
-<div class="note"><strong>注意：若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用<code>window.requestAnimationFrame()</code></strong></div>
+<div class="note"><p><strong>备注：</strong> 若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用 <code>window.requestAnimationFrame()</code></p></div>
 
 <p>当你准备更新动画时你应该调用此方法。这将使浏览器在下一次重绘之前调用你传入给该方法的动画函数 (即你的回调函数)。回调函数执行次数通常是每秒 60 次，但在大多数遵循 W3C 建议的浏览器中，回调函数执行次数通常与浏览器屏幕刷新次数相匹配。为了提高性能和电池寿命，因此在大多数浏览器里，当<code>requestAnimationFrame()</code> 运行在后台标签页或者隐藏的{{ HTMLElement("iframe") }} 里时，<code>requestAnimationFrame()</code> 会被暂停调用以提升性能和电池寿命。</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate">window.requestAnimationFrame(callback);
+<pre class="brush: js">window.requestAnimationFrame(callback);
 </pre>
 
 <h3 id="Parameters">参数</h3>
@@ -44,18 +44,27 @@ translation_of: Web/API/window/requestAnimationFrame
 <h2 id="Notes">范例</h2>
 
 <pre class="brush: js notranslate">const element = document.getElementById('some-element-you-want-to-animate');
-let start;
+let start, previousTimeStamp;
+let done = false
 
 function step(timestamp) {
-  if (start === undefined)
+  if (start === undefined) {
     start = timestamp;
+  }
   const elapsed = timestamp - start;
 
-  //这里使用`Math.min()`确保元素刚好停在 200px 的位置。
-  element.style.transform = 'translateX(' + Math.min(0.1 * elapsed, 200) + 'px)';
+  if (previousTimeStamp !== timestamp) {
+    // 这里使用 `Math.min()` 确保元素刚好停在 200px 的位置。
+    const count = Math.min(0.1 * elapsed, 200);
+    element.style.transform = 'translateX(' + count + 'px)';
+    if (count === 200) done = true;
+  }
 
-  if (elapsed &lt; 2000) { // 在两秒后停止动画
-    window.requestAnimationFrame(step);
+  if (elapsed < 2000) { // 在两秒后停止动画
+    previousTimeStamp = timestamp;
+    if (!done) {
+      window.requestAnimationFrame(step);
+    }
   }
 }
 
@@ -67,13 +76,9 @@ window.requestAnimationFrame(step);</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
+<p>{{Compat}}</p>
 
-
-<p>{{Compat("api.Window.requestAnimationFrame")}}</p>
-</div>
-
-<h2 id="See_also">参阅</h2>
+<h2 id="See_also">参见</h2>
 
 <ul>
  <li>{{domxref("Window.mozAnimationStartTime")}}</li>
@@ -85,19 +90,3 @@ window.requestAnimationFrame(step);</pre>
  <li><a href="http://www.testufo.com/#test=animation-time-graph" title="http://www.testufo.com/#test=animation-time-graph">TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations</a></li>
  <li>Paul Irish: <a class="external external-icon" href="http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision">requestAnimationFrame API: now with sub-millisecond precision</a></li>
 </ul>
-
-<div id="gtx-anchor" style="position: absolute; left: 233px; top: 1643px; width: 325.969px; height: 20px;"></div>
-
-<div class="jfk-bubble gtx-bubble">
-<div class="jfk-bubble-content-id" id="bubble-3">
-<div id="gtx-host" style="max-width: 400px;"></div>
-</div>
-
-<div class="jfk-bubble-closebtn-id jfk-bubble-closebtn"></div>
-
-<div class="jfk-bubble-arrow-id jfk-bubble-arrow jfk-bubble-arrowdown" style="left: 143px;">
-<div class="jfk-bubble-arrowimplbefore"></div>
-
-<div class="jfk-bubble-arrowimplafter"></div>
-</div>
-</div>
