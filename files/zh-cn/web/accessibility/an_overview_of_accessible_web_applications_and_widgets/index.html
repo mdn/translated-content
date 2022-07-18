@@ -13,29 +13,29 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <pre class="brush: html"><code>&lt;!-- This is a tabs widget. How would you know, looking only at the markup? --&gt;
 &lt;ol&gt;
-  &lt;li id="ch1Tab"&gt;
-    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="ch2Tab"&gt;
-    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="quizTab"&gt;
-    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
-  &lt;/li&gt;
+  &lt;li id="ch1Tab"&gt;
+    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="ch2Tab"&gt;
+    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="quizTab"&gt;
+    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div&gt;
-  &lt;div id="ch1Panel"&gt;Chapter 1 content goes here&lt;/div&gt;
-  &lt;div id="ch2Panel"&gt;Chapter 2 content goes here&lt;/div&gt;
-  &lt;div id="quizPanel"&gt;Quiz content goes here&lt;/div&gt;
+  &lt;div id="ch1Panel"&gt;Chapter 1 content goes here&lt;/div&gt;
+  &lt;div id="ch2Panel"&gt;Chapter 2 content goes here&lt;/div&gt;
+  &lt;div id="quizPanel"&gt;Quiz content goes here&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
 <p><em>Example 2: How the tabs widget might be styled visually. Users might recognize it visually, but there are no machine-readable semantics for an assistive technology.</em><br>
- <img alt="Screenshot of the tabs widget" class="default internal" src="/@api/deki/files/4926/=Tabs_Widget.png"></p>
+ <img alt="Screenshot of the tabs widget" src="tabs_widget.png"></p>
 
 <h2 id="ARIA">ARIA</h2>
 
-<p><a href="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, 来自 W3C 的网络无障碍计划（<a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>） 的可访问的富互联网应用程序（<strong>Accessible Rich Internet Applications）规范，</strong>提供了一种添加辅助技术（如屏幕阅读器）所需的缺少语义的方法。ARIA 使开发人员可以通过向标记添加特殊属性来更详细地描述其小部件。 旨在填补在动态 web 应用在发现的标准 HTML 标签与桌面式控件之的差距，ARIA 提供了角色和状态以描述大多数常见的 UI 小部件的行为。</p>
+<p><a href="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, 来自 W3C 的网络无障碍计划（<a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>） 的可访问的富互联网应用程序（<strong>Accessible Rich Internet Applications</strong>）规范，提供了一种添加辅助技术（如屏幕阅读器）所需的缺少语义的方法。ARIA 使开发人员可以通过向标记添加特殊属性来更详细地描述其小部件。 旨在填补在动态 web 应用在发现的标准 HTML 标签与桌面式控件之的差距，ARIA 提供了角色和状态以描述大多数常见的 UI 小部件的行为。</p>
 
 <p>The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.</p>
 
@@ -46,22 +46,22 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 <pre class="brush: html"><code>&lt;!-- Now *these* are Tabs! --&gt;
 &lt;!-- We've added role attributes to describe the tab list and each tab. --&gt;
 &lt;ol role="tablist"&gt;</code>
-  &lt;li id="ch1Tab" role="tab"&gt;
-    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="ch2Tab" role="tab"&gt;
-    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li id="quizTab" role="tab"&gt;
-    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
-  &lt;/li&gt;
+  &lt;li id="ch1Tab" role="tab"&gt;
+    &lt;a href="#ch1Panel"&gt;Chapter 1&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="ch2Tab" role="tab"&gt;
+    &lt;a href="#ch2Panel"&gt;Chapter 2&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li id="quizTab" role="tab"&gt;
+    &lt;a href="#quizPanel"&gt;Quiz&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;div&gt;
-  &lt;!-- Notice the role and aria-labelledby attributes we've added to describe these panels. --&gt;
-  &lt;div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab"&gt;Chapter 1 content goes here&lt;/div&gt;
-  &lt;div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab"&gt;Chapter 2 content goes here&lt;/div&gt;
-  &lt;div id="quizPanel" role="tabpanel" aria-labelledby="quizTab"&gt;Quiz content goes here&lt;/div&gt;
+  &lt;!-- Notice the role and aria-labelledby attributes we've added to describe these panels. --&gt;
+  &lt;div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab"&gt;Chapter 1 content goes here&lt;/div&gt;
+  &lt;div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab"&gt;Chapter 2 content goes here&lt;/div&gt;
+  &lt;div id="quizPanel" role="tabpanel" aria-labelledby="quizTab"&gt;Quiz content goes here&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -73,7 +73,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <h4 id="状态变化">状态变化</h4>
 
-<p>ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):</p>
+<p>ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):</p>
 
 <ul>
  <li><strong><code>aria-checked</code></strong>: indicates the state of a checkbox or radio button</li>
@@ -87,9 +87,9 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>The Open Ajax Alliance website provides an example of CSS attribute selectors based on ARIA states. The example shows a WYSIWYG editor interface with a dynamic menu system. Items currently selected in a menu, such as the font face, are visually distinguished from other items. The relevant parts of the example are explained below.</p>
 
-<p>In this example, the HTML for a menu has the form shown in Example 1a. Note how, on lines 7 and 13, the <strong><code>aria-checked</code></strong> property is used to declare the selection state of the menu items.</p>
+<p>In this example, the HTML for a menu has the form shown in Example 1a. Note how, on lines 7 and 13, the <strong><code>aria-checked</code></strong> property is used to declare the selection state of the menu items.</p>
 
-<p><em>Example 1a. HTML for a selectable menu.</em></p>
+<p><em>Example 1a. HTML for a selectable menu.</em></p>
 
 <pre class="brush: html">&lt;ul id="fontMenu" class="menu" role="menu" aria-hidden="true"&gt;
   &lt;li id="sans-serif"
@@ -123,7 +123,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p><em>Example 1c. JavaScript to update the aria-checked attribute</em>.</p>
 
-<pre class="brush: javascript">var processMenuChoice = function(item) {
+<pre class="brush: js">var processMenuChoice = function(item) {
   // 'check' the selected item
   item.setAttribute('aria-checked', 'true');
   // 'un-check' the other menu items
@@ -142,9 +142,9 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>The Open Ajax Alliance website provides an example of a tooltip that uses <strong><code>aria-hidden</code></strong> to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields. The relevant parts of the example are explained below.</p>
 
-<p>In this example, the HTML for the tooltip has the form shown in Example 2a. Line 9 sets the <strong><code>aria-hidden</code></strong> state to <code>true</code>.</p>
+<p>In this example, the HTML for the tooltip has the form shown in Example 2a. Line 9 sets the <strong><code>aria-hidden</code></strong> state to <code>true</code>.</p>
 
-<p><em>Example 2a. HTML for a tooltip.</em></p>
+<p><em>Example 2a. HTML for a tooltip.</em></p>
 
 <pre class="brush: html">&lt;div class="text"&gt;
     &lt;label id="tp1-label" for="first"&gt;First Name:&lt;/label&gt;
@@ -171,27 +171,26 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p><em>Example 2c. JavaScript to update the aria-checked attribute.</em></p>
 
-<pre class="brush: javascript">var showTip = function(el) {
+<pre class="brush: js">var showTip = function(el) {
   el.setAttribute('aria-hidden', 'false');
 }</pre>
 
 <h3 id="角色变化">角色变化</h3>
 
-<div class="note">Under construction</div>
-
-<p>ARIA allows developers to declare a semantic role for an element that otherwise offers incorrect or no semantics. For example, when an unordered list is used to create a menu, the {{ HTMLElement("ul") }} should be given a <strong><code>role</code></strong> of <code>menubar</code> and each {{ HTMLElement("li") }} should be given a <strong><code>role</code></strong> of <code>menuitem</code>.</p>
+<div class="note">
+<p><strong>备注：</strong> ARIA allows developers to declare a semantic role for an element that otherwise offers incorrect or no semantics. For example, when an unordered list is used to create a menu, the {{ HTMLElement("ul") }} should be given a <strong><code>role</code></strong> of <code>menubar</code> and each {{ HTMLElement("li") }} should be given a <strong><code>role</code></strong> of <code>menuitem</code>.</p>
 
 <p>The <strong><code>role</code></strong> of an element should not change. Instead, remove the original element and replace it with an element with the new <strong><code>role</code></strong>.</p>
 
-<p>For example, consider an "inline edit" widget: a component that allows users to edit a piece of text in place, without switching contexts. This component has a "view" mode, in which the text is not editable, but is activatable, and an "edit" mode, in which the text can be edited. A developer might be tempted to implement the "view" mode using a read-only text  {{ HTMLElement("input") }} element and setting its ARIA <strong><code>role</code></strong> to <code>button</code>, then switching to "edit" mode by making the element writable and removing the <strong><code>role</code></strong> attribute in "edit" mode (since {{ HTMLElement("input") }} elements have their own role semantics).</p>
+<p>For example, consider an "inline edit" widget: a component that allows users to edit a piece of text in place, without switching contexts. This component has a "view" mode, in which the text is not editable, but is activatable, and an "edit" mode, in which the text can be edited. A developer might be tempted to implement the "view" mode using a read-only text  {{ HTMLElement("input") }} element and setting its ARIA <strong><code>role</code></strong> to <code>button</code>, then switching to "edit" mode by making the element writable and removing the <strong><code>role</code></strong> attribute in "edit" mode (since {{ HTMLElement("input") }} elements have their own role semantics).</p>
 
-<p>Do not do this. Instead, implement the "view" mode using a different element altogether, such as a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} with a <strong><code>role</code></strong> of <code>button</code>, and the « edit » mode using a text  {{ HTMLElement("input") }} element.</p>
+<p>Do not do this. Instead, implement the "view" mode using a different element altogether, such as a {{ HTMLElement("div") }} or {{ HTMLElement("span") }} with a <strong><code>role</code></strong> of <code>button</code>, and the « edit » mode using a text  {{ HTMLElement("input") }} element.</p>
 
 <h3 id="异步内容变化">?异步内容变化</h3>
 
-<div class="note">Under construction. See also <a href="/en/ARIA/Live_Regions">Live Regions</a></div>
+<div class="note"><p><strong>备注：</strong> See also <a href="/en/ARIA/Live_Regions">Live Regions</a></p></div>
 
-<h2 id="键盘导航">?键盘导航</h2>
+<h2 id="键盘导航">键盘导航</h2>
 
 <p>Often times developers overlook support for the keyboard when they create custom widgets. To be accessible to a variety of users, all features of a web application or widget should also be controllable with the keyboard, without requiring a mouse. In practice, this usually involves following the conventions supported by similar widgets on the desktop, taking full advantage of the Tab, Enter, Spacebar, and arrow keys.</p>
 
@@ -209,7 +208,7 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 
 <p>So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the &lt;ol&gt; in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the &lt;li&gt; elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating <a href="/en/Accessibility/Keyboard-navigable_JavaScript_widgets">Keyboard-navigable JavaScript widgets</a> describes how to implement this behavior with JavaScript.</p>
 
-<p>For more detail about desktop-style keyboard navigation conventions, a comprehensive <a href="http://access.aol.com/dhtml-style-guide-working-group/">DHTML style guide</a> is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful <a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> document that includes keyboard navigation and shortcut conventions for a variety of widgets. </p>
+<p>For more detail about desktop-style keyboard navigation conventions, a comprehensive <a href="http://access.aol.com/dhtml-style-guide-working-group/">DHTML style guide</a> is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful <a href="http://www.w3.org/WAI/PF/aria-practices/Overview.html">ARIA Best Practices</a> document that includes keyboard navigation and shortcut conventions for a variety of widgets. </p>
 
 <h2 id="参见">参见</h2>
 

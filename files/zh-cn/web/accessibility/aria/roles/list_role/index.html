@@ -27,8 +27,7 @@ tags:
 <p>关于应该使用哪些元素来标记 <code>list</code> 和 <code>listitem</code> 没有硬性规定，但是您应该确保 <code>listitem</code> 在列表的上下文中有意义，例如购物清单、食谱步骤、行车路线。</p>
 
 <div class="notecard warning">
-  <h4>警告</h4>
-  <p>如果可能，您应该使用适当的语义化 HTML 元素来标记 <code>list</code> 及其 <code>listitem</code>，如 {{HTMLElement("ul")}}、{{HTMLElement("ol")}} 和 {{HTMLElement("li")}}。有关完整示例，请参阅 <a href="#best_practices">最佳实践</a>。</p>
+  <p><strong>警告：</strong> 如果可能，您应该使用适当的语义化 HTML 元素来标记 <code>list</code> 及其 <code>listitem</code>，如 {{HTMLElement("ul")}}、{{HTMLElement("ol")}} 和 {{HTMLElement("li")}}。有关完整示例，请参阅 <a href="#best_practices">最佳实践</a>。</p>
 </div>
 
 <h3 id="Associated_WAI-ARIA_Roles_States_and_Properties">关联的 WAI-ARIA 角色、状态和属性</h3>
@@ -73,15 +72,13 @@ tags:
 &lt;/ol&gt;</pre>
 
 <div class="notecard note">
-  <h4>注意</h4>
-  <p>ARIA <code>list</code> / <code>listitem</code> 角色不区分有序列表和无序列表。</p>
+  <p><strong>备注：</strong> ARIA <code>list</code> / <code>listitem</code> 角色不区分有序列表和无序列表。</p>
 </div>
 
 <p>顺便说一句，请注意，如果您使用 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}} 的语义 HTML 元素并应用 <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"><code>presentation</code></a> 角色，则每个子 <code>li</code> 元素都会继承 <code>presentation</code> 角色，因为 ARIA 需要 <code>listitem</code> 元素具有父 <code>list</code> 元素。因此，<code>li</code> 元素不会暴露给辅助技术，但是包含在这些 <code>li</code> 元素中的元素，包括嵌套列表，对辅助技术是可见的。</p>
 
 <div class="notecard note">
-  <h4>注意</h4>
-  <p>如果要标记将用作选项卡式界面的项目列表，则应改为使用 <code>tab</code>、<code>tabpanel</code> 和 <code>tablist</code> 角色。</p>
+  <p><strong>备注：</strong> 如果要标记将用作选项卡式界面的项目列表，则应改为使用 <code>tab</code>、<code>tabpanel</code> 和 <code>tablist</code> 角色。</p>
 </div>
 
 <h2 id="Specifications">规范</h2>

@@ -40,8 +40,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
   <dt>aria-owns</dt>
   <dd>这是一个以空格分隔的元素 ID 列表，它们不是 listbox 的 DOM 子元素。此处列出的 ID 也不能列在任何其他元素的 <code>aria-owns</code> 属性中。</dd>
   <dt>aria-multiselectable</dt>
-  <dd>如果用户可以选择多个选项，则存在并设置为 <code>true</code>。如果设置为 <code>true</code>，<em>每个</em> 可选的选项都应包含 <code>aria-selected</code> 属性并设置为 <code>true</code> 或 <code>false</code>。 <em>不可选</em>的选项<em>不应该</em>具有<code>aria-selected</code>属性。</dd>
-  <dd>如果值为 <code>false</code> 或被省略，那么仅当前选中的选项（如果有任何选项被选中）才需要<code>aria-selected</code>属性，而且必须设置为<code>true</code>。</dd>
+  <dd>如果用户可以选择多个选项，则存在并设置为 <code>true</code>。如果设置为 <code>true</code>，<em>每个</em> 可选的选项都应包含 <code>aria-selected</code> 属性并设置为 <code>true</code> 或 <code>false</code>。 <em>不可选</em>的选项<em>不应该</em>具有<code>aria-selected</code>属性。如果值为 <code>false</code> 或被省略，那么仅当前选中的选项（如果有任何选项被选中）才需要<code>aria-selected</code>属性，而且必须设置为<code>true</code>。</dd>
   <dt>aria-required</dt>
   <dd>一个布尔属性，指示必须选择具有非空字符串值的选项。</dd>
   <dt>aria-readonly</dt>
@@ -122,7 +121,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 </ol>
 
 <div class="notecard note">
-  <p>ARIA 使用的第一原则是您可以使用具有内置语义和行为的原生功能，而不是重新利用元素并<strong>添加</strong> ARIA 角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。</p>
+  <p><strong>备注：</strong> ARIA 使用的第一原则是您可以使用具有内置语义和行为的原生功能，而不是重新利用元素并<strong>添加</strong> ARIA 角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。</p>
 </div>
 
 <h2 id="Examples">例子</h2>
