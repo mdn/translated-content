@@ -35,7 +35,7 @@ let sym2 = Symbol('foo')
 let sym3 = Symbol('foo')
 ```
 
-El código anterior crea tres nuevos símbolos. Tenga en cuenta que `Symbol("foo")` no coacciona la cadena `"foo"` en un símbolo. Crea un nuevo símbolo cada vez:
+El código anterior crea tres nuevos símbolos. Tenga en cuenta que `Symbol("foo")` no coacciona la cadena `"foo"` en un símbolo. Cada vez crea un nuevo símbolo:
 
 ```js
 Symbol('foo') === Symbol('foo')  // false
