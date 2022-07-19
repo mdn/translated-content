@@ -3234,6 +3234,7 @@
 /ja/docs/Web/API/GlobalEventHandlers/onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/GlobalEventHandlers/onformdata	/ja/docs/conflicting/Web/API/HTMLFormElement/formdata_event
 /ja/docs/Web/API/GlobalEventHandlers/oninput	/ja/docs/conflicting/Web/API/HTMLElement/input_event
+/ja/docs/Web/API/GlobalEventHandlers/oninvalid	/ja/docs/conflicting/Web/API/HTMLInputElement/invalid_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeydown	/ja/docs/conflicting/Web/API/Element/keydown_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeypress	/ja/docs/Web/API/Element/keypress_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeyup	/ja/docs/conflicting/Web/API/Element/keyup_event
