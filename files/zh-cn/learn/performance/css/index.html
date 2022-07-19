@@ -3,7 +3,7 @@ title: CSS performance optimization
 slug: Learn/Performance/CSS
 translation_of: Learn/Performance/CSS
 ---
-<p>页面在样式没有渲染完毕的情况下被绘制，在样式渲染完毕后又被刷新，这大概是很糟糕的用户体验。因此，除非浏览器知道当前不需要 该 CSS，否则 该 CSS 将阻止渲染。浏览器只会在下载 CSS 和构建 CSSOM 之后绘制页面。浏览器遵循特定的渲染路径：绘制 paint 仅在布局 layout 之后进行，布局 layout 则在创建渲染树 render tree 之后进行，创建渲染树则需要在 DOM 和 CSSOM 树解析完成后进行。为了优化 CSSOM 的构造，请删除不必要的样式，对 CSS 进行最小化，压缩和缓存，并将页面加载时不需要的 CSS 拆分为其他文件，以减少 CSS 渲染阻塞。</p>
+<p>页面在样式没有渲染完毕的情况下被绘制，在样式渲染完毕后又被刷新，这大概是很糟糕的用户体验。因此，除非浏览器知道当前不需要 该 CSS，否则 该 CSS 将阻止渲染。浏览器只会在下载 CSS 和构建 CSSOM 之后绘制页面。浏览器遵循特定的渲染路径：绘制 paint 仅在布局 layout 之后进行，布局 layout 则在创建渲染树 render tree 之后进行，创建渲染树则需要在 DOM 和 CSSOM 树解析完成后进行。为了优化 CSSOM 的构造，请删除不必要的样式，对 CSS 进行最小化，压缩和缓存，并将页面加载时不需要的 CSS 拆分为其他文件，以减少 CSS 渲染阻塞。</p>
 
 <h3 id="阻塞渲染优化">阻塞渲染优化</h3>
 
@@ -17,7 +17,7 @@ translation_of: Learn/Performance/CSS
 
 <h3 id="在GPU_上呈现动画">在 GPU 上呈现动画</h3>
 
-<p>浏览器针对处理 CSS 动画和不会很好地触发重排（因此也导致重新绘制）的动画属性进行了优化。为了提高性能，可以将被动画化的节点从主线程移到 GPU 上。将导致合成的属性包括 3D transforms (<code><a href="/en-US/docs/Web/CSS/transform">transform: translateZ()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d()</a></code>，etc.)，animating transform 和 <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, <code><a href="/en-US/docs/Web/CSS/position">position: fixed</a></code>，<code><a href="/en-US/docs/Web/CSS/will-change">will-change</a></code>，和 <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code>。一些元素，例如 <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>，也位于各自的图层上。 将元素提升为图层（也称为合成）时，动画转换属性将在 GPU 中完成，从而改善性能，尤其是在移动设备上。</p>
+<p>浏览器针对处理 CSS 动画和不会很好地触发重排（因此也导致重新绘制）的动画属性进行了优化。为了提高性能，可以将被动画化的节点从主线程移到 GPU 上。将导致合成的属性包括 3D transforms (<code><a href="/en-US/docs/Web/CSS/transform">transform: translateZ()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d()</a></code>，etc.)，animating transform 和 <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, <code><a href="/en-US/docs/Web/CSS/position">position: fixed</a></code>，<code><a href="/en-US/docs/Web/CSS/will-change">will-change</a></code>，和 <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code>。一些元素，例如 <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>，也位于各自的图层上。 将元素提升为图层（也称为合成）时，动画转换属性将在 GPU 中完成，从而改善性能，尤其是在移动设备上。</p>
 
 <h3 id="will-change_属性"><code>will-change</code> 属性</h3>
 
@@ -39,4 +39,4 @@ translation_of: Learn/Performance/CSS
 
 <h3 id="contain_属性"><code>contain</code> 属性</h3>
 
-<p>CSS 的 <code>contain</code>属性允许作者指示元素及其内容尽可能独立于文档树的其余部分。这允许浏览器针对 DOM 的有限区域而不是整个页面重新计算布局，样式，绘画，大小或它们的任意组合。</p>
+<p>CSS 的 <code>contain</code>属性允许作者指示元素及其内容尽可能独立于文档树的其余部分。这允许浏览器针对 DOM 的有限区域而不是整个页面重新计算布局，样式，绘画，大小或它们的任意组合。</p>
