@@ -1,61 +1,89 @@
 ---
 title: Worklet.addModule()
 slug: Web/API/Worklet/addModule
+page-type: web-api-instance-method
+tags:
+  - API
+  - Background
+  - Experimental
+  - Houdini
+  - Method
+  - Multiprocessor
+  - Processes
+  - Reference
+  - Tasks
+  - Worklets
+  - addModule
+browser-compat: api.Worklet.addModule
 translation_of: Web/API/Worklet/addModule
 ---
-<div>{{APIRef("Worklets")}}{{SeeCompatTable}}</div>
+{{APIRef("Worklets")}}{{SeeCompatTable}}
 
-<p><span class="seoSummary">{{domxref("Worklet")}} インタフェースで定義される <code><strong>addModule()</strong></code> メソッドを利用することで、指定したJavaScript ファイルで定義されるモジュールを <code>Worklet</code> にロードできます。</span></p>
+**`addModule()`** は {{domxref("Worklet")}} インターフェイスのメソッドで、指定した JavaScript ファイルで定義されるモジュールを現在の `Worklet` に読み込みます。
 
-<h2 id="記法">記法</h2>
+## 構文
 
-<pre class="syntaxbox"><em>addPromise</em> = <em>worklet</em>.addModule(<em>moduleURL</em>);
-<em>addPromise =</em> <em>worklet</em>.addModule(<em>moduleURL</em>, <em>options</em>);
-</pre>
+```js
+addModule(moduleURL)
+addModule(moduleURL, options)
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<dl>
- <dt><code>moduleURL</code></dt>
- <dd>追加するモジュールが定義されている JavaScript ファイルのURLを表す {{jsxref("String")}}。</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>次のオプションを指定するためのオブジェクト:
- <ul>
-  <li><code>credentials</code>: {{domxref("RequestCredentials")}} に指定するモジュールのロードに必要な クレデンシャル情報 (例: cookies や HTTP 認証)。 <code>"omit"</code>、<code>"same-origin"</code>、 <code>"include"</code>のいずれかの値を指定します。デフォルト値は<code>"same-origin"</code>となっています。詳しくは {{domxref("Request.credentials")}} を参照してください。</li>
- </ul>
- </dd>
-</dl>
+- `moduleURL`
+  - : 文字列で、追加するモジュールの JavaScript ファイルの URL を指定します。
+- `options` {{optional_inline}}
 
-<h3 id="返り値">返り値</h3>
+  - : 次のオプションを指定するためのオブジェクトです。
 
-<p>{{jsxref("Promise")}} オブジェクトが帰ります。このオブジェクトは、URLで指定されたモジュールがロードできた場合に受理状態になります。またコールバック関数は何の引数も与えられず呼び出されます。</p>
+    - `credentials`
+      - : モジュールをロードする際に、資格情報（例: Cookie や HTTP 認証）を送信するかどうかを指定する {{domxref("Request.credentials")}} 値です。 `"omit"`, `"same-origin"`, `"include"` のいずれかを指定することができます。既定値は `"same-origin"` です。 {{domxref("Request.credentials")}} も参照してください。
 
-<h2 id="使用例">使用例</h2>
+## 返値
 
-<pre class="brush:js, highlight:[3,4,5]">const audioCtx = new AudioContext();
+指定された URL のモジュールが追加されると解決される {{jsxref("Promise")}} です。このプロミスは値を返しません。
+
+### 例外
+
+`addModule()` が失敗した場合、プロミスを拒否し、以下のいずれかのエラーを拒否ハンドラーに送出します。
+
+- `AbortError` {{domxref("DOMException")}}
+  - : 指定されたスクリプトが無効であるか、または読み込むことができませんでした。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 指定された `moduleURL` が無効です。
+
+## 例
+
+### AudioWorklet の例
+
+```js
+const audioCtx = new AudioContext();
 const audioWorklet = audioCtx.audioWorklet;
-await audioWorklet.addModule('modules/bypassFilter.js', {
+audioWorklet.addModule('modules/bypassFilter.js', {
   credentials: 'omit',
 });
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+### PaintWorklet の例
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Worklets', '#dom-worklet-addmodule', 'addModule()')}}</td>
-   <td>{{Spec2('Worklets')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+```js
+CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+```
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+{{domxref('paintWorklet')}} がインクルードされると、 CSS の {{cssxref('image/paint()')}} 関数を使用して、ワークレットが作成した画像を引用することができます。
 
-<p>{{Compat("api.Worklet.addModule")}}</p>
+```css
+@supports (background-image: paint(id)) {
+  h1 {
+      background-image: paint(hollowHighlights, filled, 3px);
+  }
+}
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

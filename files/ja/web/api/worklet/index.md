@@ -1,99 +1,103 @@
 ---
 title: Worklet
 slug: Web/API/Worklet
+page-type: web-api-interface
+tags:
+  - API
+  - Interface
+  - Reference
+  - Worklet
+  - Worklets
+browser-compat: api.Worklet
 translation_of: Web/API/Worklet
 ---
-<div>{{APIRef("Worklets")}}{{SeeCompatTable}}</div>
+{{APIRef("Worklets")}}{{SeeCompatTable}}
 
-<p class="summary"><span class="seoSummary">The <strong><code>Worklet</code></strong> インタフェースは軽量な {{domxref("Worker", "Web Workers")}} を提供し、開発者がレンダリングパイプラインの低水準な部分をコントロールできるようになります。Worklet では</span>グラフィックや音声処理といった、性能を必要とする処理を <span class="seoSummary">JavaScript や </span><a href="/ja/docs/WebAssembly">WebAssembly</a> を使って記述できます。</p>
+**`Worklet`** インターフェイスは軽量な{{domxref("Worker", "ウェブワーカー", "", 1)}}を提供し、開発者がレンダリングパイプラインの低水準な部分を制御できるようにします。
 
-<h2 id="Worklet_の種類">Worklet の種類</h2>
+ワークレットでは、グラフィックや音声処理といった、高い性能を必要とする処理を JavaScript や [WebAssembly](/ja/docs/WebAssembly) コードを使って記述できます。
 
-<p>Worklets の利用はいくつかの用途に限定されています; つまり Web Worker のように好きな計算をさせるといった用途には使えません。<code>Worklet</code> インタフェースは、すべての種類の worklet に共通する属性とメソッドを抽象化する一方、直接インスタンスを作成することはできません。実際にインスタンスを作成するには、以下のクラスを利用します:</p>
+## ワークレットの種類
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>クラス名</th>
-   <th>説明</th>
-   <th>動作するスレッド</th>
-   <th>仕様</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{domxref("PaintWorklet")}}</td>
-   <td>CSSのカスタムプロパティの描画方法を定義するために使用します。{{DOMxRef("CSS.paintWorklet")}} から利用できます。</td>
-   <td><strong>Chrome:</strong> Main thread<br>
-    <strong>Gecko:</strong> Paint thread</td>
-   <td><a href="https://drafts.css-houdini.org/css-paint-api-1/#paint-worklet">CSS Painting API</a></td>
-  </tr>
-  <tr>
-   <td>{{domxref("AudioWorklet")}}</td>
-   <td>
-    <p>カスタムオーディオノードでの音声処理のために使用します</p>
-   </td>
-   <td>Web Audio render thread</td>
-   <td><a href="https://webaudio.github.io/web-audio-api/#AudioWorklet">Web Audio API</a></td>
-  </tr>
-  <tr>
-   <td>{{domxref("AnimationWorklet")}}</td>
-   <td>スクロールに伴うアニメーションや、性能を必要とするアニメーションをプログラミングするために使用します</td>
-   <td>Compositor thread</td>
-   <td><a href="https://wicg.github.io/animation-worklet/">CSS Animation Worklet API</a></td>
-  </tr>
-  <tr>
-   <td>{{domxref("LayoutWorklet")}}</td>
-   <td>カスタムエレメントのサイズと位置を定義するために使用します</td>
-   <td> </td>
-   <td><a href="https://drafts.css-houdini.org/css-layout-api-1/#layout-worklet">CSS Layout API</a></td>
-  </tr>
- </tbody>
+ワークレットの利用はいくつかの用途に限定されています。つまり、ウェブワーカーのように好きな計算をさせる用途には使えません。 `Worklet` インターフェイスは、すべての種類のワークレットに共通する属性とメソッドを抽象化する一方、直接インスタンスを作成することはできません。実際にインスタンスを作成するには、以下のクラスを利用します。
+
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th>クラス名</th>
+      <th>説明</th>
+      <th>動作するスレッド</th>
+      <th>仕様書</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{domxref("PaintWorklet")}}</td>
+      <td>
+        CSS プロパティがファイルを必要とする場合に、プログラムによって画像を生成するためのものです。このインターフェイスには {{DOMxRef("CSS.paintWorklet")}} でアクセスします。
+      </td>
+      <td>
+        <strong>Chrome:</strong> メインスレッド<br>
+        <strong>Gecko:</strong> 描画スレッド
+      </td>
+      <td>
+        <a href="https://drafts.css-houdini.org/css-paint-api-1/#paint-worklet">CSS 描画 API</a>
+      </td>
+    </tr>
+    <tr>
+      <td>{{domxref("AudioWorklet")}}</td>
+      <td>カスタムオーディオノードでの音声処理のために使用します。</td>
+      <td>ウェブ音声レンダリングスレッド</td>
+      <td>
+        <a href="https://webaudio.github.io/web-audio-api/#AudioWorklet">ウェブ音声 API</a>
+      </td>
+    </tr>
+    <tr>
+      <td>{{domxref("AnimationWorklet")}}</td>
+      <td>
+        スクロールに伴うアニメーションや、性能を必要とするアニメーションをプログラミングするために使用します。
+      </td>
+      <td>編集スレッド</td>
+      <td>
+        <a href="https://wicg.github.io/animation-worklet/">CSS アニメーションワークレット API</a>
+      </td>
+    </tr>
+    <tr>
+      <td>{{domxref("LayoutWorklet")}}</td>
+      <td>カスタム要素のサイズと位置を定義するために使用します。</td>
+      <td></td>
+      <td>
+        <a
+          href="https://drafts.css-houdini.org/css-layout-api-1/#layout-worklet"
+          >CSS レイアウト API</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p class="note"> <a href="/ja/docs/Web/API/WebGL_API">WebGL</a> を用いた 3D グラフィックスには Worklet を使用できません。その代わりにGLSLで記述した頂点シェーダとフラグメントシェーダを 使用します。これらのシェーダコードはグラフィックスカードの上で動作します。</p>
+[WebGL](/ja/docs/Web/API/WebGL_API) を用いた 3D グラフィックにはワークレットを使用しません。その代わりに GLSL で記述した頂点シェーダーとフラグメントシェーダーを書いてください。これらのシェーダーコードはグラフィックカードの上で動作します。
 
-<h2 id="属性">属性</h2>
+## プロパティ
 
-<p><em>Worklet インタフェースでは、属性は定義されていません。</em></p>
+_Worklet インターフェイスでは、プロパティは定義されていません。_
 
-<h2 id="メソッド">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{domxref("Worklet.addModule()")}} {{experimental_inline}}</dt>
- <dd>Worklet にスクリプトモジュールをURLで追加します。</dd>
-</dl>
+- {{domxref("Worklet.addModule()")}} {{experimental_inline}}
+  - : 指定された URL にあるスクリプト モジュールを現在のワークレットに追加します。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Worklets', '#worklet', 'Worklet')}}</td>
-   <td>{{Spec2('Worklets')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.Worklet")}}</p>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="https://developers.google.com/web/updates/2016/05/houdini">Houdini: Demystifying CSS</a> on Google Developers (May 2016)</li>
- <li><a href="https://www.youtube.com/watch?v=g1L4O1smMC0&amp;t=1m33s" title="">AudioWorklet :: What, Why, and How</a> on YouTube (November 2017)</li>
- <li><a href="https://developers.google.com/web/updates/2017/12/audio-worklet">Enter AudioWorklet</a> on Google Developers (December 2017)</li>
- <li><a href="https://www.youtube.com/watch?v=ZPkMMShYxKU&amp;t=0m19s" title="">Animation Worklet - HTTP203 Advent</a> on YouTube (December 2017)</li>
-</ul>
+- [Houdini: Demystifying CSS](https://developer.chrome.com/blog/houdini/) on Google Developers (May 2016)
+- [AudioWorklet :: What, Why, and How](https://www.youtube.com/watch?v=g1L4O1smMC0&t=1m33s) on YouTube (November 2017)
+- [Enter AudioWorklet](https://developer.chrome.com/blog/audio-worklet/) on Google Developers (December 2017)
+- [Animation Worklet - HTTP203 Advent](https://www.youtube.com/watch?v=ZPkMMShYxKU&t=0m19s) on YouTube (December 2017)
