@@ -46621,20 +46621,6 @@
       "ziyunfei"
     ]
   },
-  "conflicting/Web/HTTP/Headers/Expect-CT": {
-    "modified": "2020-10-15T21:55:02.367Z",
-    "contributors": [
-      "shevacjs",
-      "WayneCui"
-    ]
-  },
-  "conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b": {
-    "modified": "2020-10-15T22:04:11.647Z",
-    "contributors": [
-      "ujsxn",
-      "shevacjs"
-    ]
-  },
   "conflicting/Web/HTTP/Status": {
     "modified": "2019-01-16T13:20:30.376Z",
     "contributors": [
