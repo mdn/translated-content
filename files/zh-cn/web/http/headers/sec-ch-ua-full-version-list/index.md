@@ -8,7 +8,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  -  Experimental
+  - Experimental
 translation_of: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
@@ -32,7 +32,7 @@ translation_of: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
 
 **`Sec-CH-UA-Full-Version-List`** 标头以逗号分隔的列表提供与每个浏览器关联的品牌的名称和完整版本信息。
 
-品牌是用户代理的商业名称，例如：Chromium、Opera、Google Chrome、Microsoft Edge、Firefox 和 Safari。用户代理可能有多个关联的品牌。例如，Opera、Chrome 和 Edge 都基于 Chromium，并将在 **`Sec-CH-UA-Full-Version-List`** 标头中提供这两个品牌。
+品牌是用户代理的商业名称，例如：Chromium、Opera、Google Chrome、Microsoft Edge、Firefox 和 Safari。用户代理可能有多个关联的品牌。例如，Opera、Chrome 和 Edge 都基于 Chromium，并将在 **`Sec-CH-UA-Full-Version-List`** 标头中会提供这两个品牌。
 
 因此，标头允许服务器根据共享品牌及其各自特定版本中的特定自定义项（particular customizations）来自定义其响应。
 
