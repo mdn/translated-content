@@ -103,5 +103,5 @@ p {
 - {{cssxref("outline-width")}}
 - El tipo de dato {{cssxref("&lt;color&gt;")}}
 - Otras propiedades relacionadas con el color: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, y {{cssxref("column-rule-color")}}
-- [Aplicar color a elementos HTML usando CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Aplicar color a elementos HTML usando CSS](/es/docs/Web/CSS/CSS_Colors/Applying_color)
 
