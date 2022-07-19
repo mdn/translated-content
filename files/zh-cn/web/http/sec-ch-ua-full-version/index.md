@@ -1,6 +1,6 @@
 ---
 title: Sec-CH-UA-Full-Version
-slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version
+slug: zh-CN/Web/HTTP/Headers/Sec-CH-UA-Full-Version
 translation_of: Web/HTTP/Headers/Sec-CH-UA-Full-Version
 tags:
   - Sec-CH-UA-Full-Version
