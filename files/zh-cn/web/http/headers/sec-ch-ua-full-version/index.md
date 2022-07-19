@@ -45,7 +45,7 @@ Sec-CH-UA-Full-Version: <version>
 
 ## 示例
 
-服务器请求 `Sec-CH-UA-Full-Version` 标头的方法是在任何来自客户端的请求 _response_ 中添加 {{HTTPHeader("Accept-CH")}}，使用所需标头的名称作为它的令牌（token）：
+服务器请求 `Sec-CH-UA-Full-Version` 标头的方法是在任何来自客户端的请求*响应*中添加 {{HTTPHeader("Accept-CH")}}，使用所需标头的名称作为它的令牌（token）：
 
 ```http
 HTTP/1.1 200 OK
@@ -76,6 +76,6 @@ Sec-CH-UA-Platform: "Windows"
 
 - [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
 - [用户代理端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
-- [通过用户代理端提示改善用户隐私和开发人员体验](https://web.dev/user-agent-client-hints/)（web.dev）
+- [通过用户代理客户端端提示改善用户隐私和开发人员体验](https://web.dev/user-agent-client-hints/)（web.dev）
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}
