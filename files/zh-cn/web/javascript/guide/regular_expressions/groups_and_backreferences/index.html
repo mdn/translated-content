@@ -116,7 +116,7 @@ do {
 <pre class="brush: js">let users= `姓氏：李，名字：雷
 姓氏：韩，名字：梅梅`;
 
-let regexpNames =  /姓氏: (?&lt;first&gt;.+), 名字: (?&lt;last&gt;.+)/mg;
+let regexpNames =  /姓氏：(?&lt;first&gt;.+)，名字：(?&lt;last&gt;.+)/mg;
 let match = regexpNames.exec(users);
 
 do {
