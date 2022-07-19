@@ -1,57 +1,60 @@
 ---
-title: window.back
+title: Window.back()
 slug: Web/API/Window/back
+page-type: web-api-instance-method
 tags:
   - API
-  - DOM
   - Firefox
   - Gecko
+  - HTML DOM
   - Method
   - Non-standard
-  - Obsolete
+  - Deprecated
   - Window
   - back
 translation_of: Web/API/Window/back
 ---
-<div>{{ApiRef}}{{Non-standard_header}}{{obsolete_header}}</div>
+{{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+ `back()` は {{domxref("Window")}} インターフェイスの廃止された標準外のメソッドで、履歴の前の項目をウィンドウに返します。これは Firefox 固有のメソッドであり、Firefox 31 で削除されました。
 
-<p><strong>{{domxref("Window")}}</strong> インターフェイスの廃止済みで非標準の <code>back()</code> メソッドは、履歴で前のアイテムの window を返します。これは Firefox 固有のメソッドであり、Firefox 31 で削除しました。代わりに、標準の {{domxref("History.back", "history.back()")}} メソッドを使用してください。</p>
+> **Note:** 代わりに、標準の {{domxref("history.back")}} メソッドを使用してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">window.back();</pre>
+```js
+back()
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<p>ありません。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 返値
 
-<p><code>undefined</code> です。</p>
+なし ({{jsxref("undefined")}})。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例は、<code>back()</code> を呼び出して "戻る" ボタンのクリックを制御します。</p>
+この例は、`back()` を呼び出して "戻る" ボタンのクリックを制御します。
 
-<pre class="brush:js">function handleMyBackButton() {
+```js
+function handleMyBackButton() {
   if (canGoBack) {
     window.back();
   }
-}</pre>
+}
+```
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様書
 
-<p>どの仕様にも属していません。</p>
+どの仕様にも属していません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<p>この非標準メソッドは Firefox だけが実装しており、Firefox 31 で削除しました。</p>
+この標準外の方法は Firefox のみで実装され、 Firefox 31 で削除されました。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("History.back()")}}</li>
- <li>{{domxref("History.forward()")}}</li>
-</ul>
+- {{domxref("History.back()")}}
+- {{domxref("History.forward()")}}

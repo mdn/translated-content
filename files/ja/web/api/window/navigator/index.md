@@ -1,116 +1,69 @@
 ---
-title: window.navigator
+title: Window.navigator
 slug: Web/API/Window/navigator
+page-type: web-api-instance-property
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Navigator
-  - 要更新
+  - API
+  - HTML DOM
+  - Property
+  - Read-only
+  - Reference
+  - Window
+browser-compat: api.Window.navigator
 translation_of: Web/API/Window/navigator
 ---
-<div>{{outdated}}{{ApiRef}}</div>
+{{APIRef}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**Window.navigator`** は読み取り専用のプロパティで、スクリプトを実行しているアプリケーションに関するメソッドとプロパティを持つ {{domxref("Navigator")}} オブジェクトへの参照を返します。
 
-<p>navigator オブジェクトへの参照を返します。 navigator オブジェクトを用いることで、スクリプトを実行しているアプリケーションについての情報を得ることができます。</p>
+## 値
 
-<h2 id="Example" name="Example">例</h2>
+{{domxref("navigator")}} オブジェクト。
 
-<div style="overflow: hidden;">
-<pre class="brush:js">alert("あなたは " + navigator.appName + " を使用しています。");
-</pre>
-</div>
+## 例
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+### 例 #1: ブラウザーを検出し文字列で返す
 
-<dl>
- <dt>{{domxref("window.navigator.appCodeName", "navigator.appCodeName")}} {{non-standard_inline}}</dt>
- <dd>現在のブラウザの内部 "コード" ネームを返す（※このプロパティは正確な値を返すとは限りません）</dd>
- <dt>{{domxref("window.navigator.appName", "navigator.appName")}}</dt>
- <dd>ブラウザの正式名称を返す（※このプロパティは正確な値を返すとは限りません）</dd>
- <dt>{{domxref("window.navigator.appVersion", "navigator.appVersion")}}</dt>
- <dd>ブラウザのバージョンを表す文字列を返す（※このプロパティは正確な値を返すとは限りません）</dd>
- <dt>{{domxref("window.navigator.buildID", "navigator.buildID")}} {{non-standard_inline}}</dt>
- <dd>ブラウザのビルド識別子を返す（※例： "2006090803"）</dd>
- <dt>{{domxref("window.navigator.connection", "navigator.connection")}}</dt>
- <dd>Provides information about the network connection of a device.</dd>
- <dt>{{domxref("window.navigator.cookieEnabled", "navigator.cookieEnabled")}}</dt>
- <dd>ブラウザのクッキーが有効かどうかを示す真偽値を返す</dd>
- <dt>{{domxref("navigator.doNotTrack")}} {{non-standard_inline}}</dt>
- <dd>Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.</dd>
- <dt>{{domxref("navigator.id")}} {{non-standard_inline}}</dt>
- <dd>Returns the {{domxref("window.navigator.id", "id")}} object which you can use to add support for <a href="/ja/docs/BrowserID" title="BrowserID">BrowserID</a> to your web site.</dd>
- <dt>{{domxref("window.navigator.language", "navigator.language")}}</dt>
- <dd>ブラウザの言語バージョンを表す文字列を返す</dd>
- <dt>{{domxref("window.navigator.mimeTypes", "navigator.mimeTypes")}}</dt>
- <dd>ブラウザがサポートしている MIME タイプの一覧を返す</dd>
- <dt>{{domxref("window.navigator.mozApps", "navigator.mozApps")}} {{non-standard_inline}}</dt>
- <dd>Returns an {{domxref("window.navigator.mozApps", "Apps")}} object you can use to install, manage, and control <a href="/Open_Web_Apps" title="Open Web apps">Open Web apps</a>.</dd>
- <dt>{{domxref("window.navigator.battery", "navigator.battery")}} {{gecko_minversion_inline("10.0")}} {{non-standard_inline}}</dt>
- <dd>Returns a {{domxref("window.navigator.battery", "battery")}} object you can use to get information about the battery charging status.</dd>
- <dt>{{domxref("navigator.mozNotification")}} {{non-standard_inline}}<br>
- {{domxref("navigator.webkitNotification")}}</dt>
- <dd>Returns a {{domxref("navigator.mozNotification", "notification")}} object you can use to deliver notifications to the user from your web application.</dd>
- <dt>{{domxref("window.navigator.mozSms", "navigator.mozSms")}} {{gecko_minversion_inline("12.0")}} {{non-standard_inline}}</dt>
- <dd>Returns a {{domxref("SmsManager")}} object you can use to manage SMS messaging in your web application.</dd>
- <dt>{{domxref("navigator.mozSocial")}} {{non-standard_inline}}</dt>
- <dd>{{todo}}</dd>
- <dt>{{domxref("window.navigator.mozTelephony", "navigator.mozTelephony")}} {{non-standard_inline}}</dt>
- <dd>Returns a {{domxref("Telephony")}} object you can use to create and manage telephone calls.</dd>
- <dt>{{domxref("window.navigator.onLine", "navigator.onLine")}}</dt>
- <dd>ブラウザがオンラインで動作しているかどうかを示す真偽値を返す</dd>
- <dt>{{domxref("window.navigator.oscpu", "navigator.oscpu")}}</dt>
- <dd>現在のオペレーティングシステムを表す文字列を返す</dd>
- <dt>{{domxref("window.navigator.platform", "navigator.platform")}}</dt>
- <dd>ブラウザのプラットフォームを表す文字列を返す</dd>
- <dt>{{domxref("window.navigator.plugins", "navigator.plugins")}}</dt>
- <dd>ブラウザにインストールされているプラグインの一覧を配列で返す</dd>
- <dt>{{domxref("window.navigator.product", "navigator.product")}} {{non-standard_inline}}</dt>
- <dd>現在のブラウザの製品名を返す（※例："Gecko"）</dd>
- <dt>{{domxref("window.navigator.productSub", "navigator.productSub")}} {{non-standard_inline}}</dt>
- <dd>現在のブラウザのビルド番号を返します（※例："20060909"）</dd>
- <dt>{{domxref("window.navigator.securitypolicy", "navigator.securitypolicy")}} {{non-standard_inline}}</dt>
- <dd>空文字列を返す（※Netscape 4.7x のみ "US &amp; CA domestic policy" または、 "Export policy" という文字列を返す）</dd>
- <dt>{{domxref("window.navigator.standalone", "navigator.standalone")}} {{non-standard_inline}}</dt>
- <dd>Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.</dd>
- <dt>{{domxref("window.navigator.userAgent", "navigator.userAgent")}}</dt>
- <dd>現在のブラウザのユーザエージェントを表す文字列を返す</dd>
- <dt>{{domxref("window.navigator.vendor", "navigator.vendor")}} {{non-standard_inline}}</dt>
- <dd>現在のブラウザのベンダー名を返す（※例："Netscape6"）</dd>
- <dt>{{domxref("window.navigator.vendorSub", "navigator.vendorSub")}} {{non-standard_inline}}</dt>
- <dd>ベンダーバージョン番号を返す（※例："6.1"）</dd>
- <dt><a href="/ja/docs/API/Pointer_Lock_API" title="Mouse Lock API"><code>navigator.webkitPointer</code></a> {{non-standard_inline}}</dt>
- <dd>Returns a PointerLock object for the <a href="/ja/docs/API/Pointer_Lock_API" title="Mouse Lock API">Mouse Lock API</a>.</dd>
-</dl>
+```js
+var sBrowser, sUsrAg = navigator.userAgent;
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+// The order matters here, and this may report false positives for unlisted browsers.
 
-<dl>
- <dt>{{domxref("window.navigator.javaEnabled", "navigator.javaEnabled")}}</dt>
- <dd>ホストブラウザで Java が有効かどうかを示す</dd>
- <dt>{{domxref("window.navigator.mozIsLocallyAvailable", "navigator.mozIsLocallyAvailable")}} {{non-standard_inline}}</dt>
- <dd>指定 URI の文書がネットワークを利用しなくても閲覧可能かどうかをチェックする</dd>
- <dt>{{domxref("window.navigator.preference", "navigator.preference")}} {{obsolete_inline("2.0")}} {{non-standard_inline}}</dt>
- <dd>ユーザ設定を設定する。このメソッドは、<a href="http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en">特権を持つコードでのみ使用可能です</a>。現在は廃止されているため、代わりに XPCOM の <a href="/ja/docs/Preferences_API">Preferences API</a> を用います。</dd>
- <dt>{{domxref("window.navigator.registerContentHandler", "navigator.registerContentHandler")}}</dt>
- <dd>Web サイトを指定した MIME タイプに関連付ける</dd>
- <dt>{{domxref("navigator.registerProtocolHandler", "navigator.registerProtocolHandler")}}</dt>
- <dd>Web サイト を指定したプロトコルに関連付ける</dd>
- <dt>{{domxref("window.navigator.taintEnabled", "navigator.taintEnabled")}} {{deprecated_inline("1.7.8")}} {{obsolete_inline("9.0")}} {{non-standard_inline}}</dt>
- <dd><code>false</code> を返す。JavaScript の taint/untaint 関数は、JavaScript 1.2 で削除されています（<a href="http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/nav.html#1194117">※</a>）</dd>
- <dt>{{domxref("window.navigator.vibrate", "navigator.vibrate()")}} {{gecko_minversion_inline("11.0")}}</dt>
- <dd>Causes vibration on devices with support for it. Does nothing if vibration support isn't available.</dd>
-</dl>
+if (sUsrAg.indexOf("Firefox") > -1) {
+  sBrowser = "Mozilla Firefox";
+  // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
+} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
+  sBrowser = "Samsung Internet";
+  // "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
+} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
+  sBrowser = "Opera";
+  // "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
+} else if (sUsrAg.indexOf("Trident") > -1) {
+  sBrowser = "Microsoft Internet Explorer";
+  // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
+} else if (sUsrAg.indexOf("Edge") > -1) {
+  sBrowser = "Microsoft Edge (Legacy)";
+  // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+} else if (sUsrAg.indexOf("Edg") > -1) {
+  sBrowser = "Microsoft Edge (Chromium)";
+  // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.64
+} else if (sUsrAg.indexOf("Chrome") > -1) {
+  sBrowser = "Google Chrome or Chromium";
+  // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
+} else if (sUsrAg.indexOf("Safari") > -1) {
+  sBrowser = "Apple Safari";
+  // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
+} else {
+  sBrowser = "unknown";
+}
 
-<h2 id="Specification" name="Specification">仕様</h2>
+alert("You are using: " + sBrowser);
+```
 
-<ul>
- <li><a href="http://www.whatwg.org/html/#navigator">HTML 仕様書での定義</a></li>
-</ul>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li><a href="/ja/docs/DOM_Client_Object_Cross-Reference/navigator" title="DOM_Client_Object_Cross-Reference/navigator">DOM Client Object クロスリファレンス - navigator</a></li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
