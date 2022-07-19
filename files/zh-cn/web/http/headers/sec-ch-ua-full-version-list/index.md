@@ -20,7 +20,7 @@ translation_of: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
     <tr>
       <th scope="row">标头类型</th>
       <td>
-        {{Glossary("Request header")}}、<a href="/en-US/docs/Web/HTTP/Client_hints">客户端提示</a>
+        {{Glossary("Request header", "请求标头")}}、<a href="/zh-CN/docs/Web/HTTP/Client_hints">客户端提示</a>
       </td>
     </tr>
     <tr>
