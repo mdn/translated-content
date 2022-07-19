@@ -1481,6 +1481,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onformdata	/zh-CN/docs/Web/API/HTMLFormElement/formdata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oninput	/zh-CN/docs/conflicting/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/oninvalid	/zh-CN/docs/conflicting/Web/API/HTMLInputElement/invalid_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/conflicting/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/conflicting/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup	/zh-CN/docs/conflicting/Web/API/Element/keyup_event
