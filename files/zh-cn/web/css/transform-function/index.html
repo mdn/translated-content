@@ -32,8 +32,6 @@ translation_of: Web/CSS/transform-function
 <p>                                                                                          a   c<br>
                                                                                            b   d</p>
 
-<div style="text-align: center;"></div>
-
 <p>将矩阵乘法用于上述坐标系中的每个点，一个变换就形成了：</p>
 
 <div style="text-align: center;"><a href="/@api/deki/files/5799/=transform_functions_generic_transformation_cart.png"><img src="/@api/deki/files/5799/=transform_functions_generic_transformation_cart.png?size=webview" style="height: 32px; width: 189px;"></a>.</div>
@@ -41,8 +39,6 @@ translation_of: Web/CSS/transform-function
 <p>可以在一行中进行多次矩阵乘法进行变换：</p>
 
 <div style="text-align: center;"><a href="/@api/deki/files/5800/=transform_functions_transform_composition_cart.png"><img src="/@api/deki/files/5800/=transform_functions_transform_composition_cart.png?size=webview" style="height: 32px; width: 313px;"></a>.</div>
-
-<div style="text-align: center;"></div>
 
 <p>有了这种方法，就可以描述大部分常见的变换并因此可以将他们组合起来，如：旋转、缩放或拉伸。（事实上，所有线性函数的变换都可以被描述。）组合的变换是从右到左生效的。然而，有一种常见的变换并不是线性的，所以当这种变换要用这种方法来表示时，应该被单独列出来：位移。位移的向量 <code>(tx, ty)</code> 必须单独表示，作为两个附加参数。</p>
 
@@ -943,3 +939,7 @@ translate(tx, ty)
   </tr>
  </tbody>
 </table>
+
+<h2 id="规范">规范</h2>
+
+{{Specifications}}
