@@ -14259,12 +14259,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/GlobalEventHandlers/oninvalid": {
-    "modified": "2020-10-28T07:14:06.761Z",
-    "contributors": [
-      "mpcjazz"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-23T23:29:36.980Z",
     "contributors": [
@@ -46816,6 +46810,12 @@
     "modified": "2019-03-23T22:27:32.009Z",
     "contributors": [
       "MakeNowJust"
+    ]
+  },
+  "conflicting/Web/API/HTMLInputElement/invalid_event": {
+    "modified": "2020-10-28T07:14:06.761Z",
+    "contributors": [
+      "mpcjazz"
     ]
   },
   "conflicting/Web/API/HTMLInputElement/select_event": {

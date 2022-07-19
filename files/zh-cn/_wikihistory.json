@@ -13266,12 +13266,6 @@
       "876843240"
     ]
   },
-  "Web/API/GlobalEventHandlers/oninvalid": {
-    "modified": "2020-10-15T22:15:01.666Z",
-    "contributors": [
-      "chenqingyue"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-23T23:15:22.431Z",
     "contributors": [
@@ -45867,6 +45861,12 @@
       "teoli",
       "basemnassar11",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/HTMLInputElement/invalid_event": {
+    "modified": "2020-10-15T22:15:01.666Z",
+    "contributors": [
+      "chenqingyue"
     ]
   },
   "conflicting/Web/API/HTMLInputElement/select_event": {
