@@ -6,48 +6,60 @@ tags:
 translation_of: Web/XSLT/Element
 original_slug: Web/XSLT/Elements
 ---
-<p>{{ XsltRef() }} There are two types of elements discussed here: top-level elements and instructions. A top-level element must appear as the child of either <code>&lt;xsl:stylesheet&gt;</code> or <code>&lt;xsl:transform&gt;</code>. An instruction, on the other hand, is associated with a template. A stylesheet may include several templates. A third type of element, not discussed here, is the literal result element (LRE). An LRE also appears in a template. It consists of any non-instruction element that should be copied as-is to the result document, for example, an <code>&lt;hr&gt;</code> element in an HTML conversion stylesheet.</p>
-<p>On a related note, any attribute in an LRE and some attributes of a limited number of XSLT elements can also include what is known as an attribute value template. An attribute value template is simply a string that includes an embedded XPath expression which is used to specify the value of an attribute. At run-time the expression is evaluated and the result of the evaluation is substituted for the XPath expression. For example, assume that a variable "<code>image-dir</code>" is defined as follows:</p>
-<pre>&lt;xsl:variable name="image-dir"&gt;/images&lt;/xsl:variable&gt;</pre>
-<p>The expression to be evaluated is placed inside curly brackets:</p>
-<pre>&lt;img src="{$image-dir}/mygraphic.jpg"/&gt;</pre>
-<p>This would result in the following:</p>
-<pre>&lt;img src="/images/mygraphic.jpg"/&gt;</pre>
-<p>The element annotations that follow include a description, a syntax listing, a list of required and optional attributes, a description of type and position, its source in the W3C Recommendation and an explanation of the degree of present Gecko support.</p>
-<ul>
- <li><a href="/cn/XSLT/apply-imports">xsl:apply-imports</a></li>
- <li><a href="/cn/XSLT/apply-templates">xsl:apply-templates</a></li>
- <li><a href="/cn/XSLT/attribute">xsl:attribute</a></li>
- <li><a href="/cn/XSLT/attribute-set">xsl:attribute-set</a></li>
- <li><a href="/cn/XSLT/call-template">xsl:call-template</a></li>
- <li><a href="/cn/XSLT/choose">xsl:choose</a></li>
- <li><a href="/cn/XSLT/comment">xsl:comment</a></li>
- <li><a href="/cn/XSLT/copy">xsl:copy</a></li>
- <li><a href="/cn/XSLT/copy-of">xsl:copy-of</a></li>
- <li><a href="/cn/XSLT/decimal-format">xsl:decimal-format</a></li>
- <li><a href="/cn/XSLT/element">xsl:element</a></li>
- <li><a href="/cn/XSLT/fallback">xsl:fallback</a> <em>(not supported)</em></li>
- <li><a href="/cn/XSLT/for-each">xsl:for-each</a></li>
- <li><a href="/cn/XSLT/if">xsl:if</a></li>
- <li><a href="/cn/XSLT/import">xsl:import</a> <em>(mostly supported)</em></li>
- <li><a href="/cn/XSLT/include">xsl:include</a></li>
- <li><a href="/cn/XSLT/key">xsl:key</a></li>
- <li><a href="/cn/XSLT/message">xsl:message</a></li>
- <li><a href="/cn/XSLT/namespace-alias">xsl:namespace-alias</a> <em>(not supported)</em></li>
- <li><a href="/cn/XSLT/number">xsl:number</a> <em>(partially supported)</em></li>
- <li><a href="/cn/XSLT/otherwise">xsl:otherwise</a></li>
- <li><a href="/cn/XSLT/output">xsl:output</a> <em>(partially supported)</em></li>
- <li><a href="/cn/XSLT/param">xsl:param</a></li>
- <li><a href="/cn/XSLT/preserve-space">xsl:preserve-space</a></li>
- <li><a href="/cn/XSLT/processing-instruction">xsl:processing-instruction</a></li>
- <li><a href="/cn/XSLT/sort">xsl:sort</a></li>
- <li><a href="/cn/XSLT/strip-space">xsl:strip-space</a></li>
- <li><a href="/cn/XSLT/stylesheet">xsl:stylesheet</a> <em>(partially supported)</em></li>
- <li><a href="/cn/XSLT/template">xsl:template</a></li>
- <li><a href="/cn/XSLT/text">xsl:text</a> <em>(partially supported)</em></li>
- <li><a href="/cn/XSLT/transform">xsl:transform</a></li>
- <li><a href="/cn/XSLT/value-of">xsl:value-of</a> <em>(partially supported)</em></li>
- <li><a href="/cn/XSLT/variable">xsl:variable</a></li>
- <li><a href="/cn/XSLT/when">xsl:when</a></li>
- <li><a href="/cn/XSLT/with-param">xsl:with-param</a></li>
-</ul>
+{{ XsltRef() }} There are two types of elements discussed here: top-level elements and instructions. A top-level element must appear as the child of either `<xsl:stylesheet>` or `<xsl:transform>`. An instruction, on the other hand, is associated with a template. A stylesheet may include several templates. A third type of element, not discussed here, is the literal result element (LRE). An LRE also appears in a template. It consists of any non-instruction element that should be copied as-is to the result document, for example, an `<hr>` element in an HTML conversion stylesheet.
+
+On a related note, any attribute in an LRE and some attributes of a limited number of XSLT elements can also include what is known as an attribute value template. An attribute value template is simply a string that includes an embedded XPath expression which is used to specify the value of an attribute. At run-time the expression is evaluated and the result of the evaluation is substituted for the XPath expression. For example, assume that a variable "`image-dir`" is defined as follows:
+
+```xml
+<xsl:variable name="image-dir">/images</xsl:variable>
+```
+
+The expression to be evaluated is placed inside curly brackets:
+
+```xml
+<img src="{$image-dir}/mygraphic.jpg"/>
+```
+
+This would result in the following:
+
+```xml
+<img src="/images/mygraphic.jpg"/>
+```
+
+The element annotations that follow include a description, a syntax listing, a list of required and optional attributes, a description of type and position, its source in the W3C Recommendation and an explanation of the degree of present Gecko support.
+
+- [xsl:apply-imports](/cn/XSLT/apply-imports)
+- [xsl:apply-templates](/cn/XSLT/apply-templates)
+- [xsl:attribute](/cn/XSLT/attribute)
+- [xsl:attribute-set](/cn/XSLT/attribute-set)
+- [xsl:call-template](/cn/XSLT/call-template)
+- [xsl:choose](/cn/XSLT/choose)
+- [xsl:comment](/cn/XSLT/comment)
+- [xsl:copy](/cn/XSLT/copy)
+- [xsl:copy-of](/cn/XSLT/copy-of)
+- [xsl:decimal-format](/cn/XSLT/decimal-format)
+- [xsl:element](/cn/XSLT/element)
+- [xsl:fallback](/cn/XSLT/fallback) _(not supported)_
+- [xsl:for-each](/cn/XSLT/for-each)
+- [xsl:if](/cn/XSLT/if)
+- [xsl:import](/cn/XSLT/import) _(mostly supported)_
+- [xsl:include](/cn/XSLT/include)
+- [xsl:key](/cn/XSLT/key)
+- [xsl:message](/cn/XSLT/message)
+- [xsl:namespace-alias](/cn/XSLT/namespace-alias) _(not supported)_
+- [xsl:number](/cn/XSLT/number) _(partially supported)_
+- [xsl:otherwise](/cn/XSLT/otherwise)
+- [xsl:output](/cn/XSLT/output) _(partially supported)_
+- [xsl:param](/cn/XSLT/param)
+- [xsl:preserve-space](/cn/XSLT/preserve-space)
+- [xsl:processing-instruction](/cn/XSLT/processing-instruction)
+- [xsl:sort](/cn/XSLT/sort)
+- [xsl:strip-space](/cn/XSLT/strip-space)
+- [xsl:stylesheet](/cn/XSLT/stylesheet) _(partially supported)_
+- [xsl:template](/cn/XSLT/template)
+- [xsl:text](/cn/XSLT/text) _(partially supported)_
+- [xsl:transform](/cn/XSLT/transform)
+- [xsl:value-of](/cn/XSLT/value-of) _(partially supported)_
+- [xsl:variable](/cn/XSLT/variable)
+- [xsl:when](/cn/XSLT/when)
+- [xsl:with-param](/cn/XSLT/with-param)
