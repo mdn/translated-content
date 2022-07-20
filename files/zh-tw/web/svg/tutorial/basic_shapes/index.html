@@ -9,8 +9,8 @@ original_slug: SVG/Tutorial/Basic_Shapes
 <p>下面将介绍一些SVG绘图常用的形状命令，通过它们名字，你可以很轻易的看出它们可以画出什么。这里也会给出一些定义位置和尺寸的属性，但不会介绍如何将元素定义得更准确更完善。在这里我们只介绍必须的基本功能，因为它们会被广泛应用在SVG文件里。</p>
 <h2 id="Basic_shapes">基本形状</h2>
 <p>你需要在文档里创建一个元素，来新增相应的形状。不同的元素用来定义不同的形状，并采用不同的属性定义尺寸和位置。其中一些是可以被其他形状命令替代的，所以显得有点多余，但是它们的存在是有意义的，它们可以让你用起来更方便，并且保证你的SVG文档尽可能简洁易懂。所有的基本形状都在右边的图例里展示出来了，生成它们的代码如下：</p>
-<p><img align="right" alt="" class="internal" src="/@api/deki/files/359/=Shapes.png"></p>
-<div style="margin-right: 380px;">
+<p><img src="/@api/deki/files/359/=Shapes.png"></p>
+<div>
   <pre class="brush:xml">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="250" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
 
@@ -31,7 +31,7 @@ original_slug: SVG/Tutorial/Basic_Shapes
 &lt;/svg&gt;</pre>
 </div>
 <div class="note">
-<strong>注意：</strong> <code>stroke</code>, <code>stroke-width</code> 和 <code>fill</code> 等属性会在后面的章节里介绍。</div>
+ <p><strong>備註：</strong> <code>stroke</code>, <code>stroke-width</code> 和 <code>fill</code> 等属性会在后面的章节里介绍。</p></div>
 <h3 id="Rectangles">矩形 rect</h3>
 <p><a href="/en/SVG/Element/rect">rect</a>元素用来创建矩形，它有6个基本属性，用于设定它的位置以及样式。上面的图例里，最开始的两个图形都是矩形，右边的矩形设定了rx和ry属性，从而增加了圆角，如果不给它们赋值，其默认值为0，也就没有圆角。</p>
 <pre class="brush:xml">&lt;rect x="10" y="10" width="30" height="30"/&gt;
@@ -64,7 +64,7 @@ original_slug: SVG/Tutorial/Basic_Shapes
 </dl>
 <h3 id="Circle">圆形 circle</h3>
 <p><a href="/en/SVG/Element/circle">circle</a> 元素用来创建圆形，这里给出了3个属性：</p>
-<pre class="brush:xml;gutter:false;">&lt;circle cx="25" cy="75" r="20"/&gt;</pre>
+<pre class="brush:xml">&lt;circle cx="25" cy="75" r="20"/&gt;</pre>
 <dl>
   <dt>
     r</dt>
@@ -81,7 +81,7 @@ original_slug: SVG/Tutorial/Basic_Shapes
 </dl>
 <h3 id="Ellipse">椭圆 ellipse</h3>
 <p><a href="/en/SVG/Element/ellipse">椭圆ellipse</a>其实就是一种特殊的圆形，这里可以改变x和y轴的半径来区分它们（数学上称为长轴半径和短轴半径）。</p>
-<pre class="brush:xml;gutter:false;">&lt;ellipse cx="75" cy="75" rx="20" ry="5"/&gt;</pre>
+<pre class="brush:xml">&lt;ellipse cx="75" cy="75" rx="20" ry="5"/&gt;</pre>
 <dl>
   <dt>
     rx</dt>
@@ -102,7 +102,7 @@ original_slug: SVG/Tutorial/Basic_Shapes
 </dl>
 <h3 id="Line">线 line</h3>
 <p><a href="/en/SVG/Element/line">line</a>画的是线段，通过在属性中定义起点和终点的坐标，构成两点之间的线段。</p>
-<pre class="brush:xml;gutter:false;">&lt;line x1="10" x2="50" y1="110" y2="150"/&gt;</pre>
+<pre class="brush:xml">&lt;line x1="10" x2="50" y1="110" y2="150"/&gt;</pre>
 <dl>
   <dt>
     x1</dt>
@@ -123,7 +123,7 @@ original_slug: SVG/Tutorial/Basic_Shapes
 </dl>
 <h3 id="Polyline">折线 polyline</h3>
 <p><a href="/en/SVG/Element/polyline">折线polyline</a>是一组连接起来的线段，折线上所有的点都放在一个属性里:</p>
-<pre class="brush:xml;gutter:false;">&lt;polyline points="60 110, 65 120, 70 115, 75 130, 80 125, 85 140, 90 135, 95 150, 100 145"/&gt;</pre>
+<pre class="brush:xml">&lt;polyline points="60 110, 65 120, 70 115, 75 130, 80 125, 85 140, 90 135, 95 150, 100 145"/&gt;</pre>
 <dl>
   <dt>
     points属性</dt>
@@ -132,7 +132,7 @@ points属性是点的列表，每个数字用空格、逗号、换行或回车�
 </dl>
 <h3 id="Polygon">多边形 polygon</h3>
 <p><a href="/en/SVG/Element/polygon">多边形polygon</a>和折线很像，它们都是定义一组点，然后将点用线段连接起来，从而形成一个图形。不同的是，多边形的起点和终点会连起来，形成一个闭合的形状。需要注意的是，矩形也是一种多边形，如果需要的话，你也可以用多边形来创建一个矩形。</p>
-<pre class="brush:xml;gutter:false;">&lt;polygon points="50 160, 55 180, 70 180, 60 190, 65 205, 50 195, 35 205, 40 190, 30 180, 45 180"/&gt;</pre>
+<pre class="brush:xml">&lt;polygon points="50 160, 55 180, 70 180, 60 190, 65 205, 50 195, 35 205, 40 190, 30 180, 45 180"/&gt;</pre>
 <dl>
   <dt>
     points属性</dt>
@@ -140,7 +140,7 @@ points属性是点的列表，每个数字用空格、逗号、换行或回车�
 </dl>
 <h3 id="Path">路径 path</h3>
 <p><a href="/en/SVG/Element/path">路径path</a>可能是SVG中最通用的一种形状，通过path元素，我们可以创建矩形（有没有圆角都行）、圆形、椭圆形、折线、多边形，以及其他一些形状，比如二次贝塞尔曲线、三次贝塞尔曲线，等等。因为path很强大也很复杂，所以会在<a href="/en/SVG/Tutorial/Paths">下一章</a>进行详细介绍。这里只介绍一个定义路径形状的属性。</p>
-<pre class="brush:xml;gutter:false;">&lt;path d="M 20 230 Q 40 205, 50 230 T 90230"/&gt;</pre>
+<pre class="brush:xml">&lt;path d="M 20 230 Q 40 205, 50 230 T 90230"/&gt;</pre>
 <dl>
   <dt>
     d属性</dt>
