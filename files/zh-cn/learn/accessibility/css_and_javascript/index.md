@@ -107,7 +107,7 @@ strong, em {
 }
 ```
 
-但是，你很少需要以任何显著的方式设置强调元素的样式。粗体和斜体文本的标准约定非常容易识别，更改样式可能会导致混淆。有关强调的更多信息，参见[强调和重要性](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)。
+但是，你很少需要以任何显著的方式设置强调元素的样式。粗体和斜体文本的标准约定非常容易识别，更改样式可能会导致混淆。有关强调的更多信息，参见[重点强调](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#重点强调)。
 
 #### 缩写
 
@@ -125,7 +125,7 @@ abbr {
 }
 ```
 
-缩写的公认样式约定是虚线下划线，偏离这一原则明显是不明智的。有关缩写的更多，参见[缩写](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)。
+缩写的公认样式约定是虚线下划线，偏离这一原则明显是不明智的。有关缩写的更多，参见[缩略语](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#缩略语)。
 
 #### 链接
 
@@ -228,9 +228,9 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 简单的内容和功能可以说是很容易使访问——例如文本，图像，表格，窗体和按钮，激活功能。正如我们在 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)一文中提到的，主要注意事项包括：
 
 - 良好的语义：为正确的工作使用正确的元素。例如，确保你使用标题和段落，以及 {{htmlelement("button")}} 和 {{htmlelement("a")}} 元素
-- 确保内容以文本形式提供，要么直接作为文本内容、表单元素的良好文本标签，也可以确保[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#Text_alternatives)（例如图像的 alt 文本）。
+- 确保内容以文本形式提供，要么直接作为文本内容、表单元素的良好文本标签，也可以确保[文本替代品](/zh-CN/docs/Learn/Accessibility/HTML#文本替代品)（例如图像的 alt 文本）。
 
-我们还查看了如何使用 JavaScript 在缺少功能的地方构建的示例 , 参见[重新构建键盘辅助功能](/zh-CN/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in)。这不是理想的——实际上，你应该只使用正确的元素为正确的作业——但它表明在情况下它是可能的，由于某种原因，你不能控制使用的标记。提高非语义 JavaScript 支持的小部件的无障碍的另一种方法是使用 WAI-ARIA 为屏幕阅读器用户提供额外的语义。下一篇文章还将详细介绍这一点。
+我们还查看了如何使用 JavaScript 在缺少功能的地方构建的示例 , 参见[重新建立键盘的无障碍](/zh-CN/docs/Learn/Accessibility/HTML#重新建立键盘的可访问性)。这不是理想的——实际上，你应该只使用正确的元素为正确的作业——但它表明在情况下它是可能的，由于某种原因，你不能控制使用的标记。提高非语义 JavaScript 支持的小部件的无障碍的另一种方法是使用 WAI-ARIA 为屏幕阅读器用户提供额外的语义。下一篇文章还将详细介绍这一点。
 
 复杂的功能，如 3D 游戏是不容易提高无障碍的 ––使用 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 创建的复杂 3D 游戏将在 {{htmlelement("canvas")}} 元素上呈现，该元素目前没有提供文本替代或其他信息的功能视障用户使用。可以说，这样的游戏并没有真正有这群人作为它的主要目标观众的一部分，这将是不合理的，期望你使它 100% 访问盲人，但你可以实现键盘控制，所以它可以使用非鼠标用户，并使配色方案的对比度足以让有颜色缺陷的人使用。
 
@@ -348,7 +348,7 @@ imgThumb.onblur = hideImg;
 
 当鼠标指针在缩略图上悬停或者移开，将分别调用前两行代码。此时不允许我们通过键盘访问缩略图——为了允许这一点，我们调用后两行代码，它们在图像聚焦和失焦时 (聚焦停止) 运行函数。这可以在图像加 tab 键实现，因为我们为图像的属性设置 `tabindex="0"`。
 
-[Click](/zh-CN/docs/Web/Events/click) 事件很有趣——听起来它依赖于鼠标，但是大多数的浏览器，在有焦点的链接或者表单元素上，按下 enter/return 之后，或者在触屏设备上点击一个元素，都将会激活 [onclick](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick) 事件处理程序。但是，当你允许非默认可聚焦事件使用 tabindex 进行焦点处理时，默认情况下不起作用，在这种情况下，你需要在按下确切键时进行专门检测（参见[Building keyboard accessibility back in](/zh-CN/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in)）。
+[Click](/zh-CN/docs/Web/Events/click) 事件很有趣——听起来它依赖于鼠标，但是大多数的浏览器，在有焦点的链接或者表单元素上，按下 enter/return 之后，或者在触屏设备上点击一个元素，都将会激活 [onclick](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick) 事件处理程序。但是，当你允许非默认可聚焦事件使用 tabindex 进行焦点处理时，默认情况下不起作用，在这种情况下，你需要在按下确切键时进行专门检测（参见[重新建立键盘的无障碍](/zh-CN/docs/Learn/Accessibility/HTML#重新建立键盘的可访问性)）。
 
 ## 总结
 
