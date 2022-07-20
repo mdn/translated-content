@@ -6,78 +6,88 @@ tags:
   - 可縮放矢量圖形 屬性
 translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
-<p>« <a href="/en/SVG/Attribute">SVG 屬性引用首頁</a></p>
+« [SVG 屬性引用首頁](/en/SVG/Attribute)
 
-<p><code>stroke-dashoffset</code> 屬性指定一個數值至虛線的開頭。</p>
+`stroke-dashoffset` 屬性指定一個數值至虛線的開頭。
 
-<p>如果使用 <a href="/en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> ，值則會代表當前viewport的百分比。<br>
- <br>
- 值允許為負值。</p>
+如果使用 [\<percentage>](/en/SVG/Content_type#Percentage) ，值則會代表當前 viewport 的百分比。
 
-<h2 id="Usage_context">Usage context</h2>
+值允許為負值。
+
+## Usage context
 
 <table>
- <tbody>
-  <tr>
-   <th scope="row">類別</th>
-   <td>Presentation attribute</td>
-  </tr>
-  <tr>
-   <th scope="row">可用值</th>
-   <td><a href="/en/SVG/Content_type#Percentage">&lt;percentage&gt;</a> | <a href="/en/SVG/Content_type#Length">&lt;length&gt;</a> | inherit</td>
-  </tr>
-  <tr>
-   <th scope="row">初始值</th>
-   <td>0</td>
-  </tr>
-  <tr>
-   <th scope="row">可動畫化</th>
-   <td>是</td>
-  </tr>
-  <tr>
-   <th scope="row">規範文件</th>
-   <td><a href="http://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">類別</th>
+      <td>Presentation attribute</td>
+    </tr>
+    <tr>
+      <th scope="row">可用值</th>
+      <td>
+        <a href="/en/SVG/Content_type#Percentage">&#x3C;percentage></a> |
+        <a href="/en/SVG/Content_type#Length">&#x3C;length></a> | inherit
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">初始值</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th scope="row">可動畫化</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">規範文件</th>
+      <td>
+        <a
+          href="http://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty"
+          >SVG 1.1 (2nd Edition)</a
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="範例">範例</h2>
+## 範例
 
-<h3 id="HTML_內容">HTML 內容</h3>
+### HTML 內容
 
-<pre class="brush: html">&lt;svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
-    &lt;line stroke-dashoffset="0" stroke-dasharray="20" x1="0" y1="10" x2="200" y2="10"/&gt;
-    &lt;line stroke-dashoffset="10" stroke-dasharray="20" x1="0" y1="20" x2="200" y2="20"/&gt;
-    &lt;line stroke-dashoffset="20" stroke-dasharray="20" x1="0" y1="30" x2="200" y2="30"/&gt;
-    &lt;line stroke-dashoffset="50%" stroke-dasharray="20" x1="0" y1="40" x2="200" y2="40"/&gt;
-    &lt;line stroke-dashoffset="25%" stroke-dasharray="20" x1="0" y1="50" x2="200" y2="50"/&gt;
-    &lt;line stroke-dashoffset="0%" stroke-dasharray="20" x1="0" y1="60" x2="200" y2="60"/&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <line stroke-dashoffset="0" stroke-dasharray="20" x1="0" y1="10" x2="200" y2="10"/>
+    <line stroke-dashoffset="10" stroke-dasharray="20" x1="0" y1="20" x2="200" y2="20"/>
+    <line stroke-dashoffset="20" stroke-dasharray="20" x1="0" y1="30" x2="200" y2="30"/>
+    <line stroke-dashoffset="50%" stroke-dasharray="20" x1="0" y1="40" x2="200" y2="40"/>
+    <line stroke-dashoffset="25%" stroke-dasharray="20" x1="0" y1="50" x2="200" y2="50"/>
+    <line stroke-dashoffset="0%" stroke-dasharray="20" x1="0" y1="60" x2="200" y2="60"/>
+</svg>
+```
 
-<h3 id="CSS_內容">CSS 內容</h3>
+### CSS 內容
 
-<pre class="brush: css">line{
+```css
+line{
     stroke: #51BBA7;
     stroke-width: 2;
-}</pre>
+}
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('範例') }}</p>
+{{ EmbedLiveSample('範例') }}
 
-<h2 id="適用元素">適用元素</h2>
+## 適用元素
 
-<p>以下元素可以使用 <code>stroke-dashoffset</code> 屬性</p>
+以下元素可以使用 `stroke-dashoffset` 屬性
 
-<ul>
- <li><a href="/en/SVG/Element#Shape">Shape elements</a> »</li>
- <li><a href="/en/SVG/Element#TextContent">Text content elements</a> »</li>
-</ul>
+- [Shape elements](/en/SVG/Element#Shape) »
+- [Text content elements](/en/SVG/Element#TextContent) »
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}

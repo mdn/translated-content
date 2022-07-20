@@ -3,11 +3,11 @@ title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 translation_of: Web/SVG/Attribute/fill-rule
 ---
-<p>« <a href="/zh-TW/docs/Web/SVG/Attribute">SVG Attribute reference home</a></p>
+« [SVG Attribute reference home](/zh-TW/docs/Web/SVG/Attribute)
 
-<p>The <code>fill-rule</code> attribute indicates the algorithm which is to be used to determine what side of a path is inside the shape. For a simple, non-intersecting path, it is intuitively clear what region lies "inside"; however, for a more complex path, such as a path that intersects itself or where one subpath encloses another, the interpretation of "inside" is not so obvious.</p>
+The `fill-rule` attribute indicates the algorithm which is to be used to determine what side of a path is inside the shape. For a simple, non-intersecting path, it is intuitively clear what region lies "inside"; however, for a more complex path, such as a path that intersects itself or where one subpath encloses another, the interpretation of "inside" is not so obvious.
 
-<h2 id="Usage_context">Usage context</h2>
+## Usage context
 
 <table>
   <tbody>
@@ -25,39 +25,35 @@ translation_of: Web/SVG/Attribute/fill-rule
     </tr>
     <tr>
       <th scope="row">Normative document</th>
-      <td><a href="https://www.w3.org/TR/SVG/painting.html#FillRuleProperty">SVG 1.1 (2nd Edition)</a></td>
+      <td>
+        <a href="https://www.w3.org/TR/SVG/painting.html#FillRuleProperty"
+          >SVG 1.1 (2nd Edition)</a
+        >
+      </td>
     </tr>
   </tbody>
 </table>
 
-<p>The <code>fill-rule</code> property provides two options for how the inside of a shape is determined:</p>
+The `fill-rule` property provides two options for how the inside of a shape is determined:
 
-<dl>
-  <dt>
-    nonzero</dt>
-  <dd>
-    This value determines the "insideness" of a point in the shape by drawing a ray from that point to infinity in any direction and then examining the places where a segment of the shape crosses the ray. Starting with a count of zero, add one each time a path segment crosses the ray from left to right and subtract one each time a path segment crosses the ray from right to left. After counting the crossings, if the result is zero then the point is outside the path. Otherwise, it is inside.</dd>
-  <dt>
-    evenodd</dt>
-  <dd>
-    This value determines the "insideness" of a point in the shape by drawing a ray from that point to infinity in any direction and counting the number of path segments from the given shape that the ray crosses. If this number is odd, the point is inside; if even, the point is outside.</dd>
-</dl>
+- nonzero
+  - : This value determines the "insideness" of a point in the shape by drawing a ray from that point to infinity in any direction and then examining the places where a segment of the shape crosses the ray. Starting with a count of zero, add one each time a path segment crosses the ray from left to right and subtract one each time a path segment crosses the ray from right to left. After counting the crossings, if the result is zero then the point is outside the path. Otherwise, it is inside.
+- evenodd
+  - : This value determines the "insideness" of a point in the shape by drawing a ray from that point to infinity in any direction and counting the number of path segments from the given shape that the ray crosses. If this number is odd, the point is inside; if even, the point is outside.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h2 id="Elements">Elements</h2>
+## Elements
 
-<p>The following elements can use the <code>fill-rule</code> attribute</p>
+The following elements can use the `fill-rule` attribute
 
-<ul>
-  <li><a href="/zh-TW/docs/Web/SVG/Element#Shape">Shape elements</a> »</li>
-  <li><a href="/zh-TW/docs/Web/SVG/Element#TextContent">Text content elements</a> »</li>
-</ul>
+- [Shape elements](/zh-TW/docs/Web/SVG/Element#Shape) »
+- [Text content elements](/zh-TW/docs/Web/SVG/Element#TextContent) »
 
-<h2 id="規範">規範</h2>
+## 規範
 
 {{Specifications}}
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+## 瀏覽器相容性
 
 {{Compat}}
