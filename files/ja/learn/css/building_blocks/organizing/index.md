@@ -15,24 +15,31 @@ tags:
   - styleguide
 translation_of: Learn/CSS/Building_blocks/Organizing
 ---
-<div>{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
-<p>スタイルシートやプロジェクトが大きい状態で作業しはじめると、巨大な CSS ファイルを維持するのが難しいことがわかります。この記事では、CSS を書いていくのと保守していくのをやりやすくするためのベストプラクティスと、保守性を向上させるための解決策の一部を紹介します。</p>
+大きなスタイルシートや巨大なプロジェクトで作業をはじめると、巨大な CSS ファイルを維持するのが難しいことがわかります。この記事では、CSS を書いていくのと保守していくのをやりやすくするためのベストプラクティスと、保守性を向上させるための解決策の一部を紹介します。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>スタイルシートを整理するためのヒントとベストプラクティスを学び、 CSS の整理およびチーム作業を手助けするいくつかの命名規則とツールについて調べる。</td>
-  </tr>
- </tbody>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基本的なコンピューターリテラシー、
+        <a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、
+        <a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、
+        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ていること。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        スタイルシートを整理するためのヒントとベストプラクティスを学び、 CSS の整理およびチーム作業を手助けするいくつかの命名規則とツールについて調べる。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Tips_to_keep_your_CSS_tidy" name="Tips_to_keep_your_CSS_tidy">CSS を整理するためのヒント</h2>
+## CSS を整理するためのヒント
 
 <p>スタイルシートを整理して整頓するための一般的な提案を次に示します。</p>
 
@@ -75,7 +82,7 @@ h2 {
 <pre class="brush: css notranslate">/* これは CSS コメントです
 複数行に分割できます。 */</pre>
 
-<p>ヒントとしては、スタイルシートの論理セクション間にコメントブロックを追加して、スキャンするときにさまざまなセクションをすばやく見つけられるようにしたり、CSS のその部分にジャンプするために検索するものを提供したりすることもできます。コードに表示されない文字列を使用する場合は、検索することでセクションからセクションにジャンプできます。以下では <code>||</code> を使用しています。</p>
+<p>ヒントとしては、スタイルシートの論理セクション間にコメントブロックを追加して、スキャンするときにさまざまなセクションをすばやく見つけられるようにしたり、CSS のその部分にジャンプするために検索するものを提供したりすることもできます。コードに表示されない文字列を使用する場合は、検索することでセクションからセクションにジャンプできます。以下では `||` を使用しています。</p>
 
 <pre class="brush: css notranslate">/* || 一般的なスタイル */
 
@@ -108,11 +115,11 @@ h2 {
 <p>スタイルシートで最初にすべての一般的なスタイルを設定することをお勧めします。これは、その要素で特別なことをしない限り、通常適用されるすべてのスタイルを意味します。通常、次のルールを設定します。</p>
 
 <ul>
- <li><code>body</code></li>
- <li><code>p</code></li>
- <li><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code></li>
- <li><code>ul</code> と <code>ol</code></li>
- <li><code>table</code> プロパティ</li>
+ <li>`body`</li>
+ <li>`p`</li>
+ <li>`h1`, `h2`, `h3`, `h4`, `h5`</li>
+ <li>`ul` と `ol`</li>
+ <li>`table` プロパティ</li>
  <li>リンク</li>
 </ul>
 
@@ -165,13 +172,13 @@ blockquote { ... }
 
 <h3 id="Avoid_overly-specific_selectors" name="Avoid_overly-specific_selectors">過剰なセレクターを避ける</h3>
 
-<p>非常に特殊なセレクタを作成した場合、別の要素に同じルールを適用するために CSS の塊を複製する必要があることに気づくことがよくあります。例えば、以下のセレクタのようなものがあるかもしれませんが、これは <code>main</code> のクラスを持つ <code>&lt;article&gt;</code> の中の <code>box</code> のクラスを持つ <code>&lt;p&gt;</code> にルールを適用します。</p>
+<p>非常に特殊なセレクタを作成した場合、別の要素に同じルールを適用するために CSS の塊を複製する必要があることに気づくことがよくあります。例えば、以下のセレクタのようなものがあるかもしれませんが、これは `main` のクラスを持つ `&lt;article&gt;` の中の `box` のクラスを持つ `&lt;p&gt;` にルールを適用します。</p>
 
 <pre class="brush: css notranslate">article.main p.box {
   border: 1px solid #ccc;
 }</pre>
 
-<p>同じルールを <code>main</code> 以外のものや <code>&lt;p&gt;</code> 以外のものにも適用したい場合は、これらのルールに別のセレクタを追加するか、まったく新しいルールセットを作成しなければなりません。その代わりに、<code>box</code> というクラスを作成して、どこでも適用することができます。</p>
+<p>同じルールを `main` 以外のものや `&lt;p&gt;` 以外のものにも適用したい場合は、これらのルールに別のセレクタを追加するか、まったく新しいルールセットを作成しなければなりません。その代わりに、`box` というクラスを作成して、どこでも適用することができます。</p>
 
 <pre class="brush: css notranslate">.box {
   border: 1px solid #ccc;
@@ -201,7 +208,7 @@ blockquote { ... }
 
 <p>あなたが遭遇するであろうアプローチのほとんどは、<a href="https://github.com/stubbornella/oocss/wiki">Nicole Sullivan の業績</a>によって人気を博した Object Oriented CSS (OOCSS) のコンセプトに起因しています。OOCSS の基本的な考え方は、CSS を再利用可能なオブジェクトに分割し、サイト上の必要な場所で使用できるようにすることです。OOCSS の標準的な例は、<a href="/ja/docs/Web/CSS/Layout_cookbook/Media_objects">The Media Object</a> として記述されているパターンです。これは、片面に固定サイズの画像や動画などの要素を配置し、もう片面には柔軟なコンテンツを配置したパターンです。コメントやリスティングなどのウェブサイトでよく見かけるパターンです。</p>
 
-<p>OOCSS の手法を採用していない場合は、このパターンが使用されるさまざまな場所に対してカスタムCSSを作成することができます。たとえば、コンポーネント・パーツに対して一連のルールを持つ <code>comment</code> というクラスを作成し、次に、いくつかの小さな違いを除いて、<code>comment</code> クラスとほとんど同じルールを持つ <code>list-item</code> というクラスを作成します。これら2つのコンポーネントの違いは、list-item には下罫線があり、comment 内のイメージには罫線がありますが、list-item のイメージにはないことです。</p>
+<p>OOCSS の手法を採用していない場合は、このパターンが使用されるさまざまな場所に対してカスタムCSSを作成することができます。たとえば、コンポーネント・パーツに対して一連のルールを持つ `comment` というクラスを作成し、次に、いくつかの小さな違いを除いて、`comment` クラスとほとんど同じルールを持つ `list-item` というクラスを作成します。これら2つのコンポーネントの違いは、list-item には下罫線があり、comment 内のイメージには罫線がありますが、list-item のイメージにはないことです。</p>
 
 <pre class="brush: css notranslate">.comment {
   display: grid;
@@ -226,7 +233,7 @@ blockquote { ... }
   font-size: .8rem;
 }</pre>
 
-<p>OOCSS では、<code>media</code> と呼ばれる1つのパターンを作成して、両方のパターンに共通の CSSをすべて持つようにします。一般的には media オブジェクトの形状を表す基底クラスです。そして、それらの小さな違いに対応するために追加のクラスを追加して、特定の方法でスタイリングを拡張します。</p>
+<p>OOCSS では、`media` と呼ばれる1つのパターンを作成して、両方のパターンに共通の CSSをすべて持つようにします。一般的には media オブジェクトの形状を表す基底クラスです。そして、それらの小さな違いに対応するために追加のクラスを追加して、特定の方法でスタイリングを拡張します。</p>
 
 <pre class="brush: css notranslate">.media {
   display: grid;
@@ -245,7 +252,7 @@ blockquote { ... }
   border-bottom: 1px solid grey;
 } </pre>
 
-<p>HTMLでは、コメントに <code>media</code> と <code>comment</code> クラスの両方を適用する必要があります。</p>
+<p>HTMLでは、コメントに `media` と `comment` クラスの両方を適用する必要があります。</p>
 
 <pre class="brush: html notranslate">&lt;div class="media comment"&gt;
   &lt;img /&gt;
@@ -253,7 +260,7 @@ blockquote { ... }
 &lt;/div&gt;
 </pre>
 
-<p>リストアイテムは次のように <code>media</code> と <code>list-item</code> が適用されます。</p>
+<p>リストアイテムは次のように `media` と `list-item` が適用されます。</p>
 
 <pre class="brush: html notranslate">&lt;ul&gt;
   &lt;li class="media list-item"&gt;
@@ -299,7 +306,7 @@ blockquote { ... }
 
 <p>CSS にネイティブ<a href="/ja/docs/Web/CSS/Using_CSS_custom_properties">カスタムプロパティが追加された</a>ため、この機能の重要性は低下していますが、Sass を使用する理由の1つは、プロジェクトで使用されるすべての色とフォントを設定として定義し、その変数をプロジェクトで使用できるようにすることです。これは、間違った青の色合いを使用したことがわかった場合、1つの場所で変更するだけでよいことを意味します。</p>
 
-<p><code>$base-color</code> 以下の最初の行のように呼び出される変数を作成した場合、その色が必要な場所であればどこでも、スタイルシートを介してその変数を使用できます。</p>
+<p>`$base-color` 以下の最初の行のように呼び出される変数を作成した場合、その色が必要な場所であればどこでも、スタイルシートを介してその変数を使用できます。</p>
 
 <pre class="brush: css notranslate"><code>$base-color: #c6538c;
 
@@ -317,7 +324,7 @@ blockquote { ... }
 
 <p>CSS を整理する1つの方法は、スタイルシートを小さなスタイルシートに分解することであると上記で述べました。Sass を使用すると、これを別のレベルに引き上げ、非常に小さなスタイルシートをたくさん持つことができます。コンポーネントごとに個別のスタイルシートを用意することもできます。Sass のインクルード機能を使用することで、これらすべてを1つまたは少数のスタイルシートにまとめて、実際に Web サイトにリンクできます。</p>
 
-<p>例えば、<a href="https://sass-lang.com/documentation/at-rules/use#partials">partial</a> を使って、ディレクトリ内にいくつかのスタイルファイル、例えば <code>foundation/_code.scss</code>、<code>foundation/_lists.scss</code>、<code>foundation/_footer.scss</code>、<code>foundation/_links.scss</code> などを作成し、Sass の <code>@use</code> ロールを使って他のスタイルシートにロードすることができます。</p>
+<p>例えば、<a href="https://sass-lang.com/documentation/at-rules/use#partials">partial</a> を使って、ディレクトリ内にいくつかのスタイルファイル、例えば `foundation/_code.scss`、`foundation/_lists.scss`、`foundation/_footer.scss`、`foundation/_links.scss` などを作成し、Sass の `@use` ロールを使って他のスタイルシートにロードすることができます。</p>
 
 <pre class="brush: css notranslate">// foundation/_index.sass
 @use 'code'
