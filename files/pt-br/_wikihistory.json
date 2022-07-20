@@ -4420,6 +4420,12 @@
       "thaynacoelho"
     ]
   },
+  "Web/API/Element/lostpointercapture_event": {
+    "modified": "2020-10-15T22:22:03.373Z",
+    "contributors": [
+      "mdeamf"
+    ]
+  },
   "Web/API/Element/matches": {
     "modified": "2019-03-23T22:20:51.438Z",
     "contributors": [
@@ -4980,12 +4986,6 @@
     "modified": "2019-03-23T22:21:10.943Z",
     "contributors": [
       "jeanonline"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onlostpointercapture": {
-    "modified": "2020-10-15T22:22:03.373Z",
-    "contributors": [
-      "mdeamf"
     ]
   },
   "Web/API/HTMLCanvasElement": {

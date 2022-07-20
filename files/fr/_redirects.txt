@@ -3768,7 +3768,7 @@
 /fr/docs/Web/API/Element/accessKey	/fr/docs/Web/API/HTMLElement/accessKey
 /fr/docs/Web/API/Element/innertHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/Web/API/Element/name	/fr/docs/Web/API
-/fr/docs/Web/API/Element/ongotpointercapture	/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture
+/fr/docs/Web/API/Element/ongotpointercapture	/fr/docs/Web/API/Element/gotpointercapture_event
 /fr/docs/Web/API/Element/onwheel	/fr/docs/Web/API/Element/wheel_event
 /fr/docs/Web/API/Element/removeChild	/fr/docs/Web/API/Node/removeChild
 /fr/docs/Web/API/Element/select_event	/fr/docs/Web/API/HTMLInputElement/select_event
@@ -3799,6 +3799,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onclose	/fr/docs/Web/API/HTMLDialogElement/close_event
 /fr/docs/Web/API/GlobalEventHandlers/ondblclick	/fr/docs/Web/API/Element/dblclick_event
 /fr/docs/Web/API/GlobalEventHandlers/onfocus	/fr/docs/Web/API/Window/focus_event
+/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/fr/docs/Web/API/Element/gotpointercapture_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeypress	/fr/docs/Web/API/Element/keypress_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeyup	/fr/docs/Web/API/Element/keyup_event

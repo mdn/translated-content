@@ -1,7 +1,8 @@
 ---
 title: GlobalEventHandlers.ongotpointercapture
-slug: Web/API/GlobalEventHandlers/ongotpointercapture
+slug: Web/API/Element/gotpointercapture_event
 translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
+original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 ---
 {{ApiRef("HTML DOM")}}La propriété **`ongotpointercapture`** du mixin {{domxref("GlobalEventHandlers")}} est un {{event("Event_handlers", "event handler")}} qui traite les évènements de type {{event("gotpointercapture")}}.
 
