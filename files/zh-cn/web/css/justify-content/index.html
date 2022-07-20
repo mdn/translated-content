@@ -10,7 +10,7 @@ translation_of: Web/CSS/justify-content
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <strong><code>justify-content</code></strong> 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。</p>
+<p><a href="/zh-CN/docs/CSS" title="CSS">CSS</a> <strong><code>justify-content</code></strong> 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。</p>
 
 <pre class="brush: css notranslate"><code>/* Positional alignment */
 justify-content: center;     </code>/* 居中排列 */<code>
@@ -45,7 +45,7 @@ justify-content: inherit;
 justify-content: initial;
 justify-content: unset;</pre>
 
-<p>当 length 属性和自动外边距属性（margin: auto）生效之后，对齐已经完成了。也就是说，如果存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 0，那么对齐方式不会生效，就像没有多余空间的情况。 </p>
+<p>当 length 属性和自动外边距属性（margin: auto）生效之后，对齐已经完成了。也就是说，如果存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 0，那么对齐方式不会生效，就像没有多余空间的情况。 </p>
 
 <div>{{cssinfo}}</div>
 
@@ -77,7 +77,7 @@ justify-content: unset;</pre>
  first baseline</code><br>
  <code>last baseline</code></dt>
  <dd>Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.<br>
- The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
+ The fallback alignment for <code>first baseline</code> is <code>start</code>, the one for <code>last baseline</code> is <code>end</code>.</dd>
  <dt><code>space-between</code></dt>
  <dd>在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素与行首对齐，每行最后一个元素与行尾对齐。</dd>
  <dt><code>space-around</code></dt>
@@ -85,9 +85,9 @@ justify-content: unset;</pre>
  <dt><code>space-evenly</code></dt>
  <dd>flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。</dd>
  <dt><code>stretch</code></dt>
- <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.</dd>
+ <dd>If the combined size of the items is less than the size of the alignment container, any <code>auto</code>-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.</dd>
  <dt><code>safe</code></dt>
- <dd>与对齐关键字一起使用，如果选定的关键字会导致元素溢出容器造成数据丢失，那么将会使用 <code>start</code> 代替它。</dd>
+ <dd>与对齐关键字一起使用，如果选定的关键字会导致元素溢出容器造成数据丢失，那么将会使用 <code>start</code> 代替它。</dd>
  <dt><code>unsafe</code></dt>
  <dd>Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.</dd>
 </dl>

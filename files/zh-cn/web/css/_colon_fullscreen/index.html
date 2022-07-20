@@ -13,9 +13,9 @@ translation_of: 'Web/CSS/:fullscreen'
 
 <h2 id="总结">总结</h2>
 
-<p><code>css 伪类 :fullscreen 应用于当前处于全屏显示模式的元素。</code> 它不仅仅选择顶级元素，还包括所有已显示的栈内元素。</p>
+<p><code>css 伪类 :fullscreen 应用于当前处于全屏显示模式的元素。</code> 它不仅仅选择顶级元素，还包括所有已显示的栈内元素。</p>
 
-<div class="note">W3C 标准使用不带破折号的单词:fullscreen，但 Webkit 和 Gecko 应用接口各自使用前缀带有破折号的变量：<code>:-webkit-full-screen</code> 和<code>:-moz-full-screen。</code>微软的 Edge 和 Internet Explorer 各自使用标准语法：<code>:fullscreen</code>和<code>:-ms-fullscreen。</code></div>
+<div class="note">W3C 标准使用不带破折号的单词:fullscreen，但 Webkit 和 Gecko 应用接口各自使用前缀带有破折号的变量：<code>:-webkit-full-screen</code> 和<code>:-moz-full-screen。</code>微软的 Edge 和 Internet Explorer 各自使用标准语法：<code>:fullscreen</code>和<code>:-ms-fullscreen。</code></div>
 
 <h2 id="语法">语法</h2>
 
@@ -26,9 +26,9 @@ translation_of: 'Web/CSS/:fullscreen'
 <h3 id="HTML">HTML</h3>
 
 <pre class="brush: html">&lt;div id="fullscreen"&gt;
-  &lt;h1&gt;:fullscreen Demo&lt;/h1&gt;
-  &lt;p&gt; This will become a big red text when on fullscreen.&lt;/p&gt;
-  &lt;button id="fullscreen-button"&gt;Enter Fullscreen&lt;/button&gt;
+  &lt;h1&gt;:fullscreen Demo&lt;/h1&gt;
+  &lt;p&gt; This will become a big red text when on fullscreen.&lt;/p&gt;
+  &lt;button id="fullscreen-button"&gt;Enter Fullscreen&lt;/button&gt;
 &lt;/div&gt;
 </pre>
 
@@ -36,17 +36,17 @@ translation_of: 'Web/CSS/:fullscreen'
 <h3 id="Javascript">Javascript</h3>
 
 <pre class="brush: js">var fullscreenButton = document.getElementById("fullscreen-button");
-var fullscreenDiv    = document.getElementById("fullscreen");
-var fullscreenFunc   = fullscreenDiv.requestFullscreen;
+var fullscreenDiv    = document.getElementById("fullscreen");
+var fullscreenFunc   = fullscreenDiv.requestFullscreen;
 if (!fullscreenFunc) {
-  ['mozRequestFullScreen',
-   'msRequestFullscreen',
-   'webkitRequestFullScreen'].forEach(function (req) {
-     fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
-   });
+  ['mozRequestFullScreen',
+   'msRequestFullscreen',
+   'webkitRequestFullScreen'].forEach(function (req) {
+     fullscreenFunc = fullscreenFunc || fullscreenDiv[req];
+   });
 }
 function enterFullscreen() {
-  fullscreenFunc.call(fullscreenDiv);
+  fullscreenFunc.call(fullscreenDiv);
 }
 fullscreenButton.addEventListener('click', enterFullscreen);
 </pre>

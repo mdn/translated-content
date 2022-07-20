@@ -15,7 +15,7 @@ translation_of: Web/HTML/Element/hgroup
 
 
 
-<div><strong>HTML <code>&lt;hgroup&gt;</code> element</strong>代表文档章节所属的多级别的目录，它将多个&lt;h1&gt;至&lt;h6&gt;的子元素组装到一起。</div>
+<div><strong>HTML <code>&lt;hgroup&gt;</code> element</strong>代表文档章节所属的多级别的目录，它将多个&lt;h1&gt;至&lt;h6&gt;的子元素组装到一起。</div>
 
 
 
@@ -59,22 +59,22 @@ translation_of: Web/HTML/Element/hgroup
 <h2 id="使用笔记">使用笔记</h2>
 
 <div class="note">
-<p><strong>注意：</strong>本元素已经从 HTML5（W3C）规范中删除，但是它仍旧在 WHATWG 的 HTML 版本里。大多数浏览器都部分地实现，所以它不太可能消失。 <br>
- 然而，考虑到&lt;hgroup&gt;元素的一个关键存在目标是明确 HTML 规范中如何显示标题的轮廓算法，但因为其轮廓算法 (outline algorithm) 未在任何浏览器中实现，因此 <code>&lt;hgroup&gt; 语义仍旧是理论上的建议。</code><br>
+<p><strong>注意：</strong>本元素已经从 HTML5（W3C）规范中删除，但是它仍旧在 WHATWG 的 HTML 版本里。大多数浏览器都部分地实现，所以它不太可能消失。 <br>
+ 然而，考虑到&lt;hgroup&gt;元素的一个关键存在目标是明确 HTML 规范中如何显示标题的轮廓算法，但因为其轮廓算法 (outline algorithm) 未在任何浏览器中实现，因此 <code>&lt;hgroup&gt; 语义仍旧是理论上的建议。</code><br>
  HTML5 (W3C) 规范提供了如何标记<a href="http://www.w3.org/TR/html5/common-idioms.html#sub-head">副标题，小标题，可选标题和标语</a>（Subheadings, subtitles, alternative titles and taglines）的建议。</p>
 </div>
 
-<p>The <code>&lt;hgroup&gt;</code> element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a <em>multi-level</em> heading.</p>
+<p>The <code>&lt;hgroup&gt;</code> element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a <em>multi-level</em> heading.</p>
 
-<p>In other words, the <code>&lt;hgroup&gt;</code> element prevents any of its secondary <code><a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children from creating separate sections of their own in the outline—as those <code><a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> elements otherwise normally would if they were not children of any <code>&lt;hgroup&gt;</code>.</p>
+<p>In other words, the <code>&lt;hgroup&gt;</code> element prevents any of its secondary <code><a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children from creating separate sections of their own in the outline—as those <code><a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> elements otherwise normally would if they were not children of any <code>&lt;hgroup&gt;</code>.</p>
 
-<p>So in the abstract outline produced by the <a href="/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">HTML outline algorithm defined in the HTML specification</a>, the <code>&lt;hgroup&gt;</code> as a whole forms a single logical heading, with the entire set of <code><a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children of the <code>&lt;hgroup&gt;</code> going into the outline as one <em>multi-level</em> unit, to comprise that single logical heading in the abstract outline.</p>
+<p>So in the abstract outline produced by the <a href="/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#The_HTML5_outline_algorithm">HTML outline algorithm defined in the HTML specification</a>, the <code>&lt;hgroup&gt;</code> as a whole forms a single logical heading, with the entire set of <code><a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;–&lt;h6&gt;</a></code> children of the <code>&lt;hgroup&gt;</code> going into the outline as one <em>multi-level</em> unit, to comprise that single logical heading in the abstract outline.</p>
 
-<p>To produce any (non-abstract) <em>rendered</em> view of such an outline, some choice must be made in the design of the rendering tool about how to render <code>&lt;hgroup&gt;</code> headings in such a way as to convey their multi-level nature. There are a variety of ways an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline; for example:</p>
+<p>To produce any (non-abstract) <em>rendered</em> view of such an outline, some choice must be made in the design of the rendering tool about how to render <code>&lt;hgroup&gt;</code> headings in such a way as to convey their multi-level nature. There are a variety of ways an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline; for example:</p>
 
 <ul>
- <li>an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline in with a colon character and space (“<code>: </code>”) or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings</li>
- <li>an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline in with the primary heading followed by parentheses around the secondary heading(s)</li>
+ <li>an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline in with a colon character and space (“<code>: </code>”) or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings</li>
+ <li>an <code>&lt;hgroup&gt;</code> might be shown in a rendered outline in with the primary heading followed by parentheses around the secondary heading(s)</li>
 </ul>
 
 <p>Consider the following HTML document:</p>
@@ -97,13 +97,13 @@ translation_of: Web/HTML/Element/hgroup
 
 <p><img src="outline-colon.png"></p>
 
-<p>That is, the rendered outline might show the primary title, <em>HTML</em>, followed by a colon and space, followed by the secondary title, <em>Living Standard — Last Updated 12 August 2016</em>.</p>
+<p>That is, the rendered outline might show the primary title, <em>HTML</em>, followed by a colon and space, followed by the secondary title, <em>Living Standard — Last Updated 12 August 2016</em>.</p>
 
 <p>Or, the rendered outline for that document might instead look like the following:</p>
 
 <p><img alt="Rendered outline that includes an &lt;hgroup> element, with parens around the secondary heading" src="outline-paren.png"></p>
 
-<p>That is, the rendered outline might show the primary title, <em>HTML</em>, followed by the secondary title shown in parentheses:<em> (Living Standard — Last Updated 12 August 2016)</em>.</p>
+<p>That is, the rendered outline might show the primary title, <em>HTML</em>, followed by the secondary title shown in parentheses:<em> (Living Standard — Last Updated 12 August 2016)</em>.</p>
 
 <h2 id="示例">示例</h2>
 

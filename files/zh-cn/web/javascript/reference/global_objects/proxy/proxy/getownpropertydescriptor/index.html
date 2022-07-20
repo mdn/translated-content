@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPrope
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>handler.getOwnPropertyDescriptor()</code></strong> 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}}  的钩子。</p>
+<p><strong><code>handler.getOwnPropertyDescriptor()</code></strong> 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}}  的钩子。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPrope
 
 <h3 id="参数">参数</h3>
 
-<p><code>下列参数会被传入 getOwnPropertyDescriptor</code> 方法中。这是绑定到 handler 上。 </p>
+<p><code>下列参数会被传入 getOwnPropertyDescriptor</code> 方法中。这是绑定到 handler 上。 </p>
 
 <dl>
  <dt><code>target</code></dt>
@@ -29,11 +29,11 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPrope
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>getOwnPropertyDescriptor</code> 方法必须返回一个 object 或 <code>undefined</code>。</p>
+<p><code>getOwnPropertyDescriptor</code> 方法必须返回一个 object 或 <code>undefined</code>。</p>
 
 <h2 id="描述">描述</h2>
 
-<p><code><strong>handler.getOwnPropertyDescriptor()</strong></code> 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的陷阱。</p>
+<p><code><strong>handler.getOwnPropertyDescriptor()</strong></code> 方法是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的陷阱。</p>
 
 <h3 id="拦截">拦截</h3>
 
@@ -49,7 +49,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPrope
 <p>如果下列不变量被违反，代理将抛出一个 {{jsxref("TypeError")}}：</p>
 
 <ul>
- <li><code>getOwnPropertyDescriptor</code> 必须返回一个 object 或 <code>undefined</code>。</li>
+ <li><code>getOwnPropertyDescriptor</code> 必须返回一个 object 或 <code>undefined</code>。</li>
  <li>如果属性作为目标对象的不可配置的属性存在，则该属性无法报告为不存在。</li>
  <li>如果属性作为目标对象的属性存在，并且目标对象不可扩展，则该属性无法报告为不存在。</li>
  <li>如果属性不存在作为目标对象的属性，并且目标对象不可扩展，则不能将其报告为存在。</li>
@@ -59,7 +59,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPrope
 
 <h2 id="示例">示例</h2>
 
-<p>以下是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的代码陷阱：</p>
+<p>以下是 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的代码陷阱：</p>
 
 <pre class="brush: js">var p = new Proxy({ a: 20}, {
   getOwnPropertyDescriptor: function(target, prop) {

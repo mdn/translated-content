@@ -11,12 +11,12 @@ tags:
   - 参考
 translation_of: Web/CSS/grid-auto-rows
 ---
-<p>CSS 属性 <strong><code>grid-auto-rows</code></strong> 用于指定隐式创建的行轨道大小。</p>
+<p>CSS 属性 <strong><code>grid-auto-rows</code></strong> 用于指定隐式创建的行轨道大小。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}</div>
 
 
-<p>如果定位到某行中的网格元素没有使用 {{cssxref("grid-template-rows")}}来指定大小，则会隐式创建{{glossary("grid", "grid")}} 轨道来保存它。这可能在显示定位到超出范围的行，或者由自动放置算法创建额外的行时发生。</p>
+<p>如果定位到某行中的网格元素没有使用 {{cssxref("grid-template-rows")}}来指定大小，则会隐式创建{{glossary("grid", "grid")}} 轨道来保存它。这可能在显示定位到超出范围的行，或者由自动放置算法创建额外的行时发生。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -63,10 +63,10 @@ grid-auto-rows: unset;
  <dt><code>&lt;length&gt;</code></dt>
  <dd>一个非负的长度。</dd>
  <dt><code>&lt;percentage&gt;</code></dt>
- <dd>相对于网格窗口块尺寸的非负 {{cssxref("percentage", "&lt;percentage&gt;")}} 值。如果网格容器的块尺寸是不确定的，则百分比值将被视为 <code>auto</code>。</dd>
+ <dd>相对于网格窗口块尺寸的非负 {{cssxref("percentage", "&lt;percentage&gt;")}} 值。如果网格容器的块尺寸是不确定的，则百分比值将被视为 <code>auto</code>。</dd>
  <dt><code>&lt;flex&gt;</code></dt>
- <dd>非负的、以 <code>fr</code> 为单位的维度指定轨道的弹性因子。每个 <code>&lt;flex&gt;</code>-尺寸的轨道都按其弹性因子的比例挤占剩余空间的一部分。
- <p>当使用在 <code>minmax()</code> 符号外时，意味着最小值为 <code>auto</code> (例： <code>minmax(auto, &lt;flex&gt;)</code>).</p>
+ <dd>非负的、以 <code>fr</code> 为单位的维度指定轨道的弹性因子。每个 <code>&lt;flex&gt;</code>-尺寸的轨道都按其弹性因子的比例挤占剩余空间的一部分。
+ <p>当使用在 <code>minmax()</code> 符号外时，意味着最小值为 <code>auto</code> (例： <code>minmax(auto, &lt;flex&gt;)</code>).</p>
  </dd>
  <dt><code>max-content</code></dt>
  <dd>关键词，指明由网格元素中占用空间最大的那一个来决定轨道的尺寸。</dd>
@@ -77,7 +77,7 @@ grid-auto-rows: unset;
  <dt><code>auto</code></dt>
  <dd>关键字，当用来指定最大值时与最大内容一致，当用来指定最小值时，它表示轨道中所有网格元素最小尺寸中的最大值（由{{cssxref("min-width")}}/{{cssxref("min-height")}}指定）。</dd>
  <dd>
- <p>注意：<code>auto</code> 轨道尺寸（且仅有 <code>auto</code> 轨道尺寸）可配合{{cssxref("align-content")}} 和{{cssxref("justify-content")}} 属性使用。</p>
+ <p>注意：<code>auto</code> 轨道尺寸（且仅有 <code>auto</code> 轨道尺寸）可配合{{cssxref("align-content")}} 和{{cssxref("justify-content")}} 属性使用。</p>
  </dd>
 </dl>
 
@@ -90,9 +90,9 @@ grid-auto-rows: unset;
 <h3 id="HTML内容">HTML 内容</h3>
 
 <pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
+  &lt;div id="item1"&gt;&lt;/div&gt;
+  &lt;div id="item2"&gt;&lt;/div&gt;
+  &lt;div id="item3"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <h3 id="CSS内容">CSS 内容</h3>
@@ -127,8 +127,8 @@ grid-auto-rows: unset;
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
- <li>网格布局指南： <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid">网格布局中的自动定位 - 隐式网格中的行尺寸</a></em></li>
+ <li>相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}</li>
+ <li>网格布局指南： <em><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid">网格布局中的自动定位 - 隐式网格中的行尺寸</a></em></li>
  <li>视频教程：<em><a href="http://gridbyexample.com/video/series-auto-placement-order/">引入网格自动放置和排序</a></em></li>
 </ul>
 

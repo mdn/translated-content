@@ -39,11 +39,11 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <h3 id="使用简单模式">使用简单模式</h3>
 
-<p>简单模式是由你想直接找到的字符构成。比如，<code>/abc/</code> 这个模式就能且仅能匹配 "abc" 字符按照顺序同时出现的情况。例如在 "Hi, do you know your abc's?" 和 "The latest airplane designs evolved from slabcraft." 中会匹配成功。在上述两个例子中，匹配的子字符串是 "abc"。但是在 "Grab crab" 中会匹配失败，因为它虽然包含子字符串 "ab c"，但并不是准确的 "abc"。</p>
+<p>简单模式是由你想直接找到的字符构成。比如，<code>/abc/</code> 这个模式就能且仅能匹配 "abc" 字符按照顺序同时出现的情况。例如在 "Hi, do you know your abc's?" 和 "The latest airplane designs evolved from slabcraft." 中会匹配成功。在上述两个例子中，匹配的子字符串是 "abc"。但是在 "Grab crab" 中会匹配失败，因为它虽然包含子字符串 "ab c"，但并不是准确的 "abc"。</p>
 
 <h3 id="使用特殊字符">使用特殊字符</h3>
 
-<p>当你需要匹配一个不确定的字符串时，比如寻找一个或多个 "b"，或者寻找空格，可以在模式中使用特殊字符。比如，你可以使用 <code>/ab*c/</code> 去匹配一个单独的 "a" 后面跟了零个或者多个 "b"，同时后面跟着 "c" 的字符串：<code>*</code>的意思是前一项出现零次或者多次。在字符串 "cbbabbbbcdebc" 中，这个模式匹配了子字符串 "abbbbc"。</p>
+<p>当你需要匹配一个不确定的字符串时，比如寻找一个或多个 "b"，或者寻找空格，可以在模式中使用特殊字符。比如，你可以使用 <code>/ab*c/</code> 去匹配一个单独的 "a" 后面跟了零个或者多个 "b"，同时后面跟着 "c" 的字符串：<code>*</code>的意思是前一项出现零次或者多次。在字符串 "cbbabbbbcdebc" 中，这个模式匹配了子字符串 "abbbbc"。</p>
 
 <p>下面的页面与表格列出了一个正则表达式中可以利用的特殊字符的完整列表和描述。</p>
 
@@ -74,11 +74,11 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>依照下列规则匹配：</p>
 
-    <p>在非特殊字符之前的反斜杠表示下一个字符是特殊字符，不能按照字面理解。例如，前面没有 "\" 的 "b" 通常匹配小写字母 "b"，即字符会被作为字面理解，无论它出现在哪里。但如果前面加了 "\"，它将不再匹配任何字符，而是表示一个<a href="#note" title="#special-word-boundary">字符边界</a>。</p>
+    <p>在非特殊字符之前的反斜杠表示下一个字符是特殊字符，不能按照字面理解。例如，前面没有 "\" 的 "b" 通常匹配小写字母 "b"，即字符会被作为字面理解，无论它出现在哪里。但如果前面加了 "\"，它将不再匹配任何字符，而是表示一个<a href="#note" title="#special-word-boundary">字符边界</a>。</p>
 
     <p>在特殊字符之前的反斜杠表示下一个字符不是特殊字符，应该按照字面理解。详情请参阅下文中的 "转义（Escaping）" 部分。</p>
 
-    <p>如果你想将字符串传递给 RegExp 构造函数，不要忘记在字符串字面量中反斜杠是转义字符。所以为了在模式中添加一个反斜杠，你需要在字符串字面量中转义它。<code>/[a-z]\s/i</code> 和 <code>new RegExp("[a-z]\\s", "i")</code> 创建了相同的正则表达式：一个用于搜索后面紧跟着空白字符（<code>\s</code> 可看后文）并且在 a-z 范围内的任意字符的表达式。为了通过字符串字面量给 RegExp 构造函数创建包含反斜杠的表达式，你需要在字符串级别和正则表达式级别都对它进行转义。例如 <code>/[a-z]:\\/i</code> 和 <code>new RegExp("[a-z]:\\\\","i")</code> 会创建相同的表达式，即匹配类似 "C:\" 字符串。</p>
+    <p>如果你想将字符串传递给 RegExp 构造函数，不要忘记在字符串字面量中反斜杠是转义字符。所以为了在模式中添加一个反斜杠，你需要在字符串字面量中转义它。<code>/[a-z]\s/i</code> 和 <code>new RegExp("[a-z]\\s", "i")</code> 创建了相同的正则表达式：一个用于搜索后面紧跟着空白字符（<code>\s</code> 可看后文）并且在 a-z 范围内的任意字符的表达式。为了通过字符串字面量给 RegExp 构造函数创建包含反斜杠的表达式，你需要在字符串级别和正则表达式级别都对它进行转义。例如 <code>/[a-z]:\\/i</code> 和 <code>new RegExp("[a-z]:\\\\","i")</code> 会创建相同的表达式，即匹配类似 "C:\" 字符串。</p>
    </td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>匹配前一个表达式 0 次或多次。等价于 <code>{0,}</code>。</p>
 
-    <p>例如，<code>/bo*/</code> 会匹配 "A ghost boooooed" 中的 'booooo' 和 "A bird warbled" 中的 'b'，但是在 "A goat grunted" 中不会匹配任何内容。</p>
+    <p>例如，<code>/bo*/</code> 会匹配 "A ghost boooooed" 中的 'booooo' 和 "A bird warbled" 中的 'b'，但是在 "A goat grunted" 中不会匹配任何内容。</p>
    </td>
   </tr>
   <tr>
@@ -112,7 +112,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>匹配前面一个表达式 1 次或者多次。等价于 <code>{1,}</code>。</p>
 
-    <p>例如，<code>/a+/</code> 会匹配 "candy" 中的 'a' 和 "caaaaaaandy" 中所有的 'a'，但是在 "cndy" 中不会匹配任何内容。</p>
+    <p>例如，<code>/a+/</code> 会匹配 "candy" 中的 'a' 和 "caaaaaaandy" 中所有的 'a'，但是在 "cndy" 中不会匹配任何内容。</p>
    </td>
   </tr>
   <tr>
@@ -122,7 +122,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
     <p>例如，<code>/e?le?/</code> 匹配 "angel" 中的 'el'、"angle" 中的 'le' 以及 "oslo' 中的 'l'。</p>
 
-    <p>如果<strong>紧跟在任何量词 *、 +、? 或 {} 的后面</strong>，将会使量词变为<strong>非贪婪</strong>（匹配尽量少的字符），和缺省使用的<strong>贪婪模式</strong>（匹配尽可能多的字符）正好相反。例如，对 "123abc" 使用 <code>/\d+/</code> 将会匹配 "123"，而使用 <code>/\d+?/</code> 则只会匹配到 "1"。</p>
+    <p>如果<strong>紧跟在任何量词 *、 +、? 或 {} 的后面</strong>，将会使量词变为<strong>非贪婪</strong>（匹配尽量少的字符），和缺省使用的<strong>贪婪模式</strong>（匹配尽可能多的字符）正好相反。例如，对 "123abc" 使用 <code>/\d+/</code> 将会匹配 "123"，而使用 <code>/\d+?/</code> 则只会匹配到 "1"。</p>
 
     <p>还用于先行断言中，如本表的 <code>x(?=y)</code> 和 <code>x(?!y)</code> 条目所述。</p>
    </td>
@@ -134,7 +134,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
     <p>例如，<code>/.n/</code> 将会匹配 "nay, an apple is on the tree" 中的 'an' 和 'on'，但是不会匹配 'nay'。</p>
 
-    <p>如果 <code>s</code> ("dotAll") 标志位被设为 true，它也会匹配换行符。</p>
+    <p>如果 <code>s</code> ("dotAll") 标志位被设为 true，它也会匹配换行符。</p>
    </td>
   </tr>
   <tr>
@@ -142,13 +142,13 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>像下面的例子展示的那样，它会匹配 'x' 并且记住匹配项。其中括号被称为<em>捕获括号</em>。</p>
 
-    <p>模式 <code>/(foo) (bar) \1 \2/</code> 中的 '<code>(foo)</code>' 和 '<code>(bar)</code>' 匹配并记住字符串 "foo bar foo bar" 中前两个单词。模式中的 <code>\1</code> 和 <code>\2</code> 表示第一个和第二个被捕获括号匹配的子字符串，即 <code>foo</code> 和 <code>bar</code>，匹配了原字符串中的后两个单词。注意 <code>\1</code>、<code>\2</code>、...、<code>\n</code> 是用在正则表达式的匹配环节，详情可以参阅后文的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference">\n</a> 条目。而在正则表达式的替换环节，则要使用像 <code>$1</code>、<code>$2</code>、...、<code>$n</code> 这样的语法，例如，<code>'bar foo'.replace(/(...) (...)/, '$2 $1')</code>。<code>$&amp;</code> 表示整个用于匹配的原字符串。</p>
+    <p>模式 <code>/(foo) (bar) \1 \2/</code> 中的 '<code>(foo)</code>' 和 '<code>(bar)</code>' 匹配并记住字符串 "foo bar foo bar" 中前两个单词。模式中的 <code>\1</code> 和 <code>\2</code> 表示第一个和第二个被捕获括号匹配的子字符串，即 <code>foo</code> 和 <code>bar</code>，匹配了原字符串中的后两个单词。注意 <code>\1</code>、<code>\2</code>、...、<code>\n</code> 是用在正则表达式的匹配环节，详情可以参阅后文的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference">\n</a> 条目。而在正则表达式的替换环节，则要使用像 <code>$1</code>、<code>$2</code>、...、<code>$n</code> 这样的语法，例如，<code>'bar foo'.replace(/(...) (...)/, '$2 $1')</code>。<code>$&amp;</code> 表示整个用于匹配的原字符串。</p>
    </td>
   </tr>
   <tr>
    <td><a href="#special-non-capturing-parentheses" id="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
    <td>
-    <p>匹配 'x' 但是不记住匹配项。这种括号叫作<em>非捕获括号</em>，使得你能够定义与正则表达式运算符一起使用的子表达式。看看这个例子 <code>/(?:foo){1,2}/</code>。如果表达式是 <code>/foo{1,2}/</code>，<code>{1,2}</code> 将只应用于 'foo' 的最后一个字符 'o'。如果使用非捕获括号，则 <code>{1,2}</code> 会应用于整个 'foo' 单词。更多信息，可以参阅下文的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses">Using parentheses</a> 条目。</p>
+    <p>匹配 'x' 但是不记住匹配项。这种括号叫作<em>非捕获括号</em>，使得你能够定义与正则表达式运算符一起使用的子表达式。看看这个例子 <code>/(?:foo){1,2}/</code>。如果表达式是 <code>/foo{1,2}/</code>，<code>{1,2}</code> 将只应用于 'foo' 的最后一个字符 'o'。如果使用非捕获括号，则 <code>{1,2}</code> 会应用于整个 'foo' 单词。更多信息，可以参阅下文的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses">Using parentheses</a> 条目。</p>
    </td>
   </tr>
   <tr>
@@ -180,9 +180,9 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>仅仅当'x'前面不是'y'时匹配'x'，这被称为反向否定查找。</p>
 
-    <p>例如，仅仅当这个数字前面没有负号的时候，<code>/(?&lt;!-)\d+/</code> 匹配一个数字。<br>
-     <code>/(?&lt;!-)\d+/.exec('3')</code> 匹配到 "3".<br>
-     <code>/(?&lt;!-)\d+/.exec('-3')</code> 因为这个数字前有负号，所以没有匹配到。</p>
+    <p>例如，仅仅当这个数字前面没有负号的时候，<code>/(?&lt;!-)\d+/</code> 匹配一个数字。<br>
+     <code>/(?&lt;!-)\d+/.exec('3')</code> 匹配到 "3".<br>
+     <code>/(?&lt;!-)\d+/.exec('-3')</code> 因为这个数字前有负号，所以没有匹配到。</p>
    </td>
   </tr>
   <tr>
@@ -203,7 +203,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>n 是一个正整数，匹配前一个字符至少出现了 n 次。</p>
 
-    <p>例如，/a{2,}/ 匹配 "aa", "aaaa" 和 "aaaaa" 但是不匹配 "a"。</p>
+    <p>例如，/a{2,}/ 匹配 "aa", "aaaa" 和 "aaaaa" 但是不匹配 "a"。</p>
    </td>
   </tr>
   <tr>
@@ -378,7 +378,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>类似地，如果您正在编写正则表达式文字并且需要匹配斜杠（'/'），那么需要转义它（否则，斜杠是正则终止符）。 例如，要搜索字符串“/ example /”后跟一个或多个字母字符，您需要使用<code>/\/example\/[a-z]+/i</code>——每个斜杠之前使用反斜杠使它们成为普通字符。</p>
 
-<p>要匹配文本符号反斜杠，您需要转义反斜杠。 例如，要匹配字符串“C:\”，其中“C”可以是任何字母，您将使用<code>/[A-Z]:\\/</code> —— 第一个反斜杠转义后面的那个反斜杠，因此表达式搜索单个普通字符反斜杠。</p>
+<p>要匹配文本符号反斜杠，您需要转义反斜杠。 例如，要匹配字符串“C:\”，其中“C”可以是任何字母，您将使用<code>/[A-Z]:\\/</code> —— 第一个反斜杠转义后面的那个反斜杠，因此表达式搜索单个普通字符反斜杠。</p>
 
 <p>如果将 RegExp 构造函数与字符串文字一起使用，请记住反斜杠是字符串文字中的转义，因此要在正则表达式中使用它，您需要在字符串文字级别转义它。 <code>/a\*b/</code> 和<code>new RegExp("a\\*b")</code>创建的表达式是相同的，搜索“a”后跟文字“*”后跟“b”。</p>
 
@@ -586,7 +586,7 @@ console.log(newstr);
   </tr>
   <tr>
    <td><code>s</code></td>
-   <td>允许 <code>.</code> 匹配换行符。</td>
+   <td>允许 <code>.</code> 匹配换行符。</td>
   </tr>
   <tr>
    <td><code>u</code></td>
@@ -633,7 +633,7 @@ console.log(myArray);
 
 <p>并且能获取到相同的结果。</p>
 
-<p>使用<code>.exec()</code>方法时，与'<code>g</code>'标志关联的行为是不同的。（“class”和“argument”的作用相反：在<code>.match()</code>的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在<code>.exec()</code>的情况下，它是拥有该方法的正则表达式，其中字符串是参数。对比<em><code>str.match(re)</code></em>与<em><code>re.exec(str)</code></em> ), '<code>g</code>'标志与<code>.exec()</code>方法一起使用获得迭代进展。</p>
+<p>使用<code>.exec()</code>方法时，与'<code>g</code>'标志关联的行为是不同的。（“class”和“argument”的作用相反：在<code>.match()</code>的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在<code>.exec()</code>的情况下，它是拥有该方法的正则表达式，其中字符串是参数。对比<em><code>str.match(re)</code></em>与<em><code>re.exec(str)</code></em> ), '<code>g</code>'标志与<code>.exec()</code>方法一起使用获得迭代进展。</p>
 
 <pre class="brush: js">var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produces:

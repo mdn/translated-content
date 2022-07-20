@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 </div>
 </div>
 
-<p><strong><code>arguments</code></strong> 是一个对应于传递给函数的参数的类数组对象。</p>
+<p><strong><code>arguments</code></strong> 是一个对应于传递给函数的参数的类数组对象。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}</p>
 
@@ -40,7 +40,7 @@ arguments[2]
 
 <pre class="brush: js">arguments[1] = 'new value';</pre>
 
-<p><code>arguments</code>对象不是一个 {{jsxref("Array")}} 。它类似于<code>Array</code>，但除了 length 属性和索引元素之外没有任何<code>Array</code>属性。例如，它没有 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a> 方法。但是它可以被转换为一个真正的<code>Array</code>：</p>
+<p><code>arguments</code>对象不是一个 {{jsxref("Array")}} 。它类似于<code>Array</code>，但除了 length 属性和索引元素之外没有任何<code>Array</code>属性。例如，它没有 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a> 方法。但是它可以被转换为一个真正的<code>Array</code>：</p>
 
 <pre class="brush: js">var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
@@ -51,15 +51,15 @@ const args = [...arguments];
 </pre>
 
 <div class="warning">
-<p><strong>警告：</strong>对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">更多信息</a>)。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的<code>Array</code>构造函数作为一个函数：</p>
+<p><strong>警告：</strong>对参数使用 slice 会阻止某些 JavaScript 引擎中的优化 (比如 V8 - <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">更多信息</a>)。如果你关心性能，尝试通过遍历 arguments 对象来构造一个新的数组。另一种方法是使用被忽视的<code>Array</code>构造函数作为一个函数：</p>
 
 <pre class="brush: js">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
 </pre>
 </div>
 
-<p>如果调用的参数多于正式声明接受的参数，则可以使用<code>arguments</code>对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code>来确定传递给函数参数的个数，然后使用<code>arguments</code>对象来处理每个参数。要确定函数<a href="/zh-CN/docs/Glossary/Signature/Function">签名</a>中（输入）参数的数量，请使用<code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code>属性。</p>
+<p>如果调用的参数多于正式声明接受的参数，则可以使用<code>arguments</code>对象。这种技术对于可以传递可变数量的参数的函数很有用。使用 <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code>来确定传递给函数参数的个数，然后使用<code>arguments</code>对象来处理每个参数。要确定函数<a href="/zh-CN/docs/Glossary/Signature/Function">签名</a>中（输入）参数的数量，请使用<code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/length">Function.length</a></code>属性。</p>
 
-<h3 id="对参数使用_typeof">对参数使用 <code>typeof</code></h3>
+<h3 id="对参数使用_typeof">对参数使用 <code>typeof</code></h3>
 
 <p>typeof 参数返回 'object'。</p>
 
@@ -96,7 +96,7 @@ var args = [...arguments];</pre>
  <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code></dt>
  <dd>传递给函数的参数数量。</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code></dt>
- <dd>返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。</dd>
+ <dd>返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。</dd>
 </dl>
 
 <div class="note">
@@ -141,7 +141,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 <h3 id="Example_Defining_a_function_that_creates_HTML_lists">定义创建 HTML 列表的方法</h3>
 
-<p>这个例子定义了一个函数通过一个字符串来创建 HTML 列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "<code>u</code>" 时，创建一个无序列表 (项目列表)；当该参数为 "<code>o</code>" 时，则创建一个有序列表 (编号列表)。该函数定义如下：</p>
+<p>这个例子定义了一个函数通过一个字符串来创建 HTML 列表。这个函数唯一正式声明了的参数是一个字符。当该参数为 "<code>u</code>" 时，创建一个无序列表 (项目列表)；当该参数为 "<code>o</code>" 时，则创建一个有序列表 (编号列表)。该函数定义如下：</p>
 
 <pre class="brush:js">function list(type) {
   var result = "&lt;" + type + "l&gt;&lt;li&gt;";

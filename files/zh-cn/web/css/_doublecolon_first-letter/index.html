@@ -14,21 +14,21 @@ p::first-letter {
 
 <p>元素首字符并不总是很容易识别：</p>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li>首字符之前或紧跟首字符的标点符号在伪元素匹配范围内。标点符号（Punctuation）包括在开（Ps），闭（Pe），初始引用（Pi），结束引用（Pf）当中定义的任何 Unicode 字符以及其他种类的标点符号（Po）。</li>
- <li>另外还会有一些以大写双字母组合命名的语言，比如荷兰的 <code>IJ </code> . 在这种罕见情况下，两个大写字母都理应被 <code>::first-letter</code> 伪元素匹配到. (但是浏览器对此支持得很糟糕，可以用 <a href="/En/CSS/::first-letter#Browser_compatibility" title="https://developer.mozilla.org/En/CSS/::first-letter#Browser_compatibility">browser compatibility table</a>进行核实).</li>
+ <li>另外还会有一些以大写双字母组合命名的语言，比如荷兰的 <code>IJ </code> . 在这种罕见情况下，两个大写字母都理应被 <code>::first-letter</code> 伪元素匹配到. (但是浏览器对此支持得很糟糕，可以用 <a href="/En/CSS/::first-letter#Browser_compatibility" title="https://developer.mozilla.org/En/CSS/::first-letter#Browser_compatibility">browser compatibility table</a>进行核实).</li>
  <li>{{ cssxref("::before") }} 伪元素 和 {{ cssxref("content") }} 属性结合起来有可能会在元素前面注入一些文本。如此，<code>::first-letter</code> 将会匹配到 content 文本的首字母。</li>
 </ul>
 
 <p>首行只在 <a href="/en/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes" title="https://developer.mozilla.org/en/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">block-container box</a>内部才有意义，因此 <code>::first-letter</code> 伪元素 只在{{ cssxref("display") }}属性值为 block, <code>inline-block</code>, <code>table-cell</code>, <code>list-item</code> 或者 <code>table-caption</code>的元素上才起作用。其他情况下，<code>::first-letter</code> 毫无意义。</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="允许的属性值">允许的属性值</h2>
 
-<p> </p>
+<p> </p>
 
 <p>只有一小部分 CSS 可以在包含使用了<code>::first-letter</code> 伪元素选择器的 CSS 规则集声明块内运用：</p>
 
@@ -42,7 +42,7 @@ p::first-letter {
  <li>{{ cssxref("text-decoration") }}, {{cssxref("text-shadow")}}, {{ cssxref("text-transform") }}, {{ cssxref("letter-spacing") }}, {{ cssxref("word-spacing") }} (使用恰当的话), {{ cssxref("line-height") }}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{ cssxref("float") }}, {{ cssxref("vertical-align") }} <code>注意此刻必须没有浮动</code>) 等属性。</li>
 </ul>
 
-<p>当这个列表以后被实现时，  为了保持 css 不过时。建议你不要在声明块内使用任何其他属性。</p>
+<p>当这个列表以后被实现时，  为了保持 css 不过时。建议你不要在声明块内使用任何其他属性。</p>
 
 <div class="note">
 <p>对于 CSS 2，伪元素采用单冒号前缀语法。因为伪类也是同样的语法，所以使得两者难以区分. CSS2.1 改变了伪元素的前缀语法可以解决这个问题。现在伪元素采用双冒号前缀，并且伪类仍然采用单冒号前缀。</p>

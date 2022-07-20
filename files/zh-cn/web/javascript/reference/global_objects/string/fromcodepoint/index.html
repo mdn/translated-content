@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>String.fromCodePoint()</code> 静态方法返回使用指定的代码点序列创建的字符串。</strong></p>
+<p><strong><code>String.fromCodePoint()</code> 静态方法返回使用指定的代码点序列创建的字符串。</strong></p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html")}}</div>
 
@@ -69,39 +69,39 @@ console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
 <p><code>String.fromCodePoint</code> 方法是 ECMAScript2015（ES6）新增加的特性，所以一些老的浏览器可能还不支持。可以通过使用下面的 polyfill 代码来保证浏览器的支持：</p>
 
 <pre class="brush: js">if (!String.fromCodePoint) (function(stringFromCharCode) {
-    var fromCodePoint = function(_) {
-      var codeUnits = [], codeLen = 0, result = "";
-      for (var index=0, len = arguments.length; index !== len; ++index) {
-        var codePoint = +arguments[index];
-        // correctly handles all cases including `NaN`, `-Infinity`, `+Infinity`
-        // The surrounding `!(...)` is required to correctly handle `NaN` cases
-        // The (codePoint&gt;&gt;&gt;0) === codePoint clause handles decimals and negatives
-        if (!(codePoint &lt; 0x10FFFF &amp;&amp; (codePoint&gt;&gt;&gt;0) === codePoint))
-          throw RangeError("Invalid code point: " + codePoint);
-        if (codePoint &lt;= 0xFFFF) { // BMP code point
-          codeLen = codeUnits.push(codePoint);
-        } else { // Astral code point; split in surrogate halves
-          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          codePoint -= 0x10000;
-          codeLen = codeUnits.push(
-            (codePoint &gt;&gt; 10) + 0xD800,  // highSurrogate
-            (codePoint % 0x400) + 0xDC00 // lowSurrogate
-          );
-        }
-        if (codeLen &gt;= 0x3fff) {
-          result += stringFromCharCode.apply(null, codeUnits);
-          codeUnits.length = 0;
-        }
-      }
-      return result + stringFromCharCode.apply(null, codeUnits);
-    };
-    try { // IE 8 only supports `Object.defineProperty` on DOM elements
-      Object.defineProperty(String, "fromCodePoint", {
-        "value": fromCodePoint, "configurable": true, "writable": true
-      });
-    } catch(e) {
-      String.fromCodePoint = fromCodePoint;
-    }
+    var fromCodePoint = function(_) {
+      var codeUnits = [], codeLen = 0, result = "";
+      for (var index=0, len = arguments.length; index !== len; ++index) {
+        var codePoint = +arguments[index];
+        // correctly handles all cases including `NaN`, `-Infinity`, `+Infinity`
+        // The surrounding `!(...)` is required to correctly handle `NaN` cases
+        // The (codePoint&gt;&gt;&gt;0) === codePoint clause handles decimals and negatives
+        if (!(codePoint &lt; 0x10FFFF &amp;&amp; (codePoint&gt;&gt;&gt;0) === codePoint))
+          throw RangeError("Invalid code point: " + codePoint);
+        if (codePoint &lt;= 0xFFFF) { // BMP code point
+          codeLen = codeUnits.push(codePoint);
+        } else { // Astral code point; split in surrogate halves
+          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+          codePoint -= 0x10000;
+          codeLen = codeUnits.push(
+            (codePoint &gt;&gt; 10) + 0xD800,  // highSurrogate
+            (codePoint % 0x400) + 0xDC00 // lowSurrogate
+          );
+        }
+        if (codeLen &gt;= 0x3fff) {
+          result += stringFromCharCode.apply(null, codeUnits);
+          codeUnits.length = 0;
+        }
+      }
+      return result + stringFromCharCode.apply(null, codeUnits);
+    };
+    try { // IE 8 only supports `Object.defineProperty` on DOM elements
+      Object.defineProperty(String, "fromCodePoint", {
+        "value": fromCodePoint, "configurable": true, "writable": true
+      });
+    } catch(e) {
+      String.fromCodePoint = fromCodePoint;
+    }
 }(String.fromCharCode));
 </pre>
 
@@ -122,7 +122,7 @@ console.log(String.fromCodePoint(0x2F804)); // or 194564 in decimal
   <tr>
    <td>{{SpecName('ESDraft', '#sec-string.fromcodepoint', 'String.fromCodePoint')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

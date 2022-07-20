@@ -11,11 +11,11 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <div>一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。</div>
 
-<div> </div>
+<div> </div>
 
 <div>在 JavaScript 中，函数是<strong>头等 (</strong>first-class<strong>)</strong>对象，因为它们可以像任何其他<strong>对象</strong>一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是<code><a href="/zh-cn/JavaScript/Reference/Global_Objects/Function" title="zh-cn/Core_JavaScript_1.5_Reference/Global_Objects/Function">Function</a></code>对象。</div>
 
-<div> </div>
+<div> </div>
 
 <p>有关更多示例和说明，请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">有关函数的 JavaScript 指南</a>。</p>
 
@@ -119,11 +119,11 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <p><strong>IIFE</strong>是在函数声明后立即调用的函数表达式。</p>
 
-<h3 id="函数生成器声明_(function*_语句)">函数生成器声明 (<code>function*</code> 语句)</h3>
+<h3 id="函数生成器声明_(function*_语句)">函数生成器声明 (<code>function*</code> 语句)</h3>
 
 <p>函数声明有一种特殊的语法 (详情请查阅{{jsxref('Statements/function*', 'function* statement')}} )：</p>
 
-<pre class="syntaxbox">function* <em>name</em>([<em>param</em>[, <em>param</em>[, ...<em>param</em>]]]) { <em>statements</em> }</pre>
+<pre class="syntaxbox">function* <em>name</em>([<em>param</em>[, <em>param</em>[, ...<em>param</em>]]]) { <em>statements</em> }</pre>
 
 <dl>
  <dt><code>name</code></dt>
@@ -136,9 +136,9 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <h3 id="函数生成器表达式_(function*表达式)">函数生成器表达式 (<code>function*</code>表达式)</h3>
 
-<p>构造函数表达式和函数声明类似，并且有着相同的语法 (详情请查阅  {{jsxref('Operators/function*', 'function* expression')}} ):</p>
+<p>构造函数表达式和函数声明类似，并且有着相同的语法 (详情请查阅  {{jsxref('Operators/function*', 'function* expression')}} ):</p>
 
-<pre class="syntaxbox">function* [<em>name</em>]([<em>param</em>] [, <em>param</em>] [..., <em>param</em>]) { <em>statements</em> }</pre>
+<pre class="syntaxbox">function* [<em>name</em>]([<em>param</em>] [, <em>param</em>] [..., <em>param</em>]) { <em>statements</em> }</pre>
 
 <dl>
  <dt><code>name</code></dt>
@@ -151,26 +151,26 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <h3 id="箭头函数表达式_(>)">箭头函数表达式 (=&gt;)</h3>
 
-<p>箭头函数表达式有着更短的语法，并在词汇方面结合这个值  (详情请查阅 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> ):</p>
+<p>箭头函数表达式有着更短的语法，并在词汇方面结合这个值  (详情请查阅 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a> ):</p>
 
 <pre class="syntaxbox">([param] [, param]) =&gt; { statements } param =&gt; expression</pre>
 
 <dl>
  <dt><code>param</code></dt>
- <dd>参数名称。零参数需要用 () 表示.  只有一个参数时不需要括号. (例如 <code>foo =&gt; 1</code>)</dd>
+ <dd>参数名称。零参数需要用 () 表示.  只有一个参数时不需要括号. (例如 <code>foo =&gt; 1</code>)</dd>
  <dt><code>statements or expression</code></dt>
  <dd>多个声明 statements 需要用大括号括起来，而单个表达式时则不需要。表达式 expression 也是该函数的隐式返回值。</dd>
 </dl>
 
-<h3 id="Function构造函数"> <code>Function</code>构造函数</h3>
+<h3 id="Function构造函数"> <code>Function</code>构造函数</h3>
 
 <div class="note">
-<p><strong>备注：</strong> 不推荐使用 <code>Function</code> 构造函数创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。</p>
+<p><strong>备注：</strong> 不推荐使用 <code>Function</code> 构造函数创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。</p>
 </div>
 
 <p>所有其他对象，{{jsxref("Function")}} 对象可以用 new 操作符创建：</p>
 
-<pre class="syntaxbox">new Function (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>functionBody</em>)</pre>
+<pre class="syntaxbox">new Function (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>functionBody</em>)</pre>
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
@@ -184,16 +184,16 @@ translation_of: Web/JavaScript/Reference/Functions
 <h3 id="生成器函数的构造函数">生成器函数的构造函数</h3>
 
 <div class="note">
-<p><strong>备注：</strong> <code>GeneratorFunction</code> 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数">生成器函数</a>).</p>
+<p><strong>备注：</strong> <code>GeneratorFunction</code> 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数">生成器函数</a>).</p>
 </div>
 
 <div class="note">
-<p><strong>备注：</strong> 不推荐使用构造器函数的构造函数 (<code>GeneratorFunction</code> constructor) 创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。</p>
+<p><strong>备注：</strong> 不推荐使用构造器函数的构造函数 (<code>GeneratorFunction</code> constructor) 创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。</p>
 </div>
 
 <p>所有其他对象，{{jsxref("GeneratorFunction")}} 对象可以用 new 操作符创建：</p>
 
-<pre class="syntaxbox">new GeneratorFunction (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>functionBody</em>)</pre>
+<pre class="syntaxbox">new GeneratorFunction (<em>arg1</em>, <em>arg2</em>, ... <em>argN</em>, <em>functionBody</em>)</pre>
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
@@ -208,15 +208,15 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <h3 id="默认参数">默认参数</h3>
 
-<p>如果没有值或传入了未定义的值，默认函数参数允许形式参数使用默认值初始化。 参见：<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>。</p>
+<p>如果没有值或传入了未定义的值，默认函数参数允许形式参数使用默认值初始化。 参见：<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters">默认参数</a>。</p>
 
 <h3 id="剩余参数">剩余参数</h3>
 
-<p>剩余参数语法允许将数量不限的参数描述成一个数组。 参见：<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>。</p>
+<p>剩余参数语法允许将数量不限的参数描述成一个数组。 参见：<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters">剩余参数</a>。</p>
 
 <h2 id="arguments对象"><code>arguments</code>对象</h2>
 
-<p>你可以参阅在函数里使用<code>arguments</code>对象的函数参数。参见：<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments"> arguments</a>。</p>
+<p>你可以参阅在函数里使用<code>arguments</code>对象的函数参数。参见：<a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments"> arguments</a>。</p>
 
 <ul>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments">arguments</a></code>: 一个包含了传递给当前执行函数参数的类似于数组的对象。</li>
@@ -242,7 +242,7 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <h3 id="方法定义语法">方法定义语法</h3>
 
-<p>从 ECMAScript 6 开始，你可以用更短的语法定义自己的方法，类似于 getters 和 setters。详情请查阅 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a> .</p>
+<p>从 ECMAScript 6 开始，你可以用更短的语法定义自己的方法，类似于 getters 和 setters。详情请查阅 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a> .</p>
 
 <pre class="brush: js"> var obj = {
    foo() {},
@@ -250,7 +250,7 @@ translation_of: Web/JavaScript/Reference/Functions
  };
 </pre>
 
-<h2 id="构造函数_vs_函数声明_vs_函数表达式">构造函数 vs 函数声明 vs 函数表达式</h2>
+<h2 id="构造函数_vs_函数声明_vs_函数表达式">构造函数 vs 函数声明 vs 函数表达式</h2>
 
 <p>对比下面的例子：</p>
 
@@ -288,18 +288,18 @@ translation_of: Web/JavaScript/Reference/Functions
 alert(x); // throws an error
 </pre>
 
-<p>当函数是通过 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString"><code>Function</code>'s toString method</a>被序列化时，函数名同样也会出现。</p>
+<p>当函数是通过 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString"><code>Function</code>'s toString method</a>被序列化时，函数名同样也会出现。</p>
 
 <p>另一方面，被函数赋值的变量仅仅受限于它的作用域，该作用域确保包含着该函数被声明时的作用域。</p>
 
 <p>正如第四个例子所展示的那样，函数名与被函数赋值的变量是不相同的。彼此之间没有关系。函数声明同时也创建了一个和函数名相同的变量。因此，与函数表达式定义不同，以函数声明定义的函数能够在它们被定义的作用域内通过函数名而被访问到：</p>
 
-<p>使用用 '<code>new Function'定义的函数没有函数名。</code> 然而，在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> JavaScript 引擎中，其函数的序列化形式表现的好像它拥有一个名叫"anonymous"的名称一样。比如，使用 <code>alert(new Function())</code> 输出：</p>
+<p>使用用 '<code>new Function'定义的函数没有函数名。</code> 然而，在 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> JavaScript 引擎中，其函数的序列化形式表现的好像它拥有一个名叫"anonymous"的名称一样。比如，使用 <code>alert(new Function())</code> 输出：</p>
 
 <pre class="brush: js">function anonymous() {
 }</pre>
 
-<p>而实际上其函数并没有名称，<code>anonymous</code> 不是一个可以在函数内被访问到的变量。例如，下面的例子将会导致错误：</p>
+<p>而实际上其函数并没有名称，<code>anonymous</code> 不是一个可以在函数内被访问到的变量。例如，下面的例子将会导致错误：</p>
 
 <pre class="brush: js">var foo = new Function("alert(anonymous);");
 foo();
@@ -314,7 +314,7 @@ function foo() {
 
 <p>函数表达式定义的函数继承了当前的作用域。换言之，函数构成了闭包。另一方面，Function 构造函数定义的函数不继承任何全局作用域以外的作用域 (那些所有函数都继承的)。</p>
 
-<p>通过函数表达式定义的函数和通过函数声明定义的函数只会被解析一次，而 Function 构造函数定义的函数却不同。也就是说，每次构造函数被调用，传递给 Function 构造函数的函数体字符串都要被解析一次 。虽然函数表达式每次都创建了一个闭包，但函数体不会被重复解析，因此函数表达式仍然要快于"<code>new Function(...)</code>"。 所以 Function 构造函数应尽可能地避免使用。</p>
+<p>通过函数表达式定义的函数和通过函数声明定义的函数只会被解析一次，而 Function 构造函数定义的函数却不同。也就是说，每次构造函数被调用，传递给 Function 构造函数的函数体字符串都要被解析一次 。虽然函数表达式每次都创建了一个闭包，但函数体不会被重复解析，因此函数表达式仍然要快于"<code>new Function(...)</code>"。 所以 Function 构造函数应尽可能地避免使用。</p>
 
 <p>有一点应该要注意的，在通过解析 Function 构造函数字符串产生的函数里，内嵌的函数表达式和函数声明不会被重复解析。例如：</p>
 
@@ -469,7 +469,7 @@ result = padZeros(5,4);  // returns "0005"</pre>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-13', 'Function Definition')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}</td>
@@ -479,7 +479,7 @@ result = padZeros(5,4);  // returns "0005"</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

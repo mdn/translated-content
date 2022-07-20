@@ -38,7 +38,7 @@ translation_of: Web/SVG/Content_type
 
  <pre>anything ::= Char*</pre>
 
- <p>在这里，<a href="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">Char</a> 表示一个字符，XML 1.0 第 2.2 节中定义了它。</p>
+ <p>在这里，<a href="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">Char</a> 表示一个字符，XML 1.0 第 2.2 节中定义了它。</p>
  </dd>
 </dl>
 
@@ -73,7 +73,7 @@ DIGIT             ::= [0-9]
    <code>50:00:10.25</code> = 50 小时 10 秒又 250 毫秒</li>
   <li>部分时钟值：<br>
    <code>02:33 </code> = 2 分钟又 33 秒<br>
-   <code>00:10.5</code> = 10.5 秒 = 10 秒又 500 毫秒</li>
+   <code>00:10.5</code> = 10.5 秒 = 10 秒又 500 毫秒</li>
   <li>Timecount 值：<br>
    <code>3.2h </code> = 3.2 小时 = 3 小时 12 分钟<br>
    <code>45min </code> = 45 分钟<br>
@@ -94,7 +94,7 @@ DIGIT             ::= [0-9]
 <dl>
  <dt>&lt;color&gt;</dt>
  <dd>
- <p>基本类型&lt;color&gt;是一个 CSS2 兼容的规范，针对 sRGB 颜色空间的颜色。&lt;color&gt; 应用在 SVG 的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，&lt;color&gt; 还提供了可选的基于 ICC 的颜色规范。</p>
+ <p>基本类型&lt;color&gt;是一个 CSS2 兼容的规范，针对 sRGB 颜色空间的颜色。&lt;color&gt; 应用在 SVG 的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，&lt;color&gt; 还提供了可选的基于 ICC 的颜色规范。</p>
 
  <p>SVG 支持所有的定义在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color">CSS2 句法和基本数据类型</a>中的 &lt;color&gt; 供选择的句法，而且还支持<a href="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的 &lt;color&gt; 句法（取决于编译器）。</p>
 
@@ -102,7 +102,7 @@ DIGIT             ::= [0-9]
 
  <p>除了这些颜色关键词，用户可以利用用户环境中的对象指定对应于颜色的关键词。 这些关键词的规范定义可以在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">用户对颜色的引用</a>（CSS2 规范第 18.2 节）中找到。</p>
 
- <p>一个 16 进制记号法的 RGB 值的格式是一个 “#” 后面紧跟着 3 个或者 6 个 16 进制字符。三数字 RGB 记号法（#rgb）可以转换成六数字 RGB 格式（#rrggbb），只需要复制数字，而不是添加 0。举个例子，#fb0 扩展为 #ffbb00。这样确保白色（#ffffff）可以用缩写记法 #fff 指定，去掉任何对显示器的色深的依赖。一个函数记号法的 RGB 值的格式是一个 RGB 开头函数后面跟着一个逗号分隔的三数值数列（可以是三个数字或者三个百分数）后面跟着一个右括号 “)”。一个 RGB 开头函数是一个大小写不敏感的字符串 “rgb(”，举个例子，“RGB(” 或者 “rGb(”。为了兼容性，建议使用全小写形式 “rgb(”。整型值 255 对应于 100%，也对应于 16 进制计号法中的 F 或 FF：<code>rgb(255,255,255)</code> = <code>rgb(100%,100%,100%)</code> = <code>#FFF。数字值周围允许存在空白字符。所有的 RGB 值都指定在 sRGB 颜色空间里。使用 sRGB 提供了一个清楚的、客观的、可测量的颜色定义，可以关联到国际标准。</code></p>
+ <p>一个 16 进制记号法的 RGB 值的格式是一个 “#” 后面紧跟着 3 个或者 6 个 16 进制字符。三数字 RGB 记号法（#rgb）可以转换成六数字 RGB 格式（#rrggbb），只需要复制数字，而不是添加 0。举个例子，#fb0 扩展为 #ffbb00。这样确保白色（#ffffff）可以用缩写记法 #fff 指定，去掉任何对显示器的色深的依赖。一个函数记号法的 RGB 值的格式是一个 RGB 开头函数后面跟着一个逗号分隔的三数值数列（可以是三个数字或者三个百分数）后面跟着一个右括号 “)”。一个 RGB 开头函数是一个大小写不敏感的字符串 “rgb(”，举个例子，“RGB(” 或者 “rGb(”。为了兼容性，建议使用全小写形式 “rgb(”。整型值 255 对应于 100%，也对应于 16 进制计号法中的 F 或 FF：<code>rgb(255,255,255)</code> = <code>rgb(100%,100%,100%)</code> = <code>#FFF。数字值周围允许存在空白字符。所有的 RGB 值都指定在 sRGB 颜色空间里。使用 sRGB 提供了一个清楚的、客观的、可测量的颜色定义，可以关联到国际标准。</code></p>
 
  <pre>color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
              | "rgb("integer, integer, integer")"
@@ -124,7 +124,7 @@ hexdigit ::= [0-9A-Fa-f]
  <dd>
  <p>一个&lt;coordinate&gt; 是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X 轴针对 X 坐标，Y 轴针对 Y 坐标）。它的句法与<a href="/en-US/docs/SVG/Content_type#length" title="https://developer.mozilla.org/en/SVG/Content_type#length">&lt;length&gt;</a>相同。</p>
 
- <p>在 SVG DOM 内部，一个 &lt;coordinate&gt; 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}.</p>
+ <p>在 SVG DOM 内部，一个 &lt;coordinate&gt; 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}.</p>
  </dd>
 </dl>
 
@@ -211,10 +211,10 @@ hexdigit ::= [0-9A-Fa-f]
  <pre>&lt;rect fill="url(#MyGradient)"/&gt;
 </pre>
 
- <p>SVG 支持两种类型的<em>IRI</em> 引用：</p>
+ <p>SVG 支持两种类型的<em>IRI</em> 引用：</p>
 
  <ul>
-  <li>本地<em>IRI</em>引用，在这里 IRI 引用不能包含一个<code>&lt;absoluteIRI&gt;</code>或<code>&lt;relativeIRI&gt;</code>，因此只能包含一个片段标识符（例如： <code>#&lt;elementID&gt;</code> 或者<code>#xpointer(id&lt;elementID&gt;)）。</code></li>
+  <li>本地<em>IRI</em>引用，在这里 IRI 引用不能包含一个<code>&lt;absoluteIRI&gt;</code>或<code>&lt;relativeIRI&gt;</code>，因此只能包含一个片段标识符（例如： <code>#&lt;elementID&gt;</code> 或者<code>#xpointer(id&lt;elementID&gt;)）。</code></li>
   <li>非本地<em>IRI</em>引用，在这里<em>IRI</em>引用必须包含一个<code>&lt;absoluteIRI&gt;</code>或<code>&lt;relativeIRI&gt;。</code></li>
  </ul>
 
@@ -231,7 +231,7 @@ hexdigit ::= [0-9A-Fa-f]
 
  <pre>length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?</pre>
 
- <p>请阅读<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units">CSS2 规范</a> 以了解单位标识符的意义。</p>
+ <p>请阅读<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units">CSS2 规范</a> 以了解单位标识符的意义。</p>
 
  <p>在 CSS2 中定义的长度属性，必须提供单位标识符。而 SVG 专用属性的长度值以及它们对应的外观属性，长度单位标识符是可选的。如果没有提供单位标识符，长度值代表当前用户坐标系统中的一段距离。对于外观属性，无论是定义在 SVG1.1 还是定义在 CSS2 中，长度单位标识符必须是小写的。</p>
 
@@ -259,7 +259,7 @@ hexdigit ::= [0-9A-Fa-f]
  <dd>
  <p>（在这里<var>T</var> 某些类型。）由一系列分开的值构成的数列。除非另有说明，SVG 的 XML 属性内的数列既可以是逗号分隔的，也可以是空格分隔的。用逗号作分隔符，逗号前面或后面可有带空格。</p>
 
- <p>数列中的空白被定义为一个或多个下列连续字符：“空格”（U+0020）、“制表符”（U+0009）、 “换行符”（U+000A）、 “回车符”（U+000D）以及“换页符”(U+000C)。</p>
+ <p>数列中的空白被定义为一个或多个下列连续字符：“空格”（U+0020）、“制表符”（U+0009）、 “换行符”（U+000A）、 “回车符”（U+000D）以及“换页符”(U+000C)。</p>
 
  <p>下面是一个 EBNF 语法的模板，用来描述&lt;list-of-<var>T</var>s&gt;句法：</p>
 

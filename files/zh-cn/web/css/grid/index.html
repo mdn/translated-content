@@ -8,16 +8,16 @@ tags:
 translation_of: Web/CSS/grid
 ---
 <p><strong><code>grid</code></strong> 是一个 CSS 简写属性，可以用来设置以下属性：<br>
- 显式网格属性 {{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-areas")}}，<br>
- 隐式网格属性 {{cssxref("grid-auto-rows")}}、{{cssxref("grid-auto-columns")}} 和  {{cssxref("grid-auto-flow")}}，<br>
- 间距属性 {{cssxref("grid-column-gap")}} 和 {{cssxref("grid-row-gap")}}。</p>
+ 显式网格属性 {{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-areas")}}，<br>
+ 隐式网格属性 {{cssxref("grid-auto-rows")}}、{{cssxref("grid-auto-columns")}} 和  {{cssxref("grid-auto-flow")}}，<br>
+ 间距属性 {{cssxref("grid-column-gap")}} 和 {{cssxref("grid-row-gap")}}。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid.html")}}</div>
 
 
 
 <div class="note">
-<p><strong>注意：您仅可在一个 <code>grid</code> 属性中声明显式或隐式网格。与其他简写属性同样，若有次级属性未被声明，其将使用初始值。另外，尽管此简写声明无法设置网格的槽</strong><strong>（gutter），槽会被该声明重置。</strong></p>
+<p><strong>注意：您仅可在一个 <code>grid</code> 属性中声明显式或隐式网格。与其他简写属性同样，若有次级属性未被声明，其将使用初始值。另外，尽管此简写声明无法设置网格的槽</strong><strong>（gutter），槽会被该声明重置。</strong></p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -55,13 +55,13 @@ grid: unset;
 
 <dl>
  <dt><code>&lt;'grid-template'&gt;</code></dt>
- <dd>定义了 {{cssxref("grid-template")}}，其包含 {{cssxref("grid-template-columns")}}，{{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-areas")}}。</dd>
+ <dd>定义了 {{cssxref("grid-template")}}，其包含 {{cssxref("grid-template-columns")}}，{{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-areas")}}。</dd>
  <dt><code>&lt;'grid-template-rows'&gt; / [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;?</code></dt>
- <dd>通过 {{cssxref("grid-template-rows")}} 属性显式设置行轨道来设置自动流（{{cssxref("grid-template-columns")}} 属性设为 <code>none</code>），并通过 {{cssxref("grid-auto-columns")}} 明确该如何自动重复列轨道（同时{{cssxref("grid-auto-rows")}}属性设为 auto）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 <code>column</code>，并可附有 dense。</dd>
- <dd>所有其余 <code>grid</code> 次级属性被重置为初始值。</dd>
+ <dd>通过 {{cssxref("grid-template-rows")}} 属性显式设置行轨道来设置自动流（{{cssxref("grid-template-columns")}} 属性设为 <code>none</code>），并通过 {{cssxref("grid-auto-columns")}} 明确该如何自动重复列轨道（同时{{cssxref("grid-auto-rows")}}属性设为 auto）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 <code>column</code>，并可附有 dense。</dd>
+ <dd>所有其余 <code>grid</code> 次级属性被重置为初始值。</dd>
  <dt><code>[ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-rows'&gt;? / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>通过 {{cssxref("grid-template-columns")}} 属性显式设置列轨道来设置自动流（{{cssxref("grid-template-rows")}} 属性设为 <code>none</code>），并通过 {{cssxref("grid-auto-rows")}} 明确该如何自动重复行轨道（同时{{cssxref("grid-auto-columns")}}属性设为 <code>auto</code>）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 <code>row</code>，并可附有 dense。</dd>
- <dd>所有其余 <code>grid</code> 次级属性被重置为初始值。</dd>
+ <dd>通过 {{cssxref("grid-template-columns")}} 属性显式设置列轨道来设置自动流（{{cssxref("grid-template-rows")}} 属性设为 <code>none</code>），并通过 {{cssxref("grid-auto-rows")}} 明确该如何自动重复行轨道（同时{{cssxref("grid-auto-columns")}}属性设为 <code>auto</code>）。{{cssxref("grid-auto-flow")}} 属性也被相应的设置为 <code>row</code>，并可附有 dense。</dd>
+ <dd>所有其余 <code>grid</code> 次级属性被重置为初始值。</dd>
 </dl>
 
 <h3 id="标准语法">标准语法</h3>

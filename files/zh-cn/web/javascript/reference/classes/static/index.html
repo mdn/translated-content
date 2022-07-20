@@ -12,9 +12,9 @@ translation_of: Web/JavaScript/Reference/Classes/static
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p>类（class）通过 <strong>static </strong>关键字定义静态方法。不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。</p>
+<p>类（class）通过 <strong>static </strong>关键字定义静态方法。不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。</p>
 
-<p> </p>
+<p> </p>
 
 <div>{{EmbedInteractiveExample("pages/js/classes-static.html")}}</div>
 
@@ -51,7 +51,7 @@ StaticMethodCall.anotherStaticMethod();
 
 <h3 id="从类的构造函数和其他方法">从类的构造函数和其他方法</h3>
 
-<p>非静态方法中，不能直接使用 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 关键字来访问静态方法。而是要用类名来调用：<code>CLASSNAME.STATIC_METHOD_NAME()</code> ，或者用构造函数的属性来调用该方法： <code>this.constructor.STATIC_METHOD_NAME()</code>.</p>
+<p>非静态方法中，不能直接使用 <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 关键字来访问静态方法。而是要用类名来调用：<code>CLASSNAME.STATIC_METHOD_NAME()</code> ，或者用构造函数的属性来调用该方法： <code>this.constructor.STATIC_METHOD_NAME()</code>.</p>
 
 <pre class="brush: js">class StaticMethodCall {
     constructor() {
@@ -75,19 +75,19 @@ StaticMethodCall.anotherStaticMethod();
  <li>什么情况下静态方法可以调用，什么情况下不能调用。</li>
 </ol>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">class Tripple {
-  static tripple(n = 1) {
-    return n * 3;
-  }
+  static tripple(n = 1) {
+    return n * 3;
+  }
 }
 
 
 class BiggerTripple extends Tripple {
-  static tripple(n) {
-    return super.tripple(n) * super.tripple(n);
-  }
+  static tripple(n) {
+    return super.tripple(n) * super.tripple(n);
+  }
 }
 
 
@@ -99,7 +99,7 @@ let tp = new Tripple();
 console.log(BiggerTripple.tripple(3));// 81（不会受父类实例化的影响）
 console.log(tp.tripple());// 'tp.tripple 不是一个函数'.</pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="规范">规范</h2>
 
@@ -118,7 +118,7 @@ console.log(tp.tripple());// 'tp.tripple 不是一个函数'.</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

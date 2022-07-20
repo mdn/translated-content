@@ -7,11 +7,11 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
-<div>{{JSRef}} </div>
+<div>{{JSRef}} </div>
 
-<p><strong>symbol</strong> 是一种基本数据类型（{{Glossary("Primitive", "primitive data type")}}）。<code>Symbol()</code> 函数会返回 <strong>symbol</strong> 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 symbol 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："<code>new Symbol()</code>"。</p>
+<p><strong>symbol</strong> 是一种基本数据类型（{{Glossary("Primitive", "primitive data type")}}）。<code>Symbol()</code> 函数会返回 <strong>symbol</strong> 类型的值，该类型具有静态属性和静态方法。它的静态属性会暴露几个内建的成员对象；它的静态方法会暴露全局的 symbol 注册，且类似于内建对象类，但作为构造函数来说它并不完整，因为它不支持语法："<code>new Symbol()</code>"。</p>
 
-<p>每个从 <code>Symbol()</code> 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见—— <a href="https://developer.mozilla.org/en-US/docs/Glossary/Symbol">glossary entry for Symbol</a>。</p>
+<p>每个从 <code>Symbol()</code> 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见—— <a href="https://developer.mozilla.org/en-US/docs/Glossary/Symbol">glossary entry for Symbol</a>。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-constructor.html")}}</div>
 
@@ -47,7 +47,7 @@ var sym3 = Symbol('foo');
 
 <p>这会阻止创建一个显式的 Symbol 包装器对象而不是一个 Symbol 值。围绕原始数据类型创建一个显式包装器对象从 ECMAScript 6 开始不再被支持。 然而，现有的原始包装器对象，如 <code>new Boolean</code>、<code>new String</code>以及<code>new Number</code>，因为遗留原因仍可被创建。</p>
 
-<p>如果你真的想创建一个 <u>Symbol 包装器对象</u> (<code>Symbol wrapper object</code>)，你可以使用 <code>Object()</code> 函数：</p>
+<p>如果你真的想创建一个 <u>Symbol 包装器对象</u> (<code>Symbol wrapper object</code>)，你可以使用 <code>Object()</code> 函数：</p>
 
 <pre class="brush: js">var sym = Symbol("foo");
 typeof sym;     // "symbol"
@@ -56,7 +56,7 @@ typeof symObj;  // "object"</pre>
 
 <h3 id="全局共享的_Symbol">全局共享的 Symbol</h3>
 
-<p>上面使用 <code>Symbol()</code> 函数的语法，不会在你的整个代码库中创建一个可用的全局的 symbol 类型。要创建跨文件可用的 symbol，甚至跨域（每个都有它自己的全局作用域），使用 {{jsxref("Symbol.for()")}} 方法和 {{jsxref("Symbol.keyFor()")}} 方法从全局的 symbol 注册表设置和取得 symbol。</p>
+<p>上面使用 <code>Symbol()</code> 函数的语法，不会在你的整个代码库中创建一个可用的全局的 symbol 类型。要创建跨文件可用的 symbol，甚至跨域（每个都有它自己的全局作用域），使用 {{jsxref("Symbol.for()")}} 方法和 {{jsxref("Symbol.keyFor()")}} 方法从全局的 symbol 注册表设置和取得 symbol。</p>
 
 <h3 id="在对象中查找_Symbol_属性">在对象中查找 Symbol 属性</h3>
 
@@ -79,9 +79,9 @@ typeof symObj;  // "object"</pre>
  <dt>
   迭代 symbols {{jsxref("Symbol.iterator")}}
  </dt>
- <dd>一个返回一个对象默认迭代器的方法。被 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 使用。</dd>
+ <dd>一个返回一个对象默认迭代器的方法。被 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 使用。</dd>
  <dt>{{jsxref("Symbol.asyncIterator")}} {{experimental_inline}}</dt>
- <dd>一个返回对象默认的异步迭代器的方法。被 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of">for await of</a></code> 使用。</dd>
+ <dd>一个返回对象默认的异步迭代器的方法。被 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of">for await of</a></code> 使用。</dd>
  <dt>
   正则表达式 symbols {{jsxref("Symbol.match")}}
  </dt>
@@ -145,7 +145,7 @@ typeof symObj;  // "object"</pre>
 
 <h3 id="Creating_Boolean_objects_with_an_initial_value_of_false">对 symbol 使用 typeof 运算符</h3>
 
-<p> {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型</p>
+<p> {{jsxref("Operators/typeof", "typeof")}}运算符能帮助你识别 symbol 类型</p>
 
 <pre class="brush: js">typeof Symbol() === 'symbol'
 typeof Symbol('foo') === 'symbol'
@@ -157,10 +157,10 @@ typeof Symbol.iterator === 'symbol'
 <p>当使用 symbol 值进行类型转换时需要注意一些事情：</p>
 
 <ul>
- <li>尝试将一个 symbol 值转换为一个 number 值时，会抛出一个 {{jsxref("TypeError")}} 错误 (e.g. <code>+sym</code> or <code>sym | 0</code>).</li>
+ <li>尝试将一个 symbol 值转换为一个 number 值时，会抛出一个 {{jsxref("TypeError")}} 错误 (e.g. <code>+sym</code> or <code>sym | 0</code>).</li>
  <li>使用宽松相等时，<code>Object(sym) == sym</code> returns <code>true.</code></li>
  <li>这会阻止你从一个 symbol 值隐式地创建一个新的 string 类型的属性名。例如，<code>Symbol("foo") + "bar"</code> 将抛出一个 {{jsxref("TypeError")}} (can't convert symbol to string).</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(sym)</code> conversion</a> 的作用会像 symbol 类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 <code>new String(sym)</code> 将抛出异常。</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(sym)</code> conversion</a> 的作用会像 symbol 类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 <code>new String(sym)</code> 将抛出异常。</li>
 </ul>
 
 <h3 id="Symbols_与_for...in_迭代">Symbols 与 <code>for...in</code> 迭代</h3>
@@ -230,5 +230,5 @@ obj[Object(sym)];    // still 1</pre>
  <li><a href="/en-US/docs/Glossary/Symbol">Glossary: Symbol data type</a></li>
  <li>{{jsxref("Operators/typeof", "typeof")}}</li>
  <li><a href="/en-US/docs/Web/JavaScript/Data_structures">Data types and data structures</a></li>
- <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/">"ES6 In Depth: Symbols"（深入 ES6 Symbols ）on hacks.mozilla.org</a></li>
+ <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/">"ES6 In Depth: Symbols"（深入 ES6 Symbols ）on hacks.mozilla.org</a></li>
 </ul>

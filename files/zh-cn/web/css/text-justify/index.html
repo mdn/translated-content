@@ -11,7 +11,7 @@ translation_of: Web/CSS/text-justify
 
 
 
-<p>CSS 属性 <strong><code>text-justify</code> </strong>定义的是当文本的 {{cssxref("text-align")}} 属性被设置为 <code>:justify</code> 时的齐行方法。</p>
+<p>CSS 属性 <strong><code>text-justify</code> </strong>定义的是当文本的 {{cssxref("text-align")}} 属性被设置为 <code>:justify</code> 时的齐行方法。</p>
 
 <pre class="brush: css no-line-numbers notranslate">text-justify: none;
 text-justify: auto;
@@ -30,7 +30,7 @@ text-justify: distribute; /* 已被废除，不提倡使用 */
 
 <dl>
  <dt><code>none</code></dt>
- <dd>表示关闭掉齐行的设置。表现的效果和没有设置 {{cssxref("text-align")}} 一样，当你因为某种原因需要在已经设置了 {{cssxref("text-align")}} 的元素上禁用齐行效果的时候，这个属性值很有用。</dd>
+ <dd>表示关闭掉齐行的设置。表现的效果和没有设置 {{cssxref("text-align")}} 一样，当你因为某种原因需要在已经设置了 {{cssxref("text-align")}} 的元素上禁用齐行效果的时候，这个属性值很有用。</dd>
  <dd>译者注：经过测试，在谷歌（v 58.0.3029.110）下的表现与在火狐下的表现是不一样的，火狐下使用 <code>none</code> 属性时，的确可以禁用掉齐行设置，但是谷歌下还是没有设置 <code>none</code> 属性时的效果。</dd>
  <dt><code>auto</code></dt>
  <dd>默认值，浏览器根据显示的效果和质量来确定符合当前状态的最佳对齐方式，当然这种对齐方式将是最适合某种语言文字的排版（例如：英语，中文，日语，韩语等）。如果没有对 <code>text-justify</code> 进行设置的话，则是默认使用这样子的对齐规则。</dd>

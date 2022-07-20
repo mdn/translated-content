@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p><code><strong>Atomics</strong></code><strong><code>.exchange()</code></strong> 静态方法会用给定的值替换掉数组上的值，然后返回数组的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。</p>
+<p><code><strong>Atomics</strong></code><strong><code>.exchange()</code></strong> 静态方法会用给定的值替换掉数组上的值，然后返回数组的旧值。此原子操作保证在写上修改的值之前不会发生其他写操作。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}</div>
 
@@ -27,9 +27,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 
 <dl>
  <dt><code>typedArray</code></dt>
- <dd>一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}}，或 {{jsxref("Uint32Array")}}。</dd>
+ <dd>一个共享的整型 typed array。例如 {{jsxref("Int8Array")}}，{{jsxref("Uint8Array")}}，{{jsxref("Int16Array")}}，{{jsxref("Uint16Array")}}，{{jsxref("Int32Array")}}，或 {{jsxref("Uint32Array")}}。</dd>
  <dt><code>index</code></dt>
- <dd>被替换的 <code>typedArray 值的索引。</code></dd>
+ <dd>被替换的 <code>typedArray 值的索引。</code></dd>
  <dt><code>value</code></dt>
  <dd>去替换的值。</dd>
 </dl>
@@ -41,9 +41,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 <h3 id="错误">错误</h3>
 
 <ul>
- <li>假如 <code>typedArray</code> 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。</li>
- <li><code>假如 typedArray</code> 不是一个贡献的 typed array，则抛出 {{jsxref("TypeError")}}。</li>
- <li>如果 <code>index</code> 超出了 <code>typedArray 的边界，则抛出</code> {{jsxref("RangeError")}}。</li>
+ <li>假如 <code>typedArray</code> 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。</li>
+ <li><code>假如 typedArray</code> 不是一个贡献的 typed array，则抛出 {{jsxref("TypeError")}}。</li>
+ <li>如果 <code>index</code> 超出了 <code>typedArray 的边界，则抛出</code> {{jsxref("RangeError")}}。</li>
 </ul>
 
 <h2 id="示例">示例</h2>

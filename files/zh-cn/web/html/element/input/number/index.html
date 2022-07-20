@@ -16,7 +16,7 @@ translation_of: Web/HTML/Element/input/number
 <p><code><strong>"number"</strong></code>类型的 {{HTMLElement("input")}} 元素用于让用户输入一个数字。其包括内置验证以拒绝非数字输入。浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。</p>
 
 <div class="note">
-<p><strong>注意：</strong>不支持 <code>"number"</code> 类型的浏览器会改用标准的 <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> 输入框。</p>
+<p><strong>注意：</strong>不支持 <code>"number"</code> 类型的浏览器会改用标准的 <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> 输入框。</p>
 </div>
 
 <div id="Basic_example">
@@ -61,7 +61,7 @@ translation_of: Web/HTML/Element/input/number
 
 <h2 id="使用_number_输入框">使用 number 输入框</h2>
 
-<p><code>&lt;input type ="number"&gt;</code>元素可以帮助您在构建用户界面和将数字输入到表单中的逻辑时简化你的工作。 当你使用正确的 type 值 <code>"number"</code> 创建数字输入时，会自动验证你输入的文本是否为数字，通常是一组向上和向下按钮。</p>
+<p><code>&lt;input type ="number"&gt;</code>元素可以帮助您在构建用户界面和将数字输入到表单中的逻辑时简化你的工作。 当你使用正确的 type 值 <code>"number"</code> 创建数字输入时，会自动验证你输入的文本是否为数字，通常是一组向上和向下按钮。</p>
 
 <div class="note">
 <p><strong>注意：</strong>记住用户可以在幕后修改 HTML 是至关重要的，因此您的网站不得使用简单的客户端验证来实现任何安全目的。 您必须在服务器端验证所提供的值可能具有任何安全含义的任何事务。</p>
@@ -88,9 +88,9 @@ translation_of: Web/HTML/Element/input/number
 
 <h3 id="占位符">占位符</h3>
 
-<p>有时，提供一个如何输入表单数据的上下文提示是非常友好的。尤其当页面所有{{HTMLElement("input")}}  元素都没有说明标签时，会非常重要。这就是使用<strong>占位符</strong>的原因。占位符是一个通常用于说明一个输入框的 <code>value</code> 应该如何输入的提示值，当元素的 <code>value</code> 为  <code>""</code> 时，该提示将出现在编辑框里面。 一旦有数据输入到编辑框中，占位符就会消失；如果该框被清空，占位符将重新出现。</p>
+<p>有时，提供一个如何输入表单数据的上下文提示是非常友好的。尤其当页面所有{{HTMLElement("input")}}  元素都没有说明标签时，会非常重要。这就是使用<strong>占位符</strong>的原因。占位符是一个通常用于说明一个输入框的 <code>value</code> 应该如何输入的提示值，当元素的 <code>value</code> 为  <code>""</code> 时，该提示将出现在编辑框里面。 一旦有数据输入到编辑框中，占位符就会消失；如果该框被清空，占位符将重新出现。</p>
 
-<p>这里，我们有一个占位符为"Multiple of 10"的<code>"number"</code> 输入框。请注意当你在编辑字段内容时占位符是如何消失的又是如何重现的。</p>
+<p>这里，我们有一个占位符为"Multiple of 10"的<code>"number"</code> 输入框。请注意当你在编辑字段内容时占位符是如何消失的又是如何重现的。</p>
 
 <pre class="brush: html">&lt;input type="number" placeholder="Multiple of 10"&gt;</pre>
 
@@ -98,7 +98,7 @@ translation_of: Web/HTML/Element/input/number
 
 <h3 id="控制步进大小">控制步进大小</h3>
 
-<p>默认情况下，向上和向下按钮可以将值增加或减小 1。您可以通过使用{{htmlattrxref("step","input")}} 属性来更改此步长值。 我们上面的例子中的占位符提示我们其值是 10 的倍数，所以设置 <code>step</code> 的值为 10 是合理的：</p>
+<p>默认情况下，向上和向下按钮可以将值增加或减小 1。您可以通过使用{{htmlattrxref("step","input")}} 属性来更改此步长值。 我们上面的例子中的占位符提示我们其值是 10 的倍数，所以设置 <code>step</code> 的值为 10 是合理的：</p>
 
 <pre class="brush: html">&lt;input type="number" placeholder="multiple of 10" step="10"&gt;</pre>
 
@@ -118,7 +118,7 @@ translation_of: Web/HTML/Element/input/number
 
 <h3 id="允许小数值">允许小数值</h3>
 
-<p>数字输入的一个问题是，步长默认为 1——如果你尝试输入带小数的数字，例如"1.0"，则它将被视为无效。 如果要输入一个需要小数的值，则需要修改 <code>step</code> 值（例如，<code>step="0.01"</code> 以允许 2 位小数）。 这里有一个简单的例子：</p>
+<p>数字输入的一个问题是，步长默认为 1——如果你尝试输入带小数的数字，例如"1.0"，则它将被视为无效。 如果要输入一个需要小数的值，则需要修改 <code>step</code> 值（例如，<code>step="0.01"</code> 以允许 2 位小数）。 这里有一个简单的例子：</p>
 
 <pre class="brush: html">&lt;input type="number" placeholder="1.0" step="0.01" min="0" max="10"&gt;</pre>
 
@@ -128,13 +128,13 @@ translation_of: Web/HTML/Element/input/number
 
 <h3 id="控制输入框大小">控制输入框大小</h3>
 
-<p>类型为<code>"number"</code> 的 {{HTMLElement("input")}} 元素不支持像 {{htmlattrxref("size", "input")}} 之类的调整大小属性。你必须通过借助 <a href="/en-US/docs/Web/CSS">CSS</a> 来改变它们的尺寸大小。</p>
+<p>类型为<code>"number"</code> 的 {{HTMLElement("input")}} 元素不支持像 {{htmlattrxref("size", "input")}} 之类的调整大小属性。你必须通过借助 <a href="/en-US/docs/Web/CSS">CSS</a> 来改变它们的尺寸大小。</p>
 
 <p>例如，要调整输入框的宽度为仅可输入 3 位数字的宽度，我们可以在 HTML 中添加 一个 ID 并缩短很长的占位符文本，如下：</p>
 
 <pre class="brush: html">&lt;input type="number" placeholder="x10" step="10" min="0" max="100" id="number"&gt;</pre>
 
-<p>然后我们添加一些 CSS 来缩小 id 为 <code>"number"</code> 的元素的宽度：</p>
+<p>然后我们添加一些 CSS 来缩小 id 为 <code>"number"</code> 的元素的宽度：</p>
 
 <pre class="brush: css">#number {
   width: 3em;
@@ -162,7 +162,7 @@ translation_of: Web/HTML/Element/input/number
 <p>{{EmbedLiveSample("提供建议值", 600, 40)}}</p>
 
 <div class="note">
-<p>并非所有浏览器都支持<code>"number"</code> 输入框的 {{htmlattrxref("list", "input")}} 属性。它在 Chrome 和 Opera 中有效，但在 Firefox 中无效。</p>
+<p>并非所有浏览器都支持<code>"number"</code> 输入框的 {{htmlattrxref("list", "input")}} 属性。它在 Chrome 和 Opera 中有效，但在 Firefox 中无效。</p>
 </div>
 
 <h2 id="验证">验证</h2>
@@ -209,10 +209,10 @@ input:valid+span:after {
   padding-left: 5px;
 }</pre>
 
-<p>Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate <code>&lt;span&gt;</code> element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on <a href="/en-US/docs/Web/HTML/Element/input/date#Validation"><code>&lt;input type="date"&gt;</code> validation</a>).</p>
+<p>Here we use the {{cssxref(":invalid")}} and {{cssxref(":valid")}} pseudo classes to display an appropriate invalid or valid icon as generated content on the adjacent {{htmlelement("span")}} element, indicating if the current value is valid. We put it on a separate <code>&lt;span&gt;</code> element for added flexibility; some browsers don't display generated content very effectively on some types of form inputs (read for example the section on <a href="/en-US/docs/Web/HTML/Element/input/date#Validation"><code>&lt;input type="date"&gt;</code> validation</a>).</p>
 
 <div class="warning">
-<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for server-side scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
+<p><strong>Important</strong>: HTML form validation is <em>not</em> a substitute for server-side scripts that ensure that the entered data is in the proper format.  It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, is of the wrong type, and so forth).</p>
 </div>
 
 <h3 id="验证模式">验证模式</h3>

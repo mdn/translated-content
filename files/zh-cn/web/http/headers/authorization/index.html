@@ -28,7 +28,7 @@ translation_of: Web/HTTP/Headers/Authorization
 
 <dl>
  <dt>&lt;type&gt;</dt>
- <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">验证类型</a>。 常见的是 <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"基本验证（Basic）"</a> 。其他类型包括：
+ <dd><a href="/en-US/docs/Web/HTTP/Authentication#Authentication_schemes">验证类型</a>。 常见的是 <a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"基本验证（Basic）"</a> 。其他类型包括：
  <ul>
   <li><a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">在 IANA 机构注册的验证方案</a></li>
   <li><a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS 服务器的验证方案 (<code>AWS4-HMAC-SHA256</code>)</a></li>
@@ -38,7 +38,7 @@ translation_of: Web/HTTP/Headers/Authorization
  <dd>如果使用“基本验证”方案，凭证通过如下步骤生成：
  <ul>
   <li>用冒号将用户名和密码进行拼接（如：aladdin:opensesame）。</li>
-  <li>将第一步生成的结果用 <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> 方式编码 (YWxhZGRpbjpvcGVuc2VzYW1l)。</li>
+  <li>将第一步生成的结果用 <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> 方式编码 (YWxhZGRpbjpvcGVuc2VzYW1l)。</li>
  </ul>
 
  <div class="note">

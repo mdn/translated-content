@@ -24,11 +24,11 @@ original_slug: Web/CSS/gradient/radial-gradient()
 
 <p>如要创建重复的径向渐变来填充容器，请使用 CSS 的{{ Cssxref("repeating-radial-gradient") }} 方法。</p>
 
-<p>因为 <code>&lt;gradient&gt;</code> 属于 <code>&lt;image&gt;</code> 类型，所以它可以用于任何适用于 <code>&lt;image&gt;</code> 的地方。正是因为这样，<code>radial-gradient()</code> 不能用于 {{Cssxref("background-color")}} 和其他属性比如 {{cssxref("&lt;color&gt;")}} 数据类型。</p>
+<p>因为 <code>&lt;gradient&gt;</code> 属于 <code>&lt;image&gt;</code> 类型，所以它可以用于任何适用于 <code>&lt;image&gt;</code> 的地方。正是因为这样，<code>radial-gradient()</code> 不能用于 {{Cssxref("background-color")}} 和其他属性比如 {{cssxref("&lt;color&gt;")}} 数据类型。</p>
 
 <h2 id="radial_gradient_的组成">radial gradient 的组成</h2>
 
-<p><img alt="" src="/files/3795/radial%20gradient.png" style="float: left; height: 176px; width: 396px;">径向渐变 (Radial gradients) 由其<em>中心点</em>、<em>边缘形状</em>轮廓、<em>两个或多个色值结束点（color stops）</em>定义而成。  </p>
+<p><img alt="" src="/files/3795/radial%20gradient.png" style="float: left; height: 176px; width: 396px;">径向渐变 (Radial gradients) 由其<em>中心点</em>、<em>边缘形状</em>轮廓、<em>两个或多个色值结束点（color stops）</em>定义而成。  </p>
 
 <p>为了创建平滑的渐变，径向渐变函数绘制了一系列从中心点放射到边缘形状（甚至可能超出范围）的同心轮廓。边缘形状可以是圆形（circle）或椭圆形（ellipse）。</p>
 
@@ -50,7 +50,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</code></pre>
  <dt><code>&lt;size&gt;</code></dt>
  <dd>渐变的尺寸大小。包含的值见下表。</dd>
  <dt><code>&lt;color-stop&gt;</code></dt>
- <dd>表示某个确定位置的固定色值，包含一个{{cssxref("&lt;color&gt;")}}值加上可选的位置值（相对虚拟渐变射线的{{cssxref("&lt;percentage&gt;")}}或者{{cssxref("&lt;length&gt;")}}长度值）。百分比值<code>0%</code>，或者长度值<code>0</code>，表示渐变中心点；百分比值<code>100%</code>表示渐变射线与边缘形状相交的点。 其间的百分比值线性对应渐变射线上的点。</dd>
+ <dd>表示某个确定位置的固定色值，包含一个{{cssxref("&lt;color&gt;")}}值加上可选的位置值（相对虚拟渐变射线的{{cssxref("&lt;percentage&gt;")}}或者{{cssxref("&lt;length&gt;")}}长度值）。百分比值<code>0%</code>，或者长度值<code>0</code>，表示渐变中心点；百分比值<code>100%</code>表示渐变射线与边缘形状相交的点。 其间的百分比值线性对应渐变射线上的点。</dd>
  <dt><code>&lt;extent-keyword&gt;</code></dt>
  <dd>关键字用于描述边缘轮廓的具体位置。以下为关键字常量：</dd>
  <dd>
@@ -80,11 +80,11 @@ radial-gradient(circle at center, red 0, blue, green 100%)</code></pre>
  </table>
 
  <div class="blockIndicator note">
- <p>注意：该函数的早期实现还包含其他关键字（ <code>cover</code> 和 <code>contain</code>），分别相当于标准关键字 <code>farthest-corner</code> 和 <code>closest-side</code> 。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。</p>
+ <p>注意：该函数的早期实现还包含其他关键字（ <code>cover</code> 和 <code>contain</code>），分别相当于标准关键字 <code>farthest-corner</code> 和 <code>closest-side</code> 。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。</p>
  </div>
  </dd>
  <dt><code>&lt;linear-color-stop&gt;</code></dt>
- <dd>A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of <code>0%</code>, or a length of <code>0</code>, represents the center of the gradient; the value <code>100%</code> represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.</dd>
+ <dd>A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of <code>0%</code>, or a length of <code>0</code>, represents the center of the gradient; the value <code>100%</code> represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.</dd>
  <dt><code>&lt;color-hint&gt;</code></dt>
  <dd>Th color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.</dd>
  <dt>
@@ -106,7 +106,7 @@ where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner |
 </pre>
 
  <div class="blockIndicator warning">
- <p>Note that negative <code>&lt;length&gt;</code>'s are not allowed, however browsers had implemented negative lengths which are now being removed. <a href="https://www.fxsitecompat.dev/en-CA/docs/2019/css-radial-gradients-no-longer-accept-negative-radii/">See the Firefox site compat note</a>.</p>
+ <p>Note that negative <code>&lt;length&gt;</code>'s are not allowed, however browsers had implemented negative lengths which are now being removed. <a href="https://www.fxsitecompat.dev/en-CA/docs/2019/css-radial-gradients-no-longer-accept-negative-radii/">See the Firefox site compat note</a>.</p>
  </div>
  </dt>
 </dl>

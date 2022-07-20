@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 
 <h2 id="描述">描述</h2>
 
-<p><code>findIndex</code> 方法对类型化数组中的每个元素执行一次 <code>callback</code> 函数，直到它找到一个使 <code>callback</code> 返回 <em>true</em>的元素。如果发现了一个这样的元素，<code>find</code> 方法将会立即返回该元素的下标。否则，<code>findIndex</code> 方法会返回 -1。<code>callback</code> 只会对那些已经被赋值的索引调用。不会对那些被删除或从来没被赋值的索引调用。</p>
+<p><code>findIndex</code> 方法对类型化数组中的每个元素执行一次 <code>callback</code> 函数，直到它找到一个使 <code>callback</code> 返回 <em>true</em>的元素。如果发现了一个这样的元素，<code>find</code> 方法将会立即返回该元素的下标。否则，<code>findIndex</code> 方法会返回 -1。<code>callback</code> 只会对那些已经被赋值的索引调用。不会对那些被删除或从来没被赋值的索引调用。</p>
 
 <p><code>callback</code> 以三个参数调用：元素的值，元素索引，以及要遍历的数组对象。</p>
 
@@ -73,37 +73,37 @@ console.log(uint16.findIndex(isPrime)); // 2
 <h2 id="Polyfill">Polyfill</h2>
 
 <pre class="brush: js">TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.findIndex || function(evaluator, thisArg) {
-        'use strict';
-        if (!this) {
-          throw new TypeError('Array.prototype.some called on null or undefined');
-        }
+        'use strict';
+        if (!this) {
+          throw new TypeError('Array.prototype.some called on null or undefined');
+        }
 
-        if (typeof(evaluator) !== 'function') {
-            if (typeof(evaluator) === 'string') {
-                // 尝试将其转换为函数
-                if ( ! (evaluator = eval(evaluator)) ){
-                    throw new TypeError();
-                }
-            } else {
-                throw new TypeError();
-            }
-        }
+        if (typeof(evaluator) !== 'function') {
+            if (typeof(evaluator) === 'string') {
+                // 尝试将其转换为函数
+                if ( ! (evaluator = eval(evaluator)) ){
+                    throw new TypeError();
+                }
+            } else {
+                throw new TypeError();
+            }
+        }
 
-        var i;
-        if (thisArg === undefined) {  // 为 thisArg 优化
-            for (i in this) {
-                if (evaluator(this[i], i, this)) {
-                    return i;
-                }
-            }
-            return -1;
-        }
-        for (i in this) {
-            if (evaluator.call(thisArg, this[i], i, this)) {
-                return i;
-            }
-        }
-        return -1;
+        var i;
+        if (thisArg === undefined) {  // 为 thisArg 优化
+            for (i in this) {
+                if (evaluator(this[i], i, this)) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        for (i in this) {
+            if (evaluator.call(thisArg, this[i], i, this)) {
+                return i;
+            }
+        }
+        return -1;
 };</pre>
 
 <h2 id="规范">规范</h2>
@@ -123,7 +123,7 @@ console.log(uint16.findIndex(isPrime)); // 2
   <tr>
    <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

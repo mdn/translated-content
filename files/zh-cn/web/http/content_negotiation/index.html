@@ -7,10 +7,10 @@ translation_of: Web/HTTP/Content_negotiation
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>在 <a href="/en-US/docs/Glossary/HTTP">HTTP</a> 协议中，内容协商是这样一种机制，通过为同一 URI 指向的资源提供不同的展现形式，可以使用户代理选择与用户需求相适应的最佳匹配（例如，文档使用的自然语言，图片的格式，或者内容编码形式）。</p>
+<p>在 <a href="/en-US/docs/Glossary/HTTP">HTTP</a> 协议中，内容协商是这样一种机制，通过为同一 URI 指向的资源提供不同的展现形式，可以使用户代理选择与用户需求相适应的最佳匹配（例如，文档使用的自然语言，图片的格式，或者内容编码形式）。</p>
 
 <div class="note">
-<p>注意：HTTP 内容协商的一些不好的地方在这篇文章中有介绍<a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>，HTML5 提供其他的选择来进行内容协商，如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>。</p>
+<p>注意：HTTP 内容协商的一些不好的地方在这篇文章中有介绍<a href="https://wiki.whatwg.org/wiki/Why_not_conneg">a wiki page from WHATWG</a>，HTML5 提供其他的选择来进行内容协商，如<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code> element</a>。</p>
 </div>
 
 <h2 id="内容协商的基本原则">内容协商的基本原则</h2>
@@ -22,19 +22,19 @@ translation_of: Web/HTTP/Content_negotiation
 <p>最佳展现形式的选取可以通过两种机制实现：</p>
 
 <ul>
- <li>客户端设置特定的 <a href="/en-US/docs/Web/HTTP/Headers">HTTP 首部</a> （又称为服务端驱动型内容协商机制或者主动协商机制）；这是进行内容协商的标准方式；</li>
- <li>服务器返回 {{HTTPStatus("300")}} (Multiple Choices) 或者 {{HTTPStatus("406")}} (Not Acceptable) <a href="/en-US/docs/Web/HTTP/Status">HTTP 状态码</a> （又称为代理驱动型协商机制或者响应式协商机制）；这种方式一般用作备选方案。</li>
+ <li>客户端设置特定的 <a href="/en-US/docs/Web/HTTP/Headers">HTTP 首部</a> （又称为服务端驱动型内容协商机制或者主动协商机制）；这是进行内容协商的标准方式；</li>
+ <li>服务器返回 {{HTTPStatus("300")}} (Multiple Choices) 或者 {{HTTPStatus("406")}} (Not Acceptable) <a href="/en-US/docs/Web/HTTP/Status">HTTP 状态码</a> （又称为代理驱动型协商机制或者响应式协商机制）；这种方式一般用作备选方案。</li>
 </ul>
 
 <p>随着时间的推移，也有其他一些内容协商的提案被提出来，比如透明内容协商以及 Alternates 首部。但是它们都没有获得人们的认可从而被遗弃。</p>
 
 <h2 id="服务端驱动型内容协商机制">服务端驱动型内容协商机制</h2>
 
-<p>在服务端驱动型协商机制或者主动协商机制中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的消息头。这些消息头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 <a class="external" href="http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm">Apache 2.2 服务器的内容协商算法</a>。</p>
+<p>在服务端驱动型协商机制或者主动协商机制中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的消息头。这些消息头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 <a class="external" href="http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm">Apache 2.2 服务器的内容协商算法</a>。</p>
 
 <p><img src="httpnegoserver.png"></p>
 
-<p>HTTP/1.1 规范指定了一系列的标准消息头用于启动服务端驱动型内容协商 （{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Charset")}}、 {{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}）。尽管严格来说  {{HTTPHeader("User-Agent")}} 并不在此列，有时候它还是会被用来确定给客户端发送的所请求资源的特定展现形式，不过这种做法不提倡使用。服务器会使用  {{HTTPHeader("Vary")}} 消息头来说明实际上哪些消息头被用作内容协商的参考依据（确切来说是与之相关的响应消息头），这样可以使<a href="/en-US/docs/Web/HTTP/Caching">缓存</a>的运作更有效。</p>
+<p>HTTP/1.1 规范指定了一系列的标准消息头用于启动服务端驱动型内容协商 （{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Charset")}}、 {{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}）。尽管严格来说  {{HTTPHeader("User-Agent")}} 并不在此列，有时候它还是会被用来确定给客户端发送的所请求资源的特定展现形式，不过这种做法不提倡使用。服务器会使用  {{HTTPHeader("Vary")}} 消息头来说明实际上哪些消息头被用作内容协商的参考依据（确切来说是与之相关的响应消息头），这样可以使<a href="/en-US/docs/Web/HTTP/Caching">缓存</a>的运作更有效。</p>
 
 <p>除此之外，有一个建议向可供选择的列表中增加更多的消息头的实验性提案，称为“客户端示意”（client hints）。客户端示意机制可以告知运行用户代理的设备类型（例如，是桌面计算机还是移动设备）。</p>
 
@@ -50,7 +50,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>{{HTTPHeader("Accept")}} 首部列举了用户代理希望接收的媒体资源的 MIME 类型。其中不同的 MIME 类型之间用逗号分隔，同时每一种 MIME 类型会配有一个品质因数（quality factor），该参数明确了不同 MIME 类型之间的相对优先级。</p>
 
-<p>{{HTTPHeader("Accept")}} 首部的值由浏览器或其他类型的用户代理确定，并且会由于上下文环境的不同而不同，比如在获取 HTML 页面、图片文件、视频文件或者是脚本文件的时候，无论是通过在地址栏中输入资源地址来获取还是通过  {{ HTMLElement("img") }}、{{ HTMLElement("video") }} 或 {{ HTMLElement("audio") }} 元素引用都是不一样的。浏览器可以自由使用它们认为最为合适的首部值；这里有一份<a href="/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values">常见浏览器 Accept 首部默认值</a>的完整列表。</p>
+<p>{{HTTPHeader("Accept")}} 首部的值由浏览器或其他类型的用户代理确定，并且会由于上下文环境的不同而不同，比如在获取 HTML 页面、图片文件、视频文件或者是脚本文件的时候，无论是通过在地址栏中输入资源地址来获取还是通过  {{ HTMLElement("img") }}、{{ HTMLElement("video") }} 或 {{ HTMLElement("audio") }} 元素引用都是不一样的。浏览器可以自由使用它们认为最为合适的首部值；这里有一份<a href="/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values">常见浏览器 Accept 首部默认值</a>的完整列表。</p>
 
 <h3 id="Accept-CH_首部experimental_inline"><code>Accept-CH</code> 首部{{experimental_inline}}</h3>
 
@@ -89,17 +89,17 @@ translation_of: Web/HTTP/Content_negotiation
 
 <h3 id="Accept-Charset_首部"><code>Accept-Charset</code> 首部</h3>
 
-<p>{{HTTPHeader("Accept-Charset")}}首部用于告知服务器该客户代理可以理解何种形式的字符编码。按照传统，不同地区用户使用的的浏览器会被赋予不同的值，比如说西欧地区用户使用的浏览器中，该首部的值可能会是 <code>ISO-8859-1,utf-8;q=0.7,*;q=0.7</code> 。</p>
+<p>{{HTTPHeader("Accept-Charset")}}首部用于告知服务器该客户代理可以理解何种形式的字符编码。按照传统，不同地区用户使用的的浏览器会被赋予不同的值，比如说西欧地区用户使用的浏览器中，该首部的值可能会是 <code>ISO-8859-1,utf-8;q=0.7,*;q=0.7</code> 。</p>
 
-<p>如今 UTF-8 编码已经得到了广泛的支持，成为首选的字符编码类型，<a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">为了通过减少基于配置信息的信息熵来更好地保护隐私信息</a>， 大多数浏览器会将 Accept-Charset 首部移除：Internet Explorer 8、Safari 5、Opera 11 以及 Firefox 10 都已经不再发送该首部。</p>
+<p>如今 UTF-8 编码已经得到了广泛的支持，成为首选的字符编码类型，<a href="https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy">为了通过减少基于配置信息的信息熵来更好地保护隐私信息</a>， 大多数浏览器会将 Accept-Charset 首部移除：Internet Explorer 8、Safari 5、Opera 11 以及 Firefox 10 都已经不再发送该首部。</p>
 
 <h3 id="Accept-CH-Lifetime_首部experimental_inline"><code>Accept-CH-Lifetime</code> 首部{{experimental_inline}}</h3>
 
 <div class="note">
-<p>这是被称为“客户端示意”（Client Hints）的<strong>实验性</strong>技术方案的一部分，目前仅在 Chrome 61 及以后的版本中得到了实现。</p>
+<p>这是被称为“客户端示意”（Client Hints）的<strong>实验性</strong>技术方案的一部分，目前仅在 Chrome 61 及以后的版本中得到了实现。</p>
 </div>
 
-<p>该实验性首部 {{HTTPHeader("Accept-CH-Lifetime")}} 与 Accept-CH 首部中的 Device-Memory 值一同使用，标明设备应该与服务器共享指定大小的内存的时间。单位为毫秒。该首部为可选的。</p>
+<p>该实验性首部 {{HTTPHeader("Accept-CH-Lifetime")}} 与 Accept-CH 首部中的 Device-Memory 值一同使用，标明设备应该与服务器共享指定大小的内存的时间。单位为毫秒。该首部为可选的。</p>
 
 <h3 id="Accept-Encoding_首部"><code>Accept-Encoding</code> 首部</h3>
 
@@ -124,11 +124,11 @@ translation_of: Web/HTTP/Content_negotiation
 <p>尽管使用该首部来进行内容选择是合理的，但是依赖这个首部来确定用户代理都支持哪些功能特性通常<a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">被认为是一个糟糕的做法</a>。</p>
 </div>
 
-<p>{{HTTPHeader("User-Agent")}} 首部可以用来识别发送请求的浏览器。该字符串中包含有用空格间隔的<strong>产品标记符</strong>及<strong>注释</strong>的清单。</p>
+<p>{{HTTPHeader("User-Agent")}} 首部可以用来识别发送请求的浏览器。该字符串中包含有用空格间隔的<strong>产品标记符</strong>及<strong>注释</strong>的清单。</p>
 
 <p><strong>产品标记符</strong>由产品名称、后面紧跟的 '/' 以及产品版本号构成，例如 Firefox/4.0.1 。用户代理可以随意添加多少产品标记符都可以。<strong>注释</strong>是一个用括号分隔的自由形式的字符串。显然括号本身不能用在该字符串中。规范没有规定注释的内部格式，不过一些浏览器会把一些标记符放置在里面，不同的标记符之间使用 ';' 分隔。</p>
 
-<h3 id="Vary_响应首部"><code>Vary</code> 响应首部</h3>
+<h3 id="Vary_响应首部"><code>Vary</code> 响应首部</h3>
 
 <p>与前面列举的 Accept-* 形式的由客户端发送的首部相反，{{HTTPHeader("Vary")}} 首部是由服务器在响应中发送的。它标示了服务器在服务端驱动型内容协商阶段所使用的首部清单。这个首部是必要的，它可以用来通知缓存服务器决策的依据，这样它可以进行复现，使得缓存服务器在预防将错误内容提供给用户方面发挥作用。</p>
 

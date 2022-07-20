@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>Intl.ListFormat</code></strong> 是一个语言相关的列表格式化构造器。</p>
+<p><strong><code>Intl.ListFormat</code></strong> 是一个语言相关的列表格式化构造器。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-listformat.html")}}</div>
 
@@ -26,17 +26,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 <dl>
  <dt><code>locales</code></dt>
  <dd>
- <p>可选的.。符合 BCP 47 语言标注的字符串或字符串数组。<code>locales</code> 参数的一般形式和相关解释，请参阅 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</p>
+ <p>可选的.。符合 BCP 47 语言标注的字符串或字符串数组。<code>locales</code> 参数的一般形式和相关解释，请参阅 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.</p>
  </dd>
  <dt><code>options</code></dt>
  <dd>可选的。 拥有下面所列属性中任意几个或全部的对象：
  <ul>
   <li><code>localeMatcher</code><br>
-   指定要使用的本地匹配算法。可选的值有<code>"lookup"</code> 和 <code>"best fit"</code>；默认情况下使用<code>"best fit"</code>。该参数的更多信息，请参考<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation" rel="nofollow"><code>Intl</code> page</a>.</li>
+   指定要使用的本地匹配算法。可选的值有<code>"lookup"</code> 和 <code>"best fit"</code>；默认情况下使用<code>"best fit"</code>。该参数的更多信息，请参考<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation" rel="nofollow"><code>Intl</code> page</a>.</li>
   <li><code>type</code><br>
-   消息输出的格式。可选的值有用于替代基于“且”关系列表的<code>"conjunction"</code> (默认值， 例如： <code>A, B, and C</code>)， 或者用于替代基于“或”关系列表的 <code>"disjunction"</code>(例如： <code>A, B, or C</code>)，以及用于替代带计量单位的值列表的<code>"unit"</code> (例如： <code>5 pounds, 12 ounces</code>).</li>
+   消息输出的格式。可选的值有用于替代基于“且”关系列表的<code>"conjunction"</code> (默认值， 例如： <code>A, B, and C</code>)， 或者用于替代基于“或”关系列表的 <code>"disjunction"</code>(例如： <code>A, B, or C</code>)，以及用于替代带计量单位的值列表的<code>"unit"</code> (例如： <code>5 pounds, 12 ounces</code>).</li>
   <li><code>style</code><br>
-   被格式化消息的长度。可选值有：<code>"long"</code> (默认值，例如：<code>A, B, and C</code>)、<code>"short"</code> 或者 <code>"narrow"</code> (例如：<code>A, B, C</code>)。 当<code>style</code> 的值为<code>narrow</code> 时，type 属性的值只能取值<code>unit</code>。</li>
+   被格式化消息的长度。可选值有：<code>"long"</code> (默认值，例如：<code>A, B, and C</code>)、<code>"short"</code> 或者 <code>"narrow"</code> (例如：<code>A, B, C</code>)。 当<code>style</code> 的值为<code>narrow</code> 时，type 属性的值只能取值<code>unit</code>。</li>
  </ul>
  </dd>
 </dl>
@@ -59,7 +59,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_format">使用 <code>format</code></h3>
+<h3 id="使用_format">使用 <code>format</code></h3>
 
 <p>下面的例子展示了用英语语言怎么去创建一个列表格式化器。</p>
 
@@ -75,7 +75,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 // &gt; Motorcycle Bus Car
 </pre>
 
-<h3 id="使用_formatToParts">使用 <code>formatToParts</code></h3>
+<h3 id="使用_formatToParts">使用 <code>formatToParts</code></h3>
 
 <p>下面的例子展示了如何创建一个返回被格式化部分的列表格式化器。</p>
 

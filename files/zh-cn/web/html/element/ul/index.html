@@ -52,13 +52,13 @@ translation_of: Web/HTML/Element/ul
 <dl>
  <dt>{{ htmlattrdef("compact") }}{{ Deprecated_inline() }}</dt>
  <dd>此布尔属性提示列表是否需要被渲染为更紧凑的样式。用户代理决定如何解释这个属性，且并非所有浏览器都支持它。
- <div class="note"><strong>使用说明：</strong>不要使用这个属性，因为它已经被废弃了：{{ HTMLElement("ul") }} 元素应当使用 <a href="/zh-CN/docs/CSS">CSS</a> 来更改样式。（CSS）可以提供与<code> compact</code> 属性相同的效果，将  <a href="/zh-CN/docs/CSS">CSS</a> 属性 <a href="/zh-CN/docs/CSS/line-height">line-height</a> 的值设为 <code>80%</code> 即可。</div>
+ <div class="note"><strong>使用说明：</strong>不要使用这个属性，因为它已经被废弃了：{{ HTMLElement("ul") }} 元素应当使用 <a href="/zh-CN/docs/CSS">CSS</a> 来更改样式。（CSS）可以提供与<code> compact</code> 属性相同的效果，将  <a href="/zh-CN/docs/CSS">CSS</a> 属性 <a href="/zh-CN/docs/CSS/line-height">line-height</a> 的值设为 <code>80%</code> 即可。</div>
  </dd>
 </dl>
 
 <dl>
  <dt>{{ htmlattrdef("type") }}{{ Deprecated_inline() }}</dt>
- <dd>用于设置列表的着重号样式 ，被定义在 <a href="/en/HTML3.2" title="en/HTML3.2">HTML3.2</a> 和过渡版本  <a href="/en/HTML4.01" title="en/HTML4.01">HTML 4.0/4.01</a> 中的可用值有：
+ <dd>用于设置列表的着重号样式 ，被定义在 <a href="/en/HTML3.2" title="en/HTML3.2">HTML3.2</a> 和过渡版本  <a href="/en/HTML4.01" title="en/HTML4.01">HTML 4.0/4.01</a> 中的可用值有：
  <ul>
   <li><code>circle</code></li>
   <li><code>disc</code></li>
@@ -67,7 +67,7 @@ translation_of: Web/HTML/Element/ul
 
  <p>第四种着重号样式被定义在 WebTV 接口中，但并不是所有浏览器都支持：<code>triangle</code></p>
 
- <p>如果未设置此 HTML 属性且没有 <a href="/en/CSS" title="en/CSS">CSS</a> {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。</p>
+ <p>如果未设置此 HTML 属性且没有 <a href="/en/CSS" title="en/CSS">CSS</a> {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。</p>
 
  <div class="note"><strong>使用说明：</strong> 不要使用这个属性，它已经被废弃了：使用 <a href="/en/CSS" title="en/CSS">CSS</a> {{ cssxref("list-style-type") }} 属性作为代替。</div>
  </dd>
@@ -103,21 +103,21 @@ translation_of: Web/HTML/Element/ul
 <h3 id="嵌套列表">嵌套列表</h3>
 
 <pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;first item&lt;/li&gt;
-  &lt;li&gt;second item      &lt;!-- Look, the closing &lt;/li&gt; tag is not placed here! --&gt;
-    &lt;ul&gt;
-      &lt;li&gt;second item first subitem&lt;/li&gt;
-      &lt;li&gt;second item second subitem      &lt;!-- Same for the second nested unordered list! --&gt;
-        &lt;ul&gt;
-          &lt;li&gt;second item second subitem first sub-subitem&lt;/li&gt;
-          &lt;li&gt;second item second subitem second sub-subitem&lt;/li&gt;
-          &lt;li&gt;second item second subitem third sub-subitem&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;           &lt;!-- Closing &lt;/li&gt; tag for the li that contains the third unordered list --&gt;
-      &lt;li&gt;second item third subitem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;               &lt;!-- Here is the closing &lt;/li&gt; tag --&gt;
-  &lt;li&gt;third item&lt;/li&gt;
+  &lt;li&gt;first item&lt;/li&gt;
+  &lt;li&gt;second item      &lt;!-- Look, the closing &lt;/li&gt; tag is not placed here! --&gt;
+    &lt;ul&gt;
+      &lt;li&gt;second item first subitem&lt;/li&gt;
+      &lt;li&gt;second item second subitem      &lt;!-- Same for the second nested unordered list! --&gt;
+        &lt;ul&gt;
+          &lt;li&gt;second item second subitem first sub-subitem&lt;/li&gt;
+          &lt;li&gt;second item second subitem second sub-subitem&lt;/li&gt;
+          &lt;li&gt;second item second subitem third sub-subitem&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;           &lt;!-- Closing &lt;/li&gt; tag for the li that contains the third unordered list --&gt;
+      &lt;li&gt;second item third subitem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;               &lt;!-- Here is the closing &lt;/li&gt; tag --&gt;
+  &lt;li&gt;third item&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
 <p>以上 HTML 输出：</p>
@@ -183,12 +183,12 @@ translation_of: Web/HTML/Element/ul
   <tr>
    <td>{{SpecName('HTML WHATWG', 'semantics.html#the-ul-element', '&lt;ul&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-ul-element', '&lt;ul&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -201,12 +201,12 @@ translation_of: Web/HTML/Element/ul
 
 <ul>
  <li>其他列表相关的 HTML 元素: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} 和绝对元素 {{ HTMLElement("dir") }};</li>
- <li>特别作用于 &lt;ul&gt;元素的 CSS 属性：
+ <li>特别作用于 &lt;ul&gt;元素的 CSS 属性：
   <ul>
-   <li> <a href="/en/CSS/list-style" title="en/CSS/list-style">list-style</a> 属性，作用于选择哪种序数的样式来显示，</li>
+   <li> <a href="/en/CSS/list-style" title="en/CSS/list-style">list-style</a> 属性，作用于选择哪种序数的样式来显示，</li>
    <li><a href="/en/CSS_Counters" title="en/CSS_Counters">CSS counters</a>, 作用于操作复杂的嵌套列表，</li>
-   <li> <a href="/en/CSS/line-height" title="en/CSS/line-height">line-height</a> 属性，作用于模拟过时的 {{ htmlattrxref("compact", "ul") }} 属性，</li>
-   <li> <a href="/en/CSS/margin" title="en/CSS/margin">margin</a> 属性，作用于控制列表的缩进。</li>
+   <li> <a href="/en/CSS/line-height" title="en/CSS/line-height">line-height</a> 属性，作用于模拟过时的 {{ htmlattrxref("compact", "ul") }} 属性，</li>
+   <li> <a href="/en/CSS/margin" title="en/CSS/margin">margin</a> 属性，作用于控制列表的缩进。</li>
   </ul>
  </li>
 </ul>

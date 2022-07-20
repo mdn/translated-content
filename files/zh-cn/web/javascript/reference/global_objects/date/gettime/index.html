@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 <p><code><strong>getTime()</strong></code> 方法返回一个时间的格林威治时间数值。</p>
 
-<p>你可以使用这个方法把一个日期时间赋值给另一个{{jsxref("Date")}} 对象。这个方法的功能和 {{jsxref("Date.valueof", "valueOf()")}} 方法一样。</p>
+<p>你可以使用这个方法把一个日期时间赋值给另一个{{jsxref("Date")}} 对象。这个方法的功能和 {{jsxref("Date.valueof", "valueOf()")}} 方法一样。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/date-gettime.html")}}</div>
 
@@ -43,7 +43,7 @@ copy.setTime(birthday.getTime());
 
 <h3 id="测量代码执行时间">测量代码执行时间</h3>
 
-<p>连续调用两个新生成的日期对象的 getTime 方法，根据两次调用的返回值求得时间差。这可以用于计算某些操作的执行时间。避免生成不必要的{{jsxref("Date")}}对象另见{{jsxref("Date.now()")}} </p>
+<p>连续调用两个新生成的日期对象的 getTime 方法，根据两次调用的返回值求得时间差。这可以用于计算某些操作的执行时间。避免生成不必要的{{jsxref("Date")}}对象另见{{jsxref("Date.now()")}} </p>
 
 <pre class="brush:js">var end, start, i;
 
@@ -72,12 +72,12 @@ console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");</p
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.9.5.9', 'Date.prototype.getTime')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

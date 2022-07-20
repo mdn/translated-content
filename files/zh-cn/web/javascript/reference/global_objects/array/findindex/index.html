@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 
 
-<p>另请参见  {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的<strong>值</strong>，而不是其索引。</p>
+<p>另请参见  {{jsxref("Array.find", "find()")}} 方法，它返回数组中找到的元素的<strong>值</strong>，而不是其索引。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 <h3 id="返回值">返回值</h3>
 
-<p>    数组中通过提供测试函数的第一个元素的<strong>索引</strong>。否则，返回-1</p>
+<p>    数组中通过提供测试函数的第一个元素的<strong>索引</strong>。否则，返回-1</p>
 
 <h2 id="Description">描述</h2>
 
@@ -123,7 +123,7 @@ if (!Array.prototype.findIndex) {
 }
 </pre>
 
-<p>如果您需要兼容不支持<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的 JavaScript 引擎，那么最好不要对<code>Array.prototype</code>方法进行 polyfill ，因为您无法使其成为不可枚举的。</p>
+<p>如果您需要兼容不支持<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的 JavaScript 引擎，那么最好不要对<code>Array.prototype</code>方法进行 polyfill ，因为您无法使其成为不可枚举的。</p>
 
 <p>使用此方法需要注意你是否在 uc 浏览器环境，如果你的页面在支付宝上使用尤其注意，因为支付宝使用的就是 uc 浏览器环境。</p>
 

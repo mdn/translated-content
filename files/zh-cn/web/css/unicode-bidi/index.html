@@ -41,11 +41,11 @@ unicode-bidi: unset;
  <dt><code>bidi-override</code></dt>
  <dd>对于内联元素，该值会创建一个覆盖；对于块容器元素，该值将为不在另一个块容器元素内的内联级别的后代创建一个覆盖。这意味着在元素内部，根据 {{Cssxref("direction")}} 属性，重新排序是严格按照顺序排列的；双向算法的隐式部分被忽略。</dd>
  <dt><code>isolate</code></dt>
- <dd>这个关键字表示计算元素容器的方向时，不考虑这个元素的内容。因此，这个元素就从它的兄弟姐妹中分离出来了。当应用它的双向分辨算法的时候，它的容器元素将其视为一个或多个 <code>U+FFFC Object Replacement Character</code>，即像 image 一样。</dd>
+ <dd>这个关键字表示计算元素容器的方向时，不考虑这个元素的内容。因此，这个元素就从它的兄弟姐妹中分离出来了。当应用它的双向分辨算法的时候，它的容器元素将其视为一个或多个 <code>U+FFFC Object Replacement Character</code>，即像 image 一样。</dd>
  <dt><code>isolate-override</code></dt>
- <dd>这个关键字将 <code>isolate</code> 关键字的隔离行为应用于周围的内容，并将 <code>bidi-override</code> 关键字的覆盖行为应用于内部内容。</dd>
+ <dd>这个关键字将 <code>isolate</code> 关键字的隔离行为应用于周围的内容，并将 <code>bidi-override</code> 关键字的覆盖行为应用于内部内容。</dd>
  <dt><code>plaintext</code></dt>
- <dd>这个关键字在计算元素方向的时候，不考虑父元素的双向状态，也不考虑 {{cssxref("direction")}} 属性的值。它是使用 Unicode 双向算法的 P2 和 P3 规则计算的。 <br>
+ <dd>这个关键字在计算元素方向的时候，不考虑父元素的双向状态，也不考虑 {{cssxref("direction")}} 属性的值。它是使用 Unicode 双向算法的 P2 和 P3 规则计算的。 <br>
  这个值允许按照 Unicode 双向算法显示已经格式化的数据。</dd>
 </dl>
 

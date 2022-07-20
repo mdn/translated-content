@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/area
 ---
 <h2 id="简要">简要</h2>
 
-<p><em>HTML <code>&lt;area&gt;</code> 元素 在图片上定义一个热点区域，可以关联一个超链接。&lt;area&gt;元素仅在&lt;map&gt;元素内部使用。</em></p>
+<p><em>HTML <code>&lt;area&gt;</code> 元素 在图片上定义一个热点区域，可以关联一个超链接。&lt;area&gt;元素仅在&lt;map&gt;元素内部使用。</em></p>
 
 <ul class="htmlelt">
  <li><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">内容分类</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content categories#Flow content">流内容</a>, <a href="/en-US/docs/HTML/Content_categories#Phrasing_content" title="HTML/Content categories#Phrasing content">短语内容</a>.</li>
@@ -37,7 +37,7 @@ translation_of: Web/HTML/Element/area
 
 <dl>
  <dt>{{htmlattrdef("coords")}}</dt>
- <dd>给热点区域设定具体的坐标值。这个值的数值和意义取决于这个值所描述的<strong>形状</strong>属性.。对于矩形或长方形，这个<strong>coords </strong>值为两个 X,Y 对：左上、右下。 对于圆形，这个值是 <code>x,y,r</code> ，这里的 <code>x,y</code> 是一对确定圆的中心的坐标而 <code>r</code> 则表示的是半径值.。对于多边和多边形，这个值是用 x,y 对表示的多边形的每一个点：<code>x1,y1,x2,y2,x3,y3,</code>等等。HTML4 里， 值可能是像素数量或者百分比，区别是不是有%出现; HTML5 里，只可能是像素的数量。</dd>
+ <dd>给热点区域设定具体的坐标值。这个值的数值和意义取决于这个值所描述的<strong>形状</strong>属性.。对于矩形或长方形，这个<strong>coords </strong>值为两个 X,Y 对：左上、右下。 对于圆形，这个值是 <code>x,y,r</code> ，这里的 <code>x,y</code> 是一对确定圆的中心的坐标而 <code>r</code> 则表示的是半径值.。对于多边和多边形，这个值是用 x,y 对表示的多边形的每一个点：<code>x1,y1,x2,y2,x3,y3,</code>等等。HTML4 里， 值可能是像素数量或者百分比，区别是不是有%出现; HTML5 里，只可能是像素的数量。</dd>
  <dt>{{htmlattrdef("download")}}</dt>
  <dd>这个属性如果存在的话，表明作者想把超链接用于下载一个资源。请查看{{HTMLElement("a")}} 获得关于 {{htmlattrxref("download", "a")}}属性的完整描述。</dd>
 </dl>
@@ -115,13 +115,13 @@ translation_of: Web/HTML/Element/area
 
 <h2 id="注意">注意</h2>
 
-<p>HTML 3.2, 4.0，和 HTML 5 规范中，不允许有 <code>&lt;/area&gt;</code> 单闭合标签。</p>
+<p>HTML 3.2, 4.0，和 HTML 5 规范中，不允许有 <code>&lt;/area&gt;</code> 单闭合标签。</p>
 
 <p>XHTML 1.0 规范要求有尾部的斜线：<code>&lt;area /&gt;</code>.</p>
 
 <p><strong>id</strong>, <strong>class</strong>, 和<strong>style</strong> 属性和其他的 HTML4 属性一样，但是只有 Netscape 和 Microsoft 定义了这些属性。</p>
 
-<p>Netscape 1–level 浏览器不能解析<strong>target</strong> 链接到 frames 的属性。</p>
+<p>Netscape 1–level 浏览器不能解析<strong>target</strong> 链接到 frames 的属性。</p>
 
 <p>HTML 3.2 只定义了<strong>alt</strong>, <strong>coords</strong>, <strong>href</strong>, <strong>nohref</strong>, 和<strong>shape</strong>.</p>
 

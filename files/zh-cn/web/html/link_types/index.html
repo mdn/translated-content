@@ -27,12 +27,12 @@ translation_of: Web/HTML/Link_types
    <td><code>alternate</code></td>
    <td>
     <ul>
-     <li>如果是{{HTMLElement("link")}}元素，并且{{htmlattrxref("rel", "link")}}属性包括 stylesheet，则这个 link 定义为 alternate 样式表;那样的话 {{htmlattrxref("title", "link")}} 属性不能为空。</li>
+     <li>如果是{{HTMLElement("link")}}元素，并且{{htmlattrxref("rel", "link")}}属性包括 stylesheet，则这个 link 定义为 alternate 样式表;那样的话 {{htmlattrxref("title", "link")}} 属性不能为空。</li>
      <li>如果{{htmlattrxref("type","link")}}设置为<code>application/rss+xml</code>或者<code>application/atom+xml</code>, 则 link 被定义为<a href="/en-US/docs/RSS/Getting_Started/Syndicating">syndication feed</a>. 页面中第一个被定义的为默认的。</li>
      <li>其它情况 link 定义为 alternate 页面：
       <ul>
-       <li>另一种介质，例如手持设备 (如果设置了 {{htmlattrxref("media","link")}} 属性),</li>
-       <li>另一种语言 (如果设置了{{htmlattrxref("hreflang","link")}} 属性),</li>
+       <li>另一种介质，例如手持设备 (如果设置了 {{htmlattrxref("media","link")}} 属性),</li>
+       <li>另一种语言 (如果设置了{{htmlattrxref("hreflang","link")}} 属性),</li>
        <li>另一种格式，例如 PDF (如果设置了{{htmlattrxref("type","link")}} 属性),</li>
        <li>或者是以上这些的集合。</li>
       </ul>
@@ -62,9 +62,9 @@ translation_of: Web/HTML/Link_types
    <td><code>author</code></td>
    <td>定义一个超链接到一个描述作者信息的页面或者提供一个方法联系作者。<br>
     <br>
-    <strong>Note:</strong> 这个方法可能是 mailto:邮箱链接，但不推荐这样，这样可能导致机器人发送大量的垃圾邮件到这个邮箱。这种情况下，最好带一个包含联系方法的页面.。<br>
+    <strong>Note:</strong> 这个方法可能是 mailto:邮箱链接，但不推荐这样，这样可能导致机器人发送大量的垃圾邮件到这个邮箱。这种情况下，最好带一个包含联系方法的页面.。<br>
     <br>
-    在{{HTMLElement("a")}}, {{HTMLElement("area")}} or{{HTMLElement("link")}} 标签的{{htmlattrxref("rev", "link")}}属性上，虽然能够识别 <code>made，但并不正确，应该用</code>{{htmlattrxref("rel", "link")}} 属性替换。</td>
+    在{{HTMLElement("a")}}, {{HTMLElement("area")}} or{{HTMLElement("link")}} 标签的{{htmlattrxref("rev", "link")}}属性上，虽然能够识别 <code>made，但并不正确，应该用</code>{{htmlattrxref("rel", "link")}} 属性替换。</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
    <td><em>None.</em></td>
   </tr>
@@ -78,10 +78,10 @@ translation_of: Web/HTML/Link_types
   <tr>
    <td><code>canonical</code></td>
    <td>
-    <p>来自维基百科: <a href="https://en.wikipedia.org/wiki/Canonical_link_element">Canonical_link_element</a><br>
+    <p>来自维基百科: <a href="https://en.wikipedia.org/wiki/Canonical_link_element">Canonical_link_element</a><br>
      规范链接元素是一个 HTML 元素，它通过指定 web 页面的“规范”或“首选”版本作为搜索引擎优化的一部分，帮助网站管理员防止重复的内容问题。</p>
    </td>
-   <td>{{HTMLElement("link")}}   </td>
+   <td>{{HTMLElement("link")}}   </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}</td>
   </tr>
   <tr>
@@ -176,7 +176,7 @@ translation_of: Web/HTML/Link_types
   </tr>
   <tr>
    <td><code>manifest</code></td>
-   <td>表示链接到的文件是 <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web App Manifest</a>.</td>
+   <td>表示链接到的文件是 <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web App Manifest</a>.</td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
   </tr>
@@ -185,7 +185,7 @@ translation_of: Web/HTML/Link_types
    <td>
     <p>更早和更高优先级的加载模块脚本</p>
    </td>
-   <td>{{HTMLElement("link")}}   </td>
+   <td>{{HTMLElement("link")}}   </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}},<br>
     {{HTMLElement("form")}}</td>
   </tr>
@@ -212,9 +212,9 @@ translation_of: Web/HTML/Link_types
    <td>
     <p>指示浏览器打开链接而不授予新的浏览上下文对打开它的文档的访问权限 - 通过在打开的窗口中不设置{{domxref("Window.opener")}}属性（返回 null）。</p>
 
-    <p>当打开不受信任的链接时，这特别有用，以确保它们无法通过{{domxref("Window.opener")}}属性来篡改原始文档（有关更多详细信息，请参阅 <a href="https://mathiasbynens.github.io/rel-noopener/">About rel=noopener</a>），同时仍提供 Referer HTTP 标头（除非也使用 noreferrer）。</p>
+    <p>当打开不受信任的链接时，这特别有用，以确保它们无法通过{{domxref("Window.opener")}}属性来篡改原始文档（有关更多详细信息，请参阅 <a href="https://mathiasbynens.github.io/rel-noopener/">About rel=noopener</a>），同时仍提供 Referer HTTP 标头（除非也使用 noreferrer）。</p>
 
-    <p>请注意，使用<code>noopener</code>时，在决定是否打开新窗口/选项卡方面，除<code>_top</code>，<code>_self</code>和<code>_parent</code> 以外的非空目标名称都被视为<code>_blank</code> 。</p>
+    <p>请注意，使用<code>noopener</code>时，在决定是否打开新窗口/选项卡方面，除<code>_top</code>，<code>_self</code>和<code>_parent</code> 以外的非空目标名称都被视为<code>_blank</code> 。</p>
    </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
    <td>{{HTMLElement("link")}}</td>
@@ -230,14 +230,14 @@ translation_of: Web/HTML/Link_types
   </tr>
   <tr>
    <td><code>opener</code> {{Experimental_Inline}}</td>
-   <td>恢复带有<code>target="_blank"</code>的链接上的隐式<code>rel="noopener"</code>添加（请参阅<a href="https://github.com/whatwg/html/issues/4078">相关的 HMTL 规范讨论</a>, <a href="https://trac.webkit.org/changeset/237144/webkit/">WebKit change</a>和<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1503681">Firefox bug discussion</a>）。</td>
+   <td>恢复带有<code>target="_blank"</code>的链接上的隐式<code>rel="noopener"</code>添加（请参阅<a href="https://github.com/whatwg/html/issues/4078">相关的 HMTL 规范讨论</a>, <a href="https://trac.webkit.org/changeset/237144/webkit/">WebKit change</a>和<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1503681">Firefox bug discussion</a>）。</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}},<br>
     {{HTMLElement("form")}}</td>
    <td>{{HTMLElement("link")}}</td>
   </tr>
   <tr>
    <td><code>pingback</code><br>
-     </td>
+     </td>
    <td>
     <p>定义一个外部资源 URI，以便在对该网页发表评论或引用时调用。 在 <a href="http://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a> 规范中定义了用于进行此类调用的协议。</p>
 
@@ -269,9 +269,9 @@ translation_of: Web/HTML/Link_types
   <tr>
    <td><a href="/zh-CN/docs/Web/HTML/Link_types/preload"><code>preload</code></a></td>
    <td>
-    <p>告诉浏览器下载资源，因为在当前导航期间稍后将需要该资源。有关详细信息，请参见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a></p>
+    <p>告诉浏览器下载资源，因为在当前导航期间稍后将需要该资源。有关详细信息，请参见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">Preloading content with rel="preload"</a></p>
    </td>
-   <td>{{HTMLElement("link")}}   </td>
+   <td>{{HTMLElement("link")}}   </td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}},<br>
     {{HTMLElement("form")}}</td>
   </tr>
@@ -306,8 +306,8 @@ translation_of: Web/HTML/Link_types
   <tr>
    <td><code>shortlink</code></td>
    <td>
-    <p><a href="https://code.google.com/archive/p/shortlink/wikis/Specification.wiki"><code>shortlink</code> 规范</a><br>
-     来自维基百科: <a href="https://en.wikipedia.org/wiki/URL_shortening">URL shortening</a><br>
+    <p><a href="https://code.google.com/archive/p/shortlink/wikis/Specification.wiki"><code>shortlink</code> 规范</a><br>
+     来自维基百科: <a href="https://en.wikipedia.org/wiki/URL_shortening">URL shortening</a><br>
      一些网站创建短链接，使通过即时消息共享链接更容易。</p>
    </td>
    <td>{{HTMLElement("link")}}</td>
@@ -326,9 +326,9 @@ translation_of: Web/HTML/Link_types
   <tr>
    <td><code>stylesheet</code></td>
    <td>
-    <p>定义要用作样式表的外部资源。如果没有设置 <code>type</code>，在进一步检查之前，浏览器应该假定它是 <code>text/css</code> 样式表。<br>
+    <p>定义要用作样式表的外部资源。如果没有设置 <code>type</code>，在进一步检查之前，浏览器应该假定它是 <code>text/css</code> 样式表。<br>
      <br>
-     如果与 <code>alternate</code> 关键字结合使用，则定义一个 <a href="/en-US/docs/Alternative_style_sheets">可选样式表</a> ;在这种情况下，{{htmlattrxref("title", "link")}} 属性必须出现，而不能是空字符串。</p>
+     如果与 <code>alternate</code> 关键字结合使用，则定义一个 <a href="/en-US/docs/Alternative_style_sheets">可选样式表</a> ;在这种情况下，{{htmlattrxref("title", "link")}} 属性必须出现，而不能是空字符串。</p>
    </td>
    <td>{{HTMLElement("link")}}</td>
    <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
@@ -370,12 +370,12 @@ translation_of: Web/HTML/Link_types
   <tr>
    <td>{{SpecName('Preload','#link-type-preload','preload')}}</td>
    <td>{{Spec2('Preload')}}</td>
-   <td>Added <code>preload</code>.</td>
+   <td>Added <code>preload</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('Resource Hints', '#dfn-preconnect', 'preconnect')}}</td>
    <td>{{Spec2('Resource Hints')}}</td>
-   <td>Added <code>dns-prefetch</code>, <code>preconnect</code>, and <code>prerender</code> values.</td>
+   <td>Added <code>dns-prefetch</code>, <code>preconnect</code>, and <code>prerender</code> values.</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}</td>
@@ -385,7 +385,7 @@ translation_of: Web/HTML/Link_types
   <tr>
    <td>{{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Added <code>tag</code>, <code>stylesheet</code>, <code>search</code>, <code>prev</code>, <code>prefetch</code>, <code>noreferrer</code>, <code>nofollow</code>, <code>next</code>, <code>license</code>, <code>icon</code>, <code>help</code>, <code>bookmark</code>, <code>author</code>, and <code>alternate</code>.</td>
+   <td>Added <code>tag</code>, <code>stylesheet</code>, <code>search</code>, <code>prev</code>, <code>prefetch</code>, <code>noreferrer</code>, <code>nofollow</code>, <code>next</code>, <code>license</code>, <code>icon</code>, <code>help</code>, <code>bookmark</code>, <code>author</code>, and <code>alternate</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}</td>

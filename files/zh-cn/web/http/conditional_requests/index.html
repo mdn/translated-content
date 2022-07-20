@@ -18,8 +18,8 @@ translation_of: Web/HTTP/Conditional_requests
 <p>请求引发的不同的反应取决于请求所使用的方法，以及组成前置条件首部集合：</p>
 
 <ul>
- <li>对于安全（{{glossary("safe")}}）方法来说，例如  {{HTTPMethod("GET")}}，通常用来获取文件，条件请求可以被用来限定仅在满足条件的情况下返回文件。这样可以节省带宽。</li>
- <li>对于非安全（{{glossary("safe", "unsafe")}}）方法来说，例如  {{HTTPMethod("PUT")}} 方法，通常用来上传文件，条件请求可以被用来限定仅在满足文件的初始版本与服务器上的版本相同的条件下才会将其上传。</li>
+ <li>对于安全（{{glossary("safe")}}）方法来说，例如  {{HTTPMethod("GET")}}，通常用来获取文件，条件请求可以被用来限定仅在满足条件的情况下返回文件。这样可以节省带宽。</li>
+ <li>对于非安全（{{glossary("safe", "unsafe")}}）方法来说，例如  {{HTTPMethod("PUT")}} 方法，通常用来上传文件，条件请求可以被用来限定仅在满足文件的初始版本与服务器上的版本相同的条件下才会将其上传。</li>
 </ul>
 
 <h2 id="验证器">验证器</h2>
@@ -27,8 +27,8 @@ translation_of: Web/HTTP/Conditional_requests
 <p>所有的条件请求首部都是试图去检测服务器上存储的资源是否与某一特定版本相匹配。为了达到这个目的，条件请求需要指明资源的版本。由于逐个字节去比较完整资源是不切实际的，况且这也并非总是想要的结果，所以在请求中会传递一个描述资源版本的值。这些值称为“验证器”，并且分为两大类：</p>
 
 <ul>
- <li>文件的最后修改时间，即 <em>last-modified</em> （最后修改）时间。</li>
- <li>一个意义模糊的字符串，指代一个独一无二的版本，称为“实体标签”，或者 <em>etag 。</em></li>
+ <li>文件的最后修改时间，即 <em>last-modified</em> （最后修改）时间。</li>
+ <li>一个意义模糊的字符串，指代一个独一无二的版本，称为“实体标签”，或者 <em>etag 。</em></li>
 </ul>
 
 <p>比较同一份资源的不同版本有一定的技巧性：取决于上下文环境的不同，有两种不同的等值检查（<em>equality checks</em>）类型：</p>
@@ -64,7 +64,7 @@ translation_of: Web/HTTP/Conditional_requests
  <dt>{{HTTPHeader("If-Unmodified-Since")}}</dt>
  <dd>如果远端资源的 HTTPHeader("Last-Modified")}} 首部标识的日期比在该首部中列出的值要更早或相同，表示条件匹配成功。</dd>
  <dt>{{HTTPHeader("If-Range")}}</dt>
- <dd>与 {{HTTPHeader("If-Match")}} 或  {{HTTPHeader("If-Unmodified-Since")}} 相似，但是只能含有一个实体标签或者日期值。如果匹配失败，则条件请求宣告失败，此时将不会返回 {{HTTPStatus("206")}} <code>Partial Content</code> 响应码，而是返回 {{HTTPStatus("200")}} <code>OK</code> 响应码，以及完整的资源。</dd>
+ <dd>与 {{HTTPHeader("If-Match")}} 或  {{HTTPHeader("If-Unmodified-Since")}} 相似，但是只能含有一个实体标签或者日期值。如果匹配失败，则条件请求宣告失败，此时将不会返回 {{HTTPStatus("206")}} <code>Partial Content</code> 响应码，而是返回 {{HTTPStatus("200")}} <code>OK</code> 响应码，以及完整的资源。</dd>
 </dl>
 
 <h2 id="应用场景">应用场景</h2>
@@ -79,7 +79,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p>只要缓存未失效，就不会发起任何请求。但是一旦失效——主要是由 {{HTTPHeader("Cache-Control")}} 首部控制——客户端就不会采用缓存值而是发起条件式请求。验证器的值会用作 {{HTTPHeader("If-Modified-Since")}} 和 {{HTTPHeader("If-Match")}} 首部字段的参数。</p>
 
-<p>假如资源未发生变化，服务器就返回状态码为  {{HTTPStatus("304")}} <code>Not Modified</code>  的响应。这样相当于对缓存资源进行了刷新，而客户端则采用被缓存的资源。尽管这里有一次请求/响应往返会消耗一定的资源，但是这样做比将整个资源通过网络再传输一遍更高效。</p>
+<p>假如资源未发生变化，服务器就返回状态码为  {{HTTPStatus("304")}} <code>Not Modified</code>  的响应。这样相当于对缓存资源进行了刷新，而客户端则采用被缓存的资源。尽管这里有一次请求/响应往返会消耗一定的资源，但是这样做比将整个资源通过网络再传输一遍更高效。</p>
 
 <p><img alt="With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same." src="httpcache2.png"></p>
 
@@ -87,7 +87,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p><img alt="In the case where the resource was changed, it is sent back as if the request wasn't conditional." src="httpcache3.png"></p>
 
-<p> 除了需要在服务器端对验证器进行设置以外，该机制是透明的：所有的浏览器都会对缓存资源进行管理，在不需要 Web 开发者进行任何特殊处理的情况下发送条件式请求。</p>
+<p> 除了需要在服务器端对验证器进行设置以外，该机制是透明的：所有的浏览器都会对缓存资源进行管理，在不需要 Web 开发者进行任何特殊处理的情况下发送条件式请求。</p>
 
 <h3 id="增量下载的完整性">增量下载的完整性</h3>
 
@@ -95,7 +95,7 @@ translation_of: Web/HTTP/Conditional_requests
 
 <p><img alt="A download has been stopped and only partial content has been retrieved." src="httpresume1.png"></p>
 
-<p>支持增量下载的服务器会通过 {{HTTPHeader("Accept-Ranges")}} 首部来广播这项能力。此后客户端就可以通过发送 {{HTTPHeader("Ranges")}} 首部字段以及缺失的范围值来进行断点续传了：</p>
+<p>支持增量下载的服务器会通过 {{HTTPHeader("Accept-Ranges")}} 首部来广播这项能力。此后客户端就可以通过发送 {{HTTPHeader("Ranges")}} 首部字段以及缺失的范围值来进行断点续传了：</p>
 
 <p><img alt="The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request." src="httpresume2.png"></p>
 
@@ -133,11 +133,11 @@ translation_of: Web/HTTP/Conditional_requests
 
 <h3 id="处理资源的首次上传问题">处理资源的首次上传问题</h3>
 
-<p>资源的首次上传问题是前面所描述的情况的一个极端情况。与任何资源更新问题一样，当两个客户端在大致相同的时间进行上传操作的时候，就会遇到竞态条件。为了防止这种情况的发生，可以使用条件式请求：添加 {{HTTPHeader("If-None-Match")}} 首部，并将其值设置为<code>'*'</code>, 表示任意实体标签。当且仅当资源先前并不存在的情况下请求的操作才会成功执行：</p>
+<p>资源的首次上传问题是前面所描述的情况的一个极端情况。与任何资源更新问题一样，当两个客户端在大致相同的时间进行上传操作的时候，就会遇到竞态条件。为了防止这种情况的发生，可以使用条件式请求：添加 {{HTTPHeader("If-None-Match")}} 首部，并将其值设置为<code>'*'</code>, 表示任意实体标签。当且仅当资源先前并不存在的情况下请求的操作才会成功执行：</p>
 
 <p><img alt="Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it." src="httpfirst.png"></p>
 
-<p><code>If-None-Match</code> 首部只可应用于兼容 HTTP/1.1（及后续版本）的服务器。假如不确定所访问的服务器是否兼容，需要首先向要访问的资源发送一次 {{HTTPMethod("HEAD")}} 请求来进行确认。</p>
+<p><code>If-None-Match</code> 首部只可应用于兼容 HTTP/1.1（及后续版本）的服务器。假如不确定所访问的服务器是否兼容，需要首先向要访问的资源发送一次 {{HTTPMethod("HEAD")}} 请求来进行确认。</p>
 
 <h2 id="结语">结语</h2>
 

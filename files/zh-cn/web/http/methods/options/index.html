@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Methods/OPTIONS
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong>HTTP 的 <code>OPTIONS 方法</code></strong> 用于获取目的资源所支持的通信选项。客户端可以对特定的 URL 使用 OPTIONS 方法，也可以对整站（通过将 URL 设置为“*”）使用该方法。</p>
+<p><strong>HTTP 的 <code>OPTIONS 方法</code></strong> 用于获取目的资源所支持的通信选项。客户端可以对特定的 URL 使用 OPTIONS 方法，也可以对整站（通过将 URL 设置为“*”）使用该方法。</p>
 
 <table class="properties">
  <tbody>
@@ -64,7 +64,7 @@ Content-Length: 0
 
 <h3 id="CORS_中的预检请求">CORS 中的预检请求</h3>
 
-<p>在 <a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">CORS</a> 中，可以使用 OPTIONS 方法发起一个预检请求，以检测实际请求是否可以被服务器所接受。预检请求报文中的 {{HTTPHeader("Access-Control-Request-Method")}} 首部字段告知服务器实际请求所使用的 HTTP 方法；{{HTTPHeader("Access-Control-Request-Headers")}} 首部字段告知服务器实际请求所携带的自定义首部字段。服务器基于从预检请求获得的信息来判断，是否接受接下来的实际请求。</p>
+<p>在 <a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">CORS</a> 中，可以使用 OPTIONS 方法发起一个预检请求，以检测实际请求是否可以被服务器所接受。预检请求报文中的 {{HTTPHeader("Access-Control-Request-Method")}} 首部字段告知服务器实际请求所使用的 HTTP 方法；{{HTTPHeader("Access-Control-Request-Headers")}} 首部字段告知服务器实际请求所携带的自定义首部字段。服务器基于从预检请求获得的信息来判断，是否接受接下来的实际请求。</p>
 
 <pre class="notranslate">OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
@@ -77,7 +77,7 @@ Origin: http://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
 
-<p>服务器所返回的 {{HTTPHeader("Access-Control-Allow-Methods")}} 首部字段将所有允许的请求方法告知客户端。该首部字段与 {{HTTPHeader("Allow")}} 类似，但只能用于涉及到 CORS 的场景中。</p>
+<p>服务器所返回的 {{HTTPHeader("Access-Control-Allow-Methods")}} 首部字段将所有允许的请求方法告知客户端。该首部字段与 {{HTTPHeader("Allow")}} 类似，但只能用于涉及到 CORS 的场景中。</p>
 
 <pre class="notranslate">HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT

@@ -9,12 +9,12 @@ translation_of: 'Web/CSS/:defined'
 
 <pre class="brush: css no-line-numbers">/* 选择所有已定义的元素 */
 :defined {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* 选择指定自定义元素的任何实例 */
 simple-custom:defined {
-  display: block;
+  display: block;
 }
 </pre>
 
@@ -63,11 +63,11 @@ simple-custom {
   font-style: italic;
 }</pre>
 
-<p> </p>
+<p> </p>
 
 <p>然后提供以下两个规则来隐藏未定义的自定义元素的所有实例，并显示被定义为块级元素的实例：</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: css">simple-custom:not(:defined) {
   display: none;

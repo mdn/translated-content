@@ -14,12 +14,12 @@ translation_of: Web/HTML/Element/input/tel
 ---
 <div>{{HTMLRef}}</div>
 
-<p>{{HTMLElement("input")}} <code><strong>"tel"</strong></code> 类型的元素用于让用户输入和编辑电话号码。 Unli 不同于<code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。</p>
+<p>{{HTMLElement("input")}} <code><strong>"tel"</strong></code> 类型的元素用于让用户输入和编辑电话号码。 Unli 不同于<code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。</p>
 
-<p>尽管 <code>tel</code> 类型的输入在功能上和 <code>text</code> 输入一致，但它们确实有用; 其中最明显的就是移动浏览器— 特别是在手机上 — 可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。</p>
+<p>尽管 <code>tel</code> 类型的输入在功能上和 <code>text</code> 输入一致，但它们确实有用; 其中最明显的就是移动浏览器— 特别是在手机上 — 可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。</p>
 
 <div class="note">
-<p>不支持 <code>"tel"</code> 类型的浏览器会默认使用 <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> 类型输入。</p>
+<p>不支持 <code>"tel"</code> 类型的浏览器会默认使用 <code><a href="/en-US/docs/Web/HTML/Element/input/text">"text"</a></code> 类型输入。</p>
 </div>
 
 <div id="Basic_example">
@@ -65,7 +65,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <h3 id="自定义键盘">自定义键盘</h3>
 
-<p><code>&lt;input type="tel"&gt;</code> 主要优势是它可以在移动浏览器显示一个特殊的电话号码输入键盘，For 例如，这是键盘在几种设备上的外观。</p>
+<p><code>&lt;input type="tel"&gt;</code> 主要优势是它可以在移动浏览器显示一个特殊的电话号码输入键盘，For 例如，这是键盘在几种设备上的外观。</p>
 
 <table class="standard-table">
  <caption>移动设备上自定义键盘的示例。</caption>
@@ -92,7 +92,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <p>{{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}</p>
 
-<p>这里没有什么神奇的事情发生。当提交给服务器时，上述输入的数据将被表示为 <code>"telNo=+12125553151"</code>.</p>
+<p>这里没有什么神奇的事情发生。当提交给服务器时，上述输入的数据将被表示为 <code>"telNo=+12125553151"</code>.</p>
 
 <h3 id="占位字符">占位字符</h3>
 
@@ -101,7 +101,7 @@ translation_of: Web/HTML/Element/input/tel
 <p>在这里，我们有<code>"tel"</code> 输入的占位符<code>"123-4567-8901"</code>。请注意占位符如何消失并在编辑字段内容时重新出现。</p>
 
 <pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
-       placeholder="123-4567-8901"&gt;</pre>
+       placeholder="123-4567-8901"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Placeholders', 600, 40) }}</p>
 
@@ -111,35 +111,35 @@ translation_of: Web/HTML/Element/input/tel
 
 <h4 id="物理输入元素大小">物理输入元素大小</h4>
 
-<p>可以使用 {{htmlattrxref("size", "input")}} 属性来控制输入框的物理大小，使用它，你可以指定输入框一次可显示的字符数，在下面的例子中 <code>tel</code> 编辑框是 20 个字符的宽度：</p>
+<p>可以使用 {{htmlattrxref("size", "input")}} 属性来控制输入框的物理大小，使用它，你可以指定输入框一次可显示的字符数，在下面的例子中 <code>tel</code> 编辑框是 20 个字符的宽度：</p>
 
 <pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
-       size="20"&gt;</pre>
+       size="20"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}</p>
 
 <h4 id="元素值的长度">元素值的长度</h4>
 
-<p><code>size</code> 和电话号码的长度限制是分开的， 你可以使用 {{htmlattrxref("minlength", "input")}} 属性为输入电话的最小长度;同样使用 {{htmlattrxref("maxlength", "input")}} 设置输入电话号码的最大长度。</p>
+<p><code>size</code> 和电话号码的长度限制是分开的， 你可以使用 {{htmlattrxref("minlength", "input")}} 属性为输入电话的最小长度;同样使用 {{htmlattrxref("maxlength", "input")}} 设置输入电话号码的最大长度。</p>
 
 <p>下面的示例创建了一个 20 个字符的电话号码输入框，要求内容不少于 9 个字符且不超过 14 个字符。</p>
 
 <pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14"&gt;</pre>
+       size="20" minlength="9" maxlength="14"&gt;</pre>
 
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 上述属性确实会影响 <a href="#验证">验证</a> — 如果值的长度小于 9 个字符，或者大于 14 个，上述示例的输入将被视为无效。甚至不会让你输入超过最大长度的值。</p>
+<p><strong>注意</strong>: 上述属性确实会影响 <a href="#验证">验证</a> — 如果值的长度小于 9 个字符，或者大于 14 个，上述示例的输入将被视为无效。甚至不会让你输入超过最大长度的值。</p>
 </div>
 
 <h3 id="提供默认选项">提供默认选项</h3>
 
-<p>与往常一样，你可以通过设置其 {{htmlattrxref("value", "input")}} 属性为<code>"tel"</code>输入框提供默认值：</p>
+<p>与往常一样，你可以通过设置其 {{htmlattrxref("value", "input")}} 属性为<code>"tel"</code>输入框提供默认值：</p>
 
 <div id="Default_value">
 <pre class="brush: html">&lt;input id="telNo" name="telNo" type="tel"
-       value="333-4444-4444"&gt;</pre>
+       value="333-4444-4444"&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample("Default_value", 600, 40)}}</p>
@@ -152,10 +152,10 @@ translation_of: Web/HTML/Element/input/tel
 &lt;input id="telNo" name="telNo" type="tel" list="defaultTels"&gt;
 
 &lt;datalist id="defaultTels"&gt;
-  &lt;option value="111-1111-1111"&gt;
-  &lt;option value="122-2222-2222"&gt;
-  &lt;option value="333-3333-3333"&gt;
-  &lt;option value="344-4444-4444"&gt;
+  &lt;option value="111-1111-1111"&gt;
+  &lt;option value="122-2222-2222"&gt;
+  &lt;option value="333-3333-3333"&gt;
+  &lt;option value="344-4444-4444"&gt;
 &lt;/datalist&gt;</pre>
 
 <p>{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}</p>

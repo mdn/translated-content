@@ -25,11 +25,11 @@ translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 
 <h2 id="配置动画">配置动画</h2>
 
-<p>创建动画序列，需要使用 {{cssxref("animation")}} 属性或其子属性，该属性允许配置动画时间、时长以及其他动画细节，但该属性不能配置动画的实际表现，动画的实际表现是由 {{cssxref("@keyframes")}} 规则实现，具体情况参见<a href="#使用_keyframes_定义动画序列">使用 keyframes 定义动画序列</a>小节部分。</p>
+<p>创建动画序列，需要使用 {{cssxref("animation")}} 属性或其子属性，该属性允许配置动画时间、时长以及其他动画细节，但该属性不能配置动画的实际表现，动画的实际表现是由 {{cssxref("@keyframes")}} 规则实现，具体情况参见<a href="#使用_keyframes_定义动画序列">使用 keyframes 定义动画序列</a>小节部分。</p>
 
 <p>{{cssxref("animation")}} 的子属性有：</p>
 
-<p> </p>
+<p> </p>
 
 <dl>
  <dt><strong>{{ cssxref("animation-delay") }}</strong></dt>
@@ -50,7 +50,7 @@ translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
  <dd>指定动画执行前后如何为目标元素应用样式。</dd>
 </dl>
 
-<p> </p>
+<p> </p>
 
 <h2 id="使用_keyframes_定义动画序列">使用 keyframes 定义动画序列</h2>
 
@@ -60,15 +60,15 @@ translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 
 <p>也可包含额外可选的关键帧，描述动画开始和结束之间的状态。</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="示例">示例</h2>
 
-<div class="note"><strong>注意：</strong> 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了<code>-webkit-</code>前缀。</div>
+<div class="note"><strong>注意：</strong> 这里的示例没有在 CSS 动画属性上使用任何前缀，Webkit 内核浏览器或者早期版本浏览器可能需要前缀，下面的实例包含了<code>-webkit-</code>前缀。</div>
 
 <h3 id="文本滑过浏览器窗口">文本滑过浏览器窗口</h3>
 
-<p>该例中{{ HTMLElement("p") }} 元素由浏览器窗口右边滑至左边</p>
+<p>该例中{{ HTMLElement("p") }} 元素由浏览器窗口右边滑至左边</p>
 
 <pre class="brush: css">p {
   animation-duration: 3s;
@@ -88,7 +88,7 @@ translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 }
 </pre>
 
-<p>{{cssxref("animation-duration")}} 属性指定 {{HTMLElement("p")}} 上的动画从开始到结束耗费 3 秒，{{cssxref("@keyframes")}} 指定使用名字为“slidein”的关键帧。</p>
+<p>{{cssxref("animation-duration")}} 属性指定 {{HTMLElement("p")}} 上的动画从开始到结束耗费 3 秒，{{cssxref("@keyframes")}} 指定使用名字为“slidein”的关键帧。</p>
 
 <p>如果希望在不支持 CSS 动画的浏览器中使用自定义样式，应该将其写在这里；然而，在该例中，我们不需要除动画效果以外的任何自定义样式。</p>
 
@@ -107,7 +107,7 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <p>让我们给上面的示例中添加一个关键帧，比如标题的字号先变大然后恢复正常，添加这个关键帧十分简单：</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: css">75% {
   font-size: 300%;
@@ -208,9 +208,9 @@ her in a languid, sleepy voice.&lt;/p&gt;
 
 <h3 id="使用动画事件">使用动画事件</h3>
 
-<div>利用动画事件可以更好的控制动画和信息。这些事件由 {{ domxref("event/AnimationEvent", "AnimationEvent") }}对象表示，可探测动画何时开始结束和开始新的循环。每个事件包括动画发生的时间和触发事件的动画名称。</div>
+<div>利用动画事件可以更好的控制动画和信息。这些事件由 {{ domxref("event/AnimationEvent", "AnimationEvent") }}对象表示，可探测动画何时开始结束和开始新的循环。每个事件包括动画发生的时间和触发事件的动画名称。</div>
 
-<div> </div>
+<div> </div>
 
 <div>我们将修改滑动文本示例，输出每个动画事件出现时的信息。</div>
 

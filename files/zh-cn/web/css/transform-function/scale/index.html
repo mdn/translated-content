@@ -6,15 +6,15 @@ original_slug: Web/CSS/transform-function/scale()
 ---
 <div>{{CSSRef}}</div>
 
-<p>CSS 函数 <code>scale()</code> 用于修改元素的大小。可以通过向量形式定义的缩放值来放大或缩小元素，同时可以在不同的方向设置不同的缩放值。</p>
+<p>CSS 函数 <code>scale()</code> 用于修改元素的大小。可以通过向量形式定义的缩放值来放大或缩小元素，同时可以在不同的方向设置不同的缩放值。</p>
 
 <p><img src="https://mdn.mozillademos.org/files/12115/scale.png" style="height: 325px; width: 392px;"></p>
 
 <p>该变换通过一个二维向量确定在一个方向缩放的多少。如果缩放向量的两个坐标是相等的，那么所讲是均等的，或者说是各向同的，同时元素的形状是被保持的。这种情况下进行的是位似变换。</p>
 
-<p>当坐标值处于区间 <code>[-1, 1]</code> 之外时，该变换将在相应的坐标方向上放大该元素，当处在区间之中时，该变换将在相应的坐标方向上缩小该元素。当值为 1 时将不进行任何处理，当为负数时，将进行<em>像素点反射</em>之后再进行大小的修改。</p>
+<p>当坐标值处于区间 <code>[-1, 1]</code> 之外时，该变换将在相应的坐标方向上放大该元素，当处在区间之中时，该变换将在相应的坐标方向上缩小该元素。当值为 1 时将不进行任何处理，当为负数时，将进行<em>像素点反射</em>之后再进行大小的修改。</p>
 
-<div class="note"><code>scale</code><code>()</code> 仅适用于在欧几里德平面（二维平面）上的变换。如果需要进行空间中的缩放，必须使用 <code>scale3D()</code> 。</div>
+<div class="note"><code>scale</code><code>()</code> 仅适用于在欧几里德平面（二维平面）上的变换。如果需要进行空间中的缩放，必须使用 <code>scale3D()</code> 。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -30,7 +30,7 @@ original_slug: Web/CSS/transform-function/scale()
  <dt><em>sx</em></dt>
  <dd>{{cssxref("&lt;number&gt;")}}，表示缩放向量的横坐标。</dd>
  <dt><em>sy</em></dt>
- <dd>{{cssxref("&lt;number&gt;")}} ，表示缩放向量的纵坐标。如果未设置，则他的默认值被设置为 <em><strong>sx</strong></em>。从而使得元素在保持原有形状下均等缩放</dd>
+ <dd>{{cssxref("&lt;number&gt;")}} ，表示缩放向量的纵坐标。如果未设置，则他的默认值被设置为 <em><strong>sx</strong></em>。从而使得元素在保持原有形状下均等缩放</dd>
 </dl>
 
 <table class="standard-table">

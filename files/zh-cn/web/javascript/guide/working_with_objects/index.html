@@ -39,7 +39,7 @@ myCar.year = 1969; </pre>
 <pre class="brush: js">myCar.noProperty; // undefined
 </pre>
 
-<p>JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a>）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 <code>myCar </code>对象的属性：</p>
+<p>JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a>）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 <code>myCar </code>对象的属性：</p>
 
 <pre class="brush: js">myCar["make"] = "Ford";
 myCar["model"] = "Mustang";
@@ -75,7 +75,7 @@ console.log(myObj);
   myCar[propertyName] = "Mustang";
   </pre>
 
-<p>你可以在  <a href="/zh-CN/docs/JavaScript/Guide/Statements#for...in_Statement">for...in</a> 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：</p>
+<p>你可以在  <a href="/zh-CN/docs/JavaScript/Guide/Statements#for...in_Statement">for...in</a> 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：</p>
 
 <pre class="brush: js">function showProps(obj, objName) {
   var result = "";
@@ -88,7 +88,7 @@ console.log(myObj);
 }
 </pre>
 
-<p>因而，对于函数调用 <code>showProps(myCar, "myCar")</code> 将返回以下值：</p>
+<p>因而，对于函数调用 <code>showProps(myCar, "myCar")</code> 将返回以下值：</p>
 
 <pre class="brush: js">myCar.make = Ford
 myCar.model = Mustang
@@ -97,10 +97,10 @@ myCar.year = 1969
 
 <h2 id="枚举一个对象的所有属性">枚举一个对象的所有属性</h2>
 
-<p>从 <a href="/zh-CN/docs/JavaScript/ECMAScript_5_support_in_Mozilla" title="zh-CN/docs/JavaScript/ECMAScript 5 support in Mozilla">ECMAScript 5</a> 开始，有三种原生的方法用于列出或枚举对象的属性：</p>
+<p>从 <a href="/zh-CN/docs/JavaScript/ECMAScript_5_support_in_Mozilla" title="zh-CN/docs/JavaScript/ECMAScript 5 support in Mozilla">ECMAScript 5</a> 开始，有三种原生的方法用于列出或枚举对象的属性：</p>
 
 <ul>
- <li><a href="/zh-CN/docs/JavaScript/Reference/Statements/for...in" title="zh-CN/docs/JavaScript/Reference/Statements/for...in">for...in</a> 循环<br>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Statements/for...in" title="zh-CN/docs/JavaScript/Reference/Statements/for...in">for...in</a> 循环<br>
   该方法依次访问一个对象及其原型链中所有可枚举的属性。</li>
  <li><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/keys" title="zh-CN/docs/JavaScript/Reference/Global Objects/Object/keys">Object.keys(o)</a><br>
   该方法返回对象 <code>o</code> 自身包含（不包括原型中）的所有可枚举属性的名称的数组。</li>
@@ -126,7 +126,7 @@ myCar.year = 1969
 
 <h2 id="创建新对象">创建新对象</h2>
 
-<p>JavaScript 拥有一系列预定义的对象。另外，你可以创建你自己的对象。从  JavaScript 1.2 之后，你可以通过对象初始化器（Object Initializer）创建对象。或者你可以创建一个构造函数并使用该函数和 <code>new</code> 操作符初始化对象。</p>
+<p>JavaScript 拥有一系列预定义的对象。另外，你可以创建你自己的对象。从  JavaScript 1.2 之后，你可以通过对象初始化器（Object Initializer）创建对象。或者你可以创建一个构造函数并使用该函数和 <code>new</code> 操作符初始化对象。</p>
 
 <h3 id="使用对象初始化器">使用对象初始化器</h3>
 
@@ -136,14 +136,14 @@ myCar.year = 1969
 
 <pre class="brush: js">var obj = { property_1:   value_1,   // property_# 可以是一个标识符...
             2:            value_2,   // 或一个数字...
-           ["property" +3]: value_3,  //  或一个可计算的 key 名...
+           ["property" +3]: value_3,  //  或一个可计算的 key 名...
             // ...,
             "property n": value_n }; // 或一个字符串
 </pre>
 
 
 
-<p>这里 <code>obj</code> 是新对象的名称，每一个 <code>property_<em>i</em></code> 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 <code>value_<em>i</em></code> 是一个其值将被赋予 property_<em>i </em>的表达式。<code>obj</code> 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）</p>
+<p>这里 <code>obj</code> 是新对象的名称，每一个 <code>property_<em>i</em></code> 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 <code>value_<em>i</em></code> 是一个其值将被赋予 property_<em>i </em>的表达式。<code>obj</code> 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）</p>
 
 <p>如果一个对象是通过在顶级脚本的对象初始化器创建的，则 JavaScript 在每次遇到包含该对象字面量的表达式时都会创建对象。同样的，在函数中的初始化器在每次函数调用时也会被创建。</p>
 
@@ -152,7 +152,7 @@ myCar.year = 1969
 <pre class="brush: js">if (cond) var x = {hi: "there"};
 </pre>
 
-<p>下例创建了有三个属性的 <code>myHonda</code> 对象。注意它的 <code>engine</code> 属性也是一个拥有自己属性的对象。</p>
+<p>下例创建了有三个属性的 <code>myHonda</code> 对象。注意它的 <code>engine</code> 属性也是一个拥有自己属性的对象。</p>
 
 <pre class="brush: js">var myHonda = {color: "red", wheels: 4, engine: {cylinders: 4, size: 2.2}};
 </pre>
@@ -167,10 +167,10 @@ myCar.year = 1969
 
 <ol>
  <li>通过创建一个构造函数来定义对象的类型。首字母大写是非常普遍而且很恰当的惯用法。</li>
- <li>通过 <code>new</code> 创建对象实例。</li>
+ <li>通过 <code>new</code> 创建对象实例。</li>
 </ol>
 
-<p>为了定义对象类型，为对象类型创建一个函数以声明类型的名称、属性和方法。例如，你想为汽车创建一个类型，并且将这类对象称为 <code>car</code> ，并且拥有属性 make, model，和 year，你可以创建如下的函数：</p>
+<p>为了定义对象类型，为对象类型创建一个函数以声明类型的名称、属性和方法。例如，你想为汽车创建一个类型，并且将这类对象称为 <code>car</code> ，并且拥有属性 make, model，和 year，你可以创建如下的函数：</p>
 
 <pre class="brush: js">function Car(make, model, year) {
   this.make = make;
@@ -194,7 +194,7 @@ myCar.year = 1969
 var vpgscar = new Car("Mazda", "Miata", 1990);
 </pre>
 
-<p>一个对象的属性值可以是另一个对象。例如，假设你按如下方式定义了 <code>person</code> 对象：</p>
+<p>一个对象的属性值可以是另一个对象。例如，假设你按如下方式定义了 <code>person</code> 对象：</p>
 
 <pre class="brush: js">function Person(name, age, sex) {
   this.name = name;
@@ -203,13 +203,13 @@ var vpgscar = new Car("Mazda", "Miata", 1990);
 }
 </pre>
 
-<p>然后按如下方式创建了两个 <code>person</code> 实例：</p>
+<p>然后按如下方式创建了两个 <code>person</code> 实例：</p>
 
 <pre class="brush: js">var rand = new Person("Rand McKinnon", 33, "M");
 var ken = new Person("Ken Jones", 39, "M");
 </pre>
 
-<p>那么，你可以重写 <code>car</code> 的定义以包含一个拥有它的 <code>owner</code> 属性，如：</p>
+<p>那么，你可以重写 <code>car</code> 的定义以包含一个拥有它的 <code>owner</code> 属性，如：</p>
 
 <pre class="brush: js">function Car(make, model, year, owner) {
   this.make = make;
@@ -235,11 +235,11 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 <pre class="brush: js">car1.color = "black";
 </pre>
 
-<p>为 <code>car1</code> 增加了 <code>color</code> 属性，并将其值设为 "black." 然而，这并不影响其他的对象。想要为某个类型的所有对象增加新属性，你必须将属性加入到 <code>car </code>对象类型的定义中。</p>
+<p>为 <code>car1</code> 增加了 <code>color</code> 属性，并将其值设为 "black." 然而，这并不影响其他的对象。想要为某个类型的所有对象增加新属性，你必须将属性加入到 <code>car </code>对象类型的定义中。</p>
 
 <h3 id="使用_Object.create_方法">使用 Object.create 方法</h3>
 
-<p>对象也可以用 {{jsxref("Object.create()")}} 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。</p>
+<p>对象也可以用 {{jsxref("Object.create()")}} 方法创建。该方法非常有用，因为它允许你为创建的对象选择一个原型对象，而不用定义构造函数。</p>
 
 <pre class="brush: js">// Animal properties and method encapsulation
 var Animal = {
@@ -261,7 +261,7 @@ fish.displayType(); // Output:Fishes
 
 <h2 id="继承"><strong>继承</strong></h2>
 
-<p>所有的 JavaScript 对象至少继承于一个对象。被继承的对象被称作原型，并且继承的属性可通过构造函数的 <code>prototype</code> 对象找到。查看更多详细 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a></p>
+<p>所有的 JavaScript 对象至少继承于一个对象。被继承的对象被称作原型，并且继承的属性可通过构造函数的 <code>prototype</code> 对象找到。查看更多详细 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a></p>
 
 <h2 id="对象属性索引"><strong>对象属性索引</strong></h2>
 
@@ -269,7 +269,7 @@ fish.displayType(); // Output:Fishes
 
 <p>这个限制发生在你通过构造函数创建一个对象和它的属性（就象我们之前通过 <code>Car</code> 对象类型所做的那样）并且显式地定义了单独的属性（如 <code>m</code>yCar.color = "red"）之时。如果你最初使用索引定义了一个对象属性，例如 <code>myCar[5] = "25"</code>，则你只可能通过 <code>myCar[5]</code> 引用它。</p>
 
-<p>这条规则的例外是从与 HTML 对应的对象，例如 <code>forms</code> 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 <code>&lt;form&gt;</code> 标签有一个 <code>NAME</code> 属性且值为<code> "myForm"，访问该 form 的方式可以是 document.forms[1]，document.forms["myForm"] 或 document.myForm。</code></p>
+<p>这条规则的例外是从与 HTML 对应的对象，例如 <code>forms</code> 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 <code>&lt;form&gt;</code> 标签有一个 <code>NAME</code> 属性且值为<code> "myForm"，访问该 form 的方式可以是 document.forms[1]，document.forms["myForm"] 或 document.myForm。</code></p>
 
 <p>为对象类型定义属性</p>
 
@@ -279,11 +279,11 @@ fish.displayType(); // Output:Fishes
 car1.color = "black";
 </pre>
 
-<p>参见 <a href="/zh-CN/docs/JavaScript/Reference" title="zh-CN/docs/JavaScript/Reference">JavaScript Reference</a> 中 Function 对象的 <a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> 属性</a> 。</p>
+<p>参见 <a href="/zh-CN/docs/JavaScript/Reference" title="zh-CN/docs/JavaScript/Reference">JavaScript Reference</a> 中 Function 对象的 <a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> 属性</a> 。</p>
 
 <h2 id="定义方法">定义方法</h2>
 
-<p>一个<em>方法</em> 是关联到某个对象的函数，或者简单地说，一个方法是一个值为某个函数的对象属性。定义方法就像定义普通的函数，除了它们必须被赋给对象的某个属性。查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>了解更多详情例如：</p>
+<p>一个<em>方法</em> 是关联到某个对象的函数，或者简单地说，一个方法是一个值为某个函数的对象属性。定义方法就像定义普通的函数，除了它们必须被赋给对象的某个属性。查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>了解更多详情例如：</p>
 
 <pre class="brush: js">objectName.methodname = function_name;
 
@@ -300,7 +300,7 @@ var myObj = {
 };
 </pre>
 
-<p>这里 <code>objectName</code> 是一个已经存在的对象，<code>methodname</code> 是方法的名称，而 <code>function_name</code> 是函数的名称。</p>
+<p>这里 <code>objectName</code> 是一个已经存在的对象，<code>methodname</code> 是方法的名称，而 <code>function_name</code> 是函数的名称。</p>
 
 <p>你可以在对象的上下文中象这样调用方法：</p>
 
@@ -315,7 +315,7 @@ var myObj = {
 }
 </pre>
 
-<p>这里 <code>pretty_print</code> 是一个显示横线和一个字符串的函数。注意使用 this 指代方法所属的对象。</p>
+<p>这里 <code>pretty_print</code> 是一个显示横线和一个字符串的函数。注意使用 this 指代方法所属的对象。</p>
 
 <p>你可以在对象定义中通过增加下述语句将这个函数变成 <code>Car</code> 的方法：</p>
 
@@ -333,7 +333,7 @@ var myObj = {
 }
 </pre>
 
-<p>然后你可以按如下方式为每个对象调用 <code>displayCar</code> 方法：</p>
+<p>然后你可以按如下方式为每个对象调用 <code>displayCar</code> 方法：</p>
 
 <pre class="brush: js">car1.displayCar();
 car2.displayCar();
@@ -341,11 +341,11 @@ car2.displayCar();
 
 
 
-<h2 id="通过_this_引用对象">通过 <code>this</code> 引用对象</h2>
+<h2 id="通过_this_引用对象">通过 <code>this</code> 引用对象</h2>
 
 
 
-<p>JavaScript 有一个特殊的关键字 <code>this</code>，它可以在方法中使用以指代当前对象。例如，假设你有一个名为 <code>validate</code> 的函数，它根据给出的最大与最小值检查某个对象的 <code>value</code> 属性：</p>
+<p>JavaScript 有一个特殊的关键字 <code>this</code>，它可以在方法中使用以指代当前对象。例如，假设你有一个名为 <code>validate</code> 的函数，它根据给出的最大与最小值检查某个对象的 <code>value</code> 属性：</p>
 
 <pre class="brush: js">function validate(obj, lowval, hival) {
   if ((obj.value &lt; lowval) || (obj.value &gt; hival)) {
@@ -360,7 +360,7 @@ car2.displayCar();
   onChange="validate(this, 18, 99)"&gt;
 </pre>
 
-<p>总的说来， <code>this</code> 在一个方法中指调用的对象。</p>
+<p>总的说来， <code>this</code> 在一个方法中指调用的对象。</p>
 
 <p>当与 <code>form</code> 属性一起使用时，<code>this </code>可以指代当前对象的父窗体。在下面的例子中，窗体 <code>myForm</code> 包含一个 <code>Text </code>对象和一个按钮，当用户点击按键，<code>Text</code> 对象的值被设为窗体的名称。按钮的 <code>onclick</code> 事件处理器使用 <code>this.form</code> 以指代其父窗体，即 <code>myForm</code>。</p>
 
@@ -373,7 +373,7 @@ car2.displayCar();
 
 <h2 id="定义_getters_与_setters"><strong>定义 getters 与 setters</strong></h2>
 
-<p>一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get">getter</a> 是一个获取某个特定属性的值的方法。一个  <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/set">setter</a> 是一个设定某个属性的值的方法。你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。定义 getter 和 setter 的语法采用对象字面量语法。</p>
+<p>一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get">getter</a> 是一个获取某个特定属性的值的方法。一个  <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/set">setter</a> 是一个设定某个属性的值的方法。你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。定义 getter 和 setter 的语法采用对象字面量语法。</p>
 
 <p>下面例子描述了 getters 和 setters 是如何为用户定义的对象<code> o</code> 工作的。</p>
 
@@ -397,7 +397,7 @@ console.log(o.a); // 25</pre>
 <ul>
  <li><code>o.a</code> — 数字</li>
  <li><code>o.b</code> — 返回 <code>o.a</code> + 1 的 getter</li>
- <li><code>o.c</code> — 由  <code>o.c 的值所设置 <code>o.a</code> 值的</code> setter</li>
+ <li><code>o.c</code> — 由  <code>o.c 的值所设置 <code>o.a</code> 值的</code> setter</li>
 </ul>
 
 <p>请注意在一个对象字面量语法中定义 getter 和 setter 使用"[gs]et property()"的方式（相比较于__define[GS]etter__) 时，并不是获取和设置某个属性自身，容易让人误以为是"[gs]et propertyName(){ }"这样错误的使用方法。定义一个 getter 或 setter 函数使用语法"[gs]et property()"，定义一个已经声明的函数作为的 getter 和 setter 方法，使用<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineProperty" title="zh-CN/docs/Core JavaScript 1.5 Reference/Global
@@ -410,8 +410,8 @@ Objects/Object/defineGetter">Object.prototype.__defineGetter__</a></code> 旧语
 
 <pre class="brush: js">var d = Date.prototype;
 Object.defineProperty(d, "year", {
-  get: function() { return this.getFullYear() },
-  set: function(y) { this.setFullYear(y) }
+  get: function() { return this.getFullYear() },
+  set: function(y) { this.setFullYear(y) }
 });
 </pre>
 
@@ -453,11 +453,11 @@ o.c = 10 // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
 console.log(o.b) // Runs the getter, which yields a + 1 or 6
 </pre>
 
-<p>这两种定义方式的选择取决于你的编程风格和手头的工作量。当你定义一个原型准备进行初始化时，可以选择第一种方式，这种方式更简洁和自然。但是，当你需要添加 getter 和 setter 方法 —— 因为并没有编写原型或者特定的对象 ——使用第二种方式更好。第二种方式可能更能表现 JavaScript 语法的动态特性——但也会使代码变得难以阅读和理解。</p>
+<p>这两种定义方式的选择取决于你的编程风格和手头的工作量。当你定义一个原型准备进行初始化时，可以选择第一种方式，这种方式更简洁和自然。但是，当你需要添加 getter 和 setter 方法 —— 因为并没有编写原型或者特定的对象 ——使用第二种方式更好。第二种方式可能更能表现 JavaScript 语法的动态特性——但也会使代码变得难以阅读和理解。</p>
 
 <h2 id="删除属性">删除属性</h2>
 
-<p>你可以用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a> 操作符删除一个<strong>不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
+<p>你可以用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a> 操作符删除一个<strong>不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
 
 <pre class="brush: js">//Creates a new object, myobj, with two properties, a and b.
 var myobj = new Object;
@@ -468,7 +468,7 @@ myobj.b = 12;
 delete myobj.a;
 </pre>
 
-<p>如果一个全局变量不是用 <code>var</code> 关键字声明的话，你也可以用 <code>delete</code> 删除它：</p>
+<p>如果一个全局变量不是用 <code>var</code> 关键字声明的话，你也可以用 <code>delete</code> 删除它：</p>
 
 <pre class="brush: js">g = 17;
 delete g;
@@ -498,13 +498,13 @@ var fruitbear = fruit;  // 将 fruit 的对象<strong>引用</strong>(reference)
 fruit == fruitbear // return true
 fruit === fruitbear // return true</pre>
 
-<p>了解更多关于比较操作符的用法，查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators</a>.</p>
+<p>了解更多关于比较操作符的用法，查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators</a>.</p>
 
 <h2 id="附加参考">附加参考</h2>
 
 <ul>
  <li>想要深入了解，请阅读<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">details of javaScript's objects model</a>。</li>
- <li>想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes">JavaScript classes</a> 章节。</li>
+ <li>想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes">JavaScript classes</a> 章节。</li>
 </ul>
 
 

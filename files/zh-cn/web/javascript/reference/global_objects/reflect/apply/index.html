@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 <div>{{JSRef}}</div>
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> 通过指定的参数列表发起对目标 (target) 函数的调用。</p>
+<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> 通过指定的参数列表发起对目标 (target) 函数的调用。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}</div>
 
@@ -42,11 +42,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 
 <h2 id="描述">描述</h2>
 
-<p>该方法与 ES5 中{{jsxref("Function.prototype.apply()")}}方法类似：调用一个方法并且显式地指定 <code>this</code> 变量和参数列表 (arguments) ，参数列表可以是数组，或类似数组的对象。</p>
+<p>该方法与 ES5 中{{jsxref("Function.prototype.apply()")}}方法类似：调用一个方法并且显式地指定 <code>this</code> 变量和参数列表 (arguments) ，参数列表可以是数组，或类似数组的对象。</p>
 
 <pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
 
-<p>使用 <code>Reflect.apply</code> 方法会使代码更加简洁易懂。</p>
+<p>使用 <code>Reflect.apply</code> 方法会使代码更加简洁易懂。</p>
 
 <h2 id="使用示例">使用示例</h2>
 

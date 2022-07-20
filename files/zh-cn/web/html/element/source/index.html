@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/source
 ---
 <h2 id="概述">概述</h2>
 
-<p><strong>HTML <code>&lt;source&gt;</code> </strong>元素为 {{HTMLElement("picture")}}, {{HTMLElement("audio")}} 或者 {{HTMLElement("video")}} 元素指定多个媒体资源。这是一个空元素。它通常用于以<a href="/zh-CN/docs/Web/HTML/Supported_media_formats">不同浏览器支持的多种格式</a>提供相同的媒体内容。</p>
+<p><strong>HTML <code>&lt;source&gt;</code> </strong>元素为 {{HTMLElement("picture")}}, {{HTMLElement("audio")}} 或者 {{HTMLElement("video")}} 元素指定多个媒体资源。这是一个空元素。它通常用于以<a href="/zh-CN/docs/Web/HTML/Supported_media_formats">不同浏览器支持的多种格式</a>提供相同的媒体内容。</p>
 
 <table class="properties">
  <tbody>
@@ -17,7 +17,7 @@ translation_of: Web/HTML/Element/source
   </tr>
   <tr>
    <th scope="row"><dfn>Permitted parent elements</dfn></th>
-   <td>A {{HTMLElement("picture")}} element, and it should be placed before the {{HTMLElement("img")}} element.</td>
+   <td>A {{HTMLElement("picture")}} element, and it should be placed before the {{HTMLElement("img")}} element.</td>
   </tr>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a></th>
@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/source
 
 <h2 id="属性">属性</h2>
 
-<p>该元素包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>.</p>
+<p>该元素包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("sizes")}} {{experimental_inline}}</dt>
@@ -70,13 +70,13 @@ translation_of: Web/HTML/Element/source
 
 <h2 id="Examples">Examples</h2>
 
-<p>This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the<code> audio</code> or <code>video</code> element is not supported by the browser, a notice is displayed instead.  If the browser supports the element but does not support any of the specified formats, an <code>error</code> event is raised and the default media controls (if enabled) will indicate an error. See also the list of <a href="/en-US/docs/Media_formats_supported_by_the_audio_and_video_elements">media formats supported by the audio and video elements</a> in various browsers.</p>
+<p>This example demonstrates how to offer a video in Ogg format for users whose browsers support Ogg format, and a QuickTime format video for users whose browsers support that. If the<code> audio</code> or <code>video</code> element is not supported by the browser, a notice is displayed instead.  If the browser supports the element but does not support any of the specified formats, an <code>error</code> event is raised and the default media controls (if enabled) will indicate an error. See also the list of <a href="/en-US/docs/Media_formats_supported_by_the_audio_and_video_elements">media formats supported by the audio and video elements</a> in various browsers.</p>
 
 <pre class="brush: html">&lt;video controls&gt;
   &lt;source src="foo.webm" type="video/webm"&gt;
   &lt;source src="foo.ogg" type="video/ogg"&gt;
   &lt;source src="foo.mov" type="video/quicktime"&gt;
-  I'm sorry; your browser doesn't support HTML5 video.
+  I'm sorry; your browser doesn't support HTML5 video.
 &lt;/video&gt;
 </pre>
 

@@ -34,7 +34,7 @@ createAudioFileAsync(audioSettings, successCallback, failureCallback)</pre>
 
 <p>更现代的函数会返回一个 Promise 对象，使得你可以将你的回调函数绑定在该 Promise 上。</p>
 
-<p>如果函数 <code>createAudioFileAsync()</code> 被重写为返回 Promise 的形式，那么我们可以像下面这样简单地调用它：</p>
+<p>如果函数 <code>createAudioFileAsync()</code> 被重写为返回 Promise 的形式，那么我们可以像下面这样简单地调用它：</p>
 
 <pre class="brush: js">const promise = createAudioFileAsync(audioSettings);
 promise.then(successCallback, failureCallback);
@@ -45,16 +45,16 @@ promise.then(successCallback, failureCallback);
 <pre class="brush: js">createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 </pre>
 
-<p>我们把这个称为 <em>异步函数调用</em>，这种形式有若干优点，下面我们将会逐一讨论。</p>
+<p>我们把这个称为 <em>异步函数调用</em>，这种形式有若干优点，下面我们将会逐一讨论。</p>
 
 <h2 id="约定">约定</h2>
 
 <p>不同于“老式”的传入回调，在使用 Promise 时，会有以下约定：</p>
 
 <ul>
- <li>在本轮 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop#执行至完成">事件循环</a> 运行完成之前，回调函数是不会被调用的。</li>
+ <li>在本轮 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop#执行至完成">事件循环</a> 运行完成之前，回调函数是不会被调用的。</li>
  <li>即使异步操作已经完成（成功或失败），在这之后通过 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>then()</code> </a>添加的回调函数也会被调用。</li>
- <li>通过多次调用 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> 可以添加多个回调函数，它们会按照插入顺序进行执行。</li>
+ <li>通过多次调用 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> 可以添加多个回调函数，它们会按照插入顺序进行执行。</li>
 </ul>
 
 <p>Promise 很棒的一点就是<strong>链式调用</strong>（<strong>chaining</strong>）。</p>
@@ -73,7 +73,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <pre class="brush: js">const promise2 = doSomething().then(successCallback, failureCallback);</pre>
 
-<p><code>promise2</code> 不仅表示 <code>doSomething()</code> 函数的完成，也代表了你传入的 <code>successCallback</code> 或者 <code>failureCallback</code> 的完成，这两个函数也可以返回一个 Promise 对象，从而形成另一个异步操作，这样的话，在 <code>promise2</code> 上新增的回调函数会排在这个 Promise 对象的后面。</p>
+<p><code>promise2</code> 不仅表示 <code>doSomething()</code> 函数的完成，也代表了你传入的 <code>successCallback</code> 或者 <code>failureCallback</code> 的完成，这两个函数也可以返回一个 Promise 对象，从而形成另一个异步操作，这样的话，在 <code>promise2</code> 上新增的回调函数会排在这个 Promise 对象的后面。</p>
 
 <p>基本上，每一个 Promise 都代表了链中另一个异步过程的完成。</p>
 
@@ -158,7 +158,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 </pre>
 
-<p>通常，一遇到异常抛出，浏览器就会顺着 Promise 链寻找下一个 <code>onRejected</code> 失败回调函数或者由 <code>.catch()</code> 指定的回调函数。这和以下同步代码的工作原理（执行过程）非常相似。</p>
+<p>通常，一遇到异常抛出，浏览器就会顺着 Promise 链寻找下一个 <code>onRejected</code> 失败回调函数或者由 <code>.catch()</code> 指定的回调函数。这和以下同步代码的工作原理（执行过程）非常相似。</p>
 
 <pre class="brush: js">try {
   let result = syncDoSomething();
@@ -308,7 +308,7 @@ console.log(1); // 1, 2, 3, 4</pre>
 
 <p>注意，有些代码步骤是嵌套的，而不是一个简单的纯链式，这些语句前与后都被括号 <code>()</code> 包裹着。</p>
 
-<p>这个内部的 <code>catch</code>  语句仅能捕获到 <code>doSomethingOptional()</code> 和 <code>doSomethingExtraNice()</code> 的失败，<code>之后就恢复到 moreCriticalStuff()</code> 的运行。重要提醒：如果 <code>doSomethingCritical()</code> 失败，这个错误仅会被最后的（外部）<code>catch</code> 语句捕获到。</p>
+<p>这个内部的 <code>catch</code>  语句仅能捕获到 <code>doSomethingOptional()</code> 和 <code>doSomethingExtraNice()</code> 的失败，<code>之后就恢复到 moreCriticalStuff()</code> 的运行。重要提醒：如果 <code>doSomethingCritical()</code> 失败，这个错误仅会被最后的（外部）<code>catch</code> 语句捕获到。</p>
 
 <h2 id="常见错误">常见错误</h2>
 

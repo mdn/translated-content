@@ -39,7 +39,7 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
     navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
 };</pre>
 
-<p>如果浏览器支持 Service Workers API，则使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register" title="ServiceWorkerContainer 接口的 register() 方法创建或更新一个给定scriptURL的ServiceWorkerRegistration 。"><code>ServiceWorkerContainer.register()</code></a> 方法在该站点注册。其内容在 sw.js 文件中，可以在注册成功后执行。它是 app.js 文件中唯一与 Service Worker 有关的代码; 其他关于 Service Worker 的内容都写在 sw.js 文件中。</p>
+<p>如果浏览器支持 Service Workers API，则使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register" title="ServiceWorkerContainer 接口的 register() 方法创建或更新一个给定scriptURL的ServiceWorkerRegistration 。"><code>ServiceWorkerContainer.register()</code></a> 方法在该站点注册。其内容在 sw.js 文件中，可以在注册成功后执行。它是 app.js 文件中唯一与 Service Worker 有关的代码; 其他关于 Service Worker 的内容都写在 sw.js 文件中。</p>
 
 <h3 id="Service_Worker_的生命周期">Service Worker 的生命周期</h3>
 
@@ -101,15 +101,15 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>有两件事需要在这里解释一下：{{domxref("ExtendableEvent.waitUntil")}} 做了什么？{{domxref("Caches","caches")}} 对象又是什么东西？</p>
 
-<p>Service Worker 会等到 <code>waitUntil</code> 里面的代码执行完毕之后才开始安装。它返回的是一个 Promise——因为安装过程可能需要一些时间，而我们必须等待它完成。</p>
+<p>Service Worker 会等到 <code>waitUntil</code> 里面的代码执行完毕之后才开始安装。它返回的是一个 Promise——因为安装过程可能需要一些时间，而我们必须等待它完成。</p>
 
-<p><code>caches</code> 是一个特殊的 {{domxref("CacheStorage")}} 对象，它能在 Service Worker 指定的范围内提供数据存储的能力（Service Worker 在注册时，第二个参数是选填的，可以被用来指定你想让 Service Worker 控制的内容的子目录，译者注）。因为 Web Storage 的执行是同步的（此处理解为 Web Storage 并不返回一个 Promise，译者注），在 Service Worker 中使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API">Web Storage</a> 将不会有效果，所以我们使用 Cache API 作为替代。</p>
+<p><code>caches</code> 是一个特殊的 {{domxref("CacheStorage")}} 对象，它能在 Service Worker 指定的范围内提供数据存储的能力（Service Worker 在注册时，第二个参数是选填的，可以被用来指定你想让 Service Worker 控制的内容的子目录，译者注）。因为 Web Storage 的执行是同步的（此处理解为 Web Storage 并不返回一个 Promise，译者注），在 Service Worker 中使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API">Web Storage</a> 将不会有效果，所以我们使用 Cache API 作为替代。</p>
 
 <p>这里，我们使用给定的名字开启了一个缓存，并且将我们的应用所需要缓存的文件全部添加进去，当我们再次加载这些资源时，由请求 URL 确定的对应缓存就是可用的。</p>
 
 <h4 id="激活">激活</h4>
 
-<p>还有一个 <code>activate</code> 事件，它的用法跟 <code>install</code> 事件相同。这个事件通常用来删除那些我们已经不需要的文件或者做一些清理工作。因为在我们的 App 里面没有使用到，这里我们暂时跳过它。</p>
+<p>还有一个 <code>activate</code> 事件，它的用法跟 <code>install</code> 事件相同。这个事件通常用来删除那些我们已经不需要的文件或者做一些清理工作。因为在我们的 App 里面没有使用到，这里我们暂时跳过它。</p>
 
 <h3 id="响应请求">响应请求</h3>
 

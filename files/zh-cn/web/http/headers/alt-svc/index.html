@@ -6,7 +6,7 @@ tags:
   - HTTP Header
 translation_of: Web/HTTP/Headers/Alt-Svc
 ---
-<p><strong><code style="white-space: nowrap;">Alt-Svc</code></strong> 全称为“Alternative-Service”，直译为“备选服务”。该头部列举了当前站点备选的访问方式列表。一般用于在提供 “QUIC” 等新兴协议支持的同时，实现向下兼容。</p>
+<p><strong><code style="white-space: nowrap;">Alt-Svc</code></strong> 全称为“Alternative-Service”，直译为“备选服务”。该头部列举了当前站点备选的访问方式列表。一般用于在提供 “QUIC” 等新兴协议支持的同时，实现向下兼容。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,7 +17,7 @@ Alt-Svc: <em>&lt;service-list&gt;</em>; ma=<em>&lt;max-age&gt;
 
 <dl>
  <dt><code>&lt;service-list&gt;</code></dt>
- <dd>使用分号隔离的访问方式列表，格式形如：<code><em>&lt;service-name&gt;</em>="<em>&lt;host-name&gt;</em>:<em>&lt;port-number&gt;</em>"</code>。这里的<code><em>&lt;service-name&gt;</em></code>应当是一个有效的 {{Glossary("ALPN")}} 标识符。</dd>
+ <dd>使用分号隔离的访问方式列表，格式形如：<code><em>&lt;service-name&gt;</em>="<em>&lt;host-name&gt;</em>:<em>&lt;port-number&gt;</em>"</code>。这里的<code><em>&lt;service-name&gt;</em></code>应当是一个有效的 {{Glossary("ALPN")}} 标识符。</dd>
  <dt><code>&lt;max-age&gt;</code>{{Optional_Inline}}</dt>
  <dd>当前访问方式的有效期，超过该时间后，服务端将不保证该访问方式依旧可用，客户端应当重新获取更新后的 Alt-Svc 列表。单位为秒，默认值为 24 小时（86400)。</dd>
  <dt><code>persist</code>{{Optional_Inline}}</dt>

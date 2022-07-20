@@ -258,12 +258,12 @@ Object.defineProperty(o, "b", { value : 2, enumerable: false });
 Object.defineProperty(o, "c", { value : 3 }); // enumerable 默认为 false
 o.d = 4; // 如果使用直接赋值的方式创建对象的属性，则 enumerable 为 true
 Object.defineProperty(o, Symbol.for('e'), {
-  value: 5,
-  enumerable: true
+  value: 5,
+  enumerable: true
 });
 Object.defineProperty(o, Symbol.for('f'), {
-  value: 6,
-  enumerable: false
+  value: 6,
+  enumerable: false
 });
 
 for (var i in o) {

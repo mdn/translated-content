@@ -10,19 +10,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 <div>{{JSRef("Global_Objects", "Function")}}</div>
 
-<div><code>function.name</code> 属性返回函数实例的名称。</div>
+<div><code>function.name</code> 属性返回函数实例的名称。</div>
 
 <p>{{js_property_attributes(0,0,1)}}</p>
 
 <div class="note">
-<p><strong>备注：</strong>在非标准的 ES2015 之前的实现中，<code>configurable</code>属性也是<code>false</code> 。</p>
+<p><strong>备注：</strong>在非标准的 ES2015 之前的实现中，<code>configurable</code>属性也是<code>false</code> 。</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="函数声明的名称">函数声明的名称</h3>
 
-<p> <code>name</code> 属性返回一个函数声明的名称。</p>
+<p> <code>name</code> 属性返回一个函数声明的名称。</p>
 
 <pre class="brush:js">function doSomething() { }
 doSomething.name;  // "doSomething"
@@ -30,7 +30,7 @@ doSomething.name;  // "doSomething"
 
 <h3 id="构造函数的名称">构造函数的名称</h3>
 
-<p>使用<code>new Function(...)</code>语法创建的函数或只是 <code>Function(...) create</code> {{jsxref("Function")}}对象及其名称为“anonymous”。</p>
+<p>使用<code>new Function(...)</code>语法创建的函数或只是 <code>Function(...) create</code> {{jsxref("Function")}}对象及其名称为“anonymous”。</p>
 
 <pre class="brush: js">(new Function).name; // "anonymous"</pre>
 
@@ -86,7 +86,7 @@ foo.bind({}).name; // "bound foo"</pre>
 
 <h3 id="getters_和_setters_的函数名">getters 和 setters 的函数名</h3>
 
-<p>当通过 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/get">get</a></code> 和 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/set">set</a></code> 访问器来存取属性时，"get" 或 "set" 会出现在函数名称前。</p>
+<p>当通过 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/get">get</a></code> 和 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/set">set</a></code> 访问器来存取属性时，"get" 或 "set" 会出现在函数名称前。</p>
 
 <pre class="brush: js">var o = {
   get foo(){},
@@ -107,7 +107,7 @@ var fooInstance = new Foo();
 console.log(fooInstance.constructor.name); // logs "Foo"</pre>
 
 <div class="warning">
-<p><strong>警告：</strong>脚本解释器只有在函数没有名为 name 的属性时才会设置内置的<code>Function.name</code>属性（参见 <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname">9.2.11 of the ECMAScript2015 Language Specification</a>）。但是，ES2015 规定由关键字<em>static</em>修饰的静态方法也会被认为是类的属性（ECMAScript2015, <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation">14.5.14.21.b</a> + <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation">12.2.6.9</a>）。</p>
+<p><strong>警告：</strong>脚本解释器只有在函数没有名为 name 的属性时才会设置内置的<code>Function.name</code>属性（参见 <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname">9.2.11 of the ECMAScript2015 Language Specification</a>）。但是，ES2015 规定由关键字<em>static</em>修饰的静态方法也会被认为是类的属性（ECMAScript2015, <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation">14.5.14.21.b</a> + <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation">12.2.6.9</a>）。</p>
 </div>
 
 <p>因此，我们无法获取具有静态方法属性<code>name()</code>的几乎任何类的类名称：</p>
@@ -201,7 +201,7 @@ if (b.constructor.name === 'Foo') {
   <tr>
    <td>{{SpecName('ESDraft', '#sec-name', 'name')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

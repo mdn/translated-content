@@ -55,23 +55,23 @@ translation_of: Web/HTTP/Headers/User-Agent
 
 <h2 id="Firefox_UA_字符串">Firefox UA 字符串</h2>
 
-<p>查阅 <a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">Firefox 用户代理字符串参考</a>来获取更多关于基于 Firefox 和 Gecko 渲染引擎的用户代理字符串的细节信息。Firefox 的用户代理字符串自身可以分为四部分：</p>
+<p>查阅 <a href="/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox">Firefox 用户代理字符串参考</a>来获取更多关于基于 Firefox 和 Gecko 渲染引擎的用户代理字符串的细节信息。Firefox 的用户代理字符串自身可以分为四部分：</p>
 
 <p><strong>Mozilla/5.0 (<em>platform</em>; rv:<em>geckoversion</em>) Gecko/<em>geckotrail</em> Firefox/<em>firefoxversion</em></strong></p>
 
 <ul>
- <li><em><strong>Mozilla/5.0 </strong></em>是一个通用标记符号，用来表示与 Mozilla 兼容，这几乎是现代浏览器的标配。</li>
+ <li><em><strong>Mozilla/5.0 </strong></em>是一个通用标记符号，用来表示与 Mozilla 兼容，这几乎是现代浏览器的标配。</li>
  <li><strong><em>platform</em></strong> 用来说明浏览器所运行的原生系统平台（例如 Windows、Mac、Linux 或 Android），以及是否运行在手机上。搭载 Firefox OS 的手机仅简单地使用了 "Mobile" 这个字符串；因为 web 本身就是平台。注意 <em><strong>platform</strong> </em>可能会包含多个使用 "; " 隔开的标记符号。参见下文获取更多的细节信息及示例。</li>
- <li><strong>rv:<em>geckoversion</em></strong> 表示 Gecko 的发布版本号（例如  "17.0"）。在近期发布的版本中，<strong><em>geckoversion</em></strong> 表示的值与 <strong><em>firefoxversion </em></strong>相同。</li>
+ <li><strong>rv:<em>geckoversion</em></strong> 表示 Gecko 的发布版本号（例如  "17.0"）。在近期发布的版本中，<strong><em>geckoversion</em></strong> 表示的值与 <strong><em>firefoxversion </em></strong>相同。</li>
  <li><strong><em>Gecko/geckotrail</em></strong> 表示该浏览器基于 Gecko 渲染引擎。</li>
- <li>在桌面浏览器中， <em><strong>geckotrail</strong></em>  是固定的字符串 "20100101" 。</li>
- <li><em><strong>Firefox/firefoxversion</strong></em> 表示该浏览器是 Firefox，并且提供了版本号信息（例如  "17.0"）。</li>
+ <li>在桌面浏览器中， <em><strong>geckotrail</strong></em>  是固定的字符串 "20100101" 。</li>
+ <li><em><strong>Firefox/firefoxversion</strong></em> 表示该浏览器是 Firefox，并且提供了版本号信息（例如  "17.0"）。</li>
 </ul>
 
 <h3 id="示例">示例</h3>
 
 <pre>Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
-Mozilla/5.0 (Macintosh; Intel Mac OS X <em>x.y</em>; rv:42.0) Gecko/20100101 Firefox/42.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X <em>x.y</em>; rv:42.0) Gecko/20100101 Firefox/42.0
 </pre>
 
 <h2 id="Chrome_UA_字符串">Chrome UA 字符串</h2>
@@ -97,7 +97,7 @@ Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1</pre>
 
 <h2 id="Safari_UA_字符串">Safari UA 字符串</h2>
 
-<p>在这个示例中，这是 Safari 的移动版本的用户代理字符串。因为其中包含了单词 "Mobile" 。</p>
+<p>在这个示例中，这是 Safari 的移动版本的用户代理字符串。因为其中包含了单词 "Mobile" 。</p>
 
 <h3 id="示例_4">示例</h3>
 

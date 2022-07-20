@@ -11,7 +11,7 @@ translation_of: Web/CSS/Shorthand_properties
 
 <p><strong>简写属性</strong>是可以让你同时设置好几个 CSS 属性值的 CSS 属性。使用简写属性，Web 开发人员可以编写更简洁、更具可读性的样式表，节省时间和精力。</p>
 
-<p>CSS 规范定义简写属性的目的在于将那些关于同一主题的常见属性的定义集中在一起。比如 CSS 的 {{cssxref("background")}} 属性就是一个简写属性，它可以定义 {{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-repeat")}} 和 {{cssxref("background-position")}} 的值。类似地，最常见的字体相关的属性可以使用 {{cssxref("font")}} 的简写，盒子（box）各方向的外边距（margin）可以使用 {{cssxref("margin")}} 这个简写。</p>
+<p>CSS 规范定义简写属性的目的在于将那些关于同一主题的常见属性的定义集中在一起。比如 CSS 的 {{cssxref("background")}} 属性就是一个简写属性，它可以定义 {{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-repeat")}} 和 {{cssxref("background-position")}} 的值。类似地，最常见的字体相关的属性可以使用 {{cssxref("font")}} 的简写，盒子（box）各方向的外边距（margin）可以使用 {{cssxref("margin")}} 这个简写。</p>
 
 <h2 id="Tricky_edge_cases">棘手的边界情况</h2>
 
@@ -22,11 +22,11 @@ translation_of: Web/CSS/Shorthand_properties
   <pre class="brush:css notranslate">background-color: red;
 background: url(images/bg.gif) no-repeat top right;
 </pre>
-  以上样式不会将 background 的 color 值设置为 <code>red，而是</code> {{cssxref("background-color")}} 的默认值 <code>transparent，因为第二条规则优先。</code></li>
+  以上样式不会将 background 的 color 值设置为 <code>red，而是</code> {{cssxref("background-color")}} 的默认值 <code>transparent，因为第二条规则优先。</code></li>
  <li>关键词 inherit 只可以应用于单独属性（individual properties），如果应用于一个简写属性（shorthand property），则必须整体应用，而能对简写属性值的每一个部分单独应用。由于单独属性的漏掉的值会被它们的初始值（initial value）替代，因此不可能允许单个属性通过省略继承的。这意味着让一个属性的值使用继承值的唯一方法就是使用值是 inherit 的普通属性（longhand property）。</li>
  <li>简写属性不试图强制它们替代属性的值的特定顺序。这适用于当这些属性使用不同类型的值时，因为这个时候顺序并不重要。但当几个属性可以设置相同值的时候，就没那么简单了。处理这些情况分以下几种类型：
   <ol>
-   <li>处理和盒子（box）边界（edge）相关的属性时，比如 {{cssxref("border-style")}}、{{cssxref("margin")}} 或者 {{cssxref("padding")}}， 始终使用一致的 1 个到 4 个值的语法表示这些边界：
+   <li>处理和盒子（box）边界（edge）相关的属性时，比如 {{cssxref("border-style")}}、{{cssxref("margin")}} 或者 {{cssxref("padding")}}， 始终使用一致的 1 个到 4 个值的语法表示这些边界：
     <table>
      <tbody>
       <tr>
@@ -50,7 +50,7 @@ background: url(images/bg.gif) no-repeat top right;
      </tbody>
     </table>
    </li>
-   <li>同样，在处理和盒子的角相关的属性时，比如 {{cssxref("border-radius")}}，也始终使用一致的 1 个到 4 个值的语法表示：
+   <li>同样，在处理和盒子的角相关的属性时，比如 {{cssxref("border-radius")}}，也始终使用一致的 1 个到 4 个值的语法表示：
     <table>
      <tbody>
       <tr>
@@ -91,7 +91,7 @@ background-position: top right;</pre>
 
 <pre class="brush:css notranslate">background: #000 url(images/bg.gif) no-repeat top right;</pre>
 
-<p>简写的形式实际上等价于以上普通属性再加上 <code>background-attachment: scroll</code>  以及 CSS3 中的一些附加属性。</p>
+<p>简写的形式实际上等价于以上普通属性再加上 <code>background-attachment: scroll</code>  以及 CSS3 中的一些附加属性。</p>
 
 <h2 id="Font_Properties">Font 属性</h2>
 
@@ -107,11 +107,11 @@ font-family: Arial, sans-serif;</pre>
 
 <pre class="brush:css notranslate">font: italic bold .8em/1.2 Arial, sans-serif;</pre>
 
-<p>这个简写声明实际上等价于以上普通属性再加上 <code>font-variant: normal</code> 和 <code>font-size-adjust: none</code> (CSS2.0 / CSS3)，<code>font-stretch: normal</code> (CSS3)。</p>
+<p>这个简写声明实际上等价于以上普通属性再加上 <code>font-variant: normal</code> 和 <code>font-size-adjust: none</code> (CSS2.0 / CSS3)，<code>font-stretch: normal</code> (CSS3)。</p>
 
 <h2 id="Border_Properties">Border 属性</h2>
 
-<p>对于 border 来说，宽度、颜色和类型是可以被简写到一个声明里的。比如：</p>
+<p>对于 border 来说，宽度、颜色和类型是可以被简写到一个声明里的。比如：</p>
 
 <pre class="brush:css notranslate">border-width: 1px;
 border-style: solid;
@@ -121,9 +121,9 @@ border-color: #000;</pre>
 
 <pre class="brush:css notranslate">border: 1px solid #000;</pre>
 
-<h2 id="Margin_and_Padding_Properties">Margin 和 Padding 属性</h2>
+<h2 id="Margin_and_Padding_Properties">Margin 和 Padding 属性</h2>
 
-<p>margin 和 padding 值的简写版本类似。下面的 CSS 声明：</p>
+<p>margin 和 padding 值的简写版本类似。下面的 CSS 声明：</p>
 
 <pre class="brush:css notranslate">margin-top: 10px;
 margin-right: 5px;
@@ -149,7 +149,7 @@ margin-left: 5px;</pre>
 
 <p>{{page("/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance", "Controlling_inheritance")}}</p>
 
-<p>查看 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">Cascade and inheritance</a> or <a href="/zh-CN/docs/Web/CSS/Cascade">Introducing the CSS Cascade</a> 了解更多关于继承的信息。</p>
+<p>查看 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">Cascade and inheritance</a> or <a href="/zh-CN/docs/Web/CSS/Cascade">Introducing the CSS Cascade</a> 了解更多关于继承的信息。</p>
 
 <h2 id="See_also">另请参阅</h2>
 

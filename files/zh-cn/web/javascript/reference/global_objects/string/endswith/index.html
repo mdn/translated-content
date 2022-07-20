@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>这个方法已经加入到 ECMAScript 6 标准当中，但是可能还没有在所有的  JavaScript 实现中可用。然而，你可以通过如下的代码片段扩展 <code>String.prototype.endsWith()</code> 实现兼容：</p>
+<p>这个方法已经加入到 ECMAScript 6 标准当中，但是可能还没有在所有的  JavaScript 实现中可用。然而，你可以通过如下的代码片段扩展 <code>String.prototype.endsWith()</code> 实现兼容：</p>
 
 <pre class="brush: js">if (!String.prototype.endsWith) {
 	String.prototype.endsWith = function(search, this_len) {

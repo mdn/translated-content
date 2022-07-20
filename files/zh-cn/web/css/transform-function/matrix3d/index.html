@@ -6,11 +6,11 @@ original_slug: Web/CSS/transform-function/matrix3d()
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/en-US/docs/Web/CSS">CSS</a> 函数 <strong><code>matrix3d()</code></strong> 以 4x4 齐次矩阵的形式定义一个 3D 转换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。</p>
+<p><a href="/en-US/docs/Web/CSS">CSS</a> 函数 <strong><code>matrix3d()</code></strong> 以 4x4 齐次矩阵的形式定义一个 3D 转换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。</p>
 
 <h2 id="语法">语法</h2>
 
-<p><code>matrix3d()</code> 函数由 16 个参数指定. 这些参数以列为主的顺序进行描述。</p>
+<p><code>matrix3d()</code> 函数由 16 个参数指定. 这些参数以列为主的顺序进行描述。</p>
 
 <pre class="syntaxbox notranslate">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
 
@@ -57,65 +57,65 @@ necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam ess
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css notranslate">html {
-  width: 100%;
+  width: 100%;
 }
 body {
-  height: 100vh;
-  /* Centering content */
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  height: 100vh;
+  /* Centering content */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
 
 }
 .foo {
-  width: 50%;
-  padding: 1em;
-  color: white;
-  background: #ff8c66;
-  border: 2px dashed black;
-  text-align: center;
-  font-family: system-ui, sans-serif;
-  font-size: 14px;
-   /* Setting up animation for better demonstration */
-  animation: MotionScale 2s alternate linear infinite;
+  width: 50%;
+  padding: 1em;
+  color: white;
+  background: #ff8c66;
+  border: 2px dashed black;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+   /* Setting up animation for better demonstration */
+  animation: MotionScale 2s alternate linear infinite;
 }
 
 @keyframes MotionScale {
-  from {
-    /*
-      Identity matrix is used as basis here.
-      The matrix below describes the
-      following transformations:
-        Translates every X point by -50px
-        Translates every Y point by -100px
-        Translates every Z point by 0
-        Scales down by 10%
-    */
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      -50,-100,0,1.1
-    );
+  from {
+    /*
+      Identity matrix is used as basis here.
+      The matrix below describes the
+      following transformations:
+        Translates every X point by -50px
+        Translates every Y point by -100px
+        Translates every Z point by 0
+        Scales down by 10%
+    */
+    transform: matrix3d(
+      1,0,0,0,
+      0,1,0,0,
+      0,0,1,0,
+      -50,-100,0,1.1
+    );
 
-  }
-  50% {
-    transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      0,0,0,0.9
-    );
-  }
-  to {
-     transform: matrix3d(
-      1,0,0,0,
-      0,1,0,0,
-      0,0,1,0,
-      50,100,0,1.1
-    )
-  }
+  }
+  50% {
+    transform: matrix3d(
+      1,0,0,0,
+      0,1,0,0,
+      0,0,1,0,
+      0,0,0,0.9
+    );
+  }
+  to {
+     transform: matrix3d(
+      1,0,0,0,
+      0,1,0,0,
+      0,0,1,0,
+      50,100,0,1.1
+    )
+  }
 }</pre>
 
 <h3 id="Result">Result</h3>

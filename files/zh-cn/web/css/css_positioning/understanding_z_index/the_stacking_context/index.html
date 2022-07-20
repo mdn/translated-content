@@ -22,7 +22,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 
 <ul>
  <li>文档根元素（<code>&lt;html&gt;</code>）；</li>
- <li>{{cssxref("position")}} 值为 <code>absolute</code>（绝对定位）或  <code>relative</code>（相对定位）且 {{cssxref("z-index")}} 值不为 <code>auto</code> 的元素；</li>
+ <li>{{cssxref("position")}} 值为 <code>absolute</code>（绝对定位）或  <code>relative</code>（相对定位）且 {{cssxref("z-index")}} 值不为 <code>auto</code> 的元素；</li>
  <li>{{cssxref("position")}} 值为 <code>fixed</code>（固定定位）或 <code>sticky</code>（粘滞定位）的元素（沾滞定位适配所有移动设备上的浏览器，但老的桌面浏览器不支持）；</li>
  <li>flex ({{cssxref("flex")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 <code>auto</code>；</li>
  <li>grid ({{cssxref("grid")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 <code>auto</code>；</li>
@@ -53,7 +53,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
  <li>每个层叠上下文都是自包含的：当一个元素的内容发生层叠后，该元素将被作为整体在父级层叠上下文中按顺序进行层叠。</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> 层叠上下文的层级是 HTML 元素层级的一个子级，因为只有某些元素才会创建层叠上下文。可以这样说，没有创建自己的层叠上下文的元素会被父层叠上下文<em>同化</em>。</div>
+<div class="note"><strong>Note:</strong> 层叠上下文的层级是 HTML 元素层级的一个子级，因为只有某些元素才会创建层叠上下文。可以这样说，没有创建自己的层叠上下文的元素会被父层叠上下文<em>同化</em>。</div>
 
 <h2 id="示例">示例</h2>
 
@@ -85,20 +85,20 @@ original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 <ul>
  <li>DIV #4 被渲染在 DIV #1 之下，因为 DIV #1 的 z-index (5) 在 root 元素的层叠上下文中生效，而 DIV #4 的 z-index (6) 在 DIV #3 的层叠上下文中生效。因此，DIV #4 在 DIV #1 之下，因为 DIV #4 归属于 z-index 值较低的 DIV #3 元素。</li>
  <li>由此可得 DIV #2 (z-index 2) 被渲染在 DIV #5 (z-index 1) 之下，因为 DIV #5 归属于 z-index 较高的 DIV #3 元素。</li>
- <li>DIV #3 的 z-index 值是 4，但是这个值独立于 DIV #4，DIV #5 和 DIV #6 的 z-index 值，因为他们从属于不同的层叠上下文。</li>
+ <li>DIV #3 的 z-index 值是 4，但是这个值独立于 DIV #4，DIV #5 和 DIV #6 的 z-index 值，因为他们从属于不同的层叠上下文。</li>
  <li>分辨出层叠的元素在 Z 轴上的<em>渲染顺序</em>的一个简单方法是将它们想象成一系列的版本号，子元素是其父元素版本号之下的次要版本。通过这个方法我们可以轻松地看出为什么一个 z-index 为 1 的元素（DIV #5）层叠于一个 z-index 为 2 的元素（DIV #2）之上，而一个 z-index 为 6 的元素（DIV #4）层叠于 z-index 为 5 的元素（DIV #1）之下。在我们的例子中（依照最终渲染次序排列）：
   <ul>
    <li>Root
     <ul>
-     <li>DIV #2 - z-index 为 2</li>
-     <li>DIV #3 - z-index 为 4
+     <li>DIV #2 - z-index 为 2</li>
+     <li>DIV #3 - z-index 为 4
       <ul>
-       <li>DIV #5 - z-index 为 1，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.1</li>
+       <li>DIV #5 - z-index 为 1，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.1</li>
        <li>DIV #6 - z-index 为 3，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.3</li>
        <li>DIV #4 - z-index 为 6，在一个 z-index 为 4 的元素内层叠，所以渲染次序为 4.6</li>
       </ul>
      </li>
-     <li>DIV #1 - z-index 为 5</li>
+     <li>DIV #1 - z-index 为 5</li>
     </ul>
    </li>
   </ul>
@@ -222,12 +222,12 @@ h1 {
 <h2 id="参考">参考</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1" title="CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2" title="CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3" title="CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1" title="CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2" title="CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3" title="CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
 </ul>
 
 <div class="originaldocinfo">

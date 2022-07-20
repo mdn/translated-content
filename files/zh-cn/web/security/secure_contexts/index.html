@@ -3,7 +3,7 @@ title: Secure contexts
 slug: Web/Security/Secure_Contexts
 translation_of: Web/Security/Secure_Contexts
 ---
-<p><strong>安全上下文</strong>是 <code>Window</code> 与 <code>Worker</code> 中的概念满足了最低标准的身份验证和机密性。许多 Web APIs 的访问仅能在安全上下文中. 安全上下文的主要目标是防止 {{interwiki("wikipedia", "man-in-the-middle attack", "MITM attackers")}} 强大的 APIs 被坏人利用。</p>
+<p><strong>安全上下文</strong>是 <code>Window</code> 与 <code>Worker</code> 中的概念满足了最低标准的身份验证和机密性。许多 Web APIs 的访问仅能在安全上下文中. 安全上下文的主要目标是防止 {{interwiki("wikipedia", "man-in-the-middle attack", "MITM attackers")}} 强大的 APIs 被坏人利用。</p>
 
 <h2 id="为什么要限制某些功能">为什么要限制某些功能？</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/Security/Secure_Contexts
 
 <h2 id="Feature_detection">Feature detection</h2>
 
-<p>Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.</p>
+<p>Pages can use feature detection to check whether they are in a secure context or not by using the {{domxref("isSecureContext")}} boolean, which is exposed on the global scope.</p>
 
 <pre class="brush: js notranslate">if (window.isSecureContext) {
   // Page is a secure context so service workers are now available

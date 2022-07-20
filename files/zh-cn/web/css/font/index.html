@@ -12,7 +12,7 @@ translation_of: Web/CSS/font
 <p>{{EmbedInteractiveExample("pages/css/font.html")}}</p>
 
 <div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
 
@@ -42,7 +42,7 @@ translation_of: Web/CSS/font
    <li>{{cssxref("&lt;line-height&gt;")}}</li>
   </ul>
  </li>
- <li><code>font-style</code>, <code>font-variant</code> 和 <code>font-weight</code> 必须在 <code>font-size</code> 之前</li>
+ <li><code>font-style</code>, <code>font-variant</code> 和 <code>font-weight</code> 必须在 <code>font-size</code> 之前</li>
  <li>在 CSS 2.1 中 <code>font-variant</code> 只可以是 <code>normal</code> 和 <code>small-caps</code></li>
  <li><code>line-height</code> 必须跟在 <code>font-size</code> 后面，由 "/" 分隔，例如 "<code>16px/3</code>"</li>
  <li><code>font-family</code> 必须最后指定</li>
@@ -56,7 +56,7 @@ translation_of: Web/CSS/font
  <dt><code>&lt;'font-variant'&gt;</code></dt>
  <dd>见 {{ Cssxref("font-variant") }} 属性。</dd>
  <dt><code>&lt;'font-weight'&gt;</code></dt>
- <dd>见 {{ Cssxref("font-weight") }} 属性。</dd>
+ <dd>见 {{ Cssxref("font-weight") }} 属性。</dd>
  <dt><code>&lt;'font-size'&gt;</code></dt>
  <dd>见 {{ Cssxref("font-size") }} 属性。</dd>
  <dt><code>&lt;'line-height'&gt;</code></dt>
@@ -111,94 +111,94 @@ p { font: status-bar }</code></pre>
 
 <p>HTML Content</p>
 
-    Change the radio buttons below to see the generated shorthand and it's effect.
+    Change the radio buttons below to see the generated shorthand and it's effect.
 &lt;/p&gt;
 &lt;form action="createShortHand()"&gt;
-    &lt;div class="cf"&gt;
-        &lt;div class="setPropCont"&gt;
-            font-style&lt;br/&gt;
-            &lt;input type="radio" id="font-style-none" name="font_style" checked="" value="" onchange="setCss()"&gt; &lt;label for="font-style-none"&gt;none&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-style-normal" name="font_style" value="normal" onchange="setCss()"&gt; &lt;label for="font-style-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-style-italic" name="font_style" value="italic" onchange="setCss()"&gt; &lt;label for="font-style-italic"&gt;italic&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-style-oblique" name="font_style" value="oblique" onchange="setCss()"&gt; &lt;label for="font-style-oblique"&gt;oblique&lt;/label&gt;
-        &lt;/div&gt;
+    &lt;div class="cf"&gt;
+        &lt;div class="setPropCont"&gt;
+            font-style&lt;br/&gt;
+            &lt;input type="radio" id="font-style-none" name="font_style" checked="" value="" onchange="setCss()"&gt; &lt;label for="font-style-none"&gt;none&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-style-normal" name="font_style" value="normal" onchange="setCss()"&gt; &lt;label for="font-style-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-style-italic" name="font_style" value="italic" onchange="setCss()"&gt; &lt;label for="font-style-italic"&gt;italic&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-style-oblique" name="font_style" value="oblique" onchange="setCss()"&gt; &lt;label for="font-style-oblique"&gt;oblique&lt;/label&gt;
+        &lt;/div&gt;
 
-        &lt;div class="setPropCont"&gt;
-            font-variant&lt;br&gt;
-            &lt;input type="radio" id="font-variant-none" name="font_variant" checked="" value=" " onchange="setCss()"&gt; &lt;label for="font-variant-none"&gt;none&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-variant-normal" name="font_variant" value="normal" onchange="setCss()"&gt; &lt;label for="font-variant-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-variant-small-caps" name="font_variant" value="small-caps" onchange="setCss()"&gt; &lt;label for="font-variant-small-caps"&gt;small-caps&lt;/label&gt;
-        &lt;/div&gt;
+        &lt;div class="setPropCont"&gt;
+            font-variant&lt;br&gt;
+            &lt;input type="radio" id="font-variant-none" name="font_variant" checked="" value=" " onchange="setCss()"&gt; &lt;label for="font-variant-none"&gt;none&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-variant-normal" name="font_variant" value="normal" onchange="setCss()"&gt; &lt;label for="font-variant-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-variant-small-caps" name="font_variant" value="small-caps" onchange="setCss()"&gt; &lt;label for="font-variant-small-caps"&gt;small-caps&lt;/label&gt;
+        &lt;/div&gt;
 
-        &lt;div class="setPropCont"&gt;
-            font-weight&lt;br/&gt;
-            &lt;input type="radio" id="font-weight-none" name="font_weight" value="" onchange="setCss()"&gt; &lt;label for="font-weight-none"&gt;none&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-weight-normal" checked="" name="font_weight" value="400" onchange="setCss()"&gt; &lt;label for="font-weight-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-weight-bold" name="font_weight" value="700" onchange="setCss()"&gt; &lt;label for="font-weight-bold"&gt;bold&lt;/label&gt;
-        &lt;/div&gt;
+        &lt;div class="setPropCont"&gt;
+            font-weight&lt;br/&gt;
+            &lt;input type="radio" id="font-weight-none" name="font_weight" value="" onchange="setCss()"&gt; &lt;label for="font-weight-none"&gt;none&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-weight-normal" checked="" name="font_weight" value="400" onchange="setCss()"&gt; &lt;label for="font-weight-normal"&gt;normal&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-weight-bold" name="font_weight" value="700" onchange="setCss()"&gt; &lt;label for="font-weight-bold"&gt;bold&lt;/label&gt;
+        &lt;/div&gt;
 
-        &lt;div class="setPropCont"&gt;
-            font-size&lt;br/&gt;
-            &lt;input type="radio" id="font-size-12px" name="font_size" value="12px" onchange="setCss()"&gt; &lt;label for="font-size-12px"&gt;12px&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-size-16px" name="font_size" value="16px" checked="" onchange="setCss()"&gt; &lt;label for="font-size-16px"&gt;16px&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-size-24px" name="font_size" value="24px" onchange="setCss()"&gt; &lt;label for="font-size-24px"&gt;24px&lt;/label&gt;
-        &lt;/div&gt;
+        &lt;div class="setPropCont"&gt;
+            font-size&lt;br/&gt;
+            &lt;input type="radio" id="font-size-12px" name="font_size" value="12px" onchange="setCss()"&gt; &lt;label for="font-size-12px"&gt;12px&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-size-16px" name="font_size" value="16px" checked="" onchange="setCss()"&gt; &lt;label for="font-size-16px"&gt;16px&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-size-24px" name="font_size" value="24px" onchange="setCss()"&gt; &lt;label for="font-size-24px"&gt;24px&lt;/label&gt;
+        &lt;/div&gt;
 
-        &lt;div class="setPropCont"&gt;
-            line-height&lt;br/&gt;
-            &lt;input type="radio" id="line-height-none" name="line_height" checked="" value="" onchange="setCss()"&gt; &lt;label for="line-height-none"&gt;none&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="line-height-1.2" name="line_height" value="/1.2" onchange="setCss()"&gt; &lt;label for="line-height-1.2"&gt;1.2&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="line-height-3" name="line_height" value="/3" onchange="setCss()"&gt; &lt;label for="line-height-3"&gt;3&lt;/label&gt;
-        &lt;/div&gt;
+        &lt;div class="setPropCont"&gt;
+            line-height&lt;br/&gt;
+            &lt;input type="radio" id="line-height-none" name="line_height" checked="" value="" onchange="setCss()"&gt; &lt;label for="line-height-none"&gt;none&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="line-height-1.2" name="line_height" value="/1.2" onchange="setCss()"&gt; &lt;label for="line-height-1.2"&gt;1.2&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="line-height-3" name="line_height" value="/3" onchange="setCss()"&gt; &lt;label for="line-height-3"&gt;3&lt;/label&gt;
+        &lt;/div&gt;
 
-        &lt;div class="setPropCont"&gt;
-            font-family&lt;br/&gt;
-            &lt;input type="radio" id="font-family-courier" name="font_family" checked="" value="courier" onchange="setCss(5,'courier')"&gt; &lt;label for="font-family-courier"&gt;courier&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-family-serif" name="font_family" value="serif" onchange="setCss()"&gt; &lt;label for="font-family-serif"&gt;serif&lt;/label&gt;&lt;br/&gt;
-            &lt;input type="radio" id="font-family-sans-serif" name="font_family" value="sans-serif" onchange="setCss()"&gt; &lt;label for="font-family-sans-serif"&gt;sans-serif&lt;/label&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        &lt;div class="setPropCont"&gt;
+            font-family&lt;br/&gt;
+            &lt;input type="radio" id="font-family-courier" name="font_family" checked="" value="courier" onchange="setCss(5,'courier')"&gt; &lt;label for="font-family-courier"&gt;courier&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-family-serif" name="font_family" value="serif" onchange="setCss()"&gt; &lt;label for="font-family-serif"&gt;serif&lt;/label&gt;&lt;br/&gt;
+            &lt;input type="radio" id="font-family-sans-serif" name="font_family" value="sans-serif" onchange="setCss()"&gt; &lt;label for="font-family-sans-serif"&gt;sans-serif&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-    &lt;div class="cf propInputs"&gt;
-        &lt;div class="propInputCont tar"&gt;
-            font :
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss" id="input_font_style"&gt;&lt;br/&gt;
-            font-style &lt;br/&gt;
-            optional
+    &lt;div class="cf propInputs"&gt;
+        &lt;div class="propInputCont tar"&gt;
+            font :
+        &lt;/div&gt;
+        &lt;div class="propInputCont"&gt;
+            &lt;input type="text" class="curCss" id="input_font_style"&gt;&lt;br/&gt;
+            font-style &lt;br/&gt;
+            optional
 
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss" id="input_font_variant"&gt; &lt;br/&gt;
-            font-variant &lt;br/&gt;
-            optional
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss" id="input_font_weight"&gt; &lt;br/&gt;
-            font-weight &lt;br/&gt;
-            optional
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss mandatory" id="input_font_size"&gt; &lt;br/&gt;
-            font-size &lt;br/&gt;
-            mandatory
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss" id="input_line_height"&gt; &lt;br/&gt;
-            line-height &lt;br/&gt;
-            optional
-        &lt;/div&gt;
-        &lt;div class="propInputCont"&gt;
-            &lt;input type="text" class="curCss mandatory" id="input_font_family"&gt; &lt;br/&gt;
-            font-family &lt;br/&gt;
-            mandatory
-        &lt;/div&gt;
-    &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="propInputCont"&gt;
+            &lt;input type="text" class="curCss" id="input_font_variant"&gt; &lt;br/&gt;
+            font-variant &lt;br/&gt;
+            optional
+        &lt;/div&gt;
+        &lt;div class="propInputCont"&gt;
+            &lt;input type="text" class="curCss" id="input_font_weight"&gt; &lt;br/&gt;
+            font-weight &lt;br/&gt;
+            optional
+        &lt;/div&gt;
+        &lt;div class="propInputCont"&gt;
+            &lt;input type="text" class="curCss mandatory" id="input_font_size"&gt; &lt;br/&gt;
+            font-size &lt;br/&gt;
+            mandatory
+        &lt;/div&gt;
+        &lt;div class="propInputCont"&gt;
+            &lt;input type="text" class="curCss" id="input_line_height"&gt; &lt;br/&gt;
+            line-height &lt;br/&gt;
+            optional
+        &lt;/div&gt;
+        &lt;div class="propInputCont"&gt;
+            &lt;input type="text" class="curCss mandatory" id="input_font_family"&gt; &lt;br/&gt;
+            font-family &lt;br/&gt;
+            mandatory
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/form&gt;
 
 &lt;div class="fontShortHand"&gt;
-    This is some sample text.
+    This is some sample text.
 &lt;/div&gt;
 </pre>
 
@@ -209,41 +209,41 @@ p { font: status-bar }</code></pre>
 }
 
 .propInputCont {
-  float: left;
-  text-align: center;
-  margin-right: 5px;
-  width: 80px;
+  float: left;
+  text-align: center;
+  margin-right: 5px;
+  width: 80px;
 }
 
 .setPropCont {
-  float: left;
-  margin-right: 5px;
-  width: 120px;
+  float: left;
+  margin-right: 5px;
+  width: 120px;
 }
 
 .propInputs, .setPropCont {
-  margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .curCss {
-  border: none;
-  border-bottom: 1px solid black;
-  text-align: center;
-  width: 80px;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  width: 80px;
 }
 
 .mandatory {
-  border-bottom-color: red;
+  border-bottom-color: red;
 }
 
 .cf:before,
 .cf:after {
-  content: " ";
-  display: table;
+  content: " ";
+  display: table;
 }
 
 .cf:after {
-  clear: both;
+  clear: both;
 }
 
 .tar {
@@ -254,51 +254,51 @@ p { font: status-bar }</code></pre>
 <p>JavaScript Content</p>
 
 <pre class="brush: js" class="hidden">var textAreas = document.getElementsByClassName("curCss"),
-    shortText = "",
-    getCheckedValue,
-    setCss,
-    getProperties,
-    injectCss;
+    shortText = "",
+    getCheckedValue,
+    setCss,
+    getProperties,
+    injectCss;
 
 getProperties = function () {
-  shortText =
-      getCheckedValue("font_style") + " " +
-      getCheckedValue("font_variant") + " " +
-      getCheckedValue("font_weight") + " " +
-      getCheckedValue("font_size") +
-      getCheckedValue("line_height") + " " +
-      getCheckedValue("font_family");
+  shortText =
+      getCheckedValue("font_style") + " " +
+      getCheckedValue("font_variant") + " " +
+      getCheckedValue("font_weight") + " " +
+      getCheckedValue("font_size") +
+      getCheckedValue("line_height") + " " +
+      getCheckedValue("font_family");
 
-  return shortText;
+  return shortText;
 }
 
 getCheckedValue = function(radio_name) {
-  oRadio = document.forms[0].elements[radio_name];
-  for (var i = 0; i &lt; oRadio.length; i++) {
-    if(oRadio[i].checked) {
-      var propInput = "input_" + radio_name,
-          curElemName = "input_" + radio_name,
-          curElem = document.getElementById(curElemName);
-      curElem.value = oRadio[i].value;
+  oRadio = document.forms[0].elements[radio_name];
+  for (var i = 0; i &lt; oRadio.length; i++) {
+    if(oRadio[i].checked) {
+      var propInput = "input_" + radio_name,
+          curElemName = "input_" + radio_name,
+          curElem = document.getElementById(curElemName);
+      curElem.value = oRadio[i].value;
 
-      return oRadio[i].value;
-    }
-  }
+      return oRadio[i].value;
+    }
+  }
 }
 
 setCss = function () {
-  getProperties();
-  injectCss(shortText);
+  getProperties();
+  injectCss(shortText);
 }
 
 injectCss = function(cssFragment) {
-  old = document.body.getElementsByTagName("style");
-  if (old.length &gt; 1) {
-    old[1].parentElement.removeChild(old[1]);
-  }
-  css = document.createElement("style");
-  css.innerHTML = ".fontShortHand{font: " + cssFragment + "}";
-  document.body.appendChild(css);
+  old = document.body.getElementsByTagName("style");
+  if (old.length &gt; 1) {
+    old[1].parentElement.removeChild(old[1]);
+  }
+  css = document.createElement("style");
+  css.innerHTML = ".fontShortHand{font: " + cssFragment + "}";
+  document.body.appendChild(css);
 }
 
 setCss();</pre>

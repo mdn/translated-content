@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>[@@split]()</code></strong> 方法切割 {{jsxref("String")}} 对象为一个其子字符串的数组 。</p>
+<p><strong><code>[@@split]()</code></strong> 方法切割 {{jsxref("String")}} 对象为一个其子字符串的数组 。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
  <dd>切割操作的目标字符串</dd>
  <dt><code>limit</code></dt>
  <dd>
- <p>可选。一个为了限制切割数量的特定整数。 <code>[@@split]()</code> 防范仍会切割每个匹配正则模式的匹配项，直到切割数量达到该限制数，除非提前切割完字符串。</p>
+ <p>可选。一个为了限制切割数量的特定整数。 <code>[@@split]()</code> 防范仍会切割每个匹配正则模式的匹配项，直到切割数量达到该限制数，除非提前切割完字符串。</p>
  </dd>
 </dl>
 
@@ -48,7 +48,7 @@ var result = re[Symbol.split](str);
 console.log(result);  // ["2016", "01", "02"]
 </pre>
 
-<h3 id="在子类中使用_split">在子类中使用 <code>@@split</code></h3>
+<h3 id="在子类中使用_split">在子类中使用 <code>@@split</code></h3>
 
 <p>{{jsxref("RegExp")}} 的子类可以覆写 <code>[@@split]()</code>方法来修改默认行为。</p>
 
@@ -82,7 +82,7 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
   <tr>
    <td>{{SpecName('ESDraft', '#sec-regexp.prototype-@@split', 'RegExp.prototype[@@split]')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

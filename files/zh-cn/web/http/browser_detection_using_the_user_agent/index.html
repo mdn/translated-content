@@ -9,11 +9,11 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 ---
 <div>{{HTTPSidebar}}</div>
 
-<div> </div>
+<div> </div>
 
 <div>为不同浏览器提供不同的网页或服务通常是一个坏主意。互联网的本意是让任何人都可以访问，无论他们使用哪个浏览器或设备。有一些方法可以根据功能的可用性而不是针对特定的浏览器来开发您的网站以逐步增强自身。</div>
 
-<div> </div>
+<div> </div>
 
 <p> 但浏览器和标准并不完美，仍然需要检测浏览器的一些边缘情况。使用用户代理检测浏览器看起来很简单，但是做得很好，实际上是一个非常困难的问题。本文档将指导您尽可能正确地进行此操作。</p>
 
@@ -27,11 +27,11 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 
 <dl>
  <dt>你正尝试解决某个浏览器的某个版本中的一个特定错误吗？</dt>
- <dd>在专业论坛中查找、询问：你不太可能是第一个遇到这个问题的人。 你也可以询问专家，或者仅仅是那些和你持有不同观点的人们，他们能提供给你不同的思路。如果这个问题看上去是不常见的，你需要检查一下是否这个错误已经通过错误跟踪系统 (<a class="link-https" href="https://bugzilla.mozilla.org">Mozilla</a>; <a class="external" href="http://bugs.webkit.org">WebKit</a>; <a class="link-https" href="https://bugs.opera.com/">Opera</a>) 报告给浏览器厂商。浏览器开发商非常关注错误报告，相关的分析也可能会有其他解决方案的提示。</dd>
+ <dd>在专业论坛中查找、询问：你不太可能是第一个遇到这个问题的人。 你也可以询问专家，或者仅仅是那些和你持有不同观点的人们，他们能提供给你不同的思路。如果这个问题看上去是不常见的，你需要检查一下是否这个错误已经通过错误跟踪系统 (<a class="link-https" href="https://bugzilla.mozilla.org">Mozilla</a>; <a class="external" href="http://bugs.webkit.org">WebKit</a>; <a class="link-https" href="https://bugs.opera.com/">Opera</a>) 报告给浏览器厂商。浏览器开发商非常关注错误报告，相关的分析也可能会有其他解决方案的提示。</dd>
  <dt>你正尝试检查某个特性是否可用吗？</dt>
  <dd>你的站点需要使用一个特定的网页特性，然而有一些浏览器还不支持该特性，你想发给那些使用不支持该特性的浏览器的用户一个更老的网页，该网页有更少的特性，但是你知道他们将正常显示。这是最糟糕的使用用户代理检测的理由，因为有很大的概率最终其余的所有浏览器都将使用这个特性。你应该尽你最大努力在这种可能情况下阻止使用用户代理嗅探器，作为替代，使用功能检测器。</dd>
  <dt>你想依据正在使用的是哪个浏览器来提供不同的 HTML 页面吗？</dt>
- <dd>这通常是一个坏的做法，不过有些情况下这又是必要的。在这些情形下，你首先应该分析你所处的情形并确定这确实是必要的。你是否可以通过添加一些无语义的 {{ HTMLElement("div") }} 或者 {{ HTMLElement("span") }} 元素来避免呢？想成功使用用户代理检测是困难的，值得牺牲一些 HTML 的整洁性来换取。另外，也请重新思考一下你的设计：能否通过使用渐进增强或者流体布局来去除使用用户代理检测的需要呢？</dd>
+ <dd>这通常是一个坏的做法，不过有些情况下这又是必要的。在这些情形下，你首先应该分析你所处的情形并确定这确实是必要的。你是否可以通过添加一些无语义的 {{ HTMLElement("div") }} 或者 {{ HTMLElement("span") }} 元素来避免呢？想成功使用用户代理检测是困难的，值得牺牲一些 HTML 的整洁性来换取。另外，也请重新思考一下你的设计：能否通过使用渐进增强或者流体布局来去除使用用户代理检测的需要呢？</dd>
 </dl>
 
 <h2 id="避免进行用户代理检测">避免进行用户代理检测</h2>
@@ -62,10 +62,10 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col"> </th>
+   <th scope="col"> </th>
    <th scope="col">必须包含</th>
    <th scope="col">禁止包含</th>
-   <th scope="col"> </th>
+   <th scope="col"> </th>
   </tr>
  </thead>
  <tbody>
@@ -73,25 +73,25 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
    <td>Firefox</td>
    <td>Firefox/xyz</td>
    <td>Seamonkey/xyz</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>Seamonkey</td>
    <td>Seamonkey/xyz</td>
-   <td> </td>
-   <td> </td>
+   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>Chrome</td>
    <td>Chrome/xyz</td>
    <td>Chromium/xyz</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>Chromium</td>
    <td>Chromium/xyz</td>
-   <td> </td>
-   <td> </td>
+   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>Safari</td>
@@ -104,19 +104,19 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
    <td>
     <p>OPR/xyz <sup>[1]</sup></p>
 
-    <p>Opera/xyz <sup>[2]</sup></p>
+    <p>Opera/xyz <sup>[2]</sup></p>
    </td>
-   <td> </td>
+   <td> </td>
    <td>
-    <p><sup>[1]</sup> Opera 15+ (基于 Blink 的引擎) </p>
+    <p><sup>[1]</sup> Opera 15+ (基于 Blink 的引擎) </p>
 
-    <p><sup>[2]</sup> Opera 12- (基于 Presto 的引擎)</p>
+    <p><sup>[2]</sup> Opera 12- (基于 Presto 的引擎)</p>
    </td>
   </tr>
   <tr>
    <td>Internet Explorer</td>
    <td>; MSIE xyz;</td>
-   <td> </td>
+   <td> </td>
    <td>IE 浏览器的名字并没有使用<em>BrowserName/VersionNumber</em>的格式</td>
   </tr>
  </tbody>
@@ -139,16 +139,16 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col"> </th>
+   <th scope="col"> </th>
    <th scope="col">必须包含</th>
-   <th scope="col"> </th>
+   <th scope="col"> </th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td>Gecko</td>
    <td>Gecko/xyz</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>WebKit</td>
@@ -158,7 +158,7 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
   <tr>
    <td>Presto</td>
    <td>Opera/xyz</td>
-   <td><strong>注：</strong> 在 Opera 浏览器在 15 及以上的版本中，已经不再使用 Presto（参见'Blink'）。</td>
+   <td><strong>注：</strong> 在 Opera 浏览器在 15 及以上的版本中，已经不再使用 Presto（参见'Blink'）。</td>
   </tr>
   <tr>
    <td>Trident</td>
@@ -168,14 +168,14 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
   <tr>
    <td>Blink</td>
    <td>Chrome/xyz</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="渲染引擎版本">渲染引擎版本</h2>
 
-<p> 除了 Gecko 这个显著的例外，大部分的渲染引擎将版本号放置在渲染引擎/版本号标记中。 该引擎将 Gecko 版本号放置在用户代理的注释部分，在 rv 字符串之后。在手机版 Gecko14 以及桌面版 Gecko17 之后，该引擎也在 Gecko/version 标记处放置版本号的值（先前的版本中此处放置的是构建日期，然后固定的日期调用 GeckoTrail）。</p>
+<p> 除了 Gecko 这个显著的例外，大部分的渲染引擎将版本号放置在渲染引擎/版本号标记中。 该引擎将 Gecko 版本号放置在用户代理的注释部分，在 rv 字符串之后。在手机版 Gecko14 以及桌面版 Gecko17 之后，该引擎也在 Gecko/version 标记处放置版本号的值（先前的版本中此处放置的是构建日期，然后固定的日期调用 GeckoTrail）。</p>
 
 <h2 id="操作系统">操作系统</h2>
 
@@ -206,7 +206,7 @@ translation_of: Web/HTTP/Browser_detection_using_the_user_agent
  <tbody>
   <tr>
    <td>Mozilla (Gecko, Firefox)</td>
-   <td>注释中的 <a href="/en-US/docs/Gecko_user_agent_string_reference"><strong>Mobile 或</strong><strong>Tablet 标记</strong></a></td>
+   <td>注释中的 <a href="/en-US/docs/Gecko_user_agent_string_reference"><strong>Mobile 或</strong><strong>Tablet 标记</strong></a></td>
    <td>Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0</td>
   </tr>
   <tr>

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>JSON.stringify()</strong></code> 方法将一个 JavaScript 对象或值转换为 JSON 字符串，如果指定了一个 replacer 函数，则可以选择性地替换值，或者指定的 replacer 是数组，则可选择性地仅包含数组指定的属性。</p>
+<p><code><strong>JSON.stringify()</strong></code> 方法将一个 JavaScript 对象或值转换为 JSON 字符串，如果指定了一个 replacer 函数，则可以选择性地替换值，或者指定的 replacer 是数组，则可选择性地仅包含数组指定的属性。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/json-stringify.html")}}</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 <ul>
  <li>当在循环引用时会抛出异常{{JSxRef("TypeError")}} ("cyclic object value")（循环对象值）</li>
- <li>当尝试去转换 {{jsxref("BigInt")}} 类型的值会抛出{{JSxRef("TypeError")}} ("BigInt value can't be serialized in JSON")（BigInt 值不能 JSON 序列化）.</li>
+ <li>当尝试去转换 {{jsxref("BigInt")}} 类型的值会抛出{{JSxRef("TypeError")}} ("BigInt value can't be serialized in JSON")（BigInt 值不能 JSON 序列化）.</li>
 </ul>
 
 <h2 id="描述">描述</h2>
@@ -52,7 +52,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
  <li>转换值如果有 toJSON() 方法，该方法定义什么值将被序列化。</li>
  <li>非数组对象的属性不能保证以特定的顺序出现在序列化后的字符串中。</li>
  <li>布尔值、数字、字符串的包装对象在序列化过程中会自动转换成对应的原始值。</li>
- <li><code>undefined</code>、任意的函数以及 symbol 值，在序列化过程中会被忽略（出现在非数组对象的属性值中时）或者被转换成 <code>null</code>（出现在数组中时）。函数、undefined 被单独转换时，会返回 undefined，如<code>JSON.stringify(function(){})</code> or <code>JSON.stringify(undefined)</code>.</li>
+ <li><code>undefined</code>、任意的函数以及 symbol 值，在序列化过程中会被忽略（出现在非数组对象的属性值中时）或者被转换成 <code>null</code>（出现在数组中时）。函数、undefined 被单独转换时，会返回 undefined，如<code>JSON.stringify(function(){})</code> or <code>JSON.stringify(undefined)</code>.</li>
  <li>对包含循环引用的对象（对象之间相互引用，形成无限循环）执行此方法，会抛出错误。</li>
  <li>所有以 symbol 为属性键的属性都会被完全忽略掉，即便 <code>replacer</code> 参数中强制指定包含了它们。</li>
  <li>Date 日期调用了 toJSON() 将其转换为了 string 字符串（同 Date.toISOString()），因此会被当做字符串处理。</li>
@@ -89,12 +89,12 @@ JSON.stringify({[Symbol.for("foo")]: "foo"}, [Symbol.for("foo")]);
 // '{}'
 
 JSON.stringify(
-    {[Symbol.for("foo")]: "foo"},
-    function (k, v) {
-        if (typeof k === "symbol"){
-            return "a symbol";
-        }
-    }
+    {[Symbol.for("foo")]: "foo"},
+    function (k, v) {
+        if (typeof k === "symbol"){
+            return "a symbol";
+        }
+    }
 );
 
 
@@ -102,13 +102,13 @@ JSON.stringify(
 
 // 不可枚举的属性默认会被忽略：
 JSON.stringify(
-    Object.create(
-        null,
-        {
-            x: { value: 'x', enumerable: false },
-            y: { value: 'y', enumerable: true }
-        }
-    )
+    Object.create(
+        null,
+        {
+            x: { value: 'x', enumerable: false },
+            y: { value: 'y', enumerable: true }
+        }
+    )
 );
 
 // "{"y":"y"}"
@@ -118,19 +118,19 @@ JSON.stringify(
 
 <p>replacer 参数可以是一个函数或者一个数组。作为函数，它有两个参数，键（key）和值（value），它们都会被序列化。</p>
 
-<p>在开始时，<code><var>replacer</var></code> 函数会被传入一个空字符串作为 <code>key</code> 值，代表着要被 <code>stringify</code> 的这个对象。随后每个对象或数组上的属性会被依次传入。 </p>
+<p>在开始时，<code><var>replacer</var></code> 函数会被传入一个空字符串作为 <code>key</code> 值，代表着要被 <code>stringify</code> 的这个对象。随后每个对象或数组上的属性会被依次传入。 </p>
 
-<p>函数应当返回 JSON 字符串中的 value, 如下所示：</p>
+<p>函数应当返回 JSON 字符串中的 value, 如下所示：</p>
 
 <ul>
  <li>如果返回一个 {{jsxref("Number")}}, 转换成相应的字符串作为属性值被添加入 JSON 字符串。</li>
  <li>如果返回一个 {{jsxref("String")}}, 该字符串作为属性值被添加入 JSON 字符串。</li>
- <li>如果返回一个 {{jsxref("Boolean")}}, "true" 或者 "false" 作为属性值被添加入 JSON 字符串。</li>
+ <li>如果返回一个 {{jsxref("Boolean")}}, "true" 或者 "false" 作为属性值被添加入 JSON 字符串。</li>
  <li>如果返回任何其他对象，该对象递归地序列化成 JSON 字符串，对每个属性调用 replacer 方法。除非该对象是一个函数，这种情况将不会被序列化成 JSON 字符串。</li>
  <li>如果返回 undefined，该属性值不会在 JSON 字符串中输出。</li>
 </ul>
 
-<p><strong>注意：</strong> 不能用 replacer 方法，从数组中移除值（values），如若返回 undefined 或者一个函数，将会被 null 取代。</p>
+<p><strong>注意：</strong> 不能用 replacer 方法，从数组中移除值（values），如若返回 undefined 或者一个函数，将会被 null 取代。</p>
 
 <h4 id="例子function">例子 (function)</h4>
 
@@ -144,11 +144,11 @@ JSON.stringify(
 var foo = {foundation: "Mozilla", model: "box", week: 45, transport: "car", month: 7};
 var jsonString = JSON.stringify(foo, replacer);</code></pre>
 
-<p>JSON 序列化结果为 <code>{"week":45,"month":7}</code>.</p>
+<p>JSON 序列化结果为 <code>{"week":45,"month":7}</code>.</p>
 
 <h4 id="例子_array">例子 (array)</h4>
 
-<p>如果 <code>replacer</code> 是一个数组，数组的值代表将被序列化成 JSON 字符串的属性名。</p>
+<p>如果 <code>replacer</code> 是一个数组，数组的值代表将被序列化成 JSON 字符串的属性名。</p>
 
 <pre><code>JSON.stringify(foo, ['week', 'month']);
 // '{"week":45,"month":7}', 只保留 “week” 和 “month” 属性值。</code></pre>
@@ -263,5 +263,5 @@ console.log(restoredSession);
 
 <ul>
  <li>{{JSxRef("JSON.parse()")}}</li>
- <li><a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> – Introduces two functions: <code>JSON.decycle</code> and <code>JSON.retrocycle</code>. These allow encoding and decoding of cyclical structures and DAGs into an extended and retrocompatible JSON format.</li>
+ <li><a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> – Introduces two functions: <code>JSON.decycle</code> and <code>JSON.retrocycle</code>. These allow encoding and decoding of cyclical structures and DAGs into an extended and retrocompatible JSON format.</li>
 </ul>

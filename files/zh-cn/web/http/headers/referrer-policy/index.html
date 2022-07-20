@@ -10,7 +10,7 @@ tags:
   - 首部
 translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
-<div><strong><code>Referrer-Policy</code></strong> 首部用来监管哪些访问来源信息——会在 {{HTTPHeader("Referer")}}  中发送——应该被包含在生成的请求当中。</div>
+<div><strong><code>Referrer-Policy</code></strong> 首部用来监管哪些访问来源信息——会在 {{HTTPHeader("Referer")}}  中发送——应该被包含在生成的请求当中。</div>
 
 <table class="properties">
  <tbody>
@@ -43,11 +43,11 @@ Referrer-Policy: unsafe-url
 
 <dl>
  <dt>no-referrer</dt>
- <dd>整个 {{HTTPHeader("Referer")}}  首部会被移除。访问来源信息不随着请求一起发送。</dd>
+ <dd>整个 {{HTTPHeader("Referer")}}  首部会被移除。访问来源信息不随着请求一起发送。</dd>
  <dt>no-referrer-when-downgrade（默认值）</dt>
  <dd>在没有指定任何策略的情况下用户代理的默认行为。在同等安全级别的情况下，引用页面的地址会被发送 (HTTPS-&gt;HTTPS)，但是在降级的情况下不会被发送 (HTTPS-&gt;HTTP)。</dd>
  <dt>origin</dt>
- <dd>在任何情况下，仅发送文件的源作为引用地址。例如  <code>https://example.com/page.html</code> 会将 <code>https://example.com/ 作为引用地址。</code></dd>
+ <dd>在任何情况下，仅发送文件的源作为引用地址。例如  <code>https://example.com/page.html</code> 会将 <code>https://example.com/ 作为引用地址。</code></dd>
  <dt>origin-when-cross-origin</dt>
  <dd>对于同源的请求，会发送完整的 URL 作为引用地址，但是对于非同源请求仅发送文件的源。</dd>
  <dt>same-origin</dt>
@@ -68,11 +68,11 @@ Referrer-Policy: unsafe-url
 
 <pre>&lt;meta name="referrer" content="origin"&gt;</pre>
 
-<p>或者用 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("img")}}、{{HTMLElement("iframe")}}、{{HTMLElement("script")}} 或者 {{HTMLElement("link")}} 元素上的 <code>referrerpolicy</code> 属性为其设置独立的请求策略。</p>
+<p>或者用 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("img")}}、{{HTMLElement("iframe")}}、{{HTMLElement("script")}} 或者 {{HTMLElement("link")}} 元素上的 <code>referrerpolicy</code> 属性为其设置独立的请求策略。</p>
 
 <pre>&lt;a href="http://example.com" referrerpolicy="origin"&gt;</pre>
 
-<p>另外也可以在 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或者 {{HTMLElement("link")}} 元素上将 <code>rel</code> 属性设置为 <code>noreferrer</code>。</p>
+<p>另外也可以在 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或者 {{HTMLElement("link")}} 元素上将 <code>rel</code> 属性设置为 <code>noreferrer</code>。</p>
 
 <pre>&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
 
@@ -81,8 +81,8 @@ Referrer-Policy: unsafe-url
 <p>CSS 可以从样式表获取引用的资源，这些资源也可以遵从 referrer 策略：</p>
 
 <ul>
- <li>外部 CSS 样式表使用默认策略 (<code>no-referrer-when-downgrade</code>)，除非 CSS 样式表的响应消息通过 <code>Referrer-Policy</code> 首部覆盖该策略。</li>
- <li>对于 {{HTMLElement("style")}} 元素或 <code><a href="/zh-CN/docs/Web/API/HTMLElement/style">style</a></code> 属性，则遵从文档的 referrer 策略。</li>
+ <li>外部 CSS 样式表使用默认策略 (<code>no-referrer-when-downgrade</code>)，除非 CSS 样式表的响应消息通过 <code>Referrer-Policy</code> 首部覆盖该策略。</li>
+ <li>对于 {{HTMLElement("style")}} 元素或 <code><a href="/zh-CN/docs/Web/API/HTMLElement/style">style</a></code> 属性，则遵从文档的 referrer 策略。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
@@ -208,7 +208,7 @@ Referrer-Policy: unsafe-url
 
 <pre><code>Referrer-Policy: no-referrer, strict-origin-when-cross-origin</code></pre>
 
-<p>在上面的场景中，<code>no-referrer</code> 仅在 <code>strict-origin-when-cross-origin</code> 不被浏览器支持的情况下被使用。</p>
+<p>在上面的场景中，<code>no-referrer</code> 仅在 <code>strict-origin-when-cross-origin</code> 不被浏览器支持的情况下被使用。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -229,7 +229,7 @@ Referrer-Policy: unsafe-url
 
 <p>{{Compat("http.headers.Referrer-Policy")}}</p>
 
-<p><strong>注意：</strong> 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值 —— network.http.referer.userControlPolicy 。可选的值包括：</p>
+<p><strong>注意：</strong> 从版本 53 起，Gecko 在 about:config 中提供了一项偏好设置，使得用户可以自行设定默认的 Referrer-Policy 值 —— network.http.referer.userControlPolicy 。可选的值包括：</p>
 
 <ul>
  <li>0 — <code>no-referrer</code></li>
@@ -246,7 +246,7 @@ Referrer-Policy: unsafe-url
   <ul>
    <li>A {{HTMLElement("meta")}} element with a <a href="/en-US/docs/Web/HTML/Element/meta#attr-name">name of <code>referrer</code></a>.</li>
    <li>A <code>referrerpolicy</code> attribute on an {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, or {{HTMLElement("link")}} element.</li>
-   <li>The <code>noreferrer</code> link relation on an a, area, or link element  (<code>rel="noreferrer"</code>).</li>
+   <li>The <code>noreferrer</code> link relation on an a, area, or link element  (<code>rel="noreferrer"</code>).</li>
    <li>When using <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>: {{domxref("Request.referrerPolicy")}}</li>
   </ul>
  </li>

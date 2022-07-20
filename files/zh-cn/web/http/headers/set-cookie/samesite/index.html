@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <h2 id="值">值</h2>
 
-<p> <code>SameSite</code> 接受下面三个值：</p>
+<p> <code>SameSite</code> 接受下面三个值：</p>
 
 <h3 id="Lax"><code>Lax</code></h3>
 
@@ -46,7 +46,7 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <pre class="example-good notranslate">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
 
-<p><a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie"><code>Secure</code></a> cookie 仅通过 HTTPS 协议加密发送到服务器。请注意，不安全站点（<code>http:</code>）无法使用 <code>Secure</code> 指令设置 cookies。</p>
+<p><a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie"><code>Secure</code></a> cookie 仅通过 HTTPS 协议加密发送到服务器。请注意，不安全站点（<code>http:</code>）无法使用 <code>Secure</code> 指令设置 cookies。</p>
 
 <h3 id="没有_SameSite_属性的Cookies默认为_SameSiteLax">没有 <code>SameSite</code> 属性的 Cookies 默认为 <code>SameSite=Lax</code></h3>
 
@@ -69,8 +69,8 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <pre class="notranslate">RewriteEngine on
 RewriteBase "/"
-RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
-RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
+RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
+RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
 RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;01;https://www.example.org;30/;SameSite=None;Secure]
 RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;02;https://www.example.org;30/;SameSite=None;Secure]
 RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule;03;https://www.example.org;30/;SameSite=None;Secure]

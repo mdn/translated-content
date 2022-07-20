@@ -11,7 +11,7 @@ translation_of: Web/SVG/Attribute/fill-rule
 ---
 <p>« <a href="/en/SVG/Attribute" title="en/SVG/Attribute">SVG 属性参考主页</a></p>
 
-<p><strong><code>fill-rule</code></strong>  是一个外观属性，它定义了用来确定一个多边形内部区域的算法。</p>
+<p><strong><code>fill-rule</code></strong>  是一个外观属性，它定义了用来确定一个多边形内部区域的算法。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意：</strong>作为一个外观属性，fill-rule 可以被用于 CSS。</p>
@@ -28,15 +28,15 @@ translation_of: Web/SVG/Attribute/fill-rule
 
 <pre class="brush: html">&lt;svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- fill-rule 的默认值 --&gt;
-  &lt;polygon fill-rule="nonzero" stroke="red"
-   points="50,0 21,90 98,35 2,35 79,90"/&gt;
+  &lt;polygon fill-rule="nonzero" stroke="red"
+   points="50,0 21,90 98,35 2,35 79,90"/&gt;
 
   &lt;!--
   从这个形状的中心到无穷远处有两条路径段（红色部分），因此
-  该区域被认为是形状外部，并且没有被填充。
+  该区域被认为是形状外部，并且没有被填充。
   --&gt;
-  &lt;polygon fill-rule="evenodd" stroke="red"
-   points="150,0 121,90 198,35 102,35 179,90"/&gt;
+  &lt;polygon fill-rule="evenodd" stroke="red"
+   points="150,0 121,90 198,35 102,35 179,90"/&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('topExample', '100%', 200)}}</p>
@@ -69,7 +69,7 @@ translation_of: Web/SVG/Attribute/fill-rule
  </tbody>
 </table>
 
-<p><code>fill-rule</code> 属性为如何确定一个形状的内部（即可以被填充的区域）提供了两个可选值：</p>
+<p><code>fill-rule</code> 属性为如何确定一个形状的内部（即可以被填充的区域）提供了两个可选值：</p>
 
 <dl>
  <dt>
@@ -77,7 +77,7 @@ translation_of: Web/SVG/Attribute/fill-rule
  </dt>
 </dl>
 
-<p>这个值确定了某点属于该形状的“内部”还是“外部”：从该点向任意方向的无限远处绘制射线，然后检测形状与射线相交的位置。从 0 开始统计，路径上每一条从左到右（顺时针）跨过射线的线段都会让结果加 1，每条从右向左（逆时针）跨过射线的线段都会让结果减 1。当统计结束后，如果结果为 0，则点在外部；如果结果不为 0，则点在内部。</p>
+<p>这个值确定了某点属于该形状的“内部”还是“外部”：从该点向任意方向的无限远处绘制射线，然后检测形状与射线相交的位置。从 0 开始统计，路径上每一条从左到右（顺时针）跨过射线的线段都会让结果加 1，每条从右向左（逆时针）跨过射线的线段都会让结果减 1。当统计结束后，如果结果为 0，则点在外部；如果结果不为 0，则点在内部。</p>
 
 <h4 id="Example">Example</h4>
 
@@ -87,25 +87,25 @@ translation_of: Web/SVG/Attribute/fill-rule
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- nonzero 填充规则被用于路径段会相交的形状上的效果 --&gt;
-  &lt;polygon fill-rule="nonzero" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/&gt;
+  &lt;!-- nonzero 填充规则被用于路径段会相交的形状上的效果 --&gt;
+  &lt;polygon fill-rule="nonzero" stroke="red"
+           points="50,0 21,90 98,35 2,35 79,90"/&gt;
 
-  &lt;!--
-  nonzero 填充规则被用于一个形状在另一形状内部的效果
-  这两个正方形的路径段方向相同（都是顺时针）
-  --&gt;
-  &lt;path fill-rule="nonzero" stroke="red"
-        d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/&gt;
+  &lt;!--
+  nonzero 填充规则被用于一个形状在另一形状内部的效果
+  这两个正方形的路径段方向相同（都是顺时针）
+  --&gt;
+  &lt;path fill-rule="nonzero" stroke="red"
+        d="M110,0  h90 v90 h-90 z
+           M130,20 h50 v50 h-50 z"/&gt;
 
-  &lt;!--
-  这个例子与第二个例子几乎相同，唯一的区别是：两个形状的路径段方向相反
-  外面的正方形是顺时针，里面的正方形则是逆时针
-  --&gt;
-  &lt;path fill-rule="nonzero" stroke="red"
-        d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/&gt;
+  &lt;!--
+  这个例子与第二个例子几乎相同，唯一的区别是：两个形状的路径段方向相反
+  外面的正方形是顺时针，里面的正方形则是逆时针
+  --&gt;
+  &lt;path fill-rule="nonzero" stroke="red"
+        d="M210,0  h90 v90 h-90 z
+           M230,20 v50 h50 v-50 z"/&gt;
 &lt;/svg&gt;</pre>
 </div>
 
@@ -127,25 +127,25 @@ translation_of: Web/SVG/Attribute/fill-rule
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- evenodd 填充规则被用于路径段会相交的形状上的效果 --&gt;
-  &lt;polygon fill-rule="evenodd" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/&gt;
+  &lt;!-- evenodd 填充规则被用于路径段会相交的形状上的效果 --&gt;
+  &lt;polygon fill-rule="evenodd" stroke="red"
+           points="50,0 21,90 98,35 2,35 79,90"/&gt;
 
-  &lt;!--
-  evenodd 填充规则被用于一个形状在另一形状内部的效果
-  这两个正方形的路径段方向相同（都是顺时针）
-  --&gt;
-  &lt;path fill-rule="evenodd" stroke="red"
-        d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/&gt;
+  &lt;!--
+  evenodd 填充规则被用于一个形状在另一形状内部的效果
+  这两个正方形的路径段方向相同（都是顺时针）
+  --&gt;
+  &lt;path fill-rule="evenodd" stroke="red"
+        d="M110,0  h90 v90 h-90 z
+           M130,20 h50 v50 h-50 z"/&gt;
 
-  &lt;!--
-  这个例子与第二个例子几乎相同，唯一的区别是：两个形状的路径段方向相反
-  外面的正方形是顺时针，里面的正方形则是逆时针
-  --&gt;
-  &lt;path fill-rule="evenodd" stroke="red"
-        d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/&gt;
+  &lt;!--
+  这个例子与第二个例子几乎相同，唯一的区别是：两个形状的路径段方向相反
+  外面的正方形是顺时针，里面的正方形则是逆时针
+  --&gt;
+  &lt;path fill-rule="evenodd" stroke="red"
+        d="M210,0  h90 v90 h-90 z
+           M230,20 v50 h50 v-50 z"/&gt;
 &lt;/svg&gt;</pre>
 </div>
 

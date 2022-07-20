@@ -19,9 +19,9 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 <dl>
  <dt><code>locales</code></dt>
  <dd>
- <p>可选。缩写语言代码 (BCP 47 language tag，例如:cmn-Hans-CN) 的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. 下面的这些 Unicode 扩展键也是被允许的：</p>
+ <p>可选。缩写语言代码 (BCP 47 language tag，例如:cmn-Hans-CN) 的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. 下面的这些 Unicode 扩展键也是被允许的：</p>
 
- <p>译者注：下面这两种扩展的使用方式是 language[-scripts][-region]-u-nu-* 和 language[-scripts][-region]-u-ca-* ,例如:zh-u-nu-hanidec(表示中文十进制数字) 和 zh-u-ca-chinese(表示中国日历，比如壬辰年冬月 8 日) ,也可以 nu 和 ca 组合使用 比如 使用 zh-u-ca-chinese-nu-hanidec 格式化 Date.now() 的返回值类似于"丙申年冬月九日"</p>
+ <p>译者注：下面这两种扩展的使用方式是 language[-scripts][-region]-u-nu-* 和 language[-scripts][-region]-u-ca-* ,例如:zh-u-nu-hanidec(表示中文十进制数字) 和 zh-u-ca-chinese(表示中国日历，比如壬辰年冬月 8 日) ,也可以 nu 和 ca 组合使用 比如 使用 zh-u-ca-chinese-nu-hanidec 格式化 Date.now() 的返回值类似于"丙申年冬月九日"</p>
 
  <dl>
   <dt><code>nu</code></dt>
@@ -36,11 +36,11 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>使用的 local 的匹配算法。可能的值有"lookup"和"best fit"; 默认值是 <code>"best fit"</code>. 有关此选项的信息，请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
+  <dd>使用的 local 的匹配算法。可能的值有"lookup"和"best fit"; 默认值是 <code>"best fit"</code>. 有关此选项的信息，请参见{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.</dd>
   <dt><code>timeZone</code></dt>
   <dd>使用的时区。这唯一的值实现必须被标准世界时间 (UTC) 所识别。默认值是运行时的默认时区。<a href="https://www.iana.org/time-zones">IANA time zone database</a>中的时区名称可能会被识别，例如<code>"Asia/Shanghai"</code>, <code>"Asia/Kolkata"</code>, <code>"America/New_York"</code>.</dd>
   <dt><code>hour12</code></dt>
-  <dd>是否使用 12 小时时间制 (而不是 24 小时的时间). 可能的值是<code>true</code> 或 <code>false</code>; 默认值是根据 locale 来自动决定的 (译者注：中国地区的默认值为 true).</dd>
+  <dd>是否使用 12 小时时间制 (而不是 24 小时的时间). 可能的值是<code>true</code> 或 <code>false</code>; 默认值是根据 locale 来自动决定的 (译者注：中国地区的默认值为 true).</dd>
   <dt><code>formatMatcher</code></dt>
   <dd><code>format 的匹配算法。可能的值有"basic"和"best fit";默认值是"best fit".有关此属性使用的信息，参见以下段落。</code>日期时间插件被格式化输出时可以使用的属性集合描述。实现需要支持是以下子集中的其中一个 (译者注：当 weekday,year 等这些属性一个也不使用的时候，在 cmn-Hans-CN 中相当于使用集合 year, month, day, hour, minute, second 并且它们的值都是 numeric)：</dd>
  </dl>
@@ -55,13 +55,13 @@ Intl.DateTimeFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</va
   <li><code>hour</code>, <code>minute</code></li>
  </ul>
 
- <p>实现可能支持其他的子集，并通过对所有可用的子集对比找到最匹配的子集。通过 formatMatcher 属性可以设置两种算法用于对比和选择子集:  <a href="http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">完全匹配<code>"basic"算法</code> </a> 和 一种依赖于“best fit”算法的实现。</p>
+ <p>实现可能支持其他的子集，并通过对所有可用的子集对比找到最匹配的子集。通过 formatMatcher 属性可以设置两种算法用于对比和选择子集:  <a href="http://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher">完全匹配<code>"basic"算法</code> </a> 和 一种依赖于“best fit”算法的实现。</p>
 
  <dl>
   <dt><code>weekday</code></dt>
-  <dd>工作日的展现方式：可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
+  <dd>工作日的展现方式：可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
   <dt><code>era</code></dt>
-  <dd>纪元的展现方式。可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
+  <dd>纪元的展现方式。可能的值有 <code>"narrow"</code>, <code>"short"</code>, <code>"long"</code></dd>
   <dt><code>year</code></dt>
   <dd>年的展现方式：可能的值有 <code>"numeric"</code>, <code>"2-digit"</code></dd>
   <dt><code>month</code></dt>
@@ -163,7 +163,7 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 
 <h3 id="使用options">使用<code>options</code></h3>
 
-<p>可以使用 <code>options</code> 参数来自定义日期时间格式化方法返回的字符串。</p>
+<p>可以使用 <code>options</code> 参数来自定义日期时间格式化方法返回的字符串。</p>
 
 <pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
@@ -213,12 +213,12 @@ console.log(date.toLocaleString('en-US', options));
   <tr>
    <td>{{SpecName('ES Int 2.0', '#sec-12.1', 'Intl.DateTimeFormat')}}</td>
    <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int Draft', '#datetimeformat-objects', 'Intl.DateTimeFormat')}}</td>
    <td>{{Spec2('ES Int Draft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

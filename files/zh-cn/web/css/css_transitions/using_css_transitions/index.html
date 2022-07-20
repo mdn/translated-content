@@ -12,23 +12,23 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 <p>{{CSSRef}} {{SeeCompattable}}</p>
 
-<p><strong>CSS transitions </strong>提供了一种在更改 CSS 属性时控制动画速度的方法。其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义。</p>
+<p><strong>CSS transitions </strong>提供了一种在更改 CSS 属性时控制动画速度的方法。其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义。</p>
 
 <p>通常将两个状态之间的过渡称为<strong>隐式过渡（implicit transitions）</strong>，因为开始与结束之间的状态由浏览器决定。</p>
 
 <p><img alt="A CSS transition tells the browsder to draw the intermediate states between the initial and final states, showing the user a smooth transitions." src="/files/4529/TransitionsPrinciple.png" style="display: block; height: 196px; margin: auto; width: 680px;"></p>
 
-<p>CSS transitions 可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay），持续多久 (设置 duration) 以及如何动画 (定义<em>timing function</em>，比如匀速地或先快后慢)。</p>
+<p>CSS transitions 可以决定哪些属性发生动画效果 (明确地列出这些属性)，何时开始 (设置 delay），持续多久 (设置 duration) 以及如何动画 (定义<em>timing function</em>，比如匀速地或先快后慢)。</p>
 
-<div class="note"><strong>Note:</strong> transition 可以不用厂商前缀，不过鉴于标准刚刚稳定，对于基于 Webkit 的浏览器仍然需要厂商前缀。如果想兼容旧版本的浏览器那么也需要厂商前缀（例如 Firefox 15 及之前版本，Opera 12 及之前版本)。详情见本页底部的兼容性表格。</div>
+<div class="note"><strong>Note:</strong> transition 可以不用厂商前缀，不过鉴于标准刚刚稳定，对于基于 Webkit 的浏览器仍然需要厂商前缀。如果想兼容旧版本的浏览器那么也需要厂商前缀（例如 Firefox 15 及之前版本，Opera 12 及之前版本)。详情见本页底部的兼容性表格。</div>
 
 <h2 id="哪些_CSS_属性可以动画">哪些 CSS 属性可以动画？</h2>
 
-<p>网页制作者可以定义哪个属性以哪种方式动画，这样能制作出复杂的过渡。因为有些属性动画无意义，所以 <a href="/zh-CN/docs/CSS/CSS_animated_properties" title="/en-US/docs/">可动画属性列表</a> 是一个有限集合。</p>
+<p>网页制作者可以定义哪个属性以哪种方式动画，这样能制作出复杂的过渡。因为有些属性动画无意义，所以 <a href="/zh-CN/docs/CSS/CSS_animated_properties" title="/en-US/docs/">可动画属性列表</a> 是一个有限集合。</p>
 
 <div class="note">Note: 可动画的属性集将有变动，开发者应关注。</div>
 
-<p>auto 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，遵循这点；一些，比如基于 WebKit 的，没有这么严格限制。在 <code>auto</code> 上动画结果可能不可预期，这取决于浏览器及其版本，应当避免使用。</p>
+<p>auto 值常常较复杂，规范指出不要在它上动画。一些用户代理，比如基于 Gecko 的，遵循这点；一些，比如基于 WebKit 的，没有这么严格限制。在 <code>auto</code> 上动画结果可能不可预期，这取决于浏览器及其版本，应当避免使用。</p>
 
 <p>同时应当留意这种情形，在插入元素（如 <code>.appendChild()</code>）或改变属性 <code>display: none</code> 后立即使用过渡，元素将视为没有开始状态，始终处于结束状态。简单的解决办法，改变属性前用 <code>window.setTimeout()</code> 延迟几毫秒。</p>
 
@@ -37,40 +37,40 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 <h3 id="HTML_内容">HTML 内容</h3>
 
 <pre class="brush: html">&lt;body&gt;
-    &lt;p&gt;盒子的多个属性一起动画：width, height, background-color, transform. 将光标悬停在盒子上查看动画。&lt;/p&gt;
-    &lt;div class="box"&gt;&lt;/div&gt;
+    &lt;p&gt;盒子的多个属性一起动画：width, height, background-color, transform. 将光标悬停在盒子上查看动画。&lt;/p&gt;
+    &lt;div class="box"&gt;&lt;/div&gt;
 &lt;/body&gt;</pre>
 
 <h3 id="CSS_内容">CSS 内容</h3>
 
 <pre class="brush: css">.box {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: #0000FF;
-    -webkit-transition:width 2s, height 2s,
-        background-color 2s, -webkit-transform 2s;
-    transition:width 2s, height 2s, background-color 2s, transform 2s;
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    -webkit-transition:width 2s, height 2s,
+        background-color 2s, -webkit-transform 2s;
+    transition:width 2s, height 2s, background-color 2s, transform 2s;
 }
 .box:hover {
-    background-color: #FFCCCC;
-    width:200px;
-    height:200px;
-    -webkit-transform:rotate(180deg);
-    transform:rotate(180deg);
+    background-color: #FFCCCC;
+    width:200px;
+    height:200px;
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
 }</pre>
 
 <p>{{ EmbedLiveSample('多个属性一起动画示例', 600, 300) }}</p>
 
 <h2 id="定义过渡">定义过渡</h2>
 
-<p>CSS 过渡 由简写属性<a href="https://developer.mozilla.org/en-US/docs/CSS/transition" title="https://developer.mozilla.org/en-US/docs/CSS/transition"> </a>{{cssxref("transition")}} 定义是最好的方式，可以避免属性值列表长度不一，节省调试时间。</p>
+<p>CSS 过渡 由简写属性<a href="https://developer.mozilla.org/en-US/docs/CSS/transition" title="https://developer.mozilla.org/en-US/docs/CSS/transition"> </a>{{cssxref("transition")}} 定义是最好的方式，可以避免属性值列表长度不一，节省调试时间。</p>
 
 <p>也可以用下面子属性来控制过渡的各部分：</p>
 
-<p><strong>(注意下面示例中过渡无限循环是为了说明例子，过渡只是从开始到结束变化，如果需要循环，查看 <a href="/en-US/docs/CSS/animation" title="/en-US/docs/CSS/animation"><code>animation</code></a> 。)</strong></p>
+<p><strong>(注意下面示例中过渡无限循环是为了说明例子，过渡只是从开始到结束变化，如果需要循环，查看 <a href="/en-US/docs/CSS/animation" title="/en-US/docs/CSS/animation"><code>animation</code></a> 。)</strong></p>
 
 <dl>
  <dt>{{ cssxref("transition-property") }}</dt>
@@ -340,7 +340,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
  </div>
  </dd>
  <dt>{{ cssxref("transition-timing-function") }}</dt>
- <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;">指定一个函数，定义属性值怎么变化。缓动函数 <em>Timing functions</em> 定义属性如何计算。多数 <a href="/en-US/docs/CSS/timing-function" title="/en-US/docs/CSS/timing-function">timing functions</a> 由四点定义一个 bezier 曲线。也可以从 <a href="http://easings.net/" style="line-height: inherit;">Easing Functions Cheat Sheet</a> 选择缓动效果。</dd>
+ <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;">指定一个函数，定义属性值怎么变化。缓动函数 <em>Timing functions</em> 定义属性如何计算。多数 <a href="/en-US/docs/CSS/timing-function" title="/en-US/docs/CSS/timing-function">timing functions</a> 由四点定义一个 bezier 曲线。也可以从 <a href="http://easings.net/" style="line-height: inherit;">Easing Functions Cheat Sheet</a> 选择缓动效果。</dd>
  <dd>
  <div class="cleared">
  <div id="ttf_ease" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
@@ -879,7 +879,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 <h2 id="检测过渡是否完成">检测过渡是否完成</h2>
 
-<p>当过渡完成时触发一个事件，在符合标准的浏览器下，这个事件是 <code>transitionend</code>, 在 WebKit 下是 <code>webkitTransitionEnd</code>. 详情查看页面底部的兼容性表格。 <code>transitionend 事件提供两个属性</code>:</p>
+<p>当过渡完成时触发一个事件，在符合标准的浏览器下，这个事件是 <code>transitionend</code>, 在 WebKit 下是 <code>webkitTransitionEnd</code>. 详情查看页面底部的兼容性表格。 <code>transitionend 事件提供两个属性</code>:</p>
 
 <dl>
  <dt><code>propertyName</code></dt>
@@ -888,42 +888,42 @@ var intervalID = window.setInterval(updateTransition, 7000);
  <dd>浮点数，指示当触发这个事件时过渡已运行的时间（秒）。这个值不受 {{ cssxref("transition-delay") }} 影响。</dd>
 </dl>
 
-<p>照例可以用  {{ domxref("element.addEventListener()") }} 方法来监听这个事件：</p>
+<p>照例可以用  {{ domxref("element.addEventListener()") }} 方法来监听这个事件：</p>
 
 <pre class="brush: js">el.addEventListener("transitionend", updateTransition, true);
 </pre>
 
-<div class="note"><strong>Note:</strong> 如果取消了过渡则不会触发 <code>transitionend</code> 事件，因为在过渡完成前动画的属性值改变了。</div>
+<div class="note"><strong>Note:</strong> 如果取消了过渡则不会触发 <code>transitionend</code> 事件，因为在过渡完成前动画的属性值改变了。</div>
 
 <h2 id="当属性值列表长度不一致时">当属性值列表长度不一致时</h2>
 
 <p>以 {{ cssxref("transition-property") }} 的值列表长度为标准，如果某个属性值列表长度短于它的，则重复其值以长度一致，例如：</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s;
+  transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s;
 }
 </pre>
 
 <p>将按下面这样处理：</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+  transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s, 3s, 5s;
 }</pre>
 
-<p>类似地，如果某个属性的值列表长于 {{ cssxref("transition-property") }} 的，将被截短。 例如：</p>
+<p>类似地，如果某个属性的值列表长于 {{ cssxref("transition-property") }} 的，将被截短。 例如：</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s, 2s, 1s;
+  transition-property: opacity, left;
+  transition-duration: 3s, 5s, 2s, 1s;
 }</pre>
 
 <p>将按下面这样处理：</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left;
-  transition-duration: 3s, 5s;
+  transition-property: opacity, left;
+  transition-duration: 3s, 5s;
 }</pre>
 
 <h2 id="简单例子">简单例子</h2>
@@ -953,42 +953,42 @@ var intervalID = window.setInterval(updateTransition, 7000);
 <h3 id="HTML_内容_2">HTML 内容</h3>
 
 <pre class="brush: html">&lt;div class="sidebar"&gt;
-  &lt;p&gt;&lt;a class="menuButton" href="home"&gt;Home&lt;/a&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;a class="menuButton" href="about"&gt;About&lt;/a&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;a class="menuButton" href="contact"&gt;Contact Us&lt;/a&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;a class="menuButton" href="links"&gt;Links&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a class="menuButton" href="home"&gt;Home&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a class="menuButton" href="about"&gt;About&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a class="menuButton" href="contact"&gt;Contact Us&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a class="menuButton" href="links"&gt;Links&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h3 id="CSS_内容_2">CSS 内容</h3>
 
 <pre class="brush: css">.menuButton {
-  position: relative;
-  transition-property: background-color, color;
-  transition-duration: 1s;
-  transition-timing-function: ease-out;
-  text-align: left;
-  background-color: grey;
-  left: 5px;
-  top: 5px;
-  height: 26px;
-  color: white;
-  border-color: black;
-  font-family: sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-  box-shadow: 2px 2px 1px black;
-  padding: 2px 4px;
-  border: solid 1px black;
+  position: relative;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  text-align: left;
+  background-color: grey;
+  left: 5px;
+  top: 5px;
+  height: 26px;
+  color: white;
+  border-color: black;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 2px 2px 1px black;
+  padding: 2px 4px;
+  border: solid 1px black;
 }
 
 .menuButton:hover {
-  position: relative;
-  transition-property: background-color, color;
-  transition-duration: 1s;
-  transition-timing-function: ease-out;
-  background-color:white;
-  color:black;
-  box-shadow: 2px 2px 1px black;
+  position: relative;
+  transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  background-color:white;
+  color:black;
+  box-shadow: 2px 2px 1px black;
 }
 </pre>
 
