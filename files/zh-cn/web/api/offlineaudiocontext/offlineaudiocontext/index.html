@@ -22,10 +22,10 @@ translation_of: Web/API/OfflineAudioContext/OfflineAudioContext
  <dd>采样帧每一秒的线性音频数据的采样率。该实现必须支持在 22050 到 96000 之间的采样率，44100 是最经常用到的采样率。</dd>
 </dl>
 
-<p>这里有个重要的警告，你可以通过不带参数的使用 <code>new AudioContext()</code> 构造函数创建一个新的 {{domxref("AudioContext")}}，但是 <code>OfflineAudioContext()</code> 构造函数必须带上三个参数。当你通过 {{domxref("AudioContext.createBuffer")}} 方法创建一个新的{{domxref("AudioBuffer")}} 时，你也是需要做一样的事情。想要知道更多信息，请阅读我们的基本概念指南的 <a href="/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#音频片段：帧，样本和声道">音频片段：帧，样本和声道</a>。</p>
+<p>这里有个重要的警告，你可以通过不带参数的使用 <code>new AudioContext()</code> 构造函数创建一个新的 {{domxref("AudioContext")}}，但是 <code>OfflineAudioContext()</code> 构造函数必须带上三个参数。当你通过 {{domxref("AudioContext.createBuffer")}} 方法创建一个新的{{domxref("AudioBuffer")}} 时，你也是需要做一样的事情。想要知道更多信息，请阅读我们的基本概念指南的 <a href="/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#音频片段：帧，样本和声道">音频片段：帧，样本和声道</a>。</p>
 
 <div class="note">
-<p><strong>注意</strong>：像普通的 <code>AudioContext</code>，<code>OfflineAudioContext</code> 可以成为事件的目标，因此它的实现是 {{domxref("EventTarget")}} 接口。</p>
+<p><strong>注意</strong>：像普通的 <code>AudioContext</code>，<code>OfflineAudioContext</code> 可以成为事件的目标，因此它的实现是 {{domxref("EventTarget")}} 接口。</p>
 </div>
 
 <h2 id="例子">例子</h2>
@@ -41,7 +41,7 @@ source = offlineCtx.createBufferSource();
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong> 想要获取完整的例子，请看我们在 Github 仓库的 <a class="external external-icon" href="http://mdn.github.io/offline-audio-context-promise/">offline-audio-context-promise</a> （也可以看 <a class="external external-icon" href="https://github.com/mdn/offline-audio-context-promise">源代码</a> ）</p>
+<p><strong>备注：</strong> 想要获取完整的例子，请看我们在 Github 仓库的 <a class="external external-icon" href="http://mdn.github.io/offline-audio-context-promise/">offline-audio-context-promise</a> （也可以看 <a class="external external-icon" href="https://github.com/mdn/offline-audio-context-promise">源代码</a> ）</p>
 </div>
 
 <h2 id="规范">规范</h2>

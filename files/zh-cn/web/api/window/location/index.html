@@ -12,13 +12,13 @@ translation_of: Web/API/Window/location
 ---
 <p>{{ APIRef() }}</p>
 
-<p><strong>window.location</strong> 只读属性，返回一个 {{domxref("Location")}}  对象，其中包含有关文档当前位置的信息。</p>
+<p><strong>window.location</strong> 只读属性，返回一个 {{domxref("Location")}}  对象，其中包含有关文档当前位置的信息。</p>
 
 <div class="note">
 <p>window.location : 所有字母必须小写！</p>
 </div>
 
-<p>尽管 window.location 是一个<em>只读</em> Location 对象，你仍然可以赋给它一个 {{domxref("DOMString")}}。这意味着您可以在大多数情况下处理 <strong>location</strong>，就像它是一个字符串一样：window.location = 'http://www.example.com'，是 window.location.href = 'http://www.example.com'的同义词 。</p>
+<p>尽管 window.location 是一个<em>只读</em> Location 对象，你仍然可以赋给它一个 {{domxref("DOMString")}}。这意味着您可以在大多数情况下处理 <strong>location</strong>，就像它是一个字符串一样：window.location = 'http://www.example.com'，是 window.location.href = 'http://www.example.com'的同义词 。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -35,7 +35,7 @@ location = newLocation;
 
 <h3 id="例子1：导航到一个新页面">例子#1：导航到一个新页面</h3>
 
-<p>只要赋给 location 对象一个新值，文档就会使用新的 URL 加载，就好像使用修改后的 URL 调用了  <code>window.location.assign()</code> 一样。需要注意的是，安全设置，如 CORS（跨域资源共享），可能会限制实际加载新页面。</p>
+<p>只要赋给 location 对象一个新值，文档就会使用新的 URL 加载，就好像使用修改后的 URL 调用了  <code>window.location.assign()</code> 一样。需要注意的是，安全设置，如 CORS（跨域资源共享），可能会限制实际加载新页面。</p>
 
 <pre class="brush: js  language-js">window.location.assign("http://www.mozilla.org"); // or
 window.location = "http://www.mozilla.org";
@@ -48,24 +48,24 @@ window.location = "http://www.mozilla.org";
 
 <h3 id="例子3">例子#3</h3>
 
-<p>考虑下面的例子，该例使用 <code>replace()</code> 方法重新加载页面，并将 <code>window.location.pathname</code> 的值插入到 hash：</p>
+<p>考虑下面的例子，该例使用 <code>replace()</code> 方法重新加载页面，并将 <code>window.location.pathname</code> 的值插入到 hash：</p>
 
 <pre class="brush: js  language-js">function reloadPageWithHash() {
-  var initialPage = window.location.pathname;
-  window.location.replace('http://example.com/#' + initialPage);
+  var initialPage = window.location.pathname;
+  window.location.replace('http://example.com/#' + initialPage);
 }
 </pre>
 
-<div class="note"><strong>Note:</strong> The example above works in situations where <code>window.location.hash</code> does not need to be retained. However, in Gecko-based browsers, setting <code>window.location.pathname</code> in this manner will erase any information in <code>window.location.hash</code>, whereas in WebKit (and possibly other browsers), setting the pathname will not alter the the hash. If you need to change pathname but keep the hash as is, use the <code>replace()</code> method instead, which should work consistently across browsers.</div>
+<div class="note"><strong>Note:</strong> The example above works in situations where <code>window.location.hash</code> does not need to be retained. However, in Gecko-based browsers, setting <code>window.location.pathname</code> in this manner will erase any information in <code>window.location.hash</code>, whereas in WebKit (and possibly other browsers), setting the pathname will not alter the the hash. If you need to change pathname but keep the hash as is, use the <code>replace()</code> method instead, which should work consistently across browsers.</div>
 
 <h3 id="例子4：弹出警告框，显示当前_URL_的属性：">例子#4：弹出警告框，显示当前 URL 的属性：</h3>
 
 <pre class="brush: js  language-js">function showLoc() {
-  var oLocation = window.location, aLog = ["Property (Typeof): Value", "window.location (" + (typeof oLocation) + "): " + oLocation ];
-  for (var sProp in oLocation){
-    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
-  }
-  alert(aLog.join("\n"));
+  var oLocation = window.location, aLog = ["Property (Typeof): Value", "window.location (" + (typeof oLocation) + "): " + oLocation ];
+  for (var sProp in oLocation){
+    aLog.push(sProp + " (" + (typeof oLocation[sProp]) + "): " +  (oLocation[sProp] || "n/a"));
+  }
+  alert(aLog.join("\n"));
 }
 
 // in html: &lt;button onclick="showLoc();"&gt;Show location properties&lt;/button&gt;
@@ -74,7 +74,7 @@ window.location = "http://www.mozilla.org";
 <h3 id="例子5：通过修改_search_属性向服务器发送字符串数据：">例子#5：通过修改 <code>search</code> 属性向服务器发送字符串数据：</h3>
 
 <pre class="brush: js  language-js">function sendData (sData) {
-  window.location.search = sData;
+  window.location.search = sData;
 }
 
 // in html: &lt;button onclick="sendData('Some data');"&gt;Send data&lt;/button&gt;
@@ -82,62 +82,62 @@ window.location = "http://www.mozilla.org";
 
 <p>当前 URL 带上 "?Some%20data"，被发送到服务端（如果服务端不处理，则使用修改后的查询字符串 [search string] 重新加载当前文档）。</p>
 
-<h3 id="例子6：获取一个_window.location.search_键值（key_value）：">例子#6：获取一个 <code>window.location.search</code> 键值（key value）：</h3>
+<h3 id="例子6：获取一个_window.location.search_键值（key_value）：">例子#6：获取一个 <code>window.location.search</code> 键值（key value）：</h3>
 
 <pre class="brush: js  language-js">function loadPageVar (sVar) {
-  return decodeURI(window.location.search.replace(new RegExp("^(?:.*[&amp;\\?]" + encodeURI(sVar).replace(/[\.\+\*]/g, "\\$&amp;") + "(?:\\=([^&amp;]*))?)?.*$", "i"), "$1"));
+  return decodeURI(window.location.search.replace(new RegExp("^(?:.*[&amp;\\?]" + encodeURI(sVar).replace(/[\.\+\*]/g, "\\$&amp;") + "(?:\\=([^&amp;]*))?)?.*$", "i"), "$1"));
 }
 
 alert(loadPageVar("name"));
 </pre>
 
-<h3 id="例子7：通过_window.location.search_字符串获取查询参数，存入对象_oGetVars_中：">例子#7：通过 <code>window.location.search</code> 字符串获取查询参数，存入对象 <code>oGetVars</code> 中：</h3>
+<h3 id="例子7：通过_window.location.search_字符串获取查询参数，存入对象_oGetVars_中：">例子#7：通过 <code>window.location.search</code> 字符串获取查询参数，存入对象 <code>oGetVars</code> 中：</h3>
 
 <pre class="brush: js  language-js">var oGetVars = {};
 
 if (window.location.search.length &gt; 1) {
-  for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
-    aItKey = aCouples[nKeyId].split("=");
-    oGetVars[decodeURIComponent(aItKey[0])] = aItKey.length &gt; 1 ? decodeURIComponent(aItKey[1]) : "";
-  }
+  for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
+    aItKey = aCouples[nKeyId].split("=");
+    oGetVars[decodeURIComponent(aItKey[0])] = aItKey.length &gt; 1 ? decodeURIComponent(aItKey[1]) : "";
+  }
 }
 
 // alert(oGetVars.yourVar);
 </pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
+<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
 
 <p>同样可以通过一个匿名构造函数来获取，这样只声明了一个全局变量。</p>
 
 <pre class="brush: js  language-js">var oGetVars = new (function (sSearch) {
-  if (sSearch.length &gt; 1) {
-    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
-      aItKey = aCouples[nKeyId].split("=");
-      this[decodeURIComponent(aItKey[0])] = aItKey.length &gt; 1 ? decodeURIComponent(aItKey[1]) : "";
-    }
-  }
+  if (sSearch.length &gt; 1) {
+    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
+      aItKey = aCouples[nKeyId].split("=");
+      this[decodeURIComponent(aItKey[0])] = aItKey.length &gt; 1 ? decodeURIComponent(aItKey[1]) : "";
+    }
+  }
 })(window.location.search);
 
 // alert(oGetVars.yourVar);
 </pre>
 
-<h3 id="例子8：通过_window.location.search_字符串获取查询参数，存入对象_oGetVars_中，并尝试识别参数类型（typeof）：">例子#8：通过 <code>window.location.search</code> 字符串获取查询参数，存入对象 <code>oGetVars</code> 中，并尝试识别参数类型（typeof）：</h3>
+<h3 id="例子8：通过_window.location.search_字符串获取查询参数，存入对象_oGetVars_中，并尝试识别参数类型（typeof）：">例子#8：通过 <code>window.location.search</code> 字符串获取查询参数，存入对象 <code>oGetVars</code> 中，并尝试识别参数类型（typeof）：</h3>
 
 <pre class="brush: js  language-js">var oGetVars = {};
 
 function buildValue(sValue) {
-  if (/^\s*$/.test(sValue)) { return null; }
-  if (/^(true|false)$/i.test(sValue)) { return sValue.toLowerCase() === "true"; }
-  if (isFinite(sValue)) { return parseFloat(sValue); }
-  if (isFinite(Date.parse(sValue))) { return new Date(sValue); } // this conditional is unreliable in non-SpiderMonkey browsers
-  return sValue;
+  if (/^\s*$/.test(sValue)) { return null; }
+  if (/^(true|false)$/i.test(sValue)) { return sValue.toLowerCase() === "true"; }
+  if (isFinite(sValue)) { return parseFloat(sValue); }
+  if (isFinite(Date.parse(sValue))) { return new Date(sValue); } // this conditional is unreliable in non-SpiderMonkey browsers
+  return sValue;
 }
 
 if (window.location.search.length &gt; 1) {
-  for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
-    aItKey = aCouples[nKeyId].split("=");
-    oGetVars[unescape(aItKey[0])] = aItKey.length &gt; 1 ? buildValue(unescape(aItKey[1])) : null;
-  }
+  for (var aItKey, nKeyId = 0, aCouples = window.location.search.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
+    aItKey = aCouples[nKeyId].split("=");
+    oGetVars[unescape(aItKey[0])] = aItKey.length &gt; 1 ? buildValue(unescape(aItKey[1])) : null;
+  }
 }
 
 // alert(oGetVars.yourVar);
@@ -146,26 +146,26 @@ if (window.location.search.length &gt; 1) {
 <p>同样可以通过一个匿名构造函数来获取，这样只声明了一个全局变量。</p>
 
 <pre class="brush: js  language-js">var oGetVars = new (function (sSearch) {
-  var rNull = /^\s*$/, rBool = /^(true|false)$/i;
-  function buildValue(sValue) {
-    if (rNull.test(sValue)) { return null; }
-    if (rBool.test(sValue)) { return sValue.toLowerCase() === "true"; }
-    if (isFinite(sValue)) { return parseFloat(sValue); }
-    if (isFinite(Date.parse(sValue))) { return new Date(sValue); }
-    return sValue;
-  }
-  if (sSearch.length &gt; 1) {
-    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
-      aItKey = aCouples[nKeyId].split("=");
-      this[unescape(aItKey[0])] = aItKey.length &gt; 1 ? buildValue(unescape(aItKey[1])) : null;
-    }
-  }
+  var rNull = /^\s*$/, rBool = /^(true|false)$/i;
+  function buildValue(sValue) {
+    if (rNull.test(sValue)) { return null; }
+    if (rBool.test(sValue)) { return sValue.toLowerCase() === "true"; }
+    if (isFinite(sValue)) { return parseFloat(sValue); }
+    if (isFinite(Date.parse(sValue))) { return new Date(sValue); }
+    return sValue;
+  }
+  if (sSearch.length &gt; 1) {
+    for (var aItKey, nKeyId = 0, aCouples = sSearch.substr(1).split("&amp;"); nKeyId &lt; aCouples.length; nKeyId++) {
+      aItKey = aCouples[nKeyId].split("=");
+      this[unescape(aItKey[0])] = aItKey.length &gt; 1 ? buildValue(unescape(aItKey[1])) : null;
+    }
+  }
 })(window.location.search);
 
 // alert(oGetVars.yourVar);
 </pre>
 
-<h3 id="例子9：不改变_window.location.hash_属性情况下使用书签">例子#9：不改变 <code>window.location.hash</code> 属性情况下使用书签</h3>
+<h3 id="例子9：不改变_window.location.hash_属性情况下使用书签">例子#9：不改变 <code>window.location.hash</code> 属性情况下使用书签</h3>
 
 <pre class="brush: html  language-html">&lt;!doctype html&gt;
 &lt;html&gt;
@@ -174,20 +174,20 @@ if (window.location.search.length &gt; 1) {
 &lt;title&gt;MDN Example&lt;/title&gt;
 &lt;script type="text/javascript"&gt;
 function showNode (oNode) {
-  var nLeft = 0, nTop = 0;
-  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);   window.scrollTo(nLeft, nTop); }
+  var nLeft = 0, nTop = 0;
+  for (var oItNode = oNode; oItNode; nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent);   window.scrollTo(nLeft, nTop); }
 
 function showBookmark (sBookmark, bUseHash) {
-  if (arguments.length === 1 || bUseHash) { window.location.hash = sBookmark; return; }
-  var oBookmark = document.querySelector(sBookmark);
-  if (oBookmark) { showNode(oBookmark); }
+  if (arguments.length === 1 || bUseHash) { window.location.hash = sBookmark; return; }
+  var oBookmark = document.querySelector(sBookmark);
+  if (oBookmark) { showNode(oBookmark); }
 }
 &lt;/script&gt;
 &lt;style type="text/css"&gt;
 span.intLink {
-    cursor: pointer;
-    color: #0000ff;
-    text-decoration: underline;
+    cursor: pointer;
+    color: #0000ff;
+    text-decoration: underline;
 }
 &lt;/style&gt;
 &lt;/head&gt;
@@ -220,48 +220,48 @@ span.intLink {
 &lt;/html&gt;
 </pre>
 
-<div class="note"><strong>Note:</strong> The function <code>showNode</code> is also an example of the use of the <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Statements/for" title="en/JavaScript/Reference/Statements/for">for</a></code> cycle without a <code>statement</code>section. In this case <strong>a semicolon is always put immediately after the declaration of the cycle</strong>.</div>
+<div class="note"><strong>Note:</strong> The function <code>showNode</code> is also an example of the use of the <code><a href="https://developer.mozilla.org/en/JavaScript/Reference/Statements/for" title="en/JavaScript/Reference/Statements/for">for</a></code> cycle without a <code>statement</code>section. In this case <strong>a semicolon is always put immediately after the declaration of the cycle</strong>.</div>
 
 <p>下面代码做同样的事，但是页面滚动带有动画效果：</p>
 
 <pre class="brush: js  language-js">var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
-       /*
-       * nDuration: the duration in milliseconds of each frame
-       * nFrames: number of frames for each scroll
-       */
-       nDuration = 200, nFrames = 10;
+  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+       /*
+       * nDuration: the duration in milliseconds of each frame
+       * nFrames: number of frames for each scroll
+       */
+       nDuration = 200, nFrames = 10;
 
-  function _next () {
-    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
-    _isBot = true;
-    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
-    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
-    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
-    _itFrame++;
-  }
+  function _next () {
+    if (_itFrame &gt; nFrames) { clearInterval(_scrollId); _scrollId = -1; return; }
+    _isBot = true;
+    document.documentElement.scrollTop = Math.round(_scrollY + (_nodeY - _scrollY) * _itFrame / nFrames);
+    document.documentElement.scrollLeft = Math.round(_scrollX + (_nodeX - _scrollX) * _itFrame / nFrames);
+    if (_useHash &amp;&amp; _itFrame === nFrames) { location.hash = _bookMark; }
+    _itFrame++;
+  }
 
-  function _chkOwner () {
-    if (_isBot) { _isBot = false; return; }
-    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
-  }
+  function _chkOwner () {
+    if (_isBot) { _isBot = false; return; }
+    if (_scrollId &gt; -1) { clearInterval(_scrollId); _scrollId = -1; }
+  }
 
-  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
-  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
+  if (window.addEventListener) { window.addEventListener("scroll", _chkOwner, false); }
+  else if (window.attachEvent) { window.attachEvent("onscroll", _chkOwner); }
 
-  return function (sBookmark, bUseHash) {
-    _scrollY = document.documentElement.scrollTop;
-    _scrollX = document.documentElement.scrollLeft;
-    _bookMark = sBookmark;
-    _useHash = arguments.length === 1 || bUseHash;
-    for (
-      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
-      oNode;
-      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
-    );
-    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
-    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
-  };
+  return function (sBookmark, bUseHash) {
+    _scrollY = document.documentElement.scrollTop;
+    _scrollX = document.documentElement.scrollLeft;
+    _bookMark = sBookmark;
+    _useHash = arguments.length === 1 || bUseHash;
+    for (
+      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
+      oNode;
+      nLeft += oNode.offsetLeft, nTop += oNode.offsetTop, oNode = oNode.offsetParent
+    );
+    _nodeX = nLeft, _nodeY = nTop, _itFrame = 1;
+    if (_scrollId === -1) { _scrollId = setInterval(_next, Math.round(nDuration / nFrames)); }
+  };
 })();
 </pre>
 
@@ -275,7 +275,7 @@ span.intLink {
 
 <p>{{Compat("api.Window.location")}}</p>
 
-<div id="compat-desktop"> </div>
+<div id="compat-desktop"> </div>
 
 <h2 id="相关链接">相关链接</h2>
 

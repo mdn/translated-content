@@ -60,13 +60,13 @@ translation_of: Web/API/Element/show_event
 
 <pre class="brush:html;">&lt;div contextmenu="test"&gt;&lt;/div&gt;
 &lt;menu type="context" id="test"&gt;
-    &lt;menuitem label="alert" onclick="alert('the alert label has been clicked')" /&gt;
+    &lt;menuitem label="alert" onclick="alert('the alert label has been clicked')" /&gt;
 &lt;/menu&gt;
 
 &lt;script&gt;
-  document.getElementById("test").addEventListener("show", function(e){
-    alert("the context menu will be displayed");
-  }, false);
+  document.getElementById("test").addEventListener("show", function(e){
+    alert("the context menu will be displayed");
+  }, false);
 &lt;/script&gt;
 </pre>
 

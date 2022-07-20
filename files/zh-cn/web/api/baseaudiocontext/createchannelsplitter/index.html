@@ -28,7 +28,7 @@ var splitter = audioCtx.createChannelSplitter(2);</pre>
 
 <h2 id="Example">Example</h2>
 
-<p>下面这个简单的例子告诉你怎样分割一个双声道音轨 (或者说一段音乐), 以及对于左右声道不同的处理。要使用它们，你需要用到{{domxref("AudioNode.connect(AudioNode)") }}方法的第二个和第三个参数，他们会指定链接声道源的序号和链接到的声道序号。</p>
+<p>下面这个简单的例子告诉你怎样分割一个双声道音轨 (或者说一段音乐), 以及对于左右声道不同的处理。要使用它们，你需要用到{{domxref("AudioNode.connect(AudioNode)") }}方法的第二个和第三个参数，他们会指定链接声道源的序号和链接到的声道序号。</p>
 
 <pre class="brush: js;highlight[5,12,17]">var ac = new AudioContext();
 ac.decodeAudioData(someStereoBuffer, function(data) {

@@ -36,7 +36,7 @@ DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the addData() function to add the data to the database
@@ -52,7 +52,7 @@ function addData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
+    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
   };
 
   transaction.onerror = function(event) {
@@ -66,10 +66,10 @@ function addData() {
   // Make a request to add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of our request
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
-  };
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of our request
+    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+  };
 };</pre>
 
 <h2 id="规范">规范</h2>

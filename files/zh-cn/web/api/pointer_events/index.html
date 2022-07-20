@@ -10,11 +10,11 @@ translation_of: Web/API/Pointer_events
 ---
 <p>{{DefaultAPISidebar("Pointer Events")}}</p>
 
-<p>目前绝大多数的 Web 内容都假设用户的指针定点设备为鼠标。然而，近年来的新兴设备支持更多不同方式的指针定点输入，如各类触控笔和触摸屏幕等。这就有必要扩展现存的定点设备事件模型，以有效追踪各类<em><a href="#term_pointer_event">指针事件</a></em>。 </p>
+<p>目前绝大多数的 Web 内容都假设用户的指针定点设备为鼠标。然而，近年来的新兴设备支持更多不同方式的指针定点输入，如各类触控笔和触摸屏幕等。这就有必要扩展现存的定点设备事件模型，以有效追踪各类<em><a href="#term_pointer_event">指针事件</a></em>。 </p>
 
-<p>指针事件 - Pointer events 是一类可以为定点设备所触发的 DOM 事件。它们被用来创建一个可以有效掌握各类输入设备（鼠标、触控笔和单点或多点的手指触摸）的统一的 DOM 事件模型。所谓 <em><a href="#term_pointer">指针</a></em> 是指一个可以明确指向屏幕上某一组坐标的硬件设备。建立这样一个单独的事件模型可以有效的简化 Web 站点与应用所需的工作，同时也便于提供更加一致与良好的用户体验，无需关心不同用户和场景在输入硬件上的差异。另外，对于某些需要处理特定设备的场景，指针事件也定义了一个 {{domxref("PointerEvent.pointerType","pointerType")}} 属性用以查看触发事件的设备类型。</p>
+<p>指针事件 - Pointer events 是一类可以为定点设备所触发的 DOM 事件。它们被用来创建一个可以有效掌握各类输入设备（鼠标、触控笔和单点或多点的手指触摸）的统一的 DOM 事件模型。所谓 <em><a href="#term_pointer">指针</a></em> 是指一个可以明确指向屏幕上某一组坐标的硬件设备。建立这样一个单独的事件模型可以有效的简化 Web 站点与应用所需的工作，同时也便于提供更加一致与良好的用户体验，无需关心不同用户和场景在输入硬件上的差异。另外，对于某些需要处理特定设备的场景，指针事件也定义了一个 {{domxref("PointerEvent.pointerType","pointerType")}} 属性用以查看触发事件的设备类型。</p>
 
-<p>这些事件需要能够处理 {{domxref("MouseEvent","mouse events")}} 之类较为通用的指针输入（<code>mousedown/pointerdown</code>, <code>mousemove/pointermove</code>, 等）。 因此，指针事件的类型，很大程度上类似于当前的鼠标事件类型。</p>
+<p>这些事件需要能够处理 {{domxref("MouseEvent","mouse events")}} 之类较为通用的指针输入（<code>mousedown/pointerdown</code>, <code>mousemove/pointermove</code>, 等）。 因此，指针事件的类型，很大程度上类似于当前的鼠标事件类型。</p>
 
 <p>此外，一个指针事件，也同时包含了鼠标事件中所常见的属性（client coordinates, target element, button states，等）以及适用于其他输入设备的新属性：pressure, contact geometry, tilt，等等。实际上，{{domxref("PointerEvent")}} 接口继承了所有 {{domxref("MouseEvent","MouseEvent")}} 中的属性，以保障原有为鼠标事件所开发的内容能更加有效的迁移到指针事件。</p>
 
@@ -22,13 +22,13 @@ translation_of: Web/API/Pointer_events
 
 <dl>
  <dt>active buttons state</dt>
- <dd>The condition when a <em><a href="/zh-CN/docs/Web/API/Pointer_events$edit#term_pointer">pointer</a></em> has a non-zero value for the <code>buttons</code> property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.</dd>
+ <dd>The condition when a <em><a href="/zh-CN/docs/Web/API/Pointer_events$edit#term_pointer">pointer</a></em> has a non-zero value for the <code>buttons</code> property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.</dd>
 </dl>
 
 <dl>
  <dt>活跃指针 - active pointer</dt>
  <dd>任意<em><a href="#term_pointer">指针</a>输入设备都可以产生事件。一个可以产生后继事件的指针可以被认为是一个活跃指针。例如，一个触摸笔处于压下状态时可以认为是活跃的，因为它接下来的抬起或移动都会产生额外的后继事件。</em></dd>
- <dt>数位设备 - digitizer</dt>
+ <dt>数位设备 - digitizer</dt>
  <dd>一个可以检测其表面接触行为的传感设备。通常来说，其所用的传感设备是一个可以感知由某些输入设备（如触控笔、压感笔、手指等）所提供的输入信息的可触摸屏幕。</dd>
  <dt>命中检测 - hit test</dt>
  <dd>浏览器用以检测某一指针事件的目标元素的过程。通常来说，这一过程是通过比照出现在文档或屏幕媒介上的指针位置与视觉布局来实现的。</dd>
@@ -53,19 +53,19 @@ translation_of: Web/API/Pointer_events
 <ul>
  <li>{{ domxref('PointerEvent.pointerId','pointerId')}} - 对于某个由指针引起的事件的唯一标识。</li>
  <li>{{ domxref('PointerEvent.width','width')}} - 以 CSS 像素计数的宽度属性，取决于指针的接触面的几何构成。</li>
- <li>{{ domxref('PointerEvent.height','height')}} -  以 CSS 像素计数的高度属性，取决于指针的接触面的几何构成。</li>
+ <li>{{ domxref('PointerEvent.height','height')}} -  以 CSS 像素计数的高度属性，取决于指针的接触面的几何构成。</li>
  <li>{{ domxref('PointerEvent.pressure','pressure')}} - 规范化后的指针输入的压力值，取值范围为 0 到 1，0 代表硬件可检测到的压力最小值，1 代表最大值。</li>
- <li>{{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}} The normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress) in the range <code>-1</code> to <code>1</code>, where <code>0</code> is the neutral position of the control.</li>
+ <li>{{ domxref('PointerEvent.tangentialPressure','tangentialPressure')}} The normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress) in the range <code>-1</code> to <code>1</code>, where <code>0</code> is the neutral position of the control.</li>
  <li>{{ domxref('PointerEvent.tiltX','tiltX')}} - the plane angle (in degrees, in the range of -90 to 90) between the Y-Z plane and the plane containing both the transducer (e.g. pen stylus) axis and the Y axis.</li>
  <li>{{ domxref('PointerEvent.tiltY','tiltY')}} - the plane angle (in degrees, in the range of -90 to 90) between the X-Z plane and the plane containing both the transducer (e.g. pen stylus) axis and the X axis.</li>
- <li>{{ domxref('PointerEvent.twist','twist')}} The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range <code>0</code> to <code>359</code>.</li>
+ <li>{{ domxref('PointerEvent.twist','twist')}} The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range <code>0</code> to <code>359</code>.</li>
  <li>{{ domxref('PointerEvent.pointerType','pointerType')}} - 表明引发该事件的设备类型（鼠标/笔/触摸等）。</li>
  <li>{{ domxref('PointerEvent.isPrimary','isPrimary')}} - 表示该指针是否为该类型指针中的首选指针。</li>
 </ul>
 
 <h3 id="事件类型与全局事件处理">事件类型与全局事件处理</h3>
 
-<p>指针事件有始终不同的事件类型，其中其中在鼠标事件中有相对应的语义话表示 (<code>down, up, move, over, out, enter, leave</code>)。以下是每个事件类型及所对应的{{domxref("GlobalEventHandlers","Global Event Handler")}}的基本介绍。</p>
+<p>指针事件有始终不同的事件类型，其中其中在鼠标事件中有相对应的语义话表示 (<code>down, up, move, over, out, enter, leave</code>)。以下是每个事件类型及所对应的{{domxref("GlobalEventHandlers","Global Event Handler")}}的基本介绍。</p>
 
 <table class="standard-table">
  <tbody>
@@ -138,7 +138,7 @@ translation_of: Web/API/Pointer_events
 
 <h3 id="Navigator对象扩展">Navigator 对象扩展</h3>
 
-<p>属性 {{domxref("Navigator.maxTouchPoints")}}  被设计用来指明在同一时间点所支持的最大的触摸点数量。</p>
+<p>属性 {{domxref("Navigator.maxTouchPoints")}}  被设计用来指明在同一时间点所支持的最大的触摸点数量。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -176,9 +176,9 @@ translation_of: Web/API/Pointer_events
       el.lostpointercapture = lostcapture_handler;
     }
   &lt;/script&gt;
-  &lt;body onload="init();"&gt;
-    &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
-  &lt;/body&gt;
+  &lt;body onload="init();"&gt;
+    &lt;div id="target"&gt; Touch me ... &lt;/div&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
@@ -319,7 +319,7 @@ translation_of: Web/API/Pointer_events
 </table>
 
 <div class="blockIndicator note">
-<p><strong>Notice:</strong> The <code>button</code> property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.</p>
+<p><strong>Notice:</strong> The <code>button</code> property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.</p>
 </div>
 
 <h2 id="指针捕捉">指针捕捉</h2>
@@ -363,7 +363,7 @@ translation_of: Web/API/Pointer_events
       el.releasePointerCapture(ev.pointerId);
     }
 
-    function init() {
+    function init() {
       var el=document.getElementById("target");
       // Register pointerdown and pointercancel handlers
       el.onpointerdown = downHandler;
@@ -398,7 +398,7 @@ translation_of: Web/API/Pointer_events
 }
 </pre>
 
-<p>在下面的示例中，当<code>target</code> 元素被触摸时，仅允许响应其在水平方向上的滚动。</p>
+<p>在下面的示例中，当<code>target</code> 元素被触摸时，仅允许响应其在水平方向上的滚动。</p>
 
 <pre class="brush: css notranslate">#target {
   touch-action: pan-x;
@@ -409,7 +409,7 @@ translation_of: Web/API/Pointer_events
 
 <p>尽管指针事件接口允许应用程序去为各种指针输入设备创建更佳的用户体验，但事实上，目前的大多数 web 内容仍然是仅为支持鼠标输入而设计的。因此，即使一个浏览器支持了指针事件，它也仍然需要在这些仅支持鼠标设置网页在不做任何修改的情况下继续对其提供支持。理想情况下，通用的指针模型将使得应用不再需要专门为鼠标输入设计相应。然而，因为浏览器仍必须处理鼠标事件，所以可能仍留存一些需要加以处理的兼容性问题。这一部分包含了一些对于开发者可能有用的关于鼠标事件和指针事件的异同点。</p>
 
-<p>出于对基于鼠标的内容的兼容性考虑，浏览器会将通用的指针事件映射成相应的鼠标事件。 这一事件映射被乘坐兼容性鼠标事件。开发者可以通过取消 pointerdown 事件相应来阻止某一特定的兼容性鼠标事件的产生，但需要注意以下情况：</p>
+<p>出于对基于鼠标的内容的兼容性考虑，浏览器会将通用的指针事件映射成相应的鼠标事件。 这一事件映射被乘坐兼容性鼠标事件。开发者可以通过取消 pointerdown 事件相应来阻止某一特定的兼容性鼠标事件的产生，但需要注意以下情况：</p>
 
 <ul>
  <li>鼠标事件仅在指针失效（when the pointer is down）的情况下可以被阻止。</li>

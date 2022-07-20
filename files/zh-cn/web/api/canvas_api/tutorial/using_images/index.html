@@ -26,14 +26,14 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
  <dt><strong>{{domxref("HTMLImageElement")}}</strong></dt>
  <dd>这些图片是由<code>Image()函数构造出来的，或者任何的{{HTMLElement("img")}}元素</code></dd>
  <dt><strong>{{domxref("HTMLVideoElement")}}</strong></dt>
- <dd>用一个 HTML 的 {{HTMLElement("video")}}元素作为你的图片源，可以从视频中抓取当前帧作为一个图像</dd>
+ <dd>用一个 HTML 的 {{HTMLElement("video")}}元素作为你的图片源，可以从视频中抓取当前帧作为一个图像</dd>
  <dt><strong>{{domxref("HTMLCanvasElement")}}</strong></dt>
- <dd>可以使用另一个 {{HTMLElement("canvas")}} 元素作为你的图片源。</dd>
+ <dd>可以使用另一个 {{HTMLElement("canvas")}} 元素作为你的图片源。</dd>
  <dt><strong>{{domxref("ImageBitmap")}}</strong></dt>
  <dd>这是一个高性能的位图，可以低延迟地绘制，它可以从上述的所有源以及其它几种源中生成。</dd>
 </dl>
 
-<p>这些源统一由 {{domxref("CanvasImageSource")}}类型来引用。</p>
+<p>这些源统一由 {{domxref("CanvasImageSource")}}类型来引用。</p>
 
 <p>有几种方式可以获取到我们需要在 canvas 上使用的图片。</p>
 
@@ -43,13 +43,13 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 
 <ul>
  <li>{{domxref("document.images")}}集合</li>
- <li> {{domxref("document.getElementsByTagName()")}}方法</li>
+ <li> {{domxref("document.getElementsByTagName()")}}方法</li>
  <li>如果你知道你想使用的指定图片的 ID，你可以用{{domxref("document.getElementById()")}}获得这个图片</li>
 </ul>
 
 <h3 id="Using_other_canvas_elements">使用其它域名下的图片</h3>
 
-<p>在 {{domxref("HTMLImageElement")}}上使用<a href="/en-US/docs/HTML/CORS_settings_attributes">crossOrigin</a>属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会<a href="/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas">污染 canvas</a>。</p>
+<p>在 {{domxref("HTMLImageElement")}}上使用<a href="/en-US/docs/HTML/CORS_settings_attributes">crossOrigin</a>属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染 canvas，否则，使用这个图片将会<a href="/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas">污染 canvas</a>。</p>
 
 <h3 id="Using_other_canvas_elements">使用其它 canvas 元素</h3>
 
@@ -80,7 +80,7 @@ img.src = 'myImage.png'; // 设置图片源地址
 
 <h3 id="Embedding_an_image_via_data_url">通过 data: url 方式嵌入图像</h3>
 
-<p>我们还可以通过 <a href="http://en.wikipedia.org/wiki/Data:_URL">data:url</a> 方式来引用图像。Data urls 允许用一串 Base64 编码的字符串的方式来定义一个图片。</p>
+<p>我们还可以通过 <a href="http://en.wikipedia.org/wiki/Data:_URL">data:url</a> 方式来引用图像。Data urls 允许用一串 Base64 编码的字符串的方式来定义一个图片。</p>
 
 <pre class="brush: js notranslate">img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
 </pre>
@@ -112,7 +112,7 @@ img.src = 'myImage.png'; // 设置图片源地址
 </dl>
 
 <div class="note">
-<p>SVG 图像必须在 &lt;svg&gt; 根指定元素的宽度和高度。</p>
+<p>SVG 图像必须在 &lt;svg&gt; 根指定元素的宽度和高度。</p>
 </div>
 
 <h3 id="Example_A_simple_line_graph">例子：一个简单的线图</h3>
@@ -123,9 +123,9 @@ img.src = 'myImage.png'; // 设置图片源地址
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="180" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="180" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;</pre>
 </div>
 
@@ -155,7 +155,7 @@ img.src = 'myImage.png'; // 设置图片源地址
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y, width, height)")}}</dt>
- <dd>这个方法多了 2 个参数：<code>width</code> 和 <code>height，</code>这两个参数用来控制 当向 canvas 画入时应该缩放的大小</dd>
+ <dd>这个方法多了 2 个参数：<code>width</code> 和 <code>height，</code>这两个参数用来控制 当向 canvas 画入时应该缩放的大小</dd>
 </dl>
 
 <h3 id="Example_Tiling_an_image">例子：平铺图像</h3>
@@ -170,9 +170,9 @@ img.src = 'myImage.png'; // 设置图片源地址
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;</pre>
 </div>
 
@@ -215,13 +215,13 @@ img.src = 'myImage.png'; // 设置图片源地址
 <p>我用一个与上面用到的不同的方法来装载图像，直接将图像插入到 HTML 里面，然后通过 CSS 隐藏（<code>display:none</code>）它。两个图像我都赋了 <code>id</code> ，方便后面使用。看下面的脚本，相当简单，首先对犀牛头做好切片（第一次<code>drawImage</code>）放在 canvas 上，然后再上面套个相框（第二次<code>drawImage</code>）。</p>
 
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
    &lt;div style="display:none;"&gt;
      &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
      &lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"&gt;
    &lt;/div&gt;
- &lt;/body&gt;
+ &lt;/body&gt;
 &lt;/html&gt;</pre>
 
 <pre class="brush: js notranslate">function draw() {
@@ -250,23 +250,23 @@ img.src = 'myImage.png'; // 设置图片源地址
 <p>下面的代码应该是蛮简单易懂的了。就是遍历图像对象数组，依次创建新的 canvas 元素并添加进去。可能唯一需要注意的，对于那些并不熟悉 DOM 的朋友来说，是 <code><a href="/En/DOM/Node.insertBefore">insertBefore</a></code> 方法的用法。<code>insertBefore</code> 是父节点（单元格）的方法，用于将新节点（canvas 元素）插入到我们想要插入的节点之前。</p>
 
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-     &lt;table&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-     &lt;/table&gt;
+ &lt;body onload="draw();"&gt;
+     &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+     &lt;/table&gt;
      &lt;img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150"&gt;
- &lt;/body&gt;
+ &lt;/body&gt;
 &lt;/html&gt;</pre>
 
 <pre class="brush: css notranslate">body {

@@ -11,11 +11,11 @@ translation_of: Web/API/WheelEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><code><strong>WheelEvent</strong></code> 接口表示用户滚动鼠标滚轮或类似输入设备时触发的事件。</p>
+<p><code><strong>WheelEvent</strong></code> 接口表示用户滚动鼠标滚轮或类似输入设备时触发的事件。</p>
 
 <div class="warning"><strong>重要：该事件为标准规定的滚轮事件接口。</strong>早期的浏览器实现过{{ domxref("MouseWheelEvent") }}和{{domxref("MouseScrollEvent")}}两种滚轮事件接口，但这两种接口皆非标准，加之各浏览器间对其兼容性极差。因而开发者应使用该标准事件接口取代这两个非标准接口。</div>
 
-<div class="note"><strong>不要混淆 <code>wheel</code> 事件和 {{event("scroll")}} 事件：</strong>{{event("wheel")}} 事件的默认动作取决于浏览器实现。因此 <code>wheel</code> 事件不一定会触发 {{event("scroll")}} 事件。即便滚轮事件引发了文档内容的滚动行为，也不表示 <code>wheel</code> 事件中的 <code>delta*</code> 值恰好反映文档内容的滚动方向。因此，不要依赖 <code>delta*</code> 属性获知文档内容的滚动方向。可在文档内容滚动事件（{{event("scroll")}}）中监视 target 的{{domxref("Element.scrollLeft", "scrollLeft")}}和{{domxref("Element.scrollTop", "scrollTop")}}的变化以推断滚动方向。</div>
+<div class="note"><strong>不要混淆 <code>wheel</code> 事件和 {{event("scroll")}} 事件：</strong>{{event("wheel")}} 事件的默认动作取决于浏览器实现。因此 <code>wheel</code> 事件不一定会触发 {{event("scroll")}} 事件。即便滚轮事件引发了文档内容的滚动行为，也不表示 <code>wheel</code> 事件中的 <code>delta*</code> 值恰好反映文档内容的滚动方向。因此，不要依赖 <code>delta*</code> 属性获知文档内容的滚动方向。可在文档内容滚动事件（{{event("scroll")}}）中监视 target 的{{domxref("Element.scrollLeft", "scrollLeft")}}和{{domxref("Element.scrollTop", "scrollTop")}}的变化以推断滚动方向。</div>
 
 <p>{{InheritanceDiagram}}</p>
 

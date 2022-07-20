@@ -5,7 +5,7 @@ translation_of: Web/API/MediaSource/duration
 ---
 <div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-<p>{{domxref("MediaSource")}} 接口的属性 <code><strong>duration</strong></code> 用来获取或者设置当前媒体展示的时长。</p>
+<p>{{domxref("MediaSource")}} 接口的属性 <code><strong>duration</strong></code> 用来获取或者设置当前媒体展示的时长。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -31,18 +31,18 @@ var myDuration = mediaSource.duration;</pre>
  <tbody>
   <tr>
    <td><code>InvalidAccessError</code></td>
-   <td>时长尝试设置一个负数，或者 <code>NaN</code>.</td>
+   <td>时长尝试设置一个负数，或者 <code>NaN</code>.</td>
   </tr>
   <tr>
    <td><code>InvalidStateError</code></td>
-   <td>{{domxref("MediaSource.readyState")}} 状态不是 <code>open</code>, 或者 一个或多个 {{domxref("SourceBuffer")}} 对象在 {{domxref("MediaSource.sourceBuffers")}} 中被更新  (例如。该 {{domxref("SourceBuffer.updating")}}属性 为 <code>true</code>.)</td>
+   <td>{{domxref("MediaSource.readyState")}} 状态不是 <code>open</code>, 或者 一个或多个 {{domxref("SourceBuffer")}} 对象在 {{domxref("MediaSource.sourceBuffers")}} 中被更新  (例如。该 {{domxref("SourceBuffer.updating")}}属性 为 <code>true</code>.)</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="例子">例子</h2>
 
-<p>下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">查看完整例子</a>, 或者 <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下载源代码</a> .)</p>
+<p>下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">查看完整例子</a>, 或者 <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下载源代码</a> .)</p>
 
 <pre class="brush: js  language-js"><code class="language-js">function sourceOpen (_) {
   //console.log(this.readyState); // open

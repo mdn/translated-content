@@ -7,7 +7,7 @@ translation_of: Web/API/MouseEvent/button
 
 <p><strong><code>MouseEvent.button</code></strong>是只读属性，它返回一个值，代表用户按下并触发了事件的鼠标按键。</p>
 
-<p>这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断{{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} {{event("mousemove")}}这些事件并不可靠。</p>
+<p>这个属性只能够表明在触发事件的单个或多个按键按下或释放过程中哪些按键被按下了。因此，它对判断{{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} {{event("mousemove")}}这些事件并不可靠。</p>
 
 <p>用户可能会改变鼠标按键的配置，因此当一个事件的<strong><code>MouseEvent.button</code></strong>值为 0 时，它可能不是由物理上设备最左边的按键触发的。但是对于一个标准按键布局的鼠标来说就会是左键。</p>
 

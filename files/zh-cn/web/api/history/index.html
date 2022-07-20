@@ -5,7 +5,7 @@ translation_of: Web/API/History
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><strong><code>History</code></strong> 接口允许操作浏览器的曾经在标签页或者框架里访问的会话历史记录。</p>
+<p><strong><code>History</code></strong> 接口允许操作浏览器的曾经在标签页或者框架里访问的会话历史记录。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/History
  <dd>通过当前页面的相对位置从浏览器历史记录 ( 会话记录 ) 加载页面。比如：参数为-1 的时候为上一页，参数为 1 的时候为下一页。当整数参数超出界限时 ( 译者注：原文为 When <code><em>integerDelta</em></code> is out of bounds )，例如：如果当前页为第一页，前面已经没有页面了，我传参的值为-1，那么这个方法没有任何效果也不会报错。调用没有参数的 <code>go() </code>方法或者参数值为 0 时，重新载入当前页面。( 这点与支持字符串作为 url 参数的 IE 有点不同)。</dd>
  <dt>{{domxref("History.pushState()")}}</dt>
  <dd>按指定的名称和 URL（如果提供该参数）将数据 push 进会话历史栈，数据被 DOM 进行不透明处理；你可以指定任何可以被序列化的 javascript 对象。注意到 Firefox 现在忽略了这个 title 参数，更多的信息，请看<a href="/zh-CN/docs/Web/API/History_API" title="en/DOM/Manipulating the browser history">manipulating the browser history</a>。
- <div class="note"><strong>Note:</strong> 在 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}中， 被传递的对象使用 JSON 进行序列化。从 Gecko 6.0 {{ geckoRelease("6.0") }}开始，使用<a href="/en/DOM/The_structured_clone_algorithm">结构化克隆算法</a>进行序列化。这样，就可以让更多类型的对象被安全地传输。</div>
+ <div class="note"><strong>Note:</strong> 在 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}中， 被传递的对象使用 JSON 进行序列化。从 Gecko 6.0 {{ geckoRelease("6.0") }}开始，使用<a href="/en/DOM/The_structured_clone_algorithm">结构化克隆算法</a>进行序列化。这样，就可以让更多类型的对象被安全地传输。</div>
  </dd>
  <dt>{{domxref("History.replaceState()")}}</dt>
  <dd>按指定的数据，名称和 URL(如果提供该参数)，更新历史栈上最新的入口。这个数据被 DOM 进行了不透明处理。你可以指定任何可以被序列化的 javascript 对象。注意到 Firefox 现在忽略了这个 title 参数，更多的信息，请看<a href="/zh-CN/docs/Web/API/History_API" title="en/DOM/Manipulating the browser history">manipulating the browser history</a>。

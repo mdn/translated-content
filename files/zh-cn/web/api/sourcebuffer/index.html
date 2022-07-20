@@ -17,7 +17,7 @@ translation_of: Web/API/SourceBuffer
 ---
 <p>{{APIRef("Media Source Extensions")}}</p>
 
-<p>The <strong><code>SourceBuffer</code></strong> interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.</p>
+<p>The <strong><code>SourceBuffer</code></strong> interface represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} and played, via a {{domxref("MediaSource")}} object. This can be made up of one or several media segments.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -41,7 +41,7 @@ translation_of: Web/API/SourceBuffer
  <dt>{{domxref("SourceBuffer.trackDefaults")}}</dt>
  <dd>Specifies the default values to use if kind, label, and/or language information is not available in the <a href="https://w3c.github.io/media-source/#init-segment">initialization segment</a> of the media to be appended to the <code>SourceBuffer</code>.</dd>
  <dt>{{domxref("SourceBuffer.updating")}} {{readonlyInline}}</dt>
- <dd>A boolean indicating whether the <code>SourceBuffer</code> is currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}}, {{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.</dd>
+ <dd>A boolean indicating whether the <code>SourceBuffer</code> is currently being updated — i.e. whether an {{domxref("SourceBuffer.appendBuffer()")}}, {{domxref("SourceBuffer.appendStream()")}}, or {{domxref("SourceBuffer.remove()")}} operation is currently in progress.</dd>
  <dt>{{domxref("SourceBuffer.videoTracks")}} {{readonlyInline}}</dt>
  <dd>A list of the video tracks currently contained inside the <code>SourceBuffer</code>.</dd>
 </dl>
@@ -50,15 +50,15 @@ translation_of: Web/API/SourceBuffer
 
 <dl>
  <dt>{{domxref("SourceBuffer.onabort")}}</dt>
- <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}} is ended by a call to {{domxref("SourceBuffer.abort()")}}. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>.</dd>
+ <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}} is ended by a call to {{domxref("SourceBuffer.abort()")}}. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>.</dd>
  <dt>{{domxref("SourceBuffer.onerror")}}</dt>
- <dd>Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}}. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>.</dd>
+ <dd>Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}}. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>.</dd>
  <dt>{{domxref("SourceBuffer.onupdate")}}</dt>
- <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>. This event is fired before <code>onupdateend</code>.</dd>
+ <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from <code>true</code> to <code>false</code>. This event is fired before <code>onupdateend</code>.</dd>
  <dt>{{domxref("SourceBuffer.onupdateend")}}</dt>
- <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} has ended. This event is fired after <code>onupdate</code>.</dd>
+ <dd>Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} has ended. This event is fired after <code>onupdate</code>.</dd>
  <dt>{{domxref("SourceBuffer.onupdatestart")}}</dt>
- <dd>Fired whenever the value of {{domxref("SourceBuffer.updating")}} transitions from <code>false</code> to <code>true</code>.</dd>
+ <dd>Fired whenever the value of {{domxref("SourceBuffer.updating")}} transitions from <code>false</code> to <code>true</code>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>

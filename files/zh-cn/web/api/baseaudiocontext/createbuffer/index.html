@@ -9,7 +9,7 @@ tags:
 translation_of: Web/API/BaseAudioContext/createBuffer
 original_slug: Web/API/AudioContext/createBuffer
 ---
-<p>音频环境{{ domxref("AudioContext") }} 接口的 <code>createBuffer() 方法用于新建一个空</code>白的 {{ domxref("AudioBuffer") }} 对象，以便用于填充数据，通过 {{ domxref("AudioBufferSourceNode") }} 播放。</p>
+<p>音频环境{{ domxref("AudioContext") }} 接口的 <code>createBuffer() 方法用于新建一个空</code>白的 {{ domxref("AudioBuffer") }} 对象，以便用于填充数据，通过 {{ domxref("AudioBufferSourceNode") }} 播放。</p>
 
 <p>更多关于音频片段 (Audio Buffer) 的细节，请参考{{ domxref("AudioBuffer") }}页面。</p>
 
@@ -31,14 +31,14 @@ original_slug: Web/API/AudioContext/createBuffer
  <dt>numOfChannels</dt>
  <dd>一个定义了 buffer 中包含的声频通道数量的整数。<br>
  一个标准的实现必须包含至少 32 个声频通道。</dd>
- <dt> </dt>
+ <dt> </dt>
  <dt>length</dt>
  <dd>一个代表 buffer 中的样本帧数的整数。</dd>
  <dt>sampleRate</dt>
  <dd>线性音频样本的采样率，即每一秒包含的关键帧的个数。实现过程中必须支持 22050～96000 的采样率。</dd>
 </dl>
 
-<p> </p>
+<p> </p>
 
 <h3 id="返回值">返回值</h3>
 
@@ -51,7 +51,7 @@ original_slug: Web/API/AudioContext/createBuffer
 <pre class="brush: js">var audioCtx = new AudioContext();
 var buffer = audioCtx.createBuffer(2, 22050, 44100);</pre>
 
-<p>如果你这样调用，你将会得到一个立体声（两个声道）的音频片段 (Buffer)，当它在一个频率为 44100 赫兹（这是目前大部分声卡处理声音的频率）的音频环境 ({{ domxref("AudioContext") }}) 中播放的时候，会持续 0.5 秒：22050 帧 / 44100 赫兹 = 0.5 秒。</p>
+<p>如果你这样调用，你将会得到一个立体声（两个声道）的音频片段 (Buffer)，当它在一个频率为 44100 赫兹（这是目前大部分声卡处理声音的频率）的音频环境 ({{ domxref("AudioContext") }}) 中播放的时候，会持续 0.5 秒：22050 帧 / 44100 赫兹 = 0.5 秒。</p>
 
 <pre class="brush: js">var audioCtx = new AudioContext();
 var buffer = audioCtx.createBuffer(1, 22050, 22050);</pre>
@@ -59,10 +59,10 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);</pre>
 <p>如果你这样调用，你将会得到一个单声道的音频片段 (Buffer)，当它在一个频率为 44100 赫兹的音频环境 ({{ domxref("AudioContext") }}) 中播放的时候，将会被自动按照 44100 赫兹*重采样*（因此也会转化为 44100 赫兹的片段），并持续 1 秒：44100 帧 / 44100 赫兹 = 1 秒。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 音频重采样与图片的缩放非常类似：比如你有一个 16 x 16 的图像，但是你想把它填充到一个 32 x 32 大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个低品质的图像（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它能缩放原图像，并且缩放后的图像占用空间比相同大小的普通图像要小。重采样的音频原理相同——你能节省一些空间，但由此你也无法得到高频率的声音（高音区）。</p>
+<p><strong>注意：</strong> 音频重采样与图片的缩放非常类似：比如你有一个 16 x 16 的图像，但是你想把它填充到一个 32 x 32 大小的区域，你就要对它进行缩放（重采样）。得到的结果会是一个低品质的图像（图像会模糊或者有锯齿形的边缘，这取决于缩放采用的算法），但它能缩放原图像，并且缩放后的图像占用空间比相同大小的普通图像要小。重采样的音频原理相同——你能节省一些空间，但由此你也无法得到高频率的声音（高音区）。</p>
 </div>
 
-<p>现在让我们来看一个更加复杂的示例，我们将创建一个时长 2 秒的音频片段，并用白噪声填充它，之后通过一个 音频片段源节点 ({{ domxref("AudioBufferSourceNode") }}) 播放。代码中的注释应该能充分解释发生了什么。你可以 <a href="http://mdn.github.io/audio-buffer/">在线演示</a> ，或者 <a href="https://github.com/mdn/audio-buffer">查看源代码</a> 。</p>
+<p>现在让我们来看一个更加复杂的示例，我们将创建一个时长 2 秒的音频片段，并用白噪声填充它，之后通过一个 音频片段源节点 ({{ domxref("AudioBufferSourceNode") }}) 播放。代码中的注释应该能充分解释发生了什么。你可以 <a href="http://mdn.github.io/audio-buffer/">在线演示</a> ，或者 <a href="https://github.com/mdn/audio-buffer">查看源代码</a> 。</p>
 
 <pre class="brush: js;highlight[13]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');

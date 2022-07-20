@@ -9,32 +9,32 @@ original_slug: Web/API/Streams_API/概念
 ---
 <div>{{apiref("Streams")}}</div>
 
-<p><a href="/en-US/docs/Web/API/Streams_API">Streams API</a> 为 Web 平台提供了一组十分有用的工具，提供了一系列对象以允许 JavaScript 访问来自网络的数据流，并根据开发人员的需要对其进行处理。与流相关的一些概念和术语可能会令您感到陌生——本文将解释您需要了解的所有内容。</p>
+<p><a href="/en-US/docs/Web/API/Streams_API">Streams API</a> 为 Web 平台提供了一组十分有用的工具，提供了一系列对象以允许 JavaScript 访问来自网络的数据流，并根据开发人员的需要对其进行处理。与流相关的一些概念和术语可能会令您感到陌生——本文将解释您需要了解的所有内容。</p>
 
 <h2 id="Readable_streams">Readable streams</h2>
 
-<p>一个可读流是一个数据源，在 JavaScript 中用一个 {{domxref("ReadableStream")}} 对象表示，数据从它的 <strong>underlying source (底层源)</strong> 流出 —— 底层源表示一个您希望从中获取数据的，来自网络或其他域的，某种资源。</p>
+<p>一个可读流是一个数据源，在 JavaScript 中用一个 {{domxref("ReadableStream")}} 对象表示，数据从它的 <strong>underlying source (底层源)</strong> 流出 —— 底层源表示一个您希望从中获取数据的，来自网络或其他域的，某种资源。</p>
 
-<p>有两种 underlying source:</p>
+<p>有两种 underlying source:</p>
 
 <ul>
- <li><strong>Push sources</strong> 会在您访问了它们之后，不断地主动推送数据。您可以自行 start, pause，或 cancel 对流的访问。例如视频流和 TCP/<a href="/en-US/docs/Web/API/WebSockets_API">Web sockets</a> 。</li>
- <li><strong>Pull sources</strong> 需要您在连接到它们后，显式地从它们请求数据。例如通过 <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> 或 <a href="/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest">XHR</a> 请求访问一个文件。</li>
+ <li><strong>Push sources</strong> 会在您访问了它们之后，不断地主动推送数据。您可以自行 start, pause，或 cancel 对流的访问。例如视频流和 TCP/<a href="/en-US/docs/Web/API/WebSockets_API">Web sockets</a> 。</li>
+ <li><strong>Pull sources</strong> 需要您在连接到它们后，显式地从它们请求数据。例如通过 <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> 或 <a href="/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest">XHR</a> 请求访问一个文件。</li>
 </ul>
 
-<p>数据被按序读入到许多小块，这些小块被称作 <strong>chunk</strong>。<strong>chunk</strong> 可以是单个字节，也可以是某种更大的数据类型，例如特定大小的 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays">typed array</a> 。来自一个流的 <strong>chunks</strong> 可以有不同的大小和类型。</p>
+<p>数据被按序读入到许多小块，这些小块被称作 <strong>chunk</strong>。<strong>chunk</strong> 可以是单个字节，也可以是某种更大的数据类型，例如特定大小的 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays">typed array</a> 。来自一个流的 <strong>chunks</strong> 可以有不同的大小和类型。</p>
 
 <p><img src="readable_streams.png"></p>
 
-<p>已放入到流中的 chunks 称作 <strong>enqueued</strong> —— 这意味着它们已经准备好被读取，并等待在队列中。流的一个 <strong>internal queue</strong> 跟踪了那些尚未读取的块（请参阅下面的<strong>内部队列和队列策略</strong>部分）。</p>
+<p>已放入到流中的 chunks 称作 <strong>enqueued</strong> —— 这意味着它们已经准备好被读取，并等待在队列中。流的一个 <strong>internal queue</strong> 跟踪了那些尚未读取的块（请参阅下面的<strong>内部队列和队列策略</strong>部分）。</p>
 
-<p>流中的 chunks 由一个 <strong>reader</strong> 读取 —— 该数据处理过程一次只处理一个 chunk，允许您对其执行任何类型的操作。reader 加上与它一起运行的其他处理代码合称为一个 <strong>consumer </strong>。</p>
+<p>流中的 chunks 由一个 <strong>reader</strong> 读取 —— 该数据处理过程一次只处理一个 chunk，允许您对其执行任何类型的操作。reader 加上与它一起运行的其他处理代码合称为一个 <strong>consumer </strong>。</p>
 
 <p>另一个您将用到的对象叫做 <strong>controller</strong> —— 每个 reader 都有一个关联的 controller，用来控制流（例如，可以将流 close）。</p>
 
-<p>一个流一次只能被一个 reader 读；当一个 reader 被创建并开始读一个流（an <strong>active reader</strong>），我们说，它被 <strong>locked</strong> 在该流上。如果您想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作。（您可以 <strong>tee</strong> 流，参阅下面的 Teeing 部分）</p>
+<p>一个流一次只能被一个 reader 读；当一个 reader 被创建并开始读一个流（an <strong>active reader</strong>），我们说，它被 <strong>locked</strong> 在该流上。如果您想让另一个 reader 读这个流，则通常需要先取消第一个 reader ，再执行其他操作。（您可以 <strong>tee</strong> 流，参阅下面的 Teeing 部分）</p>
 
-<p>注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流 —— 这是传统流的扩展版本，用于读取底层字节源。相比可读流，字节流除了 <strong><dfn>default reader</dfn></strong> ，还可以使用 <strong><dfn>BYOB reader </dfn></strong><dfn>(BYOB, or "bring your own buffer", "带上你自己的缓冲") 。</dfn>这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。您的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅{{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。</p>
+<p>注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流 —— 这是传统流的扩展版本，用于读取底层字节源。相比可读流，字节流除了 <strong><dfn>default reader</dfn></strong> ，还可以使用 <strong><dfn>BYOB reader </dfn></strong><dfn>(BYOB, or "bring your own buffer", "带上你自己的缓冲") 。</dfn>这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。您的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅{{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。</p>
 
 <div class="warning">
 <p><strong>Important</strong>: 字节流尚未在任何地方实现，并且规范的细节被质疑是否处于可以实现的高度完成的状态。这种情况可能会随着时间而变化。</p>
@@ -46,17 +46,17 @@ original_slug: Web/API/Streams_API/概念
 
 <p>尽管同一时刻只能有一个 reader 可以读取流，我们可以把流分割成两个相同的副本，这样它们就可以用两个独立的 reader 读取。该过程称为 <strong>teeing </strong>。</p>
 
-<p>在 JavaScript 中，该过程由调用 {{domxref("ReadableStream.tee()")}} 实现 —— 它返回一个数组，包含对原始可读流的两个相同的副本可读流，可以独立地被不同的 reader 读取。</p>
+<p>在 JavaScript 中，该过程由调用 {{domxref("ReadableStream.tee()")}} 实现 —— 它返回一个数组，包含对原始可读流的两个相同的副本可读流，可以独立地被不同的 reader 读取。</p>
 
-<p>举例而言，您在 <a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker</a> 中可能会用到该方法，当您从服务器 fetch 资源，得到一个响应的可读流，您可能会想把这个流拆分成两个，一个流入到浏览器，另一个流入到 ServiceWorker 的缓存。由于 response 的 body 无法被消费两次，以及可读流无法被两个 reader 同时读取，您会需要两个可读流副本来实现需求。</p>
+<p>举例而言，您在 <a href="/en-US/docs/Web/API/Service_Worker_API">ServiceWorker</a> 中可能会用到该方法，当您从服务器 fetch 资源，得到一个响应的可读流，您可能会想把这个流拆分成两个，一个流入到浏览器，另一个流入到 ServiceWorker 的缓存。由于 response 的 body 无法被消费两次，以及可读流无法被两个 reader 同时读取，您会需要两个可读流副本来实现需求。</p>
 
 <p><img src="tee.png"></p>
 
 <h2 id="Writable_streams">Writable streams</h2>
 
-<p>一个 <strong>Writable stream (可写流) </strong>是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 <strong>underlying sink (底层汇) </strong>的抽象 —— 底层汇是某个可以写入原始数据的更低层次的 I/O 数据汇。</p>
+<p>一个 <strong>Writable stream (可写流) </strong>是一个可以写入数据的数据终点，在 JavaScript 中以一个 {{domxref("WritableStream")}} 对象表示。这是 JavaScript 层面对 <strong>underlying sink (底层汇) </strong>的抽象 —— 底层汇是某个可以写入原始数据的更低层次的 I/O 数据汇。</p>
 
-<p>数据由一个 <strong>writer </strong>写入流中，每次一个 chunk 。chunk 和可读流的 reader 一样可以有多种类型。您可以用任何方式生成要被写入的块；writer 加上相关的代码称为 <strong>producer</strong>。</p>
+<p>数据由一个 <strong>writer </strong>写入流中，每次一个 chunk 。chunk 和可读流的 reader 一样可以有多种类型。您可以用任何方式生成要被写入的块；writer 加上相关的代码称为 <strong>producer</strong>。</p>
 
 <p>When a writer is created and starts writing to a stream (an <strong>active writer</strong>), it is said to be <strong>locked</strong> to it. Only one writer can write to a writable stream at one time. If you want another writer to start writing to your stream, you typically need to abort it before you then attach another writer to it.</p>
 
@@ -87,11 +87,11 @@ original_slug: Web/API/Streams_API/概念
 
 <h2 id="Backpressure">Backpressure</h2>
 
-<p>流的一个重要概念是 <strong>backpressure (背压)</strong> —— 这是单个流或一个 pipe chain 调节读/写速度的过程。当链中后面的一个流仍然忙碌，尚未准备好接受更多的 chunks 时，它会通过链向上游的流发送一个信号，告诉上游的转换流（或原始源）适当地减慢传输速度，这样您就不会在任何地方遇到瓶颈。</p>
+<p>流的一个重要概念是 <strong>backpressure (背压)</strong> —— 这是单个流或一个 pipe chain 调节读/写速度的过程。当链中后面的一个流仍然忙碌，尚未准备好接受更多的 chunks 时，它会通过链向上游的流发送一个信号，告诉上游的转换流（或原始源）适当地减慢传输速度，这样您就不会在任何地方遇到瓶颈。</p>
 
 <p>要在可读流中使用 backpressure 技术，我们可以通过查询 controller 的 {{domxref("ReadableStreamDefaultController.desiredSize")}} 属性。如果该值太低或为负数，我们的 ReadableStream 可以告诉它的底层源停止往流中装载数据，然后我们沿着 stream chain 进行背压。</p>
 
-<p>可读流在经历背压后，如果 consumer 再次想要接收数据，我们可以在构造可读流时提供 pull 方法来告诉底层源恢复往流中装载数据。</p>
+<p>可读流在经历背压后，如果 consumer 再次想要接收数据，我们可以在构造可读流时提供 pull 方法来告诉底层源恢复往流中装载数据。</p>
 
 <h2 id="Internal_queues_and_queuing_strategies">Internal queues and queuing strategies</h2>
 

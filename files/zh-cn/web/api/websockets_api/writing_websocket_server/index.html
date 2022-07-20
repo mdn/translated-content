@@ -28,7 +28,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 
 <pre class="brush: cpp">TcpListener(System.Net.IPAddress localaddr, int port)</pre>
 
-<p><code>localaddr</code> 是监听地址，  <code>port</code> 是监听端口。</p>
+<p><code>localaddr</code> 是监听地址，  <code>port</code> 是监听端口。</p>
 
 <div class="note">
 <p><em>如果字符串创建 <code>IPAddress</code> 对象，请使用 Parse 静态方法。</em></p>
@@ -75,7 +75,7 @@ class Server {
 
 <ul>
  <li><code>int Available</code><br>
-  这个属性表示已经发送了多少个字节的数据。它的值为零，直到 <code>NetworkStream.DataAvailable</code> 为 true。</li>
+  这个属性表示已经发送了多少个字节的数据。它的值为零，直到 <code>NetworkStream.DataAvailable</code> 为 true。</li>
 </ul>
 
 <h3 id="NetworkStream">NetworkStream</h3>
@@ -147,21 +147,21 @@ if (Regex.IsMatch(data, "^GET")) {
 <pre class="brush: cpp"><em>
 </em>if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
-    const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
+    const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
-    Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + eol
-        + "Connection: Upgrade" + eol
-        + "Upgrade: websocket" + eol
-        + "Sec-WebSocket-Accept: " + Convert.ToBase64String(
-            System.Security.Cryptography.SHA1.Create().ComputeHash(
-                Encoding.UTF8.GetBytes(
-                    new System.Text.RegularExpressions.Regex("Sec-WebSocket-Key: (.*)").Match(data).Groups[1].Value.Trim() + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
-                )
-            )
-        ) + eol
-        + eol);
+    Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + eol
+        + "Connection: Upgrade" + eol
+        + "Upgrade: websocket" + eol
+        + "Sec-WebSocket-Accept: " + Convert.ToBase64String(
+            System.Security.Cryptography.SHA1.Create().ComputeHash(
+                Encoding.UTF8.GetBytes(
+                    new System.Text.RegularExpressions.Regex("Sec-WebSocket-Key: (.*)").Match(data).Groups[1].Value.Trim() + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+                )
+            )
+        ) + eol
+        + eol);
 
-    stream.Write(response, 0, response.Length);
+    stream.Write(response, 0, response.Length);
 }
 </pre>
 

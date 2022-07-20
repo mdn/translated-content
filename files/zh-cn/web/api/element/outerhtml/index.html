@@ -9,9 +9,9 @@ translation_of: Web/API/Element/outerHTML
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p> {{ domxref("element") }}  DOM 接口的<code>outerHTML</code>属性获取描述元素（包括其后代）的序列化 HTML 片段。它也可以设置为用从给定字符串解析的节点替换元素。</p>
+<p> {{ domxref("element") }}  DOM 接口的<code>outerHTML</code>属性获取描述元素（包括其后代）的序列化 HTML 片段。它也可以设置为用从给定字符串解析的节点替换元素。</p>
 
-<p>要仅获取元素内容的 HTML 表示形式或替换元素的内容，请使用 {{domxref("Element.innerHTML", "innerHTML")}} 属性</p>
+<p>要仅获取元素内容的 HTML 表示形式或替换元素的内容，请使用 {{domxref("Element.innerHTML", "innerHTML")}} 属性</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -32,8 +32,8 @@ translation_of: Web/API/Element/outerHTML
 <pre class="brush: js">// HTML:
 /*
 &lt;div id="d"&gt;
-    &lt;p&gt;Content&lt;/p&gt;
-    &lt;p&gt;Further Elaborated&lt;/p&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+    &lt;p&gt;Further Elaborated&lt;/p&gt;
 &lt;/div&gt;
 */
 
@@ -51,7 +51,7 @@ console.log(d.outerHTML);
 <pre class="brush: js">// HTML:
 /*
 &lt;div id="container"&gt;
-    &lt;div id="d"&gt;This is a div.&lt;/div&gt;
+    &lt;div id="d"&gt;This is a div.&lt;/div&gt;
 &lt;/div&gt;
 */
 
@@ -68,7 +68,7 @@ console.log(container.firstChild.nodeName);
 
 /*
     #d div 不再是文档树的一部分，新段替换了它。
-    <em>(不在页面中显示，但仍然在内存中) </em>
+    <em>(不在页面中显示，但仍然在内存中) </em>
 */
 </pre>
 
@@ -91,7 +91,7 @@ console.log(p.nodeName);
 // 仍然为: "P";
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Specification">规范</h2>
 
@@ -105,7 +105,7 @@ console.log(p.nodeName);
 
 <ul>
  <li>MSDN: <a href="http://msdn.microsoft.com/en-us/library/ms534310%28v=vs.85%29.aspx">outerHTML 属性</a></li>
- <li><a href="http://youmightnotneedjquery.com/">You Don't Need jQuery </a></li>
+ <li><a href="http://youmightnotneedjquery.com/">You Don't Need jQuery </a></li>
  <li><a href="http://youmightnotneedjquery.com/">http://youmightnotneedjquery.com/</a></li>
  <li>insertAdjacentHTML</li>
 </ul>

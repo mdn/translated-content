@@ -13,7 +13,7 @@ translation_of: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 
 <p>使用 XMLHttpRequest 将 HTML 资源恢复为 DOM 就像使用 XMLHttpRequest 将 XML 资源恢复为 DOM 一样，除了您不能使用同步模式，您必须通过将字符串 “document” 分配给 responseType 属性来显式请求文档调用 <code>open()</code> 之后调用 <code>send</code> 之前的 XMLHttpRequest 对象。</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">var xhr = new XMLHttpRequest();
 xhr.onload = function() {
@@ -52,7 +52,7 @@ xhr.send();
 
 <h3 id="方法_2">方法 2</h3>
 
-<p>检测浏览器是否支持 XMLHttpRequest 中的 HTML 解析有两个挑战。首先，检测结果是异步获取的，因为 HTML 支持仅在异步模式下可用。Second, you have to actually fetch a test document over HTTP, because testing with a <code>data:</code> URL would end up testing <code>data:</code>URL support at the same time.</p>
+<p>检测浏览器是否支持 XMLHttpRequest 中的 HTML 解析有两个挑战。首先，检测结果是异步获取的，因为 HTML 支持仅在异步模式下可用。Second, you have to actually fetch a test document over HTTP, because testing with a <code>data:</code> URL would end up testing <code>data:</code>URL support at the same time.</p>
 
 <p>因此，为了检测 HTML 支持，服务器上需要一个测试 HTML 文件。这个测试文件很小，格式不是很完整：</p>
 
@@ -119,7 +119,7 @@ oReq.onload = function () { console.log(getHTML(this, "intro")); };
 oReq.send(null);
 </pre>
 
-<div class="note"><strong>注：</strong> 该解决方案对于解释器来说更为昂贵。<strong>仅在确实需要的情况下使用</strong>.</div>
+<div class="note"><strong>注：</strong> 该解决方案对于解释器来说更为昂贵。<strong>仅在确实需要的情况下使用</strong>.</div>
 
 <h2 id="Specifications">Specifications</h2>
 

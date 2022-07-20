@@ -5,11 +5,11 @@ translation_of: Web/API/File/webkitRelativePath
 ---
 <p>{{APIRef("File API")}}{{non-standard_header}}</p>
 
-<p><code><strong>File.webkitRelativePath</strong></code> 是只读属性，包含 {{domxref("USVString")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 {{htmlattrxref("webkitdirectory", "input")}} 属性。</p>
+<p><code><strong>File.webkitRelativePath</strong></code> 是只读属性，包含 {{domxref("USVString")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 {{htmlattrxref("webkitdirectory", "input")}} 属性。</p>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox"> <code><em>relativePath = File</em></code>.webkitRelativePath</pre>
+<pre class="syntaxbox"> <code><em>relativePath = File</em></code>.webkitRelativePath</pre>
 
 <h3 id="值">值</h3>
 
@@ -42,13 +42,13 @@ translation_of: Web/API/File/webkitRelativePath
 
 <p>{{ EmbedLiveSample('Example') }}</p>
 
-<p>特别提醒：假设文件路径是 C:\f1\f2\f3\file.txt, 用户选择的是 f1 文件夹，则 Chrome、Firefox、Edge 都能正确返回  f2/f3/file.txt 值。而国产的 QQ 浏览器、360 浏览器、UC 浏览器、搜狗浏览器都只能返回 f3/file.txt。也就是国产浏览器调用webkitRelativePath返回的结果都不会是你希望得到的路径，请注意使用时的细微差距。</p>
+<p>特别提醒：假设文件路径是 C:\f1\f2\f3\file.txt, 用户选择的是 f1 文件夹，则 Chrome、Firefox、Edge 都能正确返回  f2/f3/file.txt 值。而国产的 QQ 浏览器、360 浏览器、UC 浏览器、搜狗浏览器都只能返回 f3/file.txt。也就是国产浏览器调用webkitRelativePath返回的结果都不会是你希望得到的路径，请注意使用时的细微差距。</p>
 
 <h2 id="规范">规范</h2>
 
 {{Specifications}}
 
-<p>这个 API 没有官方的 W3C 或者 WHATWG 规范。</p>
+<p>这个 API 没有官方的 W3C 或者 WHATWG 规范。</p>
 
 <h2 id="Browser_compatibility">浏览器兼容性</h2>
 

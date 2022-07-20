@@ -15,7 +15,7 @@ translation_of: Web/API/Notification
 
 
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a> 的<strong>通知</strong>接口用于向用户配置和显示桌面通知。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a> 的<strong>通知</strong>接口用于向用户配置和显示桌面通知。</p>
 
 <h2 id="Method_overview">构造方法</h2>
 
@@ -47,7 +47,7 @@ translation_of: Web/API/Notification
 
 <dl>
  <dt>{{domxref("Notification.permission")}} {{readonlyinline}}</dt>
- <dd>一个用于表明当前通知显示授权状态的字符串。可能的值包括：<code>denied</code> (用户拒绝了通知的显示), <code>granted</code> (用户允许了通知的显示), 或 <code>default</code> (因为不知道用户的选择，所以浏览器的行为与 denied 时相同).</dd>
+ <dd>一个用于表明当前通知显示授权状态的字符串。可能的值包括：<code>denied</code> (用户拒绝了通知的显示), <code>granted</code> (用户允许了通知的显示), 或 <code>default</code> (因为不知道用户的选择，所以浏览器的行为与 denied 时相同).</dd>
 </dl>
 
 <h3 id="实例属性">实例属性</h3>
@@ -128,12 +128,12 @@ translation_of: Web/API/Notification
 
   // 否则我们需要向用户获取权限
   else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
-      // 如果用户接受权限，我们就可以发起一条消息
-      if (permission === "granted") {
-         var notification = new Notification("Hi there!");
-      }
-    });
+    Notification.requestPermission().then(function (permission) {
+      // 如果用户接受权限，我们就可以发起一条消息
+      if (permission === "granted") {
+         var notification = new Notification("Hi there!");
+      }
+    });
   }
 
 
@@ -170,6 +170,6 @@ translation_of: Web/API/Notification
   <p><a href="https://codepen.io/xgqfrms/pen/vxaQKe">https://codepen.io/xgqfrms/pen/vxaQKe</a></p>
 
   <p><br>
-    </p>
+    </p>
  </li>
 </ul>

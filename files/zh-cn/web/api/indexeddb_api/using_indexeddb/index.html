@@ -39,7 +39,7 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 
 <h3 id="使用实验版本的_IndexedDB">使用实验版本的 IndexedDB</h3>
 
-<p>如果你希望在仍旧使用前缀的浏览器中测试你的代码，可以使用下列代码:  </p>
+<p>如果你希望在仍旧使用前缀的浏览器中测试你的代码，可以使用下列代码:  </p>
 
 <pre class="brush: js">// In the following line, you should include the prefixes of implementations you want to test.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
@@ -66,7 +66,7 @@ var request = window.indexedDB.open("MyTestDatabase");
 
 <p>看到了吗？ 打开数据库就像任何其他操作一样 — 你必须进行 "request"。</p>
 
-<p>open 请求不会立即打开数据库或者开始一个事务。 对 <code>open()</code> 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest" title="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 <a href="/en-US/docs/IndexedDB/IDBRequest" title="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> 对象。open 函数的结果是一个 <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase" title="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a></code> 对象的实例。</p>
+<p>open 请求不会立即打开数据库或者开始一个事务。 对 <code>open()</code> 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest" title="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 <a href="/en-US/docs/IndexedDB/IDBRequest" title="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> 对象。open 函数的结果是一个 <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase" title="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a></code> 对象的实例。</p>
 
 <p>该 open 方法接受第二个参数，就是数据库的版本号。数据库的版本决定了数据库架构，即数据库的对象仓库（object store）和他的结构。如果数据库不存在，<code>open</code> 操作会创建该数据库，然后 <code>onupgradeneeded</code> 事件被触发，你需要在该事件的处理函数中创建数据库模式。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 <code>onupgradeneeded</code> 事件，允许你在处理函数中更新数据库模式。我们在后面的<a href="#Updating_the_version_of_the_database">更新数据库的版本号</a>和 {{ domxref("IDBFactory.open") }} 中会提到更多有关这方面的内容。</p>
 
@@ -86,9 +86,9 @@ request.onsuccess = function(event) {
   // Do something with request.result!
 };</pre>
 
-<p><code>onsuccess()</code> 和 <code>onerror()</code> 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成<code> "success"</code> 的 DOM 事件）会被触发，<code>request</code> 会作为它的 <code>target</code>。 一旦它被触发的话，相关 <code>request</code> 的 <code>onsuccess()</code> 处理函数就会被触发，使用 success 事件作为它的参数。 否则，如果不是所有事情都成功的话，一个 error 事件（即<code> type</code> 属性被设置成 <code>"error"</code> 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 <code><code>onerror()</code></code> 方法。</p>
+<p><code>onsuccess()</code> 和 <code>onerror()</code> 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成<code> "success"</code> 的 DOM 事件）会被触发，<code>request</code> 会作为它的 <code>target</code>。 一旦它被触发的话，相关 <code>request</code> 的 <code>onsuccess()</code> 处理函数就会被触发，使用 success 事件作为它的参数。 否则，如果不是所有事情都成功的话，一个 error 事件（即<code> type</code> 属性被设置成 <code>"error"</code> 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 <code><code>onerror()</code></code> 方法。</p>
 
-<p>IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 <a href="/en/IndexedDB#Storage_limits" title="https://developer.mozilla.org/en/IndexedDB#Storage_limits">存储限制</a>）。  </p>
+<p>IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 <a href="/en/IndexedDB#Storage_limits" title="https://developer.mozilla.org/en/IndexedDB#Storage_limits">存储限制</a>）。  </p>
 
 <p>显然，浏览器不希望允许某些广告网络或恶意网站来污染你的计算机，所以浏览器会在任意给定的 web app 首次尝试打开一个 IndexedDB 存储时对用户进行提醒。用户可以选择允许访问或者拒绝访问。还有，IndexedDB 在浏览器的隐私模式（Firefox 的 Private Browsing 模式和 Chrome 的 Incognito 模式）下是被完全禁止的。 隐私浏览的全部要点在于不留下任何足迹，所以在这种模式下打开数据库的尝试就失败了。</p>
 
@@ -121,7 +121,7 @@ request.onsuccess = function(event) {
 
 <p>当你创建一个新的数据库或者增加已存在的数据库的版本号（当<a href="#打开数据库">打开数据库</a>时，指定一个比之前更大的版本号）， <code>onupgradeneeded</code> 事件会被触发，<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> 对象会作为参数传递给绑定在 <code>request.result</code>（例如例子中的 <code>db</code>）上的 <code>onversionchange </code>事件处理函数，你应该在此创建该版本需要的对象仓库（object store）。</p>
 
-<p>要更新数据库的 schema，也就是创建或者删除对象存储空间，需要实现 <code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code> 处理程序，这个处理程序将会作为一个允许你处理对象存储空间的 <code style="font-size: 14px; color: rgb(51, 51, 51);">versionchange</code> 事务的一部分被调用。</p>
+<p>要更新数据库的 schema，也就是创建或者删除对象存储空间，需要实现 <code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code> 处理程序，这个处理程序将会作为一个允许你处理对象存储空间的 <code style="font-size: 14px; color: rgb(51, 51, 51);">versionchange</code> 事务的一部分被调用。</p>
 
 <pre class="brush: js">// 该事件仅在较新的浏览器中实现了
 request.onupgradeneeded = function(event) {
@@ -138,13 +138,13 @@ request.onupgradeneeded = function(event) {
 
 <p>如果 <code>onupgradeneeded </code>事件成功执行完成，打开数据库请求的 <code>onsuccess</code> 处理函数会被触发。</p>
 
-<p>WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及 IE 10+ 同样支持。其他和更旧的实现没有实现当前版本的规范，因此还不支持 <code>indexedDB.open(name, version).onupgradeneeded</code> 签名。有关如何在较旧 Webkit/Blink 上升级数据库版本的更多信息，请参见 <a href="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase 参考文档</a>。</p>
+<p>WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及 IE 10+ 同样支持。其他和更旧的实现没有实现当前版本的规范，因此还不支持 <code>indexedDB.open(name, version).onupgradeneeded</code> 签名。有关如何在较旧 Webkit/Blink 上升级数据库版本的更多信息，请参见 <a href="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase 参考文档</a>。</p>
 
 <h3 id="构建数据库">构建数据库</h3>
 
 <p>现在来构建数据库。IndexedDB 使用对象存仓库而不是表，并且一个单独的数据库可以包含任意数量的对象存储空间。每当一个值被存储进一个对象存储空间时，它会被和一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储空间是使用 <a href="/en/IndexedDB#gloss_key_path" title="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">key path</a> 还是 <a href="/en/IndexedDB#gloss_key_generator" title="en/IndexedDB#gloss key generator">key generator</a>。</p>
 
-<p>下面的表格显示了几种不同的提供键的方法。 </p>
+<p>下面的表格显示了几种不同的提供键的方法。 </p>
 
 <table class="standard-table">
  <thead>
@@ -233,15 +233,15 @@ request.onupgradeneeded = function(event) {
 
 <p>正如前面提到的，<code>onupgradeneeded</code> 是我们唯一可以修改数据库结构的地方。在这里面，我们可以创建和删除对象存储空间以及构建和删除索引。</p>
 
-<p>对象仓库仅调用 <code>createObjectStore()</code> 就可以创建。这个方法使用仓库的名称，和一个参数对象。即便这个参数对象是可选的，它还是非常重要的，因为它可以让你定义重要的可选属性，并完善你希望创建的对象存储空间的类型。在我们的示例中，我们创建了一个名为“customers” 的对象仓库并且定义了一个使得每个仓库中每个对象都独一无二的 <code>keyPath</code> 。在这个示例中的属性是 “ssn”，因为社会安全号码被确保是唯一的。被存储在该仓库中的所有对象都必须存在“ssn”。</p>
+<p>对象仓库仅调用 <code>createObjectStore()</code> 就可以创建。这个方法使用仓库的名称，和一个参数对象。即便这个参数对象是可选的，它还是非常重要的，因为它可以让你定义重要的可选属性，并完善你希望创建的对象存储空间的类型。在我们的示例中，我们创建了一个名为“customers” 的对象仓库并且定义了一个使得每个仓库中每个对象都独一无二的 <code>keyPath</code> 。在这个示例中的属性是 “ssn”，因为社会安全号码被确保是唯一的。被存储在该仓库中的所有对象都必须存在“ssn”。</p>
 
-<p>我们也请求了一个名为 “name” 的着眼于存储的对象的 <code>name</code> 属性的索引。如同 <code>createObjectStore()</code>，<code>createIndex()</code> 提供了一个可选地 <code>options</code> 对象，该对象细化了我们希望创建的索引类型。新增一个不带 <code>name</code> 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。</p>
+<p>我们也请求了一个名为 “name” 的着眼于存储的对象的 <code>name</code> 属性的索引。如同 <code>createObjectStore()</code>，<code>createIndex()</code> 提供了一个可选地 <code>options</code> 对象，该对象细化了我们希望创建的索引类型。新增一个不带 <code>name</code> 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。</p>
 
 <p>我们现在可以使用存储的用户对象的 <code>ssn</code> 直接从对象存储空间中把它们提取出来，或者通过使用索引来使用他们的 name 进行提取。要了解这些是如何实现的，请参见 <a href="/en/IndexedDB/Using_IndexedDB#Using_an_index" title="Using IndexedDB#Using an index">使用索引</a> 章节。</p>
 
 <h3 id="使用键生成器">使用键生成器</h3>
 
-<p>在创建对象仓库时设置 <code>autoIncrement</code> 标记会为该仓库开启键生成器。默认该设置是不开启的。</p>
+<p>在创建对象仓库时设置 <code>autoIncrement</code> 标记会为该仓库开启键生成器。默认该设置是不开启的。</p>
 
 <p>使用键生成器，当你向对象仓库新增记录时键会自动生成。对象仓库生成的键往往从 1 开始，然后自动生成的新的键会在之前的键的基础上加 1。生成的键的值从来不会减小，除非数据库操作结果被回滚，比如，数据库事务被中断。因此删除一条记录，甚至清空对象仓库里的所有记录都不会影响对象仓库的键生成器。</p>
 
@@ -266,18 +266,18 @@ request.onupgradeneeded = function (event) {
     });
 };</pre>
 
-<p>更多关于键生成器的细节，请查阅  <a href="http://www.w3.org/TR/IndexedDB/#key-generator-concept">"W3C Key Generators"</a>。</p>
+<p>更多关于键生成器的细节，请查阅  <a href="http://www.w3.org/TR/IndexedDB/#key-generator-concept">"W3C Key Generators"</a>。</p>
 
 <h2 id="增加、读取和删除数据">增加、读取和删除数据</h2>
 
 <p>你需要开启一个事务才能对你的创建的数据库进行操作。事务来自于数据库对象，而且你必须指定你想让这个事务跨越哪些对象仓库。一旦你处于一个事务中，你就可以目标对象仓库发出请求。你要决定是对数据库进行更改还是只需从中读取数据。事务提供了三种模式：<code>readonly</code>、<code>readwrite</code> 和 <code>versionchange</code>。</p>
 
-<p>想要修改数据库模式或结构——包括新建或删除对象仓库或索引，只能在 <code>versionchange</code> 事务中才能实现。该事务由一个指定了 version 的 {{domxref("IDBFactory.open")}} 方法启动。（在仍未实现最新标准的 WebKit 浏览器 ，{{domxref("IDBFactory.open")}} 方法只接受一个参数，即数据库的 <code>name</code>，这样你必须调用 {{domxref("IDBVersionChangeRequest.setVersion")}} 来建立 <code>versionchange</code> 事务。</p>
+<p>想要修改数据库模式或结构——包括新建或删除对象仓库或索引，只能在 <code>versionchange</code> 事务中才能实现。该事务由一个指定了 version 的 {{domxref("IDBFactory.open")}} 方法启动。（在仍未实现最新标准的 WebKit 浏览器 ，{{domxref("IDBFactory.open")}} 方法只接受一个参数，即数据库的 <code>name</code>，这样你必须调用 {{domxref("IDBVersionChangeRequest.setVersion")}} 来建立 <code>versionchange</code> 事务。</p>
 
-<p>使用 <code>readonly</code> 或 <code>readwrite</code> 模式都可以从已存在的对象仓库里读取记录。但只有在 <code>readwrite</code> 事务中才能修改对象仓库。你需要使用 {{domxref("IDBDatabase.transaction")}} 启动一个事务。该方法接受两个参数：<code>storeNames</code> (作用域，一个你想访问的对象仓库的数组），事务模式 <code>mode</code>（readonly 或 readwrite）。该方法返回一个包含 {{domxref("IDBIndex.objectStore")}} 方法的事务对象，使用 {{domxref("IDBIndex.objectStore")}} 你可以访问你的对象仓库。未指定 <code>mode</code> 时，默认为 <code>readonly</code> 模式。</p>
+<p>使用 <code>readonly</code> 或 <code>readwrite</code> 模式都可以从已存在的对象仓库里读取记录。但只有在 <code>readwrite</code> 事务中才能修改对象仓库。你需要使用 {{domxref("IDBDatabase.transaction")}} 启动一个事务。该方法接受两个参数：<code>storeNames</code> (作用域，一个你想访问的对象仓库的数组），事务模式 <code>mode</code>（readonly 或 readwrite）。该方法返回一个包含 {{domxref("IDBIndex.objectStore")}} 方法的事务对象，使用 {{domxref("IDBIndex.objectStore")}} 你可以访问你的对象仓库。未指定 <code>mode</code> 时，默认为 <code>readonly</code> 模式。</p>
 
 <div class="blockIndicator note">
-<p>从 Firfox 40 起，IndexedDB 事务放松了对持久性的保证以提高性能（参见 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" rel="noopener">Bug1112702</a>）以前在 <code>readwrite</code> 事务中，只有当所有的数据确保被写入磁盘时才会触发 {{domxref("IDBTransaction.oncomplete")}}。在 Firefox 40+ 中，当操作系统被告知去写入数据后 <code>complete</code> 事件便被触发，但此时数据可能还没有真正的写入磁盘。<code>complete</code> 事件触发因此变得更快，但这样会有极小的机会发生以下情况：如果操作系统崩溃或在数据被写入磁盘前断电，那么整个事务都将丢失。由于这种灾难事件是罕见的，大多数使用者并不需要过分担心。如果由于某些原因你必须确保数据的持久性（例如你要保存一个无法再次计算的关键数据），你可以使用实验性（非标准的）<code>readwriteflush</code> 模式来创建事务以强制 <code>complete</code> 事件在数据写入磁盘后触发（查看 {{domxref("IDBDatabase.transaction")}}）。</p>
+<p>从 Firfox 40 起，IndexedDB 事务放松了对持久性的保证以提高性能（参见 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" rel="noopener">Bug1112702</a>）以前在 <code>readwrite</code> 事务中，只有当所有的数据确保被写入磁盘时才会触发 {{domxref("IDBTransaction.oncomplete")}}。在 Firefox 40+ 中，当操作系统被告知去写入数据后 <code>complete</code> 事件便被触发，但此时数据可能还没有真正的写入磁盘。<code>complete</code> 事件触发因此变得更快，但这样会有极小的机会发生以下情况：如果操作系统崩溃或在数据被写入磁盘前断电，那么整个事务都将丢失。由于这种灾难事件是罕见的，大多数使用者并不需要过分担心。如果由于某些原因你必须确保数据的持久性（例如你要保存一个无法再次计算的关键数据），你可以使用实验性（非标准的）<code>readwriteflush</code> 模式来创建事务以强制 <code>complete</code> 事件在数据写入磁盘后触发（查看 {{domxref("IDBDatabase.transaction")}}）。</p>
 </div>
 
 <p>你可以通过使用合适的作用域和模式来加速数据库访问，这有两个提示：</p>
@@ -300,7 +300,7 @@ request.onupgradeneeded = function (event) {
 
 <p>现在我们已经有了一个事务，我们需要理解它的生命周期。事务和事件循环的联系非常密切。如果你创建了一个事务但是并没有使用它就返回给事件循环，那么事务将会失活。保持事务活跃的唯一方法就是在其上构建一个请求。当请求完成时你将会得到一个 DOM 事件，并且，假设请求成功了，你将会有另外一个机会在回调中来延长这个事务。如果你没有延长事务就返回到了事件循环，那么事务将会变得不活跃，依此类推。只要还有待处理的请求事务就会保持活跃。事务生命周期真的很简单但是可能需要一点时间你才能对它变得习惯。还有就是来几个例子也会有所帮助。如果你开始看到 <code>TRANSACTION_INACTIVE_ERR</code> 错误代码，那么你已经把某些事情搞乱了。</p>
 
-<p>事务接收三种不同的 DOM 事件：<code>error</code>、<code>abort</code> 和 <code>complete</code>。我们已经提及 <code>error</code> 事件是冒泡机制，所以事务会接收由它产生的所有请求所产生的错误。更微妙的一点，错误会中断它所处的事务。除非你在错误发生的第一时间就调用了 <code>stopPropagation</code> 并执行了其他操作来处理错误，不然整个事务将会回滚。这种机制迫使你考虑和处理错误场景，如果觉得细致的错误处理太繁琐，你可以在数据库上添加一个全局的错误处理。如果你在事务中没有处理一个已发生的错误或者调用 abort 方法，那么该事务会被回滚，并触发 abort 事件。另外，在所有请求完成后，事务的 complete 事件会被触发。如果你进行大量数据库操作，跟踪事务而不是具体的请求会使逻辑更加清晰。</p>
+<p>事务接收三种不同的 DOM 事件：<code>error</code>、<code>abort</code> 和 <code>complete</code>。我们已经提及 <code>error</code> 事件是冒泡机制，所以事务会接收由它产生的所有请求所产生的错误。更微妙的一点，错误会中断它所处的事务。除非你在错误发生的第一时间就调用了 <code>stopPropagation</code> 并执行了其他操作来处理错误，不然整个事务将会回滚。这种机制迫使你考虑和处理错误场景，如果觉得细致的错误处理太繁琐，你可以在数据库上添加一个全局的错误处理。如果你在事务中没有处理一个已发生的错误或者调用 abort 方法，那么该事务会被回滚，并触发 abort 事件。另外，在所有请求完成后，事务的 complete 事件会被触发。如果你进行大量数据库操作，跟踪事务而不是具体的请求会使逻辑更加清晰。</p>
 
 <p>现在你拥有了一个事务，你需要从中取出一个对象仓库。你只能在创建事务时指定的对象仓库中取出一个对象仓库。然后你可以添加任何你需要的数据。</p>
 
@@ -321,7 +321,7 @@ customerData.forEach(function(customer) {
   };
 });</pre>
 
-<p>调用 call() 方法产生的请求的 result 是被添加的数据的键。所以在该例中，它应该全等于被添加对象的 ssn 属性，因为对象仓库使用 ssn 属性作为键路径（key path)。注意，add() 方法的调用时，对象仓库中不能存在相同键的对象。如果你想修改一个已存在的条目，或者你不关心该数据是否已存在，你可以使用 put() 方法，就像下面 <a href="#更新数据库中的记录">更新数据库中的记录</a> 模块所展示的。</p>
+<p>调用 call() 方法产生的请求的 result 是被添加的数据的键。所以在该例中，它应该全等于被添加对象的 ssn 属性，因为对象仓库使用 ssn 属性作为键路径（key path)。注意，add() 方法的调用时，对象仓库中不能存在相同键的对象。如果你想修改一个已存在的条目，或者你不关心该数据是否已存在，你可以使用 put() 方法，就像下面 <a href="#更新数据库中的记录">更新数据库中的记录</a> 模块所展示的。</p>
 
 <h2 id="从数据库中删除数据">从数据库中删除数据</h2>
 
@@ -355,7 +355,7 @@ request.onsuccess = function(event) {
   alert("Name for SSN 444-44-4444 is " + event.target.result.name);
 };</pre>
 
-<p>看看这是怎么回事。因为这里只用到一个对象仓库，你可以只传该对象仓库的名字作为参数，而不必传一个列表。并且，你只需读取数据，所以不需要 <code>readwrite</code> 事务。不指定事务模式来调用 <code>transaction</code> 你会得到一个 <code>readonly</code> 事务。另外一个微妙的地方在于你并没有保存请求对象到变量中。因为 DOM 事件把请求作为他的目标（target），你可以使用该事件来获取 <code>result </code>属性。</p>
+<p>看看这是怎么回事。因为这里只用到一个对象仓库，你可以只传该对象仓库的名字作为参数，而不必传一个列表。并且，你只需读取数据，所以不需要 <code>readwrite</code> 事务。不指定事务模式来调用 <code>transaction</code> 你会得到一个 <code>readonly</code> 事务。另外一个微妙的地方在于你并没有保存请求对象到变量中。因为 DOM 事件把请求作为他的目标（target），你可以使用该事件来获取 <code>result </code>属性。</p>
 
 <p>注意，你可以通过限制事务的作用域和模式来加速数据库访问。这里有两个提醒：</p>
 
@@ -393,7 +393,7 @@ request.onsuccess = function(event) {
 <p>所以这里我们创建了一个 <code>objectStore</code>，并通过指定 ssn 值（<code>444-44-4444</code>）从中请求了一条客户记录。然后我们把请求的结果保存在变量 <code>data</code> 中，并更新了该对象的 <code>age </code>属性，之后创建了第二个请求（<code>requestUpdate</code>）将客户数据放回 <code>objectStore</code> 来覆盖之前的值。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>In this case we've had to specify a <code>readwrite</code> transaction because we want to write to the database, not just read from it.在这个例子中我们必须指定一个 <code>readwrite</code> 事务，因为我们想要写入一个数据库，而不仅仅是从中读取。</p>
+<p><strong>注意：</strong>In this case we've had to specify a <code>readwrite</code> transaction because we want to write to the database, not just read from it.在这个例子中我们必须指定一个 <code>readwrite</code> 事务，因为我们想要写入一个数据库，而不仅仅是从中读取。</p>
 </div>
 
 <h2 id="使用游标">使用游标</h2>
@@ -433,7 +433,7 @@ objectStore.openCursor().onsuccess = function(event) {
 <div class="blockIndicator note">
 <p><strong>注意</strong>：可选地，你可以使用 getAll() 来处理这种情况（以及 getAllKeys()）。下面的代码的效果和上例相同：</p>
 
-<p>Alternatively, you can use <code>getAll()</code> to handle this case (and <code>getAllKeys()</code>) . The following code does precisely the same thing as above:</p>
+<p>Alternatively, you can use <code>getAll()</code> to handle this case (and <code>getAllKeys()</code>) . The following code does precisely the same thing as above:</p>
 
 <pre><code>objectStore.getAll().onsuccess = function(event) {
   alert("Got all customers: " + event.target.result);
@@ -527,7 +527,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>因为 “name” 索引不是唯一的，那就有可能存在具有相同 <code>name</code> 的多条记录。要注意的是这种情况不可能发生在对象存储空间上，因为键必须永远是唯一的。如果你想要在游标在索引迭代过程中过滤出重复的，你可以传递 <code>nextunique</code> （或 <code>prevunique</code> 如果你正在向后寻找）作为方向参数。 当 <code>nextunique</code> 或是 <code>prevunique</code> 被使用时，被返回的那个总是键最小的记录。</p>
+<p>因为 “name” 索引不是唯一的，那就有可能存在具有相同 <code>name</code> 的多条记录。要注意的是这种情况不可能发生在对象存储空间上，因为键必须永远是唯一的。如果你想要在游标在索引迭代过程中过滤出重复的，你可以传递 <code>nextunique</code> （或 <code>prevunique</code> 如果你正在向后寻找）作为方向参数。 当 <code>nextunique</code> 或是 <code>prevunique</code> 被使用时，被返回的那个总是键最小的记录。</p>
 
 <pre class="brush: js">index.openKeyCursor(null, IDBCursor.nextunique).onsuccess = function(event) {
   var cursor = event.target.result;
@@ -579,19 +579,19 @@ function useDatabase(db) {
 
 <p>IndexedDB 使用同源原则，这意味着它把存储空间绑定到了创建它的站点的源（典型情况下，就是站点的域或是子域），所以它不能被任何其他源访问。</p>
 
-<p>第三方窗口内容（比如 {{htmlelement("iframe")}} 内容）可以访问它所嵌入的源的 IndexedDB 仓库，除非浏览器被设置成<a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">从不接受第三方 cookies</a>（参见 {{bug("1147821")}}）。</p>
+<p>第三方窗口内容（比如 {{htmlelement("iframe")}} 内容）可以访问它所嵌入的源的 IndexedDB 仓库，除非浏览器被设置成<a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">从不接受第三方 cookies</a>（参见 {{bug("1147821")}}）。</p>
 
 <h2 id="浏览器关闭警告">浏览器关闭警告</h2>
 
 <p>当浏览器关闭（由于用户选择关闭或退出选项），包含数据库的磁盘被意外移除，或者数据库存储的权限丢失，将发生以下问题：</p>
 
 <ol>
- <li>受影响的数据库（在浏览器关闭的场景下，所有打开的数据库）的所有事务会以 AbortError 错误中断。该影响和在每个事务中调用 {{domxref("IDBTransaction.abort()")}} 相同。</li>
+ <li>受影响的数据库（在浏览器关闭的场景下，所有打开的数据库）的所有事务会以 AbortError 错误中断。该影响和在每个事务中调用 {{domxref("IDBTransaction.abort()")}} 相同。</li>
  <li>所有的事务完成后，数据库连接就会关闭。</li>
- <li>最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{event("close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。</li>
+ <li>最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{event("close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。</li>
 </ol>
 
-<p>上述的行为只在 Firefox 50、Google Chrome 31（近似的） 发行版本中支持。</p>
+<p>上述的行为只在 Firefox 50、Google Chrome 31（近似的） 发行版本中支持。</p>
 
 <p>在这些版本之前的浏览器，事务会静默中断，并且 {{event("close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。</p>
 
@@ -618,14 +618,14 @@ function useDatabase(db) {
  <li>á</li>
 </ul>
 
-<p>这显然不是用户想要的数据排序方式，例如 Aaron 和 Áaron 在通讯录中理应相邻地排列。如果要获取国际化的排序，需要将整个数据内容调入内存，然后由客户端 JavaScript 实现排序，显然这样做不是很高效。</p>
+<p>这显然不是用户想要的数据排序方式，例如 Aaron 和 Áaron 在通讯录中理应相邻地排列。如果要获取国际化的排序，需要将整个数据内容调入内存，然后由客户端 JavaScript 实现排序，显然这样做不是很高效。</p>
 
-<p>这是一个新的功能，它允许开发者在使用 {{domxref("IDBObjectStore.createIndex()")}}（查看它的参数）创建索引时指定一个地区。在这种情况下，一个游标会被用来遍历数据，如果你想指定地区性的排序，你可以使用专门的 {{domxref("IDBLocaleAwareKeyRange")}}。</p>
+<p>这是一个新的功能，它允许开发者在使用 {{domxref("IDBObjectStore.createIndex()")}}（查看它的参数）创建索引时指定一个地区。在这种情况下，一个游标会被用来遍历数据，如果你想指定地区性的排序，你可以使用专门的 {{domxref("IDBLocaleAwareKeyRange")}}。</p>
 
-<p>{{domxref("IDBIndex")}}  还添加了新的属性如果它已经被指定了一个地区，它们是 locale（返回被指定的地区或 null）和 isAutoLocale（如果创建索引时使用了自动的地区，即使用了平台默认的地区，则返回 true；否则返回 false）。</p>
+<p>{{domxref("IDBIndex")}}  还添加了新的属性如果它已经被指定了一个地区，它们是 locale（返回被指定的地区或 null）和 isAutoLocale（如果创建索引时使用了自动的地区，即使用了平台默认的地区，则返回 true；否则返回 false）。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong> 现在该特性由一个标志隐藏——在 <a href="/zh-CN/docs/">about:config</a> 中开启 <code>dom.indexedDB.experimental</code> 来启用和实验该特性。</p>
+<p><strong>注意：</strong> 现在该特性由一个标志隐藏——在 <a href="/zh-CN/docs/">about:config</a> 中开启 <code>dom.indexedDB.experimental</code> 来启用和实验该特性。</p>
 </div>
 
 <h2 id="Full_IndexedDB_example">一个完整的 IndexedDB 示例</h2>
@@ -1306,7 +1306,7 @@ input {
 <p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong><code>window.indexedDB.open()</code> 是异步的。该方法在 <code>success</code> 事件触发前很长一段时间就执行完毕。这意味着一个调用 <code>open()</code> 和 <code>onsuccess</code> 的方法（例如 <code>openDb()</code>），会在 <code>onsuccess</code> 句柄开始运行前就已经返回了。这种情况同样适用于其他请求方法，比如 <code>transaction()</code> 和 <code>get()</code>。</p>
+<p><strong>注意：</strong><code>window.indexedDB.open()</code> 是异步的。该方法在 <code>success</code> 事件触发前很长一段时间就执行完毕。这意味着一个调用 <code>open()</code> 和 <code>onsuccess</code> 的方法（例如 <code>openDb()</code>），会在 <code>onsuccess</code> 句柄开始运行前就已经返回了。这种情况同样适用于其他请求方法，比如 <code>transaction()</code> 和 <code>get()</code>。</p>
 </div>
 
 <h2 id="另请参阅">另请参阅</h2>
@@ -1316,8 +1316,8 @@ input {
 <h3 id="参考">参考</h3>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB 接口参考</a></li>
- <li><a href="http://www.w3.org/TR/IndexedDB/">Indexed Database 接口说明</a></li>
+ <li><a href="https://developer.mozilla.org/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB 接口参考</a></li>
+ <li><a href="http://www.w3.org/TR/IndexedDB/">Indexed Database 接口说明</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">在 Chrome 中使用 IndexedDB</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">在 Firefox 中使用 JavaScript 生成器</a></li>
  <li>Firefox 源码中的 IndexedDB <a href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1">接口文件</a></li>
@@ -1327,13 +1327,13 @@ input {
 
 <ul>
  <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <h3 id="库">库</h3>
 
 <ul>
- <li><a href="https://localforage.github.io/localForage/">localForage</a>: 一个提供 name:value 的简单语法的客户端数据存储垫片（Polyfill），它基于 IndexedDB 实现，并在不持支 IndexedDB 的浏览器中自动回退只 WebSQL 和 localStorage。</li>
+ <li><a href="https://localforage.github.io/localForage/">localForage</a>: 一个提供 name:value 的简单语法的客户端数据存储垫片（Polyfill），它基于 IndexedDB 实现，并在不持支 IndexedDB 的浏览器中自动回退只 WebSQL 和 localStorage。</li>
  <li><a href="http://www.dexie.org/">dexie.js</a>: 对 IndexedDB 的封装，通过提供更友好和简单语法以进行快速的编码开发。</li>
  <li><a href="https://github.com/erikolson186/zangodb">ZangoDB</a>: 一个类 MongoDB 的 IndexedDB 接口实现，提供了诸如过滤、投影、排序、更新和聚合等大多数 MongoDB 常见的特性。</li>
  <li><a href="http://jsstore.net/">JsStore</a>: 一个具备类 SQL 语法的简单和先进的 IndexedDB 封装实现。</li>

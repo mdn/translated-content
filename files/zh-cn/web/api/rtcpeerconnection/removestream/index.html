@@ -5,9 +5,9 @@ translation_of: Web/API/RTCPeerConnection/removeStream
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p><code><strong>RTCPeerConnection.removeStream()</strong></code> 方法用来移除本地音频或视频的 {{domxref("媒体流")}} 。 如果已经发生交互，远程主机可能需要使用一个新的媒体流。</p>
+<p><code><strong>RTCPeerConnection.removeStream()</strong></code> 方法用来移除本地音频或视频的 {{domxref("媒体流")}} 。 如果已经发生交互，远程主机可能需要使用一个新的媒体流。</p>
 
-<p>当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 的值为 <code>"closed"</code> 时，将抛出<code>InvalidStateError</code> 异常。当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 值为 <code>"stable"</code> 时， 将触发 {{domxref("RTCPeerConnection")}} 的 {{event("negotiationneeded")}} 事件。</p>
+<p>当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 的值为 <code>"closed"</code> 时，将抛出<code>InvalidStateError</code> 异常。当 {{domxref("RTCPeerConnection.signalingState", "signalingState")}} 值为 <code>"stable"</code> 时， 将触发 {{domxref("RTCPeerConnection")}} 的 {{event("negotiationneeded")}} 事件。</p>
 
 <h2 id="Syntax">语法</h2>
 

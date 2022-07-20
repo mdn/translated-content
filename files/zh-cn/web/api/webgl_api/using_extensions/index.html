@@ -7,13 +7,13 @@ translation_of: Web/API/WebGL_API/Using_Extensions
 ---
 <div>{{WebGLSidebar}}</div>
 
-<p>WebGL，像它的姐妹 API (OpenGL and OpenGL ES)，支持使用扩展（extensions）。一份完整的扩展列表可在 <a class="external" href="http://www.khronos.org/registry/webgl/extensions/">khronos webgl extension registry</a>。</p>
+<p>WebGL，像它的姐妹 API (OpenGL and OpenGL ES)，支持使用扩展（extensions）。一份完整的扩展列表可在 <a class="external" href="http://www.khronos.org/registry/webgl/extensions/">khronos webgl extension registry</a>。</p>
 
-<div class="note"><strong>Note:</strong> 不像别的 GL APIs，在 webGL 中 , 扩展只有在明确需要的情况下才会加载。</div>
+<div class="note"><strong>Note:</strong> 不像别的 GL APIs，在 webGL 中 , 扩展只有在明确需要的情况下才会加载。</div>
 
 <h2 id="规范扩展名，供应商前缀和首选项">规范扩展名，供应商前缀和首选项</h2>
 
-<p>扩展（extensions）在未被官方正式制定为标准前，某些浏览器厂商可能会支持 WebGL 扩展 (but only when they are in draft stage)。这样的话，扩展的名字应该加上相应的厂商前缀 (<code>MOZ_</code>, <code>WEBKIT_</code>, etc.)，否则这个扩展只能在浏览器切换了偏好设置的前提下生效。</p>
+<p>扩展（extensions）在未被官方正式制定为标准前，某些浏览器厂商可能会支持 WebGL 扩展 (but only when they are in draft stage)。这样的话，扩展的名字应该加上相应的厂商前缀 (<code>MOZ_</code>, <code>WEBKIT_</code>, etc.)，否则这个扩展只能在浏览器切换了偏好设置的前提下生效。</p>
 
 <p>If you wish to work with the bleeding edge of extensions, and want to keep working on upon ratification (assuming, of course, that the extension doesn't change in incompatible ways), that you query the canonical extension name as well as the vendor extension name. For instance:</p>
 

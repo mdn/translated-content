@@ -11,7 +11,7 @@ translation_of: Web/API/Document/getElementsByTagNameNS
 
 <p>返回带有指定名称和命名空间的元素集合。整个文件结构都会被搜索，包括根节点。</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -19,18 +19,18 @@ translation_of: Web/API/Document/getElementsByTagNameNS
 </pre>
 
 <ul>
- <li><code>elements </code>是一个在树中按顺序查询到的动态的 HTML 集合 <a href="/zh-CN/docs/Web/API/HTMLCollection"><code>HTMLCollection</code></a> (但是看下面的提示)。</li>
- <li><code>namespace </code>是所要查询的元素的命名空间 URL(参考 <code><a href="/en/DOM/Node.namespaceURI">element.namespaceURI</a></code>)。</li>
- <li><code>name</code> 是所要查询的元素的名称。其中特殊字符 "*" 代表所有元素 (参考 <code><a href="/en/DOM/Node.localName">element.localName</a></code>)。</li>
+ <li><code>elements </code>是一个在树中按顺序查询到的动态的 HTML 集合 <a href="/zh-CN/docs/Web/API/HTMLCollection"><code>HTMLCollection</code></a> (但是看下面的提示)。</li>
+ <li><code>namespace </code>是所要查询的元素的命名空间 URL(参考 <code><a href="/en/DOM/Node.namespaceURI">element.namespaceURI</a></code>)。</li>
+ <li><code>name</code> 是所要查询的元素的名称。其中特殊字符 "*" 代表所有元素 (参考 <code><a href="/en/DOM/Node.localName">element.localName</a></code>)。</li>
 </ul>
 
-<div class="note"><strong>注意：</strong>在 W3C 文档中，<code>elements</code>是一个 <code>NodeList</code>，而该方法在 Gecko 内核的浏览器和 IE 中返回的是 HTML 集合<code><a href="/zh-CN/docs/Web/API/HTMLCollection">HTMLCollection</a>.</code> Opera 返回的也是一个 <code>NodeList</code>，但通过 <code>namedItem</code>方法 ， 使得它类似于一个<code>HTMLCollection</code> . 截止 2012 年 1 月，只有 WebKit 内核的浏览器返回的值是一个纯 <code>NodeList</code>. 详情请参考 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> .</div>
+<div class="note"><strong>注意：</strong>在 W3C 文档中，<code>elements</code>是一个 <code>NodeList</code>，而该方法在 Gecko 内核的浏览器和 IE 中返回的是 HTML 集合<code><a href="/zh-CN/docs/Web/API/HTMLCollection">HTMLCollection</a>.</code> Opera 返回的也是一个 <code>NodeList</code>，但通过 <code>namedItem</code>方法 ， 使得它类似于一个<code>HTMLCollection</code> . 截止 2012 年 1 月，只有 WebKit 内核的浏览器返回的值是一个纯 <code>NodeList</code>. 详情请参考 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> .</div>
 
 <h2 id="Example">示例</h2>
 
-<p>在下面的示例中，<code>getElementsByTagNameNS</code>方法从一个特定的父元素开始，并从该父元素的 DOM 中自上而下递归式搜索，查找所有与标签名参数匹配的子元素 。</p>
+<p>在下面的示例中，<code>getElementsByTagNameNS</code>方法从一个特定的父元素开始，并从该父元素的 DOM 中自上而下递归式搜索，查找所有与标签名参数匹配的子元素 。</p>
 
-<p>注意当调用<code>getElementsByTagName</code>方法获取到的节点不是文档节点时，实际上是调用了<a href="/en/DOM/element.getElementsByTagNameNS">element.getElementsByTagNameNS</a>方法 。</p>
+<p>注意当调用<code>getElementsByTagName</code>方法获取到的节点不是文档节点时，实际上是调用了<a href="/en/DOM/element.getElementsByTagNameNS">element.getElementsByTagNameNS</a>方法 。</p>
 
 <p>需要使用以下示例，只需复制/粘贴以下代码到用.xhtml 后缀名保存的新文件中即可。</p>
 
@@ -108,7 +108,7 @@ function div2ParaElems()
 
 <h2 id="Potential_Workaround_for_other_browsers_which_do_not_support">针对其他不支持此方法的浏览器的解决方法</h2>
 
-<p>如果所使用的浏览器不支持此方法，可使用另一种方法（例如遍历所有子元素的 DOM，识别所有 @xmlns 实例等等）来查找所有具有本地名称和命名空间的标签，但此方法更快。 (为了兼容 Explorer，在下面的函数中，你可以调用一个 XPath 包，而不仅仅是 XPath (由于 Explorer 支持不同 API 的 XPath ), 例如 <a href="http://www.davidflanagan.com/javascript5/display.php?n=21-10&amp;f=21/10.js">this wrapper class</a>.)</p>
+<p>如果所使用的浏览器不支持此方法，可使用另一种方法（例如遍历所有子元素的 DOM，识别所有 @xmlns 实例等等）来查找所有具有本地名称和命名空间的标签，但此方法更快。 (为了兼容 Explorer，在下面的函数中，你可以调用一个 XPath 包，而不仅仅是 XPath (由于 Explorer 支持不同 API 的 XPath ), 例如 <a href="http://www.davidflanagan.com/javascript5/display.php?n=21-10&amp;f=21/10.js">this wrapper class</a>.)</p>
 
 <pre class="brush: js">function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
 	if (!doc) {

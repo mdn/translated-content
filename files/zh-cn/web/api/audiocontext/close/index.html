@@ -19,18 +19,18 @@ audioCtx.close().then(function() { ... });
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 resolve  void 值得 {{jsxref("Promise")}}。 </p>
+<p>一个 resolve  void 值得 {{jsxref("Promise")}}。 </p>
 
 <h2 id="例子">例子</h2>
 
 <p>下面这段代码是<a href="https://github.com/mdn/audiocontext-states/settings">AudioContext states demo</a> (<a href="http://mdn.github.io/audiocontext-states/">直接运行</a>) 中的，点击停止按钮调用<code>close()</code>。promise 释放后，回到初始状态。</p>
 
 <pre class="brush: js">stopBtn.onclick = function() {
-  audioCtx.close().then(function() {
-    startBtn.removeAttribute('disabled');
-    susresBtn.setAttribute('disabled','disabled');
-    stopBtn.setAttribute('disabled','disabled');
-  });
+  audioCtx.close().then(function() {
+    startBtn.removeAttribute('disabled');
+    susresBtn.setAttribute('disabled','disabled');
+    stopBtn.setAttribute('disabled','disabled');
+  });
 }
 </pre>
 

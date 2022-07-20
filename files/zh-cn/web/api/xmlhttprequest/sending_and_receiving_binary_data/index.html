@@ -10,7 +10,7 @@ translation_of: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
 <h2 id="使用_JavaScript_类型数组接受二进制数据">使用 JavaScript 类型数组接受二进制数据</h2>
 
-<p>可以通过设置一个 XMLHttpRequest 对象的 <code>responseType</code>属性来改变一个从服务器上返回的响应的数据类型。可用的属性值为空字符串 (默认)，"arraybuffer"、"blob"、"document"、"json" 和 "text"。<code>response</code> 属性的值会根据 <code>responseType</code> 属性包含实体主体（entity body），它可能会是一个 <code>ArrayBuffer</code>、<code>Blob</code>、<code>Document</code>、<code>JSON</code>, string，或者为<code>NULL(如果请求未完成或失败)</code></p>
+<p>可以通过设置一个 XMLHttpRequest 对象的 <code>responseType</code>属性来改变一个从服务器上返回的响应的数据类型。可用的属性值为空字符串 (默认)，"arraybuffer"、"blob"、"document"、"json" 和 "text"。<code>response</code> 属性的值会根据 <code>responseType</code> 属性包含实体主体（entity body），它可能会是一个 <code>ArrayBuffer</code>、<code>Blob</code>、<code>Document</code>、<code>JSON</code>, string，或者为<code>NULL(如果请求未完成或失败)</code></p>
 
 <p>下例读取了一个二进制图像文件，并且由该文件的二进制原生字节创建了一个 8 位无符号整数的数组。注意，这不会解码图像，但会读取像素。 你需要一个 png 解码库（<a href="https://github.com/devongovett/png.js/">png decoding library</a>）。</p>
 
@@ -19,13 +19,13 @@ oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "arraybuffer";
 
 oReq.onload = function (oEvent) {
-  var arrayBuffer = oReq.response; // 注意：不是 oReq.responseText
-  if (arrayBuffer) {
-    var byteArray = new Uint8Array(arrayBuffer);
-    for (var i = 0; i &lt; byteArray.byteLength; i++) {
-      // 对数组中的每个字节进行操作
-    }
-  }
+  var arrayBuffer = oReq.response; // 注意：不是 oReq.responseText
+  if (arrayBuffer) {
+    var byteArray = new Uint8Array(arrayBuffer);
+    for (var i = 0; i &lt; byteArray.byteLength; i++) {
+      // 对数组中的每个字节进行操作
+    }
+  }
 };
 
 oReq.send(null);
@@ -54,7 +54,7 @@ oReq.send();</pre>
   //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
   req.overrideMimeType('text/plain; charset=x-user-defined');
   req.send(null);
-  if (req.status != 200) return '';
+  if (req.status != 200) return '';
   return req.responseText;
 }
 </pre>
@@ -95,7 +95,7 @@ oReq.send(bb.getBlob('text/plain'));
 var longInt8View = new Uint8Array(myArray);
 
 for (var i=0; i&lt; longInt8View.length; i++) {
-  longInt8View[i] = i % 255;
+  longInt8View[i] = i % 255;
 }
 
 var xhr = new XMLHttpRequest;
@@ -137,7 +137,7 @@ stream.init(file, 0x04 | 0x08, 0644, 0x04); // file 是一个 nsIFile 对象实�
 var mimeType = "text\/plain";
 try {
   var mimeService = Components.classes["@mozilla.org/mime;1"]
-          .getService(Components.interfaces.nsIMIMEService);
+          .getService(Components.interfaces.nsIMIMEService);
   mimeType = mimeService.getTypeFromFile(file); // file 是一个 nsIFile 对象实例
 }
 catch (oEvent) { /* 丢弃异常，使用默认的 text/plain 类型 */ }
