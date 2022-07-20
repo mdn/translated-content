@@ -125,7 +125,7 @@ abbr {
 }
 ```
 
-缩写的公认样式约定是虚线下划线，偏离这一原则明显是不明智的。有关缩写的更多，参见[缩略语](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#缩略语)。
+缩写的公认样式约定是虚线下划线，偏离这一原则明显是不明智的。有关缩写的更多，参见[缩略语](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#缩略语)。
 
 #### 链接
 
