@@ -26,7 +26,7 @@ translation_of: Web/API/IDBCursor/direction
   <tr>
    <td><code>nextunique</code></td>
    <td>
-    <p> </p>
+    <p> </p>
     <p>从数据源开始遍历；当取值有重复时，只获取一次。</p>
    </td>
   </tr>
@@ -39,7 +39,7 @@ translation_of: Web/API/IDBCursor/direction
   <tr>
    <td><code>prevunique</code></td>
    <td>从数据源的最后位置开始取值，只获取一次。<br>
-     </td>
+     </td>
   </tr>
  </tbody>
 </table>
@@ -47,11 +47,11 @@ translation_of: Web/API/IDBCursor/direction
 <p>在这个简单的例子中，我们首先创建一个事物对象，返回一个对象仓库 (store), 然后使用邮编遍历整个数据仓库。在每次迭代中我们记录了游标的方向，例如 prev（倒序遍历）</p>
 <pre class="language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; color: rgb(77, 78, 83);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr;">prev</code></pre>
 <div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;">
-  </div>
+  </div>
 <div class="note">
  <p><strong>注意</strong>：我们不能改变游标的取值，因为这是个只读属性；应该在{{domxref("IDBObjectStore.openCursor")}}方法调用的第二个参数指定游标遍历的方向；</p>
 </div>
-<p>使用游标遍历数据时，可以不需要我们指定在特定字段选择数据；我们可以直接获取所有数据，同时在每次循环迭代过程当中，我们可以通过 cursor.value.foo 获取数据，如下是一个完整的游标遍历数据的例子； <a class="external external-icon" href="https://github.com/mdn/IDBcursor-example/" style="white-space: pre-line;">IDBCursor example</a> (<a class="external external-icon" href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5; white-space: pre-line;">view example live</a>.)</p>
+<p>使用游标遍历数据时，可以不需要我们指定在特定字段选择数据；我们可以直接获取所有数据，同时在每次循环迭代过程当中，我们可以通过 cursor.value.foo 获取数据，如下是一个完整的游标遍历数据的例子； <a class="external external-icon" href="https://github.com/mdn/IDBcursor-example/" style="white-space: pre-line;">IDBCursor example</a> (<a class="external external-icon" href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5; white-space: pre-line;">view example live</a>.)</p>
 <pre class="brush: js">function backwards() {
   list.innerHTML = '';
   var transaction = db.transaction(['rushAlbumList'], 'readonly');
@@ -79,7 +79,7 @@ translation_of: Web/API/IDBCursor/direction
 <div>
 {{Compat("api.IDBCursor.direction")}}
 
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 <h2 id="参考资料">参考资料</h2>
 <ul>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>

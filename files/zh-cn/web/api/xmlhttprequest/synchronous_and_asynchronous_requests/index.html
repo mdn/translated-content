@@ -121,7 +121,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");</pre>
 <p>如上，我们指定的超时时间为 2000 ms。</p>
 
 <div class="geckoVersionNote" style="">
-<p><code>timeout</code>属性添加于 Gecko 12.0  {{Gecko("12.0")}}。</p>
+<p><code>timeout</code>属性添加于 Gecko 12.0  {{Gecko("12.0")}}。</p>
 </div>
 
 <h2 id="同步请求">同步请求</h2>
@@ -166,7 +166,7 @@ if (request.status === 200) {
 &lt;script type="text/javascript"&gt;
   var oMyWorker = new Worker("myTask.js");
   oMyWorker.onmessage = function(oEvent) {
-    alert("Worker said: " + oEvent.data);
+    alert("Worker said: " + oEvent.data);
   };
 
   oMyWorker.postMessage("Hello");
@@ -184,12 +184,12 @@ if (request.status === 200) {
 <p><code><strong>myTask.js</strong></code> (包含了<code><a href="/zh-cn/DOM/Worker" title="/zh-cn/DOM/Worker">Worker</a></code>代码):</p>
 
 <pre class="brush: js">self.onmessage = function (oEvent) {
-  if (oEvent.data === "Hello") {
-    var oReq = new XMLHttpRequest();
-    oReq.open("GET", "myFile.txt", false); // 同步请求
-    oReq.send(null);
-    self.postMessage(oReq.responseText);
-  }
+  if (oEvent.data === "Hello") {
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", "myFile.txt", false); // 同步请求
+    oReq.send(null);
+    self.postMessage(oReq.responseText);
+  }
 };
 </pre>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/Touch/Touch
 ---
 <p>{{APIRef("Touch Events")}}{{SeeCompatTable}}</p>
 
-<p><strong><code>Touch()</code></strong> 构造器创建一个新的 {{domxref("Touch")}} 对象。</p>
+<p><strong><code>Touch()</code></strong> 构造器创建一个新的 {{domxref("Touch")}} 对象。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -23,12 +23,12 @@ translation_of: Web/API/Touch/Touch
  <ul>
   <li><code>"identifier"</code>, 必须，是一个长整型，表示一个触摸点的数字标记。</li>
   <li><code>"target"</code>, 必须，是 {{domxref("EventTarget")}}类型，表示在触摸点开始接触接触面时的节点。</li>
-  <li><code>"clientX"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。 </li>
-  <li><code>"clientY"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。 </li>
+  <li><code>"clientX"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。 </li>
+  <li><code>"clientY"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在浏览器视口的横轴坐标，不包括滚动条的偏移距离。 </li>
   <li><code>"screenX"</code>, 可选，默认为 0，为双精度浮点数类型，表示以用户屏幕为基准的，触摸点横坐标。</li>
   <li><code>"screenY"</code>, 可选，默认为 0，为双精度浮点数类型，表示以用户屏幕为基准的，触摸点纵坐标。</li>
-  <li><code>"pageX"</code>,可选，默认为 0，为双精度浮点数类型，表示触摸在用户屏幕的横轴坐标，包括滚动条的偏移距离。 </li>
-  <li><code>"pageY"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在用户屏幕的纵轴坐标，包括滚动条的偏移距离。 </li>
+  <li><code>"pageX"</code>,可选，默认为 0，为双精度浮点数类型，表示触摸在用户屏幕的横轴坐标，包括滚动条的偏移距离。 </li>
+  <li><code>"pageY"</code>, 可选，默认为 0，为双精度浮点数类型，表示触摸在用户屏幕的纵轴坐标，包括滚动条的偏移距离。 </li>
   <li><code>"radiusX"</code>, 可选，默认为 0，为浮点数类型。表示接触面（比如手指，触控笔）接触形成的椭圆，在 rotationAngle 角度下横轴上形成的椭圆半径。和 screenX 使用的 CSS 像素保持同一个缩放大小。这个值不能为负。</li>
   <li><code>"radiusY"</code>, 可选，默认为 0，为浮点数类型。表示接触面（比如手指，触控笔）接触形成的椭圆，在 rotationAngle 角度下纵轴上形成的椭圆半径。和 screenY 使用的 CSS 像素保持同一个缩放大小。这个值不能为负。</li>
   <li><code>"rotationAngle"</code>, 可选，默认为 0，为浮点数类型。表示由 radiusX 和 radiusY 决定的椭圆在顺时针方向相对其中心偏转的角度。这个值介于 0 到 90 度之间。如果由 radiusX 和 radiusY 决定的椭圆是一个标准圆形，则 rotationAngle 没有任何效用。用户设备可能用 0 表示这种标准圆形的情况，或者用其他符合要求范围的值来表示（比如，用户设备可能用上一次的触摸事件 rotationAngle 值，来避免突然变动）。</li>

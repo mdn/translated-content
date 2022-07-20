@@ -26,7 +26,7 @@ translation_of: Web/API/MutationObserver/observe
 
 <dl>
  <dt><code>target</code></dt>
- <dd>DOM 树中的一个要观察变化的 DOM {{domxref("Node")}} (可能是一个 {{domxref("Element")}})，或者是被观察的子节点树的根节点。</dd>
+ <dd>DOM 树中的一个要观察变化的 DOM {{domxref("Node")}} (可能是一个 {{domxref("Element")}})，或者是被观察的子节点树的根节点。</dd>
  <dt><code>options</code> {{optional_inline}}</dt>
  <dd>一个可选的 {{domxref("MutationObserverInit")}} 对象，此对象的配置项描述了 DOM 的哪些变化应该提供给当前观察者的 <code>callback</code>。</dd>
 </dl>
@@ -42,8 +42,8 @@ translation_of: Web/API/MutationObserver/observe
  <dd>以下任一情况都会抛出异常：
  <ul>
   <li>配置选项使得实际上不会监视任何内容（例如，如果 {{domxref("MutationObserverInit.childList")}}，{{domxref("MutationObserverInit.attributes")}} 和 {{domxref("MutationObserverInit.characterData")}} 都为 <code>false</code>）。</li>
-  <li><code>attributes</code> 选项为 <code>false</code>（表示不监视属性更改）但是<code>attributeOldValue</code> 为 <code>true</code> 并且/或者 <code>attributeFilter</code> 配置存在。</li>
-  <li>{{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} 选项为 <code>true</code> 但是 {{domxref("MutationObserverInit.characterData")}} 为 <code>false</code>（表示不跟踪字符更改）。</li>
+  <li><code>attributes</code> 选项为 <code>false</code>（表示不监视属性更改）但是<code>attributeOldValue</code> 为 <code>true</code> 并且/或者 <code>attributeFilter</code> 配置存在。</li>
+  <li>{{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} 选项为 <code>true</code> 但是 {{domxref("MutationObserverInit.characterData")}} 为 <code>false</code>（表示不跟踪字符更改）。</li>
  </ul>
  </dd>
 </dl>

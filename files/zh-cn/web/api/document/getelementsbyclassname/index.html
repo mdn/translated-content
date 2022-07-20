@@ -17,9 +17,9 @@ translation_of: Web/API/Document/getElementsByClassName
 <var>var elements</var> = rootElement.getElementsByClassName(<em>names</em>);</pre>
 
 <ul>
- <li><var>elements</var> 是一个实时{{ domxref("HTMLCollection", "集合") }}，包含了找到的所有元素。</li>
- <li><var>names</var> 是一个字符串，表示要匹配的类名列表；类名通过空格分隔</li>
- <li>getElementsByClassName 可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素。</li>
+ <li><var>elements</var> 是一个实时{{ domxref("HTMLCollection", "集合") }}，包含了找到的所有元素。</li>
+ <li><var>names</var> 是一个字符串，表示要匹配的类名列表；类名通过空格分隔</li>
+ <li>getElementsByClassName 可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素。</li>
 </ul>
 
 <h2 id="Examples">示例</h2>
@@ -36,7 +36,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
-<p>我们还可以对任意的  {{ domxref("HTMLCollection") }} 使用 Array.prototype 的方法，调用时传递  <var>HTMLCollection</var> 作为方法的参数。这里我们将查找到所有 class 为 'test' 的 div 元素：</p>
+<p>我们还可以对任意的  {{ domxref("HTMLCollection") }} 使用 Array.prototype 的方法，调用时传递  <var>HTMLCollection</var> 作为方法的参数。这里我们将查找到所有 class 为 'test' 的 div 元素：</p>
 
 <pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
@@ -72,7 +72,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 <h2 id="多个_Class_示例">多个 Class 示例</h2>
 
-<p><code>document.getElementsByClassName</code> 的工作方式与 <code>document.querySelector</code> 和 <code>document.querySelectorAll</code> 很相似。 只有所有 className 都匹配的元素会被选择。</p>
+<p><code>document.getElementsByClassName</code> 的工作方式与 <code>document.querySelector</code> 和 <code>document.querySelectorAll</code> 很相似。 只有所有 className 都匹配的元素会被选择。</p>
 
 <h3 id="HTML">HTML</h3>
 

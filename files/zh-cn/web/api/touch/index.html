@@ -11,11 +11,11 @@ translation_of: Web/API/Touch
 ---
 <p>{{ ApiRef("Touch Events") }}</p>
 
-<p><strong><code>Touch</code> </strong>对象表示在触控设备上的触摸点。通常是指手指或者触控笔在触屏设备或者触摸板上的操作。</p>
+<p><strong><code>Touch</code> </strong>对象表示在触控设备上的触摸点。通常是指手指或者触控笔在触屏设备或者触摸板上的操作。</p>
 
-<p>对象属性 {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, 和 {{ domxref("Touch.rotationAngle") }} 表示用户触摸操作所作用的区域，即<em>触摸区域</em>。这些属性对于处理类似于手指触摸之类的不精确操作很有帮助。这些属性可以表示出一个尽可能匹配触控区域的椭圆形（例如用户的指尖触控）。 {{experimental_inline}}</p>
+<p>对象属性 {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, 和 {{ domxref("Touch.rotationAngle") }} 表示用户触摸操作所作用的区域，即<em>触摸区域</em>。这些属性对于处理类似于手指触摸之类的不精确操作很有帮助。这些属性可以表示出一个尽可能匹配触控区域的椭圆形（例如用户的指尖触控）。 {{experimental_inline}}</p>
 
-<div class="note"><strong>注意：</strong> 以下很多属性的值需要依赖硬件设备去获取，例如，如果设备本身不支持侦测压感，那么 <code>force</code> 属性的值将始终是 0，对于 <code>radiusX</code> 和 <code>radiusY</code> 来说同样可能有这种情况，如果设备认为触点只是一个点而不是一个面，它们始终为 1。 </div>
+<div class="note"><strong>注意：</strong> 以下很多属性的值需要依赖硬件设备去获取，例如，如果设备本身不支持侦测压感，那么 <code>force</code> 属性的值将始终是 0，对于 <code>radiusX</code> 和 <code>radiusY</code> 来说同样可能有这种情况，如果设备认为触点只是一个点而不是一个面，它们始终为 1。 </div>
 
 <h2 id="构造函数">构造函数</h2>
 

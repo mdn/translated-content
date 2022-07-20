@@ -7,12 +7,12 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 
 <div class="overheadIndicator nonStandard nonStandardHeader">
 <p><strong>重要：</strong><br>
- 所有带有 <strong>moz</strong> 前缀的属性和方法（例如 <strong>mozSetDataAt() </strong>）都是 Gecko 浏览器引擎所特有的接口。这些接口只能在基于 Gecko 引擎的浏览器上使用。</p>
+ 所有带有 <strong>moz</strong> 前缀的属性和方法（例如 <strong>mozSetDataAt() </strong>）都是 Gecko 浏览器引擎所特有的接口。这些接口只能在基于 Gecko 引擎的浏览器上使用。</p>
 </div>
 
-<p>Mozilla 提供了一些额外的非标准方法来支持多个元素的拖拽。这些方法中映射了 {{domxref("DataTransfer.types","types")}} 属性以及 {{domxref("DataTransfer.getData","getData()")}}，{{domxref("DataTransfer.setData","setData()")}} 和 {{domxref("DataTransfer.clearData","clearData()")}} 方法。不过，这些方法可以接受额外的参数来指定需要获取、修改或是移除的元素的下标。</p>
+<p>Mozilla 提供了一些额外的非标准方法来支持多个元素的拖拽。这些方法中映射了 {{domxref("DataTransfer.types","types")}} 属性以及 {{domxref("DataTransfer.getData","getData()")}}，{{domxref("DataTransfer.setData","setData()")}} 和 {{domxref("DataTransfer.clearData","clearData()")}} 方法。不过，这些方法可以接受额外的参数来指定需要获取、修改或是移除的元素的下标。</p>
 
-<p>本文中描述的拖拽过程均使用 {{domxref("DataTransfer")}} 接口。该过程不会使用 {{domxref("DataTransferItem")}} 接口，也不会使用 {{domxref("DataTransferItemList")}} 接口。</p>
+<p>本文中描述的拖拽过程均使用 {{domxref("DataTransfer")}} 接口。该过程不会使用 {{domxref("DataTransferItem")}} 接口，也不会使用 {{domxref("DataTransferItemList")}} 接口。</p>
 
 <h2 id="基于索引的添加和获取">基于索引的添加和获取</h2>
 
@@ -30,7 +30,7 @@ dt.mozSetDataAt("text/plain", "Second data to drag", 1);
 <pre class="notranslate">event.dataTransfer.mozClearDataAt("text/plain", 1);
 </pre>
 
-<p>注意：移除一个元素中的全部类型的数据项后将会使整个元素移除，导致后面的元素往前移动，索引将会产生变化（相应减小）。 例如：</p>
+<p>注意：移除一个元素中的全部类型的数据项后将会使整个元素移除，导致后面的元素往前移动，索引将会产生变化（相应减小）。 例如：</p>
 
 <pre class="notranslate">var dt = event.dataTransfer;
 dt.mozSetDataAt("text/uri-list", "URL1", 0);
@@ -60,11 +60,11 @@ dt.mozClearDataAt("text/plain", 1);
 
 <p>比较常见的使用多元素拖拽的场景，例如多个文件或者多个书签的拖拽中，记得给每个元素设置合适的数据项类型。尽管不是必须的，但你应该为所有元素设置一致的数据项类型，这可以确保目标元素接收到和预期一致的数据。</p>
 
-<p>你可以通过检查 {{domxref("DataTransfer.mozItemCount","mozItemCount")}} 属性来判断是否有多个元素被拖拽。该属性的值等于当前被拖拽的元素的个数。如果某个拖拽的目标元素只接受单个拖拽元素，它可以直接拒绝这次拖拽操作或者只接受其中的第一个元素。若需要拒绝这些元素，你可以不阻止 {{event("dragover")}} 事件，或者设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性为 <code>none</code>。最好将两者结合使用，因为有可能另一个监听函数已经阻止了事件。</p>
+<p>你可以通过检查 {{domxref("DataTransfer.mozItemCount","mozItemCount")}} 属性来判断是否有多个元素被拖拽。该属性的值等于当前被拖拽的元素的个数。如果某个拖拽的目标元素只接受单个拖拽元素，它可以直接拒绝这次拖拽操作或者只接受其中的第一个元素。若需要拒绝这些元素，你可以不阻止 {{event("dragover")}} 事件，或者设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性为 <code>none</code>。最好将两者结合使用，因为有可能另一个监听函数已经阻止了事件。</p>
 
 <p>若只接受拖拽的第一个元素，可以使用 {{domxref("DataTransfer.getData","getData()")}} 方法，就和处理单个元素一样。拖拽的目标只需支持单个元素的拖拽而无需任何额外的操作就可以适用于这个场景。</p>
 
-<p>同时，你也可以使用 {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} 方法来获取指定的拖拽元素。下面这个例子展示了如何获取到拖拽元素中的所有文件类型数据，并将他们加入到一个数组中。</p>
+<p>同时，你也可以使用 {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} 方法来获取指定的拖拽元素。下面这个例子展示了如何获取到拖拽元素中的所有文件类型数据，并将他们加入到一个数组中。</p>
 
 <pre class="notranslate">function onDrop(event)
 {
@@ -75,21 +75,21 @@ dt.mozClearDataAt("text/plain", 1);
 }
 </pre>
 
-<p>如果你想知道指定的类型在某个元素上是否存在，你可以使用 {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} 方法。与{{domxref("DataTransfer.types","types")}} 属性类似，它返回元素的数据类型列表。访问 {{domxref("DataTransfer.types","types ")}} 属性就相当于取索引为 0 的元素的数据类型列表。</p>
+<p>如果你想知道指定的类型在某个元素上是否存在，你可以使用 {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} 方法。与{{domxref("DataTransfer.types","types")}} 属性类似，它返回元素的数据类型列表。访问 {{domxref("DataTransfer.types","types ")}} 属性就相当于取索引为 0 的元素的数据类型列表。</p>
 
 <pre class="notranslate">var types = event.dataTransfer.mozTypesAt(1);
 </pre>
 
 <h2 id="拖拽非字符串的数据">拖拽非字符串的数据</h2>
 
-<p>上述方法不仅限于字符串类型的数据；你可以为数据指定任意类型。例如，文件数据使用 <a href="/En/DragDrop/Recommended_Drag_Types#file" title="application/x-moz-file">application/x-moz-file</a> 类型，存储为 <a href="/en/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> 对象。但是因为 {{domxref("DataTransfer.setData","setData()")}} 方法只支持字符串，所以在这种情况下不能用来指定文件。应该使用的是 {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} 方法。</p>
+<p>上述方法不仅限于字符串类型的数据；你可以为数据指定任意类型。例如，文件数据使用 <a href="/En/DragDrop/Recommended_Drag_Types#file" title="application/x-moz-file">application/x-moz-file</a> 类型，存储为 <a href="/en/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> 对象。但是因为 {{domxref("DataTransfer.setData","setData()")}} 方法只支持字符串，所以在这种情况下不能用来指定文件。应该使用的是 {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} 方法。</p>
 
 <pre class="notranslate">dt.mozSetDataAt("application/x-moz-file", file, 0);
 </pre>
 
 <p>通过使用这个方法，你可以传输任意的对象，尽管你可能不需要支持多元素的拖拽，但还是应该传入 0 当作索引。</p>
 
-<p>同样的，你将需要使用 {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} 方法来获取这个文件对象或是任何其他对象。如果你使用 {{domxref("DataTransfer.getData","getData()")}} 方法，非字符类型数据将可能会使你得到一个空字符串。不过一些简单类型，像数字，是可以被转换成字符串的，所以在这种情况下使用 {{domxref("DataTransfer.getData","getData()")}} 是安全的。</p>
+<p>同样的，你将需要使用 {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} 方法来获取这个文件对象或是任何其他对象。如果你使用 {{domxref("DataTransfer.getData","getData()")}} 方法，非字符类型数据将可能会使你得到一个空字符串。不过一些简单类型，像数字，是可以被转换成字符串的，所以在这种情况下使用 {{domxref("DataTransfer.getData","getData()")}} 是安全的。</p>
 
 <h2 id="举个例子">举个例子</h2>
 
@@ -144,9 +144,9 @@ function output(text)
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>这个例子中通过调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，阻止了 <code>{{event("dragenter")}}</code> 和 <code>{{event("dragover")}}</code> 事件。这使放置事件可以在该的元素上被触发。</p>
+<p>这个例子中通过调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，阻止了 <code>{{event("dragenter")}}</code> 和 <code>{{event("dragover")}}</code> 事件。这使放置事件可以在该的元素上被触发。</p>
 
-<p>当放下一个元素时， <code>dodrop</code> 事件处理函数将会被调用。它会检查 {{domxref("DataTransfer.mozItemCount","mozItemCount")}} 属性来获取有多少元素被放下并且遍历他们。对于每个元素，都会通过调用 {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} 方法来获得类型列表。数据类型列表也将被遍历以获取到所有和被拖拽元素相关的信息。</p>
+<p>当放下一个元素时， <code>dodrop</code> 事件处理函数将会被调用。它会检查 {{domxref("DataTransfer.mozItemCount","mozItemCount")}} 属性来获取有多少元素被放下并且遍历他们。对于每个元素，都会通过调用 {{domxref("DataTransfer.mozTypesAt","mozTypesAt()")}} 方法来获得类型列表。数据类型列表也将被遍历以获取到所有和被拖拽元素相关的信息。</p>
 
 <p>当你希望检查所有拖拽元素含有的数据时，这个流程是很有用的。只需要将元素拖拽到目标上就可以看到被拖拽元素本身以及它的类型和包含的数据。</p>
 

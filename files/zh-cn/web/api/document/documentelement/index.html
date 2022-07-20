@@ -34,9 +34,9 @@ for (let i = 0; i &lt; firstTier.length; i++) {
 
 <p>对于任何非空 HTML 文档，调用 <code>document.documentElement</code> 总是会返回一个 {{HTMLElement("html")}} 元素，且它一定是该文档的根元素。借助这个只读属性，能方便地获取到任意文档的根元素。</p>
 
-<p>HTML 文档通常包含一个子节点 {{HTMLElement("html")}}，但在它前面可能还有个 DOCTYPE 声明。XML 文档通常包含多个子节点：根元素，DOCTYPE 声明，和 <a href="/zh-CN/docs/DOM/ProcessingInstruction">processing instructions</a>。</p>
+<p>HTML 文档通常包含一个子节点 {{HTMLElement("html")}}，但在它前面可能还有个 DOCTYPE 声明。XML 文档通常包含多个子节点：根元素，DOCTYPE 声明，和 <a href="/zh-CN/docs/DOM/ProcessingInstruction">processing instructions</a>。</p>
 
-<p>所以，应当使用 <code>document.documentElement</code> 来获取根元素，而不是 {{Domxref("document.firstChild")}}。</p>
+<p>所以，应当使用 <code>document.documentElement</code> 来获取根元素，而不是 {{Domxref("document.firstChild")}}。</p>
 
 <h2 id="规范">规范</h2>
 

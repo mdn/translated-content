@@ -30,7 +30,7 @@ original_slug: Web/API/GlobalEventHandlers/onanimationcancel
 &lt;/div&gt;
 
 &lt;div class="button" id="toggleBox"&gt;
-  Hide the Box
+  Hide the Box
 &lt;/div&gt;
 
 &lt;pre id="log"&gt;&lt;/pre&gt;</pre>
@@ -72,7 +72,7 @@ original_slug: Web/API/GlobalEventHandlers/onanimationcancel
   font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
 }
 
- </pre>
+ </pre>
 </div>
 
 <p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself, with all its properties, including {{cssxref("animation")}}, defined. We go ahead and describe the animation in-place here because the animation is intended to begin as soon as the page loads, rather than based on an event.</p>
@@ -143,11 +143,11 @@ original_slug: Web/API/GlobalEventHandlers/onanimationcancel
 <pre class="brush: js">function toggleBox() {
   if (box.style.display == "none") {
     box.style.display = "flex";
-    document.getElementById("toggleBox").innerHTML = "Hide the box";
-  } else {
-    box.style.display = "none";
-    document.getElementById("toggleBox").innerHTML = "Show the box";
-  }
+    document.getElementById("toggleBox").innerHTML = "Hide the box";
+  } else {
+    box.style.display = "none";
+    document.getElementById("toggleBox").innerHTML = "Show the box";
+  }
 }</pre>
 
 <p>Toggling the box to <code>display: none</code> has the effect of aborting its animation. In browsers that support {{event("animationcancel")}}, the event is fired and this handler is called.</p>
@@ -176,7 +176,7 @@ original_slug: Web/API/GlobalEventHandlers/onanimationcancel
   <tr>
    <td>{{SpecName('CSS3 Animations','#eventdef-animationevent-animationcancel','onanimationcancel')}}</td>
    <td>{{Spec2('CSS3 Animations')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

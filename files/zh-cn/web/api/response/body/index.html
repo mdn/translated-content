@@ -13,7 +13,7 @@ browser-compat: api.Response.body
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>{{domxref("Response")}} mixin 的只读 getter 属性 <strong><code>body</code></strong> 用于暴露其 body 内容的{{domxref("ReadableStream")}}（流读取）。</p>
+<p>{{domxref("Response")}} mixin 的只读 getter 属性 <strong><code>body</code></strong> 用于暴露其 body 内容的{{domxref("ReadableStream")}}（流读取）。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +25,7 @@ browser-compat: api.Response.body
 
 <h2 id="例程">例程</h2>
 
-<p>在我们的 <a href="https://mdn.github.io/dom-examples/streams/simple-pump.html">simple stream pump</a> 例程中我们 fetch 一个图片地址，使用<code>response.body</code>暴露响应的流，用{{domxref("Response.getReader()", "ReadableStream.getReader()")}}创建一个读取器，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。</p>
+<p>在我们的 <a href="https://mdn.github.io/dom-examples/streams/simple-pump.html">simple stream pump</a> 例程中我们 fetch 一个图片地址，使用<code>response.body</code>暴露响应的流，用{{domxref("Response.getReader()", "ReadableStream.getReader()")}}创建一个读取器，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。</p>
 
 <pre class="brush: js">const image = document.getElementById('target');
 
@@ -70,7 +70,7 @@ fetch('./tortoise.png')
 
 <div>{{Compat("api.Response.body")}}</div>
 
-<p> </p>
+<p> </p>
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -6,10 +6,10 @@ translation_of: Web/API/IDBObjectStore/openCursor
 <p>{{ APIRef("IDBObjectStore") }}</p>
 
 <div>
-<p>{{domxref("IDBObjectStore")}} 的 <code>openCursor()</code> 方法 返回一个{{domxref("IDBRequest")}} 对象，并在一个单独的线程中，返回一个新的 {{domxref("IDBCursorWithValue")}} 对象。此方法目的是用一个游标来遍历一个对象存储空间。</p>
+<p>{{domxref("IDBObjectStore")}} 的 <code>openCursor()</code> 方法 返回一个{{domxref("IDBRequest")}} 对象，并在一个单独的线程中，返回一个新的 {{domxref("IDBCursorWithValue")}} 对象。此方法目的是用一个游标来遍历一个对象存储空间。</p>
 </div>
 
-<p>若要确认此操作是否成功完成，请监听结果的 <code>success</code> 事件。</p>
+<p>若要确认此操作是否成功完成，请监听结果的 <code>success</code> 事件。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/IDBObjectStore/openCursor
  <dt>query {{optional_inline}}</dt>
  <dd>要查询的键或者 {{domxref("IDBKeyRange")}} 。如果传一个有效的键，则会默认为只包含此键的范围。如果此参数不传值，则默认为一个选择了该对象存储空间全部记录的键范围。</dd>
  <dt>direction {{optional_inline}}</dt>
- <dd>一个 {{domxref("IDBCursorDirection")}} 来告诉游标要移动的方向。有效的值有 <code>"next"</code> 、<code>"nextunique"</code> 、<code>"prev"</code> 和 <code>"prevunique"</code>。默认值是 <code>"next"</code>。</dd>
+ <dd>一个 {{domxref("IDBCursorDirection")}} 来告诉游标要移动的方向。有效的值有 <code>"next"</code> 、<code>"nextunique"</code> 、<code>"prev"</code> 和 <code>"prevunique"</code>。默认值是 <code>"next"</code>。</dd>
 </dl>
 
 <h3 id="返回">返回</h3>
@@ -76,7 +76,7 @@ request.onsuccess = function(event) {
 };
 </pre>
 
-<h2 id="规范">规范 </h2>
+<h2 id="规范">规范 </h2>
 
 {{Specifications}}
 

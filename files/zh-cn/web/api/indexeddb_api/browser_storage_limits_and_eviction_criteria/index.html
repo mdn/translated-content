@@ -49,7 +49,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 <p>一般来说，数据存储的的类型主要有以下两种：</p>
 
 <ul>
- <li>持久化存储：这种数据是希望长久保留的，只有的当用户选择清除才会被删除掉（比如，在 Firefox 中，您可以通过转到<em>“首选项”</em>并使用“ <em>隐私和安全”&gt;“Cookie 和站点数据”</em>下的选项，选择删除所有存储的数据或仅删除所选来源的存储数据）。</li>
+ <li>持久化存储：这种数据是希望长久保留的，只有的当用户选择清除才会被删除掉（比如，在 Firefox 中，您可以通过转到<em>“首选项”</em>并使用“ <em>隐私和安全”&gt;“Cookie 和站点数据”</em>下的选项，选择删除所有存储的数据或仅删除所选来源的存储数据）。</li>
  <li>临时存储：这种数据不用保存很久，当最近一次使用时<a href="#储存限制">储存限制</a>达到限制大小就会被自动清理掉（<a href="#lru策略">LRU 策略</a>）。</li>
 </ul>
 
@@ -62,10 +62,10 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 <p>每种存储类型代表一个单独的存储库。这是用户 Firefox 配置文件下目录的实际映射（其他浏览器可能略有不同）：</p>
 
 <ul>
- <li><code>&lt;profile&gt;/storage</code> — 配额管理器维护的主要顶级目录（见下文）</li>
- <li><code>&lt;profile&gt;/storage/permanent</code> — 持久数据存储库</li>
- <li><code>&lt;profile&gt;/storage/temporary</code> —临时数据存储库</li>
- <li><code>&lt;profile&gt;/storage/default</code> — 默认数据存储库</li>
+ <li><code>&lt;profile&gt;/storage</code> — 配额管理器维护的主要顶级目录（见下文）</li>
+ <li><code>&lt;profile&gt;/storage/permanent</code> — 持久数据存储库</li>
+ <li><code>&lt;profile&gt;/storage/temporary</code> —临时数据存储库</li>
+ <li><code>&lt;profile&gt;/storage/default</code> — 默认数据存储库</li>
 </ul>
 
 <div class="blockIndicator note">
@@ -73,7 +73,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：在 Firefox 中，可以通过<code>about:support</code>在 URL 栏中输入，然后按“ <em>配置文件夹”</em>标题旁边的<em>“在...中显示...”</em>按钮（例如，在 Mac OS X 上的<em>“在 Finder 中显示”）来查找</em>您的<em>配置文件文件夹</em>。</p>
+<p><strong>注意</strong>：在 Firefox 中，可以通过<code>about:support</code>在 URL 栏中输入，然后按“ <em>配置文件夹”</em>标题旁边的<em>“在...中显示...”</em>按钮（例如，在 Mac OS X 上的<em>“在 Finder 中显示”）来查找</em>您的<em>配置文件文件夹</em>。</p>
 </div>
 
 <div class="blockIndicator note">
@@ -94,7 +94,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
  <li><code>mozilla.org</code>——组 1，源 1</li>
  <li><code>www.mozilla.org</code>——组 1，源 2</li>
  <li><code>joe.blogs.mozilla.org</code>——组 1，源 3</li>
- <li><code>firefox.com</code> ——组 2，源 4</li>
+ <li><code>firefox.com</code> ——组 2，源 4</li>
 </ul>
 
 <p>在这个组中，<code>mozilla.org</code>、<code>www.mozilla.org</code>和<code>joe.blogs.mozilla.org</code>可以聚合使用最多 20％的全局限制。 firefox.com 单独最多使用 20％。</p>
@@ -127,6 +127,6 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="http://www.html5rocks.com/en/tutorials/offline/quota-research/">在移动浏览器上使用配额</a>（<a href="http://blog.agektmr.com" title="Eiji Kitamura"> Eiji Kitamura</a>著）：详细分析了移动浏览器上的客户端存储。</li>
- <li><a href="https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts">配额管理 API：快速实践</a> （<a href="http://blog.agektmr.com" title="Eiji Kitamura">Eiji Kitamura</a>著）：查看 Chrome / Blink 中的配额管理 API（也应包括 Opera）。</li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/offline/quota-research/">在移动浏览器上使用配额</a>（<a href="http://blog.agektmr.com" title="Eiji Kitamura"> Eiji Kitamura</a>著）：详细分析了移动浏览器上的客户端存储。</li>
+ <li><a href="https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts">配额管理 API：快速实践</a> （<a href="http://blog.agektmr.com" title="Eiji Kitamura">Eiji Kitamura</a>著）：查看 Chrome / Blink 中的配额管理 API（也应包括 Opera）。</li>
 </ul>

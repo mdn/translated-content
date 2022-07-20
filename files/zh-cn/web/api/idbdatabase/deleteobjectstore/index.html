@@ -6,7 +6,7 @@ translation_of: Web/API/IDBDatabase/deleteObjectStore
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p><strong><code>deleteObjectStore()</code></strong> 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。</p>
+<p><strong><code>deleteObjectStore()</code></strong> 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。</p>
 </div>
 
 <p>与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法<em>只能</em>在<a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>versionchange</code></a>事务中调用。</p>
@@ -26,7 +26,7 @@ translation_of: Web/API/IDBDatabase/deleteObjectStore
 
 <h3 id="异常">异常</h3>
 
-<p>此方法可能会引发下列 {{domxref("DOMException")}}  异常：</p>
+<p>此方法可能会引发下列 {{domxref("DOMException")}}  异常：</p>
 
 <table class="standard-table">
  <thead>
@@ -38,7 +38,7 @@ translation_of: Web/API/IDBDatabase/deleteObjectStore
  <tbody>
   <tr>
    <td><code>InvalidStateError</code></td>
-   <td>Occurs if the method was not called from a <code>versionchange</code> transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.</td>
+   <td>Occurs if the method was not called from a <code>versionchange</code> transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.</td>
   </tr>
   <tr>
    <td><code>TransactionInactiveError</code></td>
@@ -58,17 +58,17 @@ var dbVersion = 2;
 var request = indexedDB.open(dbName, dbVersion);
 
 request.onupgradeneeded = function(e) {
-  var db = request.result;
-  if (e.oldVersion &lt; 1) {
-    db.createObjectStore("store1");
-  }
+  var db = request.result;
+  if (e.oldVersion &lt; 1) {
+    db.createObjectStore("store1");
+  }
 
-  if (e.oldVersion &lt; 2) {
-    db.deleteObjectStore("store1");
-    db.createObjectStore("store2");
-  }
+  if (e.oldVersion &lt; 2) {
+    db.deleteObjectStore("store1");
+    db.createObjectStore("store2");
+  }
 
-  // etc. for version &lt; 3, 4...
+  // etc. for version &lt; 3, 4...
 };</pre>
 
 <h2 id="Specification">Specification</h2>

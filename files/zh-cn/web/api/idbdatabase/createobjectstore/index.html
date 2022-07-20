@@ -6,7 +6,7 @@ translation_of: Web/API/IDBDatabase/createObjectStore
 <p>{{ APIRef("IndexedDB") }}</p>
 
 <div>
-<p>{{domxref("IDBDatabase")}} 接口的 <strong><code>createObjectStore()</code></strong> 方法创建并返回一个新的 object store 或 index。</p>
+<p>{{domxref("IDBDatabase")}} 接口的 <strong><code>createObjectStore()</code></strong> 方法创建并返回一个新的 object store 或 index。</p>
 </div>
 
 <p>此方法接受一个参数作为 store 的名称，也接受一个可选的参数对象让你可以定义重要的可选属性。你可以用这个属性唯一的标识此 store 中的每个对象。因为参数是一个标识符，所以 store 中的每一个对象都应有此属性并保证此属性唯一。</p>
@@ -25,7 +25,7 @@ var <em>objectStore</em> = <em>IDBDatabase</em>.createObjectStore(<em>name</em>,
 
 <dl>
  <dt>name</dt>
- <dd>被创建的 object store 的名称。请注意创建空名称的 object store 是被允许的。</dd>
+ <dd>被创建的 object store 的名称。请注意创建空名称的 object store 是被允许的。</dd>
  <dt>optionalParameters {{optional_inline}}</dt>
  <dd>
  <p>可选的对象，它的属性是此方法的可选参数，其中包括以下的属性：</p>
@@ -41,12 +41,12 @@ var <em>objectStore</em> = <em>IDBDatabase</em>.createObjectStore(<em>name</em>,
    <tr>
     <td><code>keyPath</code></td>
     <td>
-     <p><a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a> 被用在新的 object store 上。如果为空或未指定，object store 创建时将没有 key path，而是使用 <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_outofline_key">out-of-line keys</a> 。你也能传一个数组作为 <code>keyPath</code> 。</p>
+     <p><a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath">key path</a> 被用在新的 object store 上。如果为空或未指定，object store 创建时将没有 key path，而是使用 <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_outofline_key">out-of-line keys</a> 。你也能传一个数组作为 <code>keyPath</code> 。</p>
     </td>
    </tr>
    <tr>
     <td><code>autoIncrement</code></td>
-    <td>如果为 <code>true</code>,  object store 有一个 <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator">key generator</a>. 默认为 <code>false</code>。</td>
+    <td>如果为 <code>true</code>,  object store 有一个 <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator">key generator</a>. 默认为 <code>false</code>。</td>
    </tr>
   </tbody>
  </table>
@@ -83,7 +83,7 @@ var <em>objectStore</em> = <em>IDBDatabase</em>.createObjectStore(<em>name</em>,
   <tr>
    <td><code>TransactionInactiveError</code></td>
    <td>
-    <p>如果对不存在的源数据库发出请求（例如，已被删除的）。此外，在 Firefox 版本小于 41 中，会抛出误导性的 <code>InvalidStateError</code> 错误，这一问题现已修复（请参阅 {{Bug("1176165")}}）。</p>
+    <p>如果对不存在的源数据库发出请求（例如，已被删除的）。此外，在 Firefox 版本小于 41 中，会抛出误导性的 <code>InvalidStateError</code> 错误，这一问题现已修复（请参阅 {{Bug("1176165")}}）。</p>
    </td>
   </tr>
   <tr>
@@ -95,7 +95,7 @@ var <em>objectStore</em> = <em>IDBDatabase</em>.createObjectStore(<em>name</em>,
   <tr>
    <td><code><a href="/en-US/docs/IndexedDB/IDBDatabaseException#NON_TRANSIENT_ERR">I</a>nvalidAccessError</code></td>
    <td>
-    <p>如果 <code>autoIncrement</code> 设置为 true，并且 keyPath 是空字符串或包含空字符串的数组。</p>
+    <p>如果 <code>autoIncrement</code> 设置为 true，并且 keyPath 是空字符串或包含空字符串的数组。</p>
    </td>
   </tr>
  </tbody>
@@ -107,10 +107,10 @@ var <em>objectStore</em> = <em>IDBDatabase</em>.createObjectStore(<em>name</em>,
   var request = window.indexedDB.open("toDoList", 4);
 
   // This handler is called when a new version of the database
-  // is created, either when one has not been created before
-  // or when a new version number is submitted by calling
-  // window.indexedDB.open().
-  // This handler is only supported in recent browsers.
+  // is created, either when one has not been created before
+  // or when a new version number is submitted by calling
+  // window.indexedDB.open().
+  // This handler is only supported in recent browsers.
   request.onupgradeneeded = function(event) {
     var db = event.target.result;
 

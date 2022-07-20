@@ -12,7 +12,7 @@ translation_of: Web/API/Service_Worker_API
 ---
 <p>{{ServiceWorkerSidebar}}</p>
 
-<p>Service workers 本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验，它会拦截网络请求并根据网络是否可用来采取适当的动作、更新来自服务器的的资源。它还提供入口以推送通知和访问后台同步 API。</p>
+<p>Service workers 本质上充当 Web 应用程序、浏览器与网络（可用时）之间的代理服务器。这个 API 旨在创建有效的离线体验，它会拦截网络请求并根据网络是否可用来采取适当的动作、更新来自服务器的的资源。它还提供入口以推送通知和访问后台同步 API。</p>
 
 <h2 id="Service_worker_的概念和用法">Service worker 的概念和用法</h2>
 
@@ -63,7 +63,7 @@ translation_of: Web/API/Service_Worker_API
 
 <p>还有一个 activate 事件，触发时可以清理旧缓存和旧的 service worker 关联的东西。</p>
 
-<p>Servcie worker 可以通过 {{domxref("FetchEvent")}} 事件去响应请求。通过使用 {{domxref("FetchEvent.respondWith") }} 方法，你可以任意修改对于这些请求的响应。</p>
+<p>Servcie worker 可以通过 {{domxref("FetchEvent")}} 事件去响应请求。通过使用 {{domxref("FetchEvent.respondWith") }} 方法，你可以任意修改对于这些请求的响应。</p>
 
 <div class="note">
 <p><strong>注意</strong>: 因为<code>oninstall</code>和<code>onactivate</code>完成前需要一些时间，service worker 标准提供一个<code>waitUntil</code>方法，当<code>oninstall</code>或者<code>onactivate</code>触发时被调用，接受一个 promise。在这个 promise 被成功 resolve 以前，功能性事件不会分发到 service worker。</p>
@@ -97,34 +97,34 @@ translation_of: Web/API/Service_Worker_API
 <h2 id="接口">接口</h2>
 
 <dl>
- <dt>{{domxref("Cache") }} {{Experimental_Inline}}</dt>
+ <dt>{{domxref("Cache") }} {{Experimental_Inline}}</dt>
  <dd>表示用于{{domxref("Request")}}/{{domxref("Response")}}对象对的存储，作为{{domxref("ServiceWorker")}}生命周期的一部分被缓存。</dd>
- <dt>{{domxref("CacheStorage") }} {{Experimental_Inline}}</dt>
+ <dt>{{domxref("CacheStorage") }} {{Experimental_Inline}}</dt>
  <dd>表示{{domxref("Cache")}}对象的存储。提供一个所有命名缓存的主目录，{{domxref("ServiceWorker")}}可以访问并维护名字字符串到{{domxref("Cache")}}对象的映射。</dd>
- <dt>{{domxref("Client") }} {{Experimental_Inline}}</dt>
+ <dt>{{domxref("Client") }} {{Experimental_Inline}}</dt>
  <dd>表示 service worker client 的作用域。一个 service worker client 可以是浏览器上下文的一个文档，也可以是一个由活动 worker 控制的{{domxref("SharedWorker")}}。</dd>
- <dt>{{domxref("Clients") }} {{Experimental_Inline}}</dt>
+ <dt>{{domxref("Clients") }} {{Experimental_Inline}}</dt>
  <dd>表示一个{{domxref("Client")}}对象容器，是访问当前源的活动 service worker clients 的主要途径。</dd>
- <dt>{{domxref("ExtendableEvent") }} {{Experimental_Inline}}</dt>
+ <dt>{{domxref("ExtendableEvent") }} {{Experimental_Inline}}</dt>
  <dd>扩展被分发到{{domxref("ServiceWorkerGlobalScope")}}的<code>install 和 activate</code>事件时序，作为 service worker 生命周期的一部分。这会确保任何功能型事件（如{{domxref("FetchEvent")}}）不被分发到{{domxref("ServiceWorker")}}，直到它更新了数据库架构、删除过期缓存项等等以后。</dd>
- <dt>{{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}</dt>
+ <dt>{{DOMxRef("ExtendableMessageEvent")}} {{Experimental_Inline}}</dt>
  <dd>The event object of a {{event("message_(ServiceWorker)","message")}} event fired on a service worker (when a channel message is received on the {{DOMxRef("ServiceWorkerGlobalScope")}} from another context) — extends the lifetime of such events.</dd>
  <dt>{{domxref("FetchEvent") }}{{Experimental_Inline}}</dt>
  <dd>传递给{{domxref("ServiceWorkerGlobalScope.onfetch")}}处理函数的参数，FetchEvent 代表一个在{{domxref("ServiceWorker")}}的{{domxref("ServiceWorkerGlobalScope")}}中分发的请求动作。它包含关于请求和响应的结果信息，并且提供{{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}方法，这个方法允许我们提供任意的响应返回到控制页面。</dd>
  <dt>{{domxref("InstallEvent") }}{{Experimental_Inline}}</dt>
- <dd>传递给 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 处理函数的参数，<code>InstallEvent</code> 接口代表一个在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 中分发的安装动作，作为 {{domxref("ExtendableEvent")}} 的子事件，它保证诸如 {{domxref("FetchEvent")}} 的功能性事件在安装过程中不会被分发。</dd>
- <dt>{{DOMxRef("NavigationPreloadManager")}} {{Experimental_Inline}}</dt>
+ <dd>传递给 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 处理函数的参数，<code>InstallEvent</code> 接口代表一个在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 中分发的安装动作，作为 {{domxref("ExtendableEvent")}} 的子事件，它保证诸如 {{domxref("FetchEvent")}} 的功能性事件在安装过程中不会被分发。</dd>
+ <dt>{{DOMxRef("NavigationPreloadManager")}} {{Experimental_Inline}}</dt>
  <dd>Provides methods for managing the preloading of resources with a service worker.</dd>
  <dt>{{domxref("Navigator.serviceWorker") }}</dt>
  <dd>返回一个{{domxref("ServiceWorkerContainer")}}对象，可以提供入口用于注册，删除，更新以及与在<a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">相关 document</a>中{{domxref("ServiceWorker")}}通信的对象。</dd>
- <dt>{{domxref("NotificationEvent") }} {{Experimental_Inline}}</dt>
+ <dt>{{domxref("NotificationEvent") }} {{Experimental_Inline}}</dt>
  <dd>传递给{{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}处理函数的参数，<code>NotificationEvent</code> 接口代表在{{domxref("ServiceWorker")}}里{{domxref("ServiceWorkerGlobalScope")}}中分发的单击事件通知。</dd>
 </dl>
 
 <dl>
- <dt>{{domxref("ServiceWorker") }} {{Experimental_Inline}}</dt>
+ <dt>{{domxref("ServiceWorker") }} {{Experimental_Inline}}</dt>
  <dd>表示一个 service worker。多个浏览的上下文 (例如 pages、workers 等等) 都能通过相同的 <code>ServiceWorker</code> 对象相关联。</dd>
- <dt>{{domxref("ServiceWorkerContainer") }} {{Experimental_Inline}}</dt>
+ <dt>{{domxref("ServiceWorkerContainer") }} {{Experimental_Inline}}</dt>
  <dd>提供一个在网络生态中把 service worker 作为一个整体的对象，包括辅助注册，反注册以及更新服务工作者，并且访问 service worker 的状态以及他们的注册信息。</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope") }}</dt>
  <dd>表示 service worker 的全局执行上下文。</dd>
@@ -133,7 +133,7 @@ translation_of: Web/API/Service_Worker_API
  <dt>{{domxref("ServiceWorkerRegistration") }}</dt>
  <dd>表示 service worker 的注册。</dd>
  <dt>{{DOMxRef("ServiceWorkerState")}} {{Experimental_Inline}}</dt>
- <dd>Associated with its <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>'s state.</dd>
+ <dd>Associated with its <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>'s state.</dd>
  <dt>{{domxref("SyncEvent")}} {{non-standard_inline}}</dt>
  <dd>传递给同步函数的参数，SyncEvent 接口代表在 ServiceWorker 里{{domxref("ServiceWorkerGlobalScope")}}分发的同步动作。</dd>
  <dt>{{domxref("SyncManager")}} {{non-standard_inline}}</dt>

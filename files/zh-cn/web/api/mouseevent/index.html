@@ -7,7 +7,7 @@ translation_of: Web/API/MouseEvent
 
 <p><strong><code>MouseEvent</code></strong> 接口指用户与指针设备（如鼠标）交互时发生的事件。使用此接口的常见事件包括：{{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}}、{{event("mousedown")}}。</p>
 
-<p><code>MouseEvent</code> 派生自 {{domxref("UIEvent")}}，{{domxref("UIEvent")}} 派生自 {{domxref("Event")}}。虽然 <code>MouseEvent.initMouseEvent() </code>方法保持向后兼容性，但是应该使用 <code>MouseEvent()</code> 构造函数创建一个 <code>MouseEvent</code> 对象。</p>
+<p><code>MouseEvent</code> 派生自 {{domxref("UIEvent")}}，{{domxref("UIEvent")}} 派生自 {{domxref("Event")}}。虽然 <code>MouseEvent.initMouseEvent() </code>方法保持向后兼容性，但是应该使用 <code>MouseEvent()</code> 构造函数创建一个 <code>MouseEvent</code> 对象。</p>
 
 <p>一些具体的事件都派生自 <code>MouseEvent</code>：{{domxref("WheelEvent")}} 和{{domxref("DragEvent")}}。</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/MouseEvent
 
 <h2 id="属性">属性</h2>
 
-<p><em>这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型上的方法，</em></p>
+<p><em>这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型上的方法，</em></p>
 
 <dl>
  <dt>{{domxref("MouseEvent.altKey")}} {{readonlyinline}}</dt>
@@ -76,13 +76,13 @@ translation_of: Web/API/MouseEvent
  <dt>{{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
  <dd>点击事件发生时施加在触摸屏或者平板设备的压力量。这个数值在 0.0（最小压力）和 1.0（最大压力）之间。</dd>
  <dt>{{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
- <dd>生成事件的类型（若干 <code>MOZ_SOURCE_* </code>常量如下列出）。可通过该属性获知鼠标事件是否由真实鼠标设备触发，亦或通过触摸事件触发（这可能影响处理坐标事件时的精确程度）。</dd>
+ <dd>生成事件的类型（若干 <code>MOZ_SOURCE_* </code>常量如下列出）。可通过该属性获知鼠标事件是否由真实鼠标设备触发，亦或通过触摸事件触发（这可能影响处理坐标事件时的精确程度）。</dd>
  <dt>{{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}</dt>
  <dd>点击时施加的压力量。</dd>
  <dt>{{domxref("MouseEvent.x")}} {{experimental_inline}}{{readonlyinline}}</dt>
  <dd>{{domxref("MouseEvent.clientX")}}的别名。</dd>
  <dt>{{domxref("MouseEvent.y")}} {{experimental_inline}}{{readonlyinline}}</dt>
- <dd> {{domxref("MouseEvent.clientY")}}的别名。</dd>
+ <dd> {{domxref("MouseEvent.clientY")}}的别名。</dd>
 </dl>
 
 <h2 id="常量">常量</h2>

@@ -38,29 +38,29 @@ original_slug: API/Pointer_Lock_API
 var elem;
 
 document.addEventListener("mousemove", function(e) {
-  var movementX = e.movementX       ||
-                  e.mozMovementX    ||
-                  e.webkitMovementX ||
-                  0,
-      movementY = e.movementY       ||
-                  e.mozMovementY    ||
-                  e.webkitMovementY ||
-                  0;
+  var movementX = e.movementX       ||
+                  e.mozMovementX    ||
+                  e.webkitMovementX ||
+                  0,
+      movementY = e.movementY       ||
+                  e.mozMovementY    ||
+                  e.webkitMovementY ||
+                  0;
 
-  // 打印鼠标移动的增量值。
-  console.log("movementX=" + movementX, "movementY=" + movementY);
+  // 打印鼠标移动的增量值。
+  console.log("movementX=" + movementX, "movementY=" + movementY);
 }, false);
 
 function fullscreenChange() {
-  if (document.webkitFullscreenElement === elem ||
-      document.mozFullscreenElement === elem ||
-      document.mozFullScreenElement === elem) { // 较旧的 API 大写 'S'.
-    // 元素进入全屏模式了，现在我们可以请求指针锁定。
-    elem.requestPointerLock = elem.requestPointerLock    ||
-                              elem.mozRequestPointerLock ||
-                              elem.webkitRequestPointerLock;
-    elem.requestPointerLock();
-  }
+  if (document.webkitFullscreenElement === elem ||
+      document.mozFullscreenElement === elem ||
+      document.mozFullScreenElement === elem) { // 较旧的 API 大写 'S'.
+    // 元素进入全屏模式了，现在我们可以请求指针锁定。
+    elem.requestPointerLock = elem.requestPointerLock    ||
+                              elem.mozRequestPointerLock ||
+                              elem.webkitRequestPointerLock;
+    elem.requestPointerLock();
+  }
 }
 
 document.addEventListener('fullscreenchange', fullscreenChange, false);
@@ -68,12 +68,12 @@ document.addEventListener('mozfullscreenchange', fullscreenChange, false);
 document.addEventListener('webkitfullscreenchange', fullscreenChange, false);
 
 function pointerLockChange() {
-  if (document.mozPointerLockElement === elem ||
-      document.webkitPointerLockElement === elem) {
-    console.log("指针锁定成功了。");
-  } else {
-    console.log("指针锁定已丢失。");
-  }
+  if (document.mozPointerLockElement === elem ||
+      document.webkitPointerLockElement === elem) {
+    console.log("指针锁定成功了。");
+  } else {
+    console.log("指针锁定已丢失。");
+  }
 }
 
 document.addEventListener('pointerlockchange', pointerLockChange, false);
@@ -81,7 +81,7 @@ document.addEventListener('mozpointerlockchange', pointerLockChange, false);
 document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
 
 function pointerLockError() {
-  console.log("锁定指针时出错。");
+  console.log("锁定指针时出错。");
 }
 
 document.addEventListener('pointerlockerror', pointerLockError, false);
@@ -89,20 +89,20 @@ document.addEventListener('mozpointerlockerror', pointerLockError, false);
 document.addEventListener('webkitpointerlockerror', pointerLockError, false);
 
 function lockPointer() {
-  elem = document.getElementById("pointer-lock-element");
-  // 开始于使元素进入全屏模式。目前的实现
-  // 要求元素在请求指针锁定前要处于全屏模式下
-  // -- 这在以后可能会发生改变。
-  elem.requestFullscreen = elem.requestFullscreen    ||
-                           elem.mozRequestFullscreen ||
-                           elem.mozRequestFullScreen || // 较旧的 API 把 ‘S’ 大写
-                           elem.webkitRequestFullscreen;
-  elem.requestFullscreen();
+  elem = document.getElementById("pointer-lock-element");
+  // 开始于使元素进入全屏模式。目前的实现
+  // 要求元素在请求指针锁定前要处于全屏模式下
+  // -- 这在以后可能会发生改变。
+  elem.requestFullscreen = elem.requestFullscreen    ||
+                           elem.mozRequestFullscreen ||
+                           elem.mozRequestFullScreen || // 较旧的 API 把 ‘S’ 大写
+                           elem.webkitRequestFullscreen;
+  elem.requestFullscreen();
 }
 &lt;/script&gt;
 </pre>
 
-<h2 id="method_overview">方法/属性 概述</h2>
+<h2 id="method_overview">方法/属性 概述</h2>
 
 <p>Pointer lock API，和 Fullscreen API 类似，通过添加新方法来扩展 DOM 元素，<code>requestPointerLock</code>, 目前还是厂商前缀。按下面这样来写：</p>
 
@@ -113,7 +113,7 @@ element.mozRequestPointerLock(); // Firefox
 
 <p>目前 <code>requestPointerLock</code> 的实现还是和 <code>requestFullScreen</code> 以及 Fullscreen API 紧紧地绑在一起的。一个元素在能够被指针锁定之前，必须首先进入全屏模式。就像上面演示的那样，锁定指针的过程是异步的，使用 (<code>pointerlockchange</code>, <code>pointerlockerror</code>) 事件来表明请求是成功还是失败了。这和 Fullscreen API 的工作方式是一致的，它使用 <code>requestFullScreen</code> 方法，以及 <code>fullscreenchange</code> 和 <code>fullscreenerror</code> 事件。</p>
 
-<p>Pointer lock API 还扩展了 <code>document</code> 接口，添加了一个新的属性和一个新的方法。新的属性被用于访问当前被锁定的元素（如果有的话），并被命名为 <code>pointerLockElement</code>，目前也使用厂商前缀。 <code>document</code> 添加的新方法是 <code>exitPointerLock</code> ，顾名思义，它是用来退出指针锁定的。</p>
+<p>Pointer lock API 还扩展了 <code>document</code> 接口，添加了一个新的属性和一个新的方法。新的属性被用于访问当前被锁定的元素（如果有的话），并被命名为 <code>pointerLockElement</code>，目前也使用厂商前缀。 <code>document</code> 添加的新方法是 <code>exitPointerLock</code> ，顾名思义，它是用来退出指针锁定的。</p>
 
 <p><code>pointerLockElement</code> 属性适用于确定当前是否有被指针锁定的元素（例如，用来做一个布尔检查），以及当有元素被锁定时获取该元素的一个引用。下面是这两种用法的一个例子：</p>
 
@@ -162,15 +162,15 @@ document.exitPointerLock();
 
 <h2 id="mouselocklostevent">pointerlockchange 事件</h2>
 
-<p>当指针锁定状态改变时 - 例如，当调用 <code>requestPointerLock</code>, <code>exitPointerLock</code>，用户按下 ESC 键，等等。— <code>pointerlockchange</code> 事件被分发到 <code>document</code>。 这是一个简单事件所以不包含任何的额外数据。</p>
+<p>当指针锁定状态改变时 - 例如，当调用 <code>requestPointerLock</code>, <code>exitPointerLock</code>，用户按下 ESC 键，等等。— <code>pointerlockchange</code> 事件被分发到 <code>document</code>。 这是一个简单事件所以不包含任何的额外数据。</p>
 
-<div class="note">该事件目前在 Firefox 中使用前缀的格式是 <code>mozpointerlockchange</code> ，在 Chrome 中是 <code>webkitpointerlockchange</code>。 </div>
+<div class="note">该事件目前在 Firefox 中使用前缀的格式是 <code>mozpointerlockchange</code> ，在 Chrome 中是 <code>webkitpointerlockchange</code>。 </div>
 
 <h2 id="mouselocklostevent">pointerlockerror 事件</h2>
 
-<p>当调用 <code>requestPointerLock</code> 或 <code>exitPointerLock</code>而引发错误时，  <code>pointerlockerror</code> 事件被分发到 <code>document</code>。这是一个简单事件所以不包含任何的额外数据。</p>
+<p>当调用 <code>requestPointerLock</code> 或 <code>exitPointerLock</code>而引发错误时，  <code>pointerlockerror</code> 事件被分发到 <code>document</code>。这是一个简单事件所以不包含任何的额外数据。</p>
 
-<div class="note">该事件目前在 Firefox 中被加上前缀为 <code>mozpointerlockerror</code> ，在 Chrome 中为 <code>webkitpointerlockerror</code>。 </div>
+<div class="note">该事件目前在 Firefox 中被加上前缀为 <code>mozpointerlockerror</code> ，在 Chrome 中为 <code>webkitpointerlockerror</code>。 </div>
 
 <h2 id="extensions">鼠标事件扩展</h2>
 
@@ -183,17 +183,17 @@ document.exitPointerLock();
 
 <div class="note">movement 属性目前在 Firefox 中被加上前缀为 <code>.mozMovementX</code> 和 <code>.mozMovementY</code> , 在 Chrome 中为<code>.webkitMovementX</code> 和 <code>.webkitMovementY</code>。</div>
 
-<p>鼠标事件的两个新参数—<code>movementX</code> 和 <code>movementY</code>—提供了鼠标位置的变化情况。这两个参数的值，等于两个<a href="/en/DOM/MouseEvent" title="en/DOM/Event/UIEvent/MouseEvent"><code>MouseEvent</code></a> 属性（ <code>screenX</code> 和 <code>screenY）</code>之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ <code>eNow</code> 和 <code>ePrevious</code>）中。换言之，指针锁定参数 <code>movementX = eNow.screenX - ePrevious.screenX</code>。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）</p>
+<p>鼠标事件的两个新参数—<code>movementX</code> 和 <code>movementY</code>—提供了鼠标位置的变化情况。这两个参数的值，等于两个<a href="/en/DOM/MouseEvent" title="en/DOM/Event/UIEvent/MouseEvent"><code>MouseEvent</code></a> 属性（ <code>screenX</code> 和 <code>screenY）</code>之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ <code>eNow</code> 和 <code>ePrevious</code>）中。换言之，指针锁定参数 <code>movementX = eNow.screenX - ePrevious.screenX</code>。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）</p>
 
 <h3 id="locked_state">锁定状态</h3>
 
-<p>当指针锁定被启动之后，正常的 <code>MouseEvent</code> 属性 <code>clientX</code>, <code>clientY</code>, <code>screenX</code>, 和 <code>screenY</code> ，保持不变，就像鼠标没有在移动一样。 <code>movementX</code> 和 <code>movementY</code> 属性持续提供鼠标的位置变化。如果鼠标在一个方向上持续移动，<code>movementX</code> 和 <code>movementY</code>的值是没有限制的。不存在鼠标光标的概念，而且光标无法移到窗口之外，而且也不会被屏幕边缘所固定。</p>
+<p>当指针锁定被启动之后，正常的 <code>MouseEvent</code> 属性 <code>clientX</code>, <code>clientY</code>, <code>screenX</code>, 和 <code>screenY</code> ，保持不变，就像鼠标没有在移动一样。 <code>movementX</code> 和 <code>movementY</code> 属性持续提供鼠标的位置变化。如果鼠标在一个方向上持续移动，<code>movementX</code> 和 <code>movementY</code>的值是没有限制的。不存在鼠标光标的概念，而且光标无法移到窗口之外，而且也不会被屏幕边缘所固定。</p>
 
 <h3 id="unlocked_state">未锁定状态</h3>
 
-<p>无论鼠标锁定状态是怎样的， <code>movementX</code> 和 <code>movementY</code> 参数一直有效，并且为了方便起见，甚至在未锁定状态也是有效的。</p>
+<p>无论鼠标锁定状态是怎样的， <code>movementX</code> 和 <code>movementY</code> 参数一直有效，并且为了方便起见，甚至在未锁定状态也是有效的。</p>
 
-<p>当鼠标被解除锁定，系统光标可以退出并重新进入浏览器窗口。如果发生这种情况，<code>movementX</code> 和 <code>movementY</code> 可能会被设置成 0。</p>
+<p>当鼠标被解除锁定，系统光标可以退出并重新进入浏览器窗口。如果发生这种情况，<code>movementX</code> 和 <code>movementY</code> 可能会被设置成 0。</p>
 
 <h2 id="iframe_的限制">iframe 的限制</h2>
 

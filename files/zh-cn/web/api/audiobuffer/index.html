@@ -6,7 +6,7 @@ translation_of: Web/API/AudioBuffer
 <p>{{APIRef("Web Audio API")}}</p>
 
 <div>
-<p>AudioBuffer 接口表示存在内存里的一段短小的音频资源，利用{{ domxref("AudioContext.decodeAudioData()") }}方法从一个音频文件构建，或者利用 {{ domxref("AudioContext.createBuffer()") }}从原始数据构建。把音频放入 AudioBuffer 后，可以传入到一个 {{ domxref("AudioBufferSourceNode") }}进行播放。</p>
+<p>AudioBuffer 接口表示存在内存里的一段短小的音频资源，利用{{ domxref("AudioContext.decodeAudioData()") }}方法从一个音频文件构建，或者利用 {{ domxref("AudioContext.createBuffer()") }}从原始数据构建。把音频放入 AudioBuffer 后，可以传入到一个 {{ domxref("AudioBufferSourceNode") }}进行播放。</p>
 </div>
 
 <p>这些类型对象被设计来控制小音频片段，往往短于 45 秒。对于更长的声音，通过 {{domxref("MediaElementAudioSourceNode")}}来实现更为合适。缓存区（buffer）包含以下数据：不间断的 IEEE754 32 位线性 PCM，从-1 到 1 的范围额定，就是说，32 位的浮点缓存区的每个样本在-1.0 到 1.0 之间。如果{{domxref("AudioBuffer")}}有不同的频道，他们通常被保存在独立的缓存区。</p>
@@ -90,5 +90,5 @@ button.onclick = function() {
 <h2 id="可查看">可查看</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">应用 Web Audio API </a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">应用 Web Audio API </a></li>
 </ul>

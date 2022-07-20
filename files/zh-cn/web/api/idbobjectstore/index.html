@@ -11,7 +11,7 @@ translation_of: Web/API/IDBObjectStore
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
-<p><a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB API</a>  的 <strong><code>IDBObjectStore </code></strong>接口表示数据库中的 一个 <a href="https://developer.mozilla.org/en/IndexedDB#gloss_object_store" title="en/IndexedDB#gloss object store">对象库 (object store)</a> 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。</p>
+<p><a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB API</a>  的 <strong><code>IDBObjectStore </code></strong>接口表示数据库中的 一个 <a href="https://developer.mozilla.org/en/IndexedDB#gloss_object_store" title="en/IndexedDB#gloss object store">对象库 (object store)</a> 。对象库中的记录根据其键值进行排序。这种排序可以实现快速插入，查找和有序检索。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -25,31 +25,31 @@ translation_of: Web/API/IDBObjectStore
    <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#add()">add</a> (in any value, in optional any key) raises (<a href="/En/DOM/DOMException" title="en/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#clear()">clear</a> () raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
+   <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#clear()">clear</a> () raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
    <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#count()">count</a> (in optional any key) raises</code><code>(<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBIndex" title="en/IndexedDB/IDBIndex">IDBIndex</a> <a href="#createIndex()">createIndex</a>  (in <a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a> name, in </code><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code><code> keyPath, in optional boolean unique) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
+   <td><code><a href="/en/IndexedDB/IDBIndex" title="en/IndexedDB/IDBIndex">IDBIndex</a> <a href="#createIndex()">createIndex</a>  (in <a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a> name, in </code><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code><code> keyPath, in optional boolean unique) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#delete()">delete</a> (in any key) raises </code><code>(<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
+   <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#delete()">delete</a> (in any key) raises </code><code>(<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#deleteIndex()">deleteIndex</a> (in any </code><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code><code> indexName) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
+   <td><code>void <a href="#deleteIndex()">deleteIndex</a> (in any </code><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code><code> indexName) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#get()">get</a> (in any key) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
+   <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#get()">get</a> (in any key) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBIndex" title="en/IndexedDB/IDBIndex">IDBIndex</a> <a href="#index()">index</a> (in </code><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code><code> name) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
+   <td><code><a href="/en/IndexedDB/IDBIndex" title="en/IndexedDB/IDBIndex">IDBIndex</a> <a href="#index()">index</a> (in </code><code><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code><code> name) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
    <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#openCursor()">openCursor</a> (in optional <a href="/en/IndexedDB/IDBKeyRange" title="en/IndexedDB/IDBKeyRange">IDBKeyRange</a> range, in optional unsigned short direction) raises(<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
   <tr>
-   <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#put()">put</a> (in any value, in optional any key) raises (<a href="/En/DOM/DOMException" title="en/DOM/DOMException">DOMException</a>);</code></td>
+   <td><code><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#put()">put</a> (in any value, in optional any key) raises (<a href="/En/DOM/DOMException" title="en/DOM/DOMException">DOMException</a>);</code></td>
   </tr>
  </tbody>
 </table>
@@ -135,7 +135,7 @@ translation_of: Web/API/IDBObjectStore
  <tbody>
   <tr>
    <td>ReadOnlyError</td>
-   <td>The transaction associated with this operation is in read-only <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</td>
+   <td>The transaction associated with this operation is in read-only <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</td>
   </tr>
   <tr>
    <td>TransactionInactiveError</td>
@@ -156,7 +156,7 @@ translation_of: Web/API/IDBObjectStore
   </tr>
   <tr>
    <td><code>InvalidStateError</code></td>
-   <td>The IDBObjectStore has been deleted or removed.</td>
+   <td>The IDBObjectStore has been deleted or removed.</td>
   </tr>
   <tr>
    <td><code>DataCloneError</code></td>
@@ -167,7 +167,7 @@ translation_of: Web/API/IDBObjectStore
 
 <h3 id="clear">clear()</h3>
 
-<p>创建并立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象，并且在一个单独的线程中清除这个对象存储。清除对象存储包括从对象存储中删除所有的记录，并删除对象存储引用的索引中的所有记录。</p>
+<p>创建并立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象，并且在一个单独的线程中清除这个对象存储。清除对象存储包括从对象存储中删除所有的记录，并删除对象存储引用的索引中的所有记录。</p>
 
 <pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#clear" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#clear">clear</a> () raises (<a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</pre>
 
@@ -192,7 +192,7 @@ translation_of: Web/API/IDBObjectStore
  <tbody>
   <tr>
    <td>ReadOnlyError</td>
-   <td>The transaction associated with this operation is in read-only <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</td>
+   <td>The transaction associated with this operation is in read-only <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</td>
   </tr>
   <tr>
    <td>TransactionInactiveError</td>
@@ -203,7 +203,7 @@ translation_of: Web/API/IDBObjectStore
 
 <h3 id="count">count()</h3>
 
-<p>立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象，并在新线程中计算符合条件的对象的数量，该方法的参数可以是键，或键范围（key range）。在 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象中，source 属性就是 IDBObjectStore 对象，result 属性持有计算后的数量值。如果参数非法将会抛出异常。</p>
+<p>立即返回一个 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象，并在新线程中计算符合条件的对象的数量，该方法的参数可以是键，或键范围（key range）。在 <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> 对象中，source 属性就是 IDBObjectStore 对象，result 属性持有计算后的数量值。如果参数非法将会抛出异常。</p>
 
 <pre><code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="/en/IndexedDB/IDBObjectStore#count" title="en/IndexedDB/IDBObjectStore#count">count</a> (in optional any key) raises</code><code style="font-size: 14px; color: rgb(51, 51, 51);">(<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></pre>
 
@@ -300,7 +300,7 @@ translation_of: Web/API/IDBObjectStore
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
+<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -312,12 +312,12 @@ translation_of: Web/API/IDBObjectStore
  <tbody>
   <tr>
    <td><code style="font-size: 14px;">InvalidStateError</code></td>
-   <td>The IDBObjectStore has been deleted or removed or the method was not called from a <code><a href="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE" title="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE">versionchange</a></code> transaction mode callback.</td>
+   <td>The IDBObjectStore has been deleted or removed or the method was not called from a <code><a href="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE" title="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE">versionchange</a></code> transaction mode callback.</td>
   </tr>
   <tr>
    <td><code style="font-size: 14px;">ConstraintError</code></td>
    <td>An index with the same name (case-sensitive) already exists in the database.<br>
-     </td>
+     </td>
   </tr>
  </tbody>
 </table>
@@ -347,7 +347,7 @@ translation_of: Web/API/IDBObjectStore
 
 <h5 id="Exceptions_3">Exceptions</h5>
 
-<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
+<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -364,7 +364,7 @@ translation_of: Web/API/IDBObjectStore
   <tr>
    <td>ReadOnlyError</td>
    <td>
-    <p>The transaction associated with this operation is in read-only <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</p>
+    <p>The transaction associated with this operation is in read-only <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants" title="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.</p>
    </td>
   </tr>
   <tr>
@@ -387,7 +387,7 @@ objectstore.delete(key);</pre>
 
 <h3 id="deleteIndex">deleteIndex()</h3>
 
-<p>Destroys the index with the specified name in the connected database. Note that this method must be called only from a <code><a href="/en/IndexedDB/IDBTransaction#VERSION_CHANGE" title="en/IndexedDB/IDBTransaction#VERSION CHANGE">VersionChange</a></code> transaction mode callback. Note that this method synchronously modifies the <a href="#attr_indexNames" title="#attr_indexNames">indexNames</a> property.</p>
+<p>Destroys the index with the specified name in the connected database. Note that this method must be called only from a <code><a href="/en/IndexedDB/IDBTransaction#VERSION_CHANGE" title="en/IndexedDB/IDBTransaction#VERSION CHANGE">VersionChange</a></code> transaction mode callback. Note that this method synchronously modifies the <a href="#attr_indexNames" title="#attr_indexNames">indexNames</a> property.</p>
 
 <pre><code style="font-size: 14px; color: rgb(51, 51, 51);">void <a href="#deleteIndex" title="#deleteIndex">deleteIndex</a> (in any </code><code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/En/DOM/DOMString" title="en/DOM/DOMString">DOMString</a></code><code style="font-size: 14px; color: rgb(51, 51, 51);"> indexName) raises (<a href="/en-US/docs/DOM/DOMException" style="line-height: 18px;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</code></pre>
 
@@ -402,7 +402,7 @@ objectstore.delete(key);</pre>
 
 <h5 id="Exceptions_4">Exceptions</h5>
 
-<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
+<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -414,7 +414,7 @@ objectstore.delete(key);</pre>
  <tbody>
   <tr>
    <td><code style="font-size: 14px;">InvalidStateError</code></td>
-   <td>The method was not called from a <code style="font-size: 14px;"><a href="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE" title="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE">versionchange</a></code> transaction mode callback.</td>
+   <td>The method was not called from a <code style="font-size: 14px;"><a href="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE" title="/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE">versionchange</a></code> transaction mode callback.</td>
   </tr>
   <tr>
    <td><code style="font-size: 14px;">NotFoundError</code></td>
@@ -425,7 +425,7 @@ objectstore.delete(key);</pre>
 
 <h3 id="get">get()</h3>
 
-<p>Immediately returns an <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> object, and retrieves the requested record from the object store in a separate thread. If the operation is successful, then a success event is fired on the returned object, with its <code><a href="/en/IndexedDB/IDBSuccessEvent#attr_result" title="en/IndexedDB/IDBSuccessEvent#attr result">result</a></code> set to the retrieved value, and <code><a href="/en/IndexedDB/IDBTransactionEvent#attr_transaction" title="en/IndexedDB/IDBTransactionEvent#attr transaction">transaction</a></code> set to the transaction in which this object store is opened. </p>
+<p>Immediately returns an <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> object, and retrieves the requested record from the object store in a separate thread. If the operation is successful, then a success event is fired on the returned object, with its <code><a href="/en/IndexedDB/IDBSuccessEvent#attr_result" title="en/IndexedDB/IDBSuccessEvent#attr result">result</a></code> set to the retrieved value, and <code><a href="/en/IndexedDB/IDBTransactionEvent#attr_transaction" title="en/IndexedDB/IDBTransactionEvent#attr transaction">transaction</a></code> set to the transaction in which this object store is opened. </p>
 
 <pre><a href="/en/IndexedDB/IDBRequest" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="en/IndexedDB/IDBRequest">IDBRequest</a> <a href="#get" style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;" title="#get">get</a> (in any key) raises (<a href="/en-US/docs/DOM/DOMException" style="font-family: 'Courier New', 'Andale Mono', monospace;" title="/en-US/docs/DOM/DOMException">DOMException</a>);</pre>
 
@@ -449,7 +449,7 @@ objectstore.delete(key);</pre>
 
 <h5 id="Exceptions_5">Exceptions</h5>
 
-<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
+<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -471,8 +471,8 @@ objectstore.delete(key);</pre>
   </tr>
   <tr>
    <td><code style="font-size: 14px;">InvalidStateError</code></td>
-   <td>The IDBObjectStore has been deleted or removed.<br>
-     </td>
+   <td>The IDBObjectStore has been deleted or removed.<br>
+     </td>
   </tr>
  </tbody>
 </table>
@@ -499,7 +499,7 @@ objectstore.delete(key);</pre>
 
 <h5 id="Exceptions_6">Exceptions</h5>
 
-<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
+<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -516,7 +516,7 @@ objectstore.delete(key);</pre>
   <tr>
    <td><code style="font-size: 14px;">NotFoundError</code></td>
    <td>There is no index with the given name (case-sensitive) in the database.<br>
-     </td>
+     </td>
   </tr>
  </tbody>
 </table>
@@ -533,7 +533,7 @@ objectstore.delete(key);</pre>
  <dt>range</dt>
  <dd>The key range to use as the cursor's range. If this parameter is unspecified or null, then the range includes all the records in the object store.</dd>
  <dt>direction</dt>
- <dd>The cursor's <a href="/en-US/docs/IndexedDB/IDBCursor" title="/en-US/docs/IndexedDB/IDBCursor">direction</a>.</dd>
+ <dd>The cursor's <a href="/en-US/docs/IndexedDB/IDBCursor" title="/en-US/docs/IndexedDB/IDBCursor">direction</a>.</dd>
 </dl>
 
 <h5 id="Returns_7">Returns</h5>
@@ -545,7 +545,7 @@ objectstore.delete(key);</pre>
 
 <h5 id="Exceptions_7">Exceptions</h5>
 
-<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
+<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -567,7 +567,7 @@ objectstore.delete(key);</pre>
   </tr>
   <tr>
    <td><code style="font-size: 14px;">InvalidStateError</code></td>
-   <td>The IDBObjectStore has been deleted or removed.</td>
+   <td>The IDBObjectStore has been deleted or removed.</td>
   </tr>
   <tr>
    <td><code>TypeError</code></td>
@@ -578,7 +578,7 @@ objectstore.delete(key);</pre>
 
 <h3 id="put">put()</h3>
 
-<p>Returns an <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> object, and, in a separate thread, creates a <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object with the <code><a href="/en-US/docs/IndexedDB/IDBRequest" title="en/IndexedDB/IDBSuccessEvent#attr result">result</a></code> set to the key for the stored record, and <code><a href="/en-US/docs/IndexedDB/IDBRequest" title="en/IndexedDB/IDBTransactionEvent#attr transaction">transaction</a></code> set to the transaction in which this object store is opened.</p>
+<p>Returns an <a href="/en/IndexedDB/IDBRequest" title="en/IndexedDB/IDBRequest">IDBRequest</a> object, and, in a separate thread, creates a <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object with the <code><a href="/en-US/docs/IndexedDB/IDBRequest" title="en/IndexedDB/IDBSuccessEvent#attr result">result</a></code> set to the key for the stored record, and <code><a href="/en-US/docs/IndexedDB/IDBRequest" title="en/IndexedDB/IDBTransactionEvent#attr transaction">transaction</a></code> set to the transaction in which this object store is opened.</p>
 
 <p>The put method is an <em>update or insert</em> method. See also the <a href="#add()">add()</a> method.</p>
 
@@ -602,7 +602,7 @@ objectstore.delete(key);</pre>
 
 <h5 id="Exceptions_8">Exceptions</h5>
 
-<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
+<p>This method may raise a <a href="/en-US/docs/DOM/DOMException" title="/en-US/docs/DOM/DOMException">DOMException</a> with a <a href="/en-US/docs/DOM/DOMError" title="/en-US/docs/DOM/DOMError">DOMError</a> of the following types:</p>
 
 <table class="standard-table" style="font-size: 14px;">
  <thead>
@@ -635,7 +635,7 @@ objectstore.delete(key);</pre>
   </tr>
   <tr>
    <td><code style="font-size: 14px;">InvalidStateError</code></td>
-   <td>The IDBObjectStore has been deleted or removed.</td>
+   <td>The IDBObjectStore has been deleted or removed.</td>
   </tr>
   <tr>
    <td><code style="font-size: 14px;">DataCloneError</code></td>
@@ -652,7 +652,7 @@ objectstore.delete(key);</pre>
 <dl>
 </dl>
 
-<p>This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an <code>onupgradeneeded</code>function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>This example shows a variety of different uses of object stores, from updating the data structure with {{domxref("IDBObjectStore.createIndex")}} inside an <code>onupgradeneeded</code>function, to adding a new item to our object store with {{domxref("IDBObjectStore.add")}}. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre><code>// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -724,7 +724,7 @@ objectStoreRequest.onsuccess = function(event) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>and send us a pull request.</p>
+<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>and send us a pull request.</p>
 
 <p>{{Compat}}</p>
 
@@ -737,7 +737,7 @@ objectStoreRequest.onsuccess = function(event) {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>
 
 <div id="compat-mobile"></div>

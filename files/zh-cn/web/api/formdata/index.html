@@ -12,7 +12,7 @@ translation_of: Web/API/FormData
 
 <p>如果你想构建一个简单的<code>GET</code>请求，并且通过{{HTMLElement("form")}}的形式带有查询参数，可以将它直接传递给{{domxref("URLSearchParams")}}。</p>
 
-<p>实现了 <code>FormData</code> 接口的对象可以直接在{{jsxref("Statements/for...of", "for...of")}}结构中使用，而不需要调用{{domxref('FormData.entries()', 'entries()')}} : <code>for (var p of myFormData)</code> 的作用和 <code>for (var p of myFormData.entries())</code> 是相同的。</p>
+<p>实现了 <code>FormData</code> 接口的对象可以直接在{{jsxref("Statements/for...of", "for...of")}}结构中使用，而不需要调用{{domxref('FormData.entries()', 'entries()')}} : <code>for (var p of myFormData)</code> 的作用和 <code>for (var p of myFormData.entries())</code> 是相同的。</p>
 
 <div class="note">
 <p><strong>注意</strong>：此特性可用于 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a>。</p>
@@ -29,21 +29,21 @@ translation_of: Web/API/FormData
 
 <dl>
  <dt>{{domxref("FormData.append()")}}</dt>
- <dd>向 <code>FormData</code> 中添加新的属性值，<code>FormData</code> 对应的属性值存在也不会覆盖原值，而是新增一个值，如果属性不存在则新增一项属性值。</dd>
+ <dd>向 <code>FormData</code> 中添加新的属性值，<code>FormData</code> 对应的属性值存在也不会覆盖原值，而是新增一个值，如果属性不存在则新增一项属性值。</dd>
  <dt>{{domxref("FormData.delete()")}}</dt>
  <dd>从 FormData 对象里面删除一个键值对。</dd>
  <dt>{{domxref("FormData.entries()")}}</dt>
  <dd>返回一个包含所有键值对的{{jsxref("Iteration_protocols","iterator")}}对象。</dd>
  <dt>{{domxref("FormData.get()")}}</dt>
- <dd><code>返回在 FormData</code> 对象中与给定键关联的第一个值。</dd>
+ <dd><code>返回在 FormData</code> 对象中与给定键关联的第一个值。</dd>
  <dt>{{domxref("FormData.getAll()")}}</dt>
- <dd>返回一个包含 <code>FormData</code> 对象中与给定键关联的所有值的数组。</dd>
+ <dd>返回一个包含 <code>FormData</code> 对象中与给定键关联的所有值的数组。</dd>
  <dt>{{domxref("FormData.has()")}}</dt>
- <dd><code>返回一个布尔值表明 FormData</code> 对象是否包含某些键。</dd>
+ <dd><code>返回一个布尔值表明 FormData</code> 对象是否包含某些键。</dd>
  <dt>{{domxref("FormData.keys()")}}</dt>
  <dd>返回一个包含所有键的{{jsxref("Iteration_protocols","iterator")}}对象。</dd>
  <dt>{{domxref("FormData.set()")}}</dt>
- <dd>给 <code>FormData</code> 设置属性值，如果<code>FormData</code> 对应的属性值存在则覆盖原值，否则新增一项属性值。</dd>
+ <dd>给 <code>FormData</code> 设置属性值，如果<code>FormData</code> 对应的属性值存在则覆盖原值，否则新增一项属性值。</dd>
  <dt>{{domxref("FormData.values()")}}</dt>
  <dd>返回一个包含所有值的{{jsxref("Iteration_protocols","iterator")}}对象。</dd>
 </dl>

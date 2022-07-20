@@ -11,9 +11,9 @@ translation_of: Web/API/Range/surroundContents
 ---
 <div>{{ ApiRef("Range") }}</div>
 
-<p><strong><code>Range.surroundContents()</code> </strong>方法将 {{ domxref("Range") }} 对象的内容移动到一个新的节点，并将新节点放到这个范围的起始处。</p>
+<p><strong><code>Range.surroundContents()</code> </strong>方法将 {{ domxref("Range") }} 对象的内容移动到一个新的节点，并将新节点放到这个范围的起始处。</p>
 
-<p>这个方法与 <code>newNode.appendChild(<a href="/en/DOM/range.extractContents" title="en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode" title="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code> 等价。应用以后， <code>newNode</code> 包含在 <code>range</code> 的边界点中。</p>
+<p>这个方法与 <code>newNode.appendChild(<a href="/en/DOM/range.extractContents" title="en/DOM/range.extractContents">range.extractContents()</a>); <a href="/en-US/docs/DOM/range.insertNode" title="/en-US/docs/DOM/range.insertNode">range.insertNode</a>(newNode)</code> 等价。应用以后， <code>newNode</code> 包含在 <code>range</code> 的边界点中。</p>
 
 <p>然而，如果 {{ domxref("Range") }} 断开了一个非 {{ domxref("Text") }} 节点，只包含了节点的其中一个边界点，就会抛出异常。也就是说，不像上述的等价方法，如果节点仅有一部分被选中，则不会被克隆，整个操作会失败。</p>
 

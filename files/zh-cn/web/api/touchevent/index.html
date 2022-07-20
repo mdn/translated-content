@@ -24,22 +24,22 @@ translation_of: Web/API/TouchEvent
 
 <h2 id="属性列表">属性列表</h2>
 
-<p><em>{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domxref("Event")}}。</em></p>
+<p><em>{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domxref("Event")}}。</em></p>
 
 <dl>
- <dt>{{ domxref("event.altKey", "TouchEvent.altKey") }} {{readonlyInline}}</dt>
+ <dt>{{ domxref("event.altKey", "TouchEvent.altKey") }} {{readonlyInline}}</dt>
  <dd>布尔值，指明触摸事件触发时，键盘 alt 键是否被按下。</dd>
- <dt>{{ domxref("TouchEvent.changedTouches") }} {{readonlyInline}}</dt>
+ <dt>{{ domxref("TouchEvent.changedTouches") }} {{readonlyInline}}</dt>
  <dd>一个 {{ domxref("TouchList") }} 对象，包含了代表所有从上一次触摸事件到此次事件过程中，状态发生了改变的触点的 {{ domxref("Touch") }} 对象。</dd>
- <dt>{{ domxref("event.ctrlKey", "TouchEvent.ctrlKey") }} {{readonlyInline}}</dt>
+ <dt>{{ domxref("event.ctrlKey", "TouchEvent.ctrlKey") }} {{readonlyInline}}</dt>
  <dd>布尔值，指明触摸事件触发时，键盘 ctrl 键是否被按下。</dd>
- <dt>{{ domxref("event.metaKey", "TouchEvent.metaKey") }} {{readonlyInline}}</dt>
+ <dt>{{ domxref("event.metaKey", "TouchEvent.metaKey") }} {{readonlyInline}}</dt>
  <dd>布尔值，指明触摸事件触发时，键盘 meta 键（<a href="http://en.wikipedia.org/wiki/Meta_key">Wikipedia - meta Key</a>）是否被按下。</dd>
- <dt>{{ domxref("event.shiftKey", "TouchEvent.shiftKey") }} {{readonlyInline}}</dt>
+ <dt>{{ domxref("event.shiftKey", "TouchEvent.shiftKey") }} {{readonlyInline}}</dt>
  <dd>布尔值，指明触摸事件触发时，键盘 shift 键是否被按下。</dd>
- <dt>{{ domxref("TouchEvent.targetTouches") }} {{readonlyInline}}</dt>
+ <dt>{{ domxref("TouchEvent.targetTouches") }} {{readonlyInline}}</dt>
  <dd>一个 {{ domxref("TouchList") }} 对象，是包含了如下触点的 {{ domxref("Touch") }} 对象：触摸起始于当前事件的目标 {{ domxref("element") }} 上，并且仍然没有离开触摸平面的触点。</dd>
- <dt>{{ domxref("TouchEvent.touches") }} {{readonlyInline}}</dt>
+ <dt>{{ domxref("TouchEvent.touches") }} {{readonlyInline}}</dt>
  <dd>一 个 {{ domxref("TouchList") }} 对象，包含了所有当前接触触摸平面的触点的 {{ domxref("Touch") }} 对象，无论它们的起始于哪个 {{ domxref("element") }} 上，也无论它们状态是否发生了变化。</dd>
 </dl>
 
@@ -57,13 +57,13 @@ translation_of: Web/API/TouchEvent
 
 <p>当一个触点被用户从触摸平面上移除（即用户的一个手指或手写笔离开触摸平面）时触发。当触点移出触摸平面的边界时也将触发。例如用户将手指划出屏幕边缘。</p>
 
-<p>事件的目标 {{ domxref("element") }} 与触发 <code>touchstart</code> 事件的目标 {{ domxref("element") }} 相同，即使 <code>touchend</code> 事件触发时，触点已经移出了该 {{ domxref("element") }} 。</p>
+<p>事件的目标 {{ domxref("element") }} 与触发 <code>touchstart</code> 事件的目标 {{ domxref("element") }} 相同，即使 <code>touchend</code> 事件触发时，触点已经移出了该 {{ domxref("element") }} 。</p>
 
 <p>已经被从触摸平面上移除的触点，可以在 <code>changedTouches</code> 属性定义的 {{ domxref("TouchList") }} 中找到。</p>
 
 <h3 id="domxrefElementtouchmove_event_touchmove">{{domxref("Element/touchmove_event", "touchmove")}}</h3>
 
-<p>当用户在触摸平面上移动触点时触发。事件的目标 {{ domxref("element") }} 和触发 <code>touchstart</code> 事件的目标 {{ domxref("element") }} 相同，即使当 <code>touchmove</code> 事件触发时，触点已经移出了该 {{ domxref("element") }} 。</p>
+<p>当用户在触摸平面上移动触点时触发。事件的目标 {{ domxref("element") }} 和触发 <code>touchstart</code> 事件的目标 {{ domxref("element") }} 相同，即使当 <code>touchmove</code> 事件触发时，触点已经移出了该 {{ domxref("element") }} 。</p>
 
 <p>当触点的半径、旋转角度以及压力大小发生变化时，也将触发此事件。</p>
 
@@ -83,7 +83,7 @@ translation_of: Web/API/TouchEvent
 
 <p>很值得注意的是，在很多情况下，触摸事件和鼠标事件会一起触发（以使非触摸专用的代码仍然可以与用户交互）。如果你要使用触摸事件，你可以使用 {{domxref("Event.preventDefault","preventDefault()")}} 来取消鼠标事件。</p>
 
-<p>但 Chrome 是例外，从版本 56（桌面版、安卓版和安卓 webview）开始，Chrome 中 {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} 的默认值就是 <code>true</code>，没有必要调用 {{domxref("Event.preventDefault","preventDefault()")}}。如果要重写这个行为，简单地将 <code>passive</code> 设置成 <code>false</code> 就行。这样设置可以阻止监听器在用户滚动时停止页面渲染。<a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a> 有一个简单的演示。</p>
+<p>但 Chrome 是例外，从版本 56（桌面版、安卓版和安卓 webview）开始，Chrome 中 {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} 的默认值就是 <code>true</code>，没有必要调用 {{domxref("Event.preventDefault","preventDefault()")}}。如果要重写这个行为，简单地将 <code>passive</code> 设置成 <code>false</code> 就行。这样设置可以阻止监听器在用户滚动时停止页面渲染。<a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a> 有一个简单的演示。</p>
 
 <h2 id="全局事件处理">全局事件处理</h2>
 
@@ -97,7 +97,7 @@ translation_of: Web/API/TouchEvent
  <dt>{{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}</dt>
  <dd>使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 {{event("touchmove")}} 事件。</dd>
  <dt>{{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}</dt>
- <dd>使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 {{event("touchcancel")}} 事件。</dd>
+ <dd>使用一个 {{domxref("GlobalEventHandlers","global event handler")}} 处理 {{event("touchcancel")}} 事件。</dd>
 </dl>
 
 <h2 id="实例">实例</h2>
@@ -118,7 +118,7 @@ translation_of: Web/API/TouchEvent
   <tr>
    <td>{{SpecName('Touch Events 2','#touchevent-interface', 'TouchEvent')}}</td>
    <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Added <code>ontouchstart</code>, <code>ontouchend</code>, <code>ontouchmove</code>, <code>ontouchend</code> global attribute handlers</td>
+   <td>Added <code>ontouchstart</code>, <code>ontouchend</code>, <code>ontouchmove</code>, <code>ontouchend</code> global attribute handlers</td>
   </tr>
   <tr>
    <td>{{SpecName('Touch Events', '#touchevent-interface', 'TouchEvent')}}</td>

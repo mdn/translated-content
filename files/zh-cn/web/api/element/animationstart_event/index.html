@@ -12,7 +12,7 @@ tags:
 translation_of: Web/API/HTMLElement/animationstart_event
 original_slug: Web/API/HTMLElement/animationstart_event
 ---
-<p><code>animationstart</code> 事件会在 CSS 动画开始时触发。 如果有 <code>animation-delay</code> 延时，事件会在延迟时效过后立即触发。为负数的延时时长会致使事件被触发时事件的 <code>elapsedTime</code> 属性值等于该时长的绝对值（并且，相应地，动画将直接播放该时长绝对值之后的动画）。</p>
+<p><code>animationstart</code> 事件会在 CSS 动画开始时触发。 如果有 <code>animation-delay</code> 延时，事件会在延迟时效过后立即触发。为负数的延时时长会致使事件被触发时事件的 <code>elapsedTime</code> 属性值等于该时长的绝对值（并且，相应地，动画将直接播放该时长绝对值之后的动画）。</p>
 
 <h2 id="基本信息">基本信息</h2>
 
@@ -70,7 +70,7 @@ original_slug: Web/API/HTMLElement/animationstart_event
   <tr>
    <td><code>elapsedTime</code> {{ReadOnlyInline}}</td>
    <td><code>Float</code></td>
-   <td>动画运行时长，单位为秒，与直到该事件被触发的时间相一致，不包括任何动画暂停时的时长。此值应为 0 除非 <code>animation-delay</code> 是一个负值，这种情况下此值为 (-1 * {{cssxref("animation-delay")}})，并且动画将直接从此值后的序列开始播放。</td>
+   <td>动画运行时长，单位为秒，与直到该事件被触发的时间相一致，不包括任何动画暂停时的时长。此值应为 0 除非 <code>animation-delay</code> 是一个负值，这种情况下此值为 (-1 * {{cssxref("animation-delay")}})，并且动画将直接从此值后的序列开始播放。</td>
   </tr>
  </tbody>
 </table>

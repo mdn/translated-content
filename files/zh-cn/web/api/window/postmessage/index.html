@@ -14,9 +14,9 @@ translation_of: Web/API/Window/postMessage
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p><strong><strong>window.postMessage()</strong> </strong>方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为 https），端口号（443 为 https 的默认值），以及主机  (两个页面的模数 {{domxref("Document.domain")}}设置为相同的值) 时，这两个脚本才能相互通信。<strong><strong>window.postMessage()</strong> </strong>方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全。</p>
+<p><strong><strong>window.postMessage()</strong> </strong>方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为 https），端口号（443 为 https 的默认值），以及主机  (两个页面的模数 {{domxref("Document.domain")}}设置为相同的值) 时，这两个脚本才能相互通信。<strong><strong>window.postMessage()</strong> </strong>方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全。</p>
 
-<p>从广义上讲，一个窗口可以获得对另一个窗口的引用（比如 <code>targetWindow = window.opener</code>），然后在窗口上调用 <code>targetWindow.postMessage()</code> 方法分发一个  {{domxref("MessageEvent")}}<strong> </strong>消息。接收消息的窗口可以根据需要自由<a href="/zh-CN/docs/Web/Guide/Events">处理此事件</a>。传递给 window.postMessage() 的参数（比如 message ）将<a href="/zh-CN/docs/Web/API/Window/postMessage#The_dispatched_event">通过消息事件对象暴露给接收消息的窗口</a>。</p>
+<p>从广义上讲，一个窗口可以获得对另一个窗口的引用（比如 <code>targetWindow = window.opener</code>），然后在窗口上调用 <code>targetWindow.postMessage()</code> 方法分发一个  {{domxref("MessageEvent")}}<strong> </strong>消息。接收消息的窗口可以根据需要自由<a href="/zh-CN/docs/Web/Guide/Events">处理此事件</a>。传递给 window.postMessage() 的参数（比如 message ）将<a href="/zh-CN/docs/Web/API/Window/postMessage#The_dispatched_event">通过消息事件对象暴露给接收消息的窗口</a>。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -26,11 +26,11 @@ translation_of: Web/API/Window/postMessage
  <dt><code>otherWindow</code></dt>
  <dd>其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行<a href="/en-US/docs/DOM/window.open" title="DOM/window.open">window.open</a>返回的窗口对象、或者是命名过或数值索引的<a href="/en-US/docs/DOM/window.frames" title="DOM/window.frames">window.frames</a>。</dd>
  <dt><code>message</code></dt>
- <dd>将要发送到其他 window 的数据。它将会被<a href="https://developer.mozilla.org/en-US/docs/DOM/The_structured_clone_algorithm">结构化克隆算法</a>序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。[<a href="https://developer.mozilla.org/en-US/docs/">1</a>]</dd>
+ <dd>将要发送到其他 window 的数据。它将会被<a href="https://developer.mozilla.org/en-US/docs/DOM/The_structured_clone_algorithm">结构化克隆算法</a>序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。[<a href="https://developer.mozilla.org/en-US/docs/">1</a>]</dd>
  <dt><code>targetOrigin</code></dt>
  <dd>通过窗口的 origin 属性来指定哪些窗口能接收到消息事件，其值可以是字符串"*"（表示无限制）或者一个 URI。在发送消息的时候，如果目标窗口的协议、主机地址或端口这三者的任意一项不匹配 targetOrigin 提供的值，那么消息就不会被发送；只有三者完全匹配，消息才会被发送。这个机制用来控制消息可以发送到哪些窗口；例如，当用 postMessage 传送密码时，这个参数就显得尤为重要，必须保证它的值与这条包含密码的信息的预期接受者的 origin 属性完全一致，来防止密码被恶意的第三方截获。<strong>如果你明确的知道消息应该发送到哪个窗口，那么请始终提供一个有确切值的 targetOrigin，而不是*。不提供确切的目标将导致数据泄露到任何对数据感兴趣的恶意站点。</strong></dd>
- <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
- <dd>是一串和 message 同时传递的 {{domxref("Transferable")}} 对象。这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。</dd>
+ <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
+ <dd>是一串和 message 同时传递的 {{domxref("Transferable")}} 对象。这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。</dd>
 </dl>
 
 <h2 id="The_dispatched_event">The dispatched event</h2>
@@ -43,23 +43,23 @@ function receiveMessage(event)
 {
 <code>  // For Chrome, the origin property is in the event.originalEvent
   // object.
-  // 这里不准确，chrome 没有这个属性
-  // var origin = event.origin || event.originalEvent.origin;
+  // 这里不准确，chrome 没有这个属性
+  // var origin = event.origin || event.originalEvent.origin;
   var origin = event.origin</code>
-  if (origin !== "http://example.org:8080")
+  if (origin !== "http://example.org:8080")
     return;
 
   // ...
 }
 </pre>
 
-<p> message 的属性有：</p>
+<p> message 的属性有：</p>
 
 <dl>
  <dt><code>data</code></dt>
  <dd>从其他 window 中传递过来的对象。</dd>
  <dt><code>origin</code></dt>
- <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code>https://example.org</code> (隐含端口 <code>443</code>)”、“<code>http://example.net</code> (隐含端口 <code>80</code>)”、“<code>http://example.com:8080</code>”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。</dd>
+ <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code>https://example.org</code> (隐含端口 <code>443</code>)”、“<code>http://example.net</code> (隐含端口 <code>80</code>)”、“<code>http://example.com:8080</code>”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。</dd>
  <dt><code>source</code></dt>
  <dd>对发送消息的<a href="/en-US/docs/DOM/window">窗口</a>对象的引用; 您可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。</dd>
 </dl>
@@ -78,7 +78,7 @@ function receiveMessage(event)
 <h2 id="Example">示例</h2>
 
 <pre class="brush: js notranslate">/*
- * A 窗口的域名是&lt;http://example.com:8080&gt;，以下是 A 窗口的 script 标签下的代码：
+ * A 窗口的域名是&lt;http://example.com:8080&gt;，以下是 A 窗口的 script 标签下的代码：
  */
 
 var popup = window.open(...popup details...);
@@ -95,7 +95,7 @@ popup.postMessage("hello there!", "http://example.org");
 function receiveMessage(event)
 {
   // 我们能相信信息的发送者吗？(也许这个发送者和我们最初打开的不是同一个页面).
-  if (event.origin !== "http://example.org")
+  if (event.origin !== "http://example.org")
     return;
 
   // event.source 是我们通过 window.open 打开的弹出页面 popup
@@ -112,14 +112,14 @@ window.addEventListener("message", receiveMessage, false);
 function receiveMessage(event)
 {
   // 我们能信任信息来源吗？
-  if (event.origin !== "http://example.com:8080")
+  if (event.origin !== "http://example.com:8080")
     return;
 
   // event.source 就当前弹出页的来源页面
   // event.data 是 "hello there!"
 
   // 假设你已经验证了所受到信息的 origin (任何时候你都应该这样做), 一个很方便的方式就是把 event.source
-  // 作为回信的对象，并且把 event.origin 作为 targetOrigin
+  // 作为回信的对象，并且把 event.origin 作为 targetOrigin
   event.source.postMessage("hi there yourself!  the secret response " +
                            "is: rheeeeet!",
                            event.origin);
@@ -138,7 +138,7 @@ window.addEventListener("message", receiveMessage, false);
 
 <p>仅对于 IDN 主机名，origin 属性的值不是始终为 Unicode 或 punycode; 在使用此属性时，如果您期望来自 IDN 网站的消息，则最大程度地兼容性检查 IDN 和 punycode 值。 这个值最终将始终是 IDN，但现在你应该同时处理 IDN 和 punycode 表单。</p>
 
-<p>当发送窗口包含 <code>javascript:</code> 或 <code>data:</code> URL 时，origin 属性的值是加载 URL 的脚本的</p>
+<p>当发送窗口包含 <code>javascript:</code> 或 <code>data:</code> URL 时，origin 属性的值是加载 URL 的脚本的</p>
 
 <h3 id="在扩展Non-standard_inline中使用window.postMessage"><strong>在扩展</strong>{{Non-standard_inline}}<strong>中使用 window.postMessage</strong></h3>
 
@@ -169,5 +169,5 @@ window.addEventListener("message", receiveMessage, false);
 
 <ul>
  <li>{{domxref("Document.domain")}}</li>
- <li>{{domxref("CustomEvent")}} </li>
+ <li>{{domxref("CustomEvent")}} </li>
 </ul>

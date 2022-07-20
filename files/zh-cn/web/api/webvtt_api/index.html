@@ -15,7 +15,7 @@ translation_of: Web/API/WebVTT_API
 ---
 <div>{{DefaultAPISidebar("WebVTT")}}</div>
 
-<p><strong>Web 视频文本跟踪格式 </strong>(<strong>WebVTT</strong>) 是一种使用{{HTMLElement("track")}}元素显示定时文本轨道（如字幕或标题）的格式。 WebVTT 文件的主要用途是将文本叠加添加到{{HTMLElement("video")}}。 WebVTT 是一种基于文本的格式，必须使用{{Glossary("UTF-8")}}进行编码。 在可以使用空格的地方，您也可以使用制表符。 还有一个小的 API 可用于表示和管理这些轨道以及在正确的时间执行文本回放所需的数据。</p>
+<p><strong>Web 视频文本跟踪格式 </strong>(<strong>WebVTT</strong>) 是一种使用{{HTMLElement("track")}}元素显示定时文本轨道（如字幕或标题）的格式。 WebVTT 文件的主要用途是将文本叠加添加到{{HTMLElement("video")}}。 WebVTT 是一种基于文本的格式，必须使用{{Glossary("UTF-8")}}进行编码。 在可以使用空格的地方，您也可以使用制表符。 还有一个小的 API 可用于表示和管理这些轨道以及在正确的时间执行文本回放所需的数据。</p>
 
 <h2 id="WebVTT_文件">WebVTT 文件</h2>
 
@@ -46,7 +46,7 @@ Never drink liquid nitrogen. 别喝液氮。
   <ul>
    <li>There must be at least one space after <code>WEBVTT.</code></li>
    <li>You could use this to add a description to the file.</li>
-   <li>You may use anything in the text header except newlines or the string "<code>--&gt;</code>".</li>
+   <li>You may use anything in the text header except newlines or the string "<code>--&gt;</code>".</li>
   </ul>
  </li>
  <li>A blank line, which is equivalent to two consecutive newlines.</li>
@@ -64,7 +64,7 @@ Never drink liquid nitrogen. 别喝液氮。
 <pre class="eval">WEBVTT - This file has no cues.
 </pre>
 
-<h5 id="例子_3_-_拥有_header_和_cue_的_WebVTT_文件示例">例子 3 - 拥有 header 和 cue 的 WebVTT 文件示例</h5>
+<h5 id="例子_3_-_拥有_header_和_cue_的_WebVTT_文件示例">例子 3 - 拥有 header 和 cue 的 WebVTT 文件示例</h5>
 
 <pre class="eval">WEBVTT - This file has cues.
 
@@ -115,7 +115,7 @@ NOTE This is the last line in the file</pre>
 
 <p>Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.</p>
 
-<p>A comment cannot contain the string "<code>--&gt;",</code> the ampersand character (&amp;), or the less-than sign (&lt;). If you wish to use such characters, you need to escape them using for example <code>&amp;amp;</code> for ampersand and <code>&amp;lt;</code> for less-than. It is also recommended that you use the greater-than escape sequence (<code>&amp;gt;</code>) instead of the greater-than character (<code>&gt;</code>) to avoid confusion with tags.</p>
+<p>A comment cannot contain the string "<code>--&gt;",</code> the ampersand character (&amp;), or the less-than sign (&lt;). If you wish to use such characters, you need to escape them using for example <code>&amp;amp;</code> for ampersand and <code>&amp;lt;</code> for less-than. It is also recommended that you use the greater-than escape sequence (<code>&amp;gt;</code>) instead of the greater-than character (<code>&gt;</code>) to avoid confusion with tags.</p>
 
 <p>A comment consists of three parts:</p>
 
@@ -575,7 +575,7 @@ Third
 
 <h3 id="Cue_payload">Cue payload</h3>
 
-<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
+<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
 
 <p>A cue text payload cannot contain the string "<code>--&gt;"</code>, the ampersand character (&amp;), or the less-than sign (&lt;). Instead use the escape sequence "&amp;amp;" for ampersand and "&amp;lt;" for less-than. It is also recommended that you use the greater-than escape sequence "&amp;gt;" instead of the greater-than character (&gt;) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.</p>
 
@@ -620,7 +620,7 @@ Third
   </tr>
   <tr>
    <td>Non-breaking space</td>
-   <td><code> </code></td>
+   <td><code> </code></td>
    <td><code>&amp;nbsp;</code></td>
   </tr>
  </tbody>
@@ -634,7 +634,7 @@ Third
  <li><strong>Timestamp tag</strong>
 
   <ul>
-   <li>The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The <em>active text</em> is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the <em>active text</em> in the payload is <em>previous text</em> . Any text beyond the <em>active text</em> is <em>future text</em> . This enables karaoke style captions.</li>
+   <li>The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The <em>active text</em> is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the <em>active text</em> in the payload is <em>previous text</em> . Any text beyond the <em>active text</em> is <em>future text</em> . This enables karaoke style captions.</li>
   </ul>
 
   <div>
@@ -656,7 +656,7 @@ That's &lt;00:00:21.000&gt;amore
  </li>
 </ul>
 
-<p>The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., <code>&lt;b&gt;text&lt;/b&gt;</code>).</p>
+<p>The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., <code>&lt;b&gt;text&lt;/b&gt;</code>).</p>
 
 <ul>
  <li><strong>Class tag</strong> (<code>&lt;c&gt;&lt;/c&gt;</code>)
@@ -833,7 +833,7 @@ interface <dfn>VTTRegion</dfn> {
 
 <pre>WEBVTT</pre>
 
-<p>3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:</p>
+<p>3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:</p>
 
 <pre>00:01.000 --&gt; 00:05.000</pre>
 

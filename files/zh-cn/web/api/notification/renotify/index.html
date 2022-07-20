@@ -24,7 +24,7 @@ translation_of: Web/API/Notification/renotify
 
 <pre class="brush: js">var options = {
   body: 'Do you like my body?',
-  tag: 'renotify',
+  tag: 'renotify',
   renotify: true
 }
 
@@ -34,7 +34,7 @@ n.renotify // should return true</pre>
 
 <h2 id="使用注意">使用注意</h2>
 
-<p>renotify 覆盖通知选项必须搭配 tag 标签选项进行使用，否则会收到错误通知。</p>
+<p>renotify 覆盖通知选项必须搭配 tag 标签选项进行使用，否则会收到错误通知。</p>
 
 <pre>Notifications which set the renotify flag must specify a non-empty tag.</pre>
 

@@ -5,15 +5,15 @@ tags:
   - 范围对象
 translation_of: Web/API/Range/setEnd
 ---
-<p><strong><code>Range.setEnd()</code></strong>方法用于设置 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Range" title="Range表示包含节点和部分文本节点的文档片段。"><code>Range</code></a>的结束位置。</p>
+<p><strong><code>Range.setEnd()</code></strong>方法用于设置 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Range" title="Range表示包含节点和部分文本节点的文档片段。"><code>Range</code></a>的结束位置。</p>
 
-<p> </p>
+<p> </p>
 
-<p>如果结束节点类型是 <code>Text</code>、<code>Comment</code> 或 <code>CDATASection</code>之一，那么 <code>endOffset</code> 指的是从结束节点算起字符的偏移量。 对于其他 <code>Node</code> 类型节点，<code>endOffset</code> 是指从结束结点开始算起子节点的偏移量。</p>
+<p>如果结束节点类型是 <code>Text</code>、<code>Comment</code> 或 <code>CDATASection</code>之一，那么 <code>endOffset</code> 指的是从结束节点算起字符的偏移量。 对于其他 <code>Node</code> 类型节点，<code>endOffset</code> 是指从结束结点开始算起子节点的偏移量。</p>
 
 <p>如果设置的结束点在起始点之上（在文档中的位置），将会导致选区折叠，起始点和结束点都会被设置为指定的结束位置。</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/Range/setEnd
 
 <dl>
  <dt><em>endNode</em></dt>
- <dd><em>endNode</em>用于设定 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Range" title="Range表示包含节点和部分文本节点的文档片段。"><code>Range</code></a>的结束位置。</dd>
+ <dd><em>endNode</em>用于设定 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Range" title="Range表示包含节点和部分文本节点的文档片段。"><code>Range</code></a>的结束位置。</dd>
  <dt><em>endOffset</em></dt>
  <dd>必须为不小于 0 的整数。表示从<em>endNode</em>的结束位置算起的偏移量。</dd>
 </dl>

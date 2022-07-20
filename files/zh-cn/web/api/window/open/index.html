@@ -12,7 +12,7 @@ translation_of: Web/API/Window/open
 ---
 <div>{{APIRef}}</div>
 
-<p><code>Window</code> 接口的 <strong><code>open()</code></strong> 方法，是用指定的名称将指定的资源加载到浏览器上下文（窗口 <code>window</code> ，内嵌框架 <code>iframe</code> 或者标签 <code>tab</code> ）。如果没有指定名称，则一个新的窗口会被打开并且指定的资源会被加载进这个窗口的浏览器上下文中。</p>
+<p><code>Window</code> 接口的 <strong><code>open()</code></strong> 方法，是用指定的名称将指定的资源加载到浏览器上下文（窗口 <code>window</code> ，内嵌框架 <code>iframe</code> 或者标签 <code>tab</code> ）。如果没有指定名称，则一个新的窗口会被打开并且指定的资源会被加载进这个窗口的浏览器上下文中。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -80,11 +80,11 @@ function openRequestedPopup() {
 <pre>let WindowObjectReference;
 
 const openRequestedPopup = () =&gt; {
-    windowObjectReference = window.open(
-        "https://www.domainname.ext/path/ImageFile.png",
-        "DescriptiveWindowName",
-        "resizable,scrollbars,status"
-    );
+    windowObjectReference = window.open(
+        "https://www.domainname.ext/path/ImageFile.png",
+        "DescriptiveWindowName",
+        "resizable,scrollbars,status"
+    );
 }
 </pre>
 
@@ -156,7 +156,7 @@ const openRequestedPopup = () =&gt; {
 <h3 id="Toolbar_and_chrome_features">Toolbar and chrome features</h3>
 
 <dl>
- <dt>NOTE: All features can be set to yes, 1 or just be present to be "on", set to <em>no</em> or<em> 0 </em>or in most cases just not present to be "off"</dt>
+ <dt>NOTE: All features can be set to yes, 1 or just be present to be "on", set to <em>no</em> or<em> 0 </em>or in most cases just not present to be "off"</dt>
  <dd>example "status=yes", "status=1" and "status" have identical results</dd>
  <dt></dt>
  <dt>menubar</dt>

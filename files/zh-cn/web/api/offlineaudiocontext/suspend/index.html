@@ -5,7 +5,7 @@ translation_of: Web/API/OfflineAudioContext/suspend
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>The <strong><code>suspend()</code></strong> method of the {{ domxref("OfflineAudioContext") }} interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext.</p>
+<p>The <strong><code>suspend()</code></strong> method of the {{ domxref("OfflineAudioContext") }} interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext.</p>
 
 <p>Note that the maximum precision of suspension is the size of the render quantum and the specified suspension time will be rounded down to the nearest render quantum boundary. For this reason, it is not allowed to schedule multiple suspends at the same quantized frame. Also scheduling should be done while the context is not running to ensure the precise suspension.</p>
 

@@ -9,11 +9,11 @@ translation_of: Web/API/IDBIndex
 
 <p>你可以通过记录的键或使用一个 index 取回一个 object store 中的这些记录 (cursors 提供了第三种方式：请见 {{ domxref("IDBCursor") }})。一个 index 可以让你在 object store 的 records 中，通过使用 records 的 properties（属性）来寻找 records。</p>
 
-<p>index 是一个持久的键 - 值存储，其中其记录的值部分是被引用 object store 中的 record 的关键部分。在 object store 中新增、更新或是删除 records 时，索引中的 records 将自动填充。索引中的每条记录只能指向其引用的 object  store 中的唯一一条记录，但是多个索引可以引用同一个 object store。当 object store 变更时，所有引用 object store 的索引都会自动更新。</p>
+<p>index 是一个持久的键 - 值存储，其中其记录的值部分是被引用 object store 中的 record 的关键部分。在 object store 中新增、更新或是删除 records 时，索引中的 records 将自动填充。索引中的每条记录只能指向其引用的 object  store 中的唯一一条记录，但是多个索引可以引用同一个 object store。当 object store 变更时，所有引用 object store 的索引都会自动更新。</p>
 
 <p>索引中的 records 总是按照 records 的 key 进行排序。然而，不像 object stores，一个给定的 index 可以包含具有相同 key 的多条记录。这些 records 将根据被引用 object store 中的主键进一步排序。</p>
 
-<p>你可以设置在一个范围内的 key，点击这里查看更多： {{domxref("IDBKeyRange")}}.</p>
+<p>你可以设置在一个范围内的 key，点击这里查看更多： {{domxref("IDBKeyRange")}}.</p>
 
 <h2 id="Methods">Methods</h2>
 
@@ -48,7 +48,7 @@ translation_of: Web/API/IDBIndex
  <dt>{{domxref("IDBIndex.multiEntry")}} {{readonlyInline}}</dt>
  <dd>影响 index 的 key 路径的计算结果生成数组时索引的行为方式。如果为 true，那么对于 key 数组中的每一项，索引中都有一条记录。如果为 false，那么对于数组中的每个 key 都有一条记录。</dd>
  <dt>{{domxref("IDBIndex.unique")}} {{readonlyInline}}</dt>
- <dd>如果为 true，这个 index 不会允许 key 有重复值。 </dd>
+ <dd>如果为 true，这个 index 不会允许 key 有重复值。 </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
