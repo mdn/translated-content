@@ -9,11 +9,11 @@ translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
  <br>
  虽然其他的服务端语言也能创建 WebSocket 服务，但是通过这个例子你可以看到使用 Java 来做这件事会更简单。</p>
 
-<p>这个服务符合协议<a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a>， 所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。</p>
+<p>这个服务符合协议<a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a>， 所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。</p>
 
 <h2 id="第一步">第一步</h2>
 
-<p>WebSocket 通过<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP（传输控制协议）</a>通信. Java 的<a href="http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html">ServerSocket</a> 类位于 java.net 包中。</p>
+<p>WebSocket 通过<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP（传输控制协议）</a>通信. Java 的<a href="http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html">ServerSocket</a> 类位于 java.net 包中。</p>
 
 <h3 id="ServerSocket">ServerSocket</h3>
 
@@ -60,7 +60,7 @@ public class WebSocket {
 
 <p>方法：</p>
 
-<p><code>write(byte[] b, int off, int len)</code></p>
+<p><code>write(byte[] b, int off, int len)</code></p>
 
 <p>将从数组<code>b</code>中的下标<em><code>off</code></em>开始的<em><code>len</code></em>个字节写入此输出流。</p>
 
@@ -68,9 +68,9 @@ public class WebSocket {
 
 <p>方法：</p>
 
-<p><code>int read(byte[] b, int off, int len)</code></p>
+<p><code>int read(byte[] b, int off, int len)</code></p>
 
-<p>将输入流中最多 <code>len</code> 个字节写入<code>byte[] b</code>，写入起始下标为<code>off</code>。尝试读取多达 <code>len</code> 字节，但可能读取较少数量。以整数形式返回实际读取的字节数。<em> </em></p>
+<p>将输入流中最多 <code>len</code> 个字节写入<code>byte[] b</code>，写入起始下标为<code>off</code>。尝试读取多达 <code>len</code> 字节，但可能读取较少数量。以整数形式返回实际读取的字节数。<em> </em></p>
 
 <p>代码片段二：</p>
 
@@ -166,7 +166,7 @@ public class WebSocket {
 <p>我可以拿 128，因为第一位总是 1。</p>
 </div>
 
-<p>- 167, 225, 225 和 210 是要解码的密钥<code>key</code>的字节。它每次都在变化。</p>
+<p>- 167, 225, 225 和 210 是要解码的密钥<code>key</code>的字节。它每次都在变化。</p>
 
 <p>- 剩余的编码字节是消息数据部分。</p>
 

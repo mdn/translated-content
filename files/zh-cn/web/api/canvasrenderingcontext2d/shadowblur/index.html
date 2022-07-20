@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/shadowBlur
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.shadowBlur</code></strong> 是 Canvas 2D API 描述模糊效果程度的属性； 它既不对应像素值也不受当前转换矩阵的影响。 默认值是 0。</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.shadowBlur</code></strong> 是 Canvas 2D API 描述模糊效果程度的属性； 它既不对应像素值也不受当前转换矩阵的影响。 默认值是 0。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -14,14 +14,14 @@ translation_of: Web/API/CanvasRenderingContext2D/shadowBlur
 
 <dl>
  <dt><code>level</code></dt>
- <dd>描述模糊效果程度的，float 类型的值。默认值是 0。 负数、 {{jsxref("Infinity")}} 或者 {{jsxref("NaN")}} 都会被忽略。</dd>
+ <dd>描述模糊效果程度的，float 类型的值。默认值是 0。 负数、 {{jsxref("Infinity")}} 或者 {{jsxref("NaN")}} 都会被忽略。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="Using_the_shadowBlur_property">使用 <code>shadowBlur</code> 属性</h3>
 
-<p>这是一段简单的代码片段，使用 <code>shadowblur 属性设置模糊阴影。</code> 注意：只有设置 shadowColor 属性值为不透明，阴影才会被绘制。</p>
+<p>这是一段简单的代码片段，使用 <code>shadowblur 属性设置模糊阴影。</code> 注意：只有设置 shadowColor 属性值为不透明，阴影才会被绘制。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -47,8 +47,8 @@ ctx.fillRect(10, 10, 100, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.shadowColor = "black";

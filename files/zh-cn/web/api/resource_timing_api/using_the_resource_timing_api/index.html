@@ -5,13 +5,13 @@ translation_of: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 ---
 <div>{{DefaultAPISidebar("Resource Timing API")}}</div>
 
-<p><strong>Resource Timing API</strong> 提供了获取和分析应用程序<em>资源</em>加载的详细网络计时数据的一种途径。应用可以使用一些可量化的时间度量标准，如加载特定资源的时长。这些资源可能是 {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}、图片、脚本等等。</p>
+<p><strong>Resource Timing API</strong> 提供了获取和分析应用程序<em>资源</em>加载的详细网络计时数据的一种途径。应用可以使用一些可量化的时间度量标准，如加载特定资源的时长。这些资源可能是 {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}、图片、脚本等等。</p>
 
 <p>这个接口提供了使用 {{domxref("DOMHighResTimeStamp","高精度时间戳")}} 度量的资源加载时间轴。此时间轴包含众多网络事件的时间，如重定向开始和结束时间，开始请求资源时间，DNS 查询开始和结束时间，响应开始和结束时间等等。也包含了请求到的资源的大小、请求发起者的<em>类型</em>。</p>
 
 <p>这篇文档展示了如何使用 Resource Timing 接口。获取更详细的信息或示例，请查看每个接口的文档和<a href="#see_also">See also</a>章节。</p>
 
-<p><a href="https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html">Github</a>上有一个真实的例子，这里是它的源码 <a href="https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html">source code</a>. 欢迎提 pull request 和<a href="https://github.com/mdn/dom-examples/issues">报告 bug</a>。</p>
+<p><a href="https://mdn.github.io/dom-examples/performance-apis/Using_the_Resource_Timing_API.html">Github</a>上有一个真实的例子，这里是它的源码 <a href="https://github.com/mdn/dom-examples/blob/master/performance-apis/Using_the_Resource_Timing_API.html">source code</a>. 欢迎提 pull request 和<a href="https://github.com/mdn/dom-examples/issues">报告 bug</a>。</p>
 
 <h2 id="资源加载的各个阶段">资源加载的各个阶段</h2>
 
@@ -24,57 +24,57 @@ translation_of: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 
 <h2 id="计算资源加载各阶段的时间">计算资源加载各阶段的时间</h2>
 
-<p>接下来的这段例子展示了用 Resource timing 属性去计算以下阶段的耗时：重定向 ({{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} 和 {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} )，DNS 查询 ({{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} 和 {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}})，TCP 握手 ({{domxref('PerformanceResourceTiming.connectStart','connectStart')}} 和 {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}})， 响应 ({{domxref('PerformanceResourceTiming.responseStart','responseStart')}} 和 {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}})。 这段例子也计算了从开始获取资源和请求开始（分别为{{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} and {{domxref("PerformanceResourceTiming.requestStart","requestStart")}}）到响应结束 ({{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}) 的时间。</p>
+<p>接下来的这段例子展示了用 Resource timing 属性去计算以下阶段的耗时：重定向 ({{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} 和 {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} )，DNS 查询 ({{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} 和 {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}})，TCP 握手 ({{domxref('PerformanceResourceTiming.connectStart','connectStart')}} 和 {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}})， 响应 ({{domxref('PerformanceResourceTiming.responseStart','responseStart')}} 和 {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}})。 这段例子也计算了从开始获取资源和请求开始（分别为{{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} and {{domxref("PerformanceResourceTiming.requestStart","requestStart")}}）到响应结束 ({{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}) 的时间。</p>
 
 <pre class="brush: js notranslate">function calculate_load_times() {
-  // Check performance support
-  if (performance === undefined) {
-    console.log("= Calculate Load Times: performance NOT supported");
-    return;
-  }
+  // Check performance support
+  if (performance === undefined) {
+    console.log("= Calculate Load Times: performance NOT supported");
+    return;
+  }
 
-  // Get a list of "resource" performance entries
-  var resources = performance.getEntriesByType("resource");
-  if (resources === undefined || resources.length &lt;= 0) {
-    console.log("= Calculate Load Times: there are NO `resource` performance records");
-    return;
-  }
+  // Get a list of "resource" performance entries
+  var resources = performance.getEntriesByType("resource");
+  if (resources === undefined || resources.length &lt;= 0) {
+    console.log("= Calculate Load Times: there are NO `resource` performance records");
+    return;
+  }
 
-  console.log("= Calculate Load Times");
-  for (var i=0; i &lt; resources.length; i++) {
-    console.log("== Resource[" + i + "] - " + resources[i].name);
-    // Redirect time
-    var t = resources[i].redirectEnd - resources[i].redirectStart;
-    console.log("... Redirect time = " + t);
+  console.log("= Calculate Load Times");
+  for (var i=0; i &lt; resources.length; i++) {
+    console.log("== Resource[" + i + "] - " + resources[i].name);
+    // Redirect time
+    var t = resources[i].redirectEnd - resources[i].redirectStart;
+    console.log("... Redirect time = " + t);
 
-    // DNS time
-    t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
-    console.log("... DNS lookup time = " + t);
+    // DNS time
+    t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
+    console.log("... DNS lookup time = " + t);
 
-    // TCP handshake time
-    t = resources[i].connectEnd - resources[i].connectStart;
-    console.log("... TCP time = " + t);
+    // TCP handshake time
+    t = resources[i].connectEnd - resources[i].connectStart;
+    console.log("... TCP time = " + t);
 
-    // Secure connection time
-    t = (resources[i].secureConnectionStart &gt; 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
-    console.log("... Secure connection time = " + t);
+    // Secure connection time
+    t = (resources[i].secureConnectionStart &gt; 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
+    console.log("... Secure connection time = " + t);
 
-    // Response time
-    t = resources[i].responseEnd - resources[i].responseStart;
-    console.log("... Response time = " + t);
+    // Response time
+    t = resources[i].responseEnd - resources[i].responseStart;
+    console.log("... Response time = " + t);
 
-    // Fetch until response end
-    t = (resources[i].fetchStart &gt; 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
-    console.log("... Fetch until response end time = " + t);
+    // Fetch until response end
+    t = (resources[i].fetchStart &gt; 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
+    console.log("... Fetch until response end time = " + t);
 
-    // Request start until reponse end
-    t = (resources[i].requestStart &gt; 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
-    console.log("... Request start until response end time = " + t);
+    // Request start until reponse end
+    t = (resources[i].requestStart &gt; 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
+    console.log("... Request start until response end time = " + t);
 
-    // Start until reponse end
-    t = (resources[i].startTime &gt; 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
-    console.log("... Start until response end time = " + t);
-  }
+    // Start until reponse end
+    t = (resources[i].startTime &gt; 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
+    console.log("... Start until response end time = " + t);
+  }
 }
 </pre>
 

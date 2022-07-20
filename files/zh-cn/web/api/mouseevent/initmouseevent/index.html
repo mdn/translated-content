@@ -5,14 +5,14 @@ translation_of: Web/API/MouseEvent/initMouseEvent
 ---
 <p>{{APIRef("DOM Events")}}{{deprecated_header}}</p>
 
-<p><code><strong>MouseEvent.initMouseEvent()</strong></code> 方法用以在鼠标事件创建时 (一般用 {{domxref("Document.createEvent()")}}方法创建) 初始化其属性的值。</p>
+<p><code><strong>MouseEvent.initMouseEvent()</strong></code> 方法用以在鼠标事件创建时 (一般用 {{domxref("Document.createEvent()")}}方法创建) 初始化其属性的值。</p>
 
-<p>事件初始化是在事件被{{ domxref("Document.createEvent()") }}方法创建后必需的。这个方法必须在事件被{{ domxref("EventTarget.dispatchEvent()") }}方法发送出来前调用。一旦事件被发送后，它将不再起任何作用。 </p>
+<p>事件初始化是在事件被{{ domxref("Document.createEvent()") }}方法创建后必需的。这个方法必须在事件被{{ domxref("EventTarget.dispatchEvent()") }}方法发送出来前调用。一旦事件被发送后，它将不再起任何作用。 </p>
 
 <div class="note">
 <p><strong>不要再用此方法，已过时。</strong></p>
 
-<p>使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。<a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">创建并发送事件</a> 页面里有更多的使用信息。</p>
+<p>使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。<a href="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">创建并发送事件</a> 页面里有更多的使用信息。</p>
 </div>
 
 <h2 id="Syntax">语法</h2>
@@ -44,7 +44,7 @@ translation_of: Web/API/MouseEvent/initMouseEvent
  <dt><em><code>clientY</code></em></dt>
  <dd>事件的客户端 y 坐标。取值集合见{{domxref("MouseEvent.clientY")}}。</dd>
  <dt><em><code>ctrlKey</code></em></dt>
- <dd>事件发生时 <kbd>control</kbd> 键是否被按下。取值集合见{{domxref("MouseEvent.ctrlKey")}}。</dd>
+ <dd>事件发生时 <kbd>control</kbd> 键是否被按下。取值集合见{{domxref("MouseEvent.ctrlKey")}}。</dd>
  <dt><em><code>altKey</code></em></dt>
  <dd>事件发生时 <kbd>alt</kbd> 键是否被按下。取值集合见{{domxref("MouseEvent.altKey")}}。</dd>
  <dt><em><code>shiftKey</code></em></dt>
@@ -54,9 +54,9 @@ translation_of: Web/API/MouseEvent/initMouseEvent
  <dt><em><code>button</code></em></dt>
  <dd>鼠标按键值 {{domxref("MouseEvent.button", "button")}}。</dd>
  <dt><em><code>relatedTarget</code></em></dt>
- <dd>事件的<a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget">相关对象</a>。只在某些事件类型有用 (例如 <code>mouseover</code> ?和 <code>mouseout</code>)。其它的传 null。</dd>
+ <dd>事件的<a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget">相关对象</a>。只在某些事件类型有用 (例如 <code>mouseover</code> ?和 <code>mouseout</code>)。其它的传 null。</dd>
  <dt>
- <p> </p>
+ <p> </p>
 
  <h2 id="Example">示例</h2>
 

@@ -29,7 +29,7 @@ translation_of: Web/API/Document/open
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 <code>Document</code> 对象实例。</p>
+<p>一个 <code>Document</code> 对象实例。</p>
 
 <h2 id="Example">示例</h2>
 
@@ -43,22 +43,22 @@ document.close();</code></pre>
 
 <h2 id="Notes">注意</h2>
 
-<p>当 <a href="/en/DOM/document.write">document.write()</a> 在页面加载后调用，会发生自动的 <code>document.open()</code>调用。</p>
+<p>当 <a href="/en/DOM/document.write">document.write()</a> 在页面加载后调用，会发生自动的 <code>document.open()</code>调用。</p>
 
 <p>很多年以来，Firefox 和 IE 浏览器会在清除所有节点的同时，将所有 Javascript 变量等一并清除，但现在已经不采用这一做法。<br>
  document non-spec'ed parameters to document.open</p>
 
-<p>不要和 <a href="/en/DOM/window.open">window.open()</a> 方法混淆。<code>document.open</code> 可用于重写当前的文档内容或者追加内容，而 <code>window.open 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 window 是一个全局对象，直接调用 open(...)  和 window.open(...) 的效果是一样的。你可以使用 document.close（）关闭打开的文档。</code></p>
+<p>不要和 <a href="/en/DOM/window.open">window.open()</a> 方法混淆。<code>document.open</code> 可用于重写当前的文档内容或者追加内容，而 <code>window.open 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 window 是一个全局对象，直接调用 open(...)  和 window.open(...) 的效果是一样的。你可以使用 document.close（）关闭打开的文档。</code></p>
 
 <p>See <a href="/en/Security_check_basics">Security check basics</a> for more about principals.</p>
 
-<p>如果不想在当前文本追加内容， 使用 <code>open("text/html", "replace") 替换</code> <code>open()</code> .</p>
+<p>如果不想在当前文本追加内容， 使用 <code>open("text/html", "replace") 替换</code> <code>open()</code> .</p>
 
 <h3 id="针对Gecko的注意事项">针对 Gecko 的注意事项</h3>
 
 <p>从 Gecko 1.9 开始，这个方法与其他属性一样受到同源策略的控制，若调用会使文档的源产生变化则不可用。</p>
 
-<p>从 Gecko 1.9.2 开始，<code>document.open()</code> 使用文档的使用的 URI 的<a href="/docs/Security_check_basics">principal</a>大，而不是从 stack 中取来 principal。因此，你无需再在不可信的文档里调用 {{domxref("document.write()")}} ，包括使用<a href="/en/wrappedJSObject"><code>wrappedJSObject</code></a>。关于 principal 的更多信息详见<a href="/en/Security_check_basics">Security check basics</a>。</p>
+<p>从 Gecko 1.9.2 开始，<code>document.open()</code> 使用文档的使用的 URI 的<a href="/docs/Security_check_basics">principal</a>大，而不是从 stack 中取来 principal。因此，你无需再在不可信的文档里调用 {{domxref("document.write()")}} ，包括使用<a href="/en/wrappedJSObject"><code>wrappedJSObject</code></a>。关于 principal 的更多信息详见<a href="/en/Security_check_basics">Security check basics</a>。</p>
 
 
 

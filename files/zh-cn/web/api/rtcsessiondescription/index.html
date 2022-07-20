@@ -5,17 +5,17 @@ translation_of: Web/API/RTCSessionDescription
 ---
 <p>{{APIRef("WebRTC")}}{{SeeCompatTable}}</p>
 
-<p><strong><code>RTCSessionDescription</code></strong> 接口描述连接或潜在连接的一端的配置方式。 每一个<code>RTCSessionDescription</code> 由一个描述类型组成，该描述类型指示它所描述的请求/应答协商过程的{{Glossary("SDP")}} 协议的相关描述。</p>
+<p><strong><code>RTCSessionDescription</code></strong> 接口描述连接或潜在连接的一端的配置方式。 每一个<code>RTCSessionDescription</code> 由一个描述类型组成，该描述类型指示它所描述的请求/应答协商过程的{{Glossary("SDP")}} 协议的相关描述。</p>
 
 <p><code>RTCSessionDescription</code> 在两个对等点之间协商连接的过程涉及来回交换对象，每个描述都表示描述的发送者支持的连接配置选项的一个组合。一旦两个对等方就连接的配置达成一致，协商就完成了。</p>
 
 <h2 id="属性">属性</h2>
 
-<p><em><code>RTCSessionDescription</code> 接口不继承任何属性 </em></p>
+<p><em><code>RTCSessionDescription</code> 接口不继承任何属性 </em></p>
 
 <dl>
  <dt>{{domxref("RTCSessionDescription.type")}} {{ReadOnlyInline}}</dt>
- <dd><code><a href="#rtcsdptype">RTCSdpType</a></code> 会话描述类型的原型枚举。</dd>
+ <dd><code><a href="#rtcsdptype">RTCSdpType</a></code> 会话描述类型的原型枚举。</dd>
 </dl>
 
 <dl>
@@ -27,7 +27,7 @@ translation_of: Web/API/RTCSessionDescription
 
 <h3 id="RTCSdpType">RTCSdpType</h3>
 
-<p>当前枚举值定义当前会话描述的状态，例如这个属性： {{domxref("RTCSessionDescription.type", "type")}} 。 会话描述的值将使用如下值之一。</p>
+<p>当前枚举值定义当前会话描述的状态，例如这个属性： {{domxref("RTCSessionDescription.type", "type")}} 。 会话描述的值将使用如下值之一。</p>
 
 <table class="standard-table">
  <thead>
@@ -39,7 +39,7 @@ translation_of: Web/API/RTCSessionDescription
  <tbody>
   <tr>
    <td><code>answer</code></td>
-   <td>SDP 协议请求内容包含在属性{{domxref("RTCSessionDescription.sdp", "sdp")}}中。 换言之，此会话描述描述了商定的配置，并将被发送以完成协商。.</td>
+   <td>SDP 协议请求内容包含在属性{{domxref("RTCSessionDescription.sdp", "sdp")}}中。 换言之，此会话描述描述了商定的配置，并将被发送以完成协商。.</td>
   </tr>
   <tr>
    <td><code>offer</code></td>
@@ -62,12 +62,12 @@ translation_of: Web/API/RTCSessionDescription
 
 <dl>
  <dt>{{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} {{deprecated_inline}}</dt>
- <dd>该构造函数返回一个新的 <code>RTCSessionDescription</code> 对象。参数是 <code>RTCSessionDescriptionInit</code> 字典包含包含分配这两个属性的值。</dd>
+ <dd>该构造函数返回一个新的 <code>RTCSessionDescription</code> 对象。参数是 <code>RTCSessionDescriptionInit</code> 字典包含包含分配这两个属性的值。</dd>
  <dt>{{domxref("RTCSessionDescription.toJSON()")}}</dt>
  <dd>返回一个{{Glossary("JSON")}} 描述对象。该对象包含两个值，{{domxref("RTCSessionDescription.type", "type")}} 和{{domxref("RTCSessionDescription.sdp", "sdp")}}。</dd>
 </dl>
 
-<h2 id="Example">Example </h2>
+<h2 id="Example">Example </h2>
 
 <pre class="brush: js">signalingChannel.onmessage = function (evt) {
     if (!pc)

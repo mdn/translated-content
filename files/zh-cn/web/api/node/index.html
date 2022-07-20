@@ -12,7 +12,7 @@ translation_of: Web/API/Node
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><strong><code>Node</code></strong> 是一个接口，各种类型的 DOM API 对象会从这个接口继承。它允许我们使用相似的方式对待这些不同类型的对象；比如，继承同一组方法，或者用同样的方式测试。</p>
+<p><strong><code>Node</code></strong> 是一个接口，各种类型的 DOM API 对象会从这个接口继承。它允许我们使用相似的方式对待这些不同类型的对象；比如，继承同一组方法，或者用同样的方式测试。</p>
 
 <p>以下接口都从 <code>Node</code> 继承其方法和属性：</p>
 
@@ -28,14 +28,14 @@ translation_of: Web/API/Node
 
 <dl>
  <dt>{{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}</dt>
- <dd>返回一个表示 base URL 的{{DOMxRef("DOMString")}}。不同语言中的 base URL 的概念都不一样。 在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。</dd>
+ <dd>返回一个表示 base URL 的{{DOMxRef("DOMString")}}。不同语言中的 base URL 的概念都不一样。 在 HTML 中，base URL 表示协议和域名，以及一直到最后一个'/'之前的文件目录。</dd>
 </dl>
 
 <dl>
- <dt>{{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline}}</dt>
+ <dt>{{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline}}</dt>
  <dd>(不适用于网页内容) 只读的 <code>nsIURI</code> 对象表示元素的 base URI.</dd>
  <dt>{{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}</dt>
- <dd>返回一个包含了该节点所有子节点的实时的{{DOMxRef("NodeList")}}。{{DOMxRef("NodeList")}} 是动态变化的。如果该节点的子节点发生了变化，{{DOMxRef("NodeList")}}对象就会自动更新。 </dd>
+ <dd>返回一个包含了该节点所有子节点的实时的{{DOMxRef("NodeList")}}。{{DOMxRef("NodeList")}} 是动态变化的。如果该节点的子节点发生了变化，{{DOMxRef("NodeList")}}对象就会自动更新。 </dd>
  <dt>{{DOMxRef("Node.firstChild")}} {{ReadonlyInline}}</dt>
  <dd>返回该节点的第一个子节点{{DOMxRef("Node")}}，如果该节点没有子节点则返回<code>null</code>。</dd>
  <dt>{{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}</dt>
@@ -43,9 +43,9 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.lastChild")}} {{ReadonlyInline}}</dt>
  <dd>返回该节点的最后一个子节点{{DOMxRef("Node")}}，如果该节点没有子节点则返回<code>null</code>。</dd>
  <dt>{{DOMxRef("Node.nextSibling")}} {{ReadonlyInline}}</dt>
- <dd>返回与该节点同级的下一个节点 {{DOMxRef("Node")}}，如果没有返回<code>null</code>。</dd>
+ <dd>返回与该节点同级的下一个节点 {{DOMxRef("Node")}}，如果没有返回<code>null</code>。</dd>
  <dt>{{DOMxRef("Node.nodeName")}} {{ReadonlyInline}}</dt>
- <dd>返回一个包含该节点名字的{{DOMxRef("DOMString")}}。节点的名字的结构和节点类型不同。比如{{DOMxRef("HTMLElement")}}的名字跟它所关联的标签对应，就比如{{DOMxRef("HTMLAudioElement")}}的就是 <code>'audio'</code> ，{{DOMxRef("Text")}}节点对应的是 <code>'#text'</code> 还有{{DOMxRef("Document")}}节点对应的是 <code>'#document'</code>。</dd>
+ <dd>返回一个包含该节点名字的{{DOMxRef("DOMString")}}。节点的名字的结构和节点类型不同。比如{{DOMxRef("HTMLElement")}}的名字跟它所关联的标签对应，就比如{{DOMxRef("HTMLAudioElement")}}的就是 <code>'audio'</code> ，{{DOMxRef("Text")}}节点对应的是 <code>'#text'</code> 还有{{DOMxRef("Document")}}节点对应的是 <code>'#document'</code>。</dd>
  <dt>{{DOMxRef("Node.nodeType")}}{{ReadonlyInline}}</dt>
  <dd>返回一个与该节点类型对应的<code>无符号短整型</code>的值，可能的值如下：
  <table class="standard-table">
@@ -59,7 +59,7 @@ translation_of: Web/API/Node
     <td><code>1</code></td>
    </tr>
    <tr>
-    <td><code>ATTRIBUTE_NODE</code> {{Deprecated_Inline}}</td>
+    <td><code>ATTRIBUTE_NODE</code> {{Deprecated_Inline}}</td>
     <td><code>2</code></td>
    </tr>
    <tr>
@@ -71,11 +71,11 @@ translation_of: Web/API/Node
     <td><code>4</code></td>
    </tr>
    <tr>
-    <td><code>ENTITY_REFERENCE_NODE</code> {{Deprecated_Inline}}</td>
+    <td><code>ENTITY_REFERENCE_NODE</code> {{Deprecated_Inline}}</td>
     <td><code>5</code></td>
    </tr>
    <tr>
-    <td><code>ENTITY_NODE</code> {{Deprecated_Inline}}</td>
+    <td><code>ENTITY_NODE</code> {{Deprecated_Inline}}</td>
     <td><code>6</code></td>
    </tr>
    <tr>
@@ -99,7 +99,7 @@ translation_of: Web/API/Node
     <td><code>11</code></td>
    </tr>
    <tr>
-    <td><code>NOTATION_NODE</code> {{Deprecated_Inline}}</td>
+    <td><code>NOTATION_NODE</code> {{Deprecated_Inline}}</td>
     <td><code>12</code></td>
    </tr>
   </tbody>
@@ -110,7 +110,7 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.ownerDocument")}} {{readonlyInline}}</dt>
  <dd>返回这个元素属于的 {{DOMxRef("Document")}}对象 。 如果没有 Document 对象与之关联，返回 null。</dd>
  <dt>{{DOMxRef("Node.parentNode")}} {{readonlyInline}}</dt>
- <dd>返回一个当前节点 {{DOMxRef("Node")}}的父节点 。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中， 这个属性返回 null。</dd>
+ <dd>返回一个当前节点 {{DOMxRef("Node")}}的父节点 。如果没有这样的节点，比如说像这个节点是树结构的顶端或者没有插入一棵树中， 这个属性返回 null。</dd>
  <dt>{{DOMxRef("Node.parentElement")}} {{readonlyInline}}</dt>
  <dd>返回一个当前节点的父节点 {{DOMxRef("Element")}} 。 如果当前节点没有父节点或者说父节点不是一个元素 ({{DOMxRef("Element")}}), 这个属性返回 null。</dd>
  <dt>{{DOMxRef("Node.previousSibling")}} {{readonlyInline}}</dt>
@@ -139,7 +139,7 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.prefix")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
  <dd>返回一个节点命名空间的前缀 {{DOMxRef("DOMString")}} , 当前缀不存在时返回 <code>null</code> 。</dd>
  <dt>{{DOMxRef("Node.rootNode")}} {{Deprecated_Inline}}{{ReadOnlyInline}}</dt>
- <dd>返回一个 DOM 树中顶层节点的  {{DOMxRef("Node")}} 对象，如果顶层节点不 DOM 树中，则返回当前节点。该属性已被 {{DOMxRef("Node.getRootNode()")}} 方法所代替。</dd>
+ <dd>返回一个 DOM 树中顶层节点的  {{DOMxRef("Node")}} 对象，如果顶层节点不 DOM 树中，则返回当前节点。该属性已被 {{DOMxRef("Node.getRootNode()")}} 方法所代替。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -185,7 +185,7 @@ translation_of: Web/API/Node
 <dl>
  <dt>{{DOMxRef("Node.getFeature()")}} {{Deprecated_Inline}}</dt>
  <dt>{{DOMxRef("Node.getUserData()")}} {{Deprecated_Inline}}</dt>
- <dd>允许用户从节点的 {{DOMxRef("DOMUserData")}} 获得数据。</dd>
+ <dd>允许用户从节点的 {{DOMxRef("DOMUserData")}} 获得数据。</dd>
  <dt>{{DOMxRef("Node.hasAttributes()")}} {{Deprecated_Inline}}</dt>
  <dd>返回一个 {{jsxref("Boolean")}} 指定该元素是否存在某一属性。</dd>
  <dt>{{DOMxRef("Node.isSupported()")}} {{Deprecated_Inline}}</dt>
@@ -251,7 +251,7 @@ removeAllChildren(document.body);</pre>
  <dt><code>rootNode</code></dt>
  <dd>需要进行后代节点遍历的 <code>Node</code> 对象。</dd>
  <dt><code>callback</code></dt>
- <dd>一个可选的回调<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">函数</a>，接受一个节点作为唯一参数。如果没有设定， <code>eachNode</code> 返回一个包含了 <code>rootNode</code> 所有后代节点以及 <code>rootNode</code> 自身的{{jsxref("Array")}}</dd>
+ <dd>一个可选的回调<a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function">函数</a>，接受一个节点作为唯一参数。如果没有设定， <code>eachNode</code> 返回一个包含了 <code>rootNode</code> 所有后代节点以及 <code>rootNode</code> 自身的{{jsxref("Array")}}</dd>
 </dl>
 
 <h4 id="使用示例_2">使用示例</h4>
@@ -281,7 +281,7 @@ eachNode(box, function(node){
 
 <h4 id="真实案例">真实案例</h4>
 
-<p>下述例子反应了 <code>eachNode</code> 函数是如何在真实场景中使用的：搜索网页中的文本。我们使用一个包装函数 <code>grep</code> 去执行搜索：</p>
+<p>下述例子反应了 <code>eachNode</code> 函数是如何在真实场景中使用的：搜索网页中的文本。我们使用一个包装函数 <code>grep</code> 去执行搜索：</p>
 
 <pre class="brush: js; notranslate">function grep(parentNode, pattern){
 	var matches = [];

@@ -60,25 +60,25 @@ request.onupgradeneeded= function(event) {
    <td>
     <p>Returns the result of the request.</p>
 
-    <p>If the the request failed and the result is not available, the InvalidStateError exception is thrown.</p>
+    <p>If the the request failed and the result is not available, the InvalidStateError exception is thrown.</p>
    </td>
   </tr>
   <tr>
    <td><code><a name="attr_errorCode">error</a></code></td>
-   <td><code>readonly <a href="/en-US/docs/DOM/DOMError" style="color: rgb(34, 85, 170); line-height: 21px;" title="/en-US/docs/DOM/DOMError">DOMError</a></code></td>
+   <td><code>readonly <a href="/en-US/docs/DOM/DOMError" style="color: rgb(34, 85, 170); line-height: 21px;" title="/en-US/docs/DOM/DOMError">DOMError</a></code></td>
    <td>
     <p>The following error codes are returned under certain conditions:</p>
 
     <ul>
-     <li><code>AbortError</code> — If you abort the transaction, then all requests still in progress receive this error.</li>
-     <li><code>ConstraintError</code> — If you insert data that doesn't conform to a constraint. It's an exception type for creating stores and indexes. You get this error, for example, if you try to add a new key that already exists in the record.</li>
-     <li><code>QuotaExceededError</code> — If you run out of disk quota and the user declined to grant you more space.</li>
+     <li><code>AbortError</code> — If you abort the transaction, then all requests still in progress receive this error.</li>
+     <li><code>ConstraintError</code> — If you insert data that doesn't conform to a constraint. It's an exception type for creating stores and indexes. You get this error, for example, if you try to add a new key that already exists in the record.</li>
+     <li><code>QuotaExceededError</code> — If you run out of disk quota and the user declined to grant you more space.</li>
      <li><code>UnknownError</code> — If the operation failed for reasons unrelated to the database itself. A failure due to disk IO errors is such an example.</li>
      <li><code>NoError</code> — If the request succeeds.</li>
-     <li><code>VersionError</code> — If you try to open a database with a version lower than the one it already has.</li>
+     <li><code>VersionError</code> — If you try to open a database with a version lower than the one it already has.</li>
     </ul>
 
-    <p>In addition to the error codes sent to the IDBRequest object, asynchronous operations can also raise exceptions. The list describes problems that could occur when the request is being executed, but you might also encounter other problems when the request is being made. For example, if the the request failed and the result is not available, the InvalidStateError exception is thrown.</p>
+    <p>In addition to the error codes sent to the IDBRequest object, asynchronous operations can also raise exceptions. The list describes problems that could occur when the request is being executed, but you might also encounter other problems when the request is being made. For example, if the the request failed and the result is not available, the InvalidStateError exception is thrown.</p>
    </td>
   </tr>
   <tr>
@@ -97,7 +97,7 @@ request.onupgradeneeded= function(event) {
    <td><code><a name="attr_readyState">readyState</a></code></td>
    <td><code>readonly enum</code></td>
    <td>
-    <p>The state of the request. Every request starts in the <code>pending</code> state. The state changes to <code>done</code> when the request completes successfully or when an error occurs.</p>
+    <p>The state of the request. Every request starts in the <code>pending</code> state. The state changes to <code>done</code> when the request completes successfully or when an error occurs.</p>
     </td>
   </tr>
   <tr>

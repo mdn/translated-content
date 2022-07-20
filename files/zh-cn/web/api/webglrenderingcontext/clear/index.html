@@ -5,11 +5,11 @@ translation_of: Web/API/WebGLRenderingContext/clear
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.clear()</code></strong> 方法使用预设值来清空缓冲。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong><code>WebGLRenderingContext.clear()</code></strong> 方法使用预设值来清空缓冲。</p>
 
-<p>预设值可以使用 {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} 、 {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} 或 {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} 设置。</p>
+<p>预设值可以使用 {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} 、 {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} 或 {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}} 设置。</p>
 
-<p>裁剪、抖动处理和缓冲写入遮罩会影响 <code>clear()</code> 方法。</p>
+<p>裁剪、抖动处理和缓冲写入遮罩会影响 <code>clear()</code> 方法。</p>
 
 <h2 id="句法">句法</h2>
 
@@ -22,16 +22,16 @@ translation_of: Web/API/WebGLRenderingContext/clear
  <dt><code>mask</code></dt>
  <dd>一个用于指定需要清除的缓冲区的 {{domxref("GLbitfield")}} 。可能的值有：
  <ul>
-  <li><code>gl.COLOR_BUFFER_BIT   //颜色缓冲区</code></li>
-  <li><code>gl.DEPTH_BUFFER_BIT   //深度缓冲区</code></li>
-  <li><code>gl.STENCIL_BUFFER_BIT  //模板缓冲区</code></li>
+  <li><code>gl.COLOR_BUFFER_BIT   //颜色缓冲区</code></li>
+  <li><code>gl.DEPTH_BUFFER_BIT   //深度缓冲区</code></li>
+  <li><code>gl.STENCIL_BUFFER_BIT  //模板缓冲区</code></li>
  </ul>
  </dd>
 </dl>
 
 <h3 id="错误抛出">错误抛出</h3>
 
-<p>如果 mask 不是以上列出的值，会抛出 <code>gl.INVALID_ENUM</code> 错误。</p>
+<p>如果 mask 不是以上列出的值，会抛出 <code>gl.INVALID_ENUM</code> 错误。</p>
 
 <h3 id="返回值">返回值</h3>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/WebGLRenderingContext/clear
 gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
 </pre>
 
-<p>要获得当前的清除值，传入 <code>COLOR_CLEAR_VALUE</code>、<code>DEPTH_CLEAR_VALUE</code> 或 <code>STENCIL_CLEAR_VALUE</code> 常量。</p>
+<p>要获得当前的清除值，传入 <code>COLOR_CLEAR_VALUE</code>、<code>DEPTH_CLEAR_VALUE</code> 或 <code>STENCIL_CLEAR_VALUE</code> 常量。</p>
 
 <pre class="brush: js">gl.getParameter(gl.COLOR_CLEAR_VALUE);
 gl.getParameter(gl.DEPTH_CLEAR_VALUE);

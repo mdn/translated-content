@@ -14,9 +14,9 @@ translation_of: Web/API/WorkerGlobalScope
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p> <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>  的 <code><strong>WorkerGlobalScope</strong></code> 接口 是一个代表了任何 scope of worker 的接口. Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 <code>WorkerGlobalScope</code> 都有自己的事件循环。</p>
+<p> <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a>  的 <code><strong>WorkerGlobalScope</strong></code> 接口 是一个代表了任何 scope of worker 的接口. Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 <code>WorkerGlobalScope</code> 都有自己的事件循环。</p>
 
-<p>每个 worker type 都有专门的这个接口：{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>. <code>self</code> 属性返回每个内容的专门 scope.</p>
+<p>每个 worker type 都有专门的这个接口：{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker</a>. <code>self</code> 属性返回每个内容的专门 scope.</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/WorkerGlobalScope
  <dt>{{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}</dt>
  <dd>Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.</dd>
  <dt>{{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}</dt>
- <dd>Returns a reference to the <code>WorkerGlobalScope</code> itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.</dd>
+ <dd>Returns a reference to the <code>WorkerGlobalScope</code> itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.</dd>
  <dt>{{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}</dt>
  <dd>Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.</dd>
 </dl>
@@ -63,9 +63,9 @@ translation_of: Web/API/WorkerGlobalScope
  <dt>{{domxref("WorkerGlobalScope.onclose")}} {{non-standard_inline}}</dt>
  <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("close")}} event is raised.</dd>
  <dt>{{domxref("WorkerGlobalScope.onrejectionhandled")}} {{non-standard_inline}}</dt>
- <dd>An event handler for handled <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.</dd>
+ <dd>An event handler for handled <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.</dd>
  <dt>{{domxref("WorkerGlobalScope.onunhandledrejection")}} {{non-standard_inline}}</dt>
- <dd>An event handler for unhandled <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.</dd>
+ <dd>An event handler for unhandled <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>

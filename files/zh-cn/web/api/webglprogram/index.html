@@ -10,7 +10,7 @@ translation_of: Web/API/WebGLProgram
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><strong>WebGLProgram</strong> 是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的一部分，它由两个{{domxref("WebGLShader")}}s（webgl 着色器）组成，分别为顶点着色器和片元着色器（两种着色器都是采用 GLSL 语言编写的）。创建一个 <strong>WebGLProgram </strong>需要调用 GL 上下文的{{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} 方法，然后调用{{domxref("WebGLRenderingContext.attachShader", "attachShader()")}}方法附加上着色器，之后你才能将它们连接到一个可用的程序。</p>
+<p><strong>WebGLProgram</strong> 是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的一部分，它由两个{{domxref("WebGLShader")}}s（webgl 着色器）组成，分别为顶点着色器和片元着色器（两种着色器都是采用 GLSL 语言编写的）。创建一个 <strong>WebGLProgram </strong>需要调用 GL 上下文的{{domxref("WebGLRenderingContext.createProgram", "createProgram()")}} 方法，然后调用{{domxref("WebGLRenderingContext.attachShader", "attachShader()")}}方法附加上着色器，之后你才能将它们连接到一个可用的程序。</p>
 
 <p>WebGLProgram 的创建过程请参考下面的代码：</p>
 
@@ -28,13 +28,13 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 }
 </pre>
 
-<p>查看 {{domxref("WebGLShader")}} api 了解更多关于创建以上例子中的<code>顶点着色器</code>和<code>片元着色器</code>的信息。</p>
+<p>查看 {{domxref("WebGLShader")}} api 了解更多关于创建以上例子中的<code>顶点着色器</code>和<code>片元着色器</code>的信息。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="使用着色器程序">使用着色器程序</h3>
 
-<p>着色器程序在使用的过程中要分为几步，包括告知 GPU 来使用这段着色器程序，绑定合适的数据缓冲区，配置相关选项，最终把图像绘制到屏幕上。</p>
+<p>着色器程序在使用的过程中要分为几步，包括告知 GPU 来使用这段着色器程序，绑定合适的数据缓冲区，配置相关选项，最终把图像绘制到屏幕上。</p>
 
 <pre class="brush: js">// Use the program
 gl.useProgram(program);

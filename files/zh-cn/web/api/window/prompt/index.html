@@ -15,7 +15,7 @@ translation_of: Web/API/Window/prompt
 </pre>
 
 <ul>
- <li><code>result</code> 用来存储用户输入文字的字符串，或者是 null。</li>
+ <li><code>result</code> 用来存储用户输入文字的字符串，或者是 null。</li>
  <li><code>text</code> 用来提示用户输入文字的字符串，如果没有任何提示内容，该参数可以省略不写。</li>
  <li><code>value</code> 文本输入框中的默认值，该参数也可以省略不写。不过在 Internet Explorer 7 和 8 中，省略该参数会导致输入框中显示默认值"undefined"。</li>
 </ul>
@@ -41,7 +41,7 @@ var sign = window.prompt('你觉得很幸运吗？','是的'); // 打开显示�
 <br>
 prompt 和 alert 以及类似的对话框都是模态窗口，它们会阻止用户激活程序其他部分的界面，直到该对话框关闭。因此，你不应该过度使用该方法。(译注：在 content 上下文，Firefox 4 以上版本使用非模态的对话框)。</div>
 
-<div>Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM <a href="/zh-cn/XPCOM_Interface_Reference/nsIPromptService" title="zh-cn/XPCOM_Interface_Reference/nsIPromptService">nsIPromptService</a>  来替代 window.prompt。</div>
+<div>Chrome 上下文执行的脚本 (例如扩展开发) 应该使用 XPCOM <a href="/zh-cn/XPCOM_Interface_Reference/nsIPromptService" title="zh-cn/XPCOM_Interface_Reference/nsIPromptService">nsIPromptService</a>  来替代 window.prompt。</div>
 
 <h2 id="规范">规范</h2>
 

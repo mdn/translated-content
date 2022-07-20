@@ -20,7 +20,7 @@ translation_of: Web/API/WebGLRenderingContext/bindBuffer
 
 <dl>
  <dt>target</dt>
- <dd> {{domxref("GLenum")}} 指定绑定点 (target)。 可能的值：
+ <dd> {{domxref("GLenum")}} 指定绑定点 (target)。 可能的值：
  <ul>
   <li><code>gl.ARRAY_BUFFER</code>: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。</li>
   <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 用于元素索引的 Buffer。</li>
@@ -46,9 +46,9 @@ translation_of: Web/API/WebGLRenderingContext/bindBuffer
 
 <h3 id="异常">异常</h3>
 
-<p>只有一个目标可以绑定到给定的 {{domxref("WebGLBuffer")}} 。 尝试将缓冲区绑定到另一个目标将引发 <code>INVALID_OPERATION</code> 错误，并且当前的缓冲区绑定将保持不变。</p>
+<p>只有一个目标可以绑定到给定的 {{domxref("WebGLBuffer")}} 。 尝试将缓冲区绑定到另一个目标将引发 <code>INVALID_OPERATION</code> 错误，并且当前的缓冲区绑定将保持不变。</p>
 
-<p>一个被{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}标记为删除的{{domxref("WebGLBuffer")}}不可重新被绑定，尝试这样做将生成 <code>INVALID_OPERATION</code> 错误，并且当前绑定将保持不变。</p>
+<p>一个被{{domxref("WebGLRenderingContext.deleteBuffer()", "deleteBuffer")}}标记为删除的{{domxref("WebGLBuffer")}}不可重新被绑定，尝试这样做将生成 <code>INVALID_OPERATION</code> 错误，并且当前绑定将保持不变。</p>
 
 <h2 id="示例">示例</h2>
 

@@ -6,7 +6,7 @@ original_slug: Server-sent_events/EventSource/close
 ---
 <div>{{APIRef('WebSockets API')}}</div>
 
-<div> </div>
+<div> </div>
 
 <p>{{domxref("EventSource")}} 的方法<code><strong>close()</strong></code>用于关闭当前的连接，如果调用了此方法，则会将{{domxref("EventSource.readyState")}}这个属性值设置为 2 (closed)</p>
 
@@ -32,13 +32,13 @@ original_slug: Server-sent_events/EventSource/close
 var evtSource = new EventSource('sse.php');
 
 button.onclick = function() {
-  console.log('Connection closed');
-  evtSource.close();
+  console.log('Connection closed');
+  evtSource.close();
 }
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以在 Github 上查看这整个例子： <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
+<p><strong>Note</strong>: 你可以在 Github 上查看这整个例子： <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
 </div>
 
 <h2 id="规范">规范</h2>

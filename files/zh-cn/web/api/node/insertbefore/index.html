@@ -27,13 +27,13 @@ translation_of: Web/API/Node/insertBefore
 </pre>
 
 <ul>
- <li><code>insertedNode</code> 被插入节点 (newNode)</li>
+ <li><code>insertedNode</code> 被插入节点 (newNode)</li>
  <li><code>parentNode</code> 新插入节点的父节点</li>
  <li><code>newNode</code> 用于插入的节点</li>
  <li><code>referenceNode</code> <code>newNode</code> 将要插在这个节点之前</li>
 </ul>
 
-<p>如果 <code>referenceNode</code> 为 <code>null</code> 则 <code>newNode</code> 将被插入到子节点的末尾<em>。</em></p>
+<p>如果 <code>referenceNode</code> 为 <code>null</code> 则 <code>newNode</code> 将被插入到子节点的末尾<em>。</em></p>
 
 <div class="note">
 <p><em><code>referenceNode</code></em> 引用节点<strong>不是</strong>可选参数——你必须显式传入一个 <code>Node</code> 或者 <code>null</code>。如果不提供节点或者传入无效值，在不同的浏览器中会有<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=119489">不同</a>的<a href="https://code.google.com/p/chromium/issues/detail?id=419780">表现</a>。</p>

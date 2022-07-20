@@ -13,9 +13,9 @@ translation_of: Web/API/NodeList
 <p><code>NodeList</code> 对象是节点的集合，通常是由属性，如{{domxref("Node.childNodes")}} 和 方法，如{{domxref("document.querySelectorAll")}} 返回的。</p>
 
 <div class="note">
-<p><code>NodeList</code> <strong>不是一个数组</strong>，是一个类似数组的对象 (<em>Like Array Object</em>)。虽然 <code>NodeList</code> 不是一个数组，但是可以使用 <code>forEach()</code> 来迭代。你还可以使用 {{jsxref("Array.from()")}} 将其转换为数组。</p>
+<p><code>NodeList</code> <strong>不是一个数组</strong>，是一个类似数组的对象 (<em>Like Array Object</em>)。虽然 <code>NodeList</code> 不是一个数组，但是可以使用 <code>forEach()</code> 来迭代。你还可以使用 {{jsxref("Array.from()")}} 将其转换为数组。</p>
 
-<p>不过，有些浏览器较为过时，没有实现 <code>NodeList.forEach()</code> 和 <code>Array.from()</code>。你可以用 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 来规避这一问题。请查看<a href="#Example">该例</a>。</p>
+<p>不过，有些浏览器较为过时，没有实现 <code>NodeList.forEach()</code> 和 <code>Array.from()</code>。你可以用 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 来规避这一问题。请查看<a href="#Example">该例</a>。</p>
 </div>
 
 <p>在一些情况下，<code>NodeList</code> 是一个实时集合，也就是说，如果文档中的节点树发生变化，<code>NodeList</code> 也会随之变化。例如，{{domxref("Node.childNodes")}} 是实时的：</p>
@@ -26,7 +26,7 @@ console.log(child_nodes.length); // 我们假设结果会是“2”
 parent.appendChild(document.createElement('div'));
 console.log(child_nodes.length); // 但此时的输出是“3”</pre>
 
-<p>在其他情况下，<code>NodeList</code> 是一个静态集合，也就意味着随后对文档对象模型的任何改动都不会影响集合的内容。比如  {{domxref("document.querySelectorAll")}} 就会返回一个静态 <code>NodeList</code>。</p>
+<p>在其他情况下，<code>NodeList</code> 是一个静态集合，也就意味着随后对文档对象模型的任何改动都不会影响集合的内容。比如  {{domxref("document.querySelectorAll")}} 就会返回一个静态 <code>NodeList</code>。</p>
 
 <p>最好牢记这种不同，尤其是在当你选择 <code>NodeList</code> 中所有项遍历的方式，或缓存它的长度的时候。</p>
 

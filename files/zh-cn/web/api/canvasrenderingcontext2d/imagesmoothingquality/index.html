@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 ---
 <div>{{APIRef}} {{SeeCompatTable}}</div>
 
-<p><strong>CanvasRenderingContext2D.imageSmoothingQuality</strong> 是 Canvas 2D API，用于设置图像平滑度的属性。</p>
+<p><strong>CanvasRenderingContext2D.imageSmoothingQuality</strong> 是 Canvas 2D API，用于设置图像平滑度的属性。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -29,7 +29,7 @@ value</var> = ctx.imageSmoothingQuality</pre>
 
 <h3 id="使用_imageSmoothingQuality_属性">使用 imageSmoothingQuality 属性</h3>
 
-<p>这是一段简单的代码片段，对缩放的图片使用 <code>imageSmoothingQuality </code>属性。</p>
+<p>这是一段简单的代码片段，对缩放的图片使用 <code>imageSmoothingQuality </code>属性。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -45,7 +45,7 @@ var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
 img.onload = function() {
  ctx.mozImageSmoothingEnabled = false;
- ctx.imageSmoothingQuality = "Medium";
+ ctx.imageSmoothingQuality = "Medium";
  ctx.webkitImageSmoothingEnabled = false;
  ctx.msImageSmoothingEnabled = false;
  ctx.imageSmoothingEnabled = false;
@@ -59,8 +59,8 @@ img.onload = function() {
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code" style="height:140px;"&gt;
 var img = new Image();

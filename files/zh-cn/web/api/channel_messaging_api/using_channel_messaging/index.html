@@ -13,7 +13,7 @@ original_slug: Web/API/Channel_Messaging_API/使用_channel_messaging
 ---
 <p>{{DefaultAPISidebar("Channel Messaging API")}}</p>
 
-<p><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> 可以让运行在不同浏览器上下文中的独立脚本，连接到同一份文档（比如：两个 IFrame, 或者主文档和一个 IFrame, 或者使用同一个 {{domxref("SharedWorker")}} 的两份文档），并直接通信，通过每端一个 port 的双向频道（或管道）在两者之间传递消息。</p>
+<p><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a> 可以让运行在不同浏览器上下文中的独立脚本，连接到同一份文档（比如：两个 IFrame, 或者主文档和一个 IFrame, 或者使用同一个 {{domxref("SharedWorker")}} 的两份文档），并直接通信，通过每端一个 port 的双向频道（或管道）在两者之间传递消息。</p>
 
 <p>在文本中，我们将探索这项技术的基本用法。</p>
 
@@ -26,14 +26,14 @@ original_slug: Web/API/Channel_Messaging_API/使用_channel_messaging
 <p>换个角度说，Message Channels 可以提供一个安全的通道让你在不同的浏览器上下文间传递数据。</p>
 
 <div class="note">
-<p><strong>提示</strong>: 要了解更多信息和思考，规范的 <a href="https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web">Ports 作为 Web 上一个对象兼容模型的基础</a> 章节值得一读。</p>
+<p><strong>提示</strong>: 要了解更多信息和思考，规范的 <a href="https://html.spec.whatwg.org/multipage/comms.html#ports-as-the-basis-of-an-object-capability-model-on-the-web">Ports 作为 Web 上一个对象兼容模型的基础</a> 章节值得一读。</p>
 </div>
 
 <h2 id="简单的例子">简单的例子</h2>
 
-<p>为了帮助你开始，我们在 Github 上传了一些 demo. 一开始可以先看我们的 <a href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging 基本示例</a> (<a href="https://mdn.github.io/dom-examples/channel-messaging-basic/">也可以在线运行</a>)，它展示了一个非常简单的消息传递，发生在页面和内嵌 {{htmlelement("iframe")}} 之间。 </p>
+<p>为了帮助你开始，我们在 Github 上传了一些 demo. 一开始可以先看我们的 <a href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic">channel messaging 基本示例</a> (<a href="https://mdn.github.io/dom-examples/channel-messaging-basic/">也可以在线运行</a>)，它展示了一个非常简单的消息传递，发生在页面和内嵌 {{htmlelement("iframe")}} 之间。 </p>
 
-<p>然后，看看我们的 <a href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage">multimessaging demo</a> (<a href="https://mdn.github.io/dom-examples/channel-messaging-multimessage/">在线运行</a>)，它展示了一个稍微复杂一点的例子，可以在主页面和 IFrame 之间发送多条消息。</p>
+<p>然后，看看我们的 <a href="https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage">multimessaging demo</a> (<a href="https://mdn.github.io/dom-examples/channel-messaging-multimessage/">在线运行</a>)，它展示了一个稍微复杂一点的例子，可以在主页面和 IFrame 之间发送多条消息。</p>
 
 <p>本文中，我们重点说后面的这个例子。它看起来像是这样：</p>
 
@@ -41,7 +41,7 @@ original_slug: Web/API/Channel_Messaging_API/使用_channel_messaging
 
 <h2 id="创建_channel">创建 channel</h2>
 
-<p>在例子的主页面，我们有一个简单的表单，内含一个文本输入框，用来输入要发送到 {{htmlelement("iframe")}} 的消息。我们还有一个段落，我们在稍后将会用它来显示 {{htmlelement("iframe")}} 回传回来的确认消息。</p>
+<p>在例子的主页面，我们有一个简单的表单，内含一个文本输入框，用来输入要发送到 {{htmlelement("iframe")}} 的消息。我们还有一个段落，我们在稍后将会用它来显示 {{htmlelement("iframe")}} 回传回来的确认消息。</p>
 
 <pre class="brush: js notranslate">var input = document.getElementById('message-input');
 var output = document.getElementById('message-output');
@@ -79,17 +79,17 @@ function onMessage(e) {
 
 <p>我们从使用 {{domxref( "MessageChannel.MessageChannel","MessageChannel()")}} 构造函数创建了一个 message channel 开始。</p>
 
-<p>当 IFrame 加载完成，我们在按钮上注册了<code>onclick</code> 事件处理函数，在 {{domxref("MessageChannel.port1")}} 注册了 <code>onmessage</code> 事件处理函数。最后，我们使用 {{domxref("window.postMessage")}} 方法把 {{domxref("MessageChannel.port2")}} 传给 IFrame.</p>
+<p>当 IFrame 加载完成，我们在按钮上注册了<code>onclick</code> 事件处理函数，在 {{domxref("MessageChannel.port1")}} 注册了 <code>onmessage</code> 事件处理函数。最后，我们使用 {{domxref("window.postMessage")}} 方法把 {{domxref("MessageChannel.port2")}} 传给 IFrame.</p>
 
-<p>让我们来了解一下 <code>iframe.contentWindow.postMessage</code> 更多的工作细节。它接受三个参数：</p>
+<p>让我们来了解一下 <code>iframe.contentWindow.postMessage</code> 更多的工作细节。它接受三个参数：</p>
 
 <ol>
- <li>被发送的消息。对于一开始的 port 传递，这个消息可以是个空字符串，但是在例子里，我们传了 <code>'init'</code>.</li>
- <li>消息将被发送到的源（origin）。 <code>*</code> 意思是 "任何源".</li>
- <li>一个对象，它的所有权会被传给接受的浏览器上下文。在本例中，我们把 {{domxref("MessageChannel.port2")}} 传给了 IFrame, 然后它就可以用于与主页面通信了。</li>
+ <li>被发送的消息。对于一开始的 port 传递，这个消息可以是个空字符串，但是在例子里，我们传了 <code>'init'</code>.</li>
+ <li>消息将被发送到的源（origin）。 <code>*</code> 意思是 "任何源".</li>
+ <li>一个对象，它的所有权会被传给接受的浏览器上下文。在本例中，我们把 {{domxref("MessageChannel.port2")}} 传给了 IFrame, 然后它就可以用于与主页面通信了。</li>
 </ol>
 
-<p>当我们的按钮被点击时，我们阻止了默认的表单提交，然后把输入到输入框里的内容通过 {{domxref("MessageChannel")}} 发送给 IFrame.</p>
+<p>当我们的按钮被点击时，我们阻止了默认的表单提交，然后把输入到输入框里的内容通过 {{domxref("MessageChannel")}} 发送给 IFrame.</p>
 
 <h2 id="在_IFrame_里接收_port_和消息">在 IFrame 里接收 port 和消息</h2>
 
@@ -116,11 +116,11 @@ function onMessage(e) {
 }
 </pre>
 
-<p>当收到从主页面通过 {{domxref("window.postMessage")}} 方法传来的初始化消息时，我们运行 <code>initPort</code> 函数。它会保存传来的 port, 并且注册了一个 onmessage 事件处理器，每当有消息通过我们的 {{domxref("MessageChannel")}} 传来时，它都会被调用。</p>
+<p>当收到从主页面通过 {{domxref("window.postMessage")}} 方法传来的初始化消息时，我们运行 <code>initPort</code> 函数。它会保存传来的 port, 并且注册了一个 onmessage 事件处理器，每当有消息通过我们的 {{domxref("MessageChannel")}} 传来时，它都会被调用。</p>
 
-<p>当收到从主页面发来的消息时，我们创建一个列表项，并把它插入到这个无序列表中，然后把这个列表项的 {{domxref("Node.textContent","textContent")}} 设置为事件的 <code>data</code> 属性（里面包含真正的消息）。</p>
+<p>当收到从主页面发来的消息时，我们创建一个列表项，并把它插入到这个无序列表中，然后把这个列表项的 {{domxref("Node.textContent","textContent")}} 设置为事件的 <code>data</code> 属性（里面包含真正的消息）。</p>
 
-<p>然后，我们通过在初始化时传到 IFrame 的 {{domxref("MessageChannel.port2")}} 上调用 {{domxref("MessagePort.postMessage")}} 来使用 message channel 发送一个确认消息给主页面。</p>
+<p>然后，我们通过在初始化时传到 IFrame 的 {{domxref("MessageChannel.port2")}} 上调用 {{domxref("MessagePort.postMessage")}} 来使用 message channel 发送一个确认消息给主页面。</p>
 
 <h2 id="在主页面中接收确认消息">在主页面中接收确认消息</h2>
 

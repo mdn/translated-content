@@ -11,7 +11,7 @@ translation_of: Web/API/Event/currentTarget
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>{{domxref("Event")}} 接口的只读属性 <code><strong>currentTarget</strong></code> 表示的，标识是当事件沿着 DOM 触发时事件的当前目标。它总是指向事件绑定的元素，而 {{domxref("Event.target")}} 则是事件触发的元素。</p>
+<p>{{domxref("Event")}} 接口的只读属性 <code><strong>currentTarget</strong></code> 表示的，标识是当事件沿着 DOM 触发时事件的当前目标。它总是指向事件绑定的元素，而 {{domxref("Event.target")}} 则是事件触发的元素。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -23,11 +23,11 @@ translation_of: Web/API/Event/currentTarget
 
 <h2 id="Example">例子</h2>
 
-<p>当将相同的事件处理程序附加到多个元素时 <code>event.currentTarget</code> 就很有用。</p>
+<p>当将相同的事件处理程序附加到多个元素时 <code>event.currentTarget</code> 就很有用。</p>
 
 <pre class="brush: js notranslate">function hide(e){
   e.currentTarget.style.visibility = "hidden";
-  console.log(e.currentTarget);
+  console.log(e.currentTarget);
   // 该函数用作事件处理器时: this === e.currentTarget
 }
 

@@ -13,12 +13,12 @@ translation_of: Web/API/XMLHttpRequest/send
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><code><strong>XMLHttpRequest.send()</strong></code> 方法用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。<code>XMLHttpRequest.send()</code> 方法接受一个可选的参数，其作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。</p>
+<p><code><strong>XMLHttpRequest.send()</strong></code> 方法用于发送 HTTP 请求。如果是异步请求（默认为异步请求），则此方法会在请求发送后立即返回；如果是同步请求，则此方法直到响应到达后才会返回。<code>XMLHttpRequest.send()</code> 方法接受一个可选的参数，其作为请求主体；如果请求方法是 GET 或者 HEAD，则应将请求主体设置为 null。</p>
 
-<p>如果没有使用 {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} 方法设置 {{HTTPHeader("Accept")}} 头部信息，则会发送带有 <code>"* / *"</code> 的{{HTTPHeader("Accept")}} 头部。</p>
+<p>如果没有使用 {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} 方法设置 {{HTTPHeader("Accept")}} 头部信息，则会发送带有 <code>"* / *"</code> 的{{HTTPHeader("Accept")}} 头部。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 请注意不要使用一个简单的 ArrayBuffer 对象作为参数，ArrayBuffer 已经不再是 AJAX 规范的一部分，请改用 ArrayBufferView（有关信息请参考兼容性列表。）</p>
+<p><strong>Note:</strong> 请注意不要使用一个简单的 ArrayBuffer 对象作为参数，ArrayBuffer 已经不再是 AJAX 规范的一部分，请改用 ArrayBufferView（有关信息请参考兼容性列表。）</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -28,14 +28,14 @@ translation_of: Web/API/XMLHttpRequest/send
 <h3 id="参数">参数</h3>
 
 <dl>
- <dt><code>body</code> {{optional_inline}}</dt>
- <dd>在 XHR 请求中要发送的数据体. 可以是：
+ <dt><code>body</code> {{optional_inline}}</dt>
+ <dd>在 XHR 请求中要发送的数据体. 可以是：
  <ul>
   <li>可以为 {{domxref("Document")}}, 在这种情况下，它在发送之前被序列化。</li>
-  <li>为 <code>XMLHttpRequestBodyInit</code>, 从 <a href="https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit">per the Fetch spec</a> （规范中）可以是 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 或者 {{domxref("USVString")}} 对象。</li>
+  <li>为 <code>XMLHttpRequestBodyInit</code>, 从 <a href="https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit">per the Fetch spec</a> （规范中）可以是 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 或者 {{domxref("USVString")}} 对象。</li>
   <li><code>null</code></li>
  </ul>
- 如果 body 没有指定值，则默认值为 <code>null</code> .</dd>
+ 如果 body 没有指定值，则默认值为 <code>null</code> .</dd>
  <dt>
  <h3 id="返回值">返回值</h3>
 
@@ -53,11 +53,11 @@ translation_of: Web/API/XMLHttpRequest/send
   <tbody>
    <tr>
     <td><code>InvalidStateError</code></td>
-    <td><code>send()</code> has already been invoked for the request, and/or the request is complete.</td>
+    <td><code>send()</code> has already been invoked for the request, and/or the request is complete.</td>
    </tr>
    <tr>
     <td><code>NetworkError</code></td>
-    <td>The resource type to be fetched is a Blob, and the method is not <code>GET</code>.</td>
+    <td>The resource type to be fetched is a Blob, and the method is not <code>GET</code>.</td>
    </tr>
   </tbody>
  </table>
@@ -77,7 +77,7 @@ XMLHttpRequest.send(FormData <var>data</var>);
 
 <p>如果是一个 nsIInputStream 接口，它必须与 nsIUploadChannel 的 <code>setUploadStream()</code> 方法兼容。在这种情况下，将 Content-Length 的头部添加到请求中，它的值则使用 nsIInputStream 接口的 <code>available()</code> 方法获取。任何报头包括在数据流顶部的都会被当做报文主体。所以，应该在发送请求即调用 <code>send()</code> 方法之前使用<a class="internal" href="#setRequestHeader()"><code>setRequestHeader()</code></a> 方法设置 Content-Type 头部来指定数据流的 MIME 类型。</p>
 
-<p>发送二进制内容的最佳方法（如上传文件）是使用一个与 <code>send()</code> 方法结合的 <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> 或者 <a href="/en-US/docs/Web/API/Blob">Blobs</a></p>
+<p>发送二进制内容的最佳方法（如上传文件）是使用一个与 <code>send()</code> 方法结合的 <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> 或者 <a href="/en-US/docs/Web/API/Blob">Blobs</a></p>
 
 <h2 id="案例_GET">案例: GET</h2>
 

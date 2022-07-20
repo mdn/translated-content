@@ -12,7 +12,7 @@ translation_of: Web/API/AbortSignal
 ---
 <div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
 
-<p><code><strong>AbortSignal </strong></code>接口表示一个信号对象（ signal object ），它允许您通过 {{domxref("AbortController")}} 对象与 DOM 请求（如 Fetch）进行通信并在需要时将其中止。</p>
+<p><code><strong>AbortSignal </strong></code>接口表示一个信号对象（ signal object ），它允许您通过 {{domxref("AbortController")}} 对象与 DOM 请求（如 Fetch）进行通信并在需要时将其中止。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/AbortSignal
 
 <dl>
  <dt>{{domxref("AbortSignal.aborted")}} {{readonlyInline}}</dt>
- <dd><em>以 </em>{{domxref("Boolean")}} 表示<em>与之通信的请求是否被终止（true）或未终止（false）。</em></dd>
+ <dd><em>以 </em>{{domxref("Boolean")}} 表示<em>与之通信的请求是否被终止（true）或未终止（false）。</em></dd>
 </dl>
 
 <h3 id="事件处理">事件处理</h3>
@@ -60,19 +60,19 @@ function fetchVideo() {
   fetch(url, {signal}).then(function(response) {
     ...
   }).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message;
-  })
+    reports.textContent = 'Download error: ' + e.message;
+  })
 }</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 当调用<code> abort() </code>时，<code>fetch()</code> 会调用 reject，返回一个 AbortError。</p>
+<p><strong>注意</strong>: 当调用<code> abort() </code>时，<code>fetch()</code> 会调用 reject，返回一个 AbortError。</p>
 </div>
 
 <div class="warning">
-<p>当前版本 Firefox 当<code>Promise</code> 含有 <code>DOMException</code> 时，会调用 reject。</p>
+<p>当前版本 Firefox 当<code>Promise</code> 含有 <code>DOMException</code> 时，会调用 reject。</p>
 </div>
 
-<p> </p>
+<p> </p>
 
 <p>你可以在 GitHub 上找到一个完整的可用示例——请参阅<a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a>（<a href="https://mdn.github.io/dom-examples/abort-api/">实例在这</a>）。</p>
 
