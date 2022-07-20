@@ -25,7 +25,7 @@ original_slug: learn/Accessibility/CSS和JavaScript
       <th scope="row">准备：</th>
       <td>
         <p>
-          基本的计算机读写能力、对 HTML、CSS 和 JavaScript 的基本理解、以及对<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility">可访问性</a>的理解。
+          基本的计算机读写能力，对 HTML、CSS 和 JavaScript 的基本理解，以及对<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility">可访问性</a>的理解。
         </p>
       </td>
     </tr>
@@ -207,7 +207,7 @@ a:active {
 
 另一方面，不应使用 {{cssxref("visibility")}}`:hidden` 或 {{cssxref("display")}}`:none`，因为它们会隐藏屏幕阅读器中的内容。当然，除非您希望从屏幕阅读器中隐藏此内容，这是有充分理由的。
 
-> **备注：** [专为屏幕阅读器用户设计的不可见内容](http://webaim.org/techniques/css/invisiblecontent/) 有围绕本主题的更多有用详细信息。
+> **备注：** [专为屏幕阅读器用户设计的不可见内容](http://webaim.org/techniques/css/invisiblecontent/)有围绕本主题的更多有用详细信息。
 
 ### 接受用户覆盖样式
 
@@ -243,7 +243,7 @@ JavaScript 还可能会中断可访问性，具体取决于其使用方式。
 
 ### 保持别抢眼
 
-在创建内容时，应牢记**不唐突的（unobtrusive）JavaScript**原则。不唐突的 JavaScript 的想法是，它应该尽可能用于增强功能，而不是完全构建它————基本功能最好在没有 JavaScript 的情况下正常工作，尽管人们认识到，这并不总是一个选项。但同样，它的大部分是尽可能使用内置的浏览器功能。
+在创建内容时，应牢记**不唐突的（unobtrusive）JavaScript** 原则。不唐突的 JavaScript 的想法是，它应该尽可能用于增强功能，而不是完全构建它————基本功能最好在没有 JavaScript 的情况下正常工作，尽管人们认识到，这并不总是一个选项。但同样，它的大部分是尽可能使用内置的浏览器功能。
 
 不唐突的 JavaScript 使用的良好示例包括：
 
