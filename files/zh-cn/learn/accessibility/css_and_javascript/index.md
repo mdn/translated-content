@@ -88,7 +88,7 @@ p, li {
 - 确保标题从正文文本中脱颖而出，通常像默认样式一样大而粗壮。您的列表应类似于列表。
 - 文本颜色应与背景颜色形成良好对比。
 
-有关详细信息，请参阅 [HTML 文本基础知识](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 和[设置文本样式](/zh-CN/docs/Learn/CSS/Styling_text)。
+有关详细信息，请参阅 [HTML 文本基础知识](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)和[设置文本样式](/zh-CN/docs/Learn/CSS/Styling_text)。
 
 #### 强调的文本
 
