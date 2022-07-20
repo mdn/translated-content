@@ -4,31 +4,34 @@ slug: Web/API/AbortController/abort
 translation_of: Web/API/AbortController/abort
 original_slug: Web/API/FetchController/abort
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p>The <strong><code>abort()</code></strong> method of the {{domxref("AbortController")}} interface aborts a DOM request (e.g. a Fetch request) before it has completed. This is able to abort <a href="/en-US/docs/Web/API/fetch">fetch requests</a>, consumption of any response {{domxref("Body")}}, and streams.</p>
+The **`abort()`** method of the {{domxref("AbortController")}} interface aborts a DOM request (e.g. a Fetch request) before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response {{domxref("Body")}}, and streams.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">controller.abort();</pre>
+```js
+controller.abort();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>Void.</p>
+Void.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following snippet, we aim to download a video using the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
+In the following snippet, we aim to download a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-<p>We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.</p>
+We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
 
-<p>When the <a href="/en-US/docs/Web/API/fetch">fetch request</a> is initiated, we pass in the <code>AbortSignal</code> as an option inside the request's options object (see <code>{signal}</code>, below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.</p>
+When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (see `{signal}`, below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -48,26 +51,21 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Download error: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>备注：</strong> When <code>abort()</code> is called, the <code>fetch()</code> promise rejects with an <code>AbortError</code>.</p>
-</div>
+> **备注：** When `abort()` is called, the `fetch()` promise rejects with an `AbortError`.
 
-<p>You can find a full working example on GitHub — see <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">see it running live also</a>).</p>
+You can find a full working example on GitHub — see [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([see it running live also](https://mdn.github.io/dom-examples/abort-api/)).
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
+{{Compat("api.AbortController.abort")}}
 
+## See also
 
-<p>{{Compat("api.AbortController.abort")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
