@@ -861,7 +861,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/URIError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/URIError
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/null	/ja/docs/Web/JavaScript/Reference/Operators/null
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/parseInt	/ja/docs/Web/JavaScript/Reference/Global_Objects/parseInt
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/uneval	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/uneval	/ja/docs/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Properties	/ja/docs/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Properties/Infinity	/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Properties/NaN	/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN
@@ -1116,7 +1116,7 @@
 /ja/docs/DOM/CompositionEvent	/ja/docs/Web/API/CompositionEvent
 /ja/docs/DOM/DOMError	/ja/docs/Web/API/DOMError
 /ja/docs/DOM/DOMException	/ja/docs/Web/API/DOMException
-/ja/docs/DOM/DOMString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
+/ja/docs/DOM/DOMString	/ja/docs/Glossary/String
 /ja/docs/DOM/DOMTimeStamp	/ja/docs/Web/API/DOMTimeStamp
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Reference/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
@@ -3132,7 +3132,7 @@
 /ja/docs/Web/API/BroadcastChannel/onmessageerror	/ja/docs/conflicting/Web/API/BroadcastChannel/messageerror_event
 /ja/docs/Web/API/ByteString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/Web/API/CSSMatrix	/ja/docs/Web/API/DOMMatrix
-/ja/docs/Web/API/CSSOMString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String_a19cd0db4fa65ea1971fadbacdc1280d
+/ja/docs/Web/API/CSSOMString	/ja/docs/Glossary/String
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
 /ja/docs/Web/API/CSS_Painting_API/ガイド	/ja/docs/Web/API/CSS_Painting_API/Guide
 /ja/docs/Web/API/CSS_Typed_Object_Model_API	/ja/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model
@@ -3143,7 +3143,7 @@
 /ja/docs/Web/API/CloseEvent/initCloseEvent	/ja/docs/conflicting/Web/API/CloseEvent
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
-/ja/docs/Web/API/DOMString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab
+/ja/docs/Web/API/DOMString	/ja/docs/Glossary/String
 /ja/docs/Web/API/DOMString/Binary	/ja/docs/conflicting/Web/API/btoa
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
@@ -3499,7 +3499,7 @@
 /ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/conflicting/Web/API/Pointer_events
 /ja/docs/Web/API/UIEvent/layerX	/ja/docs/Web/API/MouseEvent/layerX
 /ja/docs/Web/API/UIEvent/layerY	/ja/docs/Web/API/MouseEvent/layerY
-/ja/docs/Web/API/USVString	/ja/docs/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
+/ja/docs/Web/API/USVString	/ja/docs/Glossary/String
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
@@ -4626,7 +4626,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 /ja/docs/Web/JavaScript/Reference/Global_Objects/null	/ja/docs/Web/JavaScript/Reference/Operators/null
-/ja/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects
+/ja/docs/Web/JavaScript/Reference/Global_Objects/uneval	/ja/docs/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Web/JavaScript/Reference/Global_Properties	/ja/docs/Web/JavaScript/Reference/Global_Objects
 /ja/docs/Web/JavaScript/Reference/Global_Properties/Infinity	/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /ja/docs/Web/JavaScript/Reference/Global_Properties/NaN	/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN
