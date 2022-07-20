@@ -3,181 +3,161 @@ title: 填充与边框
 slug: Web/SVG/Tutorial/Fills_and_Strokes
 translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 ---
-<p>{{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}</p>
+{{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}
 
-<p>现在你掌握的知识已经可以绘制任何图形，下一个目标是给它们上色。在SVG绘图中，可以使用若干方法上色，比如给图形对象增加指定的属性，使用行间CSS，使用CSS嵌入段落，或者使用外部引用的CSS文件。你会发现大部分web上的SVG使用的是行间CSS，但每种方法都有自身的优点和缺点，在不同情况下，应该酌情选择合适的方法。</p>
+现在你掌握的知识已经可以绘制任何图形，下一个目标是给它们上色。在 SVG 绘图中，可以使用若干方法上色，比如给图形对象增加指定的属性，使用行间 CSS，使用 CSS 嵌入段落，或者使用外部引用的 CSS 文件。你会发现大部分 web 上的 SVG 使用的是行间 CSS，但每种方法都有自身的优点和缺点，在不同情况下，应该酌情选择合适的方法。
 
-<h2 id="Fill_and_Stroke_Attributes">fill（填充）和stroke（边框）属性</h2>
+## fill（填充）和 stroke（边框）属性
 
-<h3 id="Painting">上色</h3>
+### 上色
 
-<p>大多数基本的颜色可以使用<code>fill</code>和<code>stroke</code>两个属性来设置。<code>fill</code>设置的是对象的填充色，<code>stroke</code>设置的是对象的边框颜色，你可以使用在HTML中设置CSS颜色的方式定义它们的颜色，比如颜色名（<em>red</em>），<em>rgb</em>值，<em>hex</em>值，<em>rgba</em>值。</p>
+大多数基本的颜色可以使用`fill`和`stroke`两个属性来设置。`fill`设置的是对象的填充色，`stroke`设置的是对象的边框颜色，你可以使用在 HTML 中设置 CSS 颜色的方式定义它们的颜色，比如颜色名（_red_），*rgb*值，*hex*值，*rgba*值。
 
-<pre class="brush:xml;"> &lt;rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
+```xml
+ <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
 
-       fill-opacity="0.5" stroke-opacity="0.8"/&gt;
+       fill-opacity="0.5" stroke-opacity="0.8"/>
+```
 
-</pre>
+此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由` fill-opacity `和` stroke-opacity `两个属性控制。
 
-<p>此外，在SVG中你可以分别定义填充色和边框色的透明度，它们分别由<code> fill-opacity </code>和<code> stroke-opacity </code>两个属性控制。</p>
+> **備註：** FireFox 3+支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和边框/填充的透明度分开使用。如果同时定义了 rgba 值和透明度，它们将被一起调用。
 
-<div class="note"><p><strong>備註：</strong> FireFox 3+支持rgba值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和边框/填充的透明度分开使用。如果同时定义了rgba值和透明度，它们将被一起调用。</p></div>
+### 边框
 
-<h3 id="Stroke">边框</h3>
+除了颜色属性，还有其他一些属性用来控制绘制边框的方式。
 
-<p>除了颜色属性，还有其他一些属性用来控制绘制边框的方式。</p>
+![](/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png)
 
-<p><img src="/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png"></p>
+```xml
+<?xml version="1.0" standalone="no"?>
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
+<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
 
-&lt;svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+  <line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/>
 
-  &lt;line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/&gt;
+  <line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/>
 
-  &lt;line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/&gt;
+  <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/>
 
-  &lt;line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/&gt;
+</svg>
+```
 
-&lt;/svg&gt;</pre>
+我要特别提醒一点，边框是围绕路径绘制的，在上面的例子里，路径是粉色的，边框是黑色的。`stroke-width`属性定义了边框的粗细，如你所见，路径的每一侧都有均匀分布的边框。
 
-<p>我要特别提醒一点，边框是围绕路径绘制的，在上面的例子里，路径是粉色的，边框是黑色的。<code>stroke-width</code>属性定义了边框的粗细，如你所见，路径的每一侧都有均匀分布的边框。</p>
+第二个要介绍的是`stroke-linecap`属性，它控制边框终点的形状。`stroke-linecap`属性的值有三种，`butt`表示用直边结束边框，`square`的效果差不多，但是会稍微超出`path`的范围，超出的大小是`stroke-width`控制的。`round`表示边框的终点是圆角，圆角的半径也是`stroke-width`控制的。
 
-<p>第二个要介绍的是<code>stroke-linecap</code>属性，它控制边框终点的形状。<code>stroke-linecap</code>属性的值有三种，<code>butt</code>表示用直边结束边框，<code>square</code>的效果差不多，但是会稍微超出<code>path</code>的范围，超出的大小是<code>stroke-width</code>控制的。<code>round</code>表示边框的终点是圆角，圆角的半径也是<code>stroke-width</code>控制的。</p>
+还有一个`stroke-linejoin`属性，用来控制两条边框线段之间，用什么方式连接。
 
-<p>还有一个<code>stroke-linejoin</code>属性，用来控制两条边框线段之间，用什么方式连接。</p>
+![](/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png)
 
-<p><img src="/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png"></p>
+```xml
+<?xml version="1.0" standalone="no"?>
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
+<svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
 
-&lt;svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+  <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
 
-  &lt;polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
-
-      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/&gt;
-
-
-
-  &lt;polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20"
-
-      stroke-linecap="round" fill="none" stroke-linejoin="round"/&gt;
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
 
 
 
-  &lt;polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20"
+  <polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20"
 
-      stroke-linecap="square" fill="none" stroke-linejoin="bevel"/&gt;
+      stroke-linecap="round" fill="none" stroke-linejoin="round"/>
 
-&lt;/svg&gt;</pre>
 
-<p>折线是由两个线段连接起来的，连接处的样式由<code>stroke-linejoin</code>属性控制，它有三个可用的值，<code>miter</code>是默认值，表示用方形画笔在连接处形成直角，<code>round</code>表示用圆角连接，实现平滑效果。最后还有一个值<code>bevel</code>，连接处会形成一个斜线。</p>
 
-<p>最后，你可以使用<code>stroke-dasharray</code>属性，将边框定义成虚线。</p>
+  <polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20"
 
-<p><img src="/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png"></p>
+      stroke-linecap="square" fill="none" stroke-linejoin="bevel"/>
 
-<pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
+</svg>
+```
 
-&lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+折线是由两个线段连接起来的，连接处的样式由`stroke-linejoin`属性控制，它有三个可用的值，`miter`是默认值，表示用方形画笔在连接处形成直角，`round`表示用圆角连接，实现平滑效果。最后还有一个值`bevel`，连接处会形成一个斜线。
 
-  &lt;path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
+最后，你可以使用`stroke-dasharray`属性，将边框定义成虚线。
 
-    stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/&gt;
+![](/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png)
 
-  &lt;path d="M 10 75 L 190 75" stroke="red"
+```xml
+<?xml version="1.0" standalone="no"?>
 
-    stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/&gt;
+<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
 
-&lt;/svg&gt;</pre>
+  <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
 
-<p><code>stroke-dasharray</code>属性的参数，是一组用逗号分割的数字组成的序列。需要注意的是，这里的数字必须用逗号分割，虽然也可以插入空格，但是数字之间必须用逗号分开。每一组数字，第一个用来表示实线，第二个用来表示空白。所以在上面的例子里，第二个路径会先画5px实线，紧接着是5px空白，然后又是5px实线，从而形成虚线。如果你想要更复杂的虚线模式，你可以定义更多的数字。上面例子里的第一个，就定义了3个数字，这种情况下，数字会循环两次，形成一个偶数的虚线模式。所以该路径首先是5px实线，然后是10px空白，然后是5px实线，接下来循环这组数字，形成5px空白、10px实线、5px空白。然后这种模式会继续循环。</p>
+    stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
 
-<p>另外还有一些关于填充和边框的属性，包括<code>fill-rule</code>，用于定义如何给图形重叠的区域上色；<code>stroke-miterlimit</code>，定义什么情况下绘制或不绘制边框连接的<code>miter</code>效果；还有<code>stroke-dashoffset</code>，定义虚线开始的位置。</p>
+  <path d="M 10 75 L 190 75" stroke="red"
 
-<h2 id="Using_CSS">使用CSS</h2>
+    stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/>
 
-<p>除了定义对象的属性外，你也可以通过CSS来定义<code>fill</code>和<code>stroke</code>。语法和在html里使用CSS一样，只不过你要把<code>background-color</code>、<code>border</code>改成<code>fill</code>和<code>stroke</code>。注意，不是所有的属性都能用CSS来设置。上色和填充的部分一般是可以用CSS来设置的，比如<code>fill</code>，<code>stroke</code>，<code>stroke-dasharray</code>等，但是不包括下面会提到的渐变和模式等功能。另外，宽、高，以及路径的d命令，都不能用css设置。判断它们能不能用CSS设置还是比较容易的。</p>
+</svg>
+```
 
-<div class="note">
-<p><strong>備註：</strong> <a href="http://www.w3.org/TR/SVG/propidx.html">SVG规范</a>将属性区分成<em>properties</em>和<em>其他attributes</em>，前者是可以用CSS设置的，后者不能。</p></div>
+`stroke-dasharray`属性的参数，是一组用逗号分割的数字组成的序列。需要注意的是，这里的数字必须用逗号分割，虽然也可以插入空格，但是数字之间必须用逗号分开。每一组数字，第一个用来表示实线，第二个用来表示空白。所以在上面的例子里，第二个路径会先画 5px 实线，紧接着是 5px 空白，然后又是 5px 实线，从而形成虚线。如果你想要更复杂的虚线模式，你可以定义更多的数字。上面例子里的第一个，就定义了 3 个数字，这种情况下，数字会循环两次，形成一个偶数的虚线模式。所以该路径首先是 5px 实线，然后是 10px 空白，然后是 5px 实线，接下来循环这组数字，形成 5px 空白、10px 实线、5px 空白。然后这种模式会继续循环。
 
-<p>CSS可以通过style属性插入到元素的行间:</p>
+另外还有一些关于填充和边框的属性，包括`fill-rule`，用于定义如何给图形重叠的区域上色；`stroke-miterlimit`，定义什么情况下绘制或不绘制边框连接的`miter`效果；还有`stroke-dashoffset`，定义虚线开始的位置。
 
-<pre class="brush:xml;"> &lt;rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/&gt;
+## 使用 CSS
 
-</pre>
+除了定义对象的属性外，你也可以通过 CSS 来定义`fill`和`stroke`。语法和在 html 里使用 CSS 一样，只不过你要把`background-color`、`border`改成`fill`和`stroke`。注意，不是所有的属性都能用 CSS 来设置。上色和填充的部分一般是可以用 CSS 来设置的，比如`fill`，`stroke`，`stroke-dasharray`等，但是不包括下面会提到的渐变和模式等功能。另外，宽、高，以及路径的 d 命令，都不能用 css 设置。判断它们能不能用 CSS 设置还是比较容易的。
 
-<p>或者通过&lt;style&gt;设置一段样式段落。在html里这样的段落一般放在里，在svg则放在&lt;a href="/en/SVG/Element/defs" title="en/SVG/Element/defs"&gt;&lt;code&gt;&lt;defs&gt;&lt;/code&gt;&lt;/a&gt;标签里。&lt;code&gt;&lt;defs&gt;&lt;/code&gt;表示定义，这里可以定义一些不会在SVG图形中出现的元素，但是它们可以被其他元素使用。&lt;code&gt;&lt;head&gt;&lt;/code&gt;&lt;/p&gt;
+> **備註：** [SVG 规范](http://www.w3.org/TR/SVG/propidx.html)将属性区分成*properties*和*其他 attributes*，前者是可以用 CSS 设置的，后者不能。
 
-&lt;pre class="brush:xml;"&gt;
+CSS 可以通过 style 属性插入到元素的行间:
 
-&lt;?xml version="1.0" standalone="no"?&gt;
+```xml
+ <rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/>
+```
 
-&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+或者通过\<style>设置一段样式段落。在 html 里这样的段落一般放在里，在 svg 则放在 [`<defs>`](/en/SVG/Element/defs) 标签里。`<defs>` 表示定义，这里可以定义一些不会在 SVG 图形中出现的元素，但是它们可以被其他元素使用。
 
-  &lt;defs&gt;
-
-    &lt;style type="text/css"&gt;&lt;![CDATA[
-
+```xml
+<?xml version="1.0" standalone="no"?>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <style type="text/css"><![CDATA[
        #MyRect {
-
          stroke: black;
-
          fill: red;
-
        }
+    ]]></style>
+  </defs>
+  <rect x="10" height="180" y="10" width="180" id="MyRect"/>
+</svg>
+```
 
-    ]]&gt;&lt;/style&gt;
+通过使用 style 段落你可以更轻易地调整一大组元素的样式，同样你也可以通过 **hover** 这样的伪类来创建翻转之类的效果:
 
-  &lt;/defs&gt;
-
-  &lt;rect x="10" height="180" y="10" width="180" id="MyRect"/&gt;
-
-&lt;/svg&gt;&lt;/pre&gt;
-
-&lt;p&gt;通过使用style段落你可以更轻易地调整一大组元素的样式，同样你也可以通过&lt;strong&gt;hover&lt;/strong&gt;这样的伪类来创建翻转之类的效果:&lt;/p&gt;
-
-&lt;pre class="brush:css;"&gt;
-
- #MyRect:hover {
-
-   stroke: black;
-
-   fill: blue;
-
- }
-
-&lt;/pre&gt;
-
-&lt;p&gt;你最好读一下CSS教程以便掌握它，一些可以在html里使用的css，在svg里可能无法正常工作，比如&lt;code&gt;before&lt;/code&gt;和&lt;code&gt;after&lt;/code&gt;伪类。所以这里需要一点经验。&lt;/p&gt;
-
-&lt;p&gt;你也可以定义一个外部的样式表，但是要符合&lt;a class="external" href="http://www.w3.org/TR/xml-stylesheet/" title="http://www.w3.org/TR/xml-stylesheet/"&gt;normal XML-stylesheet syntax&lt;/a&gt;的CSS规则:&lt;/p&gt;
-
-&lt;pre class="brush:xml;"&gt;
-
-&lt;?xml version="1.0" standalone="no"?&gt;
-
-&lt;?xml-stylesheet type="text/css" href="style.css"?&gt;
-
-
-
-&lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-
-  &lt;rect height="10" width="10" id="MyRect"/&gt;
-
-&lt;/svg&gt;&lt;/pre&gt;
-
-&lt;p&gt;style.css看起来就像这样：&lt;/p&gt;
-
-&lt;pre class="brush:css;"&gt;
-
+```css
 #MyRect {
-
-  fill: red;
-
   stroke: black;
+  fill: red;
+}
+```
 
-}&lt;/pre&gt;
+你最好读一下 CSS 教程以便掌握它，一些可以在 html 里使用的 css，在 svg 里可能无法正常工作，比如 `before` 和 `after` 伪类。所以这里需要一点经验。
 
-&lt;p&gt;{{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}&lt;/p&gt;&lt;/style&gt;</p>
+你也可以定义一个外部的样式表，但是要符合 [normal XML-stylesheet syntax](http://www.w3.org/TR/xml-stylesheet/) 的 CSS 规则:
+
+```xml
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<svg width="200" height="150" xmlns="http\://www\.w3.org/2000/svg" version="1.1">
+<rect height="10" width="10" id="MyRect"/>
+</svg>
+```
+
+style.css 看起来就像这样：
+
+```css
+#MyRect {
+  fill: red;
+  stroke: black;
+}
+```
+
+{{ PreviousNext("SVG/Tutorial/Paths", "SVG/Tutorial/Gradients") }}
