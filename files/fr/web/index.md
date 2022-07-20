@@ -4,6 +4,8 @@ slug: Web
 tags:
   - Landing
   - Web
+l10n:
+  sourceCommit: 44f1c22cb198f99ffdd4e62db3bed2e6c533b29a
 translation_of: Web
 ---
 Le Web fournit d'incroyables opportunités aux développeuses et développeurs. Pour tirer le meilleur parti de ces technologies, il est nécessaire de savoir comment les utiliser. Voici différents liens qui vous permettront de naviguer dans la documentation de ces technologies web.
