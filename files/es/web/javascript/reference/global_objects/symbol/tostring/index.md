@@ -23,7 +23,7 @@ Una cadena que representa el objeto {{jsxref("Symbol")}} especificado.
 
 ## Descripción
 
-El objeto {{jsxref("Symbol")}} anula el método `toString` del objeto {{jsxref("Object")}}; no hereda {{jsxref("Object.prototype.toString()")}}. Para los objetos `Symbol`, el método `toString` devuelve una representación de cadena del objeto.
+El objeto {{jsxref("Symbol")}} reemplaza el método `toString` del objeto {{jsxref("Object")}}; no hereda {{jsxref("Object.prototype.toString()")}}. Para los objetos `Symbol`, el método `toString` devuelve una representación de cadena del objeto.
 
 ### Sin concatenación de cadenas
 
