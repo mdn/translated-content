@@ -11547,6 +11547,12 @@
       "Topppy"
     ]
   },
+  "Web/API/Element/gotpointercapture_event": {
+    "modified": "2019-03-23T22:20:50.816Z",
+    "contributors": [
+      "876843240"
+    ]
+  },
   "Web/API/Element/hasAttribute": {
     "modified": "2019-03-23T23:09:36.135Z",
     "contributors": [
@@ -11656,6 +11662,13 @@
       "Ende93",
       "lingyange",
       "joeliu926"
+    ]
+  },
+  "Web/API/Element/lostpointercapture_event": {
+    "modified": "2019-03-18T21:41:59.901Z",
+    "contributors": [
+      "SphinxKnight",
+      "jvua"
     ]
   },
   "Web/API/Element/matches": {
@@ -13302,12 +13315,6 @@
       "KingMario"
     ]
   },
-  "Web/API/GlobalEventHandlers/ongotpointercapture": {
-    "modified": "2019-03-23T22:20:50.816Z",
-    "contributors": [
-      "876843240"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-23T23:15:22.431Z",
     "contributors": [
@@ -13341,13 +13348,6 @@
     "contributors": [
       "fscholz",
       "EdwinChanFullStack"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onlostpointercapture": {
-    "modified": "2019-03-18T21:41:59.901Z",
-    "contributors": [
-      "SphinxKnight",
-      "jvua"
     ]
   },
   "Web/API/GlobalEventHandlers/onpause": {

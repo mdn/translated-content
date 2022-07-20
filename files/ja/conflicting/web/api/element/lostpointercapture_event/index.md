@@ -1,6 +1,6 @@
 ---
 title: 'HTMLElement: lostpointercapture イベント'
-slug: Web/API/HTMLElement/lostpointercapture_event
+slug: conflicting/Web/API/Element/lostpointercapture_event
 tags:
   - イベント
   - HTML DOM
@@ -8,8 +8,9 @@ tags:
   - NeedsSpecTable
   - PointerEvent
   - リファレンス
-browser-compat: api.HTMLElement.lostpointercapture_event
 translation_of: Web/API/HTMLElement/lostpointercapture_event
+original_slug: Web/API/HTMLElement/lostpointercapture_event
+browser-compat: api.HTMLElement.lostpointercapture_event
 ---
 {{APIRef}}
 

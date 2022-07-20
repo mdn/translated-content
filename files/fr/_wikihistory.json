@@ -13796,6 +13796,12 @@
       "Fredchat"
     ]
   },
+  "Web/API/Element/gotpointercapture_event": {
+    "modified": "2020-10-15T22:16:22.004Z",
+    "contributors": [
+      "fmartin5"
+    ]
+  },
   "Web/API/Element/hasAttribute": {
     "modified": "2019-03-23T23:53:10.754Z",
     "contributors": [
@@ -15036,12 +15042,6 @@
       "Hell_Carlito",
       "FGM",
       "ylerjen"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ongotpointercapture": {
-    "modified": "2020-10-15T22:16:22.004Z",
-    "contributors": [
-      "fmartin5"
     ]
   },
   "Web/API/GlobalEventHandlers/onload": {

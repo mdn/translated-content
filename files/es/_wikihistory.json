@@ -5788,6 +5788,12 @@
       "cguimaraenz"
     ]
   },
+  "Web/API/Element/gotpointercapture_event": {
+    "modified": "2019-03-23T22:25:49.346Z",
+    "contributors": [
+      "SoftwareRVG"
+    ]
+  },
   "Web/API/Element/hasAttribute": {
     "modified": "2019-03-23T22:12:50.721Z",
     "contributors": [
@@ -5848,6 +5854,12 @@
   },
   "Web/API/Element/localName": {
     "modified": "2019-03-23T22:26:08.984Z",
+    "contributors": [
+      "SoftwareRVG"
+    ]
+  },
+  "Web/API/Element/lostpointercapture_event": {
+    "modified": "2019-03-23T22:25:49.190Z",
     "contributors": [
       "SoftwareRVG"
     ]
@@ -6455,24 +6467,12 @@
       "galegosimpatico"
     ]
   },
-  "Web/API/GlobalEventHandlers/ongotpointercapture": {
-    "modified": "2019-03-23T22:25:49.346Z",
-    "contributors": [
-      "SoftwareRVG"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-23T23:33:14.527Z",
     "contributors": [
       "fscholz",
       "khalid32",
       "ehecatl"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onlostpointercapture": {
-    "modified": "2019-03-23T22:25:49.190Z",
-    "contributors": [
-      "SoftwareRVG"
     ]
   },
   "Web/API/HTMLAnchorElement": {

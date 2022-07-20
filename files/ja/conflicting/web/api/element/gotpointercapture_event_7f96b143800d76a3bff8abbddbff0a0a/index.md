@@ -1,6 +1,7 @@
 ---
 title: 'HTMLElement: gotpointercapture イベント'
-slug: Web/API/HTMLElement/gotpointercapture_event
+slug: >-
+  conflicting/Web/API/Element/gotpointercapture_event_7f96b143800d76a3bff8abbddbff0a0a
 tags:
   - イベント
   - HTML DOM
@@ -8,8 +9,9 @@ tags:
   - NeedsSpecTable
   - PointerEvent
   - リファレンス
-browser-compat: api.HTMLElement.gotpointercapture_event
 translation_of: Web/API/HTMLElement/gotpointercapture_event
+original_slug: Web/API/HTMLElement/gotpointercapture_event
+browser-compat: api.HTMLElement.gotpointercapture_event
 ---
 {{APIRef}}
 
