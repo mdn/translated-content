@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorial/Introduction
 translation_of: Web/SVG/Tutorial/Introduction
 ---
 <p>{{ PreviousNext("SVG/Tutorial", "SVG/Tutorial/Getting_Started") }}</p>
-<p><img align="right" alt="" class="internal" src="/@api/deki/files/348/=SVG_Overview.png"><a href="/en/SVG">SVG</a>（Scalable Vector Graphics）是<a href="/en/XML">XML</a>的方言，有点类似XHTML，它可以用来绘制矢量图形，例如右面展示的图形。SVG可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以变形，可以合并，也可以通过滤镜完全改变外观。</p>
+<p><img src="/@api/deki/files/348/=SVG_Overview.png"><a href="/en/SVG">SVG</a>（Scalable Vector Graphics）是<a href="/en/XML">XML</a>的方言，有点类似XHTML，它可以用来绘制矢量图形，例如右面展示的图形。SVG可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以变形，可以合并，也可以通过滤镜完全改变外观。</p>
 <p>SVG于1999年推出，之前有几个相互竞争的格式规范被提交到<a href="http://www.w3.org">W3C</a>，但是都没有完全通过。虽然规范已经出现存在很长时间了，但浏览器实现的进度却比较缓慢，所以目前（2009年）应用在web上的SVG内容并不是很多。即便浏览器实现了一些规范，但实现速度完全不能和竞争技术相比，比如<a href="/en/HTML/Canvas">HTML Canvas</a>和Adobe Flash，都已经实现了成熟的应用接口。但是SVG也有自身的优点，比如它实现了DOM接口（比Canvas方便），不需要安装第三方插件就可以在浏览器中使用（比Flash方便）。当然，是否使用SVG还要取决于你要实现什么。</p>
 <h3 id="基本要素">基本要素</h3>
 <p>HTML提供了定义标题、段落、表格等等内容的元素。与此类似，SVG也提供了一些元素，用于定义圆形、矩形、简单或复杂的曲线，以及其他形状。一个简单的SVG文档只包含<code>svg</code>根元素，以及基本的形状元素。另外还有一个<code>g</code>元素，它用来把若干个基本形状标记成一个组。</p>
