@@ -15,35 +15,35 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 
 <div class="note">
 <p><strong>Note</strong>: Currently WebVR is at an experimental stage (you can find the <a href="http://mozvr.github.io/webvr-spec/webvr.html">latest spec here</a>); it currently works best in Firefox Nightly/Developer Edition, with some aspects of it also working in Google Chrome. Read <a class="external external-icon" href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">Bringing VR to Chrome</a> by Brandon Jones for more details on that.<br>
- 注意：当前 WebVR 还是体验实验阶段（你可以从<a href="http://mozvr.github.io/webvr-spec/webvr.html">这里</a>找到最新规格说明）；它已经在 Firefox Nightly/Developer Edition 的版本上工作的很好了，部分功能也在 Google Chrome 上可以正常工作了。详细请访问由 Brandon Jones 在 <a class="external external-icon" href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">Bringing VR to Chrome</a>提供的更多内容。</p>
+ 注意：当前 WebVR 还是体验实验阶段（你可以从<a href="http://mozvr.github.io/webvr-spec/webvr.html">这里</a>找到最新规格说明）；它已经在 Firefox Nightly/Developer Edition 的版本上工作的很好了，部分功能也在 Google Chrome 上可以正常工作了。详细请访问由 Brandon Jones 在 <a class="external external-icon" href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">Bringing VR to Chrome</a>提供的更多内容。</p>
 </div>
 
 <h2 id="起步">起步</h2>
 
 <p>To get started, you need to have your VR hardware set up as recommended in the owner's manual, and your computer set up as indicated in <a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a>. A dedicated GPU is recommended for smoother performance.<br>
- 你需要先准备好一个已经配置好 VR 硬件，并且还需要完成 <a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR 环境的安装</a>。 当然，若想要保证很平滑的体验，你需要配置一个足够好的 GPU 显卡。</p>
+ 你需要先准备好一个已经配置好 VR 硬件，并且还需要完成 <a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR 环境的安装</a>。 当然，若想要保证很平滑的体验，你需要配置一个足够好的 GPU 显卡。</p>
 
 <p>You also need to have <a href="https://nightly.mozilla.org/">Firefox Nightly</a> (or <a href="https://www.mozilla.org/en-US/firefox/developer/">Developer Edition</a>) installed, along with the <a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR Enabler Add-on</a><br>
- 安装好 <a href="https://nightly.mozilla.org/">Firefox Nightly</a> (或 <a href="https://www.mozilla.org/en-US/firefox/developer/">Developer Edition</a>)，以及 <a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR Enabler Add-on</a></p>
+ 安装好 <a href="https://nightly.mozilla.org/">Firefox Nightly</a> (或 <a href="https://www.mozilla.org/en-US/firefox/developer/">Developer Edition</a>)，以及 <a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR Enabler Add-on</a></p>
 
 <p>Once your environment is set up, try visiting one of our <a href="http://mozvr.com/projects/">MozVR projects</a> and clicking on the "Enter VR" button to test it out.<br>
- 设置好环境后，请尝试访问我们直接可在线运行的工程项目 <a href="http://mozvr.com/projects/">MozVR projects</a> ，点击“Enter VR” 按钮，就可以开始测试你的环境了。</p>
+ 设置好环境后，请尝试访问我们直接可在线运行的工程项目 <a href="http://mozvr.com/projects/">MozVR projects</a> ，点击“Enter VR” 按钮，就可以开始测试你的环境了。</p>
 
 <div class="note">
 <p><strong>Note</strong>: For more in depth information, be sure to check out <a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a>.<br>
- 注意：更深层次的信息，请 check out  <a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a> 以获取更详细的内容。</p>
+ 注意：更深层次的信息，请 check out  <a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">WebVR environment setup</a> 以获取更详细的内容。</p>
 </div>
 
 <div class="note">
 <p><strong>Note</strong>: There are also cheaper options available such as using a mobile device for the head mounted display (in this case you won't have a position sensor available, so you might have to fake the orientation data using the <a href="/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">deviceorientation API</a> instead perhaps.)<br>
- 注意：你也可以使用更便宜的方式，比如使用一个手机设备来实现头部显示功能（只是这种情况下，你将没有空间位置追踪传感器相关的功能，将只能使用姿态角数据相关的 API <a href="/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">deviceorientation API</a> 。）</p>
+ 注意：你也可以使用更便宜的方式，比如使用一个手机设备来实现头部显示功能（只是这种情况下，你将没有空间位置追踪传感器相关的功能，将只能使用姿态角数据相关的 API <a href="/en-US/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes">deviceorientation API</a> 。）</p>
 </div>
 
 <h2 id="Introducing_a_simple_demo_简单示例介绍">Introducing a simple demo<br>
  简单示例介绍</h2>
 
 <p>There are a number of WebVR demos available at the <a href="https://github.com/MozVR/">MozVR team repo</a>, and the <a href="https://github.com/mdn/webvr-tests">MDN webvr-tests repo</a>, but the main one we will be focusing on in this article is our <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice">positionsensorvrdevice</a> demo (<a href="http://mdn.github.io/webvr-tests/positionsensorvrdevice/">view it live</a>):<br>
- 在<a href="https://github.com/MozVR/">MozVR team repo</a>和<a href="https://github.com/mdn/webvr-tests">MDN webvr-tests repo</a>提供了一定数量的 WebVR 示例，在这篇文章里，我们将着重关注我们的 <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice">positionsensorvrdevice</a> 提供的示例 (点此访问 live <a href="http://mdn.github.io/webvr-tests/positionsensorvrdevice/">view it live</a>)</p>
+ 在<a href="https://github.com/MozVR/">MozVR team repo</a>和<a href="https://github.com/mdn/webvr-tests">MDN webvr-tests repo</a>提供了一定数量的 WebVR 示例，在这篇文章里，我们将着重关注我们的 <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice">positionsensorvrdevice</a> 提供的示例 (点此访问 live <a href="http://mdn.github.io/webvr-tests/positionsensorvrdevice/">view it live</a>)</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png" style="display: block; height: 396px; margin: 0px auto; width: 800px;"></p>
 
@@ -77,7 +77,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 </ul>
 
 <p>You can see some very simple code showing the kind of basic device information that can be returned in our <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/vrdevice">vrdevice demo</a>.<br>
- 在 <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/vrdevice">vrdevice demo</a> 中，使用简单代码即可以获取设备基础信息。</p>
+ 在 <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/vrdevice">vrdevice demo</a> 中，使用简单代码即可以获取设备基础信息。</p>
 
 <p>However, what you really want is something that grabs a pair of devices (perhaps many pairs in multiplayer VR games of the future). The following code taken from the WebVR spec (and also used in the <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice">positionsensorvrdevice</a> demo) does the trick pretty well:<br>
  当然，若你需要同时获取多套 VR 设备的信息（可能是将来多个玩家的多套设备），WebVR 说明书中包含的以下代码会更适合你来参考（在 <a href="https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice">positionsensorvrdevice</a> 示例代码中也有使用这段代码逻辑）。</p>
@@ -103,12 +103,12 @@ navigator.getVRDevices().then(function(devices) {
 });</pre>
 
 <p>Here we grab the first instance we find of an {{domxref("HMDVRDevice")}} and store it in the <code>gHMD</code> variable. Next, we grab the first instance we find of a {{domxref("PositionSensorVRDevice")}} and store it in the <code>gPositionSensor</code> variable, but only if its {{domxref("VRDevice.hardWareUnitId")}} property matches that of the <code>gHMD</code> object. Separate devices that are part of the same overall hardware unit will share a hardware unit ID — this is how you check that you've got references to two matching devices.<br>
- 这段代码，先获取第一个找到 {{domxref("HMDVRDevice")}} 类型的对象引用，赋值给 gHMD 变量。若获取到了，然后，再找到一个 {{domxref("PositionSensorVRDevice")}} 类型的对象引用，并且它与 gHMD 的 {{domxref("VRDevice.hardWareUnitId")}} 属性值相同时，即找到配对的对象，赋值给<code>gPositionSensor 变量。同一套设备单元中的多个分离的设备会共享他们的</code> hardware unit ID，可以依此来检测两个设备对象是否是同一套。</p>
+ 这段代码，先获取第一个找到 {{domxref("HMDVRDevice")}} 类型的对象引用，赋值给 gHMD 变量。若获取到了，然后，再找到一个 {{domxref("PositionSensorVRDevice")}} 类型的对象引用，并且它与 gHMD 的 {{domxref("VRDevice.hardWareUnitId")}} 属性值相同时，即找到配对的对象，赋值给<code>gPositionSensor 变量。同一套设备单元中的多个分离的设备会共享他们的</code> hardware unit ID，可以依此来检测两个设备对象是否是同一套。</p>
 
 <h3 id="Initialising_the_app_初始化APP">Initialising the app 初始化 APP</h3>
 
 <p>The scene is rendered on a {{htmlelement("canvas")}} element, created and placed as follows:<br>
- 场景最终是通过 {{htmlelement("canvas")}} 标记元素来显示。canvas 画布可通过以下 JS 代码来创建。</p>
+ 场景最终是通过 {{htmlelement("canvas")}} 标记元素来显示。canvas 画布可通过以下 JS 代码来创建。</p>
 
 <pre class="brush: js">var myCanvas = document.createElement('canvas');
 var ctx = myCanvas.getContext('2d');
@@ -116,7 +116,7 @@ var body = document.querySelector('body');
 body.appendChild(myCanvas);</pre>
 
 <p>Next, we create a new <a href="/en-US/docs/Web/API/HTMLImageElement">image</a> and use a {{event("load")}} event to check that the image is loaded before running <code>draw()</code>, the <a href="/en-US/docs/Games/Anatomy#Building_a_main_loop_in_JavaScript">main loop</a> for our app:<br>
- 然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 {{event("load")}} 事件回调，以检查图片是否已经被正常装载成功。</p>
+ 然后，我们在主渲染循环控制中，先创建一个图片对象，并且在 draw() 方法运行前，监听 {{event("load")}} 事件回调，以检查图片是否已经被正常装载成功。</p>
 
 <pre class="brush: js">var image = new Image();
 image.src = 'firefox.png';
@@ -144,7 +144,7 @@ image.onload = draw;</pre>
 }</pre>
 
 <p>The <a href="/en-US/docs/Web/API/Window">window</a> <code>WIDTH</code> and <code>HEIGHT</code> is resampled on each frame then used to set:<br>
- 在控制每一帧显示输出时，都有重新获取 <a href="/en-US/docs/Web/API/Window">window</a> 窗口当前的宽、高，并依此来调整输出显示：</p>
+ 在控制每一帧显示输出时，都有重新获取 <a href="/en-US/docs/Web/API/Window">window</a> 窗口当前的宽、高，并依此来调整输出显示：</p>
 
 <ul>
  <li>A left and right offset value used to keep the image drawn relative to the center of the left and right eye view. Because we are drawing two half-width copies of the scene, the center of each copy is actually a quarter of the total canvas width in from the edge, in each case.</li>

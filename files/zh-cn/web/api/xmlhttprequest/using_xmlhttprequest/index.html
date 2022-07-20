@@ -12,11 +12,11 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
-<div> {{APIRef("XMLHttpRequest")}}</div>
+<div> {{APIRef("XMLHttpRequest")}}</div>
 
-<p>在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a> 请求以实现网站和服务器之间的数据交换。<code>XMLHttpRequest</code>常见和晦涩的使用情况都将包含在例子中。</p>
+<p>在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a> 请求以实现网站和服务器之间的数据交换。<code>XMLHttpRequest</code>常见和晦涩的使用情况都将包含在例子中。</p>
 
-<p>发送一个 HTTP 请求，需要创建一个 <code>XMLHttpRequest</code> 对象，打开一个 URL，最后发送请求。当所有这些事务完成后，该对象将会包含一些诸如响应主体或 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP status</a> 的有用信息。</p>
+<p>发送一个 HTTP 请求，需要创建一个 <code>XMLHttpRequest</code> 对象，打开一个 URL，最后发送请求。当所有这些事务完成后，该对象将会包含一些诸如响应主体或 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP status</a> 的有用信息。</p>
 
 <pre class="brush: js notranslate">function reqListener () {
   console.log(this.responseText);
@@ -29,7 +29,7 @@ oReq.send();</pre>
 
 <h2 id="请求类型">请求类型</h2>
 
-<p>通过 <code>XMLHttpRequest</code> 生成的请求可以有两种方式来获取数据，异步模式或同步模式。请求的类型是由这个 <code>XMLHttpRequest</code> 对象的 <a href="/zh-CN/docs/Web/API/XMLHttpRequest/open">open()</a> 方法的第三个参数<code>async</code>的值决定的。如果该参数的值为 <code>false</code>，则该 <code>XMLHttpRequest</code>请求以同步模式进行，否则该过程将以异步模式完成。这两种类型请求的详细讨论和指南可以在<a href="/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">同步和异步请求</a>页找到。</p>
+<p>通过 <code>XMLHttpRequest</code> 生成的请求可以有两种方式来获取数据，异步模式或同步模式。请求的类型是由这个 <code>XMLHttpRequest</code> 对象的 <a href="/zh-CN/docs/Web/API/XMLHttpRequest/open">open()</a> 方法的第三个参数<code>async</code>的值决定的。如果该参数的值为 <code>false</code>，则该 <code>XMLHttpRequest</code>请求以同步模式进行，否则该过程将以异步模式完成。这两种类型请求的详细讨论和指南可以在<a href="/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">同步和异步请求</a>页找到。</p>
 
 <div class="note"><strong>注意：</strong>由于对用户体验的负面影响，从 Gecko 30.0{{geckoRelease("30.0")}}版本开始，在主线程上的同步请求已经被弃用。</div>
 
@@ -53,7 +53,7 @@ oReq.send();</pre>
 <div class="note"><strong>注意：</strong> 在 W3C <a class="external" href="http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">XMLHttpRequest</a> 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 <a href="/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> 。本条注意已在英文原文中更新。</div>
 
 <div class="note">
-<p><strong>注意：</strong> <code>XMLHttpRequest</code> 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 <a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> 这篇文章了解相关用法。</p>
+<p><strong>注意：</strong> <code>XMLHttpRequest</code> 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 <a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> 这篇文章了解相关用法。</p>
 </div>
 
 <h3 id="解析和操作包含_HTML_文档的_responseText_属性">解析和操作包含 HTML 文档的 responseText 属性</h3>
@@ -77,9 +77,9 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
 /* ... */
 </pre>
 
-<p>然而，自从 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性目前支持大量附加的内容类型后，已经出现了很多的现代技术，它们使得发送和接收二进制数据变得更加容易。</p>
+<p>然而，自从 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性目前支持大量附加的内容类型后，已经出现了很多的现代技术，它们使得发送和接收二进制数据变得更加容易。</p>
 
-<p>例如，考虑以下代码，它使用 <code>"arraybuffer"</code> 的 <code>responseType</code> 来将远程内容获取到一个存储原生二进制数据的 {{jsxref("ArrayBuffer")}} 对象中。</p>
+<p>例如，考虑以下代码，它使用 <code>"arraybuffer"</code> 的 <code>responseType</code> 来将远程内容获取到一个存储原生二进制数据的 {{jsxref("ArrayBuffer")}} 对象中。</p>
 
 <pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
 
@@ -103,7 +103,7 @@ oReq.send();</pre>
  <dt>{{event("progress")}}</dt>
  <dd>检索的数据量发生了变化。</dd>
  <dt>{{event("load")}}</dt>
- <dd>传输完成，所有数据保存在 <code>response</code> 中。</dd>
+ <dd>传输完成，所有数据保存在 <code>response</code> 中。</dd>
 </dl>
 
 <pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
@@ -539,15 +539,15 @@ print_r($_FILES);</pre>
 
 <pre class="syntaxbox notranslate">AJAXSubmit(myForm);</pre>
 
-<div class="note"><strong>注意：</strong> 该框架使用 {{domxref("FileReader")}} API 进行文件的上传。这是一个较新的 API 并且还未在 IE9 及以下版本的浏览器中实现。因此，使用 AJAX 上传仍是一项<strong>实验性的技术</strong>。如果你不需要上传 二进制文件，该框架在大多数浏览器中运行良好。</div>
+<div class="note"><strong>注意：</strong> 该框架使用 {{domxref("FileReader")}} API 进行文件的上传。这是一个较新的 API 并且还未在 IE9 及以下版本的浏览器中实现。因此，使用 AJAX 上传仍是一项<strong>实验性的技术</strong>。如果你不需要上传 二进制文件，该框架在大多数浏览器中运行良好。</div>
 
-<div class="note"><strong>注意：</strong> 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 <code>FileReader</code> API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">可字符串化</a> 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 <code>FileReader</code> API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 <code>FormData</code> API 来替代。</div>
+<div class="note"><strong>注意：</strong> 发送二进制内容的最佳途径是通过 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 结合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法甚至 <code>FileReader</code> API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法。但是，自从该脚本的目的变成处理 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">可字符串化</a> 的原始数据以来，我们使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法结合 <code>FileReader</code> API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。同样地，上述脚本仅当你处理小文件时行之有效。如果不打算上传二进制内容，就考虑使用 <code>FormData</code> API 来替代。</div>
 
-<div class="note"><strong>注意：</strong> 非标准的 <code>sendAsBinary</code> 方法从 Gecko 31 {{geckoRelease(31)}} 开始将会废弃并且会很快被移除。标准方法 <code>send(Blob data)</code> 将会取而代之。</div>
+<div class="note"><strong>注意：</strong> 非标准的 <code>sendAsBinary</code> 方法从 Gecko 31 {{geckoRelease(31)}} 开始将会废弃并且会很快被移除。标准方法 <code>send(Blob data)</code> 将会取而代之。</div>
 
 <h3 id="使用_FormData_对象">使用 FormData 对象</h3>
 
-<p>{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 <code>XMLHttpRequest</code> 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 <code>submit()</code> 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data". FormData 对象可以被结合 <code>XMLHttpRequest</code> 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequests，请转到 <a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData Objects</a> 页面。为了说教的目的，这里有一个早期的<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest$edit#A_little_vanilla_framework">例子</a>，被转译成了使用<strong> <code>FormData</code> API </strong>的形式。注意以下代码片段：</p>
+<p>{{domxref("XMLHttpRequest.FormData", "FormData")}} 构造函数能使你编译一个键/值对的集合，然后使用 <code>XMLHttpRequest</code> 发送出去。其主要用于发送表格数据，但是也能被单独用来传输表格中用户指定的数据。传输的数据格式与表格使用 <code>submit()</code> 方法发送数据的格式一致，如果该表格的编码类型被设为 "multipart/form-data". FormData 对象可以被结合 <code>XMLHttpRequest</code> 的多种方法利用。例如，想了解如何利用 FormData 与 XMLHttpRequests，请转到 <a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Using FormData Objects</a> 页面。为了说教的目的，这里有一个早期的<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest$edit#A_little_vanilla_framework">例子</a>，被转译成了使用<strong> <code>FormData</code> API </strong>的形式。注意以下代码片段：</p>
 
 <div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: html notranslate">&lt;!doctype html&gt;
@@ -673,7 +673,7 @@ function AJAXSubmit (oFormElement) {
 &lt;/html&gt;</pre>
 </div>
 
-<div class="note"><strong>注意：</strong> 如之前所述，<strong>{{domxref("FormData")}} 对象并不是 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">可字符串化 (stringifiable)</a> 的对象。</strong>如果你想要字符串化一个提交数据，请使用这个 <a href="#A_little_vanilla_framework">早期的纯 AJAX 例子</a>. 同时也要注意，尽管这个例子中有一些 <code>file</code> {{ HTMLElement("input") }} 字段，<strong>但当你通过</strong><strong> <code>FormData</code> API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API</strong>: 文件被自动加载并上传。</div>
+<div class="note"><strong>注意：</strong> 如之前所述，<strong>{{domxref("FormData")}} 对象并不是 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">可字符串化 (stringifiable)</a> 的对象。</strong>如果你想要字符串化一个提交数据，请使用这个 <a href="#A_little_vanilla_framework">早期的纯 AJAX 例子</a>. 同时也要注意，尽管这个例子中有一些 <code>file</code> {{ HTMLElement("input") }} 字段，<strong>但当你通过</strong><strong> <code>FormData</code> API 提交一个表格时，也无须使用 {{domxref("FileReader")}} API</strong>: 文件被自动加载并上传。</div>
 
 <h2 id="获取最后修改日期">获取最后修改日期</h2>
 
@@ -717,7 +717,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
   console.log("The page '" + this.filepath + "' has been changed on " + (new Date(nModif)).toLocaleString() + "!");
 });</pre>
 
-<p>如果你想要了解 <strong><em>当前页面是否发生了改变，</em></strong>请阅读这篇文章：{{domxref("document.lastModified")}}.</p>
+<p>如果你想要了解 <strong><em>当前页面是否发生了改变，</em></strong>请阅读这篇文章：{{domxref("document.lastModified")}}.</p>
 
 <h2 id="跨站的_XMLHttpRequest">跨站的 XMLHttpRequest</h2>
 
@@ -763,7 +763,7 @@ oReq.send(null);</pre>
 
 <h2 id="Worker">Worker</h2>
 
-<p>设置 <code>overrideMimeType</code> 后在 {{domxref("Worker")}} 中无法正常工作，详见 {{bug(678057)}}。其他浏览器也许会以不同的手段处理。</p>
+<p>设置 <code>overrideMimeType</code> 后在 {{domxref("Worker")}} 中无法正常工作，详见 {{bug(678057)}}。其他浏览器也许会以不同的手段处理。</p>
 
 <h2 id="规范">规范</h2>
 

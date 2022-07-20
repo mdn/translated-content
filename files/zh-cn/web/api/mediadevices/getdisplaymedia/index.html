@@ -20,9 +20,9 @@ translation_of: Web/API/MediaDevices/getDisplayMedia
 ---
 <div>{{DefaultAPISidebar("Screen Capture API")}}</div>
 
-<p>这个 {{domxref("MediaDevices")}}  接口的 <code><strong>getDisplayMedia() 方法提示用户去选择和授权捕获展示的内容或部分内容（如一个窗口）在一个</strong></code>  {{domxref("MediaStream")}} 里. 然后，这个媒体流可以通过使用 <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> 被记录或者作为<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 会话的一部分被传输。</p>
+<p>这个 {{domxref("MediaDevices")}}  接口的 <code><strong>getDisplayMedia() 方法提示用户去选择和授权捕获展示的内容或部分内容（如一个窗口）在一个</strong></code>  {{domxref("MediaStream")}} 里. 然后，这个媒体流可以通过使用 <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> 被记录或者作为<a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 会话的一部分被传输。</p>
 
-<p>去 <a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a> 查找更多详情和例子。</p>
+<p>去 <a href="/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture">Using the Screen Capture API</a> 查找更多详情和例子。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/MediaDevices/getDisplayMedia
 <h3 id="参数">参数</h3>
 
 <dl>
- <dt><code>constraints</code> {{optional_inline}}</dt>
+ <dt><code>constraints</code> {{optional_inline}}</dt>
  <dd>一个可选的{{domxref("MediaStreamConstraints")}}对象，它指定了返回的{{domxref("MediaStream")}}的要求。 因为<code>getDisplayMedia()</code>需要视频轨道，所以即使<code>constraints</code> 对象没有明确请求视频轨道，返回的流也会有一个。</dd>
 </dl>
 
@@ -41,7 +41,7 @@ translation_of: Web/API/MediaDevices/getDisplayMedia
 <p>一个被解析为 {{domxref("MediaStream")}} 的 {{jsxref("Promise")}}，其中包含一个视频轨道。视频轨道的内容来自用户选择的屏幕区域以及一个可选的音频轨道。</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> 浏览器对音频的支持程度各不相同，既取决于是否支持，也取决于音频源。点击 <a href="#浏览器兼容性">浏览器兼容性</a> 来查看各个浏览器的支持性。</p>
+<p><strong>Note:</strong> 浏览器对音频的支持程度各不相同，既取决于是否支持，也取决于音频源。点击 <a href="#浏览器兼容性">浏览器兼容性</a> 来查看各个浏览器的支持性。</p>
 </div>
 
 <h3 id="异常">异常</h3>

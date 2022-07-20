@@ -13,7 +13,7 @@ browser-compat: api.Response.arrayBuffer
 ---
 <p>{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
 
-<p> {{domxref("Response")}}上的方法 <strong><code>arrayBuffer()</code></strong> 接受一个 {{domxref("Response")}} 流，并等待其读取完成。它返回一个 promise 实例，并 resolve 一个 {{domxref("ArrayBuffer")}} 对象。</p>
+<p> {{domxref("Response")}}上的方法 <strong><code>arrayBuffer()</code></strong> 接受一个 {{domxref("Response")}} 流，并等待其读取完成。它返回一个 promise 实例，并 resolve 一个 {{domxref("ArrayBuffer")}} 对象。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -33,7 +33,7 @@ browser-compat: api.Response.arrayBuffer
 
 <p>In our <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-array-buffer">fetch array buffer example</a> (run <a href="http://mdn.github.io/fetch-examples/fetch-array-buffer/">fetch array buffer live</a>), we have a Play button. When pressed, the <code>getData()</code> function is run.</p>
 
-<p>In <code>getData()</code> we create a new request using the {{domxref("Request.Request")}} constructor, then use it to fetch an OGG music track. We also use {{domxref("AudioContext.createBufferSource")}} to create an audio buffer source.  When the fetch is successful, we read an {{domxref("ArrayBuffer")}} out of the response using <code>arrayBuffer()</code>, decode the audio data using {{domxref("AudioContext.decodeAudioData")}}, set the decoded data as the audio buffer source's buffer (<code>source.buffer</code>), then connect the source up to the {{domxref("AudioContext.destination")}}.</p>
+<p>In <code>getData()</code> we create a new request using the {{domxref("Request.Request")}} constructor, then use it to fetch an OGG music track. We also use {{domxref("AudioContext.createBufferSource")}} to create an audio buffer source.  When the fetch is successful, we read an {{domxref("ArrayBuffer")}} out of the response using <code>arrayBuffer()</code>, decode the audio data using {{domxref("AudioContext.decodeAudioData")}}, set the decoded data as the audio buffer source's buffer (<code>source.buffer</code>), then connect the source up to the {{domxref("AudioContext.destination")}}.</p>
 
 <p>Once <code>getData()</code> has finished running, we start the audio source playing with <code>start(0)</code>, then disable the play button so it can't be clicked again when it is already playing (this would cause an error.)</p>
 

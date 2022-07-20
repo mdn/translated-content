@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLMediaElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<div>HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素")}}来支持基础的媒体相关的能力，就像 audio 和 video 一样。{{domxref("HTMLVideoElement", "HTML 视频元素")}}和 {{domxref("HTMLAudioElement", "HTML 音频元素")}}元素都继承自此接口。</div>
+<div>HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素")}}来支持基础的媒体相关的能力，就像 audio 和 video 一样。{{domxref("HTMLVideoElement", "HTML 视频元素")}}和 {{domxref("HTMLAudioElement", "HTML 音频元素")}}元素都继承自此接口。</div>
 
 
 
@@ -20,7 +20,7 @@ translation_of: Web/API/HTMLMediaElement
 
 <h2 id="特性">特性</h2>
 
-<p><em>从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, 和 {{domxref("EventTarget")}} 继承属性</em></p>
+<p><em>从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, 和 {{domxref("EventTarget")}} 继承属性</em></p>
 
 <table>
  <thead>
@@ -65,7 +65,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>crossOrigin</code></td>
    <td>{{ domxref("DOMString") }}</td>
-   <td>一个表示媒体元素 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>的{{ domxref("DOMString") }}。从 <a href="/en-US/docs/HTML/CORS_settings_attributes" title="HTML/CORS settings attributes">CORS settings attributes</a> 查看更多详情</td>
+   <td>一个表示媒体元素 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes">CORS 设置</a>的{{ domxref("DOMString") }}。从 <a href="/en-US/docs/HTML/CORS_settings_attributes" title="HTML/CORS settings attributes">CORS settings attributes</a> 查看更多详情</td>
   </tr>
   <tr>
    <td><code>currentSrc</code> {{readonlyinline}}</td>
@@ -85,12 +85,12 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>defaultPlaybackRate</code></td>
    <td><code>double</code></td>
-   <td>控制媒体的播放速度。1.0 表示正常的播放速度，如果值小于 1.0，则播放速度会比”正常速度“慢，如果值大于 1.0，则播放速度会比”正常速度“快。0.0 是一个无效的值，并且会抛出 <code>NOT_SUPPORTED_ERR</code> 错误。</td>
+   <td>控制媒体的播放速度。1.0 表示正常的播放速度，如果值小于 1.0，则播放速度会比”正常速度“慢，如果值大于 1.0，则播放速度会比”正常速度“快。0.0 是一个无效的值，并且会抛出 <code>NOT_SUPPORTED_ERR</code> 错误。</td>
   </tr>
   <tr>
    <td><code>duration </code>{{readonlyinline}}</td>
    <td><code>double</code></td>
-   <td>媒体以秒为单位的总长度时间，如果媒体不可用，则为 0.  如果媒体可用，但时间长度未知，值为 NAN. 如果媒体是以 stream 形式传输并且没有预定长度，则值为 Inf。</td>
+   <td>媒体以秒为单位的总长度时间，如果媒体不可用，则为 0.  如果媒体可用，但时间长度未知，值为 NAN. 如果媒体是以 stream 形式传输并且没有预定长度，则值为 Inf。</td>
   </tr>
   <tr>
    <td><code>ended </code>{{readonlyinline}}</td>
@@ -100,7 +100,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>error </code>{{readonlyinline}}</td>
    <td>{{ domxref("MediaError") }}</td>
-   <td>{{domxref("MediaError")}} 对象表示最近的错误，如果没有错误则值为 <code>null</code>。</td>
+   <td>{{domxref("MediaError")}} 对象表示最近的错误，如果没有错误则值为 <code>null</code>。</td>
   </tr>
   <tr>
    <td><code>initialTime </code>{{readonlyinline}} {{ non-standard_inline() }} {{deprecated_inline}}</td>
@@ -110,7 +110,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>loop</code></td>
    <td>{{domxref("Boolean")}}</td>
-   <td>会映射在 HTML 标签  {{ htmlattrxref("loop", "video") }} 属性 , 决定该媒体是否循环播放。</td>
+   <td>会映射在 HTML 标签  {{ htmlattrxref("loop", "video") }} 属性 , 决定该媒体是否循环播放。</td>
   </tr>
   <tr>
    <td><code>mediaGroup</code></td>
@@ -120,7 +120,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td>mediaKeys {{experimental_inline}}{{readonlyinline}}</td>
    <td>{{domxref("MediaKeys")}}</td>
-   <td>Returns a reference to the {{domxref("MediaKeys")}} interface, which is a set of keys that an associated HTMLMediaElement can use for decription of media data during playback.</td>
+   <td>Returns a reference to the {{domxref("MediaKeys")}} interface, which is a set of keys that an associated HTMLMediaElement can use for decription of media data during playback.</td>
   </tr>
   <tr>
    <td><code>mozAudioChannelType</code> {{ non-standard_inline() }}</td>
@@ -130,7 +130,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>mozChannels </code>{{readonlyinline}} {{ non-standard_inline() }}</td>
    <td><code>long</code></td>
-   <td>声道数 (比如 <code>2</code> 是立体声).<strong> </strong></td>
+   <td>声道数 (比如 <code>2</code> 是立体声).<strong> </strong></td>
   </tr>
   <tr>
    <td><code>mozFrameBufferLength</code> {{ non-standard_inline() }}</td>
@@ -154,7 +154,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>muted</code></td>
    <td>{{domxref("Boolean")}}</td>
-   <td><code>静音时为 true</code> ，否则是<code>false</code> .</td>
+   <td><code>静音时为 true</code> ，否则是<code>false</code> .</td>
   </tr>
   <tr>
    <td><code>networkState</code></td>
@@ -170,7 +170,7 @@ translation_of: Web/API/HTMLMediaElement
       <tr>
        <td><code>NETWORK_EMPTY</code></td>
        <td>0</td>
-       <td>还没数据。<code>readyState</code> 是 <code>HAVE_NOTHING</code>.</td>
+       <td>还没数据。<code>readyState</code> 是 <code>HAVE_NOTHING</code>.</td>
       </tr>
       <tr>
        <td><code>NETWORK_IDLE</code></td>
@@ -237,7 +237,7 @@ translation_of: Web/API/HTMLMediaElement
       <tr>
        <td><code>HAVE_METADATA</code></td>
        <td>1</td>
-       <td>Enough of the media resource has been retrieved that the metadata attributes are initialized.  Seeking will no longer raise an exception.</td>
+       <td>Enough of the media resource has been retrieved that the metadata attributes are initialized.  Seeking will no longer raise an exception.</td>
       </tr>
       <tr>
        <td><code>HAVE_CURRENT_DATA</code></td>
@@ -326,7 +326,7 @@ translation_of: Web/API/HTMLMediaElement
    </td>
    <td>Determines whether the specified media type can be played back.
     <div class="note">
-    <p><strong>Note:</strong> Previously <code>canPlayType('video/webm')</code> returned <code>'probably'</code>. Starting with Gecko 28 {{geckoRelease(28)}}, it returns <code>'maybe'</code>. ({{ bug(884275) }})</p>
+    <p><strong>Note:</strong> Previously <code>canPlayType('video/webm')</code> returned <code>'probably'</code>. Starting with Gecko 28 {{geckoRelease(28)}}, it returns <code>'maybe'</code>. ({{ bug(884275) }})</p>
     </div>
    </td>
   </tr>
@@ -338,7 +338,7 @@ translation_of: Web/API/HTMLMediaElement
   <tr>
    <td><code>load()</code></td>
    <td><code>void</code></td>
-   <td>Reset the media element and restart selecting the media resource.  Any pending events are discarded.  How much media data is fetched is still affected by the <code>preload</code> attribute.  This method can be useful for releasing resources after any <code>src</code> attribute and <code>source</code> element descendants have been removed.  Otherwise, it is usually unnecessary to use this method, unless required to rescan <code>source</code> element children after dynamic changes.</td>
+   <td>Reset the media element and restart selecting the media resource.  Any pending events are discarded.  How much media data is fetched is still affected by the <code>preload</code> attribute.  This method can be useful for releasing resources after any <code>src</code> attribute and <code>source</code> element descendants have been removed.  Otherwise, it is usually unnecessary to use this method, unless required to rescan <code>source</code> element children after dynamic changes.</td>
   </tr>
   <tr>
    <td><code>mozGetMetadata()</code>{{ non-standard_inline() }}</td>
@@ -363,7 +363,7 @@ translation_of: Web/API/HTMLMediaElement
    <td>开始播放。</td>
   </tr>
   <tr>
-   <td>setMediaKeys {{experimental_inline}}</td>
+   <td>setMediaKeys {{experimental_inline}}</td>
    <td>{{jsxref("Promise")}}</td>
    <td>Sets the {{domxref("MediaKeys")}} keys to use when decrypting media during playback.</td>
   </tr>

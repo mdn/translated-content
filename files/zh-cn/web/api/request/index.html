@@ -5,11 +5,11 @@ translation_of: Web/API/Request
 ---
 <div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
 
-<div><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <strong><code>Request</code></strong>接口？用来表示资源请求。</div>
+<div><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <strong><code>Request</code></strong>接口？用来表示资源请求。</div>
 
 
 
-<p>你可以使用  {{domxref("Request.Request()")}} ?构造函数创建一个<code>Request 对象，但是你可能会遇到一个 Request 对象作为其它 API 的操作被返回，比如一个 </code>service worker 的{{domxref("FetchEvent.request")}}。</p>
+<p>你可以使用  {{domxref("Request.Request()")}} ?构造函数创建一个<code>Request 对象，但是你可能会遇到一个 Request 对象作为其它 API 的操作被返回，比如一个 </code>service worker 的{{domxref("FetchEvent.request")}}。</p>
 
 <h2 id="构造器">构造器</h2>
 
@@ -22,12 +22,12 @@ translation_of: Web/API/Request
 
 <dl>
  <dt>{{domxref("Request.method")}} {{readonlyInline}}</dt>
- <dd>包含请求的方法 (<code>GET</code>, <code>POST</code>, 等.)</dd>
+ <dd>包含请求的方法 (<code>GET</code>, <code>POST</code>, 等.)</dd>
  <dt>{{domxref("Request.url")}} {{readonlyInline}}</dt>
  <dd>包含这个请求的 URL。</dd>
  <dt>{{domxref("Request.headers")}} {{readonlyInline}}</dt>
  <dd>包含请求相关的{{domxref("Headers")}}对象。</dd>
- <dt>{{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}</dt>
+ <dt>{{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}</dt>
  <dd>包含请求的上下文 (例如：<code>audio</code>, <code>image</code>, <code>iframe</code>, 等)</dd>
  <dt>{{domxref("Request.referrer")}} {{readonlyInline}}</dt>
  <dd>?包含请求的来源 (例如：<code>client</code>)。</dd>
@@ -40,7 +40,7 @@ translation_of: Web/API/Request
  <dt>{{domxref("Request.redirect")}} {{readonlyinline}}</dt>
  <dd>包含？如何处理重定向模式，它可能是一个<code> follow </code>，<code>error</code>或者<code>manual</code>。</dd>
  <dt>{{domxref("Request.integrity")}} {{readonlyInline}}</dt>
- <dd>包含请求的<a href="/en-US/docs/Web/Security/Subresource_Integrity">子资源的完整性</a>值 (例如： <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
+ <dd>包含请求的<a href="/en-US/docs/Web/Security/Subresource_Integrity">子资源的完整性</a>值 (例如： <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
  <dt>{{domxref("Request.cache")}} {{readonlyInline}}</dt>
  <dd>包含请求的缓存模式 (例如： <code>default</code>, <code>reload</code>, <code>no-cache</code>).</dd>
 </dl>

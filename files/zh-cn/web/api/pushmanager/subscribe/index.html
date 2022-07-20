@@ -5,9 +5,9 @@ translation_of: Web/API/PushManager/subscribe
 ---
 <p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
 
-<p>{{domxref("PushManager")}}  的 <code><strong>subscribe() </strong></code>接口订阅了一个推送服务。</p>
+<p>{{domxref("PushManager")}}  的 <code><strong>subscribe() </strong></code>接口订阅了一个推送服务。</p>
 
-<p>返回一个 {{jsxref("Promise")}} 形式的  {{domxref("PushSubscription")}} 对象，该对象包含了推送订阅详情。如果当前 service worker 没有已存在的订阅，则会创建一个新的推送订阅。</p>
+<p>返回一个 {{jsxref("Promise")}} 形式的  {{domxref("PushSubscription")}} 对象，该对象包含了推送订阅详情。如果当前 service worker 没有已存在的订阅，则会创建一个新的推送订阅。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,14 +20,14 @@ translation_of: Web/API/PushManager/subscribe
  <dd><code>一个包含可选配置参数的对象。包含以下属性：</code>
  <ul>
   <li><code>userVisibleOnly</code>: 布尔值，表示返回的推送订阅将只能被用于对用户可见的消息。</li>
-  <li>applicationServerKey：推送服务器用来向客户端应用发送消息的公钥。该值是应用程序服务器生成的签名密钥对的一部分，可使用在 P-256 曲线上实现的椭圆曲线数字签名（ECDSA）。可以是{{domxref("DOMString")}} 或 {{domxref("ArrayBuffer")}}。</li>
+  <li>applicationServerKey：推送服务器用来向客户端应用发送消息的公钥。该值是应用程序服务器生成的签名密钥对的一部分，可使用在 P-256 曲线上实现的椭圆曲线数字签名（ECDSA）。可以是{{domxref("DOMString")}} 或 {{domxref("ArrayBuffer")}}。</li>
  </ul>
  </dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回 {{domxref("PushSubscription")}} 对象的 {{jsxref("Promise")}}。</p>
+<p>返回 {{domxref("PushSubscription")}} 对象的 {{jsxref("Promise")}}。</p>
 
 <h2 id="示例">示例</h2>
 

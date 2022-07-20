@@ -8,7 +8,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineDashOffset
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>CanvasRenderingContext2D.lineDashOffset</code></strong> 是 Canvas 2D API 设置虚线偏移量的属性，例如可以实现“<a href="http://en.wikipedia.org/wiki/Marching_ants">蚂蚁线</a>“ 的效果。</p>
+<p><strong><code>CanvasRenderingContext2D.lineDashOffset</code></strong> 是 Canvas 2D API 设置虚线偏移量的属性，例如可以实现“<a href="http://en.wikipedia.org/wiki/Marching_ants">蚂蚁线</a>“ 的效果。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,14 +17,14 @@ translation_of: Web/API/CanvasRenderingContext2D/lineDashOffset
 
 <dl>
  <dt><code>value</code></dt>
- <dd>偏移量是 float 精度的数字。初始值为 <code>0.0。</code></dd>
+ <dd>偏移量是 float 精度的数字。初始值为 <code>0.0。</code></dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="使用_lineDashOffset_属性">使用 <code>lineDashOffset</code> 属性</h3>
 
-<p>这是一段简单的代码片段，使用 <code>lineDashOffset</code> 属性绘制虚线。</p>
+<p>这是一段简单的代码片段，使用 <code>lineDashOffset</code> 属性绘制虚线。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -52,8 +52,8 @@ ctx.stroke();
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code" style="height: 120px"&gt;
 ctx.setLineDash([4, 16]);
@@ -95,7 +95,7 @@ window.addEventListener("load", drawCanvas);
 
 <h3 id="Marching_ants">“蚂蚁线”</h3>
 
-<p>”蚂蚁线“效果是一种动画技巧，经常出现在计算机绘图程序的套索工具中。 它能帮助用户根据图片背景动态变化的边界来区分选择的边界。</p>
+<p>”蚂蚁线“效果是一种动画技巧，经常出现在计算机绘图程序的套索工具中。 它能帮助用户根据图片背景动态变化的边界来区分选择的边界。</p>
 
 <div class="hidden">
 <h6 id="HTML_2">HTML</h6>
@@ -108,19 +108,19 @@ var ctx = canvas.getContext("2d");
 var offset = 0;
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10,10, 100, 100);
+  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10,10, 100, 100);
 }
 
 function march() {
-  offset++;
-  if (offset &gt; 16) {
-    offset = 0;
-  }
-  draw();
-  setTimeout(march, 20);
+  offset++;
+  if (offset &gt; 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
 }
 
 march();</pre>

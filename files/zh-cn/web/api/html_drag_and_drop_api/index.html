@@ -90,7 +90,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <p>给应用程序添加 HTML 拖放功能，{{domxref("DragEvent")}} 和 {{domxref("DataTransfer")}} 接口应该是唯二需要的接口（Firefox 给 {{domxref("DataTransfer")}} 添加了一些 Gecko 专有的扩展功能，但这些扩展只在 Firefox 上可用）。</p>
 
-<p>每个 {{domxref("DataTransfer")}} 都包含一个  {{domxref("DataTransfer.items","items")}} 属性，这个属性是 {{domxref("DataTransferItem")}} 对象的 {{domxref("DataTransferItemList","list")}}。一个 {{domxref("DataTransferItem")}} 代表一个拖拽项目，每个项目都有一个 {{domxref("DataTransferItem.kind","kind")}} 属性（<code>string</code> 或 <code>file</code>）和一个表示数据项目 MIME 类型的 {{domxref("DataTransferItem.type","type")}} 属性。{{domxref("DataTransferItem")}} 对象也有获取拖拽项目数据的方法。</p>
+<p>每个 {{domxref("DataTransfer")}} 都包含一个  {{domxref("DataTransfer.items","items")}} 属性，这个属性是 {{domxref("DataTransferItem")}} 对象的 {{domxref("DataTransferItemList","list")}}。一个 {{domxref("DataTransferItem")}} 代表一个拖拽项目，每个项目都有一个 {{domxref("DataTransferItem.kind","kind")}} 属性（<code>string</code> 或 <code>file</code>）和一个表示数据项目 MIME 类型的 {{domxref("DataTransferItem.type","type")}} 属性。{{domxref("DataTransferItem")}} 对象也有获取拖拽项目数据的方法。</p>
 
 <p>{{domxref("DataTransferItemList")}} 对象是 {{domxref("DataTransferItem")}} 对象的列表。这个列表对象包含以下方法：向列表中添加拖拽项，从列表中移除拖拽项和清空列表中所有的拖拽项。</p>
 
@@ -100,7 +100,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <h3 id="Gecko_专用接口">Gecko 专用接口</h3>
 
-<p>Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。 它们是一些帮助实现拖拽多个项目和拖拽非文本内容（如文件）的便捷函数。想要了解更多信息，请参见 <a href="/zh-CN/docs/DragDrop/Dragging_and_Dropping_Multiple_Items">拖放多个项目</a>。另外，请查看 {{domxref("DataTransfer")}} 参考页以获取所有 <a href="/zh-CN/docs/Web/API/DataTransfer#Gecko_properties">Gecko 专有属性</a> 和 <a href="/zh-CN/docs/Web/API/DataTransfer#Gecko_methods">Gecko 专有方法</a>。</p>
+<p>Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。 它们是一些帮助实现拖拽多个项目和拖拽非文本内容（如文件）的便捷函数。想要了解更多信息，请参见 <a href="/zh-CN/docs/DragDrop/Dragging_and_Dropping_Multiple_Items">拖放多个项目</a>。另外，请查看 {{domxref("DataTransfer")}} 参考页以获取所有 <a href="/zh-CN/docs/Web/API/DataTransfer#Gecko_properties">Gecko 专有属性</a> 和 <a href="/zh-CN/docs/Web/API/DataTransfer#Gecko_methods">Gecko 专有方法</a>。</p>
 
 <h2 id="基础">基础</h2>
 
@@ -126,7 +126,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 &lt;p id="p1" draggable="true"&gt;This element is draggable.&lt;/p&gt;</pre>
 
-<p>查看更多 <a href="/zh-CN/docs/Web/HTML/Global_attributes/draggable" title="draggable global attribute">draggable 属性</a> 和 <a href="/zh-CN/docs/Web/Guide/HTML/Drag_operations#draggableattribute">拖拽操作指南</a>。</p>
+<p>查看更多 <a href="/zh-CN/docs/Web/HTML/Global_attributes/draggable" title="draggable global attribute">draggable 属性</a> 和 <a href="/zh-CN/docs/Web/Guide/HTML/Drag_operations#draggableattribute">拖拽操作指南</a>。</p>
 
 <h3 id="定义拖拽数据">定义拖拽数据</h3>
 
@@ -142,7 +142,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 }
 </pre>
 
-<p>查看 <a href="/zh-CN/docs/DragDrop/Recommended_Drag_Types">推荐拖拽类型</a> 了解可拖拽的常见数据类型（如文本、HTML、链接和文件），移步 <a href="/zh-CN/docs/Web/Guide/HTML/Drag_operations#dragdata">拖拽数据</a> 获取更多有关拖拽数据的信息。</p>
+<p>查看 <a href="/zh-CN/docs/DragDrop/Recommended_Drag_Types">推荐拖拽类型</a> 了解可拖拽的常见数据类型（如文本、HTML、链接和文件），移步 <a href="/zh-CN/docs/Web/Guide/HTML/Drag_operations#dragdata">拖拽数据</a> 获取更多有关拖拽数据的信息。</p>
 
 <h3 id="定义拖拽图像">定义拖拽图像</h3>
 
@@ -158,7 +158,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 }
 </pre>
 
-<p>欲了解更多关于拖拽图像的信息，见 <a href="/zh-CN/docs/DragDrop/Drag_Operations#dragfeedback">设置拖拽图像</a>。</p>
+<p>欲了解更多关于拖拽图像的信息，见 <a href="/zh-CN/docs/DragDrop/Drag_Operations#dragfeedback">设置拖拽图像</a>。</p>
 
 <h3 id="定义拖拽效果">定义拖拽效果</h3>
 
@@ -205,7 +205,7 @@ function drop_handler(ev) {
 
 <p>注意每个处理程序调用 {{domxref("Event.preventDefault","preventDefault()")}} 来阻止对这个事件的其它处理过程（如触点事件或指针事件）。</p>
 
-<p>欲了解更多信息，参见 <a href="/zh-CN/docs/Web/Guide/HTML/Drag_operations#droptargets">指定释放目标</a>。</p>
+<p>欲了解更多信息，参见 <a href="/zh-CN/docs/Web/Guide/HTML/Drag_operations#droptargets">指定释放目标</a>。</p>
 
 <h3 id="处理放置效果">处理放置效果</h3>
 
@@ -235,17 +235,17 @@ function drop_handler(ev) {
 &lt;div id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"&gt;Drop Zone&lt;/div&gt;
 </pre>
 
-<p>更多信息请参见 <a href="/zh-CN/docs/Web/Guide/HTML/Drag_operations#drop">执行释放</a>。</p>
+<p>更多信息请参见 <a href="/zh-CN/docs/Web/Guide/HTML/Drag_operations#drop">执行释放</a>。</p>
 
 <h3 id="拖拽结束">拖拽结束</h3>
 
 <p>拖拽操作结束时，在源元素（开始拖拽时的目标元素）上触发 {{event("dragend")}} 事件。不管拖拽是完成还是被取消这个事件都会被触发。{{event("dragend")}} 事件处理程序可以检查{{domxref("DataTransfer.dropEffect","dropEffect")}} 属性的值来确认拖拽成功与否。</p>
 
-<p>更多关于处理拖拽结束的信息请参见 <a href="/zh-CN/docs/DragDrop/Drag_Operations#dragend">结束拖拽</a>。</p>
+<p>更多关于处理拖拽结束的信息请参见 <a href="/zh-CN/docs/DragDrop/Drag_Operations#dragend">结束拖拽</a>。</p>
 
 <h2 id="互操作性">互操作性</h2>
 
-<p>在 <a href="/zh-CN/docs/Web/API/DataTransferItem#Browser_compatibility">数据交换对象接口的浏览器兼容性表</a> 中可以看到拖放在桌面浏览器中相对支持得比较完整（除了 {{domxref("DataTransferItem")}} 和 {{domxref("DataTransferItemList")}} 接口支持得较少）。这个数据也显示出拖放操作在移动浏览器中支持得非常弱。</p>
+<p>在 <a href="/zh-CN/docs/Web/API/DataTransferItem#Browser_compatibility">数据交换对象接口的浏览器兼容性表</a> 中可以看到拖放在桌面浏览器中相对支持得比较完整（除了 {{domxref("DataTransferItem")}} 和 {{domxref("DataTransferItemList")}} 接口支持得较少）。这个数据也显示出拖放操作在移动浏览器中支持得非常弱。</p>
 
 <h2 id="示例和演示">示例和演示</h2>
 
@@ -254,7 +254,7 @@ function drop_handler(ev) {
  <li><a href="http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html">使用 <code>DataTransferListItem</code> 接口拷贝和移动元素</a></li>
  <li>拖放文件；仅 Firefox 支持：<a class="external" href="http://jsfiddle.net/9C2EF/" title="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
  <li>拖放文件；所有浏览器支持：<a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output" title="https://jsbin.com/hiqasek">https://jsbin.com/hiqasek/</a></li>
- <li>使用了拖放 API 的停车小页面：<a href="https://park.glitch.me/">https://park.glitch.me/</a> （在 <a href="https://glitch.com/edit/#!/park">这里</a> 编辑）</li>
+ <li>使用了拖放 API 的停车小页面：<a href="https://park.glitch.me/">https://park.glitch.me/</a> （在 <a href="https://glitch.com/edit/#!/park">这里</a> 编辑）</li>
 </ul>
 
 <h2 id="规范">规范</h2>

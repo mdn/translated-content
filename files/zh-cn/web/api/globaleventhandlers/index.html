@@ -7,10 +7,10 @@ translation_of: Web/API/GlobalEventHandlers
 <div>{{ ApiRef("HTML DOM") }}</div>
 </div>
 
-<p><strong><code>GlobalEventHandlers</code></strong> 描述了一系列 web worker 的事件接口 {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}, 或 {{domxref("WorkerGlobalScope")}}。这里面的每一个接口都可以添加更多的事件句柄。</p>
+<p><strong><code>GlobalEventHandlers</code></strong> 描述了一系列 web worker 的事件接口 {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}, 或 {{domxref("WorkerGlobalScope")}}。这里面的每一个接口都可以添加更多的事件句柄。</p>
 
 <div class="blockIndicator note">
-<p>Note:<code>GlobalEventHandlers</code> 是一个混入对象 (mixin) 而不是一个真正的接口，所以无法创建直接基于<code>GlobalEventHandlers</code> 的对象。</p>
+<p>Note:<code>GlobalEventHandlers</code> 是一个混入对象 (mixin) 而不是一个真正的接口，所以无法创建直接基于<code>GlobalEventHandlers</code> 的对象。</p>
 </div>
 
 <h2 id="属性">属性</h2>
@@ -19,19 +19,19 @@ translation_of: Web/API/GlobalEventHandlers
 
 <h3 id="Event_handlers">Event handlers</h3>
 
-<p>这些事件定义在 {{domxref("GlobalEventHandlers")}} 中，并被混入和实现在{{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}上，任意 html 元素、document 对象，window 对象上均可以使用它提供的属性， 即时是全局的{{domxref("WorkerGlobalScope")}}。</p>
+<p>这些事件定义在 {{domxref("GlobalEventHandlers")}} 中，并被混入和实现在{{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}}上，任意 html 元素、document 对象，window 对象上均可以使用它提供的属性， 即时是全局的{{domxref("WorkerGlobalScope")}}。</p>
 
 <dl>
  <dt>{{domxref("GlobalEventHandlers.onabort")}}</dt>
- <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当停止{{event("abort")}} 事件触发时会被调用。</dd>
+ <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当停止{{event("abort")}} 事件触发时会被调用。</dd>
  <dt>{{domxref("GlobalEventHandlers.onanimationcancel")}} {{Non-standard_inline}}</dt>
- <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当 CSS 动画取消{{event("animationcancel")}}事件触发时被调用，这表示某个正在执行的 CSS 动画被取消了。</dd>
+ <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当 CSS 动画取消{{event("animationcancel")}}事件触发时被调用，这表示某个正在执行的 CSS 动画被取消了。</dd>
  <dt>{{domxref("GlobalEventHandlers.onanimationend")}} {{Non-standard_inline}}</dt>
- <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当 CSS 动画播放完成{{event("animationend")}} 事件触发时被调用，这表示某个 CSS 动画已经播放完成了。</dd>
+ <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当 CSS 动画播放完成{{event("animationend")}} 事件触发时被调用，这表示某个 CSS 动画已经播放完成了。</dd>
  <dt>{{domxref("GlobalEventHandlers.onblur")}}</dt>
- <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当失去焦点 {{event("blur")}} 事件触发时会被调用。</dd>
+ <dd>这是一个事件句柄 {{event("Event_handlers", "event handler")}} ，当失去焦点 {{event("blur")}} 事件触发时会被调用。</dd>
  <dt>{{domxref("GlobalEventHandlers.onerror")}}</dt>
- <dd>这是一个错误发生时的事件句柄 {{event("Event_handlers", "event handler")}} ，当发生错误{{event("error")}} 事件时会被调用。</dd>
+ <dd>这是一个错误发生时的事件句柄 {{event("Event_handlers", "event handler")}} ，当发生错误{{event("error")}} 事件时会被调用。</dd>
  <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
  <dd>Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("focus")}} event is raised.</dd>
  <dt>{{domxref("GlobalEventHandlers.oncancel")}}</dt>

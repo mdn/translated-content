@@ -32,7 +32,7 @@ original_slug: Server-sent_events/Using_server-sent_events
 
 <pre class="notranslate">const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );</pre>
 
-<p>一旦你成功初始化了一个事件源，就可以对 {{event("message")}} 事件添加一个处理函数开始监听从服务器发出的消息了：</p>
+<p>一旦你成功初始化了一个事件源，就可以对 {{event("message")}} 事件添加一个处理函数开始监听从服务器发出的消息了：</p>
 
 <pre class="brush: js notranslate">evtSource.onmessage = function(event) {
   const newElement = document.createElement("li");
@@ -56,7 +56,7 @@ original_slug: Server-sent_events/Using_server-sent_events
 <p>这段代码也类似，只是只有在服务器发送的消息中包含一个值为"ping"的<code>event</code>字段的时候才会触发对应的处理函数，也就是将<code>data</code>字段的字段值解析为 JSON 数据，然后在页面上显示出所需要的内容。</p>
 
 <div class="blockIndicator warning">
-<p>当<strong>不通过 HTTP / 2 使用时</strong>，SSE（server-sent events）会受到最大连接数的限制，这在打开各种选项卡时特别麻烦，因为该限制是针对每个浏览器的，并且被设置为一个非常低的数字（6）。该问题在 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>中被标记为“无法解决”。此限制是针对每个浏览器 + 域的，因此这意味着您可以跨所有选项卡打开 6 个 SSE 连接到 www.example1.com，并打开 6 个 SSE 连接到 www.example2.com。（来自 <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>）。使用 HTTP / 2 时，HTTP 同一时间内的最大连接数由服务器和客户端之间协商（默认为 100）。</p>
+<p>当<strong>不通过 HTTP / 2 使用时</strong>，SSE（server-sent events）会受到最大连接数的限制，这在打开各种选项卡时特别麻烦，因为该限制是针对每个浏览器的，并且被设置为一个非常低的数字（6）。该问题在 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>中被标记为“无法解决”。此限制是针对每个浏览器 + 域的，因此这意味着您可以跨所有选项卡打开 6 个 SSE 连接到 www.example1.com，并打开 6 个 SSE 连接到 www.example2.com。（来自 <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>）。使用 HTTP / 2 时，HTTP 同一时间内的最大连接数由服务器和客户端之间协商（默认为 100）。</p>
 </div>
 
 <h2 id="服务器端如何发送事件流">服务器端如何发送事件流</h2>
@@ -92,7 +92,7 @@ while (true) {
   sleep(1);
 }</pre>
 
-<p>上面的代码会让服务器每隔一秒生成一个事件流并返回，其中每条消息的事件类型为"ping",数据字段都使用了 JSON 格式，数组字段中包含了每个事件流生成时的 ISO 8601 时间戳。而且会随机返回一些无事件类型的消息。</p>
+<p>上面的代码会让服务器每隔一秒生成一个事件流并返回，其中每条消息的事件类型为"ping",数据字段都使用了 JSON 格式，数组字段中包含了每个事件流生成时的 ISO 8601 时间戳。而且会随机返回一些无事件类型的消息。</p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: 您可以在 github 上找到以上代码的完整示例—参见<a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Simple SSE demo using PHP.</a></p>
@@ -114,7 +114,7 @@ while (true) {
 
 <h2 id="事件流格式">事件流格式</h2>
 
-<p>事件流仅仅是一个简单的文本数据流，文本应该使用 <a href="/zh-CN/docs/Glossary/UTF-8">UTF-8</a> 格式的编码。每条消息后面都由一个空行作为分隔符.以冒号开头的行为注释行，会被忽略。</p>
+<p>事件流仅仅是一个简单的文本数据流，文本应该使用 <a href="/zh-CN/docs/Glossary/UTF-8">UTF-8</a> 格式的编码。每条消息后面都由一个空行作为分隔符.以冒号开头的行为注释行，会被忽略。</p>
 
 <div class="note"><strong>注：</strong>注释行可以用来防止连接超时，服务器可以定期发送一条消息注释行，以保持连接不断。</div>
 
@@ -150,7 +150,7 @@ while (true) {
 data: some text
 
 data: another message
-data: with two lines
+data: with two lines
 </pre>
 
 <h4 id="命名事件">命名事件</h4>
@@ -161,13 +161,13 @@ data: with two lines
 data: {"username": "bobby", "time": "02:33:48"}
 
 event: usermessage
-data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
-event: userdisconnect
+event: userdisconnect
 data: {"username": "bobby", "time": "02:34:23"}
 
 event: usermessage
-data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
 </pre>
 
 <h4 id="混合两种事件">混合两种事件</h4>
@@ -178,10 +178,10 @@ data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
 data: {"username": "bobby", "time": "02:33:48"}
 
 data: Here's a system message of some kind that will get used
-data: to accomplish some task.
+data: to accomplish some task.
 
 event: usermessage
-data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 </pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>

@@ -10,9 +10,9 @@ translation_of: Web/API/CDATASection
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code><strong>CDATASection</strong></code> 接口用于表示 CDATA 片段（CDATA section）。在 XML 中， CDATA 可以直接包含未经转义的文本。比如 <code>&lt;</code> 和 <code>&amp;</code>，只要位于 CDATA 片段中，它们就不需要被转义，保持原样就可以了。</p>
+<p><code><strong>CDATASection</strong></code> 接口用于表示 CDATA 片段（CDATA section）。在 XML 中， CDATA 可以直接包含未经转义的文本。比如 <code>&lt;</code> 和 <code>&amp;</code>，只要位于 CDATA 片段中，它们就不需要被转义，保持原样就可以了。</p>
 
-<p>在 XML 中，一个 CDATA 片段格式如下：</p>
+<p>在 XML 中，一个 CDATA 片段格式如下：</p>
 
 <pre class="syntaxbox">&lt;![CDATA[  ... ]]&gt;
 </pre>
@@ -22,7 +22,7 @@ translation_of: Web/API/CDATASection
 <pre class="brush:xml">&lt;foo&gt;这是一个CDATA section: &lt;![CDATA[  &lt; &gt; &amp; ]]&gt; 其中包含了一些没有转义的字符。 &lt;/foo&gt;
 </pre>
 
-<p>唯一的例外就是，在一个 CDATA 片段中不可以使用  CDATA 片段本身的闭合标签片段:</p>
+<p>唯一的例外就是，在一个 CDATA 片段中不可以使用  CDATA 片段本身的闭合标签片段:</p>
 
 <pre class="brush:xml">&lt;![CDATA[  ]]&gt; 会引发错误   ]]&gt;
 </pre>
@@ -33,7 +33,7 @@ translation_of: Web/API/CDATASection
 
 <h2 id="属性">属性</h2>
 
-<p>这个接口没有特有的属性，但实现了父接口<em> {{domxref("Text")}}</em> 的属性。</p>
+<p>这个接口没有特有的属性，但实现了父接口<em> {{domxref("Text")}}</em> 的属性。</p>
 
 <h2 id="方法">方法</h2>
 

@@ -12,7 +12,7 @@ translation_of: Web/API/MessageEvent
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>  <code><strong>MessageEvent</strong></code>  是接口代表一段被目标对象接收的消息。</p>
+<p>  <code><strong>MessageEvent</strong></code>  是接口代表一段被目标对象接收的消息。</p>
 
 <p>用来代表下列情况的消息</p>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/MessageEvent
 
 <dl>
  <dt>{{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}</dt>
- <dd>创建一个新的 <strong>消息事件 </strong>。</dd>
+ <dd>创建一个新的 <strong>消息事件 </strong>。</dd>
 </dl>
 
 <h2 id="Attributes">属性</h2>
@@ -45,7 +45,7 @@ translation_of: Web/API/MessageEvent
  <dt>{{domxref("MessageEvent.data")}} {{ReadonlyInline}}</dt>
  <dd>返回 {{domxref("DOMString")}}, {{domxref("Blob")}} 或者 {{domxref("ArrayBuffer")}}，包含来自发送者的数据。</dd>
  <dt>{{domxref("MessageEvent.origin")}}</dt>
- <dd> 返回一个表示消息发送者来源的{{domxref("USVString")}} </dd>
+ <dd> 返回一个表示消息发送者来源的{{domxref("USVString")}} </dd>
  <dt>{{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}</dt>
  <dd>{{domxref("DOMString")}} representing a unique ID for the event.</dd>
  <dt>{{domxref("MessageEvent.source")}}</dt>
@@ -63,7 +63,7 @@ translation_of: Web/API/MessageEvent
  <dd>… <strong>不要再使用</strong>: 使用 {{domxref("MessageEvent.MessageEvent", "MessageEvent()")}}。</dd>
 </dl>
 
-<p> </p>
+<p> </p>
 
 <h2 id="示例">示例</h2>
 
@@ -77,7 +77,7 @@ translation_of: Web/API/MessageEvent
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">myWorker.port.start();</code></pre>
 
-<p>当端口被打开，两份脚本各自都可用 <code>port.postMessage()</code> 向 worker 传消息并用  <code>port.onmessage</code>处理它（worker）传来的消息：</p>
+<p>当端口被打开，两份脚本各自都可用 <code>port.postMessage()</code> 向 worker 传消息并用  <code>port.onmessage</code>处理它（worker）传来的消息：</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">first.onchange = function() {
   myWorker.port.postMessage([first.value,second.value]);

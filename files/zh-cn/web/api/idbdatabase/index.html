@@ -8,7 +8,7 @@ translation_of: Web/API/IDBDatabase
 <p>{{APIRef("IndexedDB")}}</p>
 
 <div>
-<p>IndexedDB 中的 <strong><code>IDBDatabase</code></strong> 接口提供一个到 <a href="/en-US/docs/IndexedDB#database_connection">数据库的连接</a>; 你可以使用 <code>IDBDatabase</code> 对象在数据库中打开一个<a href="/en-US/docs/IndexedDB#gloss_transaction">transaction</a> , 然后进行操作或者删除数据库中的对象。这是唯一一个能够访问和管理数据库版本的接口。 </p>
+<p>IndexedDB 中的 <strong><code>IDBDatabase</code></strong> 接口提供一个到 <a href="/en-US/docs/IndexedDB#database_connection">数据库的连接</a>; 你可以使用 <code>IDBDatabase</code> 对象在数据库中打开一个<a href="/en-US/docs/IndexedDB#gloss_transaction">transaction</a> , 然后进行操作或者删除数据库中的对象。这是唯一一个能够访问和管理数据库版本的接口。 </p>
 
 
 
@@ -20,7 +20,7 @@ translation_of: Web/API/IDBDatabase
 </div>
 
 <div class="note">
-<p><strong>注意</strong>：请注意，从 Firefox 40 开始，IndexedDB 事务具有宽松的持久性保证以提高性能（请参阅<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" rel="noopener" title="FIXED: Switch IndexedDB transactions to be non-durable by default">bug 1112702</a>）以前在<code>readwrite</code>事务中<a class="new" href="/zh-CN/docs/Web/API/IDBTransaction/oncomplete" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.oncomplete</code></a>被触发只有当所有数据都保证已刷新到磁盘时。在 Firefox 40+ 中，<code>complete</code>事件在操作系统被告知写入数据之后被触发，但可能在该数据实际上被刷新到磁盘之前。该<code>complete</code>因此，事件可以比以前更快地传递，但是，如果操作系统崩溃或者在将数据刷新到磁盘之前系统电源丢失，则整个事务将丢失的可能性很小。由于这种灾难性事件很少见，大多数消费者不应该进一步关注自己。如果由于某种原因必须确保持久性（例如，您要存储以后无法重新计算的关键数据），则可以<code>complete</code>通过使用实验（非标准）<code>readwriteflush</code>模式创建事务来强制事务在传递事件之前刷新到磁盘（请参阅<a class="new" href="/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction</code></a>）。</p>
+<p><strong>注意</strong>：请注意，从 Firefox 40 开始，IndexedDB 事务具有宽松的持久性保证以提高性能（请参阅<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" rel="noopener" title="FIXED: Switch IndexedDB transactions to be non-durable by default">bug 1112702</a>）以前在<code>readwrite</code>事务中<a class="new" href="/zh-CN/docs/Web/API/IDBTransaction/oncomplete" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.oncomplete</code></a>被触发只有当所有数据都保证已刷新到磁盘时。在 Firefox 40+ 中，<code>complete</code>事件在操作系统被告知写入数据之后被触发，但可能在该数据实际上被刷新到磁盘之前。该<code>complete</code>因此，事件可以比以前更快地传递，但是，如果操作系统崩溃或者在将数据刷新到磁盘之前系统电源丢失，则整个事务将丢失的可能性很小。由于这种灾难性事件很少见，大多数消费者不应该进一步关注自己。如果由于某种原因必须确保持久性（例如，您要存储以后无法重新计算的关键数据），则可以<code>complete</code>通过使用实验（非标准）<code>readwriteflush</code>模式创建事务来强制事务在传递事件之前刷新到磁盘（请参阅<a class="new" href="/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction</code></a>）。</p>
 </div>
 
 <h2 id="方法">方法</h2>
@@ -33,18 +33,18 @@ translation_of: Web/API/IDBDatabase
  <dt>{{domxref("IDBDatabase.createObjectStore()")}}</dt>
  <dd>创建并返回一个新的 object store 或者 index。</dd>
  <dt>{{domxref("IDBDatabase.deleteObjectStore()")}}</dt>
- <dd>根据给定的名字，删除在当前连接的数据库中的 object store 和 相关的索引。 </dd>
+ <dd>根据给定的名字，删除在当前连接的数据库中的 object store 和 相关的索引。 </dd>
  <dt>{{domxref("IDBDatabase.transaction()")}}</dt>
- <dd>立即返回一个包含{{domxref("IDBTransaction.objectStore")}} 方法的 transaction 对象。你可以用这个对象来操作 object store。这个操作是在一个单独的线程中执行的。</dd>
+ <dd>立即返回一个包含{{domxref("IDBTransaction.objectStore")}} 方法的 transaction 对象。你可以用这个对象来操作 object store。这个操作是在一个单独的线程中执行的。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("IDBDatabase.name")}} {{readonlyInline}}</dt>
- <dd>{{ domxref("DOMString") }}类型，当前连接数据库名  。</dd>
+ <dd>{{ domxref("DOMString") }}类型，当前连接数据库名  。</dd>
  <dt>{{domxref("IDBDatabase.version")}} {{readonlyInline}}</dt>
- <dd><a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit </a>整型数，当前连接数据库的版本 。当数据第一次被创建时，这个属性是一个空的字符串。 </dd>
+ <dd><a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit </a>整型数，当前连接数据库的版本 。当数据第一次被创建时，这个属性是一个空的字符串。 </dd>
  <dt>{{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}</dt>
  <dd>{{ domxref("DOMStringList") }}类型，当前连接连接数据库中所有的 object store 名字列表。</dd>
 </dl>
@@ -60,13 +60,13 @@ translation_of: Web/API/IDBDatabase
  <dd>
  <p>当数据库结构发生更改时触发</p>
 
- <p>({{domxref("IDBOpenDBRequest.onupgradeneeded")}}事件或在其他地方请求<code> </code>{{domxref("IDBFactory.deleteDatabase")}} 时（最可能在同一台计算机上的另一个窗口/选项卡中）这与版本更改事务（请参阅参考资料{{domxref("IDBVersionChangeEvent")}}) 不同，但它是相关的。</p>
+ <p>({{domxref("IDBOpenDBRequest.onupgradeneeded")}}事件或在其他地方请求<code> </code>{{domxref("IDBFactory.deleteDatabase")}} 时（最可能在同一台计算机上的另一个窗口/选项卡中）这与版本更改事务（请参阅参考资料{{domxref("IDBVersionChangeEvent")}}) 不同，但它是相关的。</p>
  </dd>
 </dl>
 
 <h2 id="example">示例</h2>
 
-<p>在下面的代码中，异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件，如果触发了 upgrade 事件就需要创建一个新的 object store  ({{ domxref("IDBdatabase") }})。如果想看完整的例子，可以使用 <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> 应用 (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>在下面的代码中，异步打开了一个数据库连接 ({{domxref("IDBFactory")}}), 并处理成功或者异常事件，如果触发了 upgrade 事件就需要创建一个新的 object store  ({{ domxref("IDBdatabase") }})。如果想看完整的例子，可以使用 <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> 应用 (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush: js;highlight:[13,24,26,27,28,32] notranslate">
 // 我们先打开一个数据库
@@ -138,4 +138,4 @@ translation_of: Web/API/IDBDatabase
  <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>
 
-<p> </p>
+<p> </p>

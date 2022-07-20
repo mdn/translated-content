@@ -5,7 +5,7 @@ translation_of: Web/API/Request/cache
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p><strong><code>cache</code></strong> 作为{{domxref("Request")}} 接口只读属性包含着请求的缓存模式。它控制着请求以何种方式与浏览器的  <a href="/en-US/docs/Web/HTTP/Caching">HTTP </a>缓存进行交互。</p>
+<p><strong><code>cache</code></strong> 作为{{domxref("Request")}} 接口只读属性包含着请求的缓存模式。它控制着请求以何种方式与浏览器的  <a href="/en-US/docs/Web/HTTP/Caching">HTTP </a>缓存进行交互。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -19,8 +19,8 @@ translation_of: Web/API/Request/cache
  <li><code>default</code> — 浏览器从 HTTP 缓存中寻找匹配的请求。
 
   <ul>
-   <li>如果缓存匹配上并且有效（ <a href="/en-US/docs/Web/HTTP/Caching#Freshness">fresh</a>）, 它将直接从缓存中返回资源。</li>
-   <li>如果缓存匹配上但已经过期 ，浏览器将会使用传统（ <a href="/en-US/docs/Web/HTTP/Conditional_requests">conditional request</a> ）的请求方式去访问远程服务器 。如果服务器端显示资源没有改动，它将从缓存中返回资源。否则，如果服务器显示资源变动，那么重新从服务器下载资源更新缓存。</li>
+   <li>如果缓存匹配上并且有效（ <a href="/en-US/docs/Web/HTTP/Caching#Freshness">fresh</a>）, 它将直接从缓存中返回资源。</li>
+   <li>如果缓存匹配上但已经过期 ，浏览器将会使用传统（ <a href="/en-US/docs/Web/HTTP/Conditional_requests">conditional request</a> ）的请求方式去访问远程服务器 。如果服务器端显示资源没有改动，它将从缓存中返回资源。否则，如果服务器显示资源变动，那么重新从服务器下载资源更新缓存。</li>
    <li>如果缓存没有匹配，浏览器将会以普通方式请求，并且更新已经下载的资源缓存。</li>
   </ul>
  </li>
@@ -43,7 +43,7 @@ translation_of: Web/API/Request/cache
    <li>如果有匹配项 (新的或旧的)，则从缓存中返回。</li>
    <li>如果没有匹配，浏览器将返回一个错误。</li>
   </ul>
-  The <code>"only-if-cached"</code> mode can only be used if the request's <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/mode">mode</a></code> is <code>"same-origin"</code>. Cached redirects will be followed if the request's <code>redirect</code> property is <code>"follow"</code> and the redirects do not violate the <code>"same-origin"</code> mode.</li>
+  The <code>"only-if-cached"</code> mode can only be used if the request's <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/mode">mode</a></code> is <code>"same-origin"</code>. Cached redirects will be followed if the request's <code>redirect</code> property is <code>"follow"</code> and the redirects do not violate the <code>"same-origin"</code> mode.</li>
 </ul>
 
 <h2 id="Example">Example</h2>

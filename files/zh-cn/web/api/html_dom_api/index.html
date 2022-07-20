@@ -378,7 +378,7 @@ nameField.addEventListener("input", event =&gt; {
   }
 });</pre>
 
-<p>This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are <code>userName</code> and <code>sendButton</code>.  With these, we can access the properties and methods that provide information about and grant control over these elements.</p>
+<p>This code uses the {{domxref("Document")}} interface's {{domxref("Document.getElementById", "getElementById()")}} method to get the DOM object representing the {{HTMLElement("input")}} elements whose IDs are <code>userName</code> and <code>sendButton</code>.  With these, we can access the properties and methods that provide information about and grant control over these elements.</p>
 
 <p>The {{domxref("HTMLInputElement")}} object for the "Send" button's {{domxref("HTMLInputElement.disabled", "disabled")}} property is set to <code>true</code>, which disables the "Send" button so it can't be clicked. In addition, the user name input field is made the active focus by calling the {{domxref("HTMLElement.focus", "focus()")}} method it inherits from {{domxref("HTMLElement")}}.</p>
 
@@ -392,15 +392,15 @@ nameField.addEventListener("input", event =&gt; {
 
 <pre class="brush: html">&lt;p&gt;Please provide the information below. Items marked with "*" are required.&lt;/p&gt;
 &lt;form action="" method="get"&gt;
-  &lt;p&gt;
-    &lt;label for="userName" required&gt;Your name:&lt;/label&gt;
-    &lt;input type="text" id="userName"&gt; (*)
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="email"&gt;Email:&lt;/label&gt;
-    &lt;input type="email" id="userEmail"&gt;
-  &lt;/p&gt;
-  &lt;input type="submit" value="Send" id="sendButton"&gt;
+  &lt;p&gt;
+    &lt;label for="userName" required&gt;Your name:&lt;/label&gt;
+    &lt;input type="text" id="userName"&gt; (*)
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="userEmail"&gt;
+  &lt;/p&gt;
+  &lt;input type="submit" value="Send" id="sendButton"&gt;
 &lt;/form&gt;
 </pre>
 

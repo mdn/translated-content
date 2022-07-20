@@ -8,10 +8,10 @@ translation_of: Web/API/RTCPeerConnection
 ---
 <p>{{APIRef}}{{SeeCompatTable}}</p>
 
-<p><strong><code>RTCPeerConnection</code></strong> 接口代表一个由本地计算机到远端的 WebRTC 连接。该接口提供了创建，保持，监控，关闭连接的方法的实现。</p>
+<p><strong><code>RTCPeerConnection</code></strong> 接口代表一个由本地计算机到远端的 WebRTC 连接。该接口提供了创建，保持，监控，关闭连接的方法的实现。</p>
 
 <div class="note">
-<p><strong>提示：</strong> <code>RTCPeerConnection</code> 和<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription" title="The RTCSessionDescription interface describes one end of a connection—or potential connection—and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session."><code>RTCSessionDescription</code></a> 是很多浏览器中使用的名称。强烈建议使用补充库，例如强大并且被广泛支持的<a href="https://github.com/webrtcHacks/adapter" rel="noopener">Adapter.js</a>，以确保您网站或 Web 应用程序的兼容性。值得注意的是<a href="https://github.com/webrtcHacks/adapter" rel="noopener">Adapter.js</a>不仅仅提供这些，它还做了一些其他补充以增强 WebRTC 在浏览器中的兼容性。参考：</p>
+<p><strong>提示：</strong> <code>RTCPeerConnection</code> 和<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription" title="The RTCSessionDescription interface describes one end of a connection—or potential connection—and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session."><code>RTCSessionDescription</code></a> 是很多浏览器中使用的名称。强烈建议使用补充库，例如强大并且被广泛支持的<a href="https://github.com/webrtcHacks/adapter" rel="noopener">Adapter.js</a>，以确保您网站或 Web 应用程序的兼容性。值得注意的是<a href="https://github.com/webrtcHacks/adapter" rel="noopener">Adapter.js</a>不仅仅提供这些，它还做了一些其他补充以增强 WebRTC 在浏览器中的兼容性。参考：</p>
 
 <pre>var PeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
 var SessionDescription = window.RTCSessionDescription || window.mozRTCSessionDescription || window.webkitRTCSessionDescription;
@@ -24,7 +24,7 @@ var SRC_OBJECT = 'srcObject' in v ? "srcObject" :
                  'webkitSrcObject' in v ? "webkitSrcObject" : "srcObject";</pre>
 </div>
 
-<p>由于 RTCPeerConnection 实现了 {{domxref("EventTarget")}} 接口，故其可以接收处理事件。</p>
+<p>由于 RTCPeerConnection 实现了 {{domxref("EventTarget")}} 接口，故其可以接收处理事件。</p>
 
 <h3 id="构造函数"><strong>构造函数</strong></h3>
 
@@ -33,7 +33,7 @@ var SRC_OBJECT = 'srcObject' in v ? "srcObject" :
  <dd>构造函数;创建一个新的 RTCPeerConnection 对象。</dd>
 </dl>
 
-<h3 id="属性"><strong>属性</strong> </h3>
+<h3 id="属性"><strong>属性</strong> </h3>
 
 <p><em>该接口的属性继承了其父接口，{{domxref("EventTarget")}}.</em></p>
 
@@ -73,7 +73,7 @@ var SRC_OBJECT = 'srcObject' in v ? "srcObject" :
  <dt>{{domxref("RTCPeerConnection.signalingState")}} {{ReadOnlyInline}}</dt>
 </dl>
 
-<p>返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和  RTCP 协议的选项 ，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。</p>
+<p>返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和  RTCP 协议的选项 ，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。</p>
 
 <h3 id="基本用法"><strong>基本用法</strong></h3>
 
@@ -184,7 +184,7 @@ pc.<a href="#createAnswer()">setRemoteDescription</a>(new RTCSessionDescription(
  <dt>{{domxref("RTCPeerConnection.remoteDescription")}} {{ReadOnlyInline}}</dt>
  <dd>返回一个 {{domxref("RTCSessionDescription")}} 它描述了这条连接的远端机器的会话控制，如果远端机器还未被设置，它的值会是 null。</dd>
  <dt>{{domxref("RTCPeerConnection.signalingState")}} {{ReadOnlyInline}}</dt>
- <dd>返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和  RTCP 协议的选项 ，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。 它可能取下列的值：
+ <dd>返回一个 RTC 通信状态的结构体，这个结构体描述了本地连接的通信状态。这个 状态描述了一个定义连接配置的 SDP offer。它包含了下列信息，与{{domxref("MediaStream")}} 类型本地相关的对象的描述，媒体流编码方式或 RTP 和  RTCP 协议的选项 ，以及被 ICE 服务器收集到的 candidates(连接候选者)。当{{domxref("RTCPeerConnection.signalingState")}}的值改变时，对象上的{{event("signalingstatechange")}}事件会被触发。 它可能取下列的值：
  <ul>
   <li><code>"stable"</code>: 没有 SDP offer/answer 正在被交换，连接仍然处于初始化状态。</li>
   <li><code>"have-local-offer"</code>: 这条连接的本地端机器已经本地应用了一个 SDP offer。</li>
@@ -200,21 +200,21 @@ pc.<a href="#createAnswer()">setRemoteDescription</a>(new RTCSessionDescription(
 
 <dl>
  <dt>{{domxref("RTCPeerConnection.onaddstream")}}</dt>
- <dd>是收到{{event("addstream")}} 事件时调用的事件处理器。 Such an event is 当{{domxref("MediaStream")}} 被远端机器添加到这条连接时，该事件会被触发。 当调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法时，这个事件就会被立即触发，它不会等待 SDP 协商的结果。</dd>
+ <dd>是收到{{event("addstream")}} 事件时调用的事件处理器。 Such an event is 当{{domxref("MediaStream")}} 被远端机器添加到这条连接时，该事件会被触发。 当调用{{domxref("RTCPeerConnection.setRemoteDescription()")}}方法时，这个事件就会被立即触发，它不会等待 SDP 协商的结果。</dd>
  <dt>{{domxref("RTCPeerConnection.ondatachannel")}}</dt>
- <dd>是收到{{event("datachannel")}} 事件时调用的事件处理器。 当一个 {{domxref("RTCDataChannel")}} 被添加到连接时，这个事件被触发。</dd>
+ <dd>是收到{{event("datachannel")}} 事件时调用的事件处理器。 当一个 {{domxref("RTCDataChannel")}} 被添加到连接时，这个事件被触发。</dd>
  <dt>{{domxref("RTCPeerConnection.onicecandidate")}}</dt>
- <dd>是收到 {{event("icecandidate")}} 事件时调用的事件处理器.。当一个 {{domxref("RTCICECandidate")}} 对象被添加时，这个事件被触发。</dd>
+ <dd>是收到 {{event("icecandidate")}} 事件时调用的事件处理器.。当一个 {{domxref("RTCICECandidate")}} 对象被添加时，这个事件被触发。</dd>
  <dt>{{domxref("RTCPeerConnection.oniceconnectionstatechange")}}</dt>
  <dd>是收到{{event("iceconnectionstatechange")}}事件时调用的事件处理器 。 当{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} 改变时，这个事件被触发。</dd>
  <dt>{{domxref("RTCPeerConnection.onidentityresult")}}</dt>
- <dd>是收到 {{event("identityresult")}}事件时调用的事件处理器。 当通过{{domxref("RTCPeerConnection.getIdentityAssertion()", "getIdentityAssertion()")}}生成身份断言，或在生成一个 answer 或一个 offer 的过程中，这个事件被触发。</dd>
+ <dd>是收到 {{event("identityresult")}}事件时调用的事件处理器。 当通过{{domxref("RTCPeerConnection.getIdentityAssertion()", "getIdentityAssertion()")}}生成身份断言，或在生成一个 answer 或一个 offer 的过程中，这个事件被触发。</dd>
  <dt>{{domxref("RTCPeerConnection.onidpassertionerror")}}</dt>
  <dd>是收到 {{event("idpassertionerror")}} 事件时调用的事件处理器。当生成一个身份断言时，如果关联的身份提供者（idP）遇到一个错误，这个事件就会被触发。</dd>
  <dt>{{domxref("RTCPeerConnection.onidpvalidationerror")}}</dt>
  <dd>是收到 {{event("idpvalidationerror")}} 事件时调用的事件处理器。当检查 一个身份断言时，如果关联的身份提供者（idP）遇到一个错误，这个事件就会被触发。</dd>
  <dt>{{domxref("RTCPeerConnection.onnegotiationneeded")}}</dt>
- <dd>是收到{{event("negotiationneeded")}} 事件时调用的事件处理器， 浏览器发送该事件以告知在将来某一时刻需要协商。</dd>
+ <dd>是收到{{event("negotiationneeded")}} 事件时调用的事件处理器， 浏览器发送该事件以告知在将来某一时刻需要协商。</dd>
  <dt>{{domxref("RTCPeerConnection.onpeeridentity")}}</dt>
  <dd>是收到{{event("peeridentity")}} 事件时调用的事件处理器，当一条连接的 peer identify 被设置以及校验后，该事件被触发</dd>
  <dt>{{domxref("RTCPeerConnection.onremovestream")}}</dt>
@@ -271,7 +271,7 @@ pc.<a href="#createAnswer()">setRemoteDescription</a>(new RTCSessionDescription(
 <pre>new RTCPeerConnection({{domxref("RTCConfiguration")}} configuration, optional {{domxref("MediaConstraints")}} constraints);</pre>
 
 <div class="note">
-<p><strong>注意：</strong> PeerConnection 需要传递一个 RTCConfiguration 对象作为参数，如果你没有传递参数的话，火狐浏览器会自动提供一个参数。</p>
+<p><strong>注意：</strong> PeerConnection 需要传递一个 RTCConfiguration 对象作为参数，如果你没有传递参数的话，火狐浏览器会自动提供一个参数。</p>
 </div>
 
 <h2 id="方法_2">方法</h2>
@@ -296,9 +296,9 @@ pc.createOffer(function(desc){
 
 <dl>
  <dt>successCallback（方法调用成功时的回调函数）</dt>
- <dd>一个 {{domxref("RTCSessionDescriptionCallback")}} 它会收到一个 {{domxref("RTCSessionDescription")}} 对象作为参数。</dd>
+ <dd>一个 {{domxref("RTCSessionDescriptionCallback")}} 它会收到一个 {{domxref("RTCSessionDescription")}} 对象作为参数。</dd>
  <dt>errorCallback（方法调用失败时的回调函数）</dt>
- <dd>一个 {{domxref("RTCPeerConnectionErrorCallback")}} 它会收到一个 {{domxref("DOMError")}} 对象作为参数。</dd>
+ <dd>一个 {{domxref("RTCPeerConnectionErrorCallback")}} 它会收到一个 {{domxref("DOMError")}} 对象作为参数。</dd>
  <dt>[optional] constraints(可选的约束条件)</dt>
  <dd>一个可选的{{domxref("MediaConstraints")}} 对象。</dd>
 </dl>
@@ -324,13 +324,13 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
 
 <dl>
  <dt>successCallback（方法调用成功时的回调函数）</dt>
- <dd>一个 {{domxref("RTCSessionDescriptionCallback")}} 它会收到一个 {{domxref("RTCSessionDescription")}} 对象作为参数。</dd>
+ <dd>一个 {{domxref("RTCSessionDescriptionCallback")}} 它会收到一个 {{domxref("RTCSessionDescription")}} 对象作为参数。</dd>
  <dt>errorCallback（方法调用失败时的回调函数）</dt>
  <dd>一个 {{domxref("RTCPeerConnectionErrorCallback")}} 它会收到一个{{domxref("DOMError")}} 对象作为参数。</dd>
  <dt>[optional] constraints（可选的约束条件）</dt>
 </dl>
 
-<p>      一个可选的{{domxref("MediaConstraints")}} 对象。</p>
+<p>      一个可选的{{domxref("MediaConstraints")}} 对象。</p>
 
 <h3 id="updateIce">updateIce()</h3>
 

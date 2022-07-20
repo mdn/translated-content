@@ -13,7 +13,7 @@ browser-compat: api.Response.json
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<div>{{domxref("Response")}}  mixin 的 <strong><code>json()</code></strong> 方法接收一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个 Promise，Promise 的解析 resolve 结果是将文本体解析为 {{jsxref("JSON")}}。</div>
+<div>{{domxref("Response")}}  mixin 的 <strong><code>json()</code></strong> 方法接收一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个 Promise，Promise 的解析 resolve 结果是将文本体解析为 {{jsxref("JSON")}}。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -31,7 +31,7 @@ browser-compat: api.Response.json
 
 <h2 id="示例">示例</h2>
 
-<p>在我们的  <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-json">fetch json 示例</a> 中 (运行 <a href="http://mdn.github.io/fetch-examples/fetch-json/">fetch json live</a>), 我们使用 {{domxref("Request.Request")}} 构造函数创建一个新的请求，然后使用它来获取一个 <code>.json</code> 文件。当获取成功时，我们使用 <code>json()</code> 读取并解析数据，然后像预期的那样从结果对象中读取值，并将其插入到列表项中以显示我们的产品数据。</p>
+<p>在我们的  <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-json">fetch json 示例</a> 中 (运行 <a href="http://mdn.github.io/fetch-examples/fetch-json/">fetch json live</a>), 我们使用 {{domxref("Request.Request")}} 构造函数创建一个新的请求，然后使用它来获取一个 <code>.json</code> 文件。当获取成功时，我们使用 <code>json()</code> 读取并解析数据，然后像预期的那样从结果对象中读取值，并将其插入到列表项中以显示我们的产品数据。</p>
 
 <pre class="brush: js highlight[5]">const myList = document.querySelector('ul');
 const myRequest = new Request('products.json');

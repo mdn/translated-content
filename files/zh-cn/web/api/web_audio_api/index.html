@@ -14,7 +14,7 @@ translation_of: Web/API/Web_Audio_API
 
 <p>Web Audio API 使用户可以在<strong>音频上下文</strong>(AudioContext) 中进行音频操作，具有<strong>模块化路由</strong>的特点。在<strong>音频节点</strong>上操作进行基础的音频， 它们连接在一起构成<strong>音频路由图</strong>。即使在单个上下文中也支持多源，尽管这些音频源具有多种不同类型通道布局。这种模块化设计提供了灵活创建动态效果的复合音频的方法。</p>
 
-<p>音频节点通过它们的输入输出相互连接，形成一个链或者一个简单的网。一般来说，这个链或网起始于一个或多个音频源。音频源可以提供一个片段一个片段的音频采样数据（以数组的方式），一般，一秒钟的音频数据可以被切分成几万个这样的片段。这些片段可以是经过一些数学运算得到 （比如{{domxref("OscillatorNode")}}），也可以是音频或视频的文件读出来的（比如{{domxref("AudioBufferSourceNode")}}和{{domxref("MediaElementAudioSourceNode")}}），又或者是音频流（{{domxref("MediaStreamAudioSourceNode")}}）。其实，音频文件本身就是声音的采样数据，这些采样数据可以来自麦克风，也可以来自电子乐器，然后混合成一个单一的复杂的波形。</p>
+<p>音频节点通过它们的输入输出相互连接，形成一个链或者一个简单的网。一般来说，这个链或网起始于一个或多个音频源。音频源可以提供一个片段一个片段的音频采样数据（以数组的方式），一般，一秒钟的音频数据可以被切分成几万个这样的片段。这些片段可以是经过一些数学运算得到 （比如{{domxref("OscillatorNode")}}），也可以是音频或视频的文件读出来的（比如{{domxref("AudioBufferSourceNode")}}和{{domxref("MediaElementAudioSourceNode")}}），又或者是音频流（{{domxref("MediaStreamAudioSourceNode")}}）。其实，音频文件本身就是声音的采样数据，这些采样数据可以来自麦克风，也可以来自电子乐器，然后混合成一个单一的复杂的波形。</p>
 
 <p>这些节点的输出可以连接到其它节点的输入上，然后新节点可以对接收到的采样数据再进行其它的处理，再形成一个结果流。一个最常见的操作是通过把输入的采样数据放大来达到扩音器的作用（缩小就是一个弱音器）（参见{{domxref("GainNode")}}）。声音处理完成之后，可以连接到一个目的地（{{domxref("AudioContext.destination")}}），这个目的地负责把声音数据传输给扬声器或者耳机。注意，只有当用户期望听到声音时，才需要进行最后一个这个连接。</p>
 
@@ -71,7 +71,7 @@ translation_of: Web/API/Web_Audio_API
  <dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
  <dd><code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong>接口表示由 HTML5 {{ htmlelement("audio") }}或{{ htmlelement("video") }}元素生成的音频源。这是一个作为音频源的{{domxref("AudioNode")}}。</dd>
  <dt>{{domxref("MediaStreamAudioSourceNode")}}</dt>
- <dd><code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong>接口表示由 WebRTC {{domxref("MediaStream")}}（如网络摄像头或麦克风）生成的音频源。这是一个作为音频源的{{domxref("AudioNode")}}。</dd>
+ <dd><code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong>接口表示由 WebRTC {{domxref("MediaStream")}}（如网络摄像头或麦克风）生成的音频源。这是一个作为音频源的{{domxref("AudioNode")}}。</dd>
 </dl>
 
 <h3 id="定义音效">定义音效</h3>
@@ -86,7 +86,7 @@ translation_of: Web/API/Web_Audio_API
  <dt>{{domxref("DelayNode")}}</dt>
  <dd><strong><code>DelayNode</code></strong><strong> </strong>接口表示<a href="http://en.wikipedia.org/wiki/Digital_delay_line" title="http://en.wikipedia.org/wiki/Digital_delay_line">延迟线</a>；是{{domxref("AudioNode")}} 类型的音频处理模块，使输入的数据延时输出。</dd>
  <dt>{{domxref("DynamicsCompressorNode")}}</dt>
- <dd><strong><code>DynamicsCompressorNode</code></strong> 提供了一个压缩效果，当多个音频在同时播放并且混合的时候，可以通过它降低音量最大的部分的音量来帮助避免发生削波和失真。</dd>
+ <dd><strong><code>DynamicsCompressorNode</code></strong> 提供了一个压缩效果，当多个音频在同时播放并且混合的时候，可以通过它降低音量最大的部分的音量来帮助避免发生削波和失真。</dd>
  <dt>{{domxref("GainNode")}}</dt>
  <dd><strong><code>GainNode</code></strong><strong> </strong>接口用于音量变化。它是一个 {{domxref("AudioNode")}} 类型的音频处理模块，输入后应用<em>增益</em> 效果，然后输出。</dd>
  <dt>{{domxref("StereoPannerNode")}}</dt>
@@ -103,9 +103,9 @@ translation_of: Web/API/Web_Audio_API
 
 <dl>
  <dt>{{domxref("AudioDestinationNode")}}</dt>
- <dd><strong><code>AudioDestinationNode</code></strong> 定义了最后音频要输出到哪里，通常是输出到你的扬声器。</dd>
+ <dd><strong><code>AudioDestinationNode</code></strong> 定义了最后音频要输出到哪里，通常是输出到你的扬声器。</dd>
  <dt>{{domxref("MediaStreamAudioDestinationNode")}}</dt>
- <dd><code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong>定义了使用 <a href="https://developer.mozilla.org/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> 的{{domxref("MediaStream")}}（只包含单个 AudioMediaStreamTrack）应该连接的目的地，AudioMediaStreamTrack 的使用方式和从{{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}中得到{{domxref("MediaStream")}}相似。这个接口是{{domxref("AudioNode")}}类型的音频目的地。</dd>
+ <dd><code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong>定义了使用 <a href="https://developer.mozilla.org/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> 的{{domxref("MediaStream")}}（只包含单个 AudioMediaStreamTrack）应该连接的目的地，AudioMediaStreamTrack 的使用方式和从{{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}中得到{{domxref("MediaStream")}}相似。这个接口是{{domxref("AudioNode")}}类型的音频目的地。</dd>
 </dl>
 
 <h3 id="数据分析和可视化">数据分析和可视化</h3>

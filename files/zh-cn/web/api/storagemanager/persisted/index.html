@@ -22,12 +22,12 @@ translation_of: Web/API/StorageManager/persisted
 <h2 id="示例">示例</h2>
 
 <pre class="brush: js"><code>if (navigator.storage &amp;&amp; navigator.storage.persist)
-  navigator.storage.persisted().then(function(persistent) {
-    if (persistent)
-      console.log("Storage will not be cleared except by explicit user action");
-    else
-      console.log("Storage may be cleared by the UA under storage pressure.");
-  });</code></pre>
+  navigator.storage.persisted().then(function(persistent) {
+    if (persistent)
+      console.log("Storage will not be cleared except by explicit user action");
+    else
+      console.log("Storage may be cleared by the UA under storage pressure.");
+  });</code></pre>
 
 <h2 id="规范">规范</h2>
 

@@ -44,7 +44,7 @@ translation_of: Web/API/OffscreenCanvas
 
 <dl>
  <dt>{{domxref("OffscreenCanvas.transferToImageBitmap()")}}</dt>
- <dd>从 <code>OffscreenCanvas</code> 最近渲染的图像创建一个 {{domxref("ImageBitmap")}} 对象。</dd>
+ <dd>从 <code>OffscreenCanvas</code> 最近渲染的图像创建一个 {{domxref("ImageBitmap")}} 对象。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -81,9 +81,9 @@ var bitmapTwo = offscreen.transferToImageBitmap();
 two.transferFromImageBitmap(bitmapTwo);
 </pre>
 
-<h3 id="异步显示OffscreenCanvas生成的帧"> 异步显示 <code>OffscreenCanvas</code> 生成的帧</h3>
+<h3 id="异步显示OffscreenCanvas生成的帧"> 异步显示 <code>OffscreenCanvas</code> 生成的帧</h3>
 
-<p>另一种使用 <code>OffscreenCanvas</code> API 的方式，是在一个{{HTMLElement("canvas")}}元素上调用{{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}}， 也可以在<a href="/en-US/docs/Web/API/Web_Workers_API">worker</a>或主线程，上调用，这将从主线程的{{domxref("HTMLCanvasElement")}}对象返回一个<code>OffscreenCanvas</code> 对象。调用{{domxref("OffscreenCanvas.getContext", "getContext()")}} 会从这个 <code>OffscreenCanvas</code> 获取一个<a href="/zh-CN/docs/Web/API/RenderingContext">RenderingContext</a>。</p>
+<p>另一种使用 <code>OffscreenCanvas</code> API 的方式，是在一个{{HTMLElement("canvas")}}元素上调用{{domxref("HTMLCanvasElement.transferControlToOffscreen", "transferControlToOffscreen()")}}， 也可以在<a href="/en-US/docs/Web/API/Web_Workers_API">worker</a>或主线程，上调用，这将从主线程的{{domxref("HTMLCanvasElement")}}对象返回一个<code>OffscreenCanvas</code> 对象。调用{{domxref("OffscreenCanvas.getContext", "getContext()")}} 会从这个 <code>OffscreenCanvas</code> 获取一个<a href="/zh-CN/docs/Web/API/RenderingContext">RenderingContext</a>。</p>
 
 <p>main.js (主线程代码):</p>
 
@@ -110,14 +110,14 @@ worker.postMessage({canvas: offscreen}, [offscreen]);
 <p>也可以在 worker 中使用 requestAnimationFrame</p>
 
 <pre class="brush: js notranslate">onmessage = function(evt) {
-  const canvas = evt.data.canvas;
-  const gl = canvas.getContext("webgl");
+  const canvas = evt.data.canvas;
+  const gl = canvas.getContext("webgl");
 
-  function render(time) {
-    // ... some drawing using the gl context ...
-    requestAnimationFrame(render);
-  }
-  requestAnimationFrame(render);
+  function render(time) {
+    // ... some drawing using the gl context ...
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
 };</pre>
 
 <h2 id="规范">规范</h2>
