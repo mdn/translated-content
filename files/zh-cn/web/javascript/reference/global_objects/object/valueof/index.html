@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>valueOf()</strong></code> 方法返回指定对象的原始值。</p>
+<p><code><strong>valueOf()</strong></code> 方法返回指定对象的原始值。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -65,7 +65,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
    <td>字符串值。</td>
   </tr>
   <tr>
-   <td> </td>
+   <td> </td>
    <td>Math 和 Error 对象没有 valueOf 方法。</td>
   </tr>
  </tbody>
@@ -73,9 +73,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 <p>你可以在自己的代码中使用 <code>valueOf</code> 将内置对象转换为原始值。创建自定义对象时，可以覆盖 <code>Object.prototype.valueOf()</code> 来调用自定义方法，而不是默认 {{jsxref("Object")}} 方法。</p>
 
-<h3 id="覆盖自定义对象的_valueOf_方法">覆盖自定义对象的 <code>valueOf</code> 方法</h3>
+<h3 id="覆盖自定义对象的_valueOf_方法">覆盖自定义对象的 <code>valueOf</code> 方法</h3>
 
-<p>你可以创建一个取代 <code>valueOf</code> 方法的函数，你的方法必须不能传入参数。</p>
+<p>你可以创建一个取代 <code>valueOf</code> 方法的函数，你的方法必须不能传入参数。</p>
 
 <p>假设你有个对象叫 <code>MyNumberType</code> 而你想为它创建一个 <code>valueOf</code> 方法。下面的代码为 <code>valueOf</code> 方法赋予了一个自定义函数：</p>
 
@@ -88,12 +88,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 <pre class="brush: js">myNumberType.valueOf()</pre>
 
 <div class="note">
-<p><strong>备注：</strong>字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个 “<code>[object <em>类型</em>]</code>” 这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
+<p><strong>备注：</strong>字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用<code>valueOf</code>转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个 “<code>[object <em>类型</em>]</code>” 这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_valueOf">使用 <code>valueOf</code></h3>
+<h3 id="使用_valueOf">使用 <code>valueOf</code></h3>
 
 <pre class="brush: js">// Array：返回数组对象本身
 var array = ["ABC", true, 12, -5];
@@ -143,7 +143,7 @@ var str2 = new String("http://www.xyz.com");
 // 两者的值相等，但不全等，因为类型不同，前者为 string 类型，后者为 object 类型
 console.log( str2.valueOf() === str2 );   // false</pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="改写_.prototype.valueof">改写 .prototype.valueof</h3>
 
@@ -175,17 +175,17 @@ myObj + 3; // 7</pre>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

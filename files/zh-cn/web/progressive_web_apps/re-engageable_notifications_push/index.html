@@ -79,13 +79,13 @@ button.addEventListener('click', function(e) {
 
 <h3 id="推送例子">推送例子</h3>
 
-<p>推送需要服务端，但因为应用托管在 GitHub 上，而 GitHub 只提供静态页面托管，我们没办法将服务端的例子包含进 js13kPWA 这个应用里面。<a href="https://serviceworke.rs/">Service Worker Cookbook</a> 这个页面上有详细的说明，demo 请看 <a href="https://serviceworke.rs/push-payload.html">Push Payload Demo</a>。</p>
+<p>推送需要服务端，但因为应用托管在 GitHub 上，而 GitHub 只提供静态页面托管，我们没办法将服务端的例子包含进 js13kPWA 这个应用里面。<a href="https://serviceworke.rs/">Service Worker Cookbook</a> 这个页面上有详细的说明，demo 请看 <a href="https://serviceworke.rs/push-payload.html">Push Payload Demo</a>。</p>
 
 <p>这个 demo 包含三个文件：</p>
 
 <ul>
  <li><a href="https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/index.js">index.js</a>, 包含我们应用的源代码</li>
- <li><a href="https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/server.js">server.js</a>,包含服务端的源代码 (用 Node.js 编写)</li>
+ <li><a href="https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/server.js">server.js</a>,包含服务端的源代码 (用 Node.js 编写)</li>
  <li><a href="https://github.com/mozilla/serviceworker-cookbook/blob/master/push-payload/service-worker.js">service-worker.js</a>, 包含 Service Worker 的具体代码。</li>
 </ul>
 
@@ -122,7 +122,7 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);</pre>
 
 <p>App 会从服务器请求一个公钥并且把响应结果转化成文本，最后它还需要转化成一个 Uint8Array（为了兼容 Chrome）。如果你想学习更多关于 VAPID 的内容可以阅读 <a href="https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/">Sending VAPID identified WebPush Notifications via Mozilla’s Push Service</a> 这篇文章。</p>
 
-<p>App 现在可以使用 {{domxref("PushManager")}} 来订阅新用户。这个方法支持传递两个参数：第一个是 <code>userVisibleOnly: true</code>，意思是发送给用户的所有通知对他们都是可见的，第二个是 <code>applicationServerKey</code>，这个参数包含我们之前从服务端取得并转化的 VAPID key。</p>
+<p>App 现在可以使用 {{domxref("PushManager")}} 来订阅新用户。这个方法支持传递两个参数：第一个是 <code>userVisibleOnly: true</code>，意思是发送给用户的所有通知对他们都是可见的，第二个是 <code>applicationServerKey</code>，这个参数包含我们之前从服务端取得并转化的 VAPID key。</p>
 
 <pre class="brush: js">return registration.pushManager.subscribe({
     userVisibleOnly: true,
@@ -162,7 +162,7 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);</pre>
     });
 };</pre>
 
-<p>当按钮被点击的时候，<code>fetch</code> 会请求服务器根据给定的参数发送通知，<code>payload</code> 参数包含通知里面要显示的文本，<code>delay</code> 参数定义了通知将会延迟展示的秒数，<code>ttl</code> 是 time-to-live 的缩写，用来设置通知在服务器上的存活时间，依然是以秒为单位。</p>
+<p>当按钮被点击的时候，<code>fetch</code> 会请求服务器根据给定的参数发送通知，<code>payload</code> 参数包含通知里面要显示的文本，<code>delay</code> 参数定义了通知将会延迟展示的秒数，<code>ttl</code> 是 time-to-live 的缩写，用来设置通知在服务器上的存活时间，依然是以秒为单位。</p>
 
 <p>接着，我们进入下一个 JavaScript 文件。</p>
 
@@ -188,7 +188,7 @@ webPush.setVapidDetails(
 );
 </pre>
 
-<p>接着，一个模块定义并导出了所有应用需要处理的路由：获取 VAPID 公钥、注册、发送通知等等。你可以看到来自 <code>index.js</code> 的 <code>payload</code>, <code>delay</code> 和<code>ttl</code> 变量在这里被用到了。</p>
+<p>接着，一个模块定义并导出了所有应用需要处理的路由：获取 VAPID 公钥、注册、发送通知等等。你可以看到来自 <code>index.js</code> 的 <code>payload</code>, <code>delay</code> 和<code>ttl</code> 变量在这里被用到了。</p>
 
 <pre>module.exports = function(app, route) {
   app.get(route + 'vapidPublicKey', function(req, res) {
@@ -235,7 +235,7 @@ webPush.setVapidDetails(
 
 <p>它做的就只是监听 {{event("push")}} 事件，创建 payload 变量，这个变量包含了来自 event.data 的文本（如果 data 是空的，就设置成 "no payload" 字符串），然后一直等到通知推送给用户为止。</p>
 
-<p>如果你想知道它们具体是怎么处理的，请随意探索 <a href="https://serviceworke.rs/">Service Worker Cookbook</a> 里面剩下的例子。<a href="https://github.com/mozilla/serviceworker-cookbook/">GitHub 上面提供了完整的源代码</a>，也有大量的示例展示了各种用法，包括 Web 推送、缓存策略、性能、离线运行等等。</p>
+<p>如果你想知道它们具体是怎么处理的，请随意探索 <a href="https://serviceworke.rs/">Service Worker Cookbook</a> 里面剩下的例子。<a href="https://github.com/mozilla/serviceworker-cookbook/">GitHub 上面提供了完整的源代码</a>，也有大量的示例展示了各种用法，包括 Web 推送、缓存策略、性能、离线运行等等。</p>
 
 <p>{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}</p>
 

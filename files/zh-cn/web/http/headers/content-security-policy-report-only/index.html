@@ -7,7 +7,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 <p>HTTP <strong><code>Content-Security-Policy-Report-Only</code></strong>响应头允许 web 开发人员通过监测 (但不强制执行) 政策的影响来尝试政策。这些违反报告由 {{Glossary("JSON")}} 文档组成通过一个 HTTP POST 请求发送到指定的 URI。</p>
 
-<p>更多相关信息，可参见这篇文章 <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>.</p>
+<p>更多相关信息，可参见这篇文章 <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -20,7 +20,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
    <td>no</td>
   </tr>
   <tr>
-   <th colspan="2" scope="row">这个 header 不支持在 {{HTMLElement("meta")}} 元素内（定义）。</th>
+   <th colspan="2" scope="row">这个 header 不支持在 {{HTMLElement("meta")}} 元素内（定义）。</th>
   </tr>
  </tbody>
 </table>
@@ -32,7 +32,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 <h2 id="指令">指令</h2>
 
-<p>{{HTTPHeader("Content-Security-Policy")}} header 的指令也可应用于 <code>Content-Security-Policy-Report-Only</code>.</p>
+<p>{{HTTPHeader("Content-Security-Policy")}} header 的指令也可应用于 <code>Content-Security-Policy-Report-Only</code>.</p>
 
 <p>CSP {{CSP("report-uri")}} 指令需要跟这个 header 一起用，否则这个 header 将会是一个昂贵却无操作 (无作用) 的机器 (设置)。</p>
 
@@ -60,9 +60,9 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
  <dt><code>violated-directive</code></dt>
  <dd>被违反的策略名。</dd>
  <dt><code>original-policy</code></dt>
- <dd> <code>Content-Security-Policy</code> HTTP 头部所指定的原始策略。</dd>
+ <dd> <code>Content-Security-Policy</code> HTTP 头部所指定的原始策略。</dd>
  <dt>disposition</dt>
- <dd>“执行”或“报告”取决于是使用{{HTTPHeader("Content-Security-Policy")}} 头还是使用 <code>Content-Security-Header-Report-Only</code> 头。</dd>
+ <dd>“执行”或“报告”取决于是使用{{HTTPHeader("Content-Security-Policy")}} 头还是使用 <code>Content-Security-Header-Report-Only</code> 头。</dd>
 </dl>
 
 <h2 id="违规报告样例">违规报告样例</h2>
@@ -99,7 +99,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
   }
 }</pre>
 
-<p>正如你所看到的，报告在<code>blocked-uri 上记录了</code>违反资源的完整路径。这并非总是如此。例如，当 <code>signup.html</code> 试图从 <code>http://anothercdn.example.com/stylesheet.css 加载</code>CSS，浏览器不会包含完整路径，只包含来源。这样做是为了防止泄漏跨域资源的敏感信息。</p>
+<p>正如你所看到的，报告在<code>blocked-uri 上记录了</code>违反资源的完整路径。这并非总是如此。例如，当 <code>signup.html</code> 试图从 <code>http://anothercdn.example.com/stylesheet.css 加载</code>CSS，浏览器不会包含完整路径，只包含来源。这样做是为了防止泄漏跨域资源的敏感信息。</p>
 
 <h2 id="规范">规范</h2>
 

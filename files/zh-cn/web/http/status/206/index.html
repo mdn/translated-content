@@ -10,9 +10,9 @@ translation_of: Web/HTTP/Status/206
 
 <p>HTTP <strong><code>206 Partial Content</code></strong> 成功状态响应代码表示请求已成功，并且主体包含所请求的数据区间，该数据区间是在请求的 {{HTTPHeader("Range")}} 首部指定的。</p>
 
-<p>如果只包含一个数据区间，那么整个响应的 {{HTTPHeader("Content-Type")}} 首部的值为所请求的文件的类型，同时包含  {{HTTPHeader("Content-Range")}} 首部。</p>
+<p>如果只包含一个数据区间，那么整个响应的 {{HTTPHeader("Content-Type")}} 首部的值为所请求的文件的类型，同时包含  {{HTTPHeader("Content-Range")}} 首部。</p>
 
-<p>如果包含多个数据区间，那么整个响应的  {{HTTPHeader("Content-Type")}}  首部的值为 <code>multipart/byteranges</code> ，其中一个片段对应一个数据区间，并提供  {{HTTPHeader("Content-Range")}} 和 {{HTTPHeader("Content-Type")}}  描述信息。</p>
+<p>如果包含多个数据区间，那么整个响应的  {{HTTPHeader("Content-Type")}}  首部的值为 <code>multipart/byteranges</code> ，其中一个片段对应一个数据区间，并提供  {{HTTPHeader("Content-Range")}} 和 {{HTTPHeader("Content-Type")}}  描述信息。</p>
 
 <h2 id="状态">状态</h2>
 

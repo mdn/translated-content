@@ -11,9 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>RegExp</code></strong> 对象用于将文本与一个模式匹配。</p>
+<p><strong><code>RegExp</code></strong> 对象用于将文本与一个模式匹配。</p>
 
-<p>有关正则表达式的介绍，请阅读 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/">JavaScript 指南</a>中的<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式章节</a>。</p>
+<p>有关正则表达式的介绍，请阅读 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/">JavaScript 指南</a>中的<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式章节</a>。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -57,7 +57,7 @@ var re = /\w+/;</pre>
 
 <dl>
  <dt>{{jsxref("RegExp/RegExp", "RegExp()")}}</dt>
- <dd>创建一个新的 <code>RegExp</code> 对象。</dd>
+ <dd>创建一个新的 <code>RegExp</code> 对象。</dd>
 </dl>
 
 <h2 id="静态属性">静态属性</h2>
@@ -73,9 +73,9 @@ var re = /\w+/;</pre>
 
 <dl>
  <dt>{{JSxRef("RegExp.prototype.flags")}}</dt>
- <dd>含有 <code>RegExp</code> 对象 flags 的字符串。</dd>
+ <dd>含有 <code>RegExp</code> 对象 flags 的字符串。</dd>
  <dt>{{JSxRef("RegExp.prototype.dotAll")}}</dt>
- <dd><code>.</code> 是否要匹配新行（newlines）。</dd>
+ <dd><code>.</code> 是否要匹配新行（newlines）。</dd>
  <dt>{{JSxRef("RegExp.prototype.global")}}</dt>
  <dd>针对字符串中所有可能的匹配项测试正则表达式，还是仅针对第一个匹配项。</dd>
  <dt>{{JSxRef("RegExp.prototype.ignoreCase")}}</dt>
@@ -117,9 +117,9 @@ var re = /\w+/;</pre>
 
 <h3 id="Using_a_regular_expression_to_change_data_format">使用正则改变数据结构</h3>
 
-<p>下例使用  {{jsxref("Global_Objects/String", "String")}} 的 {{jsxref("String.prototype.replace()", "replace()")}} 方法去匹配姓名 <em>first last </em>输出新的格式 <em>last</em>, <em>first</em>。</p>
+<p>下例使用  {{jsxref("Global_Objects/String", "String")}} 的 {{jsxref("String.prototype.replace()", "replace()")}} 方法去匹配姓名 <em>first last </em>输出新的格式 <em>last</em>, <em>first</em>。</p>
 
-<p>在替换的文本中，脚本中使用 <code>$1</code> 和 <code>$2</code> 指明括号里先前的匹配。</p>
+<p>在替换的文本中，脚本中使用 <code>$1</code> 和 <code>$2</code> 指明括号里先前的匹配。</p>
 
 <pre class="brush: js">let re = /(\w+)\s(\w+)/;
 let str = "John Smith";
@@ -163,7 +163,7 @@ regex.lastIndex = 5
 regex.test(str)      // false (lastIndex is taken into account with sticky flag)
 regex.lastIndex      // 0 (reset after match failure)</pre>
 
-<h3 id="sticky_标志和_global_标志的不同点"> sticky 标志和 global 标志的不同点</h3>
+<h3 id="sticky_标志和_global_标志的不同点"> sticky 标志和 global 标志的不同点</h3>
 
 <p>如果正则表达式有粘性 <code>y</code> 标志，下一次匹配一定在 <code>lastIndex</code> 位置开始；如果正则表达式有全局 <code>g</code> 标志，下一次匹配可能在 <code>lastIndex</code> 位置开始，也可能在这个位置的后面开始。</p>
 
@@ -179,9 +179,9 @@ while (r = re.exec("123 456")) console.log(r, "AND re.lastIndex", re.lastIndex);
 
 <h3 id="Browser_Compatibility">使用正则表达式和 Unicode 字符</h3>
 
-<p>正如上面表格提到的，<code>\w</code> 或 <code>\W</code> 只会匹配基本的 ASCII 字符；如 <code>a</code> 到 <code>z</code>、 <code>A</code> 到 <code>Z</code>、 <code>0</code> 到 <code>9</code> 及 <code>_</code>。</p>
+<p>正如上面表格提到的，<code>\w</code> 或 <code>\W</code> 只会匹配基本的 ASCII 字符；如 <code>a</code> 到 <code>z</code>、 <code>A</code> 到 <code>Z</code>、 <code>0</code> 到 <code>9</code> 及 <code>_</code>。</p>
 
-<p>为了匹配其他语言中的字符，如西里尔（Cyrillic）或 希伯来语（Hebrew），要使用 <code>\uhhhh</code>，<code>hhhh</code> 表示以十六进制表示的字符的 Unicode 值。</p>
+<p>为了匹配其他语言中的字符，如西里尔（Cyrillic）或 希伯来语（Hebrew），要使用 <code>\uhhhh</code>，<code>hhhh</code> 表示以十六进制表示的字符的 Unicode 值。</p>
 
 <p>下例展示了怎样从一个单词中分离出 Unicode 字符。</p>
 
@@ -244,7 +244,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 
 <h3 id="Firefox_特定版本提示">Firefox 特定版本提示</h3>
 
-<p>Starting with Gecko 34 {{geckoRelease(34)}}, in the case of a capturing group with quantifiers preventing its exercise, the matched text for a capturing group is now <code>undefined</code> instead of an empty string:</p>
+<p>Starting with Gecko 34 {{geckoRelease(34)}}, in the case of a capturing group with quantifiers preventing its exercise, the matched text for a capturing group is now <code>undefined</code> instead of an empty string:</p>
 
 <pre><code>// Firefox 33 or older
 'x'.replace(/x(.)?/g, function(m, group) {
@@ -256,7 +256,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
   console.log("'group:" + group + "'");
 }); // 'group:undefined'</code></pre>
 
-<p>注意，由于 web 兼容性 <code>RegExp.$N</code> 仍会返回一个空的字符串代替 <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
+<p>注意，由于 web 兼容性 <code>RegExp.$N</code> 仍会返回一个空的字符串代替 <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
 
 <h2 id="相关链接">相关链接</h2>
 

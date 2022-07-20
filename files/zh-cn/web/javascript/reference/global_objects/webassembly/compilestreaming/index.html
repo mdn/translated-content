@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStrea
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>WebAssembly.compileStreaming()</code></strong> 方法用来从一个流式源中直接编译一个 {{jsxref("WebAssembly.Module")}}。当模块需要在被实例化前被编译时，这个方法会很有用。如果要从流式源实例化一个模块应采用 {{jsxref("WebAssembly.instantiateStreaming()")}} 方法。</p>
+<p><strong><code>WebAssembly.compileStreaming()</code></strong> 方法用来从一个流式源中直接编译一个 {{jsxref("WebAssembly.Module")}}。当模块需要在被实例化前被编译时，这个方法会很有用。如果要从流式源实例化一个模块应采用 {{jsxref("WebAssembly.instantiateStreaming()")}} 方法。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,23 +15,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStrea
 
 <dl>
  <dt><em>source</em></dt>
- <dd>一个 {{domxref("Response")}} 对象或一个会履行（fulfill）它的 promise，用来表示你想编译的 .wasm 模块的流式源。</dd>
+ <dd>一个 {{domxref("Response")}} 对象或一个会履行（fulfill）它的 promise，用来表示你想编译的 .wasm 模块的流式源。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个会被解决（resolve）为编译后的 {{jsxref("WebAssembly.Module")}} 对象的 <code>Promise</code>。</p>
+<p>一个会被解决（resolve）为编译后的 {{jsxref("WebAssembly.Module")}} 对象的 <code>Promise</code>。</p>
 
 <h3 id="异常">异常</h3>
 
 <ul>
- <li>如果 <code>bufferSource</code> 不是一个 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>，将会抛出 {{jsxref("TypeError")}} 异常。</li>
+ <li>如果 <code>bufferSource</code> 不是一个 <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a>，将会抛出 {{jsxref("TypeError")}} 异常。</li>
  <li>如果编译失败，promise 会通过拒绝（reject）来返回一个 {{jsxref("WebAssembly.CompileError")}}。</li>
 </ul>
 
 <h2 id="例子">例子</h2>
 
-<p>下面的例子（在 GitHub 上查看我们的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html">compile-streaming.html</a> 示例或者直接<a href="https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html">在线预览</a>）直接从流式源传输一个 .wasm 模块然后将其编译为一个 {{jsxref("WebAssembly.Module")}} 对象。因为 <code>compileStreaming()</code> 方法可以接受一个结果为  {{domxref("Response")}} 对象的 promise，因此你可以直接用 {{domxref("fetch()")}} 的调用结果来调用该方法。</p>
+<p>下面的例子（在 GitHub 上查看我们的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html">compile-streaming.html</a> 示例或者直接<a href="https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html">在线预览</a>）直接从流式源传输一个 .wasm 模块然后将其编译为一个 {{jsxref("WebAssembly.Module")}} 对象。因为 <code>compileStreaming()</code> 方法可以接受一个结果为  {{domxref("Response")}} 对象的 promise，因此你可以直接用 {{domxref("fetch()")}} 的调用结果来调用该方法。</p>
 
 <pre class="brush: js">var importObject = { imports: { imported_func: arg =&gt; console.log(arg) } };
 

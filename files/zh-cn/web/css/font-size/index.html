@@ -7,7 +7,7 @@ translation_of: Web/CSS/font-size
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>font-size</code></strong> <a href="/zh-CN/docs/CSS" title="CSS">CSS</a> 属性指定字体的大小。因为该属性的值会被用于计算 em 和 ex 长度单位，定义该值可能改变其他元素的大小。</p>
+<p><strong><code>font-size</code></strong> <a href="/zh-CN/docs/CSS" title="CSS">CSS</a> 属性指定字体的大小。因为该属性的值会被用于计算 em 和 ex 长度单位，定义该值可能改变其他元素的大小。</p>
 
 <pre class="brush:css">/* &lt;absolute-size&gt;，绝对大小值 */
 font-size: xx-small;
@@ -39,15 +39,15 @@ font-size: inherit;
 <p><strong>font-size</strong> 属性以两种方式之一指定：</p>
 
 <ul>
- <li>作为一个从绝对大小<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size$edit#absolute-size">absolute-size</a> 关键字列表或相对大小<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size$edit#relative-size">relative-size</a> 关键字列表中选择的单个关键字。</li>
- <li>作为一个  <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size$edit#&lt;length-percentage>">&lt;length-percentage&gt;</a></code> 值。</li>
+ <li>作为一个从绝对大小<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size$edit#absolute-size">absolute-size</a> 关键字列表或相对大小<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size$edit#relative-size">relative-size</a> 关键字列表中选择的单个关键字。</li>
+ <li>作为一个  <code><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size$edit#&lt;length-percentage>">&lt;length-percentage&gt;</a></code> 值。</li>
 </ul>
 
 <h3 id="Values">值</h3>
 
 <dl>
  <dt><code>xx-small, x-small, small, medium, large, x-large, xx-large</code></dt>
- <dd>该套绝对大小关键字定义相对于用户的默认字体大小 (medium)。与展示 HTML 的<code>&lt;font size="1"&gt;</code> 到<code>&lt;font size="7"&gt;（</code>用户默认字体大小<code>&lt;font size="3"&gt;）类似。</code></dd>
+ <dd>该套绝对大小关键字定义相对于用户的默认字体大小 (medium)。与展示 HTML 的<code>&lt;font size="1"&gt;</code> 到<code>&lt;font size="7"&gt;（</code>用户默认字体大小<code>&lt;font size="3"&gt;）类似。</code></dd>
  <dt><code>larger, smaller</code></dt>
  <dd>比父元素的字体大或小，使用与上面的关键字的相近缩放比率。</dd>
  <dt><code>&lt;length&gt;</code><em> </em></dt>
@@ -76,11 +76,11 @@ font-size: inherit;
 
 <p>字体大小的设置也可以使用组合值。例如，如果父元素设定为 16px 而子元素设定为<code>larger</code>, 子元素显示的字体大小就会大于父元素。</p>
 
-<div class="note"><strong>注意：</strong> 用像素字体定义使得字体大小不可由用户的浏览器改变。（例如，视力较低用户可能希望使用比网页设计师设定的字体大小大很多的字体）所以，如果你想创造能广泛使用的设计请避免使用像素设定字体。</div>
+<div class="note"><strong>注意：</strong> 用像素字体定义使得字体大小不可由用户的浏览器改变。（例如，视力较低用户可能希望使用比网页设计师设定的字体大小大很多的字体）所以，如果你想创造能广泛使用的设计请避免使用像素设定字体。</div>
 
 <h3 id="Ems">Em</h3>
 
-<p>另一种方法是用<code>em</code>值设定字体大小。<code>em</code> 值的大小是动态的。当定义或继承 font-size 属性时，1em 等于该元素的字体大小。如果你在网页中任何地方都没有设置文字大小的话，那它将等于浏览器默认文字大小，通常是 16px。所以通常 1em = 16px。2em = 32px。 如果你设置了 body 元素的字体大小为 20px，那 1em = 20px、2em = 40px。那个 2 就是当前 em 大小的倍数。</p>
+<p>另一种方法是用<code>em</code>值设定字体大小。<code>em</code> 值的大小是动态的。当定义或继承 font-size 属性时，1em 等于该元素的字体大小。如果你在网页中任何地方都没有设置文字大小的话，那它将等于浏览器默认文字大小，通常是 16px。所以通常 1em = 16px。2em = 32px。 如果你设置了 body 元素的字体大小为 20px，那 1em = 20px、2em = 40px。那个 2 就是当前 em 大小的倍数。</p>
 
 <p>可用这个公式计算像素大小的等价 em 大小：</p>
 

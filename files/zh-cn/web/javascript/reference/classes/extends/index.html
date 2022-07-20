@@ -23,9 +23,9 @@ translation_of: Web/JavaScript/Reference/Classes/extends
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_extends">使用 <code>extends</code></h3>
+<h3 id="使用_extends">使用 <code>extends</code></h3>
 
-<p>第一个例子是根据名为 <code>Polygon</code> 类创建一个名为<code>Square</code>的类。这个例子是从这个<a href="https://googlechrome.github.io/samples/classes-es6/index.html">在线演示</a>中提取出来的。</p>
+<p>第一个例子是根据名为 <code>Polygon</code> 类创建一个名为<code>Square</code>的类。这个例子是从这个<a href="https://googlechrome.github.io/samples/classes-es6/index.html">在线演示</a>中提取出来的。</p>
 
 <pre class="brush: js">class Square extends Polygon {
   constructor(length) {
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   }
 }</pre>
 
-<h3 id="使用_extends与内置对象">使用 <code>extends</code>与内置对象</h3>
+<h3 id="使用_extends与内置对象">使用 <code>extends</code>与内置对象</h3>
 
 <p>这个示例继承了内置的{{jsxref("Date")}}对象。这个例子是从这个<a href="https://googlechrome.github.io/samples/classes-es6/index.html">在线演示</a>中提取出来的。</p>
 
@@ -57,9 +57,9 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   }
 }</pre>
 
-<h3 id="扩展_null">扩展 <code>null</code></h3>
+<h3 id="扩展_null">扩展 <code>null</code></h3>
 
-<p>可以像扩展普通类一样扩展{{jsxref("null")}}，但是新对象的原型将不会继承 {{jsxref("Object.prototype")}}。</p>
+<p>可以像扩展普通类一样扩展{{jsxref("null")}}，但是新对象的原型将不会继承 {{jsxref("Object.prototype")}}。</p>
 
 <pre class="brush: js">class nullExtends extends null {
   constructor() {}
@@ -87,7 +87,7 @@ new nullExtends(); //ReferenceError: this is not defined</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-class-definitions', 'extends')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

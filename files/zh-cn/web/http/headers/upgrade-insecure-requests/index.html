@@ -30,13 +30,13 @@ translation_of: Web/HTTP/Headers/Upgrade-Insecure-Requests
 
 <h2 id="示例">示例</h2>
 
-<p>客户端向服务器端发送信号表示它支持 {{CSP("upgrade-insecure-requests")}} 的升级机制：</p>
+<p>客户端向服务器端发送信号表示它支持 {{CSP("upgrade-insecure-requests")}} 的升级机制：</p>
 
 <pre>GET / HTTP/1.1
 Host: example.com
 Upgrade-Insecure-Requests: 1</pre>
 
-<p>服务器现在可以重定向到这个站点的安全版本。在响应中可以添加一个 {{HTTPHeader("Vary")}}  首部，这样的话，响应就不会被缓存服务器提供给不支持升级机制的客户端了。</p>
+<p>服务器现在可以重定向到这个站点的安全版本。在响应中可以添加一个 {{HTTPHeader("Vary")}}  首部，这样的话，响应就不会被缓存服务器提供给不支持升级机制的客户端了。</p>
 
 <pre>Location: https://example.com/
 Vary: Upgrade-Insecure-Requests</pre>

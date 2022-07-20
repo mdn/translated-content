@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 <h2 id="描述">描述</h2>
 
-<p>有时需要允许访问返回动态计算值的属性，或者你可能需要反映内部变量的状态，而不需要使用显式方法调用。在 JavaScript 中，可以使用 <em>getter </em>来实现。</p>
+<p>有时需要允许访问返回动态计算值的属性，或者你可能需要反映内部变量的状态，而不需要使用显式方法调用。在 JavaScript 中，可以使用 <em>getter </em>来实现。</p>
 
 <p>尽管可以结合使用 getter 和 setter 来创建一个伪属性，但是不可能同时将一个 getter 绑定到一个属性并且该属性实际上具有一个值。</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 <ul>
  <li>可以使用数值或字符串作为标识；</li>
  <li>必须不带参数（请参考<a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a>）；</li>
- <li>它不能与另一个 <code>get </code>或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 <code>{ get x() { }, get x() { } }</code> 和 <code>{ x: ..., get x() { } }</code>）。</li>
+ <li>它不能与另一个 <code>get </code>或具有相同属性的数据条目同时出现在一个对象字面量中（不允许使用 <code>{ get x() { }, get x() { } }</code> 和 <code>{ x: ..., get x() { } }</code>）。</li>
 </ul>
 </div>
 
@@ -94,7 +94,7 @@ console.log(obj.foo); // "bar"</pre>
 
 <p>Getters 给你一种方法来定义一个对象的属性，但是在访问它们之前不会计算属性的值。 getter 延迟计算值的成本，直到需要此值，如果不需要，您就不用支付成本。</p>
 
-<p>一种额外的优化技术是用<strong>智能 (或称<a href="https://en.wikipedia.org/wiki/Memoization">记忆化</a>)getters </strong>延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用 getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：</p>
+<p>一种额外的优化技术是用<strong>智能 (或称<a href="https://en.wikipedia.org/wiki/Memoization">记忆化</a>)getters </strong>延迟属性值的计算并将其缓存以备以后访问。该值是在第一次调用 getter 时计算的，然后被缓存，因此后续访问返回缓存值而不重新计算它。这在以下情况下很有用：</p>
 
 <ul>
  <li>如果属性值的计算是昂贵的（占用大量 RAM 或 CPU 时间，产生工作线程，检索远程文件等）。</li>

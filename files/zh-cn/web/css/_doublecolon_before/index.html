@@ -6,14 +6,14 @@ translation_of: 'Web/CSS/::before'
 <div>
 <p>{{CSSRef}}</p>
 
-<p>CSS 中，<strong><code>::before</code></strong> 创建一个<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a>，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认为行内元素。</p>
+<p>CSS 中，<strong><code>::before</code></strong> 创建一个<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a>，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认为行内元素。</p>
 
 <pre><code>/* Add a heart before links */
 a::before {
   content: "</code>♥<code>";
 }</code></pre>
 
-<p><strong>注意：</strong> 由<code>::before</code> 和<code>::after</code> 生成的伪元素 <a href="https://www.w3.org/TR/CSS2/generate.html#before-after-content">包含在元素格式框内</a>， 因此不能应用在<em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">替换元素上</a>，</em> 比如{{htmlelement("img")}}或{{htmlelement("br")}} 元素。</p>
+<p><strong>注意：</strong> 由<code>::before</code> 和<code>::after</code> 生成的伪元素 <a href="https://www.w3.org/TR/CSS2/generate.html#before-after-content">包含在元素格式框内</a>， 因此不能应用在<em><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">替换元素上</a>，</em> 比如{{htmlelement("img")}}或{{htmlelement("br")}} 元素。</p>
 </div>
 
 <h2 id="Syntax">语法</h2>
@@ -27,13 +27,13 @@ element:before  { <em>样式</em> }
 /* 在每一个 p 元素前插入内容 */
 p::before { content: "Hello world!"; } </pre>
 
-<p>CSS3 引入 <code style="font-style: normal;">::before</code>  是为了将<a href="/en-US/docs/CSS/Pseudo-classes" title="/en-US/docs/CSS/Pseudo-classes">伪类</a>和<a href="/en-US/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">伪元素</a>区别开来。浏览器也接受由 CSS 2 引入的<code> :before</code> 写法。</p>
+<p>CSS3 引入 <code style="font-style: normal;">::before</code>  是为了将<a href="/en-US/docs/CSS/Pseudo-classes" title="/en-US/docs/CSS/Pseudo-classes">伪类</a>和<a href="/en-US/docs/CSS/Pseudo-elements" title="/en-US/docs/CSS/Pseudo-elements">伪元素</a>区别开来。浏览器也接受由 CSS 2 引入的<code> :before</code> 写法。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="Adding_quotation_marks">加入引用标记</h3>
 
-<p>使用 <code>::before </code>伪元素的一个简单示例就是用于加入引号。此处同时使用了 <code>::before</code> 和 <code>{{Cssxref("::after")}}</code>来插入引用性文本。</p>
+<p>使用 <code>::before </code>伪元素的一个简单示例就是用于加入引号。此处同时使用了 <code>::before</code> 和 <code>{{Cssxref("::after")}}</code>来插入引用性文本。</p>
 
 <h4 id="HTML_内容">HTML 内容</h4>
 
@@ -65,14 +65,14 @@ q::after {
 <h4 id="CSS_内容_2">CSS 内容</h4>
 
 <pre class="brush: css">.ribbon {
-   background-color: #5BC8F7;
+   background-color: #5BC8F7;
 }
 
 .ribbon::before {
-   content:          "Look at this orange box.";
-   background-color: #FFBA10;
-   border-color:     black;
-   border-style:     dotted;
+   content:          "Look at this orange box.";
+   background-color: #FFBA10;
+   border-color:     black;
+   border-style:     dotted;
 }</pre>
 
 <h4 id="最终结果">最终结果</h4>
@@ -87,41 +87,41 @@ q::after {
 
 <pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;Buy milk&lt;/li&gt;
-  &lt;li&gt;Take the dog for a walk&lt;/li&gt;
-  &lt;li&gt;Exercise&lt;/li&gt;
-  &lt;li&gt;Write code&lt;/li&gt;
-  &lt;li&gt;Play music&lt;/li&gt;
-  &lt;li&gt;Relax&lt;/li&gt;
+  &lt;li&gt;Take the dog for a walk&lt;/li&gt;
+  &lt;li&gt;Exercise&lt;/li&gt;
+  &lt;li&gt;Write code&lt;/li&gt;
+  &lt;li&gt;Play music&lt;/li&gt;
+  &lt;li&gt;Relax&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 
 <h4 id="CSS_内容_3">CSS 内容</h4>
 
 <pre class="brush: css">li {
-  list-style-type: none;
-  position: relative;
-  margin: 2px;
-  padding: 0.5em 0.5em 0.5em 2em;
-  background: lightgrey;
-  font-family: sans-serif;
+  list-style-type: none;
+  position: relative;
+  margin: 2px;
+  padding: 0.5em 0.5em 0.5em 2em;
+  background: lightgrey;
+  font-family: sans-serif;
 }
 
 li.done {
-  background: #CCFF99;
+  background: #CCFF99;
 }
 
 li.done::before {
-  content: '';
-  position: absolute;
-  border-color: #009933;
-  border-style: solid;
-  border-width: 0 0.3em 0.25em 0;
-  height: 1em;
-  top: 1.3em;
-  left: 0.6em;
-  margin-top: -1em;
-  transform: rotate(45deg);
-  width: 0.5em;
+  content: '';
+  position: absolute;
+  border-color: #009933;
+  border-style: solid;
+  border-width: 0 0.3em 0.25em 0;
+  height: 1em;
+  top: 1.3em;
+  left: 0.6em;
+  margin-top: -1em;
+  transform: rotate(45deg);
+  width: 0.5em;
 }</pre>
 
 <h4 id="JavaScript_内容">JavaScript 内容</h4>
@@ -134,7 +134,7 @@ list.addEventListener('click', function(ev) {
 }, false);
 </pre>
 
-<p>下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的<code> ::before </code>伪元素。接下来建立几个待办事项来完成它们吧。</p>
+<p>下面展示的是最终得到的结果。请注意我们没有使用任何图标，对勾标识实际上是使用 CSS 定义了样式的<code> ::before </code>伪元素。接下来建立几个待办事项来完成它们吧。</p>
 
 <h4 id="最终结果_2">最终结果</h4>
 

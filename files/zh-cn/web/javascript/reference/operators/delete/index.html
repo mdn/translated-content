@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Operators/delete
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p> <strong><code>delete</code> 操作符</strong>用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。</p>
+<p> <strong><code>delete</code> 操作符</strong>用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。</p>
 
 <div>
 <div>{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}</div>
@@ -23,10 +23,10 @@ translation_of: Web/JavaScript/Reference/Operators/delete
 <pre class="syntaxbox">delete <em>expression</em>
 </pre>
 
-<p> <em>expression</em> 的计算结果应该是某个属性的引用，例如：</p>
+<p> <em>expression</em> 的计算结果应该是某个属性的引用，例如：</p>
 
-<pre class="syntaxbox">delete <em>object.property</em>
-delete <em>object</em>['<em>property</em>']
+<pre class="syntaxbox">delete <em>object.property</em>
+delete <em>object</em>['<em>property</em>']
 </pre>
 
 <h3 id="Parameters">参数</h3>
@@ -40,7 +40,7 @@ delete <em>object</em>['<em>property</em>']
 
 <h3 id="返回值">返回值</h3>
 
-<p>对于所有情况都是<code>true</code>，除非属性是一个{{jsxref("Object.hasOwnProperty", "自身的")}} {{jsxref("Errors/Cant_delete", "不可配置")}}的属性，在这种情况下，非严格模式返回 <code>false</code>。</p>
+<p>对于所有情况都是<code>true</code>，除非属性是一个{{jsxref("Object.hasOwnProperty", "自身的")}} {{jsxref("Errors/Cant_delete", "不可配置")}}的属性，在这种情况下，非严格模式返回 <code>false</code>。</p>
 
 <h3 id="异常">异常</h3>
 
@@ -57,7 +57,7 @@ delete <em>object</em>['<em>property</em>']
 <ul>
  <li>如果你试图删除的属性不存在，那么 delete 将不会起任何作用，但仍会返回 true</li>
  <li>如果对象的原型链上有一个与待删除属性同名的属性，那么删除属性之后，对象会使用原型链上的那个属性（也就是说，delete 操作只会在自身的属性上起作用）</li>
- <li>任何使用 {{jsxref("Statements/var","var")}} 声明的属性不能从全局作用域或函数的作用域中删除。
+ <li>任何使用 {{jsxref("Statements/var","var")}} 声明的属性不能从全局作用域或函数的作用域中删除。
   <ul>
    <li>这样的话，delete 操作不能删除任何在全局作用域中的函数（无论这个函数是来自于函数声明或函数表达式）</li>
    <li>除了在全局作用域中的函数不能被删除，在对象 (object) 中的函数是能够用 delete 操作删除的。</li>
@@ -91,7 +91,7 @@ Object.defineProperty(Employee, 'name', {configurable: false});
 
 console.log(delete Employee.name);  // returns false</pre>
 
-<p>{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}以及{{jsxref("Statements/const","const")}}创建的不可设置的属性不能被 delete 操作删除。</p>
+<p>{{jsxref("Statements/var","var")}}, {{jsxref("Statements/let","let")}}以及{{jsxref("Statements/const","const")}}创建的不可设置的属性不能被 delete 操作删除。</p>
 
 <pre class="brush: js">var nameOther = 'XYZ';
 
@@ -123,8 +123,8 @@ console.log(delete variable2); // false
 </pre>
 
 <pre class="brush: js">function func(param) {
-  // SyntaxError in strict mode.
-  console.log(delete param); // false
+  // SyntaxError in strict mode.
+  console.log(delete param); // false
 }
 
 // SyntaxError in strict mode.
@@ -235,7 +235,7 @@ console.log(foo.bar);    //undefined
 
 <p>当你删除一个数组元素时，数组的长度不受影响。即便你删除了数组的最后一个元素也是如此。</p>
 
-<p>当用 <code>delete</code> 操作符删除一个数组元素时，被删除的元素已经不再属于该数组。下面的例子中用 <code>delete </code>删除了<code> trees[3]</code>。</p>
+<p>当用 <code>delete</code> 操作符删除一个数组元素时，被删除的元素已经不再属于该数组。下面的例子中用 <code>delete </code>删除了<code> trees[3]</code>。</p>
 
 <pre class="brush: js">var trees = ["redwood","bay","cedar","oak","maple"];
 delete trees[3];
@@ -244,7 +244,7 @@ if (3 in trees) {
 }
 </pre>
 
-<p>如果你想让一个数组元素继续存在但是其值是 <code>undefined</code>，那么可以使用将 <code>undefined</code> 赋值给这个元素而不是使用 <code>delete</code>。下面的例子中，trees[3] 被赋值为 <code>undefined</code>，但该元素仍然存在。</p>
+<p>如果你想让一个数组元素继续存在但是其值是 <code>undefined</code>，那么可以使用将 <code>undefined</code> 赋值给这个元素而不是使用 <code>delete</code>。下面的例子中，trees[3] 被赋值为 <code>undefined</code>，但该元素仍然存在。</p>
 
 <pre class="brush: js">var trees = ["redwood","bay","cedar","oak","maple"];
 trees[3] = undefined;

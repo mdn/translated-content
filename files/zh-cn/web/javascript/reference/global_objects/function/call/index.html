@@ -9,10 +9,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>call()</strong></code> 方法使用一个指定的 <code>this</code> 值和单独给出的一个或多个参数来调用一个函数。</p>
+<p><code><strong>call()</strong></code> 方法使用一个指定的 <code>this</code> 值和单独给出的一个或多个参数来调用一个函数。</p>
 
 <div class="note">
-<p><strong>备注：</strong>该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 <code>call()</code> 方法接受的是<strong>一个参数列表</strong>，而 <code>apply()</code> 方法接受的是<strong>一个包含多个参数的数组</strong>。</p>
+<p><strong>备注：</strong>该方法的语法和作用与 {{jsxref("Function.apply", "apply()")}} 方法类似，只有一个区别，就是 <code>call()</code> 方法接受的是<strong>一个参数列表</strong>，而 <code>apply()</code> 方法接受的是<strong>一个包含多个参数的数组</strong>。</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/js/function-call.html")}}</div>
@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <dl>
  <dt><code>thisArg</code></dt>
- <dd>可选的。在 <em><code>function</code></em> 函数运行时使用的 <code>this</code> 值。请注意，<code>this</code>可能不是该方法看到的实际值：如果这个函数处于<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode" title="如果你想改变你的代码，让其工作在具有限制性JavaScript环境中，请参阅转换成严格模式。">非严格模式</a>下，则指定为 <code>null</code> 或 <code>undefined</code> 时会自动替换为指向全局对象，原始值会被包装。</dd>
+ <dd>可选的。在 <em><code>function</code></em> 函数运行时使用的 <code>this</code> 值。请注意，<code>this</code>可能不是该方法看到的实际值：如果这个函数处于<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode" title="如果你想改变你的代码，让其工作在具有限制性JavaScript环境中，请参阅转换成严格模式。">非严格模式</a>下，则指定为 <code>null</code> 或 <code>undefined</code> 时会自动替换为指向全局对象，原始值会被包装。</dd>
  <dt><code>arg1, arg2, ...</code></dt>
  <dd>指定的参数列表。</dd>
 </dl>
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <p><code>call()</code> 允许为不同的对象分配和调用属于一个对象的函数/方法。</p>
 
-<p><code>call()</code> 提供新的 <strong>this </strong>值给当前调用的函数/方法。你可以使用 <code>call</code> 来实现继承：写一个方法，然后让另外一个新的对象来继承它（而不是在新对象中再写一次这个方法）。</p>
+<p><code>call()</code> 提供新的 <strong>this </strong>值给当前调用的函数/方法。你可以使用 <code>call</code> 来实现继承：写一个方法，然后让另外一个新的对象来继承它（而不是在新对象中再写一次这个方法）。</p>
 
 <h2 id="示例">示例</h2>
 

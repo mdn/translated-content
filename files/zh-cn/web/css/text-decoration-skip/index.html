@@ -5,7 +5,7 @@ translation_of: Web/CSS/text-decoration-skip
 ---
 <div>{{CSSRef}}</div>
 
-<p>CSS <strong><code>text-decoration-skip</code></strong> 属性定义了元素哪些部分的内容需要被文本修饰所跳过。它可以控制所有该元素或该元素的祖先所绘制的文本修饰线。</p>
+<p>CSS <strong><code>text-decoration-skip</code></strong> 属性定义了元素哪些部分的内容需要被文本修饰所跳过。它可以控制所有该元素或该元素的祖先所绘制的文本修饰线。</p>
 
 <pre class="brush:css no-line-numbers">/* 关键字 */
 text-decoration-skip: none;
@@ -26,7 +26,7 @@ text-decoration-skip: unset;
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong> <code>ink</code> 值被移动至 {{cssxref("text-decoration-skip-ink")}} 属性。</p>
+<p><strong>注意：</strong> <code>ink</code> 值被移动至 {{cssxref("text-decoration-skip-ink")}} 属性。</p>
 </div>
 
 <p>{{cssinfo}}</p>
@@ -41,11 +41,11 @@ text-decoration-skip: unset;
  <dt><code>objects</code></dt>
  <dd>拥有完整盒模型的原子行内元素会被跳过，例如图片和行内块元素。</dd>
  <dt><code>spaces</code></dt>
- <dd>所有的空格会被跳过，包括：所有的 <a href="https://www.unicode.org/reports/tr44/#White_Space">Unicode 空白字符</a> 和所有的分词符，以及任意相邻的 {{cssxref("letter-spacing")}} 或 {{cssxref("word-spacing")}}。</dd>
+ <dd>所有的空格会被跳过，包括：所有的 <a href="https://www.unicode.org/reports/tr44/#White_Space">Unicode 空白字符</a> 和所有的分词符，以及任意相邻的 {{cssxref("letter-spacing")}} 或 {{cssxref("word-spacing")}}。</dd>
  <dt><code>leading-spaces</code></dt>
- <dd>除了只跳过开始的空格外，与 <code>spaces</code> 相同。</dd>
+ <dd>除了只跳过开始的空格外，与 <code>spaces</code> 相同。</dd>
  <dt><code>trailing-spaces</code></dt>
- <dd>除了只跳过结尾的空格外，与 <code>spaces</code> 相同。</dd>
+ <dd>除了只跳过结尾的空格外，与 <code>spaces</code> 相同。</dd>
  <dt><code>edges</code></dt>
  <dd>文本修饰的开始与结束会比原有的装饰范围向内收缩（例如半个线宽）。这样，相邻的元素的下划线就可以分开。（这对于中文很重要，因为在中文中，下划线也是一种形式的标点符号。）</dd>
  <dd><img alt='An example of "text-decoration-skip: edges;".' src="decoration-skip-edges.png"></dd>

@@ -25,48 +25,48 @@ translation_of: Web/SVG/Element/feDiffuseLighting
 <pre class="brush: html">&lt;svg width="440" height="140" xmlns="http://www.w3.org/2000/svg"&gt;
 
   &lt;!-- No light is applied --&gt;
-  &lt;text text-anchor="middle" x="60" y="22"&gt;No Light&lt;/text&gt;
-  &lt;circle cx="60" cy="80" r="50" fill="green" /&gt;
+  &lt;text text-anchor="middle" x="60" y="22"&gt;No Light&lt;/text&gt;
+  &lt;circle cx="60" cy="80" r="50" fill="green" /&gt;
 
   &lt;!-- the light source is a fePointLight element --&gt;
-  &lt;text text-anchor="middle" x="170" y="22"&gt;fePointLight&lt;/text&gt;
-  &lt;filter id="lightMe1"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
-      &lt;fePointLight x="150" y="60" z="20" /&gt;
-    &lt;/feDiffuseLighting&gt;
+  &lt;text text-anchor="middle" x="170" y="22"&gt;fePointLight&lt;/text&gt;
+  &lt;filter id="lightMe1"&gt;
+    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
+      &lt;fePointLight x="150" y="60" z="20" /&gt;
+    &lt;/feDiffuseLighting&gt;
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    &lt;feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
+  &lt;/filter&gt;
 
-  &lt;circle cx="170" cy="80" r="50" fill="green" filter="url(#lightMe1)" /&gt;
+  &lt;circle cx="170" cy="80" r="50" fill="green" filter="url(#lightMe1)" /&gt;
 
   &lt;!-- the light source is a feDistantLight element --&gt;
-  &lt;text text-anchor="middle" x="280" y="22"&gt;feDistantLight&lt;/text&gt;
-  &lt;filter id="lightMe2"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
-      &lt;feDistantLight azimuth="240" elevation="20"/&gt;
-    &lt;/feDiffuseLighting&gt;
+  &lt;text text-anchor="middle" x="280" y="22"&gt;feDistantLight&lt;/text&gt;
+  &lt;filter id="lightMe2"&gt;
+    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
+      &lt;feDistantLight azimuth="240" elevation="20"/&gt;
+    &lt;/feDiffuseLighting&gt;
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    &lt;feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
+  &lt;/filter&gt;
 
-  &lt;circle cx="280" cy="80" r="50" fill="green" filter="url(#lightMe2)" /&gt;
+  &lt;circle cx="280" cy="80" r="50" fill="green" filter="url(#lightMe2)" /&gt;
 
   &lt;!-- the light source is a feSpotLight source --&gt;
-  &lt;text text-anchor="middle" x="390" y="22"&gt;feSpotLight&lt;/text&gt;
-  &lt;filter id="lightMe3"&gt;
-    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
-      &lt;feSpotLight x="360" y="5" z="30" limitingConeAngle="20"
-                   pointsAtX="390" pointsAtY="80" pointsAtZ="0"/&gt;
-    &lt;/feDiffuseLighting&gt;
+  &lt;text text-anchor="middle" x="390" y="22"&gt;feSpotLight&lt;/text&gt;
+  &lt;filter id="lightMe3"&gt;
+    &lt;feDiffuseLighting in="SourceGraphic" result="light" lighting-color="white"&gt;
+      &lt;feSpotLight x="360" y="5" z="30" limitingConeAngle="20"
+                   pointsAtX="390" pointsAtY="80" pointsAtZ="0"/&gt;
+    &lt;/feDiffuseLighting&gt;
 
-    &lt;feComposite in="SourceGraphic" in2="light"
-                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
-  &lt;/filter&gt;
+    &lt;feComposite in="SourceGraphic" in2="light"
+                 operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/&gt;
+  &lt;/filter&gt;
 
-  &lt;circle cx="390" cy="80" r="50" fill="green" filter="url(#lightMe3)" /&gt;
+  &lt;circle cx="390" cy="80" r="50" fill="green" filter="url(#lightMe3)" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>预计的呈现：</p>
@@ -82,9 +82,9 @@ translation_of: Web/SVG/Element/feDiffuseLighting
 <h3 id="全局属性">全局属性</h3>
 
 <ul>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Filter" title="en/SVG/Attribute#Filter">滤镜属性</a> »</li>
+ <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">核心属性</a> »</li>
+ <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">外观属性</a> »</li>
+ <li><a href="/en/SVG/Attribute#Filter" title="en/SVG/Attribute#Filter">滤镜属性</a> »</li>
  <li>{{ SVGAttr("class") }}</li>
  <li>{{ SVGAttr("style") }}</li>
 </ul>

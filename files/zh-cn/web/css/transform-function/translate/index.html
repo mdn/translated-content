@@ -11,7 +11,7 @@ original_slug: Web/CSS/transform-function/translate()
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>translate()</code></strong> 这个 <a href="/en-US/docs/Web/CSS">CSS</a> 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。</p>
+<p><strong><code>translate()</code></strong> 这个 <a href="/en-US/docs/Web/CSS">CSS</a> 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12121/translate.png" style="height: 195px; width: 249px;"></p>
 
@@ -33,10 +33,10 @@ transform: translate(30%, 50%);
 <h3 id="值">值</h3>
 
 <dl>
- <dt>单个 <code>&lt;length-percentage&gt;</code> 作为参数</dt>
- <dd>该值是 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 代表翻译向量的横坐标  (horizontal, x-coordinate) . 而向量的纵坐标 (vertical, y-coordinate) 会被默认为 <code>0</code>. 例如，<code>translate(2)</code> 等价于 <code>translate(2, 0)</code> 。里面还可以填百分比值，百分比值是指 {{cssxref("transform-box")}} 属性定义的参考框的宽度。</dd>
- <dt>参数是两个 <code>&lt;length-percentage&gt;</code> 构成</dt>
- <dd>此值描述两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值，分别代表翻译的横坐标  (x-coordinate)  和纵坐标  (y-coordinate)  向量。百分比作为第一个值表示宽度，第二个部分表示由 {{cssxref("transform-box")}} 属性定义的参考框的高度。</dd>
+ <dt>单个 <code>&lt;length-percentage&gt;</code> 作为参数</dt>
+ <dd>该值是 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 代表翻译向量的横坐标  (horizontal, x-coordinate) . 而向量的纵坐标 (vertical, y-coordinate) 会被默认为 <code>0</code>. 例如，<code>translate(2)</code> 等价于 <code>translate(2, 0)</code> 。里面还可以填百分比值，百分比值是指 {{cssxref("transform-box")}} 属性定义的参考框的宽度。</dd>
+ <dt>参数是两个 <code>&lt;length-percentage&gt;</code> 构成</dt>
+ <dd>此值描述两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值，分别代表翻译的横坐标  (x-coordinate)  和纵坐标  (y-coordinate)  向量。百分比作为第一个值表示宽度，第二个部分表示由 {{cssxref("transform-box")}} 属性定义的参考框的高度。</dd>
 </dl>
 
 <table class="standard-table">
@@ -51,7 +51,7 @@ transform: translate(30%, 50%);
  <tbody>
   <tr>
    <td colspan="1" rowspan="2">
-    <p>平移不是 ℝ<sup>2</sup> 中的线性变换，因此不能使用矩阵来表示。</p>
+    <p>平移不是 ℝ<sup>2</sup> 中的线性变换，因此不能使用矩阵来表示。</p>
    </td>
    <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
    <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>

@@ -15,22 +15,22 @@ translation_of: Web/CSS/transform-function
 ---
 <p>{{CSSRef}}</p>
 
-<p> <strong><code>&lt;transform-function&gt;</code> </strong>CSS 数据类型用于对元素的显示做变换。通常，这种变换可以由矩阵表示，并且可以使用每个点上的矩阵乘法来确定所得到的图像。</p>
+<p> <strong><code>&lt;transform-function&gt;</code> </strong>CSS 数据类型用于对元素的显示做变换。通常，这种变换可以由矩阵表示，并且可以使用每个点上的矩阵乘法来确定所得到的图像。</p>
 
 <h2 id="2D图形_的坐标系统">2D 图形 的坐标系统</h2>
 
-<p>目前有多种用来描述转换坐标模型，最常用的是 <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">笛卡尔坐标系统</a> 和 <a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">齐次坐标</a>。</p>
+<p>目前有多种用来描述转换坐标模型，最常用的是 <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system">笛卡尔坐标系统</a> 和 <a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">齐次坐标</a>。</p>
 
 <h3 id="笛卡尔_坐标">笛卡尔 坐标</h3>
 
 <p><a href="/@api/deki/files/5796/=coord_in_R2.png"><img src="/files/3438/coord_in_R2.png" style="float: right; width: 171px;"></a></p>
 
-<p>在笛卡尔坐标系中，每个 <a href="https://en.wikipedia.org/wiki/Euclidean_geometry">欧氏空间</a> 里的点都由横坐标和纵坐标这两个值来确定。在 CSS（和大部分的计算机图形学）中，原点 <code>(0, 0)</code> 在元素的左上角。每个点都使用数学上的向量符号 (x,y) 来描述。</p>
+<p>在笛卡尔坐标系中，每个 <a href="https://en.wikipedia.org/wiki/Euclidean_geometry">欧氏空间</a> 里的点都由横坐标和纵坐标这两个值来确定。在 CSS（和大部分的计算机图形学）中，原点 <code>(0, 0)</code> 在元素的左上角。每个点都使用数学上的向量符号 (x,y) 来描述。</p>
 
 <p>每个线性函数使用 2 × 2 矩阵描述，如：</p>
 
-<p>                                                                                          a   c<br>
-                                                                                           b   d</p>
+<p>                                                                                          a   c<br>
+                                                                                           b   d</p>
 
 <p>将矩阵乘法用于上述坐标系中的每个点，一个变换就形成了：</p>
 
@@ -40,9 +40,9 @@ translation_of: Web/CSS/transform-function
 
 <div style="text-align: center;"><a href="/@api/deki/files/5800/=transform_functions_transform_composition_cart.png"><img src="/@api/deki/files/5800/=transform_functions_transform_composition_cart.png?size=webview" style="height: 32px; width: 313px;"></a>.</div>
 
-<p>有了这种方法，就可以描述大部分常见的变换并因此可以将他们组合起来，如：旋转、缩放或拉伸。（事实上，所有线性函数的变换都可以被描述。）组合的变换是从右到左生效的。然而，有一种常见的变换并不是线性的，所以当这种变换要用这种方法来表示时，应该被单独列出来：位移。位移的向量 <code>(tx, ty)</code> 必须单独表示，作为两个附加参数。</p>
+<p>有了这种方法，就可以描述大部分常见的变换并因此可以将他们组合起来，如：旋转、缩放或拉伸。（事实上，所有线性函数的变换都可以被描述。）组合的变换是从右到左生效的。然而，有一种常见的变换并不是线性的，所以当这种变换要用这种方法来表示时，应该被单独列出来：位移。位移的向量 <code>(tx, ty)</code> 必须单独表示，作为两个附加参数。</p>
 
-<p><a href="https://zh.wikipedia.org/wiki/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF" title="奥古斯特·费迪南德·莫比乌斯">奥古斯特·费迪南德·莫比乌斯</a> 的 <a href="http://en.wikipedia.org/wiki/Projective_geometry">齐次坐标系</a> 表示了一个 3 × 3 的变换矩阵，虽然它对于非专业的人来说更复杂和少见，这并不影响将它表示为线性函数，并且这样就不需要考虑额外的特例。</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF" title="奥古斯特·费迪南德·莫比乌斯">奥古斯特·费迪南德·莫比乌斯</a> 的 <a href="http://en.wikipedia.org/wiki/Projective_geometry">齐次坐标系</a> 表示了一个 3 × 3 的变换矩阵，虽然它对于非专业的人来说更复杂和少见，这并不影响将它表示为线性函数，并且这样就不需要考虑额外的特例。</p>
 
 <h2 id="3D_图形的坐标">3D 图形的坐标</h2>
 
@@ -50,11 +50,11 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="matrix"><code>matrix()</code></h3>
 
-<p>CSS 函数 <code>matrix()</code> 用六个指定的值来指定一个均匀的二维（2D）变换矩阵。这个矩形中的常量值是不作为参数进行传递的，其他的参数则在主要列的顺序中描述。</p>
+<p>CSS 函数 <code>matrix()</code> 用六个指定的值来指定一个均匀的二维（2D）变换矩阵。这个矩形中的常量值是不作为参数进行传递的，其他的参数则在主要列的顺序中描述。</p>
 
 <p><code>matrix(a, b, c, d, tx, ty)</code> 是 <code>matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)</code> 的简写</p>
 
-<div class="note"><strong>注意：</strong>直到火狐浏览器的 16 版本，Gecko 内核才为 <strong>tx</strong> 和 <strong>ty</strong> 兼容了  {{cssxref("&lt;length&gt;")}} 这个数据格式。</div>
+<div class="note"><strong>注意：</strong>直到火狐浏览器的 16 版本，Gecko 内核才为 <strong>tx</strong> 和 <strong>ty</strong> 兼容了  {{cssxref("&lt;length&gt;")}} 这个数据格式。</div>
 
 <h4 id="语法">语法</h4>
 
@@ -65,9 +65,9 @@ translation_of: Web/CSS/transform-function
 
 <dl>
  <dt><em>a</em> <em>b</em> <em>c</em> <em>d</em></dt>
- <dd>以 {{cssxref("&lt;number&gt;")}} 的格式来描述线性变换</dd>
+ <dd>以 {{cssxref("&lt;number&gt;")}} 的格式来描述线性变换</dd>
  <dt><em>tx</em> <em>ty</em></dt>
- <dd>以 {{cssxref("&lt;number&gt;")}} 的格式来描述变换的量</dd>
+ <dd>以 {{cssxref("&lt;number&gt;")}} 的格式来描述变换的量</dd>
 </dl>
 
 <table class="standard-table">
@@ -85,30 +85,30 @@ translation_of: Web/CSS/transform-function
  </thead>
  <tbody>
   <tr>
-   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>              a </mtd><mtd>c</mtd></mtr></mtable></mfenced></math><br>
-    <mtr><mtd>               b  </mtd><mtd>d</mtd></mtr></td>
-   <td><math><mfenced><mtable><mtr><mtd>           a </mtd><mtd>c </mtd><mtd>ty</mtd></mtr></mtable></mfenced></math><br>
-    <mtr><mtd>            b  </mtd><mtd>d  </mtd><mtd>tx</mtd></mtr><br>
-    <mtr><mtd>            0  </mtd><mtd>0  </mtd><mtd>1</mtd></mtr></td>
-   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>             a </mtd><mtd>c </mtd><mtd>ty</mtd></mtr></mtable></mfenced></math><br>
-    <mtr><mtd>              b  </mtd><mtd>d  </mtd><mtd>tx</mtd></mtr><br>
-    <mtr><mtd>              0  </mtd><mtd>0  </mtd><mtd>1</mtd></mtr></td>
-   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>          a </mtd><mtd>c </mtd><mtd>0 </mtd><mtd>tx</mtd></mtr></mtable></mfenced></math><br>
-    <mtr><mtd>           b  </mtd><mtd>d  </mtd><mtd>0  </mtd><mtd>ty</mtd></mtr><br>
-    <mtr><mtd>           0  </mtd><mtd>0  </mtd><mtd>1  </mtd><mtd>0</mtd></mtr><br>
-    <mtr><mtd>           0  </mtd><mtd>0  </mtd><mtd>0  </mtd><mtd>1</mtd></mtr></td>
+   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>              a </mtd><mtd>c</mtd></mtr></mtable></mfenced></math><br>
+    <mtr><mtd>               b  </mtd><mtd>d</mtd></mtr></td>
+   <td><math><mfenced><mtable><mtr><mtd>           a </mtd><mtd>c </mtd><mtd>ty</mtd></mtr></mtable></mfenced></math><br>
+    <mtr><mtd>            b  </mtd><mtd>d  </mtd><mtd>tx</mtd></mtr><br>
+    <mtr><mtd>            0  </mtd><mtd>0  </mtd><mtd>1</mtd></mtr></td>
+   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>             a </mtd><mtd>c </mtd><mtd>ty</mtd></mtr></mtable></mfenced></math><br>
+    <mtr><mtd>              b  </mtd><mtd>d  </mtd><mtd>tx</mtd></mtr><br>
+    <mtr><mtd>              0  </mtd><mtd>0  </mtd><mtd>1</mtd></mtr></td>
+   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>          a </mtd><mtd>c </mtd><mtd>0 </mtd><mtd>tx</mtd></mtr></mtable></mfenced></math><br>
+    <mtr><mtd>           b  </mtd><mtd>d  </mtd><mtd>0  </mtd><mtd>ty</mtd></mtr><br>
+    <mtr><mtd>           0  </mtd><mtd>0  </mtd><mtd>1  </mtd><mtd>0</mtd></mtr><br>
+    <mtr><mtd>           0  </mtd><mtd>0  </mtd><mtd>0  </mtd><mtd>1</mtd></mtr></td>
   </tr>
   <tr>
-   <td> <code>[a b c d tx ty]</code></td>
+   <td> <code>[a b c d tx ty]</code></td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="matrix3d"><code>matrix3d()</code></h3>
 
-<p>CSS 函数 <code>matrix3d()</code> 用一个 4 × 4 的齐次矩阵来描述一个三维（3D）变换。16 个参数都在主要列的顺序中描述。</p>
+<p>CSS 函数 <code>matrix3d()</code> 用一个 4 × 4 的齐次矩阵来描述一个三维（3D）变换。16 个参数都在主要列的顺序中描述。</p>
 
-<div class="note"><strong>注意：</strong>直到火狐浏览器的 16 版本，Gecko 内核才为 <strong>a4，</strong> <strong>b4</strong> 和 <strong>c4</strong>兼容了  {{cssxref("&lt;length&gt;")}} 这个数据格式。</div>
+<div class="note"><strong>注意：</strong>直到火狐浏览器的 16 版本，Gecko 内核才为 <strong>a4，</strong> <strong>b4</strong> 和 <strong>c4</strong>兼容了  {{cssxref("&lt;length&gt;")}} 这个数据格式。</div>
 
 <h4 id="语法_2">语法</h4>
 
@@ -118,9 +118,9 @@ translation_of: Web/CSS/transform-function
 
 <dl>
  <dt><em>a1 b1 c1 d1</em> <em>a2 b2 c2 d2 </em><em>a3 b3 c3 d3</em> <em>d4</em></dt>
- <dd>以 {{cssxref("&lt;number&gt;")}} 的格式来描述线性变换</dd>
+ <dd>以 {{cssxref("&lt;number&gt;")}} 的格式来描述线性变换</dd>
  <dt><em>a4</em> <em>b4 c4</em></dt>
- <dd>以 {{cssxref("&lt;number&gt;")}} 的格式来描述变换的量</dd>
+ <dd>以 {{cssxref("&lt;number&gt;")}} 的格式来描述变换的量</dd>
 </dl>
 
 <table class="standard-table">
@@ -142,16 +142,16 @@ translation_of: Web/CSS/transform-function
     <p>这个变换是属于 3D 空间的，并不适用于这两种情况。</p>
    </td>
    <td colspan="1" rowspan="2">笛卡尔坐标矩阵不允许由一般的三维仿射变换来作为平移，因为平移不是线性变换。</td>
-   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>a1  </mtd><mtd>a2  </mtd><mtd>a3  </mtd><mtd>a4</mtd></mtr><mtr><mtd>b1  </mtd><mtd>b2  </mtd><mtd>b3  </mtd><mtd>b4</mtd></mtr></mtable></mfenced></math><br>
-    <mtr><mtd>c1     </mtd><mtd>c2     </mtd><mtd>c3     </mtd><mtd>c4</mtd></mtr><br>
-    <mtr><mtd>d1     </mtd><mtd>d2    </mtd><mtd>d3    </mtd><mtd>d4</mtd></mtr></td>
+   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>a1  </mtd><mtd>a2  </mtd><mtd>a3  </mtd><mtd>a4</mtd></mtr><mtr><mtd>b1  </mtd><mtd>b2  </mtd><mtd>b3  </mtd><mtd>b4</mtd></mtr></mtable></mfenced></math><br>
+    <mtr><mtd>c1     </mtd><mtd>c2     </mtd><mtd>c3     </mtd><mtd>c4</mtd></mtr><br>
+    <mtr><mtd>d1     </mtd><mtd>d2    </mtd><mtd>d3    </mtd><mtd>d4</mtd></mtr></td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="perspective"><code>perspective()</code></h3>
 
-<p> <code>perspective()</code> 这个 CSS 函数定义了 z=0 平面与用户之间的距离，以便给三维定位元素一定透视度。当每个 3D 元素的 z&gt;0 时会显得比较大，而在 z&lt;0 时会显得比较小。其影响的程度由这个属性的值来决定。</p>
+<p> <code>perspective()</code> 这个 CSS 函数定义了 z=0 平面与用户之间的距离，以便给三维定位元素一定透视度。当每个 3D 元素的 z&gt;0 时会显得比较大，而在 z&lt;0 时会显得比较小。其影响的程度由这个属性的值来决定。</p>
 
 <h4 id="语法_3">语法</h4>
 
@@ -222,14 +222,14 @@ translation_of: Web/CSS/transform-function
    <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
   </tr>
   <tr>
-   <td><code>[cos(a) </code>sin(<em>a</em>)<code> -sin(a) cos(<em>a</em>) 0 0]</code></td>
+   <td><code>[cos(a) </code>sin(<em>a</em>)<code> -sin(a) cos(<em>a</em>) 0 0]</code></td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="rotate3d"><code>rotate3d()</code></h3>
 
-<p> <code>rotate3d()</code> 这个 CSS 函数定义一个 3D 旋转功能，该旋转使元素能够绕固定轴移动而不变形。其中移动量由指定角度定义；如果为正值，则运动将为顺时针，如果为负值，则为逆时针。</p>
+<p> <code>rotate3d()</code> 这个 CSS 函数定义一个 3D 旋转功能，该旋转使元素能够绕固定轴移动而不变形。其中移动量由指定角度定义；如果为正值，则运动将为顺时针，如果为负值，则为逆时针。</p>
 
 <p>在三维空间中，旋转有三个自由度，各表示某条旋转轴。旋转轴由 [x，y，z] 向量定义，且过原点（由 {{ cssxref("transform-origin") }} CSS 属性定义）。如果向量没有标准化，即它的三个坐标的平方之和不是 1，它将在内部被标准化。不可标准化的向量，如空向量 [0,0,0]，将导致旋转不被应用，但不会影响整个 CSS 属性。</p>
 
@@ -273,7 +273,7 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="rotateX"><code>rotateX()</code></h3>
 
-<p> <code>rotateX()</code> 这个 CSS 函数定义了将元素在横坐标上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
+<p> <code>rotateX()</code> 这个 CSS 函数定义了将元素在横坐标上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
 
 <p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS 属性定义。.</p>
 
@@ -313,7 +313,7 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="rotateY"><code>rotateY()</code></h3>
 
-<p> <code>rotateY()</code> 这个 CSS 函数定义了将元素在纵坐标上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
+<p> <code>rotateY()</code> 这个 CSS 函数定义了将元素在纵坐标上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
 
 <p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS 属性定义。</p>
 
@@ -353,7 +353,7 @@ translation_of: Web/CSS/transform-function
 
 <h3 id="rotateZ"><code>rotateZ()</code></h3>
 
-<p> <code>rotateZ()</code>这个 CSS 函数定义了将元素在 z 轴上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
+<p> <code>rotateZ()</code>这个 CSS 函数定义了将元素在 z 轴上旋转而不使其变形的方法。其运动的程度由指定的角度来定义；如果是正的，则为顺时针旋转，如果是负的，则是逆时针旋转。</p>
 
 <p>旋转所经过的原点，由 {{ cssxref("transform-origin") }} CSS 属性定义。</p>
 
@@ -444,7 +444,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <h3 id="scale3d"><code>scale3d()</code></h3>
 
-<p> <code>scale3d()</code> CSS 函数可改变元素的大小。由于缩放的量由矢量定义，因此可以改变不同方向的尺寸。</p>
+<p> <code>scale3d()</code> CSS 函数可改变元素的大小。由于缩放的量由矢量定义，因此可以改变不同方向的尺寸。</p>
 
 <p>这种变换的特点是矢量的坐标定义在每个方向上完成多少缩放。如果矢量的三个坐标都相等，则缩放是均匀的或各向同性的，并且保持元素形状。在这种情况下，这个缩放函数就是定义了一个同调变换。</p>
 
@@ -490,7 +490,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><code>scaleX(sx)</code> 是 <code>scale(sx, 1)</code> 和 <code>scale3d(sx, 1, 1)</code> 的简写形式。</p>
 
-<p><code>scaleX(-1)</code> 表示通过原点的垂直轴定义轴对称（由 <code><a href="transform-origin" rel="custom">transform-origin</a></code> 属性指定）。</p>
+<p><code>scaleX(-1)</code> 表示通过原点的垂直轴定义轴对称（由 <code><a href="transform-origin" rel="custom">transform-origin</a></code> 属性指定）。</p>
 
 
 
@@ -534,7 +534,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><img src="/@api/deki/files/5967/=transform-functions-scaleY_2.png" style="float: left;"></p>
 
-<p> <code>scaleY()</code> 这个 CSS 函数用一个常数因子修改每个元素点的纵坐标，在比例因子是 1 的情况下该函数是恒等变换。缩放不是各向同性的，元素的角度不守恒。</p>
+<p> <code>scaleY()</code> 这个 CSS 函数用一个常数因子修改每个元素点的纵坐标，在比例因子是 1 的情况下该函数是恒等变换。缩放不是各向同性的，元素的角度不守恒。</p>
 
 <p><code>scaleY(sy)</code> 是 <code>scale(1, sy)</code> 和 <code>scale3d(1, sy, 1)</code> 的简写形式。</p>
 
@@ -576,7 +576,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <h3 id="scaleZ"><code>scaleZ()</code></h3>
 
-<p> <code>scaleZ()</code> 这个 CSS 函数是用一个常数因子来修改每个单元点的 z 轴坐标，在比例因子是 1 的情况下该函数是恒等变换。缩放不是各向同性的，元素的角度也不守恒。</p>
+<p> <code>scaleZ()</code> 这个 CSS 函数是用一个常数因子来修改每个单元点的 z 轴坐标，在比例因子是 1 的情况下该函数是恒等变换。缩放不是各向同性的，元素的角度也不守恒。</p>
 
 <p><code>scaleZ(sz)</code> 是 <code>scale3d(1, 1, sz)</code> 的简写形式。</p>
 
@@ -614,7 +614,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <h3 id="skew"><code>skew()</code></h3>
 
-<p> <code>skew()</code> 这个 CSS 函数是一种用于拉伸，或者说是平移，该函数会使得在每个方向上扭曲元素上的每个点以一定角度。这是通过将每个坐标增加一个与指定角度成比例的值和到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
+<p> <code>skew()</code> 这个 CSS 函数是一种用于拉伸，或者说是平移，该函数会使得在每个方向上扭曲元素上的每个点以一定角度。这是通过将每个坐标增加一个与指定角度成比例的值和到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
 
 <h4 id="语法_14">语法</h4>
 
@@ -655,7 +655,7 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <h3 id="skewX"><code>skewX()</code></h3>
 
-<p> <code>skewX()</code> 这个 CSS 函数是用于水平拉伸，它将元素的每个点在水平方向上扭曲一定角度。这是通过将横坐标增加一个与指定角度成比例的值以及到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
+<p> <code>skewX()</code> 这个 CSS 函数是用于水平拉伸，它将元素的每个点在水平方向上扭曲一定角度。这是通过将横坐标增加一个与指定角度成比例的值以及到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
 
 <h4 id="语法_15">语法</h4>
 
@@ -693,7 +693,7 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <h3 id="skewY"><code>skewY()</code></h3>
 
-<p> <code>skewY()</code> 这个 CSS 函数是用于垂直拉伸，它将元素的每个点在垂直方向上扭曲一定角度。这是通过将纵坐标增加一个与指定角度成比例的值以及到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
+<p> <code>skewY()</code> 这个 CSS 函数是用于垂直拉伸，它将元素的每个点在垂直方向上扭曲一定角度。这是通过将纵坐标增加一个与指定角度成比例的值以及到原点的距离来完成的。离原点越远，拉伸的值就越大。</p>
 
 <h4 id="语法_16">语法</h4>
 
@@ -751,7 +751,7 @@ translate(tx, ty)
  <dt><em>tx</em></dt>
  <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，表示要移动矢量的横坐标。</dd>
  <dt><em>ty</em></dt>
- <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，表示要移动矢量的纵坐标。如果不写则默认为零，例如  <code>translate(2)</code> 表示 <code>translate(2, 0)</code>。</dd>
+ <dd>该参数为 {{cssxref("&lt;length&gt;")}} ，表示要移动矢量的纵坐标。如果不写则默认为零，例如  <code>translate(2)</code> 表示 <code>translate(2, 0)</code>。</dd>
 </dl>
 
 <table class="standard-table">
@@ -780,7 +780,7 @@ translate(tx, ty)
 
 <h3 id="translate3d"><code>translate3d()</code></h3>
 
-<p> <code>translate3d()</code> 这个 CSS 函数用于移动元素在 3D 空间中的位置。这种变换的特点是三维矢量的坐标定义了它在每个方向上的移动量。</p>
+<p> <code>translate3d()</code> 这个 CSS 函数用于移动元素在 3D 空间中的位置。这种变换的特点是三维矢量的坐标定义了它在每个方向上的移动量。</p>
 
 <h4 id="语法_18">语法</h4>
 
@@ -906,7 +906,7 @@ translate(tx, ty)
 
 <h3 id="translateZ"><code>translateZ()</code></h3>
 
-<p> <code>translateZ()</code> 这个 CSS 函数用于 3D 空间的 z 轴方向移动元素，这个转换的特点是通过 {{cssxref("&lt;length&gt;")}} 定义了它的 z 轴方向移动量。</p>
+<p> <code>translateZ()</code> 这个 CSS 函数用于 3D 空间的 z 轴方向移动元素，这个转换的特点是通过 {{cssxref("&lt;length&gt;")}} 定义了它的 z 轴方向移动量。</p>
 
 <p><code>translateZ(tz)</code> 是 <code>translate3d(0, 0, tz) </code>的简写形式。</p>
 

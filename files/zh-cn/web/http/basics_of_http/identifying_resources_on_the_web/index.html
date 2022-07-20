@@ -10,13 +10,13 @@ translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 
 <p>HTTP 请求的内容通称为"资源"。”资源“这一概念非常宽泛，它可以是一份文档，一张图片，或所有其他你能够想到的格式。每个资源都由一个 ({{Glossary("URI")}}) 来进行标识。</p>
 
-<p>一般情况下，资源的名称和位置由同一个 URL（统一资源定位符，它是 URI 的一种）来标识。也有某些特殊情况，资源的名称和位置由不同的 URI 进行标识：例如，待请求的资源希望客户端从另外一个位置访问它。我们可以使用一个特定的首部字段，{{HTTPHeader("Alt-Svc")}}，来指示这种情况。</p>
+<p>一般情况下，资源的名称和位置由同一个 URL（统一资源定位符，它是 URI 的一种）来标识。也有某些特殊情况，资源的名称和位置由不同的 URI 进行标识：例如，待请求的资源希望客户端从另外一个位置访问它。我们可以使用一个特定的首部字段，{{HTTPHeader("Alt-Svc")}}，来指示这种情况。</p>
 
-<h2 id="URLs_与_URNs">URLs 与 URNs</h2>
+<h2 id="URLs_与_URNs">URLs 与 URNs</h2>
 
 <h3 id="URLs">URLs</h3>
 
-<p>URI 的最常见形式是统一资源定位符 ({{Glossary("URL")}})，它也被称为 <em>Web 地址</em>。</p>
+<p>URI 的最常见形式是统一资源定位符 ({{Glossary("URL")}})，它也被称为 <em>Web 地址</em>。</p>
 
 <pre>https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Learn/
@@ -49,7 +49,7 @@ urn:ietf:rfc:7230
 
 <dl>
  <dt><img alt="Protocol" src="mdn-url-protocol@x2.png"></dt>
- <dd><code>http://</code>告诉浏览器使用何种协议。对于大部分 Web 资源，通常使用 HTTP 协议或其安全版本，HTTPS 协议。另外，浏览器也知道如何处理其他协议。例如， <code>mailto:</code> 协议指示浏览器打开邮件客户端；<code>ftp:</code>协议指示浏览器处理文件传输。常见的方案有：</dd>
+ <dd><code>http://</code>告诉浏览器使用何种协议。对于大部分 Web 资源，通常使用 HTTP 协议或其安全版本，HTTPS 协议。另外，浏览器也知道如何处理其他协议。例如， <code>mailto:</code> 协议指示浏览器打开邮件客户端；<code>ftp:</code>协议指示浏览器处理文件传输。常见的方案有：</dd>
 </dl>
 
 <table class="standard-table">
@@ -107,28 +107,28 @@ urn:ietf:rfc:7230
 
 <dl>
  <dt><img alt="Domaine Name" src="mdn-url-domain@x2.png"></dt>
- <dd><code>www.example.com</code> 既是一个域名，也代表管理该域名的机构。它指示了需要向网络上的哪一台主机发起请求。当然，也可以直接向主机的 {{Glossary("IP address")}} 地址发起请求。但直接使用 IP 地址的场景并不常见。</dd>
+ <dd><code>www.example.com</code> 既是一个域名，也代表管理该域名的机构。它指示了需要向网络上的哪一台主机发起请求。当然，也可以直接向主机的 {{Glossary("IP address")}} 地址发起请求。但直接使用 IP 地址的场景并不常见。</dd>
 </dl>
 
 <h3 id="端口">端口</h3>
 
 <dl>
  <dt><img alt="Port" src="mdn-url-port@x2.png"></dt>
- <dd><code>:80</code> 是端口。它表示用于访问 Web 服务器上资源的技术“门”。如果访问的该 Web 服务器使用 HTTP 协议的标准端口（HTTP 为 80，HTTPS 为 443）授予对其资源的访问权限，则通常省略此部分。否则端口就是 URI 必须的部分。</dd>
+ <dd><code>:80</code> 是端口。它表示用于访问 Web 服务器上资源的技术“门”。如果访问的该 Web 服务器使用 HTTP 协议的标准端口（HTTP 为 80，HTTPS 为 443）授予对其资源的访问权限，则通常省略此部分。否则端口就是 URI 必须的部分。</dd>
 </dl>
 
 <h3 id="路径">路径</h3>
 
 <dl>
  <dt><img alt="Path to the file" src="mdn-url-path@x2.png"></dt>
- <dd><code>/path/to/myfile.html</code> 是 Web 服务器上资源的路径。在 Web 的早期，类似这样的路径表示 Web 服务器上的物理文件位置。现在，它主要是由没有任何物理实体的 Web 服务器抽象处理而成的。</dd>
+ <dd><code>/path/to/myfile.html</code> 是 Web 服务器上资源的路径。在 Web 的早期，类似这样的路径表示 Web 服务器上的物理文件位置。现在，它主要是由没有任何物理实体的 Web 服务器抽象处理而成的。</dd>
 </dl>
 
 <h3 id="查询">查询</h3>
 
 <dl>
  <dt><img alt="Parameters" src="mdn-url-parameters@x2.png"></dt>
- <dd><code>?key1=value1&amp;key2=value2</code> 是提供给 Web 服务器的额外参数。这些参数是用 &amp; 符号分隔的键/值对列表。Web 服务器可以在将资源返回给用户之前使用这些参数来执行额外的操作。每个 Web 服务器都有自己的参数规则，想知道特定 Web 服务器如何处理参数的唯一可靠方法是询问该 Web 服务器所有者。</dd>
+ <dd><code>?key1=value1&amp;key2=value2</code> 是提供给 Web 服务器的额外参数。这些参数是用 &amp; 符号分隔的键/值对列表。Web 服务器可以在将资源返回给用户之前使用这些参数来执行额外的操作。每个 Web 服务器都有自己的参数规则，想知道特定 Web 服务器如何处理参数的唯一可靠方法是询问该 Web 服务器所有者。</dd>
 </dl>
 
 <h3 id="片段">片段</h3>

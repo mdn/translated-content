@@ -10,7 +10,7 @@ translation_of: 'Web/CSS/:not'
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> <strong><code>:not()</code></strong> 用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为<em>反选伪类</em>（<em>negation pseudo-class</em>）。</p>
+<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> <strong><code>:not()</code></strong> 用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为<em>反选伪类</em>（<em>negation pseudo-class</em>）。</p>
 
 <pre class="brush: css no-line-numbers">/* 选择所有不是段落（p）的元素 */
 :not(p) {
@@ -21,8 +21,8 @@ translation_of: 'Web/CSS/:not'
 <p><strong>注意：</strong></p>
 
 <ul>
- <li><code>:not()</code> 伪类不能被嵌套，这意味着 <code>:not(:not(...))</code> 是无效的。</li>
- <li>由于伪元素不是简单的选择器，他们不能被当作 <code>:not()</code> 中的参数，形如 <code>:not(p::before)</code> 这样的选择器将不会工作。</li>
+ <li><code>:not()</code> 伪类不能被嵌套，这意味着 <code>:not(:not(...))</code> 是无效的。</li>
+ <li>由于伪元素不是简单的选择器，他们不能被当作 <code>:not()</code> 中的参数，形如 <code>:not(p::before)</code> 这样的选择器将不会工作。</li>
  <li>可以利用这个伪类写一个完全没有用处的选择器。例如， <code>:not(*)</code> 匹配任何非元素的元素，因此，这个规则将永远不会被应用。</li>
  <li>可以利用这个伪类提高规则的<a href="/zh-CN/docs/Web/CSS/Specificity">优先级</a>。例如， <code>#foo:not(#bar)</code> 和 <code>#foo</code> 会匹配相同的元素，但是前者的优先级更高。</li>
  <li><code>:not(.foo)</code> 将匹配任何非 <code>.foo</code> 的元素，<em>包括 {{HTMLElement("html")}} 和 {{HTMLElement("body")}}</em>。</li>
@@ -32,7 +32,7 @@ translation_of: 'Web/CSS/:not'
 
 <h2 id="语法">语法</h2>
 
-<p><code>:not()</code> 伪类可以将一个或多个以逗号分隔的选择器列表作为其参数。选择器中不得包含另一个否定选择符或 <a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a>。</p>
+<p><code>:not()</code> 伪类可以将一个或多个以逗号分隔的选择器列表作为其参数。选择器中不得包含另一个否定选择符或 <a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素</a>。</p>
 
 <div class="warning">
 <p>以逗号分隔的选择器列表作为参数是实验性的，尚未获得广泛支持。</p>

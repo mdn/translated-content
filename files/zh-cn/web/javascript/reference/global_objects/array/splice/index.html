@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
  <dd>指定修改的开始位置（从 0 计数）。如果超出了数组的长度，则从数组末尾开始添加内容；如果是负值，则表示从数组末位开始的第几位（从 -1 计数，这意味着 -n 是倒数第 n 个元素并且等价于 <code>array.length-n</code>）；如果负数的绝对值大于数组的长度，则表示开始位置为第 0 位。</dd>
  <dt><code>deleteCount</code> {{optional_inline}}</dt>
  <dd>整数，表示要移除的数组元素的个数。如果 <code>deleteCount</code> 大于 <code>start</code> 之后的元素的总数，则从 <code>start</code> 后面的元素都将被删除（含第 <code>start</code> 位）。如果 <code>deleteCount</code> 被省略了，或者它的值大于等于<code>array.length - start</code>(也就是说，如果它大于或者等于<code>start</code>之后的所有元素的数量)，那么<code>start</code>之后数组的所有元素都会被删除。如果 <code>deleteCount</code> 是 0 或者负数，则不移除元素。这种情况下，至少应添加一个新元素。</dd>
- <dt><code>item1, item2, <em>...</em></code> {{optional_inline}}</dt>
+ <dt><code>item1, item2, <em>...</em></code> {{optional_inline}}</dt>
  <dd>要添加进数组的元素，从<code><var>start</var></code> 位置开始。如果不指定，则 <code>splice()</code> 将只删除数组元素。</dd>
 </dl>
 
@@ -96,7 +96,7 @@ var removed = myFish.splice(myFish.length - 3, 2);
 // 被删除的元素: ["blue", "trumpet"]
 </pre>
 
-<h3 id="从索引_-2_的位置开始删除_1_个元素">从索引 -2 的位置开始删除 1 个元素</h3>
+<h3 id="从索引_-2_的位置开始删除_1_个元素">从索引 -2 的位置开始删除 1 个元素</h3>
 
 <pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(-2, 1);
@@ -130,17 +130,17 @@ var removed = myFish.splice(2);
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.splice', 'Array.prototype.splice')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

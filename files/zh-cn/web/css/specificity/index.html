@@ -38,7 +38,7 @@ translation_of: Web/CSS/Specificity
 
 <p><strong>通配选择符</strong>（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）<strong>关系选择符</strong>（combinators）（{{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator" style="white-space: nowrap;">'<code> </code>'</a>, {{CSSxRef("Column_combinator", "||")}}）和 <strong>否定伪类</strong>（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在<strong> </strong> <code>:not()</code> 内部声明的选择器会影响优先级）。</p>
 
-<p>您可以访问 <a href="/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2">"Specificity" in "Cascade and inheritance"</a>  或者 <a href="https://specifishity.com/">https://specifishity.com</a> 来了解更多关于优先级的详细信息。</p>
+<p>您可以访问 <a href="/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2">"Specificity" in "Cascade and inheritance"</a>  或者 <a href="https://specifishity.com/">https://specifishity.com</a> 来了解更多关于优先级的详细信息。</p>
 
 <p>给元素添加的<strong>内联样式</strong> (例如，<code>style="font-weight:bold"</code>) 总会覆盖外部样式表的任何样式，因此可看作是具有最高的优先级。</p>
 
@@ -149,9 +149,9 @@ p.awesome {
  <li><a href="https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css">https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css</a></li>
 </ul>
 
-<h3 id="is_和_not_例外规则"><code>:is()</code> 和 <code>:not()</code> 例外规则</h3>
+<h3 id="is_和_not_例外规则"><code>:is()</code> 和 <code>:not()</code> 例外规则</h3>
 
-<p>The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are <em>not</em> considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity$edit#Selector_Types">selector types</a>.</p>
+<p>The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are <em>not</em> considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity$edit#Selector_Types">selector types</a>.</p>
 
 <p><code>:not</code> 否定伪类在优先级计算中不会被看作是伪类。事实上，在计算选择器数量时还是会把其中的选择器当做普通选择器进行计数。</p>
 
@@ -182,7 +182,7 @@ div:not(.outer) p {
 <p>{{EmbedLiveSample("The_not_exception-example")}}</p>
 </div>
 
-<h3 id="The_where_exception"><code>:where()</code> 例外规则 {{Experimental_Inline}}</h3>
+<h3 id="The_where_exception"><code>:where()</code> 例外规则 {{Experimental_Inline}}</h3>
 
 <p>{{SeeCompatTable}}</p>
 
@@ -284,7 +284,7 @@ html h1 {
 
 <p>{{EmbedLiveSample("无视 DOM 树中的距离")}}</p>
 
-<h3 id="直接添加样式_vs._继承样式">直接添加样式 vs. 继承样式</h3>
+<h3 id="直接添加样式_vs._继承样式">直接添加样式 vs. 继承样式</h3>
 
 <p>为目标元素直接添加样式，永远比继承样式的优先级高，无视优先级的遗传规则。</p>
 

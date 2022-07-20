@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个表示指定数据缓存区的新<code>DataView</code> 对象。（这句话也许不是非常有助于说明清楚）</p>
+<p>一个表示指定数据缓存区的新<code>DataView</code> 对象。（这句话也许不是非常有助于说明清楚）</p>
 
 <p>你可以把返回的对象想象成一个二进制字节缓存区 array buffer 的“解释器”——它知道如何在读取或写入时正确地转换字节码。这意味着它能在二进制层面处理整数与浮点转化、字节顺序等其他有关的细节问题。</p>
 
@@ -41,8 +41,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 
 <dl>
  <dt><code>{{jsxref("RangeError")}}</code></dt>
- <dd>如果 <code>byteOffset</code> 或者 <code>byteLength </code>参数的值导致视图超出了 buffer 的结束位置就会抛出此异常。<br>
- 例如，假设 buffer（缓冲对象）是 16 字节长度，<code>byteOffset</code> 参数为 8，<code>byteLength</code> 参数为 10，这个错误就会抛出，这是因为结果视图试图超出 buffer 对象的总长度 2 个字节。</dd>
+ <dd>如果 <code>byteOffset</code> 或者 <code>byteLength </code>参数的值导致视图超出了 buffer 的结束位置就会抛出此异常。<br>
+ 例如，假设 buffer（缓冲对象）是 16 字节长度，<code>byteOffset</code> 参数为 8，<code>byteLength</code> 参数为 10，这个错误就会抛出，这是因为结果视图试图超出 buffer 对象的总长度 2 个字节。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>

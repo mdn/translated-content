@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Operators/Less_than
 <p>The operands are compared using the <a href="https://tc39.es/ecma262/#sec-abstract-relational-comparison">Abstract Relational Comparison</a> algorithm, which is roughly summarised below:</p>
 
 <ul>
- <li>First, objects are converted to primitives using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive">Symbol.ToPrimitive</a></code> with the <code>hint</code> parameter be <code>'number'</code>.</li>
+ <li>First, objects are converted to primitives using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive">Symbol.ToPrimitive</a></code> with the <code>hint</code> parameter be <code>'number'</code>.</li>
  <li>If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.</li>
  <li>Otherwise JavaScript attempts to convert non-numeric types to numeric values:
   <ul>
@@ -76,8 +76,8 @@ console.log(true &lt; 1);         // false
 console.log(null &lt; 0);         // false
 console.log(null &lt; 1);         // true
 
-console.log(undefined &lt; 3);    // false
-console.log(3 &lt; undefined);    // false
+console.log(undefined &lt; 3);    // false
+console.log(3 &lt; undefined);    // false
 
 console.log(3 &lt; NaN);          // false
 console.log(NaN &lt; 3);          // false</pre>

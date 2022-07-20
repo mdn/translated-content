@@ -32,13 +32,13 @@ translation_of: Web/JavaScript/Reference/Operators/yield
 
 <p><code>yield</code>关键字实际返回一个<code>IteratorResult</code>对象，它有两个属性，<code>value</code>和<code>done</code>。<code>value</code>属性是对<code>yield</code>表达式求值的结果，而<code>done</code>是<code>false</code>，表示生成器函数尚未完全完成。</p>
 
-<p>一旦遇到 <code>yield</code> 表达式，生成器的代码将被暂停运行，直到生成器的 <code>next()</code> 方法被调用。每次调用生成器的<code>next()</code>方法时，生成器都会恢复执行，直到达到以下某个值：</p>
+<p>一旦遇到 <code>yield</code> 表达式，生成器的代码将被暂停运行，直到生成器的 <code>next()</code> 方法被调用。每次调用生成器的<code>next()</code>方法时，生成器都会恢复执行，直到达到以下某个值：</p>
 
 <ul>
  <li><code>yield</code>，导致生成器再次暂停并返回生成器的新值。 下一次调用<code>next()</code>时，在<code>yield</code>之后紧接着的语句继续执行。</li>
  <li>{{jsxref("Statements/throw", "throw")}}用于从生成器中抛出异常。这让生成器完全停止执行，并在调用者中继续执行，正如通常情况下抛出异常一样。</li>
  <li>到达生成器函数的结尾；在这种情况下，生成器的执行结束，并且<code>IteratorResult</code>给调用者返回{{jsxref("undefined")}}并且<code>done</code>为<code>true</code>。</li>
- <li>到达{{jsxref("Statements/return", "return")}} 语句。在这种情况下，生成器的执行结束，并将<code>IteratorResult</code>返回给调用者，其值是由<code>return</code>语句指定的，并且<code>done</code> 为<code>true</code>。</li>
+ <li>到达{{jsxref("Statements/return", "return")}} 语句。在这种情况下，生成器的执行结束，并将<code>IteratorResult</code>返回给调用者，其值是由<code>return</code>语句指定的，并且<code>done</code> 为<code>true</code>。</li>
 </ul>
 
 <p>如果将参数传递给生成器的<code>next()</code>方法，则该值将成为生成器当前<code>yield</code>操作返回的值。</p>
@@ -83,7 +83,7 @@ console.log(appleStore.next()); // { value: undefined, done: true }</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#', 'Yield')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

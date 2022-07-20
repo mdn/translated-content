@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>JavaScript 是一种基于原型而不是基于类的基于对象 (object-based) 语言。正是由于这一根本的区别，其如何创建对象的层级结构以及对象的属性与属性值是如何继承的并不是那么清晰。本节试着阐明。</p>
 
-<p>本节假设您已经有一些 JavaScript 基础，并且用 JavaScript 函数创建过简单的对象。</p>
+<p>本节假设您已经有一些 JavaScript 基础，并且用 JavaScript 函数创建过简单的对象。</p>
 
 <h2 id="class-based_vs_prototype-based_languages">基于类 vs 基于原型的语言</h2>
 
@@ -27,12 +27,12 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <h3 id="定义类">定义类</h3>
 
-<p>在基于类的语言中，需要专门的<em>类定义 (class definition)</em>来定义类。在定义类时，允许定义被称为<em>构造器 (constructor)</em>的特殊的方法来创建该类的实例。在构造器方法中，可以指定实例的属性的初始值并做一些其他的操作。你可以通过使用 <code>new</code> 操作符来创建类的实例。</p>
+<p>在基于类的语言中，需要专门的<em>类定义 (class definition)</em>来定义类。在定义类时，允许定义被称为<em>构造器 (constructor)</em>的特殊的方法来创建该类的实例。在构造器方法中，可以指定实例的属性的初始值并做一些其他的操作。你可以通过使用 <code>new</code> 操作符来创建类的实例。</p>
 
-<p>JavaScript 大体上与之类似，但并没有专门的<em>类定义</em>，你通过定义构造函数的方式来创建一系列有着特定初始值和方法的对象。任何 JavaScript 函数都可以被用作构造函数。你也可以使用 <code>new</code> 操作符来创建一个新对象。</p>
+<p>JavaScript 大体上与之类似，但并没有专门的<em>类定义</em>，你通过定义构造函数的方式来创建一系列有着特定初始值和方法的对象。任何 JavaScript 函数都可以被用作构造函数。你也可以使用 <code>new</code> 操作符来创建一个新对象。</p>
 
 <div class="note">
-<p><strong>备注：</strong>在 ES6 中引入了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes">类定义</a> ，但它实际上是已有的原型继承方式的语法糖而已，并没有引入新的面向对象继承模型。</p>
+<p><strong>备注：</strong>在 ES6 中引入了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes">类定义</a> ，但它实际上是已有的原型继承方式的语法糖而已，并没有引入新的面向对象继承模型。</p>
 </div>
 
 <h3 id="子类和继承">子类和继承</h3>
@@ -94,9 +94,9 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 <div>
 <ul>
  <li><code>Employee</code> 具有 <code>name</code> 属性（默认值为空的字符串）和 <code>dept</code> 属性（默认值为 "general"）。</li>
- <li><code>Manager</code> 是 <code>Employee</code>的子类。它添加了 <code>reports</code> 属性（默认值为空的数组，以 <code>Employee</code> 对象数组作为它的值）。</li>
- <li><code>WorkerBee</code> 是 <code>Employee</code>的子类。它添加了 <code>projects</code> 属性（默认值为空的数组，以字符串数组作为它的值）。</li>
- <li><code>SalesPerson</code> 是 <code>WorkerBee</code>的子类。它添加了 <code>quota</code> 属性（其值默认为 100）。它还重载了 <code>dept</code> 属性值为 "sales"，表明所有的销售人员都属于同一部门。</li>
+ <li><code>Manager</code> 是 <code>Employee</code>的子类。它添加了 <code>reports</code> 属性（默认值为空的数组，以 <code>Employee</code> 对象数组作为它的值）。</li>
+ <li><code>WorkerBee</code> 是 <code>Employee</code>的子类。它添加了 <code>projects</code> 属性（默认值为空的数组，以字符串数组作为它的值）。</li>
+ <li><code>SalesPerson</code> 是 <code>WorkerBee</code>的子类。它添加了 <code>quota</code> 属性（其值默认为 100）。它还重载了 <code>dept</code> 属性值为 "sales"，表明所有的销售人员都属于同一部门。</li>
  <li><code>Engineer</code> 基于 <code>WorkerBee</code>。它添加了 <code>machine</code> 属性（其值默认为空字符串）同时重载了 <code>dept</code> 属性值为 "engineering"。</li>
 </ul>
 </div>
@@ -109,7 +109,7 @@ translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 
 <p>在实际应用程序中，您很可能想定义构造器，以允许您在创建对象时指定属性值。（参见<a href="#More_flexible_constructors">More flexible constructors</a>）。当前，这些简单的定义只是说明了继承是如何实现的。</p>
 
-<p>下面关于 <code>Employee</code> 的 Java 和 JavaScript 的定义是非常类似的。唯一的不同是在 Java 中需要指定每个属性的类型，而在 JavaScript 中则不需要（这是因为 Java 是 <a href="https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BC%B1%E5%9E%8B%E5%88%A5">强类型</a> 语言，而 JavaScript 是弱类型语言）。</p>
+<p>下面关于 <code>Employee</code> 的 Java 和 JavaScript 的定义是非常类似的。唯一的不同是在 Java 中需要指定每个属性的类型，而在 JavaScript 中则不需要（这是因为 Java 是 <a href="https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BC%B1%E5%9E%8B%E5%88%A5">强类型</a> 语言，而 JavaScript 是弱类型语言）。</p>
 
 <table class="standard-table">
  <thead>
@@ -180,7 +180,7 @@ public class WorkerBee extends Employee {
  </tbody>
 </table>
 
-<p>在对<code>Engineer</code> 和 <code>SalesPerson</code> 定义时，创建了继承自 <code>WorkerBee</code> 的对象，该对象会进而继承自<code>Employee</code>。这些对象会具有在这个链之上的所有对象的属性。另外，它们在定义时，又重载了继承的 <code>dept</code> 属性值，赋予新的属性值。</p>
+<p>在对<code>Engineer</code> 和 <code>SalesPerson</code> 定义时，创建了继承自 <code>WorkerBee</code> 的对象，该对象会进而继承自<code>Employee</code>。这些对象会具有在这个链之上的所有对象的属性。另外，它们在定义时，又重载了继承的 <code>dept</code> 属性值，赋予新的属性值。</p>
 
 <table class="standard-table">
  <thead>
@@ -277,9 +277,9 @@ var jane = new Engineer;
 <pre class="brush: js">var mark = new WorkerBee;
 </pre>
 
-<p>当 JavaScript 执行 <code>new</code> 操作符时，它会先创建一个普通对象，并将这个普通对象中的 [[prototype]] 指向 <code>WorkerBee.prototype</code> ，然后再把这个普通对象设置为执行 <code>WorkerBee</code> 构造函数时 <code>this</code>  的值。该普通对象的 [[Prototype]] 决定其用于检索属性的原型链。当构造函数执行完成后，所有的属性都被设置完毕，JavaScript 返回之前创建的对象，通过赋值语句将它的引用赋值给变量 <code>mark</code>。</p>
+<p>当 JavaScript 执行 <code>new</code> 操作符时，它会先创建一个普通对象，并将这个普通对象中的 [[prototype]] 指向 <code>WorkerBee.prototype</code> ，然后再把这个普通对象设置为执行 <code>WorkerBee</code> 构造函数时 <code>this</code>  的值。该普通对象的 [[Prototype]] 决定其用于检索属性的原型链。当构造函数执行完成后，所有的属性都被设置完毕，JavaScript 返回之前创建的对象，通过赋值语句将它的引用赋值给变量 <code>mark</code>。</p>
 
-<p>这个过程不会显式的将 <code>mark</code>所继承的原型链中的属性作为本地属性存放在 <code>mark</code> 对象中。当访问属性时，JavaScript 将首先检查对象自身中是否存在该属性，如果有，则返回该属性的值。如果不存在，JavaScript 会检查原型链（使用内置的 [[Prototype]] ）。如果原型链中的某个对象包含该属性，则返回这个属性的值。如果遍历整条原型链都没有找到该属性，JavaScript 则认为对象中不存在该属性，返回一个 <code>undefined</code>。这样，<code>mark</code> 对象中将具有如下的属性和对应的值：</p>
+<p>这个过程不会显式的将 <code>mark</code>所继承的原型链中的属性作为本地属性存放在 <code>mark</code> 对象中。当访问属性时，JavaScript 将首先检查对象自身中是否存在该属性，如果有，则返回该属性的值。如果不存在，JavaScript 会检查原型链（使用内置的 [[Prototype]] ）。如果原型链中的某个对象包含该属性，则返回这个属性的值。如果遍历整条原型链都没有找到该属性，JavaScript 则认为对象中不存在该属性，返回一个 <code>undefined</code>。这样，<code>mark</code> 对象中将具有如下的属性和对应的值：</p>
 
 <pre class="brush: js">mark.name = "";
 mark.dept = "general";
@@ -461,10 +461,10 @@ jane.machine == "belau"
 
 <ol>
  <li><code>new</code> 操作符创建了一个新的对象，并将其 <code>__proto__</code> 属性设置为 <code>Engineer.prototype</code>。</li>
- <li><code>new</code> 操作符将该新对象作为 <code>this</code> 的值传递给 <code>Engineer</code> 构造函数。</li>
- <li>构造函数为该新对象创建了一个名为 <code>base</code> 的新属性，并指向 <code>WorkerBee</code> 的构造函数。这使得 <code>WorkerBee</code> 构造函数成为 <code>Engineer</code> 对象的一个方法。<code>base</code> 属性的名称并没有什么特殊性，我们可以使用任何其他合法的名称来代替；<code>base</code> 仅仅是为了贴近它的用意。</li>
+ <li><code>new</code> 操作符将该新对象作为 <code>this</code> 的值传递给 <code>Engineer</code> 构造函数。</li>
+ <li>构造函数为该新对象创建了一个名为 <code>base</code> 的新属性，并指向 <code>WorkerBee</code> 的构造函数。这使得 <code>WorkerBee</code> 构造函数成为 <code>Engineer</code> 对象的一个方法。<code>base</code> 属性的名称并没有什么特殊性，我们可以使用任何其他合法的名称来代替；<code>base</code> 仅仅是为了贴近它的用意。</li>
  <li>
-  <p>构造函数调用 <code>base</code> 方法，将传递给该构造函数的参数中的两个，作为参数传递给 <code>base</code> 方法，同时还传递一个字符串参数  <code>"engineering"。显式地在构造函数中使用</code> <code>"engineering"</code> 表明所有 <code>Engineer</code> 对象继承的 <code>dept</code> 属性具有相同的值，且该值重载了继承自 <code>Employee</code> 的值。</p>
+  <p>构造函数调用 <code>base</code> 方法，将传递给该构造函数的参数中的两个，作为参数传递给 <code>base</code> 方法，同时还传递一个字符串参数  <code>"engineering"。显式地在构造函数中使用</code> <code>"engineering"</code> 表明所有 <code>Engineer</code> 对象继承的 <code>dept</code> 属性具有相同的值，且该值重载了继承自 <code>Employee</code> 的值。</p>
  </li>
  <li>
   <p>因为 <code>base</code> 是 <code>Engineer</code> 的一个方法，在调用 <code>base</code> 时，JavaScript 将在步骤 1 中创建的对象绑定给 <code>this</code> 关键字。这样，<code>WorkerBee</code> 函数接着将 <code>"Doe, Jane"</code> 和 <code>"engineering"</code> 参数传递给 <code>Employee</code> 构造函数。当从 <code>Employee</code> 构造函数返回时，<code>WorkerBee</code> 函数用剩下的参数设置 <code>projects</code> 属性。</p>
@@ -473,7 +473,7 @@ jane.machine == "belau"
  <li>当从构造函数返回时，JavaScript 将新对象赋值给 <code>jane</code> 变量。</li>
 </ol>
 
-<p>你可以认为，在 <code>Engineer</code> 的构造器中调用了 <code>WorkerBee</code> 的构造器，也就为 <code>Engineer</code> 对象设置好了继承关系。事实并非如此。调用 <code>WorkerBee</code> 构造器确保了<code>Engineer</code> 对象以所有在构造器中所指定的属性被调用。但是，如果后续在 <code>Employee</code> 或者 <code>WorkerBee</code> 原型中添加了属性，那些属性不会被 <code>Engineer</code> 对象继承。例如，假设如下语句：</p>
+<p>你可以认为，在 <code>Engineer</code> 的构造器中调用了 <code>WorkerBee</code> 的构造器，也就为 <code>Engineer</code> 对象设置好了继承关系。事实并非如此。调用 <code>WorkerBee</code> 构造器确保了<code>Engineer</code> 对象以所有在构造器中所指定的属性被调用。但是，如果后续在 <code>Employee</code> 或者 <code>WorkerBee</code> 原型中添加了属性，那些属性不会被 <code>Engineer</code> 对象继承。例如，假设如下语句：</p>
 
 <pre class="brush: js">function Engineer (name, projs, mach) {
   this.base = WorkerBee;
@@ -559,14 +559,14 @@ WorkerBee.prototype = new Employee;
 <pre class="brush: js">var amy = new WorkerBee;
 </pre>
 
-<p>则 <code>amy</code> 对象将具有一个本地属性 <code>projects</code>。<code>name</code>和 <code>dept</code> 则不是 <code>amy</code> 对象的本地属性，而是从 <code>amy</code> 对象的 <code>__proto__</code> 属性获得的。因此，<code>amy</code> 将具有如下的属性值：</p>
+<p>则 <code>amy</code> 对象将具有一个本地属性 <code>projects</code>。<code>name</code>和 <code>dept</code> 则不是 <code>amy</code> 对象的本地属性，而是从 <code>amy</code> 对象的 <code>__proto__</code> 属性获得的。因此，<code>amy</code> 将具有如下的属性值：</p>
 
 <pre class="brush: js">amy.name == "";
 amy.dept == "general";
 amy.projects == [];
 </pre>
 
-<p>现在，假设修改了与 <code>Employee</code> 的相关联原型中的 <code>name</code> 属性的值：</p>
+<p>现在，假设修改了与 <code>Employee</code> 的相关联原型中的 <code>name</code> 属性的值：</p>
 
 <pre class="brush: js">Employee.prototype.name = "Unknown"
 </pre>

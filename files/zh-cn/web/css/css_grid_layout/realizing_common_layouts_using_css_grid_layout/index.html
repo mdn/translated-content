@@ -51,7 +51,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局
             &lt;/ul&gt;
         &lt;/nav&gt;
         &lt;article class="content"&gt;
-            &lt;h1&gt;Main article area&lt;/h1&gt;
+            &lt;h1&gt;Main article area&lt;/h1&gt;
             &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;
         &lt;/article&gt;
         &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
@@ -60,7 +60,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局
 &lt;/div&gt;
 </pre>
 
-<p>因为我们使用{{cssxref("grid-template-areas")}}来创建布局。在任何媒体查询之外，我需要命名区域。我们使用{{cssxref("grid-area")}} 属性命名区域。</p>
+<p>因为我们使用{{cssxref("grid-template-areas")}}来创建布局。在任何媒体查询之外，我需要命名区域。我们使用{{cssxref("grid-area")}} 属性命名区域。</p>
 
 <pre class="brush: css">.main-head {
   grid-area: header;
@@ -436,7 +436,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/利用CSS网格布局实现常用布局
 
 <p><img alt="The layout has gaps as there is not space to layout a two track item." src="11-grid-auto-flow-sparse.png"></p>
 
-<p>我可以通过设置{{cssxref("grid-auto-flow")}}<code>: dense </code>在网格容器上设置稠密，从而使网格填充这些空白。但是，在这样做时要小心，因为它会使项目偏离其逻辑源顺序。您应该只在项目没有设置顺序时才这样做——并且要注意源文件后面的选项卡顺序的问题，而不是重新排序的显示。</p>
+<p>我可以通过设置{{cssxref("grid-auto-flow")}}<code>: dense </code>在网格容器上设置稠密，从而使网格填充这些空白。但是，在这样做时要小心，因为它会使项目偏离其逻辑源顺序。您应该只在项目没有设置顺序时才这样做——并且要注意源文件后面的选项卡顺序的问题，而不是重新排序的显示。</p>
 
 <div id="layout_5">
 <div class="hidden">

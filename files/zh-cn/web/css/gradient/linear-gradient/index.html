@@ -28,17 +28,17 @@ linear-gradient(to left top, blue, red);
 /* </code>从下到上，从蓝色开始渐变、到高度 40% 位置是绿色渐变开始、最后以红色结束<code> */
 linear-gradient(0deg, blue, green 40%, red);</code></pre>
 
-<div>{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}  </div>
+<div>{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}  </div>
 
 <p>如同其他 gradient 函数一般，<strong><code>linear-gradient()</code></strong> 函数<a href="/zh-CN/docs/Web/CSS/image#no_intrinsic">没有内在尺寸</a>；即，它不具备固有的或首选的尺寸，也不具备首选的比率。该函数的具体尺寸将与其适用的元素尺寸匹配。</p>
 
 <div class="note"><strong>提示：</strong>利用{{cssxref("repeating-linear-gradient")}}函数可以实现线形重复渐变效果。</div>
 
-<div class="note"><strong>提示：</strong>由于<code>&lt;gradient&gt;</code>数据类型系<code>&lt;image&gt;</code>的子数据类型，<code>&lt;gradient&gt;</code>只能被用于<code>&lt;image&gt;</code>可以使用的地方。因此，<code>linear-gradient()</code> 并不适用于{{Cssxref("background-color")}}以及类似的使用 {{cssxref("&lt;color&gt;")}}数据类型的属性中。</div>
+<div class="note"><strong>提示：</strong>由于<code>&lt;gradient&gt;</code>数据类型系<code>&lt;image&gt;</code>的子数据类型，<code>&lt;gradient&gt;</code>只能被用于<code>&lt;image&gt;</code>可以使用的地方。因此，<code>linear-gradient()</code> 并不适用于{{Cssxref("background-color")}}以及类似的使用 {{cssxref("&lt;color&gt;")}}数据类型的属性中。</div>
 
 <h2 id="线形渐变的构成"><strong>线形渐变的构成</strong></h2>
 
-<p>线性渐变由一个轴 (梯度线) 定义，其上的每个点具有两种或多种的颜色，且轴上的每个点都具有独立的颜色。为了构建出平滑的渐变，<code>linear-gradient()</code> 函数构建一系列垂直于渐变线的着色线，每一条着色线的颜色则取决于与之垂直相交的渐变线上的色点</p>
+<p>线性渐变由一个轴 (梯度线) 定义，其上的每个点具有两种或多种的颜色，且轴上的每个点都具有独立的颜色。为了构建出平滑的渐变，<code>linear-gradient()</code> 函数构建一系列垂直于渐变线的着色线，每一条着色线的颜色则取决于与之垂直相交的渐变线上的色点</p>
 
 <p><img alt="linear-gradient.png" src="linear-gradient.png">渐变线由包含渐变图形的容器的中心点和一个角度来定义的。渐变线上的颜色值是由不同的点来定义，包括起始点，终点，以及两者之间的可选的中间点（中间点可以有多个）。</p>
 
@@ -83,7 +83,7 @@ linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);</code><
  <dd>描述渐变线的起始点位置。它包含 to 和两个关键词：第一个指出水平位置 left or right，第二个指出垂直位置 top or bottom。关键词的先后顺序无影响，且都是可选的。<br>
  to top, to bottom, to left 和 to right 这些值会被转换成角度 0 度、180 度、270 度和 90 度。其余值会被转换为一个以向顶部中央方向为起点顺时针旋转的角度。渐变线的结束点与其起点中心对称。</dd>
  <dt><code>&lt;angle&gt;</code></dt>
- <dd>用角度值指定渐变的方向（或角度）。角度顺时针增加。 </dd>
+ <dd>用角度值指定渐变的方向（或角度）。角度顺时针增加。 </dd>
  <dt><code>&lt;linear-color-stop&gt;</code></dt>
  <dd>由一个{{cssxref("&lt;color&gt;")}}值组成，并且跟随着一个可选的终点位置（可以是一个百分比值或者是沿着渐变轴的{{cssxref("&lt;length&gt;")}}）。CSS 渐变的颜色渲染采取了与 SVG 相同的规则。</dd>
 </dl>
@@ -92,11 +92,11 @@ linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);</code><
  <dt><code>&lt;color-hint&gt;</code></dt>
 </dl>
 
-<p>颜色中转点是一个插值提示，它定义了在相邻颜色之间渐变如何进行。长度定义了在两种颜色之间的哪个点停止渐变颜色应该达到颜色过渡的中点。如果省略，颜色转换的中点是两个颜色停止之间的中点。 </p>
+<p>颜色中转点是一个插值提示，它定义了在相邻颜色之间渐变如何进行。长度定义了在两种颜色之间的哪个点停止渐变颜色应该达到颜色过渡的中点。如果省略，颜色转换的中点是两个颜色停止之间的中点。 </p>
 
 <dl>
  <dt>
- <div class="note"><strong>提示：</strong>渲染颜色中间点的规则 <a href="#Gradient_with_multiple_color_stops">color stops in CSS gradients</a>与一致 <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>。</div>
+ <div class="note"><strong>提示：</strong>渲染颜色中间点的规则 <a href="#Gradient_with_multiple_color_stops">color stops in CSS gradients</a>与一致 <a href="/en-US/docs/Web/SVG/Tutorial/Gradients">SVG gradients</a>。</div>
 
  <h3 id="正式语法">正式语法</h3>
 
@@ -142,7 +142,7 @@ where &lt;side-or-corner&gt; = [ left | right ] || [ top | bottom ]
 <pre class="notranslate">linear-gradient(<code> [ </code>[ {{cssxref("&lt;angle&gt;")}} | <code>[top | bottom] || [left | right] ],]? &lt;color-stop&gt;[, &lt;color-stop&gt;]+);</code>
 </pre>
 
-<p>{{ cssxref("&lt;angle&gt;") }}属性的添加导致了一些混乱，它应当指向终点方向，但是这些关键字却通常指起始方向。在<a href="http://lists.w3.org/Archives/Public/www-style/2011Jun/0377.html">related W3C CSSWG thread</a>可以查看一些讨论。在一项新的语法中，这个问题被修正。它仍然使用方向关键字，但是在关键字之前增加关键字 <code>to</code> 。这项语法被添加到<a href="http://www.w3.org/TR/2011/WD-css3-images-20110908/#ltlinear-gradient">CSS Images Values and Content Replacement Level 3 draft in 2011-09-08</a>。</p>
+<p>{{ cssxref("&lt;angle&gt;") }}属性的添加导致了一些混乱，它应当指向终点方向，但是这些关键字却通常指起始方向。在<a href="http://lists.w3.org/Archives/Public/www-style/2011Jun/0377.html">related W3C CSSWG thread</a>可以查看一些讨论。在一项新的语法中，这个问题被修正。它仍然使用方向关键字，但是在关键字之前增加关键字 <code>to</code> 。这项语法被添加到<a href="http://www.w3.org/TR/2011/WD-css3-images-20110908/#ltlinear-gradient">CSS Images Values and Content Replacement Level 3 draft in 2011-09-08</a>。</p>
 
 <pre class="notranslate">linear-gradient(<code>[ [ </code>[ {{cssxref("&lt;angle&gt;")}} | to <code>[top | bottom] || [left | right] ],]? &lt;color-stop&gt;[, &lt;color-stop&gt;]+);</code>
 </pre>
@@ -237,7 +237,7 @@ where &lt;side-or-corner&gt; = [ left | right ] || [ top | bottom ]
 }
 </pre>
 
-<p>-moz-前缀的规则用于兼容 Fx 3.6 to Fx 15 的火狐浏览器。 -webkit-前缀的规则用于兼容在 Android 4.3 以前版本、iOS 6.1 以前版本、Safari 6。当使用带前缀的规则时，不要加“to”关键字。</p>
+<p>-moz-前缀的规则用于兼容 Fx 3.6 to Fx 15 的火狐浏览器。 -webkit-前缀的规则用于兼容在 Android 4.3 以前版本、iOS 6.1 以前版本、Safari 6。当使用带前缀的规则时，不要加“to”关键字。</p>
 
 <div class="note">
 <p>Notes：如果将&lt;body&gt;标签的 background-image 属性设置为线性渐变<code>linear-gradient</code>，除非您还设置文档根标签（例如&lt;html&gt;标签）的<a href="/zh-CN/docs/Web/CSS/min-height">min-height</a>属性，否则渐变不会填充浏览器屏幕到 100％。</p>
@@ -262,7 +262,7 @@ where &lt;side-or-corner&gt; = [ left | right ] || [ top | bottom ]
   <tr>
    <td>{{SpecName('CSS4 Images', '#color-stop-syntax', 'Gradient Color-Stops')}}</td>
    <td>{{Spec2('CSS4 Images')}}</td>
-   <td>Add Interpolation hints</td>
+   <td>Add Interpolation hints</td>
   </tr>
  </tbody>
 </table>

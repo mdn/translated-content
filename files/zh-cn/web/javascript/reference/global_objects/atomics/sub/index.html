@@ -22,23 +22,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 
 <dl>
  <dt><code>typedArray</code></dt>
- <dd>一个共享的整型 typed array。 例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.</dd>
+ <dd>一个共享的整型 typed array。 例如 {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, 或者 {{jsxref("Uint32Array")}}.</dd>
  <dt><code>index</code></dt>
- <dd>要被 <code>value</code> 值减去的 <code>typedArray</code> 索引位置。</dd>
+ <dd>要被 <code>value</code> 值减去的 <code>typedArray</code> 索引位置。</dd>
  <dt><code>value</code></dt>
  <dd>要减去的数字。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>给定位置的旧值 (<code>typedArray[index]</code>)。</p>
+<p>给定位置的旧值 (<code>typedArray[index]</code>)。</p>
 
 <h3 id="异常">异常</h3>
 
 <ul>
  <li>假如 <code>typedArray</code> 不是允许的整型之一，则抛出 {{jsxref("TypeError")}}。</li>
  <li>假如 <code>typedArray</code> 不是一个共享的整型 typed array，则抛出 {{jsxref("TypeError")}}。</li>
- <li>如果 <code>index</code> 超出了 <code>typedArray</code> 的边界，则抛出 {{jsxref("RangeError")}}。</li>
+ <li>如果 <code>index</code> 超出了 <code>typedArray</code> 的边界，则抛出 {{jsxref("RangeError")}}。</li>
 </ul>
 
 <h2 id="例子">例子</h2>

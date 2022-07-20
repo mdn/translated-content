@@ -32,11 +32,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 
 <h2 id="Description">描述</h2>
 
-<p>当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 <code>test()</code>（类似于<code> </code> {{jsxref("String.prototype.search()")}} 方法），差别在于 test 返回一个布尔值，而 search 返回索引（如果找到）或者-1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。 和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用<code><code>test</code></code>将会越过之前的匹配。</p>
+<p>当你想要知道一个正则表达式是否与指定的字符串匹配时，就可以使用 <code>test()</code>（类似于<code> </code> {{jsxref("String.prototype.search()")}} 方法），差别在于 test 返回一个布尔值，而 search 返回索引（如果找到）或者-1（如果没找到）；若想知道更多信息（然而执行比较慢），可使用{{jsxref("RegExp.prototype.exec()", "exec()")}} 方法（类似于 {{jsxref("String.prototype.match()")}} 方法）。 和 {{jsxref("RegExp.prototype.exec()", "exec()")}} (或者组合使用),一样，在相同的全局正则表达式实例上多次调用<code><code>test</code></code>将会越过之前的匹配。</p>
 
 <h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_test">使用 <code>test()</code></h3>
+<h3 id="Example_Using_test">使用 <code>test()</code></h3>
 
 <p>一个简单的例子，测试 "hello" 是否包含在字符串的最开始，返回布尔值。</p>
 
@@ -61,9 +61,9 @@ console.log(result);
 
 <h3 id="当设置全局标志的正则使用test">当设置全局标志的正则使用<code>test()</code></h3>
 
-<p>如果正则表达式设置了全局标志，<code>test() </code>的执行会改变正则表达式   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex" title="The lastIndex is a read/write integer property of regular expression instances that specifies the index at which to start the next match."><code>lastIndex</code></a>属性。连续的执行<code>test()</code>方法，后续的执行将会从 lastIndex 处开始匹配字符串，({{jsxref("RegExp.prototype.exec()", "<code>exec()</code>")}} 同样改变正则本身的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex" title="The lastIndex is a read/write integer property of regular expression instances that specifies the index at which to start the next match.">lastIndex</a>属性值</code>).</p>
+<p>如果正则表达式设置了全局标志，<code>test() </code>的执行会改变正则表达式   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex" title="The lastIndex is a read/write integer property of regular expression instances that specifies the index at which to start the next match."><code>lastIndex</code></a>属性。连续的执行<code>test()</code>方法，后续的执行将会从 lastIndex 处开始匹配字符串，({{jsxref("RegExp.prototype.exec()", "<code>exec()</code>")}} 同样改变正则本身的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex" title="The lastIndex is a read/write integer property of regular expression instances that specifies the index at which to start the next match.">lastIndex</a>属性值</code>).</p>
 
-<p>下面的实例表现了这种行为： </p>
+<p>下面的实例表现了这种行为： </p>
 
 <pre class="brush: js">var regex = /foo/g;
 

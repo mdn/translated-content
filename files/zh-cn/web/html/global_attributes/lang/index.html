@@ -7,7 +7,7 @@ translation_of: Web/HTML/Global_attributes/lang
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p><strong>lang</strong> <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a> 参与了元素语言的定义。这个语言是不可编辑元素写入的语言，或者可编辑元素应该写入的语言。标签包含单个条目，值的格式由 <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt"><em>用于定义语言的标签 (BCP47)</em></a> IETF 文档定义。如果标签的内容是空字符串，语言就设为<em>未知</em>。如果标签内容是无效的，根据 BCP47，它就设为<em>无效</em>。</p>
+<p><strong>lang</strong> <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a> 参与了元素语言的定义。这个语言是不可编辑元素写入的语言，或者可编辑元素应该写入的语言。标签包含单个条目，值的格式由 <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt"><em>用于定义语言的标签 (BCP47)</em></a> IETF 文档定义。如果标签的内容是空字符串，语言就设为<em>未知</em>。如果标签内容是无效的，根据 BCP47，它就设为<em>无效</em>。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}</div>
 
@@ -35,7 +35,7 @@ translation_of: Web/HTML/Global_attributes/lang
 <p>要查找语言的正确子标签代码，请参阅<a href="https://r12a.github.io/app-subtags/">语言子标签查找</a>。</p>
 </div>
 
-<p>即使设置了 <strong>lang</strong> 属性，也可能无效，因为 <a href="/en-US/docs/Web/HTML/Global_attributes/xml:lang"><strong>xml:lang</strong></a> 属性更加优先。</p>
+<p>即使设置了 <strong>lang</strong> 属性，也可能无效，因为 <a href="/en-US/docs/Web/HTML/Global_attributes/xml:lang"><strong>xml:lang</strong></a> 属性更加优先。</p>
 
 <p>对于 CSS 伪类{{cssxref(":lang")}}，如果它们的名称不同，则两个无效的语言名称是不同的。比如<code>:lang(es)</code>匹配<code>lang = "es-ES"</code>和<code>lang = "es-419"</code>，而<code>:lang(xyzzy)</code>与<code>lang = "xyzzy-Zorp!"</code>不匹配。</p>
 

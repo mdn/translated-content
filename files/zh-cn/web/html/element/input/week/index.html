@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/input/week
 ---
 <div>{{HTMLRef("Input_types")}}</div>
 
-<p>{{HTMLElement("input")}} 类型为 <strong><code>week</code></strong> 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到<a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">52 or 53</a>周）的<a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">ISO 8601 week number</a> </p>
+<p>{{HTMLElement("input")}} 类型为 <strong><code>week</code></strong> 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到<a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">52 or 53</a>周）的<a href="https://en.wikipedia.org/wiki/ISO_8601#Week_dates">ISO 8601 week number</a> </p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}</div>
 
@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/input/week
 
 <p>控件的用户界面因浏览器而异； 跨浏览器的支持目前受到限制，目前只有 Chrome / Opera 和 Microsoft Edge 支持。 在不支持的浏览器中，该控件会正常降级，使其功能与 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>相同。</p>
 
-<p>  在 Chrome / Opera 中，在<code>week</code>控件提供了用于填写周和年值的插槽，弹出式日历界面（可以更直观地选择它们）以及 “ X” 按钮以清除控件的值。</p>
+<p>  在 Chrome / Opera 中，在<code>week</code>控件提供了用于填写周和年值的插槽，弹出式日历界面（可以更直观地选择它们）以及 “ X” 按钮以清除控件的值。</p>
 
 <p><img src="week-control-chrome.png"></p>
 
@@ -43,7 +43,7 @@ translation_of: Web/HTML/Element/input/week
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
-   <td><code>value</code>, <code>valueAsDate</code>, <code>valueAsNumber</code>, 和 <code>list</code>.</td>
+   <td><code>value</code>, <code>valueAsDate</code>, <code>valueAsNumber</code>, 和 <code>list</code>.</td>
   </tr>
   <tr>
    <td><strong>方法</strong></td>
@@ -63,7 +63,7 @@ translation_of: Web/HTML/Element/input/week
 
 <p>{{EmbedLiveSample('Value', 600, 60)}}</p>
 
-<p>要注意的一件事是，显示的格式可能与<code>value</code>不同，后者始终采用 <code>yyyy-Www</code>格式。 例如，当将上述值提交给服务器时，浏览器可能会将其显示为 <code>Week 01, 2017</code>, 但是提交的值始终看起来像<code>week=2017-W01</code>.</p>
+<p>要注意的一件事是，显示的格式可能与<code>value</code>不同，后者始终采用 <code>yyyy-Www</code>格式。 例如，当将上述值提交给服务器时，浏览器可能会将其显示为 <code>Week 01, 2017</code>, 但是提交的值始终看起来像<code>week=2017-W01</code>.</p>
 
 <p>您还可以使用输入元素的 {{domxref("HTMLInputElement.value", "value")}} 属性获取并设置 JavaScript 中的值，例如：</p>
 
@@ -105,7 +105,7 @@ weekControl.value = '2017-W45';</pre>
 
 <p>接受以上 <a href="#值">值</a> 部分中讨论的字符串格式的最新（按时间）年份和星期数。 如果输入到元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">约束验证</a>。 如果<code>max</code>属性的值不是有效的周字符串，则该元素没有最大值。</p>
 
-<p>此值必须大于或等于<code>min</code> 属性指定的年和周。</p>
+<p>此值必须大于或等于<code>min</code> 属性指定的年和周。</p>
 
 <h3 id="min">min</h3>
 
@@ -119,7 +119,7 @@ weekControl.value = '2017-W45';</pre>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
-<p>对于<code>week</code> 输入， <code>step</code> 的值以周为单位，比例因子为 604,800,000（因为基础数值以毫秒为单位）。 <code>step</code>的默认值为 1，表示 1 周。 默认的步进基数是-259,200,000，这是 1970 年第一周的开始 (<code>"1970-W01"</code>).</p>
+<p>对于<code>week</code> 输入， <code>step</code> 的值以周为单位，比例因子为 604,800,000（因为基础数值以毫秒为单位）。 <code>step</code>的默认值为 1，表示 1 周。 默认的步进基数是-259,200,000，这是 1970 年第一周的开始 (<code>"1970-W01"</code>).</p>
 
 <p><em>目前，尚不清楚当与<code>week</code>输入一起使用时，<code>"any"</code> 的值对<code>step</code> 意味着什么。 确定该信息后，将对其进行更新。</em></p>
 
@@ -142,7 +142,7 @@ weekControl.value = '2017-W45';</pre>
 
 <h3 id="控制输入大小">控制输入大小</h3>
 
-<p><code>&lt;input type="week"&gt;</code> 不支持 {{htmlattrxref("size", "input")}}. 您必须依靠<a href="/en-US/docs/Web/CSS">CSS</a>来确定大小 。</p>
+<p><code>&lt;input type="week"&gt;</code> 不支持 {{htmlattrxref("size", "input")}}. 您必须依靠<a href="/en-US/docs/Web/CSS">CSS</a>来确定大小 。</p>
 
 <h3 id="使用step属性">使用 step 属性</h3>
 
@@ -246,7 +246,7 @@ input:valid+span:after {
 
 <h2 id="例子">例子</h2>
 
-<p>在此示例中，我们创建了两组用于选择星期的 UI 元素：使用 <code>&lt;input type="week"&gt;</code>，创建的本机选择器，以及两个用于选择星期/年的 {{htmlelement("select")}} 元素的集合 不支持<code>week</code>输入类型的旧版浏览器。  </p>
+<p>在此示例中，我们创建了两组用于选择星期的 UI 元素：使用 <code>&lt;input type="week"&gt;</code>，创建的本机选择器，以及两个用于选择星期/年的 {{htmlelement("select")}} 元素的集合 不支持<code>week</code>输入类型的旧版浏览器。  </p>
 
 <p>{{EmbedLiveSample('Examples', 600, 140)}}</p>
 
@@ -307,7 +307,7 @@ input:valid+span:after {
 }</pre>
 </div>
 
-<p>该代码中可能感兴趣的另一部分是特征检测代码。 要检测浏览器是否支持<code>&lt;input type="week"&gt;</code>, 我们创建一个新的 {{htmlelement("input")}} 元素，尝试将其 <code>type</code> 设置为 <code>week</code>, 然后立即检查其 <code>type</code> 设置为。  不支持的浏览器将返回<code>text</code>，因为<code>week</code>类型回退为<code>text</code>类型。 如果不支持 ,  <code>&lt;input type="week"&gt;</code> 我们将隐藏本机选择器并显示后备选择器 UI ({{htmlelement("select")}}s) .</p>
+<p>该代码中可能感兴趣的另一部分是特征检测代码。 要检测浏览器是否支持<code>&lt;input type="week"&gt;</code>, 我们创建一个新的 {{htmlelement("input")}} 元素，尝试将其 <code>type</code> 设置为 <code>week</code>, 然后立即检查其 <code>type</code> 设置为。  不支持的浏览器将返回<code>text</code>，因为<code>week</code>类型回退为<code>text</code>类型。 如果不支持 ,  <code>&lt;input type="week"&gt;</code> 我们将隐藏本机选择器并显示后备选择器 UI ({{htmlelement("select")}}s) .</p>
 
 <pre class="brush: js">// define variables
 var nativePicker = document.querySelector('.nativeWeekPicker');
@@ -325,9 +325,9 @@ fallbackLabel.style.display = 'none';
 var test = document.createElement('input');
 
 try {
-  test.type = 'week';
+  test.type = 'week';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.description);
 }
 
 // if it does, run the code inside the if() {} block
@@ -351,7 +351,7 @@ function populateWeeks() {
 }</pre>
 
 <div class="note">
-<p><strong>注意：</strong> 请记住，有些年份有 53 周（请参阅 <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">每年的周数</a>)！ 在开发生产应用程序时，您需要考虑到这一点。</p>
+<p><strong>注意：</strong> 请记住，有些年份有 53 周（请参阅 <a href="https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year">每年的周数</a>)！ 在开发生产应用程序时，您需要考虑到这一点。</p>
 </div>
 
 <h2 id="技术指标">技术指标</h2>
@@ -382,5 +382,5 @@ function populateWeeks() {
 <ul>
  <li>通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}</li>
  <li><a href="/en-US/docs/Web/HTML/Date_and_time_formats">HTML 中使用的日期和时间格式</a></li>
- <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code>, 和 <code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code></li>
+ <li><code><a href="/en-US/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/date">&lt;input type="date"&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/input/time">&lt;input type="time"&gt;</a></code>, 和 <code><a href="/en-US/docs/Web/HTML/Element/input/month">&lt;input type="month"&gt;</a></code></li>
 </ul>

@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/table
 ---
 <div>{{HTMLRef}}</div>
 
-<p><strong>HTML</strong>的 <strong><code>table</code> </strong>元素表示表格数据 — 即通过二维数据表表示的信息。</p>
+<p><strong>HTML</strong>的 <strong><code>table</code> </strong>元素表示表格数据 — 即通过二维数据表表示的信息。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}</div>
 
@@ -33,14 +33,14 @@ translation_of: Web/HTML/Element/table
     <ul>
      <li>一个可选的 {{HTMLElement("caption")}} 元素</li>
      <li>零个或多个的 {{HTMLElement("colgroup")}} 元素</li>
-     <li>一个可选的 {{HTMLElement("thead")}} 元素</li>
+     <li>一个可选的 {{HTMLElement("thead")}} 元素</li>
      <li>下列任意一个：
       <ul>
        <li>零个或多个 {{HTMLElement("tbody")}}</li>
        <li>零个或多个 {{HTMLElement("tr")}}</li>
       </ul>
      </li>
-     <li>一个可选的 {{HTMLElement("tfoot")}} 元素</li>
+     <li>一个可选的 {{HTMLElement("tfoot")}} 元素</li>
     </ul>
     </div>
     </div>
@@ -65,13 +65,13 @@ translation_of: Web/HTML/Element/table
  </tbody>
 </table>
 
-<h2 id="属性"> 属性</h2>
+<h2 id="属性"> 属性</h2>
 
 <p>表格标签支持<a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">全局属性</a>。下面列出的属性现在已经弃用（请使用 CSS 代替）。</p>
 
 <dl>
  <dt>{{htmlattrdef("align")}} {{Deprecated_inline}}</dt>
- <dd> 这个枚举属性指定了包含在文档中的表格必须如何对齐。有如下值：
+ <dd> 这个枚举属性指定了包含在文档中的表格必须如何对齐。有如下值：
  <ul>
   <li>left，表格将在文档左侧显示；</li>
   <li>center， 表格将在文档中央显示；</li>
@@ -81,8 +81,8 @@ translation_of: Web/HTML/Element/table
  <div class="note"><strong>小贴士：</strong>
 
  <ul>
-  <li><strong>不要使用这个属性</strong>，它已经不赞成被使用。  {{HTMLElement("table")}} 元素应该使用<a href="/en-US/docs/CSS" title="CSS">CSS</a> 制定样式。设置 {{cssxref("margin-left")}} 、{{cssxref("margin-right")}} 为 <code>auto</code> ( 或者 {{cssxref("margin")}} <code>设置为 0 auto</code>) 来实现类似于 align 属性的效果。</li>
-  <li>Firefox 4 之前的版本，在 quirks mode  模式下它还支持 <code>middle，</code> <code>absmiddle</code> <code>和近似于 center 的 abscenter</code> <em>。</em></li>
+  <li><strong>不要使用这个属性</strong>，它已经不赞成被使用。  {{HTMLElement("table")}} 元素应该使用<a href="/en-US/docs/CSS" title="CSS">CSS</a> 制定样式。设置 {{cssxref("margin-left")}} 、{{cssxref("margin-right")}} 为 <code>auto</code> ( 或者 {{cssxref("margin")}} <code>设置为 0 auto</code>) 来实现类似于 align 属性的效果。</li>
+  <li>Firefox 4 之前的版本，在 quirks mode  模式下它还支持 <code>middle，</code> <code>absmiddle</code> <code>和近似于 center 的 abscenter</code> <em>。</em></li>
  </ul>
  </div>
  </dd>
@@ -90,7 +90,7 @@ translation_of: Web/HTML/Element/table
 
 <dl>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
- <dd>这个属性定义了表格的背景颜色。 它是一个 6 位的十六进制编码，定义于 <a class="external" href="http://www.w3.org/Graphics/Color/sRGB">sRGB</a>，需要加上'#'作为前缀。 当然也可以使用下面已经被预先定义的字符串，来表示常用的 16 种颜色：
+ <dd>这个属性定义了表格的背景颜色。 它是一个 6 位的十六进制编码，定义于 <a class="external" href="http://www.w3.org/Graphics/Color/sRGB">sRGB</a>，需要加上'#'作为前缀。 当然也可以使用下面已经被预先定义的字符串，来表示常用的 16 种颜色：
  <table>
   <tbody>
    <tr>
@@ -144,21 +144,21 @@ translation_of: Web/HTML/Element/table
   </tbody>
  </table>
 
- <div class="note"><strong>小贴士：</strong>不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 中的 {{cssxref("background-color")}} 属性能够和 bgcolor 属性达到一样的效果。</div>
+ <div class="note"><strong>小贴士：</strong>不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 中的 {{cssxref("background-color")}} 属性能够和 bgcolor 属性达到一样的效果。</div>
  </dd>
 </dl>
 
 <dl>
  <dt>{{htmlattrdef("border")}} {{Deprecated_inline}}</dt>
  <dd>这个整型元素使用像素，定义了表格边框的大小。 如果设置为 0，这意味着{{htmlattrxref("frame", "table")}} 属性被设置为空。如果设置为 1，表示表格具有 1px 大小的边框。
- <div class="note"><strong>小贴士：</strong>不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性 {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} 和 {{cssxref("border-style")}} 可实现相同效果。</div>
+ <div class="note"><strong>小贴士：</strong>不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性 {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} 和 {{cssxref("border-style")}} 可实现相同效果。</div>
  </dd>
 </dl>
 
 <dl>
  <dt>{{htmlattrdef("cellpadding")}} {{Deprecated_inline}}</dt>
  <dd>这个属性定义了表格单元的内容和边框之间的空间。如果它是一个像素长度单位，这个像素将被应用到所有的四个侧边；如果它是一个百分比的长度单位，内容将被作为中心，总的垂直（上和下）长度将代表这个百分比。这同样适用于总的水平（左和右）空间。
- <div class="note"><strong>小贴士：不要使用这个属性</strong>，因为它已经被废弃。 {{HTMLElement("table")}} 元素应该使用<a href="/en-US/docs/CSS" title="CSS"> CSS</a> 定制样式。 在{{HTMLElement("table")}} 元素上使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}，以达到类似于 cellpadding 的效果。</div>
+ <div class="note"><strong>小贴士：不要使用这个属性</strong>，因为它已经被废弃。 {{HTMLElement("table")}} 元素应该使用<a href="/en-US/docs/CSS" title="CSS"> CSS</a> 定制样式。 在{{HTMLElement("table")}} 元素上使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}，以达到类似于 cellpadding 的效果。</div>
  </dd>
 </dl>
 
@@ -235,7 +235,7 @@ translation_of: Web/HTML/Element/table
  <dd>该属性定义了一个替代文本，当表格无法在用户代理中显示的时候用来描述表格。通常，它被用来为残障人士提供可用性，比如，盲人使用盲文屏幕（Braille screen）浏览网页，从中获取信息。如果要想对于非视力受限的人来说也可以提供作用，考虑使用 {{HTMLElement("caption")}} 代替。summary 属性不是强制性的，当一个 {{HTMLElement("caption")}} 发挥它应有的作用时，可以省略 summary 属性。
  <div class="note"><strong>小贴士：</strong> <strong>不要使用这个属性，因为它已经被废弃。</strong> 作为替代，选择其中一种方法为表格添加描述：
  <ul>
-  <li>Use prose around the table (this method is less semantic).</li>
+  <li>Use prose around the table (this method is less semantic).</li>
   <li>在表格的 {{HTMLElement("caption")}} 元素中添加描述。</li>
   <li>在表格的 {{HTMLElement("caption")}} 元素中，添加一个带有描述的 {{HTMLElement("details")}} 元素。</li>
   <li>将 {{HTMLElement("table")}} 元素包含在一个{{HTMLElement("figure")}} 元素中，并且在旁边添加散文（prose ）描述。</li>

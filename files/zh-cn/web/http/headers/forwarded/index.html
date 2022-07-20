@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Headers/Forwarded
 
 <p><strong><code>Forwarded</code></strong> 首部中包含了代理服务器的客户端的信息，即由于代理服务器在请求路径中的介入而被修改或丢失的信息。</p>
 
-<p>其他可用来替换的，已经成为既成标准的首部是 {{HTTPHeader("X-Forwarded-For")}} 、 {{HTTPHeader("X-Forwarded-Host")}} 以及{{HTTPHeader("X-Forwarded-Proto")}} 。</p>
+<p>其他可用来替换的，已经成为既成标准的首部是 {{HTTPHeader("X-Forwarded-For")}} 、 {{HTTPHeader("X-Forwarded-Host")}} 以及{{HTTPHeader("X-Forwarded-Proto")}} 。</p>
 
 <p>这个消息首部会被用来进行调试和统计，以及生成基于位置的定制化内容，按照设计的目的，它会暴露一定的隐私和敏感信息，比如客户端的 IP 地址。所以在应用此消息首部的时候，需要将用户的隐私问题考虑在内。</p>
 
@@ -51,7 +51,7 @@ translation_of: Web/HTTP/Headers/Forwarded
  <dt>for=&lt;identifier&gt;</dt>
  <dd>发起请求的客户端以及代理链中的一系列的代理服务器。</dd>
  <dt>host=&lt;host&gt;</dt>
- <dd>代理接收到的 {{HTTPHeader("Host")}}  首部的信息。</dd>
+ <dd>代理接收到的 {{HTTPHeader("Host")}}  首部的信息。</dd>
  <dt>proto=&lt;http|https&gt;</dt>
  <dd>
  <p>表示发起请求时采用的何种协议（通常是 "http" 或者 "https"）。</p>
@@ -60,7 +60,7 @@ translation_of: Web/HTTP/Headers/Forwarded
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_Forwarded">使用 <code>Forwarded</code> </h3>
+<h3 id="使用_Forwarded">使用 <code>Forwarded</code> </h3>
 
 <pre>Forwarded: for="_mdn"
 
@@ -76,7 +76,7 @@ Forwarded: for=192.0.2.43, for=198.51.100.17
 
 <h3 id="从_X-Forwarded-For_到_Forwarded_的迁移">从 X-Forwarded-For 到 Forwarded 的迁移</h3>
 
-<p>如果应用、服务器或是代理支持标准格式的 Forwarded 的首部的话，那么  {{HTTPHeader("X-Forwarded-For")}} 可以被替换。需要注意的是，在 Forwarded 中 ipv6 地址需要包含在方括号里面，同时用引号括起来。</p>
+<p>如果应用、服务器或是代理支持标准格式的 Forwarded 的首部的话，那么  {{HTTPHeader("X-Forwarded-For")}} 可以被替换。需要注意的是，在 Forwarded 中 ipv6 地址需要包含在方括号里面，同时用引号括起来。</p>
 
 <pre>X-Forwarded-For: 123.34.567.89
 Forwarded: for=123.34.567.89

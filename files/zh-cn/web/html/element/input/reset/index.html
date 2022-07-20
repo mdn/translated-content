@@ -12,7 +12,7 @@ tags:
   - reset
 translation_of: Web/HTML/Element/input/reset
 ---
-<p><code>{{HTMLElement("input")}}</code> type 类型为 <strong><code>"reset"</code></strong> 元素呈现为按钮，且带有默认的 <code>{{event("click")}}</code> 事件，用于将表单中的所有输入重置为其初始值。</p>
+<p><code>{{HTMLElement("input")}}</code> type 类型为 <strong><code>"reset"</code></strong> 元素呈现为按钮，且带有默认的 <code>{{event("click")}}</code> 事件，用于将表单中的所有输入重置为其初始值。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}</div>
 
@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/input/reset
 
 <h2 id="值">值</h2>
 
-<p><code>&lt;input type="reset"&gt;</code> 元素的 <code>{{htmlattrxref("value", "input")}}</code> 属性包含一个用做按钮标签的 <code>{{domxref("DOMString")}}</code>，诸如 <code>reset</code>之类的按钮没有其他值。</p>
+<p><code>&lt;input type="reset"&gt;</code> 元素的 <code>{{htmlattrxref("value", "input")}}</code> 属性包含一个用做按钮标签的 <code>{{domxref("DOMString")}}</code>，诸如 <code>reset</code>之类的按钮没有其他值。</p>
 
 <div id="summary-example3">
 <pre class="brush: html">&lt;input type="reset" value="Reset the form"&gt;</pre>
@@ -66,7 +66,7 @@ translation_of: Web/HTML/Element/input/reset
 
 <h2 id="使用重置按钮">使用重置按钮</h2>
 
-<p><code>&lt;input type =“ reset”&gt;</code> 按钮用于重置表单。 如果您要创建自定义按钮，则使用 JavaScript 自定义行为，您需要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/Input/button">&lt;input type="button"&gt;</a></code>，或者最好使用 <code>{{htmlelement("button")}}</code> 元素。</p>
+<p><code>&lt;input type =“ reset”&gt;</code> 按钮用于重置表单。 如果您要创建自定义按钮，则使用 JavaScript 自定义行为，您需要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/Input/button">&lt;input type="button"&gt;</a></code>，或者最好使用 <code>{{htmlelement("button")}}</code> 元素。</p>
 
 <h3 id="一个简单的重置按钮">一个简单的重置按钮</h3>
 
@@ -91,9 +91,9 @@ translation_of: Web/HTML/Element/input/reset
 
 <h3 id="添加重置键盘快捷键">添加重置键盘快捷键</h3>
 
-<p>添加键盘快捷键到提交按钮 — 就像您使用 <code>{{HTMLElement("input")}}</code> 一样做一些事情 — 请使用 <code>{{htmlattrxref("accesskey")}}</code> 全局属性。</p>
+<p>添加键盘快捷键到提交按钮 — 就像您使用 <code>{{HTMLElement("input")}}</code> 一样做一些事情 — 请使用 <code>{{htmlattrxref("accesskey")}}</code> 全局属性。</p>
 
-<p>在这个例子中， <kbd>r</kbd> 被指定为访问键（您需要按 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合； 关于这些命令请参见 <code>{{htmlattrxref("accesskey")}}</code> ）。</p>
+<p>在这个例子中， <kbd>r</kbd> 被指定为访问键（您需要按 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合； 关于这些命令请参见 <code>{{htmlattrxref("accesskey")}}</code> ）。</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -108,20 +108,20 @@ translation_of: Web/HTML/Element/input/reset
 
 <p>{{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}</p>
 
-<p>上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的以避免与系统和软件快捷键冲突。 在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 <code>{{htmlattrxref("title")}}</code> 属性）, 尽管这并不是出于可访问性目的的完善的解决方案。</p>
+<p>上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的以避免与系统和软件快捷键冲突。 在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 <code>{{htmlattrxref("title")}}</code> 属性）, 尽管这并不是出于可访问性目的的完善的解决方案。</p>
 
 <h3 id="禁用和启用重置按钮">禁用和启用重置按钮</h3>
 
-<p>要禁用重置按钮，只需在其上指定 <code>{{htmlattrxref("disabled")}}</code> 的全局属性，如下所示：</p>
+<p>要禁用重置按钮，只需在其上指定 <code>{{htmlattrxref("disabled")}}</code> 的全局属性，如下所示：</p>
 
 <div id="disable-example1">
 <pre class="brush: html">&lt;input type="reset" value="Disabled" disabled&gt;</pre>
 </div>
 
-<p>您可以在运行时通过简单地将 <code>disable</code> 设置为 <code>true</code> 或 <code>false</code> 来启用和禁用按钮。在 JavaScript 中，使用<code>btn.disabled = true</code> 或 <code>btn.disabled = false</code>。</p>
+<p>您可以在运行时通过简单地将 <code>disable</code> 设置为 <code>true</code> 或 <code>false</code> 来启用和禁用按钮。在 JavaScript 中，使用<code>btn.disabled = true</code> 或 <code>btn.disabled = false</code>。</p>
 
 <div class="note">
-<p>注意：有关启用和禁用按钮的更多想法，请参见 <code><a href="/en-US/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> 页面。</p>
+<p>注意：有关启用和禁用按钮的更多想法，请参见 <code><a href="/en-US/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button">&lt;input type="button"&gt;</a></code> 页面。</p>
 </div>
 
 <h2 id="验证方式"><strong>验证方式</strong></h2>

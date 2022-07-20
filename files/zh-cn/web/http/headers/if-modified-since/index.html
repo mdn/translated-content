@@ -8,7 +8,7 @@ translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>If-Modified-Since</code></strong> 是一个条件式请求首部，服务器只在所请求的资源在给定的日期时间之后对内容进行过修改的情况下才会将资源返回，状态码为 {{HTTPStatus("200")}}  。如果请求的资源从那时起未经修改，那么返回一个不带有消息主体的  {{HTTPStatus("304")}}  响应，而在 {{HTTPHeader("Last-Modified")}} 首部中会带有上次修改时间。 不同于  {{HTTPHeader("If-Unmodified-Since")}}, <code>If-Modified-Since</code> 只可以用在 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 请求中。</p>
+<p><strong><code>If-Modified-Since</code></strong> 是一个条件式请求首部，服务器只在所请求的资源在给定的日期时间之后对内容进行过修改的情况下才会将资源返回，状态码为 {{HTTPStatus("200")}}  。如果请求的资源从那时起未经修改，那么返回一个不带有消息主体的  {{HTTPStatus("304")}}  响应，而在 {{HTTPHeader("Last-Modified")}} 首部中会带有上次修改时间。 不同于  {{HTTPHeader("If-Unmodified-Since")}}, <code>If-Modified-Since</code> 只可以用在 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 请求中。</p>
 
 <p>当与 {{HTTPHeader("If-None-Match")}} 一同出现时，它（<strong><code>If-Modified-Since</code></strong>）会被忽略掉，除非服务器不支持 <code>If-None-Match</code>。</p>
 
@@ -36,7 +36,7 @@ translation_of: Web/HTTP/Headers/If-Modified-Since
 
 <dl>
  <dt>&lt;day-name&gt;</dt>
- <dd> "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" 或 "Sun" 之一（区分大小写）。</dd>
+ <dd> "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" 或 "Sun" 之一（区分大小写）。</dd>
  <dt>&lt;day&gt;</dt>
  <dd>两位数字表示的天数，例如"04" or "23"。</dd>
  <dt>&lt;month&gt;</dt>
@@ -46,9 +46,9 @@ translation_of: Web/HTTP/Headers/If-Modified-Since
  <dt>&lt;hour&gt;</dt>
  <dd>两位数字表示的小时数，例如 "09" 或者 "23"。</dd>
  <dt>&lt;minute&gt;</dt>
- <dd>两位数字表示的分钟数，例如"04" 或者 "59"。</dd>
+ <dd>两位数字表示的分钟数，例如"04" 或者 "59"。</dd>
  <dt>&lt;second&gt;</dt>
- <dd>两位数字表示的秒数，例如 "04" 或者 "59"。</dd>
+ <dd>两位数字表示的秒数，例如 "04" 或者 "59"。</dd>
  <dt><code>GMT</code></dt>
  <dd>
  <p>国际标准时间。HTTP 中的时间均用国际标准时间表示，从来不使用当地时间。</p>

@@ -29,13 +29,13 @@ translation_of: Web/CSS/@keyframes
 
 <h3 id="让关键帧序列生效">让关键帧序列生效</h3>
 
-<p>如果一个关键帧规则没有指定动画的开始或结束状态（也就是，<code>0%</code>/<code>from</code> 和<code>100%</code>/<code>to</code>，浏览器将使用元素的现有样式作为起始/结束状态。这可以用来从初始状态开始元素动画，最终返回初始状态。</p>
+<p>如果一个关键帧规则没有指定动画的开始或结束状态（也就是，<code>0%</code>/<code>from</code> 和<code>100%</code>/<code>to</code>，浏览器将使用元素的现有样式作为起始/结束状态。这可以用来从初始状态开始元素动画，最终返回初始状态。</p>
 
 <p>如果在关键帧的样式中使用了不能用作动画的属性，那么这些属性会被忽略掉，支持动画的属性仍然是有效的，不受波及。</p>
 
 <h3 id="重复定义">重复定义</h3>
 
-<p>如果多个关键帧使用同一个名称，以最后一次定义的为准。 <code>@keyframes</code> 不存在层叠样式 (cascade) 的情况，所以动画在一个时刻（阶段）只会使用一个的关键帧的数据。</p>
+<p>如果多个关键帧使用同一个名称，以最后一次定义的为准。 <code>@keyframes</code> 不存在层叠样式 (cascade) 的情况，所以动画在一个时刻（阶段）只会使用一个的关键帧的数据。</p>
 
 <p>如果一个 @keyframes 内的关键帧的百分比存在重复的情况，则 @keyframes 规则中该百分比的所有关键帧都将用于该帧。如果多个关键帧指定了相同的百分比值，则 @keyframes 规则内是可以使用层叠样式的。</p>
 
@@ -51,7 +51,7 @@ translation_of: Web/CSS/@keyframes
 }
 </pre>
 
-<p>例子中，{{ cssxref("top") }} 属性分别出现在关键帧 <code>0%</code>、<code>30%</code> 和 <code>100%</code> 的中，而 {{ cssxref("left") }} 属性分别出现在关键帧 <code>0%</code>、<code>68%</code>、<code>72%</code> 和 <code>100%</code> 中。</p>
+<p>例子中，{{ cssxref("top") }} 属性分别出现在关键帧 <code>0%</code>、<code>30%</code> 和 <code>100%</code> 的中，而 {{ cssxref("left") }} 属性分别出现在关键帧 <code>0%</code>、<code>68%</code>、<code>72%</code> 和 <code>100%</code> 中。</p>
 
 <h3 id="同一关键帧中的相同属性被重复定义">同一关键帧中的相同属性被重复定义</h3>
 
@@ -74,16 +74,16 @@ translation_of: Web/CSS/@keyframes
 <p>关键帧中出现的 <code>!important</code> 将会被忽略。</p>
 
 <pre class="brush: css notranslate">@keyframes important1 {
-  from { margin-top: 50px; }
-  50%  { margin-top: 150px !important; } /* 忽略 */
-  to   { margin-top: 100px; }
+  from { margin-top: 50px; }
+  50%  { margin-top: 150px !important; } /* 忽略 */
+  to   { margin-top: 100px; }
 }
 
 @keyframes important2 {
   from { margin-top: 50px;
-         margin-bottom: 100px; }
-  to   { margin-top: 150px !important; /* 忽略 */
-         margin-bottom: 50px; }
+         margin-bottom: 100px; }
+  to   { margin-top: 150px !important; /* 忽略 */
+         margin-bottom: 50px; }
 }
 </pre>
 
@@ -95,7 +95,7 @@ translation_of: Web/CSS/@keyframes
  <dt>{{cssxref("custom-ident")}}</dt>
  <dd>帧列表的名称。名称必须符合 CSS 语法中对标识符的定义。</dd>
  <dt><code>from</code></dt>
- <dd>等价于 <code>0%</code>。</dd>
+ <dd>等价于 <code>0%</code>。</dd>
  <dt><code>to</code></dt>
  <dd>等价于 <code>100%</code>。</dd>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>

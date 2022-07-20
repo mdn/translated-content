@@ -14,16 +14,16 @@ translation_of: Web/CSS/border-style
 
 <p>{{ CSSRef("CSS Borders") }}</p>
 
-<p><code>border-style</code> 是一个 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 简写属性，用来设定元素所有边框的样式。</p>
+<p><code>border-style</code> 是一个 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 简写属性，用来设定元素所有边框的样式。</p>
 
-<div class="note"><strong>注意：</strong><code>border-style</code> 默认值是 <code>none</code>，这意味着如果您只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。</div>
+<div class="note"><strong>注意：</strong><code>border-style</code> 默认值是 <code>none</code>，这意味着如果您只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。</div>
 
 
 
 <p>{{EmbedInteractiveExample("pages/css/border-style.html")}}</p>
 
 <div class="hidden">
-<p>The source for this interactiv example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p>The source for this interactiv example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 </div>
 
 
@@ -60,14 +60,14 @@ border-style: unset;
     <td style="vertical-align: middle;">
      <div style="border-width: 3px; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
     </td>
-    <td style="vertical-align: middle;">和关键字 <code>hidden</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 <code>0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>none</code> 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。</td>
+    <td style="vertical-align: middle;">和关键字 <code>hidden</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 <code>0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>none</code> 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。</td>
    </tr>
    <tr>
     <td style="vertical-align: middle;"><code>hidden</code></td>
     <td style="vertical-align: middle;">
      <div style="border-width: 3px; border-style: hidden; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
     </td>
-    <td style="vertical-align: middle;">和关键字 <code>none</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 <code style="font-style: normal; font-size: 13.63636302948px; line-height: 19.0909080505371px;">0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>hidden</code> 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。</td>
+    <td style="vertical-align: middle;">和关键字 <code>none</code> 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 <code style="font-style: normal; font-size: 13.63636302948px; line-height: 19.0909080505371px;">0</code>，即使先前已经指定过它的值。在单元格边框重叠情况下，<code>hidden</code> 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。</td>
    </tr>
    <tr>
     <td style="vertical-align: middle;"><code>dotted</code></td>
@@ -102,21 +102,21 @@ border-style: unset;
     <td style="vertical-align: middle;">
      <div style="border-width: 3px; border-style: groove; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
     </td>
-    <td style="vertical-align: middle;">显示为有雕刻效果的边框，样式与 <code>ridge</code> 相反。</td>
+    <td style="vertical-align: middle;">显示为有雕刻效果的边框，样式与 <code>ridge</code> 相反。</td>
    </tr>
    <tr>
     <td style="vertical-align: middle;"><code>ridge</code></td>
     <td style="vertical-align: middle;">
      <div style="border-width: 3px; border-style: ridge; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
     </td>
-    <td style="vertical-align: middle;">显示为有浮雕效果的边框，样式与 <code>groove</code> 相反。</td>
+    <td style="vertical-align: middle;">显示为有浮雕效果的边框，样式与 <code>groove</code> 相反。</td>
    </tr>
    <tr>
     <td style="vertical-align: middle;"><code>inset</code></td>
     <td style="vertical-align: middle;">
      <div style="border-width: 3px; border-style: inset; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
     </td>
-    <td style="vertical-align: middle;">显示为有陷入效果的边框，样式与 <code>outset</code> 相反。当它指定到 {{ cssxref("border-collapse") }} 为 <code>collapsed</code> 的单元格时，会显示为 <code>groove</code> 的样式。</td>
+    <td style="vertical-align: middle;">显示为有陷入效果的边框，样式与 <code>outset</code> 相反。当它指定到 {{ cssxref("border-collapse") }} 为 <code>collapsed</code> 的单元格时，会显示为 <code>groove</code> 的样式。</td>
    </tr>
    <tr>
     <td style="vertical-align: middle;"><code>outset</code></td>
@@ -124,7 +124,7 @@ border-style: unset;
      <div style="border-width: 3px; border-style: outset; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"></div>
     </td>
     <td style="vertical-align: middle;">
-     <p>显示为有突出效果的边框，样式与 <code>inset</code> 相反。当它指定到 {{ cssxref("border-collapse") }} 为 <code>collapsed</code> 的单元格时，会显示为 <code>ridge</code> 的样式。</p>
+     <p>显示为有突出效果的边框，样式与 <code>inset</code> 相反。当它指定到 {{ cssxref("border-collapse") }} 为 <code>collapsed</code> 的单元格时，会显示为 <code>ridge</code> 的样式。</p>
     </td>
    </tr>
   </tbody>
@@ -145,33 +145,33 @@ border-style: unset;
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html">&lt;table&gt;
-    &lt;tr&gt;
-        &lt;td class="b1"&gt;none&lt;/td&gt;
-        &lt;td class="b2"&gt;hidden&lt;/td&gt;
-        &lt;td class="b3"&gt;dotted&lt;/td&gt;
-        &lt;td class="b4"&gt;dashed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td class="b5"&gt;solid&lt;/td&gt;
-        &lt;td class="b6"&gt;double&lt;/td&gt;
-        &lt;td class="b7"&gt;groove&lt;/td&gt;
-        &lt;td class="b8"&gt;ridge&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td class="b9"&gt;inset&lt;/td&gt;
-        &lt;td class="b10"&gt;outset&lt;/td&gt;
-    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="b1"&gt;none&lt;/td&gt;
+        &lt;td class="b2"&gt;hidden&lt;/td&gt;
+        &lt;td class="b3"&gt;dotted&lt;/td&gt;
+        &lt;td class="b4"&gt;dashed&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="b5"&gt;solid&lt;/td&gt;
+        &lt;td class="b6"&gt;double&lt;/td&gt;
+        &lt;td class="b7"&gt;groove&lt;/td&gt;
+        &lt;td class="b8"&gt;ridge&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class="b9"&gt;inset&lt;/td&gt;
+        &lt;td class="b10"&gt;outset&lt;/td&gt;
+    &lt;/tr&gt;
 &lt;/table&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">/* 定义表格外观 */
 table {
-    border-width: 3px;
-    background-color: #52E396;
+    border-width: 3px;
+    background-color: #52E396;
 }
 tr, td {
-    padding: 2px;
+    padding: 2px;
 }
 
 /* border-style 示例 */

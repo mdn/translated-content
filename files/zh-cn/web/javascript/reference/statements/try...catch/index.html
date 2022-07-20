@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
 
 <h2 id="描述">描述</h2>
 
-<p><code>try</code>语句包含了由一个或者多个语句组成的<code>try</code>块，和至少一个<code>catch</code>块或者一个<code>finally</code>块的其中一个，或者两个兼有， 下面是三种形式的<code>try</code>声明：</p>
+<p><code>try</code>语句包含了由一个或者多个语句组成的<code>try</code>块，和至少一个<code>catch</code>块或者一个<code>finally</code>块的其中一个，或者两个兼有， 下面是三种形式的<code>try</code>声明：</p>
 
 <ol>
  <li><code>try...catch</code></li>
@@ -54,13 +54,13 @@ translation_of: Web/JavaScript/Reference/Statements/try...catch
  <li><code>try...catch...finally</code></li>
 </ol>
 
-<p><code>catch</code>子句包含<code>try</code>块中抛出异常时要执行的语句。也就是，你想让<code>try</code>语句中的内容成功， 如果没成功，你想控制接下来发生的事情，这时你可以在<code>catch</code>语句中实现。 如果在<code>try</code>块中有任何一个语句（或者从<code>try</code>块中调用的函数）抛出异常，控制立即转向<code>catch</code>子句。如果在<code>try</code>块中没有异常抛出，会跳过<code>catch</code>子句。</p>
+<p><code>catch</code>子句包含<code>try</code>块中抛出异常时要执行的语句。也就是，你想让<code>try</code>语句中的内容成功， 如果没成功，你想控制接下来发生的事情，这时你可以在<code>catch</code>语句中实现。 如果在<code>try</code>块中有任何一个语句（或者从<code>try</code>块中调用的函数）抛出异常，控制立即转向<code>catch</code>子句。如果在<code>try</code>块中没有异常抛出，会跳过<code>catch</code>子句。</p>
 
 <p><code>finally</code>子句在<code>try</code>块和<code>catch</code>块之后执行但是在下一个<code>try</code>声明之前执行。无论是否有异常抛出或捕获它总是执行。</p>
 
 <p>你可以嵌套一个或者更多的<code>try</code>语句。如果内部的<code>try</code>语句没有<code>catch</code>子句，那么将会进入包裹它的<code>try</code>语句的<code>catch</code>子句。</p>
 
-<p>你也可以用<code>try</code>语句去处理 JavaScript 异常。参考<a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a>了解更多关于 Javascript 异常的信息。</p>
+<p>你也可以用<code>try</code>语句去处理 JavaScript 异常。参考<a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a>了解更多关于 Javascript 异常的信息。</p>
 
 <h3 id="无条件的catch块">无条件的<code>catch</code>块</h3>
 
@@ -104,18 +104,18 @@ catch (e) {
 <p>下面用符合 ECMAscript 规范的简单的 JavaScript 来编写相同的“条件 catch 子句”（显然更加冗长的，但是可以在任何地方运行）：</p>
 
 <pre class="brush: js">try {
-  myRoutine();
+  myRoutine();
 } catch (e) {
-  if (e instanceof RangeError) {
-    // statements to handle this very common expected error
-  } else {
-    throw e;  // re-throw the error unchanged
-  }
+  if (e instanceof RangeError) {
+    // statements to handle this very common expected error
+  } else {
+    throw e;  // re-throw the error unchanged
+  }
 }</pre>
 
 <h3 id="异常标识符">异常标识符</h3>
 
-<p>当<code>try</code>块中的抛出一个异常时， <em><code>exception_var</code></em>（如<code>catch (e)</code>中的<code>e</code>）用来保存被抛出声明指定的值。你可以用这个标识符来获取关于被抛出异常的信息。</p>
+<p>当<code>try</code>块中的抛出一个异常时， <em><code>exception_var</code></em>（如<code>catch (e)</code>中的<code>e</code>）用来保存被抛出声明指定的值。你可以用这个标识符来获取关于被抛出异常的信息。</p>
 
 <p>这个标识符是<code>catch</code>子语句内部的。换言之，当进入<code>catch</code>子语句时标识符创建，<code>catch</code>子语句执行完毕后，这个标识符将不再可用。</p>
 
@@ -213,9 +213,9 @@ catch (ex) {
 // "outer" "oops"
 </pre>
 
-<p>任何给定的异常只会被离它最近的封闭 catch 块捕获一次。当然，在“inner”块抛出的任何新异常 （因为 catch 块里的代码也可以抛出异常），将会被“outer”块所捕获。</p>
+<p>任何给定的异常只会被离它最近的封闭 catch 块捕获一次。当然，在“inner”块抛出的任何新异常 （因为 catch 块里的代码也可以抛出异常），将会被“outer”块所捕获。</p>
 
-<h3 id="从_finally_语句块返回">从 finally 语句块返回</h3>
+<h3 id="从_finally_语句块返回">从 finally 语句块返回</h3>
 
 <p>如果从<code>finally</code>块中返回一个值，那么这个值将会成为整个<code>try-catch-finally</code>的返回值，无论是否有<code>return</code>语句在<code>try</code>和<code>catch</code>中。这包括在<code>catch</code>块里抛出的异常。</p>
 

@@ -16,7 +16,7 @@ translation_of: 'Web/CSS/:hover'
 
 <p>用户的可视客户端比如 Firefox, Internet Explorer, Safari, Opera or Chrome，会在光标（鼠标指针）悬停在元素上时提供关联的样式。</p>
 
-<div class="note"><strong>注意</strong>: 在触摸屏上 <code>:hover</code> 有问题，基本不可用。不同的浏览器上<code>:hover</code> 伪类表现不同。 可能从不会触发；或者在触摸某元素后触发了一小会儿；或者总是触发即使用户不在触摸了，直到用户触摸别的元素。 触摸屏非常普遍，所以网页开发人员不要让任何内容只能通过悬停才能展示出来，不然这些内容对于触摸屏使用者来说是很难或者说不可能看到。</div>
+<div class="note"><strong>注意</strong>: 在触摸屏上 <code>:hover</code> 有问题，基本不可用。不同的浏览器上<code>:hover</code> 伪类表现不同。 可能从不会触发；或者在触摸某元素后触发了一小会儿；或者总是触发即使用户不在触摸了，直到用户触摸别的元素。 触摸屏非常普遍，所以网页开发人员不要让任何内容只能通过悬停才能展示出来，不然这些内容对于触摸屏使用者来说是很难或者说不可能看到。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -31,55 +31,55 @@ translation_of: 'Web/CSS/:hover'
 
 <h3 id="下拉按钮">下拉按钮</h3>
 
-<p><code>使用:hover</code> 伪类可以创建复杂的层叠机制。一个常见用途，比如，创建一个纯 CSS 的下拉按钮（不使用 JavaScript）。 本质是创建如下的 CSS：</p>
+<p><code>使用:hover</code> 伪类可以创建复杂的层叠机制。一个常见用途，比如，创建一个纯 CSS 的下拉按钮（不使用 JavaScript）。 本质是创建如下的 CSS：</p>
 
 <pre class="brush: css">div.menu-bar ul ul {
-  display: none;
+  display: none;
 }
 
 div.menu-bar li:hover &gt; ul {
-  display: block;
+  display: block;
 }
 </pre>
 
 <p>HTML 内容如下：</p>
 
 <pre class="brush: html">&lt;div class="menu-bar"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href="example.html"&gt;Menu&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;
-          &lt;a href="example.html"&gt;Link&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;a class="menu-nav" href="example.html"&gt;Submenu&lt;/a&gt;
-          &lt;ul&gt;
-            &lt;li&gt;
-              &lt;a class="menu-nav" href="example.html"&gt;Submenu&lt;/a&gt;
-              &lt;ul&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-            &lt;/li&gt;
-            &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="example.html"&gt;Menu&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href="example.html"&gt;Link&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a class="menu-nav" href="example.html"&gt;Submenu&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;
+              &lt;a class="menu-nav" href="example.html"&gt;Submenu&lt;/a&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;a href="example.html"&gt;Link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 </pre>
 
 <p>在 <a class="internal" href="https://developer.mozilla.org/@api/deki/files/6238/=css_dropdown_menu.html" title="css_dropdown_menu.html">CSS-based dropdown menu example</a> 看示例。</p>
 
-<h3 id="可全图预览的画廊">可全图预览的画廊 </h3>
+<h3 id="可全图预览的画廊">可全图预览的画廊 </h3>
 
-<p><code>:hover</code> 伪类可以让你实现一个当鼠标悬停在图片上时全图预览的画廊功能。 在 <a class="internal" href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">this demo</a> 看示例。</p>
+<p><code>:hover</code> 伪类可以让你实现一个当鼠标悬停在图片上时全图预览的画廊功能。 在 <a class="internal" href="/@api/deki/files/6247/=css-gallery.zip" title="css-gallery.zip">this demo</a> 看示例。</p>
 
-<div class="note"><strong>注意：</strong> 一个类似的效果，是基于 :checked 伪类（用于隐藏单选框）实现的，看 <a class="internal" href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">this demo</a>，源于 <a class="internal" href="/en/CSS/%3Achecked" title="en/CSS/:checked">En/CSS/:checked</a>。</div>
+<div class="note"><strong>注意：</strong> 一个类似的效果，是基于 :checked 伪类（用于隐藏单选框）实现的，看 <a class="internal" href="/@api/deki/files/6268/=css-checked-gallery.zip" title="css-checked-gallery.zip">this demo</a>，源于 <a class="internal" href="/en/CSS/%3Achecked" title="en/CSS/:checked">En/CSS/:checked</a>。</div>
 
 <h2 id="规范">规范</h2>
 

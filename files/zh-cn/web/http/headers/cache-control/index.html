@@ -9,12 +9,12 @@ translation_of: Web/HTTP/Headers/Cache-Control
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><code> <strong>Cache-Control</strong></code> 通用消息头字段，被用于在 http 请求和响应中，通过指定指令来实现缓存机制。缓存指令是单向的，这意味着在请求中设置的指令，不一定被包含在响应中。</p>
+<p><code> <strong>Cache-Control</strong></code> 通用消息头字段，被用于在 http 请求和响应中，通过指定指令来实现缓存机制。缓存指令是单向的，这意味着在请求中设置的指令，不一定被包含在响应中。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row">Header type </th>
+   <th scope="row">Header type </th>
    <td>{{Glossary("General header")}}</td>
   </tr>
   <tr>
@@ -66,7 +66,7 @@ Cache-Control: max-age=&lt;seconds&gt;
 Cache-control: s-maxage=&lt;seconds&gt;
 </pre>
 
-<h3 id="扩展Cache-Control指令"> 扩展<code>Cache-Control</code>指令</h3>
+<h3 id="扩展Cache-Control指令"> 扩展<code>Cache-Control</code>指令</h3>
 
 <p>拓展缓存指令不是核心 HTTP 缓存标准文档的一部分，使用前请注意检查<a href="#浏览器兼容性">兼容性</a>！</p>
 
@@ -81,7 +81,7 @@ Cache-control: stale-if-error=&lt;seconds&gt;
 
 <dl>
  <dt><code>public</code></dt>
- <dd>表明响应可以被任何对象（包括：发送请求的客户端，代理服务器，等等）缓存，即使是通常不可缓存的内容。（例如：1.该响应没有<code>max-age</code>指令或<code>Expires</code>消息头；2. 该响应对应的请求方法是 <a href="/zh-CN/docs/Web/HTTP/Methods/POST">POST</a> 。）</dd>
+ <dd>表明响应可以被任何对象（包括：发送请求的客户端，代理服务器，等等）缓存，即使是通常不可缓存的内容。（例如：1.该响应没有<code>max-age</code>指令或<code>Expires</code>消息头；2. 该响应对应的请求方法是 <a href="/zh-CN/docs/Web/HTTP/Methods/POST">POST</a> 。）</dd>
  <dt><code>private</code></dt>
  <dd>表明响应只能被单个用户缓存，不能作为共享缓存（即代理服务器不能缓存它）。私有缓存可以缓存响应内容，比如：对应用户的本地浏览器。</dd>
  <dt><code>no-cache</code></dt>
@@ -115,7 +115,7 @@ Cache-control: stale-if-error=&lt;seconds&gt;
  <dt><code>proxy-revalidate</code></dt>
  <dd>与 must-revalidate 作用相同，但它仅适用于共享缓存（例如代理），并被私有缓存忽略。</dd>
  <dt><code>immutable</code> {{experimental_inline}}</dt>
- <dd>表示响应正文不会随时间而改变。资源（如果未过期）在服务器上不发生改变，因此客户端不应发送重新验证请求头（例如<code>If-None-Match</code>或 I<code>f-Modified-Since</code>）来检查更新，即使用户显式地刷新页面。在 Firefox 中，immutable 只能被用在 <code>https://</code> transactions. 有关更多信息，请参阅<a href="http://bitsup.blogspot.de/2016/05/cache-control-immutable.html">这里</a>。</dd>
+ <dd>表示响应正文不会随时间而改变。资源（如果未过期）在服务器上不发生改变，因此客户端不应发送重新验证请求头（例如<code>If-None-Match</code>或 I<code>f-Modified-Since</code>）来检查更新，即使用户显式地刷新页面。在 Firefox 中，immutable 只能被用在 <code>https://</code> transactions. 有关更多信息，请参阅<a href="http://bitsup.blogspot.de/2016/05/cache-control-immutable.html">这里</a>。</dd>
 </dl>
 
 <h3 id="其他">其他</h3>
@@ -144,7 +144,7 @@ Cache-control: stale-if-error=&lt;seconds&gt;
 
 <h3 id="需要重新验证">需要重新验证</h3>
 
-<p>指定 <code>no-cache</code> 或 <code>max-age=0, must-revalidate</code> 表示客户端可以缓存资源，每次使用缓存资源前都必须重新验证其有效性。这意味着每次都会发起 HTTP 请求，但当缓存内容仍有效时可以跳过 HTTP 响应体的下载。</p>
+<p>指定 <code>no-cache</code> 或 <code>max-age=0, must-revalidate</code> 表示客户端可以缓存资源，每次使用缓存资源前都必须重新验证其有效性。这意味着每次都会发起 HTTP 请求，但当缓存内容仍有效时可以跳过 HTTP 响应体的下载。</p>
 
 <pre class="brush: http">Cache-Control: no-cache</pre>
 

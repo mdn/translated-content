@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p><strong> <code>constructor </code></strong>是一种用于创建和初始化<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class">class</a></code>创建的对象的特殊方法。</p>
+<p><strong> <code>constructor </code></strong>是一种用于创建和初始化<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class">class</a></code>创建的对象的特殊方法。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <h3 id="使用constructor方法">使用<code>constructor</code>方法</h3>
 
-<p>以下代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">类的实例</a>（<a href="https://googlechrome.github.io/samples/classes-es6/index.html">在线 demo</a>）。</p>
+<p>以下代码片段来自 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">类的实例</a>（<a href="https://googlechrome.github.io/samples/classes-es6/index.html">在线 demo</a>）。</p>
 
 <pre class="brush: js">class Square extends Polygon {
     constructor(length) {
@@ -45,8 +45,8 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
         return this.height * this.width;
     }
     set area(value) {
-        // 注意：不可使用 this.area = value
-        // 否则会导致循环 call setter 方法导致爆栈
+        // 注意：不可使用 this.area = value
+        // 否则会导致循环 call setter 方法导致爆栈
         this._area = value;
     }
 }
@@ -111,7 +111,7 @@ console.log(newInstance.name); //Polygon
   <tr>
    <td>{{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

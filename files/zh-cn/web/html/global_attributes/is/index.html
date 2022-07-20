@@ -10,13 +10,13 @@ translation_of: Web/HTML/Global_attributes/is
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p>is 全局属性 ( <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> ) 以获取更多详细信息）。</p>
+<p>is 全局属性 ( <a href="/en-US/docs/Web/HTML/Global_attributes">global attribute</a> ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Using custom elements</a> ) 以获取更多详细信息）。</p>
 
-<p>只有在当前文档中已成功定义 ( <a href="/en-US/docs/Web/API/CustomElementRegistry/define">defined</a> ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。</p>
+<p>只有在当前文档中已成功定义 ( <a href="/en-US/docs/Web/API/CustomElementRegistry/define">defined</a> ) 指定的自定义元素名称并且扩展了要应用的元素类型时，才能使用此属性。</p>
 
 <h2 id="示例">示例</h2>
 
-<p> 以下代码来自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> 示例（<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>）。</p>
+<p> 以下代码来自我们的 <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a> 示例（<a href="https://mdn.github.io/web-components-examples/word-count-web-component/">see it live also</a>）。</p>
 
 <pre class="brush: js">// Create a class for the element
 class WordCount extends HTMLParagraphElement {
@@ -47,7 +47,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
   <tr>
    <td>{{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -64,4 +64,4 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre>
  <li>All <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</li>
 </ul>
 
-<p> </p>
+<p> </p>

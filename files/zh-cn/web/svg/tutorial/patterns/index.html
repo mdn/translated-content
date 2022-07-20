@@ -13,25 +13,25 @@ translation_of: Web/SVG/Tutorial/Patterns
 
 <pre class="brush: html">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
-  &lt;defs&gt;
-    &lt;linearGradient id="Gradient1"&gt;
-      &lt;stop offset="5%" stop-color="white"/&gt;
-      &lt;stop offset="95%" stop-color="blue"/&gt;
-    &lt;/linearGradient&gt;
-    &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
-      &lt;stop offset="5%" stop-color="red"/&gt;
-      &lt;stop offset="95%" stop-color="orange"/&gt;
-    &lt;/linearGradient&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="Gradient1"&gt;
+      &lt;stop offset="5%" stop-color="white"/&gt;
+      &lt;stop offset="95%" stop-color="blue"/&gt;
+    &lt;/linearGradient&gt;
+    &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
+      &lt;stop offset="5%" stop-color="red"/&gt;
+      &lt;stop offset="95%" stop-color="orange"/&gt;
+    &lt;/linearGradient&gt;
 
-    &lt;pattern id="Pattern" x="0" y="0" width=".25" height=".25"&gt;
-      &lt;rect x="0" y="0" width="50" height="50" fill="skyblue"/&gt;
-      &lt;rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/&gt;
-      &lt;circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/&gt;
-    &lt;/pattern&gt;
+    &lt;pattern id="Pattern" x="0" y="0" width=".25" height=".25"&gt;
+      &lt;rect x="0" y="0" width="50" height="50" fill="skyblue"/&gt;
+      &lt;rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/&gt;
+      &lt;circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/&gt;
+    &lt;/pattern&gt;
 
-  &lt;/defs&gt;
+  &lt;/defs&gt;
 
-  &lt;rect fill="url(#Pattern)" stroke="black" x="0" y="0" width="200" height="200"/&gt;
+  &lt;rect fill="url(#Pattern)" stroke="black" x="0" y="0" width="200" height="200"/&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{ EmbedLiveSample('Patterns','220','220','/files/725/SVG_Pattern_Example.png') }}</p>
@@ -42,7 +42,7 @@ translation_of: Web/SVG/Tutorial/Patterns
 
 <p>就像前面使用了<code>gradientUnits</code>属性，同样的<code>pattern</code>也有一个属性<code>patternUnits</code>用于描述我们使用的属性单元。这同之前使用的<code>objectBoundingBox</code>默认值一样，所以当一个值为 1 时，它被缩放到应用 pattern 对象的宽高值。因此，我们希望 pattern 垂直和水平的重复 4 次，所以宽高被设置位 0.25，这一位置 pattern 的宽高仅为总外框大小的 0.25。</p>
 
-<p>与渐变不同，pattern 有第二个属性<code>patternContentUnits</code>，它描述了<code>pattern</code>元素基于基本形状使用的单元系统，这个属性默认值为<code>userSpaceOnUse</code>，与<code>patternUnits</code>属性相反，这意味着除非你至少指定其中一个属性值（<code>patternContentUnits</code>或<code>patternUnits</code>），否则在<code>pattern</code>中绘制的形状将与<code>pattern</code>元素使用的坐标系不同，当你手写这部分时会容易混淆。为了使上例生效，我们必须考虑我们的边框（200 像素）大小和我们实际希望<code>pattern</code>垂直和水平重复 4 次的需求。这意味着每个 pattern 单元应该是 <code>50x50</code>的方形，pattern 中的两个矩形和圆形的大小会被缩放适应到一个 50x50 的边框里，任何我们绘制在边框外的内容都不会显示。因为我们希望 pattern 从边框的左上角里开始，所以 pattern 也必须偏移 10 像素，也就是 pattern 的 <code>x</code> 和 <code>y</code> 属性需要调整为 <code>10/200=0.05</code>。</p>
+<p>与渐变不同，pattern 有第二个属性<code>patternContentUnits</code>，它描述了<code>pattern</code>元素基于基本形状使用的单元系统，这个属性默认值为<code>userSpaceOnUse</code>，与<code>patternUnits</code>属性相反，这意味着除非你至少指定其中一个属性值（<code>patternContentUnits</code>或<code>patternUnits</code>），否则在<code>pattern</code>中绘制的形状将与<code>pattern</code>元素使用的坐标系不同，当你手写这部分时会容易混淆。为了使上例生效，我们必须考虑我们的边框（200 像素）大小和我们实际希望<code>pattern</code>垂直和水平重复 4 次的需求。这意味着每个 pattern 单元应该是 <code>50x50</code>的方形，pattern 中的两个矩形和圆形的大小会被缩放适应到一个 50x50 的边框里，任何我们绘制在边框外的内容都不会显示。因为我们希望 pattern 从边框的左上角里开始，所以 pattern 也必须偏移 10 像素，也就是 pattern 的 <code>x</code> 和 <code>y</code> 属性需要调整为 <code>10/200=0.05</code>。</p>
 
 <p>如果对象改变了大小，pattern 会自适应其大小，但是对象里面的内容不会自适应。所以当我们在 pattern 中还是放置 4 个重复的 pattern 时，组成 pattern 的对象将不会保持相同的大小，同时在他们之间会有大片空白区域。通过改变<code>patternContentUnits</code>属性，我们可以把所有的元素放到相同的单元系统中：</p>
 

@@ -16,7 +16,7 @@ translation_of: 'Web/CSS/:dir'
 
 <p><code>:dir()</code>伪类匹配特定文字书写方向的元素。在 HTML 中，文字方向由{{ htmlattrxref("dir", "html") }}属性决定。其他的文档类型可能有其他定义文字方向的方法。</p>
 
-<p>值得注意的是用 CSS 伪类 <code>:dir()</code> 并不等于使用 <code>[dir=…]</code> 属性选择器。后者匹配 {{ htmlattrxref("dir", "html") }} 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， <code>[dir=rtl]</code> 或 <code>[dir=ltr] 不会匹配到 dir 属性的值为 auto 的元素。而</code> <code>:dir()</code>会匹配经过客户端计算后的属性，不管是继承的 dir 值还是 dir 值为 auto 的。</p>
+<p>值得注意的是用 CSS 伪类 <code>:dir()</code> 并不等于使用 <code>[dir=…]</code> 属性选择器。后者匹配 {{ htmlattrxref("dir", "html") }} 的值且不会匹配到未定义此属性的元素，即使该元素继承了父元素的属性；类似的， <code>[dir=rtl]</code> 或 <code>[dir=ltr] 不会匹配到 dir 属性的值为 auto 的元素。而</code> <code>:dir()</code>会匹配经过客户端计算后的属性，不管是继承的 dir 值还是 dir 值为 auto 的。</p>
 
 <p>另外，:dir() 伪类仅考虑文档（大多数情况是 HTML）中定义的文字方向的语义值 (semantic value)，并不会考虑格式值 (styling value)，如 CSS 属性 {{ cssxref("direction") }} 的值。</p>
 
@@ -45,7 +45,7 @@ translation_of: 'Web/CSS/:dir'
 
 {{Compat("css.selectors.dir")}}
 
-<h2 id="Related_Pages"> </h2>
+<h2 id="Related_Pages"> </h2>
 
 <h2 id="Related_Pages">参见</h2>
 
