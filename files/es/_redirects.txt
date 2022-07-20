@@ -1587,8 +1587,8 @@
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
-/es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/GlobalEventHandlers/ongotpointercapture
-/es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/GlobalEventHandlers/onlostpointercapture
+/es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/Element/gotpointercapture_event
+/es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/Element/lostpointercapture_event
 /es/docs/Web/API/Element/onwheel	/es/docs/conflicting/Web/API/Element/wheel_event
 /es/docs/Web/API/ElementosHTMLparaVideo	/es/docs/Web/API/HTMLVideoElement
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
@@ -1608,9 +1608,11 @@
 /es/docs/Web/API/GlobalEventHandlers/onclick	/es/docs/conflicting/Web/API/Element/click_event
 /es/docs/Web/API/GlobalEventHandlers/onclose	/es/docs/Web/API/HTMLDialogElement/close_event
 /es/docs/Web/API/GlobalEventHandlers/onfocus	/es/docs/Web/API/Window/focus_event
+/es/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/es/docs/Web/API/Element/gotpointercapture_event
 /es/docs/Web/API/GlobalEventHandlers/oninput	/es/docs/conflicting/Web/API/HTMLElement/input_event
 /es/docs/Web/API/GlobalEventHandlers/onkeydown	/es/docs/conflicting/Web/API/Element/keydown_event
 /es/docs/Web/API/GlobalEventHandlers/onkeyup	/es/docs/conflicting/Web/API/Element/keyup_event
+/es/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/es/docs/Web/API/Element/lostpointercapture_event
 /es/docs/Web/API/GlobalEventHandlers/onresize	/es/docs/Web/API/Window/resize_event
 /es/docs/Web/API/GlobalEventHandlers/onscroll	/es/docs/Web/API/Element/scroll_event
 /es/docs/Web/API/GlobalEventHandlers/onselect	/es/docs/Web/API/HTMLInputElement/select_event

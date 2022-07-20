@@ -573,6 +573,7 @@
 /pt-BR/docs/Web/API/GlobalEventHandlers/oncontextmenu	/pt-BR/docs/Web/API/Element/contextmenu_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onfocus	/pt-BR/docs/Web/API/Window/focus_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onkeyup	/pt-BR/docs/conflicting/Web/API/Element/keyup_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/pt-BR/docs/Web/API/Element/lostpointercapture_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onscroll	/pt-BR/docs/Web/API/Element/scroll_event
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
