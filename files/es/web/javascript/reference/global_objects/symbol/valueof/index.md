@@ -45,3 +45,4 @@ sym === sym.valueOf(); // true
 ## Véase también
 
 - {{jsxref("Object.prototype.valueOf()")}}
+
