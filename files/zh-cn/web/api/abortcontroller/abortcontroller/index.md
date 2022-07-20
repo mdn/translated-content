@@ -8,27 +8,30 @@ tags:
 translation_of: Web/API/AbortController/AbortController
 original_slug: Web/API/FetchController/AbortController
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
-<p><strong><code>AbortController()</code></strong> 构造函数创建了一个新的 <code>AbortController</code> 实例</p>
+**`AbortController()`** 构造函数创建了一个新的 `AbortController` 实例。
 
-<h2 id="Syntax">Syntax</h2>
+## 语法
 
-<pre class="brush: js">var controller = new AbortController();</pre>
+```js
+var controller = new AbortController();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>无。</p>
+无。
 
-<h2 id="Examples">Examples</h2>
+## 示例
 
-<p>在下面的这段代码中，我们将通过<a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>来下载一段视频。</p>
+在下面的这段代码中，我们将通过 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 来下载一段视频。
 
-<p>首先通过{{domxref("AbortController.AbortController","AbortController()")}} 构造函数来创建一个 controller 实例，然后通过{{domxref("AbortController.signal")}} 属性获取到它的关联对象{{domxref("AbortSignal")}} 的引用。</p>
+首先通过 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数来创建一个 controller 实例，然后通过 {{domxref("AbortController.signal")}} 属性获取到它的关联对象{{domxref("AbortSignal")}} 的引用。
 
-<p>当 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 初始化后，将 <code>AbortSignal</code> 作为一个选项传入请求的选项参数中 (如下 <code>{signal}</code>). 这将 signal,controller 与 fetch 请求关联起来，允许我们通过调用{{domxref("AbortController.abort()")}}来取消 fetch 请求，正如下第二个事件监听器所示。</p>
+当 [fetch request](/zh-CN/docs/Web/API/fetch) 初始化后，将 `AbortSignal` 作为一个选项传入请求的选项参数中（如下 `{signal}`）。这将 signal,controller 与 fetch 请求关联起来，允许我们通过调用 {{domxref("AbortController.abort()")}} 来取消 fetch 请求，正如下第二个事件监听器所示。
 
-<pre class="brush: js">var controller = new AbortController();
+```js
+var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
@@ -48,26 +51,21 @@ function fetchVideo() {
   }).catch(function(e) {
     reports.textContent = 'Download error: ' + e.message;
   })
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>备注：</strong> 当<code>abort()</code> 被调用， <code>fetch()</code> promise 将会抛出一个<code>AbortError 对象</code>.</p>
-</div>
+> **备注：** 当 `abort()` 被调用，`fetch()` promise 将会抛出一个 `AbortError 对象`。
 
-<p>你可以在 GitHub 上找到一个完整的使用示例 — see <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">see it running live also</a>).</p>
+你可以在 GitHub 上找到一个完整的使用示例——参见 [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api)（[也可以看在线演示](https://mdn.github.io/dom-examples/abort-api/)）。
 
-<h2 id="Specifications">Specifications</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("api.AbortController.AbortController")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a></li>
-</ul>
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
