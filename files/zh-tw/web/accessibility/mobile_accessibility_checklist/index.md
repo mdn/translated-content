@@ -37,7 +37,7 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 
 - 在應用程式之中，為每一個非嚴格呈現的非文字元素提供文字相等意義。
 
-  - 在適當情況下使用*alt 與\*\*title*(使用指引請參見 Steve Faulkner 關於[Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/)的文章)。
+  - 在適當情況下使用*alt 與 title*(使用指引請參見 Steve Faulkner 關於[Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/)的文章)。
   - 如果上述屬性不適用，則使用合適的[ARIA 屬性](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)如`aria-label`、`aria-labelledby`或  `aria-describedby。`
 
 - 文字圖片 **必須**避免使用。
