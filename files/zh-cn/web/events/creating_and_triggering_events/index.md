@@ -1,7 +1,6 @@
 ---
 title: 创建和触发 events
 slug: Web/Events/Creating_and_triggering_events
-translation_of: Web/Events/Creating_and_triggering_events
 tags:
   - Advanced
   - DOM
@@ -9,44 +8,51 @@ tags:
   - JavaScript
   - NeedsContent
   - events
+translation_of: Web/Events/Creating_and_triggering_events
 ---
-<p>本文演示了如何创建和分派 DOM 事件。这些事件通常称为<strong>合成事件</strong>，而不是浏览器本身触发的事件。</p>
+本文演示了如何创建和分派 DOM 事件。这些事件通常称为**合成事件**，而不是浏览器本身触发的事件。
 
-<h2 id="创建自定义事件">创建自定义事件</h2>
+## 创建自定义事件
 
-<p>Events 可以使用 <a href="/zh/docs/Web/API/Event"><code>Event</code></a> 构造函数创建如下：</p>
+Events 可以使用 [`Event`](/zh/docs/Web/API/Event) 构造函数创建如下：
 
-<pre class="brush: js">var event = new Event('build');
+```js
+var event = new Event('build');
 
 // Listen for the event.
 elem.addEventListener('build', function (e) { ... }, false);
 
 // Dispatch the event.
-elem.dispatchEvent(event);</pre>
+elem.dispatchEvent(event);
+```
 
-<p>上述代码使用了 <a href="/zh-CN/docs/Web/API/EventTarget/dispatchEvent">EventTarget.dispatchEvent()</a> 方法。</p>
+上述代码使用了 [EventTarget.dispatchEvent()](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法。
 
-<p>绝大多数现代浏览器中都会支持这个构造函数（Internet Explorer 例外）。 要了解更为复杂的方法，可参考下面的 <a href="#The_old-fashioned_way">过时的方式</a>  一节。</p>
+绝大多数现代浏览器中都会支持这个构造函数（Internet Explorer 例外）。 要了解更为复杂的方法，可参考下面的 [过时的方式](#The_old-fashioned_way) 一节。
 
-<h3 id="添加自定义数据_–_CustomEvent">添加自定义数据 – CustomEvent()</h3>
+### 添加自定义数据 – CustomEvent()
 
-<p>要向事件对象添加更多数据，可以使用 <a href="/zh-CN/docs/Web/API/CustomEvent">CustomEvent</a> 接口，detail 属性可用于传递自定义数据。<br>
- 例如，event 可以创建如下：</p>
+要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，detail 属性可用于传递自定义数据。
+例如，event 可以创建如下：
 
-<pre class="brush: js">var event = new CustomEvent('build', { 'detail': elem.dataset.time });</pre>
+```js
+var event = new CustomEvent('build', { 'detail': elem.dataset.time });
+```
 
-<p>下面的代码允许你在事件监听器中访问更多的数据：</p>
+下面的代码允许你在事件监听器中访问更多的数据：
 
-<pre class="brush: js">function eventHandler(e) {
+```js
+function eventHandler(e) {
   log('The time is: ' + e.detail);
 }
-</pre>
+```
 
-<h3 id="过时的方式">过时的方式</h3>
+### 过时的方式
 
-<p>早期的创建事件的方法使用了受 Java 启发的 API。下面展示了一个示例：</p>
+早期的创建事件的方法使用了受 Java 启发的 API。下面展示了一个示例：
 
-<pre class="brush: js">// Create the event.
+```js
+// Create the event.
 var event = document.createEvent('Event');
 
 // Define that the event name is 'build'.
@@ -59,57 +65,64 @@ document.addEventListener('build', function (e) {
 
 // target can be any Element or other EventTarget.
 document.dispatchEvent(event);
-</pre>
+```
 
-<h3 id="事件冒泡">事件冒泡</h3>
+### 事件冒泡
 
-<p>通常需要从子元素触发事件，并让祖先捕获它：</p>
+通常需要从子元素触发事件，并让祖先捕获它：
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;textarea&gt;&lt;/textarea&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <textarea></textarea>
+</form>
+```
 
-<pre class="brush: js">const form = document.querySelector('form');
+```js
+const form = document.querySelector('form');
 const textarea = document.querySelector('textarea');
 
 // Create a new event, allow bubbling, and provide any data you want to pass to the "details" property
 const eventAwesome = new CustomEvent('awesome', {
   bubbles: true,
-  detail: { text: () =&gt; textarea.value }
+  detail: { text: () => textarea.value }
 });
 
 // The form element listens for the custom "awesome" event and then consoles the output of the passed text() method
-form.addEventListener('awesome', e =&gt; console.log(e.detail.text()));
+form.addEventListener('awesome', e => console.log(e.detail.text()));
 
 // As the user types, the textarea inside the form dispatches/triggers the event to fire, and uses itself as the starting point
-textarea.addEventListener('input', e =&gt; e.target.dispatchEvent(eventAwesome));</pre>
+textarea.addEventListener('input', e => e.target.dispatchEvent(eventAwesome));
+```
 
-<h3 id="动态创建和派发事件">动态创建和派发事件</h3>
+### 动态创建和派发事件
 
-<p>元素可以侦听尚未创建的事件：</p>
+元素可以侦听尚未创建的事件：
 
-<pre class="brush: html"><code>&lt;form&gt;
-  &lt;textarea&gt;&lt;/textarea&gt;
-&lt;/form&gt;</code></pre>
+```html
+<form>
+  <textarea></textarea>
+</form>
+```
 
-<pre class="brush: js">const form = document.querySelector('form');
+```js
+const form = document.querySelector('form');
 const textarea = document.querySelector('textarea');
 
-form.addEventListener('awesome', e =&gt; console.log(e.detail.text()));
+form.addEventListener('awesome', e => console.log(e.detail.text()));
 
 textarea.addEventListener('input', function() {
   // Create and dispatch/trigger an event on the fly
   // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
-  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () =&gt; textarea.value } }))
-});</pre>
+  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))
+});
+```
 
+## 触发内置事件
 
+下面的例子演示了一个在复选框上点击（click）的模拟（就是说在程序里生成一个 click 事件），这个模拟点击使用了 DOM 方法。[参见这个动态示例](/samples/domref/dispatchEvent.html)
 
-<h2 id="触发内置事件">触发内置事件</h2>
-
-<p>下面的例子演示了一个在复选框上点击（click）的模拟（就是说在程序里生成一个 click 事件），这个模拟点击使用了 DOM 方法。<a href="/samples/domref/dispatchEvent.html">参见这个动态示例</a></p>
-
-<pre class="brush: js">function simulateClick() {
+```js
+function simulateClick() {
   var event = new MouseEvent('click', {
     'view': window,
     'bubbles': true,
@@ -125,14 +138,12 @@ textarea.addEventListener('input', function() {
     alert("not cancelled");
   }
 }
-</pre>
+```
 
-<h2 id="Browser_compatibility">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/CustomEvent/CustomEvent">CustomEvent()</a></li>
- <li>{{domxref("document.createEvent()")}}</li>
- <li>{{domxref("Event.initEvent()")}}</li>
- <li>{{domxref("EventTarget.dispatchEvent()")}}</li>
- <li>{{domxref("EventTarget.addEventListener()")}}</li>
-</ul>
+- [CustomEvent()](/en-US/docs/Web/API/CustomEvent/CustomEvent)
+- {{domxref("document.createEvent()")}}
+- {{domxref("Event.initEvent()")}}
+- {{domxref("EventTarget.dispatchEvent()")}}
+- {{domxref("EventTarget.addEventListener()")}}

@@ -3,61 +3,59 @@ title: match
 slug: Web/EXSLT/regexp/match
 translation_of: Web/EXSLT/regexp/match
 ---
-<p>{{ XsltRef() }}</p>
+{{ XsltRef() }}
 
-<p><br>
- <code>regexp:match()</code> performs regular expression matching on a string, returning the submatches found as a result.</p>
+`regexp:match()` performs regular expression matching on a string, returning the submatches found as a result.
 
-<h3 id="Syntax">语法</h3>
+### 语法
 
-<pre class="brush: js">regexp:match(<em>targetString</em>,<em>regExpString</em>[[,<em>flagsString</em>]])
-</pre>
+```js
+regexp:match(targetString,regExpString[[,flagsString]])
+```
 
-<h3 id="Arguments">参数</h3>
+### 参数
 
-<dl>
- <dt><code><em>targetString</em></code></dt>
- <dd>The string to perform regular expression matching upon.</dd>
- <dt><code><em>regExpString</em></code></dt>
- <dd>The JavaScript style regular expression to evaluate.</dd>
- <dt><code><em>flagsString</em></code></dt>
- <dd>An optional string containing character flags.</dd>
-</dl>
+- `targetString`
+  - : The string to perform regular expression matching upon.
+- `regExpString`
+  - : The JavaScript style regular expression to evaluate.
+- `flagsString`
+  - : An optional string containing character flags.
 
-<p>The character flags are:</p>
+The character flags are:
 
-<dl>
- <dt><code>g</code></dt>
- <dd>全局匹配。The submatches from every match in the string are returned. If this flag isn't specified, only the submatches from the first match are returned.</dd>
- <dt><code>i</code></dt>
- <dd>Case insensitive match. If this flag is specified, the match is performed in a case insensitive fashion.</dd>
-</dl>
+- `g`
+  - : 全局匹配。The submatches from every match in the string are returned. If this flag isn't specified, only the submatches from the first match are returned.
+- `i`
+  - : Case insensitive match. If this flag is specified, the match is performed in a case insensitive fashion.
 
-<h3 id="Returns">Returns</h3>
+### Returns
 
-<p>A node set of <code>match</code> elements, each of which has the string value equal to a portion of the first parameter string as captured by the regular expression. If the match isn't a global one, the first match element has the value of the portion of the string matched by the entire regular expression.</p>
+A node set of `match` elements, each of which has the string value equal to a portion of the first parameter string as captured by the regular expression. If the match isn't a global one, the first match element has the value of the portion of the string matched by the entire regular expression.
 
-<p>例如：</p>
+例如：
 
-<pre class="brush: xml">&lt;xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
-                                   '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')"&gt;
-   Part &lt;xsl:value-of select="position()" /&gt; = &lt;xsl:value-of select="." /&gt;
-&lt;/xsl:for-each&gt;
-</pre>
+```xml
+<xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
+                                   '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')">
+   Part <xsl:value-of select="position()" /> = <xsl:value-of select="." />
+</xsl:for-each>
+```
 
-<p>This code generates the following output:</p>
+This code generates the following output:
 
-<pre class="brush: plain">Part 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
+```plain
+Part 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
 Part 2 = http
 Part 3 = developer.mozilla.org
 Part 4 =
 Part 5 = /en/docs/Firefox_3_for_developers
-</pre>
+```
 
-<h3 id="Defined">定义</h3>
+### 定义
 
-<p><a href="http://www.exslt.org/regexp/functions/match/index.html">EXSLT - REGEXP:MATCH</a></p>
+[EXSLT - REGEXP:MATCH](http://www.exslt.org/regexp/functions/match/index.html)
 
-<h3 id="Gecko_support">Gecko support</h3>
+### Gecko support
 
-<p>Supported in Gecko 1.9 and later.</p>
+Supported in Gecko 1.9 and later.

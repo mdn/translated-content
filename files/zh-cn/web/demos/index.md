@@ -13,143 +13,111 @@ tags:
 translation_of: Web/Demos_of_open_web_technologies
 original_slug: Web/Demos_of_open_web_technologies
 ---
-<p>Mozilla 支持各种令人兴奋的开源 Web 技术，我们鼓励大家使用它们。此页面提供了有关这些技术的一些有趣演示链接。</p>
+Mozilla 支持各种令人兴奋的开源 Web 技术，我们鼓励大家使用它们。此页面提供了有关这些技术的一些有趣演示链接。
 
-<p>如果你知道开源 Web 技术的优秀演示或者应用，就在这里（以及 <a href="/en-US/docs/Web/Demos_of_open_web_technologies">英文页面</a>）添加一个合适的链接吧。</p>
+如果你知道开源 Web 技术的优秀演示或者应用，就在这里（以及 [英文页面](/en-US/docs/Web/Demos_of_open_web_technologies)）添加一个合适的链接吧。
 
-<h2 id="2D_图形">2D 图形</h2>
+## 2D 图形
 
-<h3 id="Canvas">Canvas</h3>
+### Canvas
 
-<ul>
- <li><a href="http://www.blobsallad.se/">Blob Sallad: an interactive blob using JavaScript and canvas</a>（<a href="http://blobsallad.se/article/">示例</a>）</li>
- <li><a href="http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html">Flying through space</a></li>
- <li><a href="/samples/raycaster/RayCaster.html">3D RayCaster</a></li>
- <li><a href="http://processingjs.org/exhibition/">processing.js</a></li>
- <li><a href="http://gyu.que.jp/jscloth/">3D on 2D Canvas</a></li>
- <li><a href="http://viliusle.github.io/miniPaint/">miniPaint: Image editor</a>（<a href="https://github.com/viliusle/miniPaint">源码</a>）</li>
- <li><a href="http://zenphoton.com/">Zen Photon Garden</a>（<a href="https://github.com/scanlime/zenphoton">源码</a>）</li>
-</ul>
+- [Blob Sallad: an interactive blob using JavaScript and canvas](http://www.blobsallad.se/)（[示例](http://blobsallad.se/article/)）
+- [Flying through space](http://arapehlivanian.com/wp-content/uploads/2007/02/canvas.html)
+- [3D RayCaster](/samples/raycaster/RayCaster.html)
+- [processing.js](http://processingjs.org/exhibition/)
+- [3D on 2D Canvas](http://gyu.que.jp/jscloth/)
+- [miniPaint: Image editor](http://viliusle.github.io/miniPaint/)（[源码](https://github.com/viliusle/miniPaint)）
+- [Zen Photon Garden](http://zenphoton.com/)（[源码](https://github.com/scanlime/zenphoton)）
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li><a href="http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml">Bubblemenu</a> （视觉特效与交互）</li>
- <li><a href="http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/">HTML transformations</a>（使用了 <code>&lt;foreignObject&gt;</code> 元素）（视觉特效与变换）</li>
- <li><a href="http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg">Phonetics Guide</a>（可交互）</li>
- <li><a href="http://www.lutanho.net/svgvml3d/platonic.html">3D objects demo</a>（可交互）</li>
- <li><a href="http://www.themaninblue.com/experiment/Blobular/">Blobular</a>（可交互）</li>
- <li><a href="http://www.double.co.nz/video_test/video.svg">Video embedded in SVG</a>（或<a href="http://www.double.co.nz/video_test/video_svg.tar.bz2">下载到本地</a>）</li>
- <li><a href="http://summerstyle.github.io/summer/">Summer HTML image map creator</a>（<a href="https://github.com/summerstyle/summer">源码</a>）</li>
-</ul>
+- [Bubblemenu](http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml) （视觉特效与交互）
+- [HTML transformations](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/)（使用了 `<foreignObject>` 元素）（视觉特效与变换）
+- [Phonetics Guide](http://svg-whiz.com/svg/linguistics/theCreepyMouth.svg)（可交互）
+- [3D objects demo](http://www.lutanho.net/svgvml3d/platonic.html)（可交互）
+- [Blobular](http://www.themaninblue.com/experiment/Blobular/)（可交互）
+- [Video embedded in SVG](http://www.double.co.nz/video_test/video.svg)（或[下载到本地](http://www.double.co.nz/video_test/video_svg.tar.bz2)）
+- [Summer HTML image map creator](http://summerstyle.github.io/summer/)（[源码](https://github.com/summerstyle/summer)）
 
-<h3 id="Video">视频</h3>
+### 视频
 
-<ul>
- <li><a href="https://vimeo.com/172328210">Video 3D Animation "mozilla constantly evolving" </a></li>
- <li><a href="https://vimeo.com/173851395">Video 3D animation "Floating Dance" </a></li>
- <li><a href="http://www.double.co.nz/video_test/test1.html">Streaming Anime, Movie Trailer and Interview</a></li>
- <li><a href="http://www.double.co.nz/video_test/test2.html">Billy's Browser Firefox Flick</a></li>
- <li><a href="http://www.double.co.nz/video_test/test3.html">Virtual Barber Shop</a></li>
- <li><a href="http://www.double.co.nz/video_test/test4.html">Transformers Movie Trailer</a></li>
- <li><a href="http://www.double.co.nz/video_test/test5.html">A Scanner Darkly Movie Trailer</a>（自带控制功能）</li>
- <li><a href="http://www.double.co.nz/video_test/events.html">Events firing and volume control</a></li>
- <li><a href="http://www.double.co.nz/video_test/video.svg">Dragable and sizable videos</a></li>
-</ul>
+- [Video 3D Animation "mozilla constantly evolving"](https://vimeo.com/172328210)
+- [Video 3D animation "Floating Dance"](https://vimeo.com/173851395)
+- [Streaming Anime, Movie Trailer and Interview](http://www.double.co.nz/video_test/test1.html)
+- [Billy's Browser Firefox Flick](http://www.double.co.nz/video_test/test2.html)
+- [Virtual Barber Shop](http://www.double.co.nz/video_test/test3.html)
+- [Transformers Movie Trailer](http://www.double.co.nz/video_test/test4.html)
+- [A Scanner Darkly Movie Trailer](http://www.double.co.nz/video_test/test5.html)（自带控制功能）
+- [Events firing and volume control](http://www.double.co.nz/video_test/events.html)
+- [Dragable and sizable videos](http://www.double.co.nz/video_test/video.svg)
 
-<h2 id="3D_图像">3D 图像</h2>
+## 3D 图像
 
-<h3 id="WebGL">WebGL</h3>
+### WebGL
 
-<ul>
- <li><a href="http://ondras.github.io/fireworks-webgl/">Web Audio Fireworks</a></li>
- <li>IoQuake3（<a href="https://github.com/klaussilveira/ioquake3.js">源码</a>）</li>
- <li>Escher puzzle（<a href="https://github.com/micahbolen/demoscene">源码</a>）</li>
- <li><a href="http://collinhover.github.io/kaiopua/">Kai 'Opua</a>（<a href="https://github.com/collinhover/kaiopua">源码</a>）</li>
-</ul>
+- [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)
+- IoQuake3（[源码](https://github.com/klaussilveira/ioquake3.js)）
+- Escher puzzle（[源码](https://github.com/micahbolen/demoscene)）
+- [Kai 'Opua](http://collinhover.github.io/kaiopua/)（[源码](https://github.com/collinhover/kaiopua)）
 
-<h3 id="虚拟现实（VR）">虚拟现实（VR）</h3>
+### 虚拟现实（VR）
 
-<ul>
- <li><a href="http://mozvr.com/demos/polarsea/">The Polar Sea</a>（<a href="https://github.com/MozVR/polarsea">源码</a>）</li>
- <li><a href="http://mozvr.github.io/sechelt/">Sechelt fly-through</a>（<a href="https://github.com/mozvr/sechelt">源码</a>）</li>
-</ul>
+- [The Polar Sea](http://mozvr.com/demos/polarsea/)（[源码](https://github.com/MozVR/polarsea)）
+- [Sechelt fly-through](http://mozvr.github.io/sechelt/)（[源码](https://github.com/mozvr/sechelt)）
 
-<h2 id="CSS">CSS</h2>
+## CSS
 
-<ul>
- <li><a href="http://www.csszengarden.com/">CSS Zen Garden</a></li>
- <li><a href="https://codepen.io/SoftwareRVG/pen/OXkOWj/">CSS floating logo "mozilla"</a></li>
- <li><a href="http://felixniklas.com/paperfold/">Paperfold</a></li>
- <li><a href="http://ondras.github.io/blockout/">CSS Blockout</a></li>
- <li><a href="http://ondras.zarovi.cz/demos/rubik/">Rubik's cube</a></li>
- <li><a href="http://ondras.zarovi.cz/demos/nojs/">Pure CSS Slides</a></li>
- <li>Planetarium（<a href="https://github.com/littleworkshop/planetarium">源码</a>）</li>
- <li><a href="https://codepen.io/equinusocio/full/qjyXPP/">Loader with blend modes</a></li>
- <li><a href="https://codepen.io/equinusocio/full/KNYOxJ/">Text reveal with clip-path</a></li>
- <li><a href="https://codepen.io/equinusocio/full/GvyvWd/">Ambient shadow with custom properties</a></li>
- <li><a href="https://codepen.io/equinusocio/full/jEVNeJ/">Luminiscent vial</a></li>
-</ul>
+- [CSS Zen Garden](http://www.csszengarden.com/)
+- [CSS floating logo "mozilla"](https://codepen.io/SoftwareRVG/pen/OXkOWj/)
+- [Paperfold](http://felixniklas.com/paperfold/)
+- [CSS Blockout](http://ondras.github.io/blockout/)
+- [Rubik's cube](http://ondras.zarovi.cz/demos/rubik/)
+- [Pure CSS Slides](http://ondras.zarovi.cz/demos/nojs/)
+- Planetarium（[源码](https://github.com/littleworkshop/planetarium)）
+- [Loader with blend modes](https://codepen.io/equinusocio/full/qjyXPP/)
+- [Text reveal with clip-path](https://codepen.io/equinusocio/full/KNYOxJ/)
+- [Ambient shadow with custom properties](https://codepen.io/equinusocio/full/GvyvWd/)
+- [Luminiscent vial](https://codepen.io/equinusocio/full/jEVNeJ/)
 
-<p>旧项目：</p>
+旧项目：
 
-<ul>
- <li><a href="https://s.codepen.io/SoftwareRVG/debug/OXkOWj">CSS floating logo "Mozilla" developed by Rober Villar, from Software RVG. </a>(debug 模式)</li>
- <li><a href="https://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php">Bootstrap Contact Form Design</a></li>
- <li><a href="http://www.lesmoffat.co.uk/folio/forest/forest.html">CSS Paralax Forest</a></li>
- <li><a href="http://webdeveloperbareilly.in/blog/css3/awesome-login-form.html">Responsive Login Page Design</a></li>
- <li><a href="http://webdeveloperbareilly.in/blog/css3/onepage-scroll-template.html">One Page Scroll Website Template</a></li>
-</ul>
+- [CSS floating logo "Mozilla" developed by Rober Villar, from Software RVG. ](https://s.codepen.io/SoftwareRVG/debug/OXkOWj)(debug 模式)
+- [Bootstrap Contact Form Design](https://webdeveloperbareilly.in/blog/html5/responsive-contact-form-bootstrap.php)
+- [CSS Paralax Forest](http://www.lesmoffat.co.uk/folio/forest/forest.html)
+- [Responsive Login Page Design](http://webdeveloperbareilly.in/blog/css3/awesome-login-form.html)
+- [One Page Scroll Website Template](http://webdeveloperbareilly.in/blog/css3/onepage-scroll-template.html)
 
-<h3 id="变换">变换</h3>
+### 变换
 
-<ul>
- <li><a href="http://impress.github.io/impress.js">Impress.js</a> (<a href="https://github.com/impress/impress.js">源码</a>)</li>
-</ul>
+- [Impress.js](http://impress.github.io/impress.js) ([源码](https://github.com/impress/impress.js))
 
-<h2 id="游戏">游戏</h2>
+## 游戏
 
-<ul>
- <li>IoQuake3（<a href="https://github.com/klaussilveira/ioquake3.js">源码</a>）</li>
- <li><a href="http://collinhover.github.io/kaiopua/">Kai 'Opua</a>（<a href="https://github.com/collinhover/kaiopua">源码</a>）</li>
-</ul>
+- IoQuake3（[源码](https://github.com/klaussilveira/ioquake3.js)）
+- [Kai 'Opua](http://collinhover.github.io/kaiopua/)（[源码](https://github.com/collinhover/kaiopua)）
 
-<h2 id="Web_API">Web API</h2>
+## Web API
 
-<ul>
-</ul>
+### 通知 API
 
-<h3 id="通知_API">通知 API</h3>
+- [HTML5 Notifications](http://elfoxero.github.io/html5notifications/)（[源码](https://github.com/elfoxero/html5notifications)）
 
-<ul>
- <li><a href="http://elfoxero.github.io/html5notifications/">HTML5 Notifications</a>（<a href="https://github.com/elfoxero/html5notifications">源码</a>）</li>
-</ul>
+### 网络音频 API
 
-<ul>
-</ul>
+- [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)
+- [oscope.js - JavaScript oscilloscope](http://ondras.github.io/oscope/)
+- [HTML5 Web Audio Showcase](http://nipe-systems.de/webapps/html5-web-audio/)（[源码](https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase)）
+- [HTML5 Audio Visualizer](http://wayou.github.io/HTML5_Audio_Visualizer/)（[源码](https://github.com/Wayou/HTML5_Audio_Visualizer)）
+- [Graphical Filter Editor and Visualizer](http://carlosrafaelgn.com.br/GraphicalFilterEditor/)（[源码](https://github.com/carlosrafaelgn/GraphicalFilterEditor)）
 
-<h3 id="网络音频_API">网络音频 API</h3>
+### 文件 API
 
-<ul>
- <li><a href="http://ondras.github.io/fireworks-webgl/">Web Audio Fireworks</a></li>
- <li><a href="http://ondras.github.io/oscope/">oscope.js - JavaScript oscilloscope</a></li>
- <li><a href="http://nipe-systems.de/webapps/html5-web-audio/">HTML5 Web Audio Showcase</a>（<a href="https://github.com/NIPE-SYSTEMS/html5-web-audio-showcase">源码</a>）</li>
- <li><a href="http://wayou.github.io/HTML5_Audio_Visualizer/">HTML5 Audio Visualizer</a>（<a href="https://github.com/Wayou/HTML5_Audio_Visualizer">源码</a>）</li>
- <li><a href="http://carlosrafaelgn.com.br/GraphicalFilterEditor/">Graphical Filter Editor and Visualizer</a>（<a href="https://github.com/carlosrafaelgn/GraphicalFilterEditor">源码</a>）</li>
-</ul>
+- [Slide My Text - presentation from plain text files](http://palerdot.github.io/slide-my-text/)
 
-<h3 id="文件_API">文件 API</h3>
+### 其他
 
-<ul>
- <li><a href="http://palerdot.github.io/slide-my-text/">Slide My Text - presentation from plain text files</a></li>
-</ul>
-
-<h3 id="Unclassified">其他</h3>
-
-<ul>
- <li><a href="http://ondras.github.io/fractal/">Web Worker Fractals</a></li>
- <li><a href="http://ondras.github.io/photo/">Photo editor</a></li>
- <li><a href="http://ondras.github.io/coral/">Coral generator</a></li>
- <li><a href="http://nerget.com/rayjs-mt/rayjs.html">Raytracer</a></li>
- <li><a href="http://palerdot.github.io/hotcold/">HotCold Touch Typing</a></li>
-</ul>
+- [Web Worker Fractals](http://ondras.github.io/fractal/)
+- [Photo editor](http://ondras.github.io/photo/)
+- [Coral generator](http://ondras.github.io/coral/)
+- [Raytracer](http://nerget.com/rayjs-mt/rayjs.html)
+- [HotCold Touch Typing](http://palerdot.github.io/hotcold/)
