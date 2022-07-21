@@ -301,7 +301,7 @@
 /de/docs/JavaScript/Guide	/de/docs/Web/JavaScript/Guide
 /de/docs/JavaScript/Guide/Ausdruecke_und_Operatoren	/de/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /de/docs/JavaScript/Guide/Closures	/de/docs/Web/JavaScript/Closures
-/de/docs/JavaScript/Guide/Feinheiten_des_Objektmodells	/de/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/de/docs/JavaScript/Guide/Feinheiten_des_Objektmodells	/de/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /de/docs/JavaScript/Guide/Funktionen	/de/docs/Web/JavaScript/Guide/Functions
 /de/docs/JavaScript/Guide/Mit_Objekten_arbeiten	/de/docs/Web/JavaScript/Guide/Working_with_Objects
 /de/docs/JavaScript/Guide/Regular_Expressions	/de/docs/Web/JavaScript/Guide/Regular_Expressions
@@ -665,8 +665,9 @@
 /de/docs/Web/JavaScript/Eine_Wiedereinfuehrung_in_JavaScript	/de/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /de/docs/Web/JavaScript/Guide/Ausdruecke_und_Operatoren	/de/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /de/docs/Web/JavaScript/Guide/Closures	/de/docs/Web/JavaScript/Closures
+/de/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/de/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /de/docs/Web/JavaScript/Guide/Einführung	/de/docs/Web/JavaScript/Guide/Introduction
-/de/docs/Web/JavaScript/Guide/Feinheiten_des_Objektmodells	/de/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/de/docs/Web/JavaScript/Guide/Feinheiten_des_Objektmodells	/de/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /de/docs/Web/JavaScript/Guide/Funktionen	/de/docs/Web/JavaScript/Guide/Functions
 /de/docs/Web/JavaScript/Guide/Grammatik_und_Typen	/de/docs/Web/JavaScript/Guide/Grammar_and_types
 /de/docs/Web/JavaScript/Guide/Kontrollfluss_und_Fehlerbehandlung	/de/docs/Web/JavaScript/Guide/Control_flow_and_error_handling

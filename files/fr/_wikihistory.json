@@ -32203,26 +32203,6 @@
       "teoli"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-07-03T14:11:44.605Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "jsfez",
-      "jjperuzzi",
-      "Faegy",
-      "P45QU10U",
-      "gpartenet",
-      "Yves_ASTIER",
-      "QuentinPerez",
-      "teoli",
-      "darul75",
-      "tinou98",
-      "mssa.ndiaye",
-      "npichon",
-      "e.begovic"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-03-12T19:38:41.114Z",
     "contributors": [
@@ -40752,6 +40732,26 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-07-03T14:11:44.605Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "jsfez",
+      "jjperuzzi",
+      "Faegy",
+      "P45QU10U",
+      "gpartenet",
+      "Yves_ASTIER",
+      "QuentinPerez",
+      "teoli",
+      "darul75",
+      "tinou98",
+      "mssa.ndiaye",
+      "npichon",
+      "e.begovic"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {

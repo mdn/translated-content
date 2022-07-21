@@ -781,7 +781,7 @@
 /zh-CN/docs/JavaScript/Guide	/zh-CN/docs/Web/JavaScript/Guide
 /zh-CN/docs/JavaScript/Guide-redirect-1	/zh-CN/docs/Web/JavaScript/Guide
 /zh-CN/docs/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
-/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-CN/docs/JavaScript/Guide/Expressions_and_Operators	/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-CN/docs/JavaScript/Guide/Functions	/zh-CN/docs/Web/JavaScript/Guide/Functions
 /zh-CN/docs/JavaScript/Guide/Inheritance_Revisited	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -2263,6 +2263,7 @@
 /zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
+/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/EventLoop	/zh-CN/docs/Web/JavaScript/EventLoop
 /zh-CN/docs/Web/JavaScript/Guide/Inheritance_Revisited	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain

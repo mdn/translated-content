@@ -337,7 +337,7 @@
 /pt-BR/docs/JavaScript/Guide	/pt-BR/docs/Web/JavaScript/Guide
 /pt-BR/docs/JavaScript/Guide/About	/pt-BR/docs/Web/JavaScript/Guide/Introduction
 /pt-BR/docs/JavaScript/Guide/Closures	/pt-BR/docs/Web/JavaScript/Closures
-/pt-BR/docs/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto	/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/pt-BR/docs/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto	/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /pt-BR/docs/JavaScript/Guide/Expressions_and_Operators	/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /pt-BR/docs/JavaScript/Guide/Herança_Revisitada	/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /pt-BR/docs/JavaScript/Guide/Inheritance_Revisited	/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -789,7 +789,8 @@
 /pt-BR/docs/Web/JavaScript/Guide/About	/pt-BR/docs/Web/JavaScript/Guide/Introduction
 /pt-BR/docs/Web/JavaScript/Guide/Closures	/pt-BR/docs/Web/JavaScript/Closures
 /pt-BR/docs/Web/JavaScript/Guide/Declarações	/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/pt-BR/docs/Web/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto	/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
+/pt-BR/docs/Web/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto	/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /pt-BR/docs/Web/JavaScript/Guide/Formatando_texto	/pt-BR/docs/Web/JavaScript/Guide/Text_formatting
 /pt-BR/docs/Web/JavaScript/Guide/Funções	/pt-BR/docs/Web/JavaScript/Guide/Functions
 /pt-BR/docs/Web/JavaScript/Guide/Inheritance_Revisited	/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain

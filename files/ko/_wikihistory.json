@@ -11809,19 +11809,6 @@
       "SooYeonKim"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-12T19:42:17.394Z",
-    "contributors": [
-      "doong-jo",
-      "nmsohn",
-      "DoublSB",
-      "limkukhyun",
-      "wbamberg",
-      "cmygray",
-      "khseok1060",
-      "ryukato"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-04-30T03:43:48.082Z",
     "contributors": [
@@ -17239,6 +17226,19 @@
     "contributors": [
       "teoli",
       "Wafe"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:42:17.394Z",
+    "contributors": [
+      "doong-jo",
+      "nmsohn",
+      "DoublSB",
+      "limkukhyun",
+      "wbamberg",
+      "cmygray",
+      "khseok1060",
+      "ryukato"
     ]
   },
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {

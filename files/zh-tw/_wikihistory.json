@@ -5997,17 +5997,6 @@
       "Kaiyeh"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-12T19:38:25.366Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "jwhitlock",
-      "jackblackevo",
-      "teoli",
-      "steely.wing"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-10-12T06:55:01.538Z",
     "contributors": [
@@ -8131,6 +8120,17 @@
     "contributors": [
       "teoli",
       "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:38:25.366Z",
+    "contributors": [
+      "wbamberg",
+      "SphinxKnight",
+      "jwhitlock",
+      "jackblackevo",
+      "teoli",
+      "steely.wing"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {

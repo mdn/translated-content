@@ -11187,25 +11187,6 @@
       "pkelbert"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-10-29T17:14:14.553Z",
-    "contributors": [
-      "pedropaulo91",
-      "FranklynKleiton",
-      "igorsmasc",
-      "wbamberg",
-      "nailtonvieira",
-      "rsr90",
-      "tassionoronha",
-      "MuralhadeAdriano",
-      "victor-borges",
-      "fabiomiranda",
-      "AlanCezarAraujo",
-      "teoli",
-      "lisy",
-      "alexandresn"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-11-13T16:04:53.998Z",
     "contributors": [
@@ -16106,6 +16087,25 @@
     "contributors": [
       "teoli",
       "fernando.karpinski"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-10-29T17:14:14.553Z",
+    "contributors": [
+      "pedropaulo91",
+      "FranklynKleiton",
+      "igorsmasc",
+      "wbamberg",
+      "nailtonvieira",
+      "rsr90",
+      "tassionoronha",
+      "MuralhadeAdriano",
+      "victor-borges",
+      "fabiomiranda",
+      "AlanCezarAraujo",
+      "teoli",
+      "lisy",
+      "alexandresn"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {

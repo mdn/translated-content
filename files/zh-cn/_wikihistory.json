@@ -34015,30 +34015,6 @@
       "teoli"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-07-21T04:10:47.398Z",
-    "contributors": [
-      "suvyme",
-      "johnao",
-      "tzmf",
-      "zjffun",
-      "wbamberg",
-      "AlphaGo88",
-      "ThomasWhyne",
-      "yokiyang",
-      "zhangchen",
-      "MiRinZhang",
-      "Ende93",
-      "michelia",
-      "ywang1724",
-      "ReyCG",
-      "teoli",
-      "key",
-      "ziyunfei",
-      "zsytssk",
-      "rogersuen"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-12-12T02:19:33.855Z",
     "contributors": [
@@ -46653,6 +46629,30 @@
     "modified": "2020-10-30T11:36:06.394Z",
     "contributors": [
       "phone-burner"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-07-21T04:10:47.398Z",
+    "contributors": [
+      "suvyme",
+      "johnao",
+      "tzmf",
+      "zjffun",
+      "wbamberg",
+      "AlphaGo88",
+      "ThomasWhyne",
+      "yokiyang",
+      "zhangchen",
+      "MiRinZhang",
+      "Ende93",
+      "michelia",
+      "ywang1724",
+      "ReyCG",
+      "teoli",
+      "key",
+      "ziyunfei",
+      "zsytssk",
+      "rogersuen"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {

@@ -180,7 +180,7 @@
 /zh-TW/docs/JavaScript	/zh-TW/docs/Web/JavaScript
 /zh-TW/docs/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript/About_JavaScript
 /zh-TW/docs/JavaScript/Guide	/zh-TW/docs/Web/JavaScript/Guide
-/zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-TW/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/JavaScript/Guide/Functions	/zh-TW/docs/Web/JavaScript/Guide/Functions
 /zh-TW/docs/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/JavaScript/Guide/JavaScript_Overview-redirect-1	/zh-TW/docs/Web/JavaScript/Guide/Introduction
@@ -705,13 +705,14 @@
 /zh-TW/docs/Web/HTTP/Status/418_I_m_a_teapot	/zh-TW/docs/Web/HTTP/Status/418
 /zh-TW/docs/Web/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
 /zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
+/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/zh-TW/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀（JavaScript_Overview）	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/Obsolete_Pages	/zh-TW/docs/Web/JavaScript/Guide
 /zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types
 /zh-TW/docs/Web/JavaScript/Guide_old	/zh-TW/docs/Web/JavaScript/Guide
-/zh-TW/docs/Web/JavaScript/Guide_old/Details_of_the_Object_Model	/zh-TW/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/zh-TW/docs/Web/JavaScript/Guide_old/Details_of_the_Object_Model	/zh-TW/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/Web/JavaScript/Guide_old/Functions	/zh-TW/docs/Web/JavaScript/Guide/Functions
 /zh-TW/docs/Web/JavaScript/Guide_old/Grammar_and_types	/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types
 /zh-TW/docs/Web/JavaScript/Guide_old/Introduction	/zh-TW/docs/Web/JavaScript/Guide/Introduction
