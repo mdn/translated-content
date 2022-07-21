@@ -17,7 +17,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</div>
 
-<p>现在，你已经学到了一些 JavaScript 的理论知识，以及用 JavaScript 能够做些什么。下面我们会提供一个讲解 Javascript 基本特性的 Crash Course，课程是一个全面的实践性项目——循序渐进地构建一个简易版“猜数字”游戏。</p>
+<p>现在，你已经学到了一些 JavaScript 的理论知识，以及用 JavaScript 能够做些什么。下面我们会提供一个讲解 Javascript 基本特性的 Crash Course，课程是一个全面的实践性项目——循序渐进地构建一个简易版“猜数字”游戏。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -35,7 +35,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 <p>我们并不要求你立刻完整理解所有代码，当前只是概括地介绍一些抽象的概念，并且让你对 JavaScript（以及其他编程语言）工作原理有一定的认知。所有具体特性将在后续文章中详细介绍。</p>
 
 <div class="note">
-<p>注：可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（ 函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。</p>
+<p>注：可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（ 函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。</p>
 </div>
 
 <h2 id="像程序员一样思考">像程序员一样思考</h2>
@@ -208,7 +208,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 <h3 id="初始设置">初始设置</h3>
 
-<p>本教程开始前，请将 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html">number-guessing-game-start.html</a> 文件保存下来。同时在文本编辑器和 Web 浏览器中将其打开，可以看到一个简单的标题，一段游戏说明，和一个用于输入猜测的表单，此时表单不会执行任何操作。</p>
+<p>本教程开始前，请将 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html">number-guessing-game-start.html</a> 文件保存下来。同时在文本编辑器和 Web 浏览器中将其打开，可以看到一个简单的标题，一段游戏说明，和一个用于输入猜测的表单，此时表单不会执行任何操作。</p>
 
 <p>我们将在 HTML 底部的  {{htmlelement("script")}}  元素中添加新的代码：</p>
 
@@ -221,7 +221,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 
 <h3 id="添加变量以保存数据">添加变量以保存数据</h3>
 
-<p>让我们开始吧。首先，在  {{htmlelement("script")}}  元素中添加以下代码：</p>
+<p>让我们开始吧。首先，在  {{htmlelement("script")}}  元素中添加以下代码：</p>
 
 <pre class="brush: js">let randomNumber = Math.floor(Math.random() * 100) + 1;
 
@@ -243,7 +243,7 @@ let resetButton;</pre>
 
 <ul>
  <li>我们用数学算法得出一个 1 到 100 之间的随机数，并赋值给第一个变量（<code>randomNumber</code>）。</li>
- <li>接下来的三个常量均存储着一个引用，分别指向 HTML 结果段落中某个元素，用于在代码后面段落中插入值： </li>
+ <li>接下来的三个常量均存储着一个引用，分别指向 HTML 结果段落中某个元素，用于在代码后面段落中插入值： </li>
  <li>
   <pre class="brush: html" dir="rtl">&lt;p class="guesses"&gt;&lt;/p&gt;
 &lt;p class="lastResult"&gt;&lt;/p&gt;
@@ -270,7 +270,7 @@ let resetButton;</pre>
 }</pre>
 
 <div id="gt-src-tools">
-<div id="tts_button">函数是可复用的代码块，可以一次编写，反复运行，从而节省了大量的重复代码。它们真的很有用。定义函数的方法很多，但现在我们先集中考虑当前这个简单的方式。这里我们使用关键字 <code>function</code> 、一个函数名、一对小括号定义了一个函数。随后是一对花括号（<code>{}</code>）。花括号内部是调用函数时要运行的所有代码。</div>
+<div id="tts_button">函数是可复用的代码块，可以一次编写，反复运行，从而节省了大量的重复代码。它们真的很有用。定义函数的方法很多，但现在我们先集中考虑当前这个简单的方式。这里我们使用关键字 <code>function</code> 、一个函数名、一对小括号定义了一个函数。随后是一对花括号（<code>{}</code>）。花括号内部是调用函数时要运行的所有代码。</div>
 </div>
 
 <div class="g-unit" id="gt-res-c">
@@ -284,7 +284,7 @@ let resetButton;</pre>
 <div dir="ltr"></div>
 
 <div dir="ltr">让我们尝试一下。保存你的代码并刷新浏览器页面。然后进入<br>
-<a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具 JavaScript 控制台</a>，并输入以下代码：</div>
+<a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具 JavaScript 控制台</a>，并输入以下代码：</div>
 
 <div dir="ltr"></div>
 </div>
@@ -295,7 +295,7 @@ let resetButton;</pre>
 
 <pre class="brush: js">checkGuess();</pre>
 
-<p>在按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 之后，你应该会看到一个告警窗口，显示 "<code>我是一个占位符</code>"；我们在代码中定义了一个函数，当我们调用它时，函数创建了一个告警窗口。</p>
+<p>在按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 之后，你应该会看到一个告警窗口，显示 "<code>我是一个占位符</code>"；我们在代码中定义了一个函数，当我们调用它时，函数创建了一个告警窗口。</p>
 
 <div class="note">
 <p><strong>注</strong>: <a href="/zh-CN/docs/learn/JavaScript/Building_blocks/Functions">后续课程 </a>将讲解更多有关函数的知识。</p>
@@ -305,7 +305,7 @@ let resetButton;</pre>
 
 <p>JavaScript 运算符允许我们执行比较，做数学运算，连接字符串，以及其他类似的事情。</p>
 
-<p>请保存代码以免丢失，然后刷新浏览器页面，打开 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具 JavaScript 控制台</a>。然后我们就可以尝试下文中的示例了：把下表中“示例”一列中的每一项都原封不动输入进来，每次输入完毕后都按下  <kbd>Return</kbd>/<kbd>Enter</kbd> ，可以看到返回的结果。如果你无法访问浏览器开发者工具，你随时都可以使用下面的简易版内置控制台。</p>
+<p>请保存代码以免丢失，然后刷新浏览器页面，打开 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具 JavaScript 控制台</a>。然后我们就可以尝试下文中的示例了：把下表中“示例”一列中的每一项都原封不动输入进来，每次输入完毕后都按下  <kbd>Return</kbd>/<kbd>Enter</kbd> ，可以看到返回的结果。如果你无法访问浏览器开发者工具，你随时都可以使用下面的简易版内置控制台。</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -456,7 +456,7 @@ hello;
 let greeting = name + hello;
 greeting;</pre>
 
-<p>还有一些快捷操作符可用，称为 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">复合赋值操作符</a>。例如，如果你只希望在现有字符串末尾添加一个新串，可以这样做：</p>
+<p>还有一些快捷操作符可用，称为 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">复合赋值操作符</a>。例如，如果你只希望在现有字符串末尾添加一个新串，可以这样做：</p>
 
 <pre class="brush: js">name += ' says hello!';</pre>
 
@@ -464,7 +464,7 @@ greeting;</pre>
 
 <pre class="brush: js">name = name + ' says hello!';</pre>
 
-<p>在执行真/假比较时（例如在条件语句中，见<a href="#条件语句（conditional）">下表</a>），我们使用 <a href="zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较运算符</a>，例如：</p>
+<p>在执行真/假比较时（例如在条件语句中，见<a href="#条件语句（conditional）">下表</a>），我们使用 <a href="zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较运算符</a>，例如：</p>
 
 <table>
  <thead>
@@ -498,9 +498,9 @@ greeting;</pre>
 
 <h3 id="条件语句（Conditional）">条件语句（Conditional）</h3>
 
-<p>回到我们的 <code>checkGuess()</code> 函数，我们希望它不仅能够给出一个占位符消息，同时还能检查玩家是否猜对，并做出适当的反应。我想这并不难吧。</p>
+<p>回到我们的 <code>checkGuess()</code> 函数，我们希望它不仅能够给出一个占位符消息，同时还能检查玩家是否猜对，并做出适当的反应。我想这并不难吧。</p>
 
-<p>现在，将当前的 <code>checkGuess()</code> 函数替换为此版本：</p>
+<p>现在，将当前的 <code>checkGuess()</code> 函数替换为此版本：</p>
 
 <pre class="brush: js">function checkGuess() {
   let userGuess = Number(guessField.value);
@@ -549,7 +549,7 @@ greeting;</pre>
  <li>下一个代码块中（8 - 24 行）做了几个检查：
   <ul>
    <li>第一个 <code>if(){ }</code> 检查用户的猜测是否等于在代码顶端设置的 <code>randomNumber</code> 值。如果是，则玩家猜对了，游戏胜利，我们将向玩家显示一个漂亮的绿色的祝贺信息，并清除“高了 / 低了”信息框的内容，调用 <code>setGameOver()</code> 方法。</li>
-   <li>紧接着是一个 <code>else if(){ }</code> 结构。它会检查这个回合是否是玩家的最后一个回合。如果是，程序将做与前一个程序块相同的事情，只是这次它显示的是 Game Over 而不是祝贺消息。</li>
+   <li>紧接着是一个 <code>else if(){ }</code> 结构。它会检查这个回合是否是玩家的最后一个回合。如果是，程序将做与前一个程序块相同的事情，只是这次它显示的是 Game Over 而不是祝贺消息。</li>
    <li>最后的一个块是 <code>else { }</code>，前两个比较都不返回 <code>true</code> 时（也就是玩家尚未猜对，但是还有机会）才会执行这里的代码。在这个情况下，我们会告诉玩家他们猜错了，并执行另一个条件测试，判断并告诉玩家猜测的数字是高了还是低了。</li>
   </ul>
  </li>
@@ -583,7 +583,7 @@ greeting;</pre>
 
 <ul>
  <li>前两行通过将 <code>disable</code> 属性设置为 <code>true</code> 来禁用表单文本输入和按钮。这样做是必须的，否则用户就可以在游戏结束后提交更多的猜测，游戏的规则将遭到破坏。</li>
- <li>接下来的三行创建一个新的  {{htmlelement("button")}} 元素，设置它的文本为“开始新游戏”，并把它添加到当前 HTML 的底部。</li>
+ <li>接下来的三行创建一个新的  {{htmlelement("button")}} 元素，设置它的文本为“开始新游戏”，并把它添加到当前 HTML 的底部。</li>
  <li>最后一行在新按钮上设置了一个事件监听器，当它被点击时，一个名为 <code>resetGame()</code> 的函数被将被调用。</li>
 </ul>
 
@@ -628,7 +628,7 @@ greeting;</pre>
 
 <p>上面代码中有一部分需要我们仔细研读，那就是<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for"> for</a> 循环。循环是一个非常重要的编程概念，它让你能够重复运行一段代码，直到满足某个条件为止。</p>
 
-<p>首先，请再次转到 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发工具 JavaScript 控制台</a> 然后输入以下内容：</p>
+<p>首先，请再次转到 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发工具 JavaScript 控制台</a> 然后输入以下内容：</p>
 
 <pre class="brush: js">for (let i = 1; i &lt; 21; i++) { console.log(i); }</pre>
 
@@ -655,7 +655,7 @@ for (let i = 0 ; i &lt; resetParas.length ; i++) {
 
 <pre class="brush: js">guessField.focus();</pre>
 
-<p>这一行通过 {{domxref("HTMLElement.focus", "focus()")}} 方法让光标在页面加载完毕时自动放置于 {{htmlelement("input")}}  输入框内，这意味着玩家可以马上开始第一次猜测，而无需点击输入框。这只是一个小的改进，却提高了可用性——为使用户能投入游戏提供一个良好的视觉线索。</p>
+<p>这一行通过 {{domxref("HTMLElement.focus", "focus()")}} 方法让光标在页面加载完毕时自动放置于 {{htmlelement("input")}}  输入框内，这意味着玩家可以马上开始第一次猜测，而无需点击输入框。这只是一个小的改进，却提高了可用性——为使用户能投入游戏提供一个良好的视觉线索。</p>
 
 <p>深入分析一下。JavaScript 中一切都是对象。对象是存储在单个分组中的相关功能的集合。可以创建自己的对象，但这是较高阶的知识，我们今后才会谈及。现在，仅需简要讨论浏览器内置的对象，它们已经能够做许多有用的事情。</p>
 
@@ -663,7 +663,7 @@ for (let i = 0 ; i &lt; resetParas.length ; i++) {
 
 <pre class="brush: js">const guessField = document.querySelector('.guessField');</pre>
 
-<p>使用 {{domxref("document")}} 对象的 {{domxref("document.querySelector", "querySelector()")}} 方法可以获得这个引用。<code>querySelector()</code> 需要一个信息——用一个 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors">CSS 选择器</a> 可以选中需要引用的元素。</p>
+<p>使用 {{domxref("document")}} 对象的 {{domxref("document.querySelector", "querySelector()")}} 方法可以获得这个引用。<code>querySelector()</code> 需要一个信息——用一个 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors">CSS 选择器</a> 可以选中需要引用的元素。</p>
 
 <p>因为 <code>guessField</code> 现在包含一个指向 {{htmlelement("input")}} 元素的引用，它现在就能够访问一系列的属性（存储于对象内部的基础变量，其中一些的值无法改变）和方法（存储在对象内部的基础函数）。<code>focus()</code> 是 {{htmlelement("input")}} 元素可用方法之一，因此我们可以使用这行代码将光标聚焦于此文本框上︰</p>
 
@@ -677,16 +677,16 @@ for (let i = 0 ; i &lt; resetParas.length ; i++) {
 
 <ol>
  <li>首先在浏览器中打开你的程序。</li>
- <li>接下来打开 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a>， 并且切换到 JavaScript 控制台的标签页。</li>
- <li>输入 <code>guessField</code> ，控制台将会显示此变量包含一个 {{htmlelement("input")}} 元素。同时控制台还能自动补全运行环境中对象的名字，包括你的变量！</li>
+ <li>接下来打开 <a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a>， 并且切换到 JavaScript 控制台的标签页。</li>
+ <li>输入 <code>guessField</code> ，控制台将会显示此变量包含一个 {{htmlelement("input")}} 元素。同时控制台还能自动补全运行环境中对象的名字，包括你的变量！</li>
  <li>现在输入下面的代码：
   <pre class="brush: js">guessField.value = 'Hello';</pre>
-  <code>value</code> 属性表示当前文本区域中输入的值。在输入这条指令后，你将看到文本域区中的文本被我们修改了！</li>
- <li>现在试试输入 <code>guesses</code> 然后回车。控制台会显示一个包含 {{htmlelement("p")}} 元素的变量。</li>
+  <code>value</code> 属性表示当前文本区域中输入的值。在输入这条指令后，你将看到文本域区中的文本被我们修改了！</li>
+ <li>现在试试输入 <code>guesses</code> 然后回车。控制台会显示一个包含 {{htmlelement("p")}} 元素的变量。</li>
  <li>现在试试输入下面这一行：
   <pre class="brush: js">guesses.value</pre>
-  浏览器会返回 <code>undefined</code>，因为段落中并不存在 <code>value</code>。</li>
- <li>为了改变段落中的文本内容， 你需要用 {{domxref("Node.textContent", "textContent")}} 属性来代替 <code>value</code>。试试这个：
+  浏览器会返回 <code>undefined</code>，因为段落中并不存在 <code>value</code>。</li>
+ <li>为了改变段落中的文本内容， 你需要用 {{domxref("Node.textContent", "textContent")}} 属性来代替 <code>value</code>。试试这个：
   <pre class="brush: js">guesses.textContent = '我的段落在哪里？';</pre>
  </li>
  <li>下面是一些有趣的东西。尝试依次输入下面几行：
@@ -700,7 +700,7 @@ guesses.style.boxShadow = '3px 3px 6px black';</pre>
 
 <h2 id="大功告成...">大功告成...</h2>
 
-<p>这个示例已经构建完毕，做得好！来尝试运行一下最终的代码，或者 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html">看看我们的最终版本</a>。如果你的版本无法正常工作，请对照 <a href="https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html">源代码</a> 进行检查。</p>
+<p>这个示例已经构建完毕，做得好！来尝试运行一下最终的代码，或者 <a href="https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html">看看我们的最终版本</a>。如果你的版本无法正常工作，请对照 <a href="https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html">源代码</a> 进行检查。</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}</p>
 

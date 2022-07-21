@@ -32,7 +32,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 
 <h2 id="语言的力量">语言的力量</h2>
 
-<p>语言对人类非常重要——它们是我们交流的重要组成部分。由于 Web 是一种主要基于文本的媒介，旨在让人们进行交流和分享信息，因此对我们来说，掌握它所出现的单词是很有用的。{{glossary("HTML")}}为我们的文本提供了结构和意义， {{glossary("CSS")}} 允许我们精确地设计它的样式，JavaScript 包含许多操作字符串的特性，创建定制的欢迎消息，在需要时显示正确的文本标签，将术语排序到所需的顺序，等等。</p>
+<p>语言对人类非常重要——它们是我们交流的重要组成部分。由于 Web 是一种主要基于文本的媒介，旨在让人们进行交流和分享信息，因此对我们来说，掌握它所出现的单词是很有用的。{{glossary("HTML")}}为我们的文本提供了结构和意义， {{glossary("CSS")}} 允许我们精确地设计它的样式，JavaScript 包含许多操作字符串的特性，创建定制的欢迎消息，在需要时显示正确的文本标签，将术语排序到所需的顺序，等等。</p>
 
 <p>到目前为止，我们在课程中展示的所有程序都涉及到一些字符串操作。</p>
 
@@ -204,7 +204,7 @@ dblSgl;</pre>
 <pre class="brush: js">let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;</pre>
 
-<p>这回正常了。你可以用别的方式来达到一样的目的， 例如. <code>\",</code> 除此之外有一些特殊的代码 。更多细节请参见<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#Parameters">转义符号</a>。</p>
+<p>这回正常了。你可以用别的方式来达到一样的目的， 例如. <code>\",</code> 除此之外有一些特殊的代码 。更多细节请参见<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#Parameters">转义符号</a>。</p>
 
 <h2 id="连接字符串">连接字符串</h2>
 
@@ -214,8 +214,8 @@ bigmouth;</pre>
 let two = 'how are you?';
 let joined = one + two;
 joined;</pre>
-  变量 <code>joined</code> 的值的结果，它包含的值为 "Hello, how are you?"。</li>
- <li>最后一个例子中， 我们只是把两个字符串连接在一起，但是你可以喜欢连接多少就多少个， 只需要在它们之间加上 + 操作符。试试这个：
+  变量 <code>joined</code> 的值的结果，它包含的值为 "Hello, how are you?"。</li>
+ <li>最后一个例子中， 我们只是把两个字符串连接在一起，但是你可以喜欢连接多少就多少个， 只需要在它们之间加上 + 操作符。试试这个：
   <pre class="brush: js">let multiple = one + one + one + one + two;
 multiple;</pre>
  </li>
@@ -244,7 +244,7 @@ button.onclick = function() {
 
 <p>{{ EmbedLiveSample('上下文中的串联', '100%', 50, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<p>这里我们使用的是第 4 行中的 {{domxref("window.prompt()", "window.prompt()")}} 函数，它要求用户通过一个弹出对话框回答一个问题然后将他们输入的文本存储在一个给定的变量中 — 在这个例子中是就是 <code>name</code> 变量。然后，我们在第 5 行中使用  {{domxref("window.alert()","window.alert()")}}  函数来显示另一个弹出窗口，其中包含一个字符串，我们用两个字符串常量和 name 变量通过连接进行组合。</p>
+<p>这里我们使用的是第 4 行中的 {{domxref("window.prompt()", "window.prompt()")}} 函数，它要求用户通过一个弹出对话框回答一个问题然后将他们输入的文本存储在一个给定的变量中 — 在这个例子中是就是 <code>name</code> 变量。然后，我们在第 5 行中使用  {{domxref("window.alert()","window.alert()")}}  函数来显示另一个弹出窗口，其中包含一个字符串，我们用两个字符串常量和 name 变量通过连接进行组合。</p>
 
 <h3 id="数字与字符">数字与字符</h3>
 
@@ -261,20 +261,20 @@ typeof myDate;</pre>
  </li>
  <li>如果您有一个数值变量，您想要将其转换为字符串，并且不改变其他地方，或者您想将一个字符串转换为一个数字而不改变其其他地方，那么您可以使用以下两个构造：
   <ul>
-   <li>如果可以的话， {{jsxref("Number")}} 对象将把传递给它的任何东西转换成一个数字。<br>
+   <li>如果可以的话， {{jsxref("Number")}} 对象将把传递给它的任何东西转换成一个数字。<br>
     试一试：
     <pre class="brush: js">let myString = '123';
 let myNum = Number(myString);
 typeof myNum;</pre>
    </li>
-   <li>另一方面，每个数字都有一个名为 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a> 的方法，它将把它转换成等价的字符串。<br>
+   <li>另一方面，每个数字都有一个名为 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString">toString()</a> 的方法，它将把它转换成等价的字符串。<br>
     试试这个：
     <pre class="brush: js">let myNum = 123;
 let myString = myNum.toString();
 typeof myString;</pre>
    </li>
   </ul>
-  这些结构在某些情况下是非常有用的，例如，如果一个用户将一个数字输入到一个表单文本字段中，这将是一个字符串，但是如果你想要将这个数字添加到某些东西中时，你需要它是一个数字，所以你可以通过 <code>Number()</code> 来处理这个问题。我们在<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54">数字猜谜游戏中第 54 行</a>就是这么做的。</li>
+  这些结构在某些情况下是非常有用的，例如，如果一个用户将一个数字输入到一个表单文本字段中，这将是一个字符串，但是如果你想要将这个数字添加到某些东西中时，你需要它是一个数字，所以你可以通过 <code>Number()</code> 来处理这个问题。我们在<a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54">数字猜谜游戏中第 54 行</a>就是这么做的。</li>
 </ol>
 
 <h2 id="结论">结论</h2>

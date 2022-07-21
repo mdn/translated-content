@@ -63,21 +63,21 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 <p>打开 HTML index 文件。你将看到一些功能；HTML 由视频播放器和它的控件所控制：</p>
 
 <pre>&lt;div class="player"&gt;
-  &lt;video controls&gt;
-    &lt;source src="video/sintel-short.mp4" type="video/mp4"&gt;
-    &lt;source src="video/sintel-short.mp4" type="video/webm"&gt;
-    &lt;!-- fallback content here --&gt;
-  &lt;/video&gt;
-  &lt;div class="controls"&gt;
-    &lt;button class="play" data-icon="P" aria-label="play pause toggle"&gt;&lt;/button&gt;
-    &lt;button class="stop" data-icon="S" aria-label="stop"&gt;&lt;/button&gt;
-    &lt;div class="timer"&gt;
+  &lt;video controls&gt;
+    &lt;source src="video/sintel-short.mp4" type="video/mp4"&gt;
+    &lt;source src="video/sintel-short.mp4" type="video/webm"&gt;
+    &lt;!-- fallback content here --&gt;
+  &lt;/video&gt;
+  &lt;div class="controls"&gt;
+    &lt;button class="play" data-icon="P" aria-label="play pause toggle"&gt;&lt;/button&gt;
+    &lt;button class="stop" data-icon="S" aria-label="stop"&gt;&lt;/button&gt;
+    &lt;div class="timer"&gt;
       &lt;div&gt;&lt;/div&gt;
       &lt;span aria-label="timer"&gt;00:00&lt;/span&gt;
     &lt;/div&gt;
-    &lt;button class="rwd" data-icon="B" aria-label="rewind"&gt;&lt;/button&gt;
-    &lt;button class="fwd" data-icon="F" aria-label="fast forward"&gt;&lt;/button&gt;
-  &lt;/div&gt;
+    &lt;button class="rwd" data-icon="B" aria-label="rewind"&gt;&lt;/button&gt;
+    &lt;button class="fwd" data-icon="F" aria-label="fast forward"&gt;&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -86,8 +86,8 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
  <li>{{htmlelement("video")}}元素层包含两个{{htmlelement("source")}}元素，这样可以根据浏览器来加载其所支持的不同视频格式。</li>
  <li>控件 HTML 大概是最有趣的：
   <ul>
-   <li>我们有四个 {{htmlelement("button")}} — play/pause, stop, rewind, and fast forward.</li>
-   <li>每个<code>&lt;button&gt;</code> 都有一个<code>class名</code> , 一个<code>data-icon</code> 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个<code>aria-label</code> 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有<code>aria-label</code> 属性的内容也会被讲述人读出来。</li>
+   <li>我们有四个 {{htmlelement("button")}} — play/pause, stop, rewind, and fast forward.</li>
+   <li>每个<code>&lt;button&gt;</code> 都有一个<code>class名</code> , 一个<code>data-icon</code> 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个<code>aria-label</code> 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有<code>aria-label</code> 属性的内容也会被讲述人读出来。</li>
    <li>有一个设定的计时器 {{htmlelement("div")}}用来报告已经播放的时长。为了好玩，我们提供了两种报告机制 — 一个 {{htmlelement("span")}} 包含了流逝时间的分钟和秒，和一个额外的<code>&lt;div&gt;</code> 用来创建一个水平的随着时间增加而增长的进度条。要想了解完成版本看上去是咋样的，<a href="https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/">点击查看完成版本</a>.</li>
   </ul>
  </li>
@@ -95,7 +95,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 
 <h4 id="探索_CSS">探索 CSS</h4>
 
-<p>现在打开 CSS 文件来查看里面的内容。例子中的 CSS 样式并不是很复杂，我们突出了最主要的一部分。首先注意<code>.controls</code> 的样式：</p>
+<p>现在打开 CSS 文件来查看里面的内容。例子中的 CSS 样式并不是很复杂，我们突出了最主要的一部分。首先注意<code>.controls</code> 的样式：</p>
 
 <pre class="brush: css">.controls {
   visibility: hidden;
@@ -118,7 +118,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 </pre>
 
 <ul>
- <li>我们从设置为<code>hidden</code>的自定义控件{{cssxref("visibility")}}开始。稍后在我们的 JavaScript 中，我们将控件设置为 <code>visible</code>, 并且从<code>&lt;video&gt;</code> 元素中移除<code>controls</code> 属性。这是因为，如果 JavaScript 由于某种原因没有加载，用户依然可以使用原生的控件播放视频。</li>
+ <li>我们从设置为<code>hidden</code>的自定义控件{{cssxref("visibility")}}开始。稍后在我们的 JavaScript 中，我们将控件设置为 <code>visible</code>, 并且从<code>&lt;video&gt;</code> 元素中移除<code>controls</code> 属性。这是因为，如果 JavaScript 由于某种原因没有加载，用户依然可以使用原生的控件播放视频。</li>
  <li>默认情况下，我们将控件的<code>opacity</code>设置为 0.5 {{cssxref("opacity")}}，这样当您尝试观看视频时，它们就不会分散注意力。只有当您将鼠标悬停/聚焦在播放器上时，控件才会完全不透明。</li>
  <li>我们使用 Flexbox({{cssxref("display")}}: flex) 布置控制栏内的按钮，以简化操作。</li>
 </ul>
@@ -185,8 +185,8 @@ button:before {
 }</pre>
 
 <ul>
- <li>我们将外部 <code>.timer</code>  <code>&lt;div&gt;</code> 设为 flex：5，这样它占据了控件栏的大部分宽度。我们还设置 {{cssxref("position")}}<code>: relative</code>，这样我们就可以根据它的边界方便地定位元素，而不是{{htmlelement("body")}} 元素的边界。</li>
- <li>内部<code> &lt;div&gt; </code> <code>position：absolute</code> 绝对定位于外部 <code>&lt;div&gt;</code> 的顶部。它的初始宽度为 0，因此根本无法看到它。随着视频的播放，JavaScript 将动态的增加其宽度。</li>
+ <li>我们将外部 <code>.timer</code>  <code>&lt;div&gt;</code> 设为 flex：5，这样它占据了控件栏的大部分宽度。我们还设置 {{cssxref("position")}}<code>: relative</code>，这样我们就可以根据它的边界方便地定位元素，而不是{{htmlelement("body")}} 元素的边界。</li>
+ <li>内部<code> &lt;div&gt; </code> <code>position：absolute</code> 绝对定位于外部 <code>&lt;div&gt;</code> 的顶部。它的初始宽度为 0，因此根本无法看到它。随着视频的播放，JavaScript 将动态的增加其宽度。</li>
  <li><code>&lt;span&gt;</code> 也绝对位于计时器/进度条 <code>timer</code> 栏的左侧附近。</li>
  <li>我们还对内部 <code>&lt;div&gt;</code> 和 <code>&lt;span&gt;</code> 定义适当数值的 {{cssxref("z-index")}} ，以便进度条显示在最上层，内部<code> &lt;div&gt;</code> 显示在下层。这样，我们确保我们可以看到所有信息 —— 一个 box 不会遮挡另一个。</li>
 </ul>
@@ -218,7 +218,7 @@ var timerBar = document.querySelector('.timer div');
   <p>这里我们创建变量来保存对我们想要操作的所有对象的引用。有如下三组：</p>
 
   <ul>
-   <li> <code>&lt;video&gt;</code> 元素，和控制栏。</li>
+   <li> <code>&lt;video&gt;</code> 元素，和控制栏。</li>
    <li>播放/暂停，停止，快退，和快进按钮。</li>
    <li>进度条外面的 <code>&lt;div&gt;</code>，数字计时器的 <code>&lt;span&gt;</code>，以及内部的 <code>&lt;div&gt;</code> 会随着视频播放逐渐变宽。</li>
   </ul>
@@ -340,12 +340,12 @@ function mediaForward() {
 }
 </pre>
 
-  <p>您会注意到，首先我们初始化两个变量 -  intervalFwd 和 intervalRwd  - 您将在后面发现它们的用途。</p>
+  <p>您会注意到，首先我们初始化两个变量 -  intervalFwd 和 intervalRwd  - 您将在后面发现它们的用途。</p>
 
   <p>让我们逐步浏览<code>mediaBackward()</code>（<code>mediaForward()</code>的功能性完全相同，但效果相反）：</p>
 
   <ol>
-   <li>我们清除在快进功能上设置的所有 classes 和 intervals ––这样做是因为如果我们在按下<code>fwd</code>（快进）按钮后再按下<code>rwd</code>（快退）按钮，就可以取消任何快进的功能并将其替换为快退功能。如果我们试图同时做到这两点，播放器就会暂停。</li>
+   <li>我们清除在快进功能上设置的所有 classes 和 intervals ––这样做是因为如果我们在按下<code>fwd</code>（快进）按钮后再按下<code>rwd</code>（快退）按钮，就可以取消任何快进的功能并将其替换为快退功能。如果我们试图同时做到这两点，播放器就会暂停。</li>
    <li>使用<code>if</code>语句检查是否已在<code>rwd</code>按钮上设置了用来指示它已被按下的<code>active</code>类。{{domxref("classList")}}是一个非常方便的属性，存在于每个元素上 ––它包含元素上设置的所有类的列表，以及添加/删除类的方法等。使用<code>classList.contains（）</code>方法检查列表是否包含<code>active</code>类。这将返回布尔值<code>true/false</code>结果。</li>
    <li>如果在<code>rwd</code>按钮上设置了<code>active</code>，我们使用<code>classList.remove（）</code>删除它，清除第一次按下按钮时设置的间隔（参见下面的更多解释），并使用{{domxref("HTMLMediaElement.play()")}}取消快退并开始正常播放视频。</li>
    <li>如果尚未设置，使用<code>classList.add（）</code>将<code>active</code>类添加到<code>rwd</code>按钮，使用{{domxref("HTMLMediaElement.pause()")}}暂停视频，然后设置<code>intervalRwd</code>变量为 {{domxref("setInterval()")}} 的调用。调用时，<code>setInterval（）</code>会创建一个活动间隔，这意味着它每隔 x 毫秒运行一个作为第一个参数给出的函数，其中 x 是第二个参数的值。所以这里我们每 200 毫秒运行一次<code>windBackward（）</code>函数 ––我们将使用此函数不断向后滚动（快退动作）视频。要停止 {{domxref("setInterval()")}} 运行，你必须调用 {{domxref("clearInterval()")}}，给它识别要清除的间隔的名称，在本例中是变量名称 intervalRwd（请参阅函数中较早的 clearInterval（）调用）。</li>
@@ -476,8 +476,8 @@ clearInterval(intervalFwd);
 <ul>
  <li>{{domxref("HTMLMediaElement")}}</li>
  <li><a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">视频和音频内容</a>— &lt;video&gt;和&lt;audio&gt;的简单指南。</li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a> — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.</li>
- <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio 与 video 操作</a> — 操作 audio 和 video 的详细指南，例如：使用 <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>，等等。</li>
+ <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">Audio and video delivery</a> — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.</li>
+ <li><a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation">Audio 与 video 操作</a> — 操作 audio 和 video 的详细指南，例如：使用 <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a>, <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>，等等。</li>
  <li>{{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.</li>
  <li>
   <p><a href="/en-US/docs/Web/HTML/Supported_media_formats">Media formats supported by the HTML audio and video elements</a>.</p>

@@ -31,11 +31,11 @@ translation_of: >-
 
 <p>我们的 app 可以展示待办事项列表，但是我们不能更新该列表，除非手动更改代码。让我们新建一个组件来允许我们添加新的待办项。</p>
 
-<p>在 components 目录下，新建文件 <code>ToDoForm.vue</code>.</p>
+<p>在 components 目录下，新建文件 <code>ToDoForm.vue</code>.</p>
 
 <ol>
  <li>
-  <p>创建一个空的 <code>&lt;template&gt;</code> 和 <code>&lt;script&gt;</code> ：</p>
+  <p>创建一个空的 <code>&lt;template&gt;</code> 和 <code>&lt;script&gt;</code> ：</p>
 
   <pre class="brush: html notranslate">&lt;template&gt;&lt;/template&gt;
 
@@ -66,7 +66,7 @@ translation_of: >-
   <p>现在我们有一个可以 form 组件可以用来输入新的待办项的标题，它最终会渲染成<code>ToDoItem</code>的 label。</p>
  </li>
  <li>
-  <p>我们把这个组件添加到 app 中，返回 <code>App.vue</code> 然后在 <code>&lt;script&gt;</code> 添加下面的语句：</p>
+  <p>我们把这个组件添加到 app 中，返回 <code>App.vue</code> 然后在 <code>&lt;script&gt;</code> 添加下面的语句：</p>
 
   <pre class="brush: js notranslate">import ToDoForm from './components/ToDoForm';</pre>
  </li>
@@ -79,7 +79,7 @@ translation_of: >-
 }</pre>
  </li>
  <li>
-  <p>最后将 <code>ToDoForm</code> 组件添加到 App 中的<code>&lt;template&gt;</code> 中，像下面这样：</p>
+  <p>最后将 <code>ToDoForm</code> 组件添加到 App 中的<code>&lt;template&gt;</code> 中，像下面这样：</p>
 
   <pre class="brush: html notranslate">&lt;template&gt;
   &lt;div id="app"&gt;
@@ -274,9 +274,9 @@ translation_of: >-
   <p>返回 <code>App.vue</code> 并立即更新：</p>
    
   <pre class="brush: js notranslate">methods: {
-  addToDo(toDoLabel) {
-    console.log('To-do added:', toDoLabel);
-  }
+  addToDo(toDoLabel) {
+    console.log('To-do added:', toDoLabel);
+  }
 }
 </pre>
  </li>
@@ -321,11 +321,11 @@ translation_of: >-
 <p>将你的 <code>ToDoForm</code> 组件的 <code>onSubmit()</code> 方法更新为：</p>
 
 <pre class="brush: js notranslate">onSubmit() {
-  if(this.label === "") {
-    return;
-  }
-  this.$emit('todo-added', this.label);
-  this.label = "";
+  if(this.label === "") {
+    return;
+  }
+  this.$emit('todo-added', this.label);
+  this.label = "";
 }</pre>
 
 <p>现在，当你单击“添加”按钮时，“new-todo-input”将自行清除。</p>
