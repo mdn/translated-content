@@ -16666,30 +16666,6 @@
       "uleming"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-18T16:30:12.782Z",
-    "contributors": [
-      "HardKullez",
-      "qwerty-wasd",
-      "imalyavskiy",
-      "Davidnadejdin",
-      "SedovDP",
-      "metelskiy",
-      "wbamberg",
-      "rinbik",
-      "SphinxKnight",
-      "toolX",
-      "vherever",
-      "Megabyteceer",
-      "ndrsrv",
-      "NobbsNobby",
-      "Saviloff",
-      "makdeb",
-      "fscholz",
-      "esskia",
-      "ivan.p"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-03-12T19:39:43.277Z",
     "contributors": [
@@ -23796,6 +23772,30 @@
       "teoli",
       "smfd",
       "uleming"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-18T16:30:12.782Z",
+    "contributors": [
+      "HardKullez",
+      "qwerty-wasd",
+      "imalyavskiy",
+      "Davidnadejdin",
+      "SedovDP",
+      "metelskiy",
+      "wbamberg",
+      "rinbik",
+      "SphinxKnight",
+      "toolX",
+      "vherever",
+      "Megabyteceer",
+      "ndrsrv",
+      "NobbsNobby",
+      "Saviloff",
+      "makdeb",
+      "fscholz",
+      "esskia",
+      "ivan.p"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {

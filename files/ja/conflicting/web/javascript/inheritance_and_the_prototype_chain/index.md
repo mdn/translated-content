@@ -1,6 +1,6 @@
 ---
 title: オブジェクトモデルの詳細
-slug: Web/JavaScript/Guide/Details_of_the_Object_Model
+slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 tags:
   - ガイド
   - 中級者
@@ -8,6 +8,7 @@ tags:
   - オブジェクト
   - l10n:priority
 translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
+original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
 

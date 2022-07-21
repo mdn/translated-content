@@ -675,6 +675,7 @@
 /ru/docs/Web/HTTP/Куки	/ru/docs/Web/HTTP/Cookies
 /ru/docs/Web/HTTP/Кэширование	/ru/docs/Web/HTTP/Caching
 /ru/docs/Web/JavaScript/Guide/Closures	/ru/docs/Web/JavaScript/Closures
+/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ru/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ru/docs/Web/JavaScript/Guide/EventLoop	/ru/docs/Web/JavaScript/EventLoop
 /ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov	/ru/docs/Web/JavaScript/Guide/Using_promises

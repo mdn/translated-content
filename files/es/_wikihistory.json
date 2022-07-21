@@ -15655,25 +15655,6 @@
       "isnardi"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-08-17T15:38:30.288Z",
-    "contributors": [
-      "Nachec",
-      "MariaBarros",
-      "AmazonianCodeGuy",
-      "wbamberg",
-      "fherce",
-      "SphinxKnight",
-      "ObsoleteHuman",
-      "ValentinTapiaTorti",
-      "brodriguezs",
-      "DiegoA1114",
-      "montogeek",
-      "fscholz",
-      "teoli",
-      "pheras"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-09-13T21:58:37.783Z",
     "contributors": [
@@ -21230,6 +21211,25 @@
     "modified": "2019-03-23T22:37:47.150Z",
     "contributors": [
       "pekechis"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-08-17T15:38:30.288Z",
+    "contributors": [
+      "Nachec",
+      "MariaBarros",
+      "AmazonianCodeGuy",
+      "wbamberg",
+      "fherce",
+      "SphinxKnight",
+      "ObsoleteHuman",
+      "ValentinTapiaTorti",
+      "brodriguezs",
+      "DiegoA1114",
+      "montogeek",
+      "fscholz",
+      "teoli",
+      "pheras"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {

@@ -1,13 +1,13 @@
 ---
 title: Le modèle objet JavaScript en détails
-slug: Web/JavaScript/Guide/Details_of_the_Object_Model
+slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 tags:
   - Guide
   - Intermediate
   - JavaScript
   - Object
 translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
-original_slug: Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails
+original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_Objects", "Web/JavaScript/Guide/Using_promises")}}
 
