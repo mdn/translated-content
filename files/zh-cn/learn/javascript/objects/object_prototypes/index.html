@@ -93,7 +93,7 @@ console.log( doSomething.prototype );
 }
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>然后，我们可以使用 new 运算符来在现在的这个原型基础之上，创建一个 <code>doSomething</code> 的实例。正确使用 new 运算符的方法就是在正常调用函数时，在函数名的前面加上一个 <code>new</code> 前缀。通过这种方法，在调用函数前加一个 <code>new</code> ，它就会返回一个这个函数的实例化对象。然后，就可以在这个对象上面添加一些属性。看。</p>
 
@@ -103,11 +103,11 @@ var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value"; // add a property onto the object
 console.log( doSomeInstancing );</pre>
 
-<p> </p>
+<p> </p>
 
 <p>结果：</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">{
     prop: "some value",

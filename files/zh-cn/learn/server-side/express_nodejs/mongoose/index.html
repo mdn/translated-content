@@ -608,7 +608,7 @@ SomeModel.find(callback_function);</code></pre>
 <pre class="brush: js notranslate">// 设置 Mongoose 连接
 const mongoose = require('mongoose');
 const mongoDB = '<em>在此插入数据库_URL</em>';
-mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));</pre>
@@ -728,7 +728,7 @@ const BookInstanceSchema = new Schema({
     status: {
       type: String,
       required: true,
-      <strong>enum: </strong>['Available', 'Maintenance', 'Loaned', 'Reserved'],
+      <strong>enum: </strong>['Available', 'Maintenance', 'Loaned', 'Reserved'],
       <strong>default: </strong>'Maintenance'<strong>
     </strong>},
     due_back: {type: Date, <strong>default: Date.now</strong>}
@@ -779,7 +779,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
   <div class="note">
   <p><strong>注：</strong>无需深究 <a href="https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a>，它只是为数据库添加一些示例数据。</p>
 
-  <p>译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”， 请对<a href="https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a>源码酌情修改，否则会报错而添加数据失败。</p>
+  <p>译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”， 请对<a href="https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js">populatedb.js</a>源码酌情修改，否则会报错而添加数据失败。</p>
   </div>
  </li>
  <li>在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）

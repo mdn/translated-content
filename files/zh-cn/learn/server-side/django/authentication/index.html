@@ -48,15 +48,15 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <pre class="brush: python">INSTALLED_APPS = [
     ...
-<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
-<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
+<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
+<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
     ....
 
 MIDDLEWARE = [
     ...
-<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
+<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
     ...
-<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
+<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
     ....
 </pre>
 
@@ -99,7 +99,7 @@ user.save()
  <li>单击“用户”旁边的“添加”按钮 <strong>Add</strong>，以打开“添加用户”对话框。<img alt="Admin site - add user pt1" src="admin_authentication_add_user_prt1.png"></li>
  <li>为测试用户输入适当的用户名（<strong>Username）</strong>和密码/密码确认<strong>（Password/Password confirmation</strong> ）</li>
  <li>按 <strong>SAVE</strong> 创建用户。
-  <p> </p>
+  <p> </p>
 
   <p>管理站点将创建新用户，并立即转到“更改用户”屏幕，您可以在其中更改用户名（<strong>username</strong>），并添加用户模型的可选字段的信息。这些字段包括名字，姓氏，电子邮件地址，用户状态和权限（仅应设置活动标志<strong> Active</strong>）。再往下，您可以指定用户的分组和权限，并查看与用户相关的重要日期（例如，他们的加入日期和上次登录日期）。</p>
   <img alt="Admin site - add user pt2" src="admin_authentication_add_user_prt2.png"></li>
@@ -140,7 +140,7 @@ urlpatterns += [
 ]
 </pre>
 
-<p>打开 URL <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a> （注意前面的斜杠！），Django 将显示一个错误，它无法找到此 URL，并列出它尝试过的所有 URL。从中您可以看到可以使用的 URL，例如：</p>
+<p>打开 URL <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a> （注意前面的斜杠！），Django 将显示一个错误，它无法找到此 URL，并列出它尝试过的所有 URL。从中您可以看到可以使用的 URL，例如：</p>
 
 <div class="note">
 <p><strong>注意：</strong>使用上面的方法，添加以下带有方括号中的名称的 URL，可用于反转 URL 映射。您不必实现任何其他内容 - 上面的 url 映射，会自动映射下面提到的 URL。</p>
@@ -166,17 +166,17 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <h3 id="模板目录">模板目录</h3>
 
-<p>我们希望在模板搜索路径中的目录 <strong>/registration/</strong> 某处，找到刚刚添加的 url（以及隐式视图）的关联模板。</p>
+<p>我们希望在模板搜索路径中的目录 <strong>/registration/</strong> 某处，找到刚刚添加的 url（以及隐式视图）的关联模板。</p>
 
 <p>对于此站点，我们将 HTML 页面，放在 <strong>templates/registration/ </strong>目录中。此目录应该位于项目的根目录中，即与 <strong>catalog </strong>和 <strong>locallibrary </strong>文件夹相同的目录）。请立即创建这些文件夹。</p>
 
 <div class="note">
 <p><strong>注意：</strong> 您的文件夹结构，现在应如下所示：<br>
  locallibrary (django project folder)<br>
-    |_catalog<br>
-    |_locallibrary<br>
-    |_templates <strong>(new)</strong><br>
-                 |_registration</p>
+    |_catalog<br>
+    |_locallibrary<br>
+    |_templates <strong>(new)</strong><br>
+                 |_registration</p>
 </div>
 
 <p>要使这些目录对模板加载器可见（即将此目录放在模板搜索路径中），请打开项目设置（<strong>/locallibrary/locallibrary/settings.py</strong>），并更新<code>TEMPLATES </code>部分的“<code>DIRS</code>”那一行，如下所示。</p>
@@ -206,29 +206,29 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 {% endif %}
 
 {% if next %}
-    {% if user.is_authenticated %}
-    &lt;p&gt;Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.&lt;/p&gt;
-    {% else %}
-    &lt;p&gt;Please login to see this page.&lt;/p&gt;
-    {% endif %}
+    {% if user.is_authenticated %}
+    &lt;p&gt;Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.&lt;/p&gt;
+    {% else %}
+    &lt;p&gt;Please login to see this page.&lt;/p&gt;
+    {% endif %}
 {% endif %}
 
 &lt;form method="post" action="{% url 'login' %}"&gt;
 {% csrf_token %}
 
 &lt;div&gt;
-  &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
-  &lt;td&gt;\{{ form.username }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.username }}&lt;/td&gt;
 &lt;/div&gt;
 &lt;div&gt;
-  &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
-  &lt;td&gt;\{{ form.password }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.password }}&lt;/td&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-  &lt;input type="submit" value="login" /&gt;
-  &lt;input type="hidden" name="next" value="\{{ next }}" /&gt;
+  &lt;input type="submit" value="login" /&gt;
+  &lt;input type="hidden" name="next" value="\{{ next }}" /&gt;
 &lt;/div&gt;
 &lt;/form&gt;
 
@@ -388,7 +388,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <h3 id="在模板中测试">在模板中测试</h3>
 
-<p>您可以使用<code>\{{ user }}</code>模板变量，以获取有关模板中，当前登录用户的信息（默认情况下，在我们在骨架中设置项目时，会将其添加到模板上下文中）。</p>
+<p>您可以使用<code>\{{ user }}</code>模板变量，以获取有关模板中，当前登录用户的信息（默认情况下，在我们在骨架中设置项目时，会将其添加到模板上下文中）。</p>
 
 <p>通常，您将首先针对 <code>\{{ user.is_authenticated }} </code>模板变量进行测试，以确定用户是否有资格查看特定内容。为了展示这一点，接下来我们将更新侧边栏，以在用户登出时，显示“登录”链接，如果他们已登录，则显示“登出”链接。</p>
 
@@ -406,7 +406,7 @@ LOGIN_REDIRECT_URL = '/'
    <strong>{% endif %} </strong>
   &lt;/ul&gt;</pre>
 
-<p>如您所见，我们使用 <code>if</code>-<code>else</code>-<code>endif</code>模板标签，根据 <code>\{{ user.is_authenticated }}</code> 是否为 true，来有条件地显示文本。如果用户已通过身份验证，那么我们知道，我们拥有有效用户，因此我们会调用 <strong>\{{ user.get_username }} </strong>，来显示其名称。</p>
+<p>如您所见，我们使用 <code>if</code>-<code>else</code>-<code>endif</code>模板标签，根据 <code>\{{ user.is_authenticated }}</code> 是否为 true，来有条件地显示文本。如果用户已通过身份验证，那么我们知道，我们拥有有效用户，因此我们会调用 <strong>\{{ user.get_username }} </strong>，来显示其名称。</p>
 
 <p>我们使用 <code>url</code>模板标记，和相应 URL 配置的名称，创建登录和登出链接 URL。另外请注意，我们如何将“<code>?next=\{{request.path}}</code>附加到 URL 的末尾。这样做，是将包含当前页面地址（URL）的 URL 参数，添加到链接 URL 的末尾。用户成功登录/登出后，视图将使用此“下一个”值，将用户重定向，回到他们首次单击登录/登出链接的页面。</p>
 
@@ -456,7 +456,7 @@ class MyView(LoginRequiredMixin, View):
 
 <p>首先，我们必须让用户可以借用书本实例<code>BookInstance</code>（我们已经拥有状态<code>status</code>和还书日期<code>due_back</code>，但这个模型和用户之间，没有任何关联。我们将使用<code>ForeignKey</code>（一对多）字段，来创建一个。我们还需要一个简单的机制，来测试借出的书是否过期。</p>
 
-<p>打开 <strong>catalog/models.py</strong>，然后从 <code>django.contrib.auth.models</code>  导入 <code>User</code>模型（在文件顶部的上一个导入行的正下方添加它，好让后续代码可以使用 <code>User</code>）：</p>
+<p>打开 <strong>catalog/models.py</strong>，然后从 <code>django.contrib.auth.models</code>  导入 <code>User</code>模型（在文件顶部的上一个导入行的正下方添加它，好让后续代码可以使用 <code>User</code>）：</p>
 
 <pre class="brush: python">from django.contrib.auth.models import User
 </pre>
@@ -492,17 +492,17 @@ python3 manage.py migrate
 
 <pre class="brush: python">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
-    list_filter = ('status', 'due_back')
+    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
+    list_filter = ('status', 'due_back')
 
-    fieldsets = (
-        (None, {
-            'fields': ('book','imprint', 'id')
-        }),
-        ('Availability', {
-            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
-        }),
-    )</pre>
+    fieldsets = (
+        (None, {
+            'fields': ('book','imprint', 'id')
+        }),
+        ('Availability', {
+            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
+        }),
+    )</pre>
 
 <h3 id="借几本书">借几本书</h3>
 
@@ -569,7 +569,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>当开发服务器运行时，您现在应该能够在浏览器中，查看登录用户的列表，网址为<a href="http://127.0.0.1:8000/catalog/mybooks/">http://127.0.0.1:8000/catalog/mybooks/</a>。在您的用户登录并登出后，尝试此操作（在第二种情况下，您应该被重定向到登录页面）。</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="将列表添加到侧栏">将列表添加到侧栏</h3>
 
@@ -606,21 +606,21 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <pre class="brush: python">class BookInstance(models.Model):
     ...
-    class Meta:
-        ...
+    class Meta:
+        ...
 <strong>        permissions = (("can_mark_returned", "Set book as returned"),)  </strong> </pre>
 
 <p>然后，我们可以将权限分配给管理站点中的图书管理员“Librarian”分组。打开 <strong>catalog/models.py</strong>，然后添加权限，如上所示。您需要重新运行迁移（调用 <code>python3 manage.py makemigrations</code> 和 <code>python3 manage.py migrate</code>），以适当地更新数据库。</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="模板">模板</h3>
 
-<p>当前用户的权限，存在名为 <code>\{{ perms }}</code>的模板变量中。您可以使用关联的 Django“app”中的特定变量名，来检查当前用户是否具有特定权限 - 例如，如果用户具有此权限，则 <code>\{{ perms.catalog.can_mark_returned }}</code>将为 True，否则为 False。我们通常使用模板标记 <code>{% if %}</code> 测试权限，如下所示：</p>
+<p>当前用户的权限，存在名为 <code>\{{ perms }}</code>的模板变量中。您可以使用关联的 Django“app”中的特定变量名，来检查当前用户是否具有特定权限 - 例如，如果用户具有此权限，则 <code>\{{ perms.catalog.can_mark_returned }}</code>将为 True，否则为 False。我们通常使用模板标记 <code>{% if %}</code> 测试权限，如下所示：</p>
 
 <pre class="brush: python">{% if perms.catalog.<code>can_mark_returned</code> %}
     &lt;!-- We can mark a BookInstance as returned. --&gt;
-    &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
+    &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
 {% endif %}
 </pre>
 
@@ -685,7 +685,7 @@ class MyView(PermissionRequiredMixin, View):
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="本教程文档">本教程文档</h2>
 
@@ -707,4 +707,4 @@ class MyView(PermissionRequiredMixin, View):
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django 微博客</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

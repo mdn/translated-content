@@ -45,7 +45,7 @@ translation_of: Learn/Server-side/Django/Deployment
 
 <ul>
  <li>网站运行所需要的电脑硬件</li>
- <li>操作系统 (例如 Linux, Windows).</li>
+ <li>操作系统 (例如 Linux, Windows).</li>
  <li>编程语言运行库和框架库，在其上编写您的网站。</li>
  <li>用于提供页面和其他内容的 Web 服务器（例如 Nginx，Apache）。</li>
  <li>在 Django 网站和 Web 服务器之间，传递“动态”请求的应用程序服务器。</li>
@@ -263,14 +263,14 @@ with open('/etc/secret_key.txt') as f:
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
-  (use "git reset HEAD &lt;file&gt;..." to unstage)
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
 
-        modified:   .gitignore
-        new file:   catalog/__init__.py
+        modified:   .gitignore
+        new file:   catalog/__init__.py
         ...
-        new file:   catalog/migrations/0001_initial.py
+        new file:   catalog/migrations/0001_initial.py
         ...
-        new file:   templates/registration/password_reset_form.html</pre>
+        new file:   templates/registration/password_reset_form.html</pre>
  </li>
  <li>如果您满意，请将文件提交到本地储存库：
   <pre class="brush: bash notranslate">git commit -m "First version of application moved into github"</pre>
@@ -373,7 +373,7 @@ pip3 install psycopg2
 <p>相关的设置变量是：</p>
 
 <ul>
- <li><code>STATIC_URL</code>:  这是将提供静态文件的基本 URL 位置，例如，在 CDN 上。这用于在我们的基本模板中访问的静态模板变量（请参阅 <a href="/zh-CN/docs/Learn/Server-side/Django/Home_page">Django 教程 5：创建我们的主页</a>）。</li>
+ <li><code>STATIC_URL</code>:  这是将提供静态文件的基本 URL 位置，例如，在 CDN 上。这用于在我们的基本模板中访问的静态模板变量（请参阅 <a href="/zh-CN/docs/Learn/Server-side/Django/Home_page">Django 教程 5：创建我们的主页</a>）。</li>
  <li><code>STATIC_ROOT</code>: 这是 Django 的“collectstatic”工具将收集模板中引用的任何静态文件的目录的绝对路径。收集完成后，可以将这些文件，作为一个组上载到托管文件的任何位置。</li>
  <li><code>STATICFILES_DIRS</code>: 这列出了 Django 的 collectstatic 工具应该搜索静态文件的其他目录。</li>
 </ul>
@@ -418,14 +418,14 @@ STATIC_URL = '/static/'
 <p>要将 WhiteNoise 安装到您的 Django 应用程序中，请打开<strong>/locallibrary/settings.py</strong>，找到<code>MIDDLEWARE</code>设置，并在<code>SecurityMiddleware</code>正下方的列表顶部附近，添加<code>WhiteNoiseMiddleware</code>：</p>
 
 <pre class="notranslate">MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     <strong>'whitenoise.middleware.WhiteNoiseMiddleware',</strong>
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 </pre>
 

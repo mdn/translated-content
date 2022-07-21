@@ -55,23 +55,23 @@ translation_of: Learn/Server-side/Django/Testing
 
 <p>Django 提供了一个测试框架，其中包含基于 Python 标准<code><a href="https://docs.python.org/3/library/unittest.html#module-unittest">unittest</a></code>库的小型层次结构。尽管名称如此，但该测试框架适用于单元测试和集成测试。Django 框架添加了 API 方法和工具，以帮助测试 Web 和 Django 特定的行为。这允许您模拟请求，插入测试数据以及检查应用程序的输出。Django 还提供了一个 API（<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>）和<a href="https://docs.djangoproject.com/en/2.0/topics/testing/advanced/#other-testing-frameworks">使用不同测试框架</a>的工具，例如，您可以与流行的 <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Selenium</a> 框架集成，以模拟用户与实时浏览器交互。</p>
 
-<p>要编写测试，您可以从任何 Django（或 unittest）测试基类（<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#simpletestcase">SimpleTestCase</a>, <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#transactiontestcase">TransactionTestCase</a>, <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase">TestCase</a>, <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>）派生，然后编写单独的方法，来检查特定功能，是否按预期工作（测试使用“assert”方法来测试表达式导致 <code>True</code>或 <code>False</code>值，或者两个值相等，等等。）当您开始测试运行时，框架将在派生类中执行所选的测试方法。测试方法独立运行，具有在类中定义的常见设置和/或拆卸行为，如下所示。</p>
+<p>要编写测试，您可以从任何 Django（或 unittest）测试基类（<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#simpletestcase">SimpleTestCase</a>, <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#transactiontestcase">TransactionTestCase</a>, <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase">TestCase</a>, <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase">LiveServerTestCase</a>）派生，然后编写单独的方法，来检查特定功能，是否按预期工作（测试使用“assert”方法来测试表达式导致 <code>True</code>或 <code>False</code>值，或者两个值相等，等等。）当您开始测试运行时，框架将在派生类中执行所选的测试方法。测试方法独立运行，具有在类中定义的常见设置和/或拆卸行为，如下所示。</p>
 
 <pre class="brush: python">class YourTestClass(TestCase):
 
-    def setUp(self):
-        #Setup run before every test method.
-        pass
+    def setUp(self):
+        #Setup run before every test method.
+        pass
 
-    def tearDown(self):
-        #Clean up run after every test method.
-        pass
+    def tearDown(self):
+        #Clean up run after every test method.
+        pass
 
-    def test_something_that_will_pass(self):
-        self.assertFalse(False)
+    def test_something_that_will_pass(self):
+        self.assertFalse(False)
 
-    def test_something_that_will_fail(self):
-        self.assertTrue(False)
+    def test_something_that_will_fail(self):
+        self.assertTrue(False)
 </pre>
 
 <p>大多数测试的最佳基类是 <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase">django.test.TestCase</a>。此测试类在运行测试之前，创建一个干净的数据库，并在自己的事务中，运行每个测试函数。该类还拥有一个<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.Client">测试客户端</a>，您可以使用该客户端，模拟在视图级别与代码交互的用户。在下面的部分中，我们将集中讨论使用此<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase">TestCase</a> 基类创建的单元测试。</p>
@@ -89,20 +89,20 @@ translation_of: Learn/Server-side/Django/Testing
 <p>但是，您应该检查用于标签的文本（名字，姓氏，出生日期，死亡），以及为文本分配的字段大小（100 个字符），因为这些是您的设计的一部分，可能会在将来被打破/改变。</p>
 
 <pre class="brush: python">class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    date_of_birth = models.DateField(null=True, blank=True)
+    date_of_death = models.DateField('Died', null=True, blank=True)
 
-    def get_absolute_url(self):
-        return reverse('author-detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        return reverse('author-detail', args=[str(self.id)])
 
-    def __str__(self):
-        return '%s, %s' % (self.last_name, self.first_name)</pre>
+    def __str__(self):
+        return '%s, %s' % (self.last_name, self.first_name)</pre>
 
 <p>同样，您应该检查自定义方法 <code style="font-style: normal; font-weight: normal;">get_absolute_url()</code> 和 <code style="font-style: normal; font-weight: normal;">__str__()</code> 是否符合要求，因为它们是您的代码/业务逻辑。在<code style="font-style: normal; font-weight: normal;">get_absolute_url()</code>的情况下，您可以相信 Django <code>reverse()</code>方法已经正确实现，因此您正在测试的是实际上已经定义了关联的视图。</p>
 
-<p> </p>
+<p> </p>
 
 <div class="note">
 <p><strong>注意：</strong> 精明的读者可能会注意到，我们也希望将出生和死亡的日期限制在合理的值，并检查出生后是否死亡。在 Django 中，此约束将添加到表单类中（尽管您可以为字段定义验证器，这些字段似乎仅在表单级别使用，而不是在模型级别使用）。</p>
@@ -117,16 +117,16 @@ translation_of: Learn/Server-side/Django/Testing
 <p>Django 使用 unittest 模块的<a href="https://docs.python.org/3/library/unittest.html#unittest-test-discovery">内置测试查找</a>，它将在任何使用模式<strong>test*.py </strong>命名的文件中，查找当前工作目录下的测试。如果您正确命名文件，则可以使用您喜欢的任何结构。我们建议您为测试代码创建一个模块，并为模型，视图，表单和您需要测试的任何其他类型的代码，分别创建文件。例如：</p>
 
 <pre>catalog/
-  /tests/
-    __init__.py
-    test_models.py
-    test_forms.py
-    test_views.py
+  /tests/
+    __init__.py
+    test_models.py
+    test_forms.py
+    test_views.py
 </pre>
 
 <p>在 LocalLibrary 项目中，创建如上所示的文件结构。<strong>__init__.py </strong>应该是一个空文件（这告诉 Python 该目录是一个套件包）。您可以通过复制和重命名框架测试文件<strong>/catalog/tests.py</strong>，来创建三个测试文件。</p>
 
-<p> </p>
+<p> </p>
 
 <div class="note">
 <p><strong>注意：</strong> 我们构建 Django 骨架网站时，会自动创建骨架测试文件<strong>/catalog/tests.py</strong> 。将所有测试放入其中是完全“合法的”，但如果测试正确，您将很快得到一个非常庞大且难以管理的测试文件。</p>
@@ -147,26 +147,26 @@ translation_of: Learn/Server-side/Django/Testing
 
 <pre class="brush: python">class YourTestClass(TestCase):
 
-    @classmethod
-    def setUpTestData(cls):
-        print("setUpTestData: Run once to set up non-modified data for all class methods.")
-        pass
+    @classmethod
+    def setUpTestData(cls):
+        print("setUpTestData: Run once to set up non-modified data for all class methods.")
+        pass
 
-    def setUp(self):
-        print("setUp: Run once for every test method to setup clean data.")
-        pass
+    def setUp(self):
+        print("setUp: Run once for every test method to setup clean data.")
+        pass
 
-    def test_false_is_false(self):
-        print("Method: test_false_is_false.")
-        self.assertFalse(False)
+    def test_false_is_false(self):
+        print("Method: test_false_is_false.")
+        self.assertFalse(False)
 
-    def test_false_is_true(self):
-        print("Method: test_false_is_true.")
-        self.assertTrue(False)
+    def test_false_is_true(self):
+        print("Method: test_false_is_true.")
+        self.assertTrue(False)
 
-    def test_one_plus_one_equals_two(self):
-        print("Method: test_one_plus_one_equals_two.")
-        self.assertEqual(1 + 1, 2)</pre>
+    def test_one_plus_one_equals_two(self):
+        print("Method: test_one_plus_one_equals_two.")
+        self.assertEqual(1 + 1, 2)</pre>
 
 <p>新的类别定义了两个可用于测试之前的配置的方法（例如，创建测试所需的任何模型或其他对象）：</p>
 
@@ -195,7 +195,7 @@ translation_of: Learn/Server-side/Django/Testing
 
 <p>这将查找当前目录下，使用模式 <strong>test*.py</strong> 命名的所有文件，并运行使用适当基类定义的所有测试（这里我们有许多测试文件，但只有 <strong>/catalog/tests/test_models.py</strong> 目前包含任何测试。）。默认情况下，测试将仅单独报告测试失败，然后是测试摘要。</p>
 
-<p> </p>
+<p> </p>
 
 <div class="note">
 <p>如果您收到类似于以下内容的错误：<code>ValueError: Missing staticfiles manifest entry ...</code> 这可能是因为默认情况下，测试不会运行 collectstatic，而您的应用程序正在使用需要它的储存类别（有关更多信息，请参阅 <a href="https://docs.djangoproject.com/en/2.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict">manifest_strict</a>）。有许多方法可以解决这个问题 - 最简单的方法，是在运行测试之前，简单地运行 collectstatic：</p>
@@ -221,8 +221,8 @@ Method: test_one_plus_one_equals_two.</strong>
 FAIL: test_false_is_true (catalog.tests.tests_models.YourTestClass)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\Github\django_tmp\library_w_t_2\locallibrary\catalog\tests\tests_models.py", line 22, in test_false_is_true
-    self.assertTrue(False)
+  File "D:\Github\django_tmp\library_w_t_2\locallibrary\catalog\tests\tests_models.py", line 22, in test_false_is_true
+    self.assertTrue(False)
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
@@ -274,16 +274,16 @@ python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one
 <p>例如，请考虑下面的作者模型<code> Author</code>。在这里，我们应该测试所有字段的标签，因为即使我们没有明确指定它们中的大部分，我们也有一个设计，说明这些值应该是什么。如果我们不测试值，那么我们不知道字段标签，是否具有其预期值。同样，虽然我们相信 Django 会创建一个指定长度的字段，但值得为这个长度指定一个测试，以确保它按计划实现。</p>
 
 <pre class="brush: python">class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    date_of_birth = models.DateField(null=True, blank=True)
+    date_of_death = models.DateField('Died', null=True, blank=True)
 
-    def get_absolute_url(self):
-        return reverse('author-detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        return reverse('author-detail', args=[str(self.id)])
 
-    def __str__(self):
-        return '%s, %s' % (self.last_name, self.first_name)</pre>
+    def __str__(self):
+        return '%s, %s' % (self.last_name, self.first_name)</pre>
 
 <p>打开我们的 <strong>/catalog/tests/test_models.py</strong>，并用 <code>Author</code>模型的以下测试代码，替换任何现有代码。</p>
 
@@ -337,7 +337,7 @@ self.assertEquals(field_label,'first name')  # Compare the value to the expected
 
 <ul>
  <li>我们无法使用 <code>author.first_name.verbose_name</code>直接获取 <code>verbose_name</code>，因为<code>author.first_name </code>是一个字符串（不是我们可以用来访问其属性的<code>first_name</code> 对象的句柄）。取而代之的是，我们需要使用作者的 <code>_meta</code>属性，来获取字段的实例，并使用它来查询其他信息。<br>
-     </li>
+     </li>
  <li>我们选择使用 <code>assertEquals(field_label,'first name')</code> ，而不是<code>assertTrue(field_label == 'first name')</code>。这样做的原因是，如果测试失败，前者的输出，会告诉您标签实际上是什么，这使得调试问题变得更容易一些。</li>
 </ul>
 
@@ -348,14 +348,14 @@ self.assertEquals(field_label,'first name')  # Compare the value to the expected
 <p>我们还需要测试我们的自定义方法。这些基本上只是检查对象名称，是否按照我们的预期，使用“姓氏”，“名字”格式构建，并且我们为<code>Author</code>获取的 URL，是我们所期望的。</p>
 
 <pre class="brush: python">def test_object_name_is_last_name_comma_first_name(self):
-    author=Author.objects.get(id=1)
-    expected_object_name = '%s, %s' % (author.last_name, author.first_name)
-    self.assertEquals(expected_object_name,str(author))
+    author=Author.objects.get(id=1)
+    expected_object_name = '%s, %s' % (author.last_name, author.first_name)
+    self.assertEquals(expected_object_name,str(author))
 
 def test_get_absolute_url(self):
-    author=Author.objects.get(id=1)
-    #This will also fail if the urlconf is not defined.
-    self.assertEquals(author.get_absolute_url(),'/catalog/author/1')</pre>
+    author=Author.objects.get(id=1)
+    #This will also fail if the urlconf is not defined.
+    self.assertEquals(author.get_absolute_url(),'/catalog/author/1')</pre>
 
 <p>立即运行测试。如果您按照模型教程中的描述，创建了作者模型，则很可能会出现<code>date_of_death</code>标签的错误，如下所示。测试失败，是因为它写的是期望标签定义遵循 Django 的约定，即没有大写标签的第一个字母（Django 会为你做这个）。</p>
 
@@ -418,37 +418,37 @@ from catalog.forms import RenewBookForm
 
 class RenewBookFormTest(TestCase):
 
-    def test_renew_form_date_field_label(self):
-        form = RenewBookForm()
-        self.assertTrue(form.fields['renewal_date'].label == None or form.fields['renewal_date'].label == 'renewal date')
+    def test_renew_form_date_field_label(self):
+        form = RenewBookForm()
+        self.assertTrue(form.fields['renewal_date'].label == None or form.fields['renewal_date'].label == 'renewal date')
 
-    def test_renew_form_date_field_help_text(self):
-        form = RenewBookForm()
-        self.assertEqual(form.fields['renewal_date'].help_text,'Enter a date between now and 4 weeks (default 3).')
+    def test_renew_form_date_field_help_text(self):
+        form = RenewBookForm()
+        self.assertEqual(form.fields['renewal_date'].help_text,'Enter a date between now and 4 weeks (default 3).')
 
-    def test_renew_form_date_in_past(self):
-        date = datetime.date.today() - datetime.timedelta(days=1)
-        form_data = {'renewal_date': date}
-        form = RenewBookForm(data=form_data)
-        self.assertFalse(form.is_valid())
+    def test_renew_form_date_in_past(self):
+        date = datetime.date.today() - datetime.timedelta(days=1)
+        form_data = {'renewal_date': date}
+        form = RenewBookForm(data=form_data)
+        self.assertFalse(form.is_valid())
 
-    def test_renew_form_date_too_far_in_future(self):
-        date = datetime.date.today() + datetime.timedelta(weeks=4) + datetime.timedelta(days=1)
-        form_data = {'renewal_date': date}
-        form = RenewBookForm(data=form_data)
-        self.assertFalse(form.is_valid())
+    def test_renew_form_date_too_far_in_future(self):
+        date = datetime.date.today() + datetime.timedelta(weeks=4) + datetime.timedelta(days=1)
+        form_data = {'renewal_date': date}
+        form = RenewBookForm(data=form_data)
+        self.assertFalse(form.is_valid())
 
-    def test_renew_form_date_today(self):
-        date = datetime.date.today()
-        form_data = {'renewal_date': date}
-        form = RenewBookForm(data=form_data)
-        self.assertTrue(form.is_valid())
+    def test_renew_form_date_today(self):
+        date = datetime.date.today()
+        form_data = {'renewal_date': date}
+        form = RenewBookForm(data=form_data)
+        self.assertTrue(form.is_valid())
 
-    def test_renew_form_date_max(self):
-        date = timezone.now() + datetime.timedelta(weeks=4)
-        form_data = {'renewal_date': date}
-        form = RenewBookForm(data=form_data)
-        self.assertTrue(form.is_valid())
+    def test_renew_form_date_max(self):
+        date = timezone.now() + datetime.timedelta(weeks=4)
+        form_data = {'renewal_date': date}
+        form = RenewBookForm(data=form_data)
+        self.assertTrue(form.is_valid())
 </pre>
 
 <p>前两个函数，测试字段的<code>label</code> 和 <code>help_text</code>，是否符合预期。我们必须使用字段字典访问该字段（例如<code>form.fields['renewal_date']</code>）。请注意，我们还必须测试标签值，是否为<code>None</code>，因为即使 Django 将呈现正确的标签，如果未明确设置该值，它也会返回<code>None</code>。</p>
@@ -487,41 +487,41 @@ from django.urls import reverse
 
 class AuthorListViewTest(TestCase):
 
-    @classmethod
-    def setUpTestData(cls):
-        #Create 13 authors for pagination tests
-        number_of_authors = 13
-        for author_num in range(number_of_authors):
-            Author.objects.create(first_name='Christian %s' % author_num, last_name = 'Surname %s' % author_num,)
+    @classmethod
+    def setUpTestData(cls):
+        #Create 13 authors for pagination tests
+        number_of_authors = 13
+        for author_num in range(number_of_authors):
+            Author.objects.create(first_name='Christian %s' % author_num, last_name = 'Surname %s' % author_num,)
 
-    def test_view_url_exists_at_desired_location(self):
-        resp = self.client.get('/catalog/authors/')
-        self.assertEqual(resp.status_code, 200)
+    def test_view_url_exists_at_desired_location(self):
+        resp = self.client.get('/catalog/authors/')
+        self.assertEqual(resp.status_code, 200)
 
-    def test_view_url_accessible_by_name(self):
-        resp = self.client.get(reverse('authors'))
-        self.assertEqual(resp.status_code, 200)
+    def test_view_url_accessible_by_name(self):
+        resp = self.client.get(reverse('authors'))
+        self.assertEqual(resp.status_code, 200)
 
-    def test_view_uses_correct_template(self):
-        resp = self.client.get(reverse('authors'))
-        self.assertEqual(resp.status_code, 200)
+    def test_view_uses_correct_template(self):
+        resp = self.client.get(reverse('authors'))
+        self.assertEqual(resp.status_code, 200)
 
-        self.assertTemplateUsed(resp, 'catalog/author_list.html')
+        self.assertTemplateUsed(resp, 'catalog/author_list.html')
 
-    def test_pagination_is_ten(self):
-        resp = self.client.get(reverse('authors'))
-        self.assertEqual(resp.status_code, 200)
-        self.assertTrue('is_paginated' in resp.context)
-        self.assertTrue(resp.context['is_paginated'] == True)
-        self.assertTrue( len(resp.context['author_list']) == 10)
+    def test_pagination_is_ten(self):
+        resp = self.client.get(reverse('authors'))
+        self.assertEqual(resp.status_code, 200)
+        self.assertTrue('is_paginated' in resp.context)
+        self.assertTrue(resp.context['is_paginated'] == True)
+        self.assertTrue( len(resp.context['author_list']) == 10)
 
-    def test_lists_all_authors(self):
-        #Get second page and confirm it has (exactly) remaining 3 items
-        resp = self.client.get(reverse('authors')+'?page=2')
-        self.assertEqual(resp.status_code, 200)
-        self.assertTrue('is_paginated' in resp.context)
-        self.assertTrue(resp.context['is_paginated'] == True)
-        self.assertTrue( len(resp.context['author_list']) == 3)</pre>
+    def test_lists_all_authors(self):
+        #Get second page and confirm it has (exactly) remaining 3 items
+        resp = self.client.get(reverse('authors')+'?page=2')
+        self.assertEqual(resp.status_code, 200)
+        self.assertTrue('is_paginated' in resp.context)
+        self.assertTrue(resp.context['is_paginated'] == True)
+        self.assertTrue( len(resp.context['author_list']) == 3)</pre>
 
 <p>所有测试，都使用客户端（属于我们的<code>TestCase</code>的派生类）来模拟<code>GET</code>请求，并获得响应（<code>resp</code>）。第一个版本检查特定 URL（注意，只是没有域名的特定路径），而第二个版本从 URL 配置中的名称生成 URL。</p>
 
@@ -553,7 +553,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>将以下测试代码，添加到 <strong>/catalog/tests/test_views.py</strong>。这里我们首先使用<code>SetUp()</code>创建一些用户登录帐户，和<code>BookInstance</code>对象（以及它们的相关书本，和其他记录），我们稍后将在测试中使用它们。每个测试用户都借用了一半的书本，但我们最初，将所有书本的状态设置为“维护”。我们使用了<code>SetUp()</code>而不是<code>setUpTestData()</code>，因为我们稍后会修改其中的一些对象。</p>
 
-<p> </p>
+<p> </p>
 
 <div class="note">
 <p><strong>注意：</strong> 下面的<code>setUp()</code>代码，会创建一个具有指定语言<code>Language</code>的书本，但您的代码可能不包含语言模型<code>Language</code>，因为它是作为挑战创建的。如果是这种情况，只需注释掉创建或导入语言对象的代码部分。您还应该在随后的<code>RenewBookInstancesViewTest</code>部分中，执行此操作。</p>
@@ -567,113 +567,113 @@ from django.contrib.auth.models import User #Required to assign User as a borrow
 
 class LoanedBookInstancesByUserListViewTest(TestCase):
 
-    def setUp(self):
-        #Create two users
-        test_user1 = User.objects.create_user(username='testuser1', password='12345')
-        test_user1.save()
-        test_user2 = User.objects.create_user(username='testuser2', password='12345')
-        test_user2.save()
+    def setUp(self):
+        #Create two users
+        test_user1 = User.objects.create_user(username='testuser1', password='12345')
+        test_user1.save()
+        test_user2 = User.objects.create_user(username='testuser2', password='12345')
+        test_user2.save()
 
-        #Create a book
-        test_author = Author.objects.create(first_name='John', last_name='Smith')
-        test_genre = Genre.objects.create(name='Fantasy')
-        test_language = Language.objects.create(name='English')
-        test_book = Book.objects.create(title='Book Title', summary = 'My book summary', isbn='ABCDEFG', author=test_author, language=test_language)
-        # Create genre as a post-step
-        genre_objects_for_book = Genre.objects.all()
-        test_book.genre.set(genre_objects_for_book) #Direct assignment of many-to-many types not allowed.
-        test_book.save()
+        #Create a book
+        test_author = Author.objects.create(first_name='John', last_name='Smith')
+        test_genre = Genre.objects.create(name='Fantasy')
+        test_language = Language.objects.create(name='English')
+        test_book = Book.objects.create(title='Book Title', summary = 'My book summary', isbn='ABCDEFG', author=test_author, language=test_language)
+        # Create genre as a post-step
+        genre_objects_for_book = Genre.objects.all()
+        test_book.genre.set(genre_objects_for_book) #Direct assignment of many-to-many types not allowed.
+        test_book.save()
 
-        #Create 30 BookInstance objects
-        number_of_book_copies = 30
-        for book_copy in range(number_of_book_copies):
-            return_date= timezone.now() + datetime.timedelta(days=book_copy%5)
-            if book_copy % 2:
-                the_borrower=test_user1
-            else:
-                the_borrower=test_user2
-            status='m'
-            BookInstance.objects.create(book=test_book,imprint='Unlikely Imprint, 2016', due_back=return_date, borrower=the_borrower, status=status)
+        #Create 30 BookInstance objects
+        number_of_book_copies = 30
+        for book_copy in range(number_of_book_copies):
+            return_date= timezone.now() + datetime.timedelta(days=book_copy%5)
+            if book_copy % 2:
+                the_borrower=test_user1
+            else:
+                the_borrower=test_user2
+            status='m'
+            BookInstance.objects.create(book=test_book,imprint='Unlikely Imprint, 2016', due_back=return_date, borrower=the_borrower, status=status)
 
-    def test_redirect_if_not_logged_in(self):
-        resp = self.client.get(reverse('my-borrowed'))
-        self.assertRedirects(resp, '/accounts/login/?next=/catalog/mybooks/')
+    def test_redirect_if_not_logged_in(self):
+        resp = self.client.get(reverse('my-borrowed'))
+        self.assertRedirects(resp, '/accounts/login/?next=/catalog/mybooks/')
 
-    def test_logged_in_uses_correct_template(self):
-        login = self.client.login(username='testuser1', password='12345')
-        resp = self.client.get(reverse('my-borrowed'))
+    def test_logged_in_uses_correct_template(self):
+        login = self.client.login(username='testuser1', password='12345')
+        resp = self.client.get(reverse('my-borrowed'))
 
-        #Check our user is logged in
-        self.assertEqual(str(resp.context['user']), 'testuser1')
-        #Check that we got a response "success"
-        self.assertEqual(resp.status_code, 200)
+        #Check our user is logged in
+        self.assertEqual(str(resp.context['user']), 'testuser1')
+        #Check that we got a response "success"
+        self.assertEqual(resp.status_code, 200)
 
-        #Check we used correct template
-        self.assertTemplateUsed(resp, 'catalog/bookinstance_list_borrowed_user.html')
+        #Check we used correct template
+        self.assertTemplateUsed(resp, 'catalog/bookinstance_list_borrowed_user.html')
 </pre>
 
 <p>要验证如果用户未登录，视图将重定向到登录页面，我们使用<code>assertRedirects</code>，如<code>test_redirect_if_not_logged_in()</code>中所示。要验证是否已为登录用户显示该页面，我们首先登录我们的测试用户，然后再次访问该页面，并检查我们获得的<code>status_code</code>为 200（成功）。</p>
 
 <p>测试的其余部分，验证我们的观点，仅返回借给当前借用人的书本。复制上面测试类末尾的（自解释）代码。</p>
 
-<pre class="brush: python">    def test_only_borrowed_books_in_list(self):
-        login = self.client.login(username='testuser1', password='12345')
-        resp = self.client.get(reverse('my-borrowed'))
+<pre class="brush: python">    def test_only_borrowed_books_in_list(self):
+        login = self.client.login(username='testuser1', password='12345')
+        resp = self.client.get(reverse('my-borrowed'))
 
-        #Check our user is logged in
-        self.assertEqual(str(resp.context['user']), 'testuser1')
-        #Check that we got a response "success"
-        self.assertEqual(resp.status_code, 200)
+        #Check our user is logged in
+        self.assertEqual(str(resp.context['user']), 'testuser1')
+        #Check that we got a response "success"
+        self.assertEqual(resp.status_code, 200)
 
-        #Check that initially we don't have any books in list (none on loan)
-        self.assertTrue('bookinstance_list' in resp.context)
-        self.assertEqual( len(resp.context['bookinstance_list']),0)
+        #Check that initially we don't have any books in list (none on loan)
+        self.assertTrue('bookinstance_list' in resp.context)
+        self.assertEqual( len(resp.context['bookinstance_list']),0)
 
-        #Now change all books to be on loan
-        get_ten_books = BookInstance.objects.all()[:10]
+        #Now change all books to be on loan
+        get_ten_books = BookInstance.objects.all()[:10]
 
-        for copy in get_ten_books:
-            copy.status='o'
-            copy.save()
+        for copy in get_ten_books:
+            copy.status='o'
+            copy.save()
 
-        #Check that now we have borrowed books in the list
-        resp = self.client.get(reverse('my-borrowed'))
-        #Check our user is logged in
-        self.assertEqual(str(resp.context['user']), 'testuser1')
-        #Check that we got a response "success"
-        self.assertEqual(resp.status_code, 200)
+        #Check that now we have borrowed books in the list
+        resp = self.client.get(reverse('my-borrowed'))
+        #Check our user is logged in
+        self.assertEqual(str(resp.context['user']), 'testuser1')
+        #Check that we got a response "success"
+        self.assertEqual(resp.status_code, 200)
 
-        self.assertTrue('bookinstance_list' in resp.context)
+        self.assertTrue('bookinstance_list' in resp.context)
 
-        #Confirm all books belong to testuser1 and are on loan
-        for bookitem in resp.context['bookinstance_list']:
-            self.assertEqual(resp.context['user'], bookitem.borrower)
-            self.assertEqual('o', bookitem.status)
+        #Confirm all books belong to testuser1 and are on loan
+        for bookitem in resp.context['bookinstance_list']:
+            self.assertEqual(resp.context['user'], bookitem.borrower)
+            self.assertEqual('o', bookitem.status)
 
-    def test_pages_ordered_by_due_date(self):
+    def test_pages_ordered_by_due_date(self):
 
-        #Change all books to be on loan
-        for copy in BookInstance.objects.all():
-            copy.status='o'
-            copy.save()
+        #Change all books to be on loan
+        for copy in BookInstance.objects.all():
+            copy.status='o'
+            copy.save()
 
-        login = self.client.login(username='testuser1', password='12345')
-        resp = self.client.get(reverse('my-borrowed'))
+        login = self.client.login(username='testuser1', password='12345')
+        resp = self.client.get(reverse('my-borrowed'))
 
-        #Check our user is logged in
-        self.assertEqual(str(resp.context['user']), 'testuser1')
-        #Check that we got a response "success"
-        self.assertEqual(resp.status_code, 200)
+        #Check our user is logged in
+        self.assertEqual(str(resp.context['user']), 'testuser1')
+        #Check that we got a response "success"
+        self.assertEqual(resp.status_code, 200)
 
-        #Confirm that of the items, only 10 are displayed due to pagination.
-        self.assertEqual( len(resp.context['bookinstance_list']),10)
+        #Confirm that of the items, only 10 are displayed due to pagination.
+        self.assertEqual( len(resp.context['bookinstance_list']),10)
 
-        last_date=0
-        for copy in resp.context['bookinstance_list']:
-            if last_date==0:
-                last_date=copy.due_back
-            else:
-                self.assertTrue(last_date &lt;= copy.due_back)</pre>
+        last_date=0
+        for copy in resp.context['bookinstance_list']:
+            if last_date==0:
+                last_date=copy.due_back
+            else:
+                self.assertTrue(last_date &lt;= copy.due_back)</pre>
 
 <p>你也可以添加分页测试，如果你愿意的话！</p>
 
@@ -687,32 +687,32 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
 
 @permission_required('catalog.can_mark_returned')
 def renew_book_librarian(request, pk):
-    """
-    View function for renewing a specific BookInstance by librarian
-    """
-    book_inst=get_object_or_404(BookInstance, pk = pk)
+    """
+    View function for renewing a specific BookInstance by librarian
+    """
+    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>我们需要测试该视图，仅供具有<code>can_mark_returned</code>权限的用户使用，并且如果用户尝试续借不存在的<code>BookInstance</code>，则会将用户重定向到 HTTP 404 错误页面。我们应该检查表单的初始值，是否以未来三周的日期为参考值，如果验证成功，我们将被重定向到“所有借阅的书本”视图。作为验证 - 失败测试的一部分，我们还将检查我们的表单，是否发送了相应的错误消息。</p>
 
@@ -753,68 +753,68 @@ class RenewBookInstancesViewTest(TestCase):
 
 <p>将以下测试添加到测试类的底部。这些检查只有具有正确权限的用户（testuser2）才能访问该视图。我们检查所有情况：当用户没有登录时、当用户登录但没有正确的权限，当用户有权限但不是借用人（应该成功），以及当他们尝试访问不存在的<code>BookInstance</code>，会发生什么。我们还检查是否使用了正确的模板。</p>
 
-<pre class="brush: python">    def test_redirect_if_not_logged_in(self):
-        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
-        #Manually check redirect (Can't use assertRedirect, because the redirect URL is unpredictable)
-        self.assertEqual( resp.status_code,302)
-        self.assertTrue( resp.url.startswith('/accounts/login/') )
+<pre class="brush: python">    def test_redirect_if_not_logged_in(self):
+        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
+        #Manually check redirect (Can't use assertRedirect, because the redirect URL is unpredictable)
+        self.assertEqual( resp.status_code,302)
+        self.assertTrue( resp.url.startswith('/accounts/login/') )
 
-    def test_redirect_if_logged_in_but_not_correct_permission(self):
-        login = self.client.login(username='testuser1', password='12345')
-        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
+    def test_redirect_if_logged_in_but_not_correct_permission(self):
+        login = self.client.login(username='testuser1', password='12345')
+        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
 
-        #Manually check redirect (Can't use assertRedirect, because the redirect URL is unpredictable)
-        self.assertEqual( resp.status_code,302)
-        self.assertTrue( resp.url.startswith('/accounts/login/') )
+        #Manually check redirect (Can't use assertRedirect, because the redirect URL is unpredictable)
+        self.assertEqual( resp.status_code,302)
+        self.assertTrue( resp.url.startswith('/accounts/login/') )
 
-    def test_logged_in_with_permission_borrowed_book(self):
-        login = self.client.login(username='testuser2', password='12345')
-        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance2.pk,}) )
+    def test_logged_in_with_permission_borrowed_book(self):
+        login = self.client.login(username='testuser2', password='12345')
+        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance2.pk,}) )
 
-        #Check that it lets us login - this is our book and we have the right permissions.
-        self.assertEqual( resp.status_code,200)
+        #Check that it lets us login - this is our book and we have the right permissions.
+        self.assertEqual( resp.status_code,200)
 
-    def test_logged_in_with_permission_another_users_borrowed_book(self):
-        login = self.client.login(username='testuser2', password='12345')
-        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
+    def test_logged_in_with_permission_another_users_borrowed_book(self):
+        login = self.client.login(username='testuser2', password='12345')
+        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
 
-        #Check that it lets us login. We're a librarian, so we can view any users book
-        self.assertEqual( resp.status_code,200)
+        #Check that it lets us login. We're a librarian, so we can view any users book
+        self.assertEqual( resp.status_code,200)
 
-    def test_HTTP404_for_invalid_book_if_logged_in(self):
-        import uuid
-        test_uid = uuid.uuid4() #unlikely UID to match our bookinstance!
-        login = self.client.login(username='testuser2', password='12345')
-        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':test_uid,}) )
-        self.assertEqual( resp.status_code,404)
+    def test_HTTP404_for_invalid_book_if_logged_in(self):
+        import uuid
+        test_uid = uuid.uuid4() #unlikely UID to match our bookinstance!
+        login = self.client.login(username='testuser2', password='12345')
+        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':test_uid,}) )
+        self.assertEqual( resp.status_code,404)
 
-    def test_uses_correct_template(self):
-        login = self.client.login(username='testuser2', password='12345')
-        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
-        self.assertEqual( resp.status_code,200)
+    def test_uses_correct_template(self):
+        login = self.client.login(username='testuser2', password='12345')
+        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
+        self.assertEqual( resp.status_code,200)
 
-        #Check we used correct template
-        self.assertTemplateUsed(resp, 'catalog/book_renew_librarian.html')
+        #Check we used correct template
+        self.assertTemplateUsed(resp, 'catalog/book_renew_librarian.html')
 </pre>
 
 <p>添加下一个测试方法，如下所示。这将检查表单的初始日期，是将来三周。请注意我们如何能够访问表单字段的初始值内的值（以<strong>粗体</strong>显示）。</p>
 
-<pre class="brush: python">    def test_form_renewal_date_initially_has_date_three_weeks_in_future(self):
-        login = self.client.login(username='testuser2', password='12345')
-        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
-        self.assertEqual( resp.status_code,200)
+<pre class="brush: python">    def test_form_renewal_date_initially_has_date_three_weeks_in_future(self):
+        login = self.client.login(username='testuser2', password='12345')
+        resp = self.client.get(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}) )
+        self.assertEqual( resp.status_code,200)
 
-        date_3_weeks_in_future = datetime.date.today() + datetime.timedelta(weeks=3)
-        self.assertEqual(<strong>resp.context['form'].initial['renewal_date']</strong>, date_3_weeks_in_future )
+        date_3_weeks_in_future = datetime.date.today() + datetime.timedelta(weeks=3)
+        self.assertEqual(<strong>resp.context['form'].initial['renewal_date']</strong>, date_3_weeks_in_future )
 </pre>
 
 <p>下一个测试（将其添加到类中）会检查如果续借成功，视图会重定向到所有借书的列表。这里的不同之处在于，我们首次展示了，如何使用客户端发布（<code>POST</code>）数据。post 数据是 post 函数的第二个参数，并被指定为键/值的字典。</p>
 
-<pre class="brush: python">    def test_redirects_to_all_borrowed_book_list_on_success(self):
-        login = self.client.login(username='testuser2', password='12345')
-        valid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=2)
-        resp = <strong>self.client.<em>post</em>(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future} )</strong>
-        self.assertRedirects(resp, reverse('all-borrowed') )
+<pre class="brush: python">    def test_redirects_to_all_borrowed_book_list_on_success(self):
+        login = self.client.login(username='testuser2', password='12345')
+        valid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=2)
+        resp = <strong>self.client.<em>post</em>(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future} )</strong>
+        self.assertRedirects(resp, reverse('all-borrowed') )
 </pre>
 
 <div class="warning">
@@ -826,19 +826,19 @@ class RenewBookInstancesViewTest(TestCase):
 
 <p>将最后两个函数，复制到类中，如下所示。这些再次测试<code>POST</code>请求，但在这种情况下具有无效的续借日期。我们使用<code>assertFormError() </code>，来验证错误消息是否符合预期。</p>
 
-<pre class="brush: python">    def test_form_invalid_renewal_date_past(self):
-        login = self.client.login(username='testuser2', password='12345')
-        date_in_past = datetime.date.today() - datetime.timedelta(weeks=1)
-        resp = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':date_in_past} )
-        self.assertEqual( resp.status_code,200)
-        <strong>self.assertFormError(resp, 'form', 'renewal_date', 'Invalid date - renewal in past')</strong>
+<pre class="brush: python">    def test_form_invalid_renewal_date_past(self):
+        login = self.client.login(username='testuser2', password='12345')
+        date_in_past = datetime.date.today() - datetime.timedelta(weeks=1)
+        resp = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':date_in_past} )
+        self.assertEqual( resp.status_code,200)
+        <strong>self.assertFormError(resp, 'form', 'renewal_date', 'Invalid date - renewal in past')</strong>
 
-    def test_form_invalid_renewal_date_future(self):
-        login = self.client.login(username='testuser2', password='12345')
-        invalid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=5)
-        resp = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':invalid_date_in_future} )
-        self.assertEqual( resp.status_code,200)
-        <strong>self.assertFormError(resp, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')</strong>
+    def test_form_invalid_renewal_date_future(self):
+        login = self.client.login(username='testuser2', password='12345')
+        invalid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=5)
+        resp = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':invalid_date_in_future} )
+        self.assertEqual( resp.status_code,200)
+        <strong>self.assertFormError(resp, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')</strong>
 </pre>
 
 <p>可以使用相似的技术，来测试其他视图。</p>
@@ -882,7 +882,7 @@ class RenewBookInstancesViewTest(TestCase):
 
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/testing/overview/">Writing and running tests</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial05/">Writing your first Django app, part 5 &gt; Introducing automated testing</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial05/">Writing your first Django app, part 5 &gt; Introducing automated testing</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/">Testing tools reference</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/testing/advanced/">Advanced testing topics</a> (Django docs)</li>
  <li><a href="http://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/">A Guide to Testing in Django</a> (Toast Driven Blog, 2011)</li>
@@ -892,7 +892,7 @@ class RenewBookInstancesViewTest(TestCase):
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="本系列教程">本系列教程</h2>
 
@@ -914,4 +914,4 @@ class RenewBookInstancesViewTest(TestCase):
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

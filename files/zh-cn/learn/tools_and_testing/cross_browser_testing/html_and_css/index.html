@@ -82,7 +82,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
  <li>安装 Atom（如果您还没有安装最新版本），请从上面链接的 Atom 页面下载。</li>
  <li>转到 Atom 的<em>首选项...</em>对话框（例如在 Mac 上选择 <em>Atom &gt; Preferences...</em> 或在 Windows / Linux 上选择 <em>File &gt; Preferences...</em>），然后在左侧菜单中选择 Install 选项。</li>
  <li>在搜索包文本字段中，输入“lint”，然后按 Enter / 回车键搜索与 lint 相关的包。</li>
- <li>您应该在列表顶部看到一个名为 lint 的包。首先安装它（使用安装按钮），因为其他短裤依靠它工作。之后，安装用于 linting CSS 的 linter-csslint 插件，和用于 lint HTML 的 linter-tidy 插件。</li>
+ <li>您应该在列表顶部看到一个名为 lint 的包。首先安装它（使用安装按钮），因为其他短裤依靠它工作。之后，安装用于 linting CSS 的 linter-csslint 插件，和用于 lint HTML 的 linter-tidy 插件。</li>
  <li>软件包完成安装后，尝试加载一个 HTML 文件和一个 CSS 文件：在行号旁边会看到用绿色（警告）和红色（错误）圆圈，突出显示任何存在的问题，底部则提供行号、错误消息，有时有建议的值或者其他修复。</li>
 </ol>
 
@@ -130,7 +130,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p><strong>注意：</strong>请参阅<a href="/zh-CN/docs/preview-wiki-content#IE_conditional_comments">IE 条件注释</a>以获取最佳实践。</p>
 </div>
 
-<p>更复杂的元素，如 HTML  <code><a href="/zh-CN/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>、<code><a href="/zh-CN/docs/Web/HTML/Element/audio">&lt;audio&gt;</a></code>，和 <code><a href="/zh-CN/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code>（和其他功能除外）有自然的 fallback 加入机制，其工作原理与上述相同。您可以在开始和结束标记之间添加回退内容，非支持的浏览器将有效地忽略外部元素并运行嵌套的内容。</p>
+<p>更复杂的元素，如 HTML  <code><a href="/zh-CN/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>、<code><a href="/zh-CN/docs/Web/HTML/Element/audio">&lt;audio&gt;</a></code>，和 <code><a href="/zh-CN/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code>（和其他功能除外）有自然的 fallback 加入机制，其工作原理与上述相同。您可以在开始和结束标记之间添加回退内容，非支持的浏览器将有效地忽略外部元素并运行嵌套的内容。</p>
 
 <p>例如：</p>
 
@@ -251,7 +251,7 @@ button:active {
               inset -1px -1px 3px rgba(255,255,255,0.4);
 }</pre>
 
-<p>在这里，我们提供了一个 <a href="/zh-CN/docs/Web/CSS/color_value#rgba()">RGBA</a> <a href="/zh-CN/docs/Web/CSS/background-color">background-color</a>，改变悬停的不透明度，给用户一个暗示该按钮是交互式的提示，以及一些半透明的嵌入式 <a href="/zh-CN/docs/Web/CSS/box-shadow">box-shadow</a> 阴影，使按钮有一点纹理和深度。问题在于 RGBA 颜色和方块阴影在 9 以前的 IE 版本中不起作用 - 在较旧的版本中，背景根本不会显示出来，所以文本将是不可读的，这没有任何好处！</p>
+<p>在这里，我们提供了一个 <a href="/zh-CN/docs/Web/CSS/color_value#rgba()">RGBA</a> <a href="/zh-CN/docs/Web/CSS/background-color">background-color</a>，改变悬停的不透明度，给用户一个暗示该按钮是交互式的提示，以及一些半透明的嵌入式 <a href="/zh-CN/docs/Web/CSS/box-shadow">box-shadow</a> 阴影，使按钮有一点纹理和深度。问题在于 RGBA 颜色和方块阴影在 9 以前的 IE 版本中不起作用 - 在较旧的版本中，背景根本不会显示出来，所以文本将是不可读的，这没有任何好处！</p>
 
 <p><img src="unreadable-button.png"></p>
 
@@ -270,7 +270,7 @@ button:active {
   &lt;link href="ie-fix.css" rel="stylesheet" type="text/css"&gt;
 &lt;![endif]--&gt;</pre>
 
-<p>只有当浏览器查看页面是 IE 8 或更旧时，此块才会应用 IE 特定的 CSS 和 JavaScript。lte 意思是“小于或等于”，但是也可以使用 lt、gt、gte、!(NOT) 以及其他逻辑语法。</p>
+<p>只有当浏览器查看页面是 IE 8 或更旧时，此块才会应用 IE 特定的 CSS 和 JavaScript。lte 意思是“小于或等于”，但是也可以使用 lt、gt、gte、!(NOT) 以及其他逻辑语法。</p>
 
 <div class="note">
 <p><strong>注意：</strong>Sitepoint 的 <a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer 条件注释</a>提供了一个有用的初学者教程/参考，详细解释了条件注释语法。</p>
@@ -282,7 +282,7 @@ button:active {
   display: block;
 }</pre>
 
-<p>然而，这并不是那么简单 - 您还需要通过 JavaScript 在 DOM 中创建您想要样式化的每个元素的副本，让它们变得可以风格化; 这是一个奇怪的怪癖，我们不会在这里让你知道细节。例如：</p>
+<p>然而，这并不是那么简单 - 您还需要通过 JavaScript 在 DOM 中创建您想要样式化的每个元素的副本，让它们变得可以风格化; 这是一个奇怪的怪癖，我们不会在这里让你知道细节。例如：</p>
 
 <pre class="brush: js">const asideElem = document.createElement('aside');
  ...</pre>
@@ -307,7 +307,7 @@ button:active {
 
 <ol>
  <li>要尝试此示例，请创建 <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html">selectivizr-example-start.html</a> 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 <code>p:first-child</code>，这在老版本的 IE 中不起作用。</li>
- <li>现在下载  <a href="http://mootools.net/">MooTools</a>和<a href="http://selectivizr.com/">Selectivizr</a>，并将它们保存在与示例 HTML 相同的目录中。</li>
+ <li>现在下载  <a href="http://mootools.net/">MooTools</a>和<a href="http://selectivizr.com/">Selectivizr</a>，并将它们保存在与示例 HTML 相同的目录中。</li>
  <li>将下面的代码放到 HTML 文档的开头，就在开始 <code>&lt;style&gt;</code> 标记之前：
   <pre>&lt;script type="text/javascript" src="MooTools-Core-1.6.0.js"&gt;&lt;/script&gt;
     &lt;!--[if (gte IE 6)&amp;(lte IE 8)]&gt;
@@ -349,7 +349,7 @@ background-image: linear-gradient(to right,green,yellow);
  <li>第三个没有前缀，并显示语法的最终版本（包含在定义此功能的<a href="https://drafts.csswg.org/css-images-3/#linear-gradients">CSS 图像值和替换内容模块级别 3 规范中</a>）。</li>
 </ol>
 
-<p>前缀功能从来不应该用于生产网站——它们可能会在没有警告的情况下更改或删除，并导致跨浏览器问题。当开发人员决定只使用-webkit- 某个属性的版本时，这是一个特别的问题 - 这意味着该网站在其他浏览器中不起作用。这实际上发生了很多，其他浏览器已经开始实现-webkit-各种 CSS 属性的前缀版本，所以他们将使用这样的代码。由于这些类型的问题，浏览器供应商使用前缀最近已经下降，但仍然有一些需要注意。</p>
+<p>前缀功能从来不应该用于生产网站——它们可能会在没有警告的情况下更改或删除，并导致跨浏览器问题。当开发人员决定只使用-webkit- 某个属性的版本时，这是一个特别的问题 - 这意味着该网站在其他浏览器中不起作用。这实际上发生了很多，其他浏览器已经开始实现-webkit-各种 CSS 属性的前缀版本，所以他们将使用这样的代码。由于这些类型的问题，浏览器供应商使用前缀最近已经下降，但仍然有一些需要注意。</p>
 
 <p>如果您坚持使用前缀功能，请确保使用正确的功能。您可以在 MDN 参考页面上查找哪些浏览器需要前缀，以及像<a href="http://caniuse.com/">caniuse.com</a>这样的<a href="http://caniuse.com/">站点</a>。如果你不确定，你也可以直接在浏览器中做一些测试。</p>
 
@@ -384,7 +384,7 @@ transform: rotate(90deg);</pre>
 
 <p><a href="http://leaverou.github.io/prefixfree/">无前缀的 JavaScript 库</a>可以附加到页面上，并自动检测浏览器查看页面的功能，并根据需要添加前缀。使用起来非常简单方便，虽然它有一些缺点（请参阅上面的链接了解详细信息），但有一点是可争议的，即在您的站点中解析每个样式表并在运行时添加前缀可能会消耗计算机的处理能力为一个大的网站。</p>
 
-<p>另一个解决方案是在开发过程中自动添加前缀，而这个（和其他的东西除外）可以使用像<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>和<a href="http://postcss.org/">PostCSS</a>这样的工具完成。这些工具可以以多种方式使用，例如 Autoprefixer 有一个<a href="http://autoprefixer.github.io/">在线版本</a>，允许您在左侧输入非前缀 CSS，并在右侧给出前缀添加版本。您可以使用<a href="https://github.com/postcss/autoprefixer#options">Autoprefixer 选项中</a>列出的符号来选择要确保支持的浏览器; 另请参阅基于此的<a href="https://github.com/ai/browserslist#queries">Browserslist 查询</a>以获取更多详细信息。例如，以下查询将选择所有主流浏览器的最后 2 个版本和 IE9 以上的版本。</p>
+<p>另一个解决方案是在开发过程中自动添加前缀，而这个（和其他的东西除外）可以使用像<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>和<a href="http://postcss.org/">PostCSS</a>这样的工具完成。这些工具可以以多种方式使用，例如 Autoprefixer 有一个<a href="http://autoprefixer.github.io/">在线版本</a>，允许您在左侧输入非前缀 CSS，并在右侧给出前缀添加版本。您可以使用<a href="https://github.com/postcss/autoprefixer#options">Autoprefixer 选项中</a>列出的符号来选择要确保支持的浏览器; 另请参阅基于此的<a href="https://github.com/ai/browserslist#queries">Browserslist 查询</a>以获取更多详细信息。例如，以下查询将选择所有主流浏览器的最后 2 个版本和 IE9 以上的版本。</p>
 
 <pre>last 2 versions, ie &gt; 9</pre>
 
@@ -394,7 +394,7 @@ transform: rotate(90deg);</pre>
 
 <ol>
  <li>您可以通过转到首选项&gt;安装，搜索 Autoprefixer，然后安装。</li>
- <li>您可以通过按“Autoprefixer 设置”按钮并在页面的“设置”部分的文本字段中输入查询来设置浏览器查询。</li>
+ <li>您可以通过按“Autoprefixer 设置”按钮并在页面的“设置”部分的文本字段中输入查询来设置浏览器查询。</li>
  <li>在你的代码中，你可以选择要添加前缀的 CSS 部分，打开命令调色板（Cmd / Ctrl + Shift + P），然后输入 Autoprefixer 并选择 Autoprefixer 自动完成的结果。</li>
 </ol>
 
@@ -437,7 +437,7 @@ transform: rotate(90deg);</pre>
 
 <ul>
  <li>CSS Grid 是非常新的；在撰写本文的时候，他们只在最新版本的现代浏览器中才<a href="http://gridbyexample.com/browsers/">得到支持</a>。</li>
- <li>Flexbox 在现代浏览器中<a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility">得到</a>了<a href="/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility">很好的支持</a>，但是在旧版浏览器中却存在问题。IE 9 根本不支持它，IE 10 和旧版本的 iOS /桌面 Safari 分别支持 Flexbox 规范的两种不兼容老版本。如果您想尝试在所有这些浏览器上使用 flexbox（请参阅<a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">高级跨浏览器 Flexbox</a>以获得创意），<a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">则会</a>导致一些有趣的浏览器前缀<a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">杂乱</a>。</li>
+ <li>Flexbox 在现代浏览器中<a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility">得到</a>了<a href="/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility">很好的支持</a>，但是在旧版浏览器中却存在问题。IE 9 根本不支持它，IE 10 和旧版本的 iOS /桌面 Safari 分别支持 Flexbox 规范的两种不兼容老版本。如果您想尝试在所有这些浏览器上使用 flexbox（请参阅<a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">高级跨浏览器 Flexbox</a>以获得创意），<a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">则会</a>导致一些有趣的浏览器前缀<a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">杂乱</a>。</li>
 </ul>
 
 <p>布局功能并不像简单的颜色，阴影或渐变那样容易提供优雅的后备。如果布局属性被忽略，你的整个设计可能会崩溃。因此，您需要使用功能检测来检测访问的浏览器是否支持这些布局功能，并根据结果有选择地应用不同的布局（我们将在后面的文章中详细介绍功能检测）。</p>
