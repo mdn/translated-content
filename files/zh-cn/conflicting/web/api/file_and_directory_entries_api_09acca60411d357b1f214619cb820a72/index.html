@@ -7,11 +7,11 @@ original_slug: Web/API/FileException
 ---
 <div>{{APIRef("File System API")}} {{Non-standard_header}}</div>
 
-<p>在 <a href="/en-US/docs/DOM/File_API/File_System_API">文件系统 API</a> 中， <code>FileException </code>表示错误条件，你可能在使用同步 API 访问文件系统时遇到。它扩展了 FileException 接口，在 <a href="http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER">File Writer</a> 中描述，并添加了几个新的错误代码。</p>
+<p>在 <a href="/en-US/docs/DOM/File_API/File_System_API">文件系统 API</a> 中， <code>FileException </code>表示错误条件，你可能在使用同步 API 访问文件系统时遇到。它扩展了 FileException 接口，在 <a href="http://dev.w3.org/2009/dap/file-system/pub/FileSystem/#bib-FILE-WRITER">File Writer</a> 中描述，并添加了几个新的错误代码。</p>
 
 <h2 id="基本概念">基本概念</h2>
 
-<p>同步 API 没有错误回调，这使其难以捕获错误。和这个 API 一起使用 <a href="/en-US/docs/DOM/Worker">WebWorkers</a> 的额外复杂性，使得调试更具有挑战性。为了使事情简化，将你的工作器代码包在 try/catch 里面。当错误发生时，使用 <code>postMessage()</code> 将它们转发给主应用，像这样：</p>
+<p>同步 API 没有错误回调，这使其难以捕获错误。和这个 API 一起使用 <a href="/en-US/docs/DOM/Worker">WebWorkers</a> 的额外复杂性，使得调试更具有挑战性。为了使事情简化，将你的工作器代码包在 try/catch 里面。当错误发生时，使用 <code>postMessage()</code> 将它们转发给主应用，像这样：</p>
 
 <pre class="brush: js">function onError(e) {
   postMessage('ERROR:' + e.toString());
@@ -24,7 +24,7 @@ var fileEntry = fs.root.getFile('log.txt', {create: true, exclusive:true}0;
   onErrror(e);
 } </pre>
 
-<p>示例代码取自 <a href="http://www.html5rocks.com/en/tutorials/file/filesystem-sync/">HTML5Rocks</a></p>
+<p>示例代码取自 <a href="http://www.html5rocks.com/en/tutorials/file/filesystem-sync/">HTML5Rocks</a></p>
 
 <h2 id="属性">属性</h2>
 
@@ -120,7 +120,7 @@ var fileEntry = fs.root.getFile('log.txt', {create: true, exclusive:true}0;
   <tr>
    <td><code><a name="READ_ONLY_ERR">TYPE_MISMATCH_ERR</a></code></td>
    <td>11</td>
-   <td>用户尝试检索文件或者目录，但是找到的条目类型错误。例如，应用正在访问 DirectoryEntry ，当用户请求 FileEntry 的时候。</td>
+   <td>用户尝试检索文件或者目录，但是找到的条目类型错误。例如，应用正在访问 DirectoryEntry ，当用户请求 FileEntry 的时候。</td>
   </tr>
  </tbody>
 </table>

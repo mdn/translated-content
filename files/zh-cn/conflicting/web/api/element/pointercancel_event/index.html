@@ -6,7 +6,7 @@ original_slug: Web/API/HTMLElement/pointercancel_event
 ---
 <div>{{APIRef}}</div>
 
-<p>当浏览器认为不再会有更多的指针事件，或者在 {{event("pointerdown")}} 事件触发之后用户滚动或者缩放窗口，<strong><code>pointercancel</code></strong> 事件被触发。</p>
+<p>当浏览器认为不再会有更多的指针事件，或者在 {{event("pointerdown")}} 事件触发之后用户滚动或者缩放窗口，<strong><code>pointercancel</code></strong> 事件被触发。</p>
 
 <table class="properties">
  <tbody>
@@ -29,7 +29,7 @@ original_slug: Web/API/HTMLElement/pointercancel_event
  </tbody>
 </table>
 
-<p>常见需要 <code>pointercancel</code> 事件的地方：</p>
+<p>常见需要 <code>pointercancel</code> 事件的地方：</p>
 
 <ul>
  <li>用户在使用指针设备时按了硬件按钮，如用户打开任务切换界面或者按下手机的“Home”键；</li>
@@ -39,12 +39,12 @@ original_slug: Web/API/HTMLElement/pointercancel_event
 </ul>
 
 <div class="note">
-<p>在 <code>pointercancel</code> 事件触发后，浏览器会按顺序发送 {{event("pointerout")}} 以及 {{event("pointerleave")}}。</p>
+<p>在 <code>pointercancel</code> 事件触发后，浏览器会按顺序发送 {{event("pointerout")}} 以及 {{event("pointerleave")}}。</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
-<p>使用 <code>addEventListener()</code>:</p>
+<p>使用 <code>addEventListener()</code>:</p>
 
 <pre class="brush: js notranslate">const para = document.querySelector('p');
 
@@ -52,7 +52,7 @@ para.addEventListener('pointercancel', (event) =&gt; {
   console.log('Pointer event cancelled');
 });</pre>
 
-<p>使用 <code>onpointercancel</code> 事件句柄属性：</p>
+<p>使用 <code>onpointercancel</code> 事件句柄属性：</p>
 
 <pre class="brush: js notranslate">const para = document.querySelector('p');
 
