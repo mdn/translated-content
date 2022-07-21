@@ -60,12 +60,12 @@ Le [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patter
 
 Pour tester cette extension&nbsp;:
 
-* [Installez l'extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
-* Ouvrez [la console du navigateur](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (vous pouvez utiliser le raccourci clavier <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd>)
-* Activer l'option *Afficher les messages de contenu* dans le menu&nbsp;:
+- [Installez l'extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+- Ouvrez [la console du navigateur](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (vous pouvez utiliser le raccourci clavier <kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>J</kbd>)
+- Activez l'option *Afficher les messages de contenu* dans le menu&nbsp;:
 
   ![Menu de la console du navigateur avec l'option Afficher les messages de contenu](browser_console_show_content_messages.png)
-* Ouvrez différentes pages web
+- Ouvrez différentes pages web
 
 Dans la console, vous pourrez voir les URL des ressources pour lesquelles le navigateur émet des requêtes.
 Dans la capture d'écran qui suit, on voit les URL des requêtes qui ont lieu lors du chargement d'une page Wikipédia&nbsp;:
@@ -191,7 +191,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 On utilise le gestionnaire d'évènement [`onBeforeSendHeaders`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders) pour exécuter une fonction juste avant que les en-têtes de requêtes soient envoyés.
 
-Ce gestionnaire est uniquement appelé pour les requêtes dont les URL correspondent au [motif](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `targetPage`. On notera que `"blocking"` est toujours présent comme option. On voit également l'option `"requestHeaders"`, qui indique que le gestionnaire d'évènement fournira un tableau d'en-têtes de requête à envoyer. Voir [webRequest.onBeforeSendHeaders](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders) pour plus d'informations sur ces options.
+Ce gestionnaire est uniquement appelé pour les requêtes dont les URL correspondent au [motif](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `targetPage`. On notera que `"blocking"` est toujours présent comme option. On voit également l'option `"requestHeaders"`, qui indique que le gestionnaire d'évènement fournira un tableau d'en-têtes de requête à envoyer. Voir [`webRequest.onBeforeSendHeaders`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders) pour plus d'informations sur ces options.
 
 La fonction exécutée recherche l'en-tête `User-Agent` dans le tableau des en-têtes de requêtes fournis et remplace sa valeur avec celle de la variable `ua` puis renvoie le tableau ainsi modifié. Ce sont les en-têtes de ce tableau modifié qui sont envoyés au serveur.
 
