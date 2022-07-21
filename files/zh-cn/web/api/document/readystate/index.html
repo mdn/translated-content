@@ -15,7 +15,7 @@ translation_of: Web/API/Document/readyState
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><strong><code>Document.readyState</code> </strong>属性描述了{{ domxref("document") }} 的加载状态。</p>
+<p><strong><code>Document.readyState</code> </strong>属性描述了{{ domxref("document") }} 的加载状态。</p>
 
 <p>当该属性值发生变化时，会在 {{domxref("document")}} 对象上触发 {{event("readystatechange")}} 事件。</p>
 
@@ -25,11 +25,11 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="值">值</h3>
 
-<p>一个文档的 <code><strong>readyState</strong></code> 可以是以下之一：</p>
+<p>一个文档的 <code><strong>readyState</strong></code> 可以是以下之一：</p>
 
 <dl>
  <dt><code>loading</code>（正在加载）</dt>
- <dd>{{ domxref("document") }} 仍在加载。</dd>
+ <dd>{{ domxref("document") }} 仍在加载。</dd>
  <dt><code>interactive</code>（可交互）</dt>
  <dd>文档已被解析，"<strong>正在加载</strong>"状态结束，但是诸如图像，样式表和框架之类的子资源仍在加载。</dd>
  <dt><code>complete</code>（完成）</dt>
@@ -76,7 +76,7 @@ document.onreadystatechange = function () {
   }
 }</pre>
 
-<h3 id="在_DOMContentLoaded_之前使用_readystatechange_作为事件处理程序以插入或修改DOM">在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改 DOM</h3>
+<h3 id="在_DOMContentLoaded_之前使用_readystatechange_作为事件处理程序以插入或修改DOM">在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改 DOM</h3>
 
 <pre>document.addEventListener('readystatechange', event =&gt; {
   if (event.target.readyState === 'interactive') {

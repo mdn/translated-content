@@ -32,12 +32,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 
 <h2 id="描述">描述</h2>
 
-<p>和全局的 {{jsxref("Global_Objects/isFinite", "isFinite()")}} 函数相比，这个方法不会强制将一个非数值的参数转换成数值，这就意味着，只有数值类型的值，且是有穷的（finite），才返回 <code>true</code>。</p>
+<p>和全局的 {{jsxref("Global_Objects/isFinite", "isFinite()")}} 函数相比，这个方法不会强制将一个非数值的参数转换成数值，这就意味着，只有数值类型的值，且是有穷的（finite），才返回 <code>true</code>。</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
 <pre class="brush: js">if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' &amp;&amp; isFinite(value);
+    return typeof value === 'number' &amp;&amp; isFinite(value);
 }</pre>
 
 <h2 id="示例">示例</h2>

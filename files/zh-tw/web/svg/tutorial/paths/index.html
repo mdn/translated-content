@@ -8,13 +8,13 @@ original_slug: Web/SVG/Tutorial/路径
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}</p>
 
-<p><code><a href="/en-US/Web/SVG/Element/path">&lt;path&gt;</a></code> 元件可說是SVG程式庫中最強大的<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">基本形狀</a>了，你可以用它來產生線條、曲線、圓弧等形狀。</p>
+<p><code><a href="/en-US/Web/SVG/Element/path">&lt;path&gt;</a></code> 元件可說是SVG程式庫中最強大的<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">基本形狀</a>了，你可以用它來產生線條、曲線、圓弧等形狀。</p>
 
-<p>路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline">折線</a>組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用XML編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。</p>
+<p>路徑(paths) 藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#Polyline">折線</a>組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用XML編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。</p>
 
-<p>path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">基本形狀</a> ）。 <code>"d"</code> 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。</p>
+<p>path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考<a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">基本形狀</a> ）。 <code>"d"</code> 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。</p>
 
-<p> </p>
+<p> </p>
 
 <p>Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (10, 10). The "Move to" command is called with the letter M. When the parser runs into this letter, it knows you want to move to a point. So, to move to (10,10) you would use the command "M 10 10". After that, the parser begins reading for the next command.</p>
 
@@ -24,7 +24,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <h2 id="Line_commands">Line commands</h2>
 
-<p>There are five line commands for <code>&lt;path&gt;</code> nodes. The first command is the "Move To" or M, which was described above. It takes two parameters, a coordinate  ' x ' and coordinate ' y ' to move to. If your cursor already was somewhere on the page, no line is drawn to connect the two places. The "Move To" command appears at the beginning of paths to specify where the drawing should start. e.g. :</p>
+<p>There are five line commands for <code>&lt;path&gt;</code> nodes. The first command is the "Move To" or M, which was described above. It takes two parameters, a coordinate  ' x ' and coordinate ' y ' to move to. If your cursor already was somewhere on the page, no line is drawn to connect the two places. The "Move To" command appears at the beginning of paths to specify where the drawing should start. e.g. :</p>
 
 <pre>M x y
 </pre>
@@ -57,7 +57,7 @@ original_slug: Web/SVG/Tutorial/路径
  V y (or v dy)
 </pre>
 
-<p>An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a <code>&lt;rect&gt;</code> element). It's composed of horizontal and vertical lines only:</p>
+<p>An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a <code>&lt;rect&gt;</code> element). It's composed of horizontal and vertical lines only:</p>
 
 <p><img alt="" class="internal" src="/@api/deki/files/292/=Path_Line_Commands.png" style="float: right;"></p>
 
@@ -98,7 +98,7 @@ original_slug: Web/SVG/Tutorial/路径
 
 <h3 id="Bezier_Curves">Bezier Curves</h3>
 
-<p>The cubic curve, C, is the slightly more complex curve. Cubic Beziers take in two control points for each point. Therefore, to create a cubic Bezier, you need to specify three sets of coordinates.</p>
+<p>The cubic curve, C, is the slightly more complex curve. Cubic Beziers take in two control points for each point. Therefore, to create a cubic Bezier, you need to specify three sets of coordinates.</p>
 
 <pre> C x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)
 </pre>
@@ -129,7 +129,7 @@ original_slug: Web/SVG/Tutorial/路径
 <pre> S x2 y2, x y (or s dx2 dy2, dx dy)
 </pre>
 
-<p><code>S</code> produces the same type of curve as earlier, but if it follows another <code>S</code> command or a <code>C</code> command, the first control point is assumed to be a reflection of the one used previously. If the <code>S</code> command doesn't follow another <code>S</code> or <code>C</code> command, then the current position of the cursor is used as the first control point. In this case the result is the same as what the <code>Q</code> command would have produced with the same parameters. An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.</p>
+<p><code>S</code> produces the same type of curve as earlier, but if it follows another <code>S</code> command or a <code>C</code> command, the first control point is assumed to be a reflection of the one used previously. If the <code>S</code> command doesn't follow another <code>S</code> or <code>C</code> command, then the current position of the cursor is used as the first control point. In this case the result is the same as what the <code>Q</code> command would have produced with the same parameters. An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.</p>
 
 <p><img alt="ShortCut_Cubic_Bezier_with_grid.png" class="internal" src="https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bezier_with_grid.png" style="float: right; height: 160px; width: 190px;"></p>
 
@@ -137,7 +137,7 @@ original_slug: Web/SVG/Tutorial/路径
   &lt;path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/&gt;
 &lt;/svg&gt;</pre>
 
-<p>The other type of Bezier curve, the quadratic curve called with Q, is actually a simpler curve than the cubic one. It requires one control point which determines the slope of the curve at both the start point and the end point. It takes two arguments: the control point and the end point of the curve. Note that the co-ordinate deltas for <code>q</code> are both relative to the previous point (that is, <code>dx</code> and <code>dy</code> are not relative to <code>dx1</code> and <code>dy1</code>).</p>
+<p>The other type of Bezier curve, the quadratic curve called with Q, is actually a simpler curve than the cubic one. It requires one control point which determines the slope of the curve at both the start point and the end point. It takes two arguments: the control point and the end point of the curve. Note that the co-ordinate deltas for <code>q</code> are both relative to the previous point (that is, <code>dx</code> and <code>dy</code> are not relative to <code>dx1</code> and <code>dy1</code>).</p>
 
 <pre> Q x1 y1, x y (or q dx1 dy1, dx dy)
 </pre>
@@ -175,7 +175,7 @@ original_slug: Web/SVG/Tutorial/路径
  a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 </pre>
 
-<p>At its start, the arc element takes in two arguments for the x-radius and y-radius. If you need to, look up <a href="/en-US/Web/SVG/Element/ellipse">ellipses</a> to see how they behave. The final two arguments designate the x and y coordinates to end the stroke. Together, these four values define the basic structure of the arc.</p>
+<p>At its start, the arc element takes in two arguments for the x-radius and y-radius. If you need to, look up <a href="/en-US/Web/SVG/Element/ellipse">ellipses</a> to see how they behave. The final two arguments designate the x and y coordinates to end the stroke. Together, these four values define the basic structure of the arc.</p>
 
 <p>The third parameter describes the rotation of the arc. This is best explained with an example:</p>
 
@@ -197,22 +197,22 @@ original_slug: Web/SVG/Tutorial/路径
 <p><img alt="Show the 4 arcs on the Ellipse example" src="svgarcs_xaxisrotation_with_grid_ellipses.png"></p>
 
 <pre>&lt;svg xmlns="http://www.w3.org/2000/svg" width="320" height="320"&gt;
-  &lt;path d="M10 315
-           L 110 215
-           A 36 60 0 0 1 150.71 170.29
-           L 172.55 152.45
-           A 30 50 -45 0 1 215.1 109.9
-           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/&gt;
-  &lt;circle cx="150.71" cy="170.29" r="2" fill="red"/&gt;
-  &lt;circle cx="110" cy="215" r="2" fill="red"/&gt;
-  &lt;ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/&gt;
-  &lt;ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/&gt;
+  &lt;path d="M10 315
+           L 110 215
+           A 36 60 0 0 1 150.71 170.29
+           L 172.55 152.45
+           A 30 50 -45 0 1 215.1 109.9
+           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/&gt;
+  &lt;circle cx="150.71" cy="170.29" r="2" fill="red"/&gt;
+  &lt;circle cx="110" cy="215" r="2" fill="red"/&gt;
+  &lt;ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/&gt;
+  &lt;ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/&gt;
 &lt;/svg&gt;
 </pre>
 
 <p>Notice that each of the blue ellipses are formed by two arcs, depending if you travel clockwise or counter-clockwise. Each ellipse has one short arc and one long arc. The two ellipses are just mirror images of each other. They are flipped along the line formed from the start-&gt;end points.</p>
 
-<p>If the start-&gt;end points are farther than the ellipse's x and y radius can reach, the ellipse's radii will be minimally expanded so it could reach the start-&gt;end points. The interactive codepen at the bottom of this page demonstrates this well. To determine if your ellipse's radii is large enough to require expanding, you would need to solve a system of equations such as <a href="https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F36%5E2)+%2B+((215+-+y)%5E2%2F60%5E2)+%3D+1,+((150.71+-+x)%5E2%2F36%5E2)+%2B+((170.29+-+y)%5E2%2F60%5E2)+%3D+1">this on wolfram alpha</a>. This computation is for the non-rotated ellipse with start-&gt;end (110, 215)-&gt;(150.71, 170.29). The solution, (x, y), is the center of the ellipse(s). The solution will be <a href="https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F30%5E2)+%2B+((215+-+y)%5E2%2F50%5E2)+%3D+1,+((162.55+-+x)%5E2%2F30%5E2)+%2B+((162.45+-+y)%5E2%2F50%5E2)+%3D+1">imaginary</a> if your ellipse radii is too small. This second computation is for the non-rotated ellipse with start-&gt;end (110, 215)-&gt;(162.55, 162.45). The solution has a small imaginary component because the ellipse was just barely expanded.</p>
+<p>If the start-&gt;end points are farther than the ellipse's x and y radius can reach, the ellipse's radii will be minimally expanded so it could reach the start-&gt;end points. The interactive codepen at the bottom of this page demonstrates this well. To determine if your ellipse's radii is large enough to require expanding, you would need to solve a system of equations such as <a href="https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F36%5E2)+%2B+((215+-+y)%5E2%2F60%5E2)+%3D+1,+((150.71+-+x)%5E2%2F36%5E2)+%2B+((170.29+-+y)%5E2%2F60%5E2)+%3D+1">this on wolfram alpha</a>. This computation is for the non-rotated ellipse with start-&gt;end (110, 215)-&gt;(150.71, 170.29). The solution, (x, y), is the center of the ellipse(s). The solution will be <a href="https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F30%5E2)+%2B+((215+-+y)%5E2%2F50%5E2)+%3D+1,+((162.55+-+x)%5E2%2F30%5E2)+%2B+((162.45+-+y)%5E2%2F50%5E2)+%3D+1">imaginary</a> if your ellipse radii is too small. This second computation is for the non-rotated ellipse with start-&gt;end (110, 215)-&gt;(162.55, 162.45). The solution has a small imaginary component because the ellipse was just barely expanded.</p>
 
 <p>The four different paths mentioned above are determined by the next two argument flags. As mentioned earlier, there are still two possible ellipses for the path to travel around and two different possible paths on both ellipses, giving four possible paths. The first argument is the large-arc-flag. It simply determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle. The second argument is the sweep-flag. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles you will travel around. The example below shows all four possible combinations, along with the two circles for each case.</p>
 

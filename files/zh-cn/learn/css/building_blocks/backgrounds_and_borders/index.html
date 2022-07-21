@@ -11,7 +11,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>基本的计算机知识，<a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本的软件</a>，<a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>基本知识，HTML 基础知识  (如果不了解 HTML，请移步 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a>)，以及 CSS 如何工作的基本常识 (如果不了解 CSS，请移步 <a href="/en-US/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)</td>
+   <td>基本的计算机知识，<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本的软件</a>，<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>基本知识，HTML 基础知识  (如果不了解 HTML，请移步 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a>)，以及 CSS 如何工作的基本常识 (如果不了解 CSS，请移步 <a href="/zh-CN/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -22,7 +22,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h2 id="CSS的背景样式">CSS 的背景样式</h2>
 
-<p>CSS {{cssxref("background")}}属性是我们将在本课中学习的许多普通背景属性的简写。如果您在样式表中发现了一个复杂的背景属性，可能会觉得难以理解，因为可以同时传入这么多值。</p>
+<p>CSS {{cssxref("background")}} 属性是我们将在本课中学习的许多普通背景属性的简写。如果您在样式表中发现了一个复杂的背景属性，可能会觉得难以理解，因为可以同时传入这么多值。</p>
 
 <pre class="brush: css notranslate"><code>.box {
   background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
@@ -34,7 +34,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h3 id="背景颜色">背景颜色</h3>
 
-<p>{{cssxref("background-color")}}属性定义了 CSS 中任何元素的背景颜色。属性接受任何有效的<code>&lt;color&gt;值</code>。背景色扩展到元素的内容和内边距的下面。</p>
+<p>{{cssxref("background-color")}} 属性定义了 CSS 中任何元素的背景颜色。属性接受任何有效的<code>&lt;color&gt;值</code>。背景色扩展到元素的内容和内边距的下面。</p>
 
 <p>在下面的示例中，我们使用了各种颜色值来为元素盒子添加背景颜色：heading 和{{htmlelement("span")}}元素。</p>
 
@@ -44,7 +44,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h3 id="背景图片">背景图片</h3>
 
-<p>{{cssxref("background-image")}}属性允许在元素的背景中显示图像。在下面的例子中，我们有两个方框——一个是比方框大的背景图像，另一个是星星的小图像。</p>
+<p>{{cssxref("background-image")}} 属性允许在元素的背景中显示图像。在下面的例子中，我们有两个方框——一个是比方框大的背景图像，另一个是星星的小图像。</p>
 
 <p>这个例子演示了关于背景图像的两种情形。默认情况下，大图不会缩小以适应方框，因此我们只能看到它的一个小角，而小图则是平铺以填充方框。在这种情况下，实际的图像只是单独的一颗星星。</p>
 
@@ -54,7 +54,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h4 id="控制背景平铺">控制背景平铺</h4>
 
-<p>{{cssxref("background-repeat")}}属性用于控制图像的平铺行为。可用的值是：</p>
+<p>{{cssxref("background-repeat")}} 属性用于控制图像的平铺行为。可用的值是：</p>
 
 <ul>
  <li><code>no-repeat</code> — 不重复。</li>
@@ -92,7 +92,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h4 id="背景图像定位">背景图像定位</h4>
 
-<p>{{cssxref("background-position")}}属性允许您选择背景图像显示在其应用到的盒子中的位置。它使用的坐标系中，框的左上角是 (0,0)，框沿着水平 (x) 和垂直 (y) 轴定位。</p>
+<p>{{cssxref("background-position")}} 属性允许您选择背景图像显示在其应用到的盒子中的位置。它使用的坐标系中，框的左上角是 (0,0)，框沿着水平 (x) 和垂直 (y) 轴定位。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意：</strong>默认的背景位置值是 (0,0)。</p>
@@ -100,7 +100,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <p>最常见的背景位置值有两个单独的值——一个水平值后面跟着一个垂直值。</p>
 
-<p>你可以使用像<code>top</code>和<code>right</code>这样的关键字 (在{{cssxref("background-image")}}页面上查找其他的关键字):</p>
+<p>你可以使用像<code>top</code>和<code>right</code>这样的关键字 (在 {{cssxref("background-image")}} 页面上查找其他的关键字):</p>
 
 <pre class="brush: css notranslate"><code>.box {
   background-image: url(star.png);
@@ -109,7 +109,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 } </code>
 </pre>
 
-<p>或者使用 <a href="/en-US/docs/Web/CSS/length">长度值</a>, and <a href="/en-US/docs/Web/CSS/percentage">百分比</a>：</p>
+<p>或者使用 <a href="/zh-CN/docs/Web/CSS/length">长度值</a> 和 <a href="/zh-CN/docs/Web/CSS/percentage">百分比</a>：</p>
 
 <pre class="brush: css notranslate"><code>.box {
   background-image: url(star.png);
@@ -139,14 +139,14 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 800)}}</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong><code>background-position</code>是{{cssxref("background-position-x")}}和{{cssxref("background-position-y")}}的简写，它们允许您分别设置不同的坐标轴的值。</p>
+<p><strong>备注：</strong> <code>background-position</code> 是 {{cssxref("background-position-x")}} 和 {{cssxref("background-position-y")}} 的简写，它们允许您分别设置不同的坐标轴的值。</p>
 </div>
 
 <h3 id="渐变背景">渐变背景</h3>
 
-<p>当渐变用于背景时，也可以使用像图像一样的{{cssxref("background-image")}}属性设置。</p>
+<p>当渐变用于背景时，也可以使用像图像一样的 {{cssxref("background-image")}} 属性设置。</p>
 
-<p>您可以在 MDN 的<code>&lt;gradient&gt;</code>数据类型页面上，了解更多关于渐变的不同类型，以及使用它们可以做的事情。使用渐变的一个有趣方法是，使用 web 上可用的许多 CSS 渐变生成器之一，比如<a href="https://cssgradient.io/">这个 </a>。您可以创建一个渐变，然后复制并粘贴生成它的源代码。</p>
+<p>您可以在 MDN 的 <a href="/zh-CN/docs/Web/CSS/gradient"><code>&lt;gradient&gt;</code></a> 数据类型页面上，了解更多关于渐变的不同类型，以及使用它们可以做的事情。使用渐变的一个有趣方法是，使用 web 上可用的许多 CSS 渐变生成器之一，比如<a href="https://cssgradient.io/">这个</a>。您可以创建一个渐变，然后复制并粘贴生成它的源代码。</p>
 
 <p>在下面的示例中尝试一些不同的渐变。在这两个盒子里，我们分别有一个线性梯度，它延伸到整个盒子上，还有一个径向梯度，它有一个固定的大小，因此会重复。</p>
 
@@ -154,7 +154,7 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 <h3 id="多个背景图像">多个背景图像</h3>
 
-<p>也可以有多个背景图像——在单个属性值中指定多个<code>background-image</code>值，用逗号分隔每个值。</p>
+<p>也可以有多个背景图像——在单个属性值中指定多个 <code>background-image</code> 值，用逗号分隔每个值。</p>
 
 <p>当你这样做时，你可能会以背景图像互相重叠而告终。背景将与最后列出的背景图像层在堆栈的底部，背景图像在代码列表中最先出现的在顶端。</p>
 
@@ -164,13 +164,13 @@ translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 <p><strong>注意：</strong>渐变可以与常规的背景图像很好地混合在一起。</p>
 </div>
 
-<p>其它 <code>background-*</code>属性，该属性值用逗号分隔的方式设置。例如下列<code>background-image</code>：</p>
+<p>其它 <code>background-*</code> 属性，该属性值用逗号分隔的方式设置。例如下列 <code>background-image</code>：</p>
 
 <pre class="brush: css notranslate">background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px,  top right;</pre>
 
-<p>不同属性的每个值，将与其他属性中相同位置的值匹配。例如，上面的 image1 的 background-repeat 值将是 no-repeat。但是，当不同的属性具有不同数量的值时，会发生什么情况呢？答案是较小数量的值会循环—在上面的例子中有四个背景图像，但是只有两个背景位置值。前两个位置值将应用于前两个图像，然后它们将再次循环—image3 将被赋予第一个位置值，image4 将被赋予第二个位置值。</p>
+<p>不同属性的每个值，将与其他属性中相同位置的值匹配。例如，上面的 image1 的 <code>background-repeat</code> 值将是 <code>no-repeat</code>。但是，当不同的属性具有不同数量的值时，会发生什么情况呢？答案是较小数量的值会循环—在上面的例子中有四个背景图像，但是只有两个背景位置值。前两个位置值将应用于前两个图像，然后它们将再次循环—image3 将被赋予第一个位置值，image4 将被赋予第二个位置值。</p>
 
 <p><strong>我们来试一试。在下面的示例中包含了两个图像。为了演示叠加顺序，请尝试切换哪个背景图像在列表中最先出现。或使用其他属性更改位置、大小或重复值。</strong></p>
 
@@ -178,7 +178,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <h3 id="背景附加">背景附加</h3>
 
-<p>另一个可供选择的背景是指定他们如何滚动时，内容滚动。这是由{{cssxref("background-attachment")}}属性控制的，它可以接受以下值：</p>
+<p>另一个可供选择的背景是指定他们如何滚动时，内容滚动。这是由 {{cssxref("background-attachment")}} 属性控制的，它可以接受以下值：</p>
 
 <ul>
  <li><code>scroll</code>: 使元素的背景在页面滚动时滚动。如果滚动了元素内容，则背景不会移动。实际上，背景被固定在页面的相同位置，所以它会随着页面的滚动而滚动。</li>
@@ -186,11 +186,11 @@ background-position: 10px 20px,  top right;</pre>
  <li><code>local</code>: 这个值是后来添加的 (它只在 Internet Explorer 9+中受支持，而其他的在 IE4+中受支持)，因为滚动值相当混乱，在很多情况下并不能真正实现您想要的功能。局部值将背景固定在设置的元素上，因此当您滚动元素时，背景也随之滚动。</li>
 </ul>
 
-<p>{{cssxref("background-attachment")}}属性只有在有内容要滚动时才会有效果，所以我们做了一个示例来演示这三个值之间的区别——看看 <a href="http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (或者看看这儿的 <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">源代码</a>))。</p>
+<p>{{cssxref("background-attachment")}} 属性只有在有内容要滚动时才会有效果，所以我们做了一个示例来演示这三个值之间的区别——看看 <a href="http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">background-attachment.html</a> (或者看看这儿的 <a href="https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds">源代码</a>))。</p>
 
 <h3 id="使用background_的简写">使用 background 的简写</h3>
 
-<p>正如我在本课开始时提到的，您将经常看到使用{{cssxref("background")}}属性指定的背景。这种简写允许您一次设置所有不同的属性。</p>
+<p>正如我在本课开始时提到的，您将经常看到使用 {{cssxref("background")}} 属性指定的背景。这种简写允许您一次设置所有不同的属性。</p>
 
 <p>如果使用多个背景，则需要为第一个背景指定所有普通属性，然后在逗号后面添加下一个背景。在下面的例子中，我们有一个渐变，它指定大小和位置，然后是一个无重复的图像背景，它指定位置，然后是一个颜色。</p>
 
@@ -201,7 +201,7 @@ background-position: 10px 20px,  top right;</pre>
  <li><code>background-size</code> 值只能包含在背景位置之后，用'/'字符分隔，例如：<code>center/80%</code>。</li>
 </ul>
 
-<p>查看{{cssxref("background")}}的 MDN 页面，以查看所有的注意事项。</p>
+<p>查看 {{cssxref("background")}} 的 MDN 页面，以查看所有的注意事项。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 800)}}</p>
 
@@ -213,7 +213,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <h2 id="边框">边框</h2>
 
-<p>在学习盒子模型时，我们发现了边框如何影响盒子的大小。在这节课中，我们将看看如何创造性地使用边界。通常，当我们使用 CSS 向元素添加边框时，我们使用一个简写属性在一行 CSS 中设置边框的颜色、宽度和样式。我们可以使用{{cssxref("border")}}为一个框的所有四个边设置边框。</p>
+<p>在学习盒子模型时，我们发现了边框如何影响盒子的大小。在这节课中，我们将看看如何创造性地使用边界。通常，当我们使用 CSS 向元素添加边框时，我们使用一个简写属性在一行 CSS 中设置边框的颜色、宽度和样式。我们可以使用 {{cssxref("border")}} 为一个框的所有四个边设置边框。</p>
 
 <pre class="brush: css notranslate"><code>.box {
   border: 1px solid black;
@@ -251,7 +251,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <h3 id="圆角">圆角</h3>
 
-<p>通过使用{{cssxref("border-radius")}}属性和与方框的每个角相关的长边来实现方框的圆角。可以使用两个长度或百分比作为值，第一个值定义水平半径，第二个值定义垂直半径。在很多情况下，您将只传递一个值，这两个值都将使用。</p>
+<p>通过使用 {{cssxref("border-radius")}} 属性和与方框的每个角相关的长边来实现方框的圆角。可以使用两个长度或百分比作为值，第一个值定义水平半径，第二个值定义垂直半径。在很多情况下，您将只传递一个值，这两个值都将使用。</p>
 
 <p>例如，要使一个盒子的四个角都有 10px 的圆角半径：</p>
 
@@ -265,7 +265,7 @@ background-position: 10px 20px,  top right;</pre>
   border-top-right-radius: 1em 10%;
 } </code></pre>
 
-<p>我们在下面的示例中设置了所有四个角，然后更改右上角的值使之不同。您可以使用这些值来更改圆角样式。查看{{cssxref("border-radius")}}的属性页，查看可用的语法选项。</p>
+<p>我们在下面的示例中设置了所有四个角，然后更改右上角的值使之不同。您可以使用这些值来更改圆角样式。查看 {{cssxref("border-radius")}} 的属性页，查看可用的语法选项。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 800)}}</p>
 
@@ -282,7 +282,7 @@ background-position: 10px 20px,  top right;</pre>
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 800)}}</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：您可以点击  <a href="https://github.com/mdn/css-examples/blob/master/learn/solutions.md">这儿</a> 查看解决方案——但请先尝试一下自己能否实现。</p>
+<p><strong>备注：</strong> 你可以点击 <a href="https://github.com/mdn/css-examples/blob/master/learn/solutions.md">这里</a>查看解决方案——但请先尝试一下自己能否实现。</p>
 </div>
 
 <h2 id="总结">总结</h2>

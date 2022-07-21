@@ -74,7 +74,7 @@ var desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, 'a', desc); // "called: a"
 </pre>
 
-<p>当调用 {{jsxref("Object.defineProperty()")}} 或者 {{jsxref("Reflect.defineProperty()")}}，传递给 <code>defineProperty</code> 的 <code>descriptor</code>   有一个限制 - 只有以下属性才有用，非标准的属性将会被无视：</p>
+<p>当调用 {{jsxref("Object.defineProperty()")}} 或者 {{jsxref("Reflect.defineProperty()")}}，传递给 <code>defineProperty</code> 的 <code>descriptor</code>   有一个限制 - 只有以下属性才有用，非标准的属性将会被无视：</p>
 
 <ul>
  <li><code>enumerable</code></li>
@@ -86,15 +86,15 @@ Object.defineProperty(p, 'a', desc); // "called: a"
 </ul>
 
 <pre class="brush: js">var p = new Proxy({}, {
-  defineProperty(target, prop, descriptor) {
-    console.log(descriptor);
-    return Reflect.defineProperty(target, prop, descriptor);
-  }
+  defineProperty(target, prop, descriptor) {
+    console.log(descriptor);
+    return Reflect.defineProperty(target, prop, descriptor);
+  }
 });
 
 Object.defineProperty(p, 'name', {
-  value: 'proxy',
-  type: 'custom'
+  value: 'proxy',
+  type: 'custom'
 });  // { value: 'proxy' }
 </pre>
 

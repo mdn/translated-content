@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLInputElement/invalid_event
 ---
 <div>{{APIRef}}</div>
 
-<p>若一个可提交元素在检查有效性时，不符合对它的约束条件，则会触发 <strong><code>invalid</code></strong> 事件。</p>
+<p>若一个可提交元素在检查有效性时，不符合对它的约束条件，则会触发 <strong><code>invalid</code></strong> 事件。</p>
 
 <table class="properties">
  <tbody>
@@ -35,13 +35,13 @@ translation_of: Web/API/HTMLInputElement/invalid_event
  </tbody>
 </table>
 
-<p>这个事件可用于展示提交表单时所出现的问题的概览。当表单提交时，若任一表单控件无效，则会触发 <code>invalid</code> 事件。对可提交元素有效性的检查是在提交父元素 {{HtmlElement("form")}} 之前或调用父元素 <code>&lt;form&gt;</code> 或元素自己的 <a href="/en-US/docs/Learn/Forms#constraint_validation_api" title="/en-US/docs/HTML/Forms_in_HTML#Constraint_Validation_API"><code>checkValidity()</code></a> 方法之后。</p>
+<p>这个事件可用于展示提交表单时所出现的问题的概览。当表单提交时，若任一表单控件无效，则会触发 <code>invalid</code> 事件。对可提交元素有效性的检查是在提交父元素 {{HtmlElement("form")}} 之前或调用父元素 <code>&lt;form&gt;</code> 或元素自己的 <a href="/en-US/docs/Learn/Forms#constraint_validation_api" title="/en-US/docs/HTML/Forms_in_HTML#Constraint_Validation_API"><code>checkValidity()</code></a> 方法之后。</p>
 
 <p>这个事件不会在 {{Event("blur")}} 事件中触发。</p>
 
 <h2 id="Examples">示例</h2>
 
-<p>如果表单提交时有无效值，检查可提交元素时发现了错误，则 <code>invalid</code> 事件会在那个无效元素上触发。在这个例子中，当输入无效值触发 <code>invalid</code> 事件时，这个无效值被记录下来。</p>
+<p>如果表单提交时有无效值，检查可提交元素时发现了错误，则 <code>invalid</code> 事件会在那个无效元素上触发。在这个例子中，当输入无效值触发 <code>invalid</code> 事件时，这个无效值被记录下来。</p>
 
 <h3 id="HTML">HTML</h3>
 

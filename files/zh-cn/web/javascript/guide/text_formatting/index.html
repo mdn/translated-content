@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <h2 id="字符串">字符串</h2>
 
-<p>JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。它是由无符号整数值（16bit）作为元素而组成的集合。字符串中的每个元素在字符串中占据一个位置. 第一个元素的 index 值是 0，下一个元素的 index 值是 1，以此类推。字符串的长度就是字符串中所含的元素个数.你可以通过 String 字面值或者 String 对象两种方式创建一个字符串。</p>
+<p>JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。它是由无符号整数值（16bit）作为元素而组成的集合。字符串中的每个元素在字符串中占据一个位置. 第一个元素的 index 值是 0，下一个元素的 index 值是 1，以此类推。字符串的长度就是字符串中所含的元素个数.你可以通过 String 字面值或者 String 对象两种方式创建一个字符串。</p>
 
 <h3 id="String字面量">String 字面量</h3>
 
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <p>这是 ECMAScript 6 中的新特性。有了 Unicode 字元逸出，任何字符都可以用 16 进制数转义，这使得通过 Unicode 转义表示大于<code>0x10FFFF</code>的字符成为可能。使用简单的 Unicode 转义时通常需要分别写字符相应的两个部分（译注：大于 0x10FFFF 的字符需要拆分为相应的两个小于 0x10FFFF 的部分）来达到同样的效果。</p>
 
-<p>请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。</p>
+<p>请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。</p>
 
 <pre class="brush: js">'\u{2F804}'
 
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <h3 id="字符串对象">字符串对象</h3>
 
-<p>{{jsxref("String")}} 对象是对原始 string 类型的封装 .</p>
+<p>{{jsxref("String")}} 对象是对原始 string 类型的封装 .</p>
 
 <pre class="brush: js">const foo = new String('foo'); // 创建一个 String 对象
 console.log(foo); // 输出: [String: 'foo']
@@ -57,14 +57,14 @@ typeof foo; // 返回 'object'</pre>
 
 <p>你可以在 String 字面值上使用 String 对象的任何方法—JavaScript 自动把 String 字面值转换为一个临时的 String 对象，然后调用其相应方法，最后丢弃此临时对象。在 String 字面值上也可以使用 String.length 属性。</p>
 
-<p>除非必要， 应该尽量使用 String 字面值，因为 String 对象的某些行为可能并不与直觉一致。举例：</p>
+<p>除非必要， 应该尽量使用 String 字面值，因为 String 对象的某些行为可能并不与直觉一致。举例：</p>
 
 <pre class="brush: js">const firstString = '2 + 2'; //创建一个字符串字面量
 const secondString = new String('2 + 2'); // 创建一个字符串对象
 eval(firstString); // 返回数字 4
 eval(secondString); // 返回包含 "2 + 2" 的字符串对象</pre>
 
-<p><code>String</code> 对象有一个属性 <code>length</code>，标识了字符串中 UTF-16 的码点个数。举例，下面的代码把 13 赋值给了<code>helloLength</code>，因为 "Hello, World!" 包含 13 个字符，每个字符用一个 UTF-16 码点表示。你可以通过数组的方式访问每一个码点，但你不能修改每个字符，因为字符串是不变的类数组对象： </p>
+<p><code>String</code> 对象有一个属性 <code>length</code>，标识了字符串中 UTF-16 的码点个数。举例，下面的代码把 13 赋值给了<code>helloLength</code>，因为 "Hello, World!" 包含 13 个字符，每个字符用一个 UTF-16 码点表示。你可以通过数组的方式访问每一个码点，但你不能修改每个字符，因为字符串是不变的类数组对象： </p>
 
 <pre class="brush: js">const hello = 'Hello, World!';
 const helloLength = hello.length;
@@ -89,7 +89,7 @@ hello[0]; // 返回 "H"</pre>
  </thead>
  <tbody>
   <tr>
-   <td>{{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}}</td>
+   <td>{{jsxref("String.charAt", "charAt")}}, {{jsxref("String.charCodeAt", "charCodeAt")}}, {{jsxref("String.codePointAt", "codePointAt")}}</td>
    <td>返回字符串指定位置的字符或者字符编码。</td>
   </tr>
   <tr>
@@ -183,11 +183,11 @@ const ten = 10;
 console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 // "Fifteen is 15 and not 20."</pre>
 
-<p>更多信息，请阅读 <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> 中的 <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a>。</p>
+<p>更多信息，请阅读 <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> 中的 <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">Template literals</a>。</p>
 
 <h2 id="国际化">国际化</h2>
 
-<p>{{jsxref("Intl")}} 对象是 ECMAScript 国际化 API 的命名空间，它提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能.  {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是<code>Intl</code>对象的属性。</p>
+<p>{{jsxref("Intl")}} 对象是 ECMAScript 国际化 API 的命名空间，它提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能.  {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是<code>Intl</code>对象的属性。</p>
 
 <h3 id="日期和时间格式化">日期和时间格式化</h3>
 
@@ -201,7 +201,7 @@ const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));//2014-1970=44 年
 //197 是 6×30+16(7 月的 16 天)+3(3 个大月)-2(2 月少 2 天)
 
 const options = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
 const americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
@@ -212,13 +212,13 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 <p>{{jsxref("NumberFormat")}} 对象在数字的格式化方面很有用，比如货币数量值。</p>
 
 <pre class="brush: js">var gasPrice = new Intl.NumberFormat("en-US",
-                        { style: "currency", currency: "USD",
-                          minimumFractionDigits: 3 });
+                        { style: "currency", currency: "USD",
+                          minimumFractionDigits: 3 });
 
 console.log(gasPrice.format(5.259)); // $5.259
 
 var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
-                        { style: "currency", currency: "CNY" });
+                        { style: "currency", currency: "CNY" });
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一，三一四。二五
 </pre>
@@ -227,7 +227,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一，三一四。二�
 
 <p>{{jsxref("Collator")}} 对象在字符串比较和排序方面很有用。</p>
 
-<p>举例，德语中<em>有两种不同的排序方式 电话本（phonebook）</em> 和 字典（<em>dictionary）</em>. 电话本排序强调发音，比如在排序前 “ä”, “ö”等被扩展为 “ae”, “oe”等发音。</p>
+<p>举例，德语中<em>有两种不同的排序方式 电话本（phonebook）</em> 和 字典（<em>dictionary）</em>. 电话本排序强调发音，比如在排序前 “ä”, “ö”等被扩展为 “ae”, “oe”等发音。</p>
 
 <pre class="brush: js">var names = ["Hochberg", "Hönigswald", "Holzman"];
 
@@ -238,7 +238,7 @@ console.log(names.sort(germanPhonebook.compare).join(", "));
 // logs "Hochberg, Hönigswald, Holzman"
 </pre>
 
-<p>有些德语词包含变音，所以在字典中忽略变音进行排序是合理的 (除非待排序的单词只有变音部分不同：<em>schon</em> 先于 <em>schön</em>).</p>
+<p>有些德语词包含变音，所以在字典中忽略变音进行排序是合理的 (除非待排序的单词只有变音部分不同：<em>schon</em> 先于 <em>schön</em>).</p>
 
 <pre class="brush: js">var germanDictionary = new Intl.Collator("de-DE-u-co-dict");
 
@@ -247,6 +247,6 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 // logs "Hochberg, Holzman, Hönigswald"
 </pre>
 
-<p>关于{{jsxref("Intl")}} API 的更多信息，请参考 <a href="https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/">Introducing the JavaScript Internationalization API</a>。</p>
+<p>关于{{jsxref("Intl")}} API 的更多信息，请参考 <a href="https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/">Introducing the JavaScript Internationalization API</a>。</p>
 
 <div>{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}</div>

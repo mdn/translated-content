@@ -5,7 +5,7 @@ translation_of: Web/API/Navigator/getGamepads
 ---
 <p>{{APIRef("Gamepad API")}}{{SeeCompatTable}}</p>
 
-<p>调用 <strong><code>Navigator.getGamepads()</code></strong> 方法会返回一个数组：第一个值为 <code>null</code> ，其他的值均为 {{ domxref("Gamepad") }} 对象，表示每一个与设备连接的游戏手柄。所以如果没有连接任何游戏手柄，这个方法将只会返回 <code>null</code>。</p>
+<p>调用 <strong><code>Navigator.getGamepads()</code></strong> 方法会返回一个数组：第一个值为 <code>null</code> ，其他的值均为 {{ domxref("Gamepad") }} 对象，表示每一个与设备连接的游戏手柄。所以如果没有连接任何游戏手柄，这个方法将只会返回 <code>null</code>。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,24 +20,11 @@ translation_of: Web/API/Navigator/getGamepads
   gp.buttons.length, gp.axes.length);
 });</pre>
 
-<h2 id="标准">标准</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Gamepad', '', 'The Gamepad API specification')}}</td>
-   <td>{{Spec2('Gamepad')}}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 {{Compat("api.Navigator.getGamepads")}}
 

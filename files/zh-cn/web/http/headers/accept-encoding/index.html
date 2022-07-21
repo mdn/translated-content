@@ -59,19 +59,19 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5</pre>
 
 <dl>
  <dt><code>gzip</code></dt>
- <dd>表示采用 <a class="external external-icon" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77) 压缩算法，以及 32 位 CRC 校验的编码方式。</dd>
+ <dd>表示采用 <a class="external external-icon" href="http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77">Lempel-Ziv coding</a> (LZ77) 压缩算法，以及 32 位 CRC 校验的编码方式。</dd>
  <dt><code>compress</code></dt>
  <dd>采用 <a class="external external-icon" href="http://en.wikipedia.org/wiki/LZW">Lempel-Ziv-Welch</a> (LZW) 压缩算法。</dd>
  <dt><code>deflate</code></dt>
- <dd>采用 <a href="http://en.wikipedia.org/wiki/Zlib">zlib</a> 结构和 <a href="http://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> 压缩算法。</dd>
+ <dd>采用 <a href="http://en.wikipedia.org/wiki/Zlib">zlib</a> 结构和 <a href="http://en.wikipedia.org/wiki/DEFLATE"><em>deflate</em></a> 压缩算法。</dd>
  <dt><code>br</code></dt>
- <dd>表示采用 <a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a> 算法的编码方式。</dd>
+ <dd>表示采用 <a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a> 算法的编码方式。</dd>
  <dt><code>identity</code></dt>
  <dd>用于指代自身（例如：未经过压缩和修改）。除非特别指明，这个标记始终可以被接受。</dd>
  <dt><code>*</code></dt>
  <dd>匹配其他任意未在该请求头字段中列出的编码方式。假如该请求头字段不存在的话，这个值是默认值。它并不代表任意算法都支持，而仅仅表示算法之间无优先次序。</dd>
  <dt><code>;q=</code> (qvalues weighting)</dt>
- <dd>值代表优先顺序，用相对<a href="/en-US/docs/Glossary/Quality_values">质量价值</a> 表示，又称为权重。</dd>
+ <dd>值代表优先顺序，用相对<a href="/en-US/docs/Glossary/Quality_values">质量价值</a> 表示，又称为权重。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -106,7 +106,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 <ul>
  <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">内容协商</a></li>
- <li>包含有内容协商结果的响应头： {{HTTPHeader("Content-Encoding")}}</li>
+ <li>包含有内容协商结果的响应头： {{HTTPHeader("Content-Encoding")}}</li>
  <li>其他相似的请求头：{{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}</li>
 </ul>
 

@@ -1,5 +1,5 @@
 ---
-title: Implementing feature detection
+title: 实现特性检测
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
@@ -7,24 +7,24 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p>特性检测包括计算浏览器是否支持一个特定块中的代码，基于是否可以运行来运行不同的代码，以使所有的浏览器都可以正常工作，而不是在某些浏览器中崩溃或出错。本文列举了如何写出一个你自己的简单的特性检测，如何使用库来加速实现，以及对于特性间的的原生特性，如 <code>@supports</code> 。</p>
+<p>特性检测包括计算浏览器是否支持一个特定块中的代码，基于是否可以运行来运行不同的代码，以使所有的浏览器都可以正常工作，而不是在某些浏览器中崩溃或出错。本文列举了如何写出一个你自己的简单的特性检测，如何使用库来加速实现，以及对于特性间的的原生特性，如 <code>@supports</code>。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea of the high-level <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross-browser testing</a>.</td>
+   <th scope="row">预备知识：</th>
+   <td>熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 以及 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，以及<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试的高级原则</a>。</td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand what the concept of feature detection is, and be able to implement suitable solutions in CSS and JavaScript.</td>
+   <th scope="row">目标：</th>
+   <td>了解什么是特性检测的概念，并能够在 CSS 和 JavaScript 中实现合适的解决方案。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="特性检测的概念">特性检测的概念</h2>
 
-<p>功能检测的思想是，您可以运行一个测试来确定当前浏览器是否支持某个特性，然后有条件地运行代码，以便在支持该功能的浏览器和不支持该功能的浏览器中提供可接受的体验，如果不这样做，在不支持您在代码中使用的功能的浏览器中将无法正确地显示您的网站，从而产生糟糕的用户体验。</p>
+<p>特性检测的思想是，你可以运行一个测试来确定当前浏览器是否支持某个特性，然后有条件地运行代码，以便在支持该功能的浏览器和不支持该功能的浏览器中提供可接受的体验，如果不这样做，在不支持你在代码中使用的功能的浏览器中将无法正确地显示你的网站，从而产生糟糕的用户体验。</p>
 
 <p>Let's recap and look at the example we touched on in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Handling common JavaScript problems</a> — the <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 

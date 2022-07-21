@@ -15,7 +15,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 
 <h2 id="哪里出错了">哪里出错了？</h2>
 
-<p>对 {{Glossary("CORS")}} 请求的响应缺少必需的{{HTTPHeader("Access-Control-Allow-Origin")}}头，其用于确定在当前源内操作的资源是否可以访问。</p>
+<p>对 {{Glossary("CORS")}} 请求的响应缺少必需的{{HTTPHeader("Access-Control-Allow-Origin")}}头，其用于确定在当前源内操作的资源是否可以访问。</p>
 
 <p>如果服务器在您的控制之下，请将请求站点的源添加到允许访问的域集，方法是将其添加到<code>Access-Control-Allow-Origin</code>头的值。</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 <pre>Access-Control-Allow-Origin: https://amazing.site
 </pre>
 
-<p>您还可以使用<code>"*"</code>通配符配置站点使得允许任何站点访问它。您应该只将它用于公共的 API。私有 API 永远不应使用<code>"*"</code>，而应设置特定的一个域或一些域。此外，通配符仅适用于将{{htmlattrxref("crossorigin")}} 属性设置为<code>"anonymous"</code>的请求。</p>
+<p>您还可以使用<code>"*"</code>通配符配置站点使得允许任何站点访问它。您应该只将它用于公共的 API。私有 API 永远不应使用<code>"*"</code>，而应设置特定的一个域或一些域。此外，通配符仅适用于将{{htmlattrxref("crossorigin")}} 属性设置为<code>"anonymous"</code>的请求。</p>
 
 <pre>Access-Control-Allow-Origin: *</pre>
 

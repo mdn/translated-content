@@ -13,14 +13,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 <div>{{JSRef}}{{Deprecated_header}}</div>
 
 <div class="warning">
-<p><strong>警告：</strong>通过现代浏览器的操作属性的便利性，可以改变一个对象的 <code>[[Prototype]]</code> 属性，这种行为在每一个 JavaScript 引擎和浏览器中都是一个非常慢且影响性能的操作，使用这种方式来改变和继承属性是对性能影响非常严重的，并且性能消耗的时间也不是简单的花费在 <code>obj.__proto__ = ...</code> 语句上，它还会影响到所有继承来自该 <code>[[Prototype]]</code> 的对象，如果你关心性能，你就不应该在一个对象中修改它的 [[Prototype]]。相反，创建一个新的且可以继承 <code>[[Prototype]]</code> 的对象，推荐使用 {{jsxref("Object.create()")}}。</p>
+<p><strong>警告：</strong>通过现代浏览器的操作属性的便利性，可以改变一个对象的 <code>[[Prototype]]</code> 属性，这种行为在每一个 JavaScript 引擎和浏览器中都是一个非常慢且影响性能的操作，使用这种方式来改变和继承属性是对性能影响非常严重的，并且性能消耗的时间也不是简单的花费在 <code>obj.__proto__ = ...</code> 语句上，它还会影响到所有继承来自该 <code>[[Prototype]]</code> 的对象，如果你关心性能，你就不应该在一个对象中修改它的 [[Prototype]]。相反，创建一个新的且可以继承 <code>[[Prototype]]</code> 的对象，推荐使用 {{jsxref("Object.create()")}}。</p>
 </div>
 
 <div class="warning">
-<p><strong>警告：</strong>当 <code>Object.prototype.__proto__</code> 已被大多数浏览器厂商所支持的今天，其存在和确切行为仅在 ECMAScript 2015 规范中被标准化为传统功能，以确保 Web 浏览器的兼容性。为了更好的支持，建议只使用 {{jsxref("Object.getPrototypeOf()")}}。</p>
+<p><strong>警告：</strong>当 <code>Object.prototype.__proto__</code> 已被大多数浏览器厂商所支持的今天，其存在和确切行为仅在 ECMAScript 2015 规范中被标准化为传统功能，以确保 Web 浏览器的兼容性。为了更好的支持，建议只使用 {{jsxref("Object.getPrototypeOf()")}}。</p>
 </div>
 
-<div>{{jsxref("Object.prototype")}} 的 <code>__proto__</code>  属性是一个访问器属性（一个 getter 函数和一个 setter 函数）, 暴露了通过它访问的对象的内部<code>[[Prototype]]</code> (一个对象或 {{jsxref("Global_Objects/null", "null")}})。</div>
+<div>{{jsxref("Object.prototype")}} 的 <code>__proto__</code>  属性是一个访问器属性（一个 getter 函数和一个 setter 函数）, 暴露了通过它访问的对象的内部<code>[[Prototype]]</code> (一个对象或 {{jsxref("Global_Objects/null", "null")}})。</div>
 
 
 
@@ -93,9 +93,9 @@ obj.myname();//myname
 
 <h2 id="描述">描述</h2>
 
-<p><code>__proto__</code> 的读取器 (getter) 暴露了一个对象的内部 <code>[[Prototype]]</code> 。对于使用对象字面量创建的对象，这个值是 {{jsxref("Object.prototype")}}。对于使用数组字面量创建的对象，这个值是 {{jsxref("Array.prototype")}}。对于 functions，这个值是{{jsxref("Function.prototype")}}。对于使用 new fun 创建的对象，其中 fun 是由 js 提供的内建构造器函数之一 ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}} 等等），这个值总是 fun.prototype。对于用 JS 定义的其他 JS 构造器函数创建的对象，这个值就是该构造器函数的 prototype 属性。</p>
+<p><code>__proto__</code> 的读取器 (getter) 暴露了一个对象的内部 <code>[[Prototype]]</code> 。对于使用对象字面量创建的对象，这个值是 {{jsxref("Object.prototype")}}。对于使用数组字面量创建的对象，这个值是 {{jsxref("Array.prototype")}}。对于 functions，这个值是{{jsxref("Function.prototype")}}。对于使用 new fun 创建的对象，其中 fun 是由 js 提供的内建构造器函数之一 ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}} 等等），这个值总是 fun.prototype。对于用 JS 定义的其他 JS 构造器函数创建的对象，这个值就是该构造器函数的 prototype 属性。</p>
 
-<p><code>__proto__</code> 的设置器 (setter) 允许对象的 <code>[[Prototype]]</code> 被变更。前提是这个对象必须通过 {{jsxref("Object.isExtensible()")}} 判断为是可扩展的，如果不可扩展，则会抛出一个 {{jsxref("Global_Objects/TypeError", "TypeError")}} 错误。要变更的值必须是一个 object 或{{jsxref("Global_Objects/null", "null")}}，提供其它值将不起任何作用。</p>
+<p><code>__proto__</code> 的设置器 (setter) 允许对象的 <code>[[Prototype]]</code> 被变更。前提是这个对象必须通过 {{jsxref("Object.isExtensible()")}} 判断为是可扩展的，如果不可扩展，则会抛出一个 {{jsxref("Global_Objects/TypeError", "TypeError")}} 错误。要变更的值必须是一个 object 或{{jsxref("Global_Objects/null", "null")}}，提供其它值将不起任何作用。</p>
 
 <p>要理解原型如何被使用，请查看相关文章：<a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">Inheritance and the prototype chain</a>。</p>
 
@@ -129,7 +129,7 @@ obj.myname();//myname
 
 <h2 id="兼容性注意事项">兼容性注意事项</h2>
 
-<p>在 ECMAScript 2015（ES6）的规范要求中，支持 <code>__proto__</code> 是各大 Web 浏览器厂商的要求（虽然符合规范），但其他环境下因为历史遗留的问题，也有可能被使用和支持。 </p>
+<p>在 ECMAScript 2015（ES6）的规范要求中，支持 <code>__proto__</code> 是各大 Web 浏览器厂商的要求（虽然符合规范），但其他环境下因为历史遗留的问题，也有可能被使用和支持。 </p>
 
 <h2 id="更多请参考">更多请参考</h2>
 

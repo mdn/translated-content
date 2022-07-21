@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 
 <h2 id="哪里出错了？">哪里出错了？</h2>
 
-<p>非标准化的<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures">表达式闭包</a>语法（简写函数语法）已被废弃，不应该再被使用。该语法将会在 {{bug(1083458)}} 中全部移除，到时候用到该语法的脚本程序会报  SyntaxError 错误。</p>
+<p>非标准化的<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures">表达式闭包</a>语法（简写函数语法）已被废弃，不应该再被使用。该语法将会在 {{bug(1083458)}} 中全部移除，到时候用到该语法的脚本程序会报  SyntaxError 错误。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -61,7 +61,7 @@ var obj = {
 };
 </pre>
 
-<p>根据 ES2015 中对于<a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">方法定义</a>的规定，上述写法可以转换成如下形式：</p>
+<p>根据 ES2015 中对于<a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">方法定义</a>的规定，上述写法可以转换成如下形式：</p>
 
 <pre class="brush: js example-good">var obj = {
   get x() { return 1 },

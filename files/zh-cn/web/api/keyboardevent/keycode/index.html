@@ -5,9 +5,9 @@ translation_of: Web/API/KeyboardEvent/keyCode
 ---
 <p>{{APIRef("DOM Events")}}{{deprecated_header()}}</p>
 
-<p>这个只读的属性 <strong><code>KeyboardEvent.keyCode</code></strong> 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的 ASCII ({{RFC(20)}}) 或 Windows 1252 码。如果这个键不能被标志，这个值为 0。</p>
+<p>这个只读的属性 <strong><code>KeyboardEvent.keyCode</code></strong> 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的 ASCII ({{RFC(20)}}) 或 Windows 1252 码。如果这个键不能被标志，这个值为 0。</p>
 
-<p>你应该尽量避免使用它；它已经被弃用了一段时间。相反的，如果它在你的浏览器中被实现了的话，你应该使用{{domxref("KeyboardEvent.code")}}。 不幸的是，有一些浏览器还是没有实现它，所以你在使用之前必须要小心，确认你所使用的那个被所有目标浏览器所支持。</p>
+<p>你应该尽量避免使用它；它已经被弃用了一段时间。相反的，如果它在你的浏览器中被实现了的话，你应该使用{{domxref("KeyboardEvent.code")}}。 不幸的是，有一些浏览器还是没有实现它，所以你在使用之前必须要小心，确认你所使用的那个被所有目标浏览器所支持。</p>
 
 <div class="note">
 <p>在处理 keydown 和 keyup 事件时，Web 开发人员不应使用可打印字符的 keycode 属性。如上所述，keycode 属性对可打印字符不有用，尤其是那些按下 shift 或 alt 键的输入。在实现快捷键处理程序时，事件（“keypress”）事件通常更好（至少当 gecko 是正在使用的运行时）。详情请参见 Gecko 按键事件。</p>
@@ -36,22 +36,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">Comment 评论</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#widl-KeyboardEvent-keyCode','KeyboardEvent.keyCode')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>初始定义；指定为已弃用</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -114,7 +99,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <p>由标准位置的可打印键引起的每个浏览器的 keydown 事件的 keycode 值</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th colspan="1" rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
@@ -355,7 +340,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
    <th scope="row"><code>"KeyD"</code></th>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68) </code></td>
+   <td colspan="3" rowspan="1"><code>0x44 (68) </code></td>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
@@ -617,7 +602,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <p>由标准位置的可打印键（US 布局中的标点符号）引起的每个浏览器的 keydown 事件的 keycode 值：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th colspan="1" rowspan="3" scope="row">{{domxref("KeyboardEvent.code")}}</th>
@@ -787,7 +772,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
    <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
    <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
    <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code>  *1</td>
+   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code>  *1</td>
    <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
    <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
    <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code></td>
@@ -991,7 +976,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
    <td colspan="1" rowspan="2">*4</td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code><br>
-     </td>
+     </td>
    <td colspan="1" rowspan="2">*4</td>
    <td rowspan="2"><code>0xBD (189)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
@@ -1055,7 +1040,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <h3 id="不可打印键（功能键）">不可打印键（功能键）</h3>
 
-<table class="standard-table">
+<table>
  <caption>由修改键引起的每个浏览器的 keydown 事件的 keycode 值：</caption>
  <thead>
   <tr>
@@ -1217,7 +1202,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <p>由不可打印的键引起的每个浏览器的 keydown 事件的 keycode 值：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
@@ -1480,7 +1465,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <p>由功能键引起的每个浏览器的 keydown 事件的 keycode 值：</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
@@ -1802,7 +1787,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <p>由 numPad 中的键在 numLock 状态下导致的每个浏览器的 keyDown 事件的 keycode 值</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
@@ -2082,7 +2067,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <p>由处于无 numlock 状态的 numpad 中的键引起的每个浏览器的 keydown 事件的 keycode 值</p>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th colspan="1" rowspan="2" scope="row">{{domxref("KeyboardEvent.code")}}</th>
@@ -2213,7 +2198,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
 
 <p>gecko 在 keyboardvent 中定义了许多 keycode 值，用于显式地生成映射表。这些值对 Firefox 的附加开发人员很有用，但在公共网页中却没有那么有用。</p>
 
-<table class="standard-table" style="width: auto;">
+<table style="width: auto;">
  <tbody>
   <tr>
    <td class="header">常数</td>
@@ -2253,7 +2238,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
   <tr>
    <td><code>DOM_VK_ENTER</code></td>
    <td style="white-space: nowrap;">0x0E (14)</td>
-   <td>Reserved, but not used. <code> </code><code>{{obsolete_inline(30)}} </code>(Dropped, see {{bug(969247)}}.)</td>
+   <td>Reserved, but not used. {{Deprecated_Inline}} (Dropped, see {{bug(969247)}}.)</td>
   </tr>
   <tr>
    <td><code>DOM_VK_SHIFT</code></td>

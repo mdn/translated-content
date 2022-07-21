@@ -40,7 +40,7 @@ translation_of: WebAssembly/Text_format_to_wasm
 
 <ol>
  <li>はじめに、上のコードをテキストファイルにコピーして <code>simple.wat</code> という名前のファイルを作成します。</li>
- <li>このテキスト表現をブラウザが実際に読み込んで利用可能なアセンブリ言語にアセンブルする必要があります。 このために wabt ツールを使用することができます。これは WebAssembly のテキスト表現から wasm 変換する、または逆に変換するコンパイラ(加えてもう少し別のツール)が含まれます。<a href="https://github.com/webassembly/wabt">https://github.com/webassembly/wabt</a> に行って、今ページに従ってツールの設定をします。</li>
+ <li>このテキスト表現をブラウザが実際に読み込んで利用可能なアセンブリ言語にアセンブルする必要があります。 このために wabt ツールを使用することができます。これは WebAssembly のテキスト表現から wasm 変換する、または逆に変換するコンパイラ(加えてもう少し別のツール)が含まれます。<a href="https://github.com/webassembly/wabt">https://github.com/webassembly/wabt</a> に行って、そのページの説明に従ってツールの設定をします。</li>
  <li>ツールをビルドしたら、システム <code>PATH</code> に <code>/wabt/out</code> ディレクトリを追加します。</li>
  <li>次に、wast2wasm プログラムを実行します。入力ファイルパス、続いて <code>-o</code> パラメータ、出力ファイルパスを指定します:
   <pre class="brush: bash; no-line-numbers notranslate">wat2wasm simple.wat -o simple.wasm</pre>

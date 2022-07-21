@@ -9,7 +9,7 @@ translation_of: Web/API/GlobalEventHandlers/onerror
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<div>混合事件 {{domxref("GlobalEventHandlers")}} 的 onerror 属性是用于处理 {{event("error")}} 的事件</div>
+<div>混合事件 {{domxref("GlobalEventHandlers")}} 的 onerror 属性是用于处理 {{event("error")}} 的事件</div>
 
 
 
@@ -59,7 +59,7 @@ translation_of: Web/API/GlobalEventHandlers/onerror
 
 <h2 id="注意事项">注意事项</h2>
 
-<p>当加载自<a href="/en-US/docs/Web/Security/Same-origin_policy">不同域</a>的脚本中发生语法错误时，为避免信息泄露（参见{{bug("363897")}}），语法错误的细节将不会报告，而代之简单的<code><strong>"Script error."</strong></code>。在某些浏览器中，通过在{{HTMLElement("script")}}使用<code>{{htmlattrxref("crossorigin","script")}}</code>属性并要求服务器发送适当的 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> HTTP 响应头，该行为可被覆盖。一个变通方案是单独处理"Script error."，告知错误详情仅能通过浏览器控制台查看，无法通过 JavaScript 访问。</p>
+<p>当加载自<a href="/en-US/docs/Web/Security/Same-origin_policy">不同域</a>的脚本中发生语法错误时，为避免信息泄露（参见{{bug("363897")}}），语法错误的细节将不会报告，而代之简单的<code><strong>"Script error."</strong></code>。在某些浏览器中，通过在{{HTMLElement("script")}}使用<code>{{htmlattrxref("crossorigin","script")}}</code>属性并要求服务器发送适当的 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> HTTP 响应头，该行为可被覆盖。一个变通方案是单独处理"Script error."，告知错误详情仅能通过浏览器控制台查看，无法通过 JavaScript 访问。</p>
 
 <pre class="brush: js">window.onerror = function (msg, url, lineNo, columnNo, error) {
     var string = msg.toLowerCase();

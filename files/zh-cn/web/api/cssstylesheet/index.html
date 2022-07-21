@@ -14,7 +14,7 @@ translation_of: Web/API/CSSStyleSheet
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p><strong><code>CSSStyleSheet</code></strong> 接口代表一个 <a href="/zh-CN/docs/Web/CSS">CSS</a> 样式表，并允许检查和编辑样式表中的规则列表。它从父类型 {{domxref("StyleSheet")}} 继承属性和方法。</p>
+<p><strong><code>CSSStyleSheet</code></strong> 接口代表一个 <a href="/zh-CN/docs/Web/CSS">CSS</a> 样式表，并允许检查和编辑样式表中的规则列表。它从父类型 {{domxref("StyleSheet")}} 继承属性和方法。</p>
 
 <p>一个 CSS 样式表包含了一组表示规则的 {{domxref("CSSRule")}} 对象。每条 CSS 规则可以通过与之相关联的对象进行操作，这些规则被包含在 {{domxref("CSSRuleList")}} 内，可以通过样式表的 {{domxref("CSSStyleSheet.cssRules", "cssRules")}} 属性获取。</p>
 
@@ -25,13 +25,13 @@ translation_of: Web/API/CSSStyleSheet
 }
 </pre>
 
-<p>另一条规则可能是一条“@”规则（<em>at-rule</em>），例如  {{cssxref("@import")}} 或 {{cssxref("@media")}} 等等。</p>
+<p>另一条规则可能是一条“@”规则（<em>at-rule</em>），例如  {{cssxref("@import")}} 或 {{cssxref("@media")}} 等等。</p>
 
-<p>在<a href="#说明">说明</a>部分中查看 <code>CSSStyleSheet</code> 对象的多种获取方式。</p>
+<p>在<a href="#说明">说明</a>部分中查看 <code>CSSStyleSheet</code> 对象的多种获取方式。</p>
 
 <h2 id="属性">属性</h2>
 
-<p>继承自 <em>{{domxref("StyleSheet")}}。</em></p>
+<p>继承自 <em>{{domxref("StyleSheet")}}。</em></p>
 
 <dl>
  <dt>{{domxref("CSSStyleSheet.cssRules", "cssRules")}} {{ReadOnlyInline}}</dt>
@@ -42,15 +42,15 @@ translation_of: Web/API/CSSStyleSheet
 
  <pre><code>styleSheet.cssRules[i] // where i = 0..cssRules.length-1</code></pre>
 
- <p>使用<code>CSSStyleSheet</code> 的 {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} 和 {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} 方法以在 <code>cssRules</code> 中添加或移除规则。</p>
+ <p>使用<code>CSSStyleSheet</code> 的 {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} 和 {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}} 方法以在 <code>cssRules</code> 中添加或移除规则。</p>
  </dd>
  <dt>{{domxref("CSSStyleSheet.ownerRule", "ownerRule")}} {{ReadOnlyInline}}</dt>
- <dd>如果一个样式表示通过{{cssxref("@import")}} 规则引入文档，那么 <code>ownerRule</code> 属性会返回相应的{{domxref("CSSImportRule")}}对象，否则返回 <code>null</code>。</dd>
+ <dd>如果一个样式表示通过{{cssxref("@import")}} 规则引入文档，那么 <code>ownerRule</code> 属性会返回相应的{{domxref("CSSImportRule")}}对象，否则返回 <code>null</code>。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
-<p>继承自 <em>{{domxref("StyleSheet")}}。</em></p>
+<p>继承自 <em>{{domxref("StyleSheet")}}。</em></p>
 
 <dl>
  <dt>{{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}</dt>
@@ -65,7 +65,7 @@ translation_of: Web/API/CSSStyleSheet
 
 <dl>
  <dt>{{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}}</dt>
- <dd><code>rules</code> 属性的功能与标准的{{domxref("CSSStyleSheet.cssRules", "cssRules")}}属性相同；它返回一个实时的 {{domxref("CSSRuleList")}}， 其中包含样式表中所有规则的一个最新列表。</dd>
+ <dd><code>rules</code> 属性的功能与标准的{{domxref("CSSStyleSheet.cssRules", "cssRules")}}属性相同；它返回一个实时的 {{domxref("CSSRuleList")}}， 其中包含样式表中所有规则的一个最新列表。</dd>
 </dl>
 
 <h2 id="遗留方法">遗留方法</h2>
@@ -87,9 +87,9 @@ translation_of: Web/API/CSSStyleSheet
 
 <p>在一些浏览器中，如果一个样式表加载自不同的域，访问 <code>cssRules</code> 属性时会抛出 <code>SecurityError</code>。</p>
 
-<p>一个样式表最多与一个{{domxref("Document")}}链接，即所应用的那个{{domxref("Document")}}（除非{{domxref("StyleSheet.disabled", "disabled")}}）。一个特定文档的 <code>CSSStyleSheet</code> 对象列表可用 {{domxref("document.styleSheets")}} 属性获取。一个特定的样式表也可以通过其所在对象（<code>Node</code> 或 <code>CSSImportRule</code>）获取，如果有的话。</p>
+<p>一个样式表最多与一个{{domxref("Document")}}链接，即所应用的那个{{domxref("Document")}}（除非{{domxref("StyleSheet.disabled", "disabled")}}）。一个特定文档的 <code>CSSStyleSheet</code> 对象列表可用 {{domxref("document.styleSheets")}} 属性获取。一个特定的样式表也可以通过其所在对象（<code>Node</code> 或 <code>CSSImportRule</code>）获取，如果有的话。</p>
 
-<p>在文档的样式表加载时，一个 <code>CSSStyleSheet</code> 对象由浏览器自动创建并插入至文档的{{domxref("Document.styleSheets")}}列表中。由于样式表列表不能直接修改，我们没有什么有效的手段取手动创建一个新的 <code>CSSStyleSheet</code> 对象（不过<a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a>很快会来到 web 平台，而且 Blink 早已支持）。需要创建新的样式表就直接在文档中插入{{HTMLElement("style")}} 或 {{HTMLElement("link")}} 元素吧。</p>
+<p>在文档的样式表加载时，一个 <code>CSSStyleSheet</code> 对象由浏览器自动创建并插入至文档的{{domxref("Document.styleSheets")}}列表中。由于样式表列表不能直接修改，我们没有什么有效的手段取手动创建一个新的 <code>CSSStyleSheet</code> 对象（不过<a href="https://wicg.github.io/construct-stylesheets/">Constructable Stylesheet Objects</a>很快会来到 web 平台，而且 Blink 早已支持）。需要创建新的样式表就直接在文档中插入{{HTMLElement("style")}} 或 {{HTMLElement("link")}} 元素吧。</p>
 
 <p>以下是将样式表链接到文档的一些方式（可能不完整）：</p>
 
@@ -98,7 +98,7 @@ translation_of: Web/API/CSSStyleSheet
   <tr>
    <th scope="col">样式表与文档链接的原因</th>
    <th scope="col">是否出现在<code>document.<br>
-    styleSheets</code> 列表中</th>
+    styleSheets</code> 列表中</th>
    <th scope="col">获取样式表对象所在的元素/规则</th>
    <th scope="col">所在对象的接口</th>
    <th scope="col">从所在对象获取 CSSStyleSheet 对象</th>

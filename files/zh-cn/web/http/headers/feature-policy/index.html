@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Headers/Feature-Policy
 ---
 <div>{{HTTPSidebar}} {{SeeCompatTable}}</div>
 
-<div> </div>
+<div> </div>
 
 <div><strong><code>Feature-Policy</code></strong>响应头提供了一种可以在本页面或包含的 iframe 上启用或禁止浏览器特性的机制。</div>
 
@@ -61,13 +61,13 @@ translation_of: Web/HTTP/Headers/Feature-Policy
  <dt>{{httpheader('Feature-Policy/camera', 'camera')}}</dt>
  <dd>控制是否允许当前文档使用视频输入设备。当这种规则被启用时，{{domxref("MediaDevices.getUserMedia()")}}返回的 the {{jsxref("Promise")}}会拒绝并抛出错误<code>NotAllowedError。</code></dd>
  <dt>{{httpheader('Feature-Policy/document-domain','document-domain')}}</dt>
- <dd>控制是否允许当前文档设置{{domxref("document.domain")}}。当这种规则被启用时，尝试设置{{domxref("document.domain")}}会失败并抛出<code>SecurityError </code>{{domxref("DOMException")}}异常。</dd>
+ <dd>控制是否允许当前文档设置{{domxref("document.domain")}}。当这种规则被启用时，尝试设置{{domxref("document.domain")}}会失败并抛出<code>SecurityError </code>{{domxref("DOMException")}}异常。</dd>
  <dt>{{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}</dt>
  <dd>控制是否允许当前文档使用<a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions</a> API (EME)。当这种规则被启用时，{{domxref("Navigator.requestMediaKeySystemAccess()")}}返回的{{domxref("Promise")}}会拒绝并抛出<code>DOMException</code>异常。</dd>
  <dt>{{httpheader('Feature-Policy/fullscreen','fullscreen')}}</dt>
  <dd>控制是否允许当前文档使用{{domxref('Element.requestFullScreen()')}}。当这种规则被启用时，返回的{{jsxref('Promise')}}会拒绝并抛出{{jsxref('TypeError')}}。</dd>
  <dt>{{httpheader('Feature-Policy/geolocation','geolocation')}}</dt>
- <dd>控制是否允许当前文档使用{{domxref('Geolocation')}}接口。当这种规则被启用时，调用{{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}}和{{domxref('Geolocation.watchPosition','watchPosition()')}}会返回包含<code>PERMISSION_DENIED</code>的 {{domxref('PositionError')}}。</dd>
+ <dd>控制是否允许当前文档使用{{domxref('Geolocation')}}接口。当这种规则被启用时，调用{{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}}和{{domxref('Geolocation.watchPosition','watchPosition()')}}会返回包含<code>PERMISSION_DENIED</code>的 {{domxref('PositionError')}}。</dd>
  <dt>{{httpheader('Feature-Policy/microphone','microphone')}}</dt>
  <dd>控制是否允许当前文档使用音频输入设备。当这种规则被启用时，{{domxref("MediaDevices.getUserMedia()")}}返回的 the {{jsxref("Promise")}}会拒绝并抛出错误<code>NotAllowedError。</code></dd>
  <dt>{{httpheader('Feature-Policy/midi', 'midi')}}</dt>

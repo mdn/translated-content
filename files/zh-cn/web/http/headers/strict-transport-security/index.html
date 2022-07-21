@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTTP/Headers/Strict-Transport-Security
 original_slug: Web/HTTP/HTTP_Strict_Transport_Security
 ---
-<div><code><strong> HTTP Strict Transport Security</strong></code>（通常简称为{{Glossary("HSTS")}}）是一个安全功能，它告诉浏览器只能通过 HTTPS 访问当前资源，而不是<a href="/en/HTTP" title="en/HTTP">HTTP</a>。</div>
+<div><code><strong> HTTP Strict Transport Security</strong></code>（通常简称为{{Glossary("HSTS")}}）是一个安全功能，它告诉浏览器只能通过 HTTPS 访问当前资源，而不是<a href="/en/HTTP" title="en/HTTP">HTTP</a>。</div>
 
 <table class="properties">
  <tbody>
@@ -49,10 +49,10 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 
 <p>这样存在中间人攻击潜在威胁，跳转过程可能被恶意网站利用来直接接触用户信息，而不是原来的加密信息。</p>
 
-<p>网站通过 HTTP Strict Transport Security 通知浏览器，这个网站禁止使用 HTTP 方式加载，浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。</p>
+<p>网站通过 HTTP Strict Transport Security 通知浏览器，这个网站禁止使用 HTTP 方式加载，浏览器应该自动把所有尝试使用 HTTP 的请求自动替换为 HTTPS 请求。</p>
 
 <div class="note">
-<p><strong>注意：</strong> <code>Strict-Transport-Security</code> 在通过 HTTP 访问时会被浏览器<strong>忽略;</strong> 因为攻击者可以通过中间人攻击的方式在连接中修改、注入或删除它.  只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS 然后使用 <code>Strict-Transport-Security</code> 的值 .</p>
+<p><strong>注意：</strong> <code>Strict-Transport-Security</code> 在通过 HTTP 访问时会被浏览器<strong>忽略;</strong> 因为攻击者可以通过中间人攻击的方式在连接中修改、注入或删除它.  只有在你的网站通过 HTTPS 访问并且没有证书错误时，浏览器才认为你的网站支持 HTTPS 然后使用 <code>Strict-Transport-Security</code> 的值 .</p>
 </div>
 
 <h3 id="浏览器如何处理">浏览器如何处理</h3>
@@ -73,10 +73,10 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 
 <h2 id="预加载_HSTS">预加载 HSTS</h2>
 
-<p>谷歌维护着一个 <a href="https://hstspreload.appspot.com/">HSTS 预加载服务</a>。按照如下指示成功提交你的域名后，浏览器将会永不使用非安全的方式连接到你的域名。虽然该服务是由谷歌提供的，但所有浏览器都有使用这份列表的意向（或者已经在用了）。但是，这不是 HSTS 标准的一部分，也不该被当作正式的内容。</p>
+<p>谷歌维护着一个 <a href="https://hstspreload.appspot.com/">HSTS 预加载服务</a>。按照如下指示成功提交你的域名后，浏览器将会永不使用非安全的方式连接到你的域名。虽然该服务是由谷歌提供的，但所有浏览器都有使用这份列表的意向（或者已经在用了）。但是，这不是 HSTS 标准的一部分，也不该被当作正式的内容。</p>
 
 <ul>
- <li>Chrome &amp; Chromium 的 HSTS 预加载列表： <a href="https://www.chromium.org/hsts">https://www.chromium.org/hsts</a></li>
+ <li>Chrome &amp; Chromium 的 HSTS 预加载列表： <a href="https://www.chromium.org/hsts">https://www.chromium.org/hsts</a></li>
  <li>Firefox 的 HSTS 预加载列表：<a href="https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc">nsSTSPreloadList.inc</a></li>
 </ul>
 
@@ -111,10 +111,10 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 <h2 id="查看更多">查看更多</h2>
 
 <ul>
- <li>Blog post: <a href="http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html">HTTP Strict Transport Security has landed!</a></li>
- <li>Blog post: <a href="http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/">HTTP Strict Transport Security (force HTTPS)</a></li>
- <li>OWASP Article: <a href="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></li>
- <li>Wikipedia: <a href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></li>
- <li>Google: <a href="http://www.zdnet.com/article/google-chrome-is-backing-away-from-public-key-pinning-and-heres-why/">Chrome is backing away from public key pinning, and here's why</a></li>
- <li>Blog post: <a href="https://scotthelme.co.uk/a-new-security-header-expect-ct/">A new security header: Expect-CT</a></li>
+ <li>Blog post: <a href="http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html">HTTP Strict Transport Security has landed!</a></li>
+ <li>Blog post: <a href="http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/">HTTP Strict Transport Security (force HTTPS)</a></li>
+ <li>OWASP Article: <a href="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></li>
+ <li>Wikipedia: <a href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></li>
+ <li>Google: <a href="http://www.zdnet.com/article/google-chrome-is-backing-away-from-public-key-pinning-and-heres-why/">Chrome is backing away from public key pinning, and here's why</a></li>
+ <li>Blog post: <a href="https://scotthelme.co.uk/a-new-security-header-expect-ct/">A new security header: Expect-CT</a></li>
 </ul>

@@ -5,9 +5,9 @@ translation_of: Web/API/HTML_DOM_API/Microtask_guide
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>一个 <strong>微任务（microtask）</strong>就是一个简短的函数，当创建该函数的函数执行之后，<em>并且</em> 只有当 Javascript 调用栈为空，而控制权尚未返还给被 {{Glossary("user agent")}} 用来驱动脚本执行环境的事件循环之前，该微任务才会被执行。 事件循环既可能是浏览器的主事件循环也可能是被一个 <a href="/en-US/docs/Web/API/Web_Workers_API">web worker</a> 所驱动的事件循环。这使得给定的函数在没有其他脚本执行干扰的情况下运行，也保证了微任务能在用户代理有机会对该微任务带来的行为做出反应之前运行。</p>
+<p>一个 <strong>微任务（microtask）</strong>就是一个简短的函数，当创建该函数的函数执行之后，<em>并且</em> 只有当 Javascript 调用栈为空，而控制权尚未返还给被 {{Glossary("user agent")}} 用来驱动脚本执行环境的事件循环之前，该微任务才会被执行。 事件循环既可能是浏览器的主事件循环也可能是被一个 <a href="/en-US/docs/Web/API/Web_Workers_API">web worker</a> 所驱动的事件循环。这使得给定的函数在没有其他脚本执行干扰的情况下运行，也保证了微任务能在用户代理有机会对该微任务带来的行为做出反应之前运行。</p>
 
-<p>JavaScript 中的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> 和 <a href="/en-US/docs/Web/API/Mutation_Observer_API">Mutation Observer API</a> 都使用微任务队列去运行它们的回调函数，但当能够推迟工作直到当前事件循环过程完结时，也是可以执行微任务的时机。为了允许第三方库、框架、polyfills 能使用微任务，{{domxref("Window")}} 暴露了 {{domxref("queueMicrotask()")}} 方法，而 {{domxref("Worker")}} 接口则通过 <code>WindowOrWorkerGlobalScope</code> mixin 提供了同名的 queueMicrotask() 方法。</p>
+<p>JavaScript 中的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> 和 <a href="/en-US/docs/Web/API/Mutation_Observer_API">Mutation Observer API</a> 都使用微任务队列去运行它们的回调函数，但当能够推迟工作直到当前事件循环过程完结时，也是可以执行微任务的时机。为了允许第三方库、框架、polyfills 能使用微任务，{{domxref("Window")}} 暴露了 {{domxref("queueMicrotask()")}} 方法，而 {{domxref("Worker")}} 接口则通过 <code>WindowOrWorkerGlobalScope</code> mixin 提供了同名的 queueMicrotask() 方法。</p>
 
 <h2 id="任务_vs_微任务">任务 vs 微任务</h2>
 
@@ -15,12 +15,12 @@ translation_of: Web/API/HTML_DOM_API/Microtask_guide
 
 <h3 id="任务（Tasks）">任务（Tasks）</h3>
 
-<p>一个 <strong>任务</strong> 就是由执行诸如从头执行一段程序、执行一个事件回调或一个 interval/timeout 被触发之类的标准机制而被调度的任意 JavaScript 代码。这些都在 <strong>任务队列（task queue）</strong>上被调度。</p>
+<p>一个 <strong>任务</strong> 就是由执行诸如从头执行一段程序、执行一个事件回调或一个 interval/timeout 被触发之类的标准机制而被调度的任意 JavaScript 代码。这些都在 <strong>任务队列（task queue）</strong>上被调度。</p>
 
 <p>在以下时机，任务会被添加到任务队列：</p>
 
 <ul>
- <li>一段新程序或子程序被直接执行时（比如从一个控制台，或在一个 {{HTMLElement("script")}} 元素中运行代码）。</li>
+ <li>一段新程序或子程序被直接执行时（比如从一个控制台，或在一个 {{HTMLElement("script")}} 元素中运行代码）。</li>
  <li>触发了一个事件，将其回调函数添加到任务队列时。</li>
  <li>执行到一个由 {{domxref("setTimeout()")}} 或 {{domxref("setInterval()")}} 创建的 timeout 或 interval，以致相应的回调函数被添加到任务队列时。</li>
 </ul>
@@ -35,7 +35,7 @@ translation_of: Web/API/HTML_DOM_API/Microtask_guide
 
 <p>首先，每当一个任务存在，事件循环都会检查该任务是否正把控制权交给其他 JavaScript 代码。如若不然，事件循环就会运行微任务队列中的所有微任务。接下来微任务循环会在事件循环的每次迭代中被处理多次，包括处理完事件和其他回调之后。</p>
 
-<p>其次，如果一个微任务通过调用  {{domxref("queueMicrotask()")}}, 向队列中加入了更多的微任务，则那些新加入的微任务 <em>会早于下一个任务运行</em> 。这是因为事件循环会持续调用微任务直至队列中没有留存的，即使是在有更多微任务持续被加入的情况下。</p>
+<p>其次，如果一个微任务通过调用  {{domxref("queueMicrotask()")}}, 向队列中加入了更多的微任务，则那些新加入的微任务 <em>会早于下一个任务运行</em> 。这是因为事件循环会持续调用微任务直至队列中没有留存的，即使是在有更多微任务持续被加入的情况下。</p>
 
 <div class="blockIndicator warning">
 <p><strong>注意：</strong> 因为微任务自身可以入列更多的微任务，且事件循环会持续处理微任务直至队列为空，那么就存在一种使得事件循环无尽处理微任务的真实风险。如何处理递归增加微任务是要谨慎而行的。</p>
@@ -47,11 +47,11 @@ translation_of: Web/API/HTML_DOM_API/Microtask_guide
 
 <h3 id="入列微任务">入列微任务</h3>
 
-<p>就其本身而言，应该使用微任务的典型情况，要么只有在没有其他办法的时候，要么是当创建框架或库时需要使用微任务达成其功能。虽然在过去要使得入列微任务成为可能有可用的技巧（比如创建一个立即 resolve 的 promise），但新加入的 {{domxref("queueMicrotask()")}} 方法增加了一种标准的方式，可以安全的引入微任务而避免使用额外的技巧。</p>
+<p>就其本身而言，应该使用微任务的典型情况，要么只有在没有其他办法的时候，要么是当创建框架或库时需要使用微任务达成其功能。虽然在过去要使得入列微任务成为可能有可用的技巧（比如创建一个立即 resolve 的 promise），但新加入的 {{domxref("queueMicrotask()")}} 方法增加了一种标准的方式，可以安全的引入微任务而避免使用额外的技巧。</p>
 
 <p>通过引入 <code>queueMicrotask()</code>，由晦涩地使用 promise 去创建微任务而带来的风险就可以被避免了。举例来说，当使用 promise 创建微任务时，由回调抛出的异常被报告为 rejected promises 而不是标准异常。同时，创建和销毁 promise 带来了事件和内存方面的额外开销，这是正确入列微任务的函数应该避免的。</p>
 
-<p>简单的传入一个 JavaScript {{jsxref("Function")}} ，以在 <code>queueMicrotask()</code> 方法中处理微任务时供其上下文调用即可；取决于当前执行上下文， <code>queueMicrotask()</code> 以定义的形式被暴露在 {{domxref("Window")}} 或 {{domxref("Worker")}} 接口上。</p>
+<p>简单的传入一个 JavaScript {{jsxref("Function")}} ，以在 <code>queueMicrotask()</code> 方法中处理微任务时供其上下文调用即可；取决于当前执行上下文， <code>queueMicrotask()</code> 以定义的形式被暴露在 {{domxref("Window")}} 或 {{domxref("Worker")}} 接口上。</p>
 
 <pre class="brush: js">queueMicrotask(() =&gt; {
   /* 微任务中将运行的代码 */
@@ -70,7 +70,7 @@ translation_of: Web/API/HTML_DOM_API/Microtask_guide
 
 <h4 id="保证条件性使用_promises_时的顺序">保证条件性使用 promises 时的顺序</h4>
 
-<p>微任务可被用来确保执行顺序总是一致的一种情形，是当 promise 被用在一个 <code>if...else</code> 语句（或其他条件性语句）中、但并不在其他子句中的时候。考虑如下代码：</p>
+<p>微任务可被用来确保执行顺序总是一致的一种情形，是当 promise 被用在一个 <code>if...else</code> 语句（或其他条件性语句）中、但并不在其他子句中的时候。考虑如下代码：</p>
 
 <pre class="brush: js">customElement.prototype.getData = url =&gt; {
   if (this.cache[url]) {
@@ -201,7 +201,7 @@ let sendMessage = message =&gt; {
 let log = s =&gt; logElem.innerHTML += s + "&lt;br&gt;";</pre>
 </div>
 
-<p>在下面的代码中，我们看到对 {{domxref("queueMicrotask()")}} 的一次调用被用来调度一个微任务以使其运行。这次调用包含了 <code>log()</code>，一个简单的向屏幕输出文字的自定义函数。</p>
+<p>在下面的代码中，我们看到对 {{domxref("queueMicrotask()")}} 的一次调用被用来调度一个微任务以使其运行。这次调用包含了 <code>log()</code>，一个简单的向屏幕输出文字的自定义函数。</p>
 
 <pre class="brush: js">log("Before enqueueing the microtask");
 queueMicrotask(() =&gt; {
@@ -215,7 +215,7 @@ log("After enqueueing the microtask");</pre>
 
 <h3 id="timeout_和微任务的示例">timeout 和微任务的示例</h3>
 
-<p>在这个例子中，一个 timeout 在 0 毫秒后被触发（或者 "尽可能快"）。这演示了当调用一个新任务（如通过使用  <code>setTimeout()</code>）时的“尽可能快”意味着什么，以及比之于使用一个微任务的不同。</p>
+<p>在这个例子中，一个 timeout 在 0 毫秒后被触发（或者 "尽可能快"）。这演示了当调用一个新任务（如通过使用  <code>setTimeout()</code>）时的“尽可能快”意味着什么，以及比之于使用一个微任务的不同。</p>
 
 <div class="hidden">
 <h4 id="HTML_2">HTML</h4>

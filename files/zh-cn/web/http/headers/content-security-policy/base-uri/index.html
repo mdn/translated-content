@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/base-uri
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP 协议 {{HTTPHeader("Content-Security-Policy")}} 首部字段中的 <strong><code>base-uri</code></strong> 指令限制了可以应用于一个文档的 {{HTMLElement("base")}} 元素的 URL。假如指令值为空，那么任何 URL 都是允许的。如果指令不存在，那么用户代理会使用 {{HTMLElement("base")}} 元素中的值。 </p>
+<p>HTTP 协议 {{HTTPHeader("Content-Security-Policy")}} 首部字段中的 <strong><code>base-uri</code></strong> 指令限制了可以应用于一个文档的 {{HTMLElement("base")}} 元素的 URL。假如指令值为空，那么任何 URL 都是允许的。如果指令不存在，那么用户代理会使用 {{HTMLElement("base")}} 元素中的值。 </p>
 
 <table class="properties">
  <tbody>
@@ -60,7 +60,7 @@ Header set Content-Security-Policy "base-uri 'self';
 
 <h3 id="违犯策略的案例"><em>违犯策略的案例</em></h3>
 
-<p>假如你的域名不是 example.com，那么将 {{HTMLElement("base")}} 元素的 href 属性值设置成 example.com 会违犯 CSP 策略。</p>
+<p>假如你的域名不是 example.com，那么将 {{HTMLElement("base")}} 元素的 href 属性值设置成 example.com 会违犯 CSP 策略。</p>
 
 <pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;
 &lt;base href="http://example.com/"&gt;

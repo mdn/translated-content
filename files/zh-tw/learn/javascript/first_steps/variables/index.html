@@ -40,8 +40,8 @@ translation_of: Learn/JavaScript/First_steps/Variables
 <pre class="brush: js notranslate">const button = document.querySelector('button');
 
 button.onclick = function() {
-  let name = prompt('你叫什麼名字?');
-  alert('你好 ' + name + ', 很高興認識你!');
+  let name = prompt('你叫什麼名字?');
+  alert('你好 ' + name + ', 很高興認識你!');
 }
 </pre>
 
@@ -68,7 +68,7 @@ if (name === 'Adam') {
 // ... 等等 ...
 </pre>
 
-<p>你可能暫時還沒有完全理解這些代碼和語法，但是你應該能夠理解到 — 如果我們沒有變量，我們就不得不寫大量的代碼去檢查輸入的名字，然後顯示相應名稱的消息 。這樣做顯然是低效率（雖然例子中只有5種選擇，但代碼卻相對地長）和不可行的 — 你沒有辦法列舉出所有可能的名字。</p>
+<p>你可能暫時還沒有完全理解這些代碼和語法，但是你應該能夠理解到 — 如果我們沒有變量，我們就不得不寫大量的代碼去檢查輸入的名字，然後顯示相應名稱的消息 。這樣做顯然是低效率（雖然例子中只有5種選擇，但代碼卻相對地長）和不可行的 — 你沒有辦法列舉出所有可能的名字。</p>
 
 <p>使用變量才是明智的。隨著您對 JavaScript 越來越了解，您會開始習慣使用變量。</p>
 
@@ -82,16 +82,16 @@ if (name === 'Adam') {
 
 <h2 id="定義變量_Declaring_a_variable">定義變量 (Declaring a variable)</h2>
 
-<p>要想使用變量，你需要做的第一步就是創建它 — 更準確的說，是定義一個變量。定義一個變量的語法是在關鍵字 <code>var</code> 或 <code>let</code> 之後加上變量的名字：</p>
+<p>要想使用變量，你需要做的第一步就是創建它 — 更準確的說，是定義一個變量。定義一個變量的語法是在關鍵字 <code>var</code> 或 <code>let</code> 之後加上變量的名字：</p>
 
 <pre class="brush: js notranslate">let myName;
 let myAge;
 </pre>
 
-<p>在這裡我們定義了兩個變量  <code>myName</code> 和 <code>myAge</code>。那麼現在嘗試輸入這些代碼到你的瀏覽器終端。之後，嘗試使用您自己選擇的名稱來創建一兩個變量。</p>
+<p>在這裡我們定義了兩個變量  <code>myName</code> 和 <code>myAge</code>。那麼現在嘗試輸入這些代碼到你的瀏覽器終端。之後，嘗試使用您自己選擇的名稱來創建一兩個變量。</p>
 
 <div class="note">
-<p><strong>提示</strong>：在 JavaScript 中，所有代碼指令都會以分號結尾（ <code>;</code>）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。</p>
+<p><strong>提示</strong>：在 JavaScript 中，所有代碼指令都會以分號結尾（ <code>;</code>）－ 如果忘記加分號，你的單行代碼可能正常執行，但是在執行多行代碼的時候就可能出錯。所以，最好是養成主動以分號作為代碼結尾的習慣。</p>
 </div>
 
 <p>你可以輸入變量的名稱，來驗證這個變量的數值是否在執行環境（execution environment）中已經存在。例如，</p>
@@ -100,7 +100,7 @@ let myAge;
 myAge;
 </pre>
 
-<p>以上這兩個變量並沒有數值，他們是空的容器。當你輸入變量名並按輸入鍵後，你會得到一個 <code>undefined</code> （沒有定義的值）的返回值。如果變量並不存在的話，你就會得到一個錯誤信息。請嘗試輸入：</p>
+<p>以上這兩個變量並沒有數值，他們是空的容器。當你輸入變量名並按輸入鍵後，你會得到一個 <code>undefined</code> （沒有定義的值）的返回值。如果變量並不存在的話，你就會得到一個錯誤信息。請嘗試輸入：</p>
 
 <pre class="brush: js notranslate">scoobyDoo;</pre>
 
@@ -240,7 +240,7 @@ Document
 
 <h3 id="Numbers_數字">Numbers 數字</h3>
 
-<p>You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:</p>
+<p>You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:</p>
 
 <pre class="brush: js notranslate">let myAge = 17;</pre>
 
@@ -274,7 +274,7 @@ let myNumberArray = [10, 15, 40];</pre>
 <pre class="brush: js notranslate">myNameArray[0]; // should return 'Chris'
 myNumberArray[2]; // should return 40</pre>
 
-<p>The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.</p>
+<p>The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.</p>
 
 <p>You'll learn a lot more about arrays in <a href="/en-US/docs/Learn/JavaScript/First_steps/Arrays">a future article</a>.</p>
 
@@ -307,13 +307,13 @@ typeof myNumber;
 myNumber = 500; // much better — now this is a number
 typeof myNumber;</pre>
 
-<p>Try entering the four lines above into your console one by one, and see what the results are. You'll notice that we are using a special operator called <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> — this returns the data type of the variable you pass into it. The first time it is called, it should return <code>string</code>, as at that point the <code>myNumber</code> variable contains a string, <code>'500'</code>. Have a look and see what it returns the second time you call it.</p>
+<p>Try entering the four lines above into your console one by one, and see what the results are. You'll notice that we are using a special operator called <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code> — this returns the data type of the variable you pass into it. The first time it is called, it should return <code>string</code>, as at that point the <code>myNumber</code> variable contains a string, <code>'500'</code>. Have a look and see what it returns the second time you call it.</p>
 
 <h2 id="JavaScript中的常數">JavaScript中的常數</h2>
 
 <p>許多程式語言都有常數的概念：一經宣告就不改變的值。設定常數有許多原因，例如若引入第三方腳本而改動變數值，將會造成許多問題而且很難除錯。</p>
 
-<p>一開始JavaScript是沒有常數的，直到今日我們才有了關鍵字 <code>const</code>，讓我們儲存不能改變的值：</p>
+<p>一開始JavaScript是沒有常數的，直到今日我們才有了關鍵字 <code>const</code>，讓我們儲存不能改變的值：</p>
 
 <pre class="brush: js notranslate">const daysInWeek = 7;
 const hoursInDay = 24;</pre>

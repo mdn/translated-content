@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 
 <h2 id="Description">描述</h2>
 
-<p><code>length</code> 属性的值是一个 0 到 2^32 - 1 的整数。</p>
+<p><code>length</code> 属性的值是一个 0 到 2^32 - 1 的整数。</p>
 
 <pre class="brush: js">const listA = [1, 2, 3];
 const listB = new Array(6);
@@ -34,7 +34,7 @@ const listC = new Array(-100) // 负数
 // RangeError: Invalid array length
 </pre>
 
-<p>你可以设置 <code>length</code> 属性的值来截断任何数组。当通过改变 <code>length</code> 属性值来扩展数组时，实际元素的数目将会增加。例如：将一个拥有 2 个元素的数组的 <code>length</code> 属性值设为 3 时，那么这个数组将会包含 3 个元素，并且，第三个元素是不可迭代的空槽。</p>
+<p>你可以设置 <code>length</code> 属性的值来截断任何数组。当通过改变 <code>length</code> 属性值来扩展数组时，实际元素的数目将会增加。例如：将一个拥有 2 个元素的数组的 <code>length</code> 属性值设为 3 时，那么这个数组将会包含 3 个元素，并且，第三个元素是不可迭代的空槽。</p>
 
 <pre class="brush: js">const arr = [1, 2];
 console.log(arr);
@@ -59,7 +59,7 @@ arr.forEach(element => console.log(element));
  <li><code>Enumerable</code>：如果设置为 <code>true</code>，属性可以通过迭代器<a href="zh-CN/docs/Web/JavaScript/Reference/Statements/for">for</a>或<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a>进行迭代。</li>
 </ul>
 
-<h2 id="Examples">示例 </h2>
+<h2 id="Examples">示例 </h2>
 
 <h3 id="Example:_Iterating_over_an_array">遍历数组</h3>
 

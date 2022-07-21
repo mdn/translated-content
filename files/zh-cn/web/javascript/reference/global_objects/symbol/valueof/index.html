@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 
 <h2 id="Description">描述</h2>
 
-<p>在 JavaScript 中，虽然大多数类型的对象在某些操作下都会自动的隐式调用自身的 <code>valueOf()</code> 方法或者 <code>toString()</code> 方法来将自己转换成一个原始值，但 symbol 对象不会这么干，symbol 对象无法隐式转换成对应的原始值：</p>
+<p>在 JavaScript 中，虽然大多数类型的对象在某些操作下都会自动的隐式调用自身的 <code>valueOf()</code> 方法或者 <code>toString()</code> 方法来将自己转换成一个原始值，但 symbol 对象不会这么干，symbol 对象无法隐式转换成对应的原始值：</p>
 
 <pre class="brush: js">Object(Symbol("foo")) + "bar";
 // TypeError: can't convert symbol object to primitive

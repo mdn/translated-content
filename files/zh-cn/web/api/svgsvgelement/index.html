@@ -11,11 +11,11 @@ translation_of: Web/API/SVGSVGElement
 
 <h2 id="属性">属性</h2>
 
-<p><em>此接口还从其父</em> <em>{{domxref("SVGGraphicsElement")}}</em> <em>继承属性，并且还实现</em> <em>{{domxref("SVGZoomAndPan")}}</em> <em>，</em> <em>{{domxref("SVGFitToViewBox")}}</em> <em>和</em> <em> {{domxref("WindowEventHandlers")}}</em> <em>中的属性。</em></p>
+<p><em>此接口还从其父</em> <em>{{domxref("SVGGraphicsElement")}}</em> <em>继承属性，并且还实现</em> <em>{{domxref("SVGZoomAndPan")}}</em> <em>，</em> <em>{{domxref("SVGFitToViewBox")}}</em> <em>中的属性。</em></p>
 
 <dl>
  <dt>{{domxref("SVGSVGElement.x")}} {{ReadOnlyInline}}</dt>
- <dd>  {{domxref("SVGAnimatedLength")}} 对应于给定 {{SVGElement("svg")}} 元素的 {{SVGAttr("x")}} 属性</dd>
+ <dd>  {{domxref("SVGAnimatedLength")}} 对应于给定 {{SVGElement("svg")}} 元素的 {{SVGAttr("x")}} 属性</dd>
  <dt>{{domxref("SVGSVGElement.y")}} {{ReadOnlyInline}}</dt>
  <dd>{{domxref("SVGAnimatedLength")}}对应于给定{{SVGElement("svg")}}元素的{{SVGAttr("y")}}属性。</dd>
  <dt>{{domxref("SVGSVGElement.width")}} {{ReadOnlyInline}}</dt>
@@ -71,7 +71,7 @@ translation_of: Web/API/SVGSVGElement
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGZoomAndPan")}}, {{domxref("SVGFitToViewBox")}}, and {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGZoomAndPan")}}, {{domxref("SVGFitToViewBox")}}.</em></p>
 
 <dl>
  <dt>{{domxref("SVGSVGElement.suspendRedraw()")}} {{deprecated_inline}}</dt>
@@ -120,44 +120,26 @@ translation_of: Web/API/SVGSVGElement
  <dt>{{domxref("SVGSVGElement.createSVGNumber()")}}</dt>
  <dd>Creates an {{domxref("SVGNumber")}} object outside of any document trees. The object is initialized to a value of zero.</dd>
  <dt>{{domxref("SVGSVGElement.createSVGLength()")}}</dt>
- <dd>Creates an {{domxref("SVGLength")}} object outside of any document trees. The object is initialized to a value of zero user units.</dd>
+ <dd>Creates an {{domxref("SVGLength")}} object outside of any document trees. The object is initialized to a value of zero user units.</dd>
  <dt>{{domxref("SVGSVGElement.createSVGAngle()")}}</dt>
- <dd>Creates an {{domxref("SVGAngle")}} object outside of any document trees. The object is initialized to a value of zero degrees (unitless).</dd>
+ <dd>Creates an {{domxref("SVGAngle")}} object outside of any document trees. The object is initialized to a value of zero degrees (unitless).</dd>
  <dt>{{domxref("SVGSVGElement.createSVGPoint()")}}</dt>
- <dd>Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point (0,0) in the user coordinate system.</dd>
+ <dd>Creates an {{domxref("SVGPoint")}} object outside of any document trees. The object is initialized to the point (0,0) in the user coordinate system.</dd>
  <dt>{{domxref("SVGSVGElement.createSVGMatrix()")}}</dt>
- <dd>Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.</dd>
+ <dd>Creates an {{domxref("SVGMatrix")}} object outside of any document trees. The object is initialized to the identity matrix.</dd>
  <dt>{{domxref("SVGSVGElement.createSVGRect()")}}</dt>
- <dd>Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to 0 user units.</dd>
+ <dd>Creates an {{domxref("SVGRect")}} object outside of any document trees. The object is initialized such that all values are set to 0 user units.</dd>
  <dt>{{domxref("SVGSVGElement.createSVGTransform()")}}</dt>
- <dd>Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to an identity matrix transform (<code>SVG_TRANSFORM_MATRIX</code>).</dd>
+ <dd>Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to an identity matrix transform (<code>SVG_TRANSFORM_MATRIX</code>).</dd>
  <dt>{{domxref("SVGSVGElement.createSVGTransformFromMatrix()")}}</dt>
- <dd>Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to the given matrix transform (i.e., <code>SVG_TRANSFORM_MATRIX</code>). The values from the parameter matrix are copied, the matrix parameter is not adopted as <code>SVGTransform::matrix</code>.</dd>
+ <dd>Creates an {{domxref("SVGTransform")}} object outside of any document trees. The object is initialized to the given matrix transform (i.e., <code>SVG_TRANSFORM_MATRIX</code>). The values from the parameter matrix are copied, the matrix parameter is not adopted as <code>SVGTransform::matrix</code>.</dd>
  <dt>{{domxref("SVGSVGElement.getElementById()")}}</dt>
  <dd>Searches this SVG document fragment (i.e., the search is restricted to a subset of the document tree) for an Element whose id is given by <em>elementId</em>. If an Element is found, that Element is returned. If no such element exists, returns null. Behavior is not defined if more than one element has this id.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG2", "struct.html#InterfaceSVGSVGElement", "SVGSVGElement")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Replaced the inheritance from {{domxref("SVGElement")}} by {{domxref("SVGGraphicsElement")}}, removed the implemented interfaces {{domxref("SVGTests")}}, {{domxref("SVGLangSpace")}}, {{domxref("SVGExternalResourcesRequired")}}, {{domxref("SVGStylable")}}, {{domxref("SVGLocatable")}}, {{domxref("DocumentEvent")}}, {{domxref("ViewCSS")}}, and {{domxref("DocumentCSS")}} and added implemented interface {{domxref("WindowEventHandlers")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "struct.html#InterfaceSVGSVGElement", "SVGSVGElement")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

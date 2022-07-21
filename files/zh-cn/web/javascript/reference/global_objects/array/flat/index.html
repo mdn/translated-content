@@ -91,39 +91,39 @@ flatDeep(arr1, Infinity);
 
 <pre class="brush: js">// forEach 遍历数组会自动跳过空元素
 const eachFlat = (arr = [], depth = 1) =&gt; {
-  const result = []; // 缓存递归结果
-  // 开始递归
-  (function flat(arr, depth) {
-    // forEach 会自动去除数组空位
-    arr.forEach((item) =&gt; {
+  const result = []; // 缓存递归结果
+  // 开始递归
+  (function flat(arr, depth) {
+    // forEach 会自动去除数组空位
+    arr.forEach((item) =&gt; {
       // 控制递归深度
-      if (Array.isArray(item) &amp;&amp; depth &gt; 0) {
-        // 递归数组
-        flat(item, depth - 1)
-      } else {
-        // 缓存元素
-        result.push(item)
-      }
-    })
-  })(arr, depth)
-  // 返回递归结果
-  return result;
+      if (Array.isArray(item) &amp;&amp; depth &gt; 0) {
+        // 递归数组
+        flat(item, depth - 1)
+      } else {
+        // 缓存元素
+        result.push(item)
+      }
+    })
+  })(arr, depth)
+  // 返回递归结果
+  return result;
 }
 
 // for of 循环不能去除数组空位，需要手动去除
 const forFlat = (arr = [], depth = 1) =&gt; {
-  const result = [];
-  (function flat(arr, depth) {
-    for (let item of arr) {
-      if (Array.isArray(item) &amp;&amp; depth &gt; 0) {
-        flat(item, depth - 1)
-      } else {
-        // 去除空元素，添加非 undefined 元素
-        item !== void 0 &amp;&amp; result.push(item);
-      }
-    }
-  })(arr, depth)
-  return result;
+  const result = [];
+  (function flat(arr, depth) {
+    for (let item of arr) {
+      if (Array.isArray(item) &amp;&amp; depth &gt; 0) {
+        flat(item, depth - 1)
+      } else {
+        // 去除空元素，添加非 undefined 元素
+        item !== void 0 &amp;&amp; result.push(item);
+      }
+    }
+  })(arr, depth)
+  return result;
 }
 </pre>
 
@@ -163,7 +163,7 @@ function flatten(array) {
   return flattend;
 }</pre>
 
-<h3 id="Use_Generator_function">Use <code>Generator</code> function</h3>
+<h3 id="Use_Generator_function">Use <code>Generator</code> function</h3>
 
 <pre><code>function* flatten(array) {
     for (const item of array) {
@@ -179,7 +179,7 @@ var arr = [1, 2, [3, 4, [5, 6]]];
 const flattened = [...flatten(arr)];
 // [1, 2, 3, 4, 5, 6]</code></pre>
 
-<p>Please do not add polyfills on this article. For reference, please check: <a href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a></p>
+<p>Please do not add polyfills on this article. For reference, please check: <a href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a></p>
 
 <h2 id="Specifications">Specifications</h2>
 

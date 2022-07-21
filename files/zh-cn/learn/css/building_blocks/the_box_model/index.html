@@ -16,7 +16,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
   <tr>
    <th scope="row">预备知识（Prerequisites）:</th>
    <td>
-    <p>基本的计算机知识，<a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本的软件</a>，<a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>基本知识，HTML 基础知识  (如果不了解 HTML，请移步 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a>)，以及 CSS 如何工作的基本常识 (如果不了解 CSS，请移步 <a href="/en-US/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)</p>
+    <p>基本的计算机知识，<a href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本的软件</a>，<a href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>基本知识，HTML 基础知识  (如果不了解 HTML，请移步 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a>)，以及 CSS 如何工作的基本常识 (如果不了解 CSS，请移步 <a href="/zh-CN/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)</p>
    </td>
   </tr>
   <tr>
@@ -58,15 +58,15 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>在这里最好也解释下<strong>内部</strong> 和 <strong>外部</strong> 显示类型。如上所述， css 的 box 模型有一个外部显示类型，来决定盒子是块级还是内联。</p>
 
-<p>同样盒模型还有内部显示类型，它决定了盒子内部元素是如何布局的。默认情况下是按照 <strong><a href="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">正常文档流</a> </strong>布局，也意味着它们和其他块元素以及内联元素一样 (如上所述).</p>
+<p>同样盒模型还有内部显示类型，它决定了盒子内部元素是如何布局的。默认情况下是按照 <strong><a href="/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow">正常文档流</a> </strong>布局，也意味着它们和其他块元素以及内联元素一样 (如上所述).</p>
 
-<p>但是，我们可以通过使用类似  <code>flex</code> 的 <code>display</code> 属性值来更改内部显示类型。 如果设置 <code>display: flex</code>，在一个元素上，外部显示类型是 <code>block</code>，但是内部显示类型修改为 <code>flex</code>。 该盒子的所有直接子元素都会成为 flex 元素，会根据 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">弹性盒子（Flexbox</a> <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">）</a>规则进行布局，稍后您将了解这些规则。</p>
+<p>但是，我们可以通过使用类似 <code>flex</code> 的 <code>display</code> 属性值来更改内部显示类型。如果设置 <code>display: flex</code>，在一个元素上，外部显示类型是 <code>block</code>，但是内部显示类型修改为 <code>flex</code>。该盒子的所有直接子元素都会成为 flex 元素，会根据<a href="/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox">弹性盒子（Flexbox）</a>规则进行布局，稍后您将了解这些规则。</p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: 想要了解更多有关显示值以及盒子在块和内联布局中的工作原理，请参阅 <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Block and Inline Layout</a>.</p>
+<p><strong>备注：</strong> 想要了解更多有关显示值以及盒子在块和内联布局中的工作原理，请参阅<a href="/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">常规流中的块和内联布局</a>。</p>
 </div>
 
-<p>当你进一步了解 css 布局的更多细节的时候，你会了解到 <code>flex</code>， 和其他内部显示类型会用到的值，例如 <code><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">grid</a></code>。</p>
+<p>当你进一步了解 css 布局的更多细节的时候，你会了解到 <code>flex</code>，和其他内部显示类型会用到的值，例如 <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Grids"><code>grid</code></a> 。</p>
 
 <p>块级和内联布局是 web 上默认的行为 —— 正如上面所述， 它有时候被称为 <em>正常文档流</em>， 因为如果没有其他说明，我们的盒子布局默认是块级或者内联。</p>
 
@@ -170,12 +170,12 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 <p>{{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}} </p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: <a href="https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model">You can find a solution for this task here</a>.</p>
+<p><strong>备注：</strong> <a href="https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model">单击此处查看答案</a>。</p>
 </div>
 
 <h3 id="使用调试工具来查看盒模型">使用调试工具来查看盒模型</h3>
 
-<p>您的 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a> 可以使您更容易地理解 box 模型。如果您在 Firefox 的 DevTools 中查看一个元素，您可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断您的盒子大小是否符合预期 !</p>
+<p><a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">浏览器开发者工具</a>可以使你更容易地理解 box 模型。如果你在 Firefox 的 DevTools 中查看一个元素，你可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断你的盒子大小是否符合预期 !</p>
 
 <p><img alt="Inspecting the box model of an element using Firefox DevTools" src="box-model-devtools.png"></p>
 
@@ -212,7 +212,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}} </p>
 
-<p>有许多规则规定了什么时候外边距会折叠，什么时候不会折叠。相关更多信息，请参阅 <a href="/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">mastering margin collapsing</a>。现在首先要记住的事情是，外边距会折叠这个事情。如果你用外边距创建空间而没有得到你想要的效果，那这可能就是这个原因。</p>
+<p>有许多规则规定了什么时候外边距会折叠，什么时候不会折叠。相关更多信息，请参阅<a href="/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">外边距重叠</a>。现在首先要记住的事情是，外边距会折叠这个事情。如果你用外边距创建空间而没有得到你想要的效果，那这可能就是这个原因。</p>
 
 <h3 id="边框">边框</h3>
 
@@ -301,17 +301,17 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
  <li><code>padding</code>, <code>margin</code>, 以及<code>border</code> 会推开其他元素。</li>
 </ul>
 
-<p>但是，它不会跳转到新行，如果显式添加<code>width</code> 和<code>height</code> 属性，它只会变得比其内容更大。</p>
+<p>但是，它不会跳转到新行，如果显式添加 <code>width</code> 和 <code>height</code> 属性，它只会变得比其内容更大。</p>
 
-<p><strong>在下一个示例中，我们将<code>display: inline-block</code>添加到<code>&lt;span&gt;</code>元素中。尝试将此更改为<code>display: block</code> 或完全删除行，以查看显示模型中的差异</strong>。</p>
+<p><strong>在下一个示例中，我们将 <code>display: inline-block</code> 添加到 <code>&lt;span&gt;</code> 元素中。尝试将此更改为 <code>display: block</code> 或完全删除行，以查看显示模型中的差异</strong>。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}} </p>
 
-<p>当您想要通过添加内边距使链接具有更大的命中区域时，这是很有用的。<code>&lt;a&gt;</code>是像<code>&lt;span</code>&gt;一样的内联元素；你可以使用<code>display: inline-block</code>来设置内边距，让用户更容易点击链接。</p>
+<p>当您想要通过添加内边距使链接具有更大的命中区域时，这是很有用的。<code>&lt;a&gt;</code> 是像 <code>&lt;span&gt;</code> 一样的内联元素；你可以使用 <code>display: inline-block</code> 来设置内边距，让用户更容易点击链接。</p>
 
-<p>这种情况在导航栏中很常见。下面的导航使用 flexbox 显示在一行中，我们为<code>&lt;a&gt;</code>元素添加了内边距，因为我们希望能够在<code>&lt;a&gt;</code>在鼠标移动到上面时改变背景色。内边距似乎覆盖了<code>&lt;ul&gt;</code>元素上的边框。这是因为<code>&lt;a&gt;</code>是一个内联元素。</p>
+<p>这种情况在导航栏中很常见。下面的导航使用 flexbox 显示在一行中，我们为 <code>&lt;a&gt;</code> 元素添加了内边距，因为我们希望能够在 <code>&lt;a&gt;</code> 在鼠标移动到上面时改变背景色。内边距似乎覆盖了 <code>&lt;ul&gt;</code> 元素上的边框。这是因为 <code>&lt;a&gt;</code> 是一个内联元素。</p>
 
-<p><strong>使用<code>.links-list a</code>选择器将<code>display: inline-block</code>添加到样式规则中，您将看到它是如何通过内边距推开其他元素来修复这个问题的。</strong></p>
+<p>使用 <code>.links-list a</code> 选择器将 <code>display: inline-block</code> 添加到样式规则中，你将看到它是如何通过内边距推开其他元素来修复这个问题的。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block-nav.html", '100%', 600)}} </p>
 
@@ -319,7 +319,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>这就是你需要了解的关于盒子模型的大部分内容。如果以后你发现对于盒模型的布局仍有困惑，你将会回来温故这些内容。</p>
 
-<p>在下一节课中，我们将看看如何使用 <a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">背景和边框</a> 来使你的普通盒子看起来更有趣。</p>
+<p>在下一节课中，我们将看看如何使用<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">背景和边框</a>来使你的普通盒子看起来更有趣。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}</p>
 
@@ -344,5 +344,5 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements">图像、媒体和表单元素</a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables">样式化表格</a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS">调试 CSS</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Organizing">组织 CSS</a><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing"> </a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/Building_blocks/Organizing">组织 CSS</a></li>
 </ol>

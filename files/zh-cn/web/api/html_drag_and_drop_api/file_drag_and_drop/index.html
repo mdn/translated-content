@@ -13,13 +13,13 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 
 <h2 id="定义拖放区域">定义拖放区域</h2>
 
-<p>触发 {{event("drop")}} 事件的目标元素需要一个{{domxref("GlobalEventHandlers.ondrop","ondrop")}} 事件处理函数 。下面这一段代码以一个 {{HTMLelement("div")}} 元素为例展示了这些工作是如何完成的：</p>
+<p>触发 {{event("drop")}} 事件的目标元素需要一个{{domxref("GlobalEventHandlers.ondrop","ondrop")}} 事件处理函数 。下面这一段代码以一个 {{HTMLelement("div")}} 元素为例展示了这些工作是如何完成的：</p>
 
 <pre class="brush: html">&lt;div id="drop_zone" ondrop="dropHandler(event);"&gt;
   &lt;p&gt;Drag one or more files to this Drop Zone ...&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<p>一般来说，在实际应用中需要定义一个 {{event("dragover")}} 事件的处理函数并在其中加入关闭浏览器默认拖放行为的代码。你需要定义一个 {{domxref("GlobalEventHandlers.ondragover","ondragover")}} 事件处理函数：</p>
+<p>一般来说，在实际应用中需要定义一个 {{event("dragover")}} 事件的处理函数并在其中加入关闭浏览器默认拖放行为的代码。你需要定义一个 {{domxref("GlobalEventHandlers.ondragover","ondragover")}} 事件处理函数：</p>
 
 <pre class="brush: html">&lt;div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);"&gt;
   &lt;p&gt;Drag one or more files to this Drop Zone ...&lt;/p&gt;
@@ -36,14 +36,14 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 </pre>
 
 <div class="note">
-<p>注意当执行将文件拖入浏览器的操作时操作系统并不会触发 <code>dragstart</code> 和 <code>dragend</code> 事件。</p>
+<p>注意当执行将文件拖入浏览器的操作时操作系统并不会触发 <code>dragstart</code> 和 <code>dragend</code> 事件。</p>
 </div>
 
 <h2 id="执行释放事件">执行释放事件</h2>
 
-<p>当用户释放文件时 {{event("drop")}} 事件将会被触发。在下面的 drop 处理函数中，如果浏览器支持 {{domxref("DataTransferItemList")}} 接口，则可以使用 {{domxref("DataTransferItem.getAsFile","getAsFile()")}} 来获取每个文件；否则使用 {{domxref("DataTransfer")}} 接口的 {{domxref("DataTransfer.files","files")}} 属性来获取每个文件。</p>
+<p>当用户释放文件时 {{event("drop")}} 事件将会被触发。在下面的 drop 处理函数中，如果浏览器支持 {{domxref("DataTransferItemList")}} 接口，则可以使用 {{domxref("DataTransferItem.getAsFile","getAsFile()")}} 来获取每个文件；否则使用 {{domxref("DataTransfer")}} 接口的 {{domxref("DataTransfer.files","files")}} 属性来获取每个文件。</p>
 
-<p>这个示例展示了如何讲每个被拖动的文件的名字输出到控制台。在实际应用中可能会用到 {{domxref("File","File API")}} 来处理一个文件。</p>
+<p>这个示例展示了如何讲每个被拖动的文件的名字输出到控制台。在实际应用中可能会用到 {{domxref("File","File API")}} 来处理一个文件。</p>
 
 <p>注意在这个例子中，任何被拖动的非文件内容都会被忽略。</p>
 
@@ -63,7 +63,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
       }
     }
   } else {
-    // Use DataTransfer interface to access the file(s)
+    // Use DataTransfer interface to access the file(s)
     for (var i = 0; i &lt; ev.dataTransfer.files.length; i++) {
       console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
     }
@@ -72,7 +72,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
 
 <h2 id="阻止浏览器的默认释放行为">阻止浏览器的默认释放行为</h2>
 
-<p>下面的 {{event("dragover")}} 事件处理函数调用  {{domxref("Event.preventDefault","preventDefault()")}} 来关闭浏览器的默认拖动和释放行为。</p>
+<p>下面的 {{event("dragover")}} 事件处理函数调用  {{domxref("Event.preventDefault","preventDefault()")}} 来关闭浏览器的默认拖动和释放行为。</p>
 
 <pre class="brush: js">function dragOverHandler(ev) {
   console.log('File(s) in drop zone');

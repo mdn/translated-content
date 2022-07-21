@@ -13,7 +13,7 @@ translation_of: Web/API/DOMParser
 
 <h2 id="產生一個_DOMParser">產生一個 DOMParser</h2>
 
-<p>" <code>new DOMParser()" 可產生DOMParser</code>.</p>
+<p>" <code>new DOMParser()" 可產生DOMParser</code>.</p>
 
 <p><code>關於如何在Firefox外掛程式中產生DOMParser,</code>請參考<code><a href="/en-US/docs/nsIDOMParser">nsIDOMParser</a>文件</code></p>
 
@@ -37,9 +37,9 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 <p>解譯錯誤也會記錄在錯誤終端機中（<a href="/en-US/docs/Error_Console">Error Console</a>）, 紀錄裡頭的文件URI (如下) 則為錯誤來源.</p>
 
-<h2 id="解譯_SVG_或_HTML_文件">解譯 SVG 或 HTML 文件</h2>
+<h2 id="解譯_SVG_或_HTML_文件">解譯 SVG 或 HTML 文件</h2>
 
-<p><code>DOMParser也可以用來解譯 </code>SVG 文件 {{geckoRelease("10.0")}} 或是 HTML 文件 {{geckoRelease("12.0")}}. 可以依 MIME 格式，輸出三種不同格式. 如果MIME 格式是 <code>text/xml</code>,輸出的格式為 <code>XMLDocument</code>, 如果 MIME 格式是 <code>image/svg+xml</code>, 輸出格式為 <code>SVGDocument,</code> 如果 MIME 格式是 <code>text/html</code>, 輸出格式則為 <code>HTMLDocument</code>.</p>
+<p><code>DOMParser也可以用來解譯 </code>SVG 文件 {{geckoRelease("10.0")}} 或是 HTML 文件 {{geckoRelease("12.0")}}. 可以依 MIME 格式，輸出三種不同格式. 如果MIME 格式是 <code>text/xml</code>,輸出的格式為 <code>XMLDocument</code>, 如果 MIME 格式是 <code>image/svg+xml</code>, 輸出格式為 <code>SVGDocument,</code> 如果 MIME 格式是 <code>text/html</code>, 輸出格式則為 <code>HTMLDocument</code>.</p>
 
 <pre class="brush: js">var parser = new DOMParser();
 var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");

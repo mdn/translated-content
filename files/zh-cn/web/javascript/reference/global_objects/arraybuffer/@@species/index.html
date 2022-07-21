@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 ---
 <div>{{JSRef}}</div>
 
-<p>该 <code><strong>ArrayBuffer[@@species]</strong></code> 访问器属性会返回 <code>ArrayBuffer</code> 构造器。</p>
+<p>该 <code><strong>ArrayBuffer[@@species]</strong></code> 访问器属性会返回 <code>ArrayBuffer</code> 构造器。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,15 +19,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 
 <h2 id="描述">描述</h2>
 
-<p>这个 species 访问器属性会返回默认的 <code>ArrayBuffer</code> 构造器。子类构造器可能会覆盖它以改变构造器赋值。</p>
+<p>这个 species 访问器属性会返回默认的 <code>ArrayBuffer</code> 构造器。子类构造器可能会覆盖它以改变构造器赋值。</p>
 
 <h2 id="示例">示例</h2>
 
-<p>返回默认的 <code>ArrayBuffer</code> 构造器：</p>
+<p>返回默认的 <code>ArrayBuffer</code> 构造器：</p>
 
 <pre class="brush: js">ArrayBuffer[Symbol.species]; // function ArrayBuffer()</pre>
 
-<p>在派生集合对象中（比如你定制的 array buffer <code>MyArrayBuffer</code>），<code>MyArrayBuffer</code> species 就是 <code>MyArrayBuffer</code> 构造器。但是，你可能想要在派生类里重写它，以期返回的是父类的 <code>ArrayBuffer</code> 对象：</p>
+<p>在派生集合对象中（比如你定制的 array buffer <code>MyArrayBuffer</code>），<code>MyArrayBuffer</code> species 就是 <code>MyArrayBuffer</code> 构造器。但是，你可能想要在派生类里重写它，以期返回的是父类的 <code>ArrayBuffer</code> 对象：</p>
 
 <pre class="brush: js">class MyArrayBuffer extends ArrayBuffer {
   // Overwrite MyArrayBuffer species to the parent ArrayBuffer constructor
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
   <tr>
    <td>{{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -3061,14 +3061,6 @@
       "Shiyou"
     ]
   },
-  "Web/API/Document/keyup_event": {
-    "modified": "2019-04-18T03:52:12.531Z",
-    "contributors": [
-      "irenesmith",
-      "fscholz",
-      "JoanneWu"
-    ]
-  },
   "Web/API/Document/querySelector": {
     "modified": "2019-03-23T23:28:13.625Z",
     "contributors": [
@@ -3220,6 +3212,14 @@
     "contributors": [
       "akccakcctw",
       "NoobTW"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2019-04-18T03:52:12.531Z",
+    "contributors": [
+      "irenesmith",
+      "fscholz",
+      "JoanneWu"
     ]
   },
   "Web/API/Element/querySelectorAll": {
@@ -3664,18 +3664,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2019-08-27T10:57:49.300Z",
-    "contributors": [
-      "StanleyDing"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclose": {
-    "modified": "2019-03-23T22:13:45.424Z",
-    "contributors": [
-      "StanleyDing"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:48:19.691Z",
     "contributors": [
@@ -3701,6 +3689,12 @@
     "modified": "2020-10-15T22:09:39.473Z",
     "contributors": [
       "qwer5656"
+    ]
+  },
+  "Web/API/HTMLDialogElement/close_event": {
+    "modified": "2019-03-23T22:13:45.424Z",
+    "contributors": [
+      "StanleyDing"
     ]
   },
   "Web/API/HTMLDocument": {
@@ -4458,12 +4452,6 @@
     "modified": "2019-03-23T22:03:03.633Z",
     "contributors": [
       "IsaacSchemm"
-    ]
-  },
-  "Web/API/WindowEventHandlers": {
-    "modified": "2019-03-23T22:30:52.273Z",
-    "contributors": [
-      "jackblackevo"
     ]
   },
   "Web/API/XMLHttpRequest": {
@@ -6007,17 +5995,6 @@
       "Yuki0916",
       "jwhitlock",
       "Kaiyeh"
-    ]
-  },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-12T19:38:25.366Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "jwhitlock",
-      "jackblackevo",
-      "teoli",
-      "steely.wing"
     ]
   },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
@@ -7796,6 +7773,12 @@
       "jackblackevo"
     ]
   },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2019-08-27T10:57:49.300Z",
+    "contributors": [
+      "StanleyDing"
+    ]
+  },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {
     "modified": "2019-03-23T22:36:14.585Z",
     "contributors": [
@@ -8137,6 +8120,17 @@
     "contributors": [
       "teoli",
       "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:38:25.366Z",
+    "contributors": [
+      "wbamberg",
+      "SphinxKnight",
+      "jwhitlock",
+      "jackblackevo",
+      "teoli",
+      "steely.wing"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {

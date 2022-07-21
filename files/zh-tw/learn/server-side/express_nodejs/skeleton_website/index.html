@@ -42,20 +42,20 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <pre class="brush: bash notranslate">&gt; express --help
 
-  Usage: express [options] [dir]
+  Usage: express [options] [dir]
 
-  Options:
+  Options:
 
-    -h, --help           output usage information
-        --version        output the version number
-    -e, --ejs            add ejs engine support
-        --pug            add pug engine support
-        --hbs            add handlebars engine support
-    -H, --hogan          add hogan.js engine support
-    -v, --view &lt;engine&gt;  add view &lt;engine&gt; support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
-    -c, --css &lt;engine&gt;   add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain css)
-        --git            add .gitignore
-    -f, --force          force on non-empty directory
+    -h, --help           output usage information
+        --version        output the version number
+    -e, --ejs            add ejs engine support
+        --pug            add pug engine support
+        --hbs            add handlebars engine support
+    -H, --hogan          add hogan.js engine support
+    -v, --view &lt;engine&gt;  add view &lt;engine&gt; support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+    -c, --css &lt;engine&gt;   add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain css)
+        --git            add .gitignore
+    -f, --force          force on non-empty directory
 </pre>
 
 <p>您可以使用 Jade 視圖引擎和純 CSS 來指定 <code>express</code>，以在當前目錄中創建項目（如果指定目錄名，則項目將創建在具有該名稱的子文件夾中）。</p>
@@ -253,22 +253,22 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 <pre class="notranslate">/express-locallibrary-tutorial
     <strong>app.js</strong>
     /bin
-        <strong>www</strong>
+        <strong>www</strong>
     <strong>package.json</strong>
     /node_modules
-        [about 4,500 subdirectories and files]
+        [about 4,500 subdirectories and files]
     /public
-        /images
-        /javascripts
-        /stylesheets
-            <strong>style.css</strong>
+        /images
+        /javascripts
+        /stylesheets
+            <strong>style.css</strong>
     /routes
         <strong>index.js</strong>
-        <strong>users.js</strong>
+        <strong>users.js</strong>
     /views
-        <strong>error.pug</strong>
+        <strong>error.pug</strong>
         <strong>index.pug</strong>
-        <strong>layout.pug</strong>
+        <strong>layout.pug</strong>
 
 </pre>
 
@@ -279,25 +279,25 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 <p><strong>package.json </strong>文件定義了應用程序依賴關係，和其他訊息：</p>
 
 <pre class="brush: json notranslate">{
-  "name": "express-locallibrary-tutorial",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.16.2",
-    "morgan": "~1.9.0",
-    "pug": "~2.0.0-rc.4",
-    "serve-favicon": "~2.4.5"
-  },
-  "devDependencies": {
-    "nodemon": "^1.14.11"
-  }
+  "name": "express-locallibrary-tutorial",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.2",
+    "morgan": "~1.9.0",
+    "pug": "~2.0.0-rc.4",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
 }
 </pre>
 
@@ -434,7 +434,7 @@ var router = express.Router();
 
 /* GET users listing. */
 <strong>router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('respond with a resource');
 });</strong>
 
 module.exports = router;

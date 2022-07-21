@@ -117,15 +117,16 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 - [1. Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
-- [2. Beginning our Angular todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - : At this point, we are ready to start creating our to-do list application using Angular. The finished application will display a list of to-do items and includes editing, deleting, and adding features. In this article you will get to know your application structure, and work up to displaying a basic list of to-do items.
-- [3. Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - : Now that we've got our basic application structure set up and started displaying something useful, let's switch gears and spend an article looking at how Angular handles styling of applications.
-- [4. Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - : この記事では、Angular が提供するものを確認し、前提条件をインストールしてサンプルアプリを設定し、Angular の基本的なアーキテクチャを確認します。
+- [2. Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - : この時点で、Angular を使用して todo リストアプリケーションの作成を開始する準備が整いました。 完成したアプリケーションには、やることのリストが表示され、機能の編集、削除、追加が含まれます。 この記事では、アプリケーションの構造を理解し、やることの基本的なリストを表示するようになります。
+- [3. Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - : 基本的なアプリケーション構造がセットアップされ、アプリケーションが表示されるようになったので、次の段階へ移って、Angular がアプリケーションのスタイリングをどのように処理するかを見てみましょう。
+- [4. Creating an item component](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
   - : Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. the Angular event model is covered here.
-- [5. Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+- [5. Filtering our to-do items](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - : Now let's move on to adding functionality to allow users to filter their to-do items, so they can view active, completed, or all items.
-- [6. Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+- [6. Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
   - : This final Angular article covers how to build an app ready for production, and provides further resources for you to continue your learning journey.
 
 ## どのフレームワークを選ぶべきか？

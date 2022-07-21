@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 ---
 <div>{{JSRef}}</div>
 
-<p><code>静态方法 <strong>Reflect</strong></code><strong><code>.isExtensible()</code></strong> 判断一个对象是否可扩展（即是否能够添加新的属性）。与它 {{jsxref("Object.isExtensible()")}} 方法相似，但有一些不同，详情可见 <a href="#与_object.isextensible()_的不同点">与 Object.isExtensible() 的不同点</a>。</p>
+<p><code>静态方法 <strong>Reflect</strong></code><strong><code>.isExtensible()</code></strong> 判断一个对象是否可扩展（即是否能够添加新的属性）。与它 {{jsxref("Object.isExtensible()")}} 方法相似，但有一些不同，详情可见 <a href="#与_object.isextensible()_的不同点">与 Object.isExtensible() 的不同点</a>。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 
 <h3 id="异常">异常</h3>
 
-<p>抛出一个 {{jsxref("TypeError")}}，如果对象不是 {{jsxref("Object")}}。</p>
+<p>抛出一个 {{jsxref("TypeError")}}，如果对象不是 {{jsxref("Object")}}。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_Reflect.isExtensible()">使用 <code>Reflect.isExtensible()</code></h3>
+<h3 id="使用_Reflect.isExtensible()">使用 <code>Reflect.isExtensible()</code></h3>
 
 <p>详情可见 {{jsxref("Object.isExtensible()")}}。</p>
 
@@ -54,9 +54,9 @@ var frozen = Object.freeze({});
 Reflect.isExtensible(frozen); // === false
 </pre>
 
-<h3 id="与_Object.isExtensible()_的不同点">与 <code>Object.isExtensible() 的不同点</code></h3>
+<h3 id="与_Object.isExtensible()_的不同点">与 <code>Object.isExtensible() 的不同点</code></h3>
 
-<p>如果该方法的第一个参数不是一个对象（原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。对于 {{jsxref("Object.isExtensible()")}}，非对象的第一个参数会被强制转换为一个对象。</p>
+<p>如果该方法的第一个参数不是一个对象（原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。对于 {{jsxref("Object.isExtensible()")}}，非对象的第一个参数会被强制转换为一个对象。</p>
 
 <pre class="brush: js">Reflect.isExtensible(1);
 // TypeError: 1 is not an object
@@ -82,7 +82,7 @@ Object.isExtensible(1);
   <tr>
    <td>{{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

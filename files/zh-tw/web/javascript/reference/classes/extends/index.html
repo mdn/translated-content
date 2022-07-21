@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 <div>{{jsSidebar("Classes")}}</div>
 
-<p><strong><code>extends</code></strong> 關鍵字被使用於<a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">類別（class）宣告</a>或<a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">類別（class）表達式</a>中來建立擴展的子類別 。</p>
+<p><strong><code>extends</code></strong> 關鍵字被使用於<a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">類別（class）宣告</a>或<a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">類別（class）表達式</a>中來建立擴展的子類別 。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/classes-extends.html", "taller")}}</div>
 
@@ -18,15 +18,15 @@ translation_of: Web/JavaScript/Reference/Classes/extends
 
 <h2 id="解釋">解釋</h2>
 
-<p><code>extends</code> 關鍵字可用於建立一個自訂類別或內建類別的子類別。</p>
+<p><code>extends</code> 關鍵字可用於建立一個自訂類別或內建類別的子類別。</p>
 
-<p>其繼承之原型 <code>.prototype</code> 必須是 {{jsxref("Object")}} 或 {{jsxref("null")}}。</p>
+<p>其繼承之原型 <code>.prototype</code> 必須是 {{jsxref("Object")}} 或 {{jsxref("null")}}。</p>
 
 <h2 id="範例">範例</h2>
 
-<h3 id="使用_extends">使用 <code>extends</code></h3>
+<h3 id="使用_extends">使用 <code>extends</code></h3>
 
-<p>第一個範例是根據 <code>Polygon</code>類別建立一個名為 <code>Square</code> 的子類別。此範例提取自<a href="https://googlechrome.github.io/samples/classes-es6/index.html">線上示例</a>。</p>
+<p>第一個範例是根據 <code>Polygon</code>類別建立一個名為 <code>Square</code> 的子類別。此範例提取自<a href="https://googlechrome.github.io/samples/classes-es6/index.html">線上示例</a>。</p>
 
 <pre class="brush: js">class Square extends Polygon {
   constructor(length) {
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   }
 }</pre>
 
-<h3 id="使用_extends_於內建類別">使用 <code>extends</code> 於內建類別</h3>
+<h3 id="使用_extends_於內建類別">使用 <code>extends</code> 於內建類別</h3>
 
 <p>這個範例擴展了內建的 {{jsxref("Date")}} 類別。此範例提取自<a href="https://googlechrome.github.io/samples/classes-es6/index.html">線上範例</a>。</p>
 
@@ -58,9 +58,9 @@ translation_of: Web/JavaScript/Reference/Classes/extends
   }
 }</pre>
 
-<h3 id="擴展_null">擴展 <code>null</code></h3>
+<h3 id="擴展_null">擴展 <code>null</code></h3>
 
-<p>像擴展普通類別一樣擴展 {{jsxref("null")}}，但新對象的原型不會繼承 {{jsxref("Object.prototype")}}。</p>
+<p>像擴展普通類別一樣擴展 {{jsxref("null")}}，但新對象的原型不會繼承 {{jsxref("Object.prototype")}}。</p>
 
 <pre class="brush: js">class nullExtends extends null {
   constructor() {}

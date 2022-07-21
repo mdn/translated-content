@@ -11,14 +11,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 <div>{{JSRef}} {{SeeCompatTable}}</div>
 
-<p><strong><code>WebAssembly.Instance</code></strong> 对象本身是有状态的，是 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">WebAssembly.Module</a> 的一个可执行实例。<code>实例</code>包含所有的 <a href="/zh-CN/docs/WebAssembly/Exported_functions">WebAssembly 导出函数</a>，允许从 JavaScript 调用 WebAssembly 代码。</p>
+<p><strong><code>WebAssembly.Instance</code></strong> 对象本身是有状态的，是 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">WebAssembly.Module</a> 的一个可执行实例。<code>实例</code>包含所有的 <a href="/zh-CN/docs/WebAssembly/Exported_functions">WebAssembly 导出函数</a>，允许从 JavaScript 调用 WebAssembly 代码。</p>
 
-<p><code>WebAssembly.Instance()</code> 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。 然而，通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .</p>
+<p><code>WebAssembly.Instance()</code> 构造函数以同步方式实例化一个{{jsxref("WebAssembly.Module")}} 对象。 然而，通常获取实例的方法是通过异步函数{{jsxref("WebAssembly.instantiate()")}} .</p>
 
 <h2 id="构造函数">构造函数</h2>
 
 <div class="warning">
-<p><strong>警告：</strong>由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用<code>Instance()</code>；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .</p>
+<p><strong>警告：</strong>由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用<code>Instance()</code>；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .</p>
 </div>
 
 <pre class="syntaxbox">var myInstance = new WebAssembly.Instance(<em>module</em>, <em>importObject</em>);</pre>
@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 
 <dl>
  <dt>{{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}</dt>
- <dd>返回一个包含此 WebAssembly 模块实例所导出的全部成员的 JS 对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。</dd>
+ <dd>返回一个包含此 WebAssembly 模块实例所导出的全部成员的 JS 对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。</dd>
 </dl>
 
 <h2 id="规格">规格</h2>

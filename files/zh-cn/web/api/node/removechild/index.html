@@ -7,9 +7,9 @@ translation_of: Web/API/Node/removeChild
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong>Node.removeChild() </strong>方法从 DOM 中删除一个子节点。返回删除的节点。</p>
+<p><strong>Node.removeChild() </strong>方法从 DOM 中删除一个子节点。返回删除的节点。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><em>let oldChild</em> = node.removeChild(<em>child</em>);
 
@@ -27,7 +27,7 @@ translation_of: Web/API/Node/removeChild
 
 <p>如果上例中的<code>child 节点</code>不是<code>node</code>节点的子节点，则该方法会抛出异常。</p>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <pre><code>&lt;!--Sample HTML code--&gt;
 &lt;div id="top" align="center"&gt; &lt;/div&gt;
@@ -36,7 +36,7 @@ translation_of: Web/API/Node/removeChild
       var top = document.getElementById("top");
       var nested = document.getElementById("nested");
       var garbage = top.removeChild(nested);
-      //Test Case 2: the method throws the exception (2)
+      //Test Case 2: the method throws the exception (2)
 &lt;/script&gt;
 
 &lt;!--Sample HTML code--&gt;
@@ -48,9 +48,9 @@ translation_of: Web/API/Node/removeChild
       var top = document.getElementById("top");
       var nested = document.getElementById("nested");
       var garbage = top.removeChild(nested);
-      // This first call remove correctly the node
+      // This first call remove correctly the node
       garbage = top.removeChild(nested);
-      // Test Case 1: the method in the second call here, throws the exception (1)
+      // Test Case 1: the method in the second call here, throws the exception (1)
 &lt;/script&gt;</code></pre>
 
 <pre>&lt;!--示例 HTML 代码--&gt;
@@ -80,7 +80,7 @@ while (element.firstChild) {
 }
 </pre>
 
-<h2 id="Specification" name="Specification">规范</h2>
+<h2 id="Specification">规范</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild">DOM Level 1 Core: removeChild</a></li>
@@ -88,7 +88,7 @@ while (element.firstChild) {
  <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066">DOM Level 3 Core: removeChild</a></li>
 </ul>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{domxref("Node.replaceChild")}}</li>

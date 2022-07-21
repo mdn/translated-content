@@ -9,15 +9,15 @@ translation_of: Web/HTTP/Headers
 
 <p><strong>HTTP 消息头</strong>允许客户端和服务器通过<strong> request</strong>和<strong> response</strong>传递附加信息。一个请求头由名称（不区分大小写）后跟一个冒号 (`:`)，冒号后跟具体的值（不带换行符）组成。该值前面的引导空白会被忽略。</p>
 
-<p>自定专用消息头可通过'X-' 前缀来添加；但是这种用法被 IETF 在 2012 年 6 月发布的 <a href="https://tools.ietf.org/html/rfc6648">RFC6648</a> 中明确弃用，原因是其会在非标准字段成为标准时造成不便；其他的消息头在 <a class="external" href="http://www.iana.org/assignments/message-headers/perm-headers.html" title="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA 注册表</a> 中列出，其原始内容在 <a class="external" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a> 中定义。 此外，IANA 还维护着<a class="external" href="http://www.iana.org/assignments/message-headers/prov-headers.html">被提议的新 HTTP 消息头注册表</a>.</p>
+<p>自定专用消息头可通过'X-' 前缀来添加；但是这种用法被 IETF 在 2012 年 6 月发布的 <a href="https://tools.ietf.org/html/rfc6648">RFC6648</a> 中明确弃用，原因是其会在非标准字段成为标准时造成不便；其他的消息头在 <a class="external" href="http://www.iana.org/assignments/message-headers/perm-headers.html" title="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA 注册表</a> 中列出，其原始内容在 <a class="external" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a> 中定义。 此外，IANA 还维护着<a class="external" href="http://www.iana.org/assignments/message-headers/prov-headers.html">被提议的新 HTTP 消息头注册表</a>.</p>
 
 <p>根据不同上下文，可将消息头分为：</p>
 
 <ul>
- <li>{{Glossary("General header", "General headers")}}: 同时适用于请求和响应消息，但与最终消息主体中传输的数据无关的消息头。</li>
+ <li>{{Glossary("General header", "General headers")}}: 同时适用于请求和响应消息，但与最终消息主体中传输的数据无关的消息头。</li>
  <li>{{Glossary("Request header", "Request headers")}}: 包含更多有关要获取的资源或客户端本身信息的消息头。</li>
  <li>{{Glossary("Response header", "Response headers")}}: 包含有关响应的补充信息，如其位置或服务器本身（名称和版本等）的消息头。</li>
- <li>{{Glossary("Entity header", "Entity headers")}}: 包含有关实体主体的更多信息，比如主体长 (Content-Length) 度或其 MIME 类型。</li>
+ <li>{{Glossary("Entity header", "Entity headers")}}: 包含有关实体主体的更多信息，比如主体长 (Content-Length) 度或其 MIME 类型。</li>
 </ul>
 
 <p>消息头也可以根据代理对其的处理方式分为：</p>
@@ -28,7 +28,7 @@ translation_of: Web/HTTP/Headers
 
 <p><strong>逐跳消息头</strong></p>
 
-<p>这类消息头仅对单次传输连接有意义，不能通过代理或缓存进行重新转发。这些消息头包括 {{ httpheader("Connection") }}, {{ httpheader("Keep-Alive") }}, {{ httpheader("Proxy-Authenticate") }}, {{ httpheader("Proxy-Authorization") }}, {{ httpheader("TE") }}, {{ httpheader("Trailer") }}, {{ httpheader("Transfer-Encoding") }} 及 {{ httpheader("Upgrade") }}。注意，只能使用 {{ httpheader("Connection") }} 来设置逐跳一般头。</p>
+<p>这类消息头仅对单次传输连接有意义，不能通过代理或缓存进行重新转发。这些消息头包括 {{ httpheader("Connection") }}, {{ httpheader("Keep-Alive") }}, {{ httpheader("Proxy-Authenticate") }}, {{ httpheader("Proxy-Authorization") }}, {{ httpheader("TE") }}, {{ httpheader("Trailer") }}, {{ httpheader("Transfer-Encoding") }} 及 {{ httpheader("Upgrade") }}。注意，只能使用 {{ httpheader("Connection") }} 来设置逐跳一般头。</p>
 
 <p>左侧导航栏提供了按字母顺序排列的列表。以下列清单概括了消息头及其用途：</p>
 
@@ -159,7 +159,7 @@ translation_of: Web/HTTP/Headers
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Cache-Control" title="en/Cache-Control">Cache-Control</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -237,7 +237,7 @@ translation_of: Web/HTTP/Headers
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/ETag" title="en/ETag">ETag</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -249,7 +249,7 @@ translation_of: Web/HTTP/Headers
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Expires" title="en/Expires">Expires</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -273,13 +273,13 @@ translation_of: Web/HTTP/Headers
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/If-Modified-Since" title="en/If-Modified-Since">If-Modified-Since</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/If-None-Match" title="en/If-None-Match">If-None-Match</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -303,7 +303,7 @@ translation_of: Web/HTTP/Headers
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Last-Modified" title="en/Last-Modified">Last-Modified</a></code></td>
    <td></td>
-   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -345,7 +345,7 @@ translation_of: Web/HTTP/Headers
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Pragma" title="en/Pragma">Pragma</a></code></td>
    <td></td>
-   <td>for the pragma: nocache value see <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td>for the pragma: nocache value see <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -384,31 +384,31 @@ translation_of: Web/HTTP/Headers
    <td><code>Sec-Websocket-Extensions</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Key</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Origin</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Protocol</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Version</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Server" title="en/Server">Server</a></code></td>
@@ -431,8 +431,8 @@ translation_of: Web/HTTP/Headers
   <tr>
    <td><code>Strict-Transport-Security</code></td>
    <td></td>
-   <td><a href="/en-US/docs/Security/HTTP_Strict_Transport_Security" title="en/Security/HTTP Strict Transport Security">HTTP Strict Transport Security</a></td>
-   <td><a class="external" href="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02">IETF reference</a></td>
+   <td><a href="/en-US/docs/Security/HTTP_Strict_Transport_Security" title="en/Security/HTTP Strict Transport Security">HTTP Strict Transport Security</a></td>
+   <td><a class="external" href="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02">IETF reference</a></td>
   </tr>
   <tr>
    <td><code>TCN</code></td>
@@ -483,7 +483,7 @@ translation_of: Web/HTTP/Headers
    <td>
     <p>列出了用作 Web 服务器选择特定内容的条件的标头。此服务器对于高效和正确缓存发送的资源很重要。</p>
    </td>
-   <td><a href="/en-US/docs/Web/HTTP/Content_negotiation" title="https://developer.mozilla.org/en/Content_negotiation">HTTP Content Negotiation</a> &amp; <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
+   <td><a href="/en-US/docs/Web/HTTP/Content_negotiation" title="https://developer.mozilla.org/en/Content_negotiation">HTTP Content Negotiation</a> &amp; <a href="/en-US/docs/HTTP_Caching_FAQ" title="en/HTTP Caching FAQ">HTTP Caching FAQ</a></td>
    <td></td>
   </tr>
   <tr>
@@ -513,13 +513,13 @@ translation_of: Web/HTTP/Headers
   <tr>
    <td><code>X-Content-Security-Policy</code></td>
    <td></td>
-   <td>Using <a href="/en-US/docs/Security/CSP/Using_Content_Security_Policy" title="en/Security/CSP/Using Content Security Policy">Content Security Policy</a></td>
+   <td>Using <a href="/en-US/docs/Security/CSP/Using_Content_Security_Policy" title="en/Security/CSP/Using Content Security Policy">Content Security Policy</a></td>
    <td></td>
   </tr>
   <tr>
    <td><code>X-DNSPrefetch-Control</code></td>
    <td></td>
-   <td><a href="/en-US/docs/Controlling_DNS_prefetching" title="En/Controlling DNS prefetching">Controlling DNS prefetching</a></td>
+   <td><a href="/en-US/docs/Controlling_DNS_prefetching" title="En/Controlling DNS prefetching">Controlling DNS prefetching</a></td>
    <td></td>
   </tr>
   <tr>

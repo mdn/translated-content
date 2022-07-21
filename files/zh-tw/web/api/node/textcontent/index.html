@@ -5,7 +5,7 @@ translation_of: Web/API/Node/textContent
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code><strong>Node.textContent</strong></code> 屬性表示了節點或其後代的文字內容。</p>
+<p><code><strong>Node.textContent</strong></code> 屬性表示了節點或其後代的文字內容。</p>
 
 <h2 id="Syntax">語法</h2>
 
@@ -22,7 +22,7 @@ element.textContent = "this is some sample text";
  <li>Setting this property on a node removes all of its children and replaces them with a single text node with the given value.</li>
 </ul>
 
-<h3 id="與_innerText_的差異">與 <code>innerText</code> 的差異</h3>
+<h3 id="與_innerText_的差異">與 <code>innerText</code> 的差異</h3>
 
 <p>Internet Explorer introduced <code>element.innerText</code>. The intention is similar but with the following differences:</p>
 
@@ -35,7 +35,7 @@ element.textContent = "this is some sample text";
 
 <h3 id="與_innerHTML_的差異">與 <code>innerHTML</code> 的差異</h3>
 
-<p><code>innerHTML</code> returns the HTML as its name indicates. Quite often, in order to retrieve or write text within an element, people use <code>innerHTML</code>. <code>textContent</code> should be used instead. Because the text is not parsed as HTML, it's likely to have better performance. Moreover, this avoids an XSS attack vector.</p>
+<p><code>innerHTML</code> returns the HTML as its name indicates. Quite often, in order to retrieve or write text within an element, people use <code>innerHTML</code>. <code>textContent</code> should be used instead. Because the text is not parsed as HTML, it's likely to have better performance. Moreover, this avoids an XSS attack vector.</p>
 
 <h2 id="Example">範例</h2>
 

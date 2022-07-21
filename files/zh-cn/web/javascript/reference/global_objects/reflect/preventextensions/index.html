@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtension
 ---
 <div>{{JSRef}}</div>
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.preventExtensions()</code></strong> 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxref("Object.preventExtensions()")}}相似，但有一些不同点。详情可见 <a href="#与_object.preventextensions_的不同点">differences</a>。</p>
+<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.preventExtensions()</code></strong> 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与 {{jsxref("Object.preventExtensions()")}}相似，但有一些不同点。详情可见 <a href="#与_object.preventextensions_的不同点">differences</a>。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}</p>
 
@@ -27,15 +27,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtension
 
 <h3 id="异常">异常</h3>
 
-<p>抛出一个 {{jsxref("TypeError")}} 错误，如果 <code>target</code> 不是 {{jsxref("Object")}}。</p>
+<p>抛出一个 {{jsxref("TypeError")}} 错误，如果 <code>target</code> 不是 {{jsxref("Object")}}。</p>
 
 <h2 id="描述">描述</h2>
 
-<p><code>Reflect.preventExtensions</code> 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与  {{jsxref("Object.preventExtensions()")}} 方法相似。</p>
+<p><code>Reflect.preventExtensions</code> 方法阻止新属性添加到对象 (例如：防止将来对对象的扩展被添加到对象中)。该方法与  {{jsxref("Object.preventExtensions()")}} 方法相似。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_Reflect.preventExtensions">使用 <code>Reflect.preventExtensions()</code></h3>
+<h3 id="使用_Reflect.preventExtensions">使用 <code>Reflect.preventExtensions()</code></h3>
 
 <p>详情可见 {{jsxref("Object.preventExtensions()")}}.</p>
 
@@ -48,9 +48,9 @@ Reflect.preventExtensions(empty);
 Reflect.isExtensible(empty); // === false
 </pre>
 
-<h3 id="与_Object.preventExtensions_的不同点">与 <code>Object.preventExtensions()</code> 的不同点</h3>
+<h3 id="与_Object.preventExtensions_的不同点">与 <code>Object.preventExtensions()</code> 的不同点</h3>
 
-<p>如果该方法的 <em><code>target</code></em> 参数不是一个对象（是原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。 对于{{jsxref("Object.preventExtensions()")}} 方法， 非对象的 <em><code>target</code></em> 参数将被强制转换为对象。</p>
+<p>如果该方法的 <em><code>target</code></em> 参数不是一个对象（是原始值），那么将造成一个 {{jsxref("TypeError")}} 异常。 对于{{jsxref("Object.preventExtensions()")}} 方法， 非对象的 <em><code>target</code></em> 参数将被强制转换为对象。</p>
 
 <pre class="brush: js">Reflect.preventExtensions(1);
 // TypeError: 1 is not an object

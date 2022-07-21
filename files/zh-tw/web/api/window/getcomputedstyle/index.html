@@ -23,7 +23,7 @@ translation_of: Web/API/Window/getComputedStyle
 
 <div class="note"><strong>Note:</strong> Prior to Gecko 2.0 {{geckoRelease("2.0")}}, the <code>pseudoElt</code> parameter was required. No other major browser required this parameter be specified if null. Gecko has been changed to match the behavior of other browsers.</div>
 
-<p>The returned <code>style</code> is a <em>live</em> {{domxref("CSSStyleDeclaration")}} object, which updates itself automatically when the element's style is changed.</p>
+<p>The returned <code>style</code> is a <em>live</em> {{domxref("CSSStyleDeclaration")}} object, which updates itself automatically when the element's style is changed.</p>
 
 <h2 id="範例">範例</h2>
 
@@ -58,17 +58,17 @@ var style = window.getComputedStyle(elem1, null);
 
 <pre class="brush: js">function dumpComputedStyles(elem,prop) {
 
-  var cs = window.getComputedStyle(elem,null);
-  if (prop) {
-    console.log(prop+" : "+cs.getPropertyValue(prop));
-    return;
-  }
-  var len = cs.length;
-  for (var i=0;i&lt;len;i++) {
+  var cs = window.getComputedStyle(elem,null);
+  if (prop) {
+    console.log(prop+" : "+cs.getPropertyValue(prop));
+    return;
+  }
+  var len = cs.length;
+  for (var i=0;i&lt;len;i++) {
 
-    var style = cs[i];
-    console.log(style+" : "+cs.getPropertyValue(style));
-  }
+    var style = cs[i];
+    console.log(style+" : "+cs.getPropertyValue(style));
+  }
 
 }
 </pre>
@@ -111,7 +111,7 @@ var style = window.getComputedStyle(elem1, null);
 
 <p>During a CSS transition, <code>getComputedStyle</code> returns the original property value in Firefox, but the final property value in WebKit.</p>
 
-<p>In Firefox, properties with the value <code>auto</code> return the used value, not the value <code>auto</code>. So if you apply <code>top:auto;</code> and <code>bottom:0</code>; on an element with <code>height:30px</code> and its containing block is <code>height:100px;</code>, upon requesting the computed style for <code>top</code>, Firefox will return <code>top:70px</code>, as <code>100px-30px=70px</code>.</p>
+<p>In Firefox, properties with the value <code>auto</code> return the used value, not the value <code>auto</code>. So if you apply <code>top:auto;</code> and <code>bottom:0</code>; on an element with <code>height:30px</code> and its containing block is <code>height:100px;</code>, upon requesting the computed style for <code>top</code>, Firefox will return <code>top:70px</code>, as <code>100px-30px=70px</code>.</p>
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

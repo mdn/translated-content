@@ -5,9 +5,9 @@ translation_of: Web/API/Window/showModalDialog
 ---
 <div>{{ deprecated_header() }}{{APIRef}}</div>
 
-<p> <strong><code>Window.showModalDialog()</code></strong> 用于创建和展示一个指向特定网页的模态对话框。</p>
+<p> <strong><code>Window.showModalDialog()</code></strong> 用于创建和展示一个指向特定网页的模态对话框。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><var>returnVal</var> = window.showModalDialog(<var>uri</var>[, <var>arguments</var>][, <var>options</var>]);
 </pre>
@@ -15,10 +15,10 @@ translation_of: Web/API/Window/showModalDialog
 <p>其中</p>
 
 <ul>
- <li><code>returnVal</code> 集合类型 (Set) 返回值。由<code>uri</code>指定的页面返回。</li>
- <li><code>uri</code> 要在模态对话框中打开的页面 URI。</li>
- <li><code>arguments</code> 可选变量。可以通过该参数将需要的值传入对话框; 参数可以通过 <code><a href="/en-US/docs/DOM/window">window</a></code> 对象的<code><a href="/en-US/docs/DOM/window.dialogArguments">window.dialogArguments</a></code> 属性获取。</li>
- <li><code>options</code> 可选字符串参数。用于设置对话框打开的样式，使用一个或多个逗号分隔。</li>
+ <li><code>returnVal</code> 集合类型 (Set) 返回值。由<code>uri</code>指定的页面返回。</li>
+ <li><code>uri</code> 要在模态对话框中打开的页面 URI。</li>
+ <li><code>arguments</code> 可选变量。可以通过该参数将需要的值传入对话框; 参数可以通过 <code><a href="/en-US/docs/DOM/window">window</a></code> 对象的<code><a href="/en-US/docs/DOM/window.dialogArguments">window.dialogArguments</a></code> 属性获取。</li>
+ <li><code>options</code> 可选字符串参数。用于设置对话框打开的样式，使用一个或多个逗号分隔。</li>
 </ul>
 
 <table class="standard-table">
@@ -62,19 +62,19 @@ translation_of: Web/API/Window/showModalDialog
  <p><strong>备注：</strong>Firefox does not implement the <code>dialogHide</code>, <code>edge</code>, <code>status</code>, or <code>unadorned</code> arguments.</p>
 </div>
 
-<h2 id="Compatibility" name="Compatibility">Compatibility</h2>
+<h2 id="Compatibility">Compatibility</h2>
 
 <p>Introduced by Microsoft Internet Explorer 4. Support added to Firefox in Firefox 3 (deprectated in Fx 28), and to Safari in Safari 5.1.</p>
 
-<h2 id="Examples" name="Examples">Examples</h2>
+<h2 id="Examples">Examples</h2>
 
 <p><a href="/samples/domref/showModalDialog.html">Try out <code>showModalDialog()</code></a>.</p>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p><code>showModalDialog()</code> is currently being standardized as part of HTML5. The third argument (for additional options) is not present in the HTML5 version, and is (safely) ignored by both Safari and Chrome.</p>
 
-<h2 id="Specification" name="Specification">Specification</h2>
+<h2 id="Specification">Specification</h2>
 
 <ul>
  <li><code><a href="https://msdn.microsoft.com/en-us/library/ms536759%28VS.85%29.aspx?f=255&amp;MSPPError=-2147217396">showModalDialog()</a></code></li>

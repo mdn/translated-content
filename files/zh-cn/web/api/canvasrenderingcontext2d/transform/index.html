@@ -7,14 +7,14 @@ translation_of: Web/API/CanvasRenderingContext2D/transform
 
 <p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.transform()</code></strong> 是 Canvas 2D API 使用矩阵多次叠加当前变换的方法，矩阵由方法的参数进行描述。你可以缩放、旋转、移动和倾斜上下文。</p>
 
-<p>参见 {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} 方法，这个方法使用单位矩阵重新设置当前的变换并且会调用 <code>transform()。</code></p>
+<p>参见 {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} 方法，这个方法使用单位矩阵重新设置当前的变换并且会调用 <code>transform()。</code></p>
 
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">void <var><em>ctx</em>.transform(a, b, c, d, e, f);</var>
 </pre>
 
-<p>变换矩阵的描述： <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></p>
+<p>变换矩阵的描述： <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></p>
 
 <h3 id="参数">参数</h3>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/CanvasRenderingContext2D/transform
 
 <h3 id="使用_transform_方法">使用 <code>transform</code> 方法</h3>
 
-<p>这是一段使用 <code>transform</code> 方法的简单的代码片段。</p>
+<p>这是一段使用 <code>transform</code> 方法的简单的代码片段。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -60,8 +60,8 @@ ctx.fillRect(0,0,100,100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.transform(1,1,0,1,0,0);

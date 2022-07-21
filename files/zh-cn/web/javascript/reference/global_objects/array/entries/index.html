@@ -41,9 +41,9 @@ var iterator = arr.entries();
 console.log(iterator.next());
 
 /*{value: Array(2), done: false}
-          done:false
-          value:(2) [0, "a"]
-           __proto__: Object
+          done:false
+          value:(2) [0, "a"]
+           __proto__: Object
 */
 // iterator.next() 返回一个对象，对于有元素的数组，
 // 是 next{ value: Array(2), done: false }；
@@ -91,23 +91,23 @@ var arr = [[1,34],[456,2,3,44,234],[4567,1,4,5,6],[34,78,23,1]];
 sortArr(arr);
 
 /*(4) [Array(2), Array(5), Array(5), Array(4)]
-    0:(2) [1, 34]
-    1:(5) [2, 3, 44, 234, 456]
-    2:(5) [1, 4, 5, 6, 4567]
-    3:(4) [1, 23, 34, 78]
-    length:4
-    __proto__:Array(0)
+    0:(2) [1, 34]
+    1:(5) [2, 3, 44, 234, 456]
+    2:(5) [1, 4, 5, 6, 4567]
+    3:(4) [1, 23, 34, 78]
+    length:4
+    __proto__:Array(0)
 */
 </pre>
 
-<h3 id="5、使用for…of_循环">5、使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> 循环</h3>
+<h3 id="5、使用for…of_循环">5、使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> 循环</h3>
 
 <pre class="brush:js">var arr = ["a", "b", "c"];
 var iterator = arr.entries();
 // undefined
 
 for (let e of iterator) {
-    console.log(e);
+    console.log(e);
 }
 
 // [0, "a"]

@@ -8,7 +8,7 @@ translation_of: Web/API/HTMLCanvasElement/getContext
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><strong><code>HTMLCanvasElement.getContext()</code></strong> 方法返回{{jsxref("canvas")}} 的上下文，如果上下文没有定义则返回 {{jsxref("null")}} .</p>
+<p><strong><code>HTMLCanvasElement.getContext()</code></strong> 方法返回{{jsxref("canvas")}} 的上下文，如果上下文没有定义则返回 {{jsxref("null")}} .</p>
 
 <p>在同一个 canvas 上以相同的 <code>contextType</code> 多次调用此方法只会返回同一个上下文。</p>
 
@@ -24,9 +24,9 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
  <dd>是一个指示使用何种上下文的 {{domxref("DOMString")}} 。可能的值是：
  <ul>
   <li><code>"2d</code>", 建立一个 {{domxref("CanvasRenderingContext2D")}} 二维渲染上下文。</li>
-  <li><code>"webgl"</code> (或<code>"experimental-webgl"</code>) 这将创建一个 {{domxref("WebGLRenderingContext")}} 三维渲染上下文对象。只在实现<a href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a> 版本 1(OpenGL ES 2.0) 的浏览器上可用。</li>
-  <li>"<code>webgl2</code>" (或 "<code>experimental-webgl2</code>") 这将创建一个 {{domxref("WebGL2RenderingContext")}} 三维渲染上下文对象。只在实现 <a href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a> 版本 2 (OpenGL ES 3.0) 的浏览器上可用。{{experimental_inline}}</li>
-  <li><code>"bitmaprenderer"</code> 这将创建一个只提供将 canvas 内容替换为指定{{domxref("ImageBitmap")}}功能的{{domxref("ImageBitmapRenderingContext")}}  。</li>
+  <li><code>"webgl"</code> (或<code>"experimental-webgl"</code>) 这将创建一个 {{domxref("WebGLRenderingContext")}} 三维渲染上下文对象。只在实现<a href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a> 版本 1(OpenGL ES 2.0) 的浏览器上可用。</li>
+  <li>"<code>webgl2</code>" (或 "<code>experimental-webgl2</code>") 这将创建一个 {{domxref("WebGL2RenderingContext")}} 三维渲染上下文对象。只在实现 <a href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a> 版本 2 (OpenGL ES 3.0) 的浏览器上可用。{{experimental_inline}}</li>
+  <li><code>"bitmaprenderer"</code> 这将创建一个只提供将 canvas 内容替换为指定{{domxref("ImageBitmap")}}功能的{{domxref("ImageBitmapRenderingContext")}}  。</li>
  </ul>
 
  <div class="blockIndicator note">
@@ -44,7 +44,7 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
 
  <ul>
   <li><strong><code>alpha</code></strong>: {{jsxref("boolean")}}值表明{{jsxref("canvas")}}包含一个{{jsxref("alpha")}}通道。如果设置为{{jsxref("false")}}, 浏览器将认为{{jsxref("canvas")}}背景总是不透明的，这样可以加速绘制透明的内容和图片。</li>
-  <li>{{non-standard_inline}} (Gecko only) <strong><code>willReadFrequently</code></strong>: {{jsxref("boolean")}}值表明是否有重复读取计划。经常使用{{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}，这将迫使软件使用 2D {{jsxref("canvas")}} 并 节省内存（而不是硬件加速）。这个方案适用于存在属性 <code>gfx.canvas.willReadFrequently</code>的环境。并设置为{{jsxref("true")}} (缺省情况下，只有 B2G / Firefox OS).</li>
+  <li>{{non-standard_inline}} (Gecko only) <strong><code>willReadFrequently</code></strong>: {{jsxref("boolean")}}值表明是否有重复读取计划。经常使用{{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}，这将迫使软件使用 2D {{jsxref("canvas")}} 并 节省内存（而不是硬件加速）。这个方案适用于存在属性 <code>gfx.canvas.willReadFrequently</code>的环境。并设置为{{jsxref("true")}} (缺省情况下，只有 B2G / Firefox OS).</li>
   <li>{{non-standard_inline}} (Blink only) <strong><code>storage</code></strong>: {{jsxref("string")}} 这样表示使用哪种方式存储 (默认为：持久（"persistent"）).</li>
  </ul>
  WebGL 上下文属性：
@@ -95,7 +95,7 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
 <p>{{domxref("RenderingContext")}} 返回值是下列之一：</p>
 
 <ul>
- <li>{{domxref("CanvasRenderingContext2D")}} 为 <code>"2d"</code>,</li>
+ <li>{{domxref("CanvasRenderingContext2D")}} 为 <code>"2d"</code>,</li>
  <li>{{domxref("WebGLRenderingContext")}} 为<code>"webgl"</code> 和<code>"experimental-webgl"</code>,</li>
  <li>{{domxref("WebGL2RenderingContext")}} 为<code>"webgl2"</code> 和<code>"experimental-webgl2"</code>, 或者</li>
  <li>{{domxref("ImageBitmapRenderingContext")}} 为<code>"bitmaprenderer"</code>.</li>
@@ -110,7 +110,7 @@ var <em>ctx</em> = <em>canvas</em>.getContext(<em>contextType</em>, <em>contextA
 <pre class="brush: html">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>通过如下代码可以获取 {{jsxref("canvas")}}<code>2d</code> 上下文：</p>
+<p>通过如下代码可以获取 {{jsxref("canvas")}}<code>2d</code> 上下文：</p>
 
 <pre class="brush: js">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
@@ -134,5 +134,5 @@ console.log(ctx); // CanvasRenderingContext2D { ... }
 <ul>
  <li>{{domxref("HTMLCanvasElement")}}.</li>
  <li>{{domxref("OffscreenCanvas.getContext()")}}</li>
- <li>可用的上下文: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} 和 {{domxref("WebGL2RenderingContext")}} and {{domxref("ImageBitmapRenderingContext")}}.</li>
+ <li>可用的上下文: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} 和 {{domxref("WebGL2RenderingContext")}} and {{domxref("ImageBitmapRenderingContext")}}.</li>
 </ul>

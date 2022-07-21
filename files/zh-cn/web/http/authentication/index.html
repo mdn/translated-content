@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Authentication
 
 <h2 id="通用的_HTTP_认证框架">通用的 HTTP 认证框架</h2>
 
-<p>{{RFC("7235")}} 定义了一个 HTTP 身份验证框架，服务器可以用来针对客户端的请求发送 {{glossary("challenge")}}（质询信息），客户端则可以用来提供身份验证凭证。质询与应答的工作流程如下：服务器端向客户端返回 {{HTTPStatus("401")}}（Unauthorized，未被授权的）状态码，并在 {{HTTPHeader("WWW-Authenticate")}} 首部提供如何进行验证的信息，其中至少包含有一种质询方式。之后有意向证明自己身份的客户端可以在新的请求中添加 {{HTTPHeader("Authorization")}} 首部字段进行验证，字段值为身份验证凭证信息。通常客户端会弹出一个密码框让用户填写，然后发送包含有恰当的 <code>Authorization</code>  首部的请求。</p>
+<p>{{RFC("7235")}} 定义了一个 HTTP 身份验证框架，服务器可以用来针对客户端的请求发送 {{glossary("challenge")}}（质询信息），客户端则可以用来提供身份验证凭证。质询与应答的工作流程如下：服务器端向客户端返回 {{HTTPStatus("401")}}（Unauthorized，未被授权的）状态码，并在 {{HTTPHeader("WWW-Authenticate")}} 首部提供如何进行验证的信息，其中至少包含有一种质询方式。之后有意向证明自己身份的客户端可以在新的请求中添加 {{HTTPHeader("Authorization")}} 首部字段进行验证，字段值为身份验证凭证信息。通常客户端会弹出一个密码框让用户填写，然后发送包含有恰当的 <code>Authorization</code>  首部的请求。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14689/HTTPAuth.png" style="height: 335px; width: 710px;"></p>
 
@@ -21,11 +21,11 @@ translation_of: Web/HTTP/Authentication
 
 <h3 id="代理认证">代理认证</h3>
 
-<p>与上述同样的询问质疑和响应原理使用于代理认证。下面介绍一个中间代理需要认证的例子。资源认证和代理认证可以并存，区别于独立的头信息和响应状态码。代理认证，询问质疑的状态码是 {{HTTPStatus("407")}}（必须提供代理证书），响应头{{HTTPHeader("Proxy-Authenticate")}}至少包含一个可用的质制，并且请求头{{HTTPHeader("Proxy-Authorization")}}用作提供证书给代理服务器。</p>
+<p>与上述同样的询问质疑和响应原理使用于代理认证。下面介绍一个中间代理需要认证的例子。资源认证和代理认证可以并存，区别于独立的头信息和响应状态码。代理认证，询问质疑的状态码是 {{HTTPStatus("407")}}（必须提供代理证书），响应头{{HTTPHeader("Proxy-Authenticate")}}至少包含一个可用的质制，并且请求头{{HTTPHeader("Proxy-Authorization")}}用作提供证书给代理服务器。</p>
 
 <h3 id="访问拒绝">访问拒绝</h3>
 
-<p>当（代理）服务器收到一个合法认证信息时，若该认证不能获取请求资源的权限，（代理）服务器会返回{{HTTPStatus("403")}}响应状态，说明用户证书权限不够，与 {{HTTPStatus("401")}} 未认证和 {{HTTPStatus("407")}} 未代理认证不同。</p>
+<p>当（代理）服务器收到一个合法认证信息时，若该认证不能获取请求资源的权限，（代理）服务器会返回{{HTTPStatus("403")}}响应状态，说明用户证书权限不够，与 {{HTTPStatus("401")}} 未认证和 {{HTTPStatus("407")}} 未代理认证不同。</p>
 
 <h3 id="跨域图片认证">跨域图片认证</h3>
 
@@ -35,7 +35,7 @@ translation_of: Web/HTTP/Authentication
 
 <p>浏览器使用 <code>utf-8</code> 编码用户名和密码。Firefox 曾使用 <code>ISO-8859-1</code>，但为与其他浏览器保持一致改为 <code>utf-8</code>，也为了避免 {{bug(1419658)}} 中所描述的潜在问题。</p>
 
-<h3 id="WWW-Authenticate_与_Proxy-Authenticate_首部"><code>WWW-Authenticate</code> 与 <code>Proxy-Authenticate</code> 首部</h3>
+<h3 id="WWW-Authenticate_与_Proxy-Authenticate_首部"><code>WWW-Authenticate</code> 与 <code>Proxy-Authenticate</code> 首部</h3>
 
 <p>{{HTTPHeader("WWW-Authenticate")}} 与 {{HTTPHeader("Proxy-Authenticate")}} 响应消息首部指定了为获取资源访问权限而进行身份验证的方法。它们需要明确要进行验证的方案，这样希望进行授权的客户端就知道该如何提供凭证信息。这两个首部的语法形式如下：</p>
 
@@ -45,7 +45,7 @@ Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
 
 <p>在这里，&lt;type&gt; 指的是验证的方案（“基本验证方案”是最常见的验证方案，<a href="/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme">会在下面进行介绍</a>）。realm 用来描述进行保护的区域，或者指代保护的范围。它可以是类似于 "Access to the staging site" 的消息，这样用户就可以知道他们正在试图访问哪一空间。</p>
 
-<h3 id="Authorization_与_Proxy-Authorization_首部"><code>Authorization</code> 与 <code>Proxy-Authorization</code> 首部</h3>
+<h3 id="Authorization_与_Proxy-Authorization_首部"><code>Authorization</code> 与 <code>Proxy-Authorization</code> 首部</h3>
 
 <p>{{HTTPHeader("Authorization")}} 与 {{HTTPHeader("Proxy-Authorization")}} 请求消息首部包含有用来向（代理）服务器证明用户代理身份的凭证。这里同样需要指明验证的类型，其后跟有凭证信息，该凭证信息可以被编码或者加密，取决于采用的是哪种验证方案。</p>
 
@@ -60,9 +60,9 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;
 <p>最常见的验证方案是“基本验证方案”（"Basic"），该方案会在下面进行详细阐述。 IANA 维护了<a class="external external-icon" href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">一系列的验证方案</a>，除此之外还有其他类型的验证方案由虚拟主机服务提供，例如 Amazon AWS 。常见的验证方案包括：</p>
 
 <ul>
- <li><strong>Basic</strong> (查看 {{rfc(7617)}}，base64 编码凭证。详情请参阅下文.),</li>
- <li><strong>Bearer</strong> (查看 {{rfc(6750)}}，bearer 令牌通过 OAuth 2.0 保护资源),</li>
- <li><strong>Digest</strong> (查看 {{rfc(7616)}}，只有 md5 散列 在 Firefox 中支持，查看 {{bug(472823)}} 用于 SHA 加密支持),</li>
+ <li><strong>Basic</strong> (查看 {{rfc(7617)}}，base64 编码凭证。详情请参阅下文.),</li>
+ <li><strong>Bearer</strong> (查看 {{rfc(6750)}}，bearer 令牌通过 OAuth 2.0 保护资源),</li>
+ <li><strong>Digest</strong> (查看 {{rfc(7616)}}，只有 md5 散列 在 Firefox 中支持，查看 {{bug(472823)}} 用于 SHA 加密支持),</li>
  <li><strong>HOBA</strong> (查看 {{rfc(7486)}}（草案），<strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound 认证，基于数字签名),</li>
  <li><strong>Mutual</strong> (查看 <a href="https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11">draft-ietf-httpauth-mutual</a>),</li>
  <li>
@@ -112,7 +112,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 <pre class="example-bad">https://username:password@www.example.com/</pre>
 
-<p><strong>这种 URL 是不赞成使用的。</strong>在 Chrome 中， URL 中的 username:password@ 部分甚至会因为安全原因而被移除。Firefox 则会检查该站点是否真的需要身份验证，假如不是，则会弹出一个警告窗口：你即将使用用户名 “username” 登录  ”www.example.com“  站点，但是该站点不需要进行身份验证。这可能是在试图进行欺诈。</p>
+<p><strong>这种 URL 是不赞成使用的。</strong>在 Chrome 中， URL 中的 username:password@ 部分甚至会因为安全原因而被移除。Firefox 则会检查该站点是否真的需要身份验证，假如不是，则会弹出一个警告窗口：你即将使用用户名 “username” 登录  ”www.example.com“  站点，但是该站点不需要进行身份验证。这可能是在试图进行欺诈。</p>
 
 <h2 id="相关内容">相关内容</h2>
 

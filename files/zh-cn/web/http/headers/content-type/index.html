@@ -13,9 +13,9 @@ translation_of: Web/HTTP/Headers/Content-Type
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong><code>Content-Type</code></strong> 实体头部用于指示资源的 MIME 类型 {{Glossary("MIME type","media type")}} 。</p>
+<p><strong><code>Content-Type</code></strong> 实体头部用于指示资源的 MIME 类型 {{Glossary("MIME type","media type")}} 。</p>
 
-<p>在响应中，Content-Type 标头告诉客户端实际返回的内容的内容类型。浏览器会在某些情况下进行 MIME 查找，并不一定遵循此标题的值; 为了防止这种行为，可以将标题 {{HTTPHeader("X-Content-Type-Options")}} 设置为 <strong>nosniff</strong>。</p>
+<p>在响应中，Content-Type 标头告诉客户端实际返回的内容的内容类型。浏览器会在某些情况下进行 MIME 查找，并不一定遵循此标题的值; 为了防止这种行为，可以将标题 {{HTTPHeader("X-Content-Type-Options")}} 设置为 <strong>nosniff</strong>。</p>
 
 <p>在请求中 (如{{HTTPMethod("POST")}} 或 {{HTTPMethod("PUT")}})，客户端告诉服务器实际发送的数据类型。</p>
 
@@ -46,7 +46,7 @@ Content-Type: multipart/form-data; boundary=something
 
 <dl>
  <dt><code>media-type</code></dt>
- <dd>资源或数据的 <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> 。</dd>
+ <dd>资源或数据的 <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> 。</dd>
  <dt>charset</dt>
  <dd>字符编码标准。</dd>
  <dt>boundary</dt>

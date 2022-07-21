@@ -13,7 +13,7 @@ tags:
   - ramda
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
-<div>{{jsSidebar("Functions")}} </div>
+<div>{{jsSidebar("Functions")}} </div>
 
 <p><strong>箭头函数表达式</strong>的语法比<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>更简洁，并且没有自己的<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/this">this</a></code>，<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a></code>，<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/super">super</a></code>或<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target">new.target</a></code>。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
 
@@ -54,7 +54,7 @@ f();  // 6</pre>
 
 <h2 id="描述">描述</h2>
 
-<p>参考 <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In Depth: Arrow functions" on hacks.mozilla.org</a>.</p>
+<p>参考 <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">"ES6 In Depth: Arrow functions" on hacks.mozilla.org</a>.</p>
 
 <p>引入箭头函数有两个方面的作用：更简短的函数并且不绑定<code>this</code>。</p>
 
@@ -144,16 +144,16 @@ var p = new Person();</pre>
 
 <h4 id="与严格模式的关系">与严格模式的关系</h4>
 
-<p>鉴于 <code>this</code> 是词法层面上的，<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>中与 <code>this</code> 相关的规则都将被忽略。</p>
+<p>鉴于 <code>this</code> 是词法层面上的，<a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>中与 <code>this</code> 相关的规则都将被忽略。</p>
 
 <pre><code>var f = () =&gt; { 'use strict'; return this; };
 f() === window; // 或者 global</code></pre>
 
 <p>严格模式的其他规则依然不变。</p>
 
-<h4 id="通过_call_或_apply_调用">通过 call 或 apply 调用</h4>
+<h4 id="通过_call_或_apply_调用">通过 call 或 apply 调用</h4>
 
-<p>由于 箭头函数没有自己的 this 指针，通过 <code>call()</code><em> 或</em> <code>apply()</code> 方法调用一个函数时，只能传递参数（不能绑定 this---译者注），他们的第一个参数会被忽略。（这种现象对于 bind 方法同样成立 --- 译者注）</p>
+<p>由于 箭头函数没有自己的 this 指针，通过 <code>call()</code><em> 或</em> <code>apply()</code> 方法调用一个函数时，只能传递参数（不能绑定 this---译者注），他们的第一个参数会被忽略。（这种现象对于 bind 方法同样成立 --- 译者注）</p>
 
 <pre class="brush: js">var adder = {
   base : 1,
@@ -205,8 +205,8 @@ foo(3,2);//6
 foo(1); // 1
 
 function foo(arg1,arg2) {
-    var f = (...args) =&gt; args[1];
-    return f(arg1,arg2);
+    var f = (...args) =&gt; args[1];
+    return f(arg1,arg2);
 }
 foo(1,2);  //2
 
@@ -241,14 +241,14 @@ Object.defineProperty(obj, "b", {
   get: () =&gt; {
     console.log(this.a, typeof this.a, this);
     return this.a+10;
-   // 代表全局对象 'Window', 因此 'this.a' 返回 'undefined'
+   // 代表全局对象 'Window', 因此 'this.a' 返回 'undefined'
   }
 });
 
 obj.b; // undefined   "undefined"   Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
 </pre>
 
-<h3 id="使用_new_操作符">使用 <code>new</code> 操作符</h3>
+<h3 id="使用_new_操作符">使用 <code>new</code> 操作符</h3>
 
 <p>箭头函数不能用作构造器，和 <code>new</code>一起用会抛出错误。</p>
 
@@ -262,9 +262,9 @@ var foo = new Foo(); // TypeError: Foo is not a constructor</pre>
 <pre class="brush: js">var Foo = () =&gt; {};
 console.log(Foo.prototype); // undefined</pre>
 
-<h3 id="使用_yield_关键字">使用 <code>yield</code> 关键字</h3>
+<h3 id="使用_yield_关键字">使用 <code>yield</code> 关键字</h3>
 
-<p> <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 关键字通常不能在箭头函数中使用（除非是嵌套在允许使用的函数内）。因此，箭头函数不能用作函数生成器。</p>
+<p> <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 关键字通常不能在箭头函数中使用（除非是嵌套在允许使用的函数内）。因此，箭头函数不能用作函数生成器。</p>
 
 <h2 id="函数体">函数体</h2>
 
@@ -288,7 +288,7 @@ var func = (x, y) =&gt; { return x + y; };
 var func = () =&gt; { foo: function() {} };
 // SyntaxError: function statement requires a name</pre>
 
-<p>这是因为花括号（<code>{}</code> ）里面的代码被解析为一系列语句（即 <code>foo</code> 被认为是一个标签，而非对象字面量的组成部分）。</p>
+<p>这是因为花括号（<code>{}</code> ）里面的代码被解析为一系列语句（即 <code>foo</code> 被认为是一个标签，而非对象字面量的组成部分）。</p>
 
 <p>所以，记得用圆括号把对象字面量包起来：</p>
 
@@ -411,7 +411,7 @@ console.log(now);     // Fri Dec 22 2017 10:01:00 GMT+0800 (中国标准时间)
 // 对比：函数体内{} 用 var 定义的变量是局部变量
 var greeting = () =&gt; {var now = new Date(); return ("Good" + ((now.getHours() &gt; 17) ? " evening." : " day."));}
 greeting(); //"Good day."
-console.log(now);    // ReferenceError: now is not defined
+console.log(now);    // ReferenceError: now is not defined
 </pre>
 
 <blockquote>
@@ -443,7 +443,7 @@ var Add = (i=0)=&gt; ()=&gt; (++i);
 </pre>
 
 <blockquote>
-<h4 id="箭头函数递归"> 箭头函数递归</h4>
+<h4 id="箭头函数递归"> 箭头函数递归</h4>
 </blockquote>
 
 <pre class="brush: js">var fact = (x) =&gt; ( x==0 ?  1 : x*fact(x-1) );

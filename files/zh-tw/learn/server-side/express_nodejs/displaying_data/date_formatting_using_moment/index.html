@@ -5,17 +5,17 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 ---
 <p>我們模型的日期預設呈現很難看: <em>Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)</em>。在本節中，我們將展示如何更新上一節中的 <em>書本實例 BookInstance 列表頁面</em>，以更友好的格式顯示<code>due_date</code>欄位字段：December 6th, 2016。</p>
 
-<p>我們將使用的方法，是在我們的<code>BookInstance</code>模型中，創建一個返回格式化日期的虛擬屬性。我們將使用 <a href="https://www.npmjs.com/package/moment">moment</a> 來做實際的格式化，這是一個輕量級 JavaScript日期庫，用於解析，驗證，操作和格式化日期。</p>
+<p>我們將使用的方法，是在我們的<code>BookInstance</code>模型中，創建一個返回格式化日期的虛擬屬性。我們將使用 <a href="https://www.npmjs.com/package/moment">moment</a> 來做實際的格式化，這是一個輕量級 JavaScript日期庫，用於解析，驗證，操作和格式化日期。</p>
 
 <div class="note">
-<p><strong>注意:</strong>  我們可以直接在 Pug 模板中，使用 moment 格式化字符串，或者可以在許多其它地方格式化字符串。使用虛擬屬性，可以使我們獲得格式化的日期，這與我們當前獲取 <code>due_date</code> 的方式完全相同。</p>
+<p><strong>注意:</strong>  我們可以直接在 Pug 模板中，使用 moment 格式化字符串，或者可以在許多其它地方格式化字符串。使用虛擬屬性，可以使我們獲得格式化的日期，這與我們當前獲取 <code>due_date</code> 的方式完全相同。</p>
 </div>
 
 <h2 id="安裝_moment">安裝 moment</h2>
 
 <p>在項目的根目錄，輸入下列命令</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: bash line-numbers  language-bash"><code class="language-bash">npm install moment</code></pre>
 
@@ -37,7 +37,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 });</code></pre>
 
 <div class="note">
-<p><strong>注意:</strong>  格式化方法可以使用幾乎任何模式顯示日期。 <a href="http://momentjs.com/docs/#/displaying/">moment</a>文檔中，可以找到表示不同日期組件的語法。</p>
+<p><strong>注意:</strong>  格式化方法可以使用幾乎任何模式顯示日期。 <a href="http://momentjs.com/docs/#/displaying/">moment</a>文檔中，可以找到表示不同日期組件的語法。</p>
 </div>
 
 <h2 id="更新視圖">更新視圖</h2>
@@ -57,4 +57,4 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
  <li>繼續教學 5 的下一個部分: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page">Author list page and Genre list page challenge</a>.</li>
 </ul>
 
-<p> </p>
+<p> </p>
