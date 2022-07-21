@@ -24,7 +24,7 @@ tags:
 <p>要接收设备方向变化信息，只需要监听{{ event("deviceorientation") }}事件：</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong><a href="https://github.com/dorukeker/gyronorm.js">gyronorm.js</a> is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.</p>
+<p><strong>备注：</strong> <a href="https://github.com/dorukeker/gyronorm.js">gyronorm.js</a> is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.</p>
 </div>
 
 <pre class="brush: js">window.addEventListener("deviceorientation", handleOrientation, true);
@@ -56,7 +56,7 @@ tags:
 
 <h3 id="相关值解释">相关值解释</h3>
 
-<p>关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。<a href="https://developer.mozilla.org/en-US/DOM/Orientation_and_motion_data_explained" style="line-height: 1.5;" title="Orientation and motion data explained">Orientation and motion data explained</a> 这篇文章有更详细的描述，下面是对这篇文章的总结。</p>
+<p>关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。<a href="/en-US/DOM/Orientation_and_motion_data_explained">Orientation and motion data explained</a> 这篇文章有更详细的描述，下面是对这篇文章的总结。</p>
 
 <ul>
  <li>{{ domxref("DeviceOrientationEvent.alpha") }} 表示设备沿 z 轴上的旋转角度，范围为 0~360。</li>
@@ -70,19 +70,15 @@ tags:
 
 <p>让我们想象一下有一个球在花园中：</p>
 
-<pre class="brush: html  language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">&lt;div class="garden"&gt;
+<pre class="brush: html">&lt;div class="garden"&gt;
   &lt;div class="ball"&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;pre class="output"&gt;&lt;/pre&gt;</code></pre>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"></div>
+&lt;pre class="output"&gt;&lt;/pre&gt;</pre>
 
 <p>花园只有 200px 宽（很小对吧），球在中央：</p>
 
-<pre class="brush: css  language-css" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">.garden {
+<pre class="brush: css">.garden {
   position: relative;
   width : 200px;
   height: 200px;
@@ -98,45 +94,11 @@ tags:
   height: 20px;
   background: green;
   border-radius: 100%;
-}</code></pre>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 76px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 95px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 114px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 133px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 152px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 171px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 190px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 209px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 228px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 247px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 266px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 285px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 304px; background: 0px 0px;"></div>
+}</pre>
 
 <p>现在，如果我们移动设备，球将随之移动：</p>
 
-<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">var ball   = document.querySelector('.ball');
+<pre class="brush: js">var ball   = document.querySelector('.ball');
 var garden = document.querySelector('.garden');
 var output = document.querySelector('.output');
 
@@ -166,65 +128,7 @@ function handleOrientation(event) {
   ball.style.left = (maxY*y/180 - 10) + "px";
 }
 
-window.addEventListener('deviceorientation', handleOrientation);</code></pre>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 76px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 95px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 114px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 133px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 152px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 171px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 190px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 209px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 228px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 247px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 266px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 285px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 304px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 323px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 342px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 361px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 380px; background: 0px 0px;">
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 399px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 418px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 437px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 456px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 475px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 494px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 513px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 551px; background: 0px 0px;"></div>
-</div>
+window.addEventListener('deviceorientation', handleOrientation);</pre>
 
 <p>输出结果：</p>
 
@@ -232,7 +136,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
 
 <div>{{EmbedLiveSample('Orientation_example', '230', '260')}}</div>
 
-<div class="warning" style="font-size: 14px;">
+<div class="warning">
 <p><strong>警告：</strong> Chrome 和 Firefox 处理角度的机制不同，所以某些轴上的方向是相反的。</p>
 </div>
 
@@ -240,9 +144,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
 
 <p>移动事件的处理跟方向事件是一样的，除了他们有自己的事件名：{{ event("devicemotion") }}</p>
 
-<pre class="brush: js  language-js" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; color: rgb(77, 78, 83);"><code class="language-js" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;">window.addEventListener("devicemotion", handleMotion, true);</code></pre>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
+<pre class="brush: js">window.addEventListener("devicemotion", handleMotion, true);</pre>
 
 <p>真正不同的是做为参数传递给<em>HandleMotion 函数的</em>{{ domxref("DeviceMotionEvent") }}对象所包含的信息。</p>
 
@@ -257,9 +159,9 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
 
 <h3 id="相关值解释_2">相关值解释</h3>
 
-<p>{{ domxref("DeviceMotionEvent") }}对象提供给 web 开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained" style="line-height: 1.5;" title="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a>有更详细的说明。）</p>
+<p>{{ domxref("DeviceMotionEvent") }}对象提供给 web 开发者设备在位置和方向上的改变速度的相关信息。这些变化信息是通过三个轴来体现的。（<a href="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a>有更详细的说明。）</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.acceleration" title="The acceleration property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2)."><code>acceleration</code></a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.accelerationIncludingGravity" title="The accelerationIncludingGravity property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2). Unlike DeviceMotionEvent.acceleration which does not compensate for the influence of gravity, its value is the sum of the acceleration of the device as induced by the user and the acceleration caused by gravity."><code>accelerationIncludingGravity</code></a>，都包含下面三个轴：</p>
+<p><a href="/en-US/docs/Web/API/DeviceMotionEvent.acceleration"><code>acceleration</code></a> 和 <a href="/en-US/docs/Web/API/DeviceMotionEvent.accelerationIncludingGravity"><code>accelerationIncludingGravity</code></a>，都包含下面三个轴：</p>
 
 <ul>
  <li><code>x</code>: 西向东</li>
@@ -267,7 +169,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
  <li><code>z</code>: 垂直地面</li>
 </ul>
 
-<p>对于 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.rotationRate" title="Returns the rate at which the device is rotating around each of its axes in degrees per second.">rotationRate</a></code> ，情况有点不同；三个轴的信息对应着以下三种情况：</p>
+<p>对于 <code><a href="/en-US/docs/Web/API/DeviceMotionEvent.rotationRate">rotationRate</a></code> ，情况有点不同；三个轴的信息对应着以下三种情况：</p>
 
 <ul>
  <li><code>alpha</code>: 设备沿着垂直于屏幕（对于桌面设备则是垂直于键盘）的轴的旋转速率</li>
@@ -275,7 +177,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
  <li><code>gamma</code>: 设备沿着屏幕（对于桌面设备则是键盘）下至上方向的轴的旋转速率</li>
 </ul>
 
-<p>最后，<a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent.interval" style="line-height: 1.5;" title="Returns the interval, in milliseconds, at which data is obtained from the underlaying hardware. You can use this to determine the granularity of motion events."><code>interval</code></a> 表示的是从设备获取数据的间隔时间，单位是毫秒。</p>
+<p>最后，<a href="/en-US/docs/Web/API/DeviceMotionEvent.interval"><code>interval</code></a> 表示的是从设备获取数据的间隔时间，单位是毫秒。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -290,7 +192,7 @@ window.addEventListener('deviceorientation', handleOrientation);</code></pre>
 <ul>
  <li>{{domxref("DeviceOrientationEvent")}}</li>
  <li>{{domxref("DeviceMotionEvent")}}</li>
- <li>The legacy <code><a href="https://developer.mozilla.org/en-US/DOM/MozOrientation" title="en-US/DOM/MozOrientation">MozOrientation</a></code> event.</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained" title="Orientation and motion data explained">Orientation and motion data explained</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms" title="Using Deviceorientation In 3D Transforms">Using deviceorientation in 3D Transforms</a></li>
+ <li>The legacy <code><a href="/en-US/DOM/MozOrientation">MozOrientation</a></code> event.</li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained">Orientation and motion data explained</a></li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms</a></li>
 </ul>

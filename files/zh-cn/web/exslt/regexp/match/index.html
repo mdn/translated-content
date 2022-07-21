@@ -10,7 +10,7 @@ translation_of: Web/EXSLT/regexp/match
 
 <h3 id="Syntax">语法</h3>
 
-<pre class="eval">regexp:match(<em>targetString</em>,<em>regExpString</em>[[,<em>flagsString</em>]])
+<pre class="brush: js">regexp:match(<em>targetString</em>,<em>regExpString</em>[[,<em>flagsString</em>]])
 </pre>
 
 <h3 id="Arguments">参数</h3>
@@ -28,11 +28,9 @@ translation_of: Web/EXSLT/regexp/match
 
 <dl>
  <dt><code>g</code></dt>
- <dd>全局匹配</dd>
- <dd>The submatches from every match in the string are returned. If this flag isn't specified, only the submatches from the first match are returned.</dd>
+ <dd>全局匹配。The submatches from every match in the string are returned. If this flag isn't specified, only the submatches from the first match are returned.</dd>
  <dt><code>i</code></dt>
- <dd>Case insensitive match</dd>
- <dd>If this flag is specified, the match is performed in a case insensitive fashion.</dd>
+ <dd>Case insensitive match. If this flag is specified, the match is performed in a case insensitive fashion.</dd>
 </dl>
 
 <h3 id="Returns">Returns</h3>
@@ -41,7 +39,7 @@ translation_of: Web/EXSLT/regexp/match
 
 <p>例如：</p>
 
-<pre class="eval">&lt;xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
+<pre class="brush: xml">&lt;xsl:for-each select="regExp:match('http://developer.mozilla.org/en/docs/Firefox_3_for_developers',
                                    '(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)')"&gt;
    Part &lt;xsl:value-of select="position()" /&gt; = &lt;xsl:value-of select="." /&gt;
 &lt;/xsl:for-each&gt;
@@ -49,7 +47,7 @@ translation_of: Web/EXSLT/regexp/match
 
 <p>This code generates the following output:</p>
 
-<pre class="eval">Part 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
+<pre class="brush: plain">Part 1 = http://developer.mozilla.org/en/docs/Firefox_3_for_developers
 Part 2 = http
 Part 3 = developer.mozilla.org
 Part 4 =
@@ -58,7 +56,7 @@ Part 5 = /en/docs/Firefox_3_for_developers
 
 <h3 id="Defined">定义</h3>
 
-<p><a class="external" href="http://www.exslt.org/regexp/functions/match/index.html">EXSLT - REGEXP:MATCH</a></p>
+<p><a href="http://www.exslt.org/regexp/functions/match/index.html">EXSLT - REGEXP:MATCH</a></p>
 
 <h3 id="Gecko_support">Gecko support</h3>
 
