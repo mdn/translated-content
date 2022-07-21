@@ -82,7 +82,7 @@ original_slug: learn/Server-side/Django/开发环境
 <p>有三个地方可以下载 Django:</p>
 
 <ul>
- <li>Python 包资源库 (PyPi)。并用<strong> pip </strong>工具进行安装，这是获取 Django 最新稳定版本的最佳方式。</li>
+ <li>Python 包资源库 (PyPi)。并用<strong> pip </strong>工具进行安装，这是获取 Django 最新稳定版本的最佳方式。</li>
  <li>计算机软件包管理器。与操作系统捆绑在一起的 Django 发行版是一种常见的安装途径。请注意，打包的版本可能很老，且只能安装到系统 Python 环境中（而这可能不是你想要的）。</li>
  <li>源代码。你可以从源代码获得并安装最新版本的 Django。这并不推荐给初学者，但是当你准备好开始贡献给 Django 项目本身的时候，它是必需的。</li>
 </ul>
@@ -115,7 +115,7 @@ original_slug: learn/Server-side/Django/开发环境
 
 <h2 id="安装_Python_3">安装 Python 3</h2>
 
-<p>为了使用 Django，你需要在你的操作系统中安装 Python。如果你使用 Python3，那么你同样需要<a href="https://pypi.python.org/pypi">Python 包管理工具</a>  — <em>pip3</em> — 用来管理 (安装，更新和删除) 被 Django 和其他 Python 应用程序使用的 Python 软件包／库。</p>
+<p>为了使用 Django，你需要在你的操作系统中安装 Python。如果你使用 Python3，那么你同样需要<a href="https://pypi.python.org/pypi">Python 包管理工具</a>  — <em>pip3</em> — 用来管理 (安装，更新和删除) 被 Django 和其他 Python 应用程序使用的 Python 软件包／库。</p>
 
 <p>本节简要介绍了如何检查有哪些版本的 Python，并根据需要安装适用于 <strong>Ubuntu Linux 16.04,macOS, and Windows 10</strong>的新版本。</p>
 
@@ -148,7 +148,7 @@ original_slug: learn/Server-side/Django/开发环境
  <li>下载所需的安装程序：
   <ol>
    <li>点击 <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
-   <li>选择 <strong>Download Python 3.8.2</strong>  (具体的版本号可能不同)。</li>
+   <li>选择 <strong>Download Python 3.8.2</strong>  (具体的版本号可能不同)。</li>
   </ol>
  </li>
  <li>使用 Finder 找到安装包，然后双击运行，并按照提示进行安装。</li>
@@ -171,7 +171,7 @@ Python 3.8.2</pre>
  <li>下载所需版本：
   <ol>
    <li>点击 <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
-   <li>选择 <strong>Download Python 3.8.2</strong>  (具体的版本号可能不同)。</li>
+   <li>选择 <strong>Download Python 3.8.2</strong>  (具体的版本号可能不同)。</li>
   </ol>
  </li>
  <li>双击现在的文件并按照提示安装 Python。</li>
@@ -190,12 +190,12 @@ Python 3.8.2</pre>
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>安装包应该已把运行上述命令所需的一切设置完成。但如果你得到的消息是找不到 Python，那么你可能忘记将 Python 添加到系统路径中了。你可以通过再次运行安装包，选择"Modify"，并在下一页面中勾选 "Add Python to environment variables"来修复这个问题。</p>
+<p><strong>注意：</strong>安装包应该已把运行上述命令所需的一切设置完成。但如果你得到的消息是找不到 Python，那么你可能忘记将 Python 添加到系统路径中了。你可以通过再次运行安装包，选择"Modify"，并在下一页面中勾选 "Add Python to environment variables"来修复这个问题。</p>
 </div>
 
 <h2 id="在Python虚拟环境中使用Django">在 Python 虚拟环境中使用 Django</h2>
 
-<p>我们使用<a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a>（Linux 及 macOS）和 <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a>（WIndows）来创建 Python 虚拟环境，而它们又使用了<a href="/en-US/docs/Python/Virtualenv">virtualenv</a>。封装工具创建了一个一致的接口来管理各个平台上的接口。</p>
+<p>我们使用<a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a>（Linux 及 macOS）和 <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a>（WIndows）来创建 Python 虚拟环境，而它们又使用了<a href="/en-US/docs/Python/Virtualenv">virtualenv</a>。封装工具创建了一个一致的接口来管理各个平台上的接口。</p>
 
 <h3 id="安装虚拟环境软件">安装虚拟环境软件</h3>
 
@@ -216,9 +216,9 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh</code></pre>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong><code>VIRTUALENVWRAPPER_PYTHON</code> 和 <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code>变量指向 Python3 的常规安装位置，<code>source /usr/local/bin/virtualenvwrapper.sh</code>指向<code>virtualenvwrapper.sh</code>脚本的一般安装位置。 如果您在测试时发现<em>virtualenv</em>无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。</p>
+<p><strong>注意：</strong><code>VIRTUALENVWRAPPER_PYTHON</code> 和 <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code>变量指向 Python3 的常规安装位置，<code>source /usr/local/bin/virtualenvwrapper.sh</code>指向<code>virtualenvwrapper.sh</code>脚本的一般安装位置。 如果您在测试时发现<em>virtualenv</em>无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。</p>
 
-<p>你可以使用<code>which virtualenvwrapper.sh</code> 和 <code>which python3</code>命令为你的系统找到正确的安装位置。</p>
+<p>你可以使用<code>which virtualenvwrapper.sh</code> 和 <code>which python3</code>命令为你的系统找到正确的安装位置。</p>
 </div>
 
 <p>然后通过在终端中运行以下命令重载启动文件：</p>
@@ -234,11 +234,11 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details</code></pre>
 
-<p>然后你就可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。</p>
+<p>然后你就可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。</p>
 
 <h4 id="macOS_虚拟环境设置">macOS 虚拟环境设置</h4>
 
-<p>在 macOS 上设置<em>virtualenvwrapper</em> 几乎和在 Ubuntu 上是一样的（你同样可以按照以下指导操作，或在<a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">这里</a>找到正式的安装指南）。</p>
+<p>在 macOS 上设置<em>virtualenvwrapper</em> 几乎和在 Ubuntu 上是一样的（你同样可以按照以下指导操作，或在<a href="https://virtualenvwrapper.readthedocs.io/en/latest/install.html">这里</a>找到正式的安装指南）。</p>
 
 <p>使用<em>pip</em>安装<em>virtualenvwrapper</em>(并绑定<em>virtualenv</em>)，如下所示。</p>
 
@@ -252,7 +252,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh</code></pre>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong><code>VIRTUALENVWRAPPER_PYTHON</code> 和 <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code>变量指向 Python3 的常规安装位置，<code>source /usr/local/bin/virtualenvwrapper.sh</code>指向<code>virtualenvwrapper.sh</code>脚本的一般安装位置。 如果您在测试时发现<em>virtualenv</em>无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。</p>
+<p><strong>注意：</strong><code>VIRTUALENVWRAPPER_PYTHON</code> 和 <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code>变量指向 Python3 的常规安装位置，<code>source /usr/local/bin/virtualenvwrapper.sh</code>指向<code>virtualenvwrapper.sh</code>脚本的一般安装位置。 如果您在测试时发现<em>virtualenv</em>无法正常工作，则要检查的一件事是 Python 和该脚本是否在预期的位置（然后适当更改启动文件）。</p>
 
 <p>例如，在 macOS 上的一个安装测试中，启动文件中必须有以下几行代码：</p>
 
@@ -261,7 +261,7 @@ export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.
 export PROJECT_HOME=$HOME/Devel
 source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh</code></pre>
 
-<p>你可以使用<code>which virtualenvwrapper.sh</code> 和 <code>which python3</code>命令为你的系统找到正确的安装位置。</p>
+<p>你可以使用<code>which virtualenvwrapper.sh</code> 和 <code>which python3</code>命令为你的系统找到正确的安装位置。</p>
 </div>
 
 <p>此处使用和 Ubuntu 相同的代码行，但是启动文件是主目录中叫做<strong>.bash_profile</strong>的隐藏文件。</p>
@@ -280,21 +280,21 @@ nano .bash_profile # Open the file in the nano text editor, within the terminal
 
 <pre class="notranslate"><code>source ~/.bashrc</code></pre>
 
-<p>此时，你应该能看到一些脚本正在运行（和 Ubuntu 中同样的脚本）。然后你就可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。</p>
+<p>此时，你应该能看到一些脚本正在运行（和 Ubuntu 中同样的脚本）。然后你就可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。</p>
 
 <h4 id="Windows_10_虚拟环境设置">Windows 10 虚拟环境设置</h4>
 
-<p>安装 <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> 甚至比设置<em>virtualenvwrapper</em> 更简单，因为你无需配置工具用来存储虚拟环境信息的位置（有一个默认值）。你需要做的只是在命令提示符中运行以下命令：</p>
+<p>安装 <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> 甚至比设置<em>virtualenvwrapper</em> 更简单，因为你无需配置工具用来存储虚拟环境信息的位置（有一个默认值）。你需要做的只是在命令提示符中运行以下命令：</p>
 
 <pre class="notranslate"><code>pip3 install virtualenvwrapper-win</code></pre>
 
-<p>然后你就可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。</p>
+<p>然后你就可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。</p>
 
 <h3 id="创建虚拟环境">创建虚拟环境</h3>
 
-<p>一旦你成功安装了<em>virtualenvwrapper</em> 或 <em>virtualenvwrapper-win，</em>那么在所有平台中使用虚拟环境的方法是非常相似的。</p>
+<p>一旦你成功安装了<em>virtualenvwrapper</em> 或 <em>virtualenvwrapper-win，</em>那么在所有平台中使用虚拟环境的方法是非常相似的。</p>
 
-<p>现在你可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。在运行此命令时，你将看到正在设置的环境（你所看到的只略微与平台相关）。命令完成后，新的虚拟环境将被激活——你能看到提示符的开头就是括号中的环境名称（以下我们展示的是 Ubuntu 的，但是在 Windows/macOS 上，末行时相似的|）</p>
+<p>现在你可以使用 <code>mkvirtualenv</code>命令创建一个新的虚拟环境。在运行此命令时，你将看到正在设置的环境（你所看到的只略微与平台相关）。命令完成后，新的虚拟环境将被激活——你能看到提示符的开头就是括号中的环境名称（以下我们展示的是 Ubuntu 的，但是在 Windows/macOS 上，末行时相似的|）</p>
 
 <pre class="notranslate"><code>$ mkvirtualenv my_django_environment
 
@@ -314,17 +314,17 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 <p>您应该知道一些其他有用的命令 (在工具的文档中还有更多，但这些是您将经常使用的命令)：</p>
 
 <ul>
- <li><code>deactivate</code> —退出当前的 Python 虚拟环境</li>
- <li><code>workon</code> — 列出可用的所有虚拟环境</li>
- <li><code>workon name_of_environment</code> —激活特定的 Python 虚拟环境</li>
- <li><code>rmvirtualenv name_of_environment</code> — 移除特定的虚拟环境</li>
+ <li><code>deactivate</code> —退出当前的 Python 虚拟环境</li>
+ <li><code>workon</code> — 列出可用的所有虚拟环境</li>
+ <li><code>workon name_of_environment</code> —激活特定的 Python 虚拟环境</li>
+ <li><code>rmvirtualenv name_of_environment</code> — 移除特定的虚拟环境</li>
 </ul>
 
 <div class="blockIndicator note"></div>
 
 <h2 id="安装Django">安装 Django</h2>
 
-<p>一旦你创建了一个虚拟环境，并且使用<code>workon</code> 进入了它，就可以使用 pip3 来安装 Django。</p>
+<p>一旦你创建了一个虚拟环境，并且使用<code>workon</code> 进入了它，就可以使用 pip3 来安装 Django。</p>
 
 <pre class="notranslate">pip3 install django</pre>
 
@@ -336,7 +336,7 @@ python3 -m django --version
 
 # Windows
 py -3 -m django --version
- 1.10.10
+ 1.10.10
 </pre>
 
 <div class="note">
@@ -380,7 +380,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.</code></pre>
 
 <div class="note">
-<p>注意：上面的命令显示了 Linux /macOS 命令。您可以忽略关于“15 unapplied migration(s)”的警告！</p>
+<p>注意：上面的命令显示了 Linux /macOS 命令。您可以忽略关于“15 unapplied migration(s)”的警告！</p>
 </div>
 
 <p>一旦服务器运行，您可以通过本地 Web 浏览器打开<code>http://127.0.0.1:8000/</code>来查看该站点。你应该看到一个如下所示的网站：</p>

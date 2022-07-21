@@ -89,17 +89,17 @@ translation_of: Learn/Server-side/Django/Introduction
 <p><img src="basic-django.png"></p>
 
 <ul>
- <li><strong>URLs: </strong>虽然可以通过单个功能来处理来自每个 URL 的请求，但是编写单独的视图函数来处理每个资源是更加可维护的。URL 映射器用于根据请求 URL 将 HTTP 请求重定向到相应的视图。URL 映射器还可以匹配出现在 URL 中的字符串或数字的特定模式，并将其作为数据传递给视图功能。<br>
-   </li>
- <li><strong>View:</strong>  视图 是一个请求处理函数，它接收 HTTP 请求并返回 HTTP 响应。视图通过模型访问满足请求所需的数据，并将响应的格式委托给  模板。<br>
-   </li>
- <li><strong>Models:</strong>  模型 是定义应用程序数据结构的 Python 对象，并提供在数据库中管理（添加，修改，删除）和查询记录的机制。<br>
-   </li>
- <li><strong>Templates:</strong> 模板 是定义文件（例如 HTML 页面）的结构或布局的文本文件，用于表示实际内容的占位符。一个视图可以使用 HTML 模板，从数据填充它动态地创建一个 HTML 页面模型。可以使用模板来定义任何类型的文件的结构; 它不一定是 HTML！</li>
+ <li><strong>URLs: </strong>虽然可以通过单个功能来处理来自每个 URL 的请求，但是编写单独的视图函数来处理每个资源是更加可维护的。URL 映射器用于根据请求 URL 将 HTTP 请求重定向到相应的视图。URL 映射器还可以匹配出现在 URL 中的字符串或数字的特定模式，并将其作为数据传递给视图功能。<br>
+   </li>
+ <li><strong>View:</strong>  视图 是一个请求处理函数，它接收 HTTP 请求并返回 HTTP 响应。视图通过模型访问满足请求所需的数据，并将响应的格式委托给  模板。<br>
+   </li>
+ <li><strong>Models:</strong>  模型 是定义应用程序数据结构的 Python 对象，并提供在数据库中管理（添加，修改，删除）和查询记录的机制。<br>
+   </li>
+ <li><strong>Templates:</strong> 模板 是定义文件（例如 HTML 页面）的结构或布局的文本文件，用于表示实际内容的占位符。一个视图可以使用 HTML 模板，从数据填充它动态地创建一个 HTML 页面模型。可以使用模板来定义任何类型的文件的结构; 它不一定是 HTML！</li>
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a> 架构有许多相似之处. </p>
+<p><strong>注意</strong>: Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a> 架构有许多相似之处. </p>
 </div>
 
 <ul>
@@ -109,7 +109,7 @@ translation_of: Learn/Server-side/Django/Introduction
 
 <h3 id="将请求发送到正确的视图_(urls.py)">将请求发送到正确的视图 (urls.py)</h3>
 
-<p>URL 映射器通常存储在名为 urls.py 的文件中。在下面的示例中，mapper（urlpatterns）定义了特定 URL 模式 和相应视图函数之间的映射列表。如果接收到具有与指定模式匹配的 URL（例如 r'^$'，下面）的 HTTP 请求，则将调用 相关联的视图功能（例如  views.index）并传递请求。</p>
+<p>URL 映射器通常存储在名为 urls.py 的文件中。在下面的示例中，mapper（urlpatterns）定义了特定 URL 模式 和相应视图函数之间的映射列表。如果接收到具有与指定模式匹配的 URL（例如 r'^$'，下面）的 HTTP 请求，则将调用 相关联的视图功能（例如  views.index）并传递请求。</p>
 
 <pre>urlpatterns = [
     <strong>url(r'^$', views.index),</strong>
@@ -121,7 +121,7 @@ translation_of: Learn/Server-side/Django/Introduction
 <p><strong>注意</strong>: 一点点 Python:</p>
 
 <ul>
- <li>该 <code>urlpatterns</code> 对象的列表 url() 功能。在 Python 中，使用方括号定义列表。项目以逗号分隔，并可能有一个 <a href="https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples">可选的逗号</a>. 例如: <code>[item1, item2, item3,]</code>.</li>
+ <li>该 <code>urlpatterns</code> 对象的列表 url() 功能。在 Python 中，使用方括号定义列表。项目以逗号分隔，并可能有一个 <a href="https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples">可选的逗号</a>. 例如: <code>[item1, item2, item3,]</code>.</li>
  <li>该模式的奇怪的语法称为正则表达式。我们将在后面的文章中讨论这些内容！</li>
  <li>第二个参数 url() 是当模式匹配时，将被调用的另一个函数。符号 views.index 表示该函数被调用，index() 并且可以在被调用的模块中找到 views（即在一个名为 views.py 的文件中）。</li>
 </ul>
@@ -140,7 +140,7 @@ from django.http import HttpResponse
 def index(request):
     # Get an HttpRequest - the request parameter
     # perform operations using information from the request.
-    # Return HttpResponse
+    # Return HttpResponse
     return HttpResponse('Hello from Django!')
 </pre>
 
@@ -164,26 +164,26 @@ def index(request):
 
 <h3 id="定义数据模型_(models.py)">定义数据模型 (models.py)</h3>
 
-<p>Django Web 应用程序通过被称为模型的 Python 对象来管理和查询数据。模型定义存储数据的结构，包括字段类型  以及字段可能的最大值，默认值，选择列表选项，文档帮助文本，表单的标签文本等。模型的定义与底层数据库无关 -您可以选择其中一个作为项目设置的一部分。一旦您选择了要使用的数据库，您就不需要直接与之交谈 - 只需编写模型结构和其他代码，Django 可以处理与数据库通信的所有辛苦的工作。</p>
+<p>Django Web 应用程序通过被称为模型的 Python 对象来管理和查询数据。模型定义存储数据的结构，包括字段类型  以及字段可能的最大值，默认值，选择列表选项，文档帮助文本，表单的标签文本等。模型的定义与底层数据库无关 -您可以选择其中一个作为项目设置的一部分。一旦您选择了要使用的数据库，您就不需要直接与之交谈 - 只需编写模型结构和其他代码，Django 可以处理与数据库通信的所有辛苦的工作。</p>
 
 <p>下面的代码片段为<strong>Team</strong>对象展示了一个非常简单的 Django 模型。本<strong>Team</strong>类是从 Django 的类派生<strong>models.Model</strong>。它将团队名称和团队级别定义为字符字段，并为每个记录指定了要存储的最大字符数。<strong>team_level</strong> 可以是几个值中的一个，因此，我们将其定义为一个选择字段，并在被展示的数据和被储存的数据之间建立映射，并设置一个默认值。</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: python"># filename: models.py
 
 from django.db import models
 
 class Team(models.Model):
-    team_name = models.CharField(max_length=40)
+    team_name = models.CharField(max_length=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11', 'Under 11s'),
-        ...  #list other team levels
-    )
-    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
+    TEAM_LEVELS = (
+        ('U09', 'Under 09s'),
+        ('U10', 'Under 10s'),
+        ('U11', 'Under 11s'),
+        ...  #list other team levels
+    )
+    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 </pre>
 
 <div class="note">
@@ -200,7 +200,7 @@ class Team(models.Model):
 
 <p>Django 模型提供了一个用于搜索数据库的简单查询 API。这可以使用不同的标准（例如，精确，不区分大小写，大于等等）来匹配多个字段，并且可以支持复杂语句（例如，您可以在拥有一个团队的<strong> U11 </strong>团队上指定搜索名称以“Fr”开头或以“al”结尾）。</p>
 
-<p>代码片段显示了一个视图函数（资源处理程序），用于显示我们所有的<strong> U09 </strong>团队。粗体显示如何使用模型查询 API 过滤所有记录，其中该  <strong>team_level</strong> 字段具有正确的文本“<strong>U09</strong>”（请注意，该条件如何 filter() 作为参数传递给该函数，该字段名称和匹配类型由双下划线： <strong> team_level__exact</strong>）</p>
+<p>代码片段显示了一个视图函数（资源处理程序），用于显示我们所有的<strong> U09 </strong>团队。粗体显示如何使用模型查询 API 过滤所有记录，其中该  <strong>team_level</strong> 字段具有正确的文本“<strong>U09</strong>”（请注意，该条件如何 filter() 作为参数传递给该函数，该字段名称和匹配类型由双下划线： <strong> team_level__exact</strong>）</p>
 
 <pre class="brush: python">## filename: views.py
 
@@ -208,9 +208,9 @@ from django.shortcuts import render
 from .models import Team
 
 def index(request):
-    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
-    context = {'youngest_teams': list_teams}
-    return <strong>render</strong>(request, '/best/index.html', context)
+    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
+    context = {'youngest_teams': list_teams}
+    return <strong>render</strong>(request, '/best/index.html', context)
 </pre>
 
 <dl>
@@ -235,13 +235,13 @@ def index(request):
 &lt;body&gt;
 
  {% if youngest_teams %}
-    &lt;ul&gt;
-    {% for team in youngest_teams %}
-        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
-    {% endfor %}
-    &lt;/ul&gt;
+    &lt;ul&gt;
+    {% for team in youngest_teams %}
+        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
 {% else %}
-    &lt;p&gt;No teams are available.&lt;/p&gt;
+    &lt;p&gt;No teams are available.&lt;/p&gt;
 {% endif %}
 
 &lt;/body&gt;
@@ -254,7 +254,7 @@ def index(request):
 <ul>
  <li><strong>表单</strong>: HTML 表单用于收集用户数据以便在服务器上进行处理。Django 简化了表单创建，验证和处理。</li>
  <li><strong>用户身份验证和权限</strong>: Django 包含了一个强大的用户身份验证和权限系统，该系统已经构建了安全性。</li>
- <li><strong>缓存</strong>:  与提供静态内容相比，动态创建内容需要更大的计算强度（也更缓慢）。Django 提供灵活的缓存，以便你可以存储所有或部分的页面。如无必要，不会重新呈现网页。</li>
+ <li><strong>缓存</strong>:  与提供静态内容相比，动态创建内容需要更大的计算强度（也更缓慢）。Django 提供灵活的缓存，以便你可以存储所有或部分的页面。如无必要，不会重新呈现网页。</li>
  <li><strong>管理网站</strong>: 当你使用基本骨架创建应用时，就已经默认包含了一个 Django 管理站点。它十分轻松地创建了一个管理页面，使网站管理员能够创建、编辑和查看站点中的任何数据模型。</li>
  <li><strong>序列化数据</strong>: Django 可以轻松地将数据序列化，并支持 XML 或 JSON 格式。这会有助于创建一个 Web 服务（Web 服务指数据纯粹为其他应用程序或站点所用，并不会在自己的站点中显示），或是有助于创建一个由客户端代码处理和呈现所有数据的网站。</li>
 </ul>

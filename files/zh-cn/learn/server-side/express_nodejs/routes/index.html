@@ -88,7 +88,7 @@ module.exports = router;</pre>
 <p><strong>注：</strong>上面的路由处理回调直接定义在了路由函数中。LocalLibrary 的回调将定义在单独的控制器模块中。</p>
 </div>
 
-<p>要在主应用中使用该路由模块，首先应 <code>require</code> 它（<strong>wiki.js</strong>），然后对 Express 应用对象调用 <code>use()</code>（指定路径‘/wiki’），即可将其添加到中间件处理路径。</p>
+<p>要在主应用中使用该路由模块，首先应 <code>require</code> 它（<strong>wiki.js</strong>），然后对 Express 应用对象调用 <code>use()</code>（指定路径‘/wiki’），即可将其添加到中间件处理路径。</p>
 
 <pre class="brush: js notranslate">const wiki = require('./wiki.js');
 // ...
@@ -152,7 +152,7 @@ app.use('/wiki', wiki);</pre>
 
 <h3 id="路由参数">路由参数</h3>
 
-<p>路径参数是命名的 URL 段，用于捕获在 URL 中的位置指定的值。命名段以冒号为前缀，然后是名称（例如 <code>/<strong>:</strong>your_parameter_name/</code>。捕获的值保存在 <code>req.params</code> 对象中，键即参数名（例如 <code>req.params.your_parameter_name</code>）。</p>
+<p>路径参数是命名的 URL 段，用于捕获在 URL 中的位置指定的值。命名段以冒号为前缀，然后是名称（例如 <code>/<strong>:</strong>your_parameter_name/</code>。捕获的值保存在 <code>req.params</code> 对象中，键即参数名（例如 <code>req.params.your_parameter_name</code>）。</p>
 
 <p>举例说，一个包含用户和藏书信息的 URL：<code>http://localhost:3000/users/34/books/8989</code>，可以这样提取信息（使用 <code>userId</code> 和 <code>bookId</code> 路径参数）：</p>
 
@@ -186,10 +186,10 @@ app.use('/wiki', wiki);</pre>
 
 <p>首页和列表页面没有包含任何额外信息。因此它们返回的结果只取决于模型类型和数据库内容，获取信息的查询操作是恒定不变的（类似地，创建对象的代码也没有较大改动）。</p>
 
-<p>与之相反，其他 URL 是用于处理特定文档/模型实例的，它们会将项目的标识嵌入 URL（上文的 <code><em>&lt;id&gt;</em></code>）。可以用路径参数来提取嵌入的信息，并传递给路由处理器（后续章节中用于动态获取数据库中的信息）。通过在 URL 中嵌入信息，使得每种类型的所有资源只需要一个路由（例如，所有藏书副本的显示操作只需要一个路由）。</p>
+<p>与之相反，其他 URL 是用于处理特定文档/模型实例的，它们会将项目的标识嵌入 URL（上文的 <code><em>&lt;id&gt;</em></code>）。可以用路径参数来提取嵌入的信息，并传递给路由处理器（后续章节中用于动态获取数据库中的信息）。通过在 URL 中嵌入信息，使得每种类型的所有资源只需要一个路由（例如，所有藏书副本的显示操作只需要一个路由）。</p>
 
 <div class="note">
-<p><strong>注：</strong>Express 可以通过任何方式构造 URL，可以在 URL 正文中嵌入信息（如上文），或使用 URL <code>GET</code> 参数（例如 <code>/book/?id=6</code>）。无论哪种方法，URL 都应保持整洁、合理且易读（另请参阅 <a href="https://www.w3.org/Provider/Style/URI">W3C 相关建议</a>）。</p>
+<p><strong>注：</strong>Express 可以通过任何方式构造 URL，可以在 URL 正文中嵌入信息（如上文），或使用 URL <code>GET</code> 参数（例如 <code>/book/?id=6</code>）。无论哪种方法，URL 都应保持整洁、合理且易读（另请参阅 <a href="https://www.w3.org/Provider/Style/URI">W3C 相关建议</a>）。</p>
 </div>
 
 <p>下面我们为上述所有 URL 创建路由处理器回调函数和路由代码。</p>
@@ -208,7 +208,7 @@ app.use('/wiki', wiki);</pre>
     <strong>genreController.js</strong></pre>
 
 <div class="blockIndicator note">
-<p><strong>译注：</strong>上述四个文件可到 GitHub 下载 <a href="https://github.com/roy-tian/mdn-examples/blob/master/server/express-locallibrary-tutorial/controllers/dummyControllers.zip">dummyControllers.zip</a>。（链接已失效，请移步英文版查看具体代码）</p>
+<p><strong>译注：</strong>上述四个文件可到 GitHub 下载 <a href="https://github.com/roy-tian/mdn-examples/blob/master/server/express-locallibrary-tutorial/controllers/dummyControllers.zip">dummyControllers.zip</a>。（链接已失效，请移步英文版查看具体代码）</p>
 </div>
 
 <h3 id="Author_控制器"><code>Author</code> 控制器</h3>

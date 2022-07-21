@@ -24,7 +24,7 @@ translation_of: Learn/JavaScript/Building_blocks/Functions
  <tbody>
   <tr>
    <th scope="row">前提条件：</th>
-   <td>基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读： <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>（JS 的入门）。</td>
+   <td>基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读： <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>（JS 的入门）。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -143,7 +143,7 @@ myFunction()
   alert('hello');
 }</pre>
 
-<p>这个函数叫做<strong>匿名函数</strong> — 它没有函数名！它也不会自己做任何事情。你通常将匿名函数与事件处理程序一起使用，例如，如果单击相关按钮，以下操作将在函数内运行代码：</p>
+<p>这个函数叫做<strong>匿名函数</strong> — 它没有函数名！它也不会自己做任何事情。你通常将匿名函数与事件处理程序一起使用，例如，如果单击相关按钮，以下操作将在函数内运行代码：</p>
 
 <pre class="brush: js notranslate">var myButton = document.querySelector('button');
 
@@ -213,7 +213,7 @@ var newString = myText.replace('string', 'sausage');</pre>
 <p><strong>Note</strong>:当您需要指定多个参数时，它们以逗号分隔。</p>
 </div>
 
-<p>还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join（）</a>函数的参数是可选的：</p>
+<p>还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join（）</a>函数的参数是可选的：</p>
 
 <pre class="brush: js notranslate">var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
@@ -256,10 +256,10 @@ function greeting() {
   alert('Our company is called ' + name + '.');
 }</pre>
 
-<p>这两个函数都使用 <code>greeting()</code> 形式调用，但是你只能访问到 first.js 文件的<code>greeting()</code>函数（第二个文件被忽视了）。另外，第二次尝试使用 <code>let</code> 关键字定义 <code>name</code> 变量导致了一个错误。</p>
+<p>这两个函数都使用 <code>greeting()</code> 形式调用，但是你只能访问到 first.js 文件的<code>greeting()</code>函数（第二个文件被忽视了）。另外，第二次尝试使用 <code>let</code> 关键字定义 <code>name</code> 变量导致了一个错误。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 您可以参考这个例子 <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">running live on GitHub</a> (查看完整 <a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">源代码</a>).</p>
+<p><strong>Note</strong>: 您可以参考这个例子 <a href="http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html">running live on GitHub</a> (查看完整 <a href="https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions">源代码</a>).</p>
 </div>
 
 <p>将代码锁定在函数中的部分避免了这样的问题，并被认为是最佳实践。</p>
@@ -284,14 +284,14 @@ function greeting() {
 
 <p>您应该看到变量<code>x</code>输出到屏幕的值。</p>
 
-<p>       4.现在尝试在您的控制台中输入以下内容</p>
+<p>       4.现在尝试在您的控制台中输入以下内容</p>
 
 <pre class="brush: js notranslate">output(y);
 output(z);</pre>
 
-<p>这两个都应该返回错误沿“ <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError：y 未定义</a> ”。这是为什么？由于函数作用域 - <code>y和</code><code>z</code>被锁定在函数<code>a()</code>和<code>b()</code>函数中，所以<code>output()</code>从全局作用域调用时无法访问它们。</p>
+<p>这两个都应该返回错误沿“ <a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError：y 未定义</a> ”。这是为什么？由于函数作用域 - <code>y和</code><code>z</code>被锁定在函数<code>a()</code>和<code>b()</code>函数中，所以<code>output()</code>从全局作用域调用时无法访问它们。</p>
 
-<p>        5.但是，从另一个函数里面调用什么呢？尝试编辑<code>a()</code>，<code>b()</code>所以他们看起来像这样：</p>
+<p>        5.但是，从另一个函数里面调用什么呢？尝试编辑<code>a()</code>，<code>b()</code>所以他们看起来像这样：</p>
 
 <pre class="brush: js notranslate">function a() {
   var y = 2;
@@ -310,7 +310,7 @@ b();</pre>
 
 <p>您应该看到页面中输出的<code>y</code>和<code>z</code>的值。这样就没问题，因为<code>output()</code>函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。<code>output()</code>它可以从任何地方被调用，因为它在全局作用域中被定义。</p>
 
-<p>       6.现在尝试更新您的代码，如下所示：</p>
+<p>       6.现在尝试更新您的代码，如下所示：</p>
 
 <pre class="brush: js notranslate">function a() {
   var y = 2;
@@ -327,7 +327,7 @@ function b() {
 <pre class="brush: js notranslate">a();
 b();</pre>
 
-<p>函数 <code>a()</code>和<code>b()</code>都应该输出 x---1 的值。这些没有问题，因为即使<code>output()</code>的调用与<code>x</code>的定义不在同一个作用域内，但<code>x</code>是一个全局变量，所以在所有代码中都可用。</p>
+<p>函数 <code>a()</code>和<code>b()</code>都应该输出 x---1 的值。这些没有问题，因为即使<code>output()</code>的调用与<code>x</code>的定义不在同一个作用域内，但<code>x</code>是一个全局变量，所以在所有代码中都可用。</p>
 
 <p>7.最后，尝试更新您的代码，如下所示：</p>
 
@@ -346,7 +346,7 @@ function b() {
 <pre class="brush: js notranslate">a();
 b();</pre>
 
-<p>这次<code>a()</code>和<code>b()</code>调用都会返回那个令人讨厌的 "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: z is not defined</a>" error — 这是因为<code>output()</code>函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。</p>
+<p>这次<code>a()</code>和<code>b()</code>调用都会返回那个令人讨厌的 "<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined">ReferenceError: z is not defined</a>" error — 这是因为<code>output()</code>函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。</p>
 
 <div class="note">
 <p><strong>注意</strong>:相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。</p>
@@ -384,7 +384,7 @@ function subFunction3() {
 }
 </pre>
 
-<p>要确保函数调取的数值处在有效的作用域内。上面的例子中会产生一个错误提示，<code>ReferenceError：myValue is not define</code>，因为尽管<code>myValue</code>变量与函数调用指令处在同一个作用域中，但它却没有在函数内被定义 —— 实际代码在调用函数时就开始运行了。为了使代码正确运作，你必须将值作为参数传递给函数，如下所示：</p>
+<p>要确保函数调取的数值处在有效的作用域内。上面的例子中会产生一个错误提示，<code>ReferenceError：myValue is not define</code>，因为尽管<code>myValue</code>变量与函数调用指令处在同一个作用域中，但它却没有在函数内被定义 —— 实际代码在调用函数时就开始运行了。为了使代码正确运作，你必须将值作为参数传递给函数，如下所示：</p>
 
 <pre class="brush: js notranslate">function myBigFunction() {
   var myValue = 1;

@@ -30,7 +30,7 @@ translation_of: Learn/JavaScript/First_steps/Variables
 
 <h2 id="需要的工具">需要的工具</h2>
 
-<p>在本章中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 终端，(参考 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">什么是浏览器开发工具</a> 查看如何使用这些工具)。</p>
+<p>在本章中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 终端，(参考 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">什么是浏览器开发工具</a> 查看如何使用这些工具)。</p>
 
 <p>当然，我们也提供了一个简单的 JavaScript 终端，嵌入在下文的页面中，以便你更容易的输入和测试这些代码。</p>
 
@@ -84,7 +84,7 @@ if (name === 'Adam') {
 <pre class="brush: js notranslate">let myName;
 let myAge;</pre>
 
-<p>在这里我们声明了两个变量 <code>myName</code> 和 <code>myAge</code>. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的 JavaScript 终端 (你也可以在另一个独立的标签页或窗口 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">open this consol</a> ). 此外，你也可以多声明几个变量。</p>
+<p>在这里我们声明了两个变量 <code>myName</code> 和 <code>myAge</code>. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的 JavaScript 终端 (你也可以在另一个独立的标签页或窗口 <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">open this consol</a> ). 此外，你也可以多声明几个变量。</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -195,7 +195,7 @@ let myAge;</pre>
 <p>{{ EmbedLiveSample('Hidden_code', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>提示</strong>: 在 JavaScript 中，所有代码指令都会以分号结尾 (<code>;</code>) — 如果忘记加分号，你的单行代码可能执行正常，但是在多行代码在一起的时候就可能出错。所以，最好是养成主动以分号作为代码结尾的习惯。</p>
+<p><strong>提示</strong>: 在 JavaScript 中，所有代码指令都会以分号结尾 (<code>;</code>) — 如果忘记加分号，你的单行代码可能执行正常，但是在多行代码在一起的时候就可能出错。所以，最好是养成主动以分号作为代码结尾的习惯。</p>
 </div>
 
 <p>你可以通过使用变量的方式来验证这个变量的数值是否在执行环境中已经存在。例如，</p>
@@ -208,7 +208,7 @@ myAge;</pre>
 <pre class="brush: js notranslate">scoobyDoo;</pre>
 
 <div class="note">
-<p><strong>提示</strong>: 千万不要把两个概念弄混淆了，“一个变量存在，但是没有数值”和“一个变量并不存在” — 他们完全是两回事 — 在前面你看到的盒子的类比中，不存在意味着没有可以存放变量的“盒子”。没有定义的值意味着有一个“盒子”，但是它里面没有任何值。</p>
+<p><strong>提示</strong>: 千万不要把两个概念弄混淆了，“一个变量存在，但是没有数值”和“一个变量并不存在” — 他们完全是两回事 — 在前面你看到的盒子的类比中，不存在意味着没有可以存放变量的“盒子”。没有定义的值意味着有一个“盒子”，但是它里面没有任何值。</p>
 </div>
 
 <h2 id="初始化变量">初始化变量</h2>
@@ -218,7 +218,7 @@ myAge;</pre>
 <pre class="brush: js notranslate">myName = 'Chris';
 myAge = 37;</pre>
 
-<p>现在回到控制台并且尝试输入这几行。每输入一条你都应该确认一下控制台输出的变量是不是你刚赋的值。 同样，你可以通过在控制台中输入变量的名称来返回该变量的值 — 再次尝试下这些：</p>
+<p>现在回到控制台并且尝试输入这几行。每输入一条你都应该确认一下控制台输出的变量是不是你刚赋的值。 同样，你可以通过在控制台中输入变量的名称来返回该变量的值 — 再次尝试下这些：</p>
 
 <pre class="brush: js notranslate">myName;
 myAge;</pre>
@@ -227,7 +227,7 @@ myAge;</pre>
 
 <pre class="brush: js notranslate">let myName = 'Chris';</pre>
 
-<p>这可能是大多数时间你都会使用的方式， 因为它要比在单独的两行上做两次操作要快。</p>
+<p>这可能是大多数时间你都会使用的方式， 因为它要比在单独的两行上做两次操作要快。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 如果你写一个声明和初始化变量的多行 JavaScript 代码的程序，你可以在初始化变量之后再实际声明它，并且它仍然可以工作。这是因为变量的声明通常在其余的代码执行之前完成。这叫做<strong>顶置</strong>—阅读<a href="/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a>来了解更多细节。</p>
@@ -281,7 +281,7 @@ myName = 'Bob';</code></pre>
 <p>出于这些以及其他原因，我们建议您在代码中尽可能多地使用 <code>let</code>，而不是 <code>var</code>。因为没有理由使用 <code>var</code>，除非您需要用代码支持旧版本的 Internet Explorer (它直到第 11 版才支持 <code>let</code> ，现代的 Windows Edge 浏览器支持的很好)。</p>
 
 <div class="blockIndicator note">
-<p>  <strong>Note: </strong>我们目前正在更新课程以使用 let 而不是 var。忍耐一下！</p>
+<p>  <strong>Note: </strong>我们目前正在更新课程以使用 let 而不是 var。忍耐一下！</p>
 </div>
 
 <h2 id="更新变量">更新变量</h2>
@@ -297,12 +297,12 @@ myAge = 40;</pre>
 
 <ul>
  <li>你不应当使用规则之外的其他字符，因为它们可能引发错误，或对国际用户来说难以理解。</li>
- <li>变量名不要以下划线开头—— 以下划线开头的被某些 JavaScript 设计为特殊的含义，因此可能让人迷惑。</li>
+ <li>变量名不要以下划线开头—— 以下划线开头的被某些 JavaScript 设计为特殊的含义，因此可能让人迷惑。</li>
  <li>变量名不要以数字开头。这种行为是不被允许的，并且将引发一个错误。</li>
  <li>一个可靠的命名约定叫做 <a href="https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms">"小写驼峰命名法"</a>，用来将多个单词组在一起，小写整个命名的第一个字母然后大写剩下单词的首字符。我们已经在文章中使用了这种命名方法。</li>
  <li>让变量名直观，它们描述了所包含的数据。不要只使用单一的字母/数字，或者长句。</li>
  <li>变量名大小写敏感——因此<code>myage</code>与<code>myAge</code>是 2 个不同的变量。</li>
- <li>最后也是最重要的一点—— 你应当避免使用 JavaScript 的保留字给变量命名。保留字，即是组成 JavaScript 的实际语法的单词！因此诸如 <code>var</code>, <code>function</code>, <code>let和</code> <code>for</code>等，都不能被作为变量名使用。浏览器将把它们识别为不同的代码项，因此你将得到错误。</li>
+ <li>最后也是最重要的一点—— 你应当避免使用 JavaScript 的保留字给变量命名。保留字，即是组成 JavaScript 的实际语法的单词！因此诸如 <code>var</code>, <code>function</code>, <code>let和</code> <code>for</code>等，都不能被作为变量名使用。浏览器将把它们识别为不同的代码项，因此你将得到错误。</li>
 </ul>
 
 <div class="note">
@@ -341,7 +341,7 @@ thisisareallylongstupidvariablenameman</pre>
 
 <h3 id="Number">Number</h3>
 
-<p>你可以在变量中存储数字，不论这些数字是像 30（也叫整数）这样，或者像 2.456 这样的小数（也叫做浮点数）。与其他编程语言不同，在 JavaScript 中你不需要声明一个变量的类型。当你给一个变量数字赋值时，不需要用引号括起来。 </p>
+<p>你可以在变量中存储数字，不论这些数字是像 30（也叫整数）这样，或者像 2.456 这样的小数（也叫做浮点数）。与其他编程语言不同，在 JavaScript 中你不需要声明一个变量的类型。当你给一个变量数字赋值时，不需要用引号括起来。 </p>
 
 <pre class="brush: js notranslate">let myAge = 17;</pre>
 
@@ -353,7 +353,7 @@ thisisareallylongstupidvariablenameman</pre>
 
 <h3 id="Boolean">Boolean</h3>
 
-<p>Boolean 的值有 2 种：true 或 false。它们通常被用于在适当的代码之后，测试条件是否成立。举个例子，一个简单的示例如下： </p>
+<p>Boolean 的值有 2 种：true 或 false。它们通常被用于在适当的代码之后，测试条件是否成立。举个例子，一个简单的示例如下： </p>
 
 <pre class="brush: js notranslate">let iAmAlive = true;</pre>
 
@@ -408,7 +408,7 @@ typeof myNumber;
 myNumber = 500; // much better — now this is a number
 typeof myNumber</pre>
 
-<p>尝试依次将上述代码输入您的控制台，看看结果是什么（无须输入//之后的注释）。我们使用了一个名为<code>typeof</code>的特殊的操作符 ——它会返回所传递给它的变量的数据类型。第一次在上面的代码中调用它，它应该返回 string，因为此时 myNumber 变量包含一个字符串'500'。看看它第二次将返回什么。</p>
+<p>尝试依次将上述代码输入您的控制台，看看结果是什么（无须输入//之后的注释）。我们使用了一个名为<code>typeof</code>的特殊的操作符 ——它会返回所传递给它的变量的数据类型。第一次在上面的代码中调用它，它应该返回 string，因为此时 myNumber 变量包含一个字符串'500'。看看它第二次将返回什么。</p>
 
 <h2 id="总结">总结</h2>
 

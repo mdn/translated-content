@@ -10,7 +10,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 <p>现在是时候深入了解 Vue，并创建我们自己的自定义组件了--我们将从创建一个组件来表示待办事项列表中的每个项目开始。在这一过程中，我们将学习一些重要的概念，例如在其他组件中调用组件，通过道具向它们传递数据，以及保存数据状态。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 如果你需要根据我们的版本检查您的代码， 你可以在我们的<a href="https://github.com/mdn/todo-vue"> todo-vue</a> 仓库找到中找到示例 Vue 程序代码的完成版本。 有关运行中的实时版本，请参见 <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a>。</p>
+<p><strong>注意</strong>: 如果你需要根据我们的版本检查您的代码， 你可以在我们的<a href="https://github.com/mdn/todo-vue"> todo-vue</a> 仓库找到中找到示例 Vue 程序代码的完成版本。 有关运行中的实时版本，请参见 <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a>。</p>
 </div>
 
 <table class="learn-box standard-table">
@@ -47,7 +47,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
   export default {};
 &lt;/script&gt;</pre>
 
-<p>现在我们可以开始为<code>ToDoItem</code>添加实际内容了。Vue 模板目前只允许一个根元素--一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个<code><a href="/zh-CN/docs/Web/HTML/Element/div">&lt;div&gt;</a></code>。</p>
+<p>现在我们可以开始为<code>ToDoItem</code>添加实际内容了。Vue 模板目前只允许一个根元素--一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个<code><a href="/zh-CN/docs/Web/HTML/Element/div">&lt;div&gt;</a></code>。</p>
 
 <ol>
  <li>
@@ -325,7 +325,7 @@ export default {
 
 <p>这将对本文有所帮助。此时，我们有一个工作良好的<code>ToDoItem</code>组件，可以传递一个标签来显示，将存储其检查状态，并在每次调用时使用唯一的<code>id</code>呈现。您可以通过在 <code>App.vue</code> 中临时添加更多<code>&lt;to-do-item&gt;&lt;/to-do-item&gt;</code>去调用，然后使用浏览器的 DevTools 检查其呈现的输出，从而检查唯一 <code>id</code>是否正常工作。</p>
 
-<p>现在，我们已准备好将多个 <code>ToDoItem</code> 组件添加到我们的应用中。在下一篇文章中，我们将介绍如何将一组待办事项数据添加到 <code>App.vue</code> 组件中，然后使用 <code>v-for</code> 指令在 <code>ToDoItem</code> 组件中循环显示这些数据。  </p>
+<p>现在，我们已准备好将多个 <code>ToDoItem</code> 组件添加到我们的应用中。在下一篇文章中，我们将介绍如何将一组待办事项数据添加到 <code>App.vue</code> 组件中，然后使用 <code>v-for</code> 指令在 <code>ToDoItem</code> 组件中循环显示这些数据。  </p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 

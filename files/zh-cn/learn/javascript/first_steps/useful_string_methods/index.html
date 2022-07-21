@@ -16,7 +16,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</div>
 
-<p>现在我们学习基本的字符串语法， 让我们开始思考一下我们可以对内置方法的字符串做什么有用的操作，例如查找文本字符串的长度，加入和分割字符串，将字符串中的一个字符替换为另一个字符。</p>
+<p>现在我们学习基本的字符串语法， 让我们开始思考一下我们可以对内置方法的字符串做什么有用的操作，例如查找文本字符串的长度，加入和分割字符串，将字符串中的一个字符替换为另一个字符。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -39,9 +39,9 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
 <p>一旦你的变量成为字符串对象实例，你就可以有大量的原型和方法编辑它。如果你进入{{jsxref("String")}}对象页并观察页面旁边的列表你就会明白这一点。</p>
 
-<p><strong>可能现在你的大脑开始迷糊了，不要担心！</strong> 在你的学习进程中你真的不需要过早地理解大部分这方面知识，但是接下来我们这儿要看的是你要经常使用的一些知识。</p>
+<p><strong>可能现在你的大脑开始迷糊了，不要担心！</strong> 在你的学习进程中你真的不需要过早地理解大部分这方面知识，但是接下来我们这儿要看的是你要经常使用的一些知识。</p>
 
-<p>现在我们在控制台中加些示例 ，我们已经提供了以下示例（你可在单独打开控制台标签或窗口，或者选择使用<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">浏览器开发者控制台</a>）</p>
+<p>现在我们在控制台中加些示例 ，我们已经提供了以下示例（你可在单独打开控制台标签或窗口，或者选择使用<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">浏览器开发者控制台</a>）</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -193,14 +193,14 @@ browserType.length;</pre>
  <li>当你知道字符串中的子字符串开始的位置，以及想要结束的字符时，{{jsxref("String.prototype.slice()", "slice()")}}可以用来提取 它。尝试以下：
   <pre class="brush: js">browserType.slice(0,3);</pre>
   这时返回"moz"——第一个参数是开始提取的字符位置，第二个参数是提取的最后一个字符的后一个位置。所以提取从第一个位置开始，直到但不包括最后一个位置。（此例中）你也可以说第二个参数等于被返回的字符串的长度。<br>
-   </li>
+   </li>
  <li>此外，如果您知道要在某个字符之后提取字符串中的所有剩余字符，则不必包含第二个参数，而只需要包含要从中提取的字符位置 字符串中的其余字符。尝试以下：
   <pre class="brush: js">browserType.slice(2);</pre>
   这返回“zilla” —— 这是因为 2 的字符位置是字母 z，并且因为没有包含第二个参数，所以返回的子字符串是字符串中的所有剩余字符。</li>
 </ol>
 
 <div class="note">
-<p><strong>Note: </strong><code>slice()</code>的第二个参数是可选的：如果没有传入这个参数，分片结束位置会在原始字符串的末尾。这个方法也有其他的选项；学习{{jsxref("String.prototype.slice()", "slice()")}}这页，来看看你还能发现什么其他作用。</p>
+<p><strong>Note: </strong><code>slice()</code>的第二个参数是可选的：如果没有传入这个参数，分片结束位置会在原始字符串的末尾。这个方法也有其他的选项；学习{{jsxref("String.prototype.slice()", "slice()")}}这页，来看看你还能发现什么其他作用。</p>
 </div>
 
 <h3 id="转换大小写">转换大小写</h3>
@@ -318,7 +318,7 @@ window.addEventListener('load', updateCode);
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 一个提示 - 字符串方法的参数不必是字符串文字; 它们也可以是变量，甚至是在其上调用方法的变量。</p>
+<p><strong>Note</strong>: 一个提示 - 字符串方法的参数不必是字符串文字; 它们也可以是变量，甚至是在其上调用方法的变量。</p>
 </div>
 
 <div class="hidden">
