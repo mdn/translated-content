@@ -23963,7 +23963,7 @@
       "zhangchen"
     ]
   },
-  "Web/CSS/:host-context()": {
+  "Web/CSS/:host-context": {
     "modified": "2020-10-15T22:22:18.002Z",
     "contributors": [
       "jhjocelyn"
