@@ -1,8 +1,8 @@
 ---
 title: setInterval()
 slug: Web/API/setInterval
-page-type: web-api-global-function
 browser-compat: api-setInterval
+page-type: web-api-global-function
 ---
 {{APIRef("HTML DOM")}} 
 
@@ -84,12 +84,12 @@ El siguiente ejemplo llama a la función `flashtext()` una vez por segundo hasta
 
 ```js
 // variable para almacenar nuestro intervalID
-let nIntervalId;
+let nIntervId;
 
 function changeColor() {
     // comprobar si ya se ha configurado un intervalo
     if (!nIntervId) {
-        nIntervId = setInterval(flashText, 1000):
+        nIntervId = setInterval(flashText, 1000);
     }
 }
 
@@ -109,9 +109,98 @@ function stopTextColor() {
 }
 
 document.getElementById("start").addEventListener("click", changeColor);
-document.getElementById("stop").addElementListener("click", stopTextColor);
+document.getElementById("stop").addEventListener("click", stopTextColor);
 ```
 
 #### Result
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
+
+
+Véase también: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
+
+## El problema con "this"
+
+Cuando le pasas un método a `setInterval()` o cualquier otra función, ésta será invocada con el valor de [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) incorrecto. Este problema es explicado en detalle en la [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+
+### Explicación
+
+El código ejecutado por `setInterval` se ejecuta en un contexto de ejecución distinto al de la función desde la que fue llamado. Como consecuencia, la palabra clave [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) para la función llamada se establece en el objeto `window` (u objeto `global`), que no es el mismo contexto de ejecución del valor `this` de la función que llamó a `setInterval()` . Véase el siguiente ejemplo en el que se utiliza `setTimeout()` en lugar de `setInterval()` . El problema con `this` es el mismo en ambos temporizadores:
+
+```js
+myArray = ['zero', 'one', 'two'];
+
+myArray.myMethod = function (sProperty) {
+    alert(arguments.length > 0 ? this[sProperty] : this);
+};
+
+myArray.myMethod(); // imprime "zero, one, two"
+myArray.myMethod(1); // imprime "one"
+setTimeout(myArray.myMethod, 1000); // imprime "[object Window]" después de un segundo
+setTimeout(myArray.myMethod, 1500, "1"); // imprime "undefined" después de 1,5 segundos
+// pasar el objeto 'this' con .cal no funcionará
+// porque esto cambiará el valor de 'this' dentro del propio
+// setTimeout, mientras que nosotros queremos cambiar el valor
+// de 'this' dentro de myArray.myMethod. De hecho, será un error
+// porque el código de setTimeout espera que 'this' sea el
+// objeto ventana:
+setTimeout.call(myArray, myArray.myMethod, 2000); // error:
+// "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on
+// WrappedNative prototype object"
+setTimeout.call(myArray, myArray.myMethod, 2500, 2); //mismo
+// error
+```
+Como puede ver, no hay formas de pasar el objeto `this` a la función de devolución de llamada o callback en código  JavaScript legacy.
+
+### Una posible solución
+
+Todos los entornos de ejecución modernos de JavaScript (en navegadores y otros lugares) soportan [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), con `this` léxico, lo que nos permite escribir `setInterval( () => this.myMethod)` si estamos dentro del método `myArray` .
+
+Si necesita soporte para IE, utilice el método [`Function.prototype.bind`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) , que le permite especificar el valor que debe ser usado como `this` para todas las llamadas a una función dada. Esto le permite fácilmente evitar los problemas en los que no está claro cual será `this` dependiendo del contexto desde el que se llamó a la función.
+
+## Notas sobre su uso
+
+La función `setInterval()` se utiliza comúnmente para establecer un retardo en funciones que son ejecutadas una y otra vez, como por ejemplo las animaciones. Puede cancelar el intervalo utilizando {{domxref("clearInterval()")}} .
+
+Si desea que su función sea llamada _una vez_ después del retardo especificado utilice {{domxref("setTimeout()")}} .
+
+### Restricciones en el retardo
+
+Es posible anidar intervalos; Es decir, la llamada de retorno de `setInterval()` puede llamar  a su vez a otro `setInterval()` para iniciar otro intervalo, y que este sea ejecutado aunque el primero siga corriendo aún. Para mitigar el impacto potencial que esto puede tener en el rendimiento, una vez que los intervalos son anidados más allá de cinco niveles de profundidad, el navegador impondrá automáticamente un valor mínimo de cuatro milisegundos para el intervalo. Intenta especificar un valor menor a cuatro ms en llamadas profundamente anidadas a `setInterval()` . Estas serán fijadas a 4 ms.
+
+Los navegadores pueden imponer valores mínimos aún más estrictos para el intervalo en determinadas circunstancias, aunque no deberían ser habituales. Tenga también en cuenta que la cantidad real de tiempo que transcurre entre las llamadas a la función callback puede ser mayor que el propio retardo (delay); Ver
+{{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for delays longer than specified")}} para ver ejemplos.
+
+### Garantizar que la duración de la ejecución sea inferior  a la frecuecia del intervalo.
+
+Si existe la posibilidad de que su lógica pueda tardar más en ejecutarse que el tiempo de intervalo, se recomienda llamar recursivamente a una función nombrada utilizando {{domxref("setTimeout()")}}. Por ejemplo, si utiliza `setInterval()` para sondear un servidor remoto cada cinco segundos, la latencia de la red, un servidor que no responde y una serie de otros problemas podrían impedir que la solicitud se complete en el tiempo asignado. Debido a esto, es posible que se encuentre con peticiones XHR en cola que no necesariamente retornarán en orden.
+
+En estos casos, es preferible un patrón recursivo `setTimeout` :
+
+```js
+(function loop() {
+    setTimeout(function() {
+        // Escriba su lógica aquí
+
+        loop();
+    }, delay);
+    })();
+```
+
+En el fragmento de código que hay sobre estas líneas, se declara una función con nombre `loop()` y se ejecuta inmediatamente. `loop` es llamada recursivamente dentro de `setTimeout` después de que la lógica haya sido completamente ejecutada. Aunque este patrón no garantiza la ejecución en un intervalo fijo, si garantiza que el intervalo anterior se haya ejecutado por completo antes de recursar.
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
+
+- [Polyfill of `setInterval` wich allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- {{domxref("setTimeout")}}
+- {{domxref("clearTimeout")}}
+- {{domxref("clearInterval")}}
+- {{domxref("window.requestAnimationFrame")}}
