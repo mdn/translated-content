@@ -36,70 +36,87 @@ translation_of: Learn/Common_questions/set_up_a_local_testing_server
 
 <p>En la mayor parte del área de aprendizaje, te decimos que abras tus ejemplos directamente en un navegador — lo que se hace con doble clic en el archivo HTML, o arrastrándolo y soltándolo en una ventana del navegador o eligiendo <em>Archivo</em> &gt; <em>Abrir...</em> y navegando al archivo HTML, etc. Hay muchas maneras de lograr esto.</p>
 
-<p>Sabes si estás ejecutando el ejemplo desde un archivo local porque la dirección web tendrá <code>archivo://</code> al principio, seguido de la ruta al archivo en tu disco duro local. Por el contrario, si ves uno de nuestros ejemplos alojados en GitHub (o un ejemplo en algún otro servidor remoto), la dirección web tendrá <code>http://</code> o <code>https://</code> al principio, para mostrar que el archivo ha sido recibido a través de HTTP.</p>
+<p>Sabrás que estás ejecutando el ejemplo desde un archivo local porque la dirección web comenzará con <code>file://</code>, seguido de la ruta al archivo en tu disco duro local. Por el contrario, si ves uno de nuestros ejemplos alojados en GitHub (o un ejemplo en algún otro servidor remoto), la dirección web tendrá <code>http://</code> o <code>https://</code> al principio, para mostrar que el archivo ha sido recibido a través de HTTP.</p>
 
 <h2 id="El_problema_de_probar_archivos_locales">El problema de probar archivos locales</h2>
 
-<p>Algunos ejemplos no se ejecutarán si los abre como archivos locales. Esto puede deberse a una variedad de razones, siendo las más probables:</p>
+<p>Algunos ejemplos no se ejecutarán si se los abre como archivos locales. Esto puede deberse a una variedad de razones, siendo las más probables:</p>
 
 <ul>
- <li><strong>Cuentan con peticiones asincrónicas</strong>. Algunos navegadores (incluido chrome) no ejecutarán solicitudes asíncronas (consulte <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Obtención de datos desde el servidor</a>) si acaba de ejecutar el ejemplo desde un archivo local. Esto se debe a las restricciones de seguridad (para obtener más información sobre la seguridad web, lee <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">La seguridad del sitio web</a>).</li>
- <li><strong>Cuenta con un lenguaje de servidor</strong>. Los lenguajes de servidor (como PHP o Python) requieren de un servidor especial para interpretar el código y entregar los resultados.</li>
+ <li><strong>Cuentan con peticiones asincrónicas</strong>. Algunos navegadores (incluido chrome) no ejecutarán solicitudes asíncronas (consulte <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Obtención de datos desde el servidor</a>) si se ejecuta el ejemplo desde un archivo local. Esto se debe a restricciones de seguridad (para obtener más información sobre la seguridad web, lee <a href="/es/docs/Learn/Server-side/First_steps/Website_security">La seguridad del sitio web</a>).</li>
+ <li><strong>Cuentan con un lenguaje de servidor</strong>. Los lenguajes de servidor (como PHP o Python) requieren de un servidor especial para interpretar el código y entregar los resultados.</li>
+ <li><strong>Incluyen otros archivos</strong>. Los navegadores comunmente tratan a los pedidos para cargar recursos formulados utilizando el esquema <code>file://</code>, como solicitudes de recursos de origenes cruzados (<em>cross-origin requests</em>). Por ello, si se carga un archivo local que incluye otros archivos locales, puede dispararse un error <a href="/en-US/docs/Glossary/CORS">CORS</a>.</li>
 </ul>
 
 <h2 id="Ejecutando_un_servidor_HTTP_local_simple">Ejecutando un servidor HTTP local simple</h2>
 
-<p>Para evitar el problema de las solicitudes asíncronas, necesitamos probar estos ejemplos ejecutándolos a través de un servidor web local. Una de las maneras más fáciles de hacer esto para nuestros propósitos es usar el módulo <code>SimpleHTTPServer</code> de Python.</p>
+<p>Para evitar el problema de las solicitudes asíncronas, necesitamos probar estos ejemplos ejecutándolos a través de un servidor web local. Una de las maneras más fáciles de hacer esto para nuestros propósitos es usar el módulo <code>http.server</code> de Python.</p>
+
+<div class="note">
+  <p><strong>Nota</strong>: Versiones más antiguas de Python (hasta la version 2.7) proveían un módulo similar llamado <code>SimpleHTTPServer</code>. Si estás usando Python 2.x, puedes seguir esta guía reemplazando todos los usos de <code>http.server</code> por <code>SimpleHTTPServer</code>. Sin embargo, recomendamos que uses la última versión de Python.</p>
+  </div>
 
 <p>Para hacer esto:</p>
 
 <ol>
  <li>
-  <p>Instalar Python. Si usas Linux o Mac OS X, ya debe estar disponible en tu sistema. Si eres usuario de Windows, puedes conseguir un instalador desde la página principal de Python y seguir las instrucciones para instalarlo:</p>
+  <p>Instalar Python. Si usas Linux o Mac OS X, ya debe estar disponible en tu sistema. Si eres usuario de Windows, puedes obtener un instalador desde la página principal de Python y seguir las instrucciones para instalarlo:</p>
 
   <ul>
    <li>Vé a <a href="https://www.python.org/">python.org</a></li>
-   <li>Debajo de la sección de Descarga, haz clic en el link para Python "3.xxx".</li>
-   <li>En la parte superior de la página, selecciona el <em>instalador ejecutable windows x86</em> y descárgalo.</li>
-   <li>Cuando se haya descargado, córrelo.</li>
+   <li>Bajo la sección de Descarga, haz clic en el link para Python "3.xxx".</li>
+   <li>En la parte inferior de la página, selecciona el <em>instalador ejecutable windows x86</em> y descarga el archivo.</li>
+   <li>Cuando se haya descargado, ejecutalo.</li>
    <li>En la primera página de instalación, asegúrate de marcar el checkbox "Añadir Python 3.xxx a la ruta"</li>
    <li>Clic en <em>Instalar</em>, luego clic en <em>Cerrar</em> cuando la instalación ya haya finalizado.</li>
   </ul>
  </li>
  <li>
-  <p>Abre la terminal (windows)/terminal (OS X/Linux). Para chequear que Python está instalado, ingrese el siguiente comando.</p>
+  <p>Abre la terminal (windows)/terminal (OS X/Linux). Para chequear que Python está instalado, ingresa el siguiente comando.</p>
 
   <div class="note">
   <p><strong>Nota</strong>: La v del ejemplo en mayuscula (V)</p>
   </div>
-
-  <pre class="brush: bash">python -V</pre>
+  <pre class="brush: bash">python -V
+  # Si dicha instrucción falla, intenta
+  python3 -V
+  # O, por si el comando "py" estuviera disponible, intenta
+  py -V
+  </pre>
  </li>
+  
  <li>
-  <p>Esto debe retornar un número de versión. Si esto esta bien, navega al directorio que contiene tu ejemplo, usando el comando <code>cd</code>.</p>
+  <p>Esto debe retornar un número de versión. Si es así, navega al directorio que contiene tu ejemplo, usando el comando <code>cd</code>.</p>
 
-  <pre class="brush: bash"># Incluye el nombre del directorio de entrar en él,
-por ejemplo cd Escritorio
-
-# Use dos puntos para regresar un nivel de directorio
-si es necesario,por ejemplo cd ../
-</pre>
+  <pre class="brush: bash"># Incluye el nombre del directorio para ingresar en él,
+  por ejemplo 
+  cd Escritorio
+  # Use dos puntos para ir a un nivel de directorio superior 
+  si fuera necesario
+  cd ../
+  </pre>
  </li>
+  
  <li>
   <p>Ingresa el comando para iniciar el servidor en ese directorio:</p>
 
-  <pre class="brush: bash"># En Mac y Linux
-python -m SimpleHTTPServer
-#Windows
-python -m http.server</pre>
+  <pre class="brush: bash"># Si la versión de Python obtenida antes es 3.xxx 
+  #en Mac, Linux o Windows, intente
+  python -m http.server
+  # En Windows, puede intentar además
+  py -3 -m http.server
+  python3 -m http.server
+  # Si su versión de Python obtenida antes es 2.x, intente 
+  python -m SimpleHTTPServer
+  </pre>
  </li>
  <li>
-  <p>Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. puedes ir a este servidor yendo a la URL <code>localhost:8000</code> en tu navegador web. Aquí verá el contenido del directorio listado - haga clic en el archivo HTML que desea ejecutar.</p>
+  <p>Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. Puedes ir a este servidor yendo a la URL <code>localhost:8000</code> en tu navegador web. Aquí verás el contenido del directorio listado - has clic en el archivo HTML que desea ejecutar.</p>
  </li>
 </ol>
 
 <div class="note">
-<p><strong>Nota</strong>: si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo <code>python -m SimpleHTTPServer 7800</code>. Puedes acceder a tu contenido en el<code>localhost:7800</code>.</p>
+<p><strong>Nota</strong>: si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo <code>python -m http.server 7800</code> (Python 3.x) o <code>python -m SimpleHTTPServer 7800</code> (Python 2.x). Puedes acceder a tu contenido en el <code>localhost:7800</code>.</p>
 </div>
 
 <h2 id="Ejecución_de_lenguajes_del_lado_del_servidor_localmente">Ejecución de lenguajes del lado del servidor localmente</h2>
