@@ -9,90 +9,88 @@ tags:
   - 接口
 translation_of: Web/API/DocumentFragment
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p><strong><code>DocumentFragment</code>，文档片段</strong>接口，一个没有父对象的最小文档对象。它被作为一个轻量版的 {{domxref("Document")}} 使用，就像标准的 document 一样，存储由节点（nodes）组成的文档结构。与 document 相比，最大的区别是 DocumentFragment 不是真实 DOM 树的一部分，它的变化不会触发 DOM 树的{{Glossary("reflow", "重新渲染")}}，且不会导致性能等问题。</p>
+**`DocumentFragment`**，文档片段接口，表示一个没有父对象的最小文档对象。
 
-<p>最常用的方法是使用文档片段作为参数（例如，任何 {{domxref("Node")}} 接口类似 {{domxref("Node.appendChild")}} 和 {{domxref("Node.insertBefore")}} 的方法），这种情况下被添加（append）或被插入（inserted）的是片段的所有子节点，而非片段本身。因为所有的节点会被一次插入到文档中，而这个操作仅发生一个重渲染的操作，而不是每个节点分别被插入到文档中，因为后者会发生多次重渲染的操作。</p>
+它被作为一个轻量版的 {{domxref("Document")}} 使用，就像标准的 document 一样，存储由节点（nodes）组成的文档结构。与 document 相比，最大的区别是它不是真实 DOM 树的一部分，它的变化不会触发 DOM 树的{{Glossary("reflow", "重新渲染")}}，且不会对性能产生影响。
 
-<p>该接口在 Web 组件（Web components）中也非常有用：{{HTMLElement("template")}} 元素在其 {{domxref("HTMLTemplateElement.content")}} 属性中包含了一个 <code>DocumentFragment</code>。</p>
+{{InheritanceDiagram}}
 
-<p>可以使用{{domxref("document.createDocumentFragment")}} 方法或者构造函数来创建一个空的 <code>DocumentFragment</code>。</p>
+## 构造函数
 
-<h2 id="Specification">属性</h2>
+- {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }}
+  - : 创建并返回一个新的 `DocumentFragment` 对象。
 
-<p><em>该接口没有特殊的属性，其属性都继承自 {{domxref("Node")}} ，并补充了 {{domxref("ParentNode")}} 接口中的属性。</em></p>
+## 属性
 
-<dl>
- <dt>{{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回一个实时（live）{{domxref("HTMLCollection")}}，包含所有属于 <code>DocumentFragment</code> 的{{domxref("Element","元素")}}类型的子对象。</dd>
- <dt>{{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回 <code>DocumentFragment</code> 的第一个 {{domxref("Element")}} 类型的子对象，如果没有则返回 <code>null</code> 。</dd>
- <dt>{{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回 <code>DocumentFragment</code> 的最后一个 {{domxref("Element")}} 类型的子对象，如果没有则返回 <code>null</code> 。</dd>
- <dt>{{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>返回一个 <code>unsigned long</code> 给出 <code>DocumentFragment</code> 拥有的子项数量。</dd>
-</dl>
+_该接口没有特殊的属性，其属性都继承自 {{domxref("Node")}}。_
 
-<h2 id="构造函数">构造函数</h2>
+- {{ domxref("DocumentFragment.childElementCount") }} {{readonlyInline}}
+  - : 返回所有属于 `DocumentFragment` 的 {{domxref("Element")}} 类型的子对象。
+- {{ domxref("DocumentFragment.children") }} {{readonlyInline}}
+  - : 返回一个实时的 {{domxref("HTMLCollection")}}，其中包含了所有属于 `DocumentFragment` 的 {{domxref("Element")}} 类型的子对象。
+- {{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}
+  - : 返回 `DocumentFragment` 的第一个 {{domxref("Element")}} 类型的子对象，如果没有则返回 `null`。
+- {{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}
+  - : 返回 `DocumentFragment` 的最后一个 {{domxref("Element")}} 类型的子对象，如果没有则返回 `null`。
 
-<dl>
- <dt>{{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }} {{experimental_inline}}</dt>
- <dd>返回一个空的 <code>DocumentFragment</code> 对象。</dd>
-</dl>
+## 方法
 
-<h2 id="方法">方法</h2>
+_该接口继承 {{domxref("Node")}} 的全部方法。_
 
-<p><em>该接口继承 {{domxref("Node")}} 的全部方法，<em>并实现了 {{domxref("ParentNode")}} 接口中的方法。</em></em></p>
+- {{DOMxRef("DocumentFragment.append()")}}
+  - : 在文档片段的最后一个子对象后插入一组 {{domxref("Node")}} 或字符串对象。
+- {{DOMxRef("DocumentFragment.prepend()")}}
+  - : 在文档片段的第一个元素前插入一组 {{domxref("Node")}} 或字符串对象。
+- {{domxref("DocumentFragment.querySelector()")}}
+  - : 返回在 `DocumentFragment` 中以文档顺序排列的第一个符合指定选择器的 {{domxref("Element")}} 节点。
+- {{domxref("DocumentFragment.querySelectorAll()")}}
+  - : 返回在 `DocumentFragment` 中所有的符合指定选择器的 {{domxref("Element")}} 节点组成的 `NodeList` 数组。
+- {{domxref("DocumentFragment.getElementById()")}}
+  - : 返回在 `DocumentFragment` 中以文档顺序排列的第一个符合指定 ID 选择器的 {{domxref("Element")}} 节点。与 `Document.getElementById()` 作用相同。
 
-<dl>
- <dt>{{domxref("DocumentFragment.querySelector()")}}</dt>
- <dd>返回在<code>DocumentFragment</code>中以文档顺序排列的第一个符合指定选择器的<code>Element</code>节点。</dd>
- <dt>{{domxref("DocumentFragment.querySelectorAll()")}}</dt>
- <dd>返回在<code>DocumentFragment</code>中所有的符合指定选择器的<code>Element</code>节点组成的<code>NodeList</code>数组。</dd>
- <dt>{{domxref("DocumentFragment.getElementById()")}}</dt>
- <dd>返回在<code>DocumentFragment</code>中以文档顺序排列的第一个符合指定 ID 选择器的<code>Element</code>节点。与<code>Document.getElementById()</code>作用相同。</dd>
-</dl>
+## 使用说明
 
-<h2 id="例子">例子</h2>
+最常用的方法是使用 `DocumentFragment` 创建并组成一个 DOM 子树，然后使用 {{domxref("Node")}} 接口方法（如：{{domxref("Node.appendChild", "appendChild()")}} 或 {{domxref("Node.insertBefore", "insertBefore()")}}）将其插入到 DOM 中。这种情况下会插入片段的所有子节点，并留下一个空的 `DocumentFragment`。因为所有的节点会被一次插入到文档中，所以仅会发生一个重渲染的操作，而不是每个节点分别被插入到文档中从而发生多次重渲染的操作。
 
-<h3 id="HTML">HTML</h3>
+该接口在 Web 组件（Web components）中也非常有用：{{HTMLElement("template")}} 元素在其 {{domxref("HTMLTemplateElement.content")}} 属性中包含了一个 `DocumentFragment`。
 
-<pre class="brush: html notranslate">&lt;ul id="list"&gt;&lt;/ul&gt;
-</pre>
+可以使用 {{domxref("document.createDocumentFragment")}} 方法或者构造函数来创建一个空的 `DocumentFragment`。
 
-<h3 id="JavaScript">JavaScript</h3>
+## 示例
 
-<pre class="brush: js notranslate">const list = document.querySelector('#list');
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
+### HTML
 
-const fragment = document.createDocumentFragment();
+```html
+<ul id="list"></ul>
+```
 
-fruits.forEach(fruit =&gt; {
-  const li = document.createElement('li');
-  li.innerHTML = fruit;
-  fragment.appendChild(li);
-});
+### JavaScript
 
-list.appendChild(fragment);
-</pre>
+```js
+const list = document.querySelector('#list')
+const fruits = ['Apple', 'Orange', 'Banana', 'Melon']
 
-<h3 id="Result">Result</h3>
+const fragment = new DocumentFragment()
 
-<p>{{EmbedLiveSample('Example')}}</p>
+fruits.forEach((fruit) => {
+  const li = document.createElement('li')
+  li.textContent = fruit
+  fragment.appendChild(li)
+})
 
-<h2 id="标准">标准</h2>
+list.appendChild(fragment)
+```
+
+### 结果
+
+{{EmbedLiveSample('示例')}}
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-
-
-<p>{{Compat("api.DocumentFragment")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">The DOM interfaces index.</a></li>
-</ul>
+{{Compat}}
