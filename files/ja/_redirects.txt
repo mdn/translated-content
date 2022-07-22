@@ -3491,8 +3491,6 @@
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
 /ja/docs/Web/API/StorageEstimate	/ja/docs/conflicting/Web/API/StorageManager/estimate
-/ja/docs/Web/API/StorageEstimate/quota	/ja/docs/conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac
-/ja/docs/Web/API/StorageEstimate/usage	/ja/docs/conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/conflicting/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/conflicting/Web/API/Text
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length

@@ -46891,20 +46891,6 @@
       "Wind1808"
     ]
   },
-  "conflicting/Web/API/StorageManager/estimate_78aa4ffd4dfacc8f94d5c05d150d36ac": {
-    "modified": "2020-10-15T22:20:08.643Z",
-    "contributors": [
-      "Uemmra3",
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/StorageManager/estimate_9ffeea37c30a26922d3f1621912db8d8": {
-    "modified": "2020-10-15T22:20:08.494Z",
-    "contributors": [
-      "Uemmra3",
-      "Wind1808"
-    ]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": [
