@@ -1,5 +1,5 @@
 ---
-title: プロキシ自動設定ファイル
+title: プロキシー自動設定ファイル
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 tags:
   - Necko
@@ -9,465 +9,460 @@ tags:
 translation_of: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<div><strong>プロキシ自動設定 (Proxy Auto-Configuration, PAC) ファイル</strong>は、ウェブブラウザーのリクエスト (HTTP, HTTPS, FTP 等) を直接宛先に送るか、ウェブプロキシサーバーに転送するか決める JavaScript の関数です。次の JavaScript 関数を PAC ファイル内に記述します。</div>
+**プロキシー自動設定 (Proxy Auto-Configuration, PAC)** ファイルは、ウェブブラウザーのリクエスト (HTTP, HTTPS, FTP 等) を直接宛先に送るか、ウェブプロキシーサーバーに転送するか決める JavaScript の関数です。次の JavaScript 関数を PAC ファイル内に記述します。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
-  // ...
-}</pre>
+```js
+function FindProxyForURL(url, host) {
+  // …
+}
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">function FindProxyForURL(<var>url</var>, <var>host</var>)</pre>
+```js
+function FindProxyForURL(url, host)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>url</var></code></dt>
- <dd>アクセスする URL です。 <code>https://</code> の URL ではパスとクエリの部分が削除されます。 Chrome (バージョン52～73) ではポリシーで <code>PacHttpsUrlStrippingEnabled</code> を <code>false</code> に設定するか、コマンドラインで <code>--unsafe-pac-url</code> フラグを指定することで無効にすることができます (Chrome 74では、フラグのみが動作します。75以降では、パスの削除を無効にする方法はありません。 Chrome 81 では、パスの削除は HTTP の URL では適用されませんが、 HTTPS に合わせて変更される予定です。)。 Firefox では、設定値は <code>network.proxy.autoconfig_url.include_path</code> です。</dd>
- <dt><code><var>host</var></code></dt>
- <dd>URL から抽出したホスト名です。これは利便性のみのためのものです。 <code>://</code> とそのあとに最初に現れる <code>:</code> または <code>/</code> と同じ文字列です。この引数にはポート番号は含まれません。必要ならば URL から取り出してください。</dd>
-</dl>
+- `url`
+  - : アクセスする URL です。 `https://` の URL ではパスとクエリーの部分が削除されます。 Chrome (バージョン 52 ～ 73) ではポリシーで `PacHttpsUrlStrippingEnabled` を `false` に設定するか、コマンドラインで `--unsafe-pac-url` フラグを指定することで無効にすることができます (Chrome 74 では、フラグのみが動作します。 75 以降では、パスの削除を無効にする方法はありません。 Chrome 81 では、パスの削除は HTTP の URL では適用されませんが、 HTTPS に合わせて変更される予定です)。 Firefox では、設定値は `network.proxy.autoconfig_url.include_path` です。
+- `host`
+  - : URL から抽出したホスト名です。これは利便性のみのためのものです。 `://` とそのあとに最初に現れる `:` または `/` と同じ文字列です。この引数にはポート番号は含まれません。必要ならば URL から取り出してください。
 
-<h2 id="Description" name="Description">解説</h2>
+## 解説
 
-<p>構成を表す文字列を返します。この文字列の書式は後述の<strong>返値の形式</strong>で定義されています。</p>
+構成を表す文字列を返します。この文字列の書式は後述の**返値の形式**で定義されています。
 
-<h3 id="Return_value_format" name="Return_value_format">返値の形式</h3>
+### 返値の形式
 
-<ul>
- <li>この JavaScript の関数は1つの文字列を返す</li>
- <li>文字列が null である場合、プロキシは使用されない</li>
- <li>文字列にはセミコロン区切りで、以下の構成ブロックを任意の数だけ含むことができる</li>
-</ul>
+- この JavaScript の関数は 1 つの文字列を返す
+- 文字列が null である場合、プロキシーは使用されない
+- 文字列にはセミコロン区切りで、以下の構成ブロックを任意の数だけ含むことができる
 
-<dl>
- <dt><code>DIRECT</code></dt>
- <dd>接続はプロキシを使用せずに、直接行われる</dd>
- <dt><code>PROXY <em>host:port</em></code></dt>
- <dd>指定されたプロキシを使用する</dd>
- <dt><code>SOCKS <em>host:port</em></code></dt>
- <dd>指定された SOCKS サーバーを使用する</dd>
-</dl>
+<!---->
 
-<p>最近の Firefox のバージョンでは次の書き方にも対応しています。</p>
+- `DIRECT`
+  - : 接続はプロキシーを使用せずに、直接行われる
+- `PROXY host:port`
+  - : 指定されたプロキシーを使用する
+- `SOCKS host:port`
+  - : 指定された SOCKS サーバーを使用する
 
-<dl>
- <dt><code>HTTP <em>host:port</em></code></dt>
- <dd>指定されたプロキシを使用する</dd>
- <dt><code>HTTPS <em>host:port</em></code></dt>
- <dd>指定された HTTPS プロキシを使用する</dd>
- <dt><code>SOCKS4 <em>host:port</em></code></dt>
- <dt><code>SOCKS5 <em>host:port</em></code></dt>
- <dd>指定された SOCKS サーバーを (指定された SOCK バージョンで) 使用する</dd>
-</dl>
+最近の Firefox のバージョンでは次の書き方にも対応しています。
 
-<p>セミコロン区切りで複数の設定があった場合、 最も左の設定が、 Firefox がプロキシへの接続の確立に失敗しない限り使用されます。この場合は、その次の設定が使用されます。</p>
+- `HTTP host:port`
+  - : 指定されたプロキシーを使用する
+- `HTTPS host:port`
+  - : 指定された HTTPS プロキシーを使用する
+- `SOCKS4 host:port`, `SOCKS5 host:port`
+  - : 指定された SOCKS サーバーを (指定された SOCK バージョンで) 使用する
 
-<p>ブラウザーは応答がなかったプロキシに対して、30分後に再接続を試みます。その次は１時間後に試行し、試行のたびに間隔を30分追加します。</p>
+セミコロン区切りで複数の設定があった場合、 最も左の設定が、 Firefox がプロキシーへの接続の確立に失敗しない限り使用されます。この場合は、その次の設定が使用されます。
 
-<p>すべてのプロキシが使用できず、 DIRECT オプションが設定されていない場合、ブラウザーは一時的にプロキシを無視して直接接続するか尋ねます。20分後ブラウザーはプロキシが使えるか再確認するかを尋ね、その40分後に再度尋ねます。この動作は間隔を20分ずつ長くして続きます。</p>
+ブラウザーは、以前に応答しなかったプロキシーに対して、 30 分後に自動的に再試行します。追加の試行は 1 時間から始まり、試行間の経過時間に常に 30 分追加されます。
 
-<h4 id="Examples" name="Examples">例</h4>
+すべてのプロキシーが使用できず、 DIRECT オプションが設定されていない場合、ブラウザーは一時的にプロキシーを無視して直接接続するか尋ねます。 20 分後ブラウザーはプロキシーが使えるか再確認するかを尋ね、その 40 分後に再度尋ねます。この動作は間隔を 20 分ずつ長くして続きます。
 
-<dl>
- <dt><code>PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081</code></dt>
- <dd>1番目のプロキシは w3proxy:8080 です。1番目のプロキシが使用できない場合は再度使用できるようになるまで mozilla:8081 を使用します。</dd>
- <dt><code>PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081; DIRECT</code></dt>
- <dd>上と同じですが、両方使用できない場合に自動的に直接接続します。 (上記の最初の例では、 Netscape はユーザーに直接接続するか確認しますが、この例では確認されません。)</dd>
- <dt><code>PROXY w3proxy.netscape.com:8080; SOCKS socks:1080</code></dt>
- <dd>1番目のプロキシが使用できない場合 SOCKS サーバを使います。</dd>
-</dl>
+#### 例
 
-<p id="Saving_the_Auto-Config_File_Setting_the_MIME_Type">自動設定ファイルは .pac の拡張子で保存しなければなりません。</p>
+- `PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081`
+  - : 1 番目のプロキシーは w3proxy:8080 です。 1 番目のプロキシーが使用できない場合は再度使用できるようになるまで mozilla:8081 を使用します。
+- `PROXY w3proxy.netscape.com:8080; PROXY mozilla.netscape.com:8081; DIRECT`
+  - : 上と同じですが、両方使用できない場合に自動的に直接接続します。（上記の最初の例では、 Netscape はユーザーに直接接続するか確認しますが、この例では確認されません。）
+- `PROXY w3proxy.netscape.com:8080; SOCKS socks:1080`
+  - : 1 番目のプロキシーが使用できない場合 SOCKS サーバを使います。
 
-<pre class="syntaxbox notranslate">proxy.pac</pre>
+自動設定ファイルは .pac の拡張子で保存しなければなりません。
 
-<p>MIME タイプは以下のように設定してください。</p>
+```html
+proxy.pac
+```
 
-<pre class="syntaxbox notranslate">application/x-ns-proxy-autoconfig</pre>
+MIME タイプは以下のように設定してください。
 
-<p>次に、 .pac 拡張子をこの MIME タイプに結び付けるようサーバーを設定してください。</p>
+```html
+application/x-ns-proxy-autoconfig
+```
 
-<div class="note">
-<p><strong>注: </strong></p>
+次に、 .pac 拡張子をこの MIME タイプに結び付けるようサーバーを設定してください。
 
-<ul>
- <li>JavaScript 関数は常に単体のファイルで保存し、 HTML ファイルやその他のファイルに埋め込まないでください。</li>
- <li>この文書の最後にある例は完全なものです。ファイルを保存して使用するのに追加する必要がある構文はありません。 (もちろん、 JavaScript を編集して自分のサイトのドメイン名やサブネットマスクに合わせる必要があります。)</li>
-</ul>
-</div>
+> **Note:**
+>
+> - JavaScript 関数は常に単体のファイルで保存し、 HTML ファイルやその他のファイルに埋め込まないでください。
+> - この文書の最後にある例は完全なものです。ファイルを保存して使用するのに追加する必要がある構文はありません。 (もちろん、 JavaScript を編集して自分のサイトのドメイン名やサブネットマスクに合わせる必要があります。)
 
-<h2 id="Predefined_functions_and_environment" name="Predefined_functions_and_environment">定義済みの関数と環境</h2>
+## 定義済みの関数と環境
 
-<p>PAC ファイルを作成するために、以下の関数を使用できます。</p>
+PAC ファイルを作成するために、以下の関数を使用できます。
 
-<ul>
- <li>ホスト名に基づく条件
-  <ul>
-   <li><code><a href="#isPlainHostName">isPlainHostName()</a></code></li>
-   <li><code><a href="#dnsDomainIs">dnsDomainIs()</a></code></li>
-   <li><code><a href="#localHostOrDomainIs">localHostOrDomainIs()</a></code></li>
-   <li><code><a href="#isResolvable">isResolvable()</a></code></li>
-   <li><code><a href="#isInNet">isInNet()</a></code></li>
-  </ul>
- </li>
- <li>関連するユーティリティー関数
-  <ul>
-   <li><code><a href="#dnsResolve">dnsResolve()</a></code></li>
-   <li><code><a href="#convert_addr">convert_addr()</a></code></li>
-   <li><code><a href="#myIpAddress">myIpAddress()</a></code></li>
-   <li><code><a href="#dnsDomainLevels">dnsDomainLevels()</a></code></li>
-  </ul>
- </li>
- <li>URL/ホスト名に基づく条件
-  <ul>
-   <li><code><a href="#shExpMatch(str, shexp)">shExpMatch()</a></code></li>
-  </ul>
- </li>
- <li>時刻に基づく条件
-  <ul>
-   <li><code><a href="#weekdayRange">weekdayRange()</a></code></li>
-   <li><code><a href="#dateRange">dateRange()</a></code></li>
-   <li><code><a href="#timeRange">timeRange()</a></code></li>
-  </ul>
- </li>
- <li>ログ用ユーティリティ
-  <ul>
-   <li>{{domxref("Window/alert", "alert()")}}</li>
-  </ul>
- </li>
- <li>以前は JavaScript コードが自分自身で定義することができなかったため、定義済みの連想配列 (オブジェクト) が一つ用意されていました。
-  <ul>
-   <li><code>ProxyConfig.bindings</code> {{obsolete_inline}}</li>
-  </ul>
- </li>
-</ul>
+- ホスト名に基づく条件
 
-<div class="note">
-<p><strong>注:</strong> 以下の例をテストするために、 pactester (<a href="https://github.com/pacparser/pacparser">pacparser</a>パッケージの一部) を使用しました。</p>
+  - [`isPlainHostName()`](#isplainhostname)
+  - [`dnsDomainIs()`](#dnsdomainis)
+  - [`localHostOrDomainIs()`](#localhostordomainis)
+  - [`isResolvable()`](#isresolvable)
+  - [`isInNet()`](#isinnet)
 
-<ul>
- <li>PAC ファイルは <code>proxy.pac</code> という名前です</li>
- <li>コマンドライン: <code>pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org</code> (引数 <code>host</code> に <code>www.mozilla.org</code> を、引数 <code>url</code> に <code>http://www.mozilla.org</code> を渡します)</li>
-</ul>
-</div>
+- 関連するユーティリティー関数
 
-<h3 id="isPlainHostName">isPlainHostName()</h3>
+  - [`dnsResolve()`](#dnsresolve)
+  - [`convert_addr()`](#convert_addr)
+  - [`myIpAddress()`](#myipaddress)
+  - [`dnsDomainLevels()`](#dnsdomainlevels)
 
-<h4 id="Syntax_2" name="Syntax_2">構文</h4>
+- URL/ホスト名に基づく条件
 
-<pre class="syntaxbox notranslate">isPlainHostName(<var>host</var>)</pre>
+  - [`shExpMatch()`](#shexpmatch)
 
-<h4 id="Parameters_2" name="Parameters_2">引数</h4>
+- 時刻に基づく条件
 
-<dl>
- <dt>host</dt>
- <dd>URLから取り出したホスト名 (ポート番号を除いたもの)</dd>
-</dl>
+  - [`weekdayRange()`](#weekdayrange)
+  - [`dateRange()`](#daterange)
+  - [`timeRange()`](#timerange)
 
-<h4 id="解説">解説</h4>
+- ログ用ユーティリティ
 
-<p>ホスト名にドメイン名が含まれていない (=ドットを含まない) 場合は true になります。</p>
+  - [`alert()`](#alert)
 
-<h4 id="Examples_2" name="Examples_2">例</h4>
+- 以前は JavaScript コードが自分自身で定義することができなかったため、定義済みの連想配列 (オブジェクト) が一つ用意されていました。
 
-<pre class="brush: js notranslate">isPlainHostName("www.mozilla.org") // false
+  - `ProxyConfig.bindings` {{deprecated_inline}}
+
+> **Note:** 以下の例をテストするために、 pactester ([pacparser](https://github.com/manugarg/pacparser) パッケージの一部) を使用しました。
+>
+> - PAC ファイルは `proxy.pac` という名前です
+> - コマンドライン: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (引数 `host` に `www.mozilla.org` を、引数 `url` に `http://www.mozilla.org` を渡します)
+
+### isPlainHostName()
+
+#### 構文
+
+```js
+isPlainHostName(host)
+```
+
+#### 引数
+
+- host
+  - : URL から取り出したホスト名 (ポート番号を除いたもの)
+
+#### 解説
+
+ホスト名にドメイン名が含まれていない (=ドットを含まない) 場合は true になります。
+
+#### 例
+
+```js
+isPlainHostName("www.mozilla.org") // false
 isPlainHostName("www") // true
-</pre>
+```
 
-<h3 id="dnsDomainIshost_domain" name="dnsDomainIs(host, domain)">dnsDomainIs()</h3>
+### `dnsDomainIs()`
 
-<h4 id="Syntax_3" name="Syntax_3">構文</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">dnsDomainIs(<var>host</var>, <var>domain</var>)</pre>
+```js
+dnsDomainIs(host, domain)
+```
 
-<h4 id="Parameters_3" name="Parameters_3">引数</h4>
+#### 引数
 
-<dl>
- <dt>host</dt>
- <dd>URL から取り出したホスト名</dd>
- <dt>domain</dt>
- <dd>ホストが所属しているか確認したいドメイン名</dd>
-</dl>
+- host
+  - : URL から取り出したホスト名
+- domain
+  - : ホストが所属しているか確認したいドメイン名
 
-<h4 id="Description_3" name="Description_3">解説</h4>
+#### 解説
 
-<p>ホスト名のドメインが一致する場合にのみ true を返します。</p>
+ホスト名のドメインが一致する場合にのみ true を返します。
 
-<h4 id="Examples_3" name="Examples_3">例</h4>
+#### 例
 
-<pre class="brush: js notranslate">dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
+```js
+dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
 dnsDomainIs("www", ".mozilla.org") // false
-</pre>
+```
 
-<h3 id="localHostOrDomainIs">localHostOrDomainIs()</h3>
+### localHostOrDomainIs()
 
-<h4 id="Syntax_4" name="Syntax_4">構文</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">localHostOrDomainIs(<var>host</var>, <var>hostdom</var>)</pre>
+```js
+localHostOrDomainIs(host, hostdom)
+```
 
-<h4 id="Parameters_4" name="Parameters_4">引数</h4>
+#### 引数
 
-<dl>
- <dt>host</dt>
- <dd>URLから取り出したホスト名です。</dd>
- <dt>hostdom</dt>
- <dd>比較対象の完全修飾ホスト名です。</dd>
-</dl>
+- host
+  - : URLから取り出したホスト名です。
+- hostdom
+  - : 比較対象の完全修飾ホスト名です。
 
-<h4 id="Description_4" name="Description_4">解説</h4>
+#### 解説
 
-<p>ホスト名が<em>完全に</em>指定されたホスト名と一致した場合、またはホスト名にドメイン名の部分がなく、修飾されていないホスト名が一致する場合に true を返します。</p>
+ホスト名が*完全に*指定されたホスト名と一致した場合、またはホスト名にドメイン名の部分がなく、修飾されていないホスト名が一致する場合に true を返します。
 
-<h4 id="Examples_4" name="Examples_4">例</h4>
+#### 例
 
-<pre class="brush: js notranslate">localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
+```js
+localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
 localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
 localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
-localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)</pre>
+localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
+```
 
-<h3 id="isResolvable">isResolvable()</h3>
+### isResolvable()
 
-<h4 id="Syntax_5" name="Syntax_5">構文</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">isResolvable(<var>host</var>)</pre>
+```js
+isResolvable(host)
+```
 
-<h4 id="Parameters_5" name="Parameters_5">引数</h4>
+#### 引数
 
-<dl>
- <dt>host</dt>
- <dd>URLから取り出したホスト名です。</dd>
-</dl>
+- host
+  - : URLから取り出したホスト名です。
 
-<p>ホスト名の解決を試みます。成功すれば true を返します。</p>
+ホスト名の解決を試みます。成功すれば true を返します。
 
-<h4 id="Examples_5" name="Examples_5">例:</h4>
+#### 例
 
-<pre class="brush: js notranslate">isResolvable("www.mozilla.org") // true
-</pre>
+```js
+isResolvable("www.mozilla.org") // true
+```
 
-<h3 id="isInNet">isInNet()</h3>
+### isInNet()
 
-<h4 id="Syntax_6" name="Syntax_6">構文</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">isInNet(<var>host</var>, <var>pattern</var>, <var>mask</var>)</pre>
+```js
+isInNet(host, pattern, mask)
+```
 
-<h4 id="Parameters_6">Parameters</h4>
+#### 引数
 
-<dl>
- <dt>host</dt>
- <dd>a DNS hostname, or IP address. If a hostname is passed, it will be resolved into an IP address by this function.</dd>
- <dt>pattern</dt>
- <dd>an IP address pattern in the dot-separated format.</dd>
- <dt>mask</dt>
- <dd>mask for the IP address pattern informing which parts of the IP address should be matched against. 0 means ignore, 255 means match.</dd>
-</dl>
+- host
+  - : DNS ホスト名、または IP アドレス。ホスト名が渡された場合、この関数によって IP アドレスに解決されます。
+- pattern
+  - : ドットで区切られた形式の IP アドレスパターン。
+- mask
+  - : IP アドレスパターンのマスクで、 IP アドレスのどの部分に対して照合を行うかを指定します。 0 は無視、 255 は一致を意味します。
 
-<p>True if and only if the IP address of the host matches the specified IP address pattern.</p>
+ホストの IP アドレスが指定されたIPアドレスパターンに一致する場合にのみ、 true を返します。
 
-<p>Pattern and mask specification is done the same way as for SOCKS configuration.</p>
+パターンとマスクの指定は、 SOCKS の設定と同じ方法で行います。
 
-<h4 id="Examples_6">Examples:</h4>
+#### 例
 
-<pre class="brush: js notranslate">function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+```js
+function alert_eval(str) { alert(str + ' is ' + eval(str)) }
 function FindProxyForURL(url, host) {
   alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
-</pre>
+```
 
-<h3 id="dnsResolve">dnsResolve()</h3>
+### dnsResolve()
 
-<pre class="syntaxbox notranslate">dnsResolve(<em>host</em>)</pre>
+```js
+dnsResolve(host)
+```
 
-<h4 id="Parameters_7">Parameters</h4>
+#### 引数
 
-<dl>
- <dt>host</dt>
- <dd>hostname to resolve.</dd>
-</dl>
+- host
+  - : 解決するホスト名。
 
-<p>Resolves the given DNS hostname into an IP address, and returns it in the dot-separated format as a string.</p>
+与えられた DNS ホスト名を IP アドレスに解決し、ドット区切りの形式で文字列として返します。
 
-<h4 id="Example">Example</h4>
+#### 例
 
-<pre class="brush: js notranslate">dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"</pre>
+```js
+dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
+```
 
-<h3 id="convert_addr">convert_addr()</h3>
+### convert_addr()
 
-<h4 id="Syntax_7">Syntax</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">convert_addr(ipaddr)</pre>
+```js
+convert_addr(ipaddr)
+```
 
-<h4 id="Parameters_8">Parameters</h4>
+#### 引数
 
-<dl>
- <dt>ipaddr</dt>
- <dd>Any dotted address such as an IP address or mask.</dd>
-</dl>
+- ipaddr
+  - : IP アドレスやマスクなどのドット付きアドレス。
 
-<p>Concatenates the four dot-separated bytes into one 4-byte word and converts it to decimal.</p>
+ドットで区切られた 4 バイトを 1 つの 4 バイトワードに連結し、 10 進数に変換します。
 
-<h4 id="Example_2">Example</h4>
+#### 例
 
-<pre class="brush: js notranslate">convert_addr("104.16.41.2"); // returns the decimal number 1745889538</pre>
+```js
+convert_addr("104.16.41.2"); // returns the decimal number 1745889538
+```
 
-<h3 id="myIpAddress">myIpAddress()</h3>
+### myIpAddress()
 
-<h4 id="Syntax_8">Syntax</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">myIpAddress()</pre>
+```js
+myIpAddress()
+```
 
-<h4 id="Parameters_9">Parameters</h4>
+#### 引数
 
-<p><strong>(none)</strong></p>
+(なし)
 
-<p>Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.</p>
+#### 返値
 
-<div class="warning">
-<p>myIpAddress() returns the same IP address as the server address returned by <strong><code>nslookup localhost</code> </strong>on a Linux machine. It does not return the public IP address.</p>
-</div>
+Firefox が動作しているマシンのサーバー IP アドレスを、ドット区切りの整数形式の文字列で返します。
 
-<h4 id="Example_3">Example</h4>
+> **Warning:** myIpAddress() は Linux マシンでは、 **`nslookup localhost`** が返すサーバーアドレスと同じ IP アドレスを返します。パブリック IP アドレスは返しません。
 
-<pre class="brush: js notranslate">myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost</pre>
+#### 例
 
-<h3 id="dnsDomainLevels">dnsDomainLevels()</h3>
+```js
+myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
+```
 
-<h4 id="Syntax_9">Syntax</h4>
+### dnsDomainLevels()
 
-<pre class="syntaxbox notranslate">dnsDomainLevels(<var>host</var>)</pre>
+#### 構文
 
-<h4 id="Parameters_10">Parameters</h4>
+```js
+dnsDomainLevels(host)
+```
 
-<dl>
- <dt>host</dt>
- <dd>is the hostname from the URL.</dd>
-</dl>
+#### 引数
 
-<p>Returns the number (integer) of DNS domain levels (number of dots) in the hostname.</p>
+- host
+  - : URL のホスト名です。
 
-<h4 id="Examples_7">Examples:</h4>
+ホスト名に含まれる DNS ドメインレベルの数（ドットの数）を整数で返します。
 
-<pre class="brush: js notranslate">dnsDomainLevels("www");             // 0
+#### 例
+
+```js
+dnsDomainLevels("www");             // 0
 dnsDomainLevels("mozilla.org");     // 1
 dnsDomainLevels("www.mozilla.org"); // 2
-</pre>
+```
 
-<h3 id="shExpMatch">shExpMatch()</h3>
+### shExpMatch()
 
-<h4 id="Syntax_10">Syntax</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">shExpMatch(<var>str</var>, <var>shexp</var>)</pre>
+```js
+shExpMatch(str, shexp)
+```
 
-<h4 id="Parameters_11">Parameters</h4>
+#### 引数
 
-<dl>
- <dt>str</dt>
- <dd>is any string to compare (e.g. the URL, or the hostname).</dd>
- <dt>shexp</dt>
- <dd>is a shell expression to compare against.</dd>
-</dl>
+- str
+  - : 比較する任意の文字列です（例: URL、ホスト名）。
+- shexp
+  - : 比較対象となるシェル式です。
 
-<p>Returns true if the string matches the specified shell expression.</p>
+文字列が指定されたシェルグロブ表現に一致する場合、`true` を返します。
 
-<p><strong>Note that the patterns are <em>shell</em> glob <em>expressions</em>, not regular expressions. </strong><code>*</code> and <code>?</code> are always supported, while <code>[characters]</code> and <code>[^characters]</code> are supported by some implmentations including Firefox. This is mainly because the expression is translated to a RegExp via subsitution of <code>[.*?]</code>. For a reliable way to use these RegExp syntaxes, just use RegExp instead.</p>
+特定のグロブ式の構文に対応しているかどうかは、ブラウザーによって異なります。 `*` （任意の数の文字に一致）と `?` （1 文字に一致）は常に対応していますが、 `[characters]` と `[^characters]` は（Firefoxを含む）いくつかの実装で追加的に対応しています。
 
-<h4 id="Examples_8">Examples</h4>
+> **Note:** クライアントが対応している場合、JavaScript の正規表現は通常 URL (および他の文字列) をパターン一致させるより強力で一貫した方法を提供します。
 
-<pre class="brush: js notranslate">shExpMatch("http://home.netscape.com/people/ari/index.html"     , "*/ari/*"); // returns true
-shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false</pre>
+#### 例
 
-<h3 id="weekdayRange">weekdayRange()</h3>
+```js
+shExpMatch("http://home.netscape.com/people/ari/index.html", "*/ari/*"); // returns true
+shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); // returns false
+```
 
-<h4 id="Syntax_11">Syntax</h4>
+### weekdayRange()
 
-<pre class="syntaxbox notranslate">weekdayRange(<var>wd1</var>, <var>wd2</var>, [<var>gmt</var>])</pre>
+#### 構文
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+```js
+weekdayRange(wd1, wd2, [gmt])
+```
 
-<h4 id="Parameters_12">Parameters</h4>
+> **Note:** （Firefox 49以前） 関数でこれらの引数を範囲として評価したい場合は、 wd1 が wd2 より小さくなければなりません。以下の警告を参照してください。
 
-<dl>
- <dt>wd1 and wd2</dt>
- <dd>One of the ordered weekday strings:</dd>
- <dt>
- <pre class="syntaxbox notranslate">"SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"</pre>
- </dt>
- <dt>gmt</dt>
- <dd>Is either the string "GMT" or is left out.</dd>
-</dl>
+#### 引数
 
-<p>Only the first parameter is mandatory. Either the second, the third, or both may be left out.</p>
+- wd1 および wd2
+  - : 曜日の文字列 `"SUN"`, `"MON"`, `"TUE"`, `"WED"`, `"THU"`, `"FRI"`, `"SAT"` のうちの一つ。
+- gmt
+  - : 文字列 "GMT "であるか、または省略される。
 
-<p>If only one parameter is present, the function returns a value of true on the weekday that the parameter represents. If the string "GMT" is specified as a second parameter, times are taken to be in GMT. Otherwise, they are assumed to be in the local timezone.</p>
+第 1 引数のみ必須。 2 つ目、 3 つ目のどちらか、あるいは両方を省略することができます。
 
-<p>If both <strong>wd1 </strong>and <strong>wd1 </strong>are defined, the condition is true if the current weekday is in between those two <em>ordered </em>weekdays. Bounds are inclusive, <em>but the bounds are ordered</em>. If the "GMT" parameter is specified, times are taken to be in GMT. Otherwise, the local timezone is used.</p>
+引数が 1 つしかない場合、この関数はその引数が表す曜日に true という値を返します。2番目の引数に文字列 "GMT" が指定された場合，時刻は GMT であるとみなされます。それ以外の場合は、ローカルタイムゾーンであるとみなされます。
 
-<div class="warning">
-<p><strong>The order of the days matters</strong>; Before Firefox 49, <code>weekdayRange("<em>SUN", "SAT"</em>)</code> will always evaluate to true. Now <code>weekdayRange("<em>WED", "SUN"</em>)</code> will only evaluate true if the current day is Wednesday or Sunday.</p>
-</div>
+**wd1** と **wd1** の両方が定義されている場合、現在の曜日がその 2 つの曜日の間にあるとき、条件は true となります。境界を含みますが、_順序付けされたものです_。 "GMT" 引数が指定された場合、時刻は GMT とみなされます。それ以外の場合は、ローカルのタイムゾーンが使用されます。
 
-<h4 id="Examples_9">Examples</h4>
+> **Warning:** _曜日の順番が重要です_。
+> Firefox 49 以前では、`weekdayRange("SUN", "SAT")` は常に `true` と評価されます。
+> `weekdayRange("WED", "SUN")` は、現在の曜日が水曜日か日曜日の場合にのみ `true` と評価されるようになりました。
 
-<pre class="brush: js notranslate">weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
+#### 例
+
+```js
+weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
 weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
 weekdayRange("SAT");               // returns true on Saturdays local time
 weekdayRange("SAT", "GMT");        // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)</pre>
+weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)
+```
 
-<h3 id="dateRange">dateRange()</h3>
+### dateRange()
 
-<h4 id="Syntax_12">Syntax</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">dateRange(&lt;day&gt; | &lt;month&gt; | &lt;year&gt;, [gmt])  // ambiguity is resolved by assuming year is greater than 31
-dateRange(&lt;day1&gt;, &lt;day2&gt;, [gmt])
-dateRange(&lt;month1&gt;, &lt;month2&gt;, [gmt])
-dateRange(&lt;year1&gt;, &lt;year2&gt;, [gmt])
-dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;day2&gt;, &lt;month2&gt;, [gmt])
-dateRange(&lt;month1&gt;, &lt;year1&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])
-dateRange(&lt;day1&gt;, &lt;month1&gt;, &lt;year1&gt;, &lt;day2&gt;, &lt;month2&gt;, &lt;year2&gt;, [gmt])</pre>
+```js
+dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
+dateRange(<day1>, <day2>, [gmt])
+dateRange(<month1>, <month2>, [gmt])
+dateRange(<year1>, <year2>, [gmt])
+dateRange(<day1>, <month1>, <day2>, <month2>, [gmt])
+dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
+dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
+```
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+> **Note:** （Firefox 49 以前）関数がこれらの引数を範囲として評価したい場合、 day1 は day2 よりも小さく、 month1 は month2 よりも小さく、 year1 は year2 よりも小さくなければなりません。以下の警告を参照してください。
 
-<h4 id="Parameters_13">Parameters</h4>
+#### 引数
 
-<dl>
- <dt>day</dt>
- <dd>Is the ordered day of the month between 1 and 31 (as an integer).</dd>
-</dl>
+- day
+  - : 1 から 31 までの月内の順序付き日数（整数値）。
 
-<pre class="syntaxbox notranslate">1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31</pre>
+```html
+1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+```
 
-<dl>
- <dt>month</dt>
- <dd>Is one of the ordered month strings below.</dd>
-</dl>
+- month
+  - : は、以下の順序の月の文字列のいずれかです。
 
-<pre class="syntaxbox notranslate">"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"</pre>
+```html
+"JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
+```
 
-<dl>
- <dt>year</dt>
- <dd>Is the ordered full year integer number. For example, 2016 (<strong>not</strong> 16).</dd>
- <dt>gmt</dt>
- <dd>Is either the string "GMT", which makes time comparison occur in GMT timezone, or is left out. If left unspecified, times are taken to be in the local timezone.</dd>
-</dl>
+- year
+  - : 順序の通年の整数値です。例: 2016 （16 **ではない**）。
+- gmt
+  - : 文字列 "GMT" を指定すると、GMT タイムゾーンで時刻の比較を行います。指定しない場合は、ローカルタイムゾーンでの時刻と見なされます。
 
-<p>If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
+1つの値のみが指定された場合（日、月、年のカテゴリーから）、この関数はその指定に一致する日にのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で true となり、境界も含まれますが、境界は順序付けされます_。
 
-<div class="warning">
-<p><strong>The order of the days, months, and years matter</strong>; Before Firefox 49, <code>dateRange("<em>JAN", "DEC"</em>)</code> will always evaluate to <code>true</code>. Now <code>dateRange("<em>DEC", "JAN"</em>)</code> will only evaluate true if the current month is December or January.</p>
-</div>
+> **Warning:** **日、月、年の順序が重要です**。 Firefox 49 以前では、 `dateRange("JAN", "DEC")` は常に `true` と評価されます。現在では、 `dateRange("DEC", "JAN")` は現在の月が 12 月か 1 月のときのみ、 true と評価されます。
 
-<h4 id="Examples_10">Examples</h4>
+#### 例
 
-<pre class="brush: js notranslate">dateRange(1);            // returns true on the first day of each month, local timezone
+```js
+dateRange(1);            // returns true on the first day of each month, local timezone
 dateRange(1, "GMT")      // returns true on the first day of each month, GMT timezone
 dateRange(1, 15);        // returns true on the first half of each month
 dateRange(24, "DEC");    // returns true on 24th of December each year
@@ -488,109 +483,131 @@ dateRange(1995);
 // returns true during the entire year of 1995
 
 dateRange(1995, 1997);
-// returns true from beginning of year 1995 until the end of year 1997</pre>
+// returns true from beginning of year 1995 until the end of year 1997
+```
 
-<h3 id="timeRange">timeRange()</h3>
+### timeRange()
 
-<h4 id="Syntax_13">Syntax</h4>
+#### 構文
 
-<pre class="syntaxbox notranslate">// The full range of expansions is analogous to dateRange.
-timeRange(&lt;hour1&gt;, &lt;min1&gt;, &lt;sec1&gt;, &lt;hour2&gt;, &lt;min2&gt;, &lt;sec2&gt;, [gmt])</pre>
+```html
+// The full range of expansions is analogous to dateRange.
+timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
+```
 
-<div class="note">
-<p><strong>Note:</strong> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.</p>
-</div>
+> **Note:** （Firefox 49以前）関数がこれらの引数を範囲として評価したい場合、カテゴリー hour1, min1, sec1 は、カテゴリー hour2, min2, sec2 よりも小さくなければなりません。下記の警告を参照してください。
 
-<h4 id="Parameters_14">Parameters</h4>
+#### 引数
 
-<dl>
- <dt>hour</dt>
- <dd>Is the hour from 0 to 23. (0 is midnight, 23 is 11 pm.)</dd>
- <dt>min</dt>
- <dd>Minutes from 0 to 59.</dd>
- <dt>sec</dt>
- <dd>Seconds from 0 to 59.</dd>
- <dt>gmt</dt>
- <dd>Either the string "GMT" for GMT timezone, or not specified, for local timezone.</dd>
-</dl>
+- hour
+  - : 0 ～ 23 までの時です。 (0 は深夜、 23 は午後 11 時)
+- min
+  - : 0 ～ 59 の分。
+- sec
+  - : 0 ～ 59 の秒。
+- gmt
+  - : GMTタイムゾーンを表す文字列 "GMT"、またはローカルタイムゾーンを表す指定なしのどちらかです。
 
-<p>If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, <em>but the bounds are ordered</em>.</p>
+1 つの値のみが指定された場合（各カテゴリー：時、分、秒）、この関数は、その指定に一致する時間でのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で真となり、境界を含みますが、境界は順序付けされます_。
 
-<div class="warning">
-<p><strong>The order of the hour, minute, second matter</strong>; Before Firefox 49, <code>timeRange(<em>0, 23</em>)</code> will always evaluate to true. Now <code>timeRange(<em>23, 0</em>)</code> will only evaluate true if the current hour is 23:00 or midnight.</p>
-</div>
+> **Warning:** **時、分、秒の順序が重要です**。 Firefox 49 以前では、 `timeRange(0, 23)` は常に true と評価されます。現在は `timeRange(23, 0)` は現在の時刻が 23:00 か 0:00 のときだけ true と評価されます。
 
-<h4 id="Examples_11">Examples</h4>
+#### 例
 
-<pre class="brush: js notranslate">timerange(12);                // returns true from noon to 1pm
+```js
+timerange(12);                // returns true from noon to 1pm
 timerange(12, 13);            // returns true from noon to 1pm
 timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
 timerange(9, 17);             // returns true from 9am to 5pm
 timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
-timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight</pre>
+timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
+```
 
-<h2 id="Example_1">Example 1</h2>
+### alert()
 
-<h3 id="Use_proxy_for_everything_except_local_hosts">Use proxy for everything except local hosts</h3>
+#### 構文
 
-<div class="note">
-<p><strong>Note:</strong> Since all of the examples that follow are very specific, they have not been tested.</p>
-</div>
+```html
+alert(message)
+```
 
-<p>All hosts which aren't fully qualified, or the ones that are in local domain, will be connected to directly. Everything else will go through <code>w3proxy.mozilla.org:8080</code>. If the proxy goes down, connections become direct automatically:</p>
+#### 引数
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+- message
+  - : ログに出力する文字列
+
+ブラウザーコンソールにメッセージを出力します。
+
+#### 例
+
+```js
+alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
+alert("Error: shouldn't reach this clause.");      // log a simple message
+```
+
+## 例 1
+
+### ローカルホスト以外ではプロキシーを使用する
+
+> **Note:** この後の例はすべて非常に特殊なものであるため、テストはしていません。
+
+完全修飾されていないホストや、ローカルドメインにあるホストはすべて直接接続されます。それ以外はすべて `w3proxy.mozilla.org:8080` を介して接続されます。プロキシーがダウンした場合、自動的に直接接続になります。
+
+```js
+function FindProxyForURL(url, host) {
   if (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) {
     return "DIRECT";
   } else {
     return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> This is the simplest and most efficient autoconfig file for cases where there's only one proxy.</p>
-</div>
+> **Note:** これは、プロキシーが 1 つしかない場合の、最も単純で最も効率的な自動設定ファイルです。
 
-<h2 id="Example_2_2">Example 2</h2>
+## 例 2
 
-<h3 id="As_above_but_use_proxy_for_local_servers_which_are_outside_the_firewall">As above, but use proxy for local servers which are outside the firewall</h3>
+### 上記と同様だが、ファイアウォールの外側にあるローカルサーバーにはプロキシーを使用する
 
-<p>If there are hosts (such as the main Web server) that belong to the local domain but are outside the firewall and are only reachable through the proxy server, those exceptions can be handled using the <code>localHostOrDomainIs()</code> function:</p>
+ローカルドメインに属しているがファイアウォールの外にあり、プロキシサーバーを通さないと到達できないホスト (メインのウェブサーバーなど) がある場合、それらの例外は `localHostOrDomainIs()` 関数を使って処理することができます。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
-    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &amp;&amp;
-    !localHostOrDomainIs(host, "www.mozilla.org") &amp;&amp;
-    !localHostOrDoaminIs(host, "merchant.mozilla.org")
+    (isPlainHostName(host) || dnsDomainIs(host, ".mozilla.org")) &&
+    !localHostOrDomainIs(host, "www.mozilla.org") &&
+    !localHostOrDomainIs(host, "merchant.mozilla.org")
   ) {
     return "DIRECT";
   } else {
     return "PROXY w3proxy.mozilla.org:8080; DIRECT";
   }
-}</pre>
+}
+```
 
-<p>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts <code>www.mozilla.org</code> and <code>merchant.mozilla.org</code> will go through the proxy.</p>
+上記の例では、mozilla.org ドメインのローカルホスト以外のすべてにプロキシーを使用します。さらに例外として、ホスト `www.mozilla.org` と `merchant.mozilla.org` はプロキシーを経由して接続されることになります。
 
-<div class="note">
-<p><strong>Note</strong> the order of the above exceptions for efficiency: localHostOrDomainIs() functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the<em> or</em> expression before the <em>and</em> expression to achieve the above-mentioned efficient behaviour.</p>
-</div>
+> **Note:** 効率化のための例外処理、 `localHostOrDomainIs()` の関数はローカルドメインにある URL に対してのみ実行され、すべての URL に対して実行されるわけではありません。上記の効率的な動作を実現するために、 _and_ 式の前に _or_ 式を括弧で囲むことに注意してください。
 
-<h2 id="Example_3_2">Example 3</h2>
+## 例 3
 
-<h3 id="Use_proxy_only_if_cannot_resolve_host">Use proxy only if cannot resolve host</h3>
+### ホスト解決できない場合のみプロキシーを使用
 
-<p>This example will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:</p>
+この例は、内部のDNSサーバーが内部のホスト名しか解決できないように設定されている環境で動作し、解決できないホストに対してのみプロキシーを使用することを目的としています。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (isResolvable(host))
     return "DIRECT";
   else
     return "PROXY proxy.mydomain.com:8080";
-}</pre>
+}
+```
 
-<p>The above requires consulting the DNS every time; it can be grouped intelligently with other rules so that DNS is consulted only if other rules do not yield a result:</p>
+上記では毎回 DNS を参照する必要があるが、他のルールとインテリジェントにグループ化し、他のルールで結果が得られない場合にのみ DNS を参照するようにすることができる。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
@@ -600,24 +617,28 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   } else {
     return "PROXY proxy.mydomain.com:8080";
   }
-}</pre>
+}
+```
 
-<h2 id="Example_4">Example 4</h2>
+## 例 4
 
-<h3 id="Subnet_based_decisions">Subnet based decisions</h3>
+### サブネットに基づく決定
 
-<p>In this example all of the hosts in a given subnet are connected-to directly, others are connected through the proxy:</p>
+この例では、あるサブネットのすべてのホストが直接接続され、他のホストはプロキシーを介して接続されています。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (isInNet(host, "198.95.0.0", "255.255.0.0"))
     return "DIRECT";
   else
     return "PROXY proxy.mydomain.com:8080";
-}</pre>
+}
+```
 
-<p>Again, use of the DNS server in the above can be minimized by adding redundant rules in the beginning:</p>
+ここでも、最初に冗長なルールを追加することで、上記の DNS サーバーを使用することを最小限に抑えることができます。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
@@ -627,42 +648,26 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   } else {
     return "PROXY proxy.mydomain.com:8080";
   }
-}</pre>
+}
+```
 
-<h2 id="Example_5">Example 5</h2>
+## 例 5
 
-<h3 id="Load_balancingrouting_based_on_URL_patterns">Load balancing/routing based on URL patterns</h3>
+### URL パターンに基づく負荷分散/ルーティング
 
-<p>This example is more sophisticated. There are four (4) proxy servers; one of them is a hot stand-by for all of the other ones, so if any of the remaining three goes down the fourth one will take over. Furthermore, the three remaining proxy servers share the load based on URL patterns, which makes their caching more effective (there is only one copy of any document on the three servers - as opposed to one copy on each of them). The load is distributed like this:</p>
+この例はより洗練されています。4 台のプロキシサーバがあり、そのうちの 1 台は他のすべてのプロキシーサーバーの ホットスタンバイとなっていて、残りの 3 台のうちの 1 台がダウンすると、 4 台目が見なされます。さらに、残りの 3 つのプロキシーサーバーは URL パターンに基づいて負荷を分担し、キャッシュをより効果的にしています（3 つのサーバーにはどの文書も 1 つのコピーしかありません - それぞれに 1 つのコピーがあるのとは対照的です）。負荷はこのように配分されます。
 
-<table>
- <tbody>
-  <tr>
-   <th>Proxy</th>
-   <th>Purpose</th>
-  </tr>
-  <tr>
-   <td>#1</td>
-   <td>.com domain</td>
-  </tr>
-  <tr>
-   <td>#2</td>
-   <td>.edu domain</td>
-  </tr>
-  <tr>
-   <td>#3</td>
-   <td>all other domains</td>
-  </tr>
-  <tr>
-   <td>#4</td>
-   <td>hot stand-by</td>
-  </tr>
- </tbody>
-</table>
+| プロキシー | 目的           |
+| ----- | ----------------- |
+| #1    | .com ドメイン       |
+| #2    | .edu ドメイン       |
+| #3    | その他のすべてのドメイン |
+| #4    | ホットスタンバイ      |
 
-<p>All local accesses are desired to be direct. All proxy servers run on the port 8080 (they don't need to, you can just change your port but remember to modify your configuations on both side). Note how strings can be concatenated with the <code><strong>+</strong></code> operator in JavaScript.</p>
+ローカルからのアクセスはすべて直接であることが望まれます。すべてのプロキシサーバーは 8080 番ポートで動作します（要件ではありません。ポートを変更すればいいのです。ただし、両側の設定を変更するのを忘れないでください）。 JavaScript の **`+`** 演算子で文字列を連結することができることに注意してください。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
 
   if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
     return "DIRECT";
@@ -678,15 +683,17 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   else
     return "PROXY proxy3.mydomain.com:8080; " +
            "PROXY proxy4.mydomain.com:8080";
-}</pre>
+}
+```
 
-<h2 id="Example_6">Example 6</h2>
+## 例 6
 
-<h3 id="Setting_a_proxy_for_a_specific_protocol">Setting a proxy for a specific protocol</h3>
+### 特定のプロトコルのプロキシーを設定する
 
-<p>Most of the standard JavaScript functionality is available for use in the <code>FindProxyForURL()</code> function. As an example, to set different proxies based on the protocol the {{jsxref("String.prototype.startsWith()", "startsWith()")}} function can be used:</p>
+標準的な JavaScript の機能のほとんどは、 `FindProxyForURL()` 関数を使用して使用することが可能です。例として、プロトコルに応じて異なるプロキシーを設定するために {{jsxref("String.prototype.startsWith()", "startsWith()")}} 関数を使用することができます。
 
-<pre class="brush: js notranslate">function FindProxyForURL(url, host) {
+```js
+function FindProxyForURL(url, host) {
 
   if (url.startsWith("http:"))
     return "PROXY http-proxy.mydomain.com:8080";
@@ -694,7 +701,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   else if (url.startsWith("ftp:"))
     return "PROXY ftp-proxy.mydomain.com:8080";
 
-  else if (url.startsWith(“gopher:"))
+  else if (url.startsWith("gopher:"))
     return "PROXY gopher-proxy.mydomain.com:8080";
 
   else if (url.startsWith("https:") || url.startsWith("snews:"))
@@ -703,30 +710,27 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
   else
     return "DIRECT";
 
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note:</strong> The same can be accomplished using the <code><a href="#shExpMatch">shExpMatch()</a></code> function described earlier.</p>
-</div>
+> **Note:** 同じことは、先に記述した [`shExpMatch()`](#shexpmatch) 関数を使って実現することができます。
 
-<p>For example:</p>
+例:
 
-<pre class="brush: js notranslate">// ...
+```js
 if (shExpMatch(url, "http:*")) {
   return "PROXY http-proxy.mydomain.com:8080";
 }
-// ...</pre>
+```
 
-<div class="note">
-<p>The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the <code>REMOTE_ADDR</code> environment variable in CGI).</p>
+> **Note:** autoconfig ファイルは CGI スクリプトによって出力することができます。これは例えば、クライアントの IP アドレス（CGI では `REMOTE_ADDR` 環境変数）に基づいて autoconfig ファイルが異なる動作をするようにする場合に便利です。
+>
+> isInNet()`, `isResolvable()`, `dnsResolve()` 関数の使用は、 DNS サーバーを参照する必要があるため、慎重に検討されるべきです。その他の autoconfig 関連の関数はすべて、 DNS サーバーを使用する必要のない単なる文字列一致関数である。プロキシーを使用した場合は、プロキシーが DNS ルックアップを行うため、 DNS サーバーへの影響が倍増する。ほとんどの場合、これらの関数は目的の結果を得るためには必要ない。
 
-<p>Usage of <code>isInNet()</code>, <code>isResolvable()</code> and <code>dnsResolve()</code> functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.</p>
-</div>
+## 歴史と実装
 
-<h2 id="History_and_implementation">History and implementation</h2>
+プロキシー自動設定は、 JavaScript が導入された 1990 年代後半に Netscape Navigator 2.0 に導入されました。 Netscape のオープンソース化は、最終的に Firefox 自体につながっています。
 
-<p>Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, at the same time when JavaScript was introduced. Open-sourcing Netscape eventually lead to Firefox itself.</p>
+PAC とその JavaScript ライブラリーの最も「オリジナルな」実装は、したがって、 Firefox の初期バージョンにある `nsProxyAutoConfig.js` です。これらのユーティリティは [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h) を含む他の多くのオープンソースシステムで見つかります。 Firefox では、後にこのファイルを [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) に C++ 文字列リテラルとして統合しています。これを独自のファイルに展開するには、その塊を JavaScript にコピーして、それを表示するための `console.log` ディレクティブを指定すれば十分です。
 
-<p>The most "original" implementation of PAC and its JavaScript libraries is, therefore, <code>nsProxyAutoConfig.js</code> found in early versions of Firefox. These utilities are found in many other open-source systems including <a href="https://cs.chromium.org/chromium/src/services/proxy_resolver/pac_js_library.h">Chromium</a>. Firefox later integrated the file into <code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp">ProxyAutoConfig.cpp</a></code> as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a <code>console.log</code> directive to print it.</p>
-
-<p>Microsoft in general made its own implementation. There used to be <a href="https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems">some problems with their libraries</a>, but most are resolved by now. They have defined <a href="https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format">some new "Ex" suffixed functions</a> around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=558253">bugzilla #558253</a>).</p>
+マイクロソフトは一般に独自の実装をしています。以前は[ライブラリーの問題](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems)もありましたが、現在はほとんど解決しています。 IPv6 に対応するために、アドレス処理部分を中心に[いくつかの新しい "Ex" 接尾辞付き関数](https://docs.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format)を定義しているそうです。この機能は Chromium では対応していますが、 Firefox ではまだ対応していません ([bugzilla #558253](https://bugzilla.mozilla.org/show_bug.cgi?id=558253))。
