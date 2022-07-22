@@ -144,12 +144,12 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 <p>有关本节中使用的 JavaScript 的更多信息：</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/Document/createElement">document.createElement()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Document/createTextNode">document.createTextNode()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Document/createDocumentFragment">document.createDocumentFragment()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">eventTarget.addEventListener()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Node/appendChild">node.appendChild()</a></code></li>
- <li><code><a href="/en-US/docs/Web/API/Node/removeChild">node.removeChild()</a></code></li>
+ <li><code><a href="/zh-CN/docs/Web/API/Document/createElement">document.createElement()</a></code></li>
+ <li><code><a href="/zh-CN/docs/Web/API/Document/createTextNode">document.createTextNode()</a></code></li>
+ <li><code><a href="/zh-CN/docs/Web/API/Document/createDocumentFragment">document.createDocumentFragment()</a></code></li>
+ <li><code><a href="/zh-CN/docs/Web/API/EventTarget/addEventListener">eventTarget.addEventListener()</a></code></li>
+ <li><code><a href="/zh-CN/docs/Web/API/Node/appendChild">node.appendChild()</a></code></li>
+ <li><code><a href="/zh-CN/docs/Web/API/Node/removeChild">node.removeChild()</a></code></li>
 </ul>
 
 <h2 id="另一种打造_ui_的方式">另一种打造 UI 的方式</h2>
@@ -169,7 +169,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 <p>感谢 Vue 让我们不必编写自己的函数来构建 UI；我们仅仅需要向 Vue 描述每个项目应该是什么样子，然后 Vue 会以很好的、高效的方式帮我们处理好。因此熟悉 Vue 的开发者可以轻松的加入我们的项目，快速地搞清楚项目是如何运作的。不仅仅是 Vue：使用其它框架也可以提高团队和个人的效率。</p>
 
-<p>其实在原生 JavaScript 中也可以做<em>与此类似</em>的事情。<a href="/zh-CN/docs/Web/JavaScript/Reference/Template_literals">模板字符串</a>使得编写表示最终元素外观的 HTML 字符串变得容易起来。对于像创建上文示例的 To-Do 清单那样简单的应用来说，这可能是一种有用的方法，但它对于管理数千条数据记录的大型应用程序来说是难以维护的，and could render just as many unique elements in a user interface。</p>
+<p>其实在原生 JavaScript 中也可以做<em>与此类似</em>的事情。<a href="/zh-CN/docs/Web/JavaScript/Reference/Template_literals">模板字符串</a>使得编写表示最终元素外观的 HTML 字符串变得容易起来。对于像创建上文示例的 To-Do 清单那样简单的应用来说，这可能是一种有用的方法，但它对于管理数千条数据记录，且可以在用户界面上渲染许多独特元素的大型应用程序来说，是难以维护的。</p>
 
 <h2 id="框架提供给我们的其他功能">框架提供给我们的其他功能</h2>
 
@@ -177,7 +177,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 <h3 id="工具">工具</h3>
 
-<p>Because each of the frameworks in this module have a large, active community, each framework's ecosystem provides tooling that Improves the developer experience. These tools make it easy to add things like testing (to ensure that your application behaves as it should) or linting (to ensure that your code is error-free and stylistically consistent).</p>
+<p>由于此模块中的每个框架都有一个庞大而活跃的社区，因此每个框架的体系都提供了工具来改善开发体验。这些工具让诸如添加测试（确保你的应用表现应有的行为）和 linting（确保你的代码没有错误且排版统一）变得更加容易。</p>
 
 <div class="blockIndicator note">
 <p><strong>备注：</strong> 如果你想了解有关 Web 工具概念的更多详细信息，请阅读<a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview">客户端工具概述</a>。</p>
@@ -185,7 +185,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 <h3 id="组件化">组件化</h3>
 
-<p>大多数框架都鼓励开发人员将其用户界面的不同部分抽象为<em>组件（components）</em>——可维护、可重用且可以相互通信的代码块。与给定组件相关的所有代码都可以存在于一个文件（或几个特定文件）中，因此身为开发人员的你就可以轻松地知道去哪里修改目标组件。在原生 JavaScript 中，你就必须花时间创建自己的一套高效、可扩展的编码约定来实现这一点。Many JavaScript developers, if left to their own devices, could end up with all the code related to one part of the UI being spread out all over a file — or in another file altogether.</p>
+<p>大多数框架都鼓励开发人员将其用户界面的不同部分抽象为<em>组件（components）</em>——可维护、可重用且可以相互通信的代码块。与给定组件相关的所有代码都可以存在于一个文件（或几个特定文件）中，因此身为开发人员的你就可以轻松地知道去哪里修改目标组件。在原生 JavaScript 中，你就必须花时间创建自己的一套高效、可扩展的编码约定来实现这一点。如果让许多 JavaScript 开发人员使用他们自己的设备，最终可能会导致与 UI 某个部分相关的所有代码分布在一个文件中——或者完全分布在另一个文件中。</p>
 
 <h3 id="路由">路由</h3>
 
@@ -199,25 +199,25 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 <h2 id="使用框架的注意事项">使用框架的注意事项</h2>
 
-<p>Being an effective web developer means using the most appropriate tools for the job. JavaScript frameworks make front-end application development easy, but they are not a silver bullet that will solve all problems. This section talks about some of the things you should consider when using frameworks. Bear in mind that you might not need a framework at all — beware that you don't end up using a framework just for the sake of it.</p>
+<p>作为一名高效的 web 开发人员，意味着使用最合适的工具来完成工作。JavaScript 框架使前端应用开发变得容易，但它们并不是解决所有问题的灵丹妙药。本节讨论在使用框架时你应该考虑的一些事项。请记住，你也许根本不需要框架——要注意不要为了使用框架而使用框架。</p>
 
-<h3 id="Familiarity_with_the_tool">Familiarity with the tool</h3>
+<h3 id="Familiarity_with_the_tool">熟悉工具</h3>
 
-<p>Just like vanilla JavaScript, frameworks take time to learn and have their quirks. Before you decide to use a framework for a project, be sure you have time to learn enough of its features for it to be useful to you rather than it working against you, and be sure that your teammates are comfortable with it as well.</p>
+<p>就像原生 JavaScript 一样，框架需要时间来学习，也有它们自己的特性。在你决定为项目使用框架之前，确保你有足够的时间学习它的特性，使它发挥功效，而不是阻碍你，并确保你的团队成员也对它满意。</p>
 
-<h3 id="Overengineering">Overengineering</h3>
+<h3 id="Overengineering">过度工程化</h3>
 
-<p>If your web development project is a personal portfolio with a few pages, and those pages have little or no interactive capability, a framework (and all of its JavaScript) may not be necessary at all. That said, frameworks are not a monolith, and some of them are better-suited to small projects than others. In an article for Smashing Magazine, Sarah Drasner writes about how <a href="https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/">Vue can replace jQuery</a> as a tool for making small portions of a webpage interactive.</p>
+<p>如果你的 web 开发项目是一个只有几个页面的个人作品集，并且这些页面几乎没有交互功能，那么可能根本不需要框架（及其所有的 JavaScript）。也就是说，框架并不是一个整体，其中一些框架比其他框架更适合于小型项目。Sarah Drasner 在 Smashing 杂志的一篇文章中写道：作为一种使网页的一小部分具有交互性的工具 <a href="https://www.smashingmagazine.com/2018/02/jquery-vue-javascript/">Vue 是如何取代 jQuery 的</a> 。</p>
 
-<h3 id="Larger_code_base_and_abstraction">Larger code base and abstraction</h3>
+<h3 id="Larger_code_base_and_abstraction">大型代码库与抽象</h3>
 
-<p>Frameworks allow you to write more declarative code – and sometimes <em>less</em> code overall – by dealing with the DOM interactions for you, behind the scenes. This abstraction is great for your experience as a developer, but it isn't free. In order to translate what you write into DOM changes, frameworks have to run their own code, which in turn makes your final piece of software larger and more computationally expensive to operate.</p>
+<p>通过在幕后处理 DOM 交互，框架允许你编写更多的声明式代码，有时总体上可以编写<em>更少</em>的代码。这种抽象对于你作为开发者的体验非常好，但它也是有代价的。为了将你编写的内容转换为 DOM 的变更，框架必须运行自己的代码，这反过来又会使你最终的软件变得更大，并且花费更高的运行成本。</p>
 
-<p>Some extra code is inevitable, and a framework that supports tree-shaking (removal of any code that isn't actually used in the app during the build process) will allow you to keep your applications small, but this is still a factor you need to keep in mind when considering your app's performance, especially on more network/storage-constrained devices, like mobile phones.</p>
+<p>一些额外的代码是必不可少的，且一个支持 tree-shaking 的框架（在构建过程中删除应用程序实际未使用的代码）将使你保持应用程序的小型化；但这仍然是你在考虑应用程序性能时需要记住的一个因素，尤其是在网络/存储限制更严格的设备上，比如手机。</p>
 
-<p>The abstraction of frameworks affects not only your JavaScript, but your relationship with the very nature of the web. No matter how you build for the web, the end result, the layer that your users ultimately interact with, is HTML. Writing your whole application in JavaScript can make you lose sight of HTML and the purpose of its various tags, and lead you to produce an HTML document that is un-semantic and inaccessible. In fact, it's possible to write a fragile application that depends entirely on JavaScript and will not function without it.</p>
+<p>框架的抽象不仅影响 JavaScript，还影响你与 web 的本质关系。无论你如何构建 web，最终，用户都是与 HTML 交互。用 JavaScript 编写整个应用可能会使你忽略 HTML 及其各种标签的用途，并导致产出一个无语义且难以使用的 HTML 文档。实际上，完全依赖 JavaScript 有可能写出脆弱的应用，且没有 JavaScript 就无法运行。</p>
 
-<p>Frameworks are not the source of our problems. With the wrong priorities, it's possible for <em>any</em> application to be fragile, bloated, and inaccessible. Frameworks do, however, amplify our priorities as developers. If your priority is to make a complex web app, it's easy to do that. However, if your priorities don't carefully guard performance and accessibility, frameworks will amplify your fragility, your bloat, and your inaccessibility. Modern developer priorities, amplified by frameworks, have inverted the structure of the web in many places. Instead of a robust, content-first network of documents, the web now often puts JavaScript first and user experience last.</p>
+<p>框架不是问题的根源。错误的优先级可能使得<em>任何</em>应用变得脆弱、臃肿和难以使用。然而，框架确实放大了我们作为开发人员的优先级。如果你的首要任务是制作一个复杂的 web 应用程序，那么很容易做到。然而，如果你的优先级没有放在确保性能和无障碍上，那么框架将放大这种脆弱、臃肿和难以使用。现代开发人员的这种重心被框架放大，已经在许多地方颠倒了 web 的结构。现代 web 通常把 JavaScript 放在首位，用户体验放在最后，而不是一个健壮的、内容优先的文档网络。</p>
 
 <h2 id="框架驱动页面的可访问性">框架驱动页面的可访问性</h2>
 
