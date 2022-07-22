@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>String</code></strong> 全局对象是一个用于字符串或一个字符序列的构造函数。</p>
+<p><strong><code>String</code></strong> 全局对象是一个用于字符串或一个字符序列的构造函数。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 "ਪੰਜਾਬੀ"
 "한국어"</pre>
 
-<p>你也能使用 <code>String</code> 函数将其他值生成或转换成字符串：</p>
+<p>你也能使用 <code>String</code> 函数将其他值生成或转换成字符串：</p>
 
 <pre class="syntaxbox">String(thing)
 new String(thing)</pre>
@@ -143,7 +143,7 @@ otherwise my code is unreadable.";</code></pre>
 
 <h2 id="Description">描述</h2>
 
-<p>字符串对于保存可以以文本形式表示的数据非常有用。 一些常用的字符串操作有：查询<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length">字符串长度</a>，使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators"> + 和 += </a>运算符来构建和连接字符串，使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf</a> 方法检查某一子字符串在父字符串中的位置，又或是使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring</a> 方法提取从父字符串中提取子字符串。</p>
+<p>字符串对于保存可以以文本形式表示的数据非常有用。 一些常用的字符串操作有：查询<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/length">字符串长度</a>，使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/String_Operators"> + 和 += </a>运算符来构建和连接字符串，使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf</a> 方法检查某一子字符串在父字符串中的位置，又或是使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring</a> 方法提取从父字符串中提取子字符串。</p>
 
 <h3 id="Character_access">从字符串中获取单个字符</h3>
 
@@ -152,16 +152,16 @@ otherwise my code is unreadable.";</code></pre>
 <pre class="brush: js">return 'cat'.charAt(1); // returns "a"
 </pre>
 
-<p>另一种 (在 ECMAScript 5 中有所介绍) 是把字符串当作一个类似数组的对象，其中的每个字符对应一个数值索引：</p>
+<p>另一种 (在 ECMAScript 5 中有所介绍) 是把字符串当作一个类似数组的对象，其中的每个字符对应一个数值索引：</p>
 
 <pre class="brush: js">return 'cat'[1]; // returns "a"
 </pre>
 
-<p>使用括号访问字符串不可以对其进行删除或添加，因为字符串对应未知的属性并不是可读或配置的。 (更多的信息请参阅 {{jsxref("Object.defineProperty")}}。 )</p>
+<p>使用括号访问字符串不可以对其进行删除或添加，因为字符串对应未知的属性并不是可读或配置的。 (更多的信息请参阅 {{jsxref("Object.defineProperty")}}。 )</p>
 
 <h3 id="Comparing_strings">字符串比较</h3>
 
-<p>熟练使用 C 语言的开发者经常使用 <code>strcmp</code> 函数来比较字符串，但在 JavaScript 中，你只需要使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较操作符 (&gt;/&lt;/&gt;=/&lt;=)</a>：</p>
+<p>熟练使用 C 语言的开发者经常使用 <code>strcmp</code> 函数来比较字符串，但在 JavaScript 中，你只需要使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比较操作符 (&gt;/&lt;/&gt;=/&lt;=)</a>：</p>
 
 <pre class="brush: js">var a = "a";
 var b = "b";
@@ -173,7 +173,7 @@ else
   print(a + " and " + b + " are equal.");
 </pre>
 
-<p>使用从字符串实例继承而来的 {{jsxref("String.localeCompare", "localeCompare")}} 方法也能达到同样的效果。 </p>
+<p>使用从字符串实例继承而来的 {{jsxref("String.localeCompare", "localeCompare")}} 方法也能达到同样的效果。 </p>
 
 <h3 id="基本字符串和字符串对象的区别">基本字符串和字符串对象的区别</h3>
 
@@ -188,7 +188,7 @@ console.log(typeof s_prim); // Logs "string"
 console.log(typeof s_obj);  // Logs "object"
 </pre>
 
-<p>当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和字符串对象也会产生不同的结果。<code>eval</code> 会将基本字符串作为源代码处理; 而字符串对象则被看作对象处理，返回对象。 例如：</p>
+<p>当使用 {{jsxref("Global_Objects/eval", "eval")}}时，基本字符串和字符串对象也会产生不同的结果。<code>eval</code> 会将基本字符串作为源代码处理; 而字符串对象则被看作对象处理，返回对象。 例如：</p>
 
 <pre class="brush: js">s1 = "2 + 2";               // creates a string primitive
 s2 = new String("2 + 2");   // creates a String object
@@ -204,7 +204,7 @@ console.log(eval(s2));      // returns the string "2 + 2"
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong> 其他的将字符串对象转换成基本字符串的方法可以及参考 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView" title="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</p>
+<p><strong>备注：</strong> 其他的将字符串对象转换成基本字符串的方法可以及参考 <a href="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView" title="/zh-CN/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a>.</p>
 </div>
 
 <h2 id="属性">属性</h2>
@@ -217,10 +217,10 @@ console.log(eval(s2));      // returns the string "2 + 2"
 <h2 id="Methods">方法</h2>
 
 <dl>
- <dt>{{jsxref("String.fromCharCode()")}}  </dt>
- <dd> <strong>通过一串 Unicode 创建字符串。</strong></dd>
+ <dt>{{jsxref("String.fromCharCode()")}}  </dt>
+ <dd> <strong>通过一串 Unicode 创建字符串。</strong></dd>
  <dt>{{jsxref("String.fromCodePoint()")}} {{experimental_inline}}</dt>
- <dd>通过一串 码点 创建字符串。</dd>
+ <dd>通过一串 码点 创建字符串。</dd>
 </dl>
 
 <div>
@@ -246,7 +246,7 @@ console.log(String.replace(num, /5/, '2'));
 
 <p>{{jsxref("Global_Objects/Array", "Generics", "#Array_generic_methods", 1)}} 在 Javascript 1.6 中同样支持{{jsxref("Global_Objects/Array", "Array")}}。</p>
 
-<h2 id="String_instances"><code>String</code> 实例</h2>
+<h2 id="String_instances"><code>String</code> 实例</h2>
 
 <h3 id="属性_2">属性</h3>
 
@@ -254,7 +254,7 @@ console.log(String.replace(num, /5/, '2'));
 
 <p>{{page('zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods')}}</p>
 
-<h2 id="示例">示例 </h2>
+<h2 id="示例">示例 </h2>
 
 <h3 id="将其他值转换成字符串">将其他值转换成字符串</h3>
 

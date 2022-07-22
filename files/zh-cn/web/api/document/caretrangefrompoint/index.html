@@ -3,9 +3,9 @@ title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
 translation_of: Web/API/Document/caretRangeFromPoint
 ---
-<p>{{APIRef("DOM")}}{{Non-standard_header}} </p>
+<p>{{APIRef("DOM")}}{{Non-standard_header}} </p>
 
-<p>{{domxref("Document")}} 的 <code><strong>caretRangeFromPoint()</strong></code> 方法返回一个 Range 对象（指定坐标的文档片段）。</p>
+<p>{{domxref("Document")}} 的 <code><strong>caretRangeFromPoint()</strong></code> 方法返回一个 Range 对象（指定坐标的文档片段）。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/Document/caretRangeFromPoint
 
 <ul>
  <li>A {{domxref("Range")}}.</li>
- <li><code>Null</code>, 若 <strong>x</strong> 或 <strong>y</strong> 不存在、在视图外或在没有文本节点的位置。</li>
+ <li><code>Null</code>, 若 <strong>x</strong> 或 <strong>y</strong> 不存在、在视图外或在没有文本节点的位置。</li>
 </ul>
 
 <h3 id="参数">参数</h3>
@@ -45,37 +45,37 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 
 <pre class="brush: js">function insertBreakAtPoint(e) {
 
-    var range;
-    var textNode;
-    var offset;
+    var range;
+    var textNode;
+    var offset;
 
-    if (document.caretPositionFromPoint) {
-        range = document.caretPositionFromPoint(e.clientX, e.clientY);
-        textNode = range.offsetNode;
-        offset = range.offset;
+    if (document.caretPositionFromPoint) {
+        range = document.caretPositionFromPoint(e.clientX, e.clientY);
+        textNode = range.offsetNode;
+        offset = range.offset;
 
-    } else if (document.caretRangeFromPoint) {
-        range = document.caretRangeFromPoint(e.clientX, e.clientY);
-        textNode = range.startContainer;
-        offset = range.startOffset;
-    }
+    } else if (document.caretRangeFromPoint) {
+        range = document.caretRangeFromPoint(e.clientX, e.clientY);
+        textNode = range.startContainer;
+        offset = range.startOffset;
+    }
 
-    // only split TEXT_NODEs
-    if (textNode &amp;&amp; textNode.nodeType == 3) {
-        var replacement = textNode.splitText(offset);
-        var br = document.createElement('br');
-        textNode.parentNode.insertBefore(br, replacement);
-    }
+    // only split TEXT_NODEs
+    if (textNode &amp;&amp; textNode.nodeType == 3) {
+        var replacement = textNode.splitText(offset);
+        var br = document.createElement('br');
+        textNode.parentNode.insertBefore(br, replacement);
+    }
 }
 
 var paragraphs = document.getElementsByTagName("p");
 for (i=0 ; i &lt; paragraphs.length; i++) {
-    paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
+    paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
 }</pre>
 
 <p>{{ EmbedLiveSample('Example', '', '', '', 'Web/API/Document/caretRangeFromPoint') }}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

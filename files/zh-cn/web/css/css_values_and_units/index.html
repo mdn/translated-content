@@ -5,22 +5,22 @@ translation_of: Web/CSS/CSS_Values_and_Units
 ---
 <div>{{CSSRef}}</div>
 
-<p>所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。 下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。</p>
+<p>所有的 CSS 声明都包括一个 属性 / 值 对。由于属性不同，对应的值可能是一个单个整数或关键字，也可能是一串包含或不包含计数单位的数字和关键字的集合。CSS 中属性接受一个共同的数据类型（属性的值和对应的单位）。 下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。</p>
 
 <h2 id="文本数据类型">文本数据类型</h2>
 
 <ul>
  <li>{{cssxref("&lt;custom-ident&gt;")}}</li>
- <li>作为 <code>&lt;ident&gt;</code> 预定义的关键字</li>
+ <li>作为 <code>&lt;ident&gt;</code> 预定义的关键字</li>
  <li>{{cssxref("&lt;string&gt;")}}</li>
  <li>{{cssxref("&lt;url&gt;")}}</li>
 </ul>
 
-<p>文本数据类型要么是 <code>&lt;string&gt;</code>，要么是一系列字符的合集，或者是 <code>&lt;ident&gt;</code> —— 一个实质上是不带引号的字符串的"CSS 标识符"。一个 <code>&lt;string&gt;</code> 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 <code>&lt;ident&gt;</code> 或者 <code>&lt;custom-ident&gt;</code> 则必须不带引号。</p>
+<p>文本数据类型要么是 <code>&lt;string&gt;</code>，要么是一系列字符的合集，或者是 <code>&lt;ident&gt;</code> —— 一个实质上是不带引号的字符串的"CSS 标识符"。一个 <code>&lt;string&gt;</code> 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 <code>&lt;ident&gt;</code> 或者 <code>&lt;custom-ident&gt;</code> 则必须不带引号。</p>
 
-<p>在 CSS 标准中，属性的值可以由 Web 开发者指定，例如关键帧动画（keyframe animations），字体的名称（font-family names），或者是被列为 {{cssxref("&lt;custom-ident&gt;")}} 和 / 或 {{cssxref("&lt;string&gt;")}} 的栅格区域（grid-areas）。</p>
+<p>在 CSS 标准中，属性的值可以由 Web 开发者指定，例如关键帧动画（keyframe animations），字体的名称（font-family names），或者是被列为 {{cssxref("&lt;custom-ident&gt;")}} 和 / 或 {{cssxref("&lt;string&gt;")}} 的栅格区域（grid-areas）。</p>
 
-<p>当允许使用带引号或者不带引号的两种用户定义的文本属性值时，标准列出为 <code>&lt;custom-ident&gt; | &lt;string&gt;</code>，也就是说引号是可选的。例如在指定动画的名称时：</p>
+<p>当允许使用带引号或者不带引号的两种用户定义的文本属性值时，标准列出为 <code>&lt;custom-ident&gt; | &lt;string&gt;</code>，也就是说引号是可选的。例如在指定动画的名称时：</p>
 
 <pre class="brush: css notranslate">@keyframe validIdent {
   /* keyframes go here */
@@ -29,7 +29,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
   /* keyframes go here */
 }</pre>
 
-<p>有些文本属性值不允许被引号包围。例如， {{cssxref("grid-area")}} 属性对应的值可以是<code>&lt;custom-ident&gt;</code>，所以假设有一个栅格区域名为 <code>content</code> ，我们必须不带引号地使用：</p>
+<p>有些文本属性值不允许被引号包围。例如， {{cssxref("grid-area")}} 属性对应的值可以是<code>&lt;custom-ident&gt;</code>，所以假设有一个栅格区域名为 <code>content</code> ，我们必须不带引号地使用：</p>
 
 <pre class="brush: css notranslate">.item {
   grid-area: content;
@@ -43,13 +43,13 @@ translation_of: Web/CSS/CSS_Values_and_Units
 }
 </pre>
 
-<p>大多数时候你可以随心所欲地创建任何名称作为标识符，甚至包括使用 emoji 表情。然而标识符不能是 <code>none</code>，<code>unset</code>，<code>initial</code>， 或者 <code>inherit</code>，以两条短横线开头。并且，你也不可以使用任何已经预定义的 CSS 关键字。查看 {{cssxref("&lt;custom-ident&gt;")}} 和 {{cssxref("&lt;string&gt;")}} 页面了解更多信息。</p>
+<p>大多数时候你可以随心所欲地创建任何名称作为标识符，甚至包括使用 emoji 表情。然而标识符不能是 <code>none</code>，<code>unset</code>，<code>initial</code>， 或者 <code>inherit</code>，以两条短横线开头。并且，你也不可以使用任何已经预定义的 CSS 关键字。查看 {{cssxref("&lt;custom-ident&gt;")}} 和 {{cssxref("&lt;string&gt;")}} 页面了解更多信息。</p>
 
 <h3 id="预定义的关键值">预定义的关键值</h3>
 
 <p>预定义的关键值是由 CSS 标准为属性定义的文本值。这些关键字也属于 CSS 标识符，因此在使用时无需用引号包围。</p>
 
-<p>当在 CSS 标准或者 MDN 属性页面中查看某个 CSS 属性时，该属性所有允许的取值都会以下面表格的形式列出。下面的值是 {{cssxref("float")}} 属性可以取的预定义值：</p>
+<p>当在 CSS 标准或者 MDN 属性页面中查看某个 CSS 属性时，该属性所有允许的取值都会以下面表格的形式列出。下面的值是 {{cssxref("float")}} 属性可以取的预定义值：</p>
 
 <pre class="syntaxbox notranslate">left <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> right <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> none <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-start <a href="/en-US/docs/CSS/Value_definition_syntax#Single_bar" title="Single bar: exactly one of the entities must be present">|</a> inline-end</pre>
 
@@ -75,7 +75,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 <p>{{cssxref("&lt;url&gt;")}} 类型使用一个函数符号，接收一个<code>&lt;string&gt;</code>类型的 URL。这个 URL 可以是绝对地址或者相对地址。例如，如果你想要设置一张背景图片，那么你可以采用如下两种做法：</p>
 
 <pre class="brush: css notranslate"><code>.box {
-  background-image: url("images/my-background.png");
+  background-image: url("images/my-background.png");
 }</code>
 
 <code>.box {
@@ -83,7 +83,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 }</code>
 </pre>
 
-<p><code>url()</code>的参数可以也可以不使用引号。如果使用引号包围了 URL，那么它会被解析为一个<code>&lt;url-token&gt;</code>，包含对某些字符的额外转义。查看 {{cssxref("&lt;url&gt;")}} 以获取更多信息。</p>
+<p><code>url()</code>的参数可以也可以不使用引号。如果使用引号包围了 URL，那么它会被解析为一个<code>&lt;url-token&gt;</code>，包含对某些字符的额外转义。查看 {{cssxref("&lt;url&gt;")}} 以获取更多信息。</p>
 
 <h2 id="数值数据类型">数值数据类型</h2>
 
@@ -96,15 +96,15 @@ translation_of: Web/CSS/CSS_Values_and_Units
 
 <h3 id="整数">整数</h3>
 
-<p>一个整数包含 <code>0</code> 到 <code>9</code>的一个或多个十进制数字，例如 <code>1024</code> 或 <code>-55</code>。一个整数可能额外包含 <code>+</code> 或 <code>-</code> 前缀，在正负号和数值之间没有任何空格。</p>
+<p>一个整数包含 <code>0</code> 到 <code>9</code>的一个或多个十进制数字，例如 <code>1024</code> 或 <code>-55</code>。一个整数可能额外包含 <code>+</code> 或 <code>-</code> 前缀，在正负号和数值之间没有任何空格。</p>
 
 <h3 id="数值">数值</h3>
 
-<p>{{cssxref("&lt;number&gt;")}} 表示一个真正的数，有可能又或者没有小数点和小数部分。例如 <code>0.255</code>，<code>128</code> 或 <code>-1.2</code>。数值也可能包含前缀 <code>+</code> 或 <code>-</code> 标识正负。</p>
+<p>{{cssxref("&lt;number&gt;")}} 表示一个真正的数，有可能又或者没有小数点和小数部分。例如 <code>0.255</code>，<code>128</code> 或 <code>-1.2</code>。数值也可能包含前缀 <code>+</code> 或 <code>-</code> 标识正负。</p>
 
 <h3 id="尺寸">尺寸</h3>
 
-<p>{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 <code>&lt;number&gt;</code>，例如 <code>45deg</code>，<code>100ms</code>，或者 <code>10px</code>。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 <code>1 cm</code> 不是一个合法的值。</p>
+<p>{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 <code>&lt;number&gt;</code>，例如 <code>45deg</code>，<code>100ms</code>，或者 <code>10px</code>。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 <code>1 cm</code> 不是一个合法的值。</p>
 
 <p>CSS 使用尺寸来指定：</p>
 
@@ -122,7 +122,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 
 <p>一个距离单位，或这也称为长度（length），允许作为属性的值。它被描述为 {{cssxref("&lt;length&gt;")}} 类型。CSS 中有两种长度：相对和绝对。</p>
 
-<p>相对长度单位基于其它元素的长度。例如 <code>em</code> 基于该元素的字号大小，<code>vh</code> 则与设备视口的高度有关。</p>
+<p>相对长度单位基于其它元素的长度。例如 <code>em</code> 基于该元素的字号大小，<code>vh</code> 则与设备视口的高度有关。</p>
 
 <table class="standard-table">
  <caption>
@@ -405,7 +405,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 
 <h4 id="Position">Position</h4>
 
-<p>The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  {{cssxref("background-position")}} and therefore specified in the <a href="https://www.w3.org/TR/css-backgrounds-3/">CSS Backgrounds and Borders specification</a>.</p>
+<p>The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a  {{cssxref("background-position")}} and therefore specified in the <a href="https://www.w3.org/TR/css-backgrounds-3/">CSS Backgrounds and Borders specification</a>.</p>
 
 <h3 id="Functional_notation">Functional notation</h3>
 
@@ -420,7 +420,7 @@ translation_of: Web/CSS/CSS_Values_and_Units
 
 <p>Functional notation is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis <code>(</code> followed by the argument(s) to the notation followed by a right parenthesis <code>)</code>. Functions can take multiple arguments, which are formatted similarly to a CSS property value.</p>
 
-<p>White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for <code>min()</code>, <code>max()</code> and <code>clamp()</code> functions.)</p>
+<p>White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for <code>min()</code>, <code>max()</code> and <code>clamp()</code> functions.)</p>
 
 <p>Some legacy functional notations such as <code>rgba()</code> use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.</p>
 
@@ -432,5 +432,5 @@ translation_of: Web/CSS/CSS_Values_and_Units
 
 <ul>
  <li><a href="/en-US/docs/Web/CSS/CSS_Types">CSS Basic Data Types</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">Introduction to CSS: Values and Units </a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">Introduction to CSS: Values and Units </a></li>
 </ul>

@@ -5,7 +5,7 @@ translation_of: Web/API/WebGL_API/Constants
 ---
 <div>{{WebGLSidebar}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 提供了一些常量，这些常量常作为参数传入函数调用，或常作为函数的返回值。所有这些常量都是 {{domxref("GLenum")}} 类型。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 提供了一些常量，这些常量常作为参数传入函数调用，或常作为函数的返回值。所有这些常量都是 {{domxref("GLenum")}} 类型。</p>
 
 <p>标准 WebGL 常量挂载在 WebGL 的两个渲染上下文环境（{{domxref("WebGLRenderingContext")}} 和{{domxref("WebGL2RenderingContext")}}）中，因此，以形如<code>gl.CONSTANT_NAME</code>的形式使用 WebGL 常量：</p>
 
@@ -15,12 +15,12 @@ var gl = canvas.getContext('webgl');
 gl.getParameter(gl.LINE_WIDTH);
 </pre>
 
-<p>其中一些常量也由 <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL 扩展</a> 提供，如下方提供的 <a href="#Constants_defined_in_WebGL_extensions">清单</a>：</p>
+<p>其中一些常量也由 <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL 扩展</a> 提供，如下方提供的 <a href="#Constants_defined_in_WebGL_extensions">清单</a>：</p>
 
 <pre class="brush: js">var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其它资源。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API/Tutorial" title="WebGL tutorial">WebGL tutorial</a> 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其它资源。</p>
 
 <h2 id="常量表">常量表</h2>
 
@@ -55,7 +55,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>STENCIL_BUFFER_BIT</code></td>
    <td>0x00000400</td>
-   <td>传递给 <code>clear</code> 来清除当前模板缓冲区。</td>
+   <td>传递给 <code>clear</code> 来清除当前模板缓冲区。</td>
   </tr>
   <tr>
    <td><code>COLOR_BUFFER_BIT</code></td>
@@ -67,7 +67,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
 
 <h3 id="指定渲染图元_Rendering_primitives">指定渲染图元 Rendering primitives</h3>
 
-<p>传递给 {{domxref("WebGLRenderingContext.drawElements()")}} 或{{domxref("WebGLRenderingContext.drawArrays()")}} 的常量来指定要以何种原始类型渲染。</p>
+<p>传递给 {{domxref("WebGLRenderingContext.drawElements()")}} 或{{domxref("WebGLRenderingContext.drawArrays()")}} 的常量来指定要以何种原始类型渲染。</p>
 
 <table class="standard-table">
  <thead>
@@ -81,38 +81,38 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>POINTS</code></td>
    <td>0x0000</td>
-   <td>传递给 <code>drawElements</code> 或<code>drawArrays</code> 画点。</td>
+   <td>传递给 <code>drawElements</code> 或<code>drawArrays</code> 画点。</td>
   </tr>
   <tr>
    <td><code>LINES</code></td>
    <td>0x0001</td>
-   <td>传递给  <code>drawElements</code> 或<code>drawArrays</code> 画线段。 每个顶点链接到它的下一个顶点。每两点画一条线段。</td>
+   <td>传递给  <code>drawElements</code> 或<code>drawArrays</code> 画线段。 每个顶点链接到它的下一个顶点。每两点画一条线段。</td>
   </tr>
   <tr>
    <td><code>LINE_LOOP</code></td>
    <td>0x0002</td>
-   <td>传递给  <code>drawElements</code> 或<code>drawArrays</code> 画回路。 每两个点被当作是一条独立的线段。线段首尾相连。</td>
+   <td>传递给  <code>drawElements</code> 或<code>drawArrays</code> 画回路。 每两个点被当作是一条独立的线段。线段首尾相连。</td>
   </tr>
   <tr>
    <td><code>LINE_STRIP</code></td>
    <td>0x0003</td>
-   <td>传递给  <code>drawElements</code> 或<code>drawArrays</code> 画一个从第一个顶点到最后一个顶点绘制一组相连的线段。</td>
+   <td>传递给  <code>drawElements</code> 或<code>drawArrays</code> 画一个从第一个顶点到最后一个顶点绘制一组相连的线段。</td>
   </tr>
   <tr>
    <td><code>TRIANGLES</code></td>
    <td>0x0004</td>
-   <td>传递给<code>drawElements</code> 或<code>drawArrays</code>画三角形。 每三个点创建一个独立的三角形。</td>
+   <td>传递给<code>drawElements</code> 或<code>drawArrays</code>画三角形。 每三个点创建一个独立的三角形。</td>
   </tr>
   <tr>
    <td><code>TRIANGLE_STRIP</code></td>
    <td>0x0005</td>
-   <td>传递给 <code>drawElements</code> 或 <code>drawArrays</code> 画一组相连的三角形带。</td>
+   <td>传递给 <code>drawElements</code> 或 <code>drawArrays</code> 画一组相连的三角形带。</td>
   </tr>
   <tr>
    <td><code>TRIANGLE_FAN</code></td>
    <td>0x0006</td>
    <td>
-    <p>传递给 <code>drawElements</code> 或<code>drawArrays</code> 画一组连接的三角形。以第一个点做原点，每个顶点都连着它的前一个点和第一个顶点（类似风扇）。</p>
+    <p>传递给 <code>drawElements</code> 或<code>drawArrays</code> 画一组连接的三角形。以第一个点做原点，每个顶点都连着它的前一个点和第一个顶点（类似风扇）。</p>
    </td>
   </tr>
  </tbody>
@@ -134,42 +134,42 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>ZERO</code></td>
    <td>0</td>
-   <td>传递给<code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以关闭分量。</td>
+   <td>传递给<code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以关闭分量。</td>
   </tr>
   <tr>
    <td><code>ONE</code></td>
    <td>1</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以打开分量。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以打开分量。</td>
   </tr>
   <tr>
    <td><code>SRC_COLOR</code></td>
    <td>0x0300</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以源元素颜色分量。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以源元素颜色分量。</td>
   </tr>
   <tr>
    <td><code>ONE_MINUS_SRC_COLOR</code></td>
    <td>0x0301</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以 1 减去源颜色分量。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以 1 减去源颜色分量。</td>
   </tr>
   <tr>
    <td><code>SRC_ALPHA</code></td>
    <td>0x0302</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以源颜色的 alpha 值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以源颜色的 alpha 值。</td>
   </tr>
   <tr>
    <td><code>ONE_MINUS_SRC_ALPHA</code></td>
    <td>0x0303</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以一个源颜色的 alpha 值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以一个源颜色的 alpha 值。</td>
   </tr>
   <tr>
    <td><code>DST_ALPHA</code></td>
    <td>0x0304</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以目标颜色的 alpha 值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以目标颜色的 alpha 值。</td>
   </tr>
   <tr>
    <td><code>ONE_MINUS_DST_ALPHA</code></td>
    <td>0x0305</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以 1 减去目标颜色的 alpha 值。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以将分量乘以 1 减去目标颜色的 alpha 值。</td>
   </tr>
   <tr>
    <td><code>DST_COLOR</code></td>
@@ -189,12 +189,12 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>CONSTANT_COLOR</code></td>
    <td>0x8001</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定常量颜色的混合函数。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定常量颜色的混合函数。</td>
   </tr>
   <tr>
    <td><code>ONE_MINUS_CONSTANT_COLOR</code></td>
    <td>0x8002</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定 1 减去常量颜色的混合函数。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定 1 减去常量颜色的混合函数。</td>
   </tr>
   <tr>
    <td><code>CONSTANT_ALPHA</code></td>
@@ -204,7 +204,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>ONE_MINUS_CONSTANT_ALPHA</code></td>
    <td>0x8004</td>
-   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定 1 减去一个常量 alpha 的混合函数。</td>
+   <td>传递给 <code>blendFunc</code> 或 <code>blendFuncSeparate</code> 以指定 1 减去一个常量 alpha 的混合函数。</td>
   </tr>
  </tbody>
 </table>
@@ -225,24 +225,24 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>FUNC_ADD</code></td>
    <td>0x8006</td>
-   <td>传递给 <code>blendEquation</code> 或 <code>blendEquationSeparate</code> 来设置加法混合函数。</td>
+   <td>传递给 <code>blendEquation</code> 或 <code>blendEquationSeparate</code> 来设置加法混合函数。</td>
   </tr>
   <tr>
    <td><code>FUNC_SUBSTRACT</code></td>
    <td>0x800A</td>
-   <td>传递给 <code>blendEquation</code> 或 <code>blendEquationSeparate</code> 来指定减法混合函数（源 - 目标）</td>
+   <td>传递给 <code>blendEquation</code> 或 <code>blendEquationSeparate</code> 来指定减法混合函数（源 - 目标）</td>
   </tr>
   <tr>
    <td><code>FUNC_REVERSE_SUBTRACT</code></td>
    <td>0x800B</td>
-   <td>传递给 <code>blendEquation</code> 或 <code>blendEquationSeparate</code> 指定反向减法函数（目标 - 源）</td>
+   <td>传递给 <code>blendEquation</code> 或 <code>blendEquationSeparate</code> 指定反向减法函数（目标 - 源）</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="获取_GL_参数信息">获取 GL 参数信息</h3>
 
-<p>传递给 {{domxref("WebGLRenderingContext.getParameter()")}} 的常量，用以指定要返回的信息。 </p>
+<p>传递给 {{domxref("WebGLRenderingContext.getParameter()")}} 的常量，用以指定要返回的信息。 </p>
 
 <table class="standard-table">
  <thead>
@@ -256,22 +256,22 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>BLEND_EQUATION</code></td>
    <td>0x8009</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的 RGB 混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的 RGB 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_EQUATION_RGB</code></td>
    <td>0x8009</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的 RGB 混合函数。与 BLEND_EQUATION 相同。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的 RGB 混合函数。与 BLEND_EQUATION 相同。</td>
   </tr>
   <tr>
    <td><code>BLEND_EQUATION_ALPHA</code></td>
    <td>0x883D</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的 alpha 函数。与 BLEND_EQUATION 相同。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的 alpha 函数。与 BLEND_EQUATION 相同。</td>
   </tr>
   <tr>
    <td><code>BLEND_DST_RGB</code></td>
    <td>0x80C8</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的目标 RGB 混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的目标 RGB 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_SRC_RGB</code></td>
@@ -281,92 +281,92 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>BLEND_DST_ALPHA</code></td>
    <td>0x80CA</td>
-   <td>传递给 <code>getParameter</code> 以获取当前目标的 alpha 混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前目标的 alpha 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_SRC_ALPHA</code></td>
    <td>0x80CB</td>
-   <td>传递给 <code>getParameter</code> 以获取当前的源 alpha 混合函数。</td>
+   <td>传递给 <code>getParameter</code> 以获取当前的源 alpha 混合函数。</td>
   </tr>
   <tr>
    <td><code>BLEND_COLOR</code></td>
    <td>0x8005</td>
-   <td>传递给 <code>getParameter</code> 以返回当前的混合颜色。</td>
+   <td>传递给 <code>getParameter</code> 以返回当前的混合颜色。</td>
   </tr>
   <tr>
    <td><code>ARRAY_BUFFER_BINDING</code></td>
    <td>0x8894</td>
-   <td>传递给 <code>getParameter</code> 获取数组缓冲区绑定。</td>
+   <td>传递给 <code>getParameter</code> 获取数组缓冲区绑定。</td>
   </tr>
   <tr>
    <td><code>ELEMENT_ARRAY_BUFFER_BINDING</code></td>
    <td>0x8895</td>
-   <td>传递给 <code>getParameter</code> 获取当前元素数组缓冲区。</td>
+   <td>传递给 <code>getParameter</code> 获取当前元素数组缓冲区。</td>
   </tr>
   <tr>
    <td><code>LINE_WIDTH</code></td>
    <td>0x0B21</td>
-   <td>传递给 <code>getParameter</code> 获取当前的 <code>lineWidth</code> (由 <code>lineWidth</code> 方法设置)。</td>
+   <td>传递给 <code>getParameter</code> 获取当前的 <code>lineWidth</code> (由 <code>lineWidth</code> 方法设置)。</td>
   </tr>
   <tr>
    <td><code>ALIASED_POINT_SIZE_RANGE</code></td>
    <td>0x846D</td>
-   <td>传递给 <code>getParameter</code> 获取使用 <code>gl.POINTS</code> 绘制的点的大小。</td>
+   <td>传递给 <code>getParameter</code> 获取使用 <code>gl.POINTS</code> 绘制的点的大小。</td>
   </tr>
   <tr>
    <td><code>ALIASED_LINE_WIDTH_RANGE</code></td>
    <td>0x846E</td>
-   <td>传递给 <code>getParameter</code> 得到一条线的可用宽度范围。返回一个长度为 2 的数组。其中低值为 0，高值为 1。</td>
+   <td>传递给 <code>getParameter</code> 得到一条线的可用宽度范围。返回一个长度为 2 的数组。其中低值为 0，高值为 1。</td>
   </tr>
   <tr>
    <td><code>CULL_FACE_MODE</code></td>
    <td>0x0B45</td>
-   <td>传递给 <code>getParameter</code> 获取当前的<code>cullFace</code> 值。 应该返回 <code>FRONT</code>, <code>BACK</code>, 或 <code>FRONT_AND_BACK</code>。</td>
+   <td>传递给 <code>getParameter</code> 获取当前的<code>cullFace</code> 值。 应该返回 <code>FRONT</code>, <code>BACK</code>, 或 <code>FRONT_AND_BACK</code>。</td>
   </tr>
   <tr>
    <td><code>FRONT_FACE</code></td>
    <td>0x0B46</td>
-   <td>传递给 <code>getParameter</code> 以确定当前的 <code>frontFace</code> 值。应该 <code>CW</code> 或 <code>CCW</code>。</td>
+   <td>传递给 <code>getParameter</code> 以确定当前的 <code>frontFace</code> 值。应该 <code>CW</code> 或 <code>CCW</code>。</td>
   </tr>
   <tr>
    <td><code>DEPTH_RANGE</code></td>
    <td>0x0B70</td>
-   <td>传递给 <code>getParameter</code> 返回长度为 2 的浮点数数组，以表示当前深度范围。</td>
+   <td>传递给 <code>getParameter</code> 返回长度为 2 的浮点数数组，以表示当前深度范围。</td>
   </tr>
   <tr>
    <td><code>DEPTH_WRITEMASK</code></td>
    <td>0x0B72</td>
-   <td>传递给 <code>getParameter</code> 确定是否启用深度缓冲区写入操作。</td>
+   <td>传递给 <code>getParameter</code> 确定是否启用深度缓冲区写入操作。</td>
   </tr>
   <tr>
    <td><code>DEPTH_CLEAR_VALUE</code></td>
    <td>0x0B73</td>
-   <td>传递给 <code>getParameter</code> 确定当前的深度清除值。</td>
+   <td>传递给 <code>getParameter</code> 确定当前的深度清除值。</td>
   </tr>
   <tr>
    <td><code>DEPTH_FUNC</code></td>
    <td>0x0B74</td>
-   <td>传递给 <code>getParameter</code> 获取当前的深度函数。返回 <code>NEVER</code>, <code>ALWAYS</code>, <code>LESS</code>, <code>EQUAL</code>, <code>LEQUAL</code>, <code>GREATER</code>, <code>GEQUAL</code>, 或 <code>NOTEQUAL</code>。</td>
+   <td>传递给 <code>getParameter</code> 获取当前的深度函数。返回 <code>NEVER</code>, <code>ALWAYS</code>, <code>LESS</code>, <code>EQUAL</code>, <code>LEQUAL</code>, <code>GREATER</code>, <code>GEQUAL</code>, 或 <code>NOTEQUAL</code>。</td>
   </tr>
   <tr>
    <td><code>STENCIL_CLEAR_VALUE</code></td>
    <td>0x0B91</td>
-   <td>传递给 <code>getParameter</code> 获取将消除的模板值。</td>
+   <td>传递给 <code>getParameter</code> 获取将消除的模板值。</td>
   </tr>
   <tr>
    <td><code>STENCIL_FUNC</code></td>
    <td>0x0B92</td>
-   <td>传递给 <code>getParameter</code> 获取当前的模板函数。返回 <code>NEVER</code>, <code>ALWAYS</code>, <code>LESS</code>, <code>EQUAL</code>, <code>LEQUAL</code>, <code>GREATER</code>, <code>GEQUAL</code>, 或 <code>NOTEQUAL</code>。</td>
+   <td>传递给 <code>getParameter</code> 获取当前的模板函数。返回 <code>NEVER</code>, <code>ALWAYS</code>, <code>LESS</code>, <code>EQUAL</code>, <code>LEQUAL</code>, <code>GREATER</code>, <code>GEQUAL</code>, 或 <code>NOTEQUAL</code>。</td>
   </tr>
   <tr>
    <td><code>STENCIL_FAIL</code></td>
    <td>0x0B94</td>
-   <td>传递给 <code>getParameter</code> 获取当前模板的失效函数。应该返回 <code>KEEP</code>, <code>REPLACE</code>, <code>INCR</code>, <code>DECR</code>, <code>INVERT</code>, <code>INCR_WRAP</code>, 或 <code>DECR_WRAP</code>。</td>
+   <td>传递给 <code>getParameter</code> 获取当前模板的失效函数。应该返回 <code>KEEP</code>, <code>REPLACE</code>, <code>INCR</code>, <code>DECR</code>, <code>INVERT</code>, <code>INCR_WRAP</code>, 或 <code>DECR_WRAP</code>。</td>
   </tr>
   <tr>
    <td><code>STENCIL_PASS_DEPTH_FAIL</code></td>
    <td>0x0B95</td>
-   <td>如果深度缓冲区测试失败，则传递给 <code>getParameter</code> 以获取当前模板失败函数。应该返回 <code>KEEP</code>, <code>REPLACE</code>, <code>INCR</code>, <code>DECR</code>, <code>INVERT</code>, <code>INCR_WRAP</code>, 或 <code>DECR_WRAP</code>。</td>
+   <td>如果深度缓冲区测试失败，则传递给 <code>getParameter</code> 以获取当前模板失败函数。应该返回 <code>KEEP</code>, <code>REPLACE</code>, <code>INCR</code>, <code>DECR</code>, <code>INVERT</code>, <code>INCR_WRAP</code>, 或 <code>DECR_WRAP</code>。</td>
   </tr>
   <tr>
    <td><code>STENCIL_PASS_DEPTH_PASS</code></td>
@@ -376,7 +376,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>STENCIL_REF</code></td>
    <td>0x0B97</td>
-   <td>传递给 <code>getParameter</code> 获取用于模板测试的参考值。</td>
+   <td>传递给 <code>getParameter</code> 获取用于模板测试的参考值。</td>
   </tr>
   <tr>
    <td><code>STENCIL_VALUE_MASK</code></td>
@@ -426,7 +426,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>VIEWPORT</code></td>
    <td>0x0BA2</td>
-   <td>返回带有当前视口尺寸的四个元素的 {{jsxref("Int32Array")}} </td>
+   <td>返回带有当前视口尺寸的四个元素的 {{jsxref("Int32Array")}} </td>
   </tr>
   <tr>
    <td><code>SCISSOR_BOX</code></td>
@@ -617,7 +617,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>BUFFER_USAGE</code></td>
    <td>0x8765</td>
-   <td>Passed to <code>getBufferParameter</code> to get the hint for the buffer passed in when it was created.</td>
+   <td>Passed to <code>getBufferParameter</code> to get the hint for the buffer passed in when it was created.</td>
   </tr>
  </tbody>
 </table>
@@ -709,7 +709,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>FRONT_AND_BACK</code></td>
    <td>0x0408</td>
-   <td>Passed to <code>cullFace</code> to specify that front and back faces should be drawn.</td>
+   <td>Passed to <code>cullFace</code> to specify that front and back faces should be drawn.</td>
   </tr>
  </tbody>
 </table>
@@ -1154,7 +1154,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>LEQUAL</code></td>
    <td>0x0203</td>
-   <td>如果新深度值小于或等于存储值，则通过 <code>depthFunction</code> 或 <code>stencilFunction</code> 指定深度或模板测试。</td>
+   <td>如果新深度值小于或等于存储值，则通过 <code>depthFunction</code> 或 <code>stencilFunction</code> 指定深度或模板测试。</td>
   </tr>
   <tr>
    <td><code>GREATER</code></td>
@@ -3609,12 +3609,12 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);</pre>
   <tr>
    <td><code>RGBA32F_EXT</code></td>
    <td>0x8814</td>
-   <td>RGBA 32-bit floating-point color-renderable format.</td>
+   <td>RGBA 32-bit floating-point color-renderable format.</td>
   </tr>
   <tr>
    <td><code>RGB32F_EXT</code></td>
    <td>0x8815</td>
-   <td>RGB 32-bit floating-point color-renderable format.</td>
+   <td>RGB 32-bit floating-point color-renderable format.</td>
   </tr>
   <tr>
    <td><code>FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT</code></td>

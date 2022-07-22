@@ -7,9 +7,9 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
 ---
-<div>{{JSRef}} </div>
+<div>{{JSRef}} </div>
 
-<p><code><strong>Symbol.for(key)</strong></code> 方法会根据给定的键 <code>key</code>，来从运行时的 symbol 注册表中找到对应的 symbol，如果找到了，则返回它，否则，新建一个与该键关联的 symbol，并放入全局 symbol 注册表中。</p>
+<p><code><strong>Symbol.for(key)</strong></code> 方法会根据给定的键 <code>key</code>，来从运行时的 symbol 注册表中找到对应的 symbol，如果找到了，则返回它，否则，新建一个与该键关联的 symbol，并放入全局 symbol 注册表中。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
 
 <h2 id="Description">描述</h2>
 
-<p>和 <code>Symbol()</code> 不同的是，用 <code>Symbol.for()</code> 方法创建的的 symbol 会被放入一个全局 symbol 注册表中。<code>Symbol.for() 并不是每次都会创建一个新的 symbol</code>，它会首先检查给定的 key 是否已经在注册表中了。假如是，则会直接返回上次存储的那个。否则，它会再新建一个。</p>
+<p>和 <code>Symbol()</code> 不同的是，用 <code>Symbol.for()</code> 方法创建的的 symbol 会被放入一个全局 symbol 注册表中。<code>Symbol.for() 并不是每次都会创建一个新的 symbol</code>，它会首先检查给定的 key 是否已经在注册表中了。假如是，则会直接返回上次存储的那个。否则，它会再新建一个。</p>
 
 <h3 id="全局_symbol_注册表">全局 symbol 注册表</h3>
 
@@ -90,7 +90,7 @@ Symbol.for("mdn.bar");
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.for', 'Symbol.for')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>filter()</strong></code> 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。 </p>
+<p><code><strong>filter()</strong></code> 方法创建一个新数组，其包含通过所提供函数实现的测试的所有元素。 </p>
 
 <p>{{EmbedInteractiveExample("pages/js/array-filter.html")}}</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 <h2 id="描述">描述</h2>
 
-<p><code>filter</code> 为数组中的每个元素调用一次 <code>callback</code> 函数，并利用所有使得 <code>callback</code> 返回 true 或<a href="/zh-CN/docs/Glossary/Truthy">等价于 true 的值</a>的元素创建一个新数组。<code>callback</code> 只会在已经赋值的索引上被调用，对于那些已经被删除或者从未被赋值的索引不会被调用。那些没有通过 <code>callback</code> 测试的元素会被跳过，不会被包含在新数组中。</p>
+<p><code>filter</code> 为数组中的每个元素调用一次 <code>callback</code> 函数，并利用所有使得 <code>callback</code> 返回 true 或<a href="/zh-CN/docs/Glossary/Truthy">等价于 true 的值</a>的元素创建一个新数组。<code>callback</code> 只会在已经赋值的索引上被调用，对于那些已经被删除或者从未被赋值的索引不会被调用。那些没有通过 <code>callback</code> 测试的元素会被跳过，不会被包含在新数组中。</p>
 
 <p><code>callback</code> 被调用时传入三个参数：</p>
 
@@ -56,17 +56,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
  <li>被遍历的数组本身</li>
 </ol>
 
-<p>如果为 <code>filter</code> 提供一个 <code>thisArg</code> 参数，则它会被作为 <code>callback</code> 被调用时的 <code>this</code> 值。否则，<code>callback</code> 的 <code>this</code> 值在非严格模式下将是全局对象，严格模式下为 <code>undefined</code>。<code>callback</code> 函数最终观察到的 <code>this</code> 值是根据<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">通常函数所看到的 "this"的规则</a>确定的。</p>
+<p>如果为 <code>filter</code> 提供一个 <code>thisArg</code> 参数，则它会被作为 <code>callback</code> 被调用时的 <code>this</code> 值。否则，<code>callback</code> 的 <code>this</code> 值在非严格模式下将是全局对象，严格模式下为 <code>undefined</code>。<code>callback</code> 函数最终观察到的 <code>this</code> 值是根据<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this">通常函数所看到的 "this"的规则</a>确定的。</p>
 
 <p><code>filter</code> 不会改变原数组，它返回过滤后的新数组。</p>
 
-<p><code>filter</code> 遍历的元素范围在第一次调用 <code>callback</code> 之前就已经确定了。在调用 <code>filter</code> 之后被添加到数组中的元素不会被 <code>filter</code> 遍历到。如果已经存在的元素被改变了，则他们传入 <code>callback</code> 的值是 <code>filter</code> 遍历到它们那一刻的值。被删除或从来未被赋值的元素不会被遍历到。</p>
+<p><code>filter</code> 遍历的元素范围在第一次调用 <code>callback</code> 之前就已经确定了。在调用 <code>filter</code> 之后被添加到数组中的元素不会被 <code>filter</code> 遍历到。如果已经存在的元素被改变了，则他们传入 <code>callback</code> 的值是 <code>filter</code> 遍历到它们那一刻的值。被删除或从来未被赋值的元素不会被遍历到。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="筛选排除所有较小的值">筛选排除所有较小的值</h3>
 
-<p>下例使用 <code>filter</code> 创建了一个新数组，该数组的元素由原数组中值大于 10 的元素组成。</p>
+<p>下例使用 <code>filter</code> 创建了一个新数组，该数组的元素由原数组中值大于 10 的元素组成。</p>
 
 <pre class="brush: js">function isBigEnough(element) {
   return element &gt;= 10;
@@ -153,7 +153,7 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>filter</code> 被添加到 ECMA-262 标准第 5 版中，因此在某些实现环境中不被支持。可以把下面的代码插入到脚本的开头来解决此问题，该代码允许在那些没有原生支持 <code>filter</code> 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，假定 <code>fn.call</code> 等价于 {{jsxref("Function.prototype.call")}} 的初始值，且 {{jsxref("Array.prototype.push")}} 拥有它的初始值。</p>
+<p><code>filter</code> 被添加到 ECMA-262 标准第 5 版中，因此在某些实现环境中不被支持。可以把下面的代码插入到脚本的开头来解决此问题，该代码允许在那些没有原生支持 <code>filter</code> 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，假定 <code>fn.call</code> 等价于 {{jsxref("Function.prototype.call")}} 的初始值，且 {{jsxref("Array.prototype.push")}} 拥有它的初始值。</p>
 
 <pre class="brush: js">if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {

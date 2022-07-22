@@ -28,8 +28,8 @@ translation_of: Web/API/HTMLImageElement
  <dt>{{domxref("HTMLImageElement.crossOrigin")}}</dt>
  <dd>一个 {{domxref("DOMString")}} 表示这个 img 元素的 CORS 设置。参考 <a href="/en-US/docs/HTML/CORS_settings_attributes" title="HTML/CORS settings attributes">CORS settings attributes</a>。This may be <code>null</code> if CORS is not used.</dd>
  <dt>{{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("DOMString")}}  表示加载当前显示的图像的 URL。<br>
- 这可能会改变，因为图像是调整，由于不断变化的条件，由任何 <a href="/zh-CN/docs/Web/CSS/Media_Queries">media queries</a> 的地方。</dd>
+ <dd>返回一个 {{domxref("DOMString")}}  表示加载当前显示的图像的 URL。<br>
+ 这可能会改变，因为图像是调整，由于不断变化的条件，由任何 <a href="/zh-CN/docs/Web/CSS/Media_Queries">media queries</a> 的地方。</dd>
  <dt>{{domxref("HTMLImageElement.decoding")}}</dt>
  <dd>An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: <code>sync</code> to decode the image synchronously, <code>async</code> to decode it asynchronously, or <code>auto</code> to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.</dd>
  <dt>{{domxref("HTMLImageElement.height")}}</dt>
@@ -49,7 +49,7 @@ translation_of: Web/API/HTMLImageElement
  <dt>{{domxref("HTMLImageElement.srcset")}} {{experimental_inline}}</dt>
  <dd>一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("srcset", "img")}}，包含了候选图像列表，用逗号分隔（<code>',', U+002C COMMA</code>）。一个候选的图像是一个 URL 跟着一个 <code>'w'</code> 表示图像的宽度，或者一个 <code>'x'</code> 表示像素密度。</dd>
  <dt>{{domxref("HTMLImageElement.useMap")}}</dt>
- <dd>一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("usemap", "img")}}，包含一个 {{HTMLElement("map")}} 元素的页面本地 URL。The page-local URL is a pound (hash) symbol (<code>#</code>) followed by the ID of the <code>&lt;map&gt;</code> element, such as <code>#my-map-element</code>. The <code>&lt;map&gt;</code> in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.</dd>
+ <dd>一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("usemap", "img")}}，包含一个 {{HTMLElement("map")}} 元素的页面本地 URL。The page-local URL is a pound (hash) symbol (<code>#</code>) followed by the ID of the <code>&lt;map&gt;</code> element, such as <code>#my-map-element</code>. The <code>&lt;map&gt;</code> in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.</dd>
  <dt>{{domxref("HTMLImageElement.width")}}</dt>
  <dd>一个整数，表示 HTML 属性 {{htmlattrxref("width", "img")}}，说明图像在 CSS 像素中渲染的宽度。</dd>
  <dt>{{domxref("HTMLImageElement.x")}} {{readonlyInline}}{{experimental_inline}}</dt>

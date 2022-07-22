@@ -166,9 +166,9 @@ original_slug: MDN/Structures/Macros/Custom_macros
 用法：`\{{optional_inline}}` 或 `\{{ReadOnlyInline}}`。示例：
 
 - `isCustomObject` {{ReadOnlyInline}}
-  - 如果此项值为 `true`，表明该对象是一个自定义对象。
+  - : 如果此项值为 `true`，表明该对象是一个自定义对象。
 - `parameterX` {{optional_inline}}
-  - 参数描述
+  - : 参数描述
 
 ## 状态和兼容性指示器
 

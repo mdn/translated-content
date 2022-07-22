@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Symbol.match </strong></code>指定了匹配的是正则表达式而不是字符串。{{jsxref("String.prototype.match()")}} 方法会调用此函数。</p>
+<p><code><strong>Symbol.match </strong></code>指定了匹配的是正则表达式而不是字符串。{{jsxref("String.prototype.match()")}} 方法会调用此函数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-match.html")}}</div>
 
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 
 <h2 id="描述">描述</h2>
 
-<p>此函数还用于标识对象是否具有正则表达式的行为。比如， {{jsxref("String.prototype.startsWith()")}}，{{jsxref("String.prototype.endsWith()")}} 和 {{jsxref("String.prototype.includes()")}} 这些方法会检查其第一个参数是否是正则表达式，是正则表达式就抛出一个{{jsxref("TypeError")}}。现在，如果 <code>match</code> symbol 设置为 <code>false</code>（或者一个 {{Glossary("Falsy", "假值")}}），就表示该对象不打算用作正则表达式对象。</p>
+<p>此函数还用于标识对象是否具有正则表达式的行为。比如， {{jsxref("String.prototype.startsWith()")}}，{{jsxref("String.prototype.endsWith()")}} 和 {{jsxref("String.prototype.includes()")}} 这些方法会检查其第一个参数是否是正则表达式，是正则表达式就抛出一个{{jsxref("TypeError")}}。现在，如果 <code>match</code> symbol 设置为 <code>false</code>（或者一个 {{Glossary("Falsy", "假值")}}），就表示该对象不打算用作正则表达式对象。</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 // Throws TypeError，因为 /bar/ 是一个正则表达式
 // 且 Symbol.match 没有修改。</pre>
 
-<p>但是，如果你将 <code>Symbol.match</code> 置为 <code>false</code>，使用 <code>match</code> 属性的表达式检查会认为该象不是正则表达式对象。<code>startsWith</code> 和 <code>endsWith</code> 方法将不会抛出 <code>TypeError</code>。</p>
+<p>但是，如果你将 <code>Symbol.match</code> 置为 <code>false</code>，使用 <code>match</code> 属性的表达式检查会认为该象不是正则表达式对象。<code>startsWith</code> 和 <code>endsWith</code> 方法将不会抛出 <code>TypeError</code>。</p>
 
 <pre class="brush: js">var re = /foo/;
 re[Symbol.match] = false;

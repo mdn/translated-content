@@ -13,7 +13,7 @@ translation_of: Web/API/HTMLInputElement
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p><strong><code>HTMLInputElement</code></strong> 接口提供了特定的属性和方法（继承自常规的{{domxref("HTMLElement", "HTML元素")}}接口）用于管理输入元素的布局和外观。</p>
+<p><strong><code>HTMLInputElement</code></strong> 接口提供了特定的属性和方法（继承自常规的{{domxref("HTMLElement", "HTML元素")}}接口）用于管理输入元素的布局和外观。</p>
 
 <p>{{InheritanceDiagram(600,120)}}</p>
 
@@ -26,15 +26,15 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>form </code>{{readonlyInline}}</td>
-   <td><em><code>{{domxref("HTMLFormElement")}} object:</code></em>  返回一个父表单元素的引用。</td>
+   <td><em><code>{{domxref("HTMLFormElement")}} object:</code></em>  返回一个父表单元素的引用。</td>
   </tr>
   <tr>
    <td><code>formAction</code></td>
-   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formaction", "input") }} 属性, 包含处理元素提交信息程序的URI. 这会重写父表单的 {{ htmlattrxref("action", "form") }} 属性.</td>
+   <td><em><code>string</code>: </em><strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formaction", "input") }} 属性, 包含处理元素提交信息程序的URI. 这会重写父表单的 {{ htmlattrxref("action", "form") }} 属性.</td>
   </tr>
   <tr>
    <td><code>formEncType</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formenctype", "input") }} 属性, 包含将表单提交到服务器的内容类型. 这会重写父表单的 {{ htmlattrxref("enctype", "form") }} 属性.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("formenctype", "input") }} 属性, 包含将表单提交到服务器的内容类型. 这会重写父表单的 {{ htmlattrxref("enctype", "form") }} 属性.</td>
   </tr>
   <tr>
    <td><code>formMethod</code></td>
@@ -64,11 +64,11 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>disabled</code></td>
-   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("disabled", "input") }} 属性, 表示是否禁用 {{ HTMLElement("input") }}. 该元素的值将不会被提交. 也可以查看 {{ htmlattrxref("readOnly", "input") }} </td>
+   <td><em><code>boolean</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("disabled", "input") }} 属性, 表示是否禁用 {{ HTMLElement("input") }}. 该元素的值将不会被提交. 也可以查看 {{ htmlattrxref("readOnly", "input") }} </td>
   </tr>
   <tr>
    <td><code>autofocus</code></td>
-   <td><code><em>boolean:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("autofocus", "input") }} 属性, 指定的 {{ HTMLElement("input") }} 在页面加载时应当具有输入焦点, 例如通过键入不同的控件. 在文档中只有一个表单元素可以拥有 {{htmlattrxref("autofocus","input")}} 属性. 如果 {{htmlattrxref("type","input")}} 属性被设置为 <code>hidden</code> 则无效(即不可为隐藏控件设置自动焦点).</td>
+   <td><code><em>boolean:</em></code> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("autofocus", "input") }} 属性, 指定的 {{ HTMLElement("input") }} 在页面加载时应当具有输入焦点, 例如通过键入不同的控件. 在文档中只有一个表单元素可以拥有 {{htmlattrxref("autofocus","input")}} 属性. 如果 {{htmlattrxref("type","input")}} 属性被设置为 <code>hidden</code> 则无效(即不可为隐藏控件设置自动焦点).</td>
   </tr>
   <tr>
    <td><code>required</code></td>
@@ -76,7 +76,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>value</code></td>
-   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 当前控件的值.
+   <td><code><em>string:</em></code> <strong>返回/ 设置</strong> 当前控件的值.
     <p><strong>提示:</strong> 如果用户输入与预期不同，可能会返回空.</p>
    </td>
   </tr>
@@ -86,7 +86,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>validationMessage</code> {{readonlyInline}}</td>
-   <td><code><em>string:</em></code> <strong>Returns</strong> a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{htmlattrxref("willValidate","input")}} is false), or it satisfies its constraints.</td>
+   <td><code><em>string:</em></code> <strong>Returns</strong> a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{htmlattrxref("willValidate","input")}} is false), or it satisfies its constraints.</td>
   </tr>
   <tr>
    <td><code>willValidate </code>{{readonlyInline}}</td>
@@ -100,7 +100,7 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>checked</code></td>
-   <td> <code><em>boolean:</em></code> <strong>返回/ 设置</strong> 当前选中状态，当控件{{htmlattrxref("type","input")}} 是 <code>checkbox</code> 或 <code>radio时</code>.</td>
+   <td> <code><em>boolean:</em></code> <strong>返回/ 设置</strong> 当前选中状态，当控件{{htmlattrxref("type","input")}} 是 <code>checkbox</code> 或 <code>radio时</code>.</td>
   </tr>
   <tr>
    <td><code>defaultChecked</code></td>
@@ -180,7 +180,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>pattern</code></td>
-   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("pattern", "input") }} 属性, 包含 a <u><strong>regular expression</strong></u> that the control's value is checked against.  Use the {{htmlattrxref("title","input")}} 属性to describe the pattern to help the user. This 属性applies when the value of the {{htmlattrxref("type","input")}} 属性is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
+   <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> 元素的 {{ htmlattrxref("pattern", "input") }} 属性, 包含 a <u><strong>regular expression</strong></u> that the control's value is checked against.  Use the {{htmlattrxref("title","input")}} 属性to describe the pattern to help the user. This 属性applies when the value of the {{htmlattrxref("type","input")}} 属性is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
   </tr>
   <tr>
    <td><code>placeholder</code></td>
@@ -212,7 +212,7 @@ translation_of: Web/API/HTMLInputElement
    <td><em><code>string</code>:</em> <strong>返回/ 设置</strong> the direction in which selection occurred. Possible values are:<br>
     <code>"forward"</code> if selection was performed in the start-to-end direction of the current locale,<br>
     <code>"backward"</code> for the opposite direction,<br>
-    <code>"none"</code> if the direction is unknown."</td>
+    <code>"none"</code> if the direction is unknown."</td>
   </tr>
  </tbody>
 </table>
@@ -230,7 +230,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>accessKey</code></td>
-   <td><em><code>string</code>: <strong>返回</strong></em> a string 包含 a single character that switches input focus to the control when pressed.</td>
+   <td><em><code>string</code>: <strong>返回</strong></em> a string 包含 a single character that switches input focus to the control when pressed.</td>
   </tr>
   <tr>
    <td><code>list</code> {{readonlyInline}}</td>
@@ -242,11 +242,11 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>files</code></td>
-   <td><em><code>{{domxref("FileList")}} array:</code></em> <strong>返回</strong>the list of selected files.</td>
+   <td><em><code>{{domxref("FileList")}} array:</code></em> <strong>返回</strong>the list of selected files.</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.labels")}} {{readonlyInline}}</td>
-   <td><code><em>{{domxref("NodeList")}} array:</em></code> <strong>返回</strong>a list of {{ HTMLElement("label") }} elements that are labels for this element.</td>
+   <td><code><em>{{domxref("NodeList")}} array:</em></code> <strong>返回</strong>a list of {{ HTMLElement("label") }} elements that are labels for this element.</td>
   </tr>
   <tr>
    <td><code>step</code></td>
@@ -268,7 +268,7 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>autocapitalize</code> {{experimental_inline}}</td>
-   <td><code><em>string:</em></code> <strong>定义</strong> the capitalization behavior for user input. Valid values are <code>none</code>, <code>off</code>, <code>characters</code>, <code>words</code>, or <code>sentences</code>.</td>
+   <td><code><em>string:</em></code> <strong>定义</strong> the capitalization behavior for user input. Valid values are <code>none</code>, <code>off</code>, <code>characters</code>, <code>words</code>, or <code>sentences</code>.</td>
   </tr>
  </tbody>
 </table>
@@ -309,7 +309,7 @@ translation_of: Web/API/HTMLInputElement
    <td>
     <dl>
      <dd>
-     <p>Replaces a range of text with the new text. If the <var>start</var> and <var>end</var> arguments are not provided, the range is assumed to be the selection.The final argument determines how the selection should be set after the text has been replaced. The possible values are:</p>
+     <p>Replaces a range of text with the new text. If the <var>start</var> and <var>end</var> arguments are not provided, the range is assumed to be the selection.The final argument determines how the selection should be set after the text has been replaced. The possible values are:</p>
 
      <dl>
       <dt>"<code>select</code>"</dt>
@@ -343,7 +343,7 @@ translation_of: Web/API/HTMLInputElement
   <li>if the method is not applicable to for the current {{htmlattrxref("type","input")}} value,</li>
   <li>if the element has no {{htmlattrxref("step","input")}} value,</li>
   <li>if the {{htmlattrxref("value","input")}} cannot be converted to a number,</li>
-  <li>if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}. </li>
+  <li>if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}. </li>
  </ul>
  </dd>
  <dt>{{domxref("HTMLInputElement.stepUp()")}}</dt>
@@ -356,11 +356,11 @@ translation_of: Web/API/HTMLInputElement
  </ul>
  </dd>
  <dt>{{domxref("HTMLInputElement.mozSetFileArray()")}}{{non-standard_inline}}</dt>
- <dd>Sets the files selected on the input to the given array of {{domxref("File")}} objects.  This is an alternative to <code>mozSetFileNameArray()</code> which can be used in frame scripts: a chrome script can <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">open files as File objects</a> and send them via <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">message manager</a>.</dd>
+ <dd>Sets the files selected on the input to the given array of {{domxref("File")}} objects.  This is an alternative to <code>mozSetFileNameArray()</code> which can be used in frame scripts: a chrome script can <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">open files as File objects</a> and send them via <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager">message manager</a>.</dd>
  <dt>{{domxref("HTMLInputElement.mozGetFileNameArray()")}}{{non-standard_inline}}</dt>
  <dd>Returns an array of all the file names from the input.</dd>
  <dt>{{domxref("HTMLInputElement.mozSetFileNameArray()")}}{{non-standard_inline}}</dt>
- <dd>Sets the filenames for the files selected on the input.  Not for use in <a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">frame scripts</a>, because it accesses the file system.</dd>
+ <dd>Sets the filenames for the files selected on the input.  Not for use in <a href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">frame scripts</a>, because it accesses the file system.</dd>
  <dd>
  <ul>
  </ul>

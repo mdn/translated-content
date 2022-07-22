@@ -15,7 +15,7 @@ new Uint8Array(typedArray);
 new Uint8Array(object);
 new Uint8Array(buffer [, byteOffset [, length]]);</pre>
 
-<p>构造语法和参数的更多信息请参见 <em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax">TypedArray</a></em>.</p>
+<p>构造语法和参数的更多信息请参见 <em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax">TypedArray</a></em>.</p>
 
 <h2 id="属性">属性</h2>
 
@@ -27,7 +27,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.name", "Uint8Array.name")}}</dt>
  <dd>返回构造名的字符串，对 Uint8Array 类型而言返回 “Uint8Array”</dd>
  <dt>{{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}</dt>
- <dd><em>TypedArray</em> 对象的原型。</dd>
+ <dd><em>TypedArray</em> 对象的原型。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -47,9 +47,9 @@ new Uint8Array(buffer [, byteOffset [, length]]);</pre>
 
 <dl>
  <dt><code>Uint8Array.prototype.constructor</code></dt>
- <dd>返回创建实例属性的函数，默认为 <code>Uint8Array</code> 构造器。</dd>
+ <dd>返回创建实例属性的函数，默认为 <code>Uint8Array</code> 构造器。</dd>
  <dt>{{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}</dt>
- <dd>返回由 <code>Uint8Array</code>引用的 {{jsxref("ArrayBuffer")}} ，在构造时期固定，所以是<strong>只读</strong>的。</dd>
+ <dd>返回由 <code>Uint8Array</code>引用的 {{jsxref("ArrayBuffer")}} ，在构造时期固定，所以是<strong>只读</strong>的。</dd>
  <dt>{{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}</dt>
  <dd>返回<code>Uint8Array</code>长度（字节数）。在构造时期固定，所以是 <strong>只读的</strong>。</dd>
  <dt>{{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
@@ -96,7 +96,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}</dt>
  <dd>对累加器和数组的每个值应用函数（从右到左），使其归约为单一的值， 另见 {{jsxref("Array.prototype.reduceRight()")}}。</dd>
  <dt>{{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}</dt>
- <dd>翻转数组中的元素顺序 — 第一个变为最后，最后变为第一个。另见 {{jsxref("Array.prototype.reverse()")}}。</dd>
+ <dd>翻转数组中的元素顺序 — 第一个变为最后，最后变为第一个。另见 {{jsxref("Array.prototype.reverse()")}}。</dd>
  <dt>{{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}</dt>
  <dd>在类型化数组中储存多个值，从特定数组中读取输入。</dd>
  <dt>{{jsxref("TypedArray.slice", "Uint8Array.prototype.slice()")}}</dt>
@@ -106,15 +106,15 @@ new Uint8Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.sort", "Uint8Array.prototype.sort()")}}</dt>
  <dd>原地排序数组中的元素，并返回该数组，请参见 {{jsxref("Array.prototype.sort()")}}。</dd>
  <dt>{{jsxref("TypedArray.subarray", "Uint8Array.prototype.subarray()")}}</dt>
- <dd><code>从给定的元素起始和终止下标返回新的 Uint8Array</code> 。</dd>
+ <dd><code>从给定的元素起始和终止下标返回新的 Uint8Array</code> 。</dd>
  <dt>{{jsxref("TypedArray.values", "Uint8Array.prototype.values()")}}</dt>
- <dd>返回新的 <code>Array Iterator</code> 对象，含有数组每个下标处的值，请参见 {{jsxref("Array.prototype.values()")}}。</dd>
+ <dd>返回新的 <code>Array Iterator</code> 对象，含有数组每个下标处的值，请参见 {{jsxref("Array.prototype.values()")}}。</dd>
  <dt>{{jsxref("TypedArray.toLocaleString", "Uint8Array.prototype.toLocaleString()")}}</dt>
- <dd>返回表示数组及其元素的本地化字符串，请参见 {{jsxref("Array.prototype.toLocaleString()")}}。</dd>
+ <dd>返回表示数组及其元素的本地化字符串，请参见 {{jsxref("Array.prototype.toLocaleString()")}}。</dd>
  <dt>{{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}</dt>
- <dd>返回表示数组及其元素的字符串。请参见 {{jsxref("Array.prototype.toString()")}}。</dd>
+ <dd>返回表示数组及其元素的字符串。请参见 {{jsxref("Array.prototype.toString()")}}。</dd>
  <dt>{{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}</dt>
- <dd><code>返回新的 Array Iterator</code> 对象，包含数组中每个下标处的值。</dd>
+ <dd><code>返回新的 Array Iterator</code> 对象，包含数组中每个下标处的值。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -176,7 +176,7 @@ var uint8 = new Uint8Array(iterable);
 
 <h2 id="兼容性说明">兼容性说明</h2>
 
-<p>从 ECMAScript 2015 开始，<code>Uint8Array</code> 构造函数需要通过 {{jsxref("Operators/new", "new")}} 操作符调用。即日起如果没有使用 <code>new</code> 调用 <code>Uint8Array</code> 的构造函数，将会抛出 {{jsxref("TypeError")}} 。</p>
+<p>从 ECMAScript 2015 开始，<code>Uint8Array</code> 构造函数需要通过 {{jsxref("Operators/new", "new")}} 操作符调用。即日起如果没有使用 <code>new</code> 调用 <code>Uint8Array</code> 的构造函数，将会抛出 {{jsxref("TypeError")}} 。</p>
 
 <pre class="brush: js example-bad">var dv = Uint8Array([1, 2, 3]);
 // TypeError: calling a builtin Uint8Array constructor
@@ -187,7 +187,7 @@ var uint8 = new Uint8Array(iterable);
 <h2 id="相关内容">相关内容</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays" title="en/JavaScript typed arrays">JavaScript 类型化数组</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays" title="en/JavaScript typed arrays">JavaScript 类型化数组</a></li>
  <li>{{jsxref("ArrayBuffer")}}</li>
  <li>{{jsxref("DataView")}}</li>
 </ul>

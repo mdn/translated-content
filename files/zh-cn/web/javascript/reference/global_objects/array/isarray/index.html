@@ -42,7 +42,7 @@ Array.isArray(undefined);  // false
 
 <p>有关更多详细信息，请参阅文章<a href="http://web.mit.edu/jwalden/www/isArray.html">严格判定 JavaScript 对象是否为数组</a>。</p>
 
-<p>See the article <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determining with absolute accuracy whether or not a JavaScript object is an array”</a> for more details. Given a {{jsxref("TypedArray")}} instance, <code>false</code> is always returned.</p>
+<p>See the article <a href="http://web.mit.edu/jwalden/www/isArray.html">“Determining with absolute accuracy whether or not a JavaScript object is an array”</a> for more details. Given a {{jsxref("TypedArray")}} instance, <code>false</code> is always returned.</p>
 
 <h2 id="示例">示例</h2>
 
@@ -67,7 +67,7 @@ Array.isArray(new Uint8Array(32))
 Array.isArray({ __proto__: Array.prototype });
 </pre>
 
-<h3 id="instanceof_和_isArray"><code>instanceof</code> VS <code>isArray</code></h3>
+<h3 id="instanceof_和_isArray"><code>instanceof</code> VS <code>isArray</code></h3>
 
 <p>当检测 <code>Array</code> 实例时，<code>Array.isArray</code> 优于 <code>instanceof</code>，因为 <code>Array.isArray</code> 能检测 <code>iframes</code>。</p>
 

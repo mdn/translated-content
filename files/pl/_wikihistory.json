@@ -5839,15 +5839,6 @@
       "maciejmarczak"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2019-01-16T16:02:28.093Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2019-01-16T15:45:03.435Z",
     "contributors": [
@@ -9982,6 +9973,15 @@
       "Grzybu",
       "Takenbot",
       "gandalf"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2019-01-16T16:02:28.093Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {

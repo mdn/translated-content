@@ -21,7 +21,7 @@ translation_of: Web/SVG/Attribute/d
   </tr>
   <tr>
    <th scope="row">值</th>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <th scope="row">可变性</th>
@@ -53,8 +53,8 @@ translation_of: Web/SVG/Attribute/d
 <p>句法：</p>
 
 <ul>
- <li><code>M x,y</code> 在这里 x 和 y 是绝对坐标，分别代表水平坐标和垂直坐标。</li>
- <li><code>m dx,dy</code> 在这里 dx 和 dy 是相对于当前点的距离，分别是向右和向下的距离。</li>
+ <li><code>M x,y</code> 在这里 x 和 y 是绝对坐标，分别代表水平坐标和垂直坐标。</li>
+ <li><code>m dx,dy</code> 在这里 dx 和 dy 是相对于当前点的距离，分别是向右和向下的距离。</li>
 </ul>
 
 <p>示例：</p>
@@ -70,7 +70,7 @@ translation_of: Web/SVG/Attribute/d
 
 <h2 id="Curveto">Curveto</h2>
 
-<p>Curvto 命令指定了一个<a href="/User:Jt//Sandbox/Curves_in_Paths" title="Curves in Paths">贝塞尔曲线</a>。有两种类型的贝塞尔曲线：立方曲线和二次方曲线。二次方贝塞尔曲线是一种特殊的立方贝塞尔曲线，在这里，控制点的两端是相同的。二次方贝塞尔曲线的句法是”Q cx, cy  x, y“或”q dcx, dcy dx, dy“。cx 和 cy 都是控制点的绝对坐标，而 dcx 和 dcy 分别是控制点在 x 和 y 方向上的距离。</p>
+<p>Curvto 命令指定了一个<a href="/User:Jt//Sandbox/Curves_in_Paths" title="Curves in Paths">贝塞尔曲线</a>。有两种类型的贝塞尔曲线：立方曲线和二次方曲线。二次方贝塞尔曲线是一种特殊的立方贝塞尔曲线，在这里，控制点的两端是相同的。二次方贝塞尔曲线的句法是”Q cx, cy  x, y“或”q dcx, dcy dx, dy“。cx 和 cy 都是控制点的绝对坐标，而 dcx 和 dcy 分别是控制点在 x 和 y 方向上的距离。</p>
 
 <div>
 <p>立方贝赛尔曲线遵守二次方贝赛尔曲线同样的概念，但是它需要考虑两个控制点。立方贝塞尔曲线的句法是：”C c1x,c1y c2x,c2y x,y“或者”c dc1x,dc1y dc2x,dc2y dx,dy“，在这里，c1x、c1y 和 c2x、c2y 是分别是初始点和结束点的控制点的绝对坐标。dc1x、dc1y 和 dc2x、dc2y 都是相对于初始点，而不是相对于结束点的。dx 和 dy 分别是向右和向下的距离。</p>

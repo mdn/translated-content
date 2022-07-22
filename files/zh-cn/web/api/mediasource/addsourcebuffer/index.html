@@ -5,7 +5,7 @@ translation_of: Web/API/MediaSource/addSourceBuffer
 ---
 <div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
 
-<p>{{domxref("MediaSource")}} 的 <code><strong>addSourceBuffer()</strong></code> 方法会根据给定的 MIME 类型创建一个新的 {{domxref("SourceBuffer")}} 对象，然后会将它追加到 <code>MediaSource 的</code> {{domxref("SourceBuffers")}} 列表中。</p>
+<p>{{domxref("MediaSource")}} 的 <code><strong>addSourceBuffer()</strong></code> 方法会根据给定的 MIME 类型创建一个新的 {{domxref("SourceBuffer")}} 对象，然后会将它追加到 <code>MediaSource 的</code> {{domxref("SourceBuffers")}} 列表中。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/MediaSource/addSourceBuffer
 
 <dl>
  <dt>mimeType</dt>
- <dd>你想创建的 source buffer 的 MIME 类型。</dd>
+ <dd>你想创建的 source buffer 的 MIME 类型。</dd>
 </dl>
 
 <h3 id="返回">返回</h3>
@@ -36,15 +36,15 @@ translation_of: Web/API/MediaSource/addSourceBuffer
  <tbody>
   <tr>
    <td><code>InvalidAccessError</code></td>
-   <td>提交的 <code>mimeType</code> 是一个空字符串。</td>
+   <td>提交的 <code>mimeType</code> 是一个空字符串。</td>
   </tr>
   <tr>
    <td><code>InvalidStateError</code></td>
-   <td>{{domxref("MediaSource.readyState")}} 的值不等于 <code>open</code>.</td>
+   <td>{{domxref("MediaSource.readyState")}} 的值不等于 <code>open</code>.</td>
   </tr>
   <tr>
    <td><code>NotSupportedError</code></td>
-   <td>当前浏览器不支持你提交的 <code>mimeType</code> , 或者 it is not compatible with the <code>mimeType</code>s specified for the {{domxref("SourceBuffer")}} objects that already exist in {{domxref("MediaSource.sourceBuffers")}}.</td>
+   <td>当前浏览器不支持你提交的 <code>mimeType</code> , 或者 it is not compatible with the <code>mimeType</code>s specified for the {{domxref("SourceBuffer")}} objects that already exist in {{domxref("MediaSource.sourceBuffers")}}.</td>
   </tr>
   <tr>
    <td><code>QuotaExceededError</code></td>

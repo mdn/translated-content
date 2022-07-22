@@ -16,15 +16,15 @@ translation_of: Web/SVG/Element/feConvolveMatrix
 
 <p>一个矩阵卷积是基于一个 nxm 矩阵 (卷积内核)，用来描述如何将给定的输入图像的像素值与相邻像素合并为一个输出像素值。每个输出像素是由应用的内核矩阵来处理相应的源像素和它的相邻像素。基本的卷积公式是对给定的每个像素进行如下应用：</p>
 
-<p>COLORX,Y = ( <br>
- SUM I=0 to [<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">orderY</a>-1] { <br>
- SUM J=0 to [<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">orderX</a>-1] { <br>
- SOURCE X-<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute" rel="nofollow noreferrer">targetX</a>+J, Y-<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute" rel="nofollow noreferrer">targetY</a>+I * <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute" rel="nofollow noreferrer">kernelMatrix</a><a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">orderX</a>-J-1, <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">orderY</a>-I-1 <br>
- } <br>
- } <br>
- ) / <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute" rel="nofollow noreferrer">divisor</a> + <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute" rel="nofollow noreferrer">bias</a> * ALPHAX,Y </p>
+<p>COLORX,Y = ( <br>
+ SUM I=0 to [<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">orderY</a>-1] { <br>
+ SUM J=0 to [<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">orderX</a>-1] { <br>
+ SOURCE X-<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute" rel="nofollow noreferrer">targetX</a>+J, Y-<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute" rel="nofollow noreferrer">targetY</a>+I * <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute" rel="nofollow noreferrer">kernelMatrix</a><a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">orderX</a>-J-1, <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">orderY</a>-I-1 <br>
+ } <br>
+ } <br>
+ ) / <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute" rel="nofollow noreferrer">divisor</a> + <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute" rel="nofollow noreferrer">bias</a> * ALPHAX,Y </p>
 
-<p>其中“orderX”和"orderY"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">‘order’</a> 的 x 和 y 值，"targetX"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute" rel="nofollow noreferrer">‘targetX’</a> 属性的值，"targetY"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute" rel="nofollow noreferrer">‘targetY’</a> 的值，"kernelMatrix" 表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute" rel="nofollow noreferrer">‘kernelMatrix’</a>属性的值，"divisor"表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute" rel="nofollow noreferrer">‘divisor’</a>属性的值， "bias" 表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute" rel="nofollow noreferrer">‘bias’</a>属性的值。</p>
+<p>其中“orderX”和"orderY"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute" rel="nofollow noreferrer">‘order’</a> 的 x 和 y 值，"targetX"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute" rel="nofollow noreferrer">‘targetX’</a> 属性的值，"targetY"表示<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute" rel="nofollow noreferrer">‘targetY’</a> 的值，"kernelMatrix" 表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute" rel="nofollow noreferrer">‘kernelMatrix’</a>属性的值，"divisor"表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute" rel="nofollow noreferrer">‘divisor’</a>属性的值， "bias" 表示 <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute" rel="nofollow noreferrer">‘bias’</a>属性的值。</p>
 
 <p>注意上述公式中内核矩阵的值是被旋转 180 度后被使用，这是为了符合许多计算机图形学教科书中的理论。</p>
 
@@ -44,7 +44,7 @@ translation_of: Web/SVG/Element/feConvolveMatrix
   7 8 9
 </code></pre>
 
-<p>让我们专注于图像的第二行和第二列的颜色值（源像素值为 120）。最简单的情况（输入图像的像素网格与内核像素网格完全对齐）,<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute" rel="nofollow noreferrer">‘divisor’</a>, <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute" rel="nofollow noreferrer">‘targetX’</a> 和<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute" rel="nofollow noreferrer">‘targetY’</a>都是默认值，那么输出色值将是：</p>
+<p>让我们专注于图像的第二行和第二列的颜色值（源像素值为 120）。最简单的情况（输入图像的像素网格与内核像素网格完全对齐）,<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute" rel="nofollow noreferrer">‘divisor’</a>, <a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute" rel="nofollow noreferrer">‘targetX’</a> 和<a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute" rel="nofollow noreferrer">‘targetY’</a>都是默认值，那么输出色值将是：</p>
 
 <pre><code>(9*  0 + 8* 20 + 7* 40 +
 6*100 + 5*120 + 4*140 +
@@ -78,9 +78,9 @@ translation_of: Web/SVG/Element/feConvolveMatrix
 <h3 id="全局属性">全局属性</h3>
 
 <ul>
- <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">核心属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">外观属性</a> »</li>
- <li><a href="/en/SVG/Attribute#Filter" title="en/SVG/Attribute#Filter">滤镜属性</a> »</li>
+ <li><a href="/en/SVG/Attribute#Core" title="en/SVG/Attribute#Core">核心属性</a> »</li>
+ <li><a href="/en/SVG/Attribute#Presentation" title="en/SVG/Attribute#Presentation">外观属性</a> »</li>
+ <li><a href="/en/SVG/Attribute#Filter" title="en/SVG/Attribute#Filter">滤镜属性</a> »</li>
  <li>{{ SVGAttr("class") }}</li>
  <li>{{ SVGAttr("style") }}</li>
 </ul>
@@ -100,7 +100,7 @@ translation_of: Web/SVG/Element/feConvolveMatrix
  <li>{{ SVGAttr("preserveAlpha") }}</li>
 </ul>
 
-<h2 id="DOM_接口">DOM 接口</h2>
+<h2 id="DOM_接口">DOM 接口</h2>
 
 <p>该元素实现了<code><a href="/en/DOM/SVGFEConvolveMatrixElement" title="en/DOM/SVGFEConvolveMatrixElement">SVGFEConvolveMatrixElement</a></code>接口。</p>
 

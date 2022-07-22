@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Object.getOwnPropertyDescriptor()</code></strong> 方法返回指定对象上一个自有属性对应的属性描述符。（自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性）</p>
+<p><strong><code>Object.getOwnPropertyDescriptor()</code></strong> 方法返回指定对象上一个自有属性对应的属性描述符。（自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性）</p>
 
 <p>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}</p>
 
@@ -29,11 +29,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果指定的属性存在于对象上，则返回其属性描述符对象（property descriptor），否则返回 {{jsxref("undefined")}}。</p>
+<p>如果指定的属性存在于对象上，则返回其属性描述符对象（property descriptor），否则返回 {{jsxref("undefined")}}。</p>
 
 <h2 id="Description">描述</h2>
 
-<p>该方法允许对一个属性的描述进行检索。在 Javascript 中， <dfn>属性</dfn> 由一个字符串类型的“名字”（name）和一个“属性描述符”（property descriptor）对象构成。更多关于属性描述符类型以及他们属性的信息可以查看：{{jsxref("Object.defineProperty")}}.</p>
+<p>该方法允许对一个属性的描述进行检索。在 Javascript 中， <dfn>属性</dfn> 由一个字符串类型的“名字”（name）和一个“属性描述符”（property descriptor）对象构成。更多关于属性描述符类型以及他们属性的信息可以查看：{{jsxref("Object.defineProperty")}}.</p>
 
 <p>一个属性描述符是一个记录，由下面属性当中的某些组成的：</p>
 
@@ -49,7 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
  <dt><code><strong>configurable</strong></code></dt>
  <dd><code>当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为 true。</code></dd>
  <dt><code><strong>enumerable</strong></code></dt>
- <dd>当且仅当指定对象的属性可以被枚举出时，为 <code>true</code>。</dd>
+ <dd>当且仅当指定对象的属性可以被枚举出时，为 <code>true</code>。</dd>
 </dl>
 
 <h2 id="Examples">示例</h2>
@@ -90,7 +90,7 @@ d = Object.getOwnPropertyDescriptor(o, "baz");
 
 <h2 id="注意事项">注意事项</h2>
 
-<p>在 ES5 中，如果该方法的第一个参数不是对象（而是原始类型），那么就会产生出现 {{jsxref("TypeError")}}。而在 ES2015，第一个的参数不是对象的话就会被强制转换为对象。</p>
+<p>在 ES5 中，如果该方法的第一个参数不是对象（而是原始类型），那么就会产生出现 {{jsxref("TypeError")}}。而在 ES2015，第一个的参数不是对象的话就会被强制转换为对象。</p>
 
 <pre class="brush: js">Object.getOwnPropertyDescriptor('foo', 0);
 // 类型错误: "foo" 不是一个对象  // ES5 code
@@ -139,7 +139,7 @@ Object.getOwnPropertyDescriptor('foo', 0);
 
 <div></div>
 
-<div><strong>相关链接</strong> </div>
+<div><strong>相关链接</strong> </div>
 
 <ul>
  <li>{{jsxref("Object.defineProperty()")}}</li>

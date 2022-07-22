@@ -572,7 +572,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Core_JavaScript_1.5_Guide/About/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Core_JavaScript_1.5_Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/ja/docs/Core_JavaScript_1.5_Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Core_JavaScript_1.5_Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
@@ -584,7 +584,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Using_a_Constructor_Function	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_a_Regular_Expression	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
-/ja/docs/Core_JavaScript_1.5_Guide/Details_of_the_Object_Model	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/ja/docs/Core_JavaScript_1.5_Guide/Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Core_JavaScript_1.5_Guide/Expressions_and_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ja/docs/Core_JavaScript_1.5_Guide/Functions	/ja/docs/Web/JavaScript/Guide/Functions
 /ja/docs/Core_JavaScript_1.5_Guide/JavaScript_Overview	/ja/docs/Web/JavaScript/Guide/Introduction
@@ -617,7 +617,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide:About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Core_JavaScript_1.5_Guide:About:Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide:Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Core_JavaScript_1.5_Guide:Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/ja/docs/Core_JavaScript_1.5_Guide:Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Core_JavaScript_1.5_Guide:Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
@@ -629,7 +629,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Using_a_Constructor_Function	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_a_Regular_Expression	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
-/ja/docs/Core_JavaScript_1.5_Guide:Details_of_the_Object_Model	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/ja/docs/Core_JavaScript_1.5_Guide:Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Core_JavaScript_1.5_Guide:Expressions_and_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ja/docs/Core_JavaScript_1.5_Guide:Functions	/ja/docs/Web/JavaScript/Guide/Functions
 /ja/docs/Core_JavaScript_1.5_Guide:JavaScript_Overview	/ja/docs/Web/JavaScript/Guide/Introduction
@@ -2117,7 +2117,7 @@
 /ja/docs/JavaScript/Guide/About-redirect-1	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/JavaScript/Guide/Block_Statement-redirect-1	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/JavaScript/Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
@@ -2139,7 +2139,7 @@
 /ja/docs/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References-redirect-1	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
 /ja/docs/JavaScript/Guide/Creating_a_Regular_Expression	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
 /ja/docs/JavaScript/Guide/Creating_a_Regular_Expression-redirect-1	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
-/ja/docs/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/ja/docs/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/JavaScript/Guide/Expressions_and_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ja/docs/JavaScript/Guide/Expressions_and_Operators-redirect-1	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ja/docs/JavaScript/Guide/Functions	/ja/docs/Web/JavaScript/Guide/Functions
@@ -3155,6 +3155,7 @@
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/getBoxObjectFor	/ja/docs/Web/API/Element/getBoundingClientRect
+/ja/docs/Web/API/Document/gotpointercapture_event	/ja/docs/Web/API/Element/gotpointercapture_event
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/keydown_event	/ja/docs/Web/API/Element/keydown_event
 /ja/docs/Web/API/Document/keyup_event	/ja/docs/Web/API/Element/keyup_event
@@ -3233,10 +3234,13 @@
 /ja/docs/Web/API/GlobalEventHandlers/ondrop	/ja/docs/conflicting/Web/API/HTMLElement/drop_event
 /ja/docs/Web/API/GlobalEventHandlers/onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/GlobalEventHandlers/onformdata	/ja/docs/conflicting/Web/API/HTMLFormElement/formdata_event
+/ja/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/ja/docs/conflicting/Web/API/Element/gotpointercapture_event
 /ja/docs/Web/API/GlobalEventHandlers/oninput	/ja/docs/conflicting/Web/API/HTMLElement/input_event
+/ja/docs/Web/API/GlobalEventHandlers/oninvalid	/ja/docs/conflicting/Web/API/HTMLInputElement/invalid_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeydown	/ja/docs/conflicting/Web/API/Element/keydown_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeypress	/ja/docs/Web/API/Element/keypress_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeyup	/ja/docs/conflicting/Web/API/Element/keyup_event
+/ja/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/ja/docs/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/GlobalEventHandlers/onmousedown	/ja/docs/conflicting/Web/API/Element/mousedown_event
 /ja/docs/Web/API/GlobalEventHandlers/onmouseenter	/ja/docs/conflicting/Web/API/Element/mouseenter_event
 /ja/docs/Web/API/GlobalEventHandlers/onmouseleave	/ja/docs/conflicting/Web/API/Element/mouseleave_event
@@ -3269,6 +3273,8 @@
 /ja/docs/Web/API/HTMLElement/animationend_event	/ja/docs/conflicting/Web/API/Element/animationend_event
 /ja/docs/Web/API/HTMLElement/animationiteration_event	/ja/docs/conflicting/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/HTMLElement/animationstart_event	/ja/docs/conflicting/Web/API/Element/animationstart_event
+/ja/docs/Web/API/HTMLElement/gotpointercapture_event	/ja/docs/conflicting/Web/API/Element/gotpointercapture_event_7f96b143800d76a3bff8abbddbff0a0a
+/ja/docs/Web/API/HTMLElement/lostpointercapture_event	/ja/docs/conflicting/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/HTMLElement/oncopy	/ja/docs/Web/API/HTMLElement/copy_event
 /ja/docs/Web/API/HTMLElement/oncut	/ja/docs/Web/API/HTMLElement/cut_event
 /ja/docs/Web/API/HTMLElement/onpaste	/ja/docs/Web/API/HTMLElement/paste_event
@@ -4406,7 +4412,7 @@
 /ja/docs/Web/JavaScript/Getting_Started	/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /ja/docs/Web/JavaScript/Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Web/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/Web/JavaScript/Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
@@ -4419,6 +4425,7 @@
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Using_a_Constructor_Function	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#using_this_for_object_references
 /ja/docs/Web/JavaScript/Guide/Creating_a_Regular_Expression	/ja/docs/orphaned/Web/JavaScript/Guide/Creating_a_Regular_Expression
+/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/Expressions	/ja/docs/orphaned/Web/JavaScript/Guide/Expressions
 /ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/JavaScript_Overview	/ja/docs/Web/JavaScript/Guide/Introduction

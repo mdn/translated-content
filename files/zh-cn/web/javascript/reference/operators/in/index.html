@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 ---
 <p>{{jsSidebar("Operators")}}</p>
 
-<p>如果指定的属性在指定的对象或其原型链中，则<strong><code>in</code> 运算符</strong>返回<code>true</code>。</p>
+<p>如果指定的属性在指定的对象或其原型链中，则<strong><code>in</code> 运算符</strong>返回<code>true</code>。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}</div>
 
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 
 <h2 id="Description">描述</h2>
 
-<p>下面的例子演示了一些 <code>in</code> 运算符的用法。</p>
+<p>下面的例子演示了一些 <code>in</code> 运算符的用法。</p>
 
 <pre class="brush:js">// 数组
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
@@ -63,7 +63,7 @@ var color2 = "coral";
 
 <h3 id="Using_in_with_deleted_or_undefined_properties">对被删除或值为 undefined 的属性使用<code>in</code></h3>
 
-<p>如果你使用 <code><a href="/zh-CN/docs/JavaScript/Reference/Operators/delete" title="zh-CN/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code> 运算符删除了一个属性，则 <code>in</code> 运算符对所删除属性返回 <code>false</code>。</p>
+<p>如果你使用 <code><a href="/zh-CN/docs/JavaScript/Reference/Operators/delete" title="zh-CN/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code> 运算符删除了一个属性，则 <code>in</code> 运算符对所删除属性返回 <code>false</code>。</p>
 
 <pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 delete mycar.make;
@@ -74,7 +74,7 @@ delete trees[3];
 3 in trees; // 返回 false
 </pre>
 
-<p>如果你只是将一个属性的值赋值为{{jsxref("Global_Objects/undefined", "undefined")}}，而没有删除它，则 <code>in</code> 运算仍然会返回<code>true</code>。</p>
+<p>如果你只是将一个属性的值赋值为{{jsxref("Global_Objects/undefined", "undefined")}}，而没有删除它，则 <code>in</code> 运算仍然会返回<code>true</code>。</p>
 
 <pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 mycar.make = undefined;
@@ -88,7 +88,7 @@ trees[3] = undefined;
 
 <h3 id="Inherited_properties">继承属性</h3>
 
-<p>如果一个属性是从原型链上继承来的，<code>in</code> 运算符也会返回 <code>true</code>。</p>
+<p>如果一个属性是从原型链上继承来的，<code>in</code> 运算符也会返回 <code>true</code>。</p>
 
 <pre class="brush:js">"toString" in {}; // 返回 true
 </pre>

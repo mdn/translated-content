@@ -24,15 +24,15 @@ translation_of: Web/JavaScript/Reference/Statements/for...in
 
 <h2 id="sect1"></h2>
 
-<h3 id="数组迭代和_for...in">数组迭代和 <code>for...in</code></h3>
+<h3 id="数组迭代和_for...in">数组迭代和 <code>for...in</code></h3>
 
 <div class="note">
-<p><strong>备注：</strong><code>for...in</code>不应该用于迭代一个关注索引顺序的 {{jsxref("Array")}}。</p>
+<p><strong>备注：</strong><code>for...in</code>不应该用于迭代一个关注索引顺序的 {{jsxref("Array")}}。</p>
 </div>
 
 <h3 id="仅迭代自身的属性">仅迭代自身的属性</h3>
 
-<p>如果你只要考虑对象本身的属性，而不是它的原型，那么使用 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} 或执行 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 来确定某属性是否是对象本身的属性（也能使用{{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}）。或者，如果你知道不会有任何外部代码干扰，您可以使用检查方法扩展内置原型。</p>
+<p>如果你只要考虑对象本身的属性，而不是它的原型，那么使用 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} 或执行 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} 来确定某属性是否是对象本身的属性（也能使用{{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}}）。或者，如果你知道不会有任何外部代码干扰，您可以使用检查方法扩展内置原型。</p>
 
 <h2 id="Example">为什么用 for ... in?</h2>
 
@@ -130,17 +130,17 @@ for (var i = 0 in obj) {
 // 3
 </pre>
 
-<p>这个非标准行为现在在版本 40 及更高版本中被忽略，并将在严格模式（{{bug(748550)}} 和 {{bug(1164741)}}）中呈现{{jsxref("SyntaxError")}}（"<a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">for-in loop head declarations may not have initializers</a>"）错误。</p>
+<p>这个非标准行为现在在版本 40 及更高版本中被忽略，并将在严格模式（{{bug(748550)}} 和 {{bug(1164741)}}）中呈现{{jsxref("SyntaxError")}}（"<a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer">for-in loop head declarations may not have initializers</a>"）错误。</p>
 
-<p>像其他引擎 V8(Chrome)，Chakra (IE/Edge)， JSC (WebKit/Safari) 正在研究去除这种不标准的行为。</p>
+<p>像其他引擎 V8(Chrome)，Chakra (IE/Edge)， JSC (WebKit/Safari) 正在研究去除这种不标准的行为。</p>
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>{{jsxref("Statements/for...of", "for...of")}}  一个类似的迭代属性值的语句</li>
+ <li>{{jsxref("Statements/for...of", "for...of")}}  一个类似的迭代属性值的语句</li>
  <li>{{jsxref("Statements/for_each...in", "for each in")}} 一个类似的但是迭代的是对象的属性的值而不是其属性名字的语句（过时的）</li>
  <li>{{jsxref("Statements/for", "for")}}</li>
- <li>迭代器和构造器（uses the <code>for...in</code> syntax）</li>
+ <li>迭代器和构造器（uses the <code>for...in</code> syntax）</li>
  <li><a href="/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">属性的可枚举性和所有权</a></li>
  <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
  <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>

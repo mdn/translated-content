@@ -5,14 +5,14 @@ translation_of: Web/CSS/Scaling_of_SVG_backgrounds
 ---
 <div>{{cssref}}</div>
 
-<div>SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxref("background-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ cssxref("background-size") }} 属性时。本文描述了在使用这些属性时如何处理 SVG 图像的缩放。</div>
+<div>SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxref("background-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ cssxref("background-size") }} 属性时。本文描述了在使用这些属性时如何处理 SVG 图像的缩放。</div>
 
 <h2 id="规则概要">规则概要</h2>
 
 <p>大部分计算方式可以用这四条规则来概括。这些规则基本上涵盖了大部分情况除了个别边缘问题。</p>
 
 <ol>
- <li>当 {{ cssxref("background-size") }} 指定了固定的尺寸 （百分比或者其他单位），会按照固定的尺寸来。</li>
+ <li>当 {{ cssxref("background-size") }} 指定了固定的尺寸 （百分比或者其他单位），会按照固定的尺寸来。</li>
  <li>当图片自身存在固有的比例（宽高比恒定，诸如 16:9、4:3、2.39:1、1:1 等等)，渲染出的尺寸使用这个比例。</li>
  <li>当图像指定了尺寸，并且这个尺寸没有被修改，则使用指定的尺寸。</li>
  <li>当不是上述情况时，则图像将呈现与背景区域相同的大小。</li>
@@ -44,7 +44,7 @@ translation_of: Web/CSS/Scaling_of_SVG_backgrounds
 
 <h3 id="指定一个维度的尺寸，有固定比例">指定一个维度的尺寸，有固定比例</h3>
 
-<p>这个图片指定了 100px 的高但没有宽。 同时指定了一个 3:4 的比例，除非是故意放大到不成比例的尺寸（也就是说，通过显式指定宽度和高度到不是这个比例）</p>
+<p>这个图片指定了 100px 的高但没有宽。 同时指定了一个 3:4 的比例，除非是故意放大到不成比例的尺寸（也就是说，通过显式指定宽度和高度到不是这个比例）</p>
 
 <p><img alt="100px-height-3x4-ratio.png" class="default internal" src="/@api/deki/files/5857/=100px-height-3x4-ratio.png"></p>
 
@@ -52,7 +52,7 @@ translation_of: Web/CSS/Scaling_of_SVG_backgrounds
 
 <h3 id="无宽高，有固定比例">无宽高，有固定比例</h3>
 
-<p>这个图片既没有指定高度也没有指定宽度。它指定的是 1:1 的固定比例。就像软件的图标一样。它总是保持正方形，而且可以用于任何尺寸，例如  32x32，128x128，和 512x512。</p>
+<p>这个图片既没有指定高度也没有指定宽度。它指定的是 1:1 的固定比例。就像软件的图标一样。它总是保持正方形，而且可以用于任何尺寸，例如  32x32，128x128，和 512x512。</p>
 
 <p><img alt="no-dimensions-1x1-ratio.png" class="default internal" src="/@api/deki/files/5859/=no-dimensions-1x1-ratio.png"></p>
 
@@ -60,13 +60,13 @@ translation_of: Web/CSS/Scaling_of_SVG_backgrounds
 
 <h2 id="缩放示例">缩放示例</h2>
 
-<p>现在让我们来看看这些图片在各种缩放情景下怎么展现。以下例子都是宽 300 高 200 像素的矩形。此外， {{ cssxref("background-repeat") }} 都设为了 no-repeat，以便看得出来缩放的情况。</p>
+<p>现在让我们来看看这些图片在各种缩放情景下怎么展现。以下例子都是宽 300 高 200 像素的矩形。此外， {{ cssxref("background-repeat") }} 都设为了 no-repeat，以便看得出来缩放的情况。</p>
 
-<div class="note"><strong>注意：</strong> 以下截屏只表达 <strong>符合预期的</strong> 渲染效果。目前不是所有的浏览器都能正确的渲染这些代码。</div>
+<div class="note"><strong>注意：</strong> 以下截屏只表达 <strong>符合预期的</strong> 渲染效果。目前不是所有的浏览器都能正确的渲染这些代码。</div>
 
 <h3 id="两个维度都指定尺寸">两个维度都指定尺寸</h3>
 
-<p>如果你使用 {{ cssxref("background-size") }} 指定了两条边的长度， those lengths are always used, per rule 1 above. In other words, the image will always get stretched to the dimensions you specify, regardless of whether or not the source image has specified its dimensions and/or aspect ratio.</p>
+<p>如果你使用 {{ cssxref("background-size") }} 指定了两条边的长度， those lengths are always used, per rule 1 above. In other words, the image will always get stretched to the dimensions you specify, regardless of whether or not the source image has specified its dimensions and/or aspect ratio.</p>
 
 <h4 id="Source_No_dimensions_or_intrinsic_ratio">Source: No dimensions or intrinsic ratio</h4>
 
@@ -116,9 +116,9 @@ background-size: 250px 100px;
 
 <p><img alt="fixed-no-dimensions-1x1-ratio.png" class="default internal" src="/@api/deki/files/5867/=fixed-no-dimensions-1x1-ratio.png"></p>
 
-<h3 id="使用_contain_或者_cover">使用 contain 或者 cover</h3>
+<h3 id="使用_contain_或者_cover">使用 contain 或者 cover</h3>
 
-<p>当 {{ cssxref("background-size") }} 指定为 <code>cover</code> 时，图片能多小就多小，只要依然能覆盖整个背景区域。而指定为 <code>contain</code> 则会使得图片能多大就多大，只要不被背景裁切就好。</p>
+<p>当 {{ cssxref("background-size") }} 指定为 <code>cover</code> 时，图片能多小就多小，只要依然能覆盖整个背景区域。而指定为 <code>contain</code> 则会使得图片能多大就多大，只要不被背景裁切就好。</p>
 
 <p>For an image with an intrinsic ratio, exactly one size matches the <code>cover</code>/fit criteria alone. But if there is no intrinsic ratio specified, <code>cover</code>/fit isn't sufficient, so the large/small constraints choose the resulting size.</p>
 

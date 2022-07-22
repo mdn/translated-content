@@ -7,13 +7,13 @@ translation_of: Web/HTTP/Configuring_servers_for_Ogg_media
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安装任何插件或软件即可播放媒体文件。本指南包括了一些服务器配置修改，这些修改对于 web 服务器提供 Ogg 媒体文件是必要的。 这些信息在遇到服务器未配置为可识别的其他媒体类型文件时也可能提供帮助。</p>
+<p>HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安装任何插件或软件即可播放媒体文件。本指南包括了一些服务器配置修改，这些修改对于 web 服务器提供 Ogg 媒体文件是必要的。 这些信息在遇到服务器未配置为可识别的其他媒体类型文件时也可能提供帮助。</p>
 
 <h2 id="为媒体提供正确的_MIME_类型">为媒体提供正确的 MIME 类型</h2>
 
-<p><code>*.ogg</code> 和 <code>*.ogv</code> 文件包含了视频 (也可能带有音频)，应该和 <code>video/ogg</code> MIME 类型一起提供。 <code>*.oga</code> 和 <code>*.ogg</code> 只含音频的文件应该与 <code>audio/ogg</code> MIME 类型一起提供。</p>
+<p><code>*.ogg</code> 和 <code>*.ogv</code> 文件包含了视频 (也可能带有音频)，应该和 <code>video/ogg</code> MIME 类型一起提供。 <code>*.oga</code> 和 <code>*.ogg</code> 只含音频的文件应该与 <code>audio/ogg</code> MIME 类型一起提供。</p>
 
-<p>如果不确定 Ogg 文件是否包含音频或视频，可以和 MIME 类型 <code>application/ogg</code>一起提供，浏览器会将其视为视频文件。</p>
+<p>如果不确定 Ogg 文件是否包含音频或视频，可以和 MIME 类型 <code>application/ogg</code>一起提供，浏览器会将其视为视频文件。</p>
 
 <p>默认情况下，大多数服务器不为 Ogg 媒体提供正确的 MIME 类型，因此可能需要为此添加适当的配置。</p>
 
@@ -24,13 +24,13 @@ AddType video/ogg .ogv
 AddType application/ogg .ogg
 </pre>
 
-<p>你可以在 <a href="/en-US/docs/Web/Media/Formats">guide to media types and formats on the web</a> 找到有关可能的媒体文件类型以及其中使用的编解码器的特定信息。特别是，关于配置媒体服务器正确托管媒体 <a href="/en-US/docs/Web/Media/Formats/Containers">media container formats</a> 特别有用。</p>
+<p>你可以在 <a href="/en-US/docs/Web/Media/Formats">guide to media types and formats on the web</a> 找到有关可能的媒体文件类型以及其中使用的编解码器的特定信息。特别是，关于配置媒体服务器正确托管媒体 <a href="/en-US/docs/Web/Media/Formats/Containers">media container formats</a> 特别有用。</p>
 
 <h2 id="Handle_HTTP_1.1_byte_range_requests_correctly">Handle HTTP 1.1 byte range requests correctly</h2>
 
-<p>In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.</p>
+<p>In order to support seeking and playing back regions of the media that aren't yet downloaded, Gecko uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position. In addition, Gecko uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.</p>
 
-<p>Your server should accept the {{HTTPHeader("Accept-Ranges")}}<code>: bytes</code> HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}<code>: Partial content</code> to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.</p>
+<p>Your server should accept the {{HTTPHeader("Accept-Ranges")}}<code>: bytes</code> HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}<code>: Partial content</code> to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.</p>
 
 <p>Your server must also return <code>206: Partial Content</code> for the request <code>Range: bytes=0-</code> as well.</p>
 
@@ -65,7 +65,7 @@ AddType application/ogg .ogg
 <pre>X-Content-Duration: 92.6
 </pre>
 
-<p>If your server provides the <code>X-Content-Duration</code> header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.</p>
+<p>If your server provides the <code>X-Content-Duration</code> header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.</p>
 
 <p>As an inferior alternative, Gecko can estimate the video length based on the Content-Length. See next point.</p>
 
@@ -101,9 +101,9 @@ AddType application/ogg .ogg
          Audio-Channels: 2
 </pre>
 
-<p>Note that you can't simply serve up the reported Content-Duration line reported by <code>oggz-info</code>, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your <code>X-Content-Duration</code> value. Just parse out the HH, MM, and SS into numbers, then do (HH*3600)+(MM*60)+SS to get the value you should report.</p>
+<p>Note that you can't simply serve up the reported Content-Duration line reported by <code>oggz-info</code>, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your <code>X-Content-Duration</code> value. Just parse out the HH, MM, and SS into numbers, then do (HH*3600)+(MM*60)+SS to get the value you should report.</p>
 
-<p>It's important to note that it appears that <code>oggz-info</code> makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.</p>
+<p>It's important to note that it appears that <code>oggz-info</code> makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.</p>
 
 <h2 id="See_also">See also</h2>
 

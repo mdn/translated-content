@@ -34,23 +34,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 
 <h2 id="Description">描述</h2>
 
-<p>计算直角三角形的斜边，或复数的幅值时可以使用函数 <code>Math.sqrt(v1*v1 + v2*v2)</code> ，其中 v1 和 v2 是三角形的两个直角边或复数的实部和虚部。如果想计算更多维度，那么只需要在后面添加更多的数的平方就可以了，比如 <code>Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)</code>。</p>
+<p>计算直角三角形的斜边，或复数的幅值时可以使用函数 <code>Math.sqrt(v1*v1 + v2*v2)</code> ，其中 v1 和 v2 是三角形的两个直角边或复数的实部和虚部。如果想计算更多维度，那么只需要在后面添加更多的数的平方就可以了，比如 <code>Math.sqrt(v1*v1 + v2*v2 + v3*v3 + v4*v4)</code>。</p>
 
-<p>本函数比 <code>Math.sqrt()</code> 更简单也更快，你只需要调用 <code>Math.hypot(v1, v2)</code> 或 <code>Math.hypot(v1, v2, v3, v4, ...)</code>。</p>
+<p>本函数比 <code>Math.sqrt()</code> 更简单也更快，你只需要调用 <code>Math.hypot(v1, v2)</code> 或 <code>Math.hypot(v1, v2, v3, v4, ...)</code>。</p>
 
-<p>它还避免了幅值过大的问题。 JS 中最大的双精度浮点数是 <code>Number.MAX_VALUE = 1.797...e+308</code>。如果你的数字比约 1e154 大，计算其平方值会返回 Infinity，使你的结果出现问题。比如，<code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>。如果你改用 <code>hypot()</code> 函数，你可以得到正确的答案：<code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code>。在数字非常小的时候同样如此，比如 <code>Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0</code>，但 <code>Math.hypot(1e-200, 1e-200) =</code><code>1.4142...e-200</code> 则是正确的结果。</p>
+<p>它还避免了幅值过大的问题。 JS 中最大的双精度浮点数是 <code>Number.MAX_VALUE = 1.797...e+308</code>。如果你的数字比约 1e154 大，计算其平方值会返回 Infinity，使你的结果出现问题。比如，<code>Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity</code>。如果你改用 <code>hypot()</code> 函数，你可以得到正确的答案：<code>Math.hypot(1e200, 1e200) = 1.4142...e+200</code>。在数字非常小的时候同样如此，比如 <code>Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0</code>，但 <code>Math.hypot(1e-200, 1e-200) =</code><code>1.4142...e-200</code> 则是正确的结果。</p>
 
-<p>由于 <code>hypot</code> 是 <code>Math</code> 的静态方法，所以应该以 <code>Math.hypot()</code>的方式使用，而不是作为你创建的 <code>Math</code> 对象的属性（<code>Math</code> 不是一个构造函数）。</p>
+<p>由于 <code>hypot</code> 是 <code>Math</code> 的静态方法，所以应该以 <code>Math.hypot()</code>的方式使用，而不是作为你创建的 <code>Math</code> 对象的属性（<code>Math</code> 不是一个构造函数）。</p>
 
 <p>如果不传入任何参数，则返回 +0。</p>
 
-<p>如果参数列表中有至少一个参数不能被转换为数字，则返回  {{jsxref("NaN")}}。</p>
+<p>如果参数列表中有至少一个参数不能被转换为数字，则返回  {{jsxref("NaN")}}。</p>
 
-<p>如果只传入一个参数，<code>Math.hypot(x)</code> 等同于 <code>Math.abs(x)</code>。</p>
+<p>如果只传入一个参数，<code>Math.hypot(x)</code> 等同于 <code>Math.abs(x)</code>。</p>
 
 <h2 id="Examples">示例</h2>
 
-<h3 id="Using_Math.hypot">Using <code>Math.hypot()</code></h3>
+<h3 id="Using_Math.hypot">Using <code>Math.hypot()</code></h3>
 
 <pre class="brush: js">Math.hypot(3, 4);        // 5
 Math.hypot(3, 4, 5);     // 7.0710678118654755
@@ -75,18 +75,18 @@ Math.hypot(-3);          // 3, the same as Math.abs(-3)
 <p>另一种避免结果溢出的实现：</p>
 
 <pre class="brush: js">if (!Math.hypot) Math.hypot = function (x, y) {
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=896264#c28
-  var max = 0;
-  var s = 0;
-  for (var i = 0; i &lt; arguments.length; i += 1) {
-    var arg = Math.abs(Number(arguments[i]));
-    if (arg &gt; max) {
-      s *= (max / arg) * (max / arg);
-      max = arg;
-    }
-    s += arg === 0 &amp;&amp; max === 0 ? 0 : (arg / max) * (arg / max);
-  }
-  return max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s);
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=896264#c28
+  var max = 0;
+  var s = 0;
+  for (var i = 0; i &lt; arguments.length; i += 1) {
+    var arg = Math.abs(Number(arguments[i]));
+    if (arg &gt; max) {
+      s *= (max / arg) * (max / arg);
+      max = arg;
+    }
+    s += arg === 0 &amp;&amp; max === 0 ? 0 : (arg / max) * (arg / max);
+  }
+  return max === 1 / 0 ? 1 / 0 : max * Math.sqrt(s);
 };
 </pre>
 

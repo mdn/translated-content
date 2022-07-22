@@ -10,7 +10,7 @@ original_slug: Web/CSS/counter()
 ---
 <div>{{CSSRef}}</div>
 
-<div><a href="/en-US/docs/Web/CSS">CSS</a> 函数 <code><strong>counter</strong></code><strong><code>()</code></strong>，返回一个代表计数器的当前值的字符串。它通常和伪元素搭配使用，但是理论上可以在支持&lt;string&gt;值的任何地方使用。</div>
+<div><a href="/en-US/docs/Web/CSS">CSS</a> 函数 <code><strong>counter</strong></code><strong><code>()</code></strong>，返回一个代表计数器的当前值的字符串。它通常和伪元素搭配使用，但是理论上可以在支持&lt;string&gt;值的任何地方使用。</div>
 
 <pre class="brush: css notranslate">/* 简单使用 */
 counter(计数器名称);
@@ -31,8 +31,8 @@ counter(countername, upper-roman)</pre>
 <h3 id="值">值</h3>
 
 <dl>
- <dt><code><a href="/zh-CN/docs/Web/CSS/custom-ident">&lt;custom-ident&gt;</a> 自定义标识</code></dt>
- <dd>一个标识计数器的名称，区分大小写，并且与{{cssxref("counter-reset")}}和{{cssxref("counter-increment")}}中的“名称”相同。名称不能以两个破折号开头，并且不能为<code>none</code>, <code>unset</code>, <code>initial</code>, 或 <code>inherit</code>。</dd>
+ <dt><code><a href="/zh-CN/docs/Web/CSS/custom-ident">&lt;custom-ident&gt;</a> 自定义标识</code></dt>
+ <dd>一个标识计数器的名称，区分大小写，并且与{{cssxref("counter-reset")}}和{{cssxref("counter-increment")}}中的“名称”相同。名称不能以两个破折号开头，并且不能为<code>none</code>, <code>unset</code>, <code>initial</code>, 或 <code>inherit</code>。</dd>
  <dt><code style="white-space: nowrap;">&lt;counter-style&gt; 计数器样式</code></dt>
  <dd>计数器样式名称或 <code><a href="/en-US/docs/Web/CSS/symbols">symbols()</a></code> 函数，其中计数器样式名称是数字，字母或符号的简单预定义计数器样式，复杂的东亚或埃塞俄比亚长手预定义计数器样式，或其他<a href="/en-US/docs/Web/CSS/CSS_Counter_Styles">预定义计数器样式</a>。如果省略，则计数器样式默认为十进制。</dd>
 </dl>
@@ -69,7 +69,7 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
+  content: "[" counter(listCounter) "] == ["
                counter(listCounter, upper-roman) "]";
 }</pre>
 
@@ -96,7 +96,7 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, <dfn>decimal-leading-zero</dfn>) "] == ["
+  content: "[" counter(count, <dfn>decimal-leading-zero</dfn>) "] == ["
                counter(count, lower-alpha) "]";
 }</pre>
 
@@ -122,5 +122,5 @@ li::after {
  <li>{{cssxref("counter-set")}}</li>
  <li>{{cssxref("counter-increment")}}</li>
  <li>{{cssxref("@counter-style")}}</li>
- <li>CSS <code><a href="/en-US/docs/Web/CSS/counters">counters()</a></code> 函数</li>
+ <li>CSS <code><a href="/en-US/docs/Web/CSS/counters">counters()</a></code> 函数</li>
 </ul>

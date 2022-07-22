@@ -46,14 +46,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 <p>如果没有指明 <code>compareFunction</code> ，那么元素会按照转换为的字符串的诸个字符的 Unicode 位点进行排序。例如 "Banana" 会被排列到 "cherry" 之前。当数字按由小到大排序时，9 出现在 80 之前，但因为（没有指明 <code>compareFunction</code>），比较的数字会先被转换为字符串，所以在 Unicode 顺序上 "80" 要比 "9" 要靠前。</p>
 
-<p>如果指明了 <code>compareFunction</code> ，那么数组会按照调用该函数的返回值排序。即 a 和 b 是两个将要被比较的元素：</p>
+<p>如果指明了 <code>compareFunction</code> ，那么数组会按照调用该函数的返回值排序。即 a 和 b 是两个将要被比较的元素：</p>
 
 <ul>
  <li>如果 <code>compareFunction(a, b)</code> 小于 0 ，那么 a 会被排列到 b 之前；</li>
 </ul>
 
 <ul>
- <li>如果 <code>compareFunction(a, b)</code> 等于 0 ， a 和 b 的相对位置不变。备注： ECMAScript 标准并不保证这一行为，而且也不是所有浏览器都会遵守（例如 Mozilla 在 2003 年之前的版本）；</li>
+ <li>如果 <code>compareFunction(a, b)</code> 等于 0 ， a 和 b 的相对位置不变。备注： ECMAScript 标准并不保证这一行为，而且也不是所有浏览器都会遵守（例如 Mozilla 在 2003 年之前的版本）；</li>
 </ul>
 
 <ul>
@@ -75,7 +75,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 }
 </pre>
 
-<p>要比较数字而非字符串，比较函数可以简单的以 a 减 b，如下的函数将会将数组升序排列</p>
+<p>要比较数字而非字符串，比较函数可以简单的以 a 减 b，如下的函数将会将数组升序排列</p>
 
 <pre class="brush: js">function compareNumbers(a, b) {
   return a - b;

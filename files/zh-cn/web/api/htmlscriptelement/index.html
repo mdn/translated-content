@@ -6,12 +6,12 @@ translation_of: Web/API/HTMLScriptElement
 <div>{{ APIRef("HTML DOM") }}</div>
 
 <p>HTML脚本元素暴露HTMLScriptElement接口,它提供了特殊的属性和方法(超出了常规HTMLElement对象接口,他们也可以通过继承操纵&lt;脚本&gt;元素的布局和演示。）<br>
-  </p>
+  </p>
 
 <h2 id="Properties">Properties</h2>
 
 <p><em>从其父类中继承的属性, {{domxref("HTMLElement")}}。</em><br>
-  </p>
+  </p>
 
 <table>
  <tbody>
@@ -23,7 +23,7 @@ translation_of: Web/API/HTMLScriptElement
   <tr>
    <td><code id="type_property">type</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>代表了脚本的MIME类型。它反映了{{htmlattrxref("type","script")}} 属性。如何解析奇异的编程语言,请阅读这篇文章。</td>
+   <td>代表了脚本的MIME类型。它反映了{{htmlattrxref("type","script")}} 属性。如何解析奇异的编程语言,请阅读这篇文章。</td>
   </tr>
   <tr>
    <td><code id="src_property">src</code></td>
@@ -43,7 +43,7 @@ translation_of: Web/API/HTMLScriptElement
   <tr>
    <td><code id="charset_property">charset</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>代表外部脚本资源的字符编码。它反映了{{htmlattrxref("charset","script")}} 属性。</td>
+   <td>代表外部脚本资源的字符编码。它反映了{{htmlattrxref("charset","script")}} 属性。</td>
   </tr>
   <tr>
    <td><code id="async_property">async</code></td>
@@ -81,24 +81,24 @@ translation_of: Web/API/HTMLScriptElement
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>没有具体的方法;属性从其父类继承, {{domxref("HTMLElement")}}。</em></p>
+<p><em>没有具体的方法;属性从其父类继承, {{domxref("HTMLElement")}}。</em></p>
 
 <h2 id="例子">例子</h2>
 
 <h3 id="动态导入脚本">动态导入脚本</h3>
 
-<p>让我们创建一个名为importScript的函数，它能够在一个文档中导入新的脚本，创建一个{{HTMLElement("script")}} 节点，并立即插入到宿主{{HTMLElement("script")}} 之前 (通过 {{domxref("document.currentScript")}} 可以获取宿主script标签）。这些脚本将<strong>异步</strong>执行。更多细节,请参见defer和async属性。</p>
+<p>让我们创建一个名为importScript的函数，它能够在一个文档中导入新的脚本，创建一个{{HTMLElement("script")}} 节点，并立即插入到宿主{{HTMLElement("script")}} 之前 (通过 {{domxref("document.currentScript")}} 可以获取宿主script标签）。这些脚本将<strong>异步</strong>执行。更多细节,请参见defer和async属性。</p>
 
 <pre class="brush: js">function loadError (oError) {
-  throw new URIError("The script " + oError.target.src + " is not accessible.");
+  throw new URIError("The script " + oError.target.src + " is not accessible.");
 }
 
 function importScript (sSrc, fOnload) {
-  var oScript = document.createElement("script");
-  oScript.type = "text\/javascript";
-  oScript.onerror = loadError;
-  if (fOnload) { oScript.onload = fOnload; }
-  document.currentScript.parentNode.insertBefore(oScript, document.currentScript);
+  var oScript = document.createElement("script");
+  oScript.type = "text\/javascript";
+  oScript.onerror = loadError;
+  if (fOnload) { oScript.onload = fOnload; }
+  document.currentScript.parentNode.insertBefore(oScript, document.currentScript);
   oScript.src = sSrc;
 }</pre>
 
@@ -108,18 +108,18 @@ function importScript (sSrc, fOnload) {
 
 <pre class="brush: js">var importScript = (function (oHead) {
 
-  function loadError (oError) {
-    throw new URIError("The script " + oError.target.src + " is not accessible.");
-  }
+  function loadError (oError) {
+    throw new URIError("The script " + oError.target.src + " is not accessible.");
+  }
 
-  return function (sSrc, fOnload) {
-    var oScript = document.createElement("script");
-    oScript.type = "text\/javascript";
-    oScript.onerror = loadError;
-    if (fOnload) { oScript.onload = fOnload; }
-    oHead.appendChild(oScript);
+  return function (sSrc, fOnload) {
+    var oScript = document.createElement("script");
+    oScript.type = "text\/javascript";
+    oScript.onerror = loadError;
+    if (fOnload) { oScript.onload = fOnload; }
+    oHead.appendChild(oScript);
     oScript.src = sSrc;
-  }
+  }
 
 })(document.head || document.getElementsByTagName("head")[0]);
 </pre>

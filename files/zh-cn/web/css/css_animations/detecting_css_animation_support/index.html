@@ -16,7 +16,7 @@ translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
     keyframeprefix = '',
     domPrefixes = 'Webkit Moz O ms Khtml'.split(' '),
     pfx  = '',
-    elm = document.createElement('div');
+    elm = document.createElement('div');
 
 if( elm.style.animationName !== undefined ) { animation = true; }
 
@@ -33,13 +33,13 @@ if( animation === false ) {
 }
 </pre>
 
-<p>首先先定义几个变量，并通过初始化 <code>animation</code> 为 false 来假设不支持 CSS 动画属性，先设置 animationstring 变量为 <code>animation</code> 并在稍后进行修改。创建一个浏览器前缀的数组用来循环遍历并设置 pfx 前缀为空字符串。</p>
+<p>首先先定义几个变量，并通过初始化 <code>animation</code> 为 false 来假设不支持 CSS 动画属性，先设置 animationstring 变量为 <code>animation</code> 并在稍后进行修改。创建一个浏览器前缀的数组用来循环遍历并设置 pfx 前缀为空字符串。</p>
 
 <p>然后，检测创建的 elm 元素的 style 属性集合中 {{cssxref("animation-name")}} 属性是否被设置，如果被设置，则意味着着浏览器支持 CSS animation 属性，而不需要加任何前缀，然而到目前，还没有任何浏览器实现（译者：chrome 中试验了一下是可以的）；</p>
 
-<p>如果浏览器不支持无前缀的 animation，那么 animation 变量值仍为 false，遍历所有可能的浏览器前缀，由于所有的主流浏览器现在都在该属性前加了前缀，因此在 <code>AnimationName</code> 前加上前缀即可。</p>
+<p>如果浏览器不支持无前缀的 animation，那么 animation 变量值仍为 false，遍历所有可能的浏览器前缀，由于所有的主流浏览器现在都在该属性前加了前缀，因此在 <code>AnimationName</code> 前加上前缀即可。</p>
 
-<p>当代码执行完，如果浏览器不支持 CSS animation 属性，则返回 animation 为 false，否则为 true。如果 animation 为 true，则所有 animation 相关属性名称以及 keyframes 属性前缀都是检测到的正确的，因此，如果使用 firefox，属性名称就是 MozAnimation，keyframes 前缀就是 -moz-，如果使用 chrome，属性为<code>WebkitAnimation</code> ，keyframes 前缀为 <code>-webkit-</code>。注意，浏览器是不方便在驼峰法和连字符法之间进行切换的。</p>
+<p>当代码执行完，如果浏览器不支持 CSS animation 属性，则返回 animation 为 false，否则为 true。如果 animation 为 true，则所有 animation 相关属性名称以及 keyframes 属性前缀都是检测到的正确的，因此，如果使用 firefox，属性名称就是 MozAnimation，keyframes 前缀就是 -moz-，如果使用 chrome，属性为<code>WebkitAnimation</code> ，keyframes 前缀为 <code>-webkit-</code>。注意，浏览器是不方便在驼峰法和连字符法之间进行切换的。</p>
 
 <h2 id="针对不同浏览器使用正确语法实现动画效果">针对不同浏览器使用正确语法实现动画效果</h2>
 
@@ -80,7 +80,7 @@ if( animation === false ) {
 
 <p>下一个任务是将创建的 keyframes 添加到实际的 CSS 中。首先要检查是否在 document 中存在 CSStylesheet，如果存在，则能够简单的将 keyframes 值插入到 CSSstylesheet 中。</p>
 
-<p>如果不存在 CSSstylesheet，创建一个新的 {{HTMLElement("style")}} 元素，并将 keyframes 设置为其内容。然后将新的 {{HTMLElement("style")}} 元素插入到 document 的 head 中，从而将新的 style sheet 添加到了 html 文档中。</p>
+<p>如果不存在 CSSstylesheet，创建一个新的 {{HTMLElement("style")}} 元素，并将 keyframes 设置为其内容。然后将新的 {{HTMLElement("style")}} 元素插入到 document 的 head 中，从而将新的 style sheet 添加到了 html 文档中。</p>
 
 <p><a href="https://jsfiddle.net/codepo8/ATS2S/8/embedded/result">在 JSFiddle 中查看</a></p>
 

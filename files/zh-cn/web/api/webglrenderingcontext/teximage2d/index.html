@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/texImage2D
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API </a>的<strong><code>WebGLRenderingContext.texImage2D()</code></strong> 方法指定了二维纹理图像。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API </a>的<strong><code>WebGLRenderingContext.texImage2D()</code></strong> 方法指定了二维纹理图像。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -31,7 +31,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
 
 <dl>
  <dt><code>target</code></dt>
- <dd> {{domxref("GLenum")}} 指定纹理的绑定对象。可能的值：
+ <dd> {{domxref("GLenum")}} 指定纹理的绑定对象。可能的值：
  <ul>
   <li><code>gl.TEXTURE_2D</code>: 二维纹理贴图。</li>
   <li><code>gl.TEXTURE_CUBE_MAP_POSITIVE_X</code>:立方体映射纹理的正 X 面。</li>
@@ -43,10 +43,10 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </ul>
  </dd>
  <dt><code>level</code></dt>
- <dd> {{domxref("GLint")}} 指定详细级别. 0 级是基本图像等级，n 级是第 n 个金字塔简化级。</dd>
+ <dd> {{domxref("GLint")}} 指定详细级别. 0 级是基本图像等级，n 级是第 n 个金字塔简化级。</dd>
  <dt><code>internalformat</code></dt>
- <dd> {{domxref("GLenum")}} 指定纹理中的颜色组件。</dd>
- <dd>在 WebGL1 和 WebGL2 中可能的值：</dd>
+ <dd> {{domxref("GLenum")}} 指定纹理中的颜色组件。</dd>
+ <dd>在 WebGL1 和 WebGL2 中可能的值：</dd>
  <dt>
  <table>
   <thead>
@@ -109,7 +109,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
   </tbody>
  </table>
  </dt>
- <dd>在 WebGL2 中，对带有 <code>ArrayBufferView</code> 或 <code>GLintptr offset</code>的  <code>texImage2D</code> 版本，其它可能的值</dd>
+ <dd>在 WebGL2 中，对带有 <code>ArrayBufferView</code> 或 <code>GLintptr offset</code>的  <code>texImage2D</code> 版本，其它可能的值</dd>
 </dl>
 
 <table>
@@ -681,7 +681,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
 <dl>
  <dd>
  <p><br>
-   在 WebGL2 中，使用<code>HTMLImageElement</code>, <code>HTMLCanvasElement</code>, <code>HTMLVideoElement</code>, <code>ImageBitmap</code>, 或 <code>ImageData</code>作为<code>texImage2D</code> 纹理的版本中，可能的值有：</p>
+   在 WebGL2 中，使用<code>HTMLImageElement</code>, <code>HTMLCanvasElement</code>, <code>HTMLVideoElement</code>, <code>ImageBitmap</code>, 或 <code>ImageData</code>作为<code>texImage2D</code> 纹理的版本中，可能的值有：</p>
 
  <ul>
   <li><code>gl.ALPHA</code>: 抛弃红色、绿色和蓝色组件并读取 alpha 组件。</li>
@@ -734,21 +734,21 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </ul>
  </dd>
  <dt><code>width</code></dt>
- <dd> {{domxref("GLsizei")}} 指定纹理的宽度。</dd>
+ <dd> {{domxref("GLsizei")}} 指定纹理的宽度。</dd>
  <dt><code>height</code></dt>
  <dd>{{domxref("GLsizei")}} 指定纹理的高度</dd>
  <dt><code>border</code></dt>
- <dd>{{domxref("GLint")}} 指定纹理的边框宽度。必须为 0。</dd>
+ <dd>{{domxref("GLint")}} 指定纹理的边框宽度。必须为 0。</dd>
  <dt><code>format</code></dt>
- <dd> {{domxref("GLenum")}} 指定 texel 数据格式。在 WebGL 1 中，它必须与 <code>internalformat</code> 相同（查看上面). 在 WebGL 2 中，<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE">这张表</a>中列出了这些组合。</dd>
+ <dd> {{domxref("GLenum")}} 指定 texel 数据格式。在 WebGL 1 中，它必须与 <code>internalformat</code> 相同（查看上面). 在 WebGL 2 中，<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE">这张表</a>中列出了这些组合。</dd>
  <dt><code>type</code></dt>
- <dd> {{domxref("GLenum")}} 指定 texel 数据的数据类型。可能的值：
+ <dd> {{domxref("GLenum")}} 指定 texel 数据的数据类型。可能的值：
  <ul>
-  <li><code>gl.UNSIGNED_BYTE</code>:  <code>gl.RGBA</code>每个通道 8 位</li>
+  <li><code>gl.UNSIGNED_BYTE</code>:  <code>gl.RGBA</code>每个通道 8 位</li>
   <li><code>gl.UNSIGNED_SHORT_5_6_5</code>: 5 bits 红，6 bits 绿，5 bits 蓝</li>
   <li><code>gl.UNSIGNED_SHORT_4_4_4_4</code>: 4 bits 红，4 bits 绿，4 bits 蓝，4 alpha bits.</li>
   <li><code>gl.UNSIGNED_SHORT_5_5_5_1</code>: 5 bits 红，5 bits 绿，5 bits 蓝，1 alpha bit.</li>
-  <li>当使用 {{domxref("WEBGL_depth_texture")}} 扩展：
+  <li>当使用 {{domxref("WEBGL_depth_texture")}} 扩展：
    <ul>
     <li><code>gl.UNSIGNED_SHORT</code></li>
     <li><code>gl.UNSIGNED_INT</code></li>
@@ -788,10 +788,10 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  <ul>
   <li>{{domxref("ArrayBufferView")}},
    <ul>
-    <li>{{jsxref("Uint8Array")}}  如果 <code>type</code> 是 <code>gl.UNSIGNED_BYTE</code>则必须使用</li>
-    <li>{{jsxref("Uint16Array")}} 如果 <code>type</code> 是 <code>gl.UNSIGNED_SHORT_5_6_5</code>, <code>gl.UNSIGNED_SHORT_4_4_4_4</code>, <code>gl.UNSIGNED_SHORT_5_5_5_1</code>, <code>gl.UNSIGNED_SHORT</code> 或<code>ext.HALF_FLOAT_OES</code>则必须使用</li>
-    <li> {{jsxref("Uint32Array")}} 如果<code>type</code> 是 <code>gl.UNSIGNED_INT</code> 或<code>ext.UNSIGNED_INT_24_8_WEBGL</code>则必须使用</li>
-    <li> {{jsxref("Float32Array")}} 如果<code>type</code> 是 <code>gl.FLOAT</code>则必须使用</li>
+    <li>{{jsxref("Uint8Array")}}  如果 <code>type</code> 是 <code>gl.UNSIGNED_BYTE</code>则必须使用</li>
+    <li>{{jsxref("Uint16Array")}} 如果 <code>type</code> 是 <code>gl.UNSIGNED_SHORT_5_6_5</code>, <code>gl.UNSIGNED_SHORT_4_4_4_4</code>, <code>gl.UNSIGNED_SHORT_5_5_5_1</code>, <code>gl.UNSIGNED_SHORT</code> 或<code>ext.HALF_FLOAT_OES</code>则必须使用</li>
+    <li> {{jsxref("Uint32Array")}} 如果<code>type</code> 是 <code>gl.UNSIGNED_INT</code> 或<code>ext.UNSIGNED_INT_24_8_WEBGL</code>则必须使用</li>
+    <li> {{jsxref("Float32Array")}} 如果<code>type</code> 是 <code>gl.FLOAT</code>则必须使用</li>
    </ul>
   </li>
   <li>{{domxref("ImageData")}},</li>
@@ -802,7 +802,7 @@ void gl.texImage2D(target, level, internalformat, width, height, border, format,
  </ul>
  </dd>
  <dt>offset</dt>
- <dd> {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。 用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从<code>WebGLBuffer</code> 范围到<code>PIXEL_UNPACK_BUFFER</code> 目标。(仅在 WebGL 2 中 )</dd>
+ <dd> {{domxref("GLintptr")}} 类型偏移到 {{domxref("WebGLBuffer")}}的数据存储中。 用于上传数据到当前范围 {{domxref("WebGLTexture")}} 从<code>WebGLBuffer</code> 范围到<code>PIXEL_UNPACK_BUFFER</code> 目标。(仅在 WebGL 2 中 )</dd>
  <dd>
  <ul>
  </ul>

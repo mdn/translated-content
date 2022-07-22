@@ -87,12 +87,12 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
    <li>{{htmlattrxref("href","a")}} 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。</li>
   </ul>
  </li>
- <li>下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 <a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">浏览器开发工具概览</a>。</li>
+ <li>下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 <a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">浏览器开发工具概览</a>。</li>
  <li>在 DOM 查看器中可以看到渲染的标记：<img alt="Firefox控制台中的HTML检查器，可标亮元素，（图中标亮了“什么使得HTML出错？”）可以看到浏览器自动补齐了&lt;/p>关闭标签" src="html-inspector.png"></li>
  <li>通过 DOM 查看器可以清楚地看到，浏览器已经尝试修补代码错误（我们尝试了 Firefox，其他现代浏览器也应给出同样结果）：
   <ul>
    <li>段落和列表元素加上了关闭标签。</li>
-   <li>第一个 <code>&lt;strong&gt;</code> 没有明确的关闭标签，因此浏览器为之后所有独立块都补全了 <code>&lt;strong&gt;&lt;/strong&gt;</code>。</li>
+   <li>第一个 <code>&lt;strong&gt;</code> 没有明确的关闭标签，因此浏览器为之后所有独立块都补全了 <code>&lt;strong&gt;&lt;/strong&gt;</code>。</li>
    <li>浏览器是这样修补嵌套错误的：
     <pre class="brush: html notranslate">&lt;strong&gt;重点（strong）
   &lt;em&gt;重点强调（strongly emphasised）？&lt;/em&gt;
@@ -120,11 +120,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <h3 id="主动学习：验证_HTML_文档">主动学习：验证 HTML 文档</h3>
 
-<p>不妨用上文的 <a href="https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html">debug-example.html</a> 尝试一下：</p>
+<p>不妨用上文的 <a href="https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html">debug-example.html</a> 尝试一下：</p>
 
 <ol>
  <li>在浏览器中打开 <a href="https://validator.w3.org/">Markup Validation Service</a> 。</li>
- <li>选择 <a href="https://validator.w3.org/#validate_by_input">Validate by Direct Input</a> 标签。</li>
+ <li>选择 <a href="https://validator.w3.org/#validate_by_input">Validate by Direct Input</a> 标签。</li>
  <li>将整个示例文档的代码（而不仅仅是<code>body</code>部分）复制粘贴到正中的文本框内。</li>
  <li><em>点击 </em><strong>Check</strong><em> 按钮。</em></li>
 </ol>
@@ -138,8 +138,8 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 <p>错误信息一般都是有用的，也有没用的，有一些经验后你就能够分析并修复这些错误。下面来观察这些错误信息。可以看到每条信息都对应一个行号和一条信息，使得定位错误更方便。</p>
 
 <ul>
- <li>End tag <code>li</code> implied, but there were open elements（需要 <code>li</code> 的结束标签，但又开始了新的元素）（共出现 2 次）：这条信息表明有开始标签必须有结束标签，必须出现结束标签的地方却没有找到它。行/列信息指出结束标签必须出现的位置的第一行，这一线索已经足够明显了。</li>
- <li>Unclosed element <code>strong</code>（未闭合元素 <code>strong</code> ）：非常容易理解，{{htmlelement("strong")}} 元素没有闭合，行/列信息表明了它的位置。</li>
+ <li>End tag <code>li</code> implied, but there were open elements（需要 <code>li</code> 的结束标签，但又开始了新的元素）（共出现 2 次）：这条信息表明有开始标签必须有结束标签，必须出现结束标签的地方却没有找到它。行/列信息指出结束标签必须出现的位置的第一行，这一线索已经足够明显了。</li>
+ <li>Unclosed element <code>strong</code>（未闭合元素 <code>strong</code> ）：非常容易理解，{{htmlelement("strong")}} 元素没有闭合，行/列信息表明了它的位置。</li>
  <li>End tag <code>strong</code> violates nesting rules（结束标签 <code>strong</code> 违反了嵌套规则）：指出了错误嵌套的元素，行/列信息表明了它的位置。</li>
  <li>End of file reached when inside an attribute value. Ignoring tag（在属性值内达到文件末尾。忽略标签）: 这个比较难懂，它说的是在某个地方有一个属性的值格式有误，估计是在文件末尾附近，因为文件的结尾出现在了一个属性值里。事实上浏览器没有渲染超链接已经是一个很明显的线索了。</li>
  <li>End of file seen and there were open elements（文件结尾有未闭合的元素）：这个略有歧义，但基本上表明了有元素没有正确闭合。行号指向文件最后几行，且错误信息给出了一个这种错误的案例：
@@ -149,7 +149,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
   <p><strong>注：</strong>属性缺少结束引号会导致元素无法闭合。因为文档所有剩余部分（直到文档某处出现一个引号）都将被解析为属性的内容。</p>
   </div>
  </li>
- <li>Unclosed element <code>ul</code>（未闭合元素 <code>ul</code>）：这个意义不大，因为 {{htmlelement("ul")}} 已经正确闭合了。出现这个错误是因为 {{htmlelement("a")}} 元素没有右引号而没有闭合。</li>
+ <li>Unclosed element <code>ul</code>（未闭合元素 <code>ul</code>）：这个意义不大，因为 {{htmlelement("ul")}} 已经正确闭合了。出现这个错误是因为 {{htmlelement("a")}} 元素没有右引号而没有闭合。</li>
 </ul>
 
 <p>如果你不能一次弄懂所有的错误，别着急，可以试试先修复那些已经弄懂的，再申请验证，看看剩下哪些错误。有时候先修复的错误可能让你摆脱后面一系列的错误，因为一个小问题可能引发一连串错误，就像多米诺骨牌。</p>
@@ -160,7 +160,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <h2 id="小结">小结</h2>
 
-<p>以上就是 HTML 调试的一篇入门介绍，同时对于调试 CSS 和 JavaScript 也有帮助，或者你职业生涯中的任一门语言。这也是 HTML 学习一章的最后一节，接下来是两个小测试，点击“下一页”来小试牛刀吧。</p>
+<p>以上就是 HTML 调试的一篇入门介绍，同时对于调试 CSS 和 JavaScript 也有帮助，或者你职业生涯中的任一门语言。这也是 HTML 学习一章的最后一节，接下来是两个小测试，点击“下一页”来小试牛刀吧。</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}</p>
 

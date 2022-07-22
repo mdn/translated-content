@@ -10,7 +10,7 @@ tags:
   - 性能优化
 translation_of: Web/Performance
 ---
-<p>Web 性能是客观的衡量标准，是用户对加载时间和运行时的直观体验。Web 性能指页面加载到可交互和可响应所消耗的时间，以及页面在交互时的流畅度——滚动是否顺滑？按钮能否点击？弹窗能否快速打开，动画是否平滑？Web 性能既包括客观的度量如加载时间，每秒帧数和到页面可交互的时间；也包括用户的对页面内容加载时间的主观感觉。 </p>
+<p>Web 性能是客观的衡量标准，是用户对加载时间和运行时的直观体验。Web 性能指页面加载到可交互和可响应所消耗的时间，以及页面在交互时的流畅度——滚动是否顺滑？按钮能否点击？弹窗能否快速打开，动画是否平滑？Web 性能既包括客观的度量如加载时间，每秒帧数和到页面可交互的时间；也包括用户的对页面内容加载时间的主观感觉。 </p>
 
 <p>页面响应时间越长，越多的用户就会放弃该网站。重要的是，通过使体验尽可能早地变得可用和交互，同时异步地加载长尾体验部分，来最大程度地减少加载和响应时间，并添加其他功能以降低延迟。</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/Performance
 <div class="section">
 <h2 id="初学者教程">初学者教程</h2>
 
-<p>MDN <a href="/zh-CN/docs/Learn/Performance">Web 性能学习专区</a> 有着涵盖性能要素的最新教程。 如果您是性能新手，请从这里开始：</p>
+<p>MDN <a href="/zh-CN/docs/Learn/Performance">Web 性能学习专区</a> 有着涵盖性能要素的最新教程。 如果您是性能新手，请从这里开始：</p>
 
 <dl>
  <dt><a href="/zh-CN/docs/Learn/Performance/web_performance_overview">Web 性能：概述</a></dt>
@@ -53,26 +53,26 @@ translation_of: Web/Performance
 
 <dl>
  <dt><a href="/zh-CN/docs/Web/API/Performance_API/Using_the_Performance_API">Performance API</a></dt>
- <dd>该指南介绍了如何使用 <a class="external external-icon" href="https://w3c.github.io/hr-time/" rel="noopener">High-Resolution Time</a> 标准中定义的 <code><a href="/zh-CN/docs/Web/API/Performance" title="The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.">Performance</a></code> 接口。</dd>
+ <dd>该指南介绍了如何使用 <a class="external external-icon" href="https://w3c.github.io/hr-time/" rel="noopener">High-Resolution Time</a> 标准中定义的 <code><a href="/zh-CN/docs/Web/API/Performance" title="The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.">Performance</a></code> 接口。</dd>
  <dt><a href="/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API">Resource Timing API</a></dt>
  <dd><a href="/zh-CN/docs/Web/API/Resource_Timing_API">资源加载和定时加载</a> 这些资源，包括管理资源缓冲区和处理 CORS</dd>
  <dt><a href="/zh-CN/docs/Web/API/Performance_Timeline/Using_Performance_Timeline">性能时间线</a></dt>
- <dd><a href="/zh-CN/docs/Web/API/Performance_Timeline">Performance Timeline</a> 标准定义了对 <a href="/zh-CN/docs/Web/API/Performance" title="The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API."><code>Performance</code></a> 接口的扩展，以支持应用程序中的客户端延迟测量。这些接口一起可以用来帮助识别应用程序的性能瓶颈。</dd>
- <dt><a href="/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">User Timing API</a> </dt>
- <dd>使用创建特定于应用程序的时间戳 <a href="/zh-CN/docs/Web/API/User_Timing_API">user timing API</a>'s “标记”和“度量”条目类型 - 它们是浏览器性能时间轴的一部分。</dd>
+ <dd><a href="/zh-CN/docs/Web/API/Performance_Timeline">Performance Timeline</a> 标准定义了对 <a href="/zh-CN/docs/Web/API/Performance" title="The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API."><code>Performance</code></a> 接口的扩展，以支持应用程序中的客户端延迟测量。这些接口一起可以用来帮助识别应用程序的性能瓶颈。</dd>
+ <dt><a href="/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">User Timing API</a> </dt>
+ <dd>使用创建特定于应用程序的时间戳 <a href="/zh-CN/docs/Web/API/User_Timing_API">user timing API</a>'s “标记”和“度量”条目类型 - 它们是浏览器性能时间轴的一部分。</dd>
  <dt><a href="/zh-CN/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API">Frame Timing API</a></dt>
  <dd><code><a href="/zh-CN/docs/Web/API/PerformanceFrameTiming">PerformanceFrameTiming</a></code> 接口提供有关浏览器事件循环的<em>帧</em>计时数据。</dd>
  <dt><a href="/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API">Beacon API</a></dt>
- <dd><small>使用 <a href="/zh-CN/docs/Web/API/Beacon_API">Beacon</a> 接口调度发送给服务器的异步非阻塞请求。</small></dd>
+ <dd><small>使用 <a href="/zh-CN/docs/Web/API/Beacon_API">Beacon</a> 接口调度发送给服务器的异步非阻塞请求。</small></dd>
  <dt><a href="/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility">Intersection Observer API</a></dt>
- <dd>通过 <a href="/zh-CN/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> 学习对元素可见性的监测，并在关注的元素变得可见时被异步通知。</dd>
+ <dd>通过 <a href="/zh-CN/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> 学习对元素可见性的监测，并在关注的元素变得可见时被异步通知。</dd>
 </dl>
 
 <h2 id="Other_documentation">其他文档</h2>
 
 <dl>
  <dt><a href="/zh-CN/docs/Tools/Performance">开发者工具中与性能相关的功能</a></dt>
- <dd>本节提供有关如何使用和理解开发人员工具中的性能特性的信息，包括 <a href="/zh-CN/docs/Tools/Performance/Waterfall">Waterfall</a>, <a href="/zh-CN/docs/Tools/Performance/Call_Tree">Call Tree</a>, 和 <a href="/zh-CN/docs/Tools/Performance/Flame_Chart">Flame Charts</a>.</dd>
+ <dd>本节提供有关如何使用和理解开发人员工具中的性能特性的信息，包括 <a href="/zh-CN/docs/Tools/Performance/Waterfall">Waterfall</a>, <a href="/zh-CN/docs/Tools/Performance/Call_Tree">Call Tree</a>, 和 <a href="/zh-CN/docs/Tools/Performance/Flame_Chart">Flame Charts</a>.</dd>
  <dt></dt>
  <dt><a href="/zh-CN/docs/Performance/Profiling_with_the_Built-in_Profiler">使用内置分析器进行分析</a></dt>
  <dd>了解如何使用 Firefox 的内置分析器来分析应用程序性能。</dd>
@@ -144,7 +144,7 @@ translation_of: Web/Performance
  <dt><a href="/zh-CN/docs/Learn/Performance/Mobile">移动端性能</a></dt>
  <dd>由于移动设备上的 web 访问非常流行，而且所有移动平台都有成熟的 web 浏览器，但带宽、CPU 和电池寿命可能有限，因此考虑这些平台上 web 内容的性能非常重要。本文还讨论了移动设备特定的性能考虑因素。</dd>
  <dt>Web 字体性能</dt>
- <dd>性能方面一个经常被忽视的方面是 web 字体。Web 字体在 Web 设计中比以往任何时候都更加突出，然而许多开发人员只是简单地将它们从第三方服务中嵌入而不考虑它。在本文中，我们将介绍如何使用高效的文件格式和子设置使字体文件尽可能小。从那以后，我们将继续讨论浏览器如何文本，以及如何使用 CSS 和 JavaScript 功能，以确保您的字体快速呈现，并将对用户体验的干扰降到最低。</dd>
+ <dd>性能方面一个经常被忽视的方面是 web 字体。Web 字体在 Web 设计中比以往任何时候都更加突出，然而许多开发人员只是简单地将它们从第三方服务中嵌入而不考虑它。在本文中，我们将介绍如何使用高效的文件格式和子设置使字体文件尽可能小。从那以后，我们将继续讨论浏览器如何文本，以及如何使用 CSS 和 JavaScript 功能，以确保您的字体快速呈现，并将对用户体验的干扰降到最低。</dd>
  <dt>性能瓶颈</dt>
  <dd></dd>
  <dt>理解带宽</dt>
@@ -158,14 +158,14 @@ translation_of: Web/Performance
  <p>TLS 或 HTTPS（我们通常称之为 TLS）对于创建安全和安全的用户体验至关重要。虽然硬件降低了 TLS 对服务器性能的负面影响，但它仍然代表了我们等待浏览器连接到服务器所花费的大量时间。本文解释了 TLS 握手过程，并提供了一些减少时间的技巧，例如 OCSP 装订、HSTS 预加载头，以及资源提示在为第三方屏蔽 TLS 延迟方面的潜在作用。</p>
  </dd>
  <dt>阅读性能图表</dt>
- <dd>开发人员工具提供有关性能、内存和网络请求的信息。知道如何阅读 <a href="/zh-CN/docs/Tools/Performance/Waterfall">waterfall</a> charts, <a href="/zh-CN/docs/Tools/Performance/Call_Tree">call trees</a>, traces, <a href="/zh-CN/docs/Tools/Performance/Flame_Chart">flame charts</a> ,和 <a href="/zh-CN/docs/Tools/Performance/Allocations">allocations</a> 在浏览器中，开发人员工具将帮助您理解其他性能工具中的瀑布图和火焰图。</dd>
+ <dd>开发人员工具提供有关性能、内存和网络请求的信息。知道如何阅读 <a href="/zh-CN/docs/Tools/Performance/Waterfall">waterfall</a> charts, <a href="/zh-CN/docs/Tools/Performance/Call_Tree">call trees</a>, traces, <a href="/zh-CN/docs/Tools/Performance/Flame_Chart">flame charts</a> ,和 <a href="/zh-CN/docs/Tools/Performance/Allocations">allocations</a> 在浏览器中，开发人员工具将帮助您理解其他性能工具中的瀑布图和火焰图。</dd>
  <dt>其他媒体格式</dt>
  <dd>当涉及到图像和视频时，有比你可能意识到的更多的格式。其中一些格式可以通过进一步减小文件大小来进一步优化富媒体页面。在本指南中，我们将讨论一些替代的媒体格式，如何负责任地使用它们，使不受支持的浏览器不被冷落，以及一些关于将现有资源转换为它们的高级指导。</dd>
  <dt>分析 JavaScript bundle</dt>
  <dd>毫无疑问，JavaScript 是现代 web 开发的重要组成部分。虽然您应该一直努力减少在应用程序中使用的 JavaScript 数量，但是很难知道从哪里开始。在本指南中，我们将向您展示如何分析应用程序的脚本捆绑包，以便您知道您在使用什么，以及如何检测应用程序在捆绑包之间是否包含重复的脚本。</dd>
  <dt><a href="/zh-CN/docs/Web/Performance/Lazy_loading">延迟加载</a></dt>
  <dd>在初始页面加载时并不总是需要加载所有 web 应用程序资产。延迟加载是将页面上的资产（如脚本、图像等）的加载推迟到稍后的时间点，即实际需要这些资产的时候。</dd>
- <dt>使用动态 import 延迟加载 JavaScript</dt>
+ <dt>使用动态 import 延迟加载 JavaScript</dt>
  <dd>当开发人员听到术语“延迟加载”时，他们会立即想到当滚动到视口时加载的折叠图像下方。但是你知道你也可以延迟加载 JavaScript 吗？在本指南中，我们将讨论 dynamic import（）语句，这是现代浏览器中按需加载 JavaScript 模块的功能。当然，由于这个特性不是到处都可用的，我们还将向您展示如何配置您的工具以广泛兼容的方式使用此特性。</dd>
  <dt><a href="/zh-CN/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints">使用资源提示（resource hints）控制资源传输</a></dt>
  <dd>浏览器通常比我们更了解资源的优先级和交付，但是他们离克莱里奥万特还很远。本机浏览器特性使我们能够在浏览器应该连接到另一个服务器时提示浏览器，或者在浏览器知道它需要资源之前预先加载资源。如果使用得当，这可以使快速体验看起来更快。在本文中，我们将介绍诸如 rel=preconnect、rel=dns prefetch、rel=prefetch 和 rel=preload 等本机浏览器功能，以及如何使用它们来发挥您的优势。</dd>
@@ -197,7 +197,7 @@ translation_of: Web/Performance
 
 <ul>
  <li><a href="/zh-CN/docs/Web/CSS/will-change">will-change</a></li>
- <li>GPU v CPU</li>
+ <li>GPU v CPU</li>
  <li>测量布局</li>
  <li>字体加载最佳实践</li>
 </ul>

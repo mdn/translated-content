@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 <p><code>forEach()</code> 为每个数组元素执行一次 <code><var>callback</var></code> 函数；与 {{jsxref("Array.prototype.map()", "map()")}} 或者 {{jsxref("Array.prototype.reduce()", "reduce()")}} 不同的是，它总是返回 {{jsxref("undefined")}} 值，并且不可链式调用。其典型用例是在一个调用链的最后执行副作用（side effects，函数式编程上，指函数进行 返回结果值 以外的操作）。</p>
 
-<p><code>forEach()</code> 被调用时，不会改变原数组，也就是调用它的数组（尽管 <code><var>callback</var></code> 函数在被调用时可能会改变原数组）。（译注：此处说法可能不够明确，具体可参考 EMCA 语言规范：'<code>forEach</code> does not directly mutate the object on which it is called but the object may be mutated by the calls to <code><var>callbackfn</var></code>.'，即 <code>forEach</code> 不会直接改变调用它的对象，但是那个对象可能会被 <code><var>callback</var></code> 函数改变。）</p>
+<p><code>forEach()</code> 被调用时，不会改变原数组，也就是调用它的数组（尽管 <code><var>callback</var></code> 函数在被调用时可能会改变原数组）。（译注：此处说法可能不够明确，具体可参考 EMCA 语言规范：'<code>forEach</code> does not directly mutate the object on which it is called but the object may be mutated by the calls to <code><var>callbackfn</var></code>.'，即 <code>forEach</code> 不会直接改变调用它的对象，但是那个对象可能会被 <code><var>callback</var></code> 函数改变。）</p>
 
 <div class="note">
 <p><strong>备注：</strong> 除了抛出异常以外，没有办法中止或跳出 <code>forEach()</code> 循环。如果你需要中止或跳出循环，<code>forEach()</code> 方法不是应当使用的工具。</p>

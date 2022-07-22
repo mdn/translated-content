@@ -18,14 +18,14 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 <p>几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 <a href="http://www.ecma-international.org">Ecma International</a>（一个欧洲标准化组织），{{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第三版</a>的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。</p>
 
 <div class="note">
-<p><strong>备注：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
+<p><strong>备注：</strong> 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。</p>
 </div>
 
 <p>与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，<a href="http://nodejs.org">Node.js</a> 之类的服务器端环境，NoSQL 数据库（如开源的 <a href="http://couchdb.apache.org">Apache CouchDB</a>）、嵌入式计算机，以及包括 <a href="http://www.gnome.org">GNOME</a>（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。</p>
 
 <h2 id="概览">概览</h2>
 
-<p>JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a>）。JavaScript 同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。</p>
+<p>JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a>）。JavaScript 同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。</p>
 
 <p>先从任何编程语言都不可缺少的组成部分——“类型”开始。JavaScript 程序可以修改值（value），这些值都有各自的类型。JavaScript 中的类型包括：</p>
 
@@ -158,7 +158,7 @@ Number.isFinite("0"); // false</pre>
 <pre class="brush: js">"hello".length; // 5
 </pre>
 
-<p>这是我们第一次碰到 JavaScript 对象。我们有没有提过你可以像  {{jsxref("Object", "object", "", 1)}}  一样使用字符串？是的，字符串也有 {{jsxref("String", "methods", "#Methods", 1)}}（方法）能让你操作字符串和获取字符串的信息。</p>
+<p>这是我们第一次碰到 JavaScript 对象。我们有没有提过你可以像  {{jsxref("Object", "object", "", 1)}}  一样使用字符串？是的，字符串也有 {{jsxref("String", "methods", "#Methods", 1)}}（方法）能让你操作字符串和获取字符串的信息。</p>
 
 <pre class="brush: js">"hello".charAt(0); // "h"
 "hello, world".replace("world", "mars"); // "hello, mars"
@@ -182,9 +182,9 @@ Number.isFinite("0"); // false</pre>
 Boolean(234); // true
 </pre>
 
-<p>不过一般没必要这么做，因为 JavaScript 会在需要一个布尔变量时隐式完成这个转换操作（比如在 <code>if</code> 条件语句中）。所以，有时我们可以把转换成布尔值后的变量分别称为 真值（true values）——即值为 true  和 假值（false values）——即值为 false；也可以分别称为“真的”（truthy）和“假的”（falsy）。</p>
+<p>不过一般没必要这么做，因为 JavaScript 会在需要一个布尔变量时隐式完成这个转换操作（比如在 <code>if</code> 条件语句中）。所以，有时我们可以把转换成布尔值后的变量分别称为 真值（true values）——即值为 true  和 假值（false values）——即值为 false；也可以分别称为“真的”（truthy）和“假的”（falsy）。</p>
 
-<p>JavaScript 支持包括 <code>&amp;&amp;</code>（逻辑与）、<code>||</code> （逻辑或）和<code>!</code>（逻辑非）在内的一些逻辑运算符。下面会有所提到。</p>
+<p>JavaScript 支持包括 <code>&amp;&amp;</code>（逻辑与）、<code>||</code> （逻辑或）和<code>!</code>（逻辑非）在内的一些逻辑运算符。下面会有所提到。</p>
 
 <h2 id="变量">变量</h2>
 
@@ -195,7 +195,7 @@ Boolean(234); // true
 <pre class="brush: js">let a;
 let name = 'Simon';</pre>
 
-<p>下面是使用  <code><strong>let</strong></code> 声明变量作用域的例子：</p>
+<p>下面是使用  <code><strong>let</strong></code> 声明变量作用域的例子：</p>
 
 <pre class="brush: js">// myLetVariable 在这里 *不能* 被引用
 
@@ -210,13 +210,13 @@ for (let myLetVariable = 0; myLetVariable &lt; 5; myLetVariable++) {
 <pre class="brush: js">const Pi = 3.14; // 设置 Pi 的值
 Pi = 1; // 将会抛出一个错误因为你改变了一个常量的值。</pre>
 
-<p><code><strong>var</strong></code> 是最常见的声明变量的关键字。它没有其他两个关键字的种种限制。这是因为它是传统上在 JavaScript 声明变量的唯一方法。使用 <strong><code>var</code></strong> 声明的变量在它所声明的整个函数都是可见的。</p>
+<p><code><strong>var</strong></code> 是最常见的声明变量的关键字。它没有其他两个关键字的种种限制。这是因为它是传统上在 JavaScript 声明变量的唯一方法。使用 <strong><code>var</code></strong> 声明的变量在它所声明的整个函数都是可见的。</p>
 
 <pre class="brush: js">var a;
 var name = "simon";
 </pre>
 
-<p>一个使用  <strong><code>var</code> </strong>声明变量的语句块的例子：</p>
+<p>一个使用  <strong><code>var</code> </strong>声明变量的语句块的例子：</p>
 
 <pre class="brush: js">// myVarVariable 在这里 *能* 被引用
 
@@ -228,11 +228,11 @@ for (var myVarVariable = 0; myVarVariable &lt; 5; myVarVariable++) {
 
 <p>如果声明了一个变量却没有对其赋值，那么这个变量的类型就是 <code>undefined</code>。</p>
 
-<p>JavaScript 与其他语言的（如 Java）的重要区别是在 JavaScript 中语句块（blocks）是没有作用域的，只有函数有作用域。因此如果在一个复合语句中（如 if 控制结构中）使用 var 声明一个变量，那么它的作用域是整个函数（复合语句在函数中）。 但是从 ECMAScript Edition 6 开始将有所不同的， <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 关键字允许你创建块作用域的变量。</p>
+<p>JavaScript 与其他语言的（如 Java）的重要区别是在 JavaScript 中语句块（blocks）是没有作用域的，只有函数有作用域。因此如果在一个复合语句中（如 if 控制结构中）使用 var 声明一个变量，那么它的作用域是整个函数（复合语句在函数中）。 但是从 ECMAScript Edition 6 开始将有所不同的， <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 关键字允许你创建块作用域的变量。</p>
 
 <h2 id="运算符">运算符</h2>
 
-<p>JavaScript 的算术操作符包括 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 和 <code>%</code> ——求余（<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#求余_%28%29">与模运算相同</a>）。赋值使用 <code>=</code> 运算符，此外还有一些复合运算符，如 <code>+=</code> 和 <code>-=</code>，它们等价于 <code>x = x <em>operator</em> y</code>。</p>
+<p>JavaScript 的算术操作符包括 <code>+</code>、<code>-</code>、<code>*</code>、<code>/</code> 和 <code>%</code> ——求余（<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#求余_%28%29">与模运算相同</a>）。赋值使用 <code>=</code> 运算符，此外还有一些复合运算符，如 <code>+=</code> 和 <code>-=</code>，它们等价于 <code>x = x <em>operator</em> y</code>。</p>
 
 <pre class="brush: js">x += 5; // 等价于 x = x + 5;
 </pre>
@@ -378,7 +378,7 @@ do {
  <li>PHP 中的关联数组（Associative array）</li>
 </ul>
 
-<p>这样的数据结构设计合理，能应付各类复杂需求，所以被各类编程语言广泛采用。正因为 JavaScript 中的一切（除了核心类型，core object）都是对象，所以 JavaScript 程序必然与大量的散列表查找操作有着千丝万缕的联系，而散列表擅长的正是高速查找。</p>
+<p>这样的数据结构设计合理，能应付各类复杂需求，所以被各类编程语言广泛采用。正因为 JavaScript 中的一切（除了核心类型，core object）都是对象，所以 JavaScript 程序必然与大量的散列表查找操作有着千丝万缕的联系，而散列表擅长的正是高速查找。</p>
 
 <p>“名称”部分是一个 JavaScript 字符串，“值”部分可以是任何 JavaScript 的数据类型——包括对象。这使用户可以根据具体需求，创建出相当复杂的数据结构。</p>
 
@@ -448,13 +448,13 @@ obj["for"] = 'Simon'; // 工作正常
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong>从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。 这意味着当定义对象字面量时不需要用双引号了。参见 ES5 <a href="http://es5.github.io/#x7.6.1">Spec</a>.</p>
+<p><strong>备注：</strong>从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。 这意味着当定义对象字面量时不需要用双引号了。参见 ES5 <a href="http://es5.github.io/#x7.6.1">Spec</a>.</p>
 </div>
 
-<p>关于对象和原型的详情参见： <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>. 解释对象原型和对象原型链可以参见：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a>。</p>
+<p>关于对象和原型的详情参见： <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">Object.prototype</a>. 解释对象原型和对象原型链可以参见：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">继承与原型链</a>。</p>
 
 <div class="note">
-<p><strong>备注：</strong>从 ECMAScript 2015 开始，对象键可以在创建时使用括号表示法由变量定义。{[phoneType]: 12345} 可以用来替换 <code>var userPhone = {}; userPhone[phoneType] = 12345</code> .</p>
+<p><strong>备注：</strong>从 ECMAScript 2015 开始，对象键可以在创建时使用括号表示法由变量定义。{[phoneType]: 12345} 可以用来替换 <code>var userPhone = {}; userPhone[phoneType] = 12345</code> .</p>
 </div>
 
 <h2 id="数组">数组</h2>
@@ -476,7 +476,7 @@ a.length; // 3
 a.length; // 3
 </pre>
 
-<p>注意，<code>Array.length </code>并不总是等于数组中元素的个数，如下所示：</p>
+<p>注意，<code>Array.length </code>并不总是等于数组中元素的个数，如下所示：</p>
 
 <pre class="brush: js">var a = ["dog", "cat", "hen"];
 a[100] = "fox";
@@ -651,9 +651,9 @@ avg(2, 3, 4, 5); // 3.5
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong>在上面这段代码中，所有被传入该函数的参数都被变量 <strong>args </strong>所持有。</p>
+<p><strong>备注：</strong>在上面这段代码中，所有被传入该函数的参数都被变量 <strong>args </strong>所持有。</p>
 
-<p>需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(<strong>firstValue</strong>, ...args) 会把传入函数的第一个值存入 <strong>firstValue</strong>，其他的参数存入 <strong>args</strong>。这是虽然一个很有用的语言特性，却也会带来新的问题。<code>avg()</code> 函数只接受逗号分开的参数列表 -- 但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：</p>
+<p>需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(<strong>firstValue</strong>, ...args) 会把传入函数的第一个值存入 <strong>firstValue</strong>，其他的参数存入 <strong>args</strong>。这是虽然一个很有用的语言特性，却也会带来新的问题。<code>avg()</code> 函数只接受逗号分开的参数列表 -- 但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：</p>
 </div>
 
 <pre class="brush: js">function avgArray(arr) {
@@ -666,7 +666,7 @@ avg(2, 3, 4, 5); // 3.5
 avgArray([2, 3, 4, 5]); // 3.5
 </pre>
 
-<p>但如果能重用我们已经创建的那个函数不是更好吗？幸运的是 JavaScript 允许你通过任意函数对象的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply()</a></code> 方法来传递给它一个数组作为参数列表。</p>
+<p>但如果能重用我们已经创建的那个函数不是更好吗？幸运的是 JavaScript 允许你通过任意函数对象的 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply()</a></code> 方法来传递给它一个数组作为参数列表。</p>
 
 <pre class="brush: js">avg.apply(null, [2, 3, 4, 5]); // 3.5
 </pre>
@@ -733,7 +733,7 @@ b; // 2
 
 <p>如上所提供的函数表达式的名称的作用域仅仅是该函数自身。这允许引擎去做更多的优化，并且这种实现更可读、友好。该名称也显示在调试器和一些堆栈跟踪中，节省了调试时的时间。</p>
 
-<p>需要注意的是 JavaScript 函数是它们本身的对象——就和 JavaScript 其他一切一样——你可以给它们添加属性或者更改它们的属性，这与前面的对象部分一样。</p>
+<p>需要注意的是 JavaScript 函数是它们本身的对象——就和 JavaScript 其他一切一样——你可以给它们添加属性或者更改它们的属性，这与前面的对象部分一样。</p>
 
 <h2 id="自定义对象">自定义对象</h2>
 
@@ -806,7 +806,7 @@ var s = new Person("Simon", "Willison");
 
 <p>不过，这个改进的函数还是和上一个例子一样，在单独调用<code>fullName()</code> 时，会产生相同的问题。</p>
 
-<p>我们的 Person 对象现在已经相当完善了，但还有一些不太好的地方。每次我们创建一个 Person 对象的时候，我们都在其中创建了两个新的函数对象——如果这个代码可以共享不是更好吗？</p>
+<p>我们的 Person 对象现在已经相当完善了，但还有一些不太好的地方。每次我们创建一个 Person 对象的时候，我们都在其中创建了两个新的函数对象——如果这个代码可以共享不是更好吗？</p>
 
 <pre class="brush: js">function personFullName() {
     return this.first + ' ' + this.last;
@@ -836,7 +836,7 @@ Person.prototype.fullNameReversed = function() {
 }
 </pre>
 
-<p><code>Person.prototype</code> 是一个可以被<code>Person</code>的所有实例共享的对象。它是一个名叫原型链（prototype chain）的查询链的一部分：当你试图访问 <code>Person </code>某个实例（例如上个例子中的 s）一个没有定义的属性时，解释器会首先检查这个 <code>Person.prototype</code> 来判断是否存在这样一个属性。所以，任何分配给 <code>Person.prototype</code> 的东西对通过 <code>this</code> 对象构造的实例都是可用的。</p>
+<p><code>Person.prototype</code> 是一个可以被<code>Person</code>的所有实例共享的对象。它是一个名叫原型链（prototype chain）的查询链的一部分：当你试图访问 <code>Person </code>某个实例（例如上个例子中的 s）一个没有定义的属性时，解释器会首先检查这个 <code>Person.prototype</code> 来判断是否存在这样一个属性。所以，任何分配给 <code>Person.prototype</code> 的东西对通过 <code>this</code> 对象构造的实例都是可用的。</p>
 
 <p>这个特性功能十分强大，JavaScript 允许你在程序中的任何时候修改原型（prototype）中的一些东西，也就是说你可以在运行时 (runtime) 给已存在的对象添加额外的方法：</p>
 
@@ -889,7 +889,7 @@ s.toString(); // &lt;Person: Simon Willison&gt;
 }
 </pre>
 
-<p>这并不是 <code>new</code> 的完整实现，因为它没有创建原型（prototype）链。想举例说明 new 的实现有些困难，因为你不会经常用到这个，但是适当了解一下还是很有用的。在这一小段代码里，<code>...args</code>（包括省略号）叫作<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/rest_parameters">剩余参数（rest arguments）</a>。如名所示，这个东西包含了剩下的参数。</p>
+<p>这并不是 <code>new</code> 的完整实现，因为它没有创建原型（prototype）链。想举例说明 new 的实现有些困难，因为你不会经常用到这个，但是适当了解一下还是很有用的。在这一小段代码里，<code>...args</code>（包括省略号）叫作<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/rest_parameters">剩余参数（rest arguments）</a>。如名所示，这个东西包含了剩下的参数。</p>
 
 <p>因此，调用</p>
 

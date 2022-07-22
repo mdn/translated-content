@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Intl.NumberFormat.prototype.format</code></strong> 属性返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来格式化一个数字的 getter 函数。</p>
+<p><strong><code>Intl.NumberFormat.prototype.format</code></strong> 属性返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来格式化一个数字的 getter 函数。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html")}}</div>
 
@@ -24,23 +24,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 
 <h2 id="描述">描述</h2>
 
-<p>该函数返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来<code>format</code> 一个数字的函数。</p>
+<p>该函数返回一个根据{{jsxref("NumberFormat")}}对象的语言环境和格式化选项，来<code>format</code> 一个数字的函数。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_format">使用 <code>format</code></h3>
+<h3 id="使用_format">使用 <code>format</code></h3>
 
-<p>使用 <code>format</code> 格式化一个单一的货币值，以俄罗斯为例：</p>
+<p>使用 <code>format</code> 格式化一个单一的货币值，以俄罗斯为例：</p>
 
 <pre class="brush: js">var options = { style: 'currency', currency: 'RUB' };
 var numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
-// → "654 321,99 руб."
+// → "654 321,99 руб."
 </pre>
 
-<h3 id="使用_format_和_map">使用 <code>format</code> 和 <code>map</code></h3>
+<h3 id="使用_format_和_map">使用 <code>format</code> 和 <code>map</code></h3>
 
-<p>使用 <code>format</code> 返回的函数来格式化数组中的所有数字。注意，该函数绑定到所获得的{{jsxref("NumberFormat")}}，因此它可以直接传递给{{jsxref("Array.prototype.map")}}。</p>
+<p>使用 <code>format</code> 返回的函数来格式化数组中的所有数字。注意，该函数绑定到所获得的{{jsxref("NumberFormat")}}，因此它可以直接传递给{{jsxref("Array.prototype.map")}}。</p>
 
 <pre class="brush: js">var a = [123456.789, 987654.321, 456789.123];
 var numberFormat = new Intl.NumberFormat('es-ES');
@@ -66,12 +66,12 @@ console.log(formatted.join('; '));
   <tr>
    <td>{{SpecName('ES Int 2.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}</td>
    <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.prototype.format', 'Intl.NumberFormat.prototype.format')}}</td>
    <td>{{Spec2('ES Int Draft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

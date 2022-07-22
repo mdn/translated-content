@@ -685,13 +685,14 @@
 /ko/docs/Web/JavaScript/About	/ko/docs/Web/JavaScript/About_JavaScript
 /ko/docs/Web/JavaScript/Guide/About	/ko/docs/Web/JavaScript/Guide/Introduction
 /ko/docs/Web/JavaScript/Guide/Closures	/ko/docs/Web/JavaScript/Closures
+/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ko/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ko/docs/Web/JavaScript/Guide/Obsolete_Pages	/ko/docs/Web/JavaScript/Guide
 /ko/docs/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide	/ko/docs/Web/JavaScript/Guide
 /ko/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/ko/docs/Web/JavaScript/Guide
 /ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
 /ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/ko/docs/Web/JavaScript/Guide/Grammar_and_types
-/ko/docs/Web/JavaScript/Guide/객체_모델의_세부사항	/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/ko/docs/Web/JavaScript/Guide/객체_모델의_세부사항	/ko/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ko/docs/Web/JavaScript/Guide/메타_프로그래밍	/ko/docs/Web/JavaScript/Guide/Meta_programming
 /ko/docs/Web/JavaScript/Guide/소개	/ko/docs/Web/JavaScript/Guide/Introduction
 /ko/docs/Web/JavaScript/Guide/정규식	/ko/docs/Web/JavaScript/Guide/Regular_Expressions

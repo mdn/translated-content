@@ -15,16 +15,16 @@ translation_of: Web/HTML/Element/textarea
 
 <p>{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}</p>
 
-<p>上述例子展示了 <code>&lt;textarea&gt;</code> 的几个特点：</p>
+<p>上述例子展示了 <code>&lt;textarea&gt;</code> 的几个特点：</p>
 
 <ul>
- <li>为了提高可访问性（accessibility），用于将 <code>&lt;textarea&gt;</code>与一个 {{htmlelement("label")}} 关联的 <code>id</code> 属性。</li>
- <li><code>name</code> 属性，用于设置随表单一同提交到服务器的相关数据的名字。</li>
- <li><code>rows</code> 和 <code>cols</code> 属性，用于声明 <code>&lt;textarea&gt;</code> 的精确尺寸。这对于一致性非常有帮助，因为不同浏览器的默认值常常不一样。</li>
- <li>位于开始标签和闭合标签之间的默认内容。<code>&lt;textarea&gt;</code> 不支持 <code>value</code> 属性。</li>
+ <li>为了提高可访问性（accessibility），用于将 <code>&lt;textarea&gt;</code>与一个 {{htmlelement("label")}} 关联的 <code>id</code> 属性。</li>
+ <li><code>name</code> 属性，用于设置随表单一同提交到服务器的相关数据的名字。</li>
+ <li><code>rows</code> 和 <code>cols</code> 属性，用于声明 <code>&lt;textarea&gt;</code> 的精确尺寸。这对于一致性非常有帮助，因为不同浏览器的默认值常常不一样。</li>
+ <li>位于开始标签和闭合标签之间的默认内容。<code>&lt;textarea&gt;</code> 不支持 <code>value</code> 属性。</li>
 </ul>
 
-<p><code>&lt;textarea&gt;</code> 还可以使用 <code>&lt;input&gt;</code> 中的一些常见属性，如<code>autocomplete</code>, <code>autofocus</code>, <code>disabled</code>, <code>placeholder</code>, <code>readonly</code>, 和 <code>required</code>。</p>
+<p><code>&lt;textarea&gt;</code> 还可以使用 <code>&lt;input&gt;</code> 中的一些常见属性，如<code>autocomplete</code>, <code>autofocus</code>, <code>disabled</code>, <code>placeholder</code>, <code>readonly</code>, 和 <code>required</code>。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/HTML/Element/textarea
   <li><code>sentences</code>: 句子的首字母大写。</li>
   <li><code>words</code>: 单词或者字母的首字母大写。</li>
   <li><code>characters</code>: 全部字母大写。</li>
-  <li><code>on</code>: {{deprecated_inline()}} 自 iOS 5 废弃。</li>
+  <li><code>on</code>: {{deprecated_inline()}} 自 iOS 5 废弃。</li>
   <li><code>off</code>: {{deprecated_inline()}} 自 iOS 5 废弃。</li>
  </ul>
  </dd>
@@ -54,7 +54,7 @@ translation_of: Web/HTML/Element/textarea
  <dt>{{ htmlattrdef("autofocus") }}</dt>
  <dd>页面加载完毕之后是否自动给本元素添加焦点。只有跟表格关联的才能使本属性生效。</dd>
  <dt>{{ htmlattrdef("cols") }}</dt>
- <dd>文本域的可视宽度。必须为正数，默认为 20 (HTML5)。</dd>
+ <dd>文本域的可视宽度。必须为正数，默认为 20 (HTML5)。</dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
  <dd>禁用文本域。默认为 false。如果未指定，也可以从父级上如{{ HTMLElement("fieldset") }}继承而来。</dd>
  <dt>{{ htmlattrdef("form") }}</dt>
@@ -62,7 +62,7 @@ translation_of: Web/HTML/Element/textarea
  <dt>{{ htmlattrdef("maxlength") }}</dt>
  <dd>允许用户输入的最大字符长度 (Unicode) 。未指定表示无限长度。</dd>
  <dt>{{ htmlattrdef("minlength") }}</dt>
- <dd>允许用户输入的最小字符长度 (Unicode) </dd>
+ <dd>允许用户输入的最小字符长度 (Unicode) </dd>
  <dt>{{ htmlattrdef("name") }}</dt>
  <dd>元素的名称。</dd>
  <dt>{{ htmlattrdef("placeholder") }}</dt>
@@ -97,24 +97,24 @@ translation_of: Web/HTML/Element/textarea
 
 <p><code>&lt;textarea&gt;</code> 是 <a href="https://developer.mozilla.org/en-US/docs/CSS/Replaced_element" title="/en-US/docs/CSS/Replaced_element">可被替换的元素</a>——其有自己的固有尺寸，像。默认情况下，其 {{cssxref("display")}} 值为 <code>block</code>。与其他表单元素相比，这个元素相对比较容易设置样式，使用常规的 CSS 就可以轻松设置它的盒模型、字体、颜色方案等。</p>
 
-<p><a href="/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a> 这个页面提供了一些关于 <code>&lt;textarea&gt;</code> 样式的有用提示。</p>
+<p><a href="/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a> 这个页面提供了一些关于 <code>&lt;textarea&gt;</code> 样式的有用提示。</p>
 
 <h3 id="基线不一致">基线不一致</h3>
 
-<p>The HTML specification doesn't define where the baseline of a <code>&lt;textarea&gt;</code> is, so different browsers set it to different positions. For Gecko, the <code>&lt;textarea&gt;</code> baseline is set on the baseline of the first line of the textarea's first line, on another browser it may be set on the bottom of the <code>&lt;textarea&gt;</code> box. Don't use {{cssxref("vertical-align")}}<code>: baseline</code> on it; the behavior is unpredictable.</p>
+<p>The HTML specification doesn't define where the baseline of a <code>&lt;textarea&gt;</code> is, so different browsers set it to different positions. For Gecko, the <code>&lt;textarea&gt;</code> baseline is set on the baseline of the first line of the textarea's first line, on another browser it may be set on the bottom of the <code>&lt;textarea&gt;</code> box. Don't use {{cssxref("vertical-align")}}<code>: baseline</code> on it; the behavior is unpredictable.</p>
 
 <h3 id="控制文本区是否可调整大小">控制文本区是否可调整大小</h3>
 
-<p>In most browsers, <code>&lt;textarea&gt;</code>s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a <code>resize</code> value of <code>none</code>:</p>
+<p>In most browsers, <code>&lt;textarea&gt;</code>s are resizable — you'll notice the drag handle in the right hand corner, which can be used to alter the size of the element on the page. This is controlled by the {{ cssxref("resize") }} CSS property — resizing is enabled by default, but you can explicitly disable it using a <code>resize</code> value of <code>none</code>:</p>
 
 <pre>textarea {
-  resize: none;
+  resize: none;
 }
 </pre>
 
 <h3 id="在样式中使用有效值和无效值">在样式中使用有效值和无效值</h3>
 
-<p>Valid and invalid values of a <code>&lt;textarea&gt;</code> element (e.g. those within, and outside the bounds set by <code>minlength</code>, <code>maxlength</code>, or <code>required</code>) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:</p>
+<p>Valid and invalid values of a <code>&lt;textarea&gt;</code> element (e.g. those within, and outside the bounds set by <code>minlength</code>, <code>maxlength</code>, or <code>required</code>) can be highlighted using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. For example, to give your textarea a different border depending on whether it is valid or invalid:</p>
 
 <pre>textarea:invalid {
   border: 2px dashed red;
@@ -151,7 +151,7 @@ textarea:valid {
 
 <p>{{ EmbedLiveSample('Min_and_max_length','600','80') }}</p>
 
-<p>Note that <code>minlength</code> doesn't stop the user from removing characters so that the number entered goes past the minimum, but it does make the value entered into the <code>&lt;textarea&gt;</code> invalid. Also note that even if you have a <code>minlength</code> value set (3, for example), an empty <code>&lt;textarea&gt;</code> is still considered valid unless you also have the <code>required</code> attribute set.</p>
+<p>Note that <code>minlength</code> doesn't stop the user from removing characters so that the number entered goes past the minimum, but it does make the value entered into the <code>&lt;textarea&gt;</code> invalid. Also note that even if you have a <code>minlength</code> value set (3, for example), an empty <code>&lt;textarea&gt;</code> is still considered valid unless you also have the <code>required</code> attribute set.</p>
 
 <h3 id="占位符">占位符</h3>
 
@@ -164,15 +164,15 @@ textarea:valid {
 <p>{{ EmbedLiveSample('占位符','600','80') }}</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> Placeholders should only be used to show an example of the type of data that should be entered into a form; they are <em>not</em> a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.</p>
+<p><strong>Note:</strong> Placeholders should only be used to show an example of the type of data that should be entered into a form; they are <em>not</em> a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.</p>
 </div>
 
 <h3 id="禁用和只读">禁用和只读</h3>
 
-<p>This example shows two <code>&lt;textarea&gt;</code>s — one of which is <code>disabled</code>, and one of which is <code>readonly</code>. Have a play with both and you'll see the difference in behavior — the <code>disabled</code> element is not selectable in any way (and its value is not submitted), whereas the <code>readonly</code> element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.</p>
+<p>This example shows two <code>&lt;textarea&gt;</code>s — one of which is <code>disabled</code>, and one of which is <code>readonly</code>. Have a play with both and you'll see the difference in behavior — the <code>disabled</code> element is not selectable in any way (and its value is not submitted), whereas the <code>readonly</code> element is selectable and its contents copyable (and its value is submitted); you just can't edit the contents.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> In browsers other than firefox, such as chrome, the <code>disabled</code> textarea content may be selectable and copyable.</p>
+<p><strong>Note:</strong> In browsers other than firefox, such as chrome, the <code>disabled</code> textarea content may be selectable and copyable.</p>
 </div>
 
 <pre>&lt;textarea name="textarea"
@@ -191,7 +191,7 @@ textarea:valid {
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/zh-CN/docs/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/zh-CN/docs/HTML/Content_categories#Form_submittable">submittable</a> <a href="/zh-CN/docs/HTML/Content_categories#Form-associated_">form-associated</a> element.</td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Interactive_content">Interactive content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/zh-CN/docs/HTML/Content_categories#form_resettable">resettable</a>, and <a href="/zh-CN/docs/HTML/Content_categories#Form_submittable">submittable</a> <a href="/zh-CN/docs/HTML/Content_categories#Form-associated_">form-associated</a> element.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -203,7 +203,7 @@ textarea:valid {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -211,7 +211,7 @@ textarea:valid {
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>No <code>role</code> permitted</td>
+   <td>No <code>role</code> permitted</td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>

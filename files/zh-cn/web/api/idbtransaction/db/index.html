@@ -21,7 +21,7 @@ translation_of: Web/API/IDBTransaction/db
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. At the end, we return the associated database connection using <code>db</code>. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a>.)</p>
+<p>In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. At the end, we return the associated database connection using <code>db</code>. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a>.)</p>
 
 <pre class="brush: js" style="font-size: 14px;">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -30,7 +30,7 @@ DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the addData() function to add the data to the database
@@ -59,11 +59,11 @@ function addData() {
   // add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of the request (this does not mean the item
-    // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
-  };
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of the request (this does not mean the item
+    // has been stored successfully in the DB - for that you need transaction.onsuccess)
+    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+  };
 
   // Return the database (IDBDatabase) connection with which this transaction is associated
   transaction.db;

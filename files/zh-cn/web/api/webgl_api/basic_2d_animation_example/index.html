@@ -34,7 +34,7 @@ translation_of: Web/API/WebGL_API/Basic_2D_animation_example
 
 <p>主程序与我们共享属性 aVertexPosition，它是顶点在其使用的任何坐标系中的位置。我们需要转换这些值，以便位置的两个组件都在-1.0 到 1.0 的范围内。通过乘以基于上下文宽高比的缩放因子，可以很容易地完成此操作。我们很快就会看到这个计算。</p>
 
-<p>我们也可以通过一次变换来旋转这个图形。 The rotated position of the vertex is computed by applying the rotation vector, found in the uniform <code>uRotationVector</code>, that's been computed by the JavaScript code.</p>
+<p>我们也可以通过一次变换来旋转这个图形。 The rotated position of the vertex is computed by applying the rotation vector, found in the uniform <code>uRotationVector</code>, that's been computed by the JavaScript code.</p>
 
 <p>Then the final position is computed by multiplying the rotated position by the scaling vector provided by the JavaScript code in <code>uScalingFactor</code>. The values of <code>z</code> and <code>w</code> are fixed at 0.0 and 1.0, respectively, since we're drawing in 2D.</p>
 
@@ -148,9 +148,9 @@ function startup() {
 
 <p>After getting the WebGL context, <code>gl</code>, we need to begin by building the shader program. Here, we're using code designed to let us add multiple shaders to our program quite easily. The array <code>shaderSet</code> contains a list of objects, each describing one shader function to be compiled into the program. Each function has a type (one of <code>gl.VERTEX_SHADER</code> or <code>gl.FRAGMENT_SHADER</code>) and an ID (the ID of the {{HTMLElement("script")}} element containing the shader's code).</p>
 
-<p>The shader set is passed into the function <code>buildShaderProgram()</code>, which returns the compiled and linked shader program.  We'll look at how this works next.</p>
+<p>The shader set is passed into the function <code>buildShaderProgram()</code>, which returns the compiled and linked shader program.  We'll look at how this works next.</p>
 
-<p>Once the shader program is built, we compute the aspect ratio of our context by dividing its width by its height. Then we set the current rotation vector for the animation to <code>[0, 1]</code>, and the scaling vector to <code>[1.0, aspectRatio]</code>. The scaling vector, as we saw in the vertex shader, is used to scale the coordinates to fit the -1.0 to 1.0 range.</p>
+<p>Once the shader program is built, we compute the aspect ratio of our context by dividing its width by its height. Then we set the current rotation vector for the animation to <code>[0, 1]</code>, and the scaling vector to <code>[1.0, aspectRatio]</code>. The scaling vector, as we saw in the vertex shader, is used to scale the coordinates to fit the -1.0 to 1.0 range.</p>
 
 <p>The array of vertices is created next, as a {{jsxref("Float32Array")}} with six coordinates (three 2D vertices) per triangle to be drawn, for a total of 12 values.</p>
 

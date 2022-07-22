@@ -31,11 +31,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNam
 
 <h2 id="Description">描述</h2>
 
-<p><code>Object.getOwnPropertyNames()</code> 返回一个数组，该数组对元素是 <code>obj</code>自身拥有的枚举或不可枚举属性名称字符串。 数组中枚举属性的顺序与通过 {{jsxref("Statements/for...in", "for...in")}} 循环（或 {{jsxref("Object.keys")}}）迭代该对象属性时一致。数组中不可枚举属性的顺序未定义。</p>
+<p><code>Object.getOwnPropertyNames()</code> 返回一个数组，该数组对元素是 <code>obj</code>自身拥有的枚举或不可枚举属性名称字符串。 数组中枚举属性的顺序与通过 {{jsxref("Statements/for...in", "for...in")}} 循环（或 {{jsxref("Object.keys")}}）迭代该对象属性时一致。数组中不可枚举属性的顺序未定义。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_Object.getOwnPropertyNames()">使用 <code>Object.getOwnPropertyNames()</code></h3>
+<h3 id="使用_Object.getOwnPropertyNames()">使用 <code>Object.getOwnPropertyNames()</code></h3>
 
 <pre class="brush: js">var arr = ["a", "b", "c"];
 console.log(Object.getOwnPropertyNames(arr).sort()); // ["0", "1", "2", "length"]
@@ -73,17 +73,17 @@ console.log(Object.getOwnPropertyNames(my_obj).sort()); // ["foo", "getFoo"]
 ParentClass.prototype.inheritedMethod = function() {};
 
 function ChildClass() {
-  this.prop = 5;
-  this.method = function() {};
+  this.prop = 5;
+  this.method = function() {};
 }
 
 ChildClass.prototype = new ParentClass;
 ChildClass.prototype.prototypeMethod = function() {};
 
 console.log(
-  Object.getOwnPropertyNames(
-    new ChildClass()  // ["prop", "method"]
-  )
+  Object.getOwnPropertyNames(
+    new ChildClass()  // ["prop", "method"]
+  )
 );
 </pre>
 
@@ -95,14 +95,14 @@ console.log(
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
 var enum_only = Object.keys(target);
 var nonenum_only = enum_and_nonenum.filter(function(key) {
-    var indexInEnum = enum_only.indexOf(key);
-    if (indexInEnum == -1) {
-        // 没有发现在 enum_only 健集中意味着这个健是不可枚举的，
-        // 因此返回 true 以便让它保持在过滤结果中
-        return true;
-    } else {
-        return false;
-    }
+    var indexInEnum = enum_only.indexOf(key);
+    if (indexInEnum == -1) {
+        // 没有发现在 enum_only 健集中意味着这个健是不可枚举的，
+        // 因此返回 true 以便让它保持在过滤结果中
+        return true;
+    } else {
+        return false;
+    }
 });
 
 console.log(nonenum_only);</pre>
@@ -111,7 +111,7 @@ console.log(nonenum_only);</pre>
 
 <h2 id="Notes">提示</h2>
 
-<p>在 ES5 中，如果参数不是一个原始对象类型，将抛出一个 {{jsxref("TypeError")}}  异常。在 ES2015 中，非对象参数被强制转换为对象 <strong>。</strong></p>
+<p>在 ES5 中，如果参数不是一个原始对象类型，将抛出一个 {{jsxref("TypeError")}}  异常。在 ES2015 中，非对象参数被强制转换为对象 <strong>。</strong></p>
 
 <pre class="brush: js">Object.getOwnPropertyNames('foo');
 // TypeError: "foo" is not an object (ES5 code)
@@ -137,12 +137,12 @@ Object.getOwnPropertyNames('foo');
   <tr>
    <td>{{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -153,7 +153,7 @@ Object.getOwnPropertyNames('foo');
 
 <h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
 
-<p>Firefox 28 {{geckoRelease("28")}}之前，<code>Object.getOwnPropertyNames</code> 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ({{bug("724768")}})。</p>
+<p>Firefox 28 {{geckoRelease("28")}}之前，<code>Object.getOwnPropertyNames</code> 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ({{bug("724768")}})。</p>
 
 <h2 id="See_also">相关链接</h2>
 

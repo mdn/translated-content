@@ -6,7 +6,7 @@ original_slug: Web/API/Window/crypto
 ---
 <div>{{APIRef}}</div>
 
-<p>Window.crypto 只读属性返回与全局对象关联的 {{domxref("Crypto")}}对象。此对象允许网页访问某些加密相关服务。</p>
+<p>Window.crypto 只读属性返回与全局对象关联的 {{domxref("Crypto")}}对象。此对象允许网页访问某些加密相关服务。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,19 +15,19 @@ original_slug: Web/API/Window/crypto
 
 <h2 id="Example">范例</h2>
 
-<h4 id="使用_domxref(Window.crypto)_来访问getRandomValues()_方法.">使用 {{domxref("Window.crypto")}} 来访问<a href="/en-US/docs/Web/API/RandomSource/getRandomValues">getRandomValues()</a> 方法。</h4>
+<h4 id="使用_domxref(Window.crypto)_来访问getRandomValues()_方法.">使用 {{domxref("Window.crypto")}} 来访问<a href="/en-US/docs/Web/API/RandomSource/getRandomValues">getRandomValues()</a> 方法。</h4>
 
 <h3 id="JavaScript">JavaScript</h3>
 
 <pre class="brush: js">genRandomNumbers = function getRandomNumbers() {
-  var array = new Uint32Array(10);
-  window.crypto.getRandomValues(array);
+  var array = new Uint32Array(10);
+  window.crypto.getRandomValues(array);
 
-  var randText = document.getElementById("myRandText");
-  randText.innerHTML = "The random numbers are: "
-  for (var i = 0; i &lt; array.length; i++) {
-    randText.innerHTML += array[i] + " ";
-  }
+  var randText = document.getElementById("myRandText");
+  randText.innerHTML = "The random numbers are: "
+  for (var i = 0; i &lt; array.length; i++) {
+    randText.innerHTML += array[i] + " ";
+  }
 }
 </pre>
 

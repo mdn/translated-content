@@ -40,7 +40,7 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <pre class="brush: python">urlpatterns = [
     path('', views.index, name='index'),
-<strong>    </strong>path<strong>('books/', views.BookListView.as_view(), name='books'),</strong>
+<strong>    </strong>path<strong>('books/', views.BookListView.as_view(), name='books'),</strong>
 ]</pre>
 
 <p>正如前一个教程中所讨论的，URL 必须已经先匹配了<code>/catalog</code>，因此实际上将为 URL 调用的视图是：<code>/catalog/books/</code>。</p>
@@ -81,8 +81,8 @@ class BookListView(generic.ListView):
 <pre class="brush: python">class BookListView(generic.ListView):
     model = Book
 
-    def get_queryset(self):
-        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+    def get_queryset(self):
+        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
 </pre>
 
 <p>我们还可以覆盖<code>get_context_data()</code> ，以将其他上下文变量传递给模板（例如，默认情况下传递书本列表）。下面的片段，显示了如何将一个名为“<code>some_data</code>”的变量添加到上下文中（然后它将作为一个模板变量，而被提供）。</p>
@@ -90,12 +90,12 @@ class BookListView(generic.ListView):
 <pre class="brush: python">class BookListView(generic.ListView):
     model = Book
 
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get the context
-        context = super(BookListView, self).get_context_data(**kwargs)
-        # Create any data and add it to the context
-        context['some_data'] = 'This is just some data'
-        return context</pre>
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get the context
+        context = super(BookListView, self).get_context_data(**kwargs)
+        # Create any data and add it to the context
+        context['some_data'] = 'This is just some data'
+        return context</pre>
 
 <p>这样做时，遵循上面使用的模式非常重要：</p>
 
@@ -118,21 +118,21 @@ class BookListView(generic.ListView):
 <pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
-    &lt;h1&gt;Book List&lt;/h1&gt;
+    &lt;h1&gt;Book List&lt;/h1&gt;
 
-    <strong>{% if book_list %}</strong>
-    &lt;ul&gt;
+    <strong>{% if book_list %}</strong>
+    &lt;ul&gt;
 
-      {% for book in book_list %}
-      &lt;li&gt;
-        &lt;a href="\{{ book.get_absolute_url }}"&gt;\{{ book.title }}&lt;/a&gt; (\{{book.author}})
-      &lt;/li&gt;
-      {% endfor %}
+      {% for book in book_list %}
+      &lt;li&gt;
+        &lt;a href="\{{ book.get_absolute_url }}"&gt;\{{ book.title }}&lt;/a&gt; (\{{book.author}})
+      &lt;/li&gt;
+      {% endfor %}
 
-    &lt;/ul&gt;
-    <strong>{% else %}</strong>
-      &lt;p&gt;There are no books in the library.&lt;/p&gt;
-    <strong>{% endif %} </strong>
+    &lt;/ul&gt;
+    <strong>{% else %}</strong>
+      &lt;p&gt;There are no books in the library.&lt;/p&gt;
+    <strong>{% endif %} </strong>
 {% endblock %}</pre>
 
 <p>视图默认将上下文（书本列表）作为 <code>object_list </code>和 <code>book_list</code> 的别名传递；任何一个都会奏效。</p>
@@ -198,8 +198,8 @@ class BookListView(generic.ListView):
 
 <pre class="brush: python">urlpatterns = [
     path('', views.index, name='index'),
-    path('books/', views.BookListView.as_view(), name='books'),
-<strong>    path('book/&lt;int:pk&gt;', views.BookDetailView.as_view(), name='book-detail'),</strong>
+    path('books/', views.BookListView.as_view(), name='books'),
+<strong>    path('book/&lt;int:pk&gt;', views.BookDetailView.as_view(), name='book-detail'),</strong>
 ]</pre>
 
 <p>对于书本详细信息路径，URL 模式使用特殊语法，来捕获我们想要查看的书本的特定 id。语法非常简单：尖括号定义要捕获的 URL 部分，包含视图可用于访问捕获数据的变量的名称。例如，&lt;<strong>something</strong>&gt; 将捕获标记的模式，并将值作为变量“something” ，传递给视图。您可以选择在变量名称前，加上一个定义数据类型的<a href="https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters">转换器规范</a>（int，str，slug，uuid，path）。</p>
@@ -278,7 +278,7 @@ class BookListView(generic.ListView):
    <td>捕获模式（由...表示）作为命名变量（在本例中为“name”）。捕获的值，将传递给具有指定名称的视图。因此，您的视图，必须声明具有相同名称的参数！</td>
   </tr>
   <tr>
-   <td>[  ]</td>
+   <td>[  ]</td>
    <td>匹配集合中的一个字符。例如，[abc] 将匹配 'a' 或 'b' 或 'c'。 [-\w] 将匹配 ' - ' 字符，或任何单词字符。</td>
   </tr>
  </tbody>
@@ -329,7 +329,7 @@ class BookListView(generic.ListView):
 
 <h4 id="在_URL_地图中传递其他选项">在 URL 地图中传递其他选项</h4>
 
-<p>我们在这里没有使用、但您可能觉得有价值的一个功能是，您可以向视图声明并传递<a href="https://docs.djangoproject.com/en/2.0/topics/http/urls/#views-extra-options">其他选项</a>。这些选项被声明为一个字典，您将其作为第三个未命名参数，传递给  <code>path()</code>函数。</p>
+<p>我们在这里没有使用、但您可能觉得有价值的一个功能是，您可以向视图声明并传递<a href="https://docs.djangoproject.com/en/2.0/topics/http/urls/#views-extra-options">其他选项</a>。这些选项被声明为一个字典，您将其作为第三个未命名参数，传递给  <code>path()</code>函数。</p>
 
 <p>如果要对多个资源，使用相同的视图，并在每种情况下，传递数据以配置其行为，则此方法非常有用（下面我们在每种情况下提供不同的模板）。</p>
 
@@ -346,9 +346,9 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>打开 <strong>catalog / views.py</strong>，并将以下代码复制到文件的底部：</p>
 
 <pre class="brush: python">class BookDetailView(generic.DetailView):
-    model = Book</pre>
+    model = Book</pre>
 
-<p>就是这样！您现在需要做的就是创建一个名为 <strong>/locallibrary/catalog/templates/catalog/book_detail.html </strong>的模板，该视图将向此模板，传递 URL 映射器提取的特定 <code>Book</code> 记录的数据库信息。在模板中，您可以使用名为  <code>object</code> 或 <code>book</code>的模板变量（即通常为“<code><em>the_model_name</em></code>”），以访问书本列表。</p>
+<p>就是这样！您现在需要做的就是创建一个名为 <strong>/locallibrary/catalog/templates/catalog/book_detail.html </strong>的模板，该视图将向此模板，传递 URL 映射器提取的特定 <code>Book</code> 记录的数据库信息。在模板中，您可以使用名为  <code>object</code> 或 <code>book</code>的模板变量（即通常为“<code><em>the_model_name</em></code>”），以访问书本列表。</p>
 
 <p>如果需要，可以更改使用的模板，以及用于在模板中，引用该书本的上下文对象的名称。您还可以覆盖方法，例如，向上下文添加其他信息。</p>
 
@@ -364,7 +364,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
     except Book.DoesNotExist:
         raise Http404("Book does not exist")
 
-    #book_id=get_object_or_404(Book, pk=pk)
+    #book_id=get_object_or_404(Book, pk=pk)
 
     return render(
         request,
@@ -446,7 +446,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p>发生这种情况，是因为 <a href="https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects">paginator object </a>对象希望在下划线数据库上看到一些 ORDER BY。没有它，它无法确定，返回的注册表实际上是否为正确顺序！</p>
 
-<p>本教程还没有说明到 <strong>Pagination</strong>（还没，但很快），但由于你不能使用<code>sort_by()</code> 并传递一个参数（与上面描述的<code>filter()</code> 相同），你将不得不在下面三个选择当中，进行挑选：   </p>
+<p>本教程还没有说明到 <strong>Pagination</strong>（还没，但很快），但由于你不能使用<code>sort_by()</code> 并传递一个参数（与上面描述的<code>filter()</code> 相同），你将不得不在下面三个选择当中，进行挑选：   </p>
 
 <ol>
  <li>在模型的<code>class Meta</code>声明中，添加排序<code>ordering</code>。</li>
@@ -553,13 +553,13 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>本文中的挑战，是创建完成项目所需的作者详细信息视图，和列表视图。这些应在以下 URL 中提供：</p>
 
 <ul>
- <li><code>catalog/authors/</code> — 所有作者的名单。</li>
- <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— 特定作者的详细视图，并具有名为<em><code>&lt;id&gt;</code></em>的主键字段</li>
+ <li><code>catalog/authors/</code> — 所有作者的名单。</li>
+ <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— 特定作者的详细视图，并具有名为<em><code>&lt;id&gt;</code></em>的主键字段</li>
 </ul>
 
 <p>URL 映射器和视图所需的代码，应与我们上面创建的<code>Book</code>列表和详细视图几乎完全相同。模板将有所不同，但会分享类似的行为。</p>
 
-<p> </p>
+<p> </p>
 
 <div class="note">
 <p><strong>注意</strong>:</p>
@@ -605,7 +605,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="本教程">本教程</h2>
 
@@ -627,4 +627,4 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django 微博客</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p>值 <code>null</code> 特指对象的值未设置。它是 JavaScript {{Glossary("Primitive", "基本类型")}} 之一，在布尔运算中被认为是<a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a>。</p>
+<p>值 <code>null</code> 特指对象的值未设置。它是 JavaScript {{Glossary("Primitive", "基本类型")}} 之一，在布尔运算中被认为是<a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a>。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}</div>
 
@@ -22,7 +22,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/null
 
 <h2 id="描述">描述</h2>
 
-<p>值 <code>null</code> 是一个字面量，不像 {{jsxref("Global_Objects/undefined","undefined")}}，它不是全局对象的一个属性。<code>null</code> 是表示缺少的标识，指示变量未指向任何对象。把 <code>null</code> 作为尚未创建的对象，也许更好理解。在 API 中，<code>null</code> 常在返回类型应是一个对象，但没有关联的值的地方使用。</p>
+<p>值 <code>null</code> 是一个字面量，不像 {{jsxref("Global_Objects/undefined","undefined")}}，它不是全局对象的一个属性。<code>null</code> 是表示缺少的标识，指示变量未指向任何对象。把 <code>null</code> 作为尚未创建的对象，也许更好理解。在 API 中，<code>null</code> 常在返回类型应是一个对象，但没有关联的值的地方使用。</p>
 
 <pre class="brush: js">// foo 不存在，它从来没有被定义过或者是初始化过：
 foo;
@@ -33,14 +33,14 @@ var foo = null;
 foo;
 null</pre>
 
-<h3 id="null_与_undefined_的不同点："><code>null</code> 与 <code>undefined</code> 的不同点：</h3>
+<h3 id="null_与_undefined_的不同点："><code>null</code> 与 <code>undefined</code> 的不同点：</h3>
 
-<p>当检测 <code>null</code> 或 <code>undefined</code> 时，注意<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">相等（==）与全等（===）两个操作符的区别</a> ，前者会执行类型转换：</p>
+<p>当检测 <code>null</code> 或 <code>undefined</code> 时，注意<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">相等（==）与全等（===）两个操作符的区别</a> ，前者会执行类型转换：</p>
 
-<pre class="brush: js">typeof null        // "object" (因为一些以前的原因而不是'null')
-typeof undefined   // "undefined"
+<pre class="brush: js">typeof null        // "object" (因为一些以前的原因而不是'null')
+typeof undefined   // "undefined"
 null === undefined // false
-null  == undefined // true
+null  == undefined // true
 null === null // true
 null == null // true
 !null //true

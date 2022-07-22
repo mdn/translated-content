@@ -781,7 +781,7 @@
 /zh-CN/docs/JavaScript/Guide	/zh-CN/docs/Web/JavaScript/Guide
 /zh-CN/docs/JavaScript/Guide-redirect-1	/zh-CN/docs/Web/JavaScript/Guide
 /zh-CN/docs/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
-/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-CN/docs/JavaScript/Guide/Expressions_and_Operators	/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-CN/docs/JavaScript/Guide/Functions	/zh-CN/docs/Web/JavaScript/Guide/Functions
 /zh-CN/docs/JavaScript/Guide/Inheritance_Revisited	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -1477,10 +1477,13 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onended	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onformdata	/zh-CN/docs/Web/API/HTMLFormElement/formdata_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/zh-CN/docs/Web/API/Element/gotpointercapture_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oninput	/zh-CN/docs/conflicting/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/oninvalid	/zh-CN/docs/conflicting/Web/API/HTMLInputElement/invalid_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/conflicting/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/conflicting/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup	/zh-CN/docs/conflicting/Web/API/Element/keyup_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/zh-CN/docs/Web/API/Element/lostpointercapture_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmousedown	/zh-CN/docs/conflicting/Web/API/Element/mousedown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseenter	/zh-CN/docs/conflicting/Web/API/Element/mouseenter_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseleave	/zh-CN/docs/conflicting/Web/API/Element/mouseleave_event
@@ -2241,8 +2244,8 @@
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/sandbox	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/upgrade-insecure-requests	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 /zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/Web/HTTP/Headers/Cookie
-/zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins	/zh-CN/docs/conflicting/Web/HTTP/Headers/Expect-CT
-/zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/zh-CN/docs/conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
+/zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins	/zh-CN/docs/Web/HTTP/Headers/Expect-CT
+/zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/zh-CN/docs/Web/HTTP/Headers/Expect-CT
 /zh-CN/docs/Web/HTTP/Headers/Set-Cookie2	/zh-CN/docs/Web/HTTP/Headers/Set-Cookie
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Public_Key_Pinning	/zh-CN/docs/Web/Security/Certificate_Transparency
@@ -2260,6 +2263,7 @@
 /zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
+/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/EventLoop	/zh-CN/docs/Web/JavaScript/EventLoop
 /zh-CN/docs/Web/JavaScript/Guide/Inheritance_Revisited	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain

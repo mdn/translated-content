@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Guide/Indexed_collections
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}</div>
 
-<p>这个章节主要介绍了以索引进行排序的数据集合。包括数组以及类似于数组的数据结构，如<strong> {{jsxref("Array")}} </strong>、<strong>{{jsxref("TypedArray")}} </strong>。</p>
+<p>这个章节主要介绍了以索引进行排序的数据集合。包括数组以及类似于数组的数据结构，如<strong> {{jsxref("Array")}} </strong>、<strong>{{jsxref("TypedArray")}} </strong>。</p>
 
 <h2 id="数组对象Array_object">数组对象 (Array object)</h2>
 
@@ -24,9 +24,9 @@ var arr = [element0, element1, ..., elementN];
 // 译者注: var arr=[4] 和 var arr=new Array(4) 是不等效的，
 // 后者 4 指数组长度，所以使用字面值 (literal) 的方式应该不仅仅是便捷，同时也不易踩坑</pre>
 
-<p><code>element0, element1, ..., elementN</code> 是数组元素的值的列表。当这些值被指定后，数组将被初始化，他们将被作为数组元素。数组的 length 属性也会被设为参数的个数。</p>
+<p><code>element0, element1, ..., elementN</code> 是数组元素的值的列表。当这些值被指定后，数组将被初始化，他们将被作为数组元素。数组的 length 属性也会被设为参数的个数。</p>
 
-<p>括号语法被称为 "数组字面值" 或 "数组初始化器", 它比其他创建数组的方式更便捷，所以通常是首选。详细内容参见 <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals" title="en-US/docs/JavaScript/Guide/Values, Variables, and Literals#Array Literals">Array literals</a> 。</p>
+<p>括号语法被称为 "数组字面值" 或 "数组初始化器", 它比其他创建数组的方式更便捷，所以通常是首选。详细内容参见 <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals" title="en-US/docs/JavaScript/Guide/Values, Variables, and Literals#Array Literals">Array literals</a> 。</p>
 
 <p>为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：</p>
 
@@ -39,7 +39,7 @@ arr.length = arrayLength;
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong>以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 <code>arr.length</code> 会返回数组长度，但是数组实际上包含了空的（<code>undefined</code>）元素。 因此在数组上使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 循环，将不会返回任何的值 。</p>
+<p><strong>备注：</strong>以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 <code>arr.length</code> 会返回数组长度，但是数组实际上包含了空的（<code>undefined</code>）元素。 因此在数组上使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 循环，将不会返回任何的值 。</p>
 </div>
 
 <p>除了如上所示创建新定义的变量，数组 (array) 也可以作为一个属性 (property) 分配给一个新的或者已存在的对象 (object)：</p>
@@ -64,7 +64,7 @@ var arr = [];
 arr.length = 42;
 </pre>
 
-<p>如果 N 不是一个整数，调用<code>Array(N)</code>将会报<code>RangeError</code>错误， 以下方法说明了这种行为：</p>
+<p>如果 N 不是一个整数，调用<code>Array(N)</code>将会报<code>RangeError</code>错误， 以下方法说明了这种行为：</p>
 
 <pre class="brush: js">var arr = Array(9.3);  // RangeError: Invalid array length
 </pre>
@@ -117,7 +117,7 @@ arr["length"];  // 3
 
 <h3 id="理解_length">理解 length</h3>
 
-<p>在实施层面， JavaScript 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。长度属性是特殊的，它总是返回最后一个元素的索引值加 1(下例中， Dusty 的索引是 30，所以 cats.length 返回 30 + 1)。记住， JavaScript 数组索引是基于 0 的：他们从 0 开始，而不是 1。这意味着数组长度属性将比最大的索引值大 1:</p>
+<p>在实施层面， JavaScript 实际上是将元素作为标准的对象属性来存储，把数组索引作为属性名。长度属性是特殊的，它总是返回最后一个元素的索引值加 1(下例中， Dusty 的索引是 30，所以 cats.length 返回 30 + 1)。记住， JavaScript 数组索引是基于 0 的：他们从 0 开始，而不是 1。这意味着数组长度属性将比最大的索引值大 1:</p>
 
 <pre class="brush: js">var cats = [];
 cats[30] = ['Dusty'];
@@ -149,7 +149,7 @@ for (var i = 0; i &lt; colors.length; i++) {
 }
 </pre>
 
-<p>如果你确定数组中没有一个元素的求值是 false —— 如果你的数组只包含<a href="/en-US/docs/DOM" title="en-US/docs/DOM">DOM</a>节点，如下，你可以选择一个更高效的土法子：</p>
+<p>如果你确定数组中没有一个元素的求值是 false —— 如果你的数组只包含<a href="/en-US/docs/DOM" title="en-US/docs/DOM">DOM</a>节点，如下，你可以选择一个更高效的土法子：</p>
 
 <pre class="brush: js">var divs = document.getElementsByTagName('div');
 for (var i = 0, div; div = divs[i]; i++) {
@@ -187,7 +187,7 @@ array.forEach(function(element) {
   console.log(element);
 })</pre>
 
-<p>一旦 JavaScript 元素被保存为标准的对象属性，通过<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 循环来迭代数组将变得不明智，因为正常元素和所有可枚举的属性都会被列出。</p>
+<p>一旦 JavaScript 元素被保存为标准的对象属性，通过<code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> 循环来迭代数组将变得不明智，因为正常元素和所有可枚举的属性都会被列出。</p>
 
 <h3 id="数组的方法array_methods">数组的方法 (array methods)</h3>
 
@@ -263,7 +263,7 @@ myArray.sort();
 // sorts the array so that myArray = [ "Fire", "Rain", "Wind" ]
 </pre>
 
-<p><code>sort()</code> 也可以带一个回调函数来决定怎么比较数组元素。这个回调函数比较两个值，并返回 3 个值中的一个：</p>
+<p><code>sort()</code> 也可以带一个回调函数来决定怎么比较数组元素。这个回调函数比较两个值，并返回 3 个值中的一个：</p>
 
 <p>例如，下面的代码通过字符串的最后一个字母进行排序：</p>
 
@@ -277,11 +277,11 @@ myArray.sort(sortFn);
 
 <ul>
  <li>如果 a 小于 b ，返回 -1(或任何负数)</li>
- <li>如果 <code>a</code> 大于 <code>b</code> ，返回 1 (或任何正数)</li>
- <li>如果 <code>a</code> 和 <code>b</code> 相等，返回 0。</li>
+ <li>如果 <code>a</code> 大于 <code>b</code> ，返回 1 (或任何正数)</li>
+ <li>如果 <code>a</code> 和 <code>b</code> 相等，返回 0。</li>
 </ul>
 
-<p>{{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} 在数组中搜索<code>searchElement</code> 并返回第一个匹配的索引。</p>
+<p>{{jsxref("Array.indexOf", "indexOf(searchElement[, fromIndex])")}} 在数组中搜索<code>searchElement</code> 并返回第一个匹配的索引。</p>
 
 <pre class="brush: js">var a = ['a', 'b', 'a', 'b', 'a'];
 console.log(a.indexOf('b')); // logs 1
@@ -290,7 +290,7 @@ console.log(a.indexOf('b', 2)); // logs 3
 console.log(a.indexOf('z')); // logs -1, because 'z' was not found
 </pre>
 
-<p>{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} 和 <code>indexOf 差不多，但这是从结尾开始，并且是反向搜索。</code></p>
+<p>{{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement[, fromIndex])")}} 和 <code>indexOf 差不多，但这是从结尾开始，并且是反向搜索。</code></p>
 
 <pre class="brush: js">var a = ['a', 'b', 'c', 'd', 'a', 'b'];
 console.log(a.lastIndexOf('b')); // logs 5
@@ -344,11 +344,11 @@ var a3 = ['1', '2', '3'];
 console.log(a3.some(isNumber)); // logs false
 </pre>
 
-<p>以上方法都带一个被称为迭代方法的的回调函数，因为他们以某种方式迭代整个数组。都有一个可选的第二参数 <code>thisObject</code>，如果提供了这个参数，<code>thisObject</code> 变成回调函数内部的 this 关键字的值。如果没有提供，例如函数在一个显示的对象上下文外被调用时，this 将引用全局对象 ({{domxref("window")}}).</p>
+<p>以上方法都带一个被称为迭代方法的的回调函数，因为他们以某种方式迭代整个数组。都有一个可选的第二参数 <code>thisObject</code>，如果提供了这个参数，<code>thisObject</code> 变成回调函数内部的 this 关键字的值。如果没有提供，例如函数在一个显示的对象上下文外被调用时，this 将引用全局对象 ({{domxref("window")}}).</p>
 
-<p>实际上在调用回调函数时传入了 3 个参数。第一个是当前元素项的值，第二个是它在数组中的索引，第三个是数组本身的一个引用。 JavaScript 函数忽略任何没有在参数列表中命名的参数，因此提供一个只有一个参数的回调函数是安全的，例如 <code>alert</code> 。</p>
+<p>实际上在调用回调函数时传入了 3 个参数。第一个是当前元素项的值，第二个是它在数组中的索引，第三个是数组本身的一个引用。 JavaScript 函数忽略任何没有在参数列表中命名的参数，因此提供一个只有一个参数的回调函数是安全的，例如 <code>alert</code> 。</p>
 
-<p>{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} 使用回调函数 <code>callback(firstValue, secondValue)</code> 把数组列表计算成一个单一值（译者注：他数组元素两两递归处理的方式把数组计算成一个值）</p>
+<p>{{jsxref("Array.reduce", "reduce(callback[, initialValue])")}} 使用回调函数 <code>callback(firstValue, secondValue)</code> 把数组列表计算成一个单一值（译者注：他数组元素两两递归处理的方式把数组计算成一个值）</p>
 
 <pre class="brush: js">var a = [10, 20, 30];
 var total = a.reduce(function(first, second) { return first + second; }, 0);
@@ -384,17 +384,17 @@ Row 3: [3,0] [3,1] [3,2] [3,3]
 
 <h3 id="数组和正则表达式">数组和正则表达式</h3>
 
-<p>当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec" title="en-US/docs/JavaScript/Reference/Global Objects/RegExp/exec"><code>RegExp.exec()</code></a>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/match" title="en-US/docs/JavaScript/Reference/Global Objects/String/match">String.match()</a> 和</code> <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" title="en-US/docs/JavaScript/Reference/Global
-Objects/String/split">String.split()</a> 的返回值是一个数组。</code> 使用数组和正则表达式的的更多信息，请看 <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" title="en-US/docs/JavaScript/Guide/Regular Expressions">Regular Expressions</a>.</p>
+<p>当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec" title="en-US/docs/JavaScript/Reference/Global Objects/RegExp/exec"><code>RegExp.exec()</code></a>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/match" title="en-US/docs/JavaScript/Reference/Global Objects/String/match">String.match()</a> 和</code> <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" title="en-US/docs/JavaScript/Reference/Global
+Objects/String/split">String.split()</a> 的返回值是一个数组。</code> 使用数组和正则表达式的的更多信息，请看 <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" title="en-US/docs/JavaScript/Guide/Regular Expressions">Regular Expressions</a>.</p>
 
 <h3 id="使用类数组对象array-like_objects">使用类数组对象 (array-like objects)</h3>
 
-<p>一些 JavaScript 对象，例如 {{domxref("document.getElementsByTagName()")}} 返回的 {{domxref("NodeList")}} 或者函数内部可用的 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="en-US/docs/JavaScript/Reference/Functions andfunctionscope/arguments"><code>arguments</code></a> 对象，他们表面上看起来，外观和行为像数组，但是不共享他们所有的方法。例如 <code>arguments</code> 对象就提供一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">length</a></code> 属性，但是不实现 {{jsxref("Array.forEach", "forEach()")}} 方法。</p>
+<p>一些 JavaScript 对象，例如 {{domxref("document.getElementsByTagName()")}} 返回的 {{domxref("NodeList")}} 或者函数内部可用的 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="en-US/docs/JavaScript/Reference/Functions andfunctionscope/arguments"><code>arguments</code></a> 对象，他们表面上看起来，外观和行为像数组，但是不共享他们所有的方法。例如 <code>arguments</code> 对象就提供一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">length</a></code> 属性，但是不实现 {{jsxref("Array.forEach", "forEach()")}} 方法。</p>
 
 <p>Array 的原生 (prototype) 方法可以用来处理类似数组行为的对象，例如： :</p>
 
 <pre class="brush: js">function printArguments() {
-  Array.prototype.forEach.call(arguments, function(item) {
+  Array.prototype.forEach.call(arguments, function(item) {
     console.log(item);
   });
 }</pre>
@@ -407,7 +407,7 @@ Objects/String/split">String.split()</a> 的返回值是一个数组。</code>�
 
 <h2 id="数组推导式（Array_comprehensions）">数组推导式（Array comprehensions）</h2>
 
-<p>在<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7">JavaScript 1.7</a> 被介绍并计划在 <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_7_support_in_Mozilla">ECMAScript 7</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">array comprehensions</a> 被规范化并提供一个有用的快捷方式，用来实现如何在另一个数组的基础上构造一个新的数组。推导式可以经常被用在那些需要调用 <code>map()</code> 和 <code>filter() 函数的地方，</code>或作为一种结合这两种方式。</p>
+<p>在<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7">JavaScript 1.7</a> 被介绍并计划在 <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_7_support_in_Mozilla">ECMAScript 7</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">array comprehensions</a> 被规范化并提供一个有用的快捷方式，用来实现如何在另一个数组的基础上构造一个新的数组。推导式可以经常被用在那些需要调用 <code>map()</code> 和 <code>filter() 函数的地方，</code>或作为一种结合这两种方式。</p>
 
 <p>下面的推导式创建一个数字数组并且创建一个新的数组，数组的每个元素都是原来数值的两倍（译者注：这种形式类似于 Python 的列表推导式）。</p>
 
@@ -455,7 +455,7 @@ var interpolatedZeros = [c+'0' for (c of str) ].join(''); // 'a0b0c0d0e0f0'
 
 <h2 id="类型化数组Typed_Arrays">类型化数组 (Typed Arrays )</h2>
 
-<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> 是类数组对象（array-like object），其提供访问原始二进制数据的机制。 就像你知道的那样，{{jsxref("Array")}} 对象动态增长和收缩，可以有任何 JavaScript 值。但对于类型化数组，JavaScript 引擎执行优化使得这些数组访问速度快速。 随着 Web 应用程序变得越来越强大，添加音频和视频处理等功能、可以使用 <a href="/en-US/docs/WebSockets">WebSockets</a> 、使用原始数据， 这都需要访问原始的二进制数据，所以专门的优化将有助于 JavaScript 代码能够快速和容易地操纵原始二进制数据类型的数组。</p>
+<p><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> 是类数组对象（array-like object），其提供访问原始二进制数据的机制。 就像你知道的那样，{{jsxref("Array")}} 对象动态增长和收缩，可以有任何 JavaScript 值。但对于类型化数组，JavaScript 引擎执行优化使得这些数组访问速度快速。 随着 Web 应用程序变得越来越强大，添加音频和视频处理等功能、可以使用 <a href="/en-US/docs/WebSockets">WebSockets</a> 、使用原始数据， 这都需要访问原始的二进制数据，所以专门的优化将有助于 JavaScript 代码能够快速和容易地操纵原始二进制数据类型的数组。</p>
 
 <h3 id="缓冲区和视图：类型化的数组结构">缓冲区和视图：类型化的数组结构</h3>
 
@@ -465,7 +465,7 @@ var interpolatedZeros = [c+'0' for (c of str) ].join(''); // 'a0b0c0d0e0f0'
 
 <h3 id="ArrayBuffer">ArrayBuffer</h3>
 
-<p> {{jsxref("ArrayBuffer")}}是一种数据类型，用于表示一个通用的、固定长度的二进制数据缓冲区。你不能直接操纵一个 ArrayBuffer 中的内容；你需要创建一个数组类型视图或{{jsxref("DataView")}}来代表特定格式的缓冲区，并从而实现读写缓冲区的内容。</p>
+<p> {{jsxref("ArrayBuffer")}}是一种数据类型，用于表示一个通用的、固定长度的二进制数据缓冲区。你不能直接操纵一个 ArrayBuffer 中的内容；你需要创建一个数组类型视图或{{jsxref("DataView")}}来代表特定格式的缓冲区，并从而实现读写缓冲区的内容。</p>
 
 <h3 id="类型数组视图Typed_array_views">类型数组视图 (Typed array views)</h3>
 

@@ -116,8 +116,6 @@ To call a message string like this, you need to specify it like this:
 4.  The name of the message you want to call as defined in `messages.json`, followed by
 5.  Two underscores
 
-<!---->
-
     __MSG_ + messageName + __
 
 ### Specifying a default locale

@@ -51,20 +51,20 @@ translation_of: Web/API/IDBObjectStore/get
   <tr>
    <td>DataError</td>
    <td>
-    <p>The key or key range provided contains an invalid key.</p>
+    <p>The key or key range provided contains an invalid key.</p>
    </td>
   </tr>
   <tr>
    <td><code>InvalidStateError</code></td>
    <td>The {{domxref("IDBObjectStore")}} has been deleted or removed.<br>
-     </td>
+     </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="例子">例子</h2>
 
-<p>在以下的代码段中，我们在数据库上打开一个“读/写 事务（read/write transaction）”，并使用 <code>get()</code> 从“对象储存（ object store ）”中获取一个特定的记录——一个带有“Walk dog”键的示例记录。一旦检索到这个数据对象，你就可以使用普通的 JavaScript 更新它，然后使用 {{domxref("IDBObjectStore.put")}} 操作将其放回数据库。有关完整的工作示例，查看我们的 <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a>.)</p>
+<p>在以下的代码段中，我们在数据库上打开一个“读/写 事务（read/write transaction）”，并使用 <code>get()</code> 从“对象储存（ object store ）”中获取一个特定的记录——一个带有“Walk dog”键的示例记录。一旦检索到这个数据对象，你就可以使用普通的 JavaScript 更新它，然后使用 {{domxref("IDBObjectStore.put")}} 操作将其放回数据库。有关完整的工作示例，查看我们的 <a href="https://github.com/mdn/to-do-notifications/" style="line-height: 1.5;">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/" style="line-height: 1.5;">view example live</a>.)</p>
 
 <pre class="brush: js notranslate">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -73,7 +73,7 @@ DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the getData() function to get the data from the database
@@ -86,7 +86,7 @@ function getData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
+    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
   };
 
   transaction.onerror = function(event) {
@@ -99,12 +99,12 @@ function getData() {
   // Make a request to get a record by key from the object store
   var objectStoreRequest = objectStore.get("Walk dog");
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of our request
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of our request
+    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
 
     var myRecord = objectStoreRequest.result;
-  };
+  };
 
 };</pre>
 

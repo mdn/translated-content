@@ -11,8 +11,6 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 ### HTML
 
-<!---->
-
 - The HTML5 [`<progress>`](/zh-TW/docs/Web/HTML/Element/progress) element, which lets you create a progress bar, is now supported.
 - The parsing of the HTML5 [`<track>`](/zh-TW/docs/Web/HTML/Element/track) element, which specifies text tracks for media elements, is now supported. This element should appear in the DOM now, though its behavior is still not implemented.
 - The [`<iframe>`](/zh-TW/docs/Web/HTML/Element/iframe) element is now clipped correctly by its container when the container's corners have been rounded using the [`border-radius`](/zh-TW/docs/Web/CSS/border-radius) property.
@@ -54,8 +52,6 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
   - : Firefox 6 adds support for W3C standard touch events; these make it easy to interpret one or more touches at a time on touch-sensitive surfaces such as touch screens and trackpads.
 - [Server-sent events](/en/Server-sent_events)
   - : Server-sent events make it possible for a web application to ask a server to send events just like any locally-created DOM event.
-
-<!---->
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
 - [`BlobBuilder`](/zh-TW/docs/Web/API/BlobBuilder) is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
@@ -100,8 +96,6 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 - [WebSockets](/en/WebSockets)
   - : WebSockets was updated to protocol version 07 for Firefox 6. In addition, the global `WebSocket` object has been renamed to `MozWebSocket` to prevent it from incorrectly being used to detect the availability of unprefixed WebSockets.
-
-<!---->
 
 - Parsing of the `Content-Disposition` header has been fixed to properly interpret backslash-escaped ASCII characters as just that character itself. Previously it was incorrectly replacing that character with an underscore ("\_").
 - The value of the path field on `Set-Cookie` headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. **This change may affect compatibility with some web sites**, so authors should check their code.

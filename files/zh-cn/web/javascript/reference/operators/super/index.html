@@ -31,7 +31,7 @@ super.functionOnParent([arguments]);
 
 <h3 id="在类中使用super">在类中使用<code>super</code></h3>
 
-<p>以下代码片段来自于 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a>。</p>
+<p>以下代码片段来自于 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a>。</p>
 
 <pre class="brush: js">class Polygon {
   constructor(height, width) {
@@ -42,7 +42,7 @@ super.functionOnParent([arguments]);
   sayName() {
     console.log('Hi, I am a ', this.name + '.');
   }
-  get area() {
+  get area() {
     return this.height * this.width;
   }
   set area(value) {
@@ -55,11 +55,11 @@ class Square extends Polygon {
     this.height; // ReferenceError，super 需要先被调用！
 
     // 这里，它调用父类的构造函数的，
-    // 作为 Polygon 的 height, width
+    // 作为 Polygon 的 height, width
     super(length, length);
 
     // 注意：在派生的类中，在你可以使用'this'之前，必须先调用 super()。
-    // 忽略这，这将导致引用错误。
+    // 忽略这，这将导致引用错误。
     this.name = 'Square';
   }
 }
@@ -86,7 +86,7 @@ Square.logDescription(); // 'I have 4 sides which are all equal'</pre>
 
 <h3 id="删除_super_上的属性将抛出异常">删除 super 上的属性将抛出异常</h3>
 
-<p>你不能使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete 操作符</a> 加 <code>super.prop</code> 或者 <code>super[expr]</code> 去删除父类的属性，这样做会抛出 {{jsxref("ReferenceError")}}。</p>
+<p>你不能使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete 操作符</a> 加 <code>super.prop</code> 或者 <code>super[expr]</code> 去删除父类的属性，这样做会抛出 {{jsxref("ReferenceError")}}。</p>
 
 <pre class="brush: js">class Base {
   constructor() {}
@@ -101,7 +101,7 @@ class Derived extends Base {
 
 new Derived().delete(); // ReferenceError: invalid delete involving 'super'.</pre>
 
-<h3 id="super.prop_不能覆写不可写属性"><code>super.prop</code> 不能覆写不可写属性</h3>
+<h3 id="super.prop_不能覆写不可写属性"><code>super.prop</code> 不能覆写不可写属性</h3>
 
 <p>当使用 {{jsxref("Object.defineProperty")}} 定义一个属性为不可写时，<code>super</code>将不能重写这个属性的值。</p>
 
@@ -130,7 +130,7 @@ console.log(y.prop); // 1</pre>
 
 <h3 id="在对象字面量中使用super.prop">在对象字面量中使用<code>super.prop</code></h3>
 
-<p><code>Super</code>也可以在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal</a> 符号中使用。在下面的例子中，两个对象各定义了一个方法。在第二个对象中，我们使用<code>super</code>调用了第一个对象中的方法。 当然，这需要我们先利用 {{jsxref("Object.setPrototypeOf()")}} 设置<code>obj2</code>的原型为<code>obj1</code>，然后才能够使用<code>super</code>调用 <code>obj1</code>上的<code>method1</code>。</p>
+<p><code>Super</code>也可以在<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer / literal</a> 符号中使用。在下面的例子中，两个对象各定义了一个方法。在第二个对象中，我们使用<code>super</code>调用了第一个对象中的方法。 当然，这需要我们先利用 {{jsxref("Object.setPrototypeOf()")}} 设置<code>obj2</code>的原型为<code>obj1</code>，然后才能够使用<code>super</code>调用 <code>obj1</code>上的<code>method1</code>。</p>
 
 <pre class="brush: js">var obj1 = {
   method1() {

@@ -9,33 +9,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>WebAssembly</code></strong>JavaScript 对象是所有 <a href="/en-US/docs/WebAssembly">WebAssembly</a> 相关功能的命名空间。</p>
+<p><strong><code>WebAssembly</code></strong>JavaScript 对象是所有 <a href="/en-US/docs/WebAssembly">WebAssembly</a> 相关功能的命名空间。</p>
 
-<p>和大多数全局对象不一样，<code>WebAssembly</code>不是一个构造函数（它不是一个函数对象）。它类似于 {{jsxref("Math")}} 对象或者 {{jsxref("Intl")}} 对象，Math 对象也是一个命名空间对象，用于保存数学常量和函数；Intl 则是用于国际化和其他语言相关函数的命名空间对象。</p>
+<p>和大多数全局对象不一样，<code>WebAssembly</code>不是一个构造函数（它不是一个函数对象）。它类似于 {{jsxref("Math")}} 对象或者 {{jsxref("Intl")}} 对象，Math 对象也是一个命名空间对象，用于保存数学常量和函数；Intl 则是用于国际化和其他语言相关函数的命名空间对象。</p>
 
 <h2 id="描述">描述</h2>
 
 <p><code>WebAssembly</code>对象主要用于：</p>
 
 <ul>
- <li>使用 {{jsxref("WebAssembly.instantiate()")}} 函数加载 WebAssembly 代码。</li>
- <li>通过 {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}  构造函数创建新的内存和表实例。</li>
- <li>由 {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} 构造函数来提供 WebAssembly 中的错误信息。</li>
+ <li>使用 {{jsxref("WebAssembly.instantiate()")}} 函数加载 WebAssembly 代码。</li>
+ <li>通过 {{jsxref("WebAssembly.Memory()")}}/{{jsxref("WebAssembly.Table()")}}  构造函数创建新的内存和表实例。</li>
+ <li>由 {{jsxref("WebAssembly.CompileError()")}}/{{jsxref("WebAssembly.LinkError()")}}/{{jsxref("WebAssembly.RuntimeError()")}} 构造函数来提供 WebAssembly 中的错误信息。</li>
 </ul>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{jsxref("WebAssembly.instantiate()")}}</dt>
- <dd>用于编译和实例化 WebAssembly 代码的主 API，返回一个 <code>Module</code> 和它的第一个<code>Instance</code>实例。</dd>
+ <dd>用于编译和实例化 WebAssembly 代码的主 API，返回一个 <code>Module</code> 和它的第一个<code>Instance</code>实例。</dd>
  <dt>{{jsxref("WebAssembly.instantiateStreaming()")}}</dt>
  <dd>直接从流式底层源编译和实例化 WebAssembly 模块，同时返回<code>Module</code>及其第一个<code>Instance</code>实例。</dd>
  <dt>{{jsxref("WebAssembly.compile()")}}</dt>
- <dd>把 WebAssembly 二进制代码编译为一个 {{jsxref("WebAssembly.Module")}} ，不进行实例化。</dd>
+ <dd>把 WebAssembly 二进制代码编译为一个 {{jsxref("WebAssembly.Module")}} ，不进行实例化。</dd>
  <dt>{{jsxref("WebAssembly.compileStreaming()")}}</dt>
  <dd>直接从流式底层源代码编译{{jsxref("WebAssembly.Module")}} ，将实例化作为一个单独的步骤。</dd>
  <dt>{{jsxref("WebAssembly.validate()")}}</dt>
- <dd>校验 WebAssembly 二进制代码的类型数组是否合法，合法则返回 true ，否则返回 false 。</dd>
+ <dd>校验 WebAssembly 二进制代码的类型数组是否合法，合法则返回 true ，否则返回 false 。</dd>
 </dl>
 
 <h2 id="构造器">构造器</h2>

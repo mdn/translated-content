@@ -30,17 +30,17 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
   <tr>
    <td><code>^</code></td>
    <td>
-    <p>匹配输入的开头。如果多行模式设为 true，<code>^</code> 在换行符后也能立即匹配，比如 <code>/^A/</code> 匹配不了 "an A" 里面的 "A"，但是可以匹配 "An A" 里面第一个 "A"。</p>
+    <p>匹配输入的开头。如果多行模式设为 true，<code>^</code> 在换行符后也能立即匹配，比如 <code>/^A/</code> 匹配不了 "an A" 里面的 "A"，但是可以匹配 "An A" 里面第一个 "A"。</p>
 
     <div class="note">
-    <p><strong>备注：</strong><code>^</code> 出现在集合或范围开头时的含义与此不同（参见 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>）。</p>
+    <p><strong>备注：</strong><code>^</code> 出现在集合或范围开头时的含义与此不同（参见 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">group</a>）。</p>
     </div>
    </td>
   </tr>
   <tr>
    <td><code>$</code></td>
    <td>
-    <p>匹配输入的结束。如果多行模式设为 true，<code>$</code> 在换行符前也能立即匹配，比如 <code>/t$/</code> 不能匹配  "eater" 中的 "t"，但是可以匹配 "eat" 中的 "t"。</p>
+    <p>匹配输入的结束。如果多行模式设为 true，<code>$</code> 在换行符前也能立即匹配，比如 <code>/t$/</code> 不能匹配  "eater" 中的 "t"，但是可以匹配 "eat" 中的 "t"。</p>
    </td>
   </tr>
   <tr>
@@ -51,25 +51,25 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
     <p>一些例子：</p>
 
     <ul>
-     <li><code>/\bm/</code>  在 "moon" 中匹配到 "m" </li>
-     <li><code>/oo\b/</code>  在 "moon" 中不会匹配到 "oo", 因为 "oo" 后面跟着 "n" 这个单词字符。</li>
-     <li><code>/oon\b/</code> 在 "moon" 中匹配 "oon"， 因为 "oon" 是这个字符串的结尾，因此后面没有单词字符</li>
-     <li><code>/\w\b\w/</code> 将永远不会匹配任何东西，因为一个单词字符后面永远不会有非单词字符和单词字符。</li>
+     <li><code>/\bm/</code>  在 "moon" 中匹配到 "m" </li>
+     <li><code>/oo\b/</code>  在 "moon" 中不会匹配到 "oo", 因为 "oo" 后面跟着 "n" 这个单词字符。</li>
+     <li><code>/oon\b/</code> 在 "moon" 中匹配 "oon"， 因为 "oon" 是这个字符串的结尾，因此后面没有单词字符</li>
+     <li><code>/\w\b\w/</code> 将永远不会匹配任何东西，因为一个单词字符后面永远不会有非单词字符和单词字符。</li>
     </ul>
 
-    <p>匹配退格字符 (<code>[\b]</code>), 查看 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">字符类</a> </p>
+    <p>匹配退格字符 (<code>[\b]</code>), 查看 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">字符类</a> </p>
    </td>
   </tr>
   <tr>
    <td><code>\B</code></td>
    <td>
-    <p>匹配非单词边界。这是上一个字符和下一个字符属于同一类型的位置：要么两者都必须是单词，要么两者都必须是非单词，例如在两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的词边界相同，匹配的非词边界也不包含在匹配中。例如，<code>/\Bon/</code> 在 “at noon” 中匹配 “on” ，<code>/ye\B/</code> 在 "possibly yesterday"中匹配"ye" 。</p>
+    <p>匹配非单词边界。这是上一个字符和下一个字符属于同一类型的位置：要么两者都必须是单词，要么两者都必须是非单词，例如在两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的词边界相同，匹配的非词边界也不包含在匹配中。例如，<code>/\Bon/</code> 在 “at noon” 中匹配 “on” ，<code>/ye\B/</code> 在 "possibly yesterday"中匹配"ye" 。</p>
    </td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="其他断言">其他断言 </h3>
+<h3 id="其他断言">其他断言 </h3>
 
 <div class="note">
 <p><strong>备注：</strong><code>？</code>字符也可用作量词</p>
@@ -85,13 +85,13 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
  <tbody>
   <tr>
    <td>
-    <p><code>x(?=y)</code>                </p>
+    <p><code>x(?=y)</code>                </p>
    </td>
    <td>
     <table>
      <tbody>
       <tr>
-       <td><strong>向前断言：</strong> x 被 y 跟随时匹配 x。例如，对于/<code>Jack(?=Sprat)</code>/，“Jack”在跟有“Sprat”的情况下才会得到匹配．<code>/Jack(?=Sprat|Frost)/</code> “Jack”后跟有“Sprat”或“Frost”的情况下才会得到匹配。不过， 匹配结果不包括“Sprat”或“Frost”。</td>
+       <td><strong>向前断言：</strong> x 被 y 跟随时匹配 x。例如，对于/<code>Jack(?=Sprat)</code>/，“Jack”在跟有“Sprat”的情况下才会得到匹配．<code>/Jack(?=Sprat|Frost)/</code> “Jack”后跟有“Sprat”或“Frost”的情况下才会得到匹配。不过， 匹配结果不包括“Sprat”或“Frost”。</td>
       </tr>
      </tbody>
     </table>
@@ -162,7 +162,7 @@ console.log(4, fixedMultiline); // 修复  'greon'  不影响'on'.</pre>
 
 <h3 id="使用_（控制字符）匹配输入的开头">使用 ^（控制字符）匹配输入的开头</h3>
 
-<p>使用 <code>^</code>匹配输入的开头。在这个例子中，我们可以通过 /^A/ 正则表达式得到以 A 开头的水果。为了选择合适的水果，我们可以使用带有箭头函数的过滤方法。</p>
+<p>使用 <code>^</code>匹配输入的开头。在这个例子中，我们可以通过 /^A/ 正则表达式得到以 A 开头的水果。为了选择合适的水果，我们可以使用带有箭头函数的过滤方法。</p>
 
 <pre>let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
@@ -172,7 +172,7 @@ console.log(4, fixedMultiline); // 修复  'greon'  不影响'on'.</pre>
 let fruitsStartsWithA = fruits.filter(fruit =&gt; /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]</pre>
 
-<p>在第二个示例中，^用于在输入的开始处匹配，以及在内部使用时用于创建否定或被补充的字符集 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">组和范围</a>.</p>
+<p>在第二个示例中，^用于在输入的开始处匹配，以及在内部使用时用于创建否定或被补充的字符集 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">组和范围</a>.</p>
 
 <pre>let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
@@ -207,13 +207,13 @@ console.log('This is a First peach in a month.'.match(regex)); // null</pre>
 
 <h3 id="向前否定断言">向前否定断言</h3>
 
-<p>例如， <code>/\d+(?!\.)/</code> 匹配没有被小数点跟随且至少有一位的数字。 <code>/\d+(?!\.)/.exec('3.141')</code> 匹配 "141" 而不是 "3" </p>
+<p>例如， <code>/\d+(?!\.)/</code> 匹配没有被小数点跟随且至少有一位的数字。 <code>/\d+(?!\.)/.exec('3.141')</code> 匹配 "141" 而不是 "3" </p>
 
 <pre>console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]</pre>
 
 <h3 id="不同含义的!：断言和范围的组合用法">不同含义的'?!'：断言和范围的组合用法</h3>
 
-<p>不同含义的<code>?!</code> 结合使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">断言</a>  <code>/x(?!y)/ </code>和  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">范围</a> <code>[^?!]</code>.</p>
+<p>不同含义的<code>?!</code> 结合使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">断言</a>  <code>/x(?!y)/ </code>和  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">范围</a> <code>[^?!]</code>.</p>
 
 <pre>let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
@@ -245,7 +245,7 @@ console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]</pre>
 
 <h2 id="浏览器_兼容性">浏览器 兼容性</h2>
 
-<p>有关浏览器兼容性的信息，请查看 <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">main Regular Expressions compatibility table</a>.</p>
+<p>有关浏览器兼容性的信息，请查看 <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility">main Regular Expressions compatibility table</a>.</p>
 
 <h2 id="另请参阅">另请参阅</h2>
 
@@ -254,10 +254,10 @@ console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]</pre>
 
   <ul>
    <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">字符类</a></li>
-   <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">量词</a> </li>
+   <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">量词</a> </li>
    <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode 属性转义</a></li>
    <li><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">组和范围</a></li>
   </ul>
  </li>
- <li> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp() 构造器</a></li>
+ <li> <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp() 构造器</a></li>
 </ul>

@@ -8,7 +8,7 @@ translation_of: Web/API/CanvasRenderingContext2D/getLineDash
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.getLineDash()</code></strong> 是 Canvas 2D API 获取当前线段样式的方法。</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.getLineDash()</code></strong> 是 Canvas 2D API 获取当前线段样式的方法。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,13 +17,13 @@ translation_of: Web/API/CanvasRenderingContext2D/getLineDash
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 {{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。如果数组元素的数量是奇数，数组元素会被复制并重复。 例如，设置线段为 <code>[5, 15, 25]</code> 将会得到以下返回值 <code>[5, 15, 25, 5, 15, 25]。</code></p>
+<p>一个 {{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。如果数组元素的数量是奇数，数组元素会被复制并重复。 例如，设置线段为 <code>[5, 15, 25]</code> 将会得到以下返回值 <code>[5, 15, 25, 5, 15, 25]。</code></p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="使用_getLineDash_方法">使用 <code>getLineDash</code> 方法</h3>
 
-<p>这是一段使用 <code>getLineDash</code> 方法的简单的代码片段。</p>
+<p>这是一段使用 <code>getLineDash</code> 方法的简单的代码片段。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -51,8 +51,8 @@ ctx.stroke();
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.setLineDash([5, 15]);

@@ -11,7 +11,7 @@ transition_of: Web/API/TextDecoderStream
 ---
 {{APIRef("Encoding API")}}
 
-{{domxref('Encoding API','','',' ')}} 接口的 **`TextDecoderStream`** 方法将一个字符串流转换为 UTF-8 编码的字节。它与 {{domxref("TextDecoder")}} 的流形式等价。
+{{domxref('Encoding API','','',' ')}} 接口的 **`TextDecoderStream`** 方法将二进制编码（如 UTF-8 等）的文本流转换为字符串流。它与 {{domxref("TextDecoder")}} 的流形式等价。
 
 ## 构造函数
 

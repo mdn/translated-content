@@ -18,7 +18,7 @@ original_slug: Web/API/WebRTC_API/Taking_still_photos
 
 <p><img alt="WebRTC-based image capture app — on the left we have a video stream taken from a webcam and a take photo button, on the right we have the still image output from taking the photo" src="web-rtc-demo.png"></p>
 
-<p>如果你喜欢，你也可以直接跳转到 <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill">GitHub 上的代码</a>。</p>
+<p>如果你喜欢，你也可以直接跳转到 <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill">GitHub 上的代码</a>。</p>
 
 <h2 id="HTML_标记">HTML 标记</h2>
 
@@ -26,22 +26,22 @@ original_slug: Web/API/WebRTC_API/Taking_still_photos
 
 <p>左边的面板包含两个组件：一个 {{HTMLElement("video")}} 元素，它将接收来自 WebRTC 的流，以及用户点击捕获视频帧的 {{HTMLElement("button")}}。</p>
 
-<pre class="brush: html">  &lt;div class="camera"&gt;
-    &lt;video id="video"&gt;Video stream not available.&lt;/video&gt;
-    &lt;button id="startbutton"&gt;Take photo&lt;/button&gt;
-  &lt;/div&gt;</pre>
+<pre class="brush: html">  &lt;div class="camera"&gt;
+    &lt;video id="video"&gt;Video stream not available.&lt;/video&gt;
+    &lt;button id="startbutton"&gt;Take photo&lt;/button&gt;
+  &lt;/div&gt;</pre>
 
 <p>这很简单，当我们进入 JavaScript 代码时，我们将看到他们是如何紧密联系在一起的。</p>
 
-<p>接下来，我们有一个 {{HTMLElement("canvas")}} 元素，捕获的帧被存储到其中，可能以某种方式进行操作，然后转换为输出图像文件。 通过使用样式 {{cssxref("display")}}<code>:none</code> 将画布保持隐藏，以避免画面的混乱 —— 用户不需要看到这个中间过程。</p>
+<p>接下来，我们有一个 {{HTMLElement("canvas")}} 元素，捕获的帧被存储到其中，可能以某种方式进行操作，然后转换为输出图像文件。 通过使用样式 {{cssxref("display")}}<code>:none</code> 将画布保持隐藏，以避免画面的混乱 —— 用户不需要看到这个中间过程。</p>
 
-<p>我们还有一个 {{HTMLElement("img")}} 元素，我们将涌起绘制图像——这是让用户看到的最终显示。</p>
+<p>我们还有一个 {{HTMLElement("img")}} 元素，我们将涌起绘制图像——这是让用户看到的最终显示。</p>
 
-<pre class="brush: html">  &lt;canvas id="canvas"&gt;
-  &lt;/canvas&gt;
-  &lt;div class="output"&gt;
-    &lt;img id="photo" alt="The screen capture will appear in this box."&gt;
-  &lt;/div&gt;</pre>
+<pre class="brush: html">  &lt;canvas id="canvas"&gt;
+  &lt;/canvas&gt;
+  &lt;div class="output"&gt;
+    &lt;img id="photo" alt="The screen capture will appear in this box."&gt;
+  &lt;/div&gt;</pre>
 
 <p>这是所有相关的 HTML。 其余的只是一些页面布局和提供一个返回页面链接的些许文本。</p>
 
@@ -74,13 +74,13 @@ original_slug: Web/API/WebRTC_API/Taking_still_photos
  <dt><code><strong>streaming</strong></code></dt>
  <dd>指示当前是否有活动的视频流正在运行。</dd>
  <dt><code><strong>video</strong></code></dt>
- <dd>这将是页面加载完成后对 {{HTMLElement("video")}} 元素的引用。</dd>
+ <dd>这将是页面加载完成后对 {{HTMLElement("video")}} 元素的引用。</dd>
  <dt><code><strong>canvas</strong></code></dt>
- <dd>这将是页面加载完成后对 {{HTMLElement("canvas")}} 元素的引用。</dd>
+ <dd>这将是页面加载完成后对 {{HTMLElement("canvas")}} 元素的引用。</dd>
  <dt><code><strong>photo</strong></code></dt>
- <dd>这将在页面加载完成后引用 {{HTMLElement("img")}} 元素。</dd>
+ <dd>这将在页面加载完成后引用 {{HTMLElement("img")}} 元素。</dd>
  <dt><code><strong>startbutton</strong></code></dt>
- <dd>这将引用用于触发捕获的 {{HTMLElement("button")}} 元素。 我们会在页面加载完成之后得到。</dd>
+ <dd>这将引用用于触发捕获的 {{HTMLElement("button")}} 元素。 我们会在页面加载完成之后得到。</dd>
 </dl>
 
 <h3 id="startup_函数"><strong>startup( ) 函数</strong></h3>
@@ -111,17 +111,17 @@ original_slug: Web/API/WebRTC_API/Taking_still_photos
     });
 </pre>
 
-<p>在这里，我们正在调用 {{domxref("MediaDevices.getUserMedia()")}}  并请求视频流（无音频）。 它返回一个 promise，我们给它附加成功和失败情况下的回调方法。</p>
+<p>在这里，我们正在调用 {{domxref("MediaDevices.getUserMedia()")}}  并请求视频流（无音频）。 它返回一个 promise，我们给它附加成功和失败情况下的回调方法。</p>
 
-<p>成功回调接收一个 stream 对象作为输入。它是新视频的 {{HTMLElement("video")}} 元素的源。</p>
+<p>成功回调接收一个 stream 对象作为输入。它是新视频的 {{HTMLElement("video")}} 元素的源。</p>
 
-<p>一旦流被链接到 <code>{{HTMLElement("video")}}</code> 元素，我们通过调用 <code><a href="/zh-CN/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> 开始播放。</p>
+<p>一旦流被链接到 <code>{{HTMLElement("video")}}</code> 元素，我们通过调用 <code><a href="/zh-CN/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> 开始播放。</p>
 
 <p>如果打开流失败，则调用失败回调函数。 在没有连接兼容的相机，或者用户拒绝访问时，则会发生这种情况。</p>
 
 <h3 id="监听视频开始播放">监听视频开始播放</h3>
 
-<p>在 <code>{{HTMLElement("video")}}</code> 上调用 <code><a href="/zh-CN/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> 之后，在视频流开始流动之前，有一段（希望简短）的时间段过去了。 为了避免在此之前一直阻塞，我们为 <code>{{HTMLElement("video")}}</code> 加上一个 {{event("canplay")}} 事件的监听器，当视频播放实际开始时会触发该事件。 那时，视频对象中的所有属性都已基于流的格式进行配置。</p>
+<p>在 <code>{{HTMLElement("video")}}</code> 上调用 <code><a href="/zh-CN/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> 之后，在视频流开始流动之前，有一段（希望简短）的时间段过去了。 为了避免在此之前一直阻塞，我们为 <code>{{HTMLElement("video")}}</code> 加上一个 {{event("canplay")}} 事件的监听器，当视频播放实际开始时会触发该事件。 那时，视频对象中的所有属性都已基于流的格式进行配置。</p>
 
 <pre class="brush: js">    video.addEventListener('canplay', function(ev){
       if (!streaming) {
@@ -227,6 +227,6 @@ original_slug: Web/API/WebRTC_API/Taking_still_photos
  <li><a href="https://mdn-samples.mozilla.org/s/webrtc-capturestill">Try this sample</a></li>
  <li><a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill">Sample code on Github</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getUserMedia" title="The Navigator.getUserMedia() method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone). If permission is granted, a MediaStream whose video and/or audio tracks come from those devices is delivered to the specified success callback. If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a MediaStreamError object describing what went wrong. If the user instead doesn't make a choice at all, neither callback is executed."><code>Navigator.getUserMedia()</code></a></li>
- <li>"<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#Using_frames_from_a_video">Using frames from a video</a>" in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images">Using images</a></li>
+ <li>"<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#Using_frames_from_a_video">Using frames from a video</a>" in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images">Using images</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" title="The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas."><code>CanvasRenderingContext2D.drawImage()</code></a></li>
 </ul>

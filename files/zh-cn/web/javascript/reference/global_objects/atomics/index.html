@@ -7,11 +7,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>Atomics</code></strong> 对象提供了一组静态方法对 {{jsxref("SharedArrayBuffer")}} 和  {{jsxref("ArrayBuffer")}} 对象进行原子操作。</p>
+<p><strong><code>Atomics</code></strong> 对象提供了一组静态方法对 {{jsxref("SharedArrayBuffer")}} 和  {{jsxref("ArrayBuffer")}} 对象进行原子操作。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>这些原子操作属于 <code>Atomics</code> 模块。与一般的全局对象不同，<code>Atomics</code> 不是构造函数，因此不能使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a> 操作符调用，也不能将其当作函数直接调用。<code>Atomics</code> 的所有属性和方法都是静态的（与 {{jsxref("Math")}}  对象一样）。</p>
+<p>这些原子操作属于 <code>Atomics</code> 模块。与一般的全局对象不同，<code>Atomics</code> 不是构造函数，因此不能使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a> 操作符调用，也不能将其当作函数直接调用。<code>Atomics</code> 的所有属性和方法都是静态的（与 {{jsxref("Math")}}  对象一样）。</p>
 
 <h3 id="原子操作">原子操作</h3>
 
@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 <h3 id="等待和通知">等待和通知</h3>
 
-<p><code>wait()</code> 和 <code>notify()</code> 方法采用的是 Linux 上的 futexes 模型（“快速用户空间互斥量”），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。</p>
+<p><code>wait()</code> 和 <code>notify()</code> 方法采用的是 Linux 上的 futexes 模型（“快速用户空间互斥量”），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。</p>
 
 <h2 id="方法">方法</h2>
 
@@ -86,7 +86,7 @@ Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
 
 Atomics.or(ta, 0, 1);
-Atomics.load(ta, 0);  // 5
+Atomics.load(ta, 0);  // 5
 
 Atomics.store(ta, 0, 12); // 12
 
@@ -99,7 +99,7 @@ Atomics.load(ta, 0); // 4
 
 <h3 id="Waiting_和_notifiying">Waiting 和 notifiying</h3>
 
-<p>给定一个共享的 <code>Int32Array</code>：</p>
+<p>给定一个共享的 <code>Int32Array</code>：</p>
 
 <pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);

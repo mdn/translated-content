@@ -9,7 +9,7 @@ translation_of: Web/API/WebSocket
 ---
 <div>{{APIRef("Web Sockets API")}}</div>
 
-<p><code>WebSocket</code> 对象提供了用于创建和管理 <a href="/zh-CN/docs/Web/API/WebSockets_API" title="zh-CN/WebSockets">WebSocket</a> 连接，以及可以通过该连接发送和接收数据的 API。</p>
+<p><code>WebSocket</code> 对象提供了用于创建和管理 <a href="/zh-CN/docs/Web/API/WebSockets_API" title="zh-CN/WebSockets">WebSocket</a> 连接，以及可以通过该连接发送和接收数据的 API。</p>
 
 <p>使用<code><a href="/en-US/docs/Web/API/WebSocket/WebSocket"> WebSocket()</a></code><a href="/en-US/docs/Web/API/WebSocket/WebSocket"> </a>构造函数来构造一个<code> WebSocket</code> 。</p>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/WebSocket
 
 <dl>
  <dt>{{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}</dt>
- <dd>返回一个 <code>WebSocket</code> 对象。</dd>
+ <dd>返回一个 <code>WebSocket</code> 对象。</dd>
 </dl>
 
 <h2 id="常量">常量</h2>
@@ -89,20 +89,20 @@ translation_of: Web/API/WebSocket
 
 <h2 id="事件">事件</h2>
 
-<p>使用 <code>addEventListener()</code> 或将一个事件监听器赋值给本接口的 <code>on<em>eventname</em></code> 属性，来监听下面的事件。</p>
+<p>使用 <code>addEventListener()</code> 或将一个事件监听器赋值给本接口的 <code>on<em>eventname</em></code> 属性，来监听下面的事件。</p>
 
 <dl>
  <dt>{{domxref("WebSocket/close_event", "close")}}</dt>
- <dd>当一个 <code>WebSocket</code> 连接被关闭时触发。<br>
+ <dd>当一个 <code>WebSocket</code> 连接被关闭时触发。<br>
  也可以通过 {{domxref("WebSocket/onclose", "onclose")}} 属性来设置。</dd>
  <dt>{{domxref("WebSocket/error_event", "error")}}</dt>
- <dd>当一个 <code>WebSocket</code> 连接因错误而关闭时触发，例如无法发送数据时。<br>
+ <dd>当一个 <code>WebSocket</code> 连接因错误而关闭时触发，例如无法发送数据时。<br>
  也可以通过 {{domxref("WebSocket/onerror", "onerror")}} 属性来设置。</dd>
  <dt>{{domxref("WebSocket/message_event", "message")}}</dt>
- <dd>当通过 <code>WebSocket</code> 收到数据时触发。<br>
+ <dd>当通过 <code>WebSocket</code> 收到数据时触发。<br>
  也可以通过 {{domxref("WebSocket/onmessage", "onmessage")}} 属性来设置。</dd>
  <dt>{{domxref("WebSocket/open_event", "open")}}</dt>
- <dd>当一个 <code>WebSocket</code> 连接成功时触发。<br>
+ <dd>当一个 <code>WebSocket</code> 连接成功时触发。<br>
  也可以通过 {{domxref("WebSocket/onopen", "onopen")}} 属性来设置。</dd>
 </dl>
 

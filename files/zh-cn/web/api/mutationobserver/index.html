@@ -19,7 +19,7 @@ translation_of: Web/API/MutationObserver
 
 <dl>
  <dt>{{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}</dt>
- <dd>创建并返回一个新的 <code>MutationObserver</code> 它会在指定的 DOM 发生变化时被调用。</dd>
+ <dd>创建并返回一个新的 <code>MutationObserver</code> 它会在指定的 DOM 发生变化时被调用。</dd>
 </dl>
 
 <h2 id="Instance_methods">方法</h2>
@@ -49,7 +49,7 @@ const config = { attributes: true, childList: true, subtree: true };
 
 // 当观察到变动时执行的回调函数
 const callback = function(mutationsList, observer) {
-    // Use traditional 'for loops' for IE 11
+    // Use traditional 'for loops' for IE 11
     for(let mutation of mutationsList) {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');

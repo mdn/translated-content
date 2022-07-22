@@ -27,9 +27,9 @@ translation_of: Web/JavaScript/Closures
 }
 init();</pre>
 
-<p><code>init()</code> 创建了一个局部变量 <code>name</code> 和一个名为 <code>displayName()</code> 的函数。<code>displayName()</code> 是定义在 <code>init()</code> 里的内部函数，并且仅在 <code>init()</code> 函数体内可用。请注意，<code>displayName()</code> 没有自己的局部变量。然而，因为它可以访问到外部函数的变量，所以 <code>displayName()</code> 可以使用父函数 <code>init()</code> 中声明的变量 <code>name</code> 。</p>
+<p><code>init()</code> 创建了一个局部变量 <code>name</code> 和一个名为 <code>displayName()</code> 的函数。<code>displayName()</code> 是定义在 <code>init()</code> 里的内部函数，并且仅在 <code>init()</code> 函数体内可用。请注意，<code>displayName()</code> 没有自己的局部变量。然而，因为它可以访问到外部函数的变量，所以 <code>displayName()</code> 可以使用父函数 <code>init()</code> 中声明的变量 <code>name</code> 。</p>
 
-<p>使用<a href="http://jsfiddle.net/xAFs9/3/" title="http://jsfiddle.net/xAFs9/">这个 JSFiddle 链接</a>运行该代码后发现， <code>displayName()</code> 函数内的 <code>alert()</code> 语句成功显示出了变量 <code>name</code> 的值（该变量在其父函数中声明）。这个<em>词法作用域</em>的例子描述了分析器如何在函数嵌套的情况下解析变量名。词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问声明于它们外部作用域的变量。</p>
+<p>使用<a href="http://jsfiddle.net/xAFs9/3/" title="http://jsfiddle.net/xAFs9/">这个 JSFiddle 链接</a>运行该代码后发现， <code>displayName()</code> 函数内的 <code>alert()</code> 语句成功显示出了变量 <code>name</code> 的值（该变量在其父函数中声明）。这个<em>词法作用域</em>的例子描述了分析器如何在函数嵌套的情况下解析变量名。词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问声明于它们外部作用域的变量。</p>
 
 <h2 id="闭包"><strong>闭包</strong></h2>
 
@@ -46,13 +46,13 @@ init();</pre>
 var myFunc = makeFunc();
 myFunc();</pre>
 
-<p>运行这段代码的效果和之前 <code>init()</code> 函数的示例完全一样。其中不同的地方（也是有意思的地方）在于内部函数 <code>displayName()</code> <em>在执行前</em>，从外部函数返回。</p>
+<p>运行这段代码的效果和之前 <code>init()</code> 函数的示例完全一样。其中不同的地方（也是有意思的地方）在于内部函数 <code>displayName()</code> <em>在执行前</em>，从外部函数返回。</p>
 
 <p>第一眼看上去，也许不能直观地看出这段代码能够正常运行。在一些编程语言中，一个函数中的局部变量仅存在于此函数的执行期间。一旦 <code>makeFunc()</code> 执行完毕，你可能会认为 <code>name</code> 变量将不能再被访问。然而，因为代码仍按预期运行，所以在 JavaScript 中情况显然与此不同。</p>
 
-<p>原因在于，JavaScript 中的函数会形成了闭包。 <em>闭包</em>是由函数以及声明该函数的词法环境组合而成的。该环境包含了这个闭包创建时作用域内的任何局部变量。在本例子中，<code>myFunc</code> 是执行 <code>makeFunc</code> 时创建的 <code>displayName</code> 函数实例的引用。<code>displayName</code> 的实例维持了一个对它的词法环境（变量 <code>name</code> 存在于其中）的引用。因此，当 <code>myFunc</code> 被调用时，变量 <code>name</code> 仍然可用，其值 <code>Mozilla</code> 就被传递到<code>alert</code>中。</p>
+<p>原因在于，JavaScript 中的函数会形成了闭包。 <em>闭包</em>是由函数以及声明该函数的词法环境组合而成的。该环境包含了这个闭包创建时作用域内的任何局部变量。在本例子中，<code>myFunc</code> 是执行 <code>makeFunc</code> 时创建的 <code>displayName</code> 函数实例的引用。<code>displayName</code> 的实例维持了一个对它的词法环境（变量 <code>name</code> 存在于其中）的引用。因此，当 <code>myFunc</code> 被调用时，变量 <code>name</code> 仍然可用，其值 <code>Mozilla</code> 就被传递到<code>alert</code>中。</p>
 
-<p>下面是一个更有意思的示例 — 一个 <code>makeAdder</code> 函数：</p>
+<p>下面是一个更有意思的示例 — 一个 <code>makeAdder</code> 函数：</p>
 
 <pre class="brush: js">function makeAdder(x) {
   return function(y) {
@@ -67,7 +67,7 @@ console.log(add5(2));  // 7
 console.log(add10(2)); // 12
 </pre>
 
-<p>在这个示例中，我们定义了 <code>makeAdder(x)</code> 函数，它接受一个参数 <code>x</code> ，并返回一个新的函数。返回的函数接受一个参数 <code>y</code>，并返回<code>x+y</code>的值。</p>
+<p>在这个示例中，我们定义了 <code>makeAdder(x)</code> 函数，它接受一个参数 <code>x</code> ，并返回一个新的函数。返回的函数接受一个参数 <code>y</code>，并返回<code>x+y</code>的值。</p>
 
 <p>从本质上讲，<code>makeAdder</code> 是一个函数工厂 — 他创建了将指定的值和它的参数相加求和的函数。在上面的示例中，我们使用函数工厂创建了两个新函数 — 一个将其参数和 5 求和，另一个和 10 求和。</p>
 
@@ -79,7 +79,7 @@ console.log(add10(2)); // 12
 
 <p>因此，通常你使用只有一个方法的对象的地方，都可以使用闭包。</p>
 
-<p>在 Web 中，你想要这样做的情况特别常见。大部分我们所写的 JavaScript 代码都是基于事件的 — 定义某种行为，然后将其添加到用户触发的事件之上（比如点击或者按键）。我们的代码通常作为回调：为响应事件而执行的函数。</p>
+<p>在 Web 中，你想要这样做的情况特别常见。大部分我们所写的 JavaScript 代码都是基于事件的 — 定义某种行为，然后将其添加到用户触发的事件之上（比如点击或者按键）。我们的代码通常作为回调：为响应事件而执行的函数。</p>
 
 <p>假如，我们想在页面上添加一些可以调整字号的按钮。一种方法是以像素为单位指定 <code>body</code> 元素的 <code>font-size</code>，然后通过相对的 <code>em</code> 单位设置页面中其它元素（例如<code>header</code>）的字号：</p>
 
@@ -112,7 +112,7 @@ var size14 = makeSizer(14);
 var size16 = makeSizer(16);
 </pre>
 
-<p><code>size12</code>，<code>size14</code> 和 <code>size16</code> 三个函数将分别把 <code>body</code> 文本调整为 12，14，16 像素。我们可以将它们分别添加到按钮的点击事件上。如下所示：</p>
+<p><code>size12</code>，<code>size14</code> 和 <code>size16</code> 三个函数将分别把 <code>body</code> 文本调整为 12，14，16 像素。我们可以将它们分别添加到按钮的点击事件上。如下所示：</p>
 
 <pre class="brush: js">document.getElementById('size-12').onclick = size12;
 document.getElementById('size-14').onclick = size14;
@@ -199,7 +199,7 @@ console.log(Counter1.value()); /* logs 1 */
 console.log(Counter2.value()); /* logs 0 */
 </pre>
 
-<p>请注意两个计数器 <code>Counter1</code> 和 <code>Counter2</code> 是如何维护它们各自的独立性的。每个闭包都是引用自己词法作用域内的变量 <code>privateCounter</code> 。</p>
+<p>请注意两个计数器 <code>Counter1</code> 和 <code>Counter2</code> 是如何维护它们各自的独立性的。每个闭包都是引用自己词法作用域内的变量 <code>privateCounter</code> 。</p>
 
 <p>每次调用其中一个计数器时，通过改变这个变量的值，会改变这个闭包的词法环境。然而在一个闭包内对变量的修改，不会影响到另外一个闭包中的变量。</p>
 
@@ -241,7 +241,7 @@ setupHelp();
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/51brm6ps/", "", 200)}}</p>
 
-<p>数组 <code>helpText</code> 中定义了三个有用的提示信息，每一个都关联于对应的文档中的<code>input</code> 的 ID。通过循环这三项定义，依次为相应<code>input</code>添加了一个 <code>onfocus</code>  事件处理函数，以便显示帮助信息。</p>
+<p>数组 <code>helpText</code> 中定义了三个有用的提示信息，每一个都关联于对应的文档中的<code>input</code> 的 ID。通过循环这三项定义，依次为相应<code>input</code>添加了一个 <code>onfocus</code>  事件处理函数，以便显示帮助信息。</p>
 
 <p>运行这段代码后，您会发现它没有达到想要的效果。无论焦点在哪个<code>input</code>上，显示的都是关于年龄的信息。</p>
 
@@ -329,7 +329,7 @@ setupHelp();</pre>
 
 <p>这个例子使用<code>let</code>而不是<code>var</code>，因此每个闭包都绑定了块作用域的变量，这意味着不再需要额外的闭包。</p>
 
-<p>另一个可选方案是使用 <code>forEach()</code>来遍历<code>helpText</code>数组并给每一个<code><a href="/zh-CN/docs/Web/HTML/Element/p" title="The HTML &lt;p> element represents a paragraph.">&lt;p&gt;</a></code>添加一个监听器，如下所示：</p>
+<p>另一个可选方案是使用 <code>forEach()</code>来遍历<code>helpText</code>数组并给每一个<code><a href="/zh-CN/docs/Web/HTML/Element/p" title="The HTML &lt;p> element represents a paragraph.">&lt;p&gt;</a></code>添加一个监听器，如下所示：</p>
 
 <pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;

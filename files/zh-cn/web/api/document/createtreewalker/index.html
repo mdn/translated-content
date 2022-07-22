@@ -23,7 +23,7 @@ translation_of: Web/API/Document/createTreeWalker
  <dt><code><em>root </em></code></dt>
  <dd>是遍历这个 {{domxref("TreeWalker")}} 的根节点 (root {{domxref("Node")}})。通常这是文档的一个元素。</dd>
  <dt><em>whatToShow {{optional_inline}}</em></dt>
- <dd>一个无符号长整型，表示一个整合自 <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code> 常量属性的位掩码。这是筛选特定类型节点的便捷方式。默认为 0xFFFFFFFF，表示 <code>SHOW_ALL</code> 常量。
+ <dd>一个无符号长整型，表示一个整合自 <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code> 常量属性的位掩码。这是筛选特定类型节点的便捷方式。默认为 0xFFFFFFFF，表示 <code>SHOW_ALL</code> 常量。
  <table>
   <tbody>
    <tr>
@@ -100,18 +100,18 @@ translation_of: Web/API/Document/createTreeWalker
  </table>
  </dd>
  <dt><em>filter <em>{{optional_inline}}</em></em></dt>
- <dd>一个可选的 {{domxref("NodeFilter")}}，即一个具有 <code>acceptNode</code> 方法的对象，此方法被 {{domxref("TreeWalker")}} 调用以决定是否接受已通过 <code>whatToShow</code> 检查的节点。</dd>
+ <dd>一个可选的 {{domxref("NodeFilter")}}，即一个具有 <code>acceptNode</code> 方法的对象，此方法被 {{domxref("TreeWalker")}} 调用以决定是否接受已通过 <code>whatToShow</code> 检查的节点。</dd>
  <dt><em>entityReferenceExpansion</em> {{optional_inline}} {{Deprecated_Inline}}</dt>
- <dd>一个 {{domxref("Boolean")}} 标识，指示当丢弃一个 {{domxref("EntityReference")}} 时是否同时丢弃其子树。</dd>
+ <dd>一个 {{domxref("Boolean")}} 标识，指示当丢弃一个 {{domxref("EntityReference")}} 时是否同时丢弃其子树。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个新的 {{domxref("TreeWalker")}} 对象。</p>
+<p>一个新的 {{domxref("TreeWalker")}} 对象。</p>
 
 <h2 id="Example">示例</h2>
 
-<p>以下示例遍历 body 下的所有节点，将节点集合缩小至元素，简单地传递每个可接受的节点（也可在 <code>acceptNode()</code> 方法中缩小集合），然后利用创建的 TreeWalker 迭代器在节点上推进（现在是所有的元素）并把它们推入一个数组。</p>
+<p>以下示例遍历 body 下的所有节点，将节点集合缩小至元素，简单地传递每个可接受的节点（也可在 <code>acceptNode()</code> 方法中缩小集合），然后利用创建的 TreeWalker 迭代器在节点上推进（现在是所有的元素）并把它们推入一个数组。</p>
 
 <pre>var treeWalker = document.createTreeWalker(
   document.body,

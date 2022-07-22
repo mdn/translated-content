@@ -6,10 +6,10 @@ translation_of: Web/API/IDBEnvironment
 <p>{{APIRef()}}</p>
 
 <div class="warning">
-<p><strong>警告：</strong>对于 Firefox 52, the property defined in this mixin has been moved to the <code>WindowOrWorkerGlobalScope</code> mixin, and other browsers will follow suit. Look to that page for up-to-date <a href="/zh-CN/docs/IndexedDB">details.  IndexedDB API</a></p>
+<p><strong>警告：</strong>对于 Firefox 52, the property defined in this mixin has been moved to the <code>WindowOrWorkerGlobalScope</code> mixin, and other browsers will follow suit. Look to that page for up-to-date <a href="/zh-CN/docs/IndexedDB">details.  IndexedDB API</a></p>
 </div>
 
-<p><a href="/zh-CN/docs/IndexedDB"> IndexedDB API</a>提供的帮助类<strong><code>IDBEnvironment</code></strong><code>包含了一个 indexedDB</code> 属性， 这个属性可以比较方便的操作 IndexedDB. 它是由{{domxref("window")}} 和{{domxref("Worker")}} 实现的最顶级 IndexedDB 接口。</p>
+<p><a href="/zh-CN/docs/IndexedDB"> IndexedDB API</a>提供的帮助类<strong><code>IDBEnvironment</code></strong><code>包含了一个 indexedDB</code> 属性， 这个属性可以比较方便的操作 IndexedDB. 它是由{{domxref("window")}} 和{{domxref("Worker")}} 实现的最顶级 IndexedDB 接口。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -17,12 +17,12 @@ translation_of: Web/API/IDBEnvironment
 
 <dl>
  <dt>{{domxref("IDBEnvironment.indexedDB")}} {{readonlyInline}}</dt>
- <dd>该属性为应用程序提供了异步访问索引数据库 (IndexedDB) 的构件。它包含一个 {{domxref("IDBFactory")}} 对象</dd>
+ <dd>该属性为应用程序提供了异步访问索引数据库 (IndexedDB) 的构件。它包含一个 {{domxref("IDBFactory")}} 对象</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>下述代码演示了如何创建一个异步打开数据库的请求，当该请求的<code>onsuccess</code> 回调被执行时，该数据库被打开。</p>
+<p>下述代码演示了如何创建一个异步打开数据库的请求，当该请求的<code>onsuccess</code> 回调被执行时，该数据库被打开。</p>
 
 <pre class="brush: js;highlight:[3]">var db;
 function openDB() {
@@ -45,7 +45,7 @@ function openDB() {
   <tr>
    <td>{{SpecName('IndexedDB', '#idl-def-IDBEnvironment', 'IDBEnvironment')}}</td>
    <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

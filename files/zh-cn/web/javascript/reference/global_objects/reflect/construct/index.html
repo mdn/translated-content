@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Reflect</strong></code><strong><code>.construct()</code></strong> 方法的行为有点像 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 操作符</a> 构造函数 ， 相当于运行 <code>new target(...args)</code>.</p>
+<p><code><strong>Reflect</strong></code><strong><code>.construct()</code></strong> 方法的行为有点像 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 操作符</a> 构造函数 ， 相当于运行 <code>new target(...args)</code>.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -33,14 +33,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 <h2 id="描述">描述</h2>
 
-<p><code>Reflect.construct</code>允许你使用可变的参数来调用构造函数 ，这和使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new 操作符</a>搭配<a href="https://developer.mozilla.org/ zh-CN/docs/Web/JavaScript/Reference/Operators/new">对象展开符</a>调用一样。</p>
+<p><code>Reflect.construct</code>允许你使用可变的参数来调用构造函数 ，这和使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new 操作符</a>搭配<a href="https://developer.mozilla.org/ zh-CN/docs/Web/JavaScript/Reference/Operators/new">对象展开符</a>调用一样。</p>
 
 <pre class="brush: js">var obj = new Foo(...args);
 var obj = Reflect.construct(Foo, args); </pre>
 
-<h3 id="Reflect.construct_vs_Object.create"><code>Reflect.construct()</code> vs <code>Object.create()</code></h3>
+<h3 id="Reflect.construct_vs_Object.create"><code>Reflect.construct()</code> vs <code>Object.create()</code></h3>
 
-<p><code>在新语法 Reflect</code>出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。</p>
+<p><code>在新语法 Reflect</code>出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。</p>
 
 <pre class="brush: js">function OneClass() {
     this.name = 'one';
@@ -66,7 +66,7 @@ console.log(obj2 instanceof OneClass); // false
 console.log(obj1 instanceof OtherClass); // true
 console.log(obj2 instanceof OtherClass); // true</pre>
 
-<p>虽然两种方式结果相同，但在创建对象过程中仍一点不同。 </p>
+<p>虽然两种方式结果相同，但在创建对象过程中仍一点不同。 </p>
 
 <p>当使用<code>Object.create()</code>和{{jsxref("Function.prototype.apply()")}}时，如果不使用<code>new</code>操作符调用构造函数，构造函数内部的<code>new.target</code>值会指向<code>undefined</code>。</p>
 

@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
 <div>{{JSRef}} {{deprecated_header}}</div>
 
-<p><strong><code>setYear()</code></strong> 方法根据一个本地时间为一个确定的日期对象设置年份。由于<code>setYear()</code> 并不设置完整年份（"正是千年虫问题"），本方法已经完全被{{jsxref("Date.prototype.setFullYear()","setFullYear()")}} 方法所取代。</p>
+<p><strong><code>setYear()</code></strong> 方法根据一个本地时间为一个确定的日期对象设置年份。由于<code>setYear()</code> 并不设置完整年份（"正是千年虫问题"），本方法已经完全被{{jsxref("Date.prototype.setFullYear()","setFullYear()")}} 方法所取代。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -28,13 +28,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 
 <h2 id="描述">描述</h2>
 
-<p>如果<code>yearValue</code> 是介于 0 到 99(包含 99) 之间的整数，则目标对象 <code>dateObj</code> 的年份被设置为 <code>1900 + yearValue</code>。否则，目标对象 <code>dateObj</code> 的年份被设置为 <code>yearValue</code>.</p>
+<p>如果<code>yearValue</code> 是介于 0 到 99(包含 99) 之间的整数，则目标对象 <code>dateObj</code> 的年份被设置为 <code>1900 + yearValue</code>。否则，目标对象 <code>dateObj</code> 的年份被设置为 <code>yearValue</code>.</p>
 
 <h2 id="例子">例子</h2>
 
-<h3 id="使用_setYear">使用 <code>setYear()</code></h3>
+<h3 id="使用_setYear">使用 <code>setYear()</code></h3>
 
-<p>例子前两行（除去声明）将年份设置为 1996。 第三行将年份设置为 2000.</p>
+<p>例子前两行（除去声明）将年份设置为 1996。 第三行将年份设置为 2000.</p>
 
 <pre class="brush: js">var theBigDay = new Date();
 
