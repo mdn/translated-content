@@ -206,3 +206,4 @@ En el fragmento de código que hay sobre estas líneas, se declara una función 
 - {{domxref("clearTimeout")}}
 - {{domxref("clearInterval")}}
 - {{domxref("window.requestAnimationFrame")}}
+
