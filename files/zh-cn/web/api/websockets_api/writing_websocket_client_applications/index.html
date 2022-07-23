@@ -16,7 +16,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h2 id="创建_WebSocket_对象">创建 WebSocket 对象</h2>
 
-<p>为了使用 WebSocket 协议通信，你需要创建一个 <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket"><code>WebSocket</code></a> 对象；这将会自动地尝试建立与服务器的连接。</p>
+<p>为了使用 WebSocket 协议通信，你需要创建一个 <a href="/en/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> 对象；这将会自动地尝试建立与服务器的连接。</p>
 
 <p>WebSocket 构造函数接受一个必要参数和一个可选参数：</p>
 
@@ -45,9 +45,9 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h3 id="连接错误">连接错误</h3>
 
-<p>如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a> 对象（然后调用其<code>onerror</code> handler），然后 <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a> 被发送给<a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a> （然后调用其 <code>onclose</code> handler）以说明连接关闭的原因。</p>
+<p>如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 <a href="/en/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> 对象（然后调用其<code>onerror</code> handler），然后 <a href="/en/WebSockets/WebSockets_reference/CloseEvent"><code>CloseEvent</code></a> 被发送给<a href="/en/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> （然后调用其 <code>onclose</code> handler）以说明连接关闭的原因。</p>
 
-<p>在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 <code><a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent">CloseEvent</a></code> 在 <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> 中定义的错误代码。</p>
+<p>在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 <code><a href="/en/WebSockets/WebSockets_reference/CloseEvent">CloseEvent</a></code> 在 <a href="http://tools.ietf.org/html/rfc6455#section-7.4">RFC 6455, Section 7.4</a> 中定义的错误代码。</p>
 
 <h3 id="示例">示例</h3>
 
@@ -69,12 +69,12 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h2 id="向服务器发送数据">向服务器发送数据</h2>
 
-<p>一旦你的连接打开完成，你就可以向服务器发送数据了。对每一个要发送的消息使用 <code>WebSocket</code> 对象的 <a href="/en/WebSockets/WebSockets_reference/WebSocket#send()" title="en/WebSockets/WebSockets reference/WebSocket#send()"><code>send()</code></a> 方法：</p>
+<p>一旦你的连接打开完成，你就可以向服务器发送数据了。对每一个要发送的消息使用 <code>WebSocket</code> 对象的 <a href="/en/WebSockets/WebSockets_reference/WebSocket#send()"><code>send()</code></a> 方法：</p>
 
 <pre class="brush: js">exampleSocket.send("Here's some text that the server is urgently awaiting!");
 </pre>
 
-<p>你可以把数据作为字符串，{{ domxref("Blob") }}，或者<a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>来发送。</p>
+<p>你可以把数据作为字符串，{{ domxref("Blob") }}，或者<a href="/en/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a>来发送。</p>
 
 <div class="note"><strong>注意：</strong> 在版本 11 之前，Firefox 只支持以字符串的形式发送数据。</div>
 
@@ -87,7 +87,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h3 id="使用_JSON_发送对象">使用 JSON 发送对象</h3>
 
-<p>你可以方便地使用<a href="/en/JSON" title="en/JSON">JSON</a> 来向服务器发送复杂一些的数据。例如一个聊天程序与服务器交互的协议可以通过封装在 JSON 里的数据来实现：</p>
+<p>你可以方便地使用<a href="/en/JSON">JSON</a> 来向服务器发送复杂一些的数据。例如一个聊天程序与服务器交互的协议可以通过封装在 JSON 里的数据来实现：</p>
 
 <pre class="brush: js">// 服务器向所有用户发送文本
 function sendText() {
@@ -164,7 +164,7 @@ function sendText() {
   }
 };</code></pre>
 
-<p>这里我们使用 <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse" title="en/JavaScript/Reference/Global Objects/JSON/parse"><code>JSON.parse()</code></a> 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。</p>
+<p>这里我们使用 <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse"><code>JSON.parse()</code></a> 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。</p>
 
 <h3 id="文本数据的格式">文本数据的格式</h3>
 
@@ -174,7 +174,7 @@ function sendText() {
 
 <h2 id="关闭连接">关闭连接</h2>
 
-<p>当你不需要再用 WebSocket 连接了，调用 WebSocket <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()" title="en/WebSockets/WebSockets reference/WebSocket#close()"><code>close()</code></a>方法：</p>
+<p>当你不需要再用 WebSocket 连接了，调用 WebSocket <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()"><code>close()</code></a>方法：</p>
 
 <pre class="brush: js">exampleSocket.close();
 </pre>

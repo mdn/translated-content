@@ -111,7 +111,7 @@ second.onchange = function() {
 
 <p>当 worker 出现运行中错误时，它的 <code>onerror</code> 事件处理函数会被调用。它会收到一个扩展了 <code>ErrorEvent</code> 接口的名为 <code>error</code>的事件。</p>
 
-<p>该事件不会冒泡并且可以被取消；为了防止触发默认动作，worker 可以调用错误事件的 <code><a class="internal" href="/zh-CN/docs/Web/API/Event/preventDefault">preventDefault()</a></code>方法。</p>
+<p>该事件不会冒泡并且可以被取消；为了防止触发默认动作，worker 可以调用错误事件的 <code><a href="/zh-CN/docs/Web/API/Event/preventDefault">preventDefault()</a></code>方法。</p>
 
 <p>错误事件有以下三个用户关心的字段：</p>
 
@@ -727,15 +727,15 @@ onmessage = function(event) {
 &lt;/html&gt;
 </pre>
 
-<p>网页创建了一个 <code>div</code> 元素，ID 为 <code>result</code> ， 用它来显示运算结果，然后生成 worker。在生成 worker 后，<code>onmessage</code> 处理函数配置为通过设置 <code>div</code> 元素的内容来显示运算结果，然后 <code>onerror</code> 处理函数被设置为 <a class="external" href="/en/Debugging_JavaScript#dump()">转储</a> 错误信息。</p>
+<p>网页创建了一个 <code>div</code> 元素，ID 为 <code>result</code> ， 用它来显示运算结果，然后生成 worker。在生成 worker 后，<code>onmessage</code> 处理函数配置为通过设置 <code>div</code> 元素的内容来显示运算结果，然后 <code>onerror</code> 处理函数被设置为 <a href="/en/Debugging_JavaScript#dump()">转储</a> 错误信息。</p>
 
 <p>最后，向 worker 发送一条信息来启动它。</p>
 
-<p><a class="external" href="/samples/workers/fibonacci">运行这个例子</a>。</p>
+<p><a href="/samples/workers/fibonacci">运行这个例子</a>。</p>
 
 <h3 id="在后台运行_web_IO">在后台运行 web I/O</h3>
 
-<p>你可以在 <a class="internal" href="/En/Using_workers_in_extensions">在扩展中使用 worker</a> 这篇文章中找到相关例子。</p>
+<p>你可以在 <a href="/En/Using_workers_in_extensions">在扩展中使用 worker</a> 这篇文章中找到相关例子。</p>
 
 <h3 id="划分任务给多个_worker">划分任务给多个 worker</h3>
 

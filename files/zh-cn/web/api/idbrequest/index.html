@@ -11,11 +11,11 @@ translation_of: Web/API/IDBRequest
 
 <p>该 request 对象初始时不包括任何关于操作结果的信息，当 request 上的事件触发时，可以通过 IDBRequest 实例上的事件处理函数访问相关信息。</p>
 
-<p>继承自：<a href="/en/DOM/EventTarget" style="line-height: inherit;" title="en/DOM/EventTarget">EventTarget</a></p>
+<p>继承自：<a href="/en/DOM/EventTarget">EventTarget</a></p>
 
 <h2 id="About_this_document">About this document</h2>
 
-<p>This document was last updated on August 17, 2012 and follows the <a class="external" href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#request-api">W3C Specifications (Editor's Draft)</a> drafted on July 24, 2012. It has not yet been verified.</p>
+<p>This document was last updated on August 17, 2012 and follows the <a href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#request-api">W3C Specifications (Editor's Draft)</a> drafted on July 24, 2012. It has not yet been verified.</p>
 
 <h2 id="基础概念">基础概念</h2>
 
@@ -65,7 +65,7 @@ request.onupgradeneeded= function(event) {
   </tr>
   <tr>
    <td><code><a name="attr_errorCode">error</a></code></td>
-   <td><code>readonly <a href="/en-US/docs/DOM/DOMError" style="color: rgb(34, 85, 170); line-height: 21px;" title="/en-US/docs/DOM/DOMError">DOMError</a></code></td>
+   <td><code>readonly <a href="/en-US/docs/DOM/DOMError">DOMError</a></code></td>
    <td>
     <p>The following error codes are returned under certain conditions:</p>
 
@@ -90,8 +90,8 @@ request.onupgradeneeded= function(event) {
   </tr>
   <tr>
    <td><code><a name="attr_transaction">transaction</a></code></td>
-   <td><code>readonly <a href="/en/IndexedDB/IDBTransaction" title="en/IndexedDB/IDBTransaction">IDBTransaction</a></code></td>
-   <td>The transaction for the request. This property can be null for certain requests, such as for request returned from <code><a href="/en/IndexedDB/IDBFactory#open" title="en/IndexedDB/IDBFactory#open">IDBFactory.open</a></code> (You're just connecting to a database, so there is no transaction to return).</td>
+   <td><code>readonly <a href="/en/IndexedDB/IDBTransaction">IDBTransaction</a></code></td>
+   <td>The transaction for the request. This property can be null for certain requests, such as for request returned from <code><a href="/en/IndexedDB/IDBFactory#open">IDBFactory.open</a></code> (You're just connecting to a database, so there is no transaction to return).</td>
   </tr>
   <tr>
    <td><code><a name="attr_readyState">readyState</a></code></td>
@@ -170,7 +170,7 @@ request.onupgradeneeded= function(event) {
 <h2 id="Derived_interface">Derived interface</h2>
 
 <ul>
- <li><code><a href="/en/IndexedDB/IDBOpenDBRequest" title="en/IndexedDB/IDBOpenDBRequest">IDBOpenDBRequest</a></code></li>
+ <li><code><a href="/en/IndexedDB/IDBOpenDBRequest">IDBOpenDBRequest</a></code></li>
 </ul>
 
 <h2 id="规范">规范</h2>
