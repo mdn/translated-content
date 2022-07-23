@@ -156,7 +156,7 @@ Como puede ver, no hay formas de pasar el objeto `this` a la función de devoluc
 
 ### Una posible solución
 
-Todos los entornos de ejecución modernos de JavaScript (en navegadores y otros lugares) soportan [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), con `this` léxico, lo que nos permite escribir `setInterval( () => this.myMethod)` si estamos dentro del método `myArray` .
+Todos los entornos de ejecución modernos de JavaScript (en navegadores y otros lugares) soportan [arrow functions](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions), con `this` léxico, lo que nos permite escribir `setInterval( () => this.myMethod)` si estamos dentro del método `myArray` .
 
 Si necesita soporte para IE, utilice el método [`Function.prototype.bind`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) , que le permite especificar el valor que debe ser usado como `this` para todas las llamadas a una función dada. Esto le permite fácilmente evitar los problemas en los que no está claro cual será `this` dependiendo del contexto desde el que se llamó a la función.
 
