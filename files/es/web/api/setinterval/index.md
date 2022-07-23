@@ -201,7 +201,7 @@ En el fragmento de código que hay sobre estas líneas, se declara una función 
 
 ## Véase también
 
-- [Polyfill of `setInterval` wich allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill de `setInterval` wich allows passing arguments to the callback en `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("setTimeout")}}
 - {{domxref("clearTimeout")}}
 - {{domxref("clearInterval")}}
