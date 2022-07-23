@@ -45289,19 +45289,6 @@
       "xgqfrms"
     ]
   },
-  "conflicting/Web/API/Blob/size": {
-    "modified": "2019-03-23T23:33:53.292Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
-    ]
-  },
-  "conflicting/Web/API/Blob/size_3e7c15d3e7851172bb4623d0237d8c9e": {
-    "modified": "2019-03-18T21:27:15.606Z",
-    "contributors": [
-      "levo2165"
-    ]
-  },
   "conflicting/Web/API/BroadcastChannel/message_event": {
     "modified": "2020-10-15T22:26:22.393Z",
     "contributors": [
