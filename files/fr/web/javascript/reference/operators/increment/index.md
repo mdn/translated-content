@@ -35,8 +35,8 @@ Utilisé comme préfixe (l'opérateur étant placé avant l'opérande), comme da
 let x = 3;
 let y = x++;
 
-// y = 3
-// x = 4
+// x = 3
+// y = 4
 ```
 
 ### Incrément en préfixe
