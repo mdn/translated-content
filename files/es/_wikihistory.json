@@ -15995,13 +15995,6 @@
       "geinerjv"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:47:17.832Z",
-    "contributors": [
-      "lajaso",
-      "jpmontoya182"
-    ]
-  },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-03-12T19:40:38.018Z",
     "contributors": [
@@ -21230,6 +21223,13 @@
       "fscholz",
       "teoli",
       "pheras"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:47:17.832Z",
+    "contributors": [
+      "lajaso",
+      "jpmontoya182"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {

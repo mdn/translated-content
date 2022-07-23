@@ -7820,12 +7820,6 @@
       "xercool"
     ]
   },
-  "Web/API/GlobalEventHandlers/onloadend": {
-    "modified": "2019-03-18T21:41:57.825Z",
-    "contributors": [
-      "dedotmoroz"
-    ]
-  },
   "Web/API/Gyroscope": {
     "modified": "2020-10-15T22:18:16.560Z",
     "contributors": [
@@ -11067,6 +11061,12 @@
     "modified": "2019-03-23T22:29:58.839Z",
     "contributors": [
       "fider"
+    ]
+  },
+  "Web/API/XMLHttpRequest/loadend_event": {
+    "modified": "2019-03-18T21:41:57.825Z",
+    "contributors": [
+      "dedotmoroz"
     ]
   },
   "Web/API/XMLHttpRequest/loadstart_event": {
@@ -16993,15 +16993,6 @@
       "kichik",
       "askhat",
       "ixidor",
-      "uleming"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:37:58.256Z",
-    "contributors": [
-      "nnragmailcom",
-      "fscholz",
-      "teoli",
       "uleming"
     ]
   },
@@ -23796,6 +23787,15 @@
       "fscholz",
       "esskia",
       "ivan.p"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:37:58.256Z",
+    "contributors": [
+      "nnragmailcom",
+      "fscholz",
+      "teoli",
+      "uleming"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {

@@ -1,10 +1,11 @@
 ---
 title: ECMAScript
-slug: Web/JavaScript/Language_Resources
+slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
 tags:
   - Avancé
   - JavaScript
 translation_of: Web/JavaScript/Language_Resources
+original_slug: Web/JavaScript/Language_Resources
 ---
 {{JsSidebar}}
 

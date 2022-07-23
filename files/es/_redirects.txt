@@ -2161,6 +2161,7 @@
 /es/docs/Web/JavaScript/Guide/colecciones_indexadas	/es/docs/Web/JavaScript/Guide/Indexed_collections
 /es/docs/Web/JavaScript/Herencia_y_la_cadena_de_protipos	/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /es/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/es/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/es/docs/Web/JavaScript/Language_Resources	/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /es/docs/Web/JavaScript/Primeros_Pasos	/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag

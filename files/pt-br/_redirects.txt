@@ -803,6 +803,7 @@
 /pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos	/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects
 /pt-BR/docs/Web/JavaScript/Guide/Usando_promises	/pt-BR/docs/Web/JavaScript/Guide/Using_promises
 /pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types
+/pt-BR/docs/Web/JavaScript/Language_Resources	/pt-BR/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /pt-BR/docs/Web/JavaScript/Outras_ferramentas_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Fata_parênteses_após_lista_argumento	/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list

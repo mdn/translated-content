@@ -1173,7 +1173,7 @@
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Własnościundefined	/pl/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /pl/docs/Dostosowanie_aplikacji_XUL_do_Firefoksa_1.5	/pl/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 /pl/docs/Dostępność	/pl/docs/Web/Accessibility
-/pl/docs/ECMAScript	/pl/docs/Web/JavaScript/Language_Resources
+/pl/docs/ECMAScript	/pl/docs/Web/JavaScript/JavaScript_technologies_overview
 /pl/docs/EXSLT	/pl/docs/Web/EXSLT
 /pl/docs/EditCSS_-_rozszerzenie_Firefoksa_(link)	https://addons.mozilla.org/extensions/moreinfo.php?id=179
 /pl/docs/Firebug_-_rozszerzenie_Firefoksa_(link)	https://addons.mozilla.org/extensions/moreinfo.php?id=1843&application=firefox
@@ -1859,6 +1859,7 @@
 /pl/docs/Web/JavaScript/Guide/Obsolete_Pages/Przewodnik_po_języku_JavaScript_1.5/Powrót_dziedziczenia_właściwości	/pl/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /pl/docs/Web/JavaScript/Guide/Obsolete_Pages/Przewodnik_po_języku_JavaScript_1.5/Praca_z_wyrażeniami_regularnymi/Globalne_wyszukiwanie,_wielkość_znaków,_wieloliniowe_wejście	/pl/docs/Web/JavaScript/Guide/Regular_Expressions
 /pl/docs/Web/JavaScript/Guide/Składnia_i_typy	/pl/docs/Web/JavaScript/Guide/Grammar_and_types
+/pl/docs/Web/JavaScript/Language_Resources	/pl/docs/Web/JavaScript/JavaScript_technologies_overview
 /pl/docs/Web/JavaScript/O_JavaScript	/pl/docs/Web/JavaScript/About_JavaScript
 /pl/docs/Web/JavaScript/Ponowne_wprowadzenie_do_JavaScript	/pl/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /pl/docs/Web/JavaScript/Reference/Classes/Konstruktor	/pl/docs/Web/JavaScript/Reference/Classes/constructor
@@ -2186,7 +2187,7 @@
 /pl/docs/Web/JavaScript/Referencje/Własności/NaN	/pl/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /pl/docs/Web/JavaScript/Referencje/Własności/undefined	/pl/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /pl/docs/Web/JavaScript/Referencje/Własnościundefined	/pl/docs/Web/JavaScript/Reference/Global_Objects/undefined
-/pl/docs/Web/JavaScript/Zasoby_języka_JavaScript	/pl/docs/Web/JavaScript/Language_Resources
+/pl/docs/Web/JavaScript/Zasoby_języka_JavaScript	/pl/docs/Web/JavaScript/JavaScript_technologies_overview
 /pl/docs/Web/JavaScript/dziedziczenie_lancuch_prototypow	/pl/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /pl/docs/Web/Progressive_web_apps/Responsive/Media_types	/pl/docs/Web/CSS/Media_Queries/Using_media_queries
 /pl/docs/Web/SVG/Element/okrąg	/pl/docs/Web/SVG/Element/circle
@@ -2432,7 +2433,7 @@
 /pl/docs/XSLT:variable	/pl/docs/Web/XSLT/Element/variable
 /pl/docs/XSLT:when	/pl/docs/Web/XSLT/Element/when
 /pl/docs/XSLT:with-param	/pl/docs/Web/XSLT/Element/with-param
-/pl/docs/Zasoby_języka_JavaScript	/pl/docs/Web/JavaScript/Language_Resources
+/pl/docs/Zasoby_języka_JavaScript	/pl/docs/Web/JavaScript/JavaScript_technologies_overview
 /pl/docs/Zdarzenia_online_i_offline	/pl/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /pl/docs/appendChild	/pl/docs/Web/API/Node/appendChild
 /pl/docs/blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
