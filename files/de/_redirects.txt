@@ -314,7 +314,7 @@
 /de/docs/JavaScript/Guide/Über_Javascript	/de/docs/Web/JavaScript/Guide/Introduction
 /de/docs/JavaScript/Guide/Über_diese_Einführung	/de/docs/Web/JavaScript/Guide/Introduction
 /de/docs/JavaScript/Javascript_lernen_für_Anfänger	/de/docs/Web/JavaScript/Guide
-/de/docs/JavaScript/Language_Resources	/de/docs/Web/JavaScript/Language_Resources
+/de/docs/JavaScript/Language_Resources	/de/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /de/docs/JavaScript/Reference	/de/docs/Web/JavaScript/Reference
 /de/docs/JavaScript/Reference/Global_Objects	/de/docs/Web/JavaScript/Reference/Global_Objects
 /de/docs/JavaScript/Reference/Global_Objects/Array	/de/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -685,6 +685,7 @@
 /de/docs/Web/JavaScript/Guide/Über_diese_Einführung	/de/docs/Web/JavaScript/Guide/Introduction
 /de/docs/Web/JavaScript/JavaScript_technologieuebersicht	/de/docs/Web/JavaScript/JavaScript_technologies_overview
 /de/docs/Web/JavaScript/Javascript_lernen_für_Anfänger	/de/docs/Web/JavaScript/Guide
+/de/docs/Web/JavaScript/Language_Resources	/de/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /de/docs/Web/JavaScript/Reference/Anweisungen	/de/docs/Web/JavaScript/Reference/Statements
 /de/docs/Web/JavaScript/Reference/Anweisungen/const	/de/docs/Web/JavaScript/Reference/Statements/const
 /de/docs/Web/JavaScript/Reference/Anweisungen/for...in	/de/docs/Web/JavaScript/Reference/Statements/for...in

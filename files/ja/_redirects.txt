@@ -1808,8 +1808,8 @@
 /ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Drawing_text_using_a_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ja/docs/Dynamically_modifying_XUL-based_user_interface	/ja/docs/orphaned/Dynamically_modifying_XUL-based_user_interface
-/ja/docs/ECMA-262	/ja/docs/Web/JavaScript/Language_Resources
-/ja/docs/ECMAScript	/ja/docs/Web/JavaScript/Language_Resources
+/ja/docs/ECMA-262	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/ECMAScript	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/EXSLT	/ja/docs/Web/EXSLT
 /ja/docs/EXSLT/exsl	/ja/docs/Web/EXSLT/exsl
 /ja/docs/EXSLT/exsl/node-set	/ja/docs/Web/EXSLT/exsl/node-set
@@ -2195,8 +2195,8 @@
 /ja/docs/JavaScript/Introduction_to_Object-Oriented_JavaScript	/ja/docs/Learn/JavaScript/Objects
 /ja/docs/JavaScript/JavaScript_shells	/ja/docs/Web/JavaScript/Shells
 /ja/docs/JavaScript/JavaScript_technologies_overview	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
-/ja/docs/JavaScript/Language_Resources	/ja/docs/Web/JavaScript/Language_Resources
-/ja/docs/JavaScript/Language_Resources-redirect-1	/ja/docs/Web/JavaScript/Language_Resources
+/ja/docs/JavaScript/Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/ja/docs/JavaScript/Language_Resources-redirect-1	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/JavaScript/Reference	/ja/docs/Web/JavaScript/Reference
@@ -2612,7 +2612,7 @@
 /ja/docs/JavaScript/Typed_arrays/Uint32Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/JavaScript/Typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
 /ja/docs/JavaScriptReference/Statements/let	/ja/docs/Web/JavaScript/Reference/Statements/let
-/ja/docs/JavaScript_Language_Resources	/ja/docs/Web/JavaScript/Language_Resources
+/ja/docs/JavaScript_Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript_shells	/ja/docs/Web/JavaScript/Shells
 /ja/docs/JavaScript_technologies_overview	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript_typed_arrays	/ja/docs/Web/JavaScript/Typed_arrays
@@ -3240,6 +3240,7 @@
 /ja/docs/Web/API/GlobalEventHandlers/onkeydown	/ja/docs/conflicting/Web/API/Element/keydown_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeypress	/ja/docs/Web/API/Element/keypress_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeyup	/ja/docs/conflicting/Web/API/Element/keyup_event
+/ja/docs/Web/API/GlobalEventHandlers/onloadend	/ja/docs/conflicting/Web/API/XMLHttpRequest/loadend_event
 /ja/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/ja/docs/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/GlobalEventHandlers/onmousedown	/ja/docs/conflicting/Web/API/Element/mousedown_event
 /ja/docs/Web/API/GlobalEventHandlers/onmouseenter	/ja/docs/conflicting/Web/API/Element/mouseenter_event
@@ -4471,6 +4472,7 @@
 /ja/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/ja/docs/Learn/JavaScript/Objects
 /ja/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ja/docs/Web/JavaScript/JavaScript_shells	/ja/docs/Web/JavaScript/Shells
+/ja/docs/Web/JavaScript/Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/Web/JavaScript/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Guidelines/Writing_style_guide

@@ -13295,12 +13295,6 @@
       "ppphp"
     ]
   },
-  "Web/API/GlobalEventHandlers/onloadend": {
-    "modified": "2020-10-15T22:30:32.313Z",
-    "contributors": [
-      "wuyouhuaz"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onloadstart": {
     "modified": "2020-10-15T21:57:07.506Z",
     "contributors": [
@@ -34653,14 +34647,6 @@
       "YuQiang.Yuan"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:37:56.380Z",
-    "contributors": [
-      "lunix01",
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-03-12T19:38:33.297Z",
     "contributors": [
@@ -46279,6 +46265,12 @@
       "evestorm"
     ]
   },
+  "conflicting/Web/API/XMLHttpRequest/loadend_event": {
+    "modified": "2020-10-15T22:30:32.313Z",
+    "contributors": [
+      "wuyouhuaz"
+    ]
+  },
   "conflicting/Web/API/XMLHttpRequest/loadstart_event": {
     "modified": "2020-10-15T22:09:01.294Z",
     "contributors": [
@@ -46653,6 +46645,14 @@
       "ziyunfei",
       "zsytssk",
       "rogersuen"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:37:56.380Z",
+    "contributors": [
+      "lunix01",
+      "teoli",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {

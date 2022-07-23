@@ -796,7 +796,7 @@
 /zh-CN/docs/JavaScript/Guide/Working_with_Objects	/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects
 /zh-CN/docs/JavaScript/Guide/闭包	/zh-CN/docs/Web/JavaScript/Closures
 /zh-CN/docs/JavaScript/JavaScript_technologies_overview	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
-/zh-CN/docs/JavaScript/Language_Resources	/zh-CN/docs/Web/JavaScript/Language_Resources
+/zh-CN/docs/JavaScript/Language_Resources	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/JavaScript/Memory_Management	/zh-CN/docs/Web/JavaScript/Memory_Management
 /zh-CN/docs/JavaScript/Reference	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript/Reference/About	/zh-CN/docs/Web/JavaScript/Reference/About
@@ -1034,7 +1034,7 @@
 /zh-CN/docs/JavaScript_核心参考	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript参考文档	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript的同源策略	/zh-CN/docs/Web/Security/Same-origin_policy
-/zh-CN/docs/JavaScript语言资源	/zh-CN/docs/Web/JavaScript/Language_Resources
+/zh-CN/docs/JavaScript语言资源	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Learn/CSS/Building_blocks/Advanced_box_effects	/zh-CN/docs/Learn/CSS/Building_blocks/Advanced_styling_effects
 /zh-CN/docs/Learn/CSS/Building_blocks/处理_不同_方向的_文本	/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions
 /zh-CN/docs/Learn/CSS/CSS_layout/传统的布局方法	/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods
@@ -1483,6 +1483,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/conflicting/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/conflicting/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup	/zh-CN/docs/conflicting/Web/API/Element/keyup_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onloadend	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/loadend_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/zh-CN/docs/Web/API/Element/lostpointercapture_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmousedown	/zh-CN/docs/conflicting/Web/API/Element/mousedown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseenter	/zh-CN/docs/conflicting/Web/API/Element/mouseenter_event
@@ -2279,6 +2280,7 @@
 /zh-CN/docs/Web/JavaScript/Guide/介绍	/zh-CN/docs/Web/JavaScript/Guide/Introduction
 /zh-CN/docs/Web/JavaScript/Guide/可迭代对象	/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols
 /zh-CN/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/zh-CN/docs/Web/JavaScript/Language_Resources	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Reference/Array	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/Web/JavaScript/Reference/Array/Reduce	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/Web/JavaScript/Reference/Array/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat

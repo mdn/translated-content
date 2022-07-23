@@ -11441,13 +11441,6 @@
       "treax"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:43:20.868Z",
-    "contributors": [
-      "christophergomes",
-      "Danilson_Veloso"
-    ]
-  },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-03-12T19:40:29.251Z",
     "contributors": [
@@ -16106,6 +16099,13 @@
       "teoli",
       "lisy",
       "alexandresn"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:43:20.868Z",
+    "contributors": [
+      "christophergomes",
+      "Danilson_Veloso"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {

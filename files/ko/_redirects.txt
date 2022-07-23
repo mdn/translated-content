@@ -262,7 +262,7 @@
 /ko/docs/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/JavaScript/Reference/Statements	/ko/docs/Web/JavaScript/Reference/Statements
 /ko/docs/JavaScript/Reference/Statements/for...in	/ko/docs/Web/JavaScript/Reference/Statements/for...in
-/ko/docs/JavaScript/언어_리소스	/ko/docs/Web/JavaScript/Language_Resources
+/ko/docs/JavaScript/언어_리소스	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/JavaScript_modules	/ko/docs/Web/JavaScript/Guide/Modules
 /ko/docs/JavaScript_technologies_overview	/ko/docs/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/JavaScript_technologies_overview-redirect-1	/ko/docs/Web/JavaScript/JavaScript_technologies_overview
@@ -699,6 +699,7 @@
 /ko/docs/Web/JavaScript/Guide/정규식/Assertions	/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /ko/docs/Web/JavaScript/Guide/정규식/Groups_and_Ranges	/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
 /ko/docs/Web/JavaScript/Guide/함수	/ko/docs/Web/JavaScript/Guide/Functions
+/ko/docs/Web/JavaScript/Language_Resources	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference/About
 /ko/docs/Web/JavaScript/Reference/Classes/Class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션	/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -732,7 +733,7 @@
 /ko/docs/Web/JavaScript/Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript
 /ko/docs/Web/JavaScript/쉘	/ko/docs/Web/JavaScript/Shells
-/ko/docs/Web/JavaScript/언어_리소스	/ko/docs/Web/JavaScript/Language_Resources
+/ko/docs/Web/JavaScript/언어_리소스	/ko/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/Web/Media/Formats/비디오코덱	/ko/docs/Web/Media/Formats/Video_codecs
 /ko/docs/Web/Media/Formats/컨테이너	/ko/docs/Web/Media/Formats/Containers
 /ko/docs/Web/Media/Formats/코덱파라미터	/ko/docs/Web/Media/Formats/codecs_parameter

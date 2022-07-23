@@ -1191,7 +1191,7 @@
 /fr/docs/Développement_Web	/fr/docs/Web/Guide
 /fr/docs/Développement_Web/Développer_des_sites_à_compatibilité_descendante	/fr/docs/Web/Guide/Writing_forward-compatible_websites
 /fr/docs/Développement_Web/Introduction_au_développement_web	/fr/docs/Web/Guide/Introduction_to_Web_development
-/fr/docs/ECMAScript	/fr/docs/Web/JavaScript/Language_Resources
+/fr/docs/ECMAScript	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/EXSLT	/fr/docs/Web/EXSLT
 /fr/docs/EXSLT/exsl	/fr/docs/Web/EXSLT/exsl
 /fr/docs/EXSLT/exsl/node-set	/fr/docs/Web/EXSLT/exsl/node-set
@@ -2161,7 +2161,7 @@
 /fr/docs/JavaScript/Guide/Égalité_en_JavaScript	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/JavaScript/Guide_JavaScript	/fr/docs/Web/JavaScript/Guide
 /fr/docs/JavaScript/JavaScript_technologies_overview	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
-/fr/docs/JavaScript/Language_Resources	/fr/docs/Web/JavaScript/Language_Resources
+/fr/docs/JavaScript/Language_Resources	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/JavaScript/Reference	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
@@ -3803,6 +3803,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeypress	/fr/docs/Web/API/Element/keypress_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeyup	/fr/docs/Web/API/Element/keyup_event
+/fr/docs/Web/API/GlobalEventHandlers/onloadend	/fr/docs/Web/API/XMLHttpRequest/loadend_event
 /fr/docs/Web/API/GlobalEventHandlers/onmousedown	/fr/docs/Web/API/Element/mousedown_event
 /fr/docs/Web/API/GlobalEventHandlers/onmousemove	/fr/docs/Web/API/Element/mousemove_event
 /fr/docs/Web/API/GlobalEventHandlers/onmouseout	/fr/docs/Web/API/Element/mouseout_event
@@ -4786,6 +4787,7 @@
 /fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes	/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /fr/docs/Web/JavaScript/Introduction_à_JavaScript_orienté_objet	/fr/docs/Learn/JavaScript/Objects
 /fr/docs/Web/JavaScript/Introduction_à_l_utilisation_de_XPath_avec_JavaScript	/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/fr/docs/Web/JavaScript/Language_Resources	/fr/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype	/fr/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation
