@@ -97,14 +97,14 @@ myCar.year = 1969
 
 <h2 id="枚举一个对象的所有属性">枚举一个对象的所有属性</h2>
 
-<p>从 <a href="/zh-CN/docs/JavaScript/ECMAScript_5_support_in_Mozilla" title="zh-CN/docs/JavaScript/ECMAScript 5 support in Mozilla">ECMAScript 5</a> 开始，有三种原生的方法用于列出或枚举对象的属性：</p>
+<p>从 <a href="/zh-CN/docs/JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5</a> 开始，有三种原生的方法用于列出或枚举对象的属性：</p>
 
 <ul>
- <li><a href="/zh-CN/docs/JavaScript/Reference/Statements/for...in" title="zh-CN/docs/JavaScript/Reference/Statements/for...in">for...in</a> 循环<br>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Statements/for...in">for...in</a> 循环<br>
   该方法依次访问一个对象及其原型链中所有可枚举的属性。</li>
- <li><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/keys" title="zh-CN/docs/JavaScript/Reference/Global Objects/Object/keys">Object.keys(o)</a><br>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/keys">Object.keys(o)</a><br>
   该方法返回对象 <code>o</code> 自身包含（不包括原型中）的所有可枚举属性的名称的数组。</li>
- <li><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="zh-CN/docs/JavaScript/Reference/Global Objects/Object/getOwnPropertyNames">Object.getOwnPropertyNames(o)</a><br>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">Object.getOwnPropertyNames(o)</a><br>
   该方法返回对象 <code>o</code> 自身包含（不包括原型中）的所有属性 (无论是否可枚举) 的名称的数组。</li>
 </ul>
 
@@ -279,7 +279,7 @@ fish.displayType(); // Output:Fishes
 car1.color = "black";
 </pre>
 
-<p>参见 <a href="/zh-CN/docs/JavaScript/Reference" title="zh-CN/docs/JavaScript/Reference">JavaScript Reference</a> 中 Function 对象的 <a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> 属性</a> 。</p>
+<p>参见 <a href="/zh-CN/docs/JavaScript/Reference">JavaScript Reference</a> 中 Function 对象的 <a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype"><code>prototype</code> 属性</a> 。</p>
 
 <h2 id="定义方法">定义方法</h2>
 
@@ -400,9 +400,7 @@ console.log(o.a); // 25</pre>
  <li><code>o.c</code> — 由  <code>o.c 的值所设置 <code>o.a</code> 值的</code> setter</li>
 </ul>
 
-<p>请注意在一个对象字面量语法中定义 getter 和 setter 使用"[gs]et property()"的方式（相比较于__define[GS]etter__) 时，并不是获取和设置某个属性自身，容易让人误以为是"[gs]et propertyName(){ }"这样错误的使用方法。定义一个 getter 或 setter 函数使用语法"[gs]et property()"，定义一个已经声明的函数作为的 getter 和 setter 方法，使用<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineProperty" title="zh-CN/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineProperty">Object.defineProperty</a></code>(或者 <code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineGetter" title="zh-CN/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineGetter">Object.prototype.__defineGetter__</a></code> 旧语法回退)</p>
+<p>请注意在一个对象字面量语法中定义 getter 和 setter 使用"[gs]et property()"的方式（相比较于__define[GS]etter__) 时，并不是获取和设置某个属性自身，容易让人误以为是"[gs]et propertyName(){ }"这样错误的使用方法。定义一个 getter 或 setter 函数使用语法"[gs]et property()"，定义一个已经声明的函数作为的 getter 和 setter 方法，使用<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>(或者 <code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/defineGetter">Object.prototype.__defineGetter__</a></code> 旧语法回退)</p>
 
 <p>下面这个例子展示使用 getter 和 setter 方法扩展 {{jsxref("Date")}}原型，为预定义好的 Date 类添加一个 year 的属性。定义属性 year 的 getter 和 setter 方法用到了 Date 类中已存在的 getFullYear 和 setFullYear 方法。</p>
 

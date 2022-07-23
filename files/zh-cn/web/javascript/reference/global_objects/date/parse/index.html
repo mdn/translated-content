@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <dl>
  <dt><code>dateString</code></dt>
- <dd>一个符合 <a class="external" href="http://tools.ietf.org/html/rfc2822#page-14" title="http://tools.ietf.org/html/rfc2822#page-14">RFC2822</a> 或 ISO 8601 日期格式的字符串（其他格式也许也支持，但结果可能与预期不符）。</dd>
+ <dd>一个符合 <a href="http://tools.ietf.org/html/rfc2822#page-14">RFC2822</a> 或 ISO 8601 日期格式的字符串（其他格式也许也支持，但结果可能与预期不符）。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -44,15 +44,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 <p><code>parse</code> 方法接受一个日期字符串（例如 "<code>Dec 25, 1995</code>"），并返回从 1970-1-1 00:00:00 UTC 到该日期字符串所表示日期的毫秒数。该方法在基于字符串值设置日期值时很有用，例如结合使用{{jsxref("Global_Objects/Date/setTime", "setTime()")}} 方法和 {{jsxref("Global_Objects/Date", "Date()")}} 构造函数。</p>
 
-<p><code>parse</code> 方法接受一个表示时间的字符串，返回相应的时间值。该方法可以接受符合 RFC2822 / IETF 日期语法 (<a class="external" href="http://tools.ietf.org/html/rfc2822#page-14" title="http://tools.ietf.org/html/rfc2822#page-14">RFC2822 Section 3.3</a>) 的字符串，如 "<code>Mon, 25 Dec 1995 13:30:00 GMT</code>"。该方法能够理解美国大陆时区的缩写，但是为了更通用，应该使用时区偏移，如 "<code>Mon, 25 Dec 1995 13:30:00 +0430</code>"（格林威治的子午线向东偏移 4 小时 30 分钟）。如果没有指定时区，默认使用本地时区。</p>
+<p><code>parse</code> 方法接受一个表示时间的字符串，返回相应的时间值。该方法可以接受符合 RFC2822 / IETF 日期语法 (<a href="http://tools.ietf.org/html/rfc2822#page-14">RFC2822 Section 3.3</a>) 的字符串，如 "<code>Mon, 25 Dec 1995 13:30:00 GMT</code>"。该方法能够理解美国大陆时区的缩写，但是为了更通用，应该使用时区偏移，如 "<code>Mon, 25 Dec 1995 13:30:00 +0430</code>"（格林威治的子午线向东偏移 4 小时 30 分钟）。如果没有指定时区，默认使用本地时区。</p>
 
-<p>GMT 和 UTC 被看作相等。 如果 <a class="external" href="http://tools.ietf.org/html/rfc2822#page-14" title="http://tools.ietf.org/html/rfc2822#page-14">RFC2822 Section 3.3</a> 格式中不包含时区信息时，会以本地时区来解析日期字符串。</p>
+<p>GMT 和 UTC 被看作相等。 如果 <a href="http://tools.ietf.org/html/rfc2822#page-14">RFC2822 Section 3.3</a> 格式中不包含时区信息时，会以本地时区来解析日期字符串。</p>
 
 <p>由于在解析日期字符串时存在偏差会导致结果不一致，因此推荐始终手动解析日期字符串，特别是不同的 ECMAScript 实现会把诸如“2015-10-12 12:00:00”的字符串解析为 NaN，UTC 或者本地时间。</p>
 
 <h3 id="ECMAScript_5_ISO-8601_日期格式支持">ECMAScript 5 ISO-8601 日期格式支持</h3>
 
-<p>另外，日期时间字符串也可以使用 <a href="http://www.w3.org/TR/NOTE-datetime" title="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a> 格式。例如，"<code>2011-10-10</code>"（仅日期）或 "<code>2011-10-10T14:48:00</code>"（日期和时间）能够作为参数被传递和解析。 如果参数字符串只包含日期格式，那么将会使用 UTC 时区来解析该参数。而如果是<a href="http://www.w3.org/TR/NOTE-datetime" title="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a> 格式中规定的时间加日期的格式，则将会被作为本地时区处理。</p>
+<p>另外，日期时间字符串也可以使用 <a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a> 格式。例如，"<code>2011-10-10</code>"（仅日期）或 "<code>2011-10-10T14:48:00</code>"（日期和时间）能够作为参数被传递和解析。 如果参数字符串只包含日期格式，那么将会使用 UTC 时区来解析该参数。而如果是<a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a> 格式中规定的时间加日期的格式，则将会被作为本地时区处理。</p>
 
 <p>虽然在日期字符串解析过程中会使用时区修饰符，但返回值总会是从由 NaN 表示的 1970-1-1 00:00:00 UTC 到该日期字符串所表示日期的毫秒数。</p>
 

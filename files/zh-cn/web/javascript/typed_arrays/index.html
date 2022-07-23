@@ -36,9 +36,9 @@ translation_of: Web/JavaScript/Typed_arrays
 <h2 id="使用类型数组的Web_API">使用类型数组的 Web API</h2>
 
 <dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader#readAsArrayBuffer()" title="/en-US/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
- <dd><code>FileReader.prototype.readAsArrayBuffer()</code> 读取对应的<a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="/en-US/docs/DOM/Blob"><code>Blob</code></a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/File" title="/en-US/docs/DOM/File"><code>File</code></a>的内容</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#send()" title="/en-US/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader#readAsArrayBuffer()"><code>FileReader.prototype.readAsArrayBuffer()</code></a></dt>
+ <dd><code>FileReader.prototype.readAsArrayBuffer()</code> 读取对应的<a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob"><code>Blob</code></a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/File"><code>File</code></a>的内容</dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#send()"><code>XMLHttpRequest.prototype.send()</code></a></dt>
  <dd><code>XMLHttpRequest</code> 实例的 <code>send()</code> 方法现在使用支持类型化数组和 {{jsxref("ArrayBuffer")}} 对象作为参数。</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData">ImageData.data</a></code></dt>
  <dd>是一个 {{jsxref("Uint8ClampedArray")}} 对象，用来描述包含按照 RGBA 序列的颜色数据的一维数组，其值的范围在<code>0</code>到<code>255</code>（包含 255）之间。</dd>
@@ -89,11 +89,11 @@ for (var i = 0; i &lt; int16View.length; i++) {
 <pre class="brush: js">int16View[0] = 32;
 console.log("Entry 0 in the 32-bit array is now " + int32View[0]);</pre>
 
-<p>这次的输出是"Entry 0 in the 32-bit array is now 32"。也就是，这 2 个数组都是同一数据的以不同格式展示出来的视图。你可以使用任何一种 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects" title="JavaScript typed arrays/ArrayBufferView#Typed array subclasses">view types</a> 中的定义的视图。</p>
+<p>这次的输出是"Entry 0 in the 32-bit array is now 32"。也就是，这 2 个数组都是同一数据的以不同格式展示出来的视图。你可以使用任何一种 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects">view types</a> 中的定义的视图。</p>
 
 <h3 id="使用复杂的数据结构">使用复杂的数据结构</h3>
 
-<p>通过将缓冲与不同类型视图组合，以及修改内存访问的偏移位置，你可以操作包含更多更复杂数据结构的数据。你可以使用<a href="https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes" title="js-ctypes">js-ctypes</a>操作诸如<a href="https://developer.mozilla.org/en-US/docs/Web/WebGL" title="WebGL">WebGL</a>，数据文件或 C 语言结构体这些复杂的数据结构。</p>
+<p>通过将缓冲与不同类型视图组合，以及修改内存访问的偏移位置，你可以操作包含更多更复杂数据结构的数据。你可以使用<a href="https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes">js-ctypes</a>操作诸如<a href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a>，数据文件或 C 语言结构体这些复杂的数据结构。</p>
 
 <p>请看如下的 C 语言结构：</p>
 
@@ -116,7 +116,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);</pre>
 <p>现在你就可以通过<code>amountDueView[0]</code>的方式访问数量。</p>
 
 <div class="note">
-<p><strong>备注：</strong>C 语言结构体的<a href="http://en.wikipedia.org/wiki/Data_structure_alignment" title="http://en.wikipedia.org/wiki/Data_structure_alignment">数据对齐</a>与平台相关。因此需要防范和考虑不同平台的字节填充对齐。</p>
+<p><strong>备注：</strong>C 语言结构体的<a href="http://en.wikipedia.org/wiki/Data_structure_alignment">数据对齐</a>与平台相关。因此需要防范和考虑不同平台的字节填充对齐。</p>
 </div>
 
 <h3 id="转换为普通数组">转换为普通数组</h3>
@@ -162,8 +162,8 @@ normalArray.constructor === Array;</pre>
 <h2 id="了解更多">了解更多</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer" title="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Code_snippets/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer">Getting <code>ArrayBuffer</code>s or typed arrays from <em>Base64</em>-encoded strings</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Code_snippets/StringView"><code>StringView</code> – a C-like representation of strings based on typed arrays</a></li>
  <li><a href="https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays">Faster Canvas Pixel Manipulation with Typed Arrays</a></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/webgl/typed_arrays">Typed Arrays: Binary Data in the Browser</a></li>
  <li>{{Glossary("Endianness")}}</li>

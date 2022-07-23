@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
   <p><strong>备注：</strong>有时你会看到非严格模式，被称为“<strong><a href="https://developer.mozilla.org/docs/Glossary/Sloppy_mode">sloppy mode</a></strong>”。这不是一个官方术语，但以防万一，你应该意识到这一点。</p>
 </div>
 
-<div><a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a>的<strong>严格模式</strong>是采用具有限制性 JavaScript 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。</div>
+<div><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a>的<strong>严格模式</strong>是采用具有限制性 JavaScript 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。</div>
 
 <div>严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。</div>
 
@@ -86,7 +86,7 @@ mistypedVaraible = 17; // 因为变量名拼写错误
                        // 这一行代码就会抛出 ReferenceError
 </pre>
 
-<p>第二，严格模式会使引起静默失败 (silently fail，注：不报错也没有任何效果) 的赋值操作抛出异常。例如，<code>NaN</code> 是一个不可写的全局变量。在正常模式下，给 <code>NaN</code> 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 <code>NaN</code> 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作 (给不可写属性赋值，给只读属性 (getter-only) 赋值，给不可扩展对象 (<a href="/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions" title="zh-CN/JavaScript/Reference/Global Objects/Object/preventExtensions">non-extensible</a> object) 的新属性赋值) 都会抛出异常：</p>
+<p>第二，严格模式会使引起静默失败 (silently fail，注：不报错也没有任何效果) 的赋值操作抛出异常。例如，<code>NaN</code> 是一个不可写的全局变量。在正常模式下，给 <code>NaN</code> 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 <code>NaN</code> 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作 (给不可写属性赋值，给只读属性 (getter-only) 赋值，给不可扩展对象 (<a href="/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions">non-extensible</a> object) 的新属性赋值) 都会抛出异常：</p>
 
 <pre class="brush: js">"use strict";
 
@@ -168,7 +168,7 @@ with (obj) { // !!! 语法错误
 
 <p>一种取代 <code>with</code>的简单方法是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性。</p>
 
-<p>第二，<a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>严格模式下的 eval 不再为上层范围 (surrounding scope，注：包围 eval 代码块的范围) 引入新变量</code></a>. 在正常模式下， 代码 <code>eval("var x;")</code> 会给上层函数 (surrounding function) 或者全局引入一个新的变量 <code>x</code> . 这意味着，一般情况下， 在一个包含 <code>eval</code> 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义 (因为 <code>eval</code> 可能引入的新变量会覆盖它的外层变量). 在严格模式下 <code>eval</code> 仅仅为被运行的代码创建变量，所以 <code>eval</code> 不会使得名称映射到外部变量或者其他局部变量：</p>
+<p>第二，<a href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>严格模式下的 eval 不再为上层范围 (surrounding scope，注：包围 eval 代码块的范围) 引入新变量</code></a>. 在正常模式下， 代码 <code>eval("var x;")</code> 会给上层函数 (surrounding function) 或者全局引入一个新的变量 <code>x</code> . 这意味着，一般情况下， 在一个包含 <code>eval</code> 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义 (因为 <code>eval</code> 可能引入的新变量会覆盖它的外层变量). 在严格模式下 <code>eval</code> 仅仅为被运行的代码创建变量，所以 <code>eval</code> 不会使得名称映射到外部变量或者其他局部变量：</p>
 
 <pre class="brush: js">var x = 17;
 var evalX = eval("'use strict'; var x = 42; x");
@@ -253,7 +253,7 @@ f(); // 抛出类型错误
 
 <p>严格模式下更容易写出“安全”的 JavaScript。现在有些网站提供了方式给用户编写能够被网站其他用户执行的 JavaScript 代码。在浏览器环境下，JavaScript 能够获取用户的隐私信息，因此这类 Javascript 必须在运行前部分被转换成需要申请访问禁用功能的权限。没有很多的执行时检查的情况，Javascript 的灵活性让它无法有效率地做这件事。一些语言中的函数普遍出现，以至于执行时检查他们会引起严重的性能损耗。做一些在严格模式下发生的小改动，要求用户提交的 JavaScript 开启严格模式并且用特定的方式调用，就会大大减少在执行时进行检查的必要。</p>
 
-<p>第一，在严格模式下通过<code>this</code>传递给一个函数的值不会被强制转换为一个对象。对一个普通的函数来说，<code>this</code>总会是一个对象：不管调用时<code>this</code>它本来就是一个对象；还是用布尔值，字符串或者数字调用函数时函数里面被封装成对象的<code>this</code>；还是使用<code>undefined</code>或者<code>null</code>调用函数式<code>this</code>代表的全局对象（使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="en-US/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="en-US/JavaScript/Reference/Global_Objects/Function/apply"><code>apply</code></a>或者<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" title="en-US/JavaScript/Reference/Global_Objects/Function/bind">bind</a></code>方法来指定一个确定的<code>this</code>）。这种自动转化为对象的过程不仅是一种性能上的损耗，同时在浏览器中暴露出全局对象也会成为安全隐患，因为全局对象提供了访问那些所谓安全的 JavaScript 环境必须限制的功能的途径。所以对于一个开启严格模式的函数，指定的<code>this</code>不再被封装为对象，而且如果没有指定<code>this</code>的话它值是<code>undefined</code>：</p>
+<p>第一，在严格模式下通过<code>this</code>传递给一个函数的值不会被强制转换为一个对象。对一个普通的函数来说，<code>this</code>总会是一个对象：不管调用时<code>this</code>它本来就是一个对象；还是用布尔值，字符串或者数字调用函数时函数里面被封装成对象的<code>this</code>；还是使用<code>undefined</code>或者<code>null</code>调用函数式<code>this</code>代表的全局对象（使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"><code>apply</code></a>或者<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">bind</a></code>方法来指定一个确定的<code>this</code>）。这种自动转化为对象的过程不仅是一种性能上的损耗，同时在浏览器中暴露出全局对象也会成为安全隐患，因为全局对象提供了访问那些所谓安全的 JavaScript 环境必须限制的功能的途径。所以对于一个开启严格模式的函数，指定的<code>this</code>不再被封装为对象，而且如果没有指定<code>this</code>的话它值是<code>undefined</code>：</p>
 
 <pre class="brush: js">"use strict";
 function fun() { return this; }
@@ -366,12 +366,12 @@ function baz() { // 合法
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a class="external" href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/" title="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
- <li><a class="external" href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/" title="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
- <li><a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/" title="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
+ <li><a href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
+ <li><a href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
+ <li><a href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
  <li><a href="http://qnimate.com/javascript-strict-mode-in-nutshell/">JavaScript "use strict" tutorial for beginners.</a></li>
- <li><a class="external" href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/" title="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
- <li><a class="external" href="http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/">ECMA-262-5 in detail. Chapter 2. Strict Mode.</a></li>
- <li><a class="external" href="http://kangax.github.com/es5-compat-table/strict-mode/">Strict mode compatibility table</a></li>
+ <li><a href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
+ <li><a href="http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/">ECMA-262-5 in detail. Chapter 2. Strict Mode.</a></li>
+ <li><a href="http://kangax.github.com/es5-compat-table/strict-mode/">Strict mode compatibility table</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode">Transitioning to strict mode</a></li>
 </ul>
