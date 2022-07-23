@@ -1,6 +1,6 @@
 ---
 title: GlobalEventHandlers.onloadend
-slug: Web/API/GlobalEventHandlers/onloadend
+slug: Web/API/XMLHttpRequest/loadend_event
 tags:
   - API
   - DOM
@@ -8,6 +8,7 @@ tags:
   - Propriétés
   - évènements
 translation_of: Web/API/GlobalEventHandlers/onloadend
+original_slug: Web/API/GlobalEventHandlers/onloadend
 ---
 {{ApiRef}}
 

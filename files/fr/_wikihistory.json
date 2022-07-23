@@ -15054,12 +15054,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/GlobalEventHandlers/onloadend": {
-    "modified": "2019-03-18T21:35:41.854Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onloadstart": {
     "modified": "2020-10-15T22:04:38.335Z",
     "contributors": [
@@ -20263,6 +20257,12 @@
     "modified": "2020-10-15T22:31:14.653Z",
     "contributors": [
       "fatmalimem19"
+    ]
+  },
+  "Web/API/XMLHttpRequest/loadend_event": {
+    "modified": "2019-03-18T21:35:41.854Z",
+    "contributors": [
+      "loella16"
     ]
   },
   "Web/API/XMLHttpRequest/open": {
@@ -32452,17 +32452,6 @@
       "goofy_bz"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:37:01.767Z",
-    "contributors": [
-      "SphinxKnight",
-      "zatamine",
-      "teoli",
-      "Delapouite",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-03-12T19:38:42.822Z",
     "contributors": [
@@ -40732,6 +40721,17 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:37:01.767Z",
+    "contributors": [
+      "SphinxKnight",
+      "zatamine",
+      "teoli",
+      "Delapouite",
+      "Mgjbot",
+      "BenoitL"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {

@@ -6158,15 +6158,6 @@
       "chiayuan"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:36:06.284Z",
-    "contributors": [
-      "jackblackevo",
-      "fscholz",
-      "irvinfly",
-      "sailplaneTW"
-    ]
-  },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-12-04T15:05:56.547Z",
     "contributors": [
@@ -8131,6 +8122,15 @@
       "jackblackevo",
       "teoli",
       "steely.wing"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:36:06.284Z",
+    "contributors": [
+      "jackblackevo",
+      "fscholz",
+      "irvinfly",
+      "sailplaneTW"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {

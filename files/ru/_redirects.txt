@@ -120,7 +120,7 @@
 /ru/docs/JavaScript/Guide_ru	/ru/docs/Web/JavaScript/Guide
 /ru/docs/JavaScript/Guide_ru/Inheritance_and_the_prototype_chain_ru	/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ru/docs/JavaScript/Guide_ru/Замыкания	/ru/docs/Web/JavaScript/Closures
-/ru/docs/JavaScript/Language_Resources	/ru/docs/Web/JavaScript/Language_Resources
+/ru/docs/JavaScript/Language_Resources	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ru/docs/JavaScript/Memory_Management	/ru/docs/Web/JavaScript/Memory_Management
 /ru/docs/JavaScript/Reference	/ru/docs/Web/JavaScript/Reference
 /ru/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/ru/docs/Web/JavaScript/Reference/Strict_mode
@@ -409,6 +409,7 @@
 /ru/docs/Web/API/GlobalEventHandlers/oninput	/ru/docs/Web/API/HTMLElement/input_event
 /ru/docs/Web/API/GlobalEventHandlers/onkeydown	/ru/docs/conflicting/Web/API/Element/keydown_event
 /ru/docs/Web/API/GlobalEventHandlers/onkeypress	/ru/docs/conflicting/Web/API/Element/keypress_event
+/ru/docs/Web/API/GlobalEventHandlers/onloadend	/ru/docs/Web/API/XMLHttpRequest/loadend_event
 /ru/docs/Web/API/GlobalEventHandlers/onmousedown	/ru/docs/conflicting/Web/API/Element/mousedown_event
 /ru/docs/Web/API/GlobalEventHandlers/onmouseup	/ru/docs/conflicting/Web/API/Element/mouseup_event
 /ru/docs/Web/API/GlobalEventHandlers/onscroll	/ru/docs/Web/API/Element/scroll_event
@@ -694,6 +695,7 @@
 /ru/docs/Web/JavaScript/Guide_ru/Working_with_Objects	/ru/docs/Web/JavaScript/Guide/Working_with_Objects
 /ru/docs/Web/JavaScript/Guide_ru/Замыкания	/ru/docs/Web/JavaScript/Closures
 /ru/docs/Web/JavaScript/JavaScript_шеллы	/ru/docs/Web/JavaScript/Shells
+/ru/docs/Web/JavaScript/Language_Resources	/ru/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
 /ru/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ru/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type

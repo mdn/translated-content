@@ -8912,15 +8912,6 @@
       "spiegelp"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:38:27.478Z",
-    "contributors": [
-      "schlagi123",
-      "hapeit",
-      "fscholz",
-      "Aurel"
-    ]
-  },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-03-12T19:38:43.251Z",
     "contributors": [
@@ -13340,6 +13331,15 @@
       "IngoB",
       "fscholz",
       "eminor"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:38:27.478Z",
+    "contributors": [
+      "schlagi123",
+      "hapeit",
+      "fscholz",
+      "Aurel"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
