@@ -1,7 +1,11 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
+translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
+original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
 browser-compat: javascript.builtins.Symbol.species
+l10n:
+  sourceCommit: e34fbf7f735b68fdcb630432ef68d9ac7672ef88
 ---
 {{JSRef}}
 
