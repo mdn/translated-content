@@ -41,104 +41,111 @@ translation_of: Learn/CSS/Building_blocks/Organizing
 
 ## CSS を整理するためのヒント
 
-<p>スタイルシートを整理して整頓するための一般的な提案を次に示します。</p>
+スタイルシートを整理して整頓するための一般的な提案を示します。
 
-<h3 id="Does_your_project_have_a_coding_style_guide" name="Does_your_project_have_a_coding_style_guide">プロジェクトのコーディング規約があるか？</h3>
+### プロジェクトのコーディング規約があるか？
 
-<p>既存のプロジェクトでチームと作業している場合、最初に確認することは、プロジェクトに CSS の既存のスタイルガイドがあるかどうかです。チームスタイルガイドは常に自分の個人的な好みに勝つ必要があります。多くの場合、正しい方法や間違った方法はありませんが、一貫性が重要です。</p>
+既存のプロジェクトでチームと作業している場合、最初に確認することは、プロジェクトに CSS の既存のコーディング規約があるかどうかです。チームコーディング規約は常に自分の個人的な好みより優先する必要があります。多くの場合、何かを行うのに何が正しくて何が間違っているということはありませんが、一貫性が重要です。
 
-<p>例えば、<a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS">MDN コードの例の CSS ガイドライン</a>を見てみましょう。</p>
+例えば、[MDN コードの例の CSS ガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/CSS)を見てみましょう。
 
-<h3 id="Keep_it_consistent" name="Keep_it_consistent">一貫性を保つ</h3>
+### 一貫性を保つ
 
-<p>プロジェクトのルールを設定したり、単独で作業している場合、最も重要なことは、一貫性を保つことです。一貫性は、クラスに同じ命名規則を使用する、色を説明する1つの方法を選択する、一貫したフォーマットを維持するなど、あらゆる方法で適用できます（例えば、タブまたはスペースのどちらを使用してコードをインデントしますか。スペースの場合、いくつのスペース？）</p>
+プロジェクトのルールを設定したり、単独で作業している場合、最も重要なことは、一貫性を保つことです。一貫性は、クラスに同じ命名規則を使用する、色を説明する1つの方法を選択する、一貫したフォーマットを維持するなど、あらゆる方法で適用できます（例えば、タブまたはスペースのどちらを使用してコードをインデントしますか。スペースの場合、いくつのスペース？）
 
-<p>常に従う一連のルールがあると、CSS を作成するときに必要な精神的なオーバーヘッドの量が減ります。</p>
+常に従う一連のルールがあると、CSS を作成するときに必要な精神的なオーバーヘッドの量が減ります。
 
-<h3 id="Formatting_readable_CSS" name="Formatting_readable_CSS">CSS を読みやすくする</h3>
+### CSS を読みやすくする
 
-<p>CSS がフォーマットされているのを確認するには、いくつかの方法があります。一部の開発者は、次のようにすべてのルールを1行に配置します。</p>
+CSS をフォーマットする方法には、いくつかの方法を見かけるでしょう。開発者によっては、次のようにすべてのルールを 1 行に配置しています。
 
-<pre class="brush: css notranslate">.box { background-color: #567895; }
-h2 { background-color: black; color: white; }</pre>
+```css
+.box { background-color: #567895; }
+h2 { background-color: black; color: white; }
+```
 
-<p>他の開発者はすべてを新しい行に分割することを好みます：</p>
+また、すべてを新しい行に分割したがる開発者もいます。
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   background-color: #567895;
 }
 
 h2 {
   background-color: black;
   color: white;
-}</pre>
+}
+```
 
-<p>CSSはどちらを使用してもかまいません。個人的には、各プロパティと値のペアを新しい行に置く方が読みやすくなっています。</p>
+CSS ではどちらを使用してもかまいません。個人的には、各プロパティと値の組を新しい行に置く方が読みやすいと思います。
 
-<h3 id="Comment_your_CSS" name="Comment_your_CSS">CSS にコメントを書いておく</h3>
+### CSS にコメントを書いておく
 
-<p>あなたの CSS にコメントを追加することは、将来の開発者があなたの CSS ファイルを使って作業する際の助けになるだけでなく、休暇の後にプロジェクトに戻ってきたときにも役立ちます。</p>
+CSS にコメントを追加することは、将来の開発者がその CSS ファイルを使って作業する際に役立つだけでなく、休暇の後にプロジェクトに戻ってきたときに自分でも役立ちます。
 
-<pre class="brush: css notranslate">/* これは CSS コメントです
-複数行に分割できます。 */</pre>
+```css
+/* これは CSS のコメントです。
+複数行に分割できます。 */
+```
 
-<p>ヒントとしては、スタイルシートの論理セクション間にコメントブロックを追加して、スキャンするときにさまざまなセクションをすばやく見つけられるようにしたり、CSS のその部分にジャンプするために検索するものを提供したりすることもできます。コードに表示されない文字列を使用する場合は、検索することでセクションからセクションにジャンプできます。以下では `||` を使用しています。</p>
+ヒントとしては、スタイルシートの論理的な部分にコメントブロックを追加して、ざっと見たときにさまざまな部分をすばやく見つけられるようにしたり、 CSS のその部分にジャンプするために検索するものを提供したりすることもできます。コードに表示されない文字列を使用すると、検索することで部分から部分へジャンプすることができます。以下の例では `||` を使用しています。
 
-<pre class="brush: css notranslate">/* || 一般的なスタイル */
+```css
+/* || 全般的なスタイル */
 
-...
+/* … */
 
-/* || タイポグラフィ*/
+/* || 書体 */
 
-...
+/* … */
 
 /* || ヘッダーとメインナビゲーション */
 
-...
+/* … */
+```
 
-</pre>
+CSS に書かれていることの多くは自明なことなので、いちいちコメントする必要はありません。コメントすべきなのは、理由があって特定の判断をした部分です。
 
-<p>あなたのCSSにある全てのことにコメントをつける必要はありません。コメントすべきなのは、理由があって特定の決定をしたものです。</p>
+古いブラウザーとの互換性のために、特定の方法で CSS プロパティを使用する場合などがあります。
 
-<p>古いブラウザの非互換性を回避するために、CSS プロパティを特定の方法で使用した可能性があります。例えば：</p>
-
-<pre class="brush: css notranslate">.box {
-  background-color: red; /* グラデーションをサポートしない古いブラウザのフォールバック */
+```css
+.box {
+  background-color: red; /* グラデーションに対応していない古いブラウザーでの代替手段 */
   background-image: linear-gradient(to right, #ff0000, #aa0000);
 }
-</pre>
+```
 
-<p>おそらく、何かを達成するためにチュートリアルに従ったのではないかと思いますが、CSSが少し自明ではなくなっているのではないかと思います。その場合は、コメントにチュートリアルの URL を追加することができます。1年後かそこらでこのプロジェクトに戻ってきたときに自分自身に感謝するだろうし、漠然とそのことについての素晴らしいチュートリアルがあったことを思い出すことができますが、それはどこにあるのでしょうか？</p>
+何かを達成するためにチュートリアルに従ったのでしょうが、その CSS があまり自明でなく、認識しやすいものではない場合もあると思います。その場合は、チュートリアルの URL をコメントに追加しましょう。 1 年後くらいにこのプロジェクトに戻ってきたときに、「そういえば、あのことについての素晴らしいチュートリアルがあったな」とぼんやりと思い出すことができるのですが、それがどこのものかは思い出せないものです。
 
-<h3 id="Create_logical_sections_in_your_stylesheet" name="Create_logical_sections_in_your_stylesheet">スタイルシートを合理的に分割する</h3>
+### スタイルシートを合理的に分割する
 
-<p>スタイルシートで最初にすべての一般的なスタイルを設定することをお勧めします。これは、その要素で特別なことをしない限り、通常適用されるすべてのスタイルを意味します。通常、次のルールを設定します。</p>
+スタイルシートで最初で、すべての一般的なスタイルを設定することをお勧めします。これは、その要素で特別なことをしない限り、通常適用されるすべてのスタイルを意味します。通常、次のルールを設定します。
 
-<ul>
- <li>`body`</li>
- <li>`p`</li>
- <li>`h1`, `h2`, `h3`, `h4`, `h5`</li>
- <li>`ul` と `ol`</li>
- <li>`table` プロパティ</li>
- <li>リンク</li>
-</ul>
+- `body`
+- `p`
+- `h1`, `h2`, `h3`, `h4`, `h5`
+- `ul` と `ol`
+- `table` 関係のプロパティ
+- リンク
 
-<p>スタイルシートのこのセクションでは、サイトのタイプにデフォルトのスタイルを提供したり、データテーブルとリストのデフォルトスタイルを設定したりします。</p>
+スタイルシートのこの部分では、サイト上の型に対する既定のスタイルを提供したり、データ表やリストに対する既定のスタイルを設定したりしています。
 
-<pre class="brush: css notranslate">/* || 一般的なスタイル */
+```css
+/* || 一般的なスタイル */
 
-body { ... }
+body { /* … */ }
 
-h1, h2, h3, h4 { ... }
+h1, h2, h3, h4 { /* … */ }
 
-ul { ... }
+ul { /* … */ }
 
-blockquote { ... }
-</pre>
+blockquote { /* … */ }
+```
 
-<p>このセクションの後で、いくつかのユーティリティクラスを定義できます。例えば、フレックスアイテムとして、または他の方法で表示するリストのデフォルトのリストスタイルを削除するクラス。多くの異なる要素に適用したいことがわかっていることがいくつかある場合、それらはこのセクションにあります。</p>
+この部分の後で、いくつかのユーティリティクラスを定義することができます。例えば、フレックスアイテムとして表示するリストや他の方法で表示するリストの既定リストスタイルを削除するクラスなどです。多くの異なる要素に適用することが分かっているいくつかのスタイル指定がある場合、この部分に記述することができます。
 
-<pre class="brush: css notranslate">/* || ユーティリティ */
+```css
+/* || ユーティリティ */
 
 .nobullets {
   list-style: none;
@@ -146,71 +153,77 @@ blockquote { ... }
   padding: 0;
 }
 
-...
+/* … */
+```
 
-</pre>
+次に、サイト全体で使用されるものをすべて追加します。例えば、基本的なページレイアウト、ヘッダー、ナビゲーションのスタイリングなどです。
 
-<p>次に、サイト全体で使用されるすべてのものを追加できます。それは、基本的なページレイアウト、ヘッダー、ナビゲーションスタイルなどのようなものかもしれません。</p>
+```css
+/* || サイト全体 */
 
-<pre class="brush: css notranslate">/*  || サイトワイド */
+.main-nav { /* … */ }
 
-.main-nav { ... }
+.logo { /* … */ }
+```
 
-.logo { ... }
-</pre>
+最後に、特定のものを使用するための CSS を、それらが使用されるコンテキスト、ページ、あるいはコンポーネントごとに分けて記載します。
 
-<p>最後に、コンテキスト、ページ、またはそれらが使用されているコンポーネントで分類された特定のものの CSS を含めます。</p>
+```css
+/* || 店のページ */
 
-<pre class="brush: css notranslate">/* || 店のページ */
+.product-listing { /* … */ }
 
-.product-listing { ... }
+.product-box { /* … */ }
+```
 
-.product-box { ... }
-</pre>
+このように物事を順番に並べることで、少なくともスタイルシートのどの部分に変更したいものがあるのかを知ることができます。
 
-<p>このように物事を順番に並べることで、少なくともスタイルシートのどの部分に変更したいものがあるのかを知ることができます。</p>
+### 過剰なセレクターを避ける
 
-<h3 id="Avoid_overly-specific_selectors" name="Avoid_overly-specific_selectors">過剰なセレクターを避ける</h3>
+とても特殊なセレクターを作成した場合、別の要素に同じルールを適用するために CSS の塊を複製する必要があることに気づくことがよくあります。例えば、以下のようなセレクターがあったとします。これは、 `<p>` のうちクラスが `box` であるものを、 `<article>` のうちクラスが `main` であるものの中にあるルールに適用するものです。
 
-<p>非常に特殊なセレクタを作成した場合、別の要素に同じルールを適用するために CSS の塊を複製する必要があることに気づくことがよくあります。例えば、以下のセレクタのようなものがあるかもしれませんが、これは `main` のクラスを持つ `&lt;article&gt;` の中の `box` のクラスを持つ `&lt;p&gt;` にルールを適用します。</p>
-
-<pre class="brush: css notranslate">article.main p.box {
+```css
+article.main p.box {
   border: 1px solid #ccc;
-}</pre>
+}
+```
 
-<p>同じルールを `main` 以外のものや `&lt;p&gt;` 以外のものにも適用したい場合は、これらのルールに別のセレクタを追加するか、まったく新しいルールセットを作成しなければなりません。その代わりに、`box` というクラスを作成して、どこでも適用することができます。</p>
+同じルールを `main` 以外の要素、あるいは `<p>` 以外の要素に適用したい場合は、これらのルールに別のセレクターを追加するか、まったく新しいルールセットを作成しなければなりません。その代わりに、 `.box` セレクターを使用すると、 `box` クラスを持つすべての要素にルールを適用することができます。
 
-<pre class="brush: css notranslate">.box {
+```css
+.box {
   border: 1px solid #ccc;
-}</pre>
+}
+```
 
-<p>もっと具体的にすることが理にかなっている場合もありますが、これは通常の習慣ではなく、一般的に例外です。</p>
+より具体的にすることが理にかなっている場合もありますが、これは通常の習慣ではなく、一般的に例外です。
 
-<h3 id="Break_large_stylesheets_into_multiple_smaller_ones" name="Break_large_stylesheets_into_multiple_smaller_ones">スタイルシートが大きくなってきたら分割する</h3>
+### スタイルシートが大きくなってきたら分割する
 
-<p>特に、サイトの異なる部分に対して非常に異なるスタイルを持っている場合には、すべてのグローバルルールを含むスタイルシートと、それらのセクションに必要な特定のルールを含む小さなスタイルシートを持ちたいと思うかもしれません。一つのページから複数のスタイルシートにリンクすることができ、カスケードの通常のルールが適用され、後からリンクされたスタイルシートのルールは前からリンクされたスタイルシートのルールの後から適用されます。</p>
+サイト内のある部分のスタイルがとても異なったものである場合、すべてのグローバルなルールを含む一つのスタイルシートと、その部分に必要なとても特殊なルールを含むいくつかの小さなスタイルシートに分割すると良いかもしれません。一つのページから複数のスタイルシートにリンクすることができますし、先にリンクされたスタイルシートのルールの後に、後にリンクされたスタイルシートのルールが来るという、通常のカスケードルールが適用されます。
 
-<p>例えば、サイトの一部としてオンラインストアがあり、ストアに必要な商品リストやフォームのスタイリングにのみ多くの CSS が使用されているとします。それらを別のスタイルシートにして、ストアページでのみリンクさせるのは理にかなっていると思います。</p>
+例えば、サイトの一部にオンラインストアがあり、そのストアに必要な商品リストや フォームにのみ多数の CSS が使用されることがあります。そのようなものは別のスタイルシートで持ち、ストアのページからのみリンクさせるのが理にかなっています。
 
-<p><span>これにより、CSS の整理が容易になります。また、複数のユーザーが CSS で作業している場合、2人が同時に同じスタイルシートで作業する必要がなくなり、ソース管理で競合が発生する可能性も少なくなります。 </span></p>
+これにより、 CSS を整理しやすくなります。また、複数の人が CSS を扱う場合、 2 人が同時に同じスタイルシートで作業する必要があり、ソース管理上の競合が発生するという事態を少なくすることができます。
 
-<h2 id="Other_tools_that_can_help" name="Other_tools_that_can_help">その他の役立つツール</h2>
+## その他の役立つツール
 
-<p>CSS 自体には内蔵された整理の方法があまりないので、CSS の書き方に一貫性やルールを作る作業をする必要があります。また、ウェブ・コミュニティでは、大規模な CSS プロジェクトを管理するのに役立つ様々なツールやアプローチが開発されています。これらはあなたが調べてみると役に立つかもしれませんし、他の人と一緒に作業をしているときに出くわす可能性が高いので、これらのいくつかについての簡単なガイドを載せておきます。</p>
+CSS は、それ自身に組み込まれた組織化の方法が充実していないため、 CSS の一貫性のレベルは、書き手に大きく依存することになります。ウェブコミュニティは、大規模な CSS プロジェクトを管理するのに役立つさまざまなツールやアプローチを開発してきました。他の人と一緒に作業するときには、このような補助ツールに出会う可能性が高く、また一般的に役立つことが多いので、その一部を簡単にご紹介しています。
 
-<h3 id="CSS_methodologies" name="CSS_methodologies">CSS の方法論</h3>
+### CSS の方法論
 
-<p>CSS を作成するための独自のルールを考え出す必要はなく、コミュニティーによってすでに設計され、多くのプロジェクトでテストされているアプローチの1つを採用することでメリットが得られる場合があります。これらの方法論は基本的に CSS のコーディングガイドであり、CSS の作成と管理に非常に構造化されたアプローチを採用しています。通常、これらの方法論では、すべてのセレクタを作成してそのプロジェクトのカスタムルールセットに最適化した場合よりも、CSS の使用が冗長になる傾向があります。</p>
+CSS を記述するための独自のルールを考え出す代わりに、コミュニティによってすでに設計され、多くのプロジェクトでテストされているアプローチのいずれかを採用するほうが得策かもしれません。これらの方法論は、基本的に CSS コーディングガイドであり、 CSS の記述や構成についてとても体系的なアプローチを取っています。一般に、これらの方法論は、プロジェクト独自のルールに従ってすべてのセレクターを記述し、最適化した場合よりも、 CSS をより冗長に表現する傾向があります。
 
-<p>しかし、1つを採用することで多くの構造を得ることができますし、これらのシステムの多くは非常に広く使われているので、他の開発者はあなたが使用しているアプローチを理解し、自分の個人的な方法論を一から作り上げるよりも、同じように CSS を書くことができる可能性が高くなります。</p>
+しかし、このようなシステムを採用することで、多くの構造を手に入れることができます。これらのシステムの多くは広く使用されているため、他の開発者はゼロからあなた自身の個人的な手法を見つけ出すのではなく、使用しているアプローチを理解し、同じ方法で自分自身の CSS を記述できるようになる可能性が高くなります。
 
-<h4 id="OOCSS" name="OOCSS">OOCSS</h4>
+#### OOCSS
 
-<p>あなたが遭遇するであろうアプローチのほとんどは、<a href="https://github.com/stubbornella/oocss/wiki">Nicole Sullivan の業績</a>によって人気を博した Object Oriented CSS (OOCSS) のコンセプトに起因しています。OOCSS の基本的な考え方は、CSS を再利用可能なオブジェクトに分割し、サイト上の必要な場所で使用できるようにすることです。OOCSS の標準的な例は、<a href="/ja/docs/Web/CSS/Layout_cookbook/Media_objects">The Media Object</a> として記述されているパターンです。これは、片面に固定サイズの画像や動画などの要素を配置し、もう片面には柔軟なコンテンツを配置したパターンです。コメントやリスティングなどのウェブサイトでよく見かけるパターンです。</p>
+あなたが遭遇するであろうアプローチのほとんどは、 [Nicole Sullivan の業績](https://github.com/stubbornella/oocss/wiki)によって人気を博した Object Oriented CSS (OOCSS) の概念に起因しています。 OOCSS の基本的な考え方は、 CSS を再利用可能なオブジェクトに分割し、サイト上の必要な場所で使用できるようにすることです。 OOCSS の例として代表的なものに、[メディアオブジェクト](/ja/docs/Web/CSS/Layout_cookbook/Media_objects)として記述されているパターンがあります。これは、片面に固定サイズの画像や動画などの要素を配置し、もう片面には柔軟なコンテンツを配置したパターンです。コメントやリスティングなどのウェブサイトでよく見かけるパターンです。
 
-<p>OOCSS の手法を採用していない場合は、このパターンが使用されるさまざまな場所に対してカスタムCSSを作成することができます。たとえば、コンポーネント・パーツに対して一連のルールを持つ `comment` というクラスを作成し、次に、いくつかの小さな違いを除いて、`comment` クラスとほとんど同じルールを持つ `list-item` というクラスを作成します。これら2つのコンポーネントの違いは、list-item には下罫線があり、comment 内のイメージには罫線がありますが、list-item のイメージにはないことです。</p>
+もし、 OOCSS のアプローチを取らないのであれば、このパターンが使用される様々な場所に対してカスタム CSS を作成することになります。例えば、 2 つのクラスを作成し、 1 つは `comment` という名前で構成要素に対して多くのルールを設定し、もう 1 つは `list-item` という名前でいくつかの小さな違いを除いて `comment` クラスとほとんど同じルールを設定します。この 2 つのコンポーネントの違いは、 list-item には下の境界線があることと、 comment 内の画像に境界線があるのに対し、 list-item の画像にはないことです。
 
-<pre class="brush: css notranslate">.comment {
+```css
+.comment {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
@@ -231,11 +244,13 @@ blockquote { ... }
 
 .list-item .content {
   font-size: .8rem;
-}</pre>
+}
+```
 
-<p>OOCSS では、`media` と呼ばれる1つのパターンを作成して、両方のパターンに共通の CSSをすべて持つようにします。一般的には media オブジェクトの形状を表す基底クラスです。そして、それらの小さな違いに対応するために追加のクラスを追加して、特定の方法でスタイリングを拡張します。</p>
+OOCSS では、`media` と呼ばれる 1 つのパターンを作成して、両方のパターンに共通の CSSをすべて持つようにします。一般的には media オブジェクトの形状を表す基底クラスです。そして、それらの小さな違いに対応するために追加のクラスを追加して、特定の方法でスタイリングを拡張します。
 
-<pre class="brush: css notranslate">.media {
+```css
+.media {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
@@ -248,135 +263,145 @@ blockquote { ... }
   border: 1px solid grey;
 }
 
- .list-item {
+.list-item {
   border-bottom: 1px solid grey;
-} </pre>
+}
+```
 
-<p>HTMLでは、コメントに `media` と `comment` クラスの両方を適用する必要があります。</p>
+HTMLでは、コメントに `media` と `comment` クラスの両方を適用する必要があります。
 
-<pre class="brush: html notranslate">&lt;div class="media comment"&gt;
-  &lt;img /&gt;
-  &lt;div class="content"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="media comment">
+  <img />
+  <div class="content"></div>
+</div>
+```
 
-<p>リストアイテムは次のように `media` と `list-item` が適用されます。</p>
+リストアイテムは次のように `media` と `list-item` が適用されます。
 
-<pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li class="media list-item"&gt;
-    &lt;img /&gt;
-   &lt;div class="content"&gt;&lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li class="media list-item">
+    <img />
+    <div class="content"></div>
+  </li>
+</ul>
+```
 
-<p>Nicole Sullivan がこのアプローチを説明し、促進するために行った作業は、今日ではOOCSS のアプローチに厳密に従っていない人でも、一般的にはこの方法で CSS を再利用することを意味します。これは、一般的に物事に取り組むための良い方法としての理解につながりました。</p>
+Nicole Sullivan がこのアプローチを記述し、普及させたことで、今日、厳密に OOCSS のアプローチに従っていない人でも、一般的にこの方法で CSS を再利用していることになります - 一般的に物事をアプローチする良い方法として私たちの理解に入ってきています。
 
-<h4 id="BEM" name="BEM">BEM</h4>
+#### BEM
 
-<p>BEM は、Block Element Modifier の略です。BEM では、ブロックはボタン、メニュー、ロゴなどのスタンドアロンエンティティです。要素とは、リストアイテムやタイトルのようなものであり、それが入っているブロックに関連付けられています。修飾子は、スタイルや動作を変更するブロックまたは要素のフラグです。CSS クラスではダッシュとアンダースコアが多用されているため、BEM を使用するコードを認識できます。例えば、<a href="http://getbem.com/naming/">BEMの命名規則</a>に関するページから、この HTML に適用されるクラスを見てみましょう。</p>
+BEM とは、 Block Element Modifier の略です。 BEM では、ブロックは、ボタン、メニュー、ロゴなどの独立した実体として扱われます。要素は、リスト項目やタイトルのようなもので、それが含まれているブロックと結びついています。修飾子は、ブロックや要素に付けられたフラグで、スタイルや動作を変更するものです。 BEM を使用したコードは、 CSS のクラスにダッシュとアンダースコアが多用されているため、見分けがつくと思います。例えば、[BEMの命名規則](http://getbem.com/naming/)についてのページから、この HTML に適用されたクラスを見てみましょう。
 
-<pre class="brush: html notranslate">&lt;form class="form form--theme-xmas form--simple"&gt;
-  &lt;input class="form__input" type="text" /&gt;
-  &lt;input
+```html
+<form class="form form--theme-xmas form--simple">
+  <input class="form__input" type="text" />
+  <input
     class="form__submit form__submit--disabled"
-    type="submit" /&gt;
-&lt;/form&gt;</pre>
+    type="submit" />
+</form>
+```
 
-<p>追加のクラスは、OOCSS の例で使用されているクラスに似ていますが、BEM の厳密な命名規則を使用しています。</p>
+追加のクラスは、 OOCSS の例で使用されているクラスに似ていますが、 BEM の厳密な命名規則を使用しています。
 
-<p>BEM は大規模な Web プロジェクトで広く使用されており、多くの人がこの方法で CSS を作成しています。チュートリアルでさえ、CSS がこのように構造化されている理由について触れずに、BEM 構文を使用する例に出くわす可能性があります。</p>
+BEM は大規模なウェブプロジェクトで広く使用されており、多くの人がこの方法で CSS を作成しています。チュートリアルでさえ、CSS がこのように構造化されている理由について触れずに、BEM 構文を使用する例に出くわす可能性があります。
 
-<p>システムの詳細については、CSS トリックの <a href="https://css-tricks.com/bem-101/">BEM 101</a> を参照してください。</p>
+システムの詳細については、CSS トリックの [BEM 101](https://css-tricks.com/bem-101/) を参照してください。
 
-<h4 id="Other_common_systems" name="Other_common_systems">その他</h4>
+#### その他の一般的なシステム
 
-<p>これらのシステムは多数使用されています。その他の一般的なアプローチには、Jonathan Snook によって作成された <a href="http://smacss.com/">CSSのスケーラブルでモジュール式のアーキテクチャ（SMACSS）</a>、Harry Roberts の <a href="https://itcss.io/">ITCSS</a>、および Yahoo! によって最初に作成された<a href="https://acss.io/"> Atomic CSS（ACSS）</a>があります。これらのアプローチのいずれかを使用するプロジェクトに遭遇した場合の利点は、同じスタイルでコーディングする方法を理解するのに役立つ多くの記事とガイドを検索して見つけることができることです。</p>
+これらのシステムは多数使用されています。その他の一般的なアプローチには、 Jonathan Snook によって作成された [CSS のスケーラブルでモジュール式のアーキテクチャ (SMACSS)](http://smacss.com/)、 Harry Roberts の [ITCSS](https://itcss.io/)、および Yahoo! によって最初に作成された [Atomic CSS (ACSS)](https://acss.io/) があります。これらのアプローチのいずれかを使用するプロジェクトに遭遇した場合の利点は、同じスタイルでコーディングする方法を理解するのに役立つ多くの記事とガイドを検索して見つけることができることです。
 
-<p>このようなシステムを使用することの欠点は、特に小規模なプロジェクトの場合、過度に複雑に見える可能性があることです。</p>
+このようなシステムを使用することの欠点は、特に小規模なプロジェクトの場合、過度に複雑に見える可能性があることです。
 
-<h3 id="Build_systems_for_CSS" name="Build_systems_for_CSS">CSS のビルドシステム</h3>
+### CSS のビルドシステム
 
-<p>CSS を編成するもう1つの方法は、フロントエンド開発者が利用できるツールのいくつかを利用することです。これにより、CSS を書くために、よりプログラム的なアプローチを取ることができます。<em>プリプロセッサ</em>と<em>ポスト</em><em>プロセッサ</em>と呼ばれるツールは多数あります。プリプロセッサは未加工ファイルを実行してそれらをスタイルシートに変換し、ポストプロセッサは完成したスタイルシートに何かを実行します。おそらく、ロードを高速化するために最適化します。</p>
+CSS を整理するもう 1 つの方法は、フロントエンド開発者が利用できるツールをいくつか利用することです。これにより、 CSS を書くために、よりプログラム的なアプローチを取ることができます。*プリプロセッサー*や*ポストプロセッサー*と呼ばれるツールが多数あります。プリプロセッサーは未加工のファイルに対して実行してそれらをスタイルシートに変換し、ポストプロセッサーは完成したスタイルシートに何かを実行します。おそらく、読み込みを高速化するために最適化します。
 
-<p>これらのツールを使用するには、開発環境で前処理と後処理を行うスクリプトを実行できる必要があります。多くのコードエディタでこれを行うことができます。または、コマンドラインツールをインストールして支援することもできます。</p>
+これらのツールを使用するには、開発環境で前処理と後処理を行うスクリプトを実行できる必要があります。多くのコードエディターで実行することができます。または、コマンドラインツールをインストールして支援することもできます。
 
-<p>最も人気のあるプリプロセッサは <a href="https://sass-lang.com/">Sass</a> です。これは Sass のチュートリアルではありませんので、Sass でできることを簡単に説明します。これは<span> Sass の他の機能を使っていなくても、整理する上で非常に便利です。 </span> Sass についてもっと知りたいのであれば、<a href="https://sass-lang.com/guide">Sass の基礎知識</a>の記事から始めて、他のドキュメントに進んでください。</p>
+最も人気のあるプリプロセッサーは [Sass](https://sass-lang.com/) です。これは Sass のチュートリアルではありませんので、　Sass でできることを簡単に説明します。これは Sass の他の機能を使っていなくても、整理する上で非常に便利です。 Sass についてもっと知りたいのであれば、[Sass の基礎知識](https://sass-lang.com/guide)の記事から始めて、他のドキュメントに進んでください。
 
-<h4 id="Defining_variables" name="Defining_variables">変数の定義</h4>
+#### 変数の定義
 
-<p>CSS にネイティブ<a href="/ja/docs/Web/CSS/Using_CSS_custom_properties">カスタムプロパティが追加された</a>ため、この機能の重要性は低下していますが、Sass を使用する理由の1つは、プロジェクトで使用されるすべての色とフォントを設定として定義し、その変数をプロジェクトで使用できるようにすることです。これは、間違った青の色合いを使用したことがわかった場合、1つの場所で変更するだけでよいことを意味します。</p>
+CSS にネイティブ[カスタムプロパティが追加された](/ja/docs/Web/CSS/Using_CSS_custom_properties)ため、この機能の重要性は低下していますが、 Sass を使用する理由の 1 つは、プロジェクトで使用されるすべての色とフォントを設定として定義し、その変数をプロジェクトで使用できるようにすることです。これは、間違った青の色合いを使用したことがわかった場合、 1 つの場所で変更するだけでよいということです。
 
-<p>`$base-color` 以下の最初の行のように呼び出される変数を作成した場合、その色が必要な場所であればどこでも、スタイルシートを介してその変数を使用できます。</p>
+`$base-color` 以下の最初の行のように呼び出される変数を作成した場合、その色が必要な場所であればどこでも、スタイルシートを介してその変数を使用できます。
 
-<pre class="brush: css notranslate"><code>$base-color: #c6538c;
+```css
+$base-color: #c6538c;
 
 .alert {
   border: 1px solid $base-color;
-}</code></pre>
+}
+```
 
-<p>CSS にコンパイルすると、最終的なスタイルシートには次の CSS が含まれます。</p>
+CSS にコンパイルすると、最終的なスタイルシートには次の CSS が含まれます。
 
-<pre class="brush: css notranslate"><code>.alert {
+```css
+.alert {
   border: 1px solid #c6538c;
-}</code></pre>
+}
+```
 
-<h4 id="Compiling_component_stylesheets" name="Compiling_component_stylesheets">コンポーネントスタイルシートのコンパイル</h4>
+#### コンポーネントスタイルシートのコンパイル
 
-<p>CSS を整理する1つの方法は、スタイルシートを小さなスタイルシートに分解することであると上記で述べました。Sass を使用すると、これを別のレベルに引き上げ、非常に小さなスタイルシートをたくさん持つことができます。コンポーネントごとに個別のスタイルシートを用意することもできます。Sass のインクルード機能を使用することで、これらすべてを1つまたは少数のスタイルシートにまとめて、実際に Web サイトにリンクできます。</p>
+CSS を整理する 1 つの方法は、スタイルシートを小さなスタイルシートに分解することであると上記で述べました。Sass を使用すると、これを別のレベルに引き上げ、非常に小さなスタイルシートをたくさん持つことができます。コンポーネントごとに個別のスタイルシートを用意することもできます。Sass のインクルード機能を使用することで、これらすべてを 1 つまたは少数のスタイルシートにまとめて、実際にウェブサイトにリンクすることができます。
 
-<p>例えば、<a href="https://sass-lang.com/documentation/at-rules/use#partials">partial</a> を使って、ディレクトリ内にいくつかのスタイルファイル、例えば `foundation/_code.scss`、`foundation/_lists.scss`、`foundation/_footer.scss`、`foundation/_links.scss` などを作成し、Sass の `@use` ロールを使って他のスタイルシートにロードすることができます。</p>
+例えば、[パーシャル](https://sass-lang.com/documentation/at-rules/use#partials)を使って、ディレクトリー内にいくつかのスタイルファイル、例えば `foundation/_code.scss`、`foundation/_lists.scss`、`foundation/_footer.scss`、`foundation/_links.scss` などを作成し、Sass の `@use` ロールを使って他のスタイルシートに読み込むことができます。
 
-<pre class="brush: css notranslate">// foundation/_index.sass
+```css
+// foundation/_index.sass
 @use 'code'
 @use 'lists'
 @use 'footer'
-@use 'links'</pre>
+@use 'links'
+```
 
-<p>上記のように、パーシャルがすべてインデックスファイルにロードされている場合、ディレクトリ全体を一度に別のスタイルシートにロードすることができます。</p>
+上記のように、パーシャルがすべてインデックスファイルに読み込まれている場合、ディレクトリー全体を一度に別のスタイルシートに読み込むことができます。
 
-<pre class="brush: css notranslate">// style.sass
-@use 'foundation'</pre>
+```css
+// style.sass
+@use 'foundation'
+```
 
+> **Note:** Sass を試す簡単な方法は、[CodePen](https://codepen.io) を使用することです。これを有効にすると、 CodePen が Sass パーサーを実行してくれるので、通常の CSS を適用したウェブページを見ることができます。CSS チュートリアルでは、CodePen のデモでプレーンな CSS ではなく Sass を使用しているのを見つけることがありますので、少しでも知っておくと便利です。
 
+#### ポストプロセッサー
 
-<div class="blockIndicator note">
-<p><strong>注</strong>：Sass を試す簡単な方法は、<a href="https://codepen.io">CodePen</a> を使用すること<a href="https://codepen.io">です</a>。これを有効にすると、CodePen が Sass パーサを実行してくれるので、通常の CSS を適用したウェブページを見ることができます。CSS チュートリアルでは、CodePen のデモでプレーンな CSS ではなく Sass を使用しているのを見つけることがありますので、少しでも知っておくと便利です。</p>
-</div>
+もし、コメントや空白を大量に追加することでスタイルシートのサイズが大きくなることを気にしているのであれば、本番バージョンでは不要なものを取り除くことで CSS を最適化することが後処理のステップになります。これを実現するポストプロセッサーの例としては、[cssnano](https://cssnano.co/) があります。
 
-<h4 id="Post-processing_for_optimization" name="Post-processing_for_optimization">ポストプロセッサー</h4>
+## まとめ
 
-<p>もし、コメントや空白を大量に追加することでスタイルシートのサイズが大きくなることを気にしているのであれば、本番バージョンでは不要なものを取り除くことで CSS を最適化することが後処理のステップになります。これを実現するポストプロセッサの例としては、<a href="https://cssnano.co/">cssnano</a> があります。</p>
+これは CSS 学習ガイドの最後の部分で、ここから CSS の探求を続けるための様々な方法があることがお分かりいただけると思います。
 
-<h2 id="Wrapping_up" name="Wrapping_up">まとめ</h2>
+CSS のレイアウトの詳細については、「[CSS レイアウトの学習](/ja/docs/Learn/CSS/CSS_layout)」部分を参照してください。
 
-<p>これは CSS 学習ガイドの最後の部分で、ここから CSS の探求を続けるための様々な方法があることがお分かりいただけると思います。</p>
+また、これで [MDN の CSS の資料](/ja/docs/Web/CSS)の残りの部分を探索するためのスキルを身につけることができます。プロパティや値を調べたり、[CSS 料理帳](/ja/docs/Web/CSS/Layout_cookbook)で使用するパターンを調べたり、[CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout)などの特定のガイドを読んだりすることができます。
 
-<p>CSS のレイアウトの詳細については、「<a href="/ja/docs/Learn/CSS/CSS_layout">CSSレイアウトの学習</a>」セクションを参照してください。</p>
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
-<p>また、これで <a href="/ja/docs/Web/CSS">MDN の CSS の資料</a>の残りの部分を探索するためのスキルを身につけることができます。プロパティや値を調べたり、<a href="/ja/docs/Web/CSS/Layout_cookbook">CSS クックブック</a>で使用するパターンを調べたり、<a href="/ja/docs/Web/CSS/CSS_Grid_Layout">Guide to CSS Grid Layout</a> などの特定のガイドを読んだりすることができます。</p>
+## このモジュール
 
-<p>{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}</p>
+- [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+  - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+  - [属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+  - [擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+  - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-<ol>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケードと継承</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors">CSS セレクター</a>
-  <ul>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">要素・クラス・ID によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">属性によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">擬似クラスおよび疑似要素によるセレクター</a></li>
-   <li><a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators">結合子</a></li>
-  </ul>
- </li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/The_box_model">ボックスモデル</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">背景と枠線</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">テキスト方向の操作</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Overflowing_content">要素のはみ出し（オーバーフロー）</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Values_and_units">CSS の値と単位</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">CSS によるサイズ設定</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements">画像・メディア・フォーム要素</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Styling_tables">表のスタイリング</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS">CSS のデバッグ</a></li>
- <li><a href="/ja/docs/Learn/CSS/Building_blocks/Organizing">CSS の整理</a></li>
-</ol>
+- [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+- [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [異なる書字方向の扱い](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+- [コンテンツのはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+- [表のスタイル設定](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)
+- [基本的な CSS の理解](/ja/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+- [おしゃれなレターヘッド付きの便箋の作成](/ja/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+- [かっこいいボックス](/ja/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
