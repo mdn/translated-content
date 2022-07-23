@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <h3 id="函数声明">函数声明</h3>
 
-<p>一个<strong>函数定义</strong>（也称为<strong>函数声明</strong>，或<strong>函数语句</strong>）由一系列的<a href="/zh-CN/docs/JavaScript/Reference/Statements/function" title="function"><code>function</code></a>关键字组成，依次为：</p>
+<p>一个<strong>函数定义</strong>（也称为<strong>函数声明</strong>，或<strong>函数语句</strong>）由一系列的<a href="/zh-CN/docs/JavaScript/Reference/Statements/function"><code>function</code></a>关键字组成，依次为：</p>
 
 <ul>
  <li>函数的名称。</li>
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Guide/Functions
 }
 </pre>
 
-<p>函数<code>square</code>使用了一个参数，叫作<code>number</code>。这个函数只有一个语句，它说明该函数将函数的参数（即<code>number</code>）自乘后返回。函数的<a href="/en-US/docs/JavaScript/Reference/Statements/return" title="return"><code>return</code></a>语句确定了函数的返回值：</p>
+<p>函数<code>square</code>使用了一个参数，叫作<code>number</code>。这个函数只有一个语句，它说明该函数将函数的参数（即<code>number</code>）自乘后返回。函数的<a href="/en-US/docs/JavaScript/Reference/Statements/return"><code>return</code></a>语句确定了函数的返回值：</p>
 
 <pre class="brush: js">return number * number;
 </pre>
@@ -112,7 +112,7 @@ if (num == 0){
 
 <p>除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数 ，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。</p>
 
-<p>当一个函数是一个对象的属性时，称之为<strong>方法</strong>。了解更多关于对象和方法的知识 <a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects" title="en-US/docs/JavaScript/Guide/Working with Objects">使用对象</a>。</p>
+<p>当一个函数是一个对象的属性时，称之为<strong>方法</strong>。了解更多关于对象和方法的知识 <a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects">使用对象</a>。</p>
 
 <h2 id="调用函数">调用函数</h2>
 
@@ -142,7 +142,7 @@ const square = function (n) {
   return n * n;
 }</pre>
 
-<p>函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 <code>show_props</code>（其定义参见 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties" title="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">用对象编程</a>）就是一个将对象作为参数的例子。</p>
+<p>函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 <code>show_props</code>（其定义参见 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">用对象编程</a>）就是一个将对象作为参数的例子。</p>
 
 <p>函数可以被递归，就是说函数可以调用其本身。例如，下面这个函数就是用递归计算阶乘：</p>
 

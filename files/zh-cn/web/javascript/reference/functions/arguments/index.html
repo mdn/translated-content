@@ -40,7 +40,7 @@ arguments[2]
 
 <pre class="brush: js">arguments[1] = 'new value';</pre>
 
-<p><code>arguments</code>对象不是一个 {{jsxref("Array")}} 。它类似于<code>Array</code>，但除了 length 属性和索引元素之外没有任何<code>Array</code>属性。例如，它没有 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" title="JavaScript/Reference/Global_Objects/Array/pop">pop</a> 方法。但是它可以被转换为一个真正的<code>Array</code>：</p>
+<p><code>arguments</code>对象不是一个 {{jsxref("Array")}} 。它类似于<code>Array</code>，但除了 length 属性和索引元素之外没有任何<code>Array</code>属性。例如，它没有 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop</a> 方法。但是它可以被转换为一个真正的<code>Array</code>：</p>
 
 <pre class="brush: js">var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
@@ -91,9 +91,9 @@ var args = [...arguments];</pre>
 <h2 id="Properties">属性</h2>
 
 <dl>
- <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee" title="JavaScript/Reference/Functions_and_function_scope/arguments/callee">arguments.callee</a></code></dt>
+ <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee">arguments.callee</a></code></dt>
  <dd>指向参数所属的当前执行的函数。</dd>
- <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length" title="JavaScript/Reference/Functions_and_function_scope/arguments/length">arguments.length</a></code></dt>
+ <dt><code><a href="/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/length">arguments.length</a></code></dt>
  <dd>传递给函数的参数数量。</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator">arguments[@@iterator]</a></code></dt>
  <dd>返回一个新的{{jsxref("Array/@@iterator", "Array 迭代器", "", 0)}} 对象，该对象包含参数中每个索引的值。</dd>

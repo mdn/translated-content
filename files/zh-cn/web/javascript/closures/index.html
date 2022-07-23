@@ -29,7 +29,7 @@ init();</pre>
 
 <p><code>init()</code> 创建了一个局部变量 <code>name</code> 和一个名为 <code>displayName()</code> 的函数。<code>displayName()</code> 是定义在 <code>init()</code> 里的内部函数，并且仅在 <code>init()</code> 函数体内可用。请注意，<code>displayName()</code> 没有自己的局部变量。然而，因为它可以访问到外部函数的变量，所以 <code>displayName()</code> 可以使用父函数 <code>init()</code> 中声明的变量 <code>name</code> 。</p>
 
-<p>使用<a href="http://jsfiddle.net/xAFs9/3/" title="http://jsfiddle.net/xAFs9/">这个 JSFiddle 链接</a>运行该代码后发现， <code>displayName()</code> 函数内的 <code>alert()</code> 语句成功显示出了变量 <code>name</code> 的值（该变量在其父函数中声明）。这个<em>词法作用域</em>的例子描述了分析器如何在函数嵌套的情况下解析变量名。词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问声明于它们外部作用域的变量。</p>
+<p>使用<a href="http://jsfiddle.net/xAFs9/3/">这个 JSFiddle 链接</a>运行该代码后发现， <code>displayName()</code> 函数内的 <code>alert()</code> 语句成功显示出了变量 <code>name</code> 的值（该变量在其父函数中声明）。这个<em>词法作用域</em>的例子描述了分析器如何在函数嵌套的情况下解析变量名。词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问声明于它们外部作用域的变量。</p>
 
 <h2 id="闭包"><strong>闭包</strong></h2>
 
@@ -132,7 +132,7 @@ document.getElementById('size-16').onclick = size16;
 
 <p>而 JavaScript 没有这种原生支持，但我们可以使用闭包来模拟私有方法。私有方法不仅仅有利于限制对代码的访问：还提供了管理全局命名空间的强大能力，避免非核心的方法弄乱了代码的公共接口部分。</p>
 
-<p>下面的示例展现了如何使用闭包来定义公共函数，并令其可以访问私有函数和变量。这个方式也称为<a class="external" href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">模块模式（module pattern）</a>：</p>
+<p>下面的示例展现了如何使用闭包来定义公共函数，并令其可以访问私有函数和变量。这个方式也称为<a href="http://www.google.com/search?q=javascript+module+pattern">模块模式（module pattern）</a>：</p>
 
 <pre class="brush: js">var Counter = (function() {
   var privateCounter = 0;
@@ -209,7 +209,7 @@ console.log(Counter2.value()); /* logs 0 */
 
 <h2 id="Creating_closures_in_loops_A_common_mistake">在循环中创建闭包：一个常见错误</h2>
 
-<p>在 ECMAScript 2015 引入 <a href="/en-US/docs/JavaScript/Reference/Statements/let" title="let"><code>let</code> 关键字</a> 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：</p>
+<p>在 ECMAScript 2015 引入 <a href="/en-US/docs/JavaScript/Reference/Statements/let"><code>let</code> 关键字</a> 之前，在循环中有一个常见的闭包创建问题。参考下面的示例：</p>
 
 <pre class="brush: html">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
 &lt;p&gt;E-mail: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
@@ -329,7 +329,7 @@ setupHelp();</pre>
 
 <p>这个例子使用<code>let</code>而不是<code>var</code>，因此每个闭包都绑定了块作用域的变量，这意味着不再需要额外的闭包。</p>
 
-<p>另一个可选方案是使用 <code>forEach()</code>来遍历<code>helpText</code>数组并给每一个<code><a href="/zh-CN/docs/Web/HTML/Element/p" title="The HTML &lt;p> element represents a paragraph.">&lt;p&gt;</a></code>添加一个监听器，如下所示：</p>
+<p>另一个可选方案是使用 <code>forEach()</code>来遍历<code>helpText</code>数组并给每一个<code><a href="/zh-CN/docs/Web/HTML/Element/p">&lt;p&gt;</a></code>添加一个监听器，如下所示：</p>
 
 <pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
@@ -404,4 +404,4 @@ MyObject.prototype.getMessage = function() {
 
 </pre>
 
-<p>在前面的两个示例中，继承的原型可以为所有对象共享，不必在每一次创建对象时定义方法。参见 <a href="/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model" title="en-US/docs/JavaScript/Guide/Details of the Object Model">对象模型的细节</a> 一章可以了解更为详细的信息。</p>
+<p>在前面的两个示例中，继承的原型可以为所有对象共享，不必在每一次创建对象时定义方法。参见 <a href="/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model">对象模型的细节</a> 一章可以了解更为详细的信息。</p>

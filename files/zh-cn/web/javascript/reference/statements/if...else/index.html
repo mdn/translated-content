@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Statements/if...else
  <dt><code>condition</code></dt>
  <dd>值为真或假的<a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions">表达式</a></dd>
  <dt><code>statement1</code></dt>
- <dd>当<code>condition</code>为真时执行的语句。可为任意语句，包括更深层的内部<code>if</code>语句。要执行多条语句，使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block" title="en/JavaScript/Reference/Statements/block">块</a>语句（{ ... }）将这些语句分组；若不想执行语句，则使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty">空</a>语句。 </dd>
+ <dd>当<code>condition</code>为真时执行的语句。可为任意语句，包括更深层的内部<code>if</code>语句。要执行多条语句，使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/block">块</a>语句（{ ... }）将这些语句分组；若不想执行语句，则使用<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty">空</a>语句。 </dd>
  <dt><code>statement2</code></dt>
  <dd>如果<code>condition</code>为假且 <code>else</code>从句存在时执行的语句。可为任意语句，包括块语句和嵌套的<code>if</code>语句。</dd>
 </dl>
@@ -68,7 +68,7 @@ else
 }
 </pre>
 
-<p>不要将原始布尔值的<code>true</code>和<code>false</code>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>对象的真或假混淆。任何一个值，只要它不是 <code>undefined</code>、<code>null</code>、 <code>0</code>、<code>NaN</code>或空字符串（<code>""</code>），那么无论是任何对象，即使是值为假的 Boolean 对象，在条件语句中都为真。例如：</p>
+<p>不要将原始布尔值的<code>true</code>和<code>false</code>与<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>对象的真或假混淆。任何一个值，只要它不是 <code>undefined</code>、<code>null</code>、 <code>0</code>、<code>NaN</code>或空字符串（<code>""</code>），那么无论是任何对象，即使是值为假的 Boolean 对象，在条件语句中都为真。例如：</p>
 
 <pre class="brush: js">var b = new Boolean(false);
 if (b) //表达式的值为 true

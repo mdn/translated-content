@@ -21,7 +21,7 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
 <dl>
  <dt><code>locales</code></dt>
  <dd>
- <p>可选。缩写语言代码（BCP 47 language tag，例如: cmn-Hans-CN）的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation" title="国际化的构造函数和其他构造函数的几个语言敏感的方法（可见See also）一样，使用同样的模式来识别语言区域和确定使用哪一种语言格式：他们都接收 locales 和 options 参数，使用 options.localeMatcher 属性指定的一个算法来对比应用请求的和支持的语言区域，来确定使用哪一个语言区域。">Intl page</a>. 下面的这些 Unicode 扩展键也是被允许的：</p>
+ <p>可选。缩写语言代码（BCP 47 language tag，例如: cmn-Hans-CN）的字符串或者这些字符串组成的数组. 关于参数 locales 的一般形式和解释请参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation">Intl page</a>. 下面的这些 Unicode 扩展键也是被允许的：</p>
 
  <p>译者注：下面扩展的使用方式是 language[-scripts][-region]-u-nu-*,例如:zh-u-nu-hanidec(表示中文十进制数字) </p>
 
@@ -49,7 +49,7 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
   <dt><code>numberingSystem</code> {{Experimental_inline}}</dt>
   <dd>编号系统。可能的值包括："<code>arab</code>"，"<code>arabext</code>"，" <code>bali</code>"，"<code>beng</code>"，"<code>deva</code>"，"<code>fullwide</code>"，" <code>gujr</code>"，"<code>guru</code>"，"<code>hanidec</code>"，"<code>khmr</code>"，" <code>knda</code>"，"<code>laoo</code>", "<code>latn</code>"，"<code>limb</code>"，"<code>mlym</code>"，" <code>mong</code>"，"<code>mymr</code>"，"<code>orya</code>"，"<code>tamldec</code>"，" <code>telu</code>"，"<code>thai</code>"，"<code>tibt</code>"。</dd>
   <dt><code>unit</code>{{Experimental_inline}}</dt>
-  <dd><code>unit</code> 格式中使用的单位，可能的值为在 <a href="http://unicode.org/reports/tr35/tr35-general.html#Unit_Elements" rel="nofollow">UTS #35, Part 2, Section 6</a> 定义的核心单元标识符。已从<a href="https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml">完整列表</a>中选择了一个<a href="https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier">单位子集</a>以用于 ECMAScript。可以将成对的简单单位与 <code>“ -per-”</code> 连接以组成一个复合单位。没有默认值；如果 <code>style</code> 为 <code>“unit”</code>，必须提供<code>unit</code> 属性。</dd>
+  <dd><code>unit</code> 格式中使用的单位，可能的值为在 <a href="http://unicode.org/reports/tr35/tr35-general.html#Unit_Elements">UTS #35, Part 2, Section 6</a> 定义的核心单元标识符。已从<a href="https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml">完整列表</a>中选择了一个<a href="https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier">单位子集</a>以用于 ECMAScript。可以将成对的简单单位与 <code>“ -per-”</code> 连接以组成一个复合单位。没有默认值；如果 <code>style</code> 为 <code>“unit”</code>，必须提供<code>unit</code> 属性。</dd>
   <dt><code>unitDisplay</code>{{Experimental_inline}}</dt>
   <dd><code>unit</code> 格式化中使用的单位格式化样式，默认值为“ short”。<code>“long”</code> (e.g., <code>16 litres</code>)、<code>“short“</code> (e.g., <code>16 l</code>)、<code>”narrow“</code> (e.g., <code>16l</code>)</dd>
   <dt><code>currency</code></dt>

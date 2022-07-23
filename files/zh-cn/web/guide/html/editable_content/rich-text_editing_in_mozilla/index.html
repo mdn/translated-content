@@ -39,14 +39,14 @@ original_slug: Web/Guide/HTML/Content_Editable/Rich-Text_Editing_in_Mozilla
 
 <p>Mozilla 与 IE 的另一个区别是在与 designMode 结合使用的场景中，其访问 iframe 中文档对象的方式。Mozilla 使用了 W3C 的标准方式，即 <code>IFrameElement.<a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-38538621">contentDocument</a>，而</code> IE 则使用了 <code>IFrameElement.document</code>.</p>
 
-<p><em><strong>DevEdge</strong></em> 提供了一个 JavaScript 辅助工具类，<code><a href="https://developer.mozilla.org/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode" title="en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode</a>，</code>它封装了 IE 与 Mozilla 之间的 designMode 差异特性。</p>
+<p><em><strong>DevEdge</strong></em> 提供了一个 JavaScript 辅助工具类，<code><a href="https://developer.mozilla.org/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode</a>，</code>它封装了 IE 与 Mozilla 之间的 designMode 差异特性。</p>
 
 <p><br>
  <strong>禁用事件处理</strong></p>
 
 <p>另一额外的区别在于，Mozilla 中一旦切换至 designMode，那么该文档上绑定的全部事件将被禁用。在 designMode 关闭后（如在 Mozilla 1.5 中可用），事件重新可用。</p>
 
-<p>在 <a href="https://developer.mozilla.org/en/Migrate_apps_from_Internet_Explorer_to_Mozilla" title="en/Migrate_apps_from_Internet_Explorer_to_Mozilla">Migrate apps from Internet Explorer to Mozilla</a> 中的 <a href="https://developer.mozilla.org/en/Migrate_apps_from_Internet_Explorer_to_Mozilla#Rich_text_editing" title="en/Migrate_apps_from_Internet_Explorer_to_Mozilla#Rich_text_editing">Rich text editing</a> 章节可查看更多信息。</p>
+<p>在 <a href="https://developer.mozilla.org/en/Migrate_apps_from_Internet_Explorer_to_Mozilla">Migrate apps from Internet Explorer to Mozilla</a> 中的 <a href="https://developer.mozilla.org/en/Migrate_apps_from_Internet_Explorer_to_Mozilla#Rich_text_editing">Rich text editing</a> 章节可查看更多信息。</p>
 
 <h3 id="示例">示例</h3>
 
@@ -257,7 +257,7 @@ img.intLink { border: 0; }
 
 
 
-<p><strong>注意：</strong> 如果你想查看如何将创建与插入编辑器至页面的流程标准化的内容，请查看 <a href="https://developer.mozilla.org/@api/deki/files/6243/=rich-text-editor.zip" title="rich-text-editor.zip">more complete rich-text editor example</a>.</p>
+<p><strong>注意：</strong> 如果你想查看如何将创建与插入编辑器至页面的流程标准化的内容，请查看 <a href="https://developer.mozilla.org/@api/deki/files/6243/=rich-text-editor.zip">more complete rich-text editor example</a>.</p>
 
 <h3 id="相关资源">相关资源</h3>
 
@@ -268,6 +268,6 @@ img.intLink { border: 0; }
  <li><code><a href="/en-US/docs/Web/API/Document/designMode">designMode</a></code></li>
  <li><a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537834(v=vs.85)">MSDN: How to Create an HTML Editor Application</a></li>
  <li><a href="http://www.kevinroth.com/rte/demo.htm">A closed source, cross-browser rich-text editing demo</a></li>
- <li><a href="https://developer.mozilla.org/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode" title="en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode; a JavaScript helper class for easier cross-browser development using designMode.</a></li>
+ <li><a href="https://developer.mozilla.org/en/Rich-Text_Editing_in_Mozilla/Class_xbDesignMode">xbDesignMode; a JavaScript helper class for easier cross-browser development using designMode.</a></li>
  <li><a href="http://starkravingfinkle.org/blog/2007/07/firefox-3-contenteditable/">Firefox 3 and contentEditable</a></li>
 </ul>
