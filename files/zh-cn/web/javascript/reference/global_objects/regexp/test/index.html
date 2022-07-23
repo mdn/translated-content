@@ -61,7 +61,7 @@ console.log(result);
 
 <h3 id="当设置全局标志的正则使用test">当设置全局标志的正则使用<code>test()</code></h3>
 
-<p>如果正则表达式设置了全局标志，<code>test() </code>的执行会改变正则表达式   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex" title="The lastIndex is a read/write integer property of regular expression instances that specifies the index at which to start the next match."><code>lastIndex</code></a>属性。连续的执行<code>test()</code>方法，后续的执行将会从 lastIndex 处开始匹配字符串，({{jsxref("RegExp.prototype.exec()", "<code>exec()</code>")}} 同样改变正则本身的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex" title="The lastIndex is a read/write integer property of regular expression instances that specifies the index at which to start the next match.">lastIndex</a>属性值</code>).</p>
+<p>如果正则表达式设置了全局标志，<code>test() </code>的执行会改变正则表达式   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex"><code>lastIndex</code></a>属性。连续的执行<code>test()</code>方法，后续的执行将会从 lastIndex 处开始匹配字符串，({{jsxref("RegExp.prototype.exec()", "<code>exec()</code>")}} 同样改变正则本身的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex">lastIndex</a>属性值</code>).</p>
 
 <p>下面的实例表现了这种行为： </p>
 
@@ -119,6 +119,6 @@ regex.test('foo'); // false
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>在<a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript 指南</a>的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>章节</li>
+ <li>在<a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript 指南</a>的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式</a>章节</li>
  <li>{{jsxref("RegExp")}}</li>
 </ul>

@@ -50,7 +50,7 @@ httpRequest.send();
 </pre>
 
 <ul>
- <li><code>open()</code> 的第一个参数是 HTTP 请求方法 - 有 GET，POST，HEAD 以及服务器支持的其他方法。 保证这些方法一定要是大写字母，否则其他一些浏览器（比如 FireFox）可能无法处理这个请求。更多关于 HTTP 的请求方法，可以查看 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">W3C specs</a>。</li>
+ <li><code>open()</code> 的第一个参数是 HTTP 请求方法 - 有 GET，POST，HEAD 以及服务器支持的其他方法。 保证这些方法一定要是大写字母，否则其他一些浏览器（比如 FireFox）可能无法处理这个请求。更多关于 HTTP 的请求方法，可以查看 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">W3C specs</a>。</li>
  <li>第二个参数是你要发送的 URL。由于安全原因，默认不能调用第三方 URL 域名。 确保你在页面中使用的是正确的域名，否则在调用 <code>open()</code> 方法是会有 "permission denied" 错误提示。一个容易犯的错误是你企图通过 <code>domain.tld</code> 访问网站， 而不是使用 <code>www.domain.tld</code>。如果你真的需要向另一个域名发送请求，可以查看 <a href="/En/HTTP_access_control">HTTP access control</a>。</li>
  <li>第三个参数是可选的，用于设置请求是否是异步的。如果设为 <code>true</code> (默认值)，即开启异步，JavaScript 就不会在此语句阻塞，使得用户能在服务器还没有响应的情况下与页面进行交互。</li>
 </ul>
@@ -92,9 +92,9 @@ httpRequest.send();
  <li>4 (完成) or (<strong>请求已完成并且响应已准备好</strong>)</li>
 </ul>
 
-<p>(<a class="external" href="http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx">Source</a>)</p>
+<p>(<a href="http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx">Source</a>)</p>
 
-<p>接下来，点击 HTTP 响应的 <a href="/en/HTTP#HTTP_Response_Codes">response code</a>。 可能的响应码都已经列在 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>这个列表里。在下面的例子中，我们通过检查响应码 <code>200 OK</code> 判断 AJAX 有没有成功。</p>
+<p>接下来，点击 HTTP 响应的 <a href="/en/HTTP#HTTP_Response_Codes">response code</a>。 可能的响应码都已经列在 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">W3C</a>这个列表里。在下面的例子中，我们通过检查响应码 <code>200 OK</code> 判断 AJAX 有没有成功。</p>
 
 <pre class="brush: js">if (httpRequest.status === 200) {
     // Perfect!
@@ -270,4 +270,4 @@ $computedString = "Hi, " . $name;
 $array = ['userName' =&gt; $name, 'computedString' =&gt; $computedString];
 echo json_encode($array);</code></pre>
 
-<p>想获取更多 DOM 方法，可以查看<code> <a class="external" href="http://www.mozilla.org/docs/dom/">Mozilla's DOM implementation</a> 文档。</code></p>
+<p>想获取更多 DOM 方法，可以查看<code> <a href="http://www.mozilla.org/docs/dom/">Mozilla's DOM implementation</a> 文档。</code></p>

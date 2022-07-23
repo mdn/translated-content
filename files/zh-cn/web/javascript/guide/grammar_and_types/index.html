@@ -118,7 +118,7 @@ console.log("The value of x is " + x); // x 的值是 undefined
 console.log("The value of y is " + y);// 未捕获的引用错误： y 未被定义
 let y;</pre>
 
-<p>你可以使用 <code>undefined</code> 来判断一个变量是否已赋值。在以下的代码中，变量<code>input</code>未被赋值，因此 <code><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/if...else" title="zh-CN/docs/JavaScript/Reference/Statements/if...else">if</a></code> 条件语句的求值结果是 <code>true</code> 。</p>
+<p>你可以使用 <code>undefined</code> 来判断一个变量是否已赋值。在以下的代码中，变量<code>input</code>未被赋值，因此 <code><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/if...else">if</a></code> 条件语句的求值结果是 <code>true</code> 。</p>
 
 <pre class="brush: js">var input;
 if(input === undefined){
@@ -301,7 +301,7 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
  <li>以及对象（Object）。</li>
 </ul>
 
-<p>虽然这些数据类型相对来说比较少，但是通过他们你可以在程序中开发有用的功能。对象（<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/Object" title="zh-CN/docs/JavaScript/Reference/Global Objects/Object">Objects</a>）和函数（<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/Function" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function">functions</a>）是这门语言的另外两个基本元素。你可以把对象当作存放值的一个命名容器，然后将函数当作你的程序能够执行的步骤。</p>
+<p>虽然这些数据类型相对来说比较少，但是通过他们你可以在程序中开发有用的功能。对象（<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/Object">Objects</a>）和函数（<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/Function">functions</a>）是这门语言的另外两个基本元素。你可以把对象当作存放值的一个命名容器，然后将函数当作你的程序能够执行的步骤。</p>
 
 <h3 id="数据类型的转换">数据类型的转换</h3>
 
@@ -335,8 +335,8 @@ y = 42 + " is the answer" // "42 is the answer"
 <p>有一些方法可以将内存中表示一个数字的字符串转换为对应的数字。</p>
 
 <ul>
-  <li><code><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseInt" title="zh-CN/docs/JavaScript/Reference/Global Objects/parseInt">parseInt()</a></code></li>
-  <li><code><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseFloat" title="zh-CN/docs/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code></li>
+  <li><code><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseInt">parseInt()</a></code></li>
+  <li><code><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Global_Objects/parseFloat">parseFloat()</a></code></li>
 </ul>
 
 <p><code> parseInt </code>方法只能返回整数，所以使用它会丢失小数部分。另外，调用 parseInt 时最好总是带上进制 (radix) 参数，这个参数用于指定使用哪一种进制。</p>
@@ -378,7 +378,7 @@ console.log(a.length); // 1
 console.log(a[0]); // 3</pre>
 
 <div class="note">
-<p><strong>备注：</strong><strong> </strong>这里的数组字面值也是一种对象初始化器。参考<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers" title="zh-CN/docs/JavaScript/Guide/Working with Objects#Using Object Initializers">对象初始化器的使用</a>。</p>
+<p><strong>备注：</strong><strong> </strong>这里的数组字面值也是一种对象初始化器。参考<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers">对象初始化器的使用</a>。</p>
 </div>
 
 <p>若在顶层（全局）脚本里用字面值创建数组，JavaScript 语言将会在每次对包含该数组字面值的表达式求值时解释该数组。另一方面，在函数中使用的数组，将在每次调用函数时都会被创建一次。</p>
@@ -423,7 +423,7 @@ console.log(a[0]); // 3</pre>
 
 <p>布尔类型有两种字面量：<code>true</code>和<code>false</code>。</p>
 
-<p>不要混淆作为布尔对象的真和假与布尔类型的原始值 true 和 false。布尔对象是原始布尔数据类型的一个包装器。参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean" title="zh-CN/docs/JavaScript/Guide/Predefined Core Objects#Boolean Object"> 布尔对象</a>。</p>
+<p>不要混淆作为布尔对象的真和假与布尔类型的原始值 true 和 false。布尔对象是原始布尔数据类型的一个包装器。参见<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean"> 布尔对象</a>。</p>
 
 <h3 id="数字字面量_Numeric_literals">数字字面量</h3>
 
@@ -591,7 +591,7 @@ POST`http://foo.org/bar?a=${a}&amp;b=${b}
        "bar": ${bar}}`(myOnReadyStateChangeHandler);
 </pre>
 
-<p>除非有特别需要使用字符串对象，否则，你应当始终使用字符串字面值。要查看字符串对象的有关细节，请参见<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#String_Object" title="zh-CN/docs/JavaScript/Guide/Predefined Core Objects#String Object">字符串对象</a>。</p>
+<p>除非有特别需要使用字符串对象，否则，你应当始终使用字符串字面值。要查看字符串对象的有关细节，请参见<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Guide/Predefined_Core_Objects#String_Object">字符串对象</a>。</p>
 
 <h4 id="在字符串中使用的特殊字符">在字符串中使用的特殊字符</h4>
 
@@ -710,7 +710,7 @@ Sugar is sweet,\n\
 and so is foo."
 </pre>
 
-<p>ECMAScript 2015 增加了一种新的字面量，叫做模板字面量 <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings" rel="noreferrer">template literals</a>。</strong>它包含一些新特征，包括了多行字符串！</p>
+<p>ECMAScript 2015 增加了一种新的字面量，叫做模板字面量 <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings">template literals</a>。</strong>它包含一些新特征，包括了多行字符串！</p>
 
 <pre class="brush: js">var poem =
 `Roses are red,

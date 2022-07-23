@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 
 <p>每个步骤都会被分为单独的一行以这个函数的名字作为开始（如果不是一个来自于全局作用域的调用），然后通过一个 <code>@</code> 符号标记一个文件的位置（尤其是当一个函数构造错误并且作为错误被抛出，并且如果能定位到这个文件的位置，那么会使用冒号显示行号。（提示）{{jsxref("Error")}} 对象在错误跑出时同样能处理并渲染出文件名，行号和列号属性（但是仅仅限于错误。而不是追踪他的路径）</p>
 
-<p>注意这是 Firefox 定义的格式，并没有标准的定义。但是 Safari 6+ 和 Opera 12- 定义了一种非常相似的格式。其他使用 JavaScript V8 引擎的浏览器（例如 Chrome、Opera 15+，安卓浏览器）和 IE 10+，定义了一种不同的格式（可参见 <a class="external" href="http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">error.stack</a> 文档）</p>
+<p>注意这是 Firefox 定义的格式，并没有标准的定义。但是 Safari 6+ 和 Opera 12- 定义了一种非常相似的格式。其他使用 JavaScript V8 引擎的浏览器（例如 Chrome、Opera 15+，安卓浏览器）和 IE 10+，定义了一种不同的格式（可参见 <a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">error.stack</a> 文档）</p>
 
 <p>堆栈中的参数值： Firefox 14 版本之前是 ({{bug("744842")}}) 函数名会随着参数值会在添加 @符号之前被立即转换成用圆括号包裹的 string 类型。然而对象或者数组等其他类型似乎会被转换成<code>"[object Object]"</code>并且这种格式不能回退到之前实际上的对象，而纯值会被渲染（或许这种在 Firefox 14 中仍有这种可能，使用 <code>arguments.callee.caller.arguments</code> 更加简单。因为函数名可以使用 <code>arguments.callee.caller.name</code> 渲染）。<code>"undefined"</code> 被显示为 <code>"(void 0)"</code> 不过要注意的是如果是字符串类型的参数会直接以类似 <code>"@"</code>, <code>"("</code>, <code>")"</code> 格式通过编译（或者是包含在文件名中）。你不能简单的依赖这些将它分成多个组件，但是，对于 Firefox 14 及以后的版本来说，这些都不是问题</p>
 
@@ -118,7 +118,7 @@ try {
 
 <ul>
  <li><a href="/en-US/docs/Components.stack">Components.stack</a></li>
- <li>外部项目：<a class="link-https" href="https://github.com/csnover/TraceKit/">TraceKit</a> and <a class="link-https" href="https://github.com/eriwen/javascript-stacktrace">javascript-stacktrace</a></li>
- <li>MSDN：<a class="external" href="http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx" title="http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">error.stack</a> docs</li>
+ <li>外部项目：<a href="https://github.com/csnover/TraceKit/">TraceKit</a> and <a href="https://github.com/eriwen/javascript-stacktrace">javascript-stacktrace</a></li>
+ <li>MSDN：<a href="http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx">error.stack</a> docs</li>
  <li><a href="https://github.com/v8/v8/wiki/Stack%20Trace%20API">Overview of the V8 JavaScript stack trace API</a></li>
 </ul>
