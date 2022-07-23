@@ -63,7 +63,7 @@ translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 <p>由于这些原因，流水线已经被更好的算法给代替，如 <em>multiplexing</em>，已经用在 HTTP/2。</p>
 </div>
 
-<p>默认情况下，<a href="/en/HTTP" title="en/HTTP">HTTP</a> 请求是按顺序发出的。下一个请求只有在当前请求收到应答过后才会被发出。由于会受到网络延迟和带宽的限制，在下一个请求被发送到服务器之前，可能需要等待很长时间。</p>
+<p>默认情况下，<a href="/en/HTTP">HTTP</a> 请求是按顺序发出的。下一个请求只有在当前请求收到应答过后才会被发出。由于会受到网络延迟和带宽的限制，在下一个请求被发送到服务器之前，可能需要等待很长时间。</p>
 
 <p>流水线是在同一条长连接上发出连续的请求，而不用等待应答返回。这样可以避免连接延迟。理论上讲，性能还会因为两个 HTTP 请求有可能被打包到一个 TCP 消息包中而得到提升。就算 HTTP 请求不断的继续，尺寸会增加，但设置 TCP 的 <a href="https://en.wikipedia.org/wiki/Maximum_segment_size">MSS</a>(Maximum Segment Size) 选项，仍然足够包含一系列简单的请求。</p>
 
