@@ -3,7 +3,7 @@ title: setInterval()
 slug: Web/API/setInterval
 translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
-browser-compat: api-setInterval
+browser-compat: api.setInterval
 page-type: web-api-global-function
 ---
 {{APIRef("HTML DOM")}} 
