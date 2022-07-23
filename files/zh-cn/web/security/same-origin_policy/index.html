@@ -111,10 +111,10 @@ translation_of: Web/Security/Same-origin_policy
 
 <ul>
  <li><code>&lt;script src="..."&gt;&lt;/script&gt;</code> 标签嵌入跨源脚本。语法错误信息只能被同源脚本中捕捉到。</li>
- <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入 CSS。由于 CSS 的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS 的跨源需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制： <a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="https://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="https://support.apple.com/kb/HT4070">Safari</a> (跳至 CVE-2010-0051) 部分 和 <a href="https://www.opera.com/support/kb/view/943/">Opera</a>。</li>
+ <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入 CSS。由于 CSS 的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS 的跨源需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制： <a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="https://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="https://support.apple.com/kb/HT4070">Safari</a> (跳至 CVE-2010-0051) 部分 和 <a href="https://www.opera.com/support/kb/view/943/">Opera</a>。</li>
  <li>通过 {{htmlelement("img")}} 展示的图片。支持的图片格式包括 PNG,JPEG,GIF,BMP,SVG,...</li>
  <li>通过 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 播放的多媒体资源。</li>
- <li>通过 <code><a href="/zh-CN/docs/Web/HTML/Element/object">&lt;object&gt;</a></code>、 <a href="/zh-CN/docs/HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="/zh-CN/docs/HTML/Element/applet" title="HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
+ <li>通过 <code><a href="/zh-CN/docs/Web/HTML/Element/object">&lt;object&gt;</a></code>、 <a href="/zh-CN/docs/HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="/zh-CN/docs/HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
  <li>通过 <code><a href="/zh-CN/docs/Web/CSS/@font-face">@font-face</a></code> 引入的字体。一些浏览器允许跨源字体（cross-origin fonts），一些需要同源字体（same-origin fonts）。</li>
  <li>通过 <code><a href="/zh-CN/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> 载入的任何资源。站点可以使用 <a href="/zh-CN/docs/HTTP/X-Frame-Options">X-Frame-Options</a> 消息头来阻止这种形式的跨源交互。</li>
 </ul>
@@ -133,7 +133,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <h2 id="跨源脚本API访问">跨源脚本 API 访问</h2>
 
-<p>JavaScript 的 API 中，如 <code><a href="/zh-CN/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement">iframe.contentWindow</a></code>、 {{domxref("window.parent")}}、{{domxref("window.open")}} 和 {{domxref("window.opener")}} 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对 <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a> 和 <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>对象的访问添加限制，如下两节所述。</p>
+<p>JavaScript 的 API 中，如 <code><a href="/zh-CN/docs/DOM/HTMLIFrameElement">iframe.contentWindow</a></code>、 {{domxref("window.parent")}}、{{domxref("window.open")}} 和 {{domxref("window.opener")}} 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对 <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a> 和 <a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>对象的访问添加限制，如下两节所述。</p>
 
 <p>为了能让不同源中文档进行交流，可以使用 {{domxref("window.postMessage")}}。</p>
 
