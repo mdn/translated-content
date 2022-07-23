@@ -127,7 +127,7 @@ Cuando le pasas un método a `setInterval()` o cualquier otra función, ésta se
 
 ### Explicación
 
-El código ejecutado por `setInterval` se ejecuta en un contexto de ejecución distinto al de la función desde la que fue llamado. Como consecuencia, la palabra clave [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) para la función llamada se establece en el objeto `window` (u objeto `global`), que no es el mismo contexto de ejecución del valor `this` de la función que llamó a `setInterval()` . Véase el siguiente ejemplo en el que se utiliza `setTimeout()` en lugar de `setInterval()` . El problema con `this` es el mismo en ambos temporizadores:
+El código ejecutado por `setInterval` se ejecuta en un contexto de ejecución distinto al de la función desde la que fue llamado. Como consecuencia, la palabra clave [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) para la función llamada se establece en el objeto `window` (u objeto `global`), que no es el mismo contexto de ejecución del valor `this` de la función que llamó a `setInterval()` . Véase el siguiente ejemplo en el que se utiliza `setTimeout()` en lugar de `setInterval()` . El problema con `this` es el mismo en ambos temporizadores:
 
 ```js
 myArray = ['zero', 'one', 'two'];
