@@ -51,7 +51,7 @@ translation_of: Web/API/ServiceWorkerRegistration
 
 <dl>
  <dt>{{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}</dt>
- <dd>An <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" title="This method is called whenever an event occurs of the type for which the EventListener interface was registered."><code>EventListener</code></a> property called whenever an event of type <code>updatefound</code> is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.</dd>
+ <dd>An <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener"><code>EventListener</code></a> property called whenever an event of type <code>updatefound</code> is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -71,7 +71,7 @@ translation_of: Web/API/ServiceWorkerRegistration
 
 <h2 id="Examples">Examples</h2>
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a class="external external-icon" href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code checks to see if the browser supports service workers and if there's currently a service worker handling requests on this page for the current navigation.</p>
+<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">service worker registration-events sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">live demo</a>). The code checks to see if the browser supports service workers and if there's currently a service worker handling requests on this page for the current navigation.</p>
 
 <p>Any new service workers are registered; if there's an existing service worker, the code overrides its default scope so that the registration applies to the current directory and everything underneath it. The example also reports any registration failures.</p>
 

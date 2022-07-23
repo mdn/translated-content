@@ -20,7 +20,7 @@ translation_of: Web/API/Media_Streams_API
 
 <p>一个 MediaStream 包含零个或更多的 MediaStreamTrack 对象，代表着各种的声轨和视频轨。 每一个 MediaStreamTrack 可能有一个或更多的通道。这个通道代表着媒体流的最小单元，比如一个音频信号对应着一个对应的扬声器，像是在立体声音轨中的左通道或右通道。</p>
 
-<p>MediaStream 对象有着单一的输入和输出。由 <code><a href="/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia()</a></code> 创建的 MediaStream 对象是在本地借助用户相机和麦克风的源输入。非本地的 <code>MediaStream</code> 代表了一个媒体元素，像是{{HTMLElement("video")}} 元素或是 {{HTMLElement("audio")}}元素， 一般是源自网络的流，并通过 WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API" title="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection API</a> 或使用 <a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> 获得{{domxref("MediaStreamAudioSourceNode")}} 元素。<code>MediaStream</code> 对象的输出能链接到一个<strong>用户。</strong> 它可以是一个媒体元素，像是 <code>&lt;audio&gt;</code> 或者 <code>&lt;video&gt;</code>， the WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API" title="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection API</a> 或是 <a href="/en-US/docs/Web_Audio_API" title="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioDestinationNode")}}。</p>
+<p>MediaStream 对象有着单一的输入和输出。由 <code><a href="/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia()</a></code> 创建的 MediaStream 对象是在本地借助用户相机和麦克风的源输入。非本地的 <code>MediaStream</code> 代表了一个媒体元素，像是{{HTMLElement("video")}} 元素或是 {{HTMLElement("audio")}}元素， 一般是源自网络的流，并通过 WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection API</a> 或使用 <a href="/en-US/docs/Web_Audio_API">Web Audio API</a> 获得{{domxref("MediaStreamAudioSourceNode")}} 元素。<code>MediaStream</code> 对象的输出能链接到一个<strong>用户。</strong> 它可以是一个媒体元素，像是 <code>&lt;audio&gt;</code> 或者 <code>&lt;video&gt;</code>， the WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection API</a> 或是 <a href="/en-US/docs/Web_Audio_API">Web Audio API</a> {{domxref("MediaStreamAudioDestinationNode")}}。</p>
 
 <h2 id="参考">参考</h2>
 
@@ -59,7 +59,7 @@ translation_of: Web/API/Media_Streams_API
 <h2 id="See_Also">See Also</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> -  API 介绍页</li>
+ <li><a href="/en-US/docs/WebRTC">WebRTC</a> -  API 介绍页</li>
  <li><a href="/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia()</a></li>
  <li><a href="/en-US/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a> - 关于使用 <code>getUserMedia()</code> 的演示</li>
 </ul>

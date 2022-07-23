@@ -82,7 +82,7 @@ dt.mozClearDataAt("text/plain", 1);
 
 <h2 id="拖拽非字符串的数据">拖拽非字符串的数据</h2>
 
-<p>上述方法不仅限于字符串类型的数据；你可以为数据指定任意类型。例如，文件数据使用 <a href="/En/DragDrop/Recommended_Drag_Types#file" title="application/x-moz-file">application/x-moz-file</a> 类型，存储为 <a href="/en/XPCOM_Interface_Reference/nsIFile" title="nsIFile">nsIFile</a> 对象。但是因为 {{domxref("DataTransfer.setData","setData()")}} 方法只支持字符串，所以在这种情况下不能用来指定文件。应该使用的是 {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} 方法。</p>
+<p>上述方法不仅限于字符串类型的数据；你可以为数据指定任意类型。例如，文件数据使用 <a href="/En/DragDrop/Recommended_Drag_Types#file">application/x-moz-file</a> 类型，存储为 <a href="/en/XPCOM_Interface_Reference/nsIFile">nsIFile</a> 对象。但是因为 {{domxref("DataTransfer.setData","setData()")}} 方法只支持字符串，所以在这种情况下不能用来指定文件。应该使用的是 {{domxref("DataTransfer.mozSetDataAt","mozSetDataAt()")}} 方法。</p>
 
 <pre class="notranslate">dt.mozSetDataAt("application/x-moz-file", file, 0);
 </pre>
@@ -153,8 +153,8 @@ function output(text)
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="internal" href="/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>
- <li><a class="internal" href="Web/Guide/HTML/Drag_operations" title="Drag Operations">Drag Operations</a></li>
- <li><a class="internal" href="/Web/Guide/HTML/Recommended_Drag_Types" title="Recommended Drag Types">Recommended Drag Types</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
+ <li><a href="/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</a></li>
+ <li><a href="Web/Guide/HTML/Drag_operations">Drag Operations</a></li>
+ <li><a href="/Web/Guide/HTML/Recommended_Drag_Types">Recommended Drag Types</a></li>
+ <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
 </ul>

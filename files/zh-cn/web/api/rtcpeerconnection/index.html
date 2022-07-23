@@ -11,7 +11,7 @@ translation_of: Web/API/RTCPeerConnection
 <p><strong><code>RTCPeerConnection</code></strong> 接口代表一个由本地计算机到远端的 WebRTC 连接。该接口提供了创建，保持，监控，关闭连接的方法的实现。</p>
 
 <div class="note">
-<p><strong>提示：</strong> <code>RTCPeerConnection</code> 和<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription" title="The RTCSessionDescription interface describes one end of a connection—or potential connection—and how it's configured. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session."><code>RTCSessionDescription</code></a> 是很多浏览器中使用的名称。强烈建议使用补充库，例如强大并且被广泛支持的<a href="https://github.com/webrtcHacks/adapter" rel="noopener">Adapter.js</a>，以确保您网站或 Web 应用程序的兼容性。值得注意的是<a href="https://github.com/webrtcHacks/adapter" rel="noopener">Adapter.js</a>不仅仅提供这些，它还做了一些其他补充以增强 WebRTC 在浏览器中的兼容性。参考：</p>
+<p><strong>提示：</strong> <code>RTCPeerConnection</code> 和<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription"><code>RTCSessionDescription</code></a> 是很多浏览器中使用的名称。强烈建议使用补充库，例如强大并且被广泛支持的<a href="https://github.com/webrtcHacks/adapter">Adapter.js</a>，以确保您网站或 Web 应用程序的兼容性。值得注意的是<a href="https://github.com/webrtcHacks/adapter">Adapter.js</a>不仅仅提供这些，它还做了一些其他补充以增强 WebRTC 在浏览器中的兼容性。参考：</p>
 
 <pre>var PeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
 var SessionDescription = window.RTCSessionDescription || window.mozRTCSessionDescription || window.webkitRTCSessionDescription;

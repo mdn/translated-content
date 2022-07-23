@@ -149,7 +149,7 @@ translation_of: Web/API/Touch_events
 
 <p>这样我们就可以取得每个触摸点之前位置的坐标，并且使用恰当的上下文方法绘制片段，从而将新旧两个位置连接起来。</p>
 
-<p>当片段绘制完毕后，我们调用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice">Array.splice()</a></code> 将 <code>ongoingTouches</code> 数组中触摸点之前的信息替换为当前信息。</p>
+<p>当片段绘制完毕后，我们调用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Array.splice()</a></code> 将 <code>ongoingTouches</code> 数组中触摸点之前的信息替换为当前信息。</p>
 
 <h4 id="触摸结束处理">触摸结束处理</h4>
 
@@ -182,7 +182,7 @@ translation_of: Web/API/Touch_events
 }
 </pre>
 
-<p>这个函数与上一个很相像，唯一的实质性区别就是在调用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice">Array.splice()</a></code> 时， 我们把用过的触摸实体从 <code>ongoingTouches</code> 数组中直接移除了，不再添加更新信息。对这个触摸点的跟踪随之终止。</p>
+<p>这个函数与上一个很相像，唯一的实质性区别就是在调用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">Array.splice()</a></code> 时， 我们把用过的触摸实体从 <code>ongoingTouches</code> 数组中直接移除了，不再添加更新信息。对这个触摸点的跟踪随之终止。</p>
 
 <h4 id="触摸取消处理">触摸取消处理</h4>
 

@@ -154,7 +154,7 @@ if (request.status === 200) {
 
 <h3 id="例子_在_Worker_中使用HTTP_同步请求">例子：在 <code>Worker</code> 中使用 HTTP 同步请求</h3>
 
-<p>在 <code><a href="/zh-cn/DOM/Worker" title="/zh-cn/DOM/Worker">Worker</a></code> 中使用 <code>XMLHttpRequest</code> 时，同步请求比异步请求更适合。</p>
+<p>在 <code><a href="/zh-cn/DOM/Worker">Worker</a></code> 中使用 <code>XMLHttpRequest</code> 时，同步请求比异步请求更适合。</p>
 
 <p><code><strong>example.html</strong></code> (主页):</p>
 
@@ -176,12 +176,12 @@ if (request.status === 200) {
 &lt;/html&gt;
 </pre>
 
-<p><code><strong>myFile.txt</strong></code> ( <code><a href="/zh-cn/DOM/XMLHttpRequest" title="/zh-cn/XMLHttpRequest">XMLHttpRequest</a></code>对象同步请求的文件):</p>
+<p><code><strong>myFile.txt</strong></code> ( <code><a href="/zh-cn/DOM/XMLHttpRequest">XMLHttpRequest</a></code>对象同步请求的文件):</p>
 
 <pre>Hello World!!
 </pre>
 
-<p><code><strong>myTask.js</strong></code> (包含了<code><a href="/zh-cn/DOM/Worker" title="/zh-cn/DOM/Worker">Worker</a></code>代码):</p>
+<p><code><strong>myTask.js</strong></code> (包含了<code><a href="/zh-cn/DOM/Worker">Worker</a></code>代码):</p>
 
 <pre class="brush: js">self.onmessage = function (oEvent) {
   if (oEvent.data === "Hello") {
@@ -195,7 +195,7 @@ if (request.status === 200) {
 
 <div class="note"><strong>注意：</strong>由于使用了<code>Worker</code>，所以该请求实际上也是异步的。</div>
 
-<p>可以使用类似的方法，让脚本在后台与服务器交互，预加载某些内容。查看<a class="internal" href="/zh-cn/DOM/Using_web_workers" title="zh-cn/Using DOM workers">使用 Web workers</a>了解更多详情。</p>
+<p>可以使用类似的方法，让脚本在后台与服务器交互，预加载某些内容。查看<a href="/zh-cn/DOM/Using_web_workers">使用 Web workers</a>了解更多详情。</p>
 
 <h3 id="将同步XHR用例调整到Beacon_API">将同步 XHR 用例调整到 Beacon API</h3>
 
@@ -228,8 +228,8 @@ function logData() {
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" title="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/AJAX" title="/en-US/docs/AJAX">AJAX</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/AJAX">AJAX</a></li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon</a></code></li>
 </ul>

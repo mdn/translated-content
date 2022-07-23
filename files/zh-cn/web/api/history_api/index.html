@@ -58,7 +58,7 @@ translation_of: Web/API/History_API
 
 <p>HTML5 引入了 <a href="/en-US/docs/Web/API/History/pushState">history.pushState()</a> 和 <a href="/en-US/docs/Web/API/History_API#The_replaceState()_method">history.replaceState()</a> 方法，它们分别可以添加和修改历史记录条目。这些方法通常与{{ domxref("window.onpopstate") }} 配合使用。</p>
 
-<p>使用 <code>history.pushState()</code> 可以改变 referrer，它在用户发送 <a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a> 请求时在 HTTP 头部使用，改变 state 后创建的 <a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a> 对象的 referrer 都会被改变。因为 referrer 是标识创建  <code><a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a></code> 对象时 <code>this</code> 所代表的 window 对象中 document 的 URL。</p>
+<p>使用 <code>history.pushState()</code> 可以改变 referrer，它在用户发送 <a href="/en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a> 请求时在 HTTP 头部使用，改变 state 后创建的 <a href="/en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a> 对象的 referrer 都会被改变。因为 referrer 是标识创建  <code><a href="/en/DOM/XMLHttpRequest">XMLHttpRequest</a></code> 对象时 <code>this</code> 所代表的 window 对象中 document 的 URL。</p>
 
 <h3 id="pushState_方法的例子">pushState() 方法的例子</h3>
 
@@ -103,7 +103,7 @@ history.pushState(stateObj, "page 2", "bar.html");
  </li>
 </ul>
 
-<div class="note"><strong>注意：</strong> 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。 从  Gecko 6.0 {{ geckoRelease("6.0") }}开始，该对象的序列化将使用<a href="/en/DOM/The_structured_clone_algorithm" title="en/DOM/The structured clone algorithm">结构化克隆算法</a>。这将会使更多对象可以被安全的传递。</div>
+<div class="note"><strong>注意：</strong> 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。 从  Gecko 6.0 {{ geckoRelease("6.0") }}开始，该对象的序列化将使用<a href="/en/DOM/The_structured_clone_algorithm">结构化克隆算法</a>。这将会使更多对象可以被安全的传递。</div>
 
 <p>        在某种意义上，调用 <code>pushState()</code> 与 设置 <code>window.location = "#foo"</code> 类似，二者都会在当前页面创建并激活新的历史记录。但 <code>pushState()</code> 具有如下几条优点：</p>
 
@@ -171,7 +171,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <h2 id="例子">例子</h2>
 
-<p>完整的 AJAX 网站示例，请参阅： <a href="/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example" title="/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example">Ajax navigation example</a>.</p>
+<p>完整的 AJAX 网站示例，请参阅： <a href="/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example">Ajax navigation example</a>.</p>
 
 <h2 id="规范">规范</h2>
 

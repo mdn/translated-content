@@ -24,9 +24,9 @@ translation_of: Web/API/HTMLImageElement
  <dt>{{domxref("HTMLImageElement.alt")}}</dt>
  <dd>一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("alt", "img")}}，表明图像的后备描述内容，会在图像无法加载时显示。</dd>
  <dt>{{domxref("HTMLImageElement.complete")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("Boolean")}} 如果浏览器已经下载完毕，并且图像是<a href="/en-US/docs/HTML/Element/Img#Image_Format" title="HTML/Element/Img#Image Format">受支持的图片类型</a>、解码的过程中没有发生错误，则返回 <code>true</code>。That means this value is also <code>true</code> if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.</dd>
+ <dd>返回一个 {{domxref("Boolean")}} 如果浏览器已经下载完毕，并且图像是<a href="/en-US/docs/HTML/Element/Img#Image_Format">受支持的图片类型</a>、解码的过程中没有发生错误，则返回 <code>true</code>。That means this value is also <code>true</code> if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.</dd>
  <dt>{{domxref("HTMLImageElement.crossOrigin")}}</dt>
- <dd>一个 {{domxref("DOMString")}} 表示这个 img 元素的 CORS 设置。参考 <a href="/en-US/docs/HTML/CORS_settings_attributes" title="HTML/CORS settings attributes">CORS settings attributes</a>。This may be <code>null</code> if CORS is not used.</dd>
+ <dd>一个 {{domxref("DOMString")}} 表示这个 img 元素的 CORS 设置。参考 <a href="/en-US/docs/HTML/CORS_settings_attributes">CORS settings attributes</a>。This may be <code>null</code> if CORS is not used.</dd>
  <dt>{{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}</dt>
  <dd>返回一个 {{domxref("DOMString")}}  表示加载当前显示的图像的 URL。<br>
  这可能会改变，因为图像是调整，由于不断变化的条件，由任何 <a href="/zh-CN/docs/Web/CSS/Media_Queries">media queries</a> 的地方。</dd>
@@ -107,7 +107,7 @@ img1.src = 'image1.png';
 img1.alt = 'alt';
 document.body.appendChild(img1);
 
-var img2 = document.createElement('img'); // 使用 DOM <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/html/nsIDOMHTMLImageElement.idl" title="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/html/nsIDOMHTMLImageElement.idl">HTMLImageElement</a>
+var img2 = document.createElement('img'); // 使用 DOM <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/html/nsIDOMHTMLImageElement.idl">HTMLImageElement</a>
 img2.src = 'image2.jpg';
 img2.alt = 'alt text';
 document.body.appendChild(img2);
