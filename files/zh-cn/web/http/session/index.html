@@ -23,7 +23,7 @@ translation_of: Web/HTTP/Session
 
 <p>使用 TCP 时，HTTP 服务器的默认端口号是 80，另外还有 8000 和 8080 也很常用。页面的 URL 会包含域名和端口号，但当端口号为 80 时可以省略。前往 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web">标识互联网上的内容</a> 获取更多内容。</p>
 
-<div class="note"><strong>注意：</strong> 客户端 - 服务器模型不允许服务器在没有显式请求时发送数据给客户端。为了解决这个问题，Web 开发者们使用了许多技术：例如，使用 {{domxref("XMLHTTPRequest")}} 或 {{domxref("Fetch")}} API 周期性地请求服务器，使用 HTML <a href="/en/WebSockets" title="en/WebSockets">WebSockets API</a>，或其他类似协议。</div>
+<div class="note"><strong>注意：</strong> 客户端 - 服务器模型不允许服务器在没有显式请求时发送数据给客户端。为了解决这个问题，Web 开发者们使用了许多技术：例如，使用 {{domxref("XMLHTTPRequest")}} 或 {{domxref("Fetch")}} API 周期性地请求服务器，使用 HTML <a href="/en/WebSockets">WebSockets API</a>，或其他类似协议。</div>
 
 <h2 id="发送客户端请求">发送客户端请求</h2>
 
@@ -42,7 +42,7 @@ translation_of: Web/HTTP/Session
 
 <h3 id="请求示例">请求示例</h3>
 
-<p>访问 developer.mozilla.org 的根页面，即 <a class="linkification-ext external" href="/" title="Linkification: http://developer.mozilla.org/">http://developer.mozilla.org/</a>，并告诉服务器用户代理倾向于该页面使用法语展示：</p>
+<p>访问 developer.mozilla.org 的根页面，即 <a href="/">http://developer.mozilla.org/</a>，并告诉服务器用户代理倾向于该页面使用法语展示：</p>
 
 <pre>GET / HTTP/1.1
 Host: developer.mozilla.org
@@ -104,7 +104,7 @@ Content-Type: text/html
 Server: Apache/2.2.3 (Red Hat)
 Content-Type: text/html; charset=iso-8859-1
 Date: Sat, 09 Oct 2010 14:30:24 GMT
-Location: <a class="linkification-ext" href="../../../../" title="Linkification: https://developer.mozilla.org/">https://developer.mozilla.org/</a> <strong><em>(目标资源的新地址，服务器期望用户代理去访问它</em><em>)</em></strong>
+Location: https://developer.mozilla.org/ （目标资源的新地址，服务器期望用户代理去访问它）
 Keep-Alive: timeout=15, max=98
 Accept-Ranges: bytes
 Via: Moz-Cache-zlb05
@@ -118,7 +118,7 @@ Content-Length: 325 <em>(<strong>如果用户代理无法转到新地址，就�
 &lt;title&gt;301 Moved Permanently&lt;/title&gt;
 &lt;/head&gt;&lt;body&gt;
 &lt;h1&gt;Moved Permanently&lt;/h1&gt;
-&lt;p&gt;The document has moved &lt;a href="<a class="linkification-ext" href="../../../../" title="Linkification: https://developer.mozilla.org/">https://developer.mozilla.org/</a>"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The document has moved &lt;a href="https://developer.mozilla.org/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;address&gt;Apache/2.2.3 (Red Hat) Server at developer.mozilla.org Port 80&lt;/address&gt;
 &lt;/body&gt;&lt;/html&gt;
