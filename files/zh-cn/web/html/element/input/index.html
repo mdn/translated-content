@@ -554,7 +554,7 @@ translation_of: Web/HTML/Element/input
  <p>When the form above is submitted, the input cause both the <code>name</code> / <code>value</code> pair of <code>fruit=cherry</code> and the <code>dirname</code> / direction pair of <code>fruit.dir=ltr</code> to be sent.</p>
  </dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
- <dd>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  hidden，此属性将被忽略。</dd>
+ <dd>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  hidden，此属性将被忽略。</dd>
 </dl>
 
 <div class="note"><strong>Note:</strong> Although not required by the specification, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</div>
@@ -702,7 +702,7 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("usemap") }} {{Deprecated_Inline}}</dt>
  <dd>作为图像映射的{{ HTMLElement("map") }}元素的名称。</dd>
  <dt>{{ htmlattrdef("value") }}</dt>
- <dd>控件的初始值。此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code>。注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko 和 IE 将忽略 HTML 源代码中指定的值</a>。</dd>
+ <dd>控件的初始值。此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code>。注意，当重新加载页面时，如果在重新加载之前更改了值，<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko 和 IE 将忽略 HTML 源代码中指定的值</a>。</dd>
  <dt>{{ htmlattrdef("width") }} </dt>
  <dd>如果<strong>type</strong>属性的值是 image，这个属性定义了按钮图片的宽度。</dd>
  <dt>
@@ -745,13 +745,13 @@ translation_of: Web/HTML/Element/input
 <p>The following methods are provided by the <a href="/en-US/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code></a> interface which represents <code>&lt;input&gt;</code> elements in the DOM. Also available are those methods specified by the parent interfaces, <a href="/en-US/docs/Web/API/HTMLElement"><code>HTMLElement</code></a>, <a href="/en-US/docs/Web/API/Element"><code>Element</code></a>, <a href="/en-US/docs/Web/API/Node"><code>Node</code></a>, and <a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a>.</p>
 
 <dl>
- <dt><a class="new" href="/en-US/docs/Web/API/HTMLInputElement/checkValidity" rel="nofollow"><code>checkValidity()</code></a></dt>
+ <dt><a href="/en-US/docs/Web/API/HTMLInputElement/checkValidity"><code>checkValidity()</code></a></dt>
  <dd>Immediately runs the validity check on the element, triggering the document to fire the <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code></a> event at the element if the value isn't valid.</dd>
  <dt><a href="/en-US/docs/Web/API/HTMLFormElement/reportValidity"><code>reportValidity()</code></a></dt>
  <dd>Returns <code>true</code> if the element's value passes validity checks; otherwise, returns <code>false</code>.</dd>
  <dt><a href="/en-US/docs/Web/API/HTMLInputElement/select"><code>select()</code></a></dt>
  <dd>Selects the entire content of the <code>&lt;input&gt;</code> element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing.</dd>
- <dt><a class="new" href="/en-US/docs/Web/API/HTMLInputElement/setCustomValidity" rel="nofollow"><code>setCustomValidity()</code></a></dt>
+ <dt><a href="/en-US/docs/Web/API/HTMLInputElement/setCustomValidity"><code>setCustomValidity()</code></a></dt>
  <dd>Sets a custom message to display if the input element's value isn't valid.</dd>
  <dt><a href="/en-US/docs/Web/API/HTMLInputElement/setRangeText"><code>setRangeText()</code></a></dt>
  <dd>Sets the contents of the specified range of characters in the input element to a given string. A <code>selectMode</code> parameter is available to allow controlling how the existing content is affected.</dd>
@@ -796,7 +796,7 @@ translation_of: Web/HTML/Element/input
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/:placeholder-shown"><code>:placeholder-shown</code></a></td>
-   <td>Element that is currently displaying <a class="external" href="/zh-CN/docs/Web/HTML/Element/input#attr-placeholder" rel="noopener">placeholder text</a>, including input elements with the <a href="#htmlattrdefplaceholder">placeholder</a> attribute present that has, as of yet, no value.</td>
+   <td>Element that is currently displaying <a href="/zh-CN/docs/Web/HTML/Element/input#attr-placeholder">placeholder text</a>, including input elements with the <a href="#htmlattrdefplaceholder">placeholder</a> attribute present that has, as of yet, no value.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/:default"><code>:default</code></a></td>
@@ -843,7 +843,7 @@ translation_of: Web/HTML/Element/input
    <td><a href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> and <a href="/en-US/docs/Web/HTML/Element/textarea"><code>&lt;textarea&gt;</code></a> elements that currently have no value.</td>
   </tr>
   <tr>
-   <td><a class="new" href="/en-US/docs/Web/CSS/:user-invalid" rel="nofollow"><code>:user-invalid</code></a></td>
+   <td><a href="/en-US/docs/Web/CSS/:user-invalid"><code>:user-invalid</code></a></td>
    <td>Similar to <code>:invalid</code>, but is activated on blur. Matches invalid input but only after the user interaction, such as by focusing on the control, leaving the control, or attempting to submit the form containing the invalid control.</td>
   </tr>
  </tbody>
@@ -1015,7 +1015,7 @@ input[min][max] {}
   </tr>
   <tr>
    <td><a href="#htmlattrdefrequired">required</a></td>
-   <td><a class="new" href="/en-US/docs/Web/API/ValidityState/valueMissing" rel="nofollow"><code>validityState.valueMissing</code></a></td>
+   <td><a href="/en-US/docs/Web/API/ValidityState/valueMissing"><code>validityState.valueMissing</code></a></td>
    <td>Occurs when the <code>required</code> attribute is present but the value is <code>null</code> or radio or checkbox is not checked.</td>
   </tr>
   <tr>
@@ -1038,7 +1038,7 @@ input[min][max] {}
 <p>In addition to the errors described in the table above, the <code>validityState</code> interface contains the <code>badInput</code>, <code>valid</code>, and <code>customError</code> boolean readonly properties. The validity object includes:</p>
 
 <ul>
- <li><a class="new" href="/en-US/docs/Web/API/ValidityState/valueMissing" rel="nofollow"><code>validityState.valueMissing</code></a></li>
+ <li><a href="/en-US/docs/Web/API/ValidityState/valueMissing"><code>validityState.valueMissing</code></a></li>
  <li><a href="/en-US/docs/Web/API/ValidityState/typeMismatch"><code>validityState.typeMismatch</code></a></li>
  <li><a href="/en-US/docs/Web/API/ValidityState/patternMismatch"><code>validityState.patternMismatch</code></a></li>
  <li><a href="/en-US/docs/Web/API/ValidityState/tooLong"><code>validityState.tooLong</code></a></li>
@@ -1047,8 +1047,8 @@ input[min][max] {}
  <li><a href="/en-US/docs/Web/API/ValidityState/rangeOverflow"><code>validityState.rangeOverflow</code></a></li>
  <li><a href="/en-US/docs/Web/API/ValidityState/stepMismatch"><code>validityState.stepMismatch</code></a></li>
  <li><a href="/en-US/docs/Web/API/ValidityState/badInput"><code>validityState.badInput</code></a></li>
- <li><a class="new" href="/en-US/docs/Web/API/ValidityState/valid" rel="nofollow"><code>validityState.valid</code></a></li>
- <li><a class="new" href="/en-US/docs/Web/API/ValidityState/customError" rel="nofollow"><code>validityState.customError</code></a></li>
+ <li><a href="/en-US/docs/Web/API/ValidityState/valid"><code>validityState.valid</code></a></li>
+ <li><a href="/en-US/docs/Web/API/ValidityState/customError"><code>validityState.customError</code></a></li>
 </ul>
 
 <p>For each of these Boolean properties, a value of <code>true</code> indicates that the specified reason validation may have failed is true, with the exception of the <code>valid</code> property, which is <code>true</code> if the element's value obeys all constraints.</p>
@@ -1116,7 +1116,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513890" rel="noopener">bug 1513890</a>).</p>
+<p><strong>Note</strong>: Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513890">bug 1513890</a>).</p>
 </div>
 
 <h3 id="Localization">Localization</h3>
@@ -1155,10 +1155,10 @@ nameInput.addEventListener('invalid', () =&gt; {
    <th scope="row">Permitted ARIA roles</th>
    <td>
     <ul>
-     <li><code>type=button</code>: <code><a class="external" href="https://w3c.github.io/aria/#link" rel="noopener">link</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#menuitem" rel="noopener">menuitem</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#menuitemcheckbox" rel="noopener">menuitemcheckbox</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#menuitemradio" rel="noopener">menuitemradio</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#radio" rel="noopener">radio</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#switch" rel="noopener">switch</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#tab" rel="noopener">tab</a></code></li>
-     <li><code>type=checkbox</code>: <code><a class="external" href="https://w3c.github.io/aria/#button" rel="noopener">button</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#menuitemcheckbox" rel="noopener">menuitemcheckbox</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#option" rel="noopener">option</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#switch" rel="noopener">switch</a></code></li>
-     <li><code>type=image</code>: <code><a class="external" href="https://w3c.github.io/aria/#link" rel="noopener">link</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#menuitem" rel="noopener">menuitem</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#menuitemcheckbox" rel="noopener">menuitemcheckbox</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#menuitemradio" rel="noopener">menuitemradio</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#radio" rel="noopener">radio</a></code>, <code><a class="external" href="https://w3c.github.io/aria/#switch" rel="noopener">switch</a></code></li>
-     <li><code>type=radio</code>: <code><a class="external" href="https://w3c.github.io/aria/#menuitemradio" rel="noopener">menuitemradio</a></code></li>
+     <li><code>type=button</code>: <code><a href="https://w3c.github.io/aria/#link">link</a></code>, <code><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code>, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code>, <code><a href="https://w3c.github.io/aria/#tab">tab</a></code></li>
+     <li><code>type=checkbox</code>: <code><a href="https://w3c.github.io/aria/#button">button</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#option">option</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code></li>
+     <li><code>type=image</code>: <code><a href="https://w3c.github.io/aria/#link">link</a></code>, <code><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code>, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code></li>
+     <li><code>type=radio</code>: <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code></li>
      <li><code>type=color|date|datetime|datetime-local|email|file</code>: None</li>
      <li><code>type=hidden|month|number|password|range|reset</code>: None</li>
      <li><code>type=search|submit|tel|text|url|week</code>: None</li>
@@ -1186,12 +1186,12 @@ nameInput.addEventListener('invalid', () =&gt; {
 
 <h3 id="Size">Size</h3>
 
-<p>Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 <a class="external" href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels" rel="noopener">CSS pixels</a> is recommended.</p>
+<p>Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 <a href="https://www.w3.org/TR/WCAG21/#dfn-css-pixels">CSS pixels</a> is recommended.</p>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html" rel="noopener">Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1</a></li>
- <li><a class="external" href="http://adrianroselli.com/2019/06/target-size-and-2-5-5.html" rel="noopener">Target Size and 2.5.5 | Adrian Roselli</a></li>
- <li><a class="external" href="https://a11yproject.com/posts/large-touch-targets/" rel="noopener">Quick test: Large touch targets - The A11Y Project</a></li>
+ <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1</a></li>
+ <li><a href="http://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Target Size and 2.5.5 | Adrian Roselli</a></li>
+ <li><a href="https://a11yproject.com/posts/large-touch-targets/">Quick test: Large touch targets - The A11Y Project</a></li>
 </ul>
 
 <h2 id="规范">规范</h2>
