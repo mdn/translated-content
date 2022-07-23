@@ -1,5 +1,5 @@
 ---
-title: Creating an item component
+title: item コンポーネントの作成
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 tags:
