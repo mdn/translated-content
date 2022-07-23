@@ -4,6 +4,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 browser-compat: javascript.builtins.Symbol.toPrimitive
+l10n:
+  sourceCommit: 61a8cddbde9257e05c55063985f28ac8d364082a
 ---
 {{JSRef}}
 
