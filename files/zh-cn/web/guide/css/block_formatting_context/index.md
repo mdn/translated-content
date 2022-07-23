@@ -195,12 +195,9 @@ section {
 
 ## 规范
 
-| Specification                                                                                                    | Status                           | Comment               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('CSS3 Display', '#block-formatting-context', 'Block Formatting Context')}} | {{Spec2('CSS3 Display')}} | define BFC(abbr) etc. |
-| {{SpecName('CSS2.1', 'visuren.html#block-formatting', 'Block Formatting Context')}} | {{Spec2('CSS2.1')}}         | Initial definition.   |
+{{Specifications}}
 
-## 另见
+## 参见
 
 - {{ cssxref("float") }}, {{ cssxref("clear") }}
 - {{ css_key_concepts }}
