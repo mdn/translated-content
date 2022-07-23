@@ -146,15 +146,15 @@ display: unset;</pre>
 
 <p>将 <code>display</code> 设置为 <code>none</code> 会将元素从 <a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">可访问性树 <em>accessibility tree</em></a> 中移除。这会导致该元素及其所有子代元素不再被屏幕阅读技术 <em>screen reading technology </em>访问。</p>
 
-<p>如果你只是想从视觉上隐藏这个元素，对可访问性更加友好的做法是使用 <a class="external" href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">属性组合</a> 来将其从屏幕上隐藏，但仍可以被屏幕阅读器 <em>screen readers</em>  等辅助技术解析。</p>
+<p>如果你只是想从视觉上隐藏这个元素，对可访问性更加友好的做法是使用 <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">属性组合</a> 来将其从屏幕上隐藏，但仍可以被屏幕阅读器 <em>screen readers</em>  等辅助技术解析。</p>
 
 <h3 id="display_contents"><code>display: contents;</code></h3>
 
 <p>当前大多数浏览器对 <code>display: contents;</code> 的实现是：将设置了该值的元素从 <a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">可访问性树 <em>accessibility tree</em></a> 中移除，但保留其子代元素。这会导致该元素自身不再被屏幕阅读技术 <em>screen reading technology</em>  访问。这在 <a href="https://drafts.csswg.org/css-display/#valdef-display-contents">CSS 规范</a> 中被视为不正确的行为。</p>
 
 <ul>
- <li><a class="external external-icon" href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents | Hidde de Vries</a></li>
- <li><a class="external external-icon" href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
+ <li><a href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">More accessible markup with display: contents | Hidde de Vries</a></li>
+ <li><a href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
 </ul>
 
 <h3 id="Tables">Tables</h3>
@@ -162,10 +162,10 @@ display: unset;</pre>
 <p>将 {{HTMLElement("table")}} 元素的 <code>display</code> 值修改为 <code>block</code>, <code>grid</code>, 或 <code>flex</code> 会修改其在 <a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">可访问性树 <em>accessibility tree</em></a> 中的表现，这会使得 table 元素不能被屏幕阅读技术正常处理。</p>
 
 <ul>
- <li><a class="external external-icon" href="https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/">Short note on what CSS display properties do to table semantics — The Paciello Group</a></li>
- <li><a class="external external-icon" href="https://gomakethings.com/hidden-content-for-better-a11y/">Hidden content for better a11y | Go Make Things</a></li>
+ <li><a href="https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/">Short note on what CSS display properties do to table semantics — The Paciello Group</a></li>
+ <li><a href="https://gomakethings.com/hidden-content-for-better-a11y/">Hidden content for better a11y | Go Make Things</a></li>
  <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
- <li><a class="external external-icon" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h2 id="Specifications">规范</h2>

@@ -11,7 +11,7 @@ translation_of: Web/CSS/Syntax
 ---
 <div>{{cssref}}</div>
 
-<p>层叠样式表（Cascading Stylesheet，简称<a href="/en/CSS" title="CSS">CSS</a> ），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色，定位，装饰。CSS 的语法反映了这个目标，由下面两个部分构建：</p>
+<p>层叠样式表（Cascading Stylesheet，简称<a href="/en/CSS">CSS</a> ），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色，定位，装饰。CSS 的语法反映了这个目标，由下面两个部分构建：</p>
 
 <ul>
  <li>属性（ <strong>property）</strong>是一个标识符，用可读的名称来表示其特性。</li>
@@ -26,7 +26,7 @@ translation_of: Web/CSS/Syntax
 
 <p><img alt="css syntax - declaration.png" class="default internal" src="/@api/deki/files/6164/=css_syntax_-_declaration.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p>目前 CSS 中有 <a href="/en/CSS/CSS_Reference" title="en/CSS/CSS_Reference">100 多个属性</a> ，并且几乎有无限多个不同的值。并非所有的属性与值的配对都是被允许的，每个属性都定义了它的合法值。如果值对给定的属性而言非法时，声明就会被视为无效的，整个声明就会被 CSS 引擎忽略。</p>
+<p>目前 CSS 中有 <a href="/en/CSS/CSS_Reference">100 多个属性</a> ，并且几乎有无限多个不同的值。并非所有的属性与值的配对都是被允许的，每个属性都定义了它的合法值。如果值对给定的属性而言非法时，声明就会被视为无效的，整个声明就会被 CSS 引擎忽略。</p>
 
 <h2 id="CSS_声明块">CSS 声明块</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/CSS/Syntax
 
 <p><img alt="css syntax - declarations block.png" class="default internal" src="/@api/deki/files/6166/=css_syntax_-_declarations_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<div class="note">声明块的内容—开始与结束大括号之间的声明，可以放在 HTML <a href="/en/HTML/Global_attributes#attr-style" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-style"><code>style</code></a> 特性里。</div>
+<div class="note">声明块的内容—开始与结束大括号之间的声明，可以放在 HTML <a href="/en/HTML/Global_attributes#attr-style"><code>style</code></a> 特性里。</div>
 
 <h2 id="CSS_规则">CSS 规则</h2>
 
@@ -48,7 +48,7 @@ translation_of: Web/CSS/Syntax
 
 <p><img alt="css syntax - ruleset.png" class="default internal" src="/@api/deki/files/6167/=css_syntax_-_ruleset.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p>一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 <a href="/en/CSS/Getting_Started/Cascading_and_inheritance" title="Cascading and inheritance">层叠（cascade)</a> 算法。</p>
+<p>一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 <a href="/en/CSS/Getting_Started/Cascading_and_inheritance">层叠（cascade)</a> 算法。</p>
 
 <p><em>有一点需要注意的是，尽管用一组选择器来定义的单个规则集，比用多个单一选择器来定义的多个规则集更加简洁，但这却不适用于规则集的有效性。</em><br>
  <br>
@@ -66,13 +66,13 @@ translation_of: Web/CSS/Syntax
 
 <ul>
  <li>规则。如上，将一组 CSS 声明与用选择器定义的条件相关联。</li>
- <li>at 规则（<a href="https://developer.mozilla.org/en/CSS/At-rule" title="At-rule">at-rules</a>）。以 @ (U+0040 COMMERCIAL AT) 开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset  @import)，条件信息（比如 @media  @document), 描述信息（比如 @font-face)。</li>
+ <li>at 规则（<a href="https://developer.mozilla.org/en/CSS/At-rule">at-rules</a>）。以 @ (U+0040 COMMERCIAL AT) 开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset  @import)，条件信息（比如 @media  @document), 描述信息（比如 @font-face)。</li>
 </ul>
 
 <p>不是上面类型的语句则是非法的，被忽略。<br>
  <br>
  条件规则组（conditional group rules）是特殊的 at 规则，可以嵌套语句。它里面的语句只有在特定条件下才生效。<br>
- CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以用一些但不是全部的 at 规则，见<a href="https://developer.mozilla.org/en/CSS/CSS3#Conditionals" title="en/CSS/CSS3#Conditionals"><em>CSS Conditionals Level 3</em></a>。</p>
+ CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以用一些但不是全部的 at 规则，见<a href="https://developer.mozilla.org/en/CSS/CSS3#Conditionals"><em>CSS Conditionals Level 3</em></a>。</p>
 
 <h2 id="其它">其它</h2>
 
