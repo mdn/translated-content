@@ -32,7 +32,7 @@ translation_of: Web/HTML/Element/video
 
 <h2 id="Attributes">属性</h2>
 
-<p>类似于所有其它 HTML 元素，video 元素也支持 <a href="/zh-CN/docs/Web/HTML/Global_attributes" title="HTML 全局属性">全局属性</a>。</p>
+<p>类似于所有其它 HTML 元素，video 元素也支持 <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>。</p>
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
@@ -55,20 +55,20 @@ translation_of: Web/HTML/Element/video
 
  <dt>{{htmlattrdef("controlslist")}} {{experimental_inline}}</dt>
  <dd>
-  <p>当浏览器显示视频底部的播放控制面板（例如，指定了 <code>controls</code> 属性）时，<a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist" class="external" rel=" noopener"><code>controlslist</code></a> 属性会帮助浏览器选择在控制面板上显示哪些控件。</p>
+  <p>当浏览器显示视频底部的播放控制面板（例如，指定了 <code>controls</code> 属性）时，<a href="https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist"><code>controlslist</code></a> 属性会帮助浏览器选择在控制面板上显示哪些控件。</p>
   <p>允许接受的值有 <code>nodownload</code>, <code>nofullscreen</code> 和 <code>noremoteplayback</code>。</p>
   <p>如果要禁用画中画模式（和控件），请使用 <a href="#attr-disablepictureinpicture">disablePictureInPicture</a> 属性。</p>
  </dd>
 
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。<a href="/zh-CN/docs/Web/HTML/CORS_enabled_image" title="CORS_Enabled_Image">允许 CORS 的资源</a> 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被<em>污染</em>。允许的值如下：
+ <dd>该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。<a href="/zh-CN/docs/Web/HTML/CORS_enabled_image">允许 CORS 的资源</a> 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被<em>污染</em>。允许的值如下：
   <dl>
    <dt>anonymous</dt>
    <dd>在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 <code>Origin:</code> HTTP 请求首部时将不会携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 <code>Access-Control-Allow-Origin:</code> HTTP 响应首部），图像会被 <em>污染</em>，并且它的使用会受到限制。</dd>
    <dt>use-credentials</dt>
    <dd>在发送跨域请求时携带凭证（credential）信息。也就是说，浏览器在发送 <code>Origin:</code> HTTP 请求首部时将会携带 cookie、安全令牌、并且执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 <code>Access-Control-Allow-Credentials:</code> HTTP 响应首部），图像会被 <em>污染</em>，并且它的使用会受到限制。</dd>
   </dl>
-  <p>不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 <code>Origin:</code> HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 <strong>anonymous</strong> 一样使用。 查看 <a href="/zh-CN/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS 设置属性</a> 获取更多信息。</p>
+  <p>不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 <code>Origin:</code> HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 <strong>anonymous</strong> 一样使用。 查看 <a href="/zh-CN/docs/HTML/CORS_settings_attributes">CORS 设置属性</a> 获取更多信息。</p>
  </dd>
 
  <dt>{{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}</dt>
@@ -79,11 +79,11 @@ translation_of: Web/HTML/Element/video
  <dt>{{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}</dt>
  <dd>
    <p>布尔属性，用于在使用有线（HDMI、DVI 等）和无线技术（Miracast、Chromecast、DLNA、AirPlay 等）连接设备时，禁用远程播放功能。</p>
-   <p>在 Safari 中，您可以使用 <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html" class="external" rel=" noopener"><code>x-webkit-airplay="deny"</code></a> 作为兜底方案。</p>
+   <p>在 Safari 中，您可以使用 <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> 作为兜底方案。</p>
  </dd>
 
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>视频显示区域的高度，单位是 <a href="https://drafts.csswg.org/css-values/#px" class="external" rel=" noopener">CSS 像素</a>（仅限绝对值；<a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes" class="external" rel=" noopener">不支持百分比</a>）。</dd>
+ <dd>视频显示区域的高度，单位是 <a href="https://drafts.csswg.org/css-values/#px">CSS 像素</a>（仅限绝对值；<a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes">不支持百分比</a>）。</dd>
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd>布尔属性；指定后，会在视频播放结束的时候，自动返回视频开始的地方，继续播放。</dd>
 
@@ -119,7 +119,7 @@ translation_of: Web/HTML/Element/video
  <dd>要嵌到页面的视频的URL。可选；你也可以使用 video 块内的 {{HTMLElement("source")}} 元素来指定需要嵌到页面的视频。</dd>
 
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>视频显示区域的宽度，单位是 <a href="https://drafts.csswg.org/css-values/#px" class="external" rel=" noopener">CSS 像素</a>（仅限绝对值；<a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes" class="external" rel=" noopener">不支持百分比</a>）。</dd>
+ <dd>视频显示区域的宽度，单位是 <a href="https://drafts.csswg.org/css-values/#px">CSS 像素</a>（仅限绝对值；<a href="https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes">不支持百分比</a>）。</dd>
 </dl>
 
 <h2 id="事件">事件</h2>
@@ -158,7 +158,7 @@ translation_of: Web/HTML/Element/video
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.emptied_event", 'emptied')}}</td>
-   <td>媒体内容变为空；例如，当这个 media 已经加载完成（或者部分加载完成），则发送此事件，并调用 <a href="/zh-CN/docs/Web/API/HTMLMediaElement/load" rel="internal"><code>load()</code></a> 方法重新加载它。</td>
+   <td>媒体内容变为空；例如，当这个 media 已经加载完成（或者部分加载完成），则发送此事件，并调用 <a href="/zh-CN/docs/Web/API/HTMLMediaElement/load"><code>load()</code></a> 方法重新加载它。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.ended_event", 'ended')}}</td>
@@ -296,11 +296,11 @@ AddType video/ogg .ogg
 
 <ul>
  <li>
-  <a href="/zh-CN/docs/Web/Media/Formats" title="Web 媒体类型和格式指南">Web 媒体类型和格式指南</a>
+  <a href="/zh-CN/docs/Web/Media/Formats">Web 媒体类型和格式指南</a>
   <ul>
-    <li><a href="/zh-CN/docs/Web/Media/Formats/Containers" title="媒体容器（container）格式（文件类型）">媒体容器（container）格式（文件类型）</a></li>
-    <li><a href="/zh-CN/docs/Web/Media/Formats/Video_codecs" title="Web 视频编解码器（codec）指南">Web 视频编解码器（codec）指南</a></li>
-    <li><a href="/zh-CN/docs/Web/Media/Formats/Audio_codecs" title="Web 音频编解码器（codec）指南">Web 音频编解码器（codec）指南</a></li>
+    <li><a href="/zh-CN/docs/Web/Media/Formats/Containers">媒体容器（container）格式（文件类型）</a></li>
+    <li><a href="/zh-CN/docs/Web/Media/Formats/Video_codecs">Web 视频编解码器（codec）指南</a></li>
+    <li><a href="/zh-CN/docs/Web/Media/Formats/Audio_codecs">Web 音频编解码器（codec）指南</a></li>
   </ul>
  </li>
  <li>使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 设置 video 中图像位置和大小</li>

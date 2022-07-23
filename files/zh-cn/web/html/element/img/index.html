@@ -122,7 +122,7 @@ translation_of: Web/HTML/Element/img
  </dl>
  </dd>
  <dt>{{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}</dt>
- <dd>This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a class="external" href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a class="external" href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
+ <dd>This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
  <dt>{{htmlattrdef("ismap")}}</dt>
  <dd>这个布尔属性表示图像是否是<a href="https://en.wikipedia.org/wiki/Image_map#Server-side">服务器端 map</a> 的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
  <div class="note">
@@ -214,7 +214,7 @@ translation_of: Web/HTML/Element/img
  <dt>{{htmlattrdef("longdesc")}} {{Deprecated_Inline}}</dt>
  <dd>一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 {{htmlattrxref("id")}}。
  <div class="note">
- <p><strong>备注：</strong> 此属性的当前最新的 {{glossary("W3C")}} 版本，<a class="external" href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a> 中被提到，但在 {{glossary("WHATWG")}} 组织的 <a class="external" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a> 中依然处于被移除的状态。它的未来尚无定数；authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
+ <p><strong>备注：</strong> 此属性的当前最新的 {{glossary("W3C")}} 版本，<a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a> 中被提到，但在 {{glossary("WHATWG")}} 组织的 <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a> 中依然处于被移除的状态。它的未来尚无定数；authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("name")}} {{Deprecated_Inline}}</dt>
@@ -309,11 +309,11 @@ translation_of: Web/HTML/Element/img
 <p>当图像上没有 <code>alt</code> 属性时，一些屏幕阅读器可能会读出图像的文件名。如果文件名不能代表图像的内容，甚至是一团乱码，这可只能造成令人迷惑的体验。</p>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
- <li><a class="external" href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
- <li><a class="external" href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
+ <li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
+ <li><a href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
+ <li><a href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
  <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
- <li><a class="external" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h3 id="title_属性"><code>title</code> 属性</h3>
@@ -325,7 +325,7 @@ translation_of: Web/HTML/Element/img
 <p><code>title</code> 元素的值一般作为提示条 (tooltip) 呈现给用户，在光标于图片上停下后显示出来。尽管这<em>确实</em>能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 <code>title</code> 。</p>
 
 <ul>
- <li><a class="external" href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
+ <li><a href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
 </ul>
 
 <h2 id="技术信息">技术信息</h2>

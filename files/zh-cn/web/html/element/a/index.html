@@ -21,7 +21,7 @@ translation_of: Web/HTML/Element/a
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">内容分类</a></dfn></th>
+   <th scope="row"><dfn><a href="/en-US/docs/HTML/Content_categories">内容分类</a></dfn></th>
    <td>流内容、文字内容、交互内容、可触摸内容。</td>
   </tr>
   <tr>
@@ -65,13 +65,13 @@ translation_of: Web/HTML/Element/a
  </dd>
  <dt>{{htmlattrdef("href")}}</dt>
  <dd>包含超链接指向的 URL 或 URL 片段。</dd>
- <dd>URL 片段是哈希标记（#）前面的名称，哈希标记指定当前文档中的内部目标位置（HTML 元素的 ID）。URL 不限于基于 Web（HTTP）的文档，也可以使用浏览器支持的任何协议。例如，在大多数浏览器中正常工作的<a class="external external-icon" href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>、ftp:和 mailto：。
+ <dd>URL 片段是哈希标记（#）前面的名称，哈希标记指定当前文档中的内部目标位置（HTML 元素的 ID）。URL 不限于基于 Web（HTTP）的文档，也可以使用浏览器支持的任何协议。例如，在大多数浏览器中正常工作的<a href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>、ftp:和 mailto：。
  <div class="note">
- <p><strong>注意：</strong> 可以使用 <code>href="#top"</code> 或者 <code>href="#"</code> 链接返回到页面顶部。<a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid">这种行为是 HTML5 的特性</a>。</p>
+ <p><strong>注意：</strong> 可以使用 <code>href="#top"</code> 或者 <code>href="#"</code> 链接返回到页面顶部。<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid">这种行为是 HTML5 的特性</a>。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("hreflang")}}</dt>
- <dd>该属性用于指定链接文档的人类语言。其仅提供建议，并没有内置的功能。hreflang 允许的值取决于 HTML5 <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>。</dd>
+ <dd>该属性用于指定链接文档的人类语言。其仅提供建议，并没有内置的功能。hreflang 允许的值取决于 HTML5 <a href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>。</dd>
  <dt>{{htmlattrdef("ping")}}</dt>
  <dd>包含一个以空格分隔的 url 列表，当跟随超链接时，将由浏览器 (在后台) 发送带有正文 PING 的 POST 请求。通常用于跟踪。</dd>
  <dd>
@@ -118,7 +118,7 @@ translation_of: Web/HTML/Element/a
  <h3 id="过时的">过时的</h3>
  </dt>
  <dt>{{htmlattrdef("charset")}} {{Deprecated_Inline}}</dt>
- <dd>此属性定义链接资源的字符编码。该值是一个空格- 和/或逗号分隔的<a class="external" href="http://tools.ietf.org/html/rfc2045" style="color: rgb(102, 153, 204); text-decoration: none; padding-right: 16px; background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', Lucida, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">RFC 2045</a>中定义的字符集列表。默认值是 ISO-8859-1。
+ <dd>此属性定义链接资源的字符编码。该值是一个空格- 和/或逗号分隔的<a href="http://tools.ietf.org/html/rfc2045">RFC 2045</a>中定义的字符集列表。默认值是 ISO-8859-1。
  <div class="note">
  <p><strong>使用说明：</strong>在 HTML5 中该属性已作废，不应使用。 为了实现其效果，使用 HTTP content - type header 的链接资源。</p>
  </div>
@@ -128,7 +128,7 @@ translation_of: Web/HTML/Element/a
  <dt>{{htmlattrdef("name")}} {{Deprecated_Inline}}</dt>
  <dd>该属性在页面中定义锚点的目标位置时是必须的。 <strong>name</strong> 的值类似于 ID 核心属性值，该属性值在文档中是唯一的且由数字字母标示符所组成的。在 HTML 4.01 规范中，<strong>id</strong> 和 <strong>name</strong> 都可以使用 &lt;a&gt; 元素，只要他们有相同的值。
  <div class="note">
- <p><strong>使用说明：</strong> 该属性在 HTML5 中是过时的，使用 <a href="/zh-CN/docs/HTML/Global_attributes#attr-id" title="HTML/Global attributes#id">全局属性 <strong>id</strong></a> 来代替。</p>
+ <p><strong>使用说明：</strong> 该属性在 HTML5 中是过时的，使用 <a href="/zh-CN/docs/HTML/Global_attributes#attr-id">全局属性 <strong>id</strong></a> 来代替。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("rev")}} {{Deprecated_Inline}}</dt>
@@ -154,7 +154,7 @@ External Link
 
 <h4 id="Result">结果</h4>
 
-<p><a class="external" href="http://www.mozilla.com/">外部链接</a></p>
+<p><a href="http://www.mozilla.com/">外部链接</a></p>
 
 <h3 id="链接到本页的某个部分">链接到本页的某个部分</h3>
 
@@ -246,7 +246,7 @@ document.body.appendChild(link);</pre>
   </tr>
   <tr>
    <th>Chrome ≥39<br>
-    (<a href="https://code.google.com/p/chromium/issues/detail?id=388666" title="Issue 388666: Focus anchor (A) elements on mousedown">Chromium bug 388666</a>)</th>
+    (<a href="https://code.google.com/p/chromium/issues/detail?id=388666">Chromium bug 388666</a>)</th>
    <td style="background-color: LawnGreen;">是</td>
    <td style="background-color: LawnGreen;">是</td>
   </tr>
@@ -302,5 +302,5 @@ document.body.appendChild(link);</pre>
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>其它传递<a href="/zh-CN/docs/HTML/Text_level_semantics_conveying_elements" title="HTML/Text level semantics conveying elements">文本级语义</a>的元素：{{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.</li>
+ <li>其它传递<a href="/zh-CN/docs/HTML/Text_level_semantics_conveying_elements">文本级语义</a>的元素：{{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.</li>
 </ul>
