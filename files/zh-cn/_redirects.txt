@@ -224,7 +224,7 @@
 /zh-CN/docs/DOM/EventTarget	/zh-CN/docs/Web/API/EventTarget
 /zh-CN/docs/DOM/File	/zh-CN/docs/Web/API/File
 /zh-CN/docs/DOM/File.fileName	/zh-CN/docs/conflicting/Web/API/File/name
-/zh-CN/docs/DOM/File.fileSize	/zh-CN/docs/conflicting/Web/API/Blob/size
+/zh-CN/docs/DOM/File.fileSize	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/DOM/File.getAsBinary	/zh-CN/docs/Web/API/File/getAsBinary
 /zh-CN/docs/DOM/File.getAsText	/zh-CN/docs/Web/API/File/getAsText
 /zh-CN/docs/DOM/File.lastModifiedDate	/zh-CN/docs/Web/API/File/lastModifiedDate
@@ -1420,15 +1420,15 @@
 /zh-CN/docs/Web/API/FetchController/abort	/zh-CN/docs/Web/API/AbortController/abort
 /zh-CN/docs/Web/API/Fetch_API/基本概念	/zh-CN/docs/Web/API/Fetch_API/Basic_concepts
 /zh-CN/docs/Web/API/File.fileName	/zh-CN/docs/conflicting/Web/API/File/name
-/zh-CN/docs/Web/API/File.fileSize	/zh-CN/docs/conflicting/Web/API/Blob/size
+/zh-CN/docs/Web/API/File.fileSize	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/File.getAsBinary	/zh-CN/docs/Web/API/File/getAsBinary
 /zh-CN/docs/Web/API/File.getAsText	/zh-CN/docs/Web/API/File/getAsText
 /zh-CN/docs/Web/API/File.lastModifiedDate	/zh-CN/docs/Web/API/File/lastModifiedDate
 /zh-CN/docs/Web/API/File.name	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/File/Using_files_from_web_applications	/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/conflicting/Web/API/File/name
-/zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/conflicting/Web/API/Blob/size
-/zh-CN/docs/Web/API/File/size	/zh-CN/docs/conflicting/Web/API/Blob/size_3e7c15d3e7851172bb4623d0237d8c9e
+/zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/Web/API/Blob/size
+/zh-CN/docs/Web/API/File/size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/FileException	/zh-CN/docs/conflicting/Web/API/File_and_Directory_Entries_API_09acca60411d357b1f214619cb820a72
 /zh-CN/docs/Web/API/FileReader/onabort	/zh-CN/docs/conflicting/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/FileReader/onload	/zh-CN/docs/conflicting/Web/API/FileReader/load_event
