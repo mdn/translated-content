@@ -5,6 +5,8 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 browser-compat: api.setInterval
 page-type: web-api-global-function
+l10n:
+  sourceCommit: a7a18a2913f5abc5b4342fa01d1dae00cdd7c629
 ---
 {{APIRef("HTML DOM")}} 
 
@@ -206,4 +208,3 @@ En el fragmento de código que hay sobre estas líneas, se declara una función 
 - {{domxref("clearTimeout")}}
 - {{domxref("clearInterval")}}
 - {{domxref("window.requestAnimationFrame")}}
-
