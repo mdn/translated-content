@@ -7,7 +7,7 @@ tags:
   - 简介
 translation_of: MDN/Contribute/Howto/Create_and_edit_pages
 ---
-本文介绍了如何为编辑现有页面或创建新页面做出新的贡献。
+本文介绍了如何编辑现有页面或创建新页面以做出新的贡献。
 
 ## 编辑现有页面
 
