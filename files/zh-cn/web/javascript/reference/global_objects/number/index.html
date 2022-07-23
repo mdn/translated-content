@@ -9,11 +9,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
 <div>{{JSRef}}</div>
 
-<p> JavaScript 的 <strong><code>Number</code></strong> 对象是经过封装的能让你处理数字值的对象。<code>Number</code> 对象由 <code>Number()</code> 构造器创建。</p>
+<p> JavaScript 的 <strong><code>Number</code></strong> 对象是经过封装的能让你处理数字值的对象。<code>Number</code> 对象由 <code>Number()</code> 构造器创建。</p>
 
 <p>JavaScript 的<code>Number</code>类型为<a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">双精度 IEEE 754 64 位浮点</a>类型。</p>
 
-<p>最近出了 stage3{{jsxref("BigInt")}} 任意精度数字类型，已经进入 stage3 规范</p>
+<p>最近出了 stage3{{jsxref("BigInt")}} 任意精度数字类型，已经进入 stage3 规范</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -72,7 +72,7 @@ var <em>b</em> = Number('123'); // b === 123 is true
  <dt>{{jsxref("Number.isInteger()")}}</dt>
  <dd>确定传递的值类型是“number”，且是整数。</dd>
  <dt>{{jsxref("Number.isSafeInteger()")}}</dt>
- <dd>确定传递的值是否为安全整数 ( -<code>(2^53 - 1)</code> 至 <code>2^53 - 1</code>) 之间。</dd>
+ <dd>确定传递的值是否为安全整数 ( -<code>(2^53 - 1)</code> 至 <code>2^53 - 1</code>) 之间。</dd>
  <dt>{{jsxref("Number.toInteger()")}} {{Deprecated_Inline}}</dt>
  <dd>计算传递的值并将其转换为整数 (或无穷大)。</dd>
 </dl>
@@ -122,7 +122,7 @@ var notANum = Number.NaN;
 
 <h3 id="整数类型的范围">整数类型的范围</h3>
 
-<p>JavaScript 能够准确表示的整数范围在<code>-2^53</code>到<code>2^53</code>之间（不含两个端点），超过这个范围，无法精确表示这个整数。 (详情请参阅 ECMAScript standard, chapter <em><a href="https://www.ecma-international.org/ecma-262/#sec-ecmascript-language-types-number-type">6.1.6 The Number Type</a></em>):</p>
+<p>JavaScript 能够准确表示的整数范围在<code>-2^53</code>到<code>2^53</code>之间（不含两个端点），超过这个范围，无法精确表示这个整数。 (详情请参阅 ECMAScript standard, chapter <em><a href="https://www.ecma-international.org/ecma-262/#sec-ecmascript-language-types-number-type">6.1.6 The Number Type</a></em>):</p>
 
 <pre class="brush: js">var biggestInt = Number.MAX_SAFE_INTEGER;
 //9007199254740991
@@ -198,7 +198,7 @@ Number('-Infinity') //-Infinity</pre>
 
 <ul>
  <li>{{jsxref("NaN")}}</li>
- <li>全局对象 {{jsxref("Math")}} </li>
+ <li>全局对象 {{jsxref("Math")}} </li>
  <li>Integers with arbitrary precision: {{jsxref("BigInt")}}</li>
- <li><a href="https://medium.com/@maximus.koretskyi/javascripts-number-type-8d59199db1b6#.9whwe88tz">Number type in details</a></li>
+ <li><a href="https://medium.com/@maximus.koretskyi/javascripts-number-type-8d59199db1b6#.9whwe88tz">Number type in details</a></li>
 </ul>

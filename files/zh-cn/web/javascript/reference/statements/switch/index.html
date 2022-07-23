@@ -216,9 +216,9 @@ switch (foo) {
  </tbody>
 </table>
 
-<h3 id="switch_语句内的块级作用域"><code>switch</code> 语句内的块级作用域</h3>
+<h3 id="switch_语句内的块级作用域"><code>switch</code> 语句内的块级作用域</h3>
 
-<p>随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a> 和 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a> 语句，以在块级作用域内声明变量。</p>
+<p>随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下您可能需要使用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a> 和 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a> 语句，以在块级作用域内声明变量。</p>
 
 <p>以这段代码为例：</p>
 
@@ -237,9 +237,9 @@ switch (action) {
     break;
 }</pre>
 
-<p>这个示例会导致意想不到的错误 <code>Uncaught SyntaxError: Identifier 'message' has already been declared</code>.</p>
+<p>这个示例会导致意想不到的错误 <code>Uncaught SyntaxError: Identifier 'message' has already been declared</code>.</p>
 
-<p>这是因为第一个 <code>let message = 'hello';</code> 与第二个 <code>let message = 'hi';</code> 语句产生了冲突，虽然他们处于各自分隔的 case 语句中，即 <code>case 'say_hello':</code> 和 <code>case 'say_hi':</code>。导致这一问题的根本原因在于两个 <code>let</code> 语句处于同一个块级作用域，所以它们被认为是同一个变量名的重复声明。</p>
+<p>这是因为第一个 <code>let message = 'hello';</code> 与第二个 <code>let message = 'hi';</code> 语句产生了冲突，虽然他们处于各自分隔的 case 语句中，即 <code>case 'say_hello':</code> 和 <code>case 'say_hi':</code>。导致这一问题的根本原因在于两个 <code>let</code> 语句处于同一个块级作用域，所以它们被认为是同一个变量名的重复声明。</p>
 
 <p>通过把 case 语句包装到括号里面，我们就可以轻松解决这个问题。</p>
 
@@ -261,7 +261,7 @@ switch (action) {
   } // added brackets
 }</pre>
 
-<p>此时，这段代码就会在控制台输出 <code>hello</code>，不会再有任何报错。</p>
+<p>此时，这段代码就会在控制台输出 <code>hello</code>，不会再有任何报错。</p>
 
 <h2 id="规范">规范</h2>
 

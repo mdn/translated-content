@@ -31,15 +31,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果匹配成功，则 <code>search()</code> 返回正则表达式在字符串中首次匹配项的索引;否则，返回 <code>-1</code>。</p>
+<p>如果匹配成功，则 <code>search()</code> 返回正则表达式在字符串中首次匹配项的索引;否则，返回 <code>-1</code>。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>当你想要知道字符串中是否存在某个模式（pattern）时可使用 <code>search()</code>，类似于正则表达式的 {{jsxref("RegExp.test", "test()")}} 方法。当要了解更多匹配信息时，可使用 {{jsxref("String.match", "match()")}}（但会更慢一些），该方法类似于正则表达式的 {{jsxref("RegExp.exec", "exec()")}} 方法。</p>
+<p>当你想要知道字符串中是否存在某个模式（pattern）时可使用 <code>search()</code>，类似于正则表达式的 {{jsxref("RegExp.test", "test()")}} 方法。当要了解更多匹配信息时，可使用 {{jsxref("String.match", "match()")}}（但会更慢一些），该方法类似于正则表达式的 {{jsxref("RegExp.exec", "exec()")}} 方法。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="例子：使用_search">例子：使用 <code>search()</code></h3>
+<h3 id="例子：使用_search">例子：使用 <code>search()</code></h3>
 
 <p>下面的例子中用两个不同的正则表达式对同一个字符串执行搜索匹配，得到一个成功匹配（正数返回值）和一个失败匹配（-1）。</p>
 
@@ -69,7 +69,7 @@ console.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation</pre
 <h2 id="Gecko_注意事项">Gecko 注意事项</h2>
 
 <ul>
- <li>在 {{Gecko("8.0")}} 及之前的版本，<code>search()</code> 的实现有问题：在调用该方法时，若不传递参数或者参数为 {{jsxref("undefined")}}，该方法将不会匹配空字符串，而是匹配字符串 "undefined"。这个问题已被修复，现在，<code>"a".search()</code> 和 <code>"a".search(undefined)</code> 都能正确返回 0。</li>
+ <li>在 {{Gecko("8.0")}} 及之前的版本，<code>search()</code> 的实现有问题：在调用该方法时，若不传递参数或者参数为 {{jsxref("undefined")}}，该方法将不会匹配空字符串，而是匹配字符串 "undefined"。这个问题已被修复，现在，<code>"a".search()</code> 和 <code>"a".search(undefined)</code> 都能正确返回 0。</li>
  <li>Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard <code>flags</code> argument is deprecated and throws a console warning ({{bug(1142351)}}).</li>
  <li>Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard <code>flags</code> argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).</li>
  <li>Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard <code>flags</code> argument is no longer supported ({{bug(1108382)}}).</li>

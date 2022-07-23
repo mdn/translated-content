@@ -37,11 +37,11 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <h2 id="调用严格模式">调用严格模式</h2>
 
-<p>严格模式可以应用到整个脚本或个别函数中。不要在封闭大括弧 <code>{}</code> 内这样做，在这样的上下文中这么做是没有效果的。在 <code>eval</code> 、<code>Function</code> 、内联事件处理属性、  {{domxref("WindowTimers.setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本，它们会如预期一样工作。</p>
+<p>严格模式可以应用到整个脚本或个别函数中。不要在封闭大括弧 <code>{}</code> 内这样做，在这样的上下文中这么做是没有效果的。在 <code>eval</code> 、<code>Function</code> 、内联事件处理属性、  {{domxref("WindowTimers.setTimeout()")}} 方法中传入的脚本字符串，其行为类似于开启了严格模式的一个单独脚本，它们会如预期一样工作。</p>
 
 <h3 id="为脚本开启严格模式">为脚本开启严格模式</h3>
 
-<p>为整个脚本文件开启严格模式，需要在所有语句之前放一个特定语句 <code>"use strict";</code> （或 <code>'use strict';</code>）</p>
+<p>为整个脚本文件开启严格模式，需要在所有语句之前放一个特定语句 <code>"use strict";</code> （或 <code>'use strict';</code>）</p>
 
 <pre class="brush: js">// 整个脚本都开启严格模式的语法
 "use strict";
@@ -54,25 +54,25 @@ var v = "Hi!  I'm a strict mode script!";
 
 <h3 id="为函数开启严格模式">为函数开启严格模式</h3>
 
-<p>同样的，要给某个函数开启严格模式，得把 <code>"use strict";</code>  (或 <code>'use strict'; </code>) 声明<em>一字不漏地</em>放在函数体所有语句之前。</p>
+<p>同样的，要给某个函数开启严格模式，得把 <code>"use strict";</code>  (或 <code>'use strict'; </code>) 声明<em>一字不漏地</em>放在函数体所有语句之前。</p>
 
 <pre class="brush: js">function strict() {
   // 函数级别严格模式语法
   'use strict';
   function nested() {
-    return "And so am I!";
-  }
+    return "And so am I!";
+  }
   return "Hi!  I'm a strict mode function!  " + nested();
 }
 
 function notStrict() {
-  return "I'm not strict.";
+  return "I'm not strict.";
 }
 </pre>
 
 <h2 id="严格模式中的变化">严格模式中的变化</h2>
 
-<p>严格模式同时改变了语法及运行时行为。变化通常分为这几类：将问题直接转化为错误（如语法错误或运行时错误）, 简化了如何为给定名称的特定变量计算，简化了 <code>eval</code> 以及 <code>arguments</code>, 将写"安全“JavaScript 的步骤变得更简单，以及改变了预测未来 ECMAScript 行为的方式。</p>
+<p>严格模式同时改变了语法及运行时行为。变化通常分为这几类：将问题直接转化为错误（如语法错误或运行时错误）, 简化了如何为给定名称的特定变量计算，简化了 <code>eval</code> 以及 <code>arguments</code>, 将写"安全“JavaScript 的步骤变得更简单，以及改变了预测未来 ECMAScript 行为的方式。</p>
 
 <h3 id="将过失错误转成异常">将过失错误转成异常</h3>
 
@@ -81,12 +81,12 @@ function notStrict() {
 <p>第一，严格模式下无法再意外创建全局变量。在普通的 JavaScript 里面给一个错误命名的变量名赋值会使全局对象新增一个属性并继续“工作”（尽管将来可能会失败：在现代的 JavaScript 中有可能）。严格模式中意外创建全局变量被抛出错误替代：</p>
 
 <pre class="brush: js">"use strict";
-                       // 假如有一个全局变量叫做<code>mistypedVariable</code>
+                       // 假如有一个全局变量叫做<code>mistypedVariable</code>
 mistypedVaraible = 17; // 因为变量名拼写错误
-                       // 这一行代码就会抛出 ReferenceError
+                       // 这一行代码就会抛出 ReferenceError
 </pre>
 
-<p>第二，严格模式会使引起静默失败 (silently fail，注：不报错也没有任何效果) 的赋值操作抛出异常。例如，<code>NaN</code> 是一个不可写的全局变量。在正常模式下，给 <code>NaN</code> 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 <code>NaN</code> 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作 (给不可写属性赋值，给只读属性 (getter-only) 赋值，给不可扩展对象 (<a href="/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions" title="zh-CN/JavaScript/Reference/Global Objects/Object/preventExtensions">non-extensible</a> object) 的新属性赋值) 都会抛出异常：</p>
+<p>第二，严格模式会使引起静默失败 (silently fail，注：不报错也没有任何效果) 的赋值操作抛出异常。例如，<code>NaN</code> 是一个不可写的全局变量。在正常模式下，给 <code>NaN</code> 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 <code>NaN</code> 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作 (给不可写属性赋值，给只读属性 (getter-only) 赋值，给不可扩展对象 (<a href="/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions" title="zh-CN/JavaScript/Reference/Global Objects/Object/preventExtensions">non-extensible</a> object) 的新属性赋值) 都会抛出异常：</p>
 
 <pre class="brush: js">"use strict";
 
@@ -121,7 +121,7 @@ delete Object.prototype; // 抛出 TypeError 错误
 var o = { p: 1, p: 2 }; // !!! 语法错误
 </pre>
 
-<p>第五，严格模式要求函数的参数名唯一。在正常模式下，最后一个重名参数名会掩盖之前的重名参数。之前的参数仍然可以通过 <code>arguments[i] 来访问</code>, 还不是完全无法访问。然而，这种隐藏毫无意义而且可能是意料之外的 (比如它可能本来是打错了), 所以在严格模式下重名参数被认为是语法错误：</p>
+<p>第五，严格模式要求函数的参数名唯一。在正常模式下，最后一个重名参数名会掩盖之前的重名参数。之前的参数仍然可以通过 <code>arguments[i] 来访问</code>, 还不是完全无法访问。然而，这种隐藏毫无意义而且可能是意料之外的 (比如它可能本来是打错了), 所以在严格模式下重名参数被认为是语法错误：</p>
 
 <pre class="brush: js">function sum(a, a, c) { // !!! 语法错误
   "use strict";
@@ -129,7 +129,7 @@ var o = { p: 1, p: 2 }; // !!! 语法错误
 }
 </pre>
 
-<p>第六，严格模式禁止八进制数字语法. ECMAScript 并不包含八进制语法，但所有的浏览器都支持这种以零 (<code>0</code>) 开头的八进制语法：<code>0644 === 420</code> 还有 <code>"\045" === "%"</code>.在 ECMAScript 6 中支持为一个数字加"<code>0</code>o"的前缀来表示八进制数。</p>
+<p>第六，严格模式禁止八进制数字语法. ECMAScript 并不包含八进制语法，但所有的浏览器都支持这种以零 (<code>0</code>) 开头的八进制语法：<code>0644 === 420</code> 还有 <code>"\045" === "%"</code>.在 ECMAScript 6 中支持为一个数字加"<code>0</code>o"的前缀来表示八进制数。</p>
 
 <pre class="brush: js">var a = 0o10; // ES6: 八进制</pre>
 
@@ -155,20 +155,20 @@ var sum = 015 + // !!! 语法错误
 
 <p>严格模式简化了代码中变量名字映射到变量定义的方式。很多编译器的优化是依赖存储变量 X 位置的能力：这对全面优化 JavaScript 代码至关重要. JavaScript 有些情况会使得代码中名字到变量定义的基本映射只在运行时才产生。严格模式移除了大多数这种情况的发生，所以编译器可以更好的优化严格模式的代码。</p>
 
-<p>第一，严格模式禁用 <code>with</code>.  <code>with</code>所引起的问题是块内的任何名称可以映射 (map) 到 with 传进来的对象的属性，也可以映射到包围这个块的作用域内的变量 (甚至是全局变量), 这一切都是在运行时决定的：在代码运行之前是无法得知的. 严格模式下，使用 <code>with</code> 会引起语法错误，所以就不会存在 with 块内的变量在运行时才决定引用到哪里的情况了：</p>
+<p>第一，严格模式禁用 <code>with</code>.  <code>with</code>所引起的问题是块内的任何名称可以映射 (map) 到 with 传进来的对象的属性，也可以映射到包围这个块的作用域内的变量 (甚至是全局变量), 这一切都是在运行时决定的：在代码运行之前是无法得知的. 严格模式下，使用 <code>with</code> 会引起语法错误，所以就不会存在 with 块内的变量在运行时才决定引用到哪里的情况了：</p>
 
 <pre class="brush: js">"use strict";
 var x = 17;
 with (obj) { // !!! 语法错误
   // 如果没有开启严格模式，with 中的这个 x 会指向 with 上面的那个 x，还是 obj.x？
-  // 如果不运行代码，我们无法知道，因此，这种代码让引擎无法进行优化，速度也就会变慢。
+  // 如果不运行代码，我们无法知道，因此，这种代码让引擎无法进行优化，速度也就会变慢。
   x;
 }
 </pre>
 
-<p>一种取代 <code>with</code>的简单方法是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性。</p>
+<p>一种取代 <code>with</code>的简单方法是，将目标对象赋给一个短命名变量，然后访问这个变量上的相应属性。</p>
 
-<p>第二，<a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>严格模式下的 eval 不再为上层范围 (surrounding scope，注：包围 eval 代码块的范围) 引入新变量</code></a>. 在正常模式下， 代码 <code>eval("var x;")</code> 会给上层函数 (surrounding function) 或者全局引入一个新的变量 <code>x</code> . 这意味着，一般情况下， 在一个包含 <code>eval</code> 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义 (因为 <code>eval</code> 可能引入的新变量会覆盖它的外层变量). 在严格模式下 <code>eval</code> 仅仅为被运行的代码创建变量，所以 <code>eval</code> 不会使得名称映射到外部变量或者其他局部变量：</p>
+<p>第二，<a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/"><code>严格模式下的 eval 不再为上层范围 (surrounding scope，注：包围 eval 代码块的范围) 引入新变量</code></a>. 在正常模式下， 代码 <code>eval("var x;")</code> 会给上层函数 (surrounding function) 或者全局引入一个新的变量 <code>x</code> . 这意味着，一般情况下， 在一个包含 <code>eval</code> 调用的函数内所有没有引用到参数或者局部变量的名称都必须在运行时才能被映射到特定的定义 (因为 <code>eval</code> 可能引入的新变量会覆盖它的外层变量). 在严格模式下 <code>eval</code> 仅仅为被运行的代码创建变量，所以 <code>eval</code> 不会使得名称映射到外部变量或者其他局部变量：</p>
 
 <pre class="brush: js">var x = 17;
 var evalX = eval("'use strict'; var x = 42; x");
@@ -176,7 +176,7 @@ console.assert(x === 17);
 console.assert(evalX === 42);
 </pre>
 
-<p>相应的，如果函数 <code>eval</code> 被在严格模式下的<code>eval(...)</code>以表达式的形式调用时，其代码会被当做严格模式下的代码执行。当然也可以在代码中显式开启严格模式，但这样做并不是必须的。</p>
+<p>相应的，如果函数 <code>eval</code> 被在严格模式下的<code>eval(...)</code>以表达式的形式调用时，其代码会被当做严格模式下的代码执行。当然也可以在代码中显式开启严格模式，但这样做并不是必须的。</p>
 
 <pre class="brush: js">function strict1(str) {
   "use strict";
@@ -185,7 +185,7 @@ console.assert(evalX === 42);
 function strict2(f, str) {
   "use strict";
   return f(str); // 没有直接调用 eval(...): 当且仅当 str 中的代码开启了严格模式时
-                 // 才会在严格模式下运行
+                 // 才会在严格模式下运行
 }
 function nonstrict(str) {
   return eval(str); // 当且仅当 str 中的代码开启了"use strict"，str 中的代码才会在严格模式下运行
@@ -201,7 +201,7 @@ nonstrict("'use strict'; 'Strict mode code!'");
 
 <p>因此，在 eval 执行的严格模式代码下，变量的行为与严格模式下非 eval 执行的代码中的变量相同。</p>
 
-<p>第三，严格模式禁止删除声明变量。<code>delete name</code> 在严格模式下会引起语法错误：</p>
+<p>第三，严格模式禁止删除声明变量。<code>delete name</code> 在严格模式下会引起语法错误：</p>
 
 <pre class="brush: js">"use strict";
 
@@ -215,7 +215,7 @@ eval("var y; delete y;"); // !!! 语法错误
 
 <p>严格模式让<code>arguments</code>和<code>eval</code>少了一些奇怪的行为。两者在通常的代码中都包含了很多奇怪的行为： <code>eval</code>会添加删除绑定，改变绑定好的值，还会通过用它索引过的属性给形参取别名的方式修改形参。虽然在未来的 ECMAScript 版本解决这个问题之前，是不会有补丁来完全修复这个问题，但严格模式下将 eval 和 arguments 作为关键字对于此问题的解决是很有帮助的。</p>
 
-<p>第一，名称 <code>eval</code> 和 <code>arguments</code> 不能通过程序语法被绑定 (be bound) 或赋值。以下的所有尝试将引起语法错误：</p>
+<p>第一，名称 <code>eval</code> 和 <code>arguments</code> 不能通过程序语法被绑定 (be bound) 或赋值。以下的所有尝试将引起语法错误：</p>
 
 <pre class="brush: js">"use strict";
 eval = 17;
@@ -230,7 +230,7 @@ var y = function eval() { };
 var f = new Function("arguments", "'use strict'; return 17;");
 </pre>
 
-<p>第二，严格模式下，参数的值不会随 arguments 对象的值的改变而变化。在正常模式下，对于第一个参数是 arg 的函数，对 arg 赋值时会同时赋值给 arguments[<code>0</code>]，反之亦然（除非没有参数，或者 arguments[<code>0</code>] 被删除）。严格模式下，函数的 arguments 对象会保存函数被调用时的原始参数。arguments[i] 的值不会随与之相应的参数的值的改变而变化，同名参数的值也不会随与之相应的 arguments[i] 的值的改变而变化。</p>
+<p>第二，严格模式下，参数的值不会随 arguments 对象的值的改变而变化。在正常模式下，对于第一个参数是 arg 的函数，对 arg 赋值时会同时赋值给 arguments[<code>0</code>]，反之亦然（除非没有参数，或者 arguments[<code>0</code>] 被删除）。严格模式下，函数的 arguments 对象会保存函数被调用时的原始参数。arguments[i] 的值不会随与之相应的参数的值的改变而变化，同名参数的值也不会随与之相应的 arguments[i] 的值的改变而变化。</p>
 
 <pre class="brush: js">function f(a) {
   "use strict";
@@ -242,7 +242,7 @@ console.assert(pair[0] === 42);
 console.assert(pair[1] === 17);
 </pre>
 
-<p>第三，不再支持 <code>arguments.callee</code>。正常模式下，<code>arguments.callee</code> 指向当前正在执行的函数。这个作用很小：直接给执行函数命名就可以了！此外，<code>arguments.callee</code> 十分不利于优化，例如内联函数，因为 <code>arguments.callee</code> 会依赖对非内联函数的引用。在严格模式下，<code>arguments.callee</code> 是一个不可删除属性，而且赋值和读取时都会抛出异常：</p>
+<p>第三，不再支持 <code>arguments.callee</code>。正常模式下，<code>arguments.callee</code> 指向当前正在执行的函数。这个作用很小：直接给执行函数命名就可以了！此外，<code>arguments.callee</code> 十分不利于优化，例如内联函数，因为 <code>arguments.callee</code> 会依赖对非内联函数的引用。在严格模式下，<code>arguments.callee</code> 是一个不可删除属性，而且赋值和读取时都会抛出异常：</p>
 
 <pre class="brush: js">"use strict";
 var f = function() { return arguments.callee; };
@@ -253,7 +253,7 @@ f(); // 抛出类型错误
 
 <p>严格模式下更容易写出“安全”的 JavaScript。现在有些网站提供了方式给用户编写能够被网站其他用户执行的 JavaScript 代码。在浏览器环境下，JavaScript 能够获取用户的隐私信息，因此这类 Javascript 必须在运行前部分被转换成需要申请访问禁用功能的权限。没有很多的执行时检查的情况，Javascript 的灵活性让它无法有效率地做这件事。一些语言中的函数普遍出现，以至于执行时检查他们会引起严重的性能损耗。做一些在严格模式下发生的小改动，要求用户提交的 JavaScript 开启严格模式并且用特定的方式调用，就会大大减少在执行时进行检查的必要。</p>
 
-<p>第一，在严格模式下通过<code>this</code>传递给一个函数的值不会被强制转换为一个对象。对一个普通的函数来说，<code>this</code>总会是一个对象：不管调用时<code>this</code>它本来就是一个对象；还是用布尔值，字符串或者数字调用函数时函数里面被封装成对象的<code>this</code>；还是使用<code>undefined</code>或者<code>null</code>调用函数式<code>this</code>代表的全局对象（使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="en-US/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="en-US/JavaScript/Reference/Global_Objects/Function/apply"><code>apply</code></a>或者<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" title="en-US/JavaScript/Reference/Global_Objects/Function/bind">bind</a></code>方法来指定一个确定的<code>this</code>）。这种自动转化为对象的过程不仅是一种性能上的损耗，同时在浏览器中暴露出全局对象也会成为安全隐患，因为全局对象提供了访问那些所谓安全的 JavaScript 环境必须限制的功能的途径。所以对于一个开启严格模式的函数，指定的<code>this</code>不再被封装为对象，而且如果没有指定<code>this</code>的话它值是<code>undefined</code>：</p>
+<p>第一，在严格模式下通过<code>this</code>传递给一个函数的值不会被强制转换为一个对象。对一个普通的函数来说，<code>this</code>总会是一个对象：不管调用时<code>this</code>它本来就是一个对象；还是用布尔值，字符串或者数字调用函数时函数里面被封装成对象的<code>this</code>；还是使用<code>undefined</code>或者<code>null</code>调用函数式<code>this</code>代表的全局对象（使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="en-US/JavaScript/Reference/Global_Objects/Function/call"><code>call</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="en-US/JavaScript/Reference/Global_Objects/Function/apply"><code>apply</code></a>或者<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" title="en-US/JavaScript/Reference/Global_Objects/Function/bind">bind</a></code>方法来指定一个确定的<code>this</code>）。这种自动转化为对象的过程不仅是一种性能上的损耗，同时在浏览器中暴露出全局对象也会成为安全隐患，因为全局对象提供了访问那些所谓安全的 JavaScript 环境必须限制的功能的途径。所以对于一个开启严格模式的函数，指定的<code>this</code>不再被封装为对象，而且如果没有指定<code>this</code>的话它值是<code>undefined</code>：</p>
 
 <pre class="brush: js">"use strict";
 function fun() { return this; }

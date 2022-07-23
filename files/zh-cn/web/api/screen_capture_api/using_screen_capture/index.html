@@ -21,7 +21,7 @@ original_slug: Web/API/Screen_Capture_API/使用屏幕捕获API
 <p>Capturing screen contents as a live {{domxref("MediaStream")}} is initiated by calling {{domxref("MediaDevices.getDisplayMedia", "navigator.mediaDevices.getDisplayMedia()")}}, which returns a promise that resolves to a stream containing the live screen contents.</p>
 
 <figure>
-<figcaption><strong><em>开始屏幕捕捉：使用<code>async</code>/<code>await</code> 风格</em></strong></figcaption>
+<figcaption><strong><em>开始屏幕捕捉：使用<code>async</code>/<code>await</code> 风格</em></strong></figcaption>
 
 <pre class="brush: js notranslate">async function startCapture(displayMediaOptions) {
   let captureStream = null;
@@ -37,7 +37,7 @@ original_slug: Web/API/Screen_Capture_API/使用屏幕捕获API
 <p>You can write this code either using an asynchronous function and the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> operator, as shown above, or using the {{jsxref("Promise")}} directly, as seen below.</p>
 
 <figure>
-<figcaption><strong><em>开始屏幕捕获：使用<code>Promise</code> 风格</em></strong>
+<figcaption><strong><em>开始屏幕捕获：使用<code>Promise</code> 风格</em></strong>
 
 <pre class="brush: js notranslate">function startCapture(displayMediaOptions) {
  let captureStream = null;

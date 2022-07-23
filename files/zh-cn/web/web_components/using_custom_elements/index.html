@@ -23,11 +23,11 @@ translation_of: Web/Web_Components/Using_custom_elements
  <li><code>可选参数</code>，一个包含 <code>extends</code> 属性的配置对象，是可选参数。它指定了所创建的元素继承自哪个内置元素，可以继承任何内置元素。</li>
 </ul>
 
-<p>作为示例，我们可以像这样定义一个叫做 <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">word-count</a> 的 custom element：</p>
+<p>作为示例，我们可以像这样定义一个叫做 <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">word-count</a> 的 custom element：</p>
 
 <pre class="brush: js notranslate">customElements.define('word-count', WordCount, { extends: 'p' });</pre>
 
-<p>这个元素叫做 <code>word-count</code>，它的类对象是 <code>WordCount</code>, 继承自 {{htmlelement("p")}} 元素。</p>
+<p>这个元素叫做 <code>word-count</code>，它的类对象是 <code>WordCount</code>, 继承自 {{htmlelement("p")}} 元素。</p>
 
 <p>一个 custom element 的类对象可以通过 ES 2015 标准里的类语法生成。所以，<code>WordCount</code>可以写成下面这样：</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/Web_Components/Using_custom_elements
   }
 }</pre>
 
-<p>上面只是一个简单的例子，我们能做的不只这些。在构造函数中，我们可以设定一些生命周期的回调函数，在特定的时间，这些回调函数将会被调用。例如，<code>connectedCallback</code>会在 custom element 首次被插入到文档 DOM 节点上时被调用，而 <code>attributeChangedCallback</code>则会在 custom element 增加、删除或者修改某个属性时被调用。</p>
+<p>上面只是一个简单的例子，我们能做的不只这些。在构造函数中，我们可以设定一些生命周期的回调函数，在特定的时间，这些回调函数将会被调用。例如，<code>connectedCallback</code>会在 custom element 首次被插入到文档 DOM 节点上时被调用，而 <code>attributeChangedCallback</code>则会在 custom element 增加、删除或者修改某个属性时被调用。</p>
 
 <p>你可以在 <a href="#使用生命周期回调函数">使用生命周期回调函数</a>段落中了解更多相关信息。</p>
 
@@ -50,7 +50,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 <ul>
  <li><strong>Autonomous custom elements </strong>是独立的元素，它不继承其他内建的 HTML 元素。你可以直接把它们写成 HTML 标签的形式，来在页面上使用。例如 <code>&lt;popup-info&gt;</code>，或者是<code>document.createElement("popup-info")</code>这样。</li>
- <li><strong>Customized built-in elements</strong> 继承自基本的 HTML 元素。在创建时，你必须指定所需扩展的元素（正如上面例子所示），使用时，需要先写出基本的元素标签，并通过 {{htmlattrxref("is")}} 属性指定 custom element 的名称。例如<code>&lt;p is="word-count"&gt;</code>, 或者 <code>document.createElement("p", { is: "word-count" })</code>。</li>
+ <li><strong>Customized built-in elements</strong> 继承自基本的 HTML 元素。在创建时，你必须指定所需扩展的元素（正如上面例子所示），使用时，需要先写出基本的元素标签，并通过 {{htmlattrxref("is")}} 属性指定 custom element 的名称。例如<code>&lt;p is="word-count"&gt;</code>, 或者 <code>document.createElement("p", { is: "word-count" })</code>。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
@@ -59,16 +59,16 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 <h3 id="Autonomous_custom_elements">Autonomous custom elements</h3>
 
-<p>我们来看一下 <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (查看<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">在线示例</a>)，一个关于 autonomous custom element 的例子。它包含有一个图标和一段文字，并且图标显示在页面上。在这个图标获取焦点时，它会显示一个包含该段文字的信息框，用于展示更多的信息。</p>
+<p>我们来看一下 <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (查看<a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">在线示例</a>)，一个关于 autonomous custom element 的例子。它包含有一个图标和一段文字，并且图标显示在页面上。在这个图标获取焦点时，它会显示一个包含该段文字的信息框，用于展示更多的信息。</p>
 
 <p>为了实现这个功能，首先创建一个 JavaScript 文件，定义一个叫做<code>PopUpInfo</code>的类，它继承自{{domxref("HTMLElement")}}。Autonomous custom elements 总是继承自<code>HTMLElement</code>。</p>
 
 <pre class="brush: js notranslate">class PopUpInfo extends HTMLElement {
   constructor() {
     // 必须首先调用 super 方法
-    super();
+    super();
 
-    // 元素的功能代码写在这里
+    // 元素的功能代码写在这里
 
     ...
   }
@@ -170,11 +170,11 @@ wrapper.appendChild(info);</pre>
 <p>你可以正常使用<code>&lt;ul&gt;</code>标签，也可以通过<code>is</code>属性来指定一个 custom element 的名称。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 同样的，你可以在这里找到完整的 <a href="https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js">JavaScript 源码</a>。</p>
+<p><strong>注意</strong>: 同样的，你可以在这里找到完整的 <a href="https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js">JavaScript 源码</a>。</p>
 </div>
 
 <div class="note">
-<p><strong>译者注：在 </strong>chrome 66 版本上，该示例无法正确工作，相关问题：</p>
+<p><strong>译者注：在 </strong>chrome 66 版本上，该示例无法正确工作，相关问题：</p>
 
 <p><a href="https://stackoverflow.com/questions/39986046/how-to-create-new-instance-of-an-extended-class-of-custom-elements">How to create new instance of an extended class of custom elements</a></p>
 </div>
@@ -194,7 +194,7 @@ wrapper.appendChild(info);</pre>
 
 <pre class="brush: html notranslate">&lt;custom-square l="100" c="red"&gt;&lt;/custom-square&gt;</pre>
 
-<p>这里，类的构造函数很简单 — 我们将 shadow DOM 附加到元素上，然后将一个{{htmlelement("div")}}元素和{{htmlelement("style")}}元素附加到 shadow root 上：</p>
+<p>这里，类的构造函数很简单 — 我们将 shadow DOM 附加到元素上，然后将一个{{htmlelement("div")}}元素和{{htmlelement("style")}}元素附加到 shadow root 上：</p>
 
 <pre class="brush: js notranslate">var shadow = this.attachShadow({mode: 'open'});
 
@@ -240,7 +240,7 @@ adoptedCallback() {
   updateStyle(this);
 }</pre>
 
-<p>需要注意的是，如果需要在元素属性变化后，触发<code>attributeChangedCallback()</code>回调函数，你必须监听这个属性。这可以通过定义<code>observedAttributes()</code> get 函数来实现，<code>observedAttributes()</code>函数体内包含一个 return 语句，返回一个数组，包含了需要监听的属性名称：</p>
+<p>需要注意的是，如果需要在元素属性变化后，触发<code>attributeChangedCallback()</code>回调函数，你必须监听这个属性。这可以通过定义<code>observedAttributes()</code> get 函数来实现，<code>observedAttributes()</code>函数体内包含一个 return 语句，返回一个数组，包含了需要监听的属性名称：</p>
 
 <pre class="brush: js notranslate">static get observedAttributes() {return ['w', 'l']; }</pre>
 

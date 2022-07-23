@@ -76,7 +76,7 @@ console.log(factorial(3));
 
 <pre class="brush: js">function map(f,a) {
   let result = []; // 创建一个数组
-  let i; // 声明一个值，用来循环
+  let i; // 声明一个值，用来循环
   for (i = 0; i != a.length; i++)
     result[i] = f(a[i]);
   return result;
@@ -101,7 +101,7 @@ console.log(cube);</pre>
 
 <p>返回 [0, 1, 8, 125, 1000]。</p>
 
-<p>在 JavaScript 中，可以根据条件来定义一个函数。比如下面的代码，当<code>num</code> 等于 0 的时候才会定义 <code>myFunc</code> ：</p>
+<p>在 JavaScript 中，可以根据条件来定义一个函数。比如下面的代码，当<code>num</code> 等于 0 的时候才会定义 <code>myFunc</code> ：</p>
 
 <pre class="brush: js">var myFunc;
 if (num == 0){
@@ -110,9 +110,9 @@ if (num == 0){
   }
 }</pre>
 
-<p>除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数 ，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。</p>
+<p>除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数 ，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。</p>
 
-<p>当一个函数是一个对象的属性时，称之为<strong>方法</strong>。了解更多关于对象和方法的知识 <a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects" title="en-US/docs/JavaScript/Guide/Working with Objects">使用对象</a>。</p>
+<p>当一个函数是一个对象的属性时，称之为<strong>方法</strong>。了解更多关于对象和方法的知识 <a href="/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects" title="en-US/docs/JavaScript/Guide/Working with Objects">使用对象</a>。</p>
 
 <h2 id="调用函数">调用函数</h2>
 
@@ -121,7 +121,7 @@ if (num == 0){
 <pre class="brush: js">square(5);
 </pre>
 
-<p>上述语句通过提供参数 5 来调用函数。函数执行完它的语句会返回值 25。</p>
+<p>上述语句通过提供参数 5 来调用函数。函数执行完它的语句会返回值 25。</p>
 
 <p>函数一定要处于调用它们的域中，但是函数的声明可以被提升 (出现在调用语句之后)，如下例：</p>
 
@@ -133,7 +133,7 @@ function square(n) { return n*n }
 <p>函数域是指函数声明时的所在的地方，或者函数在顶层被声明时指整个程序。</p>
 
 <div class="note">
-<p><strong>备注：</strong>注意只有使用如上的语法形式（即 <code>function funcName(){}</code>）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。</p>
+<p><strong>备注：</strong>注意只有使用如上的语法形式（即 <code>function funcName(){}</code>）才可以。而下面的代码是无效的。就是说，函数提升仅适用于函数声明，而不适用于函数表达式。</p>
 </div>
 
 <pre class="brush: js example-bad">console.log(square); // square is hoisted with an initial value undefined.
@@ -165,7 +165,7 @@ d = factorial(4); // 24 赋值给 d
 e = factorial(5); // 120 赋值给 e
 </pre>
 
-<p>还有其它的方式来调用函数。常见的一些情形是某些地方需要动态调用函数，或者函数的实参数量是变化的，或者调用函数的上下文需要指定为在运行时确定的特定对象。显然，函数本身就是对象，因此这些对象也有方法（参考{{jsxref("Function")}} ）。作为此中情形之一，{{jsxref("Function.apply", "apply()")}}方法可以实现这些目的。</p>
+<p>还有其它的方式来调用函数。常见的一些情形是某些地方需要动态调用函数，或者函数的实参数量是变化的，或者调用函数的上下文需要指定为在运行时确定的特定对象。显然，函数本身就是对象，因此这些对象也有方法（参考{{jsxref("Function")}} ）。作为此中情形之一，{{jsxref("Function.apply", "apply()")}}方法可以实现这些目的。</p>
 
 <h2 id="函数作用域">函数作用域</h2>
 
@@ -221,7 +221,7 @@ getScore(); // 返回 "Chamahk scored 5"
 
 <ol>
  <li><code>bar()</code></li>
- <li><code>arguments.callee()</code> <strong>（译者注：ES5 禁止在严格模式下使用此属性）</strong></li>
+ <li><code>arguments.callee()</code> <strong>（译者注：ES5 禁止在严格模式下使用此属性）</strong></li>
  <li><code>foo()</code></li>
 </ol>
 
@@ -370,7 +370,7 @@ A(1); // logs 6 (1 + 2 + 3)</pre>
 
 outside()(10); // returns 20 instead of 10</pre>
 
-<p>命名冲突发生在<code>return x</code>上，<code>inside</code>的参数<code>x</code>和<code>outside</code>变量<code>x</code>发生了冲突。这里的作用链域是{<code>inside</code>, <code>outside</code>, 全局对象}。因此<code>inside</code>的<code>x</code>具有最高优先权，返回了 20（<code>inside</code>的<code>x</code>）而不是 10（<code>outside</code>的<code>x</code>）。</p>
+<p>命名冲突发生在<code>return x</code>上，<code>inside</code>的参数<code>x</code>和<code>outside</code>变量<code>x</code>发生了冲突。这里的作用链域是{<code>inside</code>, <code>outside</code>, 全局对象}。因此<code>inside</code>的<code>x</code>具有最高优先权，返回了 20（<code>inside</code>的<code>x</code>）而不是 10（<code>outside</code>的<code>x</code>）。</p>
 
 <h2 id="闭包">闭包</h2>
 
@@ -382,10 +382,10 @@ outside()(10); // returns 20 instead of 10</pre>
 
 <pre class="brush: js">var pet = function(name) {          //外部函数定义了一个变量"name"
   var getName = function() {
-    //内部函数可以访问 外部函数定义的"name"
+    //内部函数可以访问 外部函数定义的"name"
     return name;
   }
-  //返回这个内部函数，从而将其暴露在外部函数作用域
+  //返回这个内部函数，从而将其暴露在外部函数作用域
   return getName;
 };
 myPet = pet("Vivie");
@@ -413,7 +413,7 @@ myPet();                            // 返回结果 "Vivie"
 
     setSex: function(newSex) {
       if(typeof newSex == "string"
-        &amp;&amp; (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")) {
+        &amp;&amp; (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")) {
         sex = newSex;
       }
     }
@@ -572,18 +572,18 @@ console.log(a3); // logs [ 8, 6, 7, 9 ]</pre>
   setInterval(function growUp() {
     // 在非严格模式下，growUp() 函数将`this`定义为“全局对象”，
     // 这与 Person() 定义的`this`不同，
-    // 所以下面的语句不会起到预期的效果。
+    // 所以下面的语句不会起到预期的效果。
     this.age++;
   }, 1000);
 }
 
 var p = new Person();</pre>
 
-<p>在 ECMAScript 3/5 里，通过把<code>this</code>的值赋值给一个变量可以修复这个问题。</p>
+<p>在 ECMAScript 3/5 里，通过把<code>this</code>的值赋值给一个变量可以修复这个问题。</p>
 
 <pre class="brush: js">function Person() {
   var self = this; // 有的人习惯用`that`而不是`self`，
-                   // 无论你选择哪一种方式，请保持前后代码的一致性
+                   // 无论你选择哪一种方式，请保持前后代码的一致性
   self.age = 0;
 
   setInterval(function growUp() {
@@ -621,23 +621,23 @@ var p = new Person();</pre>
  </dd>
  <dt>{{jsxref("Global_Objects/isFinite", "isFinite()")}}</dt>
  <dd>
- <p><code><strong>isFinite()</strong></code>函数判断传入的值是否是有限的数值。 如果需要的话，其参数首先被转换为一个数值。</p>
+ <p><code><strong>isFinite()</strong></code>函数判断传入的值是否是有限的数值。 如果需要的话，其参数首先被转换为一个数值。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</dt>
  <dd>
- <p><code><strong>isNaN()</strong></code>函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：<code>isNaN</code>函数内部的<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">强制转换规则</a></code>十分有趣； 另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code>来判断数值类型。</p>
+ <p><code><strong>isNaN()</strong></code>函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：<code>isNaN</code>函数内部的<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">强制转换规则</a></code>十分有趣； 另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code>来判断数值类型。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</dt>
  <dd>
- <p><code><strong>parseFloat()</strong></code> 函数解析字符串参数，并返回一个浮点数。</p>
+ <p><code><strong>parseFloat()</strong></code> 函数解析字符串参数，并返回一个浮点数。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</dt>
  <dd>
- <p><code><strong>parseInt()</strong></code> 函数解析字符串参数，并返回指定的基数（基础数学中的数制）的整数。</p>
+ <p><code><strong>parseInt()</strong></code> 函数解析字符串参数，并返回指定的基数（基础数学中的数制）的整数。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</dt>
  <dd>
- <p><code><strong>decodeURI()</strong></code> 函数对先前经过{{jsxref("Global_Objects/encodeURI", "encodeURI")}}函数或者其他类似方法编码过的字符串进行解码。</p>
+ <p><code><strong>decodeURI()</strong></code> 函数对先前经过{{jsxref("Global_Objects/encodeURI", "encodeURI")}}函数或者其他类似方法编码过的字符串进行解码。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</dt>
  <dd>
@@ -649,15 +649,15 @@ var p = new Person();</pre>
  </dd>
  <dt>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</dt>
  <dd>
- <p><code><strong>encodeURIComponent()</strong></code> 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。</p>
+ <p><code><strong>encodeURIComponent()</strong></code> 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}</dt>
  <dd>
- <p>已废弃的 <code><strong>escape()</strong></code> 方法计算生成一个新的字符串，其中的某些字符已被替换为十六进制转义序列。使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}}或者{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}替代本方法。</p>
+ <p>已废弃的 <code><strong>escape()</strong></code> 方法计算生成一个新的字符串，其中的某些字符已被替换为十六进制转义序列。使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}}或者{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}替代本方法。</p>
  </dd>
  <dt>{{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}</dt>
  <dd>
- <p>已废弃的 <code><strong>unescape()</strong></code> 方法计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像{{jsxref("Global_Objects/escape", "escape")}}里介绍的一样。因为 <code>unescape</code> 已经废弃，建议使用{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}或者{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} 替代本方法。</p>
+ <p>已废弃的 <code><strong>unescape()</strong></code> 方法计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像{{jsxref("Global_Objects/escape", "escape")}}里介绍的一样。因为 <code>unescape</code> 已经废弃，建议使用{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}或者{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} 替代本方法。</p>
  </dd>
 </dl>
 

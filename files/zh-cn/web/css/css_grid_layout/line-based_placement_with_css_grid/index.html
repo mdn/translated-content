@@ -54,7 +54,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 &lt;/div&gt;
 </pre>
 
-<p> </p>
+<p> </p>
 </div>
 
 <p>{{ EmbedLiveSample('A_basic_example', '300', '330') }}</p>
@@ -132,9 +132,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 </div>
 
 <div id="Grid_Shorthands">
-<h2 id="grid-column_和_grid-row_缩写"><code>grid-column</code> 和 <code>grid-row</code> 缩写</h2>
+<h2 id="grid-column_和_grid-row_缩写"><code>grid-column</code> 和 <code>grid-row</code> 缩写</h2>
 
-<p>我们用了不少代码定位每个元素，你应该不会惊讶有 {{glossary("shorthand properties", "shorthand")}}缩写。{{cssxref("grid-column-start")}}和{{cssxref("grid-column-end")}}属性可以合并为 {{cssxref("grid-column")}}，{{cssxref("grid-row-start")}}和{{cssxref("grid-row-end")}}则合并为{{cssxref("grid-row")}}。</p>
+<p>我们用了不少代码定位每个元素，你应该不会惊讶有 {{glossary("shorthand properties", "shorthand")}}缩写。{{cssxref("grid-column-start")}}和{{cssxref("grid-column-end")}}属性可以合并为 {{cssxref("grid-column")}}，{{cssxref("grid-row-start")}}和{{cssxref("grid-row-end")}}则合并为{{cssxref("grid-row")}}。</p>
 
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
@@ -189,7 +189,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <h3 id="默认跨度">默认跨度</h3>
 
-<p>在上例中，为了展示这些属性，我指定了每个结束行线和列线，但实际上如果一个元素只延伸一个轨道的话，你可以省略 <code>grid-column-end</code> 或 <code>grid-row-end</code> 值。元素默认延伸一个轨道。我们最初的例子的普通写法会是这样：</p>
+<p>在上例中，为了展示这些属性，我指定了每个结束行线和列线，但实际上如果一个元素只延伸一个轨道的话，你可以省略 <code>grid-column-end</code> 或 <code>grid-row-end</code> 值。元素默认延伸一个轨道。我们最初的例子的普通写法会是这样：</p>
 
 <div id="End_Lines">
 <div class="hidden">
@@ -302,7 +302,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <h2 id="grid-area属性"><code>grid-area属性</code></h2>
 
-<p>我们可以更进一步，给每个元素只定义一个属性 {{cssxref("grid-area")}}。值的顺序如下</p>
+<p>我们可以更进一步，给每个元素只定义一个属性 {{cssxref("grid-area")}}。值的顺序如下</p>
 
 <ul>
  <li>grid-row-start</li>
@@ -357,7 +357,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <p>{{ EmbedLiveSample('The_grid-area_property', '300', '330') }}</p>
 
-<p><code>grid-area</code> 的值的顺序看起来可能有点奇怪，比如说它正好和定义 margin 和 padding 的缩写的值的顺序相反。但如果说是因为它与 CSS 书写模式规范中的书写方向相关就不难理解了。我们会在之后的文章中探讨网格与书写模式的关系，但我们有 4 个书写流关联的方向：</p>
+<p><code>grid-area</code> 的值的顺序看起来可能有点奇怪，比如说它正好和定义 margin 和 padding 的缩写的值的顺序相反。但如果说是因为它与 CSS 书写模式规范中的书写方向相关就不难理解了。我们会在之后的文章中探讨网格与书写模式的关系，但我们有 4 个书写流关联的方向：</p>
 
 <ul>
  <li>块起始（block-start）</li>
@@ -368,12 +368,12 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <p>我们现在的工作语言是英语，一种从左至右书写的语言。块起始 就是网格容器的顶端行线，块结束 就是底端行线。行起始 是左端列线，因为 行起始 与当前书写模式的起点一致，行结束 就是网格右端列线。</p>
 
-<p>当我们用 <code>grid-area</code> 属性来定义网格区域时，我们先定义 <code>块起始（block-start）</code> 和 <code>行起始（inline-start）</code>, 然后再定义 <code>块结束（block-end）</code> 和 <code>行结束（inline-end）</code>。起初，我们可能会因为习惯了顶、右、底、左的属性定义顺序，觉得这个顺序奇怪，但当从网站的书写模式有多个方向的角度思考，这就显得合理了。</p>
+<p>当我们用 <code>grid-area</code> 属性来定义网格区域时，我们先定义 <code>块起始（block-start）</code> 和 <code>行起始（inline-start）</code>, 然后再定义 <code>块结束（block-end）</code> 和 <code>行结束（inline-end）</code>。起初，我们可能会因为习惯了顶、右、底、左的属性定义顺序，觉得这个顺序奇怪，但当从网站的书写模式有多个方向的角度思考，这就显得合理了。</p>
 
 <h2 id="反方向计数">反方向计数</h2>
 
 <div id="counting_backwards">
-<p>我们也可以从行和块结束线开始反方向计数，对于英语来说就是右端的列线和底端的行线。这些线会被记为 <code>-1</code>，然后你可以从这往前数，所以倒数第 2 条线会被记为 <code>-2</code>。值得注意的是最后一条线是指显式定义网格的最后一条线，即由 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 定义的网格，并不把隐式定义网格的加入的行和列纳入考虑。</p>
+<p>我们也可以从行和块结束线开始反方向计数，对于英语来说就是右端的列线和底端的行线。这些线会被记为 <code>-1</code>，然后你可以从这往前数，所以倒数第 2 条线会被记为 <code>-2</code>。值得注意的是最后一条线是指显式定义网格的最后一条线，即由 <code>grid-template-columns</code> 和 <code>grid-template-rows</code> 定义的网格，并不把隐式定义网格的加入的行和列纳入考虑。</p>
 
 <p>下面这个例子中，我通过从右端和底端开始定义布局，把之前的例子的布局翻转了</p>
 
@@ -524,7 +524,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <p>从基于线定位的角度来说，间距的行为就像是使基线变得特别宽。所有从这条线开始的东西会从间距结束的地方开始，你并不能定位也不能放任何东西到这个间距的空间中。如果你希望得到行为和轨道行为相似的间距，你当然可以定义轨道来作为间距。</p>
 
-<h2 id="使用_span_关键字">使用 <code>span</code> 关键字</h2>
+<h2 id="使用_span_关键字">使用 <code>span</code> 关键字</h2>
 
 <div id="using_the_span_keyword">
 <p>除了”起始线与结束线“的定位方法，你还可以使用”起始线与跨越轨道数量“的定位方法</p>
@@ -580,7 +580,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <p>{{ EmbedLiveSample('using_the_span_keyword', '300', '330') }}</p>
 
-<p>你也可以在 <code>grid-row-start</code>/<code>grid-row-end</code> 和 <code>grid-column-start</code>/<code>grid-column-end</code> 属性中使用 <code>span</code> 关键字。接下来两个例子会创建同样的网格。第一个例子中我们设定了起始行，然后说我们想结束线在跨越 3 个线之后。那这个元素就会从 1 号线开始，跨越 3 个线，到 4 号线结束。</p>
+<p>你也可以在 <code>grid-row-start</code>/<code>grid-row-end</code> 和 <code>grid-column-start</code>/<code>grid-column-end</code> 属性中使用 <code>span</code> 关键字。接下来两个例子会创建同样的网格。第一个例子中我们设定了起始行，然后说我们想结束线在跨越 3 个线之后。那这个元素就会从 1 号线开始，跨越 3 个线，到 4 号线结束。</p>
 
 <pre class="brush: css">.box1 {
     grid-column: 1;
@@ -598,7 +598,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 <p>为了熟悉基于线的定位方式，你可以尝试用网格布置几个列宽不同的元素来实现一些常见布局。记住，如果你没有给所有元素定位，那些没被定位的元素就会按照自动定位规则定位。这么做的结果可能恰好和你的目标一样，但如果一些元素在你预料之外的地方出现，先检查一下你有没有给它定位。</p>
 
-<p>再者，记住你明确定位的元素是可以互相重叠的。有时你能用这点创造一些有趣的效果，但有时也会因为你定位错了线而导致不正确的重叠。<a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a> 可以在你学习时给你帮助，特别是当你的网格比较复杂时。</p>
+<p>再者，记住你明确定位的元素是可以互相重叠的。有时你能用这点创造一些有趣的效果，但有时也会因为你定位错了线而导致不正确的重叠。<a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Firefox Grid Highlighter</a> 可以在你学习时给你帮助，特别是当你的网格比较复杂时。</p>
 
 <section id="Quick_links">
 <ol>

@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 
 <h3 id="locales_参数"><code>locales</code> 参数</h3>
 
-<p><code>locales</code> 参数必须是一个 <a href="http://tools.ietf.org/html/rfc5646">BCP 47 语言标记</a>的字符串，或者是一个包括多个语言标记的数组。如果 <code>locales</code> 参数未提供或者是 undefined，便会使用运行时默认的 locale。</p>
+<p><code>locales</code> 参数必须是一个 <a href="http://tools.ietf.org/html/rfc5646">BCP 47 语言标记</a>的字符串，或者是一个包括多个语言标记的数组。如果 <code>locales</code> 参数未提供或者是 undefined，便会使用运行时默认的 locale。</p>
 
 <p>一个 BCP 47 语言标记代表了一种语言或者区域（两者没有很大的区别）。在其最常见的格式中，它以这样的顺序囊括了这些内容：语言代码，脚本代码，和国家代码，全部由连字符分隔开。例如：</p>
 
@@ -50,9 +50,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
  <li><code>"zh-Hans-CN"</code>：在中国使用的简体中文 (primary language with script and country codes)。</li>
 </ul>
 
-<p>在 BCP 47 中表示语言，脚本，国家（区域）和变体（少用）的语言子标记含义可以在<a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"> IANA 语言子标记注册</a>中找到。</p>
+<p>在 BCP 47 中表示语言，脚本，国家（区域）和变体（少用）的语言子标记含义可以在<a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"> IANA 语言子标记注册</a>中找到。</p>
 
-<p>BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是："u"（Unicode）扩展。它可以用于请求一个自定义区域特定行为的 {{jsxref("Collator")}}，{{jsxref("NumberFormat")}}，或者 {{jsxref("DateTimeFormat")}} 对象。例如：</p>
+<p>BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是："u"（Unicode）扩展。它可以用于请求一个自定义区域特定行为的 {{jsxref("Collator")}}，{{jsxref("NumberFormat")}}，或者 {{jsxref("DateTimeFormat")}} 对象。例如：</p>
 
 <ul>
  <li><code>"de-DE-u-co-phonebk"</code>：使用德语的电话簿排序变体，这会把元音变音扩展成字符对：ä → ae, ö → oe, ü → ue。</li>
@@ -90,12 +90,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
   <tr>
    <td>{{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}</td>
    <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES Int Draft', '#intl-object', 'Intl')}}</td>
    <td>{{Spec2('ES Int Draft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

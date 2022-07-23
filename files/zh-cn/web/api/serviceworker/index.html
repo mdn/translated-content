@@ -11,11 +11,11 @@ translation_of: Web/API/ServiceWorker
 ---
 <div>{{SeeCompatTable}} {{APIRef("Service Workers API")}}</div>
 
-<div>ServiceWorker API 的<a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API"> ServiceWorker 接口</a> 提供一个对一个服务工作者的引用。 多个浏览上下文（例如页面，工作者等）可以与相同的服务工作者相关联，每个都通过唯一的 ServiceWorker 对象。</div>
+<div>ServiceWorker API 的<a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API"> ServiceWorker 接口</a> 提供一个对一个服务工作者的引用。 多个浏览上下文（例如页面，工作者等）可以与相同的服务工作者相关联，每个都通过唯一的 ServiceWorker 对象。</div>
 
-<div> </div>
+<div> </div>
 
-<p>一个 ServiceWorker 对象在 {{domxref("ServiceWorkerRegistration.active")}} 属性和 {{domxref("ServiceWorkerContainer.controller")}} 属性中可用 — 这是一个激活并在控制页面的 service worker(service worker 成功注册，被控页面已经重新加载完毕.)</p>
+<p>一个 ServiceWorker 对象在 {{domxref("ServiceWorkerRegistration.active")}} 属性和 {{domxref("ServiceWorkerContainer.controller")}} 属性中可用 — 这是一个激活并在控制页面的 service worker(service worker 成功注册，被控页面已经重新加载完毕.)</p>
 
 <p>ServiceWorker 接口被分配了一系列生命周期事件 --- 安装和激活 --- 以及功能型的事件，包括 fetch.一个 ServiceWorker 对象有一个与之关联的 {{domxref("ServiceWorker.state")}},指示着它的生命周期。</p>
 
@@ -40,7 +40,7 @@ translation_of: Web/API/ServiceWorker
 <h2 id="方法">方法</h2>
 
 <dl>
- <dd><em>ServiceWorker 接口继承它父类 {{domxref("Worker")}} 的方法 ,并带有一个 {{domxref("Worker.terminate")}} 的异常 --- 它不应该从 service workers.ServiceWorker 中访问。</em></dd>
+ <dd><em>ServiceWorker 接口继承它父类 {{domxref("Worker")}} 的方法 ,并带有一个 {{domxref("Worker.terminate")}} 的异常 --- 它不应该从 service workers.ServiceWorker 中访问。</em></dd>
 </dl>
 
 <h2 id="例子">例子</h2>

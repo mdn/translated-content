@@ -13796,6 +13796,12 @@
       "Fredchat"
     ]
   },
+  "Web/API/Element/gotpointercapture_event": {
+    "modified": "2020-10-15T22:16:22.004Z",
+    "contributors": [
+      "fmartin5"
+    ]
+  },
   "Web/API/Element/hasAttribute": {
     "modified": "2019-03-23T23:53:10.754Z",
     "contributors": [
@@ -15038,12 +15044,6 @@
       "ylerjen"
     ]
   },
-  "Web/API/GlobalEventHandlers/ongotpointercapture": {
-    "modified": "2020-10-15T22:16:22.004Z",
-    "contributors": [
-      "fmartin5"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onload": {
     "modified": "2019-03-23T23:45:30.027Z",
     "contributors": [
@@ -15052,12 +15052,6 @@
       "khalid32",
       "Mgjbot",
       "BenoitL"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onloadend": {
-    "modified": "2019-03-18T21:35:41.854Z",
-    "contributors": [
-      "loella16"
     ]
   },
   "Web/API/GlobalEventHandlers/onloadstart": {
@@ -20263,6 +20257,12 @@
     "modified": "2020-10-15T22:31:14.653Z",
     "contributors": [
       "fatmalimem19"
+    ]
+  },
+  "Web/API/XMLHttpRequest/loadend_event": {
+    "modified": "2019-03-18T21:35:41.854Z",
+    "contributors": [
+      "loella16"
     ]
   },
   "Web/API/XMLHttpRequest/open": {
@@ -32203,26 +32203,6 @@
       "teoli"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-07-03T14:11:44.605Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "jsfez",
-      "jjperuzzi",
-      "Faegy",
-      "P45QU10U",
-      "gpartenet",
-      "Yves_ASTIER",
-      "QuentinPerez",
-      "teoli",
-      "darul75",
-      "tinou98",
-      "mssa.ndiaye",
-      "npichon",
-      "e.begovic"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-03-12T19:38:41.114Z",
     "contributors": [
@@ -32470,17 +32450,6 @@
       "DocMcBrown",
       "delislejm",
       "goofy_bz"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:37:01.767Z",
-    "contributors": [
-      "SphinxKnight",
-      "zatamine",
-      "teoli",
-      "Delapouite",
-      "Mgjbot",
-      "BenoitL"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -40752,6 +40721,17 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:37:01.767Z",
+    "contributors": [
+      "SphinxKnight",
+      "zatamine",
+      "teoli",
+      "Delapouite",
+      "Mgjbot",
+      "BenoitL"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {

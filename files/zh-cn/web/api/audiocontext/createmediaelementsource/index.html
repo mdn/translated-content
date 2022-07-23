@@ -6,10 +6,10 @@ translation_of: Web/API/AudioContext/createMediaElementSource
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>{{ domxref("AudioContext") }} 接口的 <code>createMediaElementSource()</code> 方法用于创建一个新的 {{ domxref("MediaElementAudioSourceNode") }} 对象，输入某个存在的 HTML {{htmlelement("audio")}} or {{htmlelement("video")}} 元素，对应的音频即可被播放或者修改。</p>
+<p>{{ domxref("AudioContext") }} 接口的 <code>createMediaElementSource()</code> 方法用于创建一个新的 {{ domxref("MediaElementAudioSourceNode") }} 对象，输入某个存在的 HTML {{htmlelement("audio")}} or {{htmlelement("video")}} 元素，对应的音频即可被播放或者修改。</p>
 </div>
 
-<p>为寻求更多关于媒体元素音频源节点的具体信息，请查阅 {{ domxref("MediaElementAudioSourceNode") }} 参考页。</p>
+<p>为寻求更多关于媒体元素音频源节点的具体信息，请查阅 {{ domxref("MediaElementAudioSourceNode") }} 参考页。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -29,10 +29,10 @@ var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
 
 <h2 id="示例">示例</h2>
 
-<p>该示例由 {{htmlelement("audio") }} 元素，通过使用 <code>createMediaElementSource()</code> 方法，创建了一个音源，将其通过 {{ domxref("GainNode") }} 节点，输出到{{ domxref("AudioDestinationNode") }} 节点以播放。当鼠标指针移动时，<code>updatePage()</code> 函数被调用，该函数计算当前鼠标 Y 坐标与页面高度的比值， 改变 {{ domxref("GainNode") }} 节点的值以调整音量。您就可以通过鼠标上下移动而改变音乐的音量了。</p>
+<p>该示例由 {{htmlelement("audio") }} 元素，通过使用 <code>createMediaElementSource()</code> 方法，创建了一个音源，将其通过 {{ domxref("GainNode") }} 节点，输出到{{ domxref("AudioDestinationNode") }} 节点以播放。当鼠标指针移动时，<code>updatePage()</code> 函数被调用，该函数计算当前鼠标 Y 坐标与页面高度的比值， 改变 {{ domxref("GainNode") }} 节点的值以调整音量。您就可以通过鼠标上下移动而改变音乐的音量了。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 您也可以 <a href="http://mdn.github.io/webaudio-examples/media-source-buffer/">浏览该示例的在线演示</a>, 或者 <a href="https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer">浏览源代码</a>.</p>
+<p><strong>Note</strong>: 您也可以 <a href="http://mdn.github.io/webaudio-examples/media-source-buffer/">浏览该示例的在线演示</a>, 或者 <a href="https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer">浏览源代码</a>.</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

@@ -5,11 +5,11 @@ translation_of: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 ---
 <div>{{CanvasSidebar}} {{ PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas") }}</div>
 
-<div>{{HTMLElement("canvas")}} 标签只是一个位图，它并不提供任何已经绘制在上面的对象的信息。canvas 的内容不能像语义化的 HTML 一样暴露给一些协助工具。一般来说，你应该避免在交互型的网站或者 App 上使用 canvas。接下来的内容能帮助你让 canvas 更加容易交互。</div>
+<div>{{HTMLElement("canvas")}} 标签只是一个位图，它并不提供任何已经绘制在上面的对象的信息。canvas 的内容不能像语义化的 HTML 一样暴露给一些协助工具。一般来说，你应该避免在交互型的网站或者 App 上使用 canvas。接下来的内容能帮助你让 canvas 更加容易交互。</div>
 
 <h2 id="内容兼容">内容兼容</h2>
 
-<p>&lt;canvas&gt; ... &lt;/canvas&gt;标签里的内容被可以对一些不支持 canvas 的浏览器提供兼容。这对残疾用户设备也很有用（比如屏幕阅读器），这样它们就可以读取并解释 DOM 里的子节点。在<a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a>有个很好的例子来演示它如何运作。</p>
+<p>&lt;canvas&gt; ... &lt;/canvas&gt;标签里的内容被可以对一些不支持 canvas 的浏览器提供兼容。这对残疾用户设备也很有用（比如屏幕阅读器），这样它们就可以读取并解释 DOM 里的子节点。在<a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a>有个很好的例子来演示它如何运作。</p>
 
 <pre class="brush: html">&lt;canvas&gt;
   &lt;h2&gt;Shapes&lt;/h2&gt;
@@ -26,7 +26,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 
 <h2 id="ARIA_规则">ARIA 规则</h2>
 
-<p>Accessible Rich Internet Applications <strong>(<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>)</strong> 定义了让 Web 内容和 Web 应用更容易被有身体缺陷的人获取的办法。你可以用 ARIA 属性来描述 canvas 元素的行为和存在目的。详情见<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>和 <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA 技术</a>。</p>
+<p>Accessible Rich Internet Applications <strong>(<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>)</strong> 定义了让 Web 内容和 Web 应用更容易被有身体缺陷的人获取的办法。你可以用 ARIA 属性来描述 canvas 元素的行为和存在目的。详情见<a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a>和 <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA 技术</a>。</p>
 
 <pre class="brush: html">&lt;canvas id="button" tabindex="0" role="button" aria-pressed="false" aria-label="Start game"&gt;&lt;/canvas&gt;
 </pre>
@@ -57,9 +57,9 @@ ctx.fill();
 ctx.addHitRegion({id: "circle"});
 
 canvas.addEventListener("mousemove", function(event){
-  if(event.region) {
-    alert("hit region: " + event.region);
-  }
+  if(event.region) {
+    alert("hit region: " + event.region);
+  }
 });
 &lt;/script&gt;</pre>
 

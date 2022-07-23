@@ -19,8 +19,8 @@ original_slug: Web/Guide/CSS/Media_queries
 <p>媒体查询常被用于以下目的：</p>
 
 <ul>
- <li>有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} <a href="/zh-CN/docs/Web/CSS/At-rule">at-rules</a> 用<a href="/en-US/docs/Web/CSS">CSS</a> 装饰样式。</li>
- <li>用<code>media=</code> 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他<a href="/zh-CN/docs/Web/HTML">HTML</a>元素指定特定的媒体类型。如：</li>
+ <li>有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} <a href="/zh-CN/docs/Web/CSS/At-rule">at-rules</a> 用<a href="/en-US/docs/Web/CSS">CSS</a> 装饰样式。</li>
+ <li>用<code>media=</code> 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他<a href="/zh-CN/docs/Web/HTML">HTML</a>元素指定特定的媒体类型。如：</li>
 </ul>
 
 <pre><code>&lt;link rel="stylesheet" src="styles.css" media="screen" /&gt;
@@ -32,7 +32,7 @@ original_slug: Web/Guide/CSS/Media_queries
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong>本页的例子使用 CSS <code>@media</code> 的方式来说明目的，但是对于所有类型的媒体查询，基本语法均相同。</p>
+<p><strong>注意：</strong>本页的例子使用 CSS <code>@media</code> 的方式来说明目的，但是对于所有类型的媒体查询，基本语法均相同。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -42,7 +42,7 @@ original_slug: Web/Guide/CSS/Media_queries
 <p>当媒体类型（如果指定）与在其上显示文档的设备匹配并且所有媒体功能表达式都计算为 true 时，媒体查询将计算为 true。涉及未知媒体类型的查询始终为 false。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 即使媒体查询返回 false，带有媒体查询附加到其{{HTMLElement("link")}}标记的样式表<a href="http://scottjehl.github.com/CSS-Download-Tests/">仍将下载</a>。但是，除非查询结果变为 true，否则其内容将不适用。</p>
+<p><strong>注意：</strong> 即使媒体查询返回 false，带有媒体查询附加到其{{HTMLElement("link")}}标记的样式表<a href="http://scottjehl.github.com/CSS-Download-Tests/">仍将下载</a>。但是，除非查询结果变为 true，否则其内容将不适用。</p>
 </div>
 
 <h3 id="媒体类型">媒体类型</h3>
@@ -60,7 +60,7 @@ original_slug: Web/Guide/CSS/Media_queries
  <dd>主要用于语音合成器。</dd>
 </dl>
 
-<div class="note"><strong>被废弃的媒体类型：</strong> CSS2.1 和  <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> 定义了一些额外的媒体类型 (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, 以及 <code>aural</code>)，但是他们在<a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> 中已经被废弃，并且不应该被使用。<code>aural</code>类型被替换为具有相似效果的<code>speech</code>。</div>
+<div class="note"><strong>被废弃的媒体类型：</strong> CSS2.1 和  <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> 定义了一些额外的媒体类型 (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, 以及 <code>aural</code>)，但是他们在<a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a> 中已经被废弃，并且不应该被使用。<code>aural</code>类型被替换为具有相似效果的<code>speech</code>。</div>
 
 <h3 id="媒体特性">媒体特性</h3>
 
@@ -123,9 +123,9 @@ original_slug: Web/Guide/CSS/Media_queries
   <tr>
    <td>{{cssxref("@media/display-mode", "display-mode")}}</td>
    <td>
-    <p>应用程序的显示模式，如 web app 的 manifest 中的<a href="/zh-CN/docs/Web/Manifest#display"><code>display</code></a> 成员所指定</p>
+    <p>应用程序的显示模式，如 web app 的 manifest 中的<a href="/zh-CN/docs/Web/Manifest#display"><code>display</code></a> 成员所指定</p>
    </td>
-   <td>在 <a href="http://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>被定义。</td>
+   <td>在 <a href="http://w3c.github.io/manifest/#the-display-mode-media-feature">Web App Manifest spec</a>被定义。</td>
   </tr>
   <tr>
    <td>{{cssxref("@media/forced-colors", "forced-colors")}}</td>
@@ -242,11 +242,11 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h3 id="逻辑操作符">逻辑操作符</h3>
 
-<p><em>逻辑操作符</em>（<em>logical operators</em>） <code>not</code>, <code>and</code>, 和 <code>only</code> 可用于联合构造复杂的媒体查询，您还可以通过用逗号分隔多个媒体查询，将它们组合为一个规则。</p>
+<p><em>逻辑操作符</em>（<em>logical operators</em>） <code>not</code>, <code>and</code>, 和 <code>only</code> 可用于联合构造复杂的媒体查询，您还可以通过用逗号分隔多个媒体查询，将它们组合为一个规则。</p>
 
 <h4 id="and"><code>and</code></h4>
 
-<p> <code>and</code> 操作符用于将多个媒体查询规则组合成单条媒体查询，当每个查询规则都为真时则该条媒体查询为真，它还用于将媒体功能与媒体类型结合在一起。</p>
+<p> <code>and</code> 操作符用于将多个媒体查询规则组合成单条媒体查询，当每个查询规则都为真时则该条媒体查询为真，它还用于将媒体功能与媒体类型结合在一起。</p>
 
 <h4 id="not"><code>not</code></h4>
 
@@ -309,7 +309,7 @@ original_slug: Web/Guide/CSS/Media_queries
 <p>在前面的示例中，我们已经看到<code>and</code>运算符用于将媒体类型与媒体功能分组。and 运算符还可以将多个媒体功能组合到单个媒体查询中。同时，<code>not</code>运算符会否定媒体查询，从而基本上颠倒了它的正常含义。唯一的运算符可防止较早的浏览器应用样式。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 在大多数情况下，默认情况下，如果未指定其他类型，则使用<code>all</code>媒体类型。但是，如果使用<code>not</code>或<code>only</code>运算符，则必须显式指定媒体类型。</p>
+<p><strong>注意：</strong> 在大多数情况下，默认情况下，如果未指定其他类型，则使用<code>all</code>媒体类型。但是，如果使用<code>not</code>或<code>only</code>运算符，则必须显式指定媒体类型。</p>
 </div>
 
 <h3 id="结合多种类型和特性">结合多种类型和特性</h3>
@@ -369,7 +369,7 @@ original_slug: Web/Guide/CSS/Media_queries
 <p>媒体查询 4 级规范对语法进行了一些改进，以使用具有“范围”类型（例如宽度或高度，减少冗余）的功能进行媒体查询。级别 4 添加了用于编写此类的查询范围上下文。例如，使用最大宽度<code>max-</code> 功能，我们可以编写以下代码：</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 <a href="/zh-CN/docs/Web/CSS/@media#Browser_compatibility"><code>@media</code> browser compatibility table</a>。</p>
+<p><strong>Note:</strong> 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 <a href="/zh-CN/docs/Web/CSS/@media#Browser_compatibility"><code>@media</code> browser compatibility table</a>。</p>
 </div>
 
 <pre class="brush: css">@media (max-width: 30em) { ... }</pre>
@@ -389,15 +389,15 @@ original_slug: Web/Guide/CSS/Media_queries
 
 </pre>
 
-<p>媒体查询 4 级规范还添加了用<strong>and</strong>, <strong>not</strong>, 和 <strong>or</strong>实现的完整的布尔运算来合并媒体查询的方法。</p>
+<p>媒体查询 4 级规范还添加了用<strong>and</strong>, <strong>not</strong>, 和 <strong>or</strong>实现的完整的布尔运算来合并媒体查询的方法。</p>
 
-<h3 id="使用_not否定一个特性">使用 <code>not</code>否定一个特性</h3>
+<h3 id="使用_not否定一个特性">使用 <code>not</code>否定一个特性</h3>
 
 <p>在媒体功能周围使用<code>not()</code>会否定查询中的该特性。例如，如果设备没有悬停功能，则<code>not(hover)</code>将被匹配：</p>
 
 <pre class="brush: css">@media (not(hover)) { ... }</pre>
 
-<h3 id="用_or测试多个特性">用 <code>or</code>测试多个特性</h3>
+<h3 id="用_or测试多个特性">用 <code>or</code>测试多个特性</h3>
 
 <p>您可以使用<code>or</code>测试多个功能之间的匹配，如果任何功能为 true，则解析为 true。例如，以下查询测试具有单色显示或悬停功能的设备：</p>
 

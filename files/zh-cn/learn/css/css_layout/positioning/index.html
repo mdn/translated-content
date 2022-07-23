@@ -24,7 +24,7 @@ original_slug: Learn/CSS/CSS_layout/定位
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>HTML 基础 (学习 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML">HTML 导学</a>) 和 CSS 怎样工作的 (学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"> CSS 导学</a>)</td>
+   <td>HTML 基础 (学习 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML">HTML 导学</a>) 和 CSS 怎样工作的 (学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"> CSS 导学</a>)</td>
   </tr>
   <tr>
    <th scope="row">目的：</th>
@@ -37,9 +37,9 @@ original_slug: Learn/CSS/CSS_layout/定位
 
 <p>定位是一个相当复杂的话题，所以我们深入了解代码之前，让我们审视一下布局理论，并让我们了解它的工作原理。</p>
 
-<p>首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model">盒模型</a> ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的 100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。您不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。 如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素 <code>display: block;</code>。</p>
+<p>首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model">盒模型</a> ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的 100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。您不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。 如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素 <code>display: block;</code>。</p>
 
-<p>这只是解释了单个元素，但是元素相互之间如何交互呢？ <strong>正常的布局流</strong>（在布局介绍文章中提到）是将元素放置在浏览器视口内的系统。默认情况下，块级元素在视口中垂直布局——每个都将显示在上一个元素下面的新行上，并且它们的外边距将分隔开它们。</p>
+<p>这只是解释了单个元素，但是元素相互之间如何交互呢？ <strong>正常的布局流</strong>（在布局介绍文章中提到）是将元素放置在浏览器视口内的系统。默认情况下，块级元素在视口中垂直布局——每个都将显示在上一个元素下面的新行上，并且它们的外边距将分隔开它们。</p>
 
 <p>内联元素表现不一样——它们不会出现在新行上；相反，它们互相之间以及任何相邻（或被包裹）的文本内容位于同一行上，只要在父块级元素的宽度内有空间可以这样做。如果没有空间，那么溢流的文本或元素将向下移动到新行。</p>
 
@@ -78,7 +78,7 @@ span {
 
 <p>在我们阅读本文时，我们将多次重复这个例子，因为我们要展示不同定位选项的效果。</p>
 
-<p>如果可能，我们希望您在本地计算机上跟随练习 — 从 GitHub 仓库下载一个<code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html">0_basic-flow.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html">源代码</a>) 然后用它作为我们的起步点。</p>
+<p>如果可能，我们希望您在本地计算机上跟随练习 — 从 GitHub 仓库下载一个<code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html">0_basic-flow.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html">源代码</a>) 然后用它作为我们的起步点。</p>
 
 <h2 id="介绍定位">介绍定位</h2>
 
@@ -90,7 +90,7 @@ span {
 
 <p>静态定位是每个元素获取的默认值——它只是意味着“将元素放入它在文档布局流中的正常位置 ——这里没有什么特别的。</p>
 
-<p>为了演示这一点，并为以后的部分设置示例，首先在 HTML 中添加一个<code>positioned</code> 的 <code>class</code> 到第二个{{htmlelement("p")}}：</p>
+<p>为了演示这一点，并为以后的部分设置示例，首先在 HTML 中添加一个<code>positioned</code> 的 <code>class</code> 到第二个{{htmlelement("p")}}：</p>
 
 <pre class="brush: html notranslate">&lt;p class="positioned"&gt; ... &lt;/p&gt;</pre>
 
@@ -104,7 +104,7 @@ span {
 <p>如果现在保存和刷新，除了第 2 段的更新的背景颜色，根本没有差别。这很好——正如我们之前所说，静态定位是默认行为！</p>
 
 <div class="note">
-<p><strong>注意：</strong>你可以在 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html">1_static-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html">see source code</a>)。</p>
+<p><strong>注意：</strong>你可以在 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html">1_static-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html">see source code</a>)。</p>
 </div>
 
 <h3 id="相对定位">相对定位</h3>
@@ -115,9 +115,9 @@ span {
 
 <p>如果您在此阶段保存并刷新，则结果根本不会发生变化。那么如何修改元素的位置呢？您需要使用{{cssxref("top")}}，{{cssxref("bottom")}}，{{cssxref("left")}}和{{cssxref("right")}}属性，我们将在下一节中解释。</p>
 
-<h3 id="Introducing_top_bottom_left_and_right">介绍 top, bottom, left,  right</h3>
+<h3 id="Introducing_top_bottom_left_and_right">介绍 top, bottom, left,  right</h3>
 
-<p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, 和 {{cssxref("right")}} 来精确指定要将定位元素移动到的位置。要尝试这样做，请在 CSS 中的 <code>.positioned</code> 规则中添加以下声明：</p>
+<p>{{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, 和 {{cssxref("right")}} 来精确指定要将定位元素移动到的位置。要尝试这样做，请在 CSS 中的 <code>.positioned</code> 规则中添加以下声明：</p>
 
 <pre class="notranslate">top: 30px;
 left: 30px;</pre>
@@ -140,8 +140,8 @@ left: 30px;</pre>
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
 <pre class="brush: css notranslate">body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {
@@ -166,10 +166,10 @@ span {
 
 <p>{{ EmbedLiveSample('Introducing_top_bottom_left_and_right', '100%', 500) }}</p>
 
-<p>酷，是吗？好吧，所以这个结果这可能不是你期待的——为什么它移动到底部和右边，但我们指定顶部和左边？听起来不合逻辑，但这只是相对定位工作的方式——你需要考虑一个看不见的力，推动定位的盒子的一侧，移动它的相反方向。所以例如，如果你指定 <code>top: 30px;</code>一个力推动框的顶部，使它向下移动 30px。</p>
+<p>酷，是吗？好吧，所以这个结果这可能不是你期待的——为什么它移动到底部和右边，但我们指定顶部和左边？听起来不合逻辑，但这只是相对定位工作的方式——你需要考虑一个看不见的力，推动定位的盒子的一侧，移动它的相反方向。所以例如，如果你指定 <code>top: 30px;</code>一个力推动框的顶部，使它向下移动 30px。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 你可以在 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html">2_relative-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html">see source code</a>)。</p>
+<p><strong>注意：</strong> 你可以在 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html">2_relative-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html">see source code</a>)。</p>
 </div>
 
 <h3 id="Absolute_positioning">绝对定位</h3>
@@ -192,8 +192,8 @@ span {
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
 <pre class="brush: css notranslate">body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {
@@ -223,7 +223,7 @@ span {
 <p>第二，注意元素的位置已经改变——这是因为{{cssxref("top")}}，{{cssxref("bottom")}}，{{cssxref("left")}}和{{cssxref("right")}}以不同的方式在绝对定位。它们指定元素应距离每个包含元素的边的距离，而不是指定元素应该移入的方向。所以在这种情况下，我们说的绝对定位元素应该位于从“包含元素”的顶部 30px，从左边 30px。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果需要，您可以使用{{cssxref("top")}}，{{cssxref("bottom")}}，{{cssxref("left")}}和{{cssxref("right")}} 调整元素大小。尝试设置 <code>top: 0; bottom: 0; left: 0; right: 0;</code> 和 <code>margin: 0;</code> 对你定位的元素，看看会发生什么！之后再回来</p>
+<p><strong>注意：</strong>如果需要，您可以使用{{cssxref("top")}}，{{cssxref("bottom")}}，{{cssxref("left")}}和{{cssxref("right")}} 调整元素大小。尝试设置 <code>top: 0; bottom: 0; left: 0; right: 0;</code> 和 <code>margin: 0;</code> 对你定位的元素，看看会发生什么！之后再回来</p>
 </div>
 
 <div class="note">
@@ -231,16 +231,16 @@ span {
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>你可以在<code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html">3_absolute-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html">see source code</a>)。</p>
+<p><strong>注意：</strong>你可以在<code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html">3_absolute-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html">see source code</a>)。</p>
 </div>
 
 <h3 id="Positioning_contexts">定位上下文</h3>
 
-<p>哪个元素是绝对定位元素的“包含元素“？这取决于绝对定位元素的父元素的 position 属性。(参见 <a href="/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block">Identifying the containing block</a>).</p>
+<p>哪个元素是绝对定位元素的“包含元素“？这取决于绝对定位元素的父元素的 position 属性。(参见 <a href="/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block">Identifying the containing block</a>).</p>
 
 <p>如果所有的父元素都没有显式地定义 position 属性，那么所有的父元素默认情况下 position 属性都是 static。结果，绝对定位元素会被包含在<strong>初始块容器</strong>中。这个初始块容器有着和浏览器视口一样的尺寸，并且&lt;html&gt;元素也被包含在这个容器里面。简单来说，绝对定位元素会被放在&lt;html&gt;元素的外面，并且根据浏览器视口来定位。</p>
 
-<p>绝对定位元素在 HTML 源代码中，是被放在&lt;body&gt;中的，但是在最终的布局里面，它离页面 (而不是&lt;body&gt;) 的左边界、上边界有 30px 的距离。我们可以改变<strong>定位上下文</strong> —— 绝对定位的元素的相对位置元素。通过设置其中一个父元素的定位属性 —— 也就是包含绝对定位元素的那个元素（如果要设置绝对定位元素的相对元素，那么这个元素一定要包含绝对定位元素）。 为了演示这一点，将以下声明添加到您的 body 规则中：</p>
+<p>绝对定位元素在 HTML 源代码中，是被放在&lt;body&gt;中的，但是在最终的布局里面，它离页面 (而不是&lt;body&gt;) 的左边界、上边界有 30px 的距离。我们可以改变<strong>定位上下文</strong> —— 绝对定位的元素的相对位置元素。通过设置其中一个父元素的定位属性 —— 也就是包含绝对定位元素的那个元素（如果要设置绝对定位元素的相对元素，那么这个元素一定要包含绝对定位元素）。 为了演示这一点，将以下声明添加到您的 body 规则中：</p>
 
 <pre class="notranslate">position: relative;</pre>
 
@@ -258,8 +258,8 @@ span {
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
 <pre class="brush: css notranslate">body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -304,13 +304,13 @@ span {
   right: 30px;
 }</pre>
 
-<p>此时，您将看到第一段的颜色为绿色，移出文档流程，并位于原始位置上方一点。它也堆叠在原始的 <code>.positioned</code> 段落下，其中两个重叠。这是因为 <code>.positioned</code> 段落是源顺序 (HTML 标记) 中的第二个段落，并且源顺序中后定位的元素将赢得先定位的元素。</p>
+<p>此时，您将看到第一段的颜色为绿色，移出文档流程，并位于原始位置上方一点。它也堆叠在原始的 <code>.positioned</code> 段落下，其中两个重叠。这是因为 <code>.positioned</code> 段落是源顺序 (HTML 标记) 中的第二个段落，并且源顺序中后定位的元素将赢得先定位的元素。</p>
 
 <p>您可以更改堆叠顺序吗？是的，您可以使用{{cssxref("z-index")}}属性。 “z-index”是对 z 轴的参考。你可以从源代码中的上一点回想一下，我们使用水平（x 轴）和垂直（y 轴）坐标来讨论网页，以确定像背景图像和阴影偏移之类的东西的位置。 （0,0）位于页面（或元素）的左上角，x 和 y 轴跨页面向右和向下（适合从左到右的语言，无论如何）。</p>
 
 <p>网页也有一个 z 轴：一条从屏幕表面到你的脸（或者在屏幕前面你喜欢的任何其他东西）的虚线。{{cssxref("z-index")}} 值影响定位元素位于该轴上的位置；正值将它们移动到堆栈上方，负值将它们向下移动到堆栈中。默认情况下，定位的元素都具有 z-index 为 auto，实际上为 0。</p>
 
-<p>要更改堆叠顺序，请尝试将以下声明添加到 <code>p:nth-of-type(1)</code> 规则中：</p>
+<p>要更改堆叠顺序，请尝试将以下声明添加到 <code>p:nth-of-type(1)</code> 规则中：</p>
 
 <pre class="notranslate">z-index: 1;</pre>
 
@@ -328,8 +328,8 @@ span {
 &lt;p&gt;inline elements &lt;span&gt;like this one&lt;/span&gt; and &lt;span&gt;this one&lt;/span&gt; sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements &lt;span&gt;wrap onto a new line if possible — like this one containing text&lt;/span&gt;, or just go on to a new line if not, much like this image will do: &lt;img src="https://mdn.mozillademos.org/files/13360/long.jpg"&gt;&lt;/p&gt;</pre>
 
 <pre class="brush: css notranslate">body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -374,9 +374,9 @@ p:nth-of-type(1) {
 
 <p>还有一种类型的定位覆盖——fixed。这与绝对定位的工作方式完全相同，只有一个主要区别：绝对定位固定元素是相对于 {{htmlelement("html")}} 元素或其最近的定位祖先，而固定定位固定元素则是相对于浏览器视口本身。这意味着您可以创建固定的有用的 UI 项目，如持久导航菜单。</p>
 
-<p>让我们举一个简单的例子来说明我们的意思。首先，从 CSS 中删除现有的 <code>p:nth-of-type(1)</code> 和<code>.positioned</code> 规则。</p>
+<p>让我们举一个简单的例子来说明我们的意思。首先，从 CSS 中删除现有的 <code>p:nth-of-type(1)</code> 和<code>.positioned</code> 规则。</p>
 
-<p>现在，更新 <code>body</code> 规则以删除<code>position: relative;</code> 声明并添加固定高度，如此：</p>
+<p>现在，更新 <code>body</code> 规则以删除<code>position: relative;</code> 声明并添加固定高度，如此：</p>
 
 <pre class="notranslate">body {
   width: 500px;
@@ -384,7 +384,7 @@ p:nth-of-type(1) {
   margin: 0 auto;
 }</pre>
 
-<p>现在我们要给{{htmlelement("h1")}}元素 <code>position: fixed;</code>，并让它坐在视口的顶部中心。将以下规则添加到 CSS：</p>
+<p>现在我们要给{{htmlelement("h1")}}元素 <code>position: fixed;</code>，并让它坐在视口的顶部中心。将以下规则添加到 CSS：</p>
 
 <pre class="notranslate">h1 {
   position: fixed;
@@ -395,7 +395,7 @@ p:nth-of-type(1) {
   padding: 10px;
 }</pre>
 
-<p> <code>top: 0;</code>是要使它贴在屏幕的顶部；我们然后给出标题与内容列相同的宽度，并使用可靠的老技巧 <code>margin: 0 auto;</code> 使它居中。然后我们给它一个白色背景和一些内边距，所以内容将不会在它下面可见。</p>
+<p> <code>top: 0;</code>是要使它贴在屏幕的顶部；我们然后给出标题与内容列相同的宽度，并使用可靠的老技巧 <code>margin: 0 auto;</code> 使它居中。然后我们给它一个白色背景和一些内边距，所以内容将不会在它下面可见。</p>
 
 <p>如果您现在保存并刷新，您会看到一个有趣的小效果，标题保持固定，内容显示向上滚动并消失在其下。但是我们可以改进这一点——目前标题下面挡住一些内容的开头。这是因为定位的标题不再出现在文档流中，所以其他内容向上移动到顶部。我们要把它向下移动一点；我们可以通过在第一段设置一些顶部边距来做到这一点。添加：</p>
 
@@ -594,7 +594,7 @@ dt {
 <p>{{ EmbedLiveSample('Sticky_2', '100%', 200) }}</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>你可以在 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">see source code</a>)。</p>
+<p><strong>注意：</strong>你可以在 <code><a href="http://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html">7_sticky-positioning.html</a></code> 查看这个例子 (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html">see source code</a>)。</p>
 </div>
 
 <h2 id="试试你的技术!">试试你的技术！</h2>

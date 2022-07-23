@@ -23,7 +23,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 <ul>
  <li>基本熟悉计算机操作。</li>
  <li>基本工作环境的设置（详见<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本软件</a>），基本的文件操作，详见<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a>。</li>
- <li>熟悉 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a> 章节中提到的基本 HTML 知识。</li>
+ <li>熟悉 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a> 章节中提到的基本 HTML 知识。</li>
 </ul>
 
 <h4 id="目标">目标</h4>
@@ -39,7 +39,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 
 <h3 id="外部样式表">外部样式表</h3>
 
-<p>在<a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a> 中我们将外部样式表链接到页面。这是将 css 附加到文档中的最常见和最有用的方法，因为您可以将 css 链接到多个页面，从而允许您使用相同的样式表设置所有页面的样式。在大多数情况下，一个站点的不同页面看起来几乎都是一样的，因此您可以使用相同的规则集来获得基本的外观。</p>
+<p>在<a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a> 中我们将外部样式表链接到页面。这是将 css 附加到文档中的最常见和最有用的方法，因为您可以将 css 链接到多个页面，从而允许您使用相同的样式表设置所有页面的样式。在大多数情况下，一个站点的不同页面看起来几乎都是一样的，因此您可以使用相同的规则集来获得基本的外观。</p>
 
 <p>外部样式表是指将 CSS 编写在扩展名为<code>.css</code> 的单独文件中，并从 HTML<code>&lt;link&gt;</code> 元素引用它的情况：</p>
 
@@ -68,7 +68,7 @@ p {
   color: red;
 }</pre>
 
-<p>{{htmlelement("link")}} 元素的 <code>href</code> 属性需要引用你的文件系统中的一个文件。</p>
+<p>{{htmlelement("link")}} 元素的 <code>href</code> 属性需要引用你的文件系统中的一个文件。</p>
 
 <p>在上面的例子中，CSS 文件和 HTML 文档在同一个文件夹中，但是你可以把 CSS 文件放在其他地方，并调整指定的路径以匹配，例如：</p>
 
@@ -110,7 +110,7 @@ p {
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>有的时候，这种方法会比较有用（比如你使用的内容管理系统不能直接编辑 CSS 文件)，但该方法和外部样式表比起来更加低效 。在一个站点里，你不得不在每个页面里重复添加相同的 CSS，并且在需要更改 CSS 时修改每个页面文件。</p>
+<p>有的时候，这种方法会比较有用（比如你使用的内容管理系统不能直接编辑 CSS 文件)，但该方法和外部样式表比起来更加低效 。在一个站点里，你不得不在每个页面里重复添加相同的 CSS，并且在需要更改 CSS 时修改每个页面文件。</p>
 
 <h3 id="内联样式">内联样式</h3>
 
@@ -164,7 +164,7 @@ p {
 
 <p>如果你没有可以轻松创建文件的系统，则可以使用下面交互式编译器进行实验。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}} </p>
 
 <p>继续读下去，希望你能享受其中！</p>
 
@@ -321,7 +321,7 @@ p {
 
 <p>您将遇到的最常见的 <code>@rules</code> 之一是 @media，它允许您使用 <a href="/en-US/docs/Web/CSS/Media_Queries">媒体查询 </a>来应用 CSS，仅当某些条件成立 (例如，当屏幕分辨率高于某一数量，或屏幕宽度大于某一宽度时)。</p>
 
-<p>在下面的 CSS 中，我们将给 <code>&lt;body&gt;</code> 元素一个粉红色的背景色。但是，我们随后使用 @media 创建样式表的一个部分，该部分仅适用于视口大于 30em 的浏览器。如果浏览器的宽度大于 30em，则背景色将为蓝色。</p>
+<p>在下面的 CSS 中，我们将给 <code>&lt;body&gt;</code> 元素一个粉红色的背景色。但是，我们随后使用 @media 创建样式表的一个部分，该部分仅适用于视口大于 30em 的浏览器。如果浏览器的宽度大于 30em，则背景色将为蓝色。</p>
 
 <pre class="brush: css notranslate">body {
   background-color: pink;
@@ -333,7 +333,7 @@ p {
   }
 }</pre>
 
-<p>在这些教程中，你将遇到一些其他的规则 <code>@rules</code> </p>
+<p>在这些教程中，你将遇到一些其他的规则 <code>@rules</code> </p>
 
 <p><strong>查看是否可以将媒体查询添加到 CSS 中，该查询将根据视口宽度更改样式。更改浏览器窗口的宽度以查看结果。</strong></p>
 
@@ -455,7 +455,7 @@ h1 {
 div p,
 #id:first-line {
   background-color: red;
-  border-radius: 3px;
+  border-radius: 3px;
 }
 
 div p {
@@ -500,7 +500,7 @@ padding- left: 10px;</pre>
 
 <h2 id="接下来是什么？">接下来是什么？</h2>
 
-<p>了解一下浏览器如何将 HTML 和 CSS 转换成网页是很有用的，所以在下一篇文章 — <a href="/zh-CN/docs/Learn/CSS/First_steps/CSS如何运行">CSS 是如何工作的</a> — 我们将看看这个过程。</p>
+<p>了解一下浏览器如何将 HTML 和 CSS 转换成网页是很有用的，所以在下一篇文章 — <a href="/zh-CN/docs/Learn/CSS/First_steps/CSS如何运行">CSS 是如何工作的</a> — 我们将看看这个过程。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/First_steps/开始", "Learn/CSS/First_steps/CSS 如何运行", "Learn/CSS/First_steps")}}</p>
 
@@ -508,8 +508,8 @@ padding- left: 10px;</pre>
 
 <ol>
  <li><a href="/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS">什么是 CSS?</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/First_steps/开始">开始使用 CSS </a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured">如何构建 CSS </a><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured"> </a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/First_steps/开始">开始使用 CSS </a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured">如何构建 CSS </a><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured"> </a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/First_steps/CSS如何运行">CSS 是如何工作的</a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/First_steps/Using_your_new_knowledge">使用你的新知识</a></li>
 </ol>

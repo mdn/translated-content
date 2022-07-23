@@ -14,7 +14,7 @@ original_slug: Learn/CSS/CSS_layout/传统的布局方法
  <tbody>
   <tr>
    <th scope="row">学习前提：</th>
-   <td>HTML 基础 (学习 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>),并且了解 CSS 是怎么工作的 (学习 <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)</td>
+   <td>HTML 基础 (学习 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>),并且了解 CSS 是怎么工作的 (学习 <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> and <a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -35,7 +35,7 @@ original_slug: Learn/CSS/CSS_layout/传统的布局方法
 
 <h2 id="两列布局">两列布局</h2>
 
-<p>让我们从最简单的实例开始——一个两列布局。你可以按照步骤在你的电脑上创建一个新的 <code>index.html</code>，先用一个<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">简单 HTML 模板</a>填充它，然后在适当的位置填充下面的代码。在这节底部，你可以看到一个展示最终代码样貌的实时实例。</p>
+<p>让我们从最简单的实例开始——一个两列布局。你可以按照步骤在你的电脑上创建一个新的 <code>index.html</code>，先用一个<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">简单 HTML 模板</a>填充它，然后在适当的位置填充下面的代码。在这节底部，你可以看到一个展示最终代码样貌的实时实例。</p>
 
 <p>首先，我们需要在我们的栏中放入一些内容。把现在在 body 中的内容替换成下面的代码：</p>
 
@@ -50,7 +50,7 @@ original_slug: Learn/CSS/CSS_layout/传统的布局方法
   &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-<p>每一列都需要一个上一级元素来包含内容，这样我们可以一次性操作所有内容。在这个例子中我们选择了{{htmlelement("div")}}， 但是你可以选择其他更合适的，例如{{htmlelement("article")}}, {{htmlelement("section")}}, 和 {{htmlelement("aside")}}，或者是任何别的元素。</p>
+<p>每一列都需要一个上一级元素来包含内容，这样我们可以一次性操作所有内容。在这个例子中我们选择了{{htmlelement("div")}}， 但是你可以选择其他更合适的，例如{{htmlelement("article")}}, {{htmlelement("section")}}, 和 {{htmlelement("aside")}}，或者是任何别的元素。</p>
 
 <p>现在我们来看 CSS。首先，应用以下的代码来对 HTML 进行基本设置：</p>
 
@@ -60,7 +60,7 @@ original_slug: Learn/CSS/CSS_layout/传统的布局方法
   margin: 0 auto;
 }</pre>
 
-<p>body 将会占据 90% 的视口宽度，直到达到 900 像素，在这种情况下，它将固定并保持在视口正中。 默认情况下，它的子项（the {{htmlelement("h1")}} 和两个 {{htmlelement("div")}}）将会达到正文宽度的 100%。如果我们希望两个{{htmlelement("div")}}，一个浮在窗口的一边，另一个浮动在另一边的话， 我们需要将它们的宽度设置为其父元素的 100% 或者更小，以便他们可以并排放置。将下面的代码加在 CSS 的底部：</p>
+<p>body 将会占据 90% 的视口宽度，直到达到 900 像素，在这种情况下，它将固定并保持在视口正中。 默认情况下，它的子项（the {{htmlelement("h1")}} 和两个 {{htmlelement("div")}}）将会达到正文宽度的 100%。如果我们希望两个{{htmlelement("div")}}，一个浮在窗口的一边，另一个浮动在另一边的话， 我们需要将它们的宽度设置为其父元素的 100% 或者更小，以便他们可以并排放置。将下面的代码加在 CSS 的底部：</p>
 
 <pre class="brush: css">div:nth-of-type(1) {
   width: 48%;
@@ -169,7 +169,7 @@ div:nth-of-type(2) {
 
 <p><img src="simple-grid-finished.png"></p>
 
-<p>在{{htmlelement("style")}}中，加入下面的代码，使容器右侧的内边距为 20 像素，总的宽度变为 980 像素。这样给我们留出 960 像素可以放置列和它们的间隔——这种情况下，内边距会被从总的内容宽度中减去，因为我们在{{cssxref("box-sizing")}}中将站点上所有的元素设置成了<code>border-box</code> （可以查看<a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">完全改变盒模型</a>，获得更多解释）。</p>
+<p>在{{htmlelement("style")}}中，加入下面的代码，使容器右侧的内边距为 20 像素，总的宽度变为 980 像素。这样给我们留出 960 像素可以放置列和它们的间隔——这种情况下，内边距会被从总的内容宽度中减去，因为我们在{{cssxref("box-sizing")}}中将站点上所有的元素设置成了<code>border-box</code> （可以查看<a href="/zh-CN/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely">完全改变盒模型</a>，获得更多解释）。</p>
 
 <pre class="brush: css">* {
   box-sizing: border-box;
@@ -196,7 +196,7 @@ body {
 
 <p>我们需要从 960px 的总宽减去这个间隔，然后剩下 720 像素给我们的列。如果用 720 除以 12，我们知道每列有 60 个像素宽。</p>
 
-<p>接下来我们给<code>.col</code>类写一个规则，  让它向左浮动，给它设置 20 像素的{{cssxref("margin-left")}}来实现一个间隔，再设置 60 像素的{{cssxref("width")}}。把下面的规则加到你的 CSS 底部：</p>
+<p>接下来我们给<code>.col</code>类写一个规则，  让它向左浮动，给它设置 20 像素的{{cssxref("margin-left")}}来实现一个间隔，再设置 60 像素的{{cssxref("width")}}。把下面的规则加到你的 CSS 底部：</p>
 
 <pre class="brush: css">.col {
   float: left;
@@ -247,7 +247,7 @@ body {
 
 <h3 id="创建液态网格">创建液态网格</h3>
 
-<p>这个网格表现的不错，但是它长度固定。 我们实际却想要一个弹性（流体）的网格，它可以随着浏览器的{{Glossary("viewport")}}大小的变化自动伸缩。为了达成这个目标，我们需要把相应的像素的长度变为百分比长度。</p>
+<p>这个网格表现的不错，但是它长度固定。 我们实际却想要一个弹性（流体）的网格，它可以随着浏览器的{{Glossary("viewport")}}大小的变化自动伸缩。为了达成这个目标，我们需要把相应的像素的长度变为百分比长度。</p>
 
 <p>把固定宽度转为伸缩的基于百分比宽度的算式在下面：</p>
 
@@ -292,7 +292,7 @@ body {
   background: rgb(255, 150, 150);
 }</pre>
 
-<p>现在做些稍微麻烦的事 — 我们需要更新所有 <code>.col.span</code> 规则来把像素变为百分比。这需要点时间计算；为节省你的功夫，我们在下面替你做了。</p>
+<p>现在做些稍微麻烦的事 — 我们需要更新所有 <code>.col.span</code> 规则来把像素变为百分比。这需要点时间计算；为节省你的功夫，我们在下面替你做了。</p>
 
 <p>像下面这样更新 CSS 规则的底部块：</p>
 
@@ -321,7 +321,7 @@ body {
 
 <p>你可以用 {{cssxref("calc()")}} 函数来在 CSS 里面做数学方面的计算——这允许你在 CSS 里插入简单的算式，来计算那些值。这个会很有用，特别当你有个复杂计算的时候，甚至你还可以在算式里用不同的单位，比如“我想要这个元素一直比它父元素少 50 像素”。看下<a href="/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()">这个来自 MediaRecorder API 教程的示例</a>。</p>
 
-<p>言归正传，来讲我们的网格！我们网格里跨越超过一列的列，它的总长是 6.45% 乘跨越的列数加 2.08333333%，乘间隔数（间隔数总等于行数减一）。<code>calc()</code> 函数允许我们就在宽度值里面这么计算，所以对跨越 4 列的列我们可以这么算：</p>
+<p>言归正传，来讲我们的网格！我们网格里跨越超过一列的列，它的总长是 6.45% 乘跨越的列数加 2.08333333%，乘间隔数（间隔数总等于行数减一）。<code>calc()</code> 函数允许我们就在宽度值里面这么计算，所以对跨越 4 列的列我们可以这么算：</p>
 
 <pre class="brush: css">.col.span4 {
   width: calc((6.25%*4) + (2.08333333%*3));

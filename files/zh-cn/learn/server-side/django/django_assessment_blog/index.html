@@ -122,7 +122,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
    <td>
     <p>用于登录，注销和设置密码的标准 Django 身份验证页面：</p>
 
-    <p> </p>
+    <p> </p>
 
     <ul>
      <li>应该可以通过侧边栏链接，访问登录/退出页面。</li>
@@ -135,7 +135,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
    <td>
     <p>应启用管理站点，以允许创建/编辑/删除博客帖子、博客作者、和博客评论（这是博客创建新博客帖子的机制）：</p>
 
-    <p> </p>
+    <p> </p>
 
     <ul>
      <li>管理站点的博客帖子记录，应显示内联的相关评论列表（在每篇博客文章下方）。</li>
@@ -249,7 +249,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
  <li>可以使用基于函数的视图（以及关联的模型和表单），或使用通用<code>CreateView</code>，以创建添加注释表单。如果您使用<code>CreateView</code>（推荐），那么：
   <ul>
    <li>您还需要将博客文章的名称，传递到上下文中的评论页面（实现<code>get_context_data()</code> ，如下所述）。</li>
-   <li>表单应仅显示用户输入的注释“description”（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此您的代码，需要在<code> form_valid()</code> 函数中，设置注释的作者，以便将其保存到模型中（<a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user">如此处所述</a> -  Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（<code>pk</code>是从 URL / URL 配置传入的博客 ID）。
+   <li>表单应仅显示用户输入的注释“description”（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此您的代码，需要在<code> form_valid()</code> 函数中，设置注释的作者，以便将其保存到模型中（<a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user">如此处所述</a> -  Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（<code>pk</code>是从 URL / URL 配置传入的博客 ID）。
     <pre class="brush: python">    def form_valid(self, form):
         """
         Add author and associated blog to form data before setting it as valid (so it is saved to model)
@@ -262,7 +262,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
         return super(BlogCommentCreate, self).form_valid(form)
 </pre>
    </li>
-   <li>在表单验证后，您需要提供成功的 URL，以进行重新定向；这应该是原来的博客。为此，您需要覆盖 <code>get_success_url()</code>，并为原来的博客“反转”URL。您可以使用<code>self.kwargs</code>属性，获取所需的博客 ID，如上面的 <code>form_valid()</code> 方法所示。</li>
+   <li>在表单验证后，您需要提供成功的 URL，以进行重新定向；这应该是原来的博客。为此，您需要覆盖 <code>get_success_url()</code>，并为原来的博客“反转”URL。您可以使用<code>self.kwargs</code>属性，获取所需的博客 ID，如上面的 <code>form_valid()</code> 方法所示。</li>
   </ul>
  </li>
 </ol>
@@ -273,11 +273,11 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
     ...
 
     def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super(SomeView, self).get_context_data(**kwargs)
-        # Get the blogger object from the "pk" URL parameter and add it to the context
-        context['blogger'] = get_object_or_404(BlogAuthor, pk = self.kwargs['pk'])
-        return context
+        # Call the base implementation first to get a context
+        context = super(SomeView, self).get_context_data(**kwargs)
+        # Get the blogger object from the "pk" URL parameter and add it to the context
+        context['blogger'] = get_object_or_404(BlogAuthor, pk = self.kwargs['pk'])
+        return context
 </pre>
 
 <h2 id="评估">评估</h2>
@@ -288,7 +288,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 
 <p>{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="本系列教程">本系列教程</h2>
 
@@ -310,4 +310,4 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django 微博客</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

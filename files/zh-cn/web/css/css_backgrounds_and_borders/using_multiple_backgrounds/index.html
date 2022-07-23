@@ -16,11 +16,11 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 <p>指定多个背景很简单：</p>
 
 <pre class="brush: css">.myclass {
-  background: background1, background 2, ..., backgroundN;
+  background: background1, background 2, ..., backgroundN;
 }
 </pre>
 
-<p>除了{{ cssxref("background-color") }}之外，你可以用简写{{ cssxref("background") }} 属性和它的各个属性来做到这一点。也就是说，以下背景属性可以被指定为一个列表，每个背景一个： {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.</p>
+<p>除了{{ cssxref("background-color") }}之外，你可以用简写{{ cssxref("background") }} 属性和它的各个属性来做到这一点。也就是说，以下背景属性可以被指定为一个列表，每个背景一个： {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.</p>
 
 <h2 id="Example">实例</h2>
 
@@ -33,15 +33,15 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css">.multi-bg-example {
-  width: 100%;
-  height: 400px;
-  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),
+  width: 100%;
+  height: 400px;
+  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png),
       url(https://mdn.mozillademos.org/files/11307/bubbles.png),
       linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat,
+  background-repeat: no-repeat,
       no-repeat,
       no-repeat;
-  background-position: bottom right,
+  background-position: bottom right,
       left,
       right;
 }</pre>

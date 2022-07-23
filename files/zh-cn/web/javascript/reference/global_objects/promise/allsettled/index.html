@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 
 <p>当您有多个彼此不依赖的异步任务成功完成时，或者您总是想知道每个<code>promise</code>的结果时，通常使用它。</p>
 
-<p>相比之下，<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code> 更适合彼此相互依赖或者在其中任何一个<code>reject</code>时立即结束。</p>
+<p>相比之下，<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code> 更适合彼此相互依赖或者在其中任何一个<code>reject</code>时立即结束。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}</div>
 
@@ -30,9 +30,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 
 <h3 id="返回值">返回值</h3>
 
-<p>一旦所指定的 promises 集合中每一个 promise 已经完成，无论是成功的达成或被拒绝，<strong>未决议的</strong> {{jsxref("Promise")}}将被<strong>异步</strong>完成。那时，所返回的 promise 的处理器将传入一个数组作为输入，该数组包含原始 promises 集中每个 promise 的结果。</p>
+<p>一旦所指定的 promises 集合中每一个 promise 已经完成，无论是成功的达成或被拒绝，<strong>未决议的</strong> {{jsxref("Promise")}}将被<strong>异步</strong>完成。那时，所返回的 promise 的处理器将传入一个数组作为输入，该数组包含原始 promises 集中每个 promise 的结果。</p>
 
-<p>对于每个结果对象，都有一个 <code>status</code> 字符串。如果它的值为 <code>fulfilled</code>，则结果对象上存在一个 <code>value</code> 。如果值为 <code>rejected</code>，则存在一个 <code>reason</code> 。value（或 reason ）反映了每个 promise 决议（或拒绝）的值。</p>
+<p>对于每个结果对象，都有一个 <code>status</code> 字符串。如果它的值为 <code>fulfilled</code>，则结果对象上存在一个 <code>value</code> 。如果值为 <code>rejected</code>，则存在一个 <code>reason</code> 。value（或 reason ）反映了每个 promise 决议（或拒绝）的值。</p>
 
 <h2 id="标准">标准</h2>
 

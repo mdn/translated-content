@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
  <li>the <strong>被遍历的类型化数组</strong></li>
 </ul>
 
-<p>如果将<code>thisArg</code>参数提供给<code>forEach</code>，它会在调用时传递给<code>callback</code>，作为它的 <code>this</code>值。否则，会传递<code>undefined</code> 作为它的<code>this</code> 值。  <code>callback</code>最终观测到的<code>this</code>值由 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">用于决定函数可见的<code>this</code>值的一般规则</a>来决定。</p>
+<p>如果将<code>thisArg</code>参数提供给<code>forEach</code>，它会在调用时传递给<code>callback</code>，作为它的 <code>this</code>值。否则，会传递<code>undefined</code> 作为它的<code>this</code> 值。  <code>callback</code>最终观测到的<code>this</code>值由 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">用于决定函数可见的<code>this</code>值的一般规则</a>来决定。</p>
 
 <p>由 <code>forEach</code>处理的元素范围在<code>callback</code>调用之前就确定了。 在 <code>forEach</code>调用之后添加到数组的元素不会由 <code>callback</code>访问。 如果类型化数组的现有元素被改变，或被删除，它们传给<code>callback</code>的值是<code>forEach</code> 访问它们时候的值。已删除的元素不会被访问。</p>
 

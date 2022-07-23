@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Operators/async允许声明一个函数�
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<div> </div>
+<div> </div>
 
 <p><strong><code>async function</code></strong> 关键字用来在表达式中定义异步函数。当然，你也可以用 {{jsxref('Statements/async_function', '异步函数语句')}} 来定义。</p>
 
@@ -59,11 +59,11 @@ add1(10).then(v =&gt; {
 });
 
 (async function(x) { // async function expression used as an IIFE
-  var p_a = resolveAfter2Seconds(20);
-  var p_b = resolveAfter2Seconds(30);
-  return x + await p_a + await p_b;
+  var p_a = resolveAfter2Seconds(20);
+  var p_b = resolveAfter2Seconds(30);
+  return x + await p_a + await p_b;
 })(10).then(v =&gt; {
-  console.log(v);  // 2 秒后打印 60
+  console.log(v);  // 2 秒后打印 60
 });
 </pre>
 

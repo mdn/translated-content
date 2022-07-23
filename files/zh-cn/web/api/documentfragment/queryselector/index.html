@@ -5,11 +5,11 @@ translation_of: Web/API/DocumentFragment/querySelector
 ---
 <div>{{ApiRef("DOM")}}</div>
 
-<p><strong><code>DocumentFragment.querySelector()</code></strong> 方法返回第一个在 {{domxref("DocumentFragment")}} 中的、符合选择器的元素。其使用深度优先，前序遍历规则遍历文档中的节点。如果没有匹配结果，返回 <code>null</code> 。</p>
+<p><strong><code>DocumentFragment.querySelector()</code></strong> 方法返回第一个在 {{domxref("DocumentFragment")}} 中的、符合选择器的元素。其使用深度优先，前序遍历规则遍历文档中的节点。如果没有匹配结果，返回 <code>null</code> 。</p>
 
-<p>如果选择器中指定了 ID 而这个 ID 在当前文档（document）被错误地使用了多次，则返回第一个匹配的元素。</p>
+<p>如果选择器中指定了 ID 而这个 ID 在当前文档（document）被错误地使用了多次，则返回第一个匹配的元素。</p>
 
-<p>如果选择器无效，将抛出一个带有 <code>SYNTAX_ERR</code> 值的 {{domxref("DOMException")}} 异常。</p>
+<p>如果选择器无效，将抛出一个带有 <code>SYNTAX_ERR</code> 值的 {{domxref("DOMException")}} 异常。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -26,14 +26,14 @@ translation_of: Web/API/DocumentFragment/querySelector
 
 <h3 id="基本示例">基本示例</h3>
 
-<p>在该示例中，将返回第一个位于 {{domxref("DocumentFragment")}} 的带有 "<code>myclass</code>" 类的元素。</p>
+<p>在该示例中，将返回第一个位于 {{domxref("DocumentFragment")}} 的带有 "<code>myclass</code>" 类的元素。</p>
 
 <pre class="brush: js">var el = documentfragment.querySelector(".myclass");
 </pre>
 
 <h3 id="CSS_语法和方法的参数问题">CSS 语法和方法的参数问题</h3>
 
-<p>传递给 <code>querySelector</code> 的字符串参数遵循 CSS 语法。如果 ID 或选择器不符合 CSS 语法 (比如使用了半角分号和空格)，必须使用双反斜杠对字符做转义。</p>
+<p>传递给 <code>querySelector</code> 的字符串参数遵循 CSS 语法。如果 ID 或选择器不符合 CSS 语法 (比如使用了半角分号和空格)，必须使用双反斜杠对字符做转义。</p>
 
 <pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
 &lt;div id="foo:bar"&gt;&lt;/div&gt;

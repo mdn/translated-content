@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/bufferData
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.bufferData()</code></strong>方法创建并初始化了 Buffer 对象的数据存储区。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的<strong><code>WebGLRenderingContext.bufferData()</code></strong>方法创建并初始化了 Buffer 对象的数据存储区。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,7 +32,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
  <ul>
   <li><code>gl.ARRAY_BUFFER</code>: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。</li>
   <li><code>gl.ELEMENT_ARRAY_BUFFER</code>: 用于元素索引的 Buffer。</li>
-  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
+  <li>当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
    <ul>
     <li><code>gl.COPY_READ_BUFFER</code>: 从一个 Buffer 对象复制到另一个 Buffer 对象。</li>
     <li><code>gl.COPY_WRITE_BUFFER</code>: 从一个 Buffer 对象复制到另一个 Buffer 对象。</li>
@@ -47,7 +47,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
  <dt>size</dt>
  <dd>{{domxref("GLsizeiptr")}} 设定 Buffer 对象的数据存储区大小。</dd>
  <dt>srcData {{optional_inline}}</dt>
- <dd>一个{{jsxref("ArrayBuffer")}}，{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("ArrayBufferView")}} 类型的数组对象，将被复制到 Buffer 的数据存储区。 如果为<code>null</code>，数据存储区仍会被创建，但是不会进行初始化和定义。</dd>
+ <dd>一个{{jsxref("ArrayBuffer")}}，{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("ArrayBufferView")}} 类型的数组对象，将被复制到 Buffer 的数据存储区。 如果为<code>null</code>，数据存储区仍会被创建，但是不会进行初始化和定义。</dd>
  <dt>usage</dt>
  <dd>{{domxref("GLenum")}} 指定数据存储区的使用方法。可取以下值：
  <ul>
@@ -86,7 +86,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_bufferData">使用 <code>bufferData</code></h3>
+<h3 id="使用_bufferData">使用 <code>bufferData</code></h3>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var gl = canvas.getContext('webgl');

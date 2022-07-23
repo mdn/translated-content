@@ -22,18 +22,18 @@ translation_of: Web/API/FetchEvent
 <p><em>Inherits properties from its ancestor, {{domxref("Event")}}</em>.</p>
 
 <dl>
- <dt>{{domxref("FetchEvent.isReload")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("FetchEvent.isReload")}} {{readonlyInline}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the event was dispatched with the user's intention for the page to reload, and <code>false</code> otherwise. Typically, pressing the refresh button in a browser is a reload, while clicking a link and pressing the back button is not.</dd>
- <dt>{{domxref("FetchEvent.request")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("FetchEvent.request")}} {{readonlyInline}}</dt>
  <dd>Returns the {{domxref("Request")}} that triggered the event handler.</dd>
- <dt>{{domxref("FetchEvent.clientId")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("FetchEvent.clientId")}} {{readonlyInline}}</dt>
  <dd>Returns the id of the client that the current service worker is controlling.</dd>
 </dl>
 
 <h3 id="Deprecated_properties">Deprecated properties</h3>
 
 <dl>
- <dt>{{domxref("FetchEvent.client")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("FetchEvent.client")}} {{readonlyInline}}</dt>
  <dd>Returns the {{domxref("Client")}} that the current service worker is controlling.</dd>
 </dl>
 
@@ -43,16 +43,16 @@ translation_of: Web/API/FetchEvent
 
 <dl>
  <dt>{{domxref("FetchEvent.respondWith()")}}</dt>
- <dd>Resolves by returning a {{domxref("Response")}} or a <a href="http://fetch.spec.whatwg.org/#concept-network-error">network error</a>  to <code style="font-style: normal;"><a href="http://fetch.spec.whatwg.org/#concept-fetch">Fetch</a></code>.</dd>
+ <dd>Resolves by returning a {{domxref("Response")}} or a <a href="http://fetch.spec.whatwg.org/#concept-network-error">network error</a>  to <code style="font-style: normal;"><a href="http://fetch.spec.whatwg.org/#concept-fetch">Fetch</a></code>.</dd>
  <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
  <dd>
- <p>Extends the lifetime of the event.  It is intended to be called in the {{event("install")}} {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the {{event("active")}} {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
+ <p>Extends the lifetime of the event.  It is intended to be called in the {{event("install")}} {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the {{event("active")}} {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.</p>
  </dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker fetch sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/prefetch/">run the fetch sample live</a>). In an earlier part of the code,  an {{domxref("InstallEvent")}} controls caching of a number of resources. The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler then listens for the {{event("fetch")}} event. When fired, {{domxref("FetchEvent.respondWith()")}} returns a promise back to the controlled page. This promise resolves to the first matching URL request in the {{domxref("Cache")}} object. If no match is found (i.e. that resource wasn't cached in the install phase), the code fetches a response from the network.</p>
+<p>This code snippet is from the <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">service worker fetch sample</a> (<a href="https://googlechrome.github.io/samples/service-worker/prefetch/">run the fetch sample live</a>). In an earlier part of the code,  an {{domxref("InstallEvent")}} controls caching of a number of resources. The {{domxref("ServiceWorkerGlobalScope.onfetch")}} event handler then listens for the {{event("fetch")}} event. When fired, {{domxref("FetchEvent.respondWith()")}} returns a promise back to the controlled page. This promise resolves to the first matching URL request in the {{domxref("Cache")}} object. If no match is found (i.e. that resource wasn't cached in the install phase), the code fetches a response from the network.</p>
 
 <p>The code also handles exceptions thrown from the {{domxref("ServiceWorkerGlobalScope.fetch()")}} operation. Note that a HTTP error response (e.g., 404) doesn't trigger an exception. It returns a normal response object that has the appropriate error code set.</p>
 

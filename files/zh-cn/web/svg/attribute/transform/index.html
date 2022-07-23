@@ -13,15 +13,15 @@ translation_of: Web/SVG/Attribute/transform
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="-40 0 150 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
-  &lt;g fill="grey"
+  &lt;g fill="grey"
      transform="rotate(-10 50 100)
                 translate(-36 45.5)
                 skewX(40)
                 scale(1 0.5)"&gt;
-    &lt;path id="heart" d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" /&gt;
-  &lt;/g&gt;
+    &lt;path id="heart" d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" /&gt;
+  &lt;/g&gt;
 
-  &lt;use xlink:href="#heart" fill="none" stroke="red"/&gt;
+  &lt;use xlink:href="#heart" fill="none" stroke="red"/&gt;
 &lt;/svg&gt;
 </pre>
 
@@ -32,7 +32,7 @@ translation_of: Web/SVG/Attribute/transform
 
 <p>作为表示属性，任何元素都可以使用<strong><code>transform</code></strong> （在 SVG 1.1 中，仅这 16 个元素被允许使用：{{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}})。<br>
  <br>
- 另外，作为 SVG 1.1 的遗留物，{{SVGElement('linearGradient')}}和{{SVGElement('radialGradient')}}支持 <code>gradientTransform </code>属性，而{{SVGElement('pattern')}}支持 <code>patternTransform </code>属性，两者的行为完全相同于 <code>transform</code> 属性</p>
+ 另外，作为 SVG 1.1 的遗留物，{{SVGElement('linearGradient')}}和{{SVGElement('radialGradient')}}支持 <code>gradientTransform </code>属性，而{{SVGElement('pattern')}}支持 <code>patternTransform </code>属性，两者的行为完全相同于 <code>transform</code> 属性</p>
 
 <table class="standard-table">
  <tbody>
@@ -53,7 +53,7 @@ translation_of: Web/SVG/Attribute/transform
 
 <h2 id="Transform_functions">Transform functions</h2>
 
-<p><code>transform</code> 属性 <em><code>&lt;transform-list&gt; </code></em>可以使用以下的所有 <code>transform </code>函数</p>
+<p><code>transform</code> 属性 <em><code>&lt;transform-list&gt; </code></em>可以使用以下的所有 <code>transform </code>函数</p>
 
 <p><strong>警告：</strong> 根据规范，您还应该能够使用 CSS {{cssxref('transform-function', 'transform functions')}}，但是，这不能保证兼容性。</p>
 
@@ -104,7 +104,7 @@ translation_of: Web/SVG/Attribute/transform
 
 <h3 id="Translate">Translate</h3>
 
-<p> <code>translate(&lt;x&gt; [&lt;y&gt;])</code> 变换函数通过 <code>x</code> 向量和 <code>y</code> 向量移动元素 (i.e. <code>x<sub>new</sub> = x<sub>old</sub> + &lt;x&gt;, y<sub>new</sub> = y<sub>old</sub> + &lt;y&gt;</code>). 如果 <code>y</code> 向量没有被提供，那么默认为 <code>0</code> </p>
+<p> <code>translate(&lt;x&gt; [&lt;y&gt;])</code> 变换函数通过 <code>x</code> 向量和 <code>y</code> 向量移动元素 (i.e. <code>x<sub>new</sub> = x<sub>old</sub> + &lt;x&gt;, y<sub>new</sub> = y<sub>old</sub> + &lt;y&gt;</code>). 如果 <code>y</code> 向量没有被提供，那么默认为 <code>0</code> </p>
 
 <h4 id="举例_2">举例</h4>
 
@@ -114,27 +114,27 @@ translation_of: Web/SVG/Attribute/transform
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- No translation --&gt;
-  &lt;rect x="5" y="5" width="40" height="40" fill="green" /&gt;
+  &lt;!-- No translation --&gt;
+  &lt;rect x="5" y="5" width="40" height="40" fill="green" /&gt;
 
-  &lt;!-- Horizontal translation --&gt;
-  &lt;rect x="5" y="5" width="40" height="40" fill="blue"
-        transform="translate(50)" /&gt;
+  &lt;!-- Horizontal translation --&gt;
+  &lt;rect x="5" y="5" width="40" height="40" fill="blue"
+        transform="translate(50)" /&gt;
 
-  &lt;!-- Vertical translation --&gt;
-  &lt;rect x="5" y="5" width="40" height="40" fill="red"
-        transform="translate(0 50)" /&gt;
+  &lt;!-- Vertical translation --&gt;
+  &lt;rect x="5" y="5" width="40" height="40" fill="red"
+        transform="translate(0 50)" /&gt;
 
-  &lt;!-- Both horizontal and vertical translation --&gt;
-  &lt;rect x="5" y="5" width="40" height="40" fill="yellow"
-         transform="translate(50,50)" /&gt;
+  &lt;!-- Both horizontal and vertical translation --&gt;
+  &lt;rect x="5" y="5" width="40" height="40" fill="yellow"
+         transform="translate(50,50)" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Translate', '100%', 200)}}</p>
 
 <h3 id="Scale">Scale</h3>
 
-<p><code>scale(&lt;x&gt; [&lt;y&gt;])</code> 变换函数通过 <code>x</code> 和 <code>y</code>指定一个 <strong>等比例放大缩小</strong> 操作。如果 <code>y</code> 没有被提供，那么假定为等同于 <code>x</code></p>
+<p><code>scale(&lt;x&gt; [&lt;y&gt;])</code> 变换函数通过 <code>x</code> 和 <code>y</code>指定一个 <strong>等比例放大缩小</strong> 操作。如果 <code>y</code> 没有被提供，那么假定为等同于 <code>x</code></p>
 
 <h4 id="举例_3">举例</h4>
 
@@ -144,27 +144,27 @@ translation_of: Web/SVG/Attribute/transform
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- uniform scale --&gt;
-  &lt;circle cx="0" cy="0" r="10" fill="red"
-          transform="scale(4)" /&gt;
+  &lt;!-- uniform scale --&gt;
+  &lt;circle cx="0" cy="0" r="10" fill="red"
+          transform="scale(4)" /&gt;
 
-  &lt;!-- vertical scale --&gt;
-  &lt;circle cx="0" cy="0" r="10" fill="yellow"
-          transform="scale(1,4)" /&gt;
+  &lt;!-- vertical scale --&gt;
+  &lt;circle cx="0" cy="0" r="10" fill="yellow"
+          transform="scale(1,4)" /&gt;
 
-  &lt;!-- horizontal scale --&gt;
-  &lt;circle cx="0" cy="0" r="10" fill="pink"
-          transform="scale(4,1)" /&gt;
+  &lt;!-- horizontal scale --&gt;
+  &lt;circle cx="0" cy="0" r="10" fill="pink"
+          transform="scale(4,1)" /&gt;
 
-  &lt;!-- No scale --&gt;
-  &lt;circle cx="0" cy="0" r="10" fill="black" /&gt;
+  &lt;!-- No scale --&gt;
+  &lt;circle cx="0" cy="0" r="10" fill="black" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Scale', '100%', 200)}}</p>
 
 <h3 id="Rotate">Rotate</h3>
 
-<p><code>rotate(&lt;a&gt; [&lt;x&gt; &lt;y&gt;])</code> 变换方法通过一个给定角度对一个指定的点进行旋转变换。如果 x 和 y 没有提供，那么默认为当前元素坐标系原点。否则，就以<code>(x,y)</code>为原点进行旋转。</p>
+<p><code>rotate(&lt;a&gt; [&lt;x&gt; &lt;y&gt;])</code> 变换方法通过一个给定角度对一个指定的点进行旋转变换。如果 x 和 y 没有提供，那么默认为当前元素坐标系原点。否则，就以<code>(x,y)</code>为原点进行旋转。</p>
 
 <h4 id="举例_4">举例</h4>
 
@@ -174,22 +174,22 @@ translation_of: Web/SVG/Attribute/transform
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="-12 -2 34 14" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="0" y="0" width="10" height="10" /&gt;
+  &lt;rect x="0" y="0" width="10" height="10" /&gt;
 
-  &lt;!-- rotation is done around the point 0,0 --&gt;
-  &lt;rect x="0" y="0" width="10" height="10" fill="red"
-        transform="rotate(100)" /&gt;
+  &lt;!-- rotation is done around the point 0,0 --&gt;
+  &lt;rect x="0" y="0" width="10" height="10" fill="red"
+        transform="rotate(100)" /&gt;
 
-  &lt;!-- rotation is done around the point 10,10 --&gt;
-  &lt;rect x="0" y="0" width="10" height="10" fill="green"
-        transform="rotate(100,10,10)" /&gt;
+  &lt;!-- rotation is done around the point 10,10 --&gt;
+  &lt;rect x="0" y="0" width="10" height="10" fill="green"
+        transform="rotate(100,10,10)" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('Rotate', '100%', 200)}}</p>
 
 <h3 id="SkewX">SkewX</h3>
 
-<p><code>skewX(&lt;a&gt;)</code> 变换函数指定了沿 <code>x</code> 轴倾斜 <code>a°</code> 的倾斜变换。</p>
+<p><code>skewX(&lt;a&gt;)</code> 变换函数指定了沿 <code>x</code> 轴倾斜 <code>a°</code> 的倾斜变换。</p>
 
 <h4 id="举例_5">举例</h4>
 
@@ -199,17 +199,17 @@ translation_of: Web/SVG/Attribute/transform
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="-3" y="-3" width="6" height="6" /&gt;
+  &lt;rect x="-3" y="-3" width="6" height="6" /&gt;
 
-  &lt;rect x="-3" y="-3" width="6" height="6" fill="red"
-        transform="skewX(30)" /&gt;
+  &lt;rect x="-3" y="-3" width="6" height="6" fill="red"
+        transform="skewX(30)" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('SkewX', '100%', 200)}}</p>
 
 <h3 id="SkewY">SkewY</h3>
 
-<p><code>skewY(&lt;a&gt;)</code> 变换函数指定了沿 <code>y</code> 轴倾斜 <code>a°</code> 的倾斜变换。</p>
+<p><code>skewY(&lt;a&gt;)</code> 变换函数指定了沿 <code>y</code> 轴倾斜 <code>a°</code> 的倾斜变换。</p>
 
 <h4 id="举例_6">举例</h4>
 
@@ -219,10 +219,10 @@ translation_of: Web/SVG/Attribute/transform
 </div>
 
 <pre class="brush: html">&lt;svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect x="-3" y="-3" width="6" height="6" /&gt;
+  &lt;rect x="-3" y="-3" width="6" height="6" /&gt;
 
-  &lt;rect x="-3" y="-3" width="6" height="6" fill="red"
-        transform="skewY(30)" /&gt;
+  &lt;rect x="-3" y="-3" width="6" height="6" fill="red"
+        transform="skewY(30)" /&gt;
 &lt;/svg&gt;</pre>
 
 <p>{{EmbedLiveSample('SkewY', '100%', 200)}}</p>

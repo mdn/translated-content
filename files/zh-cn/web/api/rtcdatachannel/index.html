@@ -28,7 +28,7 @@ translation_of: Web/API/RTCDataChannel
  <dd>返回枚举类型的 RTCDataChannelState，表示数据连接的状态，有以下几种类型：
  <ul>
   <li><code>"connecting"</code> 该状态表示底层链路还未建立和激活，该状态还是由{{domxref("RTCPeerConnection.createDataChannel()")}}生成的 datachannel 初始状态。</li>
-  <li><code>"open"</code> 该状态表示底层链路已经连接成功并且运行。这个状态还是由{{domxref("RTCDataChannelEvent")}}分发的 datachannel 的初始状态。 </li>
+  <li><code>"open"</code> 该状态表示底层链路已经连接成功并且运行。这个状态还是由{{domxref("RTCDataChannelEvent")}}分发的 datachannel 的初始状态。 </li>
   <li><code>"closing"</code> 该状态表示底层链路已经在关闭的过程中。该状态下将不会接受新的发送任务，但是缓冲队列中的消息还是会被继续发送或者接收。</li>
   <li><code>"closed"</code> 该状态表示底层链路已经完全被关闭（或者无法处于 established 状态）。</li>
  </ul>
@@ -95,7 +95,7 @@ dc.onclose = function () {
 };
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 
 <p>如果参数的小数部分大于 0.5，则舍入到相邻的绝对值更大的整数。 如果参数的小数部分小于 0.5，则舍入到相邻的绝对值更小的整数。如果参数的小数部分恰好等于 0.5，则舍入到相邻的在正无穷（+∞）方向上的整数。<strong>注意，与很多其他语言中的<code>round()</code> 函数不同，<code>Math.round()</code> 并不总是舍入到远离 0 的方向（尤其是在负数的小数部分恰好等于 0.5 的情况下）。</strong></p>
 
-<p>因为 <code>round()</code> 是 <code>Math</code> 的静态方法，你应该直接使用 <code>Math.round()</code>，而不是作为你创建的 <code>Math</code> 对象的一个实例方法来使用（<code>Math</code>没有构造函数）。</p>
+<p>因为 <code>round()</code> 是 <code>Math</code> 的静态方法，你应该直接使用 <code>Math.round()</code>，而不是作为你创建的 <code>Math</code> 对象的一个实例方法来使用（<code>Math</code>没有构造函数）。</p>
 
 <h2 id="Examples">示例</h2>
 
@@ -44,51 +44,51 @@ x = Math.round(-20.51);  //-21
 <pre class="brush: js">// 闭包
 (function(){
 
-  /**
-   * Decimal adjustment of a number.
-   *
-   * @param {String}  type  The type of adjustment.
-   * @param {Number}  value The number.
-   * @param {Integer} exp   The exponent (the 10 logarithm of the adjustment base).
-   * @returns {Number}      The adjusted value.
-   */
-  function decimalAdjust(type, value, exp) {
-    // If the exp is undefined or zero...
-    if (typeof exp === 'undefined' || +exp === 0) {
-      return Math[type](value);
-    }
-    value = +value;
-    exp = +exp;
-    // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
-      return NaN;
-    }
-    // Shift
-    value = value.toString().split('e');
-    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
-    // Shift back
-    value = value.toString().split('e');
-    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
-  }
+  /**
+   * Decimal adjustment of a number.
+   *
+   * @param {String}  type  The type of adjustment.
+   * @param {Number}  value The number.
+   * @param {Integer} exp   The exponent (the 10 logarithm of the adjustment base).
+   * @returns {Number}      The adjusted value.
+   */
+  function decimalAdjust(type, value, exp) {
+    // If the exp is undefined or zero...
+    if (typeof exp === 'undefined' || +exp === 0) {
+      return Math[type](value);
+    }
+    value = +value;
+    exp = +exp;
+    // If the value is not a number or the exp is not an integer...
+    if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+      return NaN;
+    }
+    // Shift
+    value = value.toString().split('e');
+    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+    // Shift back
+    value = value.toString().split('e');
+    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+  }
 
-  // Decimal round
-  if (!Math.round10) {
-    Math.round10 = function(value, exp) {
-      return decimalAdjust('round', value, exp);
-    };
-  }
-  // Decimal floor
-  if (!Math.floor10) {
-    Math.floor10 = function(value, exp) {
-      return decimalAdjust('floor', value, exp);
-    };
-  }
-  // Decimal ceil
-  if (!Math.ceil10) {
-    Math.ceil10 = function(value, exp) {
-      return decimalAdjust('ceil', value, exp);
-    };
-  }
+  // Decimal round
+  if (!Math.round10) {
+    Math.round10 = function(value, exp) {
+      return decimalAdjust('round', value, exp);
+    };
+  }
+  // Decimal floor
+  if (!Math.floor10) {
+    Math.floor10 = function(value, exp) {
+      return decimalAdjust('floor', value, exp);
+    };
+  }
+  // Decimal ceil
+  if (!Math.ceil10) {
+    Math.ceil10 = function(value, exp) {
+      return decimalAdjust('ceil', value, exp);
+    };
+  }
 
 })();
 
@@ -117,8 +117,8 @@ Math.ceil10(-59, 1); // -50
 <p>或：</p>
 
 <pre class="brush: js">function round(number, precision) {
-    return Math.round(+number + 'e' + precision) / Math.pow(10, precision);
-    //same as:
+    return Math.round(+number + 'e' + precision) / Math.pow(10, precision);
+    //same as:
     //return Number(Math.round(+number + 'e' + precision) + 'e-' + precision);
 }
 
@@ -142,12 +142,12 @@ round(1.005, 2);    //1.01
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-math.round', 'Math.round')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

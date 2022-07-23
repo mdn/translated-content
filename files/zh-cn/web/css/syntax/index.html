@@ -14,31 +14,31 @@ translation_of: Web/CSS/Syntax
 <p>层叠样式表（Cascading Stylesheet，简称<a href="/en/CSS" title="CSS">CSS</a> ），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色，定位，装饰。CSS 的语法反映了这个目标，由下面两个部分构建：</p>
 
 <ul>
- <li>属性（ <strong>property）</strong>是一个标识符，用可读的名称来表示其特性。</li>
- <li>值（<strong>value）</strong>则描述了浏览器引擎如何处理该特性。每个属性都包含一个有效值的集合，它有正式的语法和语义定义，被浏览器引擎实现。 </li>
+ <li>属性（ <strong>property）</strong>是一个标识符，用可读的名称来表示其特性。</li>
+ <li>值（<strong>value）</strong>则描述了浏览器引擎如何处理该特性。每个属性都包含一个有效值的集合，它有正式的语法和语义定义，被浏览器引擎实现。 </li>
 </ul>
 
 <h2 id="CSS_声明">CSS 声明</h2>
 
 <p>CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值的键值对被称为”声明“（declaration） 。CSS 引擎会计算页面上每个元素都有哪些声明，并且会根据结果绘制元素，排布样式。<br>
  <br>
- 在 CSS 中，无论是属性名还是属性值都是对大小写不敏感的。属性与值之间以英文冒号 ':' （U+003A COLON）隔开。属性与值前面、后面与两者之间的空白不是必需的，会被自动忽略。</p>
+ 在 CSS 中，无论是属性名还是属性值都是对大小写不敏感的。属性与值之间以英文冒号 ':' （U+003A COLON）隔开。属性与值前面、后面与两者之间的空白不是必需的，会被自动忽略。</p>
 
 <p><img alt="css syntax - declaration.png" class="default internal" src="/@api/deki/files/6164/=css_syntax_-_declaration.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p>目前 CSS 中有 <a href="/en/CSS/CSS_Reference" title="en/CSS/CSS_Reference">100 多个属性</a> ，并且几乎有无限多个不同的值。并非所有的属性与值的配对都是被允许的，每个属性都定义了它的合法值。如果值对给定的属性而言非法时，声明就会被视为无效的，整个声明就会被 CSS 引擎忽略。</p>
+<p>目前 CSS 中有 <a href="/en/CSS/CSS_Reference" title="en/CSS/CSS_Reference">100 多个属性</a> ，并且几乎有无限多个不同的值。并非所有的属性与值的配对都是被允许的，每个属性都定义了它的合法值。如果值对给定的属性而言非法时，声明就会被视为无效的，整个声明就会被 CSS 引擎忽略。</p>
 
 <h2 id="CSS_声明块">CSS 声明块</h2>
 
-<p>声明会按照<strong>块</strong>的形式被组合。声明块（declaration block）以英文左大括号 ('{' U+007B LEFT CURLY BRACKET) 开始，以英文右大括号 '}' (U+007D RIGHT CURLY BRACKET) 结束。块有时会嵌套，所以开始与结束大括号必须要匹配。</p>
+<p>声明会按照<strong>块</strong>的形式被组合。声明块（declaration block）以英文左大括号 ('{' U+007B LEFT CURLY BRACKET) 开始，以英文右大括号 '}' (U+007D RIGHT CURLY BRACKET) 结束。块有时会嵌套，所以开始与结束大括号必须要匹配。</p>
 
 <p><img alt="css syntax - block.png" class="default internal" src="/@api/deki/files/6165/=css_syntax_-_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p><strong>声明块</strong>里面的声明之间使用英文分号（';'  U+003B SEMICOLON）隔开。声明块可能为空，也就是包含空的声明。声明之间的空格会被忽略，声明块里最后一个声明可以不用分号，不过建议加上，以方便扩展声明块。</p>
+<p><strong>声明块</strong>里面的声明之间使用英文分号（';'  U+003B SEMICOLON）隔开。声明块可能为空，也就是包含空的声明。声明之间的空格会被忽略，声明块里最后一个声明可以不用分号，不过建议加上，以方便扩展声明块。</p>
 
 <p><img alt="css syntax - declarations block.png" class="default internal" src="/@api/deki/files/6166/=css_syntax_-_declarations_block.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<div class="note">声明块的内容—开始与结束大括号之间的声明，可以放在 HTML <a href="/en/HTML/Global_attributes#attr-style" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-style"><code>style</code></a> 特性里。</div>
+<div class="note">声明块的内容—开始与结束大括号之间的声明，可以放在 HTML <a href="/en/HTML/Global_attributes#attr-style" title="https://developer.mozilla.org/en/HTML/Global_attributes#attr-style"><code>style</code></a> 特性里。</div>
 
 <h2 id="CSS_规则">CSS 规则</h2>
 
@@ -48,7 +48,7 @@ translation_of: Web/CSS/Syntax
 
 <p><img alt="css syntax - ruleset.png" class="default internal" src="/@api/deki/files/6167/=css_syntax_-_ruleset.png" style="border: 1px solid black; padding: 1em;"></p>
 
-<p>一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 <a href="/en/CSS/Getting_Started/Cascading_and_inheritance" title="Cascading and inheritance">层叠（cascade)</a> 算法。</p>
+<p>一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 <a href="/en/CSS/Getting_Started/Cascading_and_inheritance" title="Cascading and inheritance">层叠（cascade)</a> 算法。</p>
 
 <p><em>有一点需要注意的是，尽管用一组选择器来定义的单个规则集，比用多个单一选择器来定义的多个规则集更加简洁，但这却不适用于规则集的有效性。</em><br>
  <br>
@@ -66,7 +66,7 @@ translation_of: Web/CSS/Syntax
 
 <ul>
  <li>规则。如上，将一组 CSS 声明与用选择器定义的条件相关联。</li>
- <li>at 规则（<a href="https://developer.mozilla.org/en/CSS/At-rule" title="At-rule">at-rules</a>）。以 @ (U+0040 COMMERCIAL AT) 开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset  @import)，条件信息（比如 @media  @document), 描述信息（比如 @font-face)。</li>
+ <li>at 规则（<a href="https://developer.mozilla.org/en/CSS/At-rule" title="At-rule">at-rules</a>）。以 @ (U+0040 COMMERCIAL AT) 开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset  @import)，条件信息（比如 @media  @document), 描述信息（比如 @font-face)。</li>
 </ul>
 
 <p>不是上面类型的语句则是非法的，被忽略。<br>

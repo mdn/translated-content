@@ -11,7 +11,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 <p>首先加入加载纹理的代码。现在我们只使用一张单一的纹理贴到立方体的 6 个面上，但是同样的方法可以用来加载任意数量的纹理贴图。</p>
 
-<div class="note"><strong>注意：</strong> 值得注意的一点是对纹理的加载同样需要遵循<a href="zh-CN/docs/Web/HTTP/Access_control_CORS">跨域访问规则</a>；也就是说你只能从允许跨域访问的网址加载你需要的纹理。下面的例子就是支持跨域访问的。</div>
+<div class="note"><strong>注意：</strong> 值得注意的一点是对纹理的加载同样需要遵循<a href="zh-CN/docs/Web/HTTP/Access_control_CORS">跨域访问规则</a>；也就是说你只能从允许跨域访问的网址加载你需要的纹理。下面的例子就是支持跨域访问的。</div>
 
 <p>加载纹理的代码如下：</p>
 
@@ -32,13 +32,13 @@ function handleTextureLoaded(image, texture) {
 }
 </pre>
 
-<p>函数 <code>initTextures()</code> 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 GL 纹理对象 cubeTexture 。为了把图片文件加载到纹理，代码首先创建了一个 <code>Image</code> 对象然后把需要当作纹理使用的图形文件加载了进来。当图片加载完成后回调函数 <code>handleTextureLoaded()</code> 就会执行。</p>
+<p>函数 <code>initTextures()</code> 首先调用 GL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 GL 纹理对象 cubeTexture 。为了把图片文件加载到纹理，代码首先创建了一个 <code>Image</code> 对象然后把需要当作纹理使用的图形文件加载了进来。当图片加载完成后回调函数 <code>handleTextureLoaded()</code> 就会执行。</p>
 
-<p>接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 <code>gl.TEXTURE_2D 来让它成为当前操作纹理。然后通过调用</code> {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。</p>
+<p>接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 <code>gl.TEXTURE_2D 来让它成为当前操作纹理。然后通过调用</code> {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。</p>
 
-<div class="note"><strong>注意：</strong> 在多数情况下，纹理的宽和高都必须是 2 的幂（如：1，2，4，8，16 等等）。如果有什么特殊情况请参考下面的“<a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#非2的幂纹理">非 2 的幂纹理</a>”小节。</div>
+<div class="note"><strong>注意：</strong> 在多数情况下，纹理的宽和高都必须是 2 的幂（如：1，2，4，8，16 等等）。如果有什么特殊情况请参考下面的“<a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#非2的幂纹理">非 2 的幂纹理</a>”小节。</div>
 
-<p>代码的接下来两行设置了纹理过滤器，过滤器用来控制当图片缩放时像素如何生成如何插值。在这个例子里，我们对图片放大使用的是线性过滤，而对图片缩小使用的是多级渐进纹理过滤。接下来我们通过调用 {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}} 来生成多级渐进纹理，接着通过给 <code>gl.TEXTURE_2D 绑定值 null 来告诉 WebGL 我们对当前纹理的操作已经结束了。</code></p>
+<p>代码的接下来两行设置了纹理过滤器，过滤器用来控制当图片缩放时像素如何生成如何插值。在这个例子里，我们对图片放大使用的是线性过滤，而对图片缩小使用的是多级渐进纹理过滤。接下来我们通过调用 {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}} 来生成多级渐进纹理，接着通过给 <code>gl.TEXTURE_2D 绑定值 null 来告诉 WebGL 我们对当前纹理的操作已经结束了。</code></p>
 
 <h3 id="非2的幂纹理">非 2 的幂纹理</h3>
 
@@ -50,7 +50,7 @@ function handleTextureLoaded(image, texture) {
 
 <p>使用重复纹理寻址的一个例子就是使用一张砖块的纹理来平铺满一面墙壁。</p>
 
-<p>多级渐进纹理和纹理坐标重复可以通过调用 {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} 来禁用，当然首先你已经通过调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 绑定过纹理了。这样虽然已经可以使用非 2 的幂纹理了，但是你将无法使用多级渐进纹理，纹理坐标包装，纹理坐标重复，而且无法控制设备如何处理你的纹理。</p>
+<p>多级渐进纹理和纹理坐标重复可以通过调用 {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} 来禁用，当然首先你已经通过调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 绑定过纹理了。这样虽然已经可以使用非 2 的幂纹理了，但是你将无法使用多级渐进纹理，纹理坐标包装，纹理坐标重复，而且无法控制设备如何处理你的纹理。</p>
 
 <pre class="brush: js">// gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
@@ -63,7 +63,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);</pre>
 
 <h2 id="映射纹理到面">映射纹理到面</h2>
 
-<p>现在，纹理已经加载好了，而且已经可以使用了。但是在使用之前我们还要创建好纹理坐标到立方体各个面的顶点的映射关系。下面的代码通过替换之前的设置每个面颜色的代码，当然还是在 <code>initBuffers() 函数里。</code></p>
+<p>现在，纹理已经加载好了，而且已经可以使用了。但是在使用之前我们还要创建好纹理坐标到立方体各个面的顶点的映射关系。下面的代码通过替换之前的设置每个面颜色的代码，当然还是在 <code>initBuffers() 函数里。</code></p>
 
 <pre class="brush: js">cubeVerticesTextureCoordBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
@@ -107,7 +107,7 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
 
 <p>首先，代码创建了一个 GL 缓存区，用来保存每个面的纹理坐标信息，然后把这个缓存区绑定到 GL 以方便我们写入数据。</p>
 
-<p><code>数组变量 textureCoordinates</code> 中定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。</p>
+<p><code>数组变量 textureCoordinates</code> 中定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。</p>
 
 <p>纹理坐标信息给定了之后，把这个数组里的数据都写到 GL 缓存区，这样 GL 就能使用这个坐标数据了。</p>
 
@@ -115,7 +115,7 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoordinates),
 
 <p>为了使用纹理来代替单一的颜色，着色器程序和着色器程序的初始化代码都需要进行修改。</p>
 
-<p>先让我们看一看需要加入函数 initShaders() 里的非常简单的改变：</p>
+<p>先让我们看一看需要加入函数 initShaders() 里的非常简单的改变：</p>
 
 <pre class="brush: js">textureCoordAttribute = gl.getAttribLocation(shaderProgram, "aTextureCoord");
 gl.enableVertexAttribArray(textureCoordAttribute);
@@ -165,7 +165,7 @@ gl.vertexAttribPointer(texCoordAttribute, 2, gl.FLOAT, false, 0, 0);
 
 <h2 id="绘制具体纹理贴图的立方体">绘制具体纹理贴图的立方体</h2>
 
-<p>接下来是对 <code>drawScene()</code> 函数的更改，为了使整体的代码看起来更简洁，我们去掉了让立方体位置变化的代码，现在它只会随着时间的变化进行旋转，而为了使用纹理，所要进行的代码更改确是很少的。</p>
+<p>接下来是对 <code>drawScene()</code> 函数的更改，为了使整体的代码看起来更简洁，我们去掉了让立方体位置变化的代码，现在它只会随着时间的变化进行旋转，而为了使用纹理，所要进行的代码更改确是很少的。</p>
 
 <p>使用下面的代码代替映射颜色到纹理的代码：</p>
 
@@ -174,13 +174,13 @@ gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
 gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 </pre>
 
-<p>GL 最多可同时注册 32 张纹理；<code>gl.TEXTURE0 是第一张。我们把我们之前加载的纹理绑定到了第一个寄存器，然后着色器程序里的采样器 uSampler</code> 就会完成它的功能：使用纹理。</p>
+<p>GL 最多可同时注册 32 张纹理；<code>gl.TEXTURE0 是第一张。我们把我们之前加载的纹理绑定到了第一个寄存器，然后着色器程序里的采样器 uSampler</code> 就会完成它的功能：使用纹理。</p>
 
 <p>好，现在我们的立方体就会像这样旋转起来了。</p>
 
 <p>{{EmbedGHLiveSample('webgl-examples/tutorial/sample6/index.html', 670, 510) }}</p>
 
-<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6">查看完整示例代码</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample6/">在新窗口里打开示例</a></p>
+<p><a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6">查看完整示例代码</a> | <a href="http://mdn.github.io/webgl-examples/tutorial/sample6/">在新窗口里打开示例</a></p>
 
 <h2 id="关于跨域纹理">关于跨域纹理</h2>
 
@@ -195,11 +195,11 @@ gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
 <p>被污染过的（只写）画布是不能拿来当作 WebGL 纹理来使用的。举个例子来说，当把一张跨域的图片画到一个 2D 的 {{ HTMLElement("canvas") }} 中时，这个画布就是“被污染过的”。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 对 Canvas 2D 的 <code>drawImage 的跨域支持已经在 </code>{{Gecko("9.0")}} 版本实现的。这就意味着使用支持跨域的图片来污染一个 2D 的画布，这张画布也已经可以作为 WebGL 的纹理来使用了。</p>
+<p><strong>注意：</strong> 对 Canvas 2D 的 <code>drawImage 的跨域支持已经在 </code>{{Gecko("9.0")}} 版本实现的。这就意味着使用支持跨域的图片来污染一个 2D 的画布，这张画布也已经可以作为 WebGL 的纹理来使用了。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong> 视频对跨域的支持以及 {{ HTMLElement("video") }} 元素的 <code>crossorigin</code> 属性的支持是在 {{Gecko("12.0")}} 版本中实现的。</p>
+<p><strong>注意：</strong> 视频对跨域的支持以及 {{ HTMLElement("video") }} 元素的 <code>crossorigin</code> 属性的支持是在 {{Gecko("12.0")}} 版本中实现的。</p>
 </div>
 
 <p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>

@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 
 <h3 id="区分大小写">区分大小写</h3>
 
-<p><code>includes()</code> 方法是区分大小写的。例如，下面的表达式会返回 <strong><code>false</code></strong> ：</p>
+<p><code>includes()</code> 方法是区分大小写的。例如，下面的表达式会返回 <strong><code>false</code></strong> ：</p>
 
 <pre><code>'Blue Whale'.includes('blue'); // returns false</code></pre>
 
@@ -92,11 +92,11 @@ console.log(str.includes('TO BE'));       // false</code></pre>
 
 <h2 id="String.prototype.contains">String.prototype.contains()</h2>
 
-<p>在 Firefox 18 - 39 中，这个方法的名称叫 <code>contains()</code>。由于下面的理由，在{{bug(1102219)}}中，它被重命名为 <code>includes()</code> ：</p>
+<p>在 Firefox 18 - 39 中，这个方法的名称叫 <code>contains()</code>。由于下面的理由，在{{bug(1102219)}}中，它被重命名为 <code>includes()</code> ：</p>
 
-<p>据报道，在 Firefox 17 上，一些使用 <a href="http://mootools.net/">MooTools</a> 1.2 的网站会崩溃掉。这个版本的 MooTools 会检查函数 <code>String.prototype.contains()</code>  是否存在，如果不存在的话，MooTools 就添加它自己的函数。通过在 Firefox 17 中引入这个函数，检查更改的行为在一定程度上导致了基于 MooTools 的 <code>String.prototype.contains() </code>函数的代码实现中断。结果是，当 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=789036#c32">MooTools 的拓展</a> 导致 <a href="http://mootools.net/blog/2013/02/19/mootools-1-2-6-released">MooTools 1.2.6</a> 版本的发布，此实现在 Firefox 17 中不可用和 <code>String.prototype.contains()</code> 在随后一个版本 Firefox 18 上是可用的。</p>
+<p>据报道，在 Firefox 17 上，一些使用 <a href="http://mootools.net/">MooTools</a> 1.2 的网站会崩溃掉。这个版本的 MooTools 会检查函数 <code>String.prototype.contains()</code>  是否存在，如果不存在的话，MooTools 就添加它自己的函数。通过在 Firefox 17 中引入这个函数，检查更改的行为在一定程度上导致了基于 MooTools 的 <code>String.prototype.contains() </code>函数的代码实现中断。结果是，当 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=789036#c32">MooTools 的拓展</a> 导致 <a href="http://mootools.net/blog/2013/02/19/mootools-1-2-6-released">MooTools 1.2.6</a> 版本的发布，此实现在 Firefox 17 中不可用和 <code>String.prototype.contains()</code> 在随后一个版本 Firefox 18 上是可用的。</p>
 
-<p>MooTools 1.3 会强制使用它自己版本的函数 <code>String.prototype.contains()</code>，因此，依赖它的网站不会崩溃掉。然而，你应该注意此方法在 <a href="http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains">MooTools 1.3 </a>签名和 ECMAScript 6 签名中的不同（在第二个参数）。后来，<a href="https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note">为了与 ES6 标准一致在 MooTools 1.5 版本及以上更改了签名</a>。</p>
+<p>MooTools 1.3 会强制使用它自己版本的函数 <code>String.prototype.contains()</code>，因此，依赖它的网站不会崩溃掉。然而，你应该注意此方法在 <a href="http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains">MooTools 1.3 </a>签名和 ECMAScript 6 签名中的不同（在第二个参数）。后来，<a href="https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note">为了与 ES6 标准一致在 MooTools 1.5 版本及以上更改了签名</a>。</p>
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -12,7 +12,7 @@ translation_of: Web/API/XMLHttpRequest/setRequestHeader
 
 <p>如果没有设置 {{HTTPHeader("Accept")}} 属性，则此发送出{{domxref("XMLHttpRequest.send", "send()")}} 的值为此属性的默认值：<code>*/*</code>。</p>
 
-<p>安全起见，有些请求头的值只能由 user agent 设置：{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
+<p>安全起见，有些请求头的值只能由 user agent 设置：{{Glossary("Forbidden_header_name", "forbidden header names", 1)}} 和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
 
 <div class="note">
 <p>自定义一些 header 属性进行跨域请求时，可能会遇到"<strong>not allowed by Access-Control-Allow-Headers in preflight response</strong>"，你可能需要在你的服务端设置 "Access-Control-Allow-Headers"。</p>

@@ -55,7 +55,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
  <li>设备性能不高的用户（他们可能具有较慢的处理器）</li>
 </ul>
 
-<p>在某种程度上，本模块都是关于可访问性的 — 跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility">可访问性是什么？</a> 更全面透彻地定义了什么是可访问性。</p>
+<p>在某种程度上，本模块都是关于可访问性的 — 跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility">可访问性是什么？</a> 更全面透彻地定义了什么是可访问性。</p>
 
 <p>也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在其他地方已经讨论过其他领域，例如<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98">响应式设计问题</a>和<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Performance_issues">性能</a>。</p>
 
@@ -73,7 +73,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 
 <h3 id="HTML">HTML</h3>
 
-<p>HTML 语义化 (语义化正确地使用 HTML 标签) 对于可访问性来说是开箱即用的 — 这类内容可供无视障人士阅读（前提是你不会做任何愚蠢的事情，例如使文本变小或使用 CSS 隐藏它），也可被屏幕阅读器（从字面上读出网页的应用）之类的辅助技术使用，并赋予其他优势。</p>
+<p>HTML 语义化 (语义化正确地使用 HTML 标签) 对于可访问性来说是开箱即用的 — 这类内容可供无视障人士阅读（前提是你不会做任何愚蠢的事情，例如使文本变小或使用 CSS 隐藏它），也可被屏幕阅读器（从字面上读出网页的应用）之类的辅助技术使用，并赋予其他优势。</p>
 
 <h4 id="语义化结构">语义化结构</h4>
 
@@ -107,22 +107,22 @@ This is the second subsection of my content. I think is more interesting than th
 
 &lt;p&gt;This is the second subsection of my content. I think is more interesting than the last one.&lt;/p&gt;</pre>
 
-<p>此外，你的内容应该在逻辑顺序上讲得通的 — 你总能在以后再为它们写 CSS，但你应该在一开始就确定内容正确的顺序。</p>
+<p>此外，你的内容应该在逻辑顺序上讲得通的 — 你总能在以后再为它们写 CSS，但你应该在一开始就确定内容正确的顺序。</p>
 
 <p>作为测试，你可以关闭网站的 CSS，然后看看没有了 CSS 网站是否能被理解。你可以通过从代码中删除 CSS 来手动完成此操作，但是最简单的方法是使用浏览器功能，例如：</p>
 
 <ul>
  <li>Firefox: 选择<em>查看 &gt; 页面样式 &gt; 无样式</em></li>
- <li>Safari: 选择<em>开发 &gt; 停用样式</em> (需要开启“开发”菜单，点击<em>Safari &gt; 偏好设置 &gt; 高级 &gt; 在菜单栏中显示“开发”菜单</em>)</li>
+ <li>Safari: 选择<em>开发 &gt; 停用样式</em> (需要开启“开发”菜单，点击<em>Safari &gt; 偏好设置 &gt; 高级 &gt; 在菜单栏中显示“开发”菜单</em>)</li>
  <li>Chrome: 安装 Web Developer Toolbar 扩展程序，然后重启浏览器。点击图标，选择<em>CSS &gt; 停用所有样式</em></li>
- <li>Edge: 选择<em>查看 &gt; 样式 &gt; 无样式</em></li>
+ <li>Edge: 选择<em>查看 &gt; 样式 &gt; 无样式</em></li>
 </ul>
 
 <h4 id="使用键盘">使用键盘</h4>
 
 <p>某些 HTML 功能可以使用键盘来选择 — 这是默认的，从早期 web 开始就是这样的。具有此功能的元素是允许用户与网页交互的常见元素，比如 links, {{htmlelement("button")}}s, 以及表单元素，比如{{htmlelement("input")}}.</p>
 
-<p>浏览<a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">源码</a>) 尝试一下— 在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。</p>
+<p>浏览<a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">native-keyboard-accessibility.html</a> (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html">源码</a>) 尝试一下— 在新标签页中打开它，然后尝试按 Tab 键；按下几下后，你应该看到标签焦点开始在不同的可聚焦元素之间移动；在每个浏览器中，被聚焦的元素都被赋予突出的默认样式 (不同的浏览器表现略有不同) 以便你能分辨聚焦在哪个元素上。</p>
 
 <p><img src="button-focused-unfocused.png"></p>
 
@@ -276,7 +276,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>要处理内容定期更新的区域，可以使用<code>aria-live</code>属性，该属性标识更新区域。它的值指示屏幕阅读器如何处理更新内容：</p>
 
 <ul>
- <li><code>off:</code> 默认值。更新内容不被读出。</li>
+ <li><code>off:</code> 默认值。更新内容不被读出。</li>
  <li><code>polite</code>: 当用户空闲时读出更新内容。</li>
  <li><code>assertive</code>: 尽快读出更新内容。</li>
  <li><code>rude</code>: 直接读出更新内容，即使会打断用户正常阅读。</li>
@@ -286,7 +286,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <pre class="brush: html">&lt;p&gt;&lt;span id="LiveRegion1" aria-live="polite" aria-atomic="false"&gt;&lt;/span&gt;&lt;/p&gt;</pre>
 
-<p>浏览 Freedom Scientific 的<a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">ARIA (Accessible Rich Internet Applications) 动态更新区域</a>示例 — 高亮显示的段落每 10 秒更新一次内容，屏幕阅读器应将此内容读出给用户。<a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm">ARIA Live Regions - Atomic</a>是另一个很有用的例子。</p>
+<p>浏览 Freedom Scientific 的<a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">ARIA (Accessible Rich Internet Applications) 动态更新区域</a>示例 — 高亮显示的段落每 10 秒更新一次内容，屏幕阅读器应将此内容读出给用户。<a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm">ARIA Live Regions - Atomic</a>是另一个很有用的例子。</p>
 
 <p>我们这里没有足够的空间来详细介绍 WAI-ARIA，你可以在<a href="/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a>了解更多。</p>
 
@@ -350,12 +350,12 @@ a:focus, input:focus, button:focus, select:focus {
 <p>一起看一下我们对几款不同的屏幕阅读器的测试。这将帮助你大致了解它们如何工作以及如何测试它们。</p>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM 的 <a href="http://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a>提供了一些关于屏幕阅读器的使用和如何开发应用以最好的适用屏幕阅读器的信息。你也可以看下<a href="http://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a>这篇有关屏幕阅读器一些有趣的统计信息的文章。</p>
+<p><strong>Note</strong>: WebAIM 的 <a href="http://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a>提供了一些关于屏幕阅读器的使用和如何开发应用以最好的适用屏幕阅读器的信息。你也可以看下<a href="http://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a>这篇有关屏幕阅读器一些有趣的统计信息的文章。</p>
 </div>
 
 <h4 id="VoiceOver">VoiceOver</h4>
 
-<p>VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。 我们在 Mac OS X 系统上测试了它。</p>
+<p>VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。 我们在 Mac OS X 系统上测试了它。</p>
 
 <p>按下 Cmd + Fn + F5 打开它。如果你之前没用过 VO，将会出现一个可以选择是否开启 VO 的欢迎界面，并且还会有教程指导你如何使用。再次按下 Cmd + Fn + F5 可以关闭。</p>
 
@@ -405,11 +405,11 @@ a:focus, input:focus, button:focus, select:focus {
    <td>(当在表格里面时) 阅读当前行的头部</td>
   </tr>
   <tr>
-   <td>VO + C + C </td>
+   <td>VO + C + C </td>
    <td>(当在表格里面时) 阅读当前列，包括列头</td>
   </tr>
   <tr>
-   <td>VO + R + R </td>
+   <td>VO + R + R </td>
    <td>(当在表格里面时) 阅读当前行，包括对应于每个小行的头</td>
   </tr>
   <tr>
@@ -571,7 +571,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <ul>
  <li>浏览<a href="http://mdn.github.io/learning-area/accessibility/html/good-semantics.html">good-semantics.html</a>, 留意屏幕阅读器如何找到标题并将其用于导航。再看一下<a href="http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a>, 留意屏幕阅读器不会得到这些信息。想象一下，当尝试浏览非常长的文本页面时，这会是多么使人烦躁。</li>
- <li>浏览<a href="http://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a>, 并留意当不在上下文时他们对于你理解内容的帮助。而<a href="http://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a> 就无法帮助你理解— 他们仅仅会提示"click here（点击这里）".</li>
+ <li>浏览<a href="http://mdn.github.io/learning-area/accessibility/html/good-links.html">good-links.html</a>, 并留意当不在上下文时他们对于你理解内容的帮助。而<a href="http://mdn.github.io/learning-area/accessibility/html/bad-links.html">bad-links.html</a> 就无法帮助你理解— 他们仅仅会提示"click here（点击这里）".</li>
  <li>浏览<a href="http://mdn.github.io/learning-area/accessibility/html/good-form.html">good-form.html</a>, 并注意如何使用其标签描述表单输入，因为我们已经正确使用了&lt;label&gt;。在<a href="http://mdn.github.io/learning-area/accessibility/html/bad-form.html">bad-form.html</a>, 只能获取到无用的空白标签。</li>
  <li>浏览<a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a>, 并查看屏幕阅读器如何将内容的列和行关联起来，并一起读取它们，因为我们已经正确定义了标头。在<a href="http://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a>, 无法得知单元格的关联关系。请注意，当页面上只有一个表时，NVDA 似乎表现得有些杂乱无章。你可以改用<a href="http://webaim.org/articles/nvda/tables.htm">WebAIM's table test page</a>进行测试。</li>
  <li>看一下之前看过的<a href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">WAI-ARIA live regions example</a>, 并注意屏幕阅读器将实时读取不断更新的部分。</li>
@@ -589,7 +589,7 @@ a:focus, input:focus, button:focus, select:focus {
  <li>确保 HTML 尽可能是语义化的。<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E9%AA%8C%E8%AF%81">验证</a>是一个好方法，就像使用<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7">审计工具</a>。</li>
  <li>检查当关闭 CSS 时，你的内容能够被理解。</li>
  <li>确认功能是<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E4%BD%BF%E7%94%A8%E9%94%AE%E7%9B%98">全键盘可访问</a>的。使用 Tab 键、回车键等做测试。</li>
- <li>确保非文本内容有<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E6%9B%BF%E4%BB%A3%E6%96%87%E6%9C%AC">替代文本</a>。 <a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7">审计工具</a>能够很好地发现问题。</li>
+ <li>确保非文本内容有<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E6%9B%BF%E4%BB%A3%E6%96%87%E6%9C%AC">替代文本</a>。 <a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%AE%A1%E8%AE%A1%E5%B7%A5%E5%85%B7">审计工具</a>能够很好地发现问题。</li>
  <li>确保<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E9%A2%9C%E8%89%B2%E5%92%8C%E9%A2%9C%E8%89%B2%E5%AF%B9%E6%AF%94%E5%BA%A6">颜色和颜色对比度</a>是可接受的，使用合适的工具测试。</li>
  <li>确保<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E9%9A%90%E8%97%8F%E7%9A%84%E5%86%85%E5%AE%B9">隐藏的内容</a>可以被屏幕阅读器读取。</li>
  <li>尽可能的使功能在没有 JavaScript 的情况下也可以正常使用。</li>
@@ -601,7 +601,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 <h2 id="寻找帮助">寻找帮助</h2>
 
-<p>可访问性还会遇到许多其他问题。你要学会如何在线查找答案。请查阅 HTML 和 CSS 文章的“<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E5%AF%BB%E6%89%BE%E5%B8%AE%E5%8A%A9">寻找帮助</a>”部分，以获取一些指导。 </p>
+<p>可访问性还会遇到许多其他问题。你要学会如何在线查找答案。请查阅 HTML 和 CSS 文章的“<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E5%AF%BB%E6%89%BE%E5%B8%AE%E5%8A%A9">寻找帮助</a>”部分，以获取一些指导。 </p>
 
 <h2 id="总结">总结</h2>
 

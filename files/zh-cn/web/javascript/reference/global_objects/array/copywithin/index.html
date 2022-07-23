@@ -27,11 +27,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 
 <dl>
  <dt><code>target</code></dt>
- <dd>0 为基底的索引，复制序列到该位置。如果是负数，<code>target</code> 将从末尾开始计算。如果 <code>target</code> 大于等于 <code>arr.length</code>，将不会发生拷贝。如果 <code>target</code> 在 <code>start</code> 之后，复制的序列将被修改以符合 <code>arr.length</code>。</dd>
+ <dd>0 为基底的索引，复制序列到该位置。如果是负数，<code>target</code> 将从末尾开始计算。如果 <code>target</code> 大于等于 <code>arr.length</code>，将不会发生拷贝。如果 <code>target</code> 在 <code>start</code> 之后，复制的序列将被修改以符合 <code>arr.length</code>。</dd>
  <dt><code>start</code></dt>
- <dd>0 为基底的索引，开始复制元素的起始位置。如果是负数，<code>start</code> 将从末尾开始计算。如果 <code>start</code> 被忽略，<code>copyWithin</code> 将会从 0 开始复制。</dd>
+ <dd>0 为基底的索引，开始复制元素的起始位置。如果是负数，<code>start</code> 将从末尾开始计算。如果 <code>start</code> 被忽略，<code>copyWithin</code> 将会从 0 开始复制。</dd>
  <dt><code>end</code></dt>
- <dd>0 为基底的索引，开始复制元素的结束位置。<code>copyWithin</code> 将会拷贝到该位置，但不包括 <code>end</code> 这个位置的元素。如果是负数， <code>end</code> 将从末尾开始计算。如果 <code>end</code> 被忽略，<code>copyWithin</code> 方法将会一直复制至数组结尾（默认为 <code>arr.length</code>）。</dd>
+ <dd>0 为基底的索引，开始复制元素的结束位置。<code>copyWithin</code> 将会拷贝到该位置，但不包括 <code>end</code> 这个位置的元素。如果是负数， <code>end</code> 将从末尾开始计算。如果 <code>end</code> 被忽略，<code>copyWithin</code> 方法将会一直复制至数组结尾（默认为 <code>arr.length</code>）。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -46,11 +46,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 
 <p>copyWithin 方法不要求其 this 值必须是一个数组对象；除此之外，copyWithin 是一个可变方法，它可以改变 this 对象本身，并且返回它，而不仅仅是它的拷贝。</p>
 
-<p><code>copyWithin</code> 就像 C 和 C++ 的 <code>memcpy</code> 函数一样，且它是用来移动 {{jsxref("Array")}} 或者 {{jsxref("TypedArray")}} 数据的一个高性能的方法。复制以及粘贴序列这两者是为一体的操作;即使复制和粘贴区域重叠，粘贴的序列也会有拷贝来的值。</p>
+<p><code>copyWithin</code> 就像 C 和 C++ 的 <code>memcpy</code> 函数一样，且它是用来移动 {{jsxref("Array")}} 或者 {{jsxref("TypedArray")}} 数据的一个高性能的方法。复制以及粘贴序列这两者是为一体的操作;即使复制和粘贴区域重叠，粘贴的序列也会有拷贝来的值。</p>
 
 <p><code>copyWithin</code><strong> </strong>函数被设计为通用式的，其不要求其 <code>this</code> 值必须是一个{{jsxref("Array", "数组")}}对象。</p>
 
-<p><code>copyWithin</code> 是一个可变方法，它不会改变 this 的长度 length，但是会改变 this 本身的内容，且需要时会创建新的属性。</p>
+<p><code>copyWithin</code> 是一个可变方法，它不会改变 this 的长度 length，但是会改变 this 本身的内容，且需要时会创建新的属性。</p>
 
 <h2 id="例子">例子</h2>
 

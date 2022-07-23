@@ -8,9 +8,9 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2
 ---
-<p>« <a href="/en/CSS" title="CSS">CSS</a> «<a href="/en/CSS/Understanding_z-index" title="Understanding CSS z-index"> 理解 CSS z-index</a></p>
+<p>« <a href="/en/CSS" title="CSS">CSS</a> «<a href="/en/CSS/Understanding_z-index" title="Understanding CSS z-index"> 理解 CSS z-index</a></p>
 
-<h3 id="层叠上下文示例_2">层叠上下文示例 2</h3>
+<h3 id="层叠上下文示例_2">层叠上下文示例 2</h3>
 
 <p>这是一个非常简单的例子，但它是理解层叠上下文这个概念的关键。还是和之前的例子中一样的四个 DIV，不过现在 z-index 属性被分配在两个水平的层次结构中。</p>
 
@@ -35,7 +35,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Stacking_context_example_2
  </li>
 </ul>
 
-<div class="note"><strong>Note:</strong> 值得记住的是，通常 HTML 的层次结构和层叠上下文的层次结构是不同的。在层叠上下文的层次结构中，没有创建层叠上下文的元素同其父级处于一个层叠上下文。</div>
+<div class="note"><strong>Note:</strong> 值得记住的是，通常 HTML 的层次结构和层叠上下文的层次结构是不同的。在层叠上下文的层次结构中，没有创建层叠上下文的元素同其父级处于一个层叠上下文。</div>
 
 <h3 id="示例源码"><strong>示例源码</strong></h3>
 
@@ -90,30 +90,30 @@ span.bold { font-weight: bold; }
 
 &lt;body&gt;
 
-    &lt;br /&gt;
+    &lt;br /&gt;
 
-    &lt;div id="div1"&gt;&lt;br /&gt;
-        &lt;span class="bold"&gt;DIV #1&lt;/span&gt;&lt;br /&gt;
-        position: relative;
-        &lt;div id="div2"&gt;&lt;br /&gt;
-            &lt;span class="bold"&gt;DIV #2&lt;/span&gt;&lt;br /&gt;
-            position: absolute;&lt;br /&gt;
-            z-index: 2;
-        &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;div id="div1"&gt;&lt;br /&gt;
+        &lt;span class="bold"&gt;DIV #1&lt;/span&gt;&lt;br /&gt;
+        position: relative;
+        &lt;div id="div2"&gt;&lt;br /&gt;
+            &lt;span class="bold"&gt;DIV #2&lt;/span&gt;&lt;br /&gt;
+            position: absolute;&lt;br /&gt;
+            z-index: 2;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
-    &lt;br /&gt;
+    &lt;br /&gt;
 
-    &lt;div id="div3"&gt;&lt;br /&gt;
-        &lt;span class="bold"&gt;DIV #3&lt;/span&gt;&lt;br /&gt;
-        position: relative;&lt;br /&gt;
-        z-index: 1;
-        &lt;div id="div4"&gt;&lt;br /&gt;
-            &lt;span class="bold"&gt;DIV #4&lt;/span&gt;&lt;br /&gt;
-            position: absolute;&lt;br /&gt;
-            z-index: 10;
-        &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;div id="div3"&gt;&lt;br /&gt;
+        &lt;span class="bold"&gt;DIV #3&lt;/span&gt;&lt;br /&gt;
+        position: relative;&lt;br /&gt;
+        z-index: 1;
+        &lt;div id="div4"&gt;&lt;br /&gt;
+            &lt;span class="bold"&gt;DIV #4&lt;/span&gt;&lt;br /&gt;
+            position: absolute;&lt;br /&gt;
+            z-index: 10;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
@@ -122,12 +122,12 @@ span.bold { font-weight: bold; }
 <h3 id="相关文章">相关文章</h3>
 
 <ul>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="en/CSS/Understanding_z-index/Stacking_without_z-index">Stacking without z-index</a> : Default stacking rules</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float" title="en/CSS/Understanding_z-index/Stacking_and_float">Stacking and float</a> : How floating elements are handled</li>
- <li><a href="/en/CSS/Understanding_z-index/Adding_z-index" title="en/CSS/Understanding_z-index/Adding_z-index">Adding z-index</a> : Using z-index to change default stacking</li>
- <li><a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">The stacking context</a> : Notes on the stacking context</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_1" title="en/CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3" title="en/CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
+ <li><a href="/en/CSS/Understanding_z-index/Stacking_without_z-index" title="en/CSS/Understanding_z-index/Stacking_without_z-index">Stacking without z-index</a> : Default stacking rules</li>
+ <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float" title="en/CSS/Understanding_z-index/Stacking_and_float">Stacking and float</a> : How floating elements are handled</li>
+ <li><a href="/en/CSS/Understanding_z-index/Adding_z-index" title="en/CSS/Understanding_z-index/Adding_z-index">Adding z-index</a> : Using z-index to change default stacking</li>
+ <li><a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">The stacking context</a> : Notes on the stacking context</li>
+ <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_1" title="en/CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
+ <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3" title="en/CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
 </ul>
 
 <div class="originaldocinfo">
@@ -140,4 +140,4 @@ span.bold { font-weight: bold; }
 </ul>
 </div>
 
-<p> </p>
+<p> </p>

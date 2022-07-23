@@ -10,13 +10,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>reduceRight()</strong></code> 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。</p>
+<p><code><strong>reduceRight()</strong></code> 方法接受一个函数作为累加器（accumulator）和数组的每个值（从右到左）将其减少为单个值。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}</div>
 
 
 
-<p>对于从左至右遍历的相似方法请参阅 {{jsxref("Array.prototype.reduce()")}}.</p>
+<p>对于从左至右遍历的相似方法请参阅 {{jsxref("Array.prototype.reduce()")}}.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
     <dd>调用 <code>reduceRight()</code> 的数组。</dd>
   </dl>
  </dd>
- <dt><code>initialValue</code>{{optional_inline}} </dt>
+ <dt><code>initialValue</code>{{optional_inline}} </dt>
  <dd>首次调用 <code>callback</code> 函数时，累加器  <code>accumulator</code> 的值。如果未提供该初始值，则将使用数组中的最后一个元素，并跳过该元素。如果不给出初始值，则需保证数组不为空。<br>
  否则，在空数组上调用 <code>reduce</code> 或 <code>reduceRight</code> 且未提供初始值（例如 <code>[].reduce( (acc, cur, idx, arr) =&gt; {} )</code> ）的话，会导致类型错误 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value">TypeError: reduce of empty array with no initial value</a></code>。</dd>
 </dl>
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <p><code>reduceRight</code> 为数组中每个元素调用一次 <code>callback</code> 回调函数，但是数组中被删除的索引或从未被赋值的索引会跳过。回调函数接受四个参数：初始值（或上次调用回调的返回值）、当前元素值、当前索引，以及调用迭代的当前数组。</p>
 
-<p>可以像下面这样调用 <code>reduceRight</code> 的回调函数 <code>callback</code>：</p>
+<p>可以像下面这样调用 <code>reduceRight</code> 的回调函数 <code>callback</code>：</p>
 
 <pre class="brush: js">array.reduceRight(function(accumulator, currentValue, index, array) {
   // ...
@@ -60,13 +60,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 <p>首次调用回调函数时，<code>accumulator</code> 和 <code>currentValue</code> 的可能取值情况有两种：</p>
 
 <ul>
- <li>如果在调用 <code>reduceRight</code> 时提供了 <code>initialValue</code> 参数，则 <code>accumulator</code> 等于 <code>initialValue</code>，<code>currentValue</code> 等于数组中的最后一个元素。</li>
- <li>如果没有提供 <code>initialValue</code> 参数，则 <code>accumulator</code> 等于数组最后一个元素， <code>currentValue</code> 等于数组中倒数第二个元素。</li>
+ <li>如果在调用 <code>reduceRight</code> 时提供了 <code>initialValue</code> 参数，则 <code>accumulator</code> 等于 <code>initialValue</code>，<code>currentValue</code> 等于数组中的最后一个元素。</li>
+ <li>如果没有提供 <code>initialValue</code> 参数，则 <code>accumulator</code> 等于数组最后一个元素， <code>currentValue</code> 等于数组中倒数第二个元素。</li>
 </ul>
 
-<p>如果数组为空，但提供了 <code>initialValue</code> 参数，或如果数组中只有一个元素，且没有提供 <code>initialValue</code> 参数，将会直接返回 <code>initialValue</code> 参数或数组中的那一个元素。这两种情况下，都不会调用 <code>callback</code> 函数。</p>
+<p>如果数组为空，但提供了 <code>initialValue</code> 参数，或如果数组中只有一个元素，且没有提供 <code>initialValue</code> 参数，将会直接返回 <code>initialValue</code> 参数或数组中的那一个元素。这两种情况下，都不会调用 <code>callback</code> 函数。</p>
 
-<p>如果数组为空，且没有提供 <code>initialValue</code> 参数，则会抛出一个 <code>TypeError</code> 错误。</p>
+<p>如果数组为空，且没有提供 <code>initialValue</code> 参数，则会抛出一个 <code>TypeError</code> 错误。</p>
 
 <p>最终，首次调用时的情况可汇总为此表：</p>
 
@@ -87,8 +87,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
   </tr>
   <tr>
    <td>提供</td>
-   <td><code>accumulator</code> 为 <code>initialValue</code><br>
-    <code>currentValue</code> 为最后一个元素</td>
+   <td><code>accumulator</code> 为 <code>initialValue</code><br>
+    <code>currentValue</code> 为最后一个元素</td>
   </tr>
   <tr>
    <td>= 1</td>
@@ -165,7 +165,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <p><code>reduceRight</code> 返回值是最后一次调用回调的返回值（<code>10</code>）。</p>
 
-<p>如果提供了一个 <code>initialValue</code> 参数，则结果如下：</p>
+<p>如果提供了一个 <code>initialValue</code> 参数，则结果如下：</p>
 
 <pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
     return previousValue + currentValue;

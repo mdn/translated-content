@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 
 <p>以前，一般设置默认参数的方法是在函数体测试参数是否为<code>undefined</code>，如果是的话就设置为默认的值。</p>
 
-<p>下面的例子中，如果在调用<code>multiply</code>时，参数<code>b</code>的值没有提供，那么它的值就为<code>undefined</code>。如果直接执行<code>a * b</code>，函数会返回 <code>NaN</code>。</p>
+<p>下面的例子中，如果在调用<code>multiply</code>时，参数<code>b</code>的值没有提供，那么它的值就为<code>undefined</code>。如果直接执行<code>a * b</code>，函数会返回 <code>NaN</code>。</p>
 
 <pre class="brush: js">function multiply(a, b) {
   return a * b;
@@ -60,7 +60,7 @@ multiply(5);    // 5</pre>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="传入_undefined_vs_其他假值">传入 <code>undefined</code> vs 其他假值</h3>
+<h3 id="传入_undefined_vs_其他假值">传入 <code>undefined</code> vs 其他假值</h3>
 
 <p>在第二次调用中，即使第一个参数在调用时显式设置为<code>undefined</code>（虽然不是<code>null</code>或其他<a href="/zh-CN/docs/Glossary/Falsy">falsy</a>值），但是<code>num</code>参数的值是默认值。</p>
 
@@ -155,7 +155,7 @@ withoutDefaults.call({value: '=^_^='});
 
 <h3 id="函数嵌套定义">函数嵌套定义</h3>
 
-<p>在 Gecko 33 {{geckoRelease(33)}} 中引入。在函数体内的函数声明不能引用内部的默认参数，并且会在 SpiderMonkey 抛出一个{{jsxref("ReferenceError")}}（现在是 {{jsxref("TypeError")}}），参见 {{bug(1022967)}}。默认参数总是会被首先执行，而在函数体内部的函数声明会在之后生效。</p>
+<p>在 Gecko 33 {{geckoRelease(33)}} 中引入。在函数体内的函数声明不能引用内部的默认参数，并且会在 SpiderMonkey 抛出一个{{jsxref("ReferenceError")}}（现在是 {{jsxref("TypeError")}}），参见 {{bug(1022967)}}。默认参数总是会被首先执行，而在函数体内部的函数声明会在之后生效。</p>
 
 <pre class="brush: js">// Doesn't work! Throws ReferenceError.
 function f(a = go()) {
@@ -200,7 +200,7 @@ f(); // 6</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -215,4 +215,4 @@ f(); // 6</pre>
  <li><a class="external external-icon" href="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values" rel="external" title="http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values">Original proposal at ecmascript.org</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

@@ -53,7 +53,7 @@ translation_of: Web/API/Intersection_Observer_API
 
 <h3 id="创建一个_intersection_observer">创建一个 intersection observer</h3>
 
-<p>创建一个 IntersectionObserver 对象，并传入相应参数和回调用函数，该回调函数将会在目标 (<strong>target</strong>) 元素和根 (<strong>root</strong>) 元素的交集大小超过阈值 (<strong>threshold</strong>) 规定的大小时候被执行。</p>
+<p>创建一个 IntersectionObserver 对象，并传入相应参数和回调用函数，该回调函数将会在目标 (<strong>target</strong>) 元素和根 (<strong>root</strong>) 元素的交集大小超过阈值 (<strong>threshold</strong>) 规定的大小时候被执行。</p>
 
 <pre class="brush: js">let options = {
   root: document.querySelector('#scrollArea'),
@@ -90,7 +90,7 @@ observer.observe(target);
 
 <p>每当目标满足该 IntersectionObserver 指定的 threshold 值，回调被调用。</p>
 
-<p>只要目标满足为 IntersectionObserver 指定的阈值，就会调用回调。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察者的列表：</p>
+<p>只要目标满足为 IntersectionObserver 指定的阈值，就会调用回调。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察者的列表：</p>
 
 <pre class="brush: js">let callback =(entries, observer) =&gt; {
   entries.forEach(entry =&gt; {
@@ -134,7 +134,7 @@ observer.observe(target);
 
 <p>例如，当你想要在 target 在 root 元素中中的可见性每超过 25% 或者减少 25% 的时候都通知一次。你可以在创建 observer 的时候指定 <strong>thresholds</strong> 属性值为 <code>[0, 0.25, 0.5, 0.75, 1]</code>，你可以通过检测在每次交集发生变化的时候的都会传递回调函数的参数 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 的属性值来判断 target 元素在 root 元素中的可见性是否发生变化。如果 <code>isIntersecting</code> 为真，target 元素的至少已经达到 <strong>thresholds</strong> 属性值当中规定的其中一个阈值，如果为假，则 target 元素不在给定的阈值范围内可见。</p>
 
-<p>Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.</p>
+<p>Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.</p>
 
 <p>为了让我们感受下 thresholds 是如何工作的，尝试滚动以下的例子，每一个 colored box 的四个边角都会展示自身在 root 元素中的可见程度百分比，所以在你滚动 root 的时候你将会看到四个边角的数值一直在发生变化。 每一个 box 都有不同的 thresholds：</p>
 
@@ -318,7 +318,7 @@ startup();
 
 <h3 id="Intersection_change_callbacks">Intersection change callbacks</h3>
 
-<p>When the amount of a target element which is visible within the root element crosses one of the visibility thresholds, the {{domxref("IntersectionObserver")}} object's callback is executed. The callback receives as input an array of all of {{domxref("IntersectionObserverEntry")}} objects, one for each threshold which was crossed, and a reference to the <code>IntersectionObserver</code> object itself.</p>
+<p>When the amount of a target element which is visible within the root element crosses one of the visibility thresholds, the {{domxref("IntersectionObserver")}} object's callback is executed. The callback receives as input an array of all of {{domxref("IntersectionObserverEntry")}} objects, one for each threshold which was crossed, and a reference to the <code>IntersectionObserver</code> object itself.</p>
 
 <p>Each entry in the list of thresholds is an {{domxref("IntersectionObserverEntry")}} object describing one threshold that was crossed; that is, each entry describes how much of a given element is intersecting with the root element, whether or not the element is considered to be intersecting or not, and the direction in which the transition occurred.</p>
 

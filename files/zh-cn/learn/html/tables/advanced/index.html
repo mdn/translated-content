@@ -36,7 +36,7 @@ translation_of: Learn/HTML/Tables/Advanced
 
 <h2 id="使用_&lt;caption>_为你的表格增加一个标题">使用 &lt;caption&gt; 为你的表格增加一个标题</h2>
 
-<p>你可以为你的表格增加一个标题，通过 {{htmlelement("caption")}} 元素，再把 {{htmlelement("caption")}} 元素放入 {{htmlelement("table")}} 元素中。你应该把它放在<code>&lt;table&gt;</code> 标签的下面。</p>
+<p>你可以为你的表格增加一个标题，通过 {{htmlelement("caption")}} 元素，再把 {{htmlelement("caption")}} 元素放入 {{htmlelement("table")}} 元素中。你应该把它放在<code>&lt;table&gt;</code> 标签的下面。</p>
 
 <pre class="brush: html">&lt;table&gt;
   &lt;caption&gt;Dinosaurs in the Jurassic period&lt;/caption&gt;
@@ -46,10 +46,10 @@ translation_of: Learn/HTML/Tables/Advanced
 
 <p>从上面简单的例子可以推断，标题意味着包含对于表格内容的描述，这对那些希望可以快速浏览网页中的表格对他们是否有帮助的读者们来说，是非常好的功能。特别是盲人用户，不需要让屏幕阅读设备读出很多单元格的内容，来让用户了解这张表格讲的是什么，而是可以依靠标题的内容，来决定是否需要了解更详细的内容。</p>
 
-<p>标题就放在 <code>&lt;table&gt;</code> 标签的下面。</p>
+<p>标题就放在 <code>&lt;table&gt;</code> 标签的下面。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 这个 {{htmlattrxref("summary","table")}} 属性也可以在<code>&lt;table&gt;</code> 元素中使用，用来提供一段描述，同样可以被屏幕阅读设备阅读。我们推荐使用 <code>&lt;caption&gt;</code> 元素来代替使用，因为 <code>summary</code> 被 HTML5 规范， {{glossary("deprecated")}} (废除了)，也不能被视力正常的用户阅读。 (它不会出现在页面上)</p>
+<p><strong>注意</strong>: 这个 {{htmlattrxref("summary","table")}} 属性也可以在<code>&lt;table&gt;</code> 元素中使用，用来提供一段描述，同样可以被屏幕阅读设备阅读。我们推荐使用 <code>&lt;caption&gt;</code> 元素来代替使用，因为 <code>summary</code> 被 HTML5 规范， {{glossary("deprecated")}} (废除了)，也不能被视力正常的用户阅读。 (它不会出现在页面上)</p>
 </div>
 
 <h3 id="动手练习_添加一个标题">动手练习：添加一个标题</h3>
@@ -57,31 +57,31 @@ translation_of: Learn/HTML/Tables/Advanced
 <p>我们来试试看吧，回顾一下我们在之前的文章中第一次遇到的例子。.</p>
 
 <ol>
- <li>打开你的语言老师的学校时间表，就是 <a href="/en-US/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col">HTML Table Basics</a> 结尾中的例子，或者把 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> 文件复制下面。</li>
+ <li>打开你的语言老师的学校时间表，就是 <a href="/en-US/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col">HTML Table Basics</a> 结尾中的例子，或者把 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> 文件复制下面。</li>
  <li>为表格添加一个合适的标题。</li>
  <li>保存你的代码，然后用浏览器打开，看看你的表格是什么样的。</li>
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>:你也可以在 GitHub 上找到我们的版本 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html">see it live also</a>).</p>
+<p><strong>注意</strong>:你也可以在 GitHub 上找到我们的版本 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html">see it live also</a>).</p>
 </div>
 
-<h2 id="添加_&lt;thead>_&lt;tfoot>_和_&lt;tbody>_结构">添加 &lt;thead&gt;, &lt;tfoot&gt;, 和 &lt;tbody&gt; 结构</h2>
+<h2 id="添加_&lt;thead>_&lt;tfoot>_和_&lt;tbody>_结构">添加 &lt;thead&gt;, &lt;tfoot&gt;, 和 &lt;tbody&gt; 结构</h2>
 
-<p>由于你的表格在结构上有点复杂，如果把它们定义得更加结构化，那会帮助我们更能了解结构。一个明确的方法是使用 {{htmlelement("thead")}}, {{htmlelement("tfoot")}},和 {{htmlelement("tbody")}}, 这些元素允许你把表格中的部分标记为表头、页脚、正文部分。</p>
+<p>由于你的表格在结构上有点复杂，如果把它们定义得更加结构化，那会帮助我们更能了解结构。一个明确的方法是使用 {{htmlelement("thead")}}, {{htmlelement("tfoot")}},和 {{htmlelement("tbody")}}, 这些元素允许你把表格中的部分标记为表头、页脚、正文部分。</p>
 
 <p>这些元素不会使表格更易于屏幕阅读器用户访问，也不会造成任何视觉上的改变。然而，它们在应用样式和布局上会起到作用，可以更好地让 CSS 应用到表格上。给你一些有趣的例子，在长表格的情况下，你可以在每个打印页面上使表格页眉和页脚重复，你也可以让表格的正文部分显示在一个单独的页面上，并通过上下滚动来获得内容。</p>
 
 <p>试着使用它们：</p>
 
 <ul>
- <li> <code>&lt;thead&gt;</code> 需要嵌套在 table 元素中，放置在头部的位置，因为它通常代表第一行，第一行中往往都是每列的标题，但是不是每种情况都是这样的。如果你使用了 {{htmlelement("col")}}/{{htmlelement("colgroup")}} 元素，那么 <code>&lt;thead&gt;</code>元素就需要放在它们的下面。</li>
- <li> <code>&lt;tfoot&gt;</code> 需要嵌套在 table 元素中，放置在底部 (页脚) 的位置，一般是最后一行，往往是对前面所有行的总结，比如，你可以按照预想的方式将<code>&lt;tfoot&gt;</code>放在表格的底部，或者就放在 <code>&lt;thead&gt;</code> 的下面。(浏览器仍将它呈现在表格的底部)</li>
- <li> <code>&lt;tbody&gt;</code> 需要嵌套在 table 元素中，放置在 <code>&lt;thead&gt;</code>的下面或者是 <code>&lt;tfoot&gt;</code> 的下面，这取决于你如何设计你的结构。(<code>&lt;tfoot&gt;</code>放在<code>&lt;thead&gt;</code>下面也可以生效.)</li>
+ <li> <code>&lt;thead&gt;</code> 需要嵌套在 table 元素中，放置在头部的位置，因为它通常代表第一行，第一行中往往都是每列的标题，但是不是每种情况都是这样的。如果你使用了 {{htmlelement("col")}}/{{htmlelement("colgroup")}} 元素，那么 <code>&lt;thead&gt;</code>元素就需要放在它们的下面。</li>
+ <li> <code>&lt;tfoot&gt;</code> 需要嵌套在 table 元素中，放置在底部 (页脚) 的位置，一般是最后一行，往往是对前面所有行的总结，比如，你可以按照预想的方式将<code>&lt;tfoot&gt;</code>放在表格的底部，或者就放在 <code>&lt;thead&gt;</code> 的下面。(浏览器仍将它呈现在表格的底部)</li>
+ <li> <code>&lt;tbody&gt;</code> 需要嵌套在 table 元素中，放置在 <code>&lt;thead&gt;</code>的下面或者是 <code>&lt;tfoot&gt;</code> 的下面，这取决于你如何设计你的结构。(<code>&lt;tfoot&gt;</code>放在<code>&lt;thead&gt;</code>下面也可以生效.)</li>
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: <code>&lt;tbody&gt;</code> 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 <code>&lt;tbody&gt;</code> 的例子，然后在你的 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> 中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。</p>
+<p><strong>注意</strong>: <code>&lt;tbody&gt;</code> 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 <code>&lt;tbody&gt;</code> 的例子，然后在你的 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> 中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。</p>
 </div>
 
 <h3 id="动手练习_添加表格结构">动手练习：添加表格结构</h3>
@@ -89,12 +89,12 @@ translation_of: Learn/HTML/Tables/Advanced
 <p>让我们动手使用这些新元素。</p>
 
 <ol>
- <li>首先，把 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html">spending-record.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css">minimal-table.css</a> 拷贝到你的本地环境。</li>
+ <li>首先，把 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html">spending-record.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css">minimal-table.css</a> 拷贝到你的本地环境。</li>
  <li>尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。 "SUM" 行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。</li>
- <li>将明显的标题行改为使用 <code>&lt;thead&gt;</code> 元素，"SUM" 行使用 <code>&lt;tfoot&gt;</code> 元素，剩余的内容使用 <code>&lt;tbody&gt;</code> 元素。</li>
- <li>先保存，再刷新。你会看到，添加了 <code>&lt;tfoot&gt;</code> 元素后，导致 "SUM" 这行跑到了表格的底部。</li>
+ <li>将明显的标题行改为使用 <code>&lt;thead&gt;</code> 元素，"SUM" 行使用 <code>&lt;tfoot&gt;</code> 元素，剩余的内容使用 <code>&lt;tbody&gt;</code> 元素。</li>
+ <li>先保存，再刷新。你会看到，添加了 <code>&lt;tfoot&gt;</code> 元素后，导致 "SUM" 这行跑到了表格的底部。</li>
  <li>接着，添加一个 {{htmlattrxref("colspan","td")}} 属性，使 "SUM" 单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。</li>
- <li>让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
+ <li>让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
   <pre class="brush: css">tbody {
   font-size: 90%;
   font-style: italic;
@@ -105,11 +105,11 @@ tfoot {
 }
 </pre>
  </li>
- <li>先保存，再刷新，然后观察一下结果。如果没有 <code>&lt;tbody&gt;</code> 和 <code>&lt;tfoot&gt;</code> 元素，你也许会写更加复杂的选择器来应用同样的样式。</li>
+ <li>先保存，再刷新，然后观察一下结果。如果没有 <code>&lt;tbody&gt;</code> 和 <code>&lt;tfoot&gt;</code> 元素，你也许会写更加复杂的选择器来应用同样的样式。</li>
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 我们并不期望目前你可以理解所有 CSS 的内容。当你经过我们的 CSS 模块的时候，你应该会了解更多 (<a href="/zh_CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> 是一个好的起点；我们也有专门的文章 <a href="/zh_CN/docs/Learn/CSS/Styling_boxes/Styling_tables">styling tables</a>).</p>
+<p><strong>注意</strong>: 我们并不期望目前你可以理解所有 CSS 的内容。当你经过我们的 CSS 模块的时候，你应该会了解更多 (<a href="/zh_CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> 是一个好的起点；我们也有专门的文章 <a href="/zh_CN/docs/Learn/CSS/Styling_boxes/Styling_tables">styling tables</a>).</p>
 </div>
 
 <p>你完成的表格应该如下所示：</p>
@@ -227,12 +227,12 @@ tfoot {
 <p>{{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 你也可以在 GitHub 上找到 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">see it live also</a>).</p>
+<p><strong>注意</strong>: 你也可以在 GitHub 上找到 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">see it live also</a>).</p>
 </div>
 
 <h2 id="嵌套表格">嵌套表格</h2>
 
-<p>在一个表格中嵌套另外一个表格是可能的，只要你包含完整的结构，包括 <code>&lt;table&gt;</code> 元素。这样通常是不建议的，因为这种做法会使标记看上去很难理解，对使用屏幕阅读的用户来说，可访问性也降低了。以及在很多情况下，也许你只需要插入额外的 单元格/行/列 到已有的表格中。然而有时候是必要的，比如你想要从其他资源中更简单地导入内容。</p>
+<p>在一个表格中嵌套另外一个表格是可能的，只要你包含完整的结构，包括 <code>&lt;table&gt;</code> 元素。这样通常是不建议的，因为这种做法会使标记看上去很难理解，对使用屏幕阅读的用户来说，可访问性也降低了。以及在很多情况下，也许你只需要插入额外的 单元格/行/列 到已有的表格中。然而有时候是必要的，比如你想要从其他资源中更简单地导入内容。</p>
 
 <p>下面的代码演示了一个简单的嵌套表格：</p>
 
@@ -364,7 +364,7 @@ tfoot {
 <p>但假设你无法通过视觉关联这些数据呢？那么你应该如何阅读上述的表格？视力受损的用户经常使用一个屏幕阅读设备来为他们读出网页上的信息。对于盲人来说，阅读简单的文字没有什么问题，但是要理解一张表格的内容，这就有一些难度了。虽然，使用正确的标记，我们可以用程序化来代替视觉关联。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 根据<a href="http://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment">世界卫生组织 2017 年的数据</a>，大约有 2.53 亿人患有视觉障碍。</p>
+<p><strong>注意</strong>: 根据<a href="http://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment">世界卫生组织 2017 年的数据</a>，大约有 2.53 亿人患有视觉障碍。</p>
 </div>
 
 <p>本篇文章提供了更一步的技术来使表格的可访问性尽可能地提高。</p>
@@ -373,11 +373,11 @@ tfoot {
 
 <p>屏幕阅读设备会识别所有的标题，然后在它们和它们所关联的单元格之间产生编程关联。列和行标题的组合将标识和解释每个单元格中的数据，以便屏幕阅读器用户可以类似于视力正常的用户的操作来理解表格。</p>
 
-<p>我们之前的文章就提到过这一点，可见 <a href="/en-US/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements">Adding headers with &lt;th&gt; elements</a>.</p>
+<p>我们之前的文章就提到过这一点，可见 <a href="/en-US/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements">Adding headers with &lt;th&gt; elements</a>.</p>
 
 <h3 id="scope_属性">scope 属性</h3>
 
-<p>本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在<code>&lt;th&gt;</code> 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：</p>
+<p>本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在<code>&lt;th&gt;</code> 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：</p>
 
 <pre class="brush: html">&lt;thead&gt;
   &lt;tr&gt;
@@ -389,7 +389,7 @@ tfoot {
   &lt;/tr&gt;
 &lt;/thead&gt;</pre>
 
-<p>以及每一行都可以这样定义一个行标题 (如果我们已经使用了 th 和 td 元素):</p>
+<p>以及每一行都可以这样定义一个行标题 (如果我们已经使用了 th 和 td 元素):</p>
 
 <pre class="brush: html">&lt;tr&gt;
   &lt;th scope="row"&gt;Haircut&lt;/th&gt;
@@ -401,15 +401,15 @@ tfoot {
 
 <p>屏幕阅读设备会识别这种结构化的标记，并一次读出整列或整行，比如：</p>
 
-<p><code>scope</code> 还有两个可选的值： <code>colgroup</code> 和 <code>rowgroup</code>。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的 "Items Sold August 2016" 表格。你会看到 "Clothes" 单元格在"Trousers", "Skirts", 和 "Dresses" 单元格的上面。这几个单元格都应该被标记为 (<code>&lt;th&gt;</code>)，但是 "Clothes" 是一个位于顶部且定义了其他三个子标题的标题。 因此 "Clothes" 应该有一个 <code>scope="colgroup"</code>属性，而另外三个子标题应该有 <code>scope="col"</code>属性。</p>
+<p><code>scope</code> 还有两个可选的值： <code>colgroup</code> 和 <code>rowgroup</code>。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的 "Items Sold August 2016" 表格。你会看到 "Clothes" 单元格在"Trousers", "Skirts", 和 "Dresses" 单元格的上面。这几个单元格都应该被标记为 (<code>&lt;th&gt;</code>)，但是 "Clothes" 是一个位于顶部且定义了其他三个子标题的标题。 因此 "Clothes" 应该有一个 <code>scope="colgroup"</code>属性，而另外三个子标题应该有 <code>scope="col"</code>属性。</p>
 
 <h3 id="id_和标题属性">id 和标题属性</h3>
 
-<p>如果要替代 <code>scope</code> 属性，可以使用 {{htmlattrxref("id")}} 和 {{htmlattrxref("headers", "td")}} 属性来创造标题与单元格之间的联系。使用方法如下：</p>
+<p>如果要替代 <code>scope</code> 属性，可以使用 {{htmlattrxref("id")}} 和 {{htmlattrxref("headers", "td")}} 属性来创造标题与单元格之间的联系。使用方法如下：</p>
 
 <ol>
- <li>为每个<code>&lt;th&gt;</code> 元素添加一个唯一的 <code>id</code> 。</li>
- <li>为每个 <code>&lt;td&gt;</code> 元素添加一个 <code>headers</code> 属性。每个单元格的<code>headers</code> 属性需要包含它从属于的所有标题的 id，之间用空格分隔开。</li>
+ <li>为每个<code>&lt;th&gt;</code> 元素添加一个唯一的 <code>id</code> 。</li>
+ <li>为每个 <code>&lt;td&gt;</code> 元素添加一个 <code>headers</code> 属性。每个单元格的<code>headers</code> 属性需要包含它从属于的所有标题的 id，之间用空格分隔开。</li>
 </ol>
 
 <p>这会给你的 HTML 表格中每个单元格的位置一个明确的定义。像一个电子表格一样，通过 headers 属性来定义属于哪些行或列。为了让它工作良好，表格同时需要列和行标题。</p>
@@ -439,23 +439,23 @@ tfoot {
 &lt;/tbody&gt;</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 这个放进为标题单元格和数据单元格之间创造了非常精确的联系。但是这个方法使用了大量的标记，所以容错率比较低。使用 <code>scope</code> 的方法对于大多数表格来说，也够用了。</p>
+<p><strong>注意</strong>: 这个放进为标题单元格和数据单元格之间创造了非常精确的联系。但是这个方法使用了大量的标记，所以容错率比较低。使用 <code>scope</code> 的方法对于大多数表格来说，也够用了。</p>
 </div>
 
 <h3 id="动手练习_使用_scope_和_headers">动手练习：使用 scope 和 headers</h3>
 
 <ol>
- <li>对于这个最后的练习，首先把 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html">items-sold.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css">minimal-table.css</a>,拷贝到你的本地环境。</li>
- <li>现在尝试添加适当的 <code>scope</code> 属性来让表格变得更加恰当。</li>
- <li>最后，尝试把未添加 <code>scope</code> 属性的源文件再复制一份。这次使用 <code>id</code> 和 <code>headers</code> 属性让表格变得更加恰当。</li>
+ <li>对于这个最后的练习，首先把 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html">items-sold.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css">minimal-table.css</a>,拷贝到你的本地环境。</li>
+ <li>现在尝试添加适当的 <code>scope</code> 属性来让表格变得更加恰当。</li>
+ <li>最后，尝试把未添加 <code>scope</code> 属性的源文件再复制一份。这次使用 <code>id</code> 和 <code>headers</code> 属性让表格变得更加恰当。</li>
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以根据我们完成的例子检查你的工作，请看 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">also see this live</a>) 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html">items-sold-headers.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html">see this live too</a>).</p>
+<p><strong>注意</strong>: 你可以根据我们完成的例子检查你的工作，请看 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">also see this live</a>) 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html">items-sold-headers.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html">see this live too</a>).</p>
 </div>
 
 <h2 id="总结">总结</h2>
 
-<p>关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 <a href="/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling Tables</a>.</p>
+<p>关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。在此刻，如果你想学习关于 HTML 表格的样式，可以阅读 <a href="/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling Tables</a>.</p>
 
 <div>{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}</div>

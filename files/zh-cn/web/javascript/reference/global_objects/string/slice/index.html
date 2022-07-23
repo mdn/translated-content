@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <dl>
  <dt><code>beginIndex</code></dt>
- <dd>从该索引（以 0 为基数）处开始提取原字符串中的字符。如果值为负数，会被当做 <code>strLength + beginIndex</code> 看待，这里的<code>strLength</code> 是字符串的长度（例如， 如果 <code>beginIndex</code> 是 -3 则看作是：<code>strLength - 3</code>）</dd>
+ <dd>从该索引（以 0 为基数）处开始提取原字符串中的字符。如果值为负数，会被当做 <code>strLength + beginIndex</code> 看待，这里的<code>strLength</code> 是字符串的长度（例如， 如果 <code>beginIndex</code> 是 -3 则看作是：<code>strLength - 3</code>）</dd>
  <dt><code>endIndex</code></dt>
  <dd>可选。在该索引（以 0 为基数）处结束提取字符串。如果省略该参数，<code>slice()</code> 会一直提取到字符串末尾。如果该参数为负数，则被看作是 strLength + endIndex，这里的 strLength 就是字符串的长度 (例如，如果 endIndex 是 -3，则是，strLength - 3)。</dd>
 </dl>
@@ -38,19 +38,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <h2 id="描述">描述</h2>
 
-<p><code>slice()</code> 从一个字符串中提取字符串并返回新字符串。在一个字符串中的改变不会影响另一个字符串。也就是说，<code>slice</code> 不会修改原字符串（只会返回一个包含了原字符串中部分字符的新字符串）。</p>
+<p><code>slice()</code> 从一个字符串中提取字符串并返回新字符串。在一个字符串中的改变不会影响另一个字符串。也就是说，<code>slice</code> 不会修改原字符串（只会返回一个包含了原字符串中部分字符的新字符串）。</p>
 
-<p><code>slice()</code> 提取的新字符串包括<code>beginIndex</code>但不包括 <code>endIndex</code>。下面有两个例子。</p>
+<p><code>slice()</code> 提取的新字符串包括<code>beginIndex</code>但不包括 <code>endIndex</code>。下面有两个例子。</p>
 
-<p>例 1：<code>str.slice(1, 4)</code> 提取第二个字符到第四个字符（被提取字符的索引值（index）依次为 1、2，和 3）。</p>
+<p>例 1：<code>str.slice(1, 4)</code> 提取第二个字符到第四个字符（被提取字符的索引值（index）依次为 1、2，和 3）。</p>
 
-<p>例 2：<code>str.slice(2, -1)</code> 提取第三个字符到倒数第一个字符。</p>
+<p>例 2：<code>str.slice(2, -1)</code> 提取第三个字符到倒数第一个字符。</p>
 
 <h2 id="Examples">例子</h2>
 
-<h3 id="使用_slice()_创建一个新的字符串">使用 <code>slice()</code> 创建一个新的字符串</h3>
+<h3 id="使用_slice()_创建一个新的字符串">使用 <code>slice()</code> 创建一个新的字符串</h3>
 
-<p>下面例子使用 <code>slice()</code> 创建了一个新字符串。</p>
+<p>下面例子使用 <code>slice()</code> 创建了一个新字符串。</p>
 
 <pre class="brush: js">var str1 = 'The morning is upon us.', // str1 的长度 length 是 23。
     str2 = str1.slice(1, 8),
@@ -63,7 +63,7 @@ console.log(str4); // 输出：is upon us.
 console.log(str5); // 输出：""
 </pre>
 
-<h3 id="给_slice()_传入负值索引">给 <code>slice()</code> 传入负值索引</h3>
+<h3 id="给_slice()_传入负值索引">给 <code>slice()</code> 传入负值索引</h3>
 
 <p>下面的例子在使用 <code>slice()</code> 时传入了负值作为索引。</p>
 

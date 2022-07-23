@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 
 
 
-<p><strong><code>WeakSet</code></strong> 对象允许你将<em>弱保持对象</em>存储在一个集合中。</p>
+<p><strong><code>WeakSet</code></strong> 对象允许你将<em>弱保持对象</em>存储在一个集合中。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,12 +19,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 
 <dl>
  <dt>iterable</dt>
- <dd>如果传入一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">可迭代对象</a>作为参数，则该对象的所有迭代值都会被自动添加进生成的 <code>WeakSet</code> 对象中。null 被认为是 undefined。</dd>
+ <dd>如果传入一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of">可迭代对象</a>作为参数，则该对象的所有迭代值都会被自动添加进生成的 <code>WeakSet</code> 对象中。null 被认为是 undefined。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_WeakSet对象">使用 <code>WeakSet</code>对象</h3>
+<h3 id="使用_WeakSet对象">使用 <code>WeakSet</code>对象</h3>
 
 <pre class="brush: js">var ws = new WeakSet();
 var foo = {};
@@ -40,7 +40,7 @@ ws.delete(foo); // 从 set 中删除 foo 对象
 ws.has(foo);    // false, foo 对象已经被删除了
 ws.has(bar);    // true, bar 依然存在</pre>
 
-<p>注意， <code>foo  !==  bar</code>。 尽管它们是相似的对象，但是它们不是<em><strong>同一个对象。</strong></em>因此，它们都可以被加入到 set 中。</p>
+<p>注意， <code>foo  !==  bar</code>。 尽管它们是相似的对象，但是它们不是<em><strong>同一个对象。</strong></em>因此，它们都可以被加入到 set 中。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -92,14 +92,14 @@ execRecursively(obj =&gt; console.log(obj), foo);</pre>
 
 <dl>
  <dt><code>WeakSet.length</code></dt>
- <dd><code>length</code> 属性的值为 0.</dd>
+ <dd><code>length</code> 属性的值为 0.</dd>
  <dt>{{jsxref("WeakSet.prototype")}}</dt>
  <dd>表示<code>WeakSet</code>构造函数的原型。 允许向所有<code>WeakSet</code>对象添加属性。</dd>
 </dl>
 
 <h2 id="Boolean_instances"><code>WeakSet</code> 实例</h2>
 
-<p>所有 <code>WeakSet</code> 实例都继承自 {{jsxref("WeakSet.prototype")}}.</p>
+<p>所有 <code>WeakSet</code> 实例都继承自 {{jsxref("WeakSet.prototype")}}.</p>
 
 <h3 id="属性">属性</h3>
 

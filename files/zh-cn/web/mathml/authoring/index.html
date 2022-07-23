@@ -23,20 +23,20 @@ translation_of: Web/MathML/Authoring
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
- &lt;title&gt;MathML in HTML5&lt;/title&gt;
+ &lt;title&gt;MathML in HTML5&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
-  &lt;h1&gt;MathML in HTML5&lt;/h1&gt;
+  &lt;h1&gt;MathML in HTML5&lt;/h1&gt;
 
-  &lt;p&gt;
-    Square root of two:
-    &lt;math&gt;
-      &lt;msqrt&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msqrt&gt;
-    &lt;/math&gt;
-  &lt;/p&gt;
+  &lt;p&gt;
+    Square root of two:
+    &lt;math&gt;
+      &lt;msqrt&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+      &lt;/msqrt&gt;
+    &lt;/math&gt;
+  &lt;/p&gt;
 
 &lt;/body&gt;
 &lt;/html&gt; </pre>
@@ -59,13 +59,13 @@ translation_of: Web/MathML/Authoring
 
 <p>如果你不想使用指向 Github 的链接，但是想在你的项目中整合这些铺垫，或者别的东西，你需要探测脚本以核实 MathML 支持的程度。举个例子，下面的函数通过检测 <code>mspace</code> 元素，核实了是否支持 MathML（你可以用 <code>mpadded</code> 替换 <code>mspace</code>）。</p>
 
-<pre class="brush: js"> function hasMathMLSupport() {
-  var div = document.createElement("div"), box;
-  div.innerHTML = "&lt;math&gt;&lt;mspace height='23px' width='77px'/&gt;&lt;/math&gt;";
-  document.body.appendChild(div);
-  box = div.firstChild.firstChild.getBoundingClientRect();
-  document.body.removeChild(div);
-  return Math.abs(box.height - 23) &lt;= 1  &amp;&amp; Math.abs(box.width - 77) &lt;= 1;
+<pre class="brush: js"> function hasMathMLSupport() {
+  var div = document.createElement("div"), box;
+  div.innerHTML = "&lt;math&gt;&lt;mspace height='23px' width='77px'/&gt;&lt;/math&gt;";
+  document.body.appendChild(div);
+  box = div.firstChild.firstChild.getBoundingClientRect();
+  document.body.removeChild(div);
+  return Math.abs(box.height - 23) &lt;= 1  &amp;&amp; Math.abs(box.width - 77) &lt;= 1;
 }</pre>
 
 <p>作为替选，下面的用户代理字符串嗅探将允许侦测带原生 MathML 支持的渲染引擎（Geocko 和 WebKit）。注意，UA 字符串嗅探不是最可靠的方法，而且可能会在版本之间被破坏（break from version to version）：</p>
@@ -85,10 +85,10 @@ var isWebKit = ua.indexOf('AppleWebKit') &gt; -1 &amp;&amp; ua.indexOf('Chrome')
 @namespace m url('http://www.w3.org/1998/Math/MathML');
 
 body, m|mtext {
-    font-family: Latin Modern;
+    font-family: Latin Modern;
 }
 m|math {
-    font-family: Latin Modern Math;
+    font-family: Latin Modern Math;
 }</pre>
 
 <p>You can then use the <a href="/en-US/docs/Web/CSS/@font-face">@font-face</a> rule as usual to provide WOFF fallback for Latin Modern and Latin Modern Math. See this <a href="https://github.com/fred-wang/MathFonts">GitHub repository to get WOFF fonts and sample CSS stylesheets</a> to use on your Web site and check <a href="http://fred-wang.github.io/MathFonts/">its test page</a>.</p>
@@ -96,27 +96,27 @@ m|math {
 <h4 id="XML文档中的_MathML（XHTML、EPUB，等等）">XML 文档中的 MathML（XHTML、EPUB，等等）</h4>
 
 <p>If for some reason you need to use MathML in XML documents, be sure to satisfy the usual requirements: well-formed document, use of correct MIME type, MathML namespace <code>"http://www.w3.org/1998/Math/MathML"</code> on <code>&lt;math&gt;</code> roots. For example, the XHTML version of the previous example looks like this:<br>
-  </p>
+  </p>
 
 <pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
-  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
+  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
 &lt;head&gt;
- &lt;title&gt;XHTML+MathML Example&lt;/title&gt;
+ &lt;title&gt;XHTML+MathML Example&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
 &lt;h1&gt;XHTML+MathML Example&lt;/h1&gt;
 
-  &lt;p&gt;
-    Square root of two:
-    &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
-      &lt;msqrt&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msqrt&gt;
-    &lt;/math&gt;
-  &lt;/p&gt;
+  &lt;p&gt;
+    Square root of two:
+    &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
+      &lt;msqrt&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+      &lt;/msqrt&gt;
+    &lt;/math&gt;
+  &lt;/p&gt;
 
 &lt;/body&gt;
 &lt;/html&gt; </pre>
@@ -177,7 +177,7 @@ m|math {
 
 <p>and get it automatically converted into MathML. This is still a work-in-progress, but could be improved in the future thanks to Web Components and shadow DOM. Alternatively, you can use the more traditional <a href="https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page">Javascript parsing of expressions at load time</a> as all the other tools in this section do.</p>
 
-<p>One simple client-side conversion tools is <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Just download the <a href="https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> script and copy it to your Web site. Then on your Web pages, add a <code>&lt;script&gt;</code> tag to load ASCIIMathML and the mathematical expressions delimited by <code>`</code> (grave accent) will be automatically parsed and converted to MathML:</p>
+<p>One simple client-side conversion tools is <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Just download the <a href="https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> script and copy it to your Web site. Then on your Web pages, add a <code>&lt;script&gt;</code> tag to load ASCIIMathML and the mathematical expressions delimited by <code>`</code> (grave accent) will be automatically parsed and converted to MathML:</p>
 
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
@@ -217,32 +217,32 @@ This is a sample LaTeXML document.
 
 \section{First Section}
 
-  $$ \sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6} $$
+  $$ \sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6} $$
 
 \end{document}
 &lt;/div&gt;
 ...</pre>
 
-<p><a href="https://mathscribe.com/author/jqmath.html">jqMath</a> is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code>  to write <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. The installation is similar: download and copy the relevant <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript and CSS files</a> on your Web site and reference them in your page header (see the <code>COPY-ME.html</code> file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.</p>
+<p><a href="https://mathscribe.com/author/jqmath.html">jqMath</a> is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code>  to write <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. The installation is similar: download and copy the relevant <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript and CSS files</a> on your Web site and reference them in your page header (see the <code>COPY-ME.html</code> file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.</p>
 
 <p><a name="mathjax"></a>Another way to work around the lack of MathML support in some browsers is to use <a href="https://www.mathjax.org/">MathJax</a>. However, note that you may find conflicts and synchronization issues between MathJax and the Javascript libraries previously mentioned. So if you really want to use MathJax as a MathML polyfill, you'd better use its own LaTeX/ASCIIMath parsers too. Note that on the one hand MathJax has better parsing and rendering support but on the other hand it is much bigger, more complex and slower than the previous Javascript libraries. Fortunately, you can use MathJax's CDN so that you don't need to install it on your Web server. Also, the slowest part of MathJax is currently its HTML-CSS / SVG output modes so we recommend to use the Native MathML output for Gecko-based browsers. Hence a typical configuration to use the AMS-LaTeX input is:</p>
 
 <pre class="brush: html">...
-    &lt;script type="text/x-mathjax-config"&gt;
-      MathJax.Hub.Config({
-        MMLorHTML: { prefer: { Firefox: "MML" } }
-      });
-    &lt;/script&gt;
-    &lt;script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
-   &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-   \[ \tau = \frac{x}{y} + \sqrt{3} \]
+    &lt;script type="text/x-mathjax-config"&gt;
+      MathJax.Hub.Config({
+        MMLorHTML: { prefer: { Firefox: "MML" } }
+      });
+    &lt;/script&gt;
+    &lt;script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
+   &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   \[ \tau = \frac{x}{y} + \sqrt{3} \]
 ...
 </pre>
 
-<p>Note that <a href="http://docs.mathjax.org/en/latest/tex.html#tex-and-latex-math-delimiters">the dollar delimiters are not used by default</a>. To use the ASCIIMathML input instead, just replace <code>TeX-AMS-MML_HTMLorMML</code> by <code>AM-MML_HTMLorMML</code>.  MathJax has many other features, see the <a href="http://docs.mathjax.org/en/latest/">MathJax documentation</a> for further details.</p>
+<p>Note that <a href="http://docs.mathjax.org/en/latest/tex.html#tex-and-latex-math-delimiters">the dollar delimiters are not used by default</a>. To use the ASCIIMathML input instead, just replace <code>TeX-AMS-MML_HTMLorMML</code> by <code>AM-MML_HTMLorMML</code>.  MathJax has many other features, see the <a href="http://docs.mathjax.org/en/latest/">MathJax documentation</a> for further details.</p>
 
 <h3 id="命令行程序">命令行程序</h3>
 

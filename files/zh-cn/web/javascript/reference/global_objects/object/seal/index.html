@@ -35,9 +35,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 
 <h2 id="Description">描述</h2>
 
-<p>通常，一个对象是{{jsxref("Object.isExtensible()", "可扩展的", "", 1)}}（可以添加新的属性）。密封一个对象会让这个对象变的不能添加新属性，且所有已有属性会变的不可配置。属性不可配置的效果就是属性变的不可删除，以及一个数据属性不能被重新定义成为访问器属性，或者反之。但属性的值仍然可以修改。尝试删除一个密封对象的属性或者将某个密封对象的属性从数据属性转换成访问器属性，结果会静默失败或抛出{{jsxref("TypeError")}}（在{{jsxref("Strict_mode", "严格模式", "", 1)}} 中最常见的，但不唯一）。</p>
+<p>通常，一个对象是{{jsxref("Object.isExtensible()", "可扩展的", "", 1)}}（可以添加新的属性）。密封一个对象会让这个对象变的不能添加新属性，且所有已有属性会变的不可配置。属性不可配置的效果就是属性变的不可删除，以及一个数据属性不能被重新定义成为访问器属性，或者反之。但属性的值仍然可以修改。尝试删除一个密封对象的属性或者将某个密封对象的属性从数据属性转换成访问器属性，结果会静默失败或抛出{{jsxref("TypeError")}}（在{{jsxref("Strict_mode", "严格模式", "", 1)}} 中最常见的，但不唯一）。</p>
 
-<p>不会影响从原型链上继承的属性。但 {{jsxref("Object.proto", "__proto__")}} ( {{deprecated_inline}} ) 属性的值也会不能修改。</p>
+<p>不会影响从原型链上继承的属性。但 {{jsxref("Object.proto", "__proto__")}} ( {{deprecated_inline}} ) 属性的值也会不能修改。</p>
 
 <p>返回被密封对象的引用。</p>
 
@@ -101,7 +101,7 @@ Object.defineProperty(obj, 'foo', {
 Object.seal(1);
 // 1                             (ES2015 code)</pre>
 
-<h3 id="对比_Object.freeze">对比 <code>Object.freeze()</code></h3>
+<h3 id="对比_Object.freeze">对比 <code>Object.freeze()</code></h3>
 
 <p>使用<code>Object.freeze()</code>冻结的对象中的现有属性值是不可变的。用<code>Object.seal()</code>密封的对象可以改变其现有属性值。</p>
 

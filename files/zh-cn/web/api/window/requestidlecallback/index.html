@@ -25,14 +25,14 @@ translation_of: Web/API/Window/requestIdleCallback
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 ID，可以把它传入 {{domxref("Window.cancelIdleCallback()")}} 方法来结束回调。</p>
+<p>一个 ID，可以把它传入 {{domxref("Window.cancelIdleCallback()")}} 方法来结束回调。</p>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
  <dd>一个在事件循环空闲时即将被调用的函数的引用。函数会接收到一个名为 {{domxref("IdleDeadline")}} 的参数，这个参数可以获取当前空闲时间以及回调是否在超时时间前已经执行的状态。</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
+ <dt><code>options</code> {{optional_inline}}</dt>
  <dd>包括可选的配置参数。具有如下属性：
  <ul>
   <li><code>timeout</code>： 如果指定了 timeout，并且有一个正值，而回调在 timeout 毫秒过后还没有被调用，那么回调任务将放入事件循环中排队，即使这样做有可能对性能产生负面影响。</li>
@@ -42,7 +42,7 @@ translation_of: Web/API/Window/requestIdleCallback
 
 <h2 id="Example">Example</h2>
 
-<p>See our <a href="/zh-CN/docs/Web/API/Background_Tasks_API#Example">complete example</a> in the article <a href="/zh-CN/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
+<p>See our <a href="/zh-CN/docs/Web/API/Background_Tasks_API#Example">complete example</a> in the article <a href="/zh-CN/docs/Web/API/Background_Tasks_API">Cooperative Scheduling of Background Tasks API</a>.</p>
 
 <h2 id="规范">规范</h2>
 

@@ -9,7 +9,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 
 <p><img src="mdn-canvas-lineargradient.png"></p>
 
-<p>该方法返回一个线性 {{domxref("CanvasGradient")}}对象。想要应用这个渐变，需要把这个返回值赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或者 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}。</p>
+<p>该方法返回一个线性 {{domxref("CanvasGradient")}}对象。想要应用这个渐变，需要把这个返回值赋值给 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 或者 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -24,25 +24,25 @@ translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
  <dt><code>x0</code></dt>
  <dd>起点的 x 轴坐标。</dd>
  <dt><code>y0</code></dt>
- <dd>起点的 y 轴坐标。</dd>
+ <dd>起点的 y 轴坐标。</dd>
  <dt><code>x1</code></dt>
  <dd>终点的 x 轴坐标。</dd>
  <dt><code>y1</code></dt>
- <dd>终点的 y 轴坐标。</dd>
+ <dd>终点的 y 轴坐标。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
 <dl>
  <dt>{{domxref("CanvasGradient")}}</dt>
- <dd>一个根据指定线路初始化的线性<code> </code><code>CanvasGradient</code> 对象。</dd>
+ <dd>一个根据指定线路初始化的线性<code> </code><code>CanvasGradient</code> 对象。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="使用线性渐变填充一个矩形">使用线性渐变填充一个矩形</h3>
 
-<p>这个例子使用<code>createLinearGradient()</code> 方法初始化了一个线性渐变。在这个线性渐变中添加了三种色彩。最后，这个渐变被赋值给上下文对应的属性，实现了对矩形的填充。</p>
+<p>这个例子使用<code>createLinearGradient()</code> 方法初始化了一个线性渐变。在这个线性渐变中添加了三种色彩。最后，这个渐变被赋值给上下文对应的属性，实现了对矩形的填充。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -75,8 +75,8 @@ ctx.fillRect(20, 20, 200, 100);</pre>
 
 <pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="编辑" /&gt;
-  &lt;input id="reset" type="button" value="重置" /&gt;
+  &lt;input id="edit" type="button" value="编辑" /&gt;
+  &lt;input id="reset" type="button" value="重置" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 var gradient = ctx.createLinearGradient(0,0,200,0);
@@ -129,7 +129,7 @@ window.addEventListener("load", drawCanvas);
 <h3 id="Gecko特性说明">Gecko 特性说明</h3>
 
 <ul>
- <li>自 Gecko 2.0 {{geckoRelease("2.0")}}开始，参数指定了极值会抛出<code>NOT_SUPPORTED_ERR</code>  而不再是之前的 <code>SYNTAX_ERR </code>异常。</li>
+ <li>自 Gecko 2.0 {{geckoRelease("2.0")}}开始，参数指定了极值会抛出<code>NOT_SUPPORTED_ERR</code>  而不再是之前的 <code>SYNTAX_ERR </code>异常。</li>
 </ul>
 
 <h2 id="参见"><br>
@@ -138,6 +138,6 @@ window.addEventListener("load", drawCanvas);
 <div id="compat-mobile"></div>
 
 <ul>
- <li>接口定义： {{domxref("CanvasRenderingContext2D")}}</li>
+ <li>接口定义： {{domxref("CanvasRenderingContext2D")}}</li>
  <li>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</li>
 </ul>

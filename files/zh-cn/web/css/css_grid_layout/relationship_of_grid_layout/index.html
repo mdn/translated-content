@@ -128,11 +128,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 <div id="Box_alignment">
 <p>对于很多人来说，弹性盒特性最让人激动的一点是我们第一次拥有了正当的对齐能力。这让一个盒子在页面里中心对齐变得简单。弹性元素还可以使自己延伸到和容器等高，意味我们能实现等高列。长久以来，我们都想实现这些行为，并一直在用一些所谓“技巧”去达到起码的视觉效果。</p>
 
-<p>弹性盒特性已经被加入到新规范盒 <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>。意味它们能被用在包括网格布局的其它规范中。它们未来也可能被用在其他的布局方法中。</p>
+<p>弹性盒特性已经被加入到新规范盒 <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>。意味它们能被用在包括网格布局的其它规范中。它们未来也可能被用在其他的布局方法中。</p>
 
 <p>本系列稍晚的指南中我会正式介绍盒对齐（Box Alignment）和它在网格布局中是如何工作的。不过现在我们先看一个比较弹性盒和网格的简单例子。</p>
 
-<p>在这第一个例子中，我使用了弹性盒，一个容器内有三个元素。wrapper 设定了 {{cssxref("min-height")}}，确定了弹性容器的高度。我还在弹性容器中定义了{{cssxref("align-items")}}: <code>flex-end, 因此子元素会从弹性容器尾部开始排列。我还在box1上定义了</code>{{cssxref("align-self")}}<code>属性，这会覆盖默认值，使它延长至容器的高度；box2上也定义了</code>{{cssxref("align-self")}}，所以它会与弹性容器的起点对齐。</p>
+<p>在这第一个例子中，我使用了弹性盒，一个容器内有三个元素。wrapper 设定了 {{cssxref("min-height")}}，确定了弹性容器的高度。我还在弹性容器中定义了{{cssxref("align-items")}}: <code>flex-end, 因此子元素会从弹性容器尾部开始排列。我还在box1上定义了</code>{{cssxref("align-self")}}<code>属性，这会覆盖默认值，使它延长至容器的高度；box2上也定义了</code>{{cssxref("align-self")}}，所以它会与弹性容器的起点对齐。</p>
 
 <div class="hidden">
 <pre class="brush: css">* {box-sizing: border-box;}
@@ -228,7 +228,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 
 
-<p>我们已经看到了 fr 单元如何在网格容器中分配一定比例的可用空间到我们的网格轨道。当与{{cssxref("minmax", "minmax()")}} 函数结合使用时，fr 单元可以给我们与 flexbox 中的 flex 属性非常相似的行为 - 同时仍然可以创建二维布局。</p>
+<p>我们已经看到了 fr 单元如何在网格容器中分配一定比例的可用空间到我们的网格轨道。当与{{cssxref("minmax", "minmax()")}} 函数结合使用时，fr 单元可以给我们与 flexbox 中的 flex 属性非常相似的行为 - 同时仍然可以创建二维布局。</p>
 
 <p>之前我们通过例子验证了一维布局和二维布局的差异，可以发现这两种布局方式对响应式的处理存在着不同。对于弹性布局，当我们拖拽以改变浏览器大小时，弹性盒会根据可用空间适当的调整行中项目的个数。当有足够的空间时，全部的 5 个项目全部在一行展示，当容器变的过窄时，每行则只能展示一个项目。</p>
 
@@ -278,7 +278,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <h3 id="灵活的轨道数量"><strong>灵活的轨道数量</strong></h3>
 
-<p>到这为止就和弹性盒布局不太一样了。在弹性盒布局例子中，子元素在被包裹起来之前大于基准的 200px。我们可以用使用网格布局中的<code>auto-fill</code>和{{cssxref("minmax", "minmax()")}}函数实现同样的功能。在这个例子中，我创建了一个用<code>minmax</code>自动填充的轨道。我想要这个轨道的元素最小有 200px，最大<code>1fr</code>的宽度。 一旦浏览器计算出有多少个 200px 会填充到这个容器里面，并算好网格间距，那么，浏览器就会把剩余的空间等分成以最大<code>1fr</code>单位计算的区域给其他元素。</p>
+<p>到这为止就和弹性盒布局不太一样了。在弹性盒布局例子中，子元素在被包裹起来之前大于基准的 200px。我们可以用使用网格布局中的<code>auto-fill</code>和{{cssxref("minmax", "minmax()")}}函数实现同样的功能。在这个例子中，我创建了一个用<code>minmax</code>自动填充的轨道。我想要这个轨道的元素最小有 200px，最大<code>1fr</code>的宽度。 一旦浏览器计算出有多少个 200px 会填充到这个容器里面，并算好网格间距，那么，浏览器就会把剩余的空间等分成以最大<code>1fr</code>单位计算的区域给其他元素。</p>
 
 <div id="A_flexible_number_of_tracks">
 <div class="hidden">
@@ -395,7 +395,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 
 <p>如果绝对定位的项目嵌套在网格区域内，该区域则成为该项目的参照语境。在下面的例子中，网格和上例相同，但是这次我们在网格 <code>.box3</code> 里嵌套了一个项目。</p>
 
-<p><code>.box3</code> 被设置了 <code>position: relative</code> 属性，其子元素设置了定位的偏移属性。此时，子元素的定位的参照语境就变成了网格区域（译注：这个网格区域即是 <code>.box3</code>）。</p>
+<p><code>.box3</code> 被设置了 <code>position: relative</code> 属性，其子元素设置了定位的偏移属性。此时，子元素的定位的参照语境就变成了网格区域（译注：这个网格区域即是 <code>.box3</code>）。</p>
 
 <div id="With_a_grid_area_as_the_parent">
 <div class="hidden">
@@ -446,17 +446,17 @@ translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
    position: absolute;
    top: 40px;
    left: 40px;
-   background-color: rgba(255,255,255,.5);
-   border: 1px solid rgba(0,0,0,0.5);
-   color: #000;
-   padding: 10px;
+   background-color: rgba(255,255,255,.5);
+   border: 1px solid rgba(0,0,0,0.5);
+   color: #000;
+   padding: 10px;
 }
 </pre>
 </div>
 
 <p>{{ EmbedLiveSample('With_a_grid_area_as_the_parent', '500', '420') }}</p>
 
-<h2 id="网格和_display_contents">网格和 <code>display:</code> <code>contents</code></h2>
+<h2 id="网格和_display_contents">网格和 <code>display:</code> <code>contents</code></h2>
 
 <p>最后一个值得关注的与其他布局规范的交互是 CSS 网格布局与 <code>display: contents</code> 之间的交互。<code>display</code> 属性的 <code>contents</code> 值是<a href="https://drafts.csswg.org/css-display/#box-generation">显示规范</a>中描述的新值，如下所示：</p>
 

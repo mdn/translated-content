@@ -18,7 +18,7 @@ new Int8Array(typedArray);
 new Int8Array(object);
 new Int8Array(buffer [, byteOffset [, length]]);</pre>
 
-<p>有关构造函数语法和参数的更多信息，请访问 <em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax">TypedArray</a></em>.</p>
+<p>有关构造函数语法和参数的更多信息，请访问 <em><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax">TypedArray</a></em>.</p>
 
 <h2 id="属性">属性</h2>
 
@@ -28,9 +28,9 @@ new Int8Array(buffer [, byteOffset [, length]]);</pre>
  <dt>Int8Array.length</dt>
  <dd>此属性为固定值属性，值为 3。查看 {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}} 获得获取数组内元素个数方法。</dd>
  <dt>{{jsxref("TypedArray.name", "Int8Array.name")}}</dt>
- <dd>返回构造器方法名称。在 Int8Array 类型中此值为 "Int8Array"。</dd>
+ <dd>返回构造器方法名称。在 Int8Array 类型中此值为 "Int8Array"。</dd>
  <dt>{{jsxref("TypedArray.prototype", "Int8Array.prototype")}}</dt>
- <dd><em>TypedArray</em> 对象的构造原型。</dd>
+ <dd><em>TypedArray</em> 对象的构造原型。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -44,7 +44,7 @@ new Int8Array(buffer [, byteOffset [, length]]);</pre>
 
 <h2 id="Int8Array_原型方法"><code>Int8Array</code> 原型方法</h2>
 
-<p>所有 <strong>Int8Array</strong> 对象都继承自 {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
+<p>所有 <strong>Int8Array</strong> 对象都继承自 {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
 
 <h3 id="属性_2">属性</h3>
 
@@ -165,7 +165,7 @@ var z = new Int8Array(buffer, 1, 4);
   <tr>
    <td>{{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -176,7 +176,7 @@ var z = new Int8Array(buffer, 1, 4);
 
 <h2 id="兼容性说明">兼容性说明</h2>
 
-<p>自 ECMAScript 2015 (ES6) 施行，<code>Int8Array</code> 需要使用 {{jsxref("Operators/new", "new")}} 构造。从当前版本开始，不加 new 而便调用 <code>Int8Array</code> 构造器方法，将报出 {{jsxref("TypeError")}} 错误。</p>
+<p>自 ECMAScript 2015 (ES6) 施行，<code>Int8Array</code> 需要使用 {{jsxref("Operators/new", "new")}} 构造。从当前版本开始，不加 new 而便调用 <code>Int8Array</code> 构造器方法，将报出 {{jsxref("TypeError")}} 错误。</p>
 
 <pre class="brush: js example-bad">var dv = Int8Array([1, 2, 3]);
 // TypeError: calling a builtin Int8Array constructor

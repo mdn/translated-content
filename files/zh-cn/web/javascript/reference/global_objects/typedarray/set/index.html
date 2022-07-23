@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
 <div>{{JSRef}}</div>
 
-<p> <strong><code>set()</code></strong> 方法用于从指定数组中读取值，并将其存储在类型化数组中。</p>
+<p> <strong><code>set()</code></strong> 方法用于从指定数组中读取值，并将其存储在类型化数组中。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
  <dt><code>typedarray</code></dt>
  <dd>如果源数组是一个类型化数组（typed array），则源数组和目标数组可以共享同一个底层的{{jsxref("ArrayBuffer")}}；JavaScript 引擎会智能地将 buffer 的指定区段拷贝到目标区段中去。</dd>
  <dt><code>offset</code> {{ optional_inline() }}</dt>
- <dd>偏移量参数 offset 指定从什么地方开始使用源数组 <code>array</code> 的值进行写入操作。如果忽略该参数，则默认为 0（也就是说，从目标数组的下标为 0 处开始，使用源数组 <code>array</code> 的值覆盖重写）。</dd>
+ <dd>偏移量参数 offset 指定从什么地方开始使用源数组 <code>array</code> 的值进行写入操作。如果忽略该参数，则默认为 0（也就是说，从目标数组的下标为 0 处开始，使用源数组 <code>array</code> 的值覆盖重写）。</dd>
 </dl>
 
 <h3 id="异常">异常</h3>
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_set">使用 <code>set()</code></h3>
+<h3 id="使用_set">使用 <code>set()</code></h3>
 
 <pre class="brush:js">var buffer = new ArrayBuffer(8);
 var uint8 = new Uint8Array(buffer);

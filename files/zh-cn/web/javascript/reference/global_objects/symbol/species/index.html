@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 ---
 <div>{{JSRef}}</div>
 
-<p>知名的<strong> </strong><code><strong>Symbol.species</strong></code> 是个函数值属性，其被构造函数用以创建派生对象。</p>
+<p>知名的<strong> </strong><code><strong>Symbol.species</strong></code> 是个函数值属性，其被构造函数用以创建派生对象。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-species.html")}}</div>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 
 <h2 id="示例">示例</h2>
 
-<p>你可能想在扩展数组类 <code>MyArray </code>上返回 {{jsxref("Array")}} 对象。 例如，当使用例如 {{jsxref("Array.map", "map()")}} 这样的方法返回默认的构造函数时，你希望这些方法能够返回父级的 Array 对象，以取代 <code>MyArray</code> 对象。<code>Symbol.species</code> 允许你这么做：</p>
+<p>你可能想在扩展数组类 <code>MyArray </code>上返回 {{jsxref("Array")}} 对象。 例如，当使用例如 {{jsxref("Array.map", "map()")}} 这样的方法返回默认的构造函数时，你希望这些方法能够返回父级的 Array 对象，以取代 <code>MyArray</code> 对象。<code>Symbol.species</code> 允许你这么做：</p>
 
 <pre class="brush: js">class MyArray extends Array {
   // 覆盖 species 到父级的 Array 构造函数上
@@ -54,7 +54,7 @@ console.log(mapped instanceof Array);   // true
   <tr>
    <td>{{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

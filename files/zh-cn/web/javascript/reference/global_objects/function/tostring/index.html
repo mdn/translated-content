@@ -23,21 +23,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 <h2 id="Description">描述</h2>
 
-<p>{{jsxref("Function")}}对象覆盖了从{{jsxref("Object")}}继承来的{{jsxref("Object.prototype.toString", "toString")}} 方法。对于用户定义的 {{jsxref("Function")}} 对象，<code>toString</code>方法返回一个字符串，其中包含用于定义函数的源文本段。</p>
+<p>{{jsxref("Function")}}对象覆盖了从{{jsxref("Object")}}继承来的{{jsxref("Object.prototype.toString", "toString")}} 方法。对于用户定义的 {{jsxref("Function")}} 对象，<code>toString</code>方法返回一个字符串，其中包含用于定义函数的源文本段。</p>
 
-<p>在{{jsxref("Function")}}需要转换为字符串时，通常会自动调用函数的 <code>toString </code>方法。</p>
+<p>在{{jsxref("Function")}}需要转换为字符串时，通常会自动调用函数的 <code>toString </code>方法。</p>
 
-<p>若 <code>this</code> 不是 <code>Function </code>对象，则 <code>toString()</code> 方法将抛出 {{jsxref("TypeError")}}  ("Function.prototype.toString called on incompatible object") 异常，比如 {{jsxref("Proxy")}} 对象就会抛出异常。</p>
+<p>若 <code>this</code> 不是 <code>Function </code>对象，则 <code>toString()</code> 方法将抛出 {{jsxref("TypeError")}}  ("Function.prototype.toString called on incompatible object") 异常，比如 {{jsxref("Proxy")}} 对象就会抛出异常。</p>
 
 <pre class="brush: js example-bad">Function.prototype.toString.call('foo'); // TypeError
 </pre>
 
-<p>如果是在内置函数或由 <code>Function.prototype.bind </code>返回的函数上调用 <code>toString()</code>，则<code>toString()</code> 返回原生代码字符串，如下</p>
+<p>如果是在内置函数或由 <code>Function.prototype.bind </code>返回的函数上调用 <code>toString()</code>，则<code>toString()</code> 返回原生代码字符串，如下</p>
 
-<pre class="brush: js">"function () {\n    [native code]\n}"
+<pre class="brush: js">"function () {\n    [native code]\n}"
 </pre>
 
-<p>若是在由 <code>Function</code> 构造器生成的函数上调用 <code>toString()</code> ，则 <code>toString()</code> 返回创建后的函数源码，包括形参和函数体，函数名为 "anonymous"。</p>
+<p>若是在由 <code>Function</code> 构造器生成的函数上调用 <code>toString()</code> ，则 <code>toString()</code> 返回创建后的函数源码，包括形参和函数体，函数名为 "anonymous"。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -123,7 +123,7 @@ a =&gt; a</pre>
    <td>
     <pre>
 Object.getOwnPropertyDescriptor({
-    get a(){}
+    get a(){}
 }, "a").get</pre>
    </td>
    <td>
@@ -135,7 +135,7 @@ Object.getOwnPropertyDescriptor({
    <td>
     <pre>
 Object.getOwnPropertyDescriptor({
-    set a(x){}
+    set a(x){}
 }, "a").set</pre>
    </td>
    <td>
@@ -203,7 +203,7 @@ Function("a", "b")</pre>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -219,7 +219,7 @@ Function("a", "b")</pre>
 <h2 id="附注（针对Firefox）">附注（针对 Firefox）</h2>
 
 <ul>
- <li>从 Firefox 17 开始，<code>Function.prototype.toString()</code> 通过保存函数源码的方式来实现，而之前是通过反编译器反编译函数字节码的方式来实现。反编译器已经被移除，因此我们不再需要 <code>indentation</code> 参数。查看 {{bug("761723")}} 获得更多信息。</li>
+ <li>从 Firefox 17 开始，<code>Function.prototype.toString()</code> 通过保存函数源码的方式来实现，而之前是通过反编译器反编译函数字节码的方式来实现。反编译器已经被移除，因此我们不再需要 <code>indentation</code> 参数。查看 {{bug("761723")}} 获得更多信息。</li>
  <li>从 Firefox 38 开始，<code>Function.prototype.toString()</code> 会对 {{jsxref("Proxy")}} 对象抛出异常 ({{bug(1100936)}})。</li>
 </ul>
 

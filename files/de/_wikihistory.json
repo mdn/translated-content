@@ -8737,21 +8737,6 @@
       "eminor"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-10-03T02:52:53.149Z",
-    "contributors": [
-      "c0dewalker",
-      "wbamberg",
-      "schlagi123",
-      "sigoa",
-      "DoctypeRosenthal",
-      "Venhaus",
-      "crasher666",
-      "IngoB",
-      "fscholz",
-      "eminor"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-03-12T19:38:40.241Z",
     "contributors": [
@@ -8925,15 +8910,6 @@
       "lesch",
       "fl1p",
       "spiegelp"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:38:27.478Z",
-    "contributors": [
-      "schlagi123",
-      "hapeit",
-      "fscholz",
-      "Aurel"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -13340,6 +13316,30 @@
       "cob",
       "SebinNyshkim",
       "PercyGitarrist"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-10-03T02:52:53.149Z",
+    "contributors": [
+      "c0dewalker",
+      "wbamberg",
+      "schlagi123",
+      "sigoa",
+      "DoctypeRosenthal",
+      "Venhaus",
+      "crasher666",
+      "IngoB",
+      "fscholz",
+      "eminor"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:38:27.478Z",
+    "contributors": [
+      "schlagi123",
+      "hapeit",
+      "fscholz",
+      "Aurel"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {

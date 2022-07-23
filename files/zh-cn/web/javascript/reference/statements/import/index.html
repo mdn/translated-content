@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Statements/import
 ---
 <p>{{jsSidebar("Statements")}}</p>
 
-<p>静态的 <code><strong>import</strong></code> 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，<code>import</code> 语句只能在声明了 <code>type="module"</code> 的 <code>script</code> 的标签中使用。</p>
+<p>静态的 <code><strong>import</strong></code> 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，<code>import</code> 语句只能在声明了 <code>type="module"</code> 的 <code>script</code> 的标签中使用。</p>
 
 <p>此外，还有一个类似函数的动态 <code>import()</code>，它不需要依赖 <code>type="module"</code> 的 script 标签。</p>
 
@@ -86,8 +86,8 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 <p>使用别名导入模块的多个接口。</p>
 
 <pre class="brush: js">import {
-  reallyReallyLongModuleMemberName as shortName,
-  anotherLongModuleName as short
+  reallyReallyLongModuleMemberName as shortName,
+  anotherLongModuleName as short
 } from '/modules/my-module.js';
 </pre>
 
@@ -120,7 +120,7 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 <pre class="brush: js">(async () =&gt; {
   if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
+    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
   }
 })();</pre>
 

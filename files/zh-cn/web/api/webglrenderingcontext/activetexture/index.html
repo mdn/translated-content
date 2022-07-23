@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><strong><code>WebGLRenderingContext.activeTexture() </code></strong>是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 方法之一，用来激活指定的纹理单元。</p>
+<p><strong><code>WebGLRenderingContext.activeTexture() </code></strong>是 <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 方法之一，用来激活指定的纹理单元。</p>
 
 <h2 id="句法">句法</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 
 <h3 id="异常">异常</h3>
 
-<p>如果 <em>texture </em>不是 <code>gl.TEXTURE<em>I(</em></code> <em>I </em>在 0 到 <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1 </code>范围内)，一个 <code>gl.INVALID_ENUM</code> 错误将被抛出。</p>
+<p>如果 <em>texture </em>不是 <code>gl.TEXTURE<em>I(</em></code> <em>I </em>在 0 到 <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1 </code>范围内)，一个 <code>gl.INVALID_ENUM</code> 错误将被抛出。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 <pre class="brush: js">gl.activeTexture(gl.TEXTURE1);
 </pre>
 
-<p>纹理单元的数量视实现而定， 你可以通过访问常量 <code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code> 来获取这个值。按照规范来说，最少是 8 个。</p>
+<p>纹理单元的数量视实现而定， 你可以通过访问常量 <code>MAX_COMBINED_TEXTURE_IMAGE_UNITS</code> 来获取这个值。按照规范来说，最少是 8 个。</p>
 
 <pre class="brush: js">gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
 </pre>

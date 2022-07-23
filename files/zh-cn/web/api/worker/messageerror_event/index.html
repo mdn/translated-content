@@ -5,7 +5,7 @@ translation_of: Web/API/Worker/messageerror_event
 ---
 <div>{{APIRef}}</div>
 
-<p>当 {{domxref('Worker')}} 对象接收到一条无法被反序列化的消息时， <code>messageerror</code> 事件将在该对象上被触发。</p>
+<p>当 {{domxref('Worker')}} 对象接收到一条无法被反序列化的消息时， <code>messageerror</code> 事件将在该对象上被触发。</p>
 
 <table class="properties">
  <tbody>
@@ -30,7 +30,7 @@ translation_of: Web/API/Worker/messageerror_event
 
 <h2 id="例子">例子</h2>
 
-<p>创建一个 worker ，使用 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> 监听 <code>message</code> 和 <code>messageerror</code> 事件：</p>
+<p>创建一个 worker ，使用 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> 监听 <code>message</code> 和 <code>messageerror</code> 事件：</p>
 
 <pre class="brush: js">// inside main.js
 
@@ -44,7 +44,7 @@ worker.addEventListener("messageerror", (event) =&gt; {
     console.error(`Error receiving message from worker: ${event}`);
 });</pre>
 
-<p>同样，可以使用 <code><a href="/zh-CN/docs/Web/API/Window/messageerror_event">onmessageerror</a></code> 事件处理属性监听事件：</p>
+<p>同样，可以使用 <code><a href="/zh-CN/docs/Web/API/Window/messageerror_event">onmessageerror</a></code> 事件处理属性监听事件：</p>
 
 <pre class="brush: js">// inside main.js
 

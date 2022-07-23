@@ -9,17 +9,17 @@ original_slug: Web/Guide/HTML/Using_data_attributes
 ---
 <p>{{LearnSidebar}}</p>
 
-<p><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。<a href="/en-US/docs/Web/HTML/Global_attributes#data-*">data-* 属性</a>允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 <a href="/en-US/docs/Web/API/Element.classList">classList</a>，标准外属性，DOM 额外属性或是 <a href="/en-US/docs/Web/API/Node.setUserData">setUserData</a> 之类的技巧。</p>
+<p><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。<a href="/en-US/docs/Web/HTML/Global_attributes#data-*">data-* 属性</a>允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 <a href="/en-US/docs/Web/API/Element.classList">classList</a>，标准外属性，DOM 额外属性或是 <a href="/en-US/docs/Web/API/Node.setUserData">setUserData</a> 之类的技巧。</p>
 
 <h2 id="HTML_语法">HTML 语法</h2>
 
 <p>语法非常简单。所有在元素上以<code>data-</code>开头的属性为数据属性。比如说你有一篇文章，而你又想要存储一些不需要显示在浏览器上的额外信息。请使用 data 属性：</p>
 
 <pre class="brush: html">&lt;article
-  id="electriccars"
-  data-columns="3"
-  data-index-number="12314"
-  data-parent="cars"&gt;
+  id="electriccars"
+  data-columns="3"
+  data-index-number="12314"
+  data-parent="cars"&gt;
 ...
 &lt;/article&gt;</pre>
 
@@ -64,7 +64,7 @@ article[data-columns='4'] {
 
 <p>不要在 data attribute 里储存需要显示及访问的内容，因为一些其他的技术可能访问不到它们。另外爬虫不能将 data attribute 的值编入索引中。</p>
 
-<p>IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标准，但所有更早期的版本都不支持<a href="http://caniuse.com/#feat=dataset">dataset</a>。为了支持 IE10 及以下的版本，你必须使用{{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，<a href="http://jsperf.com/data-dataset">读取 data-attributes 的行为</a>相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。</p>
+<p>IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标准，但所有更早期的版本都不支持<a href="http://caniuse.com/#feat=dataset">dataset</a>。为了支持 IE10 及以下的版本，你必须使用{{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，<a href="http://jsperf.com/data-dataset">读取 data-attributes 的行为</a>相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。</p>
 
 <p>尽管如此，对于那些与元素相关的数据，这依然是一个很好的解决方案。</p>
 
@@ -72,7 +72,7 @@ article[data-columns='4'] {
 
 <h2 id="参阅">参阅</h2>
 
-<div> </div>
+<div> </div>
 
 <ul>
  <li>该文章源自 <a href="https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/">Using data attributes in JavaScript and CSS on hacks.mozilla.org</a>.</li>

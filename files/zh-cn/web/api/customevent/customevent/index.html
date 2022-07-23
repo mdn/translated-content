@@ -23,12 +23,12 @@ translation_of: Web/API/CustomEvent/CustomEvent
 </dl>
 
 <dl>
- <dd>Is a <code>CustomEventInit</code> dictionary, having the following fields:  一个字典类型参数，有如下字段
+ <dd>Is a <code>CustomEventInit</code> dictionary, having the following fields:  一个字典类型参数，有如下字段
 
  <ul>
-  <li><code>"detail"</code>, optional and defaulting to <code>null</code>, of type any, that is a event-dependant value associated with the event.   可选的默认值是 null 的任意类型数据，是一个与 event 相关的值</li>
+  <li><code>"detail"</code>, optional and defaulting to <code>null</code>, of type any, that is a event-dependant value associated with the event.   可选的默认值是 null 的任意类型数据，是一个与 event 相关的值</li>
   <li>bubbles 一个布尔值，表示该事件能否冒泡。来自 {{domxref("Event.Event", "EventInit")}}。注意：测试 chrome 默认为不冒泡。</li>
-  <li>cancelable 一个布尔值，表示该事件是否可以取消。来自 {{domxref("Event.Event", "EventInit")}}</li>
+  <li>cancelable 一个布尔值，表示该事件是否可以取消。来自 {{domxref("Event.Event", "EventInit")}}</li>
  </ul>
 
  <div class="note">
@@ -36,9 +36,9 @@ translation_of: Web/API/CustomEvent/CustomEvent
 
  <p>CustomerEventInit 字典参数同样接受来自于 Event 类构造函数的 eventInit 字典参数，如下</p>
 
- <p>bubbles   一个布尔值，表示该事件能否冒泡</p>
+ <p>bubbles   一个布尔值，表示该事件能否冒泡</p>
 
- <p>cancelable  一个布尔值，表示该事件是否可以取消</p>
+ <p>cancelable  一个布尔值，表示该事件是否可以取消</p>
  </div>
  </dd>
 </dl>
@@ -86,25 +86,25 @@ obj.dispatchEvent(event);</pre>
 <p>You can polyfill the <code>CustomEvent()</code> constructor functionality in Internet Explorer 9 and higher with the following code:</p>
 
 <pre class="brush: js">(function(){
-    try{
-        // a : While a window.CustomEvent object exists, it cannot be called as a constructor.
-        // b : There is no window.CustomEvent object
-        new window.CustomEvent('T');
-    }catch(e){
-        var CustomEvent = function(event, params){
-            params = params || { bubbles: false, cancelable: false, detail: undefined };
+    try{
+        // a : While a window.CustomEvent object exists, it cannot be called as a constructor.
+        // b : There is no window.CustomEvent object
+        new window.CustomEvent('T');
+    }catch(e){
+        var CustomEvent = function(event, params){
+            params = params || { bubbles: false, cancelable: false, detail: undefined };
 
-            var evt = document.createEvent('CustomEvent');
+            var evt = document.createEvent('CustomEvent');
 
-            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
 
-            return evt;
-        };
+            return evt;
+        };
 
-        CustomEvent.prototype = window.Event.prototype;
+        CustomEvent.prototype = window.Event.prototype;
 
-        window.CustomEvent = CustomEvent;
-    }
+        window.CustomEvent = CustomEvent;
+    }
 })();</pre>
 
 <h2 id="See_also">See also</h2>

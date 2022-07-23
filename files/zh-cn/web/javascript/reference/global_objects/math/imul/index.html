@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/imul
 
 <h2 id="描述">描述</h2>
 
-<p><code>Math.imul()</code> 可以进行类似 C 语言的 32 位整数相乘。该特性对于一些项目比如 <a href="http://en.wikipedia.org/wiki/Emscripten" title="http://en.wikipedia.org/wiki/Emscripten">Emscripten</a> 很有用。因为 <code>imul()</code> 是 <code>Math</code> 的静态方法，所以用法是  <code>Math.imul()</code>，而不是新创建的 <code>Math</code> 对象的方法 (<code>Math</code> 不是构造函数)。如果使用 JavaScript 浮点数做为 <code>imul</code> 的参数，会有性能损失。这是因为相乘前 imul 会将浮点数转换为整数，相乘后会将整数重新转换为浮点数，这两步转换的开销是比较大的。imul 存在的原因是在 AsmJS(目前为止唯一一种环境) 下它是快速的。AsmJS 使 JIST-optimizers 更容易实现 JavaScript 内部的整数。现代浏览器中，唯一能体现出 imul 性能优越的场景是两个 Number 内部以整数的形式相乘 (仅在 AsmJS 下可行)。</p>
+<p><code>Math.imul()</code> 可以进行类似 C 语言的 32 位整数相乘。该特性对于一些项目比如 <a href="http://en.wikipedia.org/wiki/Emscripten" title="http://en.wikipedia.org/wiki/Emscripten">Emscripten</a> 很有用。因为 <code>imul()</code> 是 <code>Math</code> 的静态方法，所以用法是  <code>Math.imul()</code>，而不是新创建的 <code>Math</code> 对象的方法 (<code>Math</code> 不是构造函数)。如果使用 JavaScript 浮点数做为 <code>imul</code> 的参数，会有性能损失。这是因为相乘前 imul 会将浮点数转换为整数，相乘后会将整数重新转换为浮点数，这两步转换的开销是比较大的。imul 存在的原因是在 AsmJS(目前为止唯一一种环境) 下它是快速的。AsmJS 使 JIST-optimizers 更容易实现 JavaScript 内部的整数。现代浏览器中，唯一能体现出 imul 性能优越的场景是两个 Number 内部以整数的形式相乘 (仅在 AsmJS 下可行)。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -55,7 +55,7 @@ Math.imul(0xfffffffe, 5) //-10
   return ((aLo * bLo) + (((aHi * bLo + aLo * bHi) &lt;&lt; 16) &gt;&gt;&gt; 0) | 0);
 };</pre>
 
-<p>然而，下面的实现性能会更好一些。因为运行这段 polyfill 的浏览器很有可能会在内部使用浮点数，而不是整数表示 javascript 的 Number。</p>
+<p>然而，下面的实现性能会更好一些。因为运行这段 polyfill 的浏览器很有可能会在内部使用浮点数，而不是整数表示 javascript 的 Number。</p>
 
 <pre class="brush: js">if (!Math.imul) Math.imul = function(opA, opB) {
   opB |= 0; // ensure that opB is an integer. opA will automatically be coerced.

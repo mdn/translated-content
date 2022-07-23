@@ -11,11 +11,11 @@ translation_of: Web/JavaScript/Memory_Management
 
 <h2 id="简介">简介</h2>
 
-<p>像 C 语言这样的底层语言一般都有底层的内存管理接口，比如 <code>malloc()</code>和<code>free()</code>。相反，JavaScript 是在创建变量（对象，字符串等）时自动进行了分配内存，并且在不使用它们时“自动”释放。 释放的过程称为垃圾回收。这个“自动”是混乱的根源，并让 JavaScript（和其他高级语言）开发者错误的感觉他们可以不关心内存管理。 </p>
+<p>像 C 语言这样的底层语言一般都有底层的内存管理接口，比如 <code>malloc()</code>和<code>free()</code>。相反，JavaScript 是在创建变量（对象，字符串等）时自动进行了分配内存，并且在不使用它们时“自动”释放。 释放的过程称为垃圾回收。这个“自动”是混乱的根源，并让 JavaScript（和其他高级语言）开发者错误的感觉他们可以不关心内存管理。 </p>
 
 <h2 id="内存生命周期">内存生命周期</h2>
 
-<p>不管什么程序语言，内存生命周期基本是一致的：   </p>
+<p>不管什么程序语言，内存生命周期基本是一致的：   </p>
 
 <ol>
  <li>分配你所需要的内存</li>
@@ -152,7 +152,7 @@ window.onload = function(){
 };
 </pre>
 
-<p>在上面的例子里，<code>myDivElement</code> 这个 DOM 元素里的 <code>circularReference 属性</code>引用了 <code>myDivElement</code>，造成了循环引用。如果该属性没有显示移除或者设为 null，引用计数式垃圾收集器将总是且至少有一个引用，并将一直保持在内存里的 DOM 元素，即使其从 DOM 树中删去了。如果这个 DOM 元素拥有大量的数据 (如上的 <code>lotsOfData</code> 属性)，而这个数据占用的内存将永远不会被释放。</p>
+<p>在上面的例子里，<code>myDivElement</code> 这个 DOM 元素里的 <code>circularReference 属性</code>引用了 <code>myDivElement</code>，造成了循环引用。如果该属性没有显示移除或者设为 null，引用计数式垃圾收集器将总是且至少有一个引用，并将一直保持在内存里的 DOM 元素，即使其从 DOM 树中删去了。如果这个 DOM 元素拥有大量的数据 (如上的 <code>lotsOfData</code> 属性)，而这个数据占用的内存将永远不会被释放。</p>
 
 <h3 id="标记-清除算法">标记 - 清除算法</h3>
 

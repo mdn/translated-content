@@ -3,7 +3,7 @@ title: 如何创建一个 DOM 树
 slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
 ---
-<p>这个页面讲的是如何利用 JavaScript 中的 <a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html">DOM Core</a> API 来创建和修改 DOM 对象。它适用于特权（扩展）和非特权（网页）代码中的所有基于 Gecko 的应用程序（如 Firefox）。</p>
+<p>这个页面讲的是如何利用 JavaScript 中的 <a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html">DOM Core</a> API 来创建和修改 DOM 对象。它适用于特权（扩展）和非特权（网页）代码中的所有基于 Gecko 的应用程序（如 Firefox）。</p>
 
 <h3 id="Dynamically_creating_a_DOM_tree">Dynamically creating a DOM tree</h3>
 
@@ -83,43 +83,43 @@ doc.appendChild(peopleElem);
 <p>You can automate the creation of a DOM tree using a <a href="/en/JXON#JXON_reverse_algorithms">JXON reverse algorithm</a> in association with the following JSON representation:</p>
 
 <pre class="brush: js">{
-  "people": {
-    "person": [{
-      "address": [{
-        "@street": "321 south st",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }, {
-        "@street": "123 main st",
-        "@city": "arlington",
-        "@state": "ma",
-        "@country": "usa"
-      }],
-      "@first-name": "eric",
-      "@middle-initial": "H",
-      "@last-name": "jung"
-    }, {
-      "address": [{
-        "@street": "321 north st",
-        "@city": "atlanta",
-        "@state": "ga",
-        "@country": "usa"
-      }, {
-        "@street": "123 west st",
-        "@city": "seattle",
-        "@state": "wa",
-        "@country": "usa"
-      }, {
-        "@street": "321 south avenue",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }],
-      "@first-name": "jed",
-      "@last-name": "brown"
-    }]
-  }
+  "people": {
+    "person": [{
+      "address": [{
+        "@street": "321 south st",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }, {
+        "@street": "123 main st",
+        "@city": "arlington",
+        "@state": "ma",
+        "@country": "usa"
+      }],
+      "@first-name": "eric",
+      "@middle-initial": "H",
+      "@last-name": "jung"
+    }, {
+      "address": [{
+        "@street": "321 north st",
+        "@city": "atlanta",
+        "@state": "ga",
+        "@country": "usa"
+      }, {
+        "@street": "123 west st",
+        "@city": "seattle",
+        "@state": "wa",
+        "@country": "usa"
+      }, {
+        "@street": "321 south avenue",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }],
+      "@first-name": "jed",
+      "@last-name": "brown"
+    }]
+  }
 }
 </pre>
 

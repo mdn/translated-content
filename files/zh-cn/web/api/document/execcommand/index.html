@@ -10,9 +10,9 @@ translation_of: Web/API/Document/execCommand
 ---
 <div>{{ApiRef("DOM")}}{{deprecated_header}}</div>
 
-<p>当一个 HTML 文档切换到设计模式时，<code>document</code>暴露 <strong><code>execCommand</code> </strong>方法，该方法允许运行命令来操纵<a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable">可编辑内容区域</a>的元素。</p>
+<p>当一个 HTML 文档切换到设计模式时，<code>document</code>暴露 <strong><code>execCommand</code> </strong>方法，该方法允许运行命令来操纵<a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable">可编辑内容区域</a>的元素。</p>
 
-<p>大多数命令影响<code>document</code>的 <a href="/en-US/docs/Web/API/Selection">selection</a>（粗体，斜体等），当其他命令插入新元素（添加链接）或影响整行（缩进）。当使用<code>contentEditable</code>时，调用 <code>execCommand()</code> 将影响当前活动的可编辑元素。</p>
+<p>大多数命令影响<code>document</code>的 <a href="/en-US/docs/Web/API/Selection">selection</a>（粗体，斜体等），当其他命令插入新元素（添加链接）或影响整行（缩进）。当使用<code>contentEditable</code>时，调用 <code>execCommand()</code> 将影响当前活动的可编辑元素。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/Document/execCommand
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 {{jsxref('Boolean')}} ，如果是 <code>false</code> 则表示操作不被支持或未被启用。</p>
+<p>一个 {{jsxref('Boolean')}} ，如果是 <code>false</code> 则表示操作不被支持或未被启用。</p>
 
 <div class="note">
 <p>注意：在调用一个命令前，不要尝试使用返回值去校验浏览器的兼容性</p>
@@ -31,7 +31,7 @@ translation_of: Web/API/Document/execCommand
 
 <dl>
  <dt><code>aCommandName</code></dt>
- <dd>一个 {{domxref("DOMString")}} ，命令的名称。可用命令列表请参阅 <a href="#命令">命令</a> 。</dd>
+ <dd>一个 {{domxref("DOMString")}} ，命令的名称。可用命令列表请参阅 <a href="#命令">命令</a> 。</dd>
  <dt><code>aShowDefaultUI</code></dt>
  <dd>一个 {{jsxref("Boolean")}}， 是否展示用户界面，一般为 false。Mozilla 没有实现。</dd>
  <dt><code>aValueArgument</code></dt>
@@ -54,9 +54,9 @@ translation_of: Web/API/Document/execCommand
  <dt><code>createLink</code></dt>
  <dd>将选中内容创建为一个锚链接。这个命令需要一个<code>href</code>URI 字符串作为参数值传入。URI 必须包含至少一个字符，例如一个空格。（浏览器会创建一个空链接）</dd>
  <dt><code>cut</code></dt>
- <dd> 剪贴当前选中的文字并复制到剪贴板。启用这个功能的条件因浏览器不同而不同，而且不同时期，其启用条件也不尽相同。使用之前请检查浏览器兼容表，以确定是否可用。</dd>
+ <dd> 剪贴当前选中的文字并复制到剪贴板。启用这个功能的条件因浏览器不同而不同，而且不同时期，其启用条件也不尽相同。使用之前请检查浏览器兼容表，以确定是否可用。</dd>
  <dt><code>decreaseFontSize</code></dt>
- <dd> 给选中文字加上 {{HTMLElement("small")}} 标签，或在选中点插入该标签。(IE 浏览器不支持)</dd>
+ <dd> 给选中文字加上 {{HTMLElement("small")}} 标签，或在选中点插入该标签。(IE 浏览器不支持)</dd>
  <dt><code>defaultParagraphSeparator</code></dt>
  <dd>更改在可编辑文本区域中创建新段落时使用的段落分隔符。有关更多详细信息，请参阅<a href="/zh-CN/docs/Web/Guide/HTML/Content_Editable#Differences_in_markup_generation">标记生成的差异</a>。</dd>
  <dt><code>delete</code></dt>
@@ -74,13 +74,13 @@ translation_of: Web/API/Document/execCommand
  <dt><code>foreColor</code></dt>
  <dd>在插入点或者选中文字部分修改字体颜色。需要提供一个颜色值字符串作为参数。</dd>
  <dt><code>formatBlock</code></dt>
- <dd>添加一个 HTML 块式标签在包含当前选择的行，如果已经存在了，更换包含该行的块元素 (在 Firefox 中，BLOCKQUOTE 是一个例外 -它将包含任何包含块元素). 需要提供一个标签名称字符串作为参数。几乎所有的块样式标签都可以使用 (例如. "H1", "P", "DL", "BLOCKQUOTE"). (IE 浏览器仅仅支持标题标签 H1 - H6, ADDRESS，和 PRE，使用时还必须包含标签分隔符 &lt; &gt;, 例如 "&lt;H1&gt;".)</dd>
+ <dd>添加一个 HTML 块式标签在包含当前选择的行，如果已经存在了，更换包含该行的块元素 (在 Firefox 中，BLOCKQUOTE 是一个例外 -它将包含任何包含块元素). 需要提供一个标签名称字符串作为参数。几乎所有的块样式标签都可以使用 (例如. "H1", "P", "DL", "BLOCKQUOTE"). (IE 浏览器仅仅支持标题标签 H1 - H6, ADDRESS，和 PRE，使用时还必须包含标签分隔符 &lt; &gt;, 例如 "&lt;H1&gt;".)</dd>
  <dt><code>forwardDelete</code></dt>
  <dd>删除光标所在位置的字符。 和按下删除键一样。</dd>
  <dt><code>heading</code></dt>
  <dd>添加一个标题标签在光标处或者所选文字上。 需要提供标签名称字符串作为参数 (例如. "H1", "H6"). (IE 和 Safari 不支持)</dd>
  <dt><code>hiliteColor</code></dt>
- <dd>更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。 UseCSS 必须开启此功能。(IE 浏览器不支持)</dd>
+ <dd>更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。 UseCSS 必须开启此功能。(IE 浏览器不支持)</dd>
  <dt><code>increaseFontSize</code></dt>
  <dd>在选择或插入点周围添加一个 BIG 标签。(IE 浏览器不支持)</dd>
  <dt><code>indent</code></dt>
@@ -102,7 +102,7 @@ translation_of: Web/API/Document/execCommand
  <dt><code>insertText</code></dt>
  <dd>在光标插入位置插入文本内容或者覆盖所选的文本内容。</dd>
  <dt><code>italic</code></dt>
- <dd>在光标插入点开启或关闭斜体字。 (Internet Explorer 使用 EM 标签，而不是 I )</dd>
+ <dd>在光标插入点开启或关闭斜体字。 (Internet Explorer 使用 EM 标签，而不是 I )</dd>
  <dt><code>justifyCenter</code></dt>
  <dd>对光标插入位置或者所选内容进行文字居中。</dd>
  <dt><code>justifyFull</code></dt>
@@ -114,7 +114,7 @@ translation_of: Web/API/Document/execCommand
  <dt><code>outdent</code></dt>
  <dd>对光标插入行或者所选行内容减少缩进量。</dd>
  <dt><code>paste</code></dt>
- <dd>在光标位置粘贴剪贴板的内容，如果有被选中的内容，会被替换。剪贴板功能必须在 user.js 配置文件中启用。参阅 [1].</dd>
+ <dd>在光标位置粘贴剪贴板的内容，如果有被选中的内容，会被替换。剪贴板功能必须在 user.js 配置文件中启用。参阅 [1].</dd>
  <dt><code>redo</code></dt>
  <dd>重做被撤销的操作。</dd>
  <dt><code>removeFormat</code></dt>
@@ -144,7 +144,7 @@ translation_of: Web/API/Document/execCommand
 
 <h2 id="示例">示例</h2>
 
-<p>CodePen 中关于 <a href="http://codepen.io/netsi1964/full/QbLLGW/">如何使用</a> 如何使用的一个例子。</p>
+<p>CodePen 中关于 <a href="http://codepen.io/netsi1964/full/QbLLGW/">如何使用</a> 如何使用的一个例子。</p>
 
 <h2 id="规范">规范</h2>
 

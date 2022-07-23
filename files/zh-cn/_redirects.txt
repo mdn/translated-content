@@ -781,7 +781,7 @@
 /zh-CN/docs/JavaScript/Guide	/zh-CN/docs/Web/JavaScript/Guide
 /zh-CN/docs/JavaScript/Guide-redirect-1	/zh-CN/docs/Web/JavaScript/Guide
 /zh-CN/docs/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
-/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/zh-CN/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-CN/docs/JavaScript/Guide/Expressions_and_Operators	/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-CN/docs/JavaScript/Guide/Functions	/zh-CN/docs/Web/JavaScript/Guide/Functions
 /zh-CN/docs/JavaScript/Guide/Inheritance_Revisited	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -796,7 +796,7 @@
 /zh-CN/docs/JavaScript/Guide/Working_with_Objects	/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects
 /zh-CN/docs/JavaScript/Guide/闭包	/zh-CN/docs/Web/JavaScript/Closures
 /zh-CN/docs/JavaScript/JavaScript_technologies_overview	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
-/zh-CN/docs/JavaScript/Language_Resources	/zh-CN/docs/Web/JavaScript/Language_Resources
+/zh-CN/docs/JavaScript/Language_Resources	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/JavaScript/Memory_Management	/zh-CN/docs/Web/JavaScript/Memory_Management
 /zh-CN/docs/JavaScript/Reference	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript/Reference/About	/zh-CN/docs/Web/JavaScript/Reference/About
@@ -1034,7 +1034,7 @@
 /zh-CN/docs/JavaScript_核心参考	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript参考文档	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript的同源策略	/zh-CN/docs/Web/Security/Same-origin_policy
-/zh-CN/docs/JavaScript语言资源	/zh-CN/docs/Web/JavaScript/Language_Resources
+/zh-CN/docs/JavaScript语言资源	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Learn/CSS/Building_blocks/Advanced_box_effects	/zh-CN/docs/Learn/CSS/Building_blocks/Advanced_styling_effects
 /zh-CN/docs/Learn/CSS/Building_blocks/处理_不同_方向的_文本	/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions
 /zh-CN/docs/Learn/CSS/CSS_layout/传统的布局方法	/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods
@@ -1198,9 +1198,6 @@
 /zh-CN/docs/Server-sent_events/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/error_event
 /zh-CN/docs/Server-sent_events/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/open_event
 /zh-CN/docs/Server-sent_events/Using_server-sent_events	/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events
-/zh-CN/docs/Site_Compatibility_for_Firefox_19	/zh-CN/docs/Mozilla/Firefox/Releases/19/Site_compatibility
-/zh-CN/docs/Site_Compatibility_for_Firefox_21	/zh-CN/docs/Mozilla/Firefox/Releases/21/Site_compatibility
-/zh-CN/docs/Site_Compatibility_for_Firefox_24	/zh-CN/docs/Mozilla/Firefox/Releases/24/Site_compatibility
 /zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /zh-CN/docs/Tools-840092-dup/Remote_Debugging	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html
@@ -1480,10 +1477,14 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onended	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onformdata	/zh-CN/docs/Web/API/HTMLFormElement/formdata_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/zh-CN/docs/Web/API/Element/gotpointercapture_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oninput	/zh-CN/docs/conflicting/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/oninvalid	/zh-CN/docs/conflicting/Web/API/HTMLInputElement/invalid_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/conflicting/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/conflicting/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup	/zh-CN/docs/conflicting/Web/API/Element/keyup_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onloadend	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/loadend_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/zh-CN/docs/Web/API/Element/lostpointercapture_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmousedown	/zh-CN/docs/conflicting/Web/API/Element/mousedown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseenter	/zh-CN/docs/conflicting/Web/API/Element/mouseenter_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseleave	/zh-CN/docs/conflicting/Web/API/Element/mouseleave_event
@@ -2244,8 +2245,8 @@
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/sandbox	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/upgrade-insecure-requests	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 /zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/Web/HTTP/Headers/Cookie
-/zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins	/zh-CN/docs/conflicting/Web/HTTP/Headers/Expect-CT
-/zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/zh-CN/docs/conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
+/zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins	/zh-CN/docs/Web/HTTP/Headers/Expect-CT
+/zh-CN/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/zh-CN/docs/Web/HTTP/Headers/Expect-CT
 /zh-CN/docs/Web/HTTP/Headers/Set-Cookie2	/zh-CN/docs/Web/HTTP/Headers/Set-Cookie
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Public_Key_Pinning	/zh-CN/docs/Web/Security/Certificate_Transparency
@@ -2263,6 +2264,7 @@
 /zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
+/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/EventLoop	/zh-CN/docs/Web/JavaScript/EventLoop
 /zh-CN/docs/Web/JavaScript/Guide/Inheritance_Revisited	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -2278,6 +2280,7 @@
 /zh-CN/docs/Web/JavaScript/Guide/介绍	/zh-CN/docs/Web/JavaScript/Guide/Introduction
 /zh-CN/docs/Web/JavaScript/Guide/可迭代对象	/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols
 /zh-CN/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
+/zh-CN/docs/Web/JavaScript/Language_Resources	/zh-CN/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Reference/Array	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/Web/JavaScript/Reference/Array/Reduce	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/Web/JavaScript/Reference/Array/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat

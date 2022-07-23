@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mod
 ---
 <p>{{jsSidebar("More")}}</p>
 
-<p>ECMAScript 5 引入了 <a href="/zh-CN/docs/JavaScript/Strict_mode" title="/zh-CN/docs/JavaScript/Strict_mode">strict mode</a> ,现在已经被大多浏览器实现 (包括 IE10. 会使 web 浏览器更容易的解析代码 (只需要添加 <code>"use strict";</code> 在源码的最上面), 由现有的代码到严格模式的过渡需要一些事做。</p>
+<p>ECMAScript 5 引入了 <a href="/zh-CN/docs/JavaScript/Strict_mode" title="/zh-CN/docs/JavaScript/Strict_mode">strict mode</a> ,现在已经被大多浏览器实现 (包括 IE10. 会使 web 浏览器更容易的解析代码 (只需要添加 <code>"use strict";</code> 在源码的最上面), 由现有的代码到严格模式的过渡需要一些事做。</p>
 
 <p>该文章旨在为开发者提供指南。</p>
 
@@ -105,7 +105,7 @@ s.opacity = 1;
 
 <h4 id="arguments对象属性不与对应的形参变量同步更新"><code>arguments</code>对象属性不与对应的形参变量同步更新</h4>
 
-<p>在非严格模式中，修改<code>arguments</code>对象中某个索引属性的值，和这个属性对应的形参变量的值也会同时变化，反之亦然。这会让 JavaScript 的代码混淆引擎让代码变得更难读和理解。在严格模式中<code>arguments 对象会以形参变量的拷贝的形式被创建和初始化，因此 arguments 对象的改变不会影响形参。</code></p>
+<p>在非严格模式中，修改<code>arguments</code>对象中某个索引属性的值，和这个属性对应的形参变量的值也会同时变化，反之亦然。这会让 JavaScript 的代码混淆引擎让代码变得更难读和理解。在严格模式中<code>arguments 对象会以形参变量的拷贝的形式被创建和初始化，因此 arguments 对象的改变不会影响形参。</code></p>
 
 <h4 id="eval相关的区别"><code>eval 相关的区别</code></h4>
 
@@ -120,9 +120,9 @@ s.opacity = 1;
  <li>远离语义差异
   <ol>
    <li><code>eval</code>: 仅仅在你知道你在干什么的情况下使用它</li>
-   <li><code>arguments</code>: 总是通过形参的名字获取函数参数，或者在函数的第一行拷贝 arguments <br>
+   <li><code>arguments</code>: 总是通过形参的名字获取函数参数，或者在函数的第一行拷贝 arguments <br>
     <code>var args = Array.prototype.slice.call(arguments)</code></li>
-   <li><code>this</code>: 仅在 this 指向你自己创建的对象时使用它 </li>
+   <li><code>this</code>: 仅在 this 指向你自己创建的对象时使用它 </li>
   </ol>
  </li>
 </ol>
