@@ -6,7 +6,6 @@ browser-compat: css.at-rules.scroll-timeline
 l10n:
   sourceCommit: cfeaf30adb94aef219b0f8ec793739607b9db291
 ---
-
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) CSS **`@scroll-timeline`** définit une chronologie [`AnimationTimeline`](/fr/docs/Web/API/AnimationTimeline) dont les valeurs temporelles sont déterminées par le défilement dans un conteneur de défilement plutôt que par des minutes ou des secondes. Une fois définie, une chronologie de défilement (<i lang="en">scroll timeline</i> en anglais) est associée à une [animation CSS](/fr/docs/Web/CSS/CSS_Animations) grâce à la propriété `animation-timeline`.
@@ -24,14 +23,14 @@ La [règle @](/fr/docs/Web/CSS/At-rule) CSS **`@scroll-timeline`** définit une 
 ### Valeurs
 
 - [`custom-ident`](/fr/docs/Web/CSS/custom-ident)
-  - : Un nom idenfiant la chronologie de défilement. Ce nom est utilisé lorsqu'on référence la chronologie avec la propriété [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline).
+  - : Un nom identifiant la chronologie de défilement. Ce nom est utilisé lorsqu'on référence la chronologie avec la propriété [`animation-timeline`](/fr/docs/Web/CSS/animation-timeline).
 
 - `source`
   - : L'élément défilable dont la position du défilement agit sur la chronologie. Ce peut être&nbsp;:
     - `auto`
       - : Il s'agit alors du document associé à l'objet global [`Window`](/fr/docs/Web/API/Window) actuel.
     - `selector("id-selector")`
-      - : Le conteneur de défilement est identifiant à l'aide d'un identifiant d'élément.
+      - : Le conteneur de défilement est identifié à l'aide d'un identifiant d'élément.
     - `none`
       - : Aucun conteneur de défilement n'est indiqué.
 
