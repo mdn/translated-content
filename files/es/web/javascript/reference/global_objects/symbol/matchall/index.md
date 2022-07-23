@@ -1,7 +1,11 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
+translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
+original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 browser-compat: javascript.builtins.Symbol.matchAll
+l10n:
+  sourceCommit: c20a54b3a4b713b2636f171d00162779e67b99b7
 ---
 {{JSRef}}
 
