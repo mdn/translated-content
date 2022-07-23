@@ -11,7 +11,7 @@ l10n:
 
 El símbolo conocido como **`Symbol.match`** especifica la coincidencia de una expresión regular con una cadena. Esta función es llamada por el método {{jsxref("String.prototype.match()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-match.html")}}
+{{EmbedInteractiveExample("pages/js/symbol-match.html", "taller")}}
 
 ## Descripción
 
@@ -19,16 +19,16 @@ Esta función también se utiliza para identificar si los objetos tienen el comp
 
 {{js_property_attributes(0,0,0)}}
 
-## Ejemplo
+## Ejemplos
 
-### Deshabilitar la verificación `isRegExp`.
+### Desactivar la comprobación de `isRegExp`.
 
 El siguiente código lanzará un {{jsxref("TypeError")}}:
 
 ```js
 '/bar/'.startsWith(/bar/);
 
-// Arroja TypeError, ya que /bar/ es una expresión regular
+// Lanza TypeError, ya que /bar/ es una expresión regular
 // y Symbol.match no se modifica.
 ```
 
