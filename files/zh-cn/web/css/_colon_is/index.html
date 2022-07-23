@@ -163,7 +163,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 <h3 id="Notes">Simplifying section selectors</h3>
 
-<p><code>:is</code> 伪类在处理 HTML5 <a href="/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">sections and headings</a>特别有用。 由于 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}},  {{HTMLElement("nav")}} 经常嵌套在一起，没有 <code>:is()</code>的话匹配其他元素将会很棘手。</p>
+<p><code>:is</code> 伪类在处理 HTML5 <a href="/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document">sections and headings</a>特别有用。 由于 {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}},  {{HTMLElement("nav")}} 经常嵌套在一起，没有 <code>:is()</code>的话匹配其他元素将会很棘手。</p>
 
 <p>例如，在没有 <code>:is()</code>的情况下，在不同深度对所有{{HTMLElement("h1")}} 素进行样式化可能非常复杂：</p>
 
@@ -228,7 +228,7 @@ h1 {
 
 <h3 id="Issues_with_performance_and_specificity">any(): — Issues with performance and specificity</h3>
 
-<p><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> tracks an issue with Gecko where the specificity of <code>:-moz-any()</code> is incorrect. The current (as of Firefox 12) implementation puts <code>:-moz-any()</code> in the category of universal rules, meaning using it as the rightmost selector will be slower than using an ID, class, or tag as the rightmost selector.</p>
+<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> tracks an issue with Gecko where the specificity of <code>:-moz-any()</code> is incorrect. The current (as of Firefox 12) implementation puts <code>:-moz-any()</code> in the category of universal rules, meaning using it as the rightmost selector will be slower than using an ID, class, or tag as the rightmost selector.</p>
 
 <p>For example:</p>
 

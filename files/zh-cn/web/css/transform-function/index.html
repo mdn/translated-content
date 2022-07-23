@@ -42,7 +42,7 @@ translation_of: Web/CSS/transform-function
 
 <p>有了这种方法，就可以描述大部分常见的变换并因此可以将他们组合起来，如：旋转、缩放或拉伸。（事实上，所有线性函数的变换都可以被描述。）组合的变换是从右到左生效的。然而，有一种常见的变换并不是线性的，所以当这种变换要用这种方法来表示时，应该被单独列出来：位移。位移的向量 <code>(tx, ty)</code> 必须单独表示，作为两个附加参数。</p>
 
-<p><a href="https://zh.wikipedia.org/wiki/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF" title="奥古斯特·费迪南德·莫比乌斯">奥古斯特·费迪南德·莫比乌斯</a> 的 <a href="http://en.wikipedia.org/wiki/Projective_geometry">齐次坐标系</a> 表示了一个 3 × 3 的变换矩阵，虽然它对于非专业的人来说更复杂和少见，这并不影响将它表示为线性函数，并且这样就不需要考虑额外的特例。</p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E8%B4%B9%E8%BF%AA%E5%8D%97%E5%BE%B7%C2%B7%E8%8E%AB%E6%AF%94%E4%B9%8C%E6%96%AF">奥古斯特·费迪南德·莫比乌斯</a> 的 <a href="http://en.wikipedia.org/wiki/Projective_geometry">齐次坐标系</a> 表示了一个 3 × 3 的变换矩阵，虽然它对于非专业的人来说更复杂和少见，这并不影响将它表示为线性函数，并且这样就不需要考虑额外的特例。</p>
 
 <h2 id="3D_图形的坐标">3D 图形的坐标</h2>
 
@@ -490,7 +490,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><code>scaleX(sx)</code> 是 <code>scale(sx, 1)</code> 和 <code>scale3d(sx, 1, 1)</code> 的简写形式。</p>
 
-<p><code>scaleX(-1)</code> 表示通过原点的垂直轴定义轴对称（由 <code><a href="transform-origin" rel="custom">transform-origin</a></code> 属性指定）。</p>
+<p><code>scaleX(-1)</code> 表示通过原点的垂直轴定义轴对称（由 <code><a href="transform-origin">transform-origin</a></code> 属性指定）。</p>
 
 
 
@@ -538,7 +538,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><code>scaleY(sy)</code> 是 <code>scale(1, sy)</code> 和 <code>scale3d(1, sy, 1)</code> 的简写形式。</p>
 
-<p><code>scaleY(-1)</code> 定义了通过原点的水平轴的轴对称（由 <code><a href="transform-origin" rel="custom">transform-origin</a></code> 属性指定）。</p>
+<p><code>scaleY(-1)</code> 定义了通过原点的水平轴的轴对称（由 <code><a href="transform-origin">transform-origin</a></code> 属性指定）。</p>
 
 <h4 id="语法_12">语法</h4>
 
@@ -580,7 +580,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><code>scaleZ(sz)</code> 是 <code>scale3d(1, 1, sz)</code> 的简写形式。</p>
 
-<p><code>scaleZ(-1)</code> 定义了通过原点的 z 轴的轴对称（由 <code><a href="transform-origin" rel="custom">transform-origin</a></code> 属性指定）。</p>
+<p><code>scaleZ(-1)</code> 定义了通过原点的 z 轴的轴对称（由 <code><a href="transform-origin">transform-origin</a></code> 属性指定）。</p>
 
 <h4 id="语法_13">语法</h4>
 
