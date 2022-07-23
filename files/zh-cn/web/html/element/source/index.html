@@ -61,9 +61,9 @@ translation_of: Web/HTML/Element/source
   The <code>srcset</code> attribute has an effect only when the {{HTMLElement("source")}} element is the direct child of a {{HTMLElement("picture")}} element.</p>
  </dd>
  <dt>{{htmlattrdef("type")}}</dt>
- <dd>The MIME-type of the resource, optionally with a <code>codecs</code> parameter. See <a class="external" href="http://tools.ietf.org/html/rfc4281">RFC 4281</a> for information about how to specify codecs.</dd>
+ <dd>The MIME-type of the resource, optionally with a <code>codecs</code> parameter. See <a href="http://tools.ietf.org/html/rfc4281">RFC 4281</a> for information about how to specify codecs.</dd>
  <dt>{{htmlattrdef("media")}} {{experimental_inline}}</dt>
- <dd><a class="internal" href="/en-US/docs/CSS/Media_queries">Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
+ <dd><a href="/en-US/docs/CSS/Media_queries">Media query</a> of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.</dd>
 </dl>
 
 <p>If the <strong>type</strong> attribute isn't specified, the media's type is retrieved from the server and checked to see if Gecko can handle it; if it can't be rendered, the next <strong>source</strong> is checked. If the <strong>type</strong> attribute is specified, it's compared against the types Gecko can play, and if it's not recognized, the server doesn't even get queried; instead, the next <strong>source</strong> element is checked at once.</p>
@@ -80,7 +80,7 @@ translation_of: Web/HTML/Element/source
 &lt;/video&gt;
 </pre>
 
-<p>For more examples, see <a class="internal" href="/en-US/docs/Using_HTML5_audio_and_video">Using audio and video in Firefox</a>.</p>
+<p>For more examples, see <a href="/en-US/docs/Using_HTML5_audio_and_video">Using audio and video in Firefox</a>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
