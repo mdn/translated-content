@@ -1,17 +1,58 @@
 ---
-title: File.size
+title: Blob.size
 slug: Web/API/Blob/size
 translation_of: Web/API/Blob/size
 ---
-<h3 id="概述">概述</h3>
-<p>返回一个 File 对象所指代的文件的大小，单位为字节。</p>
-<h3 id="例子">例子</h3>
-<pre class="brush:js">// fileInput 是一个 HTMLInputElement 元素：&lt;input type="file" multiple id="myfileinput"&gt;
-var fileInput = document.getElementById("myfileinput");
-// files 是一个 FileList 对象 (类似于 NodeList)
-var files = fileInput.files;
-for (var i = 0; i &lt; files.length; i++)
-{
-    alert(files[i].name + "文件的大小为 " + files[i].size + " 字节");
+{{APIRef("File API")}}
+
+{{domxref("Blob")}} 接口的 **`size`** 属性返回 {{domxref("Blob")}} 或 {{domxref("File")}} 的字节数。
+
+## 值
+
+`Blob`（或基于 `Blob` 的对象，例如 {{domxref("File")}}）所包含数据的字节数。
+
+## 示例
+
+该实例使用 `file` 类型的 {{HTMLElement("input")}} 元素向用户请求一组文件，然后遍历这些文件，输出它们的名称和大小（以字节为单位）。
+
+### HTML
+
+```html
+<input type="file" id="input" multiple>
+<output id="output">Choose files…</output>
+```
+
+```css hidden
+output {
+  display: block;
+  margin-top: 16px;
 }
-</pre>
+```
+
+### JavaScript
+
+```js
+const input = document.getElementById('input');
+const output = document.getElementById('output');
+
+input.addEventListener('change', (event) => {
+  output.innerText = '';
+
+  for (const file of event.target.files) {
+    output.innerText += `${file.name} has a size of ${file.size} bytes.\n`;
+  }
+});
+```
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Blob")}}
+- [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
