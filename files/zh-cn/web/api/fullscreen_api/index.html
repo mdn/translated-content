@@ -159,9 +159,9 @@ translation_of: Web/API/Fullscreen_API
 }</code>
 </pre>
 
-<p>这段代码首先检查 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document" title="Document接口表示任何在浏览器中已经加载好的网页，并作为一个入口去操作网页内容（也就是DOM tree）。DOM tree包括像 &lt;body> 、&lt;table>这样的还有其他的元素。它提供了全局操作document的功能，像获取网页的URL和在document里创建一个新的元素。"><code>document</code></a> 的 <code>fullscreenElement</code> 属性的值（亦要检查带有前缀 <code>moz</code>、<code>ms、</code><code>webkit</code>）。如果其为 <code>null</code>，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullscreen" title="Element.requestFullscreen() 方法用于发出异步请求使元素进入全屏模式。"><code>element.requestFullscreen()</code></a>，可以切换到全屏模式。</p>
+<p>这段代码首先检查 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document"><code>document</code></a> 的 <code>fullscreenElement</code> 属性的值（亦要检查带有前缀 <code>moz</code>、<code>ms、</code><code>webkit</code>）。如果其为 <code>null</code>，文档当前处于窗口模式中，所以我们需要切换到全屏模式。通过调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullscreen"><code>element.requestFullscreen()</code></a>，可以切换到全屏模式。</p>
 
-<p>如果全屏模式已经激活（<code>fullscreenElement</code> 不为 <code>null</code>），我们可以调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/exitFullscreen" title="Document.exitFullscreen() 方法用于让当前文档退出全屏模式（原文表述不准确，详见备注）。调用这个方法会让文档回退到上一个调用Element.requestFullscreen()方法进入全屏模式之前的状态。"><code>document.exitFullscreen()</code></a>（或其前缀化的版本，这取决于你使用的浏览器）。</p>
+<p>如果全屏模式已经激活（<code>fullscreenElement</code> 不为 <code>null</code>），我们可以调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/exitFullscreen"><code>document.exitFullscreen()</code></a>（或其前缀化的版本，这取决于你使用的浏览器）。</p>
 
 <h2 id="规范">规范</h2>
 

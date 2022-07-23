@@ -65,18 +65,18 @@ translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 <p>当拖拽发生时，数据必须与被拖拽的项目相关联。例如，当在文本框中拖拽选定的文本时，与拖拽数据项相关联的数据就是文本本身。类似地，当在 Web 页面上拖拽链接时，拖拽数据项就是链接的 URL 。</p>
 
-<p>{{domxref("DataTransfer","拖拽数据")}} 包含两个信息，数据的类型（或格式）和数据值。格式是一个类型字符串（例如文本数据的格式是 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" title="text/plain">text/plain</a></code>），值是一个文本字符串。拖拽开始时，你提供数据类型和数据值。在拖拽过程中，在 <code>{{event("dragenter")}}</code> 和 <code>{{event("dragover")}}</code> 事件监听程序中，你使用拖拽数据的类型来检查是否允许放置（drop）。例如，接受链接的放置目标将检查链接类型 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a></code>。在放置事件中，监听程序将取回拖拽数据，并将其插入到放置位置。</p>
+<p>{{domxref("DataTransfer","拖拽数据")}} 包含两个信息，数据的类型（或格式）和数据值。格式是一个类型字符串（例如文本数据的格式是 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code>），值是一个文本字符串。拖拽开始时，你提供数据类型和数据值。在拖拽过程中，在 <code>{{event("dragenter")}}</code> 和 <code>{{event("dragover")}}</code> 事件监听程序中，你使用拖拽数据的类型来检查是否允许放置（drop）。例如，接受链接的放置目标将检查链接类型 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code>。在放置事件中，监听程序将取回拖拽数据，并将其插入到放置位置。</p>
 
-<p>{{domxref("DataTransfer","拖拽数据")}} 的 {{domxref("DataTransfer.types","类型")}} 属性返回一个类似 {{domxref("DOMString")}} 的 MIME-type 的列表，如 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" title="text/plain">text/plain</a></code> 或 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#image" title="image/jpeg">image/jpeg</a></code>。你还可以创建自己的类型。最常用的类型列在文章 <a href="/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">推荐拖拽类型</a> 中。</p>
+<p>{{domxref("DataTransfer","拖拽数据")}} 的 {{domxref("DataTransfer.types","类型")}} 属性返回一个类似 {{domxref("DOMString")}} 的 MIME-type 的列表，如 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code> 或 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#image">image/jpeg</a></code>。你还可以创建自己的类型。最常用的类型列在文章 <a href="/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">推荐拖拽类型</a> 中。</p>
 
-<p>一次拖拽可能包括几个不同类型的数据项。这使得数据可以更具体的类型提供，通常是自定义类型，但若放置目标不支持这些具体类型，则会提供回退（fallback）数据。通常情况下，最不具体的类型是 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" title="text/plain">text/plain</a></code> 类型的普通文本数据，即一些简单的文本表示。</p>
+<p>一次拖拽可能包括几个不同类型的数据项。这使得数据可以更具体的类型提供，通常是自定义类型，但若放置目标不支持这些具体类型，则会提供回退（fallback）数据。通常情况下，最不具体的类型是 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code> 类型的普通文本数据，即一些简单的文本表示。</p>
 
 <p>要在 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 中设置拖拽数据项，使用 {{domxref("DataTransfer.setData","setData()")}} 方法。这个方法接收两个参数，即数据类型和数据值。例如：</p>
 
 <pre class="brush: js notranslate">event.dataTransfer.setData("text/plain", "Text to drag");
 </pre>
 
-<p>在这个例子中，数据值是 “Text to drag”，数据类型是 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" title="text/plain">text/plain</a></code> 格式。</p>
+<p>在这个例子中，数据值是 “Text to drag”，数据类型是 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code> 格式。</p>
 
 <p>你可以提供多种格式的数据。要做到这一点，可以用不同的格式多次调用 {{domxref("DataTransfer.setData","setData()")}} 方法。你应该传入尽量具体的格式。</p>
 
@@ -90,7 +90,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>通过提供其他类型的数据，我们还可使用不那么具体的形式支持拖拽到其他应用程序。<code>application/x.bookmark</code> 类型可以提供更多的数据，以便在应用程序中使用，而另两个类型则只包含一个 URL 或文本版本。</p>
 
-<p>注意，在本例中，<code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a></code> 和 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text" title="text/plain">text/plain</a></code> 包含相同的数据。这通常是正确的，但不一定要这么做。</p>
+<p>注意，在本例中，<code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code> 和 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#text">text/plain</a></code> 包含相同的数据。这通常是正确的，但不一定要这么做。</p>
 
 <p>如果你试图以相同的格式添加两次数据，那么新的数据将替换旧的数据。你可以使用 {{domxref("DataTransfer.clearData","clearData()")}} 方法清除这些数据，该方法接收一个参数，即要删除的数据类型。</p>
 
@@ -209,7 +209,7 @@ function doDragOver(event) {
   }
 }</pre>
 
-<p>在本例中，我们使用 <code>includes</code> 方法来检查 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a></code> 是否出现在类型列表中。如果出现了，我们将取消这个事件以允许放置。如果拖拽数据不包含链接，则不取消事件，此位置也不允许放置。</p>
+<p>在本例中，我们使用 <code>includes</code> 方法来检查 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code> 是否出现在类型列表中。如果出现了，我们将取消这个事件以允许放置。如果拖拽数据不包含链接，则不取消事件，此位置也不允许放置。</p>
 
 <p>如果你希望更具体地限制操作类型，你可能还需要设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 或 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，或者两者都设置。当然，如果你不取消这个事件，改变这两个属性不会有任何效果。</p>
 
@@ -258,7 +258,7 @@ function doDragOver(event) {
 
 <p>在一个网页中，如果你想接收一个放置，不想让浏览器的默认处理程序处理放置数据，你应该调用事件的 {{domxref("Event.preventDefault","preventDefault()")}} 方法。例如，当拖拽一个链接到网页时，Firefox 会打开这个链接。而你可以通过取消事件来阻止这样的行为。</p>
 
-<p>你可以取回其他类型的数据。如果数据是一个链接，其类型应为 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a></code>。你可以将链接插入到内容中。</p>
+<p>你可以取回其他类型的数据。如果数据是一个链接，其类型应为 <code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code>。你可以将链接插入到内容中。</p>
 
 <pre class="notranslate">function doDrop(event) {
   const lines = event.dataTransfer.getData("text/uri-list").split("\n");
@@ -272,7 +272,7 @@ function doDragOver(event) {
   event.preventDefault();
 }</pre>
 
-<p>这个例子使用拖拽数据插入链接。顾名思义，<code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a></code> 类型可包含一个 URL 列表，每行一个 URL。在上述代码中，我们使用 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" title="split">split</a> 方法将字符串按行分割，然后迭代列表的每一行，将每一个链接都插入到文档中。注意到我们跳过了井号（#）开头的链接，因为那些只是注释。</p>
+<p>这个例子使用拖拽数据插入链接。顾名思义，<code><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link">text/uri-list</a></code> 类型可包含一个 URL 列表，每行一个 URL。在上述代码中，我们使用 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split">split</a> 方法将字符串按行分割，然后迭代列表的每一行，将每一个链接都插入到文档中。注意到我们跳过了井号（#）开头的链接，因为那些只是注释。</p>
 
 <p>在简单的情况中，你可以使用一个特别的类型 <code>URL</code> 来取回列表中第一个有效的 URL。例如：</p>
 
@@ -307,13 +307,13 @@ function doDragOver(event) {
 
 <p><code>{{event("dragend")}}</code> 事件结束后，整个拖放操作就完成了。</p>
 
-<p>[1] 在 Gecko 内核中，如果源头节点在拖拽过程中（如放置或 {{event("dragover")}} 中）被移动或移除了，则不会触发 {{event("dragend")}} 事件。参见 <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">bug 460801</a>。</p>
+<p>[1] 在 Gecko 内核中，如果源头节点在拖拽过程中（如放置或 {{event("dragover")}} 中）被移动或移除了，则不会触发 {{event("dragend")}} 事件。参见 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801">bug 460801</a>。</p>
 
 <h2 id="See_also">参见</h2>
 
 <ul>
- <li><a class="internal" href="/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>
- <li><a class="internal" href="/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a></li>
- <li><a class="internal" href="/Web/Guide/HTML/Recommended_Drag_Types" title="Recommended Drag Types">Recommended Drag Types</a></li>
- <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd" title="Drag and Drop Standard">HTML5 Living Standard: Drag and Drop</a></li>
+ <li><a href="/Web/API/HTML_Drag_and_Drop_API">HTML Drag and Drop API (Overview)</a></li>
+ <li><a href="/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items">Dragging and Dropping Multiple Items</a></li>
+ <li><a href="/Web/Guide/HTML/Recommended_Drag_Types">Recommended Drag Types</a></li>
+ <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
 </ul>

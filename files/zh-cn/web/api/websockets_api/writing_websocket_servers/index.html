@@ -68,7 +68,7 @@ Connection: Upgrade
 
 </strong></pre>
 
-<p>另外，服务器可以在这时候决定插件或子协议，详情参见<a href="/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous">杂项</a>。  <code>Sec-WebSocket-Accept</code> 参数很有趣，它需要服务器通过客户端发送的<code>Sec-WebSocket-Key</code> 计算出来。 怎样计算呢， 把客户发送的 <code style="font-size: 14px;">Sec-WebSocket-Key</code> 和 "<code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code>" (这个叫做 "<a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">魔法值</a>") 连接起来，把结果用<a href="https://zh.wikipedia.org/wiki/SHA-1">SHA-1</a>编码，再用<a href="https://zh.wikipedia.org/wiki/Base64">base64</a>编码一次，就可以了。 </p>
+<p>另外，服务器可以在这时候决定插件或子协议，详情参见<a href="/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#Miscellaneous">杂项</a>。  <code>Sec-WebSocket-Accept</code> 参数很有趣，它需要服务器通过客户端发送的<code>Sec-WebSocket-Key</code> 计算出来。 怎样计算呢， 把客户发送的 <code style="font-size: 14px;">Sec-WebSocket-Key</code> 和 "<code style="font-size: 14px;">258EAFA5-E914-47DA-95CA-C5AB0DC85B11</code>" (这个叫做 "<a href="https://en.wikipedia.org/wiki/Magic_string">魔法值</a>") 连接起来，把结果用<a href="https://zh.wikipedia.org/wiki/SHA-1">SHA-1</a>编码，再用<a href="https://zh.wikipedia.org/wiki/Base64">base64</a>编码一次，就可以了。 </p>
 
 <div class="note">
 <p><strong>参考：</strong>这看起来繁复的处理使得客户端明确服务端是否支持 WebSocket。这是十分重要的，如果服务端接收到一个 WebSocket 连接但是把数据作为 HTTP 请求理解可能会导致安全问题。</p>
@@ -238,7 +238,7 @@ Sec-WebSocket-Protocol: wamp
 
 <ul>
  <li><a href="https://github.com/alexhultman/libwshandshake">WebSocket handshake library in C++</a></li>
- <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_server" title="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
+ <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
  <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
  <li><a href="/en-US/docs/WebSockets/WebSocket_Server_Vb.NET">Tutorial: Websocket server in VB.NET</a></li>
 </ul>
