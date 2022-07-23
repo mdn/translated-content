@@ -18,7 +18,7 @@ translation_of: Web/HTTP/Cookies
  <li>浏览器行为跟踪（如跟踪分析用户行为等）</li>
 </ul>
 
-<p>Cookie 曾一度用于客户端数据的存储，因当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a> （本地存储和会话存储）或 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 。</p>
+<p>Cookie 曾一度用于客户端数据的存储，因当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。由于服务器指定 Cookie 后，浏览器的每次请求都会携带 Cookie 数据，会带来额外的性能开销（尤其是在移动环境下）。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API">Web storage API</a> （本地存储和会话存储）或 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 。</p>
 
 <div class="note">
 <p>要查看 Cookie 存储（或网页上能够使用其他的存储方式），你可以在开发者工具中启用<strong>存储查看</strong>（<a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a> ）功能，并在存储树上选中<strong>Cookie</strong>。</p>
@@ -263,7 +263,7 @@ console.log(document.cookie);
 
 <h3 id="僵尸_Cookie_和删不掉的_Cookie">僵尸 Cookie 和删不掉的 Cookie</h3>
 
-<p>Cookie 的一个极端使用例子是僵尸 Cookie（或称之为“删不掉的 Cookie”），这类 Cookie 较难以删除，甚至删除之后会自动重建。这些技术违反了用户隐私和用户控制的原则，可能违反了数据隐私法规，并可能使使用它们的网站承担法律责任。它们一般是使用 <a href="/en-US/docs/Web/API/Web_Storage_API" title="DOM Storage">Web storage API</a>、Flash 本地共享对象或者其他技术手段来达到的。相关内容可以看：</p>
+<p>Cookie 的一个极端使用例子是僵尸 Cookie（或称之为“删不掉的 Cookie”），这类 Cookie 较难以删除，甚至删除之后会自动重建。这些技术违反了用户隐私和用户控制的原则，可能违反了数据隐私法规，并可能使使用它们的网站承担法律责任。它们一般是使用 <a href="/en-US/docs/Web/API/Web_Storage_API">Web storage API</a>、Flash 本地共享对象或者其他技术手段来达到的。相关内容可以看：</p>
 
 <ul>
  <li><a href="https://github.com/samyk/evercookie">Evercookie by Samy Kamkar</a></li>
@@ -284,8 +284,8 @@ console.log(document.cookie);
  <li>{{domxref("Document.cookie")}}</li>
  <li>{{domxref("Navigator.cookieEnabled")}}</li>
  <li><a href="/en-US/docs/Tools/Storage_Inspector">Inspecting cookies using the Storage Inspector</a></li>
- <li><a class="external" href="https://tools.ietf.org/html/rfc6265">Cookie specification: RFC 6265</a></li>
- <li><a class="external" href="https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/">Nicholas Zakas article on cookies</a></li>
- <li><a class="external" href="https://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Nicholas Zakas article on cookies and security</a></li>
+ <li><a href="https://tools.ietf.org/html/rfc6265">Cookie specification: RFC 6265</a></li>
+ <li><a href="https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/">Nicholas Zakas article on cookies</a></li>
+ <li><a href="https://www.nczonline.net/blog/2009/05/12/cookies-and-security/">Nicholas Zakas article on cookies and security</a></li>
  <li><a href="https://en.wikipedia.org/wiki/HTTP_cookie">HTTP cookie on Wikipedia</a></li>
 </ul>
