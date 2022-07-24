@@ -570,10 +570,10 @@
 /ja/docs/Controlling_spell_checking_in_HTML_forms	/ja/docs/Web/HTML/Global_attributes/spellcheck
 /ja/docs/Core_JavaScript_1.5_Guide	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
-/ja/docs/Core_JavaScript_1.5_Guide/About/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
+/ja/docs/Core_JavaScript_1.5_Guide/About/Core_Language_Features	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/Core_JavaScript_1.5_Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-/ja/docs/Core_JavaScript_1.5_Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
+/ja/docs/Core_JavaScript_1.5_Guide/Core_Language_Features	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Methods	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods
@@ -615,10 +615,10 @@
 /ja/docs/Core_JavaScript_1.5_Guide/Working_with_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects
 /ja/docs/Core_JavaScript_1.5_Guide/Writing_a_Regular_Expression_Pattern	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 /ja/docs/Core_JavaScript_1.5_Guide:About	/ja/docs/Web/JavaScript/Guide/Introduction
-/ja/docs/Core_JavaScript_1.5_Guide:About:Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
+/ja/docs/Core_JavaScript_1.5_Guide:About:Core_Language_Features	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide:Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/Core_JavaScript_1.5_Guide:Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-/ja/docs/Core_JavaScript_1.5_Guide:Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
+/ja/docs/Core_JavaScript_1.5_Guide:Core_Language_Features	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Defining_Methods	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods
@@ -2119,7 +2119,7 @@
 /ja/docs/JavaScript/Guide/Block_Statement-redirect-1	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
-/ja/docs/JavaScript/Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
+/ja/docs/JavaScript/Guide/Core_Language_Features	/ja/docs/Web/JavaScript/Guide
 /ja/docs/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/JavaScript/Guide/Creating_New_Objects-redirect-1	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/JavaScript/Guide/Creating_New_Objects/Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
@@ -4413,7 +4413,7 @@
 /ja/docs/Web/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
-/ja/docs/Web/JavaScript/Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
+/ja/docs/Web/JavaScript/Guide/Core_Language_Features	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects/Defining_Methods	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods
