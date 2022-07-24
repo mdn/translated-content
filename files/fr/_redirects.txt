@@ -3804,6 +3804,7 @@
 /fr/docs/Web/API/GlobalEventHandlers/onkeypress	/fr/docs/Web/API/Element/keypress_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeyup	/fr/docs/Web/API/Element/keyup_event
 /fr/docs/Web/API/GlobalEventHandlers/onloadend	/fr/docs/Web/API/XMLHttpRequest/loadend_event
+/fr/docs/Web/API/GlobalEventHandlers/onloadstart	/fr/docs/Web/API/HTMLMediaElement/loadstart_event
 /fr/docs/Web/API/GlobalEventHandlers/onmousedown	/fr/docs/Web/API/Element/mousedown_event
 /fr/docs/Web/API/GlobalEventHandlers/onmousemove	/fr/docs/Web/API/Element/mousemove_event
 /fr/docs/Web/API/GlobalEventHandlers/onmouseout	/fr/docs/Web/API/Element/mouseout_event

@@ -13282,26 +13282,6 @@
       "ReyCG_sub"
     ]
   },
-  "Web/API/GlobalEventHandlers/onloadeddata": {
-    "modified": "2020-10-15T22:16:07.855Z",
-    "contributors": [
-      "chenqingyue"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onloadedmetadata": {
-    "modified": "2020-10-15T22:22:53.089Z",
-    "contributors": [
-      "rottenpen",
-      "ppphp"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onloadstart": {
-    "modified": "2020-10-15T21:57:07.506Z",
-    "contributors": [
-      "fscholz",
-      "EdwinChanFullStack"
-    ]
-  },
   "Web/API/GlobalEventHandlers/onpause": {
     "modified": "2020-10-15T22:17:32.669Z",
     "contributors": [
@@ -14251,6 +14231,13 @@
       "fscholz",
       "IShinji",
       "Iamxiaozhu"
+    ]
+  },
+  "Web/API/HTMLMediaElement/loadedmetadata_event": {
+    "modified": "2020-10-15T22:22:53.089Z",
+    "contributors": [
+      "rottenpen",
+      "ppphp"
     ]
   },
   "Web/API/HTMLMediaElement/loadstart_event": {
@@ -45847,6 +45834,19 @@
     "modified": "2020-10-15T22:18:22.501Z",
     "contributors": [
       "qiuguomuhai"
+    ]
+  },
+  "conflicting/Web/API/HTMLMediaElement/loadeddata_event": {
+    "modified": "2020-10-15T22:16:07.855Z",
+    "contributors": [
+      "chenqingyue"
+    ]
+  },
+  "conflicting/Web/API/HTMLMediaElement/loadstart_event": {
+    "modified": "2020-10-15T21:57:07.506Z",
+    "contributors": [
+      "fscholz",
+      "EdwinChanFullStack"
     ]
   },
   "conflicting/Web/API/Headers/get": {
