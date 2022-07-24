@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
    <td>
     <p>一个否定或补充的字符类。也就是说，它匹配未包含在方括号中的任何字符。你可以使用连字符指定字符范围，但如果连字符出现在<code>^</code>后的第一个字符或方括号中的或最后一个字符，则将其视为字面连字符，作为普通字符包含在字符类中。例如，<code>[^abc]</code> 与 <code>[^a-c]</code> 相同。它们首先匹配“bacon”中的“o”和“chop”中的“h”。</p>
     <div class="notecard note">
-     <p><strong>注意：</strong>^ 字符也可以表示<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">输入的开始</a>.</p>
+     <p><strong>备注：</strong> ^ 字符也可以表示<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">输入的开始</a>。</p>
     </div>
    </td>
   </tr>
@@ -177,7 +177,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
     </p>
     <div class="notecard note">
      <p>
-      <strong>注意：</strong>析取是指定“一组选择”的另一种方式，但它不是字符类。析取不是原子的——你需要使用<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">组</a>使其成为一个更大的模式的一部分。<code>[abc]</code> 在功能上等同于 <code>(?:a|b|c)</code>。
+      <strong>备注：</strong> 析取是指定“一组选择”的另一种方式，但它不是字符类。析取不是原子的——你需要使用<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">组</a>使其成为一个更大的模式的一部分。<code>[abc]</code> 在功能上等同于 <code>(?:a|b|c)</code>。
      </p>
     </div>
    </td>
