@@ -1,6 +1,6 @@
 ---
 title: GlobalEventHandlers.onloadstart
-slug: Web/API/GlobalEventHandlers/onloadstart
+slug: Web/API/HTMLMediaElement/loadstart_event
 tags:
   - API
   - DOM
@@ -8,6 +8,7 @@ tags:
   - Propriétés
   - évènements
 translation_of: Web/API/GlobalEventHandlers/onloadstart
+original_slug: Web/API/GlobalEventHandlers/onloadstart
 ---
 {{ApiRef}}
 

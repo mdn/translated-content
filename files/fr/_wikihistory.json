@@ -15054,13 +15054,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/GlobalEventHandlers/onloadstart": {
-    "modified": "2020-10-15T22:04:38.335Z",
-    "contributors": [
-      "fscholz",
-      "loella16"
-    ]
-  },
   "Web/API/HTMLBRElement": {
     "modified": "2019-03-23T23:30:24.531Z",
     "contributors": [
@@ -15580,6 +15573,13 @@
       "estelle",
       "fscholz",
       "Kalwyn"
+    ]
+  },
+  "Web/API/HTMLMediaElement/loadstart_event": {
+    "modified": "2020-10-15T22:04:38.335Z",
+    "contributors": [
+      "fscholz",
+      "loella16"
     ]
   },
   "Web/API/HTMLMediaElement/play": {
