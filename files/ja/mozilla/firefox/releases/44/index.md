@@ -5,257 +5,218 @@ tags:
   - Firefox
 translation_of: Mozilla/Firefox/Releases/44
 ---
-<p>Firefox 44 は、米国時間 2016 年 1 月 26 日にリリースされました。このページでは、開発者に影響する Firefox 44 の変更点をまとめています。</p>
+{{FirefoxSidebar}}
 
-<h2 id="Changes_for_Web_developers" name="Changes_for_Web_developers">Web 開発者向けの変更点一覧</h2>
+[Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/)Firefox 44 は、米国時間 2016 年 1 月 26 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 
-<h3 id="Developer_Tools" name="Developer_Tools">開発者ツール</h3>
+## ウェブ開発者向けの変更点一覧
 
-<p>{{page('/ja/docs/Tools/Release_notes', 'Firefox_44')}}</p>
+### 開発者ツール
 
-<h3 id="HTML" name="HTML">HTML</h3>
+主要なもの:
 
-<ul>
- <li><code><a href="/ja/docs/Web/HTTP/Link_prefetching_FAQ">&lt;link rel="prefetch"&gt;</a></code> が、{{htmlattrxref("crossorigin", "link")}} 属性に従うようになりました ({{bug(1214819)}})。</li>
-</ul>
+- [メモリーツール](https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html)
+- [アニメーションインスペクターの改良](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html)
+- [新しいウォーターフォールマーカー: DomContentLoaded、load、ワーカーメッセージ](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#markers)
 
-<h3 id="CSS" name="CSS">CSS</h3>
+[Firefox 43 と Firefox 44 の間で修正された開発ツールのすべてのバグ。](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-11-03&query_format=advanced&chfield=resolution&chfieldfrom=2015-09-19&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12582678)
 
-<ul>
- <li><code>position: fixed;</code> は、常に新たな stacking context を生成するようになりました ({{bug(1179288)}})。</li>
- <li>{{cssxref('unicode-range')}} のサポートを、デフォルトで有効にしました ({{bug(1119062)}})。</li>
- <li>CSS Writing Modes の実験的な実装を更新して、最新の仕様を反映しました:
-  <ul>
-   <li>{{cssxref("text-orientation")}} プロパティの値 <code>sideways</code> を実装して、<code>sideways-right</code> をこの値の別名にしました ({{bug(1193488)}})。</li>
-   <li>{{cssxref("writing-mode")}} プロパティの値 <code>sideways-rl</code> および <code>sideways-lr</code> を実装しました ({{bug(1193488)}} および {{bug(1193519)}})。</li>
-  </ul>
- </li>
- <li>非標準のプロパティ {{cssxref("-moz-math-display")}} および {{cssxref("-moz-window-shadow")}} は、Web コンテンツで使用できなくなりました ({{bug(1207002)}}、{{bug(1211040)}}、{{bug(1212607)}})。</li>
- <li>{{cssxref("font-style")}} で、<code>oblique</code> と <code>italic</code> の両方を使用できる場合は、両者を区別するようになりました ({{bug(543715)}})。</li>
- <li>未サポートであるにもかかわらず {{cssxref("marks")}}、{{cssxref("orphans")}}、{{cssxref("page")}}、{{cssxref("size")}}、{{cssxref("widows")}} の各プロパティがパースされ、{{cssxref("@supports")}} で誤ってサポート済みであると報告していました。この問題を修正してパースしないように、またサポート済みとしないようになりました ({{bug(1215702)}})。</li>
- <li>内部で使用する値 <code>-moz-mac-unified-toolbar</code> を、{{cssxref("-moz-appearance")}} プロパティで使用できる値から外しました ({{bug(1206468)}})。</li>
- <li>いくつかの <code>-webkit</code> 接頭辞付きプロパティおよび値を、web 互換性のためにサポートしました。設定項目 <code>layout.css.prefixes.webkit</code> で制御しており、既定値は <code>false</code> です ({{bug(837211)}}):
-  <ul>
-   <li>{{cssxref("-webkit-animation")}}</li>
-   <li>{{cssxref("-webkit-animation-delay")}}</li>
-   <li>{{cssxref("-webkit-animation-direction")}}</li>
-   <li>{{cssxref("-webkit-animation-duration")}}</li>
-   <li>{{cssxref("-webkit-animation-fill-mode")}}</li>
-   <li>{{cssxref("-webkit-animation-iteration-count")}}</li>
-   <li>{{cssxref("-webkit-animation-name")}}</li>
-   <li>{{cssxref("-webkit-animation-play-state")}}</li>
-   <li>{{cssxref("-webkit-animation-timing-function")}}</li>
-   <li>{{cssxref("-webkit-text-size-adjust")}}</li>
-   <li>{{cssxref("-webkit-transform")}}</li>
-   <li>{{cssxref("-webkit-transform-origin")}}</li>
-   <li>{{cssxref("-webkit-transform-style")}}</li>
-   <li>{{cssxref("-webkit-transition")}}</li>
-   <li>{{cssxref("-webkit-transition-delay")}}</li>
-   <li>{{cssxref("-webkit-transition-duration")}}</li>
-   <li>{{cssxref("-webkit-transition-property")}}</li>
-   <li>{{cssxref("-webkit-transition-timing-function")}}</li>
-   <li>{{cssxref("-webkit-border-radius")}}</li>
-   <li>{{cssxref("-webkit-border-top-left-radius")}}</li>
-   <li>{{cssxref("-webkit-border-top-right-radius")}}</li>
-   <li>{{cssxref("-webkit-border-bottom-left-radius")}}</li>
-   <li>{{cssxref("-webkit-border-bottom-right-radius")}}</li>
-   <li>{{cssxref("-webkit-appearance")}}</li>
-   <li>{{cssxref("-webkit-background-clip")}}</li>
-   <li>{{cssxref("-webkit-background-origin")}}</li>
-   <li>{{cssxref("-webkit-background-size")}}</li>
-   <li>{{cssxref("-webkit-border-image")}}</li>
-   <li>{{cssxref("-webkit-box-shadow")}}</li>
-   <li>{{cssxref("-webkit-box-sizing")}}</li>
-   <li>{{cssxref("-webkit-user-select")}}</li>
-  </ul>
- </li>
-</ul>
+### HTML
 
-<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
+ - [`<link rel="prefetch">`](/ja/docs/Web/HTTP/Link_prefetching_FAQ) が、{{htmlattrxref("crossorigin", "link")}} 属性に従うようになりました ({{bug(1214819)}})。
 
-<h4 id="New_APIs" name="New_APIs">新規 API</h4>
+### CSS
 
-<ul>
- <li>{{jsxref("Symbol.toPrimitive")}}、{{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}、{{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} を実装しました ({{bug(1054756)}})。</li>
-</ul>
+- `position: fixed;` が、常に新たな重ね合わせコンテキストを生成するようになりました ({{bug(1179288)}})。
+- {{cssxref('unicode-range')}} の対応を、既定で有効にしました ({{bug(1119062)}})。
+- CSS 書字方向の実験的な実装を更新して、最新の仕様を反映しました。
 
-<h4 id="Changes" name="Changes">変更点</h4>
+  - {{cssxref("text-orientation")}} プロパティの値 `sideways` を実装して、`sideways-right` をこの値の別名にしました ({{bug(1193488)}})。
+  - `sideways-rl` および `sideways-lr` の値を{{cssxref("writing-mode")}} プロパティに実装しました ({{bug(1193488)}} および {{bug(1193519)}})。
 
-<ul>
- <li>グローバルレベルにおける <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> および <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/const">const</a></code> のバインディングを、ES2015 に準拠させました。{{bug(589199)}} およびブログ記事 <a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">"Breaking changes in let and const in Firefox Nightly 44"</a> をご覧ください。また、<code>let</code> がデフォルトで Web JavaScript (strict モードおよび 非 strict モード) で使用できるようになり、バージョンのオプトインが不要になりました ({{bug(932517)}})。</li>
- <li><a href="/ja/docs/Web/JavaScript/Typed_arrays">型付き配列</a> ({{jsxref("Int8Array", "Int8Array")}} や {{jsxref("ArrayBuffer", "ArrayBuffer")}} など) のコンストラクタを {{jsxref("Operators/new", "new")}} 演算子をつけずに関数として呼び出した場合に、ES6 仕様に従って {{jsxref("TypeError")}} が発生するようになりました ({{bug(980945)}}、{{bug(1214936)}})。</li>
- <li>{{jsxref("RegExp")}} のスティッキーフラグが、ES2015 標準の <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#Anchored_sticky_flag">anchored sticky regular expressions</a> に従うようになりました ({{bug(773687)}})。</li>
- <li><a href="/ja/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell">JavaScript シェル</a> (SpiderMonkey の REPL) のデフォルト JS バージョンが、Web 互換の JS バージョンになりました (JS1.7 以降ではありません) ({{bug(1192329)}})。</li>
-</ul>
+- 非標準のプロパティ {{cssxref("-moz-math-display")}} および {{cssxref("-moz-window-shadow")}} は、ウェブコンテンツで使用できなくなりました ({{bug(1207002)}}、{{bug(1211040)}}、{{bug(1212607)}})。
+- {{cssxref("font-style")}} で、`oblique` と `italic` の両方を使用できる場合は、両者を区別するようになりました ({{bug(543715)}})。
+- 未対応であるにもかかわらず {{cssxref("marks")}}、{{cssxref("orphans")}}、{{cssxref("page")}}、{{cssxref("size")}}、{{cssxref("widows")}} の各プロパティがパースされ、{{cssxref("@supports")}} で誤って対応済みであると報告していました。この問題を修正してパースしないように、また対応済みとしないようになりました ({{bug(1215702)}})。
+- 内部で使用する値 `-moz-mac-unified-toolbar` を、{{cssxref("appearance")}} プロパティで使用できる値から外しました ({{bug(1206468)}})。
+- いくつかの `-webkit` 接頭辞付きプロパティおよび値を、ウェブ互換性のために対応しました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です ({{bug(837211)}})。
 
-<h4 id="Removals" name="Removals">廃止</h4>
+  - `-webkit-animation`
+  - `-webkit-animation-delay`
+  - `-webkit-animation-direction`
+  - `-webkit-animation-duration`
+  - `-webkit-animation-fill-mode`
+  - `-webkit-animation-iteration-count`
+  - `-webkit-animation-name`
+  - `-webkit-animation-play-state`
+  - `-webkit-animation-timing-function`
+  - `-webkit-text-size-adjust`
+  - `-webkit-transform`
+  - `-webkit-transform-origin`
+  - `-webkit-transform-style`
+  - `-webkit-transition`
+  - `-webkit-transition-delay`
+  - `-webkit-transition-duration`
+  - `-webkit-transition-property`
+  - `-webkit-transition-timing-function`
+  - `-webkit-border-radius`
+  - `-webkit-border-top-left-radius`
+  - `-webkit-border-top-right-radius`
+  - `-webkit-border-bottom-left-radius`
+  - `-webkit-border-bottom-right-radius`
+  - `-webkit-appearance`
+  - `-webkit-background-clip`
+  - `-webkit-background-origin`
+  - `-webkit-background-size`
+  - `-webkit-border-image`
+  - `-webkit-box-shadow`
+  - `-webkit-box-sizing`
+  - `-webkit-user-select`
+  - `-webkit-linear-gradient()` {{bug("1210575")}}
+  - `-webkit-radial-gradient"()` {{bug("1210575")}}
+  - `-webkit-repeating-linear-gradient()` {{bug("1210575")}}
+  - `-webkit-repeating-radial-gradient()` {{bug("1210575")}}
 
-<ul>
- <li>非標準の <a href="/ja/docs/Web/JavaScript/Reference/Statements/let#let_blocks"><code>let</code> ブロック</a>を廃止しました ({{bug(1167029)}})。</li>
- <li>非標準かつ非推奨である {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} プロパティを削除しました ({{bug(683218)}})。</li>
-</ul>
+### JavaScript
 
-<h3 id="InterfacesAPIsDOM" name="InterfacesAPIsDOM">インターフェイス/API/DOM</h3>
+#### 新規 API
 
-<h4 id="DOM_HTML_DOM" name="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
+- {{jsxref("Symbol.toPrimitive")}}、{{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}、{{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} を実装しました ({{bug(1054756)}})。
 
-<ul>
- <li>既存のサイトとの互換性を確保するため、{{domxref("Document.characterSet")}} のエイリアスとして {{domxref("Document.charset")}} を実装しました ({{bug(647621)}})。</li>
- <li>Web ページから Sherlock プラグインをインストールすることを可能にする <code><a href="/ja/docs/Adding_search_engines_from_web_pages#Installing_Sherlock_plugins">window.sidebar.addSearchEngine()</a></code> メソッドのサポートを廃止して、Web コンソールに警告を出力するようになりました ({{bug(862148)}})。</li>
- <li>望まないポップアップに対抗するため、対話がないページでは {{domxref("Window.onbeforeunload")}} で要求されたプロンプトを表示しないようになりました ({{bug(636905)}})。</li>
- <li>非推奨メソッド {{domxref("MessageEvent.initMessageEvent()")}} を、後方互換性のために再実装しました ({{bug(949376)}})。</li>
- <li>廃止した <code>DocumentType.internalSubset</code> プロパティを削除しました ({{bug(801545)}})。</li>
- <li>既存のサイトとの互換性を確保するため {{domxref("Window.orientation")}} プロパティ、{{domxref("Window.onorientationchange")}} プロパティおよび {{event("orientationchange")}} イベントを実装しました ({{bug(920734)}})。</li>
- <li>明示的にフルスクリーンを要求した {{HTMLElement("iframe")}} は、暗黙的にフルスクリーンが解除されないようになりました ({{bug(1187801)}})。</li>
- <li>イベント {{event("mouseover")}}、{{event("mouseout")}}、{{event("mouseenter")}}、{{event("mouseleave")}}、{{event("pointermove")}}、{{event("pointerover")}}、{{event("pointerout")}}、{{event("pointerenter")}}、{{event("pointerleave")}} が、無効化したフォーム要素で発生するようになりました ({{bug(218093)}})。</li>
- <li>相互運用性を高めるため、{{domxref("Element.webkitMatchesSelector()")}} メソッドを追加しました ({{bug(1216193)}})。</li>
- <li>仕様書に合致させるため、{{domxref("Document.createAttribute()")}} は入力内容を小文字に変換するようになりました ({{bug(1176313)}})。</li>
- <li>{{domxref("Window.open()")}} の非標準機能である <code>dialog</code> は Web コンテンツで使用できなくなりました。拡張機能や chrome 特権を持つコードでは引き続き使用可能です ({{bug(1095236)}})。</li>
-</ul>
+#### 変更点
 
-<h4 id="Canvas" name="Canvas">Canvas</h4>
+- グローバルレベルにおける [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) および [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) のバインディングを、ES2015 に準拠させました。{{bug(589199)}} およびブログ記事 ["Breaking changes in let and const in Firefox Nightly 44"](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/) をご覧ください。また、`let` が既定でウェブ JavaScript （厳格モードおよび非厳格モード）で使用できるようになり、バージョンのオプトインが不要になりました ({{bug(932517)}})。
+- [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) ({{jsxref("Int8Array", "Int8Array")}} や {{jsxref("ArrayBuffer", "ArrayBuffer")}} など) のコンストラクターを {{jsxref("Operators/new", "new")}} 演算子をつけずに関数として呼び出した場合に、ES6 仕様に従って {{jsxref("TypeError")}} が発生するようになりました ({{bug(980945)}}、{{bug(1214936)}})。
+- {{jsxref("RegExp")}} のスティッキーフラグが、ES2015 標準の [anchored sticky regular expressions](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) に従うようになりました ({{bug(773687)}})。
+- JavaScript シェル (SpiderMonkey の REPL) の既定 JS バージョンが、ウェブ互換の JS バージョンになりました (JS1.7 以降ではありません) ({{bug(1192329)}})。
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Workers_API">Web Workers</a> 内で実行するレンダリングコンテキスト (<a href="/ja/docs/Web/API/WebGL_API">WebGL</a> など) を可能にする、{{domxref("OffscreenCanvas")}} API の実験的な実装を追加しました。この実験的な API を使用するには、about:config で <code>gfx.offscreencanvas.enabled</code> を <code>true</code> に設定します ({{bug(709490)}})。この API に含まれるものは以下のとおりです:
+#### 廃止
 
-  <ul>
-   <li>{{domxref("OffscreenCanvas")}} インターフェイス</li>
-   <li>{{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}</li>
-   <li>{{domxref("WebGLRenderingContext.commit()")}}</li>
-   <li>この API を有効にすると、いくつかの WebGL インターフェイスも worker で使用可能になります。</li>
-  </ul>
- </li>
-</ul>
+- 非標準の [`let` ブロック](/ja/docs/Web/JavaScript/Reference/Statements/let#let_blocks)を廃止しました ({{bug(1167029)}})。
+- 非標準かつ非推奨である {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} プロパティを削除しました ({{bug(683218)}})。
 
-<h4 id="WebGL" name="WebGL">WebGL</h4>
+### インターフェイス/API/DOM
 
-<ul>
- <li>Uniform Buffer Objects を実装しました ({{bug(1048747)}})。</li>
-</ul>
+#### DOM & HTML DOM
 
-<h4 id="IndexedDB" name="IndexedDB">IndexedDB</h4>
+- 既存のサイトとの互換性を確保するため、 `Document.charset` を {{domxref("Document.characterSet")}} の別名として実装しました ({{bug(647621)}})。
+- ウェブページから Sherlock プラグインをインストールすることを可能にする [`window.sidebar.addSearchEngine()`](/ja/docs/Web/OpenSearch#installing_sherlock_plugins) メソッドの対応を廃止して、ウェブコンソールに警告を出力するようになりました ({{bug(862148)}})。
+- 望まないポップアップに対抗するため、対話がないページでは {{domxref("Window/beforeunload_event", "beforeunload")}} イベントで要求されたプロンプトを表示しないようになりました ({{bug(636905)}})。
+- 非推奨メソッド {{domxref("MessageEvent.initMessageEvent()")}} を、後方互換性のために再実装しました ({{bug(949376)}})。
+- 廃止した `DocumentType.internalSubset` プロパティを削除しました ({{bug(801545)}})。
+- 既存のサイトとの互換性を確保するため {{domxref("Window.orientation")}} プロパティ、{{domxref("Window.onorientationchange")}} プロパティおよび {{domxref("Window.orientationchange_event", "orientationchange")}} イベントを実装しました ({{bug(920734)}})。
+- 明示的に全画面表示を要求した {{HTMLElement("iframe")}} は、暗黙的に全画面表示が解除されないようになりました ({{bug(1187801)}})。
+- イベント {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}}, {{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} が、無効化したフォーム要素で発生するようになりました ({{bug(218093)}})。
+- 相互運用性を高めるため、{{domxref("Element.webkitMatchesSelector()")}} メソッドを追加しました ({{bug(1216193)}})。
+- 仕様書に合致させるため、{{domxref("Document.createAttribute()")}} は入力内容を小文字に変換するようになりました ({{bug(1176313)}})。
+- {{domxref("Window.open()")}} の非標準機能である `dialog` はウェブコンテンツで使用できなくなりました。拡張機能や chrome 特権を持つコードでは引き続き使用可能です ({{bug(1095236)}})。
 
-<ul>
- <li>{{domxref("IDBIndex.getAll()")}} および {{domxref("IDBIndex.getAllKeys()")}} を、デフォルトで有効にしました ({{bug(1196841)}})。</li>
-</ul>
+#### Canvas
 
-<h4 id="Service_Workers" name="Service_Workers">Service Worker</h4>
+- {{domxref("OffscreenCanvas")}} API の実験的な実装を追加し、レンダリングコンテキスト ([WebGL](/ja/docs/Web/API/WebGL_API) など) が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)内で実行することができるようになりました。この実験的な API を使用するには、about:config で `gfx.offscreencanvas.enabled` を `true` に設定してください ({{bug(709490)}})。この API に含まれるものは以下のとおりです。
 
-<ul>
- <li>{{domxref("ServiceWorkerMessageEvent")}} インターフェイスおよび {{domxref("ExtendableMessageEvent")}} インターフェイスを実装しました ({{bug(1143717)}} および {{bug(1207068)}})。</li>
- <li>{{domxref("Headers")}} オブジェクトでペアイテレータをサポートしました。{{domxref("Headers.entries()")}}、{{domxref("Headers.keys()")}}、{{domxref("Headers.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、デフォルトのイテレータを返すようになりました ({{bug(1108181)}})。</li>
- <li>{{domxref('XMLHttpRequest')}} API を Service Workers で無効にしました ({{bug(931243)}})。</li>
- <li>{{domxref("ExtendableEvent.waitUntil()")}} メソッドにアクセスするため、{{domxref("FetchEvent")}} インターフェイスは {{domxref("ExtendableEvent")}} を拡張するようになりました ({{bug(1214772)}})。</li>
- <li>最近の仕様書の変更に従い、{{domxref("FetchEvent.client")}} を削除しました ({{bug(1218135)}})。</li>
- <li>最新の仕様書に合致させるため、{{domxref("ServiceWorkerContainer.onreloadpage")}} を削除しました ({{bug(1218139)}})。</li>
- <li>仕様書に準拠していないため、イベントハンドラ {{domxref("ServiceWorkerGlobalScope.onbeforeevicted")}} および {{domxref("ServiceWorkerGlobalScope.onevicted")}} を削除しました。将来再導入する可能性がありますが、今回の削除により機能検出が期待どおりに動作するようになります ({{bug(1218142)}})。</li>
- <li>{{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} コンストラクタで、オプションのうち <code>isReload</code> メンバが与えられていない場合のデフォルト値が <code>false</code> になりました ({{bug(1216401)}})。</li>
- <li>{{domxref("Client.frameType")}} プロパティを正しいインターフェイスに実装しました。以前は {{domxref("WindowClient")}} に実装していました ({{bug(1218146)}})。</li>
- <li>ページのオフラインサポートを提供するために <a href="/ja/docs/Web/HTML/Using_the_application_cache">AppCache</a> を使用している場合は、代わりに <a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> を使用するようアドバイスする警告メッセージをコンソールに表示するようになりました ({{bug("1204581")}})。</li>
- <li>Gecko で、Service workers をデフォルトで有効にしました。</li>
-</ul>
+  - {{domxref("OffscreenCanvas")}} インターフェイス
+  - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
+  - {{domxref("WebGLRenderingContext.commit()")}}
+  - この API を有効にすると、いくつかの WebGL インターフェイスもワーカーで使用可能になりました。
 
-<h4 id="WebRTC" name="WebRTC">WebRTC</h4>
+#### WebGL
 
-<ul>
- <li>WebRTC インターフェイスの<em>接頭辞を削除しましたunprefixed</em> ({{bug(1155923)}})。特に、以下のとおり変更します:
+- Uniform Buffer Objects を実装しました ({{bug(1048747)}})。
 
-  <ul>
-   <li><code>mozRTCPeerConnection</code> が {{domxref("RTCPeerConnection")}} になります。</li>
-   <li><code>mozRTCIceCandidate</code> が {{domxref("RTCIceCandidate")}}になります。</li>
-   <li><code>mozRTCSessionDescription</code> が {{domxref("RTCSessionDescription")}} になります。</li>
-  </ul>
- </li>
- <li>{{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}、{{domxref("RTCDataChannel.onbufferedamountlow")}} プロパティおよび {{event("bufferedamountlow")}} イベントを実装しました ({{bug(1178091)}})。</li>
- <li>{{domxref("RTCPeerConnection.canTrickleIceCandidates")}} 属性を追加して、非標準メソッド {{domxref("RTCPeerConnection.updateIce()")}} を削除しました ({{bug(1209744)}})。</li>
- <li>{{domxref("MediaStream")}} インターフェイスで {{domxref("MediaStream.addTrack()")}} および {{domxref("MediaStream.removeTrack()")}} メソッドをサポートしました ({{bug(1103188)}})。</li>
- <li>{{domxref("MediaStream.MediaStream", "MediaStream()")}} コンストラクタを実装しました ({{bug(1070216)}})。</li>
- <li>{{domxref("RTCOfferOptions")}} の、非標準である制約的なオプションリストのサポートを廃止しました。</li>
-</ul>
+#### IndexedDB
 
-<h4 id="New_APIs_2" name="New_APIs_2">新規 API</h4>
+- {{domxref("IDBIndex.getAll()")}} および {{domxref("IDBIndex.getAllKeys()")}} を、既定で有効にしました ({{bug(1196841)}})。
 
-<ul>
- <li>Workers での Canvas API を実験的に実装しました: {{domxref("OfflineCanvas")}} および {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} を使用できます。設定項目 <code>gfx.offscreencanvas.enabled</code> で制御しており、現在はデフォルトで無効化しています ({{bug(709490)}})。</li>
- <li>Web Speech API の一部である Text2Speech API で、OS X のバックエンドに対応しました。ただし、デフォルトで無効化しています ({{bug(1003452)}})。</li>
-</ul>
+#### サービスワーカー
 
-<h4 id="Miscellaneous" name="Miscellaneous">その他</h4>
+- `ServiceWorkerMessageEvent` および {{domxref("ExtendableMessageEvent")}} インターフェイスを実装しました ({{bug(1143717)}} および {{bug(1207068)}})。
+- {{domxref("Headers")}} オブジェクトがペア反復子に対応しました。すなわち、 {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, {{domxref("Headers.values()")}} の各メソッドが利用できるようになりました。 {{jsxref("Symbol.iterator")}} も既定の反復子を返すようになりました ({{bug(1108181)}})。
+- {{domxref('XMLHttpRequest')}} API がサービスワーカーで無効化されました ({{bug(931243)}})。
+- {{domxref("FetchEvent")}} インターフェイスが {{domxref("ExtendableEvent")}} を継承するようになり、 {{domxref("ExtendableEvent.waitUntil()")}} メソッドにアクセスできるようになりました ({{bug(1214772)}})。
+- 仕様書の最新の変更に従い、 `FetchEvent.client` が削除されました ({{bug(1218135)}})。
+- 最新の仕様書に一致するように、 {{domxref("ServiceWorkerContainer.onreloadpage")}} が削除されました。 ({{bug(1218139)}}).
+- {{domxref("ServiceWorkerGlobalScope.beforeevicted_event", "onbeforeevicted")}} および {{domxref("ServiceWorkerGlobalScope.evicted_event", "onevicted")}} イベントハンドラーは、仕様書に準拠していなかったので削除されました。将来的に再導入される予定ですが、削除することで期待通りの機能検出が可能になります ({{bug(1218142)}})。
+- {{domxref("FetchEvent.FetchEvent", "FetchEvent()")}} コンストラクターで、 `isReload` が options 辞書に存在しなかった場合の既定値が `false` になりました ({{bug(1216401)}})。
+- {{domxref("Client.frameType")}} プロパティが正しいインターフェイスに実装されました。以前は {{domxref("WindowClient")}} にありました ({{bug(1218146)}})。
+- AppCache がページをオフラインに対応させるために使用された場合、コンソールに警告メッセージを表示し、開発者に[サービスワーカー](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)を使用するよう助言するようになりました ({{bug("1204581")}})。
+- Gecko で、サービスワーカーが既定で有効化されました。
 
-<ul>
- <li>{{domxref("URLSearchParams")}} オブジェクトでペアイテレータをサポートしました。{{domxref("URLSearchParams.entries()")}}、{{domxref("URLSearchParams.keys()")}}、{{domxref("URLSearchParams.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、デフォルトのイテレータを返すようになりました ({{bug(1085284)}})。</li>
- <li>{{domxref("FormData")}} オブジェクトでペアイテレータをサポートしました。{{domxref("FormData.entries()")}}、{{domxref("FormData.keys()")}}、{{domxref("FormData.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、デフォルトのイテレータを返すようになりました ({{bug(1127703)}})。</li>
- <li>{{domxref("XMLHttpRequest.send()")}} を HTML ドキュメントで使用したとき、<code>application/xml</code> に代わり <code>text/html</code> を使用するようになりました ({{bug(918771)}})。</li>
- <li>音声合成 (text-to-speech) を Mac および Linux 向けのデスクトップ版 Firefox に実装しました。ただし、<code>about:config</code> の <code>media.webspeech.synth.enabled</code> フラグで無効化しています ({{bug("1003452")}}、{{bug("1003464")}})。詳しくは <a href="/ja/docs/Web/API/Web_Speech_API">Web Speech API</a> をご覧ください。</li>
- <li>{{HTMLElement("frame")}} または {{HTMLElement('object')}} の内部にある要素は、フルスクリーン表示できないようになりました ({{bug(1212299)}})。</li>
- <li>WOFF フォントのサニタイズ処理を、少々強化しました。誤りがあるフォントをより多く拒否するようになりましたが、Firefox 46 でやや緩和しました ({{bug(1193050)}} および {{bug (1244693)}})。</li>
-</ul>
+#### WebRTC
 
-<h3 id="MathML" name="MathML">MathML</h3>
+- WebRTC インターフェイスの*接頭辞が外されました* ({{bug(1155923)}})。具体的には、
 
-<p><em>変更なし。</em></p>
+  - `mozRTCPeerConnection` が {{domxref("RTCPeerConnection")}} になりました。
+  - `mozRTCIceCandidate` が {{domxref("RTCIceCandidate")}} になりました。
+  - `mozRTCSessionDescription` が {{domxref("RTCSessionDescription")}} になりました。
 
-<h3 id="SVG" name="SVG">SVG</h3>
+- {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}、{{domxref("RTCDataChannel.onbufferedamountlow")}} プロパティおよび {{event("bufferedamountlow")}} イベントを実装しました ({{bug(1178091)}})。
+- {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} 属性を追加して、非標準メソッド {{domxref("RTCPeerConnection.updateIce()")}} を削除しました ({{bug(1209744)}})。
+- {{domxref("MediaStream")}} インターフェイスで {{domxref("MediaStream.addTrack()")}} および {{domxref("MediaStream.removeTrack()")}} メソッドに対応しました ({{bug(1103188)}})。
+- {{domxref("MediaStream.MediaStream", "MediaStream()")}} コンストラクタを実装しました ({{bug(1070216)}})。
+- {{domxref("RTCOfferOptions")}} の、非標準である制約的なオプションリストの対応を廃止しました。
 
-<p><em>変更なし。</em></p>
+#### 新規 API
 
-<h3 id="AudioVideo" name="AudioVideo">Audio/Video</h3>
+- Workers での Canvas API を実験的に実装しました。 {{domxref("OfflineCanvas")}} および {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} が使用できます。設定項目 `gfx.offscreencanvas.enabled` で制御しており、現在は既定で無効化しています ({{bug(709490)}})。
+- Web Speech API の一部である Text2Speech API で、OS X のバックエンドに対応しました。ただし、既定で無効化しています ({{bug(1003452)}})。
 
-<p><em>変更なし。</em></p>
+#### その他
 
-<h2 id="HTTP" name="HTTP">HTTP</h2>
+- {{domxref("URLSearchParams")}} オブジェクトでペア反復子に対応しました。{{domxref("URLSearchParams.entries()")}}、{{domxref("URLSearchParams.keys()")}}、{{domxref("URLSearchParams.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、既定の反復子を返すようになりました ({{bug(1085284)}})。
+- {{domxref("FormData")}} オブジェクトでペア反復子に対応しました。{{domxref("FormData.entries()")}}、{{domxref("FormData.keys")}}、{{domxref("FormData.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、既定の反復子を返すようになりました ({{bug(1127703)}})。
+- {{domxref("XMLHttpRequest.send()")}} を HTML 文書で使用したとき、`application/xml` に代わり `text/html` を使用するようになりました ({{bug(918771)}})。
+- 音声合成 (text-to-speech) を Mac および Linux 向けのデスクトップ版 Firefox に実装しました。ただし、`about:config` の `media.webspeech.synth.enabled` フラグで無効化しています ({{bug("1003452")}}、{{bug("1003464")}})。詳しくは [Web Speech API](/ja/docs/Web/API/Web_Speech_API) をご覧ください。
+- {{HTMLElement("frame")}} または {{HTMLElement('object')}} の内部にある要素は、全画面表示できないようになりました ({{bug(1212299)}})。
+- WOFF フォントのサニタイズ処理を、少々強化しました。誤りがあるフォントをより多く拒否するようになりましたが、 Firefox 46 でやや緩和しました ({{bug(1193050)}} および {{bug (1244693)}})。
 
-<ul>
- <li><a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a> アルゴリズムをサポートしました。また、<code><a href="/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Encoding_header">Accept-Encoding</a></code> および <code><a href="/ja/docs/Web/HTTP/Headers/Content-Encoding">Content-Encoding</a></code> ヘッダで値 <code>br</code> をサポートしました ({{bug(366559)}} および {{bug(1211916)}})。</li>
- <li>改行 (<code>'/n'</code>) を含む HTTP/2 ヘッダについて、HTTP/1 とは異なり仕様書で許可されていないため、誤ってサポートしていた箇所を削除しました ({{bug(1197847)}})。</li>
-</ul>
+### MathML
 
-<h2 id="Networking" name="Networking">ネットワーク</h2>
+_変更なし。_
 
-<p><em>変更なし。</em></p>
+### SVG
 
-<h2 id="Security" name="Security">セキュリティ</h2>
+_変更なし。_
 
-<ul>
- <li>Beta および Release 版のブラウザでも、RC4 がデフォルトで無効になりました ({{bug(1201025)}})。また、ホワイトリストがデフォルトで空になりました ({{bug(1215796)}})。</li>
-</ul>
+### Audio/Video
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers" name="Changes_for_add-on_and_Mozilla_developers">アドオン開発者と Mozilla 開発者向けの変更点</h2>
+_変更なし。_
 
-<h3 id="Interfaces" name="Interfaces">インターフェイス</h3>
+## HTTP
 
-<p><em>変更なし。</em></p>
+- [Brotli](https://en.wikipedia.org/wiki/Brotli) アルゴリズムに対応しました。また、 [`Accept-Encoding`](/ja/docs/Web/HTTP/Content_negotiation#the_accept-encoding_header) および [`Content-Encoding`](/ja/docs/Web/HTTP/Headers/Content-Encoding) ヘッダーで値 `br` に対応しました ({{bug(366559)}} および {{bug(1211916)}})。
+- 改行 (`'/n'`) を含む HTTP/2 ヘッダーについて、HTTP/1 とは異なり仕様書で許可されていないため、誤って対応していた箇所を削除しました ({{bug(1197847)}})。
 
-<h3 id="XUL" name="XUL">XUL</h3>
+## ネットワーク
 
-<p><em>変更なし。</em></p>
+_変更なし。_
 
-<h3 id="JavaScript_code_modules" name="JavaScript_code_modules">JavaScript コードモジュール</h3>
+## セキュリティ
 
-<ul>
- <li>Sqlite.jsm で <code>LIKE</code> をサポートしました ({{bug(1188760)}})。</li>
- <li><a href="/ja/docs/Mozilla/Firefox_for_Android" title="Mozilla/Firefox_for_Android">Android 版 Firefox</a> に <a href="/ja/docs/Mozilla/Add-ons/Firefox_for_Android/API/Snackbars.jsm">Snackbars.jsm</a> モジュールを追加しました ({{bug(1215026)}})。</li>
-</ul>
+- Beta および Release 版のブラウザーでも、RC4 が既定で無効になりました ({{bug(1201025)}})。また、ホワイトリストが既定で空になりました ({{bug(1215796)}})。
 
-<h3 id="XPCOM" name="XPCOM">XPCOM</h3>
+## アドオン開発者と Mozilla 開発者向けの変更点
 
-<ul>
- <li><code>nsIDOMWindow</code> インターフェイスが空になりました。存在していたアイテムは使用されない、他のインターフェイスに移転、あるいは C++ に限り使用するものになりました。C++ コードから利用できるアイテムは、<code>{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}</code> インターフェイスに存在しています ({{bug(1216401)}})。</li>
-</ul>
+### インターフェイス
 
-<h3 id="Other_2" name="Other_2">その他</h3>
+_変更なし。_
 
-<ul>
- <li>Firefox 44 での破壊的な変更 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1202902">bug 1202902</a>) により、<a href="/ja/docs/Mozilla/Add-ons/SDK/Tools/cfx">cfx</a> でパックしたアドオンが動作しなくなります。再びアドオンが互換性を持つようにするために、<a href="/ja/docs/Mozilla/Add-ons/SDK/Tools/jpm">jpm</a> を使用してください。<em>cfx</em> から <em>jpm</em> に移行する手順は<a href="/ja/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm">こちらに記載しています</a>。</li>
-</ul>
+### XUL
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+_変更なし。_
 
-<ul>
- <li><a href="https://www.mozilla.jp/firefox/44.0/releasenotes/">Firefox 44.0 リリースノート</a></li>
- <li><a href="https://dev.mozilla.jp/2015/12/firefox-44-addon-compatibility/">Firefox 44 アドオン互換性情報</a></li>
-</ul>
+### JavaScript コードモジュール
 
-<h2 id="Older_versions" name="Older_versions">過去のバージョン</h2>
+- Sqlite.jsm で `LIKE` に対応しました ({{bug(1188760)}})。
+- [Snackbars.jsm](/ja/docs/Mozilla/Add-ons/Firefox_for_Android/API/Snackbars.jsm) モジュールを [Android 版 Firefox](/ja/docs/Mozilla/Firefox_for_Android) に追加しました ({{bug(1215026)}})。
 
-<p>{{Firefox_for_developers('43')}}</p>
+### XPCOM
+
+- `nsIDOMWindow` インターフェイスが空になりました。存在していたアイテムは使用されない、他のインターフェイスに移転、あるいは C++ に限り使用するものになりました。C++ コードから利用できるアイテムは、`{{source("dom/base/nsPIDOMWindow.h", "nsPIDOMWindow")}}` インターフェイスに存在しています ({{bug(1216401)}})。
+
+### その他
+
+- Firefox 44 での大幅な変更 ([bug 1202902](https://bugzilla.mozilla.org/show_bug.cgi?id=1202902)) により、[cfx](/ja/docs/Mozilla/Add-ons/SDK/Tools/cfx) でパックしたアドオンが動作しなくなります。再びアドオンが互換性を持つようにするために、[jpm](/ja/docs/Mozilla/Add-ons/SDK/Tools/jpm) を使用してください。 _cfx_ から _jpm_ に移行する手順は[こちらに記載しています](/ja/docs/Mozilla/Add-ons/SDK/Tools/cfx_to_jpm)。
+
+## 過去のバージョン
+
+{{Firefox_for_developers(43)}}
