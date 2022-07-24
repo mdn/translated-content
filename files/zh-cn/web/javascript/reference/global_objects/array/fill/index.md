@@ -9,46 +9,47 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
-<div>{{JSRef}} </div>
+{{JSRef}}
 
-<p><code><strong>fill()</strong></code> 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引。</p>
+**`fill()`** 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引。
 
-<p>{{EmbedInteractiveExample("pages/js/array-fill.html")}}</p>
+{{EmbedInteractiveExample("pages/js/array-fill.html")}}
 
-<h2 id="Syntax">语法</h2>
+## 语法
 
-<pre><var>arr</var>.fill(<var>value[</var>, <var>start[<var>, <var>end]]</var>)</var></var></pre>
+```js
+arr.fill(value[, start[, end]])
+```
 
-<h3 id="Parameters">参数</h3>
+### 参数
 
-<dl>
- <dt><code>value</code></dt>
- <dd>用来填充数组元素的值。</dd>
- <dt><code>start</code> {{optional_inline}}</dt>
- <dd>起始索引，默认值为 0。</dd>
- <dt><code>end</code> {{optional_inline}}</dt>
- <dd>终止索引，默认值为 <code>this.length</code>。</dd>
-</dl>
+- `value`
+  - : 用来填充数组元素的值。
+- `start` {{optional_inline}}
+  - : 起始索引，默认值为 0。
+- `end` {{optional_inline}}
+  - : 终止索引，默认值为 `this.length`。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>修改后的数组。</p>
+修改后的数组。
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p><strong><code>fill</code></strong> 方法接受三个参数 <code>value</code>, <code>start</code> 以及 <code>end</code>. <code>start</code> 和 <code>end</code> 参数是可选的，其默认值分别为 <code>0</code> 和 <code>this</code> 对象的 <code>length </code>属性值。</p>
+**`fill`** 方法接受三个参数 `value`、`start` 以及 `end`、`start` 和 `end` 参数是可选的，其默认值分别为 `0` 和 `this` 对象的 `length` 属性值。
 
-<p>如果 <code>start</code> 是个负数，则开始索引会被自动计算成为 <code>length+start</code>, 其中 <code>length</code> 是 <code>this</code> 对象的 <code>length </code>属性值。如果 <code>end</code> 是个负数，则结束索引会被自动计算成为 <code>length+end</code>。</p>
+如果 `start` 是个负数，则开始索引会被自动计算成为 `length + start`，其中 `length` 是 `this` 对象的 `length` 属性值。如果 `end` 是个负数，则结束索引会被自动计算成为 `length + end`。
 
-<p><code><strong>fill</strong></code> 方法故意被设计成通用方法，该方法不要求 <code>this</code> 是数组对象。</p>
+**`fill`** 方法故意被设计成通用方法，该方法不要求 `this` 是数组对象。
 
-<p><code><strong>fill</strong></code> 方法是个可变方法，它会改变调用它的 <code>this</code> 对象本身，然后返回它，而并不是返回一个副本。</p>
+**`fill`** 方法是个可变方法，它会改变调用它的 `this` 对象本身，然后返回它，而并不是返回一个副本。
 
-<p>当一个对象被传递给 <strong><code>fill</code></strong>方法的时候，填充数组的是这个对象的引用。</p>
+当一个对象被传递给 **`fill`** 方法的时候，填充数组的是这个对象的引用。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">[1, 2, 3].fill(4);               // [4, 4, 4]
+```js
+[1, 2, 3].fill(4);               // [4, 4, 4]
 [1, 2, 3].fill(4, 1);            // [1, 4, 4]
 [1, 2, 3].fill(4, 1, 2);         // [1, 4, 3]
 [1, 2, 3].fill(4, 1, 1);         // [1, 2, 3]
@@ -63,11 +64,13 @@ Array(3).fill(4);                // [4, 4, 4]
 var arr = Array(3).fill({}) // [{}, {}, {}];
 // 需要注意如果 fill 的参数为引用类型，会导致都执行同一个引用类型
 // 如 arr[0] === arr[1] 为 true
-arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</pre>
+arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## Polyfill
 
-<pre class="brush: js">if (!Array.prototype.fill) {
+```js
+if (!Array.prototype.fill) {
   Object.defineProperty(Array.prototype, 'fill', {
     value: function(value) {
 
@@ -111,21 +114,19 @@ arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</pre>
     }
   });
 }
-</pre>
+```
 
-<p>如果你确实需要维护已过时的不支持 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code> 的 JavaScript 引擎，那么最好完全不向 <code>Array.prototype</code> 添加方法，因为你不能使它不可枚举。</p>
+如果你确实需要维护已过时的不支持 [`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，那么最好完全不向 `Array.prototype` 添加方法，因为你不能使它不可枚举。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">相关</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("TypedArray.prototype.fill()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.fill()")}}
