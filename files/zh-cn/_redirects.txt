@@ -1486,7 +1486,10 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/conflicting/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/conflicting/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup	/zh-CN/docs/conflicting/Web/API/Element/keyup_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onloadeddata	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/loadeddata_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onloadedmetadata	/zh-CN/docs/Web/API/HTMLMediaElement/loadedmetadata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onloadend	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/loadend_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onloadstart	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/loadstart_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/zh-CN/docs/Web/API/Element/lostpointercapture_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmousedown	/zh-CN/docs/conflicting/Web/API/Element/mousedown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseenter	/zh-CN/docs/conflicting/Web/API/Element/mouseenter_event
