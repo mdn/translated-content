@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 browser-compat: api.setInterval
 page-type: web-api-global-function
 l10n:
-  sourceCommit: a7a18a2913f5abc5b4342fa01d1dae00cdd7c629
+  sourceCommit: 0717d1c0a7528b2dd44d065fe90d860e3bdc2e6a
 ---
 {{APIRef("HTML DOM")}} 
 
@@ -46,6 +46,8 @@ Puede ser útil tener en cuenta que `setInterval()` y {{domxref("setTimeout()")}
 > **Nota:** El argumento `delay` se convierte en un número entero de 32 bits con signo. Efectivamente, esto limita `delay` a 2.147,483,647 milisegundos, ya que es especificado en el IDL como un número entero con signo.
 
 ## Ejemplos
+
+### Ejemplo 1: Sintaxis básica
 
 El siguiente ejemplo muestra la sintaxis básica de `setInterval()`
 
@@ -188,7 +190,7 @@ En estos casos, es preferible un patrón recursivo `setTimeout` :
 
         loop();
     }, delay);
-    })();
+})();
 ```
 
 En el fragmento de código que hay sobre estas líneas, se declara una función con nombre `loop()` y se ejecuta inmediatamente. `loop` es llamada recursivamente dentro de `setTimeout` después de que la lógica haya sido completamente ejecutada. Aunque este patrón no garantiza la ejecución en un intervalo fijo, si garantiza que el intervalo anterior se haya ejecutado por completo antes de recursar.
