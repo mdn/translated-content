@@ -8,224 +8,215 @@ tags:
   - 指南
 translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</div>
-
-<div>
-<p>矢量图形在很多情况下非常有用 — 它们拥有较小的文件尺寸，却高度可缩放，所以它们不会在镜头拉近或者放大图像时像素化。在这篇文章中，我们将为您呈现如何在网页中添加矢量图形。</p>
-</div>
+矢量图形在很多情况下非常有用 — 它们拥有较小的文件尺寸，却高度可缩放，所以它们不会在镜头拉近或者放大图像时像素化。在这篇文章中，我们将为您呈现如何在网页中添加矢量图形。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提：</th>
-   <td>你需要了解 <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 的基本知识</a> 并且知道如何 <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">在你的文档中插入图片</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">目标：</th>
-   <td>了解如何嵌入 SVG (矢量) 图形到网页中。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">前提：</th>
+      <td>
+        你需要了解
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 的基本知识</a
+        >
+        并且知道如何
+        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+          >在你的文档中插入图片</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目标：</th>
+      <td>了解如何嵌入 SVG (矢量) 图形到网页中。</td>
+    </tr>
+  </tbody>
 </table>
 
-<div class="note">
-<p><strong>备注：</strong> 本文的目的并不是教你 SVG；仅仅是告诉你它是什么，以及如何在网页中添加它。</p>
-</div>
+> **备注：** 本文的目的并不是教你 SVG；仅仅是告诉你它是什么，以及如何在网页中添加它。
 
-<h2 id="什么是矢量图形？">什么是矢量图形？</h2>
+## 什么是矢量图形？
 
-<p>在网上，你会和两种类型的图片打交道 — 位图和矢量图：</p>
+在网上，你会和两种类型的图片打交道 — 位图和矢量图：
 
-<ul>
- <li>位图使用像素网格来定义 — 一个位图文件精确得包含了每个像素的位置和它的色彩信息。流行的位图格式包括 Bitmap (<code>.bmp</code>), PNG (<code>.png</code>), JPEG (<code>.jpg</code>), and GIF (<code>.gif</code>.)</li>
- <li>矢量图使用算法来定义 — 一个矢量图文件包含了图形和路径的定义，电脑可以根据这些定义计算出当它们在屏幕上渲染时应该呈现的样子。 {{glossary("SVG")}} 格式可以让我们创造用于 Web 的精彩的矢量图形。</li>
-</ul>
+- 位图使用像素网格来定义 — 一个位图文件精确得包含了每个像素的位置和它的色彩信息。流行的位图格式包括 Bitmap (`.bmp`), PNG (`.png`), JPEG (`.jpg`), and GIF (`.gif`.)
+- 矢量图使用算法来定义 — 一个矢量图文件包含了图形和路径的定义，电脑可以根据这些定义计算出当它们在屏幕上渲染时应该呈现的样子。 {{glossary("SVG")}} 格式可以让我们创造用于 Web 的精彩的矢量图形。
 
-<p>为了让你清楚的认识到两者的区别，我们来一个例子。你可以在我们的 Github 仓库中在线查看这个例子：<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> — 它并排展示了两个看起来一致的图像，一个红色的五角星以及黑色的阴影。不同的是，左边的是 PNG，而右边的是 SVG 图像。</p>
+为了让你清楚的认识到两者的区别，我们来一个例子。你可以在我们的 Github 仓库中在线查看这个例子：[vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — 它并排展示了两个看起来一致的图像，一个红色的五角星以及黑色的阴影。不同的是，左边的是 PNG，而右边的是 SVG 图像。
 
-<p>当你放大网页的时候，区别就会变得明显起来 — 随着你的放大，PNG 图片变得像素化了，因为它存储是每个像素的颜色和位置信息 — 当它被放大时，每个像素就被放大以填满屏幕上更多的像素，所以图像就会开始变得马赛克感觉。矢量图像看起来仍然效果很好且清晰，因为无论它的尺寸如何，都使用算法来计算出图像的形状，仅仅是根据放大的倍数来调整算法中的值。</p>
+当你放大网页的时候，区别就会变得明显起来 — 随着你的放大，PNG 图片变得像素化了，因为它存储是每个像素的颜色和位置信息 — 当它被放大时，每个像素就被放大以填满屏幕上更多的像素，所以图像就会开始变得马赛克感觉。矢量图像看起来仍然效果很好且清晰，因为无论它的尺寸如何，都使用算法来计算出图像的形状，仅仅是根据放大的倍数来调整算法中的值。
 
-<p><img alt="Two star images, one raster and one vector. At their default size they look identical" src="raster-vector-default-size.png"></p>
+![Two star images, one raster and one vector. At their default size they look identical](raster-vector-default-size.png)
 
-<p><img alt="Two star images zoomed in. The raster one on the left starts to look pixellated, whereas the vector one still looks crisp." src="raster-vector-zoomed.png"></p>
+![Two star images zoomed in. The raster one on the left starts to look pixellated, whereas the vector one still looks crisp.](raster-vector-zoomed.png)
 
-<div class="note">
-<p><strong>备注：</strong> 上面的图片实际上都是 PNG 图片 —— 每个例子中左边的图片代表光栅图片，右边的星星代表矢量图。还有，访问 <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> 示例来查看真正的例子！</p>
-</div>
+> **备注：** 上面的图片实际上都是 PNG 图片 —— 每个例子中左边的图片代表光栅图片，右边的星星代表矢量图。还有，访问 [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) 示例来查看真正的例子！
 
-<p>此外，矢量图形相较于同样的位图，通常拥有更小的体积，因为它们仅需储存少量的算法，而不是逐个储存每个像素的信息。</p>
+此外，矢量图形相较于同样的位图，通常拥有更小的体积，因为它们仅需储存少量的算法，而不是逐个储存每个像素的信息。
 
-<h2 id="SVG是什么？">SVG 是什么？</h2>
+## SVG 是什么？
 
-<p><a href="/zh-CN/docs/Web/SVG">SVG</a> 是用于描述矢量图像的{{glossary("XML")}}语言。它基本上是像 HTML 一样的标记，只是你有许多不同的元素来定义要显示在图像中的形状，以及要应用于这些形状的效果。SVG 用于标记图形，而不是内容。非常简单，你有一些元素来创建简单图形，如{{svgelement("circle")}} 和{{svgelement("rect")}}。更高级的 SVG 功能包括 {{svgelement("feColorMatrix")}}（使用变换矩阵转换颜色）{{svgelement("animate")}} （矢量图形的动画部分）和 {{svgelement("mask")}}（在图像顶部应用模板）</p>
+[SVG](/zh-CN/docs/Web/SVG) 是用于描述矢量图像的{{glossary("XML")}}语言。它基本上是像 HTML 一样的标记，只是你有许多不同的元素来定义要显示在图像中的形状，以及要应用于这些形状的效果。SVG 用于标记图形，而不是内容。非常简单，你有一些元素来创建简单图形，如{{svgelement("circle")}} 和{{svgelement("rect")}}。更高级的 SVG 功能包括 {{svgelement("feColorMatrix")}}（使用变换矩阵转换颜色）{{svgelement("animate")}} （矢量图形的动画部分）和 {{svgelement("mask")}}（在图像顶部应用模板）
 
-<p>作为一个简单的例子，以下代码创建一个圆和一个矩形：</p>
+作为一个简单的例子，以下代码创建一个圆和一个矩形：
 
-<pre class="brush: html notranslate">&lt;svg version="1.1"
+```html
+<svg version="1.1"
      baseProfile="full"
      width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;rect width="100%" height="100%" fill="black" /&gt;
-  &lt;circle cx="150" cy="100" r="90" fill="blue" /&gt;
-&lt;/svg&gt;</pre>
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="black" />
+  <circle cx="150" cy="100" r="90" fill="blue" />
+</svg>
+```
 
-<p>这将创建以下输出：</p>
+这将创建以下输出：
 
-<p>{{ EmbedLiveSample('What_is_SVG', 300, 200, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('What_is_SVG', 300, 200, "", "", "hide-codepen-jsfiddle") }}
 
-<p>从上面的例子可以看出，SVG 很容易手工编码。是的，您可以在文本编辑器中手动编写简单的 SVG，但是对于复杂的图像，这很快就开始变得非常困难。为了创建 SVG 图像，大多数人使用矢量图形编辑器，如 <a href="https://inkscape.org/en/">Inkscape</a> 或 <a href="https://en.wikipedia.org/wiki/Adobe_Illustrator">Illustrator</a>。这些软件包允许您使用各种图形工具创建各种插图，并创建照片的近似值（例如 Inkscape 的跟踪位图功能）。</p>
+从上面的例子可以看出，SVG 很容易手工编码。是的，您可以在文本编辑器中手动编写简单的 SVG，但是对于复杂的图像，这很快就开始变得非常困难。为了创建 SVG 图像，大多数人使用矢量图形编辑器，如 [Inkscape](https://inkscape.org/en/) 或 [Illustrator](https://en.wikipedia.org/wiki/Adobe_Illustrator)。这些软件包允许您使用各种图形工具创建各种插图，并创建照片的近似值（例如 Inkscape 的跟踪位图功能）。
 
-<p>SVG 除了迄今为止所描述的以外还有其他优点：</p>
+SVG 除了迄今为止所描述的以外还有其他优点：
 
-<ul>
- <li>矢量图像中的文本仍然可访问（这也有利于 {{glossary("SEO")}}）。</li>
- <li>SVG 可以很好地适应样式/脚本，因为图像的每个组件都是可以通过CSS或通过JavaScript编写的样式的元素。</li>
-</ul>
+- 矢量图像中的文本仍然可访问（这也有利于 {{glossary("SEO")}}）。
+- SVG 可以很好地适应样式/脚本，因为图像的每个组件都是可以通过 CSS 或通过 JavaScript 编写的样式的元素。
 
-<p>那么为什么会有人想使用光栅图形而不是 SVG？其实 SVG 确实有一些缺点：</p>
+那么为什么会有人想使用光栅图形而不是 SVG？其实 SVG 确实有一些缺点：
 
-<ul>
- <li>SVG 非常容易变得复杂，这意味着文件大小会增加; 复杂的 SVG 也会在浏览器中占用很长的处理时间。</li>
- <li>SVG 可能比栅格图像更难创建，具体取决于您尝试创建哪种图像。</li>
- <li>旧版浏览器不支持 SVG，因此如果您需要在网站上支持旧版本的 IE，则可能不适合（SVG 从 IE9 开始得到支持）。</li>
-</ul>
+- SVG 非常容易变得复杂，这意味着文件大小会增加; 复杂的 SVG 也会在浏览器中占用很长的处理时间。
+- SVG 可能比栅格图像更难创建，具体取决于您尝试创建哪种图像。
+- 旧版浏览器不支持 SVG，因此如果您需要在网站上支持旧版本的 IE，则可能不适合（SVG 从 IE9 开始得到支持）。
 
-<p>由于上述原因，光栅图形更适合照片那样复杂精密的图像。</p>
+由于上述原因，光栅图形更适合照片那样复杂精密的图像。
 
-<div class="note">
-<p><strong>备注：</strong> 在 Inkscape 中，将文件保存为纯 SVG 以节省空间。另请参阅<a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">如何为 Web 准备 SVG</a>。</p>
-</div>
+> **备注：** 在 Inkscape 中，将文件保存为纯 SVG 以节省空间。另请参阅[如何为 Web 准备 SVG](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)。
 
-<h2 id="将SVG添加到页面">将 SVG 添加到页面</h2>
+## 将 SVG 添加到页面
 
-<p>在本节中，我们将介绍将 SVG 矢量图形添加到网页的不同方式。</p>
+在本节中，我们将介绍将 SVG 矢量图形添加到网页的不同方式。
 
-<h3 id="快捷方式：htmlelementimg">快捷方式：{{htmlelement("img")}}</h3>
+### 快捷方式：{{htmlelement("img")}}
 
-<p>要通过 {{htmlelement("img")}}元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将需要一个<code>height</code>或<code>width</code>属性（或者如果您的 SVG 没有固有的宽高比）。如果您还没使用过&lt;img&gt;元素，请阅读<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">HTML 中的图片</a>教程 。</p>
+要通过 {{htmlelement("img")}}元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将需要一个`height`或`width`属性（或者如果您的 SVG 没有固有的宽高比）。如果您还没使用过\<img>元素，请阅读[HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程 。
 
-<pre class="brush: html notranslate">&lt;img
+```html
+<img
     src="equilateral.svg"
     alt="triangle with all three sides equal"
     height="87px"
-    width="100px" /&gt;
-</pre>
+    width="100px" />
+```
 
-<h4 id="优点">优点</h4>
+#### 优点
 
-<ul>
- <li>快速，熟悉的图像语法与<code>alt</code>属性中提供的内置文本等效。</li>
- <li>可以通过在{{htmlelement("a")}}元素嵌套<code>&lt;img&gt;</code>，使图像轻松地成为超链接。</li>
-</ul>
+- 快速，熟悉的图像语法与`alt`属性中提供的内置文本等效。
+- 可以通过在{{htmlelement("a")}}元素嵌套`<img>`，使图像轻松地成为超链接。
 
-<h4 id="缺点">缺点</h4>
+#### 缺点
 
-<ul>
- <li>无法使用 JavaScript 操作图像。</li>
- <li>如果要使用 CSS 控制 SVG 内容，则必须在 SVG 代码中包含内联 CSS 样式。 （从 SVG 文件调用的外部样式表不起作用）</li>
- <li>不能用 CSS 伪类来重设图像样式（如<code>:focus</code>）。</li>
-</ul>
+- 无法使用 JavaScript 操作图像。
+- 如果要使用 CSS 控制 SVG 内容，则必须在 SVG 代码中包含内联 CSS 样式。 （从 SVG 文件调用的外部样式表不起作用）
+- 不能用 CSS 伪类来重设图像样式（如`:focus`）。
 
-<h3 id="疑难解答和跨浏览器支持">疑难解答和跨浏览器支持</h3>
+### 疑难解答和跨浏览器支持
 
-<p>对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，您可以从<code>src</code>属性引用 PNG 或 JPG，并使用{{htmlattrxref("srcset", "img")}}属性 只有最近的浏览器才能识别）来引用 SVG。在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG：</p>
+对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，您可以从`src`属性引用 PNG 或 JPG，并使用{{htmlattrxref("srcset", "img")}}属性 只有最近的浏览器才能识别）来引用 SVG。在这种情况下，仅支持浏览器将加载 SVG - 较旧的浏览器将加载 PNG：
 
-<pre class="brush: html notranslate">&lt;img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg"&gt;
-</pre>
+```html
+<img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">
+```
 
-<p>您还可以使用 SVG 作为 CSS 背景图像，如下所示。在下面的代码中，旧版浏览器会坚持他们理解的 PNG，而较新的浏览器将加载 SVG：</p>
+您还可以使用 SVG 作为 CSS 背景图像，如下所示。在下面的代码中，旧版浏览器会坚持他们理解的 PNG，而较新的浏览器将加载 SVG：
 
-<pre class="brush: css notranslate"><code>background: url("fallback.png") no-repeat center;</code>
-background<code>-image: url("image.svg");
-background-size: contain;</code></pre>
+```css
+background: url("fallback.png") no-repeat center;
+background-image: url("image.svg");
+background-size: contain;
+```
 
-<p>像上面描述的<code>&lt;img&gt;</code>方法一样，使用 CSS 背景图像插入 SVG 意味着它不能被 JavaScript 操作，并且也受到相同的 CSS 限制。</p>
+像上面描述的`<img>`方法一样，使用 CSS 背景图像插入 SVG 意味着它不能被 JavaScript 操作，并且也受到相同的 CSS 限制。
 
-<p>如果 SVG 根本没有显示，可能是因为你的服务器设置不正确。如果是这个问题，<a href="/zh-CN/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers">这篇文章</a>将告诉你正确方向。</p>
+如果 SVG 根本没有显示，可能是因为你的服务器设置不正确。如果是这个问题，[这篇文章](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers)将告诉你正确方向。
 
-<h3 id="如何在HTML中引入SVG代码">如何在 HTML 中引入 SVG 代码</h3>
+### 如何在 HTML 中引入 SVG 代码
 
-<p><br>
- 你还可以在文本编辑器中打开 SVG 文件，复制 SVG 代码，并将其粘贴到 HTML 文档中 - 这有时称为将<strong>SVG 内联</strong>或<strong>内联 SVG</strong>。确保您的 SVG 代码在<code><a href="/en-US/docs/Web/SVG/Element/svg">&lt;svg&gt;&lt;/svg&gt;</a></code>标签中（不要在外面添加任何内容）。这是一个非常简单的示例，您可以粘贴到文档中：</p>
+你还可以在文本编辑器中打开 SVG 文件，复制 SVG 代码，并将其粘贴到 HTML 文档中 - 这有时称为将**SVG 内联**或**内联 SVG**。确保您的 SVG 代码在[`<svg></svg>`](/en-US/docs/Web/SVG/Element/svg)标签中（不要在外面添加任何内容）。这是一个非常简单的示例，您可以粘贴到文档中：
 
-<pre class="brush: html notranslate">&lt;svg width="300" height="200"&gt;
-    &lt;rect width="100%" height="100%" fill="green" /&gt;
-&lt;/svg&gt;
-</pre>
+```html
+<svg width="300" height="200">
+    <rect width="100%" height="100%" fill="green" />
+</svg>
+```
 
-<h4 id="优点_2">优点</h4>
+#### 优点
 
-<ul>
- <li>将 SVG 内联减少 HTTP 请求，可以减少加载时间。</li>
- <li>您可以为 SVG 元素分配<code>class</code>和<code>id</code>，并使用 CSS 修改样式，无论是在 SVG 中，还是 HTML 文档中的 CSS 样式规则。实际上，您可以使用任何 <a href="/zh-CN/docs/Web/SVG/Attribute#Presentation_attributes">SVG 外观属性</a> 作为 CSS 属性。</li>
- <li>内联 SVG 是唯一可以让您在 SVG 图像上使用 CSS 交互（如<code>:focus</code>）和 CSS 动画的方法（即使在常规样式表中）。</li>
- <li>您可以通过将 SVG 标记包在{{htmlelement("a")}}元素中，使其成为超链接。</li>
-</ul>
+- 将 SVG 内联减少 HTTP 请求，可以减少加载时间。
+- 您可以为 SVG 元素分配`class`和`id`，并使用 CSS 修改样式，无论是在 SVG 中，还是 HTML 文档中的 CSS 样式规则。实际上，您可以使用任何 [SVG 外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation_attributes) 作为 CSS 属性。
+- 内联 SVG 是唯一可以让您在 SVG 图像上使用 CSS 交互（如`:focus`）和 CSS 动画的方法（即使在常规样式表中）。
+- 您可以通过将 SVG 标记包在{{htmlelement("a")}}元素中，使其成为超链接。
 
-<h4 id="缺点_2">缺点</h4>
+#### 缺点
 
-<ul>
- <li>这种方法只适用于在一个地方使用的 SVG。多次使用会导致资源密集型维护（resource-intensive maintenance）。</li>
- <li>额外的 SVG 代码会增加 HTML 文件的大小。</li>
- <li>浏览器不能像缓存普通图片一样缓存内联 SVG。</li>
- <li>您可能会在{{svgelement("foreignObject")}} 元素中包含回退，但支持 SVG 的浏览器仍然会下载任何后备图像。你需要考虑仅仅为支持过时的浏览器，而增加额外开销是否真的值得。</li>
-</ul>
+- 这种方法只适用于在一个地方使用的 SVG。多次使用会导致资源密集型维护（resource-intensive maintenance）。
+- 额外的 SVG 代码会增加 HTML 文件的大小。
+- 浏览器不能像缓存普通图片一样缓存内联 SVG。
+- 您可能会在{{svgelement("foreignObject")}} 元素中包含回退，但支持 SVG 的浏览器仍然会下载任何后备图像。你需要考虑仅仅为支持过时的浏览器，而增加额外开销是否真的值得。
 
-<ul>
-</ul>
+### 如何使用 {{htmlelement("iframe")}} 嵌入 SVG
 
-<h3 id="如何使用_htmlelementiframe_嵌入SVG">如何使用 {{htmlelement("iframe")}} 嵌入 SVG</h3>
+您可以在浏览器中打开 SVG 图像，就像网页一样。因此，使用`<iframe>`嵌入 SVG 文档就像我们在 [从对象到 iframe - 其他嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/其他嵌入技术) 中进行研究一样。
 
-<p>您可以在浏览器中打开 SVG 图像，就像网页一样。因此，使用<code>&lt;iframe&gt;</code>嵌入 SVG 文档就像我们在 <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/其他嵌入技术">从对象到 iframe - 其他嵌入技术</a> 中进行研究一样。</p>
+这是一个快速回顾：
 
-<p>这是一个快速回顾：</p>
+```html
+<iframe src="triangle.svg" width="500" height="500" sandbox>
+    <img src="triangle.png" alt="Triangle with three unequal sides" />
+</iframe>
+```
 
-<pre class="brush: html notranslate">&lt;iframe src="triangle.svg" width="500" height="500" sandbox&gt;
-    &lt;img src="triangle.png" alt="Triangle with three unequal sides" /&gt;
-&lt;/iframe&gt;</pre>
+这绝对不是最好的方法：
 
-<p>这绝对不是最好的方法：</p>
+#### 缺点
 
-<h4 id="缺点_3">缺点</h4>
+- 如你所知， `iframe`有一个回退机制，如果浏览器不支持`iframe`，则只会显示回退。
+- 此外，除非 SVG 和您当前的网页具有相同的 {{glossary('origin')}}，否则你不能在主页面上使用 JavaScript 来操纵 SVG。
 
-<ul>
- <li>如你所知， <code>iframe</code>有一个回退机制，如果浏览器不支持<code>iframe</code>，则只会显示回退。</li>
- <li>此外，除非 SVG 和您当前的网页具有相同的 {{glossary('origin')}}，否则你不能在主页面上使用 JavaScript 来操纵 SVG。</li>
-</ul>
+## 动手学习：使用 SVG
 
-<h2 id="动手学习：使用SVG">动手学习：使用 SVG</h2>
+在这个动手学习部分中，我们希望你能够体验一下 SVG 的乐趣。在下面的“input”部分，您将看到我们已经提供了一些样例来开始使用。您还可以访问 [SVG 元素参考](/zh-CN/docs/Web/SVG/Element)，了解更多关于 SVG 可以使用的其他玩具的细节，也可以尝试一下。这部分都是为了锻炼你的研究技巧，并且有一些乐趣。
 
-<p>在这个动手学习部分中，我们希望你能够体验一下 SVG 的乐趣。在下面的“input”部分，您将看到我们已经提供了一些样例来开始使用。您还可以访问 <a href="/zh-CN/docs/Web/SVG/Element">SVG 元素参考</a>，了解更多关于 SVG 可以使用的其他玩具的细节，也可以尝试一下。这部分都是为了锻炼你的研究技巧，并且有一些乐趣。</p>
+如果你卡住了，无法使你的代码工作，你可以随时使用 Reset 按钮进行重置。
 
-<p>如果你卡住了，无法使你的代码工作，你可以随时使用 Reset 按钮进行重置。</p>
+```html hidden
+<h2>Live output</h2>
 
-<pre class="brush: html hidden"><code>&lt;h2&gt;Live output&lt;/h2&gt;
+<div class="output" style="min-height: 50px;">
+</div>
 
-&lt;div class="output" style="min-height: 50px;"&gt;
-&lt;/div&gt;
+<h2>Editable code</h2>
+<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-&lt;h2&gt;Editable code&lt;/h2&gt;
-&lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
-
-&lt;textarea id="code" class="input" style="width: 95%;min-height: 200px;"&gt;
-  &lt;svg width="100%" height="100%"&gt;
-    &lt;rect width="100%" height="100%" fill="red" /&gt;
-    &lt;circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" /&gt;
-    &lt;polygon points="120,0 240,225 0,225" fill="green"/&gt;
-    &lt;text x="50" y="100" font-family="Verdana" font-size="55"
-          fill="white" stroke="black" stroke-width="2"&gt;
+<textarea id="code" class="input" style="width: 95%;min-height: 200px;">
+  <svg width="100%" height="100%">
+    <rect width="100%" height="100%" fill="red" />
+    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+    <polygon points="120,0 240,225 0,225" fill="green"/>
+    <text x="50" y="100" font-family="Verdana" font-size="55"
+          fill="white" stroke="black" stroke-width="2">
             Hello!
-    &lt;/text&gt;
-  &lt;/svg&gt;
-&lt;/textarea&gt;
+    </text>
+  </svg>
+</textarea>
 
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="reset" type="button" value="Reset"&gt;
-  &lt;input id="solution" type="button" value="Show solution" disabled&gt;
-&lt;/div&gt;</code></pre>
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution" disabled>
+</div>
+```
 
-<pre class="brush: css hidden"><code>html {
+```css hidden
+html {
   font-family: sans-serif;
 }
 
@@ -243,9 +234,11 @@ h2 {
 body {
   margin: 10px;
   background: #f5f9fa;
-}</code></pre>
+}
+```
 
-<pre class="brush: js hidden"><code>var textarea = document.getElementById('code');
+```js hidden
+var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -321,37 +314,32 @@ textarea.onkeyup = function(){
   }
 
   updateCode();
-};</code></pre>
+};
+```
 
-<p>{{ EmbedLiveSample('动手学习：使用 SVG', 700, 500) }}</p>
+{{ EmbedLiveSample('动手学习：使用 SVG', 700, 500) }}
 
-<h2 id="总结">总结</h2>
+## 总结
 
-<p>本文提供了一个矢量图形和 SVG 的快速浏览，让你了解他们的作用，以及如何在网页中引入 SVG。它从来没有打算成为学习 SVG 的完整教程，只是一个指南，让你在网上遇到 SVG 时知道它是什么。所以不要觉得你不是一个 SVG 专家而担心。如果你想了解更多关于它的工作原理，我们在下面列出了一些可能会帮助您的信息。</p>
+本文提供了一个矢量图形和 SVG 的快速浏览，让你了解他们的作用，以及如何在网页中引入 SVG。它从来没有打算成为学习 SVG 的完整教程，只是一个指南，让你在网上遇到 SVG 时知道它是什么。所以不要觉得你不是一个 SVG 专家而担心。如果你想了解更多关于它的工作原理，我们在下面列出了一些可能会帮助您的信息。
 
-<p>在本模块的最后一篇文章中，我们将详细探索响应式图像，查看 HTML 可以让您的图像在不同设备上更好地适配。</p>
+在本模块的最后一篇文章中，我们将详细探索响应式图像，查看 HTML 可以让您的图像在不同设备上更好地适配。
 
-<h2 id="相关链接">相关链接</h2>
+## 相关链接
 
-<ul>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started">SVG tutorial</a> on MDN</li>
- <li><a href="http://thenewcode.com/744/Making-SVG-Responsive">Quick tips for responsive SVGs</a></li>
- <li><a href="http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">Sara Soueidan's tutorial on responsive SVG images</a></li>
- <li><a href="http://www.w3.org/TR/SVG-access/">Accessibility benefits of SVG</a></li>
- <li><a href="https://css-tricks.com/scale-svg/">How to scale SVGs </a> （它不像光栅图形那么简单！）</li>
-</ul>
+- [SVG tutorial](/en-US/docs/Web/SVG/Tutorial/Getting_Started) on MDN
+- [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
+- [Sara Soueidan's tutorial on responsive SVG images](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
+- [Accessibility benefits of SVG](http://www.w3.org/TR/SVG-access/)
+- [How to scale SVGs ](https://css-tricks.com/scale-svg/)（它不像光栅图形那么简单！）
 
-<p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</p>
+{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
+## 在这个模块中
 
-
-<h2 id="在这个模块中">在这个模块中</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From &lt;object&gt; to &lt;iframe&gt; — other embedding technologies</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Mozilla splash page</a></li>
-</ul>
+- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [Adding vector graphics to the Web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

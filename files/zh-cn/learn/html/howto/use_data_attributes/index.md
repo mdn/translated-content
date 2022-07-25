@@ -7,75 +7,79 @@ tags:
 translation_of: Learn/HTML/Howto/Use_data_attributes
 original_slug: Web/Guide/HTML/Using_data_attributes
 ---
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p><a href="/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。<a href="/en-US/docs/Web/HTML/Global_attributes#data-*">data-* 属性</a>允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 <a href="/en-US/docs/Web/API/Element.classList">classList</a>，标准外属性，DOM 额外属性或是 <a href="/en-US/docs/Web/API/Node.setUserData">setUserData</a> 之类的技巧。</p>
+[HTML5](/en-US/docs/Web/Guide/HTML/HTML5)是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。[data-\* 属性](/en-US/docs/Web/HTML/Global_attributes#data-*)允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 [classList](/en-US/docs/Web/API/Element.classList)，标准外属性，DOM 额外属性或是 [setUserData](/en-US/docs/Web/API/Node.setUserData) 之类的技巧。
 
-<h2 id="HTML_语法">HTML 语法</h2>
+## HTML 语法
 
-<p>语法非常简单。所有在元素上以<code>data-</code>开头的属性为数据属性。比如说你有一篇文章，而你又想要存储一些不需要显示在浏览器上的额外信息。请使用 data 属性：</p>
+语法非常简单。所有在元素上以`data-`开头的属性为数据属性。比如说你有一篇文章，而你又想要存储一些不需要显示在浏览器上的额外信息。请使用 data 属性：
 
-<pre class="brush: html">&lt;article
+```html
+<article
   id="electriccars"
   data-columns="3"
   data-index-number="12314"
-  data-parent="cars"&gt;
+  data-parent="cars">
 ...
-&lt;/article&gt;</pre>
+</article>
+```
 
-<h2 id="JavaScript_访问">JavaScript 访问</h2>
+## JavaScript 访问
 
-<p>在外部使用<a href="/en-US/docs/Web/JavaScript">JavaScript</a>去访问这些属性的值同样非常简单。你可以使用{{domxref("Element.getAttribute", "getAttribute()")}}配合它们完整的 HTML 名称去读取它们，但标准定义了一个更简单的方法：{{domxref("DOMStringMap")}}你可以使用{{domxref("HTMLElement.dataset", "dataset")}}读取到数据。</p>
+在外部使用[JavaScript](/en-US/docs/Web/JavaScript)去访问这些属性的值同样非常简单。你可以使用{{domxref("Element.getAttribute", "getAttribute()")}}配合它们完整的 HTML 名称去读取它们，但标准定义了一个更简单的方法：{{domxref("DOMStringMap")}}你可以使用{{domxref("HTMLElement.dataset", "dataset")}}读取到数据。
 
-<p>为了使用<code>dataset</code>对象去获取到数据属性，需要获取属性名中<code>data-</code>之后的部分 (要注意的是破折号连接的名称需要改写为骆驼拼写法 (如"index-number"转换为"indexNumber"))。</p>
+为了使用`dataset`对象去获取到数据属性，需要获取属性名中`data-`之后的部分 (要注意的是破折号连接的名称需要改写为骆驼拼写法 (如"index-number"转换为"indexNumber"))。
 
-<pre class="brush: js">var article = document.querySelector('#electriccars');
+```js
+var article = document.querySelector('#electriccars');
 
 article.dataset.columns // "3"
 article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"</pre>
+article.dataset.parent // "cars"
+```
 
-<p>每一个属性都是一个可读写的字符串。在上面的例子中，<code>article.dataset.columns = 5</code>.将会调整属性的值为 5。</p>
+每一个属性都是一个可读写的字符串。在上面的例子中，`article.dataset.columns = 5`.将会调整属性的值为 5。
 
-<h2 id="CSS_访问">CSS 访问</h2>
+## CSS 访问
 
-<p>注意，data 设定为 HTML 属性，他们同样能被<a href="/en-US/docs/Web/CSS">CSS</a>访问。比如你可以通过<a href="/en-US/docs/Web/CSS/content">generated content</a>使用函数{{cssxref("attr")}}来显示 data-parent 的内容：</p>
+注意，data 设定为 HTML 属性，他们同样能被[CSS](/en-US/docs/Web/CSS)访问。比如你可以通过[generated content](/en-US/docs/Web/CSS/content)使用函数{{cssxref("attr")}}来显示 data-parent 的内容：
 
-<pre class="brush: css">article::before {
+```css
+article::before {
   content: attr(data-parent);
-}</pre>
+}
+```
 
-<p>你也同样可以在 CSS 中使用<a href="/en-US/docs/Web/CSS/Attribute_selectors">属性选择器</a>根据 data 来改变样式：</p>
+你也同样可以在 CSS 中使用[属性选择器](/en-US/docs/Web/CSS/Attribute_selectors)根据 data 来改变样式：
 
-<pre class="brush: css">article[data-columns='3'] {
+```css
+article[data-columns='3'] {
   width: 400px;
 }
 article[data-columns='4'] {
   width: 600px;
-}</pre>
+}
+```
 
-<p>你可以在这个<a href="http://jsbin.com/ujiday/2/edit">JSBin </a>里看到全部演示。</p>
+你可以在这个[JSBin ](http://jsbin.com/ujiday/2/edit)里看到全部演示。
 
-<p>Data 属性同样可以存储不断变化的信息，比如游戏的得分。使用 CSS 选择器与 JavaScript 去访问可以让你得到花俏的效果，这里你并不需要用常规的编写方案来编写代码。有关使用生成内容和 CSS 转换（<a href="https://jsbin.com/atawaz/3/edit">JSBin 示例</a>）的示例，请参阅此<a href="https://www.youtube.com/watch?v=On_WyUB1gOk">视频</a>。</p>
+Data 属性同样可以存储不断变化的信息，比如游戏的得分。使用 CSS 选择器与 JavaScript 去访问可以让你得到花俏的效果，这里你并不需要用常规的编写方案来编写代码。有关使用生成内容和 CSS 转换（[JSBin 示例](https://jsbin.com/atawaz/3/edit)）的示例，请参阅此[视频](https://www.youtube.com/watch?v=On_WyUB1gOk)。
 
-<p>数据值是字符串。必须在选择器中引用数值才能使样式生效。</p>
+数据值是字符串。必须在选择器中引用数值才能使样式生效。
 
-<h2 id="Issues">Issues</h2>
+## Issues
 
-<p>不要在 data attribute 里储存需要显示及访问的内容，因为一些其他的技术可能访问不到它们。另外爬虫不能将 data attribute 的值编入索引中。</p>
+不要在 data attribute 里储存需要显示及访问的内容，因为一些其他的技术可能访问不到它们。另外爬虫不能将 data attribute 的值编入索引中。
 
-<p>IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标准，但所有更早期的版本都不支持<a href="http://caniuse.com/#feat=dataset">dataset</a>。为了支持 IE10 及以下的版本，你必须使用{{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，<a href="http://jsperf.com/data-dataset">读取 data-attributes 的行为</a>相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。</p>
+IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标准，但所有更早期的版本都不支持[dataset](http://caniuse.com/#feat=dataset)。为了支持 IE10 及以下的版本，你必须使用{{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，[读取 data-attributes 的行为](http://jsperf.com/data-dataset)相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。
 
-<p>尽管如此，对于那些与元素相关的数据，这依然是一个很好的解决方案。</p>
+尽管如此，对于那些与元素相关的数据，这依然是一个很好的解决方案。
 
-<p>在 FireFox 49.0.2(其他版本也有可能) 中，javascript 将无法读出包含 1022 个及以上字符的 data 属性 (EcmaScript 4).</p>
+在 FireFox 49.0.2(其他版本也有可能) 中，javascript 将无法读出包含 1022 个及以上字符的 data 属性 (EcmaScript 4).
 
-<h2 id="参阅">参阅</h2>
+## 参阅
 
-<div> </div>
-
-<ul>
- <li>该文章源自 <a href="https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/">Using data attributes in JavaScript and CSS on hacks.mozilla.org</a>.</li>
- <li>在 SVG 2 中也同样支持自定义 data 属性; 请参看{{domxref("SVGElement.dataset")}} 和{{SVGAttr("data-*")}}.</li>
- <li><a href="http://www.sitepoint.com/use-html5-data-attributes/">How to use HTML5 data attributes</a> (Sitepoint)</li>
-</ul>
+- 该文章源自 [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
+- 在 SVG 2 中也同样支持自定义 data 属性; 请参看{{domxref("SVGElement.dataset")}} 和{{SVGAttr("data-*")}}.
+- [How to use HTML5 data attributes](http://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)

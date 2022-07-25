@@ -10,78 +10,86 @@ tags:
   - 缩略语
 translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}</div>
-
-<p>HTML 中有许多其他元素可以用于格式化文本，我们没有在<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理基础</a>中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引文、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。</p>
+HTML 中有许多其他元素可以用于格式化文本，我们没有在[HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引文、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">预备知识：</th>
-   <td>熟悉 HTML 基础（包含在 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a> 中）、HTML 文本格式（包含在 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理初步</a> 中）。</td>
-  </tr>
-  <tr>
-   <th scope="row">目标：</th>
-   <td>学习一些不常见的 HTML 元素标记来使用高级语义功能。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">预备知识：</th>
+      <td>
+        熟悉 HTML 基础（包含在
+        <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started"
+          >开始学习 HTML</a
+        >
+        中）、HTML 文本格式（包含在
+        <a
+          href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          >HTML 文字处理初步</a
+        >
+        中）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目标：</th>
+      <td>学习一些不常见的 HTML 元素标记来使用高级语义功能。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="描述列表">描述列表</h2>
+## 描述列表
 
-<p>在 HTML 基础部分，我们讨论了如何在 HTML 中<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表_Lists">标记基本的列表</a>，但是我们没有提到你偶尔会遇到的第三种类型的列表—<strong>描述列表</strong> (description list) <strong>。</strong>这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：</p>
+在 HTML 基础部分，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表_Lists)，但是我们没有提到你偶尔会遇到的第三种类型的列表—**描述列表** (description list) **。**这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
 
-<pre class="notranslate">内心独白
-戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
-语言独白
-戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
-旁白
-戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</pre>
+    内心独白
+    戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
+    语言独白
+    戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
+    旁白
+    戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
 
-<p>描述列表使用与其他列表类型不同的闭合标签— {{htmlelement("dl")}}; 此外，每一项都用 {{htmlelement("dt")}} (description term) 元素闭合。每个描述都用 {{htmlelement("dd")}} (description definition) 元素闭合。让我们来完成下面的标记例子：</p>
+描述列表使用与其他列表类型不同的闭合标签— {{htmlelement("dl")}}; 此外，每一项都用 {{htmlelement("dt")}} (description term) 元素闭合。每个描述都用 {{htmlelement("dd")}} (description definition) 元素闭合。让我们来完成下面的标记例子：
 
-<pre class="brush: html notranslate">&lt;dl&gt;
-  &lt;dt&gt;内心独白&lt;/dt&gt;
-    &lt;dd&gt;戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。&lt;/dd&gt;
-  &lt;dt&gt;语言独白&lt;/dt&gt;
-    &lt;dd&gt;戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。&lt;/dd&gt;
-  &lt;dt&gt;旁白&lt;/dt&gt;
-    &lt;dd&gt;戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。&lt;/dd&gt;
-&lt;/dl&gt;</pre>
-
-<p>浏览器的默认样式会在<strong>描述列表的描述部分</strong>（description definition）和<strong>描述术语</strong>（description terms）之间产生缩进。MDN 非常严密地遵循这一惯例，同时也鼓励关于术语的其他更多的定义（but also embolden the terms for extra definition）。</p>
-
-<p>下面是前述代码的显示结果：</p>
-
+```html
 <dl>
- <dt>内心独白</dt>
- <dd>戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。</dd>
- <dt>语言独白</dt>
- <dd>戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。</dd>
- <dt>旁白</dt>
- <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</dd>
+  <dt>内心独白</dt>
+    <dd>戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。</dd>
+  <dt>语言独白</dt>
+    <dd>戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。</dd>
+  <dt>旁白</dt>
+    <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</dd>
 </dl>
+```
 
-<p>请注意：一个术语 <code>&lt;dt&gt;</code> 可以同时有多个描述 <code>&lt;dd&gt;</code>，比如说：</p>
+浏览器的默认样式会在**描述列表的描述部分**（description definition）和**描述术语**（description terms）之间产生缩进。MDN 非常严密地遵循这一惯例，同时也鼓励关于术语的其他更多的定义（but also embolden the terms for extra definition）。
 
-<dl>
- <dt>旁白</dt>
- <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其它位置（通常位于主线内容旁边一个文本框内）。</dd>
-</dl>
+下面是前述代码的显示结果：
 
-<h3 id="主动学习_标记一组定义">主动学习：标记一组定义</h3>
+- 内心独白
+  - : 戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
+- 语言独白
+  - : 戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
+- 旁白
+  - : 戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
 
-<p>现在是时候尝试一下描述列表了; 在输入区域的原始文本里添加相应的元素，使得它在输出区域是以描述列表的形式出现。如果你喜欢，你也可以使用你自己的描述术语和描述。</p>
+请注意：一个术语 `<dt>` 可以同时有多个描述 `<dd>`，比如说：
 
-<p>如果你做错了，你可以随时点击【重置】按钮。如果实在进行不下去，可以点击【显示答案】。</p>
+- 旁白
+  - : 戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其它位置（通常位于主线内容旁边一个文本框内）。
 
-<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;style&gt;
+### 主动学习：标记一组定义
+
+现在是时候尝试一下描述列表了; 在输入区域的原始文本里添加相应的元素，使得它在输出区域是以描述列表的形式出现。如果你喜欢，你也可以使用你自己的描述术语和描述。
+
+如果你做错了，你可以随时点击【重置】按钮。如果实在进行不下去，可以点击【显示答案】。
+
+```html hidden
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <style>
       body { font-family: '微软雅黑', Helvetica, Arial, sans-serif; margin: 10px; background: #f5f9fa; }
       h2 { font-size: 16px; }
       code, textarea { font-family: Consolas, Menlo, monospace; }
@@ -89,22 +97,22 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
       .input { min-height: 160px; width: 95%; }
       .a11y-label { margin: 0; text-align: right; font-size: 0.7rem; width: 98%; }
       .controls { width: 96%; text-align: right; }
-    &lt;/style&gt;
+    </style>
 
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h2&gt;实时输出&lt;/h2&gt;
-    &lt;div class="output"&gt;&lt;/div&gt;
+  </head>
+  <body>
+    <h2>实时输出</h2>
+    <div class="output"></div>
 
-    &lt;h2&gt;可编辑代码&lt;/h2&gt;
-    &lt;p class="a11y-label"&gt;按 ESC 退出编辑区域，按 Tab 可插入制表符 &lt;code&gt;'\t'&lt;/code&gt; &lt;/p&gt;
-    &lt;textarea id="code" class="input"&gt;&lt;/textarea&gt;
+    <h2>可编辑代码</h2>
+    <p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> </p>
+    <textarea id="code" class="input"></textarea>
 
-    &lt;div class="controls"&gt;
-      &lt;button id="btn-reset"&gt;重置&lt;/button&gt;
-      &lt;button id="btn-solution"&gt;显示答案&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;script&gt;
+    <div class="controls">
+      <button id="btn-reset">重置</button>
+      <button id="btn-solution">显示答案</button>
+    </div>
+    <script>
         const btnReset = document.getElementById('btn-reset');
         const btnSolution = document.getElementById('btn-solution');
         const blockOutput = document.querySelector('.output');
@@ -118,21 +126,21 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 一种浅棕色的饮料。
 可以在清晨带来活力。`;
         const answer =
-`&lt;dl&gt;
-  &lt;dt&gt;培根&lt;/dt&gt;
-    &lt;dd&gt;整个世界的粘合剂。&lt;/dd&gt;
-  &lt;dt&gt;鸡蛋&lt;/dt&gt;
-    &lt;dd&gt;一块蛋糕的粘合剂。&lt;/dd&gt;
-  &lt;dt&gt;咖啡&lt;/dt&gt;
-    &lt;dd&gt;一种浅棕色的饮料。&lt;/dd&gt;
-    &lt;dd&gt;可以在清晨带来活力。&lt;/dd&gt;
-&lt;/dl&gt;`;
+`<dl>
+  <dt>培根</dt>
+    <dd>整个世界的粘合剂。</dd>
+  <dt>鸡蛋</dt>
+    <dd>一块蛋糕的粘合剂。</dd>
+  <dt>咖啡</dt>
+    <dd>一种浅棕色的饮料。</dd>
+    <dd>可以在清晨带来活力。</dd>
+</dl>`;
         let userEntry = "";
 
         init();
         btnReset.addEventListener('click', init);
 
-        btnSolution.addEventListener('click', () =&gt; {
+        btnSolution.addEventListener('click', () => {
           if (btnSolution.textContent === '显示答案') {
             blockInput.value =
             blockOutput.innerHTML = answer;
@@ -144,7 +152,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
           }
         });
 
-        blockInput.addEventListener('keydown', (e) =&gt; {
+        blockInput.addEventListener('keydown', (e) => {
           switch (e.key) {
           case 'Tab':
             e.preventDefault();
@@ -156,7 +164,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
           }
         });
 
-        blockInput.addEventListener('keyup', () =&gt; {
+        blockInput.addEventListener('keyup', () => {
           userEntry = blockInput.value;
           blockOutput.innerHTML = blockInput.value;
           if (btnSolution.textContent === '隐藏答案') {
@@ -185,92 +193,94 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
           blockInput.focus();
           blockInput.scrollTop = scrollPos;
         }
-      &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+      </script>
+  </body>
+</html>
+```
 
-<p>{{ EmbedLiveSample('主动学习：标记一组定义', 700, 500) }}</p>
+{{ EmbedLiveSample('主动学习：标记一组定义', 700, 500) }}
 
-<h2 id="引用">引用</h2>
+## 引用
 
-<p>HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决于你引用的是一块还是一行。</p>
+HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决于你引用的是一块还是一行。
 
-<h3 id="块引用">块引用</h3>
+### 块引用
 
-<p>如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用{{htmlelement("blockquote")}}元素包裹起来表示，并且在{{htmlattrxref("cite","blockquote")}}属性里用 URL 来指向引用的资源。例如，下面的例子就是引用的 MDN 的<code>&lt;blockquote&gt;</code>元素页面：</p>
+如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用{{htmlelement("blockquote")}}元素包裹起来表示，并且在{{htmlattrxref("cite","blockquote")}}属性里用 URL 来指向引用的资源。例如，下面的例子就是引用的 MDN 的`<blockquote>`元素页面：
 
-<pre class="brush: html notranslate">&lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;</pre>
+```html
+<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+```
 
-<p>要把这些转换为块引用，我们要这样做：</p>
+要把这些转换为块引用，我们要这样做：
 
-<pre class="brush: html notranslate">&lt;blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
-  &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-  Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
-&lt;/blockquote&gt;</pre>
-
-<p>浏览器在渲染块引用时默认会增加缩进，作为引用的一个指示符；MDN 是这样做的，但是也增加了额外的样式：</p>
-
-<blockquote>
-<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+```html
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
+```
 
-<h3 id="行内引用">行内引用</h3>
+浏览器在渲染块引用时默认会增加缩进，作为引用的一个指示符；MDN 是这样做的，但是也增加了额外的样式：
 
-<p>行内元素用同样的方式工作，除了使用{{htmlelement("q")}}元素。例如，下面的标记包含了从 MDN<code>&lt;q&gt;</code>页面的引用：</p>
+> The **HTML `<blockquote>` Element** (or _HTML Block Quotation Element_) indicates that the enclosed text is an extended quotation.
 
-<pre class="brush: html notranslate">&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;intended
-for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;
-</pre>
+### 行内引用
 
-<p>浏览器默认将其作为普通文本放入引号内表示引用，就像下面：</p>
+行内元素用同样的方式工作，除了使用{{htmlelement("q")}}元素。例如，下面的标记包含了从 MDN`<q>`页面的引用：
+
+```html
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q></p>
+```
+
+浏览器默认将其作为普通文本放入引号内表示引用，就像下面：
 
 {{EmbedLiveSample('行内引用', '100%', '78px')}}
 
-<h3 id="引文">引文</h3>
+### 引文
 
-<p>{{htmlattrxref("cite","blockquote")}}属性内容不会被浏览器显示、屏幕阅读器阅读，需使用 JavaScript 或 CSS，浏览器才会显示<code>cite</code>的内容。如果你想要确保引用的来源在页面上是可显示的，更好的方法是为{{htmlelement("cite")}}元素附上链接：</p>
+{{htmlattrxref("cite","blockquote")}}属性内容不会被浏览器显示、屏幕阅读器阅读，需使用 JavaScript 或 CSS，浏览器才会显示`cite`的内容。如果你想要确保引用的来源在页面上是可显示的，更好的方法是为{{htmlelement("cite")}}元素附上链接：
 
-<pre class="brush: html notranslate">&lt;p&gt;According to the &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
-&lt;cite&gt;MDN blockquote page&lt;/cite&gt;&lt;/a&gt;:
-&lt;/p&gt;
+```html
+<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<cite>MDN blockquote page</cite></a>:
+</p>
 
-&lt;blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
-  &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-  Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
 
-&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;intended
-for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;
-&lt;cite&gt;MDN q page&lt;/cite&gt;&lt;/a&gt;.&lt;/p&gt;
-</pre>
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+<cite>MDN q page</cite></a>.</p>
+```
 
-<p>引文默认的字体样式为斜体。你可以在<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html">quotations.html</a>中参看代码。</p>
+引文默认的字体样式为斜体。你可以在[quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html)中参看代码。
 
-<h3 id="主动学习：是谁说的？">主动学习：是谁说的？</h3>
+### 主动学习：是谁说的？
 
-<p>到了主动学习的时间！在这个例子中我们想要你：</p>
+到了主动学习的时间！在这个例子中我们想要你：
 
-<ol>
- <li>把中间的段落变成块引用，它要包含<code>cite</code>属性</li>
- <li>把第三个段落的一部分变成行内引用，它要包含<code>cite</code>属性</li>
- <li>每一个引用都要包含<code>&lt;cite&gt;</code>元素</li>
-</ol>
+1.  把中间的段落变成块引用，它要包含`cite`属性
+2.  把第三个段落的一部分变成行内引用，它要包含`cite`属性
+3.  每一个引用都要包含`<cite>`元素
 
-<p>你需要的引用源：</p>
+你需要的引用源：
 
-<ul>
- <li>http://www.brainyquote.com/quotes/authors/c/confucius.html 对应 "孔子曰"。</li>
- <li>http://www.affirmationsforpositivethinking.com/ 对应 "不要说泄气的话"。</li>
-</ul>
+- http\://www\.brainyquote.com/quotes/authors/c/confucius.html 对应 "孔子曰"。
+- http\://www\.affirmationsforpositivethinking.com/ 对应 "不要说泄气的话"。
 
-<p>如果你做错了，你可以随时点击【重置】按钮。如果实在进行不下去，可以点击【显示答案】。</p>
+如果你做错了，你可以随时点击【重置】按钮。如果实在进行不下去，可以点击【显示答案】。
 
-<pre class="brush: html hidden"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;style&gt;
+```html hidden
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <style>
       body { font-family: '微软雅黑', Helvetica, Arial, sans-serif; margin: 10px; background: #f5f9fa; }
       h2 { font-size: 16px; }
       code, textarea { font-family: Consolas, Menlo, monospace; }
@@ -278,42 +288,42 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
       .input { min-height: 160px; width: 95%; }
       .a11y-label { margin: 0; text-align: right; font-size: 0.7rem; width: 98%; }
       .controls { width: 96%; text-align: right; }
-    &lt;/style&gt;
+    </style>
 
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h2&gt;实时输出&lt;/h2&gt;
-    &lt;div class="output"&gt;&lt;/div&gt;
+  </head>
+  <body>
+    <h2>实时输出</h2>
+    <div class="output"></div>
 
-    &lt;h2&gt;可编辑代码&lt;/h2&gt;
-    &lt;p class="a11y-label"&gt;按 ESC 退出编辑区域，按 Tab 可插入制表符 &lt;code&gt;'\t'&lt;/code&gt; &lt;/p&gt;
-    &lt;textarea id="code" class="input"&gt;&lt;/textarea&gt;
+    <h2>可编辑代码</h2>
+    <p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> </p>
+    <textarea id="code" class="input"></textarea>
 
-    &lt;div class="controls"&gt;
-      &lt;button id="btn-reset"&gt;重置&lt;/button&gt;
-      &lt;button id="btn-solution"&gt;显示答案&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;script&gt;
+    <div class="controls">
+      <button id="btn-reset">重置</button>
+      <button id="btn-solution">显示答案</button>
+    </div>
+    <script>
         const btnReset = document.getElementById('btn-reset');
         const btnSolution = document.getElementById('btn-solution');
         const blockOutput = document.querySelector('.output');
         const blockInput = document.querySelector('.input');
         const original =
-`&lt;p&gt;你好！欢迎访问我的激励网页！孔子曰：&lt;/p&gt;
-&lt;p&gt;譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。&lt;/p&gt;
-&lt;p&gt;要保持乐观，不要说泄气的话。（源自 Affirmations for Positive Thinking。）&lt;/p&gt;`;
+`<p>你好！欢迎访问我的激励网页！孔子曰：</p>
+<p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
+<p>要保持乐观，不要说泄气的话。（源自 Affirmations for Positive Thinking。）</p>`;
         const answer =
-`&lt;p&gt;你好！欢迎访问我的激励网页！&lt;a href="</code>http://www.brainyquote.com/quotes/authors/c/confucius.html<code>"&gt;&lt;cite&gt;孔子&lt;/cite&gt;&lt;/a&gt;曰：&lt;/p&gt;
-&lt;blockquote cite="https://zh.wikipedia.org/zh-hans/孔子"&gt;
-  &lt;p&gt;譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;要保持乐观，&lt;q cite="http://www.affirmationsforpositivethinking.com/"&gt;不要说泄气的话&lt;/q&gt;。（源自 &lt;a href="http://www.affirmationsforpositivethinking.com/"&gt;&lt;cite&gt;Affirmations for Positive Thinking&lt;/cite&gt;&lt;/a&gt;。）&lt;/p&gt;`;
+`<p>你好！欢迎访问我的激励网页！<a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>孔子</cite></a>曰：</p>
+<blockquote cite="https://zh.wikipedia.org/zh-hans/孔子">
+  <p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
+</blockquote>
+<p>要保持乐观，<q cite="http://www.affirmationsforpositivethinking.com/">不要说泄气的话</q>。（源自 <a href="http://www.affirmationsforpositivethinking.com/"><cite>Affirmations for Positive Thinking</cite></a>。）</p>`;
         let userEntry = "";
 
         init();
         btnReset.addEventListener('click', init);
 
-        btnSolution.addEventListener('click', () =&gt; {
+        btnSolution.addEventListener('click', () => {
           if (btnSolution.textContent === '显示答案') {
             blockInput.value =
             blockOutput.innerHTML = answer;
@@ -325,7 +335,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
           }
         });
 
-        blockInput.addEventListener('keydown', (e) =&gt; {
+        blockInput.addEventListener('keydown', (e) => {
           switch (e.key) {
           case 'Tab':
             e.preventDefault();
@@ -337,7 +347,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
           }
         });
 
-        blockInput.addEventListener('keyup', () =&gt; {
+        blockInput.addEventListener('keyup', () => {
           userEntry = blockInput.value;
           blockOutput.innerHTML = blockInput.value;
           if (btnSolution.textContent === '隐藏答案') {
@@ -366,40 +376,41 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
           blockInput.focus();
           blockInput.scrollTop = scrollPos;
         }
-      &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+      </script>
+  </body>
+</html>
+```
 
 {{ EmbedLiveSample('主动学习：是谁说的？', 700, 450) }}
 
-<h2 id="缩略语">缩略语</h2>
+## 缩略语
 
-<p>另一个你在 web 上看到的相当常见的元素是{{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释（包含在{{htmlattrxref("title")}}属性中）。让我们看看下面两个例子：</p>
+另一个你在 web 上看到的相当常见的元素是{{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释（包含在{{htmlattrxref("title")}}属性中）。让我们看看下面两个例子：
 
-<pre class="brush: html notranslate">&lt;p&gt;我们使用 &lt;abbr title="超文本标记语言（Hyper text Markup Language）"&gt;HTML&lt;/abbr&gt; 来组织网页文档。&lt;/p&gt;
-
-&lt;p&gt;第 33 届 &lt;abbr title="夏季奥林匹克运动会"&gt;奥运会&lt;/abbr&gt; 将于 2024 年 8 月在法国巴黎举行。&lt;/p&gt;
-</pre>
-
-<p>这些代码的显示效果如下（当光标移动到项目上时会出现提示）：</p>
-
-<p>我们使用 <abbr title="超文本标记语言（Hypertext Markup Language）">HTML</abbr> 来组织网页文档。</p>
+```html
+<p>我们使用 <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr> 来组织网页文档。</p>
 
 <p>第 33 届 <abbr title="夏季奥林匹克运动会">奥运会</abbr> 将于 2024 年 8 月在法国巴黎举行。</p>
+```
 
-<div class="note">
-<p><strong>备注：</strong> 还有另一个元素&lt;acronym&gt;，它基本上与&lt;abbr&gt;相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了 - 它在浏览器的支持中不如&lt;abbr&gt;，并且具有类似的功能，所以没有意义。只需使用&lt;abbr&gt;。</p>
-</div>
+这些代码的显示效果如下（当光标移动到项目上时会出现提示）：
 
-<h3 id="主动学习：标记一个缩略语">主动学习：标记一个缩略语</h3>
+我们使用 HTML 来组织网页文档。
 
-<p>在这个简单的主动学习任务中，我们希望你简单地标记一个缩写。你可以使用下面的示例，或者用自己的示例来替换。</p>
+第 33 届 奥运会 将于 2024 年 8 月在法国巴黎举行。
 
-<pre class="brush: html hidden"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;style&gt;
+> **备注：** 还有另一个元素\<acronym>，它基本上与\<abbr>相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了 - 它在浏览器的支持中不如\<abbr>，并且具有类似的功能，所以没有意义。只需使用\<abbr>。
+
+### 主动学习：标记一个缩略语
+
+在这个简单的主动学习任务中，我们希望你简单地标记一个缩写。你可以使用下面的示例，或者用自己的示例来替换。
+
+```html hidden
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <style>
       body { font-family: '微软雅黑', Helvetica, Arial, sans-serif; margin: 10px; background: #f5f9fa; }
       h2 { font-size: 16px; }
       code, textarea { font-family: Consolas, Menlo, monospace; }
@@ -407,34 +418,34 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
       .input { min-height: 100px; width: 95%; }
       .a11y-label { margin: 0; text-align: right; font-size: 0.7rem; width: 98%; }
       .controls { width: 96%; text-align: right; }
-    &lt;/style&gt;
+    </style>
 
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h2&gt;实时输出&lt;/h2&gt;
-    &lt;div class="output"&gt;&lt;/div&gt;
+  </head>
+  <body>
+    <h2>实时输出</h2>
+    <div class="output"></div>
 
-    &lt;h2&gt;可编辑代码&lt;/h2&gt;
-    &lt;p class="a11y-label"&gt;按 ESC 退出编辑区域，按 Tab 可插入制表符 &lt;code&gt;'\t'&lt;/code&gt; &lt;/p&gt;
-    &lt;textarea id="code" class="input"&gt;&lt;/textarea&gt;
+    <h2>可编辑代码</h2>
+    <p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> </p>
+    <textarea id="code" class="input"></textarea>
 
-    &lt;div class="controls"&gt;
-      &lt;button id="btn-reset"&gt;重置&lt;/button&gt;
-      &lt;button id="btn-solution"&gt;显示答案&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;script&gt;
+    <div class="controls">
+      <button id="btn-reset">重置</button>
+      <button id="btn-solution">显示答案</button>
+    </div>
+    <script>
         const btnReset = document.getElementById('btn-reset');
         const btnSolution = document.getElementById('btn-solution');
         const blockOutput = document.querySelector('.output');
         const blockInput = document.querySelector('.input');
-        const original = '&lt;p&gt;NASA 做了一些动人心弦的事情。&lt;/p&gt;';
-        const answer = '&lt;p&gt;&lt;abbr title="美国国家航空航天局（National Aeronautics and Space Administration）"&gt;NASA&lt;/abbr&gt; 做了一些动人心弦的事情。&lt;/p&gt;';
+        const original = '<p>NASA 做了一些动人心弦的事情。</p>';
+        const answer = '<p><abbr title="美国国家航空航天局（National Aeronautics and Space Administration）">NASA</abbr> 做了一些动人心弦的事情。</p>';
         let userEntry = "";
 
         init();
         btnReset.addEventListener('click', init);
 
-        btnSolution.addEventListener('click', () =&gt; {
+        btnSolution.addEventListener('click', () => {
           if (btnSolution.textContent === '显示答案') {
             blockInput.value =
             blockOutput.innerHTML = answer;
@@ -446,7 +457,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
           }
         });
 
-        blockInput.addEventListener('keydown', (e) =&gt; {
+        blockInput.addEventListener('keydown', (e) => {
           switch (e.key) {
           case 'Tab':
             e.preventDefault();
@@ -458,7 +469,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
           }
         });
 
-        blockInput.addEventListener('keyup', () =&gt; {
+        blockInput.addEventListener('keyup', () => {
           userEntry = blockInput.value;
           blockOutput.innerHTML = blockInput.value;
           if (btnSolution.textContent === '隐藏答案') {
@@ -487,133 +498,138 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
           blockInput.focus();
           blockInput.scrollTop = scrollPos;
         }
-      &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+      </script>
+  </body>
+</html>
+```
 
 {{ EmbedLiveSample('主动学习：标记一个缩略语', 700, 300) }}
 
-<h2 id="标记联系方式">标记联系方式</h2>
+## 标记联系方式
 
-<p>HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。它仅仅包含你的联系方式，例如：</p>
+HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。它仅仅包含你的联系方式，例如：
 
-<pre class="brush: html notranslate">&lt;address&gt;
-  &lt;p&gt;Chris Mills, Manchester, The Grim North, UK&lt;/p&gt;
-&lt;/address&gt;</pre>
+```html
+<address>
+  <p>Chris Mills, Manchester, The Grim North, UK</p>
+</address>
+```
 
-<p>但要记住的一点是，<code>&lt;address&gt;</code>元素是为了标记编写 HTML 文档的人的联系方式，而不是任何其他的内容。因此，如果这是 Chris 写的文档，上面的内容将会很好。注意，下面的内容也是可以的：</p>
+但要记住的一点是，`<address>`元素是为了标记编写 HTML 文档的人的联系方式，而不是任何其他的内容。因此，如果这是 Chris 写的文档，上面的内容将会很好。注意，下面的内容也是可以的：
 
-<pre class="brush: html notranslate">&lt;address&gt;
-  &lt;p&gt;Page written by &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
-&lt;/address&gt;</pre>
+```html
+<address>
+  <p>Page written by <a href="../authors/chris-mills/">Chris Mills</a>.</p>
+</address>
+```
 
-<h2 id="上标和下标">上标和下标</h2>
+## 上标和下标
 
-<p>当你使用日期、化学方程式、和数学方程式时会偶尔使用上标和下标。{{htmlelement("sup")}} 和{{htmlelement("sub")}}元素可以解决这样的问题。例如：</p>
+当你使用日期、化学方程式、和数学方程式时会偶尔使用上标和下标。{{htmlelement("sup")}} 和{{htmlelement("sub")}}元素可以解决这样的问题。例如：
 
-<pre class="brush: html notranslate">&lt;p&gt;咖啡因的化学方程式是 C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;。&lt;/p&gt;
-&lt;p&gt;如果 x&lt;sup&gt;2&lt;/sup&gt; 的值为 9，那么 x 的值必为 3 或 -3。&lt;/p&gt;
-</pre>
-
-<p>这些代码输出的结果是：</p>
-
+```html
 <p>咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。</p>
-
 <p>如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。</p>
+```
 
-<h2 id="展示计算机代码">展示计算机代码</h2>
+这些代码输出的结果是：
 
-<p>有大量的 HTML 元素可以来标记计算机代码：</p>
+咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
 
-<ul>
- <li>{{htmlelement("code")}}: 用于标记计算机通用代码。</li>
- <li>{{htmlelement("pre")}}: 用于保留空白字符（通常用于代码块）——如果您在文本中使用缩进或多余的空白，浏览器将忽略它，您将不会在呈现的页面上看到它。但是，如果您将文本包含在<code>&lt;pre&gt;&lt;/pre&gt;</code>标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。</li>
- <li>{{htmlelement("var")}}: 用于标记具体变量名。</li>
- <li>{{htmlelement("kbd")}}: 用于标记输入电脑的键盘（或其他类型）输入。</li>
- <li>{{htmlelement("samp")}}: 用于标记计算机程序的输出。</li>
-</ul>
+如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。
 
-<p>让我们看看一些例子。你应该尝试运行一下（尝试运行一下<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a>样例文件的拷贝）：</p>
+## 展示计算机代码
 
-<pre class="brush: html notranslate">&lt;pre&gt;&lt;code&gt;const para = document.querySelector('p');
+有大量的 HTML 元素可以来标记计算机代码：
+
+- {{htmlelement("code")}}: 用于标记计算机通用代码。
+- {{htmlelement("pre")}}: 用于保留空白字符（通常用于代码块）——如果您在文本中使用缩进或多余的空白，浏览器将忽略它，您将不会在呈现的页面上看到它。但是，如果您将文本包含在`<pre></pre>`标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。
+- {{htmlelement("var")}}: 用于标记具体变量名。
+- {{htmlelement("kbd")}}: 用于标记输入电脑的键盘（或其他类型）输入。
+- {{htmlelement("samp")}}: 用于标记计算机程序的输出。
+
+让我们看看一些例子。你应该尝试运行一下（尝试运行一下[other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html)样例文件的拷贝）：
+
+```html
+<pre><code>const para = document.querySelector('p');
 
 para.onclick = function() {
   alert('噢，噢，噢，别点我了。');
-}&lt;/code&gt;&lt;/pre&gt;
+}</code></pre>
 
-&lt;p&gt;请不要使用 &lt;code&gt;&amp;lt;font&amp;gt;&lt;/code&gt; 、 &lt;code&gt;&amp;lt;center&amp;gt;&lt;/code&gt; 等表象元素。&lt;/p&gt;
+<p>请不要使用 <code>&lt;font&gt;</code> 、 <code>&lt;center&gt;</code> 等表象元素。</p>
 
-&lt;p&gt;在上述的 JavaScript 示例中，&lt;var&gt;para&lt;/var&gt; 表示一个段落元素。&lt;/p&gt;
+<p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
 
 
-&lt;p&gt;按 &lt;kbd&gt;Ctrl&lt;/kbd&gt;/&lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;A&lt;/kbd&gt; 选择全部内容。&lt;/p&gt;
+<p>按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 选择全部内容。</p>
 
-&lt;pre&gt;$ &lt;kbd&gt;ping mozilla.org&lt;/kbd&gt;
-&lt;samp&gt;PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms&lt;/samp&gt;&lt;/pre&gt;
-</pre>
+<pre>$ <kbd>ping mozilla.org</kbd>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+```
 
-<p>上面的代码显示效果如下：</p>
+上面的代码显示效果如下：
 
-<p>{{ EmbedLiveSample('展示计算机代码','100%',300) }}</p>
+{{ EmbedLiveSample('展示计算机代码','100%',300) }}
 
-<h2 id="标记时间和日期">标记时间和日期</h2>
+## 标记时间和日期
 
-<p>HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlelement("time")}} 元素。例如：</p>
+HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlelement("time")}} 元素。例如：
 
-<pre class="brush: html notranslate">&lt;time datetime="2016-01-20"&gt;2016 年 1 月 20 日&lt;/time&gt;</pre>
+```html
+<time datetime="2016-01-20">2016 年 1 月 20 日</time>
+```
 
-<p>为什么需要这样做？因为世界上有许多种书写日期的格式，上边的日期可能被写成：</p>
+为什么需要这样做？因为世界上有许多种书写日期的格式，上边的日期可能被写成：
 
-<ul>
- <li>20 January 2016</li>
- <li>20th January 2016</li>
- <li>Jan 20 2016</li>
- <li>20/06/16</li>
- <li>06/20/16</li>
- <li>The 20th of next month</li>
- <li>20e Janvier 2016</li>
- <li>2016 年 1 月 20 日</li>
- <li>And so on</li>
-</ul>
+- 20 January 2016
+- 20th January 2016
+- Jan 20 2016
+- 20/06/16
+- 06/20/16
+- The 20th of next month
+- 20e Janvier 2016
+- 2016 年 1 月 20 日
+- And so on
 
-<p>但是这些不同的格式不容易被电脑识别 — 假如你想自动抓取页面上所有事件的日期并将它们插入到日历中，{{htmlelement("time")}} 元素允许你附上清晰的、可被机器识别的 时间/日期来实现这种需求。</p>
+但是这些不同的格式不容易被电脑识别 — 假如你想自动抓取页面上所有事件的日期并将它们插入到日历中，{{htmlelement("time")}} 元素允许你附上清晰的、可被机器识别的 时间/日期来实现这种需求。
 
-<p>上述基本的例子仅仅提供了一种简单的可被机器识别的日期格式，这里还有许多其他支持的格式，例如：</p>
+上述基本的例子仅仅提供了一种简单的可被机器识别的日期格式，这里还有许多其他支持的格式，例如：
 
-<pre class="brush: html notranslate">&lt;!-- 标准简单日期 --&gt;
-&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;
-&lt;!-- 只包含年份和月份--&gt;
-&lt;time datetime="2016-01"&gt;January 2016&lt;/time&gt;
-&lt;!-- 只包含月份和日期 --&gt;
-&lt;time datetime="01-20"&gt;20 January&lt;/time&gt;
-&lt;!-- 只包含时间，小时和分钟数 --&gt;
-&lt;time datetime="19:30"&gt;19:30&lt;/time&gt;
-&lt;!-- 还可包含秒和毫秒 --&gt;
-&lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;
-&lt;!-- 日期和时间 --&gt;
-&lt;time datetime="2016-01-20T19:30"&gt;7.30pm, 20 January 2016&lt;/time&gt;
-&lt;!-- 含有时区偏移值的日期时间 --&gt;
-&lt;time datetime="2016-01-20T19:30+01:00"&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/time&gt;
-&lt;!-- 调用特定的周 --&gt;
-&lt;time datetime="2016-W04"&gt;The fourth week of 2016&lt;/time&gt;</pre>
+```html
+<!-- 标准简单日期 -->
+<time datetime="2016-01-20">20 January 2016</time>
+<!-- 只包含年份和月份-->
+<time datetime="2016-01">January 2016</time>
+<!-- 只包含月份和日期 -->
+<time datetime="01-20">20 January</time>
+<!-- 只包含时间，小时和分钟数 -->
+<time datetime="19:30">19:30</time>
+<!-- 还可包含秒和毫秒 -->
+<time datetime="19:30:01.856">19:30:01.856</time>
+<!-- 日期和时间 -->
+<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+<!-- 含有时区偏移值的日期时间 -->
+<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<!-- 调用特定的周 -->
+<time datetime="2016-W04">The fourth week of 2016</time>
+```
 
-<h2 id="总结">总结</h2>
+## 总结
 
-<p>到这里你就完成了 HTML 语义文本元素的学习。但要记住，你在本课程中学到的并不是 HTML 文本元素的详细列表 — 我们想要尽量覆盖主要的、通用的、常见的，或者至少是有趣的部分。如果你想找到更多的 HTML 元素，可以看一看我们的<a href="/zh-CN/docs/Web/HTML/Element">HTML 元素参考</a>（从 <a href="/zh-CN/docs/Web/HTML/Element#内联文本语义">内联文本语义</a>部分开始会是一个好的选择） 。在下一篇文章中我们将会学习用来组织 HTML 文档不同部分的 HTML 元素。</p>
+到这里你就完成了 HTML 语义文本元素的学习。但要记住，你在本课程中学到的并不是 HTML 文本元素的详细列表 — 我们想要尽量覆盖主要的、通用的、常见的，或者至少是有趣的部分。如果你想找到更多的 HTML 元素，可以看一看我们的[HTML 元素参考](/zh-CN/docs/Web/HTML/Element)（从 [内联文本语义](/zh-CN/docs/Web/HTML/Element#内联文本语义)部分开始会是一个好的选择） 。在下一篇文章中我们将会学习用来组织 HTML 文档不同部分的 HTML 元素。
 
-<p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}</p>
+{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}
 
-<h2 id="本章目录">本章目录</h2>
+## 本章目录
 
-<ul>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a></li>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">“头”里有什么？HTML 元信息</a></li>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理初步</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">创建超链接</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">高级文字格式</a></li>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构">文档和站点结构</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">HTML 调试</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">课程测验：为信件排版</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">课程测验：构建内容丰富的网页</a></li>
-</ul>
+- [开始学习 HTML](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started)
+- [“头”里有什么？HTML 元信息](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML 文字处理初步](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构)
+- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
