@@ -33,13 +33,12 @@ _Cette interface hérite aussi des propriétés de ses parents, {{domxref("Event
 
 ## Méthodes
 
-__Cette interface hérite aussi des méthodes de ses parents, {{domxref("EventTarget")}}._
-, {{domxref("EventTarget")}}._
+_Cette interface hérite aussi des méthodes de ses parents, {{domxref("EventTarget")}}._
 
 - {{domxref("BroadcastChannel.postMessage()")}}
   - : Envoie un message de n'importe quel type d'objet à l'objet `BroadcastChannel` écoutant sur le même canal.
 - {{domxref("BroadcastChannel.close()")}}
-  - : Ferme l'objet canal, indiquant qu'il n'aura plus aucun nouveau message and lui permettant finalement d'être libéré par le ramasse-miètes.
+  - : Ferme l'objet canal, indiquant qu'il n'aura plus aucun nouveau message et lui permettant finalement d'être libéré par le ramasse-miètes.
 
 ## Événements
 

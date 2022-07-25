@@ -141,7 +141,7 @@ h1 {
 ```
 
 ```js
-const canal = new BroadcastChannel('example-channel');
+const canal = new BroadcastChannel('canal_exemple');
 canal.addEventListener('message', event => {
   recu.textContent = event.data;
 });
