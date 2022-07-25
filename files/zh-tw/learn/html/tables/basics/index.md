@@ -4,563 +4,533 @@ slug: Learn/HTML/Tables/Basics
 translation_of: Learn/HTML/Tables/Basics
 original_slug: Learn/HTML/Tables/基礎
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
-<div>{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}</div>
-
-<p>這篇文章將帶你從列、格、標頭，以及將各格以數欄、數列的方式合併等基礎開始探索HTML表格。</p>
+這篇文章將帶你從列、格、標頭，以及將各格以數欄、數列的方式合併等基礎開始探索 HTML 表格。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">先備知識:</th>
-   <td>
-    <p>HTML的基礎(見<a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML">介紹HTML</a>)</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>對HTML表格有基本的認識</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">先備知識:</th>
+      <td>
+        <p>
+          HTML的基礎(見<a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML"
+            >介紹HTML</a
+          >)
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>對HTML表格有基本的認識</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="什麼是表格">什麼是表格?</h2>
+## 什麼是表格?
 
-<p>表格是一個由列和欄組成的結構化資料(tabular data)。表格能幫助你快速查看不同資料類型間的關聯值。例如人和年紀、一周當中的某天或是地方游泳池的時間表。</p>
+表格是一個由列和欄組成的結構化資料(tabular data)。表格能幫助你快速查看不同資料類型間的關聯值。例如人和年紀、一周當中的某天或是地方游泳池的時間表。
 
-<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="numbers-table.png"></p>
+![A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
-<p><img alt="A swimming timetable showing a sample data table" src="swimming-timetable.png"></p>
+![A swimming timetable showing a sample data table](swimming-timetable.png)
 
-<p>表格在人類社會當中被廣泛使用且已經有很久的歷史，如下是美國1800年的人口普查紀錄表格。</p>
+表格在人類社會當中被廣泛使用且已經有很久的歷史，如下是美國 1800 年的人口普查紀錄表格。
 
-<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="1800-census.jpg"></p>
+![A very old parchment document; the data is not easily readable, but it clearly shows a data table being used.](1800-census.jpg)
 
-<p>這也難怪HTML的開創者要提供一個在網路建立和呈現表格化資料的方法。</p>
+這也難怪 HTML 的開創者要提供一個在網路建立和呈現表格化資料的方法。
 
-<h3 id="表格是怎麼運作的呢">表格是怎麼運作的呢?</h3>
+### 表格是怎麼運作的呢?
 
-<p>表格是精確的，資訊可以透過列和欄位名稱之間的視覺關聯輕鬆呈現。觀察以下表格，利用列和欄目名稱找出有62個衛星的類木行星。</p>
+表格是精確的，資訊可以透過列和欄位名稱之間的視覺關聯輕鬆呈現。觀察以下表格，利用列和欄目名稱找出有 62 個衛星的類木行星。
 
-<p>有關太陽系星球的資訊 (真實資料取自 <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a><strong>. )</strong></p>
+有關太陽系星球的資訊 (真實資料取自 [Nasa's Planetary Fact Sheet - Metric](http://nssdc.gsfc.nasa.gov/planetary/factsheet/)**. )**
 
 <table>
- <thead>
-  <tr>
-   <td colspan="2"></td>
-   <th scope="col">名稱</th>
-   <th scope="col">質量(10<sup>24</sup>kg)</th>
-   <th scope="col">直徑 (km)</th>
-   <th scope="col">密度(kg/m<sup>3</sup>)</th>
-   <th scope="col">重力(m/s<sup>2</sup>)</th>
-   <th scope="col">一天的長度(小時)</th>
-   <th scope="col">和太陽的距離(10<sup>6</sup>km)</th>
-   <th scope="col">平均溫度 (°C)</th>
-   <th scope="col">衛星的數目</th>
-   <th scope="col">備註</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th colspan="2" rowspan="4" scope="rowgroup">陸地行星</th>
-   <th scope="row">水星</th>
-   <td>0.330</td>
-   <td>4,879</td>
-   <td>5427</td>
-   <td>3.7</td>
-   <td>4222.6</td>
-   <td>57.9</td>
-   <td>167</td>
-   <td>0</td>
-   <td>最接近太陽</td>
-  </tr>
-  <tr>
-   <th scope="row">金星</th>
-   <td>4.87</td>
-   <td>12,104</td>
-   <td>5243</td>
-   <td>8.9</td>
-   <td>2802.0</td>
-   <td>108.2</td>
-   <td>464</td>
-   <td>0</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row">地球</th>
-   <td>5.97</td>
-   <td>12,756</td>
-   <td>5514</td>
-   <td>9.8</td>
-   <td>24.0</td>
-   <td>149.6</td>
-   <td>15</td>
-   <td>1</td>
-   <td>我們的世界</td>
-  </tr>
-  <tr>
-   <th scope="row">火星</th>
-   <td>0.642</td>
-   <td>6,792</td>
-   <td>3933</td>
-   <td>3.7</td>
-   <td>24.7</td>
-   <td>227.9</td>
-   <td>-65</td>
-   <td>2</td>
-   <td>紅色星球</td>
-  </tr>
-  <tr>
-   <th rowspan="4" scope="rowgroup">類木行星</th>
-   <th rowspan="2" scope="rowgroup">氣態巨行星</th>
-   <th scope="row">木星</th>
-   <td>1898</td>
-   <td>142,984</td>
-   <td>1326</td>
-   <td>23.1</td>
-   <td>9.9</td>
-   <td>778.6</td>
-   <td>-110</td>
-   <td>67</td>
-   <td>最大的星球</td>
-  </tr>
-  <tr>
-   <th scope="row">土星</th>
-   <td>568</td>
-   <td>120,536</td>
-   <td>687</td>
-   <td>9.0</td>
-   <td>10.7</td>
-   <td>1433.5</td>
-   <td>-140</td>
-   <td>62</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th rowspan="2" scope="rowgroup">冰質巨行星</th>
-   <th scope="row">天王星</th>
-   <td>86.8</td>
-   <td>51,118</td>
-   <td>1271</td>
-   <td>8.7</td>
-   <td>17.2</td>
-   <td>2872.5</td>
-   <td>-195</td>
-   <td>27</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th scope="row">海王星</th>
-   <td>102</td>
-   <td>49,528</td>
-   <td>1638</td>
-   <td>11.0</td>
-   <td>16.1</td>
-   <td>4495.1</td>
-   <td>-200</td>
-   <td>14</td>
-   <td></td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="rowgroup">矮行星</th>
-   <th scope="row">冥王星</th>
-   <td>0.0146</td>
-   <td>2,370</td>
-   <td>2095</td>
-   <td>0.7</td>
-   <td>153.3</td>
-   <td>5906.4</td>
-   <td>-225</td>
-   <td>5</td>
-   <td>在2006年被從行星類別中除名，但這還些<a href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">爭議</a>。</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <td colspan="2"></td>
+      <th scope="col">名稱</th>
+      <th scope="col">質量(10<sup>24</sup>kg)</th>
+      <th scope="col">直徑 (km)</th>
+      <th scope="col">密度(kg/m<sup>3</sup>)</th>
+      <th scope="col">重力(m/s<sup>2</sup>)</th>
+      <th scope="col">一天的長度(小時)</th>
+      <th scope="col">和太陽的距離(10<sup>6</sup>km)</th>
+      <th scope="col">平均溫度 (°C)</th>
+      <th scope="col">衛星的數目</th>
+      <th scope="col">備註</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="2" rowspan="4" scope="rowgroup">陸地行星</th>
+      <th scope="row">水星</th>
+      <td>0.330</td>
+      <td>4,879</td>
+      <td>5427</td>
+      <td>3.7</td>
+      <td>4222.6</td>
+      <td>57.9</td>
+      <td>167</td>
+      <td>0</td>
+      <td>最接近太陽</td>
+    </tr>
+    <tr>
+      <th scope="row">金星</th>
+      <td>4.87</td>
+      <td>12,104</td>
+      <td>5243</td>
+      <td>8.9</td>
+      <td>2802.0</td>
+      <td>108.2</td>
+      <td>464</td>
+      <td>0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">地球</th>
+      <td>5.97</td>
+      <td>12,756</td>
+      <td>5514</td>
+      <td>9.8</td>
+      <td>24.0</td>
+      <td>149.6</td>
+      <td>15</td>
+      <td>1</td>
+      <td>我們的世界</td>
+    </tr>
+    <tr>
+      <th scope="row">火星</th>
+      <td>0.642</td>
+      <td>6,792</td>
+      <td>3933</td>
+      <td>3.7</td>
+      <td>24.7</td>
+      <td>227.9</td>
+      <td>-65</td>
+      <td>2</td>
+      <td>紅色星球</td>
+    </tr>
+    <tr>
+      <th rowspan="4" scope="rowgroup">類木行星</th>
+      <th rowspan="2" scope="rowgroup">氣態巨行星</th>
+      <th scope="row">木星</th>
+      <td>1898</td>
+      <td>142,984</td>
+      <td>1326</td>
+      <td>23.1</td>
+      <td>9.9</td>
+      <td>778.6</td>
+      <td>-110</td>
+      <td>67</td>
+      <td>最大的星球</td>
+    </tr>
+    <tr>
+      <th scope="row">土星</th>
+      <td>568</td>
+      <td>120,536</td>
+      <td>687</td>
+      <td>9.0</td>
+      <td>10.7</td>
+      <td>1433.5</td>
+      <td>-140</td>
+      <td>62</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="rowgroup">冰質巨行星</th>
+      <th scope="row">天王星</th>
+      <td>86.8</td>
+      <td>51,118</td>
+      <td>1271</td>
+      <td>8.7</td>
+      <td>17.2</td>
+      <td>2872.5</td>
+      <td>-195</td>
+      <td>27</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">海王星</th>
+      <td>102</td>
+      <td>49,528</td>
+      <td>1638</td>
+      <td>11.0</td>
+      <td>16.1</td>
+      <td>4495.1</td>
+      <td>-200</td>
+      <td>14</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="rowgroup">矮行星</th>
+      <th scope="row">冥王星</th>
+      <td>0.0146</td>
+      <td>2,370</td>
+      <td>2095</td>
+      <td>0.7</td>
+      <td>153.3</td>
+      <td>5906.4</td>
+      <td>-225</td>
+      <td>5</td>
+      <td>
+        在2006年被從行星類別中除名，但這還些<a
+          href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/"
+          >爭議</a
+        >。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>在正確執行之下，就連視障者都可以把表格資料詮釋為HTML格式的表格。一份成功的HTML表格就應該如此提升視障者的使用經驗。</p>
+在正確執行之下，就連視障者都可以把表格資料詮釋為 HTML 格式的表格。一份成功的 HTML 表格就應該如此提升視障者的使用經驗。
 
-<h3 id="表格樣式">表格樣式</h3>
+### 表格樣式
 
-<p>你也可以在 <a href="https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html">GitHub </a> 上看看實際範例 ! 而你也許會注意到那裡的表格似乎更容易閱讀。那是因為這裡的表格只有加上很少樣式，而GitHub上的版本卻應用上了更多明顯的CSS 。</p>
+你也可以在 [GitHub ](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html)上看看實際範例 ! 而你也許會注意到那裡的表格似乎更容易閱讀。那是因為這裡的表格只有加上很少樣式，而 GitHub 上的版本卻應用上了更多明顯的 CSS 。
 
-<p>需要弄清楚的一點是 : 要讓表格在網頁上有效呈現需要提供紮實的HTML架構和CSS樣式資訊，但將在這個模組中聚焦在HTML的部分。若想瞭解CSS的部分，可以在完成這部分閱讀之後造訪<a href="/zh-TW/docs/Learn/CSS/Building_blocks/Styling_tables">表格樣式設計</a>的文章。</p>
+需要弄清楚的一點是 : 要讓表格在網頁上有效呈現需要提供紮實的 HTML 架構和 CSS 樣式資訊，但將在這個模組中聚焦在 HTML 的部分。若想瞭解 CSS 的部分，可以在完成這部分閱讀之後造訪[表格樣式設計](/zh-TW/docs/Learn/CSS/Building_blocks/Styling_tables)的文章。
 
-<p>在這個單元裡我們將不會聚焦在CSS上，但是我們提供基本的CSS樣式表讓你做使用，這將會使你製作的表格比起毫無修飾的預設樣式更方便閱讀。你能在這找到<a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">樣式表</a>，並且你也能找到一個適用於樣式表的<a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">HTML模版</a> — 他們能一起讓你有個好起點來實驗HTML表格。</p>
+在這個單元裡我們將不會聚焦在 CSS 上，但是我們提供基本的 CSS 樣式表讓你做使用，這將會使你製作的表格比起毫無修飾的預設樣式更方便閱讀。你能在這找到[樣式表](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css)，並且你也能找到一個適用於樣式表的[HTML 模版](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) — 他們能一起讓你有個好起點來實驗 HTML 表格。
 
-<h3 id="當何時你不應該使用HTML表格">當何時你不應該使用HTML表格?</h3>
+### 當何時你不應該使用 HTML 表格?
 
-<p>HTML表格應該被使用在結構化資料(tabular data)上 — 這就是它們被設計的目的。<br>
- 不幸地是，許多人習慣使用HTML表格去排版他們的網頁，例如: 使用一列去當header，一列當做內容欄位，一列當作footer...等等，你能在我們的<a href="/zh-TW/docs/Learn/Accessibility">輔助學習單元</a>裡的<a href="/zh-TW/docs/Learn/Accessibility/HTML#Page_layouts">頁面輸出</a>發現更多細節以及一個範例。它曾經被這麼使用是因為CSS過去在不同瀏覽器之間的支援程度十分可怕; 如今，已非常少在用表格做排版，但你仍然可能在網路的一些邊邊角角見到。</p>
+HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它們被設計的目的。
+不幸地是，許多人習慣使用 HTML 表格去排版他們的網頁，例如: 使用一列去當 header，一列當做內容欄位，一列當作 footer...等等，你能在我們的[輔助學習單元](/zh-TW/docs/Learn/Accessibility)裡的[頁面輸出](/zh-TW/docs/Learn/Accessibility/HTML#Page_layouts)發現更多細節以及一個範例。它曾經被這麼使用是因為 CSS 過去在不同瀏覽器之間的支援程度十分可怕; 如今，已非常少在用表格做排版，但你仍然可能在網路的一些邊邊角角見到。
 
-<p>簡單來說，使用表格排版而非使用<a href="/zh-TW/docs/Learn/CSS/CSS_layout">CSS排版技術</a>是一件很糟的事情。<br>
- 下列是主要原因:</p>
+簡單來說，使用表格排版而非使用[CSS 排版技術](/zh-TW/docs/Learn/CSS/CSS_layout)是一件很糟的事情。
+下列是主要原因:
 
-<ol>
- <li><strong>表格排版會減少對視障使用者的輔助 </strong>: 視障者使用的<a href="/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">螢幕閱讀器</a>會翻譯存在於HTML網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於CSS排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。</li>
- <li><strong>表格會產生標籤雜燴(tag soup)</strong>: 就像上面提到的，表格排版通常會比一般適當的輸出技術包含更複雜的標籤結構。這會導致程式碼本身更難撰寫、維護及debug。</li>
- <li><strong>表格不會自適應(automatically responsive)</strong>: 當你使用合適的排版容器(像是{htmlelement("header")}, {{htmlelement("section")}}) 或是 {{htmlelement("div")}}),它們的寬度相對於父層預設為100%，而表格的預設大小是依據它們的內容物，所以當表格樣式要有效的在不同的裝置之間運行時，會需要做額外的測量調整。</li>
-</ol>
+1.  **表格排版會減少對視障使用者的輔助** : 視障者使用的[螢幕閱讀器](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)會翻譯存在於 HTML 網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於 CSS 排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。
+2.  **表格會產生標籤雜燴(tag soup)**: 就像上面提到的，表格排版通常會比一般適當的輸出技術包含更複雜的標籤結構。這會導致程式碼本身更難撰寫、維護及 debug。
+3.  **表格不會自適應(automatically responsive)**: 當你使用合適的排版容器(像是{htmlelement("header")}, {{htmlelement("section")}}) 或是 {{htmlelement("div")}}),它們的寬度相對於父層預設為 100%，而表格的預設大小是依據它們的內容物，所以當表格樣式要有效的在不同的裝置之間運行時，會需要做額外的測量調整。
 
-<h2 id="主動學習建造你第一個表格">主動學習:建造你第一個表格</h2>
+## 主動學習:建造你第一個表格
 
-<p>關於表格的理論我們已經談論夠了，所以，來深入實際的例子並建立一個簡單的表格吧!</p>
+關於表格的理論我們已經談論夠了，所以，來深入實際的例子並建立一個簡單的表格吧!
 
-<ol>
- <li>第一件事，在自己的電腦複製一份新的<a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">空白模板.html</a> 以及 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">簡易表格.css</a> </li>
- <li>每一個表格裡的內容都是由這兩個標籤所組成:<strong><code><a href="/en-US/docs/Web/HTML/Element/table">&lt;table&gt;&lt;/table&gt;</a></code></strong> 將這些放入你的HTML中的body。</li>
- <li>表格裡最小的容器是表格儲存格，由<strong><code><a href="/en-US/docs/Web/HTML/Element/td">&lt;td&gt;</a></code></strong>元素所組成('td' 代表 'table data')。將下列的程式碼加入你的表格標籤之中:
-  <pre class="brush: html notranslate">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;</pre>
- </li>
- <li>如果我們想要一個四格儲存格寬的列(row), 我們需要複製這些標籤三次。<br>
-  將你的表格內容更新成這樣:
-  <pre class="brush: html notranslate">&lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
-&lt;td&gt;I'm your second cell.&lt;/td&gt;
-&lt;td&gt;I'm your third cell.&lt;/td&gt;
-&lt;td&gt;I'm your fourth cell.&lt;/td&gt;</pre>
- </li>
-</ol>
+1.  第一件事，在自己的電腦複製一份新的[空白模板.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 以及 [簡易表格.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css)
+2.  每一個表格裡的內容都是由這兩個標籤所組成:**[`<table></table>`](/en-US/docs/Web/HTML/Element/table)** 將這些放入你的 HTML 中的 body。
+3.  表格裡最小的容器是表格儲存格，由**[`<td>`](/en-US/docs/Web/HTML/Element/td)**元素所組成('td' 代表 'table data')。將下列的程式碼加入你的表格標籤之中:
 
-<p>就像你看到的，儲存格不會在各自的下方，它們彼此自動排列在同一列上。每個 <code>&lt;td&gt;</code> 元素會創造單個儲存格並且使它們據在同一行，我們新增的每一個儲存格都會使列更長。</p>
+    ```html
+    <td>Hi, I'm your first cell.</td>
+    ```
 
-<p>要讓這個列停止增加並開始在下一列增加連續的儲存格的話，我們需要用 <strong><code><a href="/en-US/docs/Web/HTML/Element/tr">&lt;tr&gt;</a></code></strong> 元素 ('tr' 代表 'table row')，現在來探討一下:</p>
+4.  如果我們想要一個四格儲存格寬的列(row), 我們需要複製這些標籤三次。
+    將你的表格內容更新成這樣:
 
-<ol>
- <li>放置四個你已新增在 <code>&lt;tr&gt;</code> 標籤裡的儲存格, 像這樣:
+    ```html
+    <td>Hi, I'm your first cell.</td>
+    <td>I'm your second cell.</td>
+    <td>I'm your third cell.</td>
+    <td>I'm your fourth cell.</td>
+    ```
 
-  <pre class="brush: html notranslate">&lt;tr&gt;
-  &lt;td&gt;Hi, I'm your first cell.&lt;/td&gt;
-  &lt;td&gt;I'm your second cell.&lt;/td&gt;
-  &lt;td&gt;I'm your third cell.&lt;/td&gt;
-  &lt;td&gt;I'm your fourth cell.&lt;/td&gt;
-&lt;/tr&gt;</pre>
- </li>
- <li>現在你已經製作了一列了，可以再繼續做一、二列 — 每個列都需要被額外的 <code>&lt;tr&gt;</code> 元素包裹住, 並且每個儲存格都須包含在一個 <code>&lt;td&gt;</code>  內</li>
-</ol>
+就像你看到的，儲存格不會在各自的下方，它們彼此自動排列在同一列上。每個 `<td>` 元素會創造單個儲存格並且使它們據在同一行，我們新增的每一個儲存格都會使列更長。
 
-<p>表格應該會看起來像下面這樣:</p>
+要讓這個列停止增加並開始在下一列增加連續的儲存格的話，我們需要用 **[`<tr>`](/en-US/docs/Web/HTML/Element/tr)** 元素 ('tr' 代表 'table row')，現在來探討一下:
 
+1.  放置四個你已新增在 `<tr>` 標籤裡的儲存格, 像這樣:
+
+    ```html
+    <tr>
+      <td>Hi, I'm your first cell.</td>
+      <td>I'm your second cell.</td>
+      <td>I'm your third cell.</td>
+      <td>I'm your fourth cell.</td>
+    </tr>
+    ```
+
+2.  現在你已經製作了一列了，可以再繼續做一、二列 — 每個列都需要被額外的 `<tr>` 元素包裹住, 並且每個儲存格都須包含在一個 `<td>` 內
+
+### 結果
+
+表格應該會看起來像下面這樣:
+
+```html hidden
 <table>
- <tbody>
   <tr>
-   <td>Hi, I'm your first cell.</td>
-   <td>I'm your second cell.</td>
-   <td>I'm your third cell.</td>
-   <td>I'm your fourth cell.</td>
+    <td>Hi, I'm your first cell.</td>
+    <td>I'm your second cell.</td>
+    <td>I'm your third cell.</td>
+    <td>I'm your fourth cell.</td>
   </tr>
+
   <tr>
-   <td>Second row, first cell.</td>
-   <td>Cell 2.</td>
-   <td>Cell 3.</td>
-   <td>Cell 4.</td>
+    <td>Second row, first cell.</td>
+    <td>Cell 2.</td>
+    <td>Cell 3.</td>
+    <td>Cell 4.</td>
   </tr>
- </tbody>
 </table>
+```
 
-<div class="note">
-<p><strong>備註：</strong> 你也可以在GitHub 上看到 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/basic/simple-table.html">see it live also</a>).</p>
-</div>
+```css hidden
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+```
 
-<h2 id="用_&lt;th>_加上標頭元素">用 &lt;th&gt; 加上標頭元素</h2>
+{{EmbedLiveSample("結果")}}
 
-<p>現在，讓我們把注意力轉移到表格的標頭(table header) — 存在於一列或一欄開頭的特別儲存格並且定義了欄或列中內容的資料型態 (舉個例子, 看看這篇文章中第一個範例裡 的"Person" 和 "Age" 儲存格 )。<br>
- 為了說明為什麼它們很有用，請看下面的表格例子, 首先是程式碼:</p>
+> **備註：** 你也可以在 GitHub 上看到 [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-    &lt;td&gt;Knocky&lt;/td&gt;
-    &lt;td&gt;Flor&lt;/td&gt;
-    &lt;td&gt;Ella&lt;/td&gt;
-    &lt;td&gt;Juan&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Breed&lt;/td&gt;
-    &lt;td&gt;Jack Russell&lt;/td&gt;
-    &lt;td&gt;Poodle&lt;/td&gt;
-    &lt;td&gt;Streetdog&lt;/td&gt;
-    &lt;td&gt;Cocker Spaniel&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Age&lt;/td&gt;
-    &lt;td&gt;16&lt;/td&gt;
-    &lt;td&gt;9&lt;/td&gt;
-    &lt;td&gt;10&lt;/td&gt;
-    &lt;td&gt;5&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Owner&lt;/td&gt;
-    &lt;td&gt;Mother-in-law&lt;/td&gt;
-    &lt;td&gt;Me&lt;/td&gt;
-    &lt;td&gt;Me&lt;/td&gt;
-    &lt;td&gt;Sister-in-law&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Eating Habits&lt;/td&gt;
-    &lt;td&gt;Eats everyone's leftovers&lt;/td&gt;
-    &lt;td&gt;Nibbles at food&lt;/td&gt;
-    &lt;td&gt;Hearty eater&lt;/td&gt;
-    &lt;td&gt;Will eat till he explodes&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+## 用 \<th> 加上標頭元素
 
-<p>這是實際渲染出的表格:</p>
+現在，讓我們把注意力轉移到表格的標頭(table header) — 存在於一列或一欄開頭的特別儲存格並且定義了欄或列中內容的資料型態 (舉個例子, 看看這篇文章中第一個範例裡 的"Person" 和 "Age" 儲存格 )。
+為了說明為什麼它們很有用，請看下面的表格例子, 首先是程式碼:
 
+```html
 <table>
- <tbody>
   <tr>
-   <td></td>
-   <td>Knocky</td>
-   <td>Flor</td>
-   <td>Ella</td>
-   <td>Juan</td>
+    <td>&nbsp;</td>
+    <td>Knocky</td>
+    <td>Flor</td>
+    <td>Ella</td>
+    <td>Juan</td>
   </tr>
   <tr>
-   <td>Breed</td>
-   <td>Jack Russell</td>
-   <td>Poodle</td>
-   <td>Streetdog</td>
-   <td>Cocker Spaniel</td>
+    <td>Breed</td>
+    <td>Jack Russell</td>
+    <td>Poodle</td>
+    <td>Streetdog</td>
+    <td>Cocker Spaniel</td>
   </tr>
   <tr>
-   <td>Age</td>
-   <td>16</td>
-   <td>9</td>
-   <td>10</td>
-   <td>5</td>
+    <td>Age</td>
+    <td>16</td>
+    <td>9</td>
+    <td>10</td>
+    <td>5</td>
   </tr>
   <tr>
-   <td>Owner</td>
-   <td>Mother-in-law</td>
-   <td>Me</td>
-   <td>Me</td>
-   <td>Sister-in-law</td>
+    <td>Owner</td>
+    <td>Mother-in-law</td>
+    <td>Me</td>
+    <td>Me</td>
+    <td>Sister-in-law</td>
   </tr>
   <tr>
-   <td>Eating Habits</td>
-   <td>Eats everyone's leftovers</td>
-   <td>Nibbles at food</td>
-   <td>Hearty eater</td>
-   <td>Will eat till he explodes</td>
+    <td>Eating Habits</td>
+    <td>Eats everyone's leftovers</td>
+    <td>Nibbles at food</td>
+    <td>Hearty eater</td>
+    <td>Will eat till he explodes</td>
   </tr>
- </tbody>
 </table>
+```
 
-<p>這裡的問題在於，當你找到想知道的資料時，並不容易去找到資料之間對應的位置。如果欄跟列能有個明顯的標示，會比較好理解。</p>
+```css hidden
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+```
 
-<h3 id="主動學習_表格標頭">主動學習 : 表格標頭</h3>
+這是實際渲染出的表格:
 
-<p>讓我們來繼續改善這個表格吧!</p>
+{{EmbedLiveSample("用_th_加上標頭元素", "", "250")}}
 
-<ol>
- <li>首先, 複製 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html">dogs-table.html</a> and <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> 檔案到你的電腦。<br>
-  這份HTML裡包含跟底下你看到的一樣的狗狗範例。</li>
- <li>為了在語意上和視覺上辨識表格的標頭，你可以使用 <strong><code><a href="/en-US/docs/Web/HTML/Element/th">&lt;th&gt;</a></code></strong> 元素 ('th' 代表 'table header')。它的運作方式跟 <code>&lt;td&gt;</code> 完全相同，除了它表示的是標頭而非一般儲存格外。<br>
-  繼續修改你的HTML將所有外圍的 <code>&lt;td&gt;</code> 元素變成 <code>&lt;th&gt;</code> 元素。</li>
- <li>儲存你的HTML並在瀏覽器上執行，現在你應該可以看到標頭應有的樣子。</li>
-</ol>
+這裡的問題在於，當你找到想知道的資料時，並不容易去找到資料之間對應的位置。如果欄跟列能有個明顯的標示，會比較好理解。
 
-<div class="note">
-<p><strong>備註：</strong> 你可以在GitHub上的<a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html">dogs-table-fixed.html</a>找到我們寫好的完整的範例(<a href="https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html">直接看看長怎樣</a>).</p>
-</div>
+### 主動學習 : 表格標頭
 
-<h3 id="標頭為什麼實用">標頭為什麼實用?</h3>
+讓我們來繼續改善這個表格吧!
 
-<p>我們已經部分解答了這個問題 — 當有標頭清楚標示時，它能更簡單的使你找到資料並讓整體設計看起來更完整。</p>
+1.  首先, 複製 [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 檔案到你的電腦。
+    這份 HTML 裡包含跟底下你看到的一樣的狗狗範例。
+2.  為了在語意上和視覺上辨識表格的標頭，你可以使用 **[`<th>`](/en-US/docs/Web/HTML/Element/th)** 元素 ('th' 代表 'table header')。它的運作方式跟 `<td>` 完全相同，除了它表示的是標頭而非一般儲存格外。
+    繼續修改你的 HTML 將所有外圍的 `<td>` 元素變成 `<th>` 元素。
+3.  儲存你的 HTML 並在瀏覽器上執行，現在你應該可以看到標頭應有的樣子。
 
-<div class="note">
-<p><strong>備註：</strong> 表格標頭有具備預設樣式 — 粗體並置中，即使你不加上你自己的表格樣式，他們仍然能被凸顯。</p>
-</div>
+> **備註：** 你可以在 GitHub 上的[dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html)找到我們寫好的完整的範例([直接看看長怎樣](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
-<p>表格標頭還有一個額外的好處 — 伴隨著 <code>作用域(scope)</code> 屬性 (我們將會在下一個章節中學到)，當要連結每個標頭而所有資料都在同一列或欄時，這能允許表格使用起來更無障礙。並且，螢幕閱讀器能一次性讀出完整一列或一欄的資料，這是非常實用的。</p>
+### 標頭為什麼實用?
 
-<h2 id="允許列或欄的儲存格合併">允許列或欄的儲存格合併</h2>
+我們已經部分解答了這個問題 — 當有標頭清楚標示時，它能更簡單的使你找到資料並讓整體設計看起來更完整。
 
-<p>有時我們想要儲存格涵蓋複數的列或欄，來看看下列顯示常見動物名稱的簡單例子。在某些案例，我們想要將名字代表雄性或雌性顯示在動物名字旁邊，但有些不需要，這種情況下我們只想將動物名字橫跨整個表格。</p>
+> **備註：** 表格標頭有具備預設樣式 — 粗體並置中，即使你不加上你自己的表格樣式，他們仍然能被凸顯。
 
-<p>初始架構會看起來像這樣:</p>
+表格標頭還有一個額外的好處 — 伴隨著 `作用域(scope)` 屬性 (我們將會在下一個章節中學到)，當要連結每個標頭而所有資料都在同一列或欄時，這能允許表格使用起來更無障礙。並且，螢幕閱讀器能一次性讀出完整一列或一欄的資料，這是非常實用的。
 
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Animals&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Hippopotamus&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Horse&lt;/th&gt;
-    &lt;td&gt;Mare&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Stallion&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Crocodile&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Chicken&lt;/th&gt;
-    &lt;td&gt;Hen&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Rooster&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+## 允許列或欄的儲存格合併
 
-<p>但輸出的不如我們想要的樣子:</p>
+有時我們想要儲存格涵蓋複數的列或欄，來看看下列顯示常見動物名稱的簡單例子。在某些案例，我們想要將名字代表雄性或雌性顯示在動物名字旁邊，但有些不需要，這種情況下我們只想將動物名字橫跨整個表格。
 
+初始架構會看起來像這樣:
+
+```html
 <table>
- <tbody>
   <tr>
-   <th>Animals</th>
+    <th>Animals</th>
   </tr>
   <tr>
-   <th>Hippopotamus</th>
+    <th>Hippopotamus</th>
   </tr>
   <tr>
-   <th>Horse</th>
-   <td>Mare</td>
+    <th>Horse</th>
+    <td>Mare</td>
   </tr>
   <tr>
-   <td>Stallion</td>
+    <td>Stallion</td>
   </tr>
   <tr>
-   <th>Crocodile</th>
+    <th>Crocodile</th>
   </tr>
   <tr>
-   <th>Chicken</th>
-   <td>Hen</td>
+    <th>Chicken</th>
+    <td>Hen</td>
   </tr>
   <tr>
-   <td>Rooster</td>
+    <td>Rooster</td>
   </tr>
- </tbody>
 </table>
+```
 
-<p>我們需要一種方式讓"Animals", "Hippopotamus", 和 "Crocodile" 橫跨兩個欄位, 然後讓 "Horse" and "Chicken" 向下合併兩列儲存格。幸運地是，表格標頭和儲存格有 <code>colspan</code> 和 <code>rowspan</code> 屬性，可以讓我們這樣做。 兩者都接受無單位的數值等同於你想合併的列或欄的數量。舉例來說，<code>colspan="2"</code> 會讓這個儲存格合併兩欄。</p>
+```css hidden
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+```
 
-<p>來使用 <code>colspan</code> 和 <code>rowspan</code> 來改善這麼表格吧!</p>
+但輸出的不如我們想要的樣子:
 
-<ol>
- <li>首先，複製一份我們的 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html">animals-table.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">minimal-table.css</a> 檔案在你的電腦上。這個HTML包含跟上面同樣的動物範例。</li>
- <li>接著，使用 <code>colspan</code> 來讓 "Animals", "Hippopotamus", 和 "Crocodile" 合併橫跨兩個欄位。</li>
- <li>最後, 使用 <code>rowspan</code> 來讓 "Horse" and "Chicken" 合併橫跨兩列。</li>
- <li>儲存並在瀏覽器上檢視你改善後的程式碼。</li>
-</ol>
+{{EmbedLiveSample("允許列或欄的儲存格合併", "", "350")}}
 
-<div class="note">
-<p><strong>備註：</strong> 你可以在GitHub上的 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html">animals-table-fixed.html</a> 找到我們寫好的完整的範例 (<a href="http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html">see it live also</a>).</p>
-</div>
+我們需要一種方式讓"Animals", "Hippopotamus", 和 "Crocodile" 橫跨兩個欄位, 然後讓 "Horse" and "Chicken" 向下合併兩列儲存格。幸運地是，表格標頭和儲存格有 `colspan` 和 `rowspan` 屬性，可以讓我們這樣做。 兩者都接受無單位的數值等同於你想合併的列或欄的數量。舉例來說，`colspan="2"` 會讓這個儲存格合併兩欄。
 
-<h2 id="Providing_common_styling_to_columns">Providing common styling to columns</h2>
+來使用 `colspan` 和 `rowspan` 來改善這麼表格吧!
 
-<p>在我們繼續下去前，我們將要告訴你這節文章最後一個重點。HTML有一個一次定義一整欄樣式資訊的方法 —  <strong><code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong>  <strong><code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong> 元素。These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on <em>every</em> <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.</p>
+1.  首先，複製一份我們的 [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 檔案在你的電腦上。這個 HTML 包含跟上面同樣的動物範例。
+2.  接著，使用 `colspan` 來讓 "Animals", "Hippopotamus", 和 "Crocodile" 合併橫跨兩個欄位。
+3.  最後, 使用 `rowspan` 來讓 "Horse" and "Chicken" 合併橫跨兩列。
+4.  儲存並在瀏覽器上檢視你改善後的程式碼。
 
-<div class="note">
-<p><strong>備註：</strong> Styling columns like this is <a href="https://www.w3.org/TR/CSS22/tables.html#columns">limited to a few properties</a>: <code><a href="/en-US/docs/Web/CSS/border">border</a></code>, <code><a href="/en-US/docs/Web/CSS/background">background</a></code>, <code><a href="/en-US/docs/Web/CSS/width">width</a></code>, and <code><a href="/en-US/docs/Web/CSS/visibility">visibility</a></code>. To set other properties you'll have to either style every <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.</p>
-</div>
+> **備註：** 你可以在 GitHub 上的 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) 找到我們寫好的完整的範例 ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
-<p>Take the following simple example:</p>
+## Providing common styling to columns
 
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Data 1&lt;/th&gt;
-    &lt;th style="background-color: yellow"&gt;Data 2&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Calcutta&lt;/td&gt;
-    &lt;td style="background-color: yellow"&gt;Orange&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Robots&lt;/td&gt;
-    &lt;td style="background-color: yellow"&gt;Jazz&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+### Styling without \<col>
 
-<p>Which gives us the following result:</p>
+在我們繼續下去前，我們將要告訴你這節文章最後一個重點。HTML 有一個一次定義一整欄樣式資訊的方法 — **[`<col>`](/en-US/docs/Web/HTML/Element/col)** **[`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup)** 元素。These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on _every_ `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
 
+> **備註：** Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/en-US/docs/Web/CSS/border), [`background`](/en-US/docs/Web/CSS/background), [`width`](/en-US/docs/Web/CSS/width), and [`visibility`](/en-US/docs/Web/CSS/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child()")}}.
+
+Take the following simple example:
+
+```html
 <table>
- <tbody>
   <tr>
-   <th>Data 1</th>
-   <th style="background-color: yellow;">Data 2</th>
+    <th>Data 1</th>
+    <th style="background-color: yellow">Data 2</th>
   </tr>
   <tr>
-   <td>Calcutta</td>
-   <td style="background-color: yellow;">Orange</td>
+    <td>Calcutta</td>
+    <td style="background-color: yellow">Orange</td>
   </tr>
   <tr>
-   <td>Robots</td>
-   <td style="background-color: yellow;">Jazz</td>
+    <td>Robots</td>
+    <td style="background-color: yellow">Jazz</td>
   </tr>
- </tbody>
 </table>
+```
 
-<p>This isn't ideal, as we have to repeat the styling information across all three cells in the column (we'd probably have a <code>class</code> set on all three in a real project and specify the styling in a separate stylesheet). Instead of doing this, we can specify the information once, on a <code>&lt;col&gt;</code> element. <code>&lt;col&gt;</code> elements are  specified inside a <code>&lt;colgroup&gt;</code> container just below the opening <code>&lt;table&gt;</code> tag. We could create the same effect as we see above by specifying our table as follows:</p>
+```css hidden
+  table {
+    border-collapse: collapse;
+  }
+  td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+```
 
-<pre class="brush: html notranslate">&lt;table&gt;
-  &lt;colgroup&gt;
-    &lt;col&gt;
-    &lt;col style="background-color: yellow"&gt;
-  &lt;/colgroup&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Data 1&lt;/th&gt;
-    &lt;th&gt;Data 2&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Calcutta&lt;/td&gt;
-    &lt;td&gt;Orange&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Robots&lt;/td&gt;
-    &lt;td&gt;Jazz&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+Which gives us the following result:
 
-<p>Effectively we are defining two "style columns", one specifying styling information for each column. We are not styling the first column, but we still have to include a blank <code>&lt;col&gt;</code> element — if we didn't, the styling would just be applied to the first column.</p>
+{{EmbedLiveSample("Styling_without_col", "", "200")}}
 
-<p>If we wanted to apply the styling information to both columns, we could just include one <code>&lt;col&gt;</code> element with a span attribute on it, like this:</p>
+This isn't ideal, as we have to repeat the styling information across all three cells in the column (we'd probably have a `class` set on all three in a real project and specify the styling in a separate stylesheet).
 
-<pre class="brush: html notranslate">&lt;colgroup&gt;
-  &lt;col style="background-color: yellow" span="2"&gt;
-&lt;/colgroup&gt;</pre>
+### Styling with \<col>
 
-<p>Just like <code>colspan</code> and <code>rowspan</code>, <code>span</code> takes a unitless number value that specifies the number of columns you want the styling to apply to.</p>
+Instead of doing this, we can specify the information once, on a `<col>` element. `<col>` elements are specified inside a `<colgroup>` container just below the opening `<table>` tag. We could create the same effect as we see above by specifying our table as follows:
 
-<h3 id="Active_learning_colgroup_and_col">Active learning: colgroup and col</h3>
+```html
+<table>
+  <colgroup>
+    <col>
+    <col style="background-color: yellow">
+  </colgroup>
+  <tr>
+    <th>Data 1</th>
+    <th>Data 2</th>
+  </tr>
+  <tr>
+    <td>Calcutta</td>
+    <td>Orange</td>
+  </tr>
+  <tr>
+    <td>Robots</td>
+    <td>Jazz</td>
+  </tr>
+</table>
+```
 
-<p>Now it's time to have a go yourself.</p>
+Effectively we are defining two "style columns", one specifying styling information for each column. We are not styling the first column, but we still have to include a blank `<col>` element — if we didn't, the styling would just be applied to the first column.
 
-<p>Below you can see the timetable of a languages teacher. On Friday she has a new class teaching Dutch all day, but she also teaches German for a few periods on Tuesday and Thursdays. She wants to highlight the columns containing the days she is teaching.</p>
+If we wanted to apply the styling information to both columns, we could just include one `<col>` element with a span attribute on it, like this:
 
-<p>{{EmbedGHLiveSample("learning-area/html/tables/basic/timetable-fixed.html", '100%', 320)}}</p>
+```html
+<colgroup>
+  <col style="background-color: yellow" span="2">
+</colgroup>
+```
 
-<p>Recreate the table by following the steps below.</p>
+Just like `colspan` and `rowspan`, `span` takes a unitless number value that specifies the number of columns you want the styling to apply to.
 
-<ol>
- <li>First, make a local copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html">timetable.html</a> file in a new directory on your local machine. The HTML contains the same table you saw above, minus the column styling information.</li>
- <li>Add a <code>&lt;colgroup&gt;</code> element at the top of the table, just underneath the <code>&lt;table&gt;</code> tag, in which you can add your <code>&lt;col&gt;</code> elements (see the remaining steps below).</li>
- <li>The first two columns need to be left unstyled.</li>
- <li>Add a background color to the third column. The value for your <code>style</code> attribute is <code>background-color:#97DB9A;</code></li>
- <li>Set a separate width on the fourth column. The value for your <code>style</code> attribute is <code>width: 42px;</code></li>
- <li>Add a background color to the fifth column. The value for your <code>style</code> attribute is <code>background-color: #97DB9A;</code></li>
- <li>Add a different background color plus a border to the sixth column, to signify that this is a special day and she's teaching a new class. The values for your <code>style</code> attribute are <code>background-color:#DCC48E; border:4px solid #C1437A;</code></li>
- <li>The last two days are free days, so just set them to no background color but a set width; the value for the <code>style</code> attribute is <code>width: 42px;</code></li>
-</ol>
+### Active learning: colgroup and col
 
-<p>See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html">timetable-fixed.html</a> (<a href="http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html">see it live also</a>).</p>
+Now it's time to have a go yourself.
 
-<h2 id="Summary">Summary</h2>
+Below you can see the timetable of a languages teacher. On Friday she has a new class teaching Dutch all day, but she also teaches German for a few periods on Tuesday and Thursdays. She wants to highlight the columns containing the days she is teaching.
 
-<p>That just about wraps up the basics of HTML Tables. In the next article we will look at some slightly more advanced table features, and start to think how accessible they are for visually impaired people.</p>
+{{EmbedGHLiveSample("learning-area/html/tables/basic/timetable-fixed.html", '100%', 320)}}
 
-<div>{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}</div>
+Recreate the table by following the steps below.
 
-<div>
-<h2 id="In_this_module">In this module</h2>
+1.  First, make a local copy of our [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) file in a new directory on your local machine. The HTML contains the same table you saw above, minus the column styling information.
+2.  Add a `<colgroup>` element at the top of the table, just underneath the `<table>` tag, in which you can add your `<col>` elements (see the remaining steps below).
+3.  The first two columns need to be left unstyled.
+4.  Add a background color to the third column. The value for your `style` attribute is `background-color:#97DB9A;`
+5.  Set a separate width on the fourth column. The value for your `style` attribute is `width: 42px;`
+6.  Add a background color to the fifth column. The value for your `style` attribute is `background-color: #97DB9A;`
+7.  Add a different background color plus a border to the sixth column, to signify that this is a special day and she's teaching a new class. The values for your `style` attribute are `background-color:#DCC48E; border:4px solid #C1437A;`
+8.  The last two days are free days, so just set them to no background color but a set width; the value for the `style` attribute is `width: 42px;`
 
-<ul>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Basics">HTML table basics</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Tables/Structuring_planet_data">Structuring planet data</a></li>
-</ul>
-</div>
+See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ([see it live also](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
+
+## Summary
+
+That just about wraps up the basics of HTML Tables. In the next article we will look at some slightly more advanced table features, and start to think how accessible they are for visually impaired people.
+
+{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+
+## In this module
+
+- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
+- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
+- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)
