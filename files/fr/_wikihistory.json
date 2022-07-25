@@ -15035,25 +15035,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onerror": {
-    "modified": "2019-03-23T22:47:31.401Z",
-    "contributors": [
-      "NemoNobobyPersonne",
-      "Hell_Carlito",
-      "FGM",
-      "ylerjen"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T23:45:30.027Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
   "Web/API/HTMLBRElement": {
     "modified": "2019-03-23T23:30:24.531Z",
     "contributors": [
@@ -19445,6 +19426,15 @@
       "omarce",
       "Mgjbot",
       "Chbok"
+    ]
+  },
+  "Web/API/Window/error_event": {
+    "modified": "2019-03-23T22:47:31.401Z",
+    "contributors": [
+      "NemoNobobyPersonne",
+      "Hell_Carlito",
+      "FGM",
+      "ylerjen"
     ]
   },
   "Web/API/Window/event": {
@@ -40721,6 +40711,16 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T23:45:30.027Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "BenoitL"
     ]
   },
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {

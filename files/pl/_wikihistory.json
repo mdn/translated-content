@@ -2433,16 +2433,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-24T00:18:31.426Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "AshfaqHossain",
-      "wojciech.fornal",
-      "Ptak82"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2020-10-15T22:04:15.653Z",
     "contributors": [
@@ -3632,6 +3622,16 @@
       "Witia",
       "Ptak82",
       "Rev"
+    ]
+  },
+  "Web/API/Window/load_event": {
+    "modified": "2019-03-24T00:18:31.426Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "AshfaqHossain",
+      "wojciech.fornal",
+      "Ptak82"
     ]
   },
   "Web/API/Window/localStorage": {
