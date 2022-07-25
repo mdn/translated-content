@@ -1025,7 +1025,7 @@
 /fr/docs/DOM/window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM/window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM/window.onbeforeunload	/fr/docs/Web/API/Window/beforeunload_event
-/fr/docs/DOM/window.onload	/fr/docs/Web/API/GlobalEventHandlers/onload
+/fr/docs/DOM/window.onload	/fr/docs/conflicting/Web/API/Window/load_event
 /fr/docs/DOM/window.onpopstate	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/DOM/window.open	/fr/docs/Web/API/Window/open
 /fr/docs/DOM/window.openDialog	/fr/docs/Web/API/Window/openDialog
@@ -1173,7 +1173,7 @@
 /fr/docs/DOM:window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
 /fr/docs/DOM:window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM:window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
-/fr/docs/DOM:window.onload	/fr/docs/Web/API/GlobalEventHandlers/onload
+/fr/docs/DOM:window.onload	/fr/docs/conflicting/Web/API/Window/load_event
 /fr/docs/DOM:window.open	/fr/docs/Web/API/Window/open
 /fr/docs/DOM:window.opener	/fr/docs/Web/API/Window/opener
 /fr/docs/DOM:window.parent	/fr/docs/Web/API/Window/parent
@@ -3798,11 +3798,13 @@
 /fr/docs/Web/API/GlobalEventHandlers/onclick	/fr/docs/Web/API/Element/click_event
 /fr/docs/Web/API/GlobalEventHandlers/onclose	/fr/docs/Web/API/HTMLDialogElement/close_event
 /fr/docs/Web/API/GlobalEventHandlers/ondblclick	/fr/docs/Web/API/Element/dblclick_event
+/fr/docs/Web/API/GlobalEventHandlers/onerror	/fr/docs/Web/API/Window/error_event
 /fr/docs/Web/API/GlobalEventHandlers/onfocus	/fr/docs/Web/API/Window/focus_event
 /fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/fr/docs/Web/API/Element/gotpointercapture_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeydown	/fr/docs/Web/API/Element/keydown_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeypress	/fr/docs/Web/API/Element/keypress_event
 /fr/docs/Web/API/GlobalEventHandlers/onkeyup	/fr/docs/Web/API/Element/keyup_event
+/fr/docs/Web/API/GlobalEventHandlers/onload	/fr/docs/conflicting/Web/API/Window/load_event
 /fr/docs/Web/API/GlobalEventHandlers/onloadend	/fr/docs/Web/API/XMLHttpRequest/loadend_event
 /fr/docs/Web/API/GlobalEventHandlers/onloadstart	/fr/docs/Web/API/HTMLMediaElement/loadstart_event
 /fr/docs/Web/API/GlobalEventHandlers/onmousedown	/fr/docs/Web/API/Element/mousedown_event
@@ -3965,7 +3967,7 @@
 /fr/docs/Web/API/Window.matchMedia	/fr/docs/Web/API/Window/matchMedia
 /fr/docs/Web/API/Window.navigator	/fr/docs/Web/API/Window/navigator
 /fr/docs/Web/API/Window.onbeforeunload	/fr/docs/Web/API/Window/beforeunload_event
-/fr/docs/Web/API/Window.onload	/fr/docs/Web/API/GlobalEventHandlers/onload
+/fr/docs/Web/API/Window.onload	/fr/docs/conflicting/Web/API/Window/load_event
 /fr/docs/Web/API/Window.onpopstate	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Window.onresize	/fr/docs/Web/API/Window/resize_event
 /fr/docs/Web/API/Window.openDialog	/fr/docs/Web/API/Window/openDialog

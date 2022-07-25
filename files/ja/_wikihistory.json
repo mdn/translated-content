@@ -14258,20 +14258,6 @@
       "genzai"
     ]
   },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T23:29:36.980Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "ethertank"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onplaying": {
-    "modified": "2020-10-15T22:31:36.004Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/HTMLAnchorElement": {
     "modified": "2020-10-15T22:22:52.350Z",
     "contributors": [
@@ -46807,6 +46793,12 @@
       "mpcjazz"
     ]
   },
+  "conflicting/Web/API/HTMLMediaElement/playing_event": {
+    "modified": "2020-10-15T22:31:36.004Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "conflicting/Web/API/IDBRequest/success_event": {
     "modified": "2020-10-15T22:21:11.208Z",
     "contributors": [
@@ -47036,6 +47028,14 @@
     "modified": "2020-10-15T22:23:25.951Z",
     "contributors": [
       "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T23:29:36.980Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "ethertank"
     ]
   },
   "conflicting/Web/API/Window/messageerror_event": {
