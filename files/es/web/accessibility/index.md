@@ -36,7 +36,7 @@ El [área de aprendizaje de accesibilidad](/es/docs/Learn/Accessibility) de MDN 
   - : Este artículo analiza nuestra percepción de la luz y el color, proporciona una base para el uso del color en diseños accesibles y demuestra las mejores prácticas para el contenido visual y legible.
 - [Widgets de JavaScript navegables por teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Hasta ahora, los desarrolladores web que querían hacer accesibles sus widgets basados en `<div>` y `<span>` habían carecido de las técnicas adecuadas. **La accesibilidad del teclado** es parte de los requisitos mínimos de accesibilidad, que un desarrollador debe conocer.
-- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
+- [ARIA](/es/docs/Web/Accessibility/ARIA)
   - : Accessible Rich Internet Applications (ARIA) es una colección de atributos que definen como realizar contenido y aplicaciónes web (especialmente las desarrolladas con Javascript) más accesibles para las personas con discapacidades.
 - [Lista de comprobación de accesibilidad móvil](/es/docs/Web/Accessibility/Mobile_accessibility_checklist)
   - : Este artículo proporciona una lista de comprobación concisa de los requisitos de accesibilidad para los desarrolladores de aplicaciones móviles.
