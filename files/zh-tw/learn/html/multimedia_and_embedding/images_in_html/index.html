@@ -28,7 +28,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 <p>為了在網頁上放置一個簡單的圖像，我們使用&lt;img&gt;元素。 這是一個空元素（意味著它沒有文本內容或結束標記），並需要至少一個屬性（src）（有時稱為其完整標題，source）才有用。 src屬性包含指向要嵌入頁面的圖像的路徑，該路徑可以是相對路徑或絕對路徑URL，與&lt;a&gt;元素中的href屬性相同。</p>
 
 <div class="note">
-<p><strong>提醒</strong>: 在繼續之前，您應該閱讀有關URL和路徑的快速入門，以複習<a href="/en-US/docs/https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths">相對路徑和絕對路徑URL</a>。</p>
+<p><strong>備註：</strong> 在繼續之前，您應該閱讀有關URL和路徑的快速入門，以複習<a href="/en-US/docs/https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths">相對路徑和絕對路徑URL</a>。</p>
 </div>
 
 <p>舉例來說, 如果您的圖片名為 dinosaur.jpg 且與HTML檔案位於同一資料夾中，可以這樣嵌入圖片：</p>
@@ -42,7 +42,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 <p>像這樣.</p>
 
 <div class="note">
-<p><strong>提醒</strong>: 搜索引擎還會讀取圖片名稱，並將其納入SEO中。 因此您應該為圖片提供一個描述性的檔名。 例如 dinosaur.jpg 的命名方式會比 img835.png 更好。</p>
+<p><strong>備註：</strong> 搜索引擎還會讀取圖片名稱，並將其納入SEO中。 因此您應該為圖片提供一個描述性的檔名。 例如 dinosaur.jpg 的命名方式會比 img835.png 更好。</p>
 </div>
 
 <p>你也可以用絕對路徑URL來嵌入圖片，例如</p>
@@ -52,7 +52,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 <p>但這麼做是沒有意義的，因為它只會使瀏覽器執行更多工作，瀏覽器需重複執行從DNS服務器中搜尋IP地址等等工作。您應將網站上的圖片與HTML存放在同一個伺服器上。</p>
 
 <div class="warning">
-<p><strong>注意:</strong> 大多數圖像均受版權保護。 請勿在你的網站上隨意顯示圖片，除非：</p>
+<p><strong>警告：</strong> 大多數圖像均受版權保護。 請勿在你的網站上隨意顯示圖片，除非：</p>
 
 <ul>
  <li>你是圖片的擁有者.</li>
@@ -68,11 +68,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 <p><img alt='A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it' src="basic-image.png"></p>
 
 <div class="note">
-<p><strong>提醒</strong>: &lt;img&gt;和&lt;video&gt;之類的元素有時也稱為替換元素。 這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。</p>
+<p><strong>備註：</strong> &lt;img&gt;和&lt;video&gt;之類的元素有時也稱為替換元素。 這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。</p>
 </div>
 
 <div class="note">
-<p><strong>提醒</strong>: 您可以從在<a href="/zh-TW/docs/https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html">Github</a>上找到本節完成的示例（參見<a href="/zh-TW/docs/https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html">開源碼</a>。）</p>
+<p><strong>備註：</strong> 您可以從在<a href="/zh-TW/docs/https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html">Github</a>上找到本節完成的示例（參見<a href="/zh-TW/docs/https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html">開源碼</a>。）</p>
 </div>
 
 <h3 id="替代性文字">替代性文字</h3>
@@ -107,7 +107,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 <p>本質上，關鍵是即使在看不見圖片的情況下也能提供相同的體驗。這樣可以確保所有使用者都不會丟失任何內容。嘗試在瀏覽器中關閉圖像，然後查看外觀。您很快就會意識到，如果看不到圖片，替代文字會很有幫助。</p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, see our guide to <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text Alternatives</a>.</p>
+<p><strong>備註：</strong> For more information, see our guide to <a href="/en-US/docs/Learn/Accessibility/HTML#Text_alternatives">Text Alternatives</a>.</p>
 </div>
 
 <h3 id="寬與高">寬與高</h3>
@@ -129,7 +129,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 <p>However, you shouldn't alter the size of your images using HTML attributes. If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct <a href="https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29">aspect ratio</a>. You should use an image editor to put your image at the correct size before putting it on your webpage.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you do need to alter an image's size, you should use <a href="/en-US/docs/Learn/CSS">CSS</a> instead.</p>
+<p><strong>備註：</strong> If you do need to alter an image's size, you should use <a href="/en-US/docs/Learn/CSS">CSS</a> instead.</p>
 </div>
 
 <h3 id="圖片標題">圖片標題</h3>
@@ -169,10 +169,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see an answer:</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -189,7 +186,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -209,7 +206,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -286,9 +283,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 350, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('實戰練習：嵌入圖片', 700, 350) }}</p>
 
 <h2 id="用圖文和圖文標註說明圖像">用圖文和圖文標註說明圖像</h2>
 
@@ -321,7 +317,7 @@ textarea.onkeyup = function(){
 <p>The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.</p>
 
 <div class="note">
-<p><strong>Note</strong>: From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and <code>alt</code> text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.</p>
+<p><strong>備註：</strong> From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and <code>alt</code> text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.</p>
 </div>
 
 <p>A figure doesn't have to be an image. It is an independent unit of content that:</p>
@@ -345,10 +341,7 @@ textarea.onkeyup = function(){
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see an answer:</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -364,7 +357,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css hidden">html {
   font-family: sans-serif;
 }
 
@@ -384,7 +377,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -461,9 +454,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 350, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('實戰練習：建立圖文標註', 700, 350) }}</p>
 
 <h2 id="CSS_背景圖片">CSS 背景圖片</h2>
 
@@ -478,7 +470,7 @@ textarea.onkeyup = function(){
 <p>總結來說，如果圖片在內容上具有含義，則應使用HTML圖像。 如果圖像純粹是裝飾性的，則應使用CSS背景圖片。</p>
 
 <div class="note">
-<p><strong>提醒</strong>: 在我們的CSS主題中，您將學到更多關於CSS背景圖片的知識。</p>
+<p><strong>備註：</strong> 在我們的CSS主題中，您將學到更多關於CSS背景圖片的知識。</p>
 </div>
 
 <h2 id="試試看!">試試看!</h2>

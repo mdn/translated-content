@@ -34,8 +34,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>:<br>
- HTML 中的元素是不區分大小寫的<em>。</em><br>
+<p><strong>備註：</strong> HTML 中的元素是不區分大小寫的。<br>
  例如 : 一個 {{htmlelement("title")}} 標籤可以寫成<code>&lt;title&gt;</code>, <code>&lt;TITLE&gt;</code>, <code>&lt;Title&gt;</code>, <code>&lt;TiTlE&gt;</code>，之類的形式，都沒有問題<em>。</em><br>
  通常來說，為了保持一致性(consistency)、可讀性(readability)，以及其他可能的原因，最好還是以小寫來撰寫標籤<em>。</em></p>
 </div>
@@ -55,16 +54,13 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
  <li><strong>元素(element):</strong> 以上三者加起來就是元素。</li>
 </ol>
 
-<h3 id="不要光是看_創造你的第一個_HTML_元素">不要光是看: 創造你的第一個 HTML 元素</h3>
+<h3 id="不要光是看_創造你的第一個_HTML_元素">不要光是看：創造你的第一個 HTML 元素</h3>
 
 <p>編輯下面輸入區域中的文字，嘗試用 <code>&lt;em&gt;</code> 和 <code>&lt;/em&gt;</code> 標籤包裹住文字(把 <code>&lt;em&gt;</code> 放在文字前面來起始元素，把 <code>&lt;/em&gt;</code> 放在後面來結束元素) ，這會使得文字變成斜體字。你可以在下面的輸出區域看到更新後的變化。</p>
 
 <p>如果你不小心打錯了，你可以按下 <em>Reset</em> 鍵來重置。如果你卡關了，你可以點擊 <em>Show solution</em> 鍵來偷看答案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
 
@@ -81,7 +77,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -102,7 +98,7 @@ body {
 }
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -179,9 +175,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 400, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('不要光是看：創造你的第一個 HTML 元素', 700, 400) }}</p>
 
 <h3 id="巢狀元素Nesting_elements">巢狀元素(Nesting elements)</h3>
 
@@ -216,15 +211,15 @@ textarea.onkeyup = function(){
 <p>{{ EmbedLiveSample('區塊級元素_vs._行內元素Block_versus_inline_elements', 700, 200, "", "") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: HTML5 重新定義了元素類別：請見 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories">Element content categories</a>。新的定義比先前所定義的更為準確且少歧義性，因此它們也同時比 block 和 inline 還來得複雜，所以我們選擇在這裡繼續使用這個觀念。</p>
+<p><strong>備註：</strong> HTML5 重新定義了元素類別：請見 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories">Element content categories</a>。新的定義比先前所定義的更為準確且少歧義性，因此它們也同時比 block 和 inline 還來得複雜，所以我們選擇在這裡繼續使用這個觀念。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: 在本主題所使用的 block 與 inline 這兩個名詞，不應與 CSS 的 boxes 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態(display type)並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。</p>
+<p><strong>備註：</strong> 在本主題所使用的 block 與 inline 這兩個名詞，不應與 CSS 的 boxes 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態(display type)並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 <a href="/en-US/docs/Web/HTML/Block-level_elements">Block-l</a><a href="/en-US/docs/Web/HTML/Block-level_elements">evel elements</a> 和 <a href="/en-US/docs/Web/HTML/Inline_elements">Inline elements</a>。</p>
+<p><strong>備註：</strong> 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 <a href="/en-US/docs/Web/HTML/Block-level_elements">Block-l</a><a href="/en-US/docs/Web/HTML/Block-level_elements">evel elements</a> 和 <a href="/en-US/docs/Web/HTML/Inline_elements">Inline elements</a>。</p>
 </div>
 
 <h3 id="空元素Empty_elements">空元素(Empty elements)</h3>
@@ -238,7 +233,7 @@ textarea.onkeyup = function(){
 <p>{{ EmbedLiveSample('空元素Empty_elements', 700, 300, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: 空元素有時也被稱作 <em>void elements。</em></p>
+<p><strong>備註：</strong> 空元素有時也被稱作 <em>void elements。</em></p>
 </div>
 
 <h2 id="屬性Attributes">屬性(Attributes)</h2>
@@ -257,7 +252,7 @@ textarea.onkeyup = function(){
  <li>屬性值以及一對包著它的引號。</li>
 </ol>
 
-<h3 id="主動學習_在元素中加入屬性">主動學習: 在元素中加入屬性</h3>
+<h3 id="主動學習_在元素中加入屬性">主動學習：在元素中加入屬性</h3>
 
 <p>我們再舉另外一個元素的例子 {{htmlelement("a")}} 代表 anchor (錨)，而這個元素會讓被它包裹住的內容變成一個超連結。它可以和很多種屬性搭配，以下僅列出幾種：</p>
 
@@ -279,10 +274,7 @@ textarea.onkeyup = function(){
 
 <p>如果你不小心打錯了，你可以按下<em> Reset </em>鍵重置。如果你卡關了，可以點擊<em> Show solution</em> 鍵來偷看答案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code2">Playable code2</h6>
-
-<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;&amp;lt;p&amp;gt;A link to my favourite website.&amp;lt;/p&amp;gt;&lt;/textarea&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
 &lt;div class="output"&gt;&lt;/div&gt;
@@ -292,7 +284,7 @@ textarea.onkeyup = function(){
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -308,7 +300,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById("code");
+<pre class="brush: js hidden">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -331,9 +323,8 @@ solution.addEventListener("click", function() {
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code2', 700, 300) }}</p>
+<p>{{ EmbedLiveSample('主動學習：在元素中加入屬性', 700, 300) }}</p>
 
 <h3 id="布林屬性Boolean_attributes">布林屬性(Boolean attributes)</h3>
 
@@ -422,7 +413,7 @@ window.addEventListener("load", drawOutput);
  <li><code>&lt;body&gt;&lt;/body&gt;</code>: {{htmlelement("body")}} 元素含括了<em>所有</em>你想要給網頁瀏覽者看到的內容，不管是文字、圖片、遊戲、可以播放的音樂或其他東西。</li>
 </ol>
 
-<h3 id="主動學習_在HTML文檔中加入一些特徵">主動學習: 在HTML文檔中加入一些特徵</h3>
+<h3 id="主動學習_在HTML文檔中加入一些特徵">主動學習：在HTML文檔中加入一些特徵</h3>
 
 <p>如果你想試試看在你的電腦上寫一些 HTML，你可以: </p>
 
@@ -434,7 +425,7 @@ window.addEventListener("load", drawOutput);
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 你也可以在這找到基本的 HTML 範本: <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">MDN Learning Area Github repo</a>。</p>
+<p><strong>備註：</strong> 你也可以在這找到基本的 HTML 範本: <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">MDN Learning Area Github repo</a>。</p>
 </div>
 
 <p>接著你就可以用網頁瀏覽器開啟你的檔案，看看這些原始碼會被渲染(rendered)成什麼樣子，然後編輯原始碼並重新整理瀏覽器，再看看會變成怎樣。目前你的網頁會長這樣：</p>
@@ -451,10 +442,7 @@ window.addEventListener("load", drawOutput);
 
 <p>如果你不小心打錯了，你可以用<em> Reset</em> 鍵重置。如果你卡關了，可以點擊<em> Show solution</em> 鍵來偷看答案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code3">Playable code3</h6>
-
-<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;
 &amp;lt;p&amp;gt;This is my page&amp;lt;/p&amp;gt;&lt;/textarea&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
@@ -465,7 +453,7 @@ window.addEventListener("load", drawOutput);
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -489,7 +477,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById("code");
+<pre class="brush: js hidden">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -515,9 +503,8 @@ solution.addEventListener("click", function() {
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code3', 700, 600) }}</p>
+<p>{{ EmbedLiveSample('主動學習：在HTML文檔中加入一些特徵', 700, 600) }}</p>
 
 <h3 id="HTML中的空格Whitespace">HTML中的空格(Whitespace)</h3>
 
@@ -578,7 +565,7 @@ window.addEventListener("load", drawOutput);
 <p>{{ EmbedLiveSample('實體參照Entity_references_引用_HTML_中的特殊字元', 700, 200, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以在維基百科中找到完整的 HTML 字元實體參照的對照表: <a href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">List of XML and HTML character entity references</a>。請記得只要你的 HTML 的<a href="Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding">字元編碼設定為 UTF-8</a>，你就不需要使用其他字元的實體參照，因為現今的瀏覽器都能應付。</p>
+<p><strong>備註：</strong> 你可以在維基百科中找到完整的 HTML 字元實體參照的對照表: <a href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">List of XML and HTML character entity references</a>。請記得只要你的 HTML 的<a href="Introduction_to_HTML/The_head_metadata_in_HTML#Specifying_your_document's_character_encoding">字元編碼設定為 UTF-8</a>，你就不需要使用其他字元的實體參照，因為現今的瀏覽器都能應付。</p>
 </div>
 
 <h2 id="HTML_註解">HTML 註解</h2>
@@ -600,7 +587,7 @@ window.addEventListener("load", drawOutput);
 <p>恭喜你看完了這個章節，我們你能享受這個學習基礎 HTML 的旅程！目前，你應該已經了解 HTML 長什麼樣子、它最基本的運作方式，並且能夠寫出一些元素和屬性。基礎 HTML 大致上就到這裡結束，在單元接下來的章節中，我們將會更深入探討本章節學到的內容並介紹更多 HTML 的觀念。千萬別轉台！</p>
 
 <div class="note">
-<p><strong>Note</strong>: 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 <a href="/en-US/docs/Learn/CSS">CSS</a>(Cascading Style Sheets)。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。</p>
+<p><strong>備註：</strong> 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 <a href="/en-US/docs/Learn/CSS">CSS</a>(Cascading Style Sheets)。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。</p>
 </div>
 
 <h2 id="另見"> 另見</h2>
