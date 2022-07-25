@@ -5,89 +5,99 @@ tags:
   - HTML
 translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-<div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}</div>
-
-<p>There are many other elements in HTML for formatting text, which we didn't get to in the <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a> article. The elements described in this article are less well-known, but still useful to know about (and this is still not a complete list by any means.) In here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.</p>
+There are many other elements in HTML for formatting text, which we didn't get to in the [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) article. The elements described in this article are less well-known, but still useful to know about (and this is still not a complete list by any means.) In here you'll learn about marking up quotations, description lists, computer code and other related text, subscript and superscript, contact information, and more.
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic HTML familiarity, as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a>. HTML text formatting, as covered in <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn how to use lesser-known HTML elements to mark up advanced semantic features.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic HTML familiarity, as covered in
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          >Getting started with HTML</a
+        >. HTML text formatting, as covered in
+        <a
+          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          >HTML text fundamentals</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn how to use lesser-known HTML elements to mark up advanced
+        semantic features.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="說明列表">說明列表</h2>
+## 說明列表
 
-<p>In HTML text fundamentals, we walked through how to <a href="/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">mark up basic lists</a> in HTML, but we didn't mention the third type of list you'll occasionally come across — <strong>description lists</strong>. The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers. Let's look at an example of a set of terms and definitions:</p>
+In HTML text fundamentals, we walked through how to [mark up basic lists](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) in HTML, but we didn't mention the third type of list you'll occasionally come across — **description lists**. The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers. Let's look at an example of a set of terms and definitions:
 
-<pre>soliloquy
-In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
-monologue
-In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
-aside
-In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information</pre>
+    soliloquy
+    In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
+    monologue
+    In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
+    aside
+    In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information
 
-<p>Description lists use a different wrapper than the other list types — {{htmlelement("dl")}}; in addition each term is wrapped in a {{htmlelement("dt")}} (description term) element, and each description is wrapped in a {{htmlelement("dd")}} (description description) element. Let's finish marking up our example:</p>
+Description lists use a different wrapper than the other list types — {{htmlelement("dl")}}; in addition each term is wrapped in a {{htmlelement("dt")}} (description term) element, and each description is wrapped in a {{htmlelement("dd")}} (description description) element. Let's finish marking up our example:
 
-<pre class="brush: html">&lt;dl&gt;
-  &lt;dt&gt;soliloquy&lt;/dt&gt;
-  &lt;dd&gt;In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)&lt;/dd&gt;
-  &lt;dt&gt;monologue&lt;/dt&gt;
-  &lt;dd&gt;In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.&lt;/dd&gt;
-  &lt;dt&gt;aside&lt;/dt&gt;
-  &lt;dd&gt;In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.&lt;/dd&gt;
-&lt;/dl&gt;</pre>
-
-<p>The browser default styles will display description lists with the descriptions indented somewhat from the terms. MDN's styles follow this convention fairly closely, but also embolden the terms for extra definition.</p>
-
+```html
 <dl>
- <dt>soliloquy</dt>
- <dd>In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)</dd>
- <dt>monologue</dt>
- <dd>In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.</dd>
- <dt>aside</dt>
- <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of addtional background information.</dd>
+  <dt>soliloquy</dt>
+  <dd>In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)</dd>
+  <dt>monologue</dt>
+  <dd>In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.</dd>
+  <dt>aside</dt>
+  <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.</dd>
 </dl>
+```
 
-<p>Note that it is permitted to have a single term with multiple descriptions, for example:</p>
+The browser default styles will display description lists with the descriptions indented somewhat from the terms. MDN's styles follow this convention fairly closely, but also embolden the terms for extra definition.
 
-<dl>
- <dt>aside</dt>
- <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.
-  In writing, a section of content that is related to the current topic, but doesn't fit directly into the main flow of content so is presented nearby (often in a box off to the side.)</dd>
-</dl>
+- soliloquy
+  - : In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)
+- monologue
+  - : In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.
+- aside
+  - : In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of addtional background information.
 
-<h3 id="Active_learning_Marking_up_a_set_of_definitions">Active learning: Marking up a set of definitions</h3>
+Note that it is permitted to have a single term with multiple descriptions, for example:
 
-<p>It's time to try your hand at description lists; add elements to the raw text in the <em>Input</em> field so that it appears as a description list in the <em>Output</em> field. You could try using your own terms and descriptions if you like.</p>
+- aside
+  - : In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.
+    In writing, a section of content that is related to the current topic, but doesn't fit directly into the main flow of content so is presented nearby (often in a box off to the side.)
 
-<p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
+### Active learning: Marking up a set of definitions
 
-<pre class="brush: html hidden">&lt;h2&gt;Input&lt;/h2&gt;
-&lt;textarea id="code" class="input"&gt;Bacon
+It's time to try your hand at description lists; add elements to the raw text in the _Input_ field so that it appears as a description list in the _Output_ field. You could try using your own terms and descriptions if you like.
+
+If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
+
+```html hidden
+<h2>Input</h2>
+<textarea id="code" class="input">Bacon
 The glue that binds the world together.
 Eggs
 The glue that binds the cake together.
 Coffee
 The drink that gets the world running in the morning.
-A light brown color.&lt;/textarea&gt;
-&lt;h2&gt;Output&lt;/h2&gt;
-&lt;div class="output"&gt;&lt;/div&gt;
-&lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-  &lt;input id="solution" type="button" value="Show solution" /&gt;
-&lt;/div&gt;
-</pre>
+A light brown color.</textarea>
+<h2>Output</h2>
+<div class="output"></div>
+<div class="controls">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -102,9 +112,10 @@ A light brown color.&lt;/textarea&gt;
 button {
   padding: 10px 10px 10px 0;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById("code");
+```js hidden
+var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -120,98 +131,106 @@ reset.addEventListener("click", function() {
 });
 
 solution.addEventListener("click", function() {
-textarea.value = '&lt;dl&gt;\n  &lt;dt&gt;Bacon&lt;/dt&gt;\n  &lt;dd&gt;The glue that binds the world together.&lt;/dd&gt;\n  &lt;dt&gt;Eggs&lt;/dt&gt;\n  &lt;dd&gt;The glue that binds the cake together.&lt;/dd&gt;\n  &lt;dt&gt;Coffee&lt;/dt&gt;\n  &lt;dd&gt;The drink that gets the world running in the morning.&lt;/dd&gt;\n  &lt;dd&gt;A light brown color.&lt;/dd&gt;\n&lt;/dl&gt;';
+textarea.value = '<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>';
   drawOutput();
 });
 
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Active learning: Marking up a set of definitions', 700, 500) }}</p>
+{{ EmbedLiveSample('Active learning: Marking up a set of definitions', 700, 500) }}
 
-<h2 id="Quotations">Quotations</h2>
+## Quotations
 
-<p>HTML also has features available for marking up quotations; which element you use depends on whether you are marking up a block or inline quotation.</p>
+HTML also has features available for marking up quotations; which element you use depends on whether you are marking up a block or inline quotation.
 
-<h3 id="Blockquotes">Blockquotes</h3>
+### Blockquotes
 
-<p>If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a {{htmlelement("blockquote")}} element to signify this, and include a URL pointing to the source of the quote inside a {{htmlattrxref("cite","blockquote")}} attribute. For example, the following markup is taken from the MDN <code>&lt;blockquote&gt;</code> element page:</p>
+If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a {{htmlelement("blockquote")}} element to signify this, and include a URL pointing to the source of the quote inside a {{htmlattrxref("cite","blockquote")}} attribute. For example, the following markup is taken from the MDN `<blockquote>` element page:
 
-<pre class="brush: html">&lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;</pre>
+```html
+<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+```
 
-<p>To turn this into a block quote, we would just do this:</p>
+To turn this into a block quote, we would just do this:
 
-<pre class="brush: html">&lt;blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
-  &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-  Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
-&lt;/blockquote&gt;</pre>
+```html
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
+```
 
-<p>Browser default styling will render this as an indented paragraph, as an indicator that it is a quote; MDN does this, but also adds some extra styling:</p>
+Browser default styling will render this as an indented paragraph, as an indicator that it is a quote; MDN does this, but also adds some extra styling:
 
 {{EmbedLiveSample('Blockquotes', '100%', '200px')}}
 
-<h3 id="Inline_quotations">Inline quotations</h3>
+### Inline quotations
 
-<p>Inline quotations work in exactly the same way, except that they use the {{htmlelement("q")}} element. For example, the below bit of markup contains a quotation from the MDN <code>&lt;q&gt;</code> page:</p>
+Inline quotations work in exactly the same way, except that they use the {{htmlelement("q")}} element. For example, the below bit of markup contains a quotation from the MDN `<q>` page:
 
-<pre class="brush: html">&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;intended
-for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</pre>
+```html
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q></p>
+```
 
-<p>Browser default styling will render this as normal text put in quotes to indicate a quotation, like so:</p>
+Browser default styling will render this as normal text put in quotes to indicate a quotation, like so:
 
 {{EmbedLiveSample('Inline quotations', '100%', '78px')}}
 
-<h3 id="Citations">Citations</h3>
+### Citations
 
-<p>The content of the {{htmlattrxref("cite","blockquote")}} attribute sounds useful, but unfortunately browsers, screenreaders, etc. don't really do much with it. There is no way to get the browser to display the contents of <code>cite</code>, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page, a better way to mark it up is put the {{htmlelement("cite")}} element next to the quote element. This is really meant to contain the name of the quote source — i.e. the name of the book, or name of the person that said the quote — but there is no reason why you couldn't link the text inside <code>&lt;cite&gt;</code> to the quote source in some way:</p>
+The content of the {{htmlattrxref("cite","blockquote")}} attribute sounds useful, but unfortunately browsers, screenreaders, etc. don't really do much with it. There is no way to get the browser to display the contents of `cite`, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page, a better way to mark it up is put the {{htmlelement("cite")}} element next to the quote element. This is really meant to contain the name of the quote source — i.e. the name of the book, or name of the person that said the quote — but there is no reason why you couldn't link the text inside `<cite>` to the quote source in some way:
 
-<pre class="brush: html">&lt;p&gt;According to the &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
-&lt;cite&gt;MDN blockquote page&lt;/cite&gt;&lt;/a&gt;:
-&lt;/p&gt;
+```html
+<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<cite>MDN blockquote page</cite></a>:
+</p>
 
-&lt;blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"&gt;
-  &lt;p&gt;The &lt;strong&gt;HTML &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt; Element&lt;/strong&gt; (or &lt;em&gt;HTML Block
-  Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended quotation.&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+</blockquote>
 
-&lt;p&gt;The quote element — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — is &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;intended
-for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;
-&lt;cite&gt;MDN q page&lt;/cite&gt;&lt;/a&gt;.&lt;/p&gt;</pre>
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+<cite>MDN q page</cite></a>.</p>
+```
 
-<p>Citations are styled in italic font by default. You can see this code at work in our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html">quotations.html</a> example.</p>
+Citations are styled in italic font by default. You can see this code at work in our [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html) example.
 
-<h3 id="Active_learning_Who_said_that">Active learning: Who said that?</h3>
+### Active learning: Who said that?
 
-<p>Time for another active learning example! In this example we'd like you to:</p>
+Time for another active learning example! In this example we'd like you to:
 
-<ol>
- <li>Turn the middle paragraph into a blockquote, which includes a <code>cite</code> attribute.</li>
- <li>Turn part of the third paragraph into an inline quote, which includes a <code>cite</code> attribute.</li>
- <li>Include a <code>&lt;cite&gt;</code> element for each quote</li>
-</ol>
+1.  Turn the middle paragraph into a blockquote, which includes a `cite` attribute.
+2.  Turn part of the third paragraph into an inline quote, which includes a `cite` attribute.
+3.  Include a `<cite>` element for each quote
 
-<p>Search online to find appropriate quote sources.</p>
+Search online to find appropriate quote sources.
 
-<p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
+If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
-<pre class="brush: html hidden">&lt;h2&gt;Input&lt;/h2&gt;
-&lt;textarea id="code" class="input"&gt;&lt;p&gt;Hello and welcome to my motivation page. As Confucius once said:&lt;/p&gt;
+```html hidden
+<h2>Input</h2>
+<textarea id="code" class="input"><p>Hello and welcome to my motivation page. As Confucius once said:</p>
 
-&lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;
+<p>It does not matter how slowly you go as long as you do not stop.</p>
 
-&lt;p&gt;I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk
-(as mentioned in Affirmations for Positive Thinking.)&lt;/p&gt;&lt;/textarea&gt;
-&lt;h2&gt;Output&lt;/h2&gt;
-&lt;div class="output"&gt;&lt;/div&gt;
-&lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-  &lt;input id="solution" type="button" value="Show solution" /&gt;
-&lt;/div&gt;
-</pre>
+<p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk
+(as mentioned in Affirmations for Positive Thinking.)</p></textarea>
+<h2>Output</h2>
+<div class="output"></div>
+<div class="controls">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
+</div>
+```
 
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -226,9 +245,10 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 button {
   padding: 10px 10px 10px 0;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById("code");
+```js hidden
+var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -244,49 +264,49 @@ reset.addEventListener("click", function() {
 });
 
 solution.addEventListener("click", function() {
-textarea.value = '&lt;p&gt;Hello and welcome to my motivation page. As &lt;a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"&gt;&lt;cite&gt;Confucius&lt;/cite&gt;&lt;/a&gt; once said:&lt;/p&gt;\n\n&lt;blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html"&gt;\n  &lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;\n&lt;/blockquote&gt;\n\n&lt;p&gt;I also love the concept of positive thinking, and &lt;q cite="http://www.affirmationsforpositivethinking.com/index.htm"&gt;The Need To Eliminate Negative Self Talk&lt;/q&gt; (as mentioned in &lt;a href="http://www.affirmationsforpositivethinking.com/index.htm"&gt;&lt;cite&gt;Affirmations for Positive Thinking&lt;/cite&gt;&lt;/a&gt;.)&lt;/p&gt;';
+textarea.value = '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
   drawOutput();
 });
 
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Active learning: Who said that?', 700, 500) }}</p>
+{{ EmbedLiveSample('Active learning: Who said that?', 700, 500) }}
 
-<h2 id="Abbreviations">Abbreviations</h2>
+## Abbreviations
 
-<p>Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a {{htmlattrxref("title")}} attribute.) Let's look at a couple of examples:</p>
+Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a {{htmlattrxref("title")}} attribute.) Let's look at a couple of examples:
 
-<pre>&lt;p&gt;We use &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; to structure our web documents.&lt;/p&gt;
+    <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
 
-&lt;p&gt;I think &lt;abbr title="Reverend"&gt;Rev.&lt;/abbr&gt; Green did it in the kitchen with the chainsaw.&lt;/p&gt;</pre>
+    <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
 
-<p>These will come out looking something like this (the expansion will appear in a tooltip when the term is hovered over):</p>
+These will come out looking something like this (the expansion will appear in a tooltip when the term is hovered over):
 
-<p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+We use HTML to structure our web documents.
 
-<p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+I think Rev. Green did it in the kitchen with the chainsaw.
 
-<div class="note">
-<p><strong>備註：</strong> There is another element, {{htmlelement("acronym")}}, which basically does the same thing as <code>&lt;abbr&gt;</code>, and was intended specifically for acronyms rather than abbreviations. This however has fallen into disuse — it wasn't supported as well in browsers as well as <code>&lt;abbr&gt;</code>, and has such as similar function that it was felt pointless to have both. Just use <code>&lt;abbr&gt;</code> instead.</p>
+> **備註：** There is another element, {{htmlelement("acronym")}}, which basically does the same thing as `<abbr>`, and was intended specifically for acronyms rather than abbreviations. This however has fallen into disuse — it wasn't supported as well in browsers as well as `<abbr>`, and has such as similar function that it was felt pointless to have both. Just use `<abbr>` instead.
+
+### Active learning: marking up an abbreviation
+
+For this simple active learning assignment, we'd like you to simply mark up an abbreviation. You can use our sample below, or replace it with one of your own.
+
+```html hidden
+<h2>Input</h2>
+<textarea id="code" class="input"><p>NASA sure does some exciting work.</p></textarea>
+<h2>Output</h2>
+<div class="output"></div>
+<div class="controls">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
+```
 
-<h3 id="Active_learning_marking_up_an_abbreviation">Active learning: marking up an abbreviation</h3>
-
-<p>For this simple active learning assignment, we'd like you to simply mark up an abbreviation. You can use our sample below, or replace it with one of your own. </p>
-
-<pre class="brush: html hidden">&lt;h2&gt;Input&lt;/h2&gt;
-&lt;textarea id="code" class="input"&gt;&lt;p&gt;NASA sure does some exciting work.&lt;/p&gt;&lt;/textarea&gt;
-&lt;h2&gt;Output&lt;/h2&gt;
-&lt;div class="output"&gt;&lt;/div&gt;
-&lt;div class="controls"&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-  &lt;input id="solution" type="button" value="Show solution" /&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush: css hidden">body {
+```css hidden
+body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -301,9 +321,10 @@ window.addEventListener("load", drawOutput);
 button {
   padding: 10px 10px 10px 0;
 }
-</pre>
+```
 
-<pre class="brush: js hidden">var textarea = document.getElementById("code");
+```js hidden
+var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -319,124 +340,132 @@ reset.addEventListener("click", function() {
 });
 
 solution.addEventListener("click", function() {
-textarea.value = '&lt;p&gt;&lt;abbr title="National Aeronautics and Space Administration"&gt;NASA&lt;/abbr&gt; sure does some exciting work.&lt;/p&gt;';
+textarea.value = '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
   drawOutput();
 });
 
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
-</pre>
+```
 
-<p>{{ EmbedLiveSample('Active learning: marking up an abbreviation', 700, 350) }}</p>
+{{ EmbedLiveSample('Active learning: marking up an abbreviation', 700, 350) }}
 
-<h2 id="Marking_up_contact_details">Marking up contact details</h2>
+## Marking up contact details
 
-<p>HTML has an element for marking up contact details — {{htmlelement("address")}}. This simply wraps around your contact details, for example:</p>
+HTML has an element for marking up contact details — {{htmlelement("address")}}. This simply wraps around your contact details, for example:
 
-<pre class="brush: html">&lt;address&gt;
-  &lt;p&gt;Chris Mills, Manchester, The Grim North, UK&lt;/p&gt;
-&lt;/address&gt;</pre>
+```html
+<address>
+  <p>Chris Mills, Manchester, The Grim North, UK</p>
+</address>
+```
 
-<p>One thing to remember however is that the &lt;address&gt; element is meant for marking up the contact details of the person who wrote the HTML document, not <em>any</em> address. So the above would only be ok if Chris had written the document the markup appears on. Note that something like this would also be ok:</p>
+One thing to remember however is that the \<address> element is meant for marking up the contact details of the person who wrote the HTML document, not _any_ address. So the above would only be ok if Chris had written the document the markup appears on. Note that something like this would also be ok:
 
-<pre class="brush: html">&lt;address&gt;
-  &lt;p&gt;Page written by &lt;a href="../authors/chris-mills/"&gt;Chris Mills&lt;/a&gt;.&lt;/p&gt;
-&lt;/address&gt;</pre>
+```html
+<address>
+  <p>Page written by <a href="../authors/chris-mills/">Chris Mills</a>.</p>
+</address>
+```
 
-<h2 id="Superscript_and_subscript">Superscript and subscript</h2>
+## Superscript and subscript
 
-<p>You will occasionally need to use superscript and subscript when marking up items like dates, chemical formulae, and mathematical equations so they have the correct meaning. The {{htmlelement("sup")}} and {{htmlelement("sub")}} elements handle this job. For example:</p>
+You will occasionally need to use superscript and subscript when marking up items like dates, chemical formulae, and mathematical equations so they have the correct meaning. The {{htmlelement("sup")}} and {{htmlelement("sub")}} elements handle this job. For example:
 
-<pre class="brush: html">&lt;p&gt;My birthday is on the 25&lt;sup&gt;th&lt;/sup&gt; of May 2001.&lt;/p&gt;
-&lt;p&gt;Caffeine's chemical formula is C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
-&lt;p&gt;If x&lt;sup&gt;2&lt;/sup&gt; is 9, x must equal 3 or -3.&lt;/p&gt;</pre>
-
-<p>The output of this code looks like so:</p>
-
+```html
 <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
-
 <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
-
 <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+```
 
-<h2 id="Representing_computer_code">Representing computer code</h2>
+The output of this code looks like so:
 
-<p>There are a number of elements available for marking up computer code:</p>
+My birthday is on the 25<sup>th</sup> of May 2001.
 
-<ul>
- <li>{{htmlelement("code")}}: For making up generic pieces of computer code.</li>
- <li>{{htmlelement("pre")}}: For marking up blocks of fixed width text, in which the whitespace is retained (generally code blocks.)</li>
- <li>{{htmlelement("var")}}: For specifically marking up variable names.</li>
- <li>{{htmlelement("kbd")}}: For marking up keyboard (and other types of) input entered into the computer.</li>
- <li>{{htmlelement("samp")}}: For marking up the output of a computer program.</li>
-</ul>
+Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
 
-<p>Let's look at a few examples. You should try having a play with these (try grabbing a copy of our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html">other-semantics.html</a> sample file):</p>
+If x<sup>2</sup> is 9, x must equal 3 or -3.
 
-<pre class="brush: html">&lt;pre&gt;&lt;code&gt;var para = document.querySelector('p');
+## Representing computer code
+
+There are a number of elements available for marking up computer code:
+
+- {{htmlelement("code")}}: For making up generic pieces of computer code.
+- {{htmlelement("pre")}}: For marking up blocks of fixed width text, in which the whitespace is retained (generally code blocks.)
+- {{htmlelement("var")}}: For specifically marking up variable names.
+- {{htmlelement("kbd")}}: For marking up keyboard (and other types of) input entered into the computer.
+- {{htmlelement("samp")}}: For marking up the output of a computer program.
+
+Let's look at a few examples. You should try having a play with these (try grabbing a copy of our [other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html) sample file):
+
+```html
+<pre><code>var para = document.querySelector('p');
 
 para.onclick = function() {
   alert('Owww, stop poking me!');
-}&lt;/code&gt;&lt;/pre&gt;
+}</code></pre>
 
-&lt;p&gt;You shouldn't use presentational elements like &lt;code&gt;&amp;lt;font&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;center&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
 
-&lt;p&gt;In the above JavaScript example, &lt;var&gt;para&lt;/var&gt; represents a paragraph element.&lt;/p&gt;
+<p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
 
 
-&lt;p&gt;Select all the text with &lt;kbd&gt;Ctrl&lt;/kbd&gt;/&lt;kbd&gt;Cmd&lt;/kbd&gt; + &lt;kbd&gt;A&lt;/kbd&gt;.&lt;/p&gt;
+<p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
 
-&lt;pre&gt;$ &lt;kbd&gt;ping mozilla.org&lt;/kbd&gt;
-&lt;samp&gt;PING mozilla.org (63.245.215.20): 56 data bytes
-64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms&lt;/samp&gt;&lt;/pre&gt;</pre>
+<pre>$ <kbd>ping mozilla.org</kbd>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+```
 
-<p>The above code will look like so:</p>
+The above code will look like so:
 
-<p>{{ EmbedLiveSample('Representing_computer_code','100%',300) }}</p>
+{{ EmbedLiveSample('Representing_computer_code','100%',300) }}
 
-<h2 id="Marking_up_times_and_dates">Marking up times and dates</h2>
+## Marking up times and dates
 
-<p>HTML also provides the {{htmlelement("time")}} element for marking up times and dates in a machine-readable format. For example:</p>
+HTML also provides the {{htmlelement("time")}} element for marking up times and dates in a machine-readable format. For example:
 
-<pre class="brush: html">&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;</pre>
+```html
+<time datetime="2016-01-20">20 January 2016</time>
+```
 
-<p>Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:</p>
+Why is this useful? Well, there are many different ways that humans write down dates. The above date could be written as:
 
-<ul>
- <li>20 January 2016</li>
- <li>20th January 2016</li>
- <li>Jan 20 2016</li>
- <li>20/06/16</li>
- <li>06/20/16</li>
- <li>The 20th of next month</li>
- <li>20e Janvier 2016</li>
- <li>2016年1月20日</li>
- <li>And so on</li>
-</ul>
+- 20 January 2016
+- 20th January 2016
+- Jan 20 2016
+- 20/06/16
+- 06/20/16
+- The 20th of next month
+- 20e Janvier 2016
+- 2016 年 1 月 20 日
+- And so on
 
-<p>But these different forms cannot be easily recognised by the computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The {{htmlelement("time")}} element allows you to attach a unambiguous, machine-readable time/date for this purpose.</p>
+But these different forms cannot be easily recognised by the computers — what if you wanted to automatically grab the dates of all events in a page and insert them into a calendar? The {{htmlelement("time")}} element allows you to attach a unambiguous, machine-readable time/date for this purpose.
 
-<p>The basic example above just provides a simple machine readable date, but there are many other options that are possible, for example:</p>
+The basic example above just provides a simple machine readable date, but there are many other options that are possible, for example:
 
-<pre class="brush: html">&lt;!-- Standard simple date --&gt;
-&lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;
-&lt;!-- Just year and month --&gt;
-&lt;time datetime="2016-01"&gt;January 2016&lt;/time&gt;
-&lt;!-- Just month and day --&gt;
-&lt;time datetime="01-20"&gt;20 January&lt;/time&gt;
-&lt;!-- Just time, hours and minutes --&gt;
-&lt;time datetime="19:30"&gt;19:30&lt;/time&gt;
-&lt;!-- You can do seconds and milliseconds too! --&gt;
-&lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;
-&lt;!-- Date and time --&gt;
-&lt;time datetime="2016-01-20T19:30"&gt;7.30pm, 20 January 2016&lt;/time&gt;
-&lt;!-- Date and time with timezone offset--&gt;
-&lt;time datetime="2016-01-20T19:30+01:00"&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/time&gt;
-&lt;!-- Calling out a specific week number--&gt;
-&lt;time datetime="2016-W04"&gt;The fourth week of 2016&lt;/time&gt;</pre>
+```html
+<!-- Standard simple date -->
+<time datetime="2016-01-20">20 January 2016</time>
+<!-- Just year and month -->
+<time datetime="2016-01">January 2016</time>
+<!-- Just month and day -->
+<time datetime="01-20">20 January</time>
+<!-- Just time, hours and minutes -->
+<time datetime="19:30">19:30</time>
+<!-- You can do seconds and milliseconds too! -->
+<time datetime="19:30:01.856">19:30:01.856</time>
+<!-- Date and time -->
+<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+<!-- Date and time with timezone offset-->
+<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<!-- Calling out a specific week number-->
+<time datetime="2016-W04">The fourth week of 2016</time>
+```
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>That marks the end of our study of HTML text semantics. Bear in mind that what you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild, or at least might find interesting. To find way more HTML elements, you can take a look at our <a href="/en-US/docs/Web/HTML/Element">HTML element reference</a> (the <a href="/en-US/docs/Web/HTML/Element#Inline_text_semantics">Inline text semantics</a> section would be a great place to start.) In the next article we will look at the HTML elements you'd use to structure the different parts of an HTML document.</p>
+That marks the end of our study of HTML text semantics. Bear in mind that what you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild, or at least might find interesting. To find way more HTML elements, you can take a look at our [HTML element reference](/en-US/docs/Web/HTML/Element) (the [Inline text semantics](/en-US/docs/Web/HTML/Element#Inline_text_semantics) section would be a great place to start.) In the next article we will look at the HTML elements you'd use to structure the different parts of an HTML document.
 
-<p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}</p>
+{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
