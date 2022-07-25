@@ -5,47 +5,47 @@ tags:
   - Accessibility
   - Landing
 ---
-**Accessibility** (often abbreviated to **A11y** — as in, "a", then 11 characters, and then "y") in web development means enabling as many people as possible to use websites, even when those people's abilities are limited in some way.
+La **accesibilidad web** (a menudo abreviada como **A11y**) se refiere a la posibilidad de acceso a los diferentes sitios web y a todo su contenido por todas las personas, independientemente de sus limitaciones fìsicas (discapacidad) o las derivadas del contexto de uso (tecnológicas o ambientales).
 
-For many people, technology makes things easier. For people with disabilities, technology makes things possible. Accessibility means developing content to be as accessible as possible, no matter an individual's physical and cognitive abilities and how they access the web.
+Para muchas personas, la tecnología facilita las cosas. Para las personas con algun tipo de discapacidad, la tecnología hace las cosas posibles. Accesibilidad significa desarrollar contenido para que sea lo más accesible posible sin importar las habilidades físicas y cognitivas de un individuo y sin importar cómo acceda a la web.
 
-"**The Web is fundamentally designed to work for all people**, whatever their hardware, software, language, location, or ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability." ([W3C - Accessibility](https://www.w3.org/standards/webdesign/accessibility))
+"**La Web está diseñada fundamentalmente para que funcione para todas las personas**, independientemente de su hardware, software, idioma, cultura, ubicación, capacidad física o mental. Cuando la Web cumple este objetivo, es accesible para personas con una amplia gama de capacidades auditivas, de movimiento, de vista y cognitivas." ([W3C - Accesibilidad](https://www.w3.org/standards/webdesign/accessibility))
 
-## Key tutorials
+## Tutoriales clave
 
-The MDN [Accessibility Learning Area](/en-US/docs/Learn/Accessibility) contains modern, up-to-date tutorials covering the following accessibility essentials:
+El [área de aprendizaje de accesibilidad](/es/docs/Learn/Accessibility) de MDN contiene tutoriales modernos y actualizados que cubren los siguientes aspectos básicos de accesibilidad:
 
-- [What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility)
-  - : This article starts off the module with a good look at what accessibility actually is — this includes what groups of people we need to consider and why, what tools different people use to interact with the Web, and how we can make accessibility part of our web development workflow.
-- [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML)
-  - : A great deal of web content can be made accessible just by making sure that the correct HTML elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility.
-- [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript)
-  - : CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences. They can significantly harm accessibility if misused. This article outlines some CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
-- [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
-  - : Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.
-- [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-  - : Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives so that they can be understood by assistive technologies and their users. This article shows how.
-- [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
-  - : With web access on mobile devices being so popular and popular platforms such as iOS and Android having fully-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
+- [¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility)
+  - : En este artículo se inicia el módulo con una explicación ampliada sobre qué es la accesibilidad. Esta visión general incluye qué grupos de personas necesitamos tener en cuenta y por qué, qué herramientas utilizan estas personas para interactuar con la web y cómo podemos hacer que la accesibilidad sea parte de nuestro flujo de trabajo de desarrollo web.
+- [HTML:Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML)
+  - : Se puede hacer accesible una gran cantidad de contenido web simplemente asegurándose de que los elementos HTML concretos se utilizan para un propósito correcto en todo momento. Este artículo analiza en detalle cómo se puede usar HTML para garantizar la máxima accesibilidad.
+- [Mejores prácticas en accesibilidad en CSS y JavaScript](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
+  - : CSS y JavaScript, cuando se usan correctamente, también tienen el potencial de permitir experiencias web accesibles, pero si se usan mal pueden dañar significativamente la accesibilidad. Este artículo describe algunas de las mejores prácticas de CSS y JavaScript que deben considerarse para garantizar que incluso el contenido complejo sea lo más accesible posible.
+- [WAI-ARIA básico](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
+  - : Siguiendo con el artículo anterior, a veces puede ser difícil realizar controles complejos de IU que involucren HTML no semántico y contenido dinámico actualizado con JavaScript. WAI-ARIA es una tecnología que puede ayudar a resolver estos problemas agregando más semántica que los navegadores y las tecnologías de asistencia pueden reconocer y utilizar para que los usuarios sepan lo que está sucediendo. Aquí mostraremos cómo usarlo a un nivel básico para mejorar la accesibilidad.
+- [Multimedia accesible](/es/docs/Learn/Accessibility/Multimedia)
+  - : Otra categoría de contenido que puede crear problemas de accesibilidad es multimedia: el contenido de video, audio e imagen debe contar con alternativas textuales adecuadas para que las tecnologías de asistencia y sus usuarios puedan entenderlos. Este artículo muestra cómo.
+- [Accesibilidad móvil](/es/docs/Learn/Accessibility/Mobile)
+  - : Dado que el acceso a la web en dispositivos móviles es tan popular, y que las plataformas populares como iOS y Android tienen herramientas de accesibilidad completas, es importante considerar la accesibilidad de su contenido web en estas plataformas. Este artículo analiza las consideraciones de accesibilidad específicas para dispositivos móviles.
 
-## Other documentation
+## Otra documentación
 
-- [Understanding the Web Content Accessibility Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
-  - : This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 (WCAG 2.0 or just WCAG, for the purposes of this writing).
-- [Introduction to color and accessibility](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
-  - : This article discusses our perception of light and color, provides a foundation for the use of color in accessible designs, and demonstrates best practices for visual and readable content.
-- [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : Until now, web developers who wanted to make their styled `<div>`- and `<span>`-based widgets accessible have lacked proper techniques. **Keyboard accessibility** is part of the minimum accessibility requirements, which a developer should be aware of.
+- [Comprensión de las pautas de accesibilidad del contenido web](/es/docs/Web/Accessibility/Understanding_WCAG)
+  - : Esto es parte de un grupo de artículos que explican rápidamente los pasos necesario para cumplir con la normativa de W3C Web Content Accessibility Guides 2.0 o 2.1 (también conocida como WCAG).
+- [Introducción al color y la accesibilidad](/es/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+  - : Este artículo analiza nuestra percepción de la luz y el color, proporciona una base para el uso del color en diseños accesibles y demuestra las mejores prácticas para el contenido visual y legible.
+- [Widgets de JavaScript navegables por teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+  - : Hasta ahora, los desarrolladores web que querían hacer accesibles sus widgets basados en `<div>` y `<span>` habían carecido de las técnicas adecuadas. **La accesibilidad del teclado** es parte de los requisitos mínimos de accesibilidad, que un desarrollador debe conocer.
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
-  - : This is a collection of articles to learn how to use Accessible Rich Internet Applications (ARIA) to make your HTML documents more accessible.
-- [Mobile accessibility checklist](/en-US/docs/Web/Accessibility/Mobile_accessibility_checklist)
-  - : This article provides a concise checklist of accessibility requirements for mobile app developers.
-- [Cognitive accessibility](/en-US/docs/Web/Accessibility/Cognitive_accessibility)
-  - : This article explains how to ensure that the web content you're creating is accessible to people with cognitive impairments.
-- [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
-  - : Some types of visual web content can induce seizures in people with certain brain disorders. This article helps you understand the types of content that can be problematic and find tools and strategies to help you avoid them.
+  - : Accessible Rich Internet Applications (ARIA) es una colección de atributos que definen como realizar contenido y aplicaciónes web (especialmente las desarrolladas con Javascript) más accesibles para las personas con discapacidades.
+- [Lista de comprobación de accesibilidad móvil](/es/docs/Web/Accessibility/Mobile_accessibility_checklist)
+  - : Este artículo proporciona una lista de comprobación concisa de los requisitos de accesibilidad para los desarrolladores de aplicaciones móviles.
+- [Accesibilidad cognitiva](/es/docs/Web/Accessibility/Cognitive_accessibility)
+  - : Este artículo explica cómo asegurarse de que el contenido web que está creando sea accesible para personas con discapacidades cognitivas.
+- [Accesibilidad para trastornos convulsivos](/es/docs/Web/Accessibility/Seizure_disorders)
+  - : Algunos tipos de contenido web visual pueden provocar convulsiones en personas con ciertos trastornos cerebrales. Este artículo le ayuda a comprender los tipos de contenido que pueden ser problemáticos y a encontrar herramientas y estrategias para ayudarlo a evitarlos.
 
-## See also
+## Véase también
 
-- [WAI Interest Group](https://www.w3.org/WAI/about/groups/waiig/)
-- [Developer guides](/en-US/docs/Web/Guide)
+- [Grupo de interés WAI](https://www.w3.org/WAI/about/groups/waiig/)
+- [Guía de Desarrollo Web](/es/docs/Web/Guide)
