@@ -50,9 +50,6 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>这条可能算不上实用，然而，在你的页面中尽量少的使用来自不同域名的资源链接。</p>
 
-<ul>
-</ul>
-
 <h3 id="Cache_reused_content">缓存重用的内容</h3>
 
 <p>确保任何内容可以被缓存，并且拥有一个合理的有效期。</p>
@@ -96,19 +93,19 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>相较于这种深度的嵌套：</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;table&gt;
     &lt;table&gt;
           ...
     &lt;/table&gt;
   &lt;/table&gt;
-&lt;/table&gt;</code></pre>
+&lt;/table&gt;</pre>
 
 <p>用下图这样的非嵌套结构更好一些：</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">&lt;table&gt;...&lt;/table&gt;
+<pre class="brush: html">&lt;table&gt;...&lt;/table&gt;
 &lt;table&gt;...&lt;/table&gt;
-&lt;table&gt;...&lt;/table&gt;</code></pre>
+&lt;table&gt;...&lt;/table&gt;</pre>
 
 <p>可参见 <a href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout</a> 和 <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a> 规范。</p>
 
@@ -126,7 +123,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>表格可以使用 CSS 选择器：综合性能：</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">table-layout: fixed;</code></pre>
+<pre class="brush: css">table-layout: fixed;</pre>
 
 <p>用 <code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code> 元素来指定列宽。</p>
 
@@ -148,63 +145,37 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <h2 id="Example_page_structure">页面结构示例</h2>
 
-<p>· <code>{{htmlelement('html')}}</code></p>
-
-<dl>
- <dd>· <code>{{htmlelement('head')}}</code></dd>
-</dl>
-
-<dl>
- <dd>
- <dl>
-  <dd>· <code>{{htmlelement('link')}} </code>...<br>
-  CSS 文件用来修饰页面外观。在调试维护中把不相关的 CSS 拆分在不同文件中，且尽量减少文件的数量可以提高性能。</dd>
- </dl>
- </dd>
-</dl>
-
-<dl>
- <dd>
- <dl>
-  <dd>· <code>{{htmlelement('script')}} </code>...<br>
-  JavaScript 文件用来实现<strong>页面加载时需要的函数</strong>，而避免在页面加载后才能运行的 JavaScript。</dd>
-  <dd>在调试维护中把不相关的 JavaScript 拆分在不同文件中，且尽量减少文件的数量可以提高性能。</dd>
- </dl>
- </dd>
-</dl>
-
-<dl>
- <dd>· <code>{{htmlelement('body')}}</code></dd>
- <dd>· 用户能在完整页面下载完之前就可以看到的页面小分块 ( <code>{{htmlelement('header')}}</code>/ <code>{{htmlelement('main')}}/</code> <code>{{htmlelement('table')}}</code>) 。</dd>
-</dl>
-
-<dl>
- <dd>
- <dl>
-  <dd>· <code>{{htmlelement('script')}} </code>...</dd>
-  <dd>DHTML 脚本通常在页面完全加载或者所有必要的对象（objects）已初始化完毕之后才能运行。没有必要在页面内容之前加载这些脚本，这只会拖慢页面加载和初始化的体验。</dd>
-  <dd>在调试维护中把不相关的 script 拆分在不同文件中，且尽量减少文件的数量可以提高性能。</dd>
-  <dd>如有图像用到了反转效果，你应该在页面内容下载完后预加载这些图像。</dd>
- </dl>
- </dd>
+<ul>
+ <li><code>{{htmlelement('html')}}</code>
+  <ul>
+   <li><code>{{htmlelement('head')}}</code>
+    <ul>
+     <li><code>{{htmlelement('link')}}</code>
+      CSS 文件用来修饰页面外观。在调试维护中把不相关的 CSS 拆分在不同文件中，且尽量减少文件的数量可以提高性能。
+     </li>
+     <li>
+      <code>{{htmlelement('script')}}</code>
+      JavaScript 文件用来实现页面加载时<strong>需要</strong>的函数，而避免在页面加载后才能运行的 JavaScript。在调试维护中把不相关的 JavaScript 拆分在不同文件中，且尽量减少文件的数量可以提高性能。
+     </li>
+    </ul>
+   </li>
+   <li><code>{{htmlelement('body')}}</code>
+    用户能在完整页面下载完之前就可以看到的页面小分块（<code>{{htmlelement('header')}}</code>/<code>{{htmlelement('main')}}/</code> <code>{{htmlelement('table')}}</code>）。
+   <ul>
+    <li><code>{{htmlelement('script')}}</code>
+      DHTML 脚本通常在页面完全加载或者所有必要的对象（objects）已初始化完毕之后才能运行。没有必要在页面内容之前加载这些脚本，这只会拖慢页面加载和初始化的体验。在调试维护中把不相关的 script 拆分在不同文件中，且尽量减少文件的数量可以提高性能。如有图像用到了反转效果，你应该在页面内容下载完后预加载这些图像。
+    </li>
+   </ul>
+   </li>
+  </ul>
+ </li>
 </dl>
 
 <h2 id="Related_Links">相关链接</h2>
 
 <ul>
- <li>书籍： <a href="http://www.websiteoptimization.com/">"Speed Up Your Site" by Andy King</a></li>
+ <li>书籍：<a href="http://www.websiteoptimization.com/">"Speed Up Your Site" by Andy King</a></li>
  <li>非常棒、讲的很全 <a href="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
  <li>用来分析和优化的工具：<a href="https://developers.google.com/speed/pagespeed/">Google PageSpeed Tools</a></li>
  <li><a href="/en-US/docs/Tools/Paint_Flashing_Tool">Paint Flashing Tool</a></li>
 </ul>
-
-<div class="originaldocinfo">
-<h3 id=".E6.96.87.E7.AB.A0.E5.8E.9F.E5.A7.8B.E4.BF.A1.E6.81.AF">文章原始信息</h3>
-
-<ul>
- <li>作者：Bob Clary, Technology Evangelist, Netscape Communications</li>
- <li>最后更新：Published 2003 年 4 月 4 日</li>
- <li>版权信息：Copyright © 2001-2003 Netscape. All rights reserved.</li>
- <li>注意：This reprinted article was originally part of the DevEdge site.</li>
-</ul>
-</div>

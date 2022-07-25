@@ -116,7 +116,7 @@ translation_of: Learn/HTML/Tables/Basics
 <p>虽然在这个模块中我们不会专注于 CSS, 但是我们提供了一个较小的 CSS 样式表让你使用，和默认的没有采用任何 CSS 样式的表相比，表格会更加可读。 你可以在 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">stylesheet here</a> 获取样式表，以及在 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">HTML template</a> 获取 HTML 文件来应用样式表，这些会让你在“测试 HTML 表格”中有一个好的起点。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 也可以看下 <a href="http://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html">personal_pronouns table with this styling applied</a> 这个版本，这个是应用了 CSS 以后表格看上去的样子。</p>
+<p><strong>备注：</strong> 也可以看下 <a href="http://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html">personal_pronouns table with this styling applied</a> 这个版本，这个是应用了 CSS 以后表格看上去的样子。</p>
 </div>
 
 <h3 id="什么时候你不应该使用_HTML_表格">什么时候你不应该使用 HTML 表格？</h3>
@@ -186,7 +186,7 @@ translation_of: Learn/HTML/Tables/Basics
 </table>
 
 <div class="note">
-<p><strong>注意</strong>: 你也可以在 GitHub 中查看 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/basic/simple-table.html">see it live also</a>).</p>
+<p><strong>备注：</strong> 你也可以在 GitHub 中查看 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html">simple-table.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/basic/simple-table.html">see it live also</a>).</p>
 </div>
 
 <h2 id="使用_&lt;th>_元素添加标题">使用 &lt;th&gt; 元素添加标题</h2>
@@ -286,7 +286,7 @@ translation_of: Learn/HTML/Tables/Basics
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以在 GitHub 中找到完成的版本 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html">dogs-table-fixed.html</a>  (<a href="https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html">see it live also</a>).</p>
+<p><strong>备注：</strong> 你可以在 GitHub 中找到完成的版本 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html">dogs-table-fixed.html</a>  (<a href="https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html">see it live also</a>).</p>
 </div>
 
 <h3 id="为什么标题是有用的">为什么标题是有用的？</h3>
@@ -294,7 +294,7 @@ translation_of: Learn/HTML/Tables/Basics
 <p>我们已经给出了部分答案，当标题明显突出的时候，你可以更加简单地找到你想找的数据，设计上也会看起来更好。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 即使你不给表格添加你自己的样式，表格标题也会带有一些默认样式：加粗和居中，让标题可以突出显示。</p>
+<p><strong>备注：</strong> 即使你不给表格添加你自己的样式，表格标题也会带有一些默认样式：加粗和居中，让标题可以突出显示。</p>
 </div>
 
 <p>表格标题也有额外的好处，随着 <code>scope</code> 属性 (我们将在下一篇文章中了解到)，这个属性允许你让表格变得更加无障碍，每个标题与相同行或列中的所有数据相关联。屏幕阅读设备能一次读出一列或一行的数据，这是非常有帮助的。</p>
@@ -373,13 +373,12 @@ translation_of: Learn/HTML/Tables/Basics
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 你也可以在 GitHub 上找到完成的版本 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html">animals-table-fixed.html</a>  (<a href="https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html">see it live also</a>).</p>
+<p><strong>备注：</strong> 你也可以在 GitHub 上找到完成的版本 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html">animals-table-fixed.html</a>  (<a href="https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html">see it live also</a>).</p>
 </div>
 
-<table id="tabular" style="background-color: white;">
-</table>
-
 <h2 id="为表格中的列提供共同的样式">为表格中的列提供共同的样式</h2>
+
+<h3 id="不对_col_应用样式">不对 &gt;col&lt; 应用样式</h3>
 
 <p>在我们继续介绍之前，我们将介绍本文中的最后一个功能。HTML 有一种方法可以定义整列数据的样式信息：就是 <strong><code><a href="/en-US/docs/Web/HTML/Element/col">&lt;col&gt;</a></code></strong> 和 <strong><code><a href="/en-US/docs/Web/HTML/Element/colgroup">&lt;colgroup&gt;</a></code></strong> 元素。它们存在是因为如果你想让一列中的每个数据的样式都一样，那么你就要为每个数据都添加一个样式，这样的做法是令人厌烦和低效的。你通常需要在列中的每个 <code>&lt;td&gt;</code> 或 <code>&lt;th&gt;</code> 上定义样式，或者使用一个复杂的选择器，比如 {{cssxref(":nth-child()")}}。</p>
 
@@ -402,24 +401,11 @@ translation_of: Learn/HTML/Tables/Basics
 
 <p>下面就是上述代码的结果：</p>
 
-<table>
- <tbody>
-  <tr>
-   <th>Data 1</th>
-   <th style="background-color: yellow;">Data 2</th>
-  </tr>
-  <tr>
-   <td>Calcutta</td>
-   <td style="background-color: yellow;">Orange</td>
-  </tr>
-  <tr>
-   <td>Robots</td>
-   <td style="background-color: yellow;">Jazz</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("不对_col_应用样式", "", "200")}}
 
 <p>这样不太理想，因为我们不得不在列中的每个单元格中重复那些样式信息 (在真实的项目中，我们或许会设置一个 <code>class</code> 包含那三个单元格，然后在一个单独的样式表中定义样式). 为了舍弃这种做法，我们可以只定义一次，在 <code>&lt;col&gt;</code> 元素中。<code>&lt;col&gt;</code> 元素被规定包含在 <code>&lt;colgroup&gt;</code> 容器中，而 <code>&lt;colgroup&gt;</code>就在 <code>&lt;table&gt;</code> 标签的下方。我们可以通过如下的做法来创建与上面相同的效果：</p>
+
+<h3 id="对_col_应用样式">对 &gt;col&lt; 应用样式</h3>
 
 <pre class="brush: html notranslate">&lt;table&gt;
   &lt;colgroup&gt;
@@ -479,8 +465,6 @@ translation_of: Learn/HTML/Tables/Basics
 
 <div>{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}</div>
 
-
-
 <h2 id="在本单元中">在本单元中</h2>
 
 <ul>
@@ -488,10 +472,3 @@ translation_of: Learn/HTML/Tables/Basics
  <li><a href="/en-US/docs/Learn/HTML/Tables/Advanced">HTML table advanced features and accessibility</a></li>
  <li><a href="/en-US/docs/Learn/HTML/Tables/Structuring_planet_data">Structuring planet data</a></li>
 </ul>
-
-<div>
-<article>
-<ul>
-</ul>
-</article>
-</div>

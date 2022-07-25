@@ -30,7 +30,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 </table>
 
 <div class="note">
-<p><strong>提示：</strong> 本文的目的并不是教你 SVG；仅仅是告诉你它是什么，以及如何在网页中添加它。</p>
+<p><strong>备注：</strong> 本文的目的并不是教你 SVG；仅仅是告诉你它是什么，以及如何在网页中添加它。</p>
 </div>
 
 <h2 id="什么是矢量图形？">什么是矢量图形？</h2>
@@ -51,7 +51,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 <p><img alt="Two star images zoomed in. The raster one on the left starts to look pixellated, whereas the vector one still looks crisp." src="raster-vector-zoomed.png"></p>
 
 <div class="note">
-<p><strong>注意</strong>: 上面的图片实际上都是 PNG 图片 —— 每个例子中左边的图片代表光栅图片，右边的星星代表矢量图。还有，访问 <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> 示例来查看真正的例子！</p>
+<p><strong>备注：</strong> 上面的图片实际上都是 PNG 图片 —— 每个例子中左边的图片代表光栅图片，右边的星星代表矢量图。还有，访问 <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> 示例来查看真正的例子！</p>
 </div>
 
 <p>此外，矢量图形相较于同样的位图，通常拥有更小的体积，因为它们仅需储存少量的算法，而不是逐个储存每个像素的信息。</p>
@@ -94,7 +94,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 <p>由于上述原因，光栅图形更适合照片那样复杂精密的图像。</p>
 
 <div class="note">
-<p><strong>注意：</strong>在 Inkscape 中，将文件保存为纯 SVG 以节省空间。另请参阅<a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">如何为 Web 准备 SVG</a>。</p>
+<p><strong>备注：</strong> 在 Inkscape 中，将文件保存为纯 SVG 以节省空间。另请参阅<a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">如何为 Web 准备 SVG</a>。</p>
 </div>
 
 <h2 id="将SVG添加到页面">将 SVG 添加到页面</h2>
@@ -200,10 +200,7 @@ background-size: contain;</code></pre>
 
 <p>如果你卡住了，无法使你的代码工作，你可以随时使用 Reset 按钮进行重置。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate"><code>&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html hidden"><code>&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -228,7 +225,7 @@ background-size: contain;</code></pre>
   &lt;input id="solution" type="button" value="Show solution" disabled&gt;
 &lt;/div&gt;</code></pre>
 
-<pre class="brush: css notranslate"><code>html {
+<pre class="brush: css hidden"><code>html {
   font-family: sans-serif;
 }
 
@@ -248,7 +245,7 @@ body {
   background: #f5f9fa;
 }</code></pre>
 
-<pre class="brush: js notranslate"><code>var textarea = document.getElementById('code');
+<pre class="brush: js hidden"><code>var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -325,9 +322,8 @@ textarea.onkeyup = function(){
 
   updateCode();
 };</code></pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('动手学习：使用 SVG', 700, 500) }}</p>
 
 <h2 id="总结">总结</h2>
 
