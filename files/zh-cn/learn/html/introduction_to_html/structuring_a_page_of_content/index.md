@@ -10,95 +10,86 @@ tags:
   - 评估
 translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
-<div>{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}</div>
-
-<p>构建页面内容是一项重要技能，页面构建清晰才能顺利交付进行 CSS 布局。本测验将测试你是否能构思出页面的最终外观，以及是否会选用适当的结构语义。</p>
+构建页面内容是一项重要技能，页面构建清晰才能顺利交付进行 CSS 布局。本测验将测试你是否能构思出页面的最终外观，以及是否会选用适当的结构语义。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">预备知识：</th>
-   <td>完成本章之前的全部课程，特别是 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/文件和网站结构">文档和站点结构</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">学习目标：</th>
-   <td>测验网页结构知识和用标记呈现预期布局设计的方法。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">预备知识：</th>
+      <td>
+        完成本章之前的全部课程，特别是
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/文件和网站结构"
+          >文档和站点结构</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">学习目标：</th>
+      <td>测验网页结构知识和用标记呈现预期布局设计的方法。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="起点">起点</h2>
+## 起点
 
-<p>开始测验前，请先下载 <a href="https://raw.githubusercontent.com/roy-tian/learning-area/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip">assets.zip</a>。其中包含：</p>
+开始测验前，请先下载 [assets.zip](https://raw.githubusercontent.com/roy-tian/learning-area/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip)。其中包含：
 
-<ul>
- <li>需要补充结构标记的 HTML 文件。</li>
- <li>给标记添加样式的 CSS 文件。</li>
- <li>页面中使用的图片。</li>
-</ul>
+- 需要补充结构标记的 HTML 文件。
+- 给标记添加样式的 CSS 文件。
+- 页面中使用的图片。
 
-<p>可在电脑上创建示例，也可以用 <a href="http://jsbin.com/">JSBin</a> 或 <a href="https://glitch.com/">Glitch</a> 等网站来完成测验。</p>
+可在电脑上创建示例，也可以用 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 等网站来完成测验。
 
-<h2 id="项目简介">项目简介</h2>
+## 项目简介
 
-<p>本项目的任务是为“观鸟网”的主页添加结构化的元素，使其可以进行布局设计。需要添加的有：</p>
+本项目的任务是为“观鸟网”的主页添加结构化的元素，使其可以进行布局设计。需要添加的有：
 
-<ul>
- <li>页眉（<code>&lt;header&gt;</code>），应充满页面宽度，并包含网站主标题、网站 logo 和导航栏菜单。样式生效后标题和 logo 应显示在在两边，导航栏在它们下方。</li>
- <li>主内容区域（<code>&lt;main&gt;</code>），应有两栏，其中主区域显示欢迎信息，侧边栏包含一些缩略图。</li>
- <li>页脚（<code>&lt;footer&gt;</code>），包含版权信息和鸣谢。</li>
-</ul>
+- 页眉（`<header>`），应充满页面宽度，并包含网站主标题、网站 logo 和导航栏菜单。样式生效后标题和 logo 应显示在在两边，导航栏在它们下方。
+- 主内容区域（`<main>`），应有两栏，其中主区域显示欢迎信息，侧边栏包含一些缩略图。
+- 页脚（`<footer>`），包含版权信息和鸣谢。
 
-<p>你应该为以下内容添加合适的标签：</p>
+你应该为以下内容添加合适的标签：
 
-<ul>
- <li>页眉</li>
- <li>导航菜单</li>
- <li>主要内容</li>
- <li>欢迎语</li>
- <li>图片侧边栏</li>
- <li>页脚</li>
-</ul>
+- 页眉
+- 导航菜单
+- 主要内容
+- 欢迎语
+- 图片侧边栏
+- 页脚
 
-<p>还应：</p>
+还应：
 
-<ul>
- <li>添加一个 {{htmlelement("link")}} 元素把现成的 CSS 文件引入页面。</li>
-</ul>
+- 添加一个 {{htmlelement("link")}} 元素把现成的 CSS 文件引入页面。
 
-<h2 id="提示">提示</h2>
+## 提示
 
-<ul>
- <li>可用 <a href="https://validator.w3.org/">W3C </a><a href="https://validator.w3.org/">HTML 验证器</a> 来验证 HTML；验证通过有额外加分。(有两行包含“googleapis”的 <code>&lt;link&gt;</code> 元素用于从 Google Fonts 服务引入自定义字体到页面；它们不会被验证，所以不用担心。)</li>
- <li>本测验不需要任何 CSS 知识；只需用 HTML 元素添加现成的 CSS 即可。</li>
- <li>现成的 CSS 已经设计好布局，使用正确的结构元素，页面就会渲染成绿色。</li>
- <li>如果你遇到困难不知道应该把添加元素到哪里，通常一个好的做法是：画一个简单的页面布局模块图，然后为每个块记录下恰当的元素。</li>
-</ul>
+- 可用 [W3C ](https://validator.w3.org/)[HTML 验证器](https://validator.w3.org/) 来验证 HTML；验证通过有额外加分。(有两行包含“googleapis”的 `<link>` 元素用于从 Google Fonts 服务引入自定义字体到页面；它们不会被验证，所以不用担心。)
+- 本测验不需要任何 CSS 知识；只需用 HTML 元素添加现成的 CSS 即可。
+- 现成的 CSS 已经设计好布局，使用正确的结构元素，页面就会渲染成绿色。
+- 如果你遇到困难不知道应该把添加元素到哪里，通常一个好的做法是：画一个简单的页面布局模块图，然后为每个块记录下恰当的元素。
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<p>以下截图展示了添加标记后主页可能的外观：（可 <a href="https://roy-tian.github.io/learning-area/html/introduction-to-html/structuring-a-page-of-content-finished/">在线查看</a>）</p>
+以下截图展示了添加标记后主页可能的外观：（可 [在线查看](https://roy-tian.github.io/learning-area/html/introduction-to-html/structuring-a-page-of-content-finished/)）
 
-<p><img alt="测试示例。一个简单的“观鸟网”主页，由页眉、页脚、欢迎信息、收藏照片等部分组成。" src="example-page.png"></p>
+![测试示例。一个简单的“观鸟网”主页，由页眉、页脚、欢迎信息、收藏照片等部分组成。](example-page.png)
 
-<h2 id="测验">测验</h2>
+## 测验
 
-<p>如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 <a href="https://discourse.mozilla.org/t/structuring-a-page-of-content-assignment/24678">本节测验的讨论页</a> 或者 <a href="https://wiki.mozilla.org/IRC">Mozilla 聊天室 </a>的 <a href="irc://irc.mozilla.org/mdn">#mdn</a> 频道取得帮助。要自己先尝试，作弊是不会有收获的！</p>
+如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 [本节测验的讨论页](https://discourse.mozilla.org/t/structuring-a-page-of-content-assignment/24678) 或者 [Mozilla 聊天室 ](https://wiki.mozilla.org/IRC)的 [#mdn](irc://irc.mozilla.org/mdn) 频道取得帮助。要自己先尝试，作弊是不会有收获的！
 
-<p>{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}</p>
+{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
-<h2 id="本章目录">本章目录</h2>
+## 本章目录
 
-<ul>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a></li>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">“头”里有什么？HTML 元信息</a></li>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理初步</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">创建超链接</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">高级文字格式</a></li>
- <li><a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构">文档和站点结构</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">HTML 调试</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">课程测验：为信件排版</a></li>
- <li><a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">课程测验：构建内容丰富的网页</a></li>
-</ul>
+- [开始学习 HTML](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started)
+- [“头”里有什么？HTML 元信息](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML 文字处理初步](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构)
+- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
+- [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
+- [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
