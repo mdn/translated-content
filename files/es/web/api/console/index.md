@@ -3,6 +3,7 @@ title: Consola
 slug: Web/API/Console
 page-type: web-api-interface
 translation_of: Web/API/Console
+original_slug: Web/API/Console
 browser-compat: api.console
 l10n:
   sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
@@ -205,7 +206,7 @@ console.debug("Back to the outer level");
 
 La salida se verá así:
 
-![Demo of nested groups in Firefox console](console_groups_demo.png)
+![Demostración de grupos anidados en la consola de Firefox](console_groups_demo.png)
 
 ### Temporizadores
 
