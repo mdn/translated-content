@@ -61,8 +61,8 @@ In drama, where a character shares a comment only with the audience for humorous
 
 <dl>
  <dt>aside</dt>
- <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.</dd>
- <dd>In writing, a section of content that is related to the current topic, but doesn't fit directly into the main flow of content so is presented nearby (often in a box off to the side.)</dd>
+ <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.
+  In writing, a section of content that is related to the current topic, but doesn't fit directly into the main flow of content so is presented nearby (often in a box off to the side.)</dd>
 </dl>
 
 <h3 id="Active_learning_Marking_up_a_set_of_definitions">Active learning: Marking up a set of definitions</h3>
@@ -71,10 +71,7 @@ In drama, where a character shares a comment only with the audience for humorous
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;Bacon
 The glue that binds the world together.
 Eggs
@@ -90,7 +87,7 @@ A light brown color.&lt;/textarea&gt;
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -107,7 +104,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById("code");
+<pre class="brush: js hidden">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -130,9 +127,8 @@ textarea.value = '&lt;dl&gt;\n  &lt;dt&gt;Bacon&lt;/dt&gt;\n  &lt;dd&gt;The glue
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500) }}</p>
+<p>{{ EmbedLiveSample('Active learning: Marking up a set of definitions', 700, 500) }}</p>
 
 <h2 id="Quotations">Quotations</h2>
 
@@ -154,9 +150,7 @@ Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended qu
 
 <p>Browser default styling will render this as an indented paragraph, as an indicator that it is a quote; MDN does this, but also adds some extra styling:</p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
-</blockquote>
+{{EmbedLiveSample('Blockquotes', '100%', '200px')}}
 
 <h3 id="Inline_quotations">Inline quotations</h3>
 
@@ -167,7 +161,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;</p
 
 <p>Browser default styling will render this as normal text put in quotes to indicate a quotation, like so:</p>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended for short quotations that don't require paragraph breaks.</q></p>
+{{EmbedLiveSample('Inline quotations', '100%', '78px')}}
 
 <h3 id="Citations">Citations</h3>
 
@@ -202,10 +196,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <p>If you make a mistake, you can always reset it using the <em>Reset</em> button. If you get really stuck, press the <em>Show solution</em> button to see the answer.</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;&lt;p&gt;Hello and welcome to my motivation page. As Confucius once said:&lt;/p&gt;
 
 &lt;p&gt;It does not matter how slowly you go as long as you do not stop.&lt;/p&gt;
@@ -220,7 +211,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -237,7 +228,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById("code");
+<pre class="brush: js hidden">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -260,9 +251,8 @@ textarea.value = '&lt;p&gt;Hello and welcome to my motivation page. As &lt;a hre
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 500) }}</p>
+<p>{{ EmbedLiveSample('Active learning: Who said that?', 700, 500) }}</p>
 
 <h2 id="Abbreviations">Abbreviations</h2>
 
@@ -279,17 +269,14 @@ window.addEventListener("load", drawOutput);
 <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There is another element, {{htmlelement("acronym")}}, which basically does the same thing as <code>&lt;abbr&gt;</code>, and was intended specifically for acronyms rather than abbreviations. This however has fallen into disuse — it wasn't supported as well in browsers as well as <code>&lt;abbr&gt;</code>, and has such as similar function that it was felt pointless to have both. Just use <code>&lt;abbr&gt;</code> instead.</p>
+<p><strong>備註：</strong> There is another element, {{htmlelement("acronym")}}, which basically does the same thing as <code>&lt;abbr&gt;</code>, and was intended specifically for acronyms rather than abbreviations. This however has fallen into disuse — it wasn't supported as well in browsers as well as <code>&lt;abbr&gt;</code>, and has such as similar function that it was felt pointless to have both. Just use <code>&lt;abbr&gt;</code> instead.</p>
 </div>
 
 <h3 id="Active_learning_marking_up_an_abbreviation">Active learning: marking up an abbreviation</h3>
 
 <p>For this simple active learning assignment, we'd like you to simply mark up an abbreviation. You can use our sample below, or replace it with one of your own. </p>
 
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code</h6>
-
-<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html hidden">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;&lt;p&gt;NASA sure does some exciting work.&lt;/p&gt;&lt;/textarea&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
 &lt;div class="output"&gt;&lt;/div&gt;
@@ -299,7 +286,7 @@ window.addEventListener("load", drawOutput);
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css">body {
+<pre class="brush: css hidden">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -316,7 +303,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById("code");
+<pre class="brush: js hidden">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -339,9 +326,8 @@ textarea.value = '&lt;p&gt;&lt;abbr title="National Aeronautics and Space Admini
 textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_3', 700, 350) }}</p>
+<p>{{ EmbedLiveSample('Active learning: marking up an abbreviation', 700, 350) }}</p>
 
 <h2 id="Marking_up_contact_details">Marking up contact details</h2>
 
