@@ -69,7 +69,7 @@ _固有のメソッドはありません。親である {{domxref("AudioNode")}}
 これらのイベントは [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使って、あるいはこのインターフェイスの `onイベント名` プロパティにイベントリスナーを割り当てることで待ち受けます。
 
 - [`audioprocess`](/ja/docs/Web/API/ScriptProcessorNode/audioprocess_event)
-  - : ScriptProcessorNode` の入力バッファーが処理可能な状態になったときに発行されます。
+  - : `ScriptProcessorNode` の入力バッファーが処理可能な状態になったときに発行されます。
     また、`onaudioprocess` イベントハンドラープロパティでも利用可能です。
 
 ## 例
