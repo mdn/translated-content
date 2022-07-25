@@ -178,50 +178,11 @@ Function("a", "b")</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范版本</th>
-   <th scope="col">规范状态</th>
-   <th scope="col">注解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>初始定义。在 JavaScript 1.1 中实现。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>对字符串表示增加了更多的特定需求。</td>
-  </tr>
-  <tr>
-   <td><a href="http://tc39.github.io/Function-prototype-toString-revision/">Function.prototype.toString revision</a></td>
-   <td>Draft</td>
-   <td>对内置函数与行尾表示进行标准化。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.Function.toString")}}</p>
-</div>
-
-<h2 id="附注（针对Firefox）">附注（针对 Firefox）</h2>
-
-<ul>
- <li>从 Firefox 17 开始，<code>Function.prototype.toString()</code> 通过保存函数源码的方式来实现，而之前是通过反编译器反编译函数字节码的方式来实现。反编译器已经被移除，因此我们不再需要 <code>indentation</code> 参数。查看 {{bug("761723")}} 获得更多信息。</li>
- <li>从 Firefox 38 开始，<code>Function.prototype.toString()</code> 会对 {{jsxref("Proxy")}} 对象抛出异常 ({{bug(1100936)}})。</li>
-</ul>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">相关链接</h2>
 
