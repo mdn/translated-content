@@ -5,61 +5,71 @@ tags:
   - 类型错误
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="消息">消息</h2>
+JavaScript 异常“_x_ is (not) _y_”在出现与期望不符的类型（通常为意外获得的 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值）时被抛出。
 
-<pre class="syntaxbox">TypeError: "x" is (not) "y"
+## 消息
 
-Examples:
-TypeError: "x" is undefined
-TypeError: "x" is null
-TypeError: "undefined" is not an object
-TypeError: "x" is not an object or null
-TypeError: "x" is not a symbol
-</pre>
+```
+TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
+TypeError: "x" is undefined (Firefox)
+TypeError: "undefined" is not an object (Firefox)
+TypeError: undefined is not an object (evaluating 'obj.x') (Safari)
 
-<h2 id="错误类型">错误类型</h2>
+TypeError: "x" is not a symbol (V8-based & Firefox)
+TypeError: Symbol.keyFor requires that the first argument be a symbol (Safari)
+```
 
-<p>{{jsxref("TypeError")}}.</p>
+## 错误类型
 
-<h2 id="什么地方出错了">什么地方出错了？</h2>
+{{jsxref("TypeError")}}。
 
-<p>出现了与期望不符的类型。 这个错误常常由 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值引起。</p>
+## 什么地方出错了？
 
-<p>此外，某些方法，例如 {{jsxref("Object.create()")}} 或 {{jsxref("Symbol.keyFor()")}}， 要求必须提供特定类型的参数。</p>
+出现了与期望不符的类型。这个错误常常由 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值引起。
 
-<h2 id="示例">示例</h2>
+此外，某些方法，例如 {{jsxref("Object.create()")}} 或 {{jsxref("Symbol.keyFor()")}}，要求必须提供特定类型的参数。
 
-<h3 id="错误情形">错误情形</h3>
+## 示例
 
-<pre class="brush: js example-bad">// undefined and null cases on which the substring method won't work
-var foo = undefined;
+### 错误情形
+
+```js example-bad
+// undefined and null cases on which the substring method won't work
+const foo = undefined;
 foo.substring(1); // TypeError: foo is undefined
 
-var foo = null;
+const foo = null;
 foo.substring(1); // TypeError: foo is null
 
-
 // Certain methods might require a specific type
-var foo = {}
+const foo = {}
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+const foo = 'bar'
 Object.create(foo); // TypeError: "foo" is not an object or null
-</pre>
+```
 
-<h3 id="解决方法">解决方法</h3>
+### 解决方法
 
-<p>要解决空指针以及 <code>undefined</code> 或 <code>null</code> 值的问题， 你可以使用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 操作符， 例如：</p>
+要解决值为 `undefined` 或 `null` 的空指针问题，你可以首先测试值是否为 `undefined` 或 `null`。
 
-<pre class="brush: js">if (typeof foo !== 'undefined') {
+```js example-good
+if (foo !== undefined && foo !== null) {
   // Now we know that foo is defined, we are good to go.
-}</pre>
+}
+```
 
-<h2 id="相关页面">相关页面</h2>
+或者，你如果能确定 `foo` 的值不会是其它的[假值](/zh-CN/docs/Glossary/Falsy)（如：`""` 或 `0`），或者排除这些情况不是问题，那你可以简单地测试其是否为真。
 
-<ul>
- <li>{{jsxref("undefined")}}</li>
- <li>{{jsxref("null")}}</li>
-</ul>
+```js example-good
+if (foo) {
+  // Now we know that foo is truthy, it will necessarily not be null/undefined.
+}
+```
+
+## 参见
+
+- {{jsxref("undefined")}}
+- {{jsxref("null")}}
