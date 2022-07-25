@@ -1,5 +1,5 @@
 ---
-title: HTML 表格高级特性和可访问性
+title: HTML 表格高级特性和无障碍
 slug: Learn/HTML/Tables/Advanced
 tags:
   - HTML
@@ -9,7 +9,7 @@ tags:
   - tfoot
   - thead
   - 初学者
-  - 可访问性
+  - 无障碍
   - 学习
   - 标题
   - 高级
@@ -49,7 +49,7 @@ translation_of: Learn/HTML/Tables/Advanced
 <p>标题就放在 <code>&lt;table&gt;</code> 标签的下面。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 这个 {{htmlattrxref("summary","table")}} 属性也可以在<code>&lt;table&gt;</code> 元素中使用，用来提供一段描述，同样可以被屏幕阅读设备阅读。我们推荐使用 <code>&lt;caption&gt;</code> 元素来代替使用，因为 <code>summary</code> 被 HTML5 规范， {{glossary("deprecated")}} (废除了)，也不能被视力正常的用户阅读。 (它不会出现在页面上)</p>
+<p><strong>备注：</strong> 这个 {{htmlattrxref("summary","table")}} 属性也可以在<code>&lt;table&gt;</code> 元素中使用，用来提供一段描述，同样可以被屏幕阅读设备阅读。我们推荐使用 <code>&lt;caption&gt;</code> 元素来代替使用，因为 <code>summary</code> 被 HTML5 规范， {{glossary("deprecated")}} (废除了)，也不能被视力正常的用户阅读。 (它不会出现在页面上)</p>
 </div>
 
 <h3 id="动手练习_添加一个标题">动手练习：添加一个标题</h3>
@@ -63,7 +63,7 @@ translation_of: Learn/HTML/Tables/Advanced
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>:你也可以在 GitHub 上找到我们的版本 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html">see it live also</a>).</p>
+<p><strong>备注：</strong> 你也可以在 GitHub 上找到我们的版本 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html">timetable-caption.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html">see it live also</a>).</p>
 </div>
 
 <h2 id="添加_&lt;thead>_&lt;tfoot>_和_&lt;tbody>_结构">添加 &lt;thead&gt;, &lt;tfoot&gt;, 和 &lt;tbody&gt; 结构</h2>
@@ -81,7 +81,7 @@ translation_of: Learn/HTML/Tables/Advanced
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: <code>&lt;tbody&gt;</code> 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 <code>&lt;tbody&gt;</code> 的例子，然后在你的 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> 中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。</p>
+<p><strong>备注：</strong> <code>&lt;tbody&gt;</code> 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 <code>&lt;tbody&gt;</code> 的例子，然后在你的 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a> 中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。</p>
 </div>
 
 <h3 id="动手练习_添加表格结构">动手练习：添加表格结构</h3>
@@ -109,15 +109,12 @@ tfoot {
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 我们并不期望目前你可以理解所有 CSS 的内容。当你经过我们的 CSS 模块的时候，你应该会了解更多 (<a href="/zh_CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> 是一个好的起点；我们也有专门的文章 <a href="/zh_CN/docs/Learn/CSS/Styling_boxes/Styling_tables">styling tables</a>).</p>
+<p><strong>备注：</strong> 我们并不期望目前你可以理解所有 CSS 的内容。当你经过我们的 CSS 模块的时候，你应该会了解更多 (<a href="/zh_CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> 是一个好的起点；我们也有专门的文章 <a href="/zh_CN/docs/Learn/CSS/Styling_boxes/Styling_tables">styling tables</a>).</p>
 </div>
 
 <p>你完成的表格应该如下所示：</p>
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -224,10 +221,10 @@ tfoot {
 &lt;/html&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('动手练习：添加表格结构', '100%', 300) }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 你也可以在 GitHub 上找到 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">see it live also</a>).</p>
+<p><strong>备注：</strong> 你也可以在 GitHub 上找到 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html">spending-record-finished.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html">see it live also</a>).</p>
 </div>
 
 <h2 id="嵌套表格">嵌套表格</h2>
@@ -264,35 +261,7 @@ tfoot {
 
 <p>输出看起来是这样的：</p>
 
-<table id="table1">
- <tbody>
-  <tr>
-   <th>title1</th>
-   <th>title2</th>
-   <th>title3</th>
-  </tr>
-  <tr>
-   <td id="nested">
-    <table id="table2">
-     <tbody>
-      <tr>
-       <td>cell1</td>
-       <td>cell2</td>
-       <td>cell3</td>
-      </tr>
-     </tbody>
-    </table>
-   </td>
-   <td>cell2</td>
-   <td>cell3</td>
-  </tr>
-  <tr>
-   <td>cell4</td>
-   <td>cell5</td>
-   <td>cell6</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample("嵌套表格")}}
 
 <h2 id="对于视力受损的用户的表格">对于视力受损的用户的表格</h2>
 
@@ -364,7 +333,7 @@ tfoot {
 <p>但假设你无法通过视觉关联这些数据呢？那么你应该如何阅读上述的表格？视力受损的用户经常使用一个屏幕阅读设备来为他们读出网页上的信息。对于盲人来说，阅读简单的文字没有什么问题，但是要理解一张表格的内容，这就有一些难度了。虽然，使用正确的标记，我们可以用程序化来代替视觉关联。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 根据<a href="http://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment">世界卫生组织 2017 年的数据</a>，大约有 2.53 亿人患有视觉障碍。</p>
+<p><strong>备注：</strong> 根据<a href="http://www.who.int/zh/news-room/fact-sheets/detail/blindness-and-visual-impairment">世界卫生组织 2017 年的数据</a>，大约有 2.53 亿人患有视觉障碍。</p>
 </div>
 
 <p>本篇文章提供了更一步的技术来使表格的可访问性尽可能地提高。</p>
@@ -439,7 +408,7 @@ tfoot {
 &lt;/tbody&gt;</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 这个放进为标题单元格和数据单元格之间创造了非常精确的联系。但是这个方法使用了大量的标记，所以容错率比较低。使用 <code>scope</code> 的方法对于大多数表格来说，也够用了。</p>
+<p><strong>备注：</strong> 这个放进为标题单元格和数据单元格之间创造了非常精确的联系。但是这个方法使用了大量的标记，所以容错率比较低。使用 <code>scope</code> 的方法对于大多数表格来说，也够用了。</p>
 </div>
 
 <h3 id="动手练习_使用_scope_和_headers">动手练习：使用 scope 和 headers</h3>
@@ -451,7 +420,7 @@ tfoot {
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以根据我们完成的例子检查你的工作，请看 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">also see this live</a>) 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html">items-sold-headers.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html">see this live too</a>).</p>
+<p><strong>备注：</strong> 你可以根据我们完成的例子检查你的工作，请看 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html">items-sold-scope.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html">also see this live</a>) 和 <a href="https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html">items-sold-headers.html</a> (<a href="https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html">see this live too</a>).</p>
 </div>
 
 <h2 id="总结">总结</h2>

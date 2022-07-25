@@ -27,7 +27,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p>我们可以用{{htmlelement("img")}} 元素来把图片放到网页上。它是一个空元素（它不需要包含文本内容或闭合标签），最少只需要一个 <code>src</code> （一般读作其全称 <em>source）</em>来使其生效。<code>src</code> 属性包含了指向我们想要引入的图片的路径，可以是相对路径或绝对 URL，就像 {{htmlelement("a")}} 元素的 <code>href</code> 属性一样。</p>
 
 <div class="note">
-<p><strong>注意：</strong>在继续之前，你应该阅读<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门">快速入门 URL 和路径</a>来复习一下相对和绝对 URL。</p>
+<p><strong>备注：</strong> 在继续之前，你应该阅读<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#URLs与路径(path)快速入门">快速入门 URL 和路径</a>来复习一下相对和绝对 URL。</p>
 </div>
 
 <p>举个例子来看，如果你有一幅文件名为 <code>dinosaur.jpg</code> 的图片，且它与你的 HTML 页面存放在相同路径下，那么你可以这样嵌入它：</p>
@@ -41,7 +41,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p>以此类推。</p>
 
 <div class="note">
-<p><strong>注意：</strong>搜索引擎也读取图像的文件名并把它们计入 SEO。因此你应该给你的图片取一个描述性的文件名：<code>dinosaur.jpg</code> 比 <code>img835.png </code>要好。</p>
+<p><strong>备注：</strong> 搜索引擎也读取图像的文件名并把它们计入 SEO。因此你应该给你的图片取一个描述性的文件名：<code>dinosaur.jpg</code> 比 <code>img835.png </code>要好。</p>
 </div>
 
 <p>你也可以像下面这样使用绝对路径：</p>
@@ -67,11 +67,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p><img alt="A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it" src="basic-image.png"></p>
 
 <div class="note">
-<p><strong>注意：</strong>像{{htmlelement("img")}}和{{htmlelement("video")}}这样的元素有时被称之为<strong>替换元素</strong>，因为这样的元素的内容和尺寸由外部资源（像是一个图片或视频文件）所定义，而不是元素自身。</p>
+<p><strong>备注：</strong> 像{{htmlelement("img")}}和{{htmlelement("video")}}这样的元素有时被称之为<strong>替换元素</strong>，因为这样的元素的内容和尺寸由外部资源（像是一个图片或视频文件）所定义，而不是元素自身。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>你可以在<a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html">GitHub 上的这个网页</a>看到这个例子的运行结果（也可以看到<a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html">源码</a>）。</p>
+<p><strong>备注：</strong> 你可以在<a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html">GitHub 上的这个网页</a>看到这个例子的运行结果（也可以看到<a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html">源码</a>）。</p>
 </div>
 
 <h3 id="备选文本">备选文本</h3>
@@ -108,7 +108,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p>本质上，关键在于在图片无法被看见时也提供一个可用的体验，这确保了所有人都不会错失一部分内容。尝试在浏览器中使图片不可见然后看看网页变成什么样了，你会很快意识到在图片无法显示时备选文本能帮上多大忙。</p>
 
 <div class="note">
-<p><strong>注意：</strong>想知道更多，可以看我们的<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81">备选文本</a>指南</p>
+<p><strong>备注：</strong> 想知道更多，可以看我们的<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81">备选文本</a>指南</p>
 </div>
 
 <h3 id="宽度和高度">宽度和高度</h3>
@@ -129,7 +129,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p>然而，你不应该使用 HTML 属性来改变图片的大小。如果你把尺寸设定的太大，最终图片看起来会模糊；如果太小，会在下载远远大于你需要的图片时浪费带宽。如果你没有保持正确的<a href="https://zh.wikipedia.org/wiki/%E9%95%B7%E5%AF%AC%E6%AF%94_(%E5%BD%B1%E5%83%8F)">宽高比</a>，图片可能看起来会扭曲。在把图片放到你的网站页面之前，你应该使用图形编辑器使图片的尺寸正确。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果你需要改变图片的尺寸，你应该使用<a href="/zh-CN/docs/Learn/CSS">CSS</a>而不是 HTML。</p>
+<p><strong>备注：</strong> 如果你需要改变图片的尺寸，你应该使用<a href="/zh-CN/docs/Learn/CSS">CSS</a>而不是 HTML。</p>
 </div>
 
 <h3 id="Image_titles_图片标题">Image titles 图片标题</h3>
@@ -168,10 +168,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>如果你遇到了错误，你可以按 reset 按钮来重置。如果你遇到了困难无法完成，按下 Show solution 按钮来看一下答案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -271,9 +268,8 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
       &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500) }}</p>
+<p>{{ EmbedLiveSample('动手练习：嵌入一张图片', 700, 500) }}</p>
 
 <h2 id="通过为图片搭配说明文字的方式来解说图片">通过为图片搭配说明文字的方式来解说图片</h2>
 
@@ -304,7 +300,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p>这个 {{htmlelement("figcaption")}} 元素 告诉浏览器和其他辅助的技术工具这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。</p>
 
 <div class="note">
-<p><strong>注意：</strong>从无障碍的角度来说，说明文字和 {{htmlattrxref('alt','img')}} 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 {{htmlattrxref('alt','img')}} 文字只有在图片无法显示时才这样。所以，说明文字和 <code>alt</code> 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试让你的图片不显示，看看效果如何。</p>
+<p><strong>备注：</strong> 从无障碍的角度来说，说明文字和 {{htmlattrxref('alt','img')}} 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 {{htmlattrxref('alt','img')}} 文字只有在图片无法显示时才这样。所以，说明文字和 <code>alt</code> 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试让你的图片不显示，看看效果如何。</p>
 </div>
 
 <p>注意 {{htmlelement("figure")}} 里不一定要是一张图片，只要是一个这样的独立内容单元：</p>
@@ -328,10 +324,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <p>如果你遇到了错误，你可以按 reset 按钮来重置。如果你遇到了困难无法完成，按下 Show solution 按钮来看一下答案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -438,9 +431,8 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 500) }}</p>
+<p>{{ EmbedLiveSample('动手练习：创建一个 figure', 700, 500) }}</p>
 
 <h2 id="CSS_背景图片">CSS 背景图片</h2>
 
@@ -455,7 +447,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p>总而言之，如果图像对您的内容里有意义，则应使用 HTML 图像。如果图像纯粹是装饰，则应使用 CSS 背景图片。</p>
 
 <div class="note">
-<p><strong>提示：</strong>你可以在 <a href="/zh-CN/docs/Learn/CSS">CSS</a> 模块里学到更多关于<a href="/zh-CN/docs/Learn/CSS/Styling_boxes/背景">CSS 背景图片</a>的东西。</p>
+<p><strong>备注：</strong> 你可以在 <a href="/zh-CN/docs/Learn/CSS">CSS</a> 模块里学到更多关于<a href="/zh-CN/docs/Learn/CSS/Styling_boxes/背景">CSS 背景图片</a>的东西。</p>
 </div>
 
 <h2 id="总结">总结</h2>

@@ -11,7 +11,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <p>在这篇文章中我们将学习关于响应式图片——一种可以在不同的屏幕尺寸和分辨率的设备上都能良好工作以及其他特性的图片，并且看看 HTML 提供了什么工具来帮助实现它们。响应式图片仅仅只是响应式 web 设计的一部分（奠定了响应式 web 设计的良好基础），我们会在未来的<a href="/zh-CN/docs/Learn/CSS">CSS topic</a>模块中学到更多关于这一主题的知识。</p>
 </div>
 
-<table class="learn-box nostripe standard-table">
+<table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">学习本章节的前提：</th>
@@ -55,7 +55,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <p>当 web 第一次出现时，这样的问题并不存在，在上世纪 90 年代中期，仅仅可以通过笔记本电脑和台式机来浏览 web 页面，所以浏览器开发者和规范制定者甚至没有想到要实现这种解决方式（响应式开发）。最近应用的响应式图像技术，通过让浏览器提供多个图像文件来解决上述问题，比如使用相同显示效果的图片但包含多个不同的分辨率（分辨率切换），或者使用不同的图片以适应不同的空间分配（美术设计）。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 在这篇文章中讨论的新特性 — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — 都已经被新版本的现代浏览器和移动浏览器所支持（包括 Edge，而不是 IE）。</p>
+<p><strong>备注：</strong> 在这篇文章中讨论的新特性 — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — 都已经被新版本的现代浏览器和移动浏览器所支持（包括 Edge，而不是 IE）。</p>
 </div>
 
 <h2 id="怎样创建自适应的图片">怎样创建自适应的图片？</h2>
@@ -97,7 +97,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 对于槽的宽度，你也许会提供一个固定值 (<code>px</code>, <code>em</code>) 或者是一个相对于视口的长度 (<code>vw</code>)，但不是百分比。你也许已经注意到最后一个槽的宽度是没有媒体条件的，它是默认的，当没有任何一个媒体条件为真时，它就会生效。当浏览器成功匹配第一个媒体条件的时候，剩下所有的东西都会被忽略，所以要注意媒体条件的顺序。</p>
+<p><strong>备注：</strong> 对于槽的宽度，你也许会提供一个固定值 (<code>px</code>, <code>em</code>) 或者是一个相对于视口的长度 (<code>vw</code>)，但不是百分比。你也许已经注意到最后一个槽的宽度是没有媒体条件的，它是默认的，当没有任何一个媒体条件为真时，它就会生效。当浏览器成功匹配第一个媒体条件的时候，剩下所有的东西都会被忽略，所以要注意媒体条件的顺序。</p>
 </div>
 
 <p>所以，有了这些属性，浏览器会：</p>
@@ -114,7 +114,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <p>老旧的浏览器不支持这些特性，它会忽略这些特征。并继续正常加载 {{htmlattrxref("src", "img")}}属性引用的图像文件。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 在 HTML 文件中的 {{htmlelement("head")}} 标签里，你将会找到这一行代码 <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: 这行代码会强制地让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度，然后加载比浏览器真实可视窗口的宽度大的宽度的网页，然后再缩小加载的页面，这样的做法对响应式图片或其他设计，没有任何帮助。我们会在未来的模块教给你更多关于这方面的知识）。</p>
+<p><strong>备注：</strong> 在 HTML 文件中的 {{htmlelement("head")}} 标签里，你将会找到这一行代码 <code>&lt;meta name="viewport" content="width=device-width"&gt;</code>: 这行代码会强制地让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度，然后加载比浏览器真实可视窗口的宽度大的宽度的网页，然后再缩小加载的页面，这样的做法对响应式图片或其他设计，没有任何帮助。我们会在未来的模块教给你更多关于这方面的知识）。</p>
 </div>
 
 <h3 id="分辨率切换_相同的尺寸_不同的分辨率">分辨率切换：相同的尺寸，不同的分辨率</h3>
@@ -163,7 +163,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <p><img alt="Our example site as viewed on a wide screen - here the first image works OK, as it is big enough to see the detail in the center." src="picture-element-wide.png"><img alt="Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen" src="picture-element-narrow.png"></p>
 
 <div class="note">
-<p><strong>注意</strong>: 你应该仅仅当在美术设计场景下使用 media 属性；当你使用 media 时，不要在 sizes 属性中也提供媒体条件。</p>
+<p><strong>备注：</strong> 你应该仅仅当在美术设计场景下使用 media 属性；当你使用 media 时，不要在 sizes 属性中也提供媒体条件。</p>
 </div>
 
 <h3 id="为什么我们不能使用_CSS_或_JavaScript_来做到这一效果">为什么我们不能使用 CSS 或 JavaScript 来做到这一效果？</h3>
@@ -205,7 +205,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 使用浏览器开发工具来帮助你工作时可以得到你需要的视图大小，就像上文提到的。</p>
+<p><strong>备注：</strong> 使用浏览器开发工具来帮助你工作时可以得到你需要的视图大小，就像上文提到的。</p>
 </div>
 
 <h2 id="小结">小结</h2>
