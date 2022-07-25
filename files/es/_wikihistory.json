@@ -6460,21 +6460,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onerror": {
-    "modified": "2019-03-23T22:53:42.268Z",
-    "contributors": [
-      "wbamberg",
-      "galegosimpatico"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T23:33:14.527Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "ehecatl"
-    ]
-  },
   "Web/API/HTMLAnchorElement": {
     "modified": "2019-03-18T21:42:27.257Z",
     "contributors": [
@@ -8378,6 +8363,13 @@
     "modified": "2019-03-18T21:17:09.045Z",
     "contributors": [
       "Grijander81"
+    ]
+  },
+  "Web/API/Window/error_event": {
+    "modified": "2019-03-23T22:53:42.268Z",
+    "contributors": [
+      "wbamberg",
+      "galegosimpatico"
     ]
   },
   "Web/API/Window/focus_event": {
@@ -20971,6 +20963,14 @@
     "contributors": [
       "AlePerez92",
       "daesnorey"
+    ]
+  },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T23:33:14.527Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "ehecatl"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

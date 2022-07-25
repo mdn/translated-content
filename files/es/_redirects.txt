@@ -309,7 +309,7 @@
 /es/docs/DOM/window.navigator.geolocation	/es/docs/Web/API/Navigator/geolocation
 /es/docs/DOM/window.navigator.registerProtocolHandler	/es/docs/Web/API/Navigator/registerProtocolHandler
 /es/docs/DOM/window.navigator.vibrate	/es/docs/Web/API/Navigator/vibrate
-/es/docs/DOM/window.onload	/es/docs/Web/API/GlobalEventHandlers/onload
+/es/docs/DOM/window.onload	/es/docs/conflicting/Web/API/Window/load_event
 /es/docs/DOM/window.requestAnimationFrame	/es/docs/Web/API/Window/requestAnimationFrame
 /es/docs/DOM:Selection:addRange	/es/docs/Web/API/Selection/addRange
 /es/docs/DOM:Selection:anchorNode	/es/docs/Web/API/Selection/anchorNode
@@ -1607,11 +1607,13 @@
 /es/docs/Web/API/GlobalEventHandlers/onchange	/es/docs/conflicting/Web/API/HTMLElement/change_event
 /es/docs/Web/API/GlobalEventHandlers/onclick	/es/docs/conflicting/Web/API/Element/click_event
 /es/docs/Web/API/GlobalEventHandlers/onclose	/es/docs/Web/API/HTMLDialogElement/close_event
+/es/docs/Web/API/GlobalEventHandlers/onerror	/es/docs/Web/API/Window/error_event
 /es/docs/Web/API/GlobalEventHandlers/onfocus	/es/docs/Web/API/Window/focus_event
 /es/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/es/docs/Web/API/Element/gotpointercapture_event
 /es/docs/Web/API/GlobalEventHandlers/oninput	/es/docs/conflicting/Web/API/HTMLElement/input_event
 /es/docs/Web/API/GlobalEventHandlers/onkeydown	/es/docs/conflicting/Web/API/Element/keydown_event
 /es/docs/Web/API/GlobalEventHandlers/onkeyup	/es/docs/conflicting/Web/API/Element/keyup_event
+/es/docs/Web/API/GlobalEventHandlers/onload	/es/docs/conflicting/Web/API/Window/load_event
 /es/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/es/docs/Web/API/Element/lostpointercapture_event
 /es/docs/Web/API/GlobalEventHandlers/onresize	/es/docs/Web/API/Window/resize_event
 /es/docs/Web/API/GlobalEventHandlers/onscroll	/es/docs/Web/API/Element/scroll_event

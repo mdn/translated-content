@@ -42,8 +42,8 @@ translation_of: Web/SVG/Tutorial/Getting_Started
    <li>作为 XML 的一种方言，SVG 必须正确的绑定命名空间（在 xmlns 属性中绑定）。 请阅读<a href="https://developer.mozilla.org/en/docs/Web/SVG/Namespaces_Crash_Course">命名空间速成</a> 页面获取更多信息。</li>
   </ul>
  </li>
- <li>绘制一个完全覆盖图像区域的矩形 <code><a href="/en/SVG/Element/rect" title="en/SVG/Element/rect">&lt;rect/&gt;</a>，</code>把背景颜色设为红色。</li>
- <li><code>一个半径 80px 的绿色圆圈<a href="/en/SVG/Element/circle" title="en/SVG/Element/circle">&lt;circle/&gt;</a></code>绘制在红色矩形的正中央（向右偏移 150px，向下偏移 100px）。</li>
+ <li>绘制一个完全覆盖图像区域的矩形 <code><a href="/en/SVG/Element/rect">&lt;rect/&gt;</a>，</code>把背景颜色设为红色。</li>
+ <li><code>一个半径 80px 的绿色圆圈<a href="/en/SVG/Element/circle">&lt;circle/&gt;</a></code>绘制在红色矩形的正中央（向右偏移 150px，向下偏移 100px）。</li>
  <li>绘制文字“SVG”。文字被填充为白色， 通过设置居中的锚点把文字定位到期望的位置：在这种情况下，中心点应该对应于绿色圆圈的中点。还可以精细调整字体大小和垂直位置，确保最后的样式是美观的。</li>
 </ol>
 
@@ -64,7 +64,7 @@ translation_of: Web/SVG/Tutorial/Getting_Started
    <li>理论上同样可以使用 <code>img</code> 元素，但是在低于 4.0 版本的 Firefox 中不起作用。</li>
    <li>最后 SVG 可以通过 JavaScript 动态创建并注入到 HTML DOM 中。 这样具有一个优点，可以对浏览器使用替代技术，在不能解析 SVG 的情况下，可以替换创建的内容。</li>
   </ul>
-  阅读<a href="/en/SVG_In_HTML_Introduction" title="en/svg in html introduction">this dedicated article</a> 以深入了解该话题。</li>
+  阅读<a href="/en/SVG_In_HTML_Introduction">this dedicated article</a> 以深入了解该话题。</li>
  <li>SVG 如何处理大小和单位将在<a href="https://developer.mozilla.org/zh-cn/docs/Web/SVG/Tutorial/Positions">下一页</a>详解。</li>
 </ul>
 
@@ -87,7 +87,7 @@ Vary: Accept-Encoding</pre>
 Content-Encoding: gzip
 Vary: Accept-Encoding</pre>
 
-<p>可以利用<a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers">Network Monitor panel</a>或者<a class="external" href="http://web-sniffer.net/" style="line-height: 1.5;">web-sniffer.net</a>之类的网站来检查服务器是否给 SVG 文件发送正确的 HTTP 头，向<a href="http://web-sniffer.net/">web-sniffer.net</a>提交你的一个 SVG 文件的链接，然后查看 HTTP 响应头。如果发现服务器没有发送上述的响应头部值，那么你应该联系你的服务器供应商。如果不能说服他们为 SVG 修正服务器配置，可能还有一些我们可以自行解决的办法。 请阅读 SVG 维基的<a class="external" href="http://svg-whiz.com/wiki/index.php?title=Server_Configuration" style="line-height: 1.5;">server configuration page</a>以找到一些简单的解决方案。</p>
+<p>可以利用<a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers">Network Monitor panel</a>或者<a href="http://web-sniffer.net/">web-sniffer.net</a>之类的网站来检查服务器是否给 SVG 文件发送正确的 HTTP 头，向<a href="http://web-sniffer.net/">web-sniffer.net</a>提交你的一个 SVG 文件的链接，然后查看 HTTP 响应头。如果发现服务器没有发送上述的响应头部值，那么你应该联系你的服务器供应商。如果不能说服他们为 SVG 修正服务器配置，可能还有一些我们可以自行解决的办法。 请阅读 SVG 维基的<a href="http://svg-whiz.com/wiki/index.php?title=Server_Configuration">server configuration page</a>以找到一些简单的解决方案。</p>
 
 <p>服务器配置错误是 SVG 加载失败的常见原因，所以一定要确保你的服务器配置正确。如果不能把服务器配置成给 SVG 文件发送正确的响应头，这时 Firefox 很有可能把该文件的标记显示成文本或乱码，甚至会要求查看者选择打开文件的应用程序。</p>
 

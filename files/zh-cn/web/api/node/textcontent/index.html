@@ -33,7 +33,7 @@ translation_of: Web/API/Node/textContent
  <li>如果节点是一个 {{domxref("document")}}，或者一个 <a href="/zh-CN/docs/Glossary/Doctype">DOCTYPE</a> ，则 <code>textContent</code> 返回 <code>null</code>。
 
   <div class="blockIndicator note">
-  <p>如果你要获取整个文档的文本以及 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA data</a> ，可以使用 <code><a href="/zh-CN/docs/DOM/document.documentElement" title="DOM/document.documentElement">document.documentElement</a>.textContent</code>。</p>
+  <p>如果你要获取整个文档的文本以及 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA data</a> ，可以使用 <code><a href="/zh-CN/docs/DOM/document.documentElement">document.documentElement</a>.textContent</code>。</p>
   </div>
  </li>
  <li>如果节点是个 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA section</a>、注释、<a href="/zh-CN/docs/Web/API/ProcessingInstruction">processing instruction</a> 或者 <a href="/zh-CN/docs/Web/API/Document/createTextNode">text node</a>，<code>textContent</code> 返回节点内部的文本内容，例如 {{domxref("Node.nodeValue")}}。</li>

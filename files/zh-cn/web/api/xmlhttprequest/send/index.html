@@ -75,7 +75,7 @@ XMLHttpRequest.send(FormData <var>data</var>);
 
 <p>如果发送的数据是 Document 对象，需要在发送之前将其序列化。当发送一个 Document 对象时，Firefox 3 之前的版本都是使用 UTF-8 编码发送请求的；FireFox 3 则使用由 <code>body.xmlEncoding</code> 指定的编码格式正确的发送文档，但如果未指定编码格式，则使用 UTF-8 编码格式发送。</p>
 
-<p>如果是一个 nsIInputStream 接口，它必须与 nsIUploadChannel 的 <code>setUploadStream()</code> 方法兼容。在这种情况下，将 Content-Length 的头部添加到请求中，它的值则使用 nsIInputStream 接口的 <code>available()</code> 方法获取。任何报头包括在数据流顶部的都会被当做报文主体。所以，应该在发送请求即调用 <code>send()</code> 方法之前使用<a class="internal" href="#setRequestHeader()"><code>setRequestHeader()</code></a> 方法设置 Content-Type 头部来指定数据流的 MIME 类型。</p>
+<p>如果是一个 nsIInputStream 接口，它必须与 nsIUploadChannel 的 <code>setUploadStream()</code> 方法兼容。在这种情况下，将 Content-Length 的头部添加到请求中，它的值则使用 nsIInputStream 接口的 <code>available()</code> 方法获取。任何报头包括在数据流顶部的都会被当做报文主体。所以，应该在发送请求即调用 <code>send()</code> 方法之前使用<a href="#setRequestHeader()"><code>setRequestHeader()</code></a> 方法设置 Content-Type 头部来指定数据流的 MIME 类型。</p>
 
 <p>发送二进制内容的最佳方法（如上传文件）是使用一个与 <code>send()</code> 方法结合的 <a href="/en-US/docs/Web/API/ArrayBufferView">ArrayBufferView</a> 或者 <a href="/en-US/docs/Web/API/Blob">Blobs</a></p>
 

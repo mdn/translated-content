@@ -458,6 +458,7 @@
 /de/docs/Web/API/FileReader/onload	/de/docs/Web/API/FileReader/load_event
 /de/docs/Web/API/FullscreenOptions	/de/docs/orphaned/Web/API/FullscreenOptions
 /de/docs/Web/API/GlobalEventHandlers/onclick	/de/docs/Web/API/Element/click_event
+/de/docs/Web/API/GlobalEventHandlers/onload	/de/docs/conflicting/Web/API/Window/load_event
 /de/docs/Web/API/GlobalEventHandlers/onresize	/de/docs/Web/API/Window/resize_event
 /de/docs/Web/API/IndexedDB_API/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /de/docs/Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-handler	/de/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers

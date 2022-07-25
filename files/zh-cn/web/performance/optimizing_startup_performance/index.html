@@ -15,7 +15,7 @@ translation_of: Web/Performance/Optimizing_startup_performance
 
 <p>不论在什么平台上，尽可能<strong>快</strong>地启动总是一个好主意。因为这是个很宽泛的问题，在这里我们不会着重关注。相反我们会关注构建 Web 应用时更重要的一个问题：尽可能<strong>异步地</strong>启动。这意味着不要将你所有的启动代码在应用主线程中的唯一一个事件处理函数中运行。</p>
 
-<p>相反，你应该这样写你的代码，让你的应用在后台线程创建一个  <a href="/en-US/docs/DOM/Using_web_workers" title="/en-US/docs/DOM/Using_web_workers">Web worker</a> ，做尽可能多的工作（比如，获取和处理数据）。然后，所有必须在主线程中完成的事情（比如用户事件和渲染用户界面）应该被分成小的片段，这样，当应用启动时，应用的事件循环就可以持续地运行下去。这可以避免应用、浏览器以及/或者设备出现锁死。</p>
+<p>相反，你应该这样写你的代码，让你的应用在后台线程创建一个  <a href="/en-US/docs/DOM/Using_web_workers">Web worker</a> ，做尽可能多的工作（比如，获取和处理数据）。然后，所有必须在主线程中完成的事情（比如用户事件和渲染用户界面）应该被分成小的片段，这样，当应用启动时，应用的事件循环就可以持续地运行下去。这可以避免应用、浏览器以及/或者设备出现锁死。</p>
 
 <p>为什么异步性很重要？除了上面提出的原因，还考虑了无响应页面或用户界面的影响。如果用户错误地启动了应用，将不能取消。如果应用正在浏览器中运行，用户可能会收到一个“应用无响应”或“加载缓慢”的提醒。你应该显示几种界面，比如进度条，这样用户可以在应用启动时知道他们需要等待多长时间。</p>
 
@@ -25,7 +25,7 @@ translation_of: Web/Performance/Optimizing_startup_performance
 
 <p>但是，另一方面，当您将现有应用程序移植到 Web 上时，问题会变得棘手。桌面应用程序不需要以异步方式编写，因为通常操作系统会为您处理该问题；或者应用程序当前是唯一正在运行的主要任务，而这具体取决于操作环境。源程序可能有一个主循环，可以被轻松地改成异步操作（通过分别运行每个主循环）；启动通常只是一个持续的整体过程，过程中可能会定期更新进度表。</p>
 
-<p>虽然您可以使用 <a href="/zh-CN/docs/Web/API/Web_Workers_API" title="/zh-CN/docs/Web/API/Web_Workers_API">Web workers</a> 异步运行体积巨大，持续时间长的 <a href="/zh-CN/docs/JavaScript" title="/zh-CN/docs/JavaScript">JavaScript</a> 代码块，但还是要给出一个重大警告：workers 不具备访问 <a href="/zh-CN/docs/WebGL" title="/zh-CN/docs/WebGL">WebGL</a> 或音频的能力，亦不能向主线程发送同步消息，所以你甚至不能将这些 API 代理到主线程中。所有的这一切意味着，除非你够轻松地抽取启动过程中的“纯计算”代码块，加入到 workers 中，否则你最后还是得在主线程上运行大部分或全部的启动代码。</p>
+<p>虽然您可以使用 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web workers</a> 异步运行体积巨大，持续时间长的 <a href="/zh-CN/docs/JavaScript">JavaScript</a> 代码块，但还是要给出一个重大警告：workers 不具备访问 <a href="/zh-CN/docs/WebGL">WebGL</a> 或音频的能力，亦不能向主线程发送同步消息，所以你甚至不能将这些 API 代理到主线程中。所有的这一切意味着，除非你够轻松地抽取启动过程中的“纯计算”代码块，加入到 workers 中，否则你最后还是得在主线程上运行大部分或全部的启动代码。</p>
 
 <p>但是即便是那样的代码，通过一点点工作，也可以变为异步的。</p>
 
@@ -81,8 +81,8 @@ translation_of: Web/Performance/Optimizing_startup_performance
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="/en-US/docs/Apps" title="/en-US/docs/Apps">Apps</a></li>
- <li><a href="/en-US/docs/Games" title="/en-US/docs/Games">Games</a></li>
+ <li><a href="/en-US/docs/Apps">Apps</a></li>
+ <li><a href="/en-US/docs/Games">Games</a></li>
 </ul>
 
 <div class="originaldocinfo">
@@ -90,7 +90,7 @@ translation_of: Web/Performance/Optimizing_startup_performance
 
 <ul>
  <li>作者: Alon Zakai</li>
- <li>源链接：<a href="http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html" title="http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html">BananaBread (or any compiled codebase) Startup Experience</a></li>
+ <li>源链接：<a href="http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html">BananaBread (or any compiled codebase) Startup Experience</a></li>
 </ul>
 </div>
 

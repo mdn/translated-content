@@ -21,7 +21,7 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 <ul>
  <li>盒子的尺寸：精确指定、由约束条件指定或没有指定</li>
  <li>盒子的类型：行内盒子（inline）、行内级盒子（inline-level）、原子行内级盒子（atomic inline-level）、块盒子（block）</li>
- <li><a href="/zh-CN/docs/CSS/Box_positioning_scheme" title="CSS/Box positioning scheme">定位方案（positioning scheme）</a>：普通流定位、浮动定位或绝对定位</li>
+ <li><a href="/zh-CN/docs/CSS/Box_positioning_scheme">定位方案（positioning scheme）</a>：普通流定位、浮动定位或绝对定位</li>
  <li>文档树中的其它元素：即当前盒子的子元素或兄弟元素</li>
  <li>{{glossary("viewport", "视口")}}尺寸与位置</li>
  <li>所包含的图片的尺寸</li>
@@ -65,11 +65,11 @@ original_slug: Web/Guide/CSS/Visual_formatting_model
 
 <p>当元素的 {{ cssxref("display") }} 为 <code>block</code>、<code>list-item</code> 或 <code>table</code> 时，该元素将成为块级元素。一个块级元素会被格式化成一个块（例如文章的一个段落），默认按照垂直方向依次排列。</p>
 
-<p>每个块级盒子都会参与<a href="/en-US/docs/CSS/block_formatting_context" title="block formatting context">块格式化上下文（block formatting context）</a>的创建，而每个块级元素都会至少生成一个块级盒子，即主块级盒子（<em>principal block-level</em><em> box）。有</em>一些元素，比如列表项会生成额外的盒子来放置项目符号，而那些会生成列表项的元素可能会生成更多的盒子。不过，多数元素只生成一个主块级盒子。 </p>
+<p>每个块级盒子都会参与<a href="/en-US/docs/CSS/block_formatting_context">块格式化上下文（block formatting context）</a>的创建，而每个块级元素都会至少生成一个块级盒子，即主块级盒子（<em>principal block-level</em><em> box）。有</em>一些元素，比如列表项会生成额外的盒子来放置项目符号，而那些会生成列表项的元素可能会生成更多的盒子。不过，多数元素只生成一个主块级盒子。 </p>
 
-<p>主块级盒子包含由后代元素生成的盒子以及内容，同时它也会参与<a href="/zh-CN/docs/CSS/Positioning_scheme" title="CSS/Positioning scheme">定位方案</a>。</p>
+<p>主块级盒子包含由后代元素生成的盒子以及内容，同时它也会参与<a href="/zh-CN/docs/CSS/Positioning_scheme">定位方案</a>。</p>
 
-<p><img alt="venn_blocks.png" class="internal lwrap" src="/@api/deki/files/5995/=venn_blocks.png" style="float: left;">一个块级盒子可能也是一个块容器盒子。块容器盒子（<em>block container box）要么</em>只包含其它块级盒子，要么只包含行内盒子并同时创建一个行内<a href="/en-US/docs/CSS/Inline_formatting_context" title="CSS/Inline formatting context">格式化上下文（inline formatting context）</a>。</p>
+<p><img alt="venn_blocks.png" class="internal lwrap" src="/@api/deki/files/5995/=venn_blocks.png" style="float: left;">一个块级盒子可能也是一个块容器盒子。块容器盒子（<em>block container box）要么</em>只包含其它块级盒子，要么只包含行内盒子并同时创建一个行内<a href="/en-US/docs/CSS/Inline_formatting_context">格式化上下文（inline formatting context）</a>。</p>
 
 <p>能够注意到块级盒子与块容器盒子是不同的这一点很重要。前者描述了元素与其父元素和兄弟元素之间的行为，而后者描述了元素跟其后代之间的行为。有些块级盒子并不是块容器盒子，比如表格；而有些块容器盒子也不是块级盒子，比如非替换行内块和非替换表格单元格。</p>
 

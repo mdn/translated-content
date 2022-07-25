@@ -26,7 +26,7 @@ var arr = [element0, element1, ..., elementN];
 
 <p><code>element0, element1, ..., elementN</code> 是数组元素的值的列表。当这些值被指定后，数组将被初始化，他们将被作为数组元素。数组的 length 属性也会被设为参数的个数。</p>
 
-<p>括号语法被称为 "数组字面值" 或 "数组初始化器", 它比其他创建数组的方式更便捷，所以通常是首选。详细内容参见 <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals" title="en-US/docs/JavaScript/Guide/Values, Variables, and Literals#Array Literals">Array literals</a> 。</p>
+<p>括号语法被称为 "数组字面值" 或 "数组初始化器", 它比其他创建数组的方式更便捷，所以通常是首选。详细内容参见 <a href="/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals">Array literals</a> 。</p>
 
 <p>为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：</p>
 
@@ -149,7 +149,7 @@ for (var i = 0; i &lt; colors.length; i++) {
 }
 </pre>
 
-<p>如果你确定数组中没有一个元素的求值是 false —— 如果你的数组只包含<a href="/en-US/docs/DOM" title="en-US/docs/DOM">DOM</a>节点，如下，你可以选择一个更高效的土法子：</p>
+<p>如果你确定数组中没有一个元素的求值是 false —— 如果你的数组只包含<a href="/en-US/docs/DOM">DOM</a>节点，如下，你可以选择一个更高效的土法子：</p>
 
 <pre class="brush: js">var divs = document.getElementsByTagName('div');
 for (var i = 0, div; div = divs[i]; i++) {
@@ -384,12 +384,11 @@ Row 3: [3,0] [3,1] [3,2] [3,3]
 
 <h3 id="数组和正则表达式">数组和正则表达式</h3>
 
-<p>当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec" title="en-US/docs/JavaScript/Reference/Global Objects/RegExp/exec"><code>RegExp.exec()</code></a>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/match" title="en-US/docs/JavaScript/Reference/Global Objects/String/match">String.match()</a> 和</code> <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split" title="en-US/docs/JavaScript/Reference/Global
-Objects/String/split">String.split()</a> 的返回值是一个数组。</code> 使用数组和正则表达式的的更多信息，请看 <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" title="en-US/docs/JavaScript/Guide/Regular Expressions">Regular Expressions</a>.</p>
+<p>当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。 <a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec"><code>RegExp.exec()</code></a>, <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/match">String.match()</a> 和</code> <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/String/split">String.split()</a> 的返回值是一个数组。</code> 使用数组和正则表达式的的更多信息，请看 <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expressions</a>.</p>
 
 <h3 id="使用类数组对象array-like_objects">使用类数组对象 (array-like objects)</h3>
 
-<p>一些 JavaScript 对象，例如 {{domxref("document.getElementsByTagName()")}} 返回的 {{domxref("NodeList")}} 或者函数内部可用的 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments" title="en-US/docs/JavaScript/Reference/Functions andfunctionscope/arguments"><code>arguments</code></a> 对象，他们表面上看起来，外观和行为像数组，但是不共享他们所有的方法。例如 <code>arguments</code> 对象就提供一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">length</a></code> 属性，但是不实现 {{jsxref("Array.forEach", "forEach()")}} 方法。</p>
+<p>一些 JavaScript 对象，例如 {{domxref("document.getElementsByTagName()")}} 返回的 {{domxref("NodeList")}} 或者函数内部可用的 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a> 对象，他们表面上看起来，外观和行为像数组，但是不共享他们所有的方法。例如 <code>arguments</code> 对象就提供一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">length</a></code> 属性，但是不实现 {{jsxref("Array.forEach", "forEach()")}} 方法。</p>
 
 <p>Array 的原生 (prototype) 方法可以用来处理类似数组行为的对象，例如： :</p>
 
@@ -440,9 +439,9 @@ var doubledEvens = [i * 2 for (i of numbers) if (i % 2 === 0)];
 console.log(doubledEvens); // logs 4,44,60
 </pre>
 
-<p>数组推导式隐含了块作用域。新的变量 (如例子中的 i) 类似于是采用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let" title="/en-US/docs/JavaScript/Reference/Statements/let"><code>let</code></a>声明的。这意味着他们不能在推导式以外访问。</p>
+<p>数组推导式隐含了块作用域。新的变量 (如例子中的 i) 类似于是采用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a>声明的。这意味着他们不能在推导式以外访问。</p>
 
-<p>数组推导式的输入不一定必须是数组; <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators" title="en-US/docs/JavaScript/Guide/Iterators and Generators">迭代器和生成器</a> 也是可以的。</p>
+<p>数组推导式的输入不一定必须是数组; <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">迭代器和生成器</a> 也是可以的。</p>
 
 <p>甚至字符串也可以用来作为输入; 实现 filter 或者 map 行为 (参考上面类似数组行为的对象) 如下：</p>
 

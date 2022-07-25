@@ -115,7 +115,7 @@ translation_of: Web/MathML/Element/math
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>注意：</strong> XHTML 文档如果带有 MathML，必须将文档的 MIME 类型设置为<code>application/xhtml+xml</code>进行发送。一般来说可以通过将扩展名改为<code>.xhtml</code> 来实现对本地文件的修改。对于 Apache 服务器，你可以<a class="external" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">配置<code>.htaccess</code>文件</a> 来达到映射扩展名为正确的 MIME 类型的目的。因为 MathML 被放在一个 XML 文件中，你必须编写一个严格符合 XML 格式的文档。</p>
+<p><strong>注意：</strong> XHTML 文档如果带有 MathML，必须将文档的 MIME 类型设置为<code>application/xhtml+xml</code>进行发送。一般来说可以通过将扩展名改为<code>.xhtml</code> 来实现对本地文件的修改。对于 Apache 服务器，你可以<a href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">配置<code>.htaccess</code>文件</a> 来达到映射扩展名为正确的 MIME 类型的目的。因为 MathML 被放在一个 XML 文件中，你必须编写一个严格符合 XML 格式的文档。</p>
 
 <h2 id="规范">规范</h2>
 
@@ -147,7 +147,7 @@ translation_of: Web/MathML/Element/math
 
 <h2 id="Gecko-specific_注释">Gecko-specific 注释</h2>
 
-<p>Gecko 7.0 {{ geckoRelease("7.0") }} 添加了对所有 MathML 属性在顶级 math 元素上的支持。 (也就是说和添加一个{{ MathMLElement("mstyle") }}元素效果一样)。然而，<code>displaystyle</code> 属性直到 Gecko 8.0 {{ geckoRelease("8.0") }} 才 <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">被添加进实现</a>。</p>
+<p>Gecko 7.0 {{ geckoRelease("7.0") }} 添加了对所有 MathML 属性在顶级 math 元素上的支持。 (也就是说和添加一个{{ MathMLElement("mstyle") }}元素效果一样)。然而，<code>displaystyle</code> 属性直到 Gecko 8.0 {{ geckoRelease("8.0") }} 才 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">被添加进实现</a>。</p>
 
 <p>纯文本的 fall-back (<code>alttext</code>) 或者指定替代图像的属性<code>altimg</code>, <code>altimg-width</code>, <code>altimg-height</code> 或 <code>altimg-valign</code> 目前都还没有在 Gecko 中实现。</p>
 
@@ -156,5 +156,5 @@ translation_of: Web/MathML/Element/math
 <ul>
  <li>HTML top-level element: {{ HTMLElement("html") }}</li>
  <li>SVG top-level element: {{ SVGElement("svg") }}</li>
- <li>MathML browser test: For <a class="link-https" href="https://www.eyeasme.com/Joe/MathML/MathML_browser_test">XHTML</a> and <a class="link-https" href="https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test">HTML5</a></li>
+ <li>MathML browser test: For <a href="https://www.eyeasme.com/Joe/MathML/MathML_browser_test">XHTML</a> and <a href="https://eyeasme.com/Joe/MathML/HTML5_MathML_browser_test">HTML5</a></li>
 </ul>

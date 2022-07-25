@@ -21,12 +21,12 @@ original_slug: Server-sent_events/Using_server-sent_events
 
 <h2 id="从服务器接受事件">从服务器接受事件</h2>
 
-<p>服务器发送事件 API 也就是<a href="/zh-CN/Server-sent_events/EventSource" title="zh-CN/Server-sent events/EventSource"><code>EventSource</code></a>接口，在你创建一个新的<a href="/zh-CN/Server-sent_events/EventSource" title="zh-CN/Server-sent events/EventSource"><code>EventSource</code></a>对象的同时，你可以指定一个接受事件的 URI.例如：</p>
+<p>服务器发送事件 API 也就是<a href="/zh-CN/Server-sent_events/EventSource"><code>EventSource</code></a>接口，在你创建一个新的<a href="/zh-CN/Server-sent_events/EventSource"><code>EventSource</code></a>对象的同时，你可以指定一个接受事件的 URI.例如：</p>
 
 <pre class="notranslate">const evtSource = new EventSource("ssedemo.php");
 </pre>
 
-<div class="note"><strong>注：</strong>从 Firefox 11 开始，<code>EventSource</code>开始支持<a href="/zh-CN/HTTP_access_control" title="zh-CN/HTTP_access_control">CORS</a>.虽然该特性目前并不是标准，但很快会成为标准。</div>
+<div class="note"><strong>注：</strong>从 Firefox 11 开始，<code>EventSource</code>开始支持<a href="/zh-CN/HTTP_access_control">CORS</a>.虽然该特性目前并不是标准，但很快会成为标准。</div>
 
 <p>如果发送事件的脚本不同源，应该创建一个新的包含 URL 和 options 参数的<code>EventSource</code>对象。例如，假设客户端脚本在 example.com 上：</p>
 
@@ -56,7 +56,7 @@ original_slug: Server-sent_events/Using_server-sent_events
 <p>这段代码也类似，只是只有在服务器发送的消息中包含一个值为"ping"的<code>event</code>字段的时候才会触发对应的处理函数，也就是将<code>data</code>字段的字段值解析为 JSON 数据，然后在页面上显示出所需要的内容。</p>
 
 <div class="blockIndicator warning">
-<p>当<strong>不通过 HTTP / 2 使用时</strong>，SSE（server-sent events）会受到最大连接数的限制，这在打开各种选项卡时特别麻烦，因为该限制是针对每个浏览器的，并且被设置为一个非常低的数字（6）。该问题在 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>中被标记为“无法解决”。此限制是针对每个浏览器 + 域的，因此这意味着您可以跨所有选项卡打开 6 个 SSE 连接到 www.example1.com，并打开 6 个 SSE 连接到 www.example2.com。（来自 <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>）。使用 HTTP / 2 时，HTTP 同一时间内的最大连接数由服务器和客户端之间协商（默认为 100）。</p>
+<p>当<strong>不通过 HTTP / 2 使用时</strong>，SSE（server-sent events）会受到最大连接数的限制，这在打开各种选项卡时特别麻烦，因为该限制是针对每个浏览器的，并且被设置为一个非常低的数字（6）。该问题在 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955">Chrome</a> 和 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896">Firefox</a>中被标记为“无法解决”。此限制是针对每个浏览器 + 域的，因此这意味着您可以跨所有选项卡打开 6 个 SSE 连接到 www.example1.com，并打开 6 个 SSE 连接到 www.example2.com。（来自 <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>）。使用 HTTP / 2 时，HTTP 同一时间内的最大连接数由服务器和客户端之间协商（默认为 100）。</p>
 </div>
 
 <h2 id="服务器端如何发送事件流">服务器端如何发送事件流</h2>
@@ -100,7 +100,7 @@ while (true) {
 
 <h2 id="错误处理">错误处理</h2>
 
-<p>当发生错误 (例如请求超时或与<a href="/zh-CN/docs/Web/HTTP/Access_control_CORS" title="/en-US/docs/HTTP/Access_control_CORS">HTTP 访问控制（CORS）</a>有关的问题), 会生成一个错误事件。您可以通过在<code>EventSource</code>对象上使用<code>onerror</code>回调来对此采取措施：</p>
+<p>当发生错误 (例如请求超时或与<a href="/zh-CN/docs/Web/HTTP/Access_control_CORS">HTTP 访问控制（CORS）</a>有关的问题), 会生成一个错误事件。您可以通过在<code>EventSource</code>对象上使用<code>onerror</code>回调来对此采取措施：</p>
 
 <pre class="notranslate">evtSource.onerror = function(err) {
   console.error("EventSource failed:", err);

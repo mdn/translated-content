@@ -24,7 +24,7 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 <h2 id="哪些_CSS_属性可以动画">哪些 CSS 属性可以动画？</h2>
 
-<p>网页制作者可以定义哪个属性以哪种方式动画，这样能制作出复杂的过渡。因为有些属性动画无意义，所以 <a href="/zh-CN/docs/CSS/CSS_animated_properties" title="/en-US/docs/">可动画属性列表</a> 是一个有限集合。</p>
+<p>网页制作者可以定义哪个属性以哪种方式动画，这样能制作出复杂的过渡。因为有些属性动画无意义，所以 <a href="/zh-CN/docs/CSS/CSS_animated_properties">可动画属性列表</a> 是一个有限集合。</p>
 
 <div class="note">Note: 可动画的属性集将有变动，开发者应关注。</div>
 
@@ -66,11 +66,11 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 <h2 id="定义过渡">定义过渡</h2>
 
-<p>CSS 过渡 由简写属性<a href="https://developer.mozilla.org/en-US/docs/CSS/transition" title="https://developer.mozilla.org/en-US/docs/CSS/transition"> </a>{{cssxref("transition")}} 定义是最好的方式，可以避免属性值列表长度不一，节省调试时间。</p>
+<p>CSS 过渡 由简写属性<a href="https://developer.mozilla.org/en-US/docs/CSS/transition"> </a>{{cssxref("transition")}} 定义是最好的方式，可以避免属性值列表长度不一，节省调试时间。</p>
 
 <p>也可以用下面子属性来控制过渡的各部分：</p>
 
-<p><strong>(注意下面示例中过渡无限循环是为了说明例子，过渡只是从开始到结束变化，如果需要循环，查看 <a href="/en-US/docs/CSS/animation" title="/en-US/docs/CSS/animation"><code>animation</code></a> 。)</strong></p>
+<p><strong>(注意下面示例中过渡无限循环是为了说明例子，过渡只是从开始到结束变化，如果需要循环，查看 <a href="/en-US/docs/CSS/animation"><code>animation</code></a> 。)</strong></p>
 
 <dl>
  <dt>{{ cssxref("transition-property") }}</dt>
@@ -340,7 +340,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
  </div>
  </dd>
  <dt>{{ cssxref("transition-timing-function") }}</dt>
- <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;">指定一个函数，定义属性值怎么变化。缓动函数 <em>Timing functions</em> 定义属性如何计算。多数 <a href="/en-US/docs/CSS/timing-function" title="/en-US/docs/CSS/timing-function">timing functions</a> 由四点定义一个 bezier 曲线。也可以从 <a href="http://easings.net/" style="line-height: inherit;">Easing Functions Cheat Sheet</a> 选择缓动效果。</dd>
+ <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;">指定一个函数，定义属性值怎么变化。缓动函数 <em>Timing functions</em> 定义属性如何计算。多数 <a href="/en-US/docs/CSS/timing-function">timing functions</a> 由四点定义一个 bezier 曲线。也可以从 <a href="http://easings.net/">Easing Functions Cheat Sheet</a> 选择缓动效果。</dd>
  <dd>
  <div class="cleared">
  <div id="ttf_ease" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
@@ -1031,7 +1031,7 @@ document.addEventListener('click', function(ev){
 }
 </pre>
 
-<p>演示： <a class="external" href="http://jsfiddle.net/RwtHn/5/">http://jsfiddle.net/RwtHn/5/</a></p>
+<p>演示： <a href="http://jsfiddle.net/RwtHn/5/">http://jsfiddle.net/RwtHn/5/</a></p>
 
 <h2 id="规范">规范</h2>
 
@@ -1044,6 +1044,6 @@ document.addEventListener('click', function(ev){
 <h2 id="另见">另见</h2>
 
 <ul>
- <li><a href="http://techstream.org/Web-Design/Dock-Menu-with-CSS3" title="CSS3 Dock Menu using CSS transitions">CSS3 Dock Menu</a> using CSS transitions</li>
- <li>The {{ domxref("TransitionEvent") }} interface and the <a href="/en-US/docs/Mozilla_event_reference/transitionend" title="The 'transitionend' event"><code>transitionend</code></a> event.</li>
+ <li><a href="http://techstream.org/Web-Design/Dock-Menu-with-CSS3">CSS3 Dock Menu</a> using CSS transitions</li>
+ <li>The {{ domxref("TransitionEvent") }} interface and the <a href="/en-US/docs/Mozilla_event_reference/transitionend"><code>transitionend</code></a> event.</li>
 </ul>
