@@ -16,7 +16,7 @@ translation_of: Web/API/StereoPannerNode
 
 `StereoPannerNode` は[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、音声ストリームを左右にパンすることができる、シンプルなステレオのパンニングを行うノードを表します。これは {{domxref("AudioNode")}} の一種で、コストが低くパワーの変わらない [アルゴリズム](http://webaudio.github.io/web-audio-api/#panning-algorithm)を用います。
 
-{{domxref("StereoPannerNode.pan", "pan")}} 属性には -1 （完全に左へパンニング）から 1（完全に右へパンニング）までの実数値を単位をつけずに指定します。このインタフェースにより、{{domxref("PannerNode")}} よりシンプルにパンを指定できます。
+{{domxref("StereoPannerNode.pan", "pan")}} 属性には -1 （完全に左へパンニング）から 1（完全に右へパンニング）までの実数値を単位をつけずに指定します。このインターフェイスにより、{{domxref("PannerNode")}} よりシンプルにパンを指定できます。
 
 ![](stereopannernode.png)
 
