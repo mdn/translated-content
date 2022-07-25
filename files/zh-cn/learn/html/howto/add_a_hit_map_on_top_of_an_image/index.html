@@ -1,6 +1,6 @@
 ---
 title: Add a hit map on top of an image
-slug: learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
+slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 ---
 <div>
@@ -21,7 +21,7 @@ translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 </table>
 
 <div class="warning">
-<p>本文仅讨论客户端图像映射。不要使用服务器端图像映射，这需要用户拥有鼠标。</p>
+<p><strong>警告：</strong> 本文仅讨论客户端图像映射。不要使用服务器端图像映射，这需要用户拥有鼠标。</p>
 </div>
 
 <h2 id="图像映射和它的缺点">图像映射和它的缺点</h2>
@@ -66,8 +66,7 @@ translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 <p><code>&lt;area&gt;</code> 元素是空元素， 但是需要包含 4 个属性：</p>
 
 <dl>
- <dt>{{htmlattrxref('shape','area')}}</dt>
- <dt>{{htmlattrxref('coords','area')}}</dt>
+ <dt>{{htmlattrxref('shape','area')}} {{htmlattrxref('coords','area')}}</dt>
  <dd>
  <p><code>shape</code> 有 4 个值：<code>circle</code>, <code>rect</code>, <code>poly</code>, and <code>default</code>. ( <code>default</code> <code>&lt;area&gt;</code> 表示除去您定义的其他热点的剩余空间.)  根据你选择的形状需要在 <code>coords</code> 中提供对应的坐标信息。</p>
 
@@ -84,9 +83,7 @@ translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
  <dt>{{htmlattrxref('href','area')}}</dt>
  <dd>您需要链接的资源地址。 如果您不希望当前区域链接到任何地方 (比方说，如果您正在创建一个空心圆)，您可以将这个属性保留为空。</dd>
  <dt>{{htmlattrxref('alt','area')}}</dt>
- <dd>一个必选属性，告诉用户链接的指向或功能说明。<code>alt</code> 文本仅在图像不可用时显示。请参阅我们的<a href="/en-US/Learn/HTML/Howto/Create_a_hyperlink#Writing_accessible_link_text">guidelines for writing accessible link text</a>。</dd>
- <dd>
- <p>如果  <code>href</code>  属性为空并且整个图像已经具备了<code>alt</code>  属性，则可以设置 <code>alt=""。</code></p>
+ <dd>一个必选属性，告诉用户链接的指向或功能说明。<code>alt</code> 文本仅在图像不可用时显示。请参阅我们的<a href="/en-US/Learn/HTML/Howto/Create_a_hyperlink#Writing_accessible_link_text">guidelines for writing accessible link text</a>。如果 <code>href</code> 属性为空并且整个图像已经具备了 <code>alt</code> 属性，则可以设置 <code>alt=""</code>。
  </dd>
 </dl>
 

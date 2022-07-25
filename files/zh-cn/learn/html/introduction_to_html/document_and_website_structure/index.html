@@ -51,7 +51,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 
 <p>一个“典型的网站”可能会这样布局：</p>
 
-<p><img alt="一个简单站点首页截图" src="https://mdn.mozillademos.org/files/16497/snapshot.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="一个简单站点首页截图" src="sample-website.png"></p>
 
 <h2 id="用于构建内容的_HTML">用于构建内容的 HTML</h2>
 
@@ -60,7 +60,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 <p>这是因为视觉效果并不是一切。我们可以修改最重要内容（例如导航菜单和相关链接）的颜色、字体大小来吸引用户的注意，但是这对视障人士是无效的，“粉红色”和“大字体”对他们并不奏效。</p>
 
 <div class="note">
-<p><strong>注：</strong><a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">全球色盲患者比例为 4%</a>，换句话说，每 12 名男性就有一位色盲，每 200 名女性就有一位色盲。全盲和视障人士约占世界人口（<a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">约 70 亿</a>）的 13％（2015 年 <a href="https://en.wikipedia.org/wiki/Visual_impairment">全球约有 9.4 亿人口存在视力问题</a>）。</p>
+<p><strong>备注：</strong> <a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">全球色盲患者比例为 4%</a>，换句话说，每 12 名男性就有一位色盲，每 200 名女性就有一位色盲。全盲和视障人士约占世界人口（<a href="https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg">约 70 亿</a>）的 13％（2015 年 <a href="https://en.wikipedia.org/wiki/Visual_impairment">全球约有 9.4 亿人口存在视力问题</a>）。</p>
 </div>
 
 <p>HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧义地表示上文所讲的内容区段，屏幕阅读器等辅助技术可以识别这些元素，并帮助执行“找到主导航“或”找到主内容“等任务。参见前文所讲的 <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化">页面中元素结构和语义不佳所带来的后果</a>。</p>
@@ -203,7 +203,6 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 
 <p>原来这唐僧是个慈悯的圣僧。他见行者哀告，却也回心转意道：“既如此说，且饶你这一次。再休无礼。如若仍前作恶，这咒语颠倒就念二十遍！”行者道：“三十遍也由你，只是我不打人了。”却才伏侍唐僧上马，又将摘来桃子奉上。唐僧在马上也吃了几个，权且充饥。</p>
 
-<hr>
 <p>却说那妖精，脱命升空。原来行者那一棒不曾打杀妖精，妖精出神去了。他在那云端里，咬牙切齿，暗恨行者道：“几年只闻得讲他手段，今日果然话不虚传。那唐僧已此不认得我，将要吃饭。若低头闻一闻儿，我就一把捞住，却不是我的人了。不期被他走来，弄破我这勾当，又几乎被他打了一棒。若饶了这个和尚，诚然是劳而无功也。我还下去戏他一戏。”</p>
 
 <h2 id="规划一个简单的网站">规划一个简单的网站</h2>
@@ -211,11 +210,11 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 <p>在完成页面内容的规划后，一般应按部就班地规划整个网站的内容，要可能带给用户最好的体验，需要哪些页面、如何排列组合这些页面、如何互相链接等问题不可忽略。这些工作称为{{glossary("Information architecture", "信息架构")}}。在大型网站中，大多数规划工作都可以归结于此，而对于一个只有几个页面的简单网站，规划设计过程可以更简单，更有趣！</p>
 
 <ol>
- <li>时刻记住，大多数（不是全部）页面会使用一些相同的元素，例如导航菜单以及页脚内容。若网站为商业站点，不妨在所有页面的页脚都加上联系方式。请记录这些对所有页面都通用的内容：<img alt="所有页面共有的内容，包括：站点标题、Logo、联系方式、版权声明、语言等信息。" src="https://mdn.mozillademos.org/files/16508/%E9%80%9A%E7%94%A8%E5%86%85%E5%AE%B9.gif" style="display: block; margin: 0px auto;"></li>
- <li>接下来，可为页面结构绘制草图（这里与前文那个站点页面的截图类似）。记录每一块的作用：<img alt="简单的页面布局示意图，有页眉、页脚、主内容、侧边栏。" src="https://mdn.mozillademos.org/files/16509/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80.gif" style="display: block; margin: 0px auto;"></li>
- <li>下面，对于期望添加进站点的所有其它（通用内容以外的）内容展开头脑风暴，直接罗列出来。<img alt="把假日旅行站点的所有功能罗列到一个列表中" src="https://mdn.mozillademos.org/files/16522/%E5%8A%9F%E8%83%BD%E5%88%97%E8%A1%A8.gif" style="display: block; margin: 0px auto;"></li>
- <li>下一步，试着对这些内容进行分组，这样可以让你了解哪些内容可以放在同一个页面。这种做法和 {{glossary("Card sorting", "卡片分类法")}} 非常相似。<img alt="假日网站的页面应分5类：搜索、特别提供、具体国家信息、搜索结果、购物。" src="https://mdn.mozillademos.org/files/16521/%E5%8A%9F%E8%83%BD%E5%88%86%E7%B1%BB.gif" style="display: block; margin: 0px auto;"></li>
- <li>接下来，试着绘制一个站点地图的草图，使用一个气泡代表网站的一个页面，并绘制连线来表示页面间的一般工作流。主页面一般置于中心，且链接到其他大多数页面；小型网站的大多数页面都可以从主页的导航栏中链接跳转。也可记录下内容的显示方式。<img alt="" src="https://mdn.mozillademos.org/files/16523/%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE.gif" style="display: block; margin: 0px auto;"></li>
+ <li>时刻记住，大多数（不是全部）页面会使用一些相同的元素，例如导航菜单以及页脚内容。若网站为商业站点，不妨在所有页面的页脚都加上联系方式。请记录这些对所有页面都通用的内容：<img alt="所有页面共有的内容，包括：站点标题、Logo、联系方式、版权声明、语言等信息。" src="common-features.png"></li>
+ <li>接下来，可为页面结构绘制草图（这里与前文那个站点页面的截图类似）。记录每一块的作用：<img alt="简单的页面布局示意图，有页眉、页脚、主内容、侧边栏。" src="site-structure.png"></li>
+ <li>下面，对于期望添加进站点的所有其它（通用内容以外的）内容展开头脑风暴，直接罗列出来。<img alt="把假日旅行站点的所有功能罗列到一个列表中" src="feature-list.png"></li>
+ <li>下一步，试着对这些内容进行分组，这样可以让你了解哪些内容可以放在同一个页面。这种做法和 {{glossary("Card sorting", "卡片分类法")}} 非常相似。<img alt="假日网站的页面应分5类：搜索、特别提供、具体国家信息、搜索结果、购物。" src="card-sorting.png"></li>
+ <li>接下来，试着绘制一个站点地图的草图，使用一个气泡代表网站的一个页面，并绘制连线来表示页面间的一般工作流。主页面一般置于中心，且链接到其他大多数页面；小型网站的大多数页面都可以从主页的导航栏中链接跳转。也可记录下内容的显示方式。<img src="site-map.png"></li>
 </ol>
 
 <h3 id="主动学习：创建站点地图">主动学习：创建站点地图</h3>
@@ -223,7 +222,7 @@ original_slug: learn/HTML/Introduction_to_HTML/文件和网站结构
 <p>自己创造一个网站（什么网站呢？）并尝试执行上述步骤。</p>
 
 <div class="note">
-<p><strong>注：</strong>记得保存你的杰作，今后可能会用到哦。</p>
+<p><strong>备注：</strong> 记得保存你的杰作，今后可能会用到哦。</p>
 </div>
 
 <h2 id="小结">小结</h2>

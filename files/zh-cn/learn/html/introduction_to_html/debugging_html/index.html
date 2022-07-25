@@ -49,13 +49,13 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <ul>
  <li><strong>语法错误</strong>：由于拼写错误导致程序无法运行，就像上面的 Rust 示例。通常熟悉语法并理解错误信息后很容易修复。</li>
- <li><strong>逻辑错误：</strong>不存在语法错误，但代码无法按预期运行。通常逻辑错误比语法错误更难修复，因为无法得到指向错误源头的信息。</li>
+ <li><strong>逻辑错误</strong>：不存在语法错误，但代码无法按预期运行。通常逻辑错误比语法错误更难修复，因为无法得到指向错误源头的信息。</li>
 </ul>
 
 <p>HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行的，这意味着即使出现语法错误浏览器依然会继续运行。浏览器通常都有内建规则来解析书写错误的标记，所以即使与预期不符，页面仍可显示出来。当然，是存在隐患的。</p>
 
 <div class="note">
-<p><strong>注：</strong>HTML 之所以以宽松的方式进行解析，是因为 Web 创建的初心就是：人人可发布内容，不去纠结代码语法。如果 Web 以严格的风格起步，也许就不会像今天这样流行了。</p>
+<p><strong>备注：</strong> HTML 之所以以宽松的方式进行解析，是因为 Web 创建的初心就是：人人可发布内容，不去纠结代码语法。如果 Web 以严格的风格起步，也许就不会像今天这样流行了。</p>
 </div>
 
 <h3 id="主动学习：研究宽容的代码风格">主动学习：研究宽容的代码风格</h3>
@@ -146,7 +146,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
   <pre class="notranslate">来看一个示例：&lt;a href="https://www.mozilla.org/&gt;Mozilla 主页链接&lt;/a&gt; ↩ &lt;/ul&gt;↩ &lt;/body&gt;↩&lt;/html&gt;</pre>
 
   <div class="note">
-  <p><strong>注：</strong>属性缺少结束引号会导致元素无法闭合。因为文档所有剩余部分（直到文档某处出现一个引号）都将被解析为属性的内容。</p>
+  <p><strong>备注：</strong> 属性缺少结束引号会导致元素无法闭合。因为文档所有剩余部分（直到文档某处出现一个引号）都将被解析为属性的内容。</p>
   </div>
  </li>
  <li>Unclosed element <code>ul</code>（未闭合元素 <code>ul</code>）：这个意义不大，因为 {{htmlelement("ul")}} 已经正确闭合了。出现这个错误是因为 {{htmlelement("a")}} 元素没有右引号而没有闭合。</li>

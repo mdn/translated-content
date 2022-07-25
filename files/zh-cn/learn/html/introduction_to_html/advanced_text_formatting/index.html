@@ -1,6 +1,6 @@
 ---
 title: 高阶文字排版
-slug: learn/HTML/Introduction_to_HTML/Advanced_text_formatting
+slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 tags:
   - 上下标
   - 代码
@@ -68,8 +68,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 <dl>
  <dt>旁白</dt>
- <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</dd>
- <dd>写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其它位置（通常位于主线内容旁边一个文本框内）。</dd>
+ <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其它位置（通常位于主线内容旁边一个文本框内）。</dd>
 </dl>
 
 <h3 id="主动学习_标记一组定义">主动学习：标记一组定义</h3>
@@ -78,10 +77,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 <p>如果你做错了，你可以随时点击【重置】按钮。如果实在进行不下去，可以点击【显示答案】。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -192,9 +188,8 @@ translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
       &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('主动学习：标记一组定义', 700, 500) }}</p>
 
 <h2 id="引用">引用</h2>
 
@@ -216,7 +211,7 @@ Quotation Element&lt;/em&gt;) indicates that the enclosed text is an extended qu
 
 <p>浏览器在渲染块引用时默认会增加缩进，作为引用的一个指示符；MDN 是这样做的，但是也增加了额外的样式：</p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote>
 <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
 
@@ -230,7 +225,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt;&lt;/p&gt;
 
 <p>浏览器默认将其作为普通文本放入引号内表示引用，就像下面：</p>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended for short quotations that don't require paragraph breaks.</q>(&lt;q&gt;元素旨在用于不需要分段的短引用)</p>
+{{EmbedLiveSample('行内引用', '100%', '78px')}}
 
 <h3 id="引文">引文</h3>
 
@@ -271,10 +266,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <p>如果你做错了，你可以随时点击【重置】按钮。如果实在进行不下去，可以点击【显示答案】。</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html notranslate"><code>&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -377,9 +369,8 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
       &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('主动学习：是谁说的？', 700, 450) }}
 
 <h2 id="缩略语">缩略语</h2>
 
@@ -397,17 +388,14 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 <p>第 33 届 <abbr title="夏季奥林匹克运动会">奥运会</abbr> 将于 2024 年 8 月在法国巴黎举行。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 还有另一个元素&lt;acronym&gt;，它基本上与&lt;abbr&gt;相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了 - 它在浏览器的支持中不如&lt;abbr&gt;，并且具有类似的功能，所以没有意义。只需使用&lt;abbr&gt;。</p>
+<p><strong>备注：</strong> 还有另一个元素&lt;acronym&gt;，它基本上与&lt;abbr&gt;相同，专门用于首字母缩略词而不是缩略语。然而，这已经被废弃了 - 它在浏览器的支持中不如&lt;abbr&gt;，并且具有类似的功能，所以没有意义。只需使用&lt;abbr&gt;。</p>
 </div>
 
 <h3 id="主动学习：标记一个缩略语">主动学习：标记一个缩略语</h3>
 
 <p>在这个简单的主动学习任务中，我们希望你简单地标记一个缩写。你可以使用下面的示例，或者用自己的示例来替换。</p>
 
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code 3</h6>
-
-<pre class="brush: html notranslate"><code>&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -502,9 +490,8 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
       &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_3', 700, 400, "", "", "hide-codepen-jsfiddle") }}</p>
+{{ EmbedLiveSample('主动学习：标记一个缩略语', 700, 300) }}
 
 <h2 id="标记联系方式">标记联系方式</h2>
 
@@ -522,7 +509,7 @@ for short quotations that don't require paragraph breaks.&lt;/q&gt; -- &lt;a hre
 
 <h2 id="上标和下标">上标和下标</h2>
 
-<p>当你使用日期、化学方程式、和数学方程式时会偶尔使用上标和下标。 {{htmlelement("sup")}} 和{{htmlelement("sub")}}元素可以解决这样的问题。例如：</p>
+<p>当你使用日期、化学方程式、和数学方程式时会偶尔使用上标和下标。{{htmlelement("sup")}} 和{{htmlelement("sub")}}元素可以解决这样的问题。例如：</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;咖啡因的化学方程式是 C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;。&lt;/p&gt;
 &lt;p&gt;如果 x&lt;sup&gt;2&lt;/sup&gt; 的值为 9，那么 x 的值必为 3 或 -3。&lt;/p&gt;
@@ -568,7 +555,7 @@ para.onclick = function() {
 
 <p>上面的代码显示效果如下：</p>
 
-<p>{{ EmbedLiveSample('展示计算机代码','100%',300, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('展示计算机代码','100%',300) }}</p>
 
 <h2 id="标记时间和日期">标记时间和日期</h2>
 

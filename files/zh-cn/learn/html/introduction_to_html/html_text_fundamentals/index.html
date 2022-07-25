@@ -1,6 +1,6 @@
 ---
 title: HTML 文字处理基础
-slug: learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
+slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 tags:
   - HTML 指南
   - 学习
@@ -12,7 +12,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>HTML 的主要工作是编辑文本结构和文本内容（也称为语义{{glossary("semantics")}}），以便浏览器能正确的显示。本文介绍了 {{glossary("HTML")}}的使用方法：在一段文本中添加标题和段落，强调语句，创建列表等等。</p>
 
-<table class="learn-box standard-table" style="height: 161px; width: 663px;">
+<table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">先决条件：</th>
@@ -29,7 +29,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>大部分的文本结构由标题和段落组成。不管是小说、报刊、教科书还是杂志等。</p>
 
-<p><img alt="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs." src="https://mdn.mozillademos.org/files/16552/peoples.jpg" style="display: block; height: 493px; margin: 0px auto; width: 622px;" title="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs."></p>
+<p><img alt="An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs." src="newspaper_small.jpg"></p>
 
 <p>内容结构化会使读者的阅读体验更轻松，更愉快。</p>
 
@@ -77,7 +77,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>然而，当您在浏览器中打开文档时，您会看到文本显示为一整块！</p>
 
-<p><img alt="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it." src="https://mdn.mozillademos.org/files/12972/text-no-formatting.png" style="display: block; height: 420px; margin: 0px auto; width: 594px;"></p>
+<p><img alt="A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it." src="screen_shot_2017-03-29_at_09.20.35.png"></p>
 
 <p>这是因为没有元素给内容结构，所以浏览器不知道什么是标题，什么是段落。此外：</p>
 
@@ -96,10 +96,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>如果您犯了错误，您可以使用<em>重置</em>按钮进行重置。如果卡住，请按<em>显示解决方案</em>按钮以查看答案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -198,9 +195,8 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('实践操作：编辑我们的内容结构', 700, 500) }}</p>
 
 <h3 id="为什么我们需要语义？">为什么我们需要语义？</h3>
 
@@ -254,10 +250,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>尝试编辑下面的示例来创建一个 HTML 无序列表。</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -359,9 +352,8 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', 700, 400, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('实践操作：标记无序列表', 700, 400) }}</p>
 
 <h3 id="有序_Ordered">有序 Ordered</h3>
 
@@ -388,10 +380,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 
 <p>尝试编辑下面的示例来创建一个 HTML 有序列表：</p>
 
-<div class="hidden">
-<h6 id="Playable_code_3">Playable code 3</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -496,18 +485,14 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
       &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_3', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('实践操作：标记有序列表', 700, 500) }}</p>
 
 <h3 id="实践操作_标记我们的食谱">实践操作：标记我们的食谱</h3>
 
 <p>到了这里，你拥有了所有你需要的信息来标记我们的食谱样例。你可以选择从<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-start.html">text-start.html</a>复制一份文件并保存在本地，打开它进行编辑，或者在下面的例子中进行编辑。因为在本地你可以保存你的项目，所以在本地做这个工作可能更好。而如果你在下面可编辑的样本中作业，下一次你打开这个网站时你可能会丢失你的数据。各有利弊吧。</p>
 
-<div class="hidden">
-<h6 id="Playable_code_4">Playable code 4</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -667,7 +652,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 &lt;/html&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Playable_code_4', 700, 800, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('实践操作：标记我们的食谱', 700, 800) }}</p>
 
 <p>如果你感到棘手，你可以随时按下<em>Show solution</em>按钮，或者在我们的 github repo 上检查我们的 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-complete.html">text-complete.html</a> 样例。</p>
 
@@ -741,10 +726,7 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
 
 <p>在这个实践操作中，我们提供了可编辑的例子。在这个例子中，我们想让你把斜体 (em) 和加粗 (strong) 放在你认为重要的词汇上，仅仅为了练习。</p>
 
-<div class="hidden">
-<h6 id="Playable_code_5">Playable code 5</h6>
-
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -845,9 +827,8 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
       &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_5', 700, 500, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('实践操作：我们是重要的！', 700, 500) }}</p>
 
 <h3 id="斜体字、粗体字、下划线...">斜体字、粗体字、下划线...</h3>
 
@@ -864,7 +845,7 @@ if you drink it, &lt;strong&gt;you may &lt;em&gt;die&lt;/em&gt;&lt;/strong&gt;.&
 </ul>
 
 <div class="note">
-<p>使用下划线的忠告：因为我们常常会认为网页中的下划线代表着一个超链接<strong>，</strong>所以最好只用下划线来代表超链接。而在语义适合的情况下不得不使用&lt;u&gt;元素时，可以使用 CSS 来改变&lt;u&gt;元素对应的下划线的默认样式，从而和超链接的下划线区分开来。下面是一个具体的例子：</p>
+<p><strong>备注：</strong> 使用下划线的忠告：因为我们常常会认为网页中的下划线代表着一个超链接<strong>，</strong>所以最好只用下划线来代表超链接。而在语义适合的情况下不得不使用&lt;u&gt;元素时，可以使用 CSS 来改变&lt;u&gt;元素对应的下划线的默认样式，从而和超链接的下划线区分开来。下面是一个具体的例子：</p>
 </div>
 
 <pre class="brush: html notranslate">&lt;!-- 学名 --&gt;
