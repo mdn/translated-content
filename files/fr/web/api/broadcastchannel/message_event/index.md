@@ -28,7 +28,7 @@ Un {{domxref("MessageEvent")}}. Hérite d'{{domxref("Event")}}.
 
 ## Propriété de l'événement
 
-_En plus des propriétés listées ci-dessous, celles provenant de l'interface parent, {{domxref("Event")}}, sont disponibles._
+_En plus des propriétés listées ci-dessous, celles provenant de l'interface parent {{domxref("Event")}} sont disponibles._
 
 - {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
   - : Les données envoyées par l'émetteur du message.
@@ -43,7 +43,7 @@ _En plus des propriétés listées ci-dessous, celles provenant de l'interface p
 
 ## Exemples
 
-Dans cette exemple, il y a un [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) "émetteur" qui diffuse le contenu du [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) lorsque l'utilisateur clique sur le bouton. Il y a deux "récepteurs" iframes qui écoutent le message diffusé et écrivent le résultat dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div) element.
+Dans cet exemple, il y a un [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) "émetteur" qui diffuse le contenu du [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) lorsque l'utilisateur clique sur le bouton. Il y a deux iframes "récepteurs" qui écoutent le message diffusé et écrivent le résultat dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div).
 
 ### Émetteur
 
@@ -149,11 +149,11 @@ canal.addEventListener('message', event => {
 
 ### Résultat
 
-{{ EmbedLiveSample('Sender', '100%', 220) }}
+{{ EmbedLiveSample('Émetteur', '100%', 220) }}
 
-{{ EmbedLiveSample('Receiver_1', '100%', 160) }}
+{{ EmbedLiveSample('Récepteur_1', '100%', 160) }}
 
-{{ EmbedLiveSample('Receiver_2', '100%', 160) }}
+{{ EmbedLiveSample('Récepteur 2', '100%', 160) }}
 
 ## Spécifications
 

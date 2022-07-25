@@ -11,7 +11,7 @@ browser-compat: api.BroadcastChannel.close
 {{APIRef("BroadCastChannel API")}}
 
 La méthode **`BroadcastChannel.close()`** ferme la connexion au canal sous-jacent, permettant à l'objet d'être liberé par le ramasse-miètes.
-C'est tâche obligatoire puisqu'il n'y a aucun autre moyen pour le navigateur de savoir si ce canal est encore nécessaire.
+Cette tâche est obligatoire puisqu'il n'y a aucun autre moyen pour le navigateur de savoir si ce canal est encore nécessaire.
 
 {{AvailableInWorkers}}
 

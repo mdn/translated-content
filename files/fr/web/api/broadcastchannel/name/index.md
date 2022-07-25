@@ -34,7 +34,7 @@ var canal = new BroadcastChannel('canal_test');
 // Affiche la propriété name du canal dans la console
 console.log(canal.name); // "canal_test"
 
-// Lorsque les traitements sont terminées, déconnexion
+// Lorsque les traitements sont terminés, déconnexion
 canal.close();
 ```
 

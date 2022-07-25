@@ -27,7 +27,7 @@ Un {{domxref("MessageEvent")}}. hérite de {{domxref("Event")}}.
 
 ## Propriétés de l'événement
 
-_En plus des propriétés listées ci-dessous, les propriétés de l'interface parent, {{domxref("Event")}}, sont accessibles._
+_En plus des propriétés listées ci-dessous, les propriétés de l'interface parent {{domxref("Event")}} sont accessibles._
 
 - {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
   - : Les données envoyées par l'émetteur du message.

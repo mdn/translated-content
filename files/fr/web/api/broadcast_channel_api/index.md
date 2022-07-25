@@ -12,7 +12,7 @@ browser-compat: api.BroadcastChannel
 ---
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
-L'**API Broadcast Channel** permet la communication entre {{glossary("browsing context", "contextes de navigation")}} (c'est à dire, _windows_, _tabs_, _frames_, ou _iframes_) et workers d'une même {{glossary("origin", "origine)}}.
+L'**API Broadcast Channel** permet la communication entre {{glossary("browsing context", "contextes de navigation")}} (c'est à dire, _windows_, _tabs_, _frames_, ou _iframes_) et workers d'une même {{glossary("origin", "origine")}}.
 
 {{AvailableInWorkers}}
 

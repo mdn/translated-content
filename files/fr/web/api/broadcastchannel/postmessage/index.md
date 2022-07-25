@@ -10,7 +10,7 @@ browser-compat: api.BroadcastChannel.postMessage
 {{APIRef("BroadCastChannel API")}}
 
 La méthode **`BroadcastChannel.postMessage()`** envoie un message 
-qui peut être de n'importe quel type {{jsxref("Object")}} à chaque écouteur de n'importe quel {{glossary("browsing context", "contexte de navigation)}} d'une même {{glossary("origin", "origine")}}.
+qui peut être de n'importe quel type {{jsxref("Object")}} à chaque écouteur de n'importe quel {{glossary("browsing context", "contexte de navigation")}} d'une même {{glossary("origin", "origine")}}.
 Le message est transmis en tant qu'événement ['message'](/fr/docs/Web/API/BroadcastChannel/message_event) ciblant chaque {{domxref("BroadcastChannel")}} lié au canal.
 
 {{AvailableInWorkers}}
