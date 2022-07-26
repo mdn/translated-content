@@ -61,7 +61,7 @@ ng generate component item
 - `item.component.ts` は、 logic ファイルです。
 - `item.component.css` は、 styles ファイルです。
 
-HTML ファイルと CSS ファイルへの参照は、 `item.component.ts` の `@Component()` デコレータメタデータで確認できます。
+HTML ファイルと CSS ファイルへの参照は、 `item.component.ts` の `@Component()` デコレーターメタデータで確認できます。
 
 ```js
 @Component({
