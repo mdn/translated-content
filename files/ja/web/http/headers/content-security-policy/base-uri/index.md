@@ -7,100 +7,90 @@ tags:
   - Document directive
   - HTTP
   - Security
+browser-compat: http.headers.Content-Security-Policy.base-uri
 translation_of: Web/HTTP/Headers/Content-Security-Policy/base-uri
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP {{HTTPHeader("Content-Security-Policy")}} の <strong><code>base-uri</code></strong> ディレクティブは、ドキュメントの要素 {{HTMLElement("base")}} で、使用できる URL を制限します。この値が存在しない場合は、任意の URI が許可されます。このディレクティブが存在しない場合、ユーザーエージェントは、{{HTMLElement("base")}} 要素の値を使用します。</p>
+HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`base-uri`** ディレクティブは、文書の {{HTMLElement("base")}} 要素で使用することができる URL を制限します。この値が存在しない場合は、任意の URI が許可されます。このディレクティブが存在しない場合、ユーザーエージェントは {{HTMLElement("base")}} 要素の値を使用します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>2</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Document directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>設定しないと、任意の URL が許可されます。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP バージョン</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">ディレクティブ種別</th>
+      <td>{{Glossary("Document directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} による代替</th>
+      <td>設定しないと、任意の URL が許可されます。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p>1 つまたは複数のソースを base-uri ポリシーに使用:</p>
+1 つまたは複数の*ソース*を base-uri ポリシーに使用することができます。
 
-<pre class="syntaxbox">Content-Security-Policy: base-uri &lt;source&gt;;
-Content-Security-Policy: base-uri &lt;source&gt; &lt;source&gt;;
-</pre>
+```http
+Content-Security-Policy: base-uri <source>;
+Content-Security-Policy: base-uri <source> <source>;
+```
 
-<h3 id="Sources" name="Sources">ソース</h3>
+### ソース
 
-<p>このディレクティブは他の CSP ディレクティブと同じ引数を使用しますが、キーワードの <code>'unsafe-inline'</code> や <code>'strict-dynamic'</code> などは意味がありません。</p>
+このディレクティブは、他の CSP ディレクティブと同じように、引数のソース値のほとんどを使用します。 [CSP のソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)。
 
-<p>{{page("ja/docs/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+なお、 `base-uri` ではいくつかの値、たとえば `'unsafe-inline'` や `'strict-dynamic'` などのキーワードは意味がありません。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Meta_tag_configuration" name="Meta_tag_configuration">Meta タグの設定</h3>
+### Meta タグの設定
 
-<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;</pre>
+```html
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+```
 
-<h3 id="Apache_configuration" name="Apache_configuration">Apache の設定</h3>
+### Apache の設定
 
-<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
+```html
+<IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<h3 id="Nginx_configuration" name="Nginx_configuration">Nginx の設定</h3>
+### Nginx の設定
 
-<pre class="brush: bash">add_header Content-Security-Policy "base-uri 'self';"</pre>
+```
+add_header Content-Security-Policy "base-uri 'self';"
+```
 
-<h3 id="Violation_case" name="Violation_case">違反になる場合</h3>
+### 違反になる場合
 
-<p>ドメインが <code>example.com</code> でないので、<code>https://example.com</code> に設定された {{HTMLElement("base")}} 要素の <code>href</code> が CSP 違反になります。</p>
+ドメインが `example.com` ではないので、 {{HTMLElement("base")}} 要素の `href` を `https://example.com` に設定すると、 CSP 違反となります。
 
-<pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;
-&lt;base href="https://example.com/"&gt;
+```html example-bad
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<base href="https://example.com/">
 
 // Error: Refused to set the document's base URI to 'https://example.com/'
 // because it violates the following Content Security Policy
-// directive: "base-uri 'self'"</pre>
+// directive: "base-uri 'self'"
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-base-uri", "base-uri")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>変更無し</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-base-uri", "base-uri")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.csp.base-uri")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPheader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("base")}}</li>
- <li>{{domxref("Node.baseURI")}}</li>
-</ul>
+- {{HTTPheader("Content-Security-Policy")}}
+- {{HTMLElement("base")}}
+- {{domxref("Node.baseURI")}}

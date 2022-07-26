@@ -12,167 +12,174 @@ tags:
   - Style
   - source
   - style-src
+browser-compat: http.headers.Content-Security-Policy.style-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/style-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の <strong><code>style-src</code></strong> ディレクティブは、スタイルシートの有効なソースを指定します。</p>
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`style-src`** ディレクティブは、スタイルシートの有効なソースを指定します。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP バージョン</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">ディレクティブ種別</th>
-   <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} による代替</th>
-   <td>あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP バージョン</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">ディレクティブ種別</th>
+      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} による代替</th>
+      <td>
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>style-src</code> ポリシーには、１つまたは複数のソースが許可されています。</p>
+`style-src` ポリシーには、 1 つまたは複数のソースが許可されています。
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: style-src &lt;source&gt;;
-Content-Security-Policy: style-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```http
+Content-Security-Policy: style-src <source>;
+Content-Security-Policy: style-src <source> <source>;
+```
 
-<h3 id="Sources" name="Sources">ソース</h3>
+### ソース
 
-<p>{{page("/ja/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)にあるいずれかの値を取ることができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#関連ディレクティブ)）で使用できます。
 
-<h3 id="Violation_cases" name="Violation_cases">違反例</h3>
+## 例
 
-<p>この CSP ヘッダーがある場合、</p>
+## 違反例
 
-<pre class="brush: bash notranslate">Content-Security-Policy: style-src https://example.com/</pre>
+この CSP ヘッダーがある場合、
 
-<p>以下のスタイルシートはブロックされ、読み込まれません。</p>
+```http
+Content-Security-Policy: style-src https://example.com/
+```
 
-<pre class="brush: html notranslate">&lt;link href="https://not-example.com/styles/main.css" rel="stylesheet" type="text/css" /&gt;
+以下のスタイルシートはブロックされ、読み込まれません。
 
-&lt;style&gt;
+```html
+<link href="https://not-example.com/styles/main.css" rel="stylesheet" type="text/css" />
+
+<style>
 #inline-style { background: red; }
-&lt;/style&gt;
+</style>
 
-&lt;style&gt;
+<style>
   @import url("https://not-example.com/styles/print.css") print;
-&lt;/style&gt;</pre>
+</style>
+```
 
-<p>{{HTTPHeader("Link")}} ヘッダーで読み込まれるものも同様です。</p>
+{{HTTPHeader("Link")}} ヘッダーで読み込まれるものも同様です。
 
-<pre class="brush: bash notranslate">Link: &lt;https://not-example.com/styles/stylesheet.css&gt;;rel=stylesheet
-</pre>
+```
+Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
+```
 
-<p>インラインの style 属性もブロックされます。</p>
+インラインの style 属性もブロックされます。
 
-<pre class="brush: html notranslate">&lt;div style="display:none"&gt;Foo&lt;/div&gt;</pre>
+```html
+<div style="display:none">Foo</div>
+```
 
-<p>JavaScript で直接 <code>style</code> 属性を設定したり、 {{domxref("CSSStyleDeclaration.cssText", "cssText")}} を設定したりしたスタイルも同様です。</p>
+JavaScript で直接 `style` 属性を設定したり、 {{domxref("CSSStyleDeclaration.cssText", "cssText")}} を設定したりしたスタイルも同様です。
 
-<pre class="brush: js notranslate">document.querySelector('div').setAttribute('style', 'display:none;');
-document.querySelector('div').style.cssText = 'display:none;';</pre>
+```js
+document.querySelector('div').setAttribute('style', 'display:none;');
+document.querySelector('div').style.cssText = 'display:none;';
+```
 
-<p>しかし、要素の {{domxref("HTMLElement.style", "style")}} プロパティに直接設定されたスタイルプロパティはブロックされず、 JavaScript から安全にスタイルを操作することができます。</p>
+しかし、要素の {{domxref("HTMLElement.style", "style")}} プロパティに直接設定されたスタイルプロパティはブロックされず、 JavaScript から安全にスタイルを操作することができます。
 
-<pre class="brush: js notranslate">document.querySelector('div').style.display = 'none';</pre>
+```js
+document.querySelector('div').style.display = 'none';
+```
 
-<p>この手の操作は、 CSP の {{CSP("script-src")}} ディレクティブで JavaScript を無効にすることで防ぐことができます。</p>
+この手の操作は、 CSP の {{CSP("script-src")}} ディレクティブで JavaScript を無効にすることで防ぐことができます。
 
-<h3 id="Unsafe_inline_styles" name="Unsafe_inline_styles">安全ではないインラインスタイル</h3>
+### 安全ではないインラインスタイル
 
-<div class="note">
-<p><strong>注:</strong> インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。</p>
-</div>
+> **Note:** インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
 
-<p>インラインスタイルを許可するために、 <code>'unsafe-inline'</code> を指定するか、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。</p>
+インラインスタイルを許可するために、 `'unsafe-inline'` を指定するか、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
 
-<pre class="brush: bash notranslate">Content-Security-Policy: style-src 'unsafe-inline';
-</pre>
+```bash
+Content-Security-Policy: style-src 'unsafe-inline';
+```
 
-<p>上記のコンテンツセキュリティポリシーは {{HTMLElement("style")}} 要素やあらゆる要素の <code>style</code> 属性などのインラインスタイルを許可します。</p>
+上記のコンテンツセキュリティポリシーは {{HTMLElement("style")}} 要素やあらゆる要素の `style` 属性などのインラインスタイルを許可します。
 
-<pre class="brush: html notranslate">&lt;style&gt;
-#inline-style { background: red; }
-&lt;/style&gt;
+```html
+<style>
+  #inline-style { background: red; }
+</style>
 
-&lt;div style="display:none"&gt;Foo&lt;/div&gt;
-</pre>
+<div style="display:none">Foo</div>
+```
 
-<p>ノンスソースを使用して、特定のインラインスタイルのみ許可することができます。</p>
+ノンスソースを使用して、特定のインラインスタイルのみ許可することができます。
 
-<pre class="brush: bash notranslate">Content-Security-Policy: style-src 'nonce-2726c7f26c'</pre>
+```
+Content-Security-Policy: style-src 'nonce-2726c7f26c'
+```
 
-<p>同じノンスを {{HTMLElement("style")}} 要素にも設定する必要があります。</p>
+同じノンスを {{HTMLElement("style")}} 要素にも設定する必要があります。
 
-<pre class="brush: html notranslate">&lt;style nonce="2726c7f26c"&gt;
-#inline-style { background: red; }
-&lt;/style&gt;</pre>
+```html
+<style nonce="2726c7f26c">
+  #inline-style { background: red; }
+</style>
+```
 
-<p>他にも、インラインスタイルからハッシュを生成することができます。 CSP では sha256, sha384, sha512 に対応しています。</p>
+他にも、インラインスタイルからハッシュを生成することができます。 CSP では sha256, sha384, sha512 に対応しています。ハッシュの**バイナリー**形式は base64 でエンコードされていなければなりません。文字列のハッシュは `openssl` プログラムを使ってコマンドラインから取得することができます。
 
-<pre class="brush: bash notranslate">Content-Security-Policy: style-src 'sha256-a330698cbe9dc4ef1fb12e2ee9fc06d5d14300262fa4dc5878103ab7347e158f'</pre>
+```bash
+echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | openssl enc -base64
+```
 
-<p>ハッシュを生成するときは、 {{HTMLElement("style")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。</p>
+ハッシュソースを使用すると、特定のインラインスタイルブロックのみを許可することができます。
 
-<pre class="brush: html notranslate">&lt;style&gt;#inline-style { background: red; }&lt;/style&gt;</pre>
+```
+Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6tzR+FY8='
+```
 
-<h3 id="Unsafe_style_expressions" name="Unsafe_style_expressions">安全ではない style 式</h3>
+ハッシュを生成するときは、 {{HTMLElement("style")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。
 
-<p><code>'unsafe-eval'</code> ソース式は、文字列からスタイル宣言を生成するいくつかのスタイルメソッドを制御します。もし <code>'unsafe-eval'</code> が <code>style-src</code> ディレクティブで指定されていななかった場合、以下のメソッドはブロックされて何の効果も現れません。</p>
+```html
+<style>#inline-style { background: red; }</style>
+```
 
-<ul>
- <li>{{domxref("CSSStyleSheet.insertRule()")}}</li>
- <li>{{domxref("CSSGroupingRule.insertRule()")}}</li>
- <li>{{domxref("CSSStyleDeclaration.cssText")}}</li>
-</ul>
+### 安全ではない style 式
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+`'unsafe-eval'` ソース式は、文字列からスタイル宣言を生成するいくつかのスタイルメソッドを制御します。もし `'unsafe-eval'` が `style-src` ディレクティブで指定されていななかった場合、以下のメソッドはブロックされて何の効果も現れません。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-style-src", "style-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>No changes.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-style-src", "style-src")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+- {{domxref("CSSStyleSheet.insertRule()")}}
+- {{domxref("CSSGroupingRule.insertRule()")}}
+- {{domxref("CSSStyleDeclaration.cssText")}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 仕様書
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.style-src")}}</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{CSP("style-src-elem")}}</li>
- <li>{{CSP("style-src-attr")}}</li>
- <li>{{HTTPHeader("Link")}} header</li>
- <li>{{HTMLElement("style")}}, {{HTMLElement("link")}}</li>
- <li>{{cssxref("@import")}}</li>
- <li>{{domxref("CSSStyleSheet.insertRule()")}}</li>
- <li>{{domxref("CSSGroupingRule.insertRule()")}}</li>
- <li>{{domxref("CSSStyleDeclaration.cssText")}}</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{CSP("style-src-elem")}}
+- {{CSP("style-src-attr")}}
+- {{HTTPHeader("Link")}} header
+- {{HTMLElement("style")}}, {{HTMLElement("link")}}
+- {{cssxref("@import")}}
+- {{domxref("CSSStyleSheet.insertRule()")}}
+- {{domxref("CSSGroupingRule.insertRule()")}}
+- {{domxref("CSSStyleDeclaration.cssText")}}

@@ -11,93 +11,79 @@ tags:
   - Security
   - object-src
   - source
-  - セキュリティ
-  - ディレクティブ
+browser-compat: http.headers.Content-Security-Policy.object-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の {{HTTPHeader("Content-Security-Policy")}} の <code><strong>object-src</strong></code> ディレクティブは、 {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の妥当なソースを指定します。</p>
+HTTP の {{HTTPHeader("Content-Security-Policy")}} の `**object-src**` ディレクティブは、 {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の妥当なソースを指定します。
 
-<p>{{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の許可される種類を設定するには、 {{CSP("plugin-types")}} ディレクティブを使用してください。</p>
+{{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の許可される種類を設定するには、 {{CSP("plugin-types")}} ディレクティブを使用してください。
 
-<p class="note"><code>object-src</code> で制御される要素は、おそらく偶然にも古い HTML 要素と見なされており、新しい標準機能が搭載されていません (<code>&lt;iframe&gt;</code> の <code>sandbox</code> や <code>allow</code> などのセキュリティ属性など)。したがって、このフェッチディレクティブで制限することを<a href="https://csp.withgoogle.com/docs/strict-csp.html">推奨します</a> (例えば、可能であれば明示的に <code>object-src 'none'</code> を設定するなど)。</p>
+> **Note:** `object-src` で制御される要素は、おそらく偶然にも古い HTML 要素と見なされており、新しい標準機能が搭載されていません (`<iframe>` の `sandbox` や `allow` などのセキュリティ属性など)。したがって、このフェッチディレクティブで制限することを[推奨します](https://csp.withgoogle.com/docs/strict-csp.html) (例えば、可能であれば明示的に `object-src 'none'` を設定するなど)。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP バージョン</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">ディレクティブ種別</th>
-   <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} による代替</th>
-   <td>あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP バージョン</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">ディレクティブ種別</th>
+      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} による代替</th>
+      <td>
+        あり。このディレクティブがない場合、ユーザーエージェントは `default-src` ディレクティブを探します。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p>object-src ポリシーには、１つまたは複数のソースが許可されています。</p>
+object-src ポリシーには、 1 つまたは複数のソースが許可されています。
 
-<pre class="syntaxbox">Content-Security-Policy: object-src &lt;source&gt;;
-Content-Security-Policy: object-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```http
+Content-Security-Policy: object-src <source>;
+Content-Security-Policy: object-src <source> <source>;
+```
 
-<h3 id="Sources" name="Sources">ソース</h3>
+### ソース
 
-<p>{{page("/ja/docs/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)にあるいずれかの値を取ることができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#関連ディレクティブ)）で使用できます。
 
-<h3 id="Violation_case" name="Violation_case">違反例</h3>
+## 例
 
-<p>この CSP ヘッダーがある場合、</p>
+## 違反例
 
-<pre class="brush: bash">Content-Security-Policy: object-src https://example.com/</pre>
+この CSP ヘッダーがある場合、
 
-<p>以下の {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素はブロックされ、読み込まれません。</p>
+```http
+Content-Security-Policy: object-src https://example.com/
+```
 
-<pre class="brush: html">&lt;embed src="https://not-example.com/flash"&gt;&lt;/embed&gt;
-&lt;object data="https://not-example.com/plugin"&gt;&lt;/object&gt;
-&lt;applet archive="https://not-example.com/java"&gt;&lt;/applet&gt;</pre>
+以下の {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素はブロックされ、読み込まれません。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+```html
+<embed src="https://not-example.com/flash"></embed>
+<object data="https://not-example.com/plugin"></object>
+<applet archive="https://not-example.com/java"></applet>
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-object-src", "object-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-object-src", "object-src")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.object-src")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}</li>
- <li>{{CSP("plugin-types")}}</li>
-</ul>
+## 関連情報
+
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}}
+- {{CSP("plugin-types")}}
