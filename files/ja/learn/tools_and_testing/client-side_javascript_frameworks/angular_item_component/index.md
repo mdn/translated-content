@@ -237,7 +237,7 @@ export class ItemComponent {
 ユーザーが値を入力せずに **Save** をクリックした場合、 `saveItem()` は何も返さず、 `description` を更新しません。
 この `if` ステートメントがない場合、ユーザーは HTML の `<input>` に何も入力せずに **Save** をクリックすると、 `description` は空の文字列になります。
 
-ユーザーがテキストを入力して save をクリックすると、 `saveItem()` は`editable` を false に設定します。これにより、テンプレートの `*ngIf` が編集機能を削除し、再び **Edit** と **Delete** ボタンをレンダリングします。
+ユーザーがテキストを入力して save をクリックすると、 `saveItem()` は `editable` を false に設定します。これにより、テンプレートの `*ngIf` が編集機能を削除し、再び **Edit** と **Delete** ボタンをレンダリングします。
 
 この時点でアプリケーションをコンパイルする必要がありますが、ブラウザで新機能を確認できるように、 `AppComponent` で `ItemComponent` を使用する必要があります。
 
