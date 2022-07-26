@@ -4,6 +4,8 @@ slug: Web/API/BroadcastChannel/messageerror_event
 page-type: web-api-event
 translation_of: Web/API/BroadcastChannel/messageerror_event
 browser-compat: api.BroadcastChannel.messageerror_event
+l10n:
+  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 {{APIRef}}
 
@@ -14,8 +16,8 @@ L'évènement `messageerror` est déclenché sur un objet [`BroadcastChannel`](/
 Utilisez le nom de l'évènement dans les méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènements dans la propriété.
 
 ```js
-addEventListener('messageerror', event => { })
-onmessageerror = event => { }
+addEventListener('messageerror', (event) => { })
+onmessageerror = (event) => { }
 ```
 
 ## Type de l'évènement
@@ -46,11 +48,11 @@ Ce code utilise [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListen
 ```js
 const canal = new BroadcastChannel('canal_exemple');
 
-canal.addEventListener('message', event => {
+canal.addEventListener('message', (event) => {
   received.textContent = event.data;
 });
 
-canal.addEventListener('messageerror', event => {
+canal.addEventListener('messageerror', (event) => {
   console.error(event);
 });
 ```
@@ -60,11 +62,11 @@ Voici un exemple similaire qui utilise les gestionnaires d'évènements `onmessa
 ```js
 const canal = new BroadcastChannel('canal_exemple');
 
-canal.onmessage = event => {
+canal.onmessage = (event) => {
   received.textContent = event.data;
 };
 
-canal.onmessageerror = event => {
+canal.onmessageerror = (event) => {
   console.log(event);
 };
 ```
