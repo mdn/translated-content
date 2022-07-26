@@ -120,7 +120,7 @@ Angular は `\{{item.description}}` を使用して、 `items` 配列から現�
 現在のアイテムを編集および削除するための次の 2 つのボタンは、 `<div>` 内にあります。
 この `<div>` には `*ngIf` があります。これは、DOM の構造を動的に変更するために使用できる組み込みの Angular ディレクティブです。
 
-この `*ngIf` は、 `editable` が `false`の場合、この `<div>` が DOM にあることを意味します。 `editable` が `true` の場合、Angular はこの `<div>` を DOM から削除します。
+この `*ngIf` は、 `editable` が `false` の場合、この `<div>` が DOM にあることを意味します。 `editable` が `true` の場合、Angular はこの `<div>` を DOM から削除します。
 
 ```html
 <div class="btn-wrapper" *ngIf="!editable">
