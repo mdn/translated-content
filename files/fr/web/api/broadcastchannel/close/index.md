@@ -2,10 +2,7 @@
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
 page-type: web-api-instance-method
-tags:
-  - Broadcast Channel API
-  - Method
-  - Reference
+translation_of: Web/API/BroadcastChannel/close
 browser-compat: api.BroadcastChannel.close
 ---
 {{APIRef("BroadCastChannel API")}}
@@ -15,17 +12,17 @@ Cette tâche est obligatoire puisqu'il n'y a aucun autre moyen pour le navigateu
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Syntaxe
 
 ```js
 canal.close();
 ```
 
-## Example
+## Exemple
 
 ```js
 // Connexion au canal
-var bc = new BroadcastChannel('canal_test');
+const bc = new BroadcastChannel('canal_test');
 
 // Autres opérations (tel que postMessage, …)
 
@@ -37,10 +34,10 @@ bc.close();
 
 {{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- {{domxref("BroadcastChannel")}}, l'interface à laquelle elle se rapporte.
+- [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), l'interface à laquelle elle se rapporte.

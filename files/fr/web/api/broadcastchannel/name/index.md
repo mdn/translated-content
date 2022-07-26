@@ -2,32 +2,24 @@
 title: BroadcastChannel.name
 slug: Web/API/BroadcastChannel/name
 page-type: web-api-instance-property
-tags:
-  - Broadcast Channel API
-  - Property
-  - Read-only
-  - Reference
+translation_of: Web/API/BroadcastChannel/name
 browser-compat: api.BroadcastChannel.name
 ---
 {{APIRef("BroadCastChannel API")}}
 
-La propriété en lecture seule **`BroadcastChannel.name`** retourne une chaîne, qui identifie de manière unique par son nom.
-Ce nom est passé au constructeur {{domxref("BroadcastChannel.BroadCastChannel",
-  "BroadcastChannel()")}} lors de la création et est par conséquent en lecture seule.
+La propriété en lecture seule **`BroadcastChannel.name`** retourne une chaîne qui identifie de manière unique le canal par son nom. Ce nom est passé au constructeur [`BroadcastChannel()`](/fr/docs/Web/API/BroadcastChannel/BroadcastChannel) lors de la création et est par conséquent en lecture seule.
 
 {{AvailableInWorkers}}
 
-## Syntaxe
+## Valeurs
 
-```js
-var str = canal.name;
-```
+Une chaîne
 
-## Examples
+## Exemples
 
 ```js
 // Connexion à un canal
-var canal = new BroadcastChannel('canal_test');
+const canal = new BroadcastChannel('canal_test');
 
 // D'autres traitements (tel que postMessage, …)
 
@@ -42,10 +34,10 @@ canal.close();
 
 {{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- {{domxref("BroadcastChannel")}}, l'interface à laquelle elle se rapporte.
+- [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), l'interface à laquelle elle se rapporte.

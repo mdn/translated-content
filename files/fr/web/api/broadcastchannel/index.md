@@ -2,18 +2,12 @@
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
 page-type: web-api-interface
-tags:
-  - API
-  - Broadcast Channel API
-  - Experimental
-  - HTML API
-  - Interface
-  - Reference
+translation_of: Web/API/BroadcastChannel
 browser-compat: api.BroadcastChannel
 ---
 {{APIRef("Broadcast Channel API")}}
 
-L'interface **`BroadcastChannel`** représente un canal nommé auquel peut s'abonner n'importe quel {{glossary("browsing context","contexte de navigation")}} d'une même {{glossary("origin", "origine")}}. Il permet la communication entre différents documents (dans différentes fenêtres, onglets, frames ou iframes) d'une même origine. Les messages sont diffusés via un événement {{domxref("BroadcastChannel/message_event", "message")}} déclenché à tout objet `BroadcastChannel` écoutant le canal, sauf celui qui l'a envoyé.
+L'interface **`BroadcastChannel`** représente un canal nommé auquel peut s'abonner n'importe quel [contexte de navigation](/fr/docs/Glossary/Browsing_context) d'une même [origine](/fr/docs/Glossary/Origin). Il permet la communication entre différents documents (dans différentes fenêtres, onglets, cadres ou iframes) d'une même origine. Les messages sont diffusés via un évènement [`message`](/fr/docs/Web/API/BroadcastChannel/message_event) déclenché à tout objet `BroadcastChannel` écoutant le canal, sauf celui qui l'a envoyé.
 
 {{AvailableInWorkers}}
 
@@ -21,26 +15,26 @@ L'interface **`BroadcastChannel`** représente un canal nommé auquel peut s'abo
 
 ## Constructeur
 
-- {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
+- [`BroadcastChannel()`](/fr/docs/Web/API/BroadcastChannel/BroadcastChannel)
   - : Crée un objet lié au canal nommé.
 
 ## Propriétés
 
-_Cette interface hérite aussi des propriétés de ses parents, {{domxref("EventTarget")}}._
+_Cette interface hérite aussi des propriétés de son parent, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
 
-- {{domxref("BroadcastChannel.name")}} {{ReadOnlyInline}}
+- [`BroadcastChannel.name`](/fr/docs/Web/API/BroadcastChannel/name) {{ReadOnlyInline}}
   - : Retourne une chaîne, le nom du canal.
 
 ## Méthodes
 
-_Cette interface hérite aussi des méthodes de ses parents, {{domxref("EventTarget")}}._
+_Cette interface hérite aussi des méthodes de son parent, [`EventTarget`](/fr/docs/Web/API/EventTarget)._
 
-- {{domxref("BroadcastChannel.postMessage()")}}
+- [`BroadcastChannel.postMessage()`](/fr/docs/Web/API/BroadcastChannel/postMessage)
   - : Envoie un message de n'importe quel type d'objet à l'objet `BroadcastChannel` écoutant sur le même canal.
-- {{domxref("BroadcastChannel.close()")}}
+- [`BroadcastChannel.close()`](/fr/docs/Web/API/BroadcastChannel/close)
   - : Ferme l'objet canal, indiquant qu'il n'aura plus aucun nouveau message et lui permettant finalement d'être libéré par le ramasse-miètes.
 
-## Événements
+## Évènements
 
 - [`message`](/fr/docs/Web/API/BroadcastChannel/message_event)
   - : Déclenché lorsqu'un message arrive sur le canal.
@@ -53,11 +47,11 @@ _Cette interface hérite aussi des méthodes de ses parents, {{domxref("EventTar
 
 {{Specifications}}
 
-## Compatibilité navigateur
+##Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- Un autre moyen, plus fourni, de communiquer entre contextes navigateur: {{domxref("ServiceWorker")}}.
-- [Vue d'ensemble de l'API Broadcast Channel API](/fr/docs/Web/API/Broadcast_Channel_API)
+- Un autre moyen, plus fourni, de communiquer entre contextes navigateur&nbsp;: [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
+- [Vue d'ensemble de l'API <em lang="en">Broadcast Channel</em>](/fr/docs/Web/API/Broadcast_Channel_API)

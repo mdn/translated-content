@@ -2,16 +2,12 @@
 title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
+translation_of: Web/API/BroadcastChannel/postMessage
 browser-compat: api.BroadcastChannel.postMessage
 ---
 {{APIRef("BroadCastChannel API")}}
 
-La méthode **`BroadcastChannel.postMessage()`** envoie un message 
-qui peut être de n'importe quel type {{jsxref("Object")}} à chaque écouteur de n'importe quel {{glossary("browsing context", "contexte de navigation")}} d'une même {{glossary("origin", "origine")}}.
-Le message est transmis en tant qu'événement ['message'](/fr/docs/Web/API/BroadcastChannel/message_event) ciblant chaque {{domxref("BroadcastChannel")}} lié au canal.
+La méthode **`BroadcastChannel.postMessage()`** envoie un message qui peut être de n'importe quel type d'[`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object) à chaque écouteur de n'importe quel [contexte de navigation](/fr/docs/Glossary/Browsing_context) d'une même [origine](/fr/docs/Glossary/Origin). Le message est transmis en tant qu'évènement ['message'](/fr/docs/Web/API/BroadcastChannel/message_event) ciblant chaque [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lié au canal.
 
 {{AvailableInWorkers}}
 
@@ -35,10 +31,10 @@ Aucune.
 
 {{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- {{domxref("BroadcastChannel")}}, l'interface à laquelle elle se rapporte.
+- [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), l'interface à laquelle elle se rapporte.
