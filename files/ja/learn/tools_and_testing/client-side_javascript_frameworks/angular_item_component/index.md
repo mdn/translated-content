@@ -248,7 +248,7 @@ export class ItemComponent {
 `AppComponent` は、他のコンポーネントを含めることができるアプリケーションのシェルとして機能します。
 
 `AppComponent` で `ItemComponent` を使用するには、 `AppComponent` テンプレートに `ItemComponent` セレクターを配置します。
-Angular は、 `@Component()` デコレータのメタデータ内のコンポーネントのセレクターを指定します。
+Angular は、 `@Component()` デコレーターのメタデータ内にあるコンポーネントのセレクターを指定します。
 この例では、セレクターは `app-item` です。
 
 ```js
