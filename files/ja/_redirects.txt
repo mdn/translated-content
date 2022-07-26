@@ -3240,6 +3240,7 @@
 /ja/docs/Web/API/GlobalEventHandlers/onkeydown	/ja/docs/conflicting/Web/API/Element/keydown_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeypress	/ja/docs/Web/API/Element/keypress_event
 /ja/docs/Web/API/GlobalEventHandlers/onkeyup	/ja/docs/conflicting/Web/API/Element/keyup_event
+/ja/docs/Web/API/GlobalEventHandlers/onload	/ja/docs/conflicting/Web/API/Window/load_event
 /ja/docs/Web/API/GlobalEventHandlers/onloadend	/ja/docs/conflicting/Web/API/XMLHttpRequest/loadend_event
 /ja/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/ja/docs/Web/API/Element/lostpointercapture_event
 /ja/docs/Web/API/GlobalEventHandlers/onmousedown	/ja/docs/conflicting/Web/API/Element/mousedown_event
@@ -3249,6 +3250,7 @@
 /ja/docs/Web/API/GlobalEventHandlers/onmouseout	/ja/docs/conflicting/Web/API/Element/mouseout_event
 /ja/docs/Web/API/GlobalEventHandlers/onmouseover	/ja/docs/conflicting/Web/API/Element/mouseover_event
 /ja/docs/Web/API/GlobalEventHandlers/onmouseup	/ja/docs/conflicting/Web/API/Element/mouseup_event
+/ja/docs/Web/API/GlobalEventHandlers/onplaying	/ja/docs/conflicting/Web/API/HTMLMediaElement/playing_event
 /ja/docs/Web/API/GlobalEventHandlers/onpointercancel	/ja/docs/Web/API/Element/pointercancel_event
 /ja/docs/Web/API/GlobalEventHandlers/onpointerdown	/ja/docs/Web/API/Element/pointerdown_event
 /ja/docs/Web/API/GlobalEventHandlers/onpointerenter	/ja/docs/Web/API/Element/pointerenter_event
@@ -3801,7 +3803,7 @@
 /ja/docs/Web/API/window.onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/Web/API/window.onkeydown	/ja/docs/conflicting/Web/API/Element/keydown_event
 /ja/docs/Web/API/window.onkeyup	/ja/docs/conflicting/Web/API/Element/keyup_event
-/ja/docs/Web/API/window.onload	/ja/docs/Web/API/GlobalEventHandlers/onload
+/ja/docs/Web/API/window.onload	/ja/docs/conflicting/Web/API/Window/load_event
 /ja/docs/Web/API/window.onmousedown	/ja/docs/conflicting/Web/API/Element/mousedown_event
 /ja/docs/Web/API/window.onmouseup	/ja/docs/conflicting/Web/API/Element/mouseup_event
 /ja/docs/Web/API/window.onreset	/ja/docs/conflicting/Web/API/HTMLFormElement/reset_event

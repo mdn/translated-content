@@ -4976,18 +4976,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/onerror": {
-    "modified": "2019-03-23T22:31:39.576Z",
-    "contributors": [
-      "mantovani"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T22:21:10.943Z",
-    "contributors": [
-      "jeanonline"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:03:54.461Z",
     "contributors": [
@@ -6227,6 +6215,12 @@
     "contributors": [
       "diogobenica",
       "LucasRamos"
+    ]
+  },
+  "Web/API/Window/error_event": {
+    "modified": "2019-03-23T22:31:39.576Z",
+    "contributors": [
+      "mantovani"
     ]
   },
   "Web/API/Window/event": {
@@ -15949,6 +15943,12 @@
     "contributors": [
       "Fernandolrs",
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T22:21:10.943Z",
+    "contributors": [
+      "jeanonline"
     ]
   },
   "conflicting/Web/API/Window/popstate_event": {

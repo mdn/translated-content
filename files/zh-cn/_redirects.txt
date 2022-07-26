@@ -1450,7 +1450,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeydown	/zh-CN/docs/conflicting/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeypress	/zh-CN/docs/conflicting/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeyup	/zh-CN/docs/conflicting/Web/API/Element/keyup_event
-/zh-CN/docs/Web/API/GlobalEventHandlers.onload	/zh-CN/docs/Web/API/GlobalEventHandlers/onload
+/zh-CN/docs/Web/API/GlobalEventHandlers.onload	/zh-CN/docs/conflicting/Web/API/Window/load_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmousedown	/zh-CN/docs/conflicting/Web/API/Element/mousedown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmousemove	/zh-CN/docs/conflicting/Web/API/Element/mousemove_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onmouseout	/zh-CN/docs/conflicting/Web/API/Element/mouseout_event
@@ -1478,6 +1478,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/ondrop	/zh-CN/docs/Web/API/HTMLElement/drop_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ondurationchange	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/durationchange_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onended	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/ended_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onerror	/zh-CN/docs/conflicting/Web/API/Window/error_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/conflicting/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onformdata	/zh-CN/docs/Web/API/HTMLFormElement/formdata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/zh-CN/docs/Web/API/Element/gotpointercapture_event
@@ -1486,6 +1487,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/conflicting/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/conflicting/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeyup	/zh-CN/docs/conflicting/Web/API/Element/keyup_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onload	/zh-CN/docs/conflicting/Web/API/Window/load_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onloadeddata	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onloadedmetadata	/zh-CN/docs/Web/API/HTMLMediaElement/loadedmetadata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onloadend	/zh-CN/docs/conflicting/Web/API/XMLHttpRequest/loadend_event
@@ -1498,6 +1500,9 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseout	/zh-CN/docs/conflicting/Web/API/Element/mouseout_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseover	/zh-CN/docs/Web/API/Element/mouseover_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onmouseup	/zh-CN/docs/conflicting/Web/API/Element/mouseup_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onpause	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/pause_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onplay	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/play_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/onplaying	/zh-CN/docs/conflicting/Web/API/HTMLMediaElement/playing_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onpointercancel	/zh-CN/docs/Web/API/Element/pointercancel_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onpointerdown	/zh-CN/docs/Web/API/Element/pointerdown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onpointerenter	/zh-CN/docs/Web/API/Element/pointerenter_event

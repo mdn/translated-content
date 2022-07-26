@@ -2846,12 +2846,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T22:09:19.030Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
   "Web/API/HTMLCanvasElement": {
     "modified": "2019-03-23T22:34:59.417Z",
     "contributors": [
@@ -13207,6 +13201,12 @@
     "contributors": [
       "fscholz",
       "nothine"
+    ]
+  },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T22:09:19.030Z",
+    "contributors": [
+      "Anonymous"
     ]
   },
   "conflicting/Web/API/WindowOrWorkerGlobalScope": {

@@ -1,0 +1,68 @@
+---
+title: GlobalEventHandlers.onplay
+slug: conflicting/Web/API/HTMLMediaElement/play_event
+translation_of: Web/API/GlobalEventHandlers/onplay
+original_slug: Web/API/GlobalEventHandlers/onplay
+---
+<div>{{ ApiRef("HTML DOM") }}</div>
+
+<p>The <code><strong>onplay</strong></code><em> </em>property of the {{domxref("GlobalEventHandlers")}} mixin is the {{event("Event_handlers", "event handler")}} for processing {{event("play")}} events.</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox"><em><var>element</var></em>.onplay = <em>handlerFunction</em>;
+var <em>handlerFunction</em> = <em><var>element</var></em>.onplay;
+</pre>
+
+<p><code>handlerFunction</code> 应该是 <code>null</code> 或者 <a href="/en-US/docs/Web/JavaScript/Reference/Functions" title="/en-US/docs/JavaScript/Reference/Functions_and_function_scope">JavaScript function</a> 指定事件的处理程序。</p>
+
+<h2 id="示例">示例</h2>
+
+<pre class="brush: html">&lt;p&gt;此示例演示如何将“onplay”事件分配给视频元素&lt;/p&gt;
+
+&lt;video controls onplay="alertPlay()"&gt;
+  &lt;source src="mov_bbb.mp4" type="video/mp4"&gt;
+  &lt;source src="mov_bbb.ogg" type="video/ogg"&gt;
+  Your browser does not support HTML5 video.
+&lt;/video&gt;
+
+&lt;p&gt;Video courtesy of &lt;a href="http://www.bigbuckbunny.org/" target="_blank"&gt;Big Buck Bunny&lt;/a&gt;.&lt;/p&gt;
+
+&lt;script&gt;
+function alertPlay() {
+  alert("视频开始播放啦。");
+}
+&lt;/script&gt;
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onplay','onplay')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>
+    <p> </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.GlobalEventHandlers.onplay")}}</p>
+
+<h2 id="相关知识">相关知识</h2>
+
+<ul>
+ <li>{{event("play")}}</li>
+ <li><a href="/en-US/docs/Web/Guide/Events/Event_handlers">Information on working with event handlers</a></li>
+</ul>
