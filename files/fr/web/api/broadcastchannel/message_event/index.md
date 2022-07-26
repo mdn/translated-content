@@ -4,6 +4,8 @@ slug: Web/API/BroadcastChannel/message_event
 page-type: web-api-event
 translation_of: Web/API/BroadcastChannel/message_event
 browser-compat: api.BroadcastChannel.message_event
+l10n:
+  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 {{APIRef}}
 
@@ -14,8 +16,8 @@ L'évènement `message` est déclenché sur un objet [`BroadcastChannel`](/fr/do
 Utilisez le nom de l'évènement dans les méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènements.
 
 ```js
-addEventListener('message', event => { })
-onmessage = event => { }
+addEventListener('message', (event) => { })
+onmessage = (event) => { }
 ```
 
 ## Type de l'évènement
@@ -111,7 +113,7 @@ h1 {
 
 ```js
 const canal = new BroadcastChannel('canal_exemple');
-canal.addEventListener('message', event => {
+canal.addEventListener('message', (event) => {
   recu.textContent = event.data;
 });
 ```
@@ -139,7 +141,7 @@ h1 {
 
 ```js
 const canal = new BroadcastChannel('canal_exemple');
-canal.addEventListener('message', event => {
+canal.addEventListener('message', (event) => {
   recu.textContent = event.data;
 });
 ```
