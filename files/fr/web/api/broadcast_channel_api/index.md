@@ -7,15 +7,15 @@ browser-compat: api.BroadcastChannel
 ---
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
-L'**API <em lang="en">Broadcast Channel</em>** permet la communication entre des [contextes de navigation](/fr/docs/Glossary/Browsing_context) (c'est à dire des _fenêtres_, _onglets_, _cadres_, ou _iframes_) et <em lang="en">workers</em> d'une même [origine](/fr/docs/Glossary/Origin).
+L'**API <i lang="en">Broadcast Channel</i>** permet la communication entre des [contextes de navigation](/fr/docs/Glossary/Browsing_context) (c'est à dire des _fenêtres_, _onglets_, _cadres_, ou _iframes_) et <i lang="en">workers</i> d'une même [origine](/fr/docs/Glossary/Origin).
 
 {{AvailableInWorkers}}
 
-En créant un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), vous pouvez y recevoir n'importe quel message qui lui a été envoyé. Vous n'avez pas à maintenir de référence aux cadres ou<em lang="en">worker</em> avec lesquels vous souhaitez communiquer, car ils «&nbsp;s'abonnent&nbsp;» à un canal dédié en construisant leur propre objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) avec le même nom, et obtiennent un canal de communication bi-directionnel avec chacun d'eux.
+En créant un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), vous pouvez y recevoir n'importe quel message qui lui a été envoyé. Vous n'avez pas à maintenir de référence aux cadres ou<i lang="en">worker</i> avec lesquels vous souhaitez communiquer, car ils «&nbsp;s'abonnent&nbsp;» à un canal dédié en construisant leur propre objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) avec le même nom, et obtiennent un canal de communication bi-directionnel avec chacun d'eux.
 
 ![Les principes de l'API Broadcast Channel](broadcastchannel.png)
 
-## L'interface <em lang="en">Broadcast Channel</em>
+## L'interface <i lang="en">Broadcast Channel</i>
 
 ### Créer ou rejoindre un canal
 
@@ -50,7 +50,7 @@ bc.onmessage = event => { console.log(event); }
 
 ### Déconnexion d'un canal
 
-Pour quitter un canal, appellez la méthode [`close()`](/fr/docs/Web/API/BroadcastChannel/close) de l'objet. Cet appel déconnectera l'objet du canal sous-jacent permettant au ramasse-miètes de s'éxecuter.
+Pour quitter un canal, appelez la méthode [`close()`](/fr/docs/Web/API/BroadcastChannel/close) de l'objet. Cet appel déconnectera l'objet du canal sous-jacent permettant au ramasse-miètes de s'exécuter.
 
 ```js
 // Déconnexion du canal
@@ -59,7 +59,7 @@ bc.close();
 
 ## Conclusion
 
-L'interface intégrée de l'API <em lang="en">Broadcast Channel</em> permet une communication inter-contexte. Il peut être utilisé pour détecter des actions utilisateurs dans d'autre onglets d'une même origine, telle qu'une connexion ou déconnexion d'utilisateur du site.
+L'interface intégrée de l'API <i lang="en">Broadcast Channel</i> permet une communication inter-contexte. Il peut être utilisé pour détecter des actions utilisateurs dans d'autre onglets d'une même origine, telle qu'une connexion ou déconnexion d'utilisateur du site.
 
 Le protocole ne définit pas le contenu des messages ni leurs significations. Il sera à la charge de la développeuse ou du développeur d'implanter leur propre jeu de messages et traitements associés.
 

@@ -47,11 +47,11 @@ _Cette interface hérite aussi des méthodes de son parent, [`EventTarget`](/fr/
 
 {{Specifications}}
 
-##Compatibilité des navigateurs
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- Un autre moyen, plus fourni, de communiquer entre contextes navigateur&nbsp;: [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
-- [Vue d'ensemble de l'API <em lang="en">Broadcast Channel</em>](/fr/docs/Web/API/Broadcast_Channel_API)
+- Un autre moyen, plus fourni, de communiquer entre contextes navigateurs&nbsp;: [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
+- [Vue d'ensemble de l'API <i lang="en">Broadcast Channel</i>](/fr/docs/Web/API/Broadcast_Channel_API)

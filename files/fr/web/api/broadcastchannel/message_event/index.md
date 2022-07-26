@@ -11,7 +11,7 @@ L'évènement `message` est déclenché sur un objet [`BroadcastChannel`](/fr/do
 
 ## Syntaxe
 
-Utilisez le nom de l'évènement dans les méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènement.
+Utilisez le nom de l'évènement dans les méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènements.
 
 ```js
 addEventListener('message', event => { })

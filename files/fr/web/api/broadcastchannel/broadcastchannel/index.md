@@ -20,7 +20,7 @@ new BroadcastChannel(channelName)
 ### Paramètres
 
 - `channelName`
-  - : Une chaîne représentant le nom du canal&nbsp;; il n'y a qu'un canal portant ce nom pour tous les [contextes de navigation](/fr/docs/Glossary/Browsing_context) de la même [origine](/fr/docs/Glossary/Origin)..
+  - : Une chaîne représentant le nom du canal&nbsp;; il n'y a qu'un canal portant ce nom pour tous les [contextes de navigation](/fr/docs/Glossary/Browsing_context) de la même [origine](/fr/docs/Glossary/Origin).
 
 ## Exemples
 
