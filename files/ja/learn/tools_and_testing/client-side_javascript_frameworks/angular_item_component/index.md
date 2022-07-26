@@ -52,7 +52,7 @@ ng generate component item
 ```
 
 `ng generate component` コマンドは、指定した名前でコンポーネントとフォルダーを作成します。
-ここで、フォルダとコンポーネントの名前は `item` です。
+ここで、フォルダーとコンポーネントの名前は `item` です。
 `item` ディレクトリは `app` フォルダ内にあります。
 
 `AppComponent` と同様に、 `ItemComponent` は次のファイルで構成されています。
