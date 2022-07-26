@@ -7,7 +7,7 @@ browser-compat: api.BroadcastChannel.postMessage
 ---
 {{APIRef("BroadCastChannel API")}}
 
-La méthode **`BroadcastChannel.postMessage()`** envoie un message qui peut être de n'importe quel type d'[`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object) à chaque écouteur de n'importe quel [contexte de navigation](/fr/docs/Glossary/Browsing_context) d'une même [origine](/fr/docs/Glossary/Origin). Le message est transmis en tant qu'évènement ['message'](/fr/docs/Web/API/BroadcastChannel/message_event) ciblant chaque [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lié au canal.
+La méthode **`BroadcastChannel.postMessage()`** envoie un message qui peut être de n'importe quel type d'[`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object) à chaque écouteur de n'importe quel [contexte de navigation](/fr/docs/Glossary/Browsing_context) d'une même [origine](/fr/docs/Glossary/Origin). Le message est transmis en tant qu'évènement [`message`](/fr/docs/Web/API/BroadcastChannel/message_event) ciblant chaque [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lié au canal.
 
 {{AvailableInWorkers}}
 
@@ -20,8 +20,7 @@ canal.postMessage(message);
 ### Paramètres
 
 - `message`
-  - : Données à envoyer à la fenêtre. Les données sont  sérialisées en utilisant l'[algorithme de clonage de structure](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-    Cela signifie que vous pouvez passer un large spectre de type de données de manière sûre à la fenêtre de destination sans avoir à réaliser le traitement de sérialisation par vous-même.
+  - : Données à envoyer à la fenêtre. Les données sont sérialisées en utilisant l'[algorithme de clonage de structure](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Cela signifie que vous pouvez passer un large spectre de type de données de manière sûre à la fenêtre de destination sans avoir à réaliser le traitement de sérialisation par vous-même.
 
 ### Valeur de retour
 

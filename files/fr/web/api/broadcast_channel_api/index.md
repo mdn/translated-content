@@ -7,11 +7,11 @@ browser-compat: api.BroadcastChannel
 ---
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
-L'**API <i lang="en">Broadcast Channel</i>** permet la communication entre des [contextes de navigation](/fr/docs/Glossary/Browsing_context) (c'est à dire des _fenêtres_, _onglets_, _cadres_, ou _iframes_) et <i lang="en">workers</i> d'une même [origine](/fr/docs/Glossary/Origin).
+L'**API <i lang="en">Broadcast Channel</i>** permet la communication entre des [contextes de navigation](/fr/docs/Glossary/Browsing_context) (c'est-à-dire des _fenêtres_, _onglets_, _cadres_, ou _iframes_) et <i lang="en">workers</i> d'une même [origine](/fr/docs/Glossary/Origin).
 
 {{AvailableInWorkers}}
 
-En créant un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), vous pouvez y recevoir n'importe quel message qui lui a été envoyé. Vous n'avez pas à maintenir de référence aux cadres ou<i lang="en">worker</i> avec lesquels vous souhaitez communiquer, car ils «&nbsp;s'abonnent&nbsp;» à un canal dédié en construisant leur propre objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) avec le même nom, et obtiennent un canal de communication bi-directionnel avec chacun d'eux.
+En créant un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel), vous pouvez y recevoir n'importe quel message qui lui a été envoyé. Vous n'avez pas à maintenir de référence aux cadres ou <i lang="en">workers</i> avec lesquels vous souhaitez communiquer, car ils «&nbsp;s'abonnent&nbsp;» à un canal dédié en construisant leur propre objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) avec le même nom, et obtiennent un canal de communication bi-directionnel avec chacun d'eux.
 
 ![Les principes de l'API Broadcast Channel](broadcastchannel.png)
 
@@ -35,7 +35,7 @@ Il suffit d'appeler la méthode [`postMessage()`](/fr/docs/Web/API/BroadcastChan
 bc.postMessage('Ceci est un message test.');
 ```
 
-Les données envoyées sur le canal sont sérialisées via l'[algorithme de clonage de structure](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Ceci implique que vous pouvez envoyer un large spectre de type de données de manière sure sans avoir à les sérialiser par vous même.
+Les données envoyées sur le canal sont sérialisées via l'[algorithme de clonage de structure](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Ceci implique que vous pouvez envoyer un large spectre de type de données de manière sure sans avoir à les sérialiser par vous-même.
 
 Cette API n'associe aucune sémantique particulière aux messages, c'est donc au code de savoir à quelle sorte de message s'attendre et quel usage il peut en tirer.
 
@@ -50,7 +50,7 @@ bc.onmessage = event => { console.log(event); }
 
 ### Déconnexion d'un canal
 
-Pour quitter un canal, appelez la méthode [`close()`](/fr/docs/Web/API/BroadcastChannel/close) de l'objet. Cet appel déconnectera l'objet du canal sous-jacent permettant au ramasse-miètes de s'exécuter.
+Pour quitter un canal, appelez la méthode [`close()`](/fr/docs/Web/API/BroadcastChannel/close) de l'objet. Cet appel déconnectera l'objet du canal sous-jacent permettant au ramasse-miettes de s'exécuter.
 
 ```js
 // Déconnexion du canal

@@ -7,7 +7,7 @@ browser-compat: api.BroadcastChannel.messageerror_event
 ---
 {{APIRef}}
 
-L'évènement `messageerror` est déclenché sur un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lorsqu'un message qui n'a pas pu être déserialisé arrive dans le canal.
+L'évènement `messageerror` est déclenché sur un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lorsqu'un message qui n'a pas pu être désérialisé arrive dans le canal.
 
 ## Syntaxe
 

@@ -32,7 +32,7 @@ _Cette interface hérite aussi des méthodes de son parent, [`EventTarget`](/fr/
 - [`BroadcastChannel.postMessage()`](/fr/docs/Web/API/BroadcastChannel/postMessage)
   - : Envoie un message de n'importe quel type d'objet à l'objet `BroadcastChannel` écoutant sur le même canal.
 - [`BroadcastChannel.close()`](/fr/docs/Web/API/BroadcastChannel/close)
-  - : Ferme l'objet canal, indiquant qu'il n'aura plus aucun nouveau message et lui permettant finalement d'être libéré par le ramasse-miètes.
+  - : Ferme l'objet canal, indiquant qu'il n'aura plus aucun nouveau message et lui permettant finalement d'être libéré par le ramasse-miettes.
 
 ## Évènements
 
@@ -40,8 +40,7 @@ _Cette interface hérite aussi des méthodes de son parent, [`EventTarget`](/fr/
   - : Déclenché lorsqu'un message arrive sur le canal.
     Également accessible via la propriété `onmessage`.
 - [`messageerror`](/fr/docs/Web/API/BroadcastChannel/messageerror_event)
-  - : Déclenché lorsqu'un message arrive mais ne peut pas être déserialisé.
-    Également accessible via la propriété `onmessageerror`.
+  - : Déclenché lorsqu'un message arrive mais ne peut pas être désérialisé. Également accessible via la propriété `onmessageerror`.
 
 ## Spécifications
 
