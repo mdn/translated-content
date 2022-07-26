@@ -54,8 +54,6 @@ result; // "Barry"
 
 - {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} 维基百科
 
-<!---->
-
 - [相关术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("Function")}}

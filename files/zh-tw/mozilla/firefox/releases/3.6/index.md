@@ -54,8 +54,6 @@ Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language feature
 - [`Date.parse()`](/en-US/docs/JavaScript/Reference/Global_Objects/Date/parse) can now parse ISO 8601 dates like YYYY-MM-DD.
 - The [`prototype`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/prototype) property of function instances is no longer enumerable.
 
-<!---->
-
 ### DOM
 
 - Web workers can now self-terminate

@@ -43,12 +43,12 @@ translation_of: Web/API/NodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_CDATA_SECTION</code> {{Deprecated_Inline}}</td>
     <td><code>8</code></td>
-    <td>显示{{ domxref("CDATASection") }} 节点。</td>
+    <td>显示{{ domxref("CDATASection") }} 节点。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_COMMENT</code></td>
     <td><code>128</code></td>
-    <td>显示{{ domxref("Comment") }} 节点。</td>
+    <td>显示{{ domxref("Comment") }} 节点。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_DOCUMENT</code></td>
@@ -65,17 +65,17 @@ translation_of: Web/API/NodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_DOCUMENT_TYPE</code></td>
     <td><code>512</code></td>
-    <td>显示{{ domxref("DocumentType") }} 节点。</td>
+    <td>显示{{ domxref("DocumentType") }} 节点。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_ELEMENT</code></td>
     <td><code>1</code></td>
-    <td>显示{{ domxref("Element") }} 节点。</td>
+    <td>显示{{ domxref("Element") }} 节点。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_ENTITY</code> {{Deprecated_Inline}}</td>
     <td><code>32</code></td>
-    <td>显示 {{ domxref("Entity") }} 节点。只有当用一个 {{ domxref("Entity") }} 节点作为它的根节点来创建一个 {{ domxref("NodeIterator") }} 时才有意义; 在这种情况下，  {{ domxref("Entity") }} 节点会出现在迭代或遍历的首位。因为 {{ domxref("Entity") }} 永远不会是其它节点的子节点，当遍历整个文档树时它们不会出现。</td>
+    <td>显示 {{ domxref("Entity") }} 节点。只有当用一个 {{ domxref("Entity") }} 节点作为它的根节点来创建一个 {{ domxref("NodeIterator") }} 时才有意义; 在这种情况下，  {{ domxref("Entity") }} 节点会出现在迭代或遍历的首位。因为 {{ domxref("Entity") }} 永远不会是其它节点的子节点，当遍历整个文档树时它们不会出现。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_ENTITY_REFERENCE</code> {{Deprecated_Inline}}</td>
@@ -85,7 +85,7 @@ translation_of: Web/API/NodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_NOTATION</code> {{Deprecated_Inline}}</td>
     <td><code>2048</code></td>
-    <td>显示 {{ domxref("Notation") }} 节点。只有当用一个 {{ domxref("Notation") }} 节点作为它的根节点时来创建一个 {{ domxref("NodeIterator") }} 才有意义; 在这种情况下，  {{ domxref("Notation") }} 节点会出现在迭代或遍历的首位。因为 {{ domxref("Notation") }}  永远不会是其它节点的子节点，当遍历整个文档树时它们不会出现。</td>
+    <td>显示 {{ domxref("Notation") }} 节点。只有当用一个 {{ domxref("Notation") }} 节点作为它的根节点时来创建一个 {{ domxref("NodeIterator") }} 才有意义; 在这种情况下，  {{ domxref("Notation") }} 节点会出现在迭代或遍历的首位。因为 {{ domxref("Notation") }}  永远不会是其它节点的子节点，当遍历整个文档树时它们不会出现。</td>
    </tr>
    <tr>
     <td><code>NodeFilter.SHOW_PROCESSING_INSTRUCTION</code></td>
@@ -95,7 +95,7 @@ translation_of: Web/API/NodeIterator
    <tr>
     <td><code>NodeFilter.SHOW_TEXT</code></td>
     <td><code>4</code></td>
-    <td>显示{{ domxref("Text") }} 节点。</td>
+    <td>显示{{ domxref("Text") }} 节点。</td>
    </tr>
   </tbody>
  </table>
@@ -105,7 +105,7 @@ translation_of: Web/API/NodeIterator
  <dt>{{domxref("NodeIterator.expandEntityReferences")}} {{readonlyInline}} {{deprecated_inline}}</dt>
  <dd>Is a {{domxref("Boolean")}} indicating if, when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.</dd>
  <dt>{{domxref("NodeIterator.referenceNode")}} {{readonlyInline}} {{experimental_inline() }}</dt>
- <dd>返回当前遍历到的 {{domxref("Node")}} .</dd>
+ <dd>返回当前遍历到的 {{domxref("Node")}} .</dd>
  <dt>{{domxref("NodeIterator.pointerBeforeReferenceNode")}} {{readonlyInline}} {{ experimental_inline() }}</dt>
  <dd>Returns a {{domxref("Boolean")}} flag that indicates whether the {{domxref("NodeIterator")}} is anchored before, the flag being <code>true</code>, or after, the flag being <code>false</code>, the anchor node.</dd>
 </dl>
@@ -116,9 +116,9 @@ translation_of: Web/API/NodeIterator
 
 <dl>
  <dt>{{domxref("NodeIterator.detach()")}} {{Deprecated_Inline}}</dt>
- <dd>这个方法不是必需的。它现在什么也不做. 之前用来告诉引擎，<code>NodeIterator</code> 已经不会再使用，现在已经不做任何事情。</dd>
+ <dd>这个方法不是必需的。它现在什么也不做. 之前用来告诉引擎，<code>NodeIterator</code> 已经不会再使用，现在已经不做任何事情。</dd>
  <dt>{{domxref("NodeIterator.previousNode()")}}</dt>
- <dd>返回前一个 {{domxref("Node")}}，如果不存在则返回 <code>null</code>.</dd>
+ <dd>返回前一个 {{domxref("Node")}}，如果不存在则返回 <code>null</code>.</dd>
  <dt>{{domxref("NodeIterator.nextNode()")}}</dt>
  <dd>返回下一个 {{domxref("Node")}}, 如果不存在则返回<code>null</code> .</dd>
 </dl>

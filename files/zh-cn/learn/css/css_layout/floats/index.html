@@ -22,7 +22,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
  <tbody>
   <tr>
    <th scope="row">要求：</th>
-   <td>HTML 基础知识 (学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">入门 HTML</a>)，和 CSS 的工作理念（学习 <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">入门 CSS</a>)。</td>
+   <td>HTML 基础知识 (学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">入门 HTML</a>)，和 CSS 的工作理念（学习 <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">入门 CSS</a>)。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -33,9 +33,9 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <h2 id="浮动的背景知识">浮动的背景知识</h2>
 
-<p>最初，引入 {{cssxref("float")}} 属性是为了能让 web 开发人员实现简单的布局，包括在一列文本中浮动的图像，文字环绕在它的左边或右边。你可能在报纸版面上看到过。</p>
+<p>最初，引入 {{cssxref("float")}} 属性是为了能让 web 开发人员实现简单的布局，包括在一列文本中浮动的图像，文字环绕在它的左边或右边。你可能在报纸版面上看到过。</p>
 
-<p>但 Web 开发人员很快意识到，任何东西都可以浮动，而不仅仅是图像，所以浮动的使用范围扩大了。之前的 <a href="/en-US/Learn/CSS/Introduction_to_CSS/Selectors#Active_learning_A_fancy_paragraph">fancy paragraph example</a> 的课程展示了如何使用浮动创建一个有趣的 drop-cap（首字下沉）效果。</p>
+<p>但 Web 开发人员很快意识到，任何东西都可以浮动，而不仅仅是图像，所以浮动的使用范围扩大了。之前的 <a href="/en-US/Learn/CSS/Introduction_to_CSS/Selectors#Active_learning_A_fancy_paragraph">fancy paragraph example</a> 的课程展示了如何使用浮动创建一个有趣的 drop-cap（首字下沉）效果。</p>
 
 <p>浮动曾被用来实现整个网站页面的布局，它使信息列得以横向排列（默认的设定则是按照这些列在源代码中出现的顺序纵向排列）。目前出现了更新更好的页面布局技术，所以使用浮动来进行页面布局应被看作<a href="/zh-CN/docs/Learn/CSS/CSS_layout/传统的布局方法">传统的布局方法。</a></p>
 
@@ -43,7 +43,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 <h2 id="简单的例子">简单的例子</h2>
 
-<p>让我们来探讨如何使用浮动。我们将从一个非常简单的例子开始，包括在图像周围浮动一个文本块。你可以跟随在你的电脑上创建新的 <code>index.html</code> 文件，以填充它 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a>, 以下代码插入它在适当的地方。底部的部分你可以看到一个它应该是什么样子的例子。</p>
+<p>让我们来探讨如何使用浮动。我们将从一个非常简单的例子开始，包括在图像周围浮动一个文本块。你可以跟随在你的电脑上创建新的 <code>index.html</code> 文件，以填充它 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a>, 以下代码插入它在适当的地方。底部的部分你可以看到一个它应该是什么样子的例子。</p>
 
 <p>首先，我们写一些简单的 HTML——添加以下到 HTML 的{{htmlelement("body")}}内，删除之前{{htmlelement("body")}}里面的东西：</p>
 
@@ -55,7 +55,7 @@ translation_of: Learn/CSS/CSS_layout/Floats
 
 &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;</pre>
 
-<p>现在将以下 CSS 应用到您的 HTML (使用一个{{htmlelement("style")}} 元素或一个{{htmlelement("link")}} 到一个单独的 <code>.css </code>文件——你来选择)：</p>
+<p>现在将以下 CSS 应用到您的 HTML (使用一个{{htmlelement("style")}} 元素或一个{{htmlelement("link")}} 到一个单独的 <code>.css </code>文件——你来选择)：</p>
 
 <pre class="brush: css notranslate">body {
   width: 90%;
@@ -109,11 +109,11 @@ img {
 
 <p>{{ EmbedLiveSample('Playable_code', '100%', 800) }}</p>
 
-<p>因此，让我们考虑一下浮动是如何工作的——浮动元素 (这个例子中的{{htmlelement("img")}} 元素) 会脱离正常的文档布局流，并吸附到其父容器的左边 (这个例子中的{{htmlelement("body")}}元素)。在正常布局中位于该浮动元素之下的内容，此时会围绕着浮动元素，填满其右侧的空间。</p>
+<p>因此，让我们考虑一下浮动是如何工作的——浮动元素 (这个例子中的{{htmlelement("img")}} 元素) 会脱离正常的文档布局流，并吸附到其父容器的左边 (这个例子中的{{htmlelement("body")}}元素)。在正常布局中位于该浮动元素之下的内容，此时会围绕着浮动元素，填满其右侧的空间。</p>
 
 <p>注意浮动内容仍然遵循盒子模型诸如外边距和边界。我们设置一下图片右侧的外边距就能阻止右侧的文字紧贴着图片。</p>
 
-<p>向右浮动的内容是一样的效果，只是反过来了——浮动元素会吸附到右边，而其他内容将从左侧环绕它。尝试将上一个例子中的浮动值改为 <code>right</code> ，再把 <code>margin-right</code> 换成 <code>margin-left</code> ，看看结果是什么。</p>
+<p>向右浮动的内容是一样的效果，只是反过来了——浮动元素会吸附到右边，而其他内容将从左侧环绕它。尝试将上一个例子中的浮动值改为 <code>right</code> ，再把 <code>margin-right</code> 换成 <code>margin-left</code> ，看看结果是什么。</p>
 
 <h2 id="再看我们的首字下沉例子">再看我们的首字下沉例子</h2>
 
@@ -158,7 +158,7 @@ p::first-letter {
 
 <h3 id="两列布局">两列布局</h3>
 
-<p>让我们先从最简单的例子——两列布局。您可以通过创建一个新的 <code>index.html</code> 文件在您的计算机上，用<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a>填充它，并在适当的地方插入下面的代码。在本节的底部，您可以看到一个活的例子，最终代码应该看起来像。</p>
+<p>让我们先从最简单的例子——两列布局。您可以通过创建一个新的 <code>index.html</code> 文件在您的计算机上，用<a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html">simple HTML template</a>填充它，并在适当的地方插入下面的代码。在本节的底部，您可以看到一个活的例子，最终代码应该看起来像。</p>
 
 <p>首先，我们需要一些内容放入我们的列。使用以下内容替换 body 中的任何内容：</p>
 
@@ -251,13 +251,13 @@ div:nth-of-type(2) {
 
 <p>需要注意的一件事是，当它们变得非常窄时，列就会变得很糟糕。切换回窄屏幕的单列布局通常是有意义的（如手机)，使用媒体查询可以实现这一功能。再一次，你们将在未来的响应式网页设计模块中学习这些知识。</p>
 
-<p>另一种选择是将宽度设置为一个固定的单位如 rem 或像素——你可以看到一个例子<code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/two-column-layout-fixed.html">two-column-layout-fixed.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/two-column-layout-fixed.html">see source code</a>)，或者通过删除<code>max-width</code> 声明来转换您自己的示例，并改变各个宽度为 <code>900px</code>, <code>430px</code>和 <code>430px</code>。这就是<strong>固定宽度布局</strong>（<strong>fixed-width layout</strong>）——如果您现在调整浏览器大小，您将看到布局不再调整以适应视图宽度，在尺寸更小时您将需要滚动来查看它的全部。</p>
+<p>另一种选择是将宽度设置为一个固定的单位如 rem 或像素——你可以看到一个例子<code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/two-column-layout-fixed.html">two-column-layout-fixed.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/two-column-layout-fixed.html">see source code</a>)，或者通过删除<code>max-width</code> 声明来转换您自己的示例，并改变各个宽度为 <code>900px</code>, <code>430px</code>和 <code>430px</code>。这就是<strong>固定宽度布局</strong>（<strong>fixed-width layout</strong>）——如果您现在调整浏览器大小，您将看到布局不再调整以适应视图宽度，在尺寸更小时您将需要滚动来查看它的全部。</p>
 
 <p>现在我们将转去使用流体布局。</p>
 
 <h3 id="三列布局">三列布局</h3>
 
-<p>你已经有了一个两列布局工作，添加一个第三列 (或更多) 并不是太难。你只需要添加另一个列在同一个父元素。开始通过添加以下 {{htmlelement("div")}}就在另外两个后面 (或使用 <code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html">0_two-column-layout.html</a></code> 作为开始）：</p>
+<p>你已经有了一个两列布局工作，添加一个第三列 (或更多) 并不是太难。你只需要添加另一个列在同一个父元素。开始通过添加以下 {{htmlelement("div")}}就在另外两个后面 (或使用 <code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html">0_two-column-layout.html</a></code> 作为开始）：</p>
 
 <pre class="brush: html notranslate">&lt;div&gt;
   &lt;h2&gt;Third column&lt;/h2&gt;
@@ -313,24 +313,24 @@ div:nth-of-type(3) {
 
 <pre class="brush: css notranslate">body {
   width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 div:nth-of-type(1) {
-  width: 36%;
-  float: left;
+  width: 36%;
+  float: left;
 }
 
 div:nth-of-type(2) {
-  width: 30%;
-  float: left;
-  margin-left: 4%;
+  width: 30%;
+  float: left;
+  margin-left: 4%;
 }
 
 div:nth-of-type(3) {
-  width: 26%;
-  float: right;
+  width: 26%;
+  float: right;
 }
 </pre>
 </div>
@@ -339,11 +339,11 @@ div:nth-of-type(3) {
 
 <p>这个例子我们已经很熟悉了；唯一真正的区别是我们有了这个额外的列——为了让它放到合适的位置我们已经把它放在左边了；我们还给了它一个 4% 的 {{cssxref("margin-left")}}，来在第一和第二列之间拉开一段距离。我们设置了列的宽度以便它们都能匹配——36% + 30% + 4% + 26% = 96%，在第二和第三列之间有 4% 的空间。（这个空间总是出现在向左浮动的第二列和向右浮动的第三列之间。）</p>
 
-<p>这里需要注意的一点是，您必须仔细考虑将列放在什么位置，以及如何浮动它们，以获得所需的结果。你的内容应该是有意义的，当你阅读它的源代码和它的视觉布局的时候；但是，使用浮动可以使可视化布局与源顺序不同。来说明我们的意思，尝试改变第二列的 {{cssxref("float")}}值为 <code>right</code> （或者看一看<a href="https://mdn.github.io/learning-area/css/css-layout/floats/three-column-layout-wrong-order.html">three-column-layout-wrong-order.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/three-column-layout-wrong-order.html">源码</a>)）你会看到现在的视觉顺序是这样的：</p>
+<p>这里需要注意的一点是，您必须仔细考虑将列放在什么位置，以及如何浮动它们，以获得所需的结果。你的内容应该是有意义的，当你阅读它的源代码和它的视觉布局的时候；但是，使用浮动可以使可视化布局与源顺序不同。来说明我们的意思，尝试改变第二列的 {{cssxref("float")}}值为 <code>right</code> （或者看一看<a href="https://mdn.github.io/learning-area/css/css-layout/floats/three-column-layout-wrong-order.html">three-column-layout-wrong-order.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/three-column-layout-wrong-order.html">源码</a>)）你会看到现在的视觉顺序是这样的：</p>
 
 <pre class="notranslate">div1  div3  div2</pre>
 
-<p>这是因为第二个&lt;div&gt;源代码顺序上比第三个&lt;div&gt;等级要高 (DOM 上第二个&lt;div&gt;先出现并声明了<code>float: right;</code>) ，所以在浮动顺序上也会比第三个&lt;div&gt;等级要高。又因为两者同时像右浮动，第二个&lt;div&gt;就会更加地靠右。</p>
+<p>这是因为第二个&lt;div&gt;源代码顺序上比第三个&lt;div&gt;等级要高 (DOM 上第二个&lt;div&gt;先出现并声明了<code>float: right;</code>) ，所以在浮动顺序上也会比第三个&lt;div&gt;等级要高。又因为两者同时像右浮动，第二个&lt;div&gt;就会更加地靠右。</p>
 
 <p>然而视觉受损的人使用屏幕阅读器来听你的内容，仍然会听到这个顺序的内容：</p>
 
@@ -400,24 +400,24 @@ div:nth-of-type(3) {
 
 <pre class="brush: css notranslate">body {
   width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 div:nth-of-type(1) {
-  width: 36%;
-  float: left;
+  width: 36%;
+  float: left;
 }
 
 div:nth-of-type(2) {
-  width: 30%;
-  float: left;
-  margin-left: 4%;
+  width: 30%;
+  float: left;
+  margin-left: 4%;
 }
 
 div:nth-of-type(3) {
-  width: 26%;
-  float: right;
+  width: 26%;
+  float: right;
 }
 
 footer {
@@ -436,7 +436,7 @@ footer {
  <li><code>both</code>：停止任何活动的左右浮动</li>
 </ul>
 
-<p>你通常只想设定一个 <code>clear: both</code> 在你想让浮动停止的元素上。在某些情况下，你会想要只取消<code>left</code> 或 <code>right</code> 引用。</p>
+<p>你通常只想设定一个 <code>clear: both</code> 在你想让浮动停止的元素上。在某些情况下，你会想要只取消<code>left</code> 或 <code>right</code> 引用。</p>
 
 <div class="note">
 <p><strong>注：</strong>你可以在这个阶段找到例子 <code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/2a_fixed-by-clear.html">2a_fixed-by-clear.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/2a_fixed-by-clear.html">see source code</a>).</p>
@@ -448,7 +448,7 @@ footer {
 
 <h3 id="整个宽度可能难以计算">整个宽度可能难以计算</h3>
 
-<p>到目前为止，我们的例子是没有应用样式的浮动框——这很容易。当你开始给这些框加上样式时，比如添加背景、外边距、内边距等等，问题就来了。为了演示这个问题，可以将下面的 CSS 加入到你的代码里 (你也可以看这个例子 <code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/3_broken-layout.html">3_broken-layout.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/3_broken-layout.html">source code</a>))：</p>
+<p>到目前为止，我们的例子是没有应用样式的浮动框——这很容易。当你开始给这些框加上样式时，比如添加背景、外边距、内边距等等，问题就来了。为了演示这个问题，可以将下面的 CSS 加入到你的代码里 (你也可以看这个例子 <code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/3_broken-layout.html">3_broken-layout.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/3_broken-layout.html">source code</a>))：</p>
 
 <pre class="brush: css notranslate">div, footer {
   padding: 1%;
@@ -466,17 +466,17 @@ footer {
 
 <p>{{cssxref("box-sizing")}} 通过更改盒模型来拯救我们，盒子的宽度取值为 content + padding + border，而不仅是之前的 content——所以当增加内边距或边界的宽度时，不会使盒子更宽——而是会使内容调整得更窄。</p>
 
-<p>我们有另一个问题——页脚正压在最长列上，在这一点并不理想——我们来试着清除页脚浮动的同时给出一些顶部外边距（ <a href="/en-US/docs/Web/CSS/margin-top"><code>margin-top</code></a> ）来解决这个问题：</p>
+<p>我们有另一个问题——页脚正压在最长列上，在这一点并不理想——我们来试着清除页脚浮动的同时给出一些顶部外边距（ <a href="/en-US/docs/Web/CSS/margin-top"><code>margin-top</code></a> ）来解决这个问题：</p>
 
 <pre class="brush: css notranslate">footer {
   clear: both;
   margin-top: 4%;
 } </pre>
 
-<p>然而，这不起作用 ——浮动的元素存在于正常的文档布局流之外，在某些方面的行为相当奇怪：</p>
+<p>然而，这不起作用 ——浮动的元素存在于正常的文档布局流之外，在某些方面的行为相当奇怪：</p>
 
 <ul>
- <li>首先，他们在父元素中所占的面积的有效高度为 0 ——尝试在浏览器中加载 <a href="https://mdn.github.io/learning-area/css/css-layout/floats/1_three-column-layout.html">1_three-column-layout.html</a> 并用开发工具查看 {{htmlelement("body")}} 的高度，你将会看到我们的意思是什么——所报告的正文高度只有 {{htmlelement("h1")}} 的高度。这个可以通过很多方式解决，但是我们所依赖的是在父容器的底部清除浮动，如我们在我们的当前示例所做的那样。如果检查当前示例中正文的高度，您应该看它的高度是行为本身。</li>
+ <li>首先，他们在父元素中所占的面积的有效高度为 0 ——尝试在浏览器中加载 <a href="https://mdn.github.io/learning-area/css/css-layout/floats/1_three-column-layout.html">1_three-column-layout.html</a> 并用开发工具查看 {{htmlelement("body")}} 的高度，你将会看到我们的意思是什么——所报告的正文高度只有 {{htmlelement("h1")}} 的高度。这个可以通过很多方式解决，但是我们所依赖的是在父容器的底部清除浮动，如我们在我们的当前示例所做的那样。如果检查当前示例中正文的高度，您应该看它的高度是行为本身。</li>
  <li>其次，非浮动元素的外边距不能用于它们和浮动元素之间来创建空间——这是我们在这里眼前的问题，我们将在下面实施修复。</li>
  <li>还有一些关于浮动的奇怪的事情——Chris Coyier 优秀的<a href="https://css-tricks.com/all-about-floats/">关于 Floats</a>文章概述了其他一些以及修复这些。</li>
 </ul>
@@ -485,19 +485,19 @@ footer {
 
 <pre class="brush: html notranslate">&lt;div class="clearfix"&gt;&lt;/div&gt;</pre>
 
-<p>如果您没有一个可用的元素来清除您的浮动 (比如我们的页脚)，在您想要清除的浮动之后添加一个看不见的“clearfix div”是非常有用的，但是在这里页脚也要用到。接下来我们要做的是，移除页脚样式规则中的 <code>clear: both;</code> 声明，取而代之将其放在 clearfix div 中：</p>
+<p>如果您没有一个可用的元素来清除您的浮动 (比如我们的页脚)，在您想要清除的浮动之后添加一个看不见的“clearfix div”是非常有用的，但是在这里页脚也要用到。接下来我们要做的是，移除页脚样式规则中的 <code>clear: both;</code> 声明，取而代之将其放在 clearfix div 中：</p>
 
 <pre class="brush: css notranslate">.clearfix {
   clear: both;
 }</pre>
 
-<p>我们的页脚现在有一个很好的顶部外边距，但也有另一个问题——clearfix div 背景、内边距和边界与我们的列和页脚相同！为了解决这个问题，让我们先给每个列块一个类（ <code>class</code> ）<code>column</code>：</p>
+<p>我们的页脚现在有一个很好的顶部外边距，但也有另一个问题——clearfix div 背景、内边距和边界与我们的列和页脚相同！为了解决这个问题，让我们先给每个列块一个类（ <code>class</code> ）<code>column</code>：</p>
 
 <pre class="brush: html notranslate">&lt;div class="column"&gt;
   ...
 &lt;/div&gt;</pre>
 
-<p> 现在让我们改变应用盒子样式的规则到这些块和页脚，这样只有列块被样式化：</p>
+<p> 现在让我们改变应用盒子样式的规则到这些块和页脚，这样只有列块被样式化：</p>
 
 <pre class="brush: css notranslate">.column, footer {
   padding: 1%;
@@ -508,10 +508,10 @@ footer {
 <p>至此，修复问题大概就那样。</p>
 
 <div class="note">
-<p><strong>注：</strong> 查看在这个阶段最后一个解决的例子<a href="https://mdn.github.io/learning-area/css/css-layout/floats/4_fixed-layout-border-box.html">4_fixed-layout-border-box.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/4_fixed-layout-border-box.html">source code</a>)。</p>
+<p><strong>注：</strong> 查看在这个阶段最后一个解决的例子<a href="https://mdn.github.io/learning-area/css/css-layout/floats/4_fixed-layout-border-box.html">4_fixed-layout-border-box.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/4_fixed-layout-border-box.html">source code</a>)。</p>
 </div>
 
-<p>这里要注意的另一小点是，<a href="/en-US/docs/Web/CSS/box-sizing"><code>box-sizing</code></a> 出现可以追溯到 Internet Explorer 8——如果您明确需要支持较老的浏览器，您可能需要手动调整列的宽度，以允许内边距和边界宽度。这不是一种非常精确的技术，特别是考虑到你不能用百分比来确定边界——你只需要在尽可能充满父宽度的同时留出足够的空间。你可以看到这样的实战修复<code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/fixed-layout-adjusted-percentages.html">fixed-layout-adjusted-percentages.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/fixed-layout-adjusted-percentages.html">见源代码</a>)。</p>
+<p>这里要注意的另一小点是，<a href="/en-US/docs/Web/CSS/box-sizing"><code>box-sizing</code></a> 出现可以追溯到 Internet Explorer 8——如果您明确需要支持较老的浏览器，您可能需要手动调整列的宽度，以允许内边距和边界宽度。这不是一种非常精确的技术，特别是考虑到你不能用百分比来确定边界——你只需要在尽可能充满父宽度的同时留出足够的空间。你可以看到这样的实战修复<code><a href="https://mdn.github.io/learning-area/css/css-layout/floats/fixed-layout-adjusted-percentages.html">fixed-layout-adjusted-percentages.html</a></code> (<a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/fixed-layout-adjusted-percentages.html">见源代码</a>)。</p>
 
 <h3 id="浮动项目的背景高度">浮动项目的背景高度</h3>
 
@@ -532,7 +532,7 @@ footer {
 <ol>
  <li>将这些列的背景颜色设置为父元素的背景颜色，这样您就不会看到高度是不同的。这是目前最好的选择。</li>
  <li>将它们设置为固定的高度，并使内容滚动{{cssxref("overflow")}} (参见我们溢流部分的示例。)</li>
- <li>使用一种叫做伪列（faux columns）的技术——这包括将背景 (和边界) 从实际的列中提取出来，并在列的父元素上画一个伪造的背景，看起来像列的背景一样。不幸的是，这将无法处理列边界。 详见对于<a href="http://alistapart.com/article/fauxcolumns">伪列</a>和<a href="https://www.addedbytes.com/blog/code/faux-columns-for-liquid-layouts/">伪列流体布局</a>的教程。</li>
+ <li>使用一种叫做伪列（faux columns）的技术——这包括将背景 (和边界) 从实际的列中提取出来，并在列的父元素上画一个伪造的背景，看起来像列的背景一样。不幸的是，这将无法处理列边界。 详见对于<a href="http://alistapart.com/article/fauxcolumns">伪列</a>和<a href="https://www.addedbytes.com/blog/code/faux-columns-for-liquid-layouts/">伪列流体布局</a>的教程。</li>
 </ol>
 
 <h3 id="清除浮动会变复杂">清除浮动会变复杂</h3>

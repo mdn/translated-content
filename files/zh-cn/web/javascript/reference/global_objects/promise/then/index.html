@@ -34,9 +34,9 @@ p.then(value =&gt; {
 
 <dl>
  <dt><code>onFulfilled</code> {{optional_inline}}</dt>
- <dd>当 Promise 变成接受状态（fulfilled）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即接受的最终结果（the fulfillment  value）。如果该参数不是函数，则会在内部被替换为 <code>(x) =&gt; x</code>，即原样返回 promise 最终结果的函数</dd>
+ <dd>当 Promise 变成接受状态（fulfilled）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即接受的最终结果（the fulfillment  value）。如果该参数不是函数，则会在内部被替换为 <code>(x) =&gt; x</code>，即原样返回 promise 最终结果的函数</dd>
  <dt><code>onRejected</code> {{optional_inline}}</dt>
- <dd>当 Promise 变成拒绝状态（rejected）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即拒绝的原因（<code>rejection reason</code>）。  如果该参数不是函数，则会在内部被替换为一个 "Thrower" 函数 (it throws an error it received as argument)。</dd>
+ <dd>当 Promise 变成拒绝状态（rejected）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即拒绝的原因（<code>rejection reason</code>）。  如果该参数不是函数，则会在内部被替换为一个 "Thrower" 函数 (it throws an error it received as argument)。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -78,7 +78,7 @@ setTimeout(() =&gt; {
 
 <h2 id="描述">描述</h2>
 
-<p>由于 <code>then</code> 和 {{jsxref("Promise.prototype.catch()")}} 方法都会返回 promise，它们可以被<a href="/zh-CN/docs/Web/JavaScript/Guide/Using_promises#Chaining">链式调用</a>——这同时也是一种被称为<strong>复合</strong>（ <em>composition） </em>的操作。</p>
+<p>由于 <code>then</code> 和 {{jsxref("Promise.prototype.catch()")}} 方法都会返回 promise，它们可以被<a href="/zh-CN/docs/Web/JavaScript/Guide/Using_promises#Chaining">链式调用</a>——这同时也是一种被称为<strong>复合</strong>（ <em>composition） </em>的操作。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -99,7 +99,7 @@ p1.then(value =&gt; {
 
 <h3 id="链式调用">链式调用</h3>
 
-<p><code>then</code> 方法返回一个 <code>Promise</code> 对象，其允许方法链。</p>
+<p><code>then</code> 方法返回一个 <code>Promise</code> 对象，其允许方法链。</p>
 
 <p>你可以传递一个匿名函数给 <code>then</code>，并且，如果它返回一个 <code>Promise</code>，一个等价的 <code>Promise</code> 将暴露给后续的方法链。下面的代码片段使用 <code>setTimout</code> 函数来模拟异步代码操作。</p>
 
@@ -245,7 +245,7 @@ p3.then(function(v) {
 });
 </pre>
 
-<h3 id="基于_promise_的_domxrefwindow.setImmediate_polyfill">基于 promise 的 {{domxref("window.setImmediate")}} polyfill</h3>
+<h3 id="基于_promise_的_domxrefwindow.setImmediate_polyfill">基于 promise 的 {{domxref("window.setImmediate")}} polyfill</h3>
 
 <p>Using a {{jsxref("Function.prototype.bind()")}} <code>Reflect.apply</code> ({{jsxref("Reflect.apply()")}}) method to create a (non-cancellable) setImmediate-style function.</p>
 

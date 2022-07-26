@@ -29,6 +29,30 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
  </tbody>
  <tbody>
   <tr>
+   <td>
+    <code>[xyz]<br />[a-c]</code>
+   </td>
+   <td>
+    <p>一个字符类。匹配包含在方括号中的任何字符。你可以使用连字符指定字符范围，但如果连字符出现在方括号中的第一个或最后一个字符，则将其视为字面连字符，作为普通字符包含在字符类中。</p>
+    <p>例如，<code>[abcd]</code> 与 <code>[a-d]</code> 相同。它们匹配“brisket”中的“b”和“chop”中的“c”。</p>
+    <p>例如，<code>[abcd-]</code> 和 <code>[-abcd]</code> 匹配“brisket”中的“b”、“chop”中的“c”和“non-profit”中的“-”（连字符）。</p>
+    <p>例如，<code>[\w-]</code> 与 <code>[A-Za-z0-9_-]</code> 相同。它们都匹配“brisket”中的“b”、“chop”中的“c”和“non-profit”中的“n”。</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>
+     <code>[^xyz]<br />[^a-c]</code>
+    </p>
+   </td>
+   <td>
+    <p>一个否定或补充的字符类。也就是说，它匹配未包含在方括号中的任何字符。你可以使用连字符指定字符范围，但如果连字符出现在<code>^</code>后的第一个字符或方括号中的或最后一个字符，则将其视为字面连字符，作为普通字符包含在字符类中。例如，<code>[^abc]</code> 与 <code>[^a-c]</code> 相同。它们首先匹配“bacon”中的“o”和“chop”中的“h”。</p>
+    <div class="notecard note">
+     <p><strong>备注：</strong> ^ 字符也可以表示<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">输入的开始</a>。</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
    <td><code>.</code></td>
    <td>
     <p>有下列含义之一：</p>
@@ -143,6 +167,21 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
     </div>
    </td>
   </tr>
+  <tr>
+   <td>
+    <code><em>x</em>|<em>y</em></code>
+   </td>
+   <td>
+    <p>
+     <strong>析取：</strong>匹配“x”或“y”。每个由管道符 (<code>|</code>) 分隔的部分称为一个<em>可选项</em>。例如，<code>/green|red/</code> 匹配“green apple”中的“green”和“red apple”中的“red”。
+    </p>
+    <div class="notecard note">
+     <p>
+      <strong>备注：</strong> 析取是指定“一组选择”的另一种方式，但它不是字符类。析取不是原子的——你需要使用<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">组</a>使其成为一个更大的模式的一部分。<code>[abc]</code> 在功能上等同于 <code>(?:a|b|c)</code>。
+     </p>
+    </div>
+   </td>
+  </tr>
  </tbody>
 </table>
 
@@ -151,8 +190,8 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ### 寻找一系列数字
 
 ```js
-var randomData = "015 354 8787 687351 3512 8735";
-var regexpFourDigits = /\b\d{4}\b/g;
+const randomData = "015 354 8787 687351 3512 8735";
+const regexpFourDigits = /\b\d{4}\b/g;
 // \b 表示边界（即不要在单词中间开始匹配）
 // \d{4} 表示一个数字，四次
 // \b 表示另一个边界（即不要在单词中间结束匹配）
@@ -164,8 +203,8 @@ console.table(randomData.match(regexpFourDigits));
 ### 寻找以 A 开头的拉丁字母单词
 
 ```js
-var aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
-var regexpWordStartingWithA = /\b[aA]\w+/g;
+const aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
+const regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b 表示边界（即不要在单词中间开始匹配）
 // [aA] 表示字母 a 或 A
 // \w+ 表示任何*拉丁字母*字符，多次
@@ -179,12 +218,22 @@ console.table(aliceExcerpt.match(regexpWordStartingWithA));
 代替拉丁字母，我们可以使用一系列 Unicode 字符来识别一个单词（从而能够处理其他语言的文本，如中文、俄语或阿拉伯语）。Unicode 的“基本多文种平面（Basic Multilingual Plane）”包含世界各地使用的大部分字符，我们可以使用字符类和范围来匹配用这些字符编写的单词。
 
 ```js
-var nonEnglishText = "爱丽丝 梦游 仙境";
-var regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
+const nonEnglishText = "爱丽丝 梦游 仙境";
+const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // 基本多文种平面范围是 U+0000 到 U+FFFF 但空格是 U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
 [ '爱丽丝', '梦游', '仙境' ]
+```
+
+### 计算元音个数
+
+```js
+const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+const regexpVowels = /[AEIOUYaeiouy]/g;
+
+console.log("元音数：", aliceExcerpt.match(regexpVowels).length);
+// 元音数：26
 ```
 
 ## 参见
@@ -194,7 +243,7 @@ console.table(nonEnglishText.match(regexpBMPWord));
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
   - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [组和后向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
 
 - [`RegExp()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [CharacterClass in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass)

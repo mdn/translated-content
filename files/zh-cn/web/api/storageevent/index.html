@@ -7,9 +7,9 @@ translation_of: Web/API/StorageEvent
 ---
 <p>{{APIRef("Web Storage API")}}</p>
 
-<p>当前页面使用的 storage 被其他页面修改时会触发 StorageEvent 事件. </p>
+<p>当前页面使用的 storage 被其他页面修改时会触发 StorageEvent 事件. </p>
 
-<p>[译者：事件在同一个域下的不同页面之间触发，即在 A 页面注册了 storge 的监听处理，只有在跟 A 同域名下的 B 页面操作 storage 对象，A 页面才会被触发 storage 事件] </p>
+<p>[译者：事件在同一个域下的不同页面之间触发，即在 A 页面注册了 storge 的监听处理，只有在跟 A 同域名下的 B 页面操作 storage 对象，A 页面才会被触发 storage 事件] </p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -42,18 +42,18 @@ translation_of: Web/API/StorageEvent
   </tr>
   <tr>
    <td><code>key</code></td>
-   <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
+   <td><code><a href="/en/DOMString">DOMString</a></code></td>
    <td>该属性代表被修改的键值。当被 clear() 方法清除之后该属性值为 null。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>newValue</code></td>
-   <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
+   <td><code><a href="/en/DOMString">DOMString</a></code></td>
    <td>该属性代表修改后的新值。当被 clear() 方法清理后或者该键值对被移除，<code>newValue</code> 的值为 <code>null</code> 。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>oldValue</code></td>
-   <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
-   <td>该属性代表修改前的原值。在设置新键值对时由于没有原始值，该属性值为 <code>null</code>。<strong>（只读）</strong></td>
+   <td><code><a href="/en/DOMString">DOMString</a></code></td>
+   <td>该属性代表修改前的原值。在设置新键值对时由于没有原始值，该属性值为 <code>null</code>。<strong>（只读）</strong></td>
   </tr>
   <tr>
    <td><code>storageArea</code></td>
@@ -62,7 +62,7 @@ translation_of: Web/API/StorageEvent
   </tr>
   <tr>
    <td><code>url</code></td>
-   <td><code><a href="/en/DOMString" title="en/DOMString">DOMString</a></code></td>
+   <td><code><a href="/en/DOMString">DOMString</a></code></td>
    <td>
     <p>key 发生改变的对象所在文档的 URL 地址。<strong>（只读）</strong></p>
    </td>
@@ -114,5 +114,5 @@ translation_of: Web/API/StorageEvent
 <h2 id="See_also">参阅</h2>
 
 <ul>
- <li><a class="external" href="http://dev.w3.org/html5/webstorage/#the-storage-event" title="http://dev.w3.org/html5/webstorage/#the-storage-event">Specification</a></li>
+ <li><a href="http://dev.w3.org/html5/webstorage/#the-storage-event">Specification</a></li>
 </ul>

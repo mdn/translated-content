@@ -10,7 +10,7 @@ translation_of: Web/API/Animation/playState
 ---
 <p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
 
-<p>作为一个 <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> 的属性，<code><strong>Animation</strong></code><strong><code>.playState </code></strong><code>能够返回并设置一个可枚举值来描述一个动画的回放状态。</code></p>
+<p>作为一个 <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> 的属性，<code><strong>Animation</strong></code><strong><code>.playState </code></strong><code>能够返回并设置一个可枚举值来描述一个动画的回放状态。</code></p>
 
 <div class="note">
 <p>这个属性只对 CSS Animations 和 Transitions 可读。</p>
@@ -45,22 +45,22 @@ translation_of: Web/API/Animation/playState
 <pre class="brush: js">// 创建泪珠动画
 
 tears.forEach(function(el) {
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // 获取每一滴随机泪珠
-      duration: getRandomMsRange(2000, 6000), // 获取每一滴随机泪珠
-      iterations: Infinity,
-      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
-    });
-  el.playState = 'paused';
+  el.animate(
+    tearsFalling,
+    {
+      delay: getRandomMsRange(-1000, 1000), // 获取每一滴随机泪珠
+      duration: getRandomMsRange(2000, 6000), // 获取每一滴随机泪珠
+      iterations: Infinity,
+      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
+    });
+  el.playState = 'paused';
 });
 
 
 // 结尾需要现出时播放眼泪降落动画
 
 tears.forEach(function(el) {
-  el.playState = 'playing';
+  el.playState = 'playing';
 });
 
 
@@ -85,5 +85,5 @@ tears.forEach(function(el) {
 <ul>
  <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
  <li>{{domxref("Animation")}} 获取更多可用来控制网页动画的方法和属性</li>
- <li>{{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}}，这些方法可以设置一个动画的 <code>playState</code></li>
+ <li>{{domxref("Animation.play()")}}, {{domxref("Animation.pause()")}}, {{domxref("Animation.finish()")}}，这些方法可以设置一个动画的 <code>playState</code></li>
 </ul>

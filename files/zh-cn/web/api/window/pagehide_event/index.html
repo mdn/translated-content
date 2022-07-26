@@ -39,7 +39,7 @@ translation_of: Web/API/Window/pagehide_event
 
 <h2 id="例子">例子</h2>
 
-<p>在此示例中，建立了一个事件处理程序以监视 <code>pagehide </code>(页面隐藏) 事件，并在持久保存页面以进行可能的重用时执行特殊处理。</p>
+<p>在此示例中，建立了一个事件处理程序以监视 <code>pagehide </code>(页面隐藏) 事件，并在持久保存页面以进行可能的重用时执行特殊处理。</p>
 
 <pre class="brush: js notranslate">window.addEventListener("pagehide", event =&gt; {
   if (event.persisted) {
@@ -48,7 +48,7 @@ translation_of: Web/API/Window/pagehide_event
 }, false);
 </pre>
 
-<p>这也可以使用 {{domxref("Window")}} 上的 {{domxref("Window.onpagehide", "onpagehide")}} 事件处理程序属性来编写：</p>
+<p>这也可以使用 {{domxref("Window")}} 上的 {{domxref("Window.onpagehide", "onpagehide")}} 事件处理程序属性来编写：</p>
 
 <pre class="brush: js notranslate">window.onpagehide = event =&gt; {
   if (event.persisted) {

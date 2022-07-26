@@ -337,7 +337,7 @@
 /pt-BR/docs/JavaScript/Guide	/pt-BR/docs/Web/JavaScript/Guide
 /pt-BR/docs/JavaScript/Guide/About	/pt-BR/docs/Web/JavaScript/Guide/Introduction
 /pt-BR/docs/JavaScript/Guide/Closures	/pt-BR/docs/Web/JavaScript/Closures
-/pt-BR/docs/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto	/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/pt-BR/docs/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto	/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /pt-BR/docs/JavaScript/Guide/Expressions_and_Operators	/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /pt-BR/docs/JavaScript/Guide/Herança_Revisitada	/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /pt-BR/docs/JavaScript/Guide/Inheritance_Revisited	/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -571,8 +571,11 @@
 /pt-BR/docs/Web/API/GlobalEventHandlers/onchange	/pt-BR/docs/Web/API/HTMLElement/change_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onclick	/pt-BR/docs/conflicting/Web/API/Element/click_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/oncontextmenu	/pt-BR/docs/Web/API/Element/contextmenu_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onerror	/pt-BR/docs/Web/API/Window/error_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onfocus	/pt-BR/docs/Web/API/Window/focus_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onkeyup	/pt-BR/docs/conflicting/Web/API/Element/keyup_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onload	/pt-BR/docs/conflicting/Web/API/Window/load_event
+/pt-BR/docs/Web/API/GlobalEventHandlers/onlostpointercapture	/pt-BR/docs/Web/API/Element/lostpointercapture_event
 /pt-BR/docs/Web/API/GlobalEventHandlers/onscroll	/pt-BR/docs/Web/API/Element/scroll_event
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
@@ -788,7 +791,8 @@
 /pt-BR/docs/Web/JavaScript/Guide/About	/pt-BR/docs/Web/JavaScript/Guide/Introduction
 /pt-BR/docs/Web/JavaScript/Guide/Closures	/pt-BR/docs/Web/JavaScript/Closures
 /pt-BR/docs/Web/JavaScript/Guide/Declarações	/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/pt-BR/docs/Web/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto	/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
+/pt-BR/docs/Web/JavaScript/Guide/Detalhes_do_Modelo_do_Objeto	/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /pt-BR/docs/Web/JavaScript/Guide/Formatando_texto	/pt-BR/docs/Web/JavaScript/Guide/Text_formatting
 /pt-BR/docs/Web/JavaScript/Guide/Funções	/pt-BR/docs/Web/JavaScript/Guide/Functions
 /pt-BR/docs/Web/JavaScript/Guide/Inheritance_Revisited	/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -801,6 +805,7 @@
 /pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos	/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects
 /pt-BR/docs/Web/JavaScript/Guide/Usando_promises	/pt-BR/docs/Web/JavaScript/Guide/Using_promises
 /pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types
+/pt-BR/docs/Web/JavaScript/Language_Resources	/pt-BR/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /pt-BR/docs/Web/JavaScript/Outras_ferramentas_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Fata_parênteses_após_lista_argumento	/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list

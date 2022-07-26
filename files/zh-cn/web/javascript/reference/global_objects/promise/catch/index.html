@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
 <div>{{JSRef}}</div>
 
-<p><strong>catch()</strong> 方法返回一个<a href="/zh-CN/docs/Web/API/Promise">Promise</a>，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。(事实上，calling <code>obj.catch(onRejected)</code> 内部 calls <code>obj.then(undefined, onRejected)</code>).</p>
+<p><strong>catch()</strong> 方法返回一个<a href="/zh-CN/docs/Web/API/Promise">Promise</a>，并且处理拒绝的情况。它的行为与调用{{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} 相同。(事实上，calling <code>obj.catch(onRejected)</code> 内部 calls <code>obj.then(undefined, onRejected)</code>).</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -23,7 +23,7 @@ p.catch(function(reason) {
 
 <dl>
  <dt><strong>onRejected</strong></dt>
- <dd>当 Promise 被 rejected 时，被调用的一个{{jsxref("Function")}}。 该函数拥有一个参数：<code>reason</code>    rejection 的原因。如果 <code>onRejected</code> 抛出一个错误或返回一个本身失败的 Promise ，  通过 <code>catch()</code> 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。</dd>
+ <dd>当 Promise 被 rejected 时，被调用的一个{{jsxref("Function")}}。 该函数拥有一个参数：<code>reason</code>    rejection 的原因。如果 <code>onRejected</code> 抛出一个错误或返回一个本身失败的 Promise ，  通过 <code>catch()</code> 返回的 Promise 被 rejected；否则，它将显示为成功（resolved）。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -34,11 +34,11 @@ p.catch(function(reason) {
 
 <p><code>catch</code> 方法可以用于您的 promise 组合中的错误处理。</p>
 
-<p>Internally calls <code>Promise.prototype.then</code> on the object upon which is called, passing the parameters <code>undefined</code> and the <code>onRejected</code> handler received; then returns the value of that call (which is a {{jsxref("Promise")}}).</p>
+<p>Internally calls <code>Promise.prototype.then</code> on the object upon which is called, passing the parameters <code>undefined</code> and the <code>onRejected</code> handler received; then returns the value of that call (which is a {{jsxref("Promise")}}).</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用链式语句的_catch_方法">使用链式语句的 <code>catch</code> 方法</h3>
+<h3 id="使用链式语句的_catch_方法">使用链式语句的 <code>catch</code> 方法</h3>
 
 <pre class="brush: js"><code>var p1 = new Promise(function(resolve, reject) {
   resolve('Success');
@@ -135,7 +135,7 @@ p2.then(function (value) {
   <tr>
    <td>{{SpecName('ES6', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

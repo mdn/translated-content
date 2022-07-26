@@ -19,7 +19,7 @@ translation_of: Web/API/Credential_Management_API
 
 <h3 id="子域共享凭据（Subdomain-shared_credentials）">子域共享凭据（Subdomain-shared credentials）</h3>
 
-<p> </p>
+<p> </p>
 
 <p>规范的更高版本允许从不同的子域检索凭证。例如，存储在 login.example.com 中的密码可用于登录 www.example.com。要利用这一点，必须通过调用{{domxref("CredentialsContainer.store()")}}显式存储密码。这有时被称为公共后缀列表（PSL）匹配;但是规范仅建议使用 PSL 来确定凭证的有效范围。它 (子域共享凭据) 不需要它。因此浏览器的实现可能会有所不同。</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/Credential_Management_API
  <dt>{{domxref("CredentialsContainer")}}</dt>
  <dd>公开请求凭据的方法，并在发生令人关注的事件（如成功登录或注销）时通知用户代理。可以从<code>Navigator.credentials</code>访问此接口。</dd>
  <dt>{{domxref("FederatedCredential")}}</dt>
- <dd>提供关于联合身份提供程序的凭据的信息，联合身份提供程序是网站信任的实体，可以正确地对用户进行身份验证，并为此提供 API。 <a href="http://openid.net/developers/specs/">OpenID Connect</a> 就是这种框架的一个例子。</dd>
+ <dd>提供关于联合身份提供程序的凭据的信息，联合身份提供程序是网站信任的实体，可以正确地对用户进行身份验证，并为此提供 API。 <a href="http://openid.net/developers/specs/">OpenID Connect</a> 就是这种框架的一个例子。</dd>
  <dt>{{domxref("PasswordCredential")}}</dt>
  <dd>提供有关用户名/密码对的信息。</dd>
  <dt>{{domxref("PublicKeyCredential")}}</dt>

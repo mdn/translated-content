@@ -14,13 +14,13 @@ translation_of: Web/API/Performance_API
 
 <h2 id="DOMHighResTimeStamp">DOMHighResTimeStamp</h2>
 
-<p>{{domxref("DOMHighResTimeStamp")}}类型，顾名思义，表示高采样率的时间戳。 此类型是 <code>double</code> ，由性能接口使用。 该值可以是离散时间戳，也可以是两个离散时间戳之间的时间间隔。</p>
+<p>{{domxref("DOMHighResTimeStamp")}}类型，顾名思义，表示高采样率的时间戳。 此类型是 <code>double</code> ，由性能接口使用。 该值可以是离散时间戳，也可以是两个离散时间戳之间的时间间隔。</p>
 
 <p><code>DOMHighResTimeStamp</code> 的单位是毫秒，应精确到 5 µs（微秒）。 但是，如果浏览器无法提供精确到 5 微秒的时间数值（例如由于硬件或软件限制），则浏览器可以将该值表示为精确到毫秒的时间（以毫秒为单位）。</p>
 
 <h2 id="方法">方法</h2>
 
-<p><code>{{domxref("Performance")}}</code> 接口具有两个方法。</p>
+<p><code>{{domxref("Performance")}}</code> 接口具有两个方法。</p>
 
 <p>{{domxref("Performance.now","now()")}} 方法返回一个{{domxref("DOMHighResTimeStamp")}}，其值取决于{{domxref("PerformanceTiming.navigationStart","navigation start")}}和作用域。如果作用域是 window，则值是创建浏览器上下文的时间；如果作用域是{{domxref("Worker","worker")}}，则值是创建 worker 的时间。</p>
 

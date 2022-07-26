@@ -8,13 +8,13 @@ original_slug: learn/Server-side/Django/管理站点
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</div>
 
-<p>好了，我们已经为本地图书馆网站 <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 创建了模型，我们接下来使用 Django 管理站点去添加 一些“真“书数据。首先我们展示如何用管理站点注册模型，然后展示如何登录和创建一些数据。本文最后，我们介绍你可以进一步改进管理站点的建议。</p>
+<p>好了，我们已经为本地图书馆网站 <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 创建了模型，我们接下来使用 Django 管理站点去添加 一些“真“书数据。首先我们展示如何用管理站点注册模型，然后展示如何登录和创建一些数据。本文最后，我们介绍你可以进一步改进管理站点的建议。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">前提：</th>
-   <td>完成: <a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: 使用模型</a>。</td>
+   <td>完成: <a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: 使用模型</a>。</td>
   </tr>
   <tr>
    <th scope="row">目的：</th>
@@ -29,7 +29,7 @@ original_slug: learn/Server-side/Django/管理站点
 
 <p>Django 管理应用程序可以使用您的模型自动构建可用于创建，查看，更新和删除记录的站点区域。这可以在开发过程中节省大量的时间，从而很容易测试您的模型，并了解您是否拥有正确的数据。根据网站的类型，管理应用程序也可用于管理生产中的数据。Django 项目建议仅用于内部数据管理（即仅供管理员或组织内部人员使用），因为以模型为中心的方法不一定是所有用户最好的界面，并且暴露了大量不必要的细节关于模型。</p>
 
-<p><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">创建基础项目时，</a>自动完成所有将您的网站中的管理应用程序包含在内的配置文件（有关所需实际依赖关系的信息  (如有需要请看 <a href="https://docs.djangoproject.com/en/1.10/ref/contrib/admin/">Django docs here</a>). 其结果是，你必须做你的模型添加到管理应用程序是  注册  他们。在本文末尾，我们将简要介绍如何进一步配置管理区域以更好地显示我们的模型数据。</p>
+<p><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">创建基础项目时，</a>自动完成所有将您的网站中的管理应用程序包含在内的配置文件（有关所需实际依赖关系的信息  (如有需要请看 <a href="https://docs.djangoproject.com/en/1.10/ref/contrib/admin/">Django docs here</a>). 其结果是，你必须做你的模型添加到管理应用程序是  注册  他们。在本文末尾，我们将简要介绍如何进一步配置管理区域以更好地显示我们的模型数据。</p>
 
 <p>注册模型后，我们将展示如何创建一个新的“超级用户”，登录到该网站，并创建一些书籍，作者，书籍实例和流派。这些将有助于测试我们将在下一个教程中开始创建的视图和模板。</p>
 
@@ -72,7 +72,7 @@ admin.site.register(BookInstance)
 
 <h2 id="登入并使用该网站">登入并使用该网站</h2>
 
-<p>登录网站，打开 <code>/admin</code> (e.g. <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin</a>)<br>
+<p>登录网站，打开 <code>/admin</code> (e.g. <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin</a>)<br>
  和进入你的新超级用户名和密码凭据（你将被重定向到 登录页面，然后在你进入你的详细信息后回到 <code>/admin</code> URL</p>
 
 <p>这部分网站展示我们所有的模型，按安装的应用程序分组。你可以点击模型名称来进入到 它所有相关详细记录的页面，你可以进一步点击这些记录进行编辑。你也可以直接点击每个模型旁边的添加链接，开始创建该类型的记录。</p>
@@ -93,15 +93,15 @@ admin.site.register(BookInstance)
 
 <p><img alt="Admin Site - List of book objects" src="admin_book_list.png"></p>
 
-<p>从该列表中，您可以通过选中不需要的图书旁边的复选框来删除图书，从“操作”下拉列表中选择“删除”操作  ，然后按 Go 按钮。您也可以通过按下 ADD BOOK 按钮添加新书。</p>
+<p>从该列表中，您可以通过选中不需要的图书旁边的复选框来删除图书，从“操作”下拉列表中选择“删除”操作  ，然后按 Go 按钮。您也可以通过按下 ADD BOOK 按钮添加新书。</p>
 
-<p>您可以通过在链接中选择其名称来编辑书籍。一本书的编辑页面如下所示，与“添加”页面几乎相同。主要的区别是页面标题（更改书）和添加  删除，历史和<code>VIEW ON SITE</code>按钮（最后一个按钮出现，因为我们定义了<code>get_absolute_url()</code>我们的模型中的  方法）。</p>
+<p>您可以通过在链接中选择其名称来编辑书籍。一本书的编辑页面如下所示，与“添加”页面几乎相同。主要的区别是页面标题（更改书）和添加  删除，历史和<code>VIEW ON SITE</code>按钮（最后一个按钮出现，因为我们定义了<code>get_absolute_url()</code>我们的模型中的  方法）。</p>
 
 <p><img alt="Admin Site - Book Edit" src="admin_book_modify.png"></p>
 
-<p>现在回到主页（使用主页链接的导航痕迹），然后查看作者  和类型  列表 - 您应该已经有很多创建从添加新书，但可以自由添加一些更多。</p>
+<p>现在回到主页（使用主页链接的导航痕迹），然后查看作者  和类型  列表 - 您应该已经有很多创建从添加新书，但可以自由添加一些更多。</p>
 
-<p>你不会有任何书籍实例，因为这些不是从图书创建的（虽然你可以从 <strong>BookInstance</strong> - 创建一个书  - 这是 ForeignKey 字段的性质）。返回主页，然后按关联的添加按钮显示下面的添加书实例屏幕。请注意，全球唯一的 ID，可用于单独标识库中单书的副本。</p>
+<p>你不会有任何书籍实例，因为这些不是从图书创建的（虽然你可以从 <strong>BookInstance</strong> - 创建一个书  - 这是 ForeignKey 字段的性质）。返回主页，然后按关联的添加按钮显示下面的添加书实例屏幕。请注意，全球唯一的 ID，可用于单独标识库中单书的副本。</p>
 
 <p><img alt="Admin Site - BookInstance Add" src="admin_bookinstance_add.png"></p>
 
@@ -209,7 +209,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>将以下代码添加到 Book 模型（<strong>models.py</strong>）中。这将从 genre 字段的前三个值（如果存在）创建一个字符串，并创建一个<code>short_description</code>可以在此方法的管理站点中使用的字符串。</p>
 
-<pre class="brush: python">    def display_genre(self):
+<pre class="brush: python">    def display_genre(self):
         """
         Creates a string for the Genre. This is required to display genre in Admin.
         """
@@ -229,7 +229,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <h3 id="添加列表过滤器">添加列表过滤器</h3>
 
-<p>一旦列表中有很多项目，就可以过滤哪些项目被显示出来。这是通过在<code>list_filter</code>属性中列出字段来完成的。用<code>BookInstanceAdmin</code>下面的代码片段替换你当前的  类。</p>
+<p>一旦列表中有很多项目，就可以过滤哪些项目被显示出来。这是通过在<code>list_filter</code>属性中列出字段来完成的。用<code>BookInstanceAdmin</code>下面的代码片段替换你当前的  类。</p>
 
 <pre class="brush: python">class BookInstanceAdmin(admin.ModelAdmin):
 <strong>    list_filter = ('status', 'due_back')</strong>
@@ -249,7 +249,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <h4 id="控制哪些字段被显示和布局">控制哪些字段被显示和布局</h4>
 
-<p>更新您的  <code>AuthorAdmin</code> 类以添加<code>fields</code>行，如下所示（粗体）：</p>
+<p>更新您的  <code>AuthorAdmin</code> 类以添加<code>fields</code>行，如下所示（粗体）：</p>
 
 <pre class="brush: python">class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
@@ -270,7 +270,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>你可以使用 <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets">fieldsets</a> 属性添加“部分”以在详细信息表单中对相关的模型信息进行分组。</p>
 
-<p>在  <code>BookInstance</code>模型中，我们有相关的书是什么（即信息  <code>name，imprint和id</code>），并且当将可用（<code>status，due_back</code>）。我们可以通过将粗体文本添加到我们的<code>BookInstanceAdmin</code>类中来将其添加到不同的部分  。</p>
+<p>在  <code>BookInstance</code>模型中，我们有相关的书是什么（即信息  <code>name，imprint和id</code>），并且当将可用（<code>status，due_back</code>）。我们可以通过将粗体文本添加到我们的<code>BookInstanceAdmin</code>类中来将其添加到不同的部分  。</p>
 
 <pre class="brush: python">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
@@ -298,19 +298,19 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>你可以通过声明 <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, 类型 <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (水平布局 ) or <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (垂直布局，就像默认布局) 这样做。您可以通过在您的以下的粗体中添加以下行，将内容中的<code>BookInstance</code>信息添加到我们的 Book 详细信息中<code>BookAdmin</code>：</p>
 
 <pre class="brush: python"><strong>class BooksInstanceInline(admin.TabularInline):
-    model = BookInstance</strong>
+    model = BookInstance</strong>
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'display_genre')
-<strong>    inlines = [BooksInstanceInline]</strong>
+    list_display = ('title', 'author', 'display_genre')
+<strong>    inlines = [BooksInstanceInline]</strong>
 </pre>
 
 <p>尝试重新启动您的应用程序，然后查看图书的视图 - 在底部您应该看到与本书相关的图书实例：</p>
 
 <p><img alt="Admin Site - Book with Inlines" src="admin_improved_book_detail_inlines.png"></p>
 
-<p>在这种情况下，我们所做的就是声明我们的<code>tablular</code>内联类，它只是从内联模型添加所有字段。您可以为布局指定各种附加信息，包括要显示的字段，其顺序，是否只读等。（有关详细信息，请参阅  <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> ). </p>
+<p>在这种情况下，我们所做的就是声明我们的<code>tablular</code>内联类，它只是从内联模型添加所有字段。您可以为布局指定各种附加信息，包括要显示的字段，其顺序，是否只读等。（有关详细信息，请参阅  <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> ). </p>
 
 <div class="note">
 <p>注意：这个功能有一些痛苦的限制！在上面的屏幕截图中，我们有三个现有的书籍实例，其次是新的书籍实例的三个占位符（看起来非常相似！）。默认情况下没有备用书实例会更好，只需使用“添加另一个书”实例链接添加它们，或者可以<code>BookInstance</code>从这里列出作为不可读的链接。第一个选项可以通过<code>extra</code>在<code>BookInstanceInline</code>模型中将属性设置为 0 来完成，自己尝试一下。</p>
@@ -320,7 +320,7 @@ class BookAdmin(admin.ModelAdmin):
 
 <p>我们在本节学到了很多东西，所以现在是时候尝试一些事情了。</p>
 
-<p>1. 对于  <code>BookInstance</code>列表视图，添加代码以显示书籍，状态，到期日期和 ID（而不是默认<code>__str__()</code>文本）。<br>
+<p>1. 对于  <code>BookInstance</code>列表视图，添加代码以显示书籍，状态，到期日期和 ID（而不是默认<code>__str__()</code>文本）。<br>
  2. 添加的在线上市 Book 项目的 Author 使用，因为我们做了同样的做法详细视图<code>Book/ BookInstance。</code></p>
 
 <h2 id="概要">概要</h2>
@@ -333,8 +333,8 @@ class BookAdmin(admin.ModelAdmin):
 <h2 id="进阶阅读">进阶阅读</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/1.10/intro/tutorial02/#introducing-the-django-admin">Writing your first Django app, part 2: Introducing the Django Admin</a>  (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/1.10/ref/contrib/admin/">The Django Admin site</a> (Django Docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/intro/tutorial02/#introducing-the-django-admin">Writing your first Django app, part 2: Introducing the Django Admin</a>  (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/1.10/ref/contrib/admin/">The Django Admin site</a> (Django Docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</p>

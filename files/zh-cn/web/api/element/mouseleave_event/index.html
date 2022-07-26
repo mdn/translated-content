@@ -7,7 +7,7 @@ translation_of: Web/API/Element/mouseleave_event
 
 <p>指点设备（通常是鼠标）的指针移出某个元素时，会触发<code>mouseleave</code>事件。</p>
 
-<p><code>mouseleave</code>  和 {{event('mouseout')}} 是相似的，但是两者的不同在于<code>mouseleave</code> 不会冒泡而<code>mouseout</code> 会冒泡。<br>
+<p><code>mouseleave</code>  和 {{event('mouseout')}} 是相似的，但是两者的不同在于<code>mouseleave</code> 不会冒泡而<code>mouseout</code> 会冒泡。<br>
  这意味着当指针离开元素及其所有后代时，会触发<code>mouseleave</code>，而当指针离开元素或离开元素的后代（即使指针仍在元素内）时，会触发<code>mouseout</code>。</p>
 
 <table class="standard" style="border: solid 1px;">
@@ -23,7 +23,7 @@ translation_of: Web/API/Element/mouseleave_event
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>
 
 <h2 id="一般信息">一般信息</h2>
 
@@ -91,7 +91,7 @@ translation_of: Web/API/Element/mouseleave_event
   <tr>
    <td><code>relatedTarget</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td><code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件：互补事件的目标 (详情查看<a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">relatedTarget</a>)。</td>
+   <td><code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件：互补事件的目标 (详情查看<a href="/en-US/docs/Web/API/MouseEvent/relatedTarget">relatedTarget</a>)。</td>
   </tr>
   <tr>
    <td><code>screenX</code> {{readonlyInline}}</td>
@@ -159,7 +159,7 @@ translation_of: Web/API/Element/mouseleave_event
 
 <p>以下示例说明了如何使用<code>mouseout</code>来模拟<code>mouseleave</code>事件的事件委托原则。</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: html">&lt;ul id="test"&gt;
   &lt;li&gt;

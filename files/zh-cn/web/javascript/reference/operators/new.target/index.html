@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<div><strong><code>new.target</code></strong>属性允许你检测函数或构造方法是否是通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>运算符被调用的。在通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>运算符被初始化的函数或构造方法中，<code>new.target</code>返回一个指向构造方法或函数的引用。在普通的函数调用中，<code>new.target</code> 的值是{{jsxref("undefined")}}。</div>
+<div><strong><code>new.target</code></strong>属性允许你检测函数或构造方法是否是通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>运算符被调用的。在通过<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a>运算符被初始化的函数或构造方法中，<code>new.target</code>返回一个指向构造方法或函数的引用。在普通的函数调用中，<code>new.target</code> 的值是{{jsxref("undefined")}}。</div>
 
 <h2 id="语法">语法</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Operators/new.target
 
 <p><code>new.target</code>语法由一个关键字"<code>new</code>"，一个点，和一个属性名"<code>target</code>"组成。通常"<code>new.</code>"<code>的</code>作用是提供属性访问的上下文，但这里"<code>new.</code>"其实不是一个真正的对象。不过在构造方法调用中，<code>new.target</code>指向被<code>new</code>调用的构造函数，所以"<code>new.</code>"成为了一个虚拟上下文。</p>
 
-<p><code>new.target</code>属性适用于所有函数访问的元属性。在  <a href="http://www.javascripttutorial.net/es6/javascript-arrow-function/">arrow functions</a> 中，<code>new.target</code> 指向最近的外层函数的<code>new.target</code>（An arrow function expression does not have its own this, arguments, super , or new.target) 。</p>
+<p><code>new.target</code>属性适用于所有函数访问的元属性。在  <a href="http://www.javascripttutorial.net/es6/javascript-arrow-function/">arrow functions</a> 中，<code>new.target</code> 指向最近的外层函数的<code>new.target</code>（An arrow function expression does not have its own this, arguments, super , or new.target) 。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -78,7 +78,7 @@ var d = new D(); // logs class D extends C{constructor(){super();}}
   <tr>
    <td>{{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

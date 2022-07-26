@@ -47,10 +47,10 @@ translation_of: Web/API/RTCPeerConnection/setConfiguration
 <p>In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.</p>
 
 <pre class="brush: js notranslate">var restartConfig = { iceServers: [{
-                          urls: "turn:asia.myturnserver.net",
-                          username: "allie@oopcode.com",
-                          credential: "topsecretpassword"
-                      }]
+                          urls: "turn:asia.myturnserver.net",
+                          username: "allie@oopcode.com",
+                          credential: "topsecretpassword"
+                      }]
 };
 
 myPeerConnection.setConfiguration(restartConfig);

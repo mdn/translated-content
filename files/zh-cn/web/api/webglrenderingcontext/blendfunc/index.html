@@ -16,9 +16,9 @@ translation_of: Web/API/WebGLRenderingContext/blendFunc
 
 <dl>
  <dt><code>sfactor</code></dt>
- <dd> {{domxref("GLenum")}} 为源混合因子指定一个乘数。默认值是 <code>gl.ONE</code>. 有关可能的值，查看下面。</dd>
+ <dd> {{domxref("GLenum")}} 为源混合因子指定一个乘数。默认值是 <code>gl.ONE</code>. 有关可能的值，查看下面。</dd>
  <dt><code>dfactor</code></dt>
- <dd> {{domxref("GLenum")}} 为源目标合因子指定一个乘数。默认值是 <code>gl.ZERO</code>. 有关可能的值，查看下面。</dd>
+ <dd> {{domxref("GLenum")}} 为源目标合因子指定一个乘数。默认值是 <code>gl.ZERO</code>. 有关可能的值，查看下面。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -28,13 +28,13 @@ translation_of: Web/API/WebGLRenderingContext/blendFunc
 <h3 id="异常">异常</h3>
 
 <ul>
- <li>如果 <code><em>sfactor</em> 或</code> <code><em>dfactor</em> </code>不是列出的可能值一直，则抛出 <code>gl.INVALID_ENUM</code> 错误。</li>
+ <li>如果 <code><em>sfactor</em> 或</code> <code><em>dfactor</em> </code>不是列出的可能值一直，则抛出 <code>gl.INVALID_ENUM</code> 错误。</li>
  <li>如果使用恒定的颜色和恒定的 alpha 值作为源和目标因子，则抛出<code>gl.INVALID_ENUM</code> 错误。</li>
 </ul>
 
 <h2 id="常量">常量</h2>
 
-<p>下列常数可用于  <code><em>sfactor</em></code> 和<code><em>dfactor</em></code>.</p>
+<p>下列常数可用于  <code><em>sfactor</em></code> 和<code><em>dfactor</em></code>.</p>
 
 <p>混合颜色的公式可以这样描述: color(RGBA) = (sourceColor * <em>sfactor</em>) + (destinationColor * <em>dfactor</em>). RBGA 值在 0 到 1 之间。</p>
 

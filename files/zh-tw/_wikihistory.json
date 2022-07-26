@@ -5997,17 +5997,6 @@
       "Kaiyeh"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-12T19:38:25.366Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "jwhitlock",
-      "jackblackevo",
-      "teoli",
-      "steely.wing"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-10-12T06:55:01.538Z",
     "contributors": [
@@ -6167,15 +6156,6 @@
       "fscholz",
       "irvinfly",
       "chiayuan"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:36:06.284Z",
-    "contributors": [
-      "jackblackevo",
-      "fscholz",
-      "irvinfly",
-      "sailplaneTW"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -8131,6 +8111,26 @@
     "contributors": [
       "teoli",
       "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:38:25.366Z",
+    "contributors": [
+      "wbamberg",
+      "SphinxKnight",
+      "jwhitlock",
+      "jackblackevo",
+      "teoli",
+      "steely.wing"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:36:06.284Z",
+    "contributors": [
+      "jackblackevo",
+      "fscholz",
+      "irvinfly",
+      "sailplaneTW"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {

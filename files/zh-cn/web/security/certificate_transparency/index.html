@@ -12,7 +12,7 @@ original_slug: Web/HTTP/Public_Key_Pinning
 <p>HPKP 是首次使用信任（TOFU）技术。 Web 服务器第一次通过特殊的 HTTP 标头告诉客户端哪些公钥属于它，客户端会在给定的时间段内存储此信息。当客户端再次访问服务器时，它希望证书链中至少有一个证书包含一个公钥，其指纹已通过 HPKP 已知。如果服务器提供未知的公钥，则客户端应向用户发出警告。</p>
 </div>
 
-<p> </p>
+<p> </p>
 
 <p>Firefox 和 Chrome 禁用固定主机的引脚验证，其验证的证书链终止于用户定义的信任锚（而不是内置信任锚）。 这意味着对于导入自定义根证书的用户，将忽略所有固定违规。</p>
 
@@ -35,7 +35,7 @@ original_slug: Web/HTTP/Public_Key_Pinning
 </dl>
 
 <div class="note">
-<p><strong>注意</strong> ：当前规范要求包含第二个用于备份密钥的引脚，该引脚尚未在生产中使用。 这允许更改服务器的公钥，而不会破坏已经记下引脚的客户端的可访问性。 例如，当前一个密钥被泄露时，这很重要。</p>
+<p><strong>注意</strong> ：当前规范要求包含第二个用于备份密钥的引脚，该引脚尚未在生产中使用。 这允许更改服务器的公钥，而不会破坏已经记下引脚的客户端的可访问性。 例如，当前一个密钥被泄露时，这很重要。</p>
 </div>
 
 <h3 id="提取Base64编码的公钥信息">提取 Base64 编码的公钥信息</h3>
@@ -44,13 +44,13 @@ original_slug: Web/HTTP/Public_Key_Pinning
 <p><strong>注意：</strong>虽然下面的示例显示了如何在服务器证书上设置引脚，但建议将引脚放在颁发服务器证书的 CA 的中间证书上，以简化证书续订和轮换。</p>
 </div>
 
-<p> </p>
+<p> </p>
 
 <p>首先，您需要从证书或密钥文件中提取公钥信息，并使用 Base64 对其进行编码。</p>
 
 <p>以下命令将帮助您从密钥文件，证书签名请求或证书中提取 Base64 编码信息。</p>
 
-<p> </p>
+<p> </p>
 
 <pre>openssl rsa -in my-rsa-key-file.key -outform der -pubout | openssl dgst -sha256 -binary | openssl enc -base64</pre>
 
@@ -107,7 +107,7 @@ original_slug: Web/HTTP/Public_Key_Pinning
 
 <p>The following line with your relevant key information (pin-sha256="..." fields) will enable HPKP on lighttpd.</p>
 
-<pre>setenv.add-response-header  = ( "Public-Key-Pins" =&gt; "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")</pre>
+<pre>setenv.add-response-header  = ( "Public-Key-Pins" =&gt; "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")</pre>
 
 <p><strong>Note:</strong> This requires the <code>mod_setenv</code> server.module loaded which can be included by the following if not already loaded.</p>
 

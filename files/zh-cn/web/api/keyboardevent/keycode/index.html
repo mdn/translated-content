@@ -5,9 +5,9 @@ translation_of: Web/API/KeyboardEvent/keyCode
 ---
 <p>{{APIRef("DOM Events")}}{{deprecated_header()}}</p>
 
-<p>这个只读的属性 <strong><code>KeyboardEvent.keyCode</code></strong> 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的 ASCII ({{RFC(20)}}) 或 Windows 1252 码。如果这个键不能被标志，这个值为 0。</p>
+<p>这个只读的属性 <strong><code>KeyboardEvent.keyCode</code></strong> 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的 ASCII ({{RFC(20)}}) 或 Windows 1252 码。如果这个键不能被标志，这个值为 0。</p>
 
-<p>你应该尽量避免使用它；它已经被弃用了一段时间。相反的，如果它在你的浏览器中被实现了的话，你应该使用{{domxref("KeyboardEvent.code")}}。 不幸的是，有一些浏览器还是没有实现它，所以你在使用之前必须要小心，确认你所使用的那个被所有目标浏览器所支持。</p>
+<p>你应该尽量避免使用它；它已经被弃用了一段时间。相反的，如果它在你的浏览器中被实现了的话，你应该使用{{domxref("KeyboardEvent.code")}}。 不幸的是，有一些浏览器还是没有实现它，所以你在使用之前必须要小心，确认你所使用的那个被所有目标浏览器所支持。</p>
 
 <div class="note">
 <p>在处理 keydown 和 keyup 事件时，Web 开发人员不应使用可打印字符的 keycode 属性。如上所述，keycode 属性对可打印字符不有用，尤其是那些按下 shift 或 alt 键的输入。在实现快捷键处理程序时，事件（“keypress”）事件通常更好（至少当 gecko 是正在使用的运行时）。详情请参见 Gecko 按键事件。</p>
@@ -340,7 +340,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
    <th scope="row"><code>"KeyD"</code></th>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
-   <td colspan="3" rowspan="1"><code>0x44 (68) </code></td>
+   <td colspan="3" rowspan="1"><code>0x44 (68) </code></td>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
    <td colspan="3" rowspan="1"><code>0x44 (68)</code></td>
@@ -772,7 +772,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
    <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code></td>
    <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
    <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
-   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code>  *1</td>
+   <td style="background-color: rgb(255, 255, 204);"><code>0xBA (186)</code>  *1</td>
    <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
    <td colspan="1" rowspan="2"><code>0xDE (222)</code></td>
    <td colspan="1" rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x3A (58)</code></td>
@@ -976,7 +976,7 @@ translation_of: Web/API/KeyboardEvent/keyCode
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0x00 (0)</code></td>
    <td colspan="1" rowspan="2">*4</td>
    <td rowspan="2" style="background-color: rgb(255, 255, 204);"><code>0xDC (220)</code><br>
-     </td>
+     </td>
    <td colspan="1" rowspan="2">*4</td>
    <td rowspan="2"><code>0xBD (189)</code></td>
    <td rowspan="2"><code>0xBD (189)</code></td>
@@ -2843,27 +2843,27 @@ translation_of: Web/API/KeyboardEvent/keyCode
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_JISHO</code></td>
    <td style="white-space: nowrap;">0x92 (146)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Dictionary" key on Fujitsu OASYS.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Dictionary" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_MASSHOU</code></td>
    <td style="white-space: nowrap;">0x93 (147)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Unregister word" key on Fujitsu OASYS.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Unregister word" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_TOUROKU</code></td>
    <td style="white-space: nowrap;">0x94 (148)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Register word" key on Fujitsu OASYS.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Register word" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_LOYA</code></td>
    <td style="white-space: nowrap;">0x95 (149)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Left OYAYUBI" key on Fujitsu OASYS.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Left OYAYUBI" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FJ_ROYA</code></td>
    <td style="white-space: nowrap;">0x96 (150)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Right OYAYUBI" key on Fujitsu OASYS.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for "Right OYAYUBI" key on Fujitsu OASYS.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_CIRCUMFLEX</code></td>
@@ -3018,82 +3018,82 @@ translation_of: Web/API/KeyboardEvent/keyCode
   <tr>
    <td><code>DOM_VK_WIN_ICO_HELP</code></td>
    <td style="white-space: nowrap;">0xE3 (227)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_ICO_00</code></td>
    <td style="white-space: nowrap;">0xE4 (228)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_ICO_CLEAR</code></td>
    <td style="white-space: nowrap;">0xE6 (230)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This is (was?) used for Olivetti ICO keyboard.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_RESET</code></td>
    <td style="white-space: nowrap;">0xE9 (233)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_JUMP</code></td>
    <td style="white-space: nowrap;">0xEA (234)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_PA1</code></td>
    <td style="white-space: nowrap;">0xEB (235)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_PA2</code></td>
    <td style="white-space: nowrap;">0xEC (236)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_PA3</code></td>
    <td style="white-space: nowrap;">0xED (237)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_WSCTRL</code></td>
    <td style="white-space: nowrap;">0xEE (238)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_CUSEL</code></td>
    <td style="white-space: nowrap;">0xEF (239)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_ATTN</code></td>
    <td style="white-space: nowrap;">0xF0 (240)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_FINISH</code></td>
    <td style="white-space: nowrap;">0xF1 (241)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_COPY</code></td>
    <td style="white-space: nowrap;">0xF2 (242)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_AUTO</code></td>
    <td style="white-space: nowrap;">0xF3 (243)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_ENLW</code></td>
    <td style="white-space: nowrap;">0xF4 (244)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_WIN_OEM_BACKTAB</code></td>
    <td style="white-space: nowrap;">0xF5 (245)</td>
-   <td>An <a href="#OEM_specific_keys_on_Windows" title="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
+   <td>An <a href="#OEM_specific_keys_on_Windows">OEM specific key on Windows</a>. This was used for Nokia/Ericsson's device.</td>
   </tr>
   <tr>
    <td><code>DOM_VK_ATTN</code></td>

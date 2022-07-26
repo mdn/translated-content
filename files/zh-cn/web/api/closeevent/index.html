@@ -12,13 +12,13 @@ translation_of: Web/API/CloseEvent
 ---
 <p>{{APIRef("Websockets API")}}</p>
 
-<p><code>CloseEvent</code> 会在连接关闭时发送给使用 {{Glossary("WebSockets")}} 的客户端。它在 <code>WebSocket</code> <code>对象的</code> <code>onclose</code> 事件监听器中使用。</p>
+<p><code>CloseEvent</code> 会在连接关闭时发送给使用 {{Glossary("WebSockets")}} 的客户端。它在 <code>WebSocket</code> <code>对象的</code> <code>onclose</code> 事件监听器中使用。</p>
 
 <h2 id="构造器">构造器</h2>
 
 <dl>
  <dt>{{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}</dt>
- <dd>创建一个 <code>CloseEvent</code>.</dd>
+ <dd>创建一个 <code>CloseEvent</code>.</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
@@ -63,17 +63,17 @@ translation_of: Web/API/CloseEvent
    <tr>
     <td><code>1004</code></td>
     <td></td>
-    <td><strong>保留。</strong> 其意义可能会在未来定义。</td>
+    <td><strong>保留。</strong> 其意义可能会在未来定义。</td>
    </tr>
    <tr>
     <td><code>1005</code></td>
     <td><code>CLOSE_NO_STATUS</code></td>
-    <td><strong>保留。</strong>  表示没有收到预期的状态码。</td>
+    <td><strong>保留。</strong>  表示没有收到预期的状态码。</td>
    </tr>
    <tr>
     <td><code>1006</code></td>
     <td><code>CLOSE_ABNORMAL</code></td>
-    <td><strong>保留。</strong> 用于期望收到状态码时连接非正常关闭 (也就是说，没有发送关闭帧).</td>
+    <td><strong>保留。</strong> 用于期望收到状态码时连接非正常关闭 (也就是说，没有发送关闭帧).</td>
    </tr>
    <tr>
     <td><code>1007</code></td>
@@ -118,7 +118,7 @@ translation_of: Web/API/CloseEvent
    <tr>
     <td><code>1015</code></td>
     <td>TLS Handshake</td>
-    <td><strong>保留。</strong> 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书).</td>
+    <td><strong>保留。</strong> 表示连接由于无法完成 TLS 握手而关闭 (例如无法验证服务器证书).</td>
    </tr>
    <tr>
     <td><code>1016</code>–<code>1999</code></td>
@@ -144,7 +144,7 @@ translation_of: Web/API/CloseEvent
  </table>
  </dd>
  <dt>{{domxref("CloseEvent.reason")}} {{readOnlyInline}}</dt>
- <dd>返回一个 {{domxref("DOMString")}} 用以表示服务器关闭连接的原因。这是由服务器和子协议决定的。</dd>
+ <dd>返回一个 {{domxref("DOMString")}} 用以表示服务器关闭连接的原因。这是由服务器和子协议决定的。</dd>
  <dt>{{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}</dt>
  <dd>返回一个 {{jsxref("Boolean")}} 用以表示连接是否完全关闭。</dd>
 </dl>
@@ -155,7 +155,7 @@ translation_of: Web/API/CloseEvent
 
 <dl>
  <dt>{{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
- <dd>初始化创建的 <code>CloseEvent</code> 的值。如果该事件已经被处理，这个方法什么也不做。不要直接使用这个方法，使用 {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} ?构造器来代替。</dd>
+ <dd>初始化创建的 <code>CloseEvent</code> 的值。如果该事件已经被处理，这个方法什么也不做。不要直接使用这个方法，使用 {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} ?构造器来代替。</dd>
 </dl>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>

@@ -5,11 +5,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>[@@iterator]()</code></strong> 方法返回一个新的 Iterator 对象，它遍历字符串的代码点，返回每一个代码点的字符串值。</p>
+<p><strong><code>[@@iterator]()</code></strong> 方法返回一个新的 Iterator 对象，它遍历字符串的代码点，返回每一个代码点的字符串值。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/string-iterator.html")}}</p>
 
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -31,7 +31,7 @@ console.log(strIter.next().value); // "A"
 console.log(strIter.next().value); // "\uD835\uDC68"
 </pre>
 
-<h3 id="通过_for..of_使用_iterator">通过 <code>for..of</code> 使用 <code>[@@iterator]()</code></h3>
+<h3 id="通过_for..of_使用_iterator">通过 <code>for..of</code> 使用 <code>[@@iterator]()</code></h3>
 
 <pre class="brush:js">var string = 'A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A';
 

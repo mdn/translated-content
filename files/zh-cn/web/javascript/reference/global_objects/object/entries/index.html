@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Object.entries()</strong></code>方法返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 {{jsxref("Statements/for...in", "for...in")}} 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环还会枚举原型链中的属性）。</p>
+<p><code><strong>Object.entries()</strong></code>方法返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 {{jsxref("Statements/for...in", "for...in")}} 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环还会枚举原型链中的属性）。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}</div>
 
@@ -69,7 +69,7 @@ console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
 
 <h3 id="将Object转换为Map">将<code>Object</code>转换为<code>Map</code></h3>
 
-<p>{{jsxref("Map", "new Map()")}} 构造函数接受一个可迭代的<code>entries</code>。借助<code>Object.entries</code>方法你可以很容易的将{{jsxref("Object")}}转换为{{jsxref("Map")}}:</p>
+<p>{{jsxref("Map", "new Map()")}} 构造函数接受一个可迭代的<code>entries</code>。借助<code>Object.entries</code>方法你可以很容易的将{{jsxref("Object")}}转换为{{jsxref("Map")}}:</p>
 
 <pre class="brush: js">var obj = { foo: "bar", baz: 42 };
 var map = new Map(Object.entries(obj));
@@ -77,7 +77,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>要在较旧环境中添加兼容的<code>Object.entries</code>支持，你可以在 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 中找到 Object.entries 的示例（如果你不需要任何对 IE 的支持），在 <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> 资料库中的一个 polyfill，或者你可以使用下面列出的简易 polyfill。</p>
+<p>要在较旧环境中添加兼容的<code>Object.entries</code>支持，你可以在 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> 中找到 Object.entries 的示例（如果你不需要任何对 IE 的支持），在 <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> 资料库中的一个 polyfill，或者你可以使用下面列出的简易 polyfill。</p>
 
 <pre class="brush: js">if (!Object.entries)
   Object.entries = function( obj ){
@@ -90,7 +90,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }</pre>
     return resArray;
   };</pre>
 
-<p>对于上述 polyfill 代码片段，如果你需要 IE9 以下的支持，那么你还需要一个 Object.keys polyfill（如 {{jsxref("Object.keys")}}页面上的）。</p>
+<p>对于上述 polyfill 代码片段，如果你需要 IE9 以下的支持，那么你还需要一个 Object.keys polyfill（如 {{jsxref("Object.keys")}}页面上的）。</p>
 
 <h2 id="规范">规范</h2>
 

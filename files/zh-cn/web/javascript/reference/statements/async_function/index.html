@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 
 <h2 id="描述">描述</h2>
 
-<p>async 函数可能包含 0 个或者多个{{jsxref("Operators/await", "await")}}表达式。await 表达式会暂停整个 async 函数的执行进程并出让其控制权，只有当其等待的基于 promise 的异步操作被兑现或被拒绝之后才会恢复进程。promise 的解决值会被当作该 await 表达式的返回值。使用<code>async</code> / <code>await</code>关键字就可以在异步代码中使用普通的<code>try</code> / <code>catch</code>代码块。</p>
+<p>async 函数可能包含 0 个或者多个{{jsxref("Operators/await", "await")}}表达式。await 表达式会暂停整个 async 函数的执行进程并出让其控制权，只有当其等待的基于 promise 的异步操作被兑现或被拒绝之后才会恢复进程。promise 的解决值会被当作该 await 表达式的返回值。使用<code>async</code> / <code>await</code>关键字就可以在异步代码中使用普通的<code>try</code> / <code>catch</code>代码块。</p>
 
 <div class="note">
 <p><strong>备注：</strong><code>await</code>关键字只在 async 函数内有效。如果你在 async 函数体之外使用它，就会抛出语法错误 {{jsxref("SyntaxError")}} 。</p>
@@ -91,7 +91,7 @@ translation_of: Web/JavaScript/Reference/Statements/async_function
 <ol>
  <li><code>foo</code>函数的第一行将会同步执行，await 将会等待 promise 的结束。然后暂停通过<code>foo</code>的进程，并将控制权交还给调用<code>foo</code>的函数。</li>
  <li>一段时间后，当第一个 promise 完结的时候，控制权将重新回到 foo 函数内。示例中将会将<code>1</code>（promise 状态为 fulfilled）作为结果返回给 await 表达式的左边即<code>result1</code>。接下来函数会继续进行，到达第二个 await 区域，此时<code>foo</code>函数的进程将再次被暂停。</li>
- <li>一段时间后，同样当第二个 promise 完结的时候，<code>result2</code>将被赋值为<code>2</code>，之后函数将会正常同步执行，将默认返回<code>undefined</code> 。</li>
+ <li>一段时间后，同样当第二个 promise 完结的时候，<code>result2</code>将被赋值为<code>2</code>，之后函数将会正常同步执行，将默认返回<code>undefined</code> 。</li>
 </ol>
 
 <pre>async function <var>foo</var>() {
@@ -107,7 +107,7 @@ foo()</pre>
 <pre>async function <var>foo</var>() {
    const p1 = <var>new Promise((resolve) =&gt; setTimeout(() =&gt; resolve('1'), 1000))
 </var>   const p2 = <var>new Promise((_,reject) =&gt; setTimeout(() =&gt; reject('2'), 500))
-   const results = [await p1, await p2] // 不推荐使用这种方式，请使用 Promise.all 或者 Promise.allSettled </var>
+   const results = [await p1, await p2] // 不推荐使用这种方式，请使用 Promise.all 或者 Promise.allSettled </var>
 }
 foo().catch(() =&gt; {}) // 捕捉所有的错误...</pre>
 
@@ -118,69 +118,69 @@ foo().catch(() =&gt; {}) // 捕捉所有的错误...</pre>
 <h3 id="简单例子">简单例子</h3>
 
 <pre class="brush: js">var resolveAfter2Seconds = function() {
-  console.log("starting slow promise");
-  return new Promise(resolve =&gt; {
-    setTimeout(function() {
-      resolve("slow");
-      console.log("slow promise is done");
-    }, 2000);
-  });
+  console.log("starting slow promise");
+  return new Promise(resolve =&gt; {
+    setTimeout(function() {
+      resolve("slow");
+      console.log("slow promise is done");
+    }, 2000);
+  });
 };
 
 var resolveAfter1Second = function() {
-  console.log("starting fast promise");
-  return new Promise(resolve =&gt; {
-    setTimeout(function() {
-      resolve("fast");
-      console.log("fast promise is done");
-    }, 1000);
-  });
+  console.log("starting fast promise");
+  return new Promise(resolve =&gt; {
+    setTimeout(function() {
+      resolve("fast");
+      console.log("fast promise is done");
+    }, 1000);
+  });
 };
 
 var sequentialStart = async function() {
-  console.log('==SEQUENTIAL START==');
+  console.log('==SEQUENTIAL START==');
 
-  // 1. Execution gets here almost instantly
-  const slow = await resolveAfter2Seconds();
-  console.log(slow); // 2. this runs 2 seconds after 1.
+  // 1. Execution gets here almost instantly
+  const slow = await resolveAfter2Seconds();
+  console.log(slow); // 2. this runs 2 seconds after 1.
 
-  const fast = await resolveAfter1Second();
-  console.log(fast); // 3. this runs 3 seconds after 1.
+  const fast = await resolveAfter1Second();
+  console.log(fast); // 3. this runs 3 seconds after 1.
 }
 
 var concurrentStart = async function() {
-  console.log('==CONCURRENT START with await==');
-  const slow = resolveAfter2Seconds(); // starts timer immediately
-  const fast = resolveAfter1Second(); // starts timer immediately
+  console.log('==CONCURRENT START with await==');
+  const slow = resolveAfter2Seconds(); // starts timer immediately
+  const fast = resolveAfter1Second(); // starts timer immediately
 
-  // 1. Execution gets here almost instantly
-  console.log(await slow); // 2. this runs 2 seconds after 1.
-  console.log(await fast); // 3. this runs 2 seconds after 1., immediately after 2., since fast is already resolved
+  // 1. Execution gets here almost instantly
+  console.log(await slow); // 2. this runs 2 seconds after 1.
+  console.log(await fast); // 3. this runs 2 seconds after 1., immediately after 2., since fast is already resolved
 }
 
 var concurrentPromise = function() {
-  console.log('==CONCURRENT START with Promise.all==');
-  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) =&gt; {
-    console.log(messages[0]); // slow
-    console.log(messages[1]); // fast
-  });
+  console.log('==CONCURRENT START with Promise.all==');
+  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) =&gt; {
+    console.log(messages[0]); // slow
+    console.log(messages[1]); // fast
+  });
 }
 
 var parallel = async function() {
-  console.log('==PARALLEL with await Promise.all==');
+  console.log('==PARALLEL with await Promise.all==');
 
-  // Start 2 "jobs" in parallel and wait for both of them to complete
-  await Promise.all([
-      (async()=&gt;console.log(await resolveAfter2Seconds()))(),
-      (async()=&gt;console.log(await resolveAfter1Second()))()
-  ]);
+  // Start 2 "jobs" in parallel and wait for both of them to complete
+  await Promise.all([
+      (async()=&gt;console.log(await resolveAfter2Seconds()))(),
+      (async()=&gt;console.log(await resolveAfter1Second()))()
+  ]);
 }
 
 // This function does not handle errors. See warning below!
 var parallelPromise = function() {
-  console.log('==PARALLEL with Promise.then==');
-  resolveAfter2Seconds().then((message)=&gt;console.log(message));
-  resolveAfter1Second().then((message)=&gt;console.log(message));
+  console.log('==PARALLEL with Promise.then==');
+  resolveAfter2Seconds().then((message)=&gt;console.log(message));
+  resolveAfter1Second().then((message)=&gt;console.log(message));
 }
 
 sequentialStart(); // after 2 seconds, logs "slow", then after 1 more second, "fast"
@@ -200,12 +200,12 @@ setTimeout(parallelPromise, 13000); // same as parallel
 
 <div class="note">
 <p><strong>备注：</strong></p>
-<h4 id="await_and_parallelism并行"><code>await</code> and parallelism(并行)</h4>
+<h4 id="await_and_parallelism并行"><code>await</code> and parallelism(并行)</h4>
 
 <p>在<code>sequentialStart</code>中，程序在第一个<code>await</code>停留了 2 秒，然后又在第二个<code>await</code>停留了 1 秒。直到第一个计时器结束后，第二个计时器才被创建。程序需要 3 秒执行完毕。</p>
 
 <p><br>
- 在 <code>concurrentStart</code>中，两个计时器被同时创建，然后执行<code>await</code>。这两个计时器同时运行，这意味着程序完成运行只需要 2 秒，而不是 3 秒，即最慢的计时器的时间。</p>
+ 在 <code>concurrentStart</code>中，两个计时器被同时创建，然后执行<code>await</code>。这两个计时器同时运行，这意味着程序完成运行只需要 2 秒，而不是 3 秒，即最慢的计时器的时间。</p>
 
 <p>但是 <code>await </code>仍旧是顺序执行的，第二个 <code>await</code> 还是得等待第一个执行完。在这个例子中，这使得先运行结束的输出出现在最慢的输出之后。</p>
 
@@ -223,8 +223,8 @@ setTimeout(parallelPromise, 13000); // same as parallel
 <p>在 Promise 例子中这种情况同样会发生，该函数必须负责返回一个捕获函数完成的<code>Promise</code>。在<code>concurrentPromise</code>函数中，这意味着它从<code>Promise.all([]).then()</code>返回一个 Promise。事实上，在此示例的先前版本忘记了这样做！</p>
 
 <p>但是，async 函数仍有可能然可能错误地忽略错误。<br>
- 以<code>parallel</code> async 函数为例。 如果它没有等待<code>await</code>（或返回）<code>Promise.all([])</code>调用的结果，则不会传播任何错误。<br>
- 虽然<code>parallelPromise</code>函数示例看起来很简单，但它根本不会处理错误！ 这样做需要一个类似于<code>return </code><code>Promise.all([])</code>处理方式。</p>
+ 以<code>parallel</code> async 函数为例。 如果它没有等待<code>await</code>（或返回）<code>Promise.all([])</code>调用的结果，则不会传播任何错误。<br>
+ 虽然<code>parallelPromise</code>函数示例看起来很简单，但它根本不会处理错误！ 这样做需要一个类似于<code>return </code><code>Promise.all([])</code>处理方式。</p>
 </div>
 
 <h3 id="使用async函数重写_promise_链">使用 async 函数重写 promise 链</h3>

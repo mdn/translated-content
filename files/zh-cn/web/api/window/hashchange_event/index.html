@@ -39,13 +39,13 @@ translation_of: Web/API/Window/hashchange_event
 
 <h2 id="示例">示例</h2>
 
-<p>你可以在 {{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 <code>hashchange</code> 事件：</p>
+<p>你可以在 {{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 <code>hashchange</code> 事件：</p>
 
 <pre class="brush:js">window.addEventListener('hashchange', function() {
   console.log('The hash has changed!')
 }, false);</pre>
 
-<p>或使用 <code>onhashchange</code> 事件处理程序属性：</p>
+<p>或使用 <code>onhashchange</code> 事件处理程序属性：</p>
 
 <pre class="brush: js">function locationHashChanged() {
   if (location.hash === '#cool-feature') {

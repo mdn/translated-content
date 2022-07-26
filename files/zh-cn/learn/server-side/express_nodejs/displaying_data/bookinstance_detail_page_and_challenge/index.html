@@ -16,18 +16,18 @@ translation_of: >-
 <pre class="brush: js">// Display detail page for a specific BookInstance.
 exports.bookinstance_detail = function(req, res, next) {
 
-<strong>    BookInstance.findById(req.params.id)
-    .populate('book')
-    .exec(function (err, bookinstance) {
-      if (err) { return next(err); }
-      if (bookinstance==null) { // No results.
-          var err = new Error('Book copy not found');
-          err.status = 404;
-          return next(err);
-        }
-      // Successful, so render.
-      res.render('bookinstance_detail', { title: 'Book:', bookinstance:  bookinstance});
-    })</strong>
+<strong>    BookInstance.findById(req.params.id)
+    .populate('book')
+    .exec(function (err, bookinstance) {
+      if (err) { return next(err); }
+      if (bookinstance==null) { // No results.
+          var err = new Error('Book copy not found');
+          err.status = 404;
+          return next(err);
+        }
+      // Successful, so render.
+      res.render('bookinstance_detail', { title: 'Book:', bookinstance:  bookinstance});
+    })</strong>
 
 };
 </pre>
@@ -42,22 +42,22 @@ exports.bookinstance_detail = function(req, res, next) {
 
 block content
 
-<strong>  h1 ID: #{bookinstance._id}</strong>
+<strong>  h1 ID: #{bookinstance._id}</strong>
 
-  p #[strong Title:]
-    a(href=bookinstance.book.url) #{bookinstance.book.title}
-  p #[strong Imprint:] #{bookinstance.imprint}
+  p #[strong Title:]
+    a(href=bookinstance.book.url) #{bookinstance.book.title}
+  p #[strong Imprint:] #{bookinstance.imprint}
 
-  p #[strong Status:]
-    if bookinstance.status=='Available'
-      span.text-success #{bookinstance.status}
-    else if bookinstance.status=='Maintenance'
-      span.text-danger #{bookinstance.status}
-    else
-      span.text-warning #{bookinstance.status}
+  p #[strong Status:]
+    if bookinstance.status=='Available'
+      span.text-success #{bookinstance.status}
+    else if bookinstance.status=='Maintenance'
+      span.text-danger #{bookinstance.status}
+    else
+      span.text-warning #{bookinstance.status}
 
-  if bookinstance.status!='Available'
-    p #[strong Due back:] #{bookinstance.due_back}
+  if bookinstance.status!='Available'
+    p #[strong Due back:] #{bookinstance.due_back}
 </pre>
 
 <p>本模组中的所有东西，都在先前的章节演示过了。</p>

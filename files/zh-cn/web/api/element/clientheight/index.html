@@ -14,7 +14,7 @@ translation_of: Web/API/Element/clientHeight
 <div class="note">
 <p><strong>备注：</strong> 此属性会将获取的值四舍五入取整数。 如果你需要小数结果，请使用 {{ domxref("element.getBoundingClientRect()") }}.</p>
 
-<p>备注：上面的有问题 因为使用 element.getBoundingClientRect() 只能获取元素的 width / height，但是这个值是 offsetWidth / offsetHeight ，包括边框的长度，所以不能获取 clientWidth / clientHeight</p>
+<p>备注：上面的有问题 因为使用 element.getBoundingClientRect() 只能获取元素的 width / height，但是这个值是 offsetWidth / offsetHeight ，包括边框的长度，所以不能获取 clientWidth / clientHeight</p>
 </div>
 
 <h2 id=".E8.AF.AD.E6.B3.95.E5.92.8C.E5.80.BC">语法</h2>
@@ -22,7 +22,7 @@ translation_of: Web/API/Element/clientHeight
 <pre class="eval">var <var>h</var> = <var>element</var>.clientHeight;
 </pre>
 
-<p>返回整数 <code><var>h</var></code>，表示 <code><var>element</var></code> 的 <code>clientHeight</code>（单位像素）。</p>
+<p>返回整数 <code><var>h</var></code>，表示 <code><var>element</var></code> 的 <code>clientHeight</code>（单位像素）。</p>
 
 <p><code>clientHeight</code> 是只读的。</p>
 

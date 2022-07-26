@@ -30,7 +30,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 
 <p><img alt="The items are displayed in a column in reverse order starting at the bottom line." src="align11.png"></p>
 
-<p>请记住，起始行与写入模式有关。 上面两个示例说明了 <code>row</code> 和 <code>row-reverse</code> 在从左到右的语言是怎么工作的如英语。如果您使用的是右到左的语言，如阿拉伯语，则 <code>row</code> 的起始行将在右边， <code>row-reverse</code> 起始行会在左边。</p>
+<p>请记住，起始行与写入模式有关。 上面两个示例说明了 <code>row</code> 和 <code>row-reverse</code> 在从左到右的语言是怎么工作的如英语。如果您使用的是右到左的语言，如阿拉伯语，则 <code>row</code> 的起始行将在右边， <code>row-reverse</code> 起始行会在左边。</p>
 
 <p><img alt="Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left." src="order-rtl.png"></p>
 
@@ -58,7 +58,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 
 <p>与更改<code>flex-direction</code>的值不会更改项目导航到的顺序相同，更改此值不会更改绘制顺序。它仅是项目的视觉反转。</p>
 
-<h2 id="order_属性"><code>order</code> 属性</h2>
+<h2 id="order_属性"><code>order</code> 属性</h2>
 
 <p>除了颠倒显示弹性项目的顺序之外，您还可以使用{{cssxref("order")}} 属性指定单个项目并更改其在视觉顺序中的显示位置。.</p>
 
@@ -90,7 +90,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%', 440)}}</p>
 
-<p>弹性项目默认 <code>order</code> 值为 <code>0</code>, 因此整数值大于 0 的项目，将会显示在那些未指定 <code>order</code> 值的项目之后。</p>
+<p>弹性项目默认 <code>order</code> 值为 <code>0</code>, 因此整数值大于 0 的项目，将会显示在那些未指定 <code>order</code> 值的项目之后。</p>
 
 <p>您还可以按顺序使用负值，这很有用。如果要先显示一个项目，并保持所有其他项目的顺序不变，则可以将该项目的顺序设为<code>-1</code>。由于该值小于 0，因此始终会首先显示该项目。</p>
 

@@ -15,24 +15,24 @@ translation_of: Web/API/KeyboardEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><strong><code>KeyboardEvent</code></strong> 对象描述了用户与键盘的交互。 每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型<code>keydown</code>， <code>keypress</code> 与 <code>keyup</code> 用于识别不同的键盘活动类型。</p>
+<p><strong><code>KeyboardEvent</code></strong> 对象描述了用户与键盘的交互。 每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型<code>keydown</code>， <code>keypress</code> 与 <code>keyup</code> 用于识别不同的键盘活动类型。</p>
 
-<div class="note"> <strong>注意：</strong><code>KeyboardEvent</code> 只在低级别提示用户与一个键盘按键的交互是什么，不涉及这个交互的上下文含义。 当你需要处理文本输入的时候，使用 {{event("input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板， 键盘事件可能不会触发。</div>
+<div class="note"> <strong>注意：</strong><code>KeyboardEvent</code> 只在低级别提示用户与一个键盘按键的交互是什么，不涉及这个交互的上下文含义。 当你需要处理文本输入的时候，使用 {{event("input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板， 键盘事件可能不会触发。</div>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}</dt>
- <dd>创建一个 <code>KeyboardEvent</code> 对象。</dd>
+ <dd>创建一个 <code>KeyboardEvent</code> 对象。</dd>
 </dl>
 
 <h2 id="常量">常量</h2>
 
-<p><code>KeyboardEvent</code> 接口定义了以下常量。</p>
+<p><code>KeyboardEvent</code> 接口定义了以下常量。</p>
 
 <h3 id="键盘定位">键盘定位</h3>
 
-<p>下述常量用于识别产生按键事件的键盘位置，以类似 <code>KeyboardEvent.DOM_KEY_LOCATION_STANDARD</code> 的形式来访问。</p>
+<p>下述常量用于识别产生按键事件的键盘位置，以类似 <code>KeyboardEvent.DOM_KEY_LOCATION_STANDARD</code> 的形式来访问。</p>
 
 <table>
  <caption>键盘定位标识符</caption>
@@ -92,13 +92,13 @@ translation_of: Web/API/KeyboardEvent
 
 <dl>
  <dt>{{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}</dt>
- <dd>返回一个 {{jsxref("Boolean")}}，如果按键事件产生时， <kbd>Alt</kbd> （OS X 中是 <kbd>Option</kbd> 或 <kbd>⌥</kbd> ）键被按下，则该值为 <code>true</code> 。</dd>
+ <dd>返回一个 {{jsxref("Boolean")}}，如果按键事件产生时， <kbd>Alt</kbd> （OS X 中是 <kbd>Option</kbd> 或 <kbd>⌥</kbd> ）键被按下，则该值为 <code>true</code> 。</dd>
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
  <dd>返回一个 {{domxref("DOMString")}}，其 code 值代表触发事件的物理按键。
  <div class="warning"><strong>警告：</strong>这个属性会忽略用户的键盘布局，所以如果用户在 QWERTY 布局的键盘上按下“Y”位置（第一行字母按键的中间）的按键时，这个属性会返回“KeyY”，即使用户使用 QWERTZ 布局的键盘（此时用户输入的就是“Z”，其他属性也会提示“Z”）或 Dvorak 键盘（此时用户输入的就是“F”）也是如此。</div>
  </dd>
  <dt>{{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}</dt>
- <dd>返回一个 {{jsxref("Boolean")}}，如果按键事件发生时 <kbd>Ctrl</kbd> 键被按下，则该值为 <code>true</code> 。</dd>
+ <dd>返回一个 {{jsxref("Boolean")}}，如果按键事件发生时 <kbd>Ctrl</kbd> 键被按下，则该值为 <code>true</code> 。</dd>
  <dt>{{domxref("KeyboardEvent.isComposing")}} {{Readonlyinline}}</dt>
  <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the event is fired between after <code>compositionstart</code> and before <code>compositionend</code>.</dd>
  <dt>{{domxref("KeyboardEvent.key")}} {{Readonlyinline}}</dt>
@@ -262,22 +262,22 @@ document.addEventListener('keydown', (event) =&gt; {
   }
 
   if (event.ctrlKey) {
-    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
+    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+    alert(`Combination of ctrlKey + ${keyName}`);
+  } else {
+    alert(`Key pressed ${keyName}`);
+  }
 }, false);
 
 document.addEventListener('keyup', (event) =&gt; {
-  const keyName = event.key;
+  const keyName = event.key;
 
-  // As the user releases the Ctrl key, the key is no longer active,
-  // so event.ctrlKey is false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
+  // As the user releases the Ctrl key, the key is no longer active,
+  // so event.ctrlKey is false.
+  if (keyName === 'Control') {
+    alert('Control key was released');
+  }
 }, false);
 
 &lt;/script&gt;

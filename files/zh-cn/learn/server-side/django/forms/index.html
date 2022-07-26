@@ -43,14 +43,14 @@ translation_of: Learn/Server-side/Django/Forms
 <p>表单在 HTML 中定义为<code>&lt;form&gt;...&lt;/form&gt;</code> 标记内的元素集合，包含至少一个<code>type="submit"</code>的<code>input</code> 输入元素。</p>
 
 <pre class="brush: html">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
-    &lt;input type="submit" value="OK"&gt;
+    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
+    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
+    &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
 <p>虽然在这里，我们只有一个文本字段，用于输入团队名称，但表单可能包含任意数量的其他输入元素，及其相关标签。字段的<code>type</code> 属性，定义将显示哪种窗口小部件。该字段的名称<code>name</code> 和 <code>id</code>，用于标识 JavaScript / CSS / HTML 中的字段，而<code>value</code> 定义字段首次显示时的初始值。匹配团队标签使用<code style="font-style: normal; font-weight: normal;">label</code> 标签指定（请参阅上面的“输入名称”Enter name），其中<code style="font-style: normal; font-weight: normal;">for</code> 字段包含相关<code style="font-style: normal; font-weight: normal;">input</code>输入的<code style="font-style: normal; font-weight: normal;">id</code> 值。</p>
 
-<p>提交输入<code>submit</code> 将显示为一个按钮（默认情况下），用户可以按下该按钮，将表单中所有其他输入元素中的数据，上传到服务器（在本例中，只有<code>team_name</code>）。表单属性定义用于发送数据的 HTTP <code>method</code> 方法，和服务器上数据的目标（<code>action</code>）：       </p>
+<p>提交输入<code>submit</code> 将显示为一个按钮（默认情况下），用户可以按下该按钮，将表单中所有其他输入元素中的数据，上传到服务器（在本例中，只有<code>team_name</code>）。表单属性定义用于发送数据的 HTTP <code>method</code> 方法，和服务器上数据的目标（<code>action</code>）：       </p>
 
 <ul>
  <li><code>action</code>: 提交表单时，要发送数据以进行处理的资源 /URL。如果未设置（或设置为空字符串），则表单将提交回当前页面 URL。</li>
@@ -76,7 +76,7 @@ translation_of: Learn/Server-side/Django/Forms
 
 <p>基于上图，Django 表单处理的主要内容是：</p>
 
-<p> </p>
+<p> </p>
 
 <ol>
  <li>在用户第一次请求时，显示默认表单。
@@ -87,7 +87,7 @@ translation_of: Learn/Server-side/Django/Forms
  </li>
  <li>从提交请求接收数据，并将其绑定到表单。
   <ul>
-   <li>将数据绑定到表单，意味着当我们需要重新显示表单时，用户输入的数据和任何错误都可取用。 </li>
+   <li>将数据绑定到表单，意味着当我们需要重新显示表单时，用户输入的数据和任何错误都可取用。 </li>
   </ul>
  </li>
  <li>清理并验证数据。
@@ -126,12 +126,12 @@ translation_of: Learn/Server-side/Django/Forms
 <pre class="brush: python">from django import forms
 
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 </pre>
 
 <h4 id="表单字段">表单字段</h4>
 
-<p>在这种情况下，我们有一个 <code><a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/fields//#datefield">DateField</a></code> 用于输入续借日期，该日期将使用空白值在 HTML 中呈现，默认标签为“续借日期：”，以及一些有用的用法文本：“输入从现在到 4 周之间的日期（默认为 3）周）。”  由于没有指定其他可选参数，该字段将使用 <a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/fields/#django.forms.DateField.input_formats">input_formats </a>接受日期：YYYY-MM-DD（2016-11-06）、MM/DD/YYYY（02/26/2016）、MM/DD/YY（10/25/16），并且将使用默认<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/fields/#widget">小部件</a>呈现：<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/widgets/#django.forms.DateInput">DateInput</a>。</p>
+<p>在这种情况下，我们有一个 <code><a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/fields//#datefield">DateField</a></code> 用于输入续借日期，该日期将使用空白值在 HTML 中呈现，默认标签为“续借日期：”，以及一些有用的用法文本：“输入从现在到 4 周之间的日期（默认为 3）周）。”  由于没有指定其他可选参数，该字段将使用 <a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/fields/#django.forms.DateField.input_formats">input_formats </a>接受日期：YYYY-MM-DD（2016-11-06）、MM/DD/YYYY（02/26/2016）、MM/DD/YY（10/25/16），并且将使用默认<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/fields/#widget">小部件</a>呈现：<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/widgets/#django.forms.DateInput">DateInput</a>。</p>
 
 <p>还有许多其他类型的表单字段，您可以从它们与等效模型字段类的相似性中大致认识到：</p>
 
@@ -154,7 +154,7 @@ class RenewBookForm(forms.Form):
 
 <h4 id="验证">验证</h4>
 
-<p>Django 提供了许多可以验证数据的地方。验证单个字段的最简单方法，是覆盖要检查的字段的方法<code>clean_<strong>&lt;fieldname&gt;</strong>()</code> 。因此，例如，我们可以通过实现<code>clean_<strong>renewal_date</strong>()  </code>，验证输入的<code>renewal_date</code> 值是从现在到 4 周之间，如下所示。</p>
+<p>Django 提供了许多可以验证数据的地方。验证单个字段的最简单方法，是覆盖要检查的字段的方法<code>clean_<strong>&lt;fieldname&gt;</strong>()</code> 。因此，例如，我们可以通过实现<code>clean_<strong>renewal_date</strong>()  </code>，验证输入的<code>renewal_date</code> 值是从现在到 4 周之间，如下所示。</p>
 
 <pre class="brush: python">from django import forms
 
@@ -163,28 +163,28 @@ from django.utils.translation import ugettext_lazy as _
 import datetime #for checking renewal date range.
 </strong>
 class RenewBookForm(forms.Form):
-    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+    renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
-<strong>    def clean_renewal_date(self):
-        data = self.cleaned_data['renewal_date']
+<strong>    def clean_renewal_date(self):
+        data = self.cleaned_data['renewal_date']
 
-        #Check date is not in past.
-        if data &lt; datetime.date.today():
-            raise ValidationError(_('Invalid date - renewal in past'))
+        #Check date is not in past.
+        if data &lt; datetime.date.today():
+            raise ValidationError(_('Invalid date - renewal in past'))
 
-        #Check date is in range librarian allowed to change (+4 weeks).
-        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+        #Check date is in range librarian allowed to change (+4 weeks).
+        if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+            raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-        # Remember to always return the cleaned data.
-        return data</strong></pre>
+        # Remember to always return the cleaned data.
+        return data</strong></pre>
 
 <p>有两件重要的事情需要注意。首先，我们使用<code>self.cleaned_data['renewal_date']</code> 获取数据，并且无论是否在函数末尾更改数据，我们都会返回此数据。此步骤使用默认验证器，将数据“清理”、并清除可能不安全的输入，并转换为数据的正确标准类型（在本例中为 Python <code>datetime.datetime</code>对象）。</p>
 
-<p>第二点是，如果某个值超出了我们的范围，我们会引发<code>ValidationError</code>，指定在输入无效值时，我们要在表单中显示的错误文本。上面的例子，也将这个文本包含在 <a href="https://docs.djangoproject.com/zh-hans/2.0/topics/i18n/translation/">Django 的翻译函数</a><code>ugettext_lazy()</code>中（导入为 <code>_()</code>），如果你想在稍后翻译你的网站，这是一个很好的做法。</p>
+<p>第二点是，如果某个值超出了我们的范围，我们会引发<code>ValidationError</code>，指定在输入无效值时，我们要在表单中显示的错误文本。上面的例子，也将这个文本包含在 <a href="https://docs.djangoproject.com/zh-hans/2.0/topics/i18n/translation/">Django 的翻译函数</a><code>ugettext_lazy()</code>中（导入为 <code>_()</code>），如果你想在稍后翻译你的网站，这是一个很好的做法。</p>
 
 <div class="note">
-<p><strong>注意：</strong>  在<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/validation/">表单和字段验证</a>（Django docs）中验证表单还有其他很多方法和示例。例如，如果您有多个相互依赖的字段，则可以覆盖<a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> 函数并再次引发<code>ValidationError</code>。</p>
+<p><strong>注意：</strong>  在<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/validation/">表单和字段验证</a>（Django docs）中验证表单还有其他很多方法和示例。例如，如果您有多个相互依赖的字段，则可以覆盖<a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> 函数并再次引发<code>ValidationError</code>。</p>
 </div>
 
 <p>这就是我们在这个例子中，对表单所需要了解的全部内容！</p>
@@ -204,14 +204,14 @@ class RenewBookForm(forms.Form):
 <p>URL 配置会将格式为 <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong>的 URL，重定向到 <strong>views.py </strong>中，名为<code>renew_book_librarian()</code> 的函数，并将<code>BookInstance</code> id 作为名为 <code>pk</code>的参数发送。只有 <code>pk</code>是正确格式化的 <code>uuid</code>，该模式才会匹配。</p>
 
 <div class="note">
-<p><strong>注意</strong>:  我们可以将捕获的 URL 数据，命名为“<code>pk</code>”，因为我们可以完全控制视图函数（我们不使用需要具有特定名称的参数的通用详细视图类）。然而，<code>pk</code>，“主键”primary key 的缩写，是一个合理的惯例！</p>
+<p><strong>注意</strong>:  我们可以将捕获的 URL 数据，命名为“<code>pk</code>”，因为我们可以完全控制视图函数（我们不使用需要具有特定名称的参数的通用详细视图类）。然而，<code>pk</code>，“主键”primary key 的缩写，是一个合理的惯例！</p>
 </div>
 
 <h3 id="视图">视图</h3>
 
 <p>正如上面的 Django 表单处理过程中，所讨论的那样，视图必须在首次调用时呈现默认表单，然后在数据无效时，重新呈现它，并显示错误消息，或者数据有效时，处理数据，并重定向到新页面。为了执行这些不同的操作，视图必须能够知道，它是第一次被调用以呈现默认表单，还是后续处理以验证数据。</p>
 
-<p>对于使用<code>POST</code> 请求向服务器提交信息的表单，最常见的模式，是视图针对<code>POST</code> 请求类型进行测试（<code>if request.method == 'POST':</code>) 以识别表单验证请求和<code>GET</code> （使用一个<code>else</code> 条件）来识别初始表单创建请求。如果要使用<code>GET</code> 请求提交数据，则识别这是第一个、还是后续视图调用的典型方法，是读取表单数据（例如，读取表单中的隐藏值）。</p>
+<p>对于使用<code>POST</code> 请求向服务器提交信息的表单，最常见的模式，是视图针对<code>POST</code> 请求类型进行测试（<code>if request.method == 'POST':</code>) 以识别表单验证请求和<code>GET</code> （使用一个<code>else</code> 条件）来识别初始表单创建请求。如果要使用<code>GET</code> 请求提交数据，则识别这是第一个、还是后续视图调用的典型方法，是读取表单数据（例如，读取表单中的隐藏值）。</p>
 
 <p>书本续借过程将写入我们的数据库，因此按照惯例，我们使用 <code>POST</code> 请求方法。下面的代码片段，显示了这种函数视图的（非常标准）模式。</p>
 
@@ -223,79 +223,79 @@ import datetime
 from .forms import RenewBookForm
 
 def renew_book_librarian(request, pk):
-    book_inst=get_object_or_404(BookInstance, pk = pk)
+    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-<strong>    if request.method == 'POST':</strong>
+    # If this is a POST request then process the Form data
+<strong>    if request.method == 'POST':</strong>
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        <strong>if form.is_valid():</strong>
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        <strong>if form.is_valid():</strong>
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-<strong>    else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form.
+<strong>    else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>首先，我们导入我们的表单（<code>RenewBookForm</code>）和视图函数中使用的许多其他有用的对象/方法：</p>
 
 <ul>
- <li><code><a href="https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>:  根据模型的主键值，从模型返回指定的对象，如果记录不存在，则引发<code>Http404</code> 异常（未找到）。</li>
- <li><code><a href="https://docs.djangoproject.com/en/2.0/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>:  这将创建指向指定 URL 的重定向（HTTP 状态代码 302）。</li>
- <li><code><a href="https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>:  这将从 URL 配置名称和一组参数生成 URL。它是我们在模板中使用的 <code>url</code> 标记的 Python 等价物。</li>
- <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>:  用于操作日期和时间的 Python 库。</li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#get-object-or-404">get_object_or_404()</a></code>:  根据模型的主键值，从模型返回指定的对象，如果记录不存在，则引发<code>Http404</code> 异常（未找到）。</li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.0/ref/request-response/#django.http.HttpResponseRedirect">HttpResponseRedirect</a></code>:  这将创建指向指定 URL 的重定向（HTTP 状态代码 302）。</li>
+ <li><code><a href="https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#django.urls.reverse">reverse()</a></code>:  这将从 URL 配置名称和一组参数生成 URL。它是我们在模板中使用的 <code>url</code> 标记的 Python 等价物。</li>
+ <li><code><a href="https://docs.python.org/3/library/datetime.html">datetime</a></code>:  用于操作日期和时间的 Python 库。</li>
 </ul>
 
-<p>在视图中，我们首先使用 <code>get_object_or_404()</code>中的 <code>pk</code> 参数，来获取当前的 <code>BookInstance</code> （如果这不存在，视图将立即退出，页面将显示“未找到”错误）。如果这不是 <code>POST</code> 请求（由 <code>else</code> 子句处理），那么我们创建默认表单，传递 <code>renewal_date</code> 字段的<code>initial</code> 初始值（如下面的<strong>粗体</strong>所示，这是从当前日期起的 3 周）。</p>
+<p>在视图中，我们首先使用 <code>get_object_or_404()</code>中的 <code>pk</code> 参数，来获取当前的 <code>BookInstance</code> （如果这不存在，视图将立即退出，页面将显示“未找到”错误）。如果这不是 <code>POST</code> 请求（由 <code>else</code> 子句处理），那么我们创建默认表单，传递 <code>renewal_date</code> 字段的<code>initial</code> 初始值（如下面的<strong>粗体</strong>所示，这是从当前日期起的 3 周）。</p>
 
 <pre class="brush: python">    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a GET (or any other method) create the default form
-    <strong>else:</strong>
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
-        <strong>form = RenewBookForm(initial={'</strong>renewal_date<strong>': </strong>proposed_renewal_date<strong>,})</strong>
+    # If this is a GET (or any other method) create the default form
+    <strong>else:</strong>
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(<strong>weeks=3</strong>)
+        <strong>form = RenewBookForm(initial={'</strong>renewal_date<strong>': </strong>proposed_renewal_date<strong>,})</strong>
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>创建表单后，我们调用 <code>render()</code> 来创建 HTML 页面，指定模板和包含表单的上下文。在这种情况下，上下文还包含我们的 <code>BookInstance</code>，我们将在模板中使用它，来提供有关我们正在续借的书本信息。</p>
 
 <p>但是，如果这是一个<code>POST</code> 请求，那么我们创建表单对象，并使用请求中的数据填充它。此过程称为“绑定”，并且允许我们验证表单。然后我们检查表单是否有效，它运行所有字段上的所有验证代码 - 包括用于检查我们的日期字段，实际上是有效日期的通用代码，以及用于检查日期的特定表单的<code>clean_renewal_date()</code>函数在合适的范围内。</p>
 
-<pre class="brush: python">    book_inst=get_object_or_404(BookInstance, pk = pk)
+<pre class="brush: python">    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-<strong>        form = RenewBookForm(request.POST)</strong>
+        # Create a form instance and populate it with data from the request (binding):
+<strong>        form = RenewBookForm(request.POST)</strong>
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})</pre>
 
 <p>如果表单无效，我们再次调用<code>render()</code> ，但这次在上下文中传递的表单值将包含错误消息。</p>
 
 <p>如果表单有效，那么我们可以开始使用数据，通过 <code>form.cleaned_data</code>属性访问它（例如 <code>data = form.cleaned_data['renewal_date']</code>）。这里我们只将数据保存到关联的<code>BookInstance</code> 对象的<code>due_back</code> 值中。</p>
 
 <div class="warning">
-<p><strong>重要</strong>:  虽然您也可以通过请求直接访问表单数据（例如<code>request.POST['renewal_date']</code> 或 <code>request.GET['renewal_date']</code>（如果使用 GET 请求），但不建议这样做。清理后的数据是无害的、验证过的、并转换为 Python 友好类型。</p>
+<p><strong>重要</strong>:  虽然您也可以通过请求直接访问表单数据（例如<code>request.POST['renewal_date']</code> 或 <code>request.GET['renewal_date']</code>（如果使用 GET 请求），但不建议这样做。清理后的数据是无害的、验证过的、并转换为 Python 友好类型。</p>
 </div>
 
 <p>视图的表单处理部分的最后一步，是重定向到另一个页面，通常是“成功”页面。在这种情况下，我们使用 <code>HttpResponseRedirect</code> 和 <code>reverse()</code> ，重定向到名为'<code>all-borrowed</code>'的视图（这是在 <a href="/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself">Django 教程第 8 部分中创建的“挑战”：用户身份验证和权限</a>）。如果您没有创建该页面，请考虑重定向到 URL'/'处的主页。</p>
@@ -315,32 +315,32 @@ from .forms import RenewBookForm
 
 <strong>@permission_required('catalog.<code>can_mark_returned</code>')</strong>
 def renew_book_librarian(request, pk):
-    """
-    View function for renewing a specific BookInstance by librarian
-    """
-    book_inst=get_object_or_404(BookInstance, pk = pk)
+    """
+    View function for renewing a specific BookInstance by librarian
+    """
+    book_inst=get_object_or_404(BookInstance, pk = pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-        form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_inst.due_back = form.cleaned_data['renewal_date']
-            book_inst.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_inst.due_back = form.cleaned_data['renewal_date']
+            book_inst.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed') )
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed') )
 
-    # If this is a GET (or any other method) create the default form.
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
+    # If this is a GET (or any other method) create the default form.
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date,})
 
-    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
+    return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
 </pre>
 
 <h3 id="模板">模板</h3>
@@ -358,7 +358,7 @@ def renew_book_librarian(request, pk):
         {% csrf_token %}
         &lt;table&gt;
         \{{ form }}
-        &lt;/table&gt;
+        &lt;/table&gt;
         &lt;input type="submit" value="Submit" /&gt;
     &lt;/form&gt;</strong>
 
@@ -369,36 +369,36 @@ def renew_book_librarian(request, pk):
 <p>表单代码相对简单。首先，我们声明表单标签，指定表单的提交位置（<code>action</code>）和提交数据的方法（在本例中为“HTTP POST”） - 如果您回想一下页面顶部的 HTML 表单概述，如图所示的空<code>action</code> ，意味着表单数据将被发布回页面的当前 URL（这是我们想要的！）。在标签内部，我们定义了<code>submit</code> 提交输入，用户可以按这个输入来提交数据。在表单标签内添加的<code>{% csrf_token %}</code> ，是 Django 跨站点伪造保护的一部分。</p>
 
 <div class="note">
-<p><strong>注意：</strong>  将<code>{% csrf_token %}</code> 添加到您创建的每个使用 <code>POST</code> 提交数据的 Django 模板中。这将减少恶意用户劫持表单的可能性。</p>
+<p><strong>注意：</strong>  将<code>{% csrf_token %}</code> 添加到您创建的每个使用 <code>POST</code> 提交数据的 Django 模板中。这将减少恶意用户劫持表单的可能性。</p>
 </div>
 
 <p>剩下的就是 <code>\{{form}}</code>模板变量，我们将其传递给上下文字典中的模板。也许不出所料，当如图所示使用时，它提供了所有表单字段的默认呈现，包括它们的标签、小部件、和帮助文本 - 呈现如下所示：</p>
 
 <pre class="brush: html">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-  &lt;td&gt;
-    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
-    &lt;br /&gt;
-    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
-  &lt;/td&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+  &lt;td&gt;
+    &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required /&gt;
+    &lt;br /&gt;
+    &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;/td&gt;
 &lt;/tr&gt;
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong>   它可能并不明显，因为我们只有一个字段，但默认情况下，每个字段都在其自己的表格行中定义（这就是变量在上面的<code>table </code>表格标记内部的原因）。如果您引用模板变量<code>\{{ form.as_table }}</code>，会提供相同的渲染。</p>
+<p><strong>注意：</strong>   它可能并不明显，因为我们只有一个字段，但默认情况下，每个字段都在其自己的表格行中定义（这就是变量在上面的<code>table </code>表格标记内部的原因）。如果您引用模板变量<code>\{{ form.as_table }}</code>，会提供相同的渲染。</p>
 </div>
 
 <p>如果您输入无效日期，您还会获得页面中呈现的错误列表（下面以<strong>粗体</strong>显示）。</p>
 
 <pre class="brush: html">&lt;tr&gt;
-  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
-   &lt;td&gt;
-<strong>      &lt;ul class="errorlist"&gt;
-        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
-      &lt;/ul&gt;</strong>
-      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required /&gt;
-      &lt;br /&gt;
-      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
+  &lt;th&gt;&lt;label for="id_renewal_date"&gt;Renewal date:&lt;/label&gt;&lt;/th&gt;
+   &lt;td&gt;
+<strong>      &lt;ul class="errorlist"&gt;
+        &lt;li&gt;Invalid date - renewal in past&lt;/li&gt;
+      &lt;/ul&gt;</strong>
+      &lt;input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required /&gt;
+      &lt;br /&gt;
+      &lt;span class="helptext"&gt;Enter date between now and 4 weeks (default 3 weeks).&lt;/span&gt;
     &lt;/td&gt;
 &lt;/tr&gt;</pre>
 
@@ -413,7 +413,7 @@ def renew_book_librarian(request, pk):
  <li><code>\{{form.renewal_date.errors}}</code>: 错误列表。</li>
  <li><code>\{{form.renewal_date.id_for_label}}</code>: 标签的 id。</li>
  <li><code>\{{form.renewal_date.help_text}}</code>: 字段帮助文本。</li>
- <li> 其他等等！</li>
+ <li> 其他等等！</li>
 </ul>
 
 <p>有关如何在模板中，手动呈现表单，并动态循环模板字段的更多示例，请参阅<a href="https://docs.djangoproject.com/zh-hans/2.0/topics/forms/#rendering-fields-manually">使用表单&gt;手动呈现字段</a>（Django 文档）。</p>
@@ -425,10 +425,10 @@ def renew_book_librarian(request, pk):
 <pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 
 <div class="note">
-<p><strong>注意</strong>:  请记住，您的测试登录需要具有“<code>catalog.can_mark_returned</code>”权限，才能访问续借书本页面（可能使用您的超级用户帐户）。</p>
+<p><strong>注意</strong>:  请记住，您的测试登录需要具有“<code>catalog.can_mark_returned</code>”权限，才能访问续借书本页面（可能使用您的超级用户帐户）。</p>
 </div>
 
-<p>您也可以手动构建这样的测试 URL  -  <a href="http://127.0.0.1:8000/catalog/book/&lt;bookinstance id>/renew/">http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</a> （可以通过导航到图书馆中的书本详细信息页面，获取有效的 bookinstance id，并复制<code>id</code> 字段）。</p>
+<p>您也可以手动构建这样的测试 URL  -  <a href="http://127.0.0.1:8000/catalog/book/&lt;bookinstance id>/renew/">http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</a> （可以通过导航到图书馆中的书本详细信息页面，获取有效的 bookinstance id，并复制<code>id</code> 字段）。</p>
 
 <h3 id="它看起来是什么样子？">它看起来是什么样子？</h3>
 
@@ -462,7 +462,7 @@ class RenewBookModelForm(ModelForm):
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>:  这可能看起来不像使用<code>Form</code> 那么简单（在这种情况下不是这样，因为我们只有一个字段）。但是，如果你有很多字段，它可以显着减少代码量！</p>
+<p><strong>注意</strong>:  这可能看起来不像使用<code>Form</code> 那么简单（在这种情况下不是这样，因为我们只有一个字段）。但是，如果你有很多字段，它可以显着减少代码量！</p>
 </div>
 
 <p>其余信息来自模型字段的定义（例如标签、小部件、帮助文本、错误消息）。如果这些不太正确，那么我们可以在<code> Meta</code>类中覆盖它们，指定包含要更改的字段、及其新值的字典。例如，在这种形式中，我们可能需要“更新日期” <em>Renewal date </em>字段的标签（而不是基于字段名称的默认值：截止日期 <em>Due date</em>），并且我们还希望我们的帮助文本，特定于此用例。下面的<code>Meta</code> 显示了如何覆盖这些字段，如果默认值不够，您可以类似地方式设置<code>widgets</code> 窗口小部件和<code>error_messages</code> 。</p>
@@ -474,25 +474,25 @@ class RenewBookModelForm(ModelForm):
     help_texts = { 'due_back': _('Enter a date between now and 4 weeks (default 3).'), } </strong>
 </pre>
 
-<p>要添加验证，您可以使用与普通表单相同的方法 - 定义名为 <code>clean_<em>field_name</em>()</code>的函数，并为无效值引发<code>ValidationError</code> 异常。与我们原始形式的唯一区别，是模型字段名为<code>due_back</code> 而不是“<code>renewal_date</code>”。</p>
+<p>要添加验证，您可以使用与普通表单相同的方法 - 定义名为 <code>clean_<em>field_name</em>()</code>的函数，并为无效值引发<code>ValidationError</code> 异常。与我们原始形式的唯一区别，是模型字段名为<code>due_back</code> 而不是“<code>renewal_date</code>”。</p>
 
 <pre class="brush: python">from django.forms import ModelForm
 from .models import BookInstance
 
 class RenewBookModelForm(ModelForm):
-<strong>    def clean_due_back(self):
-       data = self.cleaned_data['due_back']
+<strong>    def clean_due_back(self):
+       data = self.cleaned_data['due_back']
 
-       #Check date is not in past.
-       if data &lt; datetime.date.today():
-           raise ValidationError(_('Invalid date - renewal in past'))
+       #Check date is not in past.
+       if data &lt; datetime.date.today():
+           raise ValidationError(_('Invalid date - renewal in past'))
 
-       #Check date is in range librarian allowed to change (+4 weeks)
-       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
-           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+       #Check date is in range librarian allowed to change (+4 weeks)
+       if data &gt; datetime.date.today() + datetime.timedelta(weeks=4):
+           raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
 
-       # Remember to always return the cleaned data.
-       return data
+       # Remember to always return the cleaned data.
+       return data
 </strong>
     class Meta:
         model = BookInstance
@@ -508,7 +508,7 @@ class RenewBookModelForm(ModelForm):
 <p>我们在上面的函数视图示例中，使用的表单处理算法，表示表单编辑视图中非常常见的模式。Django 通过创建基于模型创建、编辑和删除视图的<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/">通用编辑视图</a>，为您抽象出大部分“样板”。这些不仅处理“视图”行为，而且它们会自动从模型中为您创建表单类（<code>ModelForm</code>）。</p>
 
 <div class="note">
-<p><strong>注意:  </strong>除了这里描述的编辑视图之外，还有一个 <a href="https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/#formview">FormView </a>类，它位于我们的函数视图，和其他通用视图之间的“灵活性”与“编码工作”之间。使用 <code>FormView</code> ，您仍然需要创建表单，但不必实现所有标准表单处理模式。相反，您只需提供一个函数的实现，一旦知道提交有效，就会调用该函数。</p>
+<p><strong>注意:  </strong>除了这里描述的编辑视图之外，还有一个 <a href="https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/#formview">FormView </a>类，它位于我们的函数视图，和其他通用视图之间的“灵活性”与“编码工作”之间。使用 <code>FormView</code> ，您仍然需要创建表单，但不必实现所有标准表单处理模式。相反，您只需提供一个函数的实现，一旦知道提交有效，就会调用该函数。</p>
 </div>
 
 <p>在本节中，我们将使用通用编辑视图，来创建页面，以添加从我们的库中创建、编辑和删除<code>Author</code> 作者记录的功能 - 有效地提供管理站点一部分的基本重新实现（这可能很有用，如果您需要比管理站点能提供的、更加灵活的管理功能）。</p>
@@ -536,9 +536,9 @@ class AuthorDelete(DeleteView):
 
 <p>如您所见，要创建视图，您需要从<code>CreateView</code>, <code>UpdateView</code>, 和 <code>DeleteView</code>（分别）派生，然后定义关联的模型。</p>
 
-<p>对于“创建”和“更新”的情况，您还需要指定要在表单中显示的字段（使用与<code>ModelForm</code>相同的语法）。在这种情况下，我们将说明两者的语法，如何显示“所有”字段，以及如何单独列出它们。您还可以使用 field_name / value 对的字典，为每个字段指定初始值（此处我们为了演示目的，而任意设置死亡日期 - 您可能希望删除它！）。默认情况下，这些视图会在成功时，重定向到显示新创建/编辑的模型项的页面，在我们的示例中，这将是我们在上一个教程中，创建的作者详细信息视图。您可以通过显式声明参数<code>success_url</code>  ，指定备用重定向位置（与<code>AuthorDelete</code> 类一样）。</p>
+<p>对于“创建”和“更新”的情况，您还需要指定要在表单中显示的字段（使用与<code>ModelForm</code>相同的语法）。在这种情况下，我们将说明两者的语法，如何显示“所有”字段，以及如何单独列出它们。您还可以使用 field_name / value 对的字典，为每个字段指定初始值（此处我们为了演示目的，而任意设置死亡日期 - 您可能希望删除它！）。默认情况下，这些视图会在成功时，重定向到显示新创建/编辑的模型项的页面，在我们的示例中，这将是我们在上一个教程中，创建的作者详细信息视图。您可以通过显式声明参数<code>success_url</code>  ，指定备用重定向位置（与<code>AuthorDelete</code> 类一样）。</p>
 
-<p><code>AuthorDelete</code> 类不需要显示任何字段，因此不需要指定这些字段。但是你需要指定<code>success_url</code>，因为 Django 没有明显的默认值。在这种情况下，我们使用<code><a href="https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#reverse-lazy">reverse_lazy()</a></code>函数，在删除作者后，重定向到我们的作者列表 -  <code>reverse_lazy()</code>是一个延迟执行的<code>reverse()</code>版本，在这里使用，是因为我们提供了一个基于类的 URL 查看属性。</p>
+<p><code>AuthorDelete</code> 类不需要显示任何字段，因此不需要指定这些字段。但是你需要指定<code>success_url</code>，因为 Django 没有明显的默认值。在这种情况下，我们使用<code><a href="https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#reverse-lazy">reverse_lazy()</a></code>函数，在删除作者后，重定向到我们的作者列表 -  <code>reverse_lazy()</code>是一个延迟执行的<code>reverse()</code>版本，在这里使用，是因为我们提供了一个基于类的 URL 查看属性。</p>
 
 <h3 id="模板_2">模板</h3>
 
@@ -585,9 +585,9 @@ class AuthorDelete(DeleteView):
 <p>打开 URL 配置文件（<strong>locallibrary/catalog/urls.py</strong>），并将以下配置，添加到文件的底部：</p>
 
 <pre class="brush: python">urlpatterns += [
-    path('author/create/', views.AuthorCreate.as_view(), name='author_create'),
-    path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author_update'),
-    path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author_delete'),
+    path('author/create/', views.AuthorCreate.as_view(), name='author_create'),
+    path('author/&lt;int:pk&gt;/update/', views.AuthorUpdate.as_view(), name='author_update'),
+    path('author/&lt;int:pk&gt;/delete/', views.AuthorDelete.as_view(), name='author_delete'),
 ]</pre>
 
 <p>这里没有什么特别的新东西！您可以看到视图是类，因此必须通过<code>.as_view()</code>调用，并且您应该能够识别每种情况下的 URL 模式。我们必须使用 <code>pk</code> 作为捕获的主键值的名称，因为这是视图类所期望的参数名称。</p>
@@ -595,7 +595,7 @@ class AuthorDelete(DeleteView):
 <p>作者的创建，更新和删除页面，现在已准备好进行测试（在这种情况下，我们不会将它们连接到站点侧栏，尽管如果您愿意，也可以这样做）。</p>
 
 <div class="note">
-<p><strong>注意</strong>:   敏锐的用户会注意到，我们没有采取任何措施，来防止未经授权的用户访问这些页面！我们将其作为练习留给您（提示：您可以使用<code>PermissionRequiredMixin</code> ，并创建新权限，或重用我们的<code>can_mark_returned</code>权限）。</p>
+<p><strong>注意</strong>:   敏锐的用户会注意到，我们没有采取任何措施，来防止未经授权的用户访问这些页面！我们将其作为练习留给您（提示：您可以使用<code>PermissionRequiredMixin</code> ，并创建新权限，或重用我们的<code>can_mark_returned</code>权限）。</p>
 </div>
 
 <h3 id="测试页面_2">测试页面</h3>
@@ -606,7 +606,7 @@ class AuthorDelete(DeleteView):
 
 <p><img alt="Form Example: Create Author" src="forms_example_create_author.png"></p>
 
-<p>输入字段的值，然后按“提交” <strong>Submit</strong>  ，保存作者记录。现在，您应该进入新作者的详细视图，其 URL 为 http://127.0.0.1:8000/catalog/author/10。</p>
+<p>输入字段的值，然后按“提交” <strong>Submit</strong>  ，保存作者记录。现在，您应该进入新作者的详细视图，其 URL 为 http://127.0.0.1:8000/catalog/author/10。</p>
 
 <p>您可以通过将 /update/ ，附加到详细视图 URL 的末尾，来测试编辑记录（例如 http://127.0.0.1:8000/catalog/author/10/update/） - 我们不显示截图，因为它看起来就像“创建”页面！</p>
 
@@ -614,7 +614,7 @@ class AuthorDelete(DeleteView):
 
 <p><img src="forms_example_delete_author.png"></p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="挑战自己">挑战自己</h2>
 
@@ -636,8 +636,8 @@ class AuthorDelete(DeleteView):
 <ul>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/forms/">Working with forms</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial04/#write-a-simple-form">Writing your first Django app, part 4 &gt; Writing a simple form</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/">The Forms API</a> (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/">Form fields</a> (Django docs) </li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/">The Forms API</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/fields/">Form fields</a> (Django docs) </li>
  <li><a href="https://docs.djangoproject.com/en/2.0/ref/forms/validation/">Form and field validation</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/">Form handling with class-based views</a> (Django docs)</li>
  <li><a href="https://docs.djangoproject.com/en/2.0/topics/forms/modelforms/">Creating forms from models</a> (Django docs)</li>
@@ -646,7 +646,7 @@ class AuthorDelete(DeleteView):
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="本系列教程">本系列教程</h2>
 
@@ -668,4 +668,4 @@ class AuthorDelete(DeleteView):
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

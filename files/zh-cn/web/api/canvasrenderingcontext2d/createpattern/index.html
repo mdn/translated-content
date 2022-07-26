@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createPattern
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>CanvasRenderingContext2D.createPattern()</code></strong> 是 Canvas 2D API 使用指定的图像 ({{domxref("CanvasImageSource")}}) 创建模式的方法。它通过 repetition 参数在指定的方向上重复元图像。此方法返回一个{{domxref("CanvasPattern")}}对象。</p>
+<p><strong><code>CanvasRenderingContext2D.createPattern()</code></strong> 是 Canvas 2D API 使用指定的图像 ({{domxref("CanvasImageSource")}}) 创建模式的方法。它通过 repetition 参数在指定的方向上重复元图像。此方法返回一个{{domxref("CanvasPattern")}}对象。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createPattern
  <ul>
   <li><code>"repeat"</code> (both directions),</li>
   <li><code>"repeat-x"</code> (horizontal only),</li>
-  <li><code>"repeat-y"</code> (vertical only), </li>
+  <li><code>"repeat-y"</code> (vertical only), </li>
   <li><code>"no-repeat"</code> (neither).</li>
  </ul>
  如果为空字符串 (<code>''</code>) 或 {{jsxref("null")}} (但不是 {{jsxref("undefined")}})，repetition 将被当作"repeat"。</dd>
@@ -49,7 +49,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createPattern
 
 <h3 id="使用createPattern方法">使用<code>createPattern</code>方法</h3>
 
-<p>这是一段简单的代码片段，使用 createPattern 方法创建一个指定图像和重复的{{domxref("CanvasPattern")}} 对象。创建完成后，可以使用{{domxref("CanvasPattern.setTransform()")}}方法对图案进行变形。如示例所示，你可以把此模式赋值给当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果。</p>
+<p>这是一段简单的代码片段，使用 createPattern 方法创建一个指定图像和重复的{{domxref("CanvasPattern")}} 对象。创建完成后，可以使用{{domxref("CanvasPattern.setTransform()")}}方法对图案进行变形。如示例所示，你可以把此模式赋值给当前的{{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用{{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，会在 canvas 上绘制出效果。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -64,9 +64,9 @@ var ctx = canvas.getContext("2d");
 var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
 img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
-  ctx.fillStyle = pattern;
-  ctx.fillRect(0,0,400,400);
+  var pattern = ctx.createPattern(img, 'repeat');
+  ctx.fillStyle = pattern;
+  ctx.fillRect(0,0,400,400);
 };
 </pre>
 
