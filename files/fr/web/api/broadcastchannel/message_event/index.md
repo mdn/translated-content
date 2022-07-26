@@ -162,4 +162,4 @@ canal.addEventListener('message', event => {
 
 ## Voir aussi
 
-- Événements liés&nbsp;: [`messageerror`](/fr/docs/Web/API/BroadcastChannel/messageerror_event).
+- Évènements liés&nbsp;: [`messageerror`](/fr/docs/Web/API/BroadcastChannel/messageerror_event).
