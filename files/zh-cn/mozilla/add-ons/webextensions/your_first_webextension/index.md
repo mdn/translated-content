@@ -114,8 +114,6 @@ manifest.json 文件中 `content_scripts` 的键给出了一条模式匹配，�
 
 打开 Firefox 的 [about:debugging](/zh-CN/docs/Tools/about:debugging) 页面，点击”This Firefox" (在新版本的 Firefox 里），点击 "临时加载附加组件（Load Temporary Add-on）" 按钮，并选择你的附加组件目录：
 
-{{EmbedYouTube("cer9EUKegG4")}}
-
 附加组件将会被安装，直到下次重启浏览器失效。
 
 或者，你可以通过 [web-ext](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext) 工具从命令行来运行扩展。
@@ -124,13 +122,9 @@ manifest.json 文件中 `content_scripts` 的键给出了一条模式匹配，�
 
 现在尝试访问"mozilla.org", 你将会在页面上看到有个红色的边框
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
-
 > **备注：** 不要在 addons.mozilla.org 上尝试！内容脚本（Content Script) 当前在那个域名下是被限制的。
 
 尝试一下编辑内容脚本更改边框的颜色，或做页面内容别的修改，保存内容脚本，然后通过单击 **about:debugging** 页面下的 “刷新”按钮重新加载附加的文件。你可以马上看到的变化：
-
-{{EmbedYouTube("NuajE60jfGY")}}
 
 - [学习更多关于加载附加组件](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 
