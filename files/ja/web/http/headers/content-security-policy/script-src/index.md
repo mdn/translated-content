@@ -12,163 +12,167 @@ tags:
   - Security
   - script-src
   - source
+browser-compat: http.headers.Content-Security-Policy.script-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の <code><strong>script-src</strong></code> ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (<code>onclick</code>) やスクリプト実行のトリガーとなりうる <a href="/ja/docs/Web/XSLT">XSLT スタイルシート</a>のようなものも含まれます。</p>
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`script-src`** ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/en-US/docs/Web/XSLT)のようなものも含まれます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP バージョン</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">ディレクティブ種別</th>
-   <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} による代替</th>
-   <td>あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP バージョン</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">ディレクティブ種別</th>
+      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} による代替</th>
+      <td>
+        あり。このディレクティブがない場合、ユーザーエージェントは <code>default-src</code> ディレクティブを探します。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>script-src</code> ポリシーには、１つまたは複数のソースが許可されています。</p>
+`script-src` ポリシーには、 1 つまたは複数のソースが許可されています。
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: script-src &lt;source&gt;;
-Content-Security-Policy: script-src &lt;source&gt; &lt;source&gt;;
-</pre>
+```http
+Content-Security-Policy: script-src <source>;
+Content-Security-Policy: script-src <source> <source>;
+```
 
-<h3 id="Sources" name="Sources">ソース</h3>
+### ソース
 
-<p>{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース)にあるいずれかの値を取ることができます。
 
-<h2 id="Examples" name="Examples">例</h2>
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#関連ディレクティブ)）で使用できます。
 
-<h3 id="Violation_case" name="Violation_case">違反例</h3>
+## 例
 
-<p>この CSP ヘッダーがある場合、</p>
+## 違反例
 
-<pre class="brush: bash notranslate">Content-Security-Policy: script-src https://example.com/</pre>
+この CSP ヘッダーがある場合、
 
-<p>以下のスクリプトはブロックされ、読み込みや実行が行われません。</p>
+```http
+Content-Security-Policy: script-src https://example.com/
+```
 
-<pre class="brush: html notranslate">&lt;script src="https://not-example.com/js/library.js"&gt;&lt;/script&gt;</pre>
+以下のスクリプトはブロックされ、読み込みや実行が行われません。
 
-<p>なお、インラインのイベントハンドラーも同様にブロックされます。</p>
+```html
+<script src="https://not-example.com/js/library.js"></script>
+```
 
-<pre class="brush: html notranslate">&lt;button id="btn" onclick="doSomething()"&gt;</pre>
+なお、インラインのイベントハンドラーも同様にブロックされます。
 
-<p>これを {{domxref("EventTarget.addEventListener", "addEventListener")}} の呼び出しに置き換えてください。</p>
+```html
+<button id="btn" onclick="doSomething()">
+```
 
-<pre class="brush: js notranslate">document.getElementById("btn").addEventListener('click', doSomething);</pre>
+これを {{domxref("EventTarget.addEventListener", "addEventListener")}} の呼び出しに置き換えてください。
 
-<h3 id="Unsafe_inline_script" name="Unsafe_inline_script">安全ではないインラインのスクリプト</h3>
+```js
+document.getElementById("btn").addEventListener('click', doSomething);
+```
 
-<div class="note">
-<p><strong>注:</strong> インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。</p>
-</div>
+### 安全ではないインラインのスクリプト
 
-<p>インラインスクリプトとインラインのイベントハンドラーを許可するために <code>'unsafe-inline'</code> や、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。</p>
+> **Note:** インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
 
-<pre class="brush: bash notranslate">Content-Security-Policy: script-src 'unsafe-inline';
-</pre>
+インラインスクリプトとインラインのイベントハンドラーを許可するために `'unsafe-inline'` や、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
 
-<p>上記のコンテンツセキュリティポリシーは、インラインの {{HTMLElement("script")}} 要素を許可します。</p>
+```
+Content-Security-Policy: script-src 'unsafe-inline';
+```
 
-<pre class="brush: html notranslate">&lt;script&gt;
+上記のコンテンツセキュリティポリシーは、インラインの {{HTMLElement("script")}} 要素を許可します。
+
+```html
+<script>
   var inline = 1;
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>nonce-source を使用して、特定のインラインスクリプトブロックのみ許可することができます。</p>
+nonce-source を使用して、特定のインラインスクリプトブロックのみ許可することができます。
 
-<pre class="brush: bash notranslate">Content-Security-Policy: script-src 'nonce-2726c7f26c'</pre>
+```
+Content-Security-Policy: script-src 'nonce-2726c7f26c'
+```
 
-<p>同じノンスを {{HTMLElement("script")}} 要素に指定する必要があります。</p>
+同じノンスを {{HTMLElement("script")}} 要素に指定する必要があります。
 
-<pre class="brush: html notranslate">&lt;script nonce="2726c7f26c"&gt;
+```html
+<script nonce="2726c7f26c">
   var inline = 1;
-&lt;/script&gt;</pre>
+</script>
+```
 
-<p>他にも、インラインスクリプトからハッシュを生成することができます。 CSP では sha256, sha384, sha512 に対応しています。</p>
+他にも、インラインスクリプトからハッシュを生成することができます。 CSP では sha256, sha384, sha512 に対応しています。
 
-<pre class="brush: bash notranslate">Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='</pre>
+```
+Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWtWidDVF8='
+```
 
-<p>ハッシュを生成するとき、 {{HTMLElement("script")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。</p>
+ハッシュを生成するとき、 {{HTMLElement("script")}} タグを含めないようにし、大文字小文字と、ホワイトスペース、特に前後のホワイトスペースに注意してください。
 
-<pre class="brush: html notranslate">&lt;script&gt;var inline = 1;&lt;/script&gt;</pre>
+```html
+<script>var inline = 1;</script>
+```
 
-<h3 id="Unsafe_eval_expressions" name="Unsafe_eval_expressions">安全ではない eval 式</h3>
+### 安全ではない eval 式
 
-<p><code>'unsafe-eval'</code> ソース式は、文字列からコードを生成するいくつかのスクリプト実行メソッドを制御します。もし <code>'unsafe-eval'</code> が <code>script-src</code> ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。</p>
+`'unsafe-eval'` ソース式は、文字列からコードを生成するいくつかのスクリプト実行メソッドを制御します。もし `'unsafe-eval'` が `script-src` ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。
 
-<ul>
- <li>{{jsxref("eval", "eval()")}}</li>
- <li>{{jsxref("Function", "Function()")}}</li>
- <li>メソッドの文字列リテラルを <code>window.setTimeout("alert(\"Hello World!\");", 500);</code> のように渡した場合
-  <ul>
-   <li>{{domxref("window.setTimeout")}}</li>
-   <li>{{domxref("window.setInterval")}}</li>
-   <li>{{domxref("window.setImmediate")}}</li>
-  </ul>
- </li>
- <li>{{domxref("window.execScript")}} {{non-standard_inline}} (IE &lt; 11 のみ)</li>
-</ul>
+- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxref("Function", "Function()")}}
+- メソッドの文字列リテラルを `window.setTimeout("alert(\"Hello World!\");", 500);` のように渡した場合
 
-<h3 id="strict-dynamic" name="strict-dynamic">strict-dynamic</h3>
+  - {{domxref("setTimeout()")}}
+  - {{domxref("setInterval()")}}
+  - {{domxref("window.setImmediate")}}
 
-<p><code>'strict-dynamic'</code> ソース式は、マークアップ中のスクリプトに明示的に与えられた信頼が、ノンスやハッシュを伴って、そのルートスクリプトによって読み込まれるすべてのスクリプトに伝搬されることを指定します。同時に、 <code>'self'</code> や <code>'unsafe-inline'</code> のようなホワイトリストやソース表現は無視されます。例えば、 <code>script-src 'strict-dynamic' 'nonce-R4nd0m' https://whitelisted.com/</code> のようなポリシーでは、 <code>&lt;script nonce="R4nd0m" src="https://example.com/loader.js"&gt;</code> を指定したルートスクリプトの読み込みを許可し、 <code>loader.js</code> で読み込まれたすべてのスクリプトにその信頼性を伝播させますが、 <code>https://whitelisted.com/</code> からのスクリプトの読み込みは、ノンスを伴っているか、信頼されたスクリプトから読み込まれたものでない限り、許可しません。</p>
+- `window.execScript()` {{non-standard_inline}} (IE < 11 のみ)
 
-<pre class="brush: bash notranslate">script-src 'strict-dynamic' 'nonce-<em>someNonce</em>'</pre>
+### strict-dynamic
 
-<p><em>または</em></p>
+`'strict-dynamic'` ソース式は、マークアップ中のスクリプトに明示的に与えられた信頼が、ノンスやハッシュを伴って、そのルートスクリプトによって読み込まれるすべてのスクリプトに伝搬されることを指定します。同時に、 `'self'` や `'unsafe-inline'` のようなホワイトリストやソース表現は無視されます。例えば、 `script-src 'strict-dynamic' 'nonce-R4nd0m' https://allowlisted.com/` のようなポリシーでは、 `<script nonce="R4nd0m" src="https://example.com/loader.js">` を指定したルートスクリプトの読み込みを許可し、 `loader.js` で読み込まれたすべてのスクリプトにその信頼性を伝播させますが、 `https://allowlisted.com/` からのスクリプトの読み込みは、ノンスを伴っているか、信頼されたスクリプトから読み込まれたものでない限り、許可しません。
 
-<pre class="brush: bash notranslate">script-src 'strict-dynamic' 'sha256-<em>base64EncodedHash</em>'</pre>
+```http
+Content-Security-Policy: script-src 'strict-dynamic' 'nonce-someNonce'
+```
 
-<p>ユーザーエージェントのスニッフィングを必要とせず、後方互換性のある方法として、 <code>strict-dynamic</code> を指定することができます。.<br>
- 以下のポリシー、</p>
+または
 
-<pre class="brush: bash notranslate">script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'</pre>
+```http
+Content-Security-Policy: script-src 'strict-dynamic' 'sha256-base64EncodedHash'
+```
 
-<p>は、 CSP1 に対応したブラウザーでは <code>'unsafe-inline' https:</code> のように動作し、 CSP2 に対応したブラウザーでは <code>https: 'nonce-abcdefg'</code> のように、CSP3 に対応したブラウザーでは <code>'nonce-abcdefg' 'strict-dynamic'</code> のように動作します。</p>
+ユーザーエージェントのスニッフィングを必要とせず、後方互換性のある方法として、 `strict-dynamic` を指定することができます。
+以下のポリシー、
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+```http
+Content-Security-Policy: script-src 'unsafe-inline' https: 'nonce-abcdefg' 'strict-dynamic'
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-script-src", "script-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-script-src", "script-src")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+は、 CSP1 に対応したブラウザーでは `'unsafe-inline' https:` のように動作し、 CSP2 に対応したブラウザーでは `https: 'nonce-abcdefg'` のように、CSP3 に対応したブラウザーでは `'nonce-abcdefg' 'strict-dynamic'` のように動作します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 仕様書
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.script-src")}}</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("script")}}</li>
- <li>{{CSP("script-src-elem")}}</li>
- <li>{{CSP("script-src-attr")}}</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("script")}}
+- {{CSP("script-src-elem")}}
+- {{CSP("script-src-attr")}}

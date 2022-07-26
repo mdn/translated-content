@@ -6,63 +6,55 @@ tags:
   - Directive
   - HTTP
   - Security
-  - ディレクティブ
+browser-compat: http.headers.Content-Security-Policy.trusted-types
 translation_of: Web/HTTP/Headers/Content-Security-Policy/trusted-types
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の <code><strong>trusted-types</strong></code> {{experimental_inline}} ディレクティブは、既知の DOM XSS シンクの使用を、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れる定義済みの関数のセットに制限するようにユーザエージェントに指示します。これにより、作者は DOM への値の書き込みを守るルールを定義することができ、 DOM XSS 攻撃の対象をウェブアプリケーションのコードベースの小さな孤立した部分に減らすことができ、監視やコードレビューが容易になります。このディレクティブは、 Trusted Types API から <code>TrustedTypes.createPolicy</code> で作成された信頼できる型のポリシー名のホワイトリストを宣言します。</p>
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`trusted-types`** {{experimental_inline}} ディレクティブは、既知の DOM XSS シンクの使用を、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れる定義済みの関数のセットに制限するようにユーザエージェントに指示します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+ **[`require-trusted-types-for`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)** ディレクティブと一緒に使用することで、作者は DOM への値の書き込みを守るルールを定義することができ、 DOM XSS 攻撃の対象をウェブアプリケーションのコードベースの小さな孤立した部分に減らすことができ、監視やコードレビューが容易になります。このディレクティブは、 Trusted Types API から `TrustedTypes.createPolicy` で作成された信頼できる型のポリシー名のホワイトリストを宣言します。
 
-<pre>Content-Security-Policy: trusted-types;
-Content-Security-Policy: trusted-types &lt;policyName&gt;;
-Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'allow-duplicates';
-</pre>
+## 構文
 
-<dl>
- <dt>&lt;DOMString&gt;</dt>
- <dd>Trusted Type ポリシー名とすることができる任意の文字列です。</dd>
- <dt><code>'allow-duplicates'</code></dt>
- <dd>ポリシー名が既に使用されていても、生成を許可します。</dd>
-</dl>
+```
+Content-Security-Policy: trusted-types;
+Content-Security-Policy: trusted-types 'none';
+Content-Security-Policy: trusted-types <policyName>;
+Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicates';
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+- \<policyName>
+  - : 有効なポリシー名は英数字、または "`-#=_/@.%`" のうちのいずれかのみからなります。ポリシー名に星印 (`*`) を使用すると、ユーザーエージェントは任意の一意なポリシー名を許可するようになります（'`allow-duplicates`' はそれをさらに緩和することができます）。
+- `'none'`
+  - : Trusted Type ポリシーを作成しない（_<policyName>_を指定しないのと同じ）。
+- `'allow-duplicates'`
+  - : 既に使用されている名前でポリシーを作成することを可能にします。
 
-<p>TODO</p>
+## 例
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+```js
+// Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
 
-<p>A <a href="https://github.com/w3c/webappsec-trusted-types#polyfill">Trusted Types のポリフィル</a>が Github 上で利用できます。</p>
+if (typeof trustedTypes !== 'undefined') {
+  const policyFoo = trustedTypes.createPolicy('foo', {});
+  const policyFoo2 = trustedTypes.createPolicy('foo', {});
+  const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://w3c.github.io/webappsec-trusted-types/dist/spec/">Trusted Types</a></td>
-   <td>Draft</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.trusted-types")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="/ja/docs/Glossary/Cross-site_scripting">クロスサイトスクリプティング (XSS)</a></li>
- <li><a href="https://developers.google.com/web/updates/2019/02/trusted-types">Google Developers: Intro to Trusted-Types</a></li>
- <li>Trusted Types with <a href="https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types">DOMPurify</a> XSS sanitizer</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [クロスサイトスクリプティング (XSS)](/ja/docs/Glossary/Cross-site_scripting)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
+- [Trusted Types polyfill](https://github.com/w3c/webappsec-trusted-types#polyfill)
