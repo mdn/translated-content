@@ -60,7 +60,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 <p>也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在其他地方已经讨论过其他领域，例如<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98">响应式设计问题</a>和<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Performance_issues">性能</a>。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 就像 Web 开发中的许多事情一样，可访问性不是 100% 的成功或失败可以定义的；对于所有内容而言，几乎不可能实现 100％的可访问性，尤其是当站点变得越来越复杂时。我们更多的是通过防御性编码并遵循最佳实践，努力使尽可能多的人可以访问尽可能多的内容。</p>
+<p><strong>备注：</strong> 就像 Web 开发中的许多事情一样，可访问性不是 100% 的成功或失败可以定义的；对于所有内容而言，几乎不可能实现 100％的可访问性，尤其是当站点变得越来越复杂时。我们更多的是通过防御性编码并遵循最佳实践，努力使尽可能多的人可以访问尽可能多的内容。</p>
 </div>
 
 <h2 id="常见可访问性问题">常见可访问性问题</h2>
@@ -68,7 +68,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 <p>在本节中，我们将围绕 Web 可访问性，详细介绍与特定技术相关的一些主要问题、要遵循的最佳实践，以及可以进行的一些快速测试，以查看你的网站是否朝着正确的方向发展。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 可访问性在道德上是正确的事情，对企业也有好处 (残疾用户，移动用户等构成了重要的细分市场), 并且在世界许多地方，提供出来的网络媒体资源无法为残疾人服务也是违法的。阅读<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility#%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%8C%87%E5%8D%97%E5%92%8C%E6%B3%95%E5%BE%8B">无障碍指南和法律</a>获取更多相关信息。</p>
+<p><strong>备注：</strong> 可访问性在道德上是正确的事情，对企业也有好处 (残疾用户，移动用户等构成了重要的细分市场), 并且在世界许多地方，提供出来的网络媒体资源无法为残疾人服务也是违法的。阅读<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility#%E6%97%A0%E9%9A%9C%E7%A2%8D%E6%8C%87%E5%8D%97%E5%92%8C%E6%B3%95%E5%BE%8B">无障碍指南和法律</a>获取更多相关信息。</p>
 </div>
 
 <h3 id="HTML">HTML</h3>
@@ -136,7 +136,7 @@ This is the second subsection of my content. I think is more interesting than th
 </ul>
 
 <div class="warning">
-<p><strong>重要</strong>: 你应该在所写的任何新页面上执行这种测试 — 确保可以通过键盘使用功能。</p>
+<p><strong>警告：</strong> 你应该在所写的任何新页面上执行这种测试 — 确保可以通过键盘使用功能。</p>
 </div>
 
 <p>这个例子强调了正确使用语义元素的重要性。可以用 CSS 将任何元素的样式设置为看起来像链接或按钮，并使用 JavaScript 让其表现为像链接或按钮一样，但实际上它们不是链接或按钮，你将失去很多语义化元素带给你的可访问性。因此，尽量避免这样做。</p>
@@ -149,7 +149,7 @@ a:focus, input:focus, button:focus, select:focus {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 如果你决定使用 CSS 删除默认的焦点样式，请确保将其替换为更适合你的设计的其他样式 — 这是一种非常有价值的可访问性工具，不应删除。</p>
+<p><strong>备注：</strong> 如果你决定使用 CSS 删除默认的焦点样式，请确保将其替换为更适合你的设计的其他样式 — 这是一种非常有价值的可访问性工具，不应删除。</p>
 </div>
 
 <h4 id="模拟键盘">模拟键盘</h4>
@@ -169,7 +169,7 @@ a:focus, input:focus, button:focus, select:focus {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 仅当你通过事件处理程序属性（例如<code>onclick</code>）设置原始事件处理程序时，此技术才有效。<code>addEventListener</code>将无法正常工作。重新构建功能会有很多额外的麻烦。并且肯定还有其他问题。最好能从根源解决问题，使用正确的语义化元素。</p>
+<p><strong>备注：</strong> 仅当你通过事件处理程序属性（例如<code>onclick</code>）设置原始事件处理程序时，此技术才有效。<code>addEventListener</code>将无法正常工作。重新构建功能会有很多额外的麻烦。并且肯定还有其他问题。最好能从根源解决问题，使用正确的语义化元素。</p>
 </div>
 
 <h4 id="替代文本">替代文本</h4>
@@ -177,7 +177,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>替代文本对于可访问性非常重要 — 如果一个人有视觉或听觉障碍使他们无法看到或听到某些内容，那么这就是一个问题。可用的最简单的文本替代方法是<code>alt</code>属性，我们应该在所有包含相关内容的图像上包括该属性。其中应包含对图像的描述，该描述可在页面上成功传达其含义和内容，并由屏幕阅读器读取并读出给用户。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 更多信息请阅读<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81">Text alternatives</a></p>
+<p><strong>备注：</strong> 更多信息请阅读<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81">Text alternatives</a></p>
 </div>
 
 <p>可以通过多种方法来测试缺少的替代文本，例如，使用可访问性<a href="#审计工具">审计工具</a>。</p>
@@ -193,7 +193,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>表单{{htmlelement("label")}}元素是允许我们使表单可访问的主要功能之一。表单的麻烦在于，你需要标签来说明应在每个表单输入中输入哪些数据。每个标签都必须包含在{{htmlelement("label")}}内，以将其明确链接到其对应的表单输入框（属性值的每个<code>&lt;label&gt;</code>的<code>for</code>属性值必须与表单元素<code>id</code>值匹配），即使源顺序不是完全合乎逻辑的，也能提供很好的可访问性。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 更多关于链接文本和表单标签，请阅读<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E6%96%87%E5%AD%97%E6%A0%87%E7%AD%BE">有意义的文字标签</a></p>
+<p><strong>备注：</strong> 更多关于链接文本和表单标签，请阅读<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%9C%89%E6%84%8F%E4%B9%89%E7%9A%84%E6%96%87%E5%AD%97%E6%A0%87%E7%AD%BE">有意义的文字标签</a></p>
 </div>
 
 <p>最后，简要介绍一下数据表。基本数据表可以用非常简单的标记编写（请参阅<a href="http://mdn.github.io/learning-area/accessibility/html/bad-table.html">bad-table.html</a>和<a href="https://github.com/mdn/learning-area/blob/master/accessibility/html/bad-table.html">源码</a>)），但这存在问题 — 屏幕阅读器用户无法将行或列作为数据分组关联在一起，但你需要知道标题行是什么，以及标题行行的标题还是列的标题等。这些只能从可视化的表格才能知道。</p>
@@ -201,7 +201,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>相反，如果你看一下我们的<code>punk-bands-complete.html</code>示例（<a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">示例</a>，<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-complete.html">源码</a>），则可以在此处看到一些可访问性辅助，例如表头（{{htmlelement("th")}}和<code>作用域</code>属性），{{htmlelement("caption")}}元素等。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 更多信息，请阅读<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E8%A1%A8%E6%A0%BC">可访问的表格</a></p>
+<p><strong>备注：</strong> 更多信息，请阅读<a href="/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E5%8F%AF%E8%AE%BF%E9%97%AE%E7%9A%84%E8%A1%A8%E6%A0%BC">可访问的表格</a></p>
 </div>
 
 <h3 id="CSS">CSS</h3>
@@ -223,7 +223,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>另一个提示是不要仅依靠颜色来表示界标/信息，因为这对于看不见颜色的人来说是不好的。例如，不要将所需的表单字段标记为红色，而应使用星号和红色标记它们。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 高对比度也可以让使用带有光滑屏幕的设备（例如智能手机或平板电脑）的人在明亮的环境（例如阳光）下可以更好地阅读页面。</p>
+<p><strong>备注：</strong> 高对比度也可以让使用带有光滑屏幕的设备（例如智能手机或平板电脑）的人在明亮的环境（例如阳光）下可以更好地阅读页面。</p>
 </div>
 
 <h4 id="隐藏的内容">隐藏的内容</h4>
@@ -237,7 +237,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>另一方面，你不应该使用{{cssxref("visibility")}}<code>:hidden</code>或者{{cssxref("display")}}<code>:none</code>, 因为它们会让屏幕阅读器取不到那些内容，除非你真的想让屏幕阅读器不读取那些内容。</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a>有更多关于这个话题的详细信息</p>
+<p><strong>备注：</strong> <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a>有更多关于这个话题的详细信息</p>
 </div>
 
 <h3 id="JavaScript">JavaScript</h3>
@@ -254,7 +254,7 @@ a:focus, input:focus, button:focus, select:focus {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM 的<a href="http://webaim.org/techniques/javascript/">Accessible JavaScript</a>提供了一些关于 JavaScript 可访问性注意事项的信息。</p>
+<p><strong>备注：</strong> WebAIM 的<a href="http://webaim.org/techniques/javascript/">Accessible JavaScript</a>提供了一些关于 JavaScript 可访问性注意事项的信息。</p>
 </div>
 
 <p>更复杂的 JavaScript 实现可能会带来可访问性问题 — 你需要尽力而为。例如，期望让使用 WebGL 编写的复杂 3D 游戏对盲人来说 100％可访问性是不合理的，但是你可以实现键盘控件，以便非鼠标用户可以使用它，并使配色方案具有足够的对比度供有颜色分辨障碍的人使用。</p>
@@ -312,12 +312,12 @@ a:focus, input:focus, button:focus, select:focus {
  <li>下滑，直到你看到错误/描述部分，如下图。</li>
 </ol>
 
-<p><img src="https://mdn.mozillademos.org/files/14217/tenon-screenshot.png" style="border-style: solid; border-width: 1px; display: block; height: 593px; margin: 0px auto; width: 870px;"></p>
+<p><img src="https://mdn.mozillademos.org/files/14217/tenon-screenshot.png"></p>
 
 <p>你还可以探索一些选项（请参阅页面顶部附近的<em>Show Options（译者注：显示选项）</em>链接），或者使用 Tenon 的 API。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 这些工具不足以单独解决你的所有可访问性问题。你需要将这些，知识和经验，用户测试等结合起来才能获得完整的解决方案。</p>
+<p><strong>备注：</strong> 这些工具不足以单独解决你的所有可访问性问题。你需要将这些，知识和经验，用户测试等结合起来才能获得完整的解决方案。</p>
 </div>
 
 <h3 id="自动化工具">自动化工具</h3>
@@ -350,7 +350,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>一起看一下我们对几款不同的屏幕阅读器的测试。这将帮助你大致了解它们如何工作以及如何测试它们。</p>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM 的 <a href="http://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a>提供了一些关于屏幕阅读器的使用和如何开发应用以最好的适用屏幕阅读器的信息。你也可以看下<a href="http://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a>这篇有关屏幕阅读器一些有趣的统计信息的文章。</p>
+<p><strong>备注：</strong> WebAIM 的 <a href="http://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility</a>提供了一些关于屏幕阅读器的使用和如何开发应用以最好的适用屏幕阅读器的信息。你也可以看下<a href="http://webaim.org/projects/screenreadersurvey6/#used">Screen Reader User Survey #6 Results</a>这篇有关屏幕阅读器一些有趣的统计信息的文章。</p>
 </div>
 
 <h4 id="VoiceOver">VoiceOver</h4>
@@ -360,7 +360,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>按下 Cmd + Fn + F5 打开它。如果你之前没用过 VO，将会出现一个可以选择是否开启 VO 的欢迎界面，并且还会有教程指导你如何使用。再次按下 Cmd + Fn + F5 可以关闭。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 你应该至少看一遍教程，它对于你了解 VO 是非常有用的。</p>
+<p><strong>备注：</strong> 你应该至少看一遍教程，它对于你了解 VO 是非常有用的。</p>
 </div>
 
 <p>当 VO 开启时，你会看到一个会显示当前选中信息的黑色框在屏幕的左下角，除此之外屏幕显示大体还是相同的。当前选中的部分也会出现一个黑色的边框以进行高亮显示，这个黑色框就是 VO 的光标。</p>
@@ -468,7 +468,7 @@ a:focus, input:focus, button:focus, select:focus {
 <p>在使用中，你会用到"NVDA 修饰键"，"NVDA 修饰键"是一个单独键，当你使用 NVDA 的快捷键时，你需要额外按下这个"NVDA 修饰键"。屏幕阅读器通常都会有修饰键，防止它们的快捷键和其他程序的快捷键冲突。NVDA 的修饰键是 Insert 键（默认）, 或 CapsLock 键（在欢迎界面可以选择使用该键）。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 关于高亮方面，NVDA 比 VoiceOver 做的更好。当滚动过标题、列表等元素时，你选中的项目会被一个细微的边框包住以高亮，但不是对于所有元素都是这样的。如果你感觉迷失方向了，可以按 Ctrl + F5 刷新页面，并从顶部重新开始。</p>
+<p><strong>备注：</strong> 关于高亮方面，NVDA 比 VoiceOver 做的更好。当滚动过标题、列表等元素时，你选中的项目会被一个细微的边框包住以高亮，但不是对于所有元素都是这样的。如果你感觉迷失方向了，可以按 Ctrl + F5 刷新页面，并从顶部重新开始。</p>
 </div>
 
 <p>NVDA 有很多快捷键，我们没有全部列出来。只把测试网页可访问性常用的一些在下面列出了。表格里，"NVDA"代表"NVDA 修饰键"。</p>

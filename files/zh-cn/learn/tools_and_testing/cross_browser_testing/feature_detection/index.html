@@ -28,7 +28,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <p>Let's recap and look at the example we touched on in our <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Handling common JavaScript problems</a> — the <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a <code>geolocation</code> property available on the global <a href="/en-US/docs/Web/API/Navigator">Navigator</a> object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:</p>
 
-<pre class="language-js notranslate">if ("geolocation" in navigator) {
+<pre class="brush: js">if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
     // show the location on a map, perhaps using the Google Maps API
   });
@@ -55,7 +55,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 <ol>
  <li>Start by making local copies of our <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html">css-feature-detect.html</a></code>, <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/flex-layout.css">flex-layout.css</a></code>, <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/float-layout.css">float-layout.css</a></code>, and <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/basic-styling.css">basic-styling.css</a></code> files. Save them in a new directory.</li>
  <li>We will add the HTML5 Shiv to our example too so that the HTML5 semantic elements will style properly in older versions of IE. Download the latest version (see <a href="https://github.com/aFarkas/html5shiv#manual-installation">Manual installation</a>), unzip the ZIP file, copy the <code>html5shiv-printshiv.min.js</code> and <code>html5shiv.min.js</code> files into your example directory, and link to one of the files by putting the following under your {{htmlelement("title")}} element:
-  <pre class="notranslate">&lt;script src="html5shiv.min.js"&gt;&lt;/script&gt;</pre>
+  <pre class="brush: html">&lt;script src="html5shiv.min.js"&gt;&lt;/script&gt;</pre>
  </li>
  <li>Have a look at your example CSS files — you'll see that <code>basic-styling.css</code> handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browser depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.</li>
  <li>First, remove the contents of the second <code>&lt;link&gt;</code> element's <code>href</code> attribute. We will fill this in dynamically later on.</li>
@@ -74,13 +74,13 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 <p>Here we are grabbing a reference to the second <code>&lt;link&gt;</code> element, and creating a <code>&lt;div&gt;</code> element as part of our test. In our conditional statement, we test that the {{cssxref("flex")}} and {{cssxref("flex-flow")}} properties exist in the browser. Note how the JavaScript representations of those properties that are stored inside the {{domxref("HTMLElement.style")}} object use lower camel case, not hyphens, to separate the words.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you have trouble getting this to work, you can compare it to our <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">css-feature-detect-finished.html</a> code (see also the <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">live version</a>).</p>
+<p><strong>备注：</strong> If you have trouble getting this to work, you can compare it to our <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">css-feature-detect-finished.html</a> code (see also the <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">live version</a>).</p>
 </div>
 
 <p>When you save everything and try out your example, you should see the flexbox layout applied to the page if the browser supports modern flexbox, and the float layout if not.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour">CSS fallback behavior</a> and <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes">Handling CSS prefixes</a>.</p>
+<p><strong>备注：</strong> Often such an approach is overkill for a minor feature detection problem — you can often get away with using multiple vendor prefixes and fallback properties, as described in <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour">CSS fallback behavior</a> and <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes">Handling CSS prefixes</a>.</p>
 </div>
 
 <h4 id="supports">@supports</h4>
@@ -162,7 +162,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 </table>
 
 <div class="note">
-<p><strong>Note</strong>: The double <code>NOT</code> in the above example (<code>!!</code>) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.</p>
+<p><strong>备注：</strong> The double <code>NOT</code> in the above example (<code>!!</code>) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.</p>
 </div>
 
 <p>The <a href="http://diveinto.html5doctor.com/detect.html">Dive into HTML5 Detecting HTML5 Features</a> page has a lot more useful feature detection tests besides the ones listed above, and you can generally find a feature detection test for most things by searching for "detect support for YOUR-FEATURE-HERE" in your favorite search engine. Bear in mind though that some features, however, are known to be undetectable — see Modernizr's list of <a href="https://github.com/Modernizr/Modernizr/wiki/Undetectables">Undetectables</a>.</p>
@@ -220,7 +220,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 
 <p>At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your <code>&lt;html&gt;</code> <code>class</code> value like so:</p>
 
-<pre class="notranslate">&lt;html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
+<pre class="brush: html">&lt;html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
 blob-constructor cookies cors ...AND LOADS MORE VALUES!&gt;</pre>
 
 <p>It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support flexbox at all, <code>&lt;html&gt;</code> would be given a class name of <code>no-flexbox</code>. If it did support modern flexbox, it would get a class name of <code>flexbox</code>. If you search through the class list, you'll also see others relating to flexbox, like:</p>
@@ -232,7 +232,7 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!&gt;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: You can find a list of what all the class names mean — see <a href="https://modernizr.com/docs#features">Features detected by Modernizr</a>.</p>
+<p><strong>备注：</strong> You can find a list of what all the class names mean — see <a href="https://modernizr.com/docs#features">Features detected by Modernizr</a>.</p>
 </div>
 
 <p>Moving on, let's update our CSS to use Modernizr rather than <code>@supports</code>. Go into <code>modernizr-css.css</code>, and replace the two <code>@supports</code> blocks with the following:</p>
@@ -271,11 +271,11 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!&gt;</pre>
 <p>So how does this work? Because all those class names have been put on the <code>&lt;html&gt;</code> element, you can target browsers that do or don't support a feature using specific descendant selectors. So here we're applying the top set of rules only to browsers that do support flexbox, and the bottom set of rules only to browsers that don't (<code>no-flexbox</code>).</p>
 
 <div class="note">
-<p><strong>Note</strong>: Bear in mind that all of Modernizr's HTML and JavaScript feature tests are also reported in these class names, so you can quite happily apply CSS selectively based on whether the browser supports HTML or JavaScript features, if needed.</p>
+<p><strong>备注：</strong> Bear in mind that all of Modernizr's HTML and JavaScript feature tests are also reported in these class names, so you can quite happily apply CSS selectively based on whether the browser supports HTML or JavaScript features, if needed.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: If you have trouble getting this to work, check your code against our <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html">modernizr-css.html</a></code> and <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.css">modernizr-css.css</a></code> files (see this running live also).</p>
+<p><strong>备注：</strong> If you have trouble getting this to work, check your code against our <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html">modernizr-css.html</a></code> and <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.css">modernizr-css.css</a></code> files (see this running live also).</p>
 </div>
 
 <h3 id="JavaScript_2">JavaScript</h3>
@@ -284,7 +284,7 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!&gt;</pre>
 
 <p>For example, load up our <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html">modernizr-css.html</a></code> example in your browser, then try going to your JavaScript console and typing in <code>Modernizr.</code> followed by some of those class names (they are the same here too). For example:</p>
 
-<pre class="notranslate">Modernizr.flexbox
+<pre class="brush: plain">Modernizr.flexbox
 Modernizr.websqldatabase
 Modernizr.xhr2
 Modernizr.fetch</pre>

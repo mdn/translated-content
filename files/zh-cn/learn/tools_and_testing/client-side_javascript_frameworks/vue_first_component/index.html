@@ -10,7 +10,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fi
 <p>现在是时候深入了解 Vue，并创建我们自己的自定义组件了--我们将从创建一个组件来表示待办事项列表中的每个项目开始。在这一过程中，我们将学习一些重要的概念，例如在其他组件中调用组件，通过道具向它们传递数据，以及保存数据状态。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 如果你需要根据我们的版本检查您的代码， 你可以在我们的<a href="https://github.com/mdn/todo-vue"> todo-vue</a> 仓库找到中找到示例 Vue 程序代码的完成版本。 有关运行中的实时版本，请参见 <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a>。</p>
+<p><strong>备注：</strong> 如果你需要根据我们的版本检查您的代码， 你可以在我们的<a href="https://github.com/mdn/todo-vue"> todo-vue</a> 仓库找到中找到示例 Vue 程序代码的完成版本。 有关运行中的实时版本，请参见 <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a>。</p>
 </div>
 
 <table class="learn-box standard-table">
@@ -134,7 +134,7 @@ export default {
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 注意：prop 验证只能在 development 模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态 (或其他 props)。</p>
+<p><strong>备注：</strong> 注意：prop 验证只能在 development 模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态 (或其他 props)。</p>
 </div>
 
 <p>针对 ToDoItem 组件，我们将使用对象注册法。</p>
@@ -187,7 +187,7 @@ export default {
 
 <p>回到网页浏览器中，您将会看到 todo item 与之前相同，但是没有 label。转到浏览器的开发者工具，您会在控制台中看到这样的警告：</p>
 
-<pre class="notranslate">[Vue warn]: Missing required prop: "label"
+<pre class="brush: plain">[Vue warn]: Missing required prop: "label"
 
 found in
 
@@ -224,7 +224,7 @@ found in
 
 <p>您可以使用<code>this</code>从内部数据访问组件的 props 和其他属性，如所你料。我们很快就会看到一个示例。</p>
 <div class="blockIndicator note">
-<p><strong>注意</strong>：由于<code>this</code>在箭头函数中的工作方式（绑定到父级的上下文），如果使用箭头函数，您将无法从内部<code>data</code>访问任何必要的属性。因此，不要对<code>data</code>属性使用箭头函数。</p>
+<p><strong>备注：</strong> 由于<code>this</code>在箭头函数中的工作方式（绑定到父级的上下文），如果使用箭头函数，您将无法从内部<code>data</code>访问任何必要的属性。因此，不要对<code>data</code>属性使用箭头函数。</p>
 </div>
 
 <p>因此，让我们向 <code>ToDoItem</code> 组件添加一个<code>data</code>属性。这将返回一个包含单个属性的对象，即我们将调用<code>isDone</code>，其值为 <code>this.done</code>。</p>
@@ -247,7 +247,7 @@ found in
 
 <p>因此，现在我们需要将 <code>isDone</code> 属性附加到我们的组件。与 Vue 使用 <code>\{{}}</code> 表达式在模板中显示 JavaScript 表达式的方式类似，Vue 有一种特殊的语法将 JavaScript 表达式绑定到 HTML 元素和组件：<code><strong>v-bind</strong></code>。<code>v-bind</code>表达式如下所示：</p>
 
-<pre class="notranslate">v-bind:attribute="expression"</pre>
+<pre class="brush: plain">v-bind:attribute="expression"</pre>
 
 <p>换句话说，你可以在要绑定到的任何 attribute/prop 前面加上 <code>v-bind:</code>。在大多数情况下，你可以对 <code>v-bind:</code> 属性使用速记，即只在 attribute/prop 前面加上冒号。所以 <code>:attribute="expression"</code> 的工作方式与 <code>v-bind:attribute="expression"</code>相同。</p>
 
@@ -288,7 +288,7 @@ found in
 <pre class="brush: bash notranslate">npm install --save lodash.uniqueid</pre>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：如果你更喜欢 yarn，则可以改用<code>yarn add lodash.uniqueid</code>。</p>
+<p><strong>备注：</strong> 如果你更喜欢 yarn，则可以改用<code>yarn add lodash.uniqueid</code>。</p>
 </div>
 
 <p>现在，我们可以将此包导入我们的<code>ToDoItem</code>组件中。在<code>ToDoItem.vue</code>的<code>&lt;script&gt;</code>元素的顶部添加以下行：</p>
