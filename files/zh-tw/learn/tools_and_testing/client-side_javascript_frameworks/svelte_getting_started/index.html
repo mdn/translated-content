@@ -47,7 +47,7 @@ tags:
 <p>現階段的缺點只因它目前仍在發展中——和其它成熟框架相比它的生態環境較受限於工具、支援、套件、使用模式等等限制，工作機會也比較少。但它的優點應該足夠讓你感興趣並去探索它。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：最近Svelte已經正式加入<a href="https://svelte.dev/blog/svelte-and-typescript">TypeScript支援</a>，這也是最受歡迎的功能之一，我們將在之後的教學系列中看到它。</p>
+<p><strong>備註：</strong> 最近Svelte已經正式加入<a href="https://svelte.dev/blog/svelte-and-typescript">TypeScript支援</a>，這也是最受歡迎的功能之一，我們將在之後的教學系列中看到它。</p>
 </div>
 
 <p>我們鼓勵你走完<a href="https://svelte.dev/tutorial/basics">Svelte教學</a>來快速了解基本的概念，在你回來此教學系列學習如何建構一些更深入的東西之前。它應該會花費你約30分鐘去完成。</p>
@@ -108,18 +108,18 @@ npm install
 npm run dev</pre>
 
 <div class="notecard note">
-<p><strong>注意</strong>：不用太驚訝degit做了這麼多事情——它其實就只是讓你可以從git儲存庫下載和解壓縮最新版本的內容。使用它比起使用<code>git clone</code>更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。</p>
+<p><strong>備註：</strong> 不用太驚訝degit做了這麼多事情——它其實就只是讓你可以從git儲存庫下載和解壓縮最新版本的內容。使用它比起使用<code>git clone</code>更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。</p>
 </div>
 
 <p>之後執行<code>npm run dev</code>，Svelte將會編譯和建構你的應用程式。它將會跑在本機<code>localhost:5000</code>位址。當你對來源檔案做了異動，Svelte將會偵測到檔案更新並自動地重新編譯和刷新你的應用程式。你的瀏覽器將會顯示如下圖：</p>
 
-<p><img alt="A simple start page that says hello world, and gives a link to the official svelte tutorials" src="01-svelte-starter-app.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="A simple start page that says hello world, and gives a link to the official svelte tutorials" src="01-svelte-starter-app.png"></p>
 
 <h3 id="Application_structure">應用程式結構</h3>
 
 <p>入門範本有下列結構：</p>
 
-<pre>moz-todo-svelte
+<pre class="brush: plain">moz-todo-svelte
 ├── README.md
 ├── package.json
 ├── package-lock.json
@@ -190,7 +190,7 @@ npm run dev</pre>
 &lt;!-- 標記（零或多個HTML元素）放這 --&gt;</pre>
 
 <div class="notecard note">
-<p><strong>注意</strong>：更多元件格式的資訊，可以至<a href="https://svelte.dev/docs#Component_format">svelte文件</a>閱讀。</p>
+<p><strong>備註：</strong> 更多元件格式的資訊，可以至<a href="https://svelte.dev/docs#Component_format">svelte文件</a>閱讀。</p>
 </div>
 
 <p>接著我們來看入門範本中的<code>src/App.svelte</code>檔案，你應該會看到以下內容：</p>
@@ -284,7 +284,7 @@ npm run dev</pre>
 <p>編譯應用程式時，Svelte會改變我們<code>h1</code>的樣式定義為<code>h1.svelte-1tky8bj</code>並更改每一個在此元件中的<code>&lt;h1&gt;</code>元素為<code>&lt;h1 class="svelte-1tky8bj"&gt;</code>，如此就能讓該元件取得所需的樣式。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：你也可以使用<code>:global(...)</code>修飾符覆寫此行為並且套用樣式至全域選擇器上（可以至<a href="https://svelte.dev/docs#style">Svelte <code>&lt;style&gt;</code>文件</a>閱讀更多資訊）。</p>
+<p><strong>備註：</strong> 你也可以使用<code>:global(...)</code>修飾符覆寫此行為並且套用樣式至全域選擇器上（可以至<a href="https://svelte.dev/docs#style">Svelte <code>&lt;style&gt;</code>文件</a>閱讀更多資訊）。</p>
 </div>
 
 <h2 id="Making_a_couple_of_changes">做一些小改變</h2>
@@ -410,7 +410,7 @@ npm run dev</pre>
 <p>假如你想要學習更多關於git和GitHub，我們已經有整理一些有幫助的連結清單至指南——看看<a href="/zh-TW/docs/Learn/Tools_and_testing/GitHub">Git和GitHub</a>。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：假如你只是想要下載檔案而不是複製git儲存庫，你可以使用degit工具像是這樣——<code>npx degit opensas/mdn-svelte-tutorial</code>。你也可以用<code>npx degit opensas/mdn-svelte-tutorial/01-getting-started</code>來下載特定資料夾。Degit將不會建立本地git儲存庫，它將只下載特定資料夾下的檔案們。</p>
+<p><strong>備註：</strong> 假如你只是想要下載檔案而不是複製git儲存庫，你可以使用degit工具像是這樣——<code>npx degit opensas/mdn-svelte-tutorial</code>。你也可以用<code>npx degit opensas/mdn-svelte-tutorial/01-getting-started</code>來下載特定資料夾。Degit將不會建立本地git儲存庫，它將只下載特定資料夾下的檔案們。</p>
 </div>
 
 <h3 id="Using_the_Svelte_REPL">使用Svelte REPL</h3>
@@ -444,13 +444,13 @@ npm run dev</pre>
 <p>每當你在REPL改變任何檔案，Svelte將會重新編譯應用程式並更新結果（Result）標籤。為了分享你的應用程式網址。舉個例子，這是運行我們完整應用程式的REPL連結：<a href="https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2">https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2</a>。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：可以注意一下在連結上怎麼標註Svelte的版本。當你在回報Svelte特定版本的問題時，這是很有幫助的。</p>
+<p><strong>備註：</strong> 可以注意一下在連結上怎麼標註Svelte的版本。當你在回報Svelte特定版本的問題時，這是很有幫助的。</p>
 </div>
 
 <p>我們將會在每一篇文章的開頭與結尾提供REPL，所以你就能立刻和我們一起撰寫程式碼。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：不知何時REPL變得沒辦法適當地處理資料夾名稱。假如你是使用REPL來跟著教學系列，只需要將所有你的元件建立在根目錄即可。接著當你看到程式碼中的路徑時，舉例來說如果是<code>import Todos from './components/Todos.svelte'</code>，只需要將它換成類似如<code>import Todos from './Todos.svelte'</code>即可。</p>
+<p><strong>備註：</strong> 不知何時REPL變得沒辦法適當地處理資料夾名稱。假如你是使用REPL來跟著教學系列，只需要將所有你的元件建立在根目錄即可。接著當你看到程式碼中的路徑時，舉例來說如果是<code>import Todos from './components/Todos.svelte'</code>，只需要將它換成類似如<code>import Todos from './Todos.svelte'</code>即可。</p>
 </div>
 
 <h2 id="The_code_so_far">到目前為止的程式碼</h2>

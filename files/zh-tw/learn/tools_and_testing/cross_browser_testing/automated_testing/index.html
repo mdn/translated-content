@@ -36,7 +36,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 <p>我們會在下一篇文章，專注於如何設定基於 Selenium 的個人測試系統。這篇文章則會專注於如何設定任務執行器，並簡單與系統化地，使用前述的商業系統。</p>
 
 <div class="note">
-<p><strong>注意</strong>：這兩件事情並不互斥。我們可以用任務執行器來訪問服務。例如，你可以用 Sauce Labs 的 API 來跑跨瀏覽器測試，並顯示結果。我們會在下面解釋這件事。</p>
+<p><strong>備註：</strong> 這兩件事情並不互斥。我們可以用任務執行器來訪問服務。例如，你可以用 Sauce Labs 的 API 來跑跨瀏覽器測試，並顯示結果。我們會在下面解釋這件事。</p>
 </div>
 
 <h2 id="使用任務執行器以自動化測試工具">使用任務執行器以自動化測試工具</h2>
@@ -60,7 +60,7 @@ npm -v</pre>
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>：如果因為權限問題而失敗，<a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">Fixing npm permissions</a> 應該對你有所幫助。</p>
+<p><strong>備註：</strong> 如果因為權限問題而失敗，<a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">Fixing npm permissions</a> 應該對你有所幫助。</p>
 </div>
 
 <p>要在專案裡面使用 node/npm 套件，你需要把專案所在目錄設為 npm 專案。它很簡單。</p>
@@ -149,10 +149,10 @@ gulp.task('default', function() {
 </pre>
 
   <div class="note">
-  <p><strong>注意</strong>：<code>--save-dev</code> 會把此套件加到開發相依設定中。如果去看專案的 <code>package.json</code> 檔，你會在 <code>devDependencies</code> 屬性看到它被放在裡面。</p>
+  <p><strong>備註：</strong> <code>--save-dev</code> 會把此套件加到開發相依設定中。如果去看專案的 <code>package.json</code> 檔，你會在 <code>devDependencies</code> 屬性看到它被放在裡面。</p>
   </div>
  </li>
- <li class="line">在 <code>gulpfile.js</code> 增加這個相依：
+ <li>在 <code>gulpfile.js</code> 增加這個相依：
   <pre class="brush: js">var htmltidy = require('gulp-htmltidy');</pre>
  </li>
  <li>在 <code>gulpfile.js</code> 的底部加入以下測試：
@@ -203,16 +203,16 @@ var csslint = require('gulp-csslint');</pre>
 
 <ol>
  <li>輸入以下指令安裝：
-  <pre class="editor editor-colors">npm install --save-dev gulp-babel babel-preset-es2015
+  <pre class="brush: bash">npm install --save-dev gulp-babel babel-preset-es2015
 npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>在 <code>gulpfile.js</code> 增加這個相依：
-  <pre class="editor editor-colors">var babel = require('gulp-babel');
+  <pre class="brush: js">var babel = require('gulp-babel');
 var jshint = require('gulp-jshint');
 </pre>
  </li>
- <li class="line">在 <code>gulpfile.js</code> 的底部加入以下測試：
+ <li>在 <code>gulpfile.js</code> 的底部加入以下測試：
   <pre class="brush: js">gulp.task('js', function() {
     return gulp.src('src/main.js')
         .pipe(jshint())
@@ -249,11 +249,11 @@ var jshint = require('gulp-jshint');
 <p>現在來輸入 <code>gulp watch</code> 指令。Gulp 會開始監視目錄，並在儲存 HTML、CSS、JavaScript 檔的時候，運行適當的任務。</p>
 
 <div class="note">
-<p><strong>註</strong>：<code>*</code> 是通配字符（wildcard character）－－這裡的意思是「當任何檔案被儲存的時候，執行這些任務」。你也可以在主要任務內使用通配，例如 <code>gulp.src('src/*.css')</code> 會抓取所有的 CSS 檔案並執行 piped task。</p>
+<p><strong>備註：</strong> <code>*</code> 是通配字符（wildcard character）－－這裡的意思是「當任何檔案被儲存的時候，執行這些任務」。你也可以在主要任務內使用通配，例如 <code>gulp.src('src/*.css')</code> 會抓取所有的 CSS 檔案並執行 piped task。</p>
 </div>
 
 <div class="note">
-<p><strong>註</strong>：在我們的 watch 指令有個問題，那就是我們的 CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.</p>
+<p><strong>備註：</strong> 在我們的 watch 指令有個問題，那就是我們的 CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.</p>
 </div>
 
 <p>你還可以用 Gulp 做很多事情。<a href="http://gulpjs.com/plugins/">Gulp plugin directory</a> 收錄了近千個可搜尋的套件。</p>
@@ -307,7 +307,7 @@ var jshint = require('gulp-jshint');
 <p>Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can for example download any screenshots you took, watch a video of the session, and view data logs for the session.</p>
 
 <div class="note">
-<p><strong>註</strong>：This is already very useful, and way more convenient than having to set all these emulators and virtual machines by yourself.</p>
+<p><strong>備註：</strong> This is already very useful, and way more convenient than having to set all these emulators and virtual machines by yourself.</p>
 </div>
 
 <h3 id="進階：The_Sauce_Labs_API">進階：The Sauce Labs API</h3>
@@ -321,7 +321,7 @@ var jshint = require('gulp-jshint');
 <ol>
  <li>First, set up a new npm project to test this out, as detailed in <a href="#設定_node_與_npm">Setting up Node and npm</a>. Use a different directory name than before, like <code>sauce-test</code> for example.</li>
  <li>使用以下指令安裝 Node Sauce Labs wrapper：
-  <pre>npm install saucelabs</pre>
+  <pre class="brush: bash">npm install saucelabs</pre>
  </li>
  <li>在專案根目錄下建立個稱作 <code>call-sauce.js</code> 的新檔案。寫入以下內容：
   <pre class="brush: js">var SauceLabs = require('saucelabs');

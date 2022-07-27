@@ -94,7 +94,7 @@ tags:
   <p>建立新資料夾——<code>src/components</code>。</p>
 
   <div class="notecard note">
-  <p><strong>注意</strong>：你可以把元件們放在<code>src</code>資料夾當中的任何地方，但放在<code>components</code>資料夾是比較常見的做法，也讓你可以更容易地找到元件們。</p>
+  <p><strong>備註：</strong> 你可以把元件們放在<code>src</code>資料夾當中的任何地方，但放在<code>components</code>資料夾是比較常見的做法，也讓你可以更容易地找到元件們。</p>
   </div>
  </li>
  <li>
@@ -131,7 +131,7 @@ export default app</pre>
 
 <p>假如你現在檢查你的測試伺服器URL，應該會看到<code>Todos.svelte</code>元件已經被渲染出如下畫面：</p>
 
-<p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+<p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png"></p>
 
 <h2 id="Adding_static_markup">加上靜態標記語言</h2>
 
@@ -260,7 +260,7 @@ export default app</pre>
 
 <p>再次確認已經渲染出來的畫面，你應該會看到如下樣子：</p>
 
-<p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="03-unstyled-todo-app.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="03-unstyled-todo-app.png"></p>
 
 <p>上面HTML標記語言的樣式並不是那麼好看，而且也沒有實際功能。儘管如此，接著來看看它和我們想要的功能如何關聯起來：</p>
 
@@ -336,7 +336,7 @@ created public/build/bundle.js in 220ms
 </pre>
 
 <div class="notecard note">
-<p><strong>注意</strong>：透過VSCode你可以點擊<em>Quick fix...</em>連結或按<kbd>Ctrl</kbd> + <kbd>.</kbd>來自動地加上這個忽略註解。</p>
+<p><strong>備註：</strong> 透過VSCode你可以點擊<em>Quick fix...</em>連結或按<kbd>Ctrl</kbd> + <kbd>.</kbd>來自動地加上這個忽略註解。</p>
 </div>
 
 <p>假如你想要全域地關閉這個警示，可以在你的<code>rollup.config.js</code>檔案中調整<code>Svelte</code>外掛組態並補上這個<code>onwarn</code>處理器即可，像是如下：</p>
@@ -366,7 +366,7 @@ created public/build/bundle.js in 220ms
 <p>在設計上，這些警示被實現於編譯器本身，而不是你可以選擇性加入專案的外掛。理念是建立在預設會檢核你的標記語言有無a11y問題並讓你可以選擇排除特定警示。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：假如你有足夠充分的理由，則可以先停用這些警示，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。</p>
+<p><strong>備註：</strong> 假如你有足夠充分的理由，則可以先停用這些警示，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。</p>
 </div>
 
 <p>Svelte透過<a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules">eslint-plugin-jsx-a11y</a>來檢核無障礙性規則，它是提供在JSX元素上許多無障礙性規則靜態檢核的一個eslint外掛。Svelte企圖將它們全部實現於編譯器中，而大部分都已經移植至Svelte中。你可以在GitHub中看到<a href="https://github.com/sveltejs/svelte/issues/820">尚未實現的無障礙檢核</a>。點選規則的連結可以查閱它們各自的涵義。</p>
