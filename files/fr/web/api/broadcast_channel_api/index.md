@@ -4,6 +4,8 @@ slug: Web/API/Broadcast_Channel_API
 page-type: web-api-overview
 translation_of: Web/API/Broadcast_Channel_API
 browser-compat: api.BroadcastChannel
+l10n:
+  sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
 {{DefaultAPISidebar("Broadcast Channel API")}}
 
@@ -45,7 +47,7 @@ Lorsqu'un message est posté, un évènement [`message`](/fr/docs/Web/API/Broadc
 
 ```js
 // Un gestionnaire affichant simplement les messages sur la console :
-bc.onmessage = event => { console.log(event); }
+bc.onmessage = (event) => { console.log(event); }
 ```
 
 ### Déconnexion d'un canal

@@ -46888,13 +46888,6 @@
       "zhouxu"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
-    "modified": "2019-03-18T20:48:25.704Z",
-    "contributors": [
-      "teoli",
-      "AlixWang"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
     "modified": "2019-09-21T03:39:30.024Z",
     "contributors": [
