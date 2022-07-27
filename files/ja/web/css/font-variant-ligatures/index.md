@@ -3,9 +3,9 @@ title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
 tags:
   - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
+  - CSS Fonts
+  - CSS Property
+  - Reference
   - recipe:css-property
 browser-compat: css.properties.font-variant-ligatures
 translation_of: Web/CSS/font-variant-ligatures
@@ -35,6 +35,7 @@ font-variant-ligatures: no-contextual;              /* <contextual-alt-values> *
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
 font-variant-ligatures: revert;
+font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
@@ -84,7 +85,7 @@ font-variant-ligatures: unset;
 
 ## 例
 
-<h3 id="Setting_font_ligatures_and_contextual_forms">フォントの合字と文脈に合わせた字形の設定</h3>
+### フォントの合字と文脈に合わせた字形の設定
 
 #### HTML
 
@@ -189,7 +190,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700', '', 'Web/CSS/font-variant-ligatures') }}
+{{ EmbedLiveSample('Setting font ligatures and contextual forms', '', '700') }}
 
 ## 仕様書
 
