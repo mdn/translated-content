@@ -10,7 +10,7 @@ tags:
   - Method
   - Reference
   - abort()
-browser-compat: Web/API/AbortController/abort
+translation_of: Web/API/AbortController/abort
 ---
 {{APIRef("DOM")}}
 
