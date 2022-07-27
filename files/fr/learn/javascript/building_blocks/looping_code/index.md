@@ -250,11 +250,11 @@ Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et
 
 1. L'itérateur, `i`, commence à `0` (`let i = 0`).
 2. On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important  — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
-3. Au sein de la boucle, on concatène les éléments présents dans cette boucle (`cats[i]` est `cats[quel que soit la valeur de i lors de l'iteration]`) avec une virgule et un espace, à la fin de la variable `info`. Donc&nbsp;:
+3. Au sein de la boucle, on concatène les éléments présents dans cette boucle (`cats[i]` est `cats[quelle que soit la valeur de i lors de l'itération]`) avec une virgule et un espace, à la fin de la variable `info`. Donc&nbsp;:
 
     1. Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
     2. Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à  ("Jeff, ")
-    3. Et ainsi de suite. Aprés chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
+    3. Et ainsi de suite. Après chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
 
 4. Quand `i` devient égal à `cats.length`, la boucle s'arrête, et le navigateur va bouger au prochain bout de code après la boucle.
 
@@ -500,7 +500,7 @@ do {
 
 Dans ce cas, l'initialiseur vient en premier, avant que la boucle ne commence. Le mot-clé `do` précède directement les accolades contenant le code à exécuter et l'expression finale.
 
-Le différenciateur ici est que la condition de sortie vient après tout, envelopée entre parenthèses et précédée d'un mot-clé `while`. Dans une boucle `do…while`, le code à l'intérieur des accolades est toujours exécuté une fois avant que la vérification ne soit effectuée pour voir si elle doit être exécutée à nouveau (dans while et for, la vérification arrive en premier, donc le code pourrait ne jamais être exécuté).
+Le différenciateur ici est que la condition de sortie vient après tout, enveloppée entre parenthèses et précédée d'un mot-clé `while`. Dans une boucle `do…while`, le code à l'intérieur des accolades est toujours exécuté une fois avant que la vérification ne soit effectuée pour voir si elle doit être exécutée à nouveau (dans while et for, la vérification arrive en premier, donc le code pourrait ne jamais être exécuté).
 
 Réécrivons notre exemple de listing de chat pour utiliser une boucle `do…while`&nbsp;:
 
