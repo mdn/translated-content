@@ -2406,7 +2406,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/contains	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/includes
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Symbol/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects
