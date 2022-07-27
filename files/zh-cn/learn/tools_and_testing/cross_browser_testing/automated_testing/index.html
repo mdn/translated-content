@@ -36,7 +36,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 <p>We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.</p>
 
 <div class="note">
-<p><strong>Note</strong>: the above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs via an API, run cross browser tests, and return results. We will look at this below as well.</p>
+<p><strong>备注：</strong> the above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs via an API, run cross browser tests, and return results. We will look at this below as well.</p>
 </div>
 
 <h2 id="使用任务运行器作为自动化测试工具">使用任务运行器作为自动化测试工具</h2>
@@ -60,7 +60,7 @@ npm -v</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: If the above command fails with permissions errors, <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">Fixing npm permissions</a> should sort you out.</p>
+<p><strong>备注：</strong> If the above command fails with permissions errors, <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">Fixing npm permissions</a> should sort you out.</p>
 </div>
 
 <p>要在你的工程上使用基于Node/npm的包，你还需要把你的工程目录设为npm工程。这并不难。</p>
@@ -149,10 +149,10 @@ gulp.task('default', function() {
 </pre>
 
   <div class="note">
-  <p><strong>Note</strong>: <code>--save-dev</code> adds the package as a dependency to your project. If you look in your project's <code>package.json</code> file, you'll see an entry for it as, it has been added to the <code>devDependencies</code> property.</p>
+  <p><strong>备注：</strong> <code>--save-dev</code> adds the package as a dependency to your project. If you look in your project's <code>package.json</code> file, you'll see an entry for it as, it has been added to the <code>devDependencies</code> property.</p>
   </div>
  </li>
- <li class="line">Add the following dependencies to <code>gulpfile.js</code>:
+ <li>Add the following dependencies to <code>gulpfile.js</code>:
   <pre class="brush: js">var htmltidy = require('gulp-htmltidy');</pre>
  </li>
  <li>Add the following test to the bottom of <code>gulpfile.js</code>:
@@ -203,16 +203,16 @@ var csslint = require('gulp-csslint');</pre>
 
 <ol>
  <li>Install using the following lines:
-  <pre class="editor editor-colors">npm install --save-dev gulp-babel babel-preset-es2015
+  <pre class="brush: bash">npm install --save-dev gulp-babel babel-preset-es2015
 npm install jshint gulp-jshint --save-dev
 </pre>
  </li>
  <li>Add the following dependencies to <code>gulpfile.js</code>:
-  <pre class="editor editor-colors">var babel = require('gulp-babel');
+  <pre class="brush: js">var babel = require('gulp-babel');
 var jshint = require('gulp-jshint');
 </pre>
  </li>
- <li class="line">Add the following test to the bottom of <code>gulpfile.js</code>:
+ <li>Add the following test to the bottom of <code>gulpfile.js</code>:
   <pre class="brush: js">gulp.task('js', function() {
     return gulp.src('src/main.js')
         .pipe(jshint())
@@ -249,11 +249,11 @@ var jshint = require('gulp-jshint');
 <p>Now try entering the <code>gulp watch</code> command into your terminal. Gulp will now watch your directory, and run the appropriate tasks whenever you save a change to an HTML, CSS, or JavaScript file.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>*</code> character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example <code>gulp.src('src/*.css')</code> would grab all your CSS files and then run piped tasks on them.</p>
+<p><strong>备注：</strong> The <code>*</code> character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example <code>gulp.src('src/*.css')</code> would grab all your CSS files and then run piped tasks on them.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: One problem with our watch command above is that our CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.</p>
+<p><strong>备注：</strong> One problem with our watch command above is that our CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.</p>
 </div>
 
 <p>There's a lot more you can do with Gulp. The <a href="http://gulpjs.com/plugins/">Gulp plugin directory</a> has literally thousands of plugins to search through.</p>
@@ -276,7 +276,7 @@ var jshint = require('gulp-jshint');
 <p>You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.</p>
 
 <div class="note">
-<p><strong>Note</strong>: There are other commercial browser testing systems available but in this article, we'll focus on Sauce Labs and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.</p>
+<p><strong>备注：</strong> There are other commercial browser testing systems available but in this article, we'll focus on Sauce Labs and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.</p>
 </div>
 
 <h3 id="Sauce_Labs">Sauce Labs</h3>
@@ -313,7 +313,7 @@ var jshint = require('gulp-jshint');
 <p>Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took , watch a video of the session, and view data logs for the session for example.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.</p>
+<p><strong>备注：</strong> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.</p>
 </div>
 
 <h4 id="Advanced_The_Sauce_Labs_API">Advanced: The Sauce Labs API</h4>
@@ -327,7 +327,7 @@ var jshint = require('gulp-jshint');
 <ol>
  <li>First, set up a new npm project to test this out, as detailed in <a href="#setting_up_node_and_npm">Setting up Node and npm</a>. Use a different directory name than before, like <code>sauce-test</code> for example.</li>
  <li>Install the Node Sauce Labs wrapper using the following command:
-  <pre>npm install saucelabs</pre>
+  <pre class="brush: bash">npm install saucelabs</pre>
  </li>
  <li>Create a new file inside your project root called <code>call_sauce.js</code>. give it the following contents:
   <pre class="brush: js">var SauceLabs = require('saucelabs');
@@ -393,7 +393,7 @@ myAccount.getAccountDetails(function (err, res) {
 <p><img src="browserstack-test-device-sized.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
+<p><strong>备注：</strong> The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.</p>
 </div>
 
 <p>You'll find that you can enter URLs into the address bar, and use the other controls like you'd expect on a real device. You can even do things like copy and paste from the device to your clipboard, scroll up and down by dragging with the mouse, or use appropriate gestures (e.g. pinch/zoom, two fingers to scroll) on the touchpads of supporting devices (e.g. Macbook). Note that not all features are available on all devices.</p>
@@ -419,7 +419,7 @@ myAccount.getAccountDetails(function (err, res) {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.</p>
+<p><strong>备注：</strong> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.</p>
 </div>
 
 <h4 id="其他基本功能">其他基本功能</h4>

@@ -47,9 +47,7 @@ translation_of: >-
 
 <p>与本模块中涵盖的其他框架不同，React 不会对代码约定或文件组织实施严格的规则。这使团队可以设置最适合自己的约定，并以他们希望的任何方式采用 React。React 可以处理一个按钮，一个界面的几个部分或应用程序的整个用户界面。</p>
 
-<div style="padding-top: 5px;">
 <p>尽管 React 可以用于<a href="https://reactjs.org/docs/add-react-to-a-website.html">界面的小片段</a>中，但要和 jQuery 这样的库，甚至是像 Vue 这样的框架那样“引入”应用程序并不容易 —— 当你使用 React 构建整个应用程序时更容易上手。</p>
-</div>
 
 <p>另外，许多开发人员的经验对于 React 应用程序也是有用处的，例如使用 JSX 编写界面是需要编译过程的。在网站上添加类似于 Babel 的编译器会让网站上代码的运行速度变慢，因此开发人员通常会在构建项目的时候设置这样的工具。React 对于工具的要求可以说是很高的，但这是能够学习解决的。</p>
 
@@ -72,7 +70,7 @@ translation_of: >-
 );</pre>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：上一个代码段中的括号并非 JSX 的一部分，它对您的应用程序没有任何影响，括号只是用来向您（和您的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：</p>
+<p><strong>备注：</strong> 上一个代码段中的括号并非 JSX 的一部分，它对您的应用程序没有任何影响，括号只是用来向您（和您的计算机）表明其中的多行代码属于同一个表达式 (译者注：原文表述实在有点啰嗦)。因此上面的代码等同于：</p>
 
 <pre class="brush: js notranslate">const header = &lt;header&gt;
     &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
@@ -133,7 +131,7 @@ translation_of: >-
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>如果你的电脑上安装了 yarn 的话，create-react-app 会默认使用 yarn 而非 npm。如果你同时安装了 yarn 和 npm，但你希望使用 npm 的话，在 create-react-app 的时候需要输入 <code>--use-npm</code><strong> :</strong></p>
+<p><strong>备注：</strong> 如果你的电脑上安装了 yarn 的话，create-react-app 会默认使用 yarn 而非 npm。如果你同时安装了 yarn 和 npm，但你希望使用 npm 的话，在 create-react-app 的时候需要输入 <code>--use-npm</code><strong> :</strong></p>
 
 <pre class="brush: bash notranslate">npx create-react-app moz-todo-react --use-npm</pre>
 </div>
@@ -222,13 +220,13 @@ import './App.css';</pre>
 <p>第二句代码引入了 <code>'./logo.svg'</code>。注意文件路径以 <code>./</code> 开头、由 <code>.svg</code> 尾——表明这是一个本地文件，并且它不是 JavaScript 文件。</p>
 
 <div class="blockIndicator note">
-<p>我们没有指定 React 模块的路径——表明它并非来自本地文件，而是在 <code>package.json</code> 文件中列为依赖项。在整个学习过程中，请务必留心这两种引入方式的不同之处。</p>
+<p><strong>备注：</strong> 我们没有指定 React 模块的路径——表明它并非来自本地文件，而是在 <code>package.json</code> 文件中列为依赖项。在整个学习过程中，请务必留心这两种引入方式的不同之处。</p>
 </div>
 
 <p>第三行引入了我们的组件所需的 CSS 文件。与上面两句不同，这里没有将引入的内容赋给任何变量、也没有用到 <code>from</code> 指令。请注意这种特殊的语法并非原生 JS 的语法 —— 它源自前端资源打包工具 webpack，而 create-react-app 正是基于 webpack 配置而来的。</p>
 
 <div class="blockIndicator note">
-<p>译者补充：webpack 可用于打包 JS 和非 JS 的内容 (当然，非 JS 的内容需要一些插件或加载器来处理)，但是 JavaScript 标准只有关于 JS 的内容，所以 webpack 社区使用这种特殊的 `import` 语句来声明对非 JS 内容的引用。</p>
+<p><strong>备注：</strong> 译者补充：webpack 可用于打包 JS 和非 JS 的内容 (当然，非 JS 的内容需要一些插件或加载器来处理)，但是 JavaScript 标准只有关于 JS 的内容，所以 webpack 社区使用这种特殊的 `import` 语句来声明对非 JS 内容的引用。</p>
 
 <p>详情参见 webpack 官方和社区，截止目前 (2020 年下旬)，webpack 仍是现代前端工作中必不可少的技能之一。</p>
 </div>
@@ -315,7 +313,7 @@ serviceWorker.unregister();</pre>
 <p>上述所有都告诉 React 我们想把 <code>App</code> 组件作为 root 或者第一个组件来渲染我们的 React App。</p>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（<code>/</code>），如 <code>&lt;App /&gt;</code>，如果我们写 <code>&lt;App&gt;</code> 或者 <code>&lt;img&gt;</code> 将会报错。</p>
+<p><strong>备注：</strong> 在 JSX 中，React 组件和 HTML 元素必须有关闭斜杠（<code>/</code>），如 <code>&lt;App /&gt;</code>，如果我们写 <code>&lt;App&gt;</code> 或者 <code>&lt;img&gt;</code> 将会报错。</p>
 </div>
 
 <p><a href="/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> 能让我们的 App 离线运行，但它不在本篇文章的范围中，您可以删除第 5 行和第 9 到 12 行。</p>
