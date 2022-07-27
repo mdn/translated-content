@@ -45616,13 +45616,6 @@
       "daisyHawen"
     ]
   },
-  "conflicting/Web/API/File/name": {
-    "modified": "2019-03-23T23:33:53.867Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "conflicting/Web/API/FileReader/abort_event": {
     "modified": "2019-04-18T04:11:44.611Z",
     "contributors": [
