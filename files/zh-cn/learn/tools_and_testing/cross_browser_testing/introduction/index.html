@@ -7,13 +7,13 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <div>{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p>本文是对跨浏览器测试的入门概述，帮助了解“什么是跨浏览器测试？”，“常见的问题都有哪些？”，以及“应该怎么测试，识别和修复问题？” </p>
+<p>本文是对跨浏览器测试的入门概述，帮助了解“什么是跨浏览器测试？”，“常见的问题都有哪些？”，以及“应该怎么测试，识别和修复问题？” </p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">阅读基础：</th>
-   <td>熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言。</td>
+   <td>熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -35,14 +35,14 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 <p>请记住，您不能代表产品的用户 - 您的网站能适配 Macbook Pro 或高端 Galaxy Nexus，并不意味它适用于所有用户 - 还有很多测试工作要做！</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/">Make the web work for everyone</a> 文章列出了浏览器的市场份额，使用情况和相关兼容性问题。</p>
+<p><strong>Note</strong>: <a href="https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/">Make the web work for everyone</a> 文章列出了浏览器的市场份额，使用情况和相关兼容性问题。</p>
 </div>
 
 <p>我们先解释下术语。首先，我们所讨论的“跨浏览器使用（working cross browser）”，应该在不同浏览器中提供可接受的用户体验。虽然无法在所有浏览器上提供相同的体验，但确保核心功能使用顺畅就算可以。比如在现代浏览器上，能显示动画、3D 或闪光效果，而在较旧的浏览器上，可以呈现出相同信息的平面图片。只要网站主满意，你的工作就算完成了。</p>
 
 <p>另一方面，视力正常的用户能正常浏览内容，但视力障碍的用户却因为屏幕阅读器无法读取信息而无法阅读内容。这是糟糕的体验，需要您能兼容屏幕阅读器软件。</p>
 
-<p>其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。您可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的 — 参见 <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">要测试全部的吗？（Gotta test 'em all?）</a>）。作为 web 开发者，您自然要确保网站主要求的浏览器都能正常工作，但除此之外，您需要防御性编程（code defensively），尽可能让其它浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！</p>
+<p>其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。您可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的 — 参见 <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all">要测试全部的吗？（Gotta test 'em all?）</a>）。作为 web 开发者，您自然要确保网站主要求的浏览器都能正常工作，但除此之外，您需要防御性编程（code defensively），尽可能让其它浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！</p>
 
 <div class="note">
 <p><strong>Note</strong>: 后面会详细介绍防御性编程（code defensively）</p>
@@ -56,8 +56,8 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <ul>
  <li>有时候浏览器有缺陷，或者实现功能的方式不同。这种情况比以前大有改观；在 IE 4 和 Netscape 4 争霸的二十世纪九十年代，浏览器厂商故意采用与其他厂商不同的方式开发功能，以此获得竞争优势，这使得开发者如陷地狱。近来各个浏览器更加注重遵循标准，但差异和缺陷仍会时而出现。</li>
- <li> 一些浏览器对一些技术特点的支持力度与其他浏览器不同。当你在处理一些浏览器厂商正在实现的前沿技术点，或你必须支持一些很古老的不再更新维护的浏览器时，跨浏览器问题会不可避免的出现。举个例子：你想在自己网站里用到的一些前沿 Javascript 技术在旧版浏览器中可能不会生效。如果你需要支持旧版浏览器，你可能必须放弃新技术，或在所需之处把代码转换成过时语法。</li>
- <li> 一些设备可能会制定一些限制来防止网站运行缓慢或显示效果糟糕。例如：若一个网站的设计效果在 PC 端很棒，在移动设备上就会显得很小，很不易于浏览。若你的网站要加载体积很大的动画，在高配设备上可能没问题，但在低配置的设备上就会迟钝又愚蠢。</li>
+ <li> 一些浏览器对一些技术特点的支持力度与其他浏览器不同。当你在处理一些浏览器厂商正在实现的前沿技术点，或你必须支持一些很古老的不再更新维护的浏览器时，跨浏览器问题会不可避免的出现。举个例子：你想在自己网站里用到的一些前沿 Javascript 技术在旧版浏览器中可能不会生效。如果你需要支持旧版浏览器，你可能必须放弃新技术，或在所需之处把代码转换成过时语法。</li>
+ <li> 一些设备可能会制定一些限制来防止网站运行缓慢或显示效果糟糕。例如：若一个网站的设计效果在 PC 端很棒，在移动设备上就会显得很小，很不易于浏览。若你的网站要加载体积很大的动画，在高配设备上可能没问题，但在低配置的设备上就会迟钝又愚蠢。</li>
 </ul>
 
 <p>此外还有很多原因。</p>
@@ -84,7 +84,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 <p>一旦你了解了需求，确定了技术选型，你就该开始调查目标用户——使用这个网站的用户用什么浏览器、什么设备等等。也行客户通过前期调查已经有了这方面的数据，比如通过他们的其他网站，或你将要开发的网站的之前版本。若没有，你将要通过搜寻其他资源，诸如竞品的使用数据，或网站将要服务的国家来了解清楚。也可以凭直觉。</p>
 
-<p>举个例子，你要开发一个服务北美客户的电子商务网站。该网站应该完美支持最流行的 PC/移动端（iOS、Android、Windows phone）浏览器的最新几个版本——应包括 Chrome（和相同渲染引擎的 Opera）、Firefox、IE/Edge 以及 Safari。它还应为 IE 8 和 9 提供可接受的体验，以及遵循 WCAG AA 指南。</p>
+<p>举个例子，你要开发一个服务北美客户的电子商务网站。该网站应该完美支持最流行的 PC/移动端（iOS、Android、Windows phone）浏览器的最新几个版本——应包括 Chrome（和相同渲染引擎的 Opera）、Firefox、IE/Edge 以及 Safari。它还应为 IE 8 和 9 提供可接受的体验，以及遵循 WCAG AA 指南。</p>
 
 <p>现在你已知道你的目标测试平台，你应回顾功能需求和技术选型。例如：如果这个电子商务站点的拥有者想要在页面上实现基于 WebGl 的 3D 产品展示，那他们必须放弃 IE 11 及以前的版本。你要承诺为低版本用户提供没有 3D 展示的版本。</p>
 
@@ -107,7 +107,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 <ul>
  <li>让所有功能尽可能在所有目标浏览器上运行。这也许涉及到写不同的代码，让不同浏览器中的功能以不同方式实现，或使用一个<code>{{glossary("Polyfill")}}</code>模拟缺失的支撑，或者使用一个库，允许你写一点代码，然后根据浏览器支持的内容在后台执行不同的操作。</li>
  <li>接受这个现实：一些东西在不同浏览器运行效果不同，在不支持完整功能的浏览器中提供不同的（可接受的）的解决方案。因为设备限制，有时这是不可避免的——不管你怎样设计网站，在影院宽屏上和在 4 寸屏上的视觉效果是不同的。</li>
- <li> 接受这个现实：你的网站在旧版浏览器上不能用，那就忽略旧版。假设你的客户/用户认为可以就没事。</li>
+ <li> 接受这个现实：你的网站在旧版浏览器上不能用，那就忽略旧版。假设你的客户/用户认为可以就没事。</li>
 </ul>
 
 <p>一般来说你的开发会涉及到一个上述三个方法的结合。最重要的是你在提交每个小部分之前都要测试——别把测试放到最后！</p>

@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 
 <dl>
  <dt><code>thisArg</code></dt>
- <dd>可选的。在 <em><code>function</code></em> 函数运行时使用的 <code>this</code> 值。请注意，<code>this</code>可能不是该方法看到的实际值：如果这个函数处于<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode" title="如果你想改变你的代码，让其工作在具有限制性JavaScript环境中，请参阅转换成严格模式。">非严格模式</a>下，则指定为 <code>null</code> 或 <code>undefined</code> 时会自动替换为指向全局对象，原始值会被包装。</dd>
+ <dd>可选的。在 <em><code>function</code></em> 函数运行时使用的 <code>this</code> 值。请注意，<code>this</code>可能不是该方法看到的实际值：如果这个函数处于<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">非严格模式</a>下，则指定为 <code>null</code> 或 <code>undefined</code> 时会自动替换为指向全局对象，原始值会被包装。</dd>
  <dt><code>arg1, arg2, ...</code></dt>
  <dd>指定的参数列表。</dd>
 </dl>
@@ -131,41 +131,13 @@ display.call(); // Cannot read the property of 'sData' of undefined</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范版本</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>初始定义。在 JavaScript 1.3 中实现。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3.4.4', 'Function.prototype.call')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.call', 'Function.prototype.call')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function.prototype.call', 'Function.prototype.call')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 
-<p>{{Compat("javascript.builtins.Function.call")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">相关链接</h2>
 

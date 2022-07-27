@@ -22,7 +22,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
  <tbody>
   <tr>
    <th scope="row">准备：</th>
-   <td>熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试的核心概念</a>。</td>
+   <td>熟练掌握 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">跨浏览器测试的核心概念</a>。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -50,7 +50,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <p>在以下各节中，我们将以此等级为参考构建支持图表。</p>
 
 <div class="note">
-<p><strong>注意：雅虎最先使这一方法流行起来，详情参见《浏览器分级支持系统》（</strong> <a href="https://github.com/yui/yui3/wiki/Graded-Browser-Support">Graded browser Support</a><strong>）。</strong></p>
+<p><strong>注意：雅虎最先使这一方法流行起来，详情参见《浏览器分级支持系统》（</strong> <a href="https://github.com/yui/yui3/wiki/Graded-Browser-Support">Graded browser Support</a><strong>）。</strong></p>
 </div>
 
 <h3 id="有根据地假设">有根据地假设</h3>
@@ -105,7 +105,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <h4 id="配置Google分析">配置 Google 分析</h4>
 
 <ol>
- <li>首先，您需要一个谷歌帐户。使用此帐户可登录<a href="https://www.google.com/analytics/">Google Analytics</a>。 </li>
+ <li>首先，您需要一个谷歌帐户。使用此帐户可登录<a href="https://www.google.com/analytics/">Google Analytics</a>。 </li>
  <li>选择 <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> (web)) 选项，然后单击"注册"按钮。</li>
  <li>在注册页面中输入您的网站/应用详细信息。这是相当直观的设置;获得正确的最重要的字段是网站 URL。这需要是您的网站/应用的根 URL。</li>
  <li>填写完所有内容后，按"获取跟踪 ID"按钮，然后接受显示的服务条款。</li>
@@ -151,7 +151,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <p>当您的代码库有需要测试的新添加项时，在开始测试之前，应编写出需要通过才能接受的测试要求列表。这些要求可以是可视的，也可以是功能性的，两者结合起来，成为可用的网站功能。</p>
 
-<p>思考下面的例子 (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">源码</a>，<a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">在线预览</a>):</p>
+<p>思考下面的例子 (查看<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">源码</a>，<a href="https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html">在线预览</a>):</p>
 
 <p><img src="sliding-box-demo.png"></p>
 
@@ -173,7 +173,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
  <li>渐变和文本阴影应显示为增强框的外观。</li>
 </ul>
 
-<p>You may notice from the text in the example that it won't work in IE8 — this is a problem according to our support chart, which you'll have to work on, perhaps by using a feature detection library to implement the functionality in a different way if the browser doesn't support CSS transitions (see Implementing feature detection, later on in the course).您可能会从示例中的文本中注意到它在 IE8 中不起作用 ––根据我们的支持图表，这是一个问题，您必须处理这个问题，如果浏览器不采用其他方式，则可能使用功能检测库以不同的方式实现功能（如果浏览器不支持 CSS 转换的话）(请参阅实现功能检测，稍后将在本课程中)。</p>
+<p>You may notice from the text in the example that it won't work in IE8 — this is a problem according to our support chart, which you'll have to work on, perhaps by using a feature detection library to implement the functionality in a different way if the browser doesn't support CSS transitions (see Implementing feature detection, later on in the course).您可能会从示例中的文本中注意到它在 IE8 中不起作用 ––根据我们的支持图表，这是一个问题，您必须处理这个问题，如果浏览器不采用其他方式，则可能使用功能检测库以不同的方式实现功能（如果浏览器不支持 CSS 转换的话）(请参阅实现功能检测，稍后将在本课程中)。</p>
 
 <p>您可能还注意到，该按钮仅使用键盘无法使用，这也需要纠正。也许我们可以使用一些 JavaScript 来实现一个键盘控件的切换，或者完全使用一些其他的方法？</p>
 
@@ -195,7 +195,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <ul>
  <li>Mac，安装了您需要测试的浏览器，包括火狐、Chrome、Opera 和 Safari。</li>
- <li>安装了需要测试的浏览器的 Windows 电脑，其中可能包括 Edge (or IE), Chrome, Firefox 和 Opera。</li>
+ <li>安装了需要测试的浏览器的 Windows 电脑，其中可能包括 Edge (or IE), Chrome, Firefox 和 Opera。</li>
  <li>更高规格的 Android 手机和平板电脑，安装了浏览器，你需要测试 - 这可能包括 Chrome，火狐，和 Opera Mini 的 Android，以及原来的 Android stock 浏览器。</li>
  <li>更高规格的 iOS 手机和平板电脑，并安装了您需要测试的浏览器 , 这可能包括 iOS Safari，以及适用于 iOS 的 Chrome、Firefox 和 Opera Mini。</li>
 </ul>
@@ -225,7 +225,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 <p>仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序，允许您比查找要测试的特定硬件/软件组合更方便地执行某些测试。</p>
 
-<p>仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的<a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>。Safari 也有类似的模式，可以通过访问“<em>Safari &gt; 首选项”</em>和"显示开发"菜单，然后选择"开发"&amp;gt;"输入响应式设计模式"来启用。  Chrome 也有类似的功能：设备模式 (请参阅<a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/">Simulate Mobile Devices with Device Mode</a>)。</p>
+<p>仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的<a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>。Safari 也有类似的模式，可以通过访问“<em>Safari &gt; 首选项”</em>和"显示开发"菜单，然后选择"开发"&amp;gt;"输入响应式设计模式"来启用。  Chrome 也有类似的功能：设备模式 (请参阅<a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/">Simulate Mobile Devices with Device Mode</a>)。</p>
 
 <p>不过，您经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示：</p>
 
@@ -237,7 +237,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 <p>您也经常可以为其他移动设备环境找到模拟器，例如：</p>
 
 <ul>
- <li><a href="https://developer.blackberry.com/develop/simulator/">Blackberry</a> （适用于 Windows，Mac OSX 和 Linux 的模拟器）。</li>
+ <li><a href="https://developer.blackberry.com/develop/simulator/">Blackberry</a> （适用于 Windows，Mac OSX 和 Linux 的模拟器）。</li>
  <li>如果要进行测试，可以单独模拟<a href="https://dev.opera.com/articles/installing-opera-mini-on-your-computer/">Opera Mini</a>。</li>
  <li>适用于 Windows Mobile 操作系统的仿真器：请参阅<a href="https://msdn.microsoft.com/en-us/library/windows/apps/ff402563(v=vs.105).aspx">Windows Phone Emulator for Windows Phone 8</a> 和<a href="https://msdn.microsoft.com/en-us/windows/uwp/debug-test-perf/test-with-the-emulator">Test with the Microsoft Emulator for Windows 10 Mobile</a>（这些仅适用于 Windows）。</li>
 </ul>

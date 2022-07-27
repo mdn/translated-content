@@ -125,9 +125,6 @@ For helpful tips on updating existing extensions for Firefox 4, see [Updating ex
 
 - [Services.jsm](/en/JavaScript_code_modules/Services.jsm)
   - : The `Services.jsm` code module provides getters that make it easy to obtain references to commonly-used services, such as the preferences service or the window mediator, among others.
-
-<!---->
-
 - [JS-ctypes API](/en/JavaScript_code_modules/ctypes.jsm)
   - : The JS-ctypes API makes it possible to call C-compatible foreign library functions without using XPCOM.
 - [Add-ons Manager](/en/Addons/Add-on_Manager)

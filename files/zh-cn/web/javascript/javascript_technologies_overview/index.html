@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <p>The major 6th Edition of ECMAScript was officially approved and published as a standard on June 17, 2015 by the ECMA General Assembly. Since then ECMAScript Editions are published on a yearly basis.</p>
 
-<p>ECMA-262（<strong>ECMAScript 4</strong> 或者 <strong>ES4</strong>）第 4 版的提议本应成为自 1999 年第 3 版发布以来的一次重要更新，但是在 2008 年 8 月份，ECMAScript 第 4 版被回退到一个代号为<a class="external" href="http://en.wikipedia.org/wiki/ECMAScript#ECMAScript_Harmony">ECMAScript Harmony</a>的项目，像<code>const</code>关键字以及对象代理等内容都被涵盖其中。你可以在<a href="http://wiki.ecmascript.org/doku.php">这里</a>跟踪这个项目的进展。ECMA 委员会已经在 2015 年 6 月 17 号，正式发布了第 6 版标准。</p>
+<p>ECMA-262（<strong>ECMAScript 4</strong> 或者 <strong>ES4</strong>）第 4 版的提议本应成为自 1999 年第 3 版发布以来的一次重要更新，但是在 2008 年 8 月份，ECMAScript 第 4 版被回退到一个代号为<a href="http://en.wikipedia.org/wiki/ECMAScript#ECMAScript_Harmony">ECMAScript Harmony</a>的项目，像<code>const</code>关键字以及对象代理等内容都被涵盖其中。你可以在<a href="http://wiki.ecmascript.org/doku.php">这里</a>跟踪这个项目的进展。ECMA 委员会已经在 2015 年 6 月 17 号，正式发布了第 6 版标准。</p>
 
 <h2 id="国际化_API">国际化 API</h2>
 
@@ -65,7 +65,7 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 <ul>
  <li><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM 核心</a>中定义了文档结构，树模型，以及 DOM 事件架构，包括： {{domxref("Node")}}、{{domxref("Element")}}、{{domxref("DocumentFragment")}}、{{domxref("Document")}}、{{domxref("DOMImplementation")}}、{{domxref("Event")}}、{{domxref("EventTarget")}} 等等…</li>
  <li><a href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM 事件</a>中包括对于 DOM 事件架构的一个不太严格的定义，以及一些特殊事件。</li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM 元素遍历</a>以及 <a class="external" href="http://html5.org/specs/dom-range.html" title="http://html5.org/specs/dom-range.html">DOM 范围</a>对象等其它内容。</li>
+ <li><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM 元素遍历</a>以及 <a href="http://html5.org/specs/dom-range.html">DOM 范围</a>对象等其它内容。</li>
 </ul>
 
 <p>从 ECMAScript 的角度来看，DOM 规范中定义的对象被称作“宿主对象”。</p>
@@ -82,15 +82,15 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <ul>
  <li>{{domxref("WindowTimers.setTimeout", "setTimeout")}} 和 {{domxref("WindowTimers.setInterval", "setInterval")}} 函数最早被定义在 HTML 标准的 {{domxref("Window")}} 接口下。</li>
- <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/" title="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest</a> 使得发起异步 HTTP 请求成为可能。</li>
- <li><a class="external" href="http://dev.w3.org/csswg/cssom/">CSS 对象模型</a> 将 CSS 规则抽象成对象。</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers</a> 允许进行并行计算。</li>
- <li><a class="external" href="http://www.whatwg.org/C/#network">WebSockets</a> 允许进行底层双向通信。</li>
- <li><a class="external" href="http://www.whatwg.org/html/#2dcontext" title="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> {{htmlelement("canvas")}} 元素的绘图 API。</li>
+ <li><a href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest</a> 使得发起异步 HTTP 请求成为可能。</li>
+ <li><a href="http://dev.w3.org/csswg/cssom/">CSS 对象模型</a> 将 CSS 规则抽象成对象。</li>
+ <li><a href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers</a> 允许进行并行计算。</li>
+ <li><a href="http://www.whatwg.org/C/#network">WebSockets</a> 允许进行底层双向通信。</li>
+ <li><a href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> {{htmlelement("canvas")}} 元素的绘图 API。</li>
 </ul>
 
 <h2 id="DOM_浏览器支持">DOM 浏览器支持</h2>
 
 <div>相信每个 Web 开发人员都曾经有过“<a href="http://ejohn.org/blog/the-dom-is-a-mess/">DOM 就是一团糟</a>”的体验，因为浏览器对 DOM 的支持千差万别。造成这种局面的主要原因是 DOM 规范并未清晰定义很多重要的 DOM 特性。另外，一些浏览器也增加了不兼容的特性（例如 Intenet Explorer 的事件模型）。自 2011 年 6 月以来，W3C，特别是 WHATWG 都在对旧特性进行细节定义，以提高互通性。浏览器也在基于这些更加详细的规范改善它们的实现方式。</div>
 
-<p>要实现跨浏览器的兼容性，一个常见的但可能不是最可靠的方式就是使用 JavaScript 库。这些库对于 DOM 特性进行抽象，以确保它们所提供的 API 在不同的浏览器上行为一致。被广泛采用的框架有 <a class="external" href="http://jquery.com/">jQuery</a>，<a class="external" href="http://www.prototypejs.org/">prototype</a> 和 <a class="external" href="http://developer.yahoo.com/yui/">YUI</a>。</p>
+<p>要实现跨浏览器的兼容性，一个常见的但可能不是最可靠的方式就是使用 JavaScript 库。这些库对于 DOM 特性进行抽象，以确保它们所提供的 API 在不同的浏览器上行为一致。被广泛采用的框架有 <a href="http://jquery.com/">jQuery</a>，<a href="http://www.prototypejs.org/">prototype</a> 和 <a href="http://developer.yahoo.com/yui/">YUI</a>。</p>

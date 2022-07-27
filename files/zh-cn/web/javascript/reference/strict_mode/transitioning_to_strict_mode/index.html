@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mod
 ---
 <p>{{jsSidebar("More")}}</p>
 
-<p>ECMAScript 5 引入了 <a href="/zh-CN/docs/JavaScript/Strict_mode" title="/zh-CN/docs/JavaScript/Strict_mode">strict mode</a> ,现在已经被大多浏览器实现 (包括 IE10. 会使 web 浏览器更容易的解析代码 (只需要添加 <code>"use strict";</code> 在源码的最上面), 由现有的代码到严格模式的过渡需要一些事做。</p>
+<p>ECMAScript 5 引入了 <a href="/zh-CN/docs/JavaScript/Strict_mode">strict mode</a> ,现在已经被大多浏览器实现 (包括 IE10. 会使 web 浏览器更容易的解析代码 (只需要添加 <code>"use strict";</code> 在源码的最上面), 由现有的代码到严格模式的过渡需要一些事做。</p>
 
 <p>该文章旨在为开发者提供指南。</p>
 
@@ -17,11 +17,11 @@ translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mod
 
 <h3 id="语法错误">语法错误</h3>
 
-<p>如果代码中使用<code>"use strict"开启了严格模式</code>,则下面的情况都会在脚本运行之前抛出<a href="/zh-CN/docs/Core_JavaScript_1.5_Guide/SyntaxError" title="/zh-CN/docs/Core_JavaScript_1.5_Guide/SyntaxError">SyntaxError</a>异常：</p>
+<p>如果代码中使用<code>"use strict"开启了严格模式</code>,则下面的情况都会在脚本运行之前抛出<a href="/zh-CN/docs/Core_JavaScript_1.5_Guide/SyntaxError">SyntaxError</a>异常：</p>
 
 <ul>
  <li>八进制语法<code>:var n = 023 和 var s = "\047"</code></li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/with" title="/zh-CN/docs/JavaScript/Reference/Statements/with"><code>with</code></a>语句</li>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Statements/with"><code>with</code></a>语句</li>
  <li>使用<a href="https://developer.mozilla.org/zh-CN/docs/JavaScript/Reference/Operators/delete">delete</a>删除一个变量名 (而不是属性名)<code>:delete myVariable</code></li>
  <li>使用<code>eval</code>或<code>arguments</code>作为变量名或函数名</li>
  <li>使用未来保留字 (也许会在 ECMAScript 6 中使用):<code>implements</code>, <code>interface</code>, <code>let</code>, <code>package</code>, <code>private</code>, <code>protected</code>, <code>public</code>, <code>static</code>,和<code>yield</code>作为变量名或函数名</li>
@@ -101,7 +101,7 @@ s.opacity = 1;
 
 <h4 id="函数调用中的this">函数调用中的<code>this</code></h4>
 
-<p>在普通的函数调用<code>f() 中</code>,<code>this</code>的值会指向全局对象。在严格模式中，<code>this</code>的值会指向<code>undefined</code>.当函数通过<a href="/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call" title="/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call">call</a>和<a href="/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply" title="/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply">apply</a>调用时，如果传入的<code>thisvalue</code>参数是一个<code>null</code>和<code>undefined</code>除外的原始值 (字符串，数字，布尔值),则<code>this 的值会成为那个原始值对应的包装对象</code>,如果<code>thisvalue</code>参数的值是<code>undefined</code>或<code>null</code>,则<code>this 的值会指向全局对象</code>.在严格模式中，<code>this 的值就是</code><code>thisvalue</code>参数的值，没有任何类型转换。</p>
+<p>在普通的函数调用<code>f() 中</code>,<code>this</code>的值会指向全局对象。在严格模式中，<code>this</code>的值会指向<code>undefined</code>.当函数通过<a href="/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/call">call</a>和<a href="/zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply">apply</a>调用时，如果传入的<code>thisvalue</code>参数是一个<code>null</code>和<code>undefined</code>除外的原始值 (字符串，数字，布尔值),则<code>this 的值会成为那个原始值对应的包装对象</code>,如果<code>thisvalue</code>参数的值是<code>undefined</code>或<code>null</code>,则<code>this 的值会指向全局对象</code>.在严格模式中，<code>this 的值就是</code><code>thisvalue</code>参数的值，没有任何类型转换。</p>
 
 <h4 id="arguments对象属性不与对应的形参变量同步更新"><code>arguments</code>对象属性不与对应的形参变量同步更新</h4>
 

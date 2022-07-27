@@ -18,27 +18,27 @@ var async = require('async');
 <pre class="brush: js">// Display detail page for a specific Genre.
 exports.genre_detail = function(req, res, next) {
 
-<strong>    async.parallel({
-        genre: function(callback) {
-            Genre.findById(req.params.id)
-              .exec(callback);
-        },
+<strong>    async.parallel({
+        genre: function(callback) {
+            Genre.findById(req.params.id)
+              .exec(callback);
+        },
 
-        genre_books: function(callback) {
-          Book.find({ 'genre': req.params.id })
-          .exec(callback);
-        },
+        genre_books: function(callback) {
+          Book.find({ 'genre': req.params.id })
+          .exec(callback);
+        },
 
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.genre==null) { // No results.
-            var err = new Error('Genre not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render
-        res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
-    });</strong>
+    }, function(err, results) {
+        if (err) { return next(err); }
+        if (results.genre==null) { // No results.
+            var err = new Error('Genre not found');
+            err.status = 404;
+            return next(err);
+        }
+        // Successful, so render
+        res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
+    });</strong>
 
 };
 </pre>
@@ -70,20 +70,20 @@ exports.genre_detail = function(req, res, next) {
 
 block content
 
-  <strong>h1 Genre: #{genre.name}</strong>
+  <strong>h1 Genre: #{genre.name}</strong>
 
-  div(style='margin-left:20px;margin-top:20px')
+  div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
+    h4 Books
 
-    dl
-    each book in genre_books
-      dt
-        a(href=book.url) #{book.title}
-      dd #{book.summary}
+    dl
+    each book in genre_books
+      dt
+        a(href=book.url) #{book.title}
+      dd #{book.summary}
 
-    else
-      p This genre has no books
+    else
+      p This genre has no books
 </pre>
 
 <p>这个视图跟我们其它的模板非常相似。主要的差别在于，我们不使用 <code>title</code> 传送第一个标题 (虽然它还是用在底层的 <strong>layout.pug</strong> 模板，设定页面的标题)。</p>

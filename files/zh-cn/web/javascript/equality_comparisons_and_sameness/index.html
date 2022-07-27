@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 <ul>
  <li>严格相等比较 (也被称作"strict equality", "identity", "triple equals")，使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">===</a> ,</li>
  <li>抽象相等比较 ("loose equality"，"double equals") ，使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality">==</a></li>
- <li>以及 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> （ECMAScript 2015/ ES6 新特性）</li>
+ <li>以及 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> （ECMAScript 2015/ ES6 新特性）</li>
 </ul>
 
 <p>选择使用哪个操作取决于你需要什么样的比较。</p>
@@ -182,7 +182,7 @@ function attemptMutation(v)
 
 <p><code>Object.defineProperty</code> 在试图修改不可变属性时，如果这个属性确实被修改了则会抛出异常，反之什么都不会发生。例如如果 v 是 -0 ，那么没有发生任何变化，所以也不会抛出任何异常。但如果 v 是 +0 ，则会抛出异常。不可变属性和新设定的值使用 same-value 相等比较。</p>
 
-<p>同值相等由 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 方法提供。</p>
+<p>同值相等由 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 方法提供。</p>
 
 <h2 id="零值相等">零值相等</h2>
 
@@ -190,7 +190,7 @@ function attemptMutation(v)
 
 <h2 id="规范中的相等、严格相等以及同值相等">规范中的相等、严格相等以及同值相等</h2>
 
-<p>在 ES5 中， <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>==</code></a> 相等在 <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3" title="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a>； <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> 相等在 <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6" title="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a>。（请参考这两个链接，他们很简洁易懂。提示：请先阅读严格相等的算法）ES5 也提供了 same-value 相等， <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12" title="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> ，用在 JS 引擎内部。除了 11.9.6.4 和 9.12.4 在处理数字上的不同外，它基本和严格相等算法相同。ES6 简单地通过  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 暴露了这个算法。</p>
+<p>在 ES5 中， <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>==</code></a> 相等在 <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.3">Section 11.9.3, The Abstract Equality Algorithm</a>； <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a> 相等在 <a href="http://ecma-international.org/ecma-262/5.1/#sec-11.9.6">11.9.6, The Strict Equality Algorithm</a>。（请参考这两个链接，他们很简洁易懂。提示：请先阅读严格相等的算法）ES5 也提供了 same-value 相等， <a href="http://ecma-international.org/ecma-262/5.1/#sec-9.12">Section 9.12, The SameValue Algorithm</a> ，用在 JS 引擎内部。除了 11.9.6.4 和 9.12.4 在处理数字上的不同外，它基本和严格相等算法相同。ES6 简单地通过  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 暴露了这个算法。</p>
 
 <p>我们可以看到，使用双等或三等时，除了 11.9.6.1 类型检查，严格相等算法是相等算法的子集因为 11.9.6.2–7 对应 11.9.3.1.a–f。</p>
 
@@ -198,7 +198,7 @@ function attemptMutation(v)
 
 <p>在 ES2015 以前，你可能会说双等和三等是“扩展”的关系。比如有人会说双等是三等的扩展版，因为他处理三等所做的，还做了类型转换。例如 6 == "6" 。反之另一些人可能会说三等是双等的扩展，因为他还要求两个参数的类型相同，所以增加了更多的限制。怎样理解取决于你怎样看待这个问题。</p>
 
-<p>但是这种比较的方式没办法把 ES2015 的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 排列到其中。因为 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 并不比双等更宽松，也并不比三等更严格，当然也不是在他们中间。从下表中可以看出，这是由于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 处理 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 的不同。注意假如 <code>Object.is(NaN, NaN)</code> 被计算成 <code>false</code> ，我们就可以说他比三等更为严格，因为他可以区分 <code>-0</code> 和 <code>+0</code> 。但是对 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 的处理表明，这是不对的。 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 应该被认为是有其特殊的用途，而不应说他和其他的相等更宽松或严格。</p>
+<p>但是这种比较的方式没办法把 ES2015 的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 排列到其中。因为 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 并不比双等更宽松，也并不比三等更严格，当然也不是在他们中间。从下表中可以看出，这是由于 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 处理 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 的不同。注意假如 <code>Object.is(NaN, NaN)</code> 被计算成 <code>false</code> ，我们就可以说他比三等更为严格，因为他可以区分 <code>-0</code> 和 <code>+0</code> 。但是对 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 的处理表明，这是不对的。 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 应该被认为是有其特殊的用途，而不应说他和其他的相等更宽松或严格。</p>
 
 <table class="standard-table">
  <caption>判等</caption>
@@ -376,14 +376,14 @@ function attemptMutation(v)
  </tbody>
 </table>
 
-<h2 id="什么时候使用_Object.is_或是三等">什么时候使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 或是三等</h2>
+<h2 id="什么时候使用_Object.is_或是三等">什么时候使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> 或是三等</h2>
 
-<p>总的来说，除了对待<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>的方式，<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>唯一让人感兴趣的，是当你需要一些元编程方案时，它对待 0 的特殊方式，特别是关于属性描述器，即你的工作需要去镜像<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"><code>Object.defineProperty</code></a>的一些特性时。如果你的工作不需要这些，那你应该避免使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>，使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a>来代替。即使你需要比较两个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>使其结果为<code>true</code>，总的来说编写使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 检查的特例函数 (用旧版本 ECMAScript 的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN"><code>isNaN 方法</code></a>) 也会比想出一些计算方法让<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>不影响不同符号的 0 的比较更容易些。</p>
+<p>总的来说，除了对待<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>的方式，<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>唯一让人感兴趣的，是当你需要一些元编程方案时，它对待 0 的特殊方式，特别是关于属性描述器，即你的工作需要去镜像<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"><code>Object.defineProperty</code></a>的一些特性时。如果你的工作不需要这些，那你应该避免使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>，使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators"><code>===</code></a>来代替。即使你需要比较两个<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>使其结果为<code>true</code>，总的来说编写使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> 检查的特例函数 (用旧版本 ECMAScript 的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN"><code>isNaN 方法</code></a>) 也会比想出一些计算方法让<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a>不影响不同符号的 0 的比较更容易些。</p>
 
 <p>这里是一个会区别对待-0 和 +0 的内置方法和操作符不完全列表：</p>
 
 <dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29" title="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators"><code>- (一元负)</code></a></dt>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29"><code>- (一元负)</code></a></dt>
  <dd>
  <p>显而易见，对<code>0 一元负操作得到</code><code>-0</code>。但表达式的抽象化可能在你没有意识到得情况下导致-0 延续传播。例如当考虑下例时：</p>
 
@@ -392,30 +392,30 @@ function attemptMutation(v)
  <p>如果<code>obj.velocity</code>是<code>0</code> (或计算结果为<code>0</code>), <code>一个-0</code>就在上处产生并被赋值为<code>stoppingForce 的值</code>.</p>
  </dd>
  <dt>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2"><code>Math.atan2</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil"><code>Math.ceil</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"><code>Math.round</code></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2"><code>Math.atan2</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil"><code>Math.ceil</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round"><code>Math.round</code></a>
  </dt>
- <dd>即使传入的参数中没有-0，这些方法的返回值都有可能是-0。例如当用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>计算<code>-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>的任何负奇指数的幂都会得到<code>-0</code>。详情请参见这些方法各自的文档。</dd>
+ <dd>即使传入的参数中没有-0，这些方法的返回值都有可能是-0。例如当用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow"><code>Math.pow</code></a>计算<code>-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>的任何负奇指数的幂都会得到<code>-0</code>。详情请参见这些方法各自的文档。</dd>
  <dt>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min"><code>Math.min</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin"><code>Math.sin</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"><code>Math.tan</code></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"><code>Math.floor</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code>Math.max</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min"><code>Math.min</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin"><code>Math.sin</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt"><code>Math.sqrt</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan"><code>Math.tan</code></a>
  </dt>
  <dd>当传入参数中有-0 时，这些方法也可能返回-0。例如， <code>Math.min(-0, +0)</code> 得出 <code>-0</code>。详情请参见这些方法各自的文档。</dd>
  <dt>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>~</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&lt;&lt;</code></a>, 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&gt;&gt;</code></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>~</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&lt;&lt;</code></a>, 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"><code>&gt;&gt;</code></a>
  </dt>
  <dd>这些操作符内部都使用了 ToInt32 算法。因为内部 32 位整数类型只有一个 0（没有符号区别），-0 的符号在反操作后并不会保留下来。例如<code>Object.is(~~(-0), -0)</code>和<code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> <code>都会得到 false</code>.</dd>
 </dl>
 
-<p>在未考虑 0 的符号的情况下依赖于<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a><code>是危险的。当然，如果本意就是区分-0 和 +0 的话，</code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a><code>能按照期望完成工作。</code></p>
+<p>在未考虑 0 的符号的情况下依赖于<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a><code>是危险的。当然，如果本意就是区分-0 和 +0 的话，</code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a><code>能按照期望完成工作。</code></p>
 
 <h2 id="参考">参考</h2>
 

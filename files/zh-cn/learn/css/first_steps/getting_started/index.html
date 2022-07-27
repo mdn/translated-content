@@ -26,7 +26,7 @@ original_slug: Learn/CSS/First_steps/开始
 <ul>
  <li>基本熟悉计算机操作。</li>
  <li>基本工作环境的设置（详见<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本软件</a>），基本的文件操作，详见<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a>。</li>
- <li>熟悉 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a> 章节中提到的基本 HTML 知识。</li>
+ <li>熟悉 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a> 章节中提到的基本 HTML 知识。</li>
 </ul>
 
 <h4 id="目标">目标</h4>
@@ -75,13 +75,13 @@ original_slug: Learn/CSS/First_steps/开始
 
 <p>我们最想做的就是让 HTML 文档能够遵守我们给它的 CSS 规则。其实有三种方式可以实现，而目前我们更倾向于利用最普遍且有用的方式——在文档的开头链接 CSS。</p>
 
-<p>在与之前所说的 HTML 文档的相同目录创建一个文件，保存并命名为 <code>styles.css</code> 。（看后缀知道此文件就是 CSS 文件）</p>
+<p>在与之前所说的 HTML 文档的相同目录创建一个文件，保存并命名为 <code>styles.css</code> 。（看后缀知道此文件就是 CSS 文件）</p>
 
 <p>为了把 <code>styles.css</code> 和 <code>index.html</code> 连接起来，可以在 HTML 文档中，{{htmlelement("head")}} 语句模块里面加上下面的代码：</p>
 
 <pre class="brush: html">&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
 
-<p> {{htmlelement("link")}} 语句块里面，我们用属性 <code>rel</code>，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 <code>href</code> 指定，寻找 CSS 文件的位置。 你可以做测试来验证 CSS 是否有效：在 <code>styles.css</code> 里面加上 CSS 样式并观察显示的结果。下面，用你的编辑器打出下面的代码。</p>
+<p> {{htmlelement("link")}} 语句块里面，我们用属性 <code>rel</code>，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 <code>href</code> 指定，寻找 CSS 文件的位置。 你可以做测试来验证 CSS 是否有效：在 <code>styles.css</code> 里面加上 CSS 样式并观察显示的结果。下面，用你的编辑器打出下面的代码。</p>
 
 <pre class="brush: css">h1 {
   color: red;
@@ -89,11 +89,11 @@ original_slug: Learn/CSS/First_steps/开始
 
 <p>保存 HTML 和 CSS 文档，刷新浏览器网页，不出意外你将看到网页顶层的大标题变成红色了。如果看到这个现象，恭喜你：你已经成功将某些 CSS 样式运用到 HTML 上了。当然假设没有达到预想结果，可以仔细检查每句代码是否正确，加油：）</p>
 
-<p>你可以一直在本地编辑器练习 <code>styles.css</code> ，或者采用我们教程下面的交互式智能编辑器。这个编辑器会默认把第一个面板里面的 CSS 代码连接到旁边的 HTML 文档，就好像我们上面得两个文档一样互相连接。</p>
+<p>你可以一直在本地编辑器练习 <code>styles.css</code> ，或者采用我们教程下面的交互式智能编辑器。这个编辑器会默认把第一个面板里面的 CSS 代码连接到旁边的 HTML 文档，就好像我们上面得两个文档一样互相连接。</p>
 
 <h2 id="样式化_HTML_元素">样式化 HTML 元素</h2>
 
-<p>通过上一节将大标题变成红色的例子，我们已经展示了我们可以选中并且样式化 HTML 元素。我们通过触发元素选择器实现这一点——元素选择器，即直接匹配 HTML 元素的选择器。例如，若要样式化一个文档中所有的段落，只需使用选择器 <code>p</code>。若要将所有段落变成绿色，你可以利用如下方式：</p>
+<p>通过上一节将大标题变成红色的例子，我们已经展示了我们可以选中并且样式化 HTML 元素。我们通过触发元素选择器实现这一点——元素选择器，即直接匹配 HTML 元素的选择器。例如，若要样式化一个文档中所有的段落，只需使用选择器 <code>p</code>。若要将所有段落变成绿色，你可以利用如下方式：</p>
 
 <pre class="brush: css">p {
   color: green;
@@ -107,13 +107,13 @@ original_slug: Learn/CSS/First_steps/开始
 
 <p>您可以在下面的互动式文本编辑器上试试看，当然您也可以在本地的 CSS 文档上尝试。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}} </p>
 
 <h2 id="改变元素的默认行为">改变元素的默认行为</h2>
 
 <p>只要一个 HTML 文档标记正确，即使像我们的例子那么简单，浏览器都会尽全力将其渲染至可读状态。标题默认使用大号粗体；列表旁总有项目符号。这是因为浏览器自带一个包含默认样式的样式表，默认对任何页面有效。没有了它们，所有文本会夹杂在一起变得一团糟，我们只得从头开始规定，好糟糕。话说回来，所有现代浏览器的默认样式都没什么差距。</p>
 
-<p>不过你可能对浏览器的默认样式不太满意。没关系，只需选定那个元素，加一条 CSS 规则即可。就拿我们的无序列表 <code>&lt;ul&gt;</code>举个例子吧，它自带项目符号，不过要是你跟它有仇，你就可以这样移除它们：</p>
+<p>不过你可能对浏览器的默认样式不太满意。没关系，只需选定那个元素，加一条 CSS 规则即可。就拿我们的无序列表 <code>&lt;ul&gt;</code>举个例子吧，它自带项目符号，不过要是你跟它有仇，你就可以这样移除它们：</p>
 
 <pre class="brush: css">li {
   list-style-type: none;
@@ -121,15 +121,15 @@ original_slug: Learn/CSS/First_steps/开始
 
 <p>把上述代码加到你的 CSS 里面试一试！</p>
 
-<p>欢迎参阅 MDN 上的 <code>list-style-type</code> 属性，看看到底有哪些值被支持。 <code><a href="/en-US/docs/Web/CSS/list-style-type">list-style-type</a></code> 页首提供互动性示例，您可以输入不同的值来瞅一瞅它们到底有什么用。关于每个值的详细描述都规规整整地列在下面。</p>
+<p>欢迎参阅 MDN 上的 <code>list-style-type</code> 属性，看看到底有哪些值被支持。 <code><a href="/en-US/docs/Web/CSS/list-style-type">list-style-type</a></code> 页首提供互动性示例，您可以输入不同的值来瞅一瞅它们到底有什么用。关于每个值的详细描述都规规整整地列在下面。</p>
 
-<p>通过参阅上述页面，你会发现你不仅能移除项目符号——你甚至能改变它们。赶快试试 <code>square</code>，它能把默认的小黑球变成方框框。</p>
+<p>通过参阅上述页面，你会发现你不仅能移除项目符号——你甚至能改变它们。赶快试试 <code>square</code>，它能把默认的小黑球变成方框框。</p>
 
 <h2 id="使用类名">使用类名</h2>
 
 <p>目前为止，我们通过 HTML 元素名规定样式。如果你愿意所有元素都一个样，也不是不可以，但大多数情况下，我估计你都不愿意。我知道你想干啥，你想用这种方式样式化这一片元素，又想用那种方式样式化那一片元素，真贪心。不过没关系，你可以给 HTML 元素加个类名（class），再选中那个类名，这样就可以了，大家基本上都这么用。</p>
 
-<p>举个例子吧，咱们把 <a href="/en-US/docs/Web/HTML/Global_attributes/class">class 属性</a>加到表里面第二个对象。你的列表看起来应该是这样的：</p>
+<p>举个例子吧，咱们把 <a href="/en-US/docs/Web/HTML/Global_attributes/class">class 属性</a>加到表里面第二个对象。你的列表看起来应该是这样的：</p>
 
 <pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;项目一&lt;/li&gt;
@@ -137,7 +137,7 @@ original_slug: Learn/CSS/First_steps/开始
   &lt;li&gt;项目 &lt;em&gt;三&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<p>在 CSS 中，要选中这个 <code>special</code> 类，只需在选择器的开头加个西文句点（.）。在你的 CSS 文档里加上如下代码：</p>
+<p>在 CSS 中，要选中这个 <code>special</code> 类，只需在选择器的开头加个西文句点（.）。在你的 CSS 文档里加上如下代码：</p>
 
 <pre class="brush: css">.special {
   color: orange;
@@ -146,7 +146,7 @@ original_slug: Learn/CSS/First_steps/开始
 
 <p>保存再刷新，就可以看到变化。</p>
 
-<p>这个 <code>special</code> 类型可不局限于列表，它可以应用到各种元素上。举个例子，你可能也想让段落里边的 <code>&lt;span&gt;</code> 一起又橙又粗起来。试试把<code>special</code> 类属性加上去，保存，刷新，哇，生活就是这么美好。</p>
+<p>这个 <code>special</code> 类型可不局限于列表，它可以应用到各种元素上。举个例子，你可能也想让段落里边的 <code>&lt;span&gt;</code> 一起又橙又粗起来。试试把<code>special</code> 类属性加上去，保存，刷新，哇，生活就是这么美好。</p>
 
 <p>有时你会发现选择器中，HTML 元素选择器跟类一起出现：</p>
 
@@ -167,7 +167,7 @@ span.special {
 
 <h2 id="根据元素在文档中的位置确定样式">根据元素在文档中的位置确定样式</h2>
 
-<p>有时候，您希望某些内容根据它在文档中的位置而有所不同。这里有很多选择器可以为您提供帮助，但现在我们只介绍几个选择器。在我们的文档中有两个 <code>&lt;em&gt;</code>元素 ——一个在段落内，另一个在列表项内。仅选择嵌套在<code>&lt;li&gt;</code> 元素内的<code>&lt;em&gt;</code>我们可以使用一个称为<strong>包含选择符</strong>的选择器，它只是单纯地在两个选择器之间加上一个空格。</p>
+<p>有时候，您希望某些内容根据它在文档中的位置而有所不同。这里有很多选择器可以为您提供帮助，但现在我们只介绍几个选择器。在我们的文档中有两个 <code>&lt;em&gt;</code>元素 ——一个在段落内，另一个在列表项内。仅选择嵌套在<code>&lt;li&gt;</code> 元素内的<code>&lt;em&gt;</code>我们可以使用一个称为<strong>包含选择符</strong>的选择器，它只是单纯地在两个选择器之间加上一个空格。</p>
 
 <p>将以下规则添加到样式表。</p>
 
@@ -177,7 +177,7 @@ span.special {
 
 <p>该选择器将选择<code>&lt;li&gt;</code>内部的任何<code>&lt;em&gt;</code>元素（<code>&lt;li&gt;</code>的后代）。因此在示例文档中，您应该发现第三个列表项内的<code>&lt;em&gt;</code>现在是紫色，但是在段落内的那个没发生变化。</p>
 
-<p>另一些可能想尝试的事情是在 HTML 文档中设置直接出现在标题后面并且与标题具有相同层级的段落样式，为此需在两个选择器之间添加一个 <code>+</code> 号 (成为 <strong>相邻选择符</strong>) </p>
+<p>另一些可能想尝试的事情是在 HTML 文档中设置直接出现在标题后面并且与标题具有相同层级的段落样式，为此需在两个选择器之间添加一个 <code>+</code> 号 (成为 <strong>相邻选择符</strong>) </p>
 
 <p>也将这个规则添加到样式表中：</p>
 
@@ -195,7 +195,7 @@ span.special {
 
 <h2 id="根据状态确定样式">根据状态确定样式</h2>
 
-<p>在这篇教程中我们最后要看的一种修改样式的方法就是根据标签的状态确定样式。一个直观的例子就是当我们修改链接的样式时。当我们修改一个链接的样式时我们需要定位（针对） <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> （锚）标签。取决于是否是未访问的、访问过的、被鼠标悬停的、被键盘定位的，亦或是正在被点击当中的状态，这个标签有着不同的状态。你可以使用 CSS 去定位或者说针对这些不同的状态进行修饰——下面的 CSS 代码使得没有被访问的链接颜色变为粉色、访问过的链接变为绿色。</p>
+<p>在这篇教程中我们最后要看的一种修改样式的方法就是根据标签的状态确定样式。一个直观的例子就是当我们修改链接的样式时。当我们修改一个链接的样式时我们需要定位（针对） <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> （锚）标签。取决于是否是未访问的、访问过的、被鼠标悬停的、被键盘定位的，亦或是正在被点击当中的状态，这个标签有着不同的状态。你可以使用 CSS 去定位或者说针对这些不同的状态进行修饰——下面的 CSS 代码使得没有被访问的链接颜色变为粉色、访问过的链接变为绿色。</p>
 
 <pre class="brush: css">a:link {
   color: pink;
@@ -213,7 +213,7 @@ a:visited {
 
 <p>在下面的例子中，你可以对超链接的不同状态尝试各种各样的值。我已经编写了一些规则，然而你肯定已经发现粉色看上去太浅以至于不好辨认。——换一个更好的颜色吧。你能将链接变为黑体吗？</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
 
 <p>我们对鼠标悬停于链接上的情况删除了下划线。你当然可以让超链接在任何情况下都没有下划线。但需要注意的是，对一个实际的站点，需要让浏览者知道“链接是链接”。为了让浏览者注意到一段文字中的某些部分是可点击的，最好保留 link 状态下的下划线。— 这是下划线的本来作用。不管你用 CSS 来做什么，都应当使得变化后的文档看上去更加清晰明了。— 在后面，当我们遇到类似的情况时，我们将适时指出。</p>
 

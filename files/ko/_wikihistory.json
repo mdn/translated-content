@@ -12073,16 +12073,6 @@
       "jaemin_jo"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:39:22.531Z",
-    "contributors": [
-      "ahnzaz",
-      "KSH-code",
-      "Netaras",
-      "teoli",
-      "NFM"
-    ]
-  },
   "Web/JavaScript/Memory_Management": {
     "modified": "2020-03-12T19:37:54.884Z",
     "contributors": [
@@ -17242,11 +17232,13 @@
     ]
   },
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2019-12-13T21:09:57.295Z",
+    "modified": "2020-03-12T19:39:22.531Z",
     "contributors": [
-      "wbamberg",
+      "ahnzaz",
+      "KSH-code",
       "Netaras",
-      "Sebuls"
+      "teoli",
+      "NFM"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {

@@ -16,7 +16,7 @@ original_slug: API/Pointer_Lock_API
 
 <h2 id="basics">基本概念</h2>
 
-<p>指针锁定和<a href="/en/DOM/element.setCapture" title="element.setCapture">鼠标捕获</a>有关。鼠标捕获在一个鼠标被拖曳时可以向一个目标元素持续传递有关事件，但是当鼠标按钮被放开时就会停止。指针锁定和鼠标捕获在以下方面有所不同：</p>
+<p>指针锁定和<a href="/en/DOM/element.setCapture">鼠标捕获</a>有关。鼠标捕获在一个鼠标被拖曳时可以向一个目标元素持续传递有关事件，但是当鼠标按钮被放开时就会停止。指针锁定和鼠标捕获在以下方面有所不同：</p>
 
 <ul>
  <li>它是持久性的。指针锁定不释放鼠标，直到作出一个显式的 API 调用或是用户使用一个专门的释放手势。</li>
@@ -183,7 +183,7 @@ document.exitPointerLock();
 
 <div class="note">movement 属性目前在 Firefox 中被加上前缀为 <code>.mozMovementX</code> 和 <code>.mozMovementY</code> , 在 Chrome 中为<code>.webkitMovementX</code> 和 <code>.webkitMovementY</code>。</div>
 
-<p>鼠标事件的两个新参数—<code>movementX</code> 和 <code>movementY</code>—提供了鼠标位置的变化情况。这两个参数的值，等于两个<a href="/en/DOM/MouseEvent" title="en/DOM/Event/UIEvent/MouseEvent"><code>MouseEvent</code></a> 属性（ <code>screenX</code> 和 <code>screenY）</code>之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ <code>eNow</code> 和 <code>ePrevious</code>）中。换言之，指针锁定参数 <code>movementX = eNow.screenX - ePrevious.screenX</code>。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）</p>
+<p>鼠标事件的两个新参数—<code>movementX</code> 和 <code>movementY</code>—提供了鼠标位置的变化情况。这两个参数的值，等于两个<a href="/en/DOM/MouseEvent"><code>MouseEvent</code></a> 属性（ <code>screenX</code> 和 <code>screenY）</code>之间值的变化程度，这些 MouseEvent 属性被存储在两个连续的鼠标移动事件（ <code>eNow</code> 和 <code>ePrevious</code>）中。换言之，指针锁定参数 <code>movementX = eNow.screenX - ePrevious.screenX</code>。（译注：不存在名为 eNow 或 ePrevious 的事件或属性，eNow 代指当前的鼠标移动事件，ePrevious 代指前一个鼠标移动事件）</p>
 
 <h3 id="locked_state">锁定状态</h3>
 
@@ -209,4 +209,4 @@ document.exitPointerLock();
 
 <p>{{ spec("http://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html", "W3C Pointer Lock API Specification", "ED") }}</p>
 
-<p><a href="/en/DOM/MouseEvent" title="en/DOM/Event/UIEvent/MouseEvent">MouseEvent</a></p>
+<p><a href="/en/DOM/MouseEvent">MouseEvent</a></p>

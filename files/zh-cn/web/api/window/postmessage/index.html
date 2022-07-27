@@ -24,7 +24,7 @@ translation_of: Web/API/Window/postMessage
 
 <dl>
  <dt><code>otherWindow</code></dt>
- <dd>其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行<a href="/en-US/docs/DOM/window.open" title="DOM/window.open">window.open</a>返回的窗口对象、或者是命名过或数值索引的<a href="/en-US/docs/DOM/window.frames" title="DOM/window.frames">window.frames</a>。</dd>
+ <dd>其他窗口的一个引用，比如 iframe 的 contentWindow 属性、执行<a href="/en-US/docs/DOM/window.open">window.open</a>返回的窗口对象、或者是命名过或数值索引的<a href="/en-US/docs/DOM/window.frames">window.frames</a>。</dd>
  <dt><code>message</code></dt>
  <dd>将要发送到其他 window 的数据。它将会被<a href="https://developer.mozilla.org/en-US/docs/DOM/The_structured_clone_algorithm">结构化克隆算法</a>序列化。这意味着你可以不受什么限制的将数据对象安全的传送给目标窗口而无需自己序列化。[<a href="https://developer.mozilla.org/en-US/docs/">1</a>]</dd>
  <dt><code>targetOrigin</code></dt>
@@ -59,7 +59,7 @@ function receiveMessage(event)
  <dt><code>data</code></dt>
  <dd>从其他 window 中传递过来的对象。</dd>
  <dt><code>origin</code></dt>
- <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin" title="Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code>https://example.org</code> (隐含端口 <code>443</code>)”、“<code>http://example.net</code> (隐含端口 <code>80</code>)”、“<code>http://example.com:8080</code>”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。</dd>
+ <dd>调用 <code>postMessage</code>  时消息发送方窗口的 <a href="/en-US/docs/Origin">origin</a> . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如 “<code>https://example.org</code> (隐含端口 <code>443</code>)”、“<code>http://example.net</code> (隐含端口 <code>80</code>)”、“<code>http://example.com:8080</code>”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。</dd>
  <dt><code>source</code></dt>
  <dd>对发送消息的<a href="/en-US/docs/DOM/window">窗口</a>对象的引用; 您可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。</dd>
 </dl>

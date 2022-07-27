@@ -399,7 +399,7 @@
 /zh-TW/docs/JavaScript_技術簡介	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/JavaScript_正規表達式	/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions
 /zh-TW/docs/JavaScript_物件導向介紹	/zh-TW/docs/conflicting/Learn/JavaScript/Objects
-/zh-TW/docs/JavaScript_語言的資源	/zh-TW/docs/Web/JavaScript/Language_Resources
+/zh-TW/docs/JavaScript_語言的資源	/zh-TW/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/Learn/CSS/CSS_轉場	/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /zh-TW/docs/Learn/CSS/Consistent_List_Indentation	/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 /zh-TW/docs/Learn/CSS/Getting_started	/en-US/docs/Learn/CSS/First_steps
@@ -725,6 +725,7 @@
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays	/zh-TW/docs/Web/JavaScript/Typed_arrays
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
+/zh-TW/docs/Web/JavaScript/Language_Resources	/zh-TW/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Control_flow_and_error_handling	/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Expressions_and_Operators	/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Keyed_collections	/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections

@@ -10,17 +10,17 @@ translation_of: Web/CSS/clear
 ---
 <div>{{CSSRef}}</div>
 
-<p> <strong><code>clear</code></strong> <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。<code>clear</code> 属性适用于浮动和非浮动元素。</p>
+<p> <strong><code>clear</code></strong> <a href="/en-US/docs/CSS">CSS</a> 属性指定一个元素是否必须移动 (清除浮动后) 到在它之前的浮动元素下面。<code>clear</code> 属性适用于浮动和非浮动元素。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
 
 
 
-<p>当应用于非浮动块时，它将非浮动块的<a href="/en-US/docs/CSS/box_model" title="CSS/box_model">边框边界</a>移动到所有相关浮动元素<a href="/en-US/docs/CSS/box_model" title="CSS/box_model">外边界</a>的下方。这个非浮动块的<a href="/en-US/docs/CSS/margin_collapsing">垂直外边距</a>会折叠。</p>
+<p>当应用于非浮动块时，它将非浮动块的<a href="/en-US/docs/CSS/box_model">边框边界</a>移动到所有相关浮动元素<a href="/en-US/docs/CSS/box_model">外边界</a>的下方。这个非浮动块的<a href="/en-US/docs/CSS/margin_collapsing">垂直外边距</a>会折叠。</p>
 
-<p>另一方面，两个浮动元素的垂直外边距将不会折叠。当应用于浮动元素时，它将元素的<a href="/en-US/docs/CSS/box_model" title="CSS/box_model">外边界</a>移动到所有相关的浮动元素<a href="/en-US/docs/CSS/box_model" title="CSS/box_model">外边框边界</a>的下方。这会影响后面浮动元素的布局，后面的浮动元素的位置无法高于它之前的元素。</p>
+<p>另一方面，两个浮动元素的垂直外边距将不会折叠。当应用于浮动元素时，它将元素的<a href="/en-US/docs/CSS/box_model">外边界</a>移动到所有相关的浮动元素<a href="/en-US/docs/CSS/box_model">外边框边界</a>的下方。这会影响后面浮动元素的布局，后面的浮动元素的位置无法高于它之前的元素。</p>
 
-<p>要被清除的相关浮动元素指的是在相同<a href="https://developer.mozilla.org/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">块级格式化上下文</a>中的前置浮动。</p>
+<p>要被清除的相关浮动元素指的是在相同<a href="https://developer.mozilla.org/en-US/docs/CSS/block_formatting_context">块级格式化上下文</a>中的前置浮动。</p>
 
 <div class="note">
 <p><strong>注意：</strong>如果一个元素里只有浮动元素，那它的高度会是 0。如果你想要它自适应即包含所有浮动元素，那你需要清除它的子元素。一种方法叫做<strong>clearfix</strong>，即<code>clear</code>一个不浮动的 {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">伪元素</a>。</p>
@@ -200,5 +200,5 @@ p {
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/box_model" title="CSS/box_model">盒模型</a></li>
+ <li><a href="/en-US/docs/CSS/box_model">盒模型</a></li>
 </ul>

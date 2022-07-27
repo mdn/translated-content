@@ -132,7 +132,7 @@ typeof myFloat;</pre>
 </div>
 
 <div class="blockIndicator note">
-<p>Note: 有时你可能会看到使用较旧的 {{jsxref("Math.pow()")}} 方法表达的指数，该方法的工作方式非常相似。例如，在 <code>Math.pow(7, 3)</code>  中，<code>7</code> 是基数，<code>3</code> 是指数，因此表达式的结果是 <code>343</code>。 <code>Math.pow(7, 3)</code> 相当于 <code>7 ** 3</code>。</p>
+<p>Note: 有时你可能会看到使用较旧的 {{jsxref("Math.pow()")}} 方法表达的指数，该方法的工作方式非常相似。例如，在 <code>Math.pow(7, 3)</code>  中，<code>7</code> 是基数，<code>3</code> 是指数，因此表达式的结果是 <code>343</code>。 <code>Math.pow(7, 3)</code> 相当于 <code>7 ** 3</code>。</p>
 </div>
 
 <p>我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。尝试将下面的示例输入到<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">开发者工具 JavaScript 控制台</a>中。</p>
@@ -143,7 +143,7 @@ typeof myFloat;</pre>
 9 * 8
 60 % 3</pre>
  </li>
- <li>您还可以尝试声明变量并用数字初始化变量，然后尝试使用这些变量来求和 - 求和中变量的行为与直接用其持有的数来求和完全一样。例如：
+ <li>您还可以尝试声明变量并用数字初始化变量，然后尝试使用这些变量来求和 - 求和中变量的行为与直接用其持有的数来求和完全一样。例如：
   <pre class="brush: js notranslate">let num1 = 10;
 let num2 = 50;
 9 * num1;
@@ -188,7 +188,7 @@ num2 + num1 / 8 + 2;</pre>
 <pre class="brush: js notranslate">guessCount++;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 它们最常用于 <a href="/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration">循环</a> 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 ——  <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html">在线查看效果</a>，并 <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html">查看源代码</a>，看看是否可以发现增量器！我们稍后将会详细介绍循环。</p>
+<p><strong>Note</strong>: 它们最常用于 <a href="/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration">循环</a> 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 ——  <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html">在线查看效果</a>，并 <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html">查看源代码</a>，看看是否可以发现增量器！我们稍后将会详细介绍循环。</p>
 </div>
 
 <p>我们来试试看你们的控制台。首先，请注意，您不能将这些直接应用于一个数字，这可能看起来很奇怪，但是我们为变量赋值一个新的更新值，而不是对该值进行操作。以下将返回错误：</p>
@@ -211,7 +211,7 @@ num2--;
 num2;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 您可以使浏览器以其他方式进行操作 - 递增/递减变量，然后返回值 - 将操作符放在变量的开头，而不是结束。再次尝试上面的例子，但这次使用 <code>++num1</code> 和 <code>--num2</code>。</p>
+<p><strong>Note</strong>: 您可以使浏览器以其他方式进行操作 - 递增/递减变量，然后返回值 - 将操作符放在变量的开头，而不是结束。再次尝试上面的例子，但这次使用 <code>++num1</code> 和 <code>--num2</code>。</p>
 </div>
 
 <h2 id="赋值运算符">赋值运算符</h2>
@@ -399,7 +399,7 @@ function updateBtn() {
 <p>您可以在 updateBtn（）函数内看到正在使用的等号运算符。在这种情况下，我们不会测试两个数学表达式是否具有相同的值 - 我们正在测试一个按钮的文本内容是否包含某个字符串 - 但它仍然是工作原理。如果按钮当前为“启动机器（start machine）”，则将其标签更改为“停止机器（stop machine）”，并根据需要更新标签。如果按钮上写着“停机”时被按下，我们将显示回原来的内容。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 这种在两个状态之间来回交换的行为通常被称为<strong> </strong><strong>切换 (toggle)</strong>。它在一个状态和另一个状态之间切换 - 点亮，熄灭等</p>
+<p><strong>Note</strong>: 这种在两个状态之间来回交换的行为通常被称为<strong> </strong><strong>切换 (toggle)</strong>。它在一个状态和另一个状态之间切换 - 点亮，熄灭等</p>
 </div>
 
 <h2 id="总结">总结</h2>
@@ -409,7 +409,7 @@ function updateBtn() {
 <p>在下一篇文章中，我们将探讨文本，以及 JavaScript 如何让我们操纵它。</p>
 
 <div class="note">
-<p><strong>Note</strong>:  如果您喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习<a href="/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates">数字与日期</a> 和 <a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级">表达式与运算符</a> 来说，那是一个不错的地方。</p>
+<p><strong>Note</strong>:  如果您喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习<a href="/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates">数字与日期</a> 和 <a href="/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级">表达式与运算符</a> 来说，那是一个不错的地方。</p>
 </div>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}</p>

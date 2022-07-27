@@ -13,7 +13,7 @@ translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>HTML 基础 (学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>) ，了解 CSS 工作原理 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
+   <td>HTML 基础 (学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>) ，了解 CSS 工作原理 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -94,12 +94,12 @@ article {
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow: 1px 1px 1px black,
+              2px 2px 1px black,
+              3px 3px 1px red,
+              4px 4px 1px red,
+              5px 5px 1px black,
+              6px 6px 1px black;
 }</pre>
 
 <p>结果如下：</p>
@@ -191,14 +191,14 @@ button:active {
 
 <ul>
  <li>滤镜很新——它们可以被大多数的现代的浏览器支持，包括 Microsoft Edge，但它们一点也不能被 IE 浏览器支持。因此如果你在你的设计中使用滤镜，你需要确保你的内容即使没有滤镜也是可用的。</li>
- <li>你会看到我们在<code>filter</code>属性中通过<code>-webkit-</code>前缀包含了一个版本信息，这被称为一个 {{glossary("Vendor Prefix")}}，有时会被浏览器使用，以在一个新特性完整实现之前，当它与无前缀版本没有冲突的时候支持并实验这个特性。Vendor prefixes 永远都不被指望着被 web 开发人员使用，但是它们有时候确实会被在产品页面中使用，即当实验性的特性确实被需要时。在这个实例中，Chrome/Safari/Opera 目前要求这些属性的<code>-webkit-</code>版本，而 Edge 和 Firefox 则使用后者，无前缀版本。</li>
+ <li>你会看到我们在<code>filter</code>属性中通过<code>-webkit-</code>前缀包含了一个版本信息，这被称为一个 {{glossary("Vendor Prefix")}}，有时会被浏览器使用，以在一个新特性完整实现之前，当它与无前缀版本没有冲突的时候支持并实验这个特性。Vendor prefixes 永远都不被指望着被 web 开发人员使用，但是它们有时候确实会被在产品页面中使用，即当实验性的特性确实被需要时。在这个实例中，Chrome/Safari/Opera 目前要求这些属性的<code>-webkit-</code>版本，而 Edge 和 Firefox 则使用后者，无前缀版本。</li>
 </ul>
 
 <div class="note">
 <p><strong>注意</strong>: 如果你确实决定在你的代码中使用前缀，确保你包括了所有需要的前缀以及无前缀的版本，这样才会有尽可能多的浏览器能够使用这些特性，并且如果浏览器落下了前缀，它们也能够使用无前缀的版本。另外需要注意的是这些实验性的特性可能会有改变，这可能会导致你的代码被破坏，在前缀被去除之前，最好还是仅仅实验这些特性。</p>
 </div>
 
-<p> 你可以看到更多关于滤镜的例子，在 <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html">filters.html</a> (也可以看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html">source code</a>).</p>
+<p> 你可以看到更多关于滤镜的例子，在 <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html">filters.html</a> (也可以看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html">source code</a>).</p>
 
 <h2 id="Blend_modes（混合模式）">Blend modes（混合模式）</h2>
 
@@ -211,10 +211,10 @@ button:active {
  <li>{{cssxref("mix-blend-mode")}}, 用来将一个元素与它覆盖的那些元素各自所设置的背景（background）和内容 (content) 混合在一起。</li>
 </ul>
 
-<p>你可以找到比这里用到的更多的例子，在我们的<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html">blend-modes.html</a> 示例页面 (查看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html">source code</a>), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。</p>
+<p>你可以找到比这里用到的更多的例子，在我们的<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html">blend-modes.html</a> 示例页面 (查看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html">source code</a>), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。</p>
+<p><strong>注意</strong>: 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。</p>
 </div>
 
 <h3 id="background-blend-mode">background-blend-mode</h3>
@@ -226,7 +226,7 @@ button:active {
 &lt;div class="multiply"&gt;
 &lt;/div&gt;</pre>
 
-<p>现在来点 CSS — 我们正在给<code>&lt;div&gt;</code>添加一个背景图像和一个绿色的背景色：</p>
+<p>现在来点 CSS — 我们正在给<code>&lt;div&gt;</code>添加一个背景图像和一个绿色的背景色：</p>
 
 <pre class="brush: css">div {
   width: 250px;
@@ -383,9 +383,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 htmlInput.addEventListener("input", drawOutput);

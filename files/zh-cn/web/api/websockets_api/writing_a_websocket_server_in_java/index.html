@@ -9,11 +9,11 @@ translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
  <br>
  虽然其他的服务端语言也能创建 WebSocket 服务，但是通过这个例子你可以看到使用 Java 来做这件事会更简单。</p>
 
-<p>这个服务符合协议<a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a>， 所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。</p>
+<p>这个服务符合协议<a href="http://tools.ietf.org/html/rfc6455">RFC 6455</a>， 所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。</p>
 
 <h2 id="第一步">第一步</h2>
 
-<p>WebSocket 通过<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP（传输控制协议）</a>通信. Java 的<a href="http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html">ServerSocket</a> 类位于 java.net 包中。</p>
+<p>WebSocket 通过<a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP（传输控制协议）</a>通信. Java 的<a href="http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html">ServerSocket</a> 类位于 java.net 包中。</p>
 
 <h3 id="ServerSocket">ServerSocket</h3>
 
@@ -50,9 +50,9 @@ public class WebSocket {
 <p>方法：</p>
 
 <ul>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a>()</code><br>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a>()</code><br>
   返回这个 Socket 的输入流 InputStream</li>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a>()</code><br>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a>()</code><br>
   返回这个 Socket 的输出流 OutputStream</li>
 </ul>
 
@@ -156,7 +156,7 @@ public class WebSocket {
  </tbody>
 </table>
 
-<p>FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操作码 0x1 表示这是一个完整的消息。 <a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Full list of Opcodes</a></p>
+<p>FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操作码 0x1 表示这是一个完整的消息。 <a href="http://tools.ietf.org/html/rfc6455#section-5.2">Full list of Opcodes</a></p>
 
 <p>- 134:</p>
 

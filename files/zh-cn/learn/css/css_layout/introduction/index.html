@@ -81,9 +81,9 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <p>下列布局技术会覆盖默认的布局行为：</p>
 
 <ul>
- <li><strong> {{cssxref("display")}} </strong>属性 — 标准的 value，比如<code>block</code>, <code>inline</code> 或者 <code>inline-block</code> 元素在正常布局流中的表现形式 (见 <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a>). 接着是全新的布局方式，通过设置<code>display</code>的值，比如 <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> 和 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</li>
- <li><strong>浮动</strong>——应用 <strong>{{cssxref("float")}}</strong> 值，诸如 <code>left</code> 能够让块级元素互相并排成一行，而不是一个堆叠在另一个上面。</li>
- <li><strong>{{cssxref("position")}} </strong>属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 <code>static</code> ，使用其它值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。</li>
+ <li><strong> {{cssxref("display")}} </strong>属性 — 标准的 value，比如<code>block</code>, <code>inline</code> 或者 <code>inline-block</code> 元素在正常布局流中的表现形式 (见 <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">Types of CSS boxes</a>). 接着是全新的布局方式，通过设置<code>display</code>的值，比如 <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">CSS Grid</a> 和 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>.</li>
+ <li><strong>浮动</strong>——应用 <strong>{{cssxref("float")}}</strong> 值，诸如 <code>left</code> 能够让块级元素互相并排成一行，而不是一个堆叠在另一个上面。</li>
+ <li><strong>{{cssxref("position")}} </strong>属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 <code>static</code> ，使用其它值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。</li>
  <li><strong>表格布局</strong>— 表格的布局方式可以用在非表格内容上，可以使用<code>display: table</code>和相关属性在非表元素上使用。</li>
  <li><strong>多列布局</strong>— 这个 <a href="/en-US/docs/Web/CSS/CSS_Columns">Multi-column layout</a> 属性 可以让块按列布局，比如报纸的内容就是一列一列排布的。</li>
 </ul>
@@ -98,7 +98,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <h2 id="弹性盒子Flexbox">弹性盒子 (Flexbox)</h2>
 
-<p>Flexbox 是 CSS 弹性盒子布局模块（<a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用 flexbox，你只需要在想要进行 flex 布局的父元素上应用<code>display: flex</code> ，所有直接子元素都将会按照 flex 进行布局。我们来看一个例子。</p>
+<p>Flexbox 是 CSS 弹性盒子布局模块（<a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用 flexbox，你只需要在想要进行 flex 布局的父元素上应用<code>display: flex</code> ，所有直接子元素都将会按照 flex 进行布局。我们来看一个例子。</p>
 
 <p>下面这些 HTML 标记描述了一个 class 为<code>wrapper</code>的容器元素，它的内部有三个<code>&lt;div&gt;</code>元素。它们在我们的英文文档当中，会默认地作为块元素从上到下进行显示。</p>
 
@@ -171,14 +171,14 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <p>{{ EmbedLiveSample('Flex_2', '300', '200') }}</p>
 
 <div class="note">
-<p><strong>注意：</strong>为了找到更多关于 Flexbox 的信息，看看我们的 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> 的文章。</p>
+<p><strong>注意：</strong>为了找到更多关于 Flexbox 的信息，看看我们的 <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> 的文章。</p>
 </div>
 
 <h2 id="Grid布局">Grid 布局</h2>
 
 <p>Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于同时在两个维度上把元素按行和列排列整齐。</p>
 
-<p>同 flex 一样，你可以通过指定 display 的值来转到 grid 布局：<code>display: grid</code>。下面的例子使用了与 flex 例子类似的 HTML 标记，描述了一个容器和若干子元素。除了使用<code>display:grid</code>，我们还分别使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 两个属性定义了一些行和列的轨道。定义了三个<code>1fr</code>的列，还有两个<code>100px</code>的行之后，无需再在子元素上指定任何规则，它们自动地排列到了我们创建的格子当中。</p>
+<p>同 flex 一样，你可以通过指定 display 的值来转到 grid 布局：<code>display: grid</code>。下面的例子使用了与 flex 例子类似的 HTML 标记，描述了一个容器和若干子元素。除了使用<code>display:grid</code>，我们还分别使用 {{cssxref("grid-template-rows")}} 和 {{cssxref("grid-template-columns")}} 两个属性定义了一些行和列的轨道。定义了三个<code>1fr</code>的列，还有两个<code>100px</code>的行之后，无需再在子元素上指定任何规则，它们自动地排列到了我们创建的格子当中。</p>
 
 <div id="Grid_1">
 <div class="hidden">
@@ -215,7 +215,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>{{ EmbedLiveSample('Grid_1', '300', '330') }}</p>
 
-<p>一旦你拥有了一个 grid，你也可以显式地将元素摆放在里面，而不是依赖于浏览器进行自动排列。在下面的第二个例子里，我们定义了一个和上面一样的 grid，但是这一次我们只有三个子元素。我们利用 {{cssxref("grid-column")}} 和 {{cssxref("grid-row")}} 两个属性来指定每一个子元素应该从哪一行/列开始，并在哪一行/列结束。这就能够让子元素在多个行/列上展开。</p>
+<p>一旦你拥有了一个 grid，你也可以显式地将元素摆放在里面，而不是依赖于浏览器进行自动排列。在下面的第二个例子里，我们定义了一个和上面一样的 grid，但是这一次我们只有三个子元素。我们利用 {{cssxref("grid-column")}} 和 {{cssxref("grid-row")}} 两个属性来指定每一个子元素应该从哪一行/列开始，并在哪一行/列结束。这就能够让子元素在多个行/列上展开。</p>
 
 <div id="Grid_2">
 <div class="hidden">
@@ -344,7 +344,7 @@ p {
 <ul>
  <li><strong>静态定位 (Static positioning)</strong>是每个元素默认的属性——它表示“将元素放在文档布局流的默认位置——没有什么特殊的地方”。</li>
  <li><strong>相对定位 (Relative positioning)</strong>允许我们相对于元素在正常的文档流中的位置移动它——包括将两个元素叠放在页面上。这对于微调和精准设计 (design pinpointing) 非常有用。</li>
- <li><strong>绝对定位 (Absolute positioning)</strong>将元素完全从页面的正常布局流 (normal layout flow) 中移出，类似将它单独放在一个图层中。我们可以将元素相对于页面的 <code>&lt;html&gt;</code> 元素边缘固定，或者相对于该元素的<em>最近被定位祖先元素 (nearest positioned ancestor element)</em>。绝对定位在创建复杂布局效果时非常有用，例如通过标签显示和隐藏的内容面板或者通过按钮控制滑动到屏幕中的信息面板。</li>
+ <li><strong>绝对定位 (Absolute positioning)</strong>将元素完全从页面的正常布局流 (normal layout flow) 中移出，类似将它单独放在一个图层中。我们可以将元素相对于页面的 <code>&lt;html&gt;</code> 元素边缘固定，或者相对于该元素的<em>最近被定位祖先元素 (nearest positioned ancestor element)</em>。绝对定位在创建复杂布局效果时非常有用，例如通过标签显示和隐藏的内容面板或者通过按钮控制滑动到屏幕中的信息面板。</li>
  <li><strong>固定定位 (Fixed positioning)</strong>与绝对定位非常类似，但是它是将一个元素相对浏览器视口固定，而不是相对另外一个元素。这在创建类似在整个页面滚动过程中总是处于屏幕的某个位置的导航菜单时非常有用。</li>
  <li><strong>粘性定位 (Sticky positioning)</strong>是一种新的定位方式，它会让元素先保持和<code>position: static</code>一样的定位，当它的相对视口位置 (offset from the viewport) 达到某一个预设值时，他就会像<code>position: fixed</code>一样定位。</li>
 </ul>
@@ -380,7 +380,7 @@ p {
 
 <h3 id="相对定位">相对定位</h3>
 
-<p>相对定位 (relative positioning) 让你能够把一个正常布局流 (normal flow) 中的元素从它的默认位置按坐标进行相对移动。比如将一个图标往下调一点，以便放置文字。我们可以通过下面的规则添加相对定位来实现效果: </p>
+<p>相对定位 (relative positioning) 让你能够把一个正常布局流 (normal flow) 中的元素从它的默认位置按坐标进行相对移动。比如将一个图标往下调一点，以便放置文字。我们可以通过下面的规则添加相对定位来实现效果: </p>
 
 <pre class="brush: css notranslate">.positioned {
   position: relative;
@@ -607,9 +607,9 @@ p {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>现在，我们例子中的 CSS。除了使用 {{cssxref("display")}} 属性外，大多数 CSS 都是相当普通的。 {{htmlelement("form")}}, {{htmlelement("div")}},  {{htmlelement("label")}}和{{htmlelement("input")}}被告知要分别显示表、表行和表单元——基本上，它们会像 HTML 表格标记一样，导致标签和输入在默认情况下排列整齐。我们所要做的就是添加一些大小、边缘等等，让一切看起来都好一点，我们就完成了。</p>
+<p>现在，我们例子中的 CSS。除了使用 {{cssxref("display")}} 属性外，大多数 CSS 都是相当普通的。 {{htmlelement("form")}}, {{htmlelement("div")}},  {{htmlelement("label")}}和{{htmlelement("input")}}被告知要分别显示表、表行和表单元——基本上，它们会像 HTML 表格标记一样，导致标签和输入在默认情况下排列整齐。我们所要做的就是添加一些大小、边缘等等，让一切看起来都好一点，我们就完成了。</p>
 
-<p>你会注意到标题段落已经给出了 <code>display: table-caption;</code>——这使得它看起来就像一个表格{{htmlelement("caption")}} ——同时出于设计需要，我们通过<code>caption-side: bottom;</code> 告诉标题应该展示在表格的底部，即使这个{{htmlelement("p")}}标记在源码中是在<code>&lt;input&gt;</code>之前。这就能让你有一点灵活的弹性。</p>
+<p>你会注意到标题段落已经给出了 <code>display: table-caption;</code>——这使得它看起来就像一个表格{{htmlelement("caption")}} ——同时出于设计需要，我们通过<code>caption-side: bottom;</code> 告诉标题应该展示在表格的底部，即使这个{{htmlelement("p")}}标记在源码中是在<code>&lt;input&gt;</code>之前。这就能让你有一点灵活的弹性。</p>
 
 <pre class="brush: css notranslate">html {
   font-family: sans-serif;
@@ -651,7 +651,7 @@ form p {
 
 <p>{{ EmbedLiveSample('Table_layout', '100%', '170') }}</p>
 
-<p>你可以在 <a href="https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html">css-tables-example.html</a> 看到预览版 (也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html">源码</a>)</p>
+<p>你可以在 <a href="https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html">css-tables-example.html</a> 看到预览版 (也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html">源码</a>)</p>
 
 <h2 id="多列布局">多列布局</h2>
 

@@ -98,9 +98,9 @@ translation_of: Web/HTML/Element/script
  <dt>{{htmlattrdef("src")}}</dt>
  <dd>这个属性定义引用外部脚本的 URI，这可以用来代替直接在文档中嵌入脚本。指定了 src 属性的 script 元素标签内不应该再有嵌入的脚本。</dd>
  <dt>{{htmlattrdef("type")}}</dt>
- <dd>该属性定义 script 元素包含或<code>src</code>引用的脚本语言。属性的值为<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型; 支持的<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型包括<code>text/javascript</code>, <code>text/ecmascript</code>, <code>application/javascript</code>, 和<code>application/ecmascript</code>。如果没有定义这个属性，脚本会被视作 JavaScript。</dd>
- <dd>如果<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型不是 JavaScript 类型（上述支持的类型），则该元素所包含的内容会被当作数据块而不会被浏览器执行。</dd>
- <dd>如果 type 属性为<code>module</code>，代码会被当作 JavaScript 模块 {{experimental_inline}}。请参见<a class="external external-icon" href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a></dd>
+ <dd>该属性定义 script 元素包含或<code>src</code>引用的脚本语言。属性的值为<abbr>MIME</abbr>类型; 支持的<abbr>MIME</abbr>类型包括<code>text/javascript</code>, <code>text/ecmascript</code>, <code>application/javascript</code>, 和<code>application/ecmascript</code>。如果没有定义这个属性，脚本会被视作 JavaScript。</dd>
+ <dd>如果<abbr>MIME</abbr>类型不是 JavaScript 类型（上述支持的类型），则该元素所包含的内容会被当作数据块而不会被浏览器执行。</dd>
+ <dd>如果 type 属性为<code>module</code>，代码会被当作 JavaScript 模块 {{experimental_inline}}。请参见<a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a></dd>
  <dd>在 Firefox 中可以通过定义 type=application/javascript;version=1.8 来使用如 let 声明这类的 JS 高版本中的先进特性。 但请注意这是个非标准功能，其他浏览器，特别是基于 Chrome 的浏览器可能会不支持。</dd>
  <dd>关于如何引入特殊编程语言，请参见<a href="/en-US/Add-ons/Code_snippets/Rosetta">这篇文章</a>。</dd>
  <dt>{{htmlattrdef("text")}}</dt>
