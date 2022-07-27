@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/dl
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>、<code>&#x3C;dl></code> 要素の子要素が 1 つの名前と値のグループの場合は知覚可能コンテンツ
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<code>&#x3C;dl></code> 要素の子要素が 1 つの名前と値のグループの場合は知覚可能コンテンツ
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ translation_of: Web/HTML/Element/dl
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>
