@@ -8,16 +8,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 {{AddonSidebar}}
 
-> **备注：** 如果你熟悉浏览器扩展的基本概念，你可以跳过这一章节，去阅读[如何把扩展文件组合在一起](zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，阅读[参考文档](zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference)去构建你的扩展。访问 [Firefox 扩展工作站](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)，了解有关Firefox 扩展测试、发布等更多信息。
-在这篇文章中，我们将为 Firefox 创建一个扩展。这个扩展只是给从“firefox.org”或其任意子域名加载的任何页面添加一个红色边框。
+> **备注：** 如果你熟悉浏览器扩展的基本概念，你可以跳过这一章节，去阅读[如何把扩展文件组合在一起](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，阅读[参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference)以构建你的扩展。访问 [Firefox 扩展工作站](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)，了解有关 Firefox 扩展测试、发布等更多信息。
+在这篇文章中，我们将为 Firefox 创建一个扩展。这个扩展只是给从“`mozilla.org`”或其任意子域名加载的任何页面添加一个红色边框。
 
 该示例的源代码位于 GitHub：<https://github.com/mdn/webextensions-examples/tree/master/borderify>
 
-首先，你需要 Firefox 45 或更高版本。
-
 ## 编写扩展
 
-创建一个新的目录并切换到该目录。例如，在你的命令行或者说终端，你可以这么做：
+创建一个新的目录并切换到该目录。例如，在你的命令行或者终端，你可以这么做：
 
 ```bash
 mkdir borderify
@@ -51,11 +49,11 @@ cd borderify
 }
 ```
 
-- 前三个键：[`manifest_version`](/zh-CN/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-CN/Add-ons/WebExtensions/manifest.json/name) 和 [`version`](/zh-CN/Add-ons/WebExtensions/manifest.json/version) 是强制的，包含有扩展的基本元数据。
+- 前三个键：[`manifest_version`](/zh-CN/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-CN/Add-ons/WebExtensions/manifest.json/name) 和 [`version`](/zh-CN/Add-ons/WebExtensions/manifest.json/version) 是必须的，包含有扩展的基本元数据。
 - [`description`](/zh-CN/Add-ons/WebExtensions/manifest.json/description) 是可选的，但建议使用：该描述将显示在附加组件管理器上。
 - [`icons`](/zh-CN/Add-ons/WebExtensions/manifest.json/icons) 是可选的，但建议使用：它允许你给扩展指定一个图标，将显示在附加组件管理器上。
 
-这里最有意思的键是 [`content_scripts`](/zh-CN/Add-ons/WebExtensions/manifest.json/content_scripts)，它告诉 Firefox 加载脚本到其 URL 匹配特定模式的网页。本例中，我们要求 Firefox 加载脚本“borderify.js”到任何来自“mozilla.org”或其子域的 HTTP 或 HTTPS 页面。
+这里最有意思的键是 [`content_scripts`](/zh-CN/Add-ons/WebExtensions/manifest.json/content_scripts)（内容脚本），它告诉 Firefox 加载脚本到其 URL 匹配特定模式的网页。本例中，我们要求 Firefox 加载脚本“borderify.js”到任何来自“mozilla.org”或其子域的 HTTP 或 HTTPS 页面。
 
 - [进一步了解内容脚本](/zh-CN/Add-ons/WebExtensions/Content_scripts)
 - [进一步了解模式匹配](/zh-CN/Add-ons/WebExtensions/Match_patterns)
@@ -74,7 +72,7 @@ cd borderify
 
 扩展应该有一个图标。这将显示在附加组件管理器加载项的列表中。我们的 manifest.json 保证了会有一个图标“icons/border-48.png”。
 
-在“borderify”目录下直接创建“icons”目录，并在“icons”目录下保存一个名为“border-48.png”的图标。你可以使用[我们示例](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png)中的图标，来自谷歌材料设计（Material Design）中的图标，遵循 [Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/) 协议。
+在“borderify”目录下直接创建“icons”目录，并在“icons”目录下保存一个名为“border-48.png”的图标。你可以使用[我们示例](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png)中的图标，来自谷歌 Material Design 的图标库，遵循 [Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/) 协议。
 
 如果您选择使用自己的图标，它也应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标，在 manifest.json 的 `icons` 对象中添加 `96` 属性即可：
 
@@ -85,7 +83,7 @@ cd borderify
 }
 ```
 
-或者，也可以在这里提供一个 SVG 文件，它会被正确地缩放。（不过：如果你正在使用 SVG 并且你的图标包含文字，有可能想要用你的 SVG 编辑器的“转换为路径”工具来使文字扁平化，这样图标会以一个恒定的大小或位置来缩放。）
+或者，也可以在这里提供一个 SVG 文件，它会被正确地缩放。（不过：如果你正在使用 SVG 并且你的图标包含文字，你可能需要使用 SVG 编辑器的“转换为路径”工具来使文字扁平化，这样图标会以一个恒定的大小或位置来缩放。）
 
 - [了解更多关于指定图标的内容](/zh-CN/Add-ons/WebExtensions/manifest.json/icons)
 
@@ -106,16 +104,16 @@ manifest.json 文件中 `content_scripts` 的键给出了一条模式匹配，�
 首先，仔细检查文件是否在正确的位置：
 
 ```
-    borderify/
-        icons/
-            border-48.png
-        borderify.js
-        manifest.json
+borderify/
+    icons/
+        border-48.png
+    borderify.js
+    manifest.json
 ```
 
 ### 安装
 
-打开 Firefox 的 [about:debugging](/zh-CN/docs/Tools/about:debugging) 页面，点击“This Firefox”，点击 "临时加载附加组件（Load Temporary Add-on）" 按钮，并选择你的附加组件目录：
+打开 Firefox 的 [about:debugging](/zh-CN/docs/Tools/about:debugging) 页面，点击“This Firefox”，点击 "临时加载附加组件（Load Temporary Add-on）" 按钮，并选择你的扩展所在的目录：
 
 附加组件将会被安装，直到下次重启浏览器失效。
 
