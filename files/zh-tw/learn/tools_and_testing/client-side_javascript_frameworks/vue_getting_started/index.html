@@ -69,7 +69,7 @@ tags:
 </ol>
 
 <div class="notecard note">
-<p><strong>注意</strong>：如果你沒有安裝以上工具，請參考<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups">關於安裝 npm 及 Node.js</a> 。</p>
+<p><strong>備註：</strong> 如果你沒有安裝以上工具，請參考<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups">關於安裝 npm 及 Node.js</a> 。</p>
 </div>
 
 <p>在你的終端機執行以下命令來安裝 CLI ：</p>
@@ -103,7 +103,7 @@ tags:
 <p>如果你之前沒有執行過 Vue CLI ，你將會被問一個問題－請選擇套件管理員。你可以使用方向鍵來選擇你想使用的套件管理員，Vue CLI 將會把這個套件管理員設為預設值。之後如果你想要使用不同的套件管理員，可以在執行 <code>vue create</code> 時傳入一個標幟 <code>--packageManager=&lt;package-manager&gt;</code> 。舉例來說，如果你現在想要用 npm 來創建 <code>moz-todo-vue</code> 專案，但是之前是使用 yarn ，你可以執行 <code>vue create moz-todo-vue --packageManager=npm</code> 。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：在這裡我們沒有介紹所有的選項，你可以參考 Vue 官方文件裡的<a href="https://cli.vuejs.org">關於 CLI 的更多資訊</a>。</p>
+<p><strong>備註：</strong> 在這裡我們沒有介紹所有的選項，你可以參考 Vue 官方文件裡的<a href="https://cli.vuejs.org">關於 CLI 的更多資訊</a>。</p>
 </div>
 
 <h2 id="Project_structure">專案結構</h2>
@@ -118,7 +118,7 @@ tags:
   <ul>
    <li><code>favicon.ico</code> ：這是應用程式的 favicon。目前是 Vue 的標誌。</li>
    <li><code>index.html</code> ：這是應用程式的模板。你的 Vue 應用程式會透過這個 HTML 頁面來運行，你也可以使用 lodash 樣板語言在這個頁面穿插一些值。
-    <div class="note"><strong>注意</strong>：這個模板不是用來管理你的應用程式的版面－而是用來管理應用程式以外的靜態 HTML 檔案，只有在使用一些進階的功能才需要修改這個檔案。</div>
+    <div class="note"><p><strong>備註：</strong> 這個模板不是用來管理你的應用程式的版面－而是用來管理應用程式以外的靜態 HTML 檔案，只有在使用一些進階的功能才需要修改這個檔案。</p></div>
    </li>
   </ul>
  </li>
@@ -133,7 +133,7 @@ tags:
 </ul>
 
 <div class="notecard note">
-<p><strong>注意</strong>：依據你創建專案時所選設定的不同，你可能會看到其他資料夾（舉例來說，如果你有選擇 router，你將會看到一個 <code>views</code> 資料夾）。</p>
+<p><strong>備註：</strong> 依據你創建專案時所選設定的不同，你可能會看到其他資料夾（舉例來說，如果你有選擇 router，你將會看到一個 <code>views</code> 資料夾）。</p>
 </div>
 
 <h2 id=".vue_files_single_file_components">.vue 檔案（單一檔案元件）</h2>
@@ -153,7 +153,7 @@ tags:
 <p><code>&lt;template&gt;</code> 包含所有的標記結構以及元件的呈現邏輯。你的模板可以包含任何有效的 HTML，以及一些我們接下來要介紹的 Vue 特定的語法。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：在 <code>&lt;template&gt;</code> 標籤上設定 <code>lang</code> 屬性。例如設置 <code>&lt;template lang="pug"&gt;</code>，你就可以使用 Pug 樣板語法來取代標準的 HTML 。在本教學中我們會使用標準 HTML ，但還是值得知道有這個方法。</p>
+<p><strong>備註：</strong> 在 <code>&lt;template&gt;</code> 標籤上設定 <code>lang</code> 屬性。例如設置 <code>&lt;template lang="pug"&gt;</code>，你就可以使用 Pug 樣板語法來取代標準的 HTML 。在本教學中我們會使用標準 HTML ，但還是值得知道有這個方法。</p>
 </div>
 
 <p><code>&lt;script&gt;</code> 包含元件中所有非顯示的邏輯。最重要的是，你的 <code>&lt;script&gt;</code> 標籤必須輸出一個 JS 物件。這個物件是你在本地端註冊的元件，包含定義屬性、處理本地狀態、定義方法等等。在建置步驟這個物件會被處理及轉換（包含 template 模板），變成一個有 <code>render()</code> 函數的 Vue 元件。</p>
@@ -171,13 +171,13 @@ export default {
 };</pre>
 
 <div class="notecard note">
-<p><strong>注意</strong>：如果你想要使用 <a href="https://www.typescriptlang.org/">TypeScript</a> 語法，你必須把 <code>&lt;script&gt;</code> 標籤的 <code>lang</code> 屬性設定成 <code>&lt;script lang="ts"&gt;</code> 來告訴編譯器你要使用 TypeScript 。</p>
+<p><strong>備註：</strong> 如果你想要使用 <a href="https://www.typescriptlang.org/">TypeScript</a> 語法，你必須把 <code>&lt;script&gt;</code> 標籤的 <code>lang</code> 屬性設定成 <code>&lt;script lang="ts"&gt;</code> 來告訴編譯器你要使用 TypeScript 。</p>
 </div>
 
 <p><code>&lt;style&gt;</code> 是你撰寫元件的 CSS 的地方。如果你加上 <code>scoped</code> 屬性，例如 <code>&lt;style scoped&gt;</code> ， Vue 會把樣式的範圍限制在這個單一檔案元件裡。這類似 CSS-in-JS 的解決方案，但是它允許你寫單純的 CSS 。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：如果你在使用 CLI 創建專案時有選擇 CSS 預處理器，你可以在 <code>&lt;style&gt;</code> 標籤上添加 <code>lang</code> 屬性，這些內容在建置的時候將會被 Webpack 處理。舉例來說， <code>&lt;style lang="scss"&gt;</code> 允許你在樣式資訊中使用 SCSS 語法。</p>
+<p><strong>備註：</strong> 如果你在使用 CLI 創建專案時有選擇 CSS 預處理器，你可以在 <code>&lt;style&gt;</code> 標籤上添加 <code>lang</code> 屬性，這些內容在建置的時候將會被 Webpack 處理。舉例來說， <code>&lt;style lang="scss"&gt;</code> 允許你在樣式資訊中使用 SCSS 語法。</p>
 </div>
 
 <h2 id="Running_the_app_locally">在本地端運行應用程式</h2>
@@ -186,7 +186,7 @@ export default {
 
 <p>在你的終端機執行 <code>npm run serve</code>（或 <code>yarn serve</code> 如果你比較喜歡使用 yarn ）。你的終端機會輸出類似以下的資訊：</p>
 
-<pre>INFO  Starting development server...
+<pre class="brush: plain">INFO  Starting development server...
 98% after emitting CopyPlugin
 
  DONE  Compiled successfully in 18121ms
@@ -200,7 +200,7 @@ export default {
 
 <p>如果你在瀏覽器的新分頁開啟「本地」位址（如上所述，這串位址應該會類似 <code>http://localhost:8080</code> ，但可能因設置而異），你應該會看到你的應用程式。現在，它應該包含一個歡迎訊息、一個導向 Vue 文件的連結、使用 CLI 初始化應用程式時所添加的套件的連結、以及一些導向 Vue 社群及生態圈的有用連結。</p>
 
-<p><img alt="default vue app render, with vue logo, welcome message, and some documentation links" src="vue-default-app.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="default vue app render, with vue logo, welcome message, and some documentation links" src="vue-default-app.png"></p>
 
 <h2 id="Making_a_couple_of_changes">做一些改變</h2>
 

@@ -19,7 +19,7 @@ tags:
 <p>現在是時候來更深入了解 Vue ，以及建立我們自訂的元件——我們將從建立一個元件開始，這個元件代表待辦清單裡的每一個項目。在過程中，我們會學到一些重要的概念，例如在元件裡面調用其他元件，使用 props 傳遞資料，以及儲存它的狀態（ state ）。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：如果你需要根據我們的版本來檢查你的程式碼，你可以從 <a href="https://github.com/mdn/todo-vue">todo-vue 存放庫</a>找到 Vue 範例應用程式最終版本的程式碼。有關實際運行的版本，請看 <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a> 。</p>
+<p><strong>備註：</strong> 如果你需要根據我們的版本來檢查你的程式碼，你可以從 <a href="https://github.com/mdn/todo-vue">todo-vue 存放庫</a>找到 Vue 範例應用程式最終版本的程式碼。有關實際運行的版本，請看 <a href="https://mdn.github.io/todo-vue/dist/">https://mdn.github.io/todo-vue/dist/</a> 。</p>
 </div>
 
 <table class="learn-box standard-table">
@@ -125,7 +125,7 @@ export default {
 
 <p>如果你再次查看渲染應用程式，現在應該會看到你渲染的 <code>ToDoItem</code> 元件，它包含一個 checkbox 和 label 。</p>
 
-<p><img alt="目前應用程式的渲染狀態——包含一個標題（ To-Do List ），一個 checkbox 和 label" src="rendered-todoitem.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+<p><img alt="目前應用程式的渲染狀態——包含一個標題（ To-Do List ），一個 checkbox 和 label" src="rendered-todoitem.png"></p>
 
 <h2 id="Making_components_dynamic_with_props">Making components dynamic with props</h2>
 
@@ -143,7 +143,7 @@ export default {
 </ul>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).</p>
+<p><strong>備註：</strong> Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).</p>
 </div>
 
 <p>For this component, we’ll use the object registration method.</p>
@@ -196,7 +196,7 @@ export default {
 
 <p>Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you’ll see a warning along these lines in the console:</p>
 
-<pre>[Vue warn]: Missing required prop: "label"
+<pre class="brush: plain">[Vue warn]: Missing required prop: "label"
 
 found in
 
@@ -234,7 +234,7 @@ found in
 <p>You use <code>this</code> to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: Because of the way that <code>this</code> works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside <code>data</code> if you used an arrow function. So don’t use an arrow function for the <code>data</code> property.</p>
+<p><strong>備註：</strong> Because of the way that <code>this</code> works in arrow functions (binding to the parent’s context), you wouldn’t be able to access any of the necessary attributes from inside <code>data</code> if you used an arrow function. So don’t use an arrow function for the <code>data</code> property.</p>
 </div>
 
 <p>So let's add a <code>data</code> property to our <code>ToDoItem</code> component. This will return an object containing a single property that we'll call <code>isDone</code>, whose value is <code>this.done</code>.</p>
@@ -257,7 +257,7 @@ found in
 
 <p>So now we need to attach the <code>isDone</code> property to our component. In a similar fashion to how Vue uses <code>\{{}}</code> expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: <code><strong>v-bind</strong></code>. The <code>v-bind</code> expression looks like this:</p>
 
-<pre>v-bind:attribute="expression"</pre>
+<pre class="brush: plain">v-bind:attribute="expression"</pre>
 
 <p>In other words, you prefix whatever attribute/prop you want to bind to with <code>v-bind:</code>. In most cases, you can use a shorthand for the <code>v-bind</code> property, which is to just prefix the attribute/prop with a colon. So <code>:attribute="expression"</code> works the same as <code>v-bind:attribute="expression"</code>.</p>
 
@@ -298,7 +298,7 @@ found in
 <pre class="brush: bash">npm install --save lodash.uniqueid</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you prefer yarn, you could instead use <code>yarn add lodash.uniqueid</code>.</p>
+<p><strong>備註：</strong> If you prefer yarn, you could instead use <code>yarn add lodash.uniqueid</code>.</p>
 </div>
 
 <p>We can now import this package into our <code>ToDoItem</code> component. Add the following line at the top of <code>ToDoItem.vue</code>’s <code>&lt;script&gt;</code> element:</p>
