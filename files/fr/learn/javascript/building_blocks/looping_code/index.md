@@ -369,7 +369,7 @@ bouton.addEventListener('click', function() {
 
 1. Tout d'abord, nous avons quelques définitions de variables — nous avons un tableau d'informations de contact, avec chaque élément étant une chaîne contenant un nom et un numéro de téléphone séparés par deux points.
 2. Ensuite, nous attachons un écouteur d'événement au bouton (`bouton`), de sorte que quand il est pressé, du code est exécuté pour effectuer la recherche et renvoyer les résultats.
-3. Nous stockons la valeur saisie dans l'input dans une variable appelée `searchName`, , avant de vider l'input et le recentrer, prêt pour la recherche suivante.
+3. Nous stockons la valeur saisie dans l'input dans une variable appelée `searchName`, avant de vider l'input et le recentrer, prêt pour la recherche suivante.
 4. Maintenant sur la partie intéressante, la boucle for :
 
     1. Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
@@ -444,7 +444,7 @@ Ici la sortie :
 {{EmbedLiveSample('', '100%', 100)}}
 
 1. Dans ce cas, l'entrée doit être un nombre (`num`). La boucle `for` est dotée d'un compteur commençant à 1 (car nous ne sommes pas intéressés par 0 dans ce cas), une condition de sortie indiquant que la boucle s'arrêtera lorsque le compteur deviendra plus grand que l'entrée `num`, et un itérateur ajoutera 1 au compteur à chaque fois.
-2. À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant [Math.sqrt(i)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt0, puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que [Math.floor()](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor) fait au nombre auquel il est passé).
+2. À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant [Math.sqrt(i)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que [Math.floor()](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor) fait au nombre auquel il est passé).
 3. Si la racine carrée et la racine carrée arrondie ne sont pas égales les unes aux autres (`! ==`), cela signifie que la racine carrée n'est pas un entier, donc cela ne nous intéresse pas. Dans un tel cas, nous utilisons l'instruction `continue` pour passer à l'itération de la boucle suivante sans enregistrer le numéro n'importe où.
 4. Si la racine carrée est un entier, nous passons complètement le bloc if pour que l'instruction `continue` ne soit pas exécutée; à la place, nous concaténons la valeur `i` actuelle plus un espace sur la fin du contenu du paragraphe.
 
