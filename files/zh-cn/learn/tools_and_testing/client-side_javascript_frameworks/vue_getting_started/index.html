@@ -63,7 +63,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 </ol>
 
 <div class="blockIndicator note">
-<p><strong>备注：</strong>如果您还没有安装上述软件，有关安装 NPM 和 Node.js 的方法<a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#添加工具">在这里</a>。</p>
+<p><strong>备注：</strong> 如果您还没有安装上述软件，有关安装 NPM 和 Node.js 的方法<a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#添加工具">在这里</a>。</p>
 </div>
 
 <p>安装 CLI，终端中运行以下命令：</p>
@@ -101,7 +101,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 <p>如果你以前从来没有使用过 Vue CLI 的话，你可能还会遇到其他的问题，会让你选择包管理器，你可以通过方向键选择一个你喜欢的，然后从此时起 Vue CLI 就会默认使用你这次选择的包管理器。如果你只后又想换用其他包管理器，你也可以在创建项目执行  <code>vue create</code> 的时候传入参数 <code>--packageManager=&lt;package-manager&gt;</code>。比如你之前已经选择了 yarn，而你现在在创建 <code>moz-todo-vue</code> 示例程序的时候可以通过执行  <code>vue create moz-todo-vue --packageManager=npm</code> 来使用 npm 包管理器。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：我们这里并没有列举所有的配置项，如果你想了解更多信息可以访问</strong> <a href="https://cli.vuejs.org/">Vue 官方文档</a>的 CLI 部分。</p>
+<p><strong>备注：</strong> 我们这里并没有列举所有的配置项，如果你想了解更多信息可以访问 <a href="https://cli.vuejs.org/">Vue 官方文档</a>的 CLI 部分。</p>
 </div>
 
 <h2 id="项目结构">项目结构</h2>
@@ -116,7 +116,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
   <ul>
    <li><code>favicon.ico</code>: 这个是项目的图标，当前就是一个 Vue 的 logo。</li>
    <li><code>index.html</code>: 这是应用的模板文件，Vue 应用会通过这个 HTML 页面来运行，也可以通过 lodash 这种模板语法在这个文件里插值。
-    <div class="note"><strong>注意：这个不是负责管理页面最终展示的模板，而是管理 Vue 应用之外的静态 HTML 文件，一般只有在用到一些高级功能的时候才会修改这个文件。</strong></div>
+    <div class="note"><p><strong>备注：</strong> 这个不是负责管理页面最终展示的模板，而是管理 Vue 应用之外的静态 HTML 文件，一般只有在用到一些高级功能的时候才会修改这个文件。</p></div>
    </li>
   </ul>
  </li>
@@ -131,7 +131,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>注意：根据创建项目时候的一些配置项，可能会有一些其他的预设目录（例如，如果你选择了路由配置，会看到一个 <code>views</code>  的文件夹）</strong></p>
+<p><strong>备注：</strong> 根据创建项目时候的一些配置项，可能会有一些其他的预设目录（例如，如果你选择了路由配置，会看到一个 <code>views</code>  的文件夹）</p>
 </div>
 
 <h2 id=".vue_文件（单文件组件）">.vue 文件（单文件组件）</h2>
@@ -140,7 +140,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 
 <p>在其他框架都鼓励把模板、逻辑和样式的代码区分成不同文件的时候，Vue 却反其道行之。使用<a href="https://vuejs.org/v2/guide/single-file-components.html">单文件组件</a>，Vue 把模板、相关脚本和 CSS 一起整合放在 <code>.vue</code> 结尾的一个单文件中。这些文件最终会通过 JS 打包工具（例如 Webpack）处理，这意味着你可以使用构建时工具。你可以使用比如 Babel、TypeScript、SCSS 等来创建更多复杂的组件。</p>
 
-<p> 另外，使用 Vue CLI 创建的项目被配置为在开箱即用的情况下借助 Webpack 使用 .<code>vue </code>文件。实际上，如果您查看我们使用 CLI 创建的项目中的 <code>src</code> 文件夹，您会看到第一个<code>.vue</code> 文件：<code>App.vue</code>。</p>
+<p> 另外，使用 Vue CLI 创建的项目被配置为在开箱即用的情况下借助 Webpack 使用 .<code>vue</code>文件。实际上，如果您查看我们使用 CLI 创建的项目中的 <code>src</code> 文件夹，您会看到第一个<code>.vue</code> 文件：<code>App.vue</code>。</p>
 
 <p>现在我们来开始探讨。</p>
 
@@ -151,7 +151,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 <p><code>&lt;template&gt;</code> 包含了所有的标记结构和组件的展示逻辑。template 可以包含任何合法的 HTML，以及一些我们接下来要讲的 Vue 特定的语法。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：通过设置 &lt;template&gt; 标签的 <code>lang</code> 属性，例如可以通过设置 </strong><code>&lt;template lang="pug"&gt;</code> 就可以在使用 Pub 模板来替代标准 HTML。在本教程中我们依然会使用标准 HTML，但是这种方式可行你还是值得知道。</p>
+<p><strong>备注：</strong> 通过设置 &lt;template&gt; 标签的 <code>lang</code> 属性，例如可以通过设置 <code>&lt;template lang="pug"&gt;</code> 就可以在使用 Pub 模板来替代标准 HTML。在本教程中我们依然会使用标准 HTML，但是这种方式可行你还是值得知道。</p>
 </div>
 
 <p><code>&lt;script&gt;</code> 包含组件中所有的非显示逻辑，最重要的是， <code>&lt;script&gt;</code> 标签需要默认导出一个 JS 对象。该对象是您在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个对象会被处理和转换（包含 template 模板）成为一个有 <code>render()</code> 函数的 Vue 组件。</p>
@@ -169,13 +169,13 @@ export default {
 };</pre>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 如果想要使用 <a href="https://www.typescriptlang.org/">TypeScript</a> 语法，你应该将  <code>&lt;script&gt;</code> 标签的  <code>lang</code> 属性设置为 <code>&lt;script lang="ts"&gt;</code> 来告诉编译器你要使用 TypeScript。</p>
+<p><strong>备注：</strong> 如果想要使用 <a href="https://www.typescriptlang.org/">TypeScript</a> 语法，你应该将  <code>&lt;script&gt;</code> 标签的  <code>lang</code> 属性设置为 <code>&lt;script lang="ts"&gt;</code> 来告诉编译器你要使用 TypeScript。</p>
 </div>
 
 <p>组件的 CSS 应该写在 <code>&lt;style&gt;</code> 标签里，如果你添加了 <code>scoped</code> 属性，形如 <code>&lt;style scoped&gt;</code> ，Vue 会把样式的范围限制到单文件组件的内容里。这个类似 CSS-in-JS 的解决方案，不过允许你书写文本格式的 CSS 了。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 如果通过 CLI 创建项目时选择了 CSS 预处理器，则可以将 <code>lang</code> 属性添加到 <code>&lt;style&gt;</code> 标签中，以便 Webpack 可以在构建时处理内容。例如，<code>&lt;style lang ="scss"&gt;</code> 将允许您在样式信息中使用 SCSS 语法。</p>
+<p><strong>备注：</strong> 如果通过 CLI 创建项目时选择了 CSS 预处理器，则可以将 <code>lang</code> 属性添加到 <code>&lt;style&gt;</code> 标签中，以便 Webpack 可以在构建时处理内容。例如，<code>&lt;style lang ="scss"&gt;</code> 将允许您在样式信息中使用 SCSS 语法。</p>
 </div>
 
 <h2 id="本地运行程序">本地运行程序</h2>
@@ -184,7 +184,7 @@ export default {
 
 <p>在您的终端中，尝试运行 <code>npm run serve</code>（或者如果希望使用 yarn，则运行 <code>yarn serve</code> ）。您的终端应输出类似以下内容的内容：</p>
 
-<pre class="notranslate">INFO  Starting development server...
+<pre class="brush: plain">INFO  Starting development server...
 98% after emitting CopyPlugin
 
  DONE  Compiled successfully in 18121ms

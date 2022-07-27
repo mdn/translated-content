@@ -35,8 +35,8 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>实际上，HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常不会认真对待它们，因此难以确保代码简洁、高效，或是能在语义上描述页面各部分的功能。在最坏的情况下，一些网站甚至选择使用 JavaScript 来生成整个网页的内容和样式，这使得页面的可读性较差，并且性能低下（对性能而言，生成大量 DOM 元素的操作是较为昂贵的）。</p>
 
-<div class="standardNoteBlock">
-<p><strong>译者注：</strong>关于使用 JavaScript 生成网页的选择，抛开一切非决定性的因素，最终的关键还是我们开发者。<br>
+<div class="note">
+<p><strong>备注：</strong> 关于使用 JavaScript 生成网页的选择，抛开一切非决定性的因素，最终的关键还是我们开发者。<br>
  非决定性因素，比如页面本身，举个例子，如果页面是由大量的重复或有规律片段组成，使用适当、理想的 JavaScript 来生成这样的页面会是不错的选择。</p>
 
 <p>但是，如果我们的决定性因素，开发者，不了解或不重视有关的问题，甚至盲目地崇拜一些基于 JavaScript 的前端页面生成方案，可能一切都是白搭。<br>
@@ -56,7 +56,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>基本上，这是一个如何检查您的 HTML 和 CSS 代码，是否格式正确、不包含任何语法错误的问题。</p>
 
 <div class="blockIndicator note">
-<p>注意：CSS 和 HTML 之间的一个常见问题，就是不同的 CSS 规则之间发生冲突。当您使用第三方代码时，问题可能大到难以修补。例如，你可能正用着一个 CSS 框架，并发现它使用的一个类名与你已经用于某处的类名冲突。或者，您可能会发现，由某种第三方 API（例如生成广告横幅的脚本）生成的 HTML 包含您已经用于别处的类名称或者 ID。<br>
+<p><strong>备注：</strong> CSS 和 HTML 之间的一个常见问题，就是不同的 CSS 规则之间发生冲突。当您使用第三方代码时，问题可能大到难以修补。例如，你可能正用着一个 CSS 框架，并发现它使用的一个类名与你已经用于某处的类名冲突。或者，您可能会发现，由某种第三方 API（例如生成广告横幅的脚本）生成的 HTML 包含您已经用于别处的类名称或者 ID。<br>
  为了确保不会发生这种情况，您需要首先研究一下您正在使用的工具，了解它们可能使用的类名与 ID，并围绕，或者规避着它们来设计您的代码。设法为 CSS 加上“命名空间”也是值得的，例如，如果有一个小部件，就先确保它有一个独特的类，然后基于这个类来选择元件内的这个类的选择器，这样一来，冲突的可能性就小下来了。例如 .audio-player ul a。</p>
 </div>
 
@@ -101,7 +101,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>大多数浏览器中内置的开发人员工具还提供了有用的工具来查找错误，主要是针对 CSS 的。</p>
 
 <div class="note">
-<p><strong>注意</strong>：在开发工具中，HTML 错误不会直接显示，因为浏览器会尝试自动纠正错误形成的标记；目前，W3C 验证器是获取 HTML 错误的最佳方法——请参阅上面的<a href="/zh-CN/docs/preview-wiki-content#Validation">验证</a>。</p>
+<p><strong>备注：</strong> 在开发工具中，HTML 错误不会直接显示，因为浏览器会尝试自动纠正错误形成的标记；目前，W3C 验证器是获取 HTML 错误的最佳方法——请参阅上面的<a href="/zh-CN/docs/preview-wiki-content#Validation">验证</a>。</p>
 </div>
 
 <p>例如，在 Firefox 中，CSS 检查器将显示未应用的 CSS 声明，并带有警告三角形。悬停警告三角将提供一个描述性的错误信息：</p>
@@ -127,14 +127,14 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>无法识别的 HTML 元素被浏览器视为匿名内联元素（有效内联元素，没有语义值，类似于 {{htmlelement("span")}} 元素）。您还可以参考他们通过自己的名字，并用 CSS 样式它们，例如 - 你只需要确保它们表现为你想让他们，例如对所有新的语义元素设置 <code>display: block;</code>（如 {{htmlelement("article")}}、{{htmlelement("aside")}} 等），但现在，基本只有在旧版本的 IE 不能识别他们（IE 8 和更低）。这样，新的浏览器就可以正常使用这些代码，但是旧的 IE 版本也可以对这些元素进行样式化。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>请参阅<a href="/zh-CN/docs/preview-wiki-content#IE_conditional_comments">IE 条件注释</a>以获取最佳实践。</p>
+<p><strong>备注：</strong> 请参阅<a href="/zh-CN/docs/preview-wiki-content#IE_conditional_comments">IE 条件注释</a>以获取最佳实践。</p>
 </div>
 
 <p>更复杂的元素，如 HTML  <code><a href="/zh-CN/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>、<code><a href="/zh-CN/docs/Web/HTML/Element/audio">&lt;audio&gt;</a></code>，和 <code><a href="/zh-CN/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code>（和其他功能除外）有自然的 fallback 加入机制，其工作原理与上述相同。您可以在开始和结束标记之间添加回退内容，非支持的浏览器将有效地忽略外部元素并运行嵌套的内容。</p>
 
 <p>例如：</p>
 
-<pre>&lt;video id="video" controls preload="metadata" poster="img/poster.jpg"&gt;
+<pre class="brush: html">&lt;video id="video" controls preload="metadata" poster="img/poster.jpg"&gt;
   &lt;source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4"&gt;
   &lt;source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm"&gt;
   &lt;source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg"&gt;
@@ -169,50 +169,10 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>此代码的输出如下所示：</p>
 
-<div class="hidden">
-<h6 id="Hidden_example">Hidden example</h6>
-
-<pre class="brush: css">label {
-        float: left;
-        width: 30%;
-        text-align: right;
-      }
-
-      input {
-        float: right;
-        width: 65%;
-      }
-
-      label, input {
-        margin-bottom: 20px;
-      }
-
-      div {
-        clear: both;
-        margin: 10px;
-      }
-
-      body {
-        width: 400px;
-        margin: 0 auto;
-      }</pre>
-
-<pre class="brush: html">&lt;form&gt;
-      &lt;div&gt;
-        &lt;label for="date"&gt;Enter a date:&lt;/label&gt;
-        &lt;input id="date" type="date"&gt;
-      &lt;/div&gt;
-      &lt;div&gt;
-        &lt;label for="time"&gt;Enter a time:&lt;/label&gt;
-        &lt;input id="time" type="time"&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Hidden_example', '100%', 150) }}</p>
+<p>{{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}</p>
 
 <div class="note">
-<p>注意：您也可以在 GitHub 上以<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html">forms-test.html 的形式直接</a>看到这个运行（参见<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html">源代码</a>）。</p>
+<p><strong>备注：</strong> 您也可以在 GitHub 上以<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html">forms-test.html 的形式直接</a>看到这个运行（参见<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html">源代码</a>）。</p>
 </div>
 
 <p>如果您在支持的浏览器（如桌面/ Android Chrome 或 iOS Safari）上查看该示例，则会在尝试输入数据时看到特殊的小部件/功能。在一个非支持的平台上，例如 Firefox 或 Internet Explorer，输入只会回退到正常的文本输入，所以至少用户仍然可以输入一些信息。</p>
@@ -228,7 +188,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p><img src="blingy-button.png"></p>
 
 <div class="note">
-<p><strong>注意</strong>：你也可以在 GitHub 上浏览这个例子：<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html 的形式运行</a>（另见<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">源代码</a>）。</p>
+<p><strong>备注：</strong> 你也可以在 GitHub 上浏览这个例子：<a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">button-with-fallback.html 的形式运行</a>（另见<a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html">源代码</a>）。</p>
 </div>
 
 <p>该按钮有一些样式声明，但我们最感兴趣的两个如下：</p>
@@ -258,14 +218,14 @@ button:active {
 <p>为了解决这个问题，我们添加了第二个 background-color 声明，它只是指定了一个十六进制颜色 - 这在旧版本的浏览器中得到了支持，并且在现代闪亮功能无法使用的情况下作为后备。访问此页面的浏览器首先应用第一个 background-color 值，当它到达第二个 background-color 声明时，如果它支持 RGBA 颜色，它将用这个值覆盖初始值。如果不是的话，它会忽略整个声明，继续前进。</p>
 
 <div class="note">
-<p><strong>注意</strong>：这同样适用于其他 CSS 功能，如真正的<a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">媒体查询</a>，<a href="/zh-CN/docs/Web/CSS/@font-face">@font-face</a> 以及 <a href="/zh-CN/docs/Web/CSS/@supports">@supports</a> 块 - 如果不支持他们，浏览器只是忽略它们。</p>
+<p><strong>备注：</strong> 这同样适用于其他 CSS 功能，如真正的<a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">媒体查询</a>，<a href="/zh-CN/docs/Web/CSS/@font-face">@font-face</a> 以及 <a href="/zh-CN/docs/Web/CSS/@supports">@supports</a> 块 - 如果不支持他们，浏览器只是忽略它们。</p>
 </div>
 
 <h4 id="IE_条件注释">IE 条件注释</h4>
 
 <p>IE 条件注释是修改后的专有 HTML 注释语法，可用于将 HTML 代码有选择地应用于不同版本的 IE。这已被证明是一个非常有效的机制来解决跨浏览器的错误。语法如下所示：</p>
 
-<pre>&lt;!--[if lte IE 8]&gt;
+<pre class="brush: html">&lt;!--[if lte IE 8]&gt;
   &lt;script src="ie-fix.js"&gt;&lt;/script&gt;
   &lt;link href="ie-fix.css" rel="stylesheet" type="text/css"&gt;
 &lt;![endif]--&gt;</pre>
@@ -273,7 +233,7 @@ button:active {
 <p>只有当浏览器查看页面是 IE 8 或更旧时，此块才会应用 IE 特定的 CSS 和 JavaScript。lte 意思是“小于或等于”，但是也可以使用 lt、gt、gte、!(NOT) 以及其他逻辑语法。</p>
 
 <div class="note">
-<p><strong>注意：</strong>Sitepoint 的 <a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer 条件注释</a>提供了一个有用的初学者教程/参考，详细解释了条件注释语法。</p>
+<p><strong>备注：</strong> Sitepoint 的 <a href="https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/">Internet Explorer 条件注释</a>提供了一个有用的初学者教程/参考，详细解释了条件注释语法。</p>
 </div>
 
 <p>正如你所看到的，这对于将代码修复应用于旧版本的 IE 尤其有用。我们前面提到的用例（使旧版本的 IE 可以使用现代语义元素）可以通过使用条件注释来轻松实现，例如，您可以在 IE 样式表中添加类似这样的内容：</p>
@@ -309,7 +269,7 @@ button:active {
  <li>要尝试此示例，请创建 <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html">selectivizr-example-start.html</a> 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 <code>p:first-child</code>，这在老版本的 IE 中不起作用。</li>
  <li>现在下载  <a href="http://mootools.net/">MooTools</a>和<a href="http://selectivizr.com/">Selectivizr</a>，并将它们保存在与示例 HTML 相同的目录中。</li>
  <li>将下面的代码放到 HTML 文档的开头，就在开始 <code>&lt;style&gt;</code> 标记之前：
-  <pre>&lt;script type="text/javascript" src="MooTools-Core-1.6.0.js"&gt;&lt;/script&gt;
+  <pre class="brush: html">&lt;script type="text/javascript" src="MooTools-Core-1.6.0.js"&gt;&lt;/script&gt;
     &lt;!--[if (gte IE 6)&amp;(lte IE 8)]&gt;
       &lt;script type="text/javascript" src="selectivizr-min.js"&gt;&lt;/script&gt;
     &lt;![endif]--&gt;</pre>
@@ -386,7 +346,7 @@ transform: rotate(90deg);</pre>
 
 <p>另一个解决方案是在开发过程中自动添加前缀，而这个（和其他的东西除外）可以使用像<a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>和<a href="http://postcss.org/">PostCSS</a>这样的工具完成。这些工具可以以多种方式使用，例如 Autoprefixer 有一个<a href="http://autoprefixer.github.io/">在线版本</a>，允许您在左侧输入非前缀 CSS，并在右侧给出前缀添加版本。您可以使用<a href="https://github.com/postcss/autoprefixer#options">Autoprefixer 选项中</a>列出的符号来选择要确保支持的浏览器; 另请参阅基于此的<a href="https://github.com/ai/browserslist#queries">Browserslist 查询</a>以获取更多详细信息。例如，以下查询将选择所有主流浏览器的最后 2 个版本和 IE9 以上的版本。</p>
 
-<pre>last 2 versions, ie &gt; 9</pre>
+<pre class="brush: plain">last 2 versions, ie &gt; 9</pre>
 
 <p>Autoprefixer 也可用于其他更便捷的方式 - 请参阅<a href="https://github.com/postcss/autoprefixer#usage">Autoprefixer 使用情况</a>。例如，您可以使用任务运行器/构建工具（如<a href="http://gulpjs.com/">Gulp</a>或<a href="https://webpack.github.io/">Webpack）</a>在开发完成后自动添加前缀。（解释这些工作如何超出本文的范围。）</p>
 
@@ -422,11 +382,11 @@ transform: rotate(90deg);</pre>
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>：过去，Web 开发人员使用 reset CSS 删除应用于 HTML 的所有默认浏览器样式，然后将自己的样式应用于顶部的所有样式 - 这样做是为了使项目的样式更加一致，并减少可能的跨浏览器问题，特别是像布局的东西。然而现在它被认为过头了。我们现在最好的等价物是<a href="https://necolas.github.io/normalize.css/">normalize.css</a>，这是一个整齐的 CSS，在默认的浏览器样式上略微增加一点，使事情更加一致，并解决一些布局问题。建议您将 normalize.css 应用于所有的 HTML 页面。</p>
+<p><strong>备注：</strong> 过去，Web 开发人员使用 reset CSS 删除应用于 HTML 的所有默认浏览器样式，然后将自己的样式应用于顶部的所有样式 - 这样做是为了使项目的样式更加一致，并减少可能的跨浏览器问题，特别是像布局的东西。然而现在它被认为过头了。我们现在最好的等价物是<a href="https://necolas.github.io/normalize.css/">normalize.css</a>，这是一个整齐的 CSS，在默认的浏览器样式上略微增加一点，使事情更加一致，并解决一些布局问题。建议您将 normalize.css 应用于所有的 HTML 页面。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>：当试图追踪一个棘手的布局问题，一个好方法是添加一个明亮的颜色<a href="/zh-CN/docs/Web/CSS/outline">outline</a>到有问题的元素，或附近的所有元素。这使得更容易看到一切放置在哪里。请参阅<a href="http://www.otsukare.info/2016/10/05/debugging-css">使用大纲可视化调试您的 CSS 以</a>获取更多详细信息。</p>
+<p><strong>备注：</strong> 当试图追踪一个棘手的布局问题，一个好方法是添加一个明亮的颜色<a href="/zh-CN/docs/Web/CSS/outline">outline</a>到有问题的元素，或附近的所有元素。这使得更容易看到一切放置在哪里。请参阅<a href="http://www.otsukare.info/2016/10/05/debugging-css">使用大纲可视化调试您的 CSS 以</a>获取更多详细信息。</p>
 </div>
 
 <h4 id="支持新的布局特性">支持新的布局特性</h4>
@@ -445,7 +405,7 @@ transform: rotate(90deg);</pre>
 <p>例如，您可以将 Flexbox 布局应用于现代浏览器，然后将浮动布局应用于不支持 Flexbox 的旧浏览器。</p>
 
 <div class="note">
-<p><strong>注意</strong>：CSS 中还有一个相当新的特性 <a href="/zh-CN/docs/Web/CSS/@supports">@supports</a>，它允许你实现原生特征检测测试。</p>
+<p><strong>备注：</strong> CSS 中还有一个相当新的特性 <a href="/zh-CN/docs/Web/CSS/@supports">@supports</a>，它允许你实现原生特征检测测试。</p>
 </div>
 
 <h4 id="响应式设计问题">响应式设计问题</h4>

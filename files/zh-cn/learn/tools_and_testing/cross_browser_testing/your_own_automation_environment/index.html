@@ -33,7 +33,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automatio
 <p>我们将使用 Node.js 来编写和运行 Selenium 测试用例。Node.js 是一个前端开发者都很熟悉，并且容易上手的开发环境。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 如果你需要了解在其他服务器端环境下使用 WebDriver 的方式，也可以点击<a href="http://www.seleniumhq.org/about/platforms.jsp">支持 Selenium 的平台</a>来获取更多有用的链接。</p>
+<p><strong>备注：</strong> 如果你需要了解在其他服务器端环境下使用 WebDriver 的方式，也可以点击<a href="http://www.seleniumhq.org/about/platforms.jsp">支持 Selenium 的平台</a>来获取更多有用的链接。</p>
 </div>
 
 <h3 id="在Node下建立Selenium">在 Node 下建立 Selenium</h3>
@@ -46,7 +46,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automatio
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 即使你已经安装过 selenium-webdriver 并下载了浏览器驱动，我们仍然建议你按照步骤再来一遍，确定所有东西都是最新的。</p>
+<p><strong>备注：</strong> 即使你已经安装过 selenium-webdriver 并下载了浏览器驱动，我们仍然建议你按照步骤再来一遍，确定所有东西都是最新的。</p>
 </div>
 
 <p>接下来，你需要下载相应的驱动，使 WebDriver 能控制你需要测试的浏览器。在<a href="https://www.npmjs.com/package/selenium-webdriver">selenium-webdriver</a> (第一部分的表格) 页面查看如何下载。 显然，有的浏览器是 OS 定制的，我们将使用 Firefox 和 Chrome, 它们在主流的 OS 下都支持。</p>
@@ -58,7 +58,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automatio
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: 重申一下，添加到 <code>PATH</code> 的路径是到包含驱动的那一级目录，而不是驱动目录自身！这是一个常犯的错误。</p>
+<p><strong>备注：</strong> 重申一下，添加到 <code>PATH</code> 的路径是到包含驱动的那一级目录，而不是驱动目录自身！这是一个常犯的错误。</p>
 </div>
 
 <p>在 Mac OS X 或大多数 Linux 系统中设置<code>PATH</code> 变量的操作如下：</p>
@@ -221,7 +221,7 @@ var driver = new webdriver.Builder()
 <pre class="brush: js">driver.get('http://www.google.com');</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 可以查看 <a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> 了解这一部分提到内容的详情。</p>
+<p><strong>备注：</strong> 可以查看 <a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html">WebDriver class reference</a> 了解这一部分提到内容的详情。</p>
 </div>
 
 <p>你可以使用包含<code>file://</code> 的 URL 来指向需要测试的本地文件：</p>
@@ -326,7 +326,7 @@ input.sendKeys('Filling in my form');</pre>
 <p>WebDriver 等待 2 秒然后填充表单的文本框。接下来我们使用<code>getAttribute()</code>获取它的<code>value</code>属性值，并对它进行测试（如是否为空），最后将测试结果打印出来。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 还有一个方法叫 <code><a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait">wait()</a></code>, 它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html">util 库</a>, 其中定义了使用<code>wait()的常见条件</code>.</p>
+<p><strong>备注：</strong> 还有一个方法叫 <code><a href="http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait">wait()</a></code>, 它是在一定的时间内对某个条件进行反复测试，然后再继续执行代码，它也使用了 <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html">util 库</a>, 其中定义了使用<code>wait()的常见条件</code>.</p>
 </div>
 
 <h3 id="使用后关闭驱动">使用后关闭驱动</h3>
@@ -361,7 +361,7 @@ input.sendKeys('Filling in my form');</pre>
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: <a href="https://github.com/saucelabs-sample-test-frameworks">saucelabs-sample-test-frameworks</a> 中包含了一些关于如何设置不同测试/断言工具组合的有用示例。</p>
+<p><strong>备注：</strong> <a href="https://github.com/saucelabs-sample-test-frameworks">saucelabs-sample-test-frameworks</a> 中包含了一些关于如何设置不同测试/断言工具组合的有用示例。</p>
 </div>
 
 <h2 id="运行远程测试">运行远程测试</h2>
@@ -429,11 +429,11 @@ driver.quit();</pre>
 <p>点击测试链接，会打开一个屏幕播放记录了测试的视频，和在测试过程中相关的 log 详情。</p>
 
 <div class="note">
-<p><strong>Note</strong>: Browserstack 自动化仪表盘的 Resources 菜单选项上 提供了许多运行自动化测试的有用信息。查看 <a href="https://www.browserstack.com/automate/node">关于 Node JS 编写自动化测试的文档</a> 获取相关信息。研究一下使用 BrowserStack 可以帮你做到哪些事情。</p>
+<p><strong>备注：</strong> Browserstack 自动化仪表盘的 Resources 菜单选项上 提供了许多运行自动化测试的有用信息。查看 <a href="https://www.browserstack.com/automate/node">关于 Node JS 编写自动化测试的文档</a> 获取相关信息。研究一下使用 BrowserStack 可以帮你做到哪些事情。</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 如果你不想自己写测试用例，可以使用 docs 中嵌入的生成器，查看 <a href="https://www.browserstack.com/automate/node#run-tests-on-mobile">在手机浏览器上运行测试</a>和<a href="https://www.browserstack.com/automate/node#setting-os-and-browser">在桌面浏览器上运行测试</a>.</p>
+<p><strong>备注：</strong> 如果你不想自己写测试用例，可以使用 docs 中嵌入的生成器，查看 <a href="https://www.browserstack.com/automate/node#run-tests-on-mobile">在手机浏览器上运行测试</a>和<a href="https://www.browserstack.com/automate/node#setting-os-and-browser">在桌面浏览器上运行测试</a>.</p>
 </div>
 
 <h4 id="编程填充_BrowserStack_的测试详情">编程填充 BrowserStack 的测试详情</h4>
@@ -533,11 +533,11 @@ driver.quit();</pre>
 </ol>
 
 <div class="note">
-<p><strong>注意</strong>: Sauce Labs' <a href="https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/">Platform Configurator</a> is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.</p>
+<p><strong>备注：</strong> Sauce Labs' <a href="https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/">Platform Configurator</a> is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.</p>
 </div>
 
 <div class="note">
-<p><strong>注意</strong>: 你可以查看 <a href="https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Selenium+for+Automated+Website+Testing">使用 Selenium 进行 Web 自动化测试</a>, 和 <a href="https://wiki.saucelabs.com/display/DOCS/Instant+Selenium+Node.js+Tests">实时 Selenium Node.js 测试</a>获取更多关于 Sauce Labs 和 Selenium 测试的有用信息。</p>
+<p><strong>备注：</strong> 你可以查看 <a href="https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Selenium+for+Automated+Website+Testing">使用 Selenium 进行 Web 自动化测试</a>, 和 <a href="https://wiki.saucelabs.com/display/DOCS/Instant+Selenium+Node.js+Tests">实时 Selenium Node.js 测试</a>获取更多关于 Sauce Labs 和 Selenium 测试的有用信息。</p>
 </div>
 
 <h4 id="编程填充_Sauce_Labs_的测试详情">编程填充  Sauce Labs 的测试详情</h4>
@@ -548,10 +548,10 @@ driver.quit();</pre>
 
 <ol>
  <li>安装 Node Sauce Labs 套件 (如果你之前没有运行过):
-  <pre class="brush: bash"><code class="language-html">npm install saucelabs --save-dev</code></pre>
+  <pre class="brush: bash">npm install saucelabs --save-dev</pre>
  </li>
  <li>Require saucelabs — 在 <code>sauce_google_test.js</code> 文件顶端，就在之前的变量声明下面添加如下代码：
-  <pre class="brush: js line-numbers  language-js"><code class="language-js">var SauceLabs = require('saucelabs');</code></pre>
+  <pre class="brush: js">var SauceLabs = require('saucelabs');</pre>
  </li>
  <li>接着添加如下代码，创建一个新的 SauceLabs 实例：
   <pre class="brush: js">var saucelabs = new SauceLabs({
