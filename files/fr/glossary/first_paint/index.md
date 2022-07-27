@@ -1,12 +1,12 @@
 ---
-title: Premier affichage
+title: Premier rendu
 slug: Glossary/First_paint
 translation_of: Glossary/First_paint
 ---
-le **premier affichage** (ou <i lang="en">**First Paint**</i> en anglais), qui fait partie de l'[API Paint Timing](/fr/docs/Web/PerformancePaintTiming), est le temps entre la navigation et le moment où le navigateur affiche les premiers pixels à l'écran, rendant tout ce qui est visuellement différent de ce qui était à l'écran avant la navigation. Il répond à la question "Est-ce que ça se passe?"
+Le **premier rendu** (ou <i lang="en">**first paint**</i> en anglais), qui fait partie de l'[API <i lang="en">Paint Timing</i>](/fr/docs/Web/PerformancePaintTiming), correspond au temps entre la navigation et le moment où le navigateur affiche les premiers pixels à l'écran, rendant à l'écran tout ce qui est visuellement différent de ce qui y était présent avant la navigation. Cet indicateur répond à la question  «&nbsp;Est-ce que quelque chose est bien en train de se passer&nbsp;?&nbsp;».
 
 ## Voir aussi
 
-- [Premier affichage logique (ou <i lang="en">First meaningful paint</i> en anglais)](/fr/docs/Glossary/first_meaningful_paint)
-- [Premier affichage de contenu (ou <i lang="en">First contentful paint</i> en anglais)](/fr/docs/Glossary/First_contentful_paint)
-- [L'APIPaint Timing](/fr/docs/Web/PerformancePaintTiming) {{deprecated_inline}}
+- [Premier affichage significatif (ou <i lang="en">first meaningful paint</i> en anglais)](/fr/docs/Glossary/first_meaningful_paint)
+- [Premier affichage de contenu (ou <i lang="en">first contentful paint</i> en anglais)](/fr/docs/Glossary/First_contentful_paint)
+- [L'API  <i lang="en">Paint Timing</i>](/fr/docs/Web/PerformancePaintTiming) {{deprecated_inline}}
