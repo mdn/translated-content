@@ -7,194 +7,1057 @@ tags:
   - 参考
 translation_of: Web/SVG/Attribute/d
 ---
-<p>« <a href="/en-US/docs/Web/SVG/Attribute">SVG 属性参考主页</a></p>
+{{SVGRef}}
 
-<p>该属性定义了一个路径。</p>
+**`d`** 属性定义了要绘制的路径。
 
-<h2 id="用法">用法</h2>
+路径的定义是一系列 [path 命令](#path_命令)的列表。其中，每个命令由命令和命令参数组成。下面将给出命令细节。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="row">类别</th>
-   <td>路径定义属性</td>
-  </tr>
-  <tr>
-   <th scope="row">值</th>
-   <td> </td>
-  </tr>
-  <tr>
-   <th scope="row">可变性</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">规范文档</th>
-   <td><a href="http://www.w3.org/TR/SVG/animate.html#DurAttribute">SVG 1.1 (2nd Edition)</a></td>
-  </tr>
- </tbody>
+你可以将此属性与以下 SVG 元素一起使用：[`<path>`](#path)、[`<glyph>`](#path) 和 [`<missing-glyph>`](#missing-glyph)。
+
+`d` 是 [presentation attribute](/zh-CN/docs/Web/SVG/Attribute/Presentation)，因此也可以[当作 CSS 属性来使用](#using_d_as_a_css_property)。
+
+## 示例
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="red"
+    d="M 10,30
+       A 20,20 0,0,1 50,30
+       A 20,20 0,0,1 90,30
+       Q 90,60 50,90
+       Q 10,60 10,30 z" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', '100%', 200)}}
+
+## path
+
+对于 {{SVGElement('path')}} 来说，`d` 是一个字符串，包含一系列定义要绘制的路径的 path 命令。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>是</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>属性<code>d</code>实际上是一个字符串，包含了一系列路径描述。这些路径由下面这些指令组成：</p>
+## glyph
 
-<ul>
- <li>Moveto</li>
- <li>Lineto</li>
- <li>Curveto</li>
- <li>Arcto</li>
- <li>ClosePath</li>
-</ul>
+> **警告：** 在 SVG2 中，{{SVGElement('glyph')}} 已被废弃，不应再使用。
 
-<p>这些组合在一个字符串中。这些不同的命令是大小写敏感的；一个大写的命令指明它的参数是绝对位置，而小写的命令指明相对于当前位置的点。可以指定一个负数值作为命令的参数：负角度将是逆时针的，绝对 x 和 y 位置将视为负坐标。负相对 x 值将会往左移，而负相对 y 值将会向上移。</p>
+对 {{SVGElement('glyph')}} 来说，`d` 是一个字符串，包含一系列定义字形轮廓形状的 path 命令。
 
-<h2 id="Moveto">Moveto</h2>
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><code>Moveto</code>指令可以被想象成拎起绘图笔，落脚到另一处。在上一个点和这个指定点之间没有线段绘制。用一个 Moveto 命令开始一个路径是好的作法，因为如果没有一个初始化的 Moveto，执行命令时开始点会是上一个操作发生过的地方，这样可能造成不确定的行为。</p>
+> **备注：** 原点（坐标 `0`,`0`）通常是在左上角。然而，{{SVGElement("glyph")}} 元素将原点放在 letterbox 的左下角。
 
-<p>句法：</p>
+## missing-glyph
 
-<ul>
- <li><code>M x,y</code> 在这里 x 和 y 是绝对坐标，分别代表水平坐标和垂直坐标。</li>
- <li><code>m dx,dy</code> 在这里 dx 和 dy 是相对于当前点的距离，分别是向右和向下的距离。</li>
-</ul>
+> **警告：** 在 SVG2 中，{{SVGElement('missing-glyph')}} 已被废弃，不应再使用。
 
-<p>示例：</p>
+对 {{SVGElement('missing-glyph')}} 来说，`d` 是一个字符串，包含一系列定义字形轮廓形状的路径命令。
 
-<ul>
- <li>位于绝对位置 x=50, y= 100：<code>&lt;path d="M50,100..." /&gt;</code></li>
- <li>往右移 50，往下移 100：<code>&lt;path d="m50,100..." /&gt;</code></li>
-</ul>
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><em>none</em></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="Lineto">Lineto</h2>
+## 将 `d` 当作 CSS 属性使用
 
-<p>和<code>Moveto</code>指令不同，<code>Lineto</code>指令将绘制一条直线段。这个直线段从当前位置移到指定位置。原生的<code>Lineto</code>命令的句法是”L x, y“或者”l dx, dy“，在这里 x 和 y 是绝对坐标，而 dx 和 dy 分别是向右和向下的距离。还有字母 H 和 V，分别指定水平和垂直移动。它们的句法与 L 相同，它的小写版本是相对距离，大写版本是绝对位置。</p>
+`d` is a [presentation attribute](/zh-CN/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
+The property takes either [path()](/zh-CN/docs/Web/CSS/path) or `none`.
 
-<h2 id="Curveto">Curveto</h2>
+The example below shows how you might apply a new path on hover over an element.
+The new path is the same as the old one, but adds a line across the heart.
 
-<p>Curvto 命令指定了一个<a href="/User:Jt//Sandbox/Curves_in_Paths">贝塞尔曲线</a>。有两种类型的贝塞尔曲线：立方曲线和二次方曲线。二次方贝塞尔曲线是一种特殊的立方贝塞尔曲线，在这里，控制点的两端是相同的。二次方贝塞尔曲线的句法是”Q cx, cy  x, y“或”q dcx, dcy dx, dy“。cx 和 cy 都是控制点的绝对坐标，而 dcx 和 dcy 分别是控制点在 x 和 y 方向上的距离。</p>
+```css
+html,body,svg { height:100% }
 
-<div>
-<p>立方贝赛尔曲线遵守二次方贝赛尔曲线同样的概念，但是它需要考虑两个控制点。立方贝塞尔曲线的句法是：”C c1x,c1y c2x,c2y x,y“或者”c dc1x,dc1y dc2x,dc2y dx,dy“，在这里，c1x、c1y 和 c2x、c2y 是分别是初始点和结束点的控制点的绝对坐标。dc1x、dc1y 和 dc2x、dc2y 都是相对于初始点，而不是相对于结束点的。dx 和 dy 分别是向右和向下的距离。</p>
+/* This path is displayed on hover*/
+#svg_css_ex1:hover path {
+  d: path("M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90")
+}
+```
 
-<p>为了连缀平滑的贝塞尔曲线，还可以使用 T 和 S 命令。它们的语法比别的 Curveto 命令简单，因为它假定第一个控制点是从前一个控制点关于前一个点的反射，或者说如果没有前一个控制点的话它实际上就是前一个点。T 的句法是”T x,y“或者”t dx,dy“，分别对应于绝对坐标和相对距离，用来创建二次方贝塞尔曲线。S 用来创建立方贝塞尔曲线，语法是”S cx,cy x,y“或者”s dcx,dcy dx,dy“，在这里 (d)cx 指定第二个控制点。</p>
+```html
+<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="red"
+    d="M 10,30
+       A 20,20 0,0,1 50,30
+       A 20,20 0,0,1 90,30
+       Q 90,60 50,90
+       Q 10,60 10,30 z
+       " />
+</svg>
+```
 
-<p>最后，所有的贝塞尔曲线命令可以制作出一个多边贝塞尔图形，先初始化命令，然后多次指定所有的参数，就可以制作出一个多边贝赛尔图形。因此，下面的两个命令可以创建完全相同的路径：</p>
+{{EmbedLiveSample('Using d as a CSS Property', '100%', 200)}}
 
-<div class="geckoVersionNote">
-<p>&lt;path d="c 50,0 50,100 100,100 50,0 50,-100 100,-100" /&gt;<br>
- &lt;path d="c 50,0 50,100 100,100 c 50,0 50,-100 100,-100" /&gt;</p>
-</div>
+## path 命令
 
-<h2 id="Arcto">Arcto</h2>
+Path commands are instructions that define a path to be drawn. Each command is composed of a command letter and numbers that represent the command parameters.
 
-<p>有时候描述一个椭圆弧曲线路径要比描述一个贝塞尔曲线路径更简单。说到底，path 元素支持 Arcto 命令。圆弧的中心由别的变量计算出。一个 arcto 的声明相对而言有点复 Visual Studio：”A rx,ry xAxisRotate LargeArcFlag,SweepFlag x,y“。解构它，rx 和 ry 分别是 x 和 y 方向的半径，而 LargeArcFlag 的值要到是 0 要么是 1，用来确定是要画小弧（0）还是画大弧（1）。SweepFlag 也要么是 0 要么是 1，用来确定弧是顺时针方向（1）还是逆时针方向（0）。x 和 y 是目的地的坐标。虽然 xAxisRotate 支持改变 x 轴相对于当前引用框架的方向，但是在 Gecko 7 中，这个参数看起来没什么效果。</p>
+SVG defines 6 types of path commands, for a total of 20 commands:
 
-<h2 id="ClosePath">ClosePath</h2>
+- MoveTo: `M`, `m`
+- LineTo: `L`, `l`, `H`, `h`, `V`, `v`
+- Cubic Bézier Curve: `C`, `c`, `S`, `s`
+- Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
+- Elliptical Arc Curve: `A`, `a`
+- ClosePath: `Z`, `z`
 
-<p>ClosePath 命令将在当前路径从，从当前点到第一个点简单画一条直线。它是最简单的命令，而且不带有任何参数。它沿着到开始点的最短的线性路径，如果别的路径落在这路上，将可能路径相交。句法是”Z“或”z“，两种写法作用都一样。</p>
-</div>
+> **Note:** Commands are *case-sensitive*. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
-<h2 id="元素">元素</h2>
+It is always possible to specify a negative value as an argument to a command:
 
-<p>以下元素可以使用<code>d</code>属性：</p>
+- negative angles will be anti-clockwise;
+- *absolute* negative *x* and *y* values are interpreted as negative coordinates;
+- *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
 
-<ul>
- <li>{{SVGElement("path")}} »</li>
- <li>{{SVGElement("glyph")}} »</li>
-</ul>
+### MoveTo path 命令
 
-<p>同样的规则可以应用到{{SVGElement("animate")}}动画路径上。</p>
+*MoveTo* instructions can be thought of as picking up the drawing instrument, and setting it down somewhere else—in other words, moving the *current point* (*P<sub>o</sub>*; {*x<sub>o</sub>*, *y<sub>o</sub>*}). There is no line drawn between *P<sub>o</sub>* and the new *current point* (*P<sub>n</sub>*; {*x<sub>n</sub>*, *y<sub>n</sub>*}).
 
-<h2 id="提醒">提醒</h2>
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Parameters</th>
+      <th scope="col">Notes</th>
+    </tr>
+    <tr>
+      <th scope="row">M</th>
+      <td>
+        (<code><var>x</var></code
+        >, <code><var>y</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Move the <em>current point</em> to the coordinate
+          <code><var>x</var></code
+          >,<code><var>y</var></code
+          >. Any subsequent coordinate pair(s) are interpreted as parameter(s)
+          for implicit absolute LineTo (<code>L</code>) command(s) (<em
+            >see below</em
+          >).
+        </p>
+        <p>
+          <strong>Formula:</strong> <var>P<sub>n</sub></var> = {<code
+            ><var>x</var></code
+          >, <code><var>y</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">m</th>
+      <td>
+        (<code><var>dx</var></code
+        >, <code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Move the <em>current point</em> by shifting the last known position of
+          the path by <code><var>dx</var></code> along the x-axis and by
+          <code><var>dy</var></code> along the y-axis. Any subsequent coordinate
+          pair(s) are interpreted as parameter(s) for implicit relative LineTo
+          (<code>l</code>) command(s) (<em>see below</em>).
+        </p>
+        <p>
+          <strong>Formula:</strong> <var>P<sub>n</sub></var> = {<var
+            >x<sub>o</sub></var
+          >
+          + <code><var>dx</var></code
+          >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-<p>原点（坐标系 0,0 点）经常是上下文的<strong>左上角</strong>。然而{{SVGElement("glyph")}}元素的原点在它的字母框的<strong>左下角</strong>。</p>
+#### 示例
 
-<p>在任何两个数字之间允许加一个逗号，但是在别的地方不允许加逗号。</p>
+```css hidden
+html,body,svg { height:100% }
+```
 
-<h2 id="示例">示例</h2>
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="red"
+    d="M 10,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 40,20 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 50,50 h 10
+       m-20,10 h 10
+       m-20,10 h 10
+       m-20,10 h 10" />
+</svg>
+```
 
-<pre><code>&lt;svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    	 viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"&gt;
-    &lt;path fill="#F7931E" d="M37,17v15H14V17H37z M50,0H0v50h50V0z"/&gt;
-&lt;/svg&gt;</code></pre>
+{{EmbedLiveSample('MoveTo_path_commands', '100%', 200)}}
 
-<p>为了演示<code>d="M37,17v15H14V17H37z M50,0H0v50h50V0z"的实际意义，我们来讨论这个字符串的每一小段。</code></p>
+### LineTo path commands
 
-<p><img alt="enter image description here" src="http://img3.douban.com/view/photo/large/public/p2316231190.jpg" style="height: 400px; max-width: 630px; width: 400px;"></p>
+*LineTo* instructions draw a straight line from the *current point* (*P<sub>o</sub>*; {*x<sub>o</sub>*, *y<sub>o</sub>*}) to the *end point* (*P<sub>n</sub>*; {*x<sub>n</sub>*, *y<sub>n</sub>*}), based on the parameters specified. The *end point* (*P<sub>n</sub>*) then becomes the *current point* for the next command (*P<sub>o</sub>′*).
 
-<ul>
- <li><code>d=" M37,17 || v15 || H14 || V17 || H37 ||z // M50,0 || H0 || v50 || h50 || V0 || z"</code></li>
- <li><code>d=</code>
-  <ul>
-   <li>这个属性包含了构成整个 SVG 的字符串。</li>
-  </ul>
- </li>
- <li><code>M37,17</code>
-  <ul>
-   <li>M 是 MoveTo 的缩写。大写的“M”意味着绝对坐标，小写的“m”意味着相对距离。它暗含着是基于开始坐标，线在框里面，而且你在方框内矩形的右上角开始。</li>
-   <li>37 是开始 svg 位置的缩写，在 X 轴坐标 37 像素处。</li>
-   <li><code>17 开始 svg 位置，在 y 轴的 17 像素处。</code></li>
-  </ul>
- </li>
- <li>v15
-  <ul>
-   <li>v 代表垂直。大写的 V 意味着绝对坐标，小写的 v 表示相对的长度、距离。dx/dy 和 x/y 可以用在 H/V 和 h/v 相应的位置里。</li>
-   <li>这里是表示相对于给定坐标画一条 15 像素的垂直线。它意味着你向下画 15 像素，到坐标 37,32。</li>
-  </ul>
- </li>
- <li><code>H14</code>
-  <ul>
-   <li>H 代表水平，它是绝对坐标，因为它是大写的。</li>
-   <li>从 v15 的终点开始，画一条水平线直到到达绝对坐标 14，当到达 x 坐标 14 时结束画线。笔触位于坐标 14,32。</li>
-  </ul>
- </li>
- <li><code>V17</code>
-  <ul>
-   <li>就像前面那样，从上一条线的终点开始，画一条垂直线，直到到达 y 轴坐标 17。笔触位于坐标 14,17。</li>
-  </ul>
- </li>
- <li>H37
-  <ul>
-   <li>最后，从 14,17 开始，画一条水平线，直到到达 x 轴坐标 37。笔触位于坐标 37,17（M 的值）</li>
-  </ul>
- </li>
- <li><code>z</code>
-  <ul>
-   <li>小写的 z 和大写的 Z 都是闭合一系列 svg 线段。</li>
-  </ul>
- </li>
- <li><code>,</code>
-  <ul>
-   <li>逗号开始下一串简单矢量图形线段。下一系列简单矢量线段将制作外层方框。</li>
-  </ul>
- </li>
- <li><code>M50,0</code>
-  <ul>
-   <li>在 x 轴 50 和 y 轴 0 处开始。</li>
-  </ul>
- </li>
- <li><code>H0</code>
-  <ul>
-   <li>画一条直线直到 (0,0)。</li>
-  </ul>
- </li>
- <li><code>v50</code>
-  <ul>
-   <li>相对于 0,0 画一条 50 像素的垂直线。这条线将画到 (0,50)。</li>
-  </ul>
- </li>
- <li><code>h50</code>
-  <ul>
-   <li>相对于 (0,-50) 画一条 50 像素的水平线。这条线将向右画到 (50,50)。</li>
-  </ul>
- </li>
- <li><code>V0</code>
-  <ul>
-   <li>画一条垂直线直到到达 y 轴坐标 0。这将画线到 (50,0)，即 M 的值。</li>
-  </ul>
- </li>
- <li><code>z</code>
-  <ul>
-   <li>小写的 z 和大写的 Z 都是闭合一系列 svg 线段。</li>
-  </ul>
- </li>
-</ul>
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Parameters</th>
+      <th scope="col">Notes</th>
+    </tr>
+    <tr>
+      <th scope="row">L</th>
+      <td>(<code>x</code>, <code>y</code>)+</td>
+      <td>
+        <p>
+          Draw a line from the <em>current point</em> to the
+          <em>end point</em> specified by <code><var>x</var></code
+          >,<code><var>y</var></code
+          >. Any subsequent coordinate pair(s) are interpreted as parameter(s)
+          for implicit absolute LineTo (<code>L</code>) command(s).
+        </p>
+        <p>
+          <strong>Formula:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<code><var>x</var></code
+          >, <code><var>y</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">l</th>
+      <td>
+        (<code><var>dx</var></code
+        >, <code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw a line from the <em>current point</em> to the
+          <em>end point,</em> which is the <em>current point</em> shifted by
+          <code><var>dx</var></code> along the x-axis and
+          <code><var>dy</var></code> along the y-axis. Any subsequent coordinate
+          pair(s) are interpreted as parameter(s) for implicit relative LineTo
+          (<code>l</code>) command(s) (<em>see below</em>).
+        </p>
+        <p>
+          <strong>Formula:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var> +
+          <code><var>dx</var></code
+          >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">H</th>
+      <td>
+        <code><var>x</var></code
+        >+
+      </td>
+      <td>
+        <p>
+          Draw a horizontal line from the <em>current point</em> to the
+          <em>end point</em>, which is specified by the
+          <code><var>x</var></code> parameter and the <em>current point's</em>
+          <code>y</code> coordinate. Any subsequent value(s) are interpreted as
+          parameter(s) for implicit absolute horizontal LineTo (<code>H</code>)
+          command(s).
+        </p>
+        <p>
+          <strong>Formula:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<code><var>x</var></code
+          >, <var>y<sub>o</sub></var
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">h</th>
+      <td>
+        <code><var>dx</var></code
+        >+
+      </td>
+      <td>
+        <p>
+          Draw a horizontal line from the <em>current point</em> to the
+          <em>end point,</em> which is specified by the
+          <em>current point</em> shifted by <code><var>dx</var></code> along the
+          x-axis and the <em>current point's</em> <code>y</code> coordinate. Any
+          subsequent value(s) are interpreted as parameter(s) for implicit
+          relative horizontal LineTo (<code>h</code>) command(s).
+        </p>
+        <p>
+          <strong>Formula:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var> +
+          <code><var>dx</var></code
+          >, <var>y<sub>o</sub></var
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">V</th>
+      <td>
+        <code><var>y</var></code
+        >+
+      </td>
+      <td>
+        <p>
+          Draw a vertical line from the <em>current point</em> to the
+          <em>end point</em>, which is specified by the
+          <code><var>y</var></code> parameter and the <em>current point's</em>
+          <code>x</code> coordinate. Any subsequent values are interpreted as
+          parameters for implicit absolute vertical LineTo (<code>V</code>)
+          command(s).
+        </p>
+        <p>
+          <strong>Formula:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var
+          >, <code><var>y</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">v</th>
+      <td>
+        <code><var>dy</var></code
+        >+
+      </td>
+      <td>
+        <p>
+          Draw a vertical line from the <em>current point</em> to the
+          <em>end point,</em> which is specified by the
+          <em>current point</em> shifted by <code><var>dy</var></code> along the
+          y-axis and the <em>current point's</em> <code>x</code> coordinate. Any
+          subsequent value(s) are interpreted as parameter(s) for implicit
+          relative vertical LineTo (<code>v</code>) command(s).
+        </p>
+        <p>
+          <strong>Formula:</strong> <var>P<sub>o</sub>′</var> =
+          <var>P<sub>n</sub></var> = {<var>x<sub>o</sub></var
+          >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+          >}
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### 示例
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- LineTo commands with absolute coordinates -->
+  <path fill="none" stroke="red"
+        d="M 10,10
+           L 90,90
+           V 10
+           H 50" />
+
+  <!-- LineTo commands with relative coordinates -->
+  <path fill="none" stroke="red"
+        d="M 110,10
+           l 80,80
+           v -80
+           h -40" />
+</svg>
+```
+
+{{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}
+
+### Cubic Bézier Curve
+
+*Cubic [Bézier curves](/zh-CN/docs/Glossary/Bezier_curve)* are smooth curve definitions using four points:
+
+- starting point (current point)
+  - : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
+- end point
+  - : (*P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*})
+- start control point
+  - : (*P<sub>cs</sub>* = {*x<sub>cs</sub>*, *y<sub>cs</sub>*})
+    (controls curvature near the start of the curve)
+- end control point
+  - : (*P<sub>ce</sub>* = {*x<sub>ce</sub>*, *y<sub>ce</sub>*})
+    (controls curvature near the end of the curve)
+
+After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
+
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Parameters</th>
+      <th scope="col">Notes</th>
+    </tr>
+    <tr>
+      <th scope="row">C</th>
+      <td>
+        (<code><var>x1</var></code
+        >,<code><var>y1</var></code
+        >, <code><var>x2</var></code
+        >,<code><var>y2</var></code
+        >, <code><var>x</var></code
+        >,<code><var>y</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw a cubic Bézier curve from the <em>current point</em> to the
+          <em>end point</em> specified by <code><var>x</var></code
+          >,<code><var>y</var></code
+          >. The <em>start control point</em> is specified by
+          <code><var>x1</var></code
+          >,<code><var>y1</var></code> and the <em>end control point</em> is
+          specified by <code><var>x2</var></code
+          >,<code><var>y2</var></code
+          >. Any subsequent triplet(s) of coordinate pairs are interpreted as
+          parameter(s) for implicit absolute cubic Bézier curve (<code>C</code>)
+          command(s).
+        </p>
+        <dl>
+          <dt>Formulae:</dt>
+          <dd>
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code
+              ><var>x</var></code
+            >, <code><var>y</var></code
+            >} ;<br /><var>P<sub>cs</sub></var> = {<code><var>x1</var></code
+            >, <code><var>y1</var></code
+            >} ;<br /><var>P<sub>ce</sub></var> = {<code><var>x2</var></code
+            >, <code><var>y2</var></code
+            >}
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">c</th>
+      <td>
+        (<code><var>dx1</var></code
+        >,<code><var>dy1</var></code
+        >, <code><var>dx2</var></code
+        >,<code><var>dy2</var></code
+        >, <code><var>dx</var></code
+        >,<code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw a cubic Bézier curve from the <em>current point</em> to the
+          <em>end point,</em> which is the <em>current point</em> shifted by
+          <code><var>dx</var></code> along the x-axis and
+          <code><var>dy</var></code> along the y-axis. The
+          <em>start control point</em> is the <em>current point</em> (starting
+          point of the curve) shifted by <code><var>dx1</var></code> along the
+          x-axis and <code><var>dy1</var></code> along the y-axis. The
+          <em>end control point</em> is the <em>current point</em> (starting
+          point of the curve) shifted by <code><var>dx2</var></code> along the
+          x-axis and <code><var>dy2</var></code> along the y-axis. Any
+          subsequent triplet(s) of coordinate pairs are interpreted as
+          parameter(s) for implicit relative cubic Bézier curve (<code>c</code>)
+          command(s).
+        </p>
+        <dl>
+          <dt>Formulae:</dt>
+          <dd>
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var
+              >x<sub>o</sub></var
+            >
+            + <code><var>dx</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+            >} ;<br /><var>P<sub>cs</sub></var> = {<var>x<sub>o</sub></var> +
+            <code><var>dx1</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy1</var></code
+            >} ;<br /><var>P<sub>ce</sub></var> = {<var>x<sub>o</sub></var> +
+            <code><var>dx2</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy2</var></code
+            >}
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">S</th>
+      <td>
+        (<code><var>x2</var></code
+        >,<code><var>y2</var></code
+        >, <code><var>x</var></code
+        >,<code><var>y</var></code
+        >)+
+      </td>
+      <td>
+        Draw a smooth cubic Bézier curve from the <em>current point</em> to the
+        <em>end point</em> specified by <code><var>x</var></code
+        >,<code><var>y</var></code
+        >. The <em>end control point</em> is specified by
+        <code><var>x2</var></code
+        >,<code><var>y2</var></code
+        >. The <em>start control point</em> is a reflection of the
+        <em>end control point</em> of the previous curve command. If the
+        previous command wasn't a cubic Bézier curve, the
+        <em>start control point</em> is the same as the curve starting point
+        (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are
+        interpreted as parameter(s) for implicit absolute smooth cubic Bézier
+        curve (<code>S</code>) commands.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">s</th>
+      <td>
+        (<code><var>dx2</var></code
+        >,<code><var>dy2</var></code
+        >, <code><var>dx</var></code
+        >,<code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        Draw a smooth cubic Bézier curve from the <em>current point</em> to the
+        <em>end point</em>, which is the <em>current point</em> shifted by
+        <code><var>dx</var></code> along the x-axis and
+        <code><var>dy</var></code> along the y-axis. The
+        <em>end control point</em> is the <em>current point</em> (starting point
+        of the curve) shifted by <code><var>dx2</var></code> along the x-axis
+        and <code><var>dy2</var></code> along the y-axis. The
+        <em>start control point</em> is a reflection of the
+        <em>end control point</em> of the previous curve command. If the
+        previous command wasn't a cubic Bézier curve, the
+        <em>start control point</em> is the same as the curve starting point
+        (<em>current point</em>). Any subsequent pair(s) of coordinate pairs are
+        interpreted as parameter(s) for implicit relative smooth cubic Bézier
+        curve (<code>s</code>) commands.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### 示例
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- Cubic Bézier curve with absolute coordinates -->
+  <path fill="none" stroke="red"
+        d="M 10,90
+           C 30,90 25,10 50,10
+           S 70,90 90,90" />
+
+  <!-- Cubic Bézier curve with relative coordinates -->
+  <path fill="none" stroke="red"
+        d="M 110,90
+           c 20,0 15,-80 40,-80
+           s 20,80 40,80" />
+
+  <!-- Highlight the curve vertex and control points -->
+  <g id="ControlPoints">
+
+    <!-- First cubic command control points -->
+    <line x1="10" y1="90" x2="30" y2="90" stroke="lightgrey" />
+    <circle cx="30" cy="90" r="1.5"/>
+
+    <line x1="50" y1="10" x2="25" y2="10" stroke="lightgrey" />
+    <circle cx="25" cy="10" r="1.5"/>
+
+    <!-- Second smooth command control points (the first one is implicit) -->
+    <line x1="50" y1="10" x2="75" y2="10" stroke="lightgrey" stroke-dasharray="2" />
+    <circle cx="75" cy="10" r="1.5" fill="lightgrey"/>
+
+    <line x1="90" y1="90" x2="70" y2="90" stroke="lightgrey" />
+    <circle cx="70" cy="90" r="1.5" />
+
+    <!-- curve vertex points -->
+    <circle cx="10" cy="90" r="1.5"/>
+    <circle cx="50" cy="10" r="1.5"/>
+    <circle cx="90" cy="90" r="1.5"/>
+  </g>
+  <use xlink:href="#ControlPoints" x="100" />
+</svg>
+```
+
+{{EmbedLiveSample('Cubic_Bézier_Curve', '100%', 200)}}
+
+### Quadratic Bézier Curve
+
+*Quadratic [Bézier curves](/zh-CN/docs/Glossary/Bezier_curve)* are smooth curve definitions using three points:
+
+- starting point (current point)
+  - : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
+- end point
+  - : *P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*}
+- control point
+  - : *P<sub>c</sub>* = {*x<sub>c</sub>*, *y<sub>c</sub>*}
+    (controls curvature)
+
+After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
+
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Parameters</th>
+      <th scope="col">Notes</th>
+    </tr>
+    <tr>
+      <th scope="row">Q</th>
+      <td>
+        (<code><var>x1</var></code
+        >,<code><var>y1</var></code
+        >, <code><var>x</var></code
+        >,<code><var>y</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw a quadratic Bézier curve from the <em>current point</em> to the
+          <em>end point</em> specified by <code><var>x</var></code
+          >,<code><var>y</var></code
+          >. The <em>control point</em> is specified by
+          <code><var>x1</var></code
+          >,<code><var>y1</var></code
+          >. Any subsequent pair(s) of coordinate pairs are interpreted as
+          parameter(s) for implicit absolute quadratic Bézier curve
+          (<code>Q</code>) command(s).
+        </p>
+        <dl>
+          <dt><strong>Formulae:</strong></dt>
+          <dd>
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code
+              ><var>x</var></code
+            >, <code><var>y</var></code
+            >} ;<br /><var>P<sub>c</sub></var> = {<code><var>x1</var></code
+            >, <code><var>y1</var></code
+            >}
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">q</th>
+      <td>
+        (<code><var>dx1</var></code
+        >,<code><var>dy1</var></code
+        >, <code><var>dx</var></code
+        >,<code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw a quadratic Bézier curve from the <em>current point</em> to the
+          <em>end point</em>, which is the <em>current point</em> shifted by
+          <code><var>dx</var></code> along the x-axis and
+          <code><var>dy</var></code> along the y-axis. The
+          <em>control point</em> is the <em>current point</em> (starting point
+          of the curve) shifted by <code><var>dx1</var></code> along the x-axis
+          and <code><var>dy1</var></code> along the y-axis. Any subsequent
+          pair(s) of coordinate pairs are interpreted as parameter(s) for
+          implicit relative quadratic Bézier curve (<code>q</code>) command(s).
+        </p>
+        <dl>
+          <dt>Formulae:</dt>
+          <dd>
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var
+              >x<sub>o</sub></var
+            >
+            + <code><var>dx</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+            >} ;<br /><var>P<sub>c</sub></var> = {<var>x<sub>o</sub></var> +
+            <code><var>dx1</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy1</var></code
+            >}
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">T</th>
+      <td>
+        (<code><var>x</var></code
+        >,<code><var>y</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw a smooth quadratic Bézier curve from the
+          <em>current point</em> to the <em>end point</em> specified by
+          <code><var>x</var></code
+          >,<code><var>y</var></code
+          >. The <em>control point</em> is a reflection of the
+          <em>control point</em> of the previous curve command. If the previous
+          command wasn't a quadratic Bézier curve, the <em>control point</em> is
+          the same as the curve starting point (<em>current point</em>). Any
+          subsequent coordinate pair(s) are interpreted as parameter(s) for
+          implicit absolute smooth quadratic Bézier curve (<code>T</code>)
+          command(s).
+        </p>
+        <dl>
+          <dt>Formula:</dt>
+          <dd>
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<code
+              ><var>x</var></code
+            >, <code><var>y</var></code
+            >}
+          </dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">t</th>
+      <td>
+        (<code><var>dx</var></code
+        >,<code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw a smooth quadratic Bézier curve from the
+          <em>current point</em> to the <em>end point</em>, which is the
+          <em>current point</em> shifted by <code><var>dx</var></code> along the
+          x-axis and <code><var>dy</var></code> along the y-axis. The
+          <em>control point</em> is a reflection of the
+          <em>control point</em> of the previous curve command. If the previous
+          command wasn't a quadratic Bézier curve, the <em>control point</em> is
+          the same as the curve starting point (<em>current point</em>). Any
+          subsequent coordinate pair(s) are interpreted as parameter(s) for
+          implicit relative smooth quadratic Bézier curve (<code>t</code>)
+          command(s).
+        </p>
+        <dl>
+          <dt>Formulae:</dt>
+          <dd>
+            <var>P<sub>o</sub>′</var> = <var>P<sub>n</sub></var> = {<var
+              >x<sub>o</sub></var
+            >
+            + <code><var>dx</var></code
+            >, <var>y<sub>o</sub></var> + <code><var>dy</var></code
+            >}
+          </dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### 示例
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- Quadratic Bézier curve with implicit repetition -->
+  <path fill="none" stroke="red"
+        d="M 10,50
+           Q 25,25 40,50
+           t 30,0 30,0 30,0 30,0 30,0" />
+
+  <!-- Highlight the curve vertex and control points -->
+  <g>
+    <polyline points="10,50 25,25 40,50" stroke="rgba(0,0,0,.2)" fill="none" />
+    <circle cx="25" cy="25" r="1.5" />
+
+    <!-- Curve vertex points -->
+    <circle cx="10" cy="50" r="1.5"/>
+    <circle cx="40" cy="50" r="1.5"/>
+
+    <g id="SmoothQuadraticDown">
+      <polyline points="40,50 55,75 70,50" stroke="rgba(0,0,0,.2)" stroke-dasharray="2" fill="none" />
+      <circle cx="55" cy="75" r="1.5" fill="lightgrey" />
+      <circle cx="70" cy="50" r="1.5" />
+    </g>
+
+    <g id="SmoothQuadraticUp">
+      <polyline points="70,50 85,25 100,50" stroke="rgba(0,0,0,.2)" stroke-dasharray="2" fill="none" />
+      <circle cx="85" cy="25" r="1.5" fill="lightgrey" />
+      <circle cx="100" cy="50" r="1.5" />
+    </g>
+
+    <use xlink:href="#SmoothQuadraticDown" x="60" />
+    <use xlink:href="#SmoothQuadraticUp"   x="60" />
+    <use xlink:href="#SmoothQuadraticDown" x="120" />
+  </g>
+</svg>
+```
+
+{{EmbedLiveSample('Quadratic_Bézier_Curve', '100%', 200)}}
+
+### Elliptical Arc Curve
+
+*Elliptical arc curves* are curves defined as a portion of an ellipse. It is sometimes easier to draw highly regular curves with an elliptical arc than with a Bézier curve.
+
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Parameters</th>
+      <th scope="col">Notes</th>
+    </tr>
+    <tr>
+      <th scope="row">A</th>
+      <td>
+        (<code><var>rx</var></code> <code><var>ry</var></code>
+        <code><var>angle</var></code> <code><var>large-arc-flag</var></code>
+        <code><var>sweep-flag</var></code> <code><var>x</var></code>
+        <code><var>y</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw an Arc curve from the current point to the coordinate
+          <code><var>x</var></code
+          >,<code><var>y</var></code
+          >. The center of the ellipse used to draw the arc is determined
+          automatically based on the other parameters of the command:
+        </p>
+        <ul>
+          <li>
+            <code><var>rx</var></code> and <code><var>ry</var></code> are the
+            two radii of the ellipse;
+          </li>
+          <li>
+            <code><var>angle</var></code> represents a rotation (in degrees) of
+            the ellipse relative to the x-axis;
+          </li>
+          <li>
+            <code><var>large-arc-flag</var></code> and
+            <code><var>sweep-flag</var></code> allows to chose which arc must be
+            drawn as 4 possible arcs can be drawn out of the other parameters.
+            <ul>
+              <li>
+                <code><var>large-arc-flag</var></code> allows to chose one of
+                the large arc (<code>1</code>) or small arc (<code>0</code>),
+              </li>
+              <li>
+                <code><var>sweep-flag</var></code> allows to chose one of the
+                clockwise turning arc (<code>1</code>) or counterclockwise
+                turning arc (<code>0</code>)
+              </li>
+            </ul>
+          </li>
+        </ul>
+        The coordinate <code><var>x</var></code
+        >,<code><var>y</var></code> becomes the new current point for the next
+        command. All subsequent sets of parameters are considered implicit
+        absolute arc curve (<code>A</code>) commands.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">a</th>
+      <td>
+        (<code><var>rx</var></code> <code><var>ry</var></code>
+        <code><var>angle</var></code> <code><var>large-arc-flag</var></code>
+        <code><var>sweep-flag</var></code> <code><var>dx</var></code>
+        <code><var>dy</var></code
+        >)+
+      </td>
+      <td>
+        <p>
+          Draw an Arc curve from the current point to a point for which
+          coordinates are those of the current point shifted by
+          <code><var>dx</var></code> along the x-axis and
+          <code><var>dy</var></code> along the y-axis. The center of the ellipse
+          used to draw the arc is determined automatically based on the other
+          parameters of the command:
+        </p>
+        <ul>
+          <li>
+            <code><var>rx</var></code> and <code><var>ry</var></code> are the
+            two radii of the ellipse;
+          </li>
+          <li>
+            <code><var>angle</var></code> represents a rotation (in degrees) of
+            the ellipse relative to the x-axis;
+          </li>
+          <li>
+            <code><var>large-arc-flag</var></code> and
+            <code><var>sweep-flag</var></code> allows to chose which arc must be
+            drawn as 4 possible arcs can be drawn out of the other parameters.
+            <ul>
+              <li>
+                <code><var>large-arc-flag</var></code> allows a choice of large
+                arc (<code>1</code>) or small arc (<code>0</code>),
+              </li>
+              <li>
+                <code><var>sweep-flag</var></code> allows a choice of a
+                clockwise arc (<code>1</code>) or counterclockwise arc
+                (<code>0</code>)
+              </li>
+            </ul>
+          </li>
+        </ul>
+        The current point gets its X and Y coordinates shifted by
+        <code><var>dx</var></code> and <code><var>dy</var></code> for the next
+        command. All subsequent sets of parameters are considered implicit
+        relative arc curve (<code>a</code>) commands.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### 示例
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- The influence of the arc flags with which the arc is drawn -->
+  <path fill="none" stroke="red"
+        d="M 6,10
+           A 6 4 10 1 0 14,10" />
+
+  <path fill="none" stroke="lime"
+        d="M 6,10
+           A 6 4 10 1 1 14,10" />
+
+  <path fill="none" stroke="purple"
+        d="M 6,10
+           A 6 4 10 0 1 14,10" />
+
+  <path fill="none" stroke="pink"
+        d="M 6,10
+           A 6 4 10 0 0 14,10" />
+</svg>
+```
+
+{{EmbedLiveSample('Elliptical_Arc_Curve', '100%', 200)}}
+
+### ClosePath
+
+*ClosePath* instructions draw a straight line from the *current position* to the first point in the path.
+
+<table class="no-markdown">
+  <tbody>
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Parameters</th>
+      <th scope="col">Notes</th>
+    </tr>
+    <tr>
+      <th scope="row">Z, z</th>
+      <td></td>
+      <td>
+        Close the current subpath by connecting the last point of the path with
+        its initial point. If the two points are at different coordinates, a
+        straight line is drawn between those two points.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+> **Note:** The appearance of a shape closed with *ClosePath* may be different to that of one closed by drawing a line to the origin, using one of the other commands, because the line ends are joined together (according to the {{SVGAttr('stroke-linejoin')}} setting), rather than just being placed at the same coordinates.
+
+#### 示例
+
+```css hidden
+html,body,svg { height:100% }
+```
+
+```html
+<svg viewBox="0 -1 30 11" xmlns="http://www.w3.org/2000/svg">
+
+  <!--
+  An open shape with the last point of
+  the path different to the first one
+  -->
+  <path stroke="red"
+        d="M 5,1
+           l -4,8 8,0" />
+
+  <!--
+  An open shape with the last point of
+  the path matching the first one
+  -->
+  <path stroke="red"
+        d="M 15,1
+           l -4,8 8,0 -4,-8" />
+
+  <!--
+  A closed shape with the last point of
+  the path different to the first one
+  -->
+  <path stroke="red"
+        d="M 25,1
+           l -4,8 8,0
+           z" />
+</svg>
+```
+
+{{EmbedLiveSample('ClosePath', '100%', 200)}}
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
