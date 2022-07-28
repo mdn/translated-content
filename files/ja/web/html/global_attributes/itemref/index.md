@@ -2,42 +2,33 @@
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
 tags:
+  - Attribute
+  - Global attribute
   - HTML
-  - HTML マイクロデータ
+  - HTML Microdata
+  - Microdata
   - Reference
-  - グローバル属性
-  - マイクロデータ
-  - 属性
+browser-compat: html.global_attributes.itemref
 translation_of: Web/HTML/Global_attributes/itemref
 ---
-<div>{{HTMLSidebar("Global_attributes")}}</div>
+{{HTMLSidebar("Global_attributes")}}
 
-<p><span class="seoSummary"><a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>の <strong><code>itemref</code></strong> プロパティは、 <code>itemscope</code> 属性を持つ要素の子孫でない場合、 <code><strong>itemref</strong></code> を使用してアイテムと関連付けができます。</span></p>
+[`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/Web/HTML/Global_attributes) **`itemref`** を使用してアイテムに関連付けることができます。
 
-<p><code>itemref</code> は文書内のどこかにある追加のプロパティがある要素の ID （<code>itemid</code> ではない）のリストを提供します。</p>
+`itemref` は文書内のどこかにある追加のプロパティがある要素の ID （`itemid` ではない）のリストを提供します。
 
-<p><code>itemref</code> 属性は <code>itemscope</code> 属性が指定された要素のみで指定することができます。</p>
+`itemref` 属性は `itemscope` 属性が指定された要素のみで指定することができます。
 
-<p class="note"><strong>メモ: </strong> <code>itemref</code> 属性は、マイクロデータのデータモデルの一部ではありません。注釈づけるデータが扱いやすいツリー構造に従っていないページにおいて、注釈を追加することを助けるための単なる構文構造です。例えば、テーブル内のデータをマークアップするために、セル内のプロパティを維持しながらそれぞれの列に別々なアイテムを定義することができます。</p>
+> **Note:** `itemref` 属性は、マイクロデータのデータモデルの一部ではありません。注釈づけるデータが扱いやすいツリー構造に従っていないページにおいて、注釈を追加することを助けるための単なる構文構造です。例えば、テーブル内のデータをマークアップするために、セル内のプロパティを維持しながらそれぞれの列に別々なアイテムを定義することができます。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### バンドの構造化データの表現
 
-<pre class="brush: html">&lt;div itemscope id="amanda" itemref="a b"&gt;&lt;/div&gt;
-&lt;p id="a"&gt;Name: &lt;span itemprop="name"&gt;Amanda&lt;/span&gt; &lt;/p&gt;
-&lt;div id="b" itemprop="band" itemscope itemref="c"&gt;&lt;/div&gt;
-&lt;div id="c"&gt;
-    &lt;p&gt;Band: &lt;span itemprop="name"&gt;Jazz Band&lt;/span&gt; &lt;/p&gt;
-    &lt;p&gt;Size: &lt;span itemprop="size"&gt;12&lt;/span&gt; players&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+この例では、マイクロデータ属性を使用して、次の構造化データを（[JSON-LD](https://json-ld.org/) 形式で）表現しています。
 
-<h3 id="Structured_data" name="Structured_data">構造化データ</h3>
-
-<p><small>(in <a href="https://json-ld.org/" rel="external">JSON-LD</a> format)</small></p>
-
-<pre class="brush: json">{
+```json
+{
   "@id": "amanda",
   "name": "Amanda",
   "band": {
@@ -46,51 +37,39 @@ translation_of: Web/HTML/Global_attributes/itemref
     "size": 12
   }
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+#### HTML
 
-<p>{{EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref')}}</p>
+```html
+<div itemscope id="amanda" itemref="a b"></div>
+<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<div id="b" itemprop="band" itemscope itemref="c"></div>
+<div id="c">
+    <p>Band: <span itemprop="name">Jazz Band</span> </p>
+    <p>Size: <span itemprop="size">12</span> players</p>
+</div>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+#### 結果
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML Microdata', "#dfn-itemref", "itemref")}}</td>
-   <td>{{Spec2('HTML Microdata')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "microdata.html#attr-itemref", "itemref")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{EmbedLiveSample('Representing structured data for a band')}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## 仕様書
 
-<p>{{Compat("html.global_attributes.itemref")}}</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li><a href="/ja/docs/Web/HTML/Global_attributes">他のグローバル属性</a></li>
- <li>マイクロデータに関連する他のグローバル属性
-  <ul>
-   <li>{{htmlattrxref("itemid")}}</li>
-   <li>{{htmlattrxref("itemprop")}}</li>
-   <li>{{htmlattrxref("itemref")}}</li>
-   <li>{{htmlattrxref("itemscope")}}</li>
-   <li>{{htmlattrxref("itemtype")}}</li>
-  </ul>
- </li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- [他のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- マイクロデータに関連する他のグローバル属性
+
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}
