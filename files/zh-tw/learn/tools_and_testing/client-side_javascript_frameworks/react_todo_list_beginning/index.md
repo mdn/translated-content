@@ -15,252 +15,255 @@ tags:
 translation_of: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}我們被賦予做出一個 React 原型 app 的任務--這個 app 將允許使用者新增、編輯、刪除任務；且可以標記任務完成而不被刪除。文章將會與您一起完成一個基本 `App` component 的結構與畫面，以便稍後與其他 component 互動。
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
-
-<div>我們被賦予做出一個React原型app的任務--這個app將允許使用者新增、編輯、刪除任務；且可以標記任務完成而不被刪除。</div>
-
-<div>文章將會與您一起完成一個基本 <code>App</code> component 的結構與畫面，以便稍後與其他 component 互動。</div>
-
-<div class="blockIndicator note">
-<p><strong>備註：</strong> 如果您需要檢查自己的程式碼與範例之間的差異，可以連到 <a href="https://github.com/mdn/todo-react">todo-react repository</a>，這裡有我們完整的程式碼。 Todo list 作品示範：<a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>。</p>
-</div>
+> **備註：** 如果您需要檢查自己的程式碼與範例之間的差異，可以連到 [todo-react repository](https://github.com/mdn/todo-react)，這裡有我們完整的程式碼。 Todo list 作品示範：<https://mdn.github.io/todo-react-build/>。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">預備知識：</th>
-   <td>
-    <p>知道 <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>與<a href="/en-US/docs/Learn/JavaScript">JavaScript</a>的核心語法、操作基本終端機指令 <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">實作目標：</th>
-   <td>介紹待辦事項清單案例研究，並掌握基本<code>App</code>結構和樣式。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">預備知識：</th>
+      <td>
+        <p>
+          知道 <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>與<a
+            href="/en-US/docs/Learn/JavaScript"
+            >JavaScript</a
+          >的核心語法、操作基本終端機指令
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">實作目標：</th>
+      <td>介紹待辦事項清單案例研究，並掌握基本<code>App</code>結構和樣式。</td>
+    </tr>
+  </tbody>
 </table>
 
-<p><br>
- 在軟體開發中，user story 透過使用者觀點傳達開發目標。動手開發前先定義好user stories可以幫助我們專注於需要工作的項目，而我們這個案例中的app需要實現以下功能：</p>
+在軟體開發中，user story 透過使用者觀點傳達開發目標。動手開發前先定義好 user stories 可以幫助我們專注於需要工作的項目，而我們這個案例中的 app 需要實現以下功能：
 
-<p>使用者可以...</p>
+使用者可以...
 
-<ul>
- <li>讀取任務清單</li>
- <li>可以用滑鼠或鍵盤給清單增加新任務</li>
- <li>可以用滑鼠或鍵盤為任務標記完成</li>
- <li>可以用滑鼠或鍵盤刪除任務</li>
- <li>可以用滑鼠或鍵盤編輯任務</li>
- <li>可以分類查看特定子群組：全部任務、待處理任務、已完成任務</li>
-</ul>
+- 讀取任務清單
+- 可以用滑鼠或鍵盤給清單增加新任務
+- 可以用滑鼠或鍵盤為任務標記完成
+- 可以用滑鼠或鍵盤刪除任務
+- 可以用滑鼠或鍵盤編輯任務
+- 可以分類查看特定子群組：全部任務、待處理任務、已完成任務
 
-<p>我們將一一處理這些使用者故事。</p>
+我們將一一處理這些使用者故事。
 
-<h2 id="專案開始前，先清理一下">專案開始前，先清理一下</h2>
+## 專案開始前，先清理一下
 
-<p>終端機指令 <code>create-react-app</code> 會產生一些我們這個專案用不到的檔案，讓我們來清理一下。</p>
+終端機指令 `create-react-app` 會產生一些我們這個專案用不到的檔案，讓我們來清理一下。
 
-<ul>
- <li>我們不需要個別component的樣式表，所以首先請刪除<code>App.js</code>檔案上方的<code>import './App.css'</code></li>
- <li>我們也不需使用 <code>logo.svg</code>，請一並刪除這項import</li>
-</ul>
+- 我們不需要個別 component 的樣式表，所以首先請刪除`App.js`檔案上方的`import './App.css'`
+- 我們也不需使用 `logo.svg`，請一並刪除這項 import
 
-<p>接著，請複製貼上以下終端機指令，以刪除專案中不需要的檔案；刪除前請確認您在專案的根目錄中！</p>
+接著，請複製貼上以下終端機指令，以刪除專案中不需要的檔案；刪除前請確認您在專案的根目錄中！
 
-<pre class="brush: bash notranslate"># 移動到專案中的src資料夾
+```bash
+# 移動到專案中的src資料夾
 cd src
 # 刪除一些檔案
 rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
 # 回到專案上一層
-cd ..</pre>
+cd ..
+```
 
-<p>小提示：</p>
+小提示：
 
-<ul>
- <li>刪除的檔案之中包含兩個測試檔，這個練習中不會涵蓋測試教學。</li>
- <li>如果您停止server以便在終端機中刪除上述檔案，請記得使用<code>npm start</code>指令再次連上server</li>
-</ul>
+- 刪除的檔案之中包含兩個測試檔，這個練習中不會涵蓋測試教學。
+- 如果您停止 server 以便在終端機中刪除上述檔案，請記得使用`npm start`指令再次連上 server
 
-<h2 id="專案起點">專案起點</h2>
+## 專案起點
 
-<p>作為專案起始點 starting point ，我們會提供兩件事：一個新的 <code>App()</code> function 來取代原生預設，以及一些 CSS 美化我們的app。</p>
+作為專案起始點 starting point ，我們會提供兩件事：一個新的 `App()` function 來取代原生預設，以及一些 CSS 美化我們的 app。
 
-<h3 id="The_JSX">The JSX</h3>
+### The JSX
 
-<p>複製以下片段貼到 <code>App.js</code> 中取代原先的 <code>App()</code> function:</p>
+複製以下片段貼到 `App.js` 中取代原先的 `App()` function:
 
-<pre class="brush: js notranslate">function App(props) {
+```js
+function App(props) {
   return (
-    &lt;div className="todoapp stack-large"&gt;
-      &lt;h1&gt;TodoMatic&lt;/h1&gt;
-      &lt;form&gt;
-        &lt;h2 className="label-wrapper"&gt;
-          &lt;label htmlFor="new-todo-input" className="label__lg"&gt;
+    <div className="todoapp stack-large">
+      <h1>TodoMatic</h1>
+      <form>
+        <h2 className="label-wrapper">
+          <label htmlFor="new-todo-input" className="label__lg">
             What needs to be done?
-          &lt;/label&gt;
-        &lt;/h2&gt;
-        &lt;input
+          </label>
+        </h2>
+        <input
           type="text"
           id="new-todo-input"
           className="input input__lg"
           name="text"
           autoComplete="off"
-        /&gt;
-        &lt;button type="submit" className="btn btn__primary btn__lg"&gt;
+        />
+        <button type="submit" className="btn btn__primary btn__lg">
           Add
-        &lt;/button&gt;
-      &lt;/form&gt;
-      &lt;div className="filters btn-group stack-exception"&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;all&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="false"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;Active&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="false"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;Completed&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-      &lt;/div&gt;
-      &lt;h2 id="list-heading"&gt;
+        </button>
+      </form>
+      <div className="filters btn-group stack-exception">
+        <button type="button" className="btn toggle-btn" aria-pressed="true">
+          <span className="visually-hidden">Show </span>
+          <span>all</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+        <button type="button" className="btn toggle-btn" aria-pressed="false">
+          <span className="visually-hidden">Show </span>
+          <span>Active</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+        <button type="button" className="btn toggle-btn" aria-pressed="false">
+          <span className="visually-hidden">Show </span>
+          <span>Completed</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+      </div>
+      <h2 id="list-heading">
         3 tasks remaining
-      &lt;/h2&gt;
-      &lt;ul
+      </h2>
+      <ul
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
-      &gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
-            &lt;label className="todo-label" htmlFor="todo-0"&gt;
+      >
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-0" type="checkbox" defaultChecked={true} />
+            <label className="todo-label" htmlFor="todo-0">
               Eat
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Eat&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Eat&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-1" type="checkbox" /&gt;
-            &lt;label className="todo-label" htmlFor="todo-1"&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Eat</span>
+            </button>
+            <button type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Eat</span>
+            </button>
+          </div>
+        </li>
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-1" type="checkbox" />
+            <label className="todo-label" htmlFor="todo-1">
               Sleep
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Sleep&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;fbutton type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Sleep&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-2" type="checkbox" /&gt;
-            &lt;label className="todo-label" htmlFor="todo-2"&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Sleep</span>
+            </button>
+            <fbutton type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Sleep</span>
+            </button>
+          </div>
+        </li>
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-2" type="checkbox" />
+            <label className="todo-label" htmlFor="todo-2">
               Repeat
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Repeat&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Repeat&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Repeat</span>
+            </button>
+            <button type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Repeat</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
   );
 }
-</pre>
+```
 
-<p>再來，請打開 <code>public/index.html</code> 改掉 <code><a href="/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code> 元素中的文字，將文字改為 <code>TodoMatic</code>，這樣才能對應到上述 <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> 的文字。</p>
+再來，請打開 `public/index.html` 改掉 [`<title>`](/en-US/docs/Web/HTML/Element/title) 元素中的文字，將文字改為 `TodoMatic`，這樣才能對應到上述 [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 的文字。
 
-<pre class="brush: html">&lt;title&gt;TodoMatic&lt;/title&gt;</pre>
+```html
+<title>TodoMatic</title>
+```
 
-<p>當您更新瀏覽器，您應該可以看到以下畫面：</p>
+當您更新瀏覽器，您應該可以看到以下畫面：
 
-<p><img alt="todo-matic app, unstyled, showing a jumbled mess of labels, inputs, and buttons" src="unstyled-app.png"></p>
+![todo-matic app, unstyled, showing a jumbled mess of labels, inputs, and buttons](unstyled-app.png)
 
-<p>畫面醜醜的對吧，而且還沒有實際功能，沒關係讓我們馬上來美化它。</p>
+畫面醜醜的對吧，而且還沒有實際功能，沒關係讓我們馬上來美化它。
 
-<p>在此之前，回頭複習一下我們的JSX，以及它與用戶故事的對應關係：</p>
+在此之前，回頭複習一下我們的 JSX，以及它與用戶故事的對應關係：
 
-<ul>
- <li>我們有一個 <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> 元素，其中包含可以寫入新任務的 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> 以及一個button來送出表單。</li>
- <li>我們還有一個<code>&lt;button&gt;</code>陣列，用以過濾不同任務狀態(全部、待辦、完成)。</li>
- <li>下方接著一個標題告訴我們擁有多少任務</li>
- <li>我們有3個預設任務寫在無序清單<code>&lt;ul&gt;</code>元素中，其中包含的各項單一任務都是使用<code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>。 並且在各項任務下方增加 <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="checkbox"&gt;</a></code>來勾選此任務是否完成，以及編輯、刪除按鈕<code>&lt;button&gt;</code>。</li>
-</ul>
+- 我們有一個 [`<form>`](/en-US/docs/Web/HTML/Element/form) 元素，其中包含可以寫入新任務的 [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) 以及一個 button 來送出表單。
+- 我們還有一個`<button>`陣列，用以過濾不同任務狀態(全部、待辦、完成)。
+- 下方接著一個標題告訴我們擁有多少任務
+- 我們有 3 個預設任務寫在無序清單`<ul>`元素中，其中包含的各項單一任務都是使用[`<li>`](/en-US/docs/Web/HTML/Element/li)。 並且在各項任務下方增加 [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/text)來勾選此任務是否完成，以及編輯、刪除按鈕`<button>`。
 
-<p>這個表單<code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> 允許我們新增、管理任務， <code>&lt;button&gt;</code>幫助我們篩選任務狀態，<code>&lt;ul&gt;&lt;li&gt;</code> 則負責展示任務清單。接著由於缺乏編輯任務的UI，讓我們開始來處理畫面美化的部分吧。</p>
+這個表單[`<form>`](/en-US/docs/Web/HTML/Element/form) 允許我們新增、管理任務， `<button>`幫助我們篩選任務狀態，`<ul><li>` 則負責展示任務清單。接著由於缺乏編輯任務的 UI，讓我們開始來處理畫面美化的部分吧。
 
-<h3 id="Accessibility_features_無障礙設定">Accessibility features 無障礙設定</h3>
+### Accessibility features 無障礙設定
 
-<p>您可能已經注意到一些不常見的屬性，例如：</p>
+您可能已經注意到一些不常見的屬性，例如：
 
-<pre class="brush: html notranslate">&lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
-  &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-  &lt;span&gt;all&lt;/span&gt;
-  &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-&lt;/button&gt;</pre>
+```html
+<button type="button" className="btn toggle-btn" aria-pressed="true">
+  <span className="visually-hidden">Show </span>
+  <span>all</span>
+  <span className="visually-hidden"> tasks</span>
+</button>
+```
 
-<p><code>aria-pressed</code> 元素可以跟輔助工具對話(像是螢幕閱讀器)，這個button 總是處於： <code>pressed</code> 或 <code>unpressed</code>其中之一的狀態。可以想像它們如同 <code>on</code> 與 <code>off</code>。設定 <code>true</code> 代表這個button預設開啟<code>pressed</code>。</p>
+`aria-pressed` 元素可以跟輔助工具對話(像是螢幕閱讀器)，這個 button 總是處於： `pressed` 或 `unpressed`其中之一的狀態。可以想像它們如同 `on` 與 `off`。設定 `true` 代表這個 button 預設開啟`pressed`。
 
-<p>class <code>visually-hidden</code> 在我們加入CSS前還不會有作用；當我們加入樣式後，這個class會對一般使用者隱藏，因為視覺使用者不需要這些文字；而仰賴閱讀器的使用者則可以聽到更多輔助文字來提高的讀取理解與體驗。</p>
+class `visually-hidden` 在我們加入 CSS 前還不會有作用；當我們加入樣式後，這個 class 會對一般使用者隱藏，因為視覺使用者不需要這些文字；而仰賴閱讀器的使用者則可以聽到更多輔助文字來提高的讀取理解與體驗。
 
-<p>您還可以發現 <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> 元素中：</p>
+您還可以發現 [`<ul>`](/en-US/docs/Web/HTML/Element/ul) 元素中：
 
-<pre class="brush: html notranslate">&lt;ul
+```html
+<ul
   role="list"
   className="todo-list stack-large stack-exception"
   aria-labelledby="list-heading"
-&gt;</pre>
+>
+```
 
-<p><code>role</code> 屬性會向科技輔具說明各種元素分別代表什麼用途。雖然瀏覽器預設<code>&lt;ul&gt;</code> 為清單，但是由於樣式表會破壞這個功能，因此需要使用<code>role</code> 屬性保留 "list" 清單這個意思。如果您想了解更多<code>role</code> 屬性的重要性，請參照<a href="https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html">Scott O'Hara’s article, “Fixing Lists”</a>。</p>
+`role` 屬性會向科技輔具說明各種元素分別代表什麼用途。雖然瀏覽器預設`<ul>` 為清單，但是由於樣式表會破壞這個功能，因此需要使用`role` 屬性保留 "list" 清單這個意思。如果您想了解更多`role` 屬性的重要性，請參照[Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)。
 
-<p><code>aria-labelledby</code> 屬性告訴科技輔具，我們將清單標題list heading 設為label，以描述下方的程式碼片段；將這些關聯設定好會幫助使用科技輔具的朋友更好的理解前因後果。</p>
+`aria-labelledby` 屬性告訴科技輔具，我們將清單標題 list heading 設為 label，以描述下方的程式碼片段；將這些關聯設定好會幫助使用科技輔具的朋友更好的理解前因後果。
 
-<p>最後，我們清單中的labels 與 inputs對JSX而言將會有些特別的屬性：</p>
+最後，我們清單中的 labels 與 inputs 對 JSX 而言將會有些特別的屬性：
 
-<pre class="brush: html notranslate">&lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
-&lt;label className="todo-label" htmlFor="todo-0"&gt;
+```html
+<input id="todo-0" type="checkbox" defaultChecked={true} />
+<label className="todo-label" htmlFor="todo-0">
   Eat
-&lt;/label&gt;</pre>
+</label>
+```
 
-<p><code>&lt;input/ &gt;</code>中的 <code>defaultChecked</code> 屬性會讓 React 預設勾選某項目。假如我們同一般寫HTML一樣使用 <code>checked</code>，React 會紀錄一些：handling events on the checkbox警告到瀏覽器console中，而這些是我們想避免的。不過先別擔心，我們在稍後討論事件的章節會教大家解決這個問題。</p>
+`<input/ >`中的 `defaultChecked` 屬性會讓 React 預設勾選某項目。假如我們同一般寫 HTML 一樣使用 `checked`，React 會紀錄一些：handling events on the checkbox 警告到瀏覽器 console 中，而這些是我們想避免的。不過先別擔心，我們在稍後討論事件的章節會教大家解決這個問題。
 
-<p><code>htmlFor</code> 屬性對應HTML中的 <code>for</code> 屬性 ，我們不能在JSX中使用<code>for</code> 屬性因為 <code>for</code> 是保留字，因此React 使用 <code>htmlFor</code> 取代 <code>for</code>。</p>
+`htmlFor` 屬性對應 HTML 中的 `for` 屬性 ，我們不能在 JSX 中使用`for` 屬性因為 `for` 是保留字，因此 React 使用 `htmlFor` 取代 `for`。
 
-<p>備註：</p>
+備註：
 
-<ul>
- <li>在JSX屬性使用boolean值 ：<code>true</code> 與 <code>false</code>， 必須將之包在<code>{ }</code>中，如果只寫 <code>defaultChecked="true"</code>，這個值將是 <code>"true"</code> — 一個字串 string literal。 請記得 — 這是JavaScript，不是HTML!</li>
- <li><code>aria-pressed</code> 屬性在我們稍早寫的程式碼片段中有一個 <code>"true"</code> 的值，因為<code>aria-pressed</code> 不像<code>checked</code>真的是一個布林值屬性。</li>
-</ul>
+- 在 JSX 屬性使用 boolean 值 ：`true` 與 `false`， 必須將之包在`{ }`中，如果只寫 `defaultChecked="true"`，這個值將是 `"true"` — 一個字串 string literal。 請記得 — 這是 JavaScript，不是 HTML!
+- `aria-pressed` 屬性在我們稍早寫的程式碼片段中有一個 `"true"` 的值，因為`aria-pressed` 不像`checked`真的是一個布林值屬性。
 
-<h3 id="Implementing_our_styles_實作CSS美化">Implementing our styles 實作CSS美化</h3>
+### Implementing our styles 實作 CSS 美化
 
-<p>將以下的CSS貼進 <code>src/index.css</code> 取代原本的預設內容：</p>
+將以下的 CSS 貼進 `src/index.css` 取代原本的預設內容：
 
-<pre class="brush: css notranslate">/* RESETS */
+```css
+/* RESETS */
 *,
 *::before,
 *::after {
@@ -331,7 +334,7 @@ body {
 }
 /*END RESETS*/
 /* GLOBAL STYLES */
-.form-group &gt; input[type="text"] {
+.form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;
 }
@@ -365,10 +368,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.btn-group &gt; * {
+.btn-group > * {
   flex: 1 1 49%;
 }
-.btn-group &gt; * + * {
+.btn-group > * + * {
   margin-left: 0.8rem;
 }
 .label-wrapper {
@@ -385,21 +388,21 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
-[class*="stack"] &gt; * {
+[class*="stack"] > * {
   margin-top: 0;
   margin-bottom: 0;
 }
-.stack-small &gt; * + * {
+.stack-small > * + * {
   margin-top: 1.25rem;
 }
-.stack-large &gt; * + * {
+.stack-large > * + * {
   margin-top: 2.5rem;
 }
 @media screen and (min-width: 550px) {
-  .stack-small &gt; * + * {
+  .stack-small > * + * {
     margin-top: 1.4rem;
   }
-  .stack-large &gt; * + * {
+  .stack-large > * + * {
     margin-top: 2.8rem;
   }
 }
@@ -419,15 +422,15 @@ body {
     padding: 4rem;
   }
 }
-.todoapp &gt; * {
+.todoapp > * {
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
 }
-.todoapp &gt; form {
+.todoapp > form {
   max-width: 100%;
 }
-.todoapp &gt; h1 {
+.todoapp > h1 {
   display: block;
   max-width: 100%;
   text-align: center;
@@ -472,7 +475,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.todo &gt; * {
+.todo > * {
   flex: 0 0 100%;
 }
 .todo-text {
@@ -498,15 +501,15 @@ body {
   padding-left: 40px;
   clear: left;
 }
-.c-cb &gt; label::before,
-.c-cb &gt; input[type="checkbox"] {
+.c-cb > label::before,
+.c-cb > input[type="checkbox"] {
   box-sizing: border-box;
   top: -2px;
   left: -2px;
   width: 44px;
   height: 44px;
 }
-.c-cb &gt; input[type="checkbox"] {
+.c-cb > input[type="checkbox"] {
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   position: absolute;
@@ -514,7 +517,7 @@ body {
   margin: 0;
   opacity: 0;
 }
-.c-cb &gt; label {
+.c-cb > label {
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
@@ -524,17 +527,17 @@ body {
   cursor: pointer;
   touch-action: manipulation;
 }
-.c-cb &gt; label::before {
+.c-cb > label::before {
   content: "";
   position: absolute;
   border: 2px solid currentColor;
   background: transparent;
 }
-.c-cb &gt; input[type="checkbox"]:focus + label::before {
+.c-cb > input[type="checkbox"]:focus + label::before {
   border-width: 4px;
   outline: 3px dashed #228bec;
 }
-.c-cb &gt; label::after {
+.c-cb > label::after {
   box-sizing: content-box;
   content: "";
   position: absolute;
@@ -549,66 +552,60 @@ body {
   opacity: 0;
   background: transparent;
 }
-.c-cb &gt; input[type="checkbox"]:checked + label::after {
+.c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
-}</pre>
+}
+```
 
-<p>儲存並更新瀏覽器後，您的app應當會有對應的美化。</p>
+儲存並更新瀏覽器後，您的 app 應當會有對應的美化。
 
-<h2 id="小結">小結</h2>
+## 小結
 
-<p>現在我們的待辦清單app終於比較像真正的app了！問題是它還沒真正提供功能，我們將在下一章解決這個問題。</p>
+現在我們的待辦清單 app 終於比較像真正的 app 了！問題是它還沒真正提供功能，我們將在下一章解決這個問題。
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="在本模塊">在本模塊</h2>
+## 在本模塊
 
-<ul>
- <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">前端框架簡介</a></li>
- <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">框架的主要功能</a></li>
- <li>React
-  <ul>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">開始學 React</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">建立我們的 React 待辦清單</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">把 React app 組件化</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">響應性 React：事件與狀態</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">響應性 React：編輯、過濾、條件式過濾</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">React 無障礙</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React 的資源</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">開始學 Ember</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app 架構與組件</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">響應性 Ember：事件、類別、狀態</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">響應性 Ember：Footer 功能、條件式渲染</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Ember 的路由</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember 的資源與除錯</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">開始學 Vue</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">建立第一個 Vue 組件</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">渲染 Vue 組件的列表</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">寫一個 todo 表單：Vue 的事件、方法、model</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">透過 CSS 樣式化 Vue 組件</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">使用 Vue 的計算屬性</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue 的條件式渲染：編輯已存在的待辦</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">重點管理 Vue ref</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue 的資源</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">開始學Svelte</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">寫一個Svelte待辦清單(todp list app)</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Svelte中的動態行為：變數與props</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">進階Svelte：Reactivity、元件生命週期、網頁無障礙設定</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">Svelte中的TypeScript</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">部署與下一步</a></li>
-  </ul>
- </li>
-</ul>
+- [前端框架簡介](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [框架的主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [開始學 React](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [建立我們的 React 待辦清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [把 React app 組件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [響應性 React：事件與狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [響應性 React：編輯、過濾、條件式過濾](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [React 無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React 的資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [開始學 Ember](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app 架構與組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [響應性 Ember：事件、類別、狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [響應性 Ember：Footer 功能、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Ember 的路由](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember 的資源與除錯](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [開始學 Vue](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [建立第一個 Vue 組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [渲染 Vue 組件的列表](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [寫一個 todo 表單：Vue 的事件、方法、model](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [透過 CSS 樣式化 Vue 組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [使用 Vue 的計算屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue 的條件式渲染：編輯已存在的待辦](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [重點管理 Vue ref](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue 的資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [開始學 Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [寫一個 Svelte 待辦清單(todp list app)](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Svelte 中的動態行為：變數與 props](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [進階 Svelte：Reactivity、元件生命週期、網頁無障礙設定](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [Svelte 中的 TypeScript](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [部署與下一步](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
