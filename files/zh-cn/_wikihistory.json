@@ -10777,14 +10777,6 @@
       "AlexChao"
     ]
   },
-  "Web/API/Document/tooltipNode": {
-    "modified": "2019-03-24T00:17:47.811Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Document/touchcancel_event": {
     "modified": "2020-10-15T22:29:23.086Z",
     "contributors": [

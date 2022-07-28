@@ -357,7 +357,6 @@
 /zh-CN/docs/DOM/document.readyState	/zh-CN/docs/Web/API/Document/readyState
 /zh-CN/docs/DOM/document.referrer	/zh-CN/docs/Web/API/Document/referrer
 /zh-CN/docs/DOM/document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
-/zh-CN/docs/DOM/document.tooltipNode	/zh-CN/docs/Web/API/Document/tooltipNode
 /zh-CN/docs/DOM/document.width	/zh-CN/docs/Web/API/Document/width
 /zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/element
 /zh-CN/docs/DOM/element.addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
@@ -1886,7 +1885,6 @@
 /zh-CN/docs/Web/API/document.referrer	/zh-CN/docs/Web/API/Document/referrer
 /zh-CN/docs/Web/API/document.scripts	/zh-CN/docs/Web/API/Document/scripts
 /zh-CN/docs/Web/API/document.title	/zh-CN/docs/Web/API/Document/title
-/zh-CN/docs/Web/API/document.tooltipNode	/zh-CN/docs/Web/API/Document/tooltipNode
 /zh-CN/docs/Web/API/document.width	/zh-CN/docs/Web/API/Document/width
 /zh-CN/docs/Web/API/document.write	/zh-CN/docs/Web/API/Document/write
 /zh-CN/docs/Web/API/document.writeln	/zh-CN/docs/Web/API/Document/writeln
