@@ -5,40 +5,56 @@ tags:
   - vue 入门
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
-
-<p>现在我们已经有了一个可以工作的组件。我们接下来添加更多的 <code>ToDoItem</code> 组件到 我们的 App。 本文我们会添加一系列待办事项到 App.vue 组件并使用<code>v-for</code>指令遍历这些它们，将它们的每一项展示在<code>ToDoItem</code>组件中。</p>
+现在我们已经有了一个可以工作的组件。我们接下来添加更多的 `ToDoItem` 组件到 我们的 App。 本文我们会添加一系列待办事项到 App.vue 组件并使用`v-for`指令遍历这些它们，将它们的每一项展示在`ToDoItem`组件中。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
-
-    <p>Vue components are written as a combination of JavaScript objects that manage the app's data and an HTML-based template syntax that maps to the underlying DOM structure. For installation, and to use some of the more advanced features of Vue (like Single File Components or render functions), you'll need a terminal with node + npm installed.</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>To learn how to loop through an array of data and render it in multiple components.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        <p>
+          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          knowledge of the
+          <a
+            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            >terminal/command line</a
+          >.
+        </p>
+        <p>
+          Vue components are written as a combination of JavaScript objects that
+          manage the app's data and an HTML-based template syntax that maps to
+          the underlying DOM structure. For installation, and to use some of the
+          more advanced features of Vue (like Single File Components or render
+          functions), you'll need a terminal with node + npm installed.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objective:</th>
+      <td>
+        To learn how to loop through an array of data and render it in multiple
+        components.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="利用_v-for_指令渲染列表">利用 v-for 指令渲染列表</h2>
+## 利用 v-for 指令渲染列表
 
-<p>一个有效的待办事项列表需要有多个被渲染的 to-do 项，Vue 中的<code><a href="https://vuejs.org/v2/api/#v-for">v-fo</a>r</code> 可以用来实现这种效果。它是 Vue 自带的指令，用于在 template 中实现循环，我们可以利用它将数组中的各项重复渲染成指定的特征。我们将利用它迭代待办事项列表，将其中的每一项展示为单独的 ToDoItem 组件。</p>
+一个有效的待办事项列表需要有多个被渲染的 to-do 项，Vue 中的`v-for` 可以用来实现这种效果。它是 Vue 自带的指令，用于在 template 中实现循环，我们可以利用它将数组中的各项重复渲染成指定的特征。我们将利用它迭代待办事项列表，将其中的每一项展示为单独的 ToDoItem 组件。
 
-<h3 id="添加一些需要被渲染的数据">添加一些需要被渲染的数据</h3>
+### 添加一些需要被渲染的数据
 
-<p>首先我们需要准备一个待办事项数组。添加 <code>data</code> 属性到 <code>App.vue</code> 组件对象中， 它包含一个 <code>ToDoItems</code> 字段，其值是待办事项数组。在最终完成添加新的待办事项功能之前，我们可以先 mock 一些待办项目，每个待办项目可以用一个对象表示，这个对象含有 <code>name</code> 和 <code>done</code> 属性。</p>
+首先我们需要准备一个待办事项数组。添加 `data` 属性到 `App.vue` 组件对象中， 它包含一个 `ToDoItems` 字段，其值是待办事项数组。在最终完成添加新的待办事项功能之前，我们可以先 mock 一些待办项目，每个待办项目可以用一个对象表示，这个对象含有 `name` 和 `done` 属性。
 
-<p>像下面这样添加一些待办项目让我们可以利用<code>v-for</code> 来对它们进行渲染。</p>
+像下面这样添加一些待办项目让我们可以利用`v-for` 来对它们进行渲染。
 
-<pre class="brush: js notranslate">export default {
+```js
+export default {
   name: 'app',
   components: {
     ToDoItem
@@ -53,91 +69,90 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_re
       ]
     };
   }
-};</pre>
+};
+```
 
-<p>现在我们有了一个列表，可以用<code>v-for</code>去展示它们了。指令的作用方式和元素的属性类似，就 v-for 而言，它类似 js 中的<code>for...in</code>循环，<code>v-for="item in items"</code> — <code>iterms</code>是你要迭代的列表， <code>item</code> 是数组中当前元素的引用。</p>
+现在我们有了一个列表，可以用`v-for`去展示它们了。指令的作用方式和元素的属性类似，就 v-for 而言，它类似 js 中的`for...in`循环，`v-for="item in items"` — `iterms`是你要迭代的列表， `item` 是数组中当前元素的引用。
 
-<p><code>v-for</code>获取每个迭代的元素，并渲染它和它的子元素。在我们的例子中，我们用<code>&lt;li&gt;</code>的形式展示每一个待办事项，接下来我们会通过每个待办事项传递数据到其对应的<code>ToDoItem</code>组件。</p>
+`v-for`获取每个迭代的元素，并渲染它和它的子元素。在我们的例子中，我们用`<li>`的形式展示每一个待办事项，接下来我们会通过每个待办事项传递数据到其对应的`ToDoItem`组件。
 
-<h3 id="Key_属性">Key 属性</h3>
+### Key 属性
 
-<p>在进行数据传递之前，我们要了解下<code>key</code>属性，它和<code>v-for</code>使用，用来帮助 Vue 标识列表中的元素，这样 Vue 就不需要在列表变化时重新创建它们。但是 Vue 需要一个唯一的标识，即<code>key</code>来识别哪些元素是被复用的。</p>
+在进行数据传递之前，我们要了解下`key`属性，它和`v-for`使用，用来帮助 Vue 标识列表中的元素，这样 Vue 就不需要在列表变化时重新创建它们。但是 Vue 需要一个唯一的标识，即`key`来识别哪些元素是被复用的。
 
-<p>为了让 Vue 能正确的比较<code>key</code> ，key 属性需要是 numeric 或者 string 类型。用 name 字段不是个好主意，因为这个字段会被用户输入控制，无法保证唯一性。</p>
+为了让 Vue 能正确的比较`key` ，key 属性需要是 numeric 或者 string 类型。用 name 字段不是个好主意，因为这个字段会被用户输入控制，无法保证唯一性。
 
-<p>我们可以使用<code>lodash.uniqueid()</code> ，像我们前一章节那样。</p>
+我们可以使用`lodash.uniqueid()` ，像我们前一章节那样。
 
-<ol>
- <li>
-  <p>导入 <code>lodash.uniqueid</code> 到 <code>App</code> 组件。</p>
+1.  导入 `lodash.uniqueid` 到 `App` 组件。
 
-  <pre class="brush: js notranslate"> import uniqueId from 'lodash.uniqueid';</pre>
- </li>
- <li>
-  <p>添加 <code>id</code> 字段到 <code>ToDoItems</code> 数组的每一个元素中，并且将他们赋值为 <code>uniqueId('todo-')。</code></p>
+    ```js
+     import uniqueId from 'lodash.uniqueid';
+    ```
 
-  <p><code>App.vue</code> <code>&lt;script&gt;</code> 元素内容如下：</p>
+2.  添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')。`
 
-  <pre class="brush: js notranslate">import ToDoItem from './components/ToDoItem.vue';
-import uniqueId from 'lodash.uniqueid'
+    `App.vue` `<script>` 元素内容如下：
 
-export default {
-  name: 'app',
-  components: {
-    ToDoItem
-  },
-  data() {
-    return {
-      ToDoItems: [
-        { id: uniqueId('todo-'), label: 'Learn Vue', done: false },
-        { id: uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
-        { id: uniqueId('todo-'), label: 'Have fun', done: true },
-        { id: uniqueId('todo-'), label: 'Create a to-do list', done: false }
-      ]
+    ```js
+    import ToDoItem from './components/ToDoItem.vue';
+    import uniqueId from 'lodash.uniqueid'
+
+    export default {
+      name: 'app',
+      components: {
+        ToDoItem
+      },
+      data() {
+        return {
+          ToDoItems: [
+            { id: uniqueId('todo-'), label: 'Learn Vue', done: false },
+            { id: uniqueId('todo-'), label: 'Create a Vue project with the CLI', done: true },
+            { id: uniqueId('todo-'), label: 'Have fun', done: true },
+            { id: uniqueId('todo-'), label: 'Create a to-do list', done: false }
+          ]
+        };
+      }
     };
-  }
-};</pre>
- </li>
- <li>
-  <p>添加 <code>v-for</code> 指令和 <code>key</code> 属性到 <code>&lt;li&gt;</code> 元素：</p>
+    ```
 
-  <pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li v-for="item in ToDoItems" :key="item.id"&gt;
-    &lt;to-do-item label="My ToDo Item" :done="true"&gt;&lt;/to-do-item&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
+3.  添加 `v-for` 指令和 `key` 属性到 `<li>` 元素：
 
-  <p>这样改后，<code>&lt;cli&gt;</code>标签中的 js 脚本就可以访问<code>item</code>了，这意味着我们可以使用<code>v-bind</code>来传递<code>item</code>对象的字段给<code>ToDoItem</code>组件了。这非常有用，我们想让列表中的待办事项的<code>label</code>值展示到它的 label 中，而不是显示一个静态的"My Todo Item"。此外，我们想让它们的 checked 状态反应它们的<code>done</code>字段，而不是默认的<code>done="false"</code>。</p>
- </li>
- <li>
-  <p>把 <code>label="My ToDo Item"</code> 改成 <code>:label="item.label"</code>, <code>:done="false"</code> 改成 <code>:done="item.done"</code> ：</p>
- </li>
- <li>
-  <pre class="brush: html notranslate">&lt;ul&gt;
-  &lt;li v-for="item in ToDoItems" :key="item.id"&gt;
-     &lt;to-do-item :label="item.label" :done="item.done"&gt;&lt;/to-do-item&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</pre>
- </li>
-</ol>
+    ```html
+    <ul>
+      <li v-for="item in ToDoItems" :key="item.id">
+        <to-do-item label="My ToDo Item" :done="true"></to-do-item>
+      </li>
+    </ul>
+    ```
 
-<p>现在当你去看运行着的 app 时，你会发现待办事项显示了它们自己正确的名字，如果你查看源码的话，你会发现输入都有了唯一的 id。<img alt="The app with a list of todo items rendered." src="rendered-todo-items.png"></p>
+    这样改后，`<cli>`标签中的 js 脚本就可以访问`item`了，这意味着我们可以使用`v-bind`来传递`item`对象的字段给`ToDoItem`组件了。这非常有用，我们想让列表中的待办事项的`label`值展示到它的 label 中，而不是显示一个静态的"My Todo Item"。此外，我们想让它们的 checked 状态反应它们的`done`字段，而不是默认的`done="false"`。
 
-<h2 id="让我们来一点小重构">让我们来一点小重构</h2>
+4.  把 `label="My ToDo Item"` 改成 `:label="item.label"`, `:done="false"` 改成 `:done="item.done"` ：
+5.  ```html
+    <ul>
+      <li v-for="item in ToDoItems" :key="item.id">
+         <to-do-item :label="item.label" :done="item.done"></to-do-item>
+      </li>
+    </ul>
+    ```
 
-<p>我们可以做一点代码重构。 因为我们已经要为每一个待办事项创建一个唯一 id，所以不妨把 id 作为 ToDoItem 的一个 prop，而不是在每个 checkbox 里生成它。</p>
+现在当你去看运行着的 app 时，你会发现待办事项显示了它们自己正确的名字，如果你查看源码的话，你会发现输入都有了唯一的 id。![The app with a list of todo items rendered.](rendered-todo-items.png)
 
-<p>添加一个新的 prop <code>id</code> 到 <code>ToDoItem</code> 组件。</p>
+## 让我们来一点小重构
 
-<ol>
- <li>标记它为 required，类型是 <code>String</code> 。</li>
- <li>为防止命名冲突，删除掉<code>data</code>属性中的<code>id</code>字段。</li>
- <li>删除掉 <code>import uniqueId from 'lodash.uniqueid';</code> 这行。</li>
-</ol>
+我们可以做一点代码重构。 因为我们已经要为每一个待办事项创建一个唯一 id，所以不妨把 id 作为 ToDoItem 的一个 prop，而不是在每个 checkbox 里生成它。
 
-<p><code>ToDoItem</code> 中的 <code>&lt;script&gt;</code> 如下所示：</p>
+添加一个新的 prop `id` 到 `ToDoItem` 组件。
 
-<pre class="brush: js notranslate">export default {
+1.  标记它为 required，类型是 `String` 。
+2.  为防止命名冲突，删除掉`data`属性中的`id`字段。
+3.  删除掉 `import uniqueId from 'lodash.uniqueid';` 这行。
+
+`ToDoItem` 中的 `<script>` 如下所示：
+
+```js
+export default {
     props: {
         label: {required: true, type: String},
         done: {default: false, type: Boolean},
@@ -148,80 +163,76 @@ export default {
            isDone : this.done,
         }
     },
-}</pre>
+}
+```
 
-<p>现在，在 <code>App.vue</code> 组件中将 <code>item.id</code> 作为一个 prop 传递给 <code>ToDoItem</code> 组件。你的 <code>App.vue</code> template 如下所示：</p>
+现在，在 `App.vue` 组件中将 `item.id` 作为一个 prop 传递给 `ToDoItem` 组件。你的 `App.vue` template 如下所示：
 
-<pre class="brush: html notranslate">&lt;template&gt;
-  &lt;div id="app"&gt;
-    &lt;h1&gt;My To-Do List&lt;/h1&gt;
-    &lt;ul&gt;
-      &lt;li v-for="item in ToDoItems" :key="item.id"&gt;
-        &lt;to-do-item :label="item.label" :done="item.done" :id="item.id"&gt;&lt;/to-do-item&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
+```html
+<template>
+  <div id="app">
+    <h1>My To-Do List</h1>
+    <ul>
+      <li v-for="item in ToDoItems" :key="item.id">
+        <to-do-item :label="item.label" :done="item.done" :id="item.id"></to-do-item>
+      </li>
+    </ul>
+  </div>
+</template>
+```
 
-<p>你渲染后的站点看起来是没有变化的，但是这次重构使得<code>item.id</code>像其他参数一样，作为 prop 从<code>App.vue</code>传递给<code>ToDoItem</code>。现在代码变得更有逻辑性和一致。</p>
+你渲染后的站点看起来是没有变化的，但是这次重构使得`item.id`像其他参数一样，作为 prop 从`App.vue`传递给`ToDoItem`。现在代码变得更有逻辑性和一致。
 
-<h2 id="总结">总结</h2>
+## 总结
 
-<p>我们现在有了样例数据，然后我们用循环将每一项渲染成<code>ToDoItem</code>。</p>
+我们现在有了样例数据，然后我们用循环将每一项渲染成`ToDoItem`。
 
-<p>接下来我们需要让用户可以输入它们自己的待办事项，想做到这一点，我们需要一个文本输入<code>&lt;input&gt;</code>，当用户输入数据时触发一个事件，在事件响应函数中需要将数据添加到待办事项列表并且重新渲染列表，我们还需要一个模型操控数据。我们将在下一篇文章中获取这些知识。</p>
+接下来我们需要让用户可以输入它们自己的待办事项，想做到这一点，我们需要一个文本输入`<input>`，当用户输入数据时触发一个事件，在事件响应函数中需要将数据添加到待办事项列表并且重新渲染列表，我们还需要一个模型操控数据。我们将在下一篇文章中获取这些知识。
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<h2 id="In_this_module">In this module</h2>
+## In this module
 
-<ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
- <li>React
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
-  </ul>
- </li>
-</ul>
+- [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- React
+
+  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+
+- Ember
+
+  - [Getting started with Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - [Ember app structure and componentization](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - [Ember interactivity: Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember Interactivity: Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Routing in Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - [Ember resources and troubleshooting](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+
+- Vue
+
+  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Styling Vue components with CSS](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - [Using Vue computed properties](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - [Vue conditional rendering: editing existing todos](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - [Focus management with Vue refs](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - [Vue resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
