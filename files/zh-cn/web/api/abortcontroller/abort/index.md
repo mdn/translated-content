@@ -1,34 +1,44 @@
 ---
 title: AbortController.abort()
 slug: Web/API/AbortController/abort
+page-type: web-api-instance-method
+tags:
+  - API
+  - AbortController
+  - Experimental
+  - Fetch
+  - Method
+  - Reference
+  - abort()
 translation_of: Web/API/AbortController/abort
-original_slug: Web/API/FetchController/abort
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-The **`abort()`** method of the {{domxref("AbortController")}} interface aborts a DOM request (e.g. a Fetch request) before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response {{domxref("Body")}}, and streams.
+{{domxref("AbortController")}} 接口的 **`abort()`** 方法会在 DOM 请求完成之前中止它。它能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)、各种响应主体或者流的消耗。
 
-## Syntax
+## 语法
 
 ```js
-controller.abort();
+abort()
+abort(reason)
 ```
 
-### Parameters
+### 参数
 
-None.
+- `reason` {{optional_inline}}
+  - : 操作中止的原因，可以是各种 JavaScript 值。如果没有指定，则将原因设置为“AbortError”{{domxref("DOMException")}}。
 
-### Return value
+### 返回值
 
-Void.
+无（{{jsxref("undefined")}}）。
 
-## Examples
+## 示例
 
-In the following snippet, we aim to download a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
+以下片段中，我们将使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 下载一个视频。
 
-We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
+我们首先使用 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数创建一个 controller，然后使用 {{domxref("AbortController.signal")}} 属性获取到它关联的 {{domxref("AbortSignal")}} 对象的引用。
 
-When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (see `{signal}`, below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
+当 [fetch 请求](/zh-CN/docs/Web/API/fetch) 初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
 
 ```js
 var controller = new AbortController();
@@ -45,27 +55,27 @@ abortBtn.addEventListener('click', function() {
 });
 
 function fetchVideo() {
-  ...
+  // …
   fetch(url, {signal}).then(function(response) {
-    ...
+    // …
   }).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message;
+    reports.textContent = `Download error: ${e.message}`;
   })
 }
 ```
 
-> **备注：** When `abort()` is called, the `fetch()` promise rejects with an `AbortError`.
+> **备注：** 当 `abort()` 被调用时，`fetch()` promise 将会抛出 `DOMException` 类型的 `Error`（名称为 `AbortError`）。
 
-You can find a full working example on GitHub — see [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([see it running live also](https://mdn.github.io/dom-examples/abort-api/)).
+你可以在 github 上找到[完整的工作示例](https://github.com/mdn/dom-examples/tree/master/abort-api)；你还可以看它的[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("api.AbortController.abort")}}
+{{Compat}}
 
-## See also
+## 参见
 
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)

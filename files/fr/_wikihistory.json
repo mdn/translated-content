@@ -40713,27 +40713,6 @@
       "dattaz"
     ]
   },
-  "conflicting/Web/API/Window/load_event": {
-    "modified": "2019-03-23T23:45:30.027Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-03-12T19:37:01.767Z",
-    "contributors": [
-      "SphinxKnight",
-      "zatamine",
-      "teoli",
-      "Delapouite",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [

@@ -341,10 +341,10 @@ SVGは、異なるサイズでも正確に描画する必要がある画像に�
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>、
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>、
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#embedded_content">埋め込みコンテンツ</a>、
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#palpable_content">知覚可能コンテンツ</a>。要素が <code>usemap</code> 属性を持つ場合は、対話型コンテンツのカテゴリーの一角にもなります。
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>、
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。要素が <code>usemap</code> 属性を持つ場合は、対話型コンテンツのカテゴリーの一角にもなります。
       </td>
     </tr>
     <tr>

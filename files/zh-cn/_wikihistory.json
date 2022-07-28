@@ -45616,13 +45616,6 @@
       "daisyHawen"
     ]
   },
-  "conflicting/Web/API/File/name": {
-    "modified": "2019-03-23T23:33:53.867Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "conflicting/Web/API/FileReader/abort_event": {
     "modified": "2019-04-18T04:11:44.611Z",
     "contributors": [
@@ -46886,13 +46879,6 @@
     "contributors": [
       "RainSlide",
       "zhouxu"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
-    "modified": "2019-03-18T20:48:25.704Z",
-    "contributors": [
-      "teoli",
-      "AlixWang"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab": {
