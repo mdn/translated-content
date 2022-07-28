@@ -48,6 +48,7 @@ tab-size: unset;
 
 ### HTML
 
+<!-- markdownlint-disable MD010 -->
 ```html
 <pre class="exemple">
 	print "tabulation avant"

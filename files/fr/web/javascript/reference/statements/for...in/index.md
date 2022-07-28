@@ -17,9 +17,11 @@ L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérable
 
 ## Syntaxe
 
-    for (variable in objet) {
-      instructions
-    }
+```js
+for (variable in objet) {
+  instructions
+}
+```
 
 - `variable`
   - : Un nom de propriété différent est assigné à la variable à chaque itération de la boucle.

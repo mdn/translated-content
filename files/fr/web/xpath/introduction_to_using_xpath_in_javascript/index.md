@@ -19,7 +19,9 @@ La principale interface pour l'utilisation de XPath est la fonction [`evaluate()
 
 Cette méthode évalue les expressions [XPath](/fr/docs/Web/XPath) dans un document [XML](/fr/docs/Web/XML) (y compris les documents HTML), et retourne un objet [`XPathResult`](/fr/docs/Web/XPath/XPathResult), qui peut être un nœud unique ou un ensemble de nœuds. La documentation existante sur cette méthode se trouve à la page [`document.evaluate`](/fr/docs/Web/API/Document/evaluate) mais elle est plutôt succincte comparée à nos besoins actuels. Nous l'examinerons de façon plus complète dans la suite de ce document.
 
-    var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
+```js
+var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceResolver, resultType, result );
+```
 
 ### Paramètres
 
@@ -53,7 +55,9 @@ Renvoie `xpathResult`, qui est un objet `XPathResult` du type [défini](#D.C3.A9
 
 On crée un résolveur d'espace de nommage à l'aide de la méthode `createNSResolver` de l'objet [document](/fr/docs/Web/API/Document/).
 
-    var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+```js
+var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+```
 
 Ou alternativement en utilisant la méthode \<code>createNSResolver\</code> d'un objet \<code>XPathEvaluator\</code>. \<pre> var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); \</pre> On lui passe ensuite `document.evaluate`, la variable `nsResolver` comme paramètre `namespaceResolver`.
 
@@ -81,15 +85,19 @@ On obtiendra la valeur de retour de l'expression en accédant respectivement aux
 
 Cet exemple utilise l'expression XPath [`count(//p)`](/fr/docs/Web/XPath/Fonctions/count) pour obtenir le nombre d'éléments `<p>` présents dans le document HTML :
 
-    var paragraphCount = document.evaluate( 'count(//p)', document, null, XPathResult.ANY_TYPE, null );
+```js
+var paragraphCount = document.evaluate( 'count(//p)', document, null, XPathResult.ANY_TYPE, null );
 
-    console.log( 'Ce document contient ' + paragraphCount.numberValue + ' éléments de paragraphe' );
+console.log( 'Ce document contient ' + paragraphCount.numberValue + ' éléments de paragraphe' );
+```
 
 Même si JavaScript convertira un nombre en chaîne pour l'affichage, l'interface XPath ne fera pas automatiquement la conversion du résultat numérique si la propriété `stringValue` est demandée. Ainsi, le code suivant ne fonctionnera **pas** :
 
-    var paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null );
+```js
+var paragraphCount = document.evaluate('count(//p)', document, null, XPathResult.ANY_TYPE, null );
 
-    console.log( 'Ce document contient ' + paragraphCount.stringValue + ' éléments de paragraphe' );
+console.log( 'Ce document contient ' + paragraphCount.stringValue + ' éléments de paragraphe' );
+```
 
 Au lieu de cela, il déclenchera une exception portant le code `NS_DOM_TYPE_ERROR`.
 
@@ -114,21 +122,23 @@ Lorsque tous les nœuds ont été parcourus, [`iterateNext()`](/fr/docs/Web/XPat
 
 Notez cependant que si le document est modifié (l'arbre du document est modifié) entre les itérations, l'itérateur sera invalidé et la propriété `invalidIteratorState` de `XPathResult` deviendra `true`. Une exception `NS_ERROR_DOM_INVALID_STATE_ERR` sera également déclenchée.
 
-<h6 id="Exemple_d&#x27;itérateur">Exemple d'itérateur</h6>
+###### Exemple d'itérateur
 
-    var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
+```js
+var iterator = document.evaluate('//phoneNumber', documentNode, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null );
 
-    try {
-      var thisNode = iterator.iterateNext();
+try {
+  var thisNode = iterator.iterateNext();
 
-      while (thisNode) {
-        console.log( thisNode.textContent );
-        thisNode = iterator.iterateNext();
-      }
-    }
-    catch (e) {
-      console.log( 'Erreur : L\'arbre du document a été modifié pendant l\'itération ' + e );
-    }
+  while (thisNode) {
+    console.log( thisNode.textContent );
+    thisNode = iterator.iterateNext();
+  }
+}
+catch (e) {
+  console.log( 'Erreur : L\'arbre du document a été modifié pendant l\'itération ' + e );
+}
+```
 
 ##### Snapshots
 
@@ -141,13 +151,15 @@ L'objet `XPathResult` renvoyé sera un ensemble statique de nœuds correspondant
 
 Les snapshots ne changent pas avec les mutations du document. Aussi, contrairement aux itérateurs, le snapshot ne deviendra pas invalide mais peut ne plus correspondre au document actuel. Par exemple, des nœuds peuvent avoir été déplacés, il peut contenir des nœuds qui n'existent plus ou de nouveaux nœuds peuvent avoir été ajoutés.
 
-<h6 id="Exemple_de_snapshot">Exemple de snapshot</h6>
+###### Exemple de snapshot
 
-    var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+```js
+var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
-    for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ ){
-      console.log( nodesSnapshot.snapshotItem(i).textContent );
-    }
+for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ ){
+  console.log( nodesSnapshot.snapshotItem(i).textContent );
+}
+```
 
 ##### Premier nœud
 
@@ -160,7 +172,7 @@ L'objet `XPathResult` renvoyé n'est que le premier nœud trouvé correspondant 
 
 Notez que pour le sous-type non ordonné (le premier), le nœud unique renvoyé ne sera peut-être pas le premier nœud dans l'ordre du document. Dans le cas du sous-type ordonné (le second), vous pouvez être sûr d'obtenir le premier nœud correspondant dans l'ordre du document.
 
-<h6 id="Exemple_de_premier_nœud">Exemple de premier nœud</h6>
+###### Exemple de premier nœud
 
 ```js
 var firstPhoneNumber = document.evaluate('//phoneNumber', documentNode, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
@@ -196,14 +208,16 @@ Comme le but est de chercher les en-têtes dans l'intégralité du document, on 
 
 Le résultat de cette expression est un objet `XPathResult`. Pour connaître le type de résultat renvoyé, il convient d'évaluer la propriété `resultType` de l'objet renvoyé. Dans notre cas, il sera évalué à `4`, c'est donc un `UNORDERED_NODE_ITERATOR_TYPE`. Il s'agit du type de retour par défaut lorsque le résultat de l'expression XPath est un ensemble de nœuds. Il permet d'accéder à un seul nœud à la fois et ne renvoie pas les nœuds dans un ordre particulier. Pour accéder à ceux-ci, on utilise la méthode `iterateNext()` de l'objet renvoyé :
 
-    var thisHeading = headings.iterateNext();
+```js
+var thisHeading = headings.iterateNext();
 
-    var alertText = 'Les en-têtes de niveau 2 présents dans ce document sont :\n'
+var alertText = 'Les en-têtes de niveau 2 présents dans ce document sont :\n'
 
-    while (thisHeading) {
-      alertText += thisHeading.textContent + '\n';
-      thisHeading = headings.iterateNext();
-    }
+while (thisHeading) {
+  alertText += thisHeading.textContent + '\n';
+  thisHeading = headings.iterateNext();
+}
+```
 
 Une fois l'itération effectuée sur un nœud, nous avons accès à toutes les [Interfaces DOM](/fr/docs/Web/API/Document_Object_Model#Interfaces_du_DOM) standards de ce nœud. Après avoir parcouru tous les éléments `h2` renvoyés à partir de notre expression, chaque nouvel appel à `iterateNext()` donnera `null`.
 
@@ -211,40 +225,46 @@ Une fois l'itération effectuée sur un nœud, nous avons accès à toutes les [
 
 L'exemple suivant utilise un document XML situé à l'adresse [`chrome://yourextension/content/peopleDB.xml`]().
 
-    <?xml version="1.0"?>
-    <people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
-      <person>
-    	<name first="george" last="bush" />
-    	<address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-    	<phoneNumber>202-456-1111</phoneNumber>
-      </person>
-      <person>
-    	<name first="tony" last="blair" />
-    	<address street="10 downing street" city="london" country="uk"/>
-    	<phoneNumber>020 7925 0918</phoneNumber>
-      </person>
-    </people>
+```xml
+<?xml version="1.0"?>
+<people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
+  <person>
+    <name first="george" last="bush" />
+    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
+    <phoneNumber>202-456-1111</phoneNumber>
+  </person>
+  <person>
+    <name first="tony" last="blair" />
+    <address street="10 downing street" city="london" country="uk"/>
+    <phoneNumber>020 7925 0918</phoneNumber>
+  </person>
+</people>
+```
 
 Pour rendre les contenus du document XML accessibles depuis l'extension, on crée un objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour charger le document de façon synchrone. La variable `xmlDoc` contiendra le document comme un objet [`XMLDocument`](/fr/docs/Web/API/XMLDocument) sur lequel on pourra utiliser la méthode `evaluate`.
 
 _JavaScript utilisé dans les documents XUL/js des extensions._
 
-    var req = new XMLHttpRequest();
+```js
+var req = new XMLHttpRequest();
 
-    req.open("GET", "chrome://yourextension/content/peopleDB.xml", false);
-    req.send(null);
+req.open("GET", "chrome://yourextension/content/peopleDB.xml", false);
+req.send(null);
 
-    var xmlDoc = req.responseXML;
+var xmlDoc = req.responseXML;
 
-    var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
-    var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
+var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
+```
 
 #### Note
 
 Quant l'objet XPathResult n'est pas défini, les constantes peuvent être récupérées dans du code privilégié avec `Components.inertfaces.nsIDOMXPathResult.ANY_TYPE(CI.nsIDOMXPathResult)`. De la même manière un objet XPathEvaluator peut être créé en utilisant :
 
-    Components.classes["@mozille.org/dom/xpath-evaluator;1"].createInstance(Components.interfaces.nsIDOMXPathEvaluator)
+```js
+Components.classes["@mozille.org/dom/xpath-evaluator;1"].createInstance(Components.interfaces.nsIDOMXPathEvaluator)
+```
 
 ## Annexe
 
@@ -252,43 +272,53 @@ Quant l'objet XPathResult n'est pas défini, les constantes peuvent être récup
 
 Cet exemple ne sert que d'illustration. Cette fonction nécessitera de prendre les préfixes d'espaces de nommage depuis la `xpathExpression` et retourne l'URI correspondante à ces préfixes. Par exemple, l'expression :
 
-    '//xhtml:td/mathml:math'
+```
+'//xhtml:td/mathml:math'
+```
 
 sélectionnera toutes les expressions [MathML](/fr/MathML) qui sont les descendantes des éléments (X)HTML de cellules de tableau.
 
 Afin d'associer le préfixe `mathml:` avec l'URI d'espace de nommage '[`http://www.w3.org/1998/Math/MathML`](http://www.w3.org/1998/Math/MathML)' et `xhtml:` avec l'URI [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml), nous fournissons une fonction :
 
-    function nsResolver(prefix) {
-      var ns = {
-        'xhtml' : 'http://www.w3.org/1999/xhtml',
-        'mathml': 'http://www.w3.org/1998/Math/MathML'
-      };
-      return ns[prefix] || null;
-    }
+```js
+function nsResolver(prefix) {
+  var ns = {
+    'xhtml' : 'http://www.w3.org/1999/xhtml',
+    'mathml': 'http://www.w3.org/1998/Math/MathML'
+  };
+  return ns[prefix] || null;
+}
+```
 
 L'appel à `document.evaluate` ressemblera alors à :
 
-    document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
+```js
+document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
+```
 
 #### Implémentation d'un espace de nommage par défaut pour les documents XML
 
 Comme nous l'avons vu précédemment dans la section [#Implémentation d'un résolveur d'espaces de nommage par défaut](#Impl.C3.A9mentation_d.27un_r.C3.A9solveur_d.27espaces_de_nommage_par_d.C3.A9faut), le résolveur par défaut ne gère pas l'espace de nommage par défaut pour les documents XML. Par exemple, avec ce document :
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <feed xmlns="http://www.w3.org/2005/Atom">
-        <entry />
-        <entry />
-        <entry />
-    </feed>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry />
+  <entry />
+  <entry />
+</feed>
+```
 
 `doc.evaluate('//entry', doc, nsResolver, XPathResult.ANY_TYPE, null)` retournera un ensemble vide, où `nsResolver` est le résolveur retourné par `createNSResolver`. Passé un résolveur `null` ne fonctionne pas mieux.
 
 Une alternative possible est de créer un résolveur personnalisé qui retournera le bon espace de nommage (l'espace de nommage _Atom_ dans ce cas). Par exemple :
 
-     function resolver() {
-         return 'http://www.w3.org/2005/Atom';
-     }
-     doc.evaluate('//entry', doc, resolver, XPathResult.ANY_TYPE, null)
+```js
+function resolver() {
+  return 'http://www.w3.org/2005/Atom';
+}
+doc.evaluate('//entry', doc, resolver, XPathResult.ANY_TYPE, null)
+```
 
 Un résolveur plus complexe sera nécessaire si le document utilise de multiple espaces de nommage.
 
@@ -310,9 +340,11 @@ Cela pourrait récupérer des éléments par inadvertance si un de ces attributs
 
 Afin d'obtenir des éléments avec l'attribut XLink `@href` de manière précise (sans par ailleurs être obligé de définir des préfixes dans un résolveur de nom d'espaces), on procéder comme suit :
 
-    var xpathEls = 'someElements[@*[local-name() = "href" and manespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Récupère les éléments avec un simple attribute qui a à la fois le nom local 'href' and l'espace de noms XLink
-    var thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
-    var thisitemEl = thislevel.iterateNext();
+```js
+var xpathEls = 'someElements[@*[local-name() = "href" and manespace-uri() = "http://www.w3.org/1999/xlink"]]'; // Récupère les éléments avec un simple attribute qui a à la fois le nom local 'href' and l'espace de noms XLink
+var thislevel = xml.evaluate(xpathEls, xml, null, XPathResult.ANY_TYPE, null);
+var thisitemEl = thislevel.iterateNext();
+```
 
 #### Constantes définies de XPathResult
 

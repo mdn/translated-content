@@ -1,5 +1,5 @@
 ---
-title: 'Apprendre le HTML&nbsp;: guides et didacticiels'
+title: 'Apprendre le HTML : guides et didacticiels'
 slug: Learn/HTML
 tags:
   - Apprentissage

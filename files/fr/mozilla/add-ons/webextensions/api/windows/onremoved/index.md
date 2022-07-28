@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 
 Lancer quand une fenêtre est fermée.
 
-## Syntax
+## Syntaxe
 
 ```js
 browser.windows.onRemoved.addListener(listener)

@@ -13,7 +13,9 @@ La version*modèle* de `set:difference` applique des modèles à ces nœuds dans
 
 ### Syntaxe
 
-    set:difference(ensembleNœuds1,ensembleNœuds2)
+```
+set:difference(ensembleNœuds1,ensembleNœuds2)
+```
 
 ### Arguments
 

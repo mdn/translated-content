@@ -19,7 +19,9 @@ Voir [Timers](/fr/docs/Web/API/console#Timers) dans la documentation de {{ domxr
 
 ## Syntaxe
 
-    console.time(label);
+```js
+console.time(label);
+```
 
 ## Paramètres
 

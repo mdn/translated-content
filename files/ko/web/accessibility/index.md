@@ -51,4 +51,3 @@ MDN은(는) [접근성 학습 영역](/ko/docs/Learn/Accessibility) 접근성에
 
 - [WAI Interest Group](https://www.w3.org/WAI/IG/)
 - [개발자 가이드](/ko/docs/Web/Guide)
-- [접근성 그리고 Mozilla](/ko/docs/Mozilla/Accessibility)

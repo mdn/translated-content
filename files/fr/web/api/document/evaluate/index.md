@@ -15,13 +15,15 @@ La méthode **`evaluate()`** renvoie un {{domxref("XPathResult")}} basé sur une
 
 ## Syntaxe
 
-    var xpathResult = document.evaluate(
-     xpathExpression,
-     contextNode,
-     namespaceResolver,
-     resultType,
-     result
-    );
+```js
+var xpathResult = document.evaluate(
+  xpathExpression,
+  contextNode,
+  namespaceResolver,
+  resultType,
+  result
+);
+```
 
 - `xpathExpression` est une chaîne de caractères représentant le XPath à évaluer.
 - `contextNode` spécifie le noeud de contexte pour la requête (voir [XPath specification](http://www.w3.org/TR/xpath)) . Il est courant de transmettre un document en tant que nœud de contexte.

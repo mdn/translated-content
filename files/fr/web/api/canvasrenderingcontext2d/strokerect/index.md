@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.strokeRect()`** de l'API 2D des Canvas d
 
 ## Syntaxe
 
-    void ctx.strokeRect(x, y, largeur, hauteur);
+```js
+void ctx.strokeRect(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 

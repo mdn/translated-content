@@ -40,14 +40,14 @@ Cet article part du principe que :
 
 Avant de commencer à travailler sur un dépôt particulier, suivez ces étapes :
 
-1.  Installez Git sur votre ordinateur. Allez sur la [page de téléchargement de Git](https://git-scm.com/downloads), téléchargez la dernière version pour votre ordinateur, et installez-la. Si vous êtes un utilisateur Windows, vous devriez également installer le paquet [Git pour Windows](https://gitforwindows.org/), qui inclut Gitbash.
-2.  Pendant que vous y êtes, installez les autres dépendances requises pour travailler localement avec MDN - [Node.js](https://nodejs.org/en/download/) et [yarn](https://classic.yarnpkg.com/en/docs/install).
+1. Installez Git sur votre ordinateur. Allez sur la [page de téléchargement de Git](https://git-scm.com/downloads), téléchargez la dernière version pour votre ordinateur, et installez-la. Si vous êtes un utilisateur Windows, vous devriez également installer le paquet [Git pour Windows](https://gitforwindows.org/), qui inclut Gitbash.
+2. Pendant que vous y êtes, installez les autres dépendances requises pour travailler localement avec MDN - [Node.js](https://nodejs.org/en/download/) et [yarn](https://classic.yarnpkg.com/en/docs/install).
 
-    1.  Installez Node.js en suivant le lien ci-dessus et en téléchargeant et installant la dernière version pour votre ordinateur.
-    2.  Une fois que vous avez installé Node.js, installez yarn en exécutant `npm install --global yarn`.
+    1. Installez Node.js en suivant le lien ci-dessus et en téléchargeant et installant la dernière version pour votre ordinateur.
+    2. Une fois que vous avez installé Node.js, installez yarn en exécutant `npm install --global yarn`.
 
-3.  Créez un répertoire séparé quelque part sur votre ordinateur pour y stocker tous vos dépôts Git, qui soit facile à trouver et à atteindre en ligne de commande. Un répertoire appelé mdn-git à l'intérieur de votre répertoire home/user serait approprié.
-4.  [Créez un compte GitHub](https://github.com/join) si vous n'en avez pas déjà un. Vous aurez besoin d'un compte pour contribuer aux dépôts de MDN.
+3. Créez un répertoire séparé quelque part sur votre ordinateur pour y stocker tous vos dépôts Git, qui soit facile à trouver et à atteindre en ligne de commande. Un répertoire appelé mdn-git à l'intérieur de votre répertoire home/user serait approprié.
+4. [Créez un compte GitHub](https://github.com/join) si vous n'en avez pas déjà un. Vous aurez besoin d'un compte pour contribuer aux dépôts de MDN.
 
 ### Configuration de l'authentification SSH sur GitHub
 
@@ -82,29 +82,29 @@ Il est possible de faire les deux choses séparément, mais en pratique, vous le
 
 Bifurquons le dépôt <https://github.com/mdn/content> dès maintenant ; vous contribuerez certainement à ce dépôt à un moment donné. Suivez les étapes suivantes :
 
-1.  Localisez le bouton « Fork » dans le coin supérieur droit de la page du dépôt de contenu, et appuyez dessus :
+1. Localisez le bouton « Fork » dans le coin supérieur droit de la page du dépôt de contenu, et appuyez dessus :
 
     ![Bouton étiqueté fork, avec le numéro 609 à côté.](fork-button.png)
 
-2.  Une fenêtre de dialogue s'affiche, vous demandant où vous souhaitez transférer le dépôt. Sélectionnez votre compte GitHub personnel.
+2. Une fenêtre de dialogue s'affiche, vous demandant où vous souhaitez transférer le dépôt. Sélectionnez votre compte GitHub personnel.
 
     Un message apparaîtra disant quelque chose comme « Forking mdn/content. It should only take a few seconds. ». Une fois que GitHub a terminé la bifurcation, votre navigateur devrait vous rediriger vers la page du nouveau « fork ». À titre d'exemple, mon « fork » de <https://github.com/mdn/content> est disponible l'adresse <https://github.com/chrisdavidmills/content>.
 
 Maintenant que vous avez dupliqué le dépôt, il est temps de cloner votre copie localement. Pour ce faire :
 
-1.  Allez sur la page de votre bifurcation sur github.com (par exemple `https://github.com/<votre-nom-utilisateur>/content`).
-2.  Appuyez sur le bouton vert « Code » en haut de la liste des fichiers. Quelque chose de similaire à la fenêtre contextuelle suivante devrait apparaître :
+1. Allez sur la page de votre bifurcation sur github.com (par exemple `https://github.com/<votre-nom-utilisateur>/content`).
+2. Appuyez sur le bouton vert « Code » en haut de la liste des fichiers. Quelque chose de similaire à la fenêtre contextuelle suivante devrait apparaître :
 
     ![Fenêtre contextuelle montrant une URL de clonage avec les options d'ouverture via le bureau GitHub et de téléchargement du zip.](code-popup.png)
 
-3.  Si vous avez configuré l'authentification SSH comme indiqué ci-dessus, cliquez sur l'onglet "SSH" et copiez l'URL `git@github.com:<votre-nom-utilisateur>/content.git` à partir du champ de texte de la fenêtre de dialogue. Si vous n'avez pas configuré l'authentification SSH, copiez plutôt l'URL depuis le champ de texte de l'onglet "HTTPS", qui devrait ressembler à ceci : `https://github.com/<votre-nom-utilisateur>/content.git`.
-4.  Maintenant, ouvrez votre console de commande sur votre ordinateur, et naviguez dans le répertoire que vous avez configuré plus tôt pour stocker les clones de votre dépôt git local à l'aide de la commande cd, par ex.
+3. Si vous avez configuré l'authentification SSH comme indiqué ci-dessus, cliquez sur l'onglet "SSH" et copiez l'URL `git@github.com:<votre-nom-utilisateur>/content.git` à partir du champ de texte de la fenêtre de dialogue. Si vous n'avez pas configuré l'authentification SSH, copiez plutôt l'URL depuis le champ de texte de l'onglet "HTTPS", qui devrait ressembler à ceci : `https://github.com/<votre-nom-utilisateur>/content.git`.
+4. Maintenant, ouvrez votre console de commande sur votre ordinateur, et naviguez dans le répertoire que vous avez configuré plus tôt pour stocker les clones de votre dépôt git local à l'aide de la commande cd, par ex.
 
     ```bash
     cd git
     ```
 
-5.  Clonez votre bifurcation en entrant une commande de la forme suivante :
+5. Clonez votre bifurcation en entrant une commande de la forme suivante :
 
     ```bash
     git clone url-que-vous-avez-copié
@@ -133,14 +133,14 @@ git remote add remote-name repo-you-want-to-point-to
 
 Donc, pour ajouter votre suivi :
 
-1.  Allez sur la page github.com de la version principale du dépôt (<https://github.com/mdn/content> dans cet exemple) et récupérez l'URL SSH ou HTTPS selon le cas, dans la fenêtre contextuelle « Code ».
-2.  Dans votre console de commande, utilisez `cd` pour aller dans votre répertoire de contenu :
+1. Allez sur la page github.com de la version principale du dépôt (<https://github.com/mdn/content> dans cet exemple) et récupérez l'URL SSH ou HTTPS selon le cas, dans la fenêtre contextuelle « Code ».
+2. Dans votre console de commande, utilisez `cd` pour aller dans votre répertoire de contenu :
 
     ```bash
     cd content
     ```
 
-3.  Exécutez maintenant une commande selon les lignes suivantes, en remplaçant _remote-name_ et _repo-you-want-to-point-to_ comme il convient :
+3. Exécutez maintenant une commande selon les lignes suivantes, en remplaçant _remote-name_ et _repo-you-want-to-point-to_ comme il convient :
 
     ```bash
     git remote add remote-name repo-you-want-to-point-to
@@ -154,10 +154,12 @@ Donc, pour ajouter votre suivi :
 
 Votre suivi distant devrait maintenant être configuré. Vous pouvez le vérifier en exécutant la commande `git remote -v` dans votre terminal, qui sort une liste de vos noms de suivi distant et où ils pointent. Vous devriez voir quelque chose un peu comme ceci :
 
-    mozilla    git@github.com:mdn/content.git (fetch)
-    mozilla    git@github.com:mdn/content.git (push)
-    origin    git@github.com:chrisdavidmills/content.git (fetch)
-    origin    git@github.com:chrisdavidmills/content.git (push)
+```
+mozilla    git@github.com:mdn/content.git (fetch)
+mozilla    git@github.com:mdn/content.git (push)
+origin    git@github.com:chrisdavidmills/content.git (fetch)
+origin    git@github.com:chrisdavidmills/content.git (push)
+```
 
 ## Préparation d'une modification du dépôt.
 
@@ -183,7 +185,7 @@ Ensuite, vous devez mettre à jour votre branche principale afin qu'elle contien
 
 Pour mettre à jour votre dépôt :
 
-1.  Tout d'abord, récupérez le contenu mis à jour de votre suivi distant avec la commande suivante :
+1. Tout d'abord, récupérez le contenu mis à jour de votre suivi distant avec la commande suivante :
 
     ```bash
     git fetch remote-name
@@ -195,7 +197,7 @@ Pour mettre à jour votre dépôt :
     git fetch mozilla
     ```
 
-2.  Ensuite, remplacez le contenu de votre branche principale par la branche principale du dépôt distant. Il existe de nombreuses façons différentes de le faire, mais j'ai tendance à utiliser la commande `rebase`, comme ceci :
+2. Ensuite, remplacez le contenu de votre branche principale par la branche principale du dépôt distant. Il existe de nombreuses façons différentes de le faire, mais j'ai tendance à utiliser la commande `rebase`, comme ceci :
 
     ```bash
     git rebase remote-name/main-branch-name
@@ -207,7 +209,7 @@ Pour mettre à jour votre dépôt :
     git rebase mozilla/main
     ```
 
-3.  Enfin, poussez ces changements vers la version distante de votre bifircation en utilisant :
+3. Enfin, poussez ces changements vers la version distante de votre bifircation en utilisant :
 
     ```bash
     git push
@@ -221,19 +223,19 @@ Une fois que vous avez mis à jour votre branche principale dans votre bifurcati
 
 Pour créer une nouvelle branche :
 
-1.  Allez sur la page de votre bifurcation sur github.com (la mienne est à l'adresse <https://github.com/chrisdavidmills/content>) et trouvez le bouton de branche en haut à gauche de la liste des fichiers, qui devrait indiquer « main » :
+1. Allez sur la page de votre bifurcation sur github.com (la mienne est à l'adresse <https://github.com/chrisdavidmills/content>) et trouvez le bouton de branche en haut à gauche de la liste des fichiers, qui devrait indiquer « main » :
 
     ![Bouton intitulé main](branch-button.png)
 
-2.  Cliquez dessus, et vous verrez apparaître une liste de branches et un champ de texte indiquant « Find or create a branch… » :
+2. Cliquez dessus, et vous verrez apparaître une liste de branches et un champ de texte indiquant « Find or create a branch… » :
 
     ![menu montrant une liste de noms de branches avec une zone de texte étiquetée trouver ou créer une branche](branch-menu.png)
 
-3.  Si vous saisissez une partie du nom d'une branche existante dans le champ de texte, la liste des branches sera filtrée en fonction de cette chaîne de caractères, ce qui vous permettra de rechercher facilement des branches existantes. Cependant, nous voulons créer une nouvelle branche. Entrez un nom de branche qui n'existe pas encore (essayez quelque chose comme test-branch) et l'affichage changera pour vous donner un bouton intitulé « Create branch : test-branch from 'main' » :
+3. Si vous saisissez une partie du nom d'une branche existante dans le champ de texte, la liste des branches sera filtrée en fonction de cette chaîne de caractères, ce qui vous permettra de rechercher facilement des branches existantes. Cependant, nous voulons créer une nouvelle branche. Entrez un nom de branche qui n'existe pas encore (essayez quelque chose comme test-branch) et l'affichage changera pour vous donner un bouton intitulé « Create branch : test-branch from 'main' » :
 
     ![menu montrant un nouveau nom de branche, test-branch, entré dans une zone de texte, avec un bouton de création de branche en dessous](new-branch.png)
 
-4.  Une fois que vous êtes satisfait du nom de votre branche, cliquez sur ce bouton, et l'affichage sera mis à jour pour montrer le nom de la branche dans le bouton branche :
+4. Une fois que vous êtes satisfait du nom de votre branche, cliquez sur ce bouton, et l'affichage sera mis à jour pour montrer le nom de la branche dans le bouton branche :
 
     ![Bouton intitulé test-branch](branch-button-new-branch.png)
 
@@ -250,21 +252,25 @@ La section précédente vous a appris à créer une nouvelle branche dans votre 
 
 Pour ce faire, retournez dans votre terminal et, en vous assurant que vous êtes à l'intérieur du répertoire du dépôt sur lequel vous travaillez (`content` pour cet exemple) :
 
-1.  Tirez les changements distants vers votre clone local en exécutant la commande `git pull`.
-2.  Vous devriez obtenir un message du type `* [new branch] test-branch -> origin/test-branch`.
-3.  Pour passer à votre branche (c'est-à-dire passer de « main », pour travailler dans cette branche à la place), exécutez la commande `git switch test-branch`.
+1. Tirez les changements distants vers votre clone local en exécutant la commande `git pull`.
+2. Vous devriez obtenir un message du type `* [new branch] test-branch -> origin/test-branch`.
+3. Pour passer à votre branche (c'est-à-dire passer de « main », pour travailler dans cette branche à la place), exécutez la commande `git switch test-branch`.
 
 Si vous avez réussi, git devrait vous dire quelque chose comme ceci :
 
-    Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
-    Switched to a new branch 'test-branch'
+```
+Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
+Switched to a new branch 'test-branch'
+```
 
 Notez que vous pouvez vérifier le statut de votre dépôt, y compris la branche sur laquelle vous vous trouvez, à tout moment en exécutant la commande `git status`. Essayez maintenant, et git devrait vous dire quelque chose comme ceci :
 
-    On branch test-branch
-    Your branch is up to date with 'origin/test-branch'.
+```
+On branch test-branch
+Your branch is up to date with 'origin/test-branch'.
 
-    nothing to commit, working tree clean
+nothing to commit, working tree clean
+```
 
 Cela semble correct. Nous sommes sur la branche "test-branch", et nous n'avons pas encore fait de changements.
 
@@ -274,19 +280,21 @@ Cela semble correct. Nous sommes sur la branche "test-branch", et nous n'avons p
 
 Si vous voulez simplement suivre ce tutoriel à titre d'exemple, faisons quelque chose de simple.
 
-1.  Allez dans le fichier `content/README.md`, et ajoutez une seule lettre dans le titre supérieur du README.
-2.  Maintenant, retournez à votre ligne de commande et entrez à nouveau la commande `git status`. Cette fois-ci, git devrait vous dire quelque chose comme ceci :
+1. Allez dans le fichier `content/README.md`, et ajoutez une seule lettre dans le titre supérieur du README.
+2. Maintenant, retournez à votre ligne de commande et entrez à nouveau la commande `git status`. Cette fois-ci, git devrait vous dire quelque chose comme ceci :
 
-        Your branch is up to date with 'origin/test-branch'.
+    ```
+    Your branch is up to date with 'origin/test-branch'.
 
-            Changes not staged for commit:
-              (use "git add <file>..." to update what will be committed)
-              (use "git restore <file>..." to discard changes in working directory)
-                modified:   README.md
+        Changes not staged for commit:
+            (use "git add <file>..." to update what will be committed)
+            (use "git restore <file>..." to discard changes in working directory)
+            modified:   README.md
 
-            no changes added to commit (use "git add" and/or "git commit -a")
+        no changes added to commit (use "git add" and/or "git commit -a")
+    ```
 
-3.  À ce stade, il vous indique donc les fichiers que vous avez modifiés. L'étape suivante consiste à les "ajouter", c'est-à-dire à les ajouter à une liste de fichiers que vous souhaitez commiter pour les pousser vers le fork distant. Pour ajouter ce fichier à la liste de commit, tapez ce qui suit :
+3. À ce stade, il vous indique donc les fichiers que vous avez modifiés. L'étape suivante consiste à les "ajouter", c'est-à-dire à les ajouter à une liste de fichiers que vous souhaitez commiter pour les pousser vers le fork distant. Pour ajouter ce fichier à la liste de commit, tapez ce qui suit :
 
     ```bash
     git add README.md
@@ -294,16 +302,18 @@ Si vous voulez simplement suivre ce tutoriel à titre d'exemple, faisons quelque
 
     > **Note :** `README.md` est le chemin d'accès au fichier que vous avez modifié, pas seulement son nom. S'il était à l'intérieur d'un sous-répertoire, vous auriez dû écrire le chemin complet du fichier.
 
-4.  Si vous exécutez `git status` à nouveau, vous verrez maintenant ceci :
+4. Si vous exécutez `git status` à nouveau, vous verrez maintenant ceci :
 
-        On branch test-branch
-            Your branch is up to date with 'origin/test-branch'.
+    ```
+    On branch test-branch
+        Your branch is up to date with 'origin/test-branch'.
 
-            Changes to be committed:
-              (use "git restore --staged <file>..." to unstage)
-                modified:   README.md
+        Changes to be committed:
+            (use "git restore --staged <file>..." to unstage)
+            modified:   README.md
+    ```
 
-5.  Git nous dit que `README.md` est maintenant dans notre liste de commit. Pour inclure tous les fichiers de la liste de commit dans un commit (un seul ensemble de changements que nous essaierons plus tard d'envoyer à la branche principale), entrez ce qui suit (l'option `-m` est l'abréviation de « message ») :
+5. Git nous dit que `README.md` est maintenant dans notre liste de commit. Pour inclure tous les fichiers de la liste de commit dans un commit (un seul ensemble de changements que nous essaierons plus tard d'envoyer à la branche principale), entrez ce qui suit (l'option `-m` est l'abréviation de « message ») :
 
     ```bash
     git commit -m 'my first commit'
@@ -311,38 +321,44 @@ Si vous voulez simplement suivre ce tutoriel à titre d'exemple, faisons quelque
 
     Git vous dira ceci :
 
-        [test-branch 44b207ef6] my first commit
-             1 file changed, 1 insertion(+), 1 deletion(-)
+    ```
+    [test-branch 44b207ef6] my first commit
+         1 file changed, 1 insertion(+), 1 deletion(-)
+    ```
 
     Pour montrer qu'il a enregistré que vous avez fait un commit.
 
-6.  Exécutez `git status` à nouveau, et vous obtiendrez cette information :
+6. Exécutez `git status` à nouveau, et vous obtiendrez cette information :
 
-        On branch test-branch
-            Your branch is ahead of 'origin/test-branch' by 1 commit.
-              (use "git push" to publish your local commits)
+    ```
+    On branch test-branch
+        Your branch is ahead of 'origin/test-branch' by 1 commit.
+            (use "git push" to publish your local commits)
 
-            nothing to commit, working tree clean
+        nothing to commit, working tree clean
+    ```
 
 La lecture de l'information a fondamentalement été réinitialisée - elle nous dit qu'il n'y a pas de changements à soumettre, parce que nous avons maintenant envoyé notre changement précédent dans le système comme un commit. La principale différence par rapport à la version précédente est la ligne "Votre branche est en avance sur 'origin/test-branch' de 1 commit". - notre version locale de la branche "test-branch" est maintenant en avance sur la version distante de "test-branch" d'un commit - en d'autres termes, nous avons fait un changement localement que la branche distante n'a pas.
 
 Envoyons notre changement local à la branche distante. Vous pouvez le faire en exécutant la commande `git push` - essayez maintenant. S'il n'y a pas d'erreurs, vous devriez obtenir un affichage comme celui-ci :
 
-    Enumerating objects: 5, done.
-    Counting objects: 100% (5/5), done.
-    Delta compression using up to 8 threads
-    Compressing objects: 100% (3/3), done.
-    Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
-    Total 3 (delta 2), reused 0 (delta 0)
-    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-    To github.com:chrisdavidmills/content.git
-        77215e31e..44b207ef6 test-branch -> test-branch
+```
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:chrisdavidmills/content.git
+    77215e31e..44b207ef6 test-branch -> test-branch
+```
 
 ## Création d'une demande de triage
 
 À ce stade, retournez sur la page github.com de votre dépôt distant. Vous devriez voir un message du type « This branch is 1 commit ahead of mdn:main. ». Ce qui signifie que le contenu de notre bifurcation contient un changement de contenu (commit) que la branche « main » de Mozilla ne contient pas.
 
-1.  Pour envoyer notre modification vers la copie principale du dépôt, nous devons créer une demande de modification. Cela peut être fait facilement en utilisant le bouton "Compare & pull request" que vous devriez voir en haut de la liste des fichiers, une fois que la branche a eu une modification poussée vers elle.
+1. Pour envoyer notre modification vers la copie principale du dépôt, nous devons créer une demande de modification. Cela peut être fait facilement en utilisant le bouton "Compare & pull request" que vous devriez voir en haut de la liste des fichiers, une fois que la branche a eu une modification poussée vers elle.
 
     ![bannière avec le texte test-branch had recent pushes, et un bouton intitulé compare and pull request](compare-and-pull-request.png)
 
@@ -352,12 +368,12 @@ Envoyons notre changement local à la branche distante. Vous pouvez le faire en 
 
     > **Attention :** Ne suivez le reste de ces étapes que si vous avez une réelle modification à apporter au dépôt ! Veuillez ne pas soumettre de PR de test à nos dépôts.
 
-2.  À ce stade, entrez un titre et une description utiles pour votre PR, en disant exactement ce qu'il a changé, pourquoi c'est une bonne chose, et quel problème connexe il a corrigé, le cas échéant. Plus précisément, incluez une ligne disant `Fixes issue-url`. GitHub rend automatiquement cela comme un lien vers le numéro de problème, par exemple `Fixes #1234` et, en outre, ferme automatiquement le problème connexe une fois que la pull request est fusionnée.
-3.  Une fois que vous êtes prêt à envoyer votre pull request, cliquez sur le bouton « Create pull request ». Votre pull request (PR) apparaîtra alors dans la liste « [Pull requests](https://github.com/mdn/content/pulls) » du dépôt, où elle sera examinée par nos équipes de révision et, si possible, fusionnée dans le code principal.
+2. À ce stade, entrez un titre et une description utiles pour votre PR, en disant exactement ce qu'il a changé, pourquoi c'est une bonne chose, et quel problème connexe il a corrigé, le cas échéant. Plus précisément, incluez une ligne disant `Fixes issue-url`. GitHub rend automatiquement cela comme un lien vers le numéro de problème, par exemple `Fixes #1234` et, en outre, ferme automatiquement le problème connexe une fois que la pull request est fusionnée.
+3. Une fois que vous êtes prêt à envoyer votre pull request, cliquez sur le bouton « Create pull request ». Votre pull request (PR) apparaîtra alors dans la liste « [Pull requests](https://github.com/mdn/content/pulls) » du dépôt, où elle sera examinée par nos équipes de révision et, si possible, fusionnée dans le code principal.
 
     Si l'équipe de révision souhaite que vous apportiez des modifications, elle vous en informera dans les commentaires du fil de discussion de la demande de triage (vous devriez recevoir une notification par courriel pour vous en informer).
 
-4.  Si vous souhaitez apporter d'autres modifications à la même demande de dépôt que vous avez déjà soumise, vous pouvez le faire en faisant d'autres commits sur la même branche locale et en les poussant ensuite comme expliqué précédemment. Il n'est pas nécessaire de créer une demande de pull complètement nouvelle. **Veuillez simplement vous assurer que vous les faites sur la même branche que précédemment**.
+4. Si vous souhaitez apporter d'autres modifications à la même demande de dépôt que vous avez déjà soumise, vous pouvez le faire en faisant d'autres commits sur la même branche locale et en les poussant ensuite comme expliqué précédemment. Il n'est pas nécessaire de créer une demande de pull complètement nouvelle. **Veuillez simplement vous assurer que vous les faites sur la même branche que précédemment**.
 
 ## Dépannage
 
@@ -397,14 +413,14 @@ Cela vous ramènera à l'état où les changements de ce commit ne sont pas enco
 
 À ce stade, il n'est pas vraiment possible de revenir en arrière, ou de rembobiner. Au lieu de cela, vous devez pousser un autre commit pour inverser les effets de celui dont vous voulez vous débarrasser. Vous pourriez le faire manuellement en utilisant certains des outils que nous vous avons déjà donnés ci-dessus, mais il y a une commande intégrée qui rend cela plus facile - `git revert`. Cela peut être utilisé pour créer automatiquement un commit qui rétablit les changements au point que vous spécifiez.
 
-1.  Dans sa forme la plus simple, vous pouvez exécuter la commande suivante pour créer un commit qui ramènera votre branche distante à l'état dans lequel vous étiez avant de commencer à soumettre le commit :
+1. Dans sa forme la plus simple, vous pouvez exécuter la commande suivante pour créer un commit qui ramènera votre branche distante à l'état dans lequel vous étiez avant de commencer à soumettre le commit :
 
     ```bash
     git revert HEAD
     ```
 
-2.  Cela aura pour conséquence l'ouverture d'un fichier de message de commit dans votre éditeur de texte par défaut que vous devrez vérifier pour vous assurer que vous êtes satisfait. Fermez-le, et git finalisera la création du commit.
-3.  Maintenant, il faut juste le pousser :
+2. Cela aura pour conséquence l'ouverture d'un fichier de message de commit dans votre éditeur de texte par défaut que vous devrez vérifier pour vous assurer que vous êtes satisfait. Fermez-le, et git finalisera la création du commit.
+3. Maintenant, il faut juste le pousser :
 
     ```bash
     git push

@@ -65,9 +65,11 @@ Il y a plusieurs façons de définir des fonctions
 
 Il existe une syntaxe spécifique pour la déclaration des fonctions (vous pouvez consulter la page de l'instruction {{jsxref("Instructions/function","function")}} pour plus de détails) :
 
-    function nom([param[, param[, ... param]]]) {
-       instructions
-    }
+```
+function nom([param[, param[, ... param]]]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction.
@@ -80,9 +82,11 @@ Il existe une syntaxe spécifique pour la déclaration des fonctions (vous pouve
 
 L'expression d'une fonction se fait d'une façon similaire à la déclaration (veuillez consulter la page de l'expression {{jsxref("Opérateurs/L_opérateur_function","function")}} pour plus d'informations) :
 
-    function [nom]([param] [, param] [..., param]) {
-       instructions
-    }
+```
+function [nom]([param] [, param] [..., param]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction. Il est facultatif, auquel cas la fonction devient une fonction anonyme.
@@ -125,9 +129,11 @@ Les _IIFE_ sont des expressions de fonction appelées dès que la fonction est d
 
 Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page sur l'instruction {{jsxref('Instructions/function*', 'function*')}} pour plus de détails) :
 
-    function* nom([param[, param[, ... param]]]) {
-       instructions
-    }
+```
+function* nom([param[, param[, ... param]]]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction.
@@ -140,9 +146,11 @@ Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page s
 
 Une expression de générateur est similaire à une déclaration de fonction génératrice et possède presque la même syntaxe (pour plus de détails, consulter la page sur l'expression {{jsxref('Opérateurs/function*', 'function*')}}) :
 
-    function* [nom]([param[, param[, ... param]]]) {
-       instructions
-    }
+```
+function* [nom]([param[, param[, ... param]]]) {
+  instructions
+}
+```
 
 - `nom`
   - : Le nom de la fonction. Ce paramètre peut être omis, auquel cas la fonction sera une fonction anonyme.
@@ -155,11 +163,13 @@ Une expression de générateur est similaire à une déclaration de fonction gé
 
 Une expression de fonction fléchée possède une syntaxe plus courte et est liée, de façon lexicale, à sa valeur (voir la page sur les [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) pour plus de détails) :
 
-    ([param[, param]]) => {
-       instructions
-    }
+```
+([param[, param]]) => {
+  instructions
+}
 
-    param => expression
+param => expression
+```
 
 - `param`
   - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`. S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple&nbsp;: `toto => 1`).
@@ -172,7 +182,9 @@ Une expression de fonction fléchée possède une syntaxe plus courte et est li�
 
 Comme tous les autres objets, les objets {{jsxref("Function")}} peuvent être créés grâce à l'opérateur `new` :
 
-    new Function (arg1, arg2, ... argN, corpsDeLaFonction)
+```js
+new Function (arg1, arg2, ... argN, corpsDeLaFonction)
+```
 
 - `arg1, arg2, ... argN`
   - : Plusieurs (zéro ou plus) noms qui seront utilisés par la fonction comme noms d'arguments formels. Chaque nom doit être une chaîne de caractères valide au sens d'un identifiant JavaScript ou alors être une liste de telles chaînes séparées par des virgules. On aura les exemples suivants : "`x`", "`laValeur`", ou "`a,b`".
@@ -189,7 +201,9 @@ L'invocation du constructeur `Function` en tant que fonction (sans utiliser l'op
 
 Comme pour tous les autres objets, les objets {{jsxref("GeneratorFunction")}} peuvent être créés grâce à l'opérateur `new` :
 
-    new GeneratorFunction (arg1, arg2, ... argN, corpsFonction)
+```js
+new GeneratorFunction (arg1, arg2, ... argN, corpsFonction)
+```
 
 - `arg1, arg2, ... argN`
   - : Plusieurs (zéro ou plus) noms qui seront utilisés par la fonction comme noms d'arguments formels. Chaque nom doit être une chaîne de caractères valide au sens d'un identifiant JavaScript ou alors être une liste de telles chaînes séparées par des virgules. On aura les exemples suivants : "`x`", "`theValue`", ou "`a,b`".
@@ -212,16 +226,16 @@ Il est possible de faire référence aux arguments d'une fonction au sein de cet
 
 - [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) : Un objet semblable à un tableau qui contient les arguments passés à la fonction qui est exécutée.
 - [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee) {{Deprecated_inline}} : La fonction en cours d'exécution.
-- [`arguments.caller`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/caller) {{Obsolete_inline}} : La fonction qui a appelé la fonction courante.
+- [`arguments.caller`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/caller) {{deprecated_inline}} : La fonction qui a appelé la fonction courante.
 - [`arguments.length`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/length) : Le nombre d'arguments passés à la fonction.
 
 ## Récursion
 
 Une fonction peut faire référence à elle-même et s'appeler elle-même. Il y a trois façons pour qu'une fonction fasse appel à elle-même :
 
-1.  le nom de la fonction
-2.  [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
-3.  une variable interne faisant référence à la fonction
+1. le nom de la fonction
+2. [`arguments.callee`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments/callee)
+3. une variable interne faisant référence à la fonction
 
 Avec l'exemple suivant :
 
@@ -233,9 +247,9 @@ var truc = function toto() {
 
 Ce qui suit sera équivalent au sein de la fonction :
 
-1.  `toto()`
-2.  `arguments.callee()`
-3.  `truc()`
+1. `toto()`
+2. `arguments.callee()`
+3. `truc()`
 
 Une fonction qui s'appelle elle-même est appelée une fonction récursive. D'une certaine manière, une récursion est semblable à une boucle. Une récursion et une boucle exécutent le même code plusieurs fois et s'appuient sur une condition (afin d'éviter une boucle infinie, ou plutôt une récursion infinie ici). Ainsi la boucle suivante :
 
@@ -377,9 +391,9 @@ A(1); // crée un message d'alerte avec 6 (= 1 + 2 + 3)
 
 Dans cet exemple, C accède à la variable y de B et à la variable x de A. Cela est possible parce que :
 
-1.  `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`
-2.  `C` est une fermeture qui contient `B`
-3.  Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de*  `B` et `A` dans cet ordre.
+1. `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`
+2. `C` est une fermeture qui contient `B`
+3. Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de*  `B` et `A` dans cet ordre.
 
 La réciproque n'est pas vraie. `A` ne peut avoir accès à `C`, parce que `A` ne peut accéder ni aux variables ni aux arguments de `B`, or `C` est une variable de `B. C` est donc privé et seulement pour `B`.
 
@@ -426,13 +440,13 @@ var obj = {
 
 Comparons les exemples suivants :
 
-1.  une fonction définie grâce au constructeur `Function` assignée à la variable `multiplier`
+1. une fonction définie grâce au constructeur `Function` assignée à la variable `multiplier`
 
     ```js
     var multiplier = new Function("x", "y", "return x * y;");
     ```
 
-2.  une déclaration de fonction d'une fonction appelée `multiplier`
+2. une déclaration de fonction d'une fonction appelée `multiplier`
 
     ```js
     function multiplier(x, y) {
@@ -440,7 +454,7 @@ Comparons les exemples suivants :
     }
     ```
 
-3.  une expression de fonction d'une fonction anonyme assignée à la variable `multiplier`
+3. une expression de fonction d'une fonction anonyme assignée à la variable `multiplier`
 
     ```js
     var multiplier = function(x, y) {
@@ -448,7 +462,7 @@ Comparons les exemples suivants :
     };
     ```
 
-4.  une expression de fonction d'une fonction nommée `fonction_nom` assignée à la variable `multiplier`
+4. une expression de fonction d'une fonction nommée `fonction_nom` assignée à la variable `multiplier`
 
     ```js
     var multiplier = function function_nom(x, y) {
@@ -627,13 +641,13 @@ var setBGColor = new Function("document.body.style.backgroundColor = 'white';");
 
 Il est alors possible d'utiliser cette variable pour assigner une fonction à un gestionnaire d'événement. Cela peut se faire de plusieurs manières, en voici deux décrites ici :
 
-1.  écrire dans les propriétés de l'évément DOM HTML
+1. écrire dans les propriétés de l'évément DOM HTML
 
     ```js
     document.form1.colorButton.onclick = setBGColor;
     ```
 
-2.  l'attribut de l'événement HTML
+2. l'attribut de l'événement HTML
 
     ```html
     <input type="button"

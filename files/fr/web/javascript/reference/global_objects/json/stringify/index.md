@@ -17,7 +17,9 @@ La méthode **`JSON.stringify()`** convertit une valeur JavaScript en chaîne JS
 
 ## Syntaxe
 
-    JSON.stringify( valeur[, remplaçant [, espace]])
+```js
+JSON.stringify( valeur[, remplaçant [, espace]])
+```
 
 ### Paramètres
 

@@ -15,7 +15,9 @@ translation_of: Web/API/Window/cancelAnimationFrame
 
 ## Syntaxe
 
-    window.cancelAnimationFrame(requestID);
+```js
+window.cancelAnimationFrame(requestID);
+```
 
 ### Paramètres
 

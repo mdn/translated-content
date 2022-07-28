@@ -29,7 +29,9 @@ Cet entête doit être envoyée si le serveur répond avec un statut {{HTTPStatu
 
 ## Syntaxe
 
-    Allow: <methodes-http>
+```
+Allow: <methodes-http>
+```
 
 ## Directives
 
@@ -38,7 +40,9 @@ Cet entête doit être envoyée si le serveur répond avec un statut {{HTTPStatu
 
 ## Exemples
 
-    Allow: GET, POST, HEAD
+```
+Allow: GET, POST, HEAD
+```
 
 ## Spécifications
 

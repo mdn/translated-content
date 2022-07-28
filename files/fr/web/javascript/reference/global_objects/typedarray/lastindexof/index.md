@@ -20,7 +20,9 @@ La méthode **`lastIndexOf()`** renvoie le dernier indice (le plus grand) pour l
 
 ## Syntaxe
 
-    typedarray.lastIndexOf(élémentRecherché[, indiceDépart = typedarray.length])
+```js
+typedarray.lastIndexOf(élémentRecherché[, indiceDépart = typedarray.length])
+```
 
 ### Paramètres
 

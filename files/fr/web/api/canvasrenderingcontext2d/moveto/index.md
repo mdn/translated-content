@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.moveTo()`** de l'API Canvas 2D déplace 
 
 ## Syntaxe
 
-    void ctx.moveTo(x, y);
+```js
+void ctx.moveTo(x, y);
+```
 
 ### Paramètres
 

@@ -1,0 +1,89 @@
+---
+title: Globaler Eventhandler onclick
+slug: Web/API/Element/click_event
+tags:
+  - API
+  - HTML DOM
+  - Méthode
+  - Referencen
+translation_of: Web/API/GlobalEventHandlers/onclick
+original_slug: Web/API/GlobalEventHandlers/onclick
+---
+<div>
+<div>{{ ApiRef("HTML DOM") }}</div>
+</div>
+
+<div> </div>
+
+<p>Die <strong>onclick</strong> Methode gibt den c<code>lick</code>-<code>E</code>venthandler des Elementes zurück.</p>
+
+<div class="note"><strong>Note:</strong> Wenn man das <code>click</code>-<code>E</code>vent zum auslösen einer Aktion benutzt, kann man auch in Erwägung ziehen das man die selbe Aktion auf das <code>keydown</code>-Event legt, das erlaubt den Nutzern ohne Maus oder Touchscreen die Aktion trotzdem auszuführen.</div>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>element</var>.onclick = <var>function</var>;
+</pre>
+
+<p><var><span style="font-style: normal;">Anstelle von </span>function</var> wird der Methodenname eingetragen, der meistens etwas mit der Funktion der Methode zu tun hat. Siehe "<a href="/en-US/docs/JavaScript/Guide/Functions">JavaScript Guide:Functions</a>".</p>
+
+<p>Das Eventobject besteht aus der spezielen Eventhandlermethode die ein {{domxref("MouseEvent")}} ist.</p>
+
+<h2 id="Example" name="Example">Beispiel</h2>
+
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;onclick Event Beispiel&lt;/title&gt;
+&lt;script&gt;
+function initElement() {
+  var p = document.getElementById("foo");
+  // BEACHTE: showAlert(); oder showAlert(param); wird <u><strong style="color: red;">NICHT</strong></u> funktionieren.
+  // Es muss ein Methodenname und <u><strong style="color: red;">NICHT</strong></u> ein Methodenaufruf sein.
+  p.onclick = showAlert;
+};
+
+function showAlert() {
+  alert("onclick Event erkannt!")
+}
+&lt;/script&gt;
+&lt;style&gt;
+#foo {
+  border: solid blue 2px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body onload="initElement();"&gt;
+&lt;span id="foo"&gt;Mein Eventelement&lt;/span&gt;
+&lt;p&gt;Klicke auf das obenstehende Element&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Oder man benutzt eine anonyme Methode, wie hier:</p>
+
+<pre class="brush:js">p.onclick = function() { alert("onclick Event erkannt!"); };
+</pre>
+
+<h2 id="Notes" name="Notes">Bemerkungen</h2>
+
+<p>Dieses Event wird ausgefürt wenn der Benutzer auf das Element klickt. Dieses Event wird nach dem Mousedown- und dem Mouseupevent ausgefürt.</p>
+
+<p>Nur ein Klickhandler kann zu einem Objekt hinzugefügt werden in dieser Variable gespeichert werden. Man kann auch die {{domxref("EventTarget.addEventListener()")}} Methode benutzen, seit es flexibel ist und teil der DOM Evente Spezifikation.</p>
+
+<h2 id="Specification" name="Specification">Spezifikation</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spezifikation</th>
+   <th scope="col">Status</th>
+   <th scope="col">Kommentar</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>---</td>
+  </tr>
+ </tbody>
+</table>

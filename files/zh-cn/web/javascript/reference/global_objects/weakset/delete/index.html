@@ -15,12 +15,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 
 <dl>
  <dt>value</dt>
- <dd>必须。从 <code>WeakSet</code> 对象中移除的对象。</dd>
+ <dd>必须。从 <code>WeakSet</code> 对象中移除的对象。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
-<p>如果在 <code>WeakSet</code> 对象中成功移除元素则返回 true。如果 key 没有在 WeakSet 中找到或者 key 不是一个对象，则返回 false。</p>
+<p>如果在 <code>WeakSet</code> 对象中成功移除元素则返回 true。如果 key 没有在 WeakSet 中找到或者 key 不是一个对象，则返回 false。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -31,7 +31,7 @@ var obj = {};
 
 ws.add(window);
 
-ws.delete(obj);    // 返回 false。因为找不到要删除的obj
+ws.delete(obj);    // 返回 false。因为找不到要删除的 obj
 ws.delete(window); // 返回 true。成功地移除了元素
 
 ws.has(window);    // 返回 false。因为 WeakSet 中已经不存在 window 对象

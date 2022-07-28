@@ -13,7 +13,7 @@ Un _mixin_ est une {{Glossary("class","classe")}} ou une {{Glossary("interface",
 
 L'avantage des mixins est qu'ils peuvent être utilisés pour simplifier la conception d'API dans lesquelles plusieurs interfaces doivent inclure les mêmes méthodes et propriétés.
 
-Par exemple, le {{domxref ("WindowOrWorkerGlobalScope")}} mixin est utilisé pour fournir des méthodes et des propriétés qui doivent être disponibles à la fois sur les interfaces {{domxref ("Window")}} et {{domxref ("WorkerGlobalScope")}}. Le mixin est implémenté par ces deux interfaces.
+Par exemple, le mixin `WindowOrWorkerGlobalScope` est utilisé pour fournir des méthodes et des propriétés qui doivent être disponibles à la fois sur les interfaces {{domxref ("Window")}} et {{domxref ("WorkerGlobalScope")}}. Le mixin est implémenté par ces deux interfaces.
 
 ## Pour approfondir
 

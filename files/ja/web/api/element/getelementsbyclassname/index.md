@@ -13,7 +13,7 @@ translation_of: Web/API/Element/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} の **`getElementsByClassName()`** メソッドは、引数で与えられたクラス名を含むすべての子要素を、生きた {{domxref("HTMLCollection")}} で返します。 
+{{domxref("Element")}} の **`getElementsByClassName()`** メソッドは、引数で与えられたクラス名を含むすべての子要素を、生きた {{domxref("HTMLCollection")}} で返します。
 
 {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} メソッドはこのメソッドとほぼ同様に動作しますが、 {{domxref("Document")}} 全体に働きます。特定された文書ルート要素の子孫のうち、与えられたクラス名に合う複数の要素を返します。
 

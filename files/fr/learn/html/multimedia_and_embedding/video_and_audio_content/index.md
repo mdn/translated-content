@@ -103,8 +103,6 @@ Un lecteur audio peut jouer directement une piste audio, par ex. un fichier MP3 
 
 Les formats ci-dessus ont été créés pour compresser la vidéo et l'audio dans des fichiers gérables (les fichiers vidéo et audio bruts sont très volumineux). Les navigateurs contiennent différents {{Glossary("Codec","Codecs")}}, comme Vorbis ou H.264, utilisés pour convertir le son et la vidéo compressés en binaire et inversement. Comme indiqué ci-dessus, les navigateurs ne supportent malheureusement pas tous les mêmes codecs, vous devrez donc fournir plusieurs fichiers pour chaque production de média. S'il vous manque le bon codec pour décoder le média, il ne pourra pas être lu.
 
-
-
 > **Note :** Vous êtes peut-être surpris de l'existence d'une telle situation. Les formats **MP3** (pour l'audio) et **MP4/H.264** (pour la vidéo) sont tous deux largement pris en charge et de bonne qualité. Cependant, ils sont également grevés de brevets — les brevets américains couvrent le MP3 jusqu'en 2017 au moins et le H.264 jusqu'en 2027 au plus tôt, ce qui signifie que les navigateurs ne détenant pas de licence doivent payer d'énormes sommes d'argent pour pouvoir utiliser ces formats. En outre, beaucoup de personnes évitent, par principe, les logiciels propriétaires et leur préférent des formats ouverts. C'est pourquoi nous devons fournir plusieurs formats pour une prise en charge par différents navigateurs.
 >
 >
@@ -122,8 +120,6 @@ Alors, comment faire ? Jetez un coup d'œil à l'exemple qui suit, [mis à jour]
 Ici, nous avons retiré l'attribut `src` de la balise \<video> et inclus des éléments {{htmlelement("source")}} séparés qui pointent vers des sources appropriées. Dans ce cas, le navigateur parcourra les éléments `<source>` et jouera le premier dont il peut prendre en charge le codec. Inclure des sources WebM et MP4 devraient suffire pour lire votre vidéo sur la plupart des plateformes et navigateurs de nos jours.
 
 Chaque élément \<source> possède également un attribut de type. C'est facultatif, mais il est conseillé de les inclure — ils contiennent le type {{glossary("MIME type","MIME")}} des fichiers vidéo, et les navigateurs peuvent le lire et sauter immédiatement les vidéos qu'ils ne comprennent pas. Si le type n'est pas indiqué, le navigateur va charger et essayer de lire chaque fichier jusqu'à ce qu'il en trouve un qu'il prenne en charge, ce qui demande du temps et des ressources.
-
-
 
 > **Note :** L'[article sur les formats média pris en charge](/fr/docs/Web/HTML/Supported_media_formats) contient quelques types {{glossary("MIME type","MIME")}} courants.
 
@@ -215,22 +211,24 @@ WebVTT est un format d'écriture de fichiers texte&nbsp;; il contient nombre de 
 
 Un fichier WebVTT typique ressemblera à&nbsp;:
 
-    WEBVTT
+```
+WEBVTT
 
-    1
-    00:00:22.230 --> 00:00:24.606
-    Ceci est le premier sous‑titre.
+1
+00:00:22.230 --> 00:00:24.606
+Ceci est le premier sous‑titre.
 
-    2
-    00:00:30.739 --> 00:00:34.074
-    Ceci est le deuxième.
+2
+00:00:30.739 --> 00:00:34.074
+Ceci est le deuxième.
 
-      ...
+  ...
+```
 
 Pour qu'il soit affiché avec la diffusion du média HTML, il faut&nbsp;:
 
-1.  Enregistrer le fichier avec l'extension `.vtt` dans un endroit sensé.
-2.  Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut {{htmlattrxref("kind","track")}} pour préciser si les marqueurs sont  `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut {{htmlattrxref("srclang","track")}} pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
+1. Enregistrer le fichier avec l'extension `.vtt` dans un endroit sensé.
+2. Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut {{htmlattrxref("kind","track")}} pour préciser si les marqueurs sont  `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut {{htmlattrxref("srclang","track")}} pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
 
 Voici un exemple&nbsp;:
 
@@ -258,11 +256,11 @@ Si vous ne pouvez enregistrer ni vidéo ni audio, alors, n'hésitez pas à vous 
 
 Il vous faudra :
 
-1.  Préserver vos fichiers audio et vidéo dans un nouveau dossier sur votre ordinateur.
-2.  Créer un nouveau fichier HTML dans le même répertoire nommé :  `index.html`.
-3.  Ajouter des éléments  `<audio>` et  `<video>` dans la page; faire en sorte qu'ils affichent les contrôles par défaut du navigateur.
-4.  Leur attribuer (aux deux) des éléments `<source>` que le navigateur puisse trouver le meilleur format audio et le charger. N'oubliez pas d'inclure les attributs  `type`.
-5.  Donner à l'élément `<video>` une image qui sera affichée avant que la vidéo ne démarre. Amusez-vous à créer votre propre visuel de l'affiche.
+1. Préserver vos fichiers audio et vidéo dans un nouveau dossier sur votre ordinateur.
+2. Créer un nouveau fichier HTML dans le même répertoire nommé :  `index.html`.
+3. Ajouter des éléments  `<audio>` et  `<video>` dans la page; faire en sorte qu'ils affichent les contrôles par défaut du navigateur.
+4. Leur attribuer (aux deux) des éléments `<source>` que le navigateur puisse trouver le meilleur format audio et le charger. N'oubliez pas d'inclure les attributs  `type`.
+5. Donner à l'élément `<video>` une image qui sera affichée avant que la vidéo ne démarre. Amusez-vous à créer votre propre visuel de l'affiche.
 
 En bonus, vous pouvez chercher des textes à intégrer et ajouter des légendes à vos vidéos.
 
@@ -283,8 +281,6 @@ Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
-
-
 ## Contenu du module :
 
 - [Les images en HTML](/fr/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML)
@@ -293,7 +289,5 @@ Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages
 - [Ajouter des images vectorielles à une page Web](/fr/Apprendre/HTML/Comment/Ajouter_des_images_vectorielles_%C3%A0_une_page_web)
 - [Ajouter des images "responsive" à une page Web](/fr/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_%C3%A0_une_page_web)
 - [Mozilla splash page](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
-
-
 
 <!---->

@@ -75,8 +75,6 @@ function dessiner() {
 dessiner();
 ```
 
-
-
 ## Paramètres
 
 - array

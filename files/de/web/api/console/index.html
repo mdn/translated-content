@@ -17,7 +17,7 @@ translation_of: Web/API/Console
 
 <pre class="brush: js">console.log("Failed to open the specified link")</pre>
 
-<p>Diese Seite dokumentiert die {{anch("Methods", "Methoden")}}, die für das <code>Console</code> Objekt verfügbar sind und enthält einige {{anch("Usage", "Anwendungsbeispiele")}}.</p>
+<p>Diese Seite dokumentiert die <a href="#methods">Methoden</a>, die für das <code>Console</code> Objekt verfügbar sind und enthält einige <a href="#usage">Anwendungsbeispiele</a>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -180,10 +180,6 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 <p><strong>Hinweis:</strong> Es werden etliche CSS-Eigenschaften von diesem Stil unterstützt. Sie sollten experimentieren und sehen, welche sich als nützlich erweisen.</p>
 </div>
 
-<div> </div>
-
-<div>{{h3_gecko_minversion("Gruppen in der Konsole verwenden", "9.0")}}</div>
-
 <p>Sie können verschachtelte Gruppen verwenden, um Ihre Ausgabe zu organisieren, indem Sie verwandtes Material visuell kombinieren. Um einen neuen verschachtelten Block zu erstellen, rufen Sie <code>console.group()</code> auf. Die Methode <code>console.groupCollapsed()</code> ist ähnlich, erstellt den neuen Block jedoch zusammengeklappt und erfordert die Verwendung einer Schaltfläche zum Öffnen.</p>
 
 <div class="note"><strong>Hinweis:</strong> Minimierte Gruppen werden in Gecko noch nicht unterstützt. Die Methode <code>groupCollapsed()</code> ist zu diesem Zeitpunkt die gleiche wie <code>group()</code>.</div>
@@ -205,8 +201,6 @@ console.debug("Back to the outer level");
 <p>Die Ausgabe sieht folgendermaßen aus:</p>
 
 <p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
-
-<div>{{h3_gecko_minversion("Timer", "10.0")}}</div>
 
 <p>Um die Dauer einer bestimmten Operation zu berechnen, hat Gecko 10 die Unterstützung von Timern im <code>console</code>-Objekt eingeführt. Um einen Timer zu starten, rufen Sie die Methode <code>console.time</code><code>()</code> auf und geben Sie ihm als einzigen Parameter einen Namen. Um den Timer zu stoppen und die verstrichene Zeit in Millisekunden abzurufen, rufen Sie einfach die Methode <code>console.timeEnd()</code> auf und übergeben den Namen des Timers erneut als Parameter. Auf einer Seite können bis zu 10.000 Timer gleichzeitig ausgeführt werden.</p>
 

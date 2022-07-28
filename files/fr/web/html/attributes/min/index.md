@@ -124,7 +124,7 @@ Pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `min` 
 
 | Élément                                      | Syntaxe                             | Exemple                                                                                            |
 | -------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [`<meter>`](/fr/docs/Web/HTML/Element/Meter) | [<number>](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
+| [`<meter>`](/fr/docs/Web/HTML/Element/Meter) | [`<number>`](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
 
 ### Impact sur `step`
 

@@ -9,9 +9,9 @@ translation_of: Web/API/Document/readyState
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<h2 id="Summary" name="Summary">總覽</h2>
+<h2 id="Summary">總覽</h2>
 
-<p>{{ domxref("document") }} 的 <strong>Document.readyState</strong> 屬性描述文件的讀取狀態。</p>
+<p>{{ domxref("document") }} 的 <strong>Document.readyState</strong> 屬性描述文件的讀取狀態。</p>
 
 <h3 id="數值">數值</h3>
 
@@ -23,21 +23,21 @@ translation_of: Web/API/Document/readyState
  <dt>interactive</dt>
  <dd>文件已經完成讀取和解析，但是其他的子資源，如「圖片樣式層次表」，仍然在讀取。這個狀態表示 {{event("DOMContentLoaded")}} 事件已經被觸發。</dd>
  <dt>complete</dt>
- <dd>文件及子資源都完成讀取。這個狀態表示 {{event("load")}} 事件即將被觸發。</dd>
+ <dd>文件及子資源都完成讀取。這個狀態表示 {{event("load")}} 事件即將被觸發。</dd>
 </dl>
 
-<p>當這個屬性的數值改變時， {{event("readystatechange")}} 事件在 {{ domxref("document") }} 上觸發。</p>
+<p>當這個屬性的數值改變時， {{event("readystatechange")}} 事件在 {{ domxref("document") }} 上觸發。</p>
 
 <h2 id="表達式">表達式</h2>
 
 <pre class="brush: js"><em>var string</em> = document.readyState;
 </pre>
 
-<h2 id="範例"><span>範例</span></h2>
+<h2 id="範例">範例</h2>
 
 <h3 id="不同的狀態">不同的狀態</h3>
 
-<pre class="brush: js"><span>switch (document.readyState) {
+<pre class="brush: js">switch (document.readyState) {
   case "loading":
     // 文件讀取中。
     break;
@@ -51,7 +51,7 @@ translation_of: Web/API/Document/readyState
     // 頁面已經完成讀取。
     console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
     break;
-}</span>
+}
 </pre>
 
 <h3 id="readystatechange_替代_DOMContentLoaded">readystatechange 替代 DOMContentLoaded</h3>
@@ -74,30 +74,7 @@ document.onreadystatechange = function () {
 
 <h2 id="規範">規範</h2>
 
-<table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5.1", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#current-document-readiness", "Document readiness")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="參見">參見</h2>
 

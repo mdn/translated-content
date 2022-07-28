@@ -48,8 +48,6 @@ function drawPaddle() {
 
 Nous pouvons dessiner la raquette où nous voulons, mais elle doit répondre aux actions de l'utilisateur. Il est temps de mettre en place certaines commandes au clavier. Nous aurons besoin de ce qui suit :
 
-
-
 - Deux variables pour stocker des informations sur l'état des touches "gauche" et "droite".
 - Deux écouteurs d'événements pour les événements `keydown` et `keyup` du clavier. Nous voulons exécuter un code pour gérer le mouvement de la raquette lorsque des appuis sur les touches.
 - Deux fonctions gérant les événements `keydown` et `keyup` et le code qui sera exécuté lorsque les touches sont pressées.

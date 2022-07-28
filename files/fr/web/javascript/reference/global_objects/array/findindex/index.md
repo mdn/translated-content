@@ -22,7 +22,9 @@ Voir également la méthode {{jsxref("Array.find", "find()")}} qui renvoie la **
 
 ## Syntaxe
 
-    arr.findIndex(callback(element[, index[, tableau]])[, thisArg])
+```js
+arr.findIndex(callback(element[, index[, tableau]])[, thisArg])
+```
 
 ### Paramètres
 

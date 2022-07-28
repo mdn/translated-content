@@ -99,7 +99,9 @@ Le reste de cette section décrit les problèmes de compatibilité qui ne sont p
 
 - Dans Firefox, les URL relatives passées à `tabs.executeScript()` ou `tabs.insertCSS()` sont résolues par rapport à l'URL de la page actuelle. Dans Chrome, ces URL sont résolues par rapport à l'URL de base de l'extension. Pour travailler pour l'ensemble des navigateurs, il est donc nécessaire d'indiquer le chemin comme URL absolue, en commençant par la racine de l'extension, comme ceci:
 
-      /chemin/vers/script.json
+  ```
+  /chemin/vers/script.json
+  ```
 
 - Dans Firefox, interroger les onglets avec des URL avec `tabs.query()` nécessitent une permission `"tabs"`. Dans Chrome, il est possible de le faire sans la permission `"tabs"` mais cela limitera les résultats aux onglets dont les URL correspondent aux permissions de l'hôte.
 - Dans Firefox, la promesse `tabs.remove()` est tenue après l'évènement `beforeunload` alors que pour Chrome, le _callback_ n'attend pas `beforeunload`.

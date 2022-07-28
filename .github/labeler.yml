@@ -17,6 +17,7 @@ l10n-ja:
 
 l10n-ko:
   - files/ko/**/*
+  - docs/ko/**/*
 
 l10n-pl:
   - files/pl/**/*
@@ -26,7 +27,10 @@ l10n-pt-br:
 
 l10n-ru:
   - files/ru/**/*
+  - docs/ru/**/*
 
 l10n-zh:
   - files/zh-cn/**/*
   - files/zh-tw/**/*
+  - docs/zh-cn/**/*
+  - docs/zh-tw/**/*

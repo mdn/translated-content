@@ -58,9 +58,9 @@ Le texte est difficile à lire en raison du schéma de couleurs actuel. Pouvez-v
 
 ### Semantic HTML
 
-1.  Le contenu n'est toujours pas très accessible - faites un rapport sur ce qui se passe lorsque vous essayez de naviguer à l'aide d'un lecteur d'écran.
-2.  Pouvez-vous mettre à jour le texte de l'article pour faciliter la navigation des utilisateurs de lecteurs d'écran?
-3.  La partie du menu de navigation du site ( `<div class="nav"></div>`) pourrait être rendue plus accessible en la plaçant dans un élément sémantique HTML5 approprié. Lequel devrait-il être mis à jour? Faites la mise à jour.
+1. Le contenu n'est toujours pas très accessible - faites un rapport sur ce qui se passe lorsque vous essayez de naviguer à l'aide d'un lecteur d'écran.
+2. Pouvez-vous mettre à jour le texte de l'article pour faciliter la navigation des utilisateurs de lecteurs d'écran?
+3. La partie du menu de navigation du site ( `<div class="nav"></div>`) pourrait être rendue plus accessible en la plaçant dans un élément sémantique HTML5 approprié. Lequel devrait-il être mis à jour? Faites la mise à jour.
 
 > **Note :** Vous devrez mettre à jour les sélecteurs de règles CSS qui attribuent aux balises le même style que les balises sémantiques. Une fois que vous avez ajouté des éléments de paragraphe, vous remarquerez que le style est meilleur.
 
@@ -70,13 +70,13 @@ Les images sont actuellement inaccessibles aux utilisateurs de lecteur d'écran.
 
 ### Le lecteur audio
 
-1.  Le lecteur  `<audio>` n'est pas accessible aux malentendants (pouvez-vous ajouter une sorte d'alternative accessible pour ces utilisateurs)?
-2.  Le lecteur  `<audio>` n'est pas accessible aux utilisateurs de navigateurs plus anciens qui ne prennent pas en charge l'audio HTML5. Comment pouvez-vous leur permettre d'accéder encore à l'audio?
+1. Le lecteur  `<audio>` n'est pas accessible aux malentendants (pouvez-vous ajouter une sorte d'alternative accessible pour ces utilisateurs)?
+2. Le lecteur  `<audio>` n'est pas accessible aux utilisateurs de navigateurs plus anciens qui ne prennent pas en charge l'audio HTML5. Comment pouvez-vous leur permettre d'accéder encore à l'audio?
 
 ### Les formulaires
 
-1.  L'élément  `<input>` dans le formulaire de recherche en haut pourrait être associé à une étiquette, mais nous ne souhaitons pas ajouter une étiquette de texte visible qui risquerait de gâcher la conception et qui n'est pas vraiment utile aux utilisateurs voyants. Comment ajouter une étiquette uniquement accessible aux lecteurs d’écran? ?
-2.  Les deux éléments  `<input>` du formulaire de commentaire ont des étiquettes de texte visibles, mais ils ne sont pas associés sans ambiguïté à leurs étiquettes. Comment y parvenir? Notez que vous devrez également mettre à jour certaines règles CSS.
+1. L'élément  `<input>` dans le formulaire de recherche en haut pourrait être associé à une étiquette, mais nous ne souhaitons pas ajouter une étiquette de texte visible qui risquerait de gâcher la conception et qui n'est pas vraiment utile aux utilisateurs voyants. Comment ajouter une étiquette uniquement accessible aux lecteurs d’écran? ?
+2. Les deux éléments  `<input>` du formulaire de commentaire ont des étiquettes de texte visibles, mais ils ne sont pas associés sans ambiguïté à leurs étiquettes. Comment y parvenir? Notez que vous devrez également mettre à jour certaines règles CSS.
 
 ### Le contrôle afficher / masquer les commentaires
 

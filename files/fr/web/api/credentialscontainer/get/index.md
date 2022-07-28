@@ -23,7 +23,9 @@ Cette méthode récupère les informations d'authentification en appelant la mé
 
 ## Syntaxe
 
-    var promise = CredentialsContainer.get([options])
+```js
+var promise = CredentialsContainer.get([options])
+```
 
 ### Paramètres
 

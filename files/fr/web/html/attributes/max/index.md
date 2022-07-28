@@ -122,12 +122,12 @@ Si la valeur dépasse la valeur maximale autorisée, l'attribut JavaScript [`val
 
 Voir la [validation côté client](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) et [`rangeOverflow`](/fr/docs/Web/API/ValidityState/rangeOverflow) pour plus d'informations.
 
-Pour l'élément [`<progress>`](/fr/docs/Web/HTML/Element/Progress), l'attribut `max` décrit la quantité de travail que nécessite la tâche indiquée par l'élément `progress`. S'il est présent, il doit avoir une valeur supérieure à zéro et être un nombre à virgule flottante valide. Pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `max` définit la limite numérique supérieure de la plage mesurée. Celle-ci doit être supérieure à la valeur minimale ([code>min](/fr/docs/Web/HTML/Attributes/min) attribut), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
+Pour l'élément [`<progress>`](/fr/docs/Web/HTML/Element/Progress), l'attribut `max` décrit la quantité de travail que nécessite la tâche indiquée par l'élément `progress`. S'il est présent, il doit avoir une valeur supérieure à zéro et être un nombre à virgule flottante valide. Pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `max` définit la limite numérique supérieure de la plage mesurée. Celle-ci doit être supérieure à la valeur minimale ([`min`](/fr/docs/Web/HTML/Attributes/min) attribut), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
 
 | Type d'entrée                                      | Syntaxe                             | Exemple                                                                                           |
 | -------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------- |
-| [`<progress>`](/fr/docs/Web/HTML/Element/Progress) | [<number>](/fr/docs/Web/CSS/number) | `<progress id="file" max="100" value="70"> 70% </progress>`                                       |
-| [`<meter>`](/fr/docs/Web/HTML/Element/Meter)       | [<number>](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> à 40/100</meter>` |
+| [`<progress>`](/fr/docs/Web/HTML/Element/Progress) | [`<number>`](/fr/docs/Web/CSS/number) | `<progress id="file" max="100" value="70"> 70% </progress>`                                       |
+| [`<meter>`](/fr/docs/Web/HTML/Element/Meter)       | [`<number>`](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> à 40/100</meter>` |
 
 ## Accessibilité
 

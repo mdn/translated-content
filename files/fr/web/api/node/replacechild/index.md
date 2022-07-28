@@ -16,7 +16,9 @@ La méthode **`Node.replaceChild()`** remplace un nœud enfant du noeud spécifi
 
 ## Syntaxe
 
-    replacedNode = parentNode.replaceChild(newChild, oldChild);
+```js
+replacedNode = parentNode.replaceChild(newChild, oldChild);
+```
 
 - `newChild` est le nouveau nœud qui remplacera `oldChild`. S'il existe déjà dans le DOM, il sera d'abord enlevé.
 - `oldChild` est le nœud existant à remplacer.
