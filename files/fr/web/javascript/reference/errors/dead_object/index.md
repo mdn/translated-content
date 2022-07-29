@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Dead_object
 
 ## Message
 
-    TypeError: can't access dead object
+```
+TypeError: can't access dead object
+```
 
 ## Type d'erreur
 
@@ -39,7 +41,7 @@ try {
   String(window);
 }
 catch (e) {
-  console.log("window est problablement mort ");
+  console.log("window est probablement mort ");
 }
 ```
 

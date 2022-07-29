@@ -1,90 +1,36 @@
 ---
-title: Applications Web Progressives
+title: Applications web progressives
 slug: Web/Progressive_web_apps
-tags:
-  - App
-  - Applications
-  - Apps
-  - PWA
-  - Progressive web apps
-  - Web App Progressive
-  - Web App modernes
-  - Web app
 translation_of: Web/Progressive_web_apps
 ---
-{{draft}}
+Les **applications web progressives** (ou <i lang="en">progressive web applications</i> en anglais, abrégées en PWAs) sont des applications web qui utilisent [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), [les manifestes](/fr/docs/Web/Manifest), et d'autres fonctionnalités de la plateforme web, avec [l'amélioration progressive](/fr/docs/Glossary/Progressive_Enhancement) pour fournir aux utilisatrices et utilisateurs une expérience équivalente à celle des applications natives.
 
-Les **applications Web progressives** utilisent des API Web modernes ainsi qu'une stratégie d'amélioration progressive traditionnelle pour créer des applications Web multiplateformes. Ces applications fonctionnent partout et fournissent quelques fonctionnalités qui donnent à l'expérience utilisateur les mêmes avantages que les applications natives. Cet ensemble de documents explique tout ce qu'il faut savoir sur ces applications.
+Les applications web progressives ont plusieurs [avantages](/fr/docs/Web/Progressive_web_apps/Introduction#avantages_des_applications_web)&nbsp;: elles peuvent être [installées](/fr/docs/Web/Progressive_web_apps/Introduction#installabilité), [améliorées progressivement](/fr/docs/Web/Progressive_web_apps/Introduction#prise_en_charge_de_lamelioration_progressive), [conçues de façon adaptative](/fr/docs/Web/Progressive_web_apps/Introduction#adaptativité), [maintenir l'engagement](/fr/docs/Web/Progressive_web_apps/Introduction#re-engagement), [être indiquées avec un lien](/fr/docs/Web/Progressive_web_apps/Introduction#decouvrabilite_avec_un_lien), [découvrables](/fr/docs/Web/Progressive_web_apps/Introduction#découvrabilité), [indépendantes de l'état du réseau](/fr/docs/Web/Progressive_web_apps/Introduction#indépendance_du_réseau), et [sécurisées](/fr/docs/Web/Progressive_web_apps/Introduction#sécurité).
 
-Pour qu'une application Web soit considérée comme un PWA, techniquement parlant, il devrait présenter les caractéristiques suivantes : [Secure contexts](/fr/docs/Web/Security/Secure_Contexts) (**{{Glossary("HTTPS")}}**), un ou plusieurs [Service Workers](/fr/docs/Web/API/Service_Worker_API) et un [fichier manifest](/fr/docs/Web/Manifest).
+## Guides et autres documentations sur les PWA
 
-- [Secure contexts](/fr/docs/Web/Security/Secure_Contexts) ([HTTPS](/fr/docs/Glossaire/https))
-  - : L'application web doit être servie sur un réseau sécurisé. Être un site sécurisé est non seulement une bonne pratique, mais cela fait également de votre application web un site de confiance, surtout si les utilisateurs ont besoin d'effectuer des transactions sécurisées. La plupart des fonctionnalités liées à un PWA telles que la géolocalisation et même les Service Workers ne sont disponibles qu'une fois l'application chargée à l'aide de HTTPS.
-- [Service workers](/fr/docs/Web/API/Service_Worker_API)
-  - : Un _Service Worker_ est un script qui permet d'intercepter et de contrôler la façon dont un navigateur web traite ses requêtes réseau et la mise en cache des ressources. Avec les Service Workers, les développeurs web peuvent créer des pages web rapides et fiables et des expériences hors ligne.
-- [Manifest file](/fr/docs/Web/Manifest)
-  - : Un fichier {{Glossary("JSON")}} qui contrôle la façon dont votre application apparaît à l'utilisateur et garantit que les applications web progressives sont découvrables. Il décrit le nom de l'application, l'URL de démarrage, les icônes et tous les autres détails nécessaires pour transformer le site web en un format similaire à celui d'une application.
+Ces documents d'introduction et ces guides vous feront découvrir les différentes facettes de la construction d'une PWA&nbsp;:
 
-## Avantages PWA
+- [Introduction aux applications web progressives](/fr/docs/Web/Progressive_web_apps/Introduction)
+- [Structure d'une application web progressive](/fr/docs/Web/Progressive_web_apps/App_structure) et [aperçu structurel](/fr/docs/Web/Progressive_web_apps/Structural_overview)
+- [Comprendre les briques de construction de la conception adaptative](/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)
+- [Le fonctionnement hors-ligne des PWA à l'aide des <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers)
+- [Comment rendre une PWA installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs), [activer la fonctionnalité «&nbsp;ajouter à l'écran d'accueil&nbsp;»](/fr/docs/Web/Progressive_web_apps/Add_to_home_screen), et [plus de détails sur l'installation des PWA](/fr/docs/Web/Progressive_web_apps/Installing)
+- [Comment utiliser les API Notifications et Push pour l'engagement](/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)
+- [Comment activer le chargement progressif](/fr/docs/Web/Progressive_web_apps/Loading)
+- [Comment construire des PWA pensées pour le mobile](/fr/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
+- [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Utiliser le stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage), [IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB), et [l'API Web Storage](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Utiliser l'API Notifications](/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API) et [l'API Push](/fr/docs/Web/API/Push_API)
 
-Les PWA doivent pouvoir être découvertes, installées, reliées, indépendantes du réseau, progressives, réengageables, réactives et sûres. Pour en savoir plus sur la signification de ces éléments, lisez [Avantages des applications web progressives](/fr/docs/Web/Progressive_web_apps/Introduction).
+## Voir aussi
 
-Pour savoir comment mettre en œuvre les PWA, lisez notre [guide du développeur de PWA](/fr/docs/Web/Progressive_web_apps/Developer_guide).
-
-## Documentation
-
-**<-- La liste automatique temporaire ci-dessous sera bientôt remplacée -->**
-
-{{LandingPageListSubpages}}
-
-> **Attention :** ce qui se trouve en dessous de ce point est un reste de l'ancienne version de cette page et sera remanié au fur et à mesure de la révision des autres contenus.
-
-## Guides de base des PWA
-
-Les guides suivants vous montrent ce qu'il faut faire pour mettre en œuvre une PWA, en examinant un exemple simple et en vous montrant comment tous les éléments fonctionnent.
-
-1.  [Introduction aux applications web progressives](/fr/docs/Web/Progressive_web_apps/Introduction)
-2.  [Structure progressive des applications web](/fr/docs/Web/Progressive_web_apps/App_structure)
-3.  [Faire travailler les VAP en différé avec les travailleurs des services](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers)
-4.  [Comment rendre les PWA installables](/fr/docs/Web/Progressive_web_apps/Installable_PWAs)
-5.  [Comment rendre les PWA réengageables en utilisant les notifications et le Push](/fr/docs/Web/Progressive_web_apps/Relancer_Via_Notifications_Push)
-6.  [Chargement progressif](/fr/docs/Web/Progressive_web_apps/Chargement)
-7.  [Collection de ressources, de codelabs et d'outils dont vous avez besoin pour construire des PWA par l'équipe de pwafire.org](https://pwafire.org)
-8.  [Mise en place de votre environnement de développement d'applications web progressives](https://github.com/pwafire/pwadev-tips)
-
-## Guides technologiques
-
-- [Stockage côté client](/fr/docs/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage) – un long guide montrant comment et quand utiliser le stockage web, IndexedDB et les Service Workers.
-- [Using service workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers) – un guide plus approfondi couvrant l'API Service Worker.
-- [Utilisation d'IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB) – les principes fondamentaux d'IndexedDB, expliqués en détail.
-- [Utilisation de l'API de stockage Web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) – l'API de stockage Web simplifiée.
-- [Instant Loading Web Apps with An Application Shell Architecture](https://developers.google.com/web/updates/2015/11/app-shell) – un guide sur l'utilisation du modèle de codage App Shell pour créer des applications qui se chargent rapidement.
-- [Utilisation de l'API Push](/fr/docs/Web/API/Push_API/Using_the_Push_API) – apprenez l'essentiel sur l'API Web Push.
-- [Utilisation des notifications API](/fr/docs/Web/API/notification/Using_Web_Notifications) – les notifications Web en bref.
-- [Les éléments de base du design réactif](/fr/docs/Web/Apps/Modern/Responsive/responsive_design_building_blocks) – apprenez les bases du design réactif, un sujet essentiel pour la mise en page d'une application moderne.
-- [Mobile first](/fr/docs/Web/Apps/Modern/Responsive/Mobile_first) – souvent, lors de la création de mises en page d'applications réactives, il est judicieux de créer la mise en page mobile par défaut, et de construire des mises en page plus larges par-dessus.
-- [Guide de l'ajout à l'écran d'accueil](/fr/docs/Web/Progressive_web_apps/ajouter_a_lecran_daccueil_a2hs) – découvrez comment vos applications peuvent tirer profit de l'ajout à l'écran d'accueil (A2HS).
-
-## Outils
-
-- [localForage](https://localforage.github.io/localForage/) – une belle et simple bibliothèque JavaScript pour rendre le stockage de données côté client vraiment simple ; elle utilise IndexedDB par défaut et revient à Web SQL/Web Storage si nécessaire.
-- [ServiceWorkerWare](https://github.com/fxos-components/serviceworkerware) – un _Express-like_ microframe pour faciliter le développement du Service Worker.
-- [oghliner](https://github.com/mozilla/oghliner) – il s'agit non seulement d'un modèle, mais aussi d'un outil permettant de déployer des applications Web hors ligne sur des pages GitHub.
-- [sw-precache](https://github.com/GoogleChrome/sw-precache) – un module de nœud pour générer un code de travailleur de service qui précache des ressources spécifiques.
-- [workbox](https://github.com/GoogleChrome/workbox) – successeur spirituel du sw-precache avec des stratégies de mise en cache plus avancées et un précaching facile.
-- [upup](https://www.talater.com/upup/) – un petit script qui assure que votre site est toujours là pour vos utilisateurs.
-- [The service worker cookbook](https://serviceworke.rs/) – une série d'excellentes recettes de service worker/push, montrant comment mettre en œuvre une application hors ligne, mais aussi bien plus.
-- [WA VS Code extension](https://marketplace.visualstudio.com/items?itemName=mayeedwin.vscode-pwa) – une collection de tous les extraits de code essentiels dont vous avez besoin pour créer des applications Web progressives dans votre environnement VS Code.
-- [Apps web progressives](https://developers.google.com/web/progressive-web-apps) sur Google Developers.
-- [Applications Web progressives : Échapper aux tabulations sans perdre son âme](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh) par Alex Russell.
-- [Liste de contrôle des applications Web progressives](https://developers.google.com/web/progressive-web-apps/checklist).
-- [L'outil phare](https://developers.google.com/web/tools/lighthouse) par Google.
-- [Outils pour créer des applications web progressives avec Angular](https://github.com/angular/mobile-toolkit).
-- [Guide PWA React](https://github.com/codebusking/react-pwa-guide-kit).
-- [Offline-capable Pokédex web site](https://pokedex.org/).
-- [Hacker News readers as Progressive Web Apps](https://hnpwa.com/).
-- [Application Web progressive : Les avantages en bref](https://goingmeta.io/dienstleistungen/progressive-web-app/)
-- [Pourquoi les applications Web progressives sont l'avenir du Web mobile (recherche 2019)](https://ymedialabs.com/progressive-web-apps).
-- [Applications Web progressives : Tout ce que vous devez savoir](https://www.csschopper.com/blog/progressive-web-apps-everything-you-need-to-know/)
+- [La page de présentation des PWA de Google (en anglais)](https://web.dev/progressive-web-apps/) et [une liste de bonnes pratiques (en anglais)](https://web.dev/pwa-checklist/) sur [web.dev (en anglais)](https://web.dev/)
+- [Tout ce qu'il y a à savoir sur les PWA (en anglais)](https://www.csschopper.com/blog/progressive-web-apps-everything-you-need-to-know/)
+- [Les PWA&nbsp;: sortir des onglets sans y laisser son âme (en anglais)](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh)
+- [Chargement instantané des applications web avec une architecture de coquille d'application (en anglais)](https://developer.chrome.com/blog/app-shell/)
+- [Workbox (en anglais)](https://developer.chrome.com/docs/workbox/), un ensemble de bibliothèques pour aider au développement d'une application web progressive de qualité
+- [Lighthouse (en anglais)](https://developer.chrome.com/docs/lighthouse/overview/), une application web d'audit et qui inclut des fonctionnalités d'audit relatives aux PWA
+- [`localForage` (en anglais)](https://localforage.github.io/localForage/), une bibliothèque de stockage asynchrone avec une API similaire à `localStorage` et qui permet d'améliorer l'ergonomie hors-ligne de votre PWA
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}

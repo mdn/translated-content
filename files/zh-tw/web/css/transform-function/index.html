@@ -9,11 +9,11 @@ translation_of: Web/CSS/transform-function
 
 <p>There are several coordinate models used when describing transformation. The most common are the Cartesian coordinate system and homogeneous coordinates.</p>
 
-<h3 id="笛卡兒坐標系"><span class="external">笛卡兒坐標系</span></h3>
+<h3 id="笛卡兒坐標系">笛卡兒坐標系</h3>
 
 <p><a href="/@api/deki/files/5796/=coord_in_R2.png"><img src="/files/3438/coord_in_R2.png" style="float: right; width: 171px;"></a></p>
 
-<p>In <a class="external" href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system">Cartesian coordinates</a> each point of the <a class="external" href="http://en.wikipedia.org/wiki/Euclidean_geometry">Euclidian space</a> is described using two values, the abscissa and the ordinate. The origin, the <code>(0, 0)</code> is the top-left corner of the element. Unlike the usual geometric convention, and like most cases in computer graphics, the y-axis goes to the bottom. Each point is mathematically described using the vector notation <code>(x,y)</code>.</p>
+<p>In <a href="http://en.wikipedia.org/wiki/Cartesian_coordinate_system">Cartesian coordinates</a> each point of the <a href="http://en.wikipedia.org/wiki/Euclidean_geometry">Euclidian space</a> is described using two values, the abscissa and the ordinate. The origin, the <code>(0, 0)</code> is the top-left corner of the element. Unlike the usual geometric convention, and like most cases in computer graphics, the y-axis goes to the bottom. Each point is mathematically described using the vector notation <code>(x,y)</code>.</p>
 
 <p>Each linear function is described using a 2x2 matrix like:</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/CSS/transform-function
 
 <p>With this notation, it is possible to describe, and therefore composite, most usual transformations: rotations, scaling, or skewing. In fact all transformations that are linear functions can be described. One major transformation is not linear and therefore must be special-cased when using this notation: translation. The translation vector (tx, ty) must be expressed separately, as two more parameters.</p>
 
-<p><a class="external" href="http://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius">Möbius</a>' <a class="external" href="http://en.wikipedia.org/wiki/Homogeneous_coordinates">homogeneous coordinates</a> in <a class="external" href="http://en.wikipedia.org/wiki/Projective_geometry">projective geometry</a> leading to 3x3 transformation matrices, though more complex and unusual for non-specialists, doesn't suffer from the translation limitation as these can be expressed as linear functions in this algebra, removing the need for special cases.</p>
+<p><a href="http://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius">Möbius</a>' <a href="http://en.wikipedia.org/wiki/Homogeneous_coordinates">homogeneous coordinates</a> in <a href="http://en.wikipedia.org/wiki/Projective_geometry">projective geometry</a> leading to 3x3 transformation matrices, though more complex and unusual for non-specialists, doesn't suffer from the translation limitation as these can be expressed as linear functions in this algebra, removing the need for special cases.</p>
 
 <h2 id="Coordinates_for_3D_graphics">Coordinates for 3D graphics</h2>
 
@@ -59,7 +59,7 @@ translation_of: Web/CSS/transform-function
  <dd>Are {{cssxref("&lt;number&gt;")}} describing the translation to apply.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -100,7 +100,7 @@ translation_of: Web/CSS/transform-function
  <dd>Are {{cssxref("&lt;number&gt;")}} describing the translation to apply.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -134,7 +134,7 @@ translation_of: Web/CSS/transform-function
  <dd>Is a {{cssxref("&lt;length&gt;")}} giving the distance from the user to the z=0 plane. It is used to apply a perspective transform to the element. If it is 0 or a negative value, no perspective transform is applied.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -170,7 +170,7 @@ translation_of: Web/CSS/transform-function
  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -187,7 +187,7 @@ translation_of: Web/CSS/transform-function
    <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
   </tr>
   <tr>
-   <td><code>[cos(a) </code><span style="background-color: rgba(212, 221, 228, 0.14902); font-family: consolas,monaco,andale mono,monospace;">sin(</span><em>a</em><span style="background-color: rgba(212, 221, 228, 0.14902); font-family: consolas,monaco,andale mono,monospace;">)</span><code> -sin(a) cos(<em>a</em>) 0 0]</code></td>
+   <td><code>[cos(a) </code>sin(<em>a</em>)<code> -sin(a) cos(<em>a</em>) 0 0]</code></td>
   </tr>
  </tbody>
 </table>
@@ -218,7 +218,7 @@ translation_of: Web/CSS/transform-function
  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -258,7 +258,7 @@ translation_of: Web/CSS/transform-function
  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -298,7 +298,7 @@ translation_of: Web/CSS/transform-function
  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -338,7 +338,7 @@ translation_of: Web/CSS/transform-function
  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -383,7 +383,7 @@ scale(<em>sx</em>, <em>sy</em>)
  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector. If not present, its default value is <em><strong>sx</strong></em>, leading to a uniform scaling preserving the shape of the element.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -429,7 +429,7 @@ scale(<em>sx</em>, <em>sy</em>)
  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the z-component of the scaling vector.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -453,7 +453,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><code>scaleX(sx)</code> is a shorthand for <code>scale(sx, 1)</code> or for <code>scale3d(sx, 1, 1)</code>.</p>
 
-<p><code>scaleX(-1)</code> defines an <a class="external" href="http://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</a> with a vertical axis passing by the origin (as specified by the <code><a href="transform-origin" rel="custom">transform-origin</a></code> property).</p>
+<p><code>scaleX(-1)</code> defines an <a href="http://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</a> with a vertical axis passing by the origin (as specified by the <code><a href="transform-origin">transform-origin</a></code> property).</p>
 
 <h4 id="表達式_11">表達式</h4>
 
@@ -467,7 +467,7 @@ scale(<em>sx</em>, <em>sy</em>)
  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the abscissa of each point of the element.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -497,7 +497,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><code>scaleY(sy)</code> is a shorthand for <code>scale(1, sy)</code> or for <code>scale3d(1, sy, 1)</code>.</p>
 
-<p><code>scaleY(-1)</code> defines an <a class="external" href="http://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</a> with a horizontal axis passing by the origin (as specified by the <code><a href="transform-origin" rel="custom">transform-origin</a></code> property).</p>
+<p><code>scaleY(-1)</code> defines an <a href="http://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</a> with a horizontal axis passing by the origin (as specified by the <code><a href="transform-origin">transform-origin</a></code> property).</p>
 
 <h4 id="表達式_12">表達式</h4>
 
@@ -511,7 +511,7 @@ scale(<em>sx</em>, <em>sy</em>)
  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the ordinate of each point of the element.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -539,7 +539,7 @@ scale(<em>sx</em>, <em>sy</em>)
 
 <p><code>scaleZ(sz)</code> is a shorthand for <code>scale3d(1, 1, sz)</code>.</p>
 
-<p><code>scaleZ(-1)</code> defines an <a class="external" href="http://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</a> along the z-axis passing by the origin (as specified by the <code><a href="transform-origin" rel="custom">transform-origin</a></code> property).</p>
+<p><code>scaleZ(-1)</code> defines an <a href="http://en.wikipedia.org/wiki/Axial_symmetry">axial symmetry</a> along the z-axis passing by the origin (as specified by the <code><a href="transform-origin">transform-origin</a></code> property).</p>
 
 <h4 id="表達式_13">表達式</h4>
 
@@ -553,7 +553,7 @@ scale(<em>sx</em>, <em>sy</em>)
  <dd>Is a {{cssxref("&lt;number&gt;")}} representing the scaling factor to apply on the z-coordinate of each point of the element.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -590,7 +590,7 @@ skew(<em>ax</em>, <em>ay</em>)
  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle to use to distort the element along the ordinate.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -616,7 +616,7 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <p>The <code>skewX()</code> CSS function is a horizontal shear mapping distorting each point of an element by a certain angle in the horizontal direction. It is done by increasing the abscissa coordinate by a value proportionate to the specified angle and to the distance to the origin. The more far from the origin, the more away the point is, the greater will be the value added to it.</p>
 
-<h4 class="editable" id="表達式_15"><span>表達式</span></h4>
+<h4 id="表達式_15">表達式</h4>
 
 <pre class="syntaxbox">skewX(a)
 </pre>
@@ -628,7 +628,7 @@ skew(<em>ax</em>, <em>ay</em>)
  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle to use to distort the element along the abscissa.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -654,7 +654,7 @@ skew(<em>ax</em>, <em>ay</em>)
 
 <p>The <code>skewY()</code> CSS function is a vertical shear mapping distorting each point of an element by a certain angle in the vertical direction. It is done by increasing the ordinate coordinate by a value proportionate to the specified angle and to the distance to the origin. The more far from the origin, the more away the point is, the greater will be the value added to it.</p>
 
-<h4 class="editable" id="表達式_16">表達式</h4>
+<h4 id="表達式_16">表達式</h4>
 
 <pre class="syntaxbox">skewY(a)
 </pre>
@@ -666,7 +666,7 @@ skew(<em>ax</em>, <em>ay</em>)
  <dd>Is an {{ cssxref("&lt;angle&gt;") }} representing the angle to use to distort the element along the ordinate.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -704,10 +704,10 @@ translate(tx, ty)
  <dt><em>tx</em></dt>
  <dd>Is a {{cssxref("&lt;length&gt;")}} representing the abscissa of the translating vector.</dd>
  <dt><em>ty</em></dt>
- <dd>Is a {{cssxref("&lt;length&gt;")}} representing the ordinate of the translating vector. If missing, it is assumed to be equals to <strong>tx</strong> :  <code>translate(2)</code> means <code>translate(2, 2)</code>.</dd>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} representing the ordinate of the translating vector. If missing, it is assumed to be equals to <strong>tx</strong> :  <code>translate(2)</code> means <code>translate(2, 2)</code>.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -751,7 +751,7 @@ translate(tx, ty)
  <dd>Is a {{cssxref("&lt;length&gt;")}} representing the z component of the translating vector. It can't be a {{cssxref("&lt;percentage&gt;")}} value; in that case the property containing the transform is considered invalid.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -789,7 +789,7 @@ translate(tx, ty)
  <dd>Is a {{cssxref("&lt;length&gt;")}} representing the abscissa of the translating vector.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -831,7 +831,7 @@ translate(tx, ty)
  <dd>Is a {{cssxref("&lt;length&gt;")}} representing the ordinate of the translating vector.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -870,10 +870,10 @@ translate(tx, ty)
 
 <dl>
  <dt><em>t</em></dt>
- <dd><span style="line-height: 1.5;">Is a {{cssxref("&lt;length&gt;")}} representing the z-component of the translating vector. It can't be a {{cssxref("&lt;percentage&gt;")}} value; in that case the property containing the transform is considered invalid.</span></dd>
+ <dd>Is a {{cssxref("&lt;length&gt;")}} representing the z-component of the translating vector. It can't be a {{cssxref("&lt;percentage&gt;")}} value; in that case the property containing the transform is considered invalid.</dd>
 </dl>
 
-<table class="standard-table">
+<table>
  <thead>
   <tr>
    <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
@@ -891,4 +891,4 @@ translate(tx, ty)
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>

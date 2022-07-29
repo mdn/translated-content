@@ -19,7 +19,9 @@ La méthode **`getFloat64()`** permet de lire un entier signé sur 64 bits (type
 
 ## Syntaxe
 
-    dataview.getFloat64(positionOctet [, littleEndian])
+```js
+dataview.getFloat64(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 

@@ -18,7 +18,9 @@ La méthode **`toString()`** renvoie une chaine de caractères représentant l'o
 
 ## Syntaxe
 
-    str.toString()
+```js
+str.toString()
+```
 
 ### Valeur de retour
 

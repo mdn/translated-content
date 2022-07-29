@@ -11,7 +11,9 @@ La méthode `window.getComputedStyle()` donne la valeur calculée finale de tout
 
 ## Syntaxe
 
-    var style = window.getComputedStyle(element[, pseudoElt]);
+```js
+var style = window.getComputedStyle(element[, pseudoElt]);
+```
 
 - element
   - : L’{{ domxref("Element") }} pour lequel vous voulez obtenir une valeur calculée.
@@ -84,8 +86,7 @@ Le premier argument doit être un Element, sinon, si par exemple un #text Node e
 | Spécification                                                                                                            | Statut                           | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
 | {{SpecName("CSSOM", "#dom-window-getcomputedstyle", "getComputedStyle()")}}                     | {{Spec2("CSSOM")}}         |                      |
-| {{SpecName("DOM2 Style", "#CSS-CSSview-getComputedStyle",
-        "getComputedStyle()")}} | {{Spec2("DOM2 Style")}} | Définition initiale. |
+| {{SpecName("DOM2 Style", "#CSS-CSSview-getComputedStyle", "getComputedStyle()")}} | {{Spec2("DOM2 Style")}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

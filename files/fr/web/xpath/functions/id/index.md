@@ -12,7 +12,9 @@ La fonction `id` recherche les nœuds correspondant aux identifiants `id` donné
 
 ### Syntaxe
 
-    id( expression )
+```
+id( expression )
+```
 
 ### Arguments
 

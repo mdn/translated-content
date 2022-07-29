@@ -18,7 +18,9 @@ La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet pos
 
 ## Syntaxe
 
-    obj.hasOwnProperty(prop)
+```js
+obj.hasOwnProperty(prop)
+```
 
 ### Paramètres
 

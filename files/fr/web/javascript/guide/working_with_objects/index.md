@@ -190,8 +190,8 @@ De la même façon, on pourra utiliser des initialisateurs pour créer des table
 
 On peut aussi créer des objets d'une autre façon, en suivant deux étapes :
 
-1.  On définit une fonction qui sera un constructeur définissant le type de l'objet. La convention, pour nommer les constructeurs, est d'utiliser une majuscule comme première lettre pour l'identifiant de la fonction.
-2.  On crée une instance de l'objet avec `new`.
+1. On définit une fonction qui sera un constructeur définissant le type de l'objet. La convention, pour nommer les constructeurs, est d'utiliser une majuscule comme première lettre pour l'identifiant de la fonction.
+2. On crée une instance de l'objet avec `new`.
 
 Pour définir le type d'un objet, on crée une fonction qui définit le nom de ce type et les propriétés et méthodes des instances. Ainsi, si on souhaite créer un type d'objet pour représenter des voitures, on pourra nommer ce type `voiture`, et il pourra avoir des propriétés pour le fabricant, le modèle et l'année. Pour ce faire, on pourra écrire la fonction suivante :
 
@@ -313,7 +313,7 @@ Voiture.prototype.couleur = null;
 voiture1.couleur = "noir";
 ```
 
-Pour plus d'informations, voir l'article sur [la propriété `prototype`](/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function) de l'objet `Function` de la [référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Pour plus d'informations, voir l'article sur [la propriété `prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) de l'objet `Function` de la [référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 ## Définir des méthodes
 

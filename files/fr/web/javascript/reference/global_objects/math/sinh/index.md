@@ -21,7 +21,9 @@ La fonction **`Math.sinh()`** renvoie le sinus hyperbolique d'un nombre, dont la
 
 ## Syntaxe
 
-    Math.sinh(x)
+```js
+Math.sinh(x)
+```
 
 ### Paramètres
 

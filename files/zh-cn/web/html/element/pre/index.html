@@ -13,17 +13,16 @@ translation_of: Web/HTML/Element/pre
 
 <div>{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a> and send us a pull request.</p>
 
 <div class="note">
-<p><strong>注意：</strong> 你需要将该元素里的 '&lt;' 字符转义为 '&amp;lt;' 以保证代码里的关闭代码不被浏览器解释为标签。</p>
+<p><strong>注意：</strong> 你需要将该元素里的 '&lt;' 字符转义为 '&amp;lt;' 以保证代码里的关闭代码不被浏览器解释为标签。</p>
 </div>
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/Web/Guide/HTML/Content_categories">内容类别</a></th>
-   <td>流内容 ( <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) , 可触知的内容 (palpable content).</td>
+   <td>流内容 ( <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) , 可触知的内容 (palpable content).</td>
   </tr>
   <tr>
    <th scope="row">允许的 内容</th>
@@ -35,7 +34,7 @@ translation_of: Web/HTML/Element/pre
   </tr>
   <tr>
    <th scope="row">允许的 父元素</th>
-   <td>任何可以接受流内容 ( <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) 的元素</td>
+   <td>任何可以接受流内容 ( <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>) 的元素</td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
@@ -53,9 +52,9 @@ translation_of: Web/HTML/Element/pre
 <p>这个元素只具有全局属性。</p>
 
 <dl>
- <dt>{{htmlattrdef("cols")}} {{non-standard_inline}}{{obsolete_inline}}</dt>
+ <dt>{{htmlattrdef("cols")}} {{non-standard_inline}}{{Deprecated_Inline}}</dt>
  <dd>定义每行的最大字符数。这是一个非标准的属性，作用与{{htmlattrxref("width", "pre")}}相同。要实现这样的效果，应该使用 CSS。</dd>
- <dt>{{htmlattrdef("width")}} {{obsolete_inline}}</dt>
+ <dt>{{htmlattrdef("width")}} {{Deprecated_Inline}}</dt>
  <dd>包含每行的最大字符数。虽然在技术上仍被实现，但这个属性没有视觉效果。要实现这样的效果，应该使用 CSS。</dd>
  <dt>{{htmlattrdef("wrap")}} {{non-standard_inline}}</dt>
  <dd>提示溢出怎样发生。在现代浏览器中，这个提示会被忽略，且被没有视觉效果。要实现这样的效果，应该使用 CSS。</dd>
@@ -82,7 +81,7 @@ body {
 
 <p>People experiencing low vision conditions and browsing with the aid of assistive technology such as a screen reader may not understand what the preformatted text characters are representing when they are read out in sequence.</p>
 
-<p>A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by a combination of an {{htmlattrxref("id")}} and the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA</a> <code>role</code> and <code>aria-labelledby</code> attributes allow the preformatted text to be announced as an image, with the <code>figcaption</code> serving as the image's alternate description.</p>
+<p>A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by a combination of an {{htmlattrxref("id")}} and the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">ARIA</a> <code>role</code> and <code>aria-labelledby</code> attributes allow the preformatted text to be announced as an image, with the <code>figcaption</code> serving as the image's alternate description.</p>
 
 <h3 id="示例_2">示例</h3>
 
@@ -111,32 +110,7 @@ body {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No significant change from {{SpecName("HTML WHATWG")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>No significant change from {{SpecName("HTML4.01")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.3.4', '&lt;dl&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Deprecated the <code>cols</code> attribute</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

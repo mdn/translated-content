@@ -1,20 +1,14 @@
 ---
 title: box-orient
 slug: Web/CSS/box-orient
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/box-orient
+browser-compat: css.properties.box-orient
 ---
 {{CSSRef}}{{Non-standard_header}}
 
-> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
+> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) pour plus d'informations à propos du standard actuel.
 
-La propriété CSS **`box-orient`** définit si un élément organise son contenu horizontalement ou verticalement.
-
-Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) qui décrit les différentes propriétés des boîtes flexibles.
+La propriété [CSS](/fr/docs/Web/CSS) **`box-orient`** définit si un élément organise son contenu horizontalement ou verticalement.
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -29,10 +23,6 @@ box-orient: initial;
 box-orient: unset;
 ```
 
-Ainsi, les éléments XUL {{XULElem("box")}} et {{XULElem("hbox")}} disposent leurs contenus horizontalement par défaut alors que  {{XULElem("vbox")}} organise son contenu de façon verticale par défaut.
-
-Les éléments HTML disposent leurs contenus selon l'axe _inline_ par défaut. Cette propriété CSS ne s'applique qu'aux éléments HTML pour lesquels la propriété {{cssxref("display")}} vaut {{cssxref("box")}} ou {{cssxref("inline-box")}}.
-
 ## Syntaxe
 
 ### Valeurs
@@ -42,65 +32,69 @@ Les éléments HTML disposent leurs contenus selon l'axe _inline_ par défaut. C
 - `vertical`
   - : La boîte organise son contenu verticalement.
 - `inline-axis` (HTML)
-  - : La boîte organise son contenu (ses éléments-fils) dans le sens de l'axe de lecture (axe _inline_).
+  - : La boîte organise son contenu (ses éléments enfants) dans le sens de l'axe de lecture (axe <i lang="en">inline</i>).
 - `block-axis` (HTML)
-  - : La boîte organise son contenu (ses éléments-fils) dans le sens perpendiculaire à l'axe de lecteur (axe _block_).
+  - : La boîte organise son contenu (ses éléments enfants) dans le sens perpendiculaire à l'axe de lecteur (axe <i lang="en">block</i>).
 
-Les axes _inline_ et _block_ dépendent du mode d'écriture (pour l'anglais, ils correspondront, respectivement, à `horizontal` et `vertical`.
+Les axes en ligne et de bloc dépendent du mode d'écriture (pour l'anglais, ils correspondront, respectivement, à `horizontal` et `vertical`.
 
-### Syntaxe formelle
+## Description
+
+Les éléments HTML disposent par défaut leur contenu le long de l'axe en ligne. Cette propriété CSS s'appliquera uniquement aux éléments HTML pour lesquels la propriété CSS [`display`](/fr/docs/Web/CSS/display) vaut `box` ou `inline-box`.
+
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Définir une orientation de boîte horizontale
 
-```css
-div.exemple {
-  display: -moz-box; /* Mozilla */
-  display: -webkit-box; /* WebKit */
-  display: box; /* On utilise les boîtes */
+Dans cet exemple, la propriété `box-orient` placera les deux sections [`<p>`](/fr/docs/Web/HTML/Element/p) sur la même ligne.
 
-  -moz-box-orient: horizontal; /* Mozilla */
-  -webkit-box-orient: horizontal; /* WebKit */
-  box-orient: horizontal; /* spécifié */
-}
-```
-
-### HTML
+#### HTML
 
 ```html
 <div class="exemple">
-  <p>Je serai à gauche de mon voisin.</p>
-  <p>Et moi à droite de mon voisin.</p>
+    <p>Je serai à gauche de mon voisin.</p>
+    <p>Je serai à droite de mon voisin.</p>
 </div>
 ```
 
-### Résultat
+#### CSS
 
-On aura les deux paragraphes situés côte à côte.
+```css
+div.exemple {
+  display: -moz-box;                /* Mozilla */
+  display: -webkit-box;             /* WebKit */
+  display: box;                     /* Comme spécifié */
 
-{{EmbedLiveSample("Exemples")}}
+  /* Les enfants devraient s'orienter verticalement */
+  -moz-box-orient: horizontal;      /* Mozilla */
+  -webkit-box-orient: horizontal;   /* WebKit */
+  box-orient: horizontal;           /* Comme spécifié */
+}
+```
 
-## Notes
+#### Résultat
 
-Pour les éléments XUL, si l'orientation est définie avec l'attribut {{XULAttr("orient")}} cette propriété est ignorée.
+{{EmbedLiveSample('', '', 100)}}
 
 ## Spécifications
 
-- [Brouillon de travail pour le module des boîtes flexibles (W3C)](https://www.w3.org/TR/css3-flexbox/) {{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}
-- [Ancienne version de la spécification.](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) {{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}
-
-{{cssinfo}}
+Cette propriété ne fait partie d'aucun standard.
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-orient")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("box-direction")}},
-- {{cssxref("box-pack")}},
-- {{cssxref("box-align")}},
-- {{cssxref("flex-direction")}}.
+- [`box-direction`](/fr/docs/Web/CSS/box-direction)
+- [`box-pack`](/fr/docs/Web/CSS/box-pack)
+- [`box-align`](/fr/docs/Web/CSS/box-align)
+- [`flex-direction`](/fr/docs/Web/CSS/flex-direction)

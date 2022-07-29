@@ -17,9 +17,11 @@ L'instruction **`with`** permet d'étendre la portée chaînée d'une instructio
 
 ## Syntaxe
 
-    with (expression) {
-      instruction
-    }
+```js
+with (expression) {
+  instruction
+}
+```
 
 - `expression`
   - : L'expression fournie est ajoutée à la portée chaînée utilisée lors de l'évaluation de l'instruction. Les parenthèses sont obligatoires.

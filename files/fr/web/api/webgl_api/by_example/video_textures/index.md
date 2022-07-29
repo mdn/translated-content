@@ -11,8 +11,6 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Video_textures
 original_slug: Web/API/WebGL_API/By_example/Les_textures_vidéos
 ---
-{{draft}}
-
 {{Previous("Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}
 
 Cet exemple illustre comment utiliser des fichiers vidéos comme textures.

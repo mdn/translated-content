@@ -17,7 +17,9 @@ La méthode **`Document.hasFocus()`** retourne une valeur  {{jsxref("Boolean")}}
 
 ## Syntaxe
 
-    focused = document.hasFocus();
+```js
+focused = document.hasFocus();
+```
 
 ### Valeur retournée
 

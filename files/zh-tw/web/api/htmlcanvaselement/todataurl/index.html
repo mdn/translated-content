@@ -12,15 +12,15 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 </div>
 </div>
 
-<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> 方法回傳含有圖像和參數設置特定格式的 <a href="/en-US/docs/Web/HTTP/data_URIs">data URIs</a> (預設 <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). 回傳的圖像解析度為 96 dpi.</p>
+<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> 方法回傳含有圖像和參數設置特定格式的 <a href="/en-US/docs/Web/HTTP/data_URIs">data URIs</a> (預設 <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>). 回傳的圖像解析度為 96 dpi.</p>
 
 <ul>
  <li>如果 canvas 的高度或是寬度為 <code>0</code>, 將會回傳字串 <code>"data:,"</code>.</li>
  <li>如果要求的圖像類型並非 <code>image/png</code>, 但是回傳的類型卻是 <code>data:image/png</code>, 表示要求的圖像類型並不支援.</li>
- <li>Chrome 也支援 <code>image/webp</code> 類型.</li>
+ <li>Chrome 也支援 <code>image/webp</code> 類型.</li>
 </ul>
 
-<h2 id="Syntax" name="Syntax">表達式</h2>
+<h2 id="Syntax">表達式</h2>
 
 <pre class="syntaxbox"><var><em>canvas</em>.toDataURL(<em>type</em>, <em>encoderOptions</em>);</var>
 </pre>
@@ -31,13 +31,13 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
  <dt><code>type</code> {{optional_inline}}</dt>
  <dd>圖像格式的 {{domxref("DOMString")}}. 預設為 <code>image/png</code>.</dd>
  <dt><code>encoderOptions</code> {{optional_inline}}</dt>
- <dd><code>表示 image/jpeg 或是 image/webp 的圖像品質, 為0</code> 到 <code>1</code> 之間的 {{jsxref("Number")}}.<br>
+ <dd><code>表示 image/jpeg 或是 image/webp 的圖像品質, 為0</code> 到 <code>1</code> 之間的 {{jsxref("Number")}}.<br>
  如果值不在上述範圍中, 將會使用預設值. 其他的會忽略.</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>
 
-<p>包含 <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> 的 {{domxref("DOMString")}}.</p>
+<p>包含 <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> 的 {{domxref("DOMString")}}.</p>
 
 <h2 id="範例">範例</h2>
 
@@ -63,7 +63,7 @@ var mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
 var lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 </pre>
 
-<h3 id="Example:_Dynamically_change_images" name="Example:_Dynamically_change_images">範例: 動態改變圖像</h3>
+<h3 id="Example:_Dynamically_change_images">範例: 動態改變圖像</h3>
 
 <p>為了動態改變圖像, 可以與滑鼠事件一起使用 (gray-scale versus color in this example):</p>
 
@@ -116,36 +116,13 @@ function removeColors() {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change since the latest snapshot, {{SpecName('HTML5 W3C')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Snapshot of the {{SpecName('HTML WHATWG')}} containing the initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
 {{Compat("api.HTMLCanvasElement.toDataURL")}}
 
-<h2 id="See_Also" name="See_Also">參見</h2>
+<h2 id="See_Also">參見</h2>
 
 <ul>
  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>

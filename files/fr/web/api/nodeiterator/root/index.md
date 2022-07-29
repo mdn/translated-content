@@ -16,7 +16,9 @@ La propriété en lecture seule **`NodeIterator.root`** représente le {{DOMxref
 
 ## Syntaxe
 
-    root = nodeIterator.root;
+```js
+root = nodeIterator.root;
+```
 
 ## Exemple
 

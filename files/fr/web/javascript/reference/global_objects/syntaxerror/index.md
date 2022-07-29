@@ -1,54 +1,31 @@
 ---
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - SyntaxError
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 original_slug: Web/JavaScript/Reference/Objets_globaux/SyntaxError
+browser-compat: javascript.builtins.SyntaxError
 ---
 {{JSRef}}
 
-L'objet **`SyntaxError`** représente une erreur qui se produit lors de l'interprétation d'un code dont la syntaxe est invalide.
+L'objet **`SyntaxError`** représente une erreur qui se produit lors de l'interprétation d'un code dont la syntaxe est invalide. Une telle exception est déclenchée lorsque le moteur JavaScript rencontre des entités lexicales invalides ou dans un ordre invalide par rapport à la grammaire du langage.
 
-## Description
+## Constructeur
 
-Une exception `SyntaxError` est levée lorsque le moteur JavaScript rencontre des entités lexicales invalide ou dans un ordre invalide par rapport à la grammaire du langage.
+- [`SyntaxError()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError)
+  - : Crée un nouvel objet `SyntaxError`.
 
-## Syntaxe
+## Propriétés des instances
 
-    new SyntaxError([message[, nomFichier[, numLigne]]])
-
-### Paramètres
-
-- `message`{{optional_inline}}
-  - : Une description, lisible par un humain, de l'erreur.
-- `nomFichier` {{optional_inline}}{{non-standard_inline}}
-  - : Le nom du fichier contenant le code provoquant l'erreur.
-- `numLigne` {{optional_inline}}{{non-standard_inline}}
-  - : Le numéro de la ligne du code qui a provoqué l'exception.
-
-## Propriétés
-
-- {{jsxref("SyntaxError.prototype")}}
-  - : Cette méthode permet d'ajouter des propriétés aux instance de `SyntaxError`.
-
-## Méthodes
-
-L'objet global `SyntaxError` ne contient pas de méthodes directes. En revanche, il hérite de méthodes grâce à sa chaîne de prototypes.
-
-## Instances de `SyntaxError`
-
-### Propriétés
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError/prototype', 'Propriétés')}}
-
-### Méthodes
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError/prototype', 'Méthodes')}}
+- [`SyntaxError.prototype.message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message)
+  - : Le message d'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`SyntaxError.prototype.fileName`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName)
+  - : Le chemin du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`SyntaxError.prototype.lineNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber)
+  - : Le numéro de ligne dans le fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`SyntaxError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
+  - : Le numéro de colonne de la ligne du fichier qui a déclenché l'erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
+- [`SyntaxError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+  - : La pile d'appels. Héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples
 
@@ -86,18 +63,12 @@ try {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                       | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.11.6.4', 'SyntaxError')}}                                                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.SyntaxError")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Error")}}
-- {{jsxref("SyntaxError.prototype")}}
+- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)

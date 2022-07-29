@@ -54,7 +54,7 @@ Math.max(-10, 20);  //  20
 
 <pre class="brush: js">var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
-    return Math.max(a, b);
+    return Math.max(a, b);
 }, -Infinity);
 </pre>
 
@@ -70,39 +70,11 @@ var max = arr.reduce(function(a, b) {
 var max = Math.max(...arr);
 </pre>
 
-<p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Using <code>apply</code> and built-in functions</a> for more details. The <code>reduce</code> solution does not have this problem.</p>
+<p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Using <code>apply</code> and built-in functions</a> for more details. The <code>reduce</code> solution does not have this problem.</p>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.11', 'Math.max')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.max', 'Math.max')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.max', 'Math.max')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

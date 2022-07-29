@@ -17,7 +17,9 @@ La méthode **`grow()`**, rattachée au prototype de {{jsxref("WebAssembly.Table
 
 ## Syntaxe
 
-    table.grow(nombre);
+```js
+table.grow(nombre);
+```
 
 ### Paramètres
 

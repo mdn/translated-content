@@ -18,7 +18,9 @@ La méthode **`lastIndexOf()`** renvoie l'indice, dans la chaîne courante, de l
 
 ## Syntaxe
 
-    str.lastIndexOf(valeurRecherchée[, indiceDébut])
+```js
+str.lastIndexOf(valeurRecherchée[, indiceDébut])
+```
 
 ### Paramètres
 

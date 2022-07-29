@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_formal_parameter
 
 ## Message
 
-    SyntaxError: missing formal parameter (Firefox)
+```
+SyntaxError: missing formal parameter (Firefox)
+```
 
 ## Type d'erreur
 

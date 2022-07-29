@@ -174,7 +174,7 @@ new Intl.DateTimeFormat(locales, options)
     - `second`
       - : 초. 가능한 값은 `"numeric"`, `"2-digit"`입니다.
     - `fractionalSecondDigits`
-    
+
       - : 밀리초를 나타낼 소숫점 이하 자릿수. 가능한 값은 다음과 같습니다.
 
         - `0` (밀리초를 표시하지 않음.)
@@ -241,7 +241,7 @@ console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
 const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
-	
+
 for (const zoneName of timezoneNames) {
   var formatter = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/Los_Angeles',
@@ -249,7 +249,7 @@ for (const zoneName of timezoneNames) {
   });
   console.log(zoneName + ": " + formatter.format(date) );
 }
-	
+
 // 예상 출력 결과:
 // > "short: 12/16/2021, PST"
 // > "long: 12/16/2021, Pacific Standard Time"

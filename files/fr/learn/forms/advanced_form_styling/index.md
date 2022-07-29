@@ -317,7 +317,7 @@ button {
 }
 ```
 
-> **Note :** Si vous souhaitez tester ces exemples sur différents navigateurs en même temps, vous pouvez [les retrouver ici](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (vous pouvez également [voir leur code source](https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html)).
+> **Note :** Si vous souhaitez tester ces exemples sur différents navigateurs en même temps, vous pouvez [les retrouver ici](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) (vous pouvez également [voir leur code source](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)).
 >
 > Il faut également garder à l'esprit que nous avons ajouté du JavaScript à la page qui liste les fichiers sélectionnés par le sélecteur de fichier (directement après le contrôle). Il s'agit d'une version simplifiée de l'exemple trouvé sur la page de référence pour [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file#exemples).
 
@@ -479,7 +479,7 @@ label[for="file"]:active {
 }
 ```
 
-Vous pouvez voir le résultat de la mise en forme précédente dans l'exemple qui suit (vous pouvez également le voir sur une autre page [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) et consulter [le code source](https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html)).
+Vous pouvez voir le résultat de la mise en forme précédente dans l'exemple qui suit (vous pouvez également le voir sur une autre page [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) et consulter [le code source](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/styled-file-picker.html)).
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}
 

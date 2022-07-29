@@ -30,13 +30,13 @@ Faisons un essai : copiez ces trois lignes de code CSS dans un nouveau fichier d
 
 Pour que cela fonctionne, il faut appliquer le CSS au document HTML, sinon la mise en forme décrite dans le fichier CSS n'affectera pas l'affichage de la page HTML dans la navigateur (si vous n'avez pas suivi toutes les étapes pour arriver ici, vous pouvez lire l'article [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers) et [Les bases du HTML](/fr/Apprendre/Commencer_avec_le_web/Les_bases_HTML) pour savoir par où commencer).
 
-1.  Ouvrez votre fichier `index.html` et copiez la ligne suivante quelque part au sein de l'élément `head` (c'est-à-dire entre les balises `<head>` et `</head>`) :
+1. Ouvrez votre fichier `index.html` et copiez la ligne suivante quelque part au sein de l'élément `head` (c'est-à-dire entre les balises `<head>` et `</head>`) :
 
     ```html
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     ```
 
-2.  Sauvegardez `index.html` puis chargez-le dans votre navigateur. Vous devriez obtenir quelque chose comme :
+2. Sauvegardez `index.html` puis chargez-le dans votre navigateur. Vous devriez obtenir quelque chose comme :
 
 ![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)Si le texte de votre paragraphe s'affiche en rouge, félicitations ! Vous venez d'écrire votre premier CSS fonctionnel !
 
@@ -44,7 +44,7 @@ Pour que cela fonctionne, il faut appliquer le CSS au document HTML, sinon la mi
 
 Regardons un peu plus en détails ce que nous avons écrit en CSS :
 
-![Diagramme expliquant les différents éléments d'une déclaration CSS](CSS.svg)
+![Diagramme expliquant les différents éléments d'une déclaration CSS](css-declaration-small.png)
 
 Cette structure s'appelle **un ensemble de règles** (ou seulement « une règle »). Les différentes parties se nomment :
 
@@ -101,14 +101,14 @@ Il existe plein d'autres sélecteurs, pour tous les découvrir, vous pouvez lire
 
 Maintenant que nous avons vu quelques bases de CSS, ajoutons quelques règles et informations à notre fichier `style.css` pour que notre exemple soit réussi. Tout d'abord, améliorons les polices et le texte.
 
-1.  Pour commencer, revenez quelques étapes en arrière et récupérez le [résultat de Google Fonts](/fr/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font) enregistré quelque part. Ensuite, ajoutez l'élément `<link ... >` quelque part au sein de `head` dans le fichier `index.html` (c'est-à-dire quelque part entre les balises `<head>` et `</head>`). Ça devrait ressembler à :
+1. Pour commencer, revenez quelques étapes en arrière et récupérez le [résultat de Google Fonts](/fr/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font) enregistré quelque part. Ensuite, ajoutez l'élément `<link ... >` quelque part au sein de `head` dans le fichier `index.html` (c'est-à-dire quelque part entre les balises `<head>` et `</head>`). Ça devrait ressembler à :
 
     ```html
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     ```
 
-2.  Ensuite, supprimez la règle existante dans votre fichier `style.css`. Cette règle était pratique pour tester mais afficher du texte en rouge n'est pas la meilleure des mises en forme.
-3.  Ajoutez les lignes suivantes à leur place, en remplaçant la ligne avec `modèle` avec la ligne fournie par Google Fonts qui contient `font-family` (`font-family` représente la (ou les) police(s) qu'on veut utiliser pour le texte). Ce premier ensemble de règles définit une police de base et sa taille pour toute la page (`<html>` est l'élément parent de tous les éléments de la page, tous les éléments contenus dans la page hériteront donc de la même `font-size` et `font-family`) :
+2. Ensuite, supprimez la règle existante dans votre fichier `style.css`. Cette règle était pratique pour tester mais afficher du texte en rouge n'est pas la meilleure des mises en forme.
+3. Ajoutez les lignes suivantes à leur place, en remplaçant la ligne avec `modèle` avec la ligne fournie par Google Fonts qui contient `font-family` (`font-family` représente la (ou les) police(s) qu'on veut utiliser pour le texte). Ce premier ensemble de règles définit une police de base et sa taille pour toute la page (`<html>` est l'élément parent de tous les éléments de la page, tous les éléments contenus dans la page hériteront donc de la même `font-size` et `font-family`) :
 
     ```css
     html {
@@ -119,7 +119,7 @@ Maintenant que nous avons vu quelques bases de CSS, ajoutons quelques règles et
 
     > **Note :** Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire**  **de CSS.**  Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
 
-4.  Ensuite, fixons les tailles des différents textes contenus dans le corps du HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, et {{htmlelement("p")}}). Nous allons également centrer le texte du titre et donner une taille de ligne et un espacement de caractère entre les lettres pour que le contenu du corps (_body_) du document soit plus lisible :
+4. Ensuite, fixons les tailles des différents textes contenus dans le corps du HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, et {{htmlelement("p")}}). Nous allons également centrer le texte du titre et donner une taille de ligne et un espacement de caractère entre les lettres pour que le contenu du corps (_body_) du document soit plus lisible :
 
     ```css
     h1 {

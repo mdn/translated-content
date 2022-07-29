@@ -12,7 +12,9 @@ La fonction `starts-with` vérifie si la première chaîne débute par la second
 
 ### Syntaxe
 
-    starts-with( meule , aiguille)
+```
+starts-with( meule , aiguille)
+```
 
 ### Arguments
 

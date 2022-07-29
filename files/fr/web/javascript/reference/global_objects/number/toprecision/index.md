@@ -18,7 +18,9 @@ La méthode **`toPrecision()`** renvoie une chaîne de caractères représentant
 
 ## Syntaxe
 
-    numObj.toPrecision([précision])
+```js
+numObj.toPrecision([précision])
+```
 
 ### Paramètre
 

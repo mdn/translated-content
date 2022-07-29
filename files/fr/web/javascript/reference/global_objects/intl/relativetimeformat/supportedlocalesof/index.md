@@ -21,7 +21,9 @@ La méthode **`Intl.RelativeTimeFormat.supportedLocalesOf()`** renvoie un tablea
 
 ## Syntaxe
 
-    Intl.RelativeTimeFormat.supportedLocalesOf(locales[, options])
+```js
+Intl.RelativeTimeFormat.supportedLocalesOf(locales[, options])
+```
 
 ### Paramètres
 
@@ -48,7 +50,9 @@ Cette méthode renvoie un tableau qui est un sous-ensemble de `locales`. Les bal
 
 Si on dispose d'un environnement qui supporte les locales indonésienne et allemande mais pas balinaise pour le formatage des temps relatifs, `supportedLocalesOf` renverra les balises BCP 47 pour l'indonésien et l'allemand (bien que la collation pinyin ne soit pas pertinente pour les dates ni pour l'indonésien et qu'il soit peu probable qu'une variante indonésienne existe pour l'allemand). Pour l'exemple, on l'utilise l'algorithme `"lookup"`. Si on utilisait `"best fit"`, on pourrait considérer que l'indonésien est adéquat pour la locale balinaise (sachant que la plupart des balinais comprend l'indonésien) et donc également renvoyer la balise balinaise.
 
-    var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];var options = { localeMatcher: 'lookup' };console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(', '));// → "id-u-co-pinyin, de-ID"
+```js
+var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];var options = { localeMatcher: 'lookup' };console.log(Intl.RelativeTimeFormat.supportedLocalesOf(locales, options).join(', '));// → "id-u-co-pinyin, de-ID"
+```
 
 ## Spécifications
 

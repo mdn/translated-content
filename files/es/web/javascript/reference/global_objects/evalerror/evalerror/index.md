@@ -58,4 +58,3 @@ try {
 
 - {{jsxref("Error")}}
 - {{jsxref("Global_Objects/eval", "eval()")}}
-

@@ -131,10 +131,12 @@ Les données sont ajoutées à l'URL sous forme d'une suite de paires nom/valeur
 
 La requête HTTP ressemble à quelque chose comme&nbsp;:
 
-    GET /?say=Hi&to=Mom HTTP/1.1
-    Host: foo.com
+```
+GET /?say=Hi&to=Mom HTTP/1.1
+Host: foo.com
+```
 
-> **Note :** Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> **Note :** Vous trouverez cet exemple sur GitHub — voyez [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 #### La méthode POST
 
@@ -160,12 +162,14 @@ Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour
 
 Quand le formulaire est soumis avec la méthode `POST`, aucune donnée n'est ajoutée à l'URL et la requête HTTP ressemble à ceci, les données incorporées au corps de requête&nbsp;:
 
-    POST / HTTP/1.1
-    Host: foo.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 13
+```
+POST / HTTP/1.1
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
 
-    say=Hi&to=Mom
+say=Hi&to=Mom
+```
 
 L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
 
@@ -175,11 +179,11 @@ L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-T
 
 Les requêtes HTTP ne sont jamais montrées à l'utilisateur (si vous voulez les voir, vous devez utiliser des outils comme la [Console Web](/fr/docs/Tools/Web_Console) de Firefox ou les [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). À titre d'exemple, les données de formulaire sont visibles comme suit dans l'onglet Chrome Network. Après avoir soumis le formulaire&nbsp;:
 
-1.  Pressez F12
-2.  Selectionnez «&nbsp;Réseau&nbsp;»
-3.  Selectionnez «&nbsp;Tout&nbsp;»
-4.  Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
-5.  Selectionnez «&nbsp;En‑tête&nbsp;»
+1. Pressez F12
+2. Selectionnez «&nbsp;Réseau&nbsp;»
+3. Selectionnez «&nbsp;Tout&nbsp;»
+4. Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
+5. Selectionnez «&nbsp;En‑tête&nbsp;»
 
 Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
@@ -187,8 +191,8 @@ Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
 La seule chose affichée à l'utilisateur est l'URL appelée. Comme mentionné ci‑dessus, avec une requête `GET` l'utilisateur verra les données dans la barre de l'URL, mais avec une requête `POST` il ne verra rien. Cela peut être important pour deux raisons&nbsp;:
 
-1.  Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
-2.  Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
+1. Si vous avez besoin d'envoyer un mot de passe (ou toute autre donnée sensible), n'utilisez jamais la méthode GET ou vous risquez de l'afficher dans la barre d'URL, ce qui serait très peu sûr.
+2. Si vous avez besoin d'envoyer une grande quantité de données, la méthode POST est préférable, car certains navigateurs limitent la taille des URLs. De plus, de nombreux serveurs limitent la longueur des URL qu'ils acceptent.
 
 ## Côté serveur : récupérer les données
 
@@ -208,7 +212,7 @@ Le [PHP](https://php.net/) met à disposition des objets globaux pour accéder a
   echo  $say, ' ', $to;
 ```
 
-Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci opérer avec notre fichier exemple [php-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html) — il contient le même formulaire exemple que celui vu précédemment avec la méthode `post` avec `php-example.php` en action. À la soumission du formulaire, il envoie les données de ce dernier à [php-example.php](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php), contenant le code ci‑dessus. Quand le code est exécuté, la sortie dans le navigateur est `Hi Mom` « Bonjour maman ».
+Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci opérer avec notre fichier exemple [php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html) — il contient le même formulaire exemple que celui vu précédemment avec la méthode `post` avec `php-example.php` en action. À la soumission du formulaire, il envoie les données de ce dernier à [php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php), contenant le code ci‑dessus. Quand le code est exécuté, la sortie dans le navigateur est `Hi Mom` « Bonjour maman ».
 
 ![L'exécution du code PHP déclenche l'affichage de Hi Mom](php-result.png)
 
@@ -218,7 +222,7 @@ Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci 
 
 ### Exemple: Python
 
-Cet exemple vous montre comment utiliser Python pour faire la même chose — afficher les données sur une page web. Celui‑ci utilise [Flask framework](https://flask.pocoo.org/) pour le rendu des modèles, la gestion de la soumission des données du formulaire, etc (voyez [python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py)).
+Cet exemple vous montre comment utiliser Python pour faire la même chose — afficher les données sur une page web. Celui‑ci utilise [Flask framework](https://flask.pocoo.org/) pour le rendu des modèles, la gestion de la soumission des données du formulaire, etc (voyez [python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py)).
 
 ```python
 from flask import Flask, render_template, request
@@ -238,8 +242,8 @@ if __name__ == "__main__":
 
 Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbsp;:
 
-- [`form.html`](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
-- [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
+- [`form.html`](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
+- [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
 > **Note :** À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
 

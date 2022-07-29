@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Equal_as_assign
 
 ## Message
 
-    Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
+```
+Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
+```
 
 ## Type d'erreur
 

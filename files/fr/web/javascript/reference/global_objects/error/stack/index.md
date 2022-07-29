@@ -66,18 +66,22 @@ a@file:///C:/exemple.html:19:13
 
 De Firefox 14 à Firefox 29 :
 
-    trace@file:///C:/exemple.html:9
-    b@file:///C:/exemple.html:16
-    a@file:///C:/exemple.html:19
-    @file:///C:/exemple.html:21
+```
+trace@file:///C:/exemple.html:9
+b@file:///C:/exemple.html:16
+a@file:///C:/exemple.html:19
+@file:///C:/exemple.html:21
+```
 
 Firefox 13 et antérieur aurait produit à la place le texte suivant :
 
-    Error("monError")@:0
-    trace()@file:///C:/exemple.html:9
-    b(3,4,"\n\n",(void 0),[object Object])@file:///C:/exemple.html:16
-    a("premier appel, premierarg")@file:///C:/exemple.html:19
-    @file:///C:/exemple.html:21
+```
+Error("monError")@:0
+trace()@file:///C:/exemple.html:9
+b(3,4,"\n\n",(void 0),[object Object])@file:///C:/exemple.html:16
+a("premier appel, premierarg")@file:///C:/exemple.html:19
+@file:///C:/exemple.html:21
+```
 
 ### Pile d'un code evalué
 

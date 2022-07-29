@@ -18,7 +18,9 @@ La méthode statique **`Reflect.set()`** permet de définir ou de modifier une p
 
 ## Syntaxe
 
-    Reflect.set(cible, cléPropriété, valeur[, récepteur])
+```js
+Reflect.set(cible, cléPropriété, valeur[, récepteur])
+```
 
 ### Paramètres
 

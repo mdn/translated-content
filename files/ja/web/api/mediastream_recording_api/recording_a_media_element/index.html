@@ -243,7 +243,7 @@ let recordingTimeMS = 5000;
  <dt>5〜9行目</dt>
  <dd><code>getUserMedia()</code> から返された Promise が解決すると、プレビューの {{HTMLElement("video")}} 要素の {{domxref("HTMLMediaElement.srcObject","srcObject")}} プロパティを入力ストリームに設定し、ユーザーのカメラでキャプチャしている動画をプレビューボックスに表示します。 <code>&lt;video&gt;</code> 要素はミュートしているので、音声は再生しません。 Download（ダウンロード）ボタンのリンクも、ストリームを参照するように設定します。 次に、8行目で、{{domxref("MediaRecorder.captureStream()")}} メソッドがなければ接頭辞が付いた <code>preview.mozCaptureStream()</code> を呼び出すように <code>preview.captureStream()</code> を設定して、コードが Firefox で機能するようにします。 その後、プレビュー動画の再生開始時に解決する新しい {{jsxref("Promise")}} を作成して返します。</dd>
  <dt>10行目</dt>
- <dd>プレビュー動画の再生が開始されると、録画するメディアがあることがわかります。 したがって、先ほど作成した <code>{{anch("Starting media recording", "startRecording()")}}</code> 関数を呼び出し、プレビュー動画ストリーム（録画するソースメディアとして）と、<code>recordingTimeMS</code>（録画するメディアのミリ秒数として）を渡します。 前述のように、<code>startRecording()</code> は、録画が完了すると、解決ハンドラが呼び出される {{jsxref("Promise")}}（録画されたメディアデータのチャンクを含む {{domxref("Blob")}} オブジェクトの配列を入力として受け取る）を返します。</dd>
+ <dd>プレビュー動画の再生が開始されると、録画するメディアがあることがわかります。 したがって、先ほど作成した <code><a href="#starting_media_recording">startRecording()</a></code> 関数を呼び出し、プレビュー動画ストリーム（録画するソースメディアとして）と、<code>recordingTimeMS</code>（録画するメディアのミリ秒数として）を渡します。 前述のように、<code>startRecording()</code> は、録画が完了すると、解決ハンドラが呼び出される {{jsxref("Promise")}}（録画されたメディアデータのチャンクを含む {{domxref("Blob")}} オブジェクトの配列を入力として受け取る）を返します。</dd>
  <dt>11〜15行目</dt>
  <dd>録画プロセスの解決ハンドラは、ローカルに <code>recordedChunks</code> として知られるメディアデータの <code>Blob</code> の配列を入力として受け取ります。 最初にすることは、{{domxref("Blob.Blob", "Blob()")}} コンストラクターがオブジェクトの配列を1つのオブジェクトに連結するという事実を利用して、チャンクを MIME タイプが <code>"video/webm"</code> の単一の {{domxref("Blob")}} にマージすることです。 次に、{{domxref("URL.createObjectURL()")}} を使用して <code>Blob</code> を参照する URL を作成します。 これは、ダウンロードされた動画再生要素の {{htmlattrxref("src", "video")}} 属性の値（<code>Blob</code> から動画を再生できるようにする）とダウンロードボタンのリンクのターゲットになります。
  <p>その後、ダウンロードボタンの <code>download</code> 属性が設定されます。 {{htmlattrxref("download", "a")}} 属性は <code>Boolean</code> にすることができますが、ダウンロードするファイルの名前として使用する文字列に設定することもできます。 そのため、ダウンロードリンクの <code>download</code> 属性を <code>"RecordedVideo.webm"</code> に設定することで、ボタンをクリックすると内容が録画された動画である <code>"RecordedVideo.webm"</code> という名前のファイルをダウンロードするようにブラウザーに指示します。</p>
@@ -262,7 +262,7 @@ let recordingTimeMS = 5000;
   stop(preview.srcObject);
 }, false);</pre>
 
-<p>これは先ほど説明した <code>{{anch("Stopping the input stream", "stop()")}}</code> 関数を呼び出すだけです。</p>
+<p>これは先ほど説明した <code><a href="#stopping_the_input_stream">stop()</a></code> 関数を呼び出すだけです。</p>
 </div>
 
 <h2 id="Result" name="Result">結果</h2>

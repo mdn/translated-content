@@ -11,8 +11,8 @@ L'événement `unload` est appelé lorsque le document ou une ressource enfant e
 
 Il est lancé après :
 
-1.  [beforeunload](/en-US/docs/Mozilla_event_reference/beforeunload) (événement annulable)
-2.  [pagehide](/en-US/docs/Mozilla_event_reference/pagehide)
+1. [beforeunload](/en-US/docs/Mozilla_event_reference/beforeunload) (événement annulable)
+2. [pagehide](/en-US/docs/Mozilla_event_reference/pagehide)
 
 Le document se trouve alors dans un état particulier&nbsp;:
 

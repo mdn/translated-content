@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>replaceAll()</code></strong> 方法返回一个新字符串，新字符串所有满足 <code>pattern</code> 的部分都已被<code>replacement</code> 替换。<code>pattern</code>可以是一个字符串或一个 {{jsxref("RegExp")}}， <code>replacement</code>可以是一个字符串或一个在每次匹配被调用的函数。</p>
+<p><strong><code>replaceAll()</code></strong> 方法返回一个新字符串，新字符串所有满足 <code>pattern</code> 的部分都已被<code>replacement</code> 替换。<code>pattern</code>可以是一个字符串或一个 {{jsxref("RegExp")}}， <code>replacement</code>可以是一个字符串或一个在每次匹配被调用的函数。</p>
 
 <p>原始字符串保持不变。</p>
 
@@ -104,7 +104,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
   </tr>
   <tr>
    <td><code>p1, p2, ...</code></td>
-   <td>The <var>n</var>th string found by a parenthesized capture group, provided the first argument to <code>replace()</code> was a {{jsxref("RegExp")}} object. (Corresponds to <code>$1</code>, <code>$2</code>, etc. above.) For example, if <code>/(\a+)(\b+)/</code>, was given, <code>p1</code> is the match for <code>\a+</code>, and <code>p2</code> for <code>\b+</code>.</td>
+   <td>The <var>n</var>th string found by a parenthesized capture group, provided the first argument to <code>replace()</code> was a {{jsxref("RegExp")}} object. (Corresponds to <code>$1</code>, <code>$2</code>, etc. above.) For example, if <code>/(\a+)(\b+)/</code>, was given, <code>p1</code> is the match for <code>\a+</code>, and <code>p2</code> for <code>\b+</code>.</td>
   </tr>
   <tr>
    <td><code>offset</code></td>
@@ -134,7 +134,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 TypeError: replaceAll must be called with a global RegExp
 </pre>
 
-<p>这将可以正常运行:</p>
+<p>这将可以正常运行：</p>
 
 <pre class="brush: js; example-good">'aabbcc'.replaceAll(/b/g, '.');
 "aa..cc"
@@ -142,22 +142,11 @@ TypeError: replaceAll must be called with a global RegExp
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.String.replaceAll")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="了解更多">了解更多</h2>
 
