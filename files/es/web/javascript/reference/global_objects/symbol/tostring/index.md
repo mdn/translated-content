@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 browser-compat: javascript.builtins.Symbol.toString
 l10n:
-	sourceCommit: cf607d68522cd35ee7670782d3ee3a361eaef2e4
+  sourceCommit: cf607d68522cd35ee7670782d3ee3a361eaef2e4
 ---
 {{JSRef}}
 
