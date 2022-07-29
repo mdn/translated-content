@@ -1,5 +1,5 @@
 ---
-title: 'Array.prototype[@@iterator]()'
+title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 tags:
   - Array
@@ -10,72 +10,83 @@ tags:
   - Method
   - Prototype
   - Reference
-  - イテレーター
-  - メソッド
+  - Polyfill
+browser-compat: javascript.builtins.Array.@@iterator
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>@@iterator</strong></code> メソッドは<a href="/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル">反復プロトコル</a>の一部であり、値の列を同期的に反復する方法を定義します。</p>
+**`@@iterator`** メソッドは[反復プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)の一部であり、値の列を同期的に反復する方法を定義します。
 
-<p><code><strong>@@iterator</strong></code> プロパティの初期値は {{jsxref("Array.prototype.values()", "values()")}} プロパティの初期値と同じ関数オブジェクトです。</p>
+{{EmbedInteractiveExample("pages/js/array-iterator.html")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+**`@@iterator`** プロパティの初期値は {{jsxref("Array.prototype.values()", "values()")}} プロパティの初期値と同じ関数オブジェクトです。
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>[Symbol.iterator]()</code></pre>
+## 構文
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+```js
+[Symbol.iterator]()
+```
 
-<p>{{jsxref("Array.prototype.values()", "values()")}} <strong>イテレーター</strong> によって与えられる初期値です。既定では、 <code>arr[Symbol.iterator]</code> を使うと {{jsxref("Array.prototype.values()", "values()")}} を返します。</p>
+### 返値
 
-<h2 id="Examples" name="Examples">例</h2>
+{{jsxref("Array.prototype.values()", "values()")}} **反復子**によって与えられる初期値です。既定では、 `arr[Symbol.iterator]` を使うと {{jsxref("Array.prototype.values()", "values()")}} を返します。
 
-<h3 id="Iteration_using_for...of_loop" name="Iteration_using_for...of_loop">for...of ループを用いた反復</h3>
+## 例
 
-<h4 id="HTML">HTML</h4>
+### for...of ループを用いた反復
 
-<pre class="brush: html notranslate">&lt;ul id="letterResult"&gt;
-&lt;/ul&gt;</pre>
+#### HTML
 
-<h4 id="JavaScript">JavaScript</h4>
+```html
+<ul id="letterResult">
+</ul>
+```
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c'];
-var eArr = arr[Symbol.iterator]();
-var letterResult = document.getElementById('letterResult');
-// your browser must support for..of loop
-// and let-scoped variables in for loops
-// const and var could also be used
-for (let letter of eArr) {
- letterResult.innerHTML += "&lt;li&gt;" + letter + "&lt;/li&gt;";
+#### JavaScript
+
+```js
+const arr = ['a', 'b', 'c'];
+const eArr = arr[Symbol.iterator]();
+const letterResult = document.getElementById('letterResult');
+for (const letter of eArr) {
+  const li = document.createElement('li');
+  li.textContent = letter;
+  letterResult.appendChild(li);
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Iteration_using_for...of_loop', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/@@iterator')}}</p>
+{{EmbedLiveSample('Iteration_using_for...of_loop', '', '', '',
+  'Web/JavaScript/Reference/Global_Objects/Array/@@iterator')}}
 
-<h3 id="Alternative_iteration" name="Alternative_iteration">他の反復方法</h3>
+### 他の反復方法
 
-<pre class="brush: js notranslate">var arr = ['a', 'b', 'c', 'd', 'e'];
-var eArr = arr[Symbol.iterator]();
+```js
+const arr = ['a', 'b', 'c', 'd', 'e'];
+const eArr = arr[Symbol.iterator]();
 console.log(eArr.next().value); // a
 console.log(eArr.next().value); // b
 console.log(eArr.next().value); // c
 console.log(eArr.next().value); // d
 console.log(eArr.next().value); // e
-</pre>
+```
 
-<h3 id="Use_Case_for_brace_notation" name="Use_Case_for_brace_notation">括弧表記の使用法</h3>
+### 括弧表記の使用法
 
-<p>この構文をドット記法 (<code>Array.prototype.values()</code>) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。イテレータを受け取り、その値を反復処理する関数があるが、そのオブジェクトが [Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これはStringオブジェクトのような組み込みオブジェクトでも、カスタムオブジェクトでもよいでしょう。これは <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator">String</a> オブジェクトのような組込みオブジェクトや、独自オブジェクトである可能性があります。</p>
+この構文をドット記法 (`Array.prototype.values()`) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。反復子を受け取り、その値を反復処理する関数があるが、そのオブジェクトが \[Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これは [String](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) オブジェクトのような組み込みオブジェクトや、独自オブジェクトである可能性があります。
 
-<pre class="brush: js notranslate">function logIterable(it) {
-  var iterator = it[Symbol.iterator]();
-  // your browser must support for..of loop
-  // and let-scoped variables in for loops
-  // const and var could also be used
-  for (let letter of iterator) {
-      console.log(letter);
+```js
+function logIterable(it) {
+  if (!(Symbol.iterator in it)) {
+    console.log(it, ' is not an iterable object.');
+    return;
+  }
+
+  const iterator = it[Symbol.iterator]();
+  for (const letter of iterator) {
+    console.log(letter);
   }
 }
 
@@ -91,34 +102,24 @@ logIterable('abc');
 // b
 // c
 
-</pre>
+logIterable(123);
+// 123 is not an iterable object.
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Array.@@iterator")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.entries()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- [`core-js` による `Array.prototype[@@iterator]` のポリフィル](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.entries()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("Array.prototype.values()")}}
