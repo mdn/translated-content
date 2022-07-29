@@ -15,7 +15,7 @@ L'interface **`HTMLHeadingElement`** représente les différents éléments d'en
 
 *Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)*.
 
-- [`HTMLHeadingElement.align`](/fr/docs/Web/API/HTMLHeadingElement/align) {deprecated_inline}}
+- [`HTMLHeadingElement.align`](/fr/docs/Web/API/HTMLHeadingElement/align) {{deprecated_inline}}
   - : Chaîne représentant un attribut énuméré indiquant l'alignement de l'en-tête par rapport au contexte environnant. Les valeurs possibles sont `"left"`, `"right"`, `"justify"`, et `"center"`.
 
 ## Méthodes

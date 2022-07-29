@@ -5,8 +5,6 @@ translation_of: Web/API/RTCStatsReport
 ---
 <p>{{APIRef("WebRTC")}}</p>
 
-<p>{{draft("该页面目前尚不完整，正在建设中。 请注意，它还不能解答您所有的问题。")}}</p>
-
 <p><code><strong>RTCStatsReport</strong></code> 接口提供了通过调用 {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}，和 {{domxref("RTCRtpSender.getStats()")}} 这三个方法之一所获得的统计报告。该统计报告包含统计类别字符串名称到包含相应统计数据的对象的映射。</p>
 
 <p>在 {{domxref("RTCPeerConnection")}} 上调用 <code>getStats()</code> 可以指定是希望获取连接上的出站，入站还是所有流的统计信息。 <code>getStats()</code> 的 {{domxref("RTCRtpReceiver")}} 和 {{domxref("RTCRtpSender")}} 版本仅返回可用于调用它们的传入或传出流的统计信息。</p>

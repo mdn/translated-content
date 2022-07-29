@@ -96,45 +96,14 @@ console.log(Object.getOwnPropertyNames(p));
 // 数组元素类型只能是 String 或 Symbol
 </pre>
 
-<h2 id="标准">标准</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 {{Compat}}
 
-<h2 id="兼容性注意事项">兼容性注意事项</h2>
-
-<h3 id="Firefox_火狐">Firefox 火狐</h3>
-
-<ul>
- <li>在 Gecko 42 {{geckoRelease(42)}} 版本中，<code>ownKey</code> 的实施已经更新了，为了反映最终的 ES5 标准 (see {{bug(1049662)}}):
-
-  <ul>
-   <li>现在需要检查结果是不是数组以及数组元素类型是不是 string 或 symbol。</li>
-   <li>枚举重复的自有的属性名称不再失败。</li>
-  </ul>
- </li>
-</ul>
 
 <h2 id="另见">另见</h2>
 

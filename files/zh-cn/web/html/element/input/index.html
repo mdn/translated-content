@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/input
 ---
 <p>{{HTMLRef}}</p>
 
-<p><strong>HTML <code>&lt;input&gt;</code> 元素</strong>用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent")}}。</p>
+<p><strong>HTML <code>&lt;input&gt;</code> 元素</strong>用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent", "用户代理")}}。</p>
 
 <p>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/HTML/Element/input
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
-   <td>流动区域; 内容区域; 交互式内容（如果不是处于<code>hiddenhidden</code>状态）; 列表，可标签，可提交，可重置，与表单相关的元素。</td>
+   <td>流式元素；短语元素；交互元素（若 type 属性不处于隐藏 <code>hidden</code>状态）；表单相关内容、可列举的元素、可标签的元素、可提交的元素、可重置的元素。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -42,13 +42,13 @@ translation_of: Web/HTML/Element/input
    <th scope="row">允许的无障碍网络应用</th>
    <td>
     <ul>
-     <li><code>type=button</code>: {{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}</li>
-     <li><code>type=checkbox</code>: {{ARIARole("button")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("option")}}, {{ARIARole("switch")}}</li>
-     <li><code>type=image</code>: {{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}</li>
-     <li><code>type=radio</code>: {{ARIARole("menuitemradio")}}</li>
-     <li><code>type=color|date|datetime|datetime-local|email|file</code>: None</li>
-     <li><code>type=hidden|month|number|password|range|research</code>: None</li>
-     <li><code>type=search|submit|tel|text|url|week</code>: None</li>
+     <li><code>type=button</code>：{{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}, {{ARIARole("tab")}}</li>
+     <li><code>type=checkbox</code>：{{ARIARole("button")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("option")}}, {{ARIARole("switch")}}</li>
+     <li><code>type=image</code>：{{ARIARole("link")}}, {{ARIARole("menuitem")}}, {{ARIARole("menuitemcheckbox")}}, {{ARIARole("menuitemradio")}}, {{ARIARole("radio")}}, {{ARIARole("switch")}}</li>
+     <li><code>type=radio</code>：{{ARIARole("menuitemradio")}}</li>
+     <li><code>type=color|date|datetime|datetime-local|email|file</code>：None</li>
+     <li><code>type=hidden|month|number|password|range|research</code>：None</li>
+     <li><code>type=search|submit|tel|text|url|week</code>：None</li>
     </ul>
    </td>
   </tr>
@@ -61,7 +61,7 @@ translation_of: Web/HTML/Element/input
 
 <h2 id="&lt;input>_types"><code>&lt;input&gt;</code> types</h2>
 
-<p><code>&lt;input&gt;</code>的工作方式相当程度上取决于{{htmlattrxref("type", "input")}}属性的值，不同的 type 值会在各自的参考页中进行介绍。如果未指定此属性，则采用的默认类型为 <code>text</code>。</p>
+<p><code>&lt;input&gt;</code> 的工作方式相当程度上取决于 {{htmlattrxref("type", "input")}} 属性的值，不同的 type 值会在各自的参考页中进行介绍。如果未指定此属性，则采用的默认类型为 <code>text</code>。</p>
 
 <p>可用的值包括：</p>
 
@@ -84,56 +84,70 @@ translation_of: Web/HTML/Element/input
    <td>没有默认行为的按钮，上面显示 <a href="#attr-value">value</a> 属性的值，默认为空。</td>
    <td id="examplebutton">
     <pre class="brush: html hidden">
-&lt;input  type="button" name="button" /&gt;</pre>
-    {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}</td>
+&lt;input type="button" name="button" /&gt;
+    </pre>
+    {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/checkbox", "checkbox")}}</td>
    <td>复选框，可设为选中或未选中。</td>
    <td id="examplecheckbox">
     <pre class="brush: html hidden">
-&lt;input  type="checkbox" name="checkbox"/&gt;</pre>
-    {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}</td>
+&lt;input type="checkbox" name="checkbox"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/color", "color")}}</td>
    <td>用于指定颜色的控件；在支持的浏览器中，激活时会打开取色器。</td>
    <td id="examplecolor">
     <pre class="brush: html hidden">
-&lt;input  type="color" name="color"/&gt;</pre>
-    {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}</td>
+&lt;input type="color" name="color"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/date", "date")}}</td>
    <td>输入日期的控件（年、月、日，不包括时间）。在支持的浏览器激活时打开日期选择器或年月日的数字滚轮。</td>
    <td id="exampledate">
     <pre class="brush: html hidden">
-&lt;input  type="date" name="date"/&gt;</pre>
-    {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}</td>
+&lt;input type="date" name="date"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/datetime-local", "datetime-local")}}</td>
    <td>输入日期和时间的控件，不包括时区。在支持的浏览器激活时打开日期选择器或年月日的数字滚轮。</td>
    <td id="exampledtl">
     <pre class="brush: html hidden">
-&lt;input  type="datetime-local" name="datetime-local"/&gt;</pre>
-    {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}</td>
+&lt;input type="datetime-local" name="datetime-local"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/email", "email")}}</td>
    <td>编辑邮箱地址的区域。类似 <code>text</code> 输入，但在支持的浏览器和带有动态键盘的设备上会有确认参数和相应的键盘。</td>
    <td id="exampleemail">
     <pre class="brush: html hidden">
-&lt;input type="email" name="email"/&gt;</pre>
-    {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}</td>
+&lt;input type="email" name="email"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampleemail",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/file", "file")}}</td>
    <td>让用户选择文件的控件。使用 <a href="#attr-accept">accept</a> 属性规定控件能选择的文件类型。</td>
    <td id="examplefile">
     <pre class="brush: html hidden">
-&lt;input type="file" accept="image/*, text/*" name="file"/&gt;</pre>
-    {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}</td>
+&lt;input type="file" accept="image/*, text/*" name="file"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplefile",'100%',55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/hidden", "hidden")}}</td>
@@ -145,23 +159,28 @@ translation_of: Web/HTML/Element/input
    <td>带图像的 <code>submit</code> 按钮。显示的图像由 <code>src</code> 属性规定。如果 <a href="#attr-src">src</a> 缺失，<a href="#attr-alt">alt</a> 属性就会显示。</td>
    <td id="exampleimage">
     <pre class="brush: html hidden">
-&lt;input type="image" name="image" src="" alt="image input"/&gt;</pre>
-    {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}</td>
+&lt;input type="image" name="image" src="" alt="image input"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampleimage",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/month", "month")}}</td>
    <td>输入年和月的控件，没有时区。</td>
    <td id="examplemonth">
     <pre class="brush: html hidden">
-&lt;input type="month" name="month"/&gt;</pre>
-    {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}</td>
+&lt;input type="month" name="month"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplemonth",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/number", "number")}}</td>
    <td>用于输入数字的控件。如果支持的话，会显示滚动按钮并提供缺省验证（即只能输入数字）。拥有动态键盘的设备上会显示数字键盘。</td>
    <td id="examplenumber">
     <pre class="brush: html hidden">
-&lt;input  type="number" name="number"/&gt;</pre>
+&lt;input type="number" name="number"/&gt;
+    </pre>
     {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}</td>
   </tr>
   <tr>
@@ -169,72 +188,90 @@ translation_of: Web/HTML/Element/input
    <td>单行的文本区域，其值会被遮盖。如果站点不安全，会警告用户。</td>
    <td id="examplepassword">
     <pre class="brush: html hidden">
-&lt;input  type="password" name="password"/&gt;</pre>
-    {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}</td>
+&lt;input type="password" name="password"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/radio", "radio")}}</td>
    <td>单选按钮，允许在多个拥有相同 <a href="#attr-name">name</a> 值的选项中选中其中一个。</td>
    <td id="exampleradio">
     <pre class="brush: html hidden">
-&lt;input type="radio" name="radio"/&gt;</pre>
-    {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}</td>
+&lt;input type="radio" name="radio"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampleradio",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/range", "range")}}</td>
    <td>此控件用于输入不需要精确的数字。控件是一个范围组件，默认值为正中间的值。同时使用 <a href="#attr-min">min</a> 和 <a href="#attr-max">max</a> 来规定值的范围。</td>
    <td id="examplerange">
     <pre class="brush: html hidden">
-&lt;input type="range" name="range" min="0" max="25"/&gt;</pre>
-   {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}</td>
+&lt;input type="range" name="range" min="0" max="25"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplerange",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/reset", "reset")}}</td>
    <td>此按钮将表单的所有内容重置为默认值。不推荐。</td>
    <td id="examplereset">
     <pre class="brush: html hidden">
-&lt;input  type="reset" name="reset"/&gt;</pre>
-   {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}</td>
+&lt;input type="reset" name="reset"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/search", "search")}}</td>
    <td>用于搜索字符串的单行文字区域。输入文本中的换行会被自动去除。在支持的浏览器中可能有一个删除按钮，用于清除整个区域。拥有动态键盘的设备上的回车图标会变成搜索图标。</td>
    <td id="examplesearch">
     <pre class="brush: html hidden">
-&lt;input  type="search" name="search"/&gt;</pre>
-   {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}</td>
+&lt;input type="search" name="search"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/submit", "submit")}}</td>
    <td>用于提交表单的按钮。</td>
    <td id="examplesubmit">
     <pre class="brush: html hidden">
-&lt;input type="submit" name="submit"/&gt;</pre>
-   {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}</td>
+&lt;input type="submit" name="submit"/&gt;
+    </pre>
+    {{EmbedLiveSample("examplesubmit",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/tel", "tel")}}</td>
    <td>用于输入电话号码的控件。拥有动态键盘的设备上会显示电话数字键盘。</td>
    <td id="exampletel">
     <pre class="brush: html hidden">
-&lt;input  type="tel" name="tel"/&gt;</pre>
-   {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}</td>
+&lt;input type="tel" name="tel"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/text", "text")}}</td>
    <td>默认值。单行的文本区域，输入中的换行会被自动去除。</td>
    <td id="exampletext">
     <pre class="brush: html hidden">
-&lt;input type="text" name="text"/&gt;</pre>
-   {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}</td>
+&lt;input type="text" name="text"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampletext",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/time", "time")}}</td>
    <td>用于输入时间的控件，不包括时区。</td>
    <td id="exampletime">
     <pre class="brush: html hidden">
-&lt;input  type="time" name="time"/&gt;</pre>
-   {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}</td>
+&lt;input type="time" name="time"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/url", "url")}}</td>
@@ -243,16 +280,20 @@ translation_of: Web/HTML/Element/input
    </td>
    <td id="exampleurl">
     <pre class="brush: html hidden">
-&lt;input type="url" name="url"/&gt;</pre>
-   {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}</td>
+&lt;input type="url" name="url"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampleurl",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/week", "week")}}</td>
    <td>用于输入以年和周数组成的日期，不带时区。</td>
    <td id="exampleweek">
     <pre class="brush: html hidden">
-&lt;input type="week" name="week"/&gt;</pre>
-   {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}</td>
+&lt;input type="week" name="week"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampleweek",200,55,"","", "nobutton")}}
+   </td>
   </tr>
   <tr>
    <th colspan="3">废弃的值</th>
@@ -262,21 +303,23 @@ translation_of: Web/HTML/Element/input
    <td>{{deprecated_inline}} 用于输入基于 UTC 时区的日期和时间（时、分、秒及秒的小数部分）。</td>
    <td id="exampledatetime">
     <pre class="brush: html hidden">
-&lt;input type="datetime" name="datetime"/&gt;</pre>
-    {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}</td>
+&lt;input type="datetime" name="datetime"/&gt;
+    </pre>
+    {{EmbedLiveSample("exampledatetime",200,75,"","", "nobutton")}}
+   </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="属性">属性</h2>
 
-<p><code>&lt;input&gt;</code>元素由于拥有诸多属性而异常强大，其中前文举例说明的{{htmlattrxref("type", "input")}}属性尤其重要。由于所有<code>&lt;input&gt;</code>元素，无论是哪种 <code>type</code> ，都基于{{domxref("HTMLInputElement")}}接口，所以理论上说，它们共享一套相同的属性。但实际上大部分属性只作用于特定一组 <code>type</code>。此外，一些属性作用于<code>&lt;input&gt;</code>的方式取决于<code>&lt;input&gt;</code>的<code>type</code>属性，不同的<code>type</code>有不同的效果。</p>
+<p><code>&lt;input&gt;</code> 元素由于拥有诸多属性而异常强大，其中前文举例说明的 {{htmlattrxref("type", "input")}} 属性尤其重要。由于所有 <code>&lt;input&gt;</code> 元素，无论是哪种 <code>type</code>，都基于 {{domxref("HTMLInputElement")}} 接口，所以理论上说，它们共享一套相同的属性。但实际上大部分属性只作用于特定一组 <code>type</code>。此外，一些属性作用于 <code>&lt;input&gt;</code> 的方式取决于 <code>&lt;input&gt;</code> 的 <code>type</code> 属性，不同的 <code>type</code> 有不同的效果。</p>
 
-<p>下面的表格列出了所有属性，每个属性都有简短的描述。表格后的列表更详细地描述了各个属性及它们与哪些<code>&lt;input&gt;</code> <code>type</code>相关。与大部分或者全部<code>&lt;input&gt;</code> <code>type</code>都相关的属性会讲述更多细节。一些针对特定<code>&lt;input&gt;</code> <code>type</code>的属性，或者所有<code>&lt;input&gt;</code> <code>type</code>都有，但在特定的<code>&lt;input&gt;</code> <code>type</code>上有特定表现的属性，会在相应的<code>type</code>页面中说明。这个元素包含全局属性，一些针对<code>&lt;input&gt;</code>元素有额外意义的全局属性也会特别说明。</p>
+<p>下面的表格列出了所有属性，每个属性都有简短的描述。表格后的列表更详细地描述了各个属性及它们与哪些 <code>&lt;input&gt;</code> <code>type</code> 相关。与大部分或者全部 <code>&lt;input&gt;</code> <code>type</code> 都相关的属性会讲述更多细节。一些针对特定 <code>&lt;input&gt;</code> <code>type</code> 的属性，或者所有 <code>&lt;input&gt;</code> <code>type</code> 都有，但在特定的 <code>&lt;input&gt;</code> <code>type</code> 上有特定表现的属性，会在相应的 <code>type</code> 页面中说明。这个元素包含全局属性，一些针对 <code>&lt;input&gt;</code> 元素有额外意义的全局属性也会特别说明。</p>
 
 <table>
  <caption>
- <p>{{htmlelement('input')}}元素的属性包括<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局 HTML 属性</a>和以下属性：</p>
+ <p>{{htmlelement('input')}} 元素的属性包括<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局 HTML 属性</a>和以下属性：</p>
 
  <table>
   <thead>
@@ -314,12 +357,12 @@ translation_of: Web/HTML/Element/input
    </tr>
    <tr>
     <td><a href="#attr-checked">checked</a></td>
-    <td>radio, checkbox</td>
+    <td>radio、checkbox</td>
     <td>用于控制控件是否被选中</td>
    </tr>
    <tr>
     <td><a href="#attr-dirname">dirname</a></td>
-    <td>text, search</td>
+    <td>text、search</td>
     <td>表单区域的一个名字，用于在提交表单时发送元素的方向性</td>
    </tr>
    <tr>
@@ -334,27 +377,27 @@ translation_of: Web/HTML/Element/input
    </tr>
    <tr>
     <td><a href="#attr-formaction">formaction</a></td>
-    <td>image, submit</td>
+    <td>image、submit</td>
     <td>用于提交表单的 URL</td>
    </tr>
    <tr>
     <td><a href="#attr-formenctype">formenctype</a></td>
-    <td>image, submit</td>
+    <td>image、submit</td>
     <td>表单数据集的编码方式，用于表单提交</td>
    </tr>
    <tr>
     <td><a href="#attr-formmethod">formmethod</a></td>
-    <td>image, submit</td>
+    <td>image、submit</td>
     <td>用于表单提交的 HTTP 方法 </td>
    </tr>
    <tr>
     <td><a href="#attr-formnovalidate">formnovalidate</a></td>
-    <td>image, submit</td>
+    <td>image、submit</td>
     <td>提交表单时绕过对表单控件的验证</td>
    </tr>
    <tr>
     <td><a href="#attr-formtarget">formtarget</a></td>
-    <td>image, submit</td>
+    <td>image、submit</td>
     <td>表单提交的浏览上下文</td>
    </tr>
    <tr>
@@ -367,7 +410,7 @@ translation_of: Web/HTML/Element/input
    <tr>
     <td><a href="#attr-list">list</a></td>
     <td>绝大部分</td>
-    <td>自动填充选项的{{htmlelement('datalist')}} 的 id 值</td>
+    <td>自动填充选项的 {{htmlelement('datalist')}} 的 id 值</td>
    </tr>
    <tr>
     <td><a href="#attr-max">max</a></td>
@@ -376,7 +419,7 @@ translation_of: Web/HTML/Element/input
    </tr>
    <tr>
     <td><a href="#attr-maxlength">maxlength</a></td>
-    <td>password, search, tel, text, url</td>
+    <td>password、search、tel、text、url</td>
     <td><code>value</code> 的最大长度（最多字符数目）</td>
    </tr>
    <tr>
@@ -386,13 +429,13 @@ translation_of: Web/HTML/Element/input
    </tr>
    <tr>
     <td><a href="#attr-minlength">minlength</a></td>
-    <td>password, search, tel, text, url</td>
+    <td>password、search、tel、text、url</td>
     <td><code>value</code> 的最小长度（最少字符数目）</td>
    </tr>
    <tr>
     <td><a href="#attr-multiple">multiple</a></td>
-    <td>email, file</td>
-    <td>布尔值。 是否允许多个值</td>
+    <td>email、file</td>
+    <td>布尔值。是否允许多个值</td>
    </tr>
    <tr>
     <td><a href="#attr-name">name</a></td>
@@ -401,12 +444,12 @@ translation_of: Web/HTML/Element/input
    </tr>
    <tr>
     <td><a href="#attr-pattern">pattern</a></td>
-    <td>password, text, tel</td>
+    <td>password、text、tel</td>
     <td>匹配有效 <code>value</code> 的模式（pattern）</td>
    </tr>
    <tr>
     <td><a href="#attr-placeholder">placeholder</a></td>
-    <td>password, search, tel, text, url</td>
+    <td>password、search、tel、text、url</td>
     <td>当表单控件为空时，控件中显示的内容</td>
    </tr>
    <tr>
@@ -421,13 +464,13 @@ translation_of: Web/HTML/Element/input
    </tr>
    <tr>
     <td><a href="#attr-size">size</a></td>
-    <td>email, password, tel, text</td>
+    <td>email、password、tel、text</td>
     <td>控件的大小</td>
    </tr>
    <tr>
     <td><a href="#attr-src">src</a></td>
     <td>image</td>
-    <td>和{{htmlelement('img')}} 的 <code>src</code> 属性一样；图像资源的地址</td>
+    <td>和 {{htmlelement('img')}} 的 <code>src</code> 属性一样；图像资源的地址</td>
    </tr>
    <tr>
     <td><a href="#attr-step">step</a></td>
@@ -460,7 +503,7 @@ translation_of: Web/HTML/Element/input
 
 <dl>
  <dt>{{ htmlattrdef("accept") }}</dt>
- <dd>如果该元素的 <strong>type</strong> 属性的值<code>是 file</code>,则该属性表明了服务器端可接受的文件类型；否则它将被忽略。该属性的值必须为一个逗号分割的列表，包含了多个唯一的内容类型声明：
+ <dd>如果该元素的 <strong>type</strong> 属性的值是 <code>file</code>，则该属性表明了服务器端可接受的文件类型；否则它将被忽略。该属性的值必须为一个逗号分割的列表，包含了多个唯一的内容类型声明：
  <ul>
   <li>以 STOP 字符 (U+002E) 开始的文件扩展名。（例如：".jpg,.png,.doc"）</li>
   <li>一个有效的 MIME 类型，但没有扩展名</li>
@@ -472,57 +515,57 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("accesskey") }} {{Deprecated_Inline}}</dt>
  <dd>用户按下后可以获得此控件焦点的单个字符。这是 HTML5 全局属性。</dd>
  <dt>{{ htmlattrdef("autocomplete") }}</dt>
- <dd>这个属性表示这个控件的值是否可被浏览器自动填充。如果<strong>type</strong>属性的值是 hidden、checkbox、radio、file，或为按钮类型（button、submit、reset、image），则本属性被忽略。可用的值是：
+ <dd>这个属性表示这个控件的值是否可被浏览器自动填充。如果 <strong>type</strong> 属性的值是 hidden、checkbox、radio、file，或为按钮类型（button、submit、reset、image），则本属性被忽略。可用的值是：
  <ul>
-  <li><code>off</code>: 用户必须手动填值，或者该页面提供了自己的自动补全方法。浏览器不对此字段自动填充。</li>
-  <li><code>on</code>: 浏览器可以根据用户先前的填表情况对此字段自动填值。</li>
-  <li><code>name</code>: 完整的姓名</li>
-  <li><code>honorific-prefix: </code>Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle")</li>
-  <li><code>given-name </code>：名</li>
+  <li><code>off</code>：用户必须手动填值，或者该页面提供了自己的自动补全方法。浏览器不对此字段自动填充。</li>
+  <li><code>on</code>：浏览器可以根据用户先前的填表情况对此字段自动填值。</li>
+  <li><code>name</code>：完整的姓名</li>
+  <li><code>honorific-prefix</code>：Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle")</li>
+  <li><code>given-name</code>：名</li>
   <li><code>additional-name</code></li>
   <li><code>family-name</code>：姓</li>
-  <li><code>honorific-suffix</code>: Suffix (e.g. "Jr.", "B.Sc.", "MBASW", "II")</li>
+  <li><code>honorific-suffix</code>：Suffix (e.g. "Jr.", "B.Sc.", "MBASW", "II")</li>
   <li><code>nickname</code></li>
   <li><code>email</code></li>
   <li><code>username</code></li>
-  <li><code>new-password</code>: 新密码（如创建帐号或更改密码时使用）</li>
+  <li><code>new-password</code>：新密码（如创建帐号或更改密码时使用）</li>
   <li><code>current-password</code></li>
-  <li><code>organization-title</code>: Job title (e.g. "Software Engineer", "Senior Vice President", "Deputy Managing Director")</li>
+  <li><code>organization-title</code>：Job title (e.g. "Software Engineer", "Senior Vice President", "Deputy Managing Director")</li>
   <li><code>organization</code></li>
   <li><code>street-address</code></li>
-  <li><code>address-line1, <code>address-line2, <code>address-line3, <code>address-level4, <code>address-level3, <code>address-level2, <code>address-level1</code></code></code></code></code></code></code></li>
+  <li><code>address-line1</code>、<code>address-line2</code>、<code>address-line3</code>、<code>address-level4</code>、<code>address-level3</code>、<code>address-level2</code>、<code>address-level1</code></li>
   <li><code>country</code></li>
   <li><code>country-name</code></li>
   <li><code>postal-code</code></li>
-  <li><code>cc-name</code>: Full name as given on the payment instrument</li>
+  <li><code>cc-name</code>：Full name as given on the payment instrument</li>
   <li><code>cc-given-name</code></li>
   <li><code>cc-additional-name</code></li>
   <li><code>cc-family-name</code></li>
-  <li><code>cc-number</code>: Code identifying the payment instrument (e.g. the credit card number)</li>
-  <li><code>cc-exp:</code> Expiration date of the payment instrument</li>
+  <li><code>cc-number</code>：Code identifying the payment instrument (e.g. the credit card number)</li>
+  <li><code>cc-exp</code>：Expiration date of the payment instrument</li>
   <li><code>cc-exp-month</code></li>
   <li><code>cc-exp-year</code></li>
-  <li><code>cc-csc</code>: Security code for the payment instrument </li>
-  <li><code>cc-type</code>: Type of payment instrument (e.g. Visa)</li>
+  <li><code>cc-csc</code>：Security code for the payment instrument </li>
+  <li><code>cc-type</code>：Type of payment instrument (e.g. Visa)</li>
   <li><code>transaction-currency</code></li>
   <li><code>transaction-amount</code></li>
-  <li><code>language</code>: Preferred language; Valid BCP 47 language tag</li>
+  <li><code>language</code>：Preferred language; Valid BCP 47 language tag</li>
   <li><code>bday</code></li>
   <li><code>bday-day</code></li>
   <li><code>bday-month</code></li>
   <li><code>bday-year</code></li>
-  <li><code>sex</code>: Gender identity (e.g. Female, Fa'afafine); Free-form text, no newlines</li>
+  <li><code>sex</code>：Gender identity (e.g. Female, Fa'afafine); Free-form text, no newlines</li>
   <li><code>tel</code></li>
-  <li><code>url</code>: Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field</li>
-  <li><code>photo</code>: Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field</li>
+  <li><code>url</code>：Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field</li>
+  <li><code>photo</code>：Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field</li>
   <li>
    <p>参考 <a href="https://html.spec.whatwg.org/multipage/forms.html#autofill">WHATWG 标准</a> 获取更多详细内容。</p>
   </li>
  </ul>
 
- <p>如果<code>&lt;input&gt;</code>元素上没有<strong>autocomplete</strong>属性，浏览器可使用包含该 input 元素的表单（<code>&lt;form&gt;</code>）或通过 input 的<strong>form</strong>属性指定的表单的<strong>autocomplete</strong>属性值。更多信息请参见{{ HTMLElement("form") }}的<code>autocomplete</code>属性。</p>
+ <p>如果 <code>&lt;input&gt;</code> 元素上没有 <strong>autocomplete</strong> 属性，浏览器可使用包含该 input 元素的表单（<code>&lt;form&gt;</code>）或通过 input 的 <strong>form</strong> 属性指定的表单的 <strong>autocomplete</strong> 属性值。更多信息请参见 {{ HTMLElement("form") }} 的 <code>autocomplete</code> 属性。</p>
 
- <p>与其他浏览器不同，<strong>autocomplete </strong>还控制着 Firefox 浏览器 对 &lt;input&gt; 持久化动态禁用状态和（如果适用）跨页面加载的动态检查。持久化特性默认是开启的。设置<strong>autocomplete</strong>的值为<strong>off </strong>可以关闭该特性<strong>。</strong>即使 autocomplete 属性通常不应用于&lt;input&gt;的 type，它也可以工作。具体可以查看{{bug(654072)}}。</p>
+ <p>与其他浏览器不同，<strong>autocomplete</strong> 还控制着 Firefox 浏览器对 &lt;input&gt; 持久化动态禁用状态和（如果适用）跨页面加载的动态检查。持久化特性默认是开启的。设置 <strong>autocomplete</strong> 的值为 <strong>off</strong> 可以关闭该特性。即使 autocomplete 属性通常不应用于 &lt;input&gt; 的 type，它也可以工作。具体可以查看 {{bug(654072)}}。</p>
  </dd>
  <dt>{{ htmlattrdef("autofocus") }}</dt>
  <dd>这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有 autofocus 属性，它是一个布尔值。 如果 type 属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。</dd>
@@ -531,7 +574,7 @@ translation_of: Web/HTML/Element/input
  <p>Introduced in the HTML Media Capture specification and valid for the <code>file</code> input type only, the <code>capture</code> attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with <code>file</code> upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.</p>
  </dd>
  <dt>{{ htmlattrdef("checked") }}</dt>
- <dd>如果该元素的<strong>type</strong>属性的值为 radio 或者 checkbox，则该布尔属性的存在与否表明了该控件是否是默认选择状态。
+ <dd>如果该元素的 <strong>type</strong> 属性的值为 radio 或者 checkbox，则该布尔属性的存在与否表明了该控件是否是默认选择状态。
  <p>If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/zh-CN/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
 
  <div class="note">
@@ -590,7 +633,7 @@ translation_of: Web/HTML/Element/input
  <p>Valid for the <code>image</code> and <code>submit</code> input types only. See the {{HTMLElement("input/submit", "submit")}} input type for more information.</p>
  </dd>
  <dt>{{ htmlattrdef("height") }}</dt>
- <dd>如果<strong>type</strong>属性的值是 image，这个属性定义了按钮图片的高度。</dd>
+ <dd>如果 <strong>type</strong> 属性的值是 image，这个属性定义了按钮图片的高度。</dd>
  <dt>{{htmlattrdef("id")}}</dt>
  <dd>
  <p>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s <code>for</code> attribute to link the label with the form control. See the <a href="#labels">the label element</a> below.</p>
@@ -605,7 +648,8 @@ translation_of: Web/HTML/Element/input
 
 <p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The <code>&lt;datalist&gt;</code>  provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options.  The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
-<pre class="brush: html">&lt;datalist id="colorsxx"&gt;
+<pre class="brush: html">
+&lt;datalist id="colorsxx"&gt;
   &lt;option&gt;#ff0000&lt;/option&gt;
   &lt;option&gt;#ee0000&lt;/option&gt;
   &lt;option&gt;#dd0000&lt;/option&gt;
@@ -636,11 +680,27 @@ translation_of: Web/HTML/Element/input
   &lt;option&gt;https://www.youtube.com/user/firefoxchannel&lt;/option&gt;
 &lt;/datalist&gt;
 
-&lt;p&gt;&lt;label for="textx"&gt;Text&lt;/label&gt; &lt;input type="text" list="fruitsxx" id="textx"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label for="colorx"&gt;Color&lt;/label&gt; &lt;input type="color" list="colorsxx" id="colorx"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label for="rangex"&gt;Range&lt;/label&gt; &lt;input type="range" min="0" max="64" list="numbersxx" id="rangex"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label for="numberx"&gt;Number&lt;/label&gt; &lt;input type="number" min="0" max="64" list="numbersxx" id="numberx"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label for="urlx"&gt;URL&lt;/label&gt; &lt;input type="url" list="urlsxx" id="urlx"/&gt;&lt;/p&gt;</pre>
+&lt;p&gt;
+  &lt;label for="textx"&gt;Text&lt;/label&gt;
+  &lt;input type="text" list="fruitsxx" id="textx"/&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="colorx"&gt;Color&lt;/label&gt;
+  &lt;input type="color" list="colorsxx" id="colorx"/&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="rangex"&gt;Range&lt;/label&gt;
+  &lt;input type="range" min="0" max="64" list="numbersxx" id="rangex"/&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="numberx"&gt;Number&lt;/label&gt;
+  &lt;input type="number" min="0" max="64" list="numbersxx" id="numberx"/&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="urlx"&gt;URL&lt;/label&gt;
+  &lt;input type="url" list="urlsxx" id="urlx"/&gt;
+&lt;/p&gt;
+</pre>
 
 <p>{{EmbedLiveSample("datalist",400,275,"","", "nobutton")}}</p>
 
@@ -654,11 +714,11 @@ translation_of: Web/HTML/Element/input
 
 <dl>
  <dt>{{ htmlattrdef("max") }}</dt>
- <dd>此项目的最大（数字或日期时间）值，且不得小于其最小值（<strong>min</strong>属性）值。</dd>
+ <dd>此项目的最大（数字或日期时间）值，且不得小于其最小值（<strong>min</strong> 属性值）。</dd>
  <dt>{{ htmlattrdef("maxlength") }}</dt>
- <dd>如果 <strong>type</strong> 的值是  text, email, search, password, tel，或 url，那么这个属性指明了用户最多可以输入的字符个数（按照 Unicode 编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 <strong>size</strong> 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注:ie10+</dd>
+ <dd>如果 <strong>type</strong> 的值是 text、email、search、password、tel 或 url，那么这个属性指明了用户最多可以输入的字符个数（按照 Unicode 编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 <strong>size</strong> 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注：ie10+</dd>
  <dt>{{ htmlattrdef("min") }}</dt>
- <dd>此项目的最小（数字或日期时间）值，且不得大于其最大值（最大属性）值。</dd>
+ <dd>此项目的最小（数字或日期时间）值，且不得大于其最大值（<strong>max</strong> 属性值）。</dd>
  <dt>{{htmlattrdef("minlength")}}</dt>
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
@@ -666,31 +726,31 @@ translation_of: Web/HTML/Element/input
  <p>The input will fail <a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See <a href="#client-side_validation">Client-side validation</a> for more information.</p>
  </dd>
  <dt>{{ htmlattrdef("multiple") }}</dt>
- <dd>This Boolean attribute indicates whether the user can enter more than one value.这个属性指示用户能否输入多个值。这个属性仅在<strong>type</strong>属性为 email 或 file 的时候生效 ; 否则被忽视。</dd>
+ <dd>这个 <strong>Boolean</strong> 属性指明了用户能否输入多个值，仅在 <strong>type</strong> 属性为 email 或 file 时生效，否则将被忽略。</dd>
  <dt>{{ htmlattrdef("name") }}</dt>
  <dd>控件的名称，与表单数据一起提交。</dd>
  <dt>{{ htmlattrdef("pattern") }}</dt>
- <dd>检查控件值的正则表达式.。pattern 必须匹配整个值，而不仅仅是某些子集.。使用 title 属性来描述帮助用户的模式.。当类型属性的值为 text, search, tel, url 或 email 时，此属性适用，否则将被忽略。译者注:ie10+</dd>
+ <dd>检查控件值的正则表达式。pattern 必须匹配整个值，而不仅仅是某些子集。使用 title 属性来描述帮助用户的模式。仅在 <strong>type</strong> 属性的值为 text、search、tel、url 或 email 时生效，否则将被忽略。译者注：ie10+</dd>
  <dt>{{ htmlattrdef("placeholder") }}</dt>
- <dd>提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅适用于当<strong>type</strong> 属性为 text, search, tel, url or email 时; 否则会被忽略。
- <div class="note"><strong>Note:</strong> 请不要用<code>placeholder</code> 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同:  {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而<code>placeholder</code> 属性是提示用户内容的输入格式。某些情况下 <code>placeholder</code> 属性对用户不可见， 所以当没有它时也需要保证 form 能被理解。</div>
+ <dd>提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅在 <strong>type</strong> 属性为 text、search、tel、url 或 email 时生效，否则将被忽略。
+ <div class="note"><p><strong>备注</strong>：请不要用 <code>placeholder</code> 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同: {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而 <code>placeholder</code> 属性是提示用户内容的输入格式。某些情况下 <code>placeholder</code> 属性对用户不可见，所以当没有它时也需要保证 form 能被理解。</p></div>
  </dd>
  <dt>{{ htmlattrdef("readonly") }}</dt>
  <dd>这个布尔属性用于指明用户无法修改控件的值。
- <p>如果控件的 <strong>type</strong> 属性为 hidden, range, color, checkbox, radio, file 或 type 时，此属性会被忽略。</p>
+ <p>如果控件的 <strong>type</strong> 属性为 hidden、range、color、checkbox、radio、file，此属性将被忽略。</p>
  </dd>
  <dt>{{ htmlattrdef("required") }}</dt>
- <dd>这个属性指定用户在提交表单之前必须为该元素填充值。当 type 属性是 hidden,image 或者按钮类型 (submit,reset,button) 时不可使用. {{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观。</dd>
+ <dd>这个属性指定用户在提交表单之前必须为该元素填充值。当 type 属性是 hidden、image 或者按钮类型（submit、reset、button）时不可使用。 {{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观。</dd>
  <dt>{{ htmlattrdef("selectionDirection") }}</dt>
  <dd>The direction in which selection occurred. This is "forward" if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or "backward" if the selection was made in the opposite direction. This can be "none" if the selection direction is unknown.</dd>
  <dt>{{ htmlattrdef("size") }}</dt>
- <dd>控件的初始大小。以像素为单位。但当<strong>type</strong>  属性为 text 或 password 时， 它表示输入的字符的长度。从 HTML5 开始， 此属性仅适用于当 <strong>type</strong> 属性为 text, search, tel, url, email，或 password；否则会被忽略。 此外，它的值必须大于 0。 如果未指定大小，则使用默认值 20。 HTML5 概述 "用户代理应该确保至少大部分字符是可见的", 但是不同的字符的用不同的字体表示可能会导致宽度不同。在某些浏览器中，一串带有 x 的字符即使定义了到 x 的大小也将显示不完整。 。</dd>
+ <dd>控件的初始大小。以像素为单位。但当 <strong>type</strong> 属性为 text 或 password 时，它表示输入的字符的长度。从 HTML5 开始，此属性仅在 <strong>type</strong> 属性为 text、search、tel、url、email 或 password 时生效，否则将被忽略。此外，它的值必须大于 0。如果未指定大小，则使用默认值 20。HTML5 概述 "用户代理应该确保至少大部分字符是可见的"，但是不同的字符的用不同的字体表示可能会导致宽度不同。在某些浏览器中，一串带有 x 的字符即使定义了到 x 的大小也将显示不完整。</dd>
  <dt>{{ htmlattrdef("spellcheck") }}</dt>
- <dd>将此属性的值设置为<code>true</code>表示元素需要检查其拼写和语法。值<code>default</code> 表示该元素将根据默认行为进行操作，可能基于父元素自己的<code>spellcheck</code>值。值<code>false</code>表示不应该检查元素</dd>
+ <dd>将此属性的值设置为 <code>true</code> 表示元素需要检查其拼写和语法。值为 <code>default</code> 表示该元素将根据默认行为进行操作，可能基于父元素自己的 <code>spellcheck</code> 值。值为 <code>false</code> 表示不应该检查元素</dd>
  <dt>{{ htmlattrdef("src") }}</dt>
- <dd>如果<strong>type</strong>属性的值是 image，这个属性指定了按钮图片的路径; 否则它被忽视。</dd>
+ <dd>如果 <strong>type</strong> 属性的值是 image，这个属性指定了按钮图片的路径; 否则将被忽视。</dd>
  <dt>{{ htmlattrdef("step") }}</dt>
- <dd>使用<strong>min</strong>和<strong>max</strong> 属性来限制可以设置数字或日期时间值的增量。它可以是任意字符串或是正浮点数。如果此属性未设置为任何，则控件仅接受大于最小步长值的倍数的值。</dd>
+ <dd>使用 <strong>min</strong> 和 <strong>max</strong> 属性来限制可以设置数字或日期时间值的增量。它可以是任意字符串或是正浮点数。如果此属性未设置为任何，则控件仅接受大于最小步长值的倍数的值。</dd>
  <dt>{{ htmlattrdef("tabindex") }}</dt>
  <dd>元素在当前文档的 Tab 导航顺序中的位置。</dd>
  <dt>{{htmlattrdef('title')}}</dt>
@@ -700,19 +760,19 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("type") }}</dt>
  <dd>要呈现的控件类型。有关各个类型的信息，请参阅 <a href="#&lt;input&gt;_types">Form &lt;input&gt; types</a>，其中包含指向每个类型的更多信息的链接。</dd>
  <dt>{{ htmlattrdef("usemap") }} {{Deprecated_Inline}}</dt>
- <dd>作为图像映射的{{ HTMLElement("map") }}元素的名称。</dd>
+ <dd>作为图像映射的 {{ HTMLElement("map") }} 元素的名称。</dd>
  <dt>{{ htmlattrdef("value") }}</dt>
- <dd>控件的初始值。此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code>。注意，当重新加载页面时，如果在重新加载之前更改了值，<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko 和 IE 将忽略 HTML 源代码中指定的值</a>。</dd>
+ <dd>控件的初始值。此属性是可选的，除非 <strong>type</strong> 属性是 <code>radio</code> 或 <code>checkbox</code>。注意，当重新加载页面时，如果在重新加载之前更改了值，<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko 和 IE 将忽略 HTML 源代码中指定的值</a>。</dd>
  <dt>{{ htmlattrdef("width") }} </dt>
- <dd>如果<strong>type</strong>属性的值是 image，这个属性定义了按钮图片的宽度。</dd>
+ <dd>如果 <strong>type</strong> 属性的值是 image，这个属性定义了按钮图片的宽度。</dd>
  <dt>
  <h3 id="非标准_&lt;input>_属性">非标准 <code>&lt;input&gt;</code> 属性</h3>
  </dt>
  <dt>{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</dt>
  <dd>This is a non-standard attribute supported by Safari that is used to control whether autocorrection should be enabled when the user is entering/editing the text value of the <code>&lt;input&gt;</code>. Possible attribute values are:
  <ul>
-  <li><code>on</code>: Enable autocorrection.</li>
-  <li><code>off</code>: Disable autocorrection.</li>
+  <li><code>on</code>：Enable autocorrection.</li>
+  <li><code>off</code>：Disable autocorrection.</li>
  </ul>
  <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect"><code>autocorrect</code> documentation</a> in the Safari HTML Reference.</dd>
  <dt>{{ htmlattrdef("mozactionhint") }} {{ non-standard_inline() }}</dt>
@@ -720,12 +780,12 @@ translation_of: Web/HTML/Element/input
  <dt>{{htmlattrdef("autocapitalize")}} {{non-standard_inline}}</dt>
  <dd>This is a nonstandard attribute used by iOS Safari Mobile which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:
  <ul>
-  <li><code>none</code>: Completely disables automatic capitalization</li>
-  <li><code>sentences</code>: Automatically capitalize the first letter of sentences.</li>
-  <li><code>words</code>: Automatically capitalize the first letter of words.</li>
-  <li><code>characters</code>: Automatically capitalize all characters.</li>
-  <li><code>on</code>: {{deprecated_inline()}} Deprecated since iOS 5.</li>
-  <li><code>off</code>: {{deprecated_inline()}} Deprecated since iOS 5.</li>
+  <li><code>none</code>：Completely disables automatic capitalization</li>
+  <li><code>sentences</code>：Automatically capitalize the first letter of sentences.</li>
+  <li><code>words</code>：Automatically capitalize the first letter of words.</li>
+  <li><code>characters</code>：Automatically capitalize all characters.</li>
+  <li><code>on</code>：{{deprecated_inline()}} Deprecated since iOS 5.</li>
+  <li><code>off</code>：{{deprecated_inline()}} Deprecated since iOS 5.</li>
  </ul>
  <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize"><code>autocapitalize</code> documentation in the Safari HTML Reference</a></dd>
  <dt>{{htmlattrdef("incremental")}} {{non-standard_inline}}</dt>
@@ -908,7 +968,8 @@ input[min][max] {}
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css">input.custom {
+<pre class="brush: css">
+input.custom {
   caret-color: red;
   font: 16px "Helvetica", "Arial", "sans-serif"
 }
@@ -1116,7 +1177,7 @@ nameInput.addEventListener('invalid', () =&gt; {
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513890">bug 1513890</a>).</p>
+<p><strong>Note</strong>：Firefox supported a proprietary error attribute — <code>x-moz-errormessage</code> — for many versions, which allowed you set custom error messages in a similar way. This has been removed as of version 66 (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513890">bug 1513890</a>).</p>
 </div>
 
 <h3 id="Localization">Localization</h3>
@@ -1155,13 +1216,13 @@ nameInput.addEventListener('invalid', () =&gt; {
    <th scope="row">Permitted ARIA roles</th>
    <td>
     <ul>
-     <li><code>type=button</code>: <code><a href="https://w3c.github.io/aria/#link">link</a></code>, <code><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code>, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code>, <code><a href="https://w3c.github.io/aria/#tab">tab</a></code></li>
-     <li><code>type=checkbox</code>: <code><a href="https://w3c.github.io/aria/#button">button</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#option">option</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code></li>
-     <li><code>type=image</code>: <code><a href="https://w3c.github.io/aria/#link">link</a></code>, <code><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code>, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code></li>
-     <li><code>type=radio</code>: <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code></li>
-     <li><code>type=color|date|datetime|datetime-local|email|file</code>: None</li>
-     <li><code>type=hidden|month|number|password|range|reset</code>: None</li>
-     <li><code>type=search|submit|tel|text|url|week</code>: None</li>
+     <li><code>type=button</code>：<code><a href="https://w3c.github.io/aria/#link">link</a></code>, <code><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code>, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code>, <code><a href="https://w3c.github.io/aria/#tab">tab</a></code></li>
+     <li><code>type=checkbox</code>：<code><a href="https://w3c.github.io/aria/#button">button</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#option">option</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code></li>
+     <li><code>type=image</code>：<code><a href="https://w3c.github.io/aria/#link">link</a></code>, <code><a href="https://w3c.github.io/aria/#menuitem">menuitem</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemcheckbox">menuitemcheckbox</a></code>, <code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code>, <code><a href="https://w3c.github.io/aria/#radio">radio</a></code>, <code><a href="https://w3c.github.io/aria/#switch">switch</a></code></li>
+     <li><code>type=radio</code>：<code><a href="https://w3c.github.io/aria/#menuitemradio">menuitemradio</a></code></li>
+     <li><code>type=color|date|datetime|datetime-local|email|file</code>：None</li>
+     <li><code>type=hidden|month|number|password|range|reset</code>：None</li>
+     <li><code>type=search|submit|tel|text|url|week</code>：None</li>
     </ul>
    </td>
   </tr>
