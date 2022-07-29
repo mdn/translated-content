@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h3 id="類別宣告">類別宣告</h3>
 
-<p>一個定義類別的方法是使用類別宣告(<strong>class declaration</strong>)，要宣告一個類別，你要使用關鍵字 <code>class</code> 搭配類別名稱(此例為 "Polygon")。</p>
+<p>一個定義類別的方法是使用類別宣告(<strong>class declaration</strong>)，要宣告一個類別，你要使用關鍵字 <code>class</code> 搭配類別名稱(此例為 "Polygon")。</p>
 
 <pre class="brush: js">class Polygon {
   constructor(height, width) {
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h4 id="Hoisting">Hoisting</h4>
 
-<p><strong>函數宣告</strong>和<strong>類別宣告</strong>的一個重要差別在於函數宣告是 {{Glossary("Hoisting", "hoisted")}} ，類別宣告則不是。 你需要先宣告你的類別，然後存取它，否則像是下面的程式碼就會丟出一個 {{jsxref("ReferenceError")}}:</p>
+<p><strong>函數宣告</strong>和<strong>類別宣告</strong>的一個重要差別在於函數宣告是 {{Glossary("Hoisting", "hoisted")}} ，類別宣告則不是。 你需要先宣告你的類別，然後存取它，否則像是下面的程式碼就會丟出一個 {{jsxref("ReferenceError")}}:</p>
 
 <pre class="brush: js example-bad">var p = new Polygon(); // ReferenceError
 
@@ -44,17 +44,17 @@ class Polygon {}
 <pre class="brush: js">// unnamed
 var Polygon = class {
   constructor(height, width) {
-    this.height = height;
-    this.width = width;
+    this.height = height;
+    this.width = width;
   }
 };
 
 // named
 var Polygon = class Polygon {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
 };
 
 </pre>
@@ -73,11 +73,11 @@ var Polygon = class Polygon {
 
 <p>建構子(<code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor</a>)</code>方法是一個特別的方法，用來建立和初始化一個<code>類別</code>的物件。一個類別只能有一個名為建構子(constructor)的特別方法。當類別中含有一個以上的<code>建構子</code>方法時，{{jsxref("SyntaxError")}} 將會被拋出。</p>
 
-<p>一個建構子可以用關鍵字 <code>super</code> 來呼叫父類別的建構子。</p>
+<p>一個建構子可以用關鍵字 <code>super</code> 來呼叫父類別的建構子。</p>
 
 <h3 id="原型方法">原型方法</h3>
 
-<p>參見 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>。</p>
+<p>參見 <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>。</p>
 
 <pre class="brush: js">class Polygon {
   constructor(height, width) {
@@ -85,13 +85,13 @@ var Polygon = class Polygon {
     this.width = width;
   }
   // Getter
-  get area() {
+  get area() {
     return this.calcArea();
-  }
+  }
   // Method
-  calcArea() {
-    return this.height * this.width;
-  }
+  calcArea() {
+    return this.height * this.width;
+  }
 }
 
 const square = new Polygon(10, 10);
@@ -100,7 +100,7 @@ console.log(square.area); //100</pre>
 
 <h3 id="靜態方法Static_methods">靜態方法(Static methods)</h3>
 
-<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a></code> 定義了一個類別的靜態方法，靜態方法不需要<a href="/zh-TW/docs/Learn/JavaScript/Objects">實體化</a>它所屬類別的實例就可以被呼叫，它也<strong>無法</strong>被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。</p>
+<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/static">static</a></code> 定義了一個類別的靜態方法，靜態方法不需要<a href="/zh-TW/docs/Learn/JavaScript/Objects">實體化</a>它所屬類別的實例就可以被呼叫，它也<strong>無法</strong>被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。</p>
 
 <pre class="brush: js">class Point {
     constructor(x, y) {
@@ -212,24 +212,24 @@ speak(); // 全域物件
 let eat = Animal.eat;
 eat(); // 全域物件</pre>
 
-<h2 id="用_extends_建立子類別">用 <code>extends</code> 建立子類別</h2>
+<h2 id="用_extends_建立子類別">用 <code>extends</code> 建立子類別</h2>
 
-<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code> 是在類別宣告或是類別敘述中建立子類別的方法。</p>
+<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code> 是在類別宣告或是類別敘述中建立子類別的方法。</p>
 
 <pre class="brush: js">class Animal {
   constructor(name) {
-    this.name = name;
-  }
+    this.name = name;
+  }
 
-  speak() {
+  speak() {
     console.log(this.name + ' makes a noise.');
-  }
+  }
 }
 
 class Dog extends Animal {
   speak() {
     console.log(this.name + ' barks.');
-  }
+  }
 }
 
 var d = new Dog('Mitzie');
@@ -279,9 +279,9 @@ d.speak(); // Mitzie makes a noise.</pre>
 
 <h2 id="Species">Species</h2>
 
-<p>你可能會希望在陣列的衍生類別 <code>MyArray</code> 中回傳陣列 ({{jsxref("Array")}}) ，Species 這個模式讓你能覆寫默認的建構子 (contructor)。</p>
+<p>你可能會希望在陣列的衍生類別 <code>MyArray</code> 中回傳陣列 ({{jsxref("Array")}}) ，Species 這個模式讓你能覆寫默認的建構子 (contructor)。</p>
 
-<p>舉例來說，當你使用像 {{jsxref("Array.map", "map()")}} 這類會回傳默認建構子的方法時，你希望能回傳父物件 <code>Array</code> ，而不是 <code>MyArray</code> 物件。 {{jsxref("Symbol.species")}} 符號讓你做到這件事：</p>
+<p>舉例來說，當你使用像 {{jsxref("Array.map", "map()")}} 這類會回傳默認建構子的方法時，你希望能回傳父物件 <code>Array</code> ，而不是 <code>MyArray</code> 物件。 {{jsxref("Symbol.species")}} 符號讓你做到這件事：</p>
 
 <pre class="brush: js">class MyArray extends Array {
   // Overwrite species to the parent Array constructor
@@ -294,25 +294,25 @@ var mapped = a.map(x =&gt; x * x);
 console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array);   // true</pre>
 
-<h2 id="用_super_呼叫父類別">用 <code>super</code> 呼叫父類別</h2>
+<h2 id="用_super_呼叫父類別">用 <code>super</code> 呼叫父類別</h2>
 
-<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a></code> 是用來提供一個類別呼叫其父類別的函數。</p>
+<p>關鍵字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super</a></code> 是用來提供一個類別呼叫其父類別的函數。</p>
 
 <pre class="brush: js">class Cat {
-  constructor(name) {
-    this.name = name;
-  }
+  constructor(name) {
+    this.name = name;
+  }
 
-  speak() {
-    console.log(this.name + ' makes a noise.');
-  }
+  speak() {
+    console.log(this.name + ' makes a noise.');
+  }
 }
 
 class Lion extends Cat {
-  speak() {
-    super.speak();
-    console.log(this.name + ' roars.');
-  }
+  speak() {
+    super.speak();
+    console.log(this.name + ' roars.');
+  }
 }
 
 var l = new Lion('Fuzzy');

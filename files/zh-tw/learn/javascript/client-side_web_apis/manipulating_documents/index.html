@@ -7,7 +7,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p>當你在撰寫網頁(web pages)或網路應用程式(web apps)，其中一個最常見的事，你會希望能夠操作(網頁)文件結構。最常看見的方式是基於<a href="/zh-TW/docs/Web/API/Document_Object_Model"><strong>文件物件模型</strong> ( Document Object Model, DOM )</a> 概念上，透過使用 API (<a href="/zh-TW/docs/Web/API/">Web APIs</a>) 來控制 HTML 及 樣式；而這種方式也被大量使用在操作 <code><a href="/zh-TW/docs/Web/API/Document">Document</a></code> 物件上。接下來的文章中，我們將會詳細的介紹如何操作 DOM，藉著使用有趣的 API 能帶來些新奇的體驗。</p>
+<p>當你在撰寫網頁(web pages)或網路應用程式(web apps)，其中一個最常見的事，你會希望能夠操作(網頁)文件結構。最常看見的方式是基於<a href="/zh-TW/docs/Web/API/Document_Object_Model"><strong>文件物件模型</strong> ( Document Object Model, DOM )</a> 概念上，透過使用 API (<a href="/zh-TW/docs/Web/API/">Web APIs</a>) 來控制 HTML 及 樣式；而這種方式也被大量使用在操作 <code><a href="/zh-TW/docs/Web/API/Document">Document</a></code> 物件上。接下來的文章中，我們將會詳細的介紹如何操作 DOM，藉著使用有趣的 API 能帶來些新奇的體驗。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -264,11 +264,11 @@ div.style.height = HEIGHT + 'px';</pre>
 
 <ol>
  <li>To start with, download a copy of our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html">shopping-list.html</a> starting file and make a copy of it somewhere. You'll see that it has some minimal CSS, a list with a label, input, and button, and an empty list and {{htmlelement("script")}} element. You'll be making all your additions inside the script.</li>
- <li>Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.</li>
+ <li>Create three variables that hold references to the list ({{htmlelement("ul")}}), {{htmlelement("input")}}, and {{htmlelement("button")}} elements.</li>
  <li>Create a <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions">function</a> that will run in response to the button being clicked.</li>
  <li>Inside the function body, start off by storing the current <a href="/en-US/docs/Web/API/HTMLInputElement#Properties">value</a> of the input element in a variable.</li>
  <li>Next, empty the input element by setting its value to an empty string — <code>''</code>.</li>
- <li>Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.</li>
+ <li>Create three new elements — a list item ({{htmlelement('li')}}), {{htmlelement('span')}}, and {{htmlelement('button')}}, and store them in variables.</li>
  <li>Append the span and the button as children of the list item.</li>
  <li>Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.</li>
  <li>Append the list item as a child of the list.</li>

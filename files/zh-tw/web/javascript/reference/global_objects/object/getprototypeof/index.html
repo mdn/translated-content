@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Object.getPrototypeOf()</strong></code> 回傳指定物件的原型，換句話說，就是取得該物件的 <code>[[Prototype]]</code> 屬性的值).</p>
+<p><code><strong>Object.getPrototypeOf()</strong></code> 回傳指定物件的原型，換句話說，就是取得該物件的 <code>[[Prototype]]</code> 屬性的值).</p>
 
 <h2 id="表達式">表達式</h2>
 
@@ -31,7 +31,7 @@ Object.getPrototypeOf(obj) === proto; // true
 
 <h2 id="備註">備註</h2>
 
-<p>如果 <code>obj</code> 參數在 ES5 並不是物件時會拋出 {{jsxref("TypeError")}} 例外，同樣狀況在 ES6 時該參數將會被強制轉換成 {{jsxref("Object")}}。</p>
+<p>如果 <code>obj</code> 參數在 ES5 並不是物件時會拋出 {{jsxref("TypeError")}} 例外，同樣狀況在 ES6 時該參數將會被強制轉換成 {{jsxref("Object")}}。</p>
 
 <pre class="brush: js">Object.getPrototypeOf("foo");
 // TypeError: "foo" is not an object (ES5 code)
@@ -49,7 +49,7 @@ Object.getPrototypeOf("foo");
 
 <h2 id="Opera_註">Opera 註</h2>
 
-<p>雖然舊版的 Opera 並不支援 <code>Object.getPrototypeOf()</code>，但是 Opera 從 Opera 10.50 支援非標準的 {{jsxref("Object.proto", "__proto__")}} 屬性。</p>
+<p>雖然舊版的 Opera 並不支援 <code>Object.getPrototypeOf()</code>，但是 Opera 從 Opera 10.50 支援非標準的 {{jsxref("Object.proto", "__proto__")}} 屬性。</p>
 
 <h2 id="參見">參見</h2>
 
@@ -57,6 +57,6 @@ Object.getPrototypeOf("foo");
  <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
  <li>{{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}</li>
  <li>{{jsxref("Object.prototype.__proto__")}}</li>
- <li>John Resig 的文章－－《 <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a> 》</li>
+ <li>John Resig 的文章－－《 <a href="http://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf</a> 》</li>
  <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
 </ul>

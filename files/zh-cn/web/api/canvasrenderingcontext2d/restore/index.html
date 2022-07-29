@@ -5,19 +5,19 @@ translation_of: Web/API/CanvasRenderingContext2D/restore
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>CanvasRenderingContext2D.restore()</code></strong> 是 Canvas 2D API 通过在绘图状态栈中弹出顶端的状态，将 canvas 恢复到最近的保存状态的方法。如果没有保存状态，此方法不做任何改变。</p>
+<p><strong><code>CanvasRenderingContext2D.restore()</code></strong> 是 Canvas 2D API 通过在绘图状态栈中弹出顶端的状态，将 canvas 恢复到最近的保存状态的方法。如果没有保存状态，此方法不做任何改变。</p>
 
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">void <var><em>ctx</em>.restore();</var></pre>
 
-<p>更多关于 <a href="/en-US/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state">drawing state</a> 的信息，请看 {{domxref("CanvasRenderingContext2D.save()")}}。</p>
+<p>更多关于 <a href="/en-US/docs/Web/API/CanvasRenderingContext2D.save#Drawing_state">drawing state</a> 的信息，请看 {{domxref("CanvasRenderingContext2D.save()")}}。</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="使用_restore_方法">使用 <code>restore</code> 方法</h3>
 
-<p>这是一段简单的代码片段，使用 <code>save()</code> 方法保存默认的状态，使用 <code>restore()</code> 进行恢复。所以，稍后你可以使用默认的状态绘制一个矩形。</p>
+<p>这是一段简单的代码片段，使用 <code>save()</code> 方法保存默认的状态，使用 <code>restore()</code> 进行恢复。所以，稍后你可以使用默认的状态绘制一个矩形。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -45,8 +45,8 @@ ctx.fillRect(150, 75, 100, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.save();

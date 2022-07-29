@@ -93,7 +93,7 @@ console.log( doSomething.prototype );
 }
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>然后，我们可以使用 new 运算符来在现在的这个原型基础之上，创建一个 <code>doSomething</code> 的实例。正确使用 new 运算符的方法就是在正常调用函数时，在函数名的前面加上一个 <code>new</code> 前缀。通过这种方法，在调用函数前加一个 <code>new</code> ，它就会返回一个这个函数的实例化对象。然后，就可以在这个对象上面添加一些属性。看。</p>
 
@@ -103,11 +103,11 @@ var doSomeInstancing = new doSomething();
 doSomeInstancing.prop = "some value"; // add a property onto the object
 console.log( doSomeInstancing );</pre>
 
-<p> </p>
+<p> </p>
 
 <p>结果：</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">{
     prop: "some value",
@@ -166,11 +166,11 @@ doSomething.prototype.foo:  bar</pre>
 
 <p>在 JavaScript 控制台输入 "<code>person1.</code>"，你会看到，浏览器将根据这个对象的可用的成员名称进行自动补全：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13853/object-available-members.png" style="display: block; margin: 0 auto;"></p>
+<p><img src="object-available-members.png"></p>
 
 <p>在这个列表中，你可以看到定义在 <code>person1</code> 的原型对象、即 <code>Person()</code> 构造器中的成员—— <code>name</code>、<code>age</code>、<code>gender</code>、<code>interests</code>、<code>bio</code>、<code>greeting</code>。同时也有一些其他成员—— <code>watch</code>、<code>valueOf</code> 等等——这些成员定义在 <code>Person()</code> 构造器的原型对象、即 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> 之上。下图展示了原型链的运作机制。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png" style="display: block; height: 150px; margin: 0px auto; width: 700px;"></p>
+<p><img src="mdn-graphics-person-person-object-2.png"></p>
 
 <p>那么，调用 <code>person1</code> 的“实际定义在 <code>Object</code> 上”的方法时，会发生什么？比如：</p>
 
@@ -228,7 +228,7 @@ doSomething.prototype.foo:  bar</pre>
 <p><strong>重要</strong>：<code>prototype</code> 属性大概是 JavaScript 中最容易混淆的名称之一。你可能会认为，<code>this</code> 关键字指向当前对象的原型对象，其实不是（还记得么？原型对象是一个内部对象，应当使用<code> __proto__</code> 访问）。<code>prototype</code> 属性包含（指向）一个对象，你在这个对象中定义需要被继承的成员。</p>
 </div>
 
-<p><strong style="color: #4d4e53; font-size: 2.14286rem; font-weight: 700; letter-spacing: -1px;">create()</strong></p>
+<p><strong>create()</strong></p>
 
 <p>我们曾经讲过如何用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code> 方法创建新的对象实例。</p>
 

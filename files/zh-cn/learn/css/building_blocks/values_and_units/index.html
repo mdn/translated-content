@@ -11,7 +11,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>基本的计算机知识，<a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本的软件</a>，<a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>基本知识，HTML 基础知识  (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a>)，以及 CSS 如何工作的基本常识 (如果完全不了解 CSS，请移步 <a href="/en-US/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)</td>
+   <td>基本的计算机知识，<a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本的软件</a>，<a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>基本知识，HTML 基础知识  (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">学习 HTML 入门</a>)，以及 CSS 如何工作的基本常识 (如果完全不了解 CSS，请移步 <a href="/en-US/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>.)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -22,14 +22,14 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h2 id="什么是CSS的值">什么是 CSS 的值？</h2>
 
-<p>在 CSS 规范和 MDN 的属性页上，您将能够发现值的存在，因为它们将被尖括号包围，如<code>&lt;color&gt;</code>或<code>&lt;length&gt;</code>。当您看到值<code>&lt;color&gt;</code>对特定属性有效时，这意味着您可以使用任何有效的颜色作为该属性的值，如 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>参考页面所列。</p>
+<p>在 CSS 规范和 MDN 的属性页上，您将能够发现值的存在，因为它们将被尖括号包围，如<code>&lt;color&gt;</code>或<code>&lt;length&gt;</code>。当您看到值<code>&lt;color&gt;</code>对特定属性有效时，这意味着您可以使用任何有效的颜色作为该属性的值，如 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>参考页面所列。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意</strong>：您还将看到被称为数据类型的 CSS 值。这些术语基本上是可以互换的——当你在 CSS 中看到一些被称为数据类型的东西时，它实际上只是一种表示值的奇特方式。</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>：是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> 数据类型)。您可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。</p>
+<p><strong>注意</strong>：是的，CSS 值倾向于使用尖括号表示，以区别于 CSS 属性 (例如{{cssxref("color")}}属性和 <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> 数据类型)。您可能还会混淆 CSS 数据类型和 HTML 元素，因为它们都使用尖括号，但这不太可能——它们在完全不一样的上下文中使用。</p>
 </div>
 
 <p>在下面的例子中，我们使用关键字设置标题的颜色，使用<code>rgb()</code>函数设置背景：</p>
@@ -40,7 +40,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 } </code>
 </pre>
 
-<p>CSS 中的值是一种定义允许子值集合的方法。这意味着如果您看到<code>&lt;color&gt;</code>是有效的，那么您就不需要考虑可以使用哪些不同类型的颜色值—关键字、十六进制值、<code>rgb()</code>函数等等。假设浏览器支持这些可用的<code>&lt;color&gt;</code>值，则可以使用它们任意一个。MDN 上针对每个值的页面将提供有关浏览器支持的信息。例如，如果您查看 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>的页面，您将看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持。</p>
+<p>CSS 中的值是一种定义允许子值集合的方法。这意味着如果您看到<code>&lt;color&gt;</code>是有效的，那么您就不需要考虑可以使用哪些不同类型的颜色值—关键字、十六进制值、<code>rgb()</code>函数等等。假设浏览器支持这些可用的<code>&lt;color&gt;</code>值，则可以使用它们任意一个。MDN 上针对每个值的页面将提供有关浏览器支持的信息。例如，如果您查看 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>的页面，您将看到浏览器兼容性部分列出了不同类型的颜色值以及对它们的支持。</p>
 
 <p>让我们来看看您可能经常遇到的一些值和单位类型，并提供一些示例，以便您尝试使用各种值的可能性。</p>
 
@@ -187,7 +187,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>在下面的示例中，您可以看到一些相对长度单位和绝对长度单位的行为。第一个框以像素为单位设置{{cssxref("width")}}。作为一个绝对单位，这个宽度将保持不变，无论其他如何变化。</p>
 
-<p>第二个框的宽度设置为<code>vw</code>(视口宽度) 单位。这个值相对于视口宽度，所以 10<code>vw</code>是视口宽度的 10%。如果您更改浏览器窗口的宽度，那么框的大小应该会更改，但是这个示例使用&lt;iframe&gt;嵌入到页面中，所以这将不起作用。要查看实际情况，您必须在打开示例的浏览器选项卡后尝试该示例 <a href="https://mdn.github.io/css-examples/learn/values-units/length.html">试一试</a>。</p>
+<p>第二个框的宽度设置为<code>vw</code>(视口宽度) 单位。这个值相对于视口宽度，所以 10<code>vw</code>是视口宽度的 10%。如果您更改浏览器窗口的宽度，那么框的大小应该会更改，但是这个示例使用&lt;iframe&gt;嵌入到页面中，所以这将不起作用。要查看实际情况，您必须在打开示例的浏览器选项卡后尝试该示例 <a href="https://mdn.github.io/css-examples/learn/values-units/length.html">试一试</a>。</p>
 
 <p>第三个盒子使用 em 单位。这些是相对于字体大小的。我在包含{{htmlelement("div")}}的元素上设置了一个 1em 的字体大小，它有一个<code>.wrapper</code>类。将这个值更改为 1.5em，您将看到所有元素的字体大小都增加了，但是只有最后一项会变宽，因为宽度与字体大小有关。</p>
 
@@ -209,7 +209,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>但是，如果您在 CSS 中更改&lt;html&gt;字体大小，您将看到所有其他相关内容都发生了更改，包括 rem 和 em 大小的文本。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}} </p>
 
 <h3 id="百分比">百分比</h3>
 
@@ -221,21 +221,21 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>尝试更改包装器的宽度或百分比值，看看这是如何工作的。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}} </p>
 
 <p>下一个示例以百分比设置字体大小。每个<code>&lt;li&gt;</code>都有 80% 的字体大小，因此嵌套列表项在从父级继承其大小时将逐渐变小。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
 
 <p>注意，虽然许多值接受长度或百分比，但也有一些值只接受长度。您可以在 MDN 属性引用页面上看到它能接受哪些值。如果允许的值包括<code>&lt;length-percent&gt;</code>，则可以使用长度或百分比。如果允许的值只包含&lt;length&gt;，则不可能使用百分比。</p>
 
 <h3 id="数字">数字</h3>
 
-<p>有些值接受数字，不添加任何单位。接受无单位数字的属性的一个例子是不透明度属性（<code>opacity</code> ），它控制元素的不透明度 (它的透明程度)。此属性接受 0(完全透明) 和 1(完全不透明) 之间的数字。</p>
+<p>有些值接受数字，不添加任何单位。接受无单位数字的属性的一个例子是不透明度属性（<code>opacity</code> ），它控制元素的不透明度 (它的透明程度)。此属性接受 0(完全透明) 和 1(完全不透明) 之间的数字。</p>
 
 <p>在下面的示例中，尝试将不透明度值更改为 0 到 1 之间的各种小数值，并查看框及其内容是如何变得透明或者不透明的。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
 
 <div class="blockIndicator note">
 <p><strong>注意</strong>: 当您在 CSS 中使用数字作为值时，它不应该用引号括起来。</p>
@@ -248,12 +248,12 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p>现代计算机的标准颜色系统是 24 位的，它允许通过不同的红、绿、蓝通道的组合显示大约 1670 万种不同的颜色，每个通道有 256 个不同的值 (256 x 256 x 256 = 16,777,216)。让我们来看看在 CSS 中指定颜色的一些方法。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong> 在本教程中，我们将研究具有良好浏览器支持的常用指定颜色的方法；虽然还有其他的，但是他们没有很好的支持，也不太常见。</p>
+<p><strong>注意：</strong> 在本教程中，我们将研究具有良好浏览器支持的常用指定颜色的方法；虽然还有其他的，但是他们没有很好的支持，也不太常见。</p>
 </div>
 
 <h3 id="颜色关键词">颜色关键词</h3>
 
-<p>在这学习示例或 MDN 上的其他示例中，您经常会看到使用的颜色关键字，因为它们是一种指定颜色的简单易懂的方式。有一些关键词，其中一些有相当有趣的名字！您可以在页面上看到 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>值的完整列表。</p>
+<p>在这学习示例或 MDN 上的其他示例中，您经常会看到使用的颜色关键字，因为它们是一种指定颜色的简单易懂的方式。有一些关键词，其中一些有相当有趣的名字！您可以在页面上看到 <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>值的完整列表。</p>
 
 <p><strong>在下面的示例中尝试使用不同的颜色值，以了解它们是如何工作的。</strong></p>
 
@@ -263,7 +263,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>这些值有点复杂，不太容易理解，但是它们比关键字更通用——您可以使用十六进制值来表示您想在配色方案中使用的任何颜色。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}} </p>
 
 <p><strong>同样，大胆尝试更改值，看看颜色如何变化吧！</strong></p>
 
@@ -273,7 +273,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>让我们重写上一个例子，使用 RGB 颜色：</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}} </p>
 
 <p>您还可以使用 RGBA 颜色——它们的工作方式与 RGB 颜色完全相同，因此您可以使用任何 RGB 值，但是有第四个值表示颜色的 alpha 通道，它控制不透明度。如果将这个值设置为<code>0</code>，它将使颜色完全透明，而设置为<code>1</code>将使颜色完全不透明。介于两者之间的值提供了不同级别的透明度。</p>
 
@@ -288,12 +288,12 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 <p><strong>在本例中，尝试更改 alpha 通道值，看看它如何影响颜色输出。</strong><strong> </strong></p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>在某种程度上，现代浏览器得到了更新，从而让<code>rgba()</code> 和<code>rgb()</code> （以及 <code>hsl()</code>和 <code>hsla()</code>;见下文）成为彼此的纯别名并开始表现完全相同，因此<code>rgba()</code>  和<code>rgb()</code> 接受带有和不带有 alpha 通道值的颜色。尝试将上面示例的<code>rgba()</code> 函数更改为<code>rgb()</code> ，看看颜色是否仍然有效！使用哪种样式由您决定，但是将非透明和透明的颜色定义分开使用不同的功能可以（非常）更好地支持浏览器，并且可以直观地指示代码中定义透明颜色的位置。</p>
+<p><strong>注意：</strong>在某种程度上，现代浏览器得到了更新，从而让<code>rgba()</code> 和<code>rgb()</code> （以及 <code>hsl()</code>和 <code>hsla()</code>;见下文）成为彼此的纯别名并开始表现完全相同，因此<code>rgba()</code>  和<code>rgb()</code> 接受带有和不带有 alpha 通道值的颜色。尝试将上面示例的<code>rgba()</code> 函数更改为<code>rgb()</code> ，看看颜色是否仍然有效！使用哪种样式由您决定，但是将非透明和透明的颜色定义分开使用不同的功能可以（非常）更好地支持浏览器，并且可以直观地指示代码中定义透明颜色的位置。</p>
 </div>
 
 <h3 id="HSL_和_HSLA_的值">HSL 和 HSLA 的值</h3>
 
-<p>与 RGB 相比，HSL 颜色模型的支持稍差一些 (在旧版本的 IE 中不支持)，它是在设计师们感兴趣之后实现的。<code>hsl()</code> 函数接受色调、饱和度和亮度值作为参数，而不是红色、绿色和蓝色值，这些值的不同方式组合，可以区分 1670 万种颜色：</p>
+<p>与 RGB 相比，HSL 颜色模型的支持稍差一些 (在旧版本的 IE 中不支持)，它是在设计师们感兴趣之后实现的。<code>hsl()</code> 函数接受色调、饱和度和亮度值作为参数，而不是红色、绿色和蓝色值，这些值的不同方式组合，可以区分 1670 万种颜色：</p>
 
 <ul>
  <li><strong>色调</strong>：颜色的底色。这个值在 0 和 360 之间，表示色轮周围的角度。</li>
@@ -303,21 +303,21 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>我们可以更新 RGB 的例子来使用 HSL 颜色，就像这样：</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}} </p>
 
 <p>就像 RGB 有 RGBA 一样，HSL 也有 HSLA 等效物，它使您能够指定 alpha 通道值。我已经在下面通过将 RGBA 示例更改为使用 HSLA 颜色来演示了这一点。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}} </p>
 
 <p>您可以在项目中使用这些颜色值中的任何一个。对于大多数项目，您可能会选择一个调色板，然后在整个项目中使用这些颜色——以及您所选择的定义这些颜色的方法。你可以混合使用不同的颜色模型，但是为了一致性，通常最好是你的整个项目使用相同的一个！</p>
 
 <h2 id="图片">图片</h2>
 
-<p><code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> 数据类型用于图像为有效值的任何地方。它可以是一个通过 <code>url()</code>函数指向的实际图像文件，也可以是一个渐变。</p>
+<p><code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> 数据类型用于图像为有效值的任何地方。它可以是一个通过 <code>url()</code>函数指向的实际图像文件，也可以是一个渐变。</p>
 
 <p>在下面的例子中，我们演示了一个图像和一个渐变作为 CSS <code>background-image</code>属性的值。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
 
 <div class="blockIndicator note">
 <p><strong>注意：</strong><code>&lt;image&gt;</code>还有一些其他可能的值，但是这些都是较新的，并且目前对浏览器的支持很差。如果您想了解<code>&lt;image&gt;</code>数据类型，请查看 MDN 页面。</p>
@@ -325,23 +325,23 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h2 id="位置">位置</h2>
 
-<p><code><a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a></code> 数据类型表示一组 2D 坐标，用于定位一个元素，如背景图像 (通过 <code><a href="/en-US/docs/Web/CSS/background-position">background-position</a></code>)。它可以使用关键字 (如 <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, 以及<code>center</code> ) 将元素与 2D 框的特定边界对齐，以及表示框的顶部和左侧边缘偏移量的长度。</p>
+<p><code><a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a></code> 数据类型表示一组 2D 坐标，用于定位一个元素，如背景图像 (通过 <code><a href="/en-US/docs/Web/CSS/background-position">background-position</a></code>)。它可以使用关键字 (如 <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, 以及<code>center</code> ) 将元素与 2D 框的特定边界对齐，以及表示框的顶部和左侧边缘偏移量的长度。</p>
 
-<p>一个典型的位置值由两个值组成——第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 <code>center</code>。</p>
+<p>一个典型的位置值由两个值组成——第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 <code>center</code>。</p>
 
 <p>在下面的示例中，我们使用关键字将背景图像从容器的顶部到右侧放置了 40px。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}} </p>
 
 <p><strong>尝试使用这些值，看看如何把这些图像移来移去。</strong></p>
 
 <h2 id="字符串和标识符">字符串和标识符</h2>
 
-<p>在上面的示例中，我们看到关键字被用作值的地方 (例如<code>&lt;color&gt;</code>关键字，如 <code>red</code>, <code>black</code>, <code>rebeccapurple</code>, and <code>goldenrod</code>)。这些关键字被更准确地描述为标识符，一个 CSS 可以理解的特殊值。因此它们没有使用引号括起来——它们不被当作字符串。</p>
+<p>在上面的示例中，我们看到关键字被用作值的地方 (例如<code>&lt;color&gt;</code>关键字，如 <code>red</code>, <code>black</code>, <code>rebeccapurple</code>, and <code>goldenrod</code>)。这些关键字被更准确地描述为标识符，一个 CSS 可以理解的特殊值。因此它们没有使用引号括起来——它们不被当作字符串。</p>
 
-<p>在某些地方可以使用 CSS 中的字符串，例如 <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after">在指定生成的内容时</a>。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。</p>
+<p>在某些地方可以使用 CSS 中的字符串，例如 <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after">在指定生成的内容时</a>。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
 
 <h2 id="函数">函数</h2>
 
@@ -355,11 +355,11 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h2 id="总结">总结</h2>
 
-<p>本文简要介绍了您可能会遇到的最常见的值和单位类型。你可以看看所有不同类型的 <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS 的值和单位</a> 参考页面；当你学习这些课程时，你将会遇到很多这样的情况。</p>
+<p>本文简要介绍了您可能会遇到的最常见的值和单位类型。你可以看看所有不同类型的 <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS 的值和单位</a> 参考页面；当你学习这些课程时，你将会遇到很多这样的情况。</p>
 
 <p>需要记住的关键一点是，每个属性都有一个已定义的允许值列表，每个值都有一个定义来解释子值是什么。然后您可以在 MDN 上查看详细信息。</p>
 
-<p>例如，理解 <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code>还允许您创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！</p>
+<p>例如，理解 <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code>还允许您创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}</p>
 

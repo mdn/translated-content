@@ -14,7 +14,7 @@
 
 ## MDN 번역 콘텐츠에 대한 일반 지침
 
-이 문서는 한국(ko) 지역에 대한 번역 지침입니다. 귀하의 로케일에 대한 몇 가지 특정 지침을 문서화하는 페이지를 추가하고 싶은데 아직 여기에 나타나지 않는 경우, 하나를 추가하거나 [Locale Teams](https://github.com/mdn/translated-content#policies-for-active-community-maintenance-teams)에 문의해주세요.
+이 문서는 한국(ko) 지역에 대한 번역 지침입니다. 귀하의 로케일에 대한 몇 가지 특정 지침을 문서화하는 페이지를 추가하고 싶은데 아직 여기에 나타나지 않는 경우, 하나를 추가하거나 [Locale Teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams)에 문의해주세요.
 
 마찬가지로 추가하려는 일반 지침에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에 대해 이야기해주세요. 다음은 한국어 번역 지침 원칙의 주요 내용입니다.
 

@@ -88,8 +88,8 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Remainder_assignment">餘數</a><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment">賦值</a></td>
-   <td><code>x %= y</code></td>
-   <td><code>x = x % y</code></td>
+   <td><code>x %= y</code></td>
+   <td><code>x = x % y</code></td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Exponentiation_assignment">指數</a><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment">賦值</a></td>
@@ -273,7 +273,7 @@ var var2 = 4;
 
 <h3 id="位元運算子">位元運算子</h3>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">位元運算子</a> 把運算元當作 32 位元的集合來看待 (0和1)， 而不是十進位，十六進位，或八進位。例如，十進位數字 9 以二進位表示就是  1001。 位元運算子將運算元以上述二進位的形式處理，但是回傳 Javascript 中的數字類型值。</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">位元運算子</a> 把運算元當作 32 位元的集合來看待 (0和1)， 而不是十進位，十六進位，或八進位。例如，十進位數字 9 以二進位表示就是  1001。 位元運算子將運算元以上述二進位的形式處理，但是回傳 Javascript 中的數字類型值。</p>
 
 <p>下列表總結了 JavaScript' 中的位元運算子。</p>
 
@@ -331,7 +331,7 @@ var var2 = 4;
 
 <ul>
  <li>運算元被轉換為32 bits 的整數以二進位形式表示 (0 和 1)。大於 32 bits 的數字將被捨棄多出來的位元。例如， 下列整數大於32個bit但是會被轉換為32個bit的整數:
-  <pre>轉換之前:  11100110111110100000000000000110000000000001
+  <pre>轉換之前:  11100110111110100000000000000110000000000001
 轉換之後:              10100000000000000110000000000001</pre>
  </li>
  <li>第一個運算元中的每個bit分別對應到第二個運算元的每個bit: 第一個 bit 對 第一個 bit, 第二個 bit 對 第二個 bit， 以此類推。</li>
@@ -485,8 +485,8 @@ var n3 = !'Cat'; // !t 回傳 false
 <p>邏輯運算式是由左向右解析的， 他們會以下列規則嘗試進行 短路解析:</p>
 
 <ul>
- <li><code>false</code> &amp;&amp;<em> 任何東西  </em> 是 false 的短路解析。</li>
- <li><code>true</code> || <em>任何東西  </em> 是 true 的短路解析。</li>
+ <li><code>false</code> &amp;&amp;<em> 任何東西  </em> 是 false 的短路解析。</li>
+ <li><code>true</code> || <em>任何東西  </em> 是 true 的短路解析。</li>
 </ul>
 
 <p>這些規則保證 解析總是正確的。 值得注意的地方是，剩餘部分的運算式並沒有被解析，所以不會占用任何效能。</p>

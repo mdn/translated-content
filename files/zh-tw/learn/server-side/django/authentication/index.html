@@ -13,7 +13,7 @@ translation_of: Learn/Server-side/Django/Authentication
  <tbody>
   <tr>
    <th scope="row">前提:</th>
-   <td>完成至 <a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django 線上教學 7: 會話(Sessions)框架</a>為止的所有主題。</td>
+   <td>完成至 <a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django 線上教學 7: 會話(Sessions)框架</a>為止的所有主題。</td>
   </tr>
   <tr>
    <th scope="row">目標:</th>
@@ -48,15 +48,15 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <pre class="brush: python notranslate">INSTALLED_APPS = [
     ...
-<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
-<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
+<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
+<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
     ....
 
 MIDDLEWARE = [
     ...
-<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
+<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
     ...
-<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
+<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
     ....
 </pre>
 
@@ -81,7 +81,7 @@ user.save()
 
 <p>在下面，我們將首先創建一個組，然後創建一個用戶。 即使我們還沒有添加庫成員的任何權限，但是如果以後需要添加，將它們一次添加到組中要比分別添加到每個成員要容易得多。</p>
 
-<p>啟動開發服務器，然後在本地Web瀏覽器（<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>）中導航到管理站點。 使用您的超級用戶帳戶的憑據登錄到該站點。 管理站點的頂層顯示所有模型，按“ django應用程序”排序。 在“<strong>Authentication and Authorisation</strong>”部分，您可以單擊<strong>Users</strong> 或<strong>Groups</strong>鏈接以查看其現有記錄。</p>
+<p>啟動開發服務器，然後在本地Web瀏覽器（<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>）中導航到管理站點。 使用您的超級用戶帳戶的憑據登錄到該站點。 管理站點的頂層顯示所有模型，按“ django應用程序”排序。 在“<strong>Authentication and Authorisation</strong>”部分，您可以單擊<strong>Users</strong> 或<strong>Groups</strong>鏈接以查看其現有記錄。</p>
 
 <p><img alt="Admin site - add groups or users" src="admin_authentication_add.png"></p>
 
@@ -124,7 +124,7 @@ user.save()
 </div>
 
 <div class="note">
-<p><strong>注意: </strong>在這種情況下，我們可以合理地將身份驗證頁面（包括URL和模板）放入目錄應用程序中。 但是，如果我們有多個應用程序，最好將這種共享的登錄行為分開，並使其在整個站點中都可用，這就是我們在此處顯示的內容！</p>
+<p><strong>注意: </strong>在這種情況下，我們可以合理地將身份驗證頁面（包括URL和模板）放入目錄應用程序中。 但是，如果我們有多個應用程序，最好將這種共享的登錄行為分開，並使其在整個站點中都可用，這就是我們在此處顯示的內容！</p>
 </div>
 
 <h3 id="Project_URLs">Project URLs</h3>
@@ -140,7 +140,7 @@ urlpatterns += [
 <p>導航到<a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a> URL（注意尾隨斜杠！），然後Django將顯示一個錯誤，指出找不到此URL，並列出了它嘗試的所有URL。 從中您可以看到將起作用的URL，例如：</p>
 
 <div class="note">
-<p><strong>注意: </strong>使用上述方法會在方括號中添加以下網址，這些網址可用於反轉網址映射。 您無需執行其他任何操作-上面的url映射會自動映射以下提到的URL。</p>
+<p><strong>注意: </strong>使用上述方法會在方括號中添加以下網址，這些網址可用於反轉網址映射。 您無需執行其他任何操作-上面的url映射會自動映射以下提到的URL。</p>
 </div>
 
 <div class="note">
@@ -165,15 +165,15 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>我們剛剛添加的url（和隱式視圖）期望在模板搜索路徑中某個目錄<strong>/registration/</strong> 中找到它們的關聯模板。</p>
 
-<p>對於這個網站，我們將HTML頁面放在<strong>templates/registration/</strong>目錄中。 此目錄應位於您的項目根目錄中，即與<strong>catalog</strong> 和<strong>locallibrary</strong> 文件夾相同的目錄中）。 請立即創建這些文件夾。</p>
+<p>對於這個網站，我們將HTML頁面放在<strong>templates/registration/</strong>目錄中。 此目錄應位於您的項目根目錄中，即與<strong>catalog</strong> 和<strong>locallibrary</strong> 文件夾相同的目錄中）。 請立即創建這些文件夾。</p>
 
 <div class="note">
 <p><strong>Note:</strong> Your folder structure should now look like the below:<br>
  locallibrary (django project folder)<br>
-    |_catalog<br>
-    |_locallibrary<br>
-    |_templates <strong>(new)</strong><br>
-                 |_registration</p>
+    |_catalog<br>
+    |_locallibrary<br>
+    |_templates <strong>(new)</strong><br>
+                 |_registration</p>
 </div>
 
 <p>為了使這些目錄對模板加載器可見（即將該目錄放置在模板搜索路徑中），請打開項目設置(<strong>/locallibrary/locallibrary/settings.py</strong>)，並更新<code>TEMPLATES</code> 部分的<code>DIRS</code>行，如圖所示。</p>
@@ -204,28 +204,28 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 {% if next %}
   {% if user.is_authenticated %}
-    &lt;p&gt;Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.&lt;/p&gt;
-  {% else %}
-    &lt;p&gt;Please login to see this page.&lt;/p&gt;
-  {% endif %}
+    &lt;p&gt;Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.&lt;/p&gt;
+  {% else %}
+    &lt;p&gt;Please login to see this page.&lt;/p&gt;
+  {% endif %}
 {% endif %}
 
 &lt;form method="post" action="{% url 'login' %}"&gt;
 {% csrf_token %}
 
 &lt;div&gt;
-  &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
-  &lt;td&gt;\{{ form.username }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.username }}&lt;/td&gt;
 &lt;/div&gt;
 &lt;div&gt;
-  &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
-  &lt;td&gt;\{{ form.password }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.password }}&lt;/td&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-  &lt;input type="submit" value="login" /&gt;
-  &lt;input type="hidden" name="next" value="\{{ next }}" /&gt;
+  &lt;input type="submit" value="login" /&gt;
+  &lt;input type="hidden" name="next" value="\{{ next }}" /&gt;
 &lt;/div&gt;
 &lt;/form&gt;
 
@@ -291,7 +291,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <h4 id="密碼重置完成">密碼重置完成</h4>
 
-<p>收集您的電子郵件地址後，將顯示此表單。創建 <strong>/locallibrary/templates/registration/password_reset_done.html</strong>，並為其提供以下內容：</p>
+<p>收集您的電子郵件地址後，將顯示此表單。創建 <strong>/locallibrary/templates/registration/password_reset_done.html</strong>，並為其提供以下內容：</p>
 
 <pre class="brush: html notranslate">{% extends "base_generic.html" %}
 
@@ -384,7 +384,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <h3 id="在模板中測試">在模板中測試</h3>
 
-<p>您可以使用 <code>\{{ user }}</code>模板變量在模板中獲取有關當前登錄用戶的信息（默認情況下，就像我們在框架中一樣設置項目時，該信息會添加到模板上下文中）。</p>
+<p>您可以使用 <code>\{{ user }}</code>模板變量在模板中獲取有關當前登錄用戶的信息（默認情況下，就像我們在框架中一樣設置項目時，該信息會添加到模板上下文中）。</p>
 
 <p>通常，您將首先針對 <code>\{{ user.is_authenticated }}</code>模板變量進行測試，以確定該用戶是否有資格查看特定內容。 為了演示這一點，接下來，我們將更新邊欄，以在用戶註銷時顯示“登錄”鏈接，在用戶登錄時顯示“註銷”鏈接。</p>
 
@@ -402,7 +402,7 @@ LOGIN_REDIRECT_URL = '/'
    <strong>{% endif %} </strong>
   &lt;/ul&gt;</pre>
 
-<p>如您所見，我們使用 <code>if</code>-<code>else</code>-<code>endif</code> 模板標籤根據 <code>\{{ user.is_authenticated }}</code> \ {{user.is_authenticated}}是否為真來有條件地顯示文本。 如果用戶通過了身份驗證，那麼我們知道我們有一個有效的用戶，因此我們調用 <strong>\{{ user.get_username }} </strong>來顯示其名稱。</p>
+<p>如您所見，我們使用 <code>if</code>-<code>else</code>-<code>endif</code> 模板標籤根據 <code>\{{ user.is_authenticated }}</code> \ {{user.is_authenticated}}是否為真來有條件地顯示文本。 如果用戶通過了身份驗證，那麼我們知道我們有一個有效的用戶，因此我們調用 <strong>\{{ user.get_username }} </strong>來顯示其名稱。</p>
 
 <p>我們使用<code>url</code> 模板標記和相應URL配置的名稱來創建登錄和註銷鏈接URL。 還要注意我們如何將<code>?next=\{{request.path}}</code>附加到URL的末尾。 這是在鏈接的URL的末尾添加一個URL參數，其中包含當前頁面的地址（URL）。 用戶成功登錄/註銷後，視圖將使用此``<code>next</code>''值將用戶重定向到他們首先單擊 login/logout 鏈接的頁面。</p>
 
@@ -421,10 +421,10 @@ def my_view(request):
     ...</pre>
 
 <div class="note">
-<p><strong>注意:</strong> 您可以通過在<code>request.user.is_authenticated</code>上進行測試來手動執行相同的操作，但是裝飾器要方便得多！</p>
+<p><strong>注意:</strong> 您可以通過在<code>request.user.is_authenticated</code>上進行測試來手動執行相同的操作，但是裝飾器要方便得多！</p>
 </div>
 
-<p>同樣，在基於類的視圖中限制對登錄用戶的訪問權限的最簡單方法是從 <code>LoginRequiredMixin</code>. 派生。 您需要首先在父類列表中，在主視圖類之前聲明此混合。</p>
+<p>同樣，在基於類的視圖中限制對登錄用戶的訪問權限的最簡單方法是從 <code>LoginRequiredMixin</code>. 派生。 您需要首先在父類列表中，在主視圖類之前聲明此混合。</p>
 
 <pre class="brush: python notranslate">from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -490,17 +490,17 @@ python3 manage.py migrate
 
 <pre class="brush: python notranslate">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
-    list_filter = ('status', 'due_back')
+    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
+    list_filter = ('status', 'due_back')
 
-    fieldsets = (
-        (None, {
-            'fields': ('book','imprint', 'id')
-        }),
-        ('Availability', {
-            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
-        }),
-    )</pre>
+    fieldsets = (
+        (None, {
+            'fields': ('book','imprint', 'id')
+        }),
+        ('Availability', {
+            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
+        }),
+    )</pre>
 
 <h3 id="Loan_a_few_books">Loan a few books</h3>
 
@@ -561,9 +561,9 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     {% endif %}
 {% endblock %}</pre>
 
-<p>該模板與我們先前為<code>Book</code> 和<code>Author</code> 物件創建的模板非常相似。 這裡唯一的“新內容”是我們檢查在模型中添加的方法（<code>bookinst.is_overdue</code>），並使用它來更改過期項目的顏色。</p>
+<p>該模板與我們先前為<code>Book</code> 和<code>Author</code> 物件創建的模板非常相似。 這裡唯一的“新內容”是我們檢查在模型中添加的方法（<code>bookinst.is_overdue</code>），並使用它來更改過期項目的顏色。</p>
 
-<p>開發服務器運行時，現在應該可以在瀏覽器中的 <a href="http://127.0.0.1:8000/catalog/mybooks/">http://127.0.0.1:8000/catalog/mybooks/</a> 上查看已登錄用戶的列表。 在您的用戶登錄和註銷後進行嘗試（在第二種情況下，應將您重定向到登錄頁面）。</p>
+<p>開發服務器運行時，現在應該可以在瀏覽器中的 <a href="http://127.0.0.1:8000/catalog/mybooks/">http://127.0.0.1:8000/catalog/mybooks/</a> 上查看已登錄用戶的列表。 在您的用戶登錄和註銷後進行嘗試（在第二種情況下，應將您重定向到登錄頁面）。</p>
 
 <h3 id="Add_the_list_to_the_sidebar">Add the list to the sidebar</h3>
 
@@ -600,8 +600,8 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <pre class="brush: python notranslate">class BookInstance(models.Model):
     ...
-    class Meta:
-        ...
+    class Meta:
+        ...
 <strong>        permissions = (("can_mark_returned", "Set book as returned"),)  </strong> </pre>
 
 <p>然後，我們可以將權限分配給管理站點中的“圖書管理員”組。</p>
@@ -610,11 +610,11 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <h3 id="模板">模板</h3>
 
-<p>當前用戶的權限存儲在名為 <code>\{{ perms }}</code>. 的模板變量中。 您可以使用關聯的Django "app"“應用”中的特定變量名稱來檢查當前用戶是否具有特定權限，例如 如果用戶具有此權限，則 <code>\{{ perms.catalog.can_mark_returned }}</code> 將為 <code>True</code> ，否則為<code>False</code>。 我們通常使用模板 <code>{% if %}</code> 標籤測試權限，如下所示：</p>
+<p>當前用戶的權限存儲在名為 <code>\{{ perms }}</code>. 的模板變量中。 您可以使用關聯的Django "app"“應用”中的特定變量名稱來檢查當前用戶是否具有特定權限，例如 如果用戶具有此權限，則 <code>\{{ perms.catalog.can_mark_returned }}</code> 將為 <code>True</code> ，否則為<code>False</code>。 我們通常使用模板 <code>{% if %}</code> 標籤測試權限，如下所示：</p>
 
 <pre class="brush: python notranslate">{% if perms.catalog.<code>can_mark_returned</code> %}
     &lt;!-- We can mark a BookInstance as returned. --&gt;
-    &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
+    &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
 {% endif %}
 </pre>
 

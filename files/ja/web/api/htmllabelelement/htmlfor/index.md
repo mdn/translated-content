@@ -23,7 +23,7 @@ HTMLLabelElement.htmlFor = newId
 
 ### 値
 
-{{domxref("DOMString")}} で、このコントロールに関連する要素の ID 文字列をが入ります。
+{{domxref("DOMString")}} で、このコントロールに関連する要素の ID 文字列が入ります。
 
 > **Note:** このプロパティに値がある場合 {{domxref("HTMLLabelElement.control")}} プロパティも同じコントロールになります。
 

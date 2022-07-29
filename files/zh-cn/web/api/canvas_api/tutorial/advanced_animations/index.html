@@ -20,7 +20,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 <pre class="brush: html">&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
-<p>跟平常一样，我们需要先画一个 context（画布场景）。为了画出这个球，我们又会创建一个包含一些相关属性以及 <code>draw()</code> 函数的 <code>ball</code> 对象，来完成绘制。</p>
+<p>跟平常一样，我们需要先画一个 context（画布场景）。为了画出这个球，我们又会创建一个包含一些相关属性以及 <code>draw()</code> 函数的 <code>ball</code> 对象，来完成绘制。</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -86,15 +86,15 @@ canvas.addEventListener('mouseout', function(e){
 ball.draw();
 </pre>
 
-<h2 id="边界">边界  </h2>
+<h2 id="边界">边界  </h2>
 
-<p>若没有任何的碰撞检测，我们的小球很快就会超出画布。我们需要检查小球的 x 和 y 位置是否已经超出画布的尺寸以及是否需要将速度矢量反转。为了这么做，我们把下面的检查代码添加进 <code>draw</code> 函数：</p>
+<p>若没有任何的碰撞检测，我们的小球很快就会超出画布。我们需要检查小球的 x 和 y 位置是否已经超出画布的尺寸以及是否需要将速度矢量反转。为了这么做，我们把下面的检查代码添加进 <code>draw</code> 函数：</p>
 
 <pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
-  ball.vy = -ball.vy;
+  ball.vy = -ball.vy;
 }
 if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
-  ball.vx = -ball.vx;
+  ball.vx = -ball.vx;
 }</pre>
 
 <h3 id="首个预览">首个预览</h3>
@@ -290,7 +290,7 @@ ball.draw();</pre>
 
 <h2 id="添加鼠标控制">添加鼠标控制</h2>
 
-<p>为了更好地控制小球，我们可以用 <code style="font-style: normal;"><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code>事件让它跟随鼠标活动。下面例子中，<a href="/en-US/docs/Web/Events/click">click</a> 事件会释放小球然后让它重新跳起。</p>
+<p>为了更好地控制小球，我们可以用 <code style="font-style: normal;"><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code>事件让它跟随鼠标活动。下面例子中，<a href="/en-US/docs/Web/Events/click">click</a> 事件会释放小球然后让它重新跳起。</p>
 
 <div class="hidden">
 <pre class="brush: html">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>

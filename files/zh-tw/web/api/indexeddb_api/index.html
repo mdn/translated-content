@@ -41,8 +41,8 @@ translation_of: Web/API/IndexedDB_API
 <p>以下API在早期規範中有定義，但現已移除。這邊列出僅供參考:</p>
 
 <ul>
- <li><a href="/zh-TW/docs/IndexedDB/IDBVersionChangeRequest">IDBVersionChangeRequest</a> 代表「更改資料庫版本」的請求。更改資料庫版本的方法已有不同 (呼叫 <a href="/zh-TW/docs/IndexedDB/IDBFactory#open">IDBFactory.open()</a> 而不需同時呼叫  <a href="/zh-TW/docs/IndexedDB/IDBDatabase#setVersion%28%29">IDBDatabase.setVersion()</a>)；而且<a href="/zh-TW/docs/IndexedDB/IDBOpenDBRequest">IDBOpenDBRequest</a>已經整合了從IDBVersionChangeRequest中所移除之功能。</li>
- <li><a href="/zh-TW/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException </a> {{obsolete_inline}} 在執行資料庫作業時，代表可能遭遇的例外狀況。</li>
+ <li><a href="/zh-TW/docs/IndexedDB/IDBVersionChangeRequest">IDBVersionChangeRequest</a> 代表「更改資料庫版本」的請求。更改資料庫版本的方法已有不同 (呼叫 <a href="/zh-TW/docs/IndexedDB/IDBFactory#open">IDBFactory.open()</a> 而不需同時呼叫  <a href="/zh-TW/docs/IndexedDB/IDBDatabase#setVersion%28%29">IDBDatabase.setVersion()</a>)；而且<a href="/zh-TW/docs/IndexedDB/IDBOpenDBRequest">IDBOpenDBRequest</a>已經整合了從IDBVersionChangeRequest中所移除之功能。</li>
+ <li><a href="/zh-TW/docs/IndexedDB/IDBDatabaseException">IDBDatabaseException </a> {{Deprecated_Inline}} 在執行資料庫作業時，代表可能遭遇的例外狀況。</li>
 </ul>
 
 <p>除了非同步API，也有應用在<a href="/zh-TW/docs/DOM/Using_web_workers">WebWorkers</a>內的同步API，但請注意目前還沒有瀏覽器支援同步API。這裡也提供 <a href="/zh-TW/docs/IndexedDB/Syncronous_API">API 的同步版本</a>。</p>
@@ -58,7 +58,7 @@ translation_of: Web/API/IndexedDB_API
  <li>Google Chrome：請參閱 <a href="https://developers.google.com/chrome/whitepapers/storage#temporary">https://developers.google.com/chrome...rage#temporary</a></li>
 </ul>
 
-<h2 id="Example" name="Example">範例</h2>
+<h2 id="Example">範例</h2>
 
 <p>Web 上的 IndexedDB 使用範例，是由 Marco Castelluccio 所提供。Marco 是 IndexedDB Mozilla DevDerby 的優勝者，而該得獎 Demo 為 <a href="/zh-TW/demos/detail/elibri">eLibri</a>，屬於函式庫與 eBook 閱讀器的 App。</p>
 

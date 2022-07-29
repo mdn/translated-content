@@ -31,12 +31,12 @@ element.scrollIntoView(scrollIntoViewOptions); // Paramètre d'objet
 
 - `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
   - : Est un objet qui a les propriétés suivantes :
-- `behavior` {{optional_inline}}
-  - : Définit l'animation de transition qui peut être `"auto"`, `"instant"` ou `"smooth"`. Par défaut : `"auto"`.
-- `block` {{optional_inline}}
-  - : L'une des options  `"start"`, `"center"`, `"end"` ou`"nearest"`. Par défaut : `"center"`.
-- `inline` {{optional_inline}}
-  - : L'une des options `"start"`, `"center"`, `"end"` ou `"nearest"`. Par défaut : `"nearest"`.
+    - `behavior` {{optional_inline}}
+      - : Définit l'animation de transition qui peut être `"auto"`, `"instant"` ou `"smooth"`. Par défaut : `"auto"`.
+    - `block` {{optional_inline}}
+      - : L'une des options  `"start"`, `"center"`, `"end"` ou`"nearest"`. Par défaut : `"center"`.
+    - `inline` {{optional_inline}}
+      - : L'une des options `"start"`, `"center"`, `"end"` ou `"nearest"`. Par défaut : `"nearest"`.
 
 ## Exemple
 

@@ -54,7 +54,7 @@ Math.max(-10, 20);  //  20
 
 <pre class="brush: js">var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
-    return Math.max(a, b);
+    return Math.max(a, b);
 }, -Infinity);
 </pre>
 
@@ -70,7 +70,7 @@ var max = arr.reduce(function(a, b) {
 var max = Math.max(...arr);
 </pre>
 
-<p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Using <code>apply</code> and built-in functions</a> for more details. The <code>reduce</code> solution does not have this problem.</p>
+<p>However, both spread (<code>...</code>) and <code>apply</code> will either fail or return the wrong result if the array has too many elements, because they try to pass the array elements as function parameters. See <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Using_apply_and_built-in_functions">Using <code>apply</code> and built-in functions</a> for more details. The <code>reduce</code> solution does not have this problem.</p>
 
 <h2 id="規範">規範</h2>
 

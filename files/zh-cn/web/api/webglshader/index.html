@@ -9,11 +9,11 @@ translation_of: Web/API/WebGLShader
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong>WebGLShader</strong> 可以是一个顶点着色器（vertex shader）或片元着色器（fragment shader）。每个 {{domxref("WebGLProgram")}} 都需要这两种类型的着色器。</p>
+<p><a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> 的 <strong>WebGLShader</strong> 可以是一个顶点着色器（vertex shader）或片元着色器（fragment shader）。每个 {{domxref("WebGLProgram")}} 都需要这两种类型的着色器。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>要创建一个<strong> WebGLShader</strong> 需要使用 {{domxref("WebGLRenderingContext.createShader")}}，通过 {{domxref("WebGLRenderingContext.shaderSource()")}} 然后挂接 GLSL 源代码 , 最后调用 {{domxref("WebGLRenderingContext.compileShader()")}} 完成着色器（shader）的编译。 此时 <strong>WebGLShader</strong> 仍不是可用的形式，他需要被添加到一个 {{domxref("WebGLProgram")}}里。</p>
+<p>要创建一个<strong> WebGLShader</strong> 需要使用 {{domxref("WebGLRenderingContext.createShader")}}，通过 {{domxref("WebGLRenderingContext.shaderSource()")}} 然后挂接 GLSL 源代码 , 最后调用 {{domxref("WebGLRenderingContext.compileShader()")}} 完成着色器（shader）的编译。 此时 <strong>WebGLShader</strong> 仍不是可用的形式，他需要被添加到一个 {{domxref("WebGLProgram")}}里。</p>
 
 <pre class="brush: js">function createShader (gl, sourceCode, type) {
   // Compiles either a shader of type gl.VERTEX_SHADER or gl.FRAGMENT_SHADER
@@ -35,7 +35,7 @@ translation_of: Web/API/WebGLShader
 
 <h3 id="创建一个顶点着色器（_vertex_shader）">创建一个顶点着色器（ vertex shader）</h3>
 
-<p>注意，有很多其他方式编译和访问着色器（shader）源代码字符串. 这些示例仅用于例证说明。</p>
+<p>注意，有很多其他方式编译和访问着色器（shader）源代码字符串. 这些示例仅用于例证说明。</p>
 
 <pre class="brush: js">var vertexShaderSource =
   "attribute vec4 position;\n"+
@@ -60,24 +60,9 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.8", "WebGLShader")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>初次定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<div> </div>
 
 <div>{{Compat("api.WebGLShader")}}</div>
 

@@ -60,12 +60,12 @@ elements.<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
 
 // 上方這種一般的函式，可以被改寫成下方的箭頭函式
 elements.map((element) =&gt; {
-  return element.length;
+  return element.length;
 }); // [8, 6, 7, 9]
 
 // 如果輸入的參數只有一個，我們可以移除掉外面的括號
 elements.map(element =&gt; {
-  return element.length;
+  return element.length;
 }); // [8, 6, 7, 9]
 
 // 當箭頭函式裡的內容只有'return'的時候，我們可以拿掉return和外面的大括號
@@ -84,7 +84,7 @@ elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]
 
 <h3 id="this_不分家"><code>this</code> 不分家</h3>
 
-<p>在有箭頭函數之前，每個新函式是依據如何被呼叫來定義自己的 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 變數<br>
+<p>在有箭頭函數之前，每個新函式是依據如何被呼叫來定義自己的 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 變數<br>
  例如:</p>
 
 <ul>
@@ -102,7 +102,7 @@ elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]
 
   setInterval(function growUp() {
     // 在非嚴格模式下, growUp() 函式把 this 定義為全域物件
-    // (因為那是 growUp()執行的所在)，
+    // (因為那是 growUp()執行的所在)，
     // 與 Person() 建構式所定義的 this 有所不同
     this.age++;
   }, 1000);

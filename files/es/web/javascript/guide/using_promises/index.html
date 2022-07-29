@@ -14,9 +14,9 @@ original_slug: Web/JavaScript/Guide/Usar_promesas
 
 <p>Una {{jsxref("Promise")}} (promesa en castellano) es un objeto que representa la terminación o el fracaso de una operación asíncrona. Dado que la mayoría de las personas consumen <code>promises</code> ya creadas, esta guía explicará primero cómo consumirlas, y luego cómo crearlas.</p>
 
-<p>Esencialmente, una promesa es un objeto devuelto al cuál se adjuntan funciones <code>callback</code>, en lugar de pasar callbacks a una función.</p>
+<p>Esencialmente, una promesa es un objeto devuelto al cual se adjuntan funciones <code>callback</code>, en lugar de pasar callbacks a una función.</p>
 
-<p>Considera la función <code>crearArchivoAudioAsync()</code>, el cuál genera de manera asíncrona un archivo de sonido de acuerdo a un archivo de configuración, y dos funciones callback, una que es llamada si el archivo de audio es creado satisfactoriamente, y la otra que es llamada si ocurre un error. El código podría verse de la siguiente forma:</p>
+<p>Considera la función <code>crearArchivoAudioAsync()</code>, la cual genera de manera asíncrona un archivo de sonido de acuerdo a un archivo de configuración, y dos funciones callback, una que es llamada si el archivo de audio es creado satisfactoriamente, y la otra que es llamada si ocurre un error. El código podría verse de la siguiente forma:</p>
 
 <pre class="brush: js line-numbers  language-js">function exitoCallback(resultado) {
   console.log("Archivo de audio disponible en la URL " + resultado);
@@ -33,7 +33,7 @@ crearArchivoAudioAsync(audioConfig, exitoCallback, falloCallback);
 
 <pre class="brush: js line-numbers  language-js">crearArchivoAudioAsync(audioConfig).then(exitoCallback, falloCallback);</pre>
 
-<p>Lo cuál es la versión corta de:</p>
+<p>Lo cual es la versión corta de:</p>
 
 <pre class="brush: js line-numbers  language-js">const promesa = crearArchivoAudioAsync(audioConfig);
 promesa.then(exitoCallback, falloCallback);</pre>

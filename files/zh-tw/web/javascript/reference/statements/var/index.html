@@ -20,13 +20,13 @@ translation_of: Web/JavaScript/Reference/Statements/var
 
 <h2 id="說明">說明</h2>
 
-<p>以 <code>var</code> 宣告的變數, 其作用範圍 (scope) 及於該函數之內; 但是如果在函數外宣告, 其作用範圍則為全域性 (global) (亦即包納於全域物件之內)。</p>
+<p>以 <code>var</code> 宣告的變數, 其作用範圍 (scope) 及於該函數之內; 但是如果在函數外宣告, 其作用範圍則為全域性 (global) (亦即包納於全域物件之內)。</p>
 
-<p>在函數之外使用以 <code>var</code> 宣告的變數是非強制的 (optional); 如果對一個未經宣告的變數賦值, 它會被暗中 (implicitly) 宣告成為一個全域變數 (亦即成為全域物件的屬性)。其中差異在於, 已宣告的變數是全域物件裡的一個無法變更 (non-configurable) 的屬性, 而未宣告的變數則是可變更的 (configurable)。</p>
+<p>在函數之外使用以 <code>var</code> 宣告的變數是非強制的 (optional); 如果對一個未經宣告的變數賦值, 它會被暗中 (implicitly) 宣告成為一個全域變數 (亦即成為全域物件的屬性)。其中差異在於, 已宣告的變數是全域物件裡的一個無法變更 (non-configurable) 的屬性, 而未宣告的變數則是可變更的 (configurable)。</p>
 
 <p>因此, 建議你一定要宣告你的變數, 不管你要將它使用於全域範圍內或者函數內。</p>
 
-<p>若未宣告變數, 將非常可能導致無法預測的結果。所以, 在 ECMAScript 5 <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a> 中, 若在函數中給一個未經宣告的函數賦值, 將會丟出錯誤。</p>
+<p>若未宣告變數, 將非常可能導致無法預測的結果。所以, 在 ECMAScript 5 <a href="/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict mode</a> 中, 若在函數中給一個未經宣告的函數賦值, 將會丟出錯誤。</p>
 
 <p>Variable declarations, wherever they occur, are processed before any code is executed. The scope of a variable declared with <code>var</code> is its current <em>execution context</em>, which is either the enclosing function or, for variables declared outside any function, global.</p>
 
@@ -110,7 +110,7 @@ var a, b = a = "A";
 console.log(x + y); // undefinedA
 </pre>
 
-<p>Here, <code>x</code> and <code>y</code> are declared before any code is executed, the assignments occur later. At the time "<code>x = y</code>" is evaluated, <code>y</code> exists so no <code>ReferenceError</code> is thrown and its value is '<code>undefined</code>'. So, <code>x</code> is assigned the undefined value. Then, <code>y</code> is assigned a value of 'A'. Consequently, after the first line, <code>x === undefined &amp;&amp; y === 'A'</code>, hence the result.</p>
+<p>Here, <code>x</code> and <code>y</code> are declared before any code is executed, the assignments occur later. At the time "<code>x = y</code>" is evaluated, <code>y</code> exists so no <code>ReferenceError</code> is thrown and its value is '<code>undefined</code>'. So, <code>x</code> is assigned the undefined value. Then, <code>y</code> is assigned a value of 'A'. Consequently, after the first line, <code>x === undefined &amp;&amp; y === 'A'</code>, hence the result.</p>
 
 <h3 id="Initialization_of_several_variables">Initialization of several variables</h3>
 

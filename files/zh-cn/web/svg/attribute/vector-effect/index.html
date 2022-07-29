@@ -5,9 +5,9 @@ translation_of: Web/SVG/Attribute/vector-effect
 ---
 <div>{{SVGRef}}</div>
 
-<p><strong><code>vector-effect</code></strong> 属性指明绘制对象时要使用的矢量效果。在任何其他合成操作（如滤镜，蒙版和剪辑等）之前，都要应用矢量效果。</p>
+<p><strong><code>vector-effect</code></strong> 属性指明绘制对象时要使用的矢量效果。在任何其他合成操作（如滤镜，蒙版和剪辑等）之前，都要应用矢量效果。</p>
 
-<p><strong>备注：</strong> 作为显示性属性， <code>vector-effect</code> 也可以直接在 CSS 样式表中作为属性使用。</p>
+<p><strong>备注：</strong> 作为显示性属性， <code>vector-effect</code> 也可以直接在 CSS 样式表中作为属性使用。</p>
 
 <p>作为显示性属性，它能被应用到任何元素，但只对这 10 个元素有效果: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}} {{SVGElement("tspan")}}, and {{SVGElement("use")}}</p>
 
@@ -48,16 +48,16 @@ translation_of: Web/SVG/Attribute/vector-effect
 <h3 id="Example_vector-effectnon-scaling-stroke">Example: vector-effect="non-scaling-stroke"</h3>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 500 240"&gt;
-  &lt;!-- normal --&gt;
-  &lt;path d="M10,20L40,100L39,200z" stroke="black" stroke-width="2px" fill="none"&gt;&lt;/path&gt;
+  &lt;!-- normal --&gt;
+  &lt;path d="M10,20L40,100L39,200z" stroke="black" stroke-width="2px" fill="none"&gt;&lt;/path&gt;
 
-  &lt;!-- scaled --&gt;
-  &lt;path transform="translate(100,0)scale(4,1)" d="M10,20L40,100L39,200z" stroke="black"
+  &lt;!-- scaled --&gt;
+  &lt;path transform="translate(100,0)scale(4,1)" d="M10,20L40,100L39,200z" stroke="black"
       stroke-width="2px" fill="none"&gt;&lt;/path&gt;
 
-  &lt;!-- fixed--&gt;
-  &lt;path vector-effect="non-scaling-stroke" transform="translate(300,0)scale(4,1)" d="M10,20L40,100L39,200z"
-      stroke="black" stroke-width="2px" fill="none"&gt;&lt;/path&gt;
+  &lt;!-- fixed--&gt;
+  &lt;path vector-effect="non-scaling-stroke" transform="translate(300,0)scale(4,1)" d="M10,20L40,100L39,200z"
+      stroke="black" stroke-width="2px" fill="none"&gt;&lt;/path&gt;
 &lt;/svg&gt;
 </pre>
 

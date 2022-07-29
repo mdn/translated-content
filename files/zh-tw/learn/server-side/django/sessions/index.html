@@ -13,7 +13,7 @@ translation_of: Learn/Server-side/Django/Sessions
  <tbody>
   <tr>
    <th scope="row">Prerequisites:</th>
-   <td>Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></td>
+   <td>Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></td>
   </tr>
   <tr>
    <th scope="row">Objective:</th>
@@ -42,7 +42,7 @@ translation_of: Learn/Server-side/Django/Sessions
 
 <p>當我們<a href="/zh-TW/docs/Learn/Server-side/Django/skeleton_website">創建框架網站</a>時（在教程2中），將自動啟用會話。</p>
 
-<p>在項目文件的<code>INSTALLED_APPS</code> 和<code>MIDDLEWARE</code> 部分中進行配置(<strong>locallibrary/locallibrary/settings.py</strong>)，如下所示：</p>
+<p>在項目文件的<code>INSTALLED_APPS</code> 和<code>MIDDLEWARE</code> 部分中進行配置(<strong>locallibrary/locallibrary/settings.py</strong>)，如下所示：</p>
 
 <pre class="brush: python notranslate">INSTALLED_APPS = [
     ...
@@ -56,9 +56,9 @@ MIDDLEWARE = [
 
 <h2 id="Using_sessions">Using sessions</h2>
 
-<p>您可以從<code>request</code> 參數（作為視圖的第一個參數傳入的<code>HttpRequest</code> ）中訪問視圖中的<code>session</code> 屬性。 此會話屬性表示與當前用戶的特定連接（或更確切地說，與當前瀏覽器的連接，由該站點的瀏覽器cookie中的會話ID標識）。</p>
+<p>您可以從<code>request</code> 參數（作為視圖的第一個參數傳入的<code>HttpRequest</code> ）中訪問視圖中的<code>session</code> 屬性。 此會話屬性表示與當前用戶的特定連接（或更確切地說，與當前瀏覽器的連接，由該站點的瀏覽器cookie中的會話ID標識）。</p>
 
-<p><code>session</code> 屬性是一個類似於字典的對象，您可以在視圖中隨意讀取和寫入多次，並根據需要對其進行修改。 您可以執行所有正常的字典操作，包括清除所有數據，測試是否存在鍵，循環訪問數據等。儘管如此，在大多數情況下，您只會使用標準的``字典''API來獲取和設置值。</p>
+<p><code>session</code> 屬性是一個類似於字典的對象，您可以在視圖中隨意讀取和寫入多次，並根據需要對其進行修改。 您可以執行所有正常的字典操作，包括清除所有數據，測試是否存在鍵，循環訪問數據等。儘管如此，在大多數情況下，您只會使用標準的``字典''API來獲取和設置值。</p>
 
 <p>下面的代碼片段顯示瞭如何獲取，設置和刪除與當前會話（瀏覽器）相關的鍵“ <code>my_car</code>”的某些數據。</p>
 
@@ -79,7 +79,7 @@ request.session['my_car'] = 'mini'
 del request.session['my_car']
 </pre>
 
-<p>該API還提供了許多其他方法，這些方法主要用於管理關聯的會話cookie。 例如，有一些方法可以測試客戶端瀏覽器是否支持cookie，設置和檢查cookie到期日期以及從數據存儲中清除過期的會話。 您可以在如 <a href="https://docs.djangoproject.com/en/2.0/topics/http/sessions/">How to use sessions</a> 找到完整的API（Django文檔）。</p>
+<p>該API還提供了許多其他方法，這些方法主要用於管理關聯的會話cookie。 例如，有一些方法可以測試客戶端瀏覽器是否支持cookie，設置和檢查cookie到期日期以及從數據存儲中清除過期的會話。 您可以在如 <a href="https://docs.djangoproject.com/en/2.0/topics/http/sessions/">How to use sessions</a> 找到完整的API（Django文檔）。</p>
 
 <h2 id="Saving_session_data">Saving session data</h2>
 
@@ -101,11 +101,11 @@ request.session['my_car']['wheels'] = 'alloy'
 <p><strong>注意</strong>：您可以更改行為，以便站點可以通過在您的項目設置（<strong>locallibrary/locallibrary/settings.py</strong>）中添加<code>SESSION_SAVE_EVERY_REQUEST = True</code> 來更新每個請求的數據庫/發送cookie。</p>
 </div>
 
-<h2 id="Simple_example_—_getting_visit_counts">Simple example — getting visit counts</h2>
+<h2 id="Simple_example_—_getting_visit_counts">Simple example — getting visit counts</h2>
 
 <p>作為一個簡單的真實示例，我們將更新我們的庫以告知當前用戶他們訪問LocalLibrary主頁的次數。</p>
 
-<p>打開/ <strong>/locallibrary/catalog/views.py</strong>，然後進行以下粗體顯示的更改。</p>
+<p>打開/ <strong>/locallibrary/catalog/views.py</strong>，然後進行以下粗體顯示的更改。</p>
 
 <pre class="brush: python notranslate">def index(request):
     ...
@@ -159,7 +159,7 @@ request.session['my_car']['wheels'] = 'alloy'
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.0/topics/http/sessions/">How to use sessions</a> (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/topics/http/sessions/">How to use sessions</a> (Django docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}</p>

@@ -33,7 +33,7 @@ var last = fruits[fruits.length - 1];
 <p><strong>迭代陣列</strong></p>
 
 <pre class="brush: js">fruits.forEach(function(item, index, array) {
-  console.log(item, index);
+  console.log(item, index);
 });
 // Apple 0
 // Banana 1
@@ -111,7 +111,7 @@ new Array(<var>arrayLength</var>)</pre>
 
 <dl>
  <dt><code>element<em>N</em></code></dt>
- <dd>除了只傳遞一個參數給 <code>Array</code> 構造函數，且該參數為一個數字的情況（詳見下方的 arrayLength 參數），JavaScript 陣列會以傳入的元素進行初始化。請注意，這種特殊情況僅適用於以 <code>Array </code>構造函數建立的 JavaScript 陣列，而不適用於以括號語法建立的陣列常值（Array Literals）。</dd>
+ <dd>除了只傳遞一個參數給 <code>Array</code> 構造函數，且該參數為一個數字的情況（詳見下方的 arrayLength 參數），JavaScript 陣列會以傳入的元素進行初始化。請注意，這種特殊情況僅適用於以 <code>Array </code>構造函數建立的 JavaScript 陣列，而不適用於以括號語法建立的陣列常值（Array Literals）。</dd>
  <dt><code>arrayLength</code></dt>
  <dd>如果傳遞給 <code>Array</code> 構造函數的唯一參數是 0 和 2^32 - 1（含）之間的整數，將回傳一個新的 JavaScript 陣列，其長度被設定為這個數字。如果參數是任何其他數值，將拋出 {{jsxref("RangeError")}} 異常。</dd>
 </dl>
@@ -124,7 +124,7 @@ new Array(<var>arrayLength</var>)</pre>
 
 <h3 id="Accessing_array_elements">存取陣列元素</h3>
 
-<p>JavaScript 陣列是 zero-indexed：陣列元素的索引值編排從 0 開始，而最後一個元素的索引值等同於陣列的 {{jsxref("Array.length", "length")}} 屬性減 1。</p>
+<p>JavaScript 陣列是 zero-indexed：陣列元素的索引值編排從 0 開始，而最後一個元素的索引值等同於陣列的 {{jsxref("Array.length", "length")}} 屬性減 1。</p>
 
 <pre class="brush: js">var arr = ['this is the first element', 'this is the second element'];
 console.log(arr[0]);              // 紀錄出 'this is the first element'
@@ -137,7 +137,7 @@ console.log(arr[arr.length - 1]); // 記錄出 'this is the second element'
 <pre class="brush: js">console.log(arr.0); // 語法錯誤
 </pre>
 
-<p>會造成如此的原因沒有什麼特別的，在 JavaScript 當中無法用小數點的方式來參照一個名稱開頭為數字的屬性，而必須括號的表示方式來存取。舉例來說，若您有個物件的屬性名稱為「<code>3d</code>」，就只能用括號的方式來參照。</p>
+<p>會造成如此的原因沒有什麼特別的，在 JavaScript 當中無法用小數點的方式來參照一個名稱開頭為數字的屬性，而必須括號的表示方式來存取。舉例來說，若您有個物件的屬性名稱為「<code>3d</code>」，就只能用括號的方式來參照。</p>
 
 <p>請看下列範例：</p>
 
@@ -150,7 +150,7 @@ console.log(years[0]);  // 程式正常
 renderer['3d'].setTexture(model, 'character.png');  // 程式正常
 </pre>
 
-<p>注意：以這個 <code>'3d'</code> 例子來說，必須用引號將 <code>3d</code> 包起來。您也可以將 JavaScript 陣列的索引用引號包起來（例如使用 <code>years['2']</code> 而不用 <code>years[2]</code>），但這不是必要的。JavaScript 會透過隱含的 <code>toString</code>，將 <code>years[2]</code> 當中的 2 強制轉換為字串。由於這個原因，<code>'2'</code> 與 <code>'02'</code> 會參照到 <code>years</code> 物件中的不同項目，下列程式範例結果可能回傳 <code>true</code>：</p>
+<p>注意：以這個 <code>'3d'</code> 例子來說，必須用引號將 <code>3d</code> 包起來。您也可以將 JavaScript 陣列的索引用引號包起來（例如使用 <code>years['2']</code> 而不用 <code>years[2]</code>），但這不是必要的。JavaScript 會透過隱含的 <code>toString</code>，將 <code>years[2]</code> 當中的 2 強制轉換為字串。由於這個原因，<code>'2'</code> 與 <code>'02'</code> 會參照到 <code>years</code> 物件中的不同項目，下列程式範例結果可能回傳 <code>true</code>：</p>
 
 <pre class="brush: js">console.log(years['2'] != years['02']);
 </pre>
@@ -165,7 +165,7 @@ renderer['3d'].setTexture(model, 'character.png');  // 程式正常
 console.log(promise['var']);
 </pre>
 
-<h3 id="Relationship_between_length_and_numerical_properties"><code>length</code> 與數值屬性的關係</h3>
+<h3 id="Relationship_between_length_and_numerical_properties"><code>length</code> 與數值屬性的關係</h3>
 
 <p>JavaScript 陣列的 {{jsxref("Array.length", "length")}} 屬性和其數值屬性相關。許多陣列的方法被呼叫時會參考 {{jsxref("Array.length", "length")}} 屬性的值（例如 {{jsxref("Array.join", "join")}}、{{jsxref("Array.slice", "slice")}}、{{jsxref("Array.indexOf", "indexOf")}} 等）。而有另一些方法則會去改變 {{jsxref("Array.length", "length")}} 屬性的值，如 {{jsxref("Array.push", "push")}}、{{jsxref("Array.splice", "splice")}}。</p>
 
@@ -203,7 +203,7 @@ console.log(fruits.length); // 2
 
 <h3 id="Creating_an_array_using_the_result_of_a_match">使用 match 回傳結果來建立陣列</h3>
 
-<p>在字串與正規表示式之間的比對結果會產生一個 javascript 陣列。此陣列內含關於比對資訊的屬性與元素。 這樣的陣列由{{jsxref("RegExp.exec")}}, {{jsxref("String.match")}}, 和 {{jsxref("String.replace")}} 所產生。參考以下範例和表格，會有助於說明這些屬性和元素：</p>
+<p>在字串與正規表示式之間的比對結果會產生一個 javascript 陣列。此陣列內含關於比對資訊的屬性與元素。 這樣的陣列由{{jsxref("RegExp.exec")}}, {{jsxref("String.match")}}, 和 {{jsxref("String.replace")}} 所產生。參考以下範例和表格，會有助於說明這些屬性和元素：</p>
 
 <pre class="brush: js">// 比對一個字元 d，後面接著一或多個 b，再接著一個 d
 // Remember matched b's and the following d
@@ -270,7 +270,7 @@ var myArray = myRe.exec('cdbBdbsbz');
 
 <h2 id="Array_instances"><code>Array</code> 實例</h2>
 
-<p>所有的陣列實例都繼承自 {{jsxref("Array.prototype")}}。若修改這個陣列建構子 (Array constructor) 的原型物件 (prototype object)，將會影響所有的陣列實體。</p>
+<p>所有的陣列實例都繼承自 {{jsxref("Array.prototype")}}。若修改這個陣列建構子 (Array constructor) 的原型物件 (prototype object)，將會影響所有的陣列實體。</p>
 
 <h3 id="Methods_of_array_instances">屬性</h3>
 
@@ -290,13 +290,13 @@ var myArray = myRe.exec('cdbBdbsbz');
 
 <div>{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype', 'Iteration_methods')}}</div>
 
-<h2 id="Array_泛型方法"><code>Array</code> 泛型方法</h2>
+<h2 id="Array_泛型方法"><code>Array</code> 泛型方法</h2>
 
 <div class="notecard warning">
 <p><strong>警告：</strong>泛型陣列並非標準且已被棄用，將會在不久之後被去除。</p>
 </div>
 
-<p>有時你想將陣列方法用於字串或其他類陣列物件（像是函數 {{jsxref("Functions/arguments", "arguments", "", 1)}}）。藉此操作，你將此字串視為由字元組成的陣列（反之為將其他非陣列視為物件）。如範例，若要確認字串中的每個字元是不是字母，你可能會這樣寫：</p>
+<p>有時你想將陣列方法用於字串或其他類陣列物件（像是函數 {{jsxref("Functions/arguments", "arguments", "", 1)}}）。藉此操作，你將此字串視為由字元組成的陣列（反之為將其他非陣列視為物件）。如範例，若要確認字串中的每個字元是不是字母，你可能會這樣寫：</p>
 
 <pre class="brush: js">function isLetter(character) {
   return character &gt;= 'a' &amp;&amp; character &lt;= 'z';
@@ -316,10 +316,10 @@ if (Array.prototype.every.call(str, isLetter)) {
 
 <p>{{jsxref("Global_Objects/String", "Generics", "#String_generic_methods", 1)}} 也同樣可用於 {{jsxref("String")}}.</p>
 
-<p>這<strong>並非 </strong>ECMAScript 的標準，且不被非 Gecko 引擎的瀏覽器支援。你應該將你的物件用  {{jsxref("Array.from()")}} 轉為陣列，以標準替代原有的方法；雖然此方法可能不被舊的瀏覽器所支援：</p>
+<p>這<strong>並非 </strong>ECMAScript 的標準，且不被非 Gecko 引擎的瀏覽器支援。你應該將你的物件用  {{jsxref("Array.from()")}} 轉為陣列，以標準替代原有的方法；雖然此方法可能不被舊的瀏覽器所支援：</p>
 
 <pre class="brush: js">if (Array.from(str).every(isLetter)) {
-  console.log("The string '" + str + "' contains only letters!");
+  console.log("The string '" + str + "' contains only letters!");
 }
 </pre>
 

@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <h3 id="回傳值">回傳值</h3>
 
-<p>     合併目標物件及(多個)來源物件所得到的最終物件。</p>
+<p>     合併目標物件及(多個)來源物件所得到的最終物件。</p>
 
 <h2 id="說明">說明</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 <p>若發生錯誤，例如: 當一個屬性不可被寫入時，將會引發 {{jsxref("TypeError")}} 的錯誤，且目標物件剩餘的屬性將不會改變。</p>
 
-<p>注意: <code>Object.assign()</code> 不會在來源物件屬性的值為{{jsxref("null")}} 或 {{jsxref("undefined")}} 的時候拋出錯誤。</p>
+<p>注意: <code>Object.assign()</code> 不會在來源物件屬性的值為{{jsxref("null")}} 或 {{jsxref("undefined")}} 的時候拋出錯誤。</p>
 
 <h2 id="範例">範例</h2>
 
@@ -47,7 +47,7 @@ console.log(copy); // { a: 1 }
 
 <h3 id="Deep_Clone">警告:非深層複製</h3>
 
-<p>深層複製(deep clone)需要使用其他的替代方案，因為 <code>Object.assign()</code> 僅複製屬性值。若來源物件的值參照到一個子物件，它只會複製該子物件的參照。</p>
+<p>深層複製(deep clone)需要使用其他的替代方案，因為 <code>Object.assign()</code> 僅複製屬性值。若來源物件的值參照到一個子物件，它只會複製該子物件的參照。</p>
 
 <pre class="brush: js">function test() {
   let a = { b: {c:4} , d: { e: {f:1}} }
@@ -162,17 +162,17 @@ console.log(copy);
 // 這個函式用來複製完整的描述內容。
 function completeAssign(target, ...sources) {
   sources.forEach(source =&gt; {
-    let descriptors = Object.keys(source).reduce((descriptors, key) =&gt; {
-      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
-      return descriptors;
-    }, {});
-    // Object.assign 預設會複製可列舉的Symbols。
-    Object.getOwnPropertySymbols(source).forEach(sym =&gt; {
-      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
-      if (descriptor.enumerable) {
-        descriptors[sym] = descriptor;
-      }
-    });
+    let descriptors = Object.keys(source).reduce((descriptors, key) =&gt; {
+      descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
+      return descriptors;
+    }, {});
+    // Object.assign 預設會複製可列舉的Symbols。
+    Object.getOwnPropertySymbols(source).forEach(sym =&gt; {
+      let descriptor = Object.getOwnPropertyDescriptor(source, sym);
+      if (descriptor.enumerable) {
+        descriptors[sym] = descriptor;
+      }
+    });
     Object.defineProperties(target, descriptors);
   });
   return target;
@@ -188,28 +188,28 @@ console.log(copy);
 <p>{{Glossary("Polyfill","polyfill")}} 不支援Symbol屬性，因為ES5沒有Symbol型別。</p>
 
 <pre class="brush: js">if (typeof Object.assign != 'function') {
-  Object.assign = function (target, varArgs) { // .length of function is 2
-    'use strict';
-    if (target == null) { // TypeError if undefined or null
-      throw new TypeError('Cannot convert undefined or null to object');
-    }
+  Object.assign = function (target, varArgs) { // .length of function is 2
+    'use strict';
+    if (target == null) { // TypeError if undefined or null
+      throw new TypeError('Cannot convert undefined or null to object');
+    }
 
-    var to = Object(target);
+    var to = Object(target);
 
-    for (var index = 1; index &lt; arguments.length; index++) {
-      var nextSource = arguments[index];
+    for (var index = 1; index &lt; arguments.length; index++) {
+      var nextSource = arguments[index];
 
-      if (nextSource != null) { // Skip over if undefined or null
-        for (var nextKey in nextSource) {
+      if (nextSource != null) { // Skip over if undefined or null
+        for (var nextKey in nextSource) {
           // Avoid bugs when hasOwnProperty is shadowed
-          if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-            to[nextKey] = nextSource[nextKey];
-          }
-        }
-      }
-    }
-    return to;
-  };
+          if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+            to[nextKey] = nextSource[nextKey];
+          }
+        }
+      }
+    }
+    return to;
+  };
 }
 </pre>
 
