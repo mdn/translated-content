@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
 browser-compat: javascript.builtins.Symbol.species
 l10n:
-  sourceCommit: e34fbf7f735b68fdcb630432ef68d9ac7672ef88
+  sourceCommit: 8bf018f0a39d012a0d98afe3f15e0ed0fb7c8ce5
 ---
 {{JSRef}}
 
