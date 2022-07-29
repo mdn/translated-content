@@ -2,29 +2,26 @@
 title: caches
 slug: Web/API/caches
 translation_of: Web/API/caches
-original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
-<p>{{APIRef()}}{{SeeCompatTable}}</p>
+{{APIRef("Service Workers API")}}
 
-<p><code><strong>caches</strong></code> 是 <code>WindowOrWorkerGlobalScope</code> 接口的一个只读属性，它返回了与当前上下文紧密相关的{{domxref("CacheStorage")}}对象。此对象激活了诸如存储用于离线使用的资产，并生成对请求生成自定义响应等功能。</p>
+全局的 **`caches`** 只读属性返回与当前上下文紧密相关的 {{domxref("CacheStorage")}} 对象。此对象激活了诸如存储用于离线使用的资源，并生成对请求的自定义响应等功能。
 
-<h2 id="语法">语法</h2>
+{{securecontext_header}}
 
-<pre class="syntaxbox">var <em>myCacheStorage</em> = self.caches; // or just caches
-</pre>
+## 值
 
-<h3 id="值">值</h3>
+一个 {{domxref("CacheStorage")}} 对象。
 
-<p>{{domxref("CacheStorage")}} 对象。</p>
+## 示例
 
-<h2 id="例子">例子</h2>
+以下示例展示了你在 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 上下文中应该如何运用 cache 对资源进行离线存储。
 
-<p>下面的例子展示了你在<a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>上下文中如何应该运用 cache 对离线资产的进行存储。</p>
-
-<pre class="brush: js">this.addEventListener('install', function(event) {
+```js
+this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
-      return cache.addAll(
+      return cache.addAll([
         '/sw-test/',
         '/sw-test/index.html',
         '/sw-test/style.css',
@@ -35,24 +32,23 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
         '/sw-test/gallery/bountyHunters.jpg',
         '/sw-test/gallery/myLittleVader.jpg',
         '/sw-test/gallery/snowTroopers.jpg'
-      );
+      ]);
     })
   );
-});</pre>
+});
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 浏览器兼容性
 
-{{Compat("api.caches")}}
+{{Compat}}
 
-<h2 id="相关链接">相关链接</h2>
+## 参见
 
-<ul>
- <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
- <li>{{domxref("CacheStorage")}}</li>
- <li>{{domxref("Cache")}}</li>
-</ul>
+- [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API)
+- [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API)
+- {{domxref("CacheStorage")}}
+- {{domxref("Cache")}}
