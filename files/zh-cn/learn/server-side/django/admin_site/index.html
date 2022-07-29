@@ -52,7 +52,7 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 </pre>
 
-<div class="note"><strong>注意</strong>: 如果你接受创建模型以表示书籍的自然语言的挑战 (<a href="/en-US/docs/Learn/Server-side/Django/Models">see the models tutorial article</a>), 导入并注册。</div>
+<div class="note"><p><strong>备注：</strong> 如果你接受创建模型以表示书籍的自然语言的挑战 (<a href="/en-US/docs/Learn/Server-side/Django/Models">see the models tutorial article</a>), 导入并注册。</p></div>
 
 <p>这是在网站上注册模型或多模型的简单方法，管理站点是高度可定制的，我们将进一步讨论注册模型的其他方式。</p>
 
@@ -86,7 +86,7 @@ admin.site.register(BookInstance)
 <p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <div class="note">
-<p><strong>注意</strong>: 在这里，我们希望你花费一点时间添加一些书，作者，类型（如：幻想）到你的应用。确保每个作者和类型都包含几本不同的书籍（这会是你的列表和详细视图在文章系列中后期使用时更有趣）。</p>
+<p><strong>备注：</strong> 在这里，我们希望你花费一点时间添加一些书，作者，类型（如：幻想）到你的应用。确保每个作者和类型都包含几本不同的书籍（这会是你的列表和详细视图在文章系列中后期使用时更有趣）。</p>
 </div>
 
 <p>我们完成添加书籍，在顶部标签中，点击 <strong>Home</strong> 链接将回到主管理页面。然后点击 <strong>Books</strong> 链接显示当前书籍的列表（或其他链接之一，以查看其他型号列表）。现在你已经添加了几本书，列表可能与下面的截图类似。显示每本书的标题；这是书模型 __str__() 方法返回的值，在上一文章中提到。</p>
@@ -204,7 +204,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>不幸的是，我们不能直接指定 <strong>list_display </strong>中的 <strong>genre</strong> 字段，因为它是一个<strong>ManyToManyField</strong> （Django 可以防止这种情况，因为在这样做时会有大量的数据库访问“成本”）。相反，我们将定义一个 <code>display_genre </code>函数来获取信息作为一个字符串（这是我们上面调用的函数;下面我们将定义它）。</p>
 
 <div class="note">
-<p>注意：在<strong>genre</strong>这里获取可能不是一个好主意，因为数据库操作的“成本”。我们向您展示了如何在模型中调用函数的其他原因非常有用 - 例如在列表中的每个项目旁边添加一个“删除”链接。</p>
+<p><strong>备注：</strong> 在<strong>genre</strong>这里获取可能不是一个好主意，因为数据库操作的“成本”。我们向您展示了如何在模型中调用函数的其他原因非常有用 - 例如在列表中的每个项目旁边添加一个“删除”链接。</p>
 </div>
 
 <p>将以下代码添加到 Book 模型（<strong>models.py</strong>）中。这将从 genre 字段的前三个值（如果存在）创建一个字符串，并创建一个<code>short_description</code>可以在此方法的管理站点中使用的字符串。</p>
@@ -224,7 +224,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>该 Genre 模型（和 Language 模式，如果你定义一个）都有一个单一的领域，所以没有一点为他们创造更多的显示领域的附加模型。</p>
 
 <div class="note">
-<p>注意：值得更新 BookInstance 模型列表，至少显示状态和预期的返回日期。我们已经补充说，作为本文末尾的挑战！</p>
+<p><strong>备注：</strong> 值得更新 BookInstance 模型列表，至少显示状态和预期的返回日期。我们已经补充说，作为本文末尾的挑战！</p>
 </div>
 
 <h3 id="添加列表过滤器">添加列表过滤器</h3>
@@ -244,7 +244,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>默认情况下，详细视图按照其在模型中声明的顺序垂直排列所有字段。您可以更改声明的顺序，哪些字段显示（或排除），区段是否用于组织信息，字段是水平还是垂直显示，甚至是管理窗体中使用的编辑窗口小部件。</p>
 
 <div class="note">
-<p>注意：LocalLibrary 模型比较简单，因此我们不需要更改布局; 不管怎样，我们会做一些改变，只是为了向你展示如何。</p>
+<p><strong>备注：</strong> LocalLibrary 模型比较简单，因此我们不需要更改布局; 不管怎样，我们会做一些改变，只是为了向你展示如何。</p>
 </div>
 
 <h4 id="控制哪些字段被显示和布局">控制哪些字段被显示和布局</h4>
@@ -263,7 +263,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p><img alt="Admin Site - Improved Author Detail" src="admin_improved_author_detail.png"></p>
 
 <div class="note">
-<p>注意：您还可以使用<code>exclude</code>属性来声明要从表单中排除的属性列表（将显示模型中的所有其他属性）。</p>
+<p><strong>备注：</strong> 您还可以使用<code>exclude</code>属性来声明要从表单中排除的属性列表（将显示模型中的所有其他属性）。</p>
 </div>
 
 <h4 id="剖切细节视图">剖切细节视图</h4>
@@ -313,7 +313,7 @@ class BookAdmin(admin.ModelAdmin):
 <p>在这种情况下，我们所做的就是声明我们的<code>tablular</code>内联类，它只是从内联模型添加所有字段。您可以为布局指定各种附加信息，包括要显示的字段，其顺序，是否只读等。（有关详细信息，请参阅  <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> ). </p>
 
 <div class="note">
-<p>注意：这个功能有一些痛苦的限制！在上面的屏幕截图中，我们有三个现有的书籍实例，其次是新的书籍实例的三个占位符（看起来非常相似！）。默认情况下没有备用书实例会更好，只需使用“添加另一个书”实例链接添加它们，或者可以<code>BookInstance</code>从这里列出作为不可读的链接。第一个选项可以通过<code>extra</code>在<code>BookInstanceInline</code>模型中将属性设置为 0 来完成，自己尝试一下。</p>
+<p><strong>备注：</strong> 这个功能有一些痛苦的限制！在上面的屏幕截图中，我们有三个现有的书籍实例，其次是新的书籍实例的三个占位符（看起来非常相似！）。默认情况下没有备用书实例会更好，只需使用“添加另一个书”实例链接添加它们，或者可以<code>BookInstance</code>从这里列出作为不可读的链接。第一个选项可以通过<code>extra</code>在<code>BookInstanceInline</code>模型中将属性设置为 0 来完成，自己尝试一下。</p>
 </div>
 
 <h2 id="挑战自己">挑战自己</h2>

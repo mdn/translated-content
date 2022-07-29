@@ -46,7 +46,7 @@ translation_of: Learn/Server-side/Django/Testing
 </dl>
 
 <div class="note">
-<p><strong>注意：</strong>其他常见类型的测试，包括黑盒，白盒，手动，自动，金丝雀，烟雾，一致性，验收，功能，系统，性能，负载和压力测试。查找它们以获取更多信息。</p>
+<p><strong>备注：</strong> 其他常见类型的测试，包括黑盒，白盒，手动，自动，金丝雀，烟雾，一致性，验收，功能，系统，性能，负载和压力测试。查找它们以获取更多信息。</p>
 </div>
 
 <h3 id="Django为测试提供了什么？">Django 为测试提供了什么？</h3>
@@ -77,7 +77,7 @@ translation_of: Learn/Server-side/Django/Testing
 <p>大多数测试的最佳基类是 <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase">django.test.TestCase</a>。此测试类在运行测试之前，创建一个干净的数据库，并在自己的事务中，运行每个测试函数。该类还拥有一个<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.Client">测试客户端</a>，您可以使用该客户端，模拟在视图级别与代码交互的用户。在下面的部分中，我们将集中讨论使用此<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase">TestCase</a> 基类创建的单元测试。</p>
 
 <div class="note">
-<p><strong>注意：</strong> <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase">django.test.TestCase</a> 类非常方便，但可能会导致某些测试，比它们需要的速度慢（并非每个测试，都需要设置自己的数据库，或模拟视图交互）。一旦熟悉了这个类可以做什么，您可能希望用可以用更简单的测试类，替换一些测试。</p>
+<p><strong>备注：</strong> <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase">django.test.TestCase</a> 类非常方便，但可能会导致某些测试，比它们需要的速度慢（并非每个测试，都需要设置自己的数据库，或模拟视图交互）。一旦熟悉了这个类可以做什么，您可能希望用可以用更简单的测试类，替换一些测试。</p>
 </div>
 
 <h3 id="你应该测试什么？">你应该测试什么？</h3>
@@ -100,12 +100,12 @@ translation_of: Learn/Server-side/Django/Testing
     def __str__(self):
         return '%s, %s' % (self.last_name, self.first_name)</pre>
 
-<p>同样，您应该检查自定义方法 <code style="font-style: normal; font-weight: normal;">get_absolute_url()</code> 和 <code style="font-style: normal; font-weight: normal;">__str__()</code> 是否符合要求，因为它们是您的代码/业务逻辑。在<code style="font-style: normal; font-weight: normal;">get_absolute_url()</code>的情况下，您可以相信 Django <code>reverse()</code>方法已经正确实现，因此您正在测试的是实际上已经定义了关联的视图。</p>
+<p>同样，您应该检查自定义方法 <code>get_absolute_url()</code> 和 <code>__str__()</code> 是否符合要求，因为它们是您的代码/业务逻辑。在<code>get_absolute_url()</code>的情况下，您可以相信 Django <code>reverse()</code>方法已经正确实现，因此您正在测试的是实际上已经定义了关联的视图。</p>
 
 <p> </p>
 
 <div class="note">
-<p><strong>注意：</strong> 精明的读者可能会注意到，我们也希望将出生和死亡的日期限制在合理的值，并检查出生后是否死亡。在 Django 中，此约束将添加到表单类中（尽管您可以为字段定义验证器，这些字段似乎仅在表单级别使用，而不是在模型级别使用）。</p>
+<p><strong>备注：</strong> 精明的读者可能会注意到，我们也希望将出生和死亡的日期限制在合理的值，并检查出生后是否死亡。在 Django 中，此约束将添加到表单类中（尽管您可以为字段定义验证器，这些字段似乎仅在表单级别使用，而不是在模型级别使用）。</p>
 </div>
 
 <p>考虑到这些，让我们开始研究如何定义和运行测试。</p>
@@ -129,7 +129,7 @@ translation_of: Learn/Server-side/Django/Testing
 <p> </p>
 
 <div class="note">
-<p><strong>注意：</strong> 我们构建 Django 骨架网站时，会自动创建骨架测试文件<strong>/catalog/tests.py</strong> 。将所有测试放入其中是完全“合法的”，但如果测试正确，您将很快得到一个非常庞大且难以管理的测试文件。</p>
+<p><strong>备注：</strong> 我们构建 Django 骨架网站时，会自动创建骨架测试文件<strong>/catalog/tests.py</strong> 。将所有测试放入其中是完全“合法的”，但如果测试正确，您将很快得到一个非常庞大且难以管理的测试文件。</p>
 
 <p>删除骨架文件，因为我们不需要它。</p>
 </div>
@@ -176,7 +176,7 @@ translation_of: Learn/Server-side/Django/Testing
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>：测试类别还有一个我们还没有使用的<code>tearDown()</code>方法。此方法对数据库测试不是特别有用，因为<code>TestCase</code>基类会为您处理数据库拆卸。</p>
+<p><strong>备注：</strong> 测试类别还有一个我们还没有使用的<code>tearDown()</code>方法。此方法对数据库测试不是特别有用，因为<code>TestCase</code>基类会为您处理数据库拆卸。</p>
 </div>
 
 <p>下面我们有一些测试方法，它们使用 <code>Assert </code>函数来测试条件是真，假或相等（<code>AssertTrue</code>, <code>AssertFalse</code>, <code>AssertEqual</code>）。如果条件评估不如预期，则测试将失败，并将错误报告给控制台。</p>
@@ -184,7 +184,7 @@ translation_of: Learn/Server-side/Django/Testing
 <p><code>AssertTrue</code>, <code>AssertFalse</code>, <code>AssertEqual </code>是 <strong>unittest </strong>提供的标准断言。框架中还有其他标准断言，还有 <a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#assertions">Django 特定的断言</a>，来测试视图是否重定向（<code>assertRedirects</code>），或测试是否已使用特定模板（<code>assertTemplateUsed</code>）等。</p>
 
 <div class="note">
-<p><strong>注意</strong>：您通常<strong>不应</strong>在测试中包含<strong>print()</strong> 函数，如上所示。我们这样做，只是为了让您可以看到在控制台中，调用设置功能的顺序（在下一节中）。</p>
+<p><strong>备注：</strong> 您通常<strong>不应</strong>在测试中包含<strong>print()</strong> 函数，如上所示。我们这样做，只是为了让您可以看到在控制台中，调用设置功能的顺序（在下一节中）。</p>
 </div>
 
 <h2 id="如何运行测试">如何运行测试</h2>
@@ -198,7 +198,7 @@ translation_of: Learn/Server-side/Django/Testing
 <p> </p>
 
 <div class="note">
-<p>如果您收到类似于以下内容的错误：<code>ValueError: Missing staticfiles manifest entry ...</code> 这可能是因为默认情况下，测试不会运行 collectstatic，而您的应用程序正在使用需要它的储存类别（有关更多信息，请参阅 <a href="https://docs.djangoproject.com/en/2.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict">manifest_strict</a>）。有许多方法可以解决这个问题 - 最简单的方法，是在运行测试之前，简单地运行 collectstatic：</p>
+<p><strong>备注：</strong> 如果您收到类似于以下内容的错误：<code>ValueError: Missing staticfiles manifest entry ...</code> 这可能是因为默认情况下，测试不会运行 collectstatic，而您的应用程序正在使用需要它的储存类别（有关更多信息，请参阅 <a href="https://docs.djangoproject.com/en/2.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict">manifest_strict</a>）。有许多方法可以解决这个问题 - 最简单的方法，是在运行测试之前，简单地运行 collectstatic：</p>
 
 <pre class="brush: bash">python3 manage.py collectstatic
 </pre>
@@ -234,7 +234,7 @@ Destroying test database for alias 'default'...</pre>
 <p>在这里，我们看到有一个测试失败，我们可以确切地看到哪个函数失败了、为什么失败（这个失败是预期的，因为 <code>False</code>不是 <code>True</code>！）。</p>
 
 <div class="note">
-<p><strong>提示：</strong>从上面的测试输出中，学到的最重要事情是，如果为对象和方法使用描述性/信息性名称，它会更有价值。</p>
+<p><strong>备注：</strong> 从上面的测试输出中，学到的最重要事情是，如果为对象和方法使用描述性/信息性名称，它会更有价值。</p>
 </div>
 
 <p>上面以<strong>粗体</strong>显示的文本，通常不会出现在测试输出中（这是由我们的测试中的<code>print()</code>函数生成的）。这显示了如何为类调用<code>setUpTestData()</code>方法，并在每个方法之前调用<code>setUp()</code>。</p>
@@ -264,7 +264,7 @@ python3 manage.py test catalog.tests.test_models.YourTestClass.test_one_plus_one
 <p>现在我们知道，如何运行我们的测试，以及我们需要测试哪些东西，让我们看一些实际的例子。</p>
 
 <div class="note">
-<p><strong>注意：</strong>我们不会编写所有可能的测试，但这应该可以让您了解测试的工作原理，以及您可以做些什么。</p>
+<p><strong>备注：</strong> 我们不会编写所有可能的测试，但这应该可以让您了解测试的工作原理，以及您可以做些什么。</p>
 </div>
 
 <h3 id="模型">模型</h3>
@@ -342,7 +342,7 @@ self.assertEquals(field_label,'first name')  # Compare the value to the expected
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong> 已省略对<code>last_name</code> 和 <code>date_of_birth</code>标签的测试，以及 <code>last_name</code>字段长度的测试。现在按照上面显示的命名约定和方法，添加您自己的版本。</p>
+<p><strong>备注：</strong> 已省略对<code>last_name</code> 和 <code>date_of_birth</code>标签的测试，以及 <code>last_name</code>字段长度的测试。现在按照上面显示的命名约定和方法，添加您自己的版本。</p>
 </div>
 
 <p>我们还需要测试我们的自定义方法。这些基本上只是检查对象名称，是否按照我们的预期，使用“姓氏”，“名字”格式构建，并且我们为<code>Author</code>获取的 URL，是我们所期望的。</p>
@@ -374,7 +374,7 @@ AssertionError: 'Died' != 'died'
 <p>这是一个非常小的错误，但它确实强调了，编写测试如何能够更彻底地检查，您可能做出的任何假设。</p>
 
 <div class="note">
-<p><strong>注意：</strong>将 date_of_death 字段（/catalog/models.py）的标签更改为“death”并重新运行测试。</p>
+<p><strong>备注：</strong> 将 date_of_death 字段（/catalog/models.py）的标签更改为“death”并重新运行测试。</p>
 </div>
 
 <p>用于测试其他模型的模式，也类似于此，因此我们不会继续进一步讨论这些模式。请随意为其他模型，创建您自己的测试。</p>
@@ -456,7 +456,7 @@ class RenewBookFormTest(TestCase):
 <p>其余函数，测试表单对于续借日期，在可接受范围内是否有效，对于范围外的值，是否无效。请注意我们如何使用<code>datetime.timedelta()</code>，在当前日期（<code>datetime.date.today()</code>）周围构建测试日期值（在这种情况下指定天数或周数）。然后我们只需创建表单，传入我们的数据，并测试它是否有效。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 这里我们实际上并没有使用数据库，或测试客户端。考虑修改这些测试，以使用<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.SimpleTestCase">SimpleTestCase</a>。</p>
+<p><strong>备注：</strong> 这里我们实际上并没有使用数据库，或测试客户端。考虑修改这些测试，以使用<a href="https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.SimpleTestCase">SimpleTestCase</a>。</p>
 
 <p>如果表单无效，我们还需要验证是否引发了正确的错误，但这通常是作为视图处理的一部分完成的，因此我们将在下一节中处理。</p>
 </div>
@@ -553,10 +553,8 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>将以下测试代码，添加到 <strong>/catalog/tests/test_views.py</strong>。这里我们首先使用<code>SetUp()</code>创建一些用户登录帐户，和<code>BookInstance</code>对象（以及它们的相关书本，和其他记录），我们稍后将在测试中使用它们。每个测试用户都借用了一半的书本，但我们最初，将所有书本的状态设置为“维护”。我们使用了<code>SetUp()</code>而不是<code>setUpTestData()</code>，因为我们稍后会修改其中的一些对象。</p>
 
-<p> </p>
-
 <div class="note">
-<p><strong>注意：</strong> 下面的<code>setUp()</code>代码，会创建一个具有指定语言<code>Language</code>的书本，但您的代码可能不包含语言模型<code>Language</code>，因为它是作为挑战创建的。如果是这种情况，只需注释掉创建或导入语言对象的代码部分。您还应该在随后的<code>RenewBookInstancesViewTest</code>部分中，执行此操作。</p>
+<p><strong>备注：</strong> 下面的<code>setUp()</code>代码，会创建一个具有指定语言<code>Language</code>的书本，但您的代码可能不包含语言模型<code>Language</code>，因为它是作为挑战创建的。如果是这种情况，只需注释掉创建或导入语言对象的代码部分。您还应该在随后的<code>RenewBookInstancesViewTest</code>部分中，执行此操作。</p>
 </div>
 
 <pre class="brush: python">import datetime
@@ -818,7 +816,7 @@ class RenewBookInstancesViewTest(TestCase):
 </pre>
 
 <div class="warning">
-<p><strong>重要</strong>：全部借用的视图作为额外挑战，您的代码可能会改为重定向到主页'/'。如果是这样，请将测试代码的最后两行，修改为与下面的代码类似。请求中的<code>follow=True</code>，确保请求返回最终目标 URL（因此检查<code>/catalog/</code>而不是<code>/</code>）。</p>
+<p><strong>警告：</strong> 全部借用的视图作为额外挑战，您的代码可能会改为重定向到主页'/'。如果是这样，请将测试代码的最后两行，修改为与下面的代码类似。请求中的<code>follow=True</code>，确保请求返回最终目标 URL（因此检查<code>/catalog/</code>而不是<code>/</code>）。</p>
 
 <pre class="brush: python"> resp = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future},<strong>follow=True</strong> )
  <strong>self.assertRedirects(resp, '/catalog/')</strong></pre>

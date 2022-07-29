@@ -27,7 +27,7 @@ translation_of: Learn/Server-side/Django/Authentication
 <p>Django 提供了一个身份验证和授权（“权限”）系统，该系统构建在<a href="/zh-CN/docs/Learn/Server-side/Django/Sessions">上一个教程</a>中讨论的会话框架之上，允许您验证用户凭据，并定义每个用户可允许执行的操作。该框架包括用户<code>Users</code>和分组<code>Groups</code>的内置模型（一次向多个用户应用权限的通用方法），用于登录用户的权限/标志，以指定用户是否可以执行任务，表单和视图，以及查看限制内容的工具。</p>
 
 <div class="note">
-<p><strong>注意</strong>: Django 身份验证系统的目标非常通用，因此不提供其他 Web 身份验证系统中，所提供的某些功能。某些常见问题的解决方案，可作为第三方软件包提供。例如，限制登录尝试，和针对第三方的身份验证（例如 OAuth）。</p>
+<p><strong>备注：</strong> Django 身份验证系统的目标非常通用，因此不提供其他 Web 身份验证系统中，所提供的某些功能。某些常见问题的解决方案，可作为第三方软件包提供。例如，限制登录尝试，和针对第三方的身份验证（例如 OAuth）。</p>
 </div>
 
 <p>在本教程中，我们将向您展示，如何在<a href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a>网站中，启用用户身份验证，创建您自己的登录和注销页面，为模型添加权限，以及控制对页面的访问。我们将使用身份验证/权限，来显示用户和图书馆员借用图书的列表。</p>
@@ -41,7 +41,7 @@ translation_of: Learn/Server-side/Django/Authentication
 <p>我们在<a href="/zh-CN/docs/Learn/Server-side/Django/skeleton_website">创建框架网站</a>时（在教程 2 中），自动启用了身份验证，因此您此时，无需再执行任何操作。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 当我们使用 <code>django-admin startproject </code>命令，以创建应用程序时，所有必要的配置都已完成。当我们第一次调用 <code>python manage.py migrate</code> 时，创建了用户和模型权限的数据库表。</p>
+<p><strong>备注：</strong> 当我们使用 <code>django-admin startproject </code>命令，以创建应用程序时，所有必要的配置都已完成。当我们第一次调用 <code>python manage.py migrate</code> 时，创建了用户和模型权限的数据库表。</p>
 </div>
 
 <p>配置在项目文件（<strong>locallibrary/locallibrary/settings.py</strong>）的<code>INSTALLED_APPS</code>和<code>MIDDLEWARE</code>部分中设置，如下所示：</p>
@@ -65,7 +65,7 @@ MIDDLEWARE = [
 <p>在教程 4 中，当我们查看 <a href="/zh-CN/docs/Learn/Server-side/Django/Admin_site">Django 管理站点</a>时，您已经创建了第一个用户（这是一个超级用户，使用命令 <code>python manage.py createsuperuser </code>创建）。我们的超级用户已经过身份验证，并拥有所有权限，因此我们需要创建一个测试用户，来代表普通网站用户。我们将使用管理站点，来创建我们的 locallibrary 组別和网站登录，因为这是最快的方法之一。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 您还可以用编程方式创建用户，如下所示。您会必须这样做，例如，如果要开发一个界面，能允许用户创建自己的登录（您不应该授予用户访问管理站点的权限）。</p>
+<p><strong>备注：</strong> 您还可以用编程方式创建用户，如下所示。您会必须这样做，例如，如果要开发一个界面，能允许用户创建自己的登录（您不应该授予用户访问管理站点的权限）。</p>
 
 <pre class="brush: python">from django.contrib.auth.models import User
 
@@ -110,7 +110,7 @@ user.save()
 <p>就是这样！现在您有一个“普通的图书馆成员”帐户，您可以使用该帐户进行测试（一旦我们实现了页面，使他们能够登录）。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 您应该尝试创建另一个图书馆用户。此外，为图书馆管理员创建一个分组，并添加一个用户！</p>
+<p><strong>备注：</strong> 您应该尝试创建另一个图书馆用户。此外，为图书馆管理员创建一个分组，并添加一个用户！</p>
 </div>
 
 <h2 id="设置身份验证视图">设置身份验证视图</h2>
@@ -120,11 +120,11 @@ user.save()
 <p>在本节中，我们将展示如何将默认系统，集成到 LocalLibrary 网站并创建模板。我们将它们放在主项目的 URL 当中。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 您不必一定要使用这些代码，但您可能希望这样做，因为它使事情变得更容易。如果更改用户模型（高级主题！），您几乎肯定需要更改表单处理代码。但即便如此，您仍然可以使用先前已经有的视图功能。</p>
+<p><strong>备注：</strong> 您不必一定要使用这些代码，但您可能希望这样做，因为它使事情变得更容易。如果更改用户模型（高级主题！），您几乎肯定需要更改表单处理代码。但即便如此，您仍然可以使用先前已经有的视图功能。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>在这种情况下，我们可以合理地将认证页面（包括 URL 和模板）放在我们的目录应用程序中。但是，如果我们有多个应用程序，最好将这个共享登录行为分开，并让它在整个站点上可用，这就是我们在这里展示的内容！</p>
+<p><strong>备注：</strong> 在这种情况下，我们可以合理地将认证页面（包括 URL 和模板）放在我们的目录应用程序中。但是，如果我们有多个应用程序，最好将这个共享登录行为分开，并让它在整个站点上可用，这就是我们在这里展示的内容！</p>
 </div>
 
 <h3 id="项目网址">项目网址</h3>
@@ -143,10 +143,8 @@ urlpatterns += [
 <p>打开 URL <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a> （注意前面的斜杠！），Django 将显示一个错误，它无法找到此 URL，并列出它尝试过的所有 URL。从中您可以看到可以使用的 URL，例如：</p>
 
 <div class="note">
-<p><strong>注意：</strong>使用上面的方法，添加以下带有方括号中的名称的 URL，可用于反转 URL 映射。您不必实现任何其他内容 - 上面的 url 映射，会自动映射下面提到的 URL。</p>
-</div>
+<p><strong>备注：</strong> 使用上面的方法，添加以下带有方括号中的名称的 URL，可用于反转 URL 映射。您不必实现任何其他内容 - 上面的 url 映射，会自动映射下面提到的 URL。</p>
 
-<div class="note">
 <pre class="brush: python">accounts/ login/ [name='login']
 accounts/ logout/ [name='logout']
 accounts/ password_change/ [name='password_change']
@@ -171,7 +169,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 <p>对于此站点，我们将 HTML 页面，放在 <strong>templates/registration/ </strong>目录中。此目录应该位于项目的根目录中，即与 <strong>catalog </strong>和 <strong>locallibrary </strong>文件夹相同的目录）。请立即创建这些文件夹。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 您的文件夹结构，现在应如下所示：<br>
+<p><strong>备注：</strong> 您的文件夹结构，现在应如下所示：<br>
  locallibrary (django project folder)<br>
     |_catalog<br>
     |_locallibrary<br>
@@ -192,7 +190,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 <h3 id="登录模板">登录模板</h3>
 
 <div class="warning">
-<p><strong>重要说明</strong>: 本文提供的身份验证模板，是 Django 演示登录模板的基本/略微修改版本。您可能需要自定义它们，以供自己使用！</p>
+<p><strong>警告：</strong> 本文提供的身份验证模板，是 Django 演示登录模板的基本/略微修改版本。您可能需要自定义它们，以供自己使用！</p>
 </div>
 
 <p>创建一个名为 <strong>/locallibrary/templates/registration/login.html</strong> 的新 HTML 文件。为它加入以下内容：</p>
@@ -374,7 +372,7 @@ LOGIN_REDIRECT_URL = '/'
 <p>您将能够从登录页面中的链接，测试密码重置功能。<strong>请注意，Django 只会向已存储在其数据库中的地址（用户）发送重置电子邮件！</strong></p>
 
 <div class="note">
-<p><strong>注意</strong>: 密码重置系统，要求您的网站支持电子邮件，这超出了本文的范围，因此该部分<strong>将无法使用</strong>。要测试此功能，请将以下一行放在 settings.py 文件的末尾。这会记录发送到命令行控制台的所有电子邮件（因此您可以从命令行控制台，复制密码重置链接）。</p>
+<p><strong>备注：</strong> 密码重置系统，要求您的网站支持电子邮件，这超出了本文的范围，因此该部分<strong>将无法使用</strong>。要测试此功能，请将以下一行放在 settings.py 文件的末尾。这会记录发送到命令行控制台的所有电子邮件（因此您可以从命令行控制台，复制密码重置链接）。</p>
 
 <pre class="brush: python">EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 </pre>
@@ -411,7 +409,7 @@ LOGIN_REDIRECT_URL = '/'
 <p>我们使用 <code>url</code>模板标记，和相应 URL 配置的名称，创建登录和登出链接 URL。另外请注意，我们如何将“<code>?next=\{{request.path}}</code>附加到 URL 的末尾。这样做，是将包含当前页面地址（URL）的 URL 参数，添加到链接 URL 的末尾。用户成功登录/登出后，视图将使用此“下一个”值，将用户重定向，回到他们首次单击登录/登出链接的页面。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 试试吧！如果您在主页上，并单击侧栏中的“登录/登出”，在操作完成后，您应该返回到同一页面。</p>
+<p><strong>备注：</strong> 试试吧！如果您在主页上，并单击侧栏中的“登录/登出”，在操作完成后，您应该返回到同一页面。</p>
 </div>
 
 <h3 id="在视图中测试">在视图中测试</h3>
@@ -427,7 +425,7 @@ def my_view(request):
     ...</pre>
 
 <div class="note">
-<p><strong>注意：</strong> 您可以通过<code>request.user.is_authenticated</code>，测试手动执行类似的操作，但装饰器更方便！</p>
+<p><strong>备注：</strong> 您可以通过<code>request.user.is_authenticated</code>，测试手动执行类似的操作，但装饰器更方便！</p>
 </div>
 
 <p>同样，在基于类别的视图中，限制对登录用户的访问的最简单方法，是从<code>LoginRequiredMixin</code>派生。您需要在主视图类之前的超类列表中，首先声明此 mixin。</p>
@@ -477,7 +475,7 @@ def is_overdue(self):
     return False</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 在进行比较之前，我们首先验证<code>due_back</code>是否为空。空的<code>due_back</code>字段，会导致 Django 抛出错误，而不是显示页面：空值不具有可比性。这不是我们希望用户体验到的东西！</p>
+<p><strong>备注：</strong> 在进行比较之前，我们首先验证<code>due_back</code>是否为空。空的<code>due_back</code>字段，会导致 Django 抛出错误，而不是显示页面：空值不具有可比性。这不是我们希望用户体验到的东西！</p>
 </div>
 
 <p>现在我们已经更新了模型，我们需要对项目进行新的迁移，然后应用这些迁移：</p>
@@ -509,7 +507,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>现在可以将书本借给特定用户，然后借出一些<code>BookInstance</code>记录。将他们的借用字段<code>borrowed</code>，设置为您的测试用户，将状态<code>status</code>设置为“On loan”，并在将来和过去设置截止日期。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 我们不会一步一步说明这个流程，因为您已经知道如何使用管理站点！</p>
+<p><strong>备注：</strong> 我们不会一步一步说明这个流程，因为您已经知道如何使用管理站点！</p>
 </div>
 
 <h3 id="在借书视图">在借书视图</h3>
@@ -652,22 +650,19 @@ class MyView(PermissionRequiredMixin, View):
 
 <p>我们不会在这里更新 LocalLibrary；也许在下一个教程中！</p>
 
-<h2 id="挑战自己"><a id="Challenge_yourself" name="Challenge_yourself"></a>挑战自己</h2>
+<h2 id="挑战自己">挑战自己</h2>
 
 <p>在本文前面，我们向您展示了，如何为当前用户创建一个页面，列出他们借用的书本。现在的挑战，是创建一个只对图书馆员可见的类似页面，它显示所有借用的书本，其中包括每个借用人的名字。</p>
 
 <p>您应该能够遵循与其他视图相同的模式。主要区别在于，您需要将视图限制为仅限图书馆员。您可以根据用户是否是工作人员（函数装饰器：<code>staff_member_required</code>，模板变量：<code>user.is_staff</code>）来执行此操作，但我们建议您改为使用<code>can_mark_returned</code>权限，和 <code>PermissionRequiredMixin</code>，如上一节所述。</p>
 
 <div class="warning">
-<p><strong>重要</strong>: 请记住，不要使用超级用户进行基于权限的测试（即使尚未定义权限，权限检查也会对超级用户返回 true）。而是要创建一个图书管理员用户，并添加所需的功能。</p>
+<p><strong>警告：</strong> 请记住，不要使用超级用户进行基于权限的测试（即使尚未定义权限，权限检查也会对超级用户返回 true）。而是要创建一个图书管理员用户，并添加所需的功能。</p>
 </div>
 
 <p>完成后，您的页面应该类似于下面的屏幕截图。</p>
 
 <p><img alt="All borrowed books, restricted to librarian" src="library_borrowed_all.png"></p>
-
-<ul>
-</ul>
 
 <h2 id="总结">总结</h2>
 
@@ -706,5 +701,3 @@ class MyView(PermissionRequiredMixin, View):
  <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django 网页应用安全</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django 微博客</a></li>
 </ul>
-
-<p> </p>
