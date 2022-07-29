@@ -58,7 +58,7 @@ original_slug: learn/Server-side/Django/主页构建
 <p>相比之下，最后两个 URL 用于显示有关特定书籍或作者的详细信息 - 这些 URL 将编码要显示在 URL 中的项目的标识（如上所示&lt;id&gt;）。URL 映射器可以提取编码信息并将其传递给视图，然后将动态地确定从数据库获取哪些信息。通过对我们的 URL 中的信息进行编码，我们只需要一个 URL 映射，视图和模板来处理每本书（或作者）。</p>
 
 <div class="note">
-<p><strong>注意</strong>：Django 允许您以任何您喜欢的方式构建您的 URL - 您可以如上所示编码 URL 正文中的信息，或使用 URL <code style='margin: 0px; padding: 0px; border: 0px; font-style: normal; font-weight: normal; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: 18px; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212); text-decoration-style: initial;'>GET</code>参数（例如  <code style='margin: 0px; padding: 0px; border: 0px; font-style: normal; font-weight: normal; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: 18px; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 243, 212); text-decoration-style: initial;'>/book/?id=6</code>）。无论您使用哪种方法，URL 都应保持清洁，逻辑和可读性 (<a href="https://www.w3.org/Provider/Style/URI">check out the W3C advice here</a>).<br>
+<p><strong>备注：</strong> Django 允许您以任何您喜欢的方式构建您的 URL - 您可以如上所示编码 URL 正文中的信息，或使用 URL <code>GET</code>参数（例如 <code>/book/?id=6</code>）。无论您使用哪种方法，URL 都应保持清洁，逻辑和可读性 (<a href="https://www.w3.org/Provider/Style/URI">check out the W3C advice here</a>).<br>
  <br>
  Django 文档倾向于在 URL 的主体中推荐编码信息，这是他们觉得鼓励更好的 URL 设计的实践。</p>
 </div>
@@ -70,7 +70,7 @@ original_slug: learn/Server-side/Django/主页构建
 <p>我们创建的第一个页面将会是索引页（catalog/)。这会显示一些静态 HTML，以及数据库中不同记录的一些计算的“计数“。为了使其工作，我们必须创建一个 URL 映射，视图和模版。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 本节应该特别注意。一些”材料“在所有页面都通用。</p>
+<p><strong>备注：</strong> 本节应该特别注意。一些”材料“在所有页面都通用。</p>
 </div>
 
 <h3 id="URL_映射">URL 映射</h3>
@@ -86,7 +86,7 @@ original_slug: learn/Server-side/Django/主页构建
 <p>如果检测到 URL 模式''，(views.index——在 view.py 中函数命名 index() ）将被调用。URL 模式是<a href="https://docs.python.org/3/library/re.html">Python 正则表达式</a> (RE)。我们将在本教程中进一步介绍 RE。</p>
 
 <div class="note">
-<p><strong>注意：</strong>在  <strong>/locallibrary/locallibrary/urls.py</strong> </p>
+<p><strong>备注：</strong> 在 <strong>/locallibrary/locallibrary/urls.py</strong> </p>
 
 <pre><code>urlpatterns += [
     path('catalog/', include('catalog.urls')),
@@ -102,7 +102,7 @@ original_slug: learn/Server-side/Django/主页构建
 <pre class="brush: html">&lt;a href="<strong>{% url 'index' %}</strong>"&gt;Home&lt;/a&gt;.</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 我们当然可以硬编码上面的链接（如：<code>&lt;a href="<strong>/catalog/</strong>"&gt;Home&lt;/a&gt;</code>），但是如果我们改变了主页的模式，模版将不再正确链接，使用反向网址映射会更灵活和强大。</p>
+<p><strong>备注：</strong> 我们当然可以硬编码上面的链接（如：<code>&lt;a href="<strong>/catalog/</strong>"&gt;Home&lt;/a&gt;</code>），但是如果我们改变了主页的模式，模版将不再正确链接，使用反向网址映射会更灵活和强大。</p>
 </div>
 
 <h3 id="View_基于功能">View (基于功能)</h3>
@@ -149,7 +149,7 @@ def index(request):
 <p>模版是定义一个文件（例如 HTML 页面）的结构与布局的文本文件，其中占位符用于表示实际内容。Django 将自动在应用程序“templates”目录查找模版。所以例如，在我们刚刚加的索引页，<code>render()</code> 函数会期望能够找到<strong>/locallibrary/catalog/templates/<em>index.html</em></strong>这个文件，如何找不到该文件，则会引发错误。如果保存以前的更改并返回到浏览器，你可以看到访问 <code><a href="127.0.0.1:8000">127.0.0.1:8000</a> 现在将提供你一个相当直观的错误信息</code>"<strong>TemplateDoesNotExist at /catalog/</strong>“以及其他详细信息。</p>
 
 <div class="note">
-<p><strong>注意</strong>: Django 将根据你的项目的设置文件，来查看模版的许多位置 (在已安装的应用程序中进行搜索是默认设置). 你可以查阅更多关于 Django 如何找到模版以及它支持的模版格式在<a href="https://docs.djangoproject.com/en/1.10/topics/templates/">（Templates</a> ）。</p>
+<p><strong>备注：</strong> Django 将根据你的项目的设置文件，来查看模版的许多位置 (在已安装的应用程序中进行搜索是默认设置). 你可以查阅更多关于 Django 如何找到模版以及它支持的模版格式在<a href="https://docs.djangoproject.com/en/1.10/topics/templates/">（Templates</a> ）。</p>
 </div>
 
 <h4 id="扩展模版">扩展模版</h4>
@@ -159,7 +159,7 @@ def index(request):
 <p>例如，基本模版 <code>base_generic.html</code> 可能看起来像下面的文本。正如你所见的，它包含一些“常见“HTML”和标题，侧边栏和使用命名 <code>block</code> 和 <code>endblock</code> 模版标记（粗体显示）标记的内容部分。块可以是空的，或者包含将被派生页“默认使用”的内容。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 模版标签就像你可以在模版中使用的函数循环列表，基于变量的值执行条件操作等。除了模版标签，模版语法允许你引用模版变量（通过从视图进入模版），并使用模版过滤器，其中重新格式化变量（例如，将字符串设置为小写）。</p>
+<p><strong>备注：</strong> 模版标签就像你可以在模版中使用的函数循环列表，基于变量的值执行条件操作等。除了模版标签，模版语法允许你引用模版变量（通过从视图进入模版），并使用模版过滤器，其中重新格式化变量（例如，将字符串设置为小写）。</p>
 </div>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
@@ -193,7 +193,7 @@ def index(request):
 <p>下面就是我们计划的基本模版用于本地图书馆网站。正如所看到的，内容包括一些 HTML 和定义块 <code>title</code> ，<code>sidebar</code> 和 <code>content</code>。我们有默认的 <code>title</code>（当然我们可以改）和默认的所以书籍和作者的链接列表 <code>sidebar</code> （我们可能并不会怎么改，但需要时，我们通过把想法放入块<code>block</code>中，比如想法是—允许范围）。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 我们再介绍两个额外的模版标签： <code>url</code> 和 <code>load static </code>。下文中我们会详细介绍。</p>
+<p><strong>备注：</strong> 我们再介绍两个额外的模版标签： <code>url</code> 和 <code>load static </code>。下文中我们会详细介绍。</p>
 </div>
 
 <p>创建一个新的文件 — <strong>/locallibrary/catalog/templates/<em>base_generic.html</em></strong> — 写入如下代码</p>
@@ -271,13 +271,13 @@ def index(request):
 {% endblock %}</pre>
 
 <div class="note">
-<p>注意：由于本网站就是通过<strong>django </strong>来运维，<code><strong>\{{ </strong></code>的模版标签 在上面代码中会运行，只能通过增加 <code>\ </code>来转义，而不能直接写出“双大括号”。</p>
+<p><strong>备注：</strong> 由于本网站就是通过 <strong>django</strong> 来运维，<strong><code>\{\{</code></strong> 的模版标签 在上面代码中会运行，只能通过增加 <code>\</code>来转义，而不能直接写出“双大括号”。</p>
 </div>
 
 <p>在动态内容部分，我们的占位符（模版变量），是给我们想要视图的信息声明。变量使用“双大括号“或者“句柄“语法进行标记。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 你可以轻松地识别是否使用变量或模版标签（函数），因为变量具有双括号 (<code>\{{ num_books }}</code>) 而标记被包含在带有百分比符号 (<code>{% extends "base_generic.html" %}</code>) 的单个大括号中。</p>
+<p><strong>备注：</strong> 你可以轻松地识别是否使用变量或模版标签（函数），因为变量具有双括号 (<code>\{{ num_books }}</code>) 而标记被包含在带有百分比符号 (<code>{% extends "base_generic.html" %}</code>) 的单个大括号中。</p>
 </div>
 
 <p>这里要注意的重要事情是这些变量用我们视图函数<code>render</code>中的字典—注入 <code>context</code> （下面）；当渲染模版时，这些将替换为相关联的值。</p>
@@ -305,14 +305,14 @@ def index(request):
 </pre>
 
 <div class="note">
-<p><strong>主题</strong>: 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们<a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the website skeleton</a>,我们在全局 URL 映射器 r (<strong>/locallibrary/locallibrary/urls.py</strong>) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看</p>
+<p><strong>备注：</strong> 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们<a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">created the website skeleton</a>,我们在全局 URL 映射器 r (<strong>/locallibrary/locallibrary/urls.py</strong>) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看</p>
 </div>
 
 <p>更多内容—<a href="https://docs.djangoproject.com/en/1.10/howto/static-files/">Managing static files</a> (Django docs).</p>
 
-<h4 id="链接URLs">链接 URLs</h4>
+<h4 id="链接URL">链接 URL</h4>
 
-<p>基本的模版引入<code> url</code> 模版标签</p>
+<p>基本的模版引入 <code>url</code> 模版标签</p>
 
 <pre class="brush: python">&lt;li&gt;&lt;a href="{% url 'index' %}"&gt;Home&lt;/a&gt;&lt;/li&gt;
 </pre>
@@ -326,18 +326,15 @@ def index(request):
 <p><img alt="Index page for LocalLibrary website" src="index_page_ok.png"></p>
 
 <div class="note">
-<p><strong>注意：</strong>由于尚未定义这些网页的网址，视图和模板，因此您将无法使用“ <strong>所有图书</strong>和<strong>所有作者”</strong>链接（目前我们刚刚在<code style='background-color: rgb(238, 238, 238); color: rgb(51, 51, 51); margin: 0px; padding: 2px 5px; border: 0px; font-style: normal; font-weight: normal; border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>base_generic.html</code>模板中插入了这些链接的占位符）</p>
+<p><strong>备注：</strong> 由于尚未定义这些网页的网址，视图和模板，因此您将无法使用“ <strong>所有图书</strong>和<strong>所有作者”</strong>链接（目前我们刚刚在<code>base_generic.html</code>模板中插入了这些链接的占位符）</p>
 </div>
 
 <h2 id="挑战自己">挑战自己</h2>
 
 <p>以下是一些测试您熟悉模型查询，视图和模板的任务。</p>
 
-<p>   1. 在索引模板中声明一个新的标题块，并更改页面标题以匹配此特定页面。<br>
-    2. 修改视图以生成包含特定单词（不区分大小写）的类型计数和书数，然后将这些字段添加到模板。</p>
-
-<ul>
-</ul>
+<p>1. 在索引模板中声明一个新的标题块，并更改页面标题以匹配此特定页面。<br>
+2. 修改视图以生成包含特定单词（不区分大小写）的类型计数和书数，然后将这些字段添加到模板。</p>
 
 <h2 id="概要_2">概要</h2>
 

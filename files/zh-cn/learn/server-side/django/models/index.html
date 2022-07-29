@@ -44,10 +44,10 @@ translation_of: Learn/Server-side/Django/Models
 
 <p>这个图表也显示了模型之间的关系，including their <em>multiplicities</em>. 这些在图表里每个模型边上的数字（最大和最小）显示了他们的关系。 例如，链接 Book 和 Genre 两个盒子的线表示它们是关联的。 靠近 Book 模型的数字显示一本书必须有一个或多个 Genre（要多少有多少），然而另一端靠近 Genre 的数字显示了它可以有零或无数本相关的书籍。</p>
 
-<p><img alt="LocalLibrary Model UML - v3" src="https://mdn.mozillademos.org/files/14021/local_library_model_uml_v0_1.png" style="height: 660px; width: 937px;"></p>
+<p><img alt="LocalLibrary Model UML - v3" src="https://mdn.mozillademos.org/files/14021/local_library_model_uml_v0_1.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: 下一部分提供了基本的关于模型如何被定义和使用的解释。边阅读，边考虑以下我们是如何根据以上的图标构建数据库内的模型的。</p>
+<p><strong>备注：</strong> 下一部分提供了基本的关于模型如何被定义和使用的解释。边阅读，边考虑以下我们是如何根据以上的图标构建数据库内的模型的。</p>
 </div>
 
 <h2 id="Model_primer">Model primer</h2>
@@ -205,7 +205,7 @@ a_record.save()
 </pre>
 
 <div class="note">
-<p><strong>注：</strong>如果没有任何的栏位被宣告为<code>主鍵</code>，这笔新的纪录会被自动的赋予一个主键并将主键栏命名为<code>id</code>。上例的那笔资料被储存后，试着查询这笔纪录会看到它被自动赋予 1 的编号。</p>
+<p><strong>备注：</strong> 如果没有任何的栏位被宣告为<code>主鍵</code>，这笔新的纪录会被自动的赋予一个主键并将主键栏命名为<code>id</code>。上例的那笔资料被储存后，试着查询这笔纪录会看到它被自动赋予 1 的编号。</p>
 </div>
 
 <p>你可以透过「点 (dot) 的语法」取得或变更这笔新资料的栏位 (字段)。你需要呼叫<code>save()</code>将变更过的资料存进资料库：</p>
@@ -223,7 +223,7 @@ a_record.save()</pre>
 <p>你可以使用模型的  <code>objects</code> 属性 (由 base class 提供) 搜寻符合某个条件的纪录</p>
 
 <div class="note">
-<p><strong>Note</strong>: 要用"抽象的"模型还有栏位说明怎么搜寻纪录可能会有点令人困惑。我们会以一个 Book 模型，其包含<code>title</code>与<code>genre</code>字段，而 genre 也是一个仅有<code>name</code>一个字段的模型。</p>
+<p><strong>备注：</strong> 要用"抽象的"模型还有栏位说明怎么搜寻纪录可能会有点令人困惑。我们会以一个 Book 模型，其包含<code>title</code>与<code>genre</code>字段，而 genre 也是一个仅有<code>name</code>一个字段的模型。</p>
 </div>
 
 <p>我们可以取得一个模型的所有纪录，为一个  <code>QuerySet</code> 使用<code>objects.all()。</code> <code>QuerySet</code> 是一个可迭代的物件，表示他含有多个物件，而我们可以藉由迭代/回圈取得每个物件。</p>
@@ -245,7 +245,7 @@ number_wild_books = Book.objects.filter(title__contains='wild').count()
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以用下划线来表示不同关系 (<code>ForeignKey</code>/<code>ManyToManyField</code>) .例如，一本书有不同的类型，用“cover“关系可能会帮助起一个参数名字 <code>type__cover__name__exact='hard'.</code></p>
+<p><strong>备注：</strong> 你可以用下划线来表示不同关系 (<code>ForeignKey</code>/<code>ManyToManyField</code>) .例如，一本书有不同的类型，用“cover“关系可能会帮助起一个参数名字 <code>type__cover__name__exact='hard'.</code></p>
 </div>
 
 <p>还有很多是你可以用索引 (queries) 来做的，包含从相关的模型做向后查询 (backwards searches)、连锁过滤器 (chaining filters)、回传「值的小集合」等。更多资讯可以到  <a href="https://docs.djangoproject.com/en/2.0/topics/db/queries/">Making queries</a> (Django Docs) 查询。</p>
@@ -368,7 +368,7 @@ class BookInstance(models.Model):
 <p>The model <code>__str__()</code> represents the <code>BookInstance</code> object using a combination of its unique id and the associated <code>Book</code>'s title.</p>
 
 <div class="note">
-<p><strong>Note</strong>: A little Python:</p>
+<p><strong>备注：</strong> A little Python:</p>
 
 <ul>
  <li>The value returned by <code>__str__()</code> is a <em>formatted string</em>. Within the string we use <code>%s</code> to declare "placeholders'. After the string we specify <code>%</code> and then a tuple containing the values to be inserted in the placeholders. If you just have one placeholder then you can omit the tuple — e.g. <code>'My value: %s' % variable.</code><br>

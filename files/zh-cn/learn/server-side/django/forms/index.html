@@ -48,7 +48,7 @@ translation_of: Learn/Server-side/Django/Forms
     &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>虽然在这里，我们只有一个文本字段，用于输入团队名称，但表单可能包含任意数量的其他输入元素，及其相关标签。字段的<code>type</code> 属性，定义将显示哪种窗口小部件。该字段的名称<code>name</code> 和 <code>id</code>，用于标识 JavaScript / CSS / HTML 中的字段，而<code>value</code> 定义字段首次显示时的初始值。匹配团队标签使用<code style="font-style: normal; font-weight: normal;">label</code> 标签指定（请参阅上面的“输入名称”Enter name），其中<code style="font-style: normal; font-weight: normal;">for</code> 字段包含相关<code style="font-style: normal; font-weight: normal;">input</code>输入的<code style="font-style: normal; font-weight: normal;">id</code> 值。</p>
+<p>虽然在这里，我们只有一个文本字段，用于输入团队名称，但表单可能包含任意数量的其他输入元素，及其相关标签。字段的<code>type</code> 属性，定义将显示哪种窗口小部件。该字段的名称<code>name</code> 和 <code>id</code>，用于标识 JavaScript / CSS / HTML 中的字段，而<code>value</code> 定义字段首次显示时的初始值。匹配团队标签使用<code>label</code> 标签指定（请参阅上面的“输入名称”Enter name），其中<code>for</code> 字段包含相关<code>input</code>输入的<code>id</code> 值。</p>
 
 <p>提交输入<code>submit</code> 将显示为一个按钮（默认情况下），用户可以按下该按钮，将表单中所有其他输入元素中的数据，上传到服务器（在本例中，只有<code>team_name</code>）。表单属性定义用于发送数据的 HTTP <code>method</code> 方法，和服务器上数据的目标（<code>action</code>）：       </p>
 
@@ -104,7 +104,7 @@ translation_of: Learn/Server-side/Django/Forms
 <p>Django 提供了许多工具和方法，来帮助您完成上述任务。最基本的是 <code>Form</code> 类，它简化了表单 HTML 和数据清理/验证的生成。在下一节中，我们将描述表单如何使用页面的实际示例，来允许图书馆员更新书本籍。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 在我们讨论 Django 更“高级”的表单框架类时，了解 <code>Form</code> 的使用方式，将对您有所帮助。</p>
+<p><strong>备注：</strong> 在我们讨论 Django 更“高级”的表单框架类时，了解 <code>Form</code> 的使用方式，将对您有所帮助。</p>
 </div>
 
 <h2 id="续借表单_-_使用表单和功能视图">续借表单 - 使用表单和功能视图</h2>
@@ -184,7 +184,7 @@ class RenewBookForm(forms.Form):
 <p>第二点是，如果某个值超出了我们的范围，我们会引发<code>ValidationError</code>，指定在输入无效值时，我们要在表单中显示的错误文本。上面的例子，也将这个文本包含在 <a href="https://docs.djangoproject.com/zh-hans/2.0/topics/i18n/translation/">Django 的翻译函数</a><code>ugettext_lazy()</code>中（导入为 <code>_()</code>），如果你想在稍后翻译你的网站，这是一个很好的做法。</p>
 
 <div class="note">
-<p><strong>注意：</strong>  在<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/validation/">表单和字段验证</a>（Django docs）中验证表单还有其他很多方法和示例。例如，如果您有多个相互依赖的字段，则可以覆盖<a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> 函数并再次引发<code>ValidationError</code>。</p>
+<p><strong>备注：</strong> 在<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/forms/validation/">表单和字段验证</a>（Django docs）中验证表单还有其他很多方法和示例。例如，如果您有多个相互依赖的字段，则可以覆盖<a href="https://docs.djangoproject.com/en/2.0/ref/forms/api/#django.forms.Form.clean">Form.clean()</a> 函数并再次引发<code>ValidationError</code>。</p>
 </div>
 
 <p>这就是我们在这个例子中，对表单所需要了解的全部内容！</p>
@@ -204,7 +204,7 @@ class RenewBookForm(forms.Form):
 <p>URL 配置会将格式为 <strong>/catalog/book/<em>&lt;bookinstance id&gt;</em>/renew/</strong>的 URL，重定向到 <strong>views.py </strong>中，名为<code>renew_book_librarian()</code> 的函数，并将<code>BookInstance</code> id 作为名为 <code>pk</code>的参数发送。只有 <code>pk</code>是正确格式化的 <code>uuid</code>，该模式才会匹配。</p>
 
 <div class="note">
-<p><strong>注意</strong>:  我们可以将捕获的 URL 数据，命名为“<code>pk</code>”，因为我们可以完全控制视图函数（我们不使用需要具有特定名称的参数的通用详细视图类）。然而，<code>pk</code>，“主键”primary key 的缩写，是一个合理的惯例！</p>
+<p><strong>备注：</strong> 我们可以将捕获的 URL 数据，命名为“<code>pk</code>”，因为我们可以完全控制视图函数（我们不使用需要具有特定名称的参数的通用详细视图类）。然而，<code>pk</code>，“主键”primary key 的缩写，是一个合理的惯例！</p>
 </div>
 
 <h3 id="视图">视图</h3>
@@ -295,7 +295,7 @@ def renew_book_librarian(request, pk):
 <p>如果表单有效，那么我们可以开始使用数据，通过 <code>form.cleaned_data</code>属性访问它（例如 <code>data = form.cleaned_data['renewal_date']</code>）。这里我们只将数据保存到关联的<code>BookInstance</code> 对象的<code>due_back</code> 值中。</p>
 
 <div class="warning">
-<p><strong>重要</strong>:  虽然您也可以通过请求直接访问表单数据（例如<code>request.POST['renewal_date']</code> 或 <code>request.GET['renewal_date']</code>（如果使用 GET 请求），但不建议这样做。清理后的数据是无害的、验证过的、并转换为 Python 友好类型。</p>
+<p><strong>警告：</strong> 虽然您也可以通过请求直接访问表单数据（例如<code>request.POST['renewal_date']</code> 或 <code>request.GET['renewal_date']</code>（如果使用 GET 请求），但不建议这样做。清理后的数据是无害的、验证过的、并转换为 Python 友好类型。</p>
 </div>
 
 <p>视图的表单处理部分的最后一步，是重定向到另一个页面，通常是“成功”页面。在这种情况下，我们使用 <code>HttpResponseRedirect</code> 和 <code>reverse()</code> ，重定向到名为'<code>all-borrowed</code>'的视图（这是在 <a href="/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself">Django 教程第 8 部分中创建的“挑战”：用户身份验证和权限</a>）。如果您没有创建该页面，请考虑重定向到 URL'/'处的主页。</p>
@@ -369,7 +369,7 @@ def renew_book_librarian(request, pk):
 <p>表单代码相对简单。首先，我们声明表单标签，指定表单的提交位置（<code>action</code>）和提交数据的方法（在本例中为“HTTP POST”） - 如果您回想一下页面顶部的 HTML 表单概述，如图所示的空<code>action</code> ，意味着表单数据将被发布回页面的当前 URL（这是我们想要的！）。在标签内部，我们定义了<code>submit</code> 提交输入，用户可以按这个输入来提交数据。在表单标签内添加的<code>{% csrf_token %}</code> ，是 Django 跨站点伪造保护的一部分。</p>
 
 <div class="note">
-<p><strong>注意：</strong>  将<code>{% csrf_token %}</code> 添加到您创建的每个使用 <code>POST</code> 提交数据的 Django 模板中。这将减少恶意用户劫持表单的可能性。</p>
+<p><strong>备注：</strong> 将<code>{% csrf_token %}</code> 添加到您创建的每个使用 <code>POST</code> 提交数据的 Django 模板中。这将减少恶意用户劫持表单的可能性。</p>
 </div>
 
 <p>剩下的就是 <code>\{{form}}</code>模板变量，我们将其传递给上下文字典中的模板。也许不出所料，当如图所示使用时，它提供了所有表单字段的默认呈现，包括它们的标签、小部件、和帮助文本 - 呈现如下所示：</p>
@@ -385,7 +385,7 @@ def renew_book_librarian(request, pk):
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong>   它可能并不明显，因为我们只有一个字段，但默认情况下，每个字段都在其自己的表格行中定义（这就是变量在上面的<code>table </code>表格标记内部的原因）。如果您引用模板变量<code>\{{ form.as_table }}</code>，会提供相同的渲染。</p>
+<p><strong>备注：</strong> 它可能并不明显，因为我们只有一个字段，但默认情况下，每个字段都在其自己的表格行中定义（这就是变量在上面的<code>table </code>表格标记内部的原因）。如果您引用模板变量<code>\{{ form.as_table }}</code>，会提供相同的渲染。</p>
 </div>
 
 <p>如果您输入无效日期，您还会获得页面中呈现的错误列表（下面以<strong>粗体</strong>显示）。</p>
@@ -425,7 +425,7 @@ def renew_book_librarian(request, pk):
 <pre class="brush: html">{% if perms.catalog.can_mark_returned %}- &lt;a href="{% url 'renew-book-librarian' bookinst.id %}"&gt;Renew&lt;/a&gt;  {% endif %}</pre>
 
 <div class="note">
-<p><strong>注意</strong>:  请记住，您的测试登录需要具有“<code>catalog.can_mark_returned</code>”权限，才能访问续借书本页面（可能使用您的超级用户帐户）。</p>
+<p><strong>备注：</strong> 请记住，您的测试登录需要具有“<code>catalog.can_mark_returned</code>”权限，才能访问续借书本页面（可能使用您的超级用户帐户）。</p>
 </div>
 
 <p>您也可以手动构建这样的测试 URL  -  <a href="http://127.0.0.1:8000/catalog/book/&lt;bookinstance id>/renew/">http://127.0.0.1:8000/catalog/book/<em>&lt;bookinstance_id&gt;</em>/renew/</a> （可以通过导航到图书馆中的书本详细信息页面，获取有效的 bookinstance id，并复制<code>id</code> 字段）。</p>
@@ -462,7 +462,7 @@ class RenewBookModelForm(ModelForm):
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>:  这可能看起来不像使用<code>Form</code> 那么简单（在这种情况下不是这样，因为我们只有一个字段）。但是，如果你有很多字段，它可以显着减少代码量！</p>
+<p><strong>备注：</strong> 这可能看起来不像使用<code>Form</code> 那么简单（在这种情况下不是这样，因为我们只有一个字段）。但是，如果你有很多字段，它可以显着减少代码量！</p>
 </div>
 
 <p>其余信息来自模型字段的定义（例如标签、小部件、帮助文本、错误消息）。如果这些不太正确，那么我们可以在<code> Meta</code>类中覆盖它们，指定包含要更改的字段、及其新值的字典。例如，在这种形式中，我们可能需要“更新日期” <em>Renewal date </em>字段的标签（而不是基于字段名称的默认值：截止日期 <em>Due date</em>），并且我们还希望我们的帮助文本，特定于此用例。下面的<code>Meta</code> 显示了如何覆盖这些字段，如果默认值不够，您可以类似地方式设置<code>widgets</code> 窗口小部件和<code>error_messages</code> 。</p>
@@ -508,7 +508,7 @@ class RenewBookModelForm(ModelForm):
 <p>我们在上面的函数视图示例中，使用的表单处理算法，表示表单编辑视图中非常常见的模式。Django 通过创建基于模型创建、编辑和删除视图的<a href="https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/">通用编辑视图</a>，为您抽象出大部分“样板”。这些不仅处理“视图”行为，而且它们会自动从模型中为您创建表单类（<code>ModelForm</code>）。</p>
 
 <div class="note">
-<p><strong>注意:  </strong>除了这里描述的编辑视图之外，还有一个 <a href="https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/#formview">FormView </a>类，它位于我们的函数视图，和其他通用视图之间的“灵活性”与“编码工作”之间。使用 <code>FormView</code> ，您仍然需要创建表单，但不必实现所有标准表单处理模式。相反，您只需提供一个函数的实现，一旦知道提交有效，就会调用该函数。</p>
+<p><strong>备注：</strong> 除了这里描述的编辑视图之外，还有一个 <a href="https://docs.djangoproject.com/zh-hans/2.0/ref/class-based-views/generic-editing/#formview">FormView </a>类，它位于我们的函数视图，和其他通用视图之间的“灵活性”与“编码工作”之间。使用 <code>FormView</code> ，您仍然需要创建表单，但不必实现所有标准表单处理模式。相反，您只需提供一个函数的实现，一旦知道提交有效，就会调用该函数。</p>
 </div>
 
 <p>在本节中，我们将使用通用编辑视图，来创建页面，以添加从我们的库中创建、编辑和删除<code>Author</code> 作者记录的功能 - 有效地提供管理站点一部分的基本重新实现（这可能很有用，如果您需要比管理站点能提供的、更加灵活的管理功能）。</p>
@@ -595,7 +595,7 @@ class AuthorDelete(DeleteView):
 <p>作者的创建，更新和删除页面，现在已准备好进行测试（在这种情况下，我们不会将它们连接到站点侧栏，尽管如果您愿意，也可以这样做）。</p>
 
 <div class="note">
-<p><strong>注意</strong>:   敏锐的用户会注意到，我们没有采取任何措施，来防止未经授权的用户访问这些页面！我们将其作为练习留给您（提示：您可以使用<code>PermissionRequiredMixin</code> ，并创建新权限，或重用我们的<code>can_mark_returned</code>权限）。</p>
+<p><strong>备注：</strong> 敏锐的用户会注意到，我们没有采取任何措施，来防止未经授权的用户访问这些页面！我们将其作为练习留给您（提示：您可以使用<code>PermissionRequiredMixin</code> ，并创建新权限，或重用我们的<code>can_mark_returned</code>权限）。</p>
 </div>
 
 <h3 id="测试页面_2">测试页面</h3>

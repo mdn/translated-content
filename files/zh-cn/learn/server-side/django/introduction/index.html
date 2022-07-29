@@ -57,7 +57,7 @@ translation_of: Learn/Server-side/Django/Introduction
 <p>Django 不断发展壮大—从 2008 年 9 月的第一个里程碑版本（1.0）到最近发布的（1.11）-（2017）版本。每个版本都添加了新功能和错误修复，从支持新类型的数据库，模版引擎和缓存，到添加“通用”视图函数和类（这减少了开发人员必须编写的代码量）一些编程任务。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 查看 Django 网站上 <a href="https://docs.djangoproject.com/en/1.10/releases/">发行说明</a>，看看最近版本发生了什么变化，以及 Django 能做多少工作。</p>
+<p><strong>备注：</strong> 查看 Django 网站上 <a href="https://docs.djangoproject.com/en/1.10/releases/">发行说明</a>，看看最近版本发生了什么变化，以及 Django 能做多少工作。</p>
 </div>
 
 <p>Django 现在是一个蓬勃发展的合作开源项目，拥有数千个用户和贡献者。虽然它仍然具有反映其起源的一些功能，但 Django 已经发展成为能够开发任何类型的网站的多功能框架。 </p>
@@ -99,11 +99,8 @@ translation_of: Learn/Server-side/Django/Introduction
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a> 架构有许多相似之处. </p>
+<p><strong>备注：</strong> Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a> 架构有许多相似之处. </p>
 </div>
-
-<ul>
-</ul>
 
 <p>以下部分将为您提供 Django 应用程序的这些主要部分的想法（稍后我们将在进一步详细介绍后，我们将在开发环境中进行更详细的介绍）。</p>
 
@@ -118,7 +115,7 @@ translation_of: Learn/Server-side/Django/Introduction
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 一点点 Python:</p>
+<p><strong>备注：</strong> 一点点 Python:</p>
 
 <ul>
  <li>该 <code>urlpatterns</code> 对象的列表 url() 功能。在 Python 中，使用方括号定义列表。项目以逗号分隔，并可能有一个 <a href="https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples">可选的逗号</a>. 例如: <code>[item1, item2, item3,]</code>.</li>
@@ -145,7 +142,7 @@ def index(request):
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 一点点 Python:</p>
+<p><strong>备注：</strong>  一点点 Python:</p>
 
 <ul>
  <li><a href="https://docs.python.org/3/tutorial/modules.html">Python 模块</a> 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从 django.http 模块导入了 HttpResponse 对象，使我们可以在视图中使用它：<br>
@@ -187,7 +184,7 @@ class Team(models.Model):
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: Python 小知识：</p>
+<p><strong>备注：</strong> Python 小知识：</p>
 
 <ul>
  <li>Python 支持“面向对象编程”，这是一种编程风格，我们将代码组织到对象中，其中包括用于对该对象进行操作的相关数据和功能。对象也可以从其他对象继承／扩展／派生，允许相关对象之间的共同行为被共享。在 Python 中，我们使用关键字<strong> Class </strong>定义对象的“蓝图”。我们可以根据类中的模型创建类型的多个 特定 实例。</li>

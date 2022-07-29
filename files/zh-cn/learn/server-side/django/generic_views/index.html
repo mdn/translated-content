@@ -1,6 +1,6 @@
 ---
 title: 'Django 教程 6: 通用列表和详细信息视图'
-slug: learn/Server-side/Django/Generic_views
+slug: Learn/Server-side/Django/Generic_views
 translation_of: Learn/Server-side/Django/Generic_views
 ---
 <div>{{LearnSidebar}}</div>
@@ -61,7 +61,7 @@ class BookListView(generic.ListView):
 <p>就是这样！通用视图将查询数据库，以获取指定模型（<code>Book</code>）的所有记录，然后呈现位于<strong>/locallibrary/catalog/templates/catalog/book_list.html</strong> 的模板（我们将在下面创建）。在模板中，您可以使用名为<code>object_list</code> 或 <code>book_list</code>的模板变量（即通常为“<code><em>the_model_name</em>_list</code>”），以访问书本列表。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 模板位置的这个尴尬路径不是印刷错误 - 通用视图在应用程序的<code>/<em>application_name</em>/templates/</code>目录中<code>（/catalog/templates/</code>），查找模板<code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code>（在本例中为<code>catalog/book_list.html</code>）。</p>
+<p><strong>备注：</strong> 模板位置的这个尴尬路径不是印刷错误 - 通用视图在应用程序的<code>/<em>application_name</em>/templates/</code>目录中<code>（/catalog/templates/</code>），查找模板<code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code>（在本例中为<code>catalog/book_list.html</code>）。</p>
 </div>
 
 <p>您可以添加属性，以更改上面的默认行为。例如，如果需要使用同一模型的多个视图，则可以指定另一个模板文件，或者如果<code>book_list</code>对于特定模板用例不直观，则可能需要使用不同的模板变量名称。可能最有用的变更，是更改/过滤返回的结果子集 - 因此，您可能会列出其他用户阅读的前 5 本书，而不是列出所有书本。</p>
@@ -106,7 +106,7 @@ class BookListView(generic.ListView):
 </ul>
 
 <div class="note">
-<p><strong>注意</strong>: 查看<a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/">内置的基于类的通用视图</a>（Django 文档），了解更多可以执行的操作示例。</p>
+<p><strong>备注：</strong> 查看<a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/">内置的基于类的通用视图</a>（Django 文档），了解更多可以执行的操作示例。</p>
 </div>
 
 <h3 id="创建列表视图模板">创建列表视图模板</h3>
@@ -173,7 +173,7 @@ class BookListView(generic.ListView):
 <p>我们还可以在模板中，调用模型中的函数 - 在这里，我们调用<code>Book.get_absolute_url()</code>，来获取可用于显示关联详细记录的 URL。这项工作提供的函数没有任何参数（没有办法传递参数！）</p>
 
 <div class="note">
-<p><strong>注意</strong>: 在模板中调用函数时，我们必须要小心“副作用”。在这里我们只需要显示一个 URL，但是一个函数几乎可以做任何事情 - 我们不想仅仅通过渲染模板，而删除了我们的数据库（例如）！</p>
+<p><strong>备注：</strong> 在模板中调用函数时，我们必须要小心“副作用”。在这里我们只需要显示一个 URL，但是一个函数几乎可以做任何事情 - 我们不想仅仅通过渲染模板，而删除了我们的数据库（例如）！</p>
 </div>
 
 <h4 id="更新基本模板">更新基本模板</h4>
@@ -207,17 +207,17 @@ class BookListView(generic.ListView):
 <p>在这里，我们使用 <code>'&lt;int:pk&gt;' </code>来捕获 book id，它必须是一个整数，并将其作为名为 <code>pk </code>的参数（主键的缩写）传递给视图。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 如前所述，我们匹配的 URL 实际上是 <code>catalog/book/&lt;digits&gt;</code>（因为我们在应用程序 <strong>catalog </strong>中，假定使用<code>/catalog/</code>）。</p>
+<p><strong>备注：</strong> 如前所述，我们匹配的 URL 实际上是 <code>catalog/book/&lt;digits&gt;</code>（因为我们在应用程序 <strong>catalog </strong>中，假定使用<code>/catalog/</code>）。</p>
 </div>
 
 <div class="warning">
-<p><strong>要点</strong>: 基于类的通用详细信息视图，需要传递一个名为 <strong>pk </strong>的参数。如果您正在编写自己的函数视图，则可以使用您喜欢的任何参数名称，或者，确实也可以，在未命名的参数中传递信息。</p>
+<p><strong>警告：</strong> 基于类的通用详细信息视图，需要传递一个名为 <strong>pk </strong>的参数。如果您正在编写自己的函数视图，则可以使用您喜欢的任何参数名称，或者，确实也可以，在未命名的参数中传递信息。</p>
 </div>
 
 <h4 id="高级路径匹配正则表达式入门">高级路径匹配/正则表达式入门</h4>
 
 <div class="note">
-<p><strong>注意</strong>: 完成教程并不需要此部分说明！我们提供它，是因为了解此可选的部分，未来可能对您使用 Django 有帮助。</p>
+<p><strong>备注：</strong> 完成教程并不需要此部分说明！我们提供它，是因为了解此可选的部分，未来可能对您使用 Django 有帮助。</p>
 </div>
 
 <p><code>path()</code>提供的模式匹配非常简单，对于您只想捕获任何字符串或整数的（非常常见的）情况非常有用。如果需要更精细的过滤（例如，仅过滤具有一定数量字符的字符串），则可以使用 <a href="https://docs.djangoproject.com/en/2.0/ref/urls/#django.urls.re_path">re_path()</a> 方法。</p>
@@ -324,7 +324,7 @@ class BookListView(generic.ListView):
 <p>您可以在一个匹配中捕获多个模式，从而在 URL 中，编码许多不同的信息。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 作为一项挑战，请考虑如何对网址进行编码，以列出特定年份，月份，日期的所有图书，以及可用于匹配它的规则表达式 RE。</p>
+<p><strong>备注：</strong> 作为一项挑战，请考虑如何对网址进行编码，以列出特定年份，月份，日期的所有图书，以及可用于匹配它的规则表达式 RE。</p>
 </div>
 
 <h4 id="在_URL_地图中传递其他选项">在 URL 地图中传递其他选项</h4>
@@ -338,7 +338,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong> 额外选项和命名捕获的模式，二者都作为命名参数传递给视图。如果对捕获的模式和额外选项使用<strong>相同的名称</strong>，则仅将捕获的模式值发送到视图（将删除附加选项中指定的值）。</p>
+<p><strong>备注：</strong> 额外选项和命名捕获的模式，二者都作为命名参数传递给视图。如果对捕获的模式和额外选项使用<strong>相同的名称</strong>，则仅将捕获的模式值发送到视图（将删除附加选项中指定的值）。</p>
 </div>
 
 <h3 id="视图_(基于类别)_2">视图 (基于类别)</h3>
@@ -376,7 +376,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>视图首先尝试从模型中，获取特定的书本记录。如果失败，则视图应引发 <code>Http404</code>异常，以指示该书本“未找到”。然后，最后一步是使用模板名称，和上下文参数<code>context</code>中的书本数据（作为字典）调用<code>render()</code>。</p>
 
 <div class="note">
-<p><strong>注意</strong>: <code>get_object_or_404()</code>（如上所示）是一个方便的快捷方式，用于在未找到记录时，引发 <code>Http404 </code>异常。</p>
+<p><strong>备注：</strong> <code>get_object_or_404()</code>（如上所示）是一个方便的快捷方式，用于在未找到记录时，引发 <code>Http404 </code>异常。</p>
 </div>
 
 <h3 id="创建详细信息视图模板">创建详细信息视图模板</h3>
@@ -411,7 +411,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 </ul>
 
 <div class="note">
-<p><strong>注意：</strong>上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，您应该像这样更新 URL：</p>
+<p><strong>备注：</strong> 上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，您应该像这样更新 URL：</p>
 
 <pre>&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;
 </pre>
@@ -435,7 +435,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>需要此方法，是因为您仅在关系的“一”侧声明 <code>ForeignKey</code>（一对多）字段。由于您没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的“反向查找”函数，您可以使用它。函数的名称，是通过对声明<code> ForeignKey</code> 的模型名称，转化为小写来构造的，然后是<code>_set</code>（即，在 <code>Book </code>中创建的函数是 <code>bookinstance_set()</code>）。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 这里我们使用<code>all()</code>来获取所有记录（默认值）。虽然您可以使用<code>filter()</code>方法获取代码中的记录子集，但您无法直接在模板中执行此操作，因为您无法指定函数的参数。</p>
+<p><strong>备注：</strong> 这里我们使用<code>all()</code>来获取所有记录（默认值）。虽然您可以使用<code>filter()</code>方法获取代码中的记录子集，但您无法直接在模板中执行此操作，因为您无法指定函数的参数。</p>
 
 <p>还要注意，如果您没有定义顺序（在基于类的视图或模型上），您还会看到开发服务器中的错误，如下所示：</p>
 
@@ -559,10 +559,8 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p>URL 映射器和视图所需的代码，应与我们上面创建的<code>Book</code>列表和详细视图几乎完全相同。模板将有所不同，但会分享类似的行为。</p>
 
-<p> </p>
-
 <div class="note">
-<p><strong>注意</strong>:</p>
+<p><strong>备注：</strong> </p>
 
 <ul>
  <li>为作者列表页面，创建 URL 映射器之后，还需要更新基本模板中的所有作者 <strong>All authors </strong>链接。按照我们更新“所有图书”<strong>All books</strong> 链接时，所做的相同过程。</li>
@@ -577,13 +575,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p><img alt="Author List Page" src="author_list_page_no_pagination.png"></p>
 
-<ul>
-</ul>
-
 <p><img alt="Author Detail Page" src="author_detail_page_no_pagination.png"></p>
-
-<ul>
-</ul>
 
 <h2 id="总结">总结</h2>
 
@@ -605,8 +597,6 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
-
 <h2 id="本教程">本教程</h2>
 
 <ul>
@@ -626,5 +616,3 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
  <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django 网页应用安全</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django 微博客</a></li>
 </ul>
-
-<p> </p>
