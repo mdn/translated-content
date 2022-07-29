@@ -107,48 +107,11 @@ console.log(result);          // "foo"
 
 <h2 id="Specifications">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#', 'Yield')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#', 'Yield')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">浏览器兼容</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.operators.yield_star")}}</p>
-
-<h2 id="Firefox_特别提示">Firefox 特别提示</h2>
-
-<ul>
- <li>从 Gecko 33 {{geckoRelease(33)}} 开始，<code>yield</code>表达式的解析已被更新以符合 ES2015 规范（{{bug(981599)}}）：
-
-  <ul>
-   <li>现在有行结束符限制。在 <code>yield</code> 和 <code>*</code> 之间不允许有换行符。如下代码会抛出{{jsxref("SyntaxError")}}：
-
-    <pre class="brush: js">function* foo() {
-  yield
-  *[];
-}</pre>
-   </li>
-  </ul>
- </li>
-</ul>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">相关链接</h2>
 
