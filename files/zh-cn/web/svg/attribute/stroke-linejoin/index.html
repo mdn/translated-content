@@ -12,9 +12,7 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 <p>作为显示属性，该属性能被应用到任何元素，但只对这 9 种元素有效： {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, {{SVGElement('tspan')}}</p>
 
 <div id="topExample">
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!--
@@ -103,9 +101,7 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h4 id="示例">示例</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "arcs" value --&gt;
@@ -133,9 +129,7 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h4 id="示例_2">示例</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "bevel" value --&gt;
@@ -161,13 +155,11 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <p>The <code>miter</code> 用尖角连接路径段。 通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。</p>
 
-<div class="blockIndicator note"><strong>说明：</strong> 如果超出了{{SVGAttr('stroke-miterlimit')}}，则会退回到<code> bevel 。</code></div><code>
+<div class="blockIndicator note"><p><strong>备注：</strong> 如果超出了{{SVGAttr('stroke-miterlimit')}}，则会退回到 <code>bevel</code>。</p></div>
 
 <h4 id="示例_3">示例</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "miter" value --&gt;
@@ -205,13 +197,11 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <p>The <code>miter-clip</code> 用尖角连接路径段。 通过在路径段的切线处延伸笔触的外边缘直到它们相交，来形成拐角。</p>
 
-<p>如果超过了{{SVGAttr('stroke-miterlimit')}}，则斜切将被裁剪为等于{{SVGAttr('stroke-miterlimit')}}值乘以路径段相交处的笔划宽度的一半的距离。在非常尖锐的连接或动画的情况下，这提供了比<code> mitt 更好的渲染效果。</code></p><code>
+<p>如果超过了{{SVGAttr('stroke-miterlimit')}}，则斜切将被裁剪为等于{{SVGAttr('stroke-miterlimit')}}值乘以路径段相交处的笔划宽度的一半的距离。在非常尖锐的连接或动画的情况下，这提供了比 <code>mitt</code> 更好的渲染效果。</p>
 
 <h4 id="示例_4">示例</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "miter-clip" value --&gt;
@@ -248,9 +238,7 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h4 id="示例_5">示例</h4>
 
-<div class="hidden">
-<pre class="brush: css">html,body,svg { height:100% }</pre>
-</div>
+<pre class="brush: css hidden">html,body,svg { height:100% }</pre>
 
 <pre class="brush: html">&lt;svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;!-- Effect of the "round" value --&gt;
@@ -274,30 +262,8 @@ translation_of: Web/SVG/Attribute/stroke-linejoin
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("SVG2", "painting.html#StrokeLinejoinProperty", "stroke-linejoin")}}</td>
-   <td>{{Spec2("SVG2")}}</td>
-   <td>Definition for shapes and texts</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("SVG1.1", "painting.html#StrokeLinejoinProperty", "stroke-linejoin")}}</td>
-   <td>{{Spec2("SVG1.1")}}</td>
-   <td>Initial definition for shapes and texts</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("svg.attributes.presentation.stroke-linejoin")}}</p></code></code>
+<p>{{Compat}}</p>
