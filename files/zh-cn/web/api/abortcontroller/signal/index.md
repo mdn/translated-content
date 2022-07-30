@@ -24,7 +24,7 @@ translation_of: Web/API/AbortController/signal
 
 在下面的这段代码中，我们将通过 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 来下载一段视频。
 
-首先通过 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数来创建一个 controller 实例，然后通过 {{domxref("AbortController.signal")}} 属性获取到它的关联对象{{domxref("AbortSignal")}} 的引用。
+首先通过 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数来创建一个 controller 实例，然后通过 {{domxref("AbortController.signal")}} 属性获取到它的关联对象 {{domxref("AbortSignal")}} 的引用。
 
 当 [fetch request](/zh-CN/docs/Web/API/fetch) 初始化后，将 `AbortSignal` 作为一个选项传入请求的选项参数中（如下 `{signal}`）。这将 signal，controller 与 fetch 请求关联起来，允许我们通过调用 {{domxref("AbortController.abort()")}} 来取消 fetch 请求，正如下第二个事件监听器所示。
 
