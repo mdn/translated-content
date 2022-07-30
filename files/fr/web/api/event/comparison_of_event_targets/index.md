@@ -63,7 +63,7 @@ Voici les cibles à considérer&nbsp;:
   <thead>
     <tr>
       <td>La cible originale qui émet l'évènement <small><code>event.target</code></small></td>
-      <td>La cible dont le gestionaire d'évènement est en cours de traitement <small><code>event.currentTarget</code></small></td>
+      <td>La cible dont le gestionnaire d'évènement est en cours de traitement <small><code>event.currentTarget</code></small></td>
       <td>Identifie un (éventuel) autre élément impliqué dans l'évènement <small><code>event.relatedTarget</code></small></td>
     </tr>
   </thead>
