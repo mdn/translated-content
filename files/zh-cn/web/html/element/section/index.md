@@ -7,130 +7,161 @@ tags:
   - 区块
 translation_of: Web/HTML/Element/section
 ---
-<div>{{HTMLRef}}</div>
+{{HTMLRef}}
 
-<p><strong>HTML &lt;section&gt;元素</strong>表示一个包含在 HTML 文档中的独立部分，它没有更具体的语义元素来表示，一般来说会有包含一个标题。</p>
+**HTML \<section\> 元素**表示 HTML 文档中一个通用独立章节，它没有更具体的语义元素来表示。一般来说会包含一个标题。
 
-<div>{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}</div>
-
-
-<p>例如，导航菜单应该包含在{{htmlelement("nav")}}元素中，但搜索结果列表和地图显示及其控件没有特定元素，可以放在<code>&lt;section&gt;</code>里。</p>
-
-<div class="note">
-<p>注意：如果元素的内容作为一个独立的有意义的集合，{{HTMLElement("article")}}元素可能是更好的选择。</p>
-</div>
+{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Sectioning_content">Sectioning content</a>, palpable content.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>Any element that accepts <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>. Note that a <code>&lt;section&gt;</code> element must not be a descendant of an {{HTMLElement("address")}} element.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA roles</th>
-   <td>{{ARIARole("alert")}}, {{ARIARole("alertdialog")}}, {{ARIARole("application")}}, {{ARIARole("banner")}}, {{ARIARole("complementary")}}, {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}}, {{ARIARole("document")}}, {{ARIARole("feed")}}, {{ARIARole("log")}}, {{ARIARole("main")}}, {{ARIARole("marquee")}}, {{ARIARole("navigation")}}, {{ARIARole("search")}}, {{ARIARole("status")}}, {{ARIARole("tabpanel")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容分类</a>
+      </th>
+      <td>流式元素，章节元素，短语元素。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>流式元素。</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（flow_content）">流式元素</a>的任何元素。请注意，<code>&#x3C;section></code> 元素不能是 {{HTMLElement("address")}} 元素的后代。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        当该元素包含<a href="https://www.tpgi.com/what-is-an-accessible-name/">可访问的名称</a>时，认为其是
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role">region</a>，否则为
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>
+        {{ARIARole("alert")}}, {{ARIARole("alertdialog")}},
+        {{ARIARole("application")}}, {{ARIARole("banner")}},
+        {{ARIARole("complementary")}},
+        {{ARIARole("contentinfo")}}, {{ARIARole("dialog")}},
+        {{ARIARole("document")}}, {{ARIARole("feed")}},
+        {{ARIARole("log")}}, {{ARIARole("main")}},
+        {{ARIARole("marquee")}}, {{ARIARole("navigation")}},
+        {{ARIARole("search")}}, {{ARIARole("status")}},
+        {{ARIARole("tabpanel")}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<p>此元素只包含  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">全局属性</a></p>
+此元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-<h2 id="使用说明">使用说明</h2>
+## 使用说明
 
-<ul>
- <li>一般通过是否包含一个标题 ({{HTMLElement('h1')}}-{{HTMLElement('h6')}} element) 作为子节点 来 辨识每一个&lt;section&gt;。</li>
- <li>如果 &lt;section&gt; 元素的内容可以单独在多个媒体上发表，应该使用 {{HTMLElement("article")}} 而不是 {{HTMLElement("section")}}。</li>
- <li>不要把 {{HTMLElement("section")}} 元素作为一个普通的容器来使用，这是本应该是{{HTMLElement("div")}}的用法（特别是当片段（the sectioning ）仅仅是为了美化样式的时候）。 一般来说，一个 {{HTMLElement("section")}} 应该出现在文档大纲中。</li>
-</ul>
+如上所述，`<section>` 是一个通用的分节元素，只有在没有更具体的元素来代表它的时候才可以使用。举个例子，一个导航菜单应该被包裹在 {{htmlelement("nav")}} 元素中，但搜索结果列表或地图显示及其控件并没有特定的元素，可以放在 `<section>` 里面。
 
-<h2 id="范例1：">范例 1：</h2>
+注意事项：
 
-<h3 id="之前">之前</h3>
+- 当该元素的内容可以作为一个独立的作品在多个媒体上发表，使用 {{HTMLElement("article")}} 是一个更好的选择。
+- 当内容包含代表与主要内容一同展示的有用的切入信息，但不是直接的一部分（如相关链接,作者简历等），请使用 {{HTMLElement("main")}}。
+- 当内容代表文档中的主要内容区域，请使用 {{HTMLElement("main")}}。
+- 将该元素作为一个样式包装时，请使用 {{HTMLElement("div")}}。一般来说，`<section>` 应该出现在文档大纲中。
 
-<pre class="notranslate"><code>&lt;div&gt;
-  &lt;h1&gt;Heading&lt;/h1&gt;
-  &lt;p&gt;Bunch of awesome content&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+再次重申，每个 `<section>` 都应该被标识出来，通常是将标题（{{HTMLElement('h1')}}-{{HTMLElement('h6')}}元素）作为 `<section>` 元素的一个子元素。请看下面的例子，你可能会看到没有标题的 `<section>`。
 
-<h3 id="之后">之后</h3>
+## 示例
 
-<pre class="notranslate"><code>&lt;section&gt;
-  &lt;h1&gt;Heading&lt;/h1&gt;
-  &lt;p&gt;Bunch of awesome content&lt;/p&gt;
-&lt;/section&gt;</code>
-</pre>
+### 简单的使用示例
 
-<h2 id="范例2：">范例 2：</h2>
+#### 之前
 
-<h3 id="之前_2">之前</h3>
+```html
+<div>
+  <h1>Heading</h1>
+  <p>Bunch of awesome content</p>
+</div>
+```
 
-<pre class="notranslate"><code>&lt;div&gt;
-  &lt;h2&gt;Heading&lt;/h2&gt;
-  &lt;img src="bird.jpg" alt="bird"&gt;
-&lt;/div&gt;</code></pre>
+#### 之后
 
-<h3 id="之后_2">之后</h3>
+```html
+<section>
+  <h1>Heading</h1>
+  <p>Bunch of awesome content</p>
+</section>
+```
 
-<pre class="notranslate"><code>&lt;section&gt;
-  &lt;h2&gt;Heading&lt;/h2&gt;
-  &lt;img src="bird.jpg" alt="bird"&gt;
-&lt;/section&gt;</code></pre>
+### 没有标题的使用示例
 
-<h2 id="规范">规范</h2>
+使用 `<section>`> 元素但不包含标题的情况，通常出现在 web 应用或用户界面的部分，而不是传统的文档结构中。在文档中，有独立的内容部分但没有标题来描述其内容，是没有任何意义的。标题对所有的读者都很有用，尤其是对使用屏幕阅读器等辅助技术的用户，同时标题也有利于搜索引擎优化。
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-section-element', '&lt;section&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+在设置二级导航时，全局导航已经被包裹在 `<nav>` 元素中，此时可以使用 `<section>` 元素包裹一个上一个/下一个菜单作为二级导航。
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+```html
+<section>
+  <a href="#">Previous article</a>
+  <a href="#">Next article</a>
+</section>
+```
 
-<p>{{Compat("html.elements.section")}}</p>
+在设置控制应用程序的按钮栏时，需要将其作为文档中单独存在部分，但此时并不需要设置标题。
 
-<h2 id="参见">参见</h2>
+```html
+<section>
+  <button class="reply">Reply</button>
+  <button class="reply-all">Reply to all</button>
+  <button class="fwd">Forward</button>
+  <button class="del">Delete</button>>
+</section>
+```
 
-<ul>
- <li>Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};</li>
- <li class="last"><a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document">Sections and outlines of an HTML5 document</a>.</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role">ARIA: Region role</a></li>
-</ul>
+没有标题的内容不会出现在文档大纲中。但如果文档大纲中需要包含这样一个 HTML 块，又不希望影响页面效果，可以通过设置隐藏标题来实现
+
+```html
+<section>
+  <h2 class="hidden">Controls</h2>
+  <button class="reply">Reply</button>
+  <button class="reply-all">Reply to all</button>
+  <button class="fwd">Forward</button>
+  <button class="del">Delete</button>>
+</section>
+```
+
+确保使用一些辅助技术和对屏幕阅读器友好的 CSS 来隐藏它，就像这样。
+
+```css
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+```
+
+根据内容来包含标题也有助于 SEO，因此，这是一个可以考虑的选择。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat("html.elements.section")}}
+
+## 参见
+
+- 相关元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
+- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements)
+- [ARIA: Region role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Region_role)
+- [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/),by Bruce Lawson
