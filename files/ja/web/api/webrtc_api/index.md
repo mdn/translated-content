@@ -1,6 +1,7 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
+page-type: web-api-overview
 tags:
   - API
   - Audio
@@ -12,232 +13,220 @@ tags:
   - WebRTC
   - WebRTC API
   - streaming
-  - ストリーミング
-  - ネットワーク
+spec-urls:
+  - https://w3c.github.io/webrtc-pc/
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/mediacapture-fromelement/
 translation_of: Web/API/WebRTC_API
 ---
-<div>{{WebRTCSidebar}}</div>
+{{DefaultAPISidebar("WebRTC")}}
 
-<p><span class="seoSummary"><strong>WebRTC</strong> (Web Real-Time Communications、ウェブリアルタイムコミュニケーション) は、ウェブアプリケーションやウェブサイトにて、仲介を必要とせずにブラウザー間で直接、任意のデータの交換や、キャプチャしたオーディオ／ビデオストリームの送受信を可能にする技術です。 WebRTC に関する一連の標準規格は、ユーザーがプラグインやサードパーティ製ソフトウェアをインストールすることなく、ピア・ツー・ピアにて、データ共有や遠隔会議を実現することを可能にします。</span></p>
+**WebRTC** (Web Real-Time Communication、ウェブリアルタイムコミュニケーション) は、ウェブアプリケーションやウェブサイトにて、仲介を必要とせずにブラウザー間で直接、任意のデータの交換や、キャプチャした音声／映像ストリームの送受信を可能にする技術です。 WebRTC に関する一連の標準規格は、ユーザーがプラグインやサードパーティ製ソフトウェアをインストールすることなく、ピアーツーピアーにて、データ共有や遠隔会議を実現することを可能にします。
 
-<p>WebRTC は、相互に関連したいくつかの API とプロトコルで構成されており、これらが連携してこれを実現しています。ここで紹介するドキュメントでは、WebRTC の基礎知識、データ接続とメディア接続、両方の設定方法と、使用方法などを理解するのに役立ちます。</p>
+WebRTC は、相互に関連したいくつかの API とプロトコルで構成されており、これらが連携してこれを実現しています。ここで紹介するドキュメントでは、WebRTC の基礎知識、データ接続とメディア接続、両方の設定方法と、使用方法などを理解するのに役立ちます。
 
-<h2 id="Interoperability" name="Interoperability">相互運用性</h2>
+## 相互運用性
 
-<p>WebRTC の実装はまだ進化しており、ブラウザごとに<a href="/ja/docs/Web/Media/Formats/WebRTC_codecs">コーデック</a>や WebRTC 機能のサポートレベルが異なるため、コードを書き始める前に Google が提供する <a href="https://github.com/webrtcHacks/adapter">Adapter.js</a> ライブラリを利用することを強く検討する必要があります。</p>
+WebRTC の実装はまだ進化しており、ブラウザーごとに[コーデック](/ja/docs/Web/Media/Formats/WebRTC_codecs)や WebRTC 機能の対応レベルが異なるため、コードを書き始める前に Google が提供する [Adapter.js ライブラリー](https://github.com/webrtcHacks/adapter) を利用することを強く検討する必要があります。
 
-<p>Adapter.js はシム ({{Glossary("Shim")}}) やポリフィル ({{Glossary("polyfill")}}) を使用して、サポートしている環境によって異なる WebRTC 実装の違いを滑らかにします。また、接頭辞やその他の名前の違いも Adapter.js が処理することで、WebRTC の開発プロセス全体がより簡単になり、より広範な互換性のある結果が得られるようになります。このライブラリは <a href="https://www.npmjs.com/package/webrtc-adapter">NPM パッケージ</a>としても提供されています。</p>
+Adapter.js はシムやポリフィルを使用して、サポートしている環境によって異なる WebRTC 実装の違いを滑らかにします。また、接頭辞やその他の名前の違いも Adapter.js が処理することで、WebRTC の開発プロセス全体がより簡単になり、より広範な互換性のある結果が得られるようになります。このライブラリーは [NPM パッケージ](https://www.npmjs.com/package/webrtc-adapter)としても提供されています。
 
-<p>Adapter.js の詳細については、<a href="/ja/docs/Web/API/WebRTC_API/adapter.js">WebRTC adapter.js を使用した互換性の向上</a>を参照してください。</p>
+Adapter.js の詳細については、[WebRTC adapter.js を使用した互換性の向上](/ja/docs/Web/API/WebRTC_API/adapter.js)を参照してください。
 
-<h2 id="WebRTC_concepts_and_usage" name="WebRTC_concepts_and_usage">WebRTC の概念と使い方</h2>
+## WebRTC の概念と使い方
 
-<p>WebRTC は複数の目的に対応しています。<a href="/ja/docs/Web/API/Media_Streams_API">Media Capture と Streams API</a> と一緒に使用することで、音声・ビデオ会議、ファイル交換、画面共有、ID 管理、{{Glossary("DTMF")}} (タッチトーンダイヤル信号) の送信サポートを含む旧来の電話システムとのインターフェースなど、強力なマルチメディア機能を Web に提供します。ピア間の接続は、特別なドライバやプラグインを必要とせずに行うことができ、多くの場合、中間サーバーを介さずに行うことができます。</p>
+WebRTC は複数の目的に対応しています。[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API) と一緒に使用することで、音声・ビデオ会議、ファイル交換、画面共有、ID 管理、{{Glossary("DTMF")}} (タッチトーンダイヤル信号) の送信サポートを含む旧来の電話システムとのインターフェイスなど、強力なマルチメディア機能をウェブに提供します。ピアー間の接続は、特別なドライバーやプラグインを必要とせずに行うことができ、多くの場合、中間サーバーを介さずに行うことができます。
 
-<p>2つのピア間の接続は {{DOMxRef("RTCPeerConnection")}} インターフェースで表現されます。接続が確立され、<code>RTCPeerConnection</code> を使用して開かれると、メディアストリーム(({{DOMxRef("MediaStream")}}s))やデータチャンネル ({{DOMxRef("RTCDataChannel")}}s) を接続に追加することができます。</p>
+2 つのピアー間の接続は {{DOMxRef("RTCPeerConnection")}} インターフェイスで表現されます。接続が確立され、`RTCPeerConnection` を使用して開かれると、メディアストリーム ({{DOMxRef("MediaStream")}}) やデータチャンネル ({{DOMxRef("RTCDataChannel")}}) を接続に追加することができます。
 
-<p>メディアストリームは、メディア情報の任意の数のトラックで構成することができます。トラックは、{{DOMxRef("MediaStreamTrack")}} インターフェイスに基づいたオブジェクトで表され、オーディオ、ビデオ、テキスト（字幕やチャプター名など）を含むメディアデータのいくつかのタイプのうちの1つを含むことができます。ほとんどのストリームは少なくとも 1 つのオーディオトラックとビデオトラックで構成されており、ライブメディアや保存されたメディア情報（ストリーミングされた動画など）の送受信に使用することができます。</p>
+メディアストリームは、メディア情報の任意の数のトラックで構成することができます。トラックは、{{DOMxRef("MediaStreamTrack")}} インターフェイスに基づいたオブジェクトで表され、音声、映像、テキスト（字幕やチャプター名など）を含むメディアデータのいくつかの型のうちの 1 つを含むことができます。ほとんどのストリームは少なくとも 1 つの音声トラックと映像トラックで構成されており、ライブメディアや保存されたメディア情報（ストリーミングされた動画など）の送受信に使用することができます。
 
-<p>また、2 つのピア間の接続を使用して、{{DOMxRef("RTCDataChannel")}} インターフェイスを使用して任意のバイナリデータを交換することもできます。これは、バックチャンネル情報、メタデータ交換、ゲームステータスパケット、ファイル転送、あるいはデータ転送のためのプライマリチャンネルとして使用することができます。</p>
+また、2 つのピアー間の接続を使用して、{{DOMxRef("RTCDataChannel")}} インターフェイスを使用して任意のバイナリーデータを交換することもできます。これは、バックチャンネル情報、メタデータ交換、ゲームステータスパケット、ファイル転送、あるいはデータ転送のためのプライマリーチャンネルとして使用することができます。
 
-<p><em><strong>より多くの詳細と関連するガイドやチュートリアルへのリンクが必要ですね…。</strong></em></p>
+**_より多くの詳細と関連するガイドやチュートリアルへのリンクが必要ですね…。_**
 
-<h2 id="WebRTC_reference" name="WebRTC_reference">WebRTC リファレンス</h2>
+## WebRTC リファレンス
 
-<p>WebRTC は、様々なタスクを達成するために連携して動作する複数のインターフェースを提供しているため、以下のリストのインターフェースをカテゴリ別に分けています。アルファベット順のリストはサイドバーをご覧ください。</p>
+WebRTC は、様々なタスクを達成するために連携して動作する複数のインターフェイスを提供しているため、以下のリストのインターフェイスをカテゴリー別に分けています。アルファベット順のリストはサイドバーをご覧ください。
 
-<h3 id="Connection_setup_and_management" name="Connection_setup_and_management">接続の設定と管理</h3>
+### 接続の設定と管理
 
-<p>以下のインターフェイス、辞書、型は、WebRTC 接続のセットアップ、オープン、管理に使用します。これには、ピアメディア接続、データチャネルおよび、それぞれのピアが双方向メディア接続のために最適な設定を選択する機能に関する情報をやりとりするためのインターフェースが含まれています。</p>
+以下のインターフェイス、辞書、型は、WebRTC 接続のセットアップ、オープン、管理に使用します。これには、ピアーメディア接続、データチャネルおよび、それぞれのピアーが双方向メディア接続のために最適な設定を選択する機能に関する情報をやりとりするためのインターフェイスが含まれています。
 
-<h4 id="Interfaces" name="Interfaces">インターフェイス</h4>
+#### インターフェイス
 
-<dl>
- <dt>{{DOMxRef("RTCPeerConnection")}}</dt>
- <dd>ローカルコンピュータとリモートピア間の WebRTC 接続を表します。これは、2つのピア間のデータの効率的なストリーミングを処理するために使用されます。</dd>
- <dt>{{DOMxRef("RTCDataChannel")}}</dt>
- <dd>接続の2つのピア間の双方向データチャネルを表します。</dd>
- <dt>{{DOMxRef("RTCDataChannelEvent")}}</dt>
- <dd>{{DOMxRef("RTCPeerConnection")}} に {{DOMxRef("RTCDataChannel")}} をアタッチしている間に発生するイベントを表します。このインタフェースで送信されるイベントは、データチャネル {{event("datachannel")}} のみです。</dd>
- <dt>{{DOMxRef("RTCSessionDescription")}}</dt>
- <dd>セッションのパラメータを表します。各 <code>RTCSessionDescription</code> は、オファー/アンサーネゴシエーションプロセスの、どの部分を記述するかを示す記述型 ({{DOMxRef("RTCSessionDescription.type", "type")}}) と、セッションの {{Glossary("SDP")}} 記述子で構成されます。</dd>
- <dt>{{DOMxRef("RTCStatsReport")}}</dt>
- <dd>接続または接続上の個々のトラックの統計情報の詳細を提供します。{{DOMxRef("RTCPeerConnection.getStats()")}} を呼び出すと報告を取得できます。    WebRTC 統計情報の使用に関する詳細は、 <a href="/ja/docs/Web/API/WebRTC_Statistics_API">WebRTC 統計 API</a> を参照してください。</dd>
- <dt>{{DOMxRef("RTCIceCandidate")}}</dt>
- <dd>{{DOMxRef("RTCPeerConnection")}} を確立するための {{Glossary("ICE")}}(インタラクティブ接続確立) サーバの候補を表します。</dd>
- <dt>{{DOMxRef("RTCIceTransport")}}</dt>
- <dd>{{Glossary("ICE")}} トランスポートに関する情報を表します。</dd>
- <dt>{{DOMxRef("RTCPeerConnectionIceEvent")}}</dt>
- <dd>ターゲットとの {{Glossary("ICE")}} 候補(通常は {{DOMxRef("RTCPeerConnection")}} )に関連して発生するイベントを表します。このタイプのイベントは {{event("icecandidate")}} 1つだけです。</dd>
- <dt>{{DOMxRef("RTCRtpSender")}}</dt>
- <dd>{{DOMxRef("RTCPeerConnection")}} 上の {{DOMxRef("MediaStreamTrack")}} のデータのエンコードと送信を管理します。</dd>
- <dt>{{DOMxRef("RTCRtpReceiver")}}</dt>
- <dd>{{DOMxRef("RTCPeerConnection")}} 上の {{DOMxRef("MediaStreamTrack")}} のデータの受信とデコードを管理します。</dd>
- <dt>{{DOMxRef("RTCTrackEvent")}}</dt>
- <dd>このインターフェイスは {{domxref("RTCPeerConnection.track_event", "track")}} イベントを表すもので、 {{DOMxRef("RTCRtpReceiver")}} オブジェクトが {{DOMxRef("RTCPeerConnection")}} オブジェクトに追加されたことを示すトラックイベントを表現するために使用されるインターフェースで、新しい着信 (incoming) {{DOMxRef("MediaStreamTrack")}} が生成され、<code>RTCPeerConnection</code> に追加されたことを示します。</dd>
- <dt>{{DOMxRef("RTCSctpTransport")}}</dt>
- <dd>Stream Control Transmission Protocol (<strong>{{Glossary("SCTP")}}</strong>) トランスポートを説明する情報を提供し、 {{DOMxRef("RTCPeerConnection")}} のすべての<a href="/ja/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> のデータチャネルの SCTP パケットが送受信される Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) トランスポートにアクセスする方法も提供します。</dd>
- <dt>
- <h4 id="Dictionaries" name="Dictionaries">辞書</h4>
- </dt>
- <dt>{{DOMxRef("RTCConfiguration")}}</dt>
- <dd><a href="/ja/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> の {{DOMxRef("RTCPeerConnection")}} の構成オプションを提供するために使用します。</dd>
- <dt>{{DOMxRef("RTCIceServer")}}</dt>
- <dd>({{Glossary("STUN")}} や {{Glossary("TURN")}} サーバのような) 単一の {{Glossary("ICE")}} サーバーを定義します。</dd>
- <dt>{{DOMxRef("RTCRtpContributingSource")}}</dt>
- <dd>ソース貢献されているパケットが再生された直近の時刻を含む、特定の貢献ソース (contributing source; CSRC)に関する情報が含まれています。</dd>
- <dt>
- <h4 id="Types" name="Types">型</h4>
- </dt>
- <dt>{{DOMxRef("RTCSctpTransportState")}}</dt>
- <dd>{{DOMxRef("RTCSctpTransport")}} インスタンスの状態を示します。</dd>
- <dt>{{DOMxRef("RTCSessionDescriptionCallback")}}</dt>
- <dd><code>RTCSessionDescriptionCallback</code> は、オファーやアンサーの作成を要求する際に {{DOMxRef("RTCPeerConnection")}} オブジェクトに渡されます。</dd>
-</dl>
+- {{DOMxRef("RTCPeerConnection")}}
+  - : ローカルコンピュータとリモートピアー間の WebRTC 接続を表します。これは、 2 つのピアー間のデータの効率的なストリーミングを処理するために使用されます。
+- {{DOMxRef("RTCDataChannel")}}
+  - : 接続の 2 つのピアー間の双方向データチャネルを表します。
+- {{DOMxRef("RTCDataChannelEvent")}}
+  - : {{DOMxRef("RTCDataChannel")}} を {{DOMxRef("RTCPeerConnection")}} に装着している間に発生するイベントを表します。このインターフェイスで送信されるイベントは、データチャネル {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} のみです。
+- {{DOMxRef("RTCSessionDescription")}}
+  - : セッションの引数を表します。各 `RTCSessionDescription` は、オファー/アンサーネゴシエーションプロセスの、どの部分を記述するかを示す記述型 ({{DOMxRef("RTCSessionDescription.type", "type")}}) と、セッションの {{Glossary("SDP")}} 記述子で構成されます。
+- {{DOMxRef("RTCStatsReport")}}
+  - : 接続または接続上の個々のトラックの統計情報の詳細を提供します。{{DOMxRef("RTCPeerConnection.getStats()")}} を呼び出すと報告を取得できます。 WebRTC 統計情報の使用に関する詳細は、 [WebRTC 統計 API](/ja/docs/Web/API/WebRTC_Statistics_API) を参照してください。
+- {{DOMxRef("RTCIceCandidate")}}
+  - : {{DOMxRef("RTCPeerConnection")}} を確立するための {{Glossary("ICE")}}(インタラクティブ接続確立) サーバーの候補を表します。
+- {{DOMxRef("RTCIceTransport")}}
+  - : {{Glossary("ICE")}} トランスポートに関する情報を表します。
+- {{DOMxRef("RTCPeerConnectionIceEvent")}}
+  - : ターゲットとの {{Glossary("ICE")}} 候補 (通常は {{DOMxRef("RTCPeerConnection")}}) に関連して発生するイベントを表します。この型のイベントは {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 1 つだけです。
+- {{DOMxRef("RTCRtpSender")}}
+  - : {{DOMxRef("RTCPeerConnection")}} 上の {{DOMxRef("MediaStreamTrack")}} のデータのエンコードと送信を管理します。
+- {{DOMxRef("RTCRtpReceiver")}}
+  - : {{DOMxRef("RTCPeerConnection")}} 上の {{DOMxRef("MediaStreamTrack")}} のデータの受信とデコードを管理します。
+- {{DOMxRef("RTCTrackEvent")}}
+  - : このインターフェイスは {{domxref("RTCPeerConnection.track_event", "track")}} イベントを表すもので、 {{DOMxRef("RTCRtpReceiver")}} オブジェクトが {{DOMxRef("RTCPeerConnection")}} オブジェクトに追加されたことを示すトラックイベントを表現するために使用されるインターフェイスで、新しい着信 (incoming) {{DOMxRef("MediaStreamTrack")}} が生成され、 `RTCPeerConnection` に追加されたことを示します。
+- {{DOMxRef("RTCSctpTransport")}}
+  - : Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) トランスポートを説明する情報を提供し、 {{DOMxRef("RTCPeerConnection")}} のすべての[`RTCPeerConnection`](/ja/docs/Web/API/RTCPeerConnection) のデータチャネルの SCTP パケットが送受信される Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) トランスポートにアクセスする方法も提供します。
 
-<h3 id="Identity_and_security" name="Identity_and_security">アイデンティティとセキュリティ</h3>
+#### 辞書
 
-<p>これらの API は、セキュリティとアイデンティティを管理し、ユーザーの接続を認証するために使われます。</p>
+- {{DOMxRef("RTCIceServer")}}
+  - : ({{Glossary("STUN")}} や {{Glossary("TURN")}} サーバーのような) 単一の {{Glossary("ICE")}} サーバーを定義します。
+- {{DOMxRef("RTCRtpContributingSource")}}
+  - : ソース貢献されているパケットが再生された直近の時刻を含む、特定の貢献ソース (contributing source; CSRC) に関する情報が含まれています。
 
-<dl>
- <dt>{{DOMxRef("RTCIdentityProvider")}}</dt>
- <dd>ユーザー・エージェントが ID アサーションの生成または検証を要求できるようにします。</dd>
- <dt>{{DOMxRef("RTCIdentityAssertion")}}</dt>
- <dd>現在の接続のリモートピアの ID を表します。まだピアが設定されておらず、検証されていない場合、このインターフェイスは <code>null</code> を返します。一度設定すると変更することはできません。</dd>
- <dt>{{DOMxRef("RTCIdentityProviderRegistrar")}}</dt>
- <dd>ID プロバイダ(idP)を登録します。</dd>
- <dt>{{DOMxRef("RTCIdentityEvent")}}</dt>
- <dd>ID プロバイダ (idP) によって生成された ID アサーションを表します。これは通常、{{DOMxRef("RTCPeerConnection")}} に対して行われます。このタイプで送信されるイベントは {{event("identityresult")}} のみです。</dd>
- <dt>{{DOMxRef("RTCIdentityErrorEvent")}}</dt>
- <dd>ID プロバイダ (idP) に関連するエラーを表します。これは通常、 {{DOMxRef("RTCPeerConnection")}} に対して行われます。このタイプでは、 {{event("idpassertionerror")}} と {{event("idpvalidationerror")}} の 2 つのイベントが送信されます。</dd>
- <dt>{{DOMxRef("RTCCertificate")}}</dt>
- <dd>{{DOMxRef("RTCPeerConnection")}} が認証に使用する証明書を表します。</dd>
-</dl>
+#### イベント
 
-<h3 id="Telephony" name="Telephony">電話通信</h3>
+- {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}}
+  - : データチャネルの {{domxref("RTCDataChannel.bufferedAmount", "bufferedAmount")}} プロパティで示される、現在バッファリングされているデータ量が、 {{domxref("RTCDataChannel.bufferedAmountLowThreshold", "bufferedAmountLowThreshold")}} で指定されたチャンネルの最小バッファリングデータサイズ以下に減少したときに発行されます。
+- {{domxref("RTCDataChannel.close_event", "close")}}
+  - : データチャネルを閉じる処理が完了し、現在 `closed` の状態です。この点で、基礎となるデータトランスポートは完全に閉じられています。 `closing` イベントを監視することで、閉じる処理が完了する*前に*通知を受けることができます。
+- {{domxref("RTCDataChannel.closing_event", "closing")}}
+  - : `RTCDataChannel` が `closing` 状態に遷移し、まもなく閉じられることが示された。 `close` イベントを監視することで、閉じる処理の完了を検出することができます。
+- {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
+  - : {{domxref("RTCPeerConnection.connectionState", "connectionState")}} でアクセスできる接続の状態が変更された。
+- {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
+  - : リモートピアーーが新しいデータチャネルを開いた後、新しい {{domxref("RTCDataChannel")}} が利用可能です。このイベント型は {{domxref("RTCDataChannel")}} です。
+- {{domxref("RTCDataChannel.error_event", "error")}}
+  - : {{domxref("RTCErrorEvent")}} で、データチャネルでエラーが発生したことを示します。
+- {{domxref("RTCDtlsTransport.error_event", "error")}}
+  - : {{domxref("RTCErrorEvent")}} で、 {{domxref("RTCDtlsTransport")}} においてエラーが発生したことを示します。このエラーは `dtls-failure` または `fingerprint-failure` のどちらかになります。
+- {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
+  - : {{domxref("RTCIceTransport")}} の収集状態が変更されました。
+- {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}
+  - : {{domxref("RTCPeerConnectionIceEvent")}} は、ローカルデバイスがローカルピアーーに追加する必要がある新しい ICE 候補を特定したときに、 {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}を呼び出して送信されるものです。
+- {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
+  - : ICE 候補の収集中にエラーが発生したことを示す{{domxref("RTCPeerConnectionIceErrorEvent")}}。
+- {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
+  - : ICE 接続の状態（{{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} プロパティで得られる）が変化したときに {{domxref("RTCPeerConnection")}} に送られます。
+- {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
+  - : ICEの収集状態（{{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} プロパティで得られる）が変化したときに {{domxref("RTCPeerConnection")}} に送られます。
+- {{domxref("RTCDataChannel.message_event", "message")}}
+  - : データチャネルでメッセージを受信した。このイベントの型は {{domxref("MessageEvent")}} です。
+- {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
+  - : domxref("RTCPeerConnection.createOffer", "createOffer()")}} に続いて {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} を呼び出し、`RTCPeerConnection`にセッション交渉を行う必要があることを通知します。
+- {{domxref("RTCDataChannel.open_event", "open")}}
+  - : `RTCDataChannel` の基礎となるデータトランスポートが正常にオープンまたは再オープンされました。
+- {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
+  - : イベントが発行された `RTCIceTransport` において、現在選択されている ICE 候補のペアが変更されました。
+- {{domxref("RTCPeerConnection.track_event", "track")}}
+  - : `track` イベントは {{domxref("RTCTrackevent")}} の型で、メディアのストリーミングの交渉が成功した後に新しいトラックが接続に追加されると {{domxref("RTCPeerConnection")}} に送信されます。
+- {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
+  - : ピアー接続の {{domxref("RTCPeerConnection.signalingstate", "signalingstate")}} が変更されたときに送信されます。これは {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} または {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} のいずれかが呼び出された結果発生するものです。
+- {{domxref("RTCDtlsTransport.statechange_event", "statechange")}}
+  - : `RTCDtlsTransport` の状態が変化した。
+- {{domxref("RTCIceTransport.statechange_event", "statechange")}}
+  - : `RTCIceTransport` の状態が変化した。
+- {{domxref("RTCSctpTransport.statechange_event", "statechange")}}
+  - : `RTCSctpTransport` の状態が変化した。
 
-<p>以下のインターフェイスは、公衆電話網 (public-switched telephone networks; PTSNs) と通信するために利用します。</p>
+#### 型
 
-<dl>
- <dt>{{DOMxRef("RTCDTMFSender")}}</dt>
- <dd>{{DOMxRef("RTCPeerConnection")}} のデュアルトーン多周波 (DTMF) シグナリングのエンコーディングと送信を管理します。</dd>
- <dt>{{DOMxRef("RTCDTMFToneChangeEvent")}}</dt>
- <dd>DTMF トーンが開始または終了したことを示すために{{domxref("RTCDTMFSender.tonechange_event", "tonechange")}} イベントで使用されます。このイベントは（別段の記載がある場合を除き）泡立たず (bubble) 、（別段の記載がある場合を除き）キャンセルできません。</dd>
-</dl>
+- {{DOMxRef("RTCSctpTransport.state")}}
+  - : {{DOMxRef("RTCSctpTransport")}} インスタンスの状態を示します。
 
-<h2 id="Guides" name="Guides">ガイド</h2>
+### アイデンティティとセキュリティ
 
-<dl>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Protocols">WebRTC プロトコル入門</a></dt>
- <dd>この記事では、WebRTC API の基礎となっているプロトコルについて説明しています。</dd>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Connectivity">WebRTC 接続</a></dt>
- <dd>WebRTC 接続がどのように動くかを説明するガイド。どのように様々なプロトコルとインターフェースが協調して用いられることで強力なコミュニケーションアプリを構築することができるかについて説明しています。</dd>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Session_lifetime">WebRTC セッションのライフタイム</a></dt>
- <dd>WebRTCは任意のデータ、音声、映像またはそれらの組み合わせをやりとりするピアツーピア通信をブラウザアプリケーション上に構築することができます。この記事では、接続の確立から不要となり閉じられるまでのWebRTCのライフタイムについて見ていきます。</dd>
-</dl>
+これらの API は、セキュリティとアイデンティティを管理し、ユーザーの接続を認証するために使われます。
 
-<dl>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Perfect_negotiation">接続の確立: 完全なネゴシエーションパターン</a></dt>
- <dd><strong>完全なネゴシエーション</strong>はシグナリングプロセスが従うべき推奨されるデザインパターンです。二者を区別するためにたくさんのコーディングを必要とせずに、双方をオファー側とアンサー側のどちらにもなれることを可能にするネゴシエーションにおける透過性を提供します。</dd>
-</dl>
+- {{DOMxRef("RTCIdentityProvider")}}
+  - : ユーザーエージェントが ID アサーションの生成または検証を要求できるようにします。
+- {{DOMxRef("RTCIdentityAssertion")}}
+  - : 現在の接続のリモートピアーの ID を表します。まだピアーが設定されておらず、検証されていない場合、このインターフェイスは `null` を返します。一度設定すると変更することはできません。
+- {{DOMxRef("RTCIdentityProviderRegistrar")}}
+  - : ID プロバイダー (idP) を登録します。
+- {{DOMxRef("RTCCertificate")}}
+  - : {{DOMxRef("RTCPeerConnection")}} が認証に使用する証明書を表します。
 
-<dl>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling">シグナリングと双方向ビデオ通話</a></dt>
- <dd>以前の例で作成したウェブソケットベースのチャットシステムに参加者同士のビデオ通話機能を追加するチュートリアルと例。チャットサーバのウェブソケット接続は WebRTC のシグナリングとして用いられます。</dd>
- <dt><a href="/ja/docs/Web/Media/Formats/WebRTC_codecs">WebRTC で用いられるコーデック</a></dt>
- <dd>WebRTC を用いる上でブラウザがサポートしているべきコーデックと様々なポピュラーなブラウザでサポートされている追加的なコーデックについてのガイド。必要に応じたベストなコーデックの選び方についてのガイドも含みます。</dd>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Using_data_channels">WebRTC データチャネルを使う</a></dt>
- <dd>このガイドでは、ピア接続と関連する {{DOMxRef("RTCDataChannel")}} を使用して、2 つのピア間で任意のデータを交換する方法について説明します。</dd>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Using_DTMF">DTMFをWebRTCと共に用いる</a></dt>
- <dd>{{DOMxRef("RTCDTMFSender")}}インターフェースを用いたDTMFトーン送信サポートを含む、旧式の電話システムとのゲートウェイとやりとりを行うためのWebRTCサポートについて、このガイドでは、その方法を説明します。</dd>
-</dl>
+### 電話回線
 
-<h2 id="Tutorials" name="Tutorials">チュートリアル</h2>
+これらのインターフェイスとイベントは、公衆交換電話網 (PTSN) との相互作用に関連するものです。これらは主に、トーンダイヤルの音、またはその音を表すパケットをネットワーク経由でリモートピアーに送信するために使用されます。
 
-<dl>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/adapter.js">Improving compatibility using WebRTC adapter.js</a></dt>
- <dd>WebRTC 組織は、異なるブラウザの WebRTC 実装における互換性の問題を回避するため <a href="https://github.com/webrtc/adapter/">adapter.js</a> を提供しています。このアダプタは JavaScript のはシム ({{Glossary("Shim")}}) で、あなたのコードを仕様に合わせて記述することで、WebRTC をサポートしているすべてのブラウザで「ただ動く (just work) 」ようにしてくれます。</dd>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Taking_still_photos">WebRTC で静止画を撮る</a></dt>
- <dd>この記事では、WebRTC に対応したパソコンや携帯電話でWebRTCを使ってカメラにアクセスして写真を撮る方法を紹介しています。</dd>
- <dt><a href="/ja/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample">シンプルな RTCDataChannel のサンプル</a></dt>
- <dd>{{DOMxRef("RTCDataChannel")}} インターフェイスは、2つのピア間で任意のデータを送受信するためのチャネルを開くことができる機能です。このAPIは意図的に <a href="/ja/docs/Web/API/WebSocket_API">WebSocket API</a> に似せているので、それぞれに同じプログラミングモデルを使用することができます。</dd>
-</dl>
+#### インターフェイス
 
-<h2 id="Resource" name="Resource">リソース</h2>
+- {{DOMxRef("RTCDTMFSender")}}
+  - : {{DOMxRef("RTCPeerConnection")}} のデュアルトーン多周波 (DTMF) シグナリングのエンコーディングと送信を管理します。
+- {{DOMxRef("RTCDTMFToneChangeEvent")}}
+  - : DTMF トーンの開始または終了を示すために {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}} イベントで使用されます。このイベントは（特に明記されている場合を除き）バブリングせず、（特に明記されている場合を除き）キャンセルもできません。
 
-<h3 id="Protocols" name="Protocols">プロトコル</h3>
+#### イベント
 
-<h4 id="WebRTC-proper_protocols" name="WebRTC-proper_protocols">WebRTC-proper プロトコル</h4>
+- {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
+  - : 新しい {{Glossary("DTMF")}} トーンが接続上で再生され始めたか、 `RTCDTMFSender` の {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} にある最後のトーンが送信されてバッファが空になったか、どちらかです。このイベントの型は {{domxref("RTCDTMFToneChangeEvent")}} です。
 
-<ul>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/"><cite>WebRTC のためのアプリケーションレイヤプロトコルネゴシエーション</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/"><cite>WebRTC オーディオコーデックと処理要件</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/"><cite>RTCWeb Data Channels</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/"><cite>RTCWeb Data Channel Protocol</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/"><cite>ウェブリアルタイム通信 (WebRTC): メディアトランスポートとRTPの利用</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/"><cite>WebRTC セキュリティアーキテクチャ</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/"><cite>RTCWEB用トランスポート</cite></a></li>
-</ul>
+## ガイド
 
-<h4 id="Related_supporting_protocols" name="Related_supporting_protocols">関連する補助プロトコル</h4>
+- [WebRTC プロトコル入門](/ja/docs/Web/API/WebRTC_API/Protocols)
+  - : この記事では、WebRTC API の基礎となっているプロトコルについて説明しています。
+- [WebRTC 接続](/ja/docs/Web/API/WebRTC_API/Connectivity)
+  - : WebRTC 接続がどのように動くかを説明するガイド。どのように様々なプロトコルとインターフェイスが協調して用いられることで強力なコミュニケーションアプリを構築することができるかについて説明しています。
+- [WebRTC セッションのライフタイム](/ja/docs/Web/API/WebRTC_API/Session_lifetime)
+  - : WebRTCは任意のデータ、音声、映像またはそれらの組み合わせをやりとりするピアーツーピアー通信をブラウザーアプリケーション上に構築することができます。この記事では、接続の確立から不要となり閉じられるまでの WebRTC のライフタイムについて見ていきます。
+- [接続の確立: 完全なネゴシエーションパターン](/ja/docs/Web/API/WebRTC_API/Perfect_negotiation)
+  - : **完全なネゴシエーション**はシグナリングプロセスが従うべき推奨されるデザインパターンです。二者を区別するためにたくさんのコーディングを必要とせずに、双方をオファー側とアンサー側のどちらにもなれることを可能にするネゴシエーションにおける透過性を提供します。
+- [シグナリングと双方向映像通話](/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+  - : 以前の例で作成したウェブソケットベースのチャットシステムに参加者同士の映像通話機能を追加するチュートリアルと例。チャットサーバーのウェブソケット接続は WebRTC のシグナリングとして用いられます。
+- [WebRTC で用いられるコーデック](/ja/docs/Web/Media/Formats/WebRTC_codecs)
+  - : WebRTC を用いる上でブラウザーが対応すべきコーデックと様々な有名なブラウザーで対応されている追加的なコーデックについてのガイド。必要に応じたベストなコーデックの選び方についてのガイドも含みます。
+- [WebRTC データチャネルを使う](/ja/docs/Web/API/WebRTC_API/Using_data_channels)
+  - : このガイドでは、ピアー接続と関連する {{DOMxRef("RTCDataChannel")}} を使用して、2 つのピアー間で任意のデータを交換する方法について説明します。
+- [WebRTC での DTMF の使用](/ja/docs/Web/API/WebRTC_API/Using_DTMF)
+  - : {{DOMxRef("RTCDTMFSender")}} インターフェイスを用いた DTMF トーン送信サポートを含む、旧式の電話システムとのゲートウェイとやりとりを行うための WebRTC 対応について、このガイドでは、その方法を説明します。
 
-<ul>
- <li><a href="https://tools.ietf.org/html/rfc5245">Interactive Connectivity Establishment (ICE): A Protocol for Network Address Translator (NAT) Traversal for Offer/Answer Protocol</a></li>
- <li><a href="https://tools.ietf.org/html/rfc5389"><cite>Session Traversal Utilities for NAT (STUN)</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc7064"><cite>URI Scheme for the Session Traversal Utilities for NAT (STUN) Protocol</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc7065"><cite>Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc3264"><cite>An Offer/Answer Model with Session Description Protocol (SDP)</cite></a></li>
- <li><a href="https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/"><cite>Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization</cite></a><br>
-   </li>
-</ul>
+## チュートリアル
 
-<h4 id="WebRTC_statistics" name="WebRTC_statistics">WebRTC 統計情報</h4>
+- [Improving compatibility using WebRTC adapter.js](/ja/docs/Web/API/WebRTC_API/adapter.js)
+  - : WebRTC 組織は、異なるブラウザーの WebRTC 実装における互換性の問題を回避するため [adapter.js](https://github.com/webrtc/adapter/) を提供しています。このアダプタは JavaScript のはシム ({{Glossary("Shim")}}) で、あなたのコードを仕様に合わせて記述することで、WebRTC をサポートしているすべてのブラウザーで「ただ動く (just work) 」ようにしてくれます。
+- [WebRTC で静止画を撮る](/ja/docs/Web/API/WebRTC_API/Taking_still_photos)
+  - : この記事では、WebRTC に対応したパソコンや携帯電話でWebRTCを使ってカメラにアクセスして写真を撮る方法を紹介しています。
+- [シンプルな RTCDataChannel のサンプル](/ja/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+  - : {{DOMxRef("RTCDataChannel")}} インターフェイスは、2つのピアー間で任意のデータを送受信するためのチャネルを開くことができる機能です。このAPIは意図的に [WebSocket API](/ja/docs/Web/API/WebSocket_API) に似せているので、それぞれに同じプログラミングモデルを使用することができます。
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebRTC_Statistics_API">WebRTC 統計 API</a></li>
-</ul>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebRTC 1.0')}}</td>
-   <td>{{Spec2('WebRTC 1.0')}}</td>
-   <td>WebRTC API の初期定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>メディアコンテンツのストリームを伝達するオブジェクトの初期定義。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture DOM Elements')}}</td>
-   <td>{{Spec2('Media Capture DOM Elements')}}</td>
-   <td>DOM 要素からコンテンツのストリームを取得する方法の初期定義。</td>
-  </tr>
- </tbody>
-</table>
+### WebRTC-proper プロトコル
 
-<p>これらの API 仕様に加えて、Web RTC は <a href="#Protocols">リソース</a> に示されているさまざまなプロトコルを用いる必要があります。</p>
+- [Application Layer Protocol Negotiation for Web Real-Time Communications](https://datatracker.ietf.org/doc/rfc8833/)
+- [WebRTC Audio Codec and Processing Requirements](https://datatracker.ietf.org/doc/rfc7874/)
+- [RTCWeb Data Channels](https://datatracker.ietf.org/doc/rfc8831/)
+- [RTCWeb Data Channel Protocol](https://datatracker.ietf.org/doc/rfc8832/)
+- [Web Real-Time Communication (WebRTC): Media Transport and Use of RTP](https://datatracker.ietf.org/doc/rfc8834/)
+- [WebRTC Security Architecture](https://datatracker.ietf.org/doc/rfc8827/)
+- [Transports for RTCWEB](https://datatracker.ietf.org/doc/rfc8835/)
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+### 関連する補助プロトコル
 
-<ul>
- <li>{{DOMxRef("MediaDevices")}}</li>
- <li>{{DOMxRef("MediaStreamEvent")}}</li>
- <li>{{DOMxRef("MediaStreamConstraints")}}</li>
- <li>{{DOMxRef("MediaStreamTrack")}}</li>
- <li>{{DOMxRef("MessageEvent")}}</li>
- <li>{{DOMxRef("MediaStream")}}</li>
- <li><a href="https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/">Firefox multistream and renegotiation for Jitsi Videobridge</a></li>
- <li><a href="https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/">SocketPeer を使った WebRTC Fog の中のピアリング</a></li>
- <li><a href="https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/">Inside the Party Bus: 複数のライブビデオストリーム＋インタラクティブグラフィックスを使ったWebアプリの構築</a></li>
-</ul>
+- [Interactive Connectivity Establishment (ICE): A Protocol for Network Address Translator (NAT) Traversal for Offer/Answer Protocol](https://datatracker.ietf.org/doc/html/rfc5245)
+- [Session Traversal Utilities for NAT (STUN)](https://datatracker.ietf.org/doc/html/rfc5389)
+- [URI Scheme for the Session Traversal Utilities for NAT (STUN) Protocol](https://datatracker.ietf.org/doc/html/rfc7064)
+- [Traversal Using Relays around NAT (TURN) Uniform Resource Identifiers](https://datatracker.ietf.org/doc/html/rfc7065)
+- [An Offer/Answer Model with Session Description Protocol (SDP)](https://datatracker.ietf.org/doc/html/rfc3264)
+- [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/rfc7635/)
+
+## 関連情報
+
+- {{DOMxRef("MediaDevices")}}
+- {{DOMxRef("MediaStreamEvent")}}
+- {{DOMxRef("MediaStreamTrack")}}
+- {{DOMxRef("MessageEvent")}}
+- {{DOMxRef("MediaStream")}}
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [Firefox multistream and renegotiation for Jitsi Videobridge](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
+- [Peering Through the WebRTC Fog with SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
+- [Inside the Party Bus: Building a Web App with Multiple Live Video Streams + Interactive Graphics](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)
+- [ウェブメディア技術](/ja/docs/Web/Media)
+- [WebRTC 統計 API](/ja/docs/Web/API/WebRTC_Statistics_API)
