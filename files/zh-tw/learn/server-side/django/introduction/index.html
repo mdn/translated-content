@@ -62,7 +62,7 @@ translation_of: Learn/Server-side/Django/Introduction
 <p>Django 不斷發展壯大 — 從 2008 年 9 月的第一個里程碑版本（1.0），到最近發布的（2.0）-（2018）版本。每個版本都添加了新功能，和錯誤修復，從支持新類型的數據庫，模版引擎和緩存，到添加 “通用” 視圖函數和類別（這減少了開發人員在一些編程任務必須編寫的代碼量）。</p>
 
 <div class="note">
-<p><strong>注意</strong>:  查看 Django 網站上的發行說明 <a href="https://docs.djangoproject.com/en/2.0/releases/">release notes</a>，看看最近版本發生了什麼變化，以及 Django 能做多少工作</p>
+<p><strong>備註：</strong> 查看 Django 網站上的發行說明 <a href="https://docs.djangoproject.com/en/2.0/releases/">release notes</a>，看看最近版本發生了什麼變化，以及 Django 能做多少工作</p>
 </div>
 
 <p>Django 現在是一個蓬勃發展的合作開源項目，擁有數千個用戶和貢獻者。雖然它仍然具有反映其起源的一些功能，但 Django 已經發展成為，能夠開發任何類型的網站的多功能框架。</p>
@@ -104,11 +104,8 @@ translation_of: Learn/Server-side/Django/Introduction
 </ul>
 
 <div class="note">
-<p><strong>注意</strong> : Django將此組織稱為“模型視圖模板（MVT）”架構。它與更加熟悉的<a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a>架構有許多相似之處. </p>
+<p><strong>備註：</strong> Django將此組織稱為“模型視圖模板（MVT）”架構。它與更加熟悉的<a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a>架構有許多相似之處. </p>
 </div>
-
-<ul>
-</ul>
 
 <p>以下部分將為您提供Django應用程序的這些主要部分的想法（稍後我們將在進一步詳細介紹後，我們將在開發環境中進行更詳細的介紹）。</p>
 
@@ -152,7 +149,7 @@ def index(request):
 </pre>
 
 <div class="note">
-<p><strong>注意</strong> :一點點Python:</p>
+<p><strong>備註：</strong> 一點點Python:</p>
 
 <ul>
  <li><a href="https://docs.python.org/3/tutorial/modules.html">Python模塊</a>是函數的“庫”，存放在單獨的文件中，我們可能希望在代碼中使用。在這裡，我們只導入了<code>HttpResponse</code>從對象<code>django.http</code>模塊，使我們可以在視圖中使用<br>
@@ -196,14 +193,12 @@ class Team(models.Model):
 </pre>
 
 <div class="note">
-<p><strong>注意</strong> : Python小知識:</p>
+<p><strong>備註：</strong> Python小知識:</p>
 
 <ul>
  <li>Python支持“面向對象編程”，這是一種編程風格，我們將代碼組織到對像中，其中包括用於對該對象進行操作的相關數據和功能。對像也可以從其他對象繼承／擴展／派生，允許相關對象之間的共同行為被共享。在Python中，我們使用關鍵字<strong>Class</strong>定義對象的“藍圖”。我們可以根據類中的模型創建類型的多個特定實例。</li>
  <li>例如，我們有個<strong>Team</strong>類，它來自於<strong>Model</strong>類。這意味著它是一個模型，並且將包含模型的所有方法，但是我們也可以給它自己的專門功能。在我們的模型中，我們定義了我們的數據庫需要存儲我們的數據字段，給出它們的具體名稱。Django使用這些定義（包括字段名稱）來創建底層數據庫。</li>
 </ul>
-
-
 </div>
 
 <h3 id="查詢數據(views.py)">查詢數據(views.py)</h3>

@@ -49,7 +49,7 @@ admin.site.register(Author)
 admin.site.register(Genre)
 admin.site.register(BookInstance)</pre>
 
-<div class="note"><strong>注意</strong>：如果你在上一章節最後有接受挑戰並建立一個書本的「語言模型」 (<a href="/zh-TW/docs/Learn/Server-side/Django/Models">查看模型教學文章</a>)，你必需也要導入並註冊該模型！</div>
+<div class="note"><p><strong>備註：</strong> 如果你在上一章節最後有接受挑戰並建立一個書本的「語言模型」 (<a href="/zh-TW/docs/Learn/Server-side/Django/Models">查看模型教學文章</a>)，你必需也要導入並註冊該模型！</p></div>
 
 <p>這是<strong>註冊模型</strong>最簡單的方式。</p>
 
@@ -83,7 +83,7 @@ admin.site.register(BookInstance)</pre>
 <p><img alt="Admin Site - Book Add" src="admin_book_add.png"></p>
 
 <div class="note">
-<p><strong>注意：在這邊我們希望你花點時間在你的 app 中新增一些書本、作者和書及類型(例如：奇幻等)。請確保每位作者與每種書籍類型都分別關聯了一本以上的書(這在文章稍後的實作的時候，會讓你的列表與細節視圖更加豐富有趣)</strong>。</p>
+<p><strong>備註：</strong> 在這邊我們希望你花點時間在你的 app 中新增一些書本、作者和書及類型(例如：奇幻等)。請確保每位作者與每種書籍類型都分別關聯了一本以上的書(這在文章稍後的實作的時候，會讓你的列表與細節視圖更加豐富有趣)。</p>
 </div>
 
 <p>當你新增完書本後，點擊上方書籤的 <strong>Home</strong> 連結回到主要管理頁面，接著點擊 <strong>Books</strong> 連結來展示目前的書本清單(你也可以點及其他連結看看其他模型的列表)，現在你已經加了幾本書，畫面應該會與下方截圖類似，你可以看到下方陳列了每本書的標題，這是我們在上一篇文章所提到的 Book 模型中的 <code>__str__()</code> 方法所回傳的值。</p>
@@ -197,7 +197,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>很不幸地，我們無法直接在 <code>list_display</code> 中指定「書籍類別」(genre field)字段，因為它是一個 <code>ManyToManyField</code> (多對多字段)，因為如果這樣做會造成很大的資料庫讀寫「成本」，所以 Django 會預防這樣的狀況發生，因此，取而代之，我們將定義一個 <code>display_genre</code> 函式以「字串」形式得到書籍類別。(下方有定義此函式)</p>
 
 <div class="note">
-<p><strong>Note</strong>: Getting the <code>genre</code> may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a <em>Delete </em>link next to every item in the list.</p>
+<p><strong>備註：</strong> Getting the <code>genre</code> may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a <em>Delete </em>link next to every item in the list.</p>
 </div>
 
 <p>將以下程式碼添加到<code>Book</code>模型（<strong>models.py</strong>）。 這會從<code>genre</code>記錄的的頭三個值（如果有的話）創建一個字符串, 和創建一個在管理者網站中出現的<code>short_description</code>標題。</p>
@@ -216,12 +216,12 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p><code>Genre</code> 模型(如果定義了語言模型，則還有 <code>Language</code> 模型）都有一個欄位，因此沒有必要為它們創建其他模型以顯示欄位。</p>
 
 <div class="note">
-<p>注意: 更新 <code>BookInstance</code> 模型列表用來顯示狀態和預期的返回日期是有價值的。 我們在本文結尾處添加了一個挑戰！</p>
+<p><strong>備註：</strong> 更新 <code>BookInstance</code> 模型列表用來顯示狀態和預期的返回日期是有價值的。 我們在本文結尾處添加了一個挑戰！</p>
 </div>
 
 <h3 id="加入列表過濾器_List_Filter">加入列表過濾器 (List Filter)</h3>
 
-<p>當你的列表有很多個記錄時, 加入列表過濾器可以幫助你過濾想顯示的記錄。加入<code>list_filter</code>這個屬性就可以。請用以下的程式碼來取代原本的 <code style="font-style: normal; font-weight: normal;">BookInstanceAdmin</code> 類別</p>
+<p>當你的列表有很多個記錄時, 加入列表過濾器可以幫助你過濾想顯示的記錄。加入<code>list_filter</code>這個屬性就可以。請用以下的程式碼來取代原本的 <code>BookInstanceAdmin</code> 類別</p>
 
 <pre class="brush: python">class BookInstanceAdmin(admin.ModelAdmin):
 <strong>    list_filter = ('status', 'due_back')</strong>
@@ -236,7 +236,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>默認情況下，局部視圖按照模型中聲明的順序垂直排列所有字段。 您可以更改聲明的順序，顯示（或排除）哪些字段，使用分段來組織資訊，水平顯示還是垂直顯示字段，甚至管理表單中使用哪些編輯小部件。</p>
 
 <div class="note">
-<p>注意:  <em>LocalLibrary</em> 模型相對簡單，因此我們無須更改佈局。 但我們仍然會進行一些更改，向您展示如何進行。</p>
+<p><strong>備註：</strong> <em>LocalLibrary</em> 模型相對簡單，因此我們無須更改佈局。 但我們仍然會進行一些更改，向您展示如何進行。</p>
 </div>
 
 <h4 id="控制那些欄位顯示並佈置">控制那些欄位顯示並佈置</h4>
@@ -255,7 +255,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p><img alt="Admin Site - Improved Author Detail" src="admin_improved_author_detail.png"></p>
 
 <div class="note">
-<p><strong>注意</strong>: 您還可以使用 <code>exclude</code> 屬性來聲明要從表單中排除的屬性列表（將顯示模型中的所有其他屬性）。</p>
+<p><strong>備註：</strong> 您還可以使用 <code>exclude</code> 屬性來聲明要從表單中排除的屬性列表（將顯示模型中的所有其他屬性）。</p>
 </div>
 
 <h4 id="Sectioning_the_detail_view">Sectioning the detail view</h4>
@@ -305,7 +305,7 @@ class BookAdmin(admin.ModelAdmin):
 <p>In this case all we've done is declare our tabular inline class, which just adds all fields from the <em>inlined</em> model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not,  etc. (see <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> for more information). </p>
 
 <div class="note">
-<p><strong>Note</strong>: There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the <strong>Add another Book instance</strong> link, or to be able to just list the <code>BookInstance</code>s as non-readable links from here. The first option can be done by setting the <code>extra</code> attribute to 0 in <code>BooksInstanceInline</code> model, try it by yourself.</p>
+<p><strong>備註：</strong> There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the <strong>Add another Book instance</strong> link, or to be able to just list the <code>BookInstance</code>s as non-readable links from here. The first option can be done by setting the <code>extra</code> attribute to 0 in <code>BooksInstanceInline</code> model, try it by yourself.</p>
 </div>
 
 <h2 id="自我挑戰">自我挑戰</h2>

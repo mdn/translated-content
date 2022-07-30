@@ -29,14 +29,14 @@ translation_of: Learn/Server-side/Django/skeleton_website
 <p>搭建 “框架” 的過程很直接:</p>
 
 <ol>
- <li>使用 <code style="font-style: normal; font-weight: normal; line-height: 1.5;">django-admin</code>工具創建工程的文件夾，基本的文件模板和工程管理腳本（<strong>manage.py</strong>）。</li>
+ <li>使用 <code>django-admin</code>工具創建工程的文件夾，基本的文件模板和工程管理腳本（<strong>manage.py</strong>）。</li>
  <li>用 <strong>manage.py</strong> 創建一個或多個<em>應用</em>。
   <div class="note">
-  <p><strong>注意：</strong>一個網站可能由多個部分組成，比如，主要頁面，博客，wiki，下載區域等。Django鼓勵將這些部分作為分開的應用開發。如果這樣的話，在需要可以在不同的工程中復用這些應用。</p>
+  <p><strong>備註：</strong> 一個網站可能由多個部分組成，比如，主要頁面，博客，wiki，下載區域等。Django鼓勵將這些部分作為分開的應用開發。如果這樣的話，在需要可以在不同的工程中復用這些應用。</p>
   </div>
  </li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">工程裡註冊新的應用。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">為每個應用分配url。</li>
+ <li>工程裡註冊新的應用。</li>
+ <li>為每個應用分配url。</li>
 </ol>
 
 <p>為  <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">locallibrary</a>  這個項目創建的網站文件夾和它的工程文件夾都命名為<em>locallibrary</em>。我們只創建一個名為<em>catalog</em>的應用。最高層的項目文件結構如下所示：</p>
@@ -56,28 +56,28 @@ translation_of: Learn/Server-side/Django/skeleton_website
 <pre class="brush: bash">mkdir locallibrary
 cd locallibrary</pre>
 
-<p>用<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>django-admin startproject</code>命令創建新項目，並進入該文件夾。</p>
+<p>用<code>django-admin startproject</code>命令創建新項目，並進入該文件夾。</p>
 
 <pre class="brush: bash">django-admin startproject locallibrary
 cd locallibrary</pre>
 
-<p><code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>django-admin</code>工具會創建如下所示的文件夾結構</p>
+<p><code>django-admin</code>工具會創建如下所示的文件夾結構</p>
 
-<pre class="brush: bash line-numbers  language-bash"><code class="language-bash"><em>locallibrary/</em>
+<pre class="brush: bash"><em>locallibrary/</em>
     manage.py
     <em>locallibrary/</em>
         __init__.py
         settings.py
         urls.py
-        wsgi.py</code></pre>
+        wsgi.py</pre>
 
 <p>locallibrary項目的子文件夾是整個網站的進入點：</p>
 
-<ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong>__init__.py</strong> 是一個空文件，指示 Python 將此目錄視為 Python 套件。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong>settings.py</strong>  包含所有的網站設置。這是可以註冊所有創建的應用的地方，也是靜態文件，數據庫配置的地方，等等。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong>urls.py</strong>定義了網站url到view的映射<strong>。</strong>雖然這裡可以包含所有的url，但是更常見的做法是把應用相關的url包含在相關應用中，你可以在接下來的教程裡看到。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong>wsgi.py </strong> 幫助Django應用和網絡服務器間的通訊。你可以把這個當作模板。</li>
+<ul>
+ <li><strong>__init__.py</strong> 是一個空文件，指示 Python 將此目錄視為 Python 套件。</li>
+ <li><strong>settings.py</strong>  包含所有的網站設置。這是可以註冊所有創建的應用的地方，也是靜態文件，數據庫配置的地方，等等。</li>
+ <li><strong>urls.py</strong>定義了網站url到view的映射<strong>。</strong>雖然這裡可以包含所有的url，但是更常見的做法是把應用相關的url包含在相關應用中，你可以在接下來的教程裡看到。</li>
+ <li><strong>wsgi.py </strong> 幫助Django應用和網絡服務器間的通訊。你可以把這個當作模板。</li>
 </ul>
 
 <p><strong>manage.py</strong>腳本可以創建應用，和資料庫通訊，啟動開發用網絡服務器。</p>
@@ -89,9 +89,9 @@ cd locallibrary</pre>
 <pre class="brush: bash">python3 manage.py startapp catalog</pre>
 
 <div class="note">
-<p><strong>注意：</strong> Linux/Mac OS X應用可以使用上面的命令。在windows平台下應該改為： <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>py -3 manage.py startapp catalog</code></p>
+<p><strong>備註：</strong> Linux/Mac OS X應用可以使用上面的命令。在windows平台下應該改為： <code>py -3 manage.py startapp catalog</code></p>
 
-<p>如果你是windows系統，在這個部分用<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>py -3</code>替代<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem;'>python3</code>。</p>
+<p>如果你是windows系統，在這個部分用<code>py -3</code>替代<code>python3</code>。</p>
 
 <p>如果您使用的是Python 3.7.0，則應使用<code>py manage.py startapp catalog</code></p>
 </div>
@@ -115,20 +115,20 @@ cd locallibrary</pre>
 
 <p>除上面所說的文件外，我們還有：</p>
 
-<ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;">一個<em>migration</em>文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><strong>__init__.py</strong> —一個空文件，Django/Python會將這個文件作為<a href="https://docs.python.org/3/tutorial/modules.html#packages">Python套件包</a>並允許你在項目的其他部分使用它。</li>
+<ul>
+ <li>一個<em>migration</em>文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。</li>
+ <li><strong>__init__.py</strong> —一個空文件，Django/Python會將這個文件作為<a href="https://docs.python.org/3/tutorial/modules.html#packages">Python套件包</a>並允許你在項目的其他部分使用它。</li>
 </ul>
 
 <div class="note">
-<p><strong>注意</strong> :你注意到上面的文件裡有些缺失嘛？儘管有了 views 和 models 的文件，可是 url 映射，網站模板，靜態文件在哪裡呢？我們會在接下來的部分展示如何創建它們（並不是每個網站都需要，不過這個例子需要）。</p>
+<p><strong>備註：</strong> 你注意到上面的文件裡有些缺失嘛？儘管有了 views 和 models 的文件，可是 url 映射，網站模板，靜態文件在哪裡呢？我們會在接下來的部分展示如何創建它們（並不是每個網站都需要，不過這個例子需要）。</p>
 </div>
 
 <h2 id="註冊catalog應用">註冊catalog應用</h2>
 
-<p>既然應用已經創建好了，我們還必須在項目裡註冊它，以便工具在運行時它會包括在裡面（比如在數據庫裡添加模型時）。在項目的settings裡，把應用添加進<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>INSTALLED_APPS</code> ，就完成了註冊。</p>
+<p>既然應用已經創建好了，我們還必須在項目裡註冊它，以便工具在運行時它會包括在裡面（比如在數據庫裡添加模型時）。在項目的settings裡，把應用添加進<code>INSTALLED_APPS</code> ，就完成了註冊。</p>
 
-<p>打開項目設置文件  <strong>locallibrary/locallibrary/settings.py</strong>找到   <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>INSTALLED_APPS</code> 列表裡的定義。如下所示，在列表的最後添加新的一行。</p>
+<p>打開項目設置文件  <strong>locallibrary/locallibrary/settings.py</strong>找到   <code>INSTALLED_APPS</code> 列表裡的定義。如下所示，在列表的最後添加新的一行。</p>
 
 <pre class="brush: bash">INSTALLED_APPS = [
     'django.contrib.admin',
@@ -140,10 +140,10 @@ cd locallibrary</pre>
 <strong>    'catalog.apps.CatalogConfig', </strong>
 ]</pre>
 
-<p>新的這行，詳細說明了應用配置文件在( <code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>CatalogConfig</code>) <strong>/locallibrary/catalog/apps.py</strong>  裡，當你創建應用時就完成了這個過程。</p>
+<p>新的這行，詳細說明了應用配置文件在( <code>CatalogConfig</code>) <strong>/locallibrary/catalog/apps.py</strong>  裡，當你創建應用時就完成了這個過程。</p>
 
 <div class="note">
-<p><strong>注意</strong> :注意到<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>INSTALLED_APPS已经有许多其他的应用了</code> (還有 <code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; font-size: 1rem; color: rgb(51, 51, 51); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>MIDDLEWARE</code>,在settings的下面)。這些應用為   <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a>  提供了支持和許多功能(包括會話，認證系統等)。</p>
+<p><strong>備註：</strong> 注意到<code>INSTALLED_APPS已经有许多其他的应用了</code> (還有 <code>MIDDLEWARE</code>,在settings的下面)。這些應用為   <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a>  提供了支持和許多功能(包括會話，認證系統等)。</p>
 </div>
 
 <h2 id="配置資料庫">配置資料庫</h2>
@@ -164,15 +164,15 @@ cd locallibrary</pre>
 
 <h2 id="其他項目設置">其他項目設置</h2>
 
-<p>settings.py裡還包括其他的一些設置，現在只需要改變<a href="https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE">時區</a> —改為和標準<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">tz時區數據表</a>  裡的字符串相同就可以了（數據表裡的TZ列有你想要的時區）。把<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>TIME_ZONE</code>的值改為你的時區，比如</p>
+<p>settings.py裡還包括其他的一些設置，現在只需要改變<a href="https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE">時區</a> —改為和標準<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">tz時區數據表</a>  裡的字符串相同就可以了（數據表裡的TZ列有你想要的時區）。把<code>TIME_ZONE</code>的值改為你的時區，比如</p>
 
 <pre class="brush: python">TIME_ZONE = 'Asia/Taipei'</pre>
 
 <p>有兩個設置你現在不會用到，不過你應該留意：</p>
 
-<ul style='font-style: normal; margin: 0px 0px 24px; padding: 0px 0px 0px 40px; border: 0px; max-width: 42rem; color: rgb(51, 51, 51); font-family: "Open Sans", arial, x-locale-body, sans-serif; font-size: medium; font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-style: initial;'>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>SECRET_KEY</code>. 這個密匙值，是Django網站安全策略的一部分。如果在開發環境中，沒有保護好這個密匙，把代碼投入生產環境時，最好用不同的密匙代替。（可能從環境變量或文件中讀取）。</li>
- <li style="font-style: normal !important; margin: 0px 0px 6px; padding: 0px; border: 0px;"><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>DEBUG</code>. 這個會在debug日誌裡輸出錯誤信息，而不是輸入H​​TTP的返回碼。在生產環境中，它應設置為false，因為輸出的錯誤信息，會幫助想要攻擊網站的人。</li>
+<ul>
+ <li><code>SECRET_KEY</code>. 這個密匙值，是Django網站安全策略的一部分。如果在開發環境中，沒有保護好這個密匙，把代碼投入生產環境時，最好用不同的密匙代替。（可能從環境變量或文件中讀取）。</li>
+ <li><code>DEBUG</code>. 這個會在debug日誌裡輸出錯誤信息，而不是輸入H​​TTP的返回碼。在生產環境中，它應設置為false，因為輸出的錯誤信息，會幫助想要攻擊網站的人。</li>
 </ul>
 
 <h2 id="鏈接URL映射器">鏈接URL映射器</h2>
@@ -204,13 +204,13 @@ urlpatterns = [
 ]
 </pre>
 
-<p>URL映射通過<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>urlpatterns</code> 變量管理，它是一個<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>path()</code>函數的Python列表。每個<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>path()</code>函數，要么將URL式樣(URL pattern)關聯到特定視圖( <em>specific view)</em>，當模式匹配時將會顯示，要么關聯到某個URL式樣列表的測試代碼。(第二種情況下，URL式樣是目標模型裡的“基本URL”). <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>urlpatterns</code> 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到<code>admin.site.urls</code>。這個函數，包含了Administration應用自己的URL映射定義。</p>
+<p>URL映射通過<code>urlpatterns</code> 變量管理，它是一個<code>path()</code>函數的Python列表。每個<code>path()</code>函數，要么將URL式樣(URL pattern)關聯到特定視圖( <em>specific view)</em>，當模式匹配時將會顯示，要么關聯到某個URL式樣列表的測試代碼。(第二種情況下，URL式樣是目標模型裡的“基本URL”). <code>urlpatterns</code> 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到<code>admin.site.urls</code>。這個函數，包含了Administration應用自己的URL映射定義。</p>
 
 <div class="note">
-<p><strong>注意</strong>: <code>path()</code>中的路由是一個字符串，用於定義要匹配的URL模式。該字符串可能包括一個命名變量（在尖括號中），例如<code>'catalog/&lt;id&gt;/'</code>。此模式將匹配<strong> /catalog/</strong><em>any_chars</em><strong>/</strong> 等URL，並將any_chars 作為參數名稱為<code>id</code> 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式</p>
+<p><strong>備註：</strong> <code>path()</code>中的路由是一個字符串，用於定義要匹配的URL模式。該字符串可能包括一個命名變量（在尖括號中），例如<code>'catalog/&lt;id&gt;/'</code>。此模式將匹配<strong> /catalog/</strong><em>any_chars</em><strong>/</strong> 等URL，並將any_chars 作為參數名稱為<code>id</code> 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式</p>
 </div>
 
-<p>在<code style='font-style: normal; margin: 0px; padding: 0px 2px; border: 0px; font-weight: 400; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word; color: rgb(51, 51, 51); font-size: medium; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; text-decoration-style: initial;'>urlpatterns</code> 列表的下面一行，插入下面的代码。這個新項目包括一個 <code>path()</code> ，它使用模式 <code>catalog/</code> 轉發請求到模塊 <code>catalog.urls</code>（具有相對 URL <strong>/catalog/urls.py </strong>的文件）。</p>
+<p>在<code>urlpatterns</code> 列表的下面一行，插入下面的代码。這個新項目包括一個 <code>path()</code> ，它使用模式 <code>catalog/</code> 轉發請求到模塊 <code>catalog.urls</code>（具有相對 URL <strong>/catalog/urls.py </strong>的文件）。</p>
 
 <pre class="brush: python"># Use include() to add paths from the catalog application
 from django.conf.urls import include
@@ -221,7 +221,7 @@ urlpatterns += [
 ]
 </pre>
 
-<p>現在我們把我們網站的根URL(例如<code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>127.0.0.1:8000</code>)，重新導向URL <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>127.0.0.1:8000/catalog/</code>;這是項目中唯一的應用，所以我們最好這樣做。為了完成這個目標，我們使用一個特別的視圖函數( <code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>RedirectView</code>)，當<code>path()</code>函數中的 url 式樣被識別以後（在這個例子中是根 url），就會把第一個參數，也就是新的相對 URL ，重定向到（<code>/catalog/</code>）。</p>
+<p>現在我們把我們網站的根URL(例如<code>127.0.0.1:8000</code>)，重新導向URL <code>127.0.0.1:8000/catalog/</code>;這是項目中唯一的應用，所以我們最好這樣做。為了完成這個目標，我們使用一個特別的視圖函數( <code>RedirectView</code>)，當<code>path()</code>函數中的 url 式樣被識別以後（在這個例子中是根 url），就會把第一個參數，也就是新的相對 URL ，重定向到（<code>/catalog/</code>）。</p>
 
 <p>把下面的代碼加到文件最後：</p>
 
@@ -253,7 +253,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 有許多方法可以擴充<code>urlpatterns</code>列表（上面我們只是使用<code>+= </code>運算符，附加一個新的列表項，來清楚地分隔舊代碼和新代碼）。我們可以改為在原始列表定義中，包含這個新的模式映射：</p>
+<p><strong>備註：</strong> 有許多方法可以擴充<code>urlpatterns</code>列表（上面我們只是使用<code>+= </code>運算符，附加一個新的列表項，來清楚地分隔舊代碼和新代碼）。我們可以改為在原始列表定義中，包含這個新的模式映射：</p>
 
 <pre class="brush: python">urlpatterns = [
     path('admin/', admin.site.urls),
@@ -293,15 +293,15 @@ python3 manage.py migrate
 </pre>
 
 <div class="warning">
-<p><strong>重要</strong>: 每次模型改變，都需要運行以上命令，來影響需要存放的數據結構（包括添加和刪除整個模型和單個字段）。</p>
+<p><strong>警告：</strong> 每次模型改變，都需要運行以上命令，來影響需要存放的數據結構（包括添加和刪除整個模型和單個字段）。</p>
 </div>
 
-<p>該<strong><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>makemigrations</code></strong>命令，創建（但不實施）項目中安裝的所有應用程序的遷移（你可以指定應用程序名稱，也可以為單個項目運行遷移）。這讓你有機會在應用這些遷移之前，檢查這些遷移代碼—當你是Django專家時，你可以選擇稍微調整它們。</p>
+<p>該<strong><code>makemigrations</code></strong>命令，創建（但不實施）項目中安裝的所有應用程序的遷移（你可以指定應用程序名稱，也可以為單個項目運行遷移）。這讓你有機會在應用這些遷移之前，檢查這些遷移代碼—當你是Django專家時，你可以選擇稍微調整它們。</p>
 
-<p>這個 <strong><code style='font-style: inherit; margin: 0px; padding: 0px 2px; border: 0px; font-weight: inherit; background-color: rgba(220, 220, 220, 0.5); border-radius: 2px; font-family: consolas, "Liberation Mono", courier, monospace; word-wrap: break-word;'>migrate</code></strong>命令，真正對你的資料庫實施遷移（Django跟踪哪些已添加到當前資料庫）。</p>
+<p>這個 <strong><code>migrate</code></strong>命令，真正對你的資料庫實施遷移（Django跟踪哪些已添加到當前資料庫）。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 參見 <a href="https://docs.djangoproject.com/en/2.0/topics/migrations/">Migrations</a> (Django 文件) ，了解較少使用的遷移命令的其他信息。</p>
+<p><strong>備註：</strong> 參見 <a href="https://docs.djangoproject.com/en/2.0/topics/migrations/">Migrations</a> (Django 文件) ，了解較少使用的遷移命令的其他信息。</p>
 </div>
 
 <h3 id="運行網站">運行網站</h3>
@@ -309,7 +309,7 @@ python3 manage.py migrate
 <p>在開發期間，你首先要使用開發網頁服務器，然後用你本機的瀏覽器觀看，來測試你的網站。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（http://127.0.0.1:8000/),但你也可以選擇其他端口。有關更多信息，查閱（<a href="https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver">django-admin and manage.py: runserver</a>）(Django docs).</p>
+<p><strong>備註：</strong> 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（http://127.0.0.1:8000/),但你也可以選擇其他端口。有關更多信息，查閱（<a href="https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver">django-admin and manage.py: runserver</a>）(Django docs).</p>
 </div>
 
 <p>通過如下<code>runserver</code>命令，運行開發網頁服務器。（同樣的要在<strong>manage.py</strong>的目錄）</p>
@@ -332,13 +332,13 @@ python3 manage.py migrate
 <p>別擔心，這個錯誤頁面是預期的結果。因為我們沒有在 <code>catalogs.urls</code>模塊中，定義任何頁面或網址（即是當我們使用一個指向根目錄的URL時，會被重新定向的地方）。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 上面的頁面，演示了一個很棒的Django功能 - 自動除錯日誌記錄。只要找不到頁面，或者代碼引發任何錯誤，就會顯示錯誤畫面，其中包含有用的信息。在這種情況下，我們可以看到我們提供的URL，與我們的任何URL模式都不匹配（如列出的那樣）。在生產期間（當我們將網站放在網上時），日誌記錄將被關閉，在這種情況下，將提供信息量較少、但用戶友好的頁面。</p>
+<p><strong>備註：</strong> 上面的頁面，演示了一個很棒的Django功能 - 自動除錯日誌記錄。只要找不到頁面，或者代碼引發任何錯誤，就會顯示錯誤畫面，其中包含有用的信息。在這種情況下，我們可以看到我們提供的URL，與我們的任何URL模式都不匹配（如列出的那樣）。在生產期間（當我們將網站放在網上時），日誌記錄將被關閉，在這種情況下，將提供信息量較少、但用戶友好的頁面。</p>
 </div>
 
 <p>這個時候，我們知道Django正在工作！</p>
 
 <div class="note">
-<p><strong>注意</strong>: 在進行重大更改時，你應該重新運行遷移，並重新測試站點。這不需要很長時間！</p>
+<p><strong>備註：</strong> 在進行重大更改時，你應該重新運行遷移，並重新測試站點。這不需要很長時間！</p>
 </div>
 
 <h2 id="挑戰自我">挑戰自我</h2>
