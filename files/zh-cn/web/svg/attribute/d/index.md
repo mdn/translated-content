@@ -90,7 +90,7 @@ html,body,svg { height:100% }
 
 > **警告：** 在 SVG2 中，{{SVGElement('missing-glyph')}} 已被废弃，不应再使用。
 
-对 {{SVGElement('missing-glyph')}} 来说，`d` 是一个字符串，包含一系列定义字形轮廓形状的路径命令。
+对 {{SVGElement('missing-glyph')}} 来说，`d` 是一个字符串，包含一系列定义字形轮廓形状的 path 命令。
 
 <table class="properties">
   <tbody>
@@ -113,11 +113,9 @@ html,body,svg { height:100% }
 
 ## 将 `d` 当作 CSS 属性使用
 
-`d` is a [presentation attribute](/zh-CN/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
-The property takes either [path()](/zh-CN/docs/Web/CSS/path) or `none`.
+`d` 是 [presentation attribute](/zh-CN/docs/Web/SVG/Attribute/Presentation)，因此也可以使用CSS进行修改。The property takes either [path()](/zh-CN/docs/Web/CSS/path) or `none`.
 
-The example below shows how you might apply a new path on hover over an element.
-The new path is the same as the old one, but adds a line across the heart.
+下面的示例显示了如何在元素上悬停时应用新路径。这个示例当中，新路径与旧路径相同，但在中心上添加了一条线。
 
 ```css
 html,body,svg { height:100% }
@@ -144,9 +142,9 @@ html,body,svg { height:100% }
 
 ## path 命令
 
-Path commands are instructions that define a path to be drawn. Each command is composed of a command letter and numbers that represent the command parameters.
+path 命令是定义要绘制的路径的指令。每个命令都由一个命令字母和表示命令参数的数字组成。
 
-SVG defines 6 types of path commands, for a total of 20 commands:
+SVG 定义了 6 种路径命令，总共 20 条命令：
 
 - MoveTo: `M`, `m`
 - LineTo: `L`, `l`, `H`, `h`, `V`, `v`
@@ -155,24 +153,24 @@ SVG defines 6 types of path commands, for a total of 20 commands:
 - Elliptical Arc Curve: `A`, `a`
 - ClosePath: `Z`, `z`
 
-> **Note:** Commands are *case-sensitive*. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
+> **备注：** 命令区分大小写。大写命令指定绝对坐标，小写命令指定相对于当前位置的坐标。
 
-It is always possible to specify a negative value as an argument to a command:
+可以将负值指定为命令的参数：
 
-- negative angles will be anti-clockwise;
+- 负角为逆时针方向；
 - *absolute* negative *x* and *y* values are interpreted as negative coordinates;
 - *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
 
 ### MoveTo path 命令
 
-*MoveTo* instructions can be thought of as picking up the drawing instrument, and setting it down somewhere else—in other words, moving the *current point* (*P<sub>o</sub>*; {*x<sub>o</sub>*, *y<sub>o</sub>*}). There is no line drawn between *P<sub>o</sub>* and the new *current point* (*P<sub>n</sub>*; {*x<sub>n</sub>*, *y<sub>n</sub>*}).
+*MoveTo* 指令可以被认为是拿起绘图仪器，然后把它放在别的地方——换句话说，从 (*P<sub>o</sub>*; {*x<sub>o</sub>*, *y<sub>o</sub>*}) 移动到 (*P<sub>n</sub>*; {*x<sub>n</sub>*, *y<sub>n</sub>*})，中间没有画线。
 
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="col">Command</th>
-      <th scope="col">Parameters</th>
-      <th scope="col">Notes</th>
+      <th scope="col">命令</th>
+      <th scope="col">参数</th>
+      <th scope="col">注意事项</th>
     </tr>
     <tr>
       <th scope="row">M</th>
@@ -183,16 +181,15 @@ It is always possible to specify a negative value as an argument to a command:
       </td>
       <td>
         <p>
-          Move the <em>current point</em> to the coordinate
+          将当前点移动到坐标
           <code><var>x</var></code
           >,<code><var>y</var></code
-          >. Any subsequent coordinate pair(s) are interpreted as parameter(s)
-          for implicit absolute LineTo (<code>L</code>) command(s) (<em
-            >see below</em
-          >).
+          >。任何后续坐标对都被解释为隐式 absolute LineTo（<code>L</code>）命令的参数 （<em
+            >见下文</em
+          >）。
         </p>
         <p>
-          <strong>Formula:</strong> <var>P<sub>n</sub></var> = {<code
+          <strong>公式：</strong> <var>P<sub>n</sub></var> = {<code
             ><var>x</var></code
           >, <code><var>y</var></code
           >}
@@ -208,14 +205,11 @@ It is always possible to specify a negative value as an argument to a command:
       </td>
       <td>
         <p>
-          Move the <em>current point</em> by shifting the last known position of
-          the path by <code><var>dx</var></code> along the x-axis and by
-          <code><var>dy</var></code> along the y-axis. Any subsequent coordinate
-          pair(s) are interpreted as parameter(s) for implicit relative LineTo
-          (<code>l</code>) command(s) (<em>see below</em>).
+          通过沿 x 轴和 y 轴移动路径的最后一个已知位置来 移动当前点。任何后续坐标对都被解释为隐式 relative LineTo
+          （<code>l</code>）命令的参数（<em>see below</em>）。
         </p>
         <p>
-          <strong>Formula:</strong> <var>P<sub>n</sub></var> = {<var
+          <strong>公式：</strong> <var>P<sub>n</sub></var> = {<var
             >x<sub>o</sub></var
           >
           + <code><var>dx</var></code
@@ -226,6 +220,7 @@ It is always possible to specify a negative value as an argument to a command:
     </tr>
   </tbody>
 </table>
+
 
 #### 示例
 
@@ -252,9 +247,9 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('MoveTo_path_commands', '100%', 200)}}
 
-### LineTo path commands
+### LineTo path 命令
 
-*LineTo* instructions draw a straight line from the *current point* (*P<sub>o</sub>*; {*x<sub>o</sub>*, *y<sub>o</sub>*}) to the *end point* (*P<sub>n</sub>*; {*x<sub>n</sub>*, *y<sub>n</sub>*}), based on the parameters specified. The *end point* (*P<sub>n</sub>*) then becomes the *current point* for the next command (*P<sub>o</sub>′*).
+*LineTo* 指令根据指定的参数从当前点  (*P<sub>o</sub>*; {*x<sub>o</sub>*, *y<sub>o</sub>*}) 绘制一条直线到终点 (*P<sub>n</sub>*; {*x<sub>n</sub>*, *y<sub>n</sub>*})。(*P<sub>n</sub>*) then becomes the *current point* for the next command (*P<sub>o</sub>′*).
 
 <table class="no-markdown">
   <tbody>
