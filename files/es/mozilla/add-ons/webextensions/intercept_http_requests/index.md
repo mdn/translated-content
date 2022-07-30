@@ -1,11 +1,6 @@
 ---
 title: Interceptar peticiones HTTP
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-tags:
-  - Complementos
-  - Cómos
-  - WebExtensions
-  - extensiones
 translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
 {{AddonSidebar}}
