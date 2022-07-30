@@ -465,66 +465,13 @@ console.log(myclass.prototype.y); // 1
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
+<p>{{Compat}}</p>
 
-
-<p>{{Compat("javascript.builtins.Object.defineProperty")}}</p>
-
-<h2 id="兼容性问题">兼容性问题</h2>
-
-<h3 id="重定义数组_Array_对象的_length_属性">重定义数组 <code>Array</code> 对象的 <code>length</code> 属性</h3>
-
-<p>重定义数组的 {{jsxref("Array.length", "length")}} 属性是可能的，但是会受到一般的重定义限制。（{{jsxref("Array.length", "length")}} 属性初始为 non-configurable，non-enumerable 以及 writable。对于一个内容不变的数组，改变其 {{jsxref("Array.length", "length")}} 属性的值或者使它变为 non-writable 是可能的。但是改变其可枚举性和可配置性或者当它是 non-writable 时尝试改变它的值或是可写性，这两者都是不允许的。）然而，并不是所有的浏览器都允许 <code>Array.length</code> 的重定义。</p>
-
-<p>在 Firefox 4 至 22 版本中，尝试重定义数组的 length 属性都会抛出 {{jsxref("TypeError")}} 异常。</p>
-
-<p>一些版本的 Chrome 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的 length 值。有些情况下改变可写性并不起作用（也不抛出异常）。同时，比如{{jsxref("Array.prototype.push")}}的一些数组操作方法也不会考虑不可读的 length 属性。</p>
-
-<p>一些版本的 Safari 中，<code>Object.defineProperty()</code> 在某些情况下会忽略不同于数组当前{{jsxref("Array.length", "length")}}属性的 length 值。尝试改变可写性的操作会正常执行而不抛出错误，但事实上并未改变属性的可写性。</p>
-
-<p>只在 Internet Explorer 9 及以后版本和 Firefox 23 及以后版本中，才完整地正确地支持数组 {{jsxref("Array.length", "length")}} 属性的重新定义。目前不要依赖于重定义数组 {{jsxref("Array.length", "length")}} 属性能够起作用，或在特定情形下起作用。与此同时，即使你能够依赖于它，你也<a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">没有合适的理由这样做</a>。</p>
-
-<h3 id="Internet_Explorer_8_特别备注">Internet Explorer 8 特别备注</h3>
-
-<p>Internet Explorer 8 实现了 <code>Object.defineProperty()</code> 方法，但<a href="http://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx">只能在 DOM 对象上使用</a>。 需要注意的一些事情：</p>
-
-<ul>
- <li>尝试在原生对象上使用 <code>Object.defineProperty()</code> 会报错。</li>
- <li>属性特性必须设置一些特定的值。对于数据属性描述符，<code>configurable</code>, <code>enumerable</code> 和 <code>writable</code> 属性必须全部设置为 <code>true</code>；对于访问器属性描述符，<code>configurable</code> 必须设置为 <code>true</code>，<code>enumerable</code> 必须设置为 <code>false</code>。(?) 任何试图提供其他值 (?) 将导致一个错误抛出。</li>
- <li>重新配置一个属性首先需要删除该属性。如果属性没有删除，就如同重新配置前的尝试。</li>
-</ul>
-
-<h3 id="Chrome_37（及以下）特别备注">Chrome 37（及以下）特别备注</h3>
-
-<p>Chrome 37（及以下）有一个 <a href="https://bugs.chromium.org/p/v8/issues/detail?id=3448">bug</a>，使用 <code>writable: false</code> 定义原型 prototype 属性，或者函数时，不会像预期的那样工作。</p>
-
-<h2 id="相关链接">相关链接</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/Enumerability_and_ownership_of_properties">属性的可枚举性和所有权</a></li>

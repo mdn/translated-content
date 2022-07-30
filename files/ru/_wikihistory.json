@@ -7806,20 +7806,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onerror": {
-    "modified": "2019-03-23T22:57:01.164Z",
-    "contributors": [
-      "wbamberg",
-      "roman-dudin",
-      "xercool"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T22:57:03.709Z",
-    "contributors": [
-      "xercool"
-    ]
-  },
   "Web/API/Gyroscope": {
     "modified": "2020-10-15T22:18:16.560Z",
     "contributors": [
@@ -10575,6 +10561,14 @@
     "contributors": [
       "CODER591",
       "WaveMeUp"
+    ]
+  },
+  "Web/API/Window/error_event": {
+    "modified": "2019-03-23T22:57:01.164Z",
+    "contributors": [
+      "wbamberg",
+      "roman-dudin",
+      "xercool"
     ]
   },
   "Web/API/Window/focus_event": {
@@ -23564,6 +23558,12 @@
     "modified": "2019-03-23T22:58:29.697Z",
     "contributors": [
       "alexismaster"
+    ]
+  },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T22:57:03.709Z",
+    "contributors": [
+      "xercool"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

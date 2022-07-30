@@ -469,7 +469,7 @@
 /pl/docs/DOM/window.navigator.product	/pl/docs/orphaned/Web/API/NavigatorID/product
 /pl/docs/DOM/window.navigator.productSub	/pl/docs/Web/API/Navigator/productSub
 /pl/docs/DOM/window.navigator.registerProtocolHandler	/pl/docs/Web/API/Navigator/registerProtocolHandler
-/pl/docs/DOM/window.onload	/pl/docs/Web/API/GlobalEventHandlers/onload
+/pl/docs/DOM/window.onload	/pl/docs/Web/API/Window/load_event
 /pl/docs/DOM/window.open	/pl/docs/Web/API/Window/open
 /pl/docs/DOM/window.opener	/pl/docs/Web/API/Window/opener
 /pl/docs/DOM/window.prompt	/pl/docs/Web/API/Window/prompt
@@ -701,7 +701,7 @@
 /pl/docs/DOM:window.navigator.product	/pl/docs/orphaned/Web/API/NavigatorID/product
 /pl/docs/DOM:window.navigator.productSub	/pl/docs/Web/API/Navigator/productSub
 /pl/docs/DOM:window.navigator.registerProtocolHandler	/pl/docs/Web/API/Navigator/registerProtocolHandler
-/pl/docs/DOM:window.onload	/pl/docs/Web/API/GlobalEventHandlers/onload
+/pl/docs/DOM:window.onload	/pl/docs/Web/API/Window/load_event
 /pl/docs/DOM:window.open	/pl/docs/Web/API/Window/open
 /pl/docs/DOM:window.opener	/pl/docs/Web/API/Window/opener
 /pl/docs/DOM:window.prompt	/pl/docs/Web/API/Window/prompt
@@ -1479,6 +1479,7 @@
 /pl/docs/Web/API/GlobalEventHandlers/onkeydown	/pl/docs/Web/API/Element/keydown_event
 /pl/docs/Web/API/GlobalEventHandlers/onkeypress	/pl/docs/Web/API/Element/keypress_event
 /pl/docs/Web/API/GlobalEventHandlers/onkeyup	/pl/docs/Web/API/Element/keyup_event
+/pl/docs/Web/API/GlobalEventHandlers/onload	/pl/docs/Web/API/Window/load_event
 /pl/docs/Web/API/GlobalEventHandlers/onmousedown	/pl/docs/Web/API/Element/mousedown_event
 /pl/docs/Web/API/GlobalEventHandlers/onmousemove	/pl/docs/Web/API/Element/mousemove_event
 /pl/docs/Web/API/HTMLOrForeignElement/blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
@@ -1524,7 +1525,7 @@
 /pl/docs/Web/API/Window/clearInterval	/pl/docs/Web/API/clearInterval
 /pl/docs/Web/API/Window/clearTimeout	/pl/docs/Web/API/clearTimeout
 /pl/docs/Web/API/Window/crypto	/pl/docs/Web/API/crypto_property
-/pl/docs/Web/API/Window/onload	/pl/docs/Web/API/GlobalEventHandlers/onload
+/pl/docs/Web/API/Window/onload	/pl/docs/Web/API/Window/load_event
 /pl/docs/Web/API/Window/setInterval	/pl/docs/Web/API/setInterval
 /pl/docs/Web/API/Window/setTimeout	/pl/docs/Web/API/setTimeout
 /pl/docs/Web/API/WindowBase64	/pl/docs/Web/API/WindowOrWorkerGlobalScope

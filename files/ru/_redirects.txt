@@ -405,10 +405,12 @@
 /ru/docs/Web/API/GlobalEventHandlers/onclose	/ru/docs/Web/API/HTMLDialogElement/close_event
 /ru/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ru/docs/Web/API/Element/contextmenu_event
 /ru/docs/Web/API/GlobalEventHandlers/ondragstart	/ru/docs/Web/API/HTMLElement/dragstart_event
+/ru/docs/Web/API/GlobalEventHandlers/onerror	/ru/docs/Web/API/Window/error_event
 /ru/docs/Web/API/GlobalEventHandlers/onfocus	/ru/docs/Web/API/Window/focus_event
 /ru/docs/Web/API/GlobalEventHandlers/oninput	/ru/docs/Web/API/HTMLElement/input_event
 /ru/docs/Web/API/GlobalEventHandlers/onkeydown	/ru/docs/conflicting/Web/API/Element/keydown_event
 /ru/docs/Web/API/GlobalEventHandlers/onkeypress	/ru/docs/conflicting/Web/API/Element/keypress_event
+/ru/docs/Web/API/GlobalEventHandlers/onload	/ru/docs/conflicting/Web/API/Window/load_event
 /ru/docs/Web/API/GlobalEventHandlers/onloadend	/ru/docs/Web/API/XMLHttpRequest/loadend_event
 /ru/docs/Web/API/GlobalEventHandlers/onmousedown	/ru/docs/conflicting/Web/API/Element/mousedown_event
 /ru/docs/Web/API/GlobalEventHandlers/onmouseup	/ru/docs/conflicting/Web/API/Element/mouseup_event

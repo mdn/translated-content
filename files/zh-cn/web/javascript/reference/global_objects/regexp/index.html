@@ -213,50 +213,11 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition. Implemented in JavaScript 1.1</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.10', 'RegExp')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp-regular-expression-objects', 'RegExp')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.RegExp")}}</p>
-
-<h3 id="Firefox_特定版本提示">Firefox 特定版本提示</h3>
-
-<p>Starting with Gecko 34 {{geckoRelease(34)}}, in the case of a capturing group with quantifiers preventing its exercise, the matched text for a capturing group is now <code>undefined</code> instead of an empty string:</p>
-
-<pre><code>// Firefox 33 or older
-'x'.replace(/x(.)?/g, function(m, group) {
-  console.log("'group:" + group + "'");
-}); // 'group:'
-
-// Firefox 34 or newer
-'x'.replace(/x(.)?/g, function(m, group) {
-  console.log("'group:" + group + "'");
-}); // 'group:undefined'</code></pre>
-
-<p>注意，由于 web 兼容性 <code>RegExp.$N</code> 仍会返回一个空的字符串代替 <code>undefined</code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1053944">bug 1053944</a>).</p>
+<p>{{Compat}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 

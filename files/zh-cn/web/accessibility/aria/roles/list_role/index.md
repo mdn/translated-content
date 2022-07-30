@@ -80,15 +80,13 @@ ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色�
 
 ## 规范
 
-| Specification                                    | Status                   |
-| ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#list","list")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## 屏幕阅读器支持
 
 TBD
 
-## 相关链接
+## 参见
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)

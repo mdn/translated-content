@@ -27,12 +27,12 @@ original_slug: Web/API/VRDevice
 
 ## プロパティ
 
-- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}}{{deprecated_inline}}
+- {{domxref("VRDisplay.capabilities")}} {{readonlyInline}} {{deprecated_inline}}
   - : `VRDisplay` の備える機能を示す {{domxref("VRDisplayCapabilities")}} オブジェクトを返します。
 - {{domxref("VRDisplay.depthFar")}} {{deprecated_inline}}
-  - : [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の far 平面を定義している z-depth の取得と設定を行います。
+  - : [視錐台](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の far 平面を定義している z-depth の取得と設定を行います。
 - {{domxref("VRDisplay.depthNear")}} {{deprecated_inline}}
-  - : [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の near 平面を定義している z-depth の取得と設定を行います。
+  - : [視錐台](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の near 平面を定義している z-depth の取得と設定を行います。
 - {{domxref("VRDisplay.displayId")}} {{readonlyInline}} {{deprecated_inline}}
   - : この VRDisplay 固有のIDを返します。この ID は [Gamepad API](/ja/docs/Web/API/Gamepad_API) (参照 {{domxref("Gamepad.displayId")}}) の関連付けのために使用されます。
 - {{domxref("VRDisplay.displayName")}} {{readonlyInline}} {{deprecated_inline}}
@@ -51,7 +51,7 @@ original_slug: Web/API/VRDevice
 - {{domxref("VRDisplay.getFrameData()")}} {{deprecated_inline}}
   - : {{domxref("VRFrameData")}} オブジェクトを受け取り、現在のフレームをレンダリングするために必要な情報を入力します。
 - {{domxref("VRDisplay.getImmediatePose()")}} {{deprecated_inline}}
-  - :　`VRDisplay` の現在のポーズを定義した {{domxref("VRPose")}} オブジェクトを、予測を適用せずに返します。これはもはや必要ないため、仕様から削除されました。
+  - : `VRDisplay` の現在のポーズを定義した {{domxref("VRPose")}} オブジェクトを、予測を適用せずに返します。これはもはや必要ないため、仕様から削除されました。
 - {{domxref("VRDisplay.getLayers()")}} {{deprecated_inline}}
   - : `VRDisplay` によって現在表示されているレイヤーを返します。
 - {{domxref("VRDisplay.getPose()")}} {{deprecated_inline}}

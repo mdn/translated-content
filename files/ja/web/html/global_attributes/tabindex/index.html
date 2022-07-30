@@ -37,7 +37,7 @@ translation_of: Web/HTML/Global_attributes/tabindex
 
 <h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
 
-<p>キーボード入力で対話的にフォーカスを設定できるようにするために、 <a href="/ja/docs/Web/Guide/HTML/Content_categories#Interactive_content">対話型コンテンツ</a>ではないものに <code>tabindex</code> 属性を組み合わせて使用することは避けてください。例えば、 {{HTMLElement("button")}} 要素を使用する代わりに {{HTMLElement("div")}} 要素を使用してボタンを記述する場合などです。</p>
+<p>キーボード入力で対話的にフォーカスを設定できるようにするために、 <a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>ではないものに <code>tabindex</code> 属性を組み合わせて使用することは避けてください。例えば、 {{HTMLElement("button")}} 要素を使用する代わりに {{HTMLElement("div")}} 要素を使用してボタンを記述する場合などです。</p>
 
 <p>対話的要素でないものを使用して対話的コンポーネントを記述すると、<a href="/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">アクセシビリティツリー</a>に掲載されません。これは、支援技術によって移動や操作を行うことを阻害します。このようなコンテンツは、代わりに ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, などの) 対話型要素を使用して意味的に記述するべきです。これらの要素には、 <a href="/ja/docs/Web/Accessibility/ARIA">ARIA</a> によって管理しなければならないアクセシビリティにステータスを伝える、組み込みのロールと状態があります。</p>
 

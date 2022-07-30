@@ -127,14 +127,14 @@ translation_of: Web/HTML/Element/a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >,
         <a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         >、知覚可能コンテンツ。
       </td>
@@ -142,7 +142,7 @@ translation_of: Web/HTML/Element/a
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a>、ただし子孫に<a href="/ja/docs/Web/Guide/HTML/Content_categories#interactive_content">対話型コンテンツ</a> または <a href="/ja/docs/Web/HTML/Element/a">a</a> 要素をがないもの、および <a href="/ja/docs/Web/HTML/Global_attributes/tabindex">tabindex</a> 属性が指定された子孫がないもの。
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a>、ただし子孫に<a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a> または <a href="/ja/docs/Web/HTML/Element/a">a</a> 要素をがないもの、および <a href="/ja/docs/Web/HTML/Global_attributes/tabindex">tabindex</a> 属性が指定された子孫がないもの。
       </td>
     </tr>
     <tr>
@@ -152,7 +152,7 @@ translation_of: Web/HTML/Element/a
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素、ただし他の <code>&#x3C;a></code> 要素でないもの。
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素、ただし他の <code>&#x3C;a></code> 要素でないもの。
       </td>
     </tr>
     <tr>

@@ -173,45 +173,11 @@ arr = [...gen];                        // ["a", "b", "c", "d", "e"]</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#', 'function*')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#', 'function*')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.statements.generator_function")}} </p>
-</div>
-
-<h2 id="Firefox浏览器具体事项">Firefox 浏览器具体事项</h2>
-
-<h4 id="Firefox_26之前的生成器和迭代器">Firefox 26 之前的生成器和迭代器</h4>
-
-<p>旧版本的 Firefox 实施了旧版本的生成器提案。旧版中用普通的<code>function 关键字定义</code>（没有星号）.</p>
-
-<h4 id="IteratorResult不再抛出错误"><code>IteratorResult</code>不再抛出错误</h4>
-
-<p>从 Gecko 29 {{geckoRelease(29)}}开始，完成的生成器函数不再抛出{{jsxref("TypeError")}} "generator has already finished". 而是返回一个<code>IteratorResult</code>对象：{ value: undefined, done: true } ({{bug(958951)}})。</p>
+<p>{{Compat}} </p>
 
 <h2 id="相关链接">相关链接</h2>
 
