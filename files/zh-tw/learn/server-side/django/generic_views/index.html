@@ -61,7 +61,7 @@ class BookListView(generic.ListView):
 <p>就是這樣！通用view將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html的模板（我們將在下面創建）。在模板中，您可以使用所謂的object_list或book_list的模板變量（即通常為“ the_model_name_list”），以訪問書本列表。</p>
 
 <div class="note">
-<p><strong>Note</strong>: This awkward path for the template location isn't a misprint — the generic views look for templates in <code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code> (<code>catalog/book_list.html</code> in this case) inside the application's <code>/<em>application_name</em>/templates/</code> directory (<code>/catalog/templates/)</code>.</p>
+<p><strong>備註：</strong> This awkward path for the template location isn't a misprint — the generic views look for templates in <code>/<em>application_name</em>/<em>the_model_name</em>_list.html</code> (<code>catalog/book_list.html</code> in this case) inside the application's <code>/<em>application_name</em>/templates/</code> directory (<code>/catalog/templates/)</code>.</p>
 </div>
 
 <p>您可以添加屬性，以更改上面的某種行為。例如，如果需要使用同一模型的多個視圖，則可以指定另一個模板文件，或者如果book_list對於特定模板用例不直觀，則可能需要使用不同的模板變量名稱。可能最有用的變更，是更改/過濾返回的結果子集-因此，您可能會列出其他用戶閱讀的前5本書，而不是列出所有書本。</p>
@@ -106,7 +106,7 @@ class BookListView(generic.ListView):
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Check out <a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (Django docs) for many more examples of what you can do.</p>
+<p><strong>備註：</strong> Check out <a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/">Built-in class-based generic views</a> (Django docs) for many more examples of what you can do.</p>
 </div>
 
 <h3 id="Creating_the_List_View_template">Creating the List View template</h3>
@@ -170,7 +170,7 @@ class BookListView(generic.ListView):
 <p>We can also call <em>functions</em> in the model from within our template — in this case we call <code>Book.get_absolute_url()</code> to get an URL you could use to display the associated detail record. This works provided the function does not have any arguments (there is no way to pass arguments!)</p>
 
 <div class="note">
-<p><strong>Note</strong>: We have to be a little careful of "side effects" when calling functions in templates. Here we just get a URL to display, but a function can do pretty much anything — we wouldn't want to delete our database (for example) just by rendering our template!</p>
+<p><strong>備註：</strong> We have to be a little careful of "side effects" when calling functions in templates. Here we just get a URL to display, but a function can do pretty much anything — we wouldn't want to delete our database (for example) just by rendering our template!</p>
 </div>
 
 <h4 id="Update_the_base_template">Update the base template</h4>
@@ -204,17 +204,17 @@ class BookListView(generic.ListView):
 <p>In this case we use <code>'&lt;int:pk&gt;'</code><strong> </strong> to capture the book id, which must be an integer, and pass it to the view as a parameter named <code>pk</code> (short for primary key).</p>
 
 <div class="note">
-<p><strong>Note</strong>: As discussed previously, our matched URL is actually <code>catalog/book/&lt;digits&gt;</code> (because we are in the <strong>catalog</strong> application, <code>/catalog/</code> is assumed).</p>
+<p><strong>備註：</strong> As discussed previously, our matched URL is actually <code>catalog/book/&lt;digits&gt;</code> (because we are in the <strong>catalog</strong> application, <code>/catalog/</code> is assumed).</p>
 </div>
 
 <div class="warning">
-<p><strong>Important</strong>: The generic class-based detail view <em>expects</em> to be passed a parameter named <strong>pk</strong>. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.</p>
+<p><strong>警告：</strong> The generic class-based detail view <em>expects</em> to be passed a parameter named <strong>pk</strong>. If you're writing your own function view you can use whatever parameter name you like, or indeed pass the information in an unnamed argument.</p>
 </div>
 
 <h4 id="Advanced_path_matchingregular_expression_primer">Advanced path matching/regular expression primer</h4>
 
 <div class="note">
-<p><strong>Note</strong>: You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.</p>
+<p><strong>備註：</strong> You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.</p>
 </div>
 
 <p>The pattern matching provided by <code>path()</code> is simple and useful for the (very common) cases where you just want to capture <em>any</em> string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the <a href="https://docs.djangoproject.com/en/2.0/ref/urls/#django.urls.re_path">re_path()</a> method.</p>
@@ -317,7 +317,7 @@ class BookListView(generic.ListView):
 <p>You can capture multiple patterns in the one match, and hence encode lots of different information in a URL.</p>
 
 <div class="note">
-<p><strong>Note</strong>: As a challenge, consider how you might encode an url to list all books released in a particular year, month, day, and the RE that could be used to match it.</p>
+<p><strong>備註：</strong> As a challenge, consider how you might encode an url to list all books released in a particular year, month, day, and the RE that could be used to match it.</p>
 </div>
 
 <h4 id="Passing_additional_options_in_your_URL_maps">Passing additional options in your URL maps</h4>
@@ -329,7 +329,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> Both extra options and named captured patterns are passed to the view as <em>named</em> arguments. If you use the <strong>same name</strong> for both a captured pattern and an extra option then only the captured pattern value will be sent to the view (the value specified in the additional option will be dropped). </p>
+<p><strong>備註：</strong> Both extra options and named captured patterns are passed to the view as <em>named</em> arguments. If you use the <strong>same name</strong> for both a captured pattern and an extra option then only the captured pattern value will be sent to the view (the value specified in the additional option will be dropped). </p>
 </div>
 
 <h3 id="View_class-based_2">View (class-based)</h3>
@@ -364,7 +364,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>The view first tries to get the specific book record from the model. If this fails the view should raise an <code>Http404</code> exception to indicate that the book is "not found". The final step is then, as usual, to call <code>render()</code> with the template name and the book data in the <code>context</code> parameter (as a dictionary).</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>get_object_or_404()</code> (shown commented out above) is a convenient shortcut to raise an <code>Http404</code> exception if the record is not found.</p>
+<p><strong>備註：</strong> The <code>get_object_or_404()</code> (shown commented out above) is a convenient shortcut to raise an <code>Http404</code> exception if the record is not found.</p>
 </div>
 
 <h3 id="Creating_the_Detail_View_template">Creating the Detail View template</h3>
@@ -399,7 +399,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 </ul>
 
 <div class="note">
-<p>The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:</p>
+<p><strong>備註：</strong> The author link in the template above has an empty URL because we've not yet created an author detail page. Once that exists, you should update the URL like this:</p>
 
 <pre class="notranslate">&lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;
 </pre>
@@ -423,7 +423,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>需要這方法是因為我們僅在“一”那側model（Book）定義一個<code>ForeignKey</code> (一對多)字段的關聯，也因為沒有任何的關聯被定義在“多”那側model（BookInstance），故無法透過字段來取得相關的紀錄。為了克服這個問題，Django建立一個function取名為“reverse lookup”供使用。function的名字以一對多關係中該 <code>ForeignKey</code> 被定義在的那個模型名稱小寫，再在字尾加上<code>_set</code>（因此在 <code>Book</code> 創建的function名是 <code>bookinstance_set()</code>）。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 在這我們使用 <code>all()</code> 取得所有紀錄 (預設)，你無法直接在template做是因為你無法指定引數到function，但你可用 <code>filter()</code> 方法取得一個紀錄的子集 。</p>
+<p><strong>備註：</strong> 在這我們使用 <code>all()</code> 取得所有紀錄 (預設)，你無法直接在template做是因為你無法指定引數到function，但你可用 <code>filter()</code> 方法取得一個紀錄的子集 。</p>
 
 <p>順帶一提，若你不再基於類的view或model定義順序（order），開發伺服器會將會報錯類似的訊息：</p>
 
@@ -548,7 +548,7 @@ path('anotherurl/', views.my_reused_view, <strong>{'my_template_name': 'another_
 <p>The code required for the URL mappers and the views should be virtually identical to the <code>Book</code> list and detail views we created above. The templates will be different, but will share similar behaviour.</p>
 
 <div class="note">
-<p><strong>Note</strong>:</p>
+<p><strong>備註：</strong> </p>
 
 <ul>
  <li>Once you've created the URL mapper for the author list page you will also need to update the <strong>All authors</strong> link in the base template. Follow the <a href="#Update_the_base_template">same process</a> as we did when we updated the <strong>All books</strong> link.</li>
