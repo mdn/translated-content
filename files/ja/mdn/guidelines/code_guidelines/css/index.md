@@ -9,247 +9,267 @@ tags:
   - MDN Meta
 translation_of: MDN/Guidelines/Code_guidelines/CSS
 ---
-<div>{{MDNSidebar}}{{IncludeSubnav("/ja/docs/MDN")}}</div>
+{{MDNSidebar}}
 
-<p class="summary">次のガイドラインでは、MDN コードの例として CSS を記述する方法について説明します。</p>
+次のガイドラインでは、MDN コードの例として CSS を記述する方法について説明します。
 
-<h2 id="In_this_article" name="In_this_article">目次</h2>
+## 目次
 
-<ul>
- <li><a href="#High-level_guidelines">高水準のガイドライン</a>
+- [高水準のガイドライン](#高水準のガイドライン)
 
-  <ul>
-   <li><a href="#Dont_use_preprocessors">プリプロセッサーを使用しない</a></li>
-   <li><a href="#Dont_use_specific_CSS_methodologies">特定の CSS の方法論を使わない</a></li>
-   <li><a href="#Use_flexiblerelative_units">柔軟性のある/相対的な単位を使用する</a></li>
-   <li><a href="#Dont_use_resets">リセットを使わない</a></li>
-   <li><a href="#Plan_your_CSS_%E2%80%94_avoid_overriding">CSS を計画する - オーバーライドを避ける</a></li>
-  </ul>
- </li>
- <li><a href="#General_CSS_coding_style">一般的な CSS コーディングスタイル</a>
-  <ul>
-   <li><a href="#Use_expanded_syntax">展開した構文を使用する</a></li>
-   <li><a href="#Favor_longhand_rules_over_terse_shorthand">一括指定よりも個別指定を推奨</a></li>
-   <li><a href="#Use_double_quotes_around_values">値の周りには二重引用符を使用する</a></li>
-   <li><a href="#Spacing_around_function_parameters">関数の引数の空白</a></li>
-   <li><a href="#CSS_comments">CSS のコメント</a></li>
-   <li><a href="#Dont_use_!important">!important は使わない</a></li>
-  </ul>
- </li>
- <li><a href="#Specific_CSS_syntax_points">具体的な CSS 構文のポイント</a>
-  <ul>
-   <li><a href="#Turning_off_borders_and_other_properties">ボーダーなどのプロパティをオフにする</a></li>
-   <li><a href="#Use_mobile_first_media_queries">「モバイルファースト」のメディアクエリを使用する</a></li>
-  </ul>
- </li>
- <li><a href="#Selectors">セレクター</a>
-  <ul>
-   <li><a href="#Dont_use_ID_selectors">ID セレクターを使わない</a></li>
-   <li><a href="#Put_multiple_selectors_on_separate_lines">複数のセレクターは個別の行に配置する</a></li>
-  </ul>
- </li>
-</ul>
+  - [プリプロセッサーを使用しない](#プリプロセッサーを使用しない)
+  - [特定の CSS の方法論を使わない](#特定の_css_の方法論を使わない)
+  - [柔軟性のある/相対的な単位を使う](#柔軟性のある相対的な単位を使う)
+  - [リセットを使わない](#リセットを使わない)
+  - [CSS を計画する - オーバーライドを避ける](#css_を計画する_—_オーバーライドを避ける)
 
-<h2 id="High-level_guidelines" name="High-level_guidelines">高水準のガイドライン</h2>
+- [一般的な CSS コーディングスタイル](#一般的な_css_のコーディングスタイル)
 
-<h3 id="Dont_use_preprocessors" name="Dont_use_preprocessors">プリプロセッサーを使用しない</h3>
+  - [展開した構文を使う](#展開した構文を使う)
+  - [一括指定よりも個別指定を推奨](#一括指定よりも個別指定を推奨)
+  - [値の周りには二重引用符を使う](#値の周りには二重引用符を使う)
+  - [関数の引数の空白](#関数の引数の空白)
+  - [CSS のコメント](#css_のコメント)
+  - [!important は使わない](#!important_は使わない)
 
-<p>MDN のサンプル コードでは、<a href="https://sass-lang.com/">Sass</a>,<a href="http://lesscss.org/">Less</a>,<a href="http://stylus-lang.com/">Stylus,</a>などのプリプロセッサー構文を使用しないでください。MDN はバニラ CSS 言語を文書化しており、プリプロセッサーを使用することは、例を理解するためのハードルを上げるだけであり、読者を混乱させる可能性があります。</p>
+- [具体的な CSS 構文のポイント](#具体的な_css_構文のポイント)
 
-<h3 id="Dont_use_specific_CSS_methodologies" name="Dont_use_specific_CSS_methodologies">特定の CSS の方法論を使わない</h3>
+  - [ボーダーなどのプロパティをオフにする](#border_などのプロパティをオフにする)
+  - [「モバイルファースト」のメディアクエリーを使う](#「モバイルファースト」のメディアクエリーを使う)
 
-<p>前のガイドラインと同じ精神で、 <a href="http://getbem.com/naming/">BEM</a> や <a href="https://smacss.com/">SMACSS</a> のような特定の CSS の方法論を使って MDN のサンプルコードを書かないようにしてください。これらが有効な CSS 構文であっても、それらの方法論に精通していない人にとっては、命名規則が混乱を招く可能性があります。</p>
+- [セレクター](#セレクター)
 
-<h3 id="Use_flexiblerelative_units" name="Use_flexiblerelative_units">柔軟性のある/相対的な単位を使用する</h3>
+  - [ID セレクターを使わない](#id_セレクターを使わない)
+  - [複数のセレクターは個別の行に配置する](#複数のセレクターは個別の行に配置する)
 
-<p>可能な限り幅広い端末で最大限の柔軟性を実現するために、コンテナーやパディングなどの寸法は、em や rem のような相対的な単位を使用し、ビューポートの幅に応じて変化させたい場合はパーセント値やビューポートの単位を使用することをお勧めします。これについては、<a href="/ja/docs/Web/Apps/app_layout/responsive_design_building_blocks#Fluid_grids">レスポンシブデザインのビルディングブロック</a>の記事をご覧ください。</p>
+## 高水準のガイドライン
 
-<h3 id="Dont_use_resets" name="Dont_use_resets">リセットを使わない</h3>
+### プリプロセッサーを使用しない
 
-<p>For maximum control over CSS across platforms, a lot of people used to use CSS resets to remove every style, before then building things back up themselves. This certainly has its merits, but especially in the modern world CSS resets can be overkill, resulting in lots of extra time spent reimplementing things that weren't completely broken in the first place, like default margins, list styles, etc.</p>
+MDN のサンプル コードでは、[Sass](https://sass-lang.com/),[Less](https://lesscss.org/),[Stylus,](http://stylus-lang.com/)などのプリプロセッサー構文を使用しないでください。MDN はバニラ CSS 言語を文書化しており、プリプロセッサーを使うことは、例を理解するためのハードルを上げるだけであり、読者を混乱させる可能性があります。
 
-<p>If you really feel like you need to use a reset, consider using <a href="http://necolas.github.io/normalize.css/">normalize.css by Nicolas Gallagher</a>, which aims to just make things more consistent across browsers, get rid of some default annoyances that we always remove (the margins on <code>&lt;body&gt;</code>, for example) and fix a few bugs.</p>
+### 特定の CSS の方法論を使わない
 
-<h3 id="Plan_your_CSS_—_avoid_overriding" name="Plan_your_CSS_—_avoid_overriding">CSS を計画する — オーバーライドを避ける</h3>
+前のガイドラインと同じ精神で、 [BEM](http://getbem.com/naming/) や [SMACSS](https://smacss.com/) のような特定の CSS の方法論を使って MDN のサンプルコードを書かないようにしてください。これらが有効な CSS 構文であっても、それらの方法論に精通していない人にとっては、命名規則が混乱を招く可能性があります。
 
-<p>Before diving in and writing huge chunks of CSS, plan your styles carefully. What general styles are going to be needed, what different layouts do you need to create, what specific overrides need to be created, and are they reusable? Above all, you need to try to avoid too much overriding. If you keep finding yourself writing styles and then cancelling them again a few rulesets down, you probably need to rethink your strategy.</p>
+### 柔軟性のある/相対的な単位を使う
 
-<h2 id="General_CSS_coding_style" name="General_CSS_coding_style">一般的な CSS のコーディングスタイル</h2>
+可能な限り幅広い端末で最大限の柔軟性を実現するために、コンテナーやパディングなどの寸法は、em や rem のような相対的な単位を使用し、ビューポートの幅に応じて変化させたい場合はパーセント値やビューポートの単位を使うことをお勧めします。これについては、[レスポンシブデザインの構成要素](/ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids)の記事をご覧ください。
 
-<h3 id="Use_expanded_syntax" name="Use_expanded_syntax">展開した構文を使用する</h3>
+### リセットを使わない
 
-<p>There are a variety of CSS writing styles you can use, but we prefer the expanded style, with the selector/opening brace, close brace, and each declaration on a separate line. This maximizes readability, and again, promotes consistency on MDN.</p>
+プラットフォーム横断的に CSS を最大限に制御するために、多数の人が CSS リセットを使用してすべてのスタイルを削除し、その後、自分で再構築する方法をとっています。これには確かにメリットがありますが、特に現代では CSS リセットはやりすぎで、既定のマージンやリストスタイルなど、元々完全に壊れていないものを再実装するために多数の余分な時間がかかってしまうことがあります。
 
-<p>Use this:</p>
+もし本当にリセットを使う必要があると感じたら、[Nicolas Gallagher による normalize.css](https://necolas.github.io/normalize.css/) の使用を検討してください。これは、ブラウザー間でより一貫したものにし、いつも削除している既定の厄介なもの（例えば `<body>` 上のマージン）を取り除き、いくつかのバグを修正することだけを目的としています。
 
-<pre class="brush: css example-good notranslate">p {
+### CSS を計画する — オーバーライドを避ける
+
+CSS を大量に書き込む前に、スタイルを慎重に計画しましょう。どのようなスタイルが必要なのか、どのようなレイアウトが必要なのか、どのようなオーバーライドが必要なのか、そしてそれらは再利用可能なものなのか。特に、オーバーライドのしすぎは禁物です。スタイルを書いても、いくつかのルールセットで再びキャンセルしてしまうようなことがあれば、おそらく戦略を見直す必要があります。
+
+## 一般的な CSS のコーディングスタイル
+
+### 展開した構文を使う
+
+CSS にはさまざまな記述方法がありますが、私たちは、セレクター/開始中括弧、終了中括弧、および各宣言がそれぞれ別の行にある、展開されたスタイルを好んで使用します。これは読みやすさを最大限に高め、また MDN での一貫性を促進します。
+
+このようにしてください。
+
+```css example-good
+p {
   color: white;
   background-color: black;
   padding: 1rem;
-}</pre>
+}
+```
 
-<p>Not this:</p>
+このようにはしないでください。
 
-<pre class="brush: css example-bad notranslate">p { color: white; background-color: black; padding: 1rem; }</pre>
+```css example-bad
+p { color: white; background-color: black; padding: 1rem; }
+```
 
-<p>In addition, keep these specifics in mind:</p>
+また、以下の点に注意してください。
 
-<ul>
- <li>Include a space between the selector(s) and the opening curly brace.</li>
- <li>Always include a semi-colon at the end of the last declaration, even though it isn't strictly necessary.</li>
- <li>Put the closing curly brace on a new line.</li>
- <li>In each declaration, put a space after the separating colon, but not before.</li>
- <li>Use 2 spaces for code indentation.</li>
-</ul>
+- セレクターと中括弧の間には空白を入れる。
+- 最後の宣言の最後には、たとえ厳密には必要ないとしても、必ずセミコロンを入れる。
+- 閉じ中括弧は改行して書く。
+- それぞれの宣言では、区切りコロンの後に空白を入れ、その前には入れない。
+- コードのインデントには空白を 2 つ 使う。
 
-<h3 id="Favor_longhand_rules_over_terse_shorthand" name="Favor_longhand_rules_over_terse_shorthand">一括指定よりも個別指定を推奨</h3>
+### 一括指定よりも個別指定を推奨
 
-<p>Usually when teaching the specifics of CSS syntax, it is clearer and more obvious to use longhand properties, rather than terse shorthand (unless of course teaching the shorthand is the point of the example). Remember that the point of MDN examples is to teach people, not to be clever or efficient.</p>
+通常、 CSS 構文の詳細を教える場合、簡潔な一括指定よりも個別指定のプロパティを使用した方が明確でわかりやすいです（もちろん、簡潔な一括指定を教えることがこの例のポイントである場合は除きます）。 MDN の例のポイントは、人に教えることであって、賢いやり方でも効率的でもないことを覚えておいてください。
 
-<p>To start with, it is often harder to understand what the shorthand is doing. It takes a while to pick apart exactly what {{cssxref("font")}} syntax is doing, for example:</p>
+そもそも、一括指定は何をやっているのか理解するのが難しいことが多いのです。例えば {{cssxref("font")}} 構文が何をしているのかを正確に拾い上げるには、しばらく時間がかかります。
 
-<pre class="brush: css notranslate">font: small-caps bold 2rem/1.5 sans-serif;</pre>
+```css
+font: small-caps bold 2rem/1.5 sans-serif;
+```
 
-<p>Whereas this is more immediate in terms of understanding:</p>
+一方、こちらはより即座に理解することができます。
 
-<pre class="brush: css notranslate">font-variant: small-caps;
+```css
+font-variant: small-caps;
 font-weight: bold;
 font-size: 2rem;
 line-height: 1.5;
-font-family: sans-serif;</pre>
+font-family: sans-serif;
+```
 
-<p>Second, CSS shorthand comes with potential added pitfalls — default values are set for parts of the syntax that you don't explicitly set, which can produce unexpected resets of values you've set earlier in the cascade, or other expected effects. The {{cssxref("grid")}} property for example sets all of the following default values for items that are not specified:</p>
+第二に、 CSS の一括指定には潜在的な落とし穴があります。明示的に設定していない構文の属値に既定値が設定され、カスケードで先に設定した値を予期せぬ形でリセットしてしまったり、その他の予期せぬ効果をもたらす可能性があるからです。例えば {{cssxref("grid")}} プロパティは、指定されていない項目に対して、以下のすべての既定値を設定します。
 
-<ul>
- <li>{{cssxref("grid-template-rows")}}: <code>none</code></li>
- <li>{{cssxref("grid-template-columns")}}: <code>none</code></li>
- <li>{{cssxref("grid-template-areas")}}: <code>none</code></li>
- <li>{{cssxref("grid-auto-rows")}}: <code>auto</code></li>
- <li>{{cssxref("grid-auto-columns")}}: <code>auto</code></li>
- <li>{{cssxref("grid-auto-flow")}}: <code>row</code></li>
- <li>{{cssxref("grid-column-gap")}}: <code>0</code></li>
- <li>{{cssxref("grid-row-gap")}}: <code>0</code></li>
- <li>{{cssxref("column-gap")}}: <code>normal</code></li>
- <li>{{cssxref("row-gap")}}: <code>normal</code></li>
-</ul>
+- {{cssxref("grid-template-rows")}}: `none`
+- {{cssxref("grid-template-columns")}}: `none`
+- {{cssxref("grid-template-areas")}}: `none`
+- {{cssxref("grid-auto-rows")}}: `auto`
+- {{cssxref("grid-auto-columns")}}: `auto`
+- {{cssxref("grid-auto-flow")}}: `row`
+- {{cssxref("column-gap")}}: `0`
+- {{cssxref("row-gap")}}: `0`
+- {{cssxref("column-gap")}}: `normal`
+- {{cssxref("row-gap")}}: `normal`
 
-<p>In addition, some shorthands only work as expected if you include the different value components in a certain order. In CSS animations for example:</p>
+さらに、一部の一括指定は、様々な値の構成要素を特定の順序で入れないと期待通りに動作しません。例えば CSS アニメーションでは、次のようになります。
 
-<pre class="brush: css notranslate">/* duration | timing-function | delay | iteration-count
+```css
+/* duration | timing-function | delay | iteration-count
    direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;</pre>
+animation: 3s ease-in 1s 2 reverse both paused slidein;
+```
 
-<p>As an example, the first value that can be parsed as a {{cssxref("time", "&lt;time&gt;")}} is assigned to the {{cssxref("animation-duration")}}, and the second one is assigned to {{cssxref("animation-delay")}}. For more details, read the full <a href="/ja/docs/Web/CSS/animation#Syntax">animation syntax</a> details.</p>
+例として、 [`<time>`](/ja/docs/Web/CSS/time) として解釈できる最初の値は [`animation-duration`](/ja/docs/Web/CSS/animation-duration) に割り当てられ、 2 つ目の値は [`animation-delay`](/ja/docs/Web/CSS/animation-delay) に割り当てられます。詳しくは、 [animation の構文](/ja/docs/Web/CSS/animation#構文)の詳細をご覧ください。
 
-<h3 id="Use_double_quotes_around_values" name="Use_double_quotes_around_values">値の周りには二重引用符を使用する</h3>
+### 値の周りには二重引用符を使う
 
-<p>Where quotes can or should be included, use them, and use double quotes. For example:</p>
+引用符を入れることができる、または入れる必要がある場合は、次のように二重引用符を使用してください。
 
-<pre class="brush: css example-good notranslate">[data-vegetable="liquid"] {
+```css example-good
+[data-vegetable="liquid"] {
   background-color: goldenrod;
   background-image: url("../../media/examples/lizard.png");
-}</pre>
+}
+```
 
-<h3 id="Spacing_around_function_parameters" name="Spacing_around_function_parameters">関数の引数の空白</h3>
+### 関数の引数の空白
 
-<p>Function parameters should have spaces after their separating commas, but not before:</p>
+関数の引数には、区切り文字のカンマの後に空白を置くべきですが、その前には置きません。
 
-<pre class="brush: css example-good notranslate">color: rgb(255, 0, 0);
-background-image: linear-gradient(to bottom, red, black);</pre>
+```css example-good
+color: rgb(255, 0, 0);
+background-image: linear-gradient(to bottom, red, black);
+```
 
-<h3 id="CSS_のコメント">CSS のコメント</h3>
+### CSS のコメント
 
-<p>Use CSS-style comments to comment code that isn't self-documenting:</p>
+自己文書化されていないコードにコメントを付けるには、 CSS 形式のコメントを使用してください。
 
-<pre class="brush: css example-good notranslate">/* This is a CSS-style comment */</pre>
+```css example-good
+/* これが CSS 形式のコメントです。 */
+```
 
-<p>Put your comments on separate lines preceeding the code they are referring to:</p>
+コメントは、参照するコードの前に別の行で記述してください。
 
-<pre class="brush: css example-good notranslate">h3 {
-  /* Creates a red drop shadow, offset 1px right and down, w/2px blur radius */
+```css example-good
+h3 {
+  /* 赤色のドロップシャドウを、右下に 1px のオフセット、 2px のぼかし半径で作成 */
   text-shadow: 1px 1px 2px red;
-  /* Sets the font-size to double the default document font size */
+  /* フォントサイズを文書の既定値の 2 倍に設定 */
   font-size: 2rem;
-}</pre>
+}
+```
 
-<p>Also note that you should leave a space between the asterisks and the comment, in each case.</p>
+また、アスタリスクとコメントの間には、それぞれの場合で空白を空けておくことに注意してください。
 
-<h3 id="Dont_use_!important" name="Dont_use_!important">!important は使わない</h3>
+### !important は使わない
 
-<p>!important is a last resort generally only used when you need to override something and there is no other way. It is a bad practice and you should avoid it wherever possible.</p>
+`!important` は最後の手段で、何かを上書きする必要があり、他に方法がないときだけ使用します。これは悪しき習慣であり、可能な限り避けるべきです。
 
-<p>Bad:</p>
+悪い例:
 
-<pre class="brush: css example-bad notranslate">.bad-code {
+```css example-bad
+.bad-code {
   font-size: 4rem !important;
-}</pre>
+}
+```
 
-<h2 id="Specific_CSS_syntax_points" name="Specific_CSS_syntax_points">具体的な CSS 構文のポイント</h2>
+## 具体的な CSS 構文のポイント
 
-<h3 id="border_などのプロパティをオフにする">border などのプロパティをオフにする</h3>
+### border などのプロパティをオフにする
 
-<p>When turning off borders (and any other properties that can take <code>0</code> or <code>none</code> as values), use <code>0</code> rather than <code>none</code>:</p>
+境界（および他のプロパティのうち、値として `0` または `none` を取ることができるもの）をオフにするときは、 `none` ではなく `0` を使用してください。
 
-<pre class="brush: css example-good notranslate">border: 0;</pre>
+```css example-good
+border: 0;
+```
 
-<h3 id="Use_mobile_first_media_queries" name="Use_mobile_first_media_queries">「モバイルファースト」のメディアクエリを使用する</h3>
+### 「モバイルファースト」のメディアクエリーを使う
 
-<p>When including different sets of styles for different target viewport sizes using media queries inside the same stylesheet, it is a good idea to make the default styling before any media queries have been applied to the document the narrow screen/mobile styling, and then override this for wider viewports inside successive media queries.</p>
+同じスタイルシート内でメディアクエリーを使用して、様々なターゲットのビューポートサイズによって異なるスタイルのセットを入れるとき、メディアクエリーが文書に適用される前の既定のスタイルを狭い画面／モバイルスタイルとし、その後メディアクエリー内で広いビューポート用に上書きするのはよい考えです。
 
-<pre class="brush: css example-good notranslate">/*Default CSS layout for narrow screens*/
+```css example-good
+/* 狭い画面向けの既定の CSS レイアウト値 */
 
 @media (min-width: 480px) {
-  /*CSS for medium width screens*/
+  /* 中型の画面向けの CSS */
 }
 
 @media (min-width: 800px) {
-  /*CSS for wide screens*/
+  /* 広い画面向けの CSS */
 }
 
 @media (min-width: 1100px) {
-  /*CSS for really wide screens*/
-}</pre>
+  /* 本当に広い画面向けの CSS */
+}
+```
 
-<p>This has many advantages, outlined in our <a href="/ja/docs/Web/Apps/Progressive/Responsive/Mobile_first">Mobile First</a> article.</p>
+これには多くの利点があり、[モバイルファースト](/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first)の記事で概説しています。
 
-<h2 id="Selectors" name="Selectors">セレクター</h2>
+## セレクター
 
-<h3 id="Dont_use_ID_selectors" name="Dont_use_ID_selectors">ID セレクターを使わない</h3>
+### ID セレクターを使わない
 
-<p>There is really no need to use ID selectors — they are less flexible (you can't add more if you discover you need more than one), and are harder to override if needed, being of a higher specificity than classes.</p>
+ID セレクターを使用する必要はありません。 ID セレクターは柔軟性に欠け（複数必要だとわかっても追加できない）、クラスよりも特異性が高く、必要な場合に上書きするのが難しいからです。
 
-<p>Good:</p>
+良い例:
 
-<pre class="brush: css example-good notranslate">.editorial-summary {
-  ...
-}</pre>
+```css example-good
+.editorial-summary {
+  /* … */
+}
+```
 
-<p>Bad:</p>
+悪い例:
 
-<pre class="brush: css example-bad notranslate">#editorial-summary {
-  ...
-}</pre>
+```css example-bad
+#editorial-summary {
+  /* … */
+}
+```
 
-<h3 id="Put_multiple_selectors_on_separate_lines" name="Put_multiple_selectors_on_separate_lines">複数のセレクターは個別の行に配置する</h3>
+### 複数のセレクターは個別の行に配置する
 
-<p>When a rule has multiple selectors, put each selector on a new line. This makes the selector list easier to read, and can help to make code lines shorter.</p>
+ルールに複数のセレクターがある場合、それぞれのセレクターを別の行に置いてください。こうすることで、セレクターのリストが読みやすくなり、コードの一行一行を短くすることができます。
 
-<p>Do this:</p>
+このようにしてください。
 
-<pre class="brush: css example-good notranslate">h1,
+```css example-good
+h1,
 h2,
 h3 {
   font-family: sans-serif;
   text-align: center;
-}</pre>
+}
+```
 
-<p>Not this:</p>
+このようにはしないでください。
 
-<pre class="brush: css example-bad notranslate">h1, h2, h3 {
+```css example-bad
+h1, h2, h3 {
   font-family: sans-serif;
   text-align: center;
-}</pre>
+}
+```
 
-<h2 id="Good_CSS_examples_on_MDN" name="Good_CSS_examples_on_MDN">MDN の良い CSS の例</h2>
+## MDN の良い CSS の例
 
-<p>CSS プロパティのリファレンスページの冒頭には、簡潔で意味のある良い CSS スニペットが掲載されています。 <a href="/ja/docs/Web/CSS/Reference#Keyword_index">CSS のキーワード索引</a>から探して参照してみてください。そこにあるインタラクティブな例は、一般的に上記のガイドラインに沿って書かれていますが、ガイドラインが新しく書かれる前に書かれたものがほとんどなので、場所によってはそうではない場合があることに注意してください。</p>
+CSS プロパティのリファレンスページの冒頭には、簡潔で意味のある良い CSS スニペットが掲載されています。 [CSS のキーワード索引](/ja/docs/Web/CSS/Reference#keyword_index)から探して参照してみてください。そこにあるインタラクティブな例は、一般的に上記のガイドラインに沿って書かれていますが、ガイドラインが新しく書かれる前に書かれたものがほとんどなので、場所によってはそうではない場合があることに注意してください。
