@@ -19,7 +19,7 @@ original_slug: Web/Progressive_web_apps/加载
 
 <h2 id="打包还是拆分">打包还是拆分</h2>
 
-<p>大部分用户不会用到一个网站的所有页面，但我们通常的做法却是把所有的功能都打包进一个很大的文件里面。一个 <code>bundle.js</code> 文件的大小可能会有几 M，一个打包后的 <code>style.css</code> 会包含网站的一切样式，从 CSS 结构定义到网站在各个版本的样式：移动端、平板、桌面、打印版等等。</p>
+<p>大部分用户不会用到一个网站的所有页面，但我们通常的做法却是把所有的功能都打包进一个很大的文件里面。一个 <code>bundle.js</code> 文件的大小可能会有几 M，一个打包后的 <code>style.css</code> 会包含网站的一切样式，从 CSS 结构定义到网站在各个版本的样式：移动端、平板、桌面、打印版等等。</p>
 
 <p>通常来说，只加载一个较大的打包后文件会比加载很多个小文件要快一些，但如果用户并不是一开始就需要所有的资源，我们就可以首先加载那些关键的资源，其他的资源等到需要的时候再去加载它。</p>
 
@@ -40,7 +40,7 @@ original_slug: Web/Progressive_web_apps/加载
 
 <p>这种做法告诉浏览器，只有在条件满足的情况下才加载这些资源（例如指定了 print，则在打印环境下才会加载这些资源，译者注）。</p>
 
-<p>在我们这个 js13kPWA 应用里面，由于 CSS 非常的简单，因此所有样式都被放到一个文件里面，并没有具体的规则来指导它如何加载 CSS。但我们可以做得更好，例如把 <code>style.css</code> 里面的所有内容移动到一个 <code>&lt;style&gt;</code> 标签里面，并把它放到 <code>index.html</code>  的 <code>&lt;head&gt;</code> 标签里面。这样做可以进一步提升应用的性能，但为了使代码更具可读性，我们并未选择这么做。</p>
+<p>在我们这个 js13kPWA 应用里面，由于 CSS 非常的简单，因此所有样式都被放到一个文件里面，并没有具体的规则来指导它如何加载 CSS。但我们可以做得更好，例如把 <code>style.css</code> 里面的所有内容移动到一个 <code>&lt;style&gt;</code> 标签里面，并把它放到 <code>index.html</code>  的 <code>&lt;head&gt;</code> 标签里面。这样做可以进一步提升应用的性能，但为了使代码更具可读性，我们并未选择这么做。</p>
 
 <h2 id="图片">图片</h2>
 
@@ -59,7 +59,7 @@ original_slug: Web/Progressive_web_apps/加载
 
 <h3 id="通过_JavaScript_进行加载">通过 JavaScript 进行加载</h3>
 
-<p><code>app.js</code> 这个文件处理 <code>data-src</code> 属性的过程如下所示：</p>
+<p><code>app.js</code> 这个文件处理 <code>data-src</code> 属性的过程如下所示：</p>
 
 <pre class="brush: js">let imagesToLoad = document.querySelectorAll('img[data-src]');
 const loadImages = (image) =&gt; {
@@ -69,7 +69,7 @@ const loadImages = (image) =&gt; {
   };
 };</pre>
 
-<p>当函数 <code>loadImages</code> 把图片地址从 <code>data-src</code> 移动到 <code>src</code> 上时，<code>imagesToLoad</code> 变量包含了所有图片的链接。当每个图片都已经加载完成时，我们会把 <code>data-src</code> 属性移除掉，因为它已经没有任何用处了。我们遍历所有的图片，然后加载它们：</p>
+<p>当函数 <code>loadImages</code> 把图片地址从 <code>data-src</code> 移动到 <code>src</code> 上时，<code>imagesToLoad</code> 变量包含了所有图片的链接。当每个图片都已经加载完成时，我们会把 <code>data-src</code> 属性移除掉，因为它已经没有任何用处了。我们遍历所有的图片，然后加载它们：</p>
 
 <pre class="brush: js">imagesToLoad.forEach((img) =&gt; {
   loadImages(img);
@@ -130,7 +130,7 @@ article img {
 
 <h2 id="更多改进">更多改进</h2>
 
-<p>要记得，有许多方法都可以用来优化应用加载时间，这个示例只探讨了其中的一种方法。你可以尝试让你的应用变的更加健壮，让它在没有 JavaScript 的情况下也能工作，例如使用 {{htmlelement("noscript")}} 标签来展示已经分配了最终 <code>src</code> 路径的图片，或者在 <code>&lt;img&gt;</code> 外面套上一个 {{htmlelement("a")}} 标签并指向对应的图片资源，当用户想看的时候，他们可以点击图片来查看。</p>
+<p>要记得，有许多方法都可以用来优化应用加载时间，这个示例只探讨了其中的一种方法。你可以尝试让你的应用变的更加健壮，让它在没有 JavaScript 的情况下也能工作，例如使用 {{htmlelement("noscript")}} 标签来展示已经分配了最终 <code>src</code> 路径的图片，或者在 <code>&lt;img&gt;</code> 外面套上一个 {{htmlelement("a")}} 标签并指向对应的图片资源，当用户想看的时候，他们可以点击图片来查看。</p>
 
 <p>不过这个 app 本身依赖于 JavaScript，所以我们没有这么做：没有 JavaScript，游戏列表就无法加载，Service Worker 相关的代码也将无法执行。</p>
 
@@ -144,7 +144,7 @@ article img {
 
 <h2 id="结语">结语</h2>
 
-<p>这就是这个系列的所有内容了。我们通过 <a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa"> js13kPWA 示例应用的源码</a> 学习了渐进式 Web 应用的的用法，包括 <a href="/en-US/docs/Web/Apps/Progressive/Introduction">PWA 介绍</a>、<a href="/en-US/docs/Web/Apps/Progressive/App_structure">PWA 结构</a>、<a href="/en-US/docs/Web/Apps/Progressive/Offline_Service_workers">通过 Service Worker 让 PWA 离线工作</a>、<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Installable_PWAs">让 PWA 易于安装</a>，以及最后的通知功能。在 <a href="https://serviceworke.rs/">Service Worker Cookbook</a> 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> 的有趣示例。</p>
+<p>这就是这个系列的所有内容了。我们通过 <a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa"> js13kPWA 示例应用的源码</a> 学习了渐进式 Web 应用的的用法，包括 <a href="/en-US/docs/Web/Apps/Progressive/Introduction">PWA 介绍</a>、<a href="/en-US/docs/Web/Apps/Progressive/App_structure">PWA 结构</a>、<a href="/en-US/docs/Web/Apps/Progressive/Offline_Service_workers">通过 Service Worker 让 PWA 离线工作</a>、<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Installable_PWAs">让 PWA 易于安装</a>，以及最后的通知功能。在 <a href="https://serviceworke.rs/">Service Worker Cookbook</a> 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> 的有趣示例。</p>
 
 <p>请随意试验这些代码，使用 PWA 的特性来让你现有的应用更加健壮，或者创作出一点新东西。相对于常规的 Web 应用，PWA 存在巨大的优势。</p>
 

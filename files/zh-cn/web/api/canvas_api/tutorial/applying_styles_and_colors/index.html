@@ -332,10 +332,10 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 
 <p><code>miterLimit</code> 属性就是用来设定外延交点与连接点的最大距离，如果交点距离大于此值，连接效果会变成了 bevel。注意，最大斜接长度（即交点距离）是当前坐标系测量线宽与此<code>miterLimit</code>属性值（HTML {{HTMLElement("canvas")}}默认为 10.0）的乘积，所以<code>miterLimit</code>可以单独设置，不受显示比例改变或任何仿射变换的影响：它只影响线条边缘的有效绘制形状。</p>
 
-<p>更准确的说，斜接限定值（<code>miterLimit</code>）是延伸长度（在 HTML Canvas 中，这个值是线段外连接点与路径中指定的点之间的距离）与一半线宽的最大允许比值。它也可以被等效定义为线条内外连接点距离（<code>miterLength</code>）与线宽（<code>lineWidth</code>）的最大允许比值（因为路径点是内外连接点的中点）。这等同于相交线段最小内夹角（<em>θ</em> ）的一半的余割值，小于此角度的斜接将不会被渲染，而仅渲染斜边连接：</p>
+<p>更准确的说，斜接限定值（<code>miterLimit</code>）是延伸长度（在 HTML Canvas 中，这个值是线段外连接点与路径中指定的点之间的距离）与一半线宽的最大允许比值。它也可以被等效定义为线条内外连接点距离（<code>miterLength</code>）与线宽（<code>lineWidth</code>）的最大允许比值（因为路径点是内外连接点的中点）。这等同于相交线段最小内夹角（<em>θ</em> ）的一半的余割值，小于此角度的斜接将不会被渲染，而仅渲染斜边连接：</p>
 
 <ul>
- <li><code>miterLimit</code> = <strong>max</strong> <code>miterLength</code> / <code>lineWidth</code> = 1 / <strong>sin</strong> ( <strong>min</strong> <em>θ</em> / 2 )</li>
+ <li><code>miterLimit</code> = <strong>max</strong> <code>miterLength</code> / <code>lineWidth</code> = 1 / <strong>sin</strong> ( <strong>min</strong> <em>θ</em> / 2 )</li>
  <li>斜接限定值默认为 10.0，这将会去除所有小于大约 11 度的斜接。</li>
  <li>斜接限定值为√2 ≈ 1.4142136（四舍五入）时，将去除所有锐角的斜接，仅保留钝角或直角。</li>
  <li>1.0 是合法的斜接限定值，但这会去除所有斜接。</li>
@@ -397,11 +397,11 @@ ctx.fillStyle = "rgba(255,0,0,0.5)";
 draw();</pre>
 </div>
 
-<p> {{EmbedLiveSample("A_demo_of_the_miterLimit_property", "500", "240", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}</p>
+<p> {{EmbedLiveSample("A_demo_of_the_miterLimit_property", "500", "240", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}</p>
 
 <h3 id="Using_line_dashes">使用虚线</h3>
 
-<p>用 <code>setLineDash</code> 方法和 <code>lineDashOffset</code> 属性来制定虚线样式。<code>setLineDash</code> 方法接受一个数组，来指定线段与间隙的交替；<code>lineDashOffset </code>属性设置起始偏移量。</p>
+<p>用 <code>setLineDash</code> 方法和 <code>lineDashOffset</code> 属性来制定虚线样式。<code>setLineDash</code> 方法接受一个数组，来指定线段与间隙的交替；<code>lineDashOffset </code>属性设置起始偏移量。</p>
 
 <p>在这个例子中，我们要创建一个蚂蚁线的效果。它往往应用在计算机图形程序选区工具动效中。它可以帮助用户通过动画的边界来区分图像背景选区边框。在本教程的后面部分，你可以学习如何实现这一点和其他<a href="/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_animations">基本的动画</a>。</p>
 
@@ -620,7 +620,7 @@ var ptrn = ctx.createPattern(img,'repeat');
  <dt>{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur = float")}}</dt>
  <dd>shadowBlur 用于设定阴影的模糊程度，其数值并不跟像素数量挂钩，也不受变换矩阵的影响，默认为 <code>0</code>。</dd>
  <dt>{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor = color")}}</dt>
- <dd>shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。</dd>
+ <dd>shadowColor 是标准的 CSS 颜色值，用于设定阴影颜色效果，默认是全透明的黑色。</dd>
 </dl>
 
 <h3 id="A_shadowed_text_example">文字阴影的例子</h3>
@@ -633,11 +633,11 @@ var ptrn = ctx.createPattern(img,'repeat');
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
   ctx.shadowBlur = 2;
-  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
 
-  ctx.font = "20px Times New Roman";
-  ctx.fillStyle = "Black";
-  ctx.fillText("Sample String", 5, 30);
+  ctx.font = "20px Times New Roman";
+  ctx.fillStyle = "Black";
+  ctx.fillText("Sample String", 5, 30);
 }
 </pre>
 
@@ -658,8 +658,8 @@ var ptrn = ctx.createPattern(img,'repeat');
 <p>两个可能的值：</p>
 
 <ul>
- <li> <code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a>, 默认值。</li>
- <li><code><strong> "evenodd"</strong></code>:  <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding rule</a>.</li>
+ <li> <code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">non-zero winding rule</a>, 默认值。</li>
+ <li><code><strong> "evenodd"</strong></code>:  <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">even-odd winding rule</a>.</li>
 </ul>
 
 <p>这个例子，我们用填充规则 <code>evenodd</code></p>

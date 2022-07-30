@@ -14,7 +14,7 @@ translation_of: Web/API/PerformancePaintTiming
 ---
 <p>{{SeeCompatTable}}{{APIRef("Performance Timeline API")}}</p>
 
-<p><a href="/en-US/docs/Web/API/Paint Timing">Paint Timing</a>  提供的<strong><code>PerformancePaintTiming</code></strong>是一个提供页面在构建过程中的“绘制”（也称“渲染”）时间点信息的接口。“绘制”是指将渲染树转换为页面上像素的过程。</p>
+<p><a href="/en-US/docs/Web/API/Paint Timing">Paint Timing</a>  提供的<strong><code>PerformancePaintTiming</code></strong>是一个提供页面在构建过程中的“绘制”（也称“渲染”）时间点信息的接口。“绘制”是指将渲染树转换为页面上像素的过程。</p>
 
 <p>应用可以为名为“<code>paint</code>”的{{domxref("PerformanceEntry","performance entry 类型")}} 注册一个{{domxref("PerformanceObserver")}}，然后观察者可以获取绘制相关的事件发生的时间。以此来帮你找出那些花费太多时间去绘制的区域，而后提升用户体验。</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/PerformancePaintTiming
  <dt>{{domxref("PerformanceEntry.entryType")}}</dt>
  <dd>返回 "<code>paint</code>".</dd>
  <dt>{{domxref("PerformanceEntry.name")}}</dt>
- <dd>返回 <code>"first-paint"</code> 或<code>"first-contentful-paint"</code>.</dd>
+ <dd>返回 <code>"first-paint"</code> 或<code>"first-contentful-paint"</code>.</dd>
  <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
  <dd>当开始“绘制“时返回 {{domxref("DOMHighResTimeStamp","timestamp")}}.</dd>
  <dt>{{domxref("PerformanceEntry.duration")}}</dt>
@@ -42,15 +42,15 @@ translation_of: Web/API/PerformancePaintTiming
 <h2 id="例子">例子</h2>
 
 <pre class="brush: js">function showPaintTimings() {
-  if (window.performance) {
-    let performance = window.performance;
-    let performanceEntries = performance.getEntriesByType('paint');
-    performanceEntries.forEach( (performanceEntry, i, entries) =&gt; {
-      console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
-    });
-  } else {
-    console.log('Performance timing isn\'t supported.');
-  }
+  if (window.performance) {
+    let performance = window.performance;
+    let performanceEntries = performance.getEntriesByType('paint');
+    performanceEntries.forEach( (performanceEntry, i, entries) =&gt; {
+      console.log("The time to " + performanceEntry.name + " was " + performanceEntry.startTime + " milliseconds.");
+    });
+  } else {
+    console.log('Performance timing isn\'t supported.');
+  }
 }</pre>
 
 <p>上面例子输出如下</p>

@@ -35,13 +35,13 @@ translation_of: Web/HTML/Element/tt
         <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -51,7 +51,7 @@ translation_of: Web/HTML/Element/tt
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>

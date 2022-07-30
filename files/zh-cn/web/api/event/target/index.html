@@ -16,7 +16,7 @@ translation_of: Web/API/Event/target
 
 <h2 id="Example">示例</h2>
 
-<p><code>event.target </code>属性可以用来实现<strong>事件委托</strong> (<strong>event delegation</strong>)。</p>
+<p><code>event.target </code>属性可以用来实现<strong>事件委托</strong> (<strong>event delegation</strong>)。</p>
 
 <pre class="brush: js">// Make a list
 var ul = document.createElement('ul');
@@ -28,9 +28,9 @@ ul.appendChild(li1);
 ul.appendChild(li2);
 
 function hide(e){
-  // e.target 引用着 &lt;li&gt; 元素
-  // 不像 e.currentTarget 引用着其父级的 &lt;ul&gt; 元素。
-  e.target.style.visibility = 'hidden';
+  // e.target 引用着 &lt;li&gt; 元素
+  // 不像 e.currentTarget 引用着其父级的 &lt;ul&gt; 元素。
+  e.target.style.visibility = 'hidden';
 }
 
 // 添加监听事件到列表，当每个 &lt;li&gt; 被点击的时候都会触发。
@@ -47,7 +47,7 @@ ul.addEventListener('click', hide, false);
 
 <p>{{Compat("api.Event.target")}}</p>
 
-<p>在 IE6-8 中，事件模型与标准不同。使用非标准的 <a href="http://msdn.microsoft.com/en-us/library/ie/ms536343%28v=vs.85%29.aspx"><code>element.attachEvent()</code></a> 方法绑定事件监听器。在该模型中，事件对象有一个 <code>srcElement</code> 属性，等价于<code>target</code> 属性。</p>
+<p>在 IE6-8 中，事件模型与标准不同。使用非标准的 <a href="http://msdn.microsoft.com/en-us/library/ie/ms536343%28v=vs.85%29.aspx"><code>element.attachEvent()</code></a> 方法绑定事件监听器。在该模型中，事件对象有一个 <code>srcElement</code> 属性，等价于<code>target</code> 属性。</p>
 
 <pre class="brush: js" style="font-size: 14px;">function hide(e) {
   // 支持 IE6-8

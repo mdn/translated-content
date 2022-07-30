@@ -24,7 +24,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 
 <dl>
  <dt><code>angle</code></dt>
- <dd>顺时针旋转的弧度。如果你想通过角度值计算，可以使用公式： <code><em>degree</em> * Math.PI / 180</code> 。</dd>
+ <dd>顺时针旋转的弧度。如果你想通过角度值计算，可以使用公式： <code><em>degree</em> * Math.PI / 180</code> 。</dd>
 </dl>
 
 <p>旋转中心点一直是 canvas 的起始点。如果想改变中心点，我们可以通过 {{domxref("CanvasRenderingContext2D.translate", "translate()")}} 方法移动 canvas。</p>
@@ -33,7 +33,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 
 <h3 id="使用_rotate_方法">使用 <code>rotate</code> 方法</h3>
 
-<p>这是一段使用 <code>rotate</code> 方法的简单的代码片段。</p>
+<p>这是一段使用 <code>rotate</code> 方法的简单的代码片段。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -59,8 +59,8 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.rotate(45 * Math.PI / 180);

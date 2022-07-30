@@ -19,16 +19,16 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 <pre><code>initBuffers() {
   const positionBuffer = gl.createBuffer();
   const positions = [
-     1.0,  1.0,
-    -1.0,  1.0,
-     1.0, -1.0,
-    -1.0, -1.0,
-  ];</code>
+     1.0,  1.0,
+    -1.0,  1.0,
+     1.0, -1.0,
+    -1.0, -1.0,
+  ];</code>
 <code>  gl.bindBuffer(</code>WebGLRenderingContext<code>.ARRAY_BUFFER, positionBuffer);
   gl.bufferData(</code>WebGLRenderingContext<code>.ARRAY_BUFFER,
-    new Float32Array(positions),
-    </code>WebGLRenderingContext<code>.STATIC_DRAW
-  );
+    new Float32Array(positions),
+    </code>WebGLRenderingContext<code>.STATIC_DRAW
+  );
 
   const colorBuffer = gl.createBuffer();
   const colors = [
@@ -40,9 +40,9 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 
   gl.bindBuffer(</code>WebGLRenderingContext<code>.ARRAY_BUFFER, colorBuffer);
   gl.bufferData(</code>WebGLRenderingContext<code>.ARRAY_BUFFER,
-    new Float32Array(colors),
-    </code>WebGLRenderingContext<code>.STATIC_DRAW
-  );
+    new Float32Array(colors),
+    </code>WebGLRenderingContext<code>.STATIC_DRAW
+  );
 
   return {
     position: positionBuffer,
@@ -61,11 +61,11 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
       uniform mat4 uModelViewMatrix;
       uniform mat4 uProjectionMatrix;
 
-      varying lowp vec4 vColor;
+      varying lowp vec4 vColor;
 
       void main(void) {
         gl_Position = uProjectionMatrix* uModelViewMatrix * vec4(aVertexPosition, 1.0);
-        vColor = aVertexColor;
+        vColor = aVertexColor;
       }
     &lt;/script&gt;
 </pre>
@@ -77,13 +77,13 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 <p>我们先来复习一下之前构造的片段着色器：</p>
 
 <pre class="brush: html">    &lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
-      void main(void) {
-        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
-      }
-    &lt;/script&gt;
+      void main(void) {
+        gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+      }
+    &lt;/script&gt;
 </pre>
 
-<p>为使每个像素都得到插值后的颜色，我们只需要在此从 <code>vColor </code>变量中获取这个颜色的值：</p>
+<p>为使每个像素都得到插值后的颜色，我们只需要在此从 <code>vColor </code>变量中获取这个颜色的值：</p>
 
 <pre class="brush: html">    &lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
     	varying lowp vec4 vColor;

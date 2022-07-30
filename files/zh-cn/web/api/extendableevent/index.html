@@ -21,7 +21,7 @@ translation_of: Web/API/ExtendableEvent
 
 <div>如果在<code>ExtendableEvent</code>处理程序之外调用{{domxref("ExtendableEvent.waitUntil","waitUntil()")}}，浏览器应该抛出一个<code>InvalidStateError</code>；还要注意，多个调用将堆积起来，结果 promises 将添加到<a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises">extend lifetime promises</a>.</div>
 
-<div> </div>
+<div> </div>
 
 <div class="note">
 <p><strong>提示</strong>: 上述段落中描述的行为在 firefox 43 中得到了修复（参见 {{bug(1180274)}} ）。</p>

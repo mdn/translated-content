@@ -38,14 +38,14 @@ translation_of: Web/API/IDBObjectStore/autoIncrement
   <tr>
    <td><code>false</code></td>
    <td>当前 objectStore 不会自增<br>
-     </td>
+     </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="例子">例子</h2>
 
-<p>在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用<code>add()</code>向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.autoIncrement 的值。想查看完整的例子，请查看我们的<a href="https://github.com/mdn/to-do-notifications/" rel="noopener">To-do Notifications</a>应用（<a href="http://mdn.github.io/to-do-notifications/" rel="noopener">查看在线例子</a>）。</p>
+<p>在下面代码片段中，我们在数据库里打开了一个可读写的事务（transaction），并且用<code>add()</code>向一个 objectStore 中添加了一些数据。在 objectStore 被创建之后，我们在 console 中打印了 objectStore.autoIncrement 的值。想查看完整的例子，请查看我们的<a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a>应用（<a href="http://mdn.github.io/to-do-notifications/">查看在线例子</a>）。</p>
 
 <pre class="brush: js" style="font-size: 14px;">// Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -54,7 +54,7 @@ DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the addData() function to add the data to the database
@@ -70,7 +70,7 @@ function addData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
-    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
+    note.innerHTML += '&lt;li&gt;Transaction completed.&lt;/li&gt;';
   };
 
   transaction.onerror = function(event) {
@@ -84,10 +84,10 @@ function addData() {
   // Make a request to add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of our request
-    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
-  };
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of our request
+    note.innerHTML += '&lt;li&gt;Request successful.&lt;/li&gt;';
+  };
 };</pre>
 
 <h2 id="规范">规范</h2>

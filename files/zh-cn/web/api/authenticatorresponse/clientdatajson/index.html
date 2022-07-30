@@ -5,7 +5,7 @@ translation_of: Web/API/AuthenticatorResponse/clientDataJSON
 ---
 <p>{{APIRef("Web Authentication API")}}{{securecontext_header}}</p>
 
-<p>The <strong><code>clientDataJSON</code></strong> property of the {{domxref("AuthenticatorResponse")}} interface stores a <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> string in an {{domxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}. This property is only accessed on one of the child objects of <code>AuthenticatorResponse</code>, specifically {{domxref("AuthenticatorAttestationResponse")}} or {{domxref("AuthenticatorAssertionResponse")}}.</p>
+<p>The <strong><code>clientDataJSON</code></strong> property of the {{domxref("AuthenticatorResponse")}} interface stores a <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> string in an {{domxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}. This property is only accessed on one of the child objects of <code>AuthenticatorResponse</code>, specifically {{domxref("AuthenticatorAttestationResponse")}} or {{domxref("AuthenticatorAssertionResponse")}}.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -19,7 +19,7 @@ var arrayBuffer = AuthenticatorAssertionResponse.clientDataJSON;
 
 <h2 id="属性">属性</h2>
 
-<p>After the <code>clientDataJSON</code> object is converted from an <code>ArrayBuffer</code> to a JavaScript object, it will have the following properties:</p>
+<p>After the <code>clientDataJSON</code> object is converted from an <code>ArrayBuffer</code> to a JavaScript object, it will have the following properties:</p>
 
 <dl>
  <dt><code>type</code></dt>

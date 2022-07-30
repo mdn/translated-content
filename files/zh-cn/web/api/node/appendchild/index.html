@@ -14,9 +14,9 @@ translation_of: Web/API/Node/appendChild
 
 <p><code><strong>Node.appendChild()</strong></code> 方法将一个节点附加到指定父节点的子节点列表的末尾处。如果将被插入的节点已经存在于当前文档的文档树中，那么 <code>appendChild()</code> 只会将它从原先的位置移动到新的位置（不需要事先移除要移动的节点）。</p>
 
-<p>这意味着，一个节点不可能同时出现在文档的不同位置。所以，如果某个节点已经拥有父节点，在被传递给此方法后，它首先会被移除，再被插入到新的位置。若要保留已在文档中的节点，可以先使用  {{domxref("Node.cloneNode()")}} 方法来为它创建一个副本，再将副本附加到目标父节点下。请注意，用 <code>cloneNode</code> 制作的副本不会自动保持同步。</p>
+<p>这意味着，一个节点不可能同时出现在文档的不同位置。所以，如果某个节点已经拥有父节点，在被传递给此方法后，它首先会被移除，再被插入到新的位置。若要保留已在文档中的节点，可以先使用  {{domxref("Node.cloneNode()")}} 方法来为它创建一个副本，再将副本附加到目标父节点下。请注意，用 <code>cloneNode</code> 制作的副本不会自动保持同步。</p>
 
-<p>如果给定的子节点是 {{domxref("DocumentFragment")}}，那么 {{domxref("DocumentFragment")}} 的全部内容将转移到指定父节点的子节点列表中。</p>
+<p>如果给定的子节点是 {{domxref("DocumentFragment")}}，那么 {{domxref("DocumentFragment")}} 的全部内容将转移到指定父节点的子节点列表中。</p>
 
 <div class="blockIndicator note">
 <p><strong>有更加新的 API 可供使用！</strong><br>
@@ -36,7 +36,7 @@ translation_of: Web/API/Node/appendChild
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回追加后的子节点 （<code><var>aChild</var></code>），除非 <code><var>aChild</var></code> 是一个文档片段（{{domxref("DocumentFragment")}}），这种情况下将返回空文档片段（{{domxref("DocumentFragment")}}）。</p>
+<p>返回追加后的子节点 （<code><var>aChild</var></code>），除非 <code><var>aChild</var></code> 是一个文档片段（{{domxref("DocumentFragment")}}），这种情况下将返回空文档片段（{{domxref("DocumentFragment")}}）。</p>
 
 <h2 id="附注">附注</h2>
 
@@ -46,11 +46,11 @@ translation_of: Web/API/Node/appendChild
 
 <h2 id="备注">备注</h2>
 
-<p>由于 <code>appendChild()</code> 返回的是被附加的子元素，所以链式调用可能无法按照你的预期去执行：</p>
+<p>由于 <code>appendChild()</code> 返回的是被附加的子元素，所以链式调用可能无法按照你的预期去执行：</p>
 
 <pre class="brush: js">let aBlock = document.createElement('block').appendChild( document.createElement('b') );</pre>
 
-<p>（上述代码）只会将 <code><var>aBlock</var></code> 设置为 <code>&lt;b&gt;&lt;/b&gt;</code> ，这可能不是你所想要的。</p>
+<p>（上述代码）只会将 <code><var>aBlock</var></code> 设置为 <code>&lt;b&gt;&lt;/b&gt;</code> ，这可能不是你所想要的。</p>
 
 <h2 id="示例">示例</h2>
 

@@ -26,7 +26,7 @@ translation_of: Web/CSS/@supports
   }
 }</pre>
 
-<p>在 JavaScript 中，可以通过 CSS 对象模型接口 {{DOMxRef("CSSSupportsRule")}} 来访问 <code>@supports</code>。</p>
+<p>在 JavaScript 中，可以通过 CSS 对象模型接口 {{DOMxRef("CSSSupportsRule")}} 来访问 <code>@supports</code>。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -126,12 +126,12 @@ translation_of: Web/CSS/@supports
 <h3 id="测试是否支持自定义属性">测试是否支持自定义属性</h3>
 
 <pre class="brush: css notranslate">@supports (--foo: green) {
-  body {
-    color: var(--varName);
-  }
+  body {
+    color: var(--varName);
+  }
 }</pre>
 
-<h3 id="Testing_for_the_support_of_a_selector">测试是否支持选择器 (eg. {{CSSxRef(":is", ":is()")}})</h3>
+<h3 id="Testing_for_the_support_of_a_selector">测试是否支持选择器 (eg. {{CSSxRef(":is", ":is()")}})</h3>
 
 <p>{{SeeCompatTable}}</p>
 
@@ -150,7 +150,7 @@ translation_of: Web/CSS/@supports
 
 @supports selector(:nth-child(1n of a, b)) {
   /* 这条规则需要内嵌在 @supports 块内。
-     否则该规则在支持 :nth-child(…) 但不支持其内的 `of` 参数的浏览器中，
+     否则该规则在支持 :nth-child(…) 但不支持其内的 `of` 参数的浏览器中，
      只有部分生效 */
   :is(:nth-child(1n of ul, ol) a,
   details &gt; summary) {

@@ -4,6 +4,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 browser-compat: javascript.builtins.Symbol.toPrimitive
+l10n:
+  sourceCommit: 02024642bdb12940509cb4c7e2e60cbc3d62bf21
 ---
 {{JSRef}}
 
@@ -33,10 +35,10 @@ console.log(obj1 + ''); // "[object Object]"
 // Un objeto con la propiedad Symbol.toPrimitive.
 const obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint == 'number') {
+    if (hint === 'number') {
       return 10;
     }
-    if (hint == 'string') {
+    if (hint === 'string') {
       return 'hello';
     }
     return true;

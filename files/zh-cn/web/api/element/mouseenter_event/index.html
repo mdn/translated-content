@@ -10,9 +10,9 @@ translation_of: Web/API/Element/mouseenter_event
 ---
 <div>{{APIRef}}</div>
 
-<p>当定点设备（通常指鼠标）移动到元素上时就会触发 <code>mouseenter 事件</code></p>
+<p>当定点设备（通常指鼠标）移动到元素上时就会触发 <code>mouseenter 事件</code></p>
 
-<p>类似 {{event('mouseover')}}，它们两者之间的差别是 <code>mouseenter </code>不会<a href="/zh-CN/docs/Web/API/Event/bubbles">冒泡</a>（bubble），也就是说当指针从它的子层物理空间移到它的物理空间上时不会触发</p>
+<p>类似 {{event('mouseover')}}，它们两者之间的差别是 <code>mouseenter </code>不会<a href="/zh-CN/docs/Web/API/Event/bubbles">冒泡</a>（bubble），也就是说当指针从它的子层物理空间移到它的物理空间上时不会触发</p>
 
 <div style="-moz-column-width: 455px; -webkit-column-width: 455px; column-width: 455px; border: solid 1px; padding: 5px; margin-bottom: 10px;">
 <div style="text-align: center;"><img alt="mouseenter.png" class="default internal" src="/@api/deki/files/5908/=mouseenter.png"></div>
@@ -23,7 +23,7 @@ translation_of: Web/API/Element/mouseenter_event
 
 <p>对于深层次结构，发送的 *mouseover* 事件数量可能非常大并且会导致严重的性能问题。在这种情况下，最好是监听 *mouseenter* 事件。（可使用 chrome 开发者工具选项卡中的 Performance 进行性能测试）</p>
 
-<p>结合其对称事件，<code>mouseleave</code>, mouseenter DOM 事件的行为方式与 CSS  {{cssxref(':hover')}} 伪类非常相似。.</p>
+<p>结合其对称事件，<code>mouseleave</code>, mouseenter DOM 事件的行为方式与 CSS  {{cssxref(':hover')}} 伪类非常相似。.</p>
 
 <h2 id="General_info">General info</h2>
 
@@ -78,7 +78,7 @@ translation_of: Web/API/Element/mouseenter_event
   <tr>
    <td><code>view</code> {{readonlyInline}}</td>
    <td>{{domxref("WindowProxy")}}</td>
-   <td>{{domxref("document.defaultView")}} (document 的 <code>window</code> )</td>
+   <td>{{domxref("document.defaultView")}} (document 的 <code>window</code> )</td>
   </tr>
   <tr>
    <td><code>detail</code> {{readonlyInline}}</td>
@@ -93,7 +93,7 @@ translation_of: Web/API/Element/mouseenter_event
   <tr>
    <td><code>relatedTarget</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td>对于 <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件: the target of the complementary event (the <code>mouseleave</code> target in the case of a <code>mouseenter</code> event). <code>null</code> otherwise.</td>
+   <td>对于 <code>mouseover</code>, <code>mouseout</code>, <code>mouseenter</code> 和 <code>mouseleave</code> 事件: the target of the complementary event (the <code>mouseleave</code> target in the case of a <code>mouseenter</code> event). <code>null</code> otherwise.</td>
   </tr>
   <tr>
    <td><code>screenX</code> {{readonlyInline}}</td>
@@ -133,29 +133,29 @@ translation_of: Web/API/Element/mouseenter_event
   <tr>
    <td><code>ctrlKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着 ctrl 键。<code>false</code> 反之。</td>
+   <td><code>true</code> 代表当事件触发时按着 ctrl 键。<code>false</code> 反之。</td>
   </tr>
   <tr>
    <td><code>shiftKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着 shift 键。<code>false</code> 反之。</td>
+   <td><code>true</code> 代表当事件触发时按着 shift 键。<code>false</code> 反之。</td>
   </tr>
   <tr>
    <td><code>altKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着 alt 键。<code>false</code> 反之。</td>
+   <td><code>true</code> 代表当事件触发时按着 alt 键。<code>false</code> 反之。</td>
   </tr>
   <tr>
    <td><code>metaKey</code> {{readonlyInline}}</td>
    <td>boolean</td>
-   <td><code>true</code> 代表当事件触发时按着 meta 键 (???) <code>false</code> 反之。</td>
+   <td><code>true</code> 代表当事件触发时按着 meta 键 (???) <code>false</code> 反之。</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Examples">Examples</h2>
 
-<p>鼠标悬停 ( <a href="/en-US/docs/Web/Events/mouseover#Example"><code>mouseover</code> </a>) 文档中有一个示例说明了 mouseover 和 mouseenter 之间的区别。</p>
+<p>鼠标悬停 ( <a href="/en-US/docs/Web/Events/mouseover#Example"><code>mouseover</code> </a>) 文档中有一个示例说明了 mouseover 和 mouseenter 之间的区别。</p>
 
 <p>以下示例说明如何使用 mouseover 模拟 mouseenter 事件的事件委派原则。</p>
 

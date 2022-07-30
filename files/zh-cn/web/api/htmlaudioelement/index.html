@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLAudioElement
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><strong><code>HTMLAudioElement</code></strong> 接口提供对 {{HTMLElement("audio")}} 元素的属性访问及一系列操控它的方法，它基于并从 {{domxref("HTMLMediaElement")}} 接口继承属性和方法。</p>
+<p><strong><code>HTMLAudioElement</code></strong> 接口提供对 {{HTMLElement("audio")}} 元素的属性访问及一系列操控它的方法，它基于并从 {{domxref("HTMLMediaElement")}} 接口继承属性和方法。</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -13,16 +13,16 @@ translation_of: Web/API/HTMLAudioElement
 
 <dl>
  <dt>{{domxref("HTMLAudioElement.Audio", "Audio()")}}</dt>
- <dd>创建并返回一个新的 <code>HTMLAudioElement</code> 对象，如果提供音频文件 URL，则开始加载音频文件。</dd>
+ <dd>创建并返回一个新的 <code>HTMLAudioElement</code> 对象，如果提供音频文件 URL，则开始加载音频文件。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
-<p><em>没有具体的属性；从父类 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 继承属性。</em></p>
+<p><em>没有具体的属性；从父类 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 继承属性。</em></p>
 
 <h2 id="方法">方法</h2>
 
-<p><em>从父类 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 继承方法，自身不提供方法。</em></p>
+<p><em>从父类 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 继承方法，自身不提供方法。</em></p>
 
 <h3 id="废弃的且仅适用于_Mozilla_的方法">废弃的且仅适用于 Mozilla 的方法</h3>
 
@@ -41,7 +41,7 @@ translation_of: Web/API/HTMLAudioElement
 
 <h3 id="基本用法">基本用法</h3>
 
-<p>你可以完全使用 JavaScript 的 {{domxref("HTMLAudioElement.Audio", "Audio()")}} 构造函数来创建一个 <code>HTMLAudioElement</code> ：</p>
+<p>你可以完全使用 JavaScript 的 {{domxref("HTMLAudioElement.Audio", "Audio()")}} 构造函数来创建一个 <code>HTMLAudioElement</code> ：</p>
 
 <pre class="brush: js notranslate">var audioElement = new Audio('car_horn.wav');
 </pre>
@@ -51,10 +51,10 @@ translation_of: Web/API/HTMLAudioElement
 <pre class="brush: js notranslate">audioElement.play();</pre>
 
 <div class="note">
-<p>一个常见的需求是在页面加载后马上去播放音频，现代浏览器的默认自动播放策略会阻止这一行为，参见 <a href="https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/">firefox</a> 和 <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">chrome</a> 寻找最佳实践和解决方案。</p>
+<p>一个常见的需求是在页面加载后马上去播放音频，现代浏览器的默认自动播放策略会阻止这一行为，参见 <a href="https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/">firefox</a> 和 <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">chrome</a> 寻找最佳实践和解决方案。</p>
 </div>
 
-<p>一些经常被使用的属性，包括 {{domxref("HTMLMediaElement.src", "src")}}、{{domxref("HTMLMediaElement.currentTime", "currentTime")}}、{{domxref("HTMLMediaElement.duration", "duration")}}、{{domxref("HTMLMediaElement.paused", "paused")}}、{{domxref("HTMLMediaElement.muted", "muted")}} 和 {{domxref("HTMLMediaElement.volume", "volume")}}。以下这段代码赋值音频文件的播放时长给一个变量：</p>
+<p>一些经常被使用的属性，包括 {{domxref("HTMLMediaElement.src", "src")}}、{{domxref("HTMLMediaElement.currentTime", "currentTime")}}、{{domxref("HTMLMediaElement.duration", "duration")}}、{{domxref("HTMLMediaElement.paused", "paused")}}、{{domxref("HTMLMediaElement.muted", "muted")}} 和 {{domxref("HTMLMediaElement.volume", "volume")}}。以下这段代码赋值音频文件的播放时长给一个变量：</p>
 
 <pre class="brush: js notranslate">var audioElement = new Audio('car_horn.wav');
 audioElement.addEventListener('loadeddata', () =&gt; {
@@ -67,7 +67,7 @@ audioElement.addEventListener('loadeddata', () =&gt; {
 
 <h2 id="事件">事件</h2>
 
-<p><em>从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法. 使用 </em><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> <em>监听事件或者赋值一个事件监听器给这个接口的 </em><code>on<em>eventname</em></code> 属性。</p>
+<p><em>从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法. 使用 </em><code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> <em>监听事件或者赋值一个事件监听器给这个接口的 </em><code>on<em>eventname</em></code> 属性。</p>
 
 <h2 id="规范">规范</h2>
 

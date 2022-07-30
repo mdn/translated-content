@@ -24,19 +24,19 @@ translation_of: Web/API/Window/cancelAnimationFrame
 <h2 id="Notes">示例</h2>
 
 <pre class="deki-transform">var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = window.mozAnimationStartTime;  // 只有 Firefox 支持 mozAnimationStartTime 属性，其他浏览器可以使用 Date.now() 来替代。
+var start = window.mozAnimationStartTime;  // 只有 Firefox 支持 mozAnimationStartTime 属性，其他浏览器可以使用 Date.now() 来替代。
 
 var myReq;
 function step(timestamp) {
-  var progress = timestamp - start;
-  d.style.left = Math.min(progress/10, 200) + "px";
-  if (progress &lt; 2000) {
-    myReq = requestAnimationFrame(step);
-  }
+  var progress = timestamp - start;
+  d.style.left = Math.min(progress/10, 200) + "px";
+  if (progress &lt; 2000) {
+    myReq = requestAnimationFrame(step);
+  }
 }
 myReq = requestAnimationFrame(step);
 

@@ -6,7 +6,7 @@ original_slug: Web/API/GlobalEventHandlers/ontransitioncancel
 ---
 <div>{{APIRef("CSS3 Transitions")}}</div>
 
-<p>{{domxref("GlobalEventHandlers")}}混合 的 <code><strong>ontransitioncancel</strong></code>  属性 是处理 {{event("transitioncancel")}} 事件的手柄{{event("Event_handlers", "event handler")}}.</p>
+<p>{{domxref("GlobalEventHandlers")}}混合 的 <code><strong>ontransitioncancel</strong></code>  属性 是处理 {{event("transitioncancel")}} 事件的手柄{{event("Event_handlers", "event handler")}}.</p>
 
 <div class="blockIndicator note">
 <p>domxref("GlobalEventHandlers") 与 event("Event_handlers", "event handler")： dom 修订版本的事件手柄。</p>
@@ -41,7 +41,7 @@ original_slug: Web/API/GlobalEventHandlers/ontransitioncancel
 
 <p>在本例中，我们使用{{event("transitionrun")}}和{{event("transitionend")}}事件来检测转换何时开始和结束，从而导致在转换期间发生文本更新。这也可以用来触发动画或其他效果，以允许连锁反应。</p>
 
-<p>除此之外，我们也使用 {{event("click")}} 事件使盒子消失 (<code>display: none;</code>), 显示如何触发 {{event("transitioncancel")}} 事件。</p>
+<p>除此之外，我们也使用 {{event("click")}} 事件使盒子消失 (<code>display: none;</code>), 显示如何触发 {{event("transitioncancel")}} 事件。</p>
 
 <h3 id="HTML_content">HTML content</h3>
 
@@ -57,26 +57,26 @@ original_slug: Web/API/GlobalEventHandlers/ontransitioncancel
 <pre class="brush: css; highlight:[13,14]">.box {
   margin-left: 70px;
   margin-top: 30px;
-  border-style: solid;
-  border-width: 1px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-color: #0000FF;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000FF;
   color: #FFFFFF;
   padding: 20px;
   font: bold 1.6em "Helvetica", "Arial", sans-serif;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s, color 2s;
-  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s, color 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
 }
 
 .box:hover {
-  background-color: #FFCCCC;
+  background-color: #FFCCCC;
   color: #000000;
-  width: 200px;
-  height: 200px;
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 </pre>
 
