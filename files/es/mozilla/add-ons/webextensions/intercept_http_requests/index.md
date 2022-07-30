@@ -103,7 +103,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 De nuevo, se utiliza el detector de eventos {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} para ejecutar una función justamente antes de que cada solicitud sea realizada. Esta función reemplazará el objetivo URL con `redirectUrl` que está definido en la función.
 
-Esta vez no se está interceptando cada solicitud: la opción `{urls:[pattern], types:["image"]}` especifica que solo se debería interceptar solicitudes (1) de URLs que residen bajo "https\://mdn.mozillademos.org/" (2) para recursos de imágenes. Vea {{WebExtAPIRef("webRequest.RequestFilter")}} para más información sobre esto.
+Esta vez no se está interceptando cada solicitud: la opción `{urls:[pattern], types:["image"]}` especifica que solo se debería interceptar solicitudes (1) de URLs que residen bajo "https\://developer.mozilla.org/" (2) para recursos de imágenes. Vea {{WebExtAPIRef("webRequest.RequestFilter")}} para más información sobre esto.
 
 Dése cuenta también, que se esta pasando la opción llamada `"blocking"`: se necesita pasar cada vez que se requiera modificar la solicitud. Esto hace que la función del escuchador bloquee la solicitud de la red, así que el navegador espera que el escuchador retorne antes de continuar. Vea la documentación {{WebExtAPIRef("webRequest.onBeforeRequest")}} para conocer más sobre `"blocking"`.
 
