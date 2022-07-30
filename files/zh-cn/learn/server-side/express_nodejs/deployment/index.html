@@ -13,13 +13,13 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 <div>{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p>现在你已经创建（并测试）了一个不错的 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">本地图书馆</a> 网站了，你打算把它发布到一个公共网络服务器，这样图书馆职工和网络上的其他成员就可以访问它了。这篇文章总结了你可以怎样找到一台主机部署你的网站，以及你需要为站点准备到生产环境做什么。</p>
+<p>现在你已经创建（并测试）了一个不错的 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">本地图书馆</a> 网站了，你打算把它发布到一个公共网络服务器，这样图书馆职工和网络上的其他成员就可以访问它了。这篇文章总结了你可以怎样找到一台主机部署你的网站，以及你需要为站点准备到生产环境做什么。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>完成前面所有的指南主题，包括 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</td>
+   <td>完成前面所有的指南主题，包括 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a>.</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -42,7 +42,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 <p>本教程提供了，有关选择托管站点的选项的一些指导，简要概述了为使您的 Express 应用程序准备好生产，所需执行的操作，以及如何将 LocalLibrary 网站安装到 <a href="https://www.heroku.com/">Heroku</a>云托管上的工作示例服务。</p>
 
-<p>请记住，您不必使用 Heroku  - 还有其他托管服务可用。我们还提供了一个单独的教程，以展示如何在 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry </a>上安装 LocalLibrary。</p>
+<p>请记住，您不必使用 Heroku  - 还有其他托管服务可用。我们还提供了一个单独的教程，以展示如何在 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry </a>上安装 LocalLibrary。</p>
 
 <h2 id="什么是生产环境？">什么是生产环境？</h2>
 
@@ -96,7 +96,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 <p>当你刚开始时，好消息是有很多网站提供“免费”的计算环境，尽管有一些条件。例如， <a href="https://www.heroku.com/">Heroku </a>“永远”提供免费但资源有限的 PaaS 环境，而 <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure </a>和开源选项 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry </a>在您第一次加入时，提供免费信用额度。</p>
 
-<p>许多提供商还拥有“基本”层，可提供更多有用的计算能力，和更少的限制。举例来说， <a href="https://www.digitalocean.com/">Digital Ocean</a> 是一个流行的托管服务提供商，它提供了一个相对便宜的基本计算层（在本教程写作时，是每月 5 美元的较低范围）。</p>
+<p>许多提供商还拥有“基本”层，可提供更多有用的计算能力，和更少的限制。举例来说， <a href="https://www.digitalocean.com/">Digital Ocean</a> 是一个流行的托管服务提供商，它提供了一个相对便宜的基本计算层（在本教程写作时，是每月 5 美元的较低范围）。</p>
 
 <div class="note">
 <p><strong>注意：</strong> 请记住，价格不是唯一的选择标准。如果您的网站成功，可能会发现可扩展性是最重要的考虑因素。</p>
@@ -138,7 +138,7 @@ exports.author_update_get = function(req, res, next) {
         if (err) {
 <strong>            debug('update error:' + err);</strong>
             return next(err);
-        }
+        }
         //On success
         res.render('author_form', { title: 'Update Author', author: author });
     });
@@ -184,7 +184,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
+app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 ...
 </pre>
@@ -195,7 +195,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 <h3 id="使用_Helmet_避免被常见漏洞侵袭">使用 Helmet 避免被常见漏洞侵袭</h3>
 
-<p><a href="https://www.npmjs.com/package/helmet">Helmet</a> 是一个中间件包，可以通过设置适当的 HTTP 标头，来帮助保护您的应用，免受一些众所周知的 Web 漏洞的影响（有关它设置的标头/防护漏洞的详细信息，请参阅<a href="https://helmetjs.github.io/docs/">文档</a>）。</p>
+<p><a href="https://www.npmjs.com/package/helmet">Helmet</a> 是一个中间件包，可以通过设置适当的 HTTP 标头，来帮助保护您的应用，免受一些众所周知的 Web 漏洞的影响（有关它设置的标头/防护漏洞的详细信息，请参阅<a href="https://helmetjs.github.io/docs/">文档</a>）。</p>
 
 <p>通过在项目的根目录下，运行以下命令，将其安装到项目中。</p>
 
@@ -225,7 +225,7 @@ var app = express();
 
 <p>Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一。它最初只支持 Ruby 应用程序，但现在可用于托管来自许多编程环境的应用程序，包括 Node（以及 Express）！</p>
 
-<p>我们选择使用 Heroku 有以下几个原因：   </p>
+<p>我们选择使用 Heroku 有以下几个原因：   </p>
 
 <ul>
  <li>Heroku 有一个<a href="https://www.heroku.com/pricing">免费套餐</a>（尽管有一些限制）。</li>
@@ -243,7 +243,7 @@ var app = express();
 
 <p>虽然 Heroku 非常适合举办此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退​​出免费套餐，可能会花费更多。</p>
 
-<h3 id="Heroku_如何工作？"> Heroku 如何工作？</h3>
+<h3 id="Heroku_如何工作？"> Heroku 如何工作？</h3>
 
 <p>Heroku 在一个或多个“<a href="https://devcenter.heroku.com/articles/dynos">Dynos</a>”中运行网站，这些“Dynos”是独立的虚拟化 Unix 容器，提供运行应用程序所需的环境。Dynos 是完全隔离的，并且有一个短暂的文件系统（一个短暂的文件系统，每次 dyno 重新启动时都会清理/清空）。dynos 默认共享的唯一内容，是应用程序<a href="https://devcenter.heroku.com/articles/config-vars">配置变量</a>。Heroku 内部使用负载均衡器，将 Web 流量分配给所有“web”dynos。由于它们之间没有任何共享，Heroku 可以通过添加更多 dynos，来水平扩展应用程序（当然，您可能还需要扩展数据库，以接受其他连接）。</p>
 
@@ -310,9 +310,9 @@ var app = express();
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
-  (use "git reset HEAD &lt;file&gt;..." to unstage)
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
 
-        new file:   ...</pre>
+        new file:   ...</pre>
  </li>
  <li>如果您满意，请将文件提交到本地存储库：
   <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
@@ -354,7 +354,7 @@ v8.9.1</pre>
     "node": "8.9.1"
   },</strong>
   "private": true,
-  ...
+  ...
 </pre>
 
 <h4 id="数据库配置">数据库配置</h4>
@@ -381,7 +381,7 @@ v8.9.1</pre>
 
 <p>现在运行该站点（请参阅<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes">测试路由</a>的相关命令），并检查该站点，是否仍按预期运行。</p>
 
-<h4 id="将更改保存到_Github">将更改保存到 Github</h4>
+<h4 id="将更改保存到_Github">将更改保存到 Github</h4>
 
 <p>接下来，让我们将所有更改保存到 Github。在终端中（在我们的存储库中），输入以下命令：</p>
 
@@ -391,7 +391,7 @@ git push origin master</pre>
 
 <p>我们现在应该准备开始在 Heroku 上，部署 LocalLibrary。</p>
 
-<h3 id="获取一个_Heroku_账户">获取一个 Heroku 账户</h3>
+<h3 id="获取一个_Heroku_账户">获取一个 Heroku 账户</h3>
 
 <p>要开始使用 Heroku，您首先需要创建一个帐户（如果您已经拥有一个帐户，并安装了 Heroku 客户端，请跳过创建并上传网站）：</p>
 
@@ -455,7 +455,7 @@ MONGODB_URI: mongodb://your_user:your_password@ds139278.mlab.com:39278/local_lib
 <pre class="brush: bash">&gt;heroku config
 === limitless-tor-18923 Config Vars
 MONGODB_URI: mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production
-NODE_ENV:    production
+NODE_ENV:    production
 </pre>
 
 <p>Heroku 会在更新变量时，重新启动应用程序。如果您现在检查主页，它应该显示对象计数的零值，因为上面的更改，意味着我们现在正在使用新的（空）数据库。</p>
@@ -487,10 +487,10 @@ heroku ps   #Display dyno status
  <li><a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a> (Express docs)</li>
  <li>Heroku
   <ul>
-   <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node.js Applications on Heroku</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/nodejs-support">Heroku Node.js Support</a> (Heroku docs)</li>
-   <li><a href="https://devcenter.heroku.com/articles/node-concurrency">Optimizing Node.js Application Concurrency</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/node-concurrency">Optimizing Node.js Application Concurrency</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/how-heroku-works">How Heroku works</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/dynos">Dynos and the Dyno Manager</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/config-vars">Configuration and Config Vars</a> (Heroku docs)</li>
@@ -500,14 +500,14 @@ heroku ps   #Display dyno status
  <li>Digital Ocean
   <ul>
    <li><a href="https://www.digitalocean.com/community/tutorials?q=express">Express</a> tutorials</li>
-   <li><a href="https://www.digitalocean.com/community/tutorials?q=node.js">Node.js</a> tutorials </li>
+   <li><a href="https://www.digitalocean.com/community/tutorials?q=node.js">Node.js</a> tutorials </li>
   </ul>
  </li>
 </ul>
 
 <p>{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="本教程链接">本教程链接</h2>
 
@@ -523,4 +523,4 @@ heroku ps   #Display dyno status
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express 教程 7: 部署到生产环境</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

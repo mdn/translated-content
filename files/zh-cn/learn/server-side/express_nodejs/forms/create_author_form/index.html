@@ -88,7 +88,7 @@ exports.author_create_post = [
 
   <pre class="brush: js">// Validate fields.
 body('first_name').isLength({ min: 1 }).trim().withMessage('First name must be specified.')
-    .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),<code>
+    .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),<code>
 </code></pre>
  </li>
  <li>我们可以使用<code>optional()</code>函数，仅在输入字段时运行后续验证（这允许我们验证可选字段）。例如，下面我们检查可选的出生日期是否符合 ISO8601 标准（<code>checkFalsy</code> 旗标，表示我们接受空字符串或<code>null</code>作为空值）。

@@ -38,7 +38,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 <p>让我们来想一下下图，这位农夫考虑为他的家庭做一周的食物计划，他或许就需要执行一段循环：</p>
 
 <p><img alt="" src="https://raw.githubusercontent.com/agnoCJY/agno.github.io/master/loop_js-02-farm-cn.png" style="height: 563px; width: 900px;"><br>
-  </p>
+  </p>
 
 <p>一段循环通常需要一个或多个条件：</p>
 
@@ -152,14 +152,14 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 }
 </pre>
 
-<p> </p>
+<p> </p>
 
 <ul>
- <li><code>random()</code>,在前面的代码中定义过了，返回一个 <code>0</code> 到 x-1 间的整数。</li>
- <li><code>WIDTH</code> 和<code>HEIGHT</code> 浏览器内部窗口的宽度和高度。</li>
+ <li><code>random()</code>,在前面的代码中定义过了，返回一个 <code>0</code> 到 x-1 间的整数。</li>
+ <li><code>WIDTH</code> 和<code>HEIGHT</code> 浏览器内部窗口的宽度和高度。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <p>您应该有一个基本的想法 - 我们使用一个循环来运行这个代码的 100 次迭代，其中每一个在页面上的随机位置绘制一个圆。无论我们绘制 100 个圆，1000 还是 10,000，所需的代码量将是相同的。只有一个数字必须改变。</p>
 
@@ -186,9 +186,9 @@ ctx.fill();</pre>
  <li>关键字<code>for</code>，后跟一些括号。</li>
  <li>在括号内，我们有三个项目，以分号分隔：
   <ol>
-   <li>一个<strong>初始化器</strong> - 这通常是一个设置为一个数字的变量，它被递增来计算循环运行的次数。它也有时被称为<strong>计数变量</strong>。</li>
-   <li>一个<strong>退出条件</strong> - 如前面提到的，这个定义循环何时停止循环。这通常是一个表现为比较运算符的表达式，用于查看退出条件是否已满足的测试。</li>
-   <li>一个<strong>最终条件</strong> - 这总是被判断（或运行），每个循环已经通过一个完整的迭代消失时间。它通常用于增加（或在某些情况下递减）计数器变量，使其更接近退出条件值。</li>
+   <li>一个<strong>初始化器</strong> - 这通常是一个设置为一个数字的变量，它被递增来计算循环运行的次数。它也有时被称为<strong>计数变量</strong>。</li>
+   <li>一个<strong>退出条件</strong> - 如前面提到的，这个定义循环何时停止循环。这通常是一个表现为比较运算符的表达式，用于查看退出条件是否已满足的测试。</li>
+   <li>一个<strong>最终条件</strong> - 这总是被判断（或运行），每个循环已经通过一个完整的迭代消失时间。它通常用于增加（或在某些情况下递减）计数器变量，使其更接近退出条件值。</li>
   </ol>
  </li>
  <li>一些包含代码块的花括号 - 每次循环迭代时都会运行这个代码。</li>
@@ -245,7 +245,7 @@ para.textContent = info;</pre>
 <p>{{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>注</strong>: 您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">在 GitHub 上找到这段示例代码</a>。 （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">在线运行</a>）。</p>
+<p><strong>注</strong>: 您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">在 GitHub 上找到这段示例代码</a>。 （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">在线运行</a>）。</p>
 </div>
 
 <p>这显示了一个循环用于迭代数组中的项目，并与每个项目进行一些操作 - JavaScript 中非常常见的模式。这里：</p>
@@ -264,11 +264,11 @@ para.textContent = info;</pre>
 </ol>
 
 <div class="note">
-<p><strong>注</strong>: 我们将退出条件设为<code>&lt; cats.length</code>，而不是<code>&lt;= cats.length</code>是因为计算机从 0 开始，而不是 1 - 开始时<code>i</code>是 0，并且逐步增加到 i<code> = 4</code>（最后一个数组的索引）。 <code>cats.length</code>返回 5，因为数组中有 5 个项目，但是我们不希望达到<code>i = 5</code>，因为这将返回未定义的最后一个项目（没有索引为 5 的数组项目）。所以我们想要比<code>cats.length</code>（<code>i &lt;</code>）少 1，而不是<code>cats.length</code>（<code>i &lt;=</code>）。</p>
+<p><strong>注</strong>: 我们将退出条件设为<code>&lt; cats.length</code>，而不是<code>&lt;= cats.length</code>是因为计算机从 0 开始，而不是 1 - 开始时<code>i</code>是 0，并且逐步增加到 i<code> = 4</code>（最后一个数组的索引）。 <code>cats.length</code>返回 5，因为数组中有 5 个项目，但是我们不希望达到<code>i = 5</code>，因为这将返回未定义的最后一个项目（没有索引为 5 的数组项目）。所以我们想要比<code>cats.length</code>（<code>i &lt;</code>）少 1，而不是<code>cats.length</code>（<code>i &lt;=</code>）。</p>
 </div>
 
 <div class="note">
-<p><strong>注</strong>:  退出条件的一个常见错误是使它们使用“等于”(<code>===</code>) 而不是说“小于或等于”(<code>&lt;=</code>)。如果我们想要运行我的循环到<code>i = 5</code>，退出条件将需要是<code>i &lt;= cats.length</code>。如果我们设置为<code>i === cats.length</code>，循环将不会运行，因为在第一次循环迭代时 i 不等于 5，所以循环会立即停止。</p>
+<p><strong>注</strong>:  退出条件的一个常见错误是使它们使用“等于”(<code>===</code>) 而不是说“小于或等于”(<code>&lt;=</code>)。如果我们想要运行我的循环到<code>i = 5</code>，退出条件将需要是<code>i &lt;= cats.length</code>。如果我们设置为<code>i === cats.length</code>，循环将不会运行，因为在第一次循环迭代时 i 不等于 5，所以循环会立即停止。</p>
 </div>
 
 <p>我们留下的一个小问题是最后的输出句子形式不是很好：</p>
@@ -302,7 +302,7 @@ para.textContent = info;</pre>
 <p>与循环相同 - break 语句将立即退出循环，并使浏览器移动到跟随它的任何代码。</p>
 
 <p>说我们想搜索一系列联系人和电话号码，只返回我们想要找的号码？首先，一些简单的 HTML - 一个文本{{htmlelement("input")}}，允许我们输入一个名称来搜索，一个{{htmlelement("button")}}元素来提交搜索，以及一个{{htmlelement ("p")}}元素显示结果：<br>
-  </p>
+  </p>
 
 <pre class="brush: html">&lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
 &lt;input id="search" type="text"&gt;
@@ -369,8 +369,8 @@ btn.addEventListener('click', function() {
           para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
           break;
         } else if (i === contacts.length-1)
-              para.textContent = 'Contact not found.';
-        }
+              para.textContent = 'Contact not found.';
+        }
       }
     });
     &lt;/script&gt;
@@ -392,7 +392,7 @@ btn.addEventListener('click', function() {
    <li>然后，我们使用条件语句来测试<code>splitContact [0]</code>（联系人姓名）是否等于输入的<code>searchName</code>。如果是，我们在段落中输入一个字符串来报告联系人的号码，并使用 break 来结束循环。</li>
   </ol>
  </li>
- <li>在<code>(contacts.length-1)</code> 迭代后，如果联系人姓名与输入的搜索不符，则段落文本设置为“未找到联系人”，循环继续迭代。</li>
+ <li>在<code>(contacts.length-1)</code> 迭代后，如果联系人姓名与输入的搜索不符，则段落文本设置为“未找到联系人”，循环继续迭代。</li>
 </ol>
 
 <div class="note">
@@ -479,7 +479,7 @@ for (var i = 1; i &lt;= num; i++) {
 
 <h2 id="while语句和do_..._while语句">while 语句和 do ... while 语句</h2>
 
-<p><code>for</code> 不是 JavaScript 中唯一可用的循环类型。实际上还有很多其他的，而现在你不需要理解所有这些，所以值得看几个人的结构，这样你就可以在稍微不同的方式识别出相同的功能。</p>
+<p><code>for</code> 不是 JavaScript 中唯一可用的循环类型。实际上还有很多其他的，而现在你不需要理解所有这些，所以值得看几个人的结构，这样你就可以在稍微不同的方式识别出相同的功能。</p>
 
 <p>首先，我们来看看 while 循环。这个循环的语法如下所示：</p>
 
@@ -540,11 +540,11 @@ do {
 } while (i &lt; cats.length);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 再一次，它正如我们期望的那样工作 — 看一看它在<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">Github 在线运行</a> (或者查看<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">完整源代码</a>).</p>
+<p><strong>Note</strong>: 再一次，它正如我们期望的那样工作 — 看一看它在<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">Github 在线运行</a> (或者查看<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">完整源代码</a>).</p>
 </div>
 
 <div class="warning">
-<p><strong>Important</strong>: 使用 while 和 do...while — 所有循环都一样 — 你必须保证初始变量是迭代的，那么它才会逐渐地达到退出条件。不然，它将会永远循环下去，要么浏览器会强制终止它，要么它自己会崩溃。这称为无限循环。</p>
+<p><strong>Important</strong>: 使用 while 和 do...while — 所有循环都一样 — 你必须保证初始变量是迭代的，那么它才会逐渐地达到退出条件。不然，它将会永远循环下去，要么浏览器会强制终止它，要么它自己会崩溃。这称为无限循环。</p>
 </div>
 
 <h2 id="主动学习：启动倒计时！">主动学习：启动倒计时！</h2>
@@ -556,8 +556,8 @@ do {
  <li>对于每次迭代，创建一个新的段落并将其附加到输出&lt;div&gt;，我们使用<code>var output = document.querySelector('.output');</code>。在评论中，我们为您提供了需要在循环中某处使用的三条代码行：
   <ul>
    <li><code>var para = document.createElement('p');</code> —新建一个段落。</li>
-   <li><code>output.appendChild(para);</code> — 将段落附加到输出 <code>&lt;div&gt;</code>中。</li>
-   <li><code>para.textContent =</code> — 段落内的文字等于您放在右侧的任何内容。</li>
+   <li><code>output.appendChild(para);</code> — 将段落附加到输出 <code>&lt;div&gt;</code>中。</li>
+   <li><code>para.textContent =</code> — 段落内的文字等于您放在右侧的任何内容。</li>
   </ul>
  </li>
  <li>不同的迭代数字需要将不同的文本放在该迭代的段落中（您需要一个条件语句和多个<code>para.textContent = lines</code>）：
@@ -616,7 +616,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i &gt;= 0) {\n  var para = document.createElement(\'p\');\n  if(i === 10) {\n    para.textContent = \'Countdown \' + i;\n  } else if(i === 0) {\n    para.textContent = \'Blast off!\';\n  } else {\n    para.textContent = i;\n  }\n\n  output.appendChild(para);\n\n  i--;\n}';
+var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i &gt;= 0) {\n  var para = document.createElement(\'p\');\n  if(i === 10) {\n    para.textContent = \'Countdown \' + i;\n  } else if(i === 0) {\n    para.textContent = \'Blast off!\';\n  } else {\n    para.textContent = i;\n  }\n\n  output.appendChild(para);\n\n  i--;\n}';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -644,7 +644,7 @@ window.addEventListener('load', updateCode);
 <p>我们已经提供给您：</p>
 
 <ul>
- <li><code>var i = 0;</code> — 你的初始化程序</li>
+ <li><code>var i = 0;</code> — 你的初始化程序</li>
  <li><code>refused.textContent +=</code> - 将连接某些东西的行的开头，结束于<code>refused.textContent</code>。</li>
  <li><code>admitted.textContent +=</code> - 将连接某些内容到一行的结尾的行的开始。</li>
 </ul>
@@ -658,7 +658,7 @@ window.addEventListener('load', updateCode);
 
 <pre class="brush: html">&lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
-  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
+  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;textarea id="code" class="playable-code" style="height: 400px;"&gt;
@@ -729,7 +729,7 @@ while (exit-condition) {
   final-expression
 }</pre>
 
-<p>最后是 <code>do...while</code>:</p>
+<p>最后是 <code>do...while</code>:</p>
 
 <pre>initializer
 do {
@@ -764,7 +764,7 @@ do {
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="在本单元中">在本单元中</h2>
 
@@ -778,4 +778,4 @@ do {
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

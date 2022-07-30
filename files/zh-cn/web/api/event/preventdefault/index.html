@@ -92,7 +92,7 @@ translation_of: Web/API/Event/preventDefault
 <pre class="brush: js"><code>var myTextbox = document.getElementById('my-textbox');
 myTextbox.addEventListener('keypress', checkName, false);</code></pre>
 
-<p> <code>checkName()</code>方法可以监听按键并且决定是否允许按键的默认行为发生。</p>
+<p> <code>checkName()</code>方法可以监听按键并且决定是否允许按键的默认行为发生。</p>
 
 <pre class="brush: js">function checkName(evt) {
   var charCode = evt.charCode;
@@ -139,7 +139,7 @@ function displayWarning(msg) {
 
 <p>在事件流的任何阶段调用<code>preventDefault()</code>都会取消事件，这意味着任何通常被该实现触发并作为结果的默认行为都不会发生。</p>
 
-<p>你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不支持 cancelable 的事件调用<code>preventDefault()</code>将没有效果。</p>
+<p>你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不支持 cancelable 的事件调用<code>preventDefault()</code>将没有效果。</p>
 
 <h2 id="Specifications">规范</h2>
 

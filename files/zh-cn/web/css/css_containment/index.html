@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Containment
 translation_of: Web/CSS/CSS_Containment
 ---
 <p>{{CSSRef}}<br>
- CSS Containment 主要是通过允许开发者将某些子树从页面中独立出来，从而提高页面的性能。如果浏览器知道页面中的某部分是独立的，就能够优化渲染并获得性能提升。 这个定义通过一个 CSS 属性 {{cssxref("contain")}}来实现。本文阐述了这个定义的基础用法。</p>
+ CSS Containment 主要是通过允许开发者将某些子树从页面中独立出来，从而提高页面的性能。如果浏览器知道页面中的某部分是独立的，就能够优化渲染并获得性能提升。 这个定义通过一个 CSS 属性 {{cssxref("contain")}}来实现。本文阐述了这个定义的基础用法。</p>
 
 <h2 id="基本示例"><strong>基本示例</strong></h2>
 
@@ -26,19 +26,19 @@ translation_of: Web/CSS/CSS_Containment
   contain: content;
 }</pre>
 
-<p>在这个页面中，每个 article 都独立于其他的 article，所以，他们都被设置了 <code>contain: content</code> 属性，为了告诉浏览器他们相互独立。浏览器就可以通过这个信息来确定，如何渲染这些内容。比如，他可能不会渲染超出视图范围外的内容。</p>
+<p>在这个页面中，每个 article 都独立于其他的 article，所以，他们都被设置了 <code>contain: content</code> 属性，为了告诉浏览器他们相互独立。浏览器就可以通过这个信息来确定，如何渲染这些内容。比如，他可能不会渲染超出视图范围外的内容。</p>
 
 <p>如果我们给每个 <code>&lt;article&gt;</code> 节点都设置其 <code>contain</code> 属性为 <code>content</code>，当新的内容被加入到该节点中时，浏览器就知道不用重排和重绘节点以外的页面内容，但如果 <code>&lt;article&gt;</code>  设置了其 CSS 属性能让其大小根据其内容改变（比如 <code>height: auto</code>），浏览器依旧会进行其大小的计算。</p>
 
-<p>我们通过 <code>contain</code> 属性告诉浏览器，这些节点是独立的。</p>
+<p>我们通过 <code>contain</code> 属性告诉浏览器，这些节点是独立的。</p>
 
-<p><code>content</code> 其实是 <code>contain: layout paint</code> 的缩写。他告诉浏览器，该节点内部的渲染和排版完全独立于外部的其他内容，并且所有的内容渲染都只限定在其节点边界内部，溢出的部分不会显示。</p>
+<p><code>content</code> 其实是 <code>contain: layout paint</code> 的缩写。他告诉浏览器，该节点内部的渲染和排版完全独立于外部的其他内容，并且所有的内容渲染都只限定在其节点边界内部，溢出的部分不会显示。</p>
 
 <p>“节点的独立性”这个信息对于开发者来说，其实是事先知道的。但浏览器却不能够从你的内容里推测出哪些部分会是独立的。因此，这个属性给予了浏览器知晓这个信息的能力，并且允许其通过这个信息来进行一些可观的性能优化。</p>
 
 <h2 id="关键概念和术语">关键概念和术语</h2>
 
-<p>这个规范的定义只有一个属性， {{cssxref("contain")}}。他的值表明你想用何种方式控制其 containment。</p>
+<p>这个规范的定义只有一个属性， {{cssxref("contain")}}。他的值表明你想用何种方式控制其 containment。</p>
 
 <h3 id="Layout_containment">Layout containment</h3>
 
@@ -46,15 +46,15 @@ translation_of: Web/CSS/CSS_Containment
   contain: layout;
 }</pre>
 
-<p>布局的影响通常是整个页面的，比如你移动了某个节点，不论你是把它移动到哪儿，浏览器都会重新计算整个页面的布局。通过使用 <code>contain: layout</code> 你可以告诉浏览器，它只会影响到该节点内部的布局，所有内部的改变都不会影响外部页面的布局，这个容器建立了一个独立的格式化上下文。</p>
+<p>布局的影响通常是整个页面的，比如你移动了某个节点，不论你是把它移动到哪儿，浏览器都会重新计算整个页面的布局。通过使用 <code>contain: layout</code> 你可以告诉浏览器，它只会影响到该节点内部的布局，所有内部的改变都不会影响外部页面的布局，这个容器建立了一个独立的格式化上下文。</p>
 
 <p>额外注意：</p>
 
 <ul>
- <li><code>float</code> 布局会独立存在。</li>
+ <li><code>float</code> 布局会独立存在。</li>
  <li>布局边界不会存在边距塌陷。</li>
- <li>该布局容器会成为 <code>absolute</code>/<code>fixed</code> 定位的。</li>
- <li>容器会创建一个栈式上下文，因此可以使用 {{cssxref("z-index")}}。</li>
+ <li>该布局容器会成为 <code>absolute</code>/<code>fixed</code> 定位的。</li>
+ <li>容器会创建一个栈式上下文，因此可以使用 {{cssxref("z-index")}}。</li>
 </ul>
 
 <h3 id="Paint_containment">Paint containment</h3>
@@ -83,9 +83,9 @@ translation_of: Web/CSS/CSS_Containment
   contain: style;
 }</pre>
 
-<p>Despite the name, style containment does not provide scoped styles such as you would get with the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>. The main use case is to prevent situations where a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS Counter</a> could be changed in an element, which could then affect the rest of the tree. </p>
+<p>Despite the name, style containment does not provide scoped styles such as you would get with the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>. The main use case is to prevent situations where a <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS Counter</a> could be changed in an element, which could then affect the rest of the tree. </p>
 
-<p>Using <code>contain: style</code> would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.</p>
+<p>Using <code>contain: style</code> would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: <code>style</code> containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).</p>
@@ -119,5 +119,5 @@ contain: strict style;</pre>
 
 <ul>
  <li><a href="https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/">An Introduction to CSS Containment</a></li>
- <li><a href="https://dev.opera.com/articles/css-will-change-property">Everything You Need to Know About the CSS <code>will-change</code> Property</a></li>
+ <li><a href="https://dev.opera.com/articles/css-will-change-property">Everything You Need to Know About the CSS <code>will-change</code> Property</a></li>
 </ul>

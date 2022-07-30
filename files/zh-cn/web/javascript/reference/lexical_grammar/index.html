@@ -165,42 +165,42 @@ translation_of: Web/JavaScript/Reference/Lexical_grammar
 <p>第一种是<strong>单行注释（</strong>single-line comment），使用 <code>//</code>，会将该行中符号以后的文本都视为注释：</p>
 
 <pre class="brush: js">function comment() {
-  // 这是单行注释
-  console.log("Hello world!");
+  // 这是单行注释
+  console.log("Hello world!");
 }
 comment();
 </pre>
 
-<p>第二种是<strong>多行注释（</strong>multiple-line comment），使用 <code>/* */</code> ，这种方式更加灵活：</p>
+<p>第二种是<strong>多行注释（</strong>multiple-line comment），使用 <code>/* */</code> ，这种方式更加灵活：</p>
 
 <p>比如，可以在单行内使用多行注释：</p>
 
 <pre class="brush: js">function comment() {
-  /* 单行注释 */
-  console.log("Hello world!");
+  /* 单行注释 */
+  console.log("Hello world!");
 }
 comment();</pre>
 
 <p>也可以用来实现多行注释：</p>
 
 <pre class="brush: js">function comment() {
-  /* 多行注释，
-     直到终止符号才结束 */
-  console.log("Hello world!");
+  /* 多行注释，
+     直到终止符号才结束 */
+  console.log("Hello world!");
 }
 comment();</pre>
 
 <p>多行注释也可以用于行内注释，但这样会使代码可读性变差，所以要谨慎使用：</p>
 
 <pre class="brush: js">function comment(x) {
-  console.log("Hello " + x /* 引入 x 的值 */ + " !");
+  console.log("Hello " + x /* 引入 x 的值 */ + " !");
 }
 comment("world");</pre>
 
 <p>另外，块注释也可以用来屏蔽一段代码，只要将这段代码用块注释包裹起来就可以了：</p>
 
 <pre class="brush: js">function comment() {
-  /* console.log("Hello world!"); */
+  /* console.log("Hello world!"); */
 }
 comment();</pre>
 
@@ -210,7 +210,7 @@ comment();</pre>
 
 <p>专门的第三个注释语法，<strong>hashbang 注释</strong>正在 ECMAScript 中标准化（参见 <a href="https://github.com/tc39/proposal-hashbang">Hashbang 语法建议</a>）。</p>
 
-<p>Hashbang 注释的行为与单行（<code>//</code>）注释完全相同，但它以 <code>#!</code> 开头且<strong>仅在脚本或模块的绝对开头有效</strong>。还要注意，在 <code>#!</code> 之前不允许有任何类型的空格。注释由 <code>#!</code> 之后的所有字符组成直到第一行的末尾；只允许有一条这样的注释。</p>
+<p>Hashbang 注释的行为与单行（<code>//</code>）注释完全相同，但它以 <code>#!</code> 开头且<strong>仅在脚本或模块的绝对开头有效</strong>。还要注意，在 <code>#!</code> 之前不允许有任何类型的空格。注释由 <code>#!</code> 之后的所有字符组成直到第一行的末尾；只允许有一条这样的注释。</p>
 
 <p>Hashbang 注释指定特定 JavaScript 解释器的路径要用于执行脚本。示例如下：</p>
 
@@ -220,7 +220,7 @@ console.log("Hello world");
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong>：JavaScript 中的 hashbang 注释模仿 <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Unix 中的 shebangs</a>，用于指定适当的解释器运行文件。</p>
+<p><strong>备注：</strong>：JavaScript 中的 hashbang 注释模仿 <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Unix 中的 shebangs</a>，用于指定适当的解释器运行文件。</p>
 </div>
 
 <div class="warning">
@@ -472,7 +472,7 @@ tag `string text ${expression} string text`</pre>
 
 <h2 id="自动分号补全">自动分号补全</h2>
 
-<p>一些 <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript 语句</a>必须用分号结束，所以会被自动分号补全 (ASI) 影响：</p>
+<p>一些 <a href="/en-US/docs/Web/JavaScript/Reference/Statements">JavaScript 语句</a>必须用分号结束，所以会被自动分号补全 (ASI) 影响：</p>
 
 <ul>
  <li>空语句</li>

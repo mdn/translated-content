@@ -14,7 +14,7 @@ translation_of: Web/API/Selection/modify
 </div>
 </div>
 
-<p><strong><code>Selection.modify()</code></strong> 方法可以通过简单的文本命令来改变当前选区或光标位置。</p>
+<p><strong><code>Selection.modify()</code></strong> 方法可以通过简单的文本命令来改变当前选区或光标位置。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -32,10 +32,10 @@ translation_of: Web/API/Selection/modify
  <dd>调整的距离颗粒度。可选值有<code>"character"、</code><code>"word"、</code><code>"sentence"、</code><code>"line"、</code><code>"paragraph"、</code><code>"lineboundary"、</code><code>"sentenceboundary"、</code><code>"paragraphboundary"、</code><code>"documentboundary"。</code></dd>
 </dl>
 
-<div class="note"><strong>注意：</strong> Gecko <strong>不支持</strong> <code>"sentence"</code>, <code>"paragraph"</code>, <code>"sentenceboundary"</code>, <code>"paragraphboundary"和</code><code>"documentboundary"</code>. Webkit 和 Blink 支持。</div>
+<div class="note"><strong>注意：</strong> Gecko <strong>不支持</strong> <code>"sentence"</code>, <code>"paragraph"</code>, <code>"sentenceboundary"</code>, <code>"paragraphboundary"和</code><code>"documentboundary"</code>. Webkit 和 Blink 支持。</div>
 
 <div class="note">
-<p><strong>注意：</strong> 从{{Gecko("5.0")}}开始，不管是不是浏览器的默认行为，<code>"word"颗粒度不再包括</code>单词后面的空格。这让这个行为变得更加稳定，这也和之前的 Webkit 保持一致，然而不幸的是他们最近修改了这个默认行为。</p>
+<p><strong>注意：</strong> 从{{Gecko("5.0")}}开始，不管是不是浏览器的默认行为，<code>"word"颗粒度不再包括</code>单词后面的空格。这让这个行为变得更加稳定，这也和之前的 Webkit 保持一致，然而不幸的是他们最近修改了这个默认行为。</p>
 </div>
 
 <h2 id="例子">例子</h2>

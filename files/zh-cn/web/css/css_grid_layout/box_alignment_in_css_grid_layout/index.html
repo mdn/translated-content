@@ -8,7 +8,7 @@ tags:
   - Layout
 translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
-<p>如果你熟悉 <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flex 布局方式</a>，那么你应该已经学习过如何在 flex 容器中对 flex 项目恰当对齐的方法了。这些对齐属性最初出现在 flex 布局方式中，后来被移到了一个新的被称为“<a href="https://drafts.csswg.org/css-align/">盒模型对齐 Level 3</a>”的规范中，这个规范详细约定了在不同的布局方式下如何处理对齐问题。</p>
+<p>如果你熟悉 <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">flex 布局方式</a>，那么你应该已经学习过如何在 flex 容器中对 flex 项目恰当对齐的方法了。这些对齐属性最初出现在 flex 布局方式中，后来被移到了一个新的被称为“<a href="https://drafts.csswg.org/css-align/">盒模型对齐 Level 3</a>”的规范中，这个规范详细约定了在不同的布局方式下如何处理对齐问题。</p>
 
 <p>每种布局方式对盒模型对齐规范的实现都有一些差异，因为实际情况是每种方式都有各自的特点以及历史包袱，不能期望在所有的实现方式中都有完全一致的对齐表现。盒模型对齐规范对每种布局方式下的实现都有详细描述，不过如果你在各种布局方式下尝试过后可能会感到失望，因为浏览器对它还没有足够支持，好在浏览器已经支持网格布局下的对齐和空间分配了。本文将演示它是如何工作的，你会发现很多属性和值与 flex 布局中的用法是类似的，由于网格布局是二维的，flex 布局是一维的，所以你也会发现它们有一些小区别。我们就从处理网格对齐时用到的两条轴线开始吧。</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 
 <p>属性 {{cssxref("align-self")}} 和 {{cssxref("align-items")}} 用于控制项目在块方向的轴上对齐，通过设置这两个属性，可以改变网格区域中的项目的对齐方式。</p>
 
-<p>在下面的例子中，网格里包含四个网格区域，可以通过网格容器上的 {{cssxref("align-items")}} 属性，把项目的对齐方式设置为下列值之一：</p>
+<p>在下面的例子中，网格里包含四个网格区域，可以通过网格容器上的 {{cssxref("align-items")}} 属性，把项目的对齐方式设置为下列值之一：</p>
 
 <ul>
  <li><code>auto</code></li>
@@ -101,7 +101,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 
 <p>设置了 {{cssxref("align-items")}} 属性，就相当于为网格的所有子项目都设置了 {{cssxref("align-self")}} 属性，当然也可以为单独的某一个网格元素设置它的个性化的 <code>align-self</code> 属性。</p>
 
-<p>下一个例子演示把 <code>align-self</code> 设置为不同的值的对齐效果。第一个区域的 <code>align-self</code> 采用默认值即 <code>stretch</code>，第二个项目的 <code>align-self</code> 的值为 <code>start</code>，第三个项目的值为 <code>end</code>，第四个项目的值为 <code>center</code>。</p>
+<p>下一个例子演示把 <code>align-self</code> 设置为不同的值的对齐效果。第一个区域的 <code>align-self</code> 采用默认值即 <code>stretch</code>，第二个项目的 <code>align-self</code> 的值为 <code>start</code>，第三个项目的值为 <code>end</code>，第四个项目的值为 <code>center</code>。</p>
 
 <div id="alignment_2">
 <div class="hidden">
@@ -186,7 +186,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 
 <p>借用上面演示过的设置 {{cssxref("align-items")}} 的例子，下面把它改为设置 {{cssxref("justify-self")}} 属性。</p>
 
-<p>默认的对齐方式仍然是 <code>stretch</code>，除非项目具有固定宽高比。也就是说在默认情况下，网格项目会覆盖网格区域，除非改变它们的对齐方式。下面的例子中，第一个项目演示了默认的对齐效果：</p>
+<p>默认的对齐方式仍然是 <code>stretch</code>，除非项目具有固定宽高比。也就是说在默认情况下，网格项目会覆盖网格区域，除非改变它们的对齐方式。下面的例子中，第一个项目演示了默认的对齐效果：</p>
 
 <div id="alignment_3">
 <div class="hidden">
