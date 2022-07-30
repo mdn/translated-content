@@ -152,4 +152,4 @@ Para comprobarlo, abra [useragentstring.com](http://useragentstring.com/) y veri
 
 ## Aprenda más
 
-Para aprender más sobre todas las cosas que puede hacer con la API `webRequest`, vea su propia [documentación de referencia](/en-US/Add-ons/WebExtensions/API/WebRequest).
+Para aprender más sobre todas las cosas que puede hacer con la API `webRequest`, vea su propia [documentación de referencia](/es/Add-ons/WebExtensions/API/WebRequest).
