@@ -61,7 +61,7 @@ WebIDL インターフェイスは、真のインターフェイスであれ、�
 interface HTMLMediaElement : HTMLElement {…}
 ```
 
-継承チェーンはサイドバーに自動的に掲載されます（ \{{APIRef}} マクロを使用）。また、 SVG 画像としてマクロの \{{InheritanceDiagram}} を使って追加することもできます。
+継承チェーンはサイドバーに自動的に掲載されます（\\{{APIRef}} マクロを使用）。また、 SVG 画像としてマクロの \\{{InheritanceDiagram}} を使って追加することもできます。
 
 ### ミックスイン
 
@@ -103,7 +103,7 @@ IDL で [HTMLHyperlinkElementUtils](https://html.spec.whatwg.org/multipage/links
 そのミックスインを実装しているインターフェイスを探してください。
 [HTMLAnchorElement](https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement) のように、ミックスインを実装するインターフェイスを探し、それらのインターフェイス上で直接ミックスインのメンバーを文書化します。
 
-実際には、 `HTMLHyperlinkElementUtils` を文書化するのではなく、 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) や [`HTMLAreaElement`] (/ja/docs/Web/API/HTMLAreaElement) のような具体的なインターフェイスにドキュメントが追加されます。
+実際には、 `HTMLHyperlinkElementUtils` を文書化するのではなく、 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) や [`HTMLAreaElement`](/ja/docs/Web/API/HTMLAreaElement) のような具体的なインターフェイスにドキュメントが追加されます。
 
 `HTMLHyperlinkElementUtils.hash` を適切に説明する以下の 2 ページを参照してください。
 
@@ -164,7 +164,7 @@ partial interface Performance {
 - `ServiceWorker`
   - : この部分インターフェイスは {{domxref('ServiceWorkerGlobalScope')}} のみで利用可能です。
 
-`System` のような別の値も可能ですが、これには[特別な意味](/ja/docs/Mozilla/WebIDL_bindings#exposed)があり、文書化される必要はありません。
+`System` のような別の値も可能ですが、これには[特別な意味](/ja/docs/Mozilla/WebIDL_bindings#exposed)があり、文書化する必要はありません。
 
 これらの可能な値は、それ自体が WebIDL ファイルで定義されていることに注意してください。インターフェイスは `[Global=xyz]` という注釈を持つことができます。これは、このタイプのオブジェクトがグローバルスコープとして使用される場合、 `[Exposed]` の値が `xyz` である インターフェイス、プロパティ、メソッドがすべて利用可能になることを意味します。
 
@@ -576,10 +576,10 @@ interface InterfaceIdentifier {
 
 2019 年 9 月より、 WebIDL のコンストラクターの構文が更新されました。コンストラクターの構文には、インターフェイスの拡張属性が含まれなくなりました。
 
-```js
+```webidl
 [Constructor(DOMString str)]
     interface MyInterface {
-      ...
+     // …
 };
 ```
 
