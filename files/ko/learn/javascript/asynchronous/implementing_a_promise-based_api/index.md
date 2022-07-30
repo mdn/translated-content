@@ -151,7 +151,7 @@ button.addEventListener('click', () => {
 
 이름과 `deplay`에 다른 값을 설정해 보세요. `deply`에 음수도 설정해 보세요.
 
-## alamr()을 async와 await와 함께 사용하기
+## alarm()을 async와 await와 함께 사용하기
 
 `alarm()`은 `Promise`를 반환하기 때문에 `promise.all()`과 `async` / `await` 등 프로미스로 할 수 있는 모든 것을 할 수 있습니다.
 
