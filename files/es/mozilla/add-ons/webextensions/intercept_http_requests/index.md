@@ -107,7 +107,7 @@ Esta vez no se está interceptando cada solicitud: la opción `{urls:[pattern], 
 
 Dése cuenta también, que se esta pasando la opción llamada `"blocking"`: se necesita pasar cada vez que se requiera modificar la solicitud. Esto hace que la función del escuchador bloquee la solicitud de la red, así que el navegador espera que el escuchador retorne antes de continuar. Vea la documentación {{WebExtAPIRef("webRequest.onBeforeRequest")}} para conocer más sobre `"blocking"`.
 
-Para probarlo, abra una página de MDN que contenga bastantes imágenes (por ejemplo <https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor>), [recargue la WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), y luego recargue la página de MDN:
+Para probarlo, abra una página de MDN que contenga bastantes imágenes (por ejemplo <https://developer.mozilla.org/es/docs/Tools/Network_Monitor>), [recargue la WebExtension](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), y luego recargue la página de MDN:
 
 {{EmbedYouTube("ix5RrXGr0wA")}}
 
