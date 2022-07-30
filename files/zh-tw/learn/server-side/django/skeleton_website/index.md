@@ -3,185 +3,184 @@ title: 'Django 教學 2: 創建一個骨架網站'
 slug: Learn/Server-side/Django/skeleton_website
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</div>
-
-<p>Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"，在這個框架的基礎上，你可以繼續填充整站使用的 settings， urls，模型(models)，視圖(views)和模板(templates )。</p>
+Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"，在這個框架的基礎上，你可以繼續填充整站使用的 settings， urls，模型(models)，視圖(views)和模板(templates )。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提:</th>
-   <td>創建 Django 的開發環境。複習 Django 教學。</td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>能夠使用 Django 提供的工具，搭建你自己的網站。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">前提:</th>
+      <td>創建 Django 的開發環境。複習 Django 教學。</td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>能夠使用 Django 提供的工具，搭建你自己的網站。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="概覽">概覽</h2>
+## 概覽
 
-<p>這篇文章會展示怎樣創建一個網站的"框架"，在這個框架的基礎上,你可以繼續填充整站使用的settings， urls，模型(models)，視圖(views)和模板(templates)（我們會在接下來的文章裡討論）。</p>
+這篇文章會展示怎樣創建一個網站的"框架"，在這個框架的基礎上,你可以繼續填充整站使用的 settings， urls，模型(models)，視圖(views)和模板(templates)（我們會在接下來的文章裡討論）。
 
-<p>搭建 “框架” 的過程很直接:</p>
+搭建 “框架” 的過程很直接:
 
-<ol>
- <li>使用 <code>django-admin</code>工具創建工程的文件夾，基本的文件模板和工程管理腳本（<strong>manage.py</strong>）。</li>
- <li>用 <strong>manage.py</strong> 創建一個或多個<em>應用</em>。
-  <div class="note">
-  <p><strong>備註：</strong> 一個網站可能由多個部分組成，比如，主要頁面，博客，wiki，下載區域等。Django鼓勵將這些部分作為分開的應用開發。如果這樣的話，在需要可以在不同的工程中復用這些應用。</p>
-  </div>
- </li>
- <li>工程裡註冊新的應用。</li>
- <li>為每個應用分配url。</li>
-</ol>
+1.  使用 `django-admin`工具創建工程的文件夾，基本的文件模板和工程管理腳本（**manage.py**）。
+2.  用 **manage.py** 創建一個或多個*應用*。
 
-<p>為  <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">locallibrary</a>  這個項目創建的網站文件夾和它的工程文件夾都命名為<em>locallibrary</em>。我們只創建一個名為<em>catalog</em>的應用。最高層的項目文件結構如下所示：</p>
+    > **備註：** 一個網站可能由多個部分組成，比如，主要頁面，博客，wiki，下載區域等。Django 鼓勵將這些部分作為分開的應用開發。如果這樣的話，在需要可以在不同的工程中復用這些應用。
 
-<pre class="brush: bash"><em>locallibrary/         # Website folder</em>
-    <strong>manage.py         </strong># Script to run Django tools for this project (created using django-admin)
-    <em>locallibrary/     # Website/project folder </em>(created using django-admin)
-    <em>catalog/          # Application folder </em>(created using manage.py)
-</pre>
+3.  工程裡註冊新的應用。
+4.  為每個應用分配 url。
 
-<p>接下來的部分，會詳細討論創建網站框架的過程，並會展示怎麼測試這些變化。最後，我們會討論在這個階段裡，你可以設置的全站配置。</p>
+為 [locallibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) 這個項目創建的網站文件夾和它的工程文件夾都命名為*locallibrary*。我們只創建一個名為*catalog*的應用。最高層的項目文件結構如下所示：
 
-<h2 id="創建專案項目">創建專案項目</h2>
+```bash
+locallibrary/         # Website folder
+    manage.py         # Script to run Django tools for this project (created using django-admin)
+    locallibrary/     # Website/project folder (created using django-admin)
+    catalog/          # Application folder (created using manage.py)
+```
 
-<p>首先打開命令提示符/終端，確保您在<a href="/zh-TW/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment">虛擬環境</a>中，導航到您要存放Django應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為您的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用cd命令進入該文件夾：</p>
+接下來的部分，會詳細討論創建網站框架的過程，並會展示怎麼測試這些變化。最後，我們會討論在這個階段裡，你可以設置的全站配置。
 
-<pre class="brush: bash">mkdir locallibrary
-cd locallibrary</pre>
+## 創建專案項目
 
-<p>用<code>django-admin startproject</code>命令創建新項目，並進入該文件夾。</p>
+首先打開命令提示符/終端，確保您在[虛擬環境](/zh-TW/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment)中，導航到您要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為您的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
 
-<pre class="brush: bash">django-admin startproject locallibrary
-cd locallibrary</pre>
+```bash
+mkdir locallibrary
+cd locallibrary
+```
 
-<p><code>django-admin</code>工具會創建如下所示的文件夾結構</p>
+用`django-admin startproject`命令創建新項目，並進入該文件夾。
 
-<pre class="brush: bash"><em>locallibrary/</em>
+```bash
+django-admin startproject locallibrary
+cd locallibrary
+```
+
+`django-admin`工具會創建如下所示的文件夾結構
+
+```bash
+locallibrary/
     manage.py
-    <em>locallibrary/</em>
+    locallibrary/
         __init__.py
         settings.py
         urls.py
-        wsgi.py</pre>
+        wsgi.py
+```
 
-<p>locallibrary項目的子文件夾是整個網站的進入點：</p>
+locallibrary 項目的子文件夾是整個網站的進入點：
 
-<ul>
- <li><strong>__init__.py</strong> 是一個空文件，指示 Python 將此目錄視為 Python 套件。</li>
- <li><strong>settings.py</strong>  包含所有的網站設置。這是可以註冊所有創建的應用的地方，也是靜態文件，數據庫配置的地方，等等。</li>
- <li><strong>urls.py</strong>定義了網站url到view的映射<strong>。</strong>雖然這裡可以包含所有的url，但是更常見的做法是把應用相關的url包含在相關應用中，你可以在接下來的教程裡看到。</li>
- <li><strong>wsgi.py </strong> 幫助Django應用和網絡服務器間的通訊。你可以把這個當作模板。</li>
-</ul>
+- **\_\_init\_\_.py** 是一個空文件，指示 Python 將此目錄視為 Python 套件。
+- **settings.py** 包含所有的網站設置。這是可以註冊所有創建的應用的地方，也是靜態文件，數據庫配置的地方，等等。
+- **urls.py**定義了網站 url 到 view 的映射**。**雖然這裡可以包含所有的 url，但是更常見的做法是把應用相關的 url 包含在相關應用中，你可以在接下來的教程裡看到。
+- **wsgi.py** 幫助 Django 應用和網絡服務器間的通訊。你可以把這個當作模板。
 
-<p><strong>manage.py</strong>腳本可以創建應用，和資料庫通訊，啟動開發用網絡服務器。</p>
+**manage.py**腳本可以創建應用，和資料庫通訊，啟動開發用網絡服務器。
 
-<h2 id="創建_catalog_應用">創建 catalog 應用</h2>
+## 創建 catalog 應用
 
-<p>接下來，在locallibrary項目裡，使用下面的命令創建catalog應用（和您項目的<strong>manage.py</strong>在同一個文件夾下）</p>
+接下來，在 locallibrary 項目裡，使用下面的命令創建 catalog 應用（和您項目的**manage.py**在同一個文件夾下）
 
-<pre class="brush: bash">python3 manage.py startapp catalog</pre>
+```bash
+python3 manage.py startapp catalog
+```
 
-<div class="note">
-<p><strong>備註：</strong> Linux/Mac OS X應用可以使用上面的命令。在windows平台下應該改為： <code>py -3 manage.py startapp catalog</code></p>
+> **備註：** Linux/Mac OS X 應用可以使用上面的命令。在 windows 平台下應該改為： `py -3 manage.py startapp catalog`
+>
+> 如果你是 windows 系統，在這個部分用`py -3`替代`python3`。
+>
+> 如果您使用的是 Python 3.7.0，則應使用`py manage.py startapp catalog`
 
-<p>如果你是windows系統，在這個部分用<code>py -3</code>替代<code>python3</code>。</p>
+這個工具創建了一個新的文件夾，並為該應用創建了不同的文件（下面黑體所示）。絕大多數文件的命名和它們的目的有關（比如視圖函數就是**views.py，**模型就是**models.py，**測試是**tests.py，**網站管理設置是**admin.py，**註冊應用是**apps.py）**，並且還包含了為項目所用的最小模板。
 
-<p>如果您使用的是Python 3.7.0，則應使用<code>py manage.py startapp catalog</code></p>
-</div>
+執行命令後的文件夾結構如下所示：
 
-<p>這個工具創建了一個新的文件夾，並為該應用創建了不同的文件（下面黑體所示）。絕大多數文件的命名和它們的目的有關（比如視圖函數就是<strong>views.py，</strong>模型就是<strong>models.py，</strong>測試是<strong>tests.py，</strong>網站管理設置是<strong>admin.py，</strong>註冊應用是<strong>apps.py）</strong>，並且還包含了為項目所用的最小模板。</p>
-
-<p>執行命令後的文件夾結構如下所示：</p>
-
-<pre class="brush: bash"><em>locallibrary/</em>
+```bash
+locallibrary/
     manage.py
-    <em>locallibrary/
-</em><strong>    <em>catalog/</em>
+    locallibrary/
+    catalog/
         admin.py
         apps.py
         models.py
         tests.py
         views.py
         __init__.py
-        <em>migrations/</em></strong>
-</pre>
+        migrations/
+```
 
-<p>除上面所說的文件外，我們還有：</p>
+除上面所說的文件外，我們還有：
 
-<ul>
- <li>一個<em>migration</em>文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。</li>
- <li><strong>__init__.py</strong> —一個空文件，Django/Python會將這個文件作為<a href="https://docs.python.org/3/tutorial/modules.html#packages">Python套件包</a>並允許你在項目的其他部分使用它。</li>
-</ul>
+- 一個*migration*文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。
+- **\_\_init\_\_.py** —一個空文件，Django/Python 會將這個文件作為[Python 套件包](https://docs.python.org/3/tutorial/modules.html#packages)並允許你在項目的其他部分使用它。
 
-<div class="note">
-<p><strong>備註：</strong> 你注意到上面的文件裡有些缺失嘛？儘管有了 views 和 models 的文件，可是 url 映射，網站模板，靜態文件在哪裡呢？我們會在接下來的部分展示如何創建它們（並不是每個網站都需要，不過這個例子需要）。</p>
-</div>
+> **備註：** 你注意到上面的文件裡有些缺失嘛？儘管有了 views 和 models 的文件，可是 url 映射，網站模板，靜態文件在哪裡呢？我們會在接下來的部分展示如何創建它們（並不是每個網站都需要，不過這個例子需要）。
 
-<h2 id="註冊catalog應用">註冊catalog應用</h2>
+## 註冊 catalog 應用
 
-<p>既然應用已經創建好了，我們還必須在項目裡註冊它，以便工具在運行時它會包括在裡面（比如在數據庫裡添加模型時）。在項目的settings裡，把應用添加進<code>INSTALLED_APPS</code> ，就完成了註冊。</p>
+既然應用已經創建好了，我們還必須在項目裡註冊它，以便工具在運行時它會包括在裡面（比如在數據庫裡添加模型時）。在項目的 settings 裡，把應用添加進`INSTALLED_APPS` ，就完成了註冊。
 
-<p>打開項目設置文件  <strong>locallibrary/locallibrary/settings.py</strong>找到   <code>INSTALLED_APPS</code> 列表裡的定義。如下所示，在列表的最後添加新的一行。</p>
+打開項目設置文件 **locallibrary/locallibrary/settings.py**找到 `INSTALLED_APPS` 列表裡的定義。如下所示，在列表的最後添加新的一行。
 
-<pre class="brush: bash">INSTALLED_APPS = [
+```bash
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<strong>    'catalog.apps.CatalogConfig', </strong>
-]</pre>
+    'catalog.apps.CatalogConfig',
+]
+```
 
-<p>新的這行，詳細說明了應用配置文件在( <code>CatalogConfig</code>) <strong>/locallibrary/catalog/apps.py</strong>  裡，當你創建應用時就完成了這個過程。</p>
+新的這行，詳細說明了應用配置文件在( `CatalogConfig`) **/locallibrary/catalog/apps.py** 裡，當你創建應用時就完成了這個過程。
 
-<div class="note">
-<p><strong>備註：</strong> 注意到<code>INSTALLED_APPS已经有许多其他的应用了</code> (還有 <code>MIDDLEWARE</code>,在settings的下面)。這些應用為   <a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django administration site</a>  提供了支持和許多功能(包括會話，認證系統等)。</p>
-</div>
+> **備註：** 注意到`INSTALLED_APPS已经有许多其他的应用了` (還有 `MIDDLEWARE`,在 settings 的下面)。這些應用為 [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) 提供了支持和許多功能(包括會話，認證系統等)。
 
-<h2 id="配置資料庫">配置資料庫</h2>
+## 配置資料庫
 
-<p>現在可以為項目配置資料庫了——為了避免性能上的差異，最好在生產和開發中使用同一種資料庫。你可以在<a href="https://docs.djangoproject.com/en/1.10/ref/settings/#databases">資料庫</a>  裡找到不同的設置方法(Django文檔)。 </p>
+現在可以為項目配置資料庫了——為了避免性能上的差異，最好在生產和開發中使用同一種資料庫。你可以在[資料庫](https://docs.djangoproject.com/en/1.10/ref/settings/#databases) 裡找到不同的設置方法(Django 文檔)。
 
-<p>在這個項目裡，我們使用SQLite。因為在展示用的數據庫中，我們不會有很多並發存取的行為。同時，也因為SQLite不需要額外的配置工作。你可以在<strong>settings.py</strong>裡看到這個數據庫怎樣配置的。（更多信息如下所示）</p>
+在這個項目裡，我們使用 SQLite。因為在展示用的數據庫中，我們不會有很多並發存取的行為。同時，也因為 SQLite 不需要額外的配置工作。你可以在**settings.py**裡看到這個數據庫怎樣配置的。（更多信息如下所示）
 
-<pre class="brush: python">DATABASES = {
+```python
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-</pre>
+```
 
-<p>因為我們使用SQLite，不需要其他的設置了。我們繼續吧！</p>
+因為我們使用 SQLite，不需要其他的設置了。我們繼續吧！
 
-<h2 id="其他項目設置">其他項目設置</h2>
+## 其他項目設置
 
-<p>settings.py裡還包括其他的一些設置，現在只需要改變<a href="https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE">時區</a> —改為和標準<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">tz時區數據表</a>  裡的字符串相同就可以了（數據表裡的TZ列有你想要的時區）。把<code>TIME_ZONE</code>的值改為你的時區，比如</p>
+settings.py 裡還包括其他的一些設置，現在只需要改變[時區](https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-TIME_ZONE) —改為和標準[tz 時區數據表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 裡的字符串相同就可以了（數據表裡的 TZ 列有你想要的時區）。把`TIME_ZONE`的值改為你的時區，比如
 
-<pre class="brush: python">TIME_ZONE = 'Asia/Taipei'</pre>
+```python
+TIME_ZONE = 'Asia/Taipei'
+```
 
-<p>有兩個設置你現在不會用到，不過你應該留意：</p>
+有兩個設置你現在不會用到，不過你應該留意：
 
-<ul>
- <li><code>SECRET_KEY</code>. 這個密匙值，是Django網站安全策略的一部分。如果在開發環境中，沒有保護好這個密匙，把代碼投入生產環境時，最好用不同的密匙代替。（可能從環境變量或文件中讀取）。</li>
- <li><code>DEBUG</code>. 這個會在debug日誌裡輸出錯誤信息，而不是輸入H​​TTP的返回碼。在生產環境中，它應設置為false，因為輸出的錯誤信息，會幫助想要攻擊網站的人。</li>
-</ul>
+- `SECRET_KEY`. 這個密匙值，是 Django 網站安全策略的一部分。如果在開發環境中，沒有保護好這個密匙，把代碼投入生產環境時，最好用不同的密匙代替。（可能從環境變量或文件中讀取）。
+- `DEBUG`. 這個會在 debug 日誌裡輸出錯誤信息，而不是輸入 H​​TTP 的返回碼。在生產環境中，它應設置為 false，因為輸出的錯誤信息，會幫助想要攻擊網站的人。
 
-<h2 id="鏈接URL映射器">鏈接URL映射器</h2>
+## 鏈接 URL 映射器
 
-<p>在項目文件夾裡，創建網站時同時生成了URL映射器（<strong>urls.py</strong>）。儘管你可以用它來管理所有的URL映射，但是更常用的做法是把URL映射留到它們相關的應用中。</p>
+在項目文件夾裡，創建網站時同時生成了 URL 映射器（**urls.py**）。儘管你可以用它來管理所有的 URL 映射，但是更常用的做法是把 URL 映射留到它們相關的應用中。
 
-<p>打開<strong>locallibrary/locallibrary/urls.py</strong>  注意指導文字解釋了一些使用URL映射器的方法。</p>
+打開**locallibrary/locallibrary/urls.py** 注意指導文字解釋了一些使用 URL 映射器的方法。
 
-<pre class="brush: python">"""locallibrary URL Configuration
+```python
+"""locallibrary URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -202,119 +201,116 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
-</pre>
+```
 
-<p>URL映射通過<code>urlpatterns</code> 變量管理，它是一個<code>path()</code>函數的Python列表。每個<code>path()</code>函數，要么將URL式樣(URL pattern)關聯到特定視圖( <em>specific view)</em>，當模式匹配時將會顯示，要么關聯到某個URL式樣列表的測試代碼。(第二種情況下，URL式樣是目標模型裡的“基本URL”). <code>urlpatterns</code> 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到<code>admin.site.urls</code>。這個函數，包含了Administration應用自己的URL映射定義。</p>
+URL 映射通過`urlpatterns` 變量管理，它是一個`path()`函數的 Python 列表。每個`path()`函數，要么將 URL 式樣(URL pattern)關聯到特定視圖( _specific view)_，當模式匹配時將會顯示，要么關聯到某個 URL 式樣列表的測試代碼。(第二種情況下，URL 式樣是目標模型裡的“基本 URL”). `urlpatterns` 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到`admin.site.urls`。這個函數，包含了 Administration 應用自己的 URL 映射定義。
 
-<div class="note">
-<p><strong>備註：</strong> <code>path()</code>中的路由是一個字符串，用於定義要匹配的URL模式。該字符串可能包括一個命名變量（在尖括號中），例如<code>'catalog/&lt;id&gt;/'</code>。此模式將匹配<strong> /catalog/</strong><em>any_chars</em><strong>/</strong> 等URL，並將any_chars 作為參數名稱為<code>id</code> 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式</p>
-</div>
+> **備註：** `path()`中的路由是一個字符串，用於定義要匹配的 URL 模式。該字符串可能包括一個命名變量（在尖括號中），例如`'catalog/<id>/'`。此模式將匹配 **/catalog/any_chars** 等 URL，並將 any_chars 作為參數名稱為`id` 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式
 
-<p>在<code>urlpatterns</code> 列表的下面一行，插入下面的代码。這個新項目包括一個 <code>path()</code> ，它使用模式 <code>catalog/</code> 轉發請求到模塊 <code>catalog.urls</code>（具有相對 URL <strong>/catalog/urls.py </strong>的文件）。</p>
+在`urlpatterns` 列表的下面一行，插入下面的代码。這個新項目包括一個 `path()` ，它使用模式 `catalog/` 轉發請求到模塊 `catalog.urls`（具有相對 URL **/catalog/urls.py** 的文件）。
 
-<pre class="brush: python"># Use include() to add paths from the catalog application
+```python
+# Use include() to add paths from the catalog application
 from django.conf.urls import include
 from django.urls import path
 
 urlpatterns += [
     path('catalog/', include('catalog.urls')),
 ]
-</pre>
+```
 
-<p>現在我們把我們網站的根URL(例如<code>127.0.0.1:8000</code>)，重新導向URL <code>127.0.0.1:8000/catalog/</code>;這是項目中唯一的應用，所以我們最好這樣做。為了完成這個目標，我們使用一個特別的視圖函數( <code>RedirectView</code>)，當<code>path()</code>函數中的 url 式樣被識別以後（在這個例子中是根 url），就會把第一個參數，也就是新的相對 URL ，重定向到（<code>/catalog/</code>）。</p>
+現在我們把我們網站的根 URL(例如`127.0.0.1:8000`)，重新導向 URL `127.0.0.1:8000/catalog/`;這是項目中唯一的應用，所以我們最好這樣做。為了完成這個目標，我們使用一個特別的視圖函數( `RedirectView`)，當`path()`函數中的 url 式樣被識別以後（在這個例子中是根 url），就會把第一個參數，也就是新的相對 URL ，重定向到（`/catalog/`）。
 
-<p>把下面的代碼加到文件最後：</p>
+把下面的代碼加到文件最後：
 
-<pre class="brush: python">#Add URL maps to redirect the base URL to our application
+```python
+#Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='/catalog/')),
-]</pre>
+]
+```
 
-<p>將路徑函數的第一個參數留空，用以表示'/'。如果您將第一個參數寫為'/'，Django會在您啟動開發服務器時給出以下警告：</p>
+將路徑函數的第一個參數留空，用以表示'/'。如果您將第一個參數寫為'/'，Django 會在您啟動開發服務器時給出以下警告：
 
-<pre class="brush: python">System check identified some issues:
+```python
+System check identified some issues:
 
 WARNINGS:
 ?: (urls.W002) Your URL pattern '/' has a route beginning with a '/'.
 Remove this slash as it is unnecessary.
 If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
-</pre>
+```
 
-<p>Django默認不提供CSS，JavaScript和圖像等靜態文件，但在創建站點時，開發Web服務器這樣做是有用的。作為此URL映射器的最終添加，您可以通過附加以下幾行，在開發期間啟用靜態文件的提供。</p>
+Django 默認不提供 CSS，JavaScript 和圖像等靜態文件，但在創建站點時，開發 Web 服務器這樣做是有用的。作為此 URL 映射器的最終添加，您可以通過附加以下幾行，在開發期間啟用靜態文件的提供。
 
-<p>現在將以下最終區塊，添加到文件的底部：</p>
+現在將以下最終區塊，添加到文件的底部：
 
-<pre><code># Use static() to add url mapping to serve static files during development (only)
-from django.conf import settings
-from django.conf.urls.static import static
+    # Use static() to add url mapping to serve static files during development (only)
+    from django.conf import settings
+    from django.conf.urls.static import static
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</code>
-</pre>
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-<div class="note">
-<p><strong>備註：</strong> 有許多方法可以擴充<code>urlpatterns</code>列表（上面我們只是使用<code>+= </code>運算符，附加一個新的列表項，來清楚地分隔舊代碼和新代碼）。我們可以改為在原始列表定義中，包含這個新的模式映射：</p>
+> **備註：** 有許多方法可以擴充`urlpatterns`列表（上面我們只是使用`+= `運算符，附加一個新的列表項，來清楚地分隔舊代碼和新代碼）。我們可以改為在原始列表定義中，包含這個新的模式映射：
+>
+> ```python
+> urlpatterns = [
+>     path('admin/', admin.site.urls),
+>     path('catalog/', include('catalog.urls')),
+>     path('', RedirectView.as_view(url='/catalog/', permanent=True)),
+> ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+> ```
+>
+> 此外，我們將導入行（`from django.urls import include`）包含在使用它的代碼中（因此很容易看到我們添加的內容），但通常將所有導入行包含在一個 Python 文件的頂部。
 
-<pre class="brush: python">urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('catalog/', include('catalog.urls')),
-    path('', RedirectView.as_view(url='/catalog/', permanent=True)),
-] + <code>static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</code>
-</pre>
+最後一步，在**catalog**文件夾中，創建一個名為**urls.py**的文件，並添加以下文本，以定義（空）導入的`urlpatterns`。這是我們在構建應用程序時，添加模式的地方。
 
-<p>此外，我們將導入行（<code>from django.urls import include</code>）包含在使用它的代碼中（因此很容易看到我們添加的內容），但通常將所有導入行包含在一個Python文件的頂部。</p>
-</div>
-
-<p>最後一步，在<strong>catalog</strong>文件夾中，創建一個名為<strong>urls.py</strong>的文件，並添加以下文本，以定義（空）導入的<code>urlpatterns</code>。這是我們在構建應用程序時，添加模式的地方。</p>
-
-<pre class="brush: python">from django.urls import path
+```python
+from django.urls import path
 from . import views
 
 
 urlpatterns = [
 
 ]
-</pre>
+```
 
-<h2 id="測試網站框架">測試網站框架</h2>
+## 測試網站框架
 
-<p>現在我們有了一個完整的框架項目。這個網站現在還什麼都不能做，但是我們仍然要運行，以確保我們的更改是有效的。</p>
+現在我們有了一個完整的框架項目。這個網站現在還什麼都不能做，但是我們仍然要運行，以確保我們的更改是有效的。
 
-<p>在運行前，我們應該先運行<em>數據庫遷移</em>。這會更新我們的數據庫並且包含所有安裝的應用（同時去除一些警告）。</p>
+在運行前，我們應該先運行*數據庫遷移*。這會更新我們的數據庫並且包含所有安裝的應用（同時去除一些警告）。
 
-<h3 id="運行資料庫遷移">運行資料庫遷移</h3>
+### 運行資料庫遷移
 
-<p>Django使用對象關係映射器（ORM），將Django代碼中的模型定義，映射到底層資料庫使用的數據結構。當我們更改模型定義時，Django會跟踪更改，並創建資料庫遷移腳本(位於 <strong>/locallibrary/catalog/migrations/</strong> )，來自動遷移資料庫中的底層數據結構。</p>
+Django 使用對象關係映射器（ORM），將 Django 代碼中的模型定義，映射到底層資料庫使用的數據結構。當我們更改模型定義時，Django 會跟踪更改，並創建資料庫遷移腳本(位於 **/locallibrary/catalog/migrations/** )，來自動遷移資料庫中的底層數據結構。
 
-<p>當我們創建網站時，Django會自動添加一些模型，供網站的管理部分使用（稍後我們會解釋）。運行以下命令，來定義資料庫中這些模型的表（確認你位於包含 <strong>manage.py </strong>的目錄中):</p>
+當我們創建網站時，Django 會自動添加一些模型，供網站的管理部分使用（稍後我們會解釋）。運行以下命令，來定義資料庫中這些模型的表（確認你位於包含 **manage.py** 的目錄中):
 
-<pre class="brush: bash">python3 manage.py makemigrations
+```bash
+python3 manage.py makemigrations
 python3 manage.py migrate
-</pre>
+```
 
-<div class="warning">
-<p><strong>警告：</strong> 每次模型改變，都需要運行以上命令，來影響需要存放的數據結構（包括添加和刪除整個模型和單個字段）。</p>
-</div>
+> **警告：** 每次模型改變，都需要運行以上命令，來影響需要存放的數據結構（包括添加和刪除整個模型和單個字段）。
 
-<p>該<strong><code>makemigrations</code></strong>命令，創建（但不實施）項目中安裝的所有應用程序的遷移（你可以指定應用程序名稱，也可以為單個項目運行遷移）。這讓你有機會在應用這些遷移之前，檢查這些遷移代碼—當你是Django專家時，你可以選擇稍微調整它們。</p>
+該**`makemigrations`**命令，創建（但不實施）項目中安裝的所有應用程序的遷移（你可以指定應用程序名稱，也可以為單個項目運行遷移）。這讓你有機會在應用這些遷移之前，檢查這些遷移代碼—當你是 Django 專家時，你可以選擇稍微調整它們。
 
-<p>這個 <strong><code>migrate</code></strong>命令，真正對你的資料庫實施遷移（Django跟踪哪些已添加到當前資料庫）。</p>
+這個 **`migrate`**命令，真正對你的資料庫實施遷移（Django 跟踪哪些已添加到當前資料庫）。
 
-<div class="note">
-<p><strong>備註：</strong> 參見 <a href="https://docs.djangoproject.com/en/2.0/topics/migrations/">Migrations</a> (Django 文件) ，了解較少使用的遷移命令的其他信息。</p>
-</div>
+> **備註：** 參見 [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Django 文件) ，了解較少使用的遷移命令的其他信息。
 
-<h3 id="運行網站">運行網站</h3>
+### 運行網站
 
-<p>在開發期間，你首先要使用開發網頁服務器，然後用你本機的瀏覽器觀看，來測試你的網站。</p>
+在開發期間，你首先要使用開發網頁服務器，然後用你本機的瀏覽器觀看，來測試你的網站。
 
-<div class="note">
-<p><strong>備註：</strong> 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（http://127.0.0.1:8000/),但你也可以選擇其他端口。有關更多信息，查閱（<a href="https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver">django-admin and manage.py: runserver</a>）(Django docs).</p>
-</div>
+> **備註：** 這個開發網頁服務器並不夠強大，不足以用於生產使用，但是它使你在開發期間，能非常容易獲得你的 Django 網站和運行它，以此來進行快速測試。默認情況下，服務器會開通（http\://127.0.0.1:8000/),但你也可以選擇其他端口。有關更多信息，查閱（[django-admin and manage.py: runserver](https://docs.djangoproject.com/en/1.10/ref/django-admin/#runserver)）(Django docs).
 
-<p>通過如下<code>runserver</code>命令，運行開發網頁服務器。（同樣的要在<strong>manage.py</strong>的目錄）</p>
+通過如下`runserver`命令，運行開發網頁服務器。（同樣的要在**manage.py**的目錄）
 
-<pre class="brush: bash">python3 manage.py runserver
+```bash
+python3 manage.py runserver
 
  Performing system checks...
 
@@ -323,66 +319,53 @@ python3 manage.py migrate
  Django version 1.10, using settings 'locallibrary.settings'
  Starting development server at http://127.0.0.1:8000/
  Quit the server with CTRL-BREAK.
-</pre>
+```
 
-<p>一旦服務器運行，你可以用你的瀏覽器導航到<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> 查看。你應該會看到一個錯誤頁面，如下。</p>
+一旦服務器運行，你可以用你的瀏覽器導航到<http://127.0.0.1:8000/> 查看。你應該會看到一個錯誤頁面，如下。
 
-<p><img alt="Django Debug page for Django 2.0" src="django_404_debug_page.png"></p>
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
-<p>別擔心，這個錯誤頁面是預期的結果。因為我們沒有在 <code>catalogs.urls</code>模塊中，定義任何頁面或網址（即是當我們使用一個指向根目錄的URL時，會被重新定向的地方）。</p>
+別擔心，這個錯誤頁面是預期的結果。因為我們沒有在 `catalogs.urls`模塊中，定義任何頁面或網址（即是當我們使用一個指向根目錄的 URL 時，會被重新定向的地方）。
 
-<div class="note">
-<p><strong>備註：</strong> 上面的頁面，演示了一個很棒的Django功能 - 自動除錯日誌記錄。只要找不到頁面，或者代碼引發任何錯誤，就會顯示錯誤畫面，其中包含有用的信息。在這種情況下，我們可以看到我們提供的URL，與我們的任何URL模式都不匹配（如列出的那樣）。在生產期間（當我們將網站放在網上時），日誌記錄將被關閉，在這種情況下，將提供信息量較少、但用戶友好的頁面。</p>
-</div>
+> **備註：** 上面的頁面，演示了一個很棒的 Django 功能 - 自動除錯日誌記錄。只要找不到頁面，或者代碼引發任何錯誤，就會顯示錯誤畫面，其中包含有用的信息。在這種情況下，我們可以看到我們提供的 URL，與我們的任何 URL 模式都不匹配（如列出的那樣）。在生產期間（當我們將網站放在網上時），日誌記錄將被關閉，在這種情況下，將提供信息量較少、但用戶友好的頁面。
 
-<p>這個時候，我們知道Django正在工作！</p>
+這個時候，我們知道 Django 正在工作！
 
-<div class="note">
-<p><strong>備註：</strong> 在進行重大更改時，你應該重新運行遷移，並重新測試站點。這不需要很長時間！</p>
-</div>
+> **備註：** 在進行重大更改時，你應該重新運行遷移，並重新測試站點。這不需要很長時間！
 
-<h2 id="挑戰自我">挑戰自我</h2>
+## 挑戰自我
 
-<p>該 <strong>catalog/  </strong>目錄包含應用程序的視圖、模型、和應用的其他部分，你可以打開這些文件並查看樣板。</p>
+該 **catalog/** 目錄包含應用程序的視圖、模型、和應用的其他部分，你可以打開這些文件並查看樣板。
 
-<p>如上所述，管理站點的URL映射，已經添加到項目的 <strong>urls.py</strong>。在瀏覽器中查看管理區域，看看會發生什麼（你可以從上面映射，推斷正確的URL）。</p>
+如上所述，管理站點的 URL 映射，已經添加到項目的 **urls.py**。在瀏覽器中查看管理區域，看看會發生什麼（你可以從上面映射，推斷正確的 URL）。
 
-<ul>
-</ul>
+## 總結
 
-<h2 id="總結">總結</h2>
+你現在已經創建了一個完整的骨架網站項目，你可以繼續加入網址、模型、視圖、和模版。
 
-<p>你現在已經創建了一個完整的骨架網站項目，你可以繼續加入網址、模型、視圖、和模版。</p>
+現在，[Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)的骨架已經完成並運行了，是時候開始寫些代碼，讓網站做些它應該做的事了。
 
-<p>現在，<a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Local Library website</a>的骨架已經完成並運行了，是時候開始寫些代碼，讓網站做些它應該做的事了。</p>
+## 參見
 
-<h2 id="參見">參見</h2>
+- [Writing your first Django app - part 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (Django docs)
+- [Applications](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
-<ul>
- <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial01/">Writing your first Django app - part 1</a>  (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications">Applications</a> (Django Docs). Contains information on configuring applications.</li>
-</ul>
+{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-<p>{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}</p>
+## 本教程連結
 
-
-
-<h2 id="本教程連結">本教程連結</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django 介紹</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">設定 Django 開發環境</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django 教學: 本地圖書館網站</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django 教學 第2部分: 建立網站骨架</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django 教學 第3部分: 使用模型</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django 教學 第4部分: Django的管理員頁面</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django 教學 第5部分: 創建我們的首頁</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django 教學 第6部分: 通用列表與詳細視圖</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django 教學 第7部分: 會話 (Sessions) 框架</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django 教學 第8部分: 使用者的身分驗證與權限</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django 教學 第9部分: 使用表單</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django 教學 第10部分: 測試Django 網頁應用</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django 教學 第11部分: 部署 Django 到生產環境(production)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django 網頁應用安全</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django 迷你部落格</a></li>
-</ul>
+- [Django 介紹](/en-US/docs/Learn/Server-side/Django/Introduction)
+- [設定 Django 開發環境](/en-US/docs/Learn/Server-side/Django/development_environment)
+- [Django 教學: 本地圖書館網站](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django 教學 第 2 部分: 建立網站骨架](/en-US/docs/Learn/Server-side/Django/skeleton_website)
+- [Django 教學 第 3 部分: 使用模型](/en-US/docs/Learn/Server-side/Django/Models)
+- [Django 教學 第 4 部分: Django 的管理員頁面](/en-US/docs/Learn/Server-side/Django/Admin_site)
+- [Django 教學 第 5 部分: 創建我們的首頁](/en-US/docs/Learn/Server-side/Django/Home_page)
+- [Django 教學 第 6 部分: 通用列表與詳細視圖](/en-US/docs/Learn/Server-side/Django/Generic_views)
+- [Django 教學 第 7 部分: 會話 (Sessions) 框架](/en-US/docs/Learn/Server-side/Django/Sessions)
+- [Django 教學 第 8 部分: 使用者的身分驗證與權限](/en-US/docs/Learn/Server-side/Django/Authentication)
+- [Django 教學 第 9 部分: 使用表單](/en-US/docs/Learn/Server-side/Django/Forms)
+- [Django 教學 第 10 部分: 測試 Django 網頁應用](/en-US/docs/Learn/Server-side/Django/Testing)
+- [Django 教學 第 11 部分: 部署 Django 到生產環境(production)](/en-US/docs/Learn/Server-side/Django/Deployment)
+- [Django 網頁應用安全](/en-US/docs/Learn/Server-side/Django/web_application_security)
+- [DIY Django 迷你部落格](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)
