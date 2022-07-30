@@ -1,6 +1,7 @@
 ---
 title: WebRTC プロトコル入門
 slug: Web/API/WebRTC_API/Protocols
+page-type: guide
 tags:
   - API
   - Audio
@@ -16,41 +17,53 @@ tags:
   - Video
   - WebRTC
   - WebRTC API
-  - ガイド
-  - メディア
-  - 初心者
 translation_of: Web/API/WebRTC_API/Protocols
 ---
-<div>{{WebRTCSidebar}}</div>
+{{WebRTCSidebar}}
 
-<p>この記事では、 WebRTC API の基礎となっているプロトコルについて説明します。</p>
+この記事では、 WebRTC API の基礎となっているプロトコルについて説明します。
 
-<h2 id="ICE">ICE</h2>
+## ICE
 
-<p><a href="http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment">Interactive Connectivity Establishment (ICE)</a> は、ウェブブラウザーをピアと接続することを可能にするフレームワークです。さまざまな理由から、ピア A からピア B に直接接続することはできません。ファイアウォールをバイパスする必要があるからです。ファイアウォールは直接接続を開くことを妨害したり、端末がパブリック IP アドレスを持たない多くの場合にはユニークなアドレスを与えたり、ルーターがピアとの直接接続を許さない場合にはサーバー経由でデータをリレーしたりします。以下で説明するように、 ICE は STUN や TURN サーバーを使用してこれを解決しています。</p>
+[Interactive Connectivity Establishment (ICE)](https://ja.wikipedia.org/wiki/Interactive_Connectivity_Establishment) は、ウェブブラウザーをピアーと接続することを可能にするフレームワークです。さまざまな理由から、ピアー A からピアー B に直接接続することはできません。ファイアウォールをバイパスする必要があるからです。ファイアウォールは直接接続を開くことを妨害したり、端末がパブリック IP アドレスを持たない多くの場合にはユニークなアドレスを与えたり、ルーターがピアーとの直接接続を許さない場合にはサーバー経由でデータをリレーしたりします。以下で説明するように、 ICE は STUN や TURN サーバーを使用してこれを解決しています。
 
-<h2 id="STUN">STUN</h2>
+## STUN
 
-<p><a href="http://en.wikipedia.org/wiki/STUN">Session Traversal Utilities for <u>NAT</u> (STU<u>N</u>)</a> (頭字語中に頭字語が含まれている) は、パブリックアドレスを発見し、ピアとの直接接続を妨害するルーターの制限を特定するためのプロトコルです。</p>
+[Session Traversal Utilities for NAT (STUN)](https://ja.wikipedia.org/wiki/STUN) は、パブリックアドレスを発見し、ピアーとの直接接続を妨害するルーターの制限を特定するためのプロトコルです。
 
-<p>クライアントがインターネット上の STUN サーバーにリクエストを送信すると、サーバーは、クライアントのパブリックアドレスと、ルーターの NAT 内部にアクセス可能かどうかを答えます。</p>
+クライアントがインターネット上の STUN サーバーにリクエストを送信すると、サーバーは、クライアントのパブリックアドレスと、ルーターの NAT 内部にアクセス可能かどうかを答えます。
 
-<p><img alt="An interaction between two users of a WebRTC application involving a STUN server." src="https://mdn.mozillademos.org/files/6115/webrtc-stun.png" style="display: block; height: 378px; margin: 0px auto; width: 259px;"></p>
+![An interaction between two users of a WebRTC application involving a STUN server.](webrtc-stun.png)
 
-<h2 id="NAT">NAT</h2>
+## NAT
 
-<p><a href="https://en.wikipedia.org/wiki/Network_address_translation">ネットワークアドレス変換 (Network Address Translation; NAT)</a> は、端末にパブリック IP アドレスを割り当てるために使われます。ルーターはパブリック IP アドレスを持ち、ルーターに接続されたすべての端末はプライベート IP アドレスを持ちます。リクエストが送られると、端末のプライベート IP から、特定のポートを持つルーターのパブリック IP へ変換されます。こうすることで、各端末にユニークな IP アドレスを割り当てずともインターネット上で発見することができるようになります。</p>
+[ネットワークアドレス変換 (Network Address Translation; NAT)](https://ja.wikipedia.org/wiki/ネットワークアドレス変換) は、端末にパブリック IP アドレスを割り当てるために使われます。ルーターはパブリック IP アドレスを持ち、ルーターに接続されたすべての端末はプライベート IP アドレスを持ちます。リクエストが送られると、端末のプライベート IP から、特定のポートを持つルーターのパブリック IP へ変換されます。こうすることで、各端末にユニークな IP アドレスを割り当てずともインターネット上で発見することができるようになります。
 
-<p>ルーターによっては、ネットワーク上の端末に接続できる相手に制限をかけている場合があります。つまり、 STUN サーバーが発見できるパブリック IP アドレスを持っていたとしても、すべての相手が接続を張れるわけではないということです。このような状況では、TURN を使う必要があります。(訳注: 原文では「TURN を turn on する必要がある」と書かれている。)</p>
+ルーターによっては、ネットワーク上の端末に接続できる相手に制限をかけている場合があります。つまり、 STUN サーバーが発見できるパブリック IP アドレスを持っていたとしても、すべての相手が接続を張れるわけではないということです。このような状況では、 TURN を使う必要があります。
 
-<h2 id="TURN">TURN</h2>
+## TURN
 
-<p>NAT を使用するルーターの一部は、‘Symmetric NAT’ と呼ばれる制限をかけています。その場合、ルーターは過去に接続したことのあるピアから来る接続しか受け入れることができません。</p>
+NAT を使用するルーターによっては、 'Symmetric NAT' と呼ばれる制限をかけています。その場合、ルーターは過去に接続したことのあるピアーから来る接続しか受け入れることができません。
 
-<p><a href="http://en.wikipedia.org/wiki/TURN">Traversal Using Relays around NAT (TURN)</a> サーバを使って接続を張り、すべての通信をこのサーバを通して行うことで'Symmetric NAT'制限を回避できます。TURNサーバを使って接続し、すべての相手にはこのサーバにパケットを送信させることでそれらが転送されてきます。明らかにオーバヘッドが生じますので、他の選択肢がない場合にのみ使うべきです。</p>
+[Traversal Using Relays around NAT (TURN)](https://ja.wikipedia.org/wiki/TURN) は、 TURN サーバーとの接続を開き、そのサーバーを介してすべての情報を中継することで、 Symmetric NAT の制限を回避することを意図しています。 TURN サーバーとの接続を作成し、すべてのピアにサーバーにパケットを送信するように指示し、そのパケットはあなたに転送されます。これは明らかにオーバーヘッドを伴うので、他に方法がない場合にのみ使用します。
 
-<p><img alt="An interaction between two users of a WebRTC application involving STUN and TURN servers." src="https://mdn.mozillademos.org/files/6117/webrtc-turn.png" style="display: block; height: 297px; margin: 0px auto; width: 295px;"></p>
+![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
 
-<h2 id="SDP">SDP</h2>
+## SDP
 
-<p><a href="http://en.wikipedia.org/wiki/Session_Description_Protocol">Session Description Protocol (SDP)</a> とは、解像度、フォーマット、コーデック、暗号化などのマルチメディアコンテンツを指定するための標準です。これにより、データが転送された際に双方が理解できるようになります。本来、これらはメディアコンテンツそのものではなくそのコンテンツを指定するメタデータです。</p>
+[Session Description Protocol (SDP)](https://ja.wikipedia.org/wiki/Session_Description_Protocol) とは、解像度、フォーマット、コーデック、暗号化などのマルチメディアコンテンツを指定するための標準です。これにより、データが転送された際に双方が理解できるようになります。本来、これらはメディアコンテンツそのものではなくそのコンテンツを指定するメタデータです。
+
+技術的には、 SDP は真のプロトコルではなく、端末間でメディアを共有する接続を記述するために使用されるデータ形式です。
+
+SDP の文書化は、このドキュメントの範囲外です。ただし、ここで注目すべき点がいくつかあります。
+
+### 構造
+
+SDP は、 1 行以上の UTF-8 テキストで構成され、それぞれ 1 文字の型で始まり、等号 (`"="`) が続き、型に依存する形式で値または説明からなる構造化テキストが続きます。ある文字で始まるテキストの行は、一般に "_letter_-lines" と呼ばれています。例えば、メディアの説明を提供する行は `"m"` という型なので、それらの行は「m 行」と呼ばれます。
+
+### 詳細情報
+
+SDP についてより詳しく知りたい方は、以下の有用な資料をご覧ください。
+
+- 仕様書: {{RFC(4566, "SDP: Session Description Protocol")}}
+- [IANA registry of SDP parameters](https://www.iana.org/assignments/sip-parameters/sip-parameters.xhtml)
