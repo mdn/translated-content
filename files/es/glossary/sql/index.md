@@ -1,10 +1,6 @@
 ---
 title: SQL
 slug: Glossary/SQL
-tags:
-  - BBDD
-  - Glosario
-  - Sql
 translation_of: Glossary/SQL
 ---
 **SQL** por sus siglas en inglés significa Lenguaje de Consulta Estructurada (Structured Query Language), es un lenguaje de programación diseñado para actualizar, obtener, y calcular información en bases de datos relacionales.
