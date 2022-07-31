@@ -11,12 +11,12 @@ translation_of: Web/API/GainNode
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p><strong><code>GainNode</code></strong><strong> </strong>接口表示音量的变化。它是一个{{domxref("AudioNode")}}音频处理模块，在输出前使用给定<em>增益</em>应用到输入。一个 <code>GainNode</code><strong> </strong>总是只有一个输入和一个输出，两者拥有同样数量的声道。</p>
+<p><strong><code>GainNode</code></strong><strong> </strong>接口表示音量的变化。它是一个{{domxref("AudioNode")}}音频处理模块，在输出前使用给定<em>增益</em>应用到输入。一个 <code>GainNode</code><strong> </strong>总是只有一个输入和一个输出，两者拥有同样数量的声道。</p>
 
 <p>增益是一个无单位的值，会对所有输入声道的音频进行相应的增加。如果进行了修改，则会立即应用新增益，从而在结果音频中产生奇怪的“咔嗒”声。为了防止这种情况发生，请不要直接更改值，而应在{{domxref("AudioParam")}}接口上使用指数插值方法。</p>
 </div>
 
-<p><img alt="The GainNode is increasing the gain of the output." src="https://mdn.mozillademos.org/files/5085/WebAudioGainNode.png" style="height: 116px; width: 774px;"></p>
+<p><img alt="The GainNode is increasing the gain of the output." src="webaudiogainnode.png"></p>
 
 <table class="properties">
  <tbody>
@@ -72,20 +72,7 @@ translation_of: Web/API/GainNode
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-gainnode-interface', 'GainNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
@@ -94,5 +81,5 @@ translation_of: Web/API/GainNode
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">使用Web音频API</a></li>
+ <li><a href="/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API">使用 Web 音频 API</a></li>
 </ul>

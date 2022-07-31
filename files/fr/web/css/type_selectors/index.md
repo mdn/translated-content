@@ -21,7 +21,9 @@ a {
 
 ## Syntaxe
 
-    élément { style propriétés }
+```
+élément { style propriétés }
+```
 
 ## Exemples
 

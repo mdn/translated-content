@@ -17,7 +17,9 @@ La fonction **`Math.sin()`** renvoie le sinus d'un nombre.
 
 ## Syntaxe
 
-    Math.sin(x)
+```js
+Math.sin(x)
+```
 
 ### Paramètres
 

@@ -11,7 +11,9 @@ Si la méthode ne peut pas vibrer en raison d'arguments invalides, elle retourne
 
 ## Syntaxe
 
-    var successBool = window.navigator.vibrate(motif);
+```js
+var successBool = window.navigator.vibrate(motif);
+```
 
 - `motif`
   - : Fournit un motif de vibration et d'intervalle de pause. Chaque valeur indique un nombre de milisecondes de vibration ou de pause, en alternance. Vous pouvez fournir une valeur (pour vibrer une fois) ou un tableau de valeur (vibration, pause, vibration ...). Voir l'[API Vibration](/fr/docs/Web/API/Vibration_API) pour plus de détails.

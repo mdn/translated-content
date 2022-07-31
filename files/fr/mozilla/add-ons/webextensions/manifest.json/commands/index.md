@@ -165,9 +165,9 @@ Sur Mac, `"Ctrl"` est interprété comme `"Command"`, donc si vous avez réellem
 
 Les combinaisons de touches doivent être composées de deux ou trois touches :
 
-1.  **modificateur** (obligatoire, à l'exception des touches de fonction). Il peut s'agir de `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`.
-2.  **second modificateur** (facultatif). S'il est fourni, il doit être `"Shift"` ou (pour Firefox ≥ 63) l'un quelconque des `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`. Ne doit pas être le modificateur déjà utilisé comme modificateur principal.
-3.  **touche** (obligatoire). Ce peut être l'une des touches :
+1. **modificateur** (obligatoire, à l'exception des touches de fonction). Il peut s'agir de `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`.
+2. **second modificateur** (facultatif). S'il est fourni, il doit être `"Shift"` ou (pour Firefox ≥ 63) l'un quelconque des `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`. Ne doit pas être le modificateur déjà utilisé comme modificateur principal.
+3. **touche** (obligatoire). Ce peut être l'une des touches :
 
     - lettres `A`–`Z`
     - chiffres `0`–`9`

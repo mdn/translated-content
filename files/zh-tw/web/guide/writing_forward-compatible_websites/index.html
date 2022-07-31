@@ -9,7 +9,7 @@ translation_of: Web/Guide/Writing_forward-compatible_websites
 <h3 id="以「window.」前綴修飾所有存取於_onfoo_屬性的全域變數">以「<code>window.</code>」前綴修飾所有存取於 <code>onfoo</code> 屬性的全域變數</h3>
 <p>當一個事件處理器內容屬性（例如：<code>onclick</code>, <code>onmouseover</code> 等等）被使用在 HTML 的元素上時，所有對於屬性內名稱的查找首先發生在元素本身，若元素為表單控制項，再來尋找元素的表單，接著是 document，最後是 window（你定義全域變數的地方）。例如，如果你有這樣的原始碼：</p>
 <pre>&lt;div onclick="alert(ownerDocument)"&gt;點我一下&lt;/div&gt;</pre>
-<p>在點選文字時，div 中的 ownerDocument 會被提示，即使是在全域範圍內宣告 var ownerDocument 這種情況依然會發生。</p>
+<p>在點選文字時，div 中的 ownerDocument 會被提示，即使是在全域範圍內宣告 var ownerDocument 這種情況依然會發生。</p>
 <p>這意味著，無論你何時在事件處理器內容屬性存取了一個全域變數，包括呼叫任何全域函數，當規格中新增了和您變數或函式同名的 DOM 屬性到元素或文件之中，在瀏覽器實作之後，就會產生名稱衝突。這時你的函式將突然被停止呼叫。這種情況在 HTML5 的發展之下，多次在不同網站中發生。</p>
 <p>為了避免這種情況，以 window 來限定全域變數的存取，例如：</p>
 <pre>&lt;script&gt;
@@ -20,7 +20,7 @@ translation_of: Web/Guide/Writing_forward-compatible_websites
 &lt;div onclick="<strong>window.</strong>localName()"&gt;按一下會跑出一個提示訊息&lt;/div&gt;
 </pre>
 <h3 id="不要直接附加非您能控制的腳本">不要直接附加非您能控制的腳本</h3>
-<p><code>"use strict;"</code> 指令在 ECMAScript 裡，使用於檔案層級時適用於檔案的所有程式碼。因此，若將取決非嚴格模式行為的腳本，直接附加到要求嚴格模式的腳本會導致不正常的行為。</p><h3 id="要求_JavaScript_函式庫的作者遵守這些規則">要求 JavaScript 函式庫的作者遵守這些規則</h3>
+<p><code>"use strict;"</code> 指令在 ECMAScript 裡，使用於檔案層級時適用於檔案的所有程式碼。因此，若將取決非嚴格模式行為的腳本，直接附加到要求嚴格模式的腳本會導致不正常的行為。</p><h3 id="要求_JavaScript_函式庫的作者遵守這些規則">要求 JavaScript 函式庫的作者遵守這些規則</h3>
 <p>向您喜歡的函式庫開發者們建議他們遵循這些規範，否則您無法確保未來這些函式庫能否依舊正常運作。可惜的是函式庫往往違反這些準則。</p>
 <h2 id="偵測">偵測</h2>
 <h3 id="偵測特定功能支援">偵測特定功能支援</h3>

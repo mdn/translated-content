@@ -26,7 +26,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 - `nameN`
   - : 定数名。正当な{{Glossary("identifier", "識別子")}}ならば、何でもかまいません。
 - `valueN`
-  - : 定数の値。正当な[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)ならば、関数式を含め、何でもかまいません。
+  - : 定数の値。正当な[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#式)ならば、関数式を含め、何でもかまいません。
 
 [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文を使用して、定数を宣言することもできます。
 

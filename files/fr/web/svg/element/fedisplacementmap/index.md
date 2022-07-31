@@ -13,7 +13,9 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feDisplacementMap>`** utilise
 
 La formule utilisée pour la transformation est comme suit:
 
-    P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
+```
+P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
+```
 
 où `P(x,y)` est l'image en entrée, {{SVGAttr("in")}}, et `P'(x,y)` est la destination. `XC(x,y)` et `YC(x,y)` sont les valeurs des composants du canal désigné par {{SVGAttr("xChannelSelector")}} et {{SVGAttr("yChannelSelector")}}.
 

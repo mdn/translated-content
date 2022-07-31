@@ -7,7 +7,7 @@ translation_of: Web/API/Notification
 ---
 <p>{{APIRef("Web Notifications")}}</p>
 
-<p><a href="/zh-TW/docs/Web/API/Notifications_API">Notifications API</a> 的 <code>Notification</code> interface 是用來設置及顯示「桌面通知」給使用。</p>
+<p><a href="/zh-TW/docs/Web/API/Notifications_API">Notifications API</a> 的 <code>Notification</code> interface 是用來設置及顯示「桌面通知」給使用。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/Notification
 
 <h3 id="靜態屬性">靜態屬性</h3>
 
-<p>以下的屬性僅適用於 <code>Notification</code> 實例。</p>
+<p>以下的屬性僅適用於 <code>Notification</code> 實例。</p>
 
 <dl>
  <dt>{{domxref("Notification.permission")}} {{readonlyinline}}</dt>
@@ -31,7 +31,7 @@ translation_of: Web/API/Notification
 
 <h3 id="實例屬性">實例屬性</h3>
 
-<p>以下屬應僅適用於 <code>Notification</code> 實例。</p>
+<p>以下屬應僅適用於 <code>Notification</code> 實例。</p>
 
 <dl>
  <dt>{{domxref("Notification.title")}} {{readonlyinline}}</dt>
@@ -107,7 +107,7 @@ translation_of: Web/API/Notification
 
 <dl>
  <dt>{{domxref("Notification.requestPermission()")}}</dt>
- <dd>向使用者詢問是否開放顯示 Notification 的權限。</dd>
+ <dd>向使用者詢問是否開放顯示 Notification 的權限。</dd>
 </dl>
 
 <h3 id="實例方法">實例方法</h3>
@@ -155,11 +155,11 @@ translation_of: Web/API/Notification
 
 <p>{{EmbedLiveSample('範例', '100%', 30)}}</p>
 
-<p>在很多時候，你應該不會想要這麼冗長的程式碼。 比如說，在我們的 <a href="http://mdn.github.io/emogotchi/">Emogotchi demo</a> (<a href="https://github.com/mdn/emogotchi">see source code</a>)  之中，我們只寫了 {{domxref("Notification.requestPermission")}} 而不用進一步檢查是否已經獲得了權限：</p>
+<p>在很多時候，你應該不會想要這麼冗長的程式碼。 比如說，在我們的 <a href="http://mdn.github.io/emogotchi/">Emogotchi demo</a> (<a href="https://github.com/mdn/emogotchi">see source code</a>)  之中，我們只寫了 {{domxref("Notification.requestPermission")}} 而不用進一步檢查是否已經獲得了權限：</p>
 
 <pre class="brush: js">Notification.requestPermission();</pre>
 
-<p>然後我們只需要在要新增 Notfication 時執行這個 <code>spawnNotification()</code>  — 透過傳入指定的 body、icon、title，然後它就會產生我們所需的 options 參數並透過 {{domxref("Notification.Notification","Notification()")}} 建構子發送 Notification.</p>
+<p>然後我們只需要在要新增 Notfication 時執行這個 <code>spawnNotification()</code>  — 透過傳入指定的 body、icon、title，然後它就會產生我們所需的 options 參數並透過 {{domxref("Notification.Notification","Notification()")}} 建構子發送 Notification.</p>
 
 <pre class="brush: js">function spawnNotification(theBody,theIcon,theTitle) {
   var options = {

@@ -125,14 +125,14 @@ En mode strict, `eval` ne crée pas de nouvelle variable dans la portée depuis 
 
 Un des aspects négatifs de cette migration est la sémantique : le sens du code pourrait être différent dans les navigateurs historiques qui n'implémentent pas le mode strict. Dans quelques rares cas (une mauvaise concaténation ou minification), votre code pourrait ne pas fonctionner dans le mode que vous avez testé. Voici quelques règles pour que le code soit le plus neutre possible quant au mode choisi (strict ou non-strict) :
 
-1.  Écrivez votre code « strictement » et assurez vous de lancer des exceptions dans le cadre d'erreurs liées au mode non-strict (voir la section « Erreurs à l'exécution » ci-avant)
-2.  Minimisez l'utilisation des éléments dont la sémantique pourrait changer :
+1. Écrivez votre code « strictement » et assurez vous de lancer des exceptions dans le cadre d'erreurs liées au mode non-strict (voir la section « Erreurs à l'exécution » ci-avant)
+2. Minimisez l'utilisation des éléments dont la sémantique pourrait changer :
 
-    1.  `eval`&nbsp;: n'utilisez cette fonction uniquement si vous êtes certains que c'est l'unique solution
-    2.  `arguments` : utilisez les arguments d'une fonction via leur nom ou faites une copie de l'objet en utilisant :
+    1. `eval`&nbsp;: n'utilisez cette fonction uniquement si vous êtes certains que c'est l'unique solution
+    2. `arguments`&nbsp;: utilisez les arguments d'une fonction via leur nom ou faites une copie de l'objet en utilisant&nbsp;:
         `var args = Array.prototype.slice.call(arguments)`
         au tout début de votre fonction
-    3.  `this` : n'utilisez `this` que pour faire référence à un objet que vous avez créé
+    3. `this`&nbsp;: n'utilisez `this` que pour faire référence à un objet que vous avez créé
 
 ## Voir aussi
 

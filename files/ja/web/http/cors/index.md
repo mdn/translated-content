@@ -141,7 +141,9 @@ Access-Control-Allow-Origin: *
 
 {{HTTPHeader("Origin")}} ヘッダーと {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーのこのパターンは、アクセス制御プロトコルのもっとも簡単な使い方です。 `https://bar.other` にあるリソースの所有者が、リソースへの制限を `https://foo.example` からのリクエスト*のみ*に制限したい (すなわち、 `https://foo.examle` 以外のドメインがサイト間の作法でリソースにアクセスを許可しない) と考えていた場合は、以下のように送信します。
 
-    Access-Control-Allow-Origin: https://foo.example
+```
+Access-Control-Allow-Origin: https://foo.example
+```
 
 > **Note:** [資格情報を含むリクエスト](#資格情報を含むリクエスト)に応答する場合、サーバーは `Access-Control-Allow-Origin` ヘッダーにオリジンを値として指定する必要があり、"`*`" ワイルドカードを指定することはできません。
 
@@ -405,6 +407,7 @@ Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ### Access-Control-Max-Age
 
 このヘッダーはプリフライトリクエストの結果をキャッシュしてよい時間を示します。プリフライトリクエストの例は、前出の例をご覧ください。
+
 ```
 Access-Control-Max-Age: <delta-seconds>
 ```

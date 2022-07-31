@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>handler.apply()</code></strong> 方法用于拦截函数的调用。</p>
+<p><strong><code>handler.apply()</code></strong> 方法用于拦截函数的调用。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}</div>
 
@@ -25,7 +25,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 <h3 id="参数">参数</h3>
 
-<p>以下是传递给apply方法的参数，<code>this上下文绑定在</code>handler对象上.</p>
+<p>以下是传递给 apply 方法的参数，<code>this</code> 上下文绑定在 handler 对象上。</p>
 
 <dl>
  <dt><code>target</code></dt>
@@ -38,15 +38,15 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 <h3 id="返回值">返回值</h3>
 
-<p><code>apply方法可以返回任何值。</code></p>
+<p><code>apply 方法可以返回任何值。</code></p>
 
 <h2 id="描述">描述</h2>
 
-<p><strong><code>handler.apply</code></strong> 方法用于拦截函数的调用。</p>
+<p><strong><code>handler.apply</code></strong> 方法用于拦截函数的调用。</p>
 
 <h3 id="拦截">拦截</h3>
 
-<p>该方法会拦截目标对象的以下操作:</p>
+<p>该方法会拦截目标对象的以下操作：</p>
 
 <ul>
  <li><code>proxy(...args)</code></li>
@@ -56,9 +56,9 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 
 <h3 id="约束">约束</h3>
 
-<p>如果违反了以下约束，代理将抛出一个TypeError：</p>
+<p>如果违反了以下约束，代理将抛出一个 TypeError：</p>
 
-<p><code>target</code>必须是可被调用的。也就是说，它必须是一个函数对象。</p>
+<p><code>target</code> 必须是可被调用的。也就是说，它必须是一个函数对象。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -77,30 +77,12 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div>
-<p>{{Compat("javascript.builtins.Proxy.handler.apply")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="另见">另见</h2>

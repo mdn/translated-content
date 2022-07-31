@@ -13,8 +13,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/Non_configurable_array_element
 
 ## Message
 
-    TypeError: can't delete non-configurable array element (Firefox)
-    TypeError: Cannot delete property '2' of [object Array] (Chrome)
+```
+TypeError: can't delete non-configurable array element (Firefox)
+TypeError: Cannot delete property '2' of [object Array] (Chrome)
+```
 
 ## Type d'erreur
 

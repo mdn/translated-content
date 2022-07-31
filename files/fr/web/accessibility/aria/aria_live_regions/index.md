@@ -76,7 +76,7 @@ Un site de chat voudrait afficher la liste des utilisateurs actuellement connect
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-	<!-- utilisez JavaScript ici pour ajouter/supprimer des utilisateurs-->
+  <!-- utilisez JavaScript ici pour ajouter/supprimer des utilisateurs-->
 </ul>
 ```
 

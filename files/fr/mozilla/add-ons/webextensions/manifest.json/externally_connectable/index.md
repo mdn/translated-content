@@ -49,11 +49,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectab
 
 Une connexion externe permet au développeur d’extensions de contrôler quelles autres extensions et pages Web peuvent communiquer avec cette extension via  {{WebExtAPIRef("runtime.connect","runtime.connect()")}} et {{WebExtAPIRef("runtime.sendMessage", "runtime.sendMessage()")}} passage de message. Si `externally_connectable` n'est pas spécifié, toutes les extensions peuvent communiquer entre elles, mais pas avec les pages Web.
 
-### attribut "ids"
+### Attribut "ids"
 
 `ids` active la communication entre cette extension et les autres extensions installées spécifiées par les identificateurs d'extension. Utilisez le motif `"*"` si vous souhaitez communiquer avec toutes les extensions.
 
-### attribut "matches"
+### Attribut "matches"
 
 Les correspondances permettent la communication entre cette extension et les pages Web. Voici une liste d'expressions régulières pour les URL de page avec lesquelles vous souhaitez communiquer.
 

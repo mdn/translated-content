@@ -8,7 +8,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 <p>Autoplay blocking is <em>not</em> applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be <strong>audible</strong>, and autoplay blocking applies to them. <strong>Inaudible</strong> media are not affected by autoplay blocking.</p>
 
-<h2 id="自动播放_和_自动播放暂停">自动播放 和 自动播放暂停</h2>
+<h2 id="自动播放_和_自动播放暂停">自动播放 和 自动播放暂停</h2>
 
 <p>The term <strong>autoplay</strong> refers to any feature that causes audio to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media as well as the user of JavaScript code to start playback outside the context of handling user input.</p>
 
@@ -21,7 +21,7 @@ original_slug: Web/媒体/Autoplay_guide
 <pre class="brush: js notranslate">audioElement.play();
 </pre>
 
-<p dir="ltr" id="tw-target-text">以下网络功能和 API 可能会受到自动播放阻止的影响：</p>
+<p>以下网络功能和 API 可能会受到自动播放阻止的影响：</p>
 
 <ul>
  <li>The {{Glossary("HTML")}} {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements</li>
@@ -43,7 +43,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 <p>否则，播放可能会被阻止。导致播放被阻塞的确切情况以及将网站列入白名单的具体方法因浏览器而异，但最好是遵循以上的原则。</p>
 
-<p>详情，请参阅 <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">Google Chrome</a> 和 <a href="https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/">WebKit</a> 的自动播放政策。</p>
+<p>详情，请参阅 <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">Google Chrome</a> 和 <a href="https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/">WebKit</a> 的自动播放政策。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意：</strong> 换句话说，如果在尚无任何用户交互的页面中通过编程方式启动播放，则通常会阻止任何包含音频在内的媒体的播放。</p>
@@ -55,7 +55,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 <h3 id="autoplay_属性">autoplay 属性</h3>
 
-<p>想让内容自动播放的最简单方法是将{{htmlattrxref("autoplay", "audio")}}属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 <code>true</code> ，当 <code>autoplay</code> 的属性为 <code>true</code> 时，媒体元素将在发生以下情况后尽快自动开始播放：</p>
+<p>想让内容自动播放的最简单方法是将{{htmlattrxref("autoplay", "audio")}}属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 <code>true</code> ，当 <code>autoplay</code> 的属性为 <code>true</code> 时，媒体元素将在发生以下情况后尽快自动开始播放：</p>
 
 <ul>
  <li>
@@ -78,7 +78,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 <p>如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于{{htmlattrxref("autoplay", "audio")}}属性，识别自动播放是否成功开始是很棘手的。自动播放失败时<strong>不会触发</strong>任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。</p>
 
-<p dir="ltr" id="tw-target-text">如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的{{event("play")}}事件来轻松实现此目的。</p>
+<p>如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的{{event("play")}}事件来轻松实现此目的。</p>
 
 <p>The <code>play</code> event is sent both when the media is resumed after being paused <em>and</em> when autoplay occurs. That means that the first time the <code>play</code> event is fired, you know your media is being started for the first time after the page is opened.</p>
 

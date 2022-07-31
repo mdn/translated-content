@@ -240,7 +240,6 @@ De plus, les tableaux héritent de `Array.prototype` qui permet de bénéficier 
 
 [Les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays) (<i lang="en">Typed Arrays</i> en anglais) ont été ajoutés avec ECMAScript 2015 et offrent une vue sous forme d'un tableau pour manipuler des tampons de données binaires. Le tableau qui suit illustre les types de données équivalents en C&nbsp;:
 
-
 <table class="standard-table">
   <tbody>
     <tr>

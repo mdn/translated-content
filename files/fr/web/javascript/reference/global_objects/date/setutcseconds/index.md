@@ -18,7 +18,9 @@ La méthode **`setUTCSeconds()`** définit les secondes pour la date, selon UTC.
 
 ## Syntaxe
 
-    dateObj.setUTCSeconds(valeurSecondes[, valeurMs])
+```js
+dateObj.setUTCSeconds(valeurSecondes[, valeurMs])
+```
 
 ### Paramètres
 

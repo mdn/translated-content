@@ -15,7 +15,9 @@ La méthode **`DOMImplementation.createDocument()`** crée et retourne un {{domx
 
 ## Syntaxe
 
-    doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```js
+doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
+```
 
 ### Paramètres
 

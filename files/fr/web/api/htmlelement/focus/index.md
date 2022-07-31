@@ -104,7 +104,7 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 ## Notes
 
-- Si `HTMLElement.focus()` est appelé depuis un gestionnaire d'évènement pour `mousedown`, il faut appeler `event.preventDefault()` pour empêcher le focus de quitter l'élément 
+- Si `HTMLElement.focus()` est appelé depuis un gestionnaire d'évènement pour `mousedown`, il faut appeler `event.preventDefault()` pour empêcher le focus de quitter l'élément
   `HTMLElement`.
 - Le comportement du focus par rapport aux fonctionnalités HTML comme [`tabindex`](/fr/docs/Web/HTML/Global_attributes#attr-tabindex) ou [le <i lang="en">shadow dom</i>](/fr/docs/Glossary/Shadow_tree), qui était auparavant trop peu spécifié, a été mis à jour en octobre 2019. Voir [le blog WHATWG](https://blog.whatwg.org/focusing-on-focus) pour plus d'informations.
 

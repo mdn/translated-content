@@ -16,7 +16,9 @@ Renvoie l'[URI](http://www.w3.org/Addressing/#background) de la page de provenan
 
 ## Syntaxe
 
-    string = document.referrer;
+```js
+string = document.referrer;
+```
 
 ## Notes
 

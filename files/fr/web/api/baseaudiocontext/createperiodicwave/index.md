@@ -18,7 +18,9 @@ La méthode `createPeriodicWave()` de l'interface {{ domxref("BaseAudioContext")
 
 ## Syntaxe
 
-    var onde = AudioContext.createPeriodicWave(réel, imag[, constraints]);
+```js
+var onde = AudioContext.createPeriodicWave(réel, imag[, constraints]);
+```
 
 ### Retour
 

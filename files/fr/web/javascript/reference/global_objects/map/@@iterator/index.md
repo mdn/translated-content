@@ -20,7 +20,9 @@ La valeur initiale de la propriété **`@@iterator`** est la même fonction que 
 
 ## Syntaxe
 
-    maMap[Symbol.iterator]
+```js
+maMap[Symbol.iterator]
+```
 
 ### Valeur de retour
 

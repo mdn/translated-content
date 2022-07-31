@@ -12,7 +12,7 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>藉由重複使用先前取過的資源，網站與網頁應用程式能夠顯著地提升效能。caching可以減少網路傳輸量以降低一個資源可展示的延遲時間。善用 HTTP caching可以讓網站可以回應更多請求。</p>
+<p>藉由重複使用先前取過的資源，網站與網頁應用程式能夠顯著地提升效能。caching可以減少網路傳輸量以降低一個資源可展示的延遲時間。善用 HTTP caching可以讓網站可以回應更多請求。</p>
 
 <h2 id="不同種類的快取">不同種類的快取</h2>
 
@@ -93,7 +93,7 @@ Cache-Control: public
 
 <h2 id="Freshness">Freshness</h2>
 
-<p>Once a resource is stored in a cache, it could theoretically be served by the cache forever. Caches have finite storage so items are periodically removed from storage. This process is called <em>cache eviction</em>. On the other side, some resources may change on the server so the cache should be updated. As HTTP is a client-server protocol, servers can't contact caches and clients when a resource changes; they have to communicate an expiration time for the resource. Before this expiration time, the resource is <em>fresh</em>; after the expiration time, the resource is <em>stale</em>. Eviction algorithms often privilege fresh resources over stale resources. Note that a stale resource is not evicted or ignored; when the cache receives a request for a stale resource, it forwards this request with a {{HTTPHeader("If-None-Match")}} to check if it is in fact still fresh. If so, the server returns a {{HTTPStatus("304")}} (Not Modified) header without sending the body of the requested resource, saving some bandwidth.</p>
+<p>Once a resource is stored in a cache, it could theoretically be served by the cache forever. Caches have finite storage so items are periodically removed from storage. This process is called <em>cache eviction</em>. On the other side, some resources may change on the server so the cache should be updated. As HTTP is a client-server protocol, servers can't contact caches and clients when a resource changes; they have to communicate an expiration time for the resource. Before this expiration time, the resource is <em>fresh</em>; after the expiration time, the resource is <em>stale</em>. Eviction algorithms often privilege fresh resources over stale resources. Note that a stale resource is not evicted or ignored; when the cache receives a request for a stale resource, it forwards this request with a {{HTTPHeader("If-None-Match")}} to check if it is in fact still fresh. If so, the server returns a {{HTTPStatus("304")}} (Not Modified) header without sending the body of the requested resource, saving some bandwidth.</p>
 
 <p>Here is an example of this process with a shared cache proxy:</p>
 
@@ -103,13 +103,13 @@ Cache-Control: public
 
 <h3 id="Heuristic_freshness_checking">Heuristic freshness checking</h3>
 
-<p>If an origin server does not explicitly specify freshness (e.g. using {{HTTPHeader("Cache-Control")}} or {{HTTPHeader("Expires")}} header) then a heuristic approach may be used.</p>
+<p>If an origin server does not explicitly specify freshness (e.g. using {{HTTPHeader("Cache-Control")}} or {{HTTPHeader("Expires")}} header) then a heuristic approach may be used.</p>
 
-<p>In this case look for a {{HTTPHeader("Last-Modified")}} header. If this header is present, then the cache's freshness lifetime is equal to the value of the <code>Date</code> header minus the value of the <code>Last-modified</code> header divided by 10. The expiration time is computed as follows:</p>
+<p>In this case look for a {{HTTPHeader("Last-Modified")}} header. If this header is present, then the cache's freshness lifetime is equal to the value of the <code>Date</code> header minus the value of the <code>Last-modified</code> header divided by 10. The expiration time is computed as follows:</p>
 
 <pre>expirationTime = responseTime + freshnessLifetime - currentAge</pre>
 
-<p>where <code>responseTime</code> is the time at which the response was received according to the browser. For more information see <a href="https://datatracker.ietf.org/doc/html/rfc7234#section-4.2.2">RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): 4.2.2.  Calculating Heuristic Freshness</a>.</p>
+<p>where <code>responseTime</code> is the time at which the response was received according to the browser. For more information see <a href="https://datatracker.ietf.org/doc/html/rfc7234#section-4.2.2">RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): 4.2.2.  Calculating Heuristic Freshness</a>.</p>
 
 <h3 id="Revved_resources">Revved resources</h3>
 
@@ -143,18 +143,18 @@ Cache-Control: public
 
 <p>The {{HTTPHeader("Vary")}} HTTP response header determines how to match future request headers to decide whether a cached response can be used, or if a fresh one must be requested from the origin server.</p>
 
-<p>When a cache receives a request that has a <code>Vary</code> header field, it must not use a cached response by default unless all header fields specified in the <code>Vary</code> header match in both the original (cached) request and the new request.</p>
+<p>When a cache receives a request that has a <code>Vary</code> header field, it must not use a cached response by default unless all header fields specified in the <code>Vary</code> header match in both the original (cached) request and the new request.</p>
 
-<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="http_vary.png">This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set <code>Vary: Accept-Encoding</code> to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, e.g. <code>Accept-Encoding: gzip,deflate,sdch</code>.</p>
+<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="http_vary.png">This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set <code>Vary: Accept-Encoding</code> to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, e.g. <code>Accept-Encoding: gzip,deflate,sdch</code>.</p>
 
 <pre>Vary: Accept-Encoding</pre>
 
 <div class="notecard note">
   <h4>Note</h4>
-  <p>Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</p>
+  <p>Use <code>Vary</code> with care—it can easily reduce the effectiveness of caching! A caching server should use <a href="#normalization">normalization</a> to reduce duplicated cache entries and unnecessary requests to the origin server. This is particularly true when using <code>Vary</code> with headers and header values that can have many values.</p>
 </div>
 
-<p>The <code>Vary</code> header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended). This is usually achieved with the <code>Vary: User-Agent</code> header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.</p>
+<p>The <code>Vary</code> header can also be useful for serving different content to desktop and mobile users, or to allow search engines to discover the mobile version of a page (and perhaps also tell them that no <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a> is intended). This is usually achieved with the <code>Vary: User-Agent</code> header, and works because the {{HTTPHeader("User-Agent")}} header value is different for mobile and desktop clients.</p>
 
 <pre>Vary: User-Agent</pre>
 
@@ -162,23 +162,23 @@ Cache-Control: public
 
 <p>As discussed above, caching servers will by default match future requests <em>only</em> to requests with <em>exactly</em> the same headers and header values. That means a request will be made to the origin and a new cache will be created for every slight variant that might be specified by different user-agents.</p>
 
-<p>For example, by default all of the following result in a separate request to the origin and a separate cache entry: <code>Accept-Encoding: gzip,deflate,sdch</code>, <code>Accept-Encoding: gzip,deflate</code>, <code>Accept-Encoding: gzip</code>. This is true even though the origin server will probably respond with — and store — the same resource for all requests (a gzip)!</p>
+<p>For example, by default all of the following result in a separate request to the origin and a separate cache entry: <code>Accept-Encoding: gzip,deflate,sdch</code>, <code>Accept-Encoding: gzip,deflate</code>, <code>Accept-Encoding: gzip</code>. This is true even though the origin server will probably respond with — and store — the same resource for all requests (a gzip)!</p>
 
-<p>To avoid unnecessary requests and duplicated cache entries, caching servers should use <strong>normalization</strong> to pre-process the request and cache only files that are needed. For example, in the case of <code>Accept-Encoding</code> you could check for <code>gzip</code> and other compression types in the header before doing further processing, and otherwise unset the header. In "pseudo code" this might look like:</p>
+<p>To avoid unnecessary requests and duplicated cache entries, caching servers should use <strong>normalization</strong> to pre-process the request and cache only files that are needed. For example, in the case of <code>Accept-Encoding</code> you could check for <code>gzip</code> and other compression types in the header before doing further processing, and otherwise unset the header. In "pseudo code" this might look like:</p>
 
 <pre>// Normalize Accept-Encoding
 if (req.http.Accept-Encoding) {
   if (req.http.Accept-Encoding ~ "gzip") {
     set req.http.Accept-Encoding = "gzip";
   }
-  // elsif other encoding types to check
+  // elsif other encoding types to check
 else {
   unset req.http.Accept-Encoding;
   }
 }
 </pre>
 
-<p><code>User-Agent</code> has even more variation than <code>Accept-Encoding</code>. So if using <code>Vary: User-Agent</code> for caching mobile/desktop variants of files you'd similarly check for the presence of <code>"mobile"</code> and <code>"desktop"</code> in the request <code>User-Agent</code> header, and then clear it.</p>
+<p><code>User-Agent</code> has even more variation than <code>Accept-Encoding</code>. So if using <code>Vary: User-Agent</code> for caching mobile/desktop variants of files you'd similarly check for the presence of <code>"mobile"</code> and <code>"desktop"</code> in the request <code>User-Agent</code> header, and then clear it.</p>
 
 <h2 id="See_also">See also</h2>
 

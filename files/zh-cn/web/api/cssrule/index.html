@@ -19,13 +19,13 @@ translation_of: Web/API/CSSRule
 <h2 id="所有_CSSRule_实例共有的属性">所有 CSSRule 实例共有的属性</h2>
 
 <dl>
- <dt id="cssText">{{domxref("CSSRule.cssText")}}</dt>
+ <dt>{{domxref("CSSRule.cssText")}}</dt>
  <dd>返回规则的文本表示。例如 <code>"h1,h2 { font-size: 16pt }"</code></dd>
- <dt id="parentRule">{{domxref("CSSRule.parentRule")}} {{readonlyinline}}</dt>
- <dd>返回包含规则，否则返回 <code>null</code>。例如：如果此规则是 {{cssxref("@media")}} 块中的样式规则，则其父规则将是该 {{domxref("CSSMediaRule")}}。</dd>
- <dt id="parentStyleSheet">{{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("CSSRule.parentRule")}} {{readonlyinline}}</dt>
+ <dd>返回包含规则，否则返回 <code>null</code>。例如：如果此规则是 {{cssxref("@media")}} 块中的样式规则，则其父规则将是该 {{domxref("CSSMediaRule")}}。</dd>
+ <dt>{{domxref("CSSRule.parentStyleSheet")}} {{readonlyinline}}</dt>
  <dd>返回包含此规则的样式表的 {{domxref("CSSStyleSheet")}} 对象。</dd>
- <dt id="type">{{domxref("CSSRule.type")}} {{readonlyinline}}</dt>
+ <dt>{{domxref("CSSRule.type")}} {{readonlyinline}}</dt>
  <dd>规则类型，表示 CSS 规则类型 <a href="#类型常量">类型常量</a> 中的一种类型。</dd>
 </dl>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/CSSRule
 
 <p><code>CSSRule 接口通过一系列整型常量来约束 CSSRule 的</code>{{domxref("cssRule/type","type")}}取值范围，同时这些常量也对应规则的具体实现接口。这些常量和接口的对应关系如下：</p>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th>类型</th>
@@ -137,13 +137,13 @@ translation_of: Web/API/CSSRule
   <tr>
    <td><code>CSSRule.UNKNOWN_RULE</code></td>
    <td style="text-align: center;"><code>0</code></td>
-   <td>{{domxref("CSSUnknownRule")}} {{obsolete_inline}}</td>
+   <td>{{domxref("CSSUnknownRule")}} {{Deprecated_Inline}}</td>
    <td></td>
   </tr>
   <tr>
    <td><code>CSSRule.CHARSET_RULE</code></td>
    <td style="text-align: center;"><code>2</code></td>
-   <td><code>CSSCharsetRule</code> {{obsolete_inline}}</td>
+   <td><code>CSSCharsetRule</code> {{Deprecated_Inline}}</td>
    <td>（已在大多数浏览器中被移除）</td>
   </tr>
  </tbody>
@@ -153,7 +153,7 @@ translation_of: Web/API/CSSRule
 
 <h2 id="语法">语法</h2>
 
-<p>使用 <a href="https://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> 语法格式进行描述。</p>
+<p>使用 <a href="https://dev.w3.org/2006/webapi/WebIDL/">WebIDL</a> 语法格式进行描述。</p>
 
 <pre class="notranslate">interface CSSRule {
     const unsigned short STYLE_RULE = 1;
@@ -179,47 +179,7 @@ translation_of: Web/API/CSSRule
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#css-rules', 'CSSRule')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td>Obsoleted values <code>CHARSET_RULE</code> and <code>UNKNOWN_RULE</code>. Added value <code>NAMESPACE_RULE</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Animations",'#interface-cssrule', 'CSSRule')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Added values <code>KEYFRAMES_RULE</code> and <code>KEYFRAME_RULE</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#om-fontfeaturevalues', 'CSSRule')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Added value <code>FONT_FEATURE_VALUES_RULE</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Counter Styles", "#extentions-to-cssrule-interface", 'CSSRule')}}</td>
-   <td>{{Spec2("CSS3 Counter Styles")}}</td>
-   <td>Added value <code>COUNTER_STYLE_RULE</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Conditional", '#extentions-to-cssrule-interface', 'CSSRule')}}</td>
-   <td>{{Spec2('CSS3 Conditional')}}</td>
-   <td>Added value <code>SUPPORTS_RULE</code>. (<code>DOCUMENT_RULE</code> has been pushed to CSS Conditional Rules Level 4)</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSRule', 'CSSRule')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

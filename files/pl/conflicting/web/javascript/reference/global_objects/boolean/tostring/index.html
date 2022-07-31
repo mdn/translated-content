@@ -1,0 +1,52 @@
+---
+title: Boolean.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString
+tags:
+  - Boolean
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<h2 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h2>
+
+<p>Zwraca łańcuch znaków z kodem źródłowym obiektu.</p>
+
+<h2 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h2>
+
+<pre class="syntaxbox"><code><var>booleanObj</var>.toSource()
+Boolean.toSource()</code></pre>
+
+<h3 id="Parametry" name="Parametry">Parametry</h3>
+
+<p>Brak.</p>
+
+<h2 id="Opis" name="Opis">Opis</h2>
+
+<p>Metoda <code>toSource</code> zwraca następujące wartości:</p>
+
+<ul>
+ <li>dla wbudowanego obiektu <code>Boolean</code> metoda <code>toSource</code> zwraca następujący łańcuch znaków, oznaczający, że kod źródłowy nie jest dostępny:
+
+  <pre class="brush: js">function Boolean() {
+   [native code]
+}
+</pre>
+ </li>
+</ul>
+
+<ul>
+ <li>dla instancji obiektu <code>Boolean</code> metoda <code>toSource</code> zwraca łańcuch znaków reprezentujący kod źródłowy.</li>
+</ul>
+
+<p>Metoda ta jest zwykle stosowana wewnętrznie przez interpreter JavaScriptu, a nie bezpośrednio w kodzie programów.</p>
+
+<h2 id="Zobacz_tak.C5.BCe" name="Zobacz_tak.C5.BCe">Zobacz także</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}} {{non-standard_inline}}</li>
+</ul>

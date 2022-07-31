@@ -13,7 +13,9 @@ La propriété **`interval`** renvoie la granularité temporelle, exprimée en m
 
 ## Syntaxe
 
-    var interval = instanceOfDeviceMotionEvent.interval;
+```js
+var interval = instanceOfDeviceMotionEvent.interval;
+```
 
 ## Spécifications
 

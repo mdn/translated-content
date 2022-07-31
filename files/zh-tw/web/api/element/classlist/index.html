@@ -5,9 +5,9 @@ translation_of: Web/API/Element/classList
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code><strong>Element.classList</strong></code> 唯讀屬性代表了該元素所擁有之類別屬性（<code>Class</code> {{Glossary("Attribute")}}）的即時更新集－{{domxref("DOMTokenList")}}。</p>
+<p><code><strong>Element.classList</strong></code> 唯讀屬性代表了該元素所擁有之類別屬性（<code>Class</code> {{Glossary("Attribute")}}）的即時更新集－{{domxref("DOMTokenList")}}。</p>
 
-<p>使用 <code>classList</code> 屬性是取得元素 <code>Class</code> 的一種便利方式，也可以透過 {{domxref("element.className")}} 來得到以空格分隔之 <code>Class</code> 清單字串。</p>
+<p>使用 <code>classList</code> 屬性是取得元素 <code>Class</code> 的一種便利方式，也可以透過 {{domxref("element.className")}} 來得到以空格分隔之 <code>Class</code> 清單字串。</p>
 
 <h2 id="語法">語法</h2>
 
@@ -21,13 +21,13 @@ translation_of: Web/API/Element/classList
 <dl>
  <dt>add( String [, String] )</dt>
  <dd>Add specified class values. If these classes already exist in attribute of the element, then they are ignored.</dd>
- <dt>remove( String [,String] )</dt>
- <dd>Remove specified class values.</dd>
+ <dt>remove( String [,String] )</dt>
+ <dd>Remove specified class values.</dd>
  <dt><strong>item</strong> ( Number )</dt>
- <dd>Return class value by index in collection.</dd>
- <dt><strong>toggle</strong> ( String [, force] )</dt>
- <dd>When only one argument is present: Toggle class value; i.e., if class exists then remove it and return false, if not, then add it and return true.<br>
- When a second argument is present: If the second argument is true, add specified class value, and if it is false, remove it.</dd>
+ <dd>Return class value by index in collection.</dd>
+ <dt><strong>toggle</strong> ( String [, force] )</dt>
+ <dd>When only one argument is present: Toggle class value; i.e., if class exists then remove it and return false, if not, then add it and return true.<br>
+ When a second argument is present: If the second argument is true, add specified class value, and if it is false, remove it.</dd>
  <dt>contains( String )</dt>
  <dd>Checks if specified class value exists in class attribute of the element.</dd>
 </dl>

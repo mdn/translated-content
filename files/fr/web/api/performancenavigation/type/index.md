@@ -37,8 +37,7 @@ let type = performanceNavigation.type;
 
 | Spécifications                                                                                                                               | Statut                                   | Commentaire          |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancenavigation-type',
-        'PerformanceNavigation.type')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancenavigation-type', 'PerformanceNavigation.type')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

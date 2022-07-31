@@ -18,7 +18,9 @@ La méthode **`JSON.parse()`** analyse une chaîne de caractères JSON et constr
 
 ## Syntaxe
 
-    JSON.parse(texte[, reviver])
+```js
+JSON.parse(texte[, reviver])
+```
 
 ### Paramètres
 
