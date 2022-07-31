@@ -15,7 +15,7 @@ A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para ti
 - [Tutoriais para Desenvolvedores Web](/pt-BR/docs/Web/Tutorials)
   - : Tutoriais para guiá-los passo a passo no aprendizado HTML, CSS, JavaScript e APIs Web.
 - [Acessibilidade](/pt-BR/docs/Web/Accessibility)
-  - : Permitir que o maior número possível de pessoas use sites, mesmo quando as habilidades dessas pessoassão limitadas de alguma forma.
+  - : Permitir que o maior número possível de pessoas use sites, mesmo quando as habilidades dessas pessoas são limitadas de alguma forma.
 - [Performance](/pt-BR/docs/Web/Performance)
   - : Tornar o conteúdo o mais disponível e interativo possível, o mais rápido possível.
 - [Segurança](/pt-BR/docs/Web/Security)
