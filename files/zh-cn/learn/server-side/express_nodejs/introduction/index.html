@@ -53,37 +53,30 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <ol>
  <li>打开终端（Windows 中打开命令行工具）</li>
- <li>创建一个空文件夹用来存放项目，比如 <code>"test-node"</code>，然后在终端输入以下命令进入这个文件夹：</li>
-</ol>
-
-<pre class="brush: bash">cd test-node</pre>
-
-<ol start="3">
- <li>用你最喜欢的文本编辑器创建一个名为 <code>"hello.js"</code> 的文件，把以下代码粘贴进来。</li>
-</ol>
-
-<pre class="brush: js">// 调用 HTTP 模块
+ <li>创建一个空文件夹用来存放项目，比如 <code>"test-node"</code>，然后在终端输入以下命令进入这个文件夹：
+  <pre class="brush: bash">cd test-node</pre>
+ </li>
+ <li>用你最喜欢的文本编辑器创建一个名为 <code>"hello.js"</code> 的文件，把以下代码粘贴进来。
+  <pre class="brush: js">// 调用 HTTP 模块
 const http = require("http");
 
 // 创建 HTTP 服务器并监听 8000 端口的所有请求
 http.createServer((request, response) =&gt; {
 
-   // 用 HTTP 状态码和内容类型来设定 HTTP 响应头
-   response.writeHead(200, {'Content-Type': 'text/plain'});
+    // 用 HTTP 状态码和内容类型来设定 HTTP 响应头
+    response.writeHead(200, {'Content-Type': 'text/plain'});
 
-   // 发送响应体 "Hello World"
-   response.end('Hello World\n');
+    // 发送响应体 "Hello World"
+    response.end('Hello World\n');
 }).listen(8000);
 
 // 在控制台打印访问服务器的 URL
-console.log('服务器运行于 http://127.0.0.1:8000/');</pre>
-
-<ol start="4">
+console.log('服务器运行于 http://127.0.0.1:8000/');</pre></li>
  <li>将其保存在刚才创建的文件夹。</li>
- <li>返回终端并输入以下命令：</li>
+ <li>返回终端并输入以下命令：
+  <pre class="brush: bash">$ node "hello.js"</pre>
+ </li>
 </ol>
-
-<pre class="brush: bash">$ node "hello.js"</pre>
 
 <p>最后，在浏览器地址栏中输入 <code>"http://localhost:8000"</code> 并按回车，可以看到一个大面积空白的网页，左上角有“Hello World" 字样。</p>
 
@@ -105,7 +98,7 @@ console.log('服务器运行于 http://127.0.0.1:8000/');</pre>
 <p>虽然 Express 本身是极简风格的，但是开发人员通过创建各类兼容的中间件包解决了几乎所有的 web 开发问题。这些库可以实现 cookie、会话、用户登录、URL 参数、<code>POST</code> 数据、安全头等功能。可在 <a href="https://www.expressjs.com.cn/resources/middleware.html">Express 中间件</a> 网页中找到由 Express 团队维护的中间件软件包列表（还有一张流行的第三方软件包列表）。</p>
 
 <div class="note">
-<p><strong>注：</strong> 这种灵活性是一把双刃剑。虽然有一些中间件包可以解决几乎所有问题或需求，但是挑选合适的包有时也会成为一个挑战。这里构建应用没有“不二法门”，Internet 上许多示例也不是最优的，或者只展示了开发 web 应用所需工作的冰山一角。</p>
+<p><strong>备注：</strong> 这种灵活性是一把双刃剑。虽然有一些中间件包可以解决几乎所有问题或需求，但是挑选合适的包有时也会成为一个挑战。这里构建应用没有“不二法门”，Internet 上许多示例也不是最优的，或者只展示了开发 web 应用所需工作的冰山一角。</p>
 </div>
 
 <h2 id="Node_和_Express_从哪儿来">Node 和 Express 从哪儿来？</h2>
@@ -145,9 +138,9 @@ console.log('服务器运行于 http://127.0.0.1:8000/');</pre>
 <p>首先来看 Express 的 <a href="https://www.expressjs.com.cn/starter/hello-world.html">Hello World</a> 的示例（下文将逐行讨论）。</p>
 
 <div class="note">
-<p><strong>提示：</strong>如果你已经安装了 Node 和 Express（或者你已经按照 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment">下一节</a> 中的说明安装好了），可以将此代码保存为 <strong>app.js</strong>，并通过在 bash 中这样运行它：</p>
+<p><strong>备注：</strong> 如果你已经安装了 Node 和 Express（或者你已经按照 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment">下一节</a> 中的说明安装好了），可以将此代码保存为 <strong>app.js</strong>，并通过在 bash 中这样运行它：</p>
 
-<p><strong><code>node ./app.js</code></strong></p>
+<pre class="brush: bash">node ./app.js</pre>
 </div>
 
 <pre class="brush: js">const express = require('express');
@@ -181,7 +174,7 @@ const app = express();
 <p>还可以创建自定义模块，并用相同的方法导入。</p>
 
 <div class="note">
-<p><strong>提示：</strong>你一定会有自建模块的<strong>需求</strong>，因为这可以让代码管理更有序。单文件应用是很难理解和维护的。使用模块还有助于管理名字空间，因为在使用模块时只会导入模块中显式导出的变量。</p>
+<p><strong>备注：</strong> 你一定会有自建模块的<strong>需求</strong>，因为这可以让代码管理更有序。单文件应用是很难理解和维护的。使用模块还有助于管理名字空间，因为在使用模块时只会导入模块中显式导出的变量。</p>
 </div>
 
 <p>为了让对象暴露于模块之外，只需把它们设置为 <code>exports</code> 对象的附加属性即可。例如，下面的 <strong>square.js </strong>模块就是一个导出了 <code>area()</code> 和 <code>perimeter()</code> 方法的文件：</p>
@@ -197,7 +190,7 @@ exports.perimeter = width =&gt; { return 4 * width; };
 console.log('边长为 4 的正方形面积为 ' + square.area(4));</pre>
 
 <div class="note">
-<p><strong>注：</strong>为模块指定绝对路径（或模块的名字，见最初的示例）也是可行的。</p>
+<p><strong>备注：</strong> 为模块指定绝对路径（或模块的名字，见最初的示例）也是可行的。</p>
 </div>
 
 <p>一次赋值不仅能构建一个单一的属性，还能构建一个完整的对象，可以像下面这样把对象赋值给 <code>module.exports</code>（也可以让 <code>exports</code> 对象直接作为一个构造器或另一个函数）：</p>
@@ -208,12 +201,12 @@ console.log('边长为 4 的正方形面积为 ' + square.area(4));</pre>
 };</pre>
 
 <div class="blockIndicator note">
-<p><strong>注：</strong>在一个既定的模块内，可以把 <code>exports</code> 想象成 <code>module.exports</code> 的 <a href="https://nodejs.cn/api/modules.html#modules_exports_shortcut">快捷方式</a>。<code>exports</code> 本质上就是在模块初始化前为 <code>module.exports</code> 的值进行初始化的一个变量。这个值是对一个对象（这里是空对象）的引用。这意味着 <code>exports</code> 与 <code>module.exports</code> 引用了同一个对象，也意味着如果为 <code>exports</code> 赋其它值不会影响到 <code>module.exports</code>。</p>
+<p><strong>备注：</strong> 在一个既定的模块内，可以把 <code>exports</code> 想象成 <code>module.exports</code> 的 <a href="https://nodejs.cn/api/modules.html#modules_exports_shortcut">快捷方式</a>。<code>exports</code> 本质上就是在模块初始化前为 <code>module.exports</code> 的值进行初始化的一个变量。这个值是对一个对象（这里是空对象）的引用。这意味着 <code>exports</code> 与 <code>module.exports</code> 引用了同一个对象，也意味着如果为 <code>exports</code> 赋其它值不会影响到 <code>module.exports</code>。</p>
 </div>
 
 <p>更多信息请参阅 <a href="https://nodejs.cn/api/modules.html">模块</a>（Node API 文档）。</p>
 
-<h3 id="使用异步_APIs">使用异步 APIs</h3>
+<h3 id="使用异步_APIs">使用异步 API</h3>
 
 <p>JavaScript 代码在完成那些需要一段时间才能完成的操作时，经常会用异步 API 来取代同步 API。同步 API 下，每个操作完成后才可以进行下一个操作。例如，下列日志函数是同步的，将按顺序将文本打印到控制台（第一、第二）。</p>
 
@@ -233,11 +226,11 @@ console.log('第二');</pre>
 <p>有多种方法可以让一个异步 API 通知当前应用它已执行完毕。最常用的是在调用异步 API 时注册一个回调函数，在 API 操作结束后将“回调”之。这也是上面的代码所使用的方法。</p>
 
 <div class="note">
-<p><strong>提示：</strong>如果有一系列独立的异步操作必须按顺序执行，那么使用回调可能会非常“混乱”，因为这会导致多级嵌套回调。人们通常把这个问题叫做“回调地狱”。缓解这个问题有以下办法：良好的编码实践（参考 <a href="http://callbackhell.com/">http://callbackhell.com/</a>）、使用 <a href="https://www.npmjs.com/package/async">async</a> 等模块、迁移至 ES6 并使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> 等特性。</p>
+<p><strong>备注：</strong> 如果有一系列独立的异步操作必须按顺序执行，那么使用回调可能会非常“混乱”，因为这会导致多级嵌套回调。人们通常把这个问题叫做“回调地狱”。缓解这个问题有以下办法：良好的编码实践（参考 <a href="http://callbackhell.com/">http://callbackhell.com/</a>）、使用 <a href="https://www.npmjs.com/package/async">async</a> 等模块、迁移至 ES6 并使用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> 等特性。</p>
 </div>
 
 <div class="note">
-<p><strong>注：</strong>Node 和 Express 有一个一般性约定，即：使用“错误优先”回调。这个约定要求回调函数的第一个参数是错误值，而后续的参数包含成功数据。以下博文很好的解释了这个方法的有效性：<a href="https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/">以 Node.js 之名：理解错误优先回调</a>（fredkschott.com 英文文章）</p>
+<p><strong>备注：</strong> Node 和 Express 有一个一般性约定，即：使用“错误优先”回调。这个约定要求回调函数的第一个参数是错误值，而后续的参数包含成功数据。以下博文很好的解释了这个方法的有效性：<a href="https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/">以 Node.js 之名：理解错误优先回调</a>（fredkschott.com 英文文章）</p>
 </div>
 
 <h3 id="创建路由处理器（Route_handler）">创建路由处理器（Route handler）</h3>
@@ -252,10 +245,10 @@ console.log('第二');</pre>
 <p>回调函数将请求和响应对象作为参数。该函数直接调用响应的 <code>send()</code> 以返回字符串“Hello World!”。有 <a href="https://www.expressjs.com.cn/guide/routing.html#response-methods">许多其它响应方法</a> 可以结束请求/响应周期，例如，通过调用 <code>res.json()</code> 来发送 JSON 响应、调用 <code>res.sendFile()</code> 来发送文件。</p>
 
 <div class="note">
-<p><strong>JavaScript 提示</strong>：虽然回调函数的参数命名没有限制，但是当调用回调时，第一个参数将始终是请求，第二个参数将始终是响应。合理的命名它们，在回调体中使用的对象将更容易识别。</p>
+<p><strong>备注：</strong> 虽然回调函数的参数命名没有限制，但是当调用回调时，第一个参数将始终是请求，第二个参数将始终是响应。合理的命名它们，在回调体中使用的对象将更容易识别。</p>
 </div>
 
-<p><strong>Express 应用 </strong>对象还提供了为其它所有 HTTP 动词定义路由处理器的方法，大多数处理器的使用方式完全一致：</p>
+<p><strong>Express 应用</strong>对象还提供了为其它所有 HTTP 动词定义路由处理器的方法，大多数处理器的使用方式完全一致：</p>
 
 <p><code>checkout()</code>, <code>copy()</code>, <strong><code>delete()</code></strong>, <strong><code>get()</code></strong>, <code>head()</code>, <code>lock()</code>, <code>merge()</code>, <code>mkactivity()</code>, <code>mkcol()</code>, <code>move()</code>, <code>m-search()</code>, <code>notify()</code>, <code>options()</code>, <code>patch()</code>, <strong><code>post()</code></strong>, <code>purge()</code>, <strong><code>put()</code></strong>, <code>report()</code>, <code>search()</code>, <code>subscribe()</code>, <code>trace()</code>, <code>unlock()</code>, <code>unsubscribe()</code>.</p>
 
@@ -290,10 +283,10 @@ module.exports = router;
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong>向 <code>Router</code> 对象添加路由就像向之前为 <code>app</code> 对象添加路由一样。</p>
+<p><strong>备注：</strong> 向 <code>Router</code> 对象添加路由就像向之前为 <code>app</code> 对象添加路由一样。</p>
 </div>
 
-<p>首先 <code>require()</code> 路由模块（<strong>wiki.js</strong>），然后在 Express 应用中调用 <code>use()</code> 把 <code>Router</code> 添加到中间件处理路径中，就可以在主应用中使用这个模块中的路由处理器了。路由路径有两条：<code style="font-style: normal; font-weight: normal;">/wiki</code> 和 <code style="font-style: normal; font-weight: normal;">/wiki/about/</code>。</p>
+<p>首先 <code>require()</code> 路由模块（<strong>wiki.js</strong>），然后在 Express 应用中调用 <code>use()</code> 把 <code>Router</code> 添加到中间件处理路径中，就可以在主应用中使用这个模块中的路由处理器了。路由路径有两条：<code>/wiki</code> 和 <code>/wiki/about/</code>。</p>
 
 <pre class="brush: js">const wiki = require('./wiki.js');
 // ...
@@ -307,7 +300,7 @@ app.use('/wiki', wiki);
 <p>中间件在 Express 应用中得到了广泛使用，从提供错误处理静态文件、到压缩 HTTP 响应等等。路由函数可以通过向 HTTP 客户端返回一些响应来结束 HTTP“请求 - 响应”周期，而中间件函数<em>通常是</em>对请求或响应执行某些操作，然后调用“栈”里的下一个函数，可能是其它中间件或路由处理器。中间件的调用顺序由应用开发者决定。</p>
 
 <div class="note">
-<p><strong>注：</strong>中间件可以执行任何操作，运行任何代码，更改请求和响应对象，也可以<strong>结束“请求 - 响应”周期</strong>。如果它没有结束循环，则必须调用 <code>next()</code> 将控制传递给下一个中间件函数（否则请求将成为悬挂请求）。</p>
+<p><strong>备注：</strong> 中间件可以执行任何操作，运行任何代码，更改请求和响应对象，也可以<strong>结束“请求 - 响应”周期</strong>。如果它没有结束循环，则必须调用 <code>next()</code> 将控制传递给下一个中间件函数（否则请求将成为悬挂请求）。</p>
 </div>
 
 <p>大多数应用会使用<strong>第三方</strong>中间件来简化常见的 web 开发任务，比如 cookie、会话、用户身份验证、访问请求 <code>POST</code> 和 JSON 数据，日志记录等。参见 <a href="https://www.expressjs.com.cn/resources/middleware.html">Express 团队维护的中间件包列表</a>（包含受欢迎的第三方包）。NPM 有提供其它 Express 包。</p>
@@ -326,7 +319,7 @@ const app = express();
 ...</pre>
 
 <div class="note">
-<p><strong>注意：</strong>中间件和路由函数是按声明顺序调用的。一些中间件的引入顺序很重要（例如，如果会话中间件依赖于 cookie 中间件，则必须先添加 cookie 处理器）。绝大多数情况下要先调用中间件后设置路由，否则路由处理器将无法访问中间件的功能。</p>
+<p><strong>备注：</strong> 中间件和路由函数是按声明顺序调用的。一些中间件的引入顺序很重要（例如，如果会话中间件依赖于 cookie 中间件，则必须先添加 cookie 处理器）。绝大多数情况下要先调用中间件后设置路由，否则路由处理器将无法访问中间件的功能。</p>
 </div>
 
 <p>可以自己编写中间件函数，这是基本技能（仅仅为了创建错误处理代码也需要）。中间件函数和路由处理回调之间的<strong>唯一</strong>区别是：中间件函数有第三个参数 <code>next</code>，在中间件不会结束请求周期时应调用这个 <code>next</code>（它包含中间件函数调用后应调用的<strong>下一个</strong>函数）。</p>
@@ -356,7 +349,7 @@ app.get('/', a_middleware_function);
 app.listen(3000);</pre>
 
 <div class="note">
-<p><strong>JavaScript 提示：</strong>上面代码中单独声明了中间件函数，并把它设置为回调。之前是把路由处理函数在使用时声明为回调。在 JavaScript 中，两种方法都可行。</p>
+<p><strong>备注：</strong> 上面代码中单独声明了中间件函数，并把它设置为回调。之前是把路由处理函数在使用时声明为回调。在 JavaScript 中，两种方法都可行。</p>
 </div>
 
 <p>请参阅 Express 文档中关于 <a href="https://www.expressjs.com.cn/guide/using-middleware.html">使用</a> 和 <a href="https://www.expressjs.com.cn/guide/writing-middleware.html">开发</a> Express 中间件的内容。</p>
@@ -370,7 +363,7 @@ app.listen(3000);</pre>
 
 <p>现在 'public' 文件夹下的所有文件均可通过在根 URL 后直接添加文件名来访问了，比如：</p>
 
-<pre><code>http://localhost:3000/images/dog.jpg
+<pre class="brush: plain"><code>http://localhost:3000/images/dog.jpg
 http://localhost:3000/css/style.css
 http://localhost:3000/js/app.js
 http://localhost:3000/about.html
@@ -389,7 +382,7 @@ app.use(express.static('media'));
 
 <p>现在可以通过 '/media' 路径前缀来访问 'public' 文件夹中的文件。</p>
 
-<pre><code>http://localhost:3000/media/images/dog.jpg
+<pre class="brush: plain"><code>http://localhost:3000/media/images/dog.jpg
 http://localhost:3000/media/video/cat.mp4
 http://localhost:3000/media/cry.mp3</code>
 </pre>
@@ -411,11 +404,11 @@ http://localhost:3000/media/cry.mp3</code>
 <p>Express 内建了错误处理机制，可以协助处理 app 中没有被处理的错误。默认的错误处理中间件函数在中间件函数栈的末尾。如果一个错误传递给 <code>next()</code> 而没有用错误处理器来处理它，内建处理机制将启动，栈跟踪的错误将回写给客户端。</p>
 
 <div class="note">
-<p><strong>注：</strong> 生产环境中不保留栈跟踪轨迹。可将环境变量 <code>NODE_ENV</code> 设置为 <code>'production'</code> 来运行所需的生产环境。</p>
+<p><strong>备注：</strong> 生产环境中不保留栈跟踪轨迹。可将环境变量 <code>NODE_ENV</code> 设置为 <code>'production'</code> 来运行所需的生产环境。</p>
 </div>
 
 <div class="note">
-<p><strong>注：</strong>HTTP404 和其它“错误”状态码不作为错误处理。可使用中间件来自行处理这些状态。更多信息请参阅 Express 文档 <a href="https://www.expressjs.com.cn/starter/faq.html#如何处理-404-响应">FAQ</a>。</p>
+<p><strong>备注：</strong> HTTP 404 和其它“错误”状态码不作为错误处理。可使用中间件来自行处理这些状态。更多信息请参阅 Express 文档 <a href="https://www.expressjs.com.cn/starter/faq.html#如何处理-404-响应">FAQ</a>。</p>
 </div>
 
 <p>更多信息请参阅 Express 文档 <a href="https://www.expressjs.com.cn/guide/error-handling.html">错误处理</a>。</p>

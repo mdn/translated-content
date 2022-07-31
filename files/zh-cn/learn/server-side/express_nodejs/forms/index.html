@@ -1,6 +1,6 @@
 ---
 title: 'Express 教程 6: 使用表单'
-slug: learn/Server-side/Express_Nodejs/forms
+slug: Learn/Server-side/Express_Nodejs/forms
 translation_of: Learn/Server-side/Express_Nodejs/forms
 ---
 <div>{{LearnSidebar}}</div>
@@ -35,7 +35,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 <p>此教程将展示上述的操作，如何在 <em>Express </em>中实现。在此过程中，我们将扩展 LocalLibrary 网站，以允许用户创建，编辑和删除图书馆中的项目。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 我们还没有考虑如何将特定路由，限制为经过身份验证或授权的用户，因此在这个时间点，任何用户都可以对数据库进行更改。</p>
+<p><strong>备注：</strong> 我们还没有考虑如何将特定路由，限制为经过身份验证或授权的用户，因此在这个时间点，任何用户都可以对数据库进行更改。</p>
 </div>
 
 <h3 id="HTML表单">HTML 表单</h3>
@@ -54,7 +54,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
     &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>虽然这里，我们只包含一个（文本）字段，用于输入团队名称，但表单可能包含任意数量的其他输入元素，及其相关标签。字段的 <code>type </code>属性，定义将显示哪种窗口小部件。该字段的名称<code>name</code>和<code>id</code> ，用于标识 JavaScript/CSS/HTML 中的字段，而 <code>value</code>定义字段首次显示时的初始值。匹配团队标签使用<code style="font-style: normal; font-weight: normal;">label</code>标签，指定（请参阅上面的“输入名称” "Enter name"），其中 <code style="font-style: normal; font-weight: normal;">for </code>字段，包含<code style="font-style: normal; font-weight: normal;">input</code>相关输入的<code style="font-style: normal; font-weight: normal;">id</code>值。</p>
+<p>虽然这里，我们只包含一个（文本）字段，用于输入团队名称，但表单可能包含任意数量的其他输入元素，及其相关标签。字段的 <code>type</code> 属性，定义将显示哪种窗口小部件。该字段的名称 <code>name</code> 和 <code>id</code> ，用于标识 JavaScript/CSS/HTML 中的字段，而 <code>value</code>定义字段首次显示时的初始值。匹配团队标签使用 <code>label</code> 标签，指定（请参阅上面的“输入名称” "Enter name"），其中 <code>for</code> 字段，包含 <code>input</code> 相关输入的 <code>id</code> 值。</p>
 
 <p>另外，有必要说一下，HTML 中 form 表单默认就是以 post 提交的。它比 get 方式存储量更大、传输更安全。</p>
 
@@ -116,7 +116,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 <h4 id="使用_express-validator">使用 express-validator</h4>
 
 <div class="note">
-<p><strong>注意：</strong> Github 上的<a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a>指南，提供了 API 的良好概述。我们建议您阅读该内容，以了解其所有功能（包括创建自定义验证程序）。下面我们只介绍一个对 LocalLibrary 有用的子集。</p>
+<p><strong>备注：</strong> Github 上的<a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a>指南，提供了 API 的良好概述。我们建议您阅读该内容，以了解其所有功能（包括创建自定义验证程序）。下面我们只介绍一个对 LocalLibrary 有用的子集。</p>
 </div>
 
 <p>要在我们的控制器中使用验证器，我们必须从'<strong>express-validator/check</strong>'和'<strong>express-validator/filter</strong>'模块中，导入我们想要使用的函数，如下所示：</p>
@@ -142,7 +142,7 @@ body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
 </pre>
 
   <div class="note">
-  <p><strong>注意：</strong> 您还可以添加内联清理器，如<code>trim()</code>，如上所示。但是，此处应用清理器，仅适用于验证步骤。如果要对最终输出进行消毒，则需要使用单独的清理器方法，如下所示。</p>
+  <p><strong>备注：</strong> 您还可以添加内联清理器，如<code>trim()</code>，如上所示。但是，此处应用清理器，仅适用于验证步骤。如果要对最终输出进行消毒，则需要使用单独的清理器方法，如下所示。</p>
   </div>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#sanitizebodyfields">sanitizeBody(fields)</a></code>: 指定一个正文要清理的字段。然后将清理操作，以菊花链形式连接到此方法。例如，下面的<code>escape()</code>清理操作，会从名称变量中，删除可能在 JavaScript 跨站点脚本攻击中使用的 HTML 字符。
@@ -199,7 +199,7 @@ sanitizeBody('date').toDate(),</pre>
 <p>哦，如果你涉及文件上传，那么你可能需要“<a href="https://blog.csdn.net/qq_43624878/article/details/103607944">multer</a>”中间件，你大概听说过“formidable”，但 multer 比它更强大！</p>
 
 <div class="note">
-<p><strong>注意：</strong> 更“牢固”的实现，可能允许您在创建新对象时创建依赖对象，并随时删除任何对象（例如，通过删除依赖对象，或从数据库中，删除对已删除对象的引用） 。</p>
+<p><strong>备注：</strong> 更“牢固”的实现，可能允许您在创建新对象时创建依赖对象，并随时删除任何对象（例如，通过删除依赖对象，或从数据库中，删除对已删除对象的引用） 。</p>
 </div>
 
 <h3 id="路由">路由</h3>

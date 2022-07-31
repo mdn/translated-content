@@ -1,6 +1,6 @@
 ---
 title: 书本实例列表页面
-slug: learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
 <p>接下来，我们将实作图书馆中所有书本实例 (<code>BookInstance</code>) 的列表页面。这个页面需要包含与每个 <code>BookInstance</code> (链接到其详细信息页面) 关联的书本 <code>Book</code> 标题，以及<code>BookInstance</code>模型中的其他信息，包含每个副本的状态，印记和唯一 ID。唯一 ID 的文字，应该链接到 <code>BookInstance</code> 详细信息页面。</p>
@@ -11,7 +11,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_li
 
 <p>打开 <strong>/controllers/bookinstanceController.js</strong>。找到导出的 <code>bookinstance_list()</code> 控制器方法，并用以下代码替换它（更改后的代码以粗体显示）。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display list of all BookInstances.
+<pre class="brush: js">// Display list of all BookInstances.
 exports.bookinstance_list = function(req, res, next) {
 
   BookInstance.find()
@@ -22,7 +22,7 @@ exports.bookinstance_list = function(req, res, next) {
       res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
     });
 
-};</code></pre>
+};</pre>
 
 <p>此方法使用模型的<code>find()</code>函数，返回所有<code>BookInstance</code>对象。然后它将一个调用，以菊花链方式连接到<code>populate()</code>，附加书本<code>book</code>字段，这将使用完整的<code>Book</code>文档，替换每个<code>BookInstance</code>存储的书本 ID。</p>
 
@@ -32,7 +32,7 @@ exports.bookinstance_list = function(req, res, next) {
 
 <p>创建 <strong>/views/bookinstance_list.pug</strong> ，並複制貼上底下的文字。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">extends layout
+<pre class="brush: js">extends layout
 
 block content
   h1= title
@@ -51,7 +51,7 @@ block content
         span  (Due: #{val.due_back} )
 
   else
-    li There are no book copies in this library.</code></pre>
+    li There are no book copies in this library.</pre>
 
 <p>这个視图与其他視图非常相似。它扩展了布局，替换内容區块，显示从控制器传入的标题<code>title</code>，并遍历<code>bookinstance_list</code> 中的所有书籍副本。对于每个副本，我们都会显示它的状态（用颜色编码），如果书本不可用，则显示其预期返回日期。這裡引入了一个新功能 — 我们可以在标签之后使用点符号表示法，來指定一個类別。因此，<code>span.text-success</code> 将被编译为 <code>&lt;span class="text-success"&gt;</code> (也可以用 Pug 编写为 <code>span(class="text-success")</code>.</p>
 

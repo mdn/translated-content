@@ -61,7 +61,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>这种可远程访问的计算/网络硬件，称为基础架构即服务（IaaS）。许多IaaS 供应商，提供预安装特定操作系统的选项，您必须在其上，安装生产环境的其他组件。其他供应商，允许您选择功能更全面的环境，可能包括完整的 node 设置。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 预构建环境，可以使您的网站设置变得非常简单，因为它们会减少配置，但可用选项可能会限制您使用不熟悉的服务器（或其他组件），并且可能基于较旧版本的操作系统。通常最好自己安装组件，以便获得所需的组件，并且当您需要升级系统的某些部分时，您可以知道从哪里开始！</p>
+<p><strong>备注：</strong> 预构建环境，可以使您的网站设置变得非常简单，因为它们会减少配置，但可用选项可能会限制您使用不熟悉的服务器（或其他组件），并且可能基于较旧版本的操作系统。通常最好自己安装组件，以便获得所需的组件，并且当您需要升级系统的某些部分时，您可以知道从哪里开始！</p>
 </div>
 
 <p>其他托管服务提供商，支持 Express 作为平台即服务（PaaS）产品的一部分。使用此类托管时，您无需担心大多数生产环境（服务器，负载平衡器等），因为主机平台会为您处理这些问题。这使得部署非常简单，因为您只需要专注于 Web 应用程序，而不是任何其他服务器基础结构。</p>
@@ -69,7 +69,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>一些开发人员选择 IaaS，相对于 PaaS，IaaS 提供更高灵活性，而其他开发人员偏好 PaaS 的降低维护开销，和更轻松的扩展性。当您在一开始使用时，在 PaaS 系统上设置您的网站，要容易得多，因此我们将在本教程中使用 PaaS。</p>
 
 <div class="note">
-<p><strong>提示：</strong> 如果您选择Node/Express友好的托管服务提供商，他们应该提供，有关如何使用Web服务器，应用程序服务器，反向代理等不同配置，来设置 Express 网站的说明。例如，在<a href="https://www.digitalocean.com/community/tutorials?q=node">数字海洋 node 社区文档</a>中，有许多各种配置的手把手指南。</p>
+<p><strong>备注：</strong> 如果您选择Node/Express友好的托管服务提供商，他们应该提供，有关如何使用Web服务器，应用程序服务器，反向代理等不同配置，来设置 Express 网站的说明。例如，在<a href="https://www.digitalocean.com/community/tutorials?q=node">数字海洋 node 社区文档</a>中，有许多各种配置的手把手指南。</p>
 </div>
 
 <h2 id="选择一个主机供应商">选择一个主机供应商</h2>
@@ -77,7 +77,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>众所周知，众多托管服务提供商，都积极支持或与 Node（和 Express）合作。这些供应商提供不同类型的环境（IaaS，PaaS），以及不同价格的不同级别的计算和网络资源。</p>
 
 <div class="note">
-<p><strong>提示：</strong> 有很多托管解决方案，他们的服务和定价，可能会随着时间而改变。虽然我们在下面介绍几个选项，但在选择托管服务提供商之前，有必要自己进行互联网搜索。</p>
+<p><strong>备注：</strong> 有很多托管解决方案，他们的服务和定价，可能会随着时间而改变。虽然我们在下面介绍几个选项，但在选择托管服务提供商之前，有必要自己进行互联网搜索。</p>
 </div>
 
 <p>选择主机时需要考虑的一些事项：</p>
@@ -99,7 +99,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>许多提供商还拥有“基本”层，可提供更多有用的计算能力，和更少的限制。举例来说， <a href="https://www.digitalocean.com/">Digital Ocean</a> 是一个流行的托管服务提供商，它提供了一个相对便宜的基本计算层（在本教程写作时，是每月 5 美元的较低范围）。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 请记住，价格不是唯一的选择标准。如果您的网站成功，可能会发现可扩展性是最重要的考虑因素。</p>
+<p><strong>备注：</strong> 请记住，价格不是唯一的选择标准。如果您的网站成功，可能会发现可扩展性是最重要的考虑因素。</p>
 </div>
 
 <h2 id="准备好发布你的网站">准备好发布你的网站</h2>
@@ -109,7 +109,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>在以下小节中，我们概述了您应该对应用进行的、最重要的更改。</p>
 
 <div class="note">
-<p><strong>提示：</strong> Express 文档中还有其他有用的提示 - 请参阅“<a href="https://expressjs.com/en/advanced/best-practice-performance.html">生产最佳实践：性能和可靠性</a>”，以及“<a href="https://expressjs.com/en/advanced/best-practice-security.html">生产最佳实践：安全性</a>”。</p>
+<p><strong>备注：</strong> Express 文档中还有其他有用的提示 - 请参阅“<a href="https://expressjs.com/en/advanced/best-practice-performance.html">生产最佳实践：性能和可靠性</a>”，以及“<a href="https://expressjs.com/en/advanced/best-practice-security.html">生产最佳实践：安全性</a>”。</p>
 </div>
 
 <h3 id="设置_NODE_ENV_为_'production'">设置 NODE_ENV 为 'production'</h3>
@@ -119,7 +119,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>可以使用导出或环境文件，或使用 OS 初始化系统，以进行此更改。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 这实际上是在环境设置，而不是应用中所做的更改，但重要的是，要注意这里！我们将在下面，展示如何为我们的托管示例设置。</p>
+<p><strong>备注：</strong> 这实际上是在环境设置，而不是应用中所做的更改，但重要的是，要注意这里！我们将在下面，展示如何为我们的托管示例设置。</p>
 </div>
 
 <h3 id="Log_appropriately">Log appropriately</h3>
@@ -155,7 +155,7 @@ export DEBUG="author,book"
 </pre>
 
 <div class="note">
-<p><strong>挑战：</strong> 调用<code>debug</code>可以替换您以前使用<code>console.log()</code>或<code>console.error()</code>执行的日志记录。通过调试模块<a href="https://www.npmjs.com/package/debug">debug</a>进行日志记录，替换代码中的所有<code>console.log()</code>调用。通过设置 DEBUG 变量，并在其中记录对日志记录的影响，在开发环境中，打开和关闭日志记录。</p>
+<p><strong>备注：</strong> 调用<code>debug</code>可以替换您以前使用<code>console.log()</code>或<code>console.error()</code>执行的日志记录。通过调试模块<a href="https://www.npmjs.com/package/debug">debug</a>进行日志记录，替换代码中的所有<code>console.log()</code>调用。通过设置 DEBUG 变量，并在其中记录对日志记录的影响，在开发环境中，打开和关闭日志记录。</p>
 </div>
 
 <p>如果您需要记录网站活动，可以使用 Winston 或 Bunyan 等日志库。有关此主题的更多信息，请参阅：<a href="https://expressjs.com/en/advanced/best-practice-performance.html">生产最佳实践：性能和可靠性</a>。</p>
@@ -190,7 +190,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 对于生产中流量较大的网站，您不会使用此中间件。相反，你会使用像 Nginx 这样的反向代理。</p>
+<p><strong>备注：</strong> 对于生产中流量较大的网站，您不会使用此中间件。相反，你会使用像 Nginx 这样的反向代理。</p>
 </div>
 
 <h3 id="使用_Helmet_避免被常见漏洞侵袭">使用 Helmet 避免被常见漏洞侵袭</h3>
@@ -262,7 +262,7 @@ var app = express();
 <p>Heroku 与 <strong>git </strong>源代码版本控制系统紧密集成，使用它来上传/同步您对实时运行系统所做的任何更改。它通过添加一个名为 heroku 的新 Heroku“远程”存储库，来指向您在 Heroku 云上的源存储库。在开发期间，您使用 git 在“主”存储库 master 中存储更改。如果要部署站点，请将更改同步到 Heroku 存储库。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 如果您习惯于遵循良好的软件开发实践，那么您可能已经在使用 git 或其他一些 SCM 系统。如果您已有 git 存储库，则可以跳过此步骤。</p>
+<p><strong>备注：</strong> 如果您习惯于遵循良好的软件开发实践，那么您可能已经在使用 git 或其他一些 SCM 系统。如果您已有 git 存储库，则可以跳过此步骤。</p>
 </div>
 
 <p>有很多方法可以使用 git，但最简单的方法之一，是首先在<a href="https://github.com/">GitHub</a>上建立一个帐户，在那里创建存储库，然后在本地同步它：</p>
@@ -306,7 +306,7 @@ var app = express();
 </pre>
  </li>
  <li>使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
-  <pre>&gt; git status
+  <pre class="brush: plain">&gt; git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
@@ -318,14 +318,14 @@ Changes to be committed:
   <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
  </li>
  <li>然后使用以下内容，将本地存储库同步到 Github 网站：
-  <pre>git push origin master</pre>
+  <pre class="brush: bash">git push origin master</pre>
  </li>
 </ol>
 
 <p>完成此操作后，您应该可以返回创建存储库的 Github 上的页面，刷新页面，并查看您的整个应用程序现已上传。使用此添加/提交/推送循环，您可以在文件更改时，继续更新存储库。</p>
 
 <div class="note">
-<p><strong>提示：</strong> 这是备份你的“vanilla”项目的好时机 - 虽然我们将在以下部分中进行的一些更改，可能对任何平台（或开发）上的部署有用，而一些其他的更改可能没有用。</p>
+<p><strong>备注：</strong> 这是备份你的“vanilla”项目的好时机 - 虽然我们将在以下部分中进行的一些更改，可能对任何平台（或开发）上的部署有用，而一些其他的更改可能没有用。</p>
 
 <p>执行此操作的最佳方法，是使用 git 来管理您的修订。使用 git，您不仅可以回到特定的旧版本，而且可以在生产变更的单独“分支”中进行维护，并选择在生产和开发分支之间移动的任何更改。<a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">学习 Git</a>非常值得，但超出了本主题的范围。</p>
 
@@ -419,7 +419,7 @@ git push origin master</pre>
 <pre class="brush: bash">heroku create</pre>
 
 <div class="note">
-<p><strong>注意：</strong> 如果您愿意，可以在“创建”create 之后指定远程存储库的命名。如果你不这样做，你会得到一个随机的名字。该名称用于默认 URL。</p>
+<p><strong>备注：</strong> 如果您愿意，可以在“创建”create 之后指定远程存储库的命名。如果你不这样做，你会得到一个随机的名字。该名称用于默认 URL。</p>
 </div>
 
 <p>然后，我们可以将我们的应用程序，推送到 Heroku 存储库，如下所示。这将上传应用程序，获取所有依赖项，将其打包到 dyno 中，然后启动该站点。</p>
@@ -431,7 +431,7 @@ git push origin master</pre>
 <pre class="brush: bash">heroku open</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 该站点将使用我们的开发数据库运行。创建一些书本和其他对象，并检查该网站是否按预期运行。在下一节中，我们将其设置为使用我们的新数据库。</p>
+<p><strong>备注：</strong> 该站点将使用我们的开发数据库运行。创建一些书本和其他对象，并检查该网站是否按预期运行。在下一节中，我们将其设置为使用我们的新数据库。</p>
 </div>
 
 <h3 id="设定配置变量">设定配置变量</h3>
