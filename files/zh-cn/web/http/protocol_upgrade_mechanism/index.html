@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Protocol_upgrade_mechanism
 ---
 <p>{{HTTPSidebar}}</p>
 
-<p><a href="/zh-CN/docs/Web/HTTP">HTTP 协议</a> 提供了一种特殊的机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。这篇指南涵盖了其工作原理和使用场景。</p>
+<p><a href="/zh-CN/docs/Web/HTTP">HTTP 协议</a> 提供了一种特殊的机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。这篇指南涵盖了其工作原理和使用场景。</p>
 
 <p>通常来说这一机制总是由客户端发起的（不过也有例外，比如说可以由服务端发起<a href="#server-initiated_upgrade_to_tls">升级到传输层安全协议（TLS）</a>）， 服务端可以选择是否要升级到新协议。借助这一技术，连接可以以常用的协议启动（如 HTTP/1.1），随后再升级到 HTTP2 甚至是 WebSockets.</p>
 
@@ -19,9 +19,9 @@ translation_of: Web/HTTP/Protocol_upgrade_mechanism
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/HTTP/Headers/Connection">Connection: Upgrade</a></code></dt>
- <dd>设置 <code>Connection</code> 头的值为 <code>"Upgrade"</code> 来指示这是一个升级请求。</dd>
+ <dd>设置 <code>Connection</code> 头的值为 <code>"Upgrade"</code> 来指示这是一个升级请求。</dd>
  <dt><code><a href="/en-US/docs/Web/HTTP/Headers/Upgrade">Upgrade: <em>protocols</em></a></code></dt>
- <dd><code>Upgrade</code> 头指定一项或多项协议名，按优先级排序，以逗号分隔。</dd>
+ <dd><code>Upgrade</code> 头指定一项或多项协议名，按优先级排序，以逗号分隔。</dd>
 </dl>
 
 <p>一个典型的包含升级请求的例子差不多是这样的：</p>
@@ -31,21 +31,21 @@ Host: www.example.com
 Connection: upgrade
 Upgrade: example/1, foo/2</pre>
 
-<p>根据之前的请求的协议，可能需要其他头部信息，例如：从 HTTP/1.1 升级到<a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> 允许配置有关 WebSocket 连接的头部详细信息，以及在连接时提供一定程度的安全性。查看 <a href="#升级到websocket协议的连接">升级到 WebSocket 协议的连接</a> 获取更多信息。</p>
+<p>根据之前的请求的协议，可能需要其他头部信息，例如：从 HTTP/1.1 升级到<a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> 允许配置有关 WebSocket 连接的头部详细信息，以及在连接时提供一定程度的安全性。查看 <a href="#升级到websocket协议的连接">升级到 WebSocket 协议的连接</a> 获取更多信息。</p>
 
-<p>如果服务器决定升级这次连接，就会返回一个 {{HTTPStatus(101, "101 Switching Protocols")}} 响应状态码，和一个要切换到的协议的头部字段 Upgrade。 如果服务器没有（或者不能）升级这次连接，它会忽略客户端发送的 <code>"Upgrade</code> 头部字段，返回一个常规的响应：例如一个{{HTTPStatus(200, "200 OK")}}).</p>
+<p>如果服务器决定升级这次连接，就会返回一个 {{HTTPStatus(101, "101 Switching Protocols")}} 响应状态码，和一个要切换到的协议的头部字段 Upgrade。 如果服务器没有（或者不能）升级这次连接，它会忽略客户端发送的 <code>"Upgrade</code> 头部字段，返回一个常规的响应：例如一个{{HTTPStatus(200, "200 OK")}}).</p>
 
-<p>服务在发送 {{HTTPStatus(101)}}  状态码之后，就可以使用新的协议，并可以根据需要执行任何其他协议指定的握手。实际上，一旦这次升级完成了，连接就变成了双向管道。并且可以通过新协议完成启动升级的请求。</p>
+<p>服务在发送 {{HTTPStatus(101)}}  状态码之后，就可以使用新的协议，并可以根据需要执行任何其他协议指定的握手。实际上，一旦这次升级完成了，连接就变成了双向管道。并且可以通过新协议完成启动升级的请求。</p>
 
 <p>由 HTTP/1.1 请求建立的连接可以升级为 HTTP/2 协议的连接，但是反过来不可以。事实上 HTTP/2 已经不再支持 101 状态码了，也不再支持任何连接升级机制。</p>
 
 <h2 id="升级机制的常用场合">升级机制的常用场合</h2>
 
-<p>此处将介绍最常用到 <code>Upgrade</code> header 的场合。</p>
+<p>此处将介绍最常用到 <code>Upgrade</code> header 的场合。</p>
 
 <h3 id="升级到WebSocket协议的连接">升级到 WebSocket 协议的连接</h3>
 
-<p>至今为止最经常会需要升级一个 HTTP 连接的场合就是使用 WebSocket。当你用 <a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a> 以及其他大部分实现 WebSockets 的库去建立 WebSocket 连接时，基本上都不用操心升级的过程，因为这些 API 已经实现了这一步。比如，用如下 API 打开一个 WebSocket 连接：</p>
+<p>至今为止最经常会需要升级一个 HTTP 连接的场合就是使用 WebSocket。当你用 <a href="/en-US/docs/Web/API/WebSocket">WebSocket API</a> 以及其他大部分实现 WebSockets 的库去建立 WebSocket 连接时，基本上都不用操心升级的过程，因为这些 API 已经实现了这一步。比如，用如下 API 打开一个 WebSocket 连接：</p>
 
 <pre class="notranslate">webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");</pre>
 
@@ -142,7 +142,7 @@ Upgrade: websocket</pre>
  <dd>If a <code>Sec-WebSocket-Key</code> header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the {{interwiki("wikipedia", "SHA-1")}} hash of that concatenated string, resulting in a 20-byte value. That value is then <a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> encoded to obtain the value of this property.</dd>
 </dl>
 
-<h3 id="Client-initiated_upgrade_to_HTTP_over_TLS">Client-initiated upgrade to HTTP over TLS</h3>
+<h3 id="Client-initiated_upgrade_to_HTTP_over_TLS">Client-initiated upgrade to HTTP over TLS</h3>
 
 <p>You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from "http://" to "https://" on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.</p>
 

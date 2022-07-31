@@ -5,7 +5,7 @@ translation_of: Web/API/DOMException
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p> <code><strong>DOMException</strong></code> 接口代表调用方法或访问 Web API 属性时发生的异常事件（被称为<strong>异常</strong>，<strong>exception</strong>）。 这基本上是在 Web API 中如何描述错误情况的</p>
+<p> <code><strong>DOMException</strong></code> 接口代表调用方法或访问 Web API 属性时发生的异常事件（被称为<strong>异常</strong>，<strong>exception</strong>）。 这基本上是在 Web API 中如何描述错误情况的</p>
 
 <p>每个异常都有一个名称 <strong>name，</strong>一个采用骆驼式命名法的简短字符串，用于描述识别错误或异常情况。</p>
 
@@ -17,14 +17,14 @@ translation_of: Web/API/DOMException
 
 <dl>
  <dt>{{domxref("DOMException.DOMException()", "DOMException()")}} {{experimental_inline}}</dt>
- <dd>返回一个包含指定消息和名称的 <code>DOMException</code> 对象。</dd>
+ <dd>返回一个包含指定消息和名称的 <code>DOMException</code> 对象。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}</dt>
- <dd>返回一个 <code>short</code>，包含错误代码常量中的一个，或者返回 <code>0</code>，如果没有匹配的话。这个字段由于历史原因被使用。现在不再使用这个新的 DOM 异常：他们把这个信息放入 {{domxref("DOMException.name")}} 属性。</dd>
+ <dd>返回一个 <code>short</code>，包含错误代码常量中的一个，或者返回 <code>0</code>，如果没有匹配的话。这个字段由于历史原因被使用。现在不再使用这个新的 DOM 异常：他们把这个信息放入 {{domxref("DOMException.name")}} 属性。</dd>
  <dt>{{domxref("DOMException.message")}} {{readOnlyInline}}</dt>
  <dd>返回一个 {{ domxref("DOMString") }} 代表与给定的<a href="/en-US/docs/Web/API/DOMException#Error_names">错误名称</a>有关信息或描述。</dd>
  <dt>{{domxref("DOMException.name")}} {{readOnlyInline}}</dt>
@@ -65,7 +65,7 @@ translation_of: Web/API/DOMException
  <dt><a id="exception-InvalidAccessError"><code>InvalidAccessError</code></a></dt>
  <dd>对象不支持此操作或参数 (Legacy code value: <code>15</code> and legacy constant name: <code>INVALID_ACCESS_ERR</code>)</dd>
  <dt><a id="exception-TypeMismatchError"><code>TypeMismatchError</code></a> {{deprecated_inline}}</dt>
- <dd>对象的类型不匹配预期的类型. (Legacy code value: <code>17</code> and legacy constant name: <code>TYPE_MISMATCH_ERR</code>) 这个值已被弃用， JavaScript {{jsxref("TypeError")}} 异常被提出而不是<code>DOMException</code></dd>
+ <dd>对象的类型不匹配预期的类型. (Legacy code value: <code>17</code> and legacy constant name: <code>TYPE_MISMATCH_ERR</code>) 这个值已被弃用， JavaScript {{jsxref("TypeError")}} 异常被提出而不是<code>DOMException</code></dd>
  <dt><a id="exception-SecurityError"><code>SecurityError</code></a> {{experimental_inline}}</dt>
  <dd>操作不安全。 (Legacy code value: <code>18</code> and legacy constant name: <code>SECURITY_ERR</code>)</dd>
  <dt><a id="exception-NetworkError"><code>NetworkError</code></a> {{experimental_inline}}</dt>
@@ -87,11 +87,11 @@ translation_of: Web/API/DOMException
  <dt><a id="exception-NotReadableError"><code>NotReadableError</code></a> {{experimental_inline}}</dt>
  <dd>输入/输出读操作失败 (没有遗留代码值和常量的名字).</dd>
  <dt><a id="exception-UnknownError"><code>UnknownError</code></a> {{experimental_inline}}</dt>
- <dd>因未知的瞬态的原因使操作失败 (例如 内存不足) (No legacy code value and constant name).</dd>
+ <dd>因未知的瞬态的原因使操作失败 (例如 内存不足) (No legacy code value and constant name).</dd>
  <dt><a id="exception-ConstraintError"><code>ConstraintError</code></a> {{experimental_inline}}</dt>
  <dd>条件没满足而导致事件失败的异常操作 (No legacy code value and constant name).</dd>
  <dt><a id="exception-DataError"><code>DataError</code></a> {{experimental_inline}}</dt>
- <dd>提供的数据不足 (No legacy code value and constant name).</dd>
+ <dd>提供的数据不足 (No legacy code value and constant name).</dd>
  <dt><a id="exception-TransactionInactiveError"><code>TransactionInactiveError</code></a> {{experimental_inline}}</dt>
  <dd>请求被当前不活跃的事件或已完成事件阻止 (No legacy code value and constant name)。</dd>
  <dt><a id="exception-ReadOnlyError"><code>ReadOnlyError</code></a> {{experimental_inline}}</dt>

@@ -175,7 +175,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
       > - Lorsque plusieurs règles conflictuelles sont définies, c'est la règle `no-referrer` qui est appliquée.
 
     - `theme-color` qui indique une suggestion de couleur que l'agent utilisateur devrait prendre en compte afin de personnaliser l'affichage de la page ou l'interface utilisateur environnante. L'attribut `content` contiendra une couleur valide au sens CSS (cf. {{cssxref("&lt;color&gt;")}}).
-    - - `color-scheme`
+      - `color-scheme`
 
         - : Définit un ou plusieurs modes de couleurs avec lesquels le document est compatible. Le navigateur utilisera cette information ainsi que les réglages du navigateur ou de l'appareil pour déterminer les couleurs à utiliser (que ce soit pour l'arrière-plan, les contrôles, les barres de défilement, etc.). `<meta name="color-scheme">` sert principalement à indiquer la compatibilité et la préférence pour les différents modes de couleur (sombre / clair entre autres).
 
@@ -346,8 +346,6 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
     Enfin, quelques noms sont utilisés fréquemment mais sont pas considérés comme standards :
 
     - `viewport`, qui donne une indication quant à la taille du [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag) (vue virtuelle). Cette information est utilisée pour les terminaux mobiles uniquement :
-
-
 
       <table class="fullwidth-table">
         <caption>

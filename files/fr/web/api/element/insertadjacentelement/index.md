@@ -15,7 +15,9 @@ La méthode `insertAdjacentElement()` insère un noeud d'élément donné à une
 
 ## Syntaxe
 
-    targetElement.insertAdjacentElement(position, element);
+```js
+targetElement.insertAdjacentElement(position, element);
+```
 
 ### Paramètres
 
@@ -44,13 +46,15 @@ L'élément inséré ou `null` si l'insertion a échouée.
 
 ### Visualisation des positionnements
 
-    <!-- beforebegin -->
-    <p>
-    <!-- afterbegin -->
-    foo
-    <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+```html
+<!-- beforebegin -->
+<p>
+<!-- afterbegin -->
+foo
+<!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
 > **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est dans l'arbre et s'il possède un élément parent.
 

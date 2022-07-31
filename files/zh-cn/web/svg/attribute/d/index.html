@@ -7,7 +7,7 @@ tags:
   - 参考
 translation_of: Web/SVG/Attribute/d
 ---
-<p>« <a href="/en-US/docs/Web/SVG/Attribute" title="en-US/docs/Web/SVG/Attribute">SVG 属性参考主页</a></p>
+<p>« <a href="/en-US/docs/Web/SVG/Attribute">SVG 属性参考主页</a></p>
 
 <p>该属性定义了一个路径。</p>
 
@@ -21,7 +21,7 @@ translation_of: Web/SVG/Attribute/d
   </tr>
   <tr>
    <th scope="row">值</th>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <th scope="row">可变性</th>
@@ -29,7 +29,7 @@ translation_of: Web/SVG/Attribute/d
   </tr>
   <tr>
    <th scope="row">规范文档</th>
-   <td><a class="external" href="http://www.w3.org/TR/SVG/animate.html#DurAttribute">SVG 1.1 (2nd Edition)</a></td>
+   <td><a href="http://www.w3.org/TR/SVG/animate.html#DurAttribute">SVG 1.1 (2nd Edition)</a></td>
   </tr>
  </tbody>
 </table>
@@ -53,8 +53,8 @@ translation_of: Web/SVG/Attribute/d
 <p>句法：</p>
 
 <ul>
- <li><code>M x,y</code> 在这里 x 和 y 是绝对坐标，分别代表水平坐标和垂直坐标。</li>
- <li><code>m dx,dy</code> 在这里 dx 和 dy 是相对于当前点的距离，分别是向右和向下的距离。</li>
+ <li><code>M x,y</code> 在这里 x 和 y 是绝对坐标，分别代表水平坐标和垂直坐标。</li>
+ <li><code>m dx,dy</code> 在这里 dx 和 dy 是相对于当前点的距离，分别是向右和向下的距离。</li>
 </ul>
 
 <p>示例：</p>
@@ -70,7 +70,7 @@ translation_of: Web/SVG/Attribute/d
 
 <h2 id="Curveto">Curveto</h2>
 
-<p>Curvto 命令指定了一个<a href="/User:Jt//Sandbox/Curves_in_Paths" title="Curves in Paths">贝塞尔曲线</a>。有两种类型的贝塞尔曲线：立方曲线和二次方曲线。二次方贝塞尔曲线是一种特殊的立方贝塞尔曲线，在这里，控制点的两端是相同的。二次方贝塞尔曲线的句法是”Q cx, cy  x, y“或”q dcx, dcy dx, dy“。cx 和 cy 都是控制点的绝对坐标，而 dcx 和 dcy 分别是控制点在 x 和 y 方向上的距离。</p>
+<p>Curvto 命令指定了一个<a href="/User:Jt//Sandbox/Curves_in_Paths">贝塞尔曲线</a>。有两种类型的贝塞尔曲线：立方曲线和二次方曲线。二次方贝塞尔曲线是一种特殊的立方贝塞尔曲线，在这里，控制点的两端是相同的。二次方贝塞尔曲线的句法是”Q cx, cy  x, y“或”q dcx, dcy dx, dy“。cx 和 cy 都是控制点的绝对坐标，而 dcx 和 dcy 分别是控制点在 x 和 y 方向上的距离。</p>
 
 <div>
 <p>立方贝赛尔曲线遵守二次方贝赛尔曲线同样的概念，但是它需要考虑两个控制点。立方贝塞尔曲线的句法是：”C c1x,c1y c2x,c2y x,y“或者”c dc1x,dc1y dc2x,dc2y dx,dy“，在这里，c1x、c1y 和 c2x、c2y 是分别是初始点和结束点的控制点的绝对坐标。dc1x、dc1y 和 dc2x、dc2y 都是相对于初始点，而不是相对于结束点的。dx 和 dy 分别是向右和向下的距离。</p>
@@ -119,7 +119,7 @@ translation_of: Web/SVG/Attribute/d
 
 <p>为了演示<code>d="M37,17v15H14V17H37z M50,0H0v50h50V0z"的实际意义，我们来讨论这个字符串的每一小段。</code></p>
 
-<p style="margin-bottom: 1em; font-size: 15px; color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 19.5px;"><img alt="enter image description here" src="http://img3.douban.com/view/photo/large/public/p2316231190.jpg" style="height: 400px; max-width: 630px; width: 400px;"></p>
+<p><img alt="enter image description here" src="http://img3.douban.com/view/photo/large/public/p2316231190.jpg" style="height: 400px; max-width: 630px; width: 400px;"></p>
 
 <ul>
  <li><code>d=" M37,17 || v15 || H14 || V17 || H37 ||z // M50,0 || H0 || v50 || h50 || V0 || z"</code></li>
@@ -198,3 +198,7 @@ translation_of: Web/SVG/Attribute/d
   </ul>
  </li>
 </ul>
+
+<h2 id="规范">规范</h2>
+
+{{Specifications}}

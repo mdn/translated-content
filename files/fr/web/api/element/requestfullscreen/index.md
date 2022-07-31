@@ -18,7 +18,9 @@ Cette méthode doit être invoquée par l'interaction d'un utilisateur ou un cha
 
 ## Syntaxe
 
-    Element.requestFullscreen();
+```js
+Element.requestFullscreen();
+```
 
 ## Exemple
 

@@ -174,17 +174,17 @@ Comprendre le dimensionnement des objets flexibles revient avant tout à compren
 
 ### Quelle est la taille de base de l'objet ?
 
-1.  Si  `flex-basis` vaut `auto` et que l'objet possède une dimension explicitement définie, c'est cette dimension qui sera utilisée.
-2.  Si  `flex-basis` vaut `auto` ou `content` (pour les navigateurs qui prennent en charge cette valeur), c'est la taille du contenu qui déterminera la taille de base de l'élément
-3.  Si `flex-basis` est exprimée avec une valeur de longueur non nulle, c'est cette valeur qui sera la taille de base de l'élément.
-4.  Si  `flex-basis` vaut `0`, la taille de l'élément n'est pas pris en compte lors de la répartition de l'espace.
+1. Si  `flex-basis` vaut `auto` et que l'objet possède une dimension explicitement définie, c'est cette dimension qui sera utilisée.
+2. Si  `flex-basis` vaut `auto` ou `content` (pour les navigateurs qui prennent en charge cette valeur), c'est la taille du contenu qui déterminera la taille de base de l'élément
+3. Si `flex-basis` est exprimée avec une valeur de longueur non nulle, c'est cette valeur qui sera la taille de base de l'élément.
+4. Si  `flex-basis` vaut `0`, la taille de l'élément n'est pas pris en compte lors de la répartition de l'espace.
 
 ### De l'espace est-il disponible ?
 
 Les objets ne s'étendent pas s'il n'y a pas d'espace libre positif et ne se réduisent pas s'il n'y a pas d'espace libre négatif.
 
-1.  Si on prend tous les objets et qu'on somme leur dimension principale (la largeur si on travaille en ligne ou la hauteur si on travaille en colonne) et qu'on obtient une quantité inférieure à la dimension principale du conteneur, on aura alors un espace libre positif et c'est la propriété `flex-grow` qui entrera en jeu.
-2.  Si cette somme dépasse la taille du conteneur flexible, on aura alors un espace libre négatif et c'est la propriété `flex-shrink` qui sera utilisée.
+1. Si on prend tous les objets et qu'on somme leur dimension principale (la largeur si on travaille en ligne ou la hauteur si on travaille en colonne) et qu'on obtient une quantité inférieure à la dimension principale du conteneur, on aura alors un espace libre positif et c'est la propriété `flex-grow` qui entrera en jeu.
+2. Si cette somme dépasse la taille du conteneur flexible, on aura alors un espace libre négatif et c'est la propriété `flex-shrink` qui sera utilisée.
 
 ### Les autres façons de distribuer l'espace
 

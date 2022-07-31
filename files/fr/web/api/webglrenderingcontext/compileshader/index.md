@@ -15,7 +15,9 @@ La méthode **WebGLRenderingContext.compileShader()** de l'[API WebGL](/fr-FR/do
 
 ## Syntaxe
 
-    void gl.compileShader(shader);
+```js
+void gl.compileShader(shader);
+```
 
 ### Paramètres
 

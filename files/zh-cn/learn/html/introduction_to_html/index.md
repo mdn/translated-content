@@ -2,7 +2,7 @@
 title: HTML 介绍
 slug: Learn/HTML/Introduction_to_HTML
 tags:
-  - HTML介绍
+  - HTML 介绍
   - 文本
   - 结构
   - 链接
@@ -22,14 +22,14 @@ translation_of: Learn/HTML/Introduction_to_HTML
 
 ## 指南
 
-本模块包含以下文章，它们将带你了解HTML的所有基本理论，并为你提供充分的机会来测试一些技能。
+本模块包含以下文章，它们将带你了解 HTML 的所有基本理论，并为你提供充分的机会来测试一些技能。
 
 - [HTML 入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-  - : 涵盖了 HTML 绝对基础知识以帮助你入门 —— 定义元素、属性和其他重要术语，并展示了它们在语言中的位置。我们还展示了一个典型的HTML页面的结构和一个HTML元素的结构，并解释了一些重要的基本语言特征。一路下来，我们会与 HTML一起玩耍，以激发你的兴趣！
+  - : 涵盖了 HTML 绝对基础知识以帮助你入门 —— 定义元素、属性和其他重要术语，并展示了它们在语言中的位置。我们还展示了一个典型的 HTML 页面的结构和一个 HTML 元素的结构，并解释了一些重要的基本语言特征。一路下来，我们会与 HTML 一起玩耍，以激发你的兴趣！
 - [Head 中有什么？HTML 中的元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
   - : 当页面被加载后，HTML 中的 head 部分**是不会**被显示在 Web 浏览器中的。它包含了许多信息，例如网页的标题 {{htmlelement("title")}}，指向 {{glossary("CSS")}} 的链接（如果你使用 CSS 来设计 HTML 内容的样式的话），指向自定义网站图标的链接和一些元数据（关于 HTML 本身的数据，例如它的作者和描述这个文档的关键字）。
 - [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-  - : HTML 的主要工作之一就是给予文本意义（也被叫做{{glossary("Semantics", "语义")}}），以让浏览器知道如何正确的显示文本。这篇文章关注于如何用 HTML 将文本块分解为结构化的标题和段落、强调和加粗单词 、创建列表和其他。
+  - : HTML 的主要工作之一就是给予文本意义（也被叫做{{glossary("Semantics", "语义")}}），以让浏览器知道如何正确的显示文本。这篇文章关注于如何用 HTML 将文本块分解为结构化的标题和段落、强调和加粗单词、创建列表和其他。
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
   - : 超链接真的很重要--它们是“网络”这个名字的起源。本文展示了创建超链接所需的语法，并讨论了创建超链接的最佳做法。
 - [高级文本排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)

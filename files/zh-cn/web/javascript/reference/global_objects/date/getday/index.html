@@ -32,7 +32,7 @@ var weekday = Xmas95.getDay();
 console.log(weekday); // 1</pre>
 
 <div class="note">
-<p><strong>备注：</strong>如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的<code>options</code> 参数，从而返回这天的全称（如<code>"Monday"</code>）.使用此方法，结果会更加国际化：</p>
+<p><strong>备注：</strong>如果需要，可以使用{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}与一个额外的<code>options</code> 参数，从而返回这天的全称（如<code>"Monday"</code>）.使用此方法，结果会更加国际化：</p>
 
 <pre class="brush: js"><code>var options = { weekday: 'long'};
 console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
@@ -43,39 +43,11 @@ console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范版本</th>
-   <th scope="col">规范状态</th>
-   <th scope="col">注解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}  </td>
-   <td>{{Spec2('ESDraft')}}  </td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}    </td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}        </td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.Date.getDay")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_Also">相关链接</h2>
 

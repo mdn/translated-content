@@ -18,7 +18,9 @@ translation_of: Web/API/Document/createProcessingInstruction
 
 ## Syntaxe
 
-    Processing instruction node = document.createProcessingInstruction(target, data)
+```js
+Processing instruction node = document.createProcessingInstruction(target, data)
+```
 
 ### Paramètres
 
@@ -35,14 +37,16 @@ translation_of: Web/API/Document/createProcessingInstruction
 
 ## Exemple
 
-    var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
+```js
+var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
 
-    var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
 
-    docu.insertBefore(pi, docu.firstChild);
+docu.insertBefore(pi, docu.firstChild);
 
-    alert(new XMLSerializer().serializeToString(docu));
-    // Affiche: <?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+alert(new XMLSerializer().serializeToString(docu));
+// Affiche: <?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+```
 
 ## Spécifications
 

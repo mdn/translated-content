@@ -17,7 +17,9 @@ Cette propriété est en lecture seule ; elle n'a pas de valeur par défaut.
 
 ## Syntaxe
 
-    largeurExterieureFenetre = window.outerWidth;
+```js
+largeurExterieureFenetre = window.outerWidth;
+```
 
 Lors du retour, `largeurExterieureFenetre` vaut la largeur de l'extérieur de la fenêtre.
 

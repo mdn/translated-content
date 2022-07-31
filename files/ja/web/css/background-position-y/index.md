@@ -17,7 +17,6 @@ translation_of: Web/CSS/background-position-y
 
 {{EmbedInteractiveExample("pages/css/background-position-y.html")}}
 
-
 このプロパティの値は、その後で一括指定の {{cssxref("background")}} または {{cssxref("background-position")}} プロパティが定義されると上書きされます。
 
 ## 構文

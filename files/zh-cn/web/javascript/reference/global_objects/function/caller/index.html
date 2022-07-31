@@ -9,13 +9,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 
 <p>返回调用指定函数的函数。</p>
 
-<p>该属性不是 ECMA-262 第 3 版标准的一部分。不过，<a href="/zh-cn/SpiderMonkey" title="zh-cn/SpiderMonkey">SpiderMonkey</a> (Mozilla 的 JavaScript 引擎) (查看{{ Bug("65683") }}), V8 (Chrome 的 JavaScript 引擎) 和 JScript(IE 的 ECMAScript 实现) 都已经支持了它。</p>
+<p>该属性不是 ECMA-262 第 3 版标准的一部分。不过，<a href="/zh-cn/SpiderMonkey">SpiderMonkey</a> (Mozilla 的 JavaScript 引擎) (查看{{ Bug("65683") }}), V8 (Chrome 的 JavaScript 引擎) 和 JScript(IE 的 ECMAScript 实现) 都已经支持了它。</p>
 
 <h2 id="Description">描述</h2>
 
 <p>如果一个函数 <code>f</code> 是在全局作用域内被调用的，则 <code>f.caller 为</code> <code>null</code>。相反，如果一个函数是在另外一个函数作用域内被调用的，则 <code>f.caller</code> 指向调用它的那个函数。</p>
 
-<p>该属性的常用形式 <code>arguments.callee.caller</code> 替代了被废弃的 <a href="/zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/caller" title="zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a>.</p>
+<p>该属性的常用形式 <code>arguments.callee.caller</code> 替代了被废弃的 <a href="/zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a>.</p>
 
 <h3 id="Notes">备注</h3>
 
@@ -66,4 +66,4 @@ while (f) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>Function.caller 目前被所有主流浏览器支持：Firefox、Safari、Chrome、Opera 和 IE。<a class="external" href="http://dl.dropbox.com/u/534786/callertest.html" title="http://dl.dropbox.com/u/534786/callertest.html">查看检测结果</a>。</p>
+<p>Function.caller 目前被所有主流浏览器支持：Firefox、Safari、Chrome、Opera 和 IE。<a href="http://dl.dropbox.com/u/534786/callertest.html">查看检测结果</a>。</p>

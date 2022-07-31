@@ -1,0 +1,149 @@
+---
+title: GlobalEventHandlers.ontransitioncancel
+slug: conflicting/Web/API/Element/transitioncancel_event
+tags:
+  - API
+  - CSS Transitions
+  - CSS3 Transitions
+  - Event Handler
+  - GlobalEventHandlers
+  - Property
+  - Reference
+  - ontransitioncancel
+translation_of: Web/API/GlobalEventHandlers/ontransitioncancel
+original_slug: Web/API/GlobalEventHandlers/ontransitioncancel
+---
+<div>{{APIRef("CSS3 Transitions")}}</div>
+
+<p><strong><code>ontransitioncancel</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、 {{event("transitioncancel")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
+
+<p><code>transitioncancel</code> イベントは <a href="/ja/docs/Web/CSS/CSS_Transitions">CSS トランジション</a>がキャンセルされたときに送信されます。トランジションがキャンセルされるのは下記のような時です。</p>
+
+<ul>
+ <li>適用されている対象の {{cssxref("transition-property")}} プロパティの値が変更された時。</li>
+ <li>{{cssxref("display")}} プロパティが <code>none</code> に変更された時。</li>
+ <li>完了する前に、トランジションが停止された時。例えば、マウスオーバーでトランジション中の要素をマウスアウトした時。</li>
+</ul>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox notranslate">var <var>transitionCancelHandler</var> = <var>target</var>.ontransitioncancel;
+
+<var>target</var>.ontransitioncancel = <var>{{jsxref("Function")}}</var>
+</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<p>関数 ({{jsxref("Function")}}) で、 CSS トランジションがキャンセルされたことを示す {{event("transitioncancel")}} イベントが <code><var>target</var></code> 上で発生した場合に呼び出されるものです。対象となるオブジェクトは HTML 要素 ({{domxref("HTMLElement")}})、文書 ({{domxref("Document")}})、ウィンドウ ({{domxref("Window")}}) です。この関数は単一の引数、発生したイベントを記述する {{domxref("TransitionEvent")}} を単一の引数として受け取ります。イベントの {{domxref("TransitionEvent.elapsedTime")}} プロパティの値は、 {{cssxref("transition-duration")}} の値と同じでなければなりません。</p>
+
+<div class="note">
+<p><strong>注</strong>: <code>elapsedTime</code> には、トランジション効果が始まる前の時間は含まれていません。つまり、 {{cssxref("transition-delay")}} の値は、待ち時間が終了してアニメーションが始まるまでは 0 である <code>elapsedTime</code> の値に影響しません。</p>
+</div>
+
+<h2 id="Example" name="Example">例</h2>
+
+<p>この例では、{{event("transitionrun")}} イベントと {{event("transitionend")}} イベントを使用して、トランジションの開始と終了を検出し、トランジション中にテキスト更新が発生するようにしています。これは、アニメーションやその他のエフェクトを起動して、反応を連鎖させるために使用することもできます。</p>
+
+<p>追加で、{{event("click")}} イベントも使用しています。それで、(<code>display: none;</code>) で四角を非表示にすることで、{{event("transitioncancel")}} イベントが発行される様子を見ることができます。</p>
+
+<h3 id="HTML" name="HTML">HTML</h3>
+
+<p>これは {{HTMLElement("div")}} だけを作成して、後は CSS で色やトランジション後のスタイルを指定します。</p>
+
+<pre class="brush: html; notranslate">&lt;div class="box"&gt;&lt;/div&gt;
+</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<p>下記の CSS は四角にマウスオーバーする時、色やサイズを変えたり、回転させたりするようなトランジション効果を適用します。</p>
+
+<pre class="brush: css; highlight:[13,14] notranslate">.box {
+  margin-left: 70px;
+  margin-top: 30px;
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #0000FF;
+  color: #FFFFFF;
+  padding: 20px;
+  font: bold 1.6em "Helvetica", "Arial", sans-serif;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s, color 2s;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+}
+
+.box:hover {
+  background-color: #FFCCCC;
+  color: #000000;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<p>次に、トランジションの開始時と終了時にボックスのテキストコンテンツを変更するためにイベントハンドラ－を設定します。</p>
+
+<pre class="brush: js notranslate">let box = document.querySelector(".box");
+box.ontransitionrun = function(event) {
+  box.innerHTML = "Zooming...";
+}
+box.ontransitionend = function(event) {
+  box.innerHTML = "Done!";
+}
+
+box.onclick = function() {
+  box.style.display = 'none';
+  timeout = window.setTimeout(appear, 2000);
+  function appear() {
+    box.style.display = 'block';
+  }
+}
+
+box.ontransitioncancel = function(event) {
+  console.log('transitioncancel fired after ' + event.<code>elapsedTime + ' seconds.'</code>);
+}</pre>
+
+<h3 id="Result" name="Result">結果</h3>
+
+<p>結果のコンテンツは次のようになります。</p>
+
+<p>{{EmbedLiveSample('Example', 600, 280)}}</p>
+
+<p>四角にマウスオーバーやマウスアウトするときどうなるか見てください。</p>
+
+<p>あと、開発ツールにある JavaScript コンソールも見て、トランジションが終わる前に四角をクリックしたりマウスアウトすると、どんなログが出るか注意してください。</p>
+
+<h2 id="Specification" name="Specification">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Transitions','#dom-globaleventhandlers-ontransitioncancel','ontransitioncancel')}}</td>
+   <td>{{Spec2('CSS3 Transitions')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.GlobalEventHandlers.ontransitioncancel")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>このハンドラーを起動する {{event("transitioncancel")}} イベント</li>
+ <li>{{domxref("TransitionEvent")}}</li>
+ <li>トランジションが開始したときに発生する {{event("transitionrun")}} イベント</li>
+</ul>

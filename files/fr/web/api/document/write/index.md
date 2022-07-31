@@ -17,7 +17,9 @@ translation_of: Web/API/Document/write
 
 ## Syntaxe
 
-    document.write(balisage);
+```js
+document.write(balisage);
+```
 
 ### Paramètres
 

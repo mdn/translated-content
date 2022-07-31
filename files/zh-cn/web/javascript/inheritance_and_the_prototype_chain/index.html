@@ -117,9 +117,9 @@ console.log(p.m()); // 5
 
 <h2 id="在_JavaScript_中使用原型">在 JavaScript 中使用原型</h2>
 
-<p>接下去，来仔细分析一下这些应用场景下， JavaScript 在背后做了哪些事情。</p>
+<p>接下去，来仔细分析一下这些应用场景下， JavaScript 在背后做了哪些事情。</p>
 
-<p>正如之前提到的，在 JavaScript 中，函数（function）是允许拥有属性的。所有的函数会有一个特别的属性 —— <code>prototype</code> 。请注意，以下的代码是独立的（出于严谨，假定页面没有其他的 JavaScript 代码）。为了最佳的学习体验，我们强烈建议阁下打开浏览器的控制台（在 Chrome 和火狐浏览器中，按 Ctrl+Shift+I 即可），进入“console”选项卡，然后把如下的 JavaScript 代码复制粘贴到窗口中，最后通过按下回车键运行代码。</p>
+<p>正如之前提到的，在 JavaScript 中，函数（function）是允许拥有属性的。所有的函数会有一个特别的属性 —— <code>prototype</code> 。请注意，以下的代码是独立的（出于严谨，假定页面没有其他的 JavaScript 代码）。为了最佳的学习体验，我们强烈建议阁下打开浏览器的控制台（在 Chrome 和火狐浏览器中，按 Ctrl+Shift+I 即可），进入“console”选项卡，然后把如下的 JavaScript 代码复制粘贴到窗口中，最后通过按下回车键运行代码。</p>
 
 <pre class="brush: js">function doSomething(){}
 console.log( doSomething.prototype );
@@ -194,13 +194,13 @@ console.log( doSomeInstancing );</pre>
     }
 }</pre>
 
-<p>如上所示， <code>doSomeInstancing</code> 中的<code>__proto__</code>是 <code>doSomething.prototype</code>. 但这是做什么的呢？当你访问<code>doSomeInstancing</code> 中的一个属性，浏览器首先会查看<code>doSomeInstancing</code> 中是否存在这个属性。</p>
+<p>如上所示， <code>doSomeInstancing</code> 中的<code>__proto__</code>是 <code>doSomething.prototype</code>. 但这是做什么的呢？当你访问<code>doSomeInstancing</code> 中的一个属性，浏览器首先会查看<code>doSomeInstancing</code> 中是否存在这个属性。</p>
 
-<p>如果 <code>doSomeInstancing</code> 不包含属性信息，那么浏览器会在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中进行查找 (同 doSomething.prototype). 如属性在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中查找到，则使用 <code>doSomeInstancing</code> 中 <code>__proto__</code> 的属性。</p>
+<p>如果 <code>doSomeInstancing</code> 不包含属性信息，那么浏览器会在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中进行查找 (同 doSomething.prototype). 如属性在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 中查找到，则使用 <code>doSomeInstancing</code> 中 <code>__proto__</code> 的属性。</p>
 
-<p>否则，如果 <code>doSomeInstancing</code> 中 <code>__proto__</code> 不具有该属性，则检查<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 是否具有该属性。默认情况下，任何函数的原型属性 <code>__proto__</code> 都是 <code>window.Object.prototype.</code> 因此，通过<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code>  ( 同 doSomething.prototype 的 <code>__proto__ </code>(同  <code>Object.prototype</code>)) 来查找要搜索的属性。</p>
+<p>否则，如果 <code>doSomeInstancing</code> 中 <code>__proto__</code> 不具有该属性，则检查<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 是否具有该属性。默认情况下，任何函数的原型属性 <code>__proto__</code> 都是 <code>window.Object.prototype.</code> 因此，通过<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code>  ( 同 doSomething.prototype 的 <code>__proto__ </code>(同  <code>Object.prototype</code>)) 来查找要搜索的属性。</p>
 
-<p>如果属性不存在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 中， 那么就会在<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 的  <code>__proto__</code> 中查找。然而，这里存在个问题：<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 的  <code>__proto__</code> 其实不存在。因此，只有这样，在 <code>__proto__</code> 的整个原型链被查看之后，这里没有更多的 <code>__proto__</code> ， 浏览器断言该属性不存在，并给出属性值为 <code>undefined</code> 的结论。</p>
+<p>如果属性不存在 <code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 中， 那么就会在<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 的  <code>__proto__</code> 中查找。然而，这里存在个问题：<code>doSomeInstancing</code> 的 <code>__proto__</code> 的  <code>__proto__</code> 的  <code>__proto__</code> 其实不存在。因此，只有这样，在 <code>__proto__</code> 的整个原型链被查看之后，这里没有更多的 <code>__proto__</code> ， 浏览器断言该属性不存在，并给出属性值为 <code>undefined</code> 的结论。</p>
 
 <p>让我们在控制台窗口中输入更多的代码，如下：</p>
 
@@ -351,7 +351,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 
 <h3 id="总结：4_个用于拓展原型链的方法">总结：4 个用于拓展原型链的方法</h3>
 
-<p>下面列举四种用于拓展原型链的方法，以及他们的优势和缺陷。下列四个例子都创建了完全相同的 <code>inst</code> 对象（所以在控制台上的输出也是一致的），为了举例，唯一的区别是他们的创建方法不同。</p>
+<p>下面列举四种用于拓展原型链的方法，以及他们的优势和缺陷。下列四个例子都创建了完全相同的 <code>inst</code> 对象（所以在控制台上的输出也是一致的），为了举例，唯一的区别是他们的创建方法不同。</p>
 
 <table>
   <tbody>
@@ -418,7 +418,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
  console.log(inst.foo_prop);
  console.log(inst.bar_prop)</pre>
     </td>
-    <td>支持当前所有非微软版本或者 IE9 以上版本的浏览器。允许一次性地直接设置 <code>__proto__</code> 属性，以便浏览器能更好地优化对象。同时允许通过 <code>Object.create(null) </code>来创建一个没有原型的对象。</td>
+    <td>支持当前所有非微软版本或者 IE9 以上版本的浏览器。允许一次性地直接设置 <code>__proto__</code> 属性，以便浏览器能更好地优化对象。同时允许通过 <code>Object.create(null) </code>来创建一个没有原型的对象。</td>
     <td>不支持 IE8 以下的版本。然而，随着微软不再对系统中运行的旧版本浏览器提供支持，这将不是在大多数应用中的主要问题。 另外，这个慢对象初始化在使用第二个参数的时候有可能成为一个性能黑洞，因为每个对象的描述符属性都有自己的描述对象。当以对象的格式处理成百上千的对象描述的时候，可能会造成严重的性能问题。</td>
    </tr>
    <tr>
@@ -495,7 +495,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
  console.log(inst.foo_prop);
  console.log(inst.bar_prop)</pre>
     </td>
-    <td>支持所有现代非微软版本以及 IE11 以上版本的浏览器。将 <code>__proto__</code> 设置为非对象的值会静默失败，并不会抛出错误。</td>
+    <td>支持所有现代非微软版本以及 IE11 以上版本的浏览器。将 <code>__proto__</code> 设置为非对象的值会静默失败，并不会抛出错误。</td>
     <td>应该完全将其抛弃因为这个行为完全不具备性能可言。 如果你在生产环境中使用这个方法，那么快速运行 Javascript 就是不可能的，因为许多浏览器优化了原型，尝试在调用实例之前猜测方法在内存中的位置，但是动态设置原型干扰了所有的优化，甚至可能使浏览器为了运行成功，使用完全未经优化的代码进行重编译。不支持 IE10 及以下的浏览器版本。</td>
    </tr>
   </tbody>

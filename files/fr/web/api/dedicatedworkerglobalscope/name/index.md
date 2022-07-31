@@ -15,7 +15,9 @@ La propriété en lecture seule **`name`** de l'interface {{domxref("DedicatedWo
 
 ## Syntaxe
 
-    var nameObj = self.name;
+```js
+var nameObj = self.name;
+```
 
 ### Valeur
 

@@ -12,11 +12,11 @@ translation_of: Web/API/Blob
 ---
 <div>{{APIRef("File API")}}</div>
 
-<p><code>Blob</code><strong> </strong>对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取，也可以转换成 {{DOMxRef("ReadableStream")}} 来用于数据操作。 </p>
+<p><code>Blob</code><strong> </strong>对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取，也可以转换成 {{DOMxRef("ReadableStream")}} 来用于数据操作。 </p>
 
 <p>Blob 表示的不一定是 JavaScript 原生格式的数据。{{domxref("File")}} 接口基于<code>Blob</code>，继承了 blob 的功能并将其扩展使其支持用户系统上的文件。</p>
 
-<p>要从其他非 blob 对象和数据构造一个 <code>Blob</code>，请使用 {{domxref("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{domxref("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 <code>Blob</code> 对象，请参阅 {{domxref("File", "File")}} 文档。</p>
+<p>要从其他非 blob 对象和数据构造一个 <code>Blob</code>，请使用 {{domxref("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{domxref("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 <code>Blob</code> 对象，请参阅 {{domxref("File", "File")}} 文档。</p>
 
 <p>接受 <code>Blob</code> 对象的 API 也被列在 {{domxref("File", "File")}} 文档中。</p>
 
@@ -46,11 +46,11 @@ translation_of: Web/API/Blob
  <dt>{{domxref("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}</dt>
  <dd>返回一个新的 <code>Blob</code> 对象，包含了源 <code>Blob</code> 对象中指定范围内的数据。</dd>
  <dt>{{domxref("Blob.stream()", "Blob.stream()")}}</dt>
- <dd>返回一个能读取 blob 内容的 {{domxref("ReadableStream")}}。</dd>
+ <dd>返回一个能读取 blob 内容的 {{domxref("ReadableStream")}}。</dd>
  <dt>{{domxref("Blob.text()", "Blob.text()")}}</dt>
- <dd>返回一个 promise 且包含 blob 所有内容的 UTF-8 格式的 {{domxref("USVString")}}。</dd>
+ <dd>返回一个 promise 且包含 blob 所有内容的 UTF-8 格式的 {{domxref("USVString")}}。</dd>
  <dt>{{domxref("Blob.arrayBuffer()", "Blob.arrayBuffer()")}}</dt>
- <dd>返回一个 promise 且包含 blob 所有内容的二进制格式的 {{domxref("ArrayBuffer")}} </dd>
+ <dd>返回一个 promise 且包含 blob 所有内容的二进制格式的 {{domxref("ArrayBuffer")}} </dd>
 </dl>
 
 <h2 id="示例">示例</h2>

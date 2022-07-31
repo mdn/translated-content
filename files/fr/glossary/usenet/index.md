@@ -13,6 +13,4 @@ Usenet est un système de discussion sur internet où chaque message est dupliqu
 
 ### **Culture générale**
 
-
-
 - {{Interwiki("wikipedia", "Usenet")}} sur Wikipédia

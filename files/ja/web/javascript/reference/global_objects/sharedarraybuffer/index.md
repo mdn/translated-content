@@ -135,6 +135,6 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
 - [Web Worker](/ja/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– 同期と作業分配抽象化を提供するシンプルなライブラリー
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – 同期と作業分配抽象化を提供するシンプルなライブラリー
 - [共有メモリー – 簡潔なチュートリアル](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [JavaScript の並列処理機能を味見してみる](https://dev.mozilla.jp/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

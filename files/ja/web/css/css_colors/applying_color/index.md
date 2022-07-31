@@ -97,7 +97,7 @@ CSS で色を表現するには、アナログの概念である「色」の概�
 
 標準的な色名が定義されており、使用したい色を表すキーワードがあれば、色の数値表現の代わりにこれらのキーワードを使用することができます。色キーワードには原色と副色 (`red`、`blue`、`orange` など)、灰色 (`black` から `white` までの `darkgray` や `lightgrey` といった色を含む)、これらを混ぜた色である `lightseagreen`、`cornflowerblue`、`rebeccapurple` が含まれます。
 
-利用可能な全ての色キーワードの一覧は、[<color>](/ja/docs/Web/CSS/color_value) の[色キーワード](/ja/docs/Web/CSS/color_value#色キーワード)を参照してください。
+利用可能な全ての色キーワードの一覧は、[`<color>`](/ja/docs/Web/CSS/color_value) の[色キーワード](/ja/docs/Web/CSS/color_value#色キーワード)を参照してください。
 
 ### RGB 値
 
@@ -147,9 +147,9 @@ HSL カラーの色相 (H) 成分の値は、赤から黄、緑、水、青、�
 
 以下のように、完璧な絵の具の色を作るかのように考えてみましょう。
 
-1.  ユーザーの画面で表現できる最も強い青など、その色で最も強いベースの絵の具から始めます。これが**色相** (H) 要素で、ベースとして使用したい鮮やかな色相環の周りの角度を表す値です。
-2.  次に、欲しい色の明るさに対応するグレースケールの絵の具を選びます。非常に明るくて白に近い色にしたいのか、それとも非常に暗くて黒に近い色にしたいのか、それともその中間のどこかにしたいのか。これはパーセンテージで指定し、0% が完全な黒、100% が完全な白となります。(彩度や色相に関係なく)。この値の間には文字通り灰色の領域があります。
-3.  灰色の絵の具と完全に鮮やかな色が手に入ったので、これらを混ぜ合わせる必要があります。色の彩度 (S) 成分は、最終的な色のうち完全に鮮やかな色が構成するパーセントを示します。残りは、彩度を表すグレーの絵の具となります。
+1. ユーザーの画面で表現できる最も強い青など、その色で最も強いベースの絵の具から始めます。これが**色相** (H) 要素で、ベースとして使用したい鮮やかな色相環の周りの角度を表す値です。
+2. 次に、欲しい色の明るさに対応するグレースケールの絵の具を選びます。非常に明るくて白に近い色にしたいのか、それとも非常に暗くて黒に近い色にしたいのか、それともその中間のどこかにしたいのか。これはパーセンテージで指定し、0% が完全な黒、100% が完全な白となります。(彩度や色相に関係なく)。この値の間には文字通り灰色の領域があります。
+3. 灰色の絵の具と完全に鮮やかな色が手に入ったので、これらを混ぜ合わせる必要があります。色の彩度 (S) 成分は、最終的な色のうち完全に鮮やかな色が構成するパーセントを示します。残りは、彩度を表すグレーの絵の具となります。
 
 任意でアルファチャンネルを追加して、色を 100% 以下の不透明度にすることもできます。
 
@@ -437,7 +437,7 @@ colorPicker.addEventListener("change", function(event) {
 
 色覚異常については、以下の記事をご覧ください。
 
-- [Medline Plus: Color Blindness](https://medlineplus.gov/colorblindness.html) (<span class="module__title__link">アメリカ国立衛生研究所)</span>
+- [Medline Plus: Color Blindness](https://medlineplus.gov/colorblindness.html) (アメリカ国立衛生研究所)
 - [American Academy of Ophthamology: What Is Color Blindness?](https://www.aao.org/eye-health/diseases/what-is-color-blindness)
 - [Color Blindness &amp; Web Design](https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html) (Usability.gov: アメリカ保健福祉省)
 

@@ -11,7 +11,9 @@ Retourne une référence à l'objet du cache d'application pour la fenêtre.
 
 ## Syntaxe
 
-    cache = window.applicationCache
+```js
+cache = window.applicationCache
+```
 
 ### Paramètres
 

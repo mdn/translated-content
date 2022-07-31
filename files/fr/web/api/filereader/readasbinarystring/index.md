@@ -15,7 +15,9 @@ L'utilisation de {{domxref("FileReader.readAsArrayBuffer()")}} est recomandée.
 
 ## Syntaxe
 
-    instanceOfFileReader.readAsBinaryString(blob);
+```js
+instanceOfFileReader.readAsBinaryString(blob);
+```
 
 ### Paramètres
 

@@ -17,8 +17,10 @@ La propriété **`Event.returnValue`** indique si l'action par défaut pour cet 
 
 ## Syntaxe
 
-    event.returnValue = bool;
-    var bool = event.returnValue;
+```js
+event.returnValue = bool;
+var bool = event.returnValue;
+```
 
 ## Spécifications
 

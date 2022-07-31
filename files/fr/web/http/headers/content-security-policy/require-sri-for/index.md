@@ -19,9 +19,11 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`require-sri-for`*
 
 ## Syntaxe
 
-    Content-Security-Policy: require-sri-for script;
-    Content-Security-Policy: require-sri-for style;
-    Content-Security-Policy: require-sri-for script style;
+```
+Content-Security-Policy: require-sri-for script;
+Content-Security-Policy: require-sri-for style;
+Content-Security-Policy: require-sri-for script style;
+```
 
 - `script`
   - : Requiert {{Glossary("SRI")}} pour les scripts.
@@ -34,7 +36,9 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`require-sri-for`*
 
 Soit cet en-tête CSP :
 
-    Content-Security-Policy: require-sri-for script style
+```
+Content-Security-Policy: require-sri-for script style
+```
 
 Cet élément {{HTMLElement("script")}} sera chargé et exécuté puisqu'il utilise un attribut `integrity` valide.
 

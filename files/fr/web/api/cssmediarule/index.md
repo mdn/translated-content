@@ -16,9 +16,11 @@ L'interface **`CSSMediaRule`** représente une seule règle CSS {{cssxref("@medi
 
 La syntaxe est décrite en utilisant le format [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/).
 
-    interface CSSMediaRule : CSSConditionRule {
-        readonly attribute MediaList media;
-    }
+```
+interface CSSMediaRule : CSSConditionRule {
+    readonly attribute MediaList media;
+}
+```
 
 ## Propriétés
 

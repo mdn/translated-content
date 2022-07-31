@@ -49,9 +49,11 @@ Si l'en-tête `Content-Language` n'est pas spécifié, par défaut, cela signifi
 
 ## Syntaxe
 
-    Content-Language: de-DE
-    Content-Language: en-US
-    Content-Language: de-DE, en-CA
+```
+Content-Language: de-DE
+Content-Language: en-US
+Content-Language: de-DE, en-CA
+```
 
 ## Directives
 
@@ -81,7 +83,9 @@ L'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) est utilis�
 
 L'en-tête `Content-Language` est utilisé pour spécifier le public destiné à la page, et peut indiquer si cela est plus qu'une seule langue.
 
-    Content-Language: de, en
+```
+Content-Language: de, en
+```
 
 ## Spécifications
 

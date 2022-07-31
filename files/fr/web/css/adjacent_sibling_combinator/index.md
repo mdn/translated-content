@@ -21,7 +21,9 @@ img + p {
 
 ## Syntaxe
 
-    premier_element + element_cible { styles }
+```css
+premier_element + element_cible { styles }
+```
 
 ## Exemples
 

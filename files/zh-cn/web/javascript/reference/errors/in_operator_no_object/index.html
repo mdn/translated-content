@@ -33,14 +33,14 @@ TypeError: Cannot use 'in' operator to search for 'x' in y (Chrome)
 // TypeError: invalid 'in' operand "Hello World"
 </pre>
 
-<p>可以使用 {{jsxref("String.prototype.indexOf()")}} 来代替：</p>
+<p>可以使用 {{jsxref("String.prototype.indexOf()")}} 来代替：</p>
 
 <pre class="brush: js example-good">"Hello World".indexOf("Hello") !== -1;
 // true</pre>
 
 <h3 id="操作数不能为_null_或者_undefined">操作数不能为 null 或者 undefined</h3>
 
-<p>确保你将要进行探测的对象不为 {{jsxref("null")}} 或者  {{jsxref("undefined")}}.</p>
+<p>确保你将要进行探测的对象不为 {{jsxref("null")}} 或者  {{jsxref("undefined")}}.</p>
 
 <pre class="brush: js example-bad">var foo = null;
 "bar" in foo;

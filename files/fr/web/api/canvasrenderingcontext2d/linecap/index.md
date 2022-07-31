@@ -11,9 +11,11 @@ Voir aussi le chapitre [Ajout de styles et de couleurs](/fr-FR/docs/Web/API/Canv
 
 ## Syntaxe
 
-    ctx.lineCap = "butt";
-    ctx.lineCap = "round";
-    ctx.lineCap = "square";
+```js
+ctx.lineCap = "butt";
+ctx.lineCap = "round";
+ctx.lineCap = "square";
+```
 
 ### Options
 

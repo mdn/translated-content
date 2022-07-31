@@ -27,8 +27,6 @@ De plus, l'évènement  `input` se déclenche sur les éditeurs [`contenteditabl
 - Action par défaut
   - : La valeur ou le contenu est modifié
 
-
-
 ## Propriétés
 
 | Property                              | Type                                 | Description                                            |

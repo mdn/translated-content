@@ -42,9 +42,9 @@ font-style: unset;
  <dt><code>normal</code></dt>
  <dd>选择 {{Cssxref("font-family")}} 的常规字体。</dd>
  <dt><code>italic</code></dt>
- <dd>选择斜体，如果当前字体没有可用的斜体版本，会选用倾斜体（<code>oblique</code> ）替代。</dd>
+ <dd>选择斜体，如果当前字体没有可用的斜体版本，会选用倾斜体（<code>oblique</code> ）替代。</dd>
  <dt><code>oblique</code></dt>
- <dd>选择倾斜体，如果当前字体没有可用的倾斜体版本，会选用斜体（<code>italic</code> ）替代。If one or more oblique faces are available in the chosen font family, the one that most closely matches the specified angle is chosen. If no oblique faces are available, the browser will synthesize an oblique version of the font by slanting a normal face by the specified amount. Valid values are degree values of <code>-90deg</code> to <code>90deg</code> inclusive. If an angle is not specified, an angle of 14 degrees is used. Positive values are slanted to the end of the line, while negative values are slanted towards the beginning.<br>
+ <dd>选择倾斜体，如果当前字体没有可用的倾斜体版本，会选用斜体（<code>italic</code> ）替代。If one or more oblique faces are available in the chosen font family, the one that most closely matches the specified angle is chosen. If no oblique faces are available, the browser will synthesize an oblique version of the font by slanting a normal face by the specified amount. Valid values are degree values of <code>-90deg</code> to <code>90deg</code> inclusive. If an angle is not specified, an angle of 14 degrees is used. Positive values are slanted to the end of the line, while negative values are slanted towards the beginning.<br>
  <br>
  In general, for a requested angle of 14 degrees or greater, larger angles are prefered; otherwise, smaller angles are preferred (see the spec's <a href="https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm">font matching section</a> for the precise algorithm).</dd>
 </dl>
@@ -189,37 +189,7 @@ update();
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-style-prop', 'font-style')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Adds the ability to specify an angle after <code>oblique</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>没有变化</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>没有变化</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-style', 'font-style')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 

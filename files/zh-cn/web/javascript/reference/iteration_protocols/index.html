@@ -65,7 +65,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
     <dl>
      <dt><code>done</code>（boolean）</dt>
      <dd>
-     <p>如果迭代器可以产生序列中的下一个值，则为 <code>false</code>。（这等价于没有指定  <code>done</code> 这个属性。）</p>
+     <p>如果迭代器可以产生序列中的下一个值，则为 <code>false</code>。（这等价于没有指定  <code>done</code> 这个属性。）</p>
 
      <p>如果迭代器已将序列迭代完毕，则为 <code>true</code>。这种情况下，<code>value</code> 是可选的，如果它依然存在，即为迭代结束之后的默认返回值。</p>
      </dd>
@@ -73,7 +73,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
      <dd>迭代器返回的任何 JavaScript 值。done 为 true 时可省略。</dd>
     </dl>
 
-    <p><code>next()</code> 方法必须返回一个对象，该对象应当有两个属性： <code>done</code> 和 <code>value</code>，如果返回了一个非对象值（比如 <code>false</code> 或 <code>undefined</code>），则会抛出一个 {{jsxref("TypeError")}} 异常（<code>"iterator.next() returned a non-object value"</code>）。</p>
+    <p><code>next()</code> 方法必须返回一个对象，该对象应当有两个属性： <code>done</code> 和 <code>value</code>，如果返回了一个非对象值（比如 <code>false</code> 或 <code>undefined</code>），则会抛出一个 {{jsxref("TypeError")}} 异常（<code>"iterator.next() returned a non-object value"</code>）。</p>
    </td>
   </tr>
  </tbody>

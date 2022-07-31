@@ -402,13 +402,15 @@ export { name } from 'x.js'
 
 Pour voir cela en pratique, vous pouvez consulter le répertoire [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation). Dans cet exemple (construit sur le précédent qui utilise les classes), on a un module supplémentaire intitulé `shapes.js` qui agrège les fonctionnalités fournies par `circle.js`, `square.js` et `triangle.js`. Les sous-modules ont également été déplacés dans un répertoire `shapes` situé dans un répertoire `modules`. L'arborescence utilisée est donc&nbsp;:
 
-    modules/
-      canvas.js
-      shapes.js
-      shapes/
-        circle.js
-        square.js
-        triangle.js
+```
+modules/
+  canvas.js
+  shapes.js
+  shapes/
+    circle.js
+    square.js
+    triangle.js
+```
 
 Dans chaque sous-module, l'export aura la même forme&nbsp;:
 
@@ -503,7 +505,7 @@ Ensuite, on crée un module intitulé [`getColors.js`](https://github.com/mdn/js
 ```js
 // requête fetch
 const colors = fetch('../data/colors.json')
-	.then(response => response.json());
+  .then(response => response.json());
 
 export default await colors;
 ```

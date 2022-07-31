@@ -40,7 +40,7 @@ Firefox 72 から、 {{HTTPHeader("Content-type")}} が提供されている場�
 X-Content-Type-Options: nosniff
 ```
 
-# ディレクティブ
+## ディレクティブ
 
 - `nosniff`
   - : リクエスト先のタイプが `style` でありその MIME タイプが `text/css` ではない場合、または、タイプが `script` で MIME タイプが [JavaScript の MIME タイプ](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type)ではない場合にリクエストをブロックします。

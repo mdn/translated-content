@@ -18,14 +18,16 @@ translation_of: Web/API/XMLDocument/load
 
 ## Exemples
 
-    var docXml = document.implementation.createDocument("", "test", null);
+```js
+var docXml = document.implementation.createDocument("", "test", null);
 
-    function documentCharge (e) {
-      alert(new XMLSerializer().serializeToString(e.target)); // Donne le contenu de querydata.xml comme une chaîne
-    }
+function documentCharge (e) {
+  alert(new XMLSerializer().serializeToString(e.target)); // Donne le contenu de querydata.xml comme une chaîne
+}
 
-    xmlDoc.addEventListener("load", documentCharge, false);
-    xmlDoc.load('querydata.xml');
+xmlDoc.addEventListener("load", documentCharge, false);
+xmlDoc.load('querydata.xml');
+```
 
 {{Source("content/xml/tests/load/", "Voir aussi l'extrait de chargement")}} dans le dossier de tests XML. (Pour tester cette fonctionnalité, créez les fichiers sur votre disque local ou sur un serveur web, plutôt que de charger le fichier load.html depuis la page générée par LXR, qui servira le fichier text.xml comme HTML.)
 

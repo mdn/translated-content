@@ -129,7 +129,6 @@ margin-right: unset;
         </tr>
       </tbody>
     </table>
- </dd>
 
 ## 公式定義
 
