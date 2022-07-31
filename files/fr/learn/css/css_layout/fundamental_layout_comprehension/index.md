@@ -27,13 +27,13 @@ Si vous avez travaillé sur ce module, vous aurez déjà couvert les bases de ce
   </tbody>
 </table>
 
-## dossier de projet
+## Dossier de projet
 
 Vous avez reçu du HTML brut, du CSS de base et des images - vous devez maintenant créer une mise en page pour la conception, qui devrait ressembler à l'image ci-dessous.
 
 ![](layout-task-complete.png)
 
-### configuration de base
+### Configuration de base
 
 Vous pouvez télécharger le code HTML, CSS et un ensemble de six images [ici](https://github.com/mdn/learning-area/tree/master/css/css-layout/fundamental-layout-comprehension) .
 
@@ -47,11 +47,11 @@ Ce point de départ contient tout le contenu de votre mise en page, tel qu’il 
 
 Vous devez maintenant implémenter votre mise en page. Les tâches que vous devez accomplir sont:
 
-1.  Pour afficher les éléments de navigation dans une ligne, avec un espace égal entre les éléments.
-2.  La barre de navigation doit défiler avec le contenu, puis rester bloquée en haut de la fenêtre d’affichage quand elle l’atteint.
-3.  L'image qui se trouve à l'intérieur de l'article doit être entourée de texte.
-4.  Les éléments [`<article>`](/fr/docs/Web/HTML/Element/article)et [`<aside>`](/fr/docs/Web/HTML/Element/aside)doivent s'afficher sous la forme d'une disposition à deux colonnes. La taille des colonnes doit être flexible de sorte que, si la fenêtre du navigateur est réduite, les colonnes deviennent plus étroites.
-5.  Les photographies doivent s’afficher sous forme de grille à deux colonnes avec un intervalle de 1 pixel entre les images.
+1. Pour afficher les éléments de navigation dans une ligne, avec un espace égal entre les éléments.
+2. La barre de navigation doit défiler avec le contenu, puis rester bloquée en haut de la fenêtre d’affichage quand elle l’atteint.
+3. L'image qui se trouve à l'intérieur de l'article doit être entourée de texte.
+4. Les éléments [`<article>`](/fr/docs/Web/HTML/Element/article)et [`<aside>`](/fr/docs/Web/HTML/Element/aside)doivent s'afficher sous la forme d'une disposition à deux colonnes. La taille des colonnes doit être flexible de sorte que, si la fenêtre du navigateur est réduite, les colonnes deviennent plus étroites.
+5. Les photographies doivent s’afficher sous forme de grille à deux colonnes avec un intervalle de 1 pixel entre les images.
 
 Vous n'aurez pas besoin de modifier le code HTML pour obtenir cette présentation. Les techniques à utiliser sont les suivantes:
 

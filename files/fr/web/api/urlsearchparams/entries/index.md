@@ -9,9 +9,11 @@ La méthode **`URLSearchParams.entries()`** retourne un itérateur( {{jsxref("It
 
 > **Note :** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
-## Syntax
+## Syntaxe
 
-    searchParams.entries();
+```js
+searchParams.entries();
+```
 
 ### Return value
 
@@ -31,8 +33,10 @@ for(var pair of searchParams.entries()) {
 
 The result is:
 
-    key1, value1
-    key2, value2
+```
+key1, value1
+key2, value2
+```
 
 ## Specifications
 

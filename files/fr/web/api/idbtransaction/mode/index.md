@@ -17,7 +17,9 @@ La propriété **`mode`** de l'interface {{domxref("IDBTransaction")}} renvoie l
 
 ## Syntaxe
 
-    var modeCourant = IDBTransaction.mode;
+```js
+var modeCourant = IDBTransaction.mode;
+```
 
 ### Valeur
 

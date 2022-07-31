@@ -80,7 +80,7 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <p>首先，第一個步驟是告訴 HTML 文件我們有些 CSS 規則要加入。你通常有三種不同的方式來將 CSS 套用到 HTML 文件上，然而，現在我們先將焦點放在其中最常見並且實用的方式：在您文件標頭的位置將 CSS 連結進去。</p>
 
-<p>建立一個檔案，存在與您 HTML 文件同一個目錄之中，並命名為 <code>styles.css</code> 。副檔名 <code>.css</code> 會讓它被當作一個 CSS 檔案。</p>
+<p>建立一個檔案，存在與您 HTML 文件同一個目錄之中，並命名為 <code>styles.css</code> 。副檔名 <code>.css</code> 會讓它被當作一個 CSS 檔案。</p>
 
 <p>為了連結 <code>styles.css</code> 到 <code>index.html</code> 中，在 HTML 文件的 {{htmlelement("head")}} 中，加入下面這行：</p>
 
@@ -92,7 +92,7 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
   color: red;
 }</pre>
 
-<p>將您的  HTML 與 CSS 檔案儲存後，重新整理瀏覽器裡的頁面。文件中最上頭的第一級標題現在應該會是紅色的。如果是，恭喜！您成功地套到了一些 CSS 設定到 HTML 中了。如果結果不是如此，仔細檢查您的每段文字並確認都輸入正確。</p>
+<p>將您的  HTML 與 CSS 檔案儲存後，重新整理瀏覽器裡的頁面。文件中最上頭的第一級標題現在應該會是紅色的。如果是，恭喜！您成功地套到了一些 CSS 設定到 HTML 中了。如果結果不是如此，仔細檢查您的每段文字並確認都輸入正確。</p>
 
 <p>你可以在你電腦裡的 <code>styles.css</code> 上繼續，或是使用我們下的互動編輯器來繼續本教學指引。 互動編輯器的行為，就像是這個 CSS 已經連結到 HTML 中，就如同我們在前面剛剛完成的一樣。</p>
 
@@ -112,7 +112,7 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <p>在底下的互動式編輯器（編輯程式區塊）中，或是在您本地的 CSS 檔案嘗試編輯看看。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}} </p>
 
 <h2 id="Changing_the_default_behavior_of_elements">改變元素的預設樣式</h2>
 
@@ -182,7 +182,7 @@ span.special {
 
 <p>這個選擇器將會指向任何在 <code>&lt;li&gt;</code> 內部的 <code>&lt;em&gt;</code> 元素（後裔）。所以在範例裡中，您應該會發現在第三個清單項目裡的 <code>&lt;em&gt;</code> 變成紫色，但是在段落裡的則沒有改變。</p>
 
-<p>另外有些時候，您可能會想嘗試對直接跟在標題後面的那個段落設定樣式。要作到就使用一個 <code>+</code> （<strong>相鄰連結器adjacent sibling combinator</strong>）放在選擇器的中間。</p>
+<p>另外有些時候，您可能會想嘗試對直接跟在標題後面的那個段落設定樣式。要作到就使用一個 <code>+</code> （<strong>相鄰連結器adjacent sibling combinator</strong>）放在選擇器的中間。</p>
 
 <p>試著加入面這個規則到</p>
 
@@ -218,9 +218,9 @@ a:visited {
 
 <p>在下面真實運作的例子裡，您可以為連結的不同狀態設定不同的樣式。我已經將上面例子中的規則加進去，而現在意識到粉紅色實在是太淺而且不好閱讀，何不換個更好的顏色？您能讓連結變成粗體嗎？</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
 
-<p>我們已經將連結在懸停狀態下的底線移除。您也可以移除連結在所有狀態下的底線。但是在實際運作的網站上，值得注意的是您要確保使用網站的人能分判哪些元素是連結。留著底線會是一個讓人意識到段落中的某些文字以可點擊的重要線索，這是人們已經習慣的行為。就像所有 CSS　規則一樣，您所作的更改可能會使得內容難被閱讀或使用，我們將儘可能將這些可能的問題點突顯出來。</p>
+<p>我們已經將連結在懸停狀態下的底線移除。您也可以移除連結在所有狀態下的底線。但是在實際運作的網站上，值得注意的是您要確保使用網站的人能分判哪些元素是連結。留著底線會是一個讓人意識到段落中的某些文字以可點擊的重要線索，這是人們已經習慣的行為。就像所有 CSS 規則一樣，您所作的更改可能會使得內容難被閱讀或使用，我們將儘可能將這些可能的問題點突顯出來。</p>
 
 <div class="notecard note">
 <p><strong>注意</strong>： 你將會在 MDN 網站以及這些課程中經常看到<a href="/zh-TW/docs/Learn/Accessibility">可用性</a>的觀點被提起。當我們討論可用性的時候，指的是為了讓我們網頁能被每個人了解及使用所必須的東西。</p>

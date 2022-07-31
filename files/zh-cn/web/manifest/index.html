@@ -7,11 +7,11 @@ tags:
   - web app manifest
 translation_of: Web/Manifest
 ---
-<p><a href="web app manifest" id="web app manifest" name="web app manifest" title="web app manifest">Web 应用程序清单</a>在一个 JSON 文本文件中提供有关应用程序的信息（如名称，作者，图标和描述）。manifest 的目的是将 Web 应用程序安装到设备的主屏幕，为用户提供更快的访问和更丰富的体验。</p>
+<p><a href="web app manifest">Web 应用程序清单</a>在一个 JSON 文本文件中提供有关应用程序的信息（如名称，作者，图标和描述）。manifest 的目的是将 Web 应用程序安装到设备的主屏幕，为用户提供更快的访问和更丰富的体验。</p>
 
 <p>Web 应用程序清单是被称为<a href="/en-US/docs/Web/Apps/Progressive">渐进式 Web 应用程序 (PWA)</a>的 Web 技术集合的一部分，它们是可以安装到设备的主屏幕的网络应用程序，而不需要用户通过应用商店，伴随着其他功能，比如离线可用和接收推送通知。</p>
 
-<h2 id="Deploying_a_manifest_with_the_link_tag" name="Deploying_a_manifest_with_the_link_tag">部署一个 manifest</h2>
+<h2 id="Deploying_a_manifest_with_the_link_tag">部署一个 manifest</h2>
 
 <p>Web 应用程序清单部署在您的 HTML 页面中，使用在你的文件的头部的一个链接标记：</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/Manifest
 <pre><code class="language-html">&lt;link rel="manifest" href="/manifest.json"&gt;</code></pre>
 </div>
 
-<h2 id="manifest_范例">manifest 范例 </h2>
+<h2 id="manifest_范例">manifest 范例 </h2>
 
 <pre class="brush: json">{
   "name": "HackerWeb",
@@ -206,7 +206,7 @@ translation_of: Web/Manifest
 
 <h3 id="orientation"><code>orientation</code></h3>
 
-<p>定义所有 Web 应用程序顶级的默认方向 {{Glossary("Browsing context", "browsing contexts")}}.</p>
+<p>定义所有 Web 应用程序顶级的默认方向 {{Glossary("Browsing context", "browsing contexts")}}.</p>
 
 <pre class="brush: json"><code>​​"orientation": "portrait-primary"</code></pre>
 
@@ -230,7 +230,7 @@ translation_of: Web/Manifest
 <pre class="brush: json">"prefer_related_applications": false</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 如果省略，默认设置为 <code>false</code>.</p>
+<p><strong>Note</strong>: 如果省略，默认设置为 <code>false</code>.</p>
 </div>
 
 <h3 id="related_applications"><code>related_applications</code></h3>
@@ -305,7 +305,7 @@ translation_of: Web/Manifest
 
 <h2 id="Mime类型">Mime 类型</h2>
 
-<p>Manifests 应使用 <code>application/manifest+json</code> MIME 类型。但是，你不必非得这样做。</p>
+<p>Manifests 应使用 <code>application/manifest+json</code> MIME 类型。但是，你不必非得这样做。</p>
 
 <h2 id="规范">规范</h2>
 

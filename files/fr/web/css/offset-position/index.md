@@ -7,7 +7,7 @@ translation_of: Web/CSS/offset-position
 
 La propriété [CSS](/fr/docs/Web/CSS) **`offset-position`** définit la [position initiale](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) de {{cssxref("offset-path")}}.
 
-## Syntax
+## Syntaxe
 
 ```css
 /* Valeurs de mots clefs */

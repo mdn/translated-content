@@ -195,7 +195,7 @@ Cortocircuitar es una jerga para la evaluación condicional. Por ejemplo, en la 
 la expresión `(b + c)` no será evaluada, incluso si está dentro de
 paréntesis. Se podría decir que el operador de conjunción lógica ("&&") está
 "cortocircuitado". Junto con la conjunción lógica, otros operadores cortocircuitados
-son la disyunción lógica ("||"), la coalescencia nula ("??"), el encadenamiento opcional ("?."), 
+son la disyunción lógica ("||"), la coalescencia nula ("??"), el encadenamiento opcional ("?."),
 y el operador condicional ternario. A continuación, algunos ejemplos.
 
 ```js

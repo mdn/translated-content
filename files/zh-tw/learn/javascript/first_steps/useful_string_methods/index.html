@@ -146,12 +146,12 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
 <h3 id="找出字串的長度（length）">找出字串的長度（length）</h3>
 
-<p>這很簡單，你可以用 {{jsxref("String.prototype.length", "length")}} 屬性。試著輸入下面幾行：</p>
+<p>這很簡單，你可以用 {{jsxref("String.prototype.length", "length")}} 屬性。試著輸入下面幾行：</p>
 
 <pre class="brush: js notranslate">var browserType = 'mozilla';
 browserType.length;</pre>
 
-<p>結果應該會回傳數字7，因為 "mozilla" 字元長度是7。 這在很多狀況下很好用，舉例來說：你會想知道序列的長度，這樣才能將這些序列按照長度排序，或是讓使用者知道他們輸入的名稱是否太長。</p>
+<p>結果應該會回傳數字7，因為 "mozilla" 字元長度是7。 這在很多狀況下很好用，舉例來說：你會想知道序列的長度，這樣才能將這些序列按照長度排序，或是讓使用者知道他們輸入的名稱是否太長。</p>
 
 <h3 id="取得字串中的特定字元（string_character）">取得字串中的特定字元（string character）</h3>
 
@@ -159,11 +159,11 @@ browserType.length;</pre>
 
 <pre class="brush: js notranslate">browserType[0];</pre>
 
-<p>記得電腦計數從0開始，不是1！ 如果要在<em>任何</em>一個字串中取得最後一個字元，我們可以使用以下程式碼，結合了取得字元的技巧和上面學過的長度屬性：</p>
+<p>記得電腦計數從0開始，不是1！ 如果要在<em>任何</em>一個字串中取得最後一個字元，我們可以使用以下程式碼，結合了取得字元的技巧和上面學過的長度屬性：</p>
 
 <pre class="brush: js notranslate">browserType[browserType.length-1];</pre>
 
-<p>"mozilla" 這個詞的長度是7，但因為電腦是從0開始計數，所以最後一個位置是6，因此我們會將 <code>length-1</code> 。你也可以試試用這個方法找各序列的第一個字母，並將這些序列按字母順序排好 。</p>
+<p>"mozilla" 這個詞的長度是7，但因為電腦是從0開始計數，所以最後一個位置是6，因此我們會將 <code>length-1</code> 。你也可以試試用這個方法找各序列的第一個字母，並將這些序列按字母順序排好 。</p>
 
 <h3 id="尋找字串中的子字串（substring）並提出子字串">尋找字串中的子字串（substring）並提出子字串</h3>
 
@@ -177,7 +177,7 @@ browserType.length;</pre>
 <ol start="2">
  <li>This can be done in another way, which is possibly even more effective. Try the following:
   <pre class="brush: js notranslate">browserType.indexOf('vanilla');</pre>
-  This should give you a result of <code>-1</code> — this is returned when the substring, in this case 'vanilla', is not found in the main string.<br>
+  This should give you a result of <code>-1</code> — this is returned when the substring, in this case 'vanilla', is not found in the main string.<br>
   <br>
   You could use this to find all instances of strings that <strong>don't</strong> contain the substring 'mozilla', or <strong>do,</strong> if you use the negation operator, as shown below. You could do something like this:
 
@@ -185,13 +185,13 @@ browserType.length;</pre>
   // do stuff with the string
 }</pre>
  </li>
- <li>When you know where a substring starts inside a string, and you know at which character you want it to end, {{jsxref("String.prototype.slice()", "slice()")}} can be used to extract it. Try the following:
+ <li>When you know where a substring starts inside a string, and you know at which character you want it to end, {{jsxref("String.prototype.slice()", "slice()")}} can be used to extract it. Try the following:
   <pre class="brush: js notranslate">browserType.slice(0,3);</pre>
   This returns "moz" — the first parameter is the character position to start extracting at, and the second parameter is the character position after the last one to be extracted. So the slice happens from the first position, up to, but not including, the last position. In this example, since the starting index is 0, the second parameter is equal to the length of the string being returned.<br>
-   </li>
- <li>Also, if you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter! Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
+   </li>
+ <li>Also, if you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter! Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
   <pre class="brush: js notranslate">browserType.slice(2);</pre>
-  This returns "zilla" — this is because the character position of 2 is the letter z, and because you didn't include a second parameter, the substring that was returned was all of the remaining characters in the string. </li>
+  This returns "zilla" — this is because the character position of 2 is the letter z, and because you didn't include a second parameter, the substring that was returned was all of the remaining characters in the string. </li>
 </ol>
 
 <div class="note">
@@ -210,7 +210,7 @@ radData.toUpperCase();</pre>
 
 <h3 id="更動部分字串">更動部分字串</h3>
 
-<p>You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works very simply at a basic level, although there are some advanced things you can do with it that we won't go into yet.</p>
+<p>You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works very simply at a basic level, although there are some advanced things you can do with it that we won't go into yet.</p>
 
 <p>It takes two parameters — the string you want to replace, and the string you want to replace it with. Try this example:</p>
 
@@ -226,7 +226,7 @@ radData.toUpperCase();</pre>
 
 <h3 id="Filtering_greeting_messages">Filtering greeting messages</h3>
 
-<p>In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the <code>if( ... )</code> structure, to test each string and only print it in the list if it is a Christmas message.</p>
+<p>In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the <code>if( ... )</code> structure, to test each string and only print it in the list if it is a Christmas message.</p>
 
 <ol>
  <li>First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?</li>
@@ -250,7 +250,7 @@ radData.toUpperCase();</pre>
 &lt;h2&gt;Editable code&lt;/h2&gt;
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
 
-&lt;textarea id="code" class="playable-code" style="height: 290px; width: 95%"&gt;
+&lt;textarea id="code" class="playable-code" style="height: 290px; width: 95%"&gt;
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var greetings = ['Happy Birthday!',
@@ -380,7 +380,7 @@ textarea.onkeyup = function(){
 
 <h3 id="Fixing_capitalization">Fixing capitalization</h3>
 
-<p>In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:</p>
+<p>In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:</p>
 
 <ol>
  <li>Convert the whole of the string contained in the <code>input</code> variable to lower case and store it in a new variable.</li>
@@ -409,7 +409,7 @@ textarea.onkeyup = function(){
 &lt;h2&gt;Editable code&lt;/h2&gt;
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
 
-&lt;textarea id="code" class="playable-code" style="height: 250px; width: 95%"&gt;
+&lt;textarea id="code" class="playable-code" style="height: 250px; width: 95%"&gt;
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
@@ -536,7 +536,7 @@ textarea.onkeyup = function(){
 
 <pre class="notranslate">MAN675847583748sjt567654;Manchester Piccadilly</pre>
 
-<p>We want to extract the station code and name, and put them together in a string with the following structure:</p>
+<p>We want to extract the station code and name, and put them together in a string with the following structure:</p>
 
 <pre class="notranslate">MAN: Manchester Piccadilly</pre>
 
@@ -566,7 +566,7 @@ textarea.onkeyup = function(){
 &lt;h2&gt;Editable code&lt;/h2&gt;
 &lt;p class="a11y-label"&gt;Press Esc to move focus away from the code area (Tab inserts a tab character).&lt;/p&gt;
 
-&lt;textarea id="code" class="playable-code" style="height: 285px; width: 95%"&gt;
+&lt;textarea id="code" class="playable-code" style="height: 285px; width: 95%"&gt;
 var list = document.querySelector('.output ul');
 list.innerHTML = '';
 var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
@@ -695,7 +695,7 @@ textarea.onkeyup = function(){
 
 <h2 id="結語">結語</h2>
 
-<p>不可否認當網站在跟人們互相溝通時，處理文字和句子在程式設計中是相當重要的，尤其是在 JavaScript 中。這篇文章已經傳授你如何去處理字串的方法，應該對以後深入了解其他更複雜主題的你會很有幫助。接下來，我們將會看看最後一個近期內我們需要關注的主要的資料型態 — 陣列。</p>
+<p>不可否認當網站在跟人們互相溝通時，處理文字和句子在程式設計中是相當重要的，尤其是在 JavaScript 中。這篇文章已經傳授你如何去處理字串的方法，應該對以後深入了解其他更複雜主題的你會很有幫助。接下來，我們將會看看最後一個近期內我們需要關注的主要的資料型態 — 陣列。</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</p>
 

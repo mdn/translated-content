@@ -40,7 +40,7 @@ function getMonthName(mo) {
    mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',
       'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-   if (months[mo] !== undefined) {
+   if (months[mo] !== undefined) {
       return months[mo];
    } else {
       throw new UserException('InvalidMonthNo');

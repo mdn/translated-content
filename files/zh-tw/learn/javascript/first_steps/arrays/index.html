@@ -75,7 +75,7 @@ shopping;
 <pre class="brush: js notranslate">shopping.length;
 // should return 5</pre>
 
-<p>這還有其他用途，但最常見的用法是讓迴圈一直循環直到所有的單元都走過一次。 舉個例子：</p>
+<p>這還有其他用途，但最常見的用法是讓迴圈一直循環直到所有的單元都走過一次。 舉個例子：</p>
 
 <pre class="brush: js notranslate">var sequence = [1, 1, 2, 3, 5, 8, 13];
 for (var i = 0; i &lt; sequence.length; i++) {
@@ -87,7 +87,7 @@ for (var i = 0; i &lt; sequence.length; i++) {
 <ol>
  <li>從陣列中索引為 0 的單元開始循環。</li>
  <li>當索引值等於陣列的長度時，停止循環。這個方法對任何長度的陣列都可行，但在這個例子中，迴圈會當索引等於 7 時停止循環（這樣很好，因為最後一個單元——我們希望有包含到的——是6）。</li>
- <li>我們在瀏覽器 console 中用 <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> 將每個單元列印出來。</li>
+ <li>我們在瀏覽器 console 中用 <code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> 將每個單元列印出來。</li>
 </ol>
 
 <h2 id="好用的陣列方法">好用的陣列方法</h2>
@@ -120,7 +120,7 @@ myArray[myArray.length-1]; // the last item in the array</pre>
   <pre class="brush: js notranslate">var myNewString = myArray.join(',');
 myNewString;</pre>
  </li>
- <li>另一個將陣列轉換為字串的方法是用 {{jsxref("Array.prototype.toString()","toString()")}} 。<code>toString()</code> 因為不需要參數而比 <code>join()</code> 更簡潔，但因此也更多限制。使用 <code>join()</code> 你可以使用特定的分隔符（試著使用其他不同的字元來執行步驟 4）。
+ <li>另一個將陣列轉換為字串的方法是用 {{jsxref("Array.prototype.toString()","toString()")}} 。<code>toString()</code> 因為不需要參數而比 <code>join()</code> 更簡潔，但因此也更多限制。使用 <code>join()</code> 你可以使用特定的分隔符（試著使用其他不同的字元來執行步驟 4）。
   <pre class="brush: js notranslate">var dogNames = ['Rocket','Flash','Bella','Slugger'];
 dogNames.toString(); //Rocket,Flash,Bella,Slugger</pre>
  </li>
@@ -128,11 +128,11 @@ dogNames.toString(); //Rocket,Flash,Bella,Slugger</pre>
 
 <h3 id="新增與移除陣列單位">新增與移除陣列單位</h3>
 
-<p>我們還沒談到增加與移除陣列的單位，現在來看看吧！我們使用上一個小節中的 <code>myArray</code> 陣列。如果你沒跟隨到上一個小節，那就先在你的 console 建立下面這個陣列：</p>
+<p>我們還沒談到增加與移除陣列的單位，現在來看看吧！我們使用上一個小節中的 <code>myArray</code> 陣列。如果你沒跟隨到上一個小節，那就先在你的 console 建立下面這個陣列：</p>
 
 <pre class="brush: js notranslate">var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];</pre>
 
-<p>首先，我們可以分別使用 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 來增加或移除一個在陣列最末端的單元 。</p>
+<p>首先，我們可以分別使用 {{jsxref("Array.prototype.push()","push()")}} 和 {{jsxref("Array.prototype.pop()","pop()")}} 來增加或移除一個在陣列最末端的單元 。</p>
 
 <ol>
  <li>Let's use <code>push()</code> first — note that you need to include one or more items that you want to add to the end of your array. Try this:
@@ -285,9 +285,9 @@ textarea.onkeydown = function(e){
   }
 
 
-  if (e.keyCode === 27) {
-    textarea.blur();
-  }
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
 };
 
 function insertAtCaret(text) {
@@ -347,7 +347,7 @@ body {
 
 <p>A good use for array methods like {{jsxref("Array.prototype.push()","push()")}} and {{jsxref("Array.prototype.pop()","pop()")}} is when you are maintaining a record of currently active items in a web app. In an animated scene for example, you might have an array of objects representing the background graphics currently displayed, and you might only want 50 displayed at once, for performance or clutter reasons. As new objects are created and added to the array, older ones can be deleted from the array to maintain the desired number.</p>
 
-<p>In this example we're going to show a much simpler use — here we're giving you a fake search site, with a search box. The idea is that when terms are entered in the search box, the top 5 previous search terms are displayed in the list. When the number of terms goes over 5, the last term starts being deleted each time a new term is added to the top, so the 5 previous terms are always displayed.</p>
+<p>In this example we're going to show a much simpler use — here we're giving you a fake search site, with a search box. The idea is that when terms are entered in the search box, the top 5 previous search terms are displayed in the list. When the number of terms goes over 5, the last term starts being deleted each time a new term is added to the top, so the 5 previous terms are always displayed.</p>
 
 <div class="note">
 <p><strong>Note</strong>: In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.</p>

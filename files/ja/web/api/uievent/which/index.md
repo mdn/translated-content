@@ -38,7 +38,6 @@ original_slug: Web/API/MouseEvent/which
 
 > **Note:** 新しいコードでは {{domxref("MouseEvent.button")}} を検討してください。
 
-
 ## 例
 
 ```html

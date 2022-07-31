@@ -14,7 +14,7 @@ translation_of: Web/API/Web_Audio_API
 
 <p>Web Audio API 使用户可以在<strong>音频上下文</strong>(AudioContext) 中进行音频操作，具有<strong>模块化路由</strong>的特点。在<strong>音频节点</strong>上操作进行基础的音频， 它们连接在一起构成<strong>音频路由图</strong>。即使在单个上下文中也支持多源，尽管这些音频源具有多种不同类型通道布局。这种模块化设计提供了灵活创建动态效果的复合音频的方法。</p>
 
-<p>音频节点通过它们的输入输出相互连接，形成一个链或者一个简单的网。一般来说，这个链或网起始于一个或多个音频源。音频源可以提供一个片段一个片段的音频采样数据（以数组的方式），一般，一秒钟的音频数据可以被切分成几万个这样的片段。这些片段可以是经过一些数学运算得到 （比如{{domxref("OscillatorNode")}}），也可以是音频或视频的文件读出来的（比如{{domxref("AudioBufferSourceNode")}}和{{domxref("MediaElementAudioSourceNode")}}），又或者是音频流（{{domxref("MediaStreamAudioSourceNode")}}）。其实，音频文件本身就是声音的采样数据，这些采样数据可以来自麦克风，也可以来自电子乐器，然后混合成一个单一的复杂的波形。</p>
+<p>音频节点通过它们的输入输出相互连接，形成一个链或者一个简单的网。一般来说，这个链或网起始于一个或多个音频源。音频源可以提供一个片段一个片段的音频采样数据（以数组的方式），一般，一秒钟的音频数据可以被切分成几万个这样的片段。这些片段可以是经过一些数学运算得到 （比如{{domxref("OscillatorNode")}}），也可以是音频或视频的文件读出来的（比如{{domxref("AudioBufferSourceNode")}}和{{domxref("MediaElementAudioSourceNode")}}），又或者是音频流（{{domxref("MediaStreamAudioSourceNode")}}）。其实，音频文件本身就是声音的采样数据，这些采样数据可以来自麦克风，也可以来自电子乐器，然后混合成一个单一的复杂的波形。</p>
 
 <p>这些节点的输出可以连接到其它节点的输入上，然后新节点可以对接收到的采样数据再进行其它的处理，再形成一个结果流。一个最常见的操作是通过把输入的采样数据放大来达到扩音器的作用（缩小就是一个弱音器）（参见{{domxref("GainNode")}}）。声音处理完成之后，可以连接到一个目的地（{{domxref("AudioContext.destination")}}），这个目的地负责把声音数据传输给扬声器或者耳机。注意，只有当用户期望听到声音时，才需要进行最后一个这个连接。</p>
 
@@ -71,7 +71,7 @@ translation_of: Web/API/Web_Audio_API
  <dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
  <dd><code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong>接口表示由 HTML5 {{ htmlelement("audio") }}或{{ htmlelement("video") }}元素生成的音频源。这是一个作为音频源的{{domxref("AudioNode")}}。</dd>
  <dt>{{domxref("MediaStreamAudioSourceNode")}}</dt>
- <dd><code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong>接口表示由 WebRTC {{domxref("MediaStream")}}（如网络摄像头或麦克风）生成的音频源。这是一个作为音频源的{{domxref("AudioNode")}}。</dd>
+ <dd><code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong>接口表示由 WebRTC {{domxref("MediaStream")}}（如网络摄像头或麦克风）生成的音频源。这是一个作为音频源的{{domxref("AudioNode")}}。</dd>
 </dl>
 
 <h3 id="定义音效">定义音效</h3>
@@ -80,13 +80,13 @@ translation_of: Web/API/Web_Audio_API
 
 <dl>
  <dt>{{domxref("BiquadFilterNode")}}</dt>
- <dd><strong><code>BiquadFilterNode</code></strong><strong> </strong>接口表示一个简单的低频滤波器。它是一个{{domxref("AudioNode")}}，可以表示不同种类的滤波器、调音器或图形均衡器。<code>BiquadFilterNode</code> 总是只有一个输入和一个输出。</dd>
+ <dd><strong><code>BiquadFilterNode</code></strong> 接口表示一个简单的低阶滤波器。它是一个{{domxref("AudioNode")}}，可以表示不同种类的滤波器、调音器或图形均衡器。<code>BiquadFilterNode</code> 总是只有一个输入和一个输出。</dd>
  <dt>{{domxref("ConvolverNode")}}</dt>
  <dd><code><strong>Convolver</strong></code><strong><code>Node</code></strong><strong> </strong>接口是一个{{domxref("AudioNode")}}，对给定的 AudioBuffer 执行线性卷积，通常用于实现混响效果。</dd>
  <dt>{{domxref("DelayNode")}}</dt>
- <dd><strong><code>DelayNode</code></strong><strong> </strong>接口表示<a href="http://en.wikipedia.org/wiki/Digital_delay_line" title="http://en.wikipedia.org/wiki/Digital_delay_line">延迟线</a>；是{{domxref("AudioNode")}} 类型的音频处理模块，使输入的数据延时输出。</dd>
+ <dd><strong><code>DelayNode</code></strong><strong> </strong>接口表示<a href="http://en.wikipedia.org/wiki/Digital_delay_line">延迟线</a>；是{{domxref("AudioNode")}} 类型的音频处理模块，使输入的数据延时输出。</dd>
  <dt>{{domxref("DynamicsCompressorNode")}}</dt>
- <dd><strong><code>DynamicsCompressorNode</code></strong> 提供了一个压缩效果，当多个音频在同时播放并且混合的时候，可以通过它降低音量最大的部分的音量来帮助避免发生削波和失真。</dd>
+ <dd><strong><code>DynamicsCompressorNode</code></strong> 提供了一个压缩效果，当多个音频在同时播放并且混合的时候，可以通过它降低音量最大的部分的音量来帮助避免发生削波和失真。</dd>
  <dt>{{domxref("GainNode")}}</dt>
  <dd><strong><code>GainNode</code></strong><strong> </strong>接口用于音量变化。它是一个 {{domxref("AudioNode")}} 类型的音频处理模块，输入后应用<em>增益</em> 效果，然后输出。</dd>
  <dt>{{domxref("StereoPannerNode")}}</dt>
@@ -103,9 +103,9 @@ translation_of: Web/API/Web_Audio_API
 
 <dl>
  <dt>{{domxref("AudioDestinationNode")}}</dt>
- <dd><strong><code>AudioDestinationNode</code></strong> 定义了最后音频要输出到哪里，通常是输出到你的扬声器。</dd>
+ <dd><strong><code>AudioDestinationNode</code></strong> 定义了最后音频要输出到哪里，通常是输出到你的扬声器。</dd>
  <dt>{{domxref("MediaStreamAudioDestinationNode")}}</dt>
- <dd><code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong>定义了使用 <a href="https://developer.mozilla.org/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> 的{{domxref("MediaStream")}}（只包含单个 AudioMediaStreamTrack）应该连接的目的地，AudioMediaStreamTrack 的使用方式和从{{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}中得到{{domxref("MediaStream")}}相似。这个接口是{{domxref("AudioNode")}}类型的音频目的地。</dd>
+ <dd><code><strong>MediaStreamAudio</strong></code><strong><code>DestinationNode</code></strong>定义了使用 <a href="https://developer.mozilla.org/en-US/docs/WebRTC">WebRTC</a> 的{{domxref("MediaStream")}}（只包含单个 AudioMediaStreamTrack）应该连接的目的地，AudioMediaStreamTrack 的使用方式和从{{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}中得到{{domxref("MediaStream")}}相似。这个接口是{{domxref("AudioNode")}}类型的音频目的地。</dd>
 </dl>
 
 <h3 id="数据分析和可视化">数据分析和可视化</h3>
@@ -169,7 +169,7 @@ translation_of: Web/API/Web_Audio_API
  <dd><code>OfflineAudioCompletionEvent</code>表示上下文被终止时的事件。</dd>
 </dl>
 
-<h3 id="Audio_Workers" name="Audio_Workers">音频工作者</h3>
+<h3 id="Audio_Workers">音频工作者</h3>
 
 <p>在了解这一部分内容之前，你可以先了解一个新的 WebWorker 方面的内容。音频工作者提供了一种可以在一个<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">WebWorker</a>上下文中直接进行音频处理的方式。现在已经定义了一些这部分功能的新接口，接口定义是在 2014 年的 8 月 29 日文档中。到目前为止，还没有浏览器已经对这些接口进行了实现。当这些接口被实现后，{{domxref("ScriptProcessorNode")}}和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Audio_API$edit#Audio_processing_via_JavaScript">前文</a>中提到的其它接口都会被替代。</p>
 
@@ -182,7 +182,7 @@ translation_of: Web/API/Web_Audio_API
  <dd>这是一个事件对象。这个对象会被分发给{{domxref("AudioWorkerGlobalScope")}}对象来进行处理。</dd>
 </dl>
 
-<h2 id="Example" name="Example">过时的接口</h2>
+<h2 id="Example">过时的接口</h2>
 
 <p>下面介绍到的这些接口定义于比较老的 Web Audio API 标准，现在已经过时了，而且已经被新接口取代。</p>
 
@@ -193,7 +193,7 @@ translation_of: Web/API/Web_Audio_API
  <dd>用于定义一个周期性波形，现在已经被{{domxref("PeriodicWave")}}取代。</dd>
 </dl>
 
-<h2 id="Example" name="Example">示例</h2>
+<h2 id="Example">示例</h2>
 
 <p>下面的这个示例使用了较多的 Web Audio API 接口，可以通过访问<a href="https://mdn.github.io/voice-change-o-matic/">网址</a>来查看它的时时运行情况，也可以访问 GitHub 上它的<a href="https://github.com/mdn/voice-change-o-matic">源代码</a>。这个示例里会对声音的音量进行改变，打开页面时，可以先把扬声器的音量调小一些。</p>
 
@@ -358,20 +358,7 @@ function voiceMute() { // toggle to mute and unmute sound
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -385,9 +372,9 @@ function voiceMute() { // toggle to mute and unmute sound
  <li><a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic example</a></li>
  <li><a href="http://mdn.github.io/violent-theremin/">Violent Theremin example</a></li>
  <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
- <li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/" title="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
- <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/" title="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext" title="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
+ <li><a href="http://www.html5rocks.com/tutorials/webaudio/positional_audio/">Mixing Positional Audio and WebGL</a></li>
+ <li><a href="http://www.html5rocks.com/tutorials/webaudio/games/">Developing Game Audio with the Web Audio API</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
  <li><a href="https://github.com/bit101/tones">Tones</a>: a simple library for playing specific tones/notes using the Web Audio API.</li>
  <li><a href="https://github.com/goldfire/howler.js/">howler.js</a>: a JS audio library that defaults to <a href="https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html">Web Audio API</a> and falls back to <a href="http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element">HTML5 Audio</a>, as well as providing other useful features.</li>
 </ul>
@@ -396,7 +383,7 @@ function voiceMute() { // toggle to mute and unmute sound
 <h3 id="Quicklinks">Quicklinks</h3>
 
 <ol>
- <li data-default-state="open"><strong><a href="#">Guides</a></strong>
+ <li><strong><a href="#">Guides</a></strong>
 
   <ol>
    <li><a href="/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Basic concepts behind Web Audio API</a></li>
@@ -406,13 +393,13 @@ function voiceMute() { // toggle to mute and unmute sound
    <li><a href="/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
   </ol>
  </li>
- <li data-default-state="open"><strong><a href="#">Examples</a></strong>
+ <li><strong><a href="#">Examples</a></strong>
   <ol>
    <li><a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a></li>
    <li><a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a></li>
   </ol>
  </li>
- <li data-default-state="open"><strong><a href="#">Interfaces</a></strong>
+ <li><strong><a href="#">Interfaces</a></strong>
   <ol>
    <li>{{domxref("AnalyserNode")}}</li>
    <li>{{domxref("AudioBuffer")}}</li>

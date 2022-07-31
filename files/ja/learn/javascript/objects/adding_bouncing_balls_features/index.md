@@ -200,7 +200,7 @@ window.addEventListener('keydown', (e) => {
 1. 自分の作品を [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) などのオンラインで共有できるエディターに入れます。
 2. [MDN Discourse フォーラムの Learning カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)に、評価や支援を求める投稿を（英語で）書き込んでください。投稿には次のことを書いてください。
 
-    -  "Assessment wanted for Adding bouncing balls features" のような、説明的なタイトル。
+    - "Assessment wanted for Adding bouncing balls features" のような、説明的なタイトル。
     - すでに試したことの詳細と、私たちに何をしてほしいか（例: 行き詰まり、助けが必要な場合、または評価が必要な場合）。
     - 評価やヘルプが必要なサンプルへのリンクを、オンライン共有可能なエディター（上記のステップ 1 で述べたとおり）にて提供します。コードを見ることができなければ、コーディングの問題で誰かを助けることは非常に困難です。
     - 実際の課題または評価ページへのリンクにより、助けを求めている問題を見つけることができます。

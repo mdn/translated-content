@@ -20,10 +20,12 @@ Conjointement à la directive [`require-trusted-types-for`](/en-US/docs/Web/HTTP
 
 ## Syntaxe
 
-    Content-Security-Policy: trusted-types;
-    Content-Security-Policy: trusted-types 'none';
-    Content-Security-Policy: trusted-types <policyName>;
-    Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicates';
+```
+Content-Security-Policy: trusted-types;
+Content-Security-Policy: trusted-types 'none';
+Content-Security-Policy: trusted-types <policyName>;
+Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicates';
+```
 
 - \<nomRègle>
   - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`".  Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
@@ -36,7 +38,9 @@ Conjointement à la directive [`require-trusted-types-for`](/en-US/docs/Web/HTTP
 
 Soit l'en-tête CSP :
 
-    Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
+```
+Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
+```
 
 Ce code génèrera une erreur car une des règles créées a un nom non autorisé :
 

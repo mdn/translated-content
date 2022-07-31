@@ -21,11 +21,15 @@ Dans Gecko 1.8, il n'était pas possible de définir des gestionnaires d'évène
 
 Par exemple, ceci&nbsp;:
 
-    window.addEventListener('load', votreFonction, true);
+```js
+window.addEventListener('load', votreFonction, true);
+```
 
 devrait être remplacé par ceci&nbsp;:
 
-    window.addEventListener('load', votreFonction, false);
+```js
+window.addEventListener('load', votreFonction, false);
+```
 
 Pour une explication du fonctionnement de la capture des évènements, consultez [DOM Level 2 Event capture](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) (en)
 

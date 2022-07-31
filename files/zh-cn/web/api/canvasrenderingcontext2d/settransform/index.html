@@ -14,7 +14,7 @@ translation_of: Web/API/CanvasRenderingContext2D/setTransform
 <pre class="syntaxbox notranslate">void <var><em>ctx</em>.setTransform(a, b, c, d, e, f);</var>
 </pre>
 
-<p>变换矩阵的描述： <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></p>
+<p>变换矩阵的描述： <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></p>
 
 <h3 id="参数">参数</h3>
 
@@ -39,7 +39,7 @@ translation_of: Web/API/CanvasRenderingContext2D/setTransform
 
 <h3 id="使用_setTransform_方法">使用 <code>setTransform</code> 方法</h3>
 
-<p>这是一段使用 <code>setTransform</code> 方法的简单的代码片段。</p>
+<p>这是一段使用 <code>setTransform</code> 方法的简单的代码片段。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -62,8 +62,8 @@ ctx.fillRect(0,0,100,100);
 
 <pre class="brush: html notranslate">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.setTransform(1,1,0,1,0,0);

@@ -11,7 +11,9 @@ La méthode **`HTMLTableRowElement.insertCell()`** insère une nouvelle cellule 
 
 ## Syntaxe
 
-    var newCell = HTMLTableRowElement.insertCell(index);
+```js
+var newCell = HTMLTableRowElement.insertCell(index);
+```
 
 {{domxref("HTMLTableRowElement")}} est une référence sur un élément HTML {{HtmlElement("tr")}}.
 

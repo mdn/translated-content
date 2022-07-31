@@ -5,7 +5,7 @@ translation_of: Web/API/Headers/delete
 ---
 <p>{{APIRef("Fetch")}}{{ SeeCompatTable() }}</p>
 
-<p><strong><code>delete()</code></strong> 方法可以从 Headers 对象中删除指定 header.</p>
+<p><strong><code>delete()</code></strong> 方法可以从 Headers 对象中删除指定 header.</p>
 
 <p>下列原因将会导致该方法抛出一个{{jsxref("TypeError")}}:</p>
 
@@ -15,10 +15,10 @@ translation_of: Web/API/Headers/delete
 </ul>
 
 <div class="note">
-<p style="line-height: 19.0909080505371px;"><strong>Note:</strong>出于安全原因，部分头信息只能被用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
+<p><strong>Note:</strong>出于安全原因，部分头信息只能被用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
 </div>
 
-<p style="line-height: 19.0909080505371px;"><strong style="font-size: 2.14285714285714rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Syntax</strong></p>
+<h2 id="语法">语法</h2>
 
 <pre class="brush: js">myHeaders.delete(name);</pre>
 
@@ -52,20 +52,7 @@ myHeaders.get('Content-Type'); // Returns null, as it has been deleted</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-headers-delete','delete()')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

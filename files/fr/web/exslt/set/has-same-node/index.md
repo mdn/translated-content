@@ -12,7 +12,9 @@ translation_of: Web/EXSLT/set/has-same-node
 
 ### Syntaxe
 
-    set:has-same-node(ensembleNœuds1,ensembleNœuds2)
+```
+set:has-same-node(ensembleNœuds1,ensembleNœuds2)
+```
 
 ### Arguments
 

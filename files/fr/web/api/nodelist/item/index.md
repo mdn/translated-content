@@ -15,7 +15,9 @@ Renvoie un noeud depuis une [`NodeList`](/en-US/docs/Web/API/NodeList) par l'ind
 
 ## Syntaxe
 
-    nodeItem = nodeList.item(index)
+```js
+nodeItem = nodeList.item(index)
+```
 
 - `nodeList` est une `NodeList`. Elle est généralement obtenue à partir d'une autre propriété ou méthode DOM, telle que [childNodes](/en-US/docs/Web/API/Node/childNodes).
 - `index` est l'index du noeud à chercher. L'index commence à zéro.
@@ -25,7 +27,9 @@ Renvoie un noeud depuis une [`NodeList`](/en-US/docs/Web/API/NodeList) par l'ind
 
 JavaScript propose également une syntaxe semblable à un tableau pour obtenir un élément d'une liste de nœuds par index :
 
-    nodeItem = nodeList[index]
+```js
+nodeItem = nodeList[index]
+```
 
 ## Exemple
 

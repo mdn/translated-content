@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
 <div>{{JSRef}}</div>
 
-<p>该 <strong><code>Int32Array</code></strong> 类型表示在平台顺序字节中一个双补码 32 位有符号的整型数组。如果需要控制字节顺序，请改用 {{jsxref("DataView")}}。此内容的初始化为 <code>0</code>。一旦创建，你可以使用对象的方法或者标准数组索引的语法 (即使用括号表示法)。</p>
+<p>该 <strong><code>Int32Array</code></strong> 类型表示在平台顺序字节中一个双补码 32 位有符号的整型数组。如果需要控制字节顺序，请改用 {{jsxref("DataView")}}。此内容的初始化为 <code>0</code>。一旦创建，你可以使用对象的方法或者标准数组索引的语法 (即使用括号表示法)。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -95,7 +95,7 @@ new Int32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.reduceRight", "Int32Array.prototype.reduceRight()")}}</dt>
  <dd>Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduceRight()")}}.</dd>
  <dt>{{jsxref("TypedArray.reverse", "Int32Array.prototype.reverse()")}}</dt>
- <dd>Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.</dd>
+ <dd>Reverses the order of the elements of an array — the first becomes the last, and the last becomes the first. See also {{jsxref("Array.prototype.reverse()")}}.</dd>
  <dt>{{jsxref("TypedArray.set", "Int32Array.prototype.set()")}}</dt>
  <dd>在类型化数组中存储多个值，从指定数组中读取输入值。</dd>
  <dt>{{jsxref("TypedArray.slice", "Int32Array.prototype.slice()")}}</dt>
@@ -141,32 +141,9 @@ var buffer = new ArrayBuffer(16);
 var z = new Int32Array(buffer, 0, 4);
 </pre>
 
-<h2 id="详细描述">详细描述</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>已被 ECMAScript 6 取代。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#table-49', 'TypedArray constructors')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>ECMA 标准中的初始定义，指定需要新建。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -185,7 +162,7 @@ var z = new Int32Array(buffer, 0, 4);
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays" title="en/JavaScript typed arrays">JavaScript typed arrays</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
  <li>{{jsxref("ArrayBuffer")}}</li>
  <li>{{jsxref("DataView")}}</li>
 </ul>

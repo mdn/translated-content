@@ -9,7 +9,9 @@ La propriété en lecture seule **`HTMLElement.isContentEditable`** renvoie un b
 
 ## Syntaxe
 
-    editable = element.isContentEditable
+```js
+editable = element.isContentEditable
+```
 
 ## Exemple
 

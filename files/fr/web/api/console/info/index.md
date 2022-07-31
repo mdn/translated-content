@@ -17,8 +17,10 @@ Affiche un message informatif dans la console du navigateur. Dans Firefox et Chr
 
 ## Syntaxe
 
-    console.info(obj1 [, obj2, ..., objN]);
-    console.info(msg [, subst1, ..., substN]);
+```js
+console.info(obj1 [, obj2, ..., objN]);
+console.info(msg [, subst1, ..., substN]);
+```
 
 ### Paramètres
 

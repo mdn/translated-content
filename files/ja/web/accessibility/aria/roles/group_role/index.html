@@ -1,0 +1,125 @@
+---
+title: group ロールの使用
+slug: Web/Accessibility/ARIA/Roles/group_role
+tags:
+  - ARIA
+  - ARIA Role
+  - Accessibility
+translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
+original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
+---
+<h3 id="Description" name="Description">説明</h3>
+
+<p class="p1">このテクニックは、<code><a href="http://www.w3.org/TR/wai-aria/#group">group</a></code> ロールを使用する方法を示し、ブラウザーと支援技術に与える影響について説明します。</p>
+
+<p class="p1"><code>group</code> ロールは、<code><a href="http://www.w3.org/TR/wai-aria/#region">region</a></code> とは対照的に、目次やページの要約に含まれないように意図された一連のユーザーインターフェイスオブジェクトを識別するために使用されます（スクリプトや支援技術によって動的に作成される構造のような）。 グループ（group）はページ上で主要な知覚可能なセクションと見なされるべきではありません。 このロールが要素に追加されると、ブラウザーは、アクセス可能なグループイベントを支援技術製品に送り、支援技術製品はそれをユーザーに通知することができます。</p>
+
+<p class="p1">グループは、階層内の兄弟の集合を形成するツリーウィジェット内の子供や、ディレクトリ内に同じコンテナを持つ項目の集合のような、関連する機能を持つ項目の論理的集合を形成するために使用されるべきです。 ただし、グループがリストのコンテキストで使用される場合、作者はその子を <code><a href="http://www.w3.org/TR/wai-aria/#listitem">listitem</a></code> 要素に制限する必要があります。 グループ要素はネストすることができます。</p>
+
+<p class="p1">支援技術によるグループの適切な取り扱いは、それが提供されるコンテキストによって決まります。</p>
+
+<p class="p1">作者がページの目次に含まれることを保証するためにセクションが重要であると考える場合は、そのセクションに <code><a href="http://www.w3.org/TR/wai-aria/#region">region</a></code> ロールまたは<a href="http://www.w3.org/TR/wai-aria/#landmark_roles">標準的なランドマークロール</a>を割り当てるべきです。</p>
+
+<h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
+
+<p class="p1"><code>group</code> ロールが要素に追加されるか、またはそのような要素が可視になると、ユーザーエージェントは以下を行うべきです。</p>
+
+<ul class="ul1">
+ <li class="li2">オペレーティングシステムのアクセシビリティ API で <code>group</code> ロールを持つものとして要素を公開します。</li>
+ <li class="li2">オペレーティングシステムのアクセシビリティ API をサポートしている場合は、アクセス可能なグループイベントを発生させます。</li>
+</ul>
+
+<p class="p1">支援技術製品は、そのようなイベントをリスンし、それに応じてユーザーに以下を通知するべきです。</p>
+
+<ul class="ul1">
+ <li class="li2">スクリーンリーダーは、フォーカスが最初にその中のコントロールに着くとグループをアナウンスし、もし <code><a href="http://www.w3.org/TR/wai-aria/#aria-describedby">aria-describedby</a></code> が設定されていれば、その説明が読み上げられます。 これに続いて、フォーカスされたコントロールをアナウンスすることができます。</li>
+ <li class="li2">スクリーン拡大鏡でグループが拡大されることがあります。</li>
+</ul>
+
+<div class="note"><strong>注</strong>: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
+
+<h3 id="Examples" name="Examples">例</h3>
+
+<h4 id="Example_1_Using_the_group_role_with_a_HTML_tree_view" name="Example_1_Using_the_group_role_with_a_HTML_tree_view">例 1: HTML ツリービューでの group ロールの使用</h4>
+
+<p class="p1">以下のスニペットは、HTML ソースコードに group ロールを直接追加する方法を示しています。</p>
+
+<pre class="brush: html">&lt;div id="tree1" role="tree" tabindex="-1"&gt;
+  &lt;div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true"&gt;
+    &lt;img role="presentation" tabindex="-1" src="images/treeExpanded.gif" /&gt;
+    &lt;span role="treeitem" tabindex="0"&gt;動物&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div id="animalGroup" role="group"&gt;
+    &lt;div id="birds" role="treeitem"&gt;
+      &lt;span tabindex="-1"&gt;鳥&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false"&gt;
+      &lt;img role="presentation" tabindex="-1" src="images/treeContracted.gif" /&gt;
+      &lt;span role="treeitem" tabindex="0"&gt;猫&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="catGroup" role="group"&gt;
+      &lt;div id="siamese" role="treeitem"&gt;
+        &lt;span tabindex="-1"&gt;シャム猫&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="tabby" role="treeitem"&gt;
+        &lt;span tabindex="-1"&gt;虎猫&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<h4 class="p1" id="Example_2_Using_the_group_role_with_a_HTML_drop-down_menu" name="Example_2_Using_the_group_role_with_a_HTML_drop-down_menu">例 2: HTML ドロップダウンメニューでの group ロールの使用</h4>
+
+<p class="p2">以下のスニペットは、HTML ソースコードに group ロールを直接追加する方法を示しています。</p>
+
+<pre class="brush: html">&lt;div role="menu"&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;受信トレイ&lt;/li&gt;
+    &lt;li role="menuitem"&gt;アーカイブ&lt;/li&gt;
+    &lt;li role="menuitem"&gt;ごみ箱&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;カスタムフォルダ 1&lt;/li&gt;
+    &lt;li role="menuitem"&gt;カスタムフォルダ 2&lt;/li&gt;
+    &lt;li role="menuitem"&gt;カスタムフォルダ 3&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;新規フォルダ&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+
+<h4 id="Working_Examples" name="Working_Examples">動作する例</h4>
+
+<ul>
+ <li>
+  <p class="p1">Unknown Title (http://test.cita.illinois.edu/aria/tree/tree2.php) <strong>[broken link]</strong></p>
+ </li>
+</ul>
+
+<h3 id="Notes" name="Notes">注</h3>
+
+<ul>
+ <li class="p1">グループの DOM サブツリーの外側にあるグループメンバーは、そのグループに参加するために明示的な関係を割り当てられている必要があります。</li>
+</ul>
+
+<h3 class="p1" id="ARIA_attributes_used" name="ARIA_attributes_used">使用された ARIA 属性</h3>
+
+<ul class="ul1">
+ <li class="li2"><a class="external" href="http://www.w3.org/TR/wai-aria/#group">group</a></li>
+</ul>
+
+<h3 class="p1" id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h3>
+
+<ul class="ul1">
+ <li class="li2"><a class="external" href="http://www.w3.org/TR/wai-aria/#region">region</a> ロール</li>
+</ul>
+
+<h3 class="p1" id="Compatibility" name="Compatibility">互換性</h3>
+
+<p class="p2">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
+
+<h3 class="p1" id="Additional_resources" name="Additional_resources">その他のリソース</h3>
+
+<ul class="ul1">
+ <li class="li2">ARIA Best Practices – Directories, Groups and Regions: <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading">http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading</a> （該当項目は削除されています。）</li>
+</ul>

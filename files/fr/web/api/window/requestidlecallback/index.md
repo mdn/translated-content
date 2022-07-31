@@ -9,7 +9,9 @@ La méthode **`window.requestIdleCallback()`** mémorise une fonction qui sera a
 
 ## Syntaxe
 
-    var idleCallbackId = window.requestIdleCallback(fonction[, options])
+```js
+var idleCallbackId = window.requestIdleCallback(fonction[, options])
+```
 
 ### Retour de l'appel
 

@@ -16,8 +16,10 @@ Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/f
 
 ## Syntaxe
 
-    void gl.texParameterf(GLenum cible, GLenum nomp, GLfloat param);
-    void gl.texParameteri(GLenum cible, GLenum nomp, GLint param);
+```js
+void gl.texParameterf(GLenum cible, GLenum nomp, GLfloat param);
+void gl.texParameteri(GLenum cible, GLenum nomp, GLint param);
+```
 
 ### Paramètres
 

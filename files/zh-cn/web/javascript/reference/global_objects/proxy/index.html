@@ -226,7 +226,7 @@ console.log(i2.getAttribute('aria-selected')); // 'true'
 
 <h3 id="值修正及附加属性">值修正及附加属性</h3>
 
-<p>以下<code>products</code>代理会计算传值并根据需要转换为数组。这个代理对象同时支持一个叫做 <code>latestBrowser</code>的附加属性，这个属性可以同时作为 getter 和 setter。</p>
+<p>以下<code>products</code>代理会计算传值并根据需要转换为数组。这个代理对象同时支持一个叫做 <code>latestBrowser</code>的附加属性，这个属性可以同时作为 getter 和 setter。</p>
 
 <pre class="brush: js">let products = new Proxy({
   browsers: ['Internet Explorer', 'Netscape']
@@ -384,50 +384,22 @@ alert(docCookies.my_cookie1);</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-objects', 'Proxy')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2016', '#sec-proxy-objects', 'Proxy')}}</td>
-   <td>{{Spec2('ES2016')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2017', '#sec-proxy-objects', 'Proxy')}}</td>
-   <td>{{Spec2('ES2017')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.Proxy", 2)}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参考">参考</h2>
 
 <ul>
- <li><a class="external" href="http://jsconf.eu/2010/speaker/be_proxy_objects.html">"Proxies are awesome" Brendan Eich presentation at JSConf</a> (<a class="external" href="http://www.slideshare.net/BrendanEich/metaprog-5303821">slides</a>)</li>
- <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">ECMAScript Harmony Proxy proposal page</a> and <a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">ECMAScript Harmony proxy semantics page</a></li>
- <li><a class="external" href="http://soft.vub.ac.be/~tvcutsem/proxies/">Tutorial on proxies</a></li>
+ <li><a href="http://jsconf.eu/2010/speaker/be_proxy_objects.html">"Proxies are awesome" Brendan Eich presentation at JSConf</a> (<a href="http://www.slideshare.net/BrendanEich/metaprog-5303821">slides</a>)</li>
+ <li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies">ECMAScript Harmony Proxy proposal page</a> and <a href="http://wiki.ecmascript.org/doku.php?id=harmony:proxies_semantics">ECMAScript Harmony proxy semantics page</a></li>
+ <li><a href="http://soft.vub.ac.be/~tvcutsem/proxies/">Tutorial on proxies</a></li>
  <li><a href="/zh-CN/docs/JavaScript/Old_Proxy_API">SpiderMonkey specific Old Proxy API</a></li>
  <li>{{jsxref("Object.watch()")}} is a non-standard feature but has been supported in Gecko for a long time.</li>
 </ul>
 
 <h2 id="版权声明">版权声明</h2>
 
-<p>一些内容（如文本、例子）是复制自或修改自<a class="external" href="http://wiki.ecmascript.org/doku.php">ECMAScript wiki</a>（版权声明 <a class="external" href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC 2.0 BY-NC-SA</a>）。</p>
+<p>一些内容（如文本、例子）是复制自或修改自<a href="http://wiki.ecmascript.org/doku.php">ECMAScript wiki</a>（版权声明 <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC 2.0 BY-NC-SA</a>）。</p>

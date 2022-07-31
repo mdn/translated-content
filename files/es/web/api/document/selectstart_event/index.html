@@ -1,0 +1,51 @@
+---
+title: GlobalEventHandlers.onselectstart
+slug: Web/API/Document/selectstart_event
+translation_of: Web/API/GlobalEventHandlers/onselectstart
+original_slug: Web/API/GlobalEventHandlers/onselectstart
+---
+<div>{{ApiRef('DOM')}}{{SeeCompatTable}}</div>
+
+<p>La propiedad <code><strong>GlobalEventHandlers.onselectstart</strong></code> representa el manejador de evento que es invocado cuando un evento {{event("selectstart")}} alcanza el objeto.</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox"><em>obj</em>.onselectstart = <em>function</em>;
+</pre>
+
+<ul>
+ <li><code>function</code> es el nombre de una función definida por el usuario, sin el sufijo () ni ningún parámetro, o una declaración de función anónima.</li>
+</ul>
+
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<pre class="brush: html">document.onselectstart = function() { console.log("¡Selección iniciada!"); };
+</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Observaciones</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Selection API','','GlobalEventHandlers.onselectstart')}}</td>
+   <td>{{Spec2('Selection API')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+
+{{Compat("api.GlobalEventHandlers.onselectstart")}}
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{event("selectstart")}}</li>
+ <li>{{domxref("Document.onselectionchange")}} and {{event('selectionchange')}}.</li>
+</ul>

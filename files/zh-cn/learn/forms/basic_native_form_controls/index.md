@@ -228,7 +228,7 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
 
 ![Default, focused and disabled button input types in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](buttons.png)
 
-从技术上讲，使用{{HTMLElement("button")}}元素或{{HTMLElement("input")}}元素定义的按钮几乎没有区别。唯一值得注意的区别是按钮本身的标签。在{{HTMLElement("input")}}元素中，标签只能是字符数据，而在{{HTMLElement("button")}}元素中，标签可以是HTML，因此可以相应地进行样式化。
+从技术上讲，使用{{HTMLElement("button")}}元素或{{HTMLElement("input")}}元素定义的按钮几乎没有区别。唯一值得注意的区别是按钮本身的标签。在{{HTMLElement("input")}}元素中，标签只能是字符数据，而在{{HTMLElement("button")}}元素中，标签可以是 HTML，因此可以相应地进行样式化。
 
 ### 图像按钮
 

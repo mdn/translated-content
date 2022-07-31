@@ -15,13 +15,15 @@ translation_of: Web/API/CacheStorage/delete
 
 La fonction **`delete()`** de l'interface {{domxref("CacheStorage")}} trouve l'objet {{domxref("Cache")}} correspondant à un `cacheName`, et si trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} qui renvoie `true`. Si aucun objet {{domxref("Cache")}} n'est trouvé, elle retourne `false`.
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
+Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/caches).
 
 ## Syntaxe
 
-    caches.delete(cacheName).then(function(true) {
-      // le cache est maintenant supprimé
-    });
+```js
+caches.delete(cacheName).then(function(true) {
+  // le cache est maintenant supprimé
+});
+```
 
 ### Paramètres
 
@@ -66,4 +68,4 @@ this.addEventListener('activate', function(event) {
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WindowOrWorkerGlobalScope.caches")}}
+- [`caches`](/fr/docs/Web/API/caches)

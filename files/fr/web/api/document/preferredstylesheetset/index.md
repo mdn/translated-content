@@ -16,7 +16,9 @@ Retourne la feuille de style préférée, telle que définie par l'auteur de la 
 
 ## Syntaxe
 
-    preferredStyleSheetSet = document.preferredStyleSheetSet
+```js
+preferredStyleSheetSet = document.preferredStyleSheetSet
+```
 
 Au retour, `preferredStyleSheetSet` indique la feuille de style préférée par l'auteur. Ceci est déterminé par l'ordre des déclarations des feuilles de style et par l'entête HTTP intitulé `Default-Style`.
 

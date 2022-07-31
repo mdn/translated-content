@@ -37,7 +37,7 @@ translation_of: Web/API/Clipboard
 *`Clipboard` 继承自 {{domxref("EventTarget")}} 接口，因此拥有它的方法。*
 
 - {{domxref("Clipboard.read()","read()")}}
-  - : 从剪贴板读取数据（比如图片），返回一个 {{jsxref("Promise")}} 对象。在检索到数据后，promise 将兑现一个 {{domxref("DataTransfer")}} 对象来提供剪切板数据。
+  - : 从剪贴板读取数据（比如图片），返回一个 {{jsxref("Promise")}} 对象。在检索到数据后，promise 将兑现一个 {{domxref("ClipboardItem")}} 对象的数组来提供剪切板数据。
 - {{domxref("Clipboard.readText()","readText()")}}
   - : 从操作系统读取文本；返回一个 `Promise`，在从剪切板中检索到文本后，promise 将兑现一个包含剪切板文本数据的 {{domxref("DOMString")}}。
 - {{domxref("Clipboard.write()","write()")}}
