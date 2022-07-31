@@ -35,7 +35,7 @@ translation_of: Web/api/TransformStream
 
 ### 将任意对象转换为 uint8 数组
 
-在下面的示例中，一个转换流将其接收的所有分块转换为 {{jsxref("Uint8Array")}}。。
+在下面的示例中，一个转换流将其接收的所有分块转换为 {{jsxref("Uint8Array")}}。
 
 ```js
 const transformContent = {

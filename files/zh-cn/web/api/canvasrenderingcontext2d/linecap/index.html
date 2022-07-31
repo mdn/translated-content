@@ -5,9 +5,9 @@ translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>CanvasRenderingContext2D.lineCap</code></strong> 是 Canvas 2D API 指定如何绘制每一条线段末端的属性。有 3 个可能的值，分别是：<code>butt</code>, <code>round</code> and <code>square</code>。默认值是 <code>butt</code>。</p>
+<p><strong><code>CanvasRenderingContext2D.lineCap</code></strong> 是 Canvas 2D API 指定如何绘制每一条线段末端的属性。有 3 个可能的值，分别是：<code>butt</code>, <code>round</code> and <code>square</code>。默认值是 <code>butt</code>。</p>
 
-<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
+<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineCap
 
 <h3 id="Using_the_lineCap_property">使用 <code>lineCap</code> 属性</h3>
 
-<p>这是一段简单的代码片段，使用 <code>lineCap</code> 属性绘制以圆形结尾的线段。</p>
+<p>这是一段简单的代码片段，使用 <code>lineCap</code> 属性绘制以圆形结尾的线段。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -57,8 +57,8 @@ ctx.stroke();
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.beginPath();
@@ -97,11 +97,11 @@ window.addEventListener("load", drawCanvas);
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
 
-<h3 id="A_lineCap_example"><code>lineCap</code> 例子</h3>
+<h3 id="A_lineCap_example"><code>lineCap</code> 例子</h3>
 
-<p>在这个例子中绘制了 3 条线段，每条线段都设置了不同的 <code style="font-style: normal;">lineCap</code> 属性值。通过 2 条导航线能够精确地看到 3 条已绘制线段之间的不同。每条线段的顶端和末端都能在导航线上准确的反映出来。</p>
+<p>在这个例子中绘制了 3 条线段，每条线段都设置了不同的 <code style="font-style: normal;">lineCap</code> 属性值。通过 2 条导航线能够精确地看到 3 条已绘制线段之间的不同。每条线段的顶端和末端都能在导航线上准确的反映出来。</p>
 
-<p>左侧的线段使用了默认值 <code>butt</code> ， 和导航线是完全平齐的。第二条线段使用了 <code>round</code> 选项，在线段末端增加了一个半径为线短宽度一半的半圆。右侧的线段使用了 <code>square</code> 选项，增加了一个宽度和线段相同，高度是线段厚度一半的矩形区域。</p>
+<p>左侧的线段使用了默认值 <code>butt</code> ， 和导航线是完全平齐的。第二条线段使用了 <code>round</code> 选项，在线段末端增加了一个半径为线短宽度一半的半圆。右侧的线段使用了 <code>square</code> 选项，增加了一个宽度和线段相同，高度是线段厚度一半的矩形区域。</p>
 
 <pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
 var lineCap = ['butt','round','square'];

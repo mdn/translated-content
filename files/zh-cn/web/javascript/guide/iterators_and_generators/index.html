@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 
 <h2 id="迭代器">迭代器</h2>
 
-<p>在 JavaScript 中，<strong>迭代器</strong>是一个对象，它定义一个序列，并在终止时可能返回一个返回值。 更具体地说，迭代器是通过使用 <code>next()</code> 方法实现 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">Iterator protocol</a> 的任何一个对象，该方法返回具有两个属性的对象： <code>value</code>，这是序列中的 next 值；和 <code>done</code> ，如果已经迭代到序列中的最后一个值，则它为 <code>true</code> 。如果 <code>value</code> 和 <code>done</code> 一起存在，则它是迭代器的返回值。</p>
+<p>在 JavaScript 中，<strong>迭代器</strong>是一个对象，它定义一个序列，并在终止时可能返回一个返回值。 更具体地说，迭代器是通过使用 <code>next()</code> 方法实现 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol">Iterator protocol</a> 的任何一个对象，该方法返回具有两个属性的对象： <code>value</code>，这是序列中的 next 值；和 <code>done</code> ，如果已经迭代到序列中的最后一个值，则它为 <code>true</code> 。如果 <code>value</code> 和 <code>done</code> 一起存在，则它是迭代器的返回值。</p>
 
 <p>一旦创建，迭代器对象可以通过重复调用 next（）显式地迭代。 迭代一个迭代器被称为消耗了这个迭代器，因为它通常只能执行一次。 在产生终止值之后，对 next（）的额外调用应该继续返回{done：true}。<br>
  <br>
@@ -133,7 +133,7 @@ for (let value of myIterable) {
 
 <h3 id="用于可迭代对象的语法">用于可迭代对象的语法</h3>
 
-<p>一些语句和表达式专用于可迭代对象，例如 {{jsxref("Statements/for...of","for-of")}} 循环，{{jsxref("Operators/Spread_operator","展开语法")}}，{{jsxref("Operators/yield*", "yield*")}} 和 {{jsxref("Operators/Destructuring_assignment", "解构赋值")}}。</p>
+<p>一些语句和表达式专用于可迭代对象，例如 {{jsxref("Statements/for...of","for-of")}} 循环，{{jsxref("Operators/Spread_operator","展开语法")}}，{{jsxref("Operators/yield*", "yield*")}} 和 {{jsxref("Operators/Destructuring_assignment", "解构赋值")}}。</p>
 
 <pre class="brush: js">for (let value of ['a', 'b', 'c']) {
     console.log(value);
@@ -193,7 +193,7 @@ console.log(sequence.next().value);     // 2</pre>
 
 <p>你可以通过调用其 {{jsxref("Global_Objects/Generator/throw","throw()")}} 方法强制生成器抛出异常，并传递应该抛出的异常值。这个异常将从当前挂起的生成器的上下文中抛出，就好像当前挂起的 <code>yield</code> 是一个 <code>throw value</code> 语句。</p>
 
-<p>如果在抛出的异常处理期间没有遇到 <code>yield</code>，则异常将通过调用 <code>throw()</code> 向上传播，对 <code>next()</code> 的后续调用将导致 <code>done</code> 属性为 <code>true</code>。</p>
+<p>如果在抛出的异常处理期间没有遇到 <code>yield</code>，则异常将通过调用 <code>throw()</code> 向上传播，对 <code>next()</code> 的后续调用将导致 <code>done</code> 属性为 <code>true</code>。</p>
 
 <p>生成器具有 {{jsxref("Global_Objects/Generator/return","return(value)")}} 方法，返回给定的值并完成生成器本身。</p>
 

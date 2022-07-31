@@ -301,7 +301,7 @@
 /de/docs/JavaScript/Guide	/de/docs/Web/JavaScript/Guide
 /de/docs/JavaScript/Guide/Ausdruecke_und_Operatoren	/de/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /de/docs/JavaScript/Guide/Closures	/de/docs/Web/JavaScript/Closures
-/de/docs/JavaScript/Guide/Feinheiten_des_Objektmodells	/de/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/de/docs/JavaScript/Guide/Feinheiten_des_Objektmodells	/de/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /de/docs/JavaScript/Guide/Funktionen	/de/docs/Web/JavaScript/Guide/Functions
 /de/docs/JavaScript/Guide/Mit_Objekten_arbeiten	/de/docs/Web/JavaScript/Guide/Working_with_Objects
 /de/docs/JavaScript/Guide/Regular_Expressions	/de/docs/Web/JavaScript/Guide/Regular_Expressions
@@ -314,7 +314,7 @@
 /de/docs/JavaScript/Guide/Über_Javascript	/de/docs/Web/JavaScript/Guide/Introduction
 /de/docs/JavaScript/Guide/Über_diese_Einführung	/de/docs/Web/JavaScript/Guide/Introduction
 /de/docs/JavaScript/Javascript_lernen_für_Anfänger	/de/docs/Web/JavaScript/Guide
-/de/docs/JavaScript/Language_Resources	/de/docs/Web/JavaScript/Language_Resources
+/de/docs/JavaScript/Language_Resources	/de/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /de/docs/JavaScript/Reference	/de/docs/Web/JavaScript/Reference
 /de/docs/JavaScript/Reference/Global_Objects	/de/docs/Web/JavaScript/Reference/Global_Objects
 /de/docs/JavaScript/Reference/Global_Objects/Array	/de/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -457,6 +457,9 @@
 /de/docs/Web/API/File/fileSize	/de/docs/Web/API/Blob/size
 /de/docs/Web/API/FileReader/onload	/de/docs/Web/API/FileReader/load_event
 /de/docs/Web/API/FullscreenOptions	/de/docs/orphaned/Web/API/FullscreenOptions
+/de/docs/Web/API/GlobalEventHandlers/onclick	/de/docs/Web/API/Element/click_event
+/de/docs/Web/API/GlobalEventHandlers/onload	/de/docs/conflicting/Web/API/Window/load_event
+/de/docs/Web/API/GlobalEventHandlers/onresize	/de/docs/Web/API/Window/resize_event
 /de/docs/Web/API/IndexedDB_API/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /de/docs/Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-handler	/de/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /de/docs/Web/API/NavigatorOnLine	/de/docs/orphaned/Web/API/NavigatorOnLine
@@ -656,14 +659,16 @@
 /de/docs/Web/HTTP/CORS/Errors/CORSFehlenderAllowHeaderAusPreflight	/de/docs/Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 /de/docs/Web/HTTP/CORS/Errors/CORSFehltQuelleErlauben	/de/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 /de/docs/Web/HTTP/Caching_FAQ	/de/docs/Web/HTTP/Caching
+/de/docs/Web/HTTP/Public_Key_Pinning	/de/docs/conflicting/Web/Security/Certificate_Transparency
 /de/docs/Web/JavaScript/Aufzählbarkeit_und_Zugehörigkeit_von_Eigenschaften	/de/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /de/docs/Web/JavaScript/Datenstrukturen	/de/docs/Web/JavaScript/Data_structures
 /de/docs/Web/JavaScript/Datenstruktures	/de/docs/Web/JavaScript/Data_structures
 /de/docs/Web/JavaScript/Eine_Wiedereinfuehrung_in_JavaScript	/de/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /de/docs/Web/JavaScript/Guide/Ausdruecke_und_Operatoren	/de/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /de/docs/Web/JavaScript/Guide/Closures	/de/docs/Web/JavaScript/Closures
+/de/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/de/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /de/docs/Web/JavaScript/Guide/Einführung	/de/docs/Web/JavaScript/Guide/Introduction
-/de/docs/Web/JavaScript/Guide/Feinheiten_des_Objektmodells	/de/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+/de/docs/Web/JavaScript/Guide/Feinheiten_des_Objektmodells	/de/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
 /de/docs/Web/JavaScript/Guide/Funktionen	/de/docs/Web/JavaScript/Guide/Functions
 /de/docs/Web/JavaScript/Guide/Grammatik_und_Typen	/de/docs/Web/JavaScript/Guide/Grammar_and_types
 /de/docs/Web/JavaScript/Guide/Kontrollfluss_und_Fehlerbehandlung	/de/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
@@ -681,11 +686,13 @@
 /de/docs/Web/JavaScript/Guide/Über_diese_Einführung	/de/docs/Web/JavaScript/Guide/Introduction
 /de/docs/Web/JavaScript/JavaScript_technologieuebersicht	/de/docs/Web/JavaScript/JavaScript_technologies_overview
 /de/docs/Web/JavaScript/Javascript_lernen_für_Anfänger	/de/docs/Web/JavaScript/Guide
+/de/docs/Web/JavaScript/Language_Resources	/de/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /de/docs/Web/JavaScript/Reference/Anweisungen	/de/docs/Web/JavaScript/Reference/Statements
 /de/docs/Web/JavaScript/Reference/Anweisungen/const	/de/docs/Web/JavaScript/Reference/Statements/const
 /de/docs/Web/JavaScript/Reference/Anweisungen/for...in	/de/docs/Web/JavaScript/Reference/Statements/for...in
 /de/docs/Web/JavaScript/Reference/Anweisungen/let	/de/docs/Web/JavaScript/Reference/Statements/let
 /de/docs/Web/JavaScript/Reference/Anweisungen/var	/de/docs/Web/JavaScript/Reference/Statements/var
+/de/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/de/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /de/docs/Web/JavaScript/Reference/Fehler	/de/docs/Web/JavaScript/Reference/Errors
 /de/docs/Web/JavaScript/Reference/Fehler/Already_has_pragma	/de/docs/Web/JavaScript/Reference/Errors/Already_has_pragma
 /de/docs/Web/JavaScript/Reference/Fehler/Array_sort_argument	/de/docs/Web/JavaScript/Reference/Errors/Array_sort_argument
@@ -695,7 +702,7 @@
 /de/docs/Web/JavaScript/Reference/Fehler/Bad_return_or_yield	/de/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield
 /de/docs/Web/JavaScript/Reference/Fehler/Called_on_incompatible_type	/de/docs/Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 /de/docs/Web/JavaScript/Reference/Fehler/Cant_access_lexical_declaration_before_init	/de/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-/de/docs/Web/JavaScript/Reference/Fehler/Cant_access_property	/de/docs/Web/JavaScript/Reference/Errors/Cant_access_property
+/de/docs/Web/JavaScript/Reference/Fehler/Cant_access_property	/de/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /de/docs/Web/JavaScript/Reference/Fehler/Cant_define_property_object_not_extensible	/de/docs/Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 /de/docs/Web/JavaScript/Reference/Fehler/Cant_delete	/de/docs/Web/JavaScript/Reference/Errors/Cant_delete
 /de/docs/Web/JavaScript/Reference/Fehler/Cant_redefine_property	/de/docs/Web/JavaScript/Reference/Errors/Cant_redefine_property
@@ -834,7 +841,7 @@
 /de/docs/Web/SVG/Tutorial/Einführung	/de/docs/Web/SVG/Tutorial/Introduction
 /de/docs/Web/SVG/Tutorial/Pfade	/de/docs/Web/SVG/Tutorial/Paths
 /de/docs/Web/SVG/Tutorial/SVG_Schriftarten	/de/docs/Web/SVG/Tutorial/SVG_fonts
-/de/docs/Web/Security/Public_Key_Pinning	/de/docs/Web/HTTP/Public_Key_Pinning
+/de/docs/Web/Security/Public_Key_Pinning	/de/docs/conflicting/Web/Security/Certificate_Transparency
 /de/docs/Web/WebAPI/verwenden_von_geolocation	/de/docs/Web/API/Geolocation_API
 /de/docs/Web/WebGL	/de/docs/Web/API/WebGL_API
 /de/docs/Web/WebGL/3D-Objekte_mit_WebGL_erstellen	/de/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL

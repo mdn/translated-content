@@ -47,7 +47,7 @@ translation_of: Web/API/Event/eventPhase
   <tr>
    <td><code>Event.BUBBLING_PHASE</code></td>
    <td>3</td>
-   <td>事件对象逆向向上传播回目标元素的祖先元素，从父亲元素开始，并且最终到达包含元素 {{domxref("Window")}}. 这就是冒泡，并且只有{{domxref("Event.bubbles")}} 值为 true 的时候才会发生。 为这个阶段注册的{{domxref("EventListener", "Event listeners", "", 1)}} 在这个过程中被触发。</td>
+   <td>事件对象逆向向上传播回目标元素的祖先元素，从父亲元素开始，并且最终到达包含元素 {{domxref("Window")}}. 这就是冒泡，并且只有{{domxref("Event.bubbles")}} 值为 true 的时候才会发生。 为这个阶段注册的{{domxref("EventListener", "Event listeners", "", 1)}} 在这个过程中被触发。</td>
   </tr>
  </tbody>
 </table>
@@ -60,22 +60,22 @@ translation_of: Web/API/Event/eventPhase
 
 <pre class="brush: html">&lt;h4&gt;Event Propagation Chain&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Click 'd1'&lt;/li&gt;
-  &lt;li&gt;Analyse event propagation chain&lt;/li&gt;
-  &lt;li&gt;Click next div and repeat the experience&lt;/li&gt;
-  &lt;li&gt;Change Capturing mode&lt;/li&gt;
-  &lt;li&gt;Repeat the experience&lt;/li&gt;
+  &lt;li&gt;Click 'd1'&lt;/li&gt;
+  &lt;li&gt;Analyse event propagation chain&lt;/li&gt;
+  &lt;li&gt;Click next div and repeat the experience&lt;/li&gt;
+  &lt;li&gt;Change Capturing mode&lt;/li&gt;
+  &lt;li&gt;Repeat the experience&lt;/li&gt;
 &lt;/ul&gt;
 &lt;input type="checkbox" id="chCapture" /&gt;
 &lt;label for="chCapture"&gt;Use Capturing&lt;/label&gt;
- &lt;div id="d1"&gt;d1
-  &lt;div id="d2"&gt;d2
-      &lt;div id="d3"&gt;d3
-          &lt;div id="d4"&gt;d4&lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
- &lt;/div&gt;
- &lt;div id="divInfo"&gt;&lt;/div&gt;
+ &lt;div id="d1"&gt;d1
+  &lt;div id="d2"&gt;d2
+      &lt;div id="d3"&gt;d3
+          &lt;div id="d4"&gt;d4&lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div id="divInfo"&gt;&lt;/div&gt;
 </pre>
 
 <h3 id="CSS_内容">CSS 内容</h3>

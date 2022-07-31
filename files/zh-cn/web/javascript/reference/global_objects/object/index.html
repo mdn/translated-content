@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
  <li>如果传进去的是引用类型的值，仍然会返回这个值，经他们复制的变量保有和源对象相同的引用地址</li>
 </ul>
 
-<p>当以非构造函数形式被调用时，<code>Object</code> 的行为等同于 <code>new Object()</code>。</p>
+<p>当以非构造函数形式被调用时，<code>Object</code> 的行为等同于 <code>new Object()</code>。</p>
 
 <p>可查看 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer">对象初始化/字面量语法</a>。</p>
 
@@ -137,7 +137,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 
 <h3 id="Example.3A_Using_Object_given_undefined_and_null_types">给定 <code>undefined</code> 和 <code>null</code> 类型使用 <code>Object</code></h3>
 
-<p>下面的例子将一个空的 <code>Object</code> 对象存到 <code>o</code> 中：</p>
+<p>下面的例子将一个空的 <code>Object</code> 对象存到 <code>o</code> 中：</p>
 
 <pre class="brush: js">var o = new Object();
 </pre>
@@ -148,9 +148,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 <pre class="brush: js">var o = new Object(null);
 </pre>
 
-<h3 id="使用_Object_生成布尔对象">使用 <code>Object</code> 生成布尔对象</h3>
+<h3 id="使用_Object_生成布尔对象">使用 <code>Object</code> 生成布尔对象</h3>
 
-<p>下面的例子将{{jsxref("Boolean")}} 对象存到 <code>o</code> 中：</p>
+<p>下面的例子将{{jsxref("Boolean")}} 对象存到 <code>o</code> 中：</p>
 
 <pre class="brush: js">// 等价于 o = new Boolean(true);
 var o = new Object(true);
@@ -261,45 +261,15 @@ Object.prototype.valueOf = function() {
   // Hi, I am Mike
   
   mime.greet();
-  
-
 </pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2', 'Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object-objects', 'Object')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Added Object.assign, Object.getOwnPropertySymbols, Object.setPrototypeOf, Object.is</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object-objects', 'Object')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Added Object.entries and Object.values.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.Object")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">相关链接</h2>
 

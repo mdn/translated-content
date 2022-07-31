@@ -85,38 +85,17 @@ translation_of: Web/API/Storage_API
 <p>To determine the estimated quota and usage values for a given origin, use the {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}} method, which returns a promise that, when resolved, receives a {{domxref("StorageEstimate")}} that contains these figures. For example:</p>
 
 <pre class="brush: js notranslate">navigator.storage.estimate().then(estimate =&gt; {
-  // estimate.quota 是估得的配额
+  // estimate.quota 是估得的配额
   // estimate.usage 是估得的使用量，单位为 byte 比特
 });</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Storage')}}</td>
-   <td>{{Spec2('Storage')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-<h3 id="StorageManager"><code>StorageManager</code></h3>
-
-<div>
-
-
-<p>{{Compat("api.StorageManager")}}</p>
-</div>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 

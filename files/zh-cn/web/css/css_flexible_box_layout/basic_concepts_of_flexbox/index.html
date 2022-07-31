@@ -9,15 +9,15 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <p>Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。它给 flexbox 的子元素之间提供了强大的空间分布和对齐能力。本文给出了 flexbox 的主要特性，更多的细节将在别的文档中探索。</p>
 
-<p>我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>，可以同时处理行和列上的布局。</p>
+<p>我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>，可以同时处理行和列上的布局。</p>
 
 <h2 id="flexbox_的两根轴线">flexbox 的两根轴线</h2>
 
-<p>当使用 flex 布局时，首先想到的是两根轴线 — 主轴和交叉轴。主轴由 {{cssxref("flex-direction")}} 定义，另一根轴垂直于它。我们使用 flexbox 的所有属性都跟这两根轴线有关，所以有必要在一开始首先理解它。</p>
+<p>当使用 flex 布局时，首先想到的是两根轴线 — 主轴和交叉轴。主轴由 {{cssxref("flex-direction")}} 定义，另一根轴垂直于它。我们使用 flexbox 的所有属性都跟这两根轴线有关，所以有必要在一开始首先理解它。</p>
 
 <h3 id="主轴">主轴</h3>
 
-<p>主轴由 <code>flex-direction</code> 定义，可以取 4 个值：</p>
+<p>主轴由 <code>flex-direction</code> 定义，可以取 4 个值：</p>
 
 <ul>
  <li><code>row</code></li>
@@ -26,21 +26,21 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
  <li><code>column-reverse</code></li>
 </ul>
 
-<p>如果你选择了 <code>row</code> 或者 <code>row-reverse</code>，你的主轴将沿着 <strong>inline </strong>方向延伸。</p>
+<p>如果你选择了 <code>row</code> 或者 <code>row-reverse</code>，你的主轴将沿着 <strong>inline </strong>方向延伸。</p>
 
 <p><img alt="If flex-direction is set to row the main axis runs along the row in the inline direction." src="basics1.png"></p>
 
-<p>选择 <code>column</code> 或者 <code>column-reverse</code> 时，你的主轴会沿着上下方向延伸 — 也就是 <strong>block 排列的方向。</strong></p>
+<p>选择 <code>column</code> 或者 <code>column-reverse</code> 时，你的主轴会沿着上下方向延伸 — 也就是 <strong>block 排列的方向。</strong></p>
 
 <p><img alt="If flex-direction is set to column the main axis runs in the block direction." src="basics2.png"></p>
 
 <h3 id="交叉轴">交叉轴</h3>
 
-<p>交叉轴垂直于主轴，所以如果你的<code>flex-direction</code> (主轴) 设成了 <code>row</code> 或者 <code>row-reverse</code> 的话，交叉轴的方向就是沿着列向下的。</p>
+<p>交叉轴垂直于主轴，所以如果你的<code>flex-direction</code> (主轴) 设成了 <code>row</code> 或者 <code>row-reverse</code> 的话，交叉轴的方向就是沿着列向下的。</p>
 
 <p><img alt="If flex-direction is set to row then the cross axis runs in the block direction." src="basics3.png"></p>
 
-<p>如果主轴方向设成了 <code>column</code> 或者 <code>column-reverse</code>，交叉轴就是水平方向。</p>
+<p>如果主轴方向设成了 <code>column</code> 或者 <code>column-reverse</code>，交叉轴就是水平方向。</p>
 
 <p><img alt="If flex-direction is set to column then the cross axis runs in the inline direction." src="basics4.png"></p>
 
@@ -52,7 +52,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <p>你可以在接下来的文章中学到更多 flexbox 和书写模式关系的详细说明。下面的描述是来帮助我们理解为什么不用上下左右来描述 flexbox 元素的方向。</p>
 
-<p>如果 <code>flex-direction</code> 是 <code>row</code> ，并且我是在书写英文，那么主轴的起始线是左边，终止线是右边。</p>
+<p>如果 <code>flex-direction</code> 是 <code>row</code> ，并且我是在书写英文，那么主轴的起始线是左边，终止线是右边。</p>
 
 <p><img alt="Working in English the start edge is on the left." src="basics5.png"></p>
 
@@ -66,28 +66,28 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <h2 id="Flex_容器">Flex 容器</h2>
 
-<p>文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 <code>flex</code> 或者 <code>inline-flex</code>。 完成这一步之后，容器中的直系子元素就会变为 <strong>flex 元素</strong>。所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：</p>
+<p>文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器，我们把一个容器的 {{cssxref("display")}} 属性值改为 <code>flex</code> 或者 <code>inline-flex</code>。 完成这一步之后，容器中的直系子元素就会变为 <strong>flex 元素</strong>。所有 CSS 属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：</p>
 
 <ul>
- <li>元素排列为一行 (<code>flex-direction</code> 属性的初始值是 <code>row</code>)。</li>
+ <li>元素排列为一行 (<code>flex-direction</code> 属性的初始值是 <code>row</code>)。</li>
  <li>元素从主轴的起始线开始。</li>
  <li>元素不会在主维度方向拉伸，但是可以缩小。</li>
  <li>元素被拉伸来填充交叉轴大小。</li>
- <li>{{cssxref("flex-basis")}} 属性为 <code>auto</code>。</li>
+ <li>{{cssxref("flex-basis")}} 属性为 <code>auto</code>。</li>
  <li>{{cssxref("flex-wrap")}} 属性为 <code>nowrap</code>。</li>
 </ul>
 
 <p>这会让你的元素呈线形排列，并且把自己的大小作为主轴上的大小。如果有太多元素超出容器，它们会溢出而不会换行。如果一些元素比其他元素高，那么元素会沿交叉轴被拉伸来填满它的大小。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/flexbox/basics/the-flex-container.html", '100%', 480)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/flexbox/basics/the-flex-container.html", '100%', 480)}} </p>
 
 <h3 id="更改flex方向_flex-direction">更改 flex 方向 flex-direction</h3>
 
-<p>在 flex 容器中添加 {{cssxref("flex-direction")}} 属性可以让我们更改 flex 元素的排列方向。设置 <code>flex-direction: row-reverse</code> 可以让元素沿着行的方向显示，但是起始线和终止线位置会交换。</p>
+<p>在 flex 容器中添加 {{cssxref("flex-direction")}} 属性可以让我们更改 flex 元素的排列方向。设置 <code>flex-direction: row-reverse</code> 可以让元素沿着行的方向显示，但是起始线和终止线位置会交换。</p>
 
-<p>把 flex 容器的属性 <code>flex-direction</code> 改为 <code>column</code> ，主轴和交叉轴交换，元素沿着列的方向排列显示。改为 <code>column-reverse</code> ，起始线和终止线交换。</p>
+<p>把 flex 容器的属性 <code>flex-direction</code> 改为 <code>column</code> ，主轴和交叉轴交换，元素沿着列的方向排列显示。改为 <code>column-reverse</code> ，起始线和终止线交换。</p>
 
-<p>下面的例子中，<code>flex-direction</code> 值为 <code>row-reverse</code>。尝试使用其他的值 <code>row</code> ，<code>column</code>，<code>column-reverse</code>，看看内容会发生什么改变。</p>
+<p>下面的例子中，<code>flex-direction</code> 值为 <code>row-reverse</code>。尝试使用其他的值 <code>row</code> ，<code>column</code>，<code>column-reverse</code>，看看内容会发生什么改变。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-direction.html", '100%', 350)}}</p>
 
@@ -99,17 +99,17 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}</p>
 
-<p>在指南中您可以了解更多关于 <code>flex-wrap</code>的信息 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering Wrapping of Flex Items</a>.</p>
+<p>在指南中您可以了解更多关于 <code>flex-wrap</code>的信息 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Mastering Wrapping of Flex Items</a>.</p>
 
 <h2 id="简写属性_flex-flow">简写属性 flex-flow</h2>
 
-<p>你可以将两个属性 <code>flex-direction</code> 和 <code>flex-wrap</code> 组合为简写属性 {{cssxref("flex-flow")}}。第一个指定的值为 <code>flex-direction</code> ，第二个指定的值为 <code>flex-wrap</code>.</p>
+<p>你可以将两个属性 <code>flex-direction</code> 和 <code>flex-wrap</code> 组合为简写属性 {{cssxref("flex-flow")}}。第一个指定的值为 <code>flex-direction</code> ，第二个指定的值为 <code>flex-wrap</code>.</p>
 
-<p>在下面的例子中，尝试将第一个值修改为 <code>flex-direction</code> 的允许取值之一，即 <code>row</code>, <code>row-reverse</code>, <code>column</code> 或 <code>column-reverse</code>, 并尝试将第二个指定值修改为 <code>wrap</code> 或 <code>nowrap</code>。</p>
+<p>在下面的例子中，尝试将第一个值修改为 <code>flex-direction</code> 的允许取值之一，即 <code>row</code>, <code>row-reverse</code>, <code>column</code> 或 <code>column-reverse</code>, 并尝试将第二个指定值修改为 <code>wrap</code> 或 <code>nowrap</code>。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-flow.html", '100%', 400)}}</p>
 
-<h2 id="flex_元素上的属性"> flex 元素上的属性</h2>
+<h2 id="flex_元素上的属性"> flex 元素上的属性</h2>
 
 <p>为了更好地控制 flex 元素，有三个属性可以作用于它们：</p>
 
@@ -121,27 +121,27 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <p>在这里，我们只会大概介绍一下它们的用法，更详细的细节请参阅其它的文章。</p>
 
-<p>在考虑这几个属性的作用之前，需要先了解一下 <strong>可用空间</strong> available space 这个概念。这几个 flex 属性的作用其实就是改变了 flex 容器中的可用空间的行为。同时，可用空间对于 flex 元素的对齐行为也是很重要的。</p>
+<p>在考虑这几个属性的作用之前，需要先了解一下 <strong>可用空间</strong> available space 这个概念。这几个 flex 属性的作用其实就是改变了 flex 容器中的可用空间的行为。同时，可用空间对于 flex 元素的对齐行为也是很重要的。</p>
 
 <p>假设在 1 个 500px 的容器中，我们有 3 个 100px 宽的元素，那么这 3 个元素需要占 300px 的宽，剩下 200px 的可用空间。在默认情况下，flexbox 的行为会把这 200px 的空间留在最后一个元素的后面。</p>
 
 <p><img alt="This flex container has available space after laying out the items." src="basics7.png"></p>
 
-<p>如果期望这些元素能自动地扩展去填充满剩下的空间，那么我们需要去控制可用空间在这几个元素间如何分配，这就是元素上的那些 <code>flex</code> 属性要做的事。 </p>
+<p>如果期望这些元素能自动地扩展去填充满剩下的空间，那么我们需要去控制可用空间在这几个元素间如何分配，这就是元素上的那些 <code>flex</code> 属性要做的事。 </p>
 
-<h3 id="Flex_元素属性：flex-basis">Flex 元素属性：<code>flex-basis</code> </h3>
+<h3 id="Flex_元素属性：flex-basis">Flex 元素属性：<code>flex-basis</code> </h3>
 
-<p> <code>flex-basis</code> 定义了该元素的<strong>空间大小（</strong>the size of that item in terms of the space<strong>）</strong>，flex 容器里除了元素所占的空间以外的富余空间就是<strong>可用空间</strong> available space。 该属性的默认值是 <code>auto</code> 。此时，浏览器会检测这个元素是否具有确定的尺寸。 在上面的例子中，所有元素都设定了宽度（width）为 100px，所以 <code>flex-basis</code> 的值为 100px。</p>
+<p> <code>flex-basis</code> 定义了该元素的<strong>空间大小（</strong>the size of that item in terms of the space<strong>）</strong>，flex 容器里除了元素所占的空间以外的富余空间就是<strong>可用空间</strong> available space。 该属性的默认值是 <code>auto</code> 。此时，浏览器会检测这个元素是否具有确定的尺寸。 在上面的例子中，所有元素都设定了宽度（width）为 100px，所以 <code>flex-basis</code> 的值为 100px。</p>
 
-<p>如果没有给元素设定尺寸，<code>flex-basis</code> 的值采用元素内容的尺寸。这就解释了：我们给只要给 Flex 元素的父元素声明 <code>display: flex</code> ，所有子元素就会排成一行，且自动分配小大以充分展示元素的内容。</p>
+<p>如果没有给元素设定尺寸，<code>flex-basis</code> 的值采用元素内容的尺寸。这就解释了：我们给只要给 Flex 元素的父元素声明 <code>display: flex</code> ，所有子元素就会排成一行，且自动分配小大以充分展示元素的内容。</p>
 
 <h3 id="Flex_元素属性：flex-grow">Flex 元素属性：<code>flex-grow</code></h3>
 
-<p><code>flex-grow</code> 若被赋值为一个正整数， flex 元素会以 <code>flex-basis</code> 为基础，沿主轴方向增长尺寸。这会使该元素延展，并占据此方向轴上的可用空间（available space）。如果有其他元素也被允许延展，那么他们会各自占据可用空间的一部分。</p>
+<p><code>flex-grow</code> 若被赋值为一个正整数， flex 元素会以 <code>flex-basis</code> 为基础，沿主轴方向增长尺寸。这会使该元素延展，并占据此方向轴上的可用空间（available space）。如果有其他元素也被允许延展，那么他们会各自占据可用空间的一部分。</p>
 
-<p>如果我们给上例中的所有元素设定 <code>flex-grow</code> 值为 1，容器中的可用空间会被这些元素平分。它们会延展以填满容器主轴方向上的空间。</p>
+<p>如果我们给上例中的所有元素设定 <code>flex-grow</code> 值为 1，容器中的可用空间会被这些元素平分。它们会延展以填满容器主轴方向上的空间。</p>
 
-<p>flex-grow 属性可以按比例分配空间。如果第一个元素 <code>flex-grow</code> 值为 2，其他元素值为 1，则第一个元素将占有 2/4（上例中，即为 200px 中的 100px）, 另外两个元素各占有1/4（各50px）。</p>
+<p>flex-grow 属性可以按比例分配空间。如果第一个元素 <code>flex-grow</code> 值为 2，其他元素值为 1，则第一个元素将占有 2/4（上例中，即为 200px 中的 100px）, 另外两个元素各占有1/4（各50px）。</p>
 
 <h3 id="Flex_元素属性：_flex-shrink">Flex 元素属性： <code>flex-shrink</code></h3>
 
@@ -155,9 +155,9 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <h3 id="Flex属性的简写">Flex 属性的简写</h3>
 
-<p>你可能很少看到 <code>flex-grow</code>，<code>flex-shrink</code>，和 <code>flex-basis</code> 属性单独使用，而是混合着写在 {{cssxref("flex")}} 简写形式中。 <code>Flex</code> 简写形式允许你把三个数值按这个顺序书写 — <code>flex-grow</code>，<code>flex-shrink</code>，<code>flex-basis</code>。</p>
+<p>你可能很少看到 <code>flex-grow</code>，<code>flex-shrink</code>，和 <code>flex-basis</code> 属性单独使用，而是混合着写在 {{cssxref("flex")}} 简写形式中。 <code>Flex</code> 简写形式允许你把三个数值按这个顺序书写 — <code>flex-grow</code>，<code>flex-shrink</code>，<code>flex-basis</code>。</p>
 
-<p>你可以在下面的实例中尝试把 flex 简写形式中的数值更改为不同数值，但要记得第一个数值是 <code>flex-grow</code>。赋值为正数的话是让元素增加所占空间。第二个数值是<code>flex-shrink</code> — 正数可以让它缩小所占空间，但是只有在 flex 元素总和超出主轴才会生效。最后一个数值是 <code>flex-basis</code>；flex 元素是在这个基准值的基础上缩放的。</p>
+<p>你可以在下面的实例中尝试把 flex 简写形式中的数值更改为不同数值，但要记得第一个数值是 <code>flex-grow</code>。赋值为正数的话是让元素增加所占空间。第二个数值是<code>flex-shrink</code> — 正数可以让它缩小所占空间，但是只有在 flex 元素总和超出主轴才会生效。最后一个数值是 <code>flex-basis</code>；flex 元素是在这个基准值的基础上缩放的。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-properties.html", '100%', 510)}}</p>
 
@@ -170,13 +170,13 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
  <li><code>flex: &lt;positive-number&gt;</code></li>
 </ul>
 
-<p><code>flex: initial</code> 是把 flex 元素重置为 Flexbox 的初始值，它相当于 <code>flex: 0 1 auto</code>。在这里 <code>flex-grow</code> 的值为 0，所以 flex 元素不会超过它们 <code>flex-basis</code> 的尺寸。<code>flex-shrink</code> 的值为 1, 所以可以缩小 flex 元素来防止它们溢出。<code>flex-basis</code> 的值为 <code>auto</code>. Flex 元素尺寸可以是在主维度上设置的，也可以是根据内容自动得到的。</p>
+<p><code>flex: initial</code> 是把 flex 元素重置为 Flexbox 的初始值，它相当于 <code>flex: 0 1 auto</code>。在这里 <code>flex-grow</code> 的值为 0，所以 flex 元素不会超过它们 <code>flex-basis</code> 的尺寸。<code>flex-shrink</code> 的值为 1, 所以可以缩小 flex 元素来防止它们溢出。<code>flex-basis</code> 的值为 <code>auto</code>. Flex 元素尺寸可以是在主维度上设置的，也可以是根据内容自动得到的。</p>
 
-<p><code>flex: auto</code> 等同于 <code>flex: 1 1 auto</code>；和上面的 <code>flex:initial</code> 基本相同，但是这种情况下，flex 元素在需要的时候既可以拉伸也可以收缩。</p>
+<p><code>flex: auto</code> 等同于 <code>flex: 1 1 auto</code>；和上面的 <code>flex:initial</code> 基本相同，但是这种情况下，flex 元素在需要的时候既可以拉伸也可以收缩。</p>
 
-<p><code>flex: none</code> 可以把 flex 元素设置为不可伸缩。它和设置为 <code>flex: 0 0 auto</code> 是一样的。元素既不能拉伸或者收缩，但是元素会按具有 <code>flex-basis: auto</code> 属性的 flexbox 进行布局。</p>
+<p><code>flex: none</code> 可以把 flex 元素设置为不可伸缩。它和设置为 <code>flex: 0 0 auto</code> 是一样的。元素既不能拉伸或者收缩，但是元素会按具有 <code>flex-basis: auto</code> 属性的 flexbox 进行布局。</p>
 
-<p>你在教程中常看到的 <code>flex: 1</code> 或者 <code>flex: 2</code> 等等。它相当于<code>flex: 1 1 0</code>。元素可以在<code>flex-basis</code>为 0 的基础上伸缩。</p>
+<p>你在教程中常看到的 <code>flex: 1</code> 或者 <code>flex: 2</code> 等等。它相当于<code>flex: 1 1 0</code>。元素可以在<code>flex-basis</code>为 0 的基础上伸缩。</p>
 
 <p>尝试在下面的实例中应用这些简写值。</p>
 
@@ -192,7 +192,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <p>这个属性的初始值为<code>stretch</code>，这就是为什么 flex 元素会默认被拉伸到最高元素的高度。实际上，它们被拉伸来填满 flex 容器 —— 最高的元素定义了容器的高度。</p>
 
-<p>你也可以设置<code>align-items</code>的值为<code>flex-start</code>，使 flex 元素按 flex 容器的顶部对齐，<code>flex-end</code> 使它们按 flex 容器的下部对齐，或者<code>center</code>使它们居中对齐。在实例中尝试——我给出了 flex 容器的高度，以便你可以看到元素在容器中移动。看看如果更改 align-items 的值为下列值会发生什么：</p>
+<p>你也可以设置<code>align-items</code>的值为<code>flex-start</code>，使 flex 元素按 flex 容器的顶部对齐，<code>flex-end</code> 使它们按 flex 容器的下部对齐，或者<code>center</code>使它们居中对齐。在实例中尝试——我给出了 flex 容器的高度，以便你可以看到元素在容器中移动。看看如果更改 align-items 的值为下列值会发生什么：</p>
 
 <ul>
  <li><code>stretch</code></li>
@@ -205,7 +205,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <h3 id="justify-content"><code>justify-content</code></h3>
 
-<p>{{cssxref("justify-content")}}属性用来使元素在主轴方向上对齐，主轴方向是通过 <code>flex-direction</code> 设置的方向。初始值是<code>flex-start</code>，元素从容器的起始线排列。但是你也可以把值设置为<code>flex-end</code>，从终止线开始排列，或者<code>center</code>，在中间排列。</p>
+<p>{{cssxref("justify-content")}}属性用来使元素在主轴方向上对齐，主轴方向是通过 <code>flex-direction</code> 设置的方向。初始值是<code>flex-start</code>，元素从容器的起始线排列。但是你也可以把值设置为<code>flex-end</code>，从终止线开始排列，或者<code>center</code>，在中间排列。</p>
 
 <p>你也可以把值设置为<code>space-between</code>，把元素排列好之后的剩余空间拿出来，平均分配到元素之间，所以元素之间间隔相等。或者使用<code>space-around</code>，使每个元素的左右空间相等。</p>
 

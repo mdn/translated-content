@@ -18,12 +18,12 @@ translation_of: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 <p>要在客户端改正这个问题，只需要确保发出 CORS 请求时将 credential 设置为 false。</p>
 
 <ul>
- <li>如果使用 {{domxref("XMLHttpRequest")}} 发出请求，确保未将 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} 设置为 <code>true。</code></li>
- <li>如果使用 <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, 确保 {{domxref("EventSource.withCredentials")}} 的值为 <code>false</code> (false 为默认值)。</li>
- <li>如果使用 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>，确保 {{domxref("Request.credentials")}} 的值为 <code>"omit"</code>.</li>
+ <li>如果使用 {{domxref("XMLHttpRequest")}} 发出请求，确保未将 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} 设置为 <code>true。</code></li>
+ <li>如果使用 <a href="/en-US/docs/Web/API/Server-sent_events">Server-sent events</a>, 确保 {{domxref("EventSource.withCredentials")}} 的值为 <code>false</code> (false 为默认值)。</li>
+ <li>如果使用 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>，确保 {{domxref("Request.credentials")}} 的值为 <code>"omit"</code>.</li>
 </ul>
 
-<p>如果还不成功，则需要修改服务端，可能需要修改 <code>Access-Control-Allow-Origin</code> 的值，来为客户端所能够加载资源的源予以授权。</p>
+<p>如果还不成功，则需要修改服务端，可能需要修改 <code>Access-Control-Allow-Origin</code> 的值，来为客户端所能够加载资源的源予以授权。</p>
 
 <h2 id="另请参见">另请参见</h2>
 

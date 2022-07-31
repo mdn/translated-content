@@ -8,7 +8,7 @@ translation_of: Web/API/DataTransferItem/getAsFile
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-<p>如果<strong><code>DataTransferItem</code></strong>是一个文件，那 <strong><code>DataTransferItem.getAsFile()</code></strong>  方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 <code>null</code>.</p>
+<p>如果<strong><code>DataTransferItem</code></strong>是一个文件，那 <strong><code>DataTransferItem.getAsFile()</code></strong>  方法将返回拖拽项数据的 {{domxref("File")}} 对象。如果拖拽项的数据不是一个文件，则返回 <code>null</code>.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -23,12 +23,12 @@ translation_of: Web/API/DataTransferItem/getAsFile
 
 <dl>
  <dt>{{domxref("File")}}</dt>
- <dd>如果拖拽项的对象是一个文件，则返回 {{domxref("File")}} 对象; 否则返回 <code>null</code> .</dd>
+ <dd>如果拖拽项的对象是一个文件，则返回 {{domxref("File")}} 对象; 否则返回 <code>null</code> .</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
 
-<p>下面这个例子中使用 <code>getAsFile()</code> 。放在 {{event("drop")}} 事件处理里面。</p>
+<p>下面这个例子中使用 <code>getAsFile()</code> 。放在 {{event("drop")}} 事件处理里面。</p>
 
 <pre class="brush: js">function drop_handler(ev) {
  console.log("Drop");

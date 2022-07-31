@@ -15,30 +15,30 @@ translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 
 <h3 id="HTML_Content">HTML Content</h3>
 
-<pre class="brush: html">    &lt;div id="container"&gt;
-        &lt;div id="palette" class="block"&gt;
-            &lt;div id="color-palette"&gt;&lt;/div&gt;
-            &lt;div id="color-info"&gt;
-                &lt;div class="title"&gt; CSS Color &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+<pre class="brush: html">    &lt;div id="container"&gt;
+        &lt;div id="palette" class="block"&gt;
+            &lt;div id="color-palette"&gt;&lt;/div&gt;
+            &lt;div id="color-info"&gt;
+                &lt;div class="title"&gt; CSS Color &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
 
-        &lt;div id="picker" class="block"&gt;
-            &lt;div class="ui-color-picker" data-topic="picker" data-mode="HSL"&gt;&lt;/div&gt;
-            &lt;div id="picker-samples" sample-id="master"&gt;&lt;/div&gt;
-            &lt;div id="controls"&gt;
-                &lt;div id="delete"&gt;
-                    &lt;div id="trash-can"&gt;&lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div id="void-sample" class="icon"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;div id="picker" class="block"&gt;
+            &lt;div class="ui-color-picker" data-topic="picker" data-mode="HSL"&gt;&lt;/div&gt;
+            &lt;div id="picker-samples" sample-id="master"&gt;&lt;/div&gt;
+            &lt;div id="controls"&gt;
+                &lt;div id="delete"&gt;
+                    &lt;div id="trash-can"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div id="void-sample" class="icon"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
 
-        &lt;div id="canvas" data-tutorial="drop"&gt;
-            &lt;div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
-                data-max="20" data-sensivity="10"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        &lt;div id="canvas" data-tutorial="drop"&gt;
+            &lt;div id="zindex" class="ui-input-slider" data-topic="z-index" data-info="z-index"
+                data-max="20" data-sensivity="10"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 
 </pre>
 
@@ -3215,7 +3215,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 
 <p>{{CSSRef}}</p>
 
-<p>这个工具让创建、修改和测试自定义网页颜色变得简单。它还可以轻松实现多种 CSS 支持的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value">颜色格式</a>之间的转换，包括：HEXA、RGB（Red/Green/Blue）和 HSL（Hue/Saturation/Lightness）。其中 RGB（rgba）和 HSL（hsla）格式也支持控制阿尔法通道（alpha channel）</p>
+<p>这个工具让创建、修改和测试自定义网页颜色变得简单。它还可以轻松实现多种 CSS 支持的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value">颜色格式</a>之间的转换，包括：HEXA、RGB（Red/Green/Blue）和 HSL（Hue/Saturation/Lightness）。其中 RGB（rgba）和 HSL（hsla）格式也支持控制阿尔法通道（alpha channel）</p>
 
 <p>随着调整，每种颜色都呈现为三种标准 CSS 格式；此外，基于当前选择的颜色，会创建一个 HSL 和 HSV 调色板和阿尔法通道。滴管风格的色彩选择框能在 HSL 或 HSV 格式间切换。你也可以拖拽多种颜色至色彩选择框的底部使它们重叠，来测试它们的混合效果。调整它们的相对 Z 值，可以使它们前后移动。</p>
 
@@ -3224,7 +3224,7 @@ var ColorPickerTool = (function ColorPickerTool() {
 <p>{{ EmbedLiveSample('ColorPicker_Tool', '100%', '900') }}<br>
  除非另有说明，否则你所创建生成的颜色可以应用到 CSS 和 HTML 的任何一个地方。</p>
 
-<p> </p>
+<p> </p>
 
 <article class="approved">
 <div class="boxed translate-rendered text-content">
@@ -3242,4 +3242,4 @@ var ColorPickerTool = (function ColorPickerTool() {
 </div>
 </article>
 
-<p> </p>
+<p> </p>

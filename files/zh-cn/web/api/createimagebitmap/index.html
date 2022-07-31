@@ -18,7 +18,7 @@ createImageBitmap(<em>image, sx, sy, sw, sh</em>[, options]).then(function(respo
 
 <dl>
  <dt><code>image</code></dt>
- <dd>一个图像源，可以是一个 {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}}, {{domxref("ImageBitmap")}}, 或 {{domxref("OffscreenCanvas")}} 对象。</dd>
+ <dd>一个图像源，可以是一个 {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, {{HTMLElement("video")}}, {{HTMLElement("canvas")}}, {{domxref("HTMLImageElement")}}, {{domxref("SVGImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("HTMLCanvasElement")}}, {{domxref("Blob")}}, {{domxref("ImageData")}}, {{domxref("ImageBitmap")}}, 或 {{domxref("OffscreenCanvas")}} 对象。</dd>
  <dt><code>sx</code></dt>
  <dd>裁剪点 x 坐标。</dd>
  <dt><code>sy</code></dt>
@@ -30,12 +30,12 @@ createImageBitmap(<em>image, sx, sy, sw, sh</em>[, options]).then(function(respo
  <dt>options {{optional_inline}}</dt>
  <dd>为其设置选项的对象。可用的选项是：
  <ul>
-  <li><code>imageOrientation</code>: 指示图像是按原样呈现还是垂直翻转.  <code>none</code> (默认不翻转) 或 <code>flipY</code>.</li>
-  <li><code>premultiplyAlpha</code>: 指示位图颜色通道由 alpha 通道预乘。选择其一：<code>none</code>, <code>premultiply</code>, 或 <code>default</code> (默认).</li>
-  <li><code>colorSpaceConversion</code>: 指示图像是否使用色彩空间转换进行解码. <code>none</code> 或 <code>default</code> (默认). The value <code>default</code> indicates that implementation-specific behavior is used.</li>
+  <li><code>imageOrientation</code>: 指示图像是按原样呈现还是垂直翻转.  <code>none</code> (默认不翻转) 或 <code>flipY</code>.</li>
+  <li><code>premultiplyAlpha</code>: 指示位图颜色通道由 alpha 通道预乘。选择其一：<code>none</code>, <code>premultiply</code>, 或 <code>default</code> (默认).</li>
+  <li><code>colorSpaceConversion</code>: 指示图像是否使用色彩空间转换进行解码. <code>none</code> 或 <code>default</code> (默认). The value <code>default</code> indicates that implementation-specific behavior is used.</li>
   <li><code>resizeWidth</code>: 指示新宽度的长整数。</li>
   <li><code>resizeHeight</code>: 指示新高度的长整数。</li>
-  <li><code>resizeQuality</code>: 指定图像缩放算法。选择其一<code>pixelated</code>, <code>low</code> (默认), <code>medium</code>, 或 <code>high</code>.</li>
+  <li><code>resizeQuality</code>: 指定图像缩放算法。选择其一<code>pixelated</code>, <code>low</code> (默认), <code>medium</code>, 或 <code>high</code>.</li>
  </ul>
  </dd>
 </dl>
@@ -79,5 +79,5 @@ image.src = 'sprites.png';
 </ul>
 
 <p>
- <audio class="hidden"> </audio>
+ <audio class="hidden"> </audio>
 </p>

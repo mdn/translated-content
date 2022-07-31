@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLImageElement/srcset
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>{{domxref("HTMLImageElement")}} 的 <code><strong>srcset</strong></code> 的值是一个字符串，用来定义一个或多个图像候选地址，以 <code>,</code>分割，每个候选地址将在特定条件下得以使用。候选地址包含图片 URL 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 {{domxref("HTMLImageElement.src", "src")}}  的属性。</p>
+<p>{{domxref("HTMLImageElement")}} 的 <code><strong>srcset</strong></code> 的值是一个字符串，用来定义一个或多个图像候选地址，以 <code>,</code>分割，每个候选地址将在特定条件下得以使用。候选地址包含图片 URL 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 {{domxref("HTMLImageElement.src", "src")}}  的属性。</p>
 
 <p><code>srcset</code>属性和{{domxref("HTMLImageElement.sizes", "sizes")}} 属性是响应式网页设计中至关重要的组件，可以搭配使用来创建根据展示场景使用图像的页面。</p>
 
@@ -71,7 +71,7 @@ let <em>srcset</em> = <em>htmlImageElement</em>.srcset;
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<p>The following code is run within a handler for the {{domxref("Window", "window")}}'s {{domxref("Window.load_event", "load")}} event.  It uses the image's  {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display the URL selected by the browser from the <code>srcset</code>.</p>
+<p>The following code is run within a handler for the {{domxref("Window", "window")}}'s {{domxref("Window.load_event", "load")}} event.  It uses the image's  {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display the URL selected by the browser from the <code>srcset</code>.</p>
 <p>以下代码在 {{domxref("Window", "window")}} 的 {{domxref("Window.load_event", "load")}} 事件的处理程序中运行。它使用图像的 {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} 属性来获取并显示浏览器从 <code>srcset</code> 中选择的 URL。</p>
 <pre class="brush: js">let box = document.querySelector(".box");
 let image = box.querySelector("img");

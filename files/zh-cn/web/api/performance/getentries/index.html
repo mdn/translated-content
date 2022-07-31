@@ -7,7 +7,7 @@ translation_of: Web/API/Performance/getEntries
 
 <p><strong><code>getEntries()</code></strong> 对于给定的 filter，此方法返回 {{domxref("PerformanceEntry")}} 对象数组。数组成员（入口）可以在显式的时间点用 performance <em>marks 或</em><em>measures</em> 来创建 (例如调用{{domxref("Performance.mark","mark()")}} 方法) .</p>
 
-<p>此方法暴露给{{domxref("Window")}} 和 {{domxref("Worker")}}接口。</p>
+<p>此方法暴露给{{domxref("Window")}} 和 {{domxref("Worker")}}接口。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,9 +32,9 @@ translation_of: Web/API/Performance/getEntries
  <dd><code>PerformanceEntryFilterOptions</code> 是一个带有以下键值的字典：
 
  <ul>
-  <li><code>"name"</code>,  performance entry. 的名字</li>
+  <li><code>"name"</code>,  performance entry. 的名字</li>
   <li><code>"entryType"</code>, entry 类型。合法的 entry 类型可以从{{domxref("PerformanceEntry.entryType")}} 方法获取。</li>
-  <li><code>"initiatorType"</code>, 初始化资源的类型 (例如一个 HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义。</li>
+  <li><code>"initiatorType"</code>, 初始化资源的类型 (例如一个 HTML element). 其取值被 {{domxref("PerformanceResourceTiming.initiatorType")}} 接口所定义。</li>
  </ul>
  </dd>
 </dl>

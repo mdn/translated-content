@@ -14,7 +14,7 @@ translation_of: Web/API/Console
 
 <p><strong><code>Console</code></strong> 对象提供了浏览器控制台调试的接口（如：Firefox 的 <a href="/en-US/docs/Tools/Web_Console">Web Console</a>）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。</p>
 
-<p><code>Console</code> 对象可以从任何全局对象中访问到，如 浏览器作用域上的 {{domxref("Window")}}，以及通过属性控制台作为 workers 中的特定变体的 {{domxref("WorkerGlobalScope")}}。可以通过 {{domxref("Window.console")}} 引用，也可以简单的通过 <code>console</code> 引用。例：</p>
+<p><code>Console</code> 对象可以从任何全局对象中访问到，如 浏览器作用域上的 {{domxref("Window")}}，以及通过属性控制台作为 workers 中的特定变体的 {{domxref("WorkerGlobalScope")}}。可以通过 {{domxref("Window.console")}} 引用，也可以简单的通过 <code>console</code> 引用。例：</p>
 
 <pre class="brush: js notranslate">console.log("Failed to open the specified link")</pre>
 
@@ -23,14 +23,14 @@ translation_of: Web/API/Console
 <p>{{AvailableInWorkers}}</p>
 
 <div class="blockIndicator note">
-<p><strong>提示</strong>: 实际的 <code>console</code> 接口被定义为全小写的形式（比如不是这种形式 <code>Console</code> ），这是历史原因导致的。</p>
+<p><strong>提示</strong>: 实际的 <code>console</code> 接口被定义为全小写的形式（比如不是这种形式 <code>Console</code> ），这是历史原因导致的。</p>
 </div>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("Console.assert()")}}</dt>
- <dd>如果第一个参数为 <code>false</code> ，则将消息和堆栈跟踪记录到控制台。</dd>
+ <dd>如果第一个参数为 <code>false</code> ，则将消息和堆栈跟踪记录到控制台。</dd>
  <dt>{{domxref("Console.clear()")}}</dt>
  <dd>清空控制台，并输出 <code>Console was cleared</code>。</dd>
  <dt>{{domxref("Console.count()")}}</dt>
@@ -48,11 +48,11 @@ translation_of: Web/API/Console
  <dt>{{domxref("Console.exception()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd><code>error()</code> 方法的别称。</dd>
  <dt>{{domxref("Console.group()")}}</dt>
- <dd>创建一个新的内联 <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>, 后续所有打印内容将会以子层级的形式展示。调用 <code>groupEnd()</code>来闭合组。</dd>
+ <dd>创建一个新的内联 <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>, 后续所有打印内容将会以子层级的形式展示。调用 <code>groupEnd()</code>来闭合组。</dd>
  <dt>{{domxref("Console.groupCollapsed()")}}</dt>
  <dd>创建一个新的内联 <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>。使用方法和 <code>group()</code> 相同，不同的是，<code>groupCollapsed()</code> 方法打印出来的内容默认是折叠的。调用<code>groupEnd()</code>来闭合组。</dd>
  <dt>{{domxref("Console.groupEnd()")}}</dt>
- <dd>闭合当前内联 <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>。</dd>
+ <dd>闭合当前内联 <a href="/en-US/docs/Web/API/console#Using_groups_in_the_console">group</a>。</dd>
  <dt>{{domxref("Console.info()")}}</dt>
  <dd>打印资讯类说明信息，使用方法可以参考 <a href="/en-US/docs/Web/API/console#Using_string_substitutions">string substitution</a>。</dd>
  <dt>{{domxref("Console.log()")}}</dt>
@@ -66,11 +66,11 @@ translation_of: Web/API/Console
  <dt>{{domxref("Console.time()")}}</dt>
  <dd>启动一个以入参作为特定名称的<a href="/en-US/docs/Web/API/console#Timers">计时器</a>，在显示页面中可同时运行的计时器上限为 10,000.</dd>
  <dt>{{domxref("Console.timeEnd()")}}</dt>
- <dd>结束特定的 <a href="/en-US/docs/Web/API/console#Timers">计时器</a> 并以毫秒打印其从开始到结束所用的时间。</dd>
+ <dd>结束特定的 <a href="/en-US/docs/Web/API/console#Timers">计时器</a> 并以毫秒打印其从开始到结束所用的时间。</dd>
  <dt>{{domxref("Console.timeLog()")}}</dt>
- <dd>打印特定 <a href="/en-US/docs/Web/API/console#Timers">计时器</a> 所运行的时间。</dd>
+ <dd>打印特定 <a href="/en-US/docs/Web/API/console#Timers">计时器</a> 所运行的时间。</dd>
  <dt>{{domxref("Console.timeStamp()")}} {{Non-standard_inline}}</dt>
- <dd>添加一个标记到浏览器的 <a href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> 或 <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> 工具。</dd>
+ <dd>添加一个标记到浏览器的 <a href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> 或 <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> 工具。</dd>
  <dt>{{domxref("Console.trace()")}}</dt>
  <dd>输出一个 <a href="/en-US/docs/Web/API/console#Stack_traces">stack trace</a>。</dd>
  <dt>{{domxref("Console.warn()")}}</dt>
@@ -125,7 +125,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
   </tr>
   <tr>
    <td><code>%d</code> or <code>%i</code></td>
-   <td>打印整数。支持数字格式化。例如，<code>console.log("Foo %.2d", 1.1)</code> 会输出有先导 0 的两位有效数字: <code>Foo 01</code>。</td>
+   <td>打印整数。支持数字格式化。例如，<code>console.log("Foo %.2d", 1.1)</code> 会输出有先导 0 的两位有效数字: <code>Foo 01</code>。</td>
   </tr>
   <tr>
    <td><code>%s</code></td>
@@ -133,7 +133,7 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
   </tr>
   <tr>
    <td><code>%f</code></td>
-   <td>打印浮点数。支持格式化，比如 <code>console.log("Foo %.2f", 1.1)</code> 会输出两位小数: <code>Foo 1.10</code></td>
+   <td>打印浮点数。支持格式化，比如 <code>console.log("Foo %.2f", 1.1)</code> 会输出两位小数: <code>Foo 1.10</code></td>
   </tr>
  </tbody>
 </table>
@@ -166,11 +166,11 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
 
 
 
-<div>指令前的文本不会受到影响，但指令后的文本将会使用参数中声明的 CSS 样式。</div>
+<div>指令前的文本不会受到影响，但指令后的文本将会使用参数中声明的 CSS 样式。</div>
 
 <div><img src="css-styling.png">
 <p><br>
- <code>%c</code> 语法可用的属性如下 (至少在 Firefox 中是这样，别的浏览器会有诸多不同）：</p>
+ <code>%c</code> 语法可用的属性如下 (至少在 Firefox 中是这样，别的浏览器会有诸多不同）：</p>
 
 <ul>
  <li>{{cssxref("background")}} 与其全写版本。</li>
@@ -187,20 +187,20 @@ console.info("My first car was a", car, ". The object is:", someObject);</pre>
  <li>{{cssxref("margin")}}</li>
  <li>{{cssxref("outline")}} 与其全写版本。</li>
  <li>{{cssxref("padding")}}</li>
- <li>{{cssxref("text-transform")}} 这类 <code>text-*</code> 属性 </li>
+ <li>{{cssxref("text-transform")}} 这类 <code>text-*</code> 属性 </li>
  <li>{{cssxref("white-space")}}</li>
  <li>{{cssxref("word-spacing")}} 和 {{cssxref("word-break")}}</li>
  <li>{{cssxref("writing-mode")}}</li>
 </ul>
 
-<p><strong>注意</strong>: 控制台信息的默认行为与行内元素相似。为了应用 <code>padding</code>, <code>margin</code> 这类效果，你应当这样设置<code>display: inline-block</code>.。</p>
+<p><strong>注意</strong>: 控制台信息的默认行为与行内元素相似。为了应用 <code>padding</code>, <code>margin</code> 这类效果，你应当这样设置<code>display: inline-block</code>.。</p>
 </div>
 
 <h3 id="在_console_中使用编组">在 console 中使用编组</h3>
 
 <p>可以使用嵌套组来把视觉上相关的元素合并，以协助组织你的输出。使用<code>console.group()</code>创建新的嵌套块，或者用<code>console.groupCollapsed()</code> 创建默认折叠的块，这种块需要点击闭合按钮来展开才能读到。</p>
 
-<p>直接调用 <code>console.groupEnd()</code>.就可以退出当前组。比如下面的代码：</p>
+<p>直接调用 <code>console.groupEnd()</code>.就可以退出当前组。比如下面的代码：</p>
 
 <pre class="brush: js notranslate">console.log("This is the outer level");
 console.group();
@@ -220,7 +220,7 @@ console.debug("Back to the outer level");
 
 <h3 id="定时器">定时器</h3>
 
-<p>你可以使用定时器来计算一段特定操作的周期。使用 <code>console.time</code><code>()</code> 方法以创建一个计时器，其唯一的参数表示了计时器的名字。使用 <code>console.timeEnd</code><code>()</code> 方法以关闭计时器，并获取经过的毫秒数，其同样以计时器的名字作为参数。一个页面最多同时只能有 10,000 个计数器运行。</p>
+<p>你可以使用定时器来计算一段特定操作的周期。使用 <code>console.time</code><code>()</code> 方法以创建一个计时器，其唯一的参数表示了计时器的名字。使用 <code>console.timeEnd</code><code>()</code> 方法以关闭计时器，并获取经过的毫秒数，其同样以计时器的名字作为参数。一个页面最多同时只能有 10,000 个计数器运行。</p>
 
 <p>示例：:</p>
 
@@ -237,7 +237,7 @@ console.timeEnd("answer time");
 
 <p>注意无论在开始还是结束的时候都会打印计时器的名字。</p>
 
-<div class="note"><strong>注意：</strong> 如果使用计时器来记录网络时间请求的话下面的内容很重要。计时器将会报告传输过程的整个时间，而网络面板里显示的时间只计算了请求头部所需要的时间。如果启用了响应体日志记录，那么列出的响应头部和响应体组合的时间应该与在控制台输出中看到的时间相符。</div>
+<div class="note"><strong>注意：</strong> 如果使用计时器来记录网络时间请求的话下面的内容很重要。计时器将会报告传输过程的整个时间，而网络面板里显示的时间只计算了请求头部所需要的时间。如果启用了响应体日志记录，那么列出的响应头部和响应体组合的时间应该与在控制台输出中看到的时间相符。</div>
 
 <h3 id="堆栈跟踪">堆栈跟踪</h3>
 
@@ -268,15 +268,15 @@ foo();
 <h2 id="注意">注意</h2>
 
 <ul>
- <li>在 Firefox 浏览器中，如果页面中自己定义了 <code>console</code> 对象，那么它会覆盖掉浏览器内置的 <code>console</code>对象，在其它浏览器可能也是。</li>
+ <li>在 Firefox 浏览器中，如果页面中自己定义了 <code>console</code> 对象，那么它会覆盖掉浏览器内置的 <code>console</code>对象，在其它浏览器可能也是。</li>
 </ul>
 
 <h2 id="相关文档">相关文档</h2>
 
 <ul>
  <li><a href="/en-US/docs/Tools">Tools</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console">Web Console</a> - Firefox 浏览器控制台如何处理 console API 的调用</li>
- <li><a href="/en-US/docs/Tools/Remote_Debugging">Remote debugging</a> - 如何在调试移动设备时查看控制台输出。</li>
+ <li><a href="/en-US/docs/Tools/Web_Console">Web Console</a> - Firefox 浏览器控制台如何处理 console API 的调用</li>
+ <li><a href="/en-US/docs/Tools/Remote_Debugging">Remote debugging</a> - 如何在调试移动设备时查看控制台输出。</li>
 </ul>
 
 <h3 id="其他实现">其他实现</h3>
