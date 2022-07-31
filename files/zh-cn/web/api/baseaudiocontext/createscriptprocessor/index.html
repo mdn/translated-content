@@ -28,7 +28,7 @@ myScriptProcessor = audioCtx.createScriptProcessor(<code>bufferSize</code>, <cod
 </dl>
 
 <div class="warning">
-<p><strong>重要</strong>: Webkit (version 31) 要求调用这个方法的时候必须传入一个有效的 bufferSize .</p>
+<p><strong>重要</strong>: Webkit (version 31) 要求调用这个方法的时候必须传入一个有效的 bufferSize .</p>
 </div>
 
 <div class="note">
@@ -41,10 +41,10 @@ myScriptProcessor = audioCtx.createScriptProcessor(<code>bufferSize</code>, <cod
 
 <h2 id="示例">示例</h2>
 
-<p><code>下面的例子展示了一个ScriptProcessorNode的基本用法，数据源取自</code> {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放 (其实这个就是系统的扬声器)。 对于每一个声道和样本帧，在把结果当成输出样本之前，<code>scriptNode.onaudioprocess方法关联</code><code>audioProcessingEvent</code> ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。</p>
+<p><code>下面的例子展示了一个ScriptProcessorNode的基本用法，数据源取自</code> {{ domxref("AudioContext.decodeAudioData") }}, 给每一个音频样本加一点白噪声，然后通过{{domxref("AudioDestinationNode")}}播放 (其实这个就是系统的扬声器)。 对于每一个声道和样本帧，在把结果当成输出样本之前，<code>scriptNode.onaudioprocess方法关联</code><code>audioProcessingEvent</code> ，并用它来遍历每输入流的每一个声道，和每一个声道中的每一个样本，并添加一点白噪声。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 完整的示例参照 <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github (查看源码 <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
+<p><strong>注意</strong>: 完整的示例参照 <a href="https://mdn.github.io/webaudio-examples/script-processor-node/">script-processor-node</a> github (查看源码 <a href="https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html">source code</a>.)</p>
 </div>
 
 <pre class="brush: js">var myScript = document.querySelector('script');
@@ -62,43 +62,43 @@ console.log(scriptNode.bufferSize);
 // load in an audio track via XHR and decodeAudioData
 
 function getData() {
-  request = new XMLHttpRequest();
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
-  request.onload = function() {
-    var audioData = request.response;
+  request = new XMLHttpRequest();
+  request.open('GET', 'viper.ogg', true);
+  request.responseType = 'arraybuffer';
+  request.onload = function() {
+    var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-    myBuffer = buffer;
-    source.buffer = myBuffer;
-  },
-    function(e){"Error with decoding audio data" + e.err});
-  }
-  request.send();
+    audioCtx.decodeAudioData(audioData, function(buffer) {
+    myBuffer = buffer;
+    source.buffer = myBuffer;
+  },
+    function(e){"Error with decoding audio data" + e.err});
+  }
+  request.send();
 }
 
 // Give the node a function to process audio events
 scriptNode.onaudioprocess = function(audioProcessingEvent) {
   // The input buffer is the song we loaded earlier
-  var inputBuffer = audioProcessingEvent.inputBuffer;
+  var inputBuffer = audioProcessingEvent.inputBuffer;
 
-  // The output buffer contains the samples that will be modified and played
-  var outputBuffer = audioProcessingEvent.outputBuffer;
+  // The output buffer contains the samples that will be modified and played
+  var outputBuffer = audioProcessingEvent.outputBuffer;
 
-  // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel &lt; outputBuffer.numberOfChannels; channel++) {
-    var inputData = inputBuffer.getChannelData(channel);
-    var outputData = outputBuffer.getChannelData(channel);
+  // Loop through the output channels (in this case there is only one)
+  for (var channel = 0; channel &lt; outputBuffer.numberOfChannels; channel++) {
+    var inputData = inputBuffer.getChannelData(channel);
+    var outputData = outputBuffer.getChannelData(channel);
 
-    // Loop through the 4096 samples
-    for (var sample = 0; sample &lt; inputBuffer.length; sample++) {
-      // make output equal to the same as the input
-      outputData[sample] = inputData[sample];
+    // Loop through the 4096 samples
+    for (var sample = 0; sample &lt; inputBuffer.length; sample++) {
+      // make output equal to the same as the input
+      outputData[sample] = inputData[sample];
 
-      // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
-    }
-  }
+      // add noise to each output sample
+      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+    }
+  }
 }
 
 getData();
@@ -106,14 +106,14 @@ getData();
 // wire up play button
 playButton.onclick = function() {
   source.connect(scriptNode);
-  scriptNode.connect(audioCtx.destination);
-  source.start();
+  scriptNode.connect(audioCtx.destination);
+  source.start();
 }
 
 // When the buffer source stops playing, disconnect everything
 source.onended = function() {
   source.disconnect(scriptNode);
-  scriptNode.disconnect(audioCtx.destination);
+  scriptNode.disconnect(audioCtx.destination);
 }
 </pre>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/CacheStorage/has
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p>{{domxref("CacheStorage")}} 对象的 <strong><code>has()</code></strong>方法返回一个 {{jsxref("Promise")}} 对象，当 {{domxref("Cache")}} 对象有 <code>cacheName</code>  时被处理为  <code>true</code> 。</p>
+<p>{{domxref("CacheStorage")}} 对象的 <strong><code>has()</code></strong>方法返回一个 {{jsxref("Promise")}} 对象，当 {{domxref("Cache")}} 对象有 <code>cacheName</code>  时被处理为  <code>true</code> 。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -16,13 +16,13 @@ translation_of: Web/API/CacheStorage/has
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回一个 {{jsxref("Promise")}} 对象，缓存存在时 resolve 的布尔值为 <code>true</code> 否则为 <code>false</code> 。</p>
+<p>返回一个 {{jsxref("Promise")}} 对象，缓存存在时 resolve 的布尔值为 <code>true</code> 否则为 <code>false</code> 。</p>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt>cacheName</dt>
- <dd>一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{domxref("DOMString")}}.</dd>
+ <dd>一个表示你正在 {{domxref("CacheStorage")}} 中查找的 {{domxref("Cache")}} 对象 name 的 {{domxref("DOMString")}}.</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -31,14 +31,14 @@ translation_of: Web/API/CacheStorage/has
 
 <pre class="brush: js">caches.has('v1').then(function(hasCache) {
   if (!hasCache) {
-    someCacheSetupfunction();
+    someCacheSetupfunction();
   } else {
     caches.open('v1').then(function(cache) {
-      return cache.addAll(myAssets);
+      return cache.addAll(myAssets);
     });
   }
 }).catch(function() {
-  // 处理异常
+  // 处理异常
 });</pre>
 
 <h2 id="规范">规范</h2>

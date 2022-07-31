@@ -10,22 +10,22 @@ translation_of: Web/API/Background_Tasks_API
 ---
 <div>{{DefaultAPISidebar("Background Tasks")}}</div>
 
-<p><strong>幕后任务协作调度 API</strong> (也叫幕后任务 API 或者简单称为 <code>requestIdleCallback()</code> API) 提供了由用户代理决定，在空闲时间自动执行队列任务的能力。</p>
+<p><strong>幕后任务协作调度 API</strong> (也叫幕后任务 API 或者简单称为 <code>requestIdleCallback()</code> API) 提供了由用户代理决定，在空闲时间自动执行队列任务的能力。</p>
 
 <h2 id="概念和用法">概念和用法</h2>
 
-<p>浏览器的主线程以其事件循环队列为中心。此代码渲染 {{domxref("Document")}} 上待更新展示的内容，执行页面待运行的 JavaScript 脚本，接收来自输入设备的事件，以及分发事件给需要接收事件的元素。此外，事件循环队列处理与操作系统的交互、浏览器自身用户界面的更新等等。这是一个非常繁忙的代码块，您的主要 JavaScript 代码可能会和这些代码一起也在这个线程中执行。当然，大多数（不是所有）能够更改 DOM 的代码都在主线程中运行，因为用户界面更改通常只对主线程可用。</p>
+<p>浏览器的主线程以其事件循环队列为中心。此代码渲染 {{domxref("Document")}} 上待更新展示的内容，执行页面待运行的 JavaScript 脚本，接收来自输入设备的事件，以及分发事件给需要接收事件的元素。此外，事件循环队列处理与操作系统的交互、浏览器自身用户界面的更新等等。这是一个非常繁忙的代码块，您的主要 JavaScript 代码可能会和这些代码一起也在这个线程中执行。当然，大多数（不是所有）能够更改 DOM 的代码都在主线程中运行，因为用户界面更改通常只对主线程可用。</p>
 
-<p>因为事件处理和屏幕更新是用户关注性能最明显的两种方式。对于您的代码来说，防止在事件队列中出现卡顿是很重要的。在过去，除了编写尽可能高效的代码和将尽可能多的工作移交给 <a href="/en-US/docs/Web/API/Web_Workers_API">workers</a> 之外，没有其他可靠的方法可以做到这一点。 {{domxref("Window.requestIdleCallback()")}} 允许浏览器告诉您的代码可以安全使用多少时间而不会导致系统延迟，从而有助于确保浏览器的事件循环平稳运行。如果您保持在给定的范围内，您可以使用户体验更好。</p>
+<p>因为事件处理和屏幕更新是用户关注性能最明显的两种方式。对于您的代码来说，防止在事件队列中出现卡顿是很重要的。在过去，除了编写尽可能高效的代码和将尽可能多的工作移交给 <a href="/en-US/docs/Web/API/Web_Workers_API">workers</a> 之外，没有其他可靠的方法可以做到这一点。 {{domxref("Window.requestIdleCallback()")}} 允许浏览器告诉您的代码可以安全使用多少时间而不会导致系统延迟，从而有助于确保浏览器的事件循环平稳运行。如果您保持在给定的范围内，您可以使用户体验更好。</p>
 
 <h3 id="充分利用空闲回调">充分利用空闲回调</h3>
 
 <p>因为 idle callbacks 旨在为代码提供一种与事件循环协作的方式，以确保系统充分利用其潜能，不会过度分配任务，从而导致延迟或其他性能问题，因此您应该考虑如何使用它。</p>
 
 <ul>
- <li><strong>对非高优先级的任务使用空闲回调。</strong> 已经创建了多少回调，用户系统的繁忙程度，你的回调多久会执行一次（除非你指定了 <code>timeout</code>），这些都是未知的。不能保证每次事件循环（甚至每次屏幕更新）后都能执行空闲回调；如果事件循环用尽了所有可用时间，那你可就倒霉了（再说一遍，除非你用了 <code>timeout</code>）。 </li>
- <li><strong>空闲回调应尽可能不超支分配到的时间。</strong>尽管即使你超出了规定的时间上限，通常来说浏览器、代码、网页也能继续正常运行，这里的时间限制是用来保证系统能留有足够的时间去完成当前的事件循环然后进入下一个循环，而不会导致其他代码卡顿或动画效果延迟。目前，{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 有一个 50 ms 的上限时间，但实际上你能用的时间比这个少，因为在复杂的页面中事件循环可能已经花费了其中的一部分，浏览器的扩展插件也需要处理时间，等等。</li>
- <li><strong>避免在空闲回调中改变 DOM。 </strong>空闲回调执行的时候，当前帧已经结束绘制了，所有布局的更新和计算也已经完成。如果你做的改变影响了布局， 你可能会强制停止浏览器并重新计算，而从另一方面来看，这是不必要的。 如果你的回调需要改变 DOM，它应该使用{{domxref("Window.requestAnimationFrame()")}}来调度它。</li>
+ <li><strong>对非高优先级的任务使用空闲回调。</strong> 已经创建了多少回调，用户系统的繁忙程度，你的回调多久会执行一次（除非你指定了 <code>timeout</code>），这些都是未知的。不能保证每次事件循环（甚至每次屏幕更新）后都能执行空闲回调；如果事件循环用尽了所有可用时间，那你可就倒霉了（再说一遍，除非你用了 <code>timeout</code>）。 </li>
+ <li><strong>空闲回调应尽可能不超支分配到的时间。</strong>尽管即使你超出了规定的时间上限，通常来说浏览器、代码、网页也能继续正常运行，这里的时间限制是用来保证系统能留有足够的时间去完成当前的事件循环然后进入下一个循环，而不会导致其他代码卡顿或动画效果延迟。目前，{{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 有一个 50 ms 的上限时间，但实际上你能用的时间比这个少，因为在复杂的页面中事件循环可能已经花费了其中的一部分，浏览器的扩展插件也需要处理时间，等等。</li>
+ <li><strong>避免在空闲回调中改变 DOM。 </strong>空闲回调执行的时候，当前帧已经结束绘制了，所有布局的更新和计算也已经完成。如果你做的改变影响了布局， 你可能会强制停止浏览器并重新计算，而从另一方面来看，这是不必要的。 如果你的回调需要改变 DOM，它应该使用{{domxref("Window.requestAnimationFrame()")}}来调度它。</li>
  <li><strong>避免运行时间无法预测的任务。</strong> 你的空闲回调必须避免做任何占用时间不可预测的事情。比如说，应该避免做任何会影响页面布局的事情。你也必须避免 执行{{domxref("Promise")}} 的<code>resolve</code>和<code>reject</code>，因为这会在你的回调函数返回后立即引用 Promise 对象对<code>resolve</code>和<code>reject</code>的处理程序。</li>
  <li><strong>在你需要的时候要用 timeout，但记得只在需要的时候才用。</strong> 使用 timeout 可以保证你的代码按时执行，但是在剩余时间不足以强制执行你的代码的同时保证浏览器的性能表现的情况下，timeout 就会造成延迟或者动画不流畅。</li>
 </ul>
@@ -37,14 +37,14 @@ translation_of: Web/API/Background_Tasks_API
 <pre class="brush: js">window.requestIdleCallback = window.requestIdleCallback || function(handler) {
   let startTime = Date.now();
 
-  return setTimeout(function() {
+  return setTimeout(function() {
     handler({
       didTimeout: false,
-      timeRemaining: function() {
+      timeRemaining: function() {
         return Math.max(0, 50.0 - (Date.now() - startTime));
-      }
-    });
-  }, 1);
+      }
+    });
+  }, 1);
 }</pre>
 
 <p>如果 {{domxref("Window.requestIdleCallback", "window.requestIdleCallback")}} 是 undefined, 我们在这里把它创建出来。这个函数首先会记录我们调用具体实现的时间。我们将用它计算填充程序{{domxref("IdleDeadline.timeRemaining()", "timeRemaining()")}}返回的值。</p>
@@ -217,9 +217,9 @@ let logElem = document.getElementById("log");
 <p>接下来我们有了引用要交互 DOM 元素的变量。这些元素是：</p>
 
 <ul>
- <li><code>totalTaskCountElem</code>  {{HTMLElement("span")}} 用于插入我们在进度框显示状态中创建的任务总数。</li>
+ <li><code>totalTaskCountElem</code>  {{HTMLElement("span")}} 用于插入我们在进度框显示状态中创建的任务总数。</li>
  <li><code>currentTaskNumberElem</code> 是我们用来呈现到当前为止处理过的任务数的元素。</li>
- <li><code>progressBarElem</code>  {{HTMLElement("progress")}} ，我们用它来呈现到当前为止处理过任务的百分比。</li>
+ <li><code>progressBarElem</code>  {{HTMLElement("progress")}} ，我们用它来呈现到当前为止处理过任务的百分比。</li>
  <li><code>startButtonElem</code> 是开始按钮。</li>
  <li><code>logElem</code> 我们在 {{HTMLElement("div")}} 中显示记录过的文本信息。</li>
 </ul>

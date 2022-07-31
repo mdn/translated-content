@@ -22,10 +22,10 @@ original_slug: Web/JavaScript/Reference/Classes/Class_elements
 
 <p>静态公有字段在你想要创建一个只在每个类里面只存在一份，而不会存在于你创建的每个类的实例中的属性时可以用到。你可以用它存放缓存数据、固定结构数据或者其他你不想在所有实例都复制一份的数据。</p>
 
-<p>静态公有字段是使用关键字 <code>static</code> 声明的。我们在声明一个类的时候，使用<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>方法将静态公有字段添加到类的构造函数中。在类被声明之后，可以从类的构造函数访问静态公有字段。</p>
+<p>静态公有字段是使用关键字 <code>static</code> 声明的。我们在声明一个类的时候，使用<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>方法将静态公有字段添加到类的构造函数中。在类被声明之后，可以从类的构造函数访问静态公有字段。</p>
 
 <pre class="brush: js">class ClassWithStaticField {
-  static staticField = 'static field';
+  static staticField = 'static field';
 }
 
 console.log(ClassWithStaticField.staticField);
@@ -35,7 +35,7 @@ console.log(ClassWithStaticField.staticField);
 <p>没有设定初始化程序的字段将默认被初始化为<code>undefined</code>。</p>
 
 <pre class="brush: js">class ClassWithStaticField {
-  static staticField;
+  static staticField;
 }
 
 console.assert(ClassWithStaticField.hasOwnProperty('staticField'));
@@ -45,11 +45,11 @@ console.log(ClassWithStaticField.staticField);
 <p>静态公有字段不会在子类里重复初始化，但我们可以通过原型链访问它们。</p>
 
 <pre class="brush: js">class ClassWithStaticField {
-  static baseStaticField = 'base field';
+  static baseStaticField = 'base field';
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field';
+  static subStaticField = 'sub class field';
 }
 
 console.log(SubClassWithStaticField.subStaticField);
@@ -61,14 +61,14 @@ console.log(SubClassWithStaticField.baseStaticField);
 <p>当初始化字段时，<code>this</code>指向的是类的构造函数。你可以通过名字引用构造函数，并使用<code>super</code>获取到存在的超类构造函数。</p>
 
 <pre class="brush: js">class ClassWithStaticField {
-  static baseStaticField = 'base static field';
-  static anotherBaseStaticField = this.baseStaticField;
+  static baseStaticField = 'base static field';
+  static anotherBaseStaticField = this.baseStaticField;
 
-  static baseStaticMethod() { return 'base static method output'; }
+  static baseStaticMethod() { return 'base static method output'; }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod();
+  static subStaticField = super.baseStaticMethod();
 }
 
 console.log(ClassWithStaticField.anotherBaseStaticField);
@@ -95,7 +95,7 @@ console.log(instance.instanceField);
 <p>没有设定初始化程序的字段将默认被初始化为<code>undefined</code>。</p>
 
 <pre class="brush: js">class ClassWithInstanceField {
-  instanceField;
+  instanceField;
 }
 
 const instance = new ClassWithInstanceField();
@@ -108,7 +108,7 @@ console.log(instance.instanceField);
 <pre class="brush: js">const PREFIX = 'prefix';
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field';
+    [`${PREFIX}Field`] = 'prefixed field';
 }
 
 const instance = new ClassWithComputedFieldName();
@@ -118,13 +118,13 @@ console.log(instance.prefixField);
 <p>当初始化字段时，<code>this</code>指向的是类正在构造中的实例。和公共实例方法相同的是：你可以在子类中使用<code>super</code>来访问超类的原型。</p>
 
 <pre class="brush: js">class ClassWithInstanceField {
-  baseInstanceField = 'base field';
-  anotherBaseInstanceField = this.baseInstanceField;
-  baseInstanceMethod() { return 'base method output'; }
+  baseInstanceField = 'base field';
+  anotherBaseInstanceField = this.baseInstanceField;
+  baseInstanceMethod() { return 'base method output'; }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod();
+  subInstanceField = super.baseInstanceMethod();
 }
 
 const base = new ClassWithInstanceField();
@@ -173,16 +173,16 @@ console.log(instance.publicMethod());
 <p>在实例的方法中，<code>this</code>指向的是实例本身，你可以使用<code>super</code>访问到超类的原型，由此你可以调用超类的方法。</p>
 
 <pre class="brush: js">class BaseClass {
-  msg = 'hello world';
-  basePublicMethod() {
-    return this.msg;
-  }
+  msg = 'hello world';
+  basePublicMethod() {
+    return this.msg;
+  }
 }
 
 class SubClass extends BaseClass {
-  subPublicMethod() {
-    return super.basePublicMethod();
-  }
+  subPublicMethod() {
+    return super.basePublicMethod();
+  }
 }
 
 const instance = new SubClass();
@@ -193,13 +193,13 @@ console.log(instance.subPublicMethod());
 <p><code>getter</code>和<code>setter</code>是和类的属性绑定的特殊方法，分别会在其绑定的属性被取值、赋值时调用。使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get">get</a>和<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set">set</a>句法定义实例的公共<code>getter</code>和<code>setter</code>。</p>
 
 <pre class="brush: js">class ClassWithGetSet {
-  #msg = 'hello world';
-  get msg() {
-    return this.#msg;
-  }
-  set msg(x) {
-    this.#msg = `hello ${x}`;
-  }
+  #msg = 'hello world';
+  get msg() {
+    return this.#msg;
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`;
+  }
 }
 
 const instance = new ClassWithGetSet();
@@ -220,12 +220,12 @@ console.log(instance.msg);
 <p>静态变量只能被静态方法访问的限制依然存在。</p>
 
 <pre class="brush: js">class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+  static #PRIVATE_STATIC_FIELD;
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
-  }
+  static publicStaticMethod() {
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  }
 }
 
 assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);</pre>
@@ -235,12 +235,12 @@ assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);</pre>
 <p>静态私有字段有一个来源限制。只有定义静态私有字段的类可以访问该字段。这在使用<strong><code>this</code></strong>时，可能会导致不符合预期的行为。</p>
 
 <pre class="brush: js">class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+  static #PRIVATE_STATIC_FIELD;
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
-    return this.#PRIVATE_STATIC_FIELD;
-  }
+  static basePublicStaticMethod() {
+    this.#PRIVATE_STATIC_FIELD = 42;
+    return this.#PRIVATE_STATIC_FIELD;
+  }
 }
 
 class SubClass extends BaseClassWithPrivateStaticField { }
@@ -255,12 +255,12 @@ assertThrows(() =&gt; SubClass.basePublicStaticMethod(), TypeError);
 <p>封装是语言强制实施的。引用不在作用域内的 # names 是语法错误。</p>
 
 <pre class="brush: js">class ClassWithPrivateField {
-  #privateField;
+  #privateField;
 
-  constructor() {
-    this.#privateField = 42;
-    this.#randomField = 666; # Syntax error
-  }
+  constructor() {
+    this.#privateField = 42;
+    this.#randomField = 666; # Syntax error
+  }
 }
 
 const instance = new ClassWithPrivateField();
@@ -278,13 +278,13 @@ instance.#privateField === 42; // Syntax error
 <p>静态私有方法可以是生成器、异步或者异步生成器函数。</p>
 
 <pre class="brush: js">class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42;
-    }
+    static #privateStaticMethod() {
+        return 42;
+    }
 
-    static publicStaticMethod() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+    static publicStaticMethod() {
+        return ClassWithPrivateStaticMethod.#privateStaticMethod();
+    }
 }
 
 assert(ClassWithPrivateStaticMethod.publicStaticMethod() === 42);
@@ -295,13 +295,13 @@ assert(ClassWithPrivateStaticMethod.publicStaticMethod() === 42);
 <p>私有实例方法在类的实例中可用，它的访问方式的限制和私有实例字段相同。</p>
 
 <pre class="brush: js">class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world';
-  }
+  #privateMethod() {
+    return 'hello world';
+  }
 
-  getPrivateMessage() {
-      return #privateMethod();
-  }
+  getPrivateMessage() {
+      return #privateMethod();
+  }
 }
 
 const instance = new ClassWithPrivateMethod();
@@ -311,19 +311,19 @@ console.log(instance.getPrivateMessage());
 <p>私有实例方法可以是生成器、异步或者异步生成器函数。私有<code>getter</code>和<code>setter</code>也是可能的：</p>
 
 <pre class="brush: js">class ClassWithPrivateAccessor {
-  #message;
+  #message;
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`;
-  }
-  set #decoratedMessage(msg) {
-    this.#message = msg;
-  }
+  get #decoratedMessage() {
+    return `✨${this.#message}✨`;
+  }
+  set #decoratedMessage(msg) {
+    this.#message = msg;
+  }
 
-  constructor() {
-    this.#decoratedMessage = 'hello world';
-    console.log(this.#decoratedMessage);
-  }
+  constructor() {
+    this.#decoratedMessage = 'hello world';
+    console.log(this.#decoratedMessage);
+  }
 }
 
 new ClassWithPrivateAccessor();

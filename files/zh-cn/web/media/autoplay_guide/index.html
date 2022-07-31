@@ -8,7 +8,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 <p>Autoplay blocking is <em>not</em> applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be <strong>audible</strong>, and autoplay blocking applies to them. <strong>Inaudible</strong> media are not affected by autoplay blocking.</p>
 
-<h2 id="自动播放_和_自动播放暂停">自动播放 和 自动播放暂停</h2>
+<h2 id="自动播放_和_自动播放暂停">自动播放 和 自动播放暂停</h2>
 
 <p>The term <strong>autoplay</strong> refers to any feature that causes audio to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media as well as the user of JavaScript code to start playback outside the context of handling user input.</p>
 
@@ -43,7 +43,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 <p>否则，播放可能会被阻止。导致播放被阻塞的确切情况以及将网站列入白名单的具体方法因浏览器而异，但最好是遵循以上的原则。</p>
 
-<p>详情，请参阅 <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">Google Chrome</a> 和 <a href="https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/">WebKit</a> 的自动播放政策。</p>
+<p>详情，请参阅 <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">Google Chrome</a> 和 <a href="https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/">WebKit</a> 的自动播放政策。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意：</strong> 换句话说，如果在尚无任何用户交互的页面中通过编程方式启动播放，则通常会阻止任何包含音频在内的媒体的播放。</p>
@@ -55,7 +55,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 <h3 id="autoplay_属性">autoplay 属性</h3>
 
-<p>想让内容自动播放的最简单方法是将{{htmlattrxref("autoplay", "audio")}}属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 <code>true</code> ，当 <code>autoplay</code> 的属性为 <code>true</code> 时，媒体元素将在发生以下情况后尽快自动开始播放：</p>
+<p>想让内容自动播放的最简单方法是将{{htmlattrxref("autoplay", "audio")}}属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 <code>true</code> ，当 <code>autoplay</code> 的属性为 <code>true</code> 时，媒体元素将在发生以下情况后尽快自动开始播放：</p>
 
 <ul>
  <li>

@@ -4196,6 +4196,20 @@
       "composite"
     ]
   },
+  "Web/API/Element/contextmenu_event": {
+    "modified": "2019-03-23T22:08:19.174Z",
+    "contributors": [
+      "project42da"
+    ]
+  },
+  "Web/API/Element/dblclick_event": {
+    "modified": "2020-10-15T22:05:47.608Z",
+    "contributors": [
+      "baleineindigo",
+      "alattalatta",
+      "chocojoa"
+    ]
+  },
   "Web/API/Element/getAttribute": {
     "modified": "2020-10-15T21:30:04.251Z",
     "contributors": [
@@ -4260,6 +4274,12 @@
       "lifeisnovel"
     ]
   },
+  "Web/API/Element/pointerenter_event": {
+    "modified": "2020-10-15T22:31:17.998Z",
+    "contributors": [
+      "baleineindigo"
+    ]
+  },
   "Web/API/Element/removeAttribute": {
     "modified": "2020-10-15T21:33:44.118Z",
     "contributors": [
@@ -4282,6 +4302,12 @@
       "fscholz",
       "khalid32",
       "hooriza"
+    ]
+  },
+  "Web/API/Element/scroll_event": {
+    "modified": "2020-10-15T22:22:09.396Z",
+    "contributors": [
+      "rodeck826"
     ]
   },
   "Web/API/Element/tagName": {
@@ -4708,45 +4734,6 @@
       "jwhitlock"
     ]
   },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2020-10-15T22:10:25.598Z",
-    "contributors": [
-      "alattalatta",
-      "Parcovia"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncontextmenu": {
-    "modified": "2019-03-23T22:08:19.174Z",
-    "contributors": [
-      "project42da"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/ondblclick": {
-    "modified": "2020-10-15T22:05:47.608Z",
-    "contributors": [
-      "baleineindigo",
-      "alattalatta",
-      "chocojoa"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onpointerenter": {
-    "modified": "2020-10-15T22:31:17.998Z",
-    "contributors": [
-      "baleineindigo"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onscroll": {
-    "modified": "2020-10-15T22:22:09.396Z",
-    "contributors": [
-      "rodeck826"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onsubmit": {
-    "modified": "2019-03-23T22:27:57.488Z",
-    "contributors": [
-      "hoony"
-    ]
-  },
   "Web/API/HTMLAnchorElement/href": {
     "modified": "2020-10-15T22:15:22.693Z",
     "contributors": [
@@ -4870,6 +4857,12 @@
       "jsx",
       "teoli",
       "Netaras"
+    ]
+  },
+  "Web/API/HTMLFormElement/submit_event": {
+    "modified": "2019-03-23T22:27:57.488Z",
+    "contributors": [
+      "hoony"
     ]
   },
   "Web/API/HTMLInputElement/select_event": {
@@ -11816,19 +11809,6 @@
       "SooYeonKim"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-12T19:42:17.394Z",
-    "contributors": [
-      "doong-jo",
-      "nmsohn",
-      "DoublSB",
-      "limkukhyun",
-      "wbamberg",
-      "cmygray",
-      "khseok1060",
-      "ryukato"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-04-30T03:43:48.082Z",
     "contributors": [
@@ -12091,16 +12071,6 @@
       "teoli",
       "ethertank",
       "jaemin_jo"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:39:22.531Z",
-    "contributors": [
-      "ahnzaz",
-      "KSH-code",
-      "Netaras",
-      "teoli",
-      "NFM"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -17059,6 +17029,13 @@
       "Sheppy"
     ]
   },
+  "conflicting/Web/API/Element/click_event": {
+    "modified": "2020-10-15T22:10:25.598Z",
+    "contributors": [
+      "alattalatta",
+      "Parcovia"
+    ]
+  },
   "conflicting/Web/API/Element/keydown_event": {
     "modified": "2020-10-15T22:05:49.061Z",
     "contributors": [
@@ -17241,12 +17218,27 @@
       "Wafe"
     ]
   },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2019-12-13T21:09:57.295Z",
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:42:17.394Z",
     "contributors": [
+      "doong-jo",
+      "nmsohn",
+      "DoublSB",
+      "limkukhyun",
       "wbamberg",
+      "cmygray",
+      "khseok1060",
+      "ryukato"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:39:22.531Z",
+    "contributors": [
+      "ahnzaz",
+      "KSH-code",
       "Netaras",
-      "Sebuls"
+      "teoli",
+      "NFM"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {

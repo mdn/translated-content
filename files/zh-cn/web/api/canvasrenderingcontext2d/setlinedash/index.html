@@ -28,7 +28,7 @@ translation_of: Web/API/CanvasRenderingContext2D/setLineDash
 
 <dl>
  <dt><code>segments</code></dt>
- <dd>一个{{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 如果数组元素的数量是奇数， 数组的元素会被复制并重复。例如， <code>[5, 15, 25]</code> 会变成 <code>[5, 15, 25, 5, 15, 25]。</code></dd>
+ <dd>一个{{jsxref("Array")}}数组。一组描述交替绘制线段和间距（坐标空间单位）长度的数字。 如果数组元素的数量是奇数， 数组的元素会被复制并重复。例如， <code>[5, 15, 25]</code> 会变成 <code>[5, 15, 25, 5, 15, 25]。</code></dd>
  <dt>
  <h3 id="返回值">返回值</h3>
  </dt>
@@ -39,7 +39,7 @@ translation_of: Web/API/CanvasRenderingContext2D/setLineDash
 
 <h3 id="基本示例">基本示例</h3>
 
-<p>这是一段简单的代码片段，使用 <code>setLineDash</code> 方法绘制一条线段。</p>
+<p>这是一段简单的代码片段，使用 <code>setLineDash</code> 方法绘制一条线段。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -73,8 +73,8 @@ ctx.stroke();
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.setLineDash([5, 15]);
@@ -122,7 +122,7 @@ window.addEventListener("load", drawCanvas);
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<p>下面创建的<code>drawDashedLine()</code> 函数使得多个虚线的绘制变得简单。它接收模式数组作为其唯一参数。</p>
+<p>下面创建的<code>drawDashedLine()</code> 函数使得多个虚线的绘制变得简单。它接收模式数组作为其唯一参数。</p>
 
 <pre class="brush: js">function drawDashedLine(pattern) {
   ctx.beginPath();

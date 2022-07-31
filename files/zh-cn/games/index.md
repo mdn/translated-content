@@ -57,8 +57,6 @@ translation_of: Games
 - [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
   - : 开发者，架构师，发布者的论坛。提出问题，获得帮助，帮助他人。
 
-<!---->
-
 - [HTML5 游戏引擎](http://html5gameengine.com/)
   - : 眼下最流行的 HTML5 游戏框架列表，包含评分，特色和案例。
 - [JSBreakouts](http://www.jsbreakouts.org/)

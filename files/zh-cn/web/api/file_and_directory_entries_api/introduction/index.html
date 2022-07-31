@@ -12,7 +12,7 @@ original_slug: WebGuide/API/File_System/Introduction
 
 <h2 id="关于这篇文档">关于这篇文档</h2>
 
-<p>这篇介绍讨论了文件系统 API 中的基本概念和术语。它将给出一个大致的蓝图并引导你理解其中的 <a href="#concepts">关键概念</a>. 它也描述了一些<a href="#restrictions">限制</a>，如果你忽略了它们将额能产生安全错误。关于该 API 中使用的更多术语，查看<a href="#definitions">定义</a>部分. </p>
+<p>这篇介绍讨论了文件系统 API 中的基本概念和术语。它将给出一个大致的蓝图并引导你理解其中的 <a href="#concepts">关键概念</a>. 它也描述了一些<a href="#restrictions">限制</a>，如果你忽略了它们将额能产生安全错误。关于该 API 中使用的更多术语，查看<a href="#definitions">定义</a>部分. </p>
 
 <p>关于文件系统 API 的引用文献部分，查看<a href="/en/DOM/File_API/File_System_API/FileSystem">引用</a> 的登陆页及其子页。</p>
 
@@ -20,7 +20,7 @@ original_slug: WebGuide/API/File_System/Introduction
 
 <h2 id="概要">概要</h2>
 
-<p>文件系统 API 包括<a href="/en/DOM/File_API/File_System_API#Asynchronous_APIs">异步</a>和<a href="/en/DOM/File_API/File_System_API#Synchronous_APIs">同步</a>两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和<a href="/En/Using_web_workers">WebWorkers 一起使用</a>. </p>
+<p>文件系统 API 包括<a href="/en/DOM/File_API/File_System_API#Asynchronous_APIs">异步</a>和<a href="/en/DOM/File_API/File_System_API#Synchronous_APIs">同步</a>两种接口。异步 API 可以应用于当你不想操作锁定 UI 的情况。另一方面，同步 API 允许简单的程序模型，但它必须和<a href="/En/Using_web_workers">WebWorkers 一起使用</a>. </p>
 
 <h3 id="该API的用途">该 API 的用途</h3>
 
@@ -33,7 +33,7 @@ original_slug: WebGuide/API/File_System/Introduction
  <li>它提供了一种你的用户已经熟悉的存储 API，正如他们所习惯的文件系统。</li>
 </ul>
 
-<p>关于你用该 api 能够创建的特性示例，查看 <a href="/#samples">使用示例</a> 部分。 </p>
+<p>关于你用该 api 能够创建的特性示例，查看 <a href="/#samples">使用示例</a> 部分。 </p>
 
 <h3 id="文件系统API和其他存储API">文件系统 API 和其他存储 API</h3>
 
@@ -118,7 +118,7 @@ original_slug: WebGuide/API/File_System/Introduction
 <p>文件系统 API 拥有异步和同步两种版本。两种版本的 API 提供相同的功能和特性。事实上，它们基本相同，除了几个不同点以外。</p>
 
 <ul>
- <li><strong>WebWorkers.</strong> 异步的 API 可以在文档或<a href="/En/Using_web_workers">WebWorkers</a> 上下文中使用，而同步 API 只能用于 WebWorkers. </li>
+ <li><strong>WebWorkers.</strong> 异步的 API 可以在文档或<a href="/En/Using_web_workers">WebWorkers</a> 上下文中使用，而同步 API 只能用于 WebWorkers. </li>
  <li><strong>Callbacks</strong>. 异步 API 不会将数据作为返回值；作为替代，你需要传递一个回调函数。你在操作中发送请求，并在回调时得到通知。相反，同步 API 不使用回调函数，因为 API 方法返回值。</li>
  <li><strong>异步和同步 API 的全局方法</strong>. 异步 API 拥有这些全局方法：<code>requestFileSystem()</code> 和 <code>resolveLocalFileSystemURL()</code>. 这些方法同时是 window 对象和 worker 全局作用域的成员。另一方面，同步 API 使用如下方法：<code>requestFileSystemSync()</code> 和 <code>resolveLocalFileSystemSyncURL()</code>. 这些同步方法只是 worker 全局作用域的成员，而非 window 对象的。</li>
 </ul>
@@ -144,7 +144,7 @@ original_slug: WebGuide/API/File_System/Introduction
 
 <div>文件系统 API 区分大小写并保留大小写。</div>
 
-<p> </p>
+<p> </p>
 
 <h2 id="限制">限制</h2>
 
@@ -196,7 +196,7 @@ original_slug: WebGuide/API/File_System/Introduction
 
 <p>规范:http://dev.w3.org/2009/dap/file-system/pub/FileSystem/</p>
 
-<p>引用: <a href="/en/DOM/File_API/File_System_API">File System API Reference</a></p>
+<p>引用: <a href="/en/DOM/File_API/File_System_API">File System API Reference</a></p>
 
 <p>相关文档：</p>
 

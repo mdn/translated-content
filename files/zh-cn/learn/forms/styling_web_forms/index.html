@@ -27,7 +27,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <h3 id="涉及到CSS，并非所有组件都是平等的">涉及到 CSS，并非所有组件都是平等的</h3>
 
-<p>目前，在使用表单时使用 CSS 仍然有一些困难。这些问题可以分为三类： </p>
+<p>目前，在使用表单时使用 CSS 仍然有一些困难。这些问题可以分为三类： </p>
 
 <h4 id="好的">好的</h4>
 
@@ -52,9 +52,9 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <h4 id="丑陋的">丑陋的</h4>
 
-<p>有些元素根本不能用应用 CSS 样式。这些包括：所有高级用户界面小部件，如范围，颜色或日期控件; 和所有下拉小部件，包括{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}和{{HTMLElement("datalist")}} 元素。文件选择器小部件也被称为不可样式化。新的{{HTMLElement("progress")}}和{{HTMLElement("meter")}} 元素也属于这个类别。</p>
+<p>有些元素根本不能用应用 CSS 样式。这些包括：所有高级用户界面小部件，如范围，颜色或日期控件; 和所有下拉小部件，包括{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}和{{HTMLElement("datalist")}} 元素。文件选择器小部件也被称为不可样式化。新的{{HTMLElement("progress")}}和{{HTMLElement("meter")}} 元素也属于这个类别。</p>
 
-<p>所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a>一文中探索如何实现这一点。</p>
+<p>所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a>一文中探索如何实现这一点。</p>
 
 <h2 id="基本样式美化">基本样式美化</h2>
 
@@ -80,11 +80,11 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <p><img alt="This is a screenshot of a search filed on Chrome, with and without the use of -webkit-appearance" src="/files/4153/search-chrome-macos.png" style="border-style: solid; border-width: 1px; height: 107px; width: 179px;"></p>
 
-<p>截图中是 Chrome 浏览器中的两个搜索框，在我们的例子中，两个搜索框均被设置为有边框。第一个没有使用<code>-webkit-appearance</code>渲染，而第二个使用了 <code>-webkit-appearance:none</code>. 两者的不同显而易见。</p>
+<p>截图中是 Chrome 浏览器中的两个搜索框，在我们的例子中，两个搜索框均被设置为有边框。第一个没有使用<code>-webkit-appearance</code>渲染，而第二个使用了 <code>-webkit-appearance:none</code>. 两者的不同显而易见。</p>
 
 <h3 id="字体和文本">字体和文本</h3>
 
-<p>CSS font 和 text 功能能被很容易的应用到任何组件上（当然你可以在 form 组件上使用{{cssxref("@font-face")}} ）。然而，浏览器的行为经常不一致。默认情况下，一些组件不会从它们的父元素继承 {{cssxref("font-family")}}和 {{cssxref("font-size")}} 。相反，许多浏览器使用系统默认的字体和文本。为了让 form 表单的外观和其他内容保持一致，你可以在你的样式表中增加以下内容：</p>
+<p>CSS font 和 text 功能能被很容易的应用到任何组件上（当然你可以在 form 组件上使用{{cssxref("@font-face")}} ）。然而，浏览器的行为经常不一致。默认情况下，一些组件不会从它们的父元素继承 {{cssxref("font-family")}}和 {{cssxref("font-size")}} 。相反，许多浏览器使用系统默认的字体和文本。为了让 form 表单的外观和其他内容保持一致，你可以在你的样式表中增加以下内容：</p>
 
 <pre class="brush: css">button, input, select, textarea {
   font-family : inherit;
@@ -99,9 +99,9 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <h3 id="盒子模型">盒子模型</h3>
 
-<p>所有文本字段都完全支持与 CSS 盒模型相关的每个属性 ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, 和 {{cssxref("border")}})。但是，像以前一样，浏览器在显示这些小部件时依赖于系统默认的样式。您需要定义如何将其融入到您的内容中。 如果你既想保持小部件的原生外观和感觉，又想给他们一个一致的尺寸，那么你会遇到一些困难 (如果你想保持组件的原生观感，又想给它们一致的大小，你会面临一些困难)。</p>
+<p>所有文本字段都完全支持与 CSS 盒模型相关的每个属性 ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, 和 {{cssxref("border")}})。但是，像以前一样，浏览器在显示这些小部件时依赖于系统默认的样式。您需要定义如何将其融入到您的内容中。 如果你既想保持小部件的原生外观和感觉，又想给他们一个一致的尺寸，那么你会遇到一些困难 (如果你想保持组件的原生观感，又想给它们一致的大小，你会面临一些困难)。</p>
 
-<p><strong>这是因为每个小部件都有自己的边框，填充和边距的规则。</strong> 所以如果你想给几个不同的小部件相同的大小，你必须使用{{cssxref("box-sizing")}} 属性：</p>
+<p><strong>这是因为每个小部件都有自己的边框，填充和边距的规则。</strong> 所以如果你想给几个不同的小部件相同的大小，你必须使用{{cssxref("box-sizing")}} 属性：</p>
 
 <pre class="brush: css">input, textarea, select, button {
   width : 150px;
@@ -122,9 +122,9 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <h4 id="legend">legend</h4>
 
-<p>{{HTMLElement("legend")}}元素易于应用 CSS，除了定位。在所有浏览器中， {{HTMLElement("legend")}} 元素定位是其 {{HTMLElement("fieldset")}} 父元素的上边框的最顶端。在 HTML 流中无法改变它的绝对位置，无法让其远离顶部边框。然而，你可以使用 {{cssxref("position")}} 属性将其位置设置为绝对或相对。除此之外，它近几年是 fieldset 边框的一部分。</p>
+<p>{{HTMLElement("legend")}}元素易于应用 CSS，除了定位。在所有浏览器中， {{HTMLElement("legend")}} 元素定位是其 {{HTMLElement("fieldset")}} 父元素的上边框的最顶端。在 HTML 流中无法改变它的绝对位置，无法让其远离顶部边框。然而，你可以使用 {{cssxref("position")}} 属性将其位置设置为绝对或相对。除此之外，它近几年是 fieldset 边框的一部分。</p>
 
-<p>由于{{HTMLElement("legend")}}元素对可访问性非常重要，因为它能被无障碍技术作为每个 fieldset 中的表单元素的标签读出来，它通常与标题配对，并且在无障碍中被隐藏 。例如：</p>
+<p>由于{{HTMLElement("legend")}}元素对可访问性非常重要，因为它能被无障碍技术作为每个 fieldset 中的表单元素的标签读出来，它通常与标题配对，并且在无障碍中被隐藏 。例如：</p>
 
 <h5 id="HTML">HTML</h5>
 
@@ -143,7 +143,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <h4 id="textarea">textarea</h4>
 
-<p>默认情况下，所有浏览器都认为{{HTMLElement("textarea")}} 元素是 inline block，与文本底线对齐。这很少是我们真正想看到的。要将内联 (<code>inline-block</code>) 块更改为块 (<code>block</code>)，使用{{cssxref("display")}}属性非常简单。但是如果你想以 inline 方式使用它，通常改变垂直对齐方式：</p>
+<p>默认情况下，所有浏览器都认为{{HTMLElement("textarea")}} 元素是 inline block，与文本底线对齐。这很少是我们真正想看到的。要将内联 (<code>inline-block</code>) 块更改为块 (<code>block</code>)，使用{{cssxref("display")}}属性非常简单。但是如果你想以 inline 方式使用它，通常改变垂直对齐方式：</p>
 
 <pre class="brush: css">textarea {
   vertical-align: top;
@@ -159,7 +159,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <h3 id="The_HTML">The HTML</h3>
 
-<p>HTML 只比我们在 <a href="/en-US/docs/HTML/Forms/My_first_HTML_form">the first article of this guide</a> 中涉及到的多一些；它只有一些额外的 id 和 title。</p>
+<p>HTML 只比我们在 <a href="/en-US/docs/HTML/Forms/My_first_HTML_form">the first article of this guide</a> 中涉及到的多一些；它只有一些额外的 id 和 title。</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;h1&gt;to: Mozilla&lt;/h1&gt;
@@ -192,8 +192,8 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 <ol>
  <li>明信片的<a href="/files/4151/background.jpg">背景</a>——下载这幅图片，把它和你的 HTML 文件保存在相同目录下。</li>
- <li>打字机字体：<a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter">源自 fontsquirrel.com 的 "Secret Typewriter“字体</a>——将 TTF 文件下载到和上面相同的文件夹里。</li>
- <li>手绘字体：<a href="http://www.fontsquirrel.com/fonts/Journal">源自 fontsquirrel.com 的 The "Journal" 字体 </a> —— 将 TTF 文件下载到和上面相同的文件夹里。</li>
+ <li>打字机字体：<a href="http://www.fontsquirrel.com/fonts/Secret-Typewriter">源自 fontsquirrel.com 的 "Secret Typewriter“字体</a>——将 TTF 文件下载到和上面相同的文件夹里。</li>
+ <li>手绘字体：<a href="http://www.fontsquirrel.com/fonts/Journal">源自 fontsquirrel.com 的 The "Journal" 字体 </a> —— 将 TTF 文件下载到和上面相同的文件夹里。</li>
 </ol>
 
 <p>在你开始之前需要对字体做一些处理：</p>
@@ -202,14 +202,14 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
  <li>打开 fontsquirrel <a href="https://www.fontsquirrel.com/tools/webfont-generator">网络字体生成器</a>.</li>
  <li>使用表单，上传你的字体文件并生成一个网络字体包，将这个包下载到你的电脑上。</li>
  <li>解压提供的 zip 文件。</li>
- <li>再解压后的文件内容里你会找到两个  <code>.woff</code> 文件和两个<code>.woff2</code> 文件。将这四个文件拷贝到一个叫 fonts 的文件夹里，而 fonts 文件夹位于和上面相同的文件夹里。我们为每种字体使用两个不同的文件以最大限度地保证浏览器兼容性。查看我们的 <a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web 字体</a> 一文获取更多信息。</li>
+ <li>再解压后的文件内容里你会找到两个  <code>.woff</code> 文件和两个<code>.woff2</code> 文件。将这四个文件拷贝到一个叫 fonts 的文件夹里，而 fonts 文件夹位于和上面相同的文件夹里。我们为每种字体使用两个不同的文件以最大限度地保证浏览器兼容性。查看我们的 <a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web 字体</a> 一文获取更多信息。</li>
 </ol>
 
 <h3 id="CSS_2">CSS</h3>
 
 <p>现在我们可以深入探究本例的 CSS 了。将下面所有的代码块一个接一个地加到{{htmlelement("style")}} 元素里。</p>
 
-<p>首先，我们要准备一些基础。这需要定义 {{cssxref("@font-face")}} 规则，以及所有的 {{HTMLElement("body")}} 元素和 {{HTMLElement("form")}} 元素基本规则：</p>
+<p>首先，我们要准备一些基础。这需要定义 {{cssxref("@font-face")}} 规则，以及所有的 {{HTMLElement("body")}} 元素和 {{HTMLElement("form")}} 元素基本规则：</p>
 
 <pre class="brush: css">@font-face {
     font-family: 'handwriting';
@@ -303,14 +303,14 @@ form {
 
 <p>现在我们的文本域已经完成了，我们需要调整单行和多行文本域的显示，使其能够匹配，因为通常情况下它们不会以默认的设置而具有一样的外观。</p>
 
-<p>单行文本需要一些调整才能在 Internet Explorer 中渲染良好。Internet Explorer 没有基于字体的自然高度来定义文本域的高度（而这是所有其他浏览器都有的行为）。为了修正这个问题，我们需要给域添加一个确定的高度，像下面这样：</p>
+<p>单行文本需要一些调整才能在 Internet Explorer 中渲染良好。Internet Explorer 没有基于字体的自然高度来定义文本域的高度（而这是所有其他浏览器都有的行为）。为了修正这个问题，我们需要给域添加一个确定的高度，像下面这样：</p>
 
 <pre class="brush: css">input {
     height: 2.5em; /* for IE */
     vertical-align: middle; /* This is optional but it makes legacy IEs look better */
 }</pre>
 
-<p>{{HTMLElement("textarea")}} 元素默认地被渲染成一个块级元素。这里有重要地两点是 {{cssxref("resize")}} 和 {{cssxref("overflow")}} 属性。因为我们的设计是一个固定大小的设计，所以我们会使用 <code>resize</code> 属性来防止用户调整我们的多行文本域的大小。{{cssxref("overflow")}} 属性是用来让域在不同的浏览器上渲染得更一致。一些浏览器默认值为 <code>auto</code>，而一些将默认值设为 <code>scroll</code>。在我们得例子中，最好确定每个浏览器都使用 <code>auto</code>：</p>
+<p>{{HTMLElement("textarea")}} 元素默认地被渲染成一个块级元素。这里有重要地两点是 {{cssxref("resize")}} 和 {{cssxref("overflow")}} 属性。因为我们的设计是一个固定大小的设计，所以我们会使用 <code>resize</code> 属性来防止用户调整我们的多行文本域的大小。{{cssxref("overflow")}} 属性是用来让域在不同的浏览器上渲染得更一致。一些浏览器默认值为 <code>auto</code>，而一些将默认值设为 <code>scroll</code>。在我们得例子中，最好确定每个浏览器都使用 <code>auto</code>：</p>
 
 <pre class="brush: css">textarea {
   display : block;
@@ -324,7 +324,7 @@ form {
   overflow: auto;
 }</pre>
 
-<p>{{HTMLElement("button")}} 元素上使用 CSS 非常方便；你可以做你任何想做得事情，甚至包括使用 <a href="/en-US/docs/CSS/Pseudo-elements">伪元素</a>：</p>
+<p>{{HTMLElement("button")}} 元素上使用 CSS 非常方便；你可以做你任何想做得事情，甚至包括使用 <a href="/en-US/docs/CSS/Pseudo-elements">伪元素</a>：</p>
 
 <pre class="brush: css">button {
   position     : absolute;
@@ -361,12 +361,12 @@ button:focus {
 <p>瞧！</p>
 
 <div class="note">
-<p><strong>注意：如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，</strong>你可以在 Github 上找到它 —— 查看 <a href="https://mdn.github.io/learning-area/html/forms/postcard-example/">在线演示</a> (也可以查看<a href="https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example">源代码</a>)。</p>
+<p><strong>注意：如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，</strong>你可以在 Github 上找到它 —— 查看 <a href="https://mdn.github.io/learning-area/html/forms/postcard-example/">在线演示</a> (也可以查看<a href="https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example">源代码</a>)。</p>
 </div>
 
 <h2 id="总结">总结</h2>
 
-<p>如你所见，若我们想构建只包含文本域和按钮的表单，用 CSS 美化它们非常容易。如果你想要知道更多能够让你的处理表单组件时更轻松的 CSS 小技巧，看一看 <a href="http://necolas.github.com/normalize.css">normalize.css </a>项目的表单部分。</p>
+<p>如你所见，若我们想构建只包含文本域和按钮的表单，用 CSS 美化它们非常容易。如果你想要知道更多能够让你的处理表单组件时更轻松的 CSS 小技巧，看一看 <a href="http://necolas.github.com/normalize.css">normalize.css </a>项目的表单部分。</p>
 
 <p><a href="/en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms">下一篇文章中</a>，我们将会看到如何处理落入"不好的" 和"丑陋的" 分类的表单组件。</p>
 

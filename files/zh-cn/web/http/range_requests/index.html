@@ -24,7 +24,7 @@ Accept-Ranges: bytes
 Content-Length: 146515
 </pre>
 
-<p>在上面的响应中， <code>Accept-Ranges: bytes</code> 表示界定范围的单位是 bytes 。这里  {{HTTPHeader("Content-Length")}} 也是有效信息，因为它提供了要检索的图片的完整大小。</p>
+<p>在上面的响应中， <code>Accept-Ranges: bytes</code> 表示界定范围的单位是 bytes 。这里  {{HTTPHeader("Content-Length")}} 也是有效信息，因为它提供了要检索的图片的完整大小。</p>
 
 <p>如果站点未发送 <code>Accept-Ranges</code> 首部，那么它们有可能不支持范围请求。一些站点会明确将其值设置为 "none"，以此来表明不支持。在这种情况下，某些应用的下载管理器会将暂停按钮禁用。</p>
 
@@ -68,7 +68,7 @@ Content-Length: 1024
 
 <pre>curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"</pre>
 
-<p>服务器返回 206 Partial Content 状态码和 Content-Type：multipart/byteranges; boundary=3d6b6a416f9b5 头部，Content-Type：multipart/byteranges 表示这个响应有多个 byterange。每一部分 byterange 都有他自己的 Content-type 头部和 Content-Range，并且使用 boundary 参数对 body 进行划分。</p>
+<p>服务器返回 206 Partial Content 状态码和 Content-Type：multipart/byteranges; boundary=3d6b6a416f9b5 头部，Content-Type：multipart/byteranges 表示这个响应有多个 byterange。每一部分 byterange 都有他自己的 Content-type 头部和 Content-Range，并且使用 boundary 参数对 body 进行划分。</p>
 
 <pre>HTTP/1.1 206 Partial Content
 Content-Type: multipart/byteranges; boundary=3d6b6a416f9b5
@@ -93,7 +93,7 @@ eta http-equiv="Content-type" content="text/html; c
 
 <p>当（中断之后）重新开始请求更多资源片段的时候，必须确保自从上一个片段被接收之后该资源没有进行过修改。</p>
 
-<p>The {{HTTPHeader("If-Range")}} 请求首部可以用来生成条件式范围请求：假如条件满足的话，条件请求就会生效，服务器会返回状态码为 {{HTTPStatus("206")}} <code>Partial </code>的响应，以及相应的消息主体。假如条件未能得到满足，那么就会返回状态码为 {{HTTPStatus("200")}} <code>OK</code> 的响应，同时返回整个资源。该首部可以与  {{HTTPHeader("Last-Modified")}} 验证器或者  {{HTTPHeader("ETag")}} 一起使用，但是二者不能同时使用。</p>
+<p>The {{HTTPHeader("If-Range")}} 请求首部可以用来生成条件式范围请求：假如条件满足的话，条件请求就会生效，服务器会返回状态码为 {{HTTPStatus("206")}} <code>Partial </code>的响应，以及相应的消息主体。假如条件未能得到满足，那么就会返回状态码为 {{HTTPStatus("200")}} <code>OK</code> 的响应，同时返回整个资源。该首部可以与  {{HTTPHeader("Last-Modified")}} 验证器或者  {{HTTPHeader("ETag")}} 一起使用，但是二者不能同时使用。</p>
 
 <pre>If-Range: Wed, 21 Oct 2015 07:28:00 GMT </pre>
 
@@ -102,7 +102,7 @@ eta http-equiv="Content-type" content="text/html; c
 <p>与范围请求相关的有三种状态：</p>
 
 <ul>
- <li>在请求成功的情况下，服务器会返回  {{HTTPStatus("206")}} <code>Partial Content</code> 状态码。</li>
+ <li>在请求成功的情况下，服务器会返回  {{HTTPStatus("206")}} <code>Partial Content</code> 状态码。</li>
  <li>在请求的范围越界的情况下（范围值超过了资源的大小），服务器会返回 {{HTTPStatus("416")}} <code>Requested Range Not Satisfiable</code> （请求的范围无法满足）状态码。</li>
  <li>在不支持范围请求的情况下，服务器会返回 {{HTTPStatus("200")}} <code>OK</code> 状态码。</li>
 </ul>
@@ -115,6 +115,6 @@ eta http-equiv="Content-type" content="text/html; c
 
 <ul>
  <li>相关状态码： {{HTTPStatus("200")}}, {{HTTPStatus("206")}}, {{HTTPStatus("416")}}.</li>
- <li>相关首部： {{HTTPHeader("Accept-Ranges")}}, {{HTTPHeader("Range")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("If-Range")}}, {{HTTPHeader("Transfer-Encoding")}}.</li>
+ <li>相关首部： {{HTTPHeader("Accept-Ranges")}}, {{HTTPHeader("Range")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("If-Range")}}, {{HTTPHeader("Transfer-Encoding")}}.</li>
  <li><a href="https://blogs.msdn.microsoft.com/ieinternals/2011/06/03/download-resumption-in-internet-explorer/">IE 浏览器中的断点续传功能</a></li>
 </ul>

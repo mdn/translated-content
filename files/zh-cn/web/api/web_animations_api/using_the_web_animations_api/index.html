@@ -9,7 +9,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 
 <h2 id="认识Web动画API">认识 Web 动画 API</h2>
 
-<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web 动画 API</a>将浏览器动画引擎向开发者打开，并由 JavaScript 进行操作。这些 API 被设计成 <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> and <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>的接口，未来会对这些 API 做补充以丰富更多的功能。它是对网络上动画化的支持最有效的方式之一，让浏览器进行自己的内部，不需要 hacks，或者强迫，或者{{domxref("Window.requestAnimationFrame()")}}。</p>
+<p><a href="/en-US/docs/Web/API/Web_Animations_API">Web 动画 API</a>将浏览器动画引擎向开发者打开，并由 JavaScript 进行操作。这些 API 被设计成 <a href="/en-US/docs/Web/CSS/CSS_Animations">CSS Animations</a> and <a href="/en-US/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>的接口，未来会对这些 API 做补充以丰富更多的功能。它是对网络上动画化的支持最有效的方式之一，让浏览器进行自己的内部，不需要 hacks，或者强迫，或者{{domxref("Window.requestAnimationFrame()")}}。</p>
 
 <p>通过 Web 动画 API，我们可以将交互式动画从样式表移动到 JavaScript，将表现与行为分开。 我们不再需要依赖 DOM 重的技术，如将 CSS 属性和范围类写入元素来控制播放方向。 与纯粹的声明式 CSS 不同，JavaScript 还允许我们动态地将属性值设置为持续时间。 对于构建自定义动画库和创建交互式动画，Web 动画 API 可能是完成工作的完美工具。 让我们看看它能做什么！</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 
 <h3 id="The_CSS_version">The CSS version</h3>
 
-<p>这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full <a href="http://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
+<p>这是一个用 CSS 写的滚动动画，显示爱丽丝落下通向仙境的兔子洞 (see the full <a href="http://codepen.io/rachelnabors/pen/QyOqqW">code on Codepen</a>):</p>
 
 <p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="tumbling-alice_optimized.gif"></a></p>
 
@@ -88,12 +88,12 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 </ul>
 
 <div class="note">
-<p>CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。 以及我们用 <code>easing</code> 来代替<code>timing-function</code>。我们不必在这列出<code>easing</code>的值，因为不像在 CSS 动画里，默认的"<a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a>"是<code>ease</code>。页面动画 API 的默认 easing 是<code>linear</code>— 而这就是我们想要的。</p>
+<p>CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。 以及我们用 <code>easing</code> 来代替<code>timing-function</code>。我们不必在这列出<code>easing</code>的值，因为不像在 CSS 动画里，默认的"<a href="/en-US/docs/Web/CSS/animation-timing-function">animation-timing-function</a>"是<code>ease</code>。页面动画 API 的默认 easing 是<code>linear</code>— 而这就是我们想要的。</p>
 </div>
 
 <h4 id="整合这些特性">整合这些特性</h4>
 
-<p>是时候把这些特性结合到一起运用了 {{domxref("Element.animate()")}} :</p>
+<p>是时候把这些特性结合到一起运用了 {{domxref("Element.animate()")}} :</p>
 
 <pre class="brush: js">document.getElementById("alice").animate(
   aliceTumbling,
@@ -146,11 +146,11 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
   duration: aliceChange.effect.timing.duration / 2
 });</pre>
 
-<p>{{domxref("Element.animate()")}} 方法会在调用后立即执行。 为了防止蛋糕在用户有机会点击之前进食自己， 我们调用 {{domxref("Animation.pause()")}} ，如下：</p>
+<p>{{domxref("Element.animate()")}} 方法会在调用后立即执行。 为了防止蛋糕在用户有机会点击之前进食自己， 我们调用 {{domxref("Animation.pause()")}} ，如下：</p>
 
 <pre class="brush: js">nommingCake.pause();</pre>
 
-<p>我们可以运行 {{domxref("Animation.play()")}} 方法：</p>
+<p>我们可以运行 {{domxref("Animation.play()")}} 方法：</p>
 
 <pre class="brush: js">nommingCake.play();</pre>
 
@@ -179,7 +179,7 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
  <li>{{domxref("Animation.finish()")}} 动画结束。</li>
  <li>{{domxref("Animation.cancel()")}} 终止动画。</li>
  <li>{{domxref("Animation.reverse()")}} 设置动画播放速度</li>
- <li> ({{domxref("Animation.playbackRate")}}到负值，所以它向后运行。</li>
+ <li> ({{domxref("Animation.playbackRate")}}到负值，所以它向后运行。</li>
 </ul>
 
 <p>让我们先来看一下 playbackRate - 一个否定的播放速度将导致一个动画反向运行。 当爱丽丝从瓶中喝酒时，她越来越小。 这是因为瓶子将动画的播放速度从 1 更改为-1：</p>
@@ -307,7 +307,7 @@ drinking.pause();</pre>
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> <code>getAnimations()</code> and <code>effect</code> are not fully supported as of this writing, but the polyfill does support them today.</p>
+<p><strong>Note:</strong> <code>getAnimations()</code> and <code>effect</code> are not fully supported as of this writing, but the polyfill does support them today.</p>
 </div>
 
 <h2 id="Callbacks_and_promises">Callbacks and promises</h2>
@@ -315,7 +315,7 @@ drinking.pause();</pre>
 <p>CSS 动画和转换有自己的事件侦听器，这些也可以通过 Web 动画 API：</p>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> is the event handler for the <code>finish</code> event and can be triggered manually with <code><a href="/en-US/docs/Web/API/Animation/finish">finish()</a></code>.</li>
+ <li><code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> is the event handler for the <code>finish</code> event and can be triggered manually with <code><a href="/en-US/docs/Web/API/Animation/finish">finish()</a></code>.</li>
  <li><code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code> is the event handler for the <code>cancel</code> event and can be triggers with <code><a href="/en-US/docs/Web/API/Animation/cancel">cancel()</a></code>.</li>
 </ul>
 
@@ -330,7 +330,7 @@ aliceChange.onfinish = endGame;
 
 </pre>
 
-<p>Prefer promises? The Web Animations API also specifies two promises: <code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> and <code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code>.</p>
+<p>Prefer promises? The Web Animations API also specifies two promises: <code><a href="/en-US/docs/Web/API/Animation/onfinish">onfinish</a></code> and <code><a href="/en-US/docs/Web/API/Animation/oncancel">oncancel</a></code>.</p>
 
 <div class="note">
 <p>These promises are not fully supported as of this writing.</p>
@@ -343,7 +343,7 @@ aliceChange.onfinish = endGame;
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li class="post__title">The <a href="http://codepen.io/collection/bpEza/">full suite of Alice in Wonderland demos</a> on CodePen for you to play with, fork, and share</li>
+ <li class="post__title">The <a href="http://codepen.io/collection/bpEza/">full suite of Alice in Wonderland demos</a> on CodePen for you to play with, fork, and share</li>
  <li class="post__title"><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Animating like you just don’t care with Element.animate</a> — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods</li>
- <li class="post__title"><a href="https://github.com/web-animations/web-animations-js">web-animations-js</a> — the Web Animations API polyfill</li>
+ <li class="post__title"><a href="https://github.com/web-animations/web-animations-js">web-animations-js</a> — the Web Animations API polyfill</li>
 </ul>

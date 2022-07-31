@@ -94,7 +94,7 @@ pc.ontrack = ev =&gt; {
 
 <h4 id="将track与特定的stream相关联">将<strong>track</strong>与特定的 stream 相关联</h4>
 
-<p>通过指定一个流并允许{{domxref("RTCPeerConnection")}}为您创建流，流的跟踪关联将由 WebRTC 基础设施自动为您管理。这包括对收发器的{{domxref("RTCRtpTransceiver.direction","direction")}} 的更改和被停止使用{{domxref("RTCPeerConnection.removeTrack","removeTrack()")}}。</p>
+<p>通过指定一个流并允许{{domxref("RTCPeerConnection")}}为您创建流，流的跟踪关联将由 WebRTC 基础设施自动为您管理。这包括对收发器的{{domxref("RTCRtpTransceiver.direction","direction")}} 的更改和被停止使用{{domxref("RTCPeerConnection.removeTrack","removeTrack()")}}。</p>
 
 <p>例如，考虑应用程序可能使用的这个函数，通过{{domxref("RTCPeerConnection")}}将设备的摄像头和麦克风输入流化为远程对等点：</p>
 
@@ -120,7 +120,7 @@ pc.ontrack = ev =&gt; {
  <li>没有与发送方关联的跟踪。</li>
  <li>与发送方关联的{domxref("RTCRtpTransceiver")}}有一个{domxref("RTCRtpReceiver")}}，它的{{domxref("RTCRtpReceiver.track", "track")}}属性指定了一个{{domxref("MediaStreamTrack")}}它的{{domxref("MediaStreamTrack.kind", "kind")}}与调用<code><strong>RTCPeerConnection.addTrack()</strong></code>时指定的 track 参数的 kind 相同。这确保了收发器只能处理音频或视频，而不能同时处理二者。</li>
  <li><code><strong>RTCRtpTransceiver</strong></code>的{{domxref("RTCRtpTransceiver.stopped", "stopped")}}属性为<code><strong>false</strong></code>。</li>
- <li>正在考虑的<code><strong>RTCRtpSender</strong></code>从未被用于发送数据。如果收发器的{{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} 曾经是“<code><strong>sendrecv</strong></code>”或“<code><strong>sendonly</strong></code>”，发送方不能被重用。</li>
+ <li>正在考虑的<code><strong>RTCRtpSender</strong></code>从未被用于发送数据。如果收发器的{{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} 曾经是“<code><strong>sendrecv</strong></code>”或“<code><strong>sendonly</strong></code>”，发送方不能被重用。</li>
 </ul>
 
 <p>如果所有这些条件都满足，发送方会被重用，这将导致现有<code><strong>RTCRtpSender</strong></code>和它的<code><strong>RTCRtpTransceiver</strong></code>发生这些变化：</p>
@@ -137,7 +137,7 @@ pc.ontrack = ev =&gt; {
 
 <ul>
  <li>使用指定的<code><strong>track</strong></code>和<code><strong>streams</strong></code>集创建新的<code><strong>RTCRtpSender</strong></code>。</li>
- <li>新{{domxref("RTCRtpReceiver")}}被创建，新{{domxref("MediaStreamTrack")}}作为它的{{domxref("RTCRtpReceiver.track", "track")}} 属性 (不是调用<code><strong>addTrack()</strong></code>时指定作为参数的 track)。这跟踪的{{domxref("MediaStreamTrack.kind", "kind")}}设置为与作为输入参数提供的音轨类型匹配。</li>
+ <li>新{{domxref("RTCRtpReceiver")}}被创建，新{{domxref("MediaStreamTrack")}}作为它的{{domxref("RTCRtpReceiver.track", "track")}} 属性 (不是调用<code><strong>addTrack()</strong></code>时指定作为参数的 track)。这跟踪的{{domxref("MediaStreamTrack.kind", "kind")}}设置为与作为输入参数提供的音轨类型匹配。</li>
  <li>将创建一个新的{{domxref("RTCRtpTransceiver")}}，并与新的发送方和接收方关联。</li>
  <li>新的<code><strong>transceiver</strong></code>的{{domxref("RTCRtpTransceiver.direction", "direction")}}设置为"<code><strong>sendrecv</strong></code>"。</li>
  <li>新的<code><strong>transceiver</strong></code>被添加到 RTCPeerConnection 的收发器集合中。</li>
@@ -151,8 +151,8 @@ pc.ontrack = ev =&gt; {
 <p>这个例子是从文章中给出的<a href="/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Signaling and video calling</a>及其相应的示例代码中提取的。它来自那里的<code><strong>handleVideoOfferMsg()</strong></code>方法，该方法在从远程对等方接收到报价消息时被调用。</p>
 
 <pre class="brush: js notranslate">var mediaConstraints = {
-  audio: true,            // We want an audio track
-  video: true             // ...and we want a video track
+  audio: true,            // We want an audio track
+  video: true             // ...and we want a video track
 };
 
 var desc = new RTCSessionDescription(sdp);

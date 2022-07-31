@@ -6,7 +6,7 @@ original_slug: Web/API/AudioContext/createWaveShaper
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>{{ domxref("AudioContext") }} 接口的 createWaveShaper() 方法创建了 表示非线性失真的{{ domxref("WaveShaperNode") }}。该节点通常被用来给音频添加失真效果</p>
+<p>{{ domxref("AudioContext") }} 接口的 createWaveShaper() 方法创建了 表示非线性失真的{{ domxref("WaveShaperNode") }}。该节点通常被用来给音频添加失真效果</p>
 
 <h2 id="语法">语法</h2>
 
@@ -33,17 +33,17 @@ var distortion = audioCtx.createWaveShaper();
   ...
 
 function makeDistortionCurve(amount) {
-  var k = typeof amount === 'number' ? amount : 50,
-    n_samples = 44100,
-    curve = new Float32Array(n_samples),
-    deg = Math.PI / 180,
-    i = 0,
-    x;
-  for ( ; i &lt; n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
-  }
-  return curve;
+  var k = typeof amount === 'number' ? amount : 50,
+    n_samples = 44100,
+    curve = new Float32Array(n_samples),
+    deg = Math.PI / 180,
+    i = 0,
+    x;
+  for ( ; i &lt; n_samples; ++i ) {
+    x = i * 2 / n_samples - 1;
+    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  }
+  return curve;
 };
 
   ...

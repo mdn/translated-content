@@ -5,9 +5,9 @@ translation_of: Web/API/VRDisplay
 ---
 <div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-<p><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> 中的 <strong><code>VRDisplay </code></strong>代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。</p>
+<p><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> 中的 <strong><code>VRDisplay </code></strong>代表任何支持此 API 的 VR 设备。它包括了设备 ID、描述信息等诸如此类的通用信息，以及用于开始呈现 VR 场景、检索眼睛参数和显示能力以及其他重要的功能和方法。</p>
 
-<p>可以通过调用 {{domxref("Navigator.getVRDisplays()")}} 方法得到所有连接的 VR 设备数组。</p>
+<p>可以通过调用 {{domxref("Navigator.getVRDisplays()")}} 方法得到所有连接的 VR 设备数组。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -19,22 +19,22 @@ translation_of: Web/API/VRDisplay
  <dt>{{domxref("VRDisplay.depthNear")}}</dt>
  <dd>获取或设置<a href="https://en.wikipedia.org/wiki/Viewing_frustum">眼睛可视锥</a>的最近深度。</dd>
  <dt>{{domxref("VRDisplay.displayId")}} {{readonlyInline}}</dt>
- <dd>返回此 VRDisplay 的标识符，它也用作与 <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> 的关联（详见 {{domxref("Gamepad.displayId")}}）。</dd>
+ <dd>返回此 VRDisplay 的标识符，它也用作与 <a href="/en-US/docs/Web/API/Gamepad_API">Gamepad API</a> 的关联（详见 {{domxref("Gamepad.displayId")}}）。</dd>
  <dt>{{domxref("VRDisplay.displayName")}} {{readonlyInline}}</dt>
- <dd>返回一个不反人类的名称来标识此 <code>VRDisplay。</code></dd>
+ <dd>返回一个不反人类的名称来标识此 <code>VRDisplay。</code></dd>
  <dt>{{domxref("VRDisplay.isConnected")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("Boolean")}} 值，指示 <code>VRDisplay</code> 是否连接到计算机。</dd>
+ <dd>返回一个 {{domxref("Boolean")}} 值，指示 <code>VRDisplay</code> 是否连接到计算机。</dd>
  <dt>{{domxref("VRDisplay.isPresenting")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("Boolean")}} 值，指示 <code>VRDisplay</code> 当前是否由内容被呈现。</dd>
+ <dd>返回一个 {{domxref("Boolean")}} 值，指示 <code>VRDisplay</code> 当前是否由内容被呈现。</dd>
  <dt>{{domxref("VRDisplay.stageParameters")}} {{readonlyInline}}</dt>
- <dd>如果 VR 设备支持房间规模测验，则返回一个包含房间尺寸参数的 {{domxref("VRStageParameters")}} 对象。</dd>
+ <dd>如果 VR 设备支持房间规模测验，则返回一个包含房间尺寸参数的 {{domxref("VRStageParameters")}} 对象。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("VRDisplay.getEyeParameters()")}}</dt>
- <dd>返回指定一侧眼睛参数的 {{domxref("VREyeParameters")}} 对象。</dd>
+ <dd>返回指定一侧眼睛参数的 {{domxref("VREyeParameters")}} 对象。</dd>
  <dt>{{domxref("VRDisplay.getLayers()")}}</dt>
  <dd>返回 VRDisplay 当前显示的图层。</dd>
  <dt>{{domxref("VRDisplay.getPose()")}}</dt>

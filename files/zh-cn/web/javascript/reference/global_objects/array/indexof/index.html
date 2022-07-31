@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 <dl>
  <dt><code>searchElement</code></dt>
  <dd>要查找的元素</dd>
- <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
+ <dt><code><var>fromIndex</var></code> {{optional_inline}}</dt>
  <dd>开始查找的位置。如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回 -1。如果参数中提供的索引值是一个负值，则将其作为数组末尾的一个抵消，即 -1 表示从最后一个元素开始查找，-2 表示从倒数第二个元素开始查找 ，以此类推。 注意：如果参数中提供的索引值是一个负值，并不改变其查找顺序，查找顺序仍然是从前向后查询数组。如果抵消后的索引值仍小于 0，则整个数组都将会被查询。其默认值为 0。</dd>
 </dl>
 
@@ -160,34 +160,11 @@ if (!Array.prototype.indexOf) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition.<br>
-    Implemented in JavaScript 1.6</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.Array.indexOf")}}</p>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">相关链接</h2>
 

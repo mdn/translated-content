@@ -19,20 +19,20 @@ element.scrollIntoView(scrollIntoViewOptions); // Object 型参数</pre>
  <dt><code>alignToTop</code>{{optional_inline}}</dt>
  <dd>一个{{jsxref("Boolean")}}值：
  <ul>
-  <li>如果为<code>true</code>，元素的顶端将和其所在滚动区的可视区域的顶端对齐。相应的 <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>。这是这个参数的默认值。</li>
+  <li>如果为<code>true</code>，元素的顶端将和其所在滚动区的可视区域的顶端对齐。相应的 <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>。这是这个参数的默认值。</li>
   <li>如果为<code>false</code>，元素的底端将和其所在滚动区的可视区域的底端对齐。相应的<code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code>。</li>
  </ul>
  </dd>
- <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
+ <dt><code>scrollIntoViewOptions</code> {{optional_inline}} {{experimental_inline}}</dt>
  <dd>一个包含下列属性的对象：</dd>
  <dd>
  <dl>
-  <dt><code>behavior</code> {{optional_inline}}</dt>
-  <dd>定义动画过渡效果， <code>"auto"</code>或 <code>"smooth"</code> 之一。默认为 <code>"auto"</code>。</dd>
-  <dt><code>block</code> {{optional_inline}}</dt>
-  <dd>定义垂直方向的对齐， <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, 或 <code>"nearest"</code>之一。默认为 <code>"start"</code>。</dd>
-  <dt><code>inline</code> {{optional_inline}}</dt>
-  <dd>定义水平方向的对齐， <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, 或 <code>"nearest"</code>之一。默认为 <code>"nearest"</code>。</dd>
+  <dt><code>behavior</code> {{optional_inline}}</dt>
+  <dd>定义动画过渡效果， <code>"auto"</code>或 <code>"smooth"</code> 之一。默认为 <code>"auto"</code>。</dd>
+  <dt><code>block</code> {{optional_inline}}</dt>
+  <dd>定义垂直方向的对齐， <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, 或 <code>"nearest"</code>之一。默认为 <code>"start"</code>。</dd>
+  <dt><code>inline</code> {{optional_inline}}</dt>
+  <dd>定义水平方向的对齐， <code>"start"</code>, <code>"center"</code>, <code>"end"</code>, 或 <code>"nearest"</code>之一。默认为 <code>"nearest"</code>。</dd>
  </dl>
  </dd>
 </dl>
@@ -61,5 +61,5 @@ element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});</
 <h2 id="相关内容">相关内容</h2>
 
 <ul>
- <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}</li>
+ <li>{{domxref("Element.scrollIntoViewIfNeeded()")}}<a href="/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded"> </a>{{non-standard_inline}}</li>
 </ul>
