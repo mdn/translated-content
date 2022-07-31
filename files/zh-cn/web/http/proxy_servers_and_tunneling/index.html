@@ -14,15 +14,15 @@ translation_of: Web/HTTP/Proxy_servers_and_tunneling
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>当访问不同的网站时，代理服务器和 HTTP 管道帮助访问万维网 . 一个代理可以是用户的本地计算机，或者介于用户计算机和终端服务器之间的地方。本章节概述一些关于代理和相关配置选项的基础知识。</p>
+<p>当访问不同的网站时，代理服务器和 HTTP 管道帮助访问万维网 . 一个代理可以是用户的本地计算机，或者介于用户计算机和终端服务器之间的地方。本章节概述一些关于代理和相关配置选项的基础知识。</p>
 
 <p>有两种代理：<strong>正向代理</strong> (如：管道、网关) 和<strong>反向代理</strong> (用于控制和保证服务器的负载均衡、认证、加密和缓存)。</p>
 
 <h2 id="正向代理">正向代理</h2>
 
-<p>正向代理，也可以叫“网关” 或者仅仅为一个或多个客户端提供代理服务的“代理”。在互联网上像这样的代理不计其数。 他们存储并转发网络服务（如 DNS，网页）以减少和控制大家所使用的带宽。</p>
+<p>正向代理，也可以叫“网关” 或者仅仅为一个或多个客户端提供代理服务的“代理”。在互联网上像这样的代理不计其数。 他们存储并转发网络服务（如 DNS，网页）以减少和控制大家所使用的带宽。</p>
 
-<p>正向代理可以是匿名代理，并允许用户在浏览 web 或者使用其他服务时隐藏自己的 IP。 <a href="https://www.torproject.org/">TOR</a> (洋葱路由), 匿名地在多个代理间路由因特网。</p>
+<p>正向代理可以是匿名代理，并允许用户在浏览 web 或者使用其他服务时隐藏自己的 IP。 <a href="https://www.torproject.org/">TOR</a> (洋葱路由), 匿名地在多个代理间路由因特网。</p>
 
 <h2 id="反向代理">反向代理</h2>
 
@@ -51,7 +51,7 @@ translation_of: Web/HTTP/Proxy_servers_and_tunneling
  <dt>{{HTTPHeader("X-Forwarded-For")}} {{non-standard_inline}}</dt>
  <dd>Identifies the originating IP addresses of a client connecting to a web server through an HTTP proxy or a load balancer.</dd>
  <dt>{{HTTPHeader("X-Forwarded-Host")}} {{non-standard_inline}}</dt>
- <dd>Identifies the original host requested that a client used to connect to your proxy or load balancer.</dd>
+ <dd>Identifies the original host requested that a client used to connect to your proxy or load balancer.</dd>
  <dt>{{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}</dt>
  <dd>identifies the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.</dd>
 </dl>
@@ -83,13 +83,13 @@ translation_of: Web/HTTP/Proxy_servers_and_tunneling
 
 <pre class="syntaxbox notranslate">application/x-ns-proxy-autoconfig</pre>
 
-<p>The file consists of a function called <code>FindProxyForURL</code>. The example below will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:</p>
+<p>The file consists of a function called <code>FindProxyForURL</code>. The example below will work in an environment where the internal DNS server is set up so that it can only resolve internal host names, and the goal is to use a proxy only for hosts that aren't resolvable:</p>
 
 <pre class="brush: js notranslate">function FindProxyForURL(url, host) {
   if (isResolvable(host))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+    return "DIRECT";
+  else
+    return "PROXY proxy.mydomain.com:8080";
 }</pre>
 
 <p>See <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file">Proxy Auto-Configuration (PAC)</a> for more examples.</p>

@@ -7806,26 +7806,6 @@
       "fscholz"
     ]
   },
-  "Web/API/GlobalEventHandlers/onerror": {
-    "modified": "2019-03-23T22:57:01.164Z",
-    "contributors": [
-      "wbamberg",
-      "roman-dudin",
-      "xercool"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-23T22:57:03.709Z",
-    "contributors": [
-      "xercool"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onloadend": {
-    "modified": "2019-03-18T21:41:57.825Z",
-    "contributors": [
-      "dedotmoroz"
-    ]
-  },
   "Web/API/Gyroscope": {
     "modified": "2020-10-15T22:18:16.560Z",
     "contributors": [
@@ -10583,6 +10563,14 @@
       "WaveMeUp"
     ]
   },
+  "Web/API/Window/error_event": {
+    "modified": "2019-03-23T22:57:01.164Z",
+    "contributors": [
+      "wbamberg",
+      "roman-dudin",
+      "xercool"
+    ]
+  },
   "Web/API/Window/focus_event": {
     "modified": "2019-03-23T22:08:49.378Z",
     "contributors": [
@@ -11067,6 +11055,12 @@
     "modified": "2019-03-23T22:29:58.839Z",
     "contributors": [
       "fider"
+    ]
+  },
+  "Web/API/XMLHttpRequest/loadend_event": {
+    "modified": "2019-03-18T21:41:57.825Z",
+    "contributors": [
+      "dedotmoroz"
     ]
   },
   "Web/API/XMLHttpRequest/loadstart_event": {
@@ -16666,30 +16660,6 @@
       "uleming"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-18T16:30:12.782Z",
-    "contributors": [
-      "HardKullez",
-      "qwerty-wasd",
-      "imalyavskiy",
-      "Davidnadejdin",
-      "SedovDP",
-      "metelskiy",
-      "wbamberg",
-      "rinbik",
-      "SphinxKnight",
-      "toolX",
-      "vherever",
-      "Megabyteceer",
-      "ndrsrv",
-      "NobbsNobby",
-      "Saviloff",
-      "makdeb",
-      "fscholz",
-      "esskia",
-      "ivan.p"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-03-12T19:39:43.277Z",
     "contributors": [
@@ -17017,15 +16987,6 @@
       "kichik",
       "askhat",
       "ixidor",
-      "uleming"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:37:58.256Z",
-    "contributors": [
-      "nnragmailcom",
-      "fscholz",
-      "teoli",
       "uleming"
     ]
   },
@@ -23599,6 +23560,12 @@
       "alexismaster"
     ]
   },
+  "conflicting/Web/API/Window/load_event": {
+    "modified": "2019-03-23T22:57:03.709Z",
+    "contributors": [
+      "xercool"
+    ]
+  },
   "conflicting/Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:05:00.067Z",
     "contributors": [
@@ -23795,6 +23762,39 @@
       "fscholz",
       "teoli",
       "smfd",
+      "uleming"
+    ]
+  },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-18T16:30:12.782Z",
+    "contributors": [
+      "HardKullez",
+      "qwerty-wasd",
+      "imalyavskiy",
+      "Davidnadejdin",
+      "SedovDP",
+      "metelskiy",
+      "wbamberg",
+      "rinbik",
+      "SphinxKnight",
+      "toolX",
+      "vherever",
+      "Megabyteceer",
+      "ndrsrv",
+      "NobbsNobby",
+      "Saviloff",
+      "makdeb",
+      "fscholz",
+      "esskia",
+      "ivan.p"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:37:58.256Z",
+    "contributors": [
+      "nnragmailcom",
+      "fscholz",
+      "teoli",
       "uleming"
     ]
   },

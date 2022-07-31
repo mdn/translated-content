@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PA
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong>代理自动配置（PAC）</strong>文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：</p>
+<p><strong>代理自动配置（PAC）</strong>文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：</p>
 
 <pre class="brush: js notranslate">function FindProxyForURL(url, host) {
   // ...
@@ -386,7 +386,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 <pre class="syntaxbox notranslate">weekdayRange(<var>wd1</var>, <var>wd2</var>, [<var>gmt</var>])</pre>
 
 <div class="note">
-<p><strong>注意：</strong> (Before Firefox 49) <code><var>wd1</var></code> must be less than <code><var>wd2</var></code> if you want the function to evaluate these parameters as a range. See the warning below.</p>
+<p><strong>注意：</strong> (Before Firefox 49) <code><var>wd1</var></code> must be less than <code><var>wd2</var></code> if you want the function to evaluate these parameters as a range. See the warning below.</p>
 </div>
 
 <h4 id="参数_12">参数</h4>
@@ -571,7 +571,7 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 <p>以上示例为 mozilla.org 域外所有主机使用代理，同时添加了例外使 <code>www.mozilla.org</code> 和 <code>merchant.mozilla.org</code> 也使用代理。</p>
 
 <div class="note">
-<p><strong>注意：</strong>以上例外的顺序影响效率：localHostOrDomainIs() 只在 URL 位于本地域内时执行，注意位于 || 外和  &amp;&amp; 前的括号。</p>
+<p><strong>注意：</strong>以上例外的顺序影响效率：localHostOrDomainIs() 只在 URL 位于本地域内时执行，注意位于 || 外和  &amp;&amp; 前的括号。</p>
 </div>
 
 <h2 id="例_3">例 3</h2>
@@ -718,7 +718,7 @@ if (shExpMatch(url, "http:*")) {
 <div class="note">
 <p>自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。</p>
 
-<p><code>isInNet()</code>， <code>isResolvable()</code> 和 <code>dnsResolve()</code> 应该谨慎使用，这些函数会进行  DNS 查询。其他函数则大都是字符处理函数，不需要 DNS 。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。</p>
+<p><code>isInNet()</code>， <code>isResolvable()</code> 和 <code>dnsResolve()</code> 应该谨慎使用，这些函数会进行  DNS 查询。其他函数则大都是字符处理函数，不需要 DNS 。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。</p>
 </div>
 
 <h2 id="历史与实现">历史与实现</h2>

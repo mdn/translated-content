@@ -52,19 +52,19 @@ translation_of: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
 <p>These properties currently do not have implementations in browsers, so you will need to use the physical properties at the present time and adjust for your writing mode.<br>
  这些属性当前在浏览器中没有实现，因此您需要在当前使用物理属性并根据您的写入模式进行调整。</p>
 
-<h2 id="Indicating_Overflow_指示溢出">Indicating Overflow 指示溢出</h2>
+<h2 id="Indicating_Overflow_指示溢出">Indicating Overflow 指示溢出</h2>
 
 <p>In the Level 3 Overflow specification we have some properties which can help improve the way content looks in an overflow situation.<br>
  在 3 级溢出规范中，我们有一些属性可以帮助改进溢出情况下内容的外观。</p>
 
-<h3 id="Inline-Axis_Overflow_内联轴溢出">Inline-Axis Overflow 内联轴溢出</h3>
+<h3 id="Inline-Axis_Overflow_内联轴溢出">Inline-Axis Overflow 内联轴溢出</h3>
 
 <p>The <code><a href="/en-US/docs/Web/CSS/text-overflow">text-overflow</a></code> property deals with text overflowing in the inline direction. It takes one of two values <code>clip</code>, in which case content is clipped when it overflows, this is the initial value and therefore the default behaviour. We also have <code>ellipsis</code> which renders an ellipsis, which may be replaced with a better character for the language or writing mode in use.<br>
  文本溢出属性处理内联方向的文本溢出。它采用两个值 clip 中的一个值，在这种情况下，内容在溢出时被剪裁，这是初始值，因此是默认行为。我们还有一个省略号，它呈现了一个省略号，可以用一个更好的字符来替换使用中的语言或书写模式。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/overflow/text-overflow.html", '100%', 500)}}</p>
 
-<h3 id="Block-Axis_Overflow_块轴溢出">Block-Axis Overflow 块轴溢出</h3>
+<h3 id="Block-Axis_Overflow_块轴溢出">Block-Axis Overflow 块轴溢出</h3>
 
 <p>There is also a proposal for a <code>block-overflow</code> property, although at the time of writing the name is still up for discussion. This proposal would enable the adding of an ellipsis when text overflows in the block dimension.<br>
  还有一个关于块溢出属性的建议，尽管在编写名称时仍有待讨论。此建议将允许在块维度中文本溢出时添加省略号。</p>
@@ -74,7 +74,7 @@ translation_of: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
 
 
 
-<h2 id="Summary_总结">Summary 总结</h2>
+<h2 id="Summary_总结">Summary 总结</h2>
 
 <p>Whether you are in continuous media on the web or in a Paged Media format such as print or EPUB, understanding how content overflows is useful when dealing with any layout method. By understanding how overflow works in normal flow, you should find it easier to understand the implications of overflow content in layout methods such as grid and flexbox.<br>
  无论您是在 Web 上的连续媒体中，还是在页面媒体格式（如 print 或 epub）中，了解在处理任何布局方法时内容溢出是如何有用的。通过了解正常流中溢出的工作方式，您应该会发现更容易理解布局方法（如网格和 FlexBox）中溢出内容的含义。</p>

@@ -22,7 +22,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <div>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}</div>
 
-<p>在现代网站和应用中另一个常见的任务是从服务端获取个别数据来更新部分网页而不用加载整个页面。 这看起来是小细节却对网站性能和行为产生巨大的影响。所以我们将在这篇文章介绍概念和技术使它成为可能，例如：XMLHttpRequest 和 Fetch API.</p>
+<p>在现代网站和应用中另一个常见的任务是从服务端获取个别数据来更新部分网页而不用加载整个页面。 这看起来是小细节却对网站性能和行为产生巨大的影响。所以我们将在这篇文章介绍概念和技术使它成为可能，例如：XMLHttpRequest 和 Fetch API.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -39,7 +39,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <h2 id="这里有什么问题">这里有什么问题？</h2>
 
-<p>最初加载页面很简单  -- 你为网站发送一个请求到服务器，只要没有出错你将会获取资源并显示网页到你的电脑上。</p>
+<p>最初加载页面很简单  -- 你为网站发送一个请求到服务器，只要没有出错你将会获取资源并显示网页到你的电脑上。</p>
 
 <p><img alt="A basic representation of a web site architecture" src="https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png" style="display: block; height: 134px; margin: 0px auto; width: 484px;"></p>
 
@@ -49,10 +49,10 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <p>这导致了创建允许网页请求小块数据（例如 <a href="/en-US/docs/Web/HTML">HTML</a>, {{glossary("XML")}}, <a href="/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a>, 或纯文本) 和 仅在需要时显示它们的技术，从而帮助解决上述问题。</p>
 
-<p>这是通过使用诸如 {{domxref("XMLHttpRequest")}} 之类的 API 或者 — 最近以来的 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 来实现。这些技术允许网页直接处理对服务器上可用的特定资源的 <a href="/en-US/docs/Web/HTTP">HTTP</a> 请求，并在显示之前根据需要对结果数据进行格式化。</p>
+<p>这是通过使用诸如 {{domxref("XMLHttpRequest")}} 之类的 API 或者 — 最近以来的 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 来实现。这些技术允许网页直接处理对服务器上可用的特定资源的 <a href="/en-US/docs/Web/HTTP">HTTP</a> 请求，并在显示之前根据需要对结果数据进行格式化。</p>
 
 <div class="note">
-<p><strong>注意：在早期，这种通用技术被称为</strong>Asynchronous JavaScript and XML<strong>（Ajax），</strong> 因为它倾向于使用{{domxref("XMLHttpRequest")}} 来请求 XML 数据。 但通常不是这种情况 (你更有可能使用 <code>XMLHttpRequest</code> 或 Fetch 来请求 JSON), 但结果仍然是一样的，术语“Ajax”仍然常用于描述这种技术。</p>
+<p><strong>注意：在早期，这种通用技术被称为</strong>Asynchronous JavaScript and XML<strong>（Ajax），</strong> 因为它倾向于使用{{domxref("XMLHttpRequest")}} 来请求 XML 数据。 但通常不是这种情况 (你更有可能使用 <code>XMLHttpRequest</code> 或 Fetch 来请求 JSON), 但结果仍然是一样的，术语“Ajax”仍然常用于描述这种技术。</p>
 </div>
 
 <p><img alt="A simple modern architecture for web sites" src="https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png" style="display: block; height: 235px; margin: 0px auto; width: 559px;"></p>
@@ -79,7 +79,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <h2 id="基本的Ajax请求">基本的 Ajax 请求</h2>
 
-<p>让我们看看使用{{domxref("XMLHttpRequest")}} 和 <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>如何处理这样的请求。对于这些例子，我们将从几个不同的文本文件中请求数据，并使用它们来填充内容区域。</p>
+<p>让我们看看使用{{domxref("XMLHttpRequest")}} 和 <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a>如何处理这样的请求。对于这些例子，我们将从几个不同的文本文件中请求数据，并使用它们来填充内容区域。</p>
 
 <p>这一系列文件将作为我们的假数据库; 在真正的应用程序中，我们更可能使用服务器端语言（如 PHP，Python 或 Node）从数据库请求我们的数据。不过，我们要保持简单，并专注于客户端部分。</p>
 
@@ -89,10 +89,10 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <ol>
  <li>
-  <p>为例子做些准备，将 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html">ajax-start.html</a> 和四个文本文件 — <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt">verse1.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt">verse2.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt">verse3.txt</a>,  <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt">verse4.txt</a> — 复制到你计算机上的一个新目录。在这个例子中，我们将通过 XHR 在下拉菜单中选择一首诗（您可能会认识 — "如果谷歌翻译可以翻译的话"）加载另一首诗。</p>
+  <p>为例子做些准备，将 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html">ajax-start.html</a> 和四个文本文件 — <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt">verse1.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt">verse2.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt">verse3.txt</a>,  <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt">verse4.txt</a> — 复制到你计算机上的一个新目录。在这个例子中，我们将通过 XHR 在下拉菜单中选择一首诗（您可能会认识 — "如果谷歌翻译可以翻译的话"）加载另一首诗。</p>
  </li>
  <li>
-  <p>在 {{htmlelement("script")}} 的内部，添加下面的代码。将 {{htmlelement("select")}} 和 {{htmlelement("pre")}} 元素的引用存储到变量中，并定义一个 {{domxref("GlobalEventHandlers.onchange","onchange")}} 事件处理函数，可以在 select 的值改变时， 将其值传递给 <code>updateDisplay()</code> 函数作为参数。 </p>
+  <p>在 {{htmlelement("script")}} 的内部，添加下面的代码。将 {{htmlelement("select")}} 和 {{htmlelement("pre")}} 元素的引用存储到变量中，并定义一个 {{domxref("GlobalEventHandlers.onchange","onchange")}} 事件处理函数，可以在 select 的值改变时， 将其值传递给 <code>updateDisplay()</code> 函数作为参数。 </p>
 
   <pre class="brush: js">const verseChoose = document.querySelector('select');
 const poemDisplay = document.querySelector('pre');
@@ -103,40 +103,40 @@ verseChoose.onchange = function() {
 };</pre>
  </li>
  <li>
-  <p>定义 <code>updateDisplay()</code> 函数。首先，将下面的代码块放在之前代码块的下面 - 这是函数的空壳：</p>
+  <p>定义 <code>updateDisplay()</code> 函数。首先，将下面的代码块放在之前代码块的下面 - 这是函数的空壳：</p>
 
   <pre class="brush: js">function updateDisplay(verse) {
 
 }</pre>
  </li>
  <li>
-  <p>我们将通过构造一个  指向我们要加载的文本文件的相对 URL  来启动我们的函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同 (除非在值属性中指定了不同的值) — 例如 "Verse 1". 相应的诗歌文本文件是 "verse1.txt", 并与 HTML 文件位于同一目录中，因此只需要文件名即可。</p>
+  <p>我们将通过构造一个  指向我们要加载的文本文件的相对 URL  来启动我们的函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同 (除非在值属性中指定了不同的值) — 例如 "Verse 1". 相应的诗歌文本文件是 "verse1.txt", 并与 HTML 文件位于同一目录中，因此只需要文件名即可。</p>
 
-  <p>但是，Web 服务器往往是区分大小写的，文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 V 转换为小写，删除空格，并在末尾添加.txt。  这可以通过 {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, 和 简单的 <a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings">string concatenation</a> 来完成。在 <code>updateDisplay()</code> 函数中添加以下代码：</p>
+  <p>但是，Web 服务器往往是区分大小写的，文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 V 转换为小写，删除空格，并在末尾添加.txt。  这可以通过 {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, 和 简单的 <a href="/en-US/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings">string concatenation</a> 来完成。在 <code>updateDisplay()</code> 函数中添加以下代码：</p>
 
   <pre class="brush: js">verse = verse.replace(" ", "");
 verse = verse.toLowerCase();
 let url = verse + '.txt';</pre>
  </li>
  <li>
-  <p>要开始创建 XHR 请求，您需要使用 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} 的构造函数创建一个新的请求对象。 你可以把这个对象叫做你喜欢的任何东西，但是我们会把它叫做 <code>request</code> 来保持简单。在之前的代码中添加以下内容：</p>
+  <p>要开始创建 XHR 请求，您需要使用 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} 的构造函数创建一个新的请求对象。 你可以把这个对象叫做你喜欢的任何东西，但是我们会把它叫做 <code>request</code> 来保持简单。在之前的代码中添加以下内容：</p>
 
   <pre class="brush: js">let request = new XMLHttpRequest();</pre>
  </li>
  <li>
-  <p>接下来，您需要使用 {{domxref("XMLHttpRequest.open","open()")}} 方法来指定用于从网络请求资源的 <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a> , 以及它的 URL 是什么。我们将在这里使用 <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> 方法，并将 URL 设置为我们的 <code>url</code> 变量。在你上面的代码中添加以下代码：</p>
+  <p>接下来，您需要使用 {{domxref("XMLHttpRequest.open","open()")}} 方法来指定用于从网络请求资源的 <a href="/en-US/docs/Web/HTTP/Methods">HTTP request method</a> , 以及它的 URL 是什么。我们将在这里使用 <code><a href="/en-US/docs/Web/HTTP/Methods/GET">GET</a></code> 方法，并将 URL 设置为我们的 <code>url</code> 变量。在你上面的代码中添加以下代码：</p>
 
   <pre class="brush: js">request.open('GET', url);</pre>
  </li>
  <li>
-  <p>接下来，我们将设置我们期待的响应类型 —  这是由请求的 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性定义的 — 作为 <code>text</code>.  这并不是绝对必要的 — XHR 默认返回文本 —但如果你想在以后获取其他类型的数据，养成这样的习惯是一个好习惯。接下来添加：</p>
+  <p>接下来，我们将设置我们期待的响应类型 —  这是由请求的 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性定义的 — 作为 <code>text</code>.  这并不是绝对必要的 — XHR 默认返回文本 —但如果你想在以后获取其他类型的数据，养成这样的习惯是一个好习惯。接下来添加：</p>
 
   <pre class="brush: js">request.responseType = 'text';</pre>
  </li>
  <li>
   <p>从网络获取资源是一个 {{glossary("asynchronous")}} "异步" 操作，这意味着您必须等待该操作完成（例如，资源从网络返回），然后才能对该响应执行任何操作，否则会出错，将被抛出错误。XHR 允许你使用它的 {{domxref("XMLHttpRequest.onload", "onload")}} 事件处理器来处理这个事件 — 当{{event("onload")}} 事件触发时（当响应已经返回时）这个事件会被运行。发生这种情况时， <code>response</code> 数据将在 XHR 请求对象的响应属性中可用。</p>
 
-  <p>在后面添加以下内容。 你会看到，在 <code>onload</code> 事件处理程序中，我们将 <code>poemDisplay</code>  ( {{htmlelement("pre")}} 元素 ) 的  <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> 设置为 {{domxref("XMLHttpRequest.response", "request.response")}} 属性的值。</p>
+  <p>在后面添加以下内容。 你会看到，在 <code>onload</code> 事件处理程序中，我们将 <code>poemDisplay</code>  ( {{htmlelement("pre")}} 元素 ) 的  <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> 设置为 {{domxref("XMLHttpRequest.response", "request.response")}} 属性的值。</p>
 
   <pre class="brush: js">request.onload = function() {
   poemDisplay.textContent = request.response;
@@ -169,10 +169,10 @@ verseChoose.value = 'Verse 1';</pre>
 
 <ol>
  <li>
-  <p>复制您之前完成的示例目录。(如果您没有通过以前的练习，创建一个新的目录。, 然后复制 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html">xhr-basic.html</a>和这四个文件 — <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt">verse1.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt">verse2.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt">verse3.txt</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt">verse4.txt</a>.)</p>
+  <p>复制您之前完成的示例目录。(如果您没有通过以前的练习，创建一个新的目录。, 然后复制 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html">xhr-basic.html</a>和这四个文件 — <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt">verse1.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt">verse2.txt</a>, <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt">verse3.txt</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt">verse4.txt</a>.)</p>
  </li>
  <li>
-  <p>在 <code>updateDisplay()</code> 里找到 XHR 那段代码：</p>
+  <p>在 <code>updateDisplay()</code> 里找到 XHR 那段代码：</p>
 
   <pre class="brush: js">let request = new XMLHttpRequest();
 request.open('GET', url);
@@ -204,13 +204,13 @@ request.send();</pre>
 
 <p>然后，你可以看到<code>.then()</code>方法连接到了<code>fetch()</code>末尾 - 这个方法是<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promises</code></a>的一部分，是一个用于执行异步操作的现代 JavaScript 特性。<code>fetch()</code>返回一个 promise，它将解析从服务器发回的响应。我们使用<code>then()</code>来运行一些后续代码，这是我们在其内部定义的函数。这相当于 XHR 版本中的<code>onload</code>事件处理程序。</p>
 
-<p>当<code>fetch()</code> promise 解析时，这个函数会自动将响应从服务器传递给参数。在函数内部，我们获取响应并运行其<code>text()</code>方法。这基本上将响应作为原始文本返回，这相当于在 XHR 版本中的<code>responseType = 'text'</code>。</p>
+<p>当<code>fetch()</code> promise 解析时，这个函数会自动将响应从服务器传递给参数。在函数内部，我们获取响应并运行其<code>text()</code>方法。这基本上将响应作为原始文本返回，这相当于在 XHR 版本中的<code>responseType = 'text'</code>。</p>
 
 <p>你会看到 <code>text()</code> 也返回了一个 promise, 所以我们连接另外一个 <code>.then()</code> 到它上面，在其中我们定义了一个函数来接收 <code>text()</code> promise 解析的生文本。</p>
 
-<p>在 promise 的函数内部，我们做的和在 XHR 版本中差不多— 设置 <a href="/en-US/docs/Web/HTML/Element/pre"> element represents preformatted text which is to be presented exactly as written in the HTML file."><code>&lt;pre&gt;</code></a> 元素的文本内容为 text 的值。</p>
+<p>在 promise 的函数内部，我们做的和在 XHR 版本中差不多— 设置 <a href="/en-US/docs/Web/HTML/Element/pre"> element represents preformatted text which is to be presented exactly as written in the HTML file."><code>&lt;pre&gt;</code></a> 元素的文本内容为 text 的值。</p>
 
-<h3 id="关于promises">关于 promises </h3>
+<h3 id="关于promises">关于 promises </h3>
 
 <p>当你第一次见到它们的时候，promises 会让你有点困惑，但现在不要太担心这个。在一段时间之后，您将会习惯它们，特别是当您了解更多关于现代 JavaScript api 的时候——大多数现代的 JavaScript api 都是基于 promises 的。</p>
 
@@ -224,7 +224,7 @@ request.send();</pre>
 
 <p>第一行是说‘’获取位于 url 里的资源 (<code>fetch(url)</code>)‘’和“然后当 promise 解析后运行指定的函数 (<code>.then(function() { ... })</code>)”。"解析"的意思是"在将来某一时刻完成指定的操作"。在本例中，指定的操作是从指定的 URL(使用 HTTP 请求) 获取资源，并返回对我们执行某些操作的响应。</p>
 
-<p>实际上，传递给 <code>then()</code> 是一段不会立即执行的代码 — 而是当返回响应时代码会被运行。注意，你还可以选择把你的 promise 保存到一个变量里，链接 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>.then()</code></a> 在相同的位置。下面的代码会做相同的事情。</p>
+<p>实际上，传递给 <code>then()</code> 是一段不会立即执行的代码 — 而是当返回响应时代码会被运行。注意，你还可以选择把你的 promise 保存到一个变量里，链接 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>.then()</code></a> 在相同的位置。下面的代码会做相同的事情。</p>
 
 <pre class="brush: js">let myFetch = fetch(url);
 
@@ -252,9 +252,9 @@ myFetch.then(function(response) {
   });
 }</pre>
 
-<p>response 对象有个 <a href="/en-US/docs/Web/API/Body/text"><code>text()</code></a>方法，获取响应主体中的原始数据 a 并把它转换成纯文本，那是我们想要的格式。它也返回一个 promise (解析结果文本字符串), 所以这里我们再使用 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>.then()</code></a>, 在里面我们再定义一个操作文本字符串的函数。我们设置诗歌的 <a href="/en-US/docs/Web/HTML/Element/pre"> element represents preformatted text which is to be presented exactly as written in the HTML file."><code>&lt;pre&gt;</code></a> 元素的 <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> 属性和这个文本字符串相同，这样就非常简单地解决了。</p>
+<p>response 对象有个 <a href="/en-US/docs/Web/API/Body/text"><code>text()</code></a>方法，获取响应主体中的原始数据 a 并把它转换成纯文本，那是我们想要的格式。它也返回一个 promise (解析结果文本字符串), 所以这里我们再使用 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>.then()</code></a>, 在里面我们再定义一个操作文本字符串的函数。我们设置诗歌的 <a href="/en-US/docs/Web/HTML/Element/pre"> element represents preformatted text which is to be presented exactly as written in the HTML file."><code>&lt;pre&gt;</code></a> 元素的 <code><a href="/en-US/docs/Web/API/Node/textContent">textContent</a></code> 属性和这个文本字符串相同，这样就非常简单地解决了。</p>
 
-<p>值得注意的是你可以直接将 promise 块 (<code>.then()</code>块，但也有其他类型) 链接到另一个的尾部，顺着链条将每个块的结果传到下一个块。 这使得 promises 非常强大。</p>
+<p>值得注意的是你可以直接将 promise 块 (<code>.then()</code>块，但也有其他类型) 链接到另一个的尾部，顺着链条将每个块的结果传到下一个块。 这使得 promises 非常强大。</p>
 
 <p>下面的代码块和我们原始的例子做的是相同的事，但它是不同的写法：</p>
 
@@ -264,15 +264,15 @@ myFetch.then(function(response) {
   poemDisplay.textContent = text;
 });</pre>
 
-<p>很多开发者更喜欢这种样式，因为它更扁平并且按理说对于更长的 promise 链它更容易读 — 每一个 promise(承诺）接续上一个 promise，而不是在上一个 promise 的里面 (会使得整个代码笨重起来，难以理解）。以上两种写法还有一个不同的地方是我们在<code>response.text()</code>  语句之前得包含一个 <code><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">return</a></code>  语句，用来把这一部分的结果传向 promise 链的下一段。</p>
+<p>很多开发者更喜欢这种样式，因为它更扁平并且按理说对于更长的 promise 链它更容易读 — 每一个 promise(承诺）接续上一个 promise，而不是在上一个 promise 的里面 (会使得整个代码笨重起来，难以理解）。以上两种写法还有一个不同的地方是我们在<code>response.text()</code>  语句之前得包含一个 <code><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Return_values">return</a></code>  语句，用来把这一部分的结果传向 promise 链的下一段。</p>
 
 <h3 id="你应该用哪种方法呢">你应该用哪种方法呢？</h3>
 
-<p>  这完全取决于你正在干的项目是啥样。XHR 已经面世非常之久，现在已经有了相当棒的跨浏览器支持。然而对于网页平台来说，Fetch 和 Promise 是新近的产物，除了 IE 和 Safari 浏览器不支持，别的浏览器大多提供了支持。（现在 Safari 也即将为 fetch 和 promise 提供支持）。</p>
+<p>  这完全取决于你正在干的项目是啥样。XHR 已经面世非常之久，现在已经有了相当棒的跨浏览器支持。然而对于网页平台来说，Fetch 和 Promise 是新近的产物，除了 IE 和 Safari 浏览器不支持，别的浏览器大多提供了支持。（现在 Safari 也即将为 fetch 和 promise 提供支持）。</p>
 
-<p>  如果你的项目需要支持年代久远的浏览器，那么使用 XHR 可能会更爽一些。如果你的项目比较激进而且你根本不管老版的浏览器吃不吃这套，那就选择 Fetch 吧老铁。</p>
+<p>  如果你的项目需要支持年代久远的浏览器，那么使用 XHR 可能会更爽一些。如果你的项目比较激进而且你根本不管老版的浏览器吃不吃这套，那就选择 Fetch 吧老铁。</p>
 
-<p>  话说回来，咱倒真应该两者都学学——因为使用 IE 浏览器的人们在变少，Fetch 会变得越来越流行（事实上 IE 已经没人管了，因为微软 Edge 浏览器的受宠），但在所有浏览器彻底支持 Fetch 之前，你可能还得和 XHR 纠缠一阵子。</p>
+<p>  话说回来，咱倒真应该两者都学学——因为使用 IE 浏览器的人们在变少，Fetch 会变得越来越流行（事实上 IE 已经没人管了，因为微软 Edge 浏览器的受宠），但在所有浏览器彻底支持 Fetch 之前，你可能还得和 XHR 纠缠一阵子。</p>
 
 <h2 id="一个更复杂的示例">一个更复杂的示例</h2>
 
@@ -299,7 +299,7 @@ myFetch.then(function(response) {
   }
 });</pre>
 
-<p>这看起来和我们之前看到的相似，只是第二个 promise 是在一个条件语句中。在条件下，我们检查返回的 response 是否成功 —  {{domxref("response.ok")}} 属性包含一个布尔变量，如果 response 是成功的 (e.g. <a href="/en-US/docs/Web/HTTP/Status/200">200 meaning "OK"</a>)，则是<code>true</code>；如果失败了，则是<code>false</code>。</p>
+<p>这看起来和我们之前看到的相似，只是第二个 promise 是在一个条件语句中。在条件下，我们检查返回的 response 是否成功 —  {{domxref("response.ok")}} 属性包含一个布尔变量，如果 response 是成功的 (e.g. <a href="/en-US/docs/Web/HTTP/Status/200">200 meaning "OK"</a>)，则是<code>true</code>；如果失败了，则是<code>false</code>。</p>
 
 <p>如果 response 成功，我们运行第二个 promise — 然而，这次我们使用 {{domxref("Body.json","json()")}}，而不是{{domxref("Body.text","text()")}}, 因为我们想要 response 返回的是一个结构化的 JSON 数据，而不是纯文本。</p>
 

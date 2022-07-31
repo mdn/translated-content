@@ -12,7 +12,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
 <div>{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}</div>
 
-<p>在上一篇文章，我们了解了如何通过 <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a> 让 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 离线工作。我们还可以更进一步，让用户如同本地应用一样在支持的移动浏览器上安装 web 应用。这篇文章讲述如何通过网页清单和添加到主屏特性来做到这一点。</p>
+<p>在上一篇文章，我们了解了如何通过 <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a> 让 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 离线工作。我们还可以更进一步，让用户如同本地应用一样在支持的移动浏览器上安装 web 应用。这篇文章讲述如何通过网页清单和添加到主屏特性来做到这一点。</p>
 
 <p>这些技术允许应用从设备主屏直接启动，而不需启动浏览器键入 URL。你的 Web 应用可以作为一等公民和原生应用肩并肩。这样可以使应用更易于访问，你还可以指定应用全屏运行，没有浏览器界面，这样看起来更像一个原生应用。</p>
 
@@ -79,7 +79,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
  <li><code>background_color</code>: 背景色，用于安装和显示启动画面时。</li>
 </ul>
 
-<p>一份网页清单最少需要 <code>name</code> 和一个图标 (带有 <code>src</code>, <code>size</code> 和 <code>type</code>)。最好也要提供 <code>description</code>、<code>short_name</code>、和 <code>start_url</code>。除了上述字段，还有一些其它的字段供您使用，请查看<a href="/en-US/docs/Web/Manifest">网页应用清单参考</a>获取详细信息。</p>
+<p>一份网页清单最少需要 <code>name</code> 和一个图标 (带有 <code>src</code>, <code>size</code> 和 <code>type</code>)。最好也要提供 <code>description</code>、<code>short_name</code>、和 <code>start_url</code>。除了上述字段，还有一些其它的字段供您使用，请查看<a href="/en-US/docs/Web/Manifest">网页应用清单参考</a>获取详细信息。</p>
 
 <h2 id="添加到主屏">添加到主屏</h2>
 
@@ -115,7 +115,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 <p>在本文中，我们学习了如何使用网页清单和安装到主屏特性让 PWA 可安装。</p>
 
-<p>为了获得添加到主屏的更多信息，请阅读<a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">添加到主屏指南</a>。 浏览器支持当前限于 Android 平台上的 Firefox 58+、Mobile Chrome、 Android Webview 31+ 以及 Android Opera 32+, 但是将来这些限制的影响会逐渐减小。</p>
+<p>为了获得添加到主屏的更多信息，请阅读<a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">添加到主屏指南</a>。 浏览器支持当前限于 Android 平台上的 Firefox 58+、Mobile Chrome、 Android Webview 31+ 以及 Android Opera 32+, 但是将来这些限制的影响会逐渐减小。</p>
 
 <p>现在让我们将目光转移到 PWA 的最后一个难点：通过推送通知再次启动（re-engagement）。</p>
 

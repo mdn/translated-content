@@ -18,7 +18,7 @@ original_slug: Web/API/FetchController/AbortController
 var controller = new AbortController();
 ```
 
-### Parameters
+### 参数
 
 无。
 

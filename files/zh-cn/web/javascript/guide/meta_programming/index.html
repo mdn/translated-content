@@ -27,7 +27,7 @@ p.a = 1;
 console.log(p.a, p.b); // 1, 42
 </pre>
 
-<p><code>Proxy</code> 对象定义了一个目标（这里是一个空对象）和一个实现了 <code>get</code> 陷阱的 handler 对象。这里，代理的对象在获取未定义的属性时不会返回 <code>undefined</code>，而是返回 42。</p>
+<p><code>Proxy</code> 对象定义了一个目标（这里是一个空对象）和一个实现了 <code>get</code> 陷阱的 handler 对象。这里，代理的对象在获取未定义的属性时不会返回 <code>undefined</code>，而是返回 42。</p>
 
 <p>更多例子参见 {{jsxref("Proxy")}} 页面 。</p>
 
@@ -69,7 +69,7 @@ console.log(p.a, p.b); // 1, 42
    <td>
     <ul>
      <li><code>getPrototypeOf</code>方法一定返回一个对象或<code>null</code>.</li>
-     <li>如果 <code>target</code> 不可扩展，<code>Object.getPrototypeOf(proxy)</code> 必须返回和 <code>Object.getPrototypeOf(target)</code>一样的值。</li>
+     <li>如果 <code>target</code> 不可扩展，<code>Object.getPrototypeOf(proxy)</code> 必须返回和 <code>Object.getPrototypeOf(target)</code>一样的值。</li>
     </ul>
    </td>
   </tr>
@@ -77,7 +77,7 @@ console.log(p.a, p.b); // 1, 42
    <td>{{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}</td>
    <td>{{jsxref("Object.setPrototypeOf()")}}<br>
     {{jsxref("Reflect.setPrototypeOf()")}}</td>
-   <td>如果 <code>target</code> 不可扩展，<code>prototype</code> 参数必须与<code>Object.getPrototypeOf(target)</code>的值相同。</td>
+   <td>如果 <code>target</code> 不可扩展，<code>prototype</code> 参数必须与<code>Object.getPrototypeOf(target)</code>的值相同。</td>
   </tr>
   <tr>
    <td>{{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}</td>
@@ -89,7 +89,7 @@ console.log(p.a, p.b); // 1, 42
    <td>{{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}</td>
    <td>{{jsxref("Object.preventExtensions()")}}<br>
     {{jsxref("Reflect.preventExtensions()")}}</td>
-   <td> 如果<code>Object.isExtensible(proxy)</code> 值为 <code>false，Object.preventExtensions(proxy)</code> 只返回<code>true。</code></td>
+   <td> 如果<code>Object.isExtensible(proxy)</code> 值为 <code>false，Object.preventExtensions(proxy)</code> 只返回<code>true。</code></td>
   </tr>
   <tr>
    <td>{{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</td>
@@ -97,7 +97,7 @@ console.log(p.a, p.b); // 1, 42
     {{jsxref("Reflect.getOwnPropertyDescriptor()")}}</td>
    <td>
     <ul>
-     <li><code>getOwnPropertyDescripton</code> 只能返回对象或者<code>undefined</code>.</li>
+     <li><code>getOwnPropertyDescripton</code> 只能返回对象或者<code>undefined</code>.</li>
      <li>A property cannot be reported as non-existent, if it exists as a non-configurable own property of the target object.</li>
      <li>A property cannot be reported as non-existent, if it exists as an own property of the target object and the target object is not extensible.</li>
      <li>A property cannot be reported as existent, if it does not exists as an own property of the target object and the target object is not extensible.</li>
@@ -200,7 +200,7 @@ console.log(p.a, p.b); // 1, 42
  </tbody>
 </table>
 
-<h2 id="撤销_Proxy">撤销 <code>Proxy</code></h2>
+<h2 id="撤销_Proxy">撤销 <code>Proxy</code></h2>
 
 <p>{{jsxref("Proxy.revocable()")}} 方法被用来创建可撤销的 <code>Proxy</code> 对象。这意味着 proxy 可以通过 <code>revoke</code> 函数来撤销，并且关闭代理。此后，代理上的任意的操作都会导致{{jsxref("TypeError")}}。</p>
 
@@ -230,7 +230,7 @@ typeof proxy            // "object", typeof doesn't trigger any trap</pre>
 <pre class="brush: js">Reflect.has(Object, "assign"); // true
 </pre>
 
-<h3 id="更好的_apply_函数">更好的 <code>apply</code> 函数</h3>
+<h3 id="更好的_apply_函数">更好的 <code>apply</code> 函数</h3>
 
 <p>在 ES5 中，我们通常使用 {{jsxref("Function.prototype.apply()")}} 方法调用一个具有给定 <code>this</code> 值和 <code>arguments</code> 数组（或<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">类数组对象</a>）的函数。</p>
 

@@ -67,11 +67,11 @@ var abyte = filestream.charCodeAt(x) &amp; 0xff; // 扔掉的高位字节 (f7)
 
 <p>上例从请求回来的二进制数据中得到偏移量为 x 处的字节。有效的偏移量范围是 0 到 <code>filestream.length-1</code>。</p>
 
-<p>查看 <a class="external" href="http://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html">使用 XMLHttpRequest 下载文件</a> 了解详情，查看<a href="/zh-cn/Code_snippets/Downloading_Files" title="zh-cn/Code_snippets/Downloading_Files">下载文件</a>。</p>
+<p>查看 <a href="http://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html">使用 XMLHttpRequest 下载文件</a> 了解详情，查看<a href="/zh-cn/Code_snippets/Downloading_Files">下载文件</a>。</p>
 
 <h2 id="发送二进制数据">发送二进制数据</h2>
 
-<p>XMLHttpRequest 对象的 <code>send</code> 方法已被增强，可以通过简单的传入一个 <a href="/zh-cn/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a>、{{ domxref("Blob") }} 或者 {{ domxref("File") }} 对象来发送二进制数据。</p>
+<p>XMLHttpRequest 对象的 <code>send</code> 方法已被增强，可以通过简单的传入一个 <a href="/zh-cn/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a>、{{ domxref("Blob") }} 或者 {{ domxref("File") }} 对象来发送二进制数据。</p>
 
 <p>下例创建了一个文本文件，并使用 <code>POST</code> 方法将该文件发送到了服务器上。你也可以使用文本文件之外的其他二进制数据类型。</p>
 
@@ -105,7 +105,7 @@ xhr.send(myArray);
 
 <p>上例新建了一个 512 字节的 8 比特整数的数组并发送它，当然，你也可以发送任意的二进制数据。</p>
 
-<div class="note"><strong>注意：</strong> 从 Gecko 9.0 {{ geckoRelease("9.0") }} 开始，添加了使用 XMLHttpRequest 发送 <a href="/zh-cn/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a> 对象的功能。</div>
+<div class="note"><strong>注意：</strong> 从 Gecko 9.0 {{ geckoRelease("9.0") }} 开始，添加了使用 XMLHttpRequest 发送 <a href="/zh-cn/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a> 对象的功能。</div>
 
 <h2 id="Submitting_forms_and_uploading_files">提交表单和上传文件</h2>
 
@@ -126,7 +126,7 @@ req.sendAsBinary(aBody);
 
 <p>第五行使用 <code>sendAsBinary()</code> 方法发送这个请求。</p>
 
-<p>你也可以通过将一个 <code>nsIFileInputStream</code> 对象实例传给 <a class="internal" href="/zh-cn/DOM/XMLHttpRequest#send()" title="/zh-cn/XMLHttpRequest#send()"><code>send()</code></a> 方法来发送二进制内容，这样的话，你不需要自己去设置 <code>Content-Length</code> 请求头的大小，程序会自动设置：</p>
+<p>你也可以通过将一个 <code>nsIFileInputStream</code> 对象实例传给 <a href="/zh-cn/DOM/XMLHttpRequest#send()"><code>send()</code></a> 方法来发送二进制内容，这样的话，你不需要自己去设置 <code>Content-Length</code> 请求头的大小，程序会自动设置：</p>
 
 <pre class="brush: js notranslate">// 新建一个文件流。
 var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]

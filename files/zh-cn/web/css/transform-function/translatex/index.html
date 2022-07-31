@@ -13,12 +13,12 @@ browser-compat: css.types.transform-function.translateX
 ---
 <div>{{CSSRef}}</div>
 
-<p>translateX() 函数表示在二维平面上水平方向移动元素。 其结果的数据类型是{{cssxref("&lt;transform-function&gt;")}}。</p>
+<p>translateX() 函数表示在二维平面上水平方向移动元素。 其结果的数据类型是{{cssxref("&lt;transform-function&gt;")}}。</p>
 
 <p><img src="https://mdn.mozillademos.org/files/3544/transform-functions-translateX_2.png" style="height: 146px; width: 243px;"></p>
 
 <div class="note">
-<p><strong>注意</strong>： <code>translateX(tx)</code>等同于 <a href="/en-US/docs/Web/CSS/transform-function/translate">translate</a>(tx, 0) 或者 <a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d</a>(tx, 0, 0)。</p>
+<p><strong>注意</strong>： <code>translateX(tx)</code>等同于 <a href="/en-US/docs/Web/CSS/transform-function/translate">translate</a>(tx, 0) 或者 <a href="/en-US/docs/Web/CSS/transform-function/translate3d">translate3d</a>(tx, 0, 0)。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -30,7 +30,7 @@ browser-compat: css.types.transform-function.translateX
 
 <dl>
  <dt><code>t</code></dt>
- <dt>     代表了向量平移的横坐标长度{{cssxref("&lt;length&gt;")}}。</dt>
+ <dt>     代表了向量平移的横坐标长度{{cssxref("&lt;length&gt;")}}。</dt>
 </dl>
 
 <table class="standard-table">
@@ -45,30 +45,30 @@ browser-compat: css.types.transform-function.translateX
  <tbody>
   <tr>
    <td colspan="1" rowspan="2">
-    <p>在ℝ<sup>2 </sup>空间中的平移并非线性变化，因此不能表示为笛卡尔坐标矩阵。</p>
+    <p>在ℝ<sup>2 </sup>空间中的平移并非线性变化，因此不能表示为笛卡尔坐标矩阵。</p>
    </td>
    <td>
-    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
+    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
 
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
+    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
 
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
+    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
    </td>
    <td colspan="1" rowspan="2">
-    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
+    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
 
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
+    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
 
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
+    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
    </td>
    <td colspan="1" rowspan="2">
-    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
+    <p><math> <mfenced><mtable><mtr>1 <mtd>0 </mtd><mtd>0 </mtd><mtd>t</mtd></mtr></mtable></mfenced></math></p>
 
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
+    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr>0 <mtd>1 </mtd><mtd>0 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
 
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
+    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>1 </mtd><mtd>0</mtd></mtr></mtable></mfenced></math></p>
 
-    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
+    <p><math><mfenced><mtable><mtr><mtd></mtd></mtr><mtr><mtd>0 </mtd><mtd>0 </mtd><mtd>0 </mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></p>
    </td>
   </tr>
   <tr>

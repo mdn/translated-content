@@ -21,7 +21,7 @@ translation_of: Web/API/Worker/postMessage
 
 <dl>
  <dt><em>aMessage</em></dt>
- <dd>The object to deliver to the worker; this will be in the data field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#transferable">structured clone</a> algorithm, which includes cyclical references.</dd>
+ <dd>The object to deliver to the worker; this will be in the data field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the <a href="/en-US/docs/Web/Guide/DOM/The_structured_clone_algorithm">structured clone</a> algorithm, which includes cyclical references.</dd>
  <dt><em>transferList</em> {{optional_inline}}</dt>
  <dd>一个可选的{{domxref("Transferable")}}对象的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">数组</a>，用于传递所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），并且只有在它被发送到的 worker 中可用。</dd>
  <dd>可转移对象是如{{domxref("ArrayBuffer")}}，{{domxref("MessagePort")}}或{{domxref("ImageBitmap")}}的实例对象。transferList 数组中不可传入 null。</dd>
@@ -48,7 +48,7 @@ second.onchange = function() {
 }
 </pre>
 
-<p>有关完整的示例，请参阅我们的<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+<p>有关完整的示例，请参阅我们的<a href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
 
 <div class="note">
 <p><strong>Note</strong>: <code>postMessage()</code> 一次只能发送一个对象。如上所示，如果你想传递多个值，可以使用数组。</p>

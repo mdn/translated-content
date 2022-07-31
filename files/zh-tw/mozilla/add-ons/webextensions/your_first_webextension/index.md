@@ -111,8 +111,6 @@ document.body.style.border = "5px solid red";
 
 在 Firefox 打開 about:debugging，點選 Load Temporary Add-on 然後選擇你的 manifest.json 檔案：
 
-{{EmbedYouTube("cer9EUKegG4")}}
-
 現在這個附加元件就要安裝起來，但它要在你重新啟動 Firefox 後才開始。
 
 又或者，你可以從命令列利用 [web-ext](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext) 工具執行 WebExtension。
@@ -121,13 +119,11 @@ document.body.style.border = "5px solid red";
 
 現在去看一下 mozilla.org 還有它下面的所有網頁。你應該會看到有個紅色外框圍繞著網頁。
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
+![Border displayed on mozilla.org](border_on_mozilla_org.png)
 
 > **備註：** 不過，別把這招用在 addons.mozilla.org 上，該網域目前會阻擋 content scripts。
 
 再做點小實驗吧。改一下腳本讓外框顏色改變，或是做其他更動。接著存檔，並按下 about:debugging 的 Reload 鍵重啟附加元件。現在你能看到更動了：
-
-{{EmbedYouTube("NuajE60jfGY")}}
 
 - [多了解一點附加元件的載入](/zh-TW/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 

@@ -20,7 +20,7 @@ translation_of: Web/API/IDBDatabase
 </div>
 
 <div class="note">
-<p><strong>注意</strong>：请注意，从 Firefox 40 开始，IndexedDB 事务具有宽松的持久性保证以提高性能（请参阅<a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" rel="noopener" title="FIXED: Switch IndexedDB transactions to be non-durable by default">bug 1112702</a>）以前在<code>readwrite</code>事务中<a class="new" href="/zh-CN/docs/Web/API/IDBTransaction/oncomplete" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBTransaction.oncomplete</code></a>被触发只有当所有数据都保证已刷新到磁盘时。在 Firefox 40+ 中，<code>complete</code>事件在操作系统被告知写入数据之后被触发，但可能在该数据实际上被刷新到磁盘之前。该<code>complete</code>因此，事件可以比以前更快地传递，但是，如果操作系统崩溃或者在将数据刷新到磁盘之前系统电源丢失，则整个事务将丢失的可能性很小。由于这种灾难性事件很少见，大多数消费者不应该进一步关注自己。如果由于某种原因必须确保持久性（例如，您要存储以后无法重新计算的关键数据），则可以<code>complete</code>通过使用实验（非标准）<code>readwriteflush</code>模式创建事务来强制事务在传递事件之前刷新到磁盘（请参阅<a class="new" href="/zh-CN/docs/Web/API/IDBDatabase/transaction" rel="nofollow" title="此页面仍未被本地化, 期待您的翻译!"><code>IDBDatabase.transaction</code></a>）。</p>
+<p><strong>注意</strong>：请注意，从 Firefox 40 开始，IndexedDB 事务具有宽松的持久性保证以提高性能（请参阅<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702">bug 1112702</a>）以前在<code>readwrite</code>事务中<a href="/zh-CN/docs/Web/API/IDBTransaction/oncomplete"><code>IDBTransaction.oncomplete</code></a>被触发只有当所有数据都保证已刷新到磁盘时。在 Firefox 40+ 中，<code>complete</code>事件在操作系统被告知写入数据之后被触发，但可能在该数据实际上被刷新到磁盘之前。该<code>complete</code>因此，事件可以比以前更快地传递，但是，如果操作系统崩溃或者在将数据刷新到磁盘之前系统电源丢失，则整个事务将丢失的可能性很小。由于这种灾难性事件很少见，大多数消费者不应该进一步关注自己。如果由于某种原因必须确保持久性（例如，您要存储以后无法重新计算的关键数据），则可以<code>complete</code>通过使用实验（非标准）<code>readwriteflush</code>模式创建事务来强制事务在传递事件之前刷新到磁盘（请参阅<a href="/zh-CN/docs/Web/API/IDBDatabase/transaction"><code>IDBDatabase.transaction</code></a>）。</p>
 </div>
 
 <h2 id="方法">方法</h2>
@@ -135,7 +135,7 @@ translation_of: Web/API/IDBDatabase
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>
 
 <p> </p>

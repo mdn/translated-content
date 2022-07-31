@@ -197,16 +197,13 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 
 ## 规范
 
-| 规范                                                                                     | 状态                                             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#listbox","ARIA listbox role")}}                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#Listbox","Listbox Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 屏幕阅读器支持
 
 TBD
 
-## 另见
+## 参见
 
 - {{HTMLElement("select")}} 元素
 - {{HTMLElement("label")}} 元素

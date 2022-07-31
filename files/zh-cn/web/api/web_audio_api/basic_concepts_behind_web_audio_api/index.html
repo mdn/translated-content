@@ -37,7 +37,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
  <li>直接通过 Javascript 生成声音节点产生（例如一个振动发声器）</li>
  <li>由脉冲编码调制产生的原始数据（音频环境中可以调用一些方法来解码部分支持的格式）</li>
  <li>从 HTML 元素中（例如 {{HTMLElement("video")}} 或者 {{HTMLElement("audio")}} 标签）</li>
- <li>直接通过一个 <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} 获取流媒体（例如一个摄像头或麦克风）</li>
+ <li>直接通过一个 <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} 获取流媒体（例如一个摄像头或麦克风）</li>
 </ul>
 
 <h2 id="音频数据：什么是样本">音频数据：什么是样本</h2>
@@ -78,7 +78,7 @@ var buffer = context.createBuffer(2, 22050, 44100);
 <p>如果你使用上面的方法调用，你将会得到一个立体声（两个声道）的音频片段 (Buffer)，当它在一个频率为 44100 赫兹（这是目前大部分声卡处理声音的频率）的音频环境中播放的时候，会持续 0.5 秒：22050 帧 / 44100 赫兹 = 0.5 秒。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 在 <a href="https://zh.wikipedia.org/zh-cn/數位音訊" title="Digital audio">数字音频</a> 中，<strong>44,100 <a href="https://wikipedia.org/wiki/Hertz" title="Hertz">赫兹</a></strong> （有时也写作 <strong>44.1 kHz</strong>）是一个常见的 <a href="https://wikipedia.org/wiki/Sampling_frequency" title="Sampling frequency">取样频率</a>。 为什么选取 44.1kHz 呢？首先，因为 <a href="https://wikipedia.org/wiki/Hearing_range" title="Hearing range">人耳的接收频率</a> 大约在 20 Hz 到 20,000 Hz 之间，根据 <a href="https://zh.wikipedia.org/wiki/采样定理" title="Nyquist–Shannon sampling theorem">采样定理</a>，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过 <a href="https://zh.wikipedia.org/zh-cn/低通滤波器" title="Low-pass filter">低通滤波器</a> ，否则 会发生<a href="https://zh.wikipedia.org/zh-cn/混疊" title="Aliasing">混叠</a>现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上 <a href="https://wikipedia.org/wiki/Transition_band" title="Transition band">过度频带（英文）</a>总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个 <a href="https://zh.wikipedia.org/zh-cn/抗混疊濾波器" title="Anti-aliasing filter">抗混叠滤波器</a> 才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。</p>
+<p><strong>注意：</strong> 在 <a href="https://zh.wikipedia.org/zh-cn/數位音訊">数字音频</a> 中，<strong>44,100 <a href="https://wikipedia.org/wiki/Hertz">赫兹</a></strong> （有时也写作 <strong>44.1 kHz</strong>）是一个常见的 <a href="https://wikipedia.org/wiki/Sampling_frequency">取样频率</a>。 为什么选取 44.1kHz 呢？首先，因为 <a href="https://wikipedia.org/wiki/Hearing_range">人耳的接收频率</a> 大约在 20 Hz 到 20,000 Hz 之间，根据 <a href="https://zh.wikipedia.org/wiki/采样定理">采样定理</a>，采样频率一定要大于最终生成数据最大频率的二倍，因此就一定要大于 40,000 Hz（即 40kHz）。不仅如此，在采样之前信号还必须通过 <a href="https://zh.wikipedia.org/zh-cn/低通滤波器">低通滤波器</a> ，否则 会发生<a href="https://zh.wikipedia.org/zh-cn/混疊">混叠</a>现象，一个理想低通滤波器会完全留下低于 20kHz 的信号（且没有使它衰减）并完美阻拦一切高于 20kHz 的信号，而事实上 <a href="https://wikipedia.org/wiki/Transition_band">过度频带（英文）</a>总是存在，在这个区域内信号会被部分衰减。这个频带越宽，建立一个 <a href="https://zh.wikipedia.org/zh-cn/抗混疊濾波器">抗混叠滤波器</a> 才越容易。因此我们选取 44.1kHz 允许我们有 2.05kHz 的空间预留给过度频带。</p>
 </div>
 
 <pre class="brush: js">var context = new AudioContext();

@@ -32,7 +32,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <p>但是表单同样也很复杂！开发者需要为表单编写 HTML，在服务器上验证，并且正确去除有害的数据（浏览器上也可能需要），对于任何不合法的字段，需要传给用户相应的错误信息，当数据成功提交后，处理数据，并设法通知用户提交成功。</p>
 
-<p>此教程将展示上述的操作，如何在 <em>Express </em>中实现。在此过程中，我们将扩展 LocalLibrary 网站，以允许用户创建，编辑和删除图书馆中的项目。</p>
+<p>此教程将展示上述的操作，如何在 <em>Express </em>中实现。在此过程中，我们将扩展 LocalLibrary 网站，以允许用户创建，编辑和删除图书馆中的项目。</p>
 
 <div class="note">
 <p><strong>注意：</strong> 我们还没有考虑如何将特定路由，限制为经过身份验证或授权的用户，因此在这个时间点，任何用户都可以对数据库进行更改。</p>
@@ -49,9 +49,9 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 <p>请注意，我非常建议您这里使用 input 的 submit 而不是 button！这会使你感到愉悦。</p>
 
 <pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
-    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
-    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
-    &lt;input type="submit" value="OK"&gt;
+    &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
+    &lt;input id="team_name" type="text" name="name_field" value="Default name for team."&gt;
+    &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
 <p>虽然这里，我们只包含一个（文本）字段，用于输入团队名称，但表单可能包含任意数量的其他输入元素，及其相关标签。字段的 <code>type </code>属性，定义将显示哪种窗口小部件。该字段的名称<code>name</code>和<code>id</code> ，用于标识 JavaScript/CSS/HTML 中的字段，而 <code>value</code>定义字段首次显示时的初始值。匹配团队标签使用<code style="font-style: normal; font-weight: normal;">label</code>标签，指定（请参阅上面的“输入名称” "Enter name"），其中 <code style="font-style: normal; font-weight: normal;">for </code>字段，包含<code style="font-style: normal; font-weight: normal;">input</code>相关输入的<code style="font-style: normal; font-weight: normal;">id</code>值。</p>
@@ -151,16 +151,16 @@ sanitizeBody('date').toDate(),</pre>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#validationresultreq">validationResult(req)</a></code>: 运行验证，以<code>validation</code>验证结果对象的形式，提供错误。这是在单独的回调中调用的，如下所示：
   <pre class="brush: js notranslate">(req, res, next) =&gt; {
-    // Extract the validation errors from a request.
-    const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    if (!errors.isEmpty()) {
-        // There are errors. Render form again with sanitized values/errors messages.
-        // Error messages can be returned in an array using `errors.array()`.
-        }
-    else {
-        // Data from form is valid.
-    }
+    if (!errors.isEmpty()) {
+        // There are errors. Render form again with sanitized values/errors messages.
+        // Error messages can be returned in an array using `errors.array()`.
+        }
+    else {
+        // Data from form is valid.
+    }
 }</pre>
   我们使用验证结果的<code>isEmpty()</code>方法，来检查是否存在错误，并使用其<code>array()</code>方法，来获取错误消息集合。有关更多信息，请参<a href="https://github.com/ctavan/express-validator#validation-result-api">阅验证结果 API</a>。</li>
 </ul>
@@ -190,7 +190,7 @@ sanitizeBody('date').toDate(),</pre>
 
 <p>首先我们可以知道（也许你会知道）应该先引入 express：</p>
 
-<p><code>const app=express();</code> </p>
+<p><code>const app=express();</code> </p>
 
 <p>这很好。</p>
 

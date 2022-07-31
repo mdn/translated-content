@@ -6,7 +6,7 @@ original_slug: Web/CSS/max()
 ---
 <div>{{CSSRef}}</div>
 
-<p><code><strong>max</strong></code><strong><code>()</code></strong> 这个 CSS 函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值 . <code>max()</code> 可以用于以下场合 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, 或 {{CSSxRef("&lt;integer&gt;")}} 。</p>
+<p><code><strong>max</strong></code><strong><code>()</code></strong> 这个 CSS 函数让你可以从一个逗号分隔的表达式列表中选择最大（正方向）的值作为属性的值 . <code>max()</code> 可以用于以下场合 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, 或 {{CSSxRef("&lt;integer&gt;")}} 。</p>
 
 <pre class="brush: css; no-line-numbers notranslate">/* property: max(expression [, expression]) */
 width: max(10vw, 4em, 80px);
@@ -16,9 +16,9 @@ width: max(10vw, 4em, 80px);
 
 <h2 id="语法">语法</h2>
 
-<p><code>max()</code> 方法接受一个或多个用逗号分隔的表达式作为他的参数，数值最大的表达式的值将会作为指定的属性的值。</p>
+<p><code>max()</code> 方法接受一个或多个用逗号分隔的表达式作为他的参数，数值最大的表达式的值将会作为指定的属性的值。</p>
 
-<p>表达式可以是数学运算 (可在 {{CSSxRef("calc", "calc()")}} 了解更多信息), 直接数值，或者是其他表达式，例如 attr()，这将会计算成一个合法的参数类型（例如 {{CSSxRef("&lt;length&gt;")}}），也可以是嵌套的  {{CSSxRef("min", "min()")}} 和 <code>max()</code> 函数。</p>
+<p>表达式可以是数学运算 (可在 {{CSSxRef("calc", "calc()")}} 了解更多信息), 直接数值，或者是其他表达式，例如 attr()，这将会计算成一个合法的参数类型（例如 {{CSSxRef("&lt;length&gt;")}}），也可以是嵌套的  {{CSSxRef("min", "min()")}} 和 <code>max()</code> 函数。</p>
 
 <p>你可以使用你的表达式中分别使用不同的单位。需要时，你也可以使用小括号来设定运算顺序。</p>
 
@@ -27,7 +27,7 @@ width: max(10vw, 4em, 80px);
 <ul>
  <li>Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables <em>may</em> be treated as if <code>auto</code> had been specified.</li>
  <li>It is permitted to nest <code>min()</code> and other <code>max()</code> functions as expression values. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.</li>
- <li>The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( * ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any &lt;length&gt; syntax value. </li>
+ <li>The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( * ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any &lt;length&gt; syntax value. </li>
  <li>Oftentimes you will want to combine <code>min()</code> and <code>max()</code> values, or use <code>max()</code> within a <code>clamp()</code> or <code>calc()</code> function.</li>
 </ul>
 

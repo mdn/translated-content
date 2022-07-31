@@ -23,7 +23,7 @@ translation_of: Web/API/IDBCursor/key
 
 <p>在该示例中，我们创建一个事务，检索一个存储对象，然后使用游标遍历所有存储在 object store 中的记录。遍历的过程中，我们把类似（相簿标题，这是我们的键 key），游标的 key 打印出来。</p>
 
-<p>我们可以不根据游标的 key 来选取数据；我们可以抓取所有。还要注意，在循环的每个迭代中，您可以使用 cursor.value.foo 从当前记录下获取数据。完整示例，请看<a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a>.)</p>
+<p>我们可以不根据游标的 key 来选取数据；我们可以抓取所有。还要注意，在循环的每个迭代中，您可以使用 cursor.value.foo 从当前记录下获取数据。完整示例，请看<a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/">view example live</a>.)</p>
 
 <pre style="font-size: 14px;">function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
@@ -61,5 +61,5 @@ translation_of: Web/API/IDBCursor/key
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>
