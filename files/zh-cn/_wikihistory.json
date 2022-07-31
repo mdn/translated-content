@@ -7951,13 +7951,6 @@
       "jack_chen"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/addHitRegion": {
-    "modified": "2020-05-08T12:57:25.872Z",
-    "contributors": [
-      "Yayure",
-      "ice-i-snow"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/arc": {
     "modified": "2019-09-29T12:06:14.549Z",
     "contributors": [
@@ -7992,13 +7985,6 @@
     "modified": "2020-10-15T21:34:07.928Z",
     "contributors": [
       "zhangchen",
-      "ice-i-snow"
-    ]
-  },
-  "Web/API/CanvasRenderingContext2D/clearHitRegions": {
-    "modified": "2020-05-08T13:01:10.208Z",
-    "contributors": [
-      "Yayure",
       "ice-i-snow"
     ]
   },
@@ -8284,13 +8270,6 @@
   "Web/API/CanvasRenderingContext2D/rect": {
     "modified": "2019-03-23T22:53:31.279Z",
     "contributors": [
-      "ice-i-snow"
-    ]
-  },
-  "Web/API/CanvasRenderingContext2D/removeHitRegion": {
-    "modified": "2020-05-08T13:03:28.767Z",
-    "contributors": [
-      "Yayure",
       "ice-i-snow"
     ]
   },
@@ -8671,20 +8650,6 @@
       "wth",
       "Dengjiansheng",
       "ziyunfei",
-      "jasonworg"
-    ]
-  },
-  "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility": {
-    "modified": "2019-03-18T21:11:42.305Z",
-    "contributors": [
-      "fenyu",
-      "bluelifeleer",
-      "May",
-      "luojia",
-      "codingwangxiansen",
-      "ziyunfei",
-      "Sheppy",
-      "fiona23",
       "jasonworg"
     ]
   },
