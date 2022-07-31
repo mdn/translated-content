@@ -131,7 +131,7 @@ Dans cet exemple, on utilise `<aside>` afin de baliser un paragraphe d'un articl
 
 ### Résultat
 
-{{EmbedLiveSample("example", "100%", 150)}}
+{{EmbedLiveSample("Exemple", "100%", 150)}}
 
 ## Spécifications
 

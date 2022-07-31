@@ -28,7 +28,7 @@ Bien que le navigateur empêche généralement l'utilisateur de saisir plus de t
 <input type="password" maxlength="4"/>
 ```
 
-{{EmbedLiveSample('examples', '', 100)}}
+{{EmbedLiveSample('Exemple', '', 100)}}
 
 ## Spécifications
 

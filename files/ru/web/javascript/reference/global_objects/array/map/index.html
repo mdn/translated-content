@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox">let <var>new_array</var> = <var>arr</var>.map(function <var>callback</var>( <var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
+<pre class="syntaxbox">const <var>new_array</var> = <var>arr</var>.map(function <var>callback</var>( <var>currentValue</var>[, <var>index</var>[, <var>array</var>]]) {
     // Возвращает элемент для new_array
 }[, <var>thisArg</var>])</pre>
 
@@ -69,8 +69,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <p>Следующий код берёт массив чисел и создаёт новый массив, содержащий квадратные корни чисел из первого массива.</p>
 
-<pre class="brush: js">var numbers = [1, 4, 9];
-var roots = numbers.map(Math.sqrt);
+<pre class="brush: js">
+const numbers = [1, 4, 9];
+const roots = numbers.map(Math.sqrt);
 // теперь roots равен [1, 2, 3], а numbers всё ещё равен [1, 4, 9]
 </pre>
 
@@ -78,10 +79,9 @@ var roots = numbers.map(Math.sqrt);
 
 <p>Следующий код показывает, как работает отображение, когда функция требует один аргумент. Аргумент будет автоматически присваиваться каждому элементу массива, когда <code>map</code> проходит по оригинальному массиву.</p>
 
-<pre class="brush: js">var numbers = [1, 4, 9];
-var doubles = numbers.map(function(num) {
-  return num * 2;
-});
+<pre class="brush: js">
+const numbers = [1, 4, 9];
+const doubles = numbers.map((num) => num * 2);
 // теперь doubles равен [2, 8, 18], а numbers всё ещё равен [1, 4, 9]
 </pre>
 
@@ -89,31 +89,29 @@ var doubles = numbers.map(function(num) {
 
 <p>Этот пример показывает, как использовать <code>map</code> на объекте строки {{jsxref("Global_Objects/String", "String")}} для получения массива байт в кодировке ASCII, представляющего значения символов:</p>
 
-<pre class="brush: js">var map = Array.prototype.map;
-var a = map.call('Hello World', function(x) { return x.charCodeAt(0); });
-// теперь a равен [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+<pre class="brush: js">
+const map = Array.prototype.map;
+const charCodes = map.call('Hello World', (x) => x.charCodeAt(0));
+// теперь charCodes равен [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 </pre>
 
 <h3 id="Example_using_map_generically_querySelectorAll">Пример: обобщённое использование <code>map</code> вместе с <code>querySelectorAll</code></h3>
 
 <p>Этот пример показывает, как пройтись по коллекции объектов, собранных с помощью <code>querySelectorAll</code>. В данном случае мы получаем все выбранные опции на экране и печатаем их в консоль:</p>
 
-<pre class="brush: js">var elems = document.querySelectorAll('select option:checked');
-var values = [].map.call(elems, function(obj) {
-  return obj.value;
-});
+<pre class="brush: js">
+const elems = document.querySelectorAll('select option:checked');
+const values = Array.prototype.map.call(elems, ({ value }) => value);
 </pre>
 
 <p>Более простым способом будет использование метода {{jsxref("Array.from()")}}.</p>
 
 <h3 id="Example_Using_map_to_reverse_a_string">Пример: использование <code>map</code> для переворачивания строки</h3>
 
-<pre class="brush: js">var str = '12345';
-[].map.call(str, function(x) {
-  return x;
-}).reverse().join('');
-
-// Вывод: '54321'
+<pre class="brush: js">
+const string = '12345';
+const reversed = Array.prototype.map.call(string, (x) => x).reverse().join('');
+// reversed равен '54321'
 // Бонус: используйте '===' для проверки того, является ли строка палиндромом
 </pre>
 
@@ -137,112 +135,13 @@ var values = [].map.call(elems, function(obj) {
 // Третий аргумент игнорируется parseInt, но не второй, следовательно,
 // возможна путаница. Смотрите запись в блоге для дополнительной информации.
 
-function returnInt(element) {
-  return parseInt(element, 10);
-}
+const returnInt = (element) => parseInt(element, 10);
 
 ['1', '2', '3'].map(returnInt);
 // Результатом является массив чисел (как и ожидалось)
 
 // Простейший способ добиться вышеозначенного поведения и избежать чувства "чё за!?":
 ['1', '2', '3'].map(Number); // [1, 2, 3]
-</pre>
-
-<h2 id="Polyfill">Полифил</h2>
-
-<p>Метод <code>map</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>map</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Global_Objects/Object", "Object")}}, {{jsxref("Global_Objects/TypeError", "TypeError")}} и {{jsxref("Global_Objects/Array", "Array")}} имеют свои первоначальные значения и что <code>callback.call</code> вычисляется в оригинальное значение {{jsxref("Function.prototype.call")}}.</p>
-
-<pre class="brush: js">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.19
-// Ссылка (en): http://es5.github.com/#x15.4.4.19
-// Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.19
-if (!Array.prototype.map) {
-
-  Array.prototype.map = function(callback, thisArg) {
-
-    var T, A, k;
-
-    if (this == null) {
-      throw new TypeError(' this is null or not defined');
-    }
-
-    // 1. Положим O равным результату вызова ToObject с передачей ему
-    //    значения |this| в качестве аргумента.
-    var O = Object(this);
-
-    // 2. Положим lenValue равным результату вызова внутреннего метода Get
-    //    объекта O с аргументом "length".
-    // 3. Положим len равным ToUint32(lenValue).
-    var len = O.length &gt;&gt;&gt; 0;
-
-    // 4. Если вызов IsCallable(callback) равен false, выкидываем исключение TypeError.
-    // Смотрите (en): http://es5.github.com/#x9.11
-    // Смотрите (ru): http://es5.javascript.ru/x9.html#x9.11
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
-    }
-
-    // 5. Если thisArg присутствует, положим T равным thisArg; иначе положим T равным undefined.
-    if (arguments.length &gt; 1) {
-      T = thisArg;
-    }
-
-    // 6. Положим A равным новому массиву, как если бы он был создан выражением new Array(len),
-    //    где Array является стандартным встроенным конструктором с этим именем,
-    //    а len является значением len.
-    A = new Array(len);
-
-    // 7. Положим k равным 0
-    k = 0;
-
-    // 8. Пока k &lt; len, будем повторять
-    while (k &lt; len) {
-
-      var kValue, mappedValue;
-
-      // a. Положим Pk равным ToString(k).
-      //   Это неявное преобразование для левостороннего операнда в операторе in
-      // b. Положим kPresent равным результату вызова внутреннего метода HasProperty
-      //    объекта O с аргументом Pk.
-      //   Этот шаг может быть объединён с шагом c
-      // c. Если kPresent равен true, то
-      if (k in O) {
-
-        // i. Положим kValue равным результату вызова внутреннего метода Get
-        //    объекта O с аргументом Pk.
-        kValue = O[k];
-
-        // ii. Положим mappedValue равным результату вызова внутреннего метода Call
-        //     функции callback со значением T в качестве значения this и списком
-        //     аргументов, содержащим kValue, k и O.
-        mappedValue = callback.call(T, kValue, k, O);
-
-        // iii. Вызовем внутренний метод DefineOwnProperty объекта A с аргументами
-        // Pk, Описатель Свойства
-        // { Value: mappedValue,
-        //   Writable: true,
-        //   Enumerable: true,
-        //   Configurable: true }
-        // и false.
-
-        // В браузерах, поддерживающих Object.defineProperty, используем следующий код:
-        // Object.defineProperty(A, k, {
-        //   value: mappedValue,
-        //   writable: true,
-        //   enumerable: true,
-        //   configurable: true
-        // });
-
-        // Для лучшей поддержки браузерами, используем следующий код:
-        A[k] = mappedValue;
-      }
-      // d. Увеличим k на 1.
-      k++;
-    }
-
-    // 9. Вернём A.
-    return A;
-  };
-}
 </pre>
 
 <h2 id="Specifications">Спецификации</h2>
@@ -258,6 +157,7 @@ if (!Array.prototype.map) {
 <h2 id="See_also">Смотрите также</h2>
 
 <ul>
+ <li><a href="https://github.com/zloirock/core-js#ecmascript-array">Polyfill of Array.prototype.map in core-js</a></li>
  <li>{{jsxref("Array.prototype.forEach()")}}</li>
  <li>объект {{jsxref("Map")}}</li>
  <li>{{jsxref("Array.from()")}}</li>

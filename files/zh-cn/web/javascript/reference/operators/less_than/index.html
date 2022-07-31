@@ -13,14 +13,14 @@ translation_of: Web/JavaScript/Reference/Operators/Less_than
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"> x &lt; y</pre>
+<pre class="syntaxbox"> x &lt; y</pre>
 
 <h2 id="Description">Description</h2>
 
 <p>The operands are compared using the <a href="https://tc39.es/ecma262/#sec-abstract-relational-comparison">Abstract Relational Comparison</a> algorithm, which is roughly summarised below:</p>
 
 <ul>
- <li>First, objects are converted to primitives using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive">Symbol.ToPrimitive</a></code> with the <code>hint</code> parameter be <code>'number'</code>.</li>
+ <li>First, objects are converted to primitives using <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive">Symbol.ToPrimitive</a></code> with the <code>hint</code> parameter be <code>'number'</code>.</li>
  <li>If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.</li>
  <li>Otherwise JavaScript attempts to convert non-numeric types to numeric values:
   <ul>
@@ -38,13 +38,13 @@ translation_of: Web/JavaScript/Reference/Operators/Less_than
 
 <h3 id="String_to_string_comparison">String to string comparison</h3>
 
-<pre class="brush: js notranslate">console.log("a" &lt; "b");        // true
+<pre class="brush: js">console.log("a" &lt; "b");        // true
 console.log("a" &lt; "a");        // false
 console.log("a" &lt; "3");        // false</pre>
 
 <h3 id="String_to_number_comparison">String to number comparison</h3>
 
-<pre class="brush: js notranslate">console.log("5" &lt; 3);          // false
+<pre class="brush: js">console.log("5" &lt; 3);          // false
 console.log("3" &lt; 3);          // false
 console.log("3" &lt; 5);          // true
 
@@ -56,18 +56,18 @@ console.log("3" &lt; 5n);         // true</pre>
 
 <h3 id="Number_to_Number_comparison">Number to Number comparison</h3>
 
-<pre class="brush: js notranslate">console.log(5 &lt; 3);            // false
+<pre class="brush: js">console.log(5 &lt; 3);            // false
 console.log(3 &lt; 3);            // false
 console.log(3 &lt; 5);            // true</pre>
 
 <h3 id="Number_to_BigInt_comparison">Number to BigInt comparison</h3>
 
-<pre class="brush: js notranslate">console.log(5n &lt; 3);           // false
+<pre class="brush: js">console.log(5n &lt; 3);           // false
 console.log(3 &lt; 5n);           // true</pre>
 
 <h3 id="Comparing_Boolean_null_undefined_NaN">Comparing Boolean, null, undefined, NaN</h3>
 
-<pre class="brush: js notranslate">console.log(true &lt; false);     // false
+<pre class="brush: js">console.log(true &lt; false);     // false
 console.log(false &lt; true);     // true
 
 console.log(0 &lt; true);         // true
@@ -76,30 +76,21 @@ console.log(true &lt; 1);         // false
 console.log(null &lt; 0);         // false
 console.log(null &lt; 1);         // true
 
-console.log(undefined &lt; 3);    // false
-console.log(3 &lt; undefined);    // false
+console.log(undefined &lt; 3);    // false
+console.log(3 &lt; undefined);    // false
 
 console.log(3 &lt; NaN);          // false
 console.log(NaN &lt; 3);          // false</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 
 
-<p>{{Compat("javascript.operators.less_than")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

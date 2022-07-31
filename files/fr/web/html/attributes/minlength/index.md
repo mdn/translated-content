@@ -41,7 +41,7 @@ input:invalid:focus {
 }
 ```
 
-{{EmbedLiveSample('examples', '', 40)}}
+{{EmbedLiveSample('Exemples', '', 40)}}
 
 ## Spécifications
 

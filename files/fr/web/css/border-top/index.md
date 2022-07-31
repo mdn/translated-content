@@ -51,11 +51,11 @@ Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe q
 
 ### Valeurs
 
-- `<br-width> `
+- `<br-width>`
   - : Voir {{cssxref("border-top-width")}}.
-- `<br-style> `
+- `<br-style>`
   - : Voir {{cssxref("border-top-style")}}.
-- `<color> `
+- `<color>`
   - : Voir {{cssxref("border-top-color")}}.
 
 ### Syntaxe formelle

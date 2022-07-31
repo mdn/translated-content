@@ -49,27 +49,33 @@ Une autre indication (implicite) que la méthode PATCH est autorisée est la pr�
 
 ## Syntaxe
 
-    PATCH /file.txt HTTP/1.1
+```
+PATCH /file.txt HTTP/1.1
+```
 
 ## Exemple
 
 ### Requête
 
-    PATCH /file.txt HTTP/1.1
-    Host: www.example.com
-    Content-Type: application/example
-    If-Match: "e0023aa4e"
-    Content-Length: 100
+```
+PATCH /file.txt HTTP/1.1
+Host: www.example.com
+Content-Type: application/example
+If-Match: "e0023aa4e"
+Content-Length: 100
 
-    [description des changements]
+[description des changements]
+```
 
 ### Réponse
 
 Une requête traitée avec succès retourne une réponse accompagnée d'un code de réponse {{HTTPStatus("204")}}. Dans ce cas-ci, la réponse ne contient un corps de message.
 
-    HTTP/1.1 204 No Content
-    Content-Location: /file.txt
-    ETag: "e0023aa4f"
+```
+HTTP/1.1 204 No Content
+Content-Location: /file.txt
+ETag: "e0023aa4f"
+```
 
 ## Spécifications
 

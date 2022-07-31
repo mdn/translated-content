@@ -56,7 +56,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('exemple', '100%', 400)}}
+{{EmbedLiveSample('Exemple', '100%', 400)}}
 
 Quand deux segments de ligne se recontrent en angle aigu, et la liaison définit par {{ SVGAttr("stroke-linejoin") }} vaut `miter`, il est possible que le coin s'étende bien au-delà de l'épaisseur de la ligne du contour. Le ratio `stroke-miterlimit` est utilisé pour définir une limite à partir de laquelle la liaison est convertie de _miter_ à _bevel_.
 
@@ -76,7 +76,6 @@ Par exemple, une limite de 1.414 convertit une liaison _miter_ en _bevel_ pour l
         <strong
           ><a
             href="/fr/SVG/Content_type#Number"
-            title="en/SVG/Content_type#Number"
             >&#x3C;number></a
           ></strong
         >

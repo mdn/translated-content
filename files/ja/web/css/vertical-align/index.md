@@ -88,11 +88,11 @@ vertical-align: unset;
 - `baseline` (および `sub`, `super`, `text-top`, `text-bottom`, `<length>`, `<percentage>`)
   - : セルのベースラインを、行内でベースライン揃えにされた他のすべてのセルのベースラインに揃えます。
 - `top`
-  - : セルの上端のパディング境界を行の上端に揃えます。
+  - : セルの上端のパディング辺を行の上端に揃えます。
 - `middle`
   - : セルのパディングボックスが行の中央になるようにします。
 - `bottom`
-  - : セルの下端のパディング境界を行の下端に揃えます。
+  - : セルの下端のパディング辺を行の下端に揃えます。
 
 負の値を使用することができます。
 
@@ -174,7 +174,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Vertical_alignment_in_a_line_box", '100%', 160, "", "")}}
+{{EmbedLiveSample("Vertical_alignment_in_a_line_box", 1200, 160)}}
 
 <h3 id="Vertical_alignment_in_a_table_cell">表のセル内での垂直方向の配置</h3>
 
@@ -218,7 +218,7 @@ td {
 
 #### 結果
 
-{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", '100%', 230, "", "")}}
+{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", 1200, 230)}}
 
 ## 仕様書
 

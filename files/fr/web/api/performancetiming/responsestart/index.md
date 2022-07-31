@@ -30,8 +30,7 @@ let time = performanceTiming.responseStart;
 
 | Spécification                                                                                                                                                | Statut                                   | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-responsestart',
-        'PerformanceTiming.responseStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-responsestart', 'PerformanceTiming.responseStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

@@ -18,8 +18,10 @@ La syntaxe **`get`** permet de lier une propriété d'un objet à une fonction q
 
 ## Syntaxe
 
-    {get prop() { ... } }
-    {get [expression]() { ... } }
+```js
+{get prop() { ... } }
+{get [expression]() { ... } }
+```
 
 ### Paramètres
 
@@ -44,7 +46,7 @@ Un _accesseur_ peut être supprimé grâce à l'opérateur {{jsxref("Opérateurs
 
 ### Définir un accesseur avec l'opérateur `get`
 
-Ce code va créer une pseudo-propriété `dernier` de l'objet `o` qui va retourner la dernière entrée du tableau `o.journal `:
+Ce code va créer une pseudo-propriété `dernier` de l'objet `o` qui va retourner la dernière entrée du tableau `o.journal`&nbsp;:
 
 ```js
 var o = {

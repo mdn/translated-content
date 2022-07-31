@@ -20,9 +20,11 @@ La méthode **`fill()`** remplit tous les éléments d'un tableau entre deux ind
 
 ## Syntaxe
 
-    arr.fill(valeur)
-    arr.fill(valeur, début)
-    arr.fill(valeur, début, fin)
+```js
+arr.fill(valeur)
+arr.fill(valeur, début)
+arr.fill(valeur, début, fin)
+```
 
 ### Paramètres
 
@@ -121,7 +123,7 @@ if (!Array.prototype.fill) {
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

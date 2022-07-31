@@ -1,0 +1,43 @@
+---
+title: GlobalEventHandlers.onfocus
+slug: Web/API/Window/focus_event
+translation_of: Web/API/GlobalEventHandlers/onfocus
+original_slug: Web/API/GlobalEventHandlers/onfocus
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<p>La propiedad <strong>onfocus</strong> devuelve un manejador de eventos para el evento onFocus en el elemento actual.</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox">element.onfocus = <em>event handling code</em>
+</pre>
+
+<h2 id="Notas">Notas</h2>
+
+<p>El evento focus se dispara cuando el usuario establece el foco en el elemento.</p>
+
+<p>Para que el evento <code>onfocus</code> se dispare en elementos que no sean inputs, los mismos deben establecerse con el atributo  {{htmlattrxref("tabindex")}}  (vea <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a> para mas detalles).</p>
+
+<p>A diferencia de MSIE, en que casi toda clase de elemento puede recibir el evento focus,  en los navegadores Gecko en los que casi todos los elementos NO reciben este evento.</p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onfocus','onfocus')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_con_los_Navegadores">Compatibilidad con los Navegadores</h2>
+
+{{Compat("api.GlobalEventHandlers.onfocus")}}

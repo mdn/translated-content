@@ -1,4 +1,4 @@
-# MDN yari-content-ko 팀에 대한 일반 지침 
+# MDN yari-content-ko 팀에 대한 일반 지침
 
 ## yari-content-ko 구성원 변경에 대한 일반 지침
 
@@ -21,10 +21,9 @@
 
 ### 과거 구성원
 
-- [@cos18](https://github.com/cos18)
-
 ### 현재 구성원
 
+- [@cos18](https://github.com/cos18)
 - [@yechoi42](https://github.com/yechoi42)
 - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
 - [@pje1740](https://github.com/pje1740)

@@ -29,7 +29,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('exemple', '100', '100')}}
+{{EmbedLiveSample('Exemple', '100', '100')}}
 
 ## Attributs
 

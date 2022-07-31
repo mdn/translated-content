@@ -22,7 +22,7 @@ foo = true;  // foo становится типа Boolean
 
 <h2 id="Типы_данных">Типы данных</h2>
 
-<p>Стандарт ECMAScript определяет 9 типов:</p>
+<p>Стандарт ECMAScript определяет 8 типов:</p>
 
 <ul>
  <li>6 типов данных являющихся примитивами:
@@ -37,10 +37,11 @@ foo = true;  // foo становится типа Boolean
  </li>
  <li>{{Glossary("Null")}} (Null тип ) : <code>typeof instance === "object"</code>. Специальный примитив, используемый не только для данных но и в качестве указателя на финальную точку в <a href="/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Цепочке Прототипов</a>;</li>
  <li>{{Glossary("Object")}} (Объект) : <code>typeof instance === "object"</code>. Простая структура, используемая не только для хранения данных, но и для создания других структур, где любая структура создаётся с использованием ключевого слова <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/new">new</a></code>: new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Set">Set</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet">WeakSet</a>, new <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a> и множество других структур;</li>
- <li>и {{Glossary("Function")}} : <code>typeof instance === "function"</code>. Специальный случай, упрощающий определение типа для Функций, несмотря на то, что все функции конструктивно унаследованы от Object.</li>
 </ul>
 
 <p>И здесь нам необходимо сделать предостережение относительно использования оператора <code>typeof</code> для определения типа структур, т.к. все структуры будут возвращать <code>"object"</code> при его использовании, так как назначение <code>typeof</code> -- проверка типа данных, но не структур. Если проверить тип структуры всё же необходимо, то в этом случае желательно использовать оператор <a href="/ru/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a>, так как именно он отвечает на вопрос о том, какой конструктор был использован для создания структуры.</p>
+
+<p>Стоит отметить два особых случая работы оператора <code>typeof</code>: возврат <code>"object"</code> для значения <code>null</code> и <code>"function"</code> для функций: первое принято считать ошибкой языка, сохраненной ради обратной совместимости, второе является условностью, удобной для проверки на принадлежность значения категории функций, где функция - это особый, "вызываемый", объект.</p>
 
 <h2 id="Примитивные_значения">Примитивные значения</h2>
 

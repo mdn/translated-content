@@ -124,7 +124,7 @@ Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un 
 
 Le résultat de cet extrait HTML ressemble à ceci :
 
-{{EmbedLiveSample("example", 640, 200)}}
+{{EmbedLiveSample("Exemple", 640, 200)}}
 
 ## Spécifications
 

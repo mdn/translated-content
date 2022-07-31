@@ -5,7 +5,7 @@ translation_of: Web/CSS/-moz-outline-radius-bottomright
 ---
 {{Non-standard_header}}{{CSSRef}}
 
-Dans les applications Mozilla, la propriété **`-moz-outline-radius-`\*\***`bottomright`\*\* définit l'arrondi du coin inférieur droit du contour.
+Dans les applications Mozilla, la propriété **`-moz-outline-radius-bottomright`** définit l'arrondi du coin inférieur droit du contour.
 
 ## Exemples
 

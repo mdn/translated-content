@@ -9,11 +9,11 @@ translation_of: Web/API/WebGLShader
 ---
 {{APIRef("WebGL")}}
 
-Le **WebGLShader** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et peut être un shader de sommet ou de fragment. Un {{domxref ("WebGLProgram")}} requiert les deux types de shaders.
+Le **WebGLShader** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et peut être un shader de sommet ou de fragment. Un {{domxref ("WebGLProgram")}} requiert les deux types de shaders.
 
 ## Description
 
-Pour créer un **WebGLShader,** utiliser {{domxref("WebGLRenderingContext.createShader")}}, puis reliez-y le code source GLSL en utilisant {{domxref("WebGLRenderingContext.shaderSource()")}}, et enfin, appelez {{domxref ("WebGLRenderingContext.compileShader()")}} pour terminer et compiler le shader. À ce stade, le WebGLShader n'est toujours pas sous une forme utilisable et doit toujours être relié à un {{domxref ("WebGLProgram")}}.
+Pour créer un **WebGLShader,** utiliser {{domxref("WebGLRenderingContext.createShader")}}, puis reliez-y le code source GLSL en utilisant {{domxref("WebGLRenderingContext.shaderSource()")}}, et enfin, appelez {{domxref ("WebGLRenderingContext.compileShader()")}} pour terminer et compiler le shader. À ce stade, le WebGLShader n'est toujours pas sous une forme utilisable et doit toujours être relié à un {{domxref ("WebGLProgram")}}.
 
 ```js
 function creerShader (gl, codeSource, type) {
@@ -30,13 +30,13 @@ function creerShader (gl, codeSource, type) {
 }
 ```
 
-Voir {{domxref("WebGLProgram")}} pour des informations sur la liaison de shaders.
+Voir {{domxref("WebGLProgram")}} pour des informations sur la liaison de shaders.
 
 ## Exemples
 
-### Création d'un shader de sommet
+### Création d'un shader de sommet
 
-Notez qu'il existe de nombreuses autres stratégies pour écrire des chaînes de code source de shader et y accéder. Ces exemples sont à titre d'illustration seulement.
+Notez qu'il existe de nombreuses autres stratégies pour écrire des chaînes de code source de shader et y accéder. Ces exemples sont à titre d'illustration seulement.
 
 ```js
 var sourceShaderDeSommet =
@@ -49,7 +49,7 @@ var sourceShaderDeSommet =
 var shaderDeSommet = creerShader(gl, sourceShaderDeSommet, gl.VERTEX_SHADER)
 ```
 
-### Création d'un shader de fragment
+### Création d'un shader de fragment
 
 ```js
 var sourceShaderDeFragment =

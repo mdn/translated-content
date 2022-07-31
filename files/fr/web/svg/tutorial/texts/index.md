@@ -56,7 +56,7 @@ Cet élément est utilisé pour baliser des sous-parties d'un texte. Il doit s'a
 </svg>
 ```
 
-{{ EmbedLiveSample('exemple_jouable', '100%', 100) }}
+{{ EmbedLiveSample('Exemple_jouable', '100%', 100) }}
 
 L'élément tspan peut prendre les attributs personnalisés suivants:
 
@@ -93,9 +93,9 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 ```xml
 <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
 <text>
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
-    A curve.
-  </textPath>
+  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+    A curve.
+  </textPath>
 </text>
 ```
 
@@ -105,9 +105,9 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
 <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
 <text>
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
-    A curve.
-  </textPath>
+  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+    A curve.
+  </textPath>
 </text>
 
 <style><![CDATA[
@@ -119,6 +119,6 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 </svg>
 ```
 
-{{ EmbedLiveSample('code_jouable_2', '100%', 100) }}
+{{ EmbedLiveSample('Code_jouable_2', '100%', 100) }}
 
 {{PreviousNext("Web/SVG/Tutoriel/Motifs", "Web/SVG/Tutoriel/Transformations_de_base")}}

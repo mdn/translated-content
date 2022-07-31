@@ -60,7 +60,7 @@ Tous les noms de classe des microformats utilisent des préfixes. La syntaxe des
 
   - Analyse syntaxique spéciale : attribut [`datetime`](/fr/docs/Web/HTML/Element/time#attr-datetime) de l'élément [`<time>`](/fr/docs/Web/HTML/Element/time), [value-class-pattern](https://microformats.org/wiki/value-class-pattern "value-class-pattern") et analyse séparée de la valeur date-heure pour plus de lisibilité.
 
-- **"e-\*" pour les arborescences** où l'intégralité de la hiérarchie de l'élément est la valeur à récupérer (ex. "e-content"). Le préfixe "e-" peut être retenu en anglais comme "**\*e**lement tree\*", "**\*e**mbedded markup\*" ou "**\*e**ncapsulated markup\*".
+- **"e-\*" pour les arborescences** où l'intégralité de la hiérarchie de l'élément est la valeur à récupérer (ex. "e-content"). Le préfixe "e-" peut être retenu en anglais comme "**e**lement tree", "**e**mbedded markup" ou "**e**ncapsulated markup".
 
 ## Exemples de microformats
 

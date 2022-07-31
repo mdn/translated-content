@@ -126,7 +126,6 @@ p {
 
 ## Voir aussi
 
-- [Quelques tests sur `box-shadow` (en anglais)](https://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
 - [Tutoriel et box-shadow tutorial and examples](https://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
 - [Générateur d'ombres CSS](https://cssgenerator.org/box-shadow-css-generator.html)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)

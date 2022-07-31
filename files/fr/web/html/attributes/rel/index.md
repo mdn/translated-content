@@ -56,7 +56,7 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
 **Note :** L'iOS d'Apple n'utilise pas ce type de lien, ni l'attribut [`sizes`](sizes), comme le font d'autres navigateurs mobiles, pour sélectionner une icône de page Web pour Web Clip ou un espace réservé au démarrage. Au lieu de cela, il utilise les attributs non standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) et [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectivement.
 
-> **Note :**Le type de lien `shortcut` est souvent vu avant `icon`, mais ce type de lien est non conforme, ignoré et **les auteurs web ne doivent plus l'utiliser**.
+> **Note :** Le type de lien `shortcut` est souvent vu avant `icon`, mais ce type de lien est non conforme, ignoré et **les auteurs web ne doivent plus l'utiliser**.
 
 - `alternate`
 
@@ -85,7 +85,7 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
       <link rel="alternate" href="/fr/pdf" hreflang="fr" type=application/pdf title="PDF Français">
       ```
 
-    > **Note :**L'attribut obsolète `rev="made"` est traité comme `rel="alternate"`.
+    > **Note :** L'attribut obsolète `rev="made"` est traité comme `rel="alternate"`.
 
 - `author`
   - : Indique l'auteur du document ou de l'article en cours. Pertinent pour les éléments [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), le mot-clé `author` crée un lien hypertexte. Avec [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), il indique que le document lié (ou `mailto:`) fournit des informations sur l'auteur de l'ancêtre le plus proche d'un élément [`<article>`](/fr/docs/Web/HTML/Element/article) s'il en existe un, sinon le document entier. Pour [`<link>`](/fr/docs/Web/HTML/Element/link), il représente l'auteur du document entier.
@@ -111,7 +111,7 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
     S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leurs attributs [`media`](media), [`type`](type), et [`sizes`](sizes) pour sélectionner l'icône la plus appropriée. Si plusieurs icônes sont également appropriées, la dernière est utilisée. Si l'icône la plus appropriée s'avère ultérieurement inappropriée, par exemple parce qu'elle utilise un format non pris en charge, le navigateur passe à l'icône suivante la plus appropriée, et ainsi de suite.
 
-    > **Note :**Avant Firefox 83, l'attribut [crossorigin](/fr/docs/Web/HTML/Attributes/crossorigin) n'était pas pris en charge pour `rel="icon"` ; il existe également [un problème pour Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+    > **Note :** Avant Firefox 83, l'attribut [crossorigin](/fr/docs/Web/HTML/Attributes/crossorigin) n'était pas pris en charge pour `rel="icon"` ; il existe également [un problème pour Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
     >
     > L'iOS d'Apple n'utilise pas ce type de lien, ni l'attribut [`sizes`](sizes), comme le font d'autres navigateurs mobiles, pour sélectionner une icône de page Web pour Web Clip ou un espace réservé au démarrage. Au lieu de cela, il utilise respectivement le type non standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) et [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6).
     >
@@ -125,7 +125,7 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
     <link rel="license" href="#license">
     ```
 
-    > **Note :**Bien que reconnu, le synonyme `copyright` est incorrect et doit être évité.
+    > **Note :** Bien que reconnu, le synonyme `copyright` est incorrect et doit être évité.
 
 - `manifest`
   - : [Manifeste de l'application Web](/fr/docs/Web/Manifest). Nécessite l'utilisation du protocole CORS pour le « fetching cross-origin ».
@@ -159,7 +159,7 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
   - : Similaire au mot-clé [next](#next), pertinent pour les éléments [`<form>`](/fr/docs/Web/HTML/Element/Form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), les valeurs `prev` indiquent que le document actuel fait partie d'une série, et que le lien renvoie à un document précédent de la série est le document référencé.
 
-    > **Note :**Le synonyme `previous` est incorrect et ne doit pas être utilisé.
+    > **Note :** Le synonyme `previous` est incorrect et ne doit pas être utilisé.
 
 - `search`
 

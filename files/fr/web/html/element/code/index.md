@@ -107,7 +107,7 @@ Un paragraphe de texte qui contient `<code>` :
 
 La sortie générée par ce HTML ressemble à ceci :
 
-{{EmbedLiveSample('example', '', 100)}}
+{{EmbedLiveSample('Exemples', '', 100)}}
 
 ## Notes
 

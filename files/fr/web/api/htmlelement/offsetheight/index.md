@@ -13,7 +13,9 @@ Propriété DHTML permettant d'obtenir la hauteur d'un élément par rapport à 
 
 ### Syntaxe
 
-    var hauteurTotaleElem = document.getElementById(id).offsetHeight;
+```js
+var hauteurTotaleElem = document.getElementById(id).offsetHeight;
+```
 
 _hauteurTotalElem_ est une variable stockant un entier correspondant à la valeur en pixels de la hauteur totale de l'élément identifé par `id`. `offsetHeight` est une propriété en lecture seule.
 
@@ -35,7 +37,7 @@ L'exemple d'image ci-avant montre une barre de défilement et un décalage `offs
 
 ### Notes
 
-`offsetHeight` est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur « border-box » (bordure et boîte).
+`offsetHeight` est une propriété du modèle objet DHTML introduite par Microsoft Internet Explorer. On l'appelle parfois la hauteur physique ou graphique d'un élément, ou sa hauteur «&nbsp;border-box&nbsp;» (bordure et boîte).
 
 ### Références
 

@@ -37,7 +37,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('exemple', 100, '100%')}}
+{{EmbedLiveSample('Exemple', 100, '100%')}}
 
 ## Attributs
 
@@ -69,7 +69,7 @@ Cet élément implémente l'interface [`SVGTSpanElement`](/fr/docs/Web/API/SVGTS
 
 | Spécification                                                                            | Statut                   | Commentaire          |
 | ---------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}     | {{Spec2('SVG2')}} |                      |
+| {{SpecName('SVG2', 'text.html#TextElement', '&lt;tspan&gt;')}}     | {{Spec2('SVG2')}} |                      |
 | {{SpecName('SVG1.1', 'text.html#TSpanElement', '&lt;tspan&gt;')}} | {{Spec2('SVG1.1')}} | Définition originale |
 
 ## Compatibilité des navigateurs

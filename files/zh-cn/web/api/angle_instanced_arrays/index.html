@@ -5,27 +5,27 @@ translation_of: Web/API/ANGLE_instanced_arrays
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<div><code><strong>ANGLE_instanced_arrays</strong>是</code>属于 <a href="/zh-CN/docs/Web/API/WebGL_API">WebGL API </a><code>的一个扩展API，</code>它允许多次绘制相同的对象或相似对象组，前提是它们共享相同的顶点数据、基本图形的个数和类型。</div>
+<div><code><strong>ANGLE_instanced_arrays</strong>是</code>属于 <a href="/zh-CN/docs/Web/API/WebGL_API">WebGL API </a><code>的一个扩展 API，</code>它允许多次绘制相同的对象或相似对象组，前提是它们共享相同的顶点数据、基本图形的个数和类型。</div>
 
-<div></div>
 
-<div>WebGL的扩展都能使用{{domxref("WebGLRenderingContext.getExtension()")}} 这个方法。更多详细信息，请参考 <a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a><em>（WebGL使用教程）里的</em><a href="/zh-CN/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> <em>（使用扩展）</em>。</div>
 
-<div></div>
+<div>WebGL 的扩展都能使用{{domxref("WebGLRenderingContext.getExtension()")}} 这个方法。更多详细信息，请参考 <a href="/zh-CN/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a><em>（WebGL 使用教程）里的</em><a href="/zh-CN/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a> <em>（使用扩展）</em>。</div>
+
+
 
 <div class="note">
-<p><strong>实用性:</strong> 这个扩展仅仅能使用在 {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} 上下文中。在 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}，默认情况下这个扩展的在WebGL2的上下文中起作用，它的常量以及方法使用过程中没有“ANGEL”后缀。</p>
+<p><strong>实用性：</strong> 这个扩展仅仅能使用在 {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} 上下文中。在 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}，默认情况下这个扩展的在 WebGL2 的上下文中起作用，它的常量以及方法使用过程中没有“ANGEL”后缀。</p>
 
-<p>尽管名字叫“ANGLE”，只要硬件支持，它可以运行在任意设备上，而不仅是在Windows上起作用。 "ANGLE"只是表明了这个扩展是被ANGLE这个库的作者书写的，并没有更多的含义。</p>
+<p>尽管名字叫“ANGLE”，只要硬件支持，它可以运行在任意设备上，而不仅是在 Windows 上起作用。 "ANGLE"只是表明了这个扩展是被 ANGLE 这个库的作者书写的，并没有更多的含义。</p>
 </div>
 
 <h2 id="常量">常量</h2>
 
-<p>这个扩展提供了一个新常量，它能被 {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} 这个方法所使用:</p>
+<p>这个扩展提供了一个新常量，它能被 {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} 这个方法所使用：</p>
 
 <dl>
  <dt><code>ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE</code></dt>
- <dd>当这个常量在{{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}}中作为pname参数使用时，将返回一个用于实例渲染的频率因子{{domxref("GLint")}}。</dd>
+ <dd>当这个常量在{{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}}中作为 pname 参数使用时，将返回一个用于实例渲染的频率因子{{domxref("GLint")}}。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -54,20 +54,7 @@ translation_of: Web/API/ANGLE_instanced_arrays
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ANGLE_instanced_arrays', '', 'ANGLE_instanced_arrays')}}</td>
-   <td>{{Spec2('ANGLE_instanced_arrays')}}</td>
-   <td>初始定义。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

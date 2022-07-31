@@ -11,9 +11,11 @@ Voir également le chapitre [Ajout de styles et de couleurs](/fr/docs/Tutoriel_c
 
 ## Syntaxe
 
-    ctx.strokeStyle = color;
-    ctx.strokeStyle = gradient;
-    ctx.strokeStyle = pattern;
+```js
+ctx.strokeStyle = color;
+ctx.strokeStyle = gradient;
+ctx.strokeStyle = pattern;
+```
 
 ### Options
 
@@ -53,8 +55,8 @@ ctx.strokeRect(10, 10, 100, 100);
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.strokeStyle = 'blue';
@@ -119,7 +121,7 @@ Le résultat devrait ressembler à ça:
 
 | Specification                                                                                                                                        | Status                           | Comment |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Browser compatibility
 

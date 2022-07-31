@@ -177,4 +177,4 @@ table td {
 
 - {{HTMLElement("slot")}}
 - [Utiliser les gabarits et les emplacements (_templates and slots_)](/fr/docs/Web/Web_Components/Using_templates_and_slots)
-- {{HTMLElement("shadow")}} {{obsolete_inline}}
+- {{HTMLElement("shadow")}} {{deprecated_inline}}

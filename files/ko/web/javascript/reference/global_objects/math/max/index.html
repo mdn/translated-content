@@ -55,7 +55,7 @@ browser-compat: javascript.builtins.Math.max
 
 <h3 id="Using_Math.max"><code>Math.max()함수 사용하기</code></h3>
 
-<pre class="brush: js notranslate">Math.max(10, 20);   //  20
+<pre class="brush: js">Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20
 </pre>
@@ -70,14 +70,14 @@ Math.max(-10, 20);  //  20
 <pre class="brush: js">var arr = [1,2,3];
 var max = arr.reduce(function(a, b) {
     return Math.max(a, b);
-});
+}, -Infinity);
 </pre>
 
 <p>다음 함수는 {{jsxref ( "Function.prototype.apply ()")}}을 사용하여 숫자 배열에서 최대 요소를 찾습니다. <code>getMaxOfArray([1, 2, 3])</code>는
   <code>Math.max(1, 2, 3)</code>와 동일하지만 프로그래밍 방식으로 생성 된 모든 크기의 배열에서 <code>getMaxOfArray()</code>를 사용할 수 있습니다.
 </p>
 
-<pre class="brush: js notranslate">function getMaxOfArray(numArray) {
+<pre class="brush: js">function getMaxOfArray(numArray) {
   return Math.max.apply(null, numArray);
 }
 </pre>
@@ -92,7 +92,7 @@ var max = arr.reduce(function(a, b) {
 
 <p>또한 {{jsxref("Operators/Spread_syntax", "spread operator")}}이 함수를 사용하면 배열의 숫자들 중 가장 큰 숫자를 쉽게 얻을 수 있습니다.</p>
 
-<pre class="brush: js notranslate">var arr = [1, 2, 3];
+<pre class="brush: js">var arr = [1, 2, 3];
 var max = Math.max(...arr);
 </pre>
 

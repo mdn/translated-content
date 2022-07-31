@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/-webkit-transition
 ---
-{{CSSRef}}{{Non-standard_header}}{{obsolete_header}}
+{{CSSRef}}{{Non-standard_header}}{{deprecated_header}}
 
 **`-webkit-transition`** est une [caractéristique média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Cibler_des_caractéristiques_média) booléenne non-standard qui permet d'indiquer si les transitions CSS ({{cssxref("transition")}}) sont prises en charge dans leurs versions préfixées.
 
@@ -29,7 +29,7 @@ S'il vous faut déterminer si les transitions CSS sont prises en charges, évite
 
 ## Spécifications
 
-Cette caractéristique média est une caractéristique média propriétaire liée à WebKit/Blink. Elle ne fait partie d'aucune spécification. Elle est décrite plus en détails dans la [référence CSS Apple pour Safari (en anglais)](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
+Cette caractéristique média est une caractéristique média propriétaire liée à WebKit/Blink. Elle ne fait partie d'aucune spécification. Elle est décrite plus en détails dans la [référence CSS Apple pour Safari (en anglais)](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3).
 
 ## Compatibilité des navigateurs
 

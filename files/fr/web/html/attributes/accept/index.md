@@ -16,14 +16,14 @@ L'attribut **`accept`** prend comme valeur une liste séparée par des virgules 
 
 Comme un type de fichier donné peut être identifié de plusieurs manières, il est utile de fournir un ensemble complet de spécificateurs de type lorsque vous avez besoin de fichiers d'un type spécifique, ou d'utiliser le joker pour indiquer qu'un type de n'importe quel format est accepté.
 
-Par exemple, il existe un certain nombre de façons d'identifier les fichiers Microsoft Word, de sorte qu'un site qui accepte les fichiers Word pourrait utiliser un `<input>` comme celui-ci :
+Par exemple, il existe un certain nombre de façons d'identifier les fichiers Microsoft Word, de sorte qu'un site qui accepte les fichiers Word pourrait utiliser un `<input>` comme celui-ci&nbsp;:
 
 ```html
 <input type="file" id="docpicker"
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
 ```
 
-En revanche, si vous acceptez un fichier multimédia, vous pouvez inclure tout format de ce type de média :
+En revanche, si vous acceptez un fichier multimédia, vous pouvez inclure tout format de ce type de média&nbsp;:
 
 ```html
 <input type="file" id="soundFile" accept="audio/*">
@@ -54,7 +54,7 @@ Lorsque cet attribut est utilisé sur un champ permettant de sélectionner un fi
 </p>
 ```
 
-{{EmbedLiveSample('examples', '', 160)}}
+{{EmbedLiveSample('Exemples', '', 160)}}
 
 Notez que le dernier exemple vous permet de sélectionner plusieurs images. Voir l'attribut [`multiple`](multiple) pour plus d'informations.
 
@@ -98,7 +98,7 @@ div {
 
 Cela produit le résultat suivant :
 
-{{EmbedLiveSample('a_basic_example', 650, 100)}}
+{{EmbedLiveSample('Utilisation_des_champs_pour_saisir_des_fichiers', 650, 100)}}
 
 > **Note :** Vous pouvez trouver cet exemple sur GitHub également - voir le [code source](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html), et aussi [le fonctionnement en direct](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
@@ -138,7 +138,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('limiting_accepted_file_types', 650, 100)}}
+{{EmbedLiveSample('Restreindre_les_types_de_fichier_acceptés', 650, 100)}}
 
 ## Spécifications
 

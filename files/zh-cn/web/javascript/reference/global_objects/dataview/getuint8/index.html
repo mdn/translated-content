@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>getUint8()</code></strong><code>方法</code><code>从</code>{{jsxref("DataView")}}相对于起始位置偏移 n 个字节处开始，获取一个无符号的8-bit整数(一个字节).</p>
+<p><strong><code>getUint8()</code></strong><code>方法</code><code>从</code>{{jsxref("DataView")}}相对于起始位置偏移 n 个字节处开始，获取一个无符号的 8-bit 整数 (一个字节).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/dataview-getuint8.html")}}</div>
 
@@ -22,21 +22,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 
 <dl>
  <dt>byteOffset</dt>
- <dd>偏移量, 单位为字节, 从头开始计算.</dd>
+ <dd>偏移量，单位为字节，从头开始计算。</dd>
 </dl>
 
 <h3 id="抛出错误">抛出错误</h3>
 
 <dl>
  <dt>{{jsxref("RangeError")}}</dt>
- <dd>如果byteOffset超出了视图能储存的值，就会抛出错误.</dd>
+ <dd>如果 byteOffset 超出了视图能储存的值，就会抛出错误。</dd>
 </dl>
 
 <h2 id="描述">描述</h2>
 
-<dl>
- <dd> 没有对齐约束; 多字节值可以从任何偏移量获取.</dd>
-</dl>
+<p> 没有对齐约束; 多字节值可以从任何偏移量获取。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -47,36 +45,13 @@ dataview.getUint8(1); // 0
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Superseded by ECMAScript 6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition in an ECMA standard.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 
-<p>{{Compat("javascript.builtins.DataView.getUint8")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="相关内容">相关内容</h2>
 

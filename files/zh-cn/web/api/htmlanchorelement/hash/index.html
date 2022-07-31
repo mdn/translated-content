@@ -10,7 +10,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 
 <p><strong><code>HTMLHyperlinkElementUtils.hash</code></strong> 属性返回一个包含“＃”的 {{domxref("DOMString")}} , 后跟URL的片段标识符。</p>
 
-<p>片段没有<a href="/zh-CN/docs/Glossary/percent-encoding">百分比解码</a>。如果URL没有包含片段标识符，这个属性为一个空的字符串, <code>""</code>.</p>
+<p>片段没有<a href="/zh-CN/docs/Glossary/percent-encoding">百分比解码</a>。如果URL没有包含片段标识符，这个属性为一个空的字符串, <code>""</code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -26,82 +26,11 @@ var result = anchor.hash; // Returns:'#youhou'</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-hyperlink-hash', 'HTMLHyperlinkElementUtils.hash')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("22")}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("22")}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Starting in Chrome 52, this property was moved to {{domxref('URL')}}</p>
-
-<p>[2] Though not grouped in a single abstract interface, this method is directly available on the interfaces that implement it, if this interface is supported.</p>
-
-<p>[3] From Gecko 22 to Gecko 44, this property was on the <code>URLUtils</code> mixin. It has been moves either on the <code>HTMLHyperlinkElementUtils</code> mixin, or directly on the interface. Also, from Gecko 29 to Gecko 40, the returned value was incorrectly percent-decoded.</p>
+{{Compat("api.HTMLAnchorElement.hash")}}
 
 <h2 id="See_also">See also</h2>
 

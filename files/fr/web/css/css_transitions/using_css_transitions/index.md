@@ -36,7 +36,7 @@ On peut définir les propriétés qu'on souhaite animer et la façon dont on sou
 
 Les transitions CSS sont généralement contrôlées grâce à la propriété raccourcie {{cssxref("transition")}}. Les différents composants d'une transition CSS peuvent être décrits dans le détail grâce aux propriétés détaillées suivantes :
 
-> **Note :**Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.
+> **Note :** Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.
 
 - {{cssxref("transition-property")}}
   - : Cette propriété définit le nom des propriétés CSS pour lesquelles on veut appliquer des transitions. Seules les propriétés listées ici seront sujettes aux transitions. Les modifications appliquées aux autres propriétés seront instantanées.

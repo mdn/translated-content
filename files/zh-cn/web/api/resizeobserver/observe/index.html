@@ -5,8 +5,8 @@ translation_of: Web/API/ResizeObserver/observe
 ---
 <div>{{APIRef("Resize Observer API")}}{{SeeCompatTable}}</div>
 
-<p class="summary">The <strong><code>observe()</code></strong> method of the {{domxref("ResizeObserver")}} interface initiates observing of a specified {{domxref('Element')}} or {{domxref('SVGElement')}}.<br>
- {{domxref("ResizeObserver")}} 接口的 <strong><code>observe()</code> </strong>方法用于观察一个指定{{domxref('Element')}} 或 {{domxref('SVGElement')}}。</p>
+<p>The <strong><code>observe()</code></strong> method of the {{domxref("ResizeObserver")}} interface initiates observing of a specified {{domxref('Element')}} or {{domxref('SVGElement')}}.<br>
+ {{domxref("ResizeObserver")}} 接口的 <strong><code>observe()</code> </strong>方法用于观察一个指定{{domxref('Element')}} 或 {{domxref('SVGElement')}}。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/API/ResizeObserver/observe
 
 <h2 id="示例">示例</h2>
 
-<p>以下示例通过观察box的尺寸变化从而改变其边框圆角半径。</p>
+<p>以下示例通过观察 box 的尺寸变化从而改变其边框圆角半径。</p>
 
 <pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
@@ -49,20 +49,7 @@ resizeObserver.observe(document.querySelector('.box:nth-child(2)'));</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resize Observer','#dom-resizeobserver-observe','observe()')}}</td>
-   <td>{{Spec2('Resize Observer')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

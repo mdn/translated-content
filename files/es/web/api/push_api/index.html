@@ -65,7 +65,7 @@ translation_of: Web/API/Push_API
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<p>Mozilla's <a href="https://serviceworke.rs/">ServiceWorker Cookbook</a> contiene varios ejemplos Push muy utiles</p>
+<p>Mozilla's <a href="https://github.com/mdn/serviceworker-cookbook/">ServiceWorker Cookbook</a> contiene varios ejemplos Push muy utiles</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -86,84 +86,13 @@ translation_of: Web/API/Push_API
 
 <h2 id="Browser_Compatibility">Browser Compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
+<h3><code>PushEvent</code></h3>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(44.0)}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PushEvent.data")}},<br>
-    {{domxref("PushMessageData")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(44.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.PushEvent")}}
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
-  <tr>
-   <td>{{domxref("PushEvent.data")}},<br>
-    {{domxref("PushMessageData")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h3><code>PushMessageData</code></h3>
 
-<p>[1] Currently available only on desktop versions of Firefox; also, push messages are only delivered when Firefox is running.</p>
-
-<p>[2]: <a href="https://dev.modern.ie/platform/status/pushapi/">Microsoft Edge status: Under Consideration; Roadmap Priority: Low</a></p>
+{{Compat("api.PushMessageData")}}
 
 <h2 id="See_also">See also</h2>
 

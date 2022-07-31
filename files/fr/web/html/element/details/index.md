@@ -21,7 +21,7 @@ La plupart du temps, le contrôle utilisé pour cet élément est un triangle qu
 
 {{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}
 
-> **Note :**L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties » en anglais.
+> **Note :** L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties » en anglais.
 
 Un widget `<details>` peut être dans l'un des deux états suivants. L'état par défaut _fermé_ affiche uniquement le triangle et l'étiquette à l'intérieur du `<summary>` (ou une chaîne par défaut définie par [l'agent utilisateur](/fr/docs/Glossary/User_agent) si aucun `<summary>`).
 
@@ -31,7 +31,7 @@ Lorsque l'utilisateur clique sur le widget ou le met au point, puis appuie sur l
 
 Par défaut, lorsqu'il est fermé, le widget est seulement assez haut pour afficher le triangle de divulgation et le résumé. Lorsqu'il est ouvert, il s'étend pour afficher les détails qu'il contient.
 
-> **Note :**Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.
+> **Note :** Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.
 
 Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS `display: list-item` à l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary). Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir [personnaliser le marqueur de révélation](#customizing_the_disclosure_widget) pour plus de détails.
 
@@ -111,7 +111,7 @@ Comme tous les éléments HTML, cet élément accepte les [attributs universels]
 
   - : Cet attribut booléen indique si les détails — c'est-à-dire le contenu de l'élément `<details>` — sont actuellement visibles ou non. Les détails sont affichés lorsque cet attribut existe, ou cachés lorsque cet attribut est absent. Par défaut, cet attribut est absent, ce qui signifie que les détails ne sont pas visibles.
 
-    > **Note :**Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. Attention, `open="false"` rend les détails visibles, car cet attribut est booléen.
+    > **Note :** Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. Attention, `open="false"` rend les détails visibles, car cet attribut est booléen.
 
 ## Évènements
 
@@ -146,7 +146,7 @@ Dans cet exemple, on utilise un élément `<details>` sans résumé/intitulé.
 
 Ici, le navigateur utilisera alors un intitulé par défaut (généralement, ce sera "Détails").
 
-{{EmbedLiveSample("a_simple_disclosure_example", "", 100)}}
+{{EmbedLiveSample("Un_exemple_simple", "", 100)}}
 
 ### Créer un contrôle déjà ouvert
 
@@ -164,7 +164,7 @@ Pour obtenir une boîte `<details>` dans un état ouvert, il suffit d'ajouter l'
 
 Cela se traduit par :
 
-{{EmbedLiveSample("creating_an_open_disclosure_box", "", 130)}}
+{{EmbedLiveSample("Créer_un_contrôle_déjà_ouvert", "", 130)}}
 
 ### Personnaliser l'apparence
 
@@ -218,7 +218,7 @@ Le sélecteur `details[open]` peut être utilisé pour donner un style à l'él�
 
 #### Résultat
 
-{{EmbedLiveSample("customizing_the_appearance", "", 120)}}
+{{EmbedLiveSample("Personnaliser_l'apparence", "", 120)}}
 
 ### Personnaliser le marqueur de révélation
 
@@ -274,7 +274,7 @@ Ce CSS crée un aspect similaire à celui d'une interface à onglets, où l'acti
 
 #### Résultat
 
-{{EmbedLiveSample("customizing_the_disclosure_widget", "", 120)}}
+{{EmbedLiveSample("Personnaliser_le_marqueur_de_révélation", "", 120)}}
 
 ## Spécifications
 

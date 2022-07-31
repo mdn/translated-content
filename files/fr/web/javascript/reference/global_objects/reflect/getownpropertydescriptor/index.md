@@ -12,13 +12,15 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/getOwnPropertyDes
 ---
 {{JSRef}}
 
-La méthode statique **`Reflect`\*\***`.getOwnPropertyDescriptor()`\*\* est similaire à {{jsxref("Object.getOwnPropertyDescriptor()")}}. Elle renvoie un descripteur de propriété pour la propriété visée si elle existe sur l'objet, sinon, elle renvoie {{jsxref("undefined")}}.
+La méthode statique **`Reflect.getOwnPropertyDescriptor()`** est similaire à {{jsxref("Object.getOwnPropertyDescriptor()")}}. Elle renvoie un descripteur de propriété pour la propriété visée si elle existe sur l'objet, sinon, elle renvoie {{jsxref("undefined")}}.
 
 {{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
 
 ## Syntaxe
 
-    Reflect.getOwnPropertyDescriptor(cible, cléPropriété)
+```js
+Reflect.getOwnPropertyDescriptor(cible, cléPropriété)
+```
 
 ### Paramètres
 
@@ -71,7 +73,7 @@ Object.getOwnPropertyDescriptor("toto", 0);
 | Spécification                                                                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

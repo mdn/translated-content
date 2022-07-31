@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>typedarray</var>.forEach(<var>callback</var>[, <var>thisArg</var>])</code></pre>
+<pre class="syntaxbox"><code><var>typedarray</var>.forEach(<var>callback</var>[, <var>thisArg</var>])</code></pre>
 
 <h3 id="参数">参数</h3>
 
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
  <li>the <strong>被遍历的类型化数组</strong></li>
 </ul>
 
-<p>如果将<code>thisArg</code>参数提供给<code>forEach</code>，它会在调用时传递给<code>callback</code>，作为它的 <code>this</code>值。否则，会传递<code>undefined</code> 作为它的<code>this</code> 值。  <code>callback</code>最终观测到的<code>this</code>值由 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">用于决定函数可见的<code>this</code>值的一般规则</a>来决定。</p>
+<p>如果将<code>thisArg</code>参数提供给<code>forEach</code>，它会在调用时传递给<code>callback</code>，作为它的 <code>this</code>值。否则，会传递<code>undefined</code> 作为它的<code>this</code> 值。  <code>callback</code>最终观测到的<code>this</code>值由 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">用于决定函数可见的<code>this</code>值的一般规则</a>来决定。</p>
 
 <p>由 <code>forEach</code>处理的元素范围在<code>callback</code>调用之前就确定了。 在 <code>forEach</code>调用之后添加到数组的元素不会由 <code>callback</code>访问。 如果类型化数组的现有元素被改变，或被删除，它们传给<code>callback</code>的值是<code>forEach</code> 访问它们时候的值。已删除的元素不会被访问。</p>
 
@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 
 <p>下面的代码为数组中的每个元素记录一行日志：</p>
 
-<pre class="brush:js notranslate">function logArrayElements(element, index, array) {
+<pre class="brush:js">function logArrayElements(element, index, array) {
   console.log('a[' + index + '] = ' + element);
 }
 
@@ -71,35 +71,11 @@ new Uint8Array([0, 1, 2, 3]).forEach(logArrayElements);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>初始定义。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div>
-
-
-<p>{{Compat("javascript.builtins.TypedArray.forEach")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

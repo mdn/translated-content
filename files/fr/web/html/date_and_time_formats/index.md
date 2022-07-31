@@ -264,7 +264,7 @@ On notera que les deux composantes pour l'année et pour la semaine sont complé
 
 ## Représentation des mois
 
-Une chaîne de caractères pour un mois représente un mois d'une année donnée (plutôt qu'un mois « générique »). Aussi, on ne représentera pas simplement le mois de janvier mais le mois de janvier de l'année 1972.
+Une chaîne de caractères pour un mois représente un mois d'une année donnée (plutôt qu'un mois «&nbsp;générique&nbsp;»). Aussi, on ne représentera pas simplement le mois de janvier mais le mois de janvier de l'année 1972.
 
 Une chaîne de caractères représentant un mois est valide si elle commence par un numéro d'année valide (une chaîne de caractères composée de quatre chiffres), suivie d'un tiret ("`-`", ou U+002D), suivi d'un nombre sur deux chiffres où `01` représente janvier et où `12` représente décembre.
 
@@ -320,8 +320,8 @@ Lorsqu'on définit la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/I
 | `1986-01-28 11:38:00.010` | `1986-01-28T11:38:00.01` | 28 janvier 1986 à 11 heures et 38 minutes passées de 10 millisecondes |
 | `0170-07-31T22:00:00`     | `0170-07-31T22:00`       | 31 juillet 170 à 22 heures                                            |
 
-1.  On notera qu'après la normalisation, on obtient la même chaîne que sur l'exemple précédent : l'espace séparateur a été remplacé par un `"T"` et le zéro de terminaison a été supprimé pour raccourcir la chaîne de l'heure.
-2.  On notera que la forme normalisée de cette date ne contient pas l'expression des secondes.
+1. On notera qu'après la normalisation, on obtient la même chaîne que sur l'exemple précédent : l'espace séparateur a été remplacé par un `"T"` et le zéro de terminaison a été supprimé pour raccourcir la chaîne de l'heure.
+2. On notera que la forme normalisée de cette date ne contient pas l'expression des secondes.
 
 ## Représentation des dates et heures universelles
 
@@ -336,10 +336,10 @@ La chaîne de caractères qui décrit le décalage horaire contient un décalage
 
 La chaîne de caractères indiquant le décalage est directement ajoutée après la valeur pour la date et l'heure. Si la date et l'heure sont déjà exprimées relativement à UTC, on pourra simplement suffixer `"Z"`, sinon, on construira le complément de la façon suivante :
 
-1.  Un caractère indiquant le signe du décalage : le plus ("`+`" ou U+002B) pour les fuseaux situés à l'est du méridien ou le moins ("`-`" ou U+002D) pour les fuseaux situés à l'ouest.
-2.  Deux chiffres indiquant le nombre d'heures de décalage par rapport au méridien. Cette valeur doit être comprise entre `00` et `23`.
-3.  Deux-points ("`:`") (nécessaires uniquement si le décalage contient des minutes)
-4.  Deux chiffres indiquant les minutes de décalage. Cette valeur doit être comprise entre `00` et `59`.
+1. Un caractère indiquant le signe du décalage : le plus ("`+`" ou U+002B) pour les fuseaux situés à l'est du méridien ou le moins ("`-`" ou U+002D) pour les fuseaux situés à l'ouest.
+2. Deux chiffres indiquant le nombre d'heures de décalage par rapport au méridien. Cette valeur doit être comprise entre `00` et `23`.
+3. Deux-points ("`:`") (nécessaires uniquement si le décalage contient des minutes)
+4. Deux chiffres indiquant les minutes de décalage. Cette valeur doit être comprise entre `00` et `59`.
 
 Bien que ces règles permettent d'exprimer des fuseaux horaires entre -23:59 et +23:59, l'intervalle actuel des décalages horaires est -12:00 à +14:00 et il n'y a pas de fuseau horaire pour lequel le décalage en minutes est différent de `00`, `30` ou `45`. Cela peut en théorie évoluer à tout moment car les pays sont libres de modifier leur fuseau horaire quand ils le souhaitent.
 

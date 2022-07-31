@@ -5,10 +5,10 @@ tags:
   - JavaScript
   - メソッド
   - プロミス
-  - Reference
+  - リファレンス
   - allSettled
   - 非同期
-  - Polyfill
+  - ポリフィル
 browser-compat: javascript.builtins.Promise.allSettled
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
@@ -46,6 +46,7 @@ Promise.allSettled(iterable);
 ### Promise.allSettled の使用
 
 #### {{JSxRef("Promise.then", "Promise.prototype.then()")}}
+
 ```js
 Promise.allSettled([
   Promise.resolve(33),
@@ -64,6 +65,7 @@ Promise.allSettled([
 ```
 
 #### {{jsxref("Operators/await", "await")}}
+
 ```js
 const values = await Promise.allSettled([
   Promise.resolve(33),

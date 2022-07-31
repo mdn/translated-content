@@ -36,7 +36,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Un attribut booléen : s'il est spécifié, l'audio commencera automatiquement la lecture dès qu'il pourra le faire, sans attendre la fin du téléchargement de l'ensemble du fichier audio.
 
-    > **Note :**Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent s'avérer désagréables pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la soumettre au choix de l'utilisateur. Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre [guide sur la lecture automatique](/fr/docs/Web/Media/Autoplay_guide) pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction _autoplay_.
+    > **Note :** Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent s'avérer désagréables pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la soumettre au choix de l'utilisateur. Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre [guide sur la lecture automatique](/fr/docs/Web/Media/Autoplay_guide) pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction _autoplay_.
 
 - **`controls`**
   - : Si l'attribut est présent, le navigateur affichera des contrôles pour que l'utilisateur puisse gérer la lecture, le volume, et le déplacement du curseur de lecture.
@@ -55,7 +55,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont connectés à l'aide de câbles (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir [cette proposition de spécification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) pour plus d'informations.
 
-    > **Note :**Dans Safari, vous pouvez utiliser [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) comme solution de repli.
+    > **Note :** Dans Safari, vous pouvez utiliser [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) comme solution de repli.
 
 - **`loop`**
   - : Un attribut booléen. S'il est renseigné, la lecture du fichier se fera en boucle.
@@ -153,7 +153,7 @@ Il est aussi possible de détecter lorsque des pistes sont ajoutées et supprim�
 - [`HTMLMediaElement.textTracks`](/fr/docs/Web/API/HTMLMediaElement/textTracks)
   - : Un écouteur `addtrack` peut être ajouté à cet objet [`TextTrackList`](/fr/docs/Web/API/TextTrackList) afin d'alerter lorsque de nouvelles pistes de texte sont ajoutées à l'élément.
 
-> **Note :**Bien qu'on parle ici d'un élément `<audio>`, il est possible qu'un tel élément possède des pistes vidéo et des pistes texte bien que la cohérence des interfaces puisse être mise à mal.
+> **Note :** Bien qu'on parle ici d'un élément `<audio>`, il est possible qu'un tel élément possède des pistes vidéo et des pistes texte bien que la cohérence des interfaces puisse être mise à mal.
 
 Ainsi, on pourra utiliser un fragment de code analogue à celui qui suit pour détecter si de nouvelles pistes sont ajoutées ou supprimées d'un élément `<audio>` :
 
@@ -219,19 +219,21 @@ L'élément `<audio>` ne prend pas directement en charge le WebVTT. Vous devrez 
 
 En plus des dialogues parlés, les sous-titres et les transcriptions doivent également identifier la musique et les effets sonores qui communiquent des informations importantes. Cela inclut l'émotion et le ton. Par exemple, dans le WebVTT ci-dessous, notez l'utilisation de crochets pour donner un ton et un aperçu émotionnel au spectateur ; cela peut aider à établir l'ambiance autrement fournie par la musique, les sons non verbaux et les effets sonores cruciaux, et ainsi de suite.
 
-    1
-    00:00:00 --> 00:00:45
-    [Musique avec des trompettes sonnantes]
+```
+1
+00:00:00 --> 00:00:45
+[Musique avec des trompettes sonnantes]
 
-    2
-    00:00:46 --> 00:00:51
-    Elle est où la poulette ?
+2
+00:00:46 --> 00:00:51
+Elle est où la poulette ?
 
-    16
-    00:00:52 --> 00:01:02
-    [sur un ton énervé] Vous rendez la poulette ou c'est plus vous qui donnez à manger aux lapins ?
+16
+00:00:52 --> 00:01:02
+[sur un ton énervé] Vous rendez la poulette ou c'est plus vous qui donnez à manger aux lapins ?
+```
 
-Une autre bonne pratique consiste à fournir du contenu comme un lien de téléchargement comme méthode alternative pour les personnes qui utilisent un navigateur qui ne prend pas en charge `<audio>` :
+Une autre bonne pratique consiste à fournir du contenu comme un lien de téléchargement comme méthode alternative pour les personnes qui utilisent un navigateur qui ne prend pas en charge `<audio>`&nbsp;:
 
 ```html
 <audio controls>

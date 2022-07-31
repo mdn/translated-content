@@ -23,7 +23,7 @@ object['property']
 
 <h2 id="描述">描述</h2>
 
-<p class="syntaxbox">我们可以将对象看做是一个<em>关联数组（</em>或者：<em>映射</em>、<em>字典</em>、<em>哈希表</em>、<em>查询表</em>）。这个数组中的键就是这个对象中属性的名称。通常，当我们提及一个对象的属性时，会对属性与方法之间做个对比。然而，属性与方法之间的区别并不大。一个方法就是一个可以被调用的属性而已，例如一个指向函数 <a href="/zh-CN/docs/Glossary/Function">Function</a> 实例的引用可以作为对象属性的值。</p>
+<p>我们可以将对象看做是一个<em>关联数组（</em>或者：<em>映射</em>、<em>字典</em>、<em>哈希表</em>、<em>查询表</em>）。这个数组中的键就是这个对象中属性的名称。通常，当我们提及一个对象的属性时，会对属性与方法之间做个对比。然而，属性与方法之间的区别并不大。一个方法就是一个可以被调用的属性而已，例如一个指向函数 <a href="/zh-CN/docs/Glossary/Function">Function</a> 实例的引用可以作为对象属性的值。</p>
 
 <p>访问对象属性有两种方式：点号表示法和方括号表示法。</p>
 
@@ -33,7 +33,7 @@ object['property']
 object.property = set;
 </pre>
 
-<p>以上代码中，<code>property</code>必须是一个有效的 JavaScript 标识符，例如，一串字母数字字符，也包括下划线及美元符号，但不能以数字作为开头。比如，<code>object.$1</code>是合法的，而 <code>object.1</code>是无效不合法的。</p>
+<p>以上代码中，<code>property</code>必须是一个有效的 JavaScript 标识符，例如，一串字母数字字符，也包括下划线及美元符号，但不能以数字作为开头。比如，<code>object.$1</code>是合法的，而 <code>object.1</code>是无效不合法的。</p>
 
 <pre class="brush: js">document.createElement('pre');
 </pre>
@@ -109,39 +109,11 @@ console.log(object[bar]);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-property-accessors', 'Property Accessors')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.2.1', 'Property Accessors')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.2.1', 'Property Accessors')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.operators.property_accessors")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 

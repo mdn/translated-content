@@ -103,7 +103,7 @@ En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi.
 
 Comme tous les autres éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-> **Note :**L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
+> **Note :** L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
 
 ## Notes d'utilisation
 
@@ -122,7 +122,7 @@ Comme tous les autres éléments HTML, cet élément accepte [les attributs univ
 
 Le résultat ressemble à ceci :
 
-{{EmbedLiveSample("a_simple_example", "", 80)}}
+{{EmbedLiveSample("Un_exemple_simple", "", 80)}}
 
 ### Un exemple mis en forme
 
@@ -151,7 +151,7 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 #### Résultat
 
-{{EmbedLiveSample("a_styled_example", "", 150)}}
+{{EmbedLiveSample("Un_exemple_mis_en_forme", "", 150)}}
 
 ## Accessibilité
 

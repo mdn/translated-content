@@ -6,7 +6,7 @@ tags:
   - CSS
   - CSS ボックスモデル
   - CSS プロパティ
-  - Reference
+  - リファレンス
   - border-box
   - box model
   - box-sizing

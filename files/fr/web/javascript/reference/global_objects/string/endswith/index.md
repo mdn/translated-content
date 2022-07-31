@@ -19,7 +19,9 @@ La méthode **`endsWith()`** renvoie un booléen indiquant si la chaine de carac
 
 ## Syntaxe
 
-    str.endsWith(chaîneRecherchée[, position]);
+```js
+str.endsWith(chaîneRecherchée[, position]);
+```
 
 ### Paramètres
 
@@ -53,13 +55,13 @@ Cette méthode a été ajoutée dans la spécification ECMAScript 6 et peut ne p
 ```js
 if (!String.prototype.endsWith) {
   String.prototype.endsWith = function(searchString, position) {
-    var subjectString = this.toString();
-    if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
-      position = subjectString.length;
+    var subjectString = this.toString();
+    if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
+      position = subjectString.length;
     }
     position -= searchString.length;
     var lastIndex = subjectString.lastIndexOf(searchString, position);
-    return lastIndex !== -1 && lastIndex === position;
+    return lastIndex !== -1 && lastIndex === position;
   };
 }
 ```
@@ -69,7 +71,7 @@ if (!String.prototype.endsWith) {
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

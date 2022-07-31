@@ -1,0 +1,97 @@
+---
+title: GlobalEventHandlers.onkeydown
+slug: conflicting/Web/API/Element/keydown_event
+tags:
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+translation_of: Web/API/GlobalEventHandlers/onkeydown
+original_slug: Web/API/GlobalEventHandlers/onkeydown
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<p><code><strong>onkeydown</strong></code> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで {{event("keydown")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。</p>
+
+<p><code>keydown</code> イベントは、ユーザーがキーボードのキーを押下した時に発生します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox notranslate"><var>target</var>.onkeydown = <var>functionRef</var>;</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<p><code>functionRef</code> は関数名または <a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a> です。この関数は、{{domxref("KeyboardEvent")}} オブジェクトとその 1 個の引数を受け取ります。</p>
+
+<h2 id="Example" name="Example">例</h2>
+
+<p>この例は、{{HtmlElement("input")}} 要素内でキーを押下するたびに、そのキーの {{domxref("KeyboardEvent.code")}} 値をログ出力します。</p>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html notranslate">&lt;input&gt;
+&lt;p id="log"&gt;&lt;/p&gt;</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js notranslate">const input = document.querySelector('input');
+const log = document.getElementById('log');
+
+input.onkeydown = logKey;
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}</pre>
+
+<h3 id="Result" name="Result">結果</h3>
+
+<p>{{EmbedLiveSample("Example")}}</p>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="spectable standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeydown','onkeydown')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.GlobalEventHandlers.onkeydown")}}</p>
+
+<h3 id="Compatibility_notes" name="Compatibility_notes">互換性ノート</h3>
+
+<p>Firefox 65 以降、<code><a href="/ja/docs/Web/Events/keyup">keyup</a></code> および <code><a href="/ja/docs/Web/Events/keydown">keydown</a></code> イベントは、CJKT (中国、日本、韓国、台湾) ユーザーのブラウザー間の互換性を改善するために、IME 変換中に発生するようになりました (詳細は {{bug(354358)}} および <a href="https://www.fxsitecompat.dev/ja/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">IME 変換中にも keydown、keyup イベントが発生するようになりました</a> を参照)。変換対象の一部に対してすべての <code>keydown</code> イベントを無視するには、次のようにしてください (229 は IME により処理されるイベントに関する <code>keyCode</code> の特別な値セットです):</p>
+
+<pre class="brush: js notranslate">eventTarget.addEventListener("keydown", event =&gt; {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // do something
+});
+</pre>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{Event("keydown")}} イベント</li>
+ <li>関連するイベントハンドラー
+  <ul>
+   <li>{{domxref("GlobalEventHandlers.onkeypress")}}</li>
+   <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
+  </ul>
+ </li>
+</ul>

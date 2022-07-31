@@ -17,7 +17,9 @@ La propriété **`mode`** de l'interface {{domxref("IDBTransaction")}} renvoie l
 
 ## Syntaxe
 
-    var modeCourant = IDBTransaction.mode;
+```js
+var modeCourant = IDBTransaction.mode;
+```
 
 ### Valeur
 
@@ -89,7 +91,7 @@ function addData() {
 
 | Spécification                                                                        | État                         | Commentaires |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-mode', 'mode')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBTransaction-mode', 'mode')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

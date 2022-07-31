@@ -42,7 +42,7 @@ Lorsqu'ils sont définis sur un type d'entrée de fichier, les systèmes d'explo
 </p>
 ```
 
-{{EmbedLiveSample('examples', '', 200)}}
+{{EmbedLiveSample('Exemples', '', 200)}}
 
 Notez que ceux-ci fonctionnent mieux sur les appareils mobiles ; si votre appareil est un ordinateur de bureau, vous obtiendrez probablement un sélecteur de fichiers classique.
 

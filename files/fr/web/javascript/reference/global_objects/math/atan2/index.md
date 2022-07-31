@@ -1,40 +1,38 @@
 ---
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/atan2
+browser-compat: javascript.builtins.Math.atan2
 ---
 {{JSRef}}
 
-La fonction **`Math.atan2()`** renvoie l'arc tangente du quotient de ses arguments.
+La fonction **`Math.atan2()`** renvoie l'arc tangente du quotient de ses arguments, ce qui, pour `Math.atan2(y,x)`, correspond à l'angle plan (exprimé en radians) entre la droite passant par l'origine et le point de coordonnées (x,y).
 
 {{EmbedInteractiveExample("pages/js/math-atan2.html")}}
 
 ## Syntaxe
 
-    Math.atan2(y, x)
+```js
+Math.atan2(y, x)
+```
 
 ### Paramètres
 
-- `x`
-  - : La coordonnée en abscisse du point.
 - `y`
   - : La coordonnée en ordonnée du point.
+- `x`
+  - : La coordonnée en abscisse du point.
 
 ### Valeur de retour
 
-L'arc tangente du quotient formé par les deux arguments, c'est-à-dire l'angle, exprimé en radians entre l'axe des abscisses et la droite passant par l'origin (0,0) et le point de coordonnées (x,y).
+L'arc tangente du quotient formé par les deux arguments (compris dans <math><semantics><mrow><mo stretchy="false">[</mo><mo>-</mo><mi>π</mi><mo>,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow><annotation encoding="TeX">[-\pi, \pi]</annotation></semantics></math>), c'est-à-dire l'angle, exprimé en radians entre l'axe des abscisses et la droite passant par l'origin (0,0) et le point de coordonnées (x,y).
 
 ## Description
 
 La méthode `Math.atan2()` renvoie une valeur numérique comprise entre -Pi et Pi qui représente l'angle theta d'un point de coordonnées (x,y). Cela correspond à l'angle (dans le sens trigonométrique) entre l'axe des abscisses et le point de coordonnées (`x,y`). Attention, le premier argument de la fonction est l'ordonnée (y) et le second est l'abscisse (x).
 
-![Graphique explicitant l'angle donné par un point de coordonnées X/Y](https://mdn.mozillademos.org/files/11565/atan2.png)
+![Graphique explicitant l'angle donné par un point de coordonnées X/Y](atan2.png)
 
 `Math.atan2()` utilise deux arguments `x` et `y`, alors que la méthode `Math.atan()` utilise le ratio de deux nombres comme un seul argument.
 
@@ -63,22 +61,17 @@ Math.atan2( ±Infinity, +Infinity ); // ±PI/4.
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.5', 'Math.atan2')}}         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.atan2', 'Math.atan2')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.atan2', 'Math.atan2')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.atan2")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- [`Math.acos()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/acos)
+- [`Math.asin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/asin)
+- [`Math.atan()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/atan)
+- [`Math.cos()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/cos)
+- [`Math.sin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sin)
+- [`Math.tan()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/tan)

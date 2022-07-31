@@ -28,7 +28,7 @@ TypeError: Invalid value used in weak set (Chrome)
 
 <h3 id="期望的属性描述器">期望的属性描述器</h3>
 
-<p>当使用诸如 {{jsxref("Object.create()")}} 或 {{jsxref("Object.defineProperty()")}} 及{jsxref("Object.defineProperties()")}} 方法时，可选的属性描述器参数需要提供一个描述器对象。提供非对象类型的值（例如数字）将会报错：</p>
+<p>当使用诸如 {{jsxref("Object.create()")}} 或 {{jsxref("Object.defineProperty()")}} 及{jsxref("Object.defineProperties()")}} 方法时，可选的属性描述器参数需要提供一个描述器对象。提供非对象类型的值（例如数字）将会报错：</p>
 
 <pre class="brush: js example-bad">Object.defineProperty({}, 'key', 1);
 // TypeError: 1 is not a non-null object
@@ -42,7 +42,7 @@ Object.defineProperty({}, 'key', null);
 <pre class="brush: js example-good">Object.defineProperty({}, 'key', { value: 'foo', writable: false });
 </pre>
 
-<h3 id="WeakMap_和_WeakSet_对象需要对象类型的键"><code>WeakMap</code> 和 <code>WeakSet</code> 对象需要对象类型的键</h3>
+<h3 id="WeakMap_和_WeakSet_对象需要对象类型的键"><code>WeakMap</code> 和 <code>WeakSet</code> 对象需要对象类型的键</h3>
 
 <p>{{jsxref("WeakMap")}} 和 {{jsxref("WeakSet")}} 对象只能存储对象类型的键，而不能使用其他类型的。</p>
 

@@ -21,7 +21,7 @@ L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endr
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **Note :**Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
+> **Note :** Cet article ne traite que de l'élément faisant partie du HTML5. Il ne concerne pas la version précédente et non normalisée de cet élément.
 
 Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire retiré la prise en charge des plugins. Aussi, mieux vaut ne pas utiliser sur `<embed>` si on souhaite qu'un site ou une application soit fonctionnelle sur un navigateur moyen.
 
@@ -31,19 +31,16 @@ Il faut garder à l'esprit que la plupart des navigateurs ont déprécié voire 
       <th scope="row">
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories"
-          title="HTML/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          title="HTML/Content categories#Flow content"
           >Contenu de flux</a
         >,
         <a
           href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          title="HTML/Content categories#phrasing_content"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content"

@@ -13,7 +13,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:empty`** correspond à u
 
 ```css
 /* Cible tous les éléments <div> qui */
-/* n'ont  pas de contenu */
+/* n'ont pas de contenu */
 div:empty {
   background: lime;
 }

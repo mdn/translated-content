@@ -5,7 +5,7 @@ translation_of: Web/API/Geolocation/clearWatch
 ---
 <p>{{ APIref("Geolocation API") }}</p>
 
-<p><strong><code>Geolocation.clearWatch()</code></strong>这个方法主要用于使用 {{domxref("Geolocation.watchPosition()")}} 注册的 位置/错误 监听器。</p>
+<p><strong><code>Geolocation.clearWatch()</code></strong>这个方法主要用于使用 {{domxref("Geolocation.watchPosition()")}} 注册的 位置/错误 监听器。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/Geolocation/clearWatch
 
 <dl>
  <dt><em>id</em></dt>
- <dd>希望移除的监听器所对应的 {{domxref("Geolocation.watchPosition()")}} 返回的 ID 数字。</dd>
+ <dd>希望移除的监听器所对应的 {{domxref("Geolocation.watchPosition()")}} 返回的 ID 数字。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -51,83 +51,18 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Geolocation')}}</td>
-   <td>{{Spec2('Geolocation')}}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat("api.Geolocation.clearWatch")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}</td>
-   <td>9</td>
-   <td>10.60<br>
-    Removed in 15.0<br>
-    Reintroduced in 16.0</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{CompatGeckoMobile("4")}}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>10.60</td>
-   <td>{{CompatUnknown()}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">使用地理位置定位</a></li>
+ <li><a href="/en-US/docs/WebAPI/Using_geolocation">使用地理位置定位</a></li>
  <li>{{domxref("Geolocation")}}</li>
  <li>{{domxref("Geolocation.watchPosition()")}}</li>
  <li>{{domxref("Geolocation.getCurrentPosition()")}}</li>

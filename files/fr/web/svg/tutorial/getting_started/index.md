@@ -34,15 +34,15 @@ Copiez le code précédent dans un document texte, puis enregistrez-le sous le n
 
 Quelques explications s'imposent quant au fonctionnement du rendu :
 
-1.  Nous commençons avec l'élément [`svg`](/fr/docs/Web/SVG/Element/svg) à la racine :
+1. Nous commençons avec l'élément [`svg`](/fr/docs/Web/SVG/Element/svg) à la racine :
 
     - La déclaration du doctype que l'on voit en (X)HTML peut être enlevée, car la validation DTD du SVG provoque plus de problèmes qu'elle n'en résout.
     - Avant SVG 2, pour identifier la version du SVG pour d'autre types de validation, les attributs `version` et `baseProfile` devaient toujours être utilisés. Ces deux attributs sont dépréciés en SVG 2.
     - En tant que langage basé sur XML, l'espace de noms du document SVG doit être correct, d'où l'attribut `xmlns`. Pour plus d'informations, n'hésitez pas à consulter la page [Cours d'introduction aux espaces de noms.](/fr/docs/Web/SVG/Namespaces_Crash_Course)
 
-2.  L'arrière-plan est défini par un rectangle rouge, déclaré grâce à la balise [`<rect>`](/fr/docs/Web/SVG/Element/rect) qui recouvre l'intégralité de l'espace.
-3.  Un cercle ([`<circle>`](/fr/docs/Web/SVG/Element/circle)) vert d'un rayon de 80px est dessiné par-dessus le centre du rectangle rouge, avec un décalage de 30+120px vers l'intérieur et de 50+50px vers le haut.
-4.  Le texte "SVG" est dessiné. L'intérieur de chaque lettre est rempli de blanc. Le texte est positionné grâce à une ancre placée là où nous souhaitons qu'elle soit. Dans le cas présent, le centre du texte doit correspondre au milieu du rectangle rouge. De petits ajustements peuvent être apportés à la taille de la police et au positionnement vertical, de manière à assurer un résultat final esthétiquement agréable.
+2. L'arrière-plan est défini par un rectangle rouge, déclaré grâce à la balise [`<rect>`](/fr/docs/Web/SVG/Element/rect) qui recouvre l'intégralité de l'espace.
+3. Un cercle ([`<circle>`](/fr/docs/Web/SVG/Element/circle)) vert d'un rayon de 80px est dessiné par-dessus le centre du rectangle rouge, avec un décalage de 30+120px vers l'intérieur et de 50+50px vers le haut.
+4. Le texte "SVG" est dessiné. L'intérieur de chaque lettre est rempli de blanc. Le texte est positionné grâce à une ancre placée là où nous souhaitons qu'elle soit. Dans le cas présent, le centre du texte doit correspondre au milieu du rectangle rouge. De petits ajustements peuvent être apportés à la taille de la police et au positionnement vertical, de manière à assurer un résultat final esthétiquement agréable.
 
 ## Les propriétés basiques des fichiers SVG
 
@@ -78,14 +78,18 @@ Toutefois, les fichiers SVG peuvent atteindre une taille assez importante, suiva
 
 Maintenant qu'on sait comment créer des fichiers SVG basiques, la prochaine étape consiste à les envoyer sur un serveur web. À ce stade, il existe quelques précautions à suivre. Pour les fichiers SVG normaux, les serveurs devraient envoyer l'en-tête HTTP :
 
-    Content-Type: image/svg+xml
-    Vary: Accept-Encoding
+```
+Content-Type: image/svg+xml
+Vary: Accept-Encoding
+```
 
 Pour les fichiers SVG compressés, les serveurs devraient envoyer l'en-tête HTTP :
 
-    Content-Type: image/svg+xml
-    Content-Encoding: gzip
-    Vary: Accept-Encoding
+```
+Content-Type: image/svg+xml
+Content-Encoding: gzip
+Vary: Accept-Encoding
+```
 
 Vous pouvez vérifier que votre serveur envoie le bon en-tête HTTP avec vos fichiers SVG en utilisant [le Moniteur réseau](/fr/docs/Tools/Network_Monitor) ou un site comme [websniffer.cc](https://websniffer.cc/). Fournissez l'URL d'un de vos fichiers SVG et regardez les en-têtes HTTP de la réponse. Si vous remarquez que votre serveur n'envoie pas les en-têtes avec les valeurs ci-dessus, vous devriez contacter votre hébergeur. Si vous avez du mal à le convaincre de configurer correctement leurs serveurs pour le SVG, il y a peut-être moyen de le faire vous-même. Regardez [la page de configuration d'un serveur](https://www.w3.org/services/svg-server/) sur le site w3.org pour quelques solutions simples.
 

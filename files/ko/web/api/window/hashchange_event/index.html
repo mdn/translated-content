@@ -1,0 +1,160 @@
+---
+title: WindowEventHandlers.onhashchange
+slug: Web/API/Window/hashchange_event
+tags:
+  - HTML-DOM
+  - Property
+  - Reference
+  - WindowEventHandlers
+translation_of: Web/API/WindowEventHandlers/onhashchange
+original_slug: Web/API/WindowEventHandlers/onhashchange
+---
+<div>
+<div>{{APIRef("HTML DOM")}}</div>
+
+<div>{{domxref("WindowEventHandlers")}} 믹스인의 <strong>WindowEventHandlers.onhashchange</strong> 속성은 </div>
+</div>
+
+<p><strong>hashchange </strong>이벤트를 처리하기 위한 {{event("Event_handlers", "event handler")}} 입니다.</p>
+
+<p>hashchange 이벤트는 윈도우의 해시가 변경되면 시작됩니다. ( {{domxref("Window.location")}} 및 {{domxref("HTMLHyperlinkElementUtils.hash")}} 참조)</p>
+
+<h2 id="문법">문법</h2>
+
+<p><strong>event handler:</strong></p>
+
+<pre class="syntaxbox">window.onhashchange = funcRef;
+</pre>
+
+<p><strong>HTML event handler:</strong></p>
+
+<pre class="syntaxbox">&lt;body onhashchange="funcRef();"&gt;
+</pre>
+
+<p><strong>event listener:</strong></p>
+
+<p>{{domxref("EventTarget.addEventListener()", "addEventListener()")}}를 사용하여 이벤트 리스너 추가하기</p>
+
+<pre class="syntaxbox">window.addEventListener("hashchange", funcRef, false);
+</pre>
+
+<h3 id="매개변수">매개변수</h3>
+
+<dl>
+ <dt><code>funcRef</code></dt>
+ <dd>함수에 대한 참조.</dd>
+</dl>
+
+<h2 id="예제">예제</h2>
+
+<h3 id="event_handler_사용하기">event handler 사용하기</h3>
+
+<p>This example uses an event handler (<code>window.onhashchange</code>) to check the new hash value whenever it changes. If it equals <code>#cool-feature</code>, the script logs a message to the console.</p>
+
+<pre><code>function locationHashChanged() {
+  if (location.hash === '#cool-feature') {
+    console.log("You're visiting a cool feature!");
+  }
+}
+
+window.onhashchange = locationHashChanged;</code>
+</pre>
+
+<h3 id="Using_an_event_listener">Using an event listener</h3>
+
+<p>이 예제는 이벤트 리스너를 사용하여 해시가 변경 될 때마다 콘솔에 알림표시합니다.</p>
+
+<pre><code>function hashHandler() {
+  console.log('The hash has changed!');
+}
+
+window.addEventListener('hashchange', hashHandler, false);</code></pre>
+
+<h3 id="Overriding_the_hash">Overriding the hash</h3>
+
+<p>이 함수는 새로운 해시를 동적으로 설정하여 임의로 두 값 중 하나로 설정합니다.</p>
+
+<pre><code>function changeHash() {
+  location.hash = (Math.random() &gt; 0.5) ? 'location1' : 'location2';
+}</code>
+</pre>
+
+<h2 id="hashchange_이벤트">hashchange 이벤트</h2>
+
+<p><code>hashchange</code> 이벤트에는 다음과 같은 필드가 있습니다:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Field</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>newURL</code> {{gecko_minversion_inline("6.0")}}</td>
+   <td><code>DOMString</code></td>
+   <td>탐색할 새로운 URL입니다.</td>
+  </tr>
+  <tr>
+   <td><code>oldURL</code> {{gecko_minversion_inline("6.0")}}</td>
+   <td><code>DOMString</code></td>
+   <td>탐색했던 이전의 URL입니다.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="제2의_해결책을_위한_event.newURL_와_event.oldURL">제2의 해결책을 위한 event.newURL 와 event.oldURL</h3>
+
+<pre class="brush:js">//let this snippet run before your hashchange event binding code
+if(!window.HashChangeEvent)(function(){
+	var lastURL=document.URL;
+	window.addEventListener("hashchange",function(event){
+		Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
+		Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
+		lastURL=document.URL;
+	});
+}());
+</pre>
+
+<h2 id="명세">명세</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">브라우저 호환성</h2>
+
+<p>{{Compat("api.WindowEventHandlers.onhashchange")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event">hashchange</a></code> event</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/DOM/Manipulating_the_browser_history" title="DOM/Manipulating the browser history">Manipulating the browser history</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/DOM/window.history" title="DOM/window.history"><code>history.pushState()</code> and <code>history.replaceState()</code></a> methods</li>
+ <li>{{domxref("WindowEventHandlers.onpopstate")}}</li>
+ <li>{{domxref("HTMLHyperlinkElementUtils.hash")}}</li>
+</ul>

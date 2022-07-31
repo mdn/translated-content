@@ -44,4 +44,4 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 - {{cssxref("::-webkit-outer-spin-button")}}
 - {{cssxref("::-webkit-textfield-decoration-container")}}
-- [Mettre en forme les contrôles de formulaires  – WebKit (en anglais)](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)
+- [Mettre en forme les contrôles de formulaires  – WebKit (en anglais)](https://trac.webkit.org/wiki/Styling%20Form%20Controls#inputelement)

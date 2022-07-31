@@ -20,7 +20,7 @@ L'ancrage du défilement ajuste la position du défilement pour compenser les mo
 
 ## Comment activer l'ancrage du défilement ?
 
-Il n'y a rien à fait. Cette fonctionnalité est activée par défaut pour les navigateurs qui la prennent en charge. Dans la plupart des cas, ces sauts inattendus ne sont pas une expérience voulue.
+Il n'y a rien à faire. Cette fonctionnalité est activée par défaut pour les navigateurs qui la prennent en charge. Dans la plupart des cas, ces sauts inattendus ne sont pas une expérience voulue.
 
 ## Si besoin, que faire pour le désactiver ?
 
@@ -35,7 +35,7 @@ Pour désactiver l'ancrage sur l'ensemble du document, on pourra appliquer la pr
 
 ```css
 body {
-  overflow-anchor: none;
+  overflow-anchor: none;
 }
 ```
 
@@ -43,7 +43,7 @@ Pour désactiver cette fonctionnalité sur une certaine partie du document, on c
 
 ```css
 .container {
-  overflow-anchor: none;
+  overflow-anchor: none;
 }
 ```
 

@@ -22,7 +22,7 @@ browser-compat: html.elements.content
 
 L'élément HTML **`<content>`** — une partie obsolète de la suite de technologies [Web Components](/fr/docs/Web/Web_Components) — était utilisé à l'intérieur de [Shadow DOM](/fr/docs/Web/Web_Components/Using_shadow_DOM) comme un point d'insertion, et n'était pas destiné à être utilisé dans du HTML ordinaire. Il a maintenant été remplacé par l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot), qui crée un point dans le DOM où un Shadow DOM peut être inséré.
 
-> **Note :**Bien que présent dans les premières versions des spécifications et mis en œuvre dans plusieurs navigateurs, cet élément a été supprimé dans les versions ultérieures de la spécification, et ne doit pas être utilisé. Il est documenté ici pour aider à adapter le code écrit à l'époque où il était inclus dans la spécification afin qu'il fonctionne avec les versions plus récentes de la spécification.
+> **Note :** Bien que présent dans les premières versions des spécifications et mis en œuvre dans plusieurs navigateurs, cet élément a été supprimé dans les versions ultérieures de la spécification, et ne doit pas être utilisé. Il est documenté ici pour aider à adapter le code écrit à l'époque où il était inclus dans la spécification afin qu'il fonctionne avec les versions plus récentes de la spécification.
 
 <table class="properties">
   <tbody>
@@ -80,7 +80,7 @@ Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/
 
 Voici un exemple simple d'utilisation de l'élément `<content>`. Il s'agit d'un fichier HTML It is an HTML file with everything needed in it.
 
-> **Note :**Pour que ce code fonctionne, le navigateur utilisé doit prendre en charge les composants web (voir par exemple [l'activation des composants web dans Firefox](/fr/docs/Web/Web_Components#enabling_web_components_in_firefox)).
+> **Note :** Pour que ce code fonctionne, le navigateur utilisé doit prendre en charge les composants web (voir par exemple [l'activation des composants web dans Firefox](/fr/docs/Web/Web_Components#enabling_web_components_in_firefox)).
 
 ```html
 <html>

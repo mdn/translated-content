@@ -169,7 +169,7 @@ favDialog.addEventListener('close', function onClose() {
 
 #### Résultat
 
-{{EmbedLiveSample("advanced_example", "", 300)}}
+{{EmbedLiveSample("Exemple_avancé", "", 300)}}
 
 ## Spécifications
 

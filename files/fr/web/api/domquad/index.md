@@ -23,7 +23,7 @@ Un `DOMQuad` est une collection de 4 `DOMPoint` définissant les coins d'un quad
 ## Propriétés
 
 - p1,p2,p3,p4 {{readonlyinline}}
-  - : sont des objets {{domxref("DOMPoint")}} pour chacun des 4 coins de l'objet` DOMQuad`.
+  - : Des objets [`DOMPoint`](/fr/docs/Web/API/DOMPoint) pour chacun des 4 coins de l'objet `DOMQuad`.
 
 ## Méthode
 

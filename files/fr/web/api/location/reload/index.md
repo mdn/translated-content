@@ -37,4 +37,4 @@ En résumé, ce paramètre booléen ne fait pas partie de la spécification actu
 ## Voir aussi
 
 - L'interface [`Location`](/fr/docs/Web/API/Location) à laquelle appartient cette méthode.
-- Des méthodes semblables : [`Location.assign()`](/fr/docs/Web/API/Location/assign) et [`Location.replace()`](/fr/docs/Web/API/Location/replace).
+- Des méthodes semblables&nbsp;: [`Location.assign()`](/fr/docs/Web/API/Location/assign) et [`Location.replace()`](/fr/docs/Web/API/Location/replace).

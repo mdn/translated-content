@@ -48,7 +48,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('exemple', 150, '100%')}}
+{{EmbedLiveSample('Exemple', 150, '100%')}}
 
 ## Attributs
 
@@ -90,7 +90,7 @@ html,body,svg { height:100% }
 
 | Spécification                                                                                                    | Statut                   | Commentaire         |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}} |                     |
+| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}} |                     |
 | {{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
 
 ## Compatibilité des navigateurs

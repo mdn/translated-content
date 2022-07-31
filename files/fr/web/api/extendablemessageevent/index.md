@@ -12,14 +12,14 @@ translation_of: Web/API/ExtendableMessageEvent
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-L'interface **`ExtendableMessageEvent`** de {{domxref("ServiceWorker_API", "ServiceWorker API")}} représentes un objet d'évenement qu'un évènement {{event("message_(ServiceWorker)","message")}} lance pour un service worker (quand un canal de message est reçu sur le {{domxref("ServiceWorkerGlobalScope")}} depuis un autre context) — étends la durée de vie de ces évènements.
+L'interface **`ExtendableMessageEvent`** de {{domxref("ServiceWorker_API", "ServiceWorker API")}} représentes un objet d'évenement qu'un évènement {{event("message_(ServiceWorker)","message")}} lance pour un service worker (quand un canal de message est reçu sur le {{domxref("ServiceWorkerGlobalScope")}} depuis un autre context) — étends la durée de vie de ces évènements.
 
 Cette interface hérite de l'interface {{domxref("ExtendableEvent")}}.
 
 ## Constructeur
 
 - {{domxref("ExtendableMessageEvent.ExtendableMessageEvent()")}}
-  - : Crée une nouvelle instance de l'objet `ExtendableMessageEvent`.
+  - : Crée une nouvelle instance de l'objet `ExtendableMessageEvent`.
 
 ## Propriétés
 
@@ -30,19 +30,19 @@ _Hérite des propriétés de son parent,_ _{{domxref("ExtendableEvent")}}_.
 - {{domxref("ExtendableMessageEvent.origin")}} {{readonlyinline}}
   - : Retourne l'origine du {{domxref("ServiceWorkerClient")}} qui envoie le message.
 - {{domxref("ExtendableMessageEvent.lastEventId")}} {{readonlyinline}}
-  - : Représente, dans un [server-sent events](en-US/docs/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
+  - : Représente, dans un [server-sent events](en-US/docs/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
 - {{domxref("ExtendableMessageEvent.source")}} {{readonlyinline}}
   - : Retourne une référence vers le service worker qui envoie le message.
 - {{domxref("ExtendableMessageEvent.ports")}} {{readonlyinline}}
-  - : Retourne un tableau contenant l'objet {{domxref("MessagePort")}} représentant les ports associés au canal de messagerie.
+  - : Retourne un tableau contenant l'objet {{domxref("MessagePort")}} représentant les ports associés au canal de messagerie.
 
 ## Méthodes
 
-_Hérite des méthodesde son parent, {{domxref("ExtendableEvent")}}_.
+_Hérite des méthodesde son parent, {{domxref("ExtendableEvent")}}_.
 
 ## Exemples
 
-Le code suivant est utilisé dans un service worker pour répondre à un message push en envoyant les données reçues via  {{domxref("PushMessageData")}} au contexte principale via un [channel message](/en-US/docs/Web/API/Channel_Messaging_API), l'objet d'évènement du `onmessage` sera un `ExtendableMessageEvent`.
+Le code suivant est utilisé dans un service worker pour répondre à un message push en envoyant les données reçues via  {{domxref("PushMessageData")}} au contexte principale via un [channel message](/en-US/docs/Web/API/Channel_Messaging_API), l'objet d'évènement du `onmessage` sera un `ExtendableMessageEvent`.
 
 ```js
 var port;

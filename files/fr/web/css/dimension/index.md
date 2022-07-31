@@ -42,7 +42,7 @@ La syntaxe d'une valeur de type `<dimension>` est un nombre (valeur de type {{CS
 | Spécification                                                                            | État                             | Commentaires                                      |
 | ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------- |
 | {{SpecName("CSS4 Values", "#dimensions", "&lt;dimension&gt;")}}     | {{Spec2("CSS4 Values")}} | Adds `cap`, `ic`, `lh`, `rlh`, `vi`, `vb`         |
-| {{SpecName("CSS3 Values", "#dimensions", "&lt;dimension&gt;")}}     | {{Spec2("CSS3 Values")}} | Adds `ch`, `rem`, `vw`, `vw`, `vmin`,` vmax`, `Q` |
+| {{SpecName("CSS3 Values", "#dimensions", "&lt;dimension&gt;")}}     | {{Spec2("CSS3 Values")}} | Adds `ch`, `rem`, `vw`, `vw`, `vmin`, `vmax`, `Q` |
 | {{SpecName("CSS2.1", "syndata.html#numbers", "&lt;dimension&gt;")}} | {{Spec2("CSS2.1")}}         | Defined under Numbers and Length                  |
 | {{SpecName("CSS1", "", "&lt;dimension&gt;")}}                             | {{Spec2("CSS1")}}         | Initial definition under "length units"           |
 

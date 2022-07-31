@@ -14,7 +14,7 @@ translation_of: Web/HTTP/Headers/Content-Disposition
 
 <div>Em uma resposta HTTP normal, o cabeçalho de resposta <code><strong>Content-Disposition</strong></code> indica se o conteúdo é esperado a ser exibido <em>inline</em> no navegador, isso significa, como uma página Web ou parte de uma, ou como um anexo, que é baixado e salvo localmente.</div>
 
-<div></div>
+
 
 <p>Em um corpo <code>multipart/form-data</code>, o cabeçalho geral HTTP <strong><code>Content-Disposition</code></strong> é um cabeçalho que pode ser utilizado em uma subparte de um corpo multipartes para dar informações sobre o campo a que ele se aplica. A subparte é delimitada pelo limite definido no cabeçalho {{HTTPHeader("Content-Type")}}. Usado no corpo em si, <code>Content-Disposition</code> não tem efeito.</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/HTTP/Headers/Content-Disposition
 
 <h3 id="Como_cabeçalho_de_resposta_para_o_corpo_principal">Como cabeçalho de resposta para o corpo principal</h3>
 
-<p>O primeiro parâmetro no contexto HTTP ou é <code>inline</code> (valor padrão, indicando que ele pode ser mostrado dentro de uma página Web, ou como uma página Web) ou <code>attachment</code> (indicando que ele devev ser baixado; a maioria dos navegadores apresenta uma caixa de diálogo "Salvar como", pré-preenchido com o valor do parâmetro <code>filename</code> se presente).</p>
+<p>O primeiro parâmetro no contexto HTTP ou é <code>inline</code> (valor padrão, indicando que ele pode ser mostrado dentro de uma página Web, ou como uma página Web) ou <code>attachment</code> (indicando que ele deve ser baixado; a maioria dos navegadores apresenta uma caixa de diálogo "Salvar como", pré-preenchido com o valor do parâmetro <code>filename</code> se presente).</p>
 
 <pre class="syntaxbox">Content-Disposition: inline
 Content-Disposition: attachment

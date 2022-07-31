@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
 <div>{{JSRef}}{{SeeCompatTable}}</div>
 
-<p><strong><code>padStart()</code></strong><code> 會將用給定用於填充的字串，以重複的方式，插入到目標字串的起頭(左側)，直到目標字串到達指定長度。</code></p>
+<p><strong><code>padStart()</code></strong><code> 會將用給定用於填充的字串，以重複的方式，插入到目標字串的起頭(左側)，直到目標字串到達指定長度。</code></p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
  <dt><code>targetLength</code></dt>
  <dd>目標字串被填充後的長度。如果此參數小於原字串的長度，那將直接返回原字串。</dd>
  <dt><code>padString</code> {{optional_inline}}</dt>
- <dd>用來填充的字串。如果填充字串太長，則由左側開始，擷取所需要的長度。此參數預設值是空白 " " (U+0020).</dd>
+ <dd>用來填充的字串。如果填充字串太長，則由左側開始，擷取所需要的長度。此參數預設值是空白 " " (U+0020).</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -26,68 +26,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 
 <h2 id="Examples">Examples</h2>
 
-<pre class="brush: js">'abc'.padStart(10);         // "       abc"
+<pre class="brush: js">'abc'.padStart(10);         // "       abc"
 'abc'.padStart(10, "foo");  // "foofoofabc"
 'abc'.padStart(6,"123465"); // "123abc"
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="規範">規範</h2>
 
-<p>這個方法還沒有被納入 ECMAScript 標準。現在還只是個<a href="https://github.com/tc39/proposal-string-pad-start-end">提案</a>。</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(57)}} </td>
-   <td>15</td>
-   <td>{{CompatGeckoDesktop(51)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(44)}}</td>
-   <td>{{CompatSafari(10)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(57)}}</td>
-   <td>{{CompatGeckoMobile(51)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatSafari(10)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

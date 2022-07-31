@@ -26,9 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
  <dt><code>start</code></dt>
  <dd>陣列中要開始改動的元素索引（起始為 0）。若索引大於陣列長度，則實際開始的索引值會被設為陣列長度。若索引為負，則會從陣列中最後一個元素開始往前改動（起始為 -1）且若其絕對值大於陣列的長度，則會被設為 0。</dd>
  <dt><code>deleteCount</code> {{optional_inline}}</dt>
- <dd>一個表示欲刪除的原陣列元素數量的整數。</dd>
- <dd>若省略了 <code>deleteCount</code>，或假如其值大於 <code>array.length - start</code>（也就是 <code>deleteCount</code> 大於 <code>start</code> 算起的剩餘元素數量），則所有從 <code>start</code> 開始到陣列中最後一個元素都會被刪除。</dd>
- <dd>若 <code>deleteCount</code> 為 0 或是負數，則不會有元素被刪除。 因此，你應該給定至少一個欲加入的新元素（見下方說明）。</dd>
+ <dd>一個表示欲刪除的原陣列元素數量的整數。若省略了 <code>deleteCount</code>，或假如其值大於 <code>array.length - start</code>（也就是 <code>deleteCount</code> 大於 <code>start</code> 算起的剩餘元素數量），則所有從 <code>start</code> 開始到陣列中最後一個元素都會被刪除。若 <code>deleteCount</code> 為 0 或是負數，則不會有元素被刪除。 因此，你應該給定至少一個欲加入的新元素（見下方說明）。</dd>
  <dt><code>item1, item2, <em>...</em></code> {{optional_inline}}</dt>
  <dd>從 <code>start</code> 開始，要加入到陣列的元素。 如果你沒有指定任何元素，則 <code>splice()</code> 只會依照 <code>start</code> 和 <code>deleteCount</code> 刪除陣列的元素。</dd>
 </dl>
@@ -103,35 +101,7 @@ var removed = myFish.splice(2);
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">備註</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.splice', 'Array.prototype.splice')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
@@ -144,7 +114,7 @@ var removed = myFish.splice(2);
 <h2 id="參見">參見</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — add/remove elements from the end of the array</li>
- <li>{{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — add/remove elements from the beginning of the array</li>
- <li>{{jsxref("Array.prototype.concat()", "concat()")}} — returns a new array comprised of this array joined with other array(s) and/or value(s)</li>
+ <li>{{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — add/remove elements from the end of the array</li>
+ <li>{{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — add/remove elements from the beginning of the array</li>
+ <li>{{jsxref("Array.prototype.concat()", "concat()")}} — returns a new array comprised of this array joined with other array(s) and/or value(s)</li>
 </ul>

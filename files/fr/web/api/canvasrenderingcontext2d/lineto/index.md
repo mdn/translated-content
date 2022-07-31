@@ -5,11 +5,13 @@ translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.lineTo()`\*\* de l'API Canvas 2D connecte le dernier point du sous-chemin en cours aux coordonnées `x, y` spécifiées avec une ligne droite (sans tracer réellement le chemin).
+La méthode **`CanvasRenderingContext2D.lineTo()`** de l'API Canvas 2D connecte le dernier point du sous-chemin en cours aux coordonnées `x, y` spécifiées avec une ligne droite (sans tracer réellement le chemin).
 
 ## Syntaxe
 
-    void ctx.lineTo(x, y);
+```js
+void ctx.lineTo(x, y);
+```
 
 ### Paramètres
 
@@ -20,9 +22,9 @@ La méthode **`CanvasRenderingContext2D`\*\***`.lineTo()`\*\* de l'API Canvas 2
 
 ## Exemples
 
-### Utilisation de la méthode `lineTo`
+### Utilisation de la méthode `lineTo`
 
-Ceci est un extrait de code utilisant la méthode `lineTo`. Il faut utiliser la méthode {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} pour débuter un dessin, pour ensuite pouvoir dessiner une ligne dessus. On peut déplacer le crayon avec la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} et utiliser la méthode {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} pour rendre la ligne visible.
+Ceci est un extrait de code utilisant la méthode `lineTo`. Il faut utiliser la méthode {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} pour débuter un dessin, pour ensuite pouvoir dessiner une ligne dessus. On peut déplacer le crayon avec la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} et utiliser la méthode {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} pour rendre la ligne visible.
 
 #### HTML
 
@@ -49,8 +51,8 @@ ctx.stroke();
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();
@@ -91,7 +93,7 @@ window.addEventListener("load", drawCanvas);
 
 | Spécification                                                                                                                            | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-lineto", "CanvasRenderingContext2D.lineTo")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-lineto", "CanvasRenderingContext2D.lineTo")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

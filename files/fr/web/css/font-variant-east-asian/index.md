@@ -51,7 +51,7 @@ font-variant-east-asian: unset;
     | `simplified`  | Aucun, ce sont les glyphes chinois simplifiés qui sont utilisés.            | `smpl`              |
     | `traditional` | Aucun, ce sont les glyphes chinois traditionnels qui sont utilisés.         | `trad`              |
 
-- *<*east-asian-width-values\*\*>
+- `<east-asian-width-values>`
 
   - : Ces valeurs permettent de contrôler le dimensionnement des symboles pour les caractères des langues d'Asie orientale. Deux valeurs sont possibles :
 

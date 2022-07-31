@@ -5,208 +5,51 @@ translation_of: Web/API/FormData
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p><strong><code>FormData</code></strong> 介面可為表單資料中的欄位/值建立相對應的的鍵/值對（key/value）集合，之後便可使用 {{domxref("XMLHttpRequest.send()")}} 方法來送出資料。它在編碼類型設定為 <code>multipart/form-data</code> 時會採用與表單相同的格式送出。</p>
+<p><strong><code>FormData</code></strong> 介面可為表單資料中的欄位/值建立相對應的的鍵/值對（key/value）集合，之後便可使用 {{domxref("XMLHttpRequest.send()")}} 方法來送出資料。它在編碼類型設定為 <code>multipart/form-data</code> 時會採用與表單相同的格式送出。</p>
 
 <p>實作 <code>FormData</code> 的物件可以直接利用 {{jsxref("Statements/for...of", "for...of")}} 語法結構來替代 {{domxref('FormData.entries()', 'entries()')}}：<code>for (var p of myFormData)</code> 等同於 <code>for (var p of myFormData.entries())</code>。</p>
 
 <div class="note">
-<p><strong>備註：</strong>此特性適用於 <a href="/zh-TW/docs/Web/API/Web_Workers_API">Web Workers</a>。</p>
+<p><strong>備註：</strong>此特性適用於 <a href="/zh-TW/docs/Web/API/Web_Workers_API">Web Workers</a>。</p>
 </div>
 
 <h2 id="建構式">建構式</h2>
 
 <dl>
  <dt>{{domxref("FormData.FormData","FormData()")}}</dt>
- <dd>建立一個新的 <code>FormData</code> 物件。</dd>
+ <dd>建立一個新的 <code>FormData</code> 物件。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
 <dl>
  <dt>{{domxref("FormData.append()")}}</dt>
- <dd>追加新值到 <code>FormData</code> 物件已有的對應鍵上；若該鍵不存在，則為其追加新的鍵。</dd>
+ <dd>追加新值到 <code>FormData</code> 物件已有的對應鍵上；若該鍵不存在，則為其追加新的鍵。</dd>
  <dt>{{domxref("FormData.delete()")}}</dt>
  <dd>刪除指定的鍵值對。</dd>
  <dt>{{domxref("FormData.entries()")}}</dt>
  <dd>回傳 {{jsxref("Iteration_protocols","iterator")}}，可用來處理物件中所有的鍵值對。</dd>
  <dt>{{domxref("FormData.get()")}}</dt>
- <dd>回傳指定的鍵在 <code>FormData</code> 物件中找到的第一個對應值。</dd>
+ <dd>回傳指定的鍵在 <code>FormData</code> 物件中找到的第一個對應值。</dd>
  <dt>{{domxref("FormData.getAll()")}}</dt>
- <dd>回傳指定的鍵在 <code>FormData</code> 物件中所有對應值的陣列。</dd>
+ <dd>回傳指定的鍵在 <code>FormData</code> 物件中所有對應值的陣列。</dd>
  <dt>{{domxref("FormData.has()")}}</dt>
- <dd>回傳 <code>FormData</code> 物件是否含有指定鍵值對的布林值。</dd>
+ <dd>回傳 <code>FormData</code> 物件是否含有指定鍵值對的布林值。</dd>
  <dt>{{domxref("FormData.keys()")}}</dt>
  <dd>回傳 {{jsxref("Iteration_protocols", "iterator")}}，可用來處理物件中所有鍵值對之中的鍵。</dd>
  <dt>{{domxref("FormData.set()")}}</dt>
- <dd>為 <code>FormData</code> 物件已有的鍵設定新值；若該鍵不存在，則為其追加新的鍵。</dd>
+ <dd>為 <code>FormData</code> 物件已有的鍵設定新值；若該鍵不存在，則為其追加新的鍵。</dd>
  <dt>{{domxref("FormData.values()")}}</dt>
  <dd>回傳 {{jsxref("Iteration_protocols", "iterator")}}，可用來處理物件中所有鍵值對之中的值。</dd>
 </dl>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#interface-formdata','FormData')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>FormData defined in XHR spec</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(7.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}<sup>[1]</sup></td>
-   <td>10</td>
-   <td>12</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>append with filename</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("22.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>delete()</code>, <code>get()</code>, <code>getAll()</code>, <code>has()</code>, <code>set()</code></td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>entries()</code>, <code>keys()</code>, <code>values()</code>, and support of <code>for...of</code></td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("44.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Available in web workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("39.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3.0<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}<sup>[1]</sup></td>
-   <td>1.0.1</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>append with filename</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("22.0")}}</td>
-   <td>1.2</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>delete()</code>, <code>get()</code>, <code>getAll()</code>, <code>has()</code>, <code>set()</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>entries()</code>, <code>keys()</code>, <code>values()</code>, and support of <code>for...of</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("44.0")}}</td>
-   <td>2.5</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(50.0)}}</td>
-  </tr>
-  <tr>
-   <td>Available in web workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在 Gecko 7.0 {{geckoRelease("7.0")}} 之前，若把 {{domxref("Blob")}} 設定為物件中的值，則 HTTP 標頭中 "Content-Disposition" 的檔案名稱會是空字串，此行為會被某些伺服器視為錯誤。Gecko 7.0 之後則會將檔名設為 "blob" 送出。</p>
-
-<p>[2] XHR in Android 4.0 sends empty content for <code>FormData</code> with <code>blob</code>.</p>
+{{Compat("api.FormData")}}
 
 <h2 id="參見">參見</h2>
 

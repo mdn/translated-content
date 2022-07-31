@@ -67,7 +67,7 @@ WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 
 ### 共有メモリーの作成
 
-既定では、 WebAssembly のメモリーは共有されていません。[共有メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#shared_memories)を作成するには、コンストラクター
+既定では、 WebAssembly のメモリーは共有されていません。[共有メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#共有メモリー)を作成するには、コンストラクター
 の初期化オブジェクトに `shared: true` を渡してください。
 
 ```js

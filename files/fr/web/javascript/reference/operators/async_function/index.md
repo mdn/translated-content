@@ -17,9 +17,11 @@ Le mot-clé **`async function`** peut être utilisé pour définir une fonction 
 
 ## Syntaxe
 
-    async function [name]([param1[, param2[, ..., paramN]]]) {
-       instructions
-    }
+```js
+async function [name]([param1[, param2[, …, paramN]]]) {
+  instructions
+}
+```
 
 ### Paramètres
 
@@ -72,8 +74,8 @@ add(10).then(v => {
 
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES2018', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ES2018')}}     |                      |
+| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES2018', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ES2018')}}     |                      |
 | {{SpecName('ES2017', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ES2017')}}     | Définition initiale. |
 
 ## Compatibilité des navigateurs

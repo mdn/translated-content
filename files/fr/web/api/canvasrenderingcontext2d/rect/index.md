@@ -5,11 +5,13 @@ translation_of: Web/API/CanvasRenderingContext2D/rect
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D`\*\***`.rect()`\*_ de l'API Canvas 2D crée un chemin de rectangle à la position _(x, y)* et de dimensions *width* et *height\*. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser `fill` ou `stroke` pour dessiner ce rectangle.
+La méthode **`CanvasRenderingContext2D.rect()`** de l'API Canvas 2D crée un chemin de rectangle à la position _(x, y)_ et de dimensions *width* et *height*. Ces quatre points sont connectés par des lignes droites et le sous-chemin est directement fermé, vous pouvez donc utiliser `fill` ou `stroke` pour dessiner ce rectangle.
 
 ## Syntaxe
 
-    void ctx.rect(x, y, width, height);
+```js
+void ctx.rect(x, y, width, height);
+```
 
 ### Paramètres
 
@@ -50,8 +52,8 @@ ctx.fill();
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);

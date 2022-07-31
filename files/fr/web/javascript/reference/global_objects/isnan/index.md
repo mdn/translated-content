@@ -16,7 +16,9 @@ La fonction **`isNaN()`** permet de déterminer si une valeur est {{jsxref("NaN"
 
 ## Syntaxe
 
-    isNaN(valeurÀTester)
+```js
+isNaN(valeurÀTester)
+```
 
 ### Paramètres
 
@@ -119,9 +121,9 @@ isNaN("blabla")   // true : "blabla" est converti en un nombre
 | Spécification                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.4', 'isNaN')}}         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-isnan-number', 'isNaN')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.1.2.4', 'isNaN')}}         | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-isnan-number', 'isNaN')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

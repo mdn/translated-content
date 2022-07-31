@@ -16,7 +16,9 @@ La méthode **`Document.createAttribute()`** crée un nouveau nœud d'attribut e
 
 ## Syntaxe
 
-    attribut = document.createAttribute(nom)
+```js
+attribut = document.createAttribute(nom)
+```
 
 ### Paramètres
 
@@ -28,7 +30,7 @@ Un nœud {{domxref("Attr")}}.
 
 ### Exceptions levées
 
-- `INVALID_CHARACTER_ERR`  si le paramètre contient un caractère invalide pour un attribut XML.
+- `INVALID_CHARACTER_ERR`  si le paramètre contient un caractère invalide pour un attribut XML.
 
 ## Exemples
 

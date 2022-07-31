@@ -70,8 +70,8 @@ grid-template: unset;
   width: 100%;
   height: 200px;
   grid-template: [header-left] "head head" 30px [header-right]
-                 [main-left]   "nav  main" 1fr  [main-right]
-                 [footer-left] "nav  foot" 30px [footer-right]
+                 [main-left]   "nav main" 1fr  [main-right]
+                 [footer-left] "nav foot" 30px [footer-right]
                  / 120px 1fr;
 }
 

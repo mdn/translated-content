@@ -5,7 +5,7 @@ translation_of: Web/API/Path2D/addPath
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><code style="font-style: normal;"><strong>Path2D</strong></code><strong><code>.addPath()</code></strong> 是 Canvas 2D API 根据指定路径变量添加路径的方法。</p>
+<p><code style="font-style: normal;"><strong>Path2D</strong></code><strong><code>.addPath()</code></strong> 是 Canvas 2D API 根据指定路径变量添加路径的方法。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/Path2D/addPath
 
 <h3 id="使用_addPath_方法">使用 <code>addPath</code> 方法</h3>
 
-<p>这是一段使用 <code>addPath</code> 方法的简单的代码片段。</p>
+<p>这是一段使用 <code>addPath</code> 方法的简单的代码片段。</p>
 
 <pre class="brush: js; highlight:[19]">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
@@ -58,8 +58,8 @@ ctx.fill(p1);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code" style="height:220px;"&gt;
 var p1 = new Path2D();
@@ -105,74 +105,13 @@ window.addEventListener("load", drawCanvas);
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 500) }}</p>
 
-<h2 id="规范描述">规范描述</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-path2d-addpath", "Path2D.addPath()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial defintion.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop(34)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(34)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Path2D.addPath")}}
 
 <h2 id="参见">参见</h2>
 

@@ -11,11 +11,13 @@ Après la séparation, le nœud actuel contient tout le texte jusqu’à l’ind
 
 Des nœuds texte séparés peuvent être concaténés en utilisant la méthode {{domxref("Node.normalize()")}}.
 
-Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est levée si l’indice spécifié est négatif ou est supérieur au nombre d’unités 16-bit dans le texte du nœud ; une {{domxref("DOMException")}} avec la valeur `NO_MODIFICATION_ALLOWED_ERR` est levée si le nœud est en lecture seule.
+Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est levée si l’indice spécifié est négatif ou est supérieur au nombre d’unités 16-bit dans le texte du nœud&nbsp;; une {{domxref("DOMException")}} avec la valeur `NO_MODIFICATION_ALLOWED_ERR` est levée si le nœud est en lecture seule.
 
 ## Syntaxe
 
-    noeudRemplacant = noeudTexte.splitText(indice)
+```js
+noeudRemplacant = noeudTexte.splitText(indice)
+```
 
 ## Exemple
 
@@ -60,4 +62,4 @@ Dans cet exemple, le nœud texte d’un {{HTMLElement("p")}} est séparé en deu
 ## Voir aussi
 
 - L’interface {{domxref("Text")}} à laquelle cette méthode appartient.
-- La méthode opposée : {{domxref("Node.normalize")}}.
+- La méthode opposée&nbsp;: {{domxref("Node.normalize")}}.

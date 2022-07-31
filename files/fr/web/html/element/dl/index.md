@@ -137,7 +137,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 </dl>
 ```
 
-{{EmbedLiveSample("single_term_and_description", "", 120)}}
+{{EmbedLiveSample("Un_seul_terme_et_une_seule_définition", "", 120)}}
 
 ### Plusieurs termes avec une même définition
 
@@ -155,7 +155,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 </dl>
 ```
 
-{{EmbedLiveSample("multiple_terms_single_description", "", 180)}}
+{{EmbedLiveSample("Plusieurs_termes_avec_une_même_définition", "", 180)}}
 
 ### Un seul terme avec plusieurs définitions
 
@@ -176,7 +176,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 </dl>
 ```
 
-{{EmbedLiveSample("single_term_multiple_descriptions", "", 180)}}
+{{EmbedLiveSample("Un_seul_terme_avec_plusieurs_définitions", "", 180)}}
 
 ### Termes et descriptions multiples
 

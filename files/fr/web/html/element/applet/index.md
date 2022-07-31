@@ -130,7 +130,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 
 ### Résultat
 
-{{EmbedLiveSample("example","100%", 30)}}
+{{EmbedLiveSample("Exemple","100%", 30)}}
 
 ## Spécifications
 

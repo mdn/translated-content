@@ -14,10 +14,10 @@ Le **bloc englobant (_containing block_)** affecte souvent la taille et la posit
 
 Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document, il génère une boîte pour chaque élément du document. Chaque boîte est divisée en quatre zones :
 
-1.  La zone de contenu (_content area_)
-2.  La zone de remplissage (_padding area_)
-3.  La zone de bordure (_border area_)
-4.  La zone de marge (_margin area_)
+1. La zone de contenu (_content area_)
+2. La zone de remplissage (_padding area_)
+3. La zone de bordure (_border area_)
+4. La zone de marge (_margin area_)
 
 ![Diagram of the box model](box-model.png)
 
@@ -35,15 +35,15 @@ Les dimensions et la position d'un élément sont souvent dépendants du bloc en
 
 Le bloc englobant est entièrement déterminé par la valeur de la propriété {{cssxref("position")}} pour l'élément :
 
-- Si la propriété `position`\*\* **vaut **`static`**, **`relative`** ou **`sticky`\*\*, le bloc englobant est constitué par le bord de la boîte de contenu de l'ancêtre le plus proche qui est un conteneur de bloc (c'est-à-dire qui est un élément avec `display` qui vaut `inline-block`, `block` ou `list-item`) ou qui crée un contexte de formatage (tel qu'un conteneur de tableau, un conteneur flexible, un conteneur de grille ou le conteneur du bloc même).
+- Si la propriété `position` vaut **`static`**, **`relative`** ou **`sticky`**, le bloc englobant est constitué par le bord de la boîte de contenu de l'ancêtre le plus proche qui est un conteneur de bloc (c'est-à-dire qui est un élément avec `display` qui vaut `inline-block`, `block` ou `list-item`) ou qui crée un contexte de formatage (tel qu'un conteneur de tableau, un conteneur flexible, un conteneur de grille ou le conteneur du bloc même).
 - Si la propriété `position` vaut **`absolute`**, le bloc englobant est constitué par le bord de la boîte de remplissage (_padding_) de l'ancêtre le plus proche dont la valeur de `position` est différente de `static` (`fixed`, `absolute`, `relative` ou `sticky`).
 - Si la propriété `position` vaut **`fixed`**, le bloc englobant est formé par le {{glossary("viewport")}} (ou la page dans le cas des média paginés).
-- Si la propriété `position`\*\* **vaut **`absolute`** ou **`fixed`\*\*, le bloc englobant peut également être constitué par le bord de la boîte de remplissage le plus proche qui a :
+- Si la propriété `position` vaut **`absolute`** ou `fixed`, le bloc englobant peut également être constitué par le bord de la boîte de remplissage le plus proche qui a :
 
-  1.  Une propriété {{cssxref("transform")}} ou {{cssxref("perspective")}} avec une valeur différente de `none`
-  2.  Une propriété {{cssxref("will-change")}} qui vaut `transform` ou `perspective`
-  3.  Une propriété {{cssxref("filter")}} différente de `none` ou une propriété `will-change` différente of `filter` (ne fonctionne que pour Firefox).
-  4.  Une propriété {{cssxref("contain")}} qui vaut `paint`.
+  1. Une propriété {{cssxref("transform")}} ou {{cssxref("perspective")}} avec une valeur différente de `none`
+  2. Une propriété {{cssxref("will-change")}} qui vaut `transform` ou `perspective`
+  3. Une propriété {{cssxref("filter")}} différente de `none` ou une propriété `will-change` différente of `filter` (ne fonctionne que pour Firefox).
+  4. Une propriété {{cssxref("contain")}} qui vaut `paint`.
 
 > **Note :** Le bloc englobant contenant l'élément racine ({{HTMLElement("html")}}) est situé dans un rectangle appelé **bloc englobant initial**. Ce dernier a les dimensions de la zone d'affichage (_viewport_) ou de la page (pour les média paginés).
 
@@ -51,8 +51,8 @@ Le bloc englobant est entièrement déterminé par la valeur de la propriété {
 
 Comme mentionné ci-avant, lorsque certaines propriétés ont une valeur en pourcentage, la valeur calculée dépend du bloc contenant l'élément. Les propriétés qui fonctionnent de cette manière sont les propriétés **_box model_** et **_offset_** :
 
-1.  Les valeurs calculées des propriétés {{cssxref("height")}}, {{cssxref("top")}} et {{cssxref("bottom")}} sont construites à partir de la hauteur du bloc englobant.
-2.  Les valeurs calculées des propriétés {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}} et {{cssxref("margin")}} sont calculées à partir de la largeur (`width`) du bloc englobant.
+1. Les valeurs calculées des propriétés {{cssxref("height")}}, {{cssxref("top")}} et {{cssxref("bottom")}} sont construites à partir de la hauteur du bloc englobant.
+2. Les valeurs calculées des propriétés {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}} et {{cssxref("margin")}} sont calculées à partir de la largeur (`width`) du bloc englobant.
 
 ## Quelques exemples
 
@@ -103,7 +103,7 @@ p {
 
 ### Deuxième exemple
 
-Dans cet exemple, le bloc englobant est formé par l'élément {{HTMLElement("body")}}\*\* \*\*car `<section>` n'est pas un conteneur de bloc en raison de `display: inline` et il ne crée pas de contexte de formatage.
+Dans cet exemple, le bloc englobant est formé par l'élément {{HTMLElement("body")}} car `<section>` n'est pas un conteneur de bloc en raison de `display: inline` et il ne crée pas de contexte de formatage.
 
 ```html
 <body>

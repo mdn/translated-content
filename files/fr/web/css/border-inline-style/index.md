@@ -1,39 +1,45 @@
 ---
 title: border-inline-style
 slug: Web/CSS/border-inline-style
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
 translation_of: Web/CSS/border-inline-style
+browser-compat: css.properties.border-inline-style
 ---
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-La propriété** `border-inline-style`** permet de définir le style pour la bordure sur les côtés d'un élément qui correspondent à l'axe en ligne. Cette propriété logique correspond à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à {{cssxref("border-top-style")}} et {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} et {{cssxref("border-right-style")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`border-inline-style`** permet de définir le style pour la bordure sur les côtés d'un élément qui correspondent à l'axe en ligne. Cette propriété logique correspond à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à [`border-top-style`](/fr/docs/Web/CSS/border-top-style) et [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style) ou à [`border-left-style`](/fr/docs/Web/CSS/border-left-style) et [`border-right-style`](/fr/docs/Web/CSS/border-right-style) selon les valeurs des propriétés [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction) et [`text-orientation`](/fr/docs/Web/CSS/text-orientation).
+
+{{EmbedInteractiveExample("pages/css/border-inline-style.html")}}
+
+Pour les autres côtés, la bordure peut être mise en forme grâce à la propriété [`border-block-style`](/fr/docs/Web/CSS/border-block-style) qui définit [`border-block-start-style`](/fr/docs/Web/CSS/border-block-start-style) et [`border-block-end-style`](/fr/docs/Web/CSS/border-block-end-style).
+
+## Syntaxe
 
 ```css
 /* Valeurs de type <'border-style'> */
 border-inline-style: dashed;
 border-inline-style: dotted;
+border-inline-style: revert;
 border-inline-style: groove;
 ```
-
-Pour les autres côtés, la bordure peut être mise en forme grâce à la propriété {{cssxref("border-block-style")}} qui définit {{cssxref("border-block-start-style")}} et {{cssxref("border-block-end-style")}}.
-
-## Syntaxe
 
 ### Valeur
 
 - `<'border-style'>`
-  - : Le style de la ligne pour la bordure. Voir {{ cssxref("border-style") }}.
+  - : Le style de la ligne pour la bordure. Voir [`border-style`](/fr/docs/Web/CSS/border-style).
 
 ### Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
+
+### HTML
+
+```html
+<div>
+  <p class="texteExemple">Texte exemple</p>
+</div>
+```
 
 ### CSS
 
@@ -51,37 +57,21 @@ div {
 }
 ```
 
-### HTML
-
-```html
-<div>
-  <p class="texteExemple">Texte exemple</p>
-</div>
-```
-
 ### Résultat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample('', 140, 140)}}
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-style", "border-inline-style")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-inline-style")}}
+{{Compat}}
 
 ## Voir aussi
 
-- Les propriétés physiques qui correspondent à cette propriété logique :
-
-  - {{cssxref("border-top-style")}},
-  - {{cssxref("border-right-style")}},
-  - {{cssxref("border-bottom-style")}},
-  - {{cssxref("border-left-style")}}.
-
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- Les propriétés physiques qui correspondent à cette propriété logique&nbsp;: [`border-top-style`](/fr/docs/Web/CSS/border-top-style), [`border-right-style`](/fr/docs/Web/CSS/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style), [`border-left-style`](/fr/docs/Web/CSS/border-left-style).
+- [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction), [`text-orientation`](/fr/docs/Web/CSS/text-orientation)

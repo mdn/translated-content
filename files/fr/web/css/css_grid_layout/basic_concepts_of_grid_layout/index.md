@@ -394,7 +394,7 @@ Un élément peut s'étendre sur plusieurs cellules d'une rangée ou d'une colon
 
 ## Les gouttières
 
-Les _gouttière\*\*s_ entre les cellules sont définies à l'aide des propriétés {{cssxref("grid-column-gap")}} et {{cssxref("row-gap")}}, ou de la propriété raccourcie {{cssxref("gap")}}. Dans l'exemple ci-dessous nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de 1em de hauteur entre les rangées.
+Les _gouttières_ entre les cellules sont définies à l'aide des propriétés {{cssxref("grid-column-gap")}} et {{cssxref("row-gap")}}, ou de la propriété raccourcie {{cssxref("gap")}}. Dans l'exemple ci-dessous nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de 1em de hauteur entre les rangées.
 
 ```css
 .wrapper {
@@ -500,7 +500,7 @@ Dans ce cas la grille imbriquée n'est pas liée à la grille qui la contient. E
 
 ### Sous-grille
 
-Dans le brouillon de travaille pour la spécification de niveau 2 pour CSS Grid, il existe une fonctionnalité nommée _sous-grille_ qui permet de créer des grilles imbriquées qui utilisent la définition de la grille parent. _Ceci n'est implémenté dans aucun navigateur pour le moment, et la spécification peut encore changer._ Pour l'utiliser telle qu'elle est définie actuellement il faudrait modifier l'exemple suivant et remplacer `display: grid` par `display: subgrid, `et supprimer la définition des pistes. La piste imbriquée utiliserait les pistes de la grille parent pour positionner ses éléments.
+Dans le brouillon de travaille pour la spécification de niveau 2 pour CSS Grid, il existe une fonctionnalité nommée _sous-grille_ qui permet de créer des grilles imbriquées qui utilisent la définition de la grille parent. _Ceci n'est implémenté dans aucun navigateur pour le moment, et la spécification peut encore changer._ Pour l'utiliser telle qu'elle est définie actuellement il faudrait modifier l'exemple suivant et remplacer `display: grid` par `display: subgrid`, et supprimer la définition des pistes. La piste imbriquée utiliserait les pistes de la grille parent pour positionner ses éléments.
 
 Selon la version actuelle de la spécifiction, il faudrait éditer l'exemple de grille imbriquée précédent et remplacer `grid-template-columns: repeat(3, 1fr)` en `grid-template-columns: subgrid`. La grille imbriquée utilisera alors la grille parente pour inscrire ses éléments dans le document.
 

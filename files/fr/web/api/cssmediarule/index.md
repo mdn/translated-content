@@ -16,9 +16,11 @@ L'interface **`CSSMediaRule`** représente une seule règle CSS {{cssxref("@medi
 
 La syntaxe est décrite en utilisant le format [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/).
 
-    interface CSSMediaRule : CSSConditionRule {
-        readonly attribute MediaList media;
-    }
+```
+interface CSSMediaRule : CSSConditionRule {
+    readonly attribute MediaList media;
+}
+```
 
 ## Propriétés
 
@@ -35,7 +37,7 @@ En tant que {{domxref("CSSConditionRule") }}, et donc à la fois {{domxref("CSSG
 
 | Specification                                                                                                | Status                                   | Comment                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Conditional', '#the-cssmediarule-interface', 'CSSMediaRule') }} | {{ Spec2('CSS3 Conditional')}} | Dérivé de la règle  {{domxref("CSSConditionRule")}}.       |
+| {{ SpecName('CSS3 Conditional', '#the-cssmediarule-interface', 'CSSMediaRule') }} | {{ Spec2('CSS3 Conditional')}} | Dérivé de la règle  {{domxref("CSSConditionRule")}}.       |
 | {{ SpecName('CSSOM', '#the-cssmediarule-interface', 'CSSMediaRule') }}                 | {{ Spec2('CSSOM') }}             | Aucun changement par rapport à {{SpecName('DOM2 Style')}} |
 | {{SpecName('DOM2 Style', 'css.html#CSS-CSSMediaRule', 'CSSMediaRule') }}             | {{ Spec2('DOM2 Style') }}         |                                                                     |
 

@@ -14,7 +14,7 @@ original_slug: Learn/CSS/First_steps/Como_se_estructura_CSS
  <tbody>
   <tr>
    <th scope="row">Prerrequisitos:</th>
-   <td>Conocimientos básicos de informática, tener el <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico">software básico instalado</a>, conocimientos básicos de <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos">trabajo con archivos</a>, conceptos básicos de HTML (véase <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción al HTML</a>) y una idea de <a href="/es/docs/Learn/CSS/First_steps/Como_funciona_CSS">cómo funciona el CSS</a>.</td>
+   <td>Conocimientos básicos de informática, tener el <a href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software">software básico instalado</a>, conocimientos básicos de <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files">trabajo con archivos</a>, conceptos básicos de HTML (véase <a href="/es/docs/Learn/HTML/Introduction_to_HTML">Introducción al HTML</a>) y una idea de <a href="/es/docs/Learn/CSS/First_steps/How_CSS_works">cómo funciona el CSS</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -29,7 +29,7 @@ original_slug: Learn/CSS/First_steps/Como_se_estructura_CSS
 
 <h3 id="Hoja_de_estilo_externa">Hoja de estilo externa</h3>
 
-<p>En <a href="/es/docs/Learn/CSS/First_steps/Comenzando_CSS">Empezar con el CSS</a>, vinculamos una hoja de estilo externa a nuestra página. Este es el método más común y útil para adjuntar CSS a un documento, porque puedes vincular el CSS a varias páginas y dar estilo a todas ellas con la misma hoja de estilo. En la mayoría de los casos, las diferentes páginas de un sitio web se verán más o menos iguales, de modo que puedes usar el mismo conjunto de reglas para el aspecto y la interacción básicos.</p>
+<p>En <a href="/es/docs/Learn/CSS/First_steps/Getting_started">Empezar con el CSS</a>, vinculamos una hoja de estilo externa a nuestra página. Este es el método más común y útil para adjuntar CSS a un documento, porque puedes vincular el CSS a varias páginas y dar estilo a todas ellas con la misma hoja de estilo. En la mayoría de los casos, las diferentes páginas de un sitio web se verán más o menos iguales, de modo que puedes usar el mismo conjunto de reglas para el aspecto y la interacción básicos.</p>
 
 <p>Una hoja de estilo externa significa que el CSS está escrito en un archivo independiente con una extensión <code>.css</code> y que lo vinculas desde un elemento <code>&lt;link&gt;</code> de HTML:</p>
 
@@ -160,7 +160,7 @@ p {
 
 <h2 id="Selectores">Selectores</h2>
 
-<p>No se puede hablar de CSS sin mencionar los selectores, de los cuales ya hemos descubierto varios tipos diferentes en la lección <a href="/es/docs/Learn/CSS/First_steps/Comenzando_CSS">Empezar con el CSS</a>. Un selector es, como determinamos, un elemento de nuestro documento HTML para aplicarle estilo. Si los estilos no se aplican correctamente, es probable que el selector no coincida con lo que crees que debería coincidir.</p>
+<p>No se puede hablar de CSS sin mencionar los selectores, de los cuales ya hemos descubierto varios tipos diferentes en la lección <a href="/es/docs/Learn/CSS/First_steps/Getting_started">Empezar con el CSS</a>. Un selector es, como determinamos, un elemento de nuestro documento HTML para aplicarle estilo. Si los estilos no se aplican correctamente, es probable que el selector no coincida con lo que crees que debería coincidir.</p>
 
 <p>Cada regla CSS comienza con un selector o una lista de selectores que indican al navegador a qué elemento o elementos deben aplicarse dichas reglas. Todos los siguientes son ejemplos de selectores válidos o listas de selectores.</p>
 
@@ -176,7 +176,7 @@ h1, h2, .intro</pre>
 <p><strong>Prueba a crear algunas reglas CSS que usen los selectores anteriores y algo de HTML sin estilos. Si no conoces alguna de las sintaxis anteriores, ¡prueba a buscarla en MDN!</strong></p>
 
 <div class="blockIndicator note">
-<p><strong>Nota</strong>: Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre <a href="/es/docs/Learn/CSS/Building_blocks/Selectores_CSS">selectores CSS</a> de la próxima lección.</p>
+<p><strong>Nota</strong>: Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre <a href="/es/docs/Learn/CSS/Building_blocks/Selectors">selectores CSS</a> de la próxima lección.</p>
 </div>
 
 <h3 id="Especificidad">Especificidad</h3>
@@ -209,7 +209,7 @@ p {
 
 <p><strong>Prueba el ejemplo anterior: añade el HTML a tu experimento, luego pon las dos reglas <code>p { ... }</code> a tu hoja de estilo. A continuación, cambia el primer selector <code>p</code> por <code>.special</code> para ver cómo cambia el estilo.</strong></p>
 
-<p>Las reglas de especificidad y de cascada pueden parecer un poco complicadas al principio. Son más fáciles de entender a medida que se van adquiriendo conocimientos de CSS. En nuestro artículo sobre <a href="/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia">Cascada y herencia</a>, que abordaremos en la próxima lección, se explicará en detalle, incluyendo cómo calcular la especificidad. Por ahora, solo has de saber que existe y que a veces el CSS no se aplica como esperas porque algo más en la hoja de estilo tiene una mayor especificidad. El hecho de identificar que más de una regla podría aplicarse a un elemento es el primer paso para solucionar estos problemas.</p>
+<p>Las reglas de especificidad y de cascada pueden parecer un poco complicadas al principio. Son más fáciles de entender a medida que se van adquiriendo conocimientos de CSS. En nuestro artículo sobre <a href="/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascada y herencia</a>, que abordaremos en la próxima lección, se explicará en detalle, incluyendo cómo calcular la especificidad. Por ahora, solo has de saber que existe y que a veces el CSS no se aplica como esperas porque algo más en la hoja de estilo tiene una mayor especificidad. El hecho de identificar que más de una regla podría aplicarse a un elemento es el primer paso para solucionar estos problemas.</p>
 
 <h2 id="Propiedades_y_valores">Propiedades y valores</h2>
 
@@ -222,15 +222,15 @@ p {
 
 <p>La siguiente imagen resalta una sola propiedad y valor. El nombre de la propiedad es <code>color</code> y el valor <code>blue</code>.</p>
 
-<p><img alt="Una declaración resaltada en el CSS" src="https://mdn.mozillademos.org/files/16498/declaration.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+<p><img alt="Una declaración resaltada en el CSS" src="https://mdn.mozillademos.org/files/16498/declaration.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
 
 <p>Una propiedad emparejada con un valor se denomina <em>declaración CSS</em>. Las declaraciones CSS se colocan dentro de los <em>bloques de declaración CSS</em>. La siguiente imagen muestra nuestro CSS con el bloque de declaración resaltado.</p>
 
-<p><img alt="Un bloque de declaración resaltado" src="https://mdn.mozillademos.org/files/16499/declaration-block.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+<p><img alt="Un bloque de declaración resaltado" src="https://mdn.mozillademos.org/files/16499/declaration-block.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
 
 <p>Finalmente, los bloques de declaración CSS se combinan con <em>selectores</em> para producir <em>conjuntos de reglas CSS</em> (o <em>reglas CSS</em>). Nuestra imagen contiene dos reglas, una para el selector <code>h1</code> y otra para el selector <code>p</code>. La regla para <code>h1</code> está resaltada.</p>
 
-<p><img alt="La regla para h1 resaltada" src="https://mdn.mozillademos.org/files/16500/rules.png" style="border: 1px solid #cccccc; display: block; height: 218px; margin: 0 auto; width: 471px;"></p>
+<p><img alt="La regla para h1 resaltada" src="https://mdn.mozillademos.org/files/16500/rules.png" style="border: 1px solid #cccccc; display: block; margin: 0 auto;"></p>
 
 <p>Establecer las propiedades de CSS según valores específicos es la función principal del lenguaje CSS. El motor CSS calcula qué declaraciones se aplican a cada elemento de una página para darle la compaginación y los estilos adecuados.</p>
 
@@ -261,7 +261,7 @@ p {
 <p>Si bien la mayoría de valores son palabras clave relativamente simples o valores numéricos, es posible que algunos valores tomen la forma de una función. Un ejemplo sería la función <code>calc()</code>. Esta función te permite hacer operaciones matemáticas sencillas desde tu CSS, por ejemplo:</p>
 
 <div id="calc_example">
-<pre class="brush: html notranslate">&lt;div class="external"&gt; &lt;div class="box"&gt;La caja interior es del 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
+<pre class="brush: html notranslate">&lt;div class="outer"&gt; &lt;div class="box"&gt;La caja interior es del 90% - 30px.&lt;/div&gt;&lt;/div&gt;</pre>
 
 <pre class="brush: css notranslate">.outer {
   border: 5px solid black;
@@ -362,7 +362,7 @@ background-position: 10px 10px;
 background-repeat: repeat-x;
 background-scroll: fixed;</pre>
 
-<p>Ahora mismo no pretendemos enseñarlos exhaustivamente: encontrarás muchos ejemplos más adelante en el curso. Te aconsejamos que busques los nombres de las propiedades abreviadas en nuestra <a href="/es/docs/Web/CSS/Referencia_CSS">referencia CSS</a> para obtener más información.</p>
+<p>Ahora mismo no pretendemos enseñarlos exhaustivamente: encontrarás muchos ejemplos más adelante en el curso. Te aconsejamos que busques los nombres de las propiedades abreviadas en nuestra <a href="/es/docs/Web/CSS/Reference">referencia CSS</a> para obtener más información.</p>
 
 <p><strong>Prueba a añadir las declaraciones anteriores a tu CSS para ver cómo afecta al estilo de tu HTML. Experimenta con diferentes valores.</strong></p>
 
@@ -498,7 +498,7 @@ padding- left: 10px;</pre>
 
 <h2 id="¿Qué_sigue">¿Qué sigue?</h2>
 
-<p>Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo (<a href="/es/docs/Learn/CSS/First_steps/Como_funciona_CSS">Cómo funciona el CSS</a>) veremos ese proceso.</p>
+<p>Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo (<a href="/es/docs/Learn/CSS/First_steps/How_CSS_works">Cómo funciona el CSS</a>) veremos ese proceso.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}</p>
 
@@ -506,8 +506,8 @@ padding- left: 10px;</pre>
 
 <ol>
  <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">¿Qué es el CSS?</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Empezar con el CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">Cómo se estructura el CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">Cómo funciona CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Pon en práctica tus conocimientos nuevos</a></li>
+ <li><a href="/es/docs/Learn/CSS/First_steps/Getting_started">Empezar con el CSS</a></li>
+ <li><a href="/es/docs/Learn/CSS/First_steps/How_CSS_is_structured">Cómo se estructura el CSS</a></li>
+ <li><a href="/es/docs/Learn/CSS/First_steps/How_CSS_works">Cómo funciona CSS</a></li>
+ <li><a href="/es/docs/Learn/CSS/First_steps/Styling_a_biography_page">Pon en práctica tus conocimientos nuevos</a></li>
 </ol>

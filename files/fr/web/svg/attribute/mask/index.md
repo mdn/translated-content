@@ -30,7 +30,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('exemple', '100%', 150)}}
+{{EmbedLiveSample('Exemple', '100%', 150)}}
 
 Depuis SVG2, l'attribut {{cssxref('mask')}} est défini comme une propriété CSS et comme une propriété raccourcie pour beaucoup d'autres propriétés: {{cssxref('mask-image')}}, {{cssxref('mask-mode')}}, {{cssxref('mask-repeat')}}, {{cssxref('mask-position')}}, {{cssxref('mask-clip')}}, {{cssxref('mask-origin')}}, {{cssxref('mask-size')}} et {{cssxref('mask-composite')}}.
 

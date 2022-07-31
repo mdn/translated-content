@@ -55,7 +55,7 @@ console.log(obj2 + ""); // true     -- hint vaut "default"
 | Spécification                                                                                    | Etat                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

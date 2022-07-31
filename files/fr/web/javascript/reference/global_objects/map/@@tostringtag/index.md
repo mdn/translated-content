@@ -19,7 +19,9 @@ La propriété **`Map[@@toStringTag]`** vaut "Map" initialement.
 
 ## Syntaxe
 
-    Map[Symbol.toStringTag]
+```js
+Map[Symbol.toStringTag]
+```
 
 ## Exemple
 
@@ -32,7 +34,7 @@ Object.prototype.toString.call(new Map()) // "[object Map]"
 | Spécification                                                                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 
