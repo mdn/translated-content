@@ -194,8 +194,8 @@ JavaScript fait la distinction entre [`null`](/fr/docs/Web/JavaScript/Reference/
 
 JavaScript dispose d'un type booléen, dont les valeurs possibles sont `true` (vrai) et `false` (faux). L'un et l'autre sont des mots clés. Toute valeur peut être convertie en une valeur booléenne selon les règles suivantes :
 
-1.  `false`, `0`, la chaîne vide (`""`), `NaN`, `null` et `undefined` deviennent toutes `false`
-2.  toutes les autres valeurs deviennent `true`.
+1. `false`, `0`, la chaîne vide (`""`), `NaN`, `null` et `undefined` deviennent toutes `false`
+2. toutes les autres valeurs deviennent `true`.
 
 Cette conversion peut être faite de manière explicite à l'aide de la fonction `Boolean()` :
 
@@ -600,7 +600,7 @@ Les tableaux sont accompagnés d'un certain nombre de méthodes. Voir également
 | `a.unshift(item1[, item2[, ...[, itemN]]])`          | Ajoute des éléments au début du tableau.                                                                                 |
 | `a.slice(start[, end])`                              | Renvoie un sous-tableau.                                                                                                 |
 | `a.sort([cmpfn])`                                    | Trie le tableau (avec une fonction de comparaison optionnelle).                                                          |
-| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Permet de modifier un tableau en en supprimant une partie et en la remplaçant avec plus d'éléments.                      |
+| `a.splice(start, delcount[, item1[, ...[, itemN]]])` | Permet de modifier un tableau en supprimant une partie et en la remplaçant avec plus d'éléments.                      |
 | `a.reverse()`                                        | Retourne le tableau.                                                                                                     |
 
 ## Les fonctions

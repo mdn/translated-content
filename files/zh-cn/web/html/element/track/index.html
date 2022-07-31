@@ -16,7 +16,7 @@ translation_of: Web/HTML/Element/track
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><strong><a href="https://developer.mozilla.org/zh-cn/docs/Web/HTML/Content_categories" rel="nofollow">内容分类</a></strong></td>
+   <td><strong><a href="https://developer.mozilla.org/zh-cn/docs/Web/HTML/Content_categories">内容分类</a></strong></td>
    <td>无</td>
   </tr>
   <tr>
@@ -29,7 +29,7 @@ translation_of: Web/HTML/Element/track
   </tr>
   <tr>
    <td><strong>允许的父元素</strong></td>
-   <td>媒体元素，<a href="/en-US/docs/HTML/Content_categories#Flow_content" title="HTML/Content_categories#Flow_content">流内容</a>之前。</td>
+   <td>媒体元素，<a href="/en-US/docs/HTML/Content_categories#Flow_content">流内容</a>之前。</td>
   </tr>
   <tr>
    <td><strong>允许的 ARIA 角色</strong></td>
@@ -44,7 +44,7 @@ translation_of: Web/HTML/Element/track
 
 <h2 id="属性">属性</h2>
 
-<p>该元素包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">全局属性</a>。</p>
+<p>该元素包含 <a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes">全局属性</a>。</p>
 
 <dl>
  <dt>{{htmlattrdef("default")}}</dt>
@@ -88,16 +88,16 @@ translation_of: Web/HTML/Element/track
  <dt>{{htmlattrdef("src")}}</dt>
  <dd>track 的地址。必须是合法的 URL。该属性必须定义。</dd>
  <dt>{{htmlattrdef("srclang")}}</dt>
- <dd>track 文本数据的语言。它必须是合法的 <a href="http://people.w3.org/rishida/utils/subtags/">BCP 47</a> 语言标签。如果 <code>kind</code> 属性被设为 <code>subtitles,</code> 那么<code>srclang</code> 必须定义。</dd>
+ <dd>track 文本数据的语言。它必须是合法的 <a href="http://people.w3.org/rishida/utils/subtags/">BCP 47</a> 语言标签。如果 <code>kind</code> 属性被设为 <code>subtitles,</code> 那么<code>srclang</code> 必须定义。</dd>
 </dl>
 
 <h2 id="用法说明">用法说明</h2>
 
 <h3 id="轨道数据类型">轨道数据类型</h3>
 
-<p><code>track</code> 给媒体元素添加的数据的类型在 <code>kind</code> 属性中设置，属性值可以是 <code>subtitles</code>, <code>captions</code>, <code>descriptions</code>, <code>chapters</code> 或 <code>metadata</code>。该元素指向当用户请求额外的数据时浏览器公开的包含定时文本的源文件。</p>
+<p><code>track</code> 给媒体元素添加的数据的类型在 <code>kind</code> 属性中设置，属性值可以是 <code>subtitles</code>, <code>captions</code>, <code>descriptions</code>, <code>chapters</code> 或 <code>metadata</code>。该元素指向当用户请求额外的数据时浏览器公开的包含定时文本的源文件。</p>
 
-<p>一个<code>media</code> 元素的任意两个 <code>track</code> 子元素不能有相同的 <code>kind</code>, <code>srclang</code>, 和 <code>label</code>属性。</p>
+<p>一个<code>media</code> 元素的任意两个 <code>track</code> 子元素不能有相同的 <code>kind</code>, <code>srclang</code>, 和 <code>label</code>属性。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -125,36 +125,16 @@ translation_of: Web/HTML/Element/track
 
 <h2 id="规范">规范</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','embedded-content.html#the-track-element','track element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "embedded-content-0.html#the-track-element", "track element")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("html.elements.track")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参阅">参阅</h2>
 
 <ul>
- <li><a href="/en-US/docs/HTML/WebVTT" title="HTML/WebVTT">WebVTT text track format</a></li>
+ <li><a href="/en-US/docs/HTML/WebVTT">WebVTT text track format</a></li>
 </ul>
 
 <p>{{HTMLRef}}</p>

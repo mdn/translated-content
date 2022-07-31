@@ -22,6 +22,7 @@ translation_of: MDN/Guidelines/Writing_style_guide
 
 このガイドにおける言語的な観点は主に英語のドキュメントに向けられたものです。その他の言語については独自のスタイルガイドを持っているかもしれません（作成を歓迎します）。これは多国語化チームのページのサブページとして公開してください。
 > **Note:** 2017 年 12 月現在、日本語独自コンテンツとしてのスタイルガイドは未作成だが、下記の資料が参考になります。
+>
 > - [Mozilla 関連独自の L10N ガイドライン](https://github.com/mozilla-japan/translation/wiki/L10N-Guideline)
 > - [Mozilla 関連のドキュメントの表記ガイドライン](https://github.com/mozilla-japan/translation/wiki/Editorial-Guideline)
 > MDN 以外のサイトの記事での標準的なスタイルを知りたければ、[One Mozilla スタイルガイド](https://www.mozilla.org/en-US/styleguide/)を参照してください。
@@ -118,7 +119,7 @@ translation_of: MDN/Guidelines/Writing_style_guide
 > また、 `textAlign` が `"right"` の場合は、指定されたX座標で終わるように描画されます。
 >
 > (等 等 等...)
-> 
+>
 > オプションで、4 番目の引数を指定して文字列の最大幅をピクセル単位で指定することもできます。
 > この引数を指定すると、テキストは水平方向に圧縮されるか、描画時にその幅の空間に収まるように拡大縮小 (あるいは調整) されます。
 >

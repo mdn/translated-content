@@ -33,12 +33,14 @@ Le paramètre d'entête de requête HTTP **`Accept`** indique quels sont les typ
 
 ## Syntaxe
 
-    Accept: <MIME_type>/<MIME_subtype>
-    Accept: <MIME_type>/*
-    Accept: */*
+```
+Accept: <MIME_type>/<MIME_subtype>
+Accept: <MIME_type>/*
+Accept: */*
 
-    // Types multiples, pondérés {{glossary("quality values", "quality value")}} par la syntaxe :
-    Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+// Types multiples, pondérés {{glossary("quality values", "quality value")}} par la syntaxe :
+Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+```
 
 ## Directives
 
@@ -53,11 +55,13 @@ Le paramètre d'entête de requête HTTP **`Accept`** indique quels sont les typ
 
 ## Exemples
 
-    Accept: text/html
+```
+Accept: text/html
 
-    Accept: image/*
+Accept: image/*
 
-    Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
+```
 
 ## Specifications
 

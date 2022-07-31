@@ -11,7 +11,9 @@ Renvoie la largeur totale d'un élément.
 
 ### Syntaxe
 
-    var offsetWidth = element.offsetWidth;
+```js
+var offsetWidth = element.offsetWidth;
+```
 
 `offsetWidth` est une propriété en lecture seule.
 

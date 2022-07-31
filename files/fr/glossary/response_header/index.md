@@ -15,23 +15,25 @@ Tous les en-têtes apparaissant dans une réponse ne sont pas des _en-têtes de 
 
 Le code suivant montre quelques en-têtes de réponse après une requête {{HTTPMethod("GET")}}. Notez qu'à strictement parler, les en-têtes {{HTTPHeader("Content-Encoding")}} et {{HTTPHeader("Content-Type")}} sont des {{glossary("Entity header","en-têtes d'entité")}} :
 
-    200 OK
-    Access-Control-Allow-Origin: *
-    Connection: Keep-Alive
-    Content-Encoding: gzip
-    Content-Type: text/html; charset=utf-8
-    Date: Mon, 18 Jul 2016 16:06:00 GMT
-    Etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
-    Keep-Alive: timeout=5, max=997
-    Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT
-    Server: Apache
-    Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure
-    Transfer-Encoding: chunked
-    Vary: Cookie, Accept-Encoding
-    X-Backend-Server: developer2.webapp.scl3.mozilla.com
-    X-Cache-Info: not cacheable; meta data too large
-    X-kuma-revision: 1085259
-    x-frame-options: DENY
+```
+200 OK
+Access-Control-Allow-Origin: *
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8
+Date: Mon, 18 Jul 2016 16:06:00 GMT
+Etag: "c561c68d0ba92bbeb8b0f612a9199f722e3a621a"
+Keep-Alive: timeout=5, max=997
+Last-Modified: Mon, 18 Jul 2016 02:36:04 GMT
+Server: Apache
+Set-Cookie: mykey=myvalue; expires=Mon, 17-Jul-2017 16:06:00 GMT; Max-Age=31449600; Path=/; secure
+Transfer-Encoding: chunked
+Vary: Cookie, Accept-Encoding
+X-Backend-Server: developer2.webapp.scl3.mozilla.com
+X-Cache-Info: not cacheable; meta data too large
+X-kuma-revision: 1085259
+x-frame-options: DENY
+```
 
 ## En apprendre plus
 

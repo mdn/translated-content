@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLMediaElement/loadeddata_event
 
 **`loadeddata`** 事件在媒体当前播放位置的视频帧（通常是第一帧）加载完成后触发。
 
-<h2 id="基本信息">基本信息</h2>
+## 基本信息
 
 <table class="properties">
   <tbody>

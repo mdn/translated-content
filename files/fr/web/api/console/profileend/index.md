@@ -24,7 +24,9 @@ Vous pouvez éventuellement insérer un argument pour nommer le profil. Cela vou
 
 ## Syntaxe
 
-    console.profileEnd(profileName);
+```js
+console.profileEnd(profileName);
+```
 
 ## Paramètres
 

@@ -10,9 +10,11 @@ translation_of: Web/API/HTMLElement/inert
 
 ## 構文
 
-    isInert = HTMLElement.inert;
+```
+isInert = HTMLElement.inert;
 
-    HTMLElement.inert = true | false;
+HTMLElement.inert = true | false;
+```
 
 ### 値
 

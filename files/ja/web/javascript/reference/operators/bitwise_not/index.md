@@ -72,4 +72,4 @@ translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)

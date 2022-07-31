@@ -152,7 +152,7 @@ Server: Apache
 
 <p>En el año 2000, un nuevo formato para usar HTTP fue diseñado: REST (del inglés:  '{{glossary("REST", "Representational State Transfer")}}'). Las acciones de la nueva API, no estaban supeditadas a nuevos métodos HTTP, unicamente al acceso a URIs especificas con métodos HTTP/1.1). Esto permitió que cualquier aplicación Web dispusiera de una API, para permitir la recuperación y modificación de datos, sin tener que actualizar servidores o navegadores; todo lo que se necesitaba era incluido en los archivos servidos por los sitios Web. La contrapartida del modelo REST está en que cada sitio Web define su propia versión no estándar de API RESTful y tiene un control total sobre ella; al contrario del formato *DAV donde clientes y servidores eran interoperables. La arquitectura REST empezó a ser muy común a partir del año 2010.</p>
 
-<p>Desde el año 2005, las APIs disponibles para páginas Web a aumentado considerablemente, y muchas de estas nuevas APIs dependen de cabeceras HTTP específicas para funciones concretas: </p>
+<p>Desde el año 2005, las APIs disponibles para páginas Web han aumentado considerablemente, y muchas de estas nuevas APIs dependen de cabeceras HTTP específicas para funciones concretas: </p>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Server-sent_events">Eventos enviados por el servidor</a>: El servidor es el que ocasionalmente inicia los mensajes hacia el navegador. </li>
@@ -167,7 +167,7 @@ Server: Apache
 
 <h2 id="HTTP2_–_Un_protocolo_para_un_mayor_rendimiento">HTTP/2 – Un protocolo para un mayor rendimiento</h2>
 
-<p>A lo largo de los años, las páginas Web han llegado a ser mucho más complejas, incluso llegando a poder considerarse como aplicaciones por derecho propio. La cantidad de contedio visual, el tamaño de los scripts, y los scripts que añaden interactividad ha aumentado mucho también. Muchismos más datos son transmitidos bajo muchas mas peticiónes HTTP. Las conexiones HTTP/1.1 han de enviar las peticiones HTTP en el orden correcto. Teóricamente, seria posible usar varias conexiones en paralelo (normalmente entre 5 y 8), aumentando consecuentemente la complejidad del proceso. Por ejemplo, el HTTP 'pipelining' ha demostrado ser un lastre para el desarrollo Web. </p>
+<p>A lo largo de los años, las páginas Web han llegado a ser mucho más complejas, incluso llegando a poder considerarse como aplicaciones por derecho propio. La cantidad de contenido visual, el tamaño de los scripts, y los scripts que añaden interactividad ha aumentado mucho también. Muchismos más datos son transmitidos bajo muchas mas peticiónes HTTP. Las conexiones HTTP/1.1 han de enviar las peticiones HTTP en el orden correcto. Teóricamente, seria posible usar varias conexiones en paralelo (normalmente entre 5 y 8), aumentando consecuentemente la complejidad del proceso. Por ejemplo, el HTTP 'pipelining' ha demostrado ser un lastre para el desarrollo Web. </p>
 
 <p>En la primera mitad de la década de 2010, Google demostró un proceso alternativo para el intercambio de data entre clientes y servidores, implementando el protocolo experimental SPDY (pronunciado como en inglés <em>'speedy'</em>). Este atrajo mucho interés por los desarrolladores de tanto los navegadores como los servidores. Definiendo una mejora en los tiempos de respuesta, y resolviendo el problema de datos duplicados transmitidos. SPDY sirvió como base para el desarrollo del protocolo HTTP/2. </p>
 

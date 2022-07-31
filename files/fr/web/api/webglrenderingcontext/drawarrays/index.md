@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.drawArrays()`** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    void gl.drawArrays(mode, premier, compte);
+```js
+void gl.drawArrays(mode, premier, compte);
+```
 
 ### Paramètres
 

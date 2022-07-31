@@ -16,34 +16,34 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 
 <p>Now we need to update the <code>drawScene()</code> function to apply the current rotation to the square when drawing it. After translating to the initial drawing position for the square, we apply the rotation like this:</p>
 
-<pre class="brush: js">  mat4.rotate(modelViewMatrix,  // destination matrix
-              modelViewMatrix,  // matrix to rotate
-              squareRotation,   // amount to rotate in radians
-              [0, 0, 1]);       // axis to rotate around
+<pre class="brush: js">  mat4.rotate(modelViewMatrix,  // destination matrix
+              modelViewMatrix,  // matrix to rotate
+              squareRotation,   // amount to rotate in radians
+              [0, 0, 1]);       // axis to rotate around
 </pre>
 
 <p>This rotates the modelViewMatrix by the current value of <code>squareRotation</code>, around the Z axis.</p>
 
-<p>To actually animate, we need to add code that changes the value of <code>squareRotation</code> over time. We can do that by creating a new variable to track the time at which we last animated (let's call it <code>then</code>), then adding the following code to the end of the main function</p>
+<p>To actually animate, we need to add code that changes the value of <code>squareRotation</code> over time. We can do that by creating a new variable to track the time at which we last animated (let's call it <code>then</code>), then adding the following code to the end of the main function</p>
 
-<pre class="brush: js">  var then = 0;
+<pre class="brush: js">  var then = 0;
 
-  // Draw the scene repeatedly
-  function render(now) {
-    now *= 0.001;  // convert to seconds
-    const deltaTime = now - then;
-    then = now;
+  // Draw the scene repeatedly
+  function render(now) {
+    now *= 0.001;  // convert to seconds
+    const deltaTime = now - then;
+    then = now;
 
-    drawScene(gl, programInfo, buffers, deltaTime);
+    drawScene(gl, programInfo, buffers, deltaTime);
 
-    requestAnimationFrame(render);
-  }
-  requestAnimationFrame(render);
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
 </pre>
 
-<p>This code uses <code>requestAnimationFrame</code> to ask the browser call the function "<code>render</code>" each frame. <code>requestAnimationFrame</code> passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract it from the last time to compute <code>deltaTime</code> which is the number of second since the last frame was rendered. At the end of drawscene we add the code to update <code>squareRotation.</code></p>
+<p>This code uses <code>requestAnimationFrame</code> to ask the browser call the function "<code>render</code>" each frame. <code>requestAnimationFrame</code> passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract it from the last time to compute <code>deltaTime</code> which is the number of second since the last frame was rendered. At the end of drawscene we add the code to update <code>squareRotation.</code></p>
 
-<pre class="brush: js"><code>  squareRotation += deltaTime;</code>
+<pre class="brush: js"><code>  squareRotation += deltaTime;</code>
 </pre>
 
 <p>This code uses the amount of time that's passed since the last time we updated the value of <code>squareRotation</code> to determine how far to rotate the square.</p>

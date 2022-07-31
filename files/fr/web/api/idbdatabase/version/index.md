@@ -17,7 +17,9 @@ La propriété **`version`**, rattachée à l'interface {{domxref("IDBDatabase")
 
 ## Syntaxe
 
-    db.version
+```js
+db.version
+```
 
 ### Valeur
 

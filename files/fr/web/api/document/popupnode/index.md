@@ -22,7 +22,9 @@ Cette propriété s'applique seulement aux documents XUL.
 
 ## Syntaxe
 
-    var node = document.popupNode;
+```js
+var node = document.popupNode;
+```
 
 ## Exemple
 

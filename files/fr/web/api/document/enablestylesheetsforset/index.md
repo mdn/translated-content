@@ -16,7 +16,9 @@ Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de
 
 ## Syntaxe
 
-    document.enableStyleSheetsForSet(name)
+```js
+document.enableStyleSheetsForSet(name)
+```
 
 ### Paramètres
 
@@ -32,7 +34,9 @@ Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de
 
 ## Exemple
 
-    document.enableStyleSheetsForSet("Some style sheet set name");
+```js
+document.enableStyleSheetsForSet("Some style sheet set name");
+```
 
 ## Spécifications
 

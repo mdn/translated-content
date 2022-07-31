@@ -27,19 +27,23 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <p>如果将 link 置于 script 之后，就会立即打印。</p>
 
-<p>{{Note("同步 JavaScript 会暂停 DOM 的解析。")}}</p>
+<div class="note">
+ <p><strong>备注：</strong>同步 JavaScript 会暂停 DOM 的解析。</p>
+</div>
 
-<p>{{Note("还有许多通用和独立的库提供跨浏览器方法来检测 DOM 是否已准备就绪")}}</p>
+<div class="note">
+ <p><strong>备注：</strong>还有许多通用和独立的库提供跨浏览器方法来检测 DOM 是否已准备就绪</p>
+</div>
 
 <h2 id="加速中">加速中</h2>
 
-<p>如果您希望 DOM 在用户请求页面后尽可能快地解析，你可以做的一些事情是把你的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript 异步化</a> 以及 <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">优化样式表的加载</a>, 由于被并行加载而减慢页面加载，从主 html 文档“窃取”流量。</p>
+<p>如果您希望 DOM 在用户请求页面后尽可能快地解析，你可以做的一些事情是把你的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">JavaScript 异步化</a> 以及 <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery">优化样式表的加载</a>, 由于被并行加载而减慢页面加载，从主 html 文档“窃取”流量。</p>
 
 <h2 id="常规信息">常规信息</h2>
 
 <dl>
  <dt>规范</dt>
- <dd><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end">HTML5</a></dd>
+ <dd><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end">HTML5</a></dd>
  <dt>接口</dt>
  <dd>Event</dd>
  <dt>是否冒泡</dt>
@@ -86,7 +90,7 @@ document.addEventListener('DOMContentLoaded',function(){
  </tbody>
 </table>
 
-<h2 id="示例" style="margin-bottom: 20px; font-size: 28px; line-height: 28px;">示例</h2>
+<h2 id="示例">示例</h2>
 
 <pre class="notranslate"><code>&lt;script&gt;
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -100,14 +104,18 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 
   for(var i=0; i&lt;1000000000; i++){
-      // </code>这个同步脚本将延迟 DOM 的解析。
-      // 所以 DOMContentLoaded 事件稍后将启动。
-<code>  } </code><code>
+      // </code>这个同步脚本将延迟 DOM 的解析。
+      // 所以 DOMContentLoaded 事件稍后将启动。
+<code>  } </code><code>
 &lt;/script&gt;</code></pre>
+
+<h2 id="规范">规范</h2>
+
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("api.Window.DOMContentLoaded_event")}}</p>
+<p>{{Compat}}</p>
 
 <p>至少从 Gecko 1.9.2,Chrome 6，以及 Safari 4 开始，就已经实现了该事件的冒泡行为。</p>
 
@@ -115,7 +123,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <p>在 IE8 中，可以使用<code>readystatechange</code>事件来检测 DOM 文档是否加载完毕。在更早的 IE 版本中，可以通过每隔一段时间执行一次<code>document.documentElement.doScroll("left") 来检测这一状态，</code>因为这条代码在 DOM 加载完毕之前执行时会抛出错误 (throw an error)。</p>
 
-<p>诸如 jQuery 这样的通用 JS 库，会提供跨浏览器的方法来检测 DOM 是否加载完成。也有其他专门实现该功能的脚本：<a href="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js" title="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js">contentloaded.js</a> (只能添一个时间监听函数) 以及<a href="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js" title="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js">jquery.documentReady.js</a> (并不依赖 jQuery，虽然名字中有 jquery).</p>
+<p>诸如 jQuery 这样的通用 JS 库，会提供跨浏览器的方法来检测 DOM 是否加载完成。也有其他专门实现该功能的脚本：<a href="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js">contentloaded.js</a> (只能添一个时间监听函数) 以及<a href="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js">jquery.documentReady.js</a> (并不依赖 jQuery，虽然名字中有 jquery).</p>
 
 <h2 id="相关事件">相关事件</h2>
 

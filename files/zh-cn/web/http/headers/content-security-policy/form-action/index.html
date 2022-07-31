@@ -5,10 +5,10 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/form-action
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) 的 <code><strong>form</strong></code><strong><code>-action</code></strong> 指令能够限定当前页面中表单的提交地址。</p>
+<p>HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) 的 <code><strong>form</strong></code><strong><code>-action</code></strong> 指令能够限定当前页面中表单的提交地址。</p>
 
 <div class="warning">
-<p>在表单提交之后， <code>form-action</code> 指令是否应该阻止重定向仍有待讨论，各个浏览器对于此行为的实现也不尽相同（例如，Chrome 63 会阻止重定向，而 Firefox 57 则不会）。</p>
+<p>在表单提交之后， <code>form-action</code> 指令是否应该阻止重定向仍有待讨论，各个浏览器对于此行为的实现也不尽相同（例如，Chrome 63 会阻止重定向，而 Firefox 57 则不会）。</p>
 </div>
 
 <table class="properties">
@@ -30,7 +30,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/form-action
 
 <h2 id="语法">语法</h2>
 
-<p><code>form-action</code> 策略允许设定一个或多个源：</p>
+<p><code>form-action</code> 策略允许设定一个或多个源：</p>
 
 <pre class="syntaxbox">Content-Security-Policy: form-action &lt;source&gt;;
 Content-Security-Policy: form-action &lt;source&gt; &lt;source&gt;;
@@ -68,29 +68,11 @@ Header set Content-Security-Policy "form-action 'none';
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-form-action", "form-action")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>No changes.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-form-action", "form-action")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("http.headers.csp.form-action")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 

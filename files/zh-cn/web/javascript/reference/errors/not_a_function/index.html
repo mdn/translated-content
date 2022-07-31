@@ -29,9 +29,9 @@ TypeError: "x" is not a function</pre>
 <p>再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。 所以你必须提供一个函数，以使这些方法正常工作：</p>
 
 <ul>
- <li>当你在使用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 对象时：
+ <li>当你在使用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 对象时：
   <ul>
-   <li>{{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}</li>
+   <li>{{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}},  {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}</li>
   </ul>
  </li>
  <li>当你在使用 {{jsxref("Map")}} 和 {{jsxref("Set")}} 对象时：
@@ -51,14 +51,14 @@ TypeError: "x" is not a function</pre>
 // TypeError: document.getElementByID is not a function
 </pre>
 
-<p>正确的方法名应该是 <code>getElementByI<strong>d：</strong></code></p>
+<p>正确的方法名应该是 <code>getElementByI<strong>d：</strong></code></p>
 
 <pre class="brush: js example-good">var x = document.getElementById("foo");
 </pre>
 
 <h3 id="调用Object类型中不存在的方法">调用 Object 类型中不存在的方法</h3>
 
-<p>对于某些特殊的方法，它只属于某些特定的原生对象中，你必须提供一个回调函数才能正常运行。例如：这里调用了一个 {{jsxref("Array.prototype.map()")}} 方法，但是这方法只能被 {{jsxref("Array")}} 对象所调用。 </p>
+<p>对于某些特殊的方法，它只属于某些特定的原生对象中，你必须提供一个回调函数才能正常运行。例如：这里调用了一个 {{jsxref("Array.prototype.map()")}} 方法，但是这方法只能被 {{jsxref("Array")}} 对象所调用。 </p>
 
 <pre class="brush: js example-bad">var obj = { a: 13, b: 37, c: 42 };
 
@@ -86,7 +86,7 @@ numbers.map(function(num) {
 <pre class="brush: js example-bad">var Dog = function () {
  this.age = 11;
  this.color = "black";
- this.name = "Ralph";
+ this.name = "Ralph";
  return this;
 }
 
@@ -105,7 +105,7 @@ myNewDog.name("Cassidy"); //Uncaught TypeError: myNewDog.name is not a function
 <pre class="brush: js example-good">var Dog = function () {
  this.age = 11;
  this.color = "black";
- this.dogName = "Ralph"; //Using this.dogName instead of .name
+ this.dogName = "Ralph"; //Using this.dogName instead of .name
  return this;
 }
 
@@ -120,7 +120,7 @@ myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }<
 
 <h3 id="使用括号进行乘法运算">使用括号进行乘法运算</h3>
 
-<p>在数学中，您可以将 2 × (3 + 5) 写为 2*(3 + 5) 或者省略为 2(3 + 5).</p>
+<p>在数学中，您可以将 2 × (3 + 5) 写为 2*(3 + 5) 或者省略为 2(3 + 5).</p>
 
 <p>使用后者时将会抛出错误：</p>
 
@@ -128,7 +128,7 @@ myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }<
 alert('2 x (3 + 5) is ' + String(sixteen));
 //Uncaught TypeError: 2 is not a function</pre>
 
-<p>您可以添加乘法运算符 <code>*</code> 来改正代码：</p>
+<p>您可以添加乘法运算符 <code>*</code> 来改正代码：</p>
 
 <pre class="brush: js example-good">const sixteen = 2 * (3 + 5);
 alert('2 x (3 + 5) is ' + String(sixteen));
@@ -156,7 +156,7 @@ helpers.groupBy = function (objectArray, property) {
 
 export default helpers;</pre>
 
-<p>在 <code>App.js</code>中正确导入该模块：</p>
+<p>在 <code>App.js</code>中正确导入该模块：</p>
 
 <pre>import helpers from './helpers'</pre>
 

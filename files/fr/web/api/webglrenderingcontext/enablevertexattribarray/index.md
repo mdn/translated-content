@@ -29,7 +29,9 @@ De toute façon, puisque les attributs ne peuvent pas être utilisés sauf s'ils
 
 ## Syntaxe
 
-    void gl.enableVertexAttribArray(indice);
+```js
+void gl.enableVertexAttribArray(indice);
+```
 
 ### Paramètres
 

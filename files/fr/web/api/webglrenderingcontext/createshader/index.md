@@ -16,7 +16,9 @@ La méthode **WebGLRenderingContext.createShader() de l'**[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    WebGLShader gl.createShader(type);
+```js
+WebGLShader gl.createShader(type);
+```
 
 ### Paramètres
 

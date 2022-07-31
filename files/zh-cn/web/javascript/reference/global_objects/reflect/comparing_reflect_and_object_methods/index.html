@@ -14,9 +14,9 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_�
 ---
 <div>{{jssidebar}}</div>
 
-<p>ES2015 中引入的 {{jsxref("Reflect")}} 对象是一个内置对象，提供了与 JavaScript 对象交互的方法。<code>Reflect</code> 上存在的一些静态函数也对应于 ES2015 之前的{{jsxref("Object")}}上可用的方法。尽管某些方法在行为上看似相似，但它们之间常常存在细微的差异。</p>
+<p>ES2015 中引入的 {{jsxref("Reflect")}} 对象是一个内置对象，提供了与 JavaScript 对象交互的方法。<code>Reflect</code> 上存在的一些静态函数也对应于 ES2015 之前的{{jsxref("Object")}}上可用的方法。尽管某些方法在行为上看似相似，但它们之间常常存在细微的差异。</p>
 
-<p>下表详细介绍了<code>Object</code> 和 <code>Reflect</code> API 上可用方法之间的差异。请注意，如果 API 中不存在某种方法，则将其标记为 N/A。</p>
+<p>下表详细介绍了<code>Object</code> 和 <code>Reflect</code> API 上可用方法之间的差异。请注意，如果 API 中不存在某种方法，则将其标记为 N/A。</p>
 
 <table class="standard-table">
  <thead>
@@ -110,10 +110,10 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_�
   <tr>
    <td><code>preventExtensions()</code></td>
    <td>
-    <p>{{jsxref("Object.preventExtensions()")}} 返回被设为不可扩展的对象。如果参数不是对象（原始值），则在 ES5 中抛出<code>TypeError</code>。在 ES2015 中，参数如为不可扩展的普通对象，然后返回对象本身。</p>
+    <p>{{jsxref("Object.preventExtensions()")}} 返回被设为不可扩展的对象。如果参数不是对象（原始值），则在 ES5 中抛出<code>TypeError</code>。在 ES2015 中，参数如为不可扩展的普通对象，然后返回对象本身。</p>
    </td>
    <td>
-    <p>returns <code>true</code> if the object has been made non-extensible, and <code>false</code> if it has not. Throws a <code>TypeError</code> if the argument is not an object (a primitive).</p>
+    <p>returns <code>true</code> if the object has been made non-extensible, and <code>false</code> if it has not. Throws a <code>TypeError</code> if the argument is not an object (a primitive).</p>
 
     <p>如果对象已变得不可扩展，则{{jsxref("Reflect.preventExtensions()")}} 返回<code>true</code>，否则返回<code>false</code>。如果参数不是对象（原始值），则抛出<code>TypeError</code>。</p>
    </td>

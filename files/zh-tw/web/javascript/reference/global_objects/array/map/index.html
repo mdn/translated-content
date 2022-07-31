@@ -91,15 +91,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 
 <h3 id="把一個數字陣列轉換成對應的開根號後的數字陣列">把一個數字陣列轉換成對應的開根號後的數字陣列</h3>
 
-<p>以下的程式碼把一個數字陣列(array of numbers) 轉換成一個 <strong>新的</strong>以該數字陣列裡的一個個數做開根號計算的數字陣列.</p>
+<p>以下的程式碼把一個數字陣列(array of numbers) 轉換成一個 <strong>新的</strong>以該數字陣列裡的一個個數做開根號計算的數字陣列.</p>
 
 <pre class="brush: js">var numbers = [1, 4, 9];
 var roots = numbers.map(Math.sqrt); //map會return一個新的array
 // roots 現在是 [1, 2, 3]
 /* numbers 還是 [1, 4, 9]，這證明了 map() 不會去變動到 numbers 的值，
    map 內部是做了 immutable 的機制，Array.prototype 底下的這些高階函式
-   大多都具有這樣函數式編程裡非常注重的特性 - immutable，不會去改變資料
-   來源本身原有的值
+   大多都具有這樣函數式編程裡非常注重的特性 - immutable，不會去改變資料
+   來源本身原有的值
 */ </pre>
 
 <h3 id="使用_map_將陣列中的物件變更格式">使用 map 將陣列中的物件變更格式</h3>
@@ -137,9 +137,9 @@ var doubles = numbers.map(function(num) {
 // numbers 仍然是 [1, 4, 9]
 </pre>
 
-<h3 id="使用_map_於泛型陣列">使用 <code>map</code> 於泛型陣列</h3>
+<h3 id="使用_map_於泛型陣列">使用 <code>map</code> 於泛型陣列</h3>
 
-<p>以下範例示範如何將一個 {{jsxref("String")}} 陣列轉換為 byte 陣列:</p>
+<p>以下範例示範如何將一個 {{jsxref("String")}} 陣列轉換為 byte 陣列:</p>
 
 <pre class="brush: js">var map = Array.prototype.map;
 var a = map.call('Hello World', function(x) {

@@ -10,7 +10,9 @@ original_slug: Web/API/Document/Document.anchors
 
 ## Syntaxe
 
-    nodeList = document.anchors;
+```js
+nodeList = document.anchors;
+```
 
 ## Exemple
 

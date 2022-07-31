@@ -63,33 +63,39 @@ Lorsque la requête `POST` est envoyée par un autre moyen qu'un formulaire HTML
 
 ## Syntaxe
 
-    POST /index.html
+```
+POST /index.html
+```
 
 ## Exemple
 
 Un formulaire simple utilisant le type de contenu par défaut `application/x-www-form-urlencoded`&nbsp;:
 
-    POST / HTTP/1.1
-    Host: foo.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 13
+```
+POST / HTTP/1.1
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
 
-    say=Hi&to=Mom
+say=Hi&to=Mom
+```
 
 Un formulaire utilisant le type de contenu `multipart/form-data`&nbsp;:
 
-    POST /test.html HTTP/1.1
-    Host: example.org
-    Content-Type: multipart/form-data;boundary="boundary"
+```
+POST /test.html HTTP/1.1
+Host: example.org
+Content-Type: multipart/form-data;boundary="boundary"
 
-    --boundary
-    Content-Disposition: form-data; name="field1"
+--boundary
+Content-Disposition: form-data; name="field1"
 
-    value1
-    --boundary
-    Content-Disposition: form-data; name="field2"; filename="example.txt"
+value1
+--boundary
+Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-    value2
+value2
+```
 
 ## Spécifications
 

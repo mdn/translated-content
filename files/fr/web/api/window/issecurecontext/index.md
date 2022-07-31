@@ -15,7 +15,9 @@ La propriété en lecteur seule **`window.isSecureContext`** indique si un conte
 
 ## Syntaxe
 
-    var isSecure = window.isSecureContext
+```js
+var isSecure = window.isSecureContext
+```
 
 ## Exemples
 

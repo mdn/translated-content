@@ -15,10 +15,10 @@ translation_of: Web/CSS/actual_value
 
 {{glossary("user agent", "ユーザーエージェント")}}はプロパティの実効値 (最終値) を 4 段階で計算します。
 
-1.  最初に[指定値](/ja/docs/Web/CSS/specified_value) (specified value) が、[カスケード](/ja/docs/Web/CSS/Cascade)、[継承](/ja/docs/Web/CSS/inheritance)、[初期値](/ja/docs/Web/CSS/initial_value)の使用の何れかによって決定されます。
-2.  次に、仕様に従って[計算値](/ja/docs/Web/CSS/computed_value) (computed value) が計算されます (例えば、 `span` に `position: absolute` が付いていると、 `display` が計算で `block` に変わります)。
-3.  それから、レイアウトが計算され、結果として[使用値](/ja/docs/Web/CSS/used_value)になります。
-4.  最後に、使用値がローカルの環境の制約によって変換され、結果として実効値になります。
+1. 最初に[指定値](/ja/docs/Web/CSS/specified_value) (specified value) が、[カスケード](/ja/docs/Web/CSS/Cascade)、[継承](/ja/docs/Web/CSS/inheritance)、[初期値](/ja/docs/Web/CSS/initial_value)の使用の何れかによって決定されます。
+2. 次に、仕様に従って[計算値](/ja/docs/Web/CSS/computed_value) (computed value) が計算されます (例えば、 `span` に `position: absolute` が付いていると、 `display` が計算で `block` に変わります)。
+3. それから、レイアウトが計算され、結果として[使用値](/ja/docs/Web/CSS/used_value)になります。
+4. 最後に、使用値がローカルの環境の制約によって変換され、結果として実効値になります。
 
 ## 仕様書
 

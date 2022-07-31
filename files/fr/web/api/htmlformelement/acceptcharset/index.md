@@ -11,12 +11,16 @@ La propriété **`HTMLFormElement.acceptCharset`** représente une liste des cod
 
 ## Syntaxe
 
-    string = form.acceptCharset;
-    form.acceptCharset = string;
+```js
+string = form.acceptCharset;
+form.acceptCharset = string;
+```
 
 ## Exemple
 
-    inputs = document.forms["myform"].acceptCharset
+```js
+inputs = document.forms["myform"].acceptCharset
+```
 
 ## Spécification
 

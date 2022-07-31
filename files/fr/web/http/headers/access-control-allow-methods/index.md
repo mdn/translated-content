@@ -27,7 +27,9 @@ L'entête de réponse **`Access-Control-Allow-Methods`** spécifie les méthodes
 
 ## Syntaxe
 
-    Access-Control-Allow-Methods: <methode>, <methode>, ...
+```
+Access-Control-Allow-Methods: <methode>, <methode>, ...
+```
 
 ## Directives
 
@@ -36,7 +38,9 @@ L'entête de réponse **`Access-Control-Allow-Methods`** spécifie les méthodes
 
 ## Exemples
 
-    Access-Control-Allow-Methods: POST, GET, OPTIONS
+```
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+```
 
 ## Spécifications
 

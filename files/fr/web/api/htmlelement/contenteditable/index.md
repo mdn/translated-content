@@ -21,8 +21,10 @@ Vous pouvez utiliser la propriété {{domxref("HTMLElement.isContentEditable")}}
 
 ## Syntaxe
 
-    editable = element.contentEditable
-    element.contentEditable = "true"
+```js
+editable = element.contentEditable
+element.contentEditable = "true"
+```
 
 ## Spécifications
 

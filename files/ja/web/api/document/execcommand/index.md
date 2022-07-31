@@ -148,7 +148,6 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `AutoUrlDetect`
   - : ブラウザーの自動リンクの動作を変更します (Internet Explorer のみ)。
 
-
 ## 例
 
 [使用方法](https://codepen.io/chrisdavidmills/full/gzYjag/)の例 (CodePen) です。
