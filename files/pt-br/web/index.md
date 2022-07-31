@@ -28,7 +28,7 @@ A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para ti
 - [HTML](/pt-BR/docs/Web/HTML)
   - : HTML fornece os blocks de construção fundamentais para estrutura documentos e aplicativos na Web.
 - [CSS](/pt-BR/docs/Web/CSS)
-  - : Folhas de estilo em cascata são usadas para descrever a aparência de documentos e aplicaões na Web.
+  - : Folhas de estilo em cascata são usadas para descrever a aparência de documentos e aplicações na Web.
 - [JavaScript](/pt-BR/docs/Web/JavaScript)
   - : JavaScript é a linguagem de programação nativa da Web.
 - [WebAssembly](/pt-BR/docs/WebAssembly)
