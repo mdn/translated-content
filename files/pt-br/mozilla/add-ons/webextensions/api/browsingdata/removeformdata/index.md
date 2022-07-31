@@ -18,7 +18,7 @@ translation-of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 
 Limpa os dados que o navegador salvou para formulários com preenchimento automático.
 
-Você pode usar o parâmetro `removalOptions`, em que é um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, para:
+Você pode usar o parâmetro `removalOptions`, que é um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, para:
 
 - limpar apenas os dados de formulários inseridos após determinado tempo.
 - controlar se limpar os dados do formulário apenas de uma página web normal ou limpa os dados de um app e extensões hospedados também.
