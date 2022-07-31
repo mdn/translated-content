@@ -1,5 +1,5 @@
 ---
-title: Code example guidelines
+title: コード例のガイドライン
 slug: MDN/Guidelines/Code_guidelines
 tags:
   - CSS
@@ -9,72 +9,48 @@ tags:
   - HTML
   - JavaScript
   - MDN Meta
-  - NeedsTranslation
   - Shell
-  - TopicStub
 translation_of: MDN/Guidelines/Code_guidelines
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<div>{{IncludeSubnav("/en-US/docs/MDN")}}</div>
+この一連の文書では、MDN で使用するデモ、コードスニペット、対話型例などを書く際に使用するコーディングガイドラインと最善の慣習について概説します。
 
-<div>
-<p class="summary"><span class="seoSummary">This document series outlines the coding guidelines and best practices we use for writing demos, code snippets, interactive examples, etc, for use on MDN.</span></p>
+もしコード例を書くときに従うべきガイドラインを探しているのなら、正しい場所に来たと思います。これらのガイドラインを遵守する最大の利点は、 MDN 上の例やデモに一貫性を持たせ、読みやすさと理解力を高めることです。
 
-<p>If you are looking for guidelines to follow when writing your code examples, you have come to the right place. The biggest advantage to adhering to these guidelines is that it will foster consistency across our samples and demos on MDN, which increases readability and comprehension overall.</p>
-</div>
+> **Note:** コードの内容ではなく、 MDN の記事に表示されるコードのスタイルについてのアドバイスが必要な場合は、[執筆スタイルガイド](/ja/docs/MDN/Guidelines/Writing_style_guide#code_sample_style_and_formatting)を参照してください。
 
-<div class="note">
-<p><strong>Note</strong>: If you want advice on the styling of code as it appears on an MDN article, rather than the code content, see our <a href="/ja/docs/MDN/Contribute/Guidelines/Writing_style_guide#Code_sample_style_and_formatting">Writing style guide</a>.</p>
-</div>
+## 記事構成
 
-<h2 id="Article_structure">Article structure</h2>
+この記事では、 MDN コード例を書くための一般的な高レベルの最善の慣習を紹介します。内容は以下の通りです。
 
-<p>This article contains general high-level best practices for writing MDN code examples. Its subarticles are as follows:</p>
+- [すべてのコードの全般的なガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/General) — 構文的な例と、スタイルや表示の例とで
+- [HTML のガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/HTML)
+- [CSS のガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/CSS)
+- [JavaScript のガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/JavaScript)
+- [シェルプロンプトのガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/Shell)
 
-<ul>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/General">General guidelines for all code</a> — both syntactical and for styling/displaying examples</li>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML">HTML guidelines</a></li>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS">CSS guidelines</a></li>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/JavaScript">JavaScript guidelines</a></li>
- <li><a href="/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/Shell">Shell prompt guidelines</a></li>
-</ul>
+## 全般的な最善の慣習
 
-<h2 id="General_best_practices">General best practices</h2>
+この部分は、特定の機能や特徴の使い方を示す、理解しやすい最小限のコード例を作成するための一般的な最善の慣習を提供するものです。
 
-<p>This section provides quick general best practices for creating an understandable minimal code sample to demonstrate usage of a specific feature or function.</p>
+コード例の要件は次のようなものです。
 
-<p>Code samples need to be:</p>
+- 理解できる程度にシンプルでありながら
+- 興味あることを使用するのに十分な複雑さ、そして、できれば有用であること。
 
-<ul>
- <li>simple enough to be understandable, but</li>
- <li>complex enough to do something interesting, and preferably useful.</li>
-</ul>
+全体的に言える 1 つの考慮事項を心に留めておく必要があります。**読者はコード例をコピーして自分のコードに貼り付け、それを実運用に移すかもしれません。**
 
-<p>There is one overarching consideration that you need to keep in mind: <strong>Readers will copy and paste the code sample into their own code, and may put it into production.</strong></p>
+したがって、コード例が使用可能であり、一般的な最善の慣習に続いていることを確認する必要があり、アプリケーションが安全でない、著しく非効率、肥大化、またはアクセス不能になる原因となることを**行わない**ようにしてください。もしコード例が実行可能でない、あるいは実運用に適さないものであれば、必ずコードのコメントと説明文に警告を入れるようにしてください。これは、依存関係やセットアップを含め、例を実行するのに必要な**すべて**の情報を提供する必要があることも意味します。
 
-<p>Therefore, you need to make sure that the code example is usable and follows generally accepted best practices, and <strong>does not</strong> do anything that will cause an application to be insecure, grossly inefficient, bloated, or inaccessible. If the code example is not runnable or production-worthy, be sure to include a warning in a code comment and in the explanatory text — if it is a snippet and not a full example, make this clear. This also means that you should provide <strong>all</strong> of the information necessary to run the example including any dependencies and setup.</p>
+コード例は、可能な限り自己完結し、理解しやすいものであるべきです。その目的は、必ずしも専門家を感心させるような効率的で賢いコードや、優れた機能を持つコードを作ることではなく、できるだけ早く理解できるような縮小された動作例を作ることです。
 
-<p><span class="author-g-frc9o9ihh5c9qyd0">Code samples should be as self-contained and easy to understand as possible. The aim is not necessarily to produce efficient, clever code that impresses experts and has great functionality, but rather to produce reduced working examples that can be understood as quickly as possible.</span></p>
+さらに一般的な最善の慣習として、以下のようなものがあります。
 
-<ul>
-</ul>
-
-<div id="magicdomid13"><span class="author-g-frc9o9ihh5c9qyd0">Guidelines:</span></div>
-
-<div id="magicdomid14"> </div>
-
-<div id="magicdomid15">
-<ul>
- <li><span class="author-g-frc9o9ihh5c9qyd0">The sample should be short and ideally only show the feature you are immediately interested in.</span></li>
- <li><span class="author-g-frc9o9ihh5c9qyd0"><strong>Only</strong> include code that is essential for the example. A large amount of non-relevant code can easily distract or confuse the audience. If you want to provide a full, more lengthy, example put it in one of our <a href="https://github.com/mdn/">Github repos</a> (or a JSBin, Codepen, or similar) and then provide the link to the full version above or below the sample.</span></li>
- <li><span class="author-g-frc9o9ihh5c9qyd0">Don't include unnecessary server-side code, libraries, frameworks, preprocessors, and other such dependencies — they make the code less portable, and harder to run and understand. Use vanilla code where possible.</span></li>
- <li><span class="author-g-frc9o9ihh5c9qyd0">Don't assume knowledge of any libraries, frameworks, preprocessors, or other non-native features. For example, use class names that make sense within the example rather than classnames that make sense to BEM or Bootstrap users.</span></li>
- <li><span class="author-g-frc9o9ihh5c9qyd0">Write your code as cleanly and understandably as possible, even if it is not the most efficient way to do it.</span></li>
- <li><span class="author-g-frc9o9ihh5c9qyd0">Don't use bad practices for brevity (such as presentational elements like {{HTMLElement("big")}} or {{domxref("Document.write", "document.write()")}}); do it correctly.</span></li>
- <li><span class="author-g-frc9o9ihh5c9qyd0">In the case of API demos, if you are using multiple APIs together point out what APIs are included, and what features come from where.</span></li>
-</ul>
-</div>
-
-<ul>
-</ul>
+- 例は短く、すぐに関心対象の機能のみを見せるのが理想的です。
+- 例にとって必要なコード**だけ**を入れてください。関連性のないコードが大量にあると、読者の気が散ったり、混乱したりしやすくなります。もし、より長い完全な例を提供したい場合は、私たちの [GitHub リポジトリー](https://github.com/mdn/) (または JSBin や Codepen など) のいずれかに置いて、完全版へのリンクを例の上か下に示してください。
+- 不必要なサーバーサイドのコード、ライブラリー、フレームワーク、プリプロセッサー、その他の依存関係を入れないようにしましょう。可能な限り純粋なコードを使用してください。
+- ライブラリー、フレームワーク、プリプロセッサー、その他のネイティブでない機能についての知識を前提としないこと。例えば、 BEM や Bootstrap のユーザーにとって意味のあるクラス名ではなく、 この例の中で意味のあるクラス名を使用てください。
+- 最も効率的な書き方でなくても、可能な限りすっきりして理解できるようにコードを書いてください。
+- 簡潔にするための悪しき慣習（{{HTMLElement("big")}} 等の表現要素や {{domxref("Document.write", "document.write()")}}）を使用せず、正しく行いましょう。
+- API のデモの場合、複数の API を一緒に使用している場合は、どの API が入っているか、どの機能がどこから来ているかを明示しましょう。
