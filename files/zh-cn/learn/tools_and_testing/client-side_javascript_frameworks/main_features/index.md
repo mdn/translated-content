@@ -26,7 +26,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_f
 
 ## 领域特定语言（DSL）
 
-本模块中讨论的所有框架都基于 JavaScript，并且都允许你使用领域特定语言（DSL）来构建应用程序。特别地，React 已经普及了使用 **JSX** 来编写其组件，而 Ember 则使用 **Handlebars** 。与 HTML 不同，这些语言知道如何读取数据变量，并且此数据可用于简化编写 UI 的过程。
+本模块中讨论的所有框架都基于 JavaScript，并且都允许你使用领域特定语言（DSL）来构建应用程序。特别地，React 已经普及了使用 **JSX** 来编写其组件，而 Ember 则使用 **Handlebars**。与 HTML 不同，这些语言知道如何读取数据变量，并且此数据可用于简化编写 UI 的过程。
 
 基于 Angular 框架的应用程序会大量地使用 **TypeScript**。TypeScript 不关心用户界面的编写，但它仍然是一种领域特定语言（DSL），而且与原生 JavaScript 有着很大的不同。
 
@@ -50,7 +50,6 @@ const header = (
 小括号内的表达式表示一个 HTML [`<header>`](/zh-CN/docs/Web/HTML/Element/header) 元素，里面还有一个 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素。第 4 行被花括号围绕着的 `subject` 告诉应用程序要读取常量 subject 的值并将其插入到我们的 `<h1>` 元素当中。
 
 当与 React 一起使用时，上一个片段中的 JSX 将被编译成这样：
-
 
 ```js
 var subject = "World";
@@ -83,6 +82,7 @@ var header = React.createElement("header", null,
 ```
 
 还有这个数据：
+
 ```js
 {
   subject: "World"
