@@ -2,9 +2,9 @@
 title: MDN の動画コンテンツ
 slug: MDN/Guidelines/Video
 tags:
-  - ガイドライン
-  - メタ
-  - 動画
+  - Guidelines
+  - Meta
+  - Video
 translation_of: MDN/Guidelines/Video
 ---
 {{MDNSidebar}}
@@ -92,7 +92,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 4. _録画開始_ ボタンを押します。
 5. 録画したい動作をする。
 6. _停止_ ボタンを押す。
-7. メインメニューから_File_ > _Export As..._ > _1080p_ を選択し、 Hi Definition として保存します。
+7. メインメニューから_File_ > _Export As…_ > _1080p_ を選択し、 Hi Definition として保存します。
 
 ### その他のリソース
 
