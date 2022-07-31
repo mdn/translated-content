@@ -2,15 +2,13 @@
 title: ガイドライン
 slug: MDN/Guidelines
 tags:
-  - Documentation
+  - Guidelines
   - Landing
-  - MDN
+  - MDN Meta
 translation_of: MDN/Guidelines
 ---
-<div>{{MDNSidebar}}</div>
+{{MDNSidebar}}
 
-<div>{{IncludeSubnav("/ja/docs/MDN")}}</div>
+これらのガイドでは、MDN 文書の書き方や形式、コードサンプルやその他のコンテンツの表現方法について詳しく説明しています。これらのガイドに従うことで、作成する資料がクリーンで使用しやすいものになることを保証します。
 
-<p><span class="seoSummary">これらのガイドは MDN の文書がどのように書かれ、整形されるべきかの詳細を説明します。同様に、コードのサンプル、その他の素材をどのように示したら良いかについても説明します。</span> これらのガイドに従うならば、あなたの成果物はきれいなものであり、すぐに使えるものとなります。</p>
-
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}
