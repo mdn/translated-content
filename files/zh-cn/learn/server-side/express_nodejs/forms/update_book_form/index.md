@@ -3,13 +3,14 @@ title: 更新书本表单
 slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 ---
-<p><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Update_Book_form">Edit</a>本文最后一部分演示如何定义一个页面，以更新书本（<code>Book</code>）对象。当更新一本书的时候，表单处理更像是创建一本书，除了你必须将表单填进 <code>GET</code> 路由，并附加上来自数据库的值。</p>
+[Edit](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Update_Book_form)本文最后一部分演示如何定义一个页面，以更新书本（`Book`）对象。当更新一本书的时候，表单处理更像是创建一本书，除了你必须将表单填进 `GET` 路由，并附加上来自数据库的值。
 
-<h2 id="控制器—get_路由">控制器—get 路由</h2>
+## 控制器—get 路由
 
-<p>打开 <strong>/controllers/bookController.js</strong>. 找到 exported <code>book_update_get()</code> 控制方法，并用底下的代码替换。</p>
+打开 **/controllers/bookController.js**. 找到 exported `book_update_get()` 控制方法，并用底下的代码替换。
 
-<pre class="brush: js">// Display book update form on GET.
+```js
+// Display book update form on GET.
 exports.book_update_get = function(req, res, next) {
 
     // Get book, authors and genres for form.
@@ -32,8 +33,8 @@ exports.book_update_get = function(req, res, next) {
             }
             // Success.
             // Mark our selected genres as checked.
-            for (var all_g_iter = 0; all_g_iter &lt; results.genres.length; all_g_iter++) {
-                for (var book_g_iter = 0; book_g_iter &lt; results.book.genre.length; book_g_iter++) {
+            for (var all_g_iter = 0; all_g_iter < results.genres.length; all_g_iter++) {
+                for (var book_g_iter = 0; book_g_iter < results.book.genre.length; book_g_iter++) {
                     if (results.genres[all_g_iter]._id.toString()==results.book.genre[book_g_iter]._id.toString()) {
                         results.genres[all_g_iter].checked='true';
                     }
@@ -42,19 +43,21 @@ exports.book_update_get = function(req, res, next) {
             res.render('book_form', { title: 'Update Book', authors:results.authors, genres:results.genres, book: results.book });
         });
 
-};</pre>
+};
+```
 
-<p>这个控制器从 URL 参数 (<code>req.params.id</code>) 中，取得要更新的书本 <code>Book</code> 的 id。它使用 <code>async.parallel()</code>方法，取得指定的书本 <code>Book</code> 纪录 (填入它的种类和作者字段) ，并列出所有作者 <code>Author</code> 和种类 <code>Genre</code>对象。当所有操作都完成，它用勾选的方式，标记当前选择的种类，并呈现 <strong>book_form.pug</strong> 视图，传送变数 <code>title</code>、<code>book</code>、所有 <code>authors</code>、所有 <code>genres</code>。</p>
+这个控制器从 URL 参数 (`req.params.id`) 中，取得要更新的书本 `Book` 的 id。它使用 `async.parallel()`方法，取得指定的书本 `Book` 纪录 (填入它的种类和作者字段) ，并列出所有作者 `Author` 和种类 `Genre`对象。当所有操作都完成，它用勾选的方式，标记当前选择的种类，并呈现 **book_form.pug** 视图，传送变数 `title`、`book`、所有 `authors`、所有 `genres`。
 
-<h2 id="控制器—post_路由">控制器—post 路由</h2>
+## 控制器—post 路由
 
-<p>找到 exported <code>book_update_post()</code> 控制器方法，并替换为底下的代码。</p>
+找到 exported `book_update_post()` 控制器方法，并替换为底下的代码。
 
-<pre class="brush: js">// Handle book update on POST.
+```js
+// Handle book update on POST.
 exports.book_update_post = [
 
     // Convert the genre to an array
-    (req, res, next) =&gt; {
+    (req, res, next) => {
         if(!(req.body.genre instanceof Array)){
             if(typeof req.body.genre==='undefined')
             req.body.genre=[];
@@ -78,7 +81,7 @@ exports.book_update_post = [
     sanitizeBody('genre.*').trim().escape(),
 
     // Process request after validation and sanitization.
-    (req, res, next) =&gt; {
+    (req, res, next) => {
 
         // Extract the validation errors from a request.
         const errors = validationResult(req);
@@ -108,8 +111,8 @@ exports.book_update_post = [
                 if (err) { return next(err); }
 
                 // Mark our selected genres as checked.
-                for (let i = 0; i &lt; results.genres.length; i++) {
-                    if (book.genre.indexOf(results.genres[i]._id) &gt; -1) {
+                for (let i = 0; i < results.genres.length; i++) {
+                    if (book.genre.indexOf(results.genres[i]._id) > -1) {
                         results.genres[i].checked='true';
                     }
                 }
@@ -126,15 +129,17 @@ exports.book_update_post = [
                 });
         }
     }
-];</pre>
+];
+```
 
-<p>这很像是创建一本书的时候，所使用的 post 路由。首先，我们验证来自表单的书本数据，并进行无害化处理，并使用它创建一个新的书本 <code>Book</code> 对象 (将它的 <code>_id</code> 值，设置给将要更新的对象的 id)。当我们验证资料，然后重新呈现表单的时候，如果存在错误，再附加显示使用者输入的资料、错误信息、以及种类和作者列表。当我们调用<code>Book.findByIdAndUpdate()</code> 去更新 <code>Book</code> ，如果没有错误，就重新导向到它的细节页面。</p>
+这很像是创建一本书的时候，所使用的 post 路由。首先，我们验证来自表单的书本数据，并进行无害化处理，并使用它创建一个新的书本 `Book` 对象 (将它的 `_id` 值，设置给将要更新的对象的 id)。当我们验证资料，然后重新呈现表单的时候，如果存在错误，再附加显示使用者输入的资料、错误信息、以及种类和作者列表。当我们调用`Book.findByIdAndUpdate()` 去更新 `Book` ，如果没有错误，就重新导向到它的细节页面。
 
-<h2 id="视图">视图</h2>
+## 视图
 
-<p>打开 <strong>/views/book_form.pug</strong>，并更新作者表单控制器的区段，以加入底下条件控制代码。</p>
+打开 **/views/book_form.pug**，并更新作者表单控制器的区段，以加入底下条件控制代码。
 
-<pre class="brush: plain">    div.form-group
+```plain
+    div.form-group
       label(for='author') Author:
       select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
         for author in authors
@@ -148,38 +153,35 @@ exports.book_update_post = [
               ) ? 'selected' : false
             ) #{author.name}
           else
-            option(value=author._id) #{author.name}</pre>
+            option(value=author._id) #{author.name}
+```
 
-<div class="note">
-<p><strong>备注：</strong> 此处代码的更动，是为了让书本表单 book_form，能被创建和更新书本的对象共同使用 (如果不这么做，当创建表单时，在 <code>GET</code> 路由会发生一个错误)。</p>
-</div>
+> **备注：** 此处代码的更动，是为了让书本表单 book_form，能被创建和更新书本的对象共同使用 (如果不这么做，当创建表单时，在 `GET` 路由会发生一个错误)。
 
-<h2 id="加入一个更新按钮">加入一个更新按钮</h2>
+## 加入一个更新按钮
 
-<p>打开 <strong>book_detail.pug </strong>视图，并确认在页面下方，有删除和更新书本的连结，如下所示。</p>
+打开 **book_detail.pug** 视图，并确认在页面下方，有删除和更新书本的连结，如下所示。
 
-<pre class="brush: html">  hr
+```html
+  hr
   p
     a(href=book.url+'/delete') Delete Book
   p
-    a(href=book.url+'/update') Update Book</pre>
+    a(href=book.url+'/update') Update Book
+```
 
-<p>你现在应该能够更新来自书本细节页面的书了。</p>
+你现在应该能够更新来自书本细节页面的书了。
 
-<h2 id="它看起來像是">它看起來像是？</h2>
+## 它看起來像是？
 
-<p>运行本应用，打开浏览器，访问网址 <a href="http://localhost:3000/">http://localhost:3000/</a>，点击所有书本 All books 连结，然后点击一本书。最后点击更新书本 Update Book 连结。</p>
+运行本应用，打开浏览器，访问网址 <http://localhost:3000/>，点击所有书本 All books 连结，然后点击一本书。最后点击更新书本 Update Book 连结。
 
-<p>表单看起来应该就像是创建书本页面，只是标题变为 'Update book'，并且事先填入纪录值。</p>
+表单看起来应该就像是创建书本页面，只是标题变为 'Update book'，并且事先填入纪录值。
 
-<p><img src="locallibary_express_book_update_noerrors.png"></p>
+![](locallibary_express_book_update_noerrors.png)
 
-<div class="note">
-<p><strong>备注：</strong> 其它更新对象的页面，也可以用同样的方式处理。我们把这些更新页面的实作留下，做为自我挑战。</p>
-</div>
+> **备注：** 其它更新对象的页面，也可以用同样的方式处理。我们把这些更新页面的实作留下，做为自我挑战。
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<ul>
- <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程 6: 使用表单</a></li>
-</ul>
+- 回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)

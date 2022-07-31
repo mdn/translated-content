@@ -3,24 +3,29 @@ title: 创建书本实例表单
 slug: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 ---
-<p><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form">Edi</a>本章节演示如何定义一个页面/表单，以创建<code>BookInstance</code> 物件。这很像我们用来创建书本 <code>Book</code> 物件的表单。</p>
+[Edi](/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_BookInstance_form)本章节演示如何定义一个页面/表单，以创建`BookInstance` 物件。这很像我们用来创建书本 `Book` 物件的表单。
 
-<h2 id="导入验证和清理方法">导入验证和清理方法</h2>
+## 导入验证和清理方法
 
-<p>打开 <strong>/controllers/bookinstanceController.js</strong>，并在档案最上方加入以下几行：</p>
+打开 **/controllers/bookinstanceController.js**，并在档案最上方加入以下几行：
 
-<pre class="brush: js">const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');</pre>
+```js
+const { body,validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');
+```
 
-<h2 id="控制器—get_路由">控制器—get 路由</h2>
+## 控制器—get 路由
 
-<p>在档案最上方，用 require 导入书本模型 (因为每个<code>BookInstance</code> 都有关连的 <code>Book</code>)。</p>
+在档案最上方，用 require 导入书本模型 (因为每个`BookInstance` 都有关连的 `Book`)。
 
-<pre class="brush: js">var Book = require('../models/book');</pre>
+```js
+var Book = require('../models/book');
+```
 
-<p>找到导出的 <code>bookinstance_create_get()</code> 控制器方法，并替换为底下代码。</p>
+找到导出的 `bookinstance_create_get()` 控制器方法，并替换为底下代码。
 
-<pre class="brush: js">// Display BookInstance create form on GET.
+```js
+// Display BookInstance create form on GET.
 exports.bookinstance_create_get = function(req, res, next) {
 
     Book.find({},'title')
@@ -30,15 +35,17 @@ exports.bookinstance_create_get = function(req, res, next) {
       res.render('bookinstance_form', {title: 'Create BookInstance', book_list:books});
     });
 
-};</pre>
+};
+```
 
-<p>控制器取得所有书本的列表 (<code>book_list</code>) 并将它传送到视图 <code><strong>bookinstance_form.pug</strong></code> (里面附加上 <code>title</code>)。</p>
+控制器取得所有书本的列表 (`book_list`) 并将它传送到视图 **`bookinstance_form.pug`** (里面附加上 `title`)。
 
-<h2 id="控制器—post_路由">控制器—post 路由</h2>
+## 控制器—post 路由
 
-<p>找到导出的 <code>bookinstance_create_post()</code> 控制器方法，并替换为底下代码。</p>
+找到导出的 `bookinstance_create_post()` 控制器方法，并替换为底下代码。
 
-<pre class="brush: js">// Handle BookInstance create on POST.
+```js
+// Handle BookInstance create on POST.
 exports.bookinstance_create_post = [
 
     // Validate fields.
@@ -53,7 +60,7 @@ exports.bookinstance_create_post = [
     sanitizeBody('due_back').toDate(),
 
     // Process request after validation and sanitization.
-    (req, res, next) =&gt; {
+    (req, res, next) => {
 
         // Extract the validation errors from a request.
         const errors = validationResult(req);
@@ -85,15 +92,17 @@ exports.bookinstance_create_post = [
                 });
         }
     }
-];</pre>
+];
+```
 
-<p>此代码的结构和行为，与创建其他对象的结构和行为相同。首先，我们验证数据，并為数据做無害化處理。如果数据无效，我们会重新显示表單，以及用户最初输入的数据，還有错误消息列表。如果数据有效，我们保存新的<code>BookInstance</code>记录，并将用户重定向到详细信息页面。</p>
+此代码的结构和行为，与创建其他对象的结构和行为相同。首先，我们验证数据，并為数据做無害化處理。如果数据无效，我们会重新显示表單，以及用户最初输入的数据，還有错误消息列表。如果数据有效，我们保存新的`BookInstance`记录，并将用户重定向到详细信息页面。
 
-<h2 id="视图">视图</h2>
+## 视图
 
-<p>创建 <strong>/views/bookinstance_form.pug</strong> ，并复制贴上以下代码。</p>
+创建 **/views/bookinstance_form.pug** ，并复制贴上以下代码。
 
-<pre class="brush: plain">extends layout
+```plain
+extends layout
 
 block content
   h1=title
@@ -128,23 +137,20 @@ block content
   if errors
     ul
       for error in errors
-        li!= error.msg</pre>
+        li!= error.msg
+```
 
-<p>这个视图的结构和行为，几乎等同于 <strong>book_form.pug</strong> 模板，因此我们就不再重覆说明一次了。</p>
+这个视图的结构和行为，几乎等同于 **book_form.pug** 模板，因此我们就不再重覆说明一次了。
 
-<div class="note">
-<p><strong>备注：</strong> 以上的模板将状态值 (Maintenance, Available, 等等) 写死在代码里，而且不能 "记忆" 使用者的输入值。如果你愿意的话，考虑重新实作此列表，当表单被重新呈现时，从控制器传入选项数据，并设定选中的值。</p>
-</div>
+> **备注：** 以上的模板将状态值 (Maintenance, Available, 等等) 写死在代码里，而且不能 "记忆" 使用者的输入值。如果你愿意的话，考虑重新实作此列表，当表单被重新呈现时，从控制器传入选项数据，并设定选中的值。
 
-<h2 id="它看起來像是">它看起來像是？</h2>
+## 它看起來像是？
 
-<p>运行本应用，打开浏览器访问网址 <a href="http://localhost:3000/">http://localhost:3000/</a>。然后点击创建新书本实例 Create new book instance (copy) 连结。如果每个东西都设定正确了，你的网站看起应该像底下的截图。在你提交一个有效的 <code>BookInstance</code> 之后，它应该会被储存，并且你将被带到详细信息页面。</p>
+运行本应用，打开浏览器访问网址 <http://localhost:3000/>。然后点击创建新书本实例 Create new book instance (copy) 连结。如果每个东西都设定正确了，你的网站看起应该像底下的截图。在你提交一个有效的 `BookInstance` 之后，它应该会被储存，并且你将被带到详细信息页面。
 
-<p><img src="locallibary_express_bookinstance_create_empty.png"></p>
+![](locallibary_express_bookinstance_create_empty.png)
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<ul>
- <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms">Express 教程 6: 使用表单</a></li>
- <li>继续教程 6 的下一个部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">删除作者表单</a></li>
-</ul>
+- 回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
+- 继续教程 6 的下一个部分：[删除作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form)

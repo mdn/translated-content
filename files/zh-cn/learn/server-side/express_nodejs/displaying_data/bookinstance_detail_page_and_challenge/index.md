@@ -5,15 +5,16 @@ slug: >-
 translation_of: >-
   Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
-<h2 id="书本实例细节页面">书本实例细节页面</h2>
+## 书本实例细节页面
 
-<p><code>BookInstance</code>细节页面，需要呈现每一个<code>BookInstance</code>的信息，用 <code>_id</code> 字段值（自动产生）做识别。它包含了 <code>Book</code> 名称 (也是一个连结，连到 书本细节页面)，接着是纪录中的其它的信息。</p>
+`BookInstance`细节页面，需要呈现每一个`BookInstance`的信息，用 `_id` 字段值（自动产生）做识别。它包含了 `Book` 名称 (也是一个连结，连到 书本细节页面)，接着是纪录中的其它的信息。
 
-<h3 id="控制器">控制器</h3>
+### 控制器
 
-<p>打开 <strong>/controllers/bookinstanceController.js</strong>，找到 exported <code>bookinstance_detail()</code> 控制器方法，并替换以下代码。</p>
+打开 **/controllers/bookinstanceController.js**，找到 exported `bookinstance_detail()` 控制器方法，并替换以下代码。
 
-<pre class="brush: js">// Display detail page for a specific BookInstance.
+```js
+// Display detail page for a specific BookInstance.
 exports.bookinstance_detail = function(req, res, next) {
 
     BookInstance.findById(req.params.id)
@@ -30,19 +31,20 @@ exports.bookinstance_detail = function(req, res, next) {
     })
 
 };
-</pre>
+```
 
-<p>该方法使用从 URL（使用路由）中提取的特定书本实例的 ID，调用<code>BookInstance.findById()</code>，并通过请求参数（<code>req.params.id</code>），在控制器中访问。然后调用<code>populate()</code>来获取相关<code>Book</code>的详细信息。</p>
+该方法使用从 URL（使用路由）中提取的特定书本实例的 ID，调用`BookInstance.findById()`，并通过请求参数（`req.params.id`），在控制器中访问。然后调用`populate()`来获取相关`Book`的详细信息。
 
-<h3 id="视图">视图</h3>
+### 视图
 
-<p>创建 <strong>/views/bookinstance_detail.pug</strong>，并复制到下面的内容中。</p>
+创建 **/views/bookinstance_detail.pug**，并复制到下面的内容中。
 
-<pre class="brush: js">extends layout
+```js
+extends layout
 
 block content
 
-<strong>  h1 ID: #{bookinstance._id}</strong>
+  h1 ID: #{bookinstance._id}
 
   p #[strong Title:]
     a(href=bookinstance.book.url) #{bookinstance.book.title}
@@ -58,34 +60,28 @@ block content
 
   if bookinstance.status!='Available'
     p #[strong Due back:] #{bookinstance.due_back}
-</pre>
+```
 
-<p>本模组中的所有东西，都在先前的章节演示过了。</p>
+本模组中的所有东西，都在先前的章节演示过了。
 
-<h3 id="它看起來像是">它看起來像是？</h3>
+### 它看起來像是？
 
-<p>运行本应用，并打开浏览器访问 <a href="http://localhost:3000/">http://localhost:3000/</a>。选择 All book-instances 连结，然后选择其中一本。如果每个东西都设定正确了，你的网站看起来应该像是底下的截图。</p>
+运行本应用，并打开浏览器访问 <http://localhost:3000/>。选择 All book-instances 连结，然后选择其中一本。如果每个东西都设定正确了，你的网站看起来应该像是底下的截图。
 
-<p><img alt="BookInstance Detail Page - Express Local Library site" src="locallibary_express_bookinstance_detail.png"></p>
+![BookInstance Detail Page - Express Local Library site](locallibary_express_bookinstance_detail.png)
 
-<h2 id="自我挑战">自我挑战</h2>
+## 自我挑战
 
-<p>目前，我们网站上显示的大多数日期，都使用默认的 JavaScript 格式（例如 <em>Tue Dec 06 2016 15:49:58 GMT+1100</em>（AUS 东部夏令时间）。本文的挑战，是改善作者<code>Author</code>生命周期日期显示的外观信息（死亡/出生日期）和 BookInstance 详细信息页面，使用格式：December 6th, 2016。</p>
+目前，我们网站上显示的大多数日期，都使用默认的 JavaScript 格式（例如 _Tue Dec 06 2016 15:49:58 GMT+1100_（AUS 东部夏令时间）。本文的挑战，是改善作者`Author`生命周期日期显示的外观信息（死亡/出生日期）和 BookInstance 详细信息页面，使用格式：December 6th, 2016。
 
-<div class="note">
-<p><strong>备注：</strong> 您可以使用与我们用于 Book Instance List 的相同方法（将生命周期的虚拟属性，添加到<code>Author</code>模型，并使用<a href="https://www.npmjs.com/package/moment">moment</a>来设置日期字符串的格式）。</p>
-</div>
+> **备注：** 您可以使用与我们用于 Book Instance List 的相同方法（将生命周期的虚拟属性，添加到`Author`模型，并使用[moment](https://www.npmjs.com/package/moment)来设置日期字符串的格式）。
 
-<p>这一挑战的要求：</p>
+这一挑战的要求：
 
-<ol>
- <li>用 BookInstance 详细信息页面中的 <code>due_back_formatted</code> 替换 <code>due_back</code>。</li>
- <li>更新作者模块以添加寿命虚拟属性。寿命应該有两个值： <em>date_of_birth - date_of_death，這</em>两个值的格式与 <code>BookInstance.due_back_formatted</code>的日期格式相同。</li>
- <li>在当前使用<code>date_of_birth</code> 和 <code>date_of_death</code>的所有视图中，使用 <code>Author.lifespan</code> 。</li>
-</ol>
+1.  用 BookInstance 详细信息页面中的 `due_back_formatted` 替换 `due_back`。
+2.  更新作者模块以添加寿命虚拟属性。寿命应該有两个值： *date_of_birth - date_of_death，這*两个值的格式与 `BookInstance.due_back_formatted`的日期格式相同。
+3.  在当前使用`date_of_birth` 和 `date_of_death`的所有视图中，使用 `Author.lifespan` 。
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<ul>
- <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
-</ul>
+- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
