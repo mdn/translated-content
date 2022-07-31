@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
 <div>{{JSRef}}</div>
 
-<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong> 允许用于删除属性。它很像 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a> ，但它是一个函数。</p>
+<p>静态方法 <code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong> 允许用于删除属性。它很像 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a> ，但它是一个函数。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -27,15 +27,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 
 <h3 id="异常">异常</h3>
 
-<p>抛出一个 {{jsxref("TypeError")}}，如果<code>target</code>不是 {{jsxref("Object")}}。</p>
+<p>抛出一个 {{jsxref("TypeError")}}，如果<code>target</code>不是 {{jsxref("Object")}}。</p>
 
 <h2 id="描述">描述</h2>
 
-<p><code>Reflect.deleteProperty</code> 允许你删除一个对象上的属性。返回一个 {{jsxref("Boolean")}} 值表示该属性是否被成功删除。它几乎与非严格的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a> 相同。</p>
+<p><code>Reflect.deleteProperty</code> 允许你删除一个对象上的属性。返回一个 {{jsxref("Boolean")}} 值表示该属性是否被成功删除。它几乎与非严格的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code> operator</a> 相同。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_Reflect.deleteProperty()">使用 <code>Reflect.deleteProperty()</code></h3>
+<h3 id="使用_Reflect.deleteProperty()">使用 <code>Reflect.deleteProperty()</code></h3>
 
 <pre class="brush: js">var obj = { x: 1, y: 2 };
 Reflect.deleteProperty(obj, "x"); // true
@@ -54,77 +54,11 @@ Reflect.deleteProperty(Object.freeze({foo: 1}), "foo"); // false
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>49</td>
-   <td>{{CompatGeckoDesktop(42)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>49</td>
-   <td>{{CompatGeckoMobile(42)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>10</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

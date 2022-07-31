@@ -15,7 +15,7 @@ translation_of: Web/API/Navigator/mediaDevices
 ---
 <div>{{APIRef("Media Capture and Streams")}}</div>
 
-<div> </div>
+<div> </div>
 
 <div>mediaDevices 是 Navigator 只读属性，返回一个 {{domxref("MediaDevices")}} 对象，该对象可提供对相机和麦克风等媒体输入设备的连接访问，也包括屏幕共享。</div>
 
@@ -24,88 +24,17 @@ translation_of: Web/API/Navigator/mediaDevices
 <pre class="syntaxbox">var <em>mediaDevices</em> = navigator.mediaDevices;
 </pre>
 
-<h3 id="返回值"> 返回值</h3>
+<h3 id="返回值"> 返回值</h3>
 
 <p>{{domxref("MediaDevices")}} 是一个单例对象。通常，您只需直接使用此对象的成员，例如通过调用{{domxref("navigator.mediaDevices.getUserMedia()")}}。</p>
 
-<h2 id="特性">特性</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#widl-NavigatorUserMedia-mediaDevices', 'NavigatorUserMedia.mediaDevices')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Microsoft Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(51.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("36.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("36.0")}}</td>
-   <td>{{CompatGeckoMobile("36.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Navigator.mediaDevices")}}
 
 <h2 id="参考阅读">参考阅读</h2>
 

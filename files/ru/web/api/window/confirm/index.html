@@ -7,7 +7,7 @@ translation_of: Web/API/Window/confirm
 
 <p><code><font face="Open Sans, Arial, sans-serif">Метод </font><strong>Window.confirm() </strong></code>отображает диалоговое окно, которое содержит две кнопки (OK и Cancel), а так же опциональное (необязательное) текстовое сообщение.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre><em>result</em> = window.confirm(<em>message</em>);
 </pre>
@@ -17,7 +17,7 @@ translation_of: Web/API/Window/confirm
  <li><code>result</code> булево значение, указывающее на нажатую кнопку OK или Cancel (<code>true</code> означает OK).</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre>if (window.confirm("Do you really want to leave?")) {
   window.open("exit.html", "Thanks for Visiting!");
@@ -29,17 +29,17 @@ translation_of: Web/API/Window/confirm
 <p><img alt="firefox confirm" src="https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png" style="height: 119px; width: 354px;"><br>
   </p>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Окна сообщений - модальные, они препятствуют получению пользователем доступа к другим частям страницы до тех пор, пока окно не будет закрыто. По этой причине, вам не следует злоупотреблять этой функцией. Более того, существуют более веские причины <a href="http://alistapart.com/article/neveruseawarning">избегать использования диалоговых окон для подтверждения действий пользователя</a>.</p>
 
-<p>Пользователям <a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> (например, расширений Firefox) следует использовать методы {{interface("nsIPromptService")}} как альтернативу.</p>
+<p>Пользователям <a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a> (например, расширений Firefox) следует использовать методы <code>nsIPromptService</code> как альтернативу.</p>
 
 <p>Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован в {{htmlelement("iframe")}} до тех пор, пока атрибут sandbox не установлен в значение <code>allow-modal</code>.</p>
 
 <p>{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <tbody>
@@ -60,9 +60,9 @@ translation_of: Web/API/Window/confirm
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Window.confirm")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("window.alert","alert")}}</li>

@@ -96,61 +96,7 @@ border-image-slice: unset;
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>15.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("15.0")}}<sup>[1]</sup></td>
-   <td>11</td>
-   <td>15</td>
-   <td>6</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>4.1{{property_prefix("-webkit")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("15.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Hasta Gecko 47.0 {{geckoRelease("47.0")}} las imágenes SVGs sin viewport no eran divididas correctamente ({{bug("619500")}}). A partir de Gecko 48.0 {{geckoRelease("48.0")}} son mostradas igual que los SVGs con viewport, aunque si las partes no son exactamente el 50%, son ajustadas incorrectamente ({{bug("1264809")}}). Esto fue arreglado en Gecko 49.0 {{geckoRelease("49.0")}}, aunque aun hay un problema con los SVGs sin viewport donde <a href="https://wiki.mozilla.org/Electrolysis">e10s</a> es deshabilitado ({{bug("1284798")}}).</p>
-
-<p>También, SVGs pequeños son ajustados incorrectamente, porque los porcentajes en {{cssxref("border-image-slice")}} son calculados como enteros, en vez de reales ({{bug("1284797")}}).</p>
+{{Compat("css.properties.border-image-slice")}}
 
 <h2 id="Véase_también">Véase también</h2>
 

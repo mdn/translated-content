@@ -107,7 +107,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(404, "404 Not Found")}}</dt>
  <dd>O servidor não pode encontrar o recurso solicitado. Este código de resposta talvez seja o mais famoso devido à frequência com que acontece na web.</dd>
  <dt>{{HTTPStatus(405, "405 Method Not Allowed")}}</dt>
- <dd>O método de solicitação é conhecido pelo servidor, mas foi desativado e não pode ser usado. Os dois métodos obrigatórios, GET e HEAD, nunca devem ser desabilitados e não devem retornar este código de erro.</dd>
+ <dd>O método de solicitação é conhecido pelo servidor, mas foi desativado e não pode ser usado.</dd>
  <dt>{{HTTPStatus(406, "406 Not Acceptable")}}</dt>
  <dd>Essa resposta é enviada quando o servidor da Web após realizar a negociação de conteúdo orientada pelo servidor, não encontra nenhum conteúdo seguindo os critérios fornecidos pelo agente do usuário.</dd>
  <dt>{{HTTPStatus(407, "407 Proxy Authentication Required")}}</dt>
@@ -166,7 +166,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(502, "502 Bad Gateway")}}</dt>
  <dd>Esta resposta de erro significa que o servidor, ao trabalhar como um gateway a fim de obter uma resposta necessária para manipular a requisição, obteve uma resposta inválida.</dd>
  <dt>{{HTTPStatus(503, "503 Service Unavailable")}}</dt>
- <dd>O servidor não está pronto para manipular a requisição. Causas comuns são um servidor em manutenção ou sobrecarregado. Note que junto a esta resposta, uma página amigável explicando o problema deveria ser enviada. Estas respostas devem ser usadas para condições temporárias e o cabeçalho HTTP <code>Retry-After:</code> deverá, se posível, conter o tempo estimado para recuperação do serviço. O webmaster deve também tomar cuidado com os cabaçalhos relacionados com o cache que são enviados com esta resposta, já que estas respostas de condições temporárias normalmente não deveriam ser postas em cache.</dd>
+ <dd>O servidor não está pronto para manipular a requisição. Causas comuns são um servidor em manutenção ou sobrecarregado. Note que junto a esta resposta, uma página amigável explicando o problema deveria ser enviada. Estas respostas devem ser usadas para condições temporárias e o cabeçalho HTTP <code>Retry-After:</code> deverá, se possível, conter o tempo estimado para recuperação do serviço. O webmaster deve também tomar cuidado com os cabeçalhos relacionados com o cache que são enviados com esta resposta, já que estas respostas de condições temporárias normalmente não deveriam ser postas em cache.</dd>
  <dt>{{HTTPStatus(504, "504 Gateway Timeout")}}</dt>
  <dd>Esta resposta de erro é dada quando o servidor está atuando como um gateway e não obtém uma resposta a tempo.</dd>
  <dt>{{HTTPStatus(505, "505 HTTP Version Not Supported")}}</dt>
@@ -178,7 +178,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})</dt>
  <dd>O servidor detectou um looping infinito ao processar a requisição.</dd>
  <dt>{{HTTPStatus(510, "510 Not Extended")}}</dt>
- <dd>Exigem-se extenções posteriores à requisição para o servidor atendê-la.</dd>
+ <dd>Exigem-se extensões posteriores à requisição para o servidor atendê-la.</dd>
  <dt>{{HTTPStatus(511, "511 Network Authentication Required")}}</dt>
  <dd>O código de status 511 indica que o cliente precisa se autenticar para ganhar acesso à rede.</dd>
 </dl>

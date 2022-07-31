@@ -3,7 +3,7 @@ title: border
 slug: Web/CSS/border
 tags:
   - CSS Границы
-  - CSS свойства
+  - CSS-свойства
   - Разметка
   - Совместимость Мобильных Браузеров
   - Справка
@@ -28,11 +28,11 @@ border: medium dashed green;
 <p><strong>Замечание:</strong> Рекомендуется использовать <code>border</code>, когда вы хотите установить все свойства границ одновременно. Тогда как универсальные свойства {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}  принимают до четырёх значений, позволяя установить различные значения для каждого ребра, <code>border</code> принимает единственное значение для каждого свойства. И этот стиль применяется для всех четырёх границ.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <p>Свойство <code>border</code>  указывается используя одно или более значений <code><a href="#&lt;br-width>">&lt;br-width&gt;</a></code>, <code><a href="#&lt;br-style>">&lt;br-style&gt;</a></code>, и <code><a href="#&lt;color>">&lt;color&gt;</a></code> указанных ниже.</p>
 
-<h3 id="Values" name="Values">Значения</h3>
+<h3 id="Values">Значения</h3>
 
 <dl>
  <dt id="&lt;br-width>"><code>&lt;br-width&gt;</code></dt>
@@ -47,7 +47,7 @@ border: medium dashed green;
 
 <pre class="syntaxbox"><code>{{csssyntax}}</code></pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <h3 id="HTML">HTML</h3>
 
@@ -71,43 +71,17 @@ border: medium dashed green;
 
 <p>{{EmbedLiveSample('Examples')}}</p>
 
-<h2 id="Specifications" name="Specifications">Спецификация</h2>
+<h2 id="Specifications">Спецификация</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-shorthands', 'border')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Убирает  <em>особую</em> поддержку для <code>transparent</code>, так как сейчас принимается как значение {{cssxref("&lt;color&gt;")}}; это не имеет практического воздействия.<br>
-    Хотя нельзя установить пользовательское значение через универсальное свойство, <code>border</code> сейчас сбрасывает {{cssxref("border-image")}} до начального значения (<code>none</code>).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#border-shorthand-properties', 'border')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Принимает ключевое слово <code>inherit</code>. Так же принимает <code>transparent</code> как действующий цвет.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border', 'border')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость браузеров</h2>
+<h2 id="Browser_compatibility">Совместимость браузеров</h2>
 
 <div id="compat-mobile">
 <article>
-<p>{{Compat("css.properties.border")}}</p>
+<p>{{Compat}}</p>
 </article>
 </div>
 

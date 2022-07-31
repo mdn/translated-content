@@ -24,11 +24,11 @@ original_slug: Web/HTTP/Access_control_CORS
 
 <h2 id="¿Qué_peticiones_utiliza_CORS">¿Qué peticiones utiliza CORS?</h2>
 
-<p>Este <a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">estándar de intercambio de origen cruzado</a> es utilizado para habilitar solicitudes HTTP de sitios cruzados para:</p>
+<p>Este <a class="external" href="http://www.w3.org/TR/cors/">estándar de intercambio de origen cruzado</a> es utilizado para habilitar solicitudes HTTP de sitios cruzados para:</p>
 
 <ul>
  <li>Invocaciones de las APIs <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> o  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a> en una manera de sitio cruzado, como se discutió arriba.</li>
- <li>Fuentes Web (para usos de fuente en dominios cruzados <code>@font-face</code> dentro de CSS), <a class="external" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements" title="http://www.webfonts.info/wiki/index.php?title=@font-face_support_in_Firefox">para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.</a></li>
+ <li>Fuentes Web (para usos de fuente en dominios cruzados <code>@font-face</code> dentro de CSS), <a class="external" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.</a></li>
  <li>Texturas WebGL.</li>
  <li>Imágenes dibujadas en patrones usando <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">drawImage</a></code>.</li>
  <li>Hojas de estilo (para acceso <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_View">CSSOM</a>).</li>
@@ -47,7 +47,7 @@ original_slug: Web/HTTP/Access_control_CORS
 
 <p>Aquí, presentamos tres escenarios que ilustran cómo funciona el Intercambio de Recursos de Origen Cruzado. Todos estos ejemplos utilizan el objeto <code><a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest">XMLHttpRequest</a></code>, que puede ser utilizado para hacer invocaciones de sitios cruzados en cualquier explorador soportado.</p>
 
-<p>Los fragmentos de JavaScript incluidos en estas secciones (y las instancias ejecutadas del código servidor que correctamente maneja las solicitudes de sitios cruzados) <a class="external" href="http://arunranga.com/examples/access-control/" title="http://arunranga.com/examples/access-control/">pueden ser encontrados "en acción" aquí</a>, y pueden ser trabajados en exploradores que soportan <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> de sitios cruzados. Una discusión de Intercambio de Recursos de Origen Cruzado desde una <a class="internal" href="/en-US/docs/Web/HTTP/Server-Side_Access_Control" title="En/Server-Side Access Control">perspectiva de servidor (incluyendo fragmentos de código PHP) puede ser encontrada aquí</a>.</p>
+<p>Los fragmentos de JavaScript incluidos en estas secciones (y las instancias ejecutadas del código servidor que correctamente maneja las solicitudes de sitios cruzados) <a class="external" href="http://arunranga.com/examples/access-control/">pueden ser encontrados "en acción" aquí</a>, y pueden ser trabajados en exploradores que soportan <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> de sitios cruzados. Una discusión de Intercambio de Recursos de Origen Cruzado desde una <a class="internal" href="/en-US/docs/Web/HTTP/Server-Side_Access_Control" title="En/Server-Side Access Control">perspectiva de servidor (incluyendo fragmentos de código PHP) puede ser encontrada aquí</a>.</p>
 
 <h3 id="Solicitudes_simples">Solicitudes simples</h3>
 
@@ -240,7 +240,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER
 Access-Control-Max-Age: 1728000</pre>
 
-<p>El servidor responde con <code>Access-Control-Allow-Methods</code> y dice que <code>POST</code>, <code>GET</code>, y <code>OPTIONS</code> son métodos viables para consultar el recurso en cuestión.  Observe que esta cabecera es similar al <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.7" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.7">HTTP/1.1 Allow: encabezado de respuesta</a>, pero usado estrictamente dentro del contexto del control de acceso.  El servidor también envía <code>Access-Control-Allow-Headers</code> con un valor de <code>X-PINGOTHER</code>, confirmando que es una cabecera permitida para ser usado en la solicitud real.  Como <code>Access-Control-Allow-Methods</code>, <code>Access-Control-Allow-Headers</code> es una lista separada por comas de cabeceras aceptables.  Finalmente, <code>Access-Control-Max-Age</code> da el valor en segundos de cuánto tarda la respuesta de la solicitud verificada en ser capturada sin enviar otra solicitud verificada. En este caso, 1728000 segundos son 20 días.</p>
+<p>El servidor responde con <code>Access-Control-Allow-Methods</code> y dice que <code>POST</code>, <code>GET</code>, y <code>OPTIONS</code> son métodos viables para consultar el recurso en cuestión.  Observe que esta cabecera es similar al <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.7">HTTP/1.1 Allow: encabezado de respuesta</a>, pero usado estrictamente dentro del contexto del control de acceso.  El servidor también envía <code>Access-Control-Allow-Headers</code> con un valor de <code>X-PINGOTHER</code>, confirmando que es una cabecera permitida para ser usado en la solicitud real.  Como <code>Access-Control-Allow-Methods</code>, <code>Access-Control-Allow-Headers</code> es una lista separada por comas de cabeceras aceptables.  Finalmente, <code>Access-Control-Max-Age</code> da el valor en segundos de cuánto tarda la respuesta de la solicitud verificada en ser capturada sin enviar otra solicitud verificada. En este caso, 1728000 segundos son 20 días.</p>
 
 <h3 id="Solicitudes_con_credenciales">Solicitudes con credenciales</h3>
 
@@ -299,7 +299,7 @@ Content-Type: text/plain
 
 <p>Pese a que la línea 11 contiene la Cookie destinada para el contenido en <code class="plain">http://bar.other</code>, si bar.other no responde con <code>Access-Control-Allow-Credentials: true</code> (línea 19) la respuesta será ignorada y no puesta a disposición para el contenido web. <strong>Nota Importante:</strong> cuando se responde a una solicitud con credeciales, el servidor <strong>debe</strong><strong> </strong>especificar un dominio, y no puede usar comodines. El ejemplo de arriba fallará si la cabecera fuera un comodín como: <code>Access-Control-Allow-Origin: *</code>.  Dado que <code>Access-Control-Allow-Origin</code> menciona explícitamente <code class="plain">http://foo.example</code>, el contenido de credenciales competente es devuelto al contenido web invocador. Observe que, en la línea 22, se establece una cookie adicional.</p>
 
-<p>Todos estos ejemplos pueden <a class="external" href="http://arunranga.com/examples/access-control/" title="http://arunranga.com/examples/access-control/">verse funcionando aquí</a>.  La siguiente sección se refiere a las verdaderas cabeceras HTTP.</p>
+<p>Todos estos ejemplos pueden <a class="external" href="http://arunranga.com/examples/access-control/">verse funcionando aquí</a>.  La siguiente sección se refiere a las verdaderas cabeceras HTTP.</p>
 
 <h2 id="Las_cabeceras_HTTP_de_respuesta">Las cabeceras HTTP de respuesta</h2>
 
@@ -320,7 +320,7 @@ Content-Type: text/plain
 
 <p>Si el servidor especifica un host de origen en vez de "*", entonces se debe incluir <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">Origin</span><span style="line-height: 1.5;"> en el encabezado de respuesta </span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">Vary </span><span style="line-height: 1.5;">para indicar a los clientes que las respuestas del servidor difieren basándose en el valor del encabezado de respuesta</span><span style="line-height: 1.5;"> </span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">Origin.</span></p>
 
-<p>{{ h3_gecko_minversion("Access-Control-Expose-Headers", "2.0") }}</p>
+<h3>Access-Control-Expose-Headers</h3>
 
 <p>Esta cabecera permite una <em>whitelist</em> de cabeceras del servidor que los exploradores tienen permitido acceder. Por ejemplo:</p>
 
@@ -422,71 +422,18 @@ Content-Type: text/plain
 
 <h2 id="Compatibilidad_con_Exploradores">Compatibilidad con Exploradores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte Básico</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>8 (a través de XDomainRequest)<br>
-    10</td>
-   <td>12</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte Básico</td>
-   <td>2.1</td>
-   <td>yes</td>
-   <td>yes</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>12</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h4 id="Nota">Nota</h4>
-
-<p>Internet Explorer 8 y 9 exponen CORS a través del objeto XDomainRequest, pero tienen una implementación completa en IE 10. Mientras que Firefox 3.5 introduce el soporte para XMLHttpRequests y Web Fonts para sitios cruzados, algunas solicitudes fueron limitadas hasta versiones posteriores. Especificamente, Firefox 7 introduce la habilidad para solicitudes HTTP de sitios cruzados para Texturas WebGL, y Firefox 9 añade soporte para imágenes dibujadas en patrones utilizando drawImage.</p>
+{{Compat("http.headers.Access-Control-Allow-Origin")}}
 
 <h2 id="Vea_también">Vea también</h2>
 
 <ul>
- <li><a class="external" href="http://arunranga.com/examples/access-control/" title="http://arunranga.com/examples/access-control/">Muestras de Código mostrando <code>XMLHttpRequest</code> e Intercambio de Recursos de Origen Cruzado</a></li>
+ <li><a class="external" href="http://arunranga.com/examples/access-control/">Muestras de Código mostrando <code>XMLHttpRequest</code> e Intercambio de Recursos de Origen Cruzado</a></li>
  <li><a class="external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Server-Side_Access_Control" title="https://developer.mozilla.org/en-US/docs/Web/HTTP/Server-Side_Access_Control">Intercambio de Recursos de Origen Cruzado desde una perspectiva de Servidor (PHP, etc.)</a></li>
- <li><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">Especificación del Intercambio de Recursos de Origen Cruzado</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/cors/">Especificación del Intercambio de Recursos de Origen Cruzado</a></li>
  <li><a class="internal" href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
- <li><a class="external" href="http://crypto.stanford.edu/websec/specs/origin-header/" title="http://crypto.stanford.edu/websec/specs/origin-header/">Discusión adicional sobre el encabezado Origin</a></li>
- <li><a class="external" href="http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx" title="http://www.kendoui.com/blogs/teamblog/posts/11-10-04/using_cors_with_all_modern_browsers.aspx">Usando CORS con todos los exploradores (modernos).</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/cors/" title="http://www.html5rocks.com/en/tutorials/cors/">Usando CORS - HTML5 Rocks</a></li>
+ <li><a class="external" href="http://crypto.stanford.edu/websec/specs/origin-header/">Discusión adicional sobre el encabezado Origin</a></li>
+ <li><a class="external" href="http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx">Usando CORS con todos los exploradores (modernos).</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/cors/">Usando CORS - HTML5 Rocks</a></li>
 </ul>
 
 <p>{{ languages( { "ja": "ja/HTTP_access_control" } ) }}</p>

@@ -47,7 +47,7 @@ translation_of: Learn/Server-side/First_steps/Web_frameworks
 
 <p>Пример ниже показывает, как это работает в веб-фреймворке Django (Python). Каждая функция «view» (обработчик запроса) получает объект <code>HttpRequest</code>, содержащий информацию о запросе, и должна вернуть объект <code>HttpResponse</code> с форматированным выводом (в этом случае строка).</p>
 
-<pre class="brush: python notranslate"># Django view function
+<pre class="brush: python"># Django view function
 from django.http import HttpResponse
 
 def index(request):
@@ -63,13 +63,13 @@ def index(request):
 
 <p>Различные фреймворки используют различные механизмы для сопоставления. Например, веб-фреймворк Flask (Python) добавляет маршруты для просмотра функций используя декораторы.</p>
 
-<pre class="brush: python notranslate">@app.route("/")
+<pre class="brush: python">@app.route("/")
 def hello():
     return "Hello World!"</pre>
 
 <p>Django ожидает, что разработчики определят список сопоставлений URL-адресов между шаблоном URL-адреса и функцией просмотра.</p>
 
-<pre class="brush: python notranslate">urlpatterns = [
+<pre class="brush: python">urlpatterns = [
     url(r'^$', views.index),
     # example: /best/myteamname/5/
     url(r'^best/(?P&lt;team_name&gt;\w.+?)/(?P&lt;team_number&gt;[0-9]+)/$', views.best),
@@ -97,7 +97,7 @@ def hello():
  <br>
  Первый фрагмент кода ниже показывает очень простую модель Django для объекта</span> <code>Team</code><span class="tlid-translation translation" lang="ru">. Это сохраняет название команды и уровень команды как символьные поля и определяет максимальное количество символов для каждой записи.</span> <code>team_level</code><span class="tlid-translation translation" lang="ru"> </span>—<span class="tlid-translation translation" lang="ru"> это поле выбора, поэтому здесь мы связываем варианты значений на выбор с сохраняемыми данными, а также значение по умолчанию.</span></p>
 
-<pre class="brush: python notranslate">#best/models.py
+<pre class="brush: python">#best/models.py
 
 from django.db import models
 
@@ -117,7 +117,7 @@ class Team(models.Model):
  <br>
  <span title="">Второй фрагмент кода показывает функцию представления (обработчик ресурсов) для отображения всех наших команд U09.</span> <span title="">В этом случае мы указываем, что мы хотим фильтровать для всех записей, где поле</span></span> <code>team_level</code> <span class="tlid-translation translation" lang="ru"><span title="">имеет в точности текст «U09» (обратите внимание ниже, как этот критерий передаётся функции</span></span> <code>filter()</code> <span class="tlid-translation translation" lang="ru"><span title="">в качестве аргумента с именем поля и типом соответствия, отделённым двойным</span> <span title="">подчёркиванием: <strong>team_level__exact</strong>).</span></span></p>
 
-<pre class="brush: python notranslate">#best/views.py
+<pre class="brush: python">#best/views.py
 
 from django.shortcuts import render
 from .models import Team
@@ -145,7 +145,7 @@ def youngest(request):
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Фрагмент кода ниже показывает, как это работает.</span> <span title="">Продолжая пример «самой молодой команды» из предыдущего раздела, HTML-шаблон передаёт представлению переменную списка</span></span> <code>youngest_teams</code><span class="tlid-translation translation" lang="ru"><span title="">.</span> <span title="">Внутри скелета HTML у нас есть выражение, которое сначала проверяет, существует ли переменная <code>youngest_teams</code>, а затем повторяет её в цикле <code>for</code>.</span> <span title="">На каждой итерации шаблон отображает значение <code>team_name</code> команды в элементе списка.</span></span></p>
 
-<pre class="brush: html notranslate">#best/templates/best/index.html
+<pre class="brush: html">#best/templates/best/index.html
 
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -298,9 +298,9 @@ def youngest(request):
 
 <ul>
  <li><a href="/ru/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>
 </ul>
 
 <div id="gtx-anchor" style="position: absolute; left: 170px; top: 2836px; width: 297px; height: 17px;"></div>

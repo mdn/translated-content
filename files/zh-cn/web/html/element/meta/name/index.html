@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/meta/name
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">The {{htmlelement("meta")}} 元素可用于提供 名称-值 对形式的文档元数据，{{htmlattrxref("name", "meta")}} 属性为元数据条目提供名称，而 {{htmlattrxref("content", "meta")}} 属性提供值。</span></p>
+<p>The {{htmlelement("meta")}} 元素可用于提供 名称 - 值 对形式的文档元数据，{{htmlattrxref("name", "meta")}} 属性为元数据条目提供名称，而 {{htmlattrxref("content", "meta")}} 属性提供值。</p>
 
 <h3 id="HTML_规范中定义的标准元数据名称">HTML 规范中定义的标准元数据名称</h3>
 
@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/meta/name
     </tr>
     <tr>
      <td><code>no-referrer-when-downgrade</code></td>
-     <td>如果请求目标与当前页面一样安全或者更加安全（HTTP(S)→HTTPS），则发送完整 URL；如果请求目标更加不安全（HTTPS→HTTP），则不发送  referrer。这是默认行为。</td>
+     <td>如果请求目标与当前页面一样安全或者更加安全（HTTP(S)→HTTPS），则发送完整 URL；如果请求目标更加不安全（HTTPS→HTTP），则不发送  referrer。这是默认行为。</td>
     </tr>
     <tr>
      <td><code>origin-when-cross-origin</code></td>
@@ -58,11 +58,11 @@ translation_of: Web/HTML/Element/meta/name
     </tr>
     <tr>
      <td><code>strict-origin</code></td>
-     <td>如果请求目标与当前页面一样安全或者更加安全（HTTP(S)→HTTPS），则发送 origin；如果请求目标更加不安全（HTTPS→HTTP），则不发送  referrer。</td>
+     <td>如果请求目标与当前页面一样安全或者更加安全（HTTP(S)→HTTPS），则发送 origin；如果请求目标更加不安全（HTTPS→HTTP），则不发送  referrer。</td>
     </tr>
     <tr>
      <td><code>strict-origin-when-cross-origin</code></td>
-     <td>对同源请求发送完整 URL（不含 URL 参数）；其他情况下，如果请求目标与当前页面一样安全或者更加安全（HTTP(S)→HTTPS），则发送 origin；如果请求目标更加不安全（HTTPS→HTTP），则不发送  referrer。</td>
+     <td>对同源请求发送完整 URL（不含 URL 参数）；其他情况下，如果请求目标与当前页面一样安全或者更加安全（HTTP(S)→HTTPS），则发送 origin；如果请求目标更加不安全（HTTPS→HTTP），则不发送  referrer。</td>
     </tr>
     <tr>
      <td><code>unsafe-URL</code></td>
@@ -154,7 +154,7 @@ translation_of: Web/HTML/Element/meta/name
     <tr>
      <td><code>user-scalable</code></td>
      <td><code>yes</code> 或者 <code>no</code></td>
-     <td>默认为 <code>yes</code>，如果设置为 <code>no</code>，用户将无法缩放当前页面。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。</td>
+     <td>默认为 <code>yes</code>，如果设置为 <code>no</code>，用户将无法缩放当前页面。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。</td>
     </tr>
     <tr>
      <td><code>viewport-fit</code></td>
@@ -175,7 +175,7 @@ translation_of: Web/HTML/Element/meta/name
   <ul>
    <li>虽然此元数据条目未被标准化，但是，由于此条目在事实上处于支配地位，大多数移动浏览器都遵守此条目的声明。</li>
    <li>不同设备和浏览器的默认值可能有不同。</li>
-   <li>若想了解 Firefox 移动版对此声明的支持和处理，请参考<a href="/zh-CN/docs/Mobile/Viewport_meta_tag" title="Mobile/Viewport meta tag">这篇文章</a>。</li>
+   <li>若想了解 Firefox 移动版对此声明的支持和处理，请参考<a href="/zh-CN/docs/Mobile/Viewport_meta_tag">这篇文章</a>。</li>
   </ul>
   </div>
 
@@ -196,13 +196,13 @@ translation_of: Web/HTML/Element/meta/name
 
 <h3 id="其他元数据名称">其他元数据名称</h3>
 
-<p>The <a class="external" href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a> contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:</p>
+<p>The <a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a> contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:</p>
 
 <ul>
  <li><code>creator</code>：当前文档的创建者，例如某个组织或者机构。如果有不止一个创建者，则应当使用多个名称为 <code>creator</code> 的 {{HTMLElement("meta")}} 元素。（而不是像关键词一样使用逗号分隔：关键词不应包含逗号，但创建者名称可能含有逗号。）</li>
  <li><code>googlebot</code>：<code>robots</code> 的替代名称，只被 Googlebot（Google 的网页爬虫/索引搜寻器）使用。</li>
  <li><code>publisher</code>：当前文档的发布者/出版者。</li>
- <li><code>robots</code>：爬虫、协作搜寻器，或者“机器人”，对此页面的处理行为，或者说，应当遵守的规则。是一个使用逗号分隔的、由下列值构成的列表：
+ <li><code>robots</code>：爬虫、协作搜寻器，或者 “机器人”，对此页面的处理行为，或者说，应当遵守的规则。是一个使用逗号分隔的、由下列值构成的列表：
   <table class="standard-table">
    <caption><code>&lt;meta name="robots"&gt;</code> 的 <code>content</code> 属性的值</caption>
    <thead>
@@ -236,32 +236,32 @@ translation_of: Web/HTML/Element/meta/name
     <tr>
      <td><code>all</code></td>
      <td>与 <code>index, follow</code> 等价</td>
-     <td><a class="external" href="https://support.google.com/webmasters/answer/79812">Google</a></td>
+     <td><a href="https://support.google.com/webmasters/answer/79812">Google</a></td>
     </tr>
     <tr>
      <td><code>none</code></td>
      <td>与 <code>noindex, nofollow</code> 等价</td>
-     <td><a class="external" href="https://support.google.com/webmasters/answer/79812">Google</a></td>
+     <td><a href="https://support.google.com/webmasters/answer/79812">Google</a></td>
     </tr>
     <tr>
      <td><code>noarchive</code></td>
      <td>要求搜索引擎不缓存页面内容。</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>、<a class="external" href="https://help.yahoo.com/kb/search-for-desktop/SLN2213.html">Yahoo</a>、<a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>、<a href="https://help.yahoo.com/kb/search-for-desktop/SLN2213.html">Yahoo</a>、<a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
     <tr>
      <td><code>nosnippet</code></td>
      <td>Prevents displaying any description of the page in search engine results.</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>、<a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a>、<a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
     <tr>
      <td><code>noimageindex</code></td>
      <td>Requests this page not to appear as the referring page of an indexed image.</td>
-     <td><a class="external" href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a></td>
+     <td><a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag#valid-indexing--serving-directives">Google</a></td>
     </tr>
     <tr>
      <td><code>nocache</code></td>
      <td><code>noarchive</code> 的替代名称。</td>
-     <td><a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
+     <td><a href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
     </tr>
    </tbody>
   </table>
@@ -281,28 +281,8 @@ translation_of: Web/HTML/Element/meta/name
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#standard-metadata-names', 'standard metadata names')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Color Adjust', '#color-scheme-meta', 'the "color-scheme" metadata name')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Device', '#viewport-meta', 'the "viewport" metadata name')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-meta', 'the "referrer" metadata name')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("html.elements.meta.name")}}</p>
+<p>{{Compat}}</p>

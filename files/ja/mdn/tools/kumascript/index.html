@@ -2,6 +2,7 @@
 title: KumaScript
 slug: MDN/Tools/KumaScript
 tags:
+  - Guide
   - Kuma
   - KumaScript
   - MDN Meta
@@ -13,83 +14,83 @@ translation_of: MDN/Tools/KumaScript
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">MDN を構築している <a href="/ja/docs/MDN/Kuma">Kuma</a> プラットフォームにおいて、 wiki 上のコンテンツを自動化するテンプレートシステムは <a class="link-https" href="https://github.com/mdn/kumascript">KumaScript</a> と呼ばれています。 KumaScript はサーバー側 JavaScript で実行されており、 <a class="external" href="https://nodejs.org/en/">Node.js</a> を使用して実装されています。</span>この記事は、 KumaScript の使い方について基本的な情報を提供するものです。</p>
+<p><span class="seoSummary">MDN を動かしている <a href="/ja/docs/MDN/Yari">Yari</a> プラットフォームでは、コンテンツの特定の側面を自動化するために、 <a href="https://github.com/mdn/yari/tree/master/kumascript">KumaScript</a> と呼ばれる古くからのテンプレート/マクロシステムがまだ利用可能です。</span>このシステムの使用をいつか中止したいと考えていますが、それまでは MDN はこのシステムに依存しています。この記事では、 KumaScript の使用に関する基本的な情報を提供します。</p>
 
-<p>詳細な概要や KumaScript の Q&amp;A については、 MDN 開発チームの <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=">KumaScript Fireside Chat</a> を見ていてください (ミーティングはビデオで10分で開始します)。 KumaScript は、以前の MDN で使われていたプラットフォームであり、 MindTouch のためのテンプレート言語であった DekiScript を置き換えました。</p>
-
-<h3 id="What_is_KumaScript" name="What_is_KumaScript">KumaScript とは</h3>
+<h3 id="What_is_KumaScript">KumaScript とは</h3>
 
 <ul>
  <li>文書間で繰り返し現れるコンテンツの再利用やローカライズを行う手段 (互換性のラベル、セクションナビゲーション、警告バナーなど)。</li>
  <li>他の文書からコンテンツを引用して文書を構築する手段。</li>
- <li>他のウェブサイトやサービス (Bugzilla など) からコンテンツを取得して含める手段</li>
+ <li>他のウェブサイトやサービス (Bugzilla など) からコンテンツを取得して含める手段。</li>
 </ul>
 
-<h3 id="What_KumaScript_is_not" name="What_KumaScript_is_not">KumaScript にはないもの</h3>
+<h3 id="What_KumaScript_is_not">KumaScript が持たないもの</h3>
+
+<p>KumaScript は次のことは行いません。</p>
 
 <ul>
- <li>KumaScript は、フォーム送信を受け付けるような対話型スクリプトには対応していません。</li>
- <li>KumaScript には、データベースやファイルにアクセスしたり、情報を永続的に格納したりする仕組みはありません。</li>
- <li>KumaScript は、ログイン中のユーザー情報に基づくサイトのパーソナライズには対応していません。</li>
- <li>KumaScript は、ユーザー情報にアクセスすることはできず、コンテンツとページのメタデータにのみアクセス可能です。</li>
+ <li>フォーム送信を受け付けるような対話型スクリプトには対応していません。</li>
+ <li>データベースやファイルにアクセスしたり、情報を永続的に格納したりする仕組みはありません。</li>
+ <li>ログイン中のユーザー情報に基づくサイトのパーソナライズには対応していません。</li>
+ <li>ユーザー情報にアクセスすることはできず、コンテンツとページのメタデータにのみアクセス可能です。</li>
 </ul>
 
-<h2 id="Basics" name="Basics">基本</h2>
+<h2 id="Basics">基本</h2>
 
 <p>KumaScript は MDN で<a href="https://github.com/mde/ejs">埋め込み JavaScript テンプレート</a>に利用されています。これらのテンプレートは MDN の筆者ならば誰でも文書内で、マクロを使用して呼び出すことができます。</p>
 
-<p>KumaScript のスクリプトは<em>テンプレート</em>であり、それぞれのテンプレートは Github の <a href="https://github.com/mdn/kumascript/tree/master/macros">KumaScript リポジトリの macros ディレクトリ</a>に格納されているファイルです。テンプレートは以下のようなものです。</p>
+<p>KumaScript のスクリプトは<em>テンプレート</em>であり、それぞれのテンプレートは Github のKumaScript リポジトリーの <a href="https://github.com/mdn/yari/tree/master/kumascript/macros">macros ディレクトリー</a>に格納されているファイルです。テンプレートは以下のようなものです。</p>
 
-<pre class="brush: js no-line-numbers notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
+<pre class="brush: js no-line-numbers">&lt;% for (let i = 0; i &lt; $0; i++) { %&gt;
   Hello #&lt;%= i %&gt;
 &lt;% } %&gt;</pre>
 
-<p>テンプレートは wiki コンテンツのどこからでも<em>マクロ</em>で呼び出すことができます。マクロは次のようなものです。</p>
+<p>テンプレートの呼び出しには<em>マクロ</em>を使用します。上記のテンプレートを呼び出すと、次のようになります (macros ディレクトリに <code>hello.ejs</code> というファイル名で保存されている場合)。</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{hello(3)}}</pre>
+<pre class="brush: none no-line-numbers">\{{hello(3)}}</pre>
 
 <p>マクロの出力は以下のようなものです。</p>
 
-<pre class="brush: html no-line-numbers notranslate">Hello #0
+<pre class="brush: html no-line-numbers">Hello #0
 Hello #1
 Hello #2</pre>
 
-<h3 id="Macro_syntax" name="Macro_syntax">マクロの構文</h3>
+<h3 id="Macro_syntax">マクロの構文</h3>
 
-<p>KumaScript のテンプレートは、以下のようにドキュメントのコンテンツの中でマクロとして呼び出すことができます。</p>
+<p>マクロの呼び出しは、次のような一般的な形を取ります。</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{templateName("arg0", "arg1", ..., "argN")}}</pre>
+<pre class="brush: none no-line-numbers">\{{templateName("arg0", "arg1", ..., "argN")}}</pre>
 
 <p>マクロの構文は、以下の規則に基づいて構成されます。</p>
 
 <ul>
- <li>マクロのコードは <code>\{{</code> より始まり、 <code>\}}</code> で終わります。</li>
- <li>マクロの最初の部分はテンプレートの名前です。この名前の小文字の値は、 <a href="https://github.com/mdn/kumascript/tree/master/macros">KumaScript の macros ディレクトリ</a>以下のファイル名の小文字の値に一致します。</li>
- <li>テンプレートは引数を受け付けます。括弧内にコンマ区切りで複数の引数を記述する事ができます。</li>
+ <li>マクロの先頭と末尾は <code>\{{</code> と <code>\}}</code> の文字です。</li>
+ <li>このマクロの最初の部分は、テンプレートの名前です。この名前の小文字の値は、 macros ディレクトリの下にあるファイル名のいずれかの小文字の値と一致する必要があります。</li>
+ <li>テンプレートは引数を受け付けます。括弧内にカンマ区切りで複数の引数を記述することができます。</li>
  <li>数値以外の引数は引用符で囲む必要があります。数値は囲む必要はありません。</li>
 </ul>
 
-<h4 id="Using_JSON_as_a_macro_parameter" name="Using_JSON_as_a_macro_parameter">マクロの引数に JSON を用いる</h4>
+<h4 id="Using_JSON_as_a_macro_parameter">マクロの引数に JSON を用いる</h4>
 
 <p>半実験的な機能 (動作保証なし) として、以下のように引数が一つだけの場合は、引数に JSON オブジェクトを指定できます。</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{templateName(<code class="language-json">{ "Alpha": "one", "Beta": ["a", "b", "c"], "Foo": "https:\/\/mozilla.org\/" }</code>)}}</pre>
+<pre class="brush: none no-line-numbers">\{{templateName({ &quot;Alpha&quot;: &quot;one&quot;, &quot;Beta&quot;: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;], &quot;Foo&quot;: &quot;https:\/\/mozilla.org\/&quot; })}}</pre>
 
 <p>このマクロからのデータは、テンプレートコード内で <code class="language-javascript">$0</code> 引数のオブジェクトとして利用できます (例えば、 <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>)。これにより、引数の単純なリストで実現することが難しい又は不可能な複雑なデータ構造を、マクロ引数で表すことができます。</p>
 
-<p>なお、この引数の形はとても繊細です。 — 正確に <a href="http://json.org/" title="http://json.org/">JSON の構文</a>に従っていなければならず、間違いを犯しやすいエスケープ文字の要件が求められます (例えば、すべてのスラッシュをエスケープするなど)。疑わしい場合は、 <a href="http://jsonlint.com/" title="http://jsonlint.com/">JSON をバリデーターに掛けてみてください</a>。</p>
+<p>なお、この引数の形はとても繊細です。 — 正確に <a href="http://json.org/">JSON の構文</a>に従っていなければならず、間違いを犯しやすいエスケープ文字の要件が求められます (例えば、すべてのスラッシュをエスケープするなど)。疑わしい場合は、 <a href="http://jsonlint.com/">JSON をバリデーターに掛けてみてください</a>。</p>
 
-<h4 id="How_to_write_in_text" name="How_to_write_in_text">「\{{」を記述する方法</h4>
+<h4 id="How_to_write_in_text">"\{{"を記述する方法</h4>
 
 <p>"<code>\{{</code>" という文字の並びはマクロの開始を示すため、実際にページ内で "<code>\{{</code>" および "<code>}}</code>" を使用したい場合は問題になります。おそらく <code>DocumentParsingError</code> メッセージが発生するでしょう。</p>
 
 <p>この場合、 <code>\\{</code> のように最初の中括弧をバックスラッシュでエスケープすることができます。</p>
 
-<h3 id="Template_Syntax" name="Template_Syntax">テンプレートの構文</h3>
+<h3 id="Template_Syntax">テンプレートの構文</h3>
 
-<p>それぞれの KumaScript テンプレートは、 <a href="https://github.com/mdn/kumascript/tree/master/macros">KumaScript の macros ディレクトリ</a>に格納されているファイルです。これらのファイルは GitHub 上の何らかのオープンソースプロジェクトのファイルとして作成したり編集したりします (詳しくは <a href="https://github.com/mdn/kumascript">the KumaScript README</a> をご覧ください)。</p>
+<p>それぞれの KumaScript テンプレートは、 <a href="https://github.com/mdn/yari/tree/master/kumascript/macros">KumaScript の macros ディレクトリ</a>に格納されているファイルです。これらのファイルは GitHub 上の何らかのオープンソースプロジェクトのファイルとして作成したり編集したりします。</p>
 
-<p>KumaScript テンプレートは、いくつかの簡単な規則で、<a href="https://ejs.co">組込み JavaScript テンプレートエンジン</a>によって処理されます。</p>
+<p>KumaScript テンプレートは、いくつかの簡単な規則で、<a href="https://ejs.co">組み込み JavaScript テンプレートエンジン</a>によって処理されます。</p>
 
 <ul>
  <li>テンプレート内では、マクロから渡された引数は <code>$0</code>, <code>$1</code>, <code>$2</code>, などのような変数として利用できます。引数のリスト全体は、テンプレート内で変数 <code>arguments</code> として利用できます。</li>
@@ -103,53 +104,49 @@ Hello #2</pre>
  </li>
  <li><code class="language-ejs">&lt;%</code> と <code>%&gt;</code> の間は JavaScript として解釈される。すなわち、ループ、条件文、関数などを含めることが可能。</li>
  <li><code class="language-ejs">&lt;% %&gt;</code> ブロック内は出力ストリームに含まれない。ブロック内の変数などをブロック外で使用する場合は、以下のように <code>&lt;%= %&gt;</code> を用いる。
-  <pre class="brush: js notranslate">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
+  <pre class="brush: js">&lt;% for (var i = 0; i &lt; $0; i++) { %&gt;
   Hello #&lt;%= i %&gt;
 &lt;% } %&gt;</pre>
 
-  <p>Note how the JavaScript code is contained in <code class="language-ejs">&lt;% ... %&gt;</code>, and output happens in the space between <code class="language-ejs">%&gt; ... &lt;%</code>. The <code>for</code> loop in JS can begin with one <code class="language-ejs">&lt;% %&gt;</code> block, transition to output mode, and finish up in a second <code class="language-ejs">&lt;% %&gt;</code> JS block.</p>
+  <p>JavaScriptのコードは <code class="language-ejs">&lt;% ... %&gt;</code> に含まれており、 <code class="language-ejs">%&gt; ... &lt;%</code> の間に現れるものは出力されることに注意してください。 JS の <code>for</code> ループは、1つ目の <code class="language-ejs">&lt;% %&gt;</code> ブロックで始まり、出力モードに移行して、2つ目の <code class="language-ejs">&lt;% %&gt;</code> の JS ブロックで終わらせることができます。</p>
  </li>
  <li>EJS の構文の詳細については、<a href="https://ejs.co">上流モジュールのドキュメント</a>でご確認ください。</li>
 </ul>
 
-<h3 id="Tips">Tips</h3>
+<h2 id="Advanced_Features">高度な機能</h2>
 
-<p>マクロのリストと、マクロが MDN でどの様に使用されているか<a href="/ja/dashboards/macros">マクロダッシュボード</a>で確認することができます。</p>
+<p>KumaScript には前章までに紹介したもの以外に、高度な機能もあります。</p>
 
-<h2 id="Advanced_Features" name="Advanced_Features">より高度な機能</h2>
+<h3 id="Environment_variables">環境変数</h3>
 
-<p>KumaScript には前章までに紹介したもの以外に、より高度な機能もあります。</p>
-
-<h3 id="Environment_variables" name="Environment_variables">環境変数</h3>
-
-<p>When the wiki makes a call to the KumaScript service, it passes along some context on the current document that KumaScript makes available to templates as variables:</p>
+<p>Wiki が KumaScript サービスを呼び出す際には、KumaScript がテンプレートに変数として利用できるようにする、現在の文書に関するいくつかのコンテキストを渡します。</p>
 
 <dl>
  <dt><code>env.path</code></dt>
- <dd>現在の wiki 文書へのパス</dd>
+ <dd>現在の MDN 文書へのパス</dd>
  <dt><code>env.url</code></dt>
- <dd>現在の wiki 文書への 絶対 URL</dd>
+ <dd>現在の MDN 文書への絶対 URL</dd>
  <dt><code>env.id</code></dt>
- <dd>現在の wiki 文書のユニーク ID</dd>
+ <dd>現在の MDN 文書のユニーク ID</dd>
  <dt><code>env.files</code></dt>
- <dd>An array of the files attached to the current wiki document; each object in the array is as described under {{ anch("File objects") }} below</dd>
+ <dd>現在の MDN 文書に添付されているファイルの配列で、配列内の各オブジェクトは、下記の <a href="#file_objects">File オブジェクト</a>で説明されています。</dd>
  <dt><code>env.review_tags</code></dt>
  <dd>記事のレビュータグ配列 ("technical"、 "editorial"など。)</dd>
  <dt><code>env.locale</code></dt>
- <dd>現在の wiki 文書のロケール</dd>
+ <dd>現在の MDN 文書のロケール</dd>
  <dt><code>env.title</code></dt>
- <dd>現在の wiki 文書のタイトル</dd>
+ <dd>現在の MDN 文書のタイトル</dd>
  <dt><code>env.slug</code></dt>
- <dd>現在の wiki 文書の URL スラッグ</dd>
+ <dd>現在の MDN 文書の URL スラッグ</dd>
  <dt><code>env.tags</code></dt>
- <dd>現在の wiki 文書に付与されたタグの名称のリスト</dd>
+ <dd>現在の MDN 文書に付与されたタグの名称のリスト</dd>
  <dt><code>env.modified</code></dt>
- <dd>現在の wiki 文書の最終更新日を示すタイムスタンプ</dd>
+ <dd>現在の MDN 文書の最終更新日を示すタイムスタンプ</dd>
  <dt><code>env.cache_control</code></dt>
- <dd><code>Cache-Control</code> header sent in the request for the current wiki document, useful in deciding whether to invalidate caches</dd>
+ <dd><code>Cache-Control</code> ヘッダーで、現在の MDN 文書がリクエストされた際に送信されたものであり、キャッシュを無効にするかどうかの判断をするのに便利です</dd>
 </dl>
 
-<h4 id="File_objects" name="File_objects">File オブジェクト</h4>
+<h4 id="File_objects">File オブジェクト</h4>
 
 <p>個々の file オブジェクトは以下の様なフィールドを持ちます。</p>
 
@@ -170,69 +167,69 @@ Hello #2</pre>
  <dd>添付ファイルの URL</dd>
 </dl>
 
-<h4 id="Working_with_tag_lists" name="Working_with_tag_lists">タグリストでの作業</h4>
+<h4 id="Working_with_tag_lists">タグリストでの作業</h4>
 
-<p>The <code>env.tags</code> and <code>env.review_tags</code> variables return arrays of tags. You can work with these in many ways, of course, but here are a couple of suggestions.</p>
+<p>変数 <code>env.tags</code> および <code>env.review_tags</code> がタグの配列を返します。これらを使って作業するには、もちろんたくさんの方法がありますが、ここではいくつかを提案します。</p>
 
-<h5 id="Looking_to_see_if_a_specific_tag_is_set">Looking to see if a specific tag is set</h5>
+<h5 id="Looking_to_see_if_a_specific_tag_is_set">特定のタグが設定されているかどうかの確認</h5>
 
-<p>You can look to see if a specific tag exists on a page like this:</p>
+<p>ページに特定のタグが存在するかどうかを調べるには、このようにします。</p>
 
-<pre class="brush: js notranslate">if (env.tags.indexOf("tag") != −1) {
+<pre class="brush: js">if (env.tags.indexOf("tag") !== −1) {
   // The page has the tag "tag"
 }
 </pre>
 
-<h5 id="Iterating_over_all_the_tags_on_a_page">Iterating over all the tags on a page</h5>
+<h5 id="Iterating_over_all_the_tags_on_a_page">ページのすべてのタグを反復処理</h5>
 
-<p>You can also iterate over all the tags on a page, like this:</p>
+<p>次のようにして、ページのすべてのタグを反復処理するようにすることもできます。</p>
 
-<pre class="brush: js notranslate">env.tag.forEach(function(tag) {
+<pre class="brush: js">env.tag.forEach(function(tag) {
   // do whatever you need to do, such as:
-  if (tag.indexOf("a") == 0) {
+  if (tag.indexOf("a") === 0) {
     // this tag starts with "a" - woohoo!
   }
 });</pre>
 
-<h3 id="APIs_and_Modules" name="APIs_and_Modules">API とモジュール</h3>
+<h3 id="APIs_and_Modules">API とモジュール</h3>
 
-<p>KumaScript offers some built-in methods and APIs for KumaScript macros. Macros can also use <code>module.exports</code> to export new API methods.</p>
+<p>KumaScript は、 KumaScript マクロ用にいくつかの組み込みメソッドと API を提供します。マクロは、 <code>module.exports</code> を使用して新しい API メソッドをエクスポートすることもできます。</p>
 
-<p>KumaScript では、ビルトインのユーティリティ API だけでなく、wiki 文書として編集可能なモジュール内で新規の API を定義する機能も提供されています。</p>
+<h4 id="Built-in_methods">組み込みメソッド</h4>
 
-<h4 id="Built-in_methods" name="Built-in_methods">ビルトインメソッド</h4>
-
-<p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L175" title="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L208">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
+<p>この文書は手動で管理されているので、コードとともに古くなってしまう可能性があります。この点を考慮して、<a class="link-https" href="https://github.com/mdn/yari/tree/master/kumascript/src/api">KumaScript のソースにある組み込み API の最新状態を常にチェックしましょう</a>。しかし、ここではテンプレートに公開されている便利なメソッドの一部を紹介します。</p>
 
 <dl>
  <dt><code class="language-javascript">md5(string)</code></dt>
- <dd>与えられた文字列の MD5 16 進ダイジェストを返す</dd>
+ <dd>与えられた文字列の MD5 ダイジェストを16 進で返します。</dd>
  <dt><code class="language-javascript">template("name", ["arg0", "arg1", ..., "argN"])</code></dt>
  <dd>
- <p>Executes and returns the result of the named template with the given list of parameters.</p>
+ <p>指定されたテンプレートを、指定された引数のリストを使って実行し、その結果を返します。</p>
 
- <p>Example: <code class="language-javascript">&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</p>
+ <p>例: <code class="language-javascript">&lt;%- template("warning", ["foo", "bar", "baz"]) %&gt;</code>.</p>
 
- <p>Example using the <code>DOMxRef</code> macro: <code class="language-javascript">&lt;%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %&gt;</code>.</p>
+ <p><code>DOMxRef</code> マクロを使用した例: <code class="language-javascript">&lt;%- template("DOMxRef", ["Event.bubbles", "bubbles"]) %&gt;</code>.</p>
 
- <p>This is a JavaScript function. So, if one of the parameters is an arg variable like $2, do not put it in quotes. Like this: <code class="language-javascript">&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code>. If you need to call another template from within a block of code, do not use <code>&lt;%</code> ... <code>%&gt;</code>. Example: <code class="language-javascript">myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code></p>
+ <p>これは JavaScript の関数です。ですから、引数が $2 のような引数の変数である場合は、引用符で囲まないでください。 <code class="language-javascript">&lt;%- template("warning", [$1, $2, "baz"]) %&gt;</code> のようにします。コードのブロック内から他のテンプレートを呼び出す必要がある場合は、 <code>&lt;%</code> ... <code>%&gt;</code> を使用しないでください。例えば <code class="language-javascript">myvar = "&lt;li&gt;" + template("LXRSearch", ["ident", "i", $1]) + "&lt;/li&gt;";</code> のようにします。</p>
  </dd>
  <dt><code class="language-javascript">require(name)</code></dt>
- <dd>Loads another template as a module; any output is ignored. Anything assigned to <code class="language-javascript">module.exports</code> in the template is returned.</dd>
- <dd>Used in templates like so: <code class="language-javascript">&lt;% const my_module = require('MyModule'); %&gt;</code>.</dd>
+ <dd>別なテンプレートをモジュールとして読み込みます。すべての出力は無視されます。テンプレート内で <code class="language-javascript">module.exports</code> に代入されたものをすべて返します。</dd>
+ <dd>テンプレート内で、 <code class="language-javascript">&lt;% const my_module = require('MyModule'); %&gt;</code> のように使用されます。</dd>
  <dt><code class="language-javascript">cacheFn(key, timeout, function_to_cache)</code></dt>
- <dd>Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of <code>env.cache_control</code> to invalidate cache on <code>no-cache</code>, which can be sent by a logged-in user hitting shift-refresh.</dd>
+ <dd>指定されたキーとキャッシュ生存時間を使用して、指定された関数の結果をキャッシュします。 <code>env.cache_control</code> の値を尊重し、ログイン中のユーザーが Shift を押しながら更新を押すことで送信される <code>no-cache</code> でキャッシュを無効化します。</dd>
  <dt><code class="language-javascript">request</code></dt>
- <dd>Access to <a class="link-https" href="https://github.com/mikeal/request" title="https://github.com/mikeal/request"><code>mikeal/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
+
+ <dd>HTTP リクエストを作成するためのライブラリーである <a class="link-https" href="https://github.com/request/request"><code>request/request</code></a> にアクセスします。 KumaScript テンプレート内でこのモジュールを使用するにはあまり使い勝手が良くないので、簡単にするためにモジュール API の中でラップすると良いでしょう。</dd>
+
  <dt><code class="language-javascript">log.debug(string)</code></dt>
- <dd>Outputs a debug message into the script log on the page (i.e. the big red box that usually displays errors).</dd>
+ <dd>ページ上のスクリプトログにデバッグメッセージを出力します (通常はエラーを表示する大きな赤いボックスです)。</dd>
 </dl>
 
-<h4 id="Built-in_API_modules" name="Built-in_API_modules">組込み API モジュール</h4>
+<h4 id="Built-in_API_modules">組込み API モジュール</h4>
 
-<p>There are a set of built in API that are automatically loaded and made available to every template by the environment script.</p>
+<p>環境スクリプトによって自動的に読み込まれ、すべてのテンプレートで利用可能になる一連の組み込み API があます。 MDN が何年も前に依存していた古い DekiScript システムからいくつかの機能を提供しています。</p>
 
-<p>For the most part, these attempt to provide stand-ins for legacy DekiScript features to ease template migration. But, going forward, these can be used to share common variables and methods between templates:</p>
+<p>これらは、テンプレート間で共通の変数やメソッドを共有するために使用されます。</p>
 
 <ul>
  <li><code>kuma.*</code> - <a href="https://github.com/mdn/kumascript/blob/master/src/api/kuma.js">Kuma</a></li>
@@ -244,24 +241,24 @@ Hello #2</pre>
  <li><code>wiki.*</code> - <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/src/api/wiki.js">DekiScript:Wiki</a></li>
 </ul>
 
-<p>You can see the most up to date list of methods under <code>kuma</code> from <a href="https://github.com/mdn/kumascript/blob/master/src/api/kuma.js">the KumaScript source code</a>, but here are a few:</p>
+<p>他に利用可能な API には以下のようなものがあります。</p>
 
 <dl>
  <dt><code class="language-javascript">kuma.inspect(object)</code></dt>
- <dd>Renders any JS object as a string, handy for use with <code>log.debug()</code>. See also: <a href="https://nodejs.org/api/util.html#util_util_inspect_object_options">node.js <code class="language-javascript">util.inspect()</code></a>.</dd>
+ <dd>任意の JS オブジェクトを文字列として出力します。 <code>log.debug()</code> と共に良く使用します。 <a href="https://nodejs.org/api/util.html#util_util_inspect_object_options">node.js の <code class="language-javascript">util.inspect()</code></a> も参照してください。</dd>
  <dt><code class="language-javascript">kuma.htmlEscape(string)</code></dt>
- <dd>Escapes the characters <code>&amp;, &lt;, &gt;, "</code> to <code>&amp;amp, &amp;lt;, &amp;gt;, &amp;quot;</code>, respectively.</dd>
+ <dd><code>&amp;, &lt;, &gt;, "</code> の文字を <code>&amp;amp, &amp;lt;, &amp;gt;, &amp;quot;</code> にそれぞれエスケープします。</dd>
  <dt><code class="language-javascript">kuma.url</code></dt>
- <dd>See also: <a href="http://nodejs.org/api/url.html">node.js <code>url</code> module</a>.</dd>
+ <dd><a href="https://nodejs.org/api/url.html">node.js の <code>url</code> モジュール</a>も参照してください。</dd>
  <dt><code class="language-javascript">kuma.fetchFeed(url)</code></dt>
- <dd>Fetch an RSS feed and parse it into a JS object. See also: <a href="https://github.com/mdn/kumascript/blob/master/macros/InsertFeedLinkList.ejs"><code>InsertFeedLinkList</code></a></dd>
+ <dd>RSS フィードを読み取り JS オブジェクトに解釈します。 <a href="https://github.com/mdn/kumascript/blob/master/macros/InsertFeedLinkList.ejs"><code>InsertFeedLinkList</code></a> も参照してください。</dd>
 </dl>
 
-<h4 id="Creating_modules" name="Creating_modules">モジュールの作成</h4>
+<h4 id="Creating_modules">モジュールの作成</h4>
 
-<p>Using the built-in <code>require()</code> method, you can load a template as a module to share common variables and methods between templates. A module can be defined in a template like this:</p>
+<p>組み込みの <code>require()</code> メソッドを使って、テンプレートをモジュールとして読み込み、テンプレート間で共通の変数やメソッドを共有することができます。モジュールはテンプレートの中で次のように定義できます。</p>
 
-<pre class="brush: js notranslate">&lt;%
+<pre class="brush: js">&lt;%
 module.exports = {
     add: function (a, b) {
         return a + b;
@@ -269,140 +266,115 @@ module.exports = {
 }
 %&gt;</pre>
 
-<p>Assuming this template is saved under <a href="https://github.com/mdn/kumascript/tree/master/macros">https://github.com/mdn/kumascript/tree/master/macros</a> as <code>MathLib.ejs</code>, you can use it in another template like so:</p>
+<p>このテンプレートが macros ディレクトリーに <code>MathLib.ejs</code> として保存されていたとすると、次のように別のテンプレートで使用することができます。</p>
 
-<pre class="brush: js notranslate">&lt;%
+<pre class="brush: js">&lt;%
 var math_lib = require("MathLib");
 %&gt;
 The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 
 <p>このテンプレートの出力は以下の様になるでしょう。</p>
 
-<pre class="brush: html no-line-numbers notranslate">The result of 2 + 2 = 4</pre>
+<pre class="brush: html no-line-numbers">The result of 2 + 2 = 4</pre>
 
-<h2 id="Tips_and_caveats">Tips and caveats</h2>
+<h2 id="Tips_and_caveats">ヒントと注意点</h2>
 
-<h3 id="Debugging" name="Debugging">デバッグ</h3>
+<h3 id="Debugging">デバッグ</h3>
 
-<p>A useful tip when debugging. You can use the <code>log.debug()</code> method to output text to the scripting messages area at the top of the page that's running your template. Note that you need to be really sure to remove these when you're done debugging, as they're visible to all users! To use it, just do something like this:</p>
+<p>デバッグ時に役立つヒントです。 <code>log.debug()</code> メソッドを使うと、テンプレートを実行しているページの上部にあるスクリプトメッセージ領域にテキストを出力することができます。ただし、これらのメッセージはすべてのユーザーが見ることができるため、デバッグが終わったら確実に削除する必要があります。これを使うには、次のようにしてください。</p>
 
-<pre class="brush: js no-line-numbers notranslate">&lt;%- log.debug("Some text goes here"); %&gt;</pre>
+<pre class="brush: js no-line-numbers">&lt;%- log.debug("テキストはこちら"); %&gt;</pre>
 
-<p>You can, of course, create more complex output using script code if it's helpful.</p>
+<p>もちろん、役立つのであれば、スクリプトコードを使ってより複雑な出力を作ることもできます。</p>
 
-<h3 id="Caching" name="Caching">キャッシュ</h3>
+<h3 id="Caching">キャッシュ</h3>
 
-<p>KumaScript templates are heavily cached to improve performance. For the most part, this works great to serve up content that doesn't change very often. But, as a logged-in user, you have two options to force a page to be regenerated, in case you notice issues with scripting:</p>
+<p>KumaScript テンプレートは、パフォーマンスを向上させるために深くキャッシュされます。ほとんどの場合、これは頻繁に変更されないコンテンツを提供するのに適しています。しかし、ログインしたユーザーがスクリプトの問題に気づいたときに、ページを強制的に再生成するための 2 つのオプションがあります。</p>
 
 <ul>
- <li>Hit Refresh in your browser. This causes KumaScript to invalidate its cache for the content on the current page by issuing a request with a <code>Cache-Control: max-age=0</code> header.</li>
- <li>Hit Shift-Refresh in your browser. This causes KumaScript to invalidate cache for the current page, as well as for any templates or content used by the current page by issuing a request with a <code>Cache-Control: no-cache</code> header.</li>
+ <li>ブラウザーで再読み込みしてください。これにより、 KumaScript は <code>Cache-Control: max-age=0</code> ヘッダーのリクエストを発行することで、現在のページのコンテンツのキャッシュを無効にします。</li>
+ <li>ブラウザーで Shift を押しながら再読み込みを実行してください。これにより <code>Cache-Control: no-cache</code> ヘッダー付きのリクエストを発行することで、 KumaScript は、現在のページ、および現在のページで使用されているテンプレートやコンテンツのキャッシュを無効にします。</li>
 </ul>
 
-<h3 id="Using_search_keywords_to_open_template_pages" name="Using_search_keywords_to_open_template_pages">検索キーワードを使用してテンプレートページを開く</h3>
 
-<p>When using templates, it's common to open the template's code in a browser window to review the comments at the top, which are used to document the template, its parameters, and how to use it properly. To quickly access templates, you can create a Firefox <a href="http://kb.mozillazine.org/Using_keyword_searches">search keyword</a>, which gives you a shortcut you can type in the URL box to get to a template more easily.</p>
 
-<p>To create a search keyword, open the bookmarks window by choosing "Show all bookmarks" in the Bookmarks menu, or by pressing <kbd>Control+Shift+B</kbd> (<kbd>Command+Shift+B</kbd> on Mac). Then from the utility ("Gear") menu in the Library window that appears, choose "New Bookmark...".</p>
+<h2 id="Cookbook">クックブック</h2>
 
-<p>This causes the bookmark editing dialog to appear. Fill that out as follows:</p>
+<p>このセクションでは、MDN で使用されるテンプレートの一般的なパターンの例をリストアップします。これには、古い DekiScript テンプレートと新しい KumaScript の同等品のサンプルがあります。</p>
 
-<dl>
- <dt>Name</dt>
- <dd>A suitable name for your search keyword; "Open MDN Template" is a good one.</dd>
- <dt>Location</dt>
- <dd><code>https://github.com/mdn/kumascript/blob/master/macros/%s</code></dd>
- <dt>Tags{{Optional_Inline}}</dt>
- <dd>A list of tags used to organize your bookmarks; these are entirely optional and what (if any) tags you use is up to you.</dd>
- <dt>Keyword</dt>
- <dd>The shortcut text you wish to use to access the template. Ideally, this should be something short and quick to type, such as simply "t" or "mdnt".</dd>
- <dt>Description{{Optional_Inline}}</dt>
- <dd>A suitable description explaining what the search keyword does.</dd>
-</dl>
+<h3 id="Force_templates_used_on_a_page_to_be_reloaded">ページ上で使用されているテンプレートを強制的に再読み込みさせる</h3>
 
-<p>The resulting dialog looks something like this:</p>
+<p>繰り返しになりますが、ページで使用されているテンプレートを編集後に強制的に再読み込みさせるには、Shift を押しながら再読み込みします。再読み込みを使用するだけで、ページのコンテンツが再生成されますが、キャッシュされたテンプレートやインクルードされたコンテンツが使用されます。ページ自体のコンテンツ以外のキャッシュを無効にするには、 Shift を押しながらの再読み込みが必要です。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14432/Screen%20Shot%202016-11-28%20at%203.08.39%20PM.png" style="height: 289px; width: 500px;"></p>
+<h3 id="Recovering_from_Unknown_Error">"Unknown Error" からの回復</h3>
 
-<p>Then click the "Add" button to save your new search keyword. From then on, typing your keyword, then a space, then the name of a macro will open that macro in your current tab. So if you used "t" as the keyword, typing <kbd>t ListSubpages</kbd> will show you the page at {{TemplateLink("ListSubpages")}}.</p>
+<p>時々、ページ読込時に、次のようなスクリプティングメッセージが表示されることがあります。</p>
 
-<h2 id="Cookbook" name="Cookbook">クックブック</h2>
+<pre class="brush: none no-line-numbers">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
 
-<p>This section will list examples of common patterns for templates used on MDN, including samples of legacy DekiScript templates and their new KumaScript equivalents.</p>
+<p>これはおそらく、 KumaScript サービスの一時的な障害です。ページを更新すると、このエラーは消えるかもしれません。それがうまくいかない場合は、Shift を押しながら再読み込みを試してみてください。何度か試してみてもエラーが消えない場合は、 Mozilla Developer Network に  <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;format=itrequest">IT バグを提出</a>して調査を依頼してください。</p>
 
-<h3 id="Force_templates_used_on_a_page_to_be_reloaded">Force templates used on a page to be reloaded</h3>
+<h3 id="Broken_wiki.languages_macros">Broken wiki.languages() マクロ</h3>
 
-<p>It bears repeating: To force templates used on a page to be reloaded after editing, hit Shift-Reload. Just using Reload by itself will cause the page contents to be regenerated, but using cached templates and included content. A Shift-Reload is necessary to invalidate caches beyond just the content of the page itself.</p>
+<p>いくつかのページで、以下の様なスクリプトエラーメッセージを見かける場合があるでしょう。</p>
 
-<h3 id="Recovering_from_.22Unknown_Error.22" name="Recovering_from_.22Unknown_Error.22">「不明なエラー」からの回復</h3>
-
-<p>ページ読込時に、時折、このようなスクリプティング・メッセージが表示される事があります。</p>
-
-<pre class="brush: none no-line-numbers notranslate">Kumascript service failed unexpectedly: &lt;class 'httplib.BadStatusLine'&gt;</pre>
-
-<p>これはおそらく、 KumaScript サービスの一時的な障害です。ページの再読込みでこの問題が解決する事があります。これで問題が解決しない場合はスーパーリロード（<kbd><kbd>shift</kbd> + <kbd>F5</kbd></kbd>）を試してみて下さい。これらの試みの後もエラーが解消されない場合は、<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org&amp;format=itrequest">file an IT bug</a> for Mozilla Developer Network to ask for an investigation.</p>
-
-<h3 id="Broken_wiki.languages_マクロ">Broken wiki.languages() マクロ</h3>
-
-<p>幾つかのページで、以下の様なスクリプトエラーメッセージを見かける場合があるでしょう。</p>
-
-<pre class="brush: none; no-line-numbers notranslate">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...</pre>
+<pre class="brush: none; no-line-numbers">Syntax error at line 436, column 461: Expected valid JSON object as the parameter of the preceding macro but...</pre>
 
 <p>その様なページを編集状態にした場合、ページ下部に以下の様なマクロが見つかるかもしれません。</p>
 
-<pre class="brush: none no-line-numbers notranslate">\{{ wiki.languages(<code class="language-json">{ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }</code>) }}</pre>
+<pre class="brush: none no-line-numbers">\{{ wiki.languages({ &quot;zh-tw&quot;: &quot;zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要&quot;, ... }) }}</pre>
 
-<p>To fix the problem, just delete the macro. Or, replace the curly braces on either side with HTML comments <code>&lt;!-- --&gt;</code> to preserve the information, like so:</p>
+<p>この問題を解決するには、マクロを削除してください。または、情報を温存するために次のように両側の中括弧を HTML コメント <code>&lt;!-- --&gt;</code> で置き換えてください。</p>
 
-<pre class="brush: html no-line-numbers notranslate">&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;</pre>
+<pre class="brush: html no-line-numbers">&lt;!-- wiki.languages({ "zh-tw": "zh_tw/Core_JavaScript_1.5_教學/JavaScript_概要", ... }) --&gt;</pre>
 
-<p>Because Kuma supports localization differently, these macros aren't actually needed any more. But, they've been left intact in case we need to revisit the relationships between localized pages. Unfortunately, it seems like migration has failed to convert some of them properly.</p>
+<p>Kuma は様々な方法でローカライズに対応しているため、これらのマクロは実際にはもう必要ありません。しかし、ローカライズされたページ間の関係を再検討する必要がある場合に備えて、これらのマクロはそのまま残されています。残念ながら、マイグレーションではいくつかのマクロを正しく変換できなかったようです。</p>
 
-<h3 id="Finding_the_Current_Pages_Language" name="Finding_the_Current_Page's_Language">ページの言語の取得</h3>
+<h3 id="Finding_the_Current_Pages_Language">ページの言語の取得</h3>
 
-<p>In KumaScript, the locale of the current document is exposed as an environment variable:</p>
+<p>KumaScript では、現在の文書のロケールは環境変数から取得することができます。</p>
 
-<pre class="brush: js no-line-numbers notranslate">const lang = env.locale;</pre>
+<pre class="brush: js no-line-numbers">const lang = env.locale;</pre>
 
-<p>The <code>env.locale</code> variable should be reliable and defined for every document.</p>
+<p>変数 <code>env.locale</code> は信頼すべきものであり、すべての文書で定義されています。</p>
 
-<h3 id="Reading_the_contents_of_a_page_attachment">Reading the contents of a page attachment</h3>
+<h3 id="Reading_the_contents_of_a_page_attachment">ページの添付ファイルの内容の読み取り</h3>
 
-<p>You can read the contents of an attached file by using the <code>mdn.getFileContent()</code> function, like this:</p>
+<p>以下のように <code>mdn.getFileContent()</code> 関数を用いることで、添付ファイルの内容を読み取ることができます。</p>
 
-<pre class="brush: js notranslate">&lt;%
+<pre class="brush: js">&lt;%
   let contents = mdn.getFileContent(fileUrl);
   // ... do stuff with the contents ...
 %&gt;
 </pre>
 
-<p>or</p>
+<p>または</p>
 
-<pre class="brush: js no-line-numbers notranslate">&lt;%- mdn.getFileContent(fileObject); %&gt;
+<pre class="brush: js no-line-numbers">&lt;%- mdn.getFileContent(fileObject); %&gt;
 </pre>
 
-<p>In other words, you may specify either the URL of the file to read or as a file object. The file objects for a page can be accessed through the array <code>env.files</code>. So, for example, to embed the contents of the first file attached to the article, you can do this:</p>
+<p>つまり、読み込むファイルのURLを指定する場合と、ファイルオブジェクトとして指定する場合があります。あるページのファイルオブジェクトは、配列 <code>env.files</code> を通じてアクセスできます。ですから、例えば、記事に添付された最初のファイルの内容を埋め込むには、次のようにします。</p>
 
-<pre class="brush: js no-line-numbers notranslate">&lt;%- mdn.getFileContent(env.files[0]); %&gt;
+<pre class="brush: js no-line-numbers">&lt;%- mdn.getFileContent(env.files[0]); %&gt;
 </pre>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> You probably don't want to try to embed the contents of a non-text file this way, as the raw contents would be injected as text. This is meant to let you access the contents of text attachments.</p>
+<div class="notecard note">
+<p><strong>注:</strong> テキスト以外のファイルのコンテンツをこの方法で埋め込もうとすると、生のコンテンツがテキストとして注入されてしまうので、おそらく避けた方がいいでしょう。これは、テキストの添付ファイルの内容にアクセスするためのものです。</p>
 </div>
 
-<p>If the file isn't found, an empty string is returned. There is currently no way to tell the difference between an empty file and a nonexistent one. But if you're putting empty files on the wiki, you're doing it wrong.</p>
+<p>ファイルが見つからない場合は、空の文字列が返されます。現在のところ、空のファイルと存在しないファイルの違いを見分ける方法はありません。しかし、もし空のファイルを wiki に置いているのであれば、それは間違っています。</p>
 
-<h3 id="Localizing_template_content" name="Localizing_template_content">テンプレートのローカライズ</h3>
+<h3 id="Localizing_template_content">テンプレートのローカライズ</h3>
 
-<p>Templates are not translated like wiki pages, rather any single template might be used for any number of locales.</p>
+<p>テンプレートは wiki ページのように翻訳されるわけではなく、 1 つのテンプレートをいくつものロケールで使用することになります。</p>
 
-<p>So the main way to output content tailored to the current document locale is to pivot on the value of <code>env.locale</code>. There are many ways to do this, but a few patterns are common in the conversion of legacy DekiScript templates:</p>
+<p>そのため、現在の文書のロケールに合わせてコンテンツを出力する主な方法は、 <code>env.locale</code> の値に基づいています。これには様々な方法がありますが、従来の DekiScript テンプレートの変換にはいくつかのパターンがあります。</p>
 
-<h4 id="Ifelse_blocks_in_KumaScript" name="Ifelse_blocks_in_KumaScript">If/else ブロックを用いる例</h4>
+<h4 id="Ifelse_blocks_in_KumaScript">If/else ブロックを用いる例</h4>
 
-<p>The KumaScript equivalent of this can be achieved with simple if/else blocks, like so:</p>
+<p>これに相当する KumaScript では、以下のような単純な if/else ブロックで実現できます。</p>
 
-<pre class="brush: js notranslate">&lt;% if ("fr" == env.locale) { %&gt;
+<pre class="brush: js">&lt;% if ("fr" == env.locale) { %&gt;
 &lt;%- template("CSSRef") %&gt; « &lt;a href="/fr/docs/Référence_CSS/Extensions_Mozilla"&gt;Référence CSS: Extensions Mozilla&lt;/a&gt;
 &lt;% } else if ("ja" == env.locale) { %&gt;
 &lt;%- template("CSSRef") %&gt; « &lt;a href="/ja/docs/CSS_Reference/Mozilla_Extensions"&gt;CSS リファレンス: Mozilla 拡張仕様&lt;/a&gt;
@@ -414,43 +386,23 @@ The result of 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;</pre>
 &lt;%- template("CSSRef") %&gt; « &lt;a href="/en-US/docs/CSS_Reference/Mozilla_Extensions"&gt;CSS Reference: Mozilla Extensions&lt;/a&gt;
 &lt;% } %&gt;</pre>
 
-<p>Depending on what text editor is your favorite, you may be able to copy &amp; paste from the browser-based editor and attack this pattern with a series of search/replace regexes to get you most of the way there.</p>
+<p>どのテキストエディターがお気に入りであるかによりますが、ブラウザーベースのエディターからコピー＆貼り付けして、一連の検索/置換正規表現を使ってこのパターンを攻略すれば、大体のことは解決できるでしょう。</p>
 
-<p>My favorite editor is MacVim, and a series of regexes like this does the bulk of the work with just a little manual clean up following:</p>
+<p>私が愛用しているエディターは MacVim ですが、次の一連の正規表現を使えば、後は手動でちょっとしたクリーンアップをするだけで、大部分の作業が完了します。</p>
 
-<pre class="brush: none notranslate">%s#&lt;span#^M&lt;span#g
+<pre class="brush: none">%s#&lt;span#^M&lt;span#g
 %s#&lt;span lang="\(.*\)" .*&gt;#&lt;% } else if ("\1" == env.locale) { %&gt;#g
 %s#&lt;span class="script"&gt;template.CSSxRef(#&lt;%- template("CSSxRef", [#
 %s#)&lt;/span&gt; &lt;/span&gt;#]) %&gt;
 </pre>
 
-<p>Your mileage may vary, and patterns change slightly from template to template. That's why the migration script was unable to just handle this automatically, after all.</p>
+<p>また、テンプレートごとにパターンが微妙に変わることもあります。そのため、移行スクリプトで自動的に処理することができなかったのだと思います。</p>
 
-<h4 id="String_variables_and_switch" name="String_variables_and_switch">文字列値と switch</h4>
+<h4 id="String_variables_and_switch">文字列値と switch</h4>
 
-<p>Rather than switch between full chunks of markup, you can define a set of strings, switch them based on locale, and then use them to fill in placeholders in a single chunk of markup:</p>
+<p><code class="language-javascript">mdn.localString()</code> を使用すると、次のようにロケールに応じて異なる文字列が定義されます。</p>
 
-<pre class="brush: js notranslate">&lt;%
-var s_title = 'Firefox for Developers';
-switch (env.locale) {
-    case 'de':
-        s_title = "Firefox für Entwickler";
-        break;
-    case 'fr':
-        s_title = "Firefox pour les développeurs";
-        break;
-    case 'es':
-        s_title = "Firefox para desarrolladores";
-        break;
-};
-%&gt;
-&lt;span class="title"&gt;&lt;%= s_title %&gt;&lt;/span&gt;</pre>
-
-<h4 id="Use_mdn.localString">Use <code class="language-javascript">mdn.localString()</code></h4>
-
-<p>A recent addition to the <code>MDN:Common</code> module is <code class="language-javascript">mdn.localString()</code>, used like this:</p>
-
-<pre class="brush: js notranslate">&lt;%
+<pre class="brush: js">&lt;%
 var s_title = mdn.localString({
   "en-US": "Firefox for Developers",
   "de": "Firefox für Entwickler",
@@ -459,13 +411,4 @@ var s_title = mdn.localString({
 %&gt;
 &lt;span class="title"&gt;&lt;%= s_title %&gt;&lt;/span&gt;</pre>
 
-<p>これは switch 文による分岐よりも簡潔であり、テンプレート内で一種類や二種類程度の文字列のみの翻訳が必要なケースなどでは、switch 文より良い選択となるかもしれません。ロケールにより多くの文字列を切り替える必要がある場合（※例: <a href="/ja/docs/Template:CSSRef" title="Template:CSSRef | MDN">Template:CSSRef | MDN</a>）は、switch 文 を用いた方が良いでしょう。 if 文を用いた場合が良い場合もあります。適切なものを選択して御利用下さい。</p>
-
 <p>オブジェクトに適切なロケールが無い場合、 "en-US" の値が初期値として使用されます。</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="https://github.com/mdn/kumascript">KumaScript ソースコード</a></li>
- <li><a href="https://wiki.mozilla.org/MDN/Kuma">Kuma wiki</a></li>
-</ul>

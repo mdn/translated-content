@@ -5,7 +5,7 @@ translation_of: Web/API/Clients
 ---
 <p>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</p>
 
-<p>The <code>Clients</code> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers API</a> represents a container for a list of {{domxref("Client")}} objects.</p>
+<p>The <code>Clients</code> interface of the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers API</a> represents a container for a list of {{domxref("Client")}} objects.</p>
 
 <h2 id="Methods">Methods</h2>
 
@@ -13,11 +13,11 @@ translation_of: Web/API/Clients
  <dt>{{domxref("Clients.get()")}}</dt>
  <dd>Gets a service worker client matching a given <code>id</code> and returns it in a {{jsxref("Promise")}}.</dd>
  <dt>{{domxref("Clients.matchAll()")}}</dt>
- <dd>Gets a list of service worker clients and returns them in a {{jsxref("Promise")}}. Include the <code>options</code> parameter to return all service worker clients whose origin is the same as the associated service worker's origin. If <code>options</code> are not included, the method returns only the service worker clients controlled by the service worker. </dd>
+ <dd>Gets a list of service worker clients and returns them in a {{jsxref("Promise")}}. Include the <code>options</code> parameter to return all service worker clients whose origin is the same as the associated service worker's origin. If <code>options</code> are not included, the method returns only the service worker clients controlled by the service worker. </dd>
  <dt>{{domxref("Clients.openWindow()")}}</dt>
  <dd>Opens a service worker {{domxref("Client")}} in a new browser window.</dd>
  <dt>{{domxref("Clients.claim()")}}</dt>
- <dd>Allows an active Service Worker to set itself as the active worker for a client page when the worker and the page are in the same scope. </dd>
+ <dd>Allows an active Service Worker to set itself as the active worker for a client page when the worker and the page are in the same scope. </dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -33,74 +33,11 @@ translation_of: Web/API/Clients
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#clients', 'Clients')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Clients")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -9,14 +9,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
 <div>{{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Объект <strong><code>Intl.Collator</code></strong> является конструктором <dfn>сортировщиков</dfn> — объектов, включающих языка-зависимое сравнение строк.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>new Intl.Collator([<var>locales</var>[, <var>options</var>]])
 Intl.Collator.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>locales</code></dt>
  <dd>
@@ -59,33 +59,33 @@ Intl.Collator.call(<var>this</var>[, <var>locales</var>[, <var>options</var>]])<
  </dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
-<h3 id="Properties" name="Properties">Свойства</h3>
+<h3 id="Properties">Свойства</h3>
 <dl>
  <dt>{{jsxref("Collator.prototype", "Intl.Collator.prototype")}}</dt>
  <dd>Позволяет добавлять свойства ко всем объектам.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 <dl>
  <dt>{{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}</dt>
  <dd>Возвращает массив, содержащий те из предоставленных локалей, которые поддерживаются без отката к локали по умолчанию среды выполнения.</dd>
 </dl>
 
-<h2 id="Collator_instances" name="Collator_instances">Экземпляры объекта <code>Collator</code></h2>
+<h2 id="Collator_instances">Экземпляры объекта <code>Collator</code></h2>
 
-<h3 id="Properties_of_Collator_instance" name="Properties_of_Collator_instance">Свойства</h3>
+<h3 id="Properties_of_Collator_instance">Свойства</h3>
 <p>Экземпляры <code>Collator</code> наследуют следующие свойства из своего прототипа:</p>
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Collator/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_Collator_instance" name="Methods_of_Collator_instance">Методы</h3>
+<h3 id="Methods_of_Collator_instance">Методы</h3>
 <p>Экземпляры <code>Collator</code> наследуют следующие методы из своего прототипа:</p>
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Collator/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_Collator" name="Example:_Using_Collator">Пример: использование <code>Collator</code></h3>
+<h3 id="Example_Using_Collator">Пример: использование <code>Collator</code></h3>
 <p>Следующий пример демонстрирует различные потенциальные результаты для строки, находящейся до, после или на том же самом уровне, что и другая строка:</p>
 <pre class="brush: js">console.log(new Intl.Collator().compare('a', 'c')); // → отрицательное значение
 console.log(new Intl.Collator().compare('c', 'a')); // → положительное значение
@@ -93,7 +93,7 @@ console.log(new Intl.Collator().compare('a', 'a')); // → 0
 </pre>
 <p>Обратите внимание, что результат, показанный в коде выше, может сильно различаться в зависимости от браузера и его версии. Происходит это потому, что возвращаемые значения зависят от реализации. То есть, спецификация требует только чтобы при следовании строки до значение было отрицательным, а после — положительным.</p>
 
-<h3 id="Example_Using_locales" name="Example:_Using_locales">Пример: использование аргумента <code>locales</code></h3>
+<h3 id="Example_Using_locales">Пример: использование аргумента <code>locales</code></h3>
 <p>Результаты, предоставляемые функцией {{jsxref("Collator.prototype.compare()")}} сильно различаются в зависимости от языка. Для получения порядка сортировки языка, используемого в пользовательском интерфейсе вашего приложения, убедитесь, что вы указали этот язык (и, возможно, несколько запасных языков) через аргумент <code>locales</code>:</p>
 <pre class="brush: js">// В немецком буква ä идёт рядом с буквой a
 console.log(new Intl.Collator('de').compare('ä', 'z'));
@@ -104,7 +104,7 @@ console.log(new Intl.Collator('sv').compare('ä', 'z'));
 // → положительное значение
 </pre>
 
-<h3 id="Example_Using_options" name="Example:_Using_options">Пример: использование аргумента <code>options</code></h3>
+<h3 id="Example_Using_options">Пример: использование аргумента <code>options</code></h3>
 <p>Результат, предоставляемый функцией {{jsxref("Collator.prototype.compare()")}}, может быть настроен с помощью аргумента <code>options</code>:</p>
 <pre class="brush: js">// В немецком буква a является базовой для буквы ä
 console.log(new Intl.Collator('de', { sensitivity: 'base' }).compare('ä', 'a'));
@@ -115,7 +115,7 @@ console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'))
 // → положительное значение
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -131,8 +131,8 @@ console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'))
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl', 'See_also')}}</div>

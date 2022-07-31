@@ -9,11 +9,9 @@ translation_of: Web/JavaScript/Reference/Operators/Equality
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="문법">문법</h2>
 
-<pre class="syntaxbox notranslate">x == y
+<pre class="syntaxbox ">x == y
 </pre>
 
 <h2 id="상세_설명">상세 설명</h2>
@@ -45,12 +43,12 @@ translation_of: Web/JavaScript/Reference/Operators/Equality
 
 <h3 id="타입변환_없이_비교">타입변환 없이 비교</h3>
 
-<pre class="brush: js notranslate">1 == 1;              // true
+<pre class="brush: js ">1 == 1;              // true
 "hello" == "hello";  // true</pre>
 
 <h3 id="타입변환을_이용한_비교">타입변환을 이용한 비교</h3>
 
-<pre class="brush: js notranslate">"1" ==  1;            // true
+<pre class="brush: js ">"1" ==  1;            // true
 1 == "1";             // true
 0 == false;           // true
 0 == null;            // false
@@ -66,7 +64,7 @@ number1 == number2;   // false</pre>
 
 <h3 id="객체들_간의_비교">객체들 간의 비교</h3>
 
-<pre class="brush: js notranslate">const object1 = {"key": "value"}
+<pre class="brush: js ">const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 == object2 // false
@@ -76,7 +74,7 @@ object2 == object2 // true</pre>
 
 <p><code>new String()</code> 을 통해 생성된 문자열들은 객체입니다. 이 객체중 하나를 문자열과 비교한다면, <code>String</code> 객체가 문자열로 변환된 후 비교될 것입니다. 그러나 두개의 피연산자 모두 <code>String</code> 객체라면, 객체로써 비교가 이루어지기 때문에 같은 값으로 취급될려면 같은 객체를 참조하고 있어야 합니다:</p>
 
-<pre class="brush: js notranslate">const string1 = "hello";
+<pre class="brush: js ">const string1 = "hello";
 const string2 = String("hello");
 const string3 = new String("hello");
 const string4 = new String("hello");
@@ -89,7 +87,7 @@ console.log(string4 == string4); // true</pre>
 
 <h3 id="Comparing_Dates_and_strings">Comparing Dates and strings</h3>
 
-<pre class="brush: js notranslate">const d = new Date('December 17, 1995 03:24:00');
+<pre class="brush: js ">const d = new Date('December 17, 1995 03:24:00');
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
 console.log(d == s);    //true</pre>
 

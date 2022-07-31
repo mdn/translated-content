@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Expect
 
 <p>例如，如果请求中 {{HTTPHeader("Content-Length")}} 的值太大的话，可能会遭到服务器的拒绝。</p>
 
-<p>常见的浏览器不会发送 <code>Expect</code> 消息头，但是其他类型的客户端如cURL默认会这么做。</p>
+<p>常见的浏览器不会发送 <code>Expect</code> 消息头，但是其他类型的客户端如 cURL 默认会这么做。</p>
 
 <table class="properties">
  <tbody>
@@ -42,14 +42,14 @@ translation_of: Web/HTTP/Headers/Expect
 
 <dl>
  <dt>100-continue</dt>
- <dd>通知接收方客户端要发送一个体积可能很大的消息体，期望收到状态码为{{HTTPStatus("100")}} (Continue)  的临时回复。</dd>
+ <dd>通知接收方客户端要发送一个体积可能很大的消息体，期望收到状态码为{{HTTPStatus("100")}} (Continue)  的临时回复。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="大消息体">大消息体</h3>
 
-<p>客户端发送带有Expect消息头的请求，等服务器回复后再发送消息体。</p>
+<p>客户端发送带有 Expect 消息头的请求，等服务器回复后再发送消息体。</p>
 
 <pre>PUT /somewhere/fun HTTP/1.1
 Host: origin.example.com
@@ -62,22 +62,11 @@ Expect: 100-continue
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Expect", "5.1.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容情况">浏览器兼容情况</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>目前没有已知的浏览器会使用这个消息头。</p>
+{{Compat}}
 
 <h2 id="参见">参见</h2>
 

@@ -10,9 +10,9 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 
 <p class="note">Drag операции описываются в документе, используя {{domxref("DataTransfer")}} интерфейс. Этот документ не использует не{{domxref("DataTransferItem")}} интерфейс, не{{domxref("DataTransferItemList")}} интерфейс.</p>
 
-<h2 id="draggableattribute" name="draggableattribute"><code>draggable</code> атрибуты</h2>
+<h2 id="draggableattribute"><code>draggable</code> атрибуты</h2>
 
-<p>На веб-странице, в некоторых случаях используется поведение drag (перетаскивания) по умолчанию. Включая выделенный текст, изображения и ссылки. Когда изображение или ссылка переносятся, URL изображения или ссылки устанавливается в качестве данных drag и перетаскивание начинается. Для других элементов, они должны быть частью выделения для выполнения перетаскивания по умолчанию. Чтобы увидеть это в действии, выделите область веб-страницы, а затем нажмите и удерживайте кнопку мыши и перетащите выделение. Появится специфичный для ОС рендеринг выделенного фрагмента и будет следовать за указателем мыши при перетаскивании. Однако это поведение является только drag поведением по умолчанию, если нет слушателей, определяющих данные для перетаскивания.</p>
+<p>На веб-странице, в некоторых случаях используется поведение drag (перетаскивания) по умолчанию. Включая выделенный текст, изображения и ссылки. Когда изображение или ссылка переносятся, URL изображения или ссылки устанавливается в качестве данных drag и перетаскивание начинается. Для других элементов, они должны быть частью выделения для выполнения перетаскивания по умолчанию. Чтобы увидеть это в действии, выделите область веб-страницы, а затем нажмите и удерживайте кнопку мыши и перетащите выделение. Появится специфичный для ОС рендеринг выделенного фрагмента и будет следовать за указателем мыши при перетаскивании. Однако это поведение является только drag поведением по умолчанию, если нет обработчиков, определяющих данные для перетаскивания.</p>
 
 <p>В HTML, кроме поведения по умолчанию изображений, ссылок и выделенных областей, никакие другие элементы по умолчанию не переносятся.</p>
 
@@ -39,7 +39,7 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 <p><strong>Примечание:</strong> Когда элемент становится перетаскиваемыми, текст или другие элементы в нем больше не могут быть выбраны обычным способом, щёлкая и перетаскивая мышью. Вместо этого пользователь должен удерживать клавишу <kbd>Alt</kbd>  чтобы выбрать текст с помощью мыши или клавиатуры.</p>
 </div>
 
-<h2 id="dragstart" name="dragstart">Начало операции перетаскивания</h2>
+<h2 id="dragstart">Начало операции перетаскивания</h2>
 
 <p>В примере, обработчик добавлен для события {{event("dragstart")}} с использованием атрибута<code>{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}</code>.</p>
 
@@ -54,7 +54,7 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 
 <p>Внутри события {{event("dragstart")}}, вы можете указать <strong>drag данные</strong>, <strong>изображение отклика</strong>, <strong>drag-эффекты</strong>, все это описано ниже. Однако, обязательны только <strong>drag данные</strong>. (Изображение и drag-эффекты по умолчанию, подходят в большинстве ситуаций)</p>
 
-<h2 id="dragdata" name="dragdata">Drag-данные</h2>
+<h2 id="dragdata">Drag-данные</h2>
 
 <p>Все {{domxref("DragEvent","drag events")}} имеют свойство, называемое{{domxref("DragEvent.dataTransfer","dataTransfer")}}, которое содержит drag-данные (<code>dataTransfer</code> это {{domxref("DataTransfer")}} object).</p>
 
@@ -96,7 +96,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>Аргумент <code>type</code> в методе {{domxref("DataTransfer.clearData","clearData()")}} опционален. Если <code>type</code> не указан, данные, связанные со всеми типами, удаляются. Если перетаскивание не содержит элементов данных перетаскивания или все элементы были впоследствии очищены, то перетаскивание не произойдёт.</p>
 
-<h2 id="dragfeedback" name="dragfeedback">Настройка изображения отклика drag</h2>
+<h2 id="dragfeedback">Настройка изображения отклика drag</h2>
 
 <p>Когда происходит перетаскивание, полупрозрачное изображение генерируется из цели перетаскивания (событие "{{event("dragstart")}}" элемента срабатывает), и следует за указателем пользователя во время перетаскивания. Это изображение создаётся автоматически, поэтому вам не нужно создавать его самостоятельно. Однако вы можете использовать {{domxref("DataTransfer.setDragImage","setDragImage()")}} для задания пользовательского изображения отклика перетаскивания.</p>
 
@@ -127,7 +127,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>В этом примере мы делаем один canvas перетаскивания. Поскольку размер холста составляет 50×50 пикселей, мы используем смещение половины этого (25), чтобы изображение было центрировано на указателе мыши.</p>
 
-<h2 id="drageffects" name="drageffects">Drag эффекты</h2>
+<h2 id="drageffects">Drag эффекты</h2>
 
 <p>При перетаскивании можно выполнить несколько операций. Операция  <code>copy</code> используется для указания на то, что перетаскиваемые данные будут скопированы из текущего местоположения в место перетаскивания. Операция <code>move</code> используется для указания на то, что перетаскиваемые данные будут перемещены, а операция <code>link</code> используется для указания на то, что между исходным и удаляемым местоположениями будет создана некоторая форма связи или соединения.</p>
 
@@ -178,9 +178,9 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>В событиях <code>{{event("drop")}}</code> и <code>{{event("dragend")}}</code>, вы можете проверить свойства {{domxref("DataTransfer.dropEffect","dropEffect")}} для определения того, какой эффект был в конечном итоге выбран.  Если выбран эффект "<code>move</code>",то исходные данные должны быть удалены из источника перетаскивания в событии<code>{{event("dragend")}}</code>.</p>
 
-<h2 id="droptargets" name="droptargets">Указание drop-целей</h2>
+<h2 id="droptargets">Указание drop-целей</h2>
 
-<p>Слушатель для событий <code>{{event("dragenter")}}</code> и <code>{{event("dragover")}}</code> используются для указания допустимых drop-целей, то есть мест, где могут быть сброшены перетаскиваемые элементы. Большинство областей веб-страницы или приложения не являются допустимыми местами для сброса данных. Таким образом, обработка этих событий по умолчанию не допускает сброса перетаскиваемых данных.</p>
+<p>Обработчик для событий <code>{{event("dragenter")}}</code> и <code>{{event("dragover")}}</code> используются для указания допустимых drop-целей, то есть мест, где могут быть сброшены перетаскиваемые элементы. Большинство областей веб-страницы или приложения не являются допустимыми местами для сброса данных. Таким образом, обработка этих событий по умолчанию не допускает сброса перетаскиваемых данных.</p>
 
 <p>Если вы хотите разрешить сброс переносимых данных, вы должны предотвратить обработку по умолчанию, отменив оба события <code>dragenter</code> и <code>dragover</code>.  Это можно сделать, либо вернув <code>false</code> из определённых атрибутом обработчика событий, либо вызвав метод {{domxref("Event.preventDefault","preventDefault()")}} событие. Последнее может быть более осуществимо в функции, определённой в отдельном скрипте.</p>
 
@@ -205,7 +205,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>Вы также можете установить либо свойство {{domxref("DataTransfer.effectAllowed","effectAllowed")}}, либо свойство{{domxref("DataTransfer.dropEffect","dropEffect")}}, либо оба одновременно, если вы хотите указать более конкретные сведения о типе операции, которая будет выполнена. Естественно, изменение любого свойства не будет иметь никакого эффекта, если вы не отмените событие.</p>
 
-<h2 id="dropfeedback" name="dropfeedback">Drop Feedback</h2>
+<h2 id="dropfeedback">Drop Feedback</h2>
 
 <p>There are several ways in which you can indicate to the user that a drop is allowed at a certain location. The mouse pointer will update as necessary depending on the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property.</p>
 
@@ -230,7 +230,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>Finally, the <code>{{event("dragleave")}}</code> event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the <code>:-moz-drag-over</code> pseudoclass will be removed automatically. The <code>{{event("dragleave")}}</code> event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.</p>
 
-<h2 id="drop" name="drop">Performing a Drop</h2>
+<h2 id="drop">Performing a Drop</h2>
 
 <p>When the user releases the mouse, the drag and drop operation ends.</p>
 
@@ -293,7 +293,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 }
 </pre>
 
-<h2 id="dragend" name="dragend">Окончание перетаскивания</h2>
+<h2 id="dragend">Окончание перетаскивания</h2>
 
 <p>Как только перетаскивание завершено, событие <code>{{event("dragend")}}</code> запускается в источнике перетаскивания (тот же элемент, который получил событие <code>{{event("dragstart")}}</code>). Это событие сработает, если перетаскивание было успешным<sup>[1]</sup> или если оно было отменено. Однако вы можете использовать свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} для определения, какая операция удаления произошла.</p>
 
@@ -305,7 +305,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 <p>[1]: В Gecko, {{event("dragend")}} не отправляется, если исходный узел движется или удаляется во время перетаскивания (например, при сбрасывании или {{event("dragover")}}). <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=460801" title="New D&amp;D API: dragend is not dispatched if the source node was moved or removed during the drag session">Bug 460801</a></p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a class="internal" href="/Web/API/HTML_Drag_and_Drop_API" title="HTML Drag and Drop API">HTML Drag and Drop API (Overview)</a></li>

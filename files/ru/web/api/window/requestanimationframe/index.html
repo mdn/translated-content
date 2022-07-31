@@ -14,13 +14,13 @@ original_slug: DOM/window.requestAnimationFrame
 
 <p>Вы должны вызывать этот метод всякий раз, когда готовы обновить анимацию на экране, чтобы запросить планирование анимации. Обычно запросы происходят 60 раз в секунду, но чаще всего совпадают с частотой обновления экрана. В большинстве браузеров в фоновых вкладках или скрытых <code>&lt;iframe&gt;</code>, вызовы <code>requestAnimationFrame()</code> приостанавливаются, для того, чтобы повысить производительность и время работы батареи.</p>
 
-<p>Callback методу передаётся один аргумент, {{domxref("DOMHighResTimeStamp")}}, который содержит текущее время (количество миллисекунд, прошедших с момента <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>). Когда колбэки, отправленные в очередь с помощью <code>requestAnimationFrame()</code> начинают вызывать несколько колбэков в одном кадре, каждый получает одинаковый timestamp, хотя для вычисления каждого callback было затрачено время. Этот timestamp - десятичное число в миллисекундах, но с минимальной точностью в 1ms (1000 µs).</p>
+<p>Callback методу передаётся один аргумент, {{domxref("DOMHighResTimeStamp")}}, который содержит текущее время (количество миллисекунд, прошедших с момента <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>). Когда колбэки, отправленные в очередь с помощью <code>requestAnimationFrame()</code> начинают вызывать несколько колбэков в одном кадре, каждый получает одинаковый timestamp, хотя для вычисления каждого callback было затрачено время. Этот timestamp - десятичное число в миллисекундах, но с минимальной точностью в 1ms (1000 µs).</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="brush: js notranslate">window.requestAnimationFrame(callback);</pre>
+<pre class="brush: js">window.requestAnimationFrame(callback);</pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -33,9 +33,9 @@ original_slug: DOM/window.requestAnimationFrame
 
 <p><code>requestID</code> — длинное целое, являющееся уникальным идентификатором для записи, содержащей callback. Оно не равно нулю, но других предположений о его значении делать не следует. Вы можете передать его в {{ domxref("window.cancelAnimationFrame()") }} для отмены вызова.</p>
 
-<h2 id="Notes" name="Notes">Пример</h2>
+<h2 id="Notes">Пример</h2>
 
-<pre class="brush: js notranslate">var start = null;
+<pre class="brush: js">var start = null;
 var element = document.getElementById('SomeElementYouWantToAnimate');
 
 function step(timestamp) {
@@ -53,7 +53,7 @@ window.requestAnimationFrame(step);</pre>
 
 <p>В Edge версиях младше 17 и в Internet Explorer не надёжно запускать <code>requestAnimationFrame</code> перед циклом рисования.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <thead>
@@ -77,9 +77,9 @@ window.requestAnimationFrame(step);</pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Браузерная совместимость</h2>
+<h2 id="Browser_compatibility">Браузерная совместимость</h2>
 
-<p id="Specification">{{Compat("api.Window.requestAnimationFrame")}}</p>
+<p id="Specification">{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
@@ -89,5 +89,4 @@ window.requestAnimationFrame(step);</pre>
  <li><a class="external" href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a> - Blog post</li>
  <li><a class="external" href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for smart animating</a> - Blog post</li>
  <li><a class="external" href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating with javascript: from setInterval to requestAnimationFrame</a> - Blog post</li>
- <li><a class="external" href="http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1</a> - Blog post</li>
 </ul>

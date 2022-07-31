@@ -7,7 +7,7 @@ translation_of: Web/API/Node/cloneNode
 
 <p>Метод <strong><code>Node.cloneNode()</code></strong> возвращает дубликат узла, из которого этот метод был вызван.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var <em><var>dupNode</var></em> = <em><var>node</var></em>.cloneNode(<em><var>deep</var></em>);
 </pre>
@@ -27,13 +27,13 @@ translation_of: Web/API/Node/cloneNode
 <p>Это поведение было изменено в последней спецификации, и если опущено значение, метод будет действовать как если бы <code>deep</code> было <strong><code>false</code></strong>. Хотя, это все ещё не обязательно, вы всегда должны обеспечить аргументом <code>deep</code>, для прямой и обратной совместимости. С Gecko 28.0 {{geckoRelease(28)}}), консоль предупреждает разработчиков не опускать аргумент. Начиная с Gecko 29.0 {{geckoRelease(29)}}), поверхностный клон, по умолчанию, вместо глубокого клона.</p>
 </div>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: js">    var p = document.getElementById("para1");
     var p_prime = p.cloneNode(true);
 </pre>
 
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 
 <p id="not-event-listeners">Клонирование узлов копирует все атрибуты и их значения, в том числе собственных (в линию) перехватчиков. Это не копирует перехватчики событий, добавленных используя <a href="/en-US/docs/DOM/element.addEventListener" title="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> или тех что назначены через свойства элемента (т.е <code>node.onclick = fn</code>).</p>
 
@@ -51,12 +51,12 @@ translation_of: Web/API/Node/cloneNode
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Node.cloneNode")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
 <ul>
  <li>{{Spec("http://w3.org/TR/DOM-Level-2-Core/core.html#ID-3A0ED0A4","DOM Level 2 Core: cloneNode","REC")}}</li>
  <li>{{Spec("http://w3.org/TR/DOM-Level-3-Core/core.html#ID-3A0ED0A4","DOM Level 3 Core: cloneNode","REC")}}</li>
- <li><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-node-clonenode" title="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-node-clonenode">DOM4: cloneNode</a> (черновик)</li>
+ <li><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-node-clonenode">DOM4: cloneNode</a> (черновик)</li>
 </ul>

@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="視覚表示">視覚表示</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="/files/4617/default.svg" style="height: 270px; width: 294px;"></p>
+<p style="text-align: center;"><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg" style="height: 270px; width: 294px;"></p>
 
 <h3 id="スタック">スタック</h3>
 
@@ -65,14 +65,14 @@ console.log(bar(7)); // returns 42
 
 <p>Webブラウザでは、メッセージは、イベントが発生し、それに接続されているイベントリスナーがある任意の時間に追加されます。イベントリスナーがない場合、イベントは失われます。だから、他のイベントと同様に、クリックイベントハンドラを持つ要素をクリックすると、メッセージが追加されます。</p>
 
-<p><code><a href="/docs/Web/API/WindowTimers.setTimeout" title="/docs/window.setTimeout">setTimeout</a></code>を呼び出すと、2番目の引数として渡された時間が経過した後、メッセージがキューに追加されます。キューに他のメッセージがない場合、メッセージはすぐに処理されます。しかしながら、メッセージがある場合、<code>setTimeout</code>メッセージは他のメッセージを処理するために待機する必要があります。そのため第二引数は、保証時間ではなく、最小の時間を示しています。</p>
+<p><code><a href="/ja/docs/Web/API/WindowTimers.setTimeout" title="/docs/window.setTimeout">setTimeout</a></code>を呼び出すと、2番目の引数として渡された時間が経過した後、メッセージがキューに追加されます。キューに他のメッセージがない場合、メッセージはすぐに処理されます。しかしながら、メッセージがある場合、<code>setTimeout</code>メッセージは他のメッセージを処理するために待機する必要があります。そのため第二引数は、保証時間ではなく、最小の時間を示しています。</p>
 
 <h3 id="一緒に通信するいくつかのランタイム">一緒に通信するいくつかのランタイム</h3>
 
-<p>ウェブワーカーやクロスオリジンのiframeは、独自のスタック、ヒープ、およびメッセージキューがあります。二つの異なるランタイムのみ<a href="/docs/DOM/window.postMessage" title="/docs/DOM/window.postMessage"><code>postMessage</code></a>メソッドによって送信メッセージを介して通信することができます。他のランタイムが<code>message</code>イベントをリッスンする場合、このメソッドは他のランタイムにメッセージを追加します。</p>
+<p>ウェブワーカーやクロスオリジンのiframeは、独自のスタック、ヒープ、およびメッセージキューがあります。二つの異なるランタイムのみ<a href="/ja/docs/DOM/window.postMessage" title="/docs/DOM/window.postMessage"><code>postMessage</code></a>メソッドによって送信メッセージを介して通信することができます。他のランタイムが<code>message</code>イベントをリッスンする場合、このメソッドは他のランタイムにメッセージを追加します。</p>
 
 <h2 id="ブロッキング不可">ブロッキング不可</h2>
 
-<p>イベントループモデルの非常に興味深い特性は、他の多くの言語とは異なり、JavaScriptは決してブロックしないことです。I/Oの取り扱いは、通常、イベントとコールバックを介して行われます。そのため、アプリケーションは<a href="/docs/Web/API/IndexedDB_API" title="/docs/IndexedDB">IndexedDB</a>のクエリや<a href="/docs/Web/API/XMLHttpRequest" title="/docs/DOM/XMLHttpRequest">XHR</a>リクエストが返るのを待っている時も、ユーザ入力のような他のことを処理することができます。</p>
+<p>イベントループモデルの非常に興味深い特性は、他の多くの言語とは異なり、JavaScriptは決してブロックしないことです。I/Oの取り扱いは、通常、イベントとコールバックを介して行われます。そのため、アプリケーションは<a href="/ja/docs/Web/API/IndexedDB_API" title="/docs/IndexedDB">IndexedDB</a>のクエリや<a href="/ja/docs/Web/API/XMLHttpRequest" title="/docs/DOM/XMLHttpRequest">XHR</a>リクエストが返るのを待っている時も、ユーザ入力のような他のことを処理することができます。</p>
 
-<p><code>alert</code>か同期XHRのようにレガシーな例外が存在しますが、それらを避けることは良い慣習とされています。<a href="http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311" title="http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">例外に対する例外は存在する</a>ことに気をつけてください(と言っても、たいていは他の何かというよりはむしろ実装のバグですが)。</p>
+<p><code>alert</code>か同期XHRのようにレガシーな例外が存在しますが、それらを避けることは良い慣習とされています。<a href="http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">例外に対する例外は存在する</a>ことに気をつけてください(と言っても、たいていは他の何かというよりはむしろ実装のバグですが)。</p>

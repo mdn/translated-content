@@ -7,8 +7,9 @@ tags:
   - iOS
   - plano de fundo
 translation_of: Web/CSS/backdrop-filter
+browser-compat: css.properties.backdrop-filter
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
 <p>A propriedade <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>backdrop-filter</code></strong> permite que você aplique efeitos gráficos, como desfoque ou mudança de cores, na área ao fundo de um elemento. Como ela se aplica a tudo que fica <em>atrás</em> do elemento, é preciso deixá-lo (ou o seu plando de fundo) ao menos parcialmente transparente para poder ver o efeito em ação.</p>
 
@@ -39,8 +40,6 @@ backdrop-filter: initial;
 backdrop-filter: unset;
 </pre>
 
-<p>{{cssinfo}}</p>
-
 <h2 id="Sintaxe">Sintaxe</h2>
 
 <h3 id="Valores">Valores</h3>
@@ -51,6 +50,11 @@ backdrop-filter: unset;
  <dt><code>&lt;filter-function-list&gt;</code></dt>
  <dd>Uma lista de {{cssxref("&lt;filter-function&gt;")}}s separadas por espaços ou um <a href="/en-US/docs/Web/SVG/Element/filter">filtro SVG</a> que será aplicado ao plano de fundo.</dd>
 </dl>
+
+
+<h2>Definição formal</h2>
+
+<p>{{cssinfo}}</p>
 
 <h3 id="Sintaxe_formal">Sintaxe formal</h3>
 
@@ -80,7 +84,7 @@ body {
 }
 
 body {
-  background-image: url('https://lorempixel.com/400/200/');
+  background-image: url(https://picsum.photos/id/1080/6858/4574);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,32 +113,16 @@ body {
 
 <h2 id="Especificações">Especificações</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Especificação</th>
-   <th scope="col">Status</th>
-   <th scope="col">Descrição</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 2.0', '#BackdropFilterProperty', 'backdrop-filter')}}</td>
-   <td>{{Spec2('Filters 2.0')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Compatibilidade_em_navegadores">Compatibilidade em navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 
 
-<p>{{Compat("css.properties.backdrop-filter")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
  <li>{{cssxref("filter")}}</li>
- <li><a href="http://product.voxmedia.com/til/2015/2/17/8053347/css-ios-transparency-with-webkit-backdrop-filter">Criando efeitos de transparência estilo iOS em CSS com backdrop-filter</a></li>
 </ul>

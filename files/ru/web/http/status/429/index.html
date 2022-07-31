@@ -5,17 +5,17 @@ translation_of: Web/HTTP/Status/429
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP <code><strong>429 Too Many Requests</strong></code> код ответа указывает, что пользователь отправил слишком много запросов за последнее временя ("ограничение скорости" или "rate limiting" ).</p>
+<p>HTTP <code><strong>429 Too Many Requests</strong></code> код ответа указывает, что пользователь отправил слишком много запросов за последнее время ("ограничение скорости" или "rate limiting" ).</p>
 
 <p>В этот ответ может быть включён  {{HTTPHeader("Retry-After")}}, указывающий, как долго ждать нового запроса.</p>
 
 <h2 id="Статус">Статус</h2>
 
-<pre class="syntaxbox notranslate">429 Too Many Requests</pre>
+<pre class="syntaxbox">429 Too Many Requests</pre>
 
 <h2 id="Пример">Пример</h2>
 
-<pre class="notranslate">HTTP/1.1 429 Too Many Requests
+<pre>HTTP/1.1 429 Too Many Requests
 Content-Type: text/html
 Retry-After: 3600</pre>
 

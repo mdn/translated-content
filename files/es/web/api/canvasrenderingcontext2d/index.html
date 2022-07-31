@@ -320,7 +320,7 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozCurrentTransformInverse</code></dt>
  <dd>Sets or gets the current inversed transformation matrix.  {{ gecko_minversion_inline("7.0") }}</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozFillRule</code></dt>
- <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t" title="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
+ <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.mozImageSmoothingEnabled</code></dt>
  <dd>See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.</dd>
  <dt>{{non-standard_inline}} {{deprecated_inline}} <code>CanvasRenderingContext2D.mozDash</code></dt>
@@ -354,7 +354,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.msFillRule</code></dt>
- <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t" title="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
+ <dd>The <a class="external" href="http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t">fill rule</a> to use. This must be one of <code>evenodd</code> or <code>nonzero</code> (default).</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -376,61 +376,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("1")}}</td>
-   <td>{{CompatGeckoDesktop("1.8")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("9")}}</td>
-   <td>{{CompatSafari("2")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Compatibility_notes">Compatibility notes</h3>
-
-<ul>
- <li>Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: <code>translate()</code>, <code>transform()</code>, <code>rotate(), </code><code>scale(),</code> <code>rect()</code>, <code>clearRect()</code>, <code>fillRect()</code>, <code>strokeRect()</code>, <code>lineTo()</code>, <code>moveTo()</code>, <code>quadraticCurveTo()</code>, <code>arc()</code>, <code>shadowOffsetX</code>, <code>shadowOffsetY</code>,  <code>shadowBlur</code>.</li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D")}}
 
 <h2 id="See_also">See also</h2>
 

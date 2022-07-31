@@ -12,7 +12,7 @@ translation_of: Web/API/Window/scrollMaxY
 
 <p>Свойство <code><strong>Window.scrollMaxY</strong></code> возвращает максимальное число пикселей по вертикали, доступных для прокрутки в документе. Только для чтения.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>yMax</var> = window.scrollMaxY
 </pre>
@@ -21,7 +21,7 @@ translation_of: Web/API/Window/scrollMaxY
  <li><code>yMax</code> - число пикселей.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">// Пролистать в самый низ
 var maxY = window.scrollMaxY;
@@ -29,14 +29,14 @@ var maxY = window.scrollMaxY;
 window.scrollTo(0,maxY);
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания </h2>
+<h2 id="Notes">Примечания </h2>
 
 <p>Не используйте это свойство для получения общей высоты документа, так как оно не равнозначно {{domxref("window.innerHeight")}} + window.scrollMaxY, потому что {{domxref("window.innerHeight")}} включает ещё ширину любой видимой горизонтальной полосы прокрутке. Вместо этого применяйте {{domxref("element.scrollHeight","document.body.scrollHeight")}}. Смотрите также {{domxref("window.scrollMaxX")}} и {{domxref("window.scrollTo")}}.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <p>Не является частью какой-либо спецификации.</p>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Window.scrollMaxY")}}</p>
+<p>{{Compat}}</p>

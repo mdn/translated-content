@@ -25,7 +25,7 @@ translation_of: Web/API/Document/createNodeIterator
  <dt><code><var>root</var></code></dt>
  <dd>{{ domxref("NodeIterator") }} の探索の開始地点になるルートノードです。</dd>
  <dt><code><var>whatToShow</var></code> {{ optional_inline() }}</dt>
- <dd>オプションの <code>unsigned long</code> 値で、 <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter" title="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code> の定数プロパティを組み合わせて作られたビットマスクを表します。これは特定の種類のノードを絞り込みするのに便利な方法です。. 既定値は <code>0xFFFFFFFF</code> で、 <code>SHOW_ALL</code> 定数を表します。
+ <dd>オプションの <code>unsigned long</code> 値で、 <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code> の定数プロパティを組み合わせて作られたビットマスクを表します。これは特定の種類のノードを絞り込みするのに便利な方法です。. 既定値は <code>0xFFFFFFFF</code> で、 <code>SHOW_ALL</code> 定数を表します。
  <table class="standard-table">
   <thead>
    <tr>
@@ -108,7 +108,7 @@ translation_of: Web/API/Document/createNodeIterator
  </table>
  </dd>
  <dt><code><var>filter</var></code> {{ optional_inline() }}</dt>
- <dd>NodeFilter インターフェースを実装したオブジェクト。その acceptNode() メソッドは、反復可能なノードのリストに含めるかどうかを決定するために、 whatToShow フラグによって含まれていると受け入れられたルートを基準としたサブツリーの各ノードに対して呼び出されます (代わりに単純なコールバック関数を使用することもできます)。このメソッドは <code>NodeFilter.FILTER_ACCEPT</code>, <code>NodeFilter.FILTER_REJECT</code>, or <code>NodeFilter.FILTER_SKIP</code> のいずれかを返します。{{ anch("Example", "例") }}を参照してください。</dd>
+ <dd>NodeFilter インターフェースを実装したオブジェクト。その acceptNode() メソッドは、反復可能なノードのリストに含めるかどうかを決定するために、 whatToShow フラグによって含まれていると受け入れられたルートを基準としたサブツリーの各ノードに対して呼び出されます (代わりに単純なコールバック関数を使用することもできます)。このメソッドは <code>NodeFilter.FILTER_ACCEPT</code>, <code>NodeFilter.FILTER_REJECT</code>, or <code>NodeFilter.FILTER_SKIP</code> のいずれかを返します。<a href="#example">例</a>を参照してください。</dd>
 </dl>
 
 <div class="note"><strong>メモ:</strong> Gecko 12.0 (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9) より前の版では、このメソッドは DOM4 仕様の一部ではないオプションの 4 番目の引数 (entityReferenceExpansion) を受け入れていました。この引数は、エンティティ参照ノードの子がイテレーターから見えるかどうかを示していました。このようなノードはブラウザーでは作成されないので、この引数は何の効果もありませんでした。</div>

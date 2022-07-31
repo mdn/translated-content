@@ -12,7 +12,7 @@ translation_of: Web/API/Node/contains
 
 <div>Метод <strong><code>Node.contains()</code></strong> возвращает {{jsxref ("Boolean")}} значение, указывающее, является ли узел потомком данного узла, т. е. сам узел, один из его прямых потомков ({{domxref ("Node. childNodes "," childNodes ")}}), один из детей его детей и так далее.</div>
 
-<h2 id="Summary" name="Summary">Синтаксис</h2>
+<h2 id="Summary">Синтаксис</h2>
 
 <pre class="syntaxbox">node.contains( otherNode )
 </pre>
@@ -22,7 +22,7 @@ translation_of: Web/API/Node/contains
  <li><code>otherNode</code> элемент с которым производится сравнение.</li>
 </ul>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <p>Эта функция проверяет, находится ли элемент в теле страницы.</p>
 
@@ -30,32 +30,17 @@ translation_of: Web/API/Node/contains
   return (node === document.body) ? false : document.body.contains(node);
 }</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификация</h2>
+<h2 id="Specifications">Спецификация</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Поддержка браузерами</h2>
+<h2 id="Browser_compatibility">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("api.Node.contains")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Node.compareDocumentPosition")}}</li>

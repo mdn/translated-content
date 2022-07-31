@@ -3,13 +3,13 @@ title: Отправка и получение бинарных данных
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 translation_of: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
-<h2 id="Receiving_binary_data_using_JavaScript_typed_arrays" name="Receiving_binary_data_using_JavaScript_typed_arrays">Получение бинарных данных используя JavaScript arrays </h2>
+<h2 id="Receiving_binary_data_using_JavaScript_typed_arrays">Получение бинарных данных используя JavaScript arrays </h2>
 
 <p>Свойство responseType объекта XMLHttpRequest можно задать для изменения ожидаемого типа ответа с сервера. Возможные значения: пустая строка (по умолчанию), "arraybuffer", "blob", "document", "json" и "text". Свойство response будет содержать тело сущности в соответствии с типом ответа, как ArrayBuffer, Blob, Document, JSON или string. Это значение равно null, если запрос не завершён или не был успешным.</p>
 
 <p>В этом примере изображение считывается как двоичный файл и создаётся 8-разрядный массив целых чисел без знака из необработанных байтов. Обратите внимание, что это не будет декодировать изображение и читать пиксели. Для этого вам понадобится <a href="https://github.com/devongovett/png.js/">библиотека декодирования png</a>.</p>
 
-<pre class="brush: js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush: js">var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "arraybuffer";
 
@@ -28,7 +28,7 @@ oReq.send(null);
 
 <p>Альтернатива вышеуказанному методу использует интерфейс {{domxref("Blob")}} для непосредственного построения Blob с данными arraybuffer.</p>
 
-<pre class="brush: js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush: js">var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "arraybuffer";
 
@@ -42,7 +42,7 @@ oReq.send();
 
 <p>Также вы можете прочитать двоичный файл как {{domxref ("Blob")}}, установив строку" blob " в свойство responseType.</p>
 
-<pre class="brush: js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush: js">var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
 oReq.responseType = "blob";
 
@@ -53,11 +53,11 @@ oReq.onload = function(oEvent) {
 
 oReq.send();</pre>
 
-<h2 id="Receiving_binary_data_in_older_browsers" name="Receiving_binary_data_in_older_browsers">Получение бинарных данных в старых браузерах</h2>
+<h2 id="Receiving_binary_data_in_older_browsers">Получение бинарных данных в старых браузерах</h2>
 
 <p>Функция load_binary_resource(), показанная ниже, загружает двоичные данные из указанного URL, возвращая их вызывающему объекту.</p>
 
-<pre class="brush: js notranslate">function load_binary_resource(url) {
+<pre class="brush: js">function load_binary_resource(url) {
   var req = new XMLHttpRequest();
   req.open('GET', url, false);
   //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
@@ -70,7 +70,7 @@ oReq.send();</pre>
 
 <p>Магия происходит в строке 5, которая переопределяет тип MIME, заставляя браузер рассматривать его как обычный текст, используя пользовательский набор символов. Это говорит браузеру не анализировать его и пропускать байты через необработанные.</p>
 
-<pre class="brush: js notranslate">var filestream = load_binary_resource(url);
+<pre class="brush: js">var filestream = load_binary_resource(url);
 var abyte = filestream.charCodeAt(x) &amp; 0xff; // throw away high-order byte (f7)
 </pre>
 
@@ -80,21 +80,21 @@ var abyte = filestream.charCodeAt(x) &amp; 0xff; // throw away high-order byte (
 
 <h2 id="Получение_бинарных_данных_из_различных_источников">Получение бинарных данных из различных источников</h2>
 
-<p>Библиотека <a href="https://github.com/jDataView/jBinary">jBinary</a> для работы с бинарными данными в JavaScript позволяет загрузить данные из любого источника, автоматически определяя лучший способ для этого в текущем броузере или Node.js:</p>
+<p>Библиотека <a href="https://github.com/jDataView/jBinary">jBinary</a> для работы с бинарными данными в JavaScript позволяет загрузить данные из любого источника, автоматически определяя лучший способ для этого в текущем браузере или Node.js:</p>
 
-<pre class="brush: js notranslate">jBinary.load(url).then(function (binary) {
+<pre class="brush: js">jBinary.load(url).then(function (binary) {
   // здесь аргумент `binary` может использовться для обработки данных
   // в любом формате (строка, массив байтов, структура данных и т. д.)
 });
 </pre>
 
-<h2 id="Sending_binary_data" name="Sending_binary_data">Отправка бинарных данных</h2>
+<h2 id="Sending_binary_data">Отправка бинарных данных</h2>
 
 <p>Метод <code>send</code> объекта XMLHttpRequest был расширен, чтобы обеспечить лёгкую передачу бинарных данных - теперь он принимает объекты <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, или {{domxref("File")}}.</p>
 
 <p>В примере ниже на лету создаётся текстовый файл и отправляется методом <code>POST</code> на сервер. Здесь используется обычный текст, но нетрудно представить себе пример с бинарным файлом.</p>
 
-<pre class="brush: js notranslate">var oReq = new XMLHttpRequest();
+<pre class="brush: js">var oReq = new XMLHttpRequest();
 oReq.open("POST", url, true);
 oReq.onload = function (oEvent) {
   // Uploaded.
@@ -105,11 +105,11 @@ var blob = new Blob(['abc123'], {type: 'text/plain'});
 oReq.send(blob);
 </pre>
 
-<h2 id="Sending_typed_arrays_as_binary_data" name="Sending_typed_arrays_as_binary_data">Отправка типизированных массивов как бинарных данных</h2>
+<h2 id="Sending_typed_arrays_as_binary_data">Отправка типизированных массивов как бинарных данных</h2>
 
 <p>Точно так же можно отправлять типизированные массивы JavaScript.</p>
 
-<pre class="brush: js notranslate">var myArray = new ArrayBuffer(512);
+<pre class="brush: js">var myArray = new ArrayBuffer(512);
 var longInt8View = new Uint8Array(myArray);
 
 for (var i=0; i&lt; longInt8View.length; i++) {
@@ -125,15 +125,15 @@ xhr.send(myArray);
 
 <div class="note"><strong>Примечание:</strong> Поддержка передачи объектов <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a> с помощью XMLHttpRequest появилась в Gecko 9.0 {{geckoRelease("9.0")}}. <strong>Add information about other browsers' support here.</strong></div>
 
-<h2 id="Submitting_forms_and_uploading_files" name="Submitting_forms_and_uploading_files">Отправка форм и загрузка файлов</h2>
+<h2 id="Submitting_forms_and_uploading_files">Отправка форм и загрузка файлов</h2>
 
 <p>См. <a href="/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">этот параграф</a>.</p>
 
-<h2 id="Firefox-specific_examples" name="Firefox-specific_examples">Примеры для Firefox</h2>
+<h2 id="Firefox-specific_examples">Примеры для Firefox</h2>
 
 <p>В этом примере двоичные данные передаются асинхронно методом <code>POST</code> и нестандартным методом Firefox's <code>sendAsBinary()</code>.</p>
 
-<pre class="brush: js notranslate">var req = new XMLHttpRequest();
+<pre class="brush: js">var req = new XMLHttpRequest();
 req.open("POST", url, true);
 // установите заголовок и тип данных
 req.setRequestHeader("Content-Length", 741);
@@ -146,9 +146,9 @@ req.sendAsBinary(aBody);
 
 <div class="note"><strong>Примечание:</strong> Нестандартный метод <code>sendAsBinary</code> начиная с Gecko 31 {{ geckoRelease(31) }} считается устаревшим и скоро будет удалён. Вместо него, как показывалось выше, можно использовать стандартный метод <code>send(Blob data)</code>.</div>
 
-<p>Кроме того, чтобы отправить бинарные данные можно передать экземпляр {{interface("nsIFileInputStream")}} в метод <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. В этом случае заголовок <code>Content-Length</code> заполнять явно необязательно, поскольку информация получается из потока автоматически:</p>
+<p>Кроме того, чтобы отправить бинарные данные можно передать экземпляр <code>nsIFileInputStream</code> в метод <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. В этом случае заголовок <code>Content-Length</code> заполнять явно необязательно, поскольку информация получается из потока автоматически:</p>
 
-<pre class="brush: js notranslate">// Создание потока из файла.
+<pre class="brush: js">// Создание потока из файла.
 var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
                        .createInstance(Components.interfaces.nsIFileInputStream);
 stream.init(file, 0x04 | 0x08, 0644, 0x04); // file is an nsIFile instance

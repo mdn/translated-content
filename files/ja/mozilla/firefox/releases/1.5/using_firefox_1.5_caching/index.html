@@ -15,7 +15,7 @@ original_slug: Using_Firefox_1.5_caching
 
 <h2 id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB">はじめに</h2>
 
-<p><a href="/ja/Firefox_1.5_for_developers" title="ja/Firefox_1.5_for_developers">Firefox 1.5</a> ではウェブページ全体をその JavaScript の状態も含めてメモリ内にキャッシュし、1 つのブラウザセッションとして使用します。訪問したページ間の戻る、進むという動作にページのロードが不要になり、JavaScript の状態も保存されます。この機能によってページナビゲーションが非常に高速化します。この機能は <strong>bfcache</strong>（"Back-Forward Cache" のこと）と呼ばれることもあります。このキャッシュ状態はユーザがブラウザを閉じるまで保存されます。</p>
+<p><a href="/ja/Firefox_1.5_for_developers">Firefox 1.5</a> ではウェブページ全体をその JavaScript の状態も含めてメモリ内にキャッシュし、1 つのブラウザセッションとして使用します。訪問したページ間の戻る、進むという動作にページのロードが不要になり、JavaScript の状態も保存されます。この機能によってページナビゲーションが非常に高速化します。この機能は <strong>bfcache</strong>（"Back-Forward Cache" のこと）と呼ばれることもあります。このキャッシュ状態はユーザがブラウザを閉じるまで保存されます。</p>
 
 <p>Firefox がページをキャッシュしない場合があります。ページがキャッシュされないプログラム的な理由でよくあるものをいくつか以下に示します。</p>
 
@@ -187,6 +187,6 @@ function loadOnlyFirst() {
 
 <h2 id="Firefox_.E7.94.A8.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E9.96.8B.E7.99.BA" name="Firefox_.E7.94.A8.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD.E3.81.AE.E9.96.8B.E7.99.BA">Firefox 用拡張機能の開発</h2>
 
-<p>Firefox 1.5 の <a href="/ja/Building_an_Extension" title="ja/Building_an_Extension">拡張機能</a> はこのキャッシュ機能を許容するものである必要があります。1.5 とそれより前のバージョンの両方と互換性を持つ Firefox の拡張機能を開発したいのであれば、キャッシュされるようにするトリガについては <code>load</code> イベントをリスンし、キャッシュされないようにするトリガについては <code>pageshow</code> イベントをリスンしてください。</p>
+<p>Firefox 1.5 の <a href="/ja/Building_an_Extension">拡張機能</a> はこのキャッシュ機能を許容するものである必要があります。1.5 とそれより前のバージョンの両方と互換性を持つ Firefox の拡張機能を開発したいのであれば、キャッシュされるようにするトリガについては <code>load</code> イベントをリスンし、キャッシュされないようにするトリガについては <code>pageshow</code> イベントをリスンしてください。</p>
 
 <p>例えば Firefox 用 Google ツールバーは、1.5 とそれより前のバージョンの両方と互換性を持たせるためには、autolink 関数については <code>load</code> イベントをリスンすべきであり、PageRank 関数については <code>pageshow</code> イベントをリスンすべきです。</p>

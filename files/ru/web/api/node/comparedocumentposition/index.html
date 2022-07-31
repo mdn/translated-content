@@ -4,9 +4,9 @@ slug: Web/API/Node/compareDocumentPosition
 translation_of: Web/API/Node/compareDocumentPosition
 ---
 <p>{{ ApiRef() }}</p>
-<h2 id="Summary" name="Summary">Аннотация</h2>
+<h2 id="Summary">Аннотация</h2>
 <p>Сравнивает позицию текущего узла и другого узла в любом другом документе.</p>
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox">node.compareDocumentPosition( otherNode )
 </pre>
 <ul>
@@ -14,7 +14,7 @@ translation_of: Web/API/Node/compareDocumentPosition
  <li><code>otherNode</code> это узел, с которым идёт сравнение.</li>
 </ul>
 <p>Возвращаемое значение вычисляется как отношение, которое имеется между <code>otherNode</code> и <code>node</code>.</p>
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 <p>Возвращаемое значение - это битовая маска со следующими значениями:</p>
 <table>
  <thead>
@@ -50,7 +50,7 @@ translation_of: Web/API/Node/compareDocumentPosition
   </tr>
  </tbody>
 </table>
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 <pre class="brush:js">var head = document.getElementsByTagName('head').item(0);
 if (head.compareDocumentPosition(document.body) &amp; Node.DOCUMENT_POSITION_FOLLOWING) {
   console.log("well-formed document");
@@ -61,7 +61,7 @@ if (head.compareDocumentPosition(document.body) &amp; Node.DOCUMENT_POSITION_FOL
 <div class="note">
  <p><strong>Замечание:</strong> <em>Из-за того, что результат, возвращаемый </em><code>compareDocumentPosition</code>, является битовой маской, <a href="/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators" title="/en-US/docs/JavaScript/Reference/Operators/Bitwise_Operators">побитовый оператор и</a> должен использоваться для осмысленных значений.</p>
 </div>
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 <table>
  <tbody>
   <tr>
@@ -70,12 +70,12 @@ if (head.compareDocumentPosition(document.body) &amp; Node.DOCUMENT_POSITION_FOL
    <td>Комментарий</td>
   </tr>
   <tr>
-   <td><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition" title="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition">DOM Level 3</a></td>
+   <td><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-compareDocumentPosition">DOM Level 3</a></td>
    <td>Рекомендация</td>
    <td> </td>
   </tr>
   <tr>
-   <td><a href="http://dom.spec.whatwg.org/#dom-node-comparedocumentposition" title="http://dom.spec.whatwg.org/#dom-node-comparedocumentposition">DOM Standard</a></td>
+   <td><a href="http://dom.spec.whatwg.org/#dom-node-comparedocumentposition">DOM Standard</a></td>
    <td>Живой стандарт</td>
    <td> </td>
   </tr>
@@ -84,6 +84,6 @@ if (head.compareDocumentPosition(document.body) &amp; Node.DOCUMENT_POSITION_FOL
 <h2 id="Смотрите_также">Смотрите также</h2>
 <ul>
  <li><code><a href="/en-US/docs/DOM/Node.contains" title="/en-US/docs/DOM/Node.contains">Node.contains</a></code></li>
- <li><a href="http://ejohn.org/blog/comparing-document-position/" title="http://ejohn.org/blog/comparing-document-position/">John Resig - Comparing Document Position</a></li>
+ <li><a href="http://ejohn.org/blog/comparing-document-position/">John Resig - Comparing Document Position</a></li>
 </ul>
 <p>{{ languages( {"ru-ru": "ru-ru/DOM/Node.compareDocumentPosition" } ) }}</p>

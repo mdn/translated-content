@@ -77,73 +77,7 @@ ten dpi                                            Incorecto: sólo deben ser ut
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>29</td>
-   <td>3.5 (1.9.1)<sup>[1]</sup></td>
-   <td>9</td>
-   <td>9.5</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td><code>dppx</code></td>
-   <td>29</td>
-   <td>{{CompatGeckoDesktop("16.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.10</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td><code>dppx</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("16.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.10</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Antes de Firefox 8 (Gecko 8.0), era erroneamente aceptado sólo dimensiones CSS que fueran {{cssxref("&lt;integer&gt;")}} seguidos por la unidad. A partir de esa versión, es compatible con cualquier dimensión ({{cssxref("&lt;number&gt;")}} CSS válido seguido inmediatamente por la unidad).</p>
-
-<p>[2] El Webkit engine no soporta resolución CSS  en la especificación, es necesario el uso del no estandar <code>device-pixel-ratio</code> query para el navegador Safari, ver <a href="https://bugs.webkit.org/show_bug.cgi?id=16832">bug 16832</a>.</p>
+{{Compat("css.types.resolution")}}
 
 <h2 id="See_also" name="See_also">Ver también</h2>
 

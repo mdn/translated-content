@@ -237,7 +237,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 <span class="keyword token">let</span> guessCount <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
 <span class="keyword token">let</span> resetButton<span class="punctuation token">;</span></code></pre>
 
-<p>上記のコードはプログラムが使用するデータを保持する変数と定数をセットアップしています。変数とは基本的には値 (数字や文字など) の入れ物です。 <code>let</code> (か <code>var</code>)  キーワードに続いて変数の名前を書くことで、変数を作成します (これらのキーワードの違いは<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">以降の記事</a>で見ます) 。定数は変更しない値を保持するのに、 <code>const</code> キーワードといっしょに使います。この場合では、定数をユーザーインターフェイスのパーツへの参照を保存するのに使っていて、一部の内部のテキストは変わるかも知れませんが、参照されるHTML要素は同じままです。</p>
+<p>上記のコードはプログラムが使用するデータを保持する変数と定数をセットアップしています。変数とは基本的には値 (数字や文字など) の入れ物です。 <code>let</code> (か <code>var</code>)  キーワードに続いて変数の名前を書くことで、変数を作成します (これらのキーワードの違いは<a href="/ja/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">以降の記事</a>で見ます) 。定数は変更しない値を保持するのに、 <code>const</code> キーワードといっしょに使います。この場合では、定数をユーザーインターフェイスのパーツへの参照を保存するのに使っていて、一部の内部のテキストは変わるかも知れませんが、参照されるHTML要素は同じままです。</p>
 
 <p>等号記号 ( <code>=</code> ) に続いて、与えたい値を書いて、変数や定数に値を代入できます。</p>
 
@@ -252,7 +252,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
   <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>lowOrHi<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
  </li>
- <li>次の 2 つの定数はにはテキスト入力フォームおよび送信ボタンへの参照が保持され、後で予想の送信をコントロールする際に使用されます。
+ <li>次の 2 つの定数にはテキスト入力フォームおよび送信ボタンへの参照が保持され、後で予想の送信をコントロールする際に使用されます。
   <pre class="brush: html notranslate">&lt;label for="guessField"&gt;予想を入力してください: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt;
 &lt;input type="submit" value="予想を投稿" class="guessSubmit"&gt;</pre>
  </li>
@@ -260,7 +260,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 </ul>
 
 <div class="note">
-<p><strong>注記</strong>: 変数や定数についてはこのコースの間に、<a href="https://developer.mozilla.org/ja/docs/user:chrisdavidmills/variables">次の記事</a>を始めとして何度も出てきます。</p>
+<p><strong>注記</strong>: 変数や定数についてはこのコースの間に、<a href="/ja/docs/user:chrisdavidmills/variables">次の記事</a>を始めとして何度も出てきます。</p>
 </div>
 
 <h3 id="Functions" name="Functions">関数</h3>
@@ -282,7 +282,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 <p><kbd>Return</kbd>/<kbd>Enter</kbd> を押した後で、"ここはプレースホルダです"という警告が表示されましたね。呼び出すと、いつでも警告が表示される関数を定義することができました。</p>
 
 <div class="note">
-<p><strong>注記</strong>: 関数についても<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions">このコースの後の方で</a>詳しく学びます。</p>
+<p><strong>注記</strong>: 関数についても<a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions">このコースの後の方で</a>詳しく学びます。</p>
 </div>
 
 <h3 id="Operators" name="Operators">演算子</h3>
@@ -334,7 +334,7 @@ hello;
 let greeting = name + hello;
 greeting;</pre>
 
-<p>累算<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">代入演算子</a>と呼ばれるもっと短い書き方もあります。すでにある文字列に、さらに文字を追加した結果を返したい場合などに使います。例えば、</p>
+<p>累算<a href="/ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">代入演算子</a>と呼ばれるもっと短い書き方もあります。すでにある文字列に、さらに文字を追加した結果を返したい場合などに使います。例えば、</p>
 
 <pre class="brush: js notranslate">name += 'が、こんにちは！と言っています。';</pre>
 
@@ -342,7 +342,7 @@ greeting;</pre>
 
 <pre class="brush: js notranslate">name = name + 'が、こんにちは！と言っています。';</pre>
 
-<p>true/false テスト（例えば条件内 - {{anch("Conditionals", "below")}}参照）を実行しているとき、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比較演算子</a>を使用します。例えば：</p>
+<p>true/false テスト（例えば条件内 - <a href="#conditionals">below</a>参照）を実行しているとき、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比較演算子</a>を使用します。例えば：</p>
 
 <table class="standard-table">
  <thead>
@@ -598,13 +598,13 @@ guesses.style.boxShadow = '3px 3px 6px black';</pre>
 <h2 id="In_this_module" name="In_this_module">このモジュール</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript って何?</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript への最初のダイブ</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/What_went_wrong">何が間違っている? JavaScript のトラブルシューティング</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Variables">必要な情報を保存する — 変数</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Math">JavaScript での数学入門 — 数値と演算子について</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Strings">テキストを扱う — JavaScript での文字列</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods">便利な文字列メソッド</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Arrays">配列</a></li>
- <li><a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator">評価: バカ話ジェネレーター</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript って何?</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript への最初のダイブ</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/What_went_wrong">何が間違っている? JavaScript のトラブルシューティング</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/Variables">必要な情報を保存する — 変数</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/Math">JavaScript での数学入門 — 数値と演算子について</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/Strings">テキストを扱う — JavaScript での文字列</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods">便利な文字列メソッド</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/Arrays">配列</a></li>
+ <li><a href="/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator">評価: バカ話ジェネレーター</a></li>
 </ul>

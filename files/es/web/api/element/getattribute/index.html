@@ -11,7 +11,7 @@ translation_of: Web/API/Element/getAttribute
 
 <h2 id="Summary" name="Summary">Resumen</h2>
 
-<p><span class="seoSummary"><code>getAttribute()</code> devuelve el valor del atributo especificado en el elemento.</span> Si el atributo especificado no existe, el valor retornado puede ser tanto <code>null</code> como <code>""</code> (una cadena vacía); ver {{Anch("Notes")}} para más detalles.</p>
+<p><span class="seoSummary"><code>getAttribute()</code> devuelve el valor del atributo especificado en el elemento.</span> Si el atributo especificado no existe, el valor retornado puede ser tanto <code>null</code> como <code>""</code> (una cadena vacía); ver <a href="#notes">Notes</a> para más detalles.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
@@ -36,7 +36,7 @@ alert(align); // Muestra el valor de la alineación(align) del elemento con id="
 
 <p>Cuando es invocado en un elemento HTML desde un DOM marcado como documento HTML, <code>getAttribute()</code> convierte a minúsculas el argumento antes de proceder.</p>
 
-<p>Esencialmente todos los navegadores (Firefox, Internet Explorer, versiones recientes de Opera, Safari, Konqueror, y iCab, siendo una lista no exhaustiva) devuelven <code>null</code> cuando el atributo especificado no existe en el elemento especificado y esto es lo que establece <a href="http://dom.spec.whatwg.org/#dom-element-getattribute" title="http://dom.spec.whatwg.org/#dom-element-getattribute">el actual borrador de la especificación del DOM</a>. Por otra parte, la antigua especificación del DOM 3 Core dice que el valor correcto de retorno es de hecho una <em>cadena vacía</em>, y algunas implementaciones de DOM aplican este comportamiento. La implementación de getAttribute en XUL (Gecko) sigue la especificación de DOM 3 Core y retorna una cadena vacía. Por consiguiente, es recomendable usar {{domxref("element.hasAttribute()")}} para verificar la existencia de un atributo previo a la utilización de <code>getAttribute()</code> si es posible que el atributo requerido no exista en el elemento especificado.</p>
+<p>Esencialmente todos los navegadores (Firefox, Internet Explorer, versiones recientes de Opera, Safari, Konqueror, y iCab, siendo una lista no exhaustiva) devuelven <code>null</code> cuando el atributo especificado no existe en el elemento especificado y esto es lo que establece <a href="http://dom.spec.whatwg.org/#dom-element-getattribute">el actual borrador de la especificación del DOM</a>. Por otra parte, la antigua especificación del DOM 3 Core dice que el valor correcto de retorno es de hecho una <em>cadena vacía</em>, y algunas implementaciones de DOM aplican este comportamiento. La implementación de getAttribute en XUL (Gecko) sigue la especificación de DOM 3 Core y retorna una cadena vacía. Por consiguiente, es recomendable usar {{domxref("element.hasAttribute()")}} para verificar la existencia de un atributo previo a la utilización de <code>getAttribute()</code> si es posible que el atributo requerido no exista en el elemento especificado.</p>
 
 <div>{{DOMAttributeMethods}}</div>
 

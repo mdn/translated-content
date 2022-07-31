@@ -86,7 +86,7 @@ Origin: http://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
 
-<p>서버는 {{HTTPHeader("Access-Control-Allow-Methods")}}로 응답하고, <code>POST</code>, <code>GET</code>, 그리고 <code>OPTIONS</code> 메소드를 통해서 해당하는 자원을 문의 (query) 할 수 알려준다. 이 헤더는 {{HTTPHeader("Allow")}} 응답 헤더와 비슷하지만 반드시 CORS 에 한해서만 사용된다. </p>
+<p>서버는 {{HTTPHeader("Access-Control-Allow-Methods")}}로 응답하고, <code>POST</code>, <code>GET</code>, 그리고 <code>OPTIONS</code> 메소드를 통해서 해당하는 자원을 문의 (query) 할 수 있다고 알려준다. 이 헤더는 {{HTTPHeader("Allow")}} 응답 헤더와 비슷하지만 반드시 CORS 에 한해서만 사용된다. </p>
 
 <pre>HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT

@@ -102,7 +102,7 @@ translation_of: Mozilla/Firefox/Releases/3.5
  <dd>JavaScript 1.8.1 における変更のすべての概要。</dd>
  <dt><a class="internal" href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf()</a></dt>
  <dd>このメソッドは指定されたオブジェクトのプロトタイプを返します。</dd>
- <dt><a class="internal" href="/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/JSON">ネイティブ JSON の使用</a></dt>
+ <dt><a class="internal" href="/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON">ネイティブ JSON の使用</a></dt>
  <dd>Firefox 3.5 は JSON をネイティブでサポートします。</dd>
  <dt>String オブジェクトの新しい trim メソッド</dt>
  <dd>String オブジェクトに <a class="internal" href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trim" rel="internal">trim()</a>、<a class="internal" href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart" rel="internal">trimLeft()</a>、そして <a class="internal" href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd" rel="internal">trimRight()</a> メソッドが定義されました。</dd>
@@ -153,21 +153,21 @@ translation_of: Mozilla/Firefox/Releases/3.5
 <h3 id="Other_improvements">その他の改善</h3>
 
 <ul>
- <li>Text ノードの <code><a class="internal" href="/en-US/docs/Web/API/Text/wholeText" rel="internal">wholeText</a></code> プロパティ と <code><a class="internal" href="/en-US/docs/Web/API/Text/replaceWholeText" rel="internal">replaceWholeText()</a></code> メソッドが実装されました。</li>
- <li><code><a class="internal" href="/en-US/docs/Web/API/Element/children" rel="internal">element.children</a></code> プロパティが追加されました。これは与えられた要素の子要素の<em>コレクション</em>を返します。</li>
+ <li>Text ノードの <code><a class="internal" href="/ja/docs/Web/API/Text/wholeText" rel="internal">wholeText</a></code> プロパティ と <code><a class="internal" href="/ja/docs/Web/API/Text/replaceWholeText" rel="internal">replaceWholeText()</a></code> メソッドが実装されました。</li>
+ <li><code><a class="internal" href="/ja/docs/Web/API/Element/children" rel="internal">element.children</a></code> プロパティが追加されました。これは与えられた要素の子要素の<em>コレクション</em>を返します。</li>
  <li>{{ domxref("element.contentEditable") }} プロパティに対応するようになり、編集可能な要素に対応するようになりました。</li>
- <li>DOM <a class="internal" href="/en-US/docs/Web/API/Element" rel="internal">Element</a> オブジェクトで Element Traversal API がサポートされました。</li>
- <li>HTML document ノードを <a class="internal" href="/en-US/docs/Web/API/Node/cloneNode"><code>cloneNode()</code></a> を用いて複製できるようになりました。</li>
- <li>非標準であるDOM の <code>getBoxObjectFor()</code> メソッドが削除されました。代わりとして <a class="internal" href="/en-US/docs/Web/API/Element/getBoundingClientRect"><code>getBoundingClientRect()</code></a> を利用すべきです。</li>
+ <li>DOM <a class="internal" href="/ja/docs/Web/API/Element" rel="internal">Element</a> オブジェクトで Element Traversal API がサポートされました。</li>
+ <li>HTML document ノードを <a class="internal" href="/ja/docs/Web/API/Node/cloneNode"><code>cloneNode()</code></a> を用いて複製できるようになりました。</li>
+ <li>非標準であるDOM の <code>getBoxObjectFor()</code> メソッドが削除されました。代わりとして <a class="internal" href="/ja/docs/Web/API/Element/getBoundingClientRect"><code>getBoundingClientRect()</code></a> を利用すべきです。</li>
  <li>伝達された DOM イベントを再伝達できるようになりました。これにより Firefox 3.5 は Acid 3 test 30 をパスします。</li>
  <li>DOM 2 Range ハンドリングが改善されました。</li>
- <li>非 Chrome スコープにおいて、例外でキャッチされるオブジェクトがスローされたオブジェクトを含む <a class="internal" href="/en-US/docs/XPConnect">XPConnect</a> ラッパーではなく実際にスローされたオブジェクトになりました。</li>
+ <li>非 Chrome スコープにおいて、例外でキャッチされるオブジェクトがスローされたオブジェクトを含む <a class="internal" href="/ja/docs/XPConnect">XPConnect</a> ラッパーではなく実際にスローされたオブジェクトになりました。</li>
  <li>SVG ID 参照が動的な変更に対応するようになりました。</li>
  <li>SVG フィルターが <code>foreignObject</code> でも動作するようになりました。</li>
- <li>互換性のために <code>GetSVGDocument()</code> メソッドが <a class="internal" href="/en-US/docs/Web/HTML/Element/object"><code>object</code></a> および <a class="internal" href="/en-US/docs/Web/HTML/Element/iframe"><code>iframe</code></a> 要素に追加されました。</li>
+ <li>互換性のために <code>GetSVGDocument()</code> メソッドが <a class="internal" href="/ja/docs/Web/HTML/Element/object"><code>object</code></a> および <a class="internal" href="/ja/docs/Web/HTML/Element/iframe"><code>iframe</code></a> 要素に追加されました。</li>
  <li>JavaScript においてオブジェクトおよび配列の初期化子によるプロパティの暗黙的な設定ではセッターの定義を行わないようになりました。詳細は <a href="/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated" title="web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated/">オブジェクトおよび配列の初期化子は評価時にセッターの定義を行うべきではない</a> というブログ投稿を参照してください。</li>
- <li><code>gDownloadLastDir.path</code> 変数は、パスではなく {{ interface("nsIFile") }} を参照しているので、 <code>gDownloadLastDir.file</code> に名称変更されました。</li>
- <li><code>gDownloadLastDirPath</code> 変数は、パスではなく {{ interface("nsIFile") }} を参照しているので、 <code>gDownloadLastDirFile</code> に名称変更されました。</li>
+ <li><code>gDownloadLastDir.path</code> 変数は、パスではなく <code>nsIFile</code> を参照しているので、 <code>gDownloadLastDir.file</code> に名称変更されました。</li>
+ <li><code>gDownloadLastDirPath</code> 変数は、パスではなく <code>nsIFile</code> を参照しているので、 <code>gDownloadLastDirFile</code> に名称変更されました。</li>
  <li>Firefox 3.5 から、<code>XPCNativeWrapper</code> オートメーションを得る Chrome パッケージでの <code>data:</code> バインディングを利用することはできなくなります。</li>
 </ul>
 
@@ -178,31 +178,31 @@ translation_of: Mozilla/Firefox/Releases/3.5
 <h4 id="New_components_and_functionality">新しいコンポーネントと機能</h4>
 
 <dl>
- <dt><a class="internal" href="/en-US/Supporting_private_browsing_mode">プライベートブラウジングモードのサポート</a></dt>
+ <dt><a class="internal" href="/ja/Supporting_private_browsing_mode">プライベートブラウジングモードのサポート</a></dt>
  <dd>Firefox 3.5 ではプライベートブラウジングモードが提供されます。これはユーザの活動を記録しません。拡張はこの記事で挙げるガイドラインに従ってプライベートブラウジングをサポートすることができます。</dd>
- <dt><a class="internal" href="/en-US/Security_changes_in_Firefox_3.5">Firefox 3.5 でのセキュリティの変更</a></dt>
+ <dt><a class="internal" href="/ja/Security_changes_in_Firefox_3.5">Firefox 3.5 でのセキュリティの変更</a></dt>
  <dd>この記事は Firefox 3.5 でのセキュリティ関連の変更をカバーしています。</dd>
- <dt><a class="internal" href="/en-US/Theme_changes_in_Firefox_3.5">Firefox 3.5 でのテーマの変更</a></dt>
+ <dt><a class="internal" href="/ja/Theme_changes_in_Firefox_3.5">Firefox 3.5 でのテーマの変更</a></dt>
  <dd>この記事は Firefox 3.5 でのテーマ関連の変更をカバーしています。</dd>
- <dt><a class="internal" href="/en-US/Monitoring_WiFi_access_points">WiFi アクセスポイントのモニタリング</a></dt>
+ <dt><a class="internal" href="/ja/Monitoring_WiFi_access_points">WiFi アクセスポイントのモニタリング</a></dt>
  <dd>UniversalXPConnect 特権を持つコードで有効なアクセスポイントの一覧がモニタリング可能になり、個々の SSIDs、MAC アドレス、シグナル強度の情報が取得できます。 これを Geolocation と連携して用いることで WiFi ベースのロケーションサービスを提供できます。</dd>
 </dl>
 
 <h4 id="Notable_changes_and_improvements">注目すべき変更と改善</h4>
 
 <ul>
- <li>XUL <code><a class="internal" href="/en-US/docs/XUL/textbox" rel="internal">textbox</a></code> ウィジェットが検索フィールドとして利用するための <code><a class="internal" href="/en-US/docs/XUL/Attribute/textbox.type" rel="internal">search</a></code> type を提供するようになりました。</li>
- <li>ウィンドウ間のタブのドラッグ＆ドロップのサポートのために、<a class="internal" href="/en-US/docs/XUL/browser"><code>browser</code></a> ウィジェットに <a class="internal" href="/en-US/XUL/Method/SwapDocShells"><code>swapDocShells()</code></a> メソッドが定義されました。</li>
- <li><a class="internal" href="/en-US/docs/XUL/panel"><code>panel</code></a> 要素に <a class="internal" href="/en-US/docs/XUL/Attribute/panel.level"><code>level</code></a> 属性が追加されました。 これは panel を他のアプリケーションの手前に表示するか、単純に panel が含まれるウィンドウの手前に表示するかどうかを指定できます。</li>
+ <li>XUL <code><a class="internal" href="/ja/docs/XUL/textbox" rel="internal">textbox</a></code> ウィジェットが検索フィールドとして利用するための <code><a class="internal" href="/ja/docs/XUL/Attribute/textbox.type" rel="internal">search</a></code> type を提供するようになりました。</li>
+ <li>ウィンドウ間のタブのドラッグ＆ドロップのサポートのために、<a class="internal" href="/ja/docs/XUL/browser"><code>browser</code></a> ウィジェットに <a class="internal" href="/ja/XUL/Method/SwapDocShells"><code>swapDocShells()</code></a> メソッドが定義されました。</li>
+ <li><a class="internal" href="/ja/docs/XUL/panel"><code>panel</code></a> 要素に <a class="internal" href="/ja/docs/XUL/Attribute/panel.level"><code>level</code></a> 属性が追加されました。 これは panel を他のアプリケーションの手前に表示するか、単純に panel が含まれるウィンドウの手前に表示するかどうかを指定できます。</li>
  <li>XUL 要素が <code>clientHeight</code>、<code>clientWidth</code>、<code>scrollHeight</code>、<code>scrollWidth </code> プロパティをサポートするようになりました。</li>
- <li><a class="internal" href="/en-US/docs/XUL/keyset"><code>keyset</code></a>s now include a <code>disabled</code> 要素に <code>disabled</code> 属性が追加されました。</li>
- <li>加えて、 <code>keyset</code> 要素はノードの <a class="internal" href="/en-US/docs/Web/API/Node/removeChild"><code>removeChild()</code></a> メソッドを用いて削除可能になりました。</li>
- <li><code><a href="/en-US/docs/mozIStorageStatement" rel="internal">mozIStorageStatement</a></code> には <code>initialize()</code> メソッドがありましたが、削除されました。利用者は新しいステートメントオブジェクトを得るための代替として <code><a href="/en-US/docs/mozIStorageConnection#createStatement()" rel="internal">createStatement()</a></code> メソッドを使うべきです。</li>
- <li><a class="internal" href="/en-US/docs/Storage">Storage</a> API が非同期リクエストのサポートを提供するようになりました。</li>
- <li><a class="internal" href="/en-US/docs/XPCOM_Interface_Reference/nsICookie2"><code>nsICookie2</code></a> インターフェースに新しく <code>creationTime</code> 属性が追加され、Cookie が作成された時間を取得できるようになりました。</li>
- <li>プロトコルが登録することを許可されることを保証するために Chrome 登録の間にチェックされる <code><a class="internal" href="/en-US/docs/nsIProtocolHandler" rel="internal">nsIProtocolHandler</a></code> へのフラグが追加されました (<code>URI_IS_LOCAL_RESOURCE</code>)。</li>
+ <li><a class="internal" href="/ja/docs/XUL/keyset"><code>keyset</code></a>s now include a <code>disabled</code> 要素に <code>disabled</code> 属性が追加されました。</li>
+ <li>加えて、 <code>keyset</code> 要素はノードの <a class="internal" href="/ja/docs/Web/API/Node/removeChild"><code>removeChild()</code></a> メソッドを用いて削除可能になりました。</li>
+ <li><code><a href="/ja/docs/mozIStorageStatement" rel="internal">mozIStorageStatement</a></code> には <code>initialize()</code> メソッドがありましたが、削除されました。利用者は新しいステートメントオブジェクトを得るための代替として <code><a href="/ja/docs/mozIStorageConnection#createStatement()" rel="internal">createStatement()</a></code> メソッドを使うべきです。</li>
+ <li><a class="internal" href="/ja/docs/Storage">Storage</a> API が非同期リクエストのサポートを提供するようになりました。</li>
+ <li><a class="internal" href="/ja/docs/XPCOM_Interface_Reference/nsICookie2"><code>nsICookie2</code></a> インターフェースに新しく <code>creationTime</code> 属性が追加され、Cookie が作成された時間を取得できるようになりました。</li>
+ <li>プロトコルが登録することを許可されることを保証するために Chrome 登録の間にチェックされる <code><a class="internal" href="/ja/docs/nsIProtocolHandler" rel="internal">nsIProtocolHandler</a></code> へのフラグが追加されました (<code>URI_IS_LOCAL_RESOURCE</code>)。</li>
  <li>Linux で Firefox がプラグインを探すために <code>/usr/lib/mozilla/plugins</code> を見るようになりました。以前にサポートされていた場所も同様に検索対象です。</li>
- <li>プラグイン API がプライベートブラウジングモードのサポートを含むために更新されました。これにより、<code>NPNprivateModeBool</code> を用いているプライベートブラウジングモードの状態を調べるために、 <a class="internal" href="/en-US/docs/NPN_GetValue"><code>NPN_GetValue()</code></a> を使用できるようになりました。</li>
+ <li>プラグイン API がプライベートブラウジングモードのサポートを含むために更新されました。これにより、<code>NPNprivateModeBool</code> を用いているプライベートブラウジングモードの状態を調べるために、 <a class="internal" href="/ja/docs/NPN_GetValue"><code>NPN_GetValue()</code></a> を使用できるようになりました。</li>
 </ul>
 
 <h2 id="New_features_for_end_users">エンドユーザ向け新機能</h2>

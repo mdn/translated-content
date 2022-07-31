@@ -23,7 +23,7 @@ translation_of: Web/CSS/frequency
  <li><code><a id="kHz">kHz</a></code>, que representa una frecuencia en kilohertz. Ejemplos: <code>0kHz</code>, <code>1.5kHz</code>, <code>10kHz</code>.</li>
 </ul>
 
-<p>Aunque todas las unidades representen la misma frecuencia para el valor <code>0</code>, la unidad no debe ser omitida en ese caso, puesto que no es un valor {{cssxref("length")}}: <code>0</code>, no es válido, y no representa <code>0Hz</code>, <code>0kHz</code>. Aunque las unidades sean insensibles a mayúsculas en CSS, es buena práctica usar una H mayúscula para <code>Hz</code> y <code>kHz</code>, como indica el <a class="external" href="https://es.wikipedia.org/wiki/Sistema_Internacional_de_Unidades" title="http://en.wikipedia.org/wiki/International_System_of_Units">SI</a>, siendo <a class="external" href="http://en.wikipedia.org/wiki/Heinrich_Hertz" title="http://en.wikipedia.org/wiki/Heinrich_Hertz">Hertz</a> un apellido.</p>
+<p>Aunque todas las unidades representen la misma frecuencia para el valor <code>0</code>, la unidad no debe ser omitida en ese caso, puesto que no es un valor {{cssxref("length")}}: <code>0</code>, no es válido, y no representa <code>0Hz</code>, <code>0kHz</code>. Aunque las unidades sean insensibles a mayúsculas en CSS, es buena práctica usar una H mayúscula para <code>Hz</code> y <code>kHz</code>, como indica el <a class="external" href="https://es.wikipedia.org/wiki/Sistema_Internacional_de_Unidades">SI</a>, siendo <a class="external" href="http://en.wikipedia.org/wiki/Heinrich_Hertz">Hertz</a> un apellido.</p>
 
 <h2 id="Ejemplos"><span>Ejemplos</span></h2>
 
@@ -106,56 +106,8 @@ translation_of: Web/CSS/frequency
  </tbody>
 </table>
 
-<p>Este tipo de dato fue introducido inicialmente en <a class="external" href="http://www.w3.org/TR/CSS2/" title="http://www.w3.org/TR/CSS2/">CSS Nivel 2</a> para el ya obsoleto <a href="/en/CSS/Aural" title="aural">grupo de merios aural</a>, donde era usado para definir el tono de la voz. Dicho grupo fue descontinuado desde entonces, pero el tipo de datos <code>&lt;frequency&gt;</code> ha sido reintroducido en CSS3, aunque ninguna propiedad CSS lo usa por el momento.</p>
+<p>Este tipo de dato fue introducido inicialmente en <a class="external" href="http://www.w3.org/TR/CSS2/">CSS Nivel 2</a> para el ya obsoleto <a href="/en/CSS/Aural" title="aural">grupo de merios aural</a>, donde era usado para definir el tono de la voz. Dicho grupo fue descontinuado desde entonces, pero el tipo de datos <code>&lt;frequency&gt;</code> ha sido reintroducido en CSS3, aunque ninguna propiedad CSS lo usa por el momento.</p>
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Algunas versiones de Opera pueden tener (partialmente) soporte para el grupo de medios aural obsoleto, y con soporte al tipo de datos <code>&lt;frequency&gt;</code> a través de la propiedad de tono.</p>
+{{Compat("css.types.frequency")}}

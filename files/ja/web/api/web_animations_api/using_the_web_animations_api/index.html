@@ -31,7 +31,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 
 <h3 id="CSS_バージョン">CSS バージョン</h3>
 
-<p>アリスがうさぎの穴からオチてワンダーランドに導かれる様子を示した CSS で書かれている転がり落ちるアニメーションです。(完全な <a href="http://codepen.io/rachelnabors/pen/QyOqqW">Codepen のコード</a> を参照してください)</p>
+<p>アリスがうさぎの穴から落ちてワンダーランドに導かれる様子を示した CSS で書かれている転がり落ちるアニメーションです。(完全な <a href="http://codepen.io/rachelnabors/pen/QyOqqW">Codepen のコード</a> を参照してください)</p>
 
 <p><a href="http://codepen.io/rachelnabors/pen/rxpmJL"><img alt="Alice Tumbling down the rabbit's hole." src="https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
 
@@ -96,7 +96,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 </ul>
 
 <div class="note">
-<p>CSS アニメーションで使用される用語と Web Animations で利用される用語とではいくつか小さな違いがあります。例えば、Web Animationsは <code>"infinite"</code> という文字列を利用しない代わりに JavaScript の予約語である <code>Infinity</code> を利用します。そして、 <code>timing-function</code> の代わりに <code>easing</code> を利用します。デフォルトのt <a href="/ja-JP/docs/Web/CSS/animation-timing-function">animation-timing-function</a> が簡単な <code>ease</code> であるCSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは <code>linear</code> (線形)であるため、ここではイージング値をリストにしていません。</p>
+<p>CSS アニメーションで使用される用語と Web Animations で利用される用語とではいくつか小さな違いがあります。例えば、Web Animationsは <code>"infinite"</code> という文字列を利用しない代わりに JavaScript の予約語である <code>Infinity</code> を利用します。そして、 <code>timing-function</code> の代わりに <code>easing</code> を利用します。デフォルトの <a href="/ja-JP/docs/Web/CSS/animation-timing-function">animation-timing-function</a> が簡単な <code>ease</code> であるCSS アニメーションとは異なり、Web Animation API ではデフォルトのイージングは <code>linear</code> (線形)であるため、ここではイージング値をリストにしていません。</p>
 </div>
 
 <h4 id="パーツをまとめる">パーツをまとめる</h4>
@@ -108,7 +108,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
   aliceTiming
 )</pre>
 
-<p>アニメーションが再生が開始されます！(<a href="http://codepen.io/rachelnabors/pen/rxpmJL">Codepen の完成バージョン</a>を参照してください。)</p>
+<p>アニメーションの再生が開始されます！(<a href="http://codepen.io/rachelnabors/pen/rxpmJL">Codepen の完成バージョン</a>を参照してください。)</p>
 
 <p><code>animate()</code> メソッドは、CSS でアニメーション化出来る DOM 要素を用いて呼び出し可能です。そして、それはいくつかの方法で書くことが出来ます。キーフレームとタイミングプロパティを作成する代わりに、次のように直接渡すことが出来ます。</p>
 
@@ -137,7 +137,7 @@ translation_of: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 <p>Web Animation API を使用して CSS アニメーションを作成することが可能ですが、API が本当に役立つ時はアニメーションの再生を制御するときです。Web Animation API は、再生を制御するための便利ないくつかのメソッドを提供しています。アリスが拡大/縮小するゲームでのアニメーションの一時停止と再生を見てみましょう( <a href="http://codepen.io/rachelnabors/pen/PNYGZQ">Codepen の完全なコード</a>をご覧ください。)<br>
  <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010"><img alt="Playing the growing and shrinking game with Alice." src="https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif" style="display: block; height: 374px; margin-left: auto; margin-right: auto; width: 700px;"></a></p>
 
-<p>このゲームでは、アリスはちさなボトルから大きなボトルに移動するアニメーションを使用しており、ボトルとカップケーキを使い制御します。どちらにも独自のアニメーションがあります。</p>
+<p>このゲームでは、アリスは小さなボトルから大きなボトルに移動するアニメーションを使用しており、ボトルとカップケーキを使い制御します。どちらにも独自のアニメーションがあります。</p>
 
 <h3 id="アニメーションの一時停止と再生">アニメーションの一時停止と再生</h3>
 
@@ -188,7 +188,7 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
  <li>{{domxref("Animation.reverse()")}} を実行すると ({{domxref("Animation.playbackRate")}} に負数を設定し、アニメーションの再生方向を逆方向にします。</li>
 </ul>
 
-<p>最初に <code>playbackRate</code> を見てみましょう。負数の playbackRate はアニメーションを逆に実行させます。アリスがボトルから飲むと彼女は地位sかうなります。これは、ボトルが彼女のアニメーションの playbackRate を 1 から -1 に変更するためです。</p>
+<p>最初に <code>playbackRate</code> を見てみましょう。負数の playbackRate はアニメーションを逆に実行させます。アリスがボトルから飲むと彼女は小さくうなります。これは、ボトルが彼女のアニメーションの playbackRate を 1 から -1 に変更するためです。</p>
 
 <pre class="brush: js notranslate">var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
@@ -198,11 +198,11 @@ cake.addEventListener("touchstart", growAlice, false);</pre>
 bottle.addEventListener("mousedown", shrinkAlice, false);
 bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 
-<p><a href="https://ja.wikipedia.org/wiki/%E9%8F%A1%E3%81%AE%E5%9B%BD%E3%81%AE%E3%82%A2%E3%83%AA%E3%82%B9">鏡の国のアリス</a>では、アリスは走り続けなければならない世界に移動します。レッドクイーンのレースの例では、アリストレッドクイーンが所定の位置にとどまっています。(<a href="http://codepen.io/rachelnabors/pen/PNGGaV">Codepen の</a> 完全なコードを参照してください。)</p>
+<p><a href="https://ja.wikipedia.org/wiki/%E9%8F%A1%E3%81%AE%E5%9B%BD%E3%81%AE%E3%82%A2%E3%83%AA%E3%82%B9">鏡の国のアリス</a>では、アリスは走り続けなければならない世界に移動します。レッドクイーンのレースの例では、アリスとレッドクイーンが所定の位置にとどまっています。(<a href="http://codepen.io/rachelnabors/pen/PNGGaV">Codepen の</a> 完全なコードを参照してください。)</p>
 
 <p><a href="http://codepen.io/rachelnabors/pen/PNGGaV"><img alt="Alice and the Red Queen race to get to the next square in this game." src="https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif" style="display: block; height: 342px; margin-left: auto; margin-right: auto; width: 640px;"></a></p>
 
-<p>小さな子どもたちは、オートマトンのチェスのコマとは異なり、疲れやすいのでアリスは常に速度をとしています。彼女のアニメーションの <code>playbackRate</code> に衰えを設定することでコードでこれを表現しました。</p>
+<p>小さな子どもたちは、オートマトンのチェスのコマとは異なり、疲れやすいのでアリスは常に速度を落としています。彼女のアニメーションの <code>playbackRate</code> に衰えを設定することでコードでこれを表現しました。</p>
 
 <pre class="brush: js notranslate">setInterval( function() {
 
@@ -224,7 +224,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);</pre>
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);</pre>
 
-<p>また、背景要素にはクリックまたｈタップしたときに影響を受ける<code>playbackRate</code> を設定しています。アリスとレッドクイーンを 2 倍早く走らせたらどうなると思いますか？速度を落とすとどうなると思いますか？</p>
+<p>また、背景要素にはクリックまたはタップしたときに影響を受ける<code>playbackRate</code> を設定しています。アリスとレッドクイーンを 2 倍早く走らせたらどうなると思いますか？速度を落とすとどうなると思いますか？</p>
 
 <h2 id="アニメーションから情報を取得する">アニメーションから情報を取得する</h2>
 
@@ -262,12 +262,12 @@ document.addEventListener("touchstart", goFaster);</pre>
 
 <pre class="brush: js notranslate">aliceChange.currentTime = 4000;</pre>
 
-<p>しかし、アニメーションの作業中にアリスの間隔時間を大幅に変更する可能性があります。アリスの <code>currentTime</code> を動的に設定するとよいのではないでしょうか。従って、一度に 2 つの更新を行う必要はありません。実際のところ、aliceChange の {{domxref("Animation.effect")}} プロパティをあsン称することでこれを実行できます。プロパティはアクティブなエフェクトの全ての詳細を含むオブジェクトを返します。</p>
+<p>しかし、アニメーションの作業中にアリスの間隔時間を大幅に変更する可能性があります。アリスの <code>currentTime</code> を動的に設定するとよいのではないでしょうか。従って、一度に 2 つの更新を行う必要はありません。実際のところ、aliceChange の {{domxref("Animation.effect")}} プロパティを参照することでこれを実行できます。プロパティはアクティブなエフェクトの全ての詳細を含むオブジェクトを返します。</p>
 
 <pre class="brush: js notranslate">aliceChange.currentTime = aliceChange.effect.timing.duration / 2;</pre>
 
 <p><code>effect</code> を利用すると、アニメーションの <code>keyframe</code> と <code>timing</code> オブジェクトにアクセスできます。<code>aliceChange.effect.timing</code> はアリスのタイミングオブジェクト({{domxref("AnimationEffectTimingReadOnly")}}) 型) を示します。これには、{{domxref("AnimationEffectTimingReadOnly.duration")}} も含まれます。<br>
- アニメーションのタイムラインの中間点を取得するために、アリスの長さを半分に分割し、通常の身長に設定できます。アリアスのアニメーションを逆再生して、どちらの方向にも再生したり、小さくしたり、大きくしたり出来ます！</p>
+ アニメーションのタイムラインの中間点を取得するために、アリスの長さを半分に分割し、通常の身長に設定できます。アリスのアニメーションを逆再生して、どちらの方向にも再生したり、小さくしたり、大きくしたり出来ます！</p>
 
 <p>また、ボトルとケーキの再生時間を設定するときにも同じことが出来ます。</p>
 
@@ -314,7 +314,7 @@ drinking.pause();</pre>
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong><code>getAnimations()</code> と <code>effect</code> はこの記事執筆時点では完全にサポートされていませんが plyfill は今現在サポートしています。</p>
+<p><strong>注意:</strong><code>getAnimations()</code> と <code>effect</code> はこの記事執筆時点では完全にサポートされていませんが polyfill は今現在サポートしています。</p>
 </div>
 
 <h2 id="コールバックと_Promise">コールバックと Promise</h2>
@@ -337,7 +337,7 @@ aliceChange.onfinish = endGame;
 
 </pre>
 
-<p>さらに良いことに、Web Animations APIではアニメーション終了時に解決されるか、またはキャンセル時に拒否される <code><a href="/docs/Web/API/Animation/finished">finished</a></code> プロミスを提供しています。</p>
+<p>さらに良いことに、Web Animations APIではアニメーション終了時に解決されるか、またはキャンセル時に拒否される <code><a href="/ja/docs/Web/API/Animation/finished">finished</a></code> プロミスを提供しています。</p>
 
 <h2 id="まとめ">まとめ</h2>
 
@@ -347,6 +347,6 @@ aliceChange.onfinish = endGame;
 
 <ul>
  <li class="post__title"><a href="http://codepen.io/collection/bpEza/">Codepen の不思議の国のアリス</a> を使い、フォーク・シェアしてください。</li>
- <li class="post__title"><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Element.animte を気にしないようにアニメーションする方法</a>：Web Animations API の作られた背景・他のアニメーション手法よりパフォーマンスが優れている理由を説明した秀逸な記事です。</li>
+ <li class="post__title"><a href="https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/">Element.animate を気にしないようにアニメーションする方法</a>：Web Animations API の作られた背景・他のアニメーション手法よりパフォーマンスが優れている理由を説明した秀逸な記事です。</li>
  <li class="post__title"><a href="https://github.com/web-animations/web-animations-js">web-animations-js</a> ： Web Animations API の polyfill です。</li>
 </ul>

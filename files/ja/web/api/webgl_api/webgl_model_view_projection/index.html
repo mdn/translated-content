@@ -5,7 +5,7 @@ translation_of: Web/API/WebGL_API/WebGL_model_view_projection
 ---
 <p>{{WebGLSidebar}}</p>
 
-<p class="summary">この記事では、<a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3Dシーンを構成するときに通常使用される中心的な3つの行列である、モデル、ビュー、射影行列について説明します。</p>
+<p class="summary">この記事では、<a href="/ja/docs/Web/API/WebGL_API">WebGL</a> プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3Dシーンを構成するときに通常使用される中心的な3つの行列である、モデル、ビュー、射影行列について説明します。</p>
 
 <div class="note">
 <p><strong>Note</strong>: This article is also available as an <a href="https://github.com/TatumCreative/mdn-model-view-projection">MDN content kit</a>. It also uses a collection of <a href="https://github.com/TatumCreative/mdn-webgl">utility functions</a> available under the <code>MDN</code> global object.</p>
@@ -408,7 +408,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 <p><img alt="Filling the W component and creating some projection." src="https://mdn.mozillademos.org/files/11379/part4.png" style="height: 531px; width: 800px;"></p>
 
-<p>See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See {{anch("Perspective projection matrix")}} below for an introduction to how to use more complex matrices to help control and prevent clipping.</p>
+<p>See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See <a href="#perspective_projection_matrix">Perspective projection matrix</a> below for an introduction to how to use more complex matrices to help control and prevent clipping.</p>
 
 <h3 id="Exercise">Exercise</h3>
 
@@ -491,7 +491,7 @@ var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
 };
 </pre>
 
-<p>Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional <strong>{{anch("Projection matrix", "projection matrix")}}</strong>, which (as the name suggests) projects 3D points onto a 2D drawing surface:</p>
+<p>Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional <strong><a href="#projection_matrix">projection matrix</a></strong>, which (as the name suggests) projects 3D points onto a 2D drawing surface:</p>
 
 <pre class="brush: glsl notranslate">// Make sure to read the transformations in reverse order
 gl_Position = projection * model * vec4(position, 1.0);
@@ -687,6 +687,6 @@ gl_Position = projection * model * vec4(position, 1.0);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a></li>
+ <li><a href="/ja/docs/Web/API/WebGL_API">WebGL</a></li>
  <li>{{interwiki("wikipedia", "3D projection")}}</li>
 </ul>

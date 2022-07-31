@@ -10,100 +10,100 @@ tags:
   - Web Workers
   - Worker
   - Workers
+browser-compat: api.Worker
 translation_of: Web/API/Worker
 ---
-<p>{{APIRef("Web Workers API")}}</p>
+<div>{{APIRef("Web Workers API")}}</div>
 
-<p><a href="/ja/docs/Web/API/Web_Workers_API">Web Workers API</a> の <strong><code>Worker</code></strong> インターフェイスはバックグラウンドで行われるタスクを実行することができ、そのタスクは簡単に生成され、かつ作成元にメッセージを送り返すことができます。<code>Worker()</code> コンストラクターを呼び出しワーカースレッドを走らせるスクリプトを特定してあげるだけでワーカーオブジェクトを作成することができます。</p>
+<p><span class="seoSummary"><strong><code>Worker</code></strong> は <a href="/ja/docs/Web/API/Web_Workers_API">Web Workers API</a> のインターフェイスです。スクリプトで生成することができるバックグラウンドタスクを表し、作成元にメッセージを送り返すことができます。</span>ワーカーは <code>Worker("path/to/worker/script")</code> コンストラクターを呼び出すことで生成することができます。</p>
 
-<p>ワーカーは同じ親ページの同一 <a href="/ja/docs/Web/Security/Same-origin_policy">オリジン</a> 内でホストされている限り、他の新しいワーカーを発生させる可能性があります (注記: 入れ子の worker は <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">WebKit で未実装です</a>)。それにくわえて、ワーカーはネットワーク I/O のための <a href="/ja/docs/DOM/XMLHttpRequest" title="XMLHttpRequest"><code>XMLHttpRequest</code></a> を使用することもあります。なお、<code>XMLHttpRequest</code> の <code>responseXML</code> と <code>channel</code> 属性は常に <code>null</code> を返す決まりです。</p>
+<p>ワーカーは同じ親ページの同一 <a href="/ja/docs/Web/Security/Same-origin_policy">オリジン</a> 内でホストされている限り、他の新しいワーカーを生成することができます (注: 入れ子になったワーカーは <a href="https://bugs.webkit.org/show_bug.cgi?id=22723">WebKit では未実装です</a>)。</p>
 
-<p>必ずしも <a href="/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers" title="Functions and classes available to Web Workers">すべてのインターフェイスと関数</a> が <code>Worker</code> のスクリプトに関連づいているわけではありません。</p>
+<p><a href="/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers" title="Web Worker で利用可能な関数とクラス">利用可能なすべてのインターフェイスと関数</a> がすべて <code>Worker</code> の中で利用できるとは限りません。ワーカーはネットワーク通信のために {{domxref("XMLHttpRequest")}} を使うことができますが、 <code>responseXML</code> 属性と <code>channel</code> 属性は常に <code>null</code> になります。 (<code><a href="/ja/docs/Web/API/Fetch_API">fetch</a></code> も利用可能であり、このような制限はありません。)</p>
 
-<p>Firefox において、ワーカーをエクステンションを用いて <a href="/ja/docs/js-ctypes" title="js-ctypes">js-ctypes</a> にアクセスしたい場合、{{ domxref("ChromeWorker") }} オブジェクトを代わりに使用しなくてはいけません。</p>
-
-<h2 id="Constructors" name="Constructors">コンストラクター</h2>
+<h2 id="Constructors">コンストラクター</h2>
 
 <dl>
  <dt>{{domxref("Worker.Worker", "Worker()")}}</dt>
- <dd>特有の URL で動作する専用ワーカーのインスタンスを生成することができます。また、<a href="/ja/docs/Web/API/Blob">Blobs</a> を用いてワーカーを生成することもできます。</dd>
+ <dd>指定された URLにあるスクリプトを実行する専用ウェブワーカーのインスタンスを生成します。また、 <a href="/ja/docs/Web/API/Blob">Blob URL</a> を用いてワーカーを生成することもできます。</dd>
 </dl>
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+<h2 id="Properties">プロパティ</h2>
 
-<p><em>{{domxref("EventTarget")}} より継承しています。また、{{domxref("AbstractWorker")}} のメソッドを定義しています。</em></p>
+<p><em>親インターフェイスである {{domxref("EventTarget")}} からプロパティを継承しています。</em></p>
 
-<h3 id="Event_handlers" name="Event_handlers">イベントハンドラー</h3>
+<h3 id="Event_handlers">イベントハンドラー</h3>
 
 <dl>
- <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd><code>error</code> タイプの {{domxref("ErrorEvent")}} がワーカーを通して発生するとき、常に {{ domxref("EventListener") }} を呼びます。これは {{domxref("AbstractWorker")}} からの継承メソッドです。</dd>
+ <dt>{{domxref("Worker.onerror")}}</dt>
+ <dd>{{ domxref("EventListener") }} であり、 {{domxref("ErrorEvent")}} の type が <code>error</code> であるイベントが発行されるたびに呼び出されます。</dd>
  <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd><code>message</code> タイプの {{domxref("MessageEvent")}} がワーカーを通して発生するときは常に {{ domxref("EventListener") }} を呼びます。例えば、{{domxref("DedicatedWorkerGlobalScope.postMessage")}} を経由して親要素のドキュメントにメッセージが送信されます。メッセージは {{domxref("MessageEvent.data", "data")}} プロパティに保存されます。</dd>
+ <dd>{{ domxref("EventListener") }} であり、 {{domxref("MessageEvent")}} の type が <code>message</code> であるイベントが発行されるたびに呼び出されます。すなわち、 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} を経由して親文書にメッセージが送信されます。メッセージは {{domxref("MessageEvent.data", "data")}} プロパティに格納されます。</dd>
  <dt>{{domxref("Worker.onmessageerror")}}</dt>
- <dd>{{event("messageerror")}} イベントが発生したときに呼び出されるコードを表す {{event("Event_handlers", "event handler")}} です。</dd>
+ <dd><a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー</a>であり、 {{event("messageerror")}} イベントが発行されるたびに呼び出されるコードを表します。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+<h2 id="Methods">メソッド</h2>
 
-<p><em>{{domxref("EventTarget")}} より継承しています。また、{{domxref("AbstractWorker")}} のメソッドを定義しています。</em></p>
+<p><em>親である {{domxref("EventTarget")}} からメソッドを継承しています。</em></p>
 
 <dl>
  <dt>{{domxref("Worker.postMessage()")}}</dt>
- <dd>ワーカーの内部スコープにメッセージを送ることができます。このメッセージは、<strong>いかなる</strong> JavaScript のオブジェクトでも送ることができます。</dd>
+ <dd>ワーカーの内部スコープに、あらゆる JavaScript オブジェクトの形式のメッセージも送ることができます。</dd>
  <dt>{{domxref("Worker.terminate()")}}</dt>
- <dd>ワーカーを直ちに終了させます。実行中の処理は完了を待たずに終了させられます。ServiceWorker インスタンスはこのメソッドを備えていません。</dd>
+ <dd>ワーカーを直ちに終了させます。ワーカーに終了処理を行わせず、直ちに終了させます。 <code><a href="/ja/docs/Web/API/ServiceWorker">ServiceWorker</a></code> インスタンスはこのメソッドを備えていません。</dd>
 </dl>
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Events">イベント</h2>
 
-<p>次のコード例では、{{domxref("Worker.Worker", "Worker()")}} コンストラクターを用いて {{domxref("Worker")}} オブジェクトを生成しています。</p>
+<dl>
+ <dt><code><a href="/ja/docs/Web/API/Worker/message_event">message</a></code></dt>
+ <dd>ワーカーの親が、そのワーカーからメッセージを受信したときに発行されます。<br>
+ <code><a href="/ja/docs/Web/API/Worker/onmessage">onmessage</a></code> プロパティからも利用できます。</dd>
+ <dt><code><a href="/ja/docs/Web/API/Worker/messageerror_event">messageerror</a></code></dt>
+ <dd><code>Worker</code> オブジェクトが <a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">シリアライズ解除</a>できないというメッセージを受け取ったときに発行されます。<br>
+ <code><a href="/ja/docs/Web/API/Worker/onmessageerror">onmessageerror</a></code> プロパティからも利用できます。</dd>
+ <dt><code><a href="/ja/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code></dt>
+ <dd>{{jsxref("Promise")}} が拒否されるたびに発行されます。拒否を処理するハンドラーがあるかどうかは問いません。<br>
+ <code><a href="/ja/docs/Web/API/WindowEventHandlers/onrejectionhandled">onrejectionhandled</a></code> イベントハンドラープロパティからも利用できます。</dd>
+ <dt><code><a href="/ja/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code></dt>
+ <dd>拒否を処理するハンドラーのない {{jsxref("Promise")}} が拒否されたときに発行されます。<br>
+ <code><a href="/ja/docs/Web/API/WindowEventHandlers/onunhandledrejection">onunhandledrejection</a></code> イベントハンドラープロパティからも利用できます。</dd>
+</dl>
 
-<pre class="brush: js">var myWorker = new Worker('worker.js');
-var first = document.querySelector('#number1');
-var second = document.querySelector('#number2');
+<h2 id="Example">例</h2>
+
+<p>次のコード例では、 {{domxref("Worker")}} オブジェクトを、 {{domxref("Worker.Worker", "Worker()")}} コンストラクターを用いて生成しています。</p>
+
+<pre class="brush: js">var myWorker = new Worker('/worker.js');
+var first = document.querySelector('input#number1');
+var second = document.querySelector('input#number2');
 
 first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
+  myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }</pre>
 
-<p>完全なサンプルは次のリンクより御覧ください：<a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>)。</p>
+<p>完全な例は、 <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">専用ワーカーを実行</a>) を参照してください。</p>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "#worker", "Worker")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>worker の種類に応じてサポート状況が異なります。詳しくは、それぞれの worker のページをご覧ください。</p>
+<p>ワーカーの種類に応じて対応状況が異なります。詳しくは、それぞれの種類のワーカーのページをご覧ください。</p>
 
+<p>{{Compat}}</p>
 
+<h3 id="Cross-origin_worker_error_behaviour">オリジンをまたいだワーカーのエラーの動作</h3>
 
-<p>{{Compat("api.Worker")}}</p>
+<p>古いバージョンのブラウザーでオリジンをまたいでワーカーのスクリプトを読み込もうとすると、 <code>SecurityError</code> が発生していました。最近は、 {{event("error")}} イベントが発行されるようになりました。</p>
 
-<h3 id="Cross-origin_worker_error_behaviour" name="Cross-origin_worker_error_behaviour">クロスオリジン worker エラーの動作</h3>
-
-<p>古いバージョンのブラウザーでクロスオリジンの worker のスクリプトを読み込もうとすると、<code>SecurityError</code> が発生していました。仕様が変わったため、新しいブラウザーでは {{event("error")}} イベントが発生します。この処理方法について詳しくは <a href="https://www.fxsitecompat.com/docs/2016/loading-cross-origin-worker-now-fires-error-event-instead-of-throwing-worker-in-sandboxed-iframe-no-longer-allowed/">クロスオリジンの Worker 読み込みが例外の代わりに error イベントを発生させるようになり、サンドボックス化された iframe 内の Worker が禁止されます</a> をご覧ください。</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ja/docs/Web/Guide/Performance/Using_web_workers">Web Workers の使い方</a></li>
- <li><a href="/ja/DOM/Worker/Functions_available_to_workers" title="https://developer.mozilla.org/En/DOM/Worker/Functions_available_to_workers">Web Workers で使用可能な関数一覧</a></li>
- <li>他の Workers： {{ domxref("SharedWorker") }} 、 <a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker</a>.</li>
- <li>非標準の Gecko 専用 Workers： {{ domxref("ChromeWorker") }}（拡張機能で使用）</li>
+ <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">ウェブワーカーの使用</a></li>
+ <li><a href="/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">ウェブワーカーで使用可能な関数一覧</a></li>
+ <li>他の種類のワーカー: {{domxref("SharedWorker")}}、 <a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker</a></li>
 </ul>

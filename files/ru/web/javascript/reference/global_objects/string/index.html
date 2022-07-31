@@ -12,11 +12,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
 
 <p>Объект <strong><code>String</code></strong> используется, чтобы представить и конструировать последовательность символов.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <p>Строковые литералы могут быть следующих форм:</p>
 
-<pre class="syntaxbox notranslate"><code>'строка текста'
+<pre class="syntaxbox"><code>'строка текста'
 "строка текста"
 "中文 español English हिन्दी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어 தமிழ்"
 </code></pre>
@@ -73,51 +73,51 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String
   </tr>
   <tr>
    <td><code>\uXXXX</code></td>
-   <td>кодовая точка Юникода</td>
+   <td>Юникод-символ</td>
   </tr>
   <tr>
    <td><code>\xXX</code></td>
-   <td>символ из кодировки Latin-1</td>
+   <td>символ в кодировке Latin-1</td>
   </tr>
  </tbody>
 </table>
 
 <p>Либо можно использовать глобальный объект <code>String</code> напрямую:</p>
 
-<pre class="syntaxbox notranslate"><code>String(thing)
+<pre class="syntaxbox"><code>String(thing)
 new String(thing)
 </code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>thing</code></dt>
  <dd>Всё, что может быть преобразовано в строку.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
-<p>Строки полезны для хранения данных, которые можно представить в текстовой форме. Некоторые из наиболее частых операций со строками — это проверка их {{jsxref("String.length", "длины", "", 1)}}, построение строки с помощью <a href="/ru/docs/Web/JavaScript/Reference/Operators/String_Operators">операций строковой конкатенации + и +=</a>, проверка на существование или местоположение подстрок с помощью метода {{jsxref("String.prototype.indexOf()", "indexOf()")}}, либо извлечение подстрок с помощью метода {{jsxref("String.prototype.substring()", "substring()")}}.</p>
+<p>Строки полезны для хранения данных, которые можно представить в текстовой форме. Некоторые из наиболее частых операций со строками — это проверка их {{jsxref("String.length", "длины", "", 1)}}, построение строки с помощью <a href="/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B">операций строковой конкатенации + и +=</a>, проверка на существование или местоположение подстрок с помощью метода {{jsxref("String.prototype.indexOf()", "indexOf()")}}, либо извлечение подстрок с помощью метода {{jsxref("String.prototype.substring()", "substring()")}}.</p>
 
-<h3 id="Character_access" name="Character_access">Доступ к символам</h3>
+<h3 id="Character_access">Доступ к символам</h3>
 
 <p>Существует два способа добраться до конкретного символа в строке. В первом способе используется метод {{jsxref("String.prototype.charAt()", "charAt()")}}:</p>
 
-<pre class="brush: js notranslate">return 'кот'.charAt(1); // вернёт "о"
+<pre class="brush: js">return 'кот'.charAt(1); // вернёт "о"
 </pre>
 
 <p>Другим способом (введённым в ECMAScript 5) является рассмотрение строки как массивоподобного объекта, в котором символы имеют соответствующие числовые индексы:</p>
 
-<pre class="brush: js notranslate">return 'кот'[1]; // вернёт "о"
+<pre class="brush: js">return 'кот'[1]; // вернёт "о"
 </pre>
 
 <p>При доступе к символам посредством нотации с квадратными скобками, попытка удалить символ, или присвоить значение числовому свойству закончится неудачей, поскольку эти свойства являются незаписываемыми и ненастраиваемыми. Смотрите документацию по методу {{jsxref("Object.defineProperty()")}} для дополнительной информации.</p>
 
-<h3 id="Comparing_strings" name="Comparing_strings">Сравнение строк</h3>
+<h3 id="Comparing_strings">Сравнение строк</h3>
 
 <p>Разработчики на C имеют для сравнения строк функцию <code>strcmp()</code>. В JavaScript вы просто используете <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F">операторы меньше и больше</a>:</p>
 
-<pre class="brush: js notranslate">var a = 'a';
+<pre class="brush: js">var a = 'a';
 var b = 'b';
 if (a &lt; b) { // true
   print(a + ' меньше чем ' + b);
@@ -130,13 +130,13 @@ if (a &lt; b) { // true
 
 <p>Подобный результат также может быть достигнут путём использования метода {{jsxref("String.prototype.localeCompare()", "localeCompare()")}}, имеющегося у всех экземпляров <code>String</code>.</p>
 
-<h3 id="Distinction_between_string_primitives_and_String_objects" name="Distinction_between_string_primitives_and_String_objects">Разница между строковыми примитивами и объектами <code>String</code></h3>
+<h3 id="Distinction_between_string_primitives_and_String_objects">Разница между строковыми примитивами и объектами <code>String</code></h3>
 
 <p>Обратите внимание, что JavaScript различает объекты <code>String</code> и значения строкового примитива (то же самое верно и для объектов {{jsxref("Global_Objects/Boolean", "Boolean")}} и {{jsxref("Global_Objects/Number", "Number")}}).</p>
 
 <p>Строковые литералы (обозначаемые двойными или одинарными кавычками) и строки, возвращённые вызовом <code>String</code> в неконструкторном контексте (то есть, без использования ключевого слова {{jsxref("Operators/new", "new")}}) являются строковыми примитивами. JavaScript автоматически преобразует примитивы в объекты <code>String</code>, так что на строковых примитивах возможно использовать методы объекта <code>String</code>. В контекстах, когда на примитивной строке вызывается метод или происходит поиск свойства, JavaScript автоматически оборачивает строковый примитив объектом и вызывает на нём метод или ищет в нём свойство.</p>
 
-<pre class="brush: js notranslate">var s_prim = 'foo';
+<pre class="brush: js">var s_prim = 'foo';
 var s_obj = new String(s_prim);
 
 console.log(typeof s_prim); // выведет 'string'
@@ -145,7 +145,7 @@ console.log(typeof s_obj);  // выведет 'object'
 
 <p>Строковые примитивы и объекты <code>String</code> также дают разные результаты при использовании глобальной функции {{jsxref("Global_Objects/eval", "eval()")}}. Примитивы, передаваемые в <code>eval()</code>, трактуются как исходный код; объекты же <code>String</code> трактуются так же, как и все остальные объекты, а именно: возвращается сам объект. Например:</p>
 
-<pre class="brush: js notranslate">var s1 = '2 + 2';             // создаёт строковый примитив
+<pre class="brush: js">var s1 = '2 + 2';             // создаёт строковый примитив
 var s2 = new String('2 + 2'); // создаёт объект String
 console.log(eval(s1));        // выведет число 4
 console.log(eval(s2));        // выведет строку '2 + 2'
@@ -155,21 +155,14 @@ console.log(eval(s2));        // выведет строку '2 + 2'
 
 <p>Объект <code>String</code> также всегда может быть преобразован в его примитивный аналог при помощи метода {{jsxref("String.prototype.valueOf()", "valueOf()")}}.</p>
 
-<pre class="brush: js notranslate">console.log(eval(s2.valueOf())); // выведет число 4
+<pre class="brush: js">console.log(eval(s2.valueOf())); // выведет число 4
 </pre>
 
-<div class="note"><strong>Примечание:</strong> для того, чтобы узнать больше о другом возможном подходе к строкам в JavaScript, прочитайте статью о <a href="/ru/Add-ons/Code_snippets/StringView"><code>StringView</code> — C-подобном представлении строк на основе типизированных массивов</a>.</div>
-
-<h2 id="Properties" name="Properties">Свойства</h2>
-
-<dl>
- <dt>{{jsxref("String.prototype")}}</dt>
- <dd>Позволяет добавлять свойства к объекту <code>String</code>.</dd>
-</dl>
+<h2 id="Properties">Свойства</h2>
 
 <div>{{jsOverrides("Function", "Properties", "prototype")}}</div>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
 <dl>
  <dt>{{jsxref("String.fromCharCode()")}}</dt>
@@ -182,11 +175,11 @@ console.log(eval(s2));        // выведет строку '2 + 2'
 
 <div>{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint", "raw")}}</div>
 
-<h2 id="String_generic_methods" name="String_generic_methods">Общие методы объекта <code>String</code></h2>
+<h2 id="String_generic_methods">Общие методы объекта <code>String</code></h2>
 
 <p>Методы экземпляров <code>String</code> также доступны в Firefox как часть JavaScript 1.6 (который не является частью стандарта ECMAScript) на объекте <code>String</code>, что позволяет применять эти методы к любому объекту:</p>
 
-<pre class="brush: js notranslate">var num = 15;
+<pre class="brush: js">var num = 15;
 console.log(String.replace(num, /5/, '2'));
 </pre>
 
@@ -194,7 +187,7 @@ console.log(String.replace(num, /5/, '2'));
 
 <p>Следующая прослойка позволяет использовать их во всех браузерах:</p>
 
-<pre class="brush: js notranslate">/*globals define*/
+<pre class="brush: js">/*globals define*/
 // Предполагаем, что все требуемые методы экземпляров String уже присутствуют
 // (для них так же можно использовать полифилы, если их нет)
 (function() {
@@ -227,71 +220,31 @@ console.log(String.replace(num, /5/, '2'));
 }());
 </pre>
 
-<h2 id="String_instances" name="String_instances">Экземпляры объекта <code>String</code></h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Properties_of_String_instance" name="Properties_of_String_instance">Свойства</h3>
-
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Properties')}}</div>
-
-<h3 id="Methods_of_String_instance" name="Methods_of_String_instance">Методы</h3>
-
-<h4 id="Methods_unrelated_to_HTML" name="Methods_unrelated_to_HTML">Методы, не относящиеся к HTML</h4>
-
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods_unrelated_to_HTML')}}</div>
-
-<h4 id="HTML_wrapper_methods" name="HTML_wrapper_methods">Методы-обёртки HTML</h4>
-
-<div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'HTML_wrapper_methods')}}</div>
-
-<h2 id="Examples" name="Examples">Примеры</h2>
-
-<h3 id="Example_String_conversion" name="Example:_String_conversion">Пример: преобразование в строку</h3>
+<h3 id="Example_String_conversion">Пример: преобразование в строку</h3>
 
 <p>Объект <code>String</code> можно использовать как «безопасную» альтернативу методу {{jsxref("String.prototype.toString()", "toString()")}}, так как хотя он обычно и вызывает соответствующий метод <code>toString()</code>, он также работает и для значений {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}}. Например:</p>
 
-<pre class="brush: js notranslate">var outputStrings = [];
+<pre class="brush: js">var outputStrings = [];
 for (var i = 0, n = inputValues.length; i &lt; n; ++i) {
   outputStrings.push(String(inputValues[i]));
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5', 'String')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string-objects', 'String')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.String",2)}}</p>
+<p>{{Compat}}</p>
 
-<div></div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("DOMString")}}</li>
- <li><a href="/ru/Add-ons/Code_snippets/StringView"><code>StringView</code> — C-подобное представление строк на основе типизированных массивов</a></li>
- <li><a href="/ru/docs/Web/API/DOMString/Binary">Двоичные строки</a></li>
+ <li><a href="/en-US/docs/Web/API/DOMString/Binary">Двоичные строки</a></li>
 </ul>

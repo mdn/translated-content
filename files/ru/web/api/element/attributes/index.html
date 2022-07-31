@@ -7,12 +7,12 @@ translation_of: Web/API/Element/attributes
 
 <p>Свойство <strong><code>Element.attributes</code></strong> возвращает группу атрибутов всех узлов, зарегистрированных в указанном узле. Это {{domxref("NamedNodeMap")}}, то есть полученные данные не являются массивом <code>Array</code>, не содержат {{jsxref("Array")}} методы и {{domxref("Attr")}} индекс узлов может отличаться в различных браузерах. Если сказать более точно, атрибуты <font face="Courier New, Andale Mono, monospace"><strong>(</strong></font><strong style="font-family: courier new,andale mono,monospace; font-weight: bold;">attributes</strong><font face="Courier New, Andale Mono, monospace"><strong>)</strong></font> это строка, пара ключ/значение которая представляет собой информацию относительно этого атрибута.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">var <em>attr</em> =<em> element</em>.attributes;
 </pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <h3 id="Базовые_примеры">Базовые примеры</h3>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/Element/attributes
 var para = document.getElementsByTagName("p")[0];
 var atts = para.attributes;</pre>
 
-<h3 id="Notes" name="Notes">Перечисление атрибутов элементов</h3>
+<h3 id="Notes">Перечисление атрибутов элементов</h3>
 
 <p>Числовое индексирование полезно для прохождения всех атрибутов элемента.<br>
  Следующий пример проходит через узлы атрибутов для элемента в документе с идентификатором «p1» и печатает значение каждого атрибута. </p>
@@ -97,11 +97,11 @@ var atts = para.attributes;</pre>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.Element.attributes")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li>{{domxref("NamedNodeMap")}}, the interface of the returned object</li>
- <li>Cross-browser compatibility considerations: on <a class="external" href="http://www.quirksmode.org/dom/w3c_core.html#attributes" title="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
+ <li>Cross-browser compatibility considerations: on <a class="external" href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
 </ul>

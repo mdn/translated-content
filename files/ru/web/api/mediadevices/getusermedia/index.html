@@ -15,7 +15,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <p>Обычно, разработчик получает доступ к  единственному экземпляру объекта {{domxref("MediaDevices")}} , используя {{domxref("navigator.mediaDevices.getUserMedia()")}}  метод, возвращающий поток:</p>
 
-<pre class="brush: js notranslate">async function getMedia(constraints) {
+<pre class="brush: js">async function getMedia(constraints) {
   let stream = null;
 
   try {
@@ -29,7 +29,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <p>Тот же результат, но используя тип промиса :</p>
 
-<pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia(constraints)
+<pre class="brush: js">navigator.mediaDevices.getUserMedia(constraints)
 .then(function(stream) {
   /* используем поток */
 })
@@ -38,12 +38,12 @@ translation_of: Web/API/MediaDevices/getUserMedia
 });</pre>
 
 <div class="blockIndicator note">
-<p><strong>Примечание :</strong> Если документ загружен не безопасно, значение <code>navigator.mediaDevices</code> будет <code>undefined</code>, и нельзя будет использовать метод  <code>getUserMedia()</code>. Смотри  {{anch("Security")}} для дополнительной информации о дальнейших вопросах безопасности, связанной с использованием метода <code>getUserMedia()</code>.</p>
+<p><strong>Примечание :</strong> Если документ загружен не безопасно, значение <code>navigator.mediaDevices</code> будет <code>undefined</code>, и нельзя будет использовать метод  <code>getUserMedia()</code>. Смотри  <a href="#security">Security</a> для дополнительной информации о дальнейших вопросах безопасности, связанной с использованием метода <code>getUserMedia()</code>.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var <var>promise</var> = navigator.mediaDevices.getUserMedia(<var>constraints</var>);
+<pre class="syntaxbox">var <var>promise</var> = navigator.mediaDevices.getUserMedia(<var>constraints</var>);
 </pre>
 
 <h3 id="Параметры">Параметры</h3>
@@ -57,13 +57,13 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
  <p>Следующий отрывок кода запрашивает и <code>audio</code> и <code>video</code><strong> </strong>типы  без дополнительных условий:</p>
 
- <pre class="brush: js notranslate">{ audio: true, video: true }</pre>
+ <pre class="brush: js">{ audio: true, video: true }</pre>
 
  <p>Если определяется значение <code>true</code> для медиатипа, результирующий поток обязательно будет иметь в себе запрошенный медиатип. Если ни один из типов не включается в запрос, вызов метода  <code>getUserMedia()</code> приведёт к ошибке.</p>
 
  <p>Если полная информация о камерах и микрофонах пользователя недоступна по причинам конфиденциальности, приложение может запросить доступ только к необходимым ему функциям, используя дополнительные условия. Следующий пример запрашивает видеотрек с разрешением камеры 1280x720 пикселей:</p>
 
- <pre class="brush: js notranslate">{
+ <pre class="brush: js">{
   audio: true,
   video: { width: 1280, height: 720 }
 }</pre>
@@ -72,7 +72,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
  <p>Для минимального, максимального и точного определения значения можно использовать ключевые слова <code>min</code>, <code>max</code>, или <code>exac</code>. Следующий пример запрашивает минимальное разрешение камеры 1280x720:</p>
 
- <pre class="brush: js notranslate">{
+ <pre class="brush: js">{
   audio: true,
   video: {
     width: { min: 1280 },
@@ -84,7 +84,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
  <p>Различие поведения происходит по причине того, что ключевые слова <code>min</code>, <code>max</code>, и <code>exact</code>  являются обязательными к выполнению. В то время как простые значения и ключевое слово  <code>ideal</code> - не обязательные к выполнению. Ниже, полный пример:</p>
 
- <pre class="brush: js notranslate">{
+ <pre class="brush: js">{
   audio: true,
   video: {
     width: { min: 1024, ideal: 1280, max: 1920 },
@@ -96,7 +96,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
  <p>Простые значения работают как идеальные, поэтому один из первых примеров выше можно переписать, используя свойство  <code>ideal </code>:</p>
 
- <pre class="brush: js notranslate">{
+ <pre class="brush: js">{
   audio: true,
   video: {
     width: { ideal: 1280 },
@@ -106,19 +106,19 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
  <p>Не все значения ограничений являются числовыми. К примеру, на мобильных устройствах следующий отрывок будет запрашивать переднюю камеру (если присутствует) , поэтому в свойстве <code>facingMode</code> указано строковое значение <code>user</code>:</p>
 
- <pre class="brush: js notranslate">{ audio: true, video: { facingMode: "user" } }</pre>
+ <pre class="brush: js">{ audio: true, video: { facingMode: "user" } }</pre>
 
  <p>Запрос обратной (задней) камеры:</p>
 
- <pre class="brush: js notranslate">{ audio: true, video: { facingMode: { exact: "environment" } } }</pre>
+ <pre class="brush: js">{ audio: true, video: { facingMode: { exact: "environment" } } }</pre>
 
  <p>Следующее строковое свойство -  <code>deviceId</code> (идентификатор устройства). Его значение может быть получено из  метода {{domxref("mediaDevices.enumerateDevices()")}}, возвращающего список, имеющихся на машине устройств, с их идентификаторами, и может быть использовано для запроса определённого устройства по идентификатору этого устройства:</p>
 
- <pre class="brush: js notranslate">{ video: { deviceId: идентификаторНужнойКамеры } }</pre>
+ <pre class="brush: js">{ video: { deviceId: идентификаторНужнойКамеры } }</pre>
 
  <p>Код выше вернёт запрашиваемую камеру или другую камеру, если требуемая камера недоступна. Для получения доступа к потоку только определённой камеры, без альтернативы, используется свойство  <code>exact</code> (точно) :</p>
 
- <pre class="brush: js notranslate">{ video: { deviceId: { exact: идентификаторНужнойКамеры } } }</pre>
+ <pre class="brush: js">{ video: { deviceId: { exact: идентификаторНужнойКамеры } } }</pre>
  </dd>
 </dl>
 
@@ -188,15 +188,15 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <p>К примеру, строка  HTTP заголовка позволит использовать камеру документу и любым встроенные  {{HTMLElement("iframe")}} элементам, которые загружаются  из одного источника:</p>
 
-<pre class="notranslate">Feature-Policy: camera 'self'</pre>
+<pre>Feature-Policy: camera 'self'</pre>
 
 <p>Строка ниже, запрашивает доступ к микрофону для текущего источника и указанном в заголовке источнике <code>https://developer.mozilla.org</code>:</p>
 
-<pre class="notranslate">Feature-Policy: microphone 'self' https://developer.mozilla.org</pre>
+<pre>Feature-Policy: microphone 'self' https://developer.mozilla.org</pre>
 
 <p>Если используется <code>getUserMedia()</code> внутри элемента <code>&lt;iframe&gt;</code>, можно запросить разрешение только для этого фрейма, которое явно более безопаснее, чем  запрашивать более общее разрешение. Здесь нам нужно использовать и камеру и микрофон:</p>
 
-<pre class="brush: html notranslate">&lt;iframe src="https://mycode.example.net/etc" allow="camera;microphone"&gt;
+<pre class="brush: html">&lt;iframe src="https://mycode.example.net/etc" allow="camera;microphone"&gt;
 &lt;/iframe&gt;</pre>
 
 <p>Прочитайте наше руководство <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Применение функциональной политики </a>, изучив подробнее то, как это работает.</p>
@@ -211,7 +211,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <ul>
  <li>Документ, загруженный в песочницу {{HTMLElement("iframe")}} элемента не может вызвать <code>getUserMedia()</code>, до тех пор пока, на элементе <code>&lt;iframe&gt;</code> находиться атрибут  {{htmlattrxref("sandbox", "iframe")}}, установленный в значение <code>allow-same-origin</code>.</li>
- <li>Документ, загруженный по протоколам <code>data://</code> или <code>blob://</code> в URL-адресе, не имеющий источника  (такими являются типы URL-ов, введённые пользователями в строке адреса браузера) не может вызвать <code>getUserMedia()</code>. Подобные типы  URL-ов, загружаемые из JavaScript кода, наследуют разрешения скрипта.</li>
+ <li>Документ, загруженный по протоколам <code>data://</code> или <code>blob://</code> в URL-адресе, не имеющий источника  (такими являются типы URL-ов, введённые пользователями в строке адреса браузера) не может вызвать <code>getUserMedia()</code>. Подобные типы  URL-ов, загружаемые из JavaScript-кода, наследуют разрешения скрипта.</li>
  <li>Иные ситуации, документы которых не имеют источника, к примеру элемент, содержащий атрибут {{htmlattrxref("srcdoc", "iframe")}}, использующийся для указания содержимого фрейма.</li>
 </ul>
 
@@ -221,7 +221,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <p>Этот пример выбирает указанное разрешение камеры и присваивает ссылку на объект {{domxref("MediaStream")}} свойству <code>srcObject</code> элемента <code>video</code> .</p>
 
-<pre class="brush: js notranslate">// Выбирает разрешение камеры близкое к 1280x720.
+<pre class="brush: js">// Выбирает разрешение камеры близкое к 1280x720.
 var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
 navigator.mediaDevices.getUserMedia(constraints)
@@ -239,7 +239,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 <p>Ниже, находятся примеры, использующие <code>navigator.mediaDevices.getUserMedia()</code>, с полифилами для работы в старых браузерах. Обратите внимание, что эти полифилы не корректируют все различия в синтаксисе, и не работают во всех браузерах. Рекомендуется использовать библиотеку  <a href="https://github.com/webrtc/adapter">adapter.js</a> , как производственный полифил.</p>
 
-<pre class="brush: js notranslate">// Старые браузеры могут не реализовывать свойство mediaDevices,
+<pre class="brush: js">// Старые браузеры могут не реализовывать свойство mediaDevices,
 // поэтому сначала присваиваем свойству ссылку на пустой объект
 
 if (navigator.mediaDevices === undefined) {
@@ -296,14 +296,14 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: true })
 
 <p>В некоторых случаях может быть желательна более низкая частота кадров, например, при передаче WebRTC с ограничениями полосы пропускания</p>
 
-<pre class="brush: js notranslate">var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
+<pre class="brush: js">var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 </pre>
 
 <h3 id="Передняя_и_задняя_камеры">Передняя и задняя камеры</h3>
 
 <p>На мобильных устройствах.</p>
 
-<pre class="brush: js notranslate">var front = false;
+<pre class="brush: js">var front = false;
 document.getElementById('flip-button').onclick = function() { front = !front; };
 
 var constraints = { video: { facingMode: (front? "user" : "environment") } };
@@ -311,25 +311,10 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Начальное определение</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-<p>{{Compat("api.MediaDevices.getUserMedia")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

@@ -11,7 +11,7 @@ translation_of: Web/API/DataTransfer
 
 <p>Объект может быть получен из свойства <strong>dataTransfer</strong> всех событий перетаскивания. Он не может быть отдельно создан.</p>
 
-<h2 id="Properties" name="Properties">Список свойств</h2>
+<h2 id="Properties">Список свойств</h2>
 
 <table class="standard-table">
  <tbody>
@@ -54,7 +54,7 @@ translation_of: Web/API/DataTransfer
  </tbody>
 </table>
 
-<h2 id="Method_overview" name="Method_overview">Список методов</h2>
+<h2 id="Method_overview">Список методов</h2>
 
 <table class="standard-table">
  <tbody>
@@ -88,9 +88,9 @@ translation_of: Web/API/DataTransfer
  </tbody>
 </table>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
-<h3 id="dropEffect.28.29" name="dropEffect.28.29">dropEffect</h3>
+<h3 id="dropEffect.28.29">dropEffect</h3>
 
 <p>Реальное действие, которое будет выполнено, и единственное возможное значение свойства <strong>effectAllowed.</strong></p>
 
@@ -111,7 +111,7 @@ translation_of: Web/API/DataTransfer
 
 <p>Присвоение каких-либо других значений не возымеет эффекта и оставит старое значение.</p>
 
-<h3 id="effectAllowed.28.29" name="effectAllowed.28.29">effectAllowed</h3>
+<h3 id="effectAllowed.28.29">effectAllowed</h3>
 
 <p>Определяет эффекты, которые разрешены для этого перетаскивания. Вы можете указать их в событии <code>dragstart </code>чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем),  или в событии  <code>dragenter </code>и<code> dragenter </code>чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется.</p>
 
@@ -131,7 +131,7 @@ translation_of: Web/API/DataTransfer
 
 <p>Assigning any other value has no effect and retains the old value.</p>
 
-<h3 id="files.28.29" name="files.28.29">files</h3>
+<h3 id="files.28.29">files</h3>
 
 <p>{{ gecko_minversion_header("1.9.2") }}</p>
 
@@ -141,13 +141,13 @@ translation_of: Web/API/DataTransfer
 
 <p>Данный пример демонстрирует перетаскивание файлов в окно браузера:</p>
 
-<p><a class="external" href="http://jsfiddle.net/9C2EF/" title="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></p>
+<p><a class="external" href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></p>
 
-<h3 id="types.28.29" name="types.28.29">types</h3>
+<h3 id="types.28.29">types</h3>
 
 <p>Содержит список типов форматов данных в порядке добавления данных. Если ничего не было добавлено, то будет вернут пустой список.</p>
 
-<p>{{ h3_gecko_minversion("mozCursor", "1.9.1", "mozCursor") }}</p>
+<h3>mozCursor</h3>
 
 <p>The drag cursor's state. This is primarily used to control the cursor during tab drags.</p>
 
@@ -164,7 +164,7 @@ translation_of: Web/API/DataTransfer
 
 <div class="note"><strong>Note:</strong> If you specify any value other than "default", "auto" is assumed.</div>
 
-<h3 id="mozItemCount.28.29" name="mozItemCount.28.29">mozItemCount</h3>
+<h3 id="mozItemCount.28.29">mozItemCount</h3>
 
 <p>The number of items being dragged.</p>
 
@@ -178,15 +178,15 @@ translation_of: Web/API/DataTransfer
 
 <div class="note"><strong>Note:</strong> This property is Gecko-specific.</div>
 
-<h3 id="mozItemCount.28.29" name="mozItemCount.28.29">mozUserCancelled</h3>
+<h3 id="mozItemCount.28.29">mozUserCancelled</h3>
 
 <p>This property applies only to the <code>dragend</code> event, and is <code>true</code> if the user canceled the drag operation by pressing escape. It will be <code>false</code> in all other cases, including if the drag failed for any other reason, for instance due to a drop over an invalid location. This property is not currently implemented on Linux.</p>
 
 <div class="note"><strong>Note:</strong> This property is Gecko-specific.</div>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
-<h3 id="addElement.28.29" name="addElement.28.29">addElement()</h3>
+<h3 id="addElement.28.29">addElement()</h3>
 
 <p>Данный метод устанавливает источник перетаскивания. Обычно вы его не изменяете, но он влияет на то,  на каком узле запускаются события drag и dragend. По умолчанию целью является узел который перетаскивали.</p>
 
@@ -195,14 +195,14 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_addElement" name="Parameters_addElement">Параметры</h6>
+<h6 id="Parameters_addElement">Параметры</h6>
 
 <dl>
  <dt><code>element </code></dt>
  <dd>Элемент для добавления.</dd>
 </dl>
 
-<h3 id="clearData.28.29" name="clearData.28.29">clearData()</h3>
+<h3 id="clearData.28.29">clearData()</h3>
 
 <p>Удаление данных, связанные с указанным типом. Аргумент <strong>type</strong> является необязательным. Если <strong>type</strong> пуст или не указан, тогда данные, связанные со всеми типами удаляются. Если данные для указанного типа не существуют или передача данных не содержит данных, тогда этот метод не будет делать ничего.</p>
 
@@ -211,14 +211,14 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_clearData" name="Parameters_clearData">Параметры</h6>
+<h6 id="Parameters_clearData">Параметры</h6>
 
 <dl>
  <dt><code>type </code></dt>
  <dd>Тип данных для удаления.</dd>
 </dl>
 
-<h3 id="getData.28.29" name="getData.28.29">getData()</h3>
+<h3 id="getData.28.29">getData()</h3>
 
 <p>Возвращает данные для указанного типа или пустую строку, если данные для указанного типа не существуют или передаваемая сущность не содержит данных.</p>
 
@@ -229,7 +229,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_getData" name="Parameters_getData">Параметры</h6>
+<h6 id="Parameters_getData">Параметры</h6>
 
 <p>Тип данных который будет возвращён.</p>
 
@@ -237,7 +237,7 @@ translation_of: Web/API/DataTransfer
  <dt><code>type </code></dt>
 </dl>
 
-<h3 id="setData.28.29" name="setData.28.29">setData()</h3>
+<h3 id="setData.28.29">setData()</h3>
 
 <p>Установка данных для указываемого типа. Если данные для <strong>type</strong> не существуют, тогда они добавляются в конце, так что последним элементом в списке типов будет новый формат. Если данные для <strong>type</strong> уже существуют, существующие данные заменяются в том же положении. То есть порядок списка типов не изменяется при замене данных одного и того же типа.</p>
 
@@ -247,7 +247,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_setData" name="Parameters_setData">Параметры</h6>
+<h6 id="Parameters_setData">Параметры</h6>
 
 <dl>
  <dt><code>type </code></dt>
@@ -256,7 +256,7 @@ translation_of: Web/API/DataTransfer
  <dd>Данные для добавления.</dd>
 </dl>
 
-<h3 id="setDragImage.28.29" name="setDragImage.28.29">setDragImage()</h3>
+<h3 id="setDragImage.28.29">setDragImage()</h3>
 
 <p>Устанавливает изображение, которое будет использоваться для перетаскивания если нужно. В большинстве случаев это не будет установлено, так как изображение по умолчанию создаётся из перетаскиваемого узла.</p>
 
@@ -271,7 +271,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_setDragImage" name="Parameters_setDragImage">Параметры</h6>
+<h6 id="Parameters_setDragImage">Параметры</h6>
 
 <dl>
  <dt><code>image </code></dt>
@@ -282,7 +282,7 @@ translation_of: Web/API/DataTransfer
  <dd>Вертикальное смещение внутри изображения.</dd>
 </dl>
 
-<h3 id="mozClearDataAt.28.29" name="mozClearDataAt.28.29">mozClearDataAt()</h3>
+<h3 id="mozClearDataAt.28.29">mozClearDataAt()</h3>
 
 <p>Removes the data associated with the given format for an item at the specified index. The index is in the range from zero to the number of items minus one.</p>
 
@@ -298,7 +298,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_mozClearDataAt" name="Parameters_mozClearDataAt">Parameters</h6>
+<h6 id="Parameters_mozClearDataAt">Parameters</h6>
 
 <dl>
  <dt><code>type </code></dt>
@@ -307,7 +307,7 @@ translation_of: Web/API/DataTransfer
  <dd>The index of the data to remove.</dd>
 </dl>
 
-<h3 id="mozGetDataAt.28.29" name="mozGetDataAt.28.29">mozGetDataAt()</h3>
+<h3 id="mozGetDataAt.28.29">mozGetDataAt()</h3>
 
 <p>Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one.</p>
 
@@ -319,7 +319,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_mozClearDataAt" name="Parameters_mozClearDataAt">Parameters</h6>
+<h6 id="Parameters_mozClearDataAt">Parameters</h6>
 
 <dl>
  <dt><code>type </code></dt>
@@ -328,13 +328,13 @@ translation_of: Web/API/DataTransfer
  <dd>The index of the data to retrieve.</dd>
 </dl>
 
-<h3 id="mozSetDataAt.28.29" name="mozSetDataAt.28.29">mozSetDataAt()</h3>
+<h3 id="mozSetDataAt.28.29">mozSetDataAt()</h3>
 
 <p>A data transfer may store multiple items, each at a given zero-based index. <code>mozSetDataAt()</code> may only be called with an index argument less than <code>mozItemCount</code> in which case an existing item is modified, or equal to <code>mozItemCount</code> in which case a new item is added, and the <code>mozItemCount</code> is incremented by one.</p>
 
 <p>Data should be added in order of preference, with the most specific format added first and the least specific format added last. If data of the given format already exists, it is replaced in the same position as the old data.</p>
 
-<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an {{ interface("nsISupports") }}.</p>
+<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an <code>nsISupports</code>.</p>
 
 <div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
 
@@ -345,7 +345,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_mozSetDataAt" name="Parameters_mozSetDataAt">Parameters</h6>
+<h6 id="Parameters_mozSetDataAt">Parameters</h6>
 
 <dl>
  <dt><code>type </code></dt>
@@ -356,7 +356,7 @@ translation_of: Web/API/DataTransfer
  <dd>The index of the data to add.</dd>
 </dl>
 
-<h3 id="mozTypesAt.28.29" name="mozTypesAt.28.29">mozTypesAt()</h3>
+<h3 id="mozTypesAt.28.29">mozTypesAt()</h3>
 
 <p>Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.</p>
 
@@ -367,14 +367,14 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_mozTypesAt" name="Parameters_mozTypesAt">Parameters</h6>
+<h6 id="Parameters_mozTypesAt">Parameters</h6>
 
 <dl>
  <dt><code>index </code></dt>
  <dd>The index of the data for which to retrieve the types.</dd>
 </dl>
 
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also">See also</h2>
 
 <p><a class="internal" href="/En/DragDrop/Drag_and_Drop" title="Drag and Drop">Drag and Drop</a></p>
 

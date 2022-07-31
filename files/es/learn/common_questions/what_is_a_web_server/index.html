@@ -30,29 +30,29 @@ original_slug: Learn/Common_questions/Que_es_un_servidor_WEB
 <p>Con "Servidor web" podemos referirnos a hardware o software, o a ambos trabajando juntos.</p>
 
 <ol>
- <li>En cuanto a hardware, un servidor web es una computadora que almacena los archivos que componen un sitio web (ej.  documentos HTML , imágenes, hojas de estilos CSS y archivo JavaScript) y los entrega al dispositivo del usuario final. Está conectado a internet y es accesible a través de un nombre de dominio como<code> mozilla.org</code>.</li>
- <li>En cuanto a software, un servidor web tiene muchas partes encargadas del control sobre cómo tienen acceso los usuarios a los archivos, por lo menos un servidor <em>HTTP. </em>Un servidor HTTP es una pieza de software que comprende {{Glossary("URL","URLs")}} (direcciones web) y {{Glossary("HTTP")}} (el protocolo que tu navegador usa para ver las páginas web).</li>
+ <li>En cuanto a hardware, un servidor web es una computadora que almacena el software de servidor web, y los archivos que componen un sitio web (por ejemplo, documentos HTML, imágenes, hojas de estilos CSS y archivos JavaScript). Un servidor web -hardware- se conecta a internet y mantiene el intercambio de datos con otros dispositivos conectados a la web.</li>
+ <li>En cuanto a software, un servidor web tiene muchas partes que controlan cómo los usuarios de la web obtienen acceso a los archivos alojados en el servidor; es decir, mínimamente, un <em>servidor HTTP</em>. Un servidor HTTP es una pieza de software capaz de comprender {{Glossary("URL","URLs")}} (direcciones web) y {{Glossary("HTTP")}} (el protocolo que tu navegador usa para obtener las páginas web). Un servidor HTTP puede ser accedido a través de los nombres de dominio de los sitios web que aloja, y entrega el contenido de esos sitios web alojados al dispositivo del usuario final.</li>
 </ol>
 
-<p>Al nivel más básico, siempre que un navegador necesite un archivo almacenado en un  servidor web, el navegador hará una solicitud al servidor mediante la vía HTTP. Cuando la petición llega al servidor web correcto (hardware), el  servidor <em>HTTP </em> (software) envía el archivo antes solicitado, tambien a través de HTTP.</p>
+<p>Al nivel más básico, cuando un navegador necesita un archivo que está almacenado en un servidor web, el navegador requerirá el archivo al servidor mediante el protocolo HTTP. Cuando la petición alcanza al servidor web correcto (hardware), el <em>servidor HTTP</em> (software) acepta la solicitud, encuentra el documento requerido y lo envía de regreso al navegador, tambien a través de HTTP. (Si el servidor no encuentra el documento requerido, devuelve una respuesta [404](/es/docs/Web/HTTP/Status/404) en su lugar.)</p>
 
-<p><img alt="Basic representation of a client/server connection through HTTP" src="https://mdn.mozillademos.org/files/8659/web-server.svg" style="height: 200px; width: 600px;"></p>
+<p><img alt="Representación básica de una conexión cliente/servidor a través de HTTP" src="https://mdn.mozillademos.org/files/8659/web-server.svg" style="height: 200px; width: 600px;"></p>
 
-<p>Para publicar un sitio web, necesitarás un servidor web dinámico o estático.</p>
+<p>Para publicar un sitio web, necesitarás un servidor web estático o dinámico.</p>
 
-<p>Un <strong>servidor web estático</strong>, o pila, consiste en una computadora (hardware) con un servidor HTTP (software). Llamamos a este "estático" debido a que el servidor envía los archivos almacenados "tal cual" a tu navegador.</p>
+<p>Un <strong>servidor web estático</strong>, o pila, consiste en una computadora (hardware) con un servidor HTTP (software). Llamamos a "estático" a este servidor porque envía los archivos que aloja "tal como se encuentran" (sin modificarlos) a tu navegador.</p>
 
-<p>Un <strong>servidor web dinámico </strong>consiste en un servidor web estático con un software extra , lo común es que sea una <em>aplicación</em> servidor <em> y una </em> base de datos<em>. Llamamos a esto</em> "dinámico" por que la aplicacion servidor actualiza los archivos almacenados en la base de datos antes de enviarlos mediante el servidor HTTP.</p>
+<p>Un <strong>servidor web dinámico</strong> consiste en un servidor web estático con software adicional, habitualmente una <em>aplicación servidor</em> y una <em>base de datos</em>. Llamamos "dinámico" a este servidor porque la <em>aplicacion servidor</em> actualiza los archivos alojados, antes de enviar el contenido a tu navegador mediante el <em>servidor HTTP</em>.</p>
 
-<p>Por ejemplo, para ver la página que ves en tu navegador finalmente, el servidor aplicación puede mostrar el diseño HTML con contenido desde una base de datos. Sitios como MDN o Wikipedia tienen cientos de páginas web, que no son realmente archivos HTML, si no una estrucura HTML asociada a una gigantesca base de datos. Esto hace mas fácil y rápido el mantenimiento y entrega del contenido.</p>
+<p>Por ejemplo, para producir las páginas web que finalmente ves en tu navegador, la <em>aplicación servidor</em> podría llenar una plantilla HTML con contenido obtenido de una base de datos. Sitios como MDN o Wikipedia tienen miles de páginas web, que no son realmente archivos HTML. Típicamente, este tipo de sitios se componen de unas pocas plantillas HTML y una gigantesca base de datos, en vez de miles de documentos HTML estáticos. Esto hace mas fácil el mantenimiento y entrega del contenido.</p>
 
 <h2 id="Aprendizaje_activo">Aprendizaje activo</h2>
 
-<p><em>No hay aprendizaje activo disponible. <a href="https://developer.mozilla.org/en-US/docs/MDN/Getting_started">P</a><u>or favor, considere colaborar.</u></em></p>
+<p><em>No hay aprendizaje activo disponible. <a href="https://developer.mozilla.org/es/docs/MDN/Getting_started"></a><u>Por favor, considere colaborar.</u></em></p>
 
 <h2 id="Inmersión_más_profunda">Inmersión más profunda</h2>
 
-<p>Para recuperar una página web, como ya dijimos, su navegador envía una solicitud al servidor web, que procede a buscar el archivo solicitado en su propio espacio de almacenamiento. Al encontrar el archivo, el servidor lo lee, lo procesa según sea necesario y lo envía al navegador. Veamos esos pasos con más detalle.</p>
+<p>Recapitulando: para obtener una página web, como ya dijimos, tu navegador envía una solicitud al servidor web, que procede a buscar el archivo solicitado en su propio espacio de almacenamiento. Encontrado el archivo, el servidor lo lee, lo procesa según sea necesario y lo envía al navegador. Veamos esos pasos con más detalle.</p>
 
 <h3 id="Alojamiento_de_archivos_Hosting">Alojamiento de archivos (Hosting)</h3>
 

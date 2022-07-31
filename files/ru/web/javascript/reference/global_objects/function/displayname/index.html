@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
 <div>
  {{JSRef("Global_Objects", "Function")}} {{Non-standard_header}}</div>
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Свойство <code><strong><em>function</em>.displayName</strong></code> возвращает отображаемое имя функции.</p>
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Если оно определено, свойство <code>displayName</code> возвращает отображаемое имя функции:</p>
 <pre class="brush: js">function doSomething() {}
 
@@ -49,7 +49,7 @@ alert(object.someMethod.displayName); // "undefined"
 object.someMethod('123')
 alert(object.someMethod.displayName); // "someMethod (123)"
 </pre>
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 <p>Обычно оно используется консолью и профилировщиком, как обёртка над {{jsxref("Function.name", "func.name")}} для отображения имени функции.</p>
 <p>Введя следующий пример в консоль, вы должны увидеть что-то вроде "<code>function Моя функция()</code>":</p>
 <pre class="brush: js">var a = function() {};
@@ -57,8 +57,8 @@ a.displayName = 'Моя функция';
 
 a
 </pre>
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <p>Не является частью какой-либо спецификации.</p>
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <div>
 <p>{{Compat}}</p>

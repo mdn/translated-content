@@ -20,7 +20,7 @@ translation_of: Web/HTTP/CSP
 
 <h3 id="Межсайтовый_скриптинг">Межсайтовый скриптинг</h3>
 
-<p>Основная цель создания CSP заключается в устранении XSS атак и сборе данных об их попытках. XSS атаки используют доверие браузера к контенту, полученному с сервера. Зловредные скрипты исполняются в браузере жертвы, поскольку браузер доверяет источнику, даже когда скрипт поставляется не оттуда, откуда кажется.</p>
+<p>Основная цель создания CSP заключается в устранении XSS-атак и сборе данных об их попытках. XSS-атаки используют доверие браузера к контенту, полученному с сервера. Зловредные скрипты исполняются в браузере жертвы, поскольку браузер доверяет источнику, даже когда скрипт поставляется не оттуда, откуда кажется.</p>
 
 <p>CSP даёт возможность администраторам серверов снизить или полностью устранить вектора, по которым злоумышленники могут провести XSS, с помощью определения доменов, которые браузер клиента должен считать доверенными источниками исполняемых скриптов. В таком случае, браузер, совместимый с CSP, будет исполнять только те скрипты, которые были получены из списка разрешённых источников, и игнорировать прочие (в т.ч. встраиваемые скрипты и обработчики событий, указанные непосредственно в HTML-атрибутах).</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/HTTP/CSP
 
 <p>Вы можете начать настройку {{HTTPHeader("Content-Security-Policy")}} с определения HTTP-заголовка и указания какую политику использовать:</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: <em>policy</em></pre>
+<pre class="syntaxbox">Content-Security-Policy: <em>policy</em></pre>
 
 <p>Где policy - это строка, содержащая директивы, описывающие вашу Content Security Policy.</p>
 
@@ -54,19 +54,19 @@ translation_of: Web/HTTP/CSP
 
 <p>Вы хотите ограничить источники контента только исходным сервером (исключая поддомены)</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src 'self'</pre>
+<pre class="syntaxbox">Content-Security-Policy: default-src 'self'</pre>
 
 <h3 id="Пример_2">Пример 2</h3>
 
 <p>Вы хотите разрешить получение контента с доверенного домена и всех его поддоменов (доверенный домен не обязательно должен совпадать с тем, на котором настраиваются CSP.)</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src 'self' *.trusted.com</pre>
+<pre class="syntaxbox">Content-Security-Policy: default-src 'self' *.trusted.com</pre>
 
 <h3 id="Пример_3">Пример 3</h3>
 
 <p>Вы хотите разрешить пользователям приложения вставлять в создаваемый ими контент картинки из любого источника, но при этом ограничить источники аудио- и видео-файлов списком доверенных провайдеров. Получение скриптов должно происходить только с конкретного сервера, содержащего доверенный код.</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com</pre>
+<pre class="syntaxbox">Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com media2.com; script-src userscripts.example.com</pre>
 
 <p>При такой настройке, весь контент доступен для получения только с исходного домена, со следующими исключениями:</p>
 
@@ -80,7 +80,7 @@ translation_of: Web/HTTP/CSP
 
 <p>Вы хотите удостовериться, что весь получаемый контент для онлайн-банкинга идёт по SSL и атакующий не сможет обрабатывать запросы:</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src https://onlinebanking.jumbobank.com</pre>
+<pre class="syntaxbox">Content-Security-Policy: default-src https://onlinebanking.jumbobank.com</pre>
 
 <p>При данной настройке сервер будет позволять загрузку страниц только по HTTPS и только из одного источника - onlinebanking.jumbobank.com.</p>
 
@@ -88,7 +88,7 @@ translation_of: Web/HTTP/CSP
 
 <p>Для просмотра писем в почтовом клиенте вы хотите разрешить использование HTML внутри письма, а также позволить загрузку изображений из любых источников, но запретить использование любого JavaScript-кода и прочий потенциально опасный контент.</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *</pre>
+<pre class="syntaxbox">Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *</pre>
 
 <p>Заметьте, что в настройке политики отсутствует директива {{CSP("script-src")}}; при такой настройке CSP при загрузке скриптов будут использоваться настройки, определяемые директивой {{CSP("default-src")}}, следовательно все скрипты могут быть загружены только с исходного домена.</p>
 
@@ -98,7 +98,7 @@ translation_of: Web/HTTP/CSP
 
 <p>Для определения вашей политики вы можете использовать заголовок {{HTTPHeader("Content-Security-Policy-Report-Only")}} следующим образом:</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy-Report-Only: <em>policy</em> </pre>
+<pre class="syntaxbox">Content-Security-Policy-Report-Only: <em>policy</em> </pre>
 
 <p>В случае, если оба заголовка ({{HTTPHeader("Content-Security-Policy-Report-Only")}} и {{HTTPHeader("Content-Security-Policy")}}) были определены одновременно в одном ответе сервера, обе политики будут обработаны. Политики, описанные в заголовке <code>Content-Security-Policy</code> будут применены, в то время как политики, описанные в заголовке <code>Content-Security-Policy-Report-Only</code>, создадут отчёты, но применены не будут.</p>
 
@@ -106,7 +106,7 @@ translation_of: Web/HTTP/CSP
 
 <p>По умолчанию, отправка отчётов не производится.  Для того чтобы включить отправку отчётов, необходимо в вашей политике определить директиву {{CSP("report-uri")}} и указать как минимум один URI, куда будут направляться отчёты:</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi</pre>
+<pre class="syntaxbox">Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi</pre>
 
 <p>Кроме того, необходимо настроить свой сервер на получение этих отчётов; вы можете хранить и обрабатывать эти отчёты как считаете нужным.</p>
 
@@ -143,12 +143,12 @@ translation_of: Web/HTTP/CSP
 <div>Возьмём страницу, расположенную по адресу <code><a class="external" href="http://example.com/signup.html" rel="freelink">http://example.com/signup.html</a></code>. Для неё используется следующая политика, запрещающая загрузку всего кроме CSS-файлов с <code>cdn.example.com</code>.</div>
 
 <div>
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
+<pre class="syntaxbox">Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
 </div>
 
 <div>HTML-код страницы <code>signup.html</code> выглядит следующим образом:</div>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Sign Up&lt;/title&gt;
@@ -161,7 +161,7 @@ translation_of: Web/HTTP/CSP
 
 <div>Можете заметить ошибку? CSS разрешено загружать только с <code>cdn.example.com</code>, в то время как веб-сайт пытается загрузить его используя основной домен (<code>http://example.com</code>). Браузер поддерживающий CSP отправит отчёт о нарушении политики в POST-запросе к <code><a href="http://example.com/_/csp-reports" rel="freelink">http://example.com/_/csp-reports</a></code> в момент обращения к странице (<code>signup.html</code>):</div>
 
-<pre class="notranslate">{
+<pre>{
   "csp-report": {
     "document-uri": "http://example.com/signup.html",
     "referrer": "",

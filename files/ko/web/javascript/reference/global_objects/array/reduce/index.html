@@ -12,7 +12,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><code><strong>reduce()</strong></code><strong> </strong>메서드는 배열의 각 요소에 대해 주어진 <strong>리듀서</strong>(reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.</span></p>
+<p><code><strong>reduce()</strong></code><strong> </strong>메서드는 배열의 각 요소에 대해 주어진 <strong>리듀서</strong>(reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.</p>
+
 
 <div>{{EmbedInteractiveExample("pages/js/array-reduce.html")}}</div>
 
@@ -21,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 <p><strong>리듀서</strong> 함수는 네 개의 인자를 가집니다.</p>
 
 <ol>
- <li>누산기<sup>accumulator</sup> (acc)</li>
+ <li>누산기 (acc)</li>
  <li>현재 값 (cur)</li>
  <li>현재 인덱스 (idx)</li>
  <li>원본 배열 (src)</li>
@@ -41,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
  <dd>
  <dl>
   <dt><code>accumulator</code></dt>
-  <dd>누산기<sup>accmulator</sup>는 콜백의 반환값을 누적합니다. 콜백의 이전 반환값 또는, 콜백의 첫 번째 호출이면서 <code>initialValue</code>를 제공한 경우에는 <code>initialValue</code>의 값입니다.</dd>
+  <dd>누산기는 콜백의 반환값을 누적합니다. 콜백의 이전 반환값 또는, 콜백의 첫 번째 호출이면서 <code>initialValue</code>를 제공한 경우에는 <code>initialValue</code>의 값입니다.</dd>
   <dt><code>currentValue</code></dt>
   <dd>처리할 현재 요소.</dd>
   <dt><code>currentIndex</code> {{optional_inline}}</dt>
@@ -260,7 +261,7 @@ var sum = [{x: 1}, {x:2}, {x:3}].reduce(
 
 console.log(sum) // logs 6</pre>
 
-<h3 id="중첩_배열_펼치기flatten">중첩 배열 펼치기<sup>flatten</sup></h3>
+<h3 id="중첩_배열_펼치기flatten">중첩 배열 펼치기</h3>
 
 <pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
   function(accumulator, currentValue) {

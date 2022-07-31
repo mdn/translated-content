@@ -1,5 +1,5 @@
 ---
-title: これは MDN Web Docs に掲載するものですか？
+title: MDN Web Docs に掲載するものであるかどうか
 slug: MDN/Guidelines/Does_this_belong_on_MDN
 tags:
   - Guide
@@ -9,11 +9,9 @@ translation_of: MDN/Guidelines/Does_this_belong_on_MDN
 ---
 <div>{{MDNSidebar}}</div>
 
-<div>{{IncludeSubnav("/ja/docs/MDN")}}</div>
-
 <p><span class="seoSummary">この記事では、ある主題やコンテンツの種類を MDN Web Docs に載せるべきかどうかを決定する方法について説明します。</span>また、詳細ではありませんが、コンテンツを配置する可能性のある他の場所についても検討します。</p>
 
-<h2 id="The_question" name="The_question">問い</h2>
+<h2 id="The_question">問い</h2>
 
 <p>何らかの文書をまとめる準備をしている場合、その情報を MDN Web Docs に載せるどうか考えるかもしれません。加えて、ソースコード内の文書を維持したり、その文書を <a href="https://wiki.mozilla.org/">Mozilla wiki</a> や、git リポジトリー内の readme ファイルに置いたりすることを検討しているかもしれません。この記事の目的は、あなたのコンテンツが、これらのオプションのどれにふさわしいのかを決めるのに役立つことです。</p>
 
@@ -24,55 +22,55 @@ translation_of: MDN/Guidelines/Does_this_belong_on_MDN
  <li>文書の性質 (これはどんな種類の文書か)</li>
 </ul>
 
-<p>MDN への寄稿は、すべて特定のオープンソースライセンスに該当することに注意してください。これは <a href="/en-US/docs/MDN/About">MDN について</a>ページに<a href="/ja/docs/MDN/About#Copyrights_and_licenses">詳細に記されています</a>。</p>
+<p>MDN への寄稿は、すべて特定のオープンソースライセンスに該当することに注意してください。これは <a href="/ja/docs/MDN/About">MDN について</a>ページに<a href="/ja/docs/MDN/About#copyrights_and_licenses">詳細に記されています</a>。</p>
 
 <div class="note">
-<p><strong>注</strong>: MDN Web Docs を利用したり、投稿したりする際には、Mozilla の<a href="https://www.mozilla.org/en-US/about/legal/terms/mozilla/">ウェブサイトおよびコミュニケーション利用規約</a>が適用されることに注意してください。この文書を確認して、Mozilla のサイトで投稿できること、できないことを確認してください。</p>
+<p><strong>注</strong>: MDN Web Docs を利用したり、投稿したりする際には、Mozilla の<a href="https://www.mozilla.org/en-US/about/legal/terms/mozilla/">ウェブサイトおよびコミュニケーション利用規約</a>が適用されることに注意してください。この文書を確認して、 Mozilla のサイトで投稿できること、できないことを確認してください。</p>
 </div>
 
-<h2 id="What_topics_belong_on_MDN_Web_Docs" name="What_topics_belong_on_MDN_Web_Docs">どのようなトピックが MDN Web Docs に載るのか</h2>
+<h2 id="What_topics_belong_on_MDN_Web_Docs">どのようなトピックが MDN Web Docs に載るのか</h2>
 
 <p>一般的には、オープンなウェブ向きの技術であれば、MDN 上で文書化します。これは、現在および近い将来にサイトやアプリケーションを作成するウェブ開発者が使用できる機能を意味します。複数のブラウザーで実装されていて、標準として受け入れられているか、標準化に向けて進んでいるものであれば、そうですね。もしそれがまだ非常に実験的で、複数のブラウザーで実装されておらず、変更される可能性がある場合、それでも載せるのに適してはいますが、ライターのチームが取り組むべき優先事項とは見なされないかもしれません。</p>
 
 <p>主にフロントエンドのウェブ技術に重点を置いています。</p>
 
 <ul>
- <li><a href="/ja/docs/Web/HTML" title="HTML">HTML</a></li>
- <li><a href="/ja/docs/Web/CSS" title="CSS">CSS</a></li>
- <li><a href="/ja/docs/Web/JavaScript" title="JavaScript">JavaScript</a></li>
- <li><a href="/ja/docs/Web/SVG" title="SVG">SVG</a></li>
+ <li><a href="/ja/docs/Web/HTML">HTML</a></li>
+ <li><a href="/ja/docs/Web/CSS">CSS</a></li>
+ <li><a href="/ja/docs/Web/JavaScript">JavaScript</a></li>
+ <li><a href="/ja/docs/Web/SVG">SVG</a></li>
  <li><a href="/ja/docs/Web/API">Web APIs</a></li>
- <li><a href="/ja/docs/Web/API/WebGL_API" title="WebGL">WebGL</a></li>
+ <li><a href="/ja/docs/Web/API/WebGL_API">WebGL</a></li>
  <li>など</li>
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: バックエンドテクノロジーには、別の文書化の場所があり、MDN はこれにとって変わるつもりはありませんが、<a href="/ja/docs/Learn/Server-side">いくつかの例外はあります</a>。</p>
+<p><strong>Note</strong>: バックエンドテクノロジーには、別の文書化の場所があり、 MDN はこれにとって代わるつもりはありませんが、<a href="/ja/docs/Learn/Server-side">いくつかの例外はあります</a>。</p>
 </div>
 
 <p>また、複数の技術にまたがるが、以下のようなウェブ開発に関連したトピックも歓迎します。</p>
 
 <ul>
- <li><a href="/ja/docs/Web/Accessibility" title="Accessibility">Accessibility</a></li>
+ <li><a href="/ja/docs/Web/Accessibility">Accessibility</a></li>
  <li><a href="/ja/docs/Web/Guide/AJAX">AJAX</a></li>
  <li><a href="/ja/docs/Web/Guide/Graphics">ウェブグラフィック</a></li>
  <li><a href="/ja/docs/Web/Progressive_web_apps">プログレッシブウェブアプリ</a></li>
- <li><a href="/ja/docs/Games/">ウェブベースのゲーム</a></li>
+ <li><a href="/ja/docs/Games">ウェブベースのゲーム</a></li>
 </ul>
 
 <div class="note">
 <p><strong>注:</strong> MDN は、ウェブに公開されていて、特に一般的に使われている場合には、一部の標準外の機能をカバーしています。例えば、WebKit 固有の CSS プロパティのドキュメントがあります。MDN は、ウェブ開発者にとって十分に有用であると考えられる場合には、ウェブ標準以外の技術もカバーしています。<a href="/ja/docs/Related">ウェブ関連技術</a>のセクションを参照してください。</p>
 </div>
 
-<h2 id="What_topics_dont_belong_on_MDN_Web_Docs" name="What_topics_dont_belong_on_MDN_Web_Docs">MDN Web Docs に掲載しない主題</h2>
+<h2 id="What_topics_dont_belong_on_MDN_Web_Docs">MDN Web Docs に掲載しない主題</h2>
 
 <p>一般医、オープンなウェブ標準ではないものはすべて、MDN に掲載するものではありません。以下にもっと具体的に示します。</p>
 
-<h3 id="Mozilla_products" name="Mozilla_products">Mozilla 製品</h3>
+<h3 id="Mozilla_products">Mozilla 製品</h3>
 
 <p>このカテゴリーの文書には、 Mozilla 製品に対して開発者として作業する方法と、これらのオープンソースプロジェクトに貢献する方法との、両方があります。</p>
 
-<p>MDN には Mozilla 製品の文書が大量にありますが、新規コンテンツ開発の重点はオープンウェブに置いています。MDN に Mozilla 製品の文書を新規作成することは推奨されません。Mozilla 製品 (やそうなるかもしれない製品) の作業を進めている場合は、<a href="https://wiki.mozilla.org/Engagement/MDN_Durable_Team">MDN スタッフチーム</a>のメンバーに話して、その製品の文書化の道を議論してください。また、下記の<a href="#Cases_for_documenting_elsewhere">他の場所に文書化する場合</a>も見てください。</p>
+<p>MDN には Mozilla 製品の文書が大量にありますが、新規コンテンツ開発の重点はオープンウェブに置いています。MDN に Mozilla 製品の文書を新規作成することは推奨されません。Mozilla 製品 (やそうなるかもしれない製品) の作業を進めている場合は、<a href="https://wiki.mozilla.org/Engagement/MDN_Durable_Team">MDN スタッフチーム</a>のメンバーに話して、その製品の文書化の道を議論してください。また、下記の<a href="#cases_for_documenting_elsewhere">他の場所に文書化する場合</a>も見てください。</p>
 
 <ul>
  <li><a href="/ja/docs/Mozilla/Firefox">Firefox ブラウザー</a>
@@ -93,7 +91,7 @@ translation_of: MDN/Guidelines/Does_this_belong_on_MDN
  </li>
 </ul>
 
-<h3 id="What_else" name="What_else">それ以外</h3>
+<h3 id="What_else">それ以外</h3>
 
 <p>その他の MDN Web Docs のトピックとして適切ではないものの例です。</p>
 
@@ -103,7 +101,7 @@ translation_of: MDN/Guidelines/Does_this_belong_on_MDN
  <li>エンドユーザー向け文書。Mozilla 製品では、こうした文書は <a href="https://support.mozilla.org">Mozilla サポートサイト</a>に載っています。</li>
 </ul>
 
-<h2 id="What_types_of_documents_belong_on_MDN" name="What_types_of_documents_belong_on_MDN">MDN に掲載する文書の種類</h2>
+<h2 id="What_types_of_documents_belong_on_MDN">MDN に掲載する文書の種類</h2>
 
 <p>一般に、MDN は<em>プロダクト</em>のドキュメントであり、<em>プロジェクト</em>や<em>プロセス</em>のドキュメントではありません (<a href="/ja/docs/MDN">MDN 自体について</a>を除く)。そのため、もしドキュメントが「どのように使うか」や「どのように動作するか」 (「どの」とは下記で記述されている特定のカテゴリのことです) なら MDN に掲載しましょう。しかし、「誰が開発したか」や「開発プランについて」などは MDN にふさわしくありません。Mozilla 傘下で開発されているものの場合は <a href="https://wiki.mozilla.org/Main_Page">Mozilla project wiki</a> に掲載するといいでしょう。</p>
 
@@ -114,89 +112,5 @@ translation_of: MDN/Guidelines/Does_this_belong_on_MDN
  <li>設計書</li>
  <li>プロジェクト提案書</li>
  <li>仕様書や標準</li>
- <li>プロモーション素材、広告、<a href="#About_your_profile">個人情報</a></li>
+ <li>プロモーション素材、広告、<a href="#about_your_profile">個人情報</a></li>
 </ul>
-
-<h2 id="Advantages_to_documenting_on_MDN" name="Advantages_to_documenting_on_MDN">MDN で文書化する利点</h2>
-
-<p>もし書きたいドキュメントの内容や種類が MDN に適していると判断したとしても、MDN が最適な場所かどうか迷っているのであれば、読んでみてください。MDN でドキュメントを作成する利点はたくさんあります。</p>
-
-<h3 id="Lots_of_writers_and_translators" name="Lots_of_writers_and_translators">たくさんの執筆者と翻訳者</h3>
-
-<p>MDN コミュニティは巨大です。MDN のコンテンツの作成や保守に参加している人がたくさんいます。すべての大陸に (南極ではないかもしれませんが、それ以外には) 執筆者や編集者がいて、執筆者の数の多さには価値があります。</p>
-
-<ul>
- <li>雇用している本職の執筆者がいて、できるだけコンテンツをより良いものにする<strong>ミッション</strong>が与えられています。</li>
- <li>ボランティアの中心となるコミュニティがあり、あなたを手助けするかなりの量のコンテンツに協力しています。</li>
- <li>MDN チームは、あなたの文書化プロジェクトに十分人を配置することを保証すべく、一緒に作業してくれます。</li>
- <li>広大な MDN コミュニティは大量に貢献します。誤字の修正からコンテンツの編集レビューまで、助けてくれます。</li>
- <li><a href="https://chat.mozilla.org/#/room/#mdn:mozilla.org">MDN Web Docs チャットルーム</a>が <a href="https://wiki.mozilla.org/Matrix">Matrix</a> にあり、ライターコミュニティに話してアドバイスを得る場や、コンテンツ作成や維持を助ける人を採用する場を提供します。</li>
- <li>全世界に協力者がいるため、問題を見ていたり直したりする人がいつも周りにいます。</li>
- <li>ボランティアコミュニティには、多くの言語へ翻訳する人がいて、ドキュメントのローカライズを手伝っています。</li>
-</ul>
-
-<p>あなたの開発チームが、文書作成に全責任を負うことを望みますか？その場合はおそらく他の場所で文書を維持するべきでしょう。</p>
-
-<h3 id="Maintenance" name="Maintenance">保守</h3>
-
-<p>投稿者の数が非常に多いため、通常、コンテンツに問題がないかどうかを監視するために、誰かが常駐していま。スパム対策からコピー編集まで、24時間体制で対応しています。ここでは、私たちのチームができることのほんの一例をご紹介します。</p>
-
-<dl>
- <dt>スパム削除</dt>
- <dd>スパムは発生します。それに対処します。</dd>
- <dt>文章の推敲</dt>
- <dd>文章が思うようにはっきりしていなくても、正確でなくても心配する必要はありません。散文を、他の人が読めるような文章に仕上げます。</dd>
- <dt>スタイルの一貫性</dt>
- <dd>コンテンツが、それ自体だけでなく、その周りにある他のドキュメントとスタイル的に一貫していることを確認します。</dd>
- <dt>コンテンツ管理</dt>
- <dd>私たちのチームは、ドキュメントが他の関連資料とクロスリンクされ、記事が適切な場所に配置され、メニューやその他のインフラストラクチャが構築されているかどうかを確認し、フォローしやすく、理解しやすいように支援します。</dd>
- <dt>サイトとプラットホームの維持</dt>
- <dd>MDN には、サイトの稼働、運営、安全性を維持するITチームと、コンテンツが表示されるプラットフォームを維持、強化するプラットフォーム開発チームの両方があります。ドキュメントのインフラに自分のリソースや追加のリソースを割く必要はありません。</dd>
-</dl>
-
-<h2 id="Cases_for_documenting_elsewhere" name="Cases_for_documenting_elsewhere">他の場所で文書化した場合</h2>
-
-<p>MDN 以外のどこかで成果を文書化するのを考える理由も少しあります。その理由のいくつかと、利点や欠点をそれぞれ示します。</p>
-
-<h3 id="Plans_and_processes" name="Plans_and_processes">計画書や手順書</h3>
-
-<p>計画書や手順書や提案書は、決して MDN に載せてはいけません。これはとても単純なことです。製品が Mozilla のものなら、<a href="https://wiki.mozilla.org/Main_Page">Mozilla project wiki</a> に置くことができます。</p>
-
-<h3 id="The_project_is_on_GitHub" name="The_project_is_on_GitHub">Github 上のプロジェクト</h3>
-
-<p>Mozilla の製品のいくつかは Github にホストされていて、Github では wiki 的な文書化システムが提供されています。文書をそこに作成するチームもあります。文書を作成するには確実にフェアで便利ですが、次に注意してください。</p>
-
-<ul>
- <li>MDN はたぶんあなたを手助けできません。一般的に我々は MDN 以外の文書作業には加わりしません。例外はあるものの、まれです。</li>
- <li>あなたの文書と、関連する他の素材をクロスリンクするのは、困難だったり、不可能になるかもしれません。</li>
- <li>コンテンツが他の文書と一貫したスタイルが持てなくなります。</li>
- <li>他の (ウェブや Mozilla の) 文書の外にあるため、文書の発見しやすさが失われます。</li>
-</ul>
-
-<p>もちろん、これらのことが困ることではなかったり、問題にならなかったりする可能性もあります。チームによっては、自分たちでドキュメントを書いたりメンテナンスしたりすることを気にしない、あるいは最低限のドキュメントの必要性があるコードに取り組んでいるチームもあります。</p>
-
-<h3 id="You_want_to_keep_docs_in-source" name="You_want_to_keep_docs_in-source">ソース内に文書を置きたい場合</h3>
-
-<p>一部のチームでは、ドキュメントをソースツリーに配置したがることがあります。これは特にプロジェクトの内部やライブラリプロジェクトでよく見られます。</p>
-
-<p>このアプローチにはいくつかの利点があります。</p>
-
-<ul>
- <li>これにより、開発者が技術をコーディングしながらドキュメントを作成することができ、ドキュメントがコードを常に最新の状態に保つことができるようになります。</li>
- <li>ドキュメントは、バージョン管理を含め、コードと同じ開発とリリースのプロセスに従うことができます。</li>
-</ul>
-
-<p>欠点もあります。</p>
-
-<ul>
- <li>MDN Web Docs チームはあなたを助けることができません。コードが Mozilla のソースリポジトリー内にあっても、レビューとチェックインのシステムにより、docs チームが参加することは現実的ではありません。</li>
- <li>他の関連文書とのクロスリンクを行うための簡単なツールがありません。クロスリンクは、読者にコンテキストと追加の重要な情報の両方を提供します。</li>
- <li>ドキュメントが、他のドキュメントの中に存在しないことで発見可能性を失います。</li>
- <li>変換ツール (JavaDoc など) を使ってウェブで読めるドキュメントを作っても、MDN Web Docs でできるものほど魅力的なものにはならないでしょう。</li>
-</ul>
-
-<p>それでも、これはいくつかの種類のプロジェクト、特に小さなものや、あまり興味を持たれることが期待されていないものに対しては、実行可能な選択肢 (良い選択肢である可能性もあります) になるでしょう。</p>
-
-<h2 id="About_your_profile" name="About_your_profile">自分のプロフィールについて</h2>
-
-<p>MDN のプロフィールページには、限られた個人情報を掲載しても構いません。ユーザーのプロフィールは、企業や組織ではなく、人間を反映したものであるべきです。適度な自己 PR は OK ですが、リンクスパムは不可です。個人的な写真やその他の無関係なファイルをアップロードするためにプロフィールを使用<em>しない</em>でください。</p>

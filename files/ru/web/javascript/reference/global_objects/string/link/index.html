@@ -12,30 +12,30 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/link
 ---
 <div>{{JSRef("Global_Objects", "String")}} {{deprecated_header}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>link()</code></strong> создаёт HTML-элемент {{HTMLElement("a")}}, заставляющий строку отображаться в виде ссылки на другой URL.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>str</var>.link(<var>url</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>url</code></dt>
  <dd>Любая строка, определяющая атрибут <code>href</code> тега <code>&lt;a&gt;</code>; она должна содержать допустимый URL (относительный или абсолютный), символы амперсанда <code>&amp;</code> должны быть закодированы в ней как <code>&amp;amp;</code>, а символы кавычки <code>"</code> — как <code>&amp;quot;</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>link()</code> используется для создания кусочка HTML со ссылкой в гипертексте. Возвращённая строка затем может быть добавлена в документ при помощи метода {{domxref("document.write()")}} или свойства {{domxref("element.innerHTML")}}</p>
 
 <p>Ссылки, созданные методом <code>link()</code>, становятся элементами в массиве {{domxref("document.links")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_link" name="Example:_Using_link">Пример: использование метода <code>link()</code></h3>
+<h3 id="Example:_Using_link">Пример: использование метода <code>link()</code></h3>
 
 <p>В следующем примере слово «MDN» отображается в виде гипертекстовой ссылки, ведущей на сайт Сети разработчиков Mozilla.</p>
 
@@ -50,29 +50,15 @@ document.write('Нажмите для возврата на ' + hotText.link(URL
 <pre class="brush: html">Нажмите для возврата на &lt;a href="https://developer.mozilla.org/"&gt;MDN&lt;/a&gt;
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.link', 'String.prototype.link')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.<br>
-    Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.anchor()")}}</li>

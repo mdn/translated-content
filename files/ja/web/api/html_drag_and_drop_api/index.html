@@ -90,7 +90,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <p>{{domxref("DataTransfer")}} オブジェクトはドラッグイベントの状態、例えば (<code>copy</code> や <code>move</code> のような) ドラッグの種類や、ドラッグのデータ (1 つ以上の項目)や、各<em>ドラッグ項目</em>の MIME タイプのようなものを含んでいます。{{domxref("DataTransfer")}} オブジェクトにはドラッグデータを追加・削除するメソッドもあります。</p>
 
-<p>{{domxref("DragEvent")}} と {{domxref("DataTransfer")}} インターフェイスは、アプリケーションに HTML ドラッグ &amp; ドロップ機能を追加するために必要な唯一のものです。 (Firefox では {{anch("Gecko specific interfaces","Gecko 独自拡張")}} を {{domxref("DataTransfer")}} オブジェクトへ施していますが、この拡張機能は Firefox でのみ動作します。)</p>
+<p>{{domxref("DragEvent")}} と {{domxref("DataTransfer")}} インターフェイスは、アプリケーションに HTML ドラッグ &amp; ドロップ機能を追加するために必要な唯一のものです。 (Firefox では <a href="#gecko_specific_interfaces">Gecko 独自拡張</a> を {{domxref("DataTransfer")}} オブジェクトへ施していますが、この拡張機能は Firefox でのみ動作します。)</p>
 
 <p>それぞれの {{domxref("DataTransfer")}} オブジェクトには {{domxref("DataTransfer.items","items")}} プロパティがあり、これは {{domxref("DataTransferItem")}} オブジェクトの {{domxref("DataTransferItemList","list")}} です。 {{domxref("DataTransferItem")}} オブジェクトは単一の<em>ドラッグ項目</em>を表し、それぞれが {{domxref("DataTransferItem.kind","kind")}} プロパティ (<code>string</code> か <code>file</code> の値を取る) と項目の MIME タイプを表す {{domxref("DataTransferItem.type","type")}} プロパティを持ちます。{{domxref("DataTransferItem")}} オブジェクトにはドラッグ項目のデータを取得するメソッドもあります。</p>
 
@@ -98,7 +98,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <p>{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。.</p>
 
-<p class="note"><strong>メモ:</strong> {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは{{anch("Interoperability", "相互運用性")}}を見てください。</p>
+<p class="note"><strong>メモ:</strong> {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは<a href="#interoperability">相互運用性</a>を見てください。</p>
 
 <h3 id="Gecko-specific_interfaces" name="Gecko-specific_interfaces">Gecko-特有のインターフェイス</h3>
 
@@ -234,7 +234,7 @@ function drop_handler(ev) {
 <p>詳しくは、以下を参照してください。</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Drag_operations#droptargets">ドロップ先の指定</a></li>
+ <li><a href="/ja/docs/Web/Guide/HTML/Drag_operations#droptargets">ドロップ先の指定</a></li>
 </ul>
 
 <h3 id="ドロップ効果を扱う">ドロップ<em>効果</em>を扱う</h3>
@@ -270,7 +270,7 @@ function drop_handler(ev) {
 <p>詳しくは、以下を参照してください。</p>
 
 <ul>
- <li><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Drag_operations#drop">ドロップの実行</a></li>
+ <li><a href="/ja/docs/Web/Guide/HTML/Drag_operations#drop">ドロップの実行</a></li>
 </ul>
 
 <h3 id="Drag_end" name="Drag_end">ドラッグの終了</h3>
@@ -294,8 +294,8 @@ function drop_handler(ev) {
 <ul>
  <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html">Copying and moving elements with the <code>DataTransfer</code> interface</a></li>
  <li><a href="http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html">Copying and moving elements with the <code>DataTransferListItem</code> interface</a></li>
- <li>ファイルのドラッグ&amp;ドロップ (Firefox のみ): <a class="external" href="http://jsfiddle.net/9C2EF/" title="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
- <li>ファイルのドラッグ&amp;ドロップ (全ブラウザー): <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output" title="https://jsbin.com/hiqasek">https://jsbin.com/hiqasek/</a></li>
+ <li>ファイルのドラッグ&amp;ドロップ (Firefox のみ): <a class="external" href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
+ <li>ファイルのドラッグ&amp;ドロップ (全ブラウザー): <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
  <li>
   <p>Drag and Drop API を使った駐車場プロジェクト: <a href="https://park.glitch.me/">https://park.glitch.me/</a> (<a href="https://glitch.com/edit/#!/park">ここで</a>編集できます)</p>
  </li>

@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/checkbox
 ---
 <div>{{HTMLRef}}</div>
 
-<p>{{htmlelement ("input")}} elementos do tipo <strong><code>checkbox</code></strong>são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas, como você pode ver em um formulário de papel oficial do governo. A aparência exata depende de da configuração de sistema operacional sobre o qual o navegador está sendo executado. Eles permitem que você selecione valores únicos para envio em um formulário (ou não).</p>
+<p>{{htmlelement ("input")}} elementos do tipo <strong><code>checkbox</code></strong>são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas, como as que você veria em um formulário do governo. A aparência exata depende de da configuração de sistema operacional sobre o qual o navegador está sendo executado. Caixas de seleção permitem que você selecione valores únicos para envio em um formulário (ou não).</p>
 
 <div>{{EmbedInteractiveExample ("pages/tabbed/input-checkbox.html", "tabbed-standard")}}</div>
 
@@ -18,7 +18,7 @@ translation_of: Web/HTML/Element/input/checkbox
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch ("Valor")}}</strong></td>
+   <td><strong><a href="#valor">Valor</a></strong></td>
    <td>Um {{domxref ("DOMString")}} representando o valor da caixa de seleção.</td>
   </tr>
   <tr>
@@ -42,11 +42,11 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <h2 id="Valor">Valor</h2>
 
-<p>Um {{domxref ("DOMString")}} representando o valor da caixa de seleção. Isso nunca é visto no lado do cliente, mas no servidor esse é o <code>value</code>  atribuído aos dados enviados com o <code>name</code> da caixa de seleção. Tome o seguinte exemplo:</p>
+<p>Um {{domxref ("DOMString")}} representando o valor da caixa de seleção. Isso nunca é visto no lado do cliente, mas no servidor esse é o <code>value</code>  atribuído aos dados enviados com o <code>name</code> da caixa de seleção. Tome o seguinte exemplo:</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "subscribeNews" nome = "subscribe" value = "<code>newsletter</code>"&gt;
+    &lt;input type = "checkbox" id = "subscribeNews" name = "subscribe" value = "<code>newsletter</code>"&gt;
     &lt;label for = "subscribeNews"&gt; Subscreva a newsletter? &lt;/ label&gt;
   &lt;/ div&gt;
   &lt;div&gt;
@@ -58,7 +58,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <p>Neste exemplo, temos um nome <code>subscribe</code>e um valor de <code>newsletter</code>. Quando o formulário é enviado, o par de nome / valor de dados será <code>subscribe=newsletter</code>.</p>
 
-<p>Se o atributo <code>value</code> for omitido, o valor padrão da caixa de seleção é <code>on</code> , portanto, os dados enviados nesse caso seriam <code>subscribe=on</code>.</p>
+<p>Se o atributo <code>value</code> for omitido, o valor padrão da caixa de seleção é <code>on</code> , portanto, os dados enviados nesse caso seriam <code>subscribe=on</code>.</p>
 
 <div class="note">
 <p><strong>Nota</strong> : Se uma caixa de seleção estiver desmarcada quando seu formulário for enviado, não haverá nenhum valor enviado ao servidor para representar seu estado desmarcado (por exemplo <code>value=unchecked</code>); o valor não é submetido ao servidor.</p>
@@ -72,16 +72,16 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <p>O exemplo que vimos acima continha apenas uma caixa de seleção; em situações do mundo real, você provavelmente encontrará várias caixas de seleção. Se eles não estiverem relacionados, você pode lidar com todos eles separadamente, como mostrado acima. No entanto, se todos estiverem relacionados, as coisas não são tão simples.</p>
 
-<p>Por exemplo, na demonstração a seguir, incluímos várias caixas de seleção para permitir que o usuário selecione seus interesses (veja a versão completa na seção {{anch ("Examples")}}).</p>
+<p>Por exemplo, na demonstração a seguir, incluímos várias caixas de seleção para permitir que o usuário selecione seus interesses (veja a versão completa na seção <a href="#examples">Examples</a>).</p>
 
 <pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt; Escolha seus interesses &lt;/ legend&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "codificação" name = "interesse" valor = "codificação"&gt;
+    &lt;input type = "checkbox" id = "codificação" name = "interesse" value = "codificação"&gt;
     &lt;label for = "coding"&gt; Codificação &lt;/ label&gt;
   &lt;/ div&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "música" name = "interesse" valor = "música"&gt;
+    &lt;input type = "checkbox" id = "música" name = "interesse" value = "música"&gt;
     &lt;label for = "music"&gt; Música &lt;/ label&gt;
   &lt;/ div&gt;
 &lt;/ fieldset&gt;</pre>
@@ -97,11 +97,11 @@ translation_of: Web/HTML/Element/input/checkbox
 <pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt; Escolha seus interesses &lt;/ legend&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "codificação" nome = "interesse" valor = "codificação" checked&gt;
+    &lt;input type = "checkbox" id = "codificação" name = "interesse" value = "codificação" checked&gt;
     &lt;label for = "coding"&gt; Codificação &lt;/ label&gt;
   &lt;/ div&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "música" name = "interesse" valor = "música"&gt;
+    &lt;input type = "checkbox" id = "música" name = "interesse" value = "música"&gt;
     &lt;label for = "music"&gt; Música &lt;/ label&gt;
   &lt;/ div&gt;
 &lt;/ fieldset&gt;</pre>
@@ -116,7 +116,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <h3 id="Caixas_de_seleção_de_estado_indeterminado">Caixas de seleção de estado indeterminado</h3>
 
-<p>Além dos estados marcado e não marcado, há um terceiro estado em que uma caixa de seleção pode estar: <strong>indeterminada</strong>. Este é um estado em que é impossível dizer se o item está ativado ou desativado. Isso é definido usando a propriedade <code>indeterminate</code> do objeto {{domxref ("HTMLInputElement")}} via JavaScript (não pode ser definido usando um atributo HTML):</p>
+<p>Além dos estados marcado e não marcado, há um terceiro estado em que uma caixa de seleção pode estar: <strong>indeterminada</strong>. Este é um estado em que é impossível dizer se o item está ativado ou desativado. Isso é definido usando a propriedade <code>indeterminate</code> do objeto {{domxref ("HTMLInputElement")}} via JavaScript (não pode ser definido usando um atributo HTML):</p>
 
 <pre class="brush: js">inputInstance.indeterminate = true;</pre>
 
@@ -142,7 +142,7 @@ translation_of: Web/HTML/Element/input/checkbox
   });
 
   for(var i = 0; i &lt;ingredientes.length; i ++) {
-    ingredientes [i] .addEventListener ('clique', updateDisplay);
+    ingredientes [i] .addEventListener ('click', updateDisplay);
   }
 
   função updateDisplay () {
@@ -173,7 +173,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <h2 id="Validação">Validação</h2>
 
-<p>As caixas de seleção suportam <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validação</a> (oferecidas para todos os  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="O elemento HTML &lt;input> é usado para criar controles interativos para formulários baseados na web, a fim de aceitar dados do usuário."><code>&lt;input&gt;</code></a>s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será <code>false</code>. Se a caixa de seleção tiver o <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-required">required</a></code> atributo, mas não estiver marcada, ela  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/valueMissing" title="The documentation about this has not yet been written; please consider contributing!">ValidityState.valueMissing</a></code> será <code>true</code>.</p>
+<p>As caixas de seleção suportam <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validação</a> (oferecidas para todos os  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="O elemento HTML &lt;input> é usado para criar controles interativos para formulários baseados na web, a fim de aceitar dados do usuário."><code>&lt;input&gt;</code></a>s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será <code>false</code>. Se a caixa de seleção tiver o <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-required">required</a></code> atributo, mas não estiver marcada, ela  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/valueMissing" title="The documentation about this has not yet been written; please consider contributing!">ValidityState.valueMissing</a></code> será <code>true</code>.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -185,29 +185,29 @@ translation_of: Web/HTML/Element/input/checkbox
   &lt;fieldset&gt;
   &lt;legend&gt; Escolha seus interesses &lt;/ legend&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "codificação" name = "interesse" valor = "codificação"&gt;
+      &lt;input type = "checkbox" id = "codificação" name = "interesse" value = "codificação"&gt;
       &lt;label for = "coding"&gt; Codificação &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "música" name = "interesse" valor = "música"&gt;
+      &lt;input type = "checkbox" id = "música" name = "interesse" value = "música"&gt;
       &lt;label for = "music"&gt; Música &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "arte" name = "interesse" valor = "arte"&gt;
+      &lt;input type = "checkbox" id = "arte" name = "interesse" value = "arte"&gt;
       &lt;label for = "art"&gt; Art &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "sports" nome = "interesse" valor = "esportes"&gt;
+      &lt;input type = "checkbox" id = "sports" name = "interesse" value = "esportes"&gt;
       &lt;label for = "sports"&gt; Esportes &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "cozinhar" nome = "interesse" valor = "cozinhar"&gt;
+      &lt;input type = "checkbox" id = "cozinhar" name = "interesse" value = "cozinhar"&gt;
       &lt;label for = "cooking"&gt; Cozinhando &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "outro" nome = "interesse" valor = "outro"&gt;
+      &lt;input type = "checkbox" id = "outro" name = "interesse" value = "outro"&gt;
       &lt;label for = "other"&gt; Outro &lt;/ label&gt;
-      &lt;input type = "text" id = "otherValue" nome = "outro"&gt;
+      &lt;input type = "text" id = "otherValue" name = "outro"&gt;
     &lt;/ div&gt;
     &lt;div&gt;
       &lt;button type = "submit"&gt; Enviar formulário &lt;/ button&gt;
@@ -221,7 +221,7 @@ translation_of: Web/HTML/Element/input/checkbox
   font-family: sem serifa;
 }
 
-Formato {
+form {
   largura: 600px;
   margem: 0 auto;
 }
@@ -235,7 +235,7 @@ fieldset {
   borda: 5px azul sólido;
 }
 
-lenda {
+legend {
   preenchimento: 10px;
   fundo: azul;
   cor: ciano;
@@ -252,10 +252,10 @@ otherText.style.visibility = 'oculto';
 
 otherCheckbox.onchange = function () {
   if (otherCheckbox.checked) {
-    otherText.style.visibility = 'visível';
+    otherText.style.visibility = 'visible';
     otherText.value = '';
   } outro {
-    otherText.style.visibility = 'oculto';
+    otherText.style.visibility = 'hidden';
   }
 };</pre>
 

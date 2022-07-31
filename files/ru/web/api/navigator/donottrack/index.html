@@ -7,22 +7,22 @@ translation_of: Web/API/Navigator/doNotTrack
 
 <p>Возвращает настройки пользователя  do-not-track. Будет "yes" если пользователь попросил не отслеживать его на веб-сайтах, контенте, рекламе.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval"><em>dnt</em> = <em>navigator</em>.doNotTrack;
 </pre>
 
 <p>Значение отражает , что в заголовке do-not-track header, т.е. значения {"1", "0", "unspecified" }.Примечание: до  Gecko 32, Gecko были использованы значения { "yes", "no", "unspecified"} (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=887703">bug 887703</a>).</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="eval">dump(window.navigator.doNotTrack);
 // prints "1" if DNT is enabled; "0" if the user opted-in for tracking; otherwise this is "unspecified"
 </pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
-<p><a class="external" href="http://www.w3.org/TR/tracking-dnt/" title="http://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression</a> (Working проект) основан на более ранней версии этой спецификации, где <code>navigator.doNotTrack</code> <strong>это </strong>значение<strong> </strong> посланное заголовком do-not-track.</p>
+<p><a class="external" href="http://www.w3.org/TR/tracking-dnt/">Tracking Preference Expression</a> (Working проект) основан на более ранней версии этой спецификации, где <code>navigator.doNotTrack</code> <strong>это </strong>значение<strong> </strong> посланное заголовком do-not-track.</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
@@ -32,4 +32,4 @@ translation_of: Web/API/Navigator/doNotTrack
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Navigator.doNotTrack")}}</p>
+<p>{{Compat}}</p>

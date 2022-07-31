@@ -5,10 +5,10 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
 <div>{{APIRef("Canvas API")}}</div>
 
-<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> メソッドは、 <code>type</code> パラメータ（デフォルトは<a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>形式）で指定される画像フォーマット形式の <a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a> を返すメソッドです。返り値となる画像の解像度は96 dpiです。</p>
+<p><strong><code>HTMLCanvasElement.toDataURL()</code></strong> メソッドは、 <code>type</code> パラメータ（デフォルトは<a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>形式）で指定される画像フォーマット形式の <a href="/ja/docs/Web/HTTP/data_URIs">data URI</a> を返すメソッドです。返り値となる画像の解像度は96 dpiです。</p>
 
 <ul>
- <li>キャンバスの幅か高さが、<code>0</code> もしくは <a href="/en-US/docs/Web/HTML/Element/canvas#Maximum_canvas_size">maximum canvas size</a> より大きい場合、文字列 <code>"data:,"</code>を返します。</li>
+ <li>キャンバスの幅か高さが、<code>0</code> もしくは <a href="/ja/docs/Web/HTML/Element/canvas#Maximum_canvas_size">maximum canvas size</a> より大きい場合、文字列 <code>"data:,"</code>を返します。</li>
  <li><code>image/png</code> 形式を指定したにもかかわらず返り値が <code>data:image/png</code> で始まる場合、要求された形式には対応していません。</li>
  <li>Chrome は <code>image/webp</code> 形式に対応します。</li>
 </ul>
@@ -30,7 +30,7 @@ translation_of: Web/API/HTMLCanvasElement/toDataURL
 
 <h3 id="戻り値">戻り値</h3>
 
-<p>要求された<a href="/en-US/docs/Web/HTTP/data_URIs">data URI</a>を含む {{domxref("DOMString")}} 。</p>
+<p>要求された<a href="/ja/docs/Web/HTTP/data_URIs">data URI</a>を含む {{domxref("DOMString")}} 。</p>
 
 <h3 id="例外">例外</h3>
 
@@ -151,5 +151,5 @@ function removeColors() {
 
 <ul>
  <li>The interface defining it, {{domxref("HTMLCanvasElement")}}.</li>
- <li><a href="/en-US/docs/Web/HTTP/data_URIs">Data URIs</a> in the <a href="/en-US/docs/Web/HTTP">HTTP</a> reference.</li>
+ <li><a href="/ja/docs/Web/HTTP/data_URIs">Data URIs</a> in the <a href="/ja/docs/Web/HTTP">HTTP</a> reference.</li>
 </ul>

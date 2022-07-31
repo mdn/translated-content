@@ -1,40 +1,42 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
+tags:
+  - HTTP
+  - Reference
+  - header
+  - referer
+  - referrer
 translation_of: Web/HTTP/Headers/Referer
+browser-compat: http.headers.Referer
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><code><strong>Referer</strong></code> 요청 헤더는 현재 요청된 페이지의 링크 이전의 웹 페이지 주소를 포함합니다. <code>Referer</code> 헤더는 사람들이 어디로부터 와서 방문 중인지를 인식할 수 있도록 해주며 해당 데이터는 예를 들어, 분석, 로깅, 혹은 캐싱 최적화에 사용될 수도 있습니다.</p>
+<p><code><strong>Referer</strong></code> 요청 헤더는 현재 요청을 보낸 페이지의 절대 혹은 부분 주소를 포함합니다. 만약 링크를 타고 들어왔다면 해당 링크를 포함하고 있는 페이지의 주소가, 다른 도메인에 리소스 요청을 보내는 경우라면 해당 리소스를 사용하는 페이지의 주소가 이 헤더에 포함됩니다.<code>Referer</code> 헤더는 사람들이 어디로부터 와서 방문 중인지를 인식할 수 있도록 해주며 해당 데이터는 예를 들어, 분석, 로깅, 혹은 캐싱 최적화에 사용될 수도 있습니다.</p>
 
-<p>referer는 실제로 단어 "referrer"에서 철자를 빼먹은 것입니다. 자세한 내용은 {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}을 참고하세요.</p>
+<p><code>Referer</code> 헤더는 URL 프래그먼트 (예 : "#section") 또는 "username : password" 정보를 포함 할 수 없습니다. <em>origin</em>, <em>경로</em>, 및 <em>쿼리 문자열</em>을 포함 할 수는 있습니다. 전송되는 내용은 요청에 대한 referrer 정책에 따라 다릅니다. 정보 및 예제는 Referrer-Policy를 참조하십시오. <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">정보</a> 와 <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples">예시</a>는 이곳 {{HTTPHeader("Referrer-Policy")}}을 참고하세요.
+<div class="notecard note">
+    <h4>Note</h4>
+    <p><p>referer는 단어 "referrer"의 잘못된 철자입니다. 자세한 내용은 {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}을 참고하세요.</p>
+  </div>
 
 <div class="warning">
-<p><code>Referer</code> 헤더는 사생활과 관련된 브라우징 히스토리에 관한 정보를 노출할 가능성이 있습니다.</p>
+    <h4>Warning</h4>
+<p><code>Referer</code> 헤더는 사생활과 관련된 브라우징 히스토리에 관한 정보를 노출할 가능성이 있습니다. 더 많은 정보는 <a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns">Referer header: privacy and security concerns</a> 이곳을 참조하세요.</p>
+
 </div>
 
-<p><code>Referer</code> 헤더는 다음과 같은 경우 브라우저에 의해 전송되지 않습니다:</p>
-
-<ul>
- <li>참조되는 리소스가 로컬 "파일" 혹은 "데이터"의 URI인 경우,</li>
- <li>
-  <p>안전하지 않은 HTTP 요청이 사용되고 참조 페이지가 보안 프로토콜(HTTPS)로 수신된 경우.</p>
- </li>
-</ul>
-
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
-
+    <tbody>
+     <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+     </tr>
+     <tr>
+     </tr>
+    </tbody>
+   </table>
+   
 <h2 id="문법">문법</h2>
 
 <pre class="syntaxbox">Referer: &lt;url&gt;
@@ -44,12 +46,16 @@ translation_of: Web/HTTP/Headers/Referer
 
 <dl>
  <dt>&lt;url&gt;</dt>
- <dd>현재 요청된 페이지의 링크 이전의 웹 페이지의 절대 혹은 부분 주소. URL 프래그먼트(예를 들어, "#section")는 포함되지 않습니다.</dd>
+ <dd>현재 요청된 페이지의 링크 이전의 웹 페이지의 절대 혹은 부분 주소. URL 프래그먼트(예를 들어, "#section")나 사용자 정보(예를 들어 "https://username:password@example.com/foo/bar/" 에서 "username:password")는 포함되지 않습니다. 오리진, 패쓰, 쿼리스트링은 <a href="/ko/docs/Web/HTTP/Headers/Referrer-Policy#directives">referrer 정책</a>에 따라 포함될 수 있습니다.</dd>
 </dl>
 
-<h2 id="예제">예제</h2>
+<h2 id="Exapmels">예제</h2>
 
-<pre>Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript</pre>
+<pre>
+Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://example.com/page?q=123
+Referer: https://example.com/
+</pre>
 
 <h2 id="명세서">명세서</h2>
 
@@ -66,12 +72,17 @@ translation_of: Web/HTTP/Headers/Referer
  </tbody>
 </table>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
-<p>{{Compat("http.headers.Referer")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="함께_참고할_내용">함께 참고할 내용</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li>{{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}</li>
+  <li>{{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}</li>
+  <li><a href="/ko/docs/Web/API/Fetch_API">Fetch</a>: {{domxref("Request.referrerPolicy")}}</li>
+  <li>outdated 된 {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} 디렉티브</li>
+  <li><a href="/ko/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
+  <li><a href="https://blog.mozilla.org/security/2015/01/21/meta-referrer/">Tighter Control Over Your Referrers – Mozilla Security Blog</a></li> 
 </ul>
+

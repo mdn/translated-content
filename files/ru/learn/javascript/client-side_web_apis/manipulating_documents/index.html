@@ -31,7 +31,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 <h2 id="Важные_элементы_веб-браузера">Важные элементы веб-браузера</h2>
 
-<p>Веб-браузеры - очень сложные части программного обеспечения с множеством движущихся частей, многие из которых не могут управляться или управляться веб-разработчиком с использованием JavaScript. Вы можете подумать, что такие ограничения - это плохо, но браузеры заблокированы по уважительным причинам (в основном ради безопасности). Представьте себе, что веб-сайт может получить доступ к вашим сохранённым паролям или другой конфиденциальной информации и войти на веб-сайты так, как если бы это были вы?</p>
+<p>Веб-браузеры - очень сложные части программного обеспечения с множеством движущихся частей, многие из которых не могут контролироваться или управляться веб-разработчиком с использованием JavaScript. Вы можете подумать, что такие ограничения - это плохо, но браузеры заблокированы по уважительным причинам (в основном ради безопасности). Представьте себе, что веб-сайт может получить доступ к вашим сохранённым паролям или другой конфиденциальной информации и войти на веб-сайты так, как если бы это были вы?</p>
 
 <p>Несмотря на ограничения, Web API по-прежнему дают нам доступ к множеству функциональных возможностей, которые позволяют нам многое делать с веб-страницами. Есть несколько действительно очевидных моментов, на которые вы будете регулярно ссылаться в своём коде. Рассмотрим следующую диаграмму, которая представляет основные части браузера, непосредственно участвующие в просмотре веб-страниц:</p>
 
@@ -51,7 +51,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 <p>Мы создали простую страницу примера в <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html">dom-example.html</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html">см. также live</a>). Попробуйте открыть это в своём браузере - это очень простая страница, содержащая элемент {{htmlelement("section")}}, внутри которого вы можете найти изображение и абзац со ссылкой внутри. Исходный код HTML выглядит так:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -95,13 +95,13 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
  <li>Возьмите локальную копию страницы <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example.html">dom-example.html page</a> и изображение, которое вместе с ним.</li>
  <li>Добавьте элемент <code>&lt;script&gt;&lt;/script&gt;</code> чуть выше закрывающего тега <code>&lt;/body&gt;</code>.</li>
  <li>Чтобы управлять элементом внутри DOM, вам сначала нужно выбрать его и сохранить ссылку на него внутри переменной. Внутри вашего скриптового элемента добавьте следующую строку:
-  <pre class="brush: js notranslate">var link = document.querySelector('a');</pre>
+  <pre class="brush: js">var link = document.querySelector('a');</pre>
  </li>
  <li>Теперь у нас есть ссылка на элемент, хранящаяся в переменной, мы можем начать её манипулировать с использованием доступных ему свойств и методов (они определены на таких интерфейсах, как {{domxref("HTMLAnchorElement")}} в случае {{htmlelement ("a")}}, его более общий родительский интерфейс {{domxref ("HTMLElement")}} и {{domxref("Node")}} - который представляет все узлы в DOM). Прежде всего, давайте изменим текст внутри ссылки, обновив значение свойства {{domxref("Node.textContent")}}. Добавьте следующую строку ниже предыдущей:
-  <pre class="brush: js notranslate">link.textContent = 'Mozilla Developer Network';</pre>
+  <pre class="brush: js">link.textContent = 'Mozilla Developer Network';</pre>
  </li>
  <li>Мы также должны изменить URL-адрес, на который указывает ссылка, чтобы он не попадал в неправильное место при нажатии. Добавьте следующую строку, опять внизу:
-  <pre class="brush: js notranslate">link.href = 'https://developer.mozilla.org';</pre>
+  <pre class="brush: js">link.href = 'https://developer.mozilla.org';</pre>
  </li>
 </ol>
 
@@ -120,24 +120,24 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 <h3 id="Создание_и_размещение_новых_узлов">Создание и размещение новых узлов</h3>
 
-<p>Вышесказанное дало вам немного вкуса от того, что вы можете сделать, но давайте продолжим и посмотрим, как мы можем создавать новые элементы.</p>
+<p>Вышесказанное дало вам немного представления о том, что вы можете сделать, но давайте продолжим и посмотрим, как мы можем создавать новые элементы.</p>
 
 <ol>
  <li>Возвращаясь к текущему примеру, давайте начнём с захвата ссылки на наш элемент {{htmlelement("section")}} - добавьте следующий код внизу существующего скрипта (сделайте то же самое с другими строками):
-  <pre class="brush: js notranslate">var sect = document.querySelector('section');</pre>
+  <pre class="brush: js">var sect = document.querySelector('section');</pre>
  </li>
  <li>Теперь давайте создадим новый абзац, используя {{domxref("Document.createElement()")}} и передадим ему текстовое содержимое так же, как и раньше:
-  <pre class="brush: js notranslate">var para = document.createElement('p');
+  <pre class="brush: js">var para = document.createElement('p');
 para.textContent = 'We hope you enjoyed the ride.';</pre>
  </li>
  <li>Теперь вы можете добавить новый абзац в конце раздела, используя {{domxref("Node.appendChild()")}}:
-  <pre class="brush: js notranslate">sect.appendChild(para);</pre>
+  <pre class="brush: js">sect.appendChild(para);</pre>
  </li>
  <li>Наконец, для этой части, давайте добавим текстовый узел в абзац, где находится ссылка, чтобы оформить предложение красиво. Сначала мы создадим текстовый узел, используя {{domxref("Document.createTextNode()")}}:
-  <pre class="brush: js notranslate">var text = document.createTextNode(' — the premier source for web development knowledge.');</pre>
+  <pre class="brush: js">var text = document.createTextNode(' — the premier source for web development knowledge.');</pre>
  </li>
  <li>Теперь мы возьмём ссылку на абзац, в котором находится ссылка, и добавим к нему текстовый узел:
-  <pre class="brush: js notranslate">var linkPara = document.querySelector('p');
+  <pre class="brush: js">var linkPara = document.querySelector('p');
 linkPara.appendChild(text);</pre>
  </li>
 </ol>
@@ -150,17 +150,17 @@ linkPara.appendChild(text);</pre>
 
 <p>Если бы мы хотели переместить абзац со ссылкой внутри него в нижней части раздела, мы могли бы просто сделать это:</p>
 
-<pre class="brush: js notranslate">sect.appendChild(linkPara);</pre>
+<pre class="brush: js">sect.appendChild(linkPara);</pre>
 
 <p>Это переводит абзац вниз в нижнюю часть раздела. Вы могли подумать, что это сделает вторую копию, но это не так - <code>linkPara</code> - ссылка на единственную копию этого абзаца. Если вы хотите сделать копию и добавить её также, вам нужно будет использовать {{domxref("Node.cloneNode()")}}.</p>
 
 <p>Удаление узла довольно просто, по крайней мере, когда у вас есть ссылка на удаляемый узел и его родительский элемент. В нашем случае мы просто используем {{domxref("Node.removeChild()")}}, например:</p>
 
-<pre class="notranslate">sect.removeChild(linkPara);</pre>
+<pre>sect.removeChild(linkPara);</pre>
 
-<p>Он становится немного сложнее, если вы хотите удалить узел, основанный только на ссылке на себя, что довольно часто. Нет способа сообщить узлу удалить себя, поэтому вам нужно будет сделать следующее.</p>
+<p>Он становится немного сложнее, если вы хотите удалить узел, основанный только на ссылке на себя, что довольно распространено. Нет способа сообщить узлу удалить себя, поэтому вам нужно будет сделать следующее.</p>
 
-<pre class="brush: js notranslate">linkPara.parentNode.removeChild(linkPara);</pre>
+<pre class="brush: js">linkPara.parentNode.removeChild(linkPara);</pre>
 
 <p>Попробуйте добавить вышеуказанные строки в свой код.</p>
 
@@ -174,14 +174,14 @@ linkPara.appendChild(text);</pre>
 
 <ol>
  <li>В качестве примера попробуйте добавить эти строки в наш текущий пример:
-  <pre class="brush: js notranslate">para.style.color = 'white';
+  <pre class="brush: js">para.style.color = 'white';
 para.style.backgroundColor = 'black';
 para.style.padding = '10px';
 para.style.width = '250px';
 para.style.textAlign = 'center';</pre>
  </li>
  <li>Перезагрузите страницу, и вы увидите, что стили были применены к абзацу. Если вы посмотрите на этот параграф в инспекторе <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector">Page Inspector/DOM inspector </a>вашего браузера, вы увидите, что эти строки действительно добавляют встроенные стили в документ:
-  <pre class="brush: html notranslate">&lt;p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;"&gt;We hope you enjoyed the ride.&lt;/p&gt;</pre>
+  <pre class="brush: html">&lt;p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;"&gt;We hope you enjoyed the ride.&lt;/p&gt;</pre>
  </li>
 </ol>
 
@@ -194,7 +194,7 @@ para.style.textAlign = 'center';</pre>
 <ol>
  <li>Удалите предыдущие пять строк, добавленных в JavaScript.</li>
  <li>Добавьте в свой HTML-код следующее: {{htmlelement("head")}}:
-  <pre class="notranslate">&lt;style&gt;
+  <pre>&lt;style&gt;
 .highlight {
   color: white;
   background-color: black;
@@ -205,7 +205,7 @@ para.style.textAlign = 'center';</pre>
 &lt;/style&gt;</pre>
  </li>
  <li>Теперь мы перейдём к очень полезному методу для общего манипулирования HTML - {{domxref("Element.setAttribute()")}} - это принимает два аргумента, атрибут, который вы хотите установить для элемента, и значение, которое вы хотите для его установки. В этом случае мы укажем имя класса выделения в нашем абзаце:
-  <pre class="brush: js notranslate">para.setAttribute('class', 'highlight');</pre>
+  <pre class="brush: js">para.setAttribute('class', 'highlight');</pre>
  </li>
  <li>Обновите свою страницу, и вы не увидите изменений - CSS по-прежнему применяется к абзацу, но на этот раз, предоставив ему класс, который выбран нашим правилом CSS, а не как встроенные стили CSS.</li>
 </ol>
@@ -220,7 +220,7 @@ para.style.textAlign = 'center';</pre>
 <p>Примечание. Вы можете найти наш пример <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html">finished version of the dom-example.html</a> на GitHub (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html">см. также live</a>).</p>
 </div>
 
-<h2 id="Активное_обучение_динамический_список_покупок">Активное обучение: динамический список покупок</h2>
+<h2 id="Активное_обучение_получение_полезной_информации_из_объекта_window">Активное обучение: Получение полезной информации из объекта Window</h2>
 
 <p>До сих пор мы действительно смотрели на использование функций {{domxref("Node")}} и {{domxref("Document")}} для управления документами, но нет причин, по которым вы не можете получить данные из других источников и использовать его в пользовательском интерфейсе. Вспомните нашу простую демонстрацию <a href="http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">maps-example.html</a> из последней статьи - там мы извлекли некоторые данные о местоположении и использовали её для отображения карты вашей области. Вам просто нужно убедиться, что ваши данные в правильном формате; JavaScript упрощает работу, чем многие другие языки, будучи слабо типизированным - например, числа автоматически преобразуются в строки, когда вы хотите распечатать их на экране.</p>
 
@@ -230,17 +230,17 @@ para.style.textAlign = 'center';</pre>
 
 <ol>
  <li>Прежде всего, давайте возьмём ссылку на div, а затем возьмём ширину и высоту окна просмотра (внутреннее окно, где отображается ваш документ) и сохраните их в переменных - эти два значения удобно содержатся в {{domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}. Добавьте следующие строки внутри существующего элемента {{htmlelement("script")}}:
-  <pre class="brush: js notranslate">var div = document.querySelector('div');
+  <pre class="brush: js">var div = document.querySelector('div');
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;</pre>
  </li>
  <li>Затем мы динамически изменяем ширину и высоту div, равную ширине окна просмотра. Добавьте следующие две строки ниже своих первых:
-  <pre class="brush: js notranslate">div.style.width = WIDTH + 'px';
+  <pre class="brush: js">div.style.width = WIDTH + 'px';
 div.style.height = HEIGHT + 'px';</pre>
  </li>
  <li>Сохраните и попробуйте обновить браузер - теперь вы должны увидеть, что div становится таким же большим, как ваш видовой экран, независимо от того, какой размер экрана вы используете. Если теперь вы попытаетесь изменить размер окна, чтобы увеличить его, вы увидите, что div остаётся одного размера - мы устанавливаем его только один раз.</li>
  <li>Как насчёт того, чтобы мы использовали событие, чтобы размер div изменялся при изменении размера окна? Объект {{domxref("Window")}} имеет событие, имеющееся на нем с именем resize, которое запускается каждый раз при изменении размера окна - давайте обратимся к нему через обработчик событий {{domxref("Window.onresize")}} и повторяйте наш размерный код каждый раз, когда он изменяется. Добавьте нижеследующую часть кода:
-  <pre class="brush: js notranslate">window.onresize = function() {
+  <pre class="brush: js">window.onresize = function() {
   WIDTH = window.innerWidth;
   HEIGHT = window.innerHeight;
   div.style.width = WIDTH + 'px';
@@ -253,7 +253,7 @@ div.style.height = HEIGHT + 'px';</pre>
 <p><strong>Примечание</strong>. Если у вас возникла проблема, посмотрите на наш <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html">законченный пример изменения размера окна</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html">см. также live</a>).</p>
 </div>
 
-<h2 id="Активное_обучение_динамический_список_покупок_2">Активное обучение: динамический список покупок</h2>
+<h2 id="Активное_обучение_динамический_список_покупок">Активное обучение: динамический список покупок</h2>
 
 <p>Чтобы завершить статью, мы хотели бы задать вам небольшой вызов - мы хотим сделать простой пример списка покупок, который позволяет динамически добавлять элементы в список с помощью ввода формы и кнопки. Когда вы добавляете элемент на вход и нажимаете кнопку:</p>
 

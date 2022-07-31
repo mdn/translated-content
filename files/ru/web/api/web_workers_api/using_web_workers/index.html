@@ -37,7 +37,7 @@ original_slug: DOM/Using_web_workers
 
 <p>Для большего контроля над ошибками и обратной совместимости, рекомендуется обернуть ваш код доступа к worker-у в следующий (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
 
-<pre class="brush: js notranslate">if (window.Worker) {
+<pre class="brush: js">if (window.Worker) {
 
   ...
 
@@ -48,7 +48,7 @@ original_slug: DOM/Using_web_workers
 <p>Создание нового worker-а — это легко. Всё что вам нужно это вызвать конструктор {{domxref("Worker.Worker", "Worker()")}}, указав URI скрипта для выполнения в потоке worker-а (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
 
 <div style="overflow: hidden;">
-<pre class="brush: js notranslate">var myWorker = new Worker("worker.js");
+<pre class="brush: js">var myWorker = new Worker("worker.js");
 </pre>
 </div>
 
@@ -56,7 +56,7 @@ original_slug: DOM/Using_web_workers
 
 <p>Магия worker-ов происходит через {{domxref("Worker.postMessage", "postMessage()")}} метод и обработчик событий {{domxref("Worker.onmessage", "onmessage")}}. Когда вы хотите отправить сообщение в worker, вы доставляете сообщение к нему вот так (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>):</p>
 
-<pre class="brush: js notranslate">first.onchange = function() {
+<pre class="brush: js">first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
@@ -70,7 +70,7 @@ second.onchange = function() {
 
 <p>Внутри worker-a мы можем обрабатывать сообщения и отвечать на них при помощи добавления обработчика события <code>onmessage</code> подобным образом (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js">worker.js</a>):</p>
 
-<pre class="brush: js notranslate">onmessage = function(e) {
+<pre class="brush: js">onmessage = function(e) {
   console.log('Message received from main script');
   var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
   console.log('Posting message back to main script');
@@ -81,7 +81,7 @@ second.onchange = function() {
 
 <p>Возвращаясь в основной поток, мы используем <code>onmessage</code> снова, чтобы отреагировать на сообщение, отправленное нам назад из worker-а:</p>
 
-<pre class="brush: js notranslate">myWorker.onmessage = function(e) {
+<pre class="brush: js">myWorker.onmessage = function(e) {
   result.textContent = e.data;
   console.log('Message received from worker');
 }</pre>
@@ -90,13 +90,13 @@ second.onchange = function() {
 
 <p class="note"><strong>Примечание</strong>: Обратите внимание, что <font face="consolas, Liberation Mono, courier, monospace"><code>onmessage()</code>​ и <code>postmessage()</code> должны вызываться из экземпляра Worker в главном потоке, но не в потоке worker-а. Это связано с тем, что внутри потока worker-а, worker выступает в качестве глобального объекта.</font></p>
 
-<p class="note"><strong>Примечание</strong>: При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте {{anch("Transferring data to and from workers: further details")}} для более подробного объяснения.</p>
+<p class="note"><strong>Примечание</strong>: При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте <a href="#transferring_data_to_and_from_workers:_further_details">Transferring data to and from workers: further details</a> для более подробного объяснения.</p>
 
 <h3 id="Завершение_работы_worker-а">Завершение работы worker-а</h3>
 
 <p>Прекращение работы worker-а главного потока достигается методом {{domxref("Worker", "terminate")}}:</p>
 
-<pre class="brush: js notranslate">myWorker.terminate();</pre>
+<pre class="brush: js">myWorker.terminate();</pre>
 
 <p>Поток worker-а немедленно уничтожается.</p>
 
@@ -125,7 +125,7 @@ second.onchange = function() {
 
 <p>Worker потоки имеют доступ к глобальной функции, <code>importScripts()</code>, которая позволяет импортировать скрипты с того же домена в их область видимости. Функция принимает ноль и более URI параметров, как список ссылок на ресурсы для импорта; все нижеприведённые примеры верны:</p>
 
-<pre class="brush: js notranslate">importScripts();                        /* imports nothing */
+<pre class="brush: js">importScripts();                        /* imports nothing */
 importScripts('foo.js');                /* imports just "foo.js" */
 importScripts('foo.js', 'bar.js');      /* imports two scripts */
 </pre>
@@ -138,7 +138,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>Разделяемый worker доступен нескольким разным скриптам — даже если они находятся в разных окнах, фреймах или даже worker-ах. В этом разделе мы обсудим JavaScript, который можно найти в нашем <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">базовом примере разделяемых worker-ов</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">запустить разделяемый worker</a>): Он очень похож на базовый пример выделенных worker-ов, за исключением двух функций, которые доступны из разных скриптовых файлов: <em>умножение двух чисел</em> или <em>возведение числа в степень.</em> Оба скрипта используют один и тот же worker для необходимых вычислений.</p>
 
-<p>Здесь мы сосредоточимся на разнице между выделенными и разделёнными worker-ами. Обратите внимание, что в данном примере есть две HTML страницы с JavaScript кодом, которые используют один и тот же файл worker-а.</p>
+<p>Здесь мы сосредоточимся на разнице между выделенными и разделёнными worker-ами. Обратите внимание, что в данном примере есть две HTML страницы с JavaScript-кодом, которые используют один и тот же файл worker-а.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: Если разделяемый worker может быть доступен из нескольких контекстов просмотра, то все они должны иметь одно и то же происхождение (одни и те же протокол, хост и порт).</p>
@@ -152,7 +152,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>Запуск разделяемого worker-а очень похож на запуск выделенного worker-а, но используется другой конструктор (см. <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html">index.html</a> и <a href="http://mdn.github.io/simple-shared-worker/index2.html">index2.html</a>) — в каждом документе необходимо поднять worker, для этого следует написать такой код:</p>
 
-<pre class="brush: js notranslate">var myWorker = new SharedWorker("worker.js");</pre>
+<pre class="brush: js">var myWorker = new SharedWorker("worker.js");</pre>
 
 <p>Большая разница заключается в том, что с разделяемым worker-ом необходимо взаимодействовать через объект <code>port</code> — явно открыв порт, с помощью которого скрипты могут взаимодействовать с worker-ом (в случае выделенного worker-а это происходит неявно).</p>
 
@@ -162,22 +162,22 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 <p><strong>Примечание: </strong>Когда используется метод <code>start()</code> чтобы открыть соединение с портом, его необходимо вызывать и в родительском потоке и в потоке worker-а, если необходима двухсторонняя коммуникация.</p>
 </div>
 
-<pre class="brush: js notranslate">myWorker.port.start();  // в родительском потоке</pre>
+<pre class="brush: js">myWorker.port.start();  // в родительском потоке</pre>
 
-<pre class="brush: js notranslate">port.start();  // в потоке worker-а, где переменная <code>port</code> является ссылкой на порт</pre>
+<pre class="brush: js">port.start();  // в потоке worker-а, где переменная <code>port</code> является ссылкой на порт</pre>
 
 <h3 id="Передача_сообщений_виз_разделяемого_worker-а">Передача сообщений в/из разделяемого worker-а</h3>
 
 <p>Теперь сообщения могут быть отправлены worker-у, как и прежде, но метод <code>postMessage()</code> должен вызываться из объекта <code>port</code> (ещё раз, вы можете увидеть схожие конструкции в <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> и <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>):</p>
 
-<pre class="brush: js notranslate">squareNumber.onchange = function() {
+<pre class="brush: js">squareNumber.onchange = function() {
   myWorker.port.postMessage([squareNumber.value,squareNumber.value]);
   console.log('Message posted to worker');
 }</pre>
 
 <p>Теперь на стороне worker-а. Здесь код немного сложнее (<a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js">worker.js</a>):</p>
 
-<pre class="brush: js notranslate">self.addEventListener('connect', function(e) { // требуется addEventListener()
+<pre class="brush: js">self.addEventListener('connect', function(e) { // требуется addEventListener()
   var port = e.ports[0];
   port.onmessage = function(e) {
     var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
@@ -194,7 +194,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>Последний этап — возвращение в основной поток и обработка сообщения от worker‑а (ещё раз, вы можете увидеть схожие конструкции в <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> и <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>):</p>
 
-<pre class="brush: js notranslate">myWorker.port.onmessage = function(e) {
+<pre class="brush: js">myWorker.port.onmessage = function(e) {
   result2.textContent = e.data[0];
   console.log('Message received from worker');
 }</pre>
@@ -213,7 +213,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>Для иллюстрации этого мы создадим функцию <code>emulateMessage()</code>, которая будет имитировать поведение значения, которое клонируется, но не используется совместно при переходе от worker-а к главной странице или наоборот.</p>
 
-<pre class="brush: js notranslate">function emulateMessage (vVal) {
+<pre class="brush: js">function emulateMessage (vVal) {
     return eval("(" + JSON.stringify(vVal) + ")");
 }
 
@@ -255,7 +255,7 @@ alert(emulateMessage(example5).constructor); // Object</pre>
 
 <p><strong>example.html</strong>: (главная страница):</p>
 
-<pre class="brush: js notranslate">var myWorker = new Worker("my_task.js");
+<pre class="brush: js">var myWorker = new Worker("my_task.js");
 
 myWorker.onmessage = function (oEvent) {
   console.log("Worker said : " + oEvent.data);
@@ -265,7 +265,7 @@ myWorker.postMessage("ali");</pre>
 
 <p><strong>my_task.js</strong> (worker):</p>
 
-<pre class="brush: js notranslate">postMessage("I\'m working before postMessage(\'ali\').");
+<pre class="brush: js">postMessage("I\'m working before postMessage(\'ali\').");
 
 onmessage = function (oEvent) {
   postMessage("Hi " + oEvent.data);
@@ -281,7 +281,7 @@ onmessage = function (oEvent) {
 
 <p>В первую очередь мы создаём класс QueryableWorker, который принимает url worker-а, стандартный обработчик событий (defaultListener) и обработчик ошибок. Этот класс будет отслеживать всех обработчиков и поможет нам общаться с воркером.</p>
 
-<pre class="brush: js notranslate"><code>function QueryableWorker(url, defaultListener, onError) {
+<pre class="brush: js"><code>function QueryableWorker(url, defaultListener, onError) {
     var instance = this,
         worker = new Worker(url),
         listeners = {};
@@ -302,7 +302,7 @@ onmessage = function (oEvent) {
 
 <p>Затем мы добавляем методы добавления/удаления обработчиков.</p>
 
-<pre class="brush: js notranslate"><code>this.addListeners = function(name, listener) {
+<pre class="brush: js"><code>this.addListeners = function(name, listener) {
     listeners[name] = listener;
 }
 
@@ -313,7 +313,7 @@ this.removeListeners = function(name) {
 
 <p>Здесь мы создадим у worker-а два простых события для примера: получение разницы двух чисел и создание оповещения через три секунды. Но сначала нам нужно реализовать метод sendQuery, который проверит есть ли вообще у worker-а обработчик, который мы собираемся вызвать.</p>
 
-<pre class="brush: js notranslate"><code>/*
+<pre class="brush: js"><code>/*
   Эта функция принимает по крайней мере один аргумент: имя метода, который мы хотим вызвать.
   Далее мы можем передать методу необходимые ему аргументы.
  */
@@ -331,7 +331,7 @@ this.sendQuery = function() {
 
 <p>Завершим QueryableWorker методом <code>onmessage</code>.  Если worker имеет соответствующий метод, который мы запросили, он также должен вернуть соответствующий обработчик и аргументы, которые нам нужны. Останется лишь найти его в <code>listeners</code>:</p>
 
-<pre class="brush: js notranslate"><code>worker.onmessage = function(event) {
+<pre class="brush: js"><code>worker.onmessage = function(event) {
     if (event.data instanceof Object &amp;&amp;
         event.data.hasOwnProperty('queryMethodListener') &amp;&amp;
         event.data.hasOwnProperty('queryMethodArguments')) {
@@ -344,7 +344,7 @@ this.sendQuery = function() {
 
 <p>Теперь к самому worker-у. Сначала следует определить эти два простых метода:</p>
 
-<pre class="brush: js notranslate"><code>var queryableFunctions = {
+<pre class="brush: js"><code>var queryableFunctions = {
     getDifference: function(a, b) {
         reply('printStuff', a - b);
     },
@@ -374,7 +374,7 @@ function defaultReply(message) {
 
 <p>И <code>onmessage</code>:</p>
 
-<pre class="brush: js notranslate"><code>onmessage = function(event) {
+<pre class="brush: js"><code>onmessage = function(event) {
     if (event.data instanceof Object &amp;&amp;
         event.data.hasOwnProperty('queryMethod') &amp;&amp;
         event.data.hasOwnProperty('queryMethodArguments')) {
@@ -389,7 +389,7 @@ function defaultReply(message) {
 
 <p><strong>example.html</strong> (основная страница):</p>
 
-<pre class="brush: html notranslate"><code>&lt;!doctype html&gt;
+<pre class="brush: html"><code>&lt;!doctype html&gt;
   &lt;html&gt;
     &lt;head&gt;
       &lt;meta charset="UTF-8"  /&gt;
@@ -480,7 +480,7 @@ function defaultReply(message) {
 
 <p><strong>my_task.js</strong> (код worker-а):</p>
 
-<pre class="brush: js notranslate"><code>var queryableFunctions = {
+<pre class="brush: js"><code>var queryableFunctions = {
   // пример #1: получить разницу между двумя числами
   getDifference: function(nMinuend, nSubtrahend) {
       reply('printStuff', nMinuend - nSubtrahend);
@@ -518,7 +518,7 @@ onmessage = function(oEvent) {
 
 <p>Google Chrome 17+ and Firefox 18+ имеют дополнительную возможность передачи определённых типов объектов (передаваемые объекты реализующие {{domxref("Transferable")}} интерфейс) к или из worker-а с высокой производительностью. Эти объекты передаются из одного контекста в другой без операций копирования, что приводит к значительному повышению производительности при отправке больших наборов данных. Думайте об этом как о передаче по ссылке в мире C/C++. Однако в отличии от передачи по ссылке, "версия" из вызывающего контекста больше недоступна после передачи. Владельцем становится новый контекст.  Для примера, после передачи {{domxref("ArrayBuffer")}} из главной страницы к worker-у,  исходный {{domxref("ArrayBuffer")}} очищается и более недоступен для использования.  Его содержание (в буквальном смысле) переносится в рабочий контекст.</p>
 
-<pre class="brush: js notranslate">// Create a 32MB "file" and fill it.
+<pre class="brush: js">// Create a 32MB "file" and fill it.
 var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
 for (var i = 0; i &lt; uInt8Array.length; ++i) {
   uInt8Array[i] = i;
@@ -535,7 +535,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>Не существует утверждённого способа встроить код worker-а в рамках веб-страницы, как элемент {{HTMLElement("script")}} делает для обычных скриптов. Но элемент {{HTMLElement("script")}}, который не имеет атрибута <code>src</code> и атрибута  <code>type</code>, которому не назначен выполняемый MIME type, можно считать блоком данных для использования JavaScript. Блок данных "Data blocks" — это более общее свойство HTML5, может содержать любые текстовые данные. Так, worker может быть встроен следующим образом:</p>
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
+<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>UTF-8<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
@@ -587,11 +587,11 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <div id="logDisplay">Встраиваемый worker теперь внесён в новое custom свойство <code>document.worker</code></div>
 
-<div></div>
+
 
 <div>Также стоит отметить, что вы также можете преобразовать функцию в BLOB-объект, а затем сгенерировать URL объекта из этого BLOB-объекта. Например:</div>
 
-<pre class="notranslate">function fn2workerURL(fn) {
+<pre>function fn2workerURL(fn) {
   var blob = new Blob(['('+fn.toString()+')()'], {type: 'application/javascript'})
   return URL.createObjectURL(blob)
 }
@@ -609,7 +609,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>Следующий код JavaScript хранится в файле "fibonacci.js", на который ссылается HTML в следующем разделе.</p>
 
-<pre class="brush: js notranslate">var results = [];
+<pre class="brush: js">var results = [];
 
 function resultReceiver(event) {
   results.push(parseInt(event.data));
@@ -642,7 +642,7 @@ onmessage = function(event) {
 
 <h4 id="HTML_код">HTML код</h4>
 
-<pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
+<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
   <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
     <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>UTF-8<span class="punctuation token">"</span></span>  <span class="punctuation token">/&gt;</span></span>
@@ -715,24 +715,21 @@ onmessage = function(event) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#toc-workers')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Без изменений {{SpecName("Web Workers")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Workers')}}</td>
-   <td>{{Spec2('Web Workers')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
+<table>
+  <thead>
+    <tr>
+      <th>Specification</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#workers', 'Web workers')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

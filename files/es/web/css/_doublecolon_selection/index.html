@@ -17,7 +17,7 @@ translation_of: 'Web/CSS/::selection'
 <p><code>text-shadow</code> en <code>::selection</code> es soportado por Chrome y Safari y Firefox 17 y superior.</p>
 </div>
 
-<div class="note">Aunque este pseudo-elemento está en borradores como nivel 3 de selectores CSS, fue quitado durante la fase  recomendaciones de candidatos, como parecía que su comportamiento estaba infra-especificado, especialmente con elementos anidados, y la interoperabilidad no fue conseguida <a class="external" href="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html" title="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">(basado en discusión en W3C lista de correos de estilo)</a>.<br>
+<div class="note">Aunque este pseudo-elemento está en borradores como nivel 3 de selectores CSS, fue quitado durante la fase  recomendaciones de candidatos, como parecía que su comportamiento estaba infra-especificado, especialmente con elementos anidados, y la interoperabilidad no fue conseguida <a class="external" href="http://lists.w3.org/Archives/Public/www-style/2008Oct/0268.html">(basado en discusión en W3C lista de correos de estilo)</a>.<br>
 <br>
 <code>El ::selection</code> pseudo elemento actualmente no está en los modulos de CSS para estandar track. No debe ser usado en entornos de produccion.</div>
 
@@ -41,54 +41,4 @@ p::selection      { color: white;  background: black; }</pre>
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Caracteristicas</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte basico</td>
-   <td>1</td>
-   <td>1.0 {{ property_prefix("-moz") }}</td>
-   <td>9</td>
-   <td>9.5</td>
-   <td>1.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Caracteristicas</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte basico</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p> </p>
+{{Compat("css.selectors.selection")}}

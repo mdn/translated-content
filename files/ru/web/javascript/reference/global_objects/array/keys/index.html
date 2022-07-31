@@ -24,13 +24,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 
 <p class="hidden">Источник этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, скопируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам запрос на перенос.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.keys()</code></pre>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_basic_usages" name="Example:_basic_usages">Пример: базовое использование</h3>
+<h3 id="Example:_basic_usages">Пример: базовое использование</h3>
 
 <pre class="brush: js">var arr = ['a', 'b', 'c'];
 var iterator = arr.keys();
@@ -41,7 +41,7 @@ console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
 </pre>
 
-<h3 id="Example:_keys_iterator_doesnt_ignore_holes" name="Example:_keys_iterator_doesnt_ignore_holes">Пример: итератор, возвращаемый методом <code>keys()</code>, не пропускает дырки в массиве</h3>
+<h3 id="Example:_keys_iterator_doesnt_ignore_holes">Пример: итератор, возвращаемый методом <code>keys()</code>, не пропускает дырки в массиве</h3>
 
 <pre class="brush: js">var arr = ['a', , 'c'];
 var sparseKeys = Object.keys(arr);
@@ -50,36 +50,18 @@ console.log(sparseKeys); // [0, 2]
 console.log(denseKeys);  // [0, 1, 2]
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array.prototype.keys', 'Array.prototype.keys')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.keys', 'Array.prototype.keys')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
-<p>{{Compat("javascript.builtins.Array.keys")}}</p>
+<p>{{Compat}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.values()")}}</li>

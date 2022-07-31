@@ -15,7 +15,7 @@ translation_of: Web/API/Element/insertAdjacentElement
 
 <p>Метод <strong><code>insertAdjacentElement()</code></strong> добавляет переданный элемент в DOM-дерево относительно элемента, вызвавшего метод.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
 
@@ -72,7 +72,7 @@ foo
 
 <div class="note"><strong>Примечание:</strong> значения <code>beforebegin</code> и <code>afterend</code> работают только если targetElement находится в DOM-дереве и имеет родительский элемент.</div>
 
-<h2 id="Example" name="Example">Примеры</h2>
+<h2 id="Example">Примеры</h2>
 
 <pre class="brush: js">beforeBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
@@ -94,7 +94,7 @@ afterBtn.addEventListener('click', function() {
 
 <p>Посмотрите наше демо <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> на Github (так же посмотрите <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">исходный код</a>). В этом демо мы имеем последовательность {{htmlelement("div")}} элементов внутри контейнера. При выборе одного из них можно нажать кнопку <em>Insert before</em> или <em>Insert after</em> и добавить новые div до или после выбранного  элемента используя метод <code>insertAdjacentElement()</code>.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <thead>
@@ -113,9 +113,9 @@ afterBtn.addEventListener('click', function() {
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Element.insertAdjacentElement")}}</p>
+<p>{{Compat}}</p>
 
 <div id="compat-desktop"></div>
 

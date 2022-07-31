@@ -22,10 +22,10 @@ translation_of: Web/API/WebSockets_API
 <h2 class="Tools" id="Tools" name="Tools">Herramientas</h2>
 
 <ul>
- <li><a class="external" href="http://socket.io" title="http://socket.io/">Socket.IO</a>: Una poderosa API WebSocket multi-plataforma para <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
- <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node" title="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: Un servidor WebSocket API implementado para <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
+ <li><a class="external" href="http://socket.io">Socket.IO</a>: Una poderosa API WebSocket multi-plataforma para <a class="external" href="http://nodejs.org">Node.js</a>.</li>
+ <li><a class="link-https" href="https://github.com/Worlize/WebSocket-Node">WebSocket-Node</a>: Un servidor WebSocket API implementado para <a class="external" href="http://nodejs.org">Node.js</a>.</li>
  <li><a href="http://www.totaljs.com">Total.js</a>: Framework para aplicaciones web para <a href="http://www.nodejs.org">Node.js</a> (Ejemplo: <a href="https://github.com/totaljs/examples/tree/master/websocket">WebSocket chat</a>)</li>
- <li><a href="https://www.npmjs.com/package/faye-websocket">Faye</a>: Un servidor y cliente <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSocket</a> (conexión bidireccional) y <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/">EventSource</a> (conexión unidireccional) para <a class="external" href="http://nodejs.org" title="http://nodejs.org/">Node.js</a>.</li>
+ <li><a href="https://www.npmjs.com/package/faye-websocket">Faye</a>: Un servidor y cliente <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSocket</a> (conexión bidireccional) y <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource/">EventSource</a> (conexión unidireccional) para <a class="external" href="http://nodejs.org">Node.js</a>.</li>
 </ul>
 
 <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">Temas RELACIONADOS</h2>
@@ -45,126 +45,4 @@ translation_of: Web/API/WebSockets_API
 
 <h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Versión -76  {{obsolete_inline}}</td>
-   <td>6</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>11.00 (disabled)</td>
-   <td>5.0.1</td>
-  </tr>
-  <tr>
-   <td>Protocolo versión 7</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("6.0")}}<br>
-    {{property_prefix("Moz")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Protocolo versión 10</td>
-   <td>14</td>
-   <td>{{CompatGeckoDesktop("7.0")}}<br>
-    {{property_prefix("Moz")}}</td>
-   <td>HTML5 Labs</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>RFC 6455 (IETF Draft 17)</td>
-   <td>16</td>
-   <td>{{CompatGeckoDesktop("11.0")}}</td>
-   <td>10</td>
-   <td>12.10</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Versión -76  {{obsolete_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Protocolo versión 7</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Protocolo versión 8 (IETF draft 10)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("7.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>RFC 6455 (IETF Draft 17)</td>
-   <td>16</td>
-   <td>{{CompatGeckoDesktop("11.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>12.10</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_para_Gecko">Notas para Gecko</h3>
-
-<p>La compatibilidad de Firefox con WebSockets ha seguido la evolución de la especificación WebSocket. Firefox 6 implementa la versión 7 del protocolo subyacente, mientras que Firefox 7 implementa la versión 8 (como especifica IETF draft 10). Firefox mobile tuvo compatibilidad con WebSocket en Firefox mobile 7.0.</p>
-
-<h4 id="Gecko_6.0">Gecko 6.0</h4>
-
-<p>Prior to Gecko 6.0 {{geckoRelease("6.0")}}, there was, incorrectly, a <code>WebSocket</code> object that some sites were thinking implied that <code>WebSocket</code> services were not prefixed; this object has been renamed to <code>MozWebSocket</code>.</p>
-
-<h4 id="Gecko_7.0">Gecko 7.0</h4>
-
-<p>Starting in Gecko 7.0 {{geckoRelease("7.0")}}, the <code>network.websocket.max-connections</code> preference is used to determine the maximum number of WebSocket connections that can be open at a time. The default value is 200.</p>
-
-<h4 id="Gecko_8.0">Gecko 8.0</h4>
-
-<p>Starting in Gecko 8.0 {{geckoRelease("8.0")}}, the deflate-stream extension to the WebSocket protocol has been disabled, since it's been deprecated from the specification drafts. This resolves incompatibilities with some sites.</p>
-
-<h4 id="Gecko_11.0">Gecko 11.0</h4>
-
-<p>Prior to Gecko 11.0, both incoming and outgoing messages were limited to 16 MB in size. They may now be up to 2 GB in size. Note, however, that memory limitations (especially on mobile devices) make that a theoretical maximum, not a practical one. In reality, transfers of that size will fail on devices that don't have enough memory.</p>
-
-<p>Additionally, ArrayBuffer send and receive support for binary data has been implemented.</p>
-
-<p>Starting in Gecko 11.0, the WebSocket API is no longer prefixed.</p>
-
-<div class="warning"><strong>Warning:</strong> Among other things, a key reason WebSockets was disabled by default in Firefox 4 and 5 is the discovery of a <a class="external" href="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html" title="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html">security issue in the protocol's design</a>. This was fixed in Firefox 6 by implementing a newer version of the protocol that corrects the problem.</div>
+{{Compat("api.WebSocket")}}

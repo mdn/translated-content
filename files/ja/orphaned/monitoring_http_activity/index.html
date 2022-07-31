@@ -4,9 +4,9 @@ slug: orphaned/Monitoring_HTTP_activity
 original_slug: Monitoring_HTTP_activity
 ---
 <p> {{ gecko_minversion_header("1.9.2") }}</p>
-<p>Gecko は {{ interface("nsIHttpActivityObserver") }} インターフェースを含んでおり、コールバックを受け取る形でHTTPトランザクションをリアルタイムにモニタすることができます。</p>
+<p>Gecko は <code>nsIHttpActivityObserver</code> インターフェースを含んでおり、コールバックを受け取る形でHTTPトランザクションをリアルタイムにモニタすることができます。</p>
 <h2 id="HTTP_activity_observer_を作る">HTTP activity observer を作る</h2>
-<p>HTTP上のアクティビティを観察するには、コード内で {{ interface("nsIHttpActivityObserver") }} を実装する必要があります。このインターフェースはとても単純で、 {{ ifmethod("nsIHttpActivityObserver", "observeActivity") }} という1つのメソッドを実装するだけです。このメソッドはHTTPチャンネルで対象となるアクションが発生するごとに呼び出されます。</p>
+<p>HTTP上のアクティビティを観察するには、コード内で <code>nsIHttpActivityObserver</code> を実装する必要があります。このインターフェースはとても単純で、 <code>nsIHttpActivityObserver.observeActivity</code> という1つのメソッドを実装するだけです。このメソッドはHTTPチャンネルで対象となるアクションが発生するごとに呼び出されます。</p>
 <pre><span>// インターフェースへの参照を定義する<br>var nsIHttpActivityObserver = Components.interfaces.</span>nsIHttpActivityObserver;
 
 var httpObserver =
@@ -26,7 +26,7 @@ var httpObserver =
     }
 };
 </pre>
-<p>次に、activity observer を実際に組み込む必要があります。これは {{ interface("nsIHttpActivityDistributor") }} の{{ ifmethod("nsIHttpActivityDistributor", "addObserver") }} メソッドを用いて行います：</p>
+<p>次に、activity observer を実際に組み込む必要があります。これは <code>nsIHttpActivityDistributor</code> の<code>nsIHttpActivityDistributor.addObserver</code> メソッドを用いて行います：</p>
 <pre>var activityDistributor = Components.classes["@mozilla.org/network/http-activity-distributor;1"]
                                     .getService(Components.interfaces.nsIHttpActivityDistributor);
 activityDistributor.addObserver(httpObserver);
@@ -34,9 +34,9 @@ activityDistributor.addObserver(httpObserver);
 <h2 id="アクティビティを観察する">アクティビティを観察する</h2>
 <p>観察可能なクラスは2つあります： ソケットレベルで発生するものと、HTTPトランザクションレベルで発生するものです。</p>
 <h3 id="観察可能なソケットのアクティビティ">観察可能なソケットのアクティビティ</h3>
-<p>{{ interface("nsIHttpActivityDistributor") }} メソッドに報告され<code>た </code>アクティビティが <code>ACTIVITY_TYPE_SOCKET_TRANSPORT</code> の場合、発生したアクティビティの詳細な型を示すアクティビティサブタイプは <a href="/ja/XPCOM_Interface_Reference/nsISocketTransport#nsITransportEventSink.0a_status_codes" title="ja/XPCOM Interface Reference/nsISocketTransport#nsITransportEventSink.0a status codes">socket transport status code</a> となります。</p>
+<p><code>nsIHttpActivityDistributor</code> メソッドに報告され<code>た </code>アクティビティが <code>ACTIVITY_TYPE_SOCKET_TRANSPORT</code> の場合、発生したアクティビティの詳細な型を示すアクティビティサブタイプは <a href="/ja/XPCOM_Interface_Reference/nsISocketTransport#nsITransportEventSink.0a_status_codes">socket transport status code</a> となります。</p>
 <h3 id="観察可能な_HTTP_のアクティビティ">観察可能な HTTP のアクティビティ</h3>
 <p>アクティビティタイプ が <code>ACTIVITY_TYPE_HTTP_TRANSACTION の場合</code>、アクティビティサブタイプは <a href="/en/nsIHttpActivityObserver#Activity_subtype_constants" title="en/nsIHttpActivityObserver#Activity subtype constants">activity subtype 定数</a> のうちの1つとなります。これらは送信されるHTTPリクエストヘッダやボディ、受信するHTTPヘッダなどを含むHTTPトランザクション全体を観察するための機能も含みます。</p>
 <h2 id="参照">参照</h2>
-<ul> <li>{{ interface("nsIHttpActivityDistributor") }}</li> <li>{{ interface("nsIHttpActivityObserver") }}</li>
+<ul> <li><code>nsIHttpActivityDistributor</code></li> <li><code>nsIHttpActivityObserver</code></li>
 </ul>

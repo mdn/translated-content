@@ -8,7 +8,7 @@ original_slug: WebSockets/Writing_WebSocket_server
 
 <p>Se você quiser usar uma API WebSocket, você precisara ter um servidor. Neste artigo vou mostrar como escrever um WebSocket em C#. Você pode fazer isso em qualquer linguagem server-side, mas para manter as coisas simples e mais compreensíveis eu escolhi uma linguagem Microsoft.</p>
 
-<p>Este servidor está em conformidade com a <a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a>, por isso irá tratar apenas as conexões com os navegadores Chrome versão 16, Firefox 11, IE 10 ou superior. </p>
+<p>Este servidor está em conformidade com a <a href="http://tools.ietf.org/html/rfc6455">RFC 6455</a>, por isso irá tratar apenas as conexões com os navegadores Chrome versão 16, Firefox 11, IE 10 ou superior. </p>
 
 <h2 id="Primeiros_passos">Primeiros passos</h2>
 
@@ -34,7 +34,7 @@ original_slug: WebSockets/Writing_WebSocket_server
 
 <ul>
  <li><span style="line-height: 1.572;">Start()</span></li>
- <li><span style="line-height: 1.572;">System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()<br>
+ <li><span style="line-height: 1.572;">System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()<br>
   Espera por uma conexão TCP, aceita a conexão e retorna um objeto TcpClient.</span></li>
 </ul>
 
@@ -63,7 +63,7 @@ class Server {
 <p>Métodos:</p>
 
 <ul>
- <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
+ <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
   Obtém o fluxo (stream) do canal de comunicação. Ambos os lados do canal de comunicação possuem a capacidade de ler e escrever.</li>
 </ul>
 
@@ -201,7 +201,7 @@ if (new Regex("^GET").IsMatch(data)) {
 </table>
 
 <p>FIN: Você pode enviar sua mensagem em quadros (frames), mas agora as coisas ficaram mais simples.<br>
- <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> significa que este é um texto. Veja aqui a </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">lista completa de Opcodes</a>.</p>
+ <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> significa que este é um texto. Veja aqui a </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;">lista completa de Opcodes</a>.</p>
 
 <p>- 131:</p>
 
@@ -234,5 +234,3 @@ for (int i = 0; i &lt; encoded.Length; i++) {
 <ul>
  <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_servers">Writing WebSocket servers</a></li>
 </ul>
-
-<div id="cke_pastebin" style="position: absolute; top: 2209.23px; width: 1px; height: 1px; overflow: hidden; left: -1000px;"> </div>

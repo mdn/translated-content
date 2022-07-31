@@ -15,7 +15,7 @@ translation_of: Web/CSS/initial
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="seoSummary">Ключевое слово <strong><code>initial</code></strong> (CSS) устанавливает свойство элемента в <a href="/ru/docs/Web/CSS/initial_value">начальное (или по умолчанию) значение</a>. Это может быть применимо к любому свойству CSS.</span> Это относится также к CSS свойству {{cssxref("all")}}, с которым <code>initial</code> может быть использовано для восстановления всех CSS свойств до их начальных значений.</p>
+<p><span class="seoSummary">Ключевое слово <strong><code>initial</code></strong> (CSS) устанавливает свойство элемента в <a href="/ru/docs/Web/CSS/initial_value">начальное (или по умолчанию) значение</a>. Это может быть применимо к любому свойству CSS.</span> Это относится также к CSS-свойству {{cssxref("all")}}, с которым <code>initial</code> может быть использовано для восстановления всех CSS-свойств до их начальных значений.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> На <a href="/ru/docs/Web/CSS/inheritance#Inherited_properties">наследуемые свойства</a> действие значения initial может быть непредвиденным. Вы должны рассмотреть возможность использования ключевых слов {{cssxref("inherit")}}, {{cssxref("unset")}} или {{cssxref("revert")}} вместо него.</p>
@@ -41,40 +41,20 @@ em {
   color: initial;
 }</pre>
 
-<p>{{EmbedLiveSample('Example')}}</p>
+<p>{{EmbedLiveSample('Пример')}}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS4 Cascade', '#initial', 'initial') }}</td>
-   <td>{{Spec2('CSS4 Cascade')}}</td>
-   <td>Нет изменений с уровня 3.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Cascade', '#initial', 'initial') }}</td>
-   <td>{{Spec2('CSS3 Cascade')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Совместимость с браузерами" name="Совместимость с браузерами">Совместимость с браузерами</h2>
-<p>{{Compat("css.types.global_keywords.initial")}}</p>
+<h2 id="Совместимость с браузерами">Совместимость с браузерами</h2>
+<p>{{Compat}}</p>
 
-<h2 id="Смотрите_также" name="Смотрите также">Смотрите также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><code>Используйте {{cssxref("unset")}}, чтобы установить свойство в его унаследованное значение, если оно наследует, или его начальное значение, если нет.</code></li>
- <li><code>Используйте {{cssxref("revert")}} для сброса свойства до значения, установленного таблицей стилей пользователя-агента (или стилями пользователя, если они существуют).</code></li>
+ <li>Используйте {{cssxref("unset")}}, чтобы установить свойство в его унаследованное значение, если оно наследует, или его начальное значение, если нет.</li>
+ <li>Используйте {{cssxref("revert")}} для сброса свойства до значения, установленного таблицей стилей пользователя-агента (или стилями пользователя, если они существуют).</li>
  <li>Используйте свойство {{cssxref("inherit")}}, чтобы установить свойство элемента таким же значением, как у его родителя.</li>
- <li><code>Свойство {{cssxref("all")}} позволяет сбросить все свойства сразу до начального (initial), унаследованного (inherited), возвращённого (reverted) или неустановленного (unset) состояния.</code></li>
+ <li>Свойство {{cssxref("all")}} позволяет сбросить все свойства сразу до начального (initial), унаследованного (inherited), возвращённого (reverted) или неустановленного (unset) состояния.</li>
 </ul>

@@ -23,7 +23,7 @@ original_slug: Web/HTTP/Заголовки/Strict-Transport-Security
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox notranslate">Strict-Transport-Security: max-age=&lt;expire-time&gt;
+<pre class="syntaxbox">Strict-Transport-Security: max-age=&lt;expire-time&gt;
 Strict-Transport-Security: max-age=&lt;expire-time&gt;; includeSubDomains
 Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 </pre>
@@ -36,7 +36,7 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
  <dt><code>includeSubDomains</code> {{optional_inline}}</dt>
  <dd>Если этот опциональный параметр задан, то правило также применяется ко всем саб-доменам сайта.</dd>
  <dt><code>preload</code> {{optional_inline}}</dt>
- <dd>Смотри {{anch("Предзагрузка Strict Transport Security")}} для большей информации. Не часть спецификации.</dd>
+ <dd>Смотри <a href="#предзагрузка_strict_transport_security">Предзагрузка Strict Transport Security</a> для большей информации. Не часть спецификации.</dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
@@ -74,7 +74,7 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 
 <p>Все текущие и будущие субдомены будут HTTPS по max-age на 1 год. Это блокирует доступ к страницам или субдоменам, которые могут быть доступны только по HTTP.</p>
 
-<pre class="notranslate">Strict-Transport-Security: max-age=31536000; includeSubDomains</pre>
+<pre>Strict-Transport-Security: max-age=31536000; includeSubDomains</pre>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -96,7 +96,7 @@ Strict-Transport-Security: max-age=&lt;expire-time&gt;; preload
 </table>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-<p>{{Compat("http.headers.Strict-Transport-Security")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

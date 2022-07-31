@@ -59,7 +59,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>Возьмём следующий пример:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Let's use:
   &lt;span&gt;Cascading&lt;/span&gt;
   &lt;span&gt;Style&lt;/span&gt;
@@ -69,7 +69,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>В DOM-дереве узел, соответствующий элементу <code>&lt;p&gt;</code>, — это родительский элемент. Его дочерние элементы — текст и три элемента <code>&lt;span&gt;</code>. Узлы <code>SPAN</code> также будут родителями — с текстом в качестве дочерних элементов:</p>
 
-<pre class="notranslate">P
+<pre>P
 ├─ "Let's use:"
 ├─ SPAN
 |  └─ "Cascading"
@@ -84,14 +84,14 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 <p>{{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}</p>
 
 <div class="hidden">
-<pre class="brush: css notranslate">p {margin:0;}</pre>
+<pre class="brush: css">p {margin:0;}</pre>
 </div>
 
 <h2 id="Добавление_CSS_в_DOM">Добавление CSS в DOM</h2>
 
 <p>Допустим, мы добавили таблицу стилей к нашему примеру:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   Let's use:
   &lt;span&gt;Cascading&lt;/span&gt;
   &lt;span&gt;Style&lt;/span&gt;
@@ -100,7 +100,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>А вот CSS-код:</p>
 
-<pre class="brush: css notranslate">span {
+<pre class="brush: css">span {
   border: 1px solid black;
   background-color: lime;
 }</pre>
@@ -109,7 +109,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>Новый результат:</p>
 
-<p>{{EmbedLiveSample('Applying_CSS_to_the_DOM', '100%', 55)}}</p>
+<p>{{EmbedLiveSample('Добавление_CSS_в_DOM', '100%', 55)}}</p>
 
 <p>В статье <a href="/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a> мы будем использовать браузер DevTools для отладки CSS.</p>
 
@@ -126,9 +126,9 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 <p>Ниже я использовал британское написание слова <em>color</em>, что делает свойство некорректным. Поэтому текст не будет синим. Однако всё остальное будет работать; пропущено только недействительное свойство.</p>
 
 <div id="Skipping_example">
-<pre class="brush: html notranslate">&lt;p&gt; I want this text to be large, bold and blue.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt; I want this text to be large, bold and blue.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   font-weight: bold;
   colour: blue; /* некорректное написание свойства цвета */
   font-size: 200%;
@@ -141,7 +141,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 <p>Это хорошо применяется, если вы хотите использовать величину, не использующуюся везде в документе. К примеру, некоторые старые браузеры не поддерживают <code>calc()</code> как значение. Я добавлю резерв — значение в px, затем задам ширину с помощью функции <code>calc()</code>, равной <code>100% - 50px</code>. Старые браузеры используют пиксельное значение, потому что не распознают <code>calc()</code>. Новые браузеры используют <code>calc()</code> так как эта строка появляется позже в каскаде.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 500px;
   width: calc(100% - 50px);
 }</pre>
@@ -157,7 +157,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 <ol>
  <li><a href="/ru/docs/Learn/CSS/First_steps/Что_такое_CSS">Что такое CSS?</a></li>
  <li><a href="/ru/docs/Learn/CSS/First_steps/Getting_started">Начало работы с CSS</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Learn/CSS/First_steps/%D0%9A%D0%B0%D0%BA_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD_CSS">Как структурирован CSS </a></li>
+ <li><a href="/ru/docs/Learn/CSS/First_steps/%D0%9A%D0%B0%D0%BA_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD_CSS">Как структурирован CSS </a></li>
  <li><a href="/ru/docs/Learn/CSS/First_steps/How_CSS_works">Как работает CSS</a></li>
  <li><a href="/ru/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Использование ваших новых знаний</a></li>
 </ol>

@@ -15,7 +15,7 @@ translation_of: Web/API/PromiseRejectionEvent
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>PromiseRejectionEvent</code></strong> インターフェイスは、 JavaScript の {{jsxref("Promise")}} が拒絶されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。</span>これらのイベントは、測定やデバッグ目的に使用すると特に有益です。</p>
+<p><span class="seoSummary"><strong><code>PromiseRejectionEvent</code></strong> インターフェイスは、 JavaScript の {{jsxref("Promise")}} が拒否されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。</span>これらのイベントは、測定やデバッグ目的に使用すると特に有益です。</p>
 
 <h2 id="Constructor" name="Constructor">コンストラクター</h2>
 
@@ -30,9 +30,9 @@ translation_of: Web/API/PromiseRejectionEvent
 
 <dl>
  <dt>{{domxref("PromiseRejectionEvent.promise")}} {{readonlyInline}}</dt>
- <dd>拒絶された JavaScript の {{jsxref("Promise")}}。</dd>
+ <dd>拒否された JavaScript の {{jsxref("Promise")}}。</dd>
  <dt>{{domxref("PromiseRejectionEvent.reason")}} {{readOnlyInline}}</dt>
- <dd>{{jsxref("Promise.reject()")}} に渡される Promise が拒絶された理由を示す値、または {{jsxref("Object")}}。</dd>
+ <dd>{{jsxref("Promise.reject()")}} に渡される Promise が拒否された理由を示す値、または {{jsxref("Object")}}。</dd>
 </dl>
 
 <h2 id="Methods" name="Methods">メソッド</h2>
@@ -43,9 +43,9 @@ translation_of: Web/API/PromiseRejectionEvent
 
 <dl>
  <dt>{{Event("rejectionhandled")}}</dt>
- <dd>JavaScript の {{jsxref("Promise")}} が拒絶され、promise の reject イベントハンドラーのコードが実行された後に発生する。</dd>
+ <dd>JavaScript の {{jsxref("Promise")}} が拒否され、promise の reject イベントハンドラーのコードが実行された後に発生する。</dd>
  <dt>{{Event("unhandledrejection")}}</dt>
- <dd>reject に対するイベントハンドラーがない状態で JavaScript の {{jsxref("Promise")}} が拒絶されたときに発生する。</dd>
+ <dd>reject に対するイベントハンドラーがない状態で JavaScript の {{jsxref("Promise")}} が拒否されたときに発生する。</dd>
 </dl>
 
 <h2 id="Examples" name="Examples">例</h2>

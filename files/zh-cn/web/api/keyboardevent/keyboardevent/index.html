@@ -10,7 +10,7 @@ translation_of: Web/API/KeyboardEvent/KeyboardEvent
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p><strong><code>KeyboardEvent()</code></strong> 构造函数新建一个 {{domxref("KeyboardEvent")}} 实例。</p>
+<p><strong><code>KeyboardEvent()</code></strong> 构造函数新建一个 {{domxref("KeyboardEvent")}} 实例。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,127 +25,39 @@ translation_of: Web/API/KeyboardEvent/KeyboardEvent
 </dl>
 
 <dl>
- <dd><code>KeyboardEventInit</code> 字典，有以下几种值:
+ <dd><code>KeyboardEventInit</code> 字典，有以下几种值：
 
  <ul>
-  <li><code>"key"</code>, 可选，默认为 <code>""</code>,  {{domxref("DOMString")}} 类型, 设置 {{domxref("KeyboardEvent.key")}} 的值。</li>
-  <li><code>"code"</code>, 可选，默认为 <code>""</code>, {{domxref("DOMString")}} 类型, 设置{{domxref("KeyboardEvent.code")}} 的值。</li>
-  <li><code>"location"</code>, 可选，默认为 <code>0</code>,  <code>unsigned long</code>类型, 设置 {{domxref("KeyboardEvent.location")}} 的值。</li>
-  <li><code>"ctrlKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型, 设置 {{domxref("KeyboardEvent.ctrlKey")}} 的值。</li>
-  <li><code>"shiftKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型, 设置{{domxref("KeyboardEvent.shiftKey")}} 的值。</li>
-  <li><code>"altKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型, 设置 {{domxref("KeyboardEvent.altKey")}} 的值。</li>
-  <li><code>"metaKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型, 设置 {{domxref("KeyboardEvent.metaKey")}} 的值。</li>
-  <li><code>"repeat"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型, 设置 {{domxref("KeyboardEvent.repeat")}} 的值。</li>
-  <li><code>"isComposing"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型, 设置 {{domxref("KeyboardEvent.isComposing")}} 的值。</li>
-  <li><code>"charCode"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型, 设置 {{domxref("KeyboardEvent.charCode")}} (已废弃) 的值。</li>
-  <li><code>"keyCode"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型, 设置{{domxref("KeyboardEvent.keyCode")}} (已废弃) 的值。</li>
-  <li><code>"which"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型, 设置{{domxref("KeyboardEvent.which")}} (已废弃) 的值。</li>
+  <li><code>"key"</code>, 可选，默认为 <code>""</code>,  {{domxref("DOMString")}} 类型，设置 {{domxref("KeyboardEvent.key")}} 的值。</li>
+  <li><code>"code"</code>, 可选，默认为 <code>""</code>, {{domxref("DOMString")}} 类型，设置{{domxref("KeyboardEvent.code")}} 的值。</li>
+  <li><code>"location"</code>, 可选，默认为 <code>0</code>,  <code>unsigned long</code>类型，设置 {{domxref("KeyboardEvent.location")}} 的值。</li>
+  <li><code>"ctrlKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.ctrlKey")}} 的值。</li>
+  <li><code>"shiftKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置{{domxref("KeyboardEvent.shiftKey")}} 的值。</li>
+  <li><code>"altKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.altKey")}} 的值。</li>
+  <li><code>"metaKey"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.metaKey")}} 的值。</li>
+  <li><code>"repeat"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.repeat")}} 的值。</li>
+  <li><code>"isComposing"</code>, 可选，默认为 <code>false</code>, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.isComposing")}} 的值。</li>
+  <li><code>"charCode"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型，设置 {{domxref("KeyboardEvent.charCode")}} (已废弃) 的值。</li>
+  <li><code>"keyCode"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型，设置{{domxref("KeyboardEvent.keyCode")}} (已废弃) 的值。</li>
+  <li><code>"which"</code>, 可选，默认为 <code>0</code>, <code>unsigned long</code> 类型，设置{{domxref("KeyboardEvent.which")}} (已废弃) 的值。</li>
  </ul>
 
  <div class="note">
- <p><em><code>KeyboardEventInit</code></em><em> 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。</em></p>
+ <p><em><code>KeyboardEventInit</code></em><em> 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。</em></p>
  </div>
  </dd>
 </dl>
 
-<h2 id="Specifications" name="Specifications">标准</h2>
+<h2 id="Specifications">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('UI Events','#interface-keyboardevent','KeyboardEvent()')}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-   <td>Current definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Events','#interface-KeyboardEvent','KeyboardEvent()')}}</td>
-   <td>{{Spec2('DOM3 Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop(31) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>初始化 <code>code</code> 和 <code>key</code></td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile(31) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>初始化 <code>code</code> 和 <code>key</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(49.0)}}</td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td> </td>
-   <td>{{CompatChrome(49.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.KeyboardEvent.KeyboardEvent")}}
 
 <h2 id="参考">参考</h2>
 
 <ul>
- <li>{{domxref("KeyboardEvent")}} 构造的相关对象的接口</li>
+ <li>{{domxref("KeyboardEvent")}} 构造的相关对象的接口</li>
 </ul>

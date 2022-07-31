@@ -4,7 +4,7 @@ slug: orphaned/Monitoring_WiFi_access_points
 original_slug: Monitoring_WiFi_access_points
 ---
 <p>{{ gecko_minversion_header("1.9.1") }}</p>
-<p>UniversalXPConnect 特権を用いたコードを利用することで、周囲の WiFi アクセスポイントの SSID 、 MAC アドレス、信号強度の一覧を取得することができます。この機能は、主に WiFi 情報に基づいた <a class="internal" href="/Ja/Using_geolocation" title="Ja/Using geolocation">geolocation</a> サービスのために導入されました。</p>
+<p>UniversalXPConnect 特権を用いたコードを利用することで、周囲の WiFi アクセスポイントの SSID 、 MAC アドレス、信号強度の一覧を取得することができます。この機能は、主に WiFi 情報に基づいた <a class="internal" href="/Ja/Using_geolocation">geolocation</a> サービスのために導入されました。</p>
 <h2 id="例">例</h2>
 <p>この例では、利用可能なアクセスポイントの一覧を出力します。</p>
 <div class="note"><strong>注意:</strong> wiki の仕様上、 21 行目の表示がおかしくなることがあります。最初の "dd" は単純に "d" ですが、どういうわけか余分な1文字が付いてしまうようです。</div>
@@ -73,6 +73,6 @@ test.prototype =
 <h3 id="アクセスポイントのモニタリングを始める">アクセスポイントのモニタリングを始める</h3>
 <p>アクセスポイントのモニタリングを始めるためには、まず44行目のようにリスナーオブジェクトのインスタンスを作成しなければなりません。その後、45行目で示すように WiFi モニターインターフェースへアクセスを行い、47行目で WiFi モニタリングサービスの <code>startWatching()</code> メソッドを呼び出すことでモニタリングが始まります。</p>
 <h2 id="参考文献">参考文献</h2>
-<ul> <li>{{ interface("nsIWifiMonitor") }}</li> <li>{{ interface("nsIWifiListener") }}</li> <li>{{ interface("nsIWifiAccessPoint") }}</li>
+<ul> <li><code>nsIWifiMonitor</code></li> <li><code>nsIWifiListener</code></li> <li><code>nsIWifiAccessPoint</code></li>
 </ul>
 <p> </p>

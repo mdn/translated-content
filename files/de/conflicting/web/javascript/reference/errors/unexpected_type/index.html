@@ -1,0 +1,60 @@
+---
+title: 'TypeError: can''t access property "x" of "y"'
+slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+tags:
+  - Fehler
+  - JavaScript
+  - TypeError
+translation_of: Web/JavaScript/Reference/Errors/Cant_access_property
+original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="Fehlermeldung">Fehlermeldung</h2>
+
+<pre class="syntaxbox">TypeError: Unable to get property {x} of undefined or null reference (Edge)
+TypeError: can't access property {x} of {y} (Firefox)
+TypeError: {y} is undefined, can't access property {x} of it (Firefox)
+TypeError: {y} is null, can't access property {x} of it (Firefox)
+
+Beispiele:
+TypeError: x is undefined, can't access property "prop" of it
+TypeError: x is null, can't access property "prop" of it
+TypeError: can't access property "prop" of undefined
+TypeError: can't access property "prop" of null
+</pre>
+
+<h2 id="Fehlertyp">Fehlertyp</h2>
+
+<p>{{jsxref("TypeError")}}.</p>
+
+<h2 id="Was_ist_falsch_gelaufen">Was ist falsch gelaufen?</h2>
+
+<p>The Attributzugriff erfolgte über einen {{jsxref("undefined")}} oder {{jsxref("null")}} Wert</p>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="Invalide_Fälle">Invalide Fälle</h3>
+
+<pre class="brush: js example-bad">// undefined und null sind Fälle auf denen die Methode substring nicht aufgerufen werden kann
+var foo = undefined;
+foo.substring(1); // TypeError: x is undefined, can't access property "substring" of it
+
+var foo = null;
+foo.substring(1); // TypeError: x is null, can't access property "substring" of it
+</pre>
+
+<h3 id="Fehlerbehebung">Fehlerbehebung</h3>
+
+<p>Um den null pointer auf <code>undefined</code> oder <code>null</code> Werte zu beheben, kann beispielsweise der <a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> Operator verwendet werden.</p>
+
+<pre class="brush: js">if (typeof foo !== 'undefined') {
+  // Hier wissen wir, dass foo definiert ist
+}</pre>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li>{{jsxref("undefined")}}</li>
+ <li>{{jsxref("null")}}</li>
+</ul>

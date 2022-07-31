@@ -18,7 +18,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 <p>В этой статье мы рассмотрим как создать такой виджет. Для этого мы возьмём пример: переделка элемента {{HTMLElement("select")}} .</p>
 
 <div class="note">
-<p><strong>Замечание:</strong> Мы сфокусируемся на создании виджетов, а не на том чтобы сделать код  универсальным и многоразовым; поэтому будут использоваться некоторый нетривиальный JavaScript код и манипуляции DOM в неизвестном контексте, что выходит за рамки этой статьи.</p>
+<p><strong>Замечание:</strong> Мы сфокусируемся на создании виджетов, а не на том чтобы сделать код  универсальным и многоразовым; поэтому будут использоваться некоторый нетривиальный JavaScript-код и манипуляции DOM в неизвестном контексте, что выходит за рамки этой статьи.</p>
 </div>
 
 <h2 id="Дизайн_структура_и_семантика">Дизайн, структура и семантика</h2>
@@ -88,9 +88,9 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 <p>В нашем примере пропущенные спецификации очевидны, так что мы с ними справимся, но это может стать реальной проблемой для новых экзотических виджетов, когда никто не имеет ни малейшего представления о том как они должны реагировать. Всегда лучше потратить время на этом этапе дизайна, потому что если вы плохо определите, или забудете определить реакцию виджета, то будет очень сложно изменять её, когда пользователи уже привыкнут. Если у вас есть сомнения - спросите мнения у окружающих, и, если позволяет бюджет,  не стесняйтесь <a href="https://ru.wikipedia.org/wiki/%D0%AE%D0%B7%D0%B0%D0%B1%D0%B8%D0%BB%D0%B8%D1%82%D0%B8-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">выполнять пользовательские тесты</a>. Этот процесс называется UX Design (<a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F_%D1%81_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%BC">Дизайн взаимодействия с пользователем</a>). Если вы хотите узнать больше об этой теме, вам следует посетить следующие полезные ресурсы:</p>
 
 <ul>
- <li><a href="http://www.uxmatters.com/" rel="external" title="http://www.uxmatters.com/">UXMatters.com</a></li>
- <li><a href="http://uxdesign.com/" rel="external" title="http://uxdesign.com/">UXDesign.com</a></li>
- <li><a href="http://uxdesign.smashingmagazine.com/" rel="external" title="http://uxdesign.smashingmagazine.com/">The UX Design section of SmashingMagazine</a></li>
+ <li><a href="http://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
+ <li><a href="http://uxdesign.com/" rel="external">UXDesign.com</a></li>
+ <li><a href="http://uxdesign.smashingmagazine.com/" rel="external">The UX Design section of SmashingMagazine</a></li>
 </ul>
 
 <div class="note">
@@ -320,7 +320,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 </div>
 
 <div class="note">
-<p><strong>Замечание:</strong> Создание многократно используемых виджетов может быть немного сложнее. <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html" rel="external" title="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">W3C Web Component draft</a> является одним из ответов на этот конкретный вопрос. <a href="http://x-tags.org/" rel="external" title="http://x-tags.org/">The X-Tag project</a> попытка реализовать эту спецификацию; пожалуйста, посмотрите этот проект.</p>
+<p><strong>Замечание:</strong> Создание многократно используемых виджетов может быть немного сложнее. <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html" rel="external">W3C Web Component draft</a> является одним из ответов на этот конкретный вопрос. <a href="http://x-tags.org/" rel="external">The X-Tag project</a> попытка реализовать эту спецификацию; пожалуйста, посмотрите этот проект.</p>
 </div>
 
 <h3 id="Почему_он_не_работает">Почему он не работает?</h3>
@@ -332,13 +332,13 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
  <li>Скрипт не загружается. Это один из самых распространённых случаев, особенно в мобильном мире, где сеть не очень надёжная.</li>
  <li>Скрипт глючит.Вы должны всегда учитывать эту возможность.</li>
  <li>Скрипт конфликтует со сторонним скриптом. Это может случиться со скриптами отслеживания или любыми букмарклетами (bookmarklets), которые использует пользователь.</li>
- <li>Скрипт конфликтует с расширением браузера или зависит от него (такими как расширение <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external" title="https://addons.mozilla.org/fr/firefox/addon/noscript/">NoScript</a> в Firefox, или расширение <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external" title="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn">NotScripts</a> в Chrome).</li>
+ <li>Скрипт конфликтует с расширением браузера или зависит от него (такими как расширение <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external">NoScript</a> в Firefox, или расширение <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> в Chrome).</li>
  <li>Пользователь использует устаревший браузер, и одна из требуемых функций не поддерживается. Это часто случается, когда вы используете передовые API.</li>
 </ul>
 
 <p>Из-за этого очень важно серьёзно подумать о том, что произойдёт, если JavaScript не сработает. Детальное рассмотрение этой проблемы выходит за рамки данной статьи, поскольку эта проблема тесно связана с тем, насколько универсальным и многократно используемым вы хотите сделать свой сценарий, но мы рассмотрим основы этого в нашем примере.</p>
 
-<p>В нашем примере, если наш JavaScript код не работает, мы используем стандартный элемент {{HTMLElement("select")}}. Для этого, нам нужны две вещи.</p>
+<p>В нашем примере, если наш JavaScript-код не работает, мы используем стандартный элемент {{HTMLElement("select")}}. Для этого, нам нужны две вещи.</p>
 
 <p>Во-первых нам нужно добавить стандартный элемент {{HTMLElement("select")}} перед каждым использованием нашего пользовательского виджета. Это также необходимо, чтобы отправить данные из нашего пользовательского виджета вместе с остальными данными формы; подробнее рассмотрим это позже.</p>
 
@@ -413,7 +413,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 <p>В коде который мы собираемся написать, для выполнения всех необходимых действий мы будем использовать стандартный DOM API. Однако, хотя поддержка DOM API в браузерах стала гораздо лучше, все ещё есть нюансы с устраевшеними браузерами  (особенно со старым добрым Internet Explorer).</p>
 
-<p>Чтобы избежать неприятностей с устаревшими браузерами есть два способа: использовать отдельный фреймворк такой как <a href="http://jquery.com/" rel="external" title="http://jquery.com/">jQuery</a>, <a href="https://github.com/julienw/dollardom" rel="external" title="https://github.com/julienw/dollardom">$dom</a>, <a href="http://prototypejs.org/" rel="external" title="http://prototypejs.org/">prototype</a>, <a href="http://dojotoolkit.org/" rel="external" title="http://dojotoolkit.org/">Dojo</a>, <a href="http://yuilibrary.com/" rel="external" title="http://yuilibrary.com/">YUI</a>, и т.п., или самостоятельно реализовать недостающие функции которые вам нужны (что можно легко сделать через условную загрузку, например используя библиотеку <a href="http://yepnopejs.com/" rel="external" title="http://yepnopejs.com/">yepnope</a>).</p>
+<p>Чтобы избежать неприятностей с устаревшими браузерами есть два способа: использовать отдельный фреймворк такой как <a href="http://jquery.com/" rel="external">jQuery</a>, <a href="https://github.com/julienw/dollardom" rel="external">$dom</a>, <a href="http://prototypejs.org/" rel="external">prototype</a>, <a href="http://dojotoolkit.org/" rel="external">Dojo</a>, <a href="http://yuilibrary.com/" rel="external">YUI</a>, и т.п., или самостоятельно реализовать недостающие функции которые вам нужны (что можно легко сделать через условную загрузку, например используя библиотеку <a href="http://yepnopejs.com/" rel="external">yepnope</a>).</p>
 
 <p>Мы планируем использовать следующие функции (от самых рискованных до самых безопасных):</p>
 
@@ -689,7 +689,7 @@ window.addEventListener('load', function () {
 
 <p>Мы создали нечто работающее, и, хотя это далеко от полнофункционального выпадающего списка, работает это хорошо. Однако то, что мы сделали, это не более, чем возня с DOM. У него нет настоящей семантики, и хотя оно выглядит как раскрывающейся список, с точки зрения браузера - это не так, поэтому вспомогательные технологии не смогут понять что это он и есть. Короче говоря, этот хорошенький список для выбора фруктов не является доступным для людей с ограниченными возможностями!</p>
 
-<p>К счастью существует решение, и оно называется <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA - аббревиатура для "Accessible Rich Internet Application" (Доступное всем интернет приложение), и представляет собой <a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/">W3C спецификацию</a> специально разработанную для того, что мы здесь делаем: делаем веб приложения и пользовательские виджеты ассистивными (доступными для людей с ограниченными возможностями). В основном, это набор атрибутов, которые расширяют HTML, чтобы мы смогли лучше описать роли, состояния и свойства, так что только что изобретённый элемент выглядит как будто он был тем стандартным, за которого он себя выдаёт. Использовать эти атрибуты очень просто, поэтому давайте сделаем это.</p>
+<p>К счастью существует решение, и оно называется <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA - аббревиатура для "Accessible Rich Internet Application" (Доступное всем интернет приложение), и представляет собой <a href="http://www.w3.org/TR/wai-aria/" rel="external">W3C спецификацию</a> специально разработанную для того, что мы здесь делаем: делаем веб приложения и пользовательские виджеты ассистивными (доступными для людей с ограниченными возможностями). В основном, это набор атрибутов, которые расширяют HTML, чтобы мы смогли лучше описать роли, состояния и свойства, так что только что изобретённый элемент выглядит как будто он был тем стандартным, за которого он себя выдаёт. Использовать эти атрибуты очень просто, поэтому давайте сделаем это.</p>
 
 <h3 id="Атрибут_role">Атрибут <code>role</code></h3>
 
@@ -741,7 +741,7 @@ window.addEventListener('load', function () {
   highlightOption(select, optionList[index]);
 };</pre>
 
-<p>Вот окончательный результат всех этих изменений (вы сможете это лучше прочувствовать если испробуете это со вспомогательными технологиями, такими как <a href="http://www.nvda-project.org/" rel="external" title="http://www.nvda-project.org/">NVDA</a> или <a href="http://www.apple.com/accessibility/voiceover/" rel="external" title="http://www.apple.com/accessibility/voiceover/">VoiceOver</a>):</p>
+<p>Вот окончательный результат всех этих изменений (вы сможете это лучше прочувствовать если испробуете это со вспомогательными технологиями, такими как <a href="http://www.nvda-project.org/" rel="external">NVDA</a> или <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a>):</p>
 
 <table>
  <thead>
@@ -766,9 +766,9 @@ window.addEventListener('load', function () {
 <p>Вот несколько библиотек, которые вам стоит рассмотреть перед тем как создавать собственную:</p>
 
 <ul>
- <li><a href="http://jqueryui.com/" rel="external" title="http://jqueryui.com/">jQuery UI</a></li>
- <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external" title="https://github.com/marghoobsuleman/ms-Dropdown">msDropDown</a></li>
- <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external" title="http://www.emblematiq.com/lab/niceforms/">Nice Forms</a></li>
+ <li><a href="http://jqueryui.com/" rel="external">jQuery UI</a></li>
+ <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external">msDropDown</a></li>
+ <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external">Nice Forms</a></li>
  <li><a href="https://www.google.fr/search?q=HTML+custom+form+controls&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:fr:official&amp;client=firefox-a" rel="external" title="https://www.google.fr/search?q=HTML+custom+form+controls&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:fr:official&amp;client=firefox-a">и многие другие…</a></li>
 </ul>
 

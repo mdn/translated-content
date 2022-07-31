@@ -62,7 +62,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <p><em>Многокомпонентные</em> типы описывают категории разграниченных на части документов, где каждая из частей может иметь свой отдельный MIME тип. При работе с электронными письмами, они могут использоваться для описания нескольких отдельных файлов, передаваемых в одном сообщении. Они представляют <strong>составные документы</strong>.</p>
 
-<p>За исключением <code>multipart/form-data</code> типа, используемого в {{HTTPMethod("POST")}} методе <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms">HTML форм</a>, и <code>multipart/byteranges</code> типа, используемом в ответе {{HTTPStatus("206")}} <code>Partial Content</code> для отправки части документа, HTTP никаким особым образом не обрабатывает многокомпонентные типы, и просто отправляет данные в браузер (который, с большой вероятностью, предложит сохранить переданный файл, тоже не зная как его обработать).</p>
+<p>За исключением <code>multipart/form-data</code> типа, используемого в {{HTTPMethod("POST")}} методе <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML форм</a>, и <code>multipart/byteranges</code> типа, используемом в ответе {{HTTPStatus("206")}} <code>Partial Content</code> для отправки части документа, HTTP никаким особым образом не обрабатывает многокомпонентные типы, и просто отправляет данные в браузер (который, с большой вероятностью, предложит сохранить переданный файл, тоже не зная как его обработать).</p>
 
 <p>Существуют два многокомпонентных типа:</p>
 
@@ -84,7 +84,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 <p>Этот тип является базовым для текстовых файлов. Несмотря на то, что он означает "неопределённые текстовые данные", браузеры всё равно могут его отображать.</p>
 
 <div class="note">
-<p><strong>Заметьте:</strong> <code>text/plain</code> не означает "любой вид текстовых данных". Если браузер ожидает получения какого-то конкретного типа текстовых данных, то с большой вероятностью он не будет считать <code>text/plain</code> подходящим типом. Например, при загрузке <code>text/plain</code> документа через {{HTMLElement("link")}} элемент, браузер не будет его признать правильным CSS файлом и использовать для применения стилей. Только <code>text/css</code> тип должен использоваться для загрузки CSS документов.</p>
+<p><strong>Заметьте:</strong> <code>text/plain</code> не означает "любой вид текстовых данных". Если браузер ожидает получения какого-то конкретного типа текстовых данных, то с большой вероятностью он не будет считать <code>text/plain</code> подходящим типом. Например, при загрузке <code>text/plain</code> документа через {{HTMLElement("link")}} элемент, браузер не будет его признавать правильным CSS файлом и использовать для применения стилей. Только <code>text/css</code> тип должен использоваться для загрузки CSS документов.</p>
 </div>
 
 <h3 id="textcss">text/css</h3>
@@ -96,7 +96,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 <p>Все HTML данные должны пересылаться с данным типом. Альтернативные MIME типы для XHTML (например, <code>application/xhtml+xml</code>) почти не используются в настоящее время.</p>
 
 <div class="note">
-<p><strong>Заметьте:</strong> Используйте <code>application/xml</code> или <code>application/xhtml+xml</code>, когда вам необходим строгий синтаксический анализ документов, разделы <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/CDATASection">&lt;![CDATA[…]]&gt;</a></code> или элементы, не принадлежащие к пространствам имён HTML/SVG/MathML.</p>
+<p><strong>Заметьте:</strong> Используйте <code>application/xml</code> или <code>application/xhtml+xml</code>, когда вам необходим строгий синтаксический анализ документов, разделы <code><a href="/en-US/docs/Web/API/CDATASection">&lt;![CDATA[…]]&gt;</a></code> или элементы, не принадлежащие к пространствам имён HTML/SVG/MathML.</p>
 </div>
 
 <h3 id="textjavascript">text/javascript</h3>
@@ -190,7 +190,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 
 <h3 id="multipartform-data">multipart/form-data</h3>
 
-<p><code>multipart/form-data</code> тип может быть использован при отправке значений из  заполненной <a href="https://wiki.developer.mozilla.org/ru/docs/Web/Guide/HTML/Forms">HTML Формы</a> на сервер.</p>
+<p><code>multipart/form-data</code> тип может быть использован при отправке значений из  заполненной <a href="/ru/docs/Web/Guide/HTML/Forms">HTML Формы</a> на сервер.</p>
 
 <p>Как многокомпонентный тип документа, он состоит из различных частей, разделённых специальной границей (строкой, начинающейся с двух чёрточек <code>--</code>), где каждая часть представляет собой отдельную сущность и имеет отдельные HTTP заголовки {{HTTPHeader("Content-Disposition")}} и {{HTTPHeader("Content-Type")}} для загружаемых файлов.</p>
 
@@ -286,7 +286,7 @@ Content-Range: bytes 300-400/1270
 
 <ul>
  <li>RAR-сжатые файлы. В этом случае самым правильным вариантом было бы задать тип изначального ресурса; но это не всегда выполнимо, так как .RAR файлы могут хранить в себе несколько типов данных. Тогда, настройте сервер на отправку <code>application/x-rar-compressed</code> MIME типа вместе с RAR ресурсами.</li>
- <li>Аудио и видео. Только ресурсы с правильно заданными MIME типами могут производиться в {{HTMLElement("video")}} и {{HTMLElement("audio")}} элементах. Убедитесь, что вы <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats">используете правильные типы для аудио и видео данных</a>.</li>
+ <li>Аудио и видео. Только ресурсы с правильно заданными MIME типами могут производиться в {{HTMLElement("video")}} и {{HTMLElement("audio")}} элементах. Убедитесь, что вы <a href="/en-US/docs/Web/HTML/Supported_media_formats">используете правильные типы для аудио и видео данных</a>.</li>
  <li>Запатентованные типы файлов. Избегайте использования <code>application/octet-stream</code> при их отправке, так как большинство браузеров не позволит определять способы обработки (например, "Открыть в Word") для этого базового MIME типа. Используйте специальные типы, например <code>application/vnd.mspowerpoint</code>, чтобы позволить пользователям открывать загруженный ресурс в программе по их выбору.</li>
 </ul>
 
@@ -308,10 +308,10 @@ Content-Range: bytes 300-400/1270
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Web/Media">Медиа технологии в web</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ru/docs/Web/Media/Formats">Руководство по медиа типам и форматам в web</a></li>
+ <li><a href="/ru/docs/Web/Media">Медиа технологии в web</a></li>
+ <li><a href="/ru/docs/Web/Media/Formats">Руководство по медиа типам и форматам в web</a></li>
  <li>
-  <p><a href="https://wiki.developer.mozilla.org/ru/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types">Настраивание MIME типов на стороне сервера</a></p>
+  <p><a href="/ru/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types">Настраивание MIME типов на стороне сервера</a></p>
  </li>
 </ul>
 

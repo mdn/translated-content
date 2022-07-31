@@ -88,7 +88,7 @@ translation_of: Web/CSS/font
 
 <h2 id="Примеры">Примеры</h2>
 
-<pre class="brush: css notranslate">/* Set the font size to 12px and the line height to 14px.
+<pre class="brush: css">/* Set the font size to 12px and the line height to 14px.
    Set the font family to sans-serif */
 p { font: 12px/14px sans-serif }
 
@@ -107,12 +107,12 @@ p { font: bold italic large serif }
 p { font: status-bar }
 </pre>
 
-<h3 id="live_sample" name="live_sample">Live sample</h3>
+<h3 id="live_sample">Live sample</h3>
 
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
     Change the radio buttons below to see the generated shorthand and it's effect.
 &lt;/p&gt;
 &lt;form action="createShortHand()"&gt;
@@ -208,7 +208,7 @@ p { font: status-bar }
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">body, input {
+<pre class="brush: css">body, input {
   font: 14px arial;
   overflow: hidden;
 }
@@ -261,7 +261,7 @@ p { font: status-bar }
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var textAreas = document.getElementsByClassName("curCss"),
+<pre class="brush: js">var textAreas = document.getElementsByClassName("curCss"),
     shortText = "",
     getCheckedValue,
     setCss,
@@ -316,32 +316,7 @@ setCss();</pre>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Fonts', '#font-prop', 'font') }}</td>
-   <td>{{ Spec2('CSS3 Fonts') }}</td>
-   <td>Added support for <code>font-stretch</code> values.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'fonts.html#font-shorthand', 'font-weight') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Added support for keywords.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS1', '#font', 'font') }}</td>
-   <td>{{ Spec2('CSS1') }}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 
@@ -349,4 +324,4 @@ setCss();</pre>
 
 
 
-<p>{{Compat("css.properties.font")}}</p>
+<p>{{Compat}}</p>

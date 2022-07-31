@@ -1,5 +1,5 @@
 ---
-title: Углублённое форматирование текста
+title: Продвинутое форматирование текста
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 tags:
   - Beginner
@@ -38,7 +38,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 
 <p>Давайте рассмотрим пример набора терминов и определений:</p>
 
-<pre class="notranslate">Солилоквий
+<pre>Солилоквий
 Драматическая речь, в которой персонаж разговаривает сам с собой, передавая свои ощущения и мысли публике (но не другим персонажам).
 Монолог
 Драматическая речь, в которой персонаж передаёт свои мысли публике и некоторым персонажам.
@@ -49,7 +49,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 
 <p>Закончим разметку нашего примера:</p>
 
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;Солилоквий&lt;/dt&gt;
   &lt;dd&gt;Драматическая речь, в которой персонаж разговаривает сам с собой, передавая свои ощущения и мысли публике (но не другим персонажам).&lt;/dd&gt;
   &lt;dt&gt;Монолог&lt;/dt&gt;
@@ -86,7 +86,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -108,7 +108,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Advanced_text_formatting
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -128,7 +128,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -219,12 +219,12 @@ textarea.onkeyup = function(){
 
 <p class="syntaxbox">Например, следующая разметка берётся из страницы элемента MDN <code><strong>&lt;blockquote&gt;</strong></code>:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;&lt;strong&gt;HTML-элемент&lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (от англ. &lt;em&gt;HTML Block
+<pre class="brush: html">&lt;p&gt;&lt;strong&gt;HTML-элемент&lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (от англ. &lt;em&gt;HTML Block
 Quotation Element&lt;/em&gt;) указывает на то, что заключённый в нём текст является развёрнутой цитатой.&lt;/p&gt;</pre>
 
 <p>Чтобы превратить её в блочную цитату, мы просто делаем следующее:</p>
 
-<pre class="brush: html notranslate">&lt;blockquote cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote"&gt;
+<pre class="brush: html">&lt;blockquote cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote"&gt;
   &lt;p&gt;&lt;strong&gt;HTML-элемент&lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;/code&gt;&lt;/strong&gt; (от англ. &lt;em&gt;HTML Block Quotation Element&lt;/em&gt;) указывает на то, что заключённый в нём текст является развёрнутой цитатой.&lt;/p&gt;
 &lt;/blockquote&gt;</pre>
 
@@ -238,7 +238,7 @@ Quotation Element&lt;/em&gt;) указывает на то, что заключ�
 
 <p>Строчные цитаты работают точно так же, за исключением того, что они используют элемент {{htmlelement ("q")}}. Например, следующий кусочек разметки содержит цитату из страницы <code>&lt;q&gt;</code> MDN:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Элемент цитирования — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;предназначен
+<pre class="brush: html">&lt;p&gt;Элемент цитирования — &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt; — &lt;q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"&gt;предназначен
 для коротких цитат, не требующих прерывания абзаца&lt;/q&gt;.&lt;/p&gt;</pre>
 
 <p>Стиль браузера по умолчанию будет отображать это как обычный текст, заключённый в кавычки для обозначения цитаты, например:</p>
@@ -249,7 +249,7 @@ Quotation Element&lt;/em&gt;) указывает на то, что заключ�
 
 <p>Содержание атрибута {{htmlattrxref ("cite", "blockquote")}} выглядит полезным, но, к сожалению, браузерам, программам чтения с экрана и т. д. оно на самом деле мало чем помогает. Невозможно заставить браузер отображать содержимое атрибута <code>&lt;cite&gt;</code> без написания собственного решения с использованием JavaScript или CSS. Если вы хотите, чтобы источник цитирования был доступен на странице, лучший способ его разметки - поместить элемент {{htmlelement ("cite")}} рядом с элементом цитаты (или внутри него). Это действительно будет означать то, что имя источника цитаты — то есть имя книги или имя человека, которое произвело цитату, — будет включено в текст. Нет причин, по которым вы не могли бы связать текст внутри <code>&lt;cite&gt;</code> с источником цитаты:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Как указано в статье о &lt;a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote"&gt;
+<pre class="brush: html">&lt;p&gt;Как указано в статье о &lt;a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote"&gt;
 &lt;cite&gt;блочных цитатах&lt;/cite&gt;&lt;/a&gt;:
 &lt;/p&gt;
 
@@ -286,7 +286,7 @@ Quotation Element&lt;/em&gt;) указывает на то, что заключ�
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -305,7 +305,7 @@ Quotation Element&lt;/em&gt;) указывает на то, что заключ�
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -325,7 +325,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -412,7 +412,7 @@ textarea.onkeyup = function(){
 
 <p>Давайте рассмотрим несколько примеров:</p>
 
-<pre class="notranslate">&lt;p&gt;Мы используем &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; для структурирования наших веб-документов.&lt;/p&gt;
+<pre>&lt;p&gt;Мы используем &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt; для структурирования наших веб-документов.&lt;/p&gt;
 
 &lt;p&gt;Я думаю, &lt;abbr title="Почтенный"&gt;Почт.&lt;/abbr&gt; Грин сделал это на кухне с бензопилой.&lt;/p&gt;
 </pre>
@@ -434,7 +434,7 @@ textarea.onkeyup = function(){
 <div class="hidden">
 <h6 id="Playable_code_3">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Результат&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Результат&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 50px;"&gt;
 &lt;/div&gt;
@@ -451,7 +451,7 @@ textarea.onkeyup = function(){
   &lt;input id="solution" type="button" value="Показать решение"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -471,7 +471,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -556,13 +556,13 @@ textarea.onkeyup = function(){
 
 <p>HTML имеет элемент для разметки контактных данных — {{htmlelement ("address")}}. Он просто обёртывает ваши контактные данные, например:</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;Крис Миллс, Манчестер, Жестокий Север, РФ&lt;/p&gt;
 &lt;/address&gt;</pre>
 
 <p>Однако следует помнить, что элемент {{htmlelement ("address")}} предназначен для разметки контактных данных человека, который написал HTML-документ, а не <em>любого </em>адреса. Таким образом, написанное выше было бы корректным только в том случае, если бы Крис написал документ, на котором появляется разметка. Обратите внимание, что следующее также подойдёт:</p>
 
-<pre class="brush: html notranslate">&lt;address&gt;
+<pre class="brush: html">&lt;address&gt;
   &lt;p&gt;Автор страницы — &lt;a href="../authors/chris-mills/"&gt;Крис Миллс&lt;/a&gt;.&lt;/p&gt;
 &lt;/address&gt;</pre>
 
@@ -572,7 +572,7 @@ textarea.onkeyup = function(){
 
 <p>Приведём пример:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;Я просыпаюсь в 6&lt;sup&gt;35&lt;/sup&gt; часов утра.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Я просыпаюсь в 6&lt;sup&gt;35&lt;/sup&gt; часов утра.&lt;/p&gt;
 &lt;p&gt;Химическая формула кофеина: C&lt;sub&gt;8&lt;/sub&gt;H&lt;sub&gt;10&lt;/sub&gt;N&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt;.&lt;/p&gt;
 &lt;p&gt;Если x&lt;sup&gt;2&lt;/sup&gt; равно 9, x должен равняться 3 или -3.&lt;/p&gt;</pre>
 
@@ -592,7 +592,7 @@ textarea.onkeyup = function(){
  <li>{{htmlelement("code")}}: Для разметки общих частей компьютерного кода.</li>
  <li>{{htmlelement("pre")}}: Для сохранения пробелов (как правило, кодовых блоков) — если вы используете отступы или лишние пробелы внутри вашего текста, браузеры будут игнорировать его, и вы не увидите его на вашей отображаемой странице; если вы поместите текст в теги <code>&lt;pre&gt;&lt;/pre&gt;</code>, то ваши пробелы будут отображаться идентично тому, как вы видите текст в редакторе.</li>
  <li>{{htmlelement("var")}}: Для конкретной маркировки имён переменных.</li>
- <li>{{htmlelement("kbd")}}: Для маркировки вывода компьютерной программы. Для маркировки ввода клавиатуры (и других типов), введённого в компьютер.</li>
+ <li>{{htmlelement("kbd")}}: Для маркировки ввода с клавиатуры (и других типов).</li>
  <li>{{htmlelement("samp")}}: Для маркировки вывода компьютерной программы.</li>
 </ul>
 
@@ -622,7 +622,7 @@ para.onclick = function() {
 
 <p>HTML также содержит элемент {{htmlelement ("time")}} для отметки времени и дат в машиночитаемом формате. Например:</p>
 
-<pre class="brush: html notranslate">&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20<span class="pl-pds">"</span></span>&gt;20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;</pre>
+<pre class="brush: html">&lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20<span class="pl-pds">"</span></span>&gt;20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;</pre>
 
 <p>Почему это полезно? Ну, есть много разных способов, которыми люди записывают даты. Вышеуказанная дата может быть записана как:</p>
 
@@ -641,7 +641,7 @@ para.onclick = function() {
 
 <p>В приведённом выше базовом примере приведена простая машиносчитываемая дата, но есть много других возможных вариантов, например:</p>
 
-<pre class="brush: html notranslate">&lt;!-- Стандартная дата --&gt;
+<pre class="brush: html">&lt;!-- Стандартная дата --&gt;
 &lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01-20<span class="pl-pds">"</span></span>&gt;20 Января 2020&lt;/<span class="pl-ent">time</span>&gt;
 &lt;!-- Только год и месяц --&gt;
 &lt;<span class="pl-ent">time</span> <span class="pl-e">datetime</span>=<span class="pl-s"><span class="pl-pds">"</span>2020-01<span class="pl-pds">"</span></span>&gt;Январь 2020&lt;/<span class="pl-ent">time</span>&gt;
@@ -671,7 +671,7 @@ para.onclick = function() {
  <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/The_head_metadata_in_HTML">Что такое заголовок? Метаданные в HTML</a></li>
  <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a></li>
  <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA">Создание гиперссылок</a></li>
- <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting">Углублённое форматирование текста</a></li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting">Продвинутое форматирование текста</a></li>
  <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0_%D0%B8_%D0%B2%D0%B5%D0%B1-%D1%81%D0%B0%D0%B9%D1%82%D0%B0">Структура документа и веб-сайта</a></li>
  <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Debugging_HTML">Отладка HTML</a></li>
  <li><a href="https://developer.mozilla.org/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Marking_up_a_letter">Разметка письма</a></li>

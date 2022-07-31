@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/ol
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/HTML/Content_categories">Категории контента</a></th>
-   <td><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Основной поток</a>, и если дочерний элемент <code>&lt;ol&gt;</code> включает в себя хотя бы один элемент {{HTMLElement("li")}}, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">явный контент</a>.</td>
+   <td><a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content">Основной поток</a>, и если дочерний элемент <code>&lt;ol&gt;</code> включает в себя хотя бы один элемент {{HTMLElement("li")}}, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Palpable_content">явный контент</a>.</td>
   </tr>
   <tr>
    <th scope="row">Разрешённое содержимое</th>
@@ -101,7 +101,7 @@ translation_of: Web/HTML/Element/ol
 
 <p>Результат HTML кода выше:</p>
 
-<p>{{EmbedLiveSample("Simple_example", 400, 100)}}</p>
+<p>{{EmbedLiveSample("Обычный_список", 400, 100)}}</p>
 
 <h3 id="Список_с_Римскими_числами">Список с Римскими числами</h3>
 
@@ -113,7 +113,7 @@ translation_of: Web/HTML/Element/ol
 
 <p>Результат HTML кода выше:</p>
 
-<p>{{EmbedLiveSample("Using_Roman_Numeral_type", 400, 100)}}</p>
+<p>{{EmbedLiveSample("Список_с_Римскими_числами", 400, 100)}}</p>
 
 <h3 id="Используя_свойство_start">Используя свойство <code>start</code></h3>
 
@@ -128,7 +128,7 @@ translation_of: Web/HTML/Element/ol
 
 <p>Результат HTML кода выше:</p>
 
-<p>{{EmbedLiveSample("Using_the_start_attribute", 400, 100)}}</p>
+<p>{{EmbedLiveSample("Используя_свойство_start", 400, 100)}}</p>
 
 <h3 id="Вложенный_список">Вложенный список</h3>
 
@@ -147,7 +147,7 @@ translation_of: Web/HTML/Element/ol
 
 <p>Результат HTML кода выше:</p>
 
-<p>{{EmbedLiveSample("Nesting_lists", 400, 150)}}</p>
+<p>{{EmbedLiveSample("Вложенный_список", 400, 150)}}</p>
 
 <h3 id="Неупорядоченный_список_внутри_упорядоченного_списка">Неупорядоченный список внутри упорядоченного списка</h3>
 
@@ -166,48 +166,23 @@ translation_of: Web/HTML/Element/ol
 
 <p>Результат HTML кода выше:</p>
 
-<p>{{EmbedLiveSample("Unordered_list_inside_ordered_list", 400, 150)}}</p>
+<p>{{EmbedLiveSample("Неупорядоченный_список_внутри_упорядоченного_списка", 400, 150)}}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-ol-element', '&lt;ol&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Без изменений с последнего W3C, {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "grouping-content.html#the-ol-element", "HTMLOListElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Добавлено <code>reversed</code> и приписан <code>start</code>; возможно использование <code>type</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;ol&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td>Были убраны <code>compact</code> и <code>type</code>.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat("html.elements.ol")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>Другие элементы HTML списка: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}</li>
- <li>CSS свойства, которые могут быть полезны для стилизации <code>&lt;ol&gt;</code> элемента:
+ <li>CSS-свойства, которые могут быть полезны для стилизации <code>&lt;ol&gt;</code> элемента:
   <ul>
    <li>свойство {{CSSxRef("list-style")}}, для порядковых показов</li>
-   <li><a href="https://wiki.developer.mozilla.org/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS счётчики</a>, для более сложных вложенных списков</li>
+   <li><a href="/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS счётчики</a>, для более сложных вложенных списков</li>
    <li>свойство <a href="https://developer.mozilla.org/ru/docs/Web/CSS/line-height">line-height</a>, для замены убранного свойства <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/ol#attr-compact">compact</a></li>
    <li>Свойство <a href="https://developer.mozilla.org/ru/docs/Web/CSS/margin">margin</a>, для контроля отступа в списке</li>
   </ul>

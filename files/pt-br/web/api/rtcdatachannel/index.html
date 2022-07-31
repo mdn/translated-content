@@ -13,8 +13,6 @@ translation_of: Web/API/RTCDataChannel
 
 <p>Para criar um canal de dados e pedir a um ponto remoto para se juntar a você, chame os metodos {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}}.  O interlocutor que está sendo convidado a trocar dados recebe um evento {{event("datachannel")}} (que possui o tipo {{domxref("RTCDataChannelEvent")}}) para informá-lo de que o canal de dados foi adicionado à conexão.</p>
 
-<p>{{InterfaceOverview("WebRTC")}}</p>
-
 <h2 id="Exemplo">Exemplo</h2>
 
 <pre class="brush: js">var pc = new RTCPeerConnection();
@@ -52,7 +50,7 @@ dc.onclose = function () {
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{ CompatibilityTable }}</p>
 

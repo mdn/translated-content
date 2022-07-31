@@ -32,26 +32,36 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <p><span style="line-height: 1.5;">Por conta das referências serem fracas, chaves de <code>WeakMap</code> não são enumeráveis (i.e. não existe um método que dá a você uma lista de chaves). Se existisse tal método, a lista dependeria no estado da coleção do GC, introduzindo não-determinismo. Se você quiser ter uma lista de chaves, deve usar um {{jsxref("Map")}}. </span></p>
 
-<h2 id="Properties" name="Properties">Propriedades</h2>
+<h2 id="constructor" name="constructor">Construtor</h2>
 
 <dl>
- <dt><code>WeakMap.length</code></dt>
- <dd>O valor da propriedade <code>length</code> é 0.</dd>
- <dt>{{jsxref("WeakMap.prototype")}}</dt>
- <dd>Representa o prototype para o constructor <code>WeakMap</code>. Permite a adição de propriedades para todos os objetos <code>WeakMap</code>.</dd>
+  <dt>{{jsxref("WeakMap/WeakMap", "WeakMap()")}}</dt>
+  <dd>Cria um novo objeto <code>WeakMap</code>.</dd>
 </dl>
 
-<h2 id="Boolean_instances" name="Boolean_instances"><font face="Courier New, Andale Mono, monospace">Instâncias <code>WeakMap</code></font></h2>
+<h2 id="instance_methods" name="instance_methods">Métodos de instância</h2>
 
-<p>Todas as instâncias <code>WeakMap</code> herdam de {{jsxref("WeakMap.prototype")}}.</p>
+<dl>
+  <dt>{{jsxref("WeakMap.delete", "WeakMap.prototype.delete(<var>key</var>)")}}</dt>
+  <dd>
+    Remove qualquer valor associado à chave(<code>key</code>). <code>WeakMap.prototype.has(key)</code> retornará <code>false</code> depois.
+  </dd>
 
-<h3 id="Propriedades">Propriedades</h3>
+  <dt>{{jsxref("WeakMap.get", "WeakMap.prototype.get(<var>key</var>)")}}</dt>
+  <dd>
+    Retorna o valor associado à chave(<code>key</code>). Ou <code>undefined</code> se não houver.
+  </dd>
 
-<p>{{page('pt-BR/docs/JavaScript/Reference/Global_Objects/WeakMap/prototype','Propriedades')}}</p>
+  <dt>{{jsxref("WeakMap.has", "WeakMap.prototype.has(<var>key</var>)")}}</dt>
+  <dd>
+    Retorna um boolean afirmando se um valor foi associado à chave(<code>key</code>) no objeto <code>WeakMap</code> ou não.
+  </dd>
 
-<h3 id="Métodos">Métodos</h3>
-
-<p>{{page('pt-BR/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype','Metodos')}}</p>
+  <dt>{{jsxref("WeakMap.set", "WeakMap.prototype.set(<var>key</var>, <var>value</var>)")}}</dt>
+  <dd>
+    Define o valor(<code>value</code>) da chave(<code>key</code>) no objeto <code>WeakMap</code>. Retorna o objeto <code>WeakMap</code>.
+  </dd>
+</dl>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -112,7 +122,7 @@ wm1.has(o1);   // false
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_com_browsers">Compatibilidade com browsers</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p><br>
  {{Compat("javascript.builtins.WeakMap")}}</p>

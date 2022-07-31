@@ -96,7 +96,7 @@ original_slug: Web/API/HTML_드래그_앤_드롭_API
 
 <p>HTML 드래그와 드롭 인터페이스는 {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {{domxref("DataTransferItem")}}, {{domxref("DataTransferItemList")}} 입니다.</p>
 
-<p>{{domxref("DataTransfer")}} 객체는 드래그 형태나 드래그 데이터 (하나 이상의 아이템), 각 드래그 아이템의 종류 (MIME 종류) 와 같은 드래그 이벤트의 상태를 담고 있습니다. {{domxref("DataTransfer")}} 는 또한 드래그 데이터에 아이템을 추가하거나 제거하는 메소드를 가지고 있습니다. The {{domxref("DragEvent")}} 와 {{domxref("DataTransfer")}} 인터페이스만 있으면 어플리케이션에 HTML 드래그 앤 드롭 기능을 추가할 수 있습니다. 참고로 파이어폭스는 {{domxref("DataTransfer")}}에 {{anch("Gecko specific interfaces","Gecko-specific extensions")}} 와 같은 파이어폭스에서만 동작하는 추가적인 확장을 제공합니다. </p>
+<p>{{domxref("DataTransfer")}} 객체는 드래그 형태나 드래그 데이터 (하나 이상의 아이템), 각 드래그 아이템의 종류 (MIME 종류) 와 같은 드래그 이벤트의 상태를 담고 있습니다. {{domxref("DataTransfer")}} 는 또한 드래그 데이터에 아이템을 추가하거나 제거하는 메소드를 가지고 있습니다. The {{domxref("DragEvent")}} 와 {{domxref("DataTransfer")}} 인터페이스만 있으면 어플리케이션에 HTML 드래그 앤 드롭 기능을 추가할 수 있습니다. 참고로 파이어폭스는 {{domxref("DataTransfer")}}에 <a href="#gecko_specific_interfaces">Gecko-specific extensions</a> 와 같은 파이어폭스에서만 동작하는 추가적인 확장을 제공합니다. </p>
 
 <p>{{domxref("DataTransfer")}}는 {{domxref("DataTransferItem")}}의 {{domxref("DataTransferItemList","목록")}} 인 {{domxref("DataTransfer.items","items")}} 프로퍼티를 가지고 있습니다. 각 {{domxref("DataTransferItem")}} 는 하나의 드래그 아이템을 나타내고 각 아이템은 데이터의 종류 (<code>string</code> 혹은 <code>file</code>) 를 나타내는 {{domxref("DataTransferItem.kind","kind")}} 프로퍼티와 데이터 아이템의 종류 (MIME 종류) 를 나타내는 {{domxref("DataTransferItem.type","type")}} 프로퍼티를 가집니다. {{domxref("DataTransferItem")}}은 드래그 아이템의 데이터를 가져오는 메소드를 제공합니다.</p>
 
@@ -106,7 +106,7 @@ original_slug: Web/API/HTML_드래그_앤_드롭_API
 
 <p>{{domxref("DataTransfer")}}와 {{domxref("DataTransferItem")}}의 가장 중요한 차이점은 전자는 드래그 아이템의 데이터에 접근하기 위해 동기 메소드인 {{domxref("DataTransfer.getData","getData()")}}를 사용하는데 반해, 후자는 비동기 메소드인 {{domxref("DataTransferItem.getAsString","getAsString()")}}를 사용한다는 점입니다.</p>
 
-<p class="note">참고: {{domxref("DragEvent")}} and {{domxref("DataTransfer")}}는 여러 데스크탑 브라우저에서 폭넓게 지원하고 있습니다. 하지만 {{domxref("DataTransferItem")}}와 {{domxref("DataTransferItemList")}}는 제한적으로 사용 가능합니다. 드래그 앤 드롭의 상호 운용성에 대한 더 많은 정보를 찾아보기 위해 {{anch("Interoperability")}}를 보십시오.</p>
+<p class="note">참고: {{domxref("DragEvent")}} and {{domxref("DataTransfer")}}는 여러 데스크탑 브라우저에서 폭넓게 지원하고 있습니다. 하지만 {{domxref("DataTransferItem")}}와 {{domxref("DataTransferItemList")}}는 제한적으로 사용 가능합니다. 드래그 앤 드롭의 상호 운용성에 대한 더 많은 정보를 찾아보기 위해 <a href="#interoperability">Interoperability</a>를 보십시오.</p>
 
 <h3 id="Gecko_한정_인터페이스">Gecko 한정 인터페이스</h3>
 
@@ -270,8 +270,8 @@ function drop_handler(ev) {
 <ul>
  <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html">Copying and moving elements with the <code>DataTransfer</code> interface</a></li>
  <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html">Copying and moving elements with the <code>DataTransferListItem</code> interface</a></li>
- <li>파일 드래그 앤 드롭; 파이어폭스 전용: <a class="external" href="http://jsfiddle.net/9C2EF/" title="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
- <li>파일 드래그 앤 드롭; 모든 브라우저: <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output" title="https://jsbin.com/hiqasek">https://jsbin.com/hiqasek/</a></li>
+ <li>파일 드래그 앤 드롭; 파이어폭스 전용: <a class="external" href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
+ <li>파일 드래그 앤 드롭; 모든 브라우저: <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
 </ul>
 
 <h2 id="명세서">명세서 </h2>

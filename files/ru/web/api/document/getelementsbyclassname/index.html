@@ -7,7 +7,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <p>Возвращает массивоподобный (итерируемый) объект всех дочерних элементов, соответствующих всем из указанных имён классов. В случае вызова по отношению к объекту 'document', поиск происходит по всему документу, включая корневой элемент. Вызывать {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} можно также применительно к любому элементу: возвращены будут лишь те элементы, которые являются потомками указанного корневого элемента и имеют при этом указанные классы.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>var elements</var> = document.getElementsByClassName(<em>names</em>); // или:
 <var>var elements</var> = rootElement.getElementsByClassName(<em>names</em>);</pre>
@@ -18,7 +18,7 @@ translation_of: Web/API/Document/getElementsByClassName
  <li>getElementsByClassName может быть вызвана по отношению к любому элементу, не только для документа целиком. ("document"). Элемент, по отношению к которому осуществляется вызов, используется для целей поиска в качестве корневого элемента.</li>
 </ul>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <p>Получить все элементы класса 'test':</p>
 
@@ -70,10 +70,10 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
-<p>{{Compat("api.Document.getElementsByClassName")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
- <li><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname" title="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname"><span class="external">W3C: getElementsByClassName</span></a></li>
+ <li><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname"><span class="external">W3C: getElementsByClassName</span></a></li>
 </ul>

@@ -9,19 +9,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <p>Объект <strong><code>WeakMap</code></strong> — коллекция пар ключ-значение. В качестве ключей могут быть использованы только объекты, а значения могут быть произвольных типов.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code>new WeakMap([iterable])
+<pre class="syntaxbox"><code>new WeakMap([iterable])
 </code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>iterable</code></dt>
  <dd>Может быть массивом или любым другим итерируемым объектом, элементы которого являются парами ключ-значение (массивы из двух элементов). Каждая пара ключ-значение будет добавлена во вновь созданный экземпляр <code>WeakMap</code>. <code>Null</code> обрабатывается как <code>undefined</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Ключами WeakMap могут быть только объекты. {{Glossary("Primitive", "Примитивы")}} в качестве ключей не допускаются (т.е. {{jsxref("Symbol")}} не может быть ключом <code>WeakMap</code>).</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <p>Из-за того, что ссылки являются слабыми, ключи <code>WeakMap</code> не перечисляемы (то есть нет метода, который возвращает список ключей). Иначе список бы зависел от состояния сбора мусора, представляя индетерминизм. Если вы хотите иметь список ключей, вам следует поддерживать его самостоятельно.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 
 <dl>
  <dt><code>WeakMap.length</code></dt>
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
  <dd>Представляет прототип конструктора <code>WeakMap</code>. Позволяет добавлять свойства всем объектам типа <code>WeakMap</code>.</dd>
 </dl>
 
-<h2 id="Boolean_instances" name="Boolean_instances">Экземпляры <code>WeakMap</code></h2>
+<h2 id="Boolean_instances">Экземпляры <code>WeakMap</code></h2>
 
 <p>Все экземпляры <code>WeakMap</code> унаследованы от {{jsxref("WeakMap.prototype")}}.</p>
 
@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 <h3 id="Использование_объекта_WeakMap">Использование объекта <code>WeakMap</code></h3>
 
-<pre class="brush: js notranslate">const wm1 = new WeakMap(),
+<pre class="brush: js">const wm1 = new WeakMap(),
     wm2 = new WeakMap(),
     wm3 = new WeakMap();
 const o1 = {},
@@ -92,7 +92,7 @@ wm1.has(o1);     // false
 
 <h3 id="Пример_Реализация_класса_WeakMap-like_классов_с_методом_.clear">Пример: Реализация класса WeakMap-like классов с методом .clear()</h3>
 
-<pre class="brush: js notranslate">class ClearableWeakMap {
+<pre class="brush: js">class ClearableWeakMap {
     constructor(init) {
         this._wm = new WeakMap(init)
     }
@@ -143,7 +143,7 @@ wm1.has(o1);     // false
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.WeakMap")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

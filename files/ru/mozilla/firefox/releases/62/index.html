@@ -114,7 +114,7 @@ translation_of: Mozilla/Firefox/Releases/62
 <ul>
  <li>Поддержка событий {{event("userproximity")}}, {{event("deviceproximity")}} (см. {{domxref("UserProximityEvent")}} и {{domxref("DeviceProximityEvent")}}) отключена по умолчанию и управляется настройкой <code>device.sensors.proximity.enabled</code> ({{bug(1462308)}}).</li>
  <li>Поддержка события {{event("devicelight")}} (см. также {{domxref("DeviceLightEvent")}}) отключена по умолчанию и управляется настройкой <code>device.sensors.ambientLight.enabled</code> ({{bug(1462308)}}).</li>
- <li><a href="/ru/docs/Web/Guide/Events/Mutation_events">События мутации</a> {{event("DOMSubtreeModified")}} и {{event("DOMAttrModified")}} больше не выбрасываются, когда атрибут {{htmlattrxref("style")}} изменяется с помощью CSSOM ({{bug(1460295)}}, см. также <a href="https://www.fxsitecompat.com/en-CA/docs/2018/domattrmodified-and-domsubtreemodified-events-are-no-longer-fired-when-style-attribute-is-changed-via-cssom/">эту статью</a>).</li>
+ <li><a href="/ru/docs/Web/Guide/Events/Mutation_events">События мутации</a> {{event("DOMSubtreeModified")}} и {{event("DOMAttrModified")}} больше не выбрасываются, когда атрибут {{htmlattrxref("style")}} изменяется с помощью CSSOM ({{bug(1460295)}}).</li>
  <li>Прекращена поддержка {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} ({{bug(1408301)}}).</li>
  <li>Прекращена поддержка {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}} и {{domxref("CSSValueList")}} ({{bug(1459871)}}).</li>
  <li>{{domxref("window.getComputedStyle()")}} больше не возвращает <code>null</code>, если вызван на <code>Window</code>, у которого нет представления ({{bug(1467722)}}).</li>
@@ -206,12 +206,6 @@ translation_of: Mozilla/Firefox/Releases/62
 <ul>
  <li>Прекращена поддержка установки распакованных дополнений ({{bug(1385057)}}).</li>
  <li>Убран показ предупреждения о <code>browser_style</code> при временной загрузке дополнения для тестирования ({{bug(1404724)}}).</li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-US/versions/62">Совместимость сайтов с Firefox 62</a></li>
 </ul>
 
 <h2 id="Предыдущие_версии">Предыдущие версии</h2>

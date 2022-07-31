@@ -93,7 +93,7 @@ translation_of: Mozilla/Firefox/Releases/64
  <li>Метод {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} отныне возвращает имена заголовков в нижнем регистре, в соответствии со спецификацией ({{bug(1398718)}}).</li>
  <li>Устаревший интерфейс <code>HTMLAllCollection</code> обновлён в соответствии с последними изменениями <a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmlallcollection">спецификации</a> ({{bug(1398354)}}).</li>
  <li>В целях конфиденциальности {{domxref("Navigator.buildID")}} будет возвращать фиксированную метку времени ({{bug(583181)}}).</li>
- <li>По умолчанию отключены следующие возможности {{domxref("Document.execCommand()")}} ({{bug(1490641)}}, см. также <a href="https://www.fxsitecompat.com/en-CA/docs/2018/firefox-specific-html-editing-ui-has-been-disabled-by-default/">Firefox-specific HTML editing UI has been disabled by default</a>):
+ <li>По умолчанию отключены следующие возможности {{domxref("Document.execCommand()")}} ({{bug(1490641)}}):
   <ul>
    <li><code>enableObjectResizing</code></li>
    <li><code>enableInlineTableEditing</code></li>
@@ -197,12 +197,6 @@ translation_of: Mozilla/Firefox/Releases/64
  <li>Новое свойство <code>pinned</code> ключа манифеста <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> позволяет дополнениям управлять тем, должны ли при установке их действия на странице быть прикреплены к адресной строке или нет ({{bug(1494135)}}).</li>
  <li>В Windows наличие ключей NativeMessagingHosts сначала будет проверяться в 32-разрядном представлении реестра (<a class="external external-icon" href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system" rel="noopener">Wow6432Node)</a>); следует использовать то, что подходит для вашего приложения ({{bug(1494709)}}).</li>
  <li>Объект <code>search_provider</code> поля <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides</a></code> отныне может включать новые свойства — <code>suggest_url</code>, <code>suggest_url_post_params</code> ({{bug(1486819)}}) и <code>search_url_post_params</code>.</li>
-</ul>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
-
-<ul>
- <li><a href="https://www.fxsitecompat.com/en-CA/versions/64/">Совместимость сайтов с Firefox 64</a></li>
 </ul>
 
 <h2 id="Предыдущие_версии">Предыдущие версии</h2>

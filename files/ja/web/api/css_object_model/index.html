@@ -11,9 +11,10 @@ translation_of: Web/API/CSS_Object_Model
 ---
 <p>{{DefaultAPISidebar("CSSOM")}}</p>
 
-<p><strong>CSS オブジェクトモデル</strong>は CSS を JavaScript から操作するための API の集合です。これは DOM にとても良く似ていますが HTML ではなく CSS のためのものです。これにより CSS スタイルを動的に読んだり変更したりすることができます。</p>
+<p class="summary"><strong>CSS オブジェクトモデル</strong>は CSS を JavaScript から操作するための API の集合です。これは DOM にとても良く似ていますが、 HTML ではなく CSS のためのものです。これにより CSS スタイルを動的に読んだり変更したりすることができます。</p>
+<p>CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オブジェクトを使用します。</p>
 
-<h2 id="Reference" name="Reference">リファレンス</h2>
+<h2 id="Reference">リファレンス</h2>
 
 <div class="index">
 <ul>
@@ -42,27 +43,23 @@ translation_of: Web/API/CSS_Object_Model
  <li>{{DOMxRef("CSSSupportsRule")}}</li>
  <li>{{DOMxRef("CSSVariablesMap")}}</li>
  <li>{{DOMxRef("CSSViewportRule")}}</li>
- <li>{{DOMxRef("ElementCSSInlineStyle")}}</li>
  <li>{{DOMxRef("FontFace")}}</li>
  <li>{{DOMxRef("FontFaceSet")}}</li>
  <li>{{DOMxRef("FontFaceSetLoadEvent")}}</li>
- <li>{{DOMxRef("GeometryUtils")}}</li>
  <li>{{DOMxRef("GetStyleUtils")}}</li>
- <li>{{DOMxRef("LinkStyle")}}</li>
  <li>{{DOMxRef("MediaList")}}</li>
  <li>{{DOMxRef("MediaQueryList")}}</li>
  <li>{{DOMxRef("MediaQueryListEvent")}}</li>
- <li>{{DOMxRef("MediaQueryListListener")}}</li>
  <li>{{DOMxRef("Screen")}}</li>
  <li>{{DOMxRef("StyleSheet")}}</li>
- <li>{{DOMxRef("StylesheetList")}}</li>
+ <li>{{DOMxRef("StyleSheetList")}}</li>
  <li>{{DOMxRef("TransitionEvent")}}</li>
 </ul>
 </div>
 
-<p>他にも CSSOM に関する仕様書で拡張されているインターフェイスがあります。 {{DOMxRef("Document")}}, {{DOMxRef("Window")}}, {{DOMxRef("Element")}}, {{DOMxRef("HTMLElement")}}, {{DOMxRef("HTMLImageElement")}}, {{DOMxRef("Range")}}, {{DOMxRef("MouseEvent")}}, {{DOMxRef("SVGElement")}}</p>
+<p>他にも CSSOM に関する仕様書で拡張されているインターフェイスがあります。 {{DOMxRef("Document")}}, {{DOMxRef("Window")}}, {{DOMxRef("Element")}}, {{DOMxRef("HTMLElement")}}, {{DOMxRef("HTMLImageElement")}}, {{DOMxRef("Range")}}, {{DOMxRef("MouseEvent")}}, {{DOMxRef("SVGElement")}} です。</p>
 
-<h3 id="CSS_Typed_Object_Model" name="CSS_Typed_Object_Model">CSS 型付きオブジェクトモデル {{Experimental_Inline}}</h3>
+<h3 id="CSS_Typed_Object_Model">CSS 型付きオブジェクトモデル {{Experimental_Inline}}</h3>
 
 <p>{{SeeCompatTable}}</p>
 
@@ -99,26 +96,26 @@ translation_of: Web/API/CSS_Object_Model
 </ul>
 </div>
 
-<h3 id="Obsolete_CSSOM_interfaces" name="Obsolete_CSSOM_interfaces">廃止された CSSOM インターフェイス {{Obsolete_Inline}}</h3>
+<h3 id="Obsolete_CSSOM_interfaces">廃止された CSSOM インターフェイス {{deprecated_inline}}</h3>
 
-<p>{{Obsolete_Header}}</p>
+<p>{{deprecated_header}}</p>
 
 <div class="index">
 <ul>
- <li>{{DOMxRef("CSSPrimitiveValue")}} {{Obsolete_Inline}}</li>
- <li>{{DOMxRef("CSSValue")}} {{Obsolete_Inline}}</li>
- <li>{{DOMxRef("CSSValueList")}} {{Obsolete_Inline}}</li>
+ <li>{{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}</li>
+ <li>{{DOMxRef("CSSValue")}} {{deprecated_inline}}</li>
+ <li>{{DOMxRef("CSSValueList")}} {{deprecated_inline}}</li>
 </ul>
 </div>
 
-<h2 id="Tutorials" name="Tutorials">チュートリアル</h2>
+<h2 id="Tutorials">チュートリアル</h2>
 
 <ul>
- <li><a href="/ja/docs/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a> (これは DHTML/Ajax 時代に作られたのでいくらか更新が必要です)。</li>
+ <li><a href="/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a> (これは DHTML/Ajax 時代に作られたのでいくらか更新が必要です)。</li>
  <li><a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">画面の向きの管理</a></li>
 </ul>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <tbody>
@@ -195,7 +192,7 @@ translation_of: Web/API/CSS_Object_Model
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>この機能のすべてはさまざまなブラウザーで何年かけて少しずつ追加されてきました。これは簡単なページにまとめることができないとても複雑なプロセスでした。利用できるかについてはそれぞれのインターフェイスを参照してください。</p>
 

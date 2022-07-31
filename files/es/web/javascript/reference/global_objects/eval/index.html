@@ -131,7 +131,7 @@ document.write("El campo llamado ", campo, " tiene un valor de ", campo[valor]);
 
 <h3 id="Utilice_funciones_en_lugar_de_evaluar_fragmentos_de_código">Utilice funciones en lugar de evaluar fragmentos de código</h3>
 
-<p>JavaScript tiene <a class="external external-icon" href="http://en.wikipedia.org/wiki/First-class_function" title="http://en.wikipedia.org/wiki/First-class_function">funciones de primera clase </a>(artículo en inglés), lo que quiere decir que usted puede pasar funciones como argumentos a otras APIs, almacenarlas en variables y propiedades de objetos, etc. Muchas APIs de DOM están diseñadas con esto en mente, o sea que usted puede (y debería) escribir:</p>
+<p>JavaScript tiene <a class="external external-icon" href="http://en.wikipedia.org/wiki/First-class_function">funciones de primera clase </a>(artículo en inglés), lo que quiere decir que usted puede pasar funciones como argumentos a otras APIs, almacenarlas en variables y propiedades de objetos, etc. Muchas APIs de DOM están diseñadas con esto en mente, o sea que usted puede (y debería) escribir:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// instead of setTimeout(" ... ", 1000) use:</span>
 <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">1000</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -236,55 +236,7 @@ console<span class="punctuation token">.</span><span class="function token">log<
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Carác.</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.builtins.eval")}}
 
 <h2 id="Observaciones_específicas_para_Gecko">Observaciones específicas para Gecko</h2>
 

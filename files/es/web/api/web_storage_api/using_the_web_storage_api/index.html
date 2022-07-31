@@ -204,63 +204,15 @@ imageForm.onchange = populateStorage;</pre>
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+<h3><code>Window.localStorage</code></h3>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>localStorage</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>8</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
-  <tr>
-   <td>sessionStorage</td>
-   <td>5</td>
-   <td>2</td>
-   <td>8</td>
-   <td>10.50</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Window.localStorage")}}
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.1</td>
-   <td>{{ CompatUnknown }}</td>
-   <td>8</td>
-   <td>11</td>
-   <td>iOS 3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h3><code>Window.sessionStorage</code></h3>
 
-<p>Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una <a class="external external-icon" href="http://dev-test.nemikor.com/web-storage/support-test/" rel="noopener" title="http://dev-test.nemikor.com/web-storage/support-test/">análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores</a>.</p>
+{{Compat("api.Window.sessionStorage")}}
+
+<p>Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una <a class="external external-icon" href="http://dev-test.nemikor.com/web-storage/support-test/" rel="noopener">análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores</a>.</p>
 
 <div class="note">
 <p><strong>Nota: </strong>Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.</p>

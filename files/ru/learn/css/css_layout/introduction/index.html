@@ -41,7 +41,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>Нормальный поток (Normal flow) это то как ваш браузер отображает по умолчанию, когда вы не меняли расположение элементов на странице. Взглянем на пример:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;I love my cat.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;I love my cat.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Buy cat food&lt;/li&gt;
@@ -55,7 +55,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>{{ EmbedLiveSample('Normal_flow', '100%', 200) }}</p>
 
-<p>Заметьте, что HTML элементы здесь отображаются точно в таком порядке, как и в исходном коде — первый параграф, за ним неупорядоченный список, затем второй параграф.</p>
+<p>Заметьте, что HTML-элементы здесь отображаются точно в таком порядке, как и в исходном коде — первый параграф, за ним неупорядоченный список, затем второй параграф.</p>
 
 <p>Элементы, выводящиеся один <em>под</em> другим, называются <em>блочными</em>, в противоположность <em>строчным</em>, которые выводятся один <em>вслед</em> за другим, как отдельные слова в обычном абзаце текста.</p>
 
@@ -79,7 +79,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>Значения свойства <code>display</code> являются главными методами вёрстки разметки страницы в CSS. Это свойство позволяет нам менять то, как что-то отображается по умолчанию. Каждый элемент по умолчанию имеет свойство <code>display</code>, влияющее на то, как этот элемент отображается. Например, параграфы на английском располагаются один под другим только потому что они имеют по умолчанию свойство  <code>display: block</code>. Если же вы создадите ссылку внутри параграфа, эта ссылка будет отображаться в общем потоке с остальным текстом, без переноса на новую строку. Это потому что у элемента {{htmlelement("a")}} по умолчанию установлено свойство <code>display: inline</code>.</p>
 
-<p>Вы можете изменить дефолтное поведение display. К примеру,  {{htmlelement("li")}} отображается как <code>display: block</code> по умолчанию, это означает что элементы списка отображаются один за другим в нашем документе.Если мы изменим значение display на <code>inline</code> они будут отображаться друг за другом, как это делают слова в предложении. Тот факт, что вы можете изменить значение display для любого элемента означает, что вы можете выбирать HTML элементы по их семантическому значению, не беспокоясь о том как они будут выглядеть. То как они выглядят это то, что вы можете поменять.</p>
+<p>Вы можете изменить дефолтное поведение display. К примеру,  {{htmlelement("li")}} отображается как <code>display: block</code> по умолчанию, это означает что элементы списка отображаются один за другим в нашем документе.Если мы изменим значение display на <code>inline</code> они будут отображаться друг за другом, как это делают слова в предложении. Тот факт, что вы можете изменить значение display для любого элемента означает, что вы можете выбирать HTML-элементы по их семантическому значению, не беспокоясь о том как они будут выглядеть. То как они выглядят это то, что вы можете поменять.</p>
 
 <p><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">В дополнение к возможности менять значение с </span></font><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;"> </span></font>block</code> на <code>inline</code> и обратно, есть и другие возможности вёрстки с другими значениями  <code>display</code>. Однако, в основном все они требуют использования дополнительных свойств. Двумя наиболее важными  для задач вёрстки страниц являются <code>display: flex</code> и <code>display: grid</code>.</p>
 
@@ -95,7 +95,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <div class="hidden">
 <h6 id="Flexbox_Example_1">Flexbox Example 1</h6>
 
-<pre class="brush: css notranslate">* {box-sizing: border-box;}
+<pre class="brush: css">* {box-sizing: border-box;}
 
 .wrapper &gt; div {
     border-radius: 5px;
@@ -105,12 +105,12 @@ translation_of: Learn/CSS/CSS_layout/Introduction
     </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
   display: flex;
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;One&lt;/div&gt;
   &lt;div class="box2"&gt;Two&lt;/div&gt;
   &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -128,7 +128,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <div class="hidden">
 <h6 id="Flexbox_Example_2">Flexbox Example 2</h6>
 
-<pre class="brush: css notranslate">    * {box-sizing: border-box;}
+<pre class="brush: css">    * {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -138,7 +138,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
     </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: flex;
 }
 
@@ -147,7 +147,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="box1"&gt;One&lt;/div&gt;
     &lt;div class="box2"&gt;Two&lt;/div&gt;
     &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -171,7 +171,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <div class="hidden">
 <h6 id="Grid_example_1">Grid example 1</h6>
 
-<pre class="brush: css notranslate">    * {box-sizing: border-box;}
+<pre class="brush: css">    * {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -181,7 +181,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
     </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
@@ -189,7 +189,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="box1"&gt;One&lt;/div&gt;
     &lt;div class="box2"&gt;Two&lt;/div&gt;
     &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -208,7 +208,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <div class="hidden">
 <h6 id="Grid_example_2">Grid example 2</h6>
 
-<pre class="brush: css notranslate">    * {box-sizing: border-box;}
+<pre class="brush: css">    * {box-sizing: border-box;}
 
     .wrapper &gt; div {
         border-radius: 5px;
@@ -218,7 +218,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
     </pre>
 </div>
 
-<pre class="brush: css notranslate">.wrapper {
+<pre class="brush: css">.wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px;
@@ -241,7 +241,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
+<pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="box1"&gt;One&lt;/div&gt;
     &lt;div class="box2"&gt;Two&lt;/div&gt;
     &lt;div class="box3"&gt;Three&lt;/div&gt;
@@ -276,7 +276,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <div class="hidden">
 <h6 id="Floats_example">Floats example</h6>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
@@ -296,7 +296,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Simple float example&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Simple float example&lt;/h1&gt;
 
 &lt;div class="box"&gt;Float&lt;/div&gt;
 
@@ -304,7 +304,7 @@ p {
 
 </pre>
 
-<pre class="brush: css notranslate">
+<pre class="brush: css">
 .box {
     float: left;
     width: 150px;
@@ -340,7 +340,7 @@ p {
 
 <p>Для ознакомления с этими методами вёрстки, мы покажем вам пару быстрых примеров. Наши примеры будут иметь одинаковый HTML, который выглядит следующим образом:</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;
 &lt;p class="positioned"&gt;I am a basic block level element.&lt;/p&gt;
@@ -348,7 +348,7 @@ p {
 
 <p>Этот HTML по умолчанию будет стилизован, используя следующий CSS:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -370,7 +370,7 @@ p {
 
 <p>Относительное (Relative) позиционирование позволяет вам смещать элемент относительно положения, которое он бы имел по умолчанию в нормальном потоке. Это значит, что вы можете выполнить такую задачу как перемещение иконки немного вниз, так чтобы он был на одной линии с текстовой меткой. Чтобы сделать это, мы можем добавить следующее правило для добавления относительного позиционирования.</p>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: relative;
   top: 30px;
   left: 30px;
@@ -384,13 +384,13 @@ p {
 <div class="hidden">
 <h6 id="Relative_positioning_example">Relative positioning example</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Relative positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Relative positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;
 &lt;p class="positioned"&gt;This is my relatively positioned element.&lt;/p&gt;
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -405,7 +405,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: relative;
   background: rgba(255,84,104,.3);
   border: 2px solid rgb(255,84,104);
@@ -420,9 +420,9 @@ p {
 
 <p>Абсолютное (Absolute) позиционирование используется чтобы полностью удалить элемент из нормального потока и разместить его, используя смещение от краёв содержащего блока.</p>
 
-<p>Возвращаясь к нашему примеру без позиционирования, мы можем добавить следующее CSS правило, чтобы реализовать абсолютное позиционирование:</p>
+<p>Возвращаясь к нашему примеру без позиционирования, мы можем добавить следующее CSS-правило, чтобы реализовать абсолютное позиционирование:</p>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: absolute;
   top: 30px;
   left: 30px;
@@ -434,13 +434,13 @@ p {
 <div class="hidden">
 <h6 id="Absolute_positioning_example">Absolute positioning example</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Absolute positioning&lt;/h1&gt;
 
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;
 &lt;p class="positioned"&gt;This is my absolutely positioned element.&lt;/p&gt;
 &lt;p&gt;I am a basic block level element.&lt;/p&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -455,7 +455,7 @@ p {
 </pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
     position: absolute;
     background: rgba(255,84,104,.3);
     border: 2px solid rgb(255,84,104);
@@ -474,7 +474,7 @@ p {
 
 <p>Для этого примера наш HTML это три параграфа текста для того, чтобы мы могли прокручивать страницу и блок, которому мы дадим <code>position: fixed</code>.</p>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
 
 &lt;div class="positioned"&gt;Fixed&lt;/div&gt;
 
@@ -487,7 +487,7 @@ p {
 <div class="hidden">
 <h6 id="Fixed_positioning_example">Fixed positioning example</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Fixed positioning&lt;/h1&gt;
 
 &lt;div class="positioned"&gt;Fixed&lt;/div&gt;
 
@@ -499,7 +499,7 @@ p {
 
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
     width: 500px;
     margin: 0 auto;
 }
@@ -513,7 +513,7 @@ p {
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
     position: fixed;
     top: 30px;
     left: 30px;
@@ -530,7 +530,7 @@ p {
 <div class="hidden">
 <h6 id="Sticky_positioning_example">Sticky positioning example</h6>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
 
@@ -540,7 +540,7 @@ p {
 
 &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;       </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   width: 500px;
   margin: 0 auto;
 }
@@ -554,7 +554,7 @@ p {
 }</pre>
 </div>
 
-<pre class="brush: css notranslate">.positioned {
+<pre class="brush: css">.positioned {
   position: sticky;
   top: 30px;
   left: 30px;
@@ -577,7 +577,7 @@ p {
 
 <p>Давайте взглянем на пример. Во-первых, немного простой разметки, которая создаёт HTML форму. Каждый input элемент имеет label, и мы также заключили описание в параграф. каждая пара label/input обёрнута в {{htmlelement("div")}}, для целей вёрстки.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;First of all, tell us your name and age.&lt;/p&gt;
   &lt;div&gt;
     &lt;label for="fname"&gt;First name:&lt;/label&gt;
@@ -597,7 +597,7 @@ p {
 
 <p>Вы заметите, что параграфу с описанием дано <code>display: table-caption;</code> — что заставляет его вести себя как табличный {{htmlelement("caption")}} — а <code>caption-side: bottom;</code> для того чтобы указать описанию располагаться снизу таблицы в целях дизайна, не смотря на то что разметка находится до <code>&lt;input&gt;</code> элементов в источнике. Это обеспечивает гибкостью.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -647,7 +647,7 @@ form p {
 
 <p>В примере ниже мы начинаем с HTML блоком, который содержится в элементе <code>&lt;div&gt;</code> с классом <code>container</code>.</p>
 
-<pre class="brush: html notranslate">&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
     &lt;h1&gt;Multi-column layout&lt;/h1&gt;
 
     &lt;p&gt;Paragraph 1.&lt;/p&gt;
@@ -662,7 +662,7 @@ form p {
 <div class="hidden">
 <h6 id="Multicol_example">Multicol example</h6>
 
-<pre class="brush: html notranslate">    &lt;div class="container"&gt;
+<pre class="brush: html">    &lt;div class="container"&gt;
         &lt;h1&gt;Multi-column Layout&lt;/h1&gt;
 
         &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;
@@ -673,10 +673,10 @@ form p {
     &lt;/div&gt;
         </pre>
 
-<pre class="brush: css notranslate">body { max-width: 800px; margin: 0 auto; } </pre>
+<pre class="brush: css">body { max-width: 800px; margin: 0 auto; } </pre>
 </div>
 
-<pre class="brush: css notranslate">    .container {
+<pre class="brush: css">    .container {
         column-width: 200px;
     }</pre>
 </div>

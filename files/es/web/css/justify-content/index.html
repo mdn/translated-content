@@ -12,7 +12,7 @@ translation_of: Web/CSS/justify-content
 <p>El alineamiento se produce luego de que las longitudes y márgenes automáticos son aplicados, lo que significa que, si existe al menos un elemento flexible con {{cssxref("flex-grow")}} diferente a 0, no tendrá efecto ya que no habrá espacio disponible.</p>
 
 <div class="note">
-<p>No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para <a href="http://dev.w3.org/csswg/css3-align/#justify-content" title="http://dev.w3.org/csswg/css3-align/#justify-content">extender su uso a cualquier elemento en bloque</a>. La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.</p>
+<p>No se debe asumir que esta propiedad sólo se aplicará a contenedores flex en el futuro y por lo tanto no ocultarla simplemente estableciendo otro valor para {{cssxref("display")}}. El CSSWG está trabajano para <a href="http://dev.w3.org/csswg/css3-align/#justify-content">extender su uso a cualquier elemento en bloque</a>. La especificación preliminar se encuentra en una etapa muy temprana y aún no está implementada.</p>
 </div>
 
 <div>{{cssinfo}}</div>
@@ -164,56 +164,7 @@ justify-content: unset;
 
 <h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soprte básico</td>
-   <td>{{CompatGeckoDesktop("18.0")}} (behind a pref) [1]<br>
-    {{CompatGeckoDesktop("20.0")}}</td>
-   <td>21.0{{property_prefix("-webkit")}}</td>
-   <td>11</td>
-   <td>12.10</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soprte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12.10</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox soporta sólo single-line flexbox hasta Firefox 28. Para activar soporte flexbox, para Firefox 18 y 19, el usuario debe cambiar la preferencia  about:config "layout.css.flexbox.enabled" a <code>true</code>.</p>
+{{Compat("css.properties.justify-content")}}
 
 <h2 id="Ver_también">Ver también</h2>
 

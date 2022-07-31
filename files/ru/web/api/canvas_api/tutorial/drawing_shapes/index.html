@@ -41,7 +41,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <h3 id="Пример_создания_прямоугольных_фигур">Пример создания прямоугольных фигур</h3>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -49,7 +49,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -113,7 +113,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <p>Например, код для рисования треугольника будет выглядеть как-то так:</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -121,7 +121,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -153,7 +153,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <p>Вы можете проверить это сами, используя участок кода ниже. Просто вставьте в функцию <code>draw()</code>, рассмотренную ранее.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -161,7 +161,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight:[8,10,12] notranslate">function draw() {
+<pre class="brush: js;highlight:[8,10,12]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
      var ctx = canvas.getContext('2d');
@@ -186,7 +186,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <p>Если вы захотите увидеть соединение линии, то можете удалить вызов <code>moveTo()</code>.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Подробнее о функции <code>arc()</code>,посмотрите {{anch("Дуги")}} .</p>
+<p><strong>Note:</strong> Подробнее о функции <code>arc()</code>,посмотрите <a href="#дуги">Дуги</a> .</p>
 </div>
 
 <h3 id="Линии">Линии</h3>
@@ -203,7 +203,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <p>Пример ниже рисует два треугольника, один закрашенный и другой обведён контуром.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -211,7 +211,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight[9,10,16,17] notranslate">function draw() {
+<pre class="brush: js;highlight[9,10,16,17]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -270,7 +270,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </div>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -278,7 +278,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight[16] notranslate">function draw() {
+<pre class="brush: js;highlight[16]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -310,7 +310,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 <h3 id="Безье_и_квадратичные_кривые">Безье и квадратичные кривые</h3>
 
-<p>Следующим типом доступных контуров являются  <a class="external" href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve" rel="external" title="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">кривые Безье</a>, и к тому же доступны в кубическом и квадратичном вариантах. Обычно они используются при рисовании сложных составных фигур.</p>
+<p>Следующим типом доступных контуров являются  <a class="external" href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve" rel="external">кривые Безье</a>, и к тому же доступны в кубическом и квадратичном вариантах. Обычно они используются при рисовании сложных составных фигур.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}</dt>
@@ -332,7 +332,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <p>В этом примере многократно используются квадратичные кривые Безье для рисования речевой выноски.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -340,7 +340,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight[9,10,11,12,13,14] notranslate">function draw() {
+<pre class="brush: js;highlight[9,10,11,12,13,14]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -366,7 +366,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <p>В этом примере нарисовано сердце с использованием кубических кривых Безье.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -374,7 +374,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js;highlight[9,10,11,12,13,14] notranslate">function draw() {
+<pre class="brush: js;highlight[9,10,11,12,13,14]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -393,11 +393,11 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 }
 </pre>
 
-<p>{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}</p>
+<p>{{EmbedLiveSample("Кубические_кривые_Безье", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}</p>
 
 <h3 id="Прямоугольники">Прямоугольники</h3>
 
-<p>Все эти методы мы видели в  {{anch("Рисование прямоугольников")}}, которые рисуют прямоугольники сразу в canvas, так же есть метод <code>rect()</code>, который не отображает, а только добавляет контур рисования (path) заданного прямоугольника к последнему открытому контуру.</p>
+<p>Все эти методы мы видели в  <a href="#рисование_прямоугольников">Рисование прямоугольников</a>, которые рисуют прямоугольники сразу в canvas, так же есть метод <code>rect()</code>, который не отображает, а только добавляет контур рисования (path) заданного прямоугольника к последнему открытому контуру.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.rect", "rect(x, y, width, height)")}}</dt>
@@ -414,7 +414,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
  Однако, нет никаких ограничений на количество или типы контуров, которые вы можете использовать для создания фигур. Давайте в этом примере объединим все вышеперечисленные  функции контуров, чтобы создать набор очень известных игровых персонажей.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -422,7 +422,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 </pre>
 </div>
 
-<pre class="brush: js notranslate">function draw() {
+<pre class="brush: js">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -492,17 +492,13 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 // A utility function to draw a rectangle with rounded corners.
 
-function roundedRect(ctx,x,y,width,height,radius){
+function roundedRect(ctx, x, y, width, height, radius) {
   ctx.beginPath();
-  ctx.moveTo(x,y+radius);
-  ctx.lineTo(x,y+height-radius);
-  ctx.quadraticCurveTo(x,y+height,x+radius,y+height);
-  ctx.lineTo(x+width-radius,y+height);
-  ctx.quadraticCurveTo(x+width,y+height,x+width,y+height-radius);
-  ctx.lineTo(x+width,y+radius);
-  ctx.quadraticCurveTo(x+width,y,x+width-radius,y);
-  ctx.lineTo(x+radius,y);
-  ctx.quadraticCurveTo(x,y,x,y+radius);
+  ctx.moveTo(x, y + radius);
+  ctx.arcTo(x, y + height, x + radius, y + height, radius);
+  ctx.arcTo(x + width, y + height, x + width, y + height - radius, radius);
+  ctx.arcTo(x + width, y, x + width - radius, y, radius);
+  ctx.arcTo(x, y, x, y + radius, radius);
   ctx.stroke();
 }
 </pre>
@@ -525,7 +521,7 @@ function roundedRect(ctx,x,y,width,height,radius){
  <dd>Конструктор <code><strong>Path2D()</strong></code> возвращает вновь созданный объект <code>Path2D</code>  необязательно с другим путём в качестве аргумента (создаёт копию) или необязательно со строкой, состоящей из данных пути <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> .</dd>
 </dl>
 
-<pre class="brush: js notranslate">new Path2D();     // пустой path объект
+<pre class="brush: js">new Path2D();     // пустой path объект
 new Path2D(path); // копирование из другого path
 new Path2D(d);    // path из SVG</pre>
 
@@ -543,7 +539,7 @@ new Path2D(d);    // path из SVG</pre>
 <p>В этом примере мы создаём прямоугольник и круг. Оба они сохраняются как объект <code>Path2D</code>, поэтому они доступны для последующего использования. С новым API <code>Path2D</code> несколько методов были обновлены, чтобы при необходимости принять объект <code>Path2D</code> для использования вместо текущего пути. Здесь <code>stroke</code> и <code>fill</code> используются с аргументом пути, например, для рисования обоих объектов на холст.</p>
 
 <div class="hidden">
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="130" height="100"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
@@ -551,7 +547,7 @@ new Path2D(d);    // path из SVG</pre>
 </pre>
 </div>
 
-<pre class="brush: js;highlight[6,9] notranslate">function draw() {
+<pre class="brush: js;highlight[6,9]">function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext){
     var ctx = canvas.getContext('2d');
@@ -569,7 +565,7 @@ new Path2D(d);    // path из SVG</pre>
 }
 </pre>
 
-<p>{{EmbedLiveSample("Path2D_example", 130, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}</p>
+<p>{{EmbedLiveSample("Path2D_пример", 130, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}</p>
 
 <h3 id="Использование_SVG_путей">Использование SVG путей</h3>
 
@@ -578,6 +574,6 @@ new Path2D(d);    // path из SVG</pre>
 <p>Путь перемещается в точку (<code>M10 10</code>), а затем горизонтально перемещается на 80 пунктов вправо (<code>h 80</code>), затем на 80 пунктов вниз (<code>v 80</code>), затем на 80 пунктов влево (<code>h -80</code>), а затем обратно на start (<code>z</code>). <br>
  Этот пример можно увидеть на странице  <a href="/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths"><code>Path2D</code> constructor</a>.</p>
 
-<pre class="brush: js; notranslate">var p = new Path2D("M10 10 h 80 v 80 h -80 Z");</pre>
+<pre class="brush: js;">var p = new Path2D("M10 10 h 80 v 80 h -80 Z");</pre>
 
 <div>{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}</div>

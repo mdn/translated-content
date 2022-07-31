@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 
 <h2 id="描述">描述</h2>
 
-<p><code>find</code> 方法对类型化数组中的每个元素执行一次 <code>callback</code> 函数，直到它找到一个使 <code>callback</code> 返回 <em>true</em>的元素。如果发现了一个这样的元素，<code>find</code> 方法将会立即返回该元素的值。否则，<code>find</code> 方法会返回{{jsxref("undefined")}}。<code>callback</code> 只会对那些已经被赋值的索引调用。不会对那些被删除或从来没被赋值的索引调用。</p>
+<p><code>find</code> 方法对类型化数组中的每个元素执行一次 <code>callback</code> 函数，直到它找到一个使 <code>callback</code> 返回 <em>true</em>的元素。如果发现了一个这样的元素，<code>find</code> 方法将会立即返回该元素的值。否则，<code>find</code> 方法会返回{{jsxref("undefined")}}。<code>callback</code> 只会对那些已经被赋值的索引调用。不会对那些被删除或从来没被赋值的索引调用。</p>
 
 <p><code>callback</code> 以三个参数调用：元素的值，元素索引，以及要遍历的数组对象。</p>
 
@@ -51,16 +51,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 
 <h3 id="在类型化数组中寻找质数">在类型化数组中寻找质数</h3>
 
-<p>下面的示例在类型化数组中寻找质数（如果没有质数则返回 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="The global undefined value property represents the value undefined. It is one of JavaScript's primitive types."><code>undefined</code></a>）。</p>
+<p>下面的示例在类型化数组中寻找质数（如果没有质数则返回 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>）。</p>
 
 <pre class="brush: js">function isPrime(element, index, array) {
-  var start = 2;
-  while (start &lt;= Math.sqrt(element)) {
-    if (element % start++ &lt; 1) {
-      return false;
-    }
-  }
-  return element &gt; 1;
+  var start = 2;
+  while (start &lt;= Math.sqrt(element)) {
+    if (element % start++ &lt; 1) {
+      return false;
+    }
+  }
+  return element &gt; 1;
 }
 
 var uint8 = new Uint8Array([4, 5, 8, 12]);
@@ -68,77 +68,11 @@ console.log(uint8.find(isPrime)); // 5</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>初始定义。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("37.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("37.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

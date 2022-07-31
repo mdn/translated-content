@@ -6,7 +6,7 @@ translation_of: Web/API/IDBFactory
 <p>{{APIRef("IndexedDB")}}</p>
 
 <div>
-<p><a href="/en-US/docs/IndexedDB">IndexedDB API</a> 的<code>IDBFactory</code> 接口让程序可以异步存取 indexed databases。<code>window.indexedDB</code> 对象实现了这个接口。你可以通过这个对象而不是直接使用<code>IDBFactory</code>接口打开—— 创建或者连接 —— 和删除一个数据库。</p>
+<p><a href="/en-US/docs/IndexedDB">IndexedDB API</a> 的<code>IDBFactory</code> 接口让程序可以异步存取 indexed databases。<code>window.indexedDB</code> 对象实现了这个接口。你可以通过这个对象而不是直接使用<code>IDBFactory</code>接口打开—— 创建或者连接 —— 和删除一个数据库。</p>
 </div>
 
 <h2 id="Methods">Methods</h2>
@@ -19,15 +19,15 @@ translation_of: Web/API/IDBFactory
  <dt>{{domxref("IDBFactory.cmp")}}</dt>
  <dd>比较两个键的方法并返回一个结果，表明哪个值更大。</dd>
  <dt>
- <h3 id="过时的Methods">过时的Methods</h3>
+ <h3 id="过时的Methods">过时的 Methods</h3>
  </dt>
- <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory.open-obsolete">IDBFactory.open</a></code>, the original version {{ obsolete_inline }}</dt>
- <dd>一个被废弃的方法请求打开一个数据库的连接，仍然在一些浏览器中被实施(<a href="https://developer.mozilla.org/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>).</dd>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory.open-obsolete">IDBFactory.open</a></code>, the original version {{Deprecated_Inline}}</dt>
+ <dd>一个被废弃的方法请求打开一个数据库的连接，仍然在一些浏览器中被实施 (<a href="https://developer.mozilla.org/en-US/docs/IndexedDB#gloss_database_connection">connection to a database</a>).</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
+<p>In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</p>
 
 <pre class="brush:js;highlight:[10]">var note = document.querySelector("ul");
 
@@ -44,91 +44,24 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
+  note.innerHTML += '&lt;li&gt;Error loading database.&lt;/li&gt;';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
+  note.innerHTML += '&lt;li&gt;Database initialised.&lt;/li&gt;';
 
-  // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
-  db = request.result;
+  // store the result of opening the database in the db variable. This is used a lot later on, for opening transactions and suchlike.
+  db = request.result;
 };
 </pre>
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#idl-def-IDBFactory', 'IDBFactory')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>23{{property_prefix("webkit")}}<br>
-    24</td>
-   <td>10 {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16.0")}}</td>
-   <td>10, partial</td>
-   <td>15</td>
-   <td>7.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>{{CompatGeckoMobile("22.0")}}</td>
-   <td>1.0.1</td>
-   <td>10</td>
-   <td>22</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div class="warning">
-<p>Be careful in Chrome as it still implements the old specification along with the new one. Similarly it still has the prefixed <code>webkitIndexedDB</code> property even if the unprefixed <code>indexedDB</code> is present.</p>
-</div>
+{{Compat("api.IDBFactory")}}
 
 <h2 id="See_also">See also</h2>
 
@@ -139,5 +72,5 @@ DBOpenRequest.onsuccess = function(event) {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

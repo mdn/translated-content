@@ -3,22 +3,23 @@ title: transform
 slug: Web/CSS/transform
 translation_of: Web/CSS/transform
 ---
-<p>{{ CSSRef() }}{{ SeeCompatTable() }}</p>
+{{CSSRef}}
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>A Propriedade CSS <code style="color: rgb(51, 51, 51); font-size: 14px; line-height: 21px;">transform</code><span style="line-height: 21px;"> permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.</span></p>
+<p>A propriedade CSS <code>transform</code><span style="line-height: 21px;"> permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.</span></p>
 
-<p><span style="line-height: 21px;">Se a propriedade tem um valor diferente de </span><span style="font-family: monospace; line-height: 21px;">none, </span><span style="line-height: 21px;">um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para  </span><span style="font-family: monospace; line-height: 21px;">position: fixed</span><span style="line-height: 21px;"> para os elementos que estão contidos.</span></p>
+{{EmbedInteractiveExample("pages/css/transform.html")}}
 
-<p><span style="line-height: 21px;">{{cssinfo}}</span></p>
+<p><span style="line-height: 21px;">Se a propriedade tem um valor diferente de </span><code>none, </code><span style="line-height: 21px;">um contexto de empilhamento será criado. Neste caso, o objeto atuará como um bloco recipiente para  </span><code>position: fixed</code><span style="line-height: 21px;"> para os elementos que estão contidos.</span></p>
+
 
 <h2 id="Sintaxe" style="padding: 0px;">Sintaxe</h2>
 
 <pre class="twopartsyntaxbox">Gramática Formal: &lt;transform-função&gt; [&lt;transform-função&gt;]* | none
 </pre>
 
-<pre>transform: none
+<pre class="brush: css">transform: none
 transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0)
 transform: translate(12px, 50%)
 transform: translateX(2em)
@@ -43,13 +44,17 @@ transform: perspective(17px)
 transform: translateX(10px) rotate(10deg) translateY(5px)
 </pre>
 
+<p>A propriedade transform pode ser especificada com a palavra reservada <code>none</code> ou com uma das várias funções disponíveis.</p>
+
+<p>Se {{cssxref("transform-function/perspective()", "perspective()")}} é uma das múltiplas funções atribuídas à transform, então ela obrigatoriamente deve ser a primeira.</p>
+
 <h3 id="Valores">Valores</h3>
 
 <dl>
  <dt><code>&lt;transform-função&gt;</code></dt>
- <dd>Uma ou mais das  {{ anch("funções CSS transform") }} para serem aplicadas, veja abaixo.</dd>
+ <dd>Uma ou mais das  <a href="#funções_css_transform">funções CSS transform</a> para serem aplicadas, veja abaixo.</dd>
  <dt><code>none</code></dt>
- <dd>Espcifica que nenhuma função transform deve ser aplicada.</dd>
+ <dd>Especifica que nenhuma função transform deve ser aplicada.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -58,7 +63,7 @@ transform: translateX(10px) rotate(10deg) translateY(5px)
 
 <h3 id="Exemplo_ao_vivo">Exemplo ao vivo:</h3>
 
-<pre style="">pre {
+<pre class="brush: css">pre {
      width: 33em;
      border: solid red;
 
@@ -204,75 +209,9 @@ To achieve the same effect, use <code>skewX()</code> if you were using <code>ske
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+{{Compat}}
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }} {{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoDesktop("16.0") }}</td>
-   <td>9.0 {{ property_prefix("-ms") }}<br>
-    10.0</td>
-   <td>10.5{{ property_prefix("-o") }}<br>
-    12.5</td>
-   <td>3.1{{ property_prefix("-webkit") }}</td>
-  </tr>
-  <tr>
-   <td>3D Support</td>
-   <td>12.0{{ property_prefix("-webkit") }}</td>
-   <td>10.0{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoDesktop("16.0") }}</td>
-   <td>10.0</td>
-   <td>{{ CompatNo() }}</td>
-   <td>4.0{{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notes">Notes</h3>
-
-<p>Internet Explorer 5.5 or later supports a proprietary <a class="external" href="http://msdn.microsoft.com/en-us/library/ms533014%28VS.85,loband%29.aspx">Matrix Filter</a> which can be used to achieve the similar effect.</p>
-
-<p>Gecko 14.0 removed the experimental support for <code>skew()</code>, but it was reintroduced in Gecko 15.0 for compatibility reason. As it is non-standard and will likely be removed in the future, do not use it.</p>
 
 <h2 id="See_also_2">See also</h2>
 

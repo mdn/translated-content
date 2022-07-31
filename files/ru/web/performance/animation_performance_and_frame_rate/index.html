@@ -11,7 +11,7 @@ tags:
 translation_of: Web/Performance/Animation_performance_and_frame_rate
 original_slug: Web/Performance/Производительность_анимации
 ---
-<p>Анимация в Вебе может быть сделана с помощью {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, включая {{htmlelement('canvas')}} и {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, анимированных GIF и даже с помощью анимированных PNG и других типов изображений. Производительность CSS анимации может отличаться от одного CSS-свойства к другому, а попытка анимировать некоторые "дорогие" CSS-свойства может привести к зависаниям ({{glossary('jank')}}), даже несмотря на то, что браузер борется за то, чтобы смягчить частоту смены кадров {{glossary('frame rate')}}.</p>
+<p>Анимация в Вебе может быть сделана с помощью {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}, включая {{htmlelement('canvas')}} и {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, анимированных GIF и даже с помощью анимированных PNG и других типов изображений. Производительность CSS-анимации может отличаться от одного CSS-свойства к другому, а попытка анимировать некоторые "дорогие" CSS-свойства может привести к зависаниям ({{glossary('jank')}}), даже несмотря на то, что браузер борется за то, чтобы смягчить частоту смены кадров {{glossary('frame rate')}}.</p>
 
 <p>Для анимированных медиа, таких как видео и GIF, основная проблема производительности - это размер файлов. Скачивание больших по объёму файлов не может не повлиять на производительность системы или на то, как эту систему воспринимает пользователь. </p>
 
@@ -25,23 +25,23 @@ original_slug: Web/Performance/Производительность_анимац
 
 <p>Графики <a href="/en-US/docs/Tools/Performance/Frame_rate">frame rate</a> и <a href="/en-US/docs/Tools/Performance/Waterfall">waterfall</a> из встроенных инструментов браузера дают информацию о том, как браузер выполняет работу по анимации. Используя эти инструменты, вы можете измерить fps приложения и диагностировать узкие места, в которых fps уменьшается.</p>
 
-<p>С помощью <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">CSS анимации</a> вы указываете <a href="/en-US/docs/Web/CSS/@keyframes">ключевые кадры (keyframes)</a>, каждый из которых использует определённые CSS свойства, чтобы определить внешний вид элемента в конкретный (ключевой) момент анимации. Браузер создаёт анимации с помощью плавных переходов от одного ключевого кадра к следующему.</p>
+<p>С помощью <a href="/en-US/docs/Web/Guide/CSS/Using_CSS_animations">CSS-анимации</a> вы указываете <a href="/en-US/docs/Web/CSS/@keyframes">ключевые кадры (keyframes)</a>, каждый из которых использует определённые CSS-свойства, чтобы определить внешний вид элемента в конкретный (ключевой) момент анимации. Браузер создаёт анимации с помощью плавных переходов от одного ключевого кадра к следующему.</p>
 
 <p>Если сравнивать анимацию с помощью JavaScript и CSS, вы увидите, что CSS-анимации проще создать. Более того, CSS-анимации гарантируют лучшую производительность, так как они автоматически делегируют некоторые задачи браузеру. Например, в случае CSS браузер сам решает, когда нужно отрендерить кадр, а когда пропустить кадр, если это необходимо. </p>
 
 <p><br>
- Однако, стоимость изменения разных CSS свойств варьируется. Общепринято, что 60 кадров в секунду - это достаточная частота, чтобы анимация выглядела мягкой и плавной. Несложный подсчёт говорит, что при частоте 60 кадров в секунду, браузер имеет лишь 16.7 миллисекунд, чтобы выполнить все скрипты, пересчитать стили, скомпоновать слои и отрисовать новый кадр. Отсюда следует, что медленные скрипты и анимация дорогих CSS свойств может может привести к <a href="/en-US/docs/Glossary/Jank">зависаниям</a>, так как браузер все ещё будет пытаться вычислить все 60 кадров.</p>
+ Однако, стоимость изменения разных CSS-свойств варьируется. Общепринято, что 60 кадров в секунду - это достаточная частота, чтобы анимация выглядела мягкой и плавной. Несложный подсчёт говорит, что при частоте 60 кадров в секунду, браузер имеет лишь 16.7 миллисекунд, чтобы выполнить все скрипты, пересчитать стили, скомпоновать слои и отрисовать новый кадр. Отсюда следует, что медленные скрипты и анимация дорогих CSS-свойств может может привести к <a href="/en-US/docs/Glossary/Jank">зависаниям</a>, так как браузер все ещё будет пытаться вычислить все 60 кадров.</p>
 
 <p>Стоит заметить, что 60 кадров в секунду - это стандартная частота обновления экрана. Существуют экраны с гораздо большим FPS. Например, экраны игровых ноутбуков или iPad Pro 2018 имеют частоту смены кадров, равную 120 fps и выше. Для таких устройств производители браузеров ограничивают частоту 60-ю кадрами в секунду, но с помощью некоторых опций этот лимит можно убрать. И в этом случае, на формирование каждого кадра устройство будет отводить лишь 8.6 миллисекунд.</p>
 
 <h2 id="Этапы_рендеринга">Этапы рендеринга</h2>
 
-<p>Процесс, используемый браузером для отображения анимации CSS свойств, может быть представлен как последовательность этапов из следующего изображения:</p>
+<p>Процесс, используемый браузером для отображения анимации CSS-свойств, может быть представлен как последовательность этапов из следующего изображения:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10821/css-rendering-waterfall.png" style="display: block; height: 203px; margin-left: auto; margin-right: auto; width: 546px;"></p>
 
 <ol>
- <li><strong>Recalculate Style</strong>: когда любое CSS свойство для элемента изменяется, браузер должен заново вычислить результирующий набор свойств.</li>
+ <li><strong>Recalculate Style</strong>: когда любое CSS-свойство для элемента изменяется, браузер должен заново вычислить результирующий набор свойств.</li>
  <li><strong>Layout</strong>: затем браузер использует вычисленные стили для того, чтобы понять позицию и геометрию элементов - как изменённого, так и рядом лежащих. Эта операция называется "layout", но иногда её так же называют "reflow".</li>
  <li><strong>Paint</strong>: наконец, браузер должен перерисовать элементы на экране. Но этот этап не обязательно должен быть простым, как на изображении. Страница может быть разделена на слои, каждый из которых перерисовывается независимо, а только после этого они комбинируются в процессе, который называется композицией "Composition".</li>
 </ol>
@@ -50,7 +50,7 @@ original_slug: Web/Performance/Производительность_анимац
 
 <p>В любом случае, вычисление каждого следующего кадра должно происходить достаточно быстро, чтобы успеть попасть в частоту обновления экрана, чтобы не было зависаний.</p>
 
-<h2 id="Стоимость_CSS_свойств">Стоимость CSS свойств</h2>
+<h2 id="Стоимость_CSS_свойств">Стоимость CSS-свойств</h2>
 
 <p>На всех этапах рендеринга изменение некоторых свойств является более затратным, других - менее:</p>
 
@@ -65,7 +65,11 @@ original_slug: Web/Performance/Производительность_анимац
  <tbody>
   <tr>
    <td>Свойства, затрагивающие геометрию или позицию элемента, запускают <strong>весь</strong> процесс заново: новое вычисление стилей, layout и перерисовку.</td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10825/layout.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10823/paint.png" style="height: 26px; width: 123px;"></td>
+   <td>
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout.png" loading="lazy" width="244" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png" loading="lazy" width="246" height="52">
+    </td>
    <td>
     <p><code><a href="/en-US/docs/Web/CSS/left">left</a></code><br>
      <code><a href="/en-US/docs/Web/CSS/max-width">max-width</a></code><br>
@@ -78,7 +82,11 @@ original_slug: Web/Performance/Производительность_анимац
    <td>
     <p>Свойства, не затрагивающие геометрию и позиционирование элементов, но не лежащие в отдельном слое, запускают только вычисление стилей и перерисовку, но не Layout.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10835/layout-faint.png" style="height: 52px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10823/paint.png" style="height: 26px; width: 123px;"></td>
+   <td>
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png" loading="lazy" width="246" height="52">
+    </td>
    <td>
     <p><code><a href="/en-US/docs/Web/CSS/color">color</a></code></p>
    </td>
@@ -87,7 +95,11 @@ original_slug: Web/Performance/Производительность_анимац
    <td>
     <p>Свойства, которые рендерятся в отдельном слое не запускают даже repaint, так как результат обновления обрабатывается на этапе композиции.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10835/layout-faint.png" style="height: 52px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10839/paint-faint.png" style="height: 26px; width: 123px;"></td>
+   <td>
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint-faint.png" loading="lazy" width="246" height="52">
+   </td>
    <td><code><a href="/en-US/docs/Web/CSS/transform">transform</a></code><br>
     <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code></td>
   </tr>
@@ -95,12 +107,12 @@ original_slug: Web/Performance/Производительность_анимац
 </table>
 
 <div class="note">
-<p>На Веб-сайте <a href="http://csstriggers.com/">CSS Triggers</a> хорошо показано, какие CSS свойства вызывают те или иные этапы обновления в разных браузерах.</p>
+<p>На Веб-сайте <a href="http://csstriggers.com/">CSS Triggers</a> хорошо показано, какие CSS-свойства вызывают те или иные этапы обновления в разных браузерах.</p>
 </div>
 
 <h2 id="Пример_margin_против_transform">Пример: margin против transform</h2>
 
-<p>В этом разделе мы увидим, как инструмент <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> может указать на разницу между анимацией. её <code><a href="/en-US/docs/Web/CSS/margin">margin</a></code>  и <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code>.</p>
+<p>В этом разделе мы увидим, как инструмент <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> может указать на разницу между анимацией <code><a href="/en-US/docs/Web/CSS/margin">margin</a></code> и <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code>.</p>
 
 <p>Задумка этого сценария не в том, чтобы убедить вас, что анимация через <code>margin</code> - это всегда плохая идея. Сценарий нужен, чтобы продемонстрировать, как инструменты могут помочь вам понять работу браузера и как вы можете применить эти знания для оптимизации.</p>
 
@@ -168,7 +180,7 @@ original_slug: Web/Performance/Производительность_анимац
 
 <h4 id="Этапы_рендеринга_в_деталях_Waterfall_2">Этапы рендеринга в деталях (Waterfall)</h4>
 
-<p>В этой секции мы видим объяснения тому, что fps значительно улучшился. Мы больше не тратим время на layout и перерисовку элементов. :</p>
+<p>В этой секции мы видим объяснения тому, что fps значительно улучшился. Мы больше не тратим время на layout и перерисовку элементов:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10867/transform-timeline.png" style="display: block; height: 384px; margin-left: auto; margin-right: auto; width: 800px;"></p>
 

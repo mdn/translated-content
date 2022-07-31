@@ -13,12 +13,9 @@ translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}</div>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.<br>
- 이 예제의 추가는 <a href="https://github.com/mdn/interactive-examples/pull/1482#issuecomment-553841750">PR #1482</a>를 참조해라.</p>
-
 <h2 id="문법">문법</h2>
 
-<pre class="syntaxbox notranslate"><var>leftExpr</var> ?? <var>rightExpr</var>
+<pre class="syntaxbox "><var>leftExpr</var> ?? <var>rightExpr</var>
 </pre>
 
 <h2 id="설명">설명</h2>
@@ -29,14 +26,14 @@ translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 
 <p>이전에는 변수에 기본값을 할당하고 싶을 때, 논리 연산자 OR (<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">||</a></code>)을 사용하는 것이 일반적인 패턴이다:</p>
 
-<pre class="brush: js notranslate">let foo;
+<pre class="brush: js ">let foo;
 ...
 //  foo is never assigned any value so it is still undefined
 let someDummyText = foo || 'Hello!';</pre>
 
 <p>그러나 <code>||</code> boolean 논리 연산자 때문에, 왼쪽 피연산자는 boolean으로 강제로 변환되었고 <em>falsy</em> 한 값(<code>0</code>, <code>''</code>, <code>NaN</code>, <code>null</code>, <code>undefined</code>)은 반환되지 않았다. 이 동작은 만약 <code>0</code>, <code>''</code> or <code>NaN</code>을 유효한 값으로 생각한 경우 예기치 않는 결과를 초래할 수 있다.</p>
 
-<pre class="brush: js notranslate">let count;
+<pre class="brush: js ">let count;
 let text;
 ...
 count = 0;
@@ -50,7 +47,7 @@ console.log(message); // "hi!" and not ""
 
 <p>널 병합 연산자는 첫 번째 연산자가 <code>null</code> 또는 <code>undefined</code>로 평가될 때만, 두 번째 피연산자를 반환함으로써 이러한 위험을 피한다:</p>
 
-<pre class="brush: js notranslate">let myText = ''; // An empty string (which is also a falsy value)
+<pre class="brush: js ">let myText = ''; // An empty string (which is also a falsy value)
 
 let notFalsyText = myText || 'Hello world';
 console.log(notFalsyText); // Hello world
@@ -63,7 +60,7 @@ console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 
 <p>OR과 AND 같은 논리 연산자들과 마찬가지로, 만약 왼쪽이 <code>null</code> 또는 <code>undefined</code>가 아님이 판명되면 오른쪽 표현식은 평가되지 않는다.</p>
 
-<pre class="brush: js notranslate">function A() { console.log('A was called'); return undefined;}
+<pre class="brush: js ">function A() { console.log('A was called'); return undefined;}
 function B() { console.log('B was called'); return false;}
 function C() { console.log('C was called'); return "foo";}
 
@@ -81,19 +78,19 @@ console.log( B() ?? C() );
 
 <p>AND (<code>&amp;&amp;</code>) 와 OR 연산자 (<code>||</code>)를 <code>??</code>와 직접적으로 결합하여 사용하는 것은 불가능하다. 이 경우 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>가 발생된다.</p>
 
-<pre class="brush: js notranslate">null || undefined ?? "foo"; // raises a SyntaxError
+<pre class="brush: js ">null || undefined ?? "foo"; // raises a SyntaxError
 true || undefined ?? "foo"; // raises a SyntaxError</pre>
 
 <p>그러나 우선 순위를 명시적으로 나타내기 위해 괄호를 사용하면 가능하다:</p>
 
-<pre class="brush: js notranslate">(null || undefined ) ?? "foo"; // returns "foo"
+<pre class="brush: js ">(null || undefined ) ?? "foo"; // returns "foo"
 </pre>
 
 <h3 id="Optional_chaining_연산자.와의_관계">Optional chaining 연산자(<code>?.</code>)와의 관계</h3>
 
 <p>널 병합 연산자는 명확한 값으로 <code>undefined</code>과 <code>null</code>을 처리하고, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining">optional chaining 연산자 (<code>?.</code>)</a>는 <code>null</code> or <code>undefined</code>일 수 있는 객체의 속성에 접근할 때 유용하다.</p>
 
-<pre class="brush: js notranslate">let foo = { someFooProp: "hi" };
+<pre class="brush: js ">let foo = { someFooProp: "hi" };
 
 console.log(foo.someFooProp?.toUpperCase());  // "HI"
 console.log(foo.someBarProp?.toUpperCase()); // undefined
@@ -103,7 +100,7 @@ console.log(foo.someBarProp?.toUpperCase()); // undefined
 
 <p>이 예제는 기본 값을 제공하지만 <code>null</code> or <code>undefined</code> 이외의 값을 를 유지한다. </p>
 
-<pre class="brush: js notranslate">function getMiscObj(){
+<pre class="brush: js ">function getMiscObj(){
   return {
     aNullProperty: null,
     emptyText: "", // this is not falsy

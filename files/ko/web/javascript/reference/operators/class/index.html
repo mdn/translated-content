@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Operators/class
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate">var MyClass = class <em>[className]</em> [extends] {
+<pre class="syntaxbox ">var MyClass = class <em>[className]</em> [extends] {
   // class body
 };</pre>
 
@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Operators/class
 
 <p>class 식은 <a href="/ko/docs/Web/JavaScript/Reference/Statements/class">class 문</a>과 구문이 비슷합니다. 그러나, class 식의 경우 클래스명("binding identifier")을 생략할 수 있는데 class 문으로는 할 수 없습니다.</p>
 
-<p>class 문과 같이, class 식의 본체는 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode" title="strict mode">엄격 모드</a>에서 실행됩니다.</p>
+<p>class 문과 같이, class 식의 본체는 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a>에서 실행됩니다.</p>
 
 
 
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Operators/class
 
 <p>이게 바로 변수 "Foo"를 사용하여 참조할 수 있는 간단한 익명 class 식입니다.</p>
 
-<pre class="brush: js notranslate">var Foo = class {
+<pre class="brush: js ">var Foo = class {
   constructor() {}
   bar() {
     return "Hello World!";
@@ -53,7 +53,7 @@ Foo.name; // ""
 
 <p>당신이 클래스 몸통 내에서 현재 클래스를 참조하고 싶다면, 유명 class 식을 만들 수 있습니다. 이 이름은 오직 class 식 자체 범위에서만 볼 수 있습니다.</p>
 
-<pre class="brush: js notranslate">var Foo = class NamedFoo {
+<pre class="brush: js ">var Foo = class NamedFoo {
   constructor() {}
   whoIsThere() {
     return NamedFoo.name;

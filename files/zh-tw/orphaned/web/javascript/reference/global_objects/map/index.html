@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>Map</code></strong> 是保存了鍵值對（key-value pairs）的物件。</span>任何值（包括物件及{{Glossary("Primitive", "基本型別（primitive）值")}}）都可以作為鍵或值。</p>
+<p><span><strong><code>Map</code></strong> 是保存了鍵值對（key-value pairs）的物件。</span>任何值（包括物件及{{Glossary("Primitive", "基本型別（primitive）值")}}）都可以作為鍵或值。</p>
 
 <h2 id="語法">語法</h2>
 
@@ -31,7 +31,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map
 
 <h3 id="鍵的相等性">鍵的相等性</h3>
 
-<p>鍵相等是基於 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">SameValueZero</a> 的演算法：<code>NaN</code> 被認為與 <code>NaN</code> 相同（即使 <code>NaN !== NaN</code>）並且根據 <code>===</code> 運算符的語義，所有其他值都被認為相等。在目前的ECMAScript 規範中，<code>-0</code> 和 <code>+0</code> 被認為是相等的，儘管在早期的草案中並非如此。詳細的內容請參閱 {{anch("Browser compatibility")}} 表中的 "Value equality for -0 and 0"。</p>
+<p>鍵相等是基於 <a href="/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">SameValueZero</a> 的演算法：<code>NaN</code> 被認為與 <code>NaN</code> 相同（即使 <code>NaN !== NaN</code>）並且根據 <code>===</code> 運算符的語義，所有其他值都被認為相等。在目前的ECMAScript 規範中，<code>-0</code> 和 <code>+0</code> 被認為是相等的，儘管在早期的草案中並非如此。詳細的內容請參閱 <a href="#瀏覽器相容性">瀏覽器相容性</a> 表中的 "Value equality for -0 and 0"。</p>
 
 <h3 id="Object_及_Map_的比較">Object 及 Map 的比較</h3>
 
@@ -250,8 +250,6 @@ console.log(merged.get(3)); // three</code>
 </table>
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
-
-
 
 <p>{{Compat("javascript.builtins.Map")}}</p>
 

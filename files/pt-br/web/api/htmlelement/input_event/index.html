@@ -9,18 +9,18 @@ original_slug: Web/Events/input
 <h2 id="Informações_gerais">Informações gerais</h2>
 
 <dl>
- <dt>Specification</dt>
+ <dt>Especificação</dt>
  <dd><a class="external" href="https://html.spec.whatwg.org/multipage/forms.html#event-input-input">HTML5</a>, <a href="https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3-Events.html#event-type-input">DOM Level 3 Events</a></dd>
  <dt>Interface</dt>
  <dd>{{domxref("Event")}}, {{domxref("InputEvent")}}</dd>
- <dt>Bubbles</dt>
- <dd>Yes</dd>
- <dt>Cancelable</dt>
- <dd>No</dd>
- <dt>Target</dt>
- <dd>Element</dd>
- <dt>Default Action</dt>
- <dd>The value or the content is modified.</dd>
+ <dt>Borbulha</dt>
+ <dd>Sim</dd>
+ <dt>Cancelável</dt>
+ <dd>Não</dd>
+ <dt>Alvo</dt>
+ <dd>Elemento</dd>
+ <dt>Ação padrão</dt>
+ <dd>O valor ou o conteúdo é modificado.</dd>
 </dl>
 
 <h2 id="Propriedades">Propriedades</h2>
@@ -28,36 +28,36 @@ original_slug: Web/Events/input
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
+   <th scope="col">Propriedade</th>
+   <th scope="col">Tipo</th>
+   <th scope="col">Descrição</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
    <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
+   <td>O alvo do evento (o alvo mais alto na árvore DOM).</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
+   <td>Tipo do evento.</td>
   </tr>
   <tr>
    <td><code>bubbles</code> {{readonlyInline}}</td>
    <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
+   <td>Se o evento borbulha ou não.</td>
   </tr>
   <tr>
    <td><code>cancelable</code> {{readonlyInline}}</td>
    <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
+   <td>Se o evento é cancelável, ou não.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_dos_navegadores">Compatibilidade dos navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{CompatibilityTable}}</p>
 
@@ -65,7 +65,7 @@ original_slug: Web/Events/input
 <table class="compat-table">
  <tbody>
   <tr>
-   <th>Feature</th>
+   <th>Funcionalidade</th>
    <th>Chrome</th>
    <th>Edge</th>
    <th>Firefox (Gecko)</th>
@@ -74,7 +74,7 @@ original_slug: Web/Events/input
    <th>Safari</th>
   </tr>
   <tr>
-   <td>Basic support</td>
+   <td>Suporte básico</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
@@ -83,7 +83,7 @@ original_slug: Web/Events/input
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td>immediately after <code>compositionupdate</code></td>
+   <td>imediatamente ao <code>compositionupdate</code></td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatGeckoDesktop("12")}}</td>
@@ -92,7 +92,7 @@ original_slug: Web/Events/input
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td>on <code>contenteditable</code> element</td>
+   <td>ao <code>contenteditable</code> do elemento</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatGeckoDesktop("14")}}</td>
@@ -103,7 +103,7 @@ original_slug: Web/Events/input
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td>when <code>designMode</code> is "on"</td>
+   <td>quando <code>designMode</code> está "ativado"</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatUnknown}}</td>
    <td>{{CompatGeckoDesktop("14")}}</td>
@@ -146,7 +146,7 @@ original_slug: Web/Events/input
 <table class="compat-table">
  <tbody>
   <tr>
-   <th>Feature</th>
+   <th>Funcionalidade</th>
    <th>Android</th>
    <th>Chrome for Android</th>
    <th>Edge</th>
@@ -156,7 +156,7 @@ original_slug: Web/Events/input
    <th>Safari Mobile</th>
   </tr>
   <tr>
-   <td>Basic support</td>
+   <td>Suporte básico</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -166,7 +166,7 @@ original_slug: Web/Events/input
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td>immediately after <code>compositionupdate</code></td>
+   <td>imediatamente ao <code>compositionupdate</code></td>
    <td>{{CompatUnknown}}</td>
    <td>{{CompatUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -176,7 +176,7 @@ original_slug: Web/Events/input
    <td>{{CompatUnknown}}</td>
   </tr>
   <tr>
-   <td>on <code>contenteditable</code> element</td>
+   <td>ao <code>contenteditable</code> do elemento</td>
    <td>{{CompatUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatUnknown}}</td>
@@ -186,7 +186,7 @@ original_slug: Web/Events/input
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td>when <code>designMode</code> is "on"</td>
+   <td>quando <code>designMode</code> está "ativado"</td>
    <td>{{CompatUnknown}}</td>
    <td>{{CompatUnknown}}</td>
    <td>{{CompatUnknown}}</td>
@@ -229,13 +229,13 @@ original_slug: Web/Events/input
 </table>
 </div>
 
-<p>[1] Prior to Gecko 12.0 {{geckoRelease("12.0")}}, Gecko didn't fire input events while composition was ongoing using IMEs or when dead keys were used on Mac OS X.</p>
+<p>[1] Antes do Gecko 12.0 {{geckoRelease("12.0")}}, Gecko não disparava eventos input embora a composição tenha continuado usando IMEs ou quando pressionado as "teclas mortas" do Mac OS X.</p>
 
-<p>[2] IE 9 does not fire an input event when the user deletes characters from an input (e.g. by pressing Backspace or Delete, or using the "Cut" operation).</p>
+<p>[2] IE 9 não dispara evento de input quando caracteres são deletados (ex.: pressionando Backspace ou Delete, ou utilizando a operação de cortar).</p>
 
-<p>[3] Prior to Opera 15, Opera did not fire an input event after dropping text in an input field.</p>
+<p>[3] Antes do Opera 15, Opera não disparava evento de input ao colar texto no input.</p>
 
-<p>[4] The event target is the innermost element at the caret position.</p>
+<p>[4] O alvo do evento é o elemento mais interno na posição do cursor.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
@@ -246,4 +246,4 @@ original_slug: Web/Events/input
  <li>{{event("input")}}</li>
 </ul>
 
-<p>Also the <code><a href="/en-US/docs/Web/Reference/Events/change">change</a></code> event is related. <code>change</code> fires less often than <code>input</code> – it only fires when the changes are committed by the user.</p>
+<p>O evento de <code><a href="/en-US/docs/Web/Reference/Events/change">change</a></code> é relacionado. <code>change</code> dispara com menos frequência que o <code>input</code> – ele só irá disparar quando as mudanças forem finalizadas pelo usuário.</p>

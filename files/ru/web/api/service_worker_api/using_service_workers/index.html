@@ -66,7 +66,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <h4 id="sync">sync</h4>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   const value = myFunction();
   console.log(value);
 } catch(err) {
@@ -75,7 +75,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <h4 id="async">async</h4>
 
-<pre class="brush: js notranslate">myFunction().then((value) =&gt; {
+<pre class="brush: js">myFunction().then((value) =&gt; {
   console.log(value);
 }).catch((err) =&gt; {
   console.log(err);
@@ -89,7 +89,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <p>{{note("Реальные реализации сервис-воркеров скорее всего будут использовать <code>onfetch</code>, а не устаревающий XMLHttpRequest API. Эти возможности не используются здесь, так что можете сосредоточиться на изучении промисов.")}}</p>
 
-<pre class="brush: js notranslate">const imgLoad = (url) =&gt; {
+<pre class="brush: js">const imgLoad = (url) =&gt; {
   return new Promise((resolve, reject) =&gt; {
     var request = new XMLHttpRequest();
     request.open('GET', url);
@@ -115,7 +115,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <p>Вызывая функцию <code>imgLoad()</code>, мы ожидаемо передаём в качестве параметра url изображения, которое хотим загрузить, но далее код немного отличается:</p>
 
-<pre class="brush: js notranslate">let body = document.querySelector('body');
+<pre class="brush: js">let body = document.querySelector('body');
 let myImage = new Image();
 
 imgLoad('myLittleVader.jpg').then((response) =&gt; {
@@ -161,7 +161,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>Ниже представлен первый блок кода файла app.js. Это точка входа в Service Worker.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw-test/sw.js', {scope: './sw-test/'})
   .then((reg) =&gt; {
     // регистрация сработала
@@ -219,12 +219,12 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 <p>Событие install возникает после того как установка успешно завершится. Это событие используется главным образом для того, чтобы заполнить кеш браузера ресурсами, необходимыми для успешного запуска в офлайн-режиме. Для этого используется новый API хранилища Service Worker — {{domxref("cache")}} — глобальный для всех сервис-воркеров, который позволяет нам хранить результаты запросов, используя в качестве ключа для их получения сами запросы. Этот API работает аналогично стандартному кешу браузера, но только для вашего домена. Данные в кеше сохраняются до тех пор, пока вы сами не решите их удалить — вы имеете полный контроль.</p>
 
 <div class="note">
-<p><strong>На заметку</strong>: Cache API поддерживается не всеми браузерами (смотрите раздел {{anch("Browser support")}} чтобы получить больше информации). Если вы хотите сейчас использовать эту технологию, то можете рассмотреть возможность использования полифила, который доступен в <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google's Topeka demo</a>, или можете хранить ресурсы в <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
+<p><strong>На заметку</strong>: Cache API поддерживается не всеми браузерами (смотрите раздел <a href="#browser_support">Browser support</a> чтобы получить больше информации). Если вы хотите сейчас использовать эту технологию, то можете рассмотреть возможность использования полифила, который доступен в <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google's Topeka demo</a>, или можете хранить ресурсы в <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
 </div>
 
 <p>Давайте начнём этот раздел посмотрев на фрагмент кода ниже — это <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L17">первый блок кода, который вы увидите в нашем сервис-воркере</a>:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (event) =&gt; {
   event.waitUntil(
     caches.open('v1').then((cache) =&gt; {
       return cache.addAll([
@@ -247,7 +247,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
  <li>Здесь мы добавляем обработчик события <code>install</code> к сервис-воркеру (отныне <code>self</code>), и затем вызываем метод {{domxref("ExtendableEvent.waitUntil()") }} объекта события. Такая конструкция гарантирует, что сервис-воркер не будет установлен, пока код, переданный внутри <code>waitUntil()</code>, не завершится с успехом.</li>
  <li><span style="line-height: 1.5;">Внутри <code>waitUntil()</code> мы используем метод </span><a href="/en-US/docs/Web/API/CacheStorage/open">caches.open()</a>, чтобы создать новый кеш, который назовём <code>v1</code>, это будет первая версия кеша ресурсов. Этот метод возвращает промис для созданного кеша; когда он выполнится, у объекта созданного кеша мы вызовем метод <code>addAll()</code>, который в качестве параметра ожидает получить массив origin-относительных URL всех ресурсов, которые мы хотим хранить в кеше.</li>
  <li>Если промис будет отклонён, то установка будет завершена неудачно, и воркер ничего не сделает. Это хорошо, потому как вы можете исправить свой код и затем попробовать провести регистрацию в следующий раз.</li>
- <li>После успешной установки сервис-воркер активируется. Этот момент не очень важен при первоначальной установке/активации сервис-воркера, в то же время он имеет большое значение, когда происходит обновление воркера (смотрите раздел {{anch("Обновление вашего сервис-воркера")}}, находящийся ниже).</li>
+ <li>После успешной установки сервис-воркер активируется. Этот момент не очень важен при первоначальной установке/активации сервис-воркера, в то же время он имеет большое значение, когда происходит обновление воркера (смотрите раздел <a href="#обновление_вашего_сервис-воркера">Обновление вашего сервис-воркера</a>, находящийся ниже).</li>
 </ol>
 
 <div class="note">
@@ -268,7 +268,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>Вы можете подключить к сервис-воркеру обработчик события <code>fetch</code> и внутри него на объекте события вызвать метод <code>respondWith()</code>, чтобы заменить ответы и показать собственную "магию".</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     // магия происходит здесь
   );
@@ -277,7 +277,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p>Для начала, на каждый сетевой запрос мы можем отдать в ответ ресурс, чей url соответствует запросу:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     caches.match(event.request)
   );
@@ -291,29 +291,29 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
  <li>
   <p>Конструктор <code>{{domxref("Response.Response","Response()")}}</code> позволяет вам создавать собственные ответы. В данном случае, мы всего лишь возвращаем простую текстовую строку:</p>
 
-  <pre class="brush: js notranslate">new Response('Hello from your friendly neighbourhood service worker!');
+  <pre class="brush: js">new Response('Hello from your friendly neighbourhood service worker!');
 </pre>
 
   <p>В этом более сложном объекте Response показано, как вы можете передать набор заголовков в свой ответ, эмулируя стандартный HTTP-ответ. Здесь мы просто сообщаем браузеру, чем является содержимое ответа:</p>
 
-  <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
+  <pre class="brush: js">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
   headers: { 'Content-Type': 'text/html' }
 });</pre>
  </li>
  <li>
   <p>Если совпадение не было найдено в кеше, вы можете попросить браузер {{domxref("GlobalFetch.fetch","загрузить")}} тот же ресурс, чтобы получить новый файл через обычную сеть, если она доступна:</p>
 
-  <pre class="brush: js notranslate">fetch(event.request);</pre>
+  <pre class="brush: js">fetch(event.request);</pre>
  </li>
  <li>
   <p>Если информация, соответствующая запросу, в кеше не найдена, а также сеть не доступна, то вы можете просто ответить на запрос какой-либо страницей по умолчанию, которая хранится в кеше, используя {{domxref("CacheStorage.match","match()")}}:</p>
 
-  <pre class="brush: js notranslate">caches.match('./fallback.html');</pre>
+  <pre class="brush: js">caches.match('./fallback.html');</pre>
  </li>
  <li>
   <p>Вы можете получить больше информации о каждом запросе, используя для этого свойства объекта {{domxref("Request")}}, который можно получить как свойство объекта {{domxref("FetchEvent")}}:</p>
 
-  <pre class="brush: js notranslate">event.request.url
+  <pre class="brush: js">event.request.url
 event.request.method
 event.request.headers
 event.request.body</pre>
@@ -326,7 +326,7 @@ event.request.body</pre>
 
 <p>К счастью, сервис-воркеры имеют структуру основанную на промисах, что делает тривиальной такую обработку и предоставляет большое количество способов успешно обработать запрос:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     caches.match(event.request).then((response) =&gt; {
       return response || fetch(event.request);
@@ -338,7 +338,7 @@ event.request.body</pre>
 
 <p>Если же мы были достаточно умны, то мы не стали бы просто возвращать сетевой запрос, а сохранили бы его результат в кеше, чтобы иметь возможность получить его в офлайн-режиме. В случае с нашим демо-приложением "Star Wars gallery", это означает, что, если в галерею будет добавлено ещё одно изображение, то оно будет получено и сохранено в кеше:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     caches.match(event.request).then((resp) =&gt; {
       return resp || fetch(event.request).then((response) =&gt; {
@@ -357,7 +357,7 @@ event.request.body</pre>
 
 <p>У нас все ещё остаётся единственная проблема - если на какой-либо запрос в кеше не будет найдено соответствие, и в этот момент сеть не доступна, то наш запрос завершится неудачно. Давайте реализуем запасной вариант по умолчанию, при котором пользователь, в описанном случае, будет получать хоть что-нибудь:</p>
 
-<pre class="brush: js notranslate">self.addEventListener('fetch', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('fetch', (event) =&gt; {
   event.respondWith(
     caches.match(event.request).then((resp) =&gt; {
       return resp || fetch(event.request).then((response) =&gt; {
@@ -376,13 +376,13 @@ event.request.body</pre>
 
 <p>Здесь мы решили обрабатывать только картинки, потому что единственные запросы, которые могут не удастся — это загрузка новых картинок, так как все остальное было закешировано во время обработки события <code>install</code>, которое мы обсуждали ранее.</p>
 
-<h2 id="Обновление_вашего_сервис-воркера"><a id="Updating your service worker" name="Updating your service worker">Обновление вашего сервис-воркера</a></h2>
+<h2 id="Обновление_вашего_сервис-воркера"><a id="Updating your service worker">Обновление вашего сервис-воркера</a></h2>
 
 <p>Если после того, как ваш сервис-воркер был установлен, стала доступна его новая версия, при обновлении или загрузке страницы она будет установлена в фоновом режиме, но не будет активирована. Она будет активирована, лишь когда не останется ни одной страницы, использующей старую версию сервис-воркера.</p>
 
 <p>Вы можете обновить обработчик события install в новой версии сервис-воркера, чтобы получить примерно такое (обратите внимание на номер новой версии):</p>
 
-<pre class="brush: js notranslate">self.addEventListener('install', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('install', (event) =&gt; {
   event.waitUntil(
     caches.open('v2').then((cache) =&gt; {
       return cache.addAll([
@@ -410,7 +410,7 @@ event.request.body</pre>
 
 <p>Promise, переданный в <code>waitUntil()</code>, заблокирует другие события до своего завершения, поэтому можно быть уверенным, что процесс очистки закончится раньше, чем выполнится первое событие <code>fetch</code> на основе нового кеша.</p>
 
-<pre class="brush: js notranslate">self.addEventListener('activate', (event) =&gt; {
+<pre class="brush: js">self.addEventListener('activate', (event) =&gt; {
   var cacheKeeplist = ['v2'];
 
   event.waitUntil(
@@ -439,23 +439,6 @@ event.request.body</pre>
 <div class="blockIndicator note">
 <p><strong>На заметку</strong>: вы можете держать своё приложение на <code>http://localhost</code> (например, используя <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) для локальной разработки. См. <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
 </div>
-
-<h2 id="Спецификации">Спецификации</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

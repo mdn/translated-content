@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>A função <code>Symbol()</code> retorna um valor do tipo <strong>símbolo (symbol)</strong>, tem propriedades estáticas que expõem vários membros dos objetos nativos, possuem métodos estáticos que expõem o registro de símbolos globais e se parecem com uma classe de objeto nativo, mas estão incompletos como construtor porque não suportam a sintaxe "<code>new Symbol()</code>" .</p>
+<p>A função <code>Symbol()</code> retorna um valor do tipo <strong>símbolo (symbol)</strong>, tem propriedades estáticas que expõem vários membros dos objetos nativos, possuem métodos estáticos que expõem o registro de símbolos globais e se parecem com uma classe de objeto nativo, mas estão incompletos como construtor porque não suportam a sintaxe "<code>new Symbol()</code>".</p>
 
 <p>Cada valor símbolo retornado de <code>Symbol()</code> é único. Um símbolo pode ser usado como o identificador para propriedades de objetos; esse é o único propósito do tipo de dado. Algumas explicações sobre propósito e uso podem ser encontradas {{Glossary("Symbol", "no verbete do glossário para Symbol")}}.</p>
 
@@ -17,34 +17,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 
 <pre class="syntaxbox notranslate"><code>Symbol(<em>[descrição]</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Parametros</h3>
+<h3 id="Parameters" name="Parameters">Parâmetros</h3>
 
 <dl>
  <dt><code>descrição</code> {{optional_inline}}</dt>
- <dd>String opcional. Uma descrição de símbolo no qual pode ser usado para debugar mas não para acessar o próprio símbolo.</dd>
+ <dd>String opcional. Uma descrição de símbolo no qual pode ser usado para debugar, mas não para acessar o próprio símbolo.</dd>
 </dl>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
-<p>Para criar um novo simbolo primitivo, simplesmente escreva <code>Symbol()</code> com uma string opçional para sua descrição:</p>
+<p>Para criar um novo símbolo primitivo, simplesmente escreva <code>Symbol()</code> com uma string opcional para sua descrição:</p>
 
 <pre class="brush: js notranslate">var sym1 = Symbol();
 var sym2 = Symbol("foo");
 var sym3 = Symbol("foo");
 </pre>
 
-<p>O codigo acima cria três simbolos novos. Note que a função <strong><em>Symbol("foo")</em></strong> não faz a string <strong><em>"foo"</em></strong> ser um símbolo. Ela cria um novo simbolo a cada vez que é chamada:</p>
+<p>O código acima cria três símbolos novos. Note que a função <strong><em>Symbol("foo")</em></strong> não faz a string <strong><em>"foo"</em></strong> ser um símbolo. Ela cria um novo símbolo a cada vez que é chamada:</p>
 
 <pre class="brush: js notranslate">Symbol("foo") === Symbol("foo"); // false</pre>
 
-<p>A sintaxe a seguir com o operador {{jsxref("Operators/new", "new")}} vai resultar em um  {{jsxref("TypeError")}}:</p>
+<p>A sintaxe a seguir com o operador {{jsxref("Operators/new", "new")}} vai resultar em um {{jsxref("TypeError")}}:</p>
 
 <pre class="brush: js notranslate">var sym = new Symbol(); // TypeError
 </pre>
 
-<p>Isso evita que os autores criem um objeto empacotador explícito de <code>Symbol</code> em vez de um novo valor de símbolo. O que pode surpreender, pois geralmente é possível criar objetos empacotadores explícitos em torno de tipos de dados primitivos (por exemplo, <code>new Boolean</code>, <code>new String</code> e <code>new Number</code>).</p>
+<p>Isso evita que os autores criem um objeto empacotador explícito de <code>Symbol</code> em vez de um novo valor de símbolo. O que pode surpreender, pois, geralmente é possível criar objetos empacotadores explícitos em torno de tipos de dados primitivos (por exemplo, <code>new Boolean</code>, <code>new String</code> e <code>new Number</code>).</p>
 
-<p>Se você realmente quiser criar um objeto empacotador de <code>Symbol</code> , você pode usar a função <code>Object()</code>:</p>
+<p>Se você realmente quiser criar um objeto empacotador de <code>Symbol</code>, você pode usar a função <code>Object()</code>:</p>
 
 <pre class="brush: js notranslate">var sym = Symbol("foo");
 typeof sym;     // "symbol"
@@ -75,7 +75,7 @@ typeof symObj;  // "object"
 
 <dl>
  <dt>Symbol.hasInstance</dt>
- <dd>Especificado como @@hasInstance. Um método que determina se um construtor de um objeto é reconhecido como a instancia de um objeto. Usado por {{jsxref("Operators/instanceof", "instanceof")}}.</dd>
+ <dd>Especificado como @@hasInstance. Um método que determina se um construtor de um objeto é reconhecido como a instância de um objeto. Usado por {{jsxref("Operators/instanceof", "instanceof")}}.</dd>
  <dt>Symbol.isConcatSpreadable</dt>
  <dd>Especificado como @@isConcatSpreadable. Um valor Booleano indicando se um objeto deve ser adicionado como elemento de uma array. Usado por {{jsxref("Array.prototype.concat()")}}.</dd>
  <dt>Symbol.isRegExp</dt>
@@ -83,18 +83,18 @@ typeof symObj;  // "object"
  <dt>Symbol.iterator</dt>
  <dd>Especificado como @@iterator. Um método retornando o iterador padrão para um objeto. Usado por <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>.</dd>
  <dt>Symbol.toPrimitive</dt>
- <dd>Especificado como @@toPrimitive. Um método convertendo um objeto para um valor primitivo .</dd>
+ <dd>Especificado como @@toPrimitive. Um método convertendo um objeto para um valor primitivo.</dd>
  <dt>Symbol.toStringTag</dt>
  <dd>Especificado como @@toStringTag. Um valor string usado para descrição padrão de um objeto. Usado por {{jsxref("Object.prototype.toString()")}}</dd>
  <dt>Symbol.unscopables</dt>
- <dd>Especificado como @@unscopables. Uma Array com valores string que são  valores propriedade. Esses são excluídos das ligações com o objeto associado.</dd>
+ <dd>Especificado como @@unscopables. Uma Array com valores string que são valores propriedade. Esses são excluídos das ligações com o objeto associado.</dd>
 </dl>
 
 <h2 id="Methods" name="Methods">Métodos</h2>
 
 <dl>
  <dt>{{jsxref("Symbol.for()", "Symbol.for(key)")}}</dt>
- <dd>Procura por símbolos existentes com as chaves dada e retorna as chaves se for encontradas. Caso contrário um novo símbolo vai ser criado no registro de símbolo global com essa chave.</dd>
+ <dd>Procura por símbolos existentes com as chaves dada e retorna as chaves se forem encontradas. Caso contrário um novo símbolo será criado no registro de símbolo global com essa chave.</dd>
  <dt>{{jsxref("Symbol.keyFor", "Symbol.keyFor(sym)")}}</dt>
  <dd>Retorna um símbolo compartilhado do registro global de símbolo para o símbolo dado.</dd>
 </dl>
@@ -113,30 +113,30 @@ typeof symObj;  // "object"
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false" name="Creating_Boolean_objects_with_an_initial_value_of_false">Usando o <code>typeof</code> operador com símbolos</h3>
+<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false" name="Creating_Boolean_objects_with_an_initial_value_of_false">Usando o operador <code>typeof</code> com símbolos</h3>
 
-<p>O {{jsxref("Operators/typeof", "typeof")}} operador pode ajudar a identificar os símbolos.</p>
+<p>O operador {{jsxref("Operators/typeof", "typeof")}} pode ajudar a identificar os símbolos.</p>
 
 <pre class="brush: js notranslate">typeof Symbol() === 'symbol'
 typeof Symbol('foo') === 'symbol'
 typeof Symbol.iterator === 'symbol'
 </pre>
 
-<h3 id="Conversões_de_tipos_de_símbolo">Conversões de tipos de símbolo</h3>
+<h3 id="Conversões_de_tipos_de_símbolo">Conversões de tipos de símbolos</h3>
 
 <p>Algumas anotações quando trabalhando com conversão de tipo de símbolos.</p>
 
 <ul>
- <li>Quando estiver tentando converter um símbolo para um número, um {{jsxref("TypeError")}} vai ser retornado.<br>
+ <li>Quando estiver tentando converter um símbolo para um número, um {{jsxref("TypeError")}} será retornado.<br>
   (e.g. <code>+sym</code> or <code>sym | 0</code>).</li>
- <li>Quando usando operador de igualdade , <code>Object(sym) == sym</code> retorna <code>true.</code></li>
- <li><code>Symbol("foo") + "bar" </code>lança um {{jsxref("TypeError")}} (não pode converter um símbolo para string). Isso previne você de silenciamente criar um novo nome de propriedade string a partir de um símbolo, por exemplo.</li>
- <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(sym)</code> conversion</a> funciona como uma chamada para {{jsxref("Symbol.prototype.toString()")}} com símbolos, mas note que uma <code>new String(sym)</code> vai ser lançada.</li>
+ <li>Quando usando operador de igualdade, <code>Object(sym) == sym</code> retorna <code>true</code>.</li>
+ <li><code>Symbol("foo") + "bar" </code>lança um {{jsxref("TypeError")}} (não pode converter um símbolo para string). Isso previne você de silenciosamente criar um novo nome de propriedade string a partir de um símbolo, por exemplo.</li>
+ <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(sym)</code> conversion</a> funciona como uma chamada para {{jsxref("Symbol.prototype.toString()")}} com símbolos, mas note que uma <code>new String(sym)</code> será lançada.</li>
 </ul>
 
 <h3 id="Símbolos_e_for...in_iteração">Símbolos e <code>for...in</code> iteração</h3>
 
-<p>Símbolos não são visíveis em <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> iterações. Além de , {{jsxref("Object.getOwnPropertyNames()")}} não retornará o objeto símbolo propriedade, entretante, você pode fazer uso do {{jsxref("Object.getOwnPropertySymbols()")}} para conseguir esses resultados.</p>
+<p>Símbolos não são visíveis em <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> iterações. Além de, {{jsxref("Object.getOwnPropertyNames()")}} não retornará propriedades do objeto símbolo, entretanto, você pode fazer uso do {{jsxref("Object.getOwnPropertySymbols()")}} para conseguir esses resultados.</p>
 
 <pre class="brush: js notranslate">var obj = {};
 
@@ -160,7 +160,7 @@ for (var i in obj) {
 
 <h3 id="Objeto_wrapper_de_símbolo_como_chave_de_propriedade">Objeto wrapper de símbolo como chave de propriedade</h3>
 
-<p>Quando um objeto wrapper de um símbolo é usado como uma chave de propriedade , esse objeto vai ser coerced para o seu símbolo wrapper:</p>
+<p>Quando um objeto wrapper de um símbolo é usado como uma chave de propriedade, esse objeto será coerced para o seu símbolo wrapper:</p>
 
 <pre class="brush: js notranslate">var sym = Symbol("foo");
 var obj = {[sym]: 1};
@@ -185,7 +185,7 @@ obj[Object(sym)];    // still 1
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_do_navegador">Compatibilidade do navegador</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{ CompatibilityTable() }}</p>
 

@@ -18,15 +18,15 @@ translation_of: Web/HTML/Element/thead
  <tbody>
   <tr>
    <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容类别</a></th>
-   <td>无.</td>
+   <td>无。</td>
   </tr>
   <tr>
    <th scope="row">允许内容</th>
-   <td>零或多个{{ HTMLElement("tr") }}元素.</td>
+   <td>零或多个{{ HTMLElement("tr") }}元素。</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>开头的标签是强制的. 如果{{ HTMLElement("thead") }} 元素后直接跟 {{ HTMLElement("tbody") }}或{{ HTMLElement("tfoot") }}元素，结尾的标签可以被省略。</td>
+   <td>开头的标签是强制的。如果{{ HTMLElement("thead") }} 元素后直接跟 {{ HTMLElement("tbody") }}或{{ HTMLElement("tfoot") }}元素，结尾的标签可以被省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/thead
 <p>This element includes the <a href="/en-US/docs/Web/HTML/Global_attributes">global attributes</a>.</p>
 
 <dl>
- <dt>{{ htmlattrdef("align") }} {{ Deprecated_inline() }} in {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} in {{ HTMLVersionInline("5") }}</dt>
+ <dt>{{ htmlattrdef("align") }} {{Deprecated_Inline}}</dt>
  <dd>This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
  <ul>
   <li><code>left</code>, aligning the content to the left of the cell</li>
@@ -58,7 +58,7 @@ translation_of: Web/HTML/Element/thead
   <li><code>char</code>, aligning the textual content on a special character with a minimal offset, defined by the {{ htmlattrxref("char", "thead") }} and {{ htmlattrxref("charoff", "thead") }} attributes {{ unimplemented_inline("2212") }}.</li>
  </ul>
 
- <p>If this attribute is not set,  the <code>left</code> value is assumed.</p>
+ <p>If this attribute is not set,  the <code>left</code> value is assumed.</p>
 
  <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (not supported) in the latest standard.
 
@@ -72,7 +72,7 @@ translation_of: Web/HTML/Element/thead
 
 <dl>
  <dt>{{ htmlattrdef("bgcolor") }} {{ Non-standard_inline() }}</dt>
- <dd>This attribute defines the background color of each cell of the column. It is one of the 6-digit hexadecimal code as defined in <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>, prefixed by a '#'. One of the sixteen predefined color strings may be used:
+ <dd>This attribute defines the background color of each cell of the column. It is one of the 6-digit hexadecimal code as defined in <a href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>, prefixed by a '#'. One of the sixteen predefined color strings may be used:
  <table style="width: 80%;">
   <tbody>
    <tr>
@@ -126,35 +126,35 @@ translation_of: Web/HTML/Element/thead
   </tbody>
  </table>
 
- <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{ HTMLElement("thead") }} element should be styled using <a href="/en-US/docs/CSS">CSS</a>. To give a similar effect to the <strong>bgcolor</strong> attribute, use the <a href="/en-US/docs/CSS">CSS</a> property {{ cssxref("background-color") }}, on the relevant {{ HTMLElement("td") }} or {{ HTMLElement("th") }} elements.</div>
+ <div class="note"><strong>Usage note: </strong>Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{ HTMLElement("thead") }} element should be styled using <a href="/en-US/docs/CSS">CSS</a>. To give a similar effect to the <strong>bgcolor</strong> attribute, use the <a href="/en-US/docs/CSS">CSS</a> property {{ cssxref("background-color") }}, on the relevant {{ HTMLElement("td") }} or {{ HTMLElement("th") }} elements.</div>
  </dd>
 </dl>
 
 <dl>
- <dt>{{ htmlattrdef("char") }} {{ Deprecated_inline() }} in {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} in {{ HTMLVersionInline("5") }}</dt>
+ <dt>{{ htmlattrdef("char") }} {{Deprecated_Inline}}</dt>
  <dd>This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{ htmlattrxref("align", "tr") }} is not set to <code>char</code>, this attribute is ignored.
  <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{ htmlattrxref("char", "thead") }}, in CSS3, you can use the character set using the {{ htmlattrxref("char", "thead") }} attribute as the value of the {{ cssxref("text-align") }} property {{ unimplemented_inline() }}.</div>
  </dd>
 </dl>
 
 <dl>
- <dt>{{ htmlattrdef("charoff") }} {{ Deprecated_inline() }} in {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} in {{ HTMLVersionInline("5") }}</dt>
+ <dt>{{ htmlattrdef("charoff") }} {{Deprecated_Inline}}</dt>
  <dd>This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the <strong>char</strong> attribute.
  <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard.</div>
  </dd>
 </dl>
 
 <dl>
- <dt>{{ htmlattrdef("valign") }} {{ Deprecated_inline() }} in {{ HTMLVersionInline("4") }}, {{ obsolete_inline() }} in {{ HTMLVersionInline("5") }}</dt>
+ <dt>{{ htmlattrdef("valign") }} {{Deprecated_Inline}}</dt>
  <dd>This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
  <ul>
-  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a class="external" href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
+  <li><code>baseline</code>, which will put the text as close to the bottom of the cell as it is possible, but align it on the <a href="https://en.wikipedia.org/wiki/Baseline_%28typography%29">baseline</a> of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as <code>bottom</code>.</li>
   <li><code>bottom</code>, which will put the text as close to the bottom of the cell as it is possible;</li>
   <li><code>middle</code>, which will center the text in the cell;</li>
   <li><code>top</code>, which will put the text as close to the top of the cell as it is possible.</li>
  </ul>
 
- <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{ cssxref("vertical-align") }} property on it.</div>
+ <div class="note"><strong>Note: </strong>Do not use this attribute as it is obsolete (and not supported) in the latest standard: instead set the CSS {{ cssxref("vertical-align") }} property on it.</div>
  </dd>
 </dl>
 
@@ -164,32 +164,14 @@ translation_of: Web/HTML/Element/thead
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG','tables.html#the-thead-element','thead element')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C','tabular-data.html#the-thead-element','thead element')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <div>
 
 
-<p>{{Compat("html.elements.thead")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 
@@ -197,7 +179,7 @@ translation_of: Web/HTML/Element/thead
 <h2 id="参见">参见</h2>
 
 <ul>
- <li>Other table-related HTML Elements: {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("tfoot") }}, {{ HTMLElement("th") }}, {{ HTMLElement("tr") }};</li>
+ <li>Other table-related HTML Elements: {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("tfoot") }}, {{ HTMLElement("th") }}, {{ HTMLElement("tr") }};</li>
  <li>CSS properties and pseudo-classes that may be specially useful to style the <code>&lt;thead&gt;</code> element:
   <ul>
    <li>the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;</li>

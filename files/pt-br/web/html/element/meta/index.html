@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/meta
 <table class="properties">
  <tbody>
   <tr>
-   <th><a href="/en-US/docs/Web/HTML/Content_categories">C</a>ategoria de conteúdo</th>
+   <th><a href="/en-US/docs/Web/HTML/Content_categories">Categoria</a> de conteúdo</th>
    <td>Conteúdo de metadado. Se o {{htmlattrxref("itemprop", "meta")}} atributo estiver presente: <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
@@ -38,7 +38,7 @@ translation_of: Web/HTML/Element/meta
 
 <h2 id="Atributos">Atributos</h2>
 
-<p>Esse elemento inclui os <a href="/en-US/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
+<p>Esse elemento inclui os <a href="/pt-BR/docs/Web/HTML/Global_attributes">atributos globais</a>.</p>
 
 <div class="note">
 <p><strong>Nota:</strong> o atributo global {{htmlattrxref("name", "meta")}} tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo {{htmlattrxref("itemprop", "meta")}} não deve ser definido no mesmo elemento<code>&lt;meta&gt;</code> que tem algum desses atributos existentes: {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.</p>
@@ -51,9 +51,9 @@ translation_of: Web/HTML/Element/meta
  <ul>
   <li>Autores são encorajados a usar UTF-8.</li>
   <li>Autores não devem usar codificações incompatíveis com ASCII (<br>
-   isto é, aqueles que não mapeiam os pontos de código de 8 bits 0x20 a 0x7E para os pontos de código Unicode 0x0020 a 0x007E), pois representam um risco de segurança: navegadores que não os suportam podem interpretar conteúdo benigno como Elementos HTML. Esse é o caso de pelo menos os seguintes caracteres: JIS_C6226-1983, JIS_X0212-1990, HZ-GB-2312, JOHAB, a família ISO-2022 e a família EBCDIC.</li>
+   isto é, aqueles que não mapeiam os pontos de código de 8 bits 0x20 a 0x7E para os pontos de código Unicode 0x0020 a 0x007E), pois representam um risco de segurança: navegadores que não os suportam podem interpretar conteúdo maligno como Elementos HTML. Esse é o caso de pelo menos os seguintes caracteres: JIS_C6226-1983, JIS_X0212-1990, HZ-GB-2312, JOHAB, a família ISO-2022 e a família EBCDIC.</li>
   <li>Autores não devem usar CESU-8, UTF-7, BOCU-1 e SCSU, also falling in that category and not intended to be used on the web. Cross-scripting attacks with some of these encodings have been documented.</li>
-  <li>Autores não devem usar UTF-32 pois nem todos algorítimos de codificção HTML5 conseguem distingui-lo do UTF-16.</li>
+  <li>Autores não devem usar UTF-32 pois nem todos algorítimos de codificação HTML5 conseguem distingui-lo do UTF-16.</li>
  </ul>
 
  <div class="note"><strong>Notas:</strong>
@@ -63,63 +63,63 @@ translation_of: Web/HTML/Element/meta
   <li>Esse elemento {{HTMLElement ("meta")}} deve estar dentro do elemento {{HTMLElement ("head")}} e dentro dos primeiros 1024 bytes da página, pois alguns navegadores só olham para esses primeiros bytes antes de escolher um caractere definido para a página.</li>
   <li>Esse elemento {{HTMLElement ("meta")}} é apenas uma parte do algoritmo para determinar o conjunto de caracteres de uma página que os navegadores aplicam. O cabeçalho HTTP Content-Type e quaisquer elementos da BOM têm precedência sobre esse elemento.</li>
   <li>É uma boa prática, e altamente recomendável, definir o conjunto de caracteres usando este atributo. Se nenhum conjunto de caracteres estiver definido para uma página, várias técnicas de scripts cruzados poderão prejudicar o usuário da página, como a técnica de cross-scripting de fallback UTF-7. Sempre definindo esta meta irá proteger contra esses riscos.</li>
-  <li>Esse elemento {{HTMLElement("meta")}} é um sinonimo para o pre-HTML5 <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=<em>IANAcharset</em>"&gt; </code>onde o atributo  <em><code>IANAcharset</code> </em>corresponde ao valor equivalente de {{htmlattrxref("charset", "meta")}}. Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.</li>
+  <li>Esse elemento {{HTMLElement("meta")}} é um sinônimo para o pre-HTML5 <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=<em>IANAcharset</em>"&gt; </code>onde o atributo  <em><code>IANAcharset</code> </em>corresponde ao valor equivalente de {{htmlattrxref("charset", "meta")}}. Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.</li>
  </ul>
  </div>
  </dd>
  <dt>{{htmlattrdef("content")}}</dt>
  <dd>Esse atributo fornece o valor associado ao atributo {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("name", "meta")}}, dependendo do contexto.</dd>
  <dt>{{htmlattrdef("http-equiv")}}</dt>
- <dd>Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usnado {{htmlattrxref("content", "meta")}} e pode ser um dos seguintes:
+ <dd>Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando {{htmlattrxref("content", "meta")}} e pode ser um dos seguintes:
  <dl>
   <dt><code>"content-language"</code> {{obsolete_inline}}</dt>
-  <dd>este pragma define a linguagem defaul da pagina
-  <div class="note">não use este pragma, ele esta absoleto. use o global atributo <code>lang</code> no {{HTMLElement("html")}} inves deste.</div>
+  <dd>este pragma define a linguagem default da página
+  <div class="note">não use este pragma, ele esta obsoleto. use o atributo global <code>lang</code> no {{HTMLElement("html")}} ao invés deste.</div>
   </dd>
   <dt><code>"Content-Security-Policy"</code></dt>
-  <dd>Este valor permite os administradores do web site a definir o <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">c</a>onteudo politico para servido recursos. com algumas exeçoes, politicas involvem especificos origins de servers e escripts endpoints. isso ajuda na defesa de cross-server scripting attacks.</dd>
+  <dd>Este valor permite os administradores do web site definam uma <a href="/en-US/docs/Web/Security/CSP/CSP_policy_directives">política de conteúdo</a> para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.</dd>
   <dt><code>"content-type"</code> {{obsolete_inline}}</dt>
-  <dd>Esse atributo define o <a href="/en-US/docs/MIME">MIME type</a> do documento, eventualmente seguido por estes caracteres. isso segue a mesma syntax como o HTTP <code>content-type</code> entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possivel. sendo assim a syntax valida para este conteudo é a literal string '<code>text/html</code>' eventualmente seguido por estes caracteres com a seguinte syntax:'<code>; charset=</code><em><code>IANAcharset</code></em>' onde <code>IANAcharset</code> é o<em> MIME preferido nome para um conjunto de caracteres como </em> <a class="external" href="https://www.iana.org/assignments/character-sets">definido pela IANA.</a>
+  <dd>Esse atributo define o <a href="/en-US/docs/MIME">MIME type</a> e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP <code>content-type</code> entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '<code>text/html</code>' eventualmente seguido por estes caracteres com a seguinte sintaxe: '<code>; charset=</code><em><code>IANAcharset</code></em>' onde <code>IANAcharset</code> é o<em> MIME preferido nome para um conjunto de caracteres como </em> <a class="external" href="https://www.iana.org/assignments/character-sets">definido pela IANA.</a>
   <div class="note"><strong>nota de uso:</strong>
   <ul>
-   <li>Nao use esta pragma ela esta absoleta. use {{htmlattrxref("charset", "meta")}} atributo {{HTMLElement("meta")}} element instead.</li>
+   <li>Nao use esta pragma ela esta obsoleta. use {{htmlattrxref("charset", "meta")}} atributo {{HTMLElement("meta")}} element instead.</li>
    <li>como o {{HTMLElement("meta")}} pode nao ser usado para mudar o tipo de documento no XHTML, ou em um documento de HTML5 seguindo uma syntax de XHTML, nunca marque MIME type para um XHTML MIME type desta forma. isso sera incoerente.</li>
-   <li>somente um documento HTML pode usar o content-type, entao a maioria disto é redundante: isso porque esta absoleto e trocado pelo atributo {{htmlattrxref("charset", "meta")}}.</li>
+   <li>somente um documento HTML pode usar o content-type, então a maioria disto é redundante: isso porque esta obsoleto e trocado pelo atributo {{htmlattrxref("charset", "meta")}}.</li>
   </ul>
   </div>
   </dd>
   <dt><code>"default-style"</code></dt>
-  <dd>Este pragma preferencia de stylesheet a ser usado na pagina. o atributo {{htmlattrxref("content", "meta")}}  deve conter o <strong>title</strong> de um {{HTMLElement("link")}} elemento de quem {{htmlattrxref("href", "link")}} atributo link um CSS stylesheet, ou um <strong>title</strong> de um elemento {{HTMLElement("style")}} do qual contem um <a href="/en-US/docs/Web/CSS">CSS</a> stylesheet.</dd>
+  <dd>Este pragma preferencia de stylesheet a ser usado na página. o atributo {{htmlattrxref("content", "meta")}}  deve conter o <strong>title</strong> de um {{HTMLElement("link")}} elemento de quem {{htmlattrxref("href", "link")}} atributo link um CSS stylesheet, ou um <strong>title</strong> de um elemento {{HTMLElement("style")}} do qual contem um <a href="/en-US/docs/Web/CSS">CSS</a> stylesheet.</dd>
   <dt><code>"refresh"</code></dt>
   <dd>este pragma especifica:
   <ul>
-   <li>o numero de segundos ate a pagina ser re carregada, se o atributo {{htmlattrxref("content", "meta")}} contem apenas um numero inteiro positivo;</li>
-   <li>o numero de segundos ate a pagina ser redirecionada para outro lugar, se o atributo {{htmlattrxref("content", "meta")}} contem um inteiro positivo seguido de uma string '<code>;url=</code>' e uma URL valida.</li>
+   <li>o numero de segundos até a página ser recarregada, se o atributo {{htmlattrxref("content", "meta")}} contém apenas um número inteiro positivo;</li>
+   <li>o número de segundos até a página ser redirecionada para outro lugar, se o atributo {{htmlattrxref("content", "meta")}} contém um inteiro positivo seguido de uma string '<code>;url=</code>' e uma URL válida.</li>
   </ul>
   </dd>
   <dt><code>"set-cookie"</code> {{obsolete_inline}}</dt>
-  <dd>este pragma define um <a href="/en-US/docs/cookie">cookie</a> para a pagina. este conteudo deve seguir a syntax definida em <a class="external" href="https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14">IETF HTTP Cookie Specification</a>.
-  <div class="note"><strong>Note:</strong> não use este pragma esta absoleto. Use HTTP header set-cookie instead.</div>
+  <dd>este pragma define um <a href="/en-US/docs/cookie">cookie</a> para a página. este conteúdo deve seguir a sintaxe definida em <a class="external" href="https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14">IETF HTTP Cookie Specification</a>.
+  <div class="note"><strong>Nota:</strong> não use este pragma está obsoleto. Use HTTP header set-cookie instead.</div>
   </dd>
  </dl>
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>Este atributo define o nome do document-level metadata. isso nao deve ser marcado se um dos atributos {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}} ja estao preparados.<br>
- este document-level metadata name é asociado a um valor, contido pelo atributo {{htmlattrxref("content", "meta")}}. os possiveis valores para o elemento name sao, com seu valor asociado, guardado via {{htmlattrxref("content", "meta")}} attribute:
+ <dd>Este atributo define o nome do document-level metadata. Isso não deve ser marcado se um dos atributos {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}} já estiver preparado.<br>
+ este document-level metadata name é associado a um valor, contido pelo atributo {{htmlattrxref("content", "meta")}}. os possíveis valores para o elemento name são, com seu valor associado, guardado via {{htmlattrxref("content", "meta")}} attribute:
  <ul>
-  <li><code>application-name</code>, define o nome da aplicação que esta rodando na pagina;
-   <div class="note"><strong>Note:</strong>
+  <li><code>application-name</code>, define o nome da aplicação que esta rodando na página;
+   <div class="note"><strong>Nota:</strong>
    <ul>
-    <li>Browsers podem usar isso para indentificar a aplicaçao. isso é diferente do elemento {{HTMLElement("title")}}, que geralemnte constitui no nome da aplicaçao, mas tambem contem  informaçoes especificas como o nome do documento ou status;</li>
-    <li>Simple webpages nao deveriam definir application-name meta.</li>
+    <li>Browsers podem usar isso para identificar a aplicação. isso é diferente do elemento {{HTMLElement("title")}}, que geralmente constituí no nome da aplicação, mas também contém  informações específicas como o nome do documento ou status;</li>
+    <li>Webpages simples não deveriam definir application-name meta.</li>
    </ul>
    </div>
   </li>
   <li><code>author</code>, definindo, em formato livre, o nome do author do documento;</li>
-  <li><code>description</code>, contem uma curta e precisa descriçao do conteudo da pagina. varios browsers, como o Firefox e o Opera, usam este meta como descriçao padrao da pagina quando é marcada.</li>
-  <li><code>generator</code>, contendo, em um formato livre, o indentificador do software que gerou a pagina;</li>
-  <li><code>keywords</code>, contendo, como strings separadas por virgula, palavras relevantes asociadas ao conteudo da pagina;</li>
-  <li><code>referrer</code> {{experimental_inline}} controlando o conteudo de um HTTP <code>Referer</code> HTTP header anexado a qualquer pedido enviado deste documento:
+  <li><code>description</code>, contém uma curta e precisa descrição do conteúdo da página. vários browsers, como o Firefox e o Opera, usam este meta como descrição padrão da página quando é marcada.</li>
+  <li><code>generator</code>, contendo, em um formato livre, o identificador do software que gerou a página;</li>
+  <li><code>keywords</code>, contendo, como strings separadas por vírgula, palavras relevantes associadas ao conteúdo da página;</li>
+  <li><code>referrer</code> {{experimental_inline}} controlando o conteúdo de um HTTP <code>Referer</code> HTTP header anexado a qualquer pedido enviado deste documento:
    <table class="standard-table">
     <caption>valores para content attribute de &lt;meta name="referrer"&gt;</caption>
     <tbody>
@@ -153,22 +153,22 @@ translation_of: Web/HTML/Element/meta
    </table>
 
    <div class="note">
-   <p><strong>Note: </strong>algun browsers suportam keywords <code>always</code>, <code>default</code>, e <code>never</code> para referenciar. estes valores estao descontinuados.  </p>
+   <p><strong>Nota: </strong>alguns browsers suportam keywords <code>always</code>, <code>default</code>, e <code>never</code> para referenciar. estes valores estão descontinuados.  </p>
    </div>
 
    <div class="note">
-   <div class="notes"><strong>Note:</strong> dinamicamente inseridos <code>&lt;meta name="referrer"&gt;</code> (por document.write ou appendChild) cria um nao-determinismo qunado isso vem para enviar referencias ou nao. note tambem qunado muitas politicas conflitantes sao definidas, o No-referrer politia é aplicada.</div>
+   <div class="notes"><strong>Nota:</strong> dinamicamente inseridos <code>&lt;meta name="referrer"&gt;</code> (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.</div>
    </div>
   </li>
  </ul>
 
- <p>o atributo tambem pode ter um valor retirado de uma extensa lista definida em <a class="external" href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a>. Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados ​​estão entre as propostas:</p>
+ <p>o atributo também pode ter um valor retirado de uma extensa lista definida em <a class="external" href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a>. Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados ​​estão entre as propostas:</p>
 
  <ul>
-  <li><code>creator</code>, definindo, em um formato livre, o nome do criador do documento. note que tambem pode ser o nome de uma instituiçao. se ha mais de uma, muitas elemntos {{HTMLElement("meta")}} podem ser usados;</li>
-  <li><code>googlebot</code>, é um sinonimo de <code>robots</code>, mas so é seguido por  Googlebot, o indexador crawler do Google;</li>
-  <li><code>publisher</code>, definido, en um formato livre, o nome do editor do documento. note tambem pode ser o nome de uma instituição;</li>
-  <li><code>robots</code>, definindo o comportamento que crawlers devem ter com a pagina. é separado por virgula a lista de valores seguintes:
+  <li><code>creator</code>, definindo, em um formato livre, o nome do criador do documento. Note que também pode ser o nome de uma instituição. se há mais de uma, vários elementos {{HTMLElement("meta")}} podem ser usados;</li>
+  <li><code>googlebot</code>, é um sinônimo de <code>robots</code>, mas só é seguido por  Googlebot, o indexador crawler do Google;</li>
+  <li><code>publisher</code>, definido, em um formato livre, o nome do editor do documento. Note que também pode ser o nome de uma instituição;</li>
+  <li><code>robots</code>, definindo o comportamento que crawlers devem ter com a página. É separado por vírgula a lista de valores seguintes:
    <table class="standard-table">
     <caption>Valores para content de &lt;meta name="robots"&gt;</caption>
     <thead>
@@ -181,34 +181,34 @@ translation_of: Web/HTML/Element/meta
     <tbody>
      <tr>
       <td><code>index</code></td>
-      <td>permite o robo indexar uma pagina</td>
+      <td>permite o robô indexar uma página</td>
       <td>All</td>
      </tr>
      <tr>
       <td><code>noindex</code></td>
-      <td>previne o robo de indexar uma pagina</td>
+      <td>previne o robô de indexar uma página</td>
       <td>All</td>
      </tr>
      <tr>
       <td><code>follow</code></td>
-      <td>permite o robo a seguir os links da pagina</td>
+      <td>permite o robô a seguir os links da página</td>
       <td>All</td>
      </tr>
      <tr>
       <td><code>nofollow</code></td>
-      <td>previne o robo a seguir os links da pagina</td>
+      <td>previne o robô a seguir os links da página</td>
       <td>All</td>
      </tr>
      <tr>
       <td><code>noodp</code></td>
-      <td>previne o uso de descriçao <a class="external" href="https://www.dmoz.org/">Open Directory Project</a>, caso existam, como descriçao da pagina o resultado na ferramenta de busca.</td>
+      <td>previne o uso de descrição <a class="external" href="https://www.dmoz.org/">Open Directory Project</a>, caso existam, como descrição da página o resultado na ferramenta de busca.</td>
       <td>
        <p><a class="external" href="https://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=79812">Google</a>, <a class="external" href="https://help.yahoo.com/l/us/yahoo/search/indexing/indexing-11.html;_ylt=Arh3LHnisvRMPJKzQqmJ97JYqCN4">Yahoo</a>, <a class="external" href="https://www.bing.com/toolbox/blogs/webmaster/archive/2008/06/03/robots-exclusion-protocol-joining-together-to-provide-better-documentation.aspx">Bing</a></p>
       </td>
      </tr>
      <tr>
       <td><code>noarchive</code></td>
-      <td>previne a ferramenta de busca pecar o conteudo da pagina</td>
+      <td>previne a ferramenta de busca pecar o conteúdo da página</td>
       <td><a class="external" href="https://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=79812">Google</a>, <a class="external" href="https://help.yahoo.com/l/us/yahoo/search/indexing/basics-10.html;_ylt=Aszma_Ly8TfhL7mn_LGWn5RYqCN4">Yahoo</a></td>
      </tr>
      <tr>
@@ -222,12 +222,12 @@ translation_of: Web/HTML/Element/meta
      </tr>
      <tr>
       <td><code>noimageindex</code></td>
-      <td>previne esta pagina de aparecer como referencia de alguma imagem indexada</td>
+      <td>previne esta página de aparecer como referencia de alguma imagem indexada</td>
       <td><a class="external" href="https://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=79812">Google</a></td>
      </tr>
      <tr>
       <td><code>nocache</code></td>
-      <td>sinonimo de <code>noarchive</code></td>
+      <td>sinônimo de <code>noarchive</code></td>
       <td><a class="external" href="https://www.bing.com/toolbox/blogs/webmaster/archive/2008/06/03/robots-exclusion-protocol-joining-together-to-provide-better-documentation.aspx">Bing</a></td>
      </tr>
     </tbody>
@@ -261,7 +261,7 @@ translation_of: Web/HTML/Element/meta
    </ul>
    </div>
   </li>
-  <li><code>slurp</code>, qual é um sinonimo de <code>robots</code>, mas somente seguido por Slurp, o indexador crawler para Yahoo Search;</li>
+  <li><code>slurp</code>, qual é um sinônimo de <code>robots</code>, mas somente seguido por Slurp, o indexador crawler para Yahoo Search;</li>
  </ul>
 
  <p> </p>
@@ -303,17 +303,17 @@ translation_of: Web/HTML/Element/meta
      <tr>
       <td><code>maximum-scale</code></td>
       <td>um numero positivo entre   <code>0.0</code> e <code>10.0</code></td>
-      <td>define o valor maximo de  zoom; deve ser maior ou igual ao <code>minimum-scale</code> ou o comportamento sera indeterminado.</td>
+      <td>define o valor máximo de  zoom; deve ser maior ou igual ao <code>minimum-scale</code> ou o comportamento sera indeterminado.</td>
      </tr>
      <tr>
       <td><code>minimum-scale</code></td>
       <td>um numero positivo entre   <code>0.0</code> e <code>10.0</code></td>
-      <td>define o valor minimo do zoom; deve ser menor ou igual ao <code>maximum-scale</code> ou o comportamento sera indeterminado</td>
+      <td>define o valor mínimo do zoom; deve ser menor ou igual ao <code>maximum-scale</code> ou o comportamento sera indeterminado</td>
      </tr>
      <tr>
       <td><code>user-scalable</code></td>
-      <td>um valor booleano (<code>yes</code> or <code>no</code>)</td>
-      <td>se setado <code>no</code>, o usuario nao podera usar zoom na pagina. o valor padrao é <code>yes</code>.</td>
+      <td>um valor booleano (<code>yes</code> ou <code>no</code>)</td>
+      <td>se setado <code>no</code>, o usuário não poderá usar zoom na página. o valor padrão é <code>yes</code>.</td>
      </tr>
     </tbody>
    </table>
@@ -360,7 +360,7 @@ translation_of: Web/HTML/Element/meta
  <dd>
  <p dir="ltr" id="tw-target-text">Este atributo define o esquema no qual os metadados são descritos<span style="font-size: 1rem; letter-spacing: -0.00278rem;">. </span>Um esquema é um contexto que leva às interpretações corretas dos <span style="font-size: 1rem; letter-spacing: -0.00278rem;">{{htmlattrxref("content", "meta")}} valores, como um formato.</span></p>
 
- <div class="note"><strong>Notes:</strong> Não use este atributo pois esta absoleto.
+ <div class="note"><strong>Notes:</strong> Não use este atributo pois esta obsoleto.
 
  <p dir="ltr" id="tw-target-text">Não há substituto para isso, pois não houve uso real para isso. Omitir completamente<span style="font-size: 1rem; letter-spacing: -0.00278rem;">.</span></p>
  </div>
@@ -369,11 +369,11 @@ translation_of: Web/HTML/Element/meta
 
 <h2 id="Notes">Notes</h2>
 
-<p>Dependendo do conjunto escolhido, o tipo de matadata pode ser uma das seguntes:</p>
+<p>Dependendo do conjunto escolhido, o tipo de metadata pode ser uma das seguintes:</p>
 
 <ul>
- <li>se {{htmlattrxref("name", "meta")}} é definido, isto é <em>document-level</em> <em>metadata</em>, aplicando para a pagina inteira.</li>
- <li>se {{htmlattrxref("http-equiv", "meta")}} é definido, isto é um <em>pragma diretiva</em>, i.e. normalmente informação dada pelo web server sobre como a pagina web deve ser entregue.</li>
+ <li>se {{htmlattrxref("name", "meta")}} é definido, isto é <em>document-level</em> <em>metadata</em>, aplicando para a página inteira.</li>
+ <li>se {{htmlattrxref("http-equiv", "meta")}} é definido, isto é um <em>pragma diretiva</em>, i.e. normalmente informação dada pelo web server sobre como a página web deve ser entregue.</li>
  <li>se {{htmlattrxref("charset", "meta")}} é definido, isto é uma declaração de <em>charset</em>, i.e. o charset usado para o formulário serializado da página da Web
   <p> </p>
  </li>
@@ -385,7 +385,7 @@ translation_of: Web/HTML/Element/meta
 <pre class="brush: html">&lt;!-- In HTML5 --&gt;
 &lt;meta charset="utf-8"&gt;
 
-&lt;!-- redireciona a pagina depois de 3 seconds --&gt;
+&lt;!-- redireciona a página depois de 3 segundos --&gt;
 &lt;meta http-equiv="refresh" content="3;url=https://www.mozilla.org"&gt;
 
 </pre>
@@ -424,7 +424,7 @@ translation_of: Web/HTML/Element/meta
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_Browser">Compatibilidade de Browser</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{CompatibilityTable}}</p>
 

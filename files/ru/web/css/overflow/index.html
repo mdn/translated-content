@@ -5,7 +5,7 @@ translation_of: Web/CSS/overflow
 ---
 <div>{{ CSSRef() }}</div>
 
-<h2 id="Summary" name="Summary">Резюме</h2>
+<h2 id="Summary">Резюме</h2>
 
 <p>Свойство CSS <code>overflow</code> определяет, необходимо ли для переполненного блочного элемента содержимое обрезать, предоставить полосы прокрутки или просто отобразить.</p>
 
@@ -25,7 +25,7 @@ overflow: auto
 overflow: inherit
 </pre>
 
-<h3 id="Values" name="Values">Значения</h3>
+<h3 id="Values">Значения</h3>
 
 <dl>
  <dt><code>visible</code></dt>
@@ -33,12 +33,12 @@ overflow: inherit
  <dt><code>hidden</code></dt>
  <dd>Контент обрезается, без предоставления прокрутки.</dd>
  <dt><code>scroll</code></dt>
- <dd>Содержимое обрезается и браузер использует элементы прокрутки, не важно было ли обрезано содержимое или нет. Это избегает многих проблем касательно появления прокруток и их исчезновения в динамичной среде. Принтеры могу печатать переполненное содержимое.</dd>
+ <dd>Содержимое обрезается и браузер использует элементы прокрутки, не важно было ли обрезано содержимое или нет. Это избегает многих проблем касательно появления прокруток и их исчезновения в динамичной среде. Принтеры могут печатать переполненное содержимое.</dd>
  <dt><code>auto</code></dt>
  <dd>Зависит от агента пользователя. Браузеры такие как Firefox предоставляют прокрутку, если содержимое переполняет блок.</dd>
 </dl>
 
-<h4 id="Mozilla_Extensions" name="Mozilla_Extensions">Расширения Mozilla</h4>
+<h4 id="Mozilla_Extensions">Расширения Mozilla</h4>
 
 <dl>
  <dt><code>-moz-scrollbars-none </code>{{ obsolete_inline() }}</dt>
@@ -51,7 +51,7 @@ overflow: inherit
  <dd>Главным образом предназначен для внутреннего использования и для тем. Отключает прокрутку XML root элементов и <code>&lt;html&gt;</code>, <code> &lt;body&gt;</code> клавишами со стрелками и колесом мыши.</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: css">p {
      width: 12em;
@@ -82,7 +82,7 @@ overflow: inherit
 <p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>
  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
 <p> </p>
 
@@ -115,19 +115,19 @@ overflow: inherit
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость браузера</h2>
+<h2 id="Browser_compatibility">Совместимость браузера</h2>
 
-<p>{{Compat("css.properties.overflow")}} </p>
+<p>{{Compat}} </p>
 
-<h3 id="Firefox_(Gecko)_Notes" name="Firefox_(Gecko)_Notes">Firefox (Gecko) Примечания</h3>
+<h3 id="Firefox_(Gecko)_Notes">Firefox (Gecko) Примечания</h3>
 
 <p>Из-за Firefox 3.6 (Gecko 1.9.2), <code>свойство overflow неверно применяется к элементам</code> table-group (<code>&lt;thead&gt;</code> , <code>&lt;tbody&gt;</code> , <code>&lt;tfoot&gt;</code>). Это поведение будет исправлено в следующих версиях.</p>
 
-<h3 id="Internet_Explorer_Notes" name="Internet_Explorer_Notes">Internet Explorer Примечания</h3>
+<h3 id="Internet_Explorer_Notes">Internet Explorer Примечания</h3>
 
 <p>Internet Explorer 4 - 6 <code>увеличивает элемент с overflow:visible </code>(значение по умолчанию), чтобы заполнить содержимое в нём.<code> height/width </code>действуют подобно<code> min-height/min-width</code>.</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Связанные свойства CSS: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}</li>

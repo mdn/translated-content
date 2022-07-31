@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate"><var>str</var>.lastIndexOf(<var>searchValue</var>[, <var>fromIndex</var>])</pre>
+<pre class="syntaxbox "><var>str</var>.lastIndexOf(<var>searchValue</var>[, <var>fromIndex</var>])</pre>
 
 <h3 id="매개변수">매개변수</h3>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 <p>문자열의 문자는 왼쪽에서 오른쪽으로 인덱스를 매깁니다. 첫 번째 문자의 인덱스는 <code>0</code>이며, 마지막 문자의 인덱스는 <code>str.length -1</code>입니다.</p>
 
-<pre class="brush: js notranslate">'canal'.lastIndexOf('a');     //  3 반환
+<pre class="brush: js ">'canal'.lastIndexOf('a');     //  3 반환
 'canal'.lastIndexOf('a', 2);  //  1 반환
 'canal'.lastIndexOf('a', 0);  // -1 반환
 'canal'.lastIndexOf('x');     // -1 반환
@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 <p><code>lastIndexOf()</code> 메서드는 대소문자를 구분합니다. 예를 들어, 아래 예제는 <code>-1</code>을 반환합니다.</p>
 
-<pre class="brush: js notranslate">'Blue Whale, Killer Whale'.lastIndexOf('blue'); // -1 반환
+<pre class="brush: js ">'Blue Whale, Killer Whale'.lastIndexOf('blue'); // -1 반환
 </pre>
 
 <h2 id="예제">예제</h2>
@@ -65,7 +65,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 <p>아래 예제는 문자열 <code>"Brave new world"</code> 내에서 특정 값의 위치를 확인하기 위해 {{jsxref("String.prototype.indexOf()", "indexOf()")}}와 <code>lastIndexOf()</code>를 사용합니다.</p>
 
-<pre class="brush: js notranslate">let anyString = 'Brave new world';
+<pre class="brush: js ">let anyString = 'Brave new world';
 
 console.log('시작점으로부터 처음 만나는 w의 위치는 ' + anyString.indexOf('w'));
 // logs 8

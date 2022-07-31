@@ -58,7 +58,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Live output&lt;/h2&gt;
 
 &lt;div class="output" style="min-height: 250px;"&gt;
 &lt;/div&gt;
@@ -74,7 +74,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
   &lt;input id="solution" type="button" value="Show solution"&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -94,7 +94,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var output = document.querySelector('.output');
@@ -179,9 +179,9 @@ textarea.onkeyup = function(){
 
 <p>Итак, это было легко и весело, не так ли? Элементы {{htmlelement ("iframe")}} предназначены для размещения других веб-документов в текущем документе. Это отлично подходит для включения стороннего контента на ваш сайт, который, возможно, не имеет прямого контроля и не хочет реализовывать вашу собственную версию - например, видео от поставщиков онлайн-видео, системы комментариев, такие как Disqus, карты от поставщиков онлайн-карт, рекламных баннеров и т. д. Живые редактируемые примеры, которые вы использовали в этом курсе, реализованы с помощью &lt;iframe&gt;.</p>
 
-<p>Есть несколько серьёзных {{anch("Проблемы безопасности", "Проблем безопасности")}} при использовании &lt;iframe&gt;, которые мы обсудим ниже, но это не значит, что вы не должны использовать их на своих сайтах - они просто требуют некоторых знаний и тщательного обдумывания. Давайте рассмотрим код немного подробнее. Скажем, вы хотите добавить глоссарий MDN на одну из своих веб-страниц. Вы можете попробовать что-то вроде этого:</p>
+<p>Есть несколько серьёзных <a href="#проблемы_безопасности">Проблем безопасности</a> при использовании &lt;iframe&gt;, которые мы обсудим ниже, но это не значит, что вы не должны использовать их на своих сайтах - они просто требуют некоторых знаний и тщательного обдумывания. Давайте рассмотрим код немного подробнее. Скажем, вы хотите добавить глоссарий MDN на одну из своих веб-страниц. Вы можете попробовать что-то вроде этого:</p>
 
-<pre class="notranslate">&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+<pre>&lt;iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
         width="100%" height="500" frameborder="0"
         allowfullscreen sandbox&gt;
   &lt;p&gt; &lt;a href="https://developer.mozilla.org/en-US/docs/Glossary"&gt;
@@ -220,7 +220,7 @@ textarea.onkeyup = function(){
 <p>{{interwiki('wikipedia','Clickjacking')}} – это один из видов обычной атаки iframe, когда хакеры внедряют невидимый iframe в ваш документ (или внедряют ваш документ на свой собственный вредоносный веб-сайт) и используют его для захвата взаимодействия пользователей. Это обычный способ ввести пользователей в заблуждение или украсть конфиденциальные данные.</p>
 </div>
 
-<p>Быстрый пример - попробуйте загрузить предыдущий пример, который мы показали выше, в ваш браузер (вы можете найти его живой пример на Github (см. Также исходный код). На самом деле, вы ничего не увидите на странице, т.к. если вы посмотрите в консоль в инструментах разработчика браузера, вы увидите сообщение, объясняющее вам, почему. В Firefox вы получите сообщение <em>«Отказано в доступе» в связи с X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary не разрешает кадрирование</em>. Это связано с тем, что разработчики, которые построили MDN, включили параметр на сервере, который обслуживает страницы веб-сайта, запрещая им внедряться внутри &lt;iframe&gt; (см. {{Anch ("Настройка директивы CSP")}} ниже). Суть здесь такова - целой странице MDN на самом деле нет смысла встраиваться в другие страницы - конечно, если вы не хотите сделать что-то вроде встраивания их на свой сайт и выставлять их как свои собственные; или пытаться украсть данные с помощью clickjacking, что очень плохо. Плюс, если все начнут это делать, вся дополнительная пропускная способность начнёт стоить Mozilla больших денег.</p>
+<p>Быстрый пример - попробуйте загрузить предыдущий пример, который мы показали выше, в ваш браузер (вы можете найти его живой пример на Github (см. Также исходный код). На самом деле, вы ничего не увидите на странице, т.к. если вы посмотрите в консоль в инструментах разработчика браузера, вы увидите сообщение, объясняющее вам, почему. В Firefox вы получите сообщение <em>«Отказано в доступе» в связи с X-Frame-Options: https://developer.mozilla.org/en-US/docs/Glossary не разрешает кадрирование</em>. Это связано с тем, что разработчики, которые построили MDN, включили параметр на сервере, который обслуживает страницы веб-сайта, запрещая им внедряться внутри &lt;iframe&gt; (см. <a href="#настройка_директивы_csp">Настройка директивы CSP</a> ниже). Суть здесь такова - целой странице MDN на самом деле нет смысла встраиваться в другие страницы - конечно, если вы не хотите сделать что-то вроде встраивания их на свой сайт и выставлять их как свои собственные; или пытаться украсть данные с помощью clickjacking, что очень плохо. Плюс, если все начнут это делать, вся дополнительная пропускная способность начнёт стоить Mozilla больших денег.</p>
 
 <h4 id="Используйте_только_при_необходимости">Используйте только при необходимости</h4>
 
@@ -275,7 +275,7 @@ textarea.onkeyup = function(){
 <p><span id="result_box" lang="ru"><span><strong>Примечание</strong>. <strong>Плагин </strong>- это программное обеспечение, обеспечивающее доступ к контенту, который браузер не может читать изначально.</span></span></p>
 </div>
 
-<p>Тем не менее, вы вряд ли будете использовать эти элементы очень часто. Апплеты не использовались годами, Flash в настоящее время не очень популярен из-за ряда причин (см. {{Anch ("Случай с плагинами")}}, ниже), PDF-файлы, как правило, лучше открывать по ссылке, а другой контент - такой, как изображения и видео, могут обрабатываться намного проще. Плагины и эти методы внедрения действительно являются устаревшими технологиями, и мы упоминаем их здесь на случай, если вы столкнётесь с ними в определённых обстоятельствах, таких как интрасети или корпоративные проекты.</p>
+<p>Тем не менее, вы вряд ли будете использовать эти элементы очень часто. Апплеты не использовались годами, Flash в настоящее время не очень популярен из-за ряда причин (см. <a href="#случай_с_плагинами">Случай с плагинами</a>, ниже), PDF-файлы, как правило, лучше открывать по ссылке, а другой контент - такой, как изображения и видео, могут обрабатываться намного проще. Плагины и эти методы внедрения действительно являются устаревшими технологиями, и мы упоминаем их здесь на случай, если вы столкнётесь с ними в определённых обстоятельствах, таких как интрасети или корпоративные проекты.</p>
 
 <p><span id="result_box" lang="ru"><span>Если вам нужно внедрить контент плагина, ниже исчерпывающая информация, которая вам понадобится:</span></span></p>
 
@@ -324,7 +324,7 @@ textarea.onkeyup = function(){
 
 <p>Ниже представлен пример использования элемента {{htmlelement("embed")}} для вставки Flash-фильма (загляните на <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">live on Github</a>, а также на <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html">check the source code</a>):</p>
 
-<pre class="brush: html notranslate">&lt;embed src="whoosh.swf" quality="medium"
+<pre class="brush: html">&lt;embed src="whoosh.swf" quality="medium"
        bgcolor="#ffffff" width="550" height="400"
        name="whoosh" align="middle" allowScriptAccess="sameDomain"
        allowFullScreen="false" type="application/x-shockwave-flash"
@@ -334,7 +334,7 @@ textarea.onkeyup = function(){
 
 <p>Давайте взглянем на пример <code>&lt;object&gt;</code> , встраивающего PDF в страницу (взгляните <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">live example</a> и <a href="https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html">source code</a>):</p>
 
-<pre class="brush: html notranslate">&lt;object data="mypdf.pdf" type="application/pdf"
+<pre class="brush: html">&lt;object data="mypdf.pdf" type="application/pdf"
         width="800" height="1200" typemustmatch&gt;
   &lt;p&gt;You don't have a PDF plugin, but you can &lt;a href="mypdf.pdf"&gt;download the PDF file.&lt;/a&gt;&lt;/p&gt;
 &lt;/object&gt;</pre>

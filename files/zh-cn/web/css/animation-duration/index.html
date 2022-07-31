@@ -15,7 +15,7 @@ translation_of: Web/CSS/animation-duration
 
 <p><code>animation-duration</code>属性指定一个动画周期的时长。</p>
 
-<p>默认值为0s，表示无动画。</p>
+<p>默认值为 0s，表示无动画。</p>
 
 <p>使用简写属性{{cssxref("animation")}}很方便地同时设置所有的动画属性。</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/CSS/animation-duration
 
 <h2 id="语法">语法</h2>
 
-<pre class="twopartsyntaxbox notranslate"><a href="/en-US/docs/CSS/Value_definition_syntax" title="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("animation-duration")}}
+<pre class="twopartsyntaxbox notranslate"><a href="/en-US/docs/CSS/Value_definition_syntax">Formal syntax</a>: {{csssyntax("animation-duration")}}
 </pre>
 
 <pre class="notranslate">animation-duration: 6s
@@ -36,90 +36,28 @@ animation-duration: 10s, 30s, 230ms
 
 <dl>
  <dt><code>&lt;time&gt;</code></dt>
- <dd>一个动画周期的时长，单位为秒(s)或者毫秒(ms)，无单位值无效。</dd>
+ <dd>一个动画周期的时长，单位为秒 (s) 或者毫秒 (ms)，无单位值无效。</dd>
 </dl>
 
-<div class="note"><strong>注意：</strong>负值无效，浏览器会忽略该声明，但是一些早期的带前缀的声明会将负值当作0s。</div>
+<div class="note">
+ <p><strong>备注：</strong>负值无效，浏览器会忽略该声明，但是一些早期的带前缀的声明会将负值当作 0s。</p>
+</div>
 
 <h2 id="示例">示例</h2>
 
-<p>See <a href="/en/CSS/CSS_animations" title="en/CSS/CSS_animations">CSS animations</a> for examples.</p>
+<p>See <a href="/en/CSS/CSS_animations">CSS animations</a> for examples.</p>
 
-<h2 id="Specifications" name="Specifications">标准</h2>
+<h2 id="Specifications">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('CSS3 Animations', '#animation-duration', 'animation-duration') }}</td>
-   <td>{{ Spec2('CSS3 Animations') }}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容</h2>
+<h2 id="Browser_Compatibility">浏览器兼容</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3.0{{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoDesktop("5.0") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoDesktop("16.0") }}</td>
-   <td>10</td>
-   <td>12{{ property_prefix("-o") }}<br>
-    12.10 <a href="http://my.opera.com/ODIN/blog/2012/08/03/a-hot-opera-12-50-summer-time-snapshot" title="http://my.opera.com/ODIN/blog/2012/08/03/a-hot-opera-12-50-summer-time-snapshot">#</a></td>
-   <td>4.0{{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2.0{{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoMobile("5.0") }}{{ property_prefix("-moz") }}<br>
-    {{ CompatGeckoMobile("16.0") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>4.2{{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.animation-duration")}}
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations" title="Tutorial about CSS animations">Using CSS animations</a></li>
+ <li><a href="/en-US/docs/CSS/Tutorials/Using_CSS_animations">Using CSS animations</a></li>
  <li>{{ domxref("AnimationEvent", "AnimationEvent") }}</li>
 </ul>

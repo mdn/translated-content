@@ -39,7 +39,7 @@ translation_of: Web/API/ServiceWorkerRegistration/showNotification
   <li><code>dir</code> : The direction of the notification; it can be <code>auto</code>, <code>ltr</code>, or <code>rtl</code></li>
   <li><code>icon</code>: URL или base64 версия картинки, которая отображается рядом с уведомлением.</li>
   <li><code>image</code>: URL {{domxref("USVSTring")}} картинки, которая отображается внутри уведомления.</li>
-  <li><code>lang</code>: Specify the lang used within the notification. This string must be a valid <a href="http://tools.ietf.org/html/bcp47" title="http://tools.ietf.org/html/bcp47">BCP 47 language tag</a>.</li>
+  <li><code>lang</code>: Specify the lang used within the notification. This string must be a valid <a href="http://tools.ietf.org/html/bcp47">BCP 47 language tag</a>.</li>
   <li><code>renotify</code>: A boolean that indicates whether to supress vibrations and audible alerts when resusing a <code>tag</code> value. The default is false.</li>
   <li><code>requireInteraction</code>: Indicates that on devices with sufficiently large screens, a notification should remain active until the user clicks or dismisses it. If this value is absent or false, the desktop version of Chrome will auto-minimize notifications after approximately twenty seconds. The default value is <code>false</code>.</li>
   <li><code>tag</code>: An ID for a given notification that allows you to find, replace, or remove the notification using script if necessary.</li>
@@ -93,6 +93,6 @@ function showNotification() {
 
 
 
-<p>{{Compat("api.ServiceWorkerRegistration.showNotification")}}</p>
+<p>{{Compat}}</p>
 
 <p>{{Compat("api.ServiceWorkerRegistration.showNotification")}}</p>

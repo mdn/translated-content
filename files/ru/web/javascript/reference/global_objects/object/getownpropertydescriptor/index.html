@@ -10,13 +10,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <code><strong>Object.getOwnPropertyDescriptor()</strong></code> возвращает дескриптор свойства для <dfn>собственного свойства</dfn> (то есть такого, которое находится непосредственно в объекте, а не получено через цепочку прототипов) переданного объекта.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>Object.getOwnPropertyDescriptor(<var>obj</var>, <var>prop</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>obj</code></dt>
  <dd>Объект, в котором ищется свойство.</dd>
@@ -24,10 +24,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
  <dd>Имя свойства, чьё описание будет возвращено.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 <p>Дескриптор переданного свойства, если оно присутствует в объекте, либо {{jsxref("undefined")}}, если его там нет.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Этот метод позволяет просмотреть точное описание свойства. <dfn>Свойство</dfn> в JavaScript состоит из строкового имени и дескриптора свойства. Подробная информация о типах дескрипторов свойств и их атрибутах может быть найдена в описании метода {{jsxref("Object.defineProperty()")}}.</p>
 <p><dfn>Дескриптор свойства</dfn> — это запись с некоторыми из следующих атрибутов:</p>
 <dl>
@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
  <dd>Значение <code>true</code>, если это свойство доступно при перечислении свойств содержащего его объекта, иначе <code>false</code>.</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 <pre class="brush: js">var o, d;
 
 o = { get foo() { return 17; } };
@@ -62,7 +62,7 @@ d = Object.getOwnPropertyDescriptor(o, 'baz');
 // d равен { value: 8675309, writable: false, enumerable: false, configurable: false }
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 <p>В ES5, если первый аргумент метода не является объектом (является примитивным значением), будет выброшено исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}. В ES6 такой аргумент будет сначала приведён к объекту.</p>
 <pre class="brush: js">&gt; Object.getOwnPropertyDescriptor('foo', 0)
 TypeError: "foo" is not an object  // код ES5
@@ -71,7 +71,7 @@ TypeError: "foo" is not an object  // код ES5
 { configurable: false, enumerable: true, value: 'f', writable: false }  // код ES6
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -92,10 +92,10 @@ TypeError: "foo" is not an object  // код ES5
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Object.defineProperty()")}}</li>
 </ul>

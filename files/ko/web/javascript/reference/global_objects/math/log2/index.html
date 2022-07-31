@@ -2,45 +2,108 @@
 title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Math
+  - Method
+  - Reference
+  - Polyfill
+browser-compat: javascript.builtins.Math.log2
 ---
+
 <div>{{JSRef}}</div>
 
-<p> <strong><code>Math.log2()</code></strong> 함수는 숫자를 log<sub>2</sub>(숫자)로 반환합니다.</p>
+<p>
+   <strong><code>Math.log2()</code></strong
+  > 함수는 숫자를 log<sub>2</sub>(숫자)로 반환합니다.
+</p>
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log2</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mn>2</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0, \mathtt{\operatorname{Math.log2}(x)} = \log_2(x) = \text{the unique} \; y \; \text{such that} \; 2^y = x</annotation></semantics></math></p>
+<p>
+  <math display="block"
+    ><semantics
+      ><mrow
+        ><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo
+        ><mstyle mathvariant="monospace"
+          ><mrow
+            ><mo lspace="0em" rspace="thinmathspace">Math.log2</mo
+            ><mo stretchy="false">(</mo><mi>x</mi
+            ><mo stretchy="false">)</mo></mrow
+          ></mstyle
+        ><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub
+        ><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo
+        ><mo>=</mo><mtext>the unique</mtext
+        ><mspace width="thickmathspace"></mspace><mi>y</mi
+        ><mspace width="thickmathspace"></mspace><mtext>such that</mtext
+        ><mspace width="thickmathspace"></mspace
+        ><msup><mn>2</mn><mi>y</mi></msup
+        ><mo>=</mo><mi>x</mi></mrow
+      ><annotation encoding="TeX"
+        >\forall x &gt; 0, \mathtt{\operatorname{Math.log2}(x)} = \log_2(x) =
+        \text{the unique} \; y \; \text{such that} \; 2^y = x</annotation
+      >
+    </semantics></math
+  >
+</p>
+<div>{{EmbedInteractiveExample("pages/js/math-log2.html")}}</div>
 
-<h2 id="문법">문법</h2>
+<h2 id="Syntax">문법</h2>
 
 <pre class="syntaxbox"><code>Math.log2(<var>x</var>)</code></pre>
 
-<h3 id="매개변수">매개변수</h3>
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
- <dt><code>x</code></dt>
- <dd>숫자.</dd>
+  <dt><code>x</code></dt>
+  <dd>숫자.</dd>
 </dl>
 
-<h3 id="반환_값">반환 값</h3>
+<h3 id="Return_value">반환 값</h3>
 
-<p>주어진 숫자는 log<sub>2</sub>(숫자)로 계산합니다. 만약 숫자가 음수라면 {{jsxref("NaN")}}를 반환합니다.</p>
+<p>
+  주어진 숫자를 진수로, 2를 밑으로 하는 로그 계산 결과입니다. 만약 숫자가
+  음수라면 {{jsxref("NaN")}}를 반환합니다.
+</p>
 
-<h2 id="설명">설명</h2>
+<h2 id="Description">설명</h2>
 
-<p>만약 <code>x</code> 의 값이 0보다 작다면(음수) 값은 항상 {{jsxref("NaN")}}로 반환합니다.</p>
+<p>
+  만약 <code>x</code> 의 값이 0보다 작다면(음수) 값은 항상 {{jsxref("NaN")}}로
+  반환합니다.
+</p>
 
-<p><code>log<sub>2</sub>()</code>는 <code>Math</code>의 정적 메서드이므로 만든 <code>Math</code> 객체의 메서드가 아니라 항상 <code>Math.log2()</code>함수를 사용해야합니다. (<code>Math</code>는 생성자가 없습니다.)</p>
+<p>
+  <code>log<sub>2</sub>()</code>는 <code>Math</code>의 정적 메서드이므로
+  만든 <code>Math</code> 객체의 메서드가
+  아니라 항상 <code>Math.log2()</code>함수를
+  사용해야합니다. (<code>Math</code>는 생성자가 없습니다.)
+</p>
 
 <p>이 함수는 Math.log(x) / Math.log(2)와 같습니다.</p>
 
-<p>따라서 log<sub>2</sub>(e)는 {{jsxref("Math.LOG2E")}}와 같습니다. </p>
+<p>따라서 <code>log2(e)</code>는 {{jsxref("Math.LOG2E")}}와 같습니다. </p>
 
 <p>그리고 위 함수는 1 / {{jsxref("Math.LN2")}}과 같습니다.</p>
 
-<h2 id="예제">예제</h2>
+<h2 id="Polyfill">폴리 필</h2>
+<p>
+  폴리 필은 <code>Math.log2</code>함수를 모방합니다. 일부 입력(예: 1 &lt;&lt;
+  29)에 대해 부정확한 값을 반환할 수 있습니다. 만약 비트마스크로 작업할 경우
+  {{jsxref("Math.round()")}} 로 감싸주어야 합니다.
+</p>
+
+<pre class="brush: js">
+if (!Math.log2) Math.log2 = function(x) {
+  return Math.log(x) * Math.LOG2E;
+};
+</pre>
+
+<h2 id="Examples">예제</h2>
 
 <h3 id="Math.log2()"><code>Math.log2()</code></h3>
 
-<pre class="brush: js">Math.log2(3);    // 1.584962500721156
+<pre class="brush: js">
+Math.log2(3);    // 1.584962500721156
 Math.log2(2);    // 1
 Math.log2(1);    // 0
 Math.log2(0);    // -Infinity
@@ -48,47 +111,26 @@ Math.log2(-2);   // NaN
 Math.log2(1024); // 10
 </pre>
 
-<h2 id="Polyfill">Polyfill</h2>
+<h2 id="Specifications">명세</h2>
 
-<p>This Polyfill emulates the <code>Math.log2</code> function. Note that it returns imprecise values on some inputs (like 1 &lt;&lt; 29), wrap into {{jsxref("Math.round()")}} if working with bit masks.</p>
+{{Specifications}}
 
-<pre class="brush: js">Math.log2 = Math.log2 || function(x) {
-  return Math.log(x) * Math.LOG2E;
-};
-</pre>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
-<h2 id="표준">표준</h2>
+<p>{{Compat}}</p>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">표준</th>
-   <th scope="col">상태</th>
-   <th scope="col">비고</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-math.log2', 'Math.log2')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.log2', 'Math.log2')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-<p>{{Compat("javascript.builtins.Math.log2")}}</p>
-
-<h2 id="참조">참조</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
+  <li>
+    <code>Math.log2</code>의 폴리 필은
+    <a href="https://github.com/zloirock/core-js#ecmascript-math"
+      ><code>core-js</code></a
+    >에 존재합니다.
+  </li>
+  <li>{{jsxref("Math.exp()")}}</li>
+  <li>{{jsxref("Math.log()")}}</li>
+  <li>{{jsxref("Math.log10()")}}</li>
+  <li>{{jsxref("Math.log1p()")}}</li>
+  <li>{{jsxref("Math.pow()")}}</li>
 </ul>

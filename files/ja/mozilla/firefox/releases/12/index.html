@@ -16,7 +16,7 @@ translation_of: Mozilla/Firefox/Releases/12
 
 <ul>
  <li><code>title</code> の値に含めた改行文字が反映され、複数行のツールチップを表示できるようになりました。</li>
- <li>JavaScript が無効である場合、<a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html">仕様</a> に従ったフォールバックコンテンツではなく {{ HTMLElement("canvas") }} 要素が表示されていましたが、フォールバックコンテンツが表示されるようになりました。</li>
+ <li>JavaScript が無効である場合、<a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html">仕様</a> に従ったフォールバックコンテンツではなく {{ HTMLElement("canvas") }} 要素が表示されていましたが、フォールバックコンテンツが表示されるようになりました。</li>
 </ul>
 
 <h3 id="CSS">CSS</h3>
@@ -127,15 +127,15 @@ translation_of: Mozilla/Firefox/Releases/12
 <h3 id="インタフェースの変更">インタフェースの変更</h3>
 
 <ul>
- <li><code>nsIScreen_MOZILLA_2_0_BRANCH</code> インタフェースが {{ interface("nsIScreen") }} へ統合されました。このインタフェースで定義されていた API (画面の最低輝度の調節) はこれまで文書化されていませんでしたが、これを機に文書化されました。</li>
- <li>The {{ interface("nsIScriptError2") }} interface has been merged into {{ interface("nsIScriptError") }}.</li>
- <li>{{ ifmethod("nsIDownloadManager", "addDownload") }} is now handled asynchronously rather than synchronously.</li>
- <li>The {{ ifmethod("imgIContainerObserver", "frameChanged") }} method now receives as its first parameter an {{ interface("imgIRequest") }} object identifying the corresponding request.</li>
- <li>The {{ ifmethod("nsIDOMWindowUtils", "sendTouchEvent") }} method has been added to allow synthesizing touch events.</li>
- <li>You can now scroll the specified content to the vertical center of the view by specifying <code>SCROLL_CENTER_VERTICALLY</code> as the scroll constant when calling {{ ifmethod("nsISelectionController", "scrollSelectionIntoView") }}.</li>
- <li>The new {{ ifattribute("nsIMemoryMultiReporter", "explicitNonHeap") }} attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" <strong>and</strong> are of the kind <code>KIND_NONHEAP</code>.</li>
- <li>The {{ ifattribute("nsIDOMWindowUtils", "paintingSuppressed") }} attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.</li>
- <li>The <code>nsIDocCharset</code> and <code>nsIDocumentCharsetInfo</code> interfaces have been merged into {{ interface("nsIDocShell") }}. As part of this work, the old <code>forcedDetector</code> attribute has been removed; it never did anything.</li>
+ <li><code>nsIScreen_MOZILLA_2_0_BRANCH</code> インタフェースが <code>nsIScreen</code> へ統合されました。このインタフェースで定義されていた API (画面の最低輝度の調節) はこれまで文書化されていませんでしたが、これを機に文書化されました。</li>
+ <li>The <code>nsIScriptError2</code> interface has been merged into <code>nsIScriptError</code>.</li>
+ <li><code>nsIDownloadManager.addDownload</code> is now handled asynchronously rather than synchronously.</li>
+ <li>The <code>imgIContainerObserver.frameChanged</code> method now receives as its first parameter an <code>imgIRequest</code> object identifying the corresponding request.</li>
+ <li>The <code>nsIDOMWindowUtils.sendTouchEvent</code> method has been added to allow synthesizing touch events.</li>
+ <li>You can now scroll the specified content to the vertical center of the view by specifying <code>SCROLL_CENTER_VERTICALLY</code> as the scroll constant when calling <code>nsISelectionController.scrollSelectionIntoView</code>.</li>
+ <li>The new <code>nsIMemoryMultiReporter.explicitNonHeap</code> attribute has been added; this is a more efficient way to obtain the sum of all of the multi-reporter's measurements that have a path that starts with "explicit" <strong>and</strong> are of the kind <code>KIND_NONHEAP</code>.</li>
+ <li>The <code>nsIDOMWindowUtils.paintingSuppressed</code> attribute has been added; this boolean value indicates whether or not painting is currently suppressed on the window. This is used on mobile to prevent bouncy rendering that occurs when attempts to draw the page begin before enough content is available to do so smoothly.</li>
+ <li>The <code>nsIDocCharset</code> and <code>nsIDocumentCharsetInfo</code> interfaces have been merged into <code>nsIDocShell</code>. As part of this work, the old <code>forcedDetector</code> attribute has been removed; it never did anything.</li>
 </ul>
 
 <h3 id="SpiderMonkey">SpiderMonkey</h3>

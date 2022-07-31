@@ -21,16 +21,16 @@ translation_of: Mozilla/Firefox/Releases/17
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li><a href="http://dev.w3.org/csswg/css3-conditional/" title="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules 仕様書</a>で定義されている {{ cssxref("@supports") }} @-規則をサポートしました。これは既定で無効にされています。開発者の方は、<code>layout.css.supports-rule.enabled</code> を true に設定することで試すことができます (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740" title="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>)。</li>
- <li>要素の表記方向を基にした要素選択を可能にする、CSS Selectors Level 4 の {{ cssxref(":dir", ":dir()") }} 疑似クラスをサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=562169" title="https://bugzilla.mozilla.org/show_bug.cgi?id=562169">bug 562169</a>)</li>
- <li>CSS の{{ cssxref("unicode-bidi") }} プロパティで新たに規定された値である <code>isolate-override</code> をサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=774335" title="https://bugzilla.mozilla.org/show_bug.cgi?id=774335">bug 774335</a>)</li>
+ <li><a href="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules 仕様書</a>で定義されている {{ cssxref("@supports") }} @-規則をサポートしました。これは既定で無効にされています。開発者の方は、<code>layout.css.supports-rule.enabled</code> を true に設定することで試すことができます (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>)。</li>
+ <li>要素の表記方向を基にした要素選択を可能にする、CSS Selectors Level 4 の {{ cssxref(":dir", ":dir()") }} 疑似クラスをサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=562169">bug 562169</a>)</li>
+ <li>CSS の{{ cssxref("unicode-bidi") }} プロパティで新たに規定された値である <code>isolate-override</code> をサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=774335">bug 774335</a>)</li>
  <li>{{ cssxref("box-sizing") }} の接頭辞付き実装が、{{ cssxref("min-height") }} および {{ cssxref("max-height") }} を考慮するようになりました。接頭辞が不要な実装に近づくステップのひとつです。({{bug("308801")}})</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li><a href="http://dev.w3.org/csswg/css3-conditional/" title="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules 仕様書</a>で定義されている {{ domxref("CSSSupportsRule") }} インタフェースをサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740" title="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>)</li>
+ <li><a href="http://dev.w3.org/csswg/css3-conditional/">CSS3 Conditional Rules 仕様書</a>で定義されている {{ domxref("CSSSupportsRule") }} インタフェースをサポートしました。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649740">bug 649740</a>)</li>
  <li>{{ domxref("WheelEvent") }} オブジェクトおよび  <code>wheel</code> イベントをサポートしました ({{ bug("719320") }})。</li>
  <li>Linux において DOM Meta キーを再びサポートしました ({{bug("751749")}})。</li>
  <li>{{ domxref("HTMLMediaElement") }} で、新たなメソッド <code>mozGetMetadata</code> をサポートしました ({{bug("763010")}})。これは、再生しているメディアのリソースから得たメタデータを {key: value} の組として表すプロパティを持つ、JavaScript オブジェクトを返します。</li>
@@ -40,7 +40,7 @@ translation_of: Mozilla/Firefox/Releases/17
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="/ja/docs/JavaScript/Reference/Global_Objects/String"><code>String</code></a> オブジェクトが Harmony の <code>startsWith</code>、<code>endsWith</code>、および <code>contains</code> メソッドを提供します。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=772733" title="https://bugzilla.mozilla.org/show_bug.cgi?id=772733">bug 772733</a>)</li>
+ <li><a href="/ja/docs/JavaScript/Reference/Global_Objects/String"><code>String</code></a> オブジェクトが Harmony の <code>startsWith</code>、<code>endsWith</code>、および <code>contains</code> メソッドを提供します。(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=772733">bug 772733</a>)</li>
  <li>strawman <a href="/ja/docs/JavaScript/Reference/Global_Objects/ParallelArray" title="/ja/docs/JavaScript/Reference/Global_Objects/ParallelArray"><code>ParallelArray</code></a> オブジェクトが試験的に実装されました。({{ bug("778559") }})</li>
  <li><code><a href="/ja/docs/JavaScript/Reference/Global_Objects/Map" title="/ja/docs/JavaScript/Reference/Global_Objects/Map">Map</a></code>/<code><a href="/ja/docs/JavaScript/Reference/Global_Objects/Set" title="/ja/docs/JavaScript/Reference/Global_Objects/Set">Set</a></code> のイテレートをサポートしました。({{ bug("725909") }})</li>
  <li>Web コンテンツでは、デフォルトで <a href="/ja/docs/E4X" title="/ja/docs/E4X">E4X</a> を無効にしました。({{ bug("778851") }})</li>
@@ -72,15 +72,15 @@ translation_of: Mozilla/Firefox/Releases/17
 <h3 id="Interface_changes" name="Interface_changes">インタフェースの変更点</h3>
 
 <dl>
- <dt>{{ interface("nsIInputStream") }}</dt>
+ <dt><code>nsIInputStream</code></dt>
  <dd><code>available()</code> メソッドは 32 ビット長ではなく 64 ビット長で値を返します。({{bug("215450")}})</dd>
- <dt>{{ interface("nsIDOMWindowUtils") }}</dt>
+ <dt><code>nsIDOMWindowUtils</code></dt>
  <dd><code>sendMouseScrollEvent()</code> メソッドは <code>sendWheelEvent()</code> に置き換えられました。({{bug("719320")}})</dd>
- <dt>{{ interface("nsIFilePicker") }}</dt>
+ <dt><code>nsIFilePicker</code></dt>
  <dd>ファイルダイアログを非同期的に開くための <code>open()</code> メソッドを追加し、また <code>show()</code> メソッドは非推奨になりました。({{bug("731307")}})</dd>
- <dt>{{ interface("nsIScriptSecurityManager") }}</dt>
+ <dt><code>nsIScriptSecurityManager</code></dt>
  <dd><code>checkLoadURIStr()</code> メソッドおよび <code>checkLoadURI()</code> メソッドが削除されました。({{bug("327244")}})</dd>
- <dt>{{ interface("nsIRefreshURI") }}</dt>
+ <dt><code>nsIRefreshURI</code></dt>
  <dd><code>setupRefreshURIFromHeader()</code> メソッドに引数 <code>principal</code> が追加されました。({{bug("327244")}})</dd>
 </dl>
 

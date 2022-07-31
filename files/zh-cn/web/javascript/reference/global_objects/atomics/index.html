@@ -7,11 +7,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>Atomics</code></strong> 对象提供了一组静态方法对 {{jsxref("SharedArrayBuffer")}} 和  {{jsxref("ArrayBuffer")}} 对象进行原子操作。</p>
+<p><strong><code>Atomics</code></strong> 对象提供了一组静态方法对 {{jsxref("SharedArrayBuffer")}} 和  {{jsxref("ArrayBuffer")}} 对象进行原子操作。</p>
 
 <h2 id="描述">描述</h2>
 
-<p>这些原子操作属于 <code>Atomics</code> 模块。与一般的全局对象不同，<code>Atomics</code> 不是构造函数，因此不能使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a> 操作符调用，也不能将其当作函数直接调用。<code>Atomics</code> 的所有属性和方法都是静态的（与 {{jsxref("Math")}}  对象一样）。</p>
+<p>这些原子操作属于 <code>Atomics</code> 模块。与一般的全局对象不同，<code>Atomics</code> 不是构造函数，因此不能使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new</a> 操作符调用，也不能将其当作函数直接调用。<code>Atomics</code> 的所有属性和方法都是静态的（与 {{jsxref("Math")}}  对象一样）。</p>
 
 <h3 id="原子操作">原子操作</h3>
 
@@ -19,12 +19,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 <h3 id="等待和通知">等待和通知</h3>
 
-<p><code>wait()</code> 和 <code>notify()</code> 方法采用的是 Linux 上的 futexes 模型（“快速用户空间互斥量”），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。</p>
+<p><code>wait()</code> 和 <code>notify()</code> 方法采用的是 Linux 上的 futexes 模型（“快速用户空间互斥量”），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。</p>
 
 <h2 id="方法">方法</h2>
 
 <dl>
- <dt><span class="hidden"> </span></dt>
  <dt>{{jsxref("Atomics.add()")}}</dt>
  <dd>将指定位置上的数组元素与给定的值相加，并返回相加前该元素的值。</dd>
  <dt><strong>{{jsxref("Atomics.and()")}}</strong></dt>
@@ -55,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 <h3 id="使用_Atomics">使用 Atomics</h3>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 
 ta[0];
@@ -87,7 +86,7 @@ Atomics.isLockFree(3); // false
 Atomics.isLockFree(4); // true
 
 Atomics.or(ta, 0, 1);
-Atomics.load(ta, 0);  // 5
+Atomics.load(ta, 0);  // 5
 
 Atomics.store(ta, 0, 12); // 12
 
@@ -100,42 +99,31 @@ Atomics.load(ta, 0); // 4
 
 <h3 id="Waiting_和_notifiying">Waiting 和 notifiying</h3>
 
-<p>给定一个共享的 <code>Int32Array</code>：</p>
+<p>给定一个共享的 <code>Int32Array</code>：</p>
 
-<pre class="brush: js notranslate">const sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 </pre>
 
-<p>读取线程正在休眠并位置0上等待。只要该位置应为0，它就不会继续。但是，一旦写入线程存储了新值，写入线程将通知它并返回新值（123）。</p>
+<p>读取线程正在休眠并位置 0 上等待。只要该位置应为 0，它就不会继续。但是，一旦写入线程存储了新值，写入线程将通知它并返回新值（123）。</p>
 
-<pre class="brush: js notranslate">Atomics.wait(int32, 0, 0);
+<pre class="brush: js">Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123
 </pre>
 
 <p>写入线程存储一个新值并再写入完成时通知等待线程：</p>
 
-<pre class="brush: js notranslate">console.log(int32[0]); // 0;
+<pre class="brush: js">console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);
 Atomics.notify(int32, 0, 1);</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-atomics-object', 'Atomics')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.Atomics")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -100,7 +100,7 @@ original_slug: WebAPI/Using_Web_Notifications
 
 <p>코드 중복을 피하기 위해 뒷 처리 수행 코드를 <code>handlePermission()</code> 함수에 넣었는데 이 함수가 코드에서 첫 번째 메인 블록입니다. 그 안에서는 <code>Notification.permission</code> 값을 명시적으로 설정하고(크롬의 일부 과거 버전에서는 이게 자동으로 안됩니다) 사용자가 권한 대화창에서 선택한 결과에 따라 단추를 보이거나 숨깁니다. 권한이 이미 허용됐는지 보여주려는 것은 아니고 사용자가 권한을 거부한 경우 나중에 다시 선택할 수 있도록 해주는 것입니다.</p>
 
-<p><strong>참고:</strong> 크롬 37 버전 전에는 <code>load</code> 이벤트 핸들러에서 {{domxref("Notification.requestPermission()")}}을 호출할 수 없었습니다(<a href="https://code.google.com/p/chromium/issues/detail?id=274284" title="https://code.google.com/p/chromium/issues/detail?id=274284">이슈 274284</a> 참고).</p>
+<p><strong>참고:</strong> 크롬 37 버전 전에는 <code>load</code> 이벤트 핸들러에서 {{domxref("Notification.requestPermission()")}}을 호출할 수 없었습니다(<a href="https://code.google.com/p/chromium/issues/detail?id=274284">이슈 274284</a> 참고).</p>
 
 <h3 id="requestPermission_프로미스_기능_알아내기">requestPermission() 프로미스 기능 알아내기</h3>
 
@@ -256,7 +256,7 @@ var notification = new Notification('할 일 목록', { body: text, icon: img })
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<p>{{page("/en-US/Web/API/Notification","Browser compatibility")}}</p>
+<p>{{Compat("api.Notification")}}</p>
 
 <h2 id="참고">참고</h2>
 

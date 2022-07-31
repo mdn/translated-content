@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Operators/this
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate">this</pre>
+<pre class="syntaxbox ">this</pre>
 
 <h3 id="값">값</h3>
 
@@ -28,9 +28,9 @@ translation_of: Web/JavaScript/Reference/Operators/this
 
 <h2 id="전역_문맥">전역 문맥</h2>
 
-<p>전역 실행 문맥<sup>global execution context</sup>에서 <code>this</code>는 엄격 모드 여부에 관계 없이 전역 객체를 참조합니다.</p>
+<p>전역 실행 맥락에서 <code>this</code>는 엄격 모드 여부에 관계 없이 전역 객체를 참조합니다.</p>
 
-<pre class="brush: js notranslate">// 웹 브라우저에서는 window 객체가 전역 객체
+<pre class="brush: js ">// 웹 브라우저에서는 window 객체가 전역 객체
 console.log(this === window); // true
 
 a = 37;
@@ -52,7 +52,7 @@ console.log(b)         // "MDN"</pre>
 
 <p>다음 예제는 엄격 모드가 아니며 <code>this</code>의 값이 호출에 의해 설정되지 않으므로, 기본값으로 브라우저에서는 {{domxref("Window", "window")}}인 전역 객체를 참조합니다.</p>
 
-<pre class="brush: js notranslate">function f1() {
+<pre class="brush: js ">function f1() {
   return this;
 }
 
@@ -64,7 +64,7 @@ f1() === global; // true</pre>
 
 <p>반면에 엄격 모드에서 <code>this</code> 값은 실행 문맥에 진입하며 설정되는 값을 유지하므로 다음 예시에서 보여지는 것 처럼 <code>this</code>는 <code>undefined</code>로 남아있습니다.</p>
 
-<pre class="brush: js notranslate">function f2(){
+<pre class="brush: js ">function f2(){
   "use strict"; // 엄격 모드 참고
   return this;
 }
@@ -97,7 +97,7 @@ whatsThis.apply(obj); // this는 'Custom'. 함수 내에서 obj로 설정한다.
 
 <p><strong>예시 2</strong></p>
 
-<pre class="brush: js notranslate">function add(c, d) {
+<pre class="brush: js ">function add(c, d) {
   return this.a + this.b + c + d;
 }
 
@@ -114,7 +114,7 @@ add.apply(o, [10, 20]); // 34
 
 <p>비엄격 모드에서 <code>this</code>로 전달된 값이 객체가 아닌 경우, <code>call</code>과 <code>apply</code>는 이를 객체로 변환하기 위한 시도를 합니다. <code>null</code>과 <code>undefined</code> 값은 전역 객체가 됩니다. <code>7</code>이나 <code>'foo'</code>와 같은 원시값은 관련된 생성자를 사용해 객체로 변환되며, 따라서 원시 숫자 <code>7</code>은 <code>new Number(7)</code>에 의해 객체로 변환되고 문자열 <code>'foo'</code>는 <code>new String('foo')</code>에 의해 객체로 변환됩니다.</p>
 
-<pre class="brush: js notranslate">function bar() {
+<pre class="brush: js ">function bar() {
   console.log(Object.prototype.toString.call(this));
 }
 
@@ -127,7 +127,7 @@ bar.call(undefined); // [object global]
 
 <p>ECMAScript 5는 {{jsxref("Function.prototype.bind")}}를 도입했습니다. <code>f.bind(someObject)</code>를 호출하면 <code>f</code>와 같은 본문(코드)과 범위를 가졌지만 this는 원본 함수를 가진 새로운 함수를 생성합니다. 새 함수의 <code>this</code>는 호출 방식과 상관없이 영구적으로<code>bind()</code>의 첫 번째 매개변수로 고정됩니다.</p>
 
-<pre class="brush: js notranslate">function f() {
+<pre class="brush: js ">function f() {
   return this.a;
 }
 
@@ -142,9 +142,9 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty</pre>
 
 <h3 id="화살표_함수">화살표 함수</h3>
 
-<p><a href="/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98">화살표 함수</a>에서 <code>this</code>는 자신을 감싼 정적 범위<sup>lexical context</sup>입니다. 전역 코드에서는 전역 객체를 가리킵니다.</p>
+<p><a href="/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98">화살표 함수</a>에서 <code>this</code>는 자신을 감싼 정적 범위입니다. 전역 코드에서는 전역 객체를 가리킵니다.</p>
 
-<pre class="brush: js notranslate">var globalObject = this;
+<pre class="brush: js ">var globalObject = this;
 var foo = (() =&gt; this);
 console.log(foo() === globalObject); // true</pre>
 
@@ -152,7 +152,7 @@ console.log(foo() === globalObject); // true</pre>
 <p><strong>참고</strong>: 화살표 함수를 <code>call()</code>, <code>bind()</code>, <code>apply()</code>를 사용해 호출할 때 <code>this</code>의 값을 정해주더라도 무시합니다. 사용할 매개변수를 정해주는 건 문제 없지만, 첫 번째 매개변수(<code>thisArg</code>)는 <code>null</code>을 지정해야 합니다.</p>
 </div>
 
-<pre class="brush: js notranslate">// 객체로서 메서드 호출
+<pre class="brush: js ">// 객체로서 메서드 호출
 var obj = {func: foo};
 console.log(obj.func() === globalObject); // true
 
@@ -165,7 +165,7 @@ console.log(foo() === globalObject); // true</pre>
 
 <p>어떤 방법을 사용하든 <code>foo</code>의 <code>this</code>는 생성 시점의 것으로 설정됩니다(위 예시에서는 global 객체). 다른 함수 내에서 생성된 화살표 함수에도 동일하게 적용됩니다. <code>this</code>는 싸여진 렉시컬 컨텍스트의 것으로 유지됩니다.</p>
 
-<pre class="brush: js notranslate">// this를 반환하는 메소드 bar를 갖는 obj를 생성합니다.
+<pre class="brush: js ">// this를 반환하는 메소드 bar를 갖는 obj를 생성합니다.
 // 반환된 함수는 화살표 함수로 생성되었으므로,
 // this는 감싸진 함수의 this로 영구적으로 묶입니다.
 // bar의 값은 호출에서 설정될 수 있으며, 이는 반환된 함수의 값을 설정하는 것입니다.
@@ -198,7 +198,7 @@ console.log(fn2()() == window); // true</pre>
 
 <p>다음 예제에서 <code>o.f()</code>를 실행할 때 <code>o</code> 객체가 함수 내부의 <code>this</code>와 연결됩니다.</p>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js ">var o = {
   prop: 37,
   f: function() {
     return this.prop;
@@ -210,7 +210,7 @@ console.log(o.f()); // 37
 
 <p>이 행동이 함수가 정의된 방법이나 위치에 전혀 영향을 받지 않는 것에 유의해라. 이전 예제에서, <code>o</code> 의 정의 중 <code>f</code> 함수를 구성원으로 내부에 정의 하였다.  그러나, 간단하게 함수를 먼저 정의하고 나중에 <code>o.f</code>를 추가할 수 있다. 이렇게 하면 동일한 동작 결과 이다 :</p>
 
-<pre class="brush: js notranslate">var o = {prop: 37};
+<pre class="brush: js ">var o = {prop: 37};
 
 function independent() {
   return this.prop;
@@ -225,7 +225,7 @@ console.log(o.f()); // logs 37
 
 <p>마찬가지로, 이 <code>this</code> 바인딩은 가장 즉각으로 멤버 대상에 영향을 받는다. 다음 예제에서, 함수를 실행할 때, 객체 <code>o.b</code>의 메소드 <code>g</code> 로서 호출한다. 이것이 실행되는 동안, 함수 내부의 <code>this</code>는 <code>o.b</code>를 나타낸다. 객체는 그 자신이 <code>o</code>의 멤버 중 하나라는 사실은 중요하지 않다. 가장 즉각적인 참조가  중요한 것이다.</p>
 
-<pre class="brush: js notranslate">o.b = {g: independent, prop: 42};
+<pre class="brush: js ">o.b = {g: independent, prop: 42};
 console.log(o.b.g()); // logs 42
 </pre>
 
@@ -233,7 +233,7 @@ console.log(o.b.g()); // logs 42
 
 <p>같은 개념으로 객체의 프로토타입 체인 어딘가에 정의한 메서드도 마찬가지입니다. 메서드가 어떤 객체의 프로토타입 체인 위에 존재하면, <code>this</code>의 값은 그 객체가 메서드를 가진 것 마냥 설정됩니다.</p>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js ">var o = {
   f:function() { return this.a + this.b; }
 };
 var p = Object.create(o);
@@ -249,7 +249,7 @@ console.log(p.f()); // 5
 
 <p>다시 한 번 같은 개념으로, 함수를 접근자와 설정자에서 호출하더라도 동일합니다. 접근자나 설정자로 사용하는 함수의 <code>this</code>는 접근하거나 설정하는 속성을 가진 객체로 묶입니다.</p>
 
-<pre class="brush: js notranslate">function sum() {
+<pre class="brush: js ">function sum() {
   return this.a + this.b + this.c;
 }
 
@@ -276,7 +276,7 @@ console.log(o.average, o.sum); // 2, 6
 <p>While the default for a constructor is to return the object referenced by <code>this</code>, it can instead return some other object (if the return value isn't an object, then the <code>this</code> object is returned).</p>
 </div>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js ">/*
  * Constructors work like this:
  *
  * function MyConstructor(){
@@ -316,7 +316,7 @@ console.log(o.a); // 38
 
 <p>함수를 이벤트 처리기로 사용하면 this는 이벤트를 발사한 요소로 설정됩니다. 일부 브라우저는 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 외의 다른 방법으로 추가한 처리기에 대해선 이 규칙을 따르지 않습니다.</p>
 
-<pre class="brush: js notranslate">// 처리기로 호출하면 관련 객체를 파랗게 만듦
+<pre class="brush: js ">// 처리기로 호출하면 관련 객체를 파랗게 만듦
 function bluify(e) {
   // 언제나 true
   console.log(this === e.currentTarget);
@@ -338,13 +338,13 @@ for (var i = 0; i &lt; elements.length; i++) {
 
 <p>코드를 인라인 이벤트 처리기로 사용하면 <code>this</code>는 처리기를 배치한 DOM 요소로 설정됩니다.</p>
 
-<pre class="brush: js notranslate">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
+<pre class="brush: js ">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
   this 표시
 &lt;/button&gt;</pre>
 
 <p>위의 경고창은 <code>button</code>을 보여줍니다. 다만 바깥쪽 코드만 <code>this</code>를 이런 방식으로 설정합니다.</p>
 
-<pre class="brush: js notranslate">&lt;button onclick="alert((function() { return this; })());"&gt;
+<pre class="brush: js ">&lt;button onclick="alert((function() { return this; })());"&gt;
   내부 this 표시
 &lt;/button&gt;</pre>
 

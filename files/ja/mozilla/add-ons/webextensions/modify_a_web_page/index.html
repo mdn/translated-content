@@ -45,7 +45,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 
 }</pre>
 
-<p><code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、<code>content_scripts</code> は<a href="https://developer.mozilla.org/"> https://developer.mozilla.org/</a> 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。</p>
+<p><code><a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> キーは URL パターンと一致するページにスクリプトを読み込む方法です。この場合、<code>content_scripts</code> は<a href="/"> https://developer.mozilla.org/</a> 以下のすべてのページで "page-eater.js" というスクリプトをロードするようにブラウザーに指示します。</p>
 
 <div class="note">
 <p><code>content_scripts</code> の <code>"js"</code> プロパティ は配列なので、マッチしているページに複数のスクリプトを挿入できます。<span id="result_box" lang="ja"><span>これを行うと、ページによってロードされるいくつかのスクリプトと同じように、ページは同じスコープを共有し、配列にリストされている順序でロードされます。</span></span></p>
@@ -63,7 +63,7 @@ var header = document.createElement('h1');
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);</pre>
 
-<p><a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">拡張機能をインストール</a> して <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a> を訪れてみましょう。</p>
+<p><a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">拡張機能をインストール</a> して <a href="/">https://developer.mozilla.org/</a> を訪れてみましょう。</p>
 
 <p>{{EmbedYouTube("lxf2Tkg6U1M")}}</p>
 
@@ -126,7 +126,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
     manifest.json
     page-eater.js</code></pre>
 
-<p><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">拡張機能を再読み込み</a>して、ページを開きます (任意のページ)  コンテキストメニューを有効化し、"Eat this page" を選択します。</p>
+<p><a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on">拡張機能を再読み込み</a>して、ページを開きます (任意のページ)  コンテキストメニューを有効化し、"Eat this page" を選択します。</p>
 
 <p>{{EmbedYouTube("zX4Bcv8VctA")}}</p>
 
@@ -159,7 +159,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 </table>
 
 <div class="blockIndicator note">
-<p>このワンオフメッセージを送る通信メソッドに加えて、<a href="https://wiki.developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">メッセージ交換するコネクションベースの方法</a>も使えます。これらのオプションを選択するアドバイスは、<a href="https://wiki.developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging">ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する</a>を見てください。</p>
+<p>このワンオフメッセージを送る通信メソッドに加えて、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Connection-based_messaging">メッセージ交換するコネクションベースの方法</a>も使えます。これらのオプションを選択するアドバイスは、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Choosing_between_one-off_messages_and_connection-based_messaging">ワンオフメッセージとコネクションベースのメッセージのいずれかを選択する</a>を見てください。</p>
 </div>
 
 <p><span id="result_box" lang="ja"><span>例を更新して、バックグラウンドスクリプトからメッセージを送信する方法を示します。</span></span></p>

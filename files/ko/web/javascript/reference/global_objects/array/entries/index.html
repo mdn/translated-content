@@ -16,13 +16,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 <p>{{EmbedInteractiveExample("pages/js/array-entries.html")}}</p>
 
-<div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-</div>
-
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate"><code><var>arr</var>.entries()</code>
+<pre class="syntaxbox"><code><var>arr</var>.entries()</code>
 </pre>
 
 <h3 id="반환_값">반환 값</h3>
@@ -33,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 <h3 id="인덱스와_요소_이터레이팅">인덱스와 요소 이터레이팅</h3>
 
-<pre class="notranslate">const a = ['a', 'b', 'c'];
+<pre>const a = ['a', 'b', 'c'];
 
 for (const [index, element] of a.entries())
   console.log(index, element);
@@ -44,7 +40,7 @@ for (const [index, element] of a.entries())
 
 <h3 id="for…of_루프_사용"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for…of</a> 루프 사용</h3>
 
-<pre class="brush:js notranslate">var a = ['a', 'b', 'c'];
+<pre class="brush:js">var a = ['a', 'b', 'c'];
 var iterator = a.entries();
 
 for (let e of iterator) {
@@ -68,7 +64,7 @@ for (let e of iterator) {
  </tbody>
 </table>
 
-<h2 id="브라우저_호환성"><span>브라우저 호환성</span></h2>
+<h2 id="브라우저_호환성">브라우저 호환성</h2>
 
 <div>
 

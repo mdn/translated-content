@@ -313,7 +313,7 @@ fetchAndInstantiate('logger2.wasm', importObj).then(function(instance) {
 
 <p>To finish this tour of the WebAssembly text format, let’s look at the most intricate, and often confusing, part of WebAssembly: <strong>tables</strong>. Tables are basically resizable arrays of references that can be accessed by index from WebAssembly code.</p>
 
-<p>To see why tables are needed, we need to first observe that the <code>call</code> instruction we saw earlier (see {{anch("Calling functions from other functions in the same module")}}) takes a static function index and thus can only ever call one function — but what if the callee is a runtime value?</p>
+<p>To see why tables are needed, we need to first observe that the <code>call</code> instruction we saw earlier (see <a href="#calling_functions_from_other_functions_in_the_same_module">Calling functions from other functions in the same module</a>) takes a static function index and thus can only ever call one function — but what if the callee is a runtime value?</p>
 
 <ul>
  <li>In JavaScript we see this all the time: functions are first-class values.</li>

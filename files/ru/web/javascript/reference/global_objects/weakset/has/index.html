@@ -13,27 +13,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 
 <p>Метод <code><strong>has()</strong></code> определяет, содержит ли WeakSet определённый элемент, возвращая в зависимости от этого true или false. </p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><em>ws</em>.has(value);</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt>value</dt>
  <dd>Обязателен. Искомый объект.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <dl>
  <dt>Boolean</dt>
  <dd>Если объект был найден в WeakSet вернёт true, иначе false.</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:Using_the_has_method" name="Example:Using_the_has_method">Использование метода <code>has</code> </h3>
+<h3 id="Example:Using_the_has_method">Использование метода <code>has</code> </h3>
 
 <pre class="brush: js">var ws = new WeakSet();
 var obj = {};
@@ -43,33 +43,15 @@ mySet.has(window);  // вернёт true
 mySet.has(obj);     // вернёт false
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("WeakSet")}}</li>

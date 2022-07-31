@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Domkniecia
 ---
 <div> {{jsSidebar("Intermediate")}}</div>
 
-<div></div>
+
 
 <p class="summary">Domknięcie jest funkcją skojarzoną z odwołującym się do niej środowiskiem. Innymi słowy domknięcie daje Ci dostęp z funkcji wewnętrznej do zasięgu funkcji zewnętrznej.</p>
 
@@ -128,7 +128,7 @@ document.getElementById('size-16').onclick = size16;</code></pre>
 
 <p>JavaScript nie zapewnia do tego wbudowanej metody, jednakże jest możliwa emulacja prywatnych metod przy użyciu domknięć. Prywatne metody nie sa wyłącznie użyteczne z racji możliwości ograniczenia dostępu do kodu: dają również świetną możliwość zarządzania Twoją globalną przestrzenią nazw (namespace) uniemożliwiając nieistotnym metodom zaśmiecenie interfejsu publicznego Twojego kodu.</p>
 
-<p>Poniższy kod ukazuje, w jaki sposób można użyć domknięć do zdefiniowania publicznych funkcji, które mają dostęp do prywatnych funkcji i zmiennych. Używanie dokmnięć w taki sposób znane jest jako <a href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>:</p>
+<p>Poniższy kod ukazuje, w jaki sposób można użyć domknięć do zdefiniowania publicznych funkcji, które mają dostęp do prywatnych funkcji i zmiennych. Używanie dokmnięć w taki sposób znane jest jako <a href="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>:</p>
 
 <pre><code>var counter = (function() {
   var privateCounter = 0;

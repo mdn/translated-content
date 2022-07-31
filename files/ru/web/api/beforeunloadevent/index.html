@@ -10,7 +10,7 @@ translation_of: Web/API/BeforeUnloadEvent
 
 <p>Событие <strong><code>beforeunload </code></strong>  (en: перед_выгрузкой) происходит (непосредственно) перед выгрузкой окна, документа и их ресурсов.</p>
 
-<p>Если присвоено ненулевое значение свойству <code>returnValue</code> Event, всплывает диалоговое окно: "Вы действительно хотите покинуть эту страницу?" (см. пример ниже). Если значение не присвоено, то событие не отображается. В некоторых случаях диалоговое окно всплывает только после взаимодействия пользователя с фреймом или любым встроенным фреймом. См. детали  {{anch("Browser compatibility")}} </p>
+<p>Если присвоено ненулевое значение свойству <code>returnValue</code> Event, всплывает диалоговое окно: "Вы действительно хотите покинуть эту страницу?" (см. пример ниже). Если значение не присвоено, то событие не отображается. В некоторых случаях диалоговое окно всплывает только после взаимодействия пользователя с фреймом или любым встроенным фреймом. См. детали  <a href="#browser_compatibility">Browser compatibility</a> </p>
 
 <table class="properties">
  <tbody>
@@ -56,7 +56,7 @@ window.addEventListener("beforeunload", function( event ) {
 <h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
 
 <div>
-<p>{{Compat("api.BeforeUnloadEvent")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
@@ -67,5 +67,5 @@ window.addEventListener("beforeunload", function( event ) {
  <li>{{Event("load")}}</li>
  <li>{{Event("beforeunload")}}</li>
  <li>{{Event("unload")}}</li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document" title="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Выгрузка Документов - Запрос на выгрузку документа</a> </li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document">Выгрузка Документов - Запрос на выгрузку документа</a> </li>
 </ul>

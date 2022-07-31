@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: cyclic object value(TypeError: циклическое значение объекта)'
+title: 'TypeError: cyclic object value'
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
 tags:
   - Ошибка
@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 
 <h2 id="Сообщения">Сообщения</h2>
 
-<pre class="syntaxbox notranslate">TypeError: циклическое значение объекта (Firefox)
+<pre class="syntaxbox">TypeError: циклическое значение объекта (Firefox)
 TypeError: преобразование круговой структуры в JSON (Chrome и Opera)
 TypeError: циклическая ссылка в аргументе значения не поддерживается (Edge)
 </pre>
@@ -21,19 +21,19 @@ TypeError: циклическая ссылка в аргументе значе�
 
 <h2 id="Что_не_так">Что не так?</h2>
 
-<p>The <a href="https://www.json.org/">JSON format</a> per se doesn't support object references (although an <a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF draft exists</a>), hence {{jsxref("JSON.stringify()")}} doesn't try to solve them and fail accordingly.</p>
+<p>Сам по себе <a href="https://www.json.org/">JSON-формат</a> не поддерживает ссылки на объекты (не смотря на то что существует <a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF</a>, который позволяет значению JSON ссылаться на другое значение в JSON-документе), поэтому {{jsxref("JSON.stringify()")}} не пытаеться их анализировать и терпит неудачу при попытке сделать это.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
 <p>В круговой структуре как эта</p>
 
-<pre class="brush: js notranslate">var circularReference = {otherData: 123};
+<pre class="brush: js">var circularReference = {otherData: 123};
 circularReference.myself = circularReference;
 </pre>
 
 <p>{{jsxref("JSON.stringify()")}} закончится неудачей</p>
 
-<pre class="brush: js example-bad notranslate">JSON.stringify(circularReference);
+<pre class="brush: js example-bad">JSON.stringify(circularReference);
 // TypeError: циклическое значение объекта
 </pre>
 
@@ -45,7 +45,7 @@ circularReference.myself = circularReference;
 
 
 
-<pre class="brush: js notranslate">const getCircularReplacer = () =&gt; {
+<pre class="brush: js">const getCircularReplacer = () =&gt; {
   const seen = new WeakSet();
   return (key, value) =&gt; {
     if (typeof value === "object" &amp;&amp; value !== null) {

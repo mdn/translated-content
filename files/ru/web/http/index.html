@@ -14,34 +14,34 @@ translation_of: Web/HTTP
 
 <div class="column-container">
 <div class="column-half">
-<h2 class="Documentation" id="Documentation" name="Documentation">Учебники</h2>
+<h2 class="Documentation" id="Documentation">Учебники</h2>
 
 <p>Узнайте, как использовать HTTP, благодаря учебникам и руководствам.</p>
 
 <dl>
  <dt><a href="/ru/docs/Web/HTTP/Overview">Обзор HTTP</a></dt>
  <dd>Основные свойства клиент-серверного протокола: что можно сделать и для чего он предназначен.</dd>
- <dt><a href="/en-US/docs/Web/HTTP/Caching">HTTP-кеширование (HTTP Cache)</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/Caching">HTTP-кеширование (HTTP Cache)</a></dt>
  <dd>Кеширование - это важнейший инструмент для повышения производительности веб-сайтов. Эта статья описывает разные виды кеша, а также использование HTTP-заголовков для конфигурации и управления кешированием.</dd>
- <dt><a href="/en-US/docs/Web/HTTP/Cookies">HTTP-куки (HTTP cookies)</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/Cookies">HTTP-куки (HTTP cookies)</a></dt>
  <dd>Как работают куки, можно почитать в <a href="https://tools.ietf.org/html/rfc6265">RFC 6265</a>. При обслуживании HTTP-запроса сервер может отправить в ответе HTTP-заголовок <code>Set-Cookie</code>. После этого значение куки посылается клиентом с каждым запросом к этому серверу. Делается это в форме заголовка запроса <code>Cookie</code>. Дополнительно можно указать истечение срока куки, а так же ограничения для специфического домена или пути.</dd>
 </dl>
 
 <dl>
- <dt><a href="/en-US/docs/Web/HTTP/Access_control_CORS">Контроль доступа (совместное использование ресурсов между разными источниками, HTTP access control (CORS))</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/CORS">Контроль доступа (совместное использование ресурсов между разными источниками, HTTP access control (CORS))</a></dt>
  <dd><strong>Межсайтовые HTTP-запросы</strong> (кросс-сайтовые) - это HTTP-запросы к ресурсам, находящимся в домене, <strong>отличающемся </strong>от того, с которого производится запрос. Например, HTML-страница, загружаемая с домена А (<code>http://domaina.example</code>), запрашивает изображение с домена Б (<code>http://domainb.foo</code>), используя тег <code>img</code> (<code>http://domainb.foo/image.jpg</code>). Это происходит постоянно в мире веба: страницы загружают различные ресурсы в кросс-сайтовой манере, включая стили (CSS), изображения, скрипты и другие ресурсы. CORS позволяет разработчикам сайтов контролировать межсайтовые запросы.</dd>
 </dl>
 
 <dl>
- <dt><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP">Эволюция HTTP</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP">Эволюция HTTP</a></dt>
  <dd>Краткое описание изменений, произошедших в HTTP, начиная с самых ранних версий, заканчивая новой HTTP/2 и далее.</dd>
  <dt><a href="https://wiki.mozilla.org/Security/Guidelines/Web_Security">Принципы веб-безопасности Mozilla</a></dt>
  <dd>Сборник советов для помощи в разработке защищённых веб-приложений.</dd>
- <dt><a href="/en-US/docs/Web/HTTP/Messages">HTTP-сообщения (HTTP Messages)</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/Messages">HTTP-сообщения (HTTP Messages)</a></dt>
  <dd>Описывает тип и структуру разных видов сообщений HTTP/1.x и HTTP/2.</dd>
- <dt><a href="/en-US/docs/Web/HTTP/Session">Обычный сеанс HTTP</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/Session">Обычный сеанс HTTP</a></dt>
  <dd>Показывает и описывает течение обычного сеанса HTTP.</dd>
- <dt><a href="/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x">Управление подключениями в HTTP/1.x</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/Connection_management_in_HTTP_1.x">Управление подключениями в HTTP/1.x</a></dt>
  <dd>Описывает три модели управления подключениями, доступными в HTTP/1.x, их сильные и слабые стороны.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Controlling_DNS_prefetching">Контроль предварительной загрузки DNS (Controlling DNS prefetching)</a></dt>
  <dd>Firefox, как и большинство других браузеров, выполняет <strong>предварительную загрузку DNS (DNS prefetching)</strong>. Это действие, когда браузеры превентивно выполняют разрешение доменных имён (получают имена доменов) для ссылок, по которым пользователь может перейти, а также для ссылок на ресурсы, такие как картинки, CSS,  JavaScript. Эта предварительная загрузка выполняется в фоновом режиме, так что вполне вероятно, что к моменту обращения к объектам в документе DNS уже получен. Это уменьшает задержки, когда, например, пользователь кликает на ссылку.</dd>
@@ -54,9 +54,9 @@ translation_of: Web/HTTP
 <p>Глубже изучите HTTP с помощью справочников и документации.</p>
 
 <dl>
- <dt><a href="/en-US/docs/HTTP/Headers" title="/en-US/docs/HTTP/Headers">HTTP-заголовки (HTTP Headers)</a></dt>
- <dd>Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя <code>X-</code> префикс; другие перечислены в  <a class="external" href="http://www.iana.org/assignments/message-headers/perm-headers.html" title="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA registry</a>, содержание которого в свою очередь определено в <a class="external" href="http://tools.ietf.org/html/rfc4229" title="http://tools.ietf.org/html/rfc4229">RFC 4229</a>. IANA так же поддерживает <a class="external" href="http://www.iana.org/assignments/message-headers/prov-headers.html" title="http://www.iana.org/assignments/message-headers/prov-headers.html">регистр предложенных новых HTTP-заголовков</a>.</dd>
- <dt><a href="/en-US/docs/Web/HTTP/Methods">Методы HTTP-запроса</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/Headers" title="/ru/docs/Web/HTTP/Headers">HTTP-заголовки (HTTP Headers)</a></dt>
+ <dd>Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя <code>X-</code> префикс; другие перечислены в  <a class="external" href="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA registry</a>, содержание которого в свою очередь определено в <a class="external" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a>. IANA так же поддерживает <a class="external" href="http://www.iana.org/assignments/message-headers/prov-headers.html">регистр предложенных новых HTTP-заголовков</a>.</dd>
+ <dt><a href="/ru/docs/Web/HTTP/Methods">Методы HTTP-запроса</a></dt>
  <dd>Различные операции, которые выполняются с HTTP:
  <ul>
   <li>{{HTTPMethod("GET")}}</li>
@@ -68,7 +68,7 @@ translation_of: Web/HTTP
   <li>другие</li>
  </ul>
  <span class="hidden"> </span><span class="hidden"> </span></dd>
- <dt><a href="/en-US/docs/Web/HTTP/Status">Коды ответа (HTTP response codes)</a></dt>
+ <dt><a href="/ru/docs/Web/HTTP/Status">Коды ответа (HTTP response codes)</a></dt>
  <dd>Коды ответа HTTP указывают на результат выполнения определённого HTTP-запроса. Ответы сгруппированы в пять категорий: информационные ответы, удачные ответы, перенаправления, ошибки клиента и ошибки сервера.</dd>
  <dt><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">Директивы CSP</a></dt>
  <dd>Поля заголовка ответа {{HTTPHeader("Content-Security-Policy")}} позволяют администраторам веб-сайтов контролировать ресурсы, которые браузер пользователя может загрузить на данную веб-страницу. За некоторым исключением, эти политики связаны с указанием сервера-источника и адресов доступа (обращения) скриптов.</dd>
@@ -91,15 +91,15 @@ translation_of: Web/HTTP
 </div>
 </div>
 
-<h2 class="Community" id="Community" name="Community">Смотрите также</h2>
+<h2 class="Community" id="Community">Смотрите также</h2>
 
 <ul>
  <li><a href="/En/Controlling_DNS_prefetching" title="En/Controlling DNS prefetching">Controlling DNS prefetching</a></li>
  <li><a href="/en/HTTP_Pipelining_FAQ" title="https://developer.mozilla.org/en/HTTP_Pipelining_FAQ">HTTP pipelining FAQ</a></li>
- <li><a href="/en/Web_Development/HTTP_cookies" title="HTTP cookies">HTTP cookies</a></li>
- <li><a href="/en-US/docs/HTTP/Headers" title="/en-US/docs/HTTP/Headers">HTTP заголовки</a></li>
+ <li><a href="/ru/docs/Web/HTTP/Cookies" title="HTTP cookies">HTTP-куки (HTTP cookies)</a></li>
+ <li><a href="/ru/docs/Web/HTTP/Headers" title="/ru/docs/Web/HTTP/Headers">HTTP заголовки</a></li>
  <li><a href="/en-US/docs/HTTP/Basic_access_authentication" title="/en-US/docs/HTTP/Basic_access_authentication">Basic access authentication</a></li>
- <li><a href="/en-US/docs/HTTP/Access_control_CORS" title="/en-US/docs/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/ru/docs/Web/HTTP/CORS" title="/ru/docs/Web/HTTP/CORS">HTTP контроль доступа (CORS)</a></li>
 </ul>
 
 <p>{{ languages( { "ja": "ja/HTTP"} ) }}</p>

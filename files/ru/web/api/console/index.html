@@ -27,64 +27,64 @@ translation_of: Web/API/Console
 <h2 id="Методы">Методы</h2>
 
 <dl>
- <dt>{{domxref("Console.assert()")}}</dt>
+ <dt>{{domxref("console.assert()")}}</dt>
  <dd>Выводит в консоль (имеется ввиду веб-консоль) сообщение и стек вызова метода, если первый аргумент <code>false</code>.</dd>
- <dt>{{domxref("Console.clear()")}}</dt>
+ <dt>{{domxref("console.clear()")}}</dt>
  <dd>Очистка консоли.</dd>
- <dt>{{domxref("Console.count()")}}</dt>
+ <dt>{{domxref("console.count()")}}</dt>
  <dd>Выводит количество вызовов метода с определённой меткой (передаётся в параметре метода)</dd>
 </dl>
 
 <dl>
- <dt>{{domxref("Console.countReset()")}}</dt>
+ <dt>{{domxref("console.countReset()")}}</dt>
  <dd>Обнуляет значение счётчика с заданным значением.</dd>
 </dl>
 
 <dl>
- <dt>{{domxref("Console.debug()")}}</dt>
+ <dt>{{domxref("console.debug()")}}</dt>
  <dd>Синоним для <code>log()</code></dd>
- <dt>{{domxref("Console.dir()")}} {{Non-standard_inline}}</dt>
+ <dt>{{domxref("console.dir()")}} {{Non-standard_inline}}</dt>
  <dd>Отображает интерактивный список свойств указанного объекта JavaScript. Этот список позволит вам посмотреть дочерние объекты и их свойства.</dd>
- <dt>{{domxref("Console.dirxml()")}} {{Non-standard_inline}}</dt>
+ <dt>{{domxref("console.dirxml()")}} {{Non-standard_inline}}</dt>
  <dd>
  <p>Отображает представление указанного объекта в XML/HTML-виде, если это возможно. Если нет - в виде JavaScript-объекта (как в виде "console.dir()").</p>
  </dd>
- <dt>{{domxref("Console.error()")}}</dt>
+ <dt>{{domxref("console.error()")}}</dt>
  <dd>Выводит сообщение об ошибке. Для форматирования вы можете использовать <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочные символы (маски)</a> с дополнительными параметрами.</dd>
- <dt>{{domxref("Console._exception()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("console._exception()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Синоним для <code>error();</code></dd>
- <dt>{{domxref("Console.group()")}}</dt>
+ <dt>{{domxref("console.group()")}}</dt>
  <dd>Создаёт новую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группировку</a> сообщений, сдвигая все следующие выводимые строки вправо на один уровень. Для завершения <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы </a>вызовите <code>groupEnd()</code>.</dd>
- <dt>{{domxref("Console.groupCollapsed()")}}</dt>
+ <dt>{{domxref("console.groupCollapsed()")}}</dt>
  <dd>Создаёт новую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группировку </a>сообщений, сдвигая все следующие сообщения вправо на один уровень; в отличие от <code>group()</code> вывод происходи в свёрнутую <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группу</a>, требующую раскрыть её вручную по кнопке. Для завершения <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы </a>вызовите <code>groupEnd()</code>.</dd>
- <dt>{{domxref("Console.groupEnd()")}}</dt>
+ <dt>{{domxref("console.groupEnd()")}}</dt>
  <dd>Выход из текущей <a href="/ru/docs/Web/API/console#Using_groups_in_the_console">группы</a>.</dd>
- <dt>{{domxref("Console.info()")}}</dt>
+ <dt>{{domxref("console.info()")}}</dt>
  <dd>Информационное сообщение. Для форматирования вы можете использовать <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочные символы (маски)</a> с дополнительными параметрами.</dd>
- <dt>{{domxref("Console.log()")}}</dt>
+ <dt>{{domxref("console.log()")}}</dt>
  <dd>Общий метод вывода информации. Для форматирования вы можете использовать <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочные символы (маски)</a> с дополнительными параметрами.</dd>
- <dt>{{domxref("Console.profile()")}} {{Non-standard_inline}}</dt>
+ <dt>{{domxref("console.profile()")}} {{Non-standard_inline}}</dt>
  <dd>Запускает профайлер, встроенный в браузер (например, <a href="/ru/docs/Tools/Производительность">Firefox performance tool</a>). Вы можете указать метку профиля (по желанию).</dd>
- <dt>{{domxref("Console.profileEnd()")}} {{Non-standard_inline}}</dt>
+ <dt>{{domxref("console.profileEnd()")}} {{Non-standard_inline}}</dt>
  <dd>Останавливает профайлер.Вы можете посмотреть результат в инструментах анализа производительности браузера (например, <a href="/ru/docs/Tools/Производительность">Firefox performance tool</a>).</dd>
- <dt>{{domxref("Console.table()")}}</dt>
+ <dt>{{domxref("console.table()")}}</dt>
  <dd>Отображает табличные данные в виде таблицы.</dd>
- <dt>{{domxref("Console.time()")}}</dt>
+ <dt>{{domxref("console.time()")}}</dt>
  <dd>Запускает <a href="/ru/docs/Web/API/console#Timers">таймер</a> с именем из переданного параметра. Можно запустить одновременно до 10,000 таймеров на странице.</dd>
- <dt>{{domxref("Console.timeEnd()")}}</dt>
+ <dt>{{domxref("console.timeEnd()")}}</dt>
  <dd>Останавливает указанный <a href="/ru/docs/Web/API/console#Timers">таймер</a> и записывает в лог, сколько прошло секунд от его старта.</dd>
- <dt>{{domxref("Console.timeStamp()")}} {{Non-standard_inline}}</dt>
+ <dt>{{domxref("console.timeStamp()")}} {{Non-standard_inline}}</dt>
  <dd>Ставит маркер в браузерном инструменте измерения производительности <a href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> или <a href="/ru/docs/Tools/Производительность/Waterfall">Waterfall</a>.</dd>
- <dt>{{domxref("Console.trace()")}}</dt>
+ <dt>{{domxref("console.trace()")}}</dt>
  <dd>Вывод <a href="/ru/docs/Web/API/console#Stack_traces">трассировки стека</a>.</dd>
- <dt>{{domxref("Console.warn()")}}</dt>
+ <dt>{{domxref("console.warn()")}}</dt>
  <dd>Выводит предупреждающее сообщение. Для форматирования вы можете использовать <a href="/ru/docs/Web/API/console#Using_string_substitutions">подстановочные символы (маски)</a> с дополнительными параметрами.</dd>
 </dl>
 
 
-<h2 id="Usage" name="Usage">Использование</h2>
+<h2 id="Usage">Использование</h2>
 
-<h3 id="Outputting_text_to_the_console" name="Outputting_text_to_the_console"><a id="Outputting_text_to_the_console" name="Outputting_text_to_the_console">Вывод текста в консоль</a></h3>
+<h3 id="Outputting_text_to_the_console" name="Outputting_text_to_the_console"><a id="Outputting_text_to_the_console">Вывод текста в консоль</a></h3>
 
 <p>Чаще всего Консоль используется для вывода строк текста и других типов данных. Существует четыре категории вывода, которые вы можете создавать, используя функции {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}}. Их вывод стилизован по-разному, и вы можете использовать фильтры, предоставляемые браузером, чтобы видеть только интересующие вас вещи.</p>
 
@@ -115,7 +115,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);</pre>
 <pre>[09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
 </pre>
 
-<h4 id="Преобразование_строк_с_использованием_масок"><a id="Using_string_substitutions" name="Using_string_substitutions">Преобразование строк с использованием масок</a></h4>
+<h4 id="Преобразование_строк_с_использованием_масок"><a id="Using_string_substitutions">Преобразование строк с использованием масок</a></h4>
 
 <p>Gecko 9.0 {{geckoRelease("9.0")}} ввёл поддержку подстановочных символов (масок). При передаче строки одному из методов вы можете использовать следующие символы:</p>
 
@@ -172,7 +172,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);</pre>
 <p><strong>Note</strong>: Поддерживается довольно много свойств стилей CSS; но вам необходимо поэкспериментировать и посмотреть, что окажется более полезным.</p>
 </div>
 
-<div>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</div>
+<h3>Группирование вывода в консоли</h3>
 
 <p>Вы можете использовать вложенные группы для организации вывода, визуально комбинируя связанный материал. Для создания вложенного блока вызовите <code>console.group()</code>. Метод <code>console.groupCollapsed()</code> похожий, но создаёт новый блок свёрнутым, что потребует нажать на кнопку, для своего раскрытия для чтения.</p>
 
@@ -196,7 +196,7 @@ console.debug("Back to the outer level");
 
 <p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
 
-<p>{{h3_gecko_minversion("Timers", "10.0")}}</p>
+<h3>Таймеры</h3>
 
 <p>Для расчёта длительности определённых операций в Gecko 10 введена поддержка таймеров в объекте <code>console</code>. Для запуска таймера вызовите функцию <code>console.time</code><code>(),</code> при этом в качестве параметра передайте название таймера. Для остановки таймера и для получения прошедшего времени в миллисекундах вызовите <code>console.timeEnd()</code>, передав в качестве параметра имя таймера. На странице можно запустить до 10000 таймеров одновременно.</p>
 
@@ -238,7 +238,7 @@ function foo() {
 <ul>
  <li>По крайней мере в Firefox, если страница определяет свой объект <code>console</code>, то этот объект переопределяет объект <code>console</code>, встроенный в Firefox.</li>
  <li>До {{Gecko("12.0")}}, методы объекта <code>console</code> работали только, если открыта панель "Веб-консоль" (Web Console). Начиная с {{Gecko("12.0")}}, вывод кешируется до тех пор, пока панель Веб-консоль не откроется, и сразу отобразится в ней.</li>
- <li>Стоит отметить, что встроенный в Firefox объект <code>console</code> совместим с таким же объектом, предоставляемым плагином <a class="external" href="http://getfirebug.com/" title="http://getfirebug.com/">Firebug</a>.</li>
+ <li>Стоит отметить, что встроенный в Firefox объект <code>console</code> совместим с таким же объектом, предоставляемым плагином <a class="external" href="http://getfirebug.com/">Firebug</a>.</li>
 </ul>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

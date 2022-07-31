@@ -5,30 +5,30 @@ translation_of: Web/API/Event/bubbles
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
-<h3 id="Summary" name="Summary">Описание</h3>
+<h3 id="Summary">Описание</h3>
 
 <p>Указывает, является ли данное событие всплывающим внутри DOM.</p>
 
 <div class="blockIndicator note">
-<p>Более подробно про всплытие событий: <a href="https://wiki.developer.mozilla.org/ru/docs/Learn/JavaScript/Building_blocks/%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F#%D0%92%D1%81%D0%BF%D0%BB%D1%8B%D1%82%D0%B8%D0%B5_%D0%B8_%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D0%B2%D0%B0%D1%82_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9">Всплытие и перехват событий</a></p>
+<p>Более подробно про всплытие событий: <a href="/ru/docs/Learn/JavaScript/Building_blocks/%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F#%D0%92%D1%81%D0%BF%D0%BB%D1%8B%D1%82%D0%B8%D0%B5_%D0%B8_%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D0%B2%D0%B0%D1%82_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9">Всплытие и перехват событий</a></p>
 </div>
 
 <h3 id="Синтаксис">Синтаксис</h3>
 
-<pre class="notranslate">event.bubbles</pre>
+<pre>event.bubbles</pre>
 
 <p>Возвращает булево значение <code>true</code>, если событие является всплывающим внутри DOM.</p>
 
-<h3 id="Syntax" name="Syntax">Пример</h3>
+<h3 id="Syntax">Пример</h3>
 
-<pre class="eval notranslate"><em>var bool</em> = event.bubbles;
+<pre class="eval"><em>var bool</em> = event.bubbles;
 </pre>
 
 <p><code>bool</code> содержит <code>true</code> или <code>false</code> в зависимости от того, может событие быть всплывающим внутри DOM или нет</p>
 
-<h3 id="Example" name="Example">Пример</h3>
+<h3 id="Example">Пример</h3>
 
-<pre class="notranslate">function handleInput(e) {
+<pre>function handleInput(e) {
   // Проверяем всплывает ли событие и ...
   if (!e.bubbles) {
     // ... пропускаем событие сюда если нет

@@ -15,7 +15,7 @@ translation_of: Web/API/FileList
 <p><strong>Примечание:</strong> До версии {{Gecko("1.9.2")}}, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с {{Gecko("1.9.2")}}, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.</p>
 </div>
 
-<h2 id="Using_the_file_list" name="Using_the_file_list">Использование FileList</h2>
+<h2 id="Using_the_file_list">Использование FileList</h2>
 
 <p>Все <code>&lt;input&gt;</code> элементы имеют файловые массивы которые позволяют получить доступ к файлам. Пример файлового тега:</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/FileList
 <pre class="brush: js">var file = document.getElementById('fileItem').files[0];
 </pre>
 
-<h2 id="Method_overview" name="Method_overview">Обзор методов</h2>
+<h2 id="Method_overview">Обзор методов</h2>
 
 <table class="standard-table">
  <tbody>
@@ -37,7 +37,7 @@ translation_of: Web/API/FileList
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">Свойства</h2>
+<h2 id="Attributes">Свойства</h2>
 
 <table class="standard-table">
  <tbody>
@@ -54,9 +54,9 @@ translation_of: Web/API/FileList
  </tbody>
 </table>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 
-<h3 id="item()" name="item()">item()</h3>
+<h3 id="item()">item()</h3>
 
 <p>Возвращает <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> объект по его индексу в списке.</p>
 
@@ -65,18 +65,18 @@ translation_of: Web/API/FileList
  );
 </pre>
 
-<h6 id="Parameters" name="Parameters">Параметр</h6>
+<h6 id="Parameters">Параметр</h6>
 
 <dl>
  <dt><code>index</code></dt>
  <dd>Отсчитываемый от нуля индекс файла для извлечения из списка.</dd>
 </dl>
 
-<h6 id="Return_value" name="Return_value">Возвращаемое значение</h6>
+<h6 id="Return_value">Возвращаемое значение</h6>
 
 <p><code>Тип <a href="/en-US/docs/DOM/File" title="DOM/File">File</a>, соотвествует запрашиваемому файлу.</code></p>
 
-<h2 id="Example" name="Example">Примеры</h2>
+<h2 id="Example">Примеры</h2>
 
 <p>Этот пример выполняет перебор всех файлов, выбранных пользователем, используя элемент Input:</p>
 
@@ -138,13 +138,13 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 &lt;/html&gt;</pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (HTML5 working draft)</li>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (HTML5 working draft)</li>
 </ul>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Using files from web applications</a></li>

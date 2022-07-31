@@ -52,7 +52,7 @@ myFunc();
 
 <p>Se você rodar este código o mesmo terá exatamente o mesmo efeito que o <code>init()</code> do exemplo anterior: a palavra "Mozilla" será mostrada na caixa de alerta. O que é diferente - e interessante - é o fato de que a função interna do <code>displayName()</code> foi retornada da função externa antes de ser executada.</p>
 
-<p>Pode parecer não muito intuitivo de que o código de fato funciona. Normalmente variáveis locais a uma função apenas existem pela duração da execução da mesma. Uma vez que <code>makeFunc()</code> terminou de executar, é razoável esperar que a variável <code>name</code> não será mais necessária. Dado que o código ainda funciona como o esperado, este não é o caso.</p>
+<p>Pode parecer não muito intuitivo de que o código de fato funciona. Normalmente variáveis locais de uma função, apenas existem pela duração de sua execução. Uma vez que <code>makeFunc()</code> terminou de executar, é razoável esperar que a variável <code>name</code> não será mais necessária. Dado que o código ainda funciona como o esperado, este não é o caso.</p>
 
 <p>A solução para tal problema é que a função <code>myFunc</code> tornou-se uma <code>closure</code>. Uma closure (fechamento) trata-se de um tipo especial de objeto que combina duas coisas: a função e o ambiente onde a função foi criada. Este ambiente consiste de quaisquer variáveis que estavam no escopo naquele momento em que a função foi criada. Neste caso, <code>myFunc</code> é a closure que incorpora tanto a função <code>displayName</code> quanto a palavra <em>Mozilla</em> que existia quando a closure foi criada.</p>
 
@@ -135,7 +135,7 @@ document.getElementById('size-16').onclick = size16;
 
 <p>O JavaScript não oferece uma maneira nativa de fazer isso, mas é possível emular métodos privados usando closures. Métodos privados não são somente úteis para restringir acesso ao código: eles também oferecem uma maneira eficaz de gerenciar seu namespace global, evitando que métodos não essenciais baguncem a interface pública do seu código.</p>
 
-<p>Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como <a class="external" href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>:</p>
+<p>Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como <a class="external" href="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>:</p>
 
 <pre class="brush: js">var Counter = (function() {
   var privateCounter = 0;

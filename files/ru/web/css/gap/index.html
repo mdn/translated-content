@@ -9,7 +9,7 @@ translation_of: Web/CSS/gap
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<div>{{EmbedInteractiveExample("pages/css/grid-gap.html")}}</div>
+<div>{{EmbedInteractiveExample("pages/css/gap.html")}}</div>
 
 <div class="note">
 <p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> initially defined the <code>grid-gap</code> property. This prefixed property is being replaced by <code>gap</code>. However, in order to support browsers that implemented <code>grid-gap</code> and not <code>gap</code> for grid, you will need to use the prefixed property as in the interactive example above.</p>
@@ -17,7 +17,7 @@ translation_of: Web/CSS/gap
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: css; no-line-numbers notranslate">/* One &lt;length&gt; value */
+<pre class="brush: css; no-line-numbers">/* One &lt;length&gt; value */
 gap: 20px;
 gap: 1em;
 gap: 3vmin;
@@ -70,7 +70,7 @@ gap: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;div id="flexbox"&gt;
+<pre class="brush: html;">&lt;div id="flexbox"&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -82,7 +82,7 @@ gap: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[5] notranslate">#flexbox {
+<pre class="brush: css; highlight[5]">#flexbox {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
@@ -107,7 +107,7 @@ gap: unset;
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;div id="grid"&gt;
+<pre class="brush: html;">&lt;div id="grid"&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
   &lt;div&gt;&lt;/div&gt;
@@ -122,13 +122,13 @@ gap: unset;
 <h4 id="CSS_2">CSS</h4>
 
 <div class="hidden">
-<pre class="brush: css notranslate">#grid {
+<pre class="brush: css">#grid {
   grid-gap: 20px 5px;
 }
 </pre>
 </div>
 
-<pre class="brush: css; highlight[5] notranslate">#grid {
+<pre class="brush: css; highlight[5]">#grid {
   display: grid;
   height: 200px;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
@@ -149,7 +149,7 @@ gap: unset;
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;p class="content-box"&gt;
+<pre class="brush: html;">&lt;p class="content-box"&gt;
   This is some multi-column text with a 40px column
   gap created with the CSS &lt;code&gt;gap&lt;/code&gt; property.
   Don't you think that's fun and exciting? I sure do!
@@ -158,7 +158,7 @@ gap: unset;
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css; highlight[3] notranslate">.content-box {
+<pre class="brush: css; highlight[3]">.content-box {
   column-count: 3;
   gap: 40px;
 }
@@ -195,7 +195,7 @@ gap: unset;
 
 <h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
 
-<p>{{Compat("css.properties.gap.flex_context")}}</p>
+<p>{{Compat}}</p>
 
 <h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
 

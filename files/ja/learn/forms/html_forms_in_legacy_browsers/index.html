@@ -128,7 +128,7 @@ input[type="button"] {
 
 <p>一般に、フォームコントロールの既定の外観は変更しない方が良いと考えられています。というのも、 1 つの CSS プロパティの値を変更すると、一部の入力型は変更されますが、他の入力型は変更されないからです。例えば、 <code>input { font-size: 2rem; }</code> と宣言した場合、 <code>number</code>、<code>date</code>、<code>text</code> には影響がありますが、 <code>color</code> や <code>range</code> には影響しません。プロパティを変更すると、予期せぬ形でウィジェットの外観に影響を与えることがあります。例えば、 <code>[value] { background-color: #ccc; }</code> は、 <code>value</code> 属性を持つすべての {{HTMLElement("input")}} を対象としていますが、 {{HTMLElement("meter")}} の背景色や境界線の角の丸めを変更すると、ブラウザーによって異なる予期せぬ結果になる可能性があります。 {{cssxref('appearance', 'appearance: none;')}} と宣言してブラウザーのスタイルを削除することもできますが、一般的には目的を達成できません。すべてのスタイルが失われ、訪問者が慣れ親しんだ既定のルック＆フィールが削除されるからです。</p>
 
-<p>まとめるとすると、フォームコントロールのウィジェットに CSS でスタイル付けすることで、予測できない副作用が発生することがあります。だからやめましょう。 <a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">フォームウィジェット向けプロパティ実装状況一覧</a>の記事の複雑さからもわかるように、非常に難しいのです。テキスト要素に多少の調整 (サイズやフォントの色など) を行うことはまだ可能でも、必ず副作用が発生します。最良の方法は、 HTML フォームウィジェットにスタイルをまったく適用しないことです。しかし、周囲のアイテムになら、どれでも適用することはできます。また、どうしてもフォームウィジェットの既定のスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、 <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">JavaScript でのウィジェットの再構築</a>など、難しいテクニックを検討することもできます。しかし、その場合は、<a href="https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/" rel="external">そのような愚かな要求をするクライアントに請求すること</a>をためらってはいけません。</p>
+<p>まとめるとすると、フォームコントロールのウィジェットに CSS でスタイル付けすることで、予測できない副作用が発生することがあります。だからやめましょう。 <a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">フォームウィジェット向けプロパティ実装状況一覧</a>の記事の複雑さからもわかるように、非常に難しいのです。テキスト要素に多少の調整 (サイズやフォントの色など) を行うことはまだ可能でも、必ず副作用が発生します。最良の方法は、 HTML フォームウィジェットにスタイルをまったく適用しないことです。しかし、周囲のアイテムになら、どれでも適用することはできます。また、どうしてもフォームウィジェットの既定のスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、 <a href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls">JavaScript でのウィジェットの再構築</a>など、難しいテクニックを検討することもできます。しかし、その場合は、<a href="https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/" rel="external">そのような愚かな要求をするクライアントに請求すること</a>をためらってはいけません。</p>
 
 <h2 id="Feature_detection_and_polyfills"">機能検出とポリフィル</h2>
 
@@ -159,7 +159,7 @@ input[type="button"] {
 
 <h3 id="The_Modernizr_library">Modernizr ライブラリー</h3>
 
-<p>欠けている API を提供することで、すばらしい "ポリフィル" が大きな助けになるケースが多数あります。<a href="https://remysharp.com/2010/10/08/what-is-a-polyfill/" rel="external" title="http://remysharp.com/2010/10/08/what-is-a-polyfill/">ポリフィル</a>は、古いブラウザにおける機能性の "穴を埋める" 小さな JavaScript コードです。ポリフィルは任意の機能のサポート状況を改善するために使用できますが、JavaScript 向けに使用するのは CSS や HTML 向けより低リスクです。JavaScript が動作しない可能性は多数あります(ネットワークの問題、スクリプトの競合 など)。しかし JavaScript については、控えめな JavaScript を念頭に置いて取り組む場合はポリフィルが欠けたとしても、重大な問題にはなりません。</p>
+<p>欠けている API を提供することで、すばらしい "ポリフィル" が大きな助けになるケースが多数あります。<a href="https://remysharp.com/2010/10/08/what-is-a-polyfill/" rel="external">ポリフィル</a>は、古いブラウザにおける機能性の "穴を埋める" 小さな JavaScript コードです。ポリフィルは任意の機能のサポート状況を改善するために使用できますが、JavaScript 向けに使用するのは CSS や HTML 向けより低リスクです。JavaScript が動作しない可能性は多数あります(ネットワークの問題、スクリプトの競合 など)。しかし JavaScript については、控えめな JavaScript を念頭に置いて取り組む場合はポリフィルが欠けたとしても、重大な問題にはなりません。</p>
 
 <p>欠けている API に対してポリフィルを適用する最善の方法は、<a href="https://modernizr.com" rel="external">Modernizr</a> ライブラリー、およびそこからスピンオフしたプロジェクトである <a href="https://yepnopejs.com" rel="external">YepNope</a> を使用することです。Modernizr は、機能が利用できるかを確認して適宜対応を行えるようにするためのライブラリーです。YepNope は、条件付きで読み込みを行うライブラリーです。</p>
 

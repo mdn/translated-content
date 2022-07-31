@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Guide/The_Employee_Example/Creating_the_Hierarchy
 <h3 id=".E9.9A.8E.E5.B1.A4.E3.81.AE.E4.BD.9C.E6.88.90" name=".E9.9A.8E.E5.B1.A4.E3.81.AE.E4.BD.9C.E6.88.90">階層の作成</h3>
 <p>Employee の階層を実装するための適当なコンストラクタ関数を定義する方法はいくつかあります。これの定義に何を選択するかは、アプリケーションで何ができるようにしたいかに大きくよります。</p>
 <p>このセクションではとても単純（かつ比較的柔軟でない）定義の使用方法を示し、継承を機能させる方法を実際に示します。これらの定義では、オブジェクト作成時に何らかのプロパティの値を指定することはできません。新しく作成されるオブジェクトは単にデフォルトの値を取得するだけです。これは後から変更できます。図 8.2 ではこれらの単純な定義を備えた階層を例示します。</p>
-<p>実際のアプリケーションでは、オブジェクト作成時にプロパティの値を設定できるようにするコンストラクタを定義することになるでしょう（詳しくは <a href="/ja/Core_JavaScript_1.5_Guide/The_Employee_Example/More_Flexible_Constructors" title="ja/Core_JavaScript_1.5_Guide/The_Employee_Example/More_Flexible_Constructors">より柔軟なコンストラクタ</a> を参照）。今回はこれらの単純な定義を使用して、継承はどのようにして起こるのかを実際に示していくことにします。</p>
+<p>実際のアプリケーションでは、オブジェクト作成時にプロパティの値を設定できるようにするコンストラクタを定義することになるでしょう（詳しくは <a href="/ja/Core_JavaScript_1.5_Guide/The_Employee_Example/More_Flexible_Constructors">より柔軟なコンストラクタ</a> を参照）。今回はこれらの単純な定義を使用して、継承はどのようにして起こるのかを実際に示していくことにします。</p>
 <p><img alt="Image:hier02.gif" class="internal" src="/@api/deki/files/1905/=Hier02.gif"><br>
  <small><strong>図 8.2：Employee オブジェクトの定義</strong></small></p>
 <p>以下に示すように、Java と JavaScript の <code>Employee</code> の定義は似ています。唯一の相違点は、Java では各プロパティに対して型を指定する必要があるのに対して、JavaScript ではその必要がないことです。また、Java のクラスでは明示的なコンストラクタメソッドを作成する必要があります。</p>

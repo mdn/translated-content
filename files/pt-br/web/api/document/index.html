@@ -5,7 +5,7 @@ translation_of: Web/API/Document
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<div></div>
+
 
 <p>Para cada página carregada no browser, existe um objeto <code><strong>Document</strong></code>. A interface <code>Document</code> serve como um ponto de entrada para o conteúdo da Página ( a árvore DOM, incluindo elementos como {{HTMLElement("body")}} e {{HTMLElement("table")}}) e provê funcionalidades globais ao documento (como obter a URL da página e criar novos elementos no documento).</p>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/Document
 
 <p>Dependendo do tipo do documento (e.g. <a href="/en-US/docs/HTML" title="HTML">HTML</a> ou <a href="/en-US/docs/XML" title="XML">XML</a>), diferentes APIs estarão disponívels no objeto <code><strong>Document</strong></code>.</p>
 
-<p>Todo objeto <strong><code>Document</code></strong> implementa a interface <code><a href="http://dom.spec.whatwg.org/#interface-document">Document</a> (e consequentemente as interfaces </code>{{domxref("Node")}} e {{domxref("EventTarget")}}<code>). Portanto, as principais propriedades e métodos documentados nesta página estarão disponíveis para todos os tipos de documents.</code></p>
+<p>Todo objeto <strong><code>Document</code></strong> implementa a interface <code><a href="http://dom.spec.whatwg.org/#interface-document">Document</a></code> (e consequentemente as interfaces {{domxref("Node")}} e {{domxref("EventTarget")}}). Portanto, as principais propriedades e métodos documentados nesta página estarão disponíveis para todos os tipos de documents.</p>
 
 <ul>
  <li>Em navegadores mais atuais, alguns documentos (ex: aqueles que são servidos com o Content-Type <code>text/html</code>) também implementam a interface {{domxref("HTMLDocument")}}.</li>
@@ -356,7 +356,7 @@ translation_of: Web/API/Document
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <h3 id="Firefox_notes">Firefox notes</h3>
 
@@ -366,7 +366,7 @@ translation_of: Web/API/Document
  <dt>{{domxref("document.currentScript")}} {{gecko_minversion_inline("2.0")}}</dt>
  <dd>Returns the {{HTMLElement("script")}} element that is currently executing.</dd>
  <dt>{{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}</dt>
- <dd>(<strong>Mozilla add-ons only!</strong>) Returns the {{Interface("nsIURI")}} object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
+ <dd>(<strong>Mozilla add-ons only!</strong>) Returns the <code>nsIURI</code> object representing the URI of the document. This property only has special meaning in privileged JavaScript code (with UniversalXPConnect privileges).</dd>
  <dt>{{domxref("document.popupNode")}}</dt>
  <dd>Returns the node upon which a popup was invoked.</dd>
  <dt>{{domxref("document.tooltipNode")}}</dt>
@@ -392,7 +392,7 @@ translation_of: Web/API/Document
 
 <dl>
  <dt>{{domxref("document.fileSize")}}* {{non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
+ <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
  <dt><span style="font-weight: normal; line-height: 1.5;">Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</span></dt>
 </dl>
 

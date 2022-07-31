@@ -2,44 +2,88 @@
 title: XMLHttpRequest.responseType
 slug: Web/API/XMLHttpRequest/responseType
 tags:
-  - XMLHttpRequest.responseType
+  - AJAX
+  - API
+  - HTTP
+  - HTTP Response
+  - HTTP Response Type
+  - Property
+  - Reference
+  - Response
+  - XHR
+  - XMLHttpRequest
+  - responseType
 translation_of: Web/API/XMLHttpRequest/responseType
+browser-compat: api.XMLHttpRequest.responseType
 ---
-<p>{{APIRef('XMLHttpRequest')}}</p>
+<div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><strong>XMLHttpRequest.responseType </strong>属性是一个枚举类型的属性，返回响应数据的类型。它允许我们手动的设置返回数据的类型。如果我们将它设置为一个空字符串，它将使用默认的"text"类型。</p>
+<p>{{DOMxRef("XMLHttpRequest")}} 属性 <strong><code>responseType</code></strong> 是一个枚举字符串值，用于指定响应中包含的数据类型。</p>
 
-<p>在工作环境(Work Environment)中将responseType的值设置为"document"通常会被忽略. 当将responseType设置为一个特定的类型时，你需要确保服务器所返回的类型和你所设置的返回值类型是兼容的。那么如果两者类型不兼容呢?恭喜你，你会发现服务器返回的数据变成了null，即使服务器返回了数据。还有一个要注意的是，给一个同步请求设置responseType会抛出一个<code>InvalidAccessError</code> 的异常。</p>
+<p>它还允许作者更改响应类型。如果将 <code>responseType</code> 的值设置为空字符串，则会使用 <code>text</code> 作为默认值。</p>
 
-<p>responseType支持以下几种值：</p>
+<h2 id="syntax">语法</h2>
 
-<p>{{page("/zh-CN/docs/Web/API/XMLHttpRequestResponseType", "取值")}}</p>
+<pre class="brush: js">var <var>type</var> = <var>XMLHttpRequest</var>.responseType;
 
-<h2 id="规范">规范</h2>
+<var>XMLHttpRequest</var>.responseType = <var>type</var>;</pre>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest', '#the-responsetype-attribute')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>WHATWG living standard</td>
-  </tr>
- </tbody>
-</table>
+<h3 id="Value">值</h3>
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+<p>{{JSxRef("Global_Objects/String")}} 类型的值，指定响应包含的数据类型。它可以采用以下值：</p>
 
-<p>{{Compat("api.XMLHttpRequest.responseType")}}</p>
+<dl>
+    <dt><code>""</code></dt>
+    <dd>空的 <code>responseType</code> 字符串与默认类型 <code>"text"</code> 相同。</dd>
+    <dt><code>"arraybuffer"</code></dt>
+    <dd>{{DOMxRef("XMLHttpRequest.response", "response")}} 是一个包含二进制数据的 JavaScript {{JSxRef("ArrayBuffer")}}。</dd>
+    <dt><code>"blob"</code></dt>
+    <dd>{{DOMxRef("XMLHttpRequest.response", "response")}} 是一个包含二进制数据的 {{DOMxRef("Blob")}} 对象。</dd>
+    <dt><code>"document"</code></dt>
+    <dd>{{DOMxRef("XMLHttpRequest.response", "response")}} 是一个 {{Glossary("HTML")}} {{DOMxRef("Document")}} 或 {{Glossary("XML")}} {{DOMxRef("XMLDocument")}}，根据接收到的数据的 MIME 类型而定。请参阅 <a href="/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a> 中的 HTML，了解有关使用 XHR 获取 HTML 内容的更多信息。</dd>
+    <dt><code>"json"</code></dt>
+    <dd>{{DOMxRef("XMLHttpRequest.response", "response")}} 是通过将接收到的数据内容解析为 {{Glossary("JSON")}} 而创建的 JavaScript 对象。</dd>
+    <dt><code>"text"</code></dt>
+    <dd>{{DOMxRef("XMLHttpRequest.response", "response")}} 是 {{DOMxRef("DOMString")}} 对象中的文本。</dd>
+    <dt><code>"ms-stream"</code> {{non-standard_inline}}</dt>
+    <dd>{{DOMxRef("XMLHttpRequest.response", "response")}} 是流式下载的一部分；此响应类型仅允许用于下载请求，并且仅受 Internet Explorer 支持。</dd>
+</dl>
 
-<h2 id="了解更多">了解更多</h2>
+<div class="note">
+    <p>将 <code>responseType</code> 设置为特定值时，作者应确保服务器实际发送的响应与该格式兼容。如果服务器返回的数据与设置的 <code>responseType</code> 不兼容，则 {{DOMxRef("XMLHttpRequest.response", "response")}} 的值将为<code>null</code> .</p>
+</div>
+
+<h3 id="Exceptions">异常</h3>
+
+<dl>
+    <dt><code>InvalidAccessError</code></dt>
+    <dd>试图更改 <code>XMLHttpRequest</code> 的 <code>responseType</code>，该值处于同步模式但不在 {{DOMxRef("Worker")}} 中。有关其他详细信息，请参阅下面的 <a href="#synchronous_xhr_restrictions">同步 XHR 限制</a>。</dd>
+</dl>
+
+<h2 id="Usage_notes">使用说明</h2>
+
+<h3 id="Synchronous_XHR_restrictions">同步 XHR 限制</h3>
+
+<p>您不能在同步<code>XMLHttpRequest</code> 中更改 <code>responseType</code> 的值，除非请求属于 {{DOMxRef("Worker")}}。此限制部分旨在帮助确保同步操作不会用于阻塞浏览器主线程的大型事务，从而阻碍用户体验。</p>
+
+<p>XHR 请求默认是异步的；它们仅通过在调用 {{DOMxRef("XMLHttpRequest.open", "open()")}} 时将 <code>false</code> 作为可选<code>async</code> 参数的值传递来置于同步模式。</p>
+
+<h3 id="Restrictions_in_Workers">Worker 中的限制</h3>
+
+<p>在 {{DOMxRef("Worker")}} 中尝试将 <code>responseType</code> 的值设置为 <code>document</code> 时会被忽略。</p>
+
+<h2 id="Specifications">规范</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">相关链接</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li>
- <li><a href="/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a></li>
- <li>响应数据： {{domxref("XMLHttpRequest.response", "response")}} 、 {{domxref("XMLHttpRequest.responseText", "responseText")}} 和 {{domxref("XMLHttpRequest.responseXML", "responseXML")}}</li>
+    <li><a href="/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">使用 XMLHttpRequest</a></li>
+    <li><a href="/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a></li>
+    <li>{{DOMxRef("XMLHttpRequest.response", "response")}}, {{DOMxRef("XMLHttpRequest.responseText", "responseText")}} 和 {{DOMxRef("XMLHttpRequest.responseXML", "responseXML")}}</li>
 </ul>

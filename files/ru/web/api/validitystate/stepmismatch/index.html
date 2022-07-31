@@ -1,0 +1,38 @@
+---
+title: ValidityState.stepMismatch
+slug: Web/API/ValidityState/stepMismatch
+tags:
+  - API
+  - Constraint Validation API
+  - DOM
+  - Свойство
+  - Справочник
+browser-compat: api.ValidityState.stepMismatch
+---
+<p>Доступное только для чтения свойство <strong><code>stepMismatch</code></strong> объекта <strong><code><a href="/ru/docs/Web/API/ValidityState">ValidityState</a></code></strong> указывает, соответствует ли значение {{HTMLElement("input")}} после изменения пользователем ограничениям, установленным атрибутом <code>step</code>.</p>
+
+<p>Если поле является числовым, включая типы {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} и значение атрибута <code>step</code> не равно <code>any</code>, в случае не соответствия поля ограниченям атрибутов <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code> и <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code>, то <code>stepMismatch</code> будет true. Если остаток от деления значения элемента формы за вычетом <code><a href="/en-US/docs/Web/HTML/Attributes/min">min</a></code> на <code><a href="/en-US/docs/Web/HTML/Attributes/step">step</a></code>, (которое по умолчаиню равно 1) не равен нулю, то это является несоответствием.</p>
+
+<p>Учитывая следующее:</p>
+
+<pre class="brush: html">&lt;input type="number" min="20" max="40" step="2"/&gt;</pre>
+
+<p>если <code>(value - min) % 2 != 0</code>, <code>stepMismatch</code> будет true.</p>
+
+<p>Если true, элемент соответствует CSS-псевдоклассам {{cssxref(":invalid")}} и {{cssxref(":out-of-range")}}.</p>
+
+<h2 id="Specifications">Спецификации</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">Смотрите также</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation">Валидация ограничений</a></li>
+ <li><a href="/ru/docs/Learn/Forms/Form_validation">Валидация форм на стороне клиента</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Attributes/step">Атрибут <code>step</code></a></li>
+</ul>

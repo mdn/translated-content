@@ -5,15 +5,15 @@ translation_of: Web/API/Range/getBoundingClientRect
 ---
 <p>{{ ApiRef("Range") }}{{SeeCompatTable}}</p>
 <p>Метод <strong><code>Range.getBoundingClientRect()</code></strong> возвращает объект {{ domxref("ClientRect") }}, соответствующий фрагменту документа, на основе которого создан объект Range; это прямоугольник, непосредственно обрамляющий объединение прямоугольников для каждого элемента фрагмента документа.</p>
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><em>boundingRect</em> = <em>range</em>.getBoundingClientRect()
 </pre>
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 <pre class="brush: js">range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
 rect = range.getBoundingClientRect();
 </pre>
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -29,7 +29,7 @@ rect = range.getBoundingClientRect();
  </tbody>
 </table>
 <h2 id="Поддержка_браузеров">Поддержка браузеров</h2>
-<p>{{Compat("api.Range.getBoundingClientRect")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 <ul>

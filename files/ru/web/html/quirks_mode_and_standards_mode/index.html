@@ -7,7 +7,7 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 <p>На сегодняшний день существует три режима отображения, которые используются движками разметки (layout engines) браузеров: режим совместимости (quirks mode), частично стандартный режим (almost standards mode) и стандартный режим (full standards mode). В режиме совместимости (<strong>quirks mode)</strong>, разметка эмулирует нестандартное поведение браузеров Navigator 4 и Internet Explorer 5. Этот режим необходим для поддержки сайтов, созданных до начала широкого применения веб стандартов. В стандартном режиме (<strong>full standards mode)</strong> поведение браузера соответствует (будем надеяться) описанному в спецификациях HTML и CSS. В частично стандартном режиме (<strong>almost standards mode) </strong> реализовано лишь незначительное количество так называемых "странностей" (quirks).</p>
 
-<h2 id="How_does_Mozilla_determine_which_mode_to_use.3F" name="How_does_Mozilla_determine_which_mode_to_use.3F">Как браузеры понимают, какой режим использовать?</h2>
+<h2 id="How_does_Mozilla_determine_which_mode_to_use.3F">Как браузеры понимают, какой режим использовать?</h2>
 
 <p>Браузеры используют тег DOCTYPE, чтобы определить в каком режиме обрабатывать документ. Для отображения страницы в стандартном режиме необходимо добавить тег DOCTYPE в HTML-код страницы как показано в примере ниже:</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 <p>В стандарте HTML5 тег DOCTYPE используется исключительно для активации стандартного режима отображения. Предыдущие версии HTML придавали дополнительное значение использованию тега DOCTYPE, но браузеры использовали тег DOCTYPE исключительно для переключения между режимом совместимости и стандартным режимом. </p>
 
-<p>Смотрите также детальное описание того, <a class="external" href="http://hsivonen.iki.fi/doctype/" title="http://hsivonen.iki.fi/doctype/">как разные браузеры выбирают режимы</a>.</p>
+<p>Смотрите также детальное описание того, <a class="external" href="http://hsivonen.iki.fi/doctype/">как разные браузеры выбирают режимы</a>.</p>
 
 <h3 id="XHTML">XHTML</h3>
 
@@ -35,12 +35,12 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 <p>Если страница написана в  XHTML формате с использованием типа MIME <code>text/html</code>, браузер будет интерпретировать его как HTML, поэтому для использования браузером стандартного режима отображения необходимо  указать тег DOCTYPE. </p>
 
-<h2 id="What_are_the_differences_between_the_modes.3F" name="What_are_the_differences_between_the_modes.3F">Как узнать, какой режим используется?</h2>
+<h2 id="What_are_the_differences_between_the_modes.3F">Как узнать, какой режим используется?</h2>
 
 <p>В Firefox необходимо в контекстном меню "Информация о странице" (<em>View Page Info)</em> проверить<em> </em>"Тип визуализации" (<em>Render Mode)</em>.</p>
 
 <p>В Internet Explorer через <em>F12</em> проверить Тип документа (<em>Document Mode)</em>.</p>
 
-<h2 id="What_are_the_differences_between_the_modes.3F" name="What_are_the_differences_between_the_modes.3F">В чем разница между режимами?</h2>
+<h2 id="What_are_the_differences_between_the_modes.3F">В чем разница между режимами?</h2>
 
 <p>См. <a href="/en-US/docs/Mozilla_Quirks_Mode_Behavior" title="Mozilla_Quirks_Mode_Behavior">список странностей (list of quirks)</a> и <a href="/en-US/docs/Gecko's_&quot;Almost_Standards&quot;_Mode" title="Gecko%27s_%22Almost_Standards%22_Mode">частично стандартный режим</a> для того, чтобы увидеть разницу между режимами.</p>

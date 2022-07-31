@@ -14,10 +14,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <p><code><strong>flatMap()</strong></code> 메서드는 먼저 매핑함수를 사용해 각 엘리먼트에 대해 map 수행 후, 결과를 새로운 배열로 평탄화합니다. 이는 깊이 1의 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a> 이 뒤따르는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> 과 동일하지만, <code>flatMap</code> 은 아주 유용하며 둘을 하나의 메소드로 병합할 때 조금 더 효율적입니다.</p>
 
-<p class="hidden">\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}</p>
-
-
-
 <h2 id="구문">구문</h2>
 
 <pre class="syntaxbox"><var>arr</var>.flatMap(<var>callback(currentValue[, index[, array]])</var>[, <var>thisArg</var>])</pre>
@@ -53,13 +49,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 <h3 id="map_과_flatMap"><code>map</code> 과 <code>flatMap</code></h3>
 
-<pre class="brush: js">let arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
+<pre class="brush: js">let arr1 = [1, 2, 3, 4];
 
-arr1.map(</span></span></span></span></span>x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+arr1.map(x =&gt; [x * 2]);
 // [[2], [4], [6], [8]]
 
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);
-// [2, 4, 6, 8]</span></span></span></span></span>
+arr1.flatMap(x =&gt; [x * 2]);
+// [2, 4, 6, 8]
 
 // 한 레벨만 평탄화됨
 arr1.flatMap(x =&gt; [[x * 2]]);
@@ -75,14 +71,14 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 arr1.map(x=&gt;x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
-arr1.flatMap(x =&gt; x.split(" ")<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);
-// ["it's","Sunny","in","California"]</span></span></span></span></span></pre>
+arr1.flatMap(x =&gt; x.split(" "));
+// ["it's","Sunny","in","California"]</pre>
 
 <p>출력 리스트의 길이는 입력 리스트의 길이와 다를 수 있습니다.</p>
 
 <h3 id="flatMap_을_이용한_아이템_추가_및_제거"><code>flatMap()</code> 을 이용한 아이템 추가 및 제거</h3>
 
-<p><code>flatMap</code>은 <code>map</code>을 하는 과정에서 아이템을 추가하거나 제거하여 아이템 개수를 바꿀 수 있습니다. 다른 말로는 각각의 아이템에 대하여 1:1대응관계 뿐만 아니라 다대다 대응도 가능하다는 것입니다. 이러한 측면에서 <a href="https://wiki.developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>가 하는 역할의 반대역할을 한다고 볼 수 있습니다. 단순히 아무런 변화를 주고 싶지 않을때에는 원소 하나를 가진 배열을 반환할 수도, 아이템을 추가하고 싶을 때는 다-원소 배열을 반환할 수도, 아이템을 제거하고 싶을 때에는 빈 배열을 반환할 수도 있습니다.</p>
+<p><code>flatMap</code>은 <code>map</code>을 하는 과정에서 아이템을 추가하거나 제거하여 아이템 개수를 바꿀 수 있습니다. 다른 말로는 각각의 아이템에 대하여 1:1대응관계 뿐만 아니라 다대다 대응도 가능하다는 것입니다. 이러한 측면에서 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>가 하는 역할의 반대역할을 한다고 볼 수 있습니다. 단순히 아무런 변화를 주고 싶지 않을때에는 원소 하나를 가진 배열을 반환할 수도, 아이템을 추가하고 싶을 때는 다-원소 배열을 반환할 수도, 아이템을 제거하고 싶을 때에는 빈 배열을 반환할 수도 있습니다.</p>
 
 <pre><code>// 다음은 음수는 제거하고 홀수는 1과 짝수로 분리하는 예시입니다.
 let a = [5, 4, -3, 20, 17, -33, -4, 18]
@@ -97,21 +93,21 @@ a.flatMap( (n) =&gt;
 
 // expected output: [4, 1, 4, 20, 16, 1, 18]</code></pre>
 
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+<div class="line">//=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</div>
 
 <h2 id="대안">대안</h2>
 
 <h3 id="reduce_와_concat"><code>reduce</code> 와 <code>concat</code></h3>
 
-<pre class="brush: js">var arr1 = <span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>[</span></span><span class="constant decimal js numeric"><span>1</span></span><span class="comma delimiter js meta object"><span>,</span></span><span> </span><span class="brace js meta square"><span>2, 3, 4];
-</span></span></span></span></span>
-arr1.flatMap(x =&gt; [x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>);</span></span></span></span></span>
+<pre class="brush: js">var arr1 = [1, 2, 3, 4];
+
+arr1.flatMap(x =&gt; [x * 2]);
 // 다음과 동일합니다
-arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>), []);</span></span></span></span></span>
-<span class="js source"><span class="function-call js meta"><span class="js meta"><span class="brace js meta square"><span>// [2, 4, 6, 8]</span></span></span></span></span>
+arr1.reduce((acc, x) =&gt; acc.concat([x * 2]), []);
+// [2, 4, 6, 8]
 </pre>
 
-<div class="line"><span class="js source"><span class="comment double-slash js line"><span class="comment definition js punctuation"><span>//</span></span><span>=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span></span></div>
+<div class="line">//=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</div>
 
 <h2 id="명세">명세</h2>
 

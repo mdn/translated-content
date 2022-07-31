@@ -15,13 +15,13 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="Визуальное_представление">Визуальное представление</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="/files/4617/default.svg" style="height: 270px; width: 294px;"></p>
+<p style="text-align: center;"><img alt="Stack, heap, queue" src="/en-US/docs/Web/JavaScript/EventLoop/the_javascript_runtime_environment_example.svg" style="height: 270px; width: 294px;"></p>
 
 <p style="text-align: center;">Для лучшего <strong>визуального</strong> представления работы <strong>Event loop</strong>, Вы можете ознакомиться с данным видео: <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;t=389s">https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;t=389s</a></p>
 
 <h3 id="Стек">Стек</h3>
 
-<p>Вызов любой функции создаёт контекст выполнения (<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#JavaScript_execution_contexts">Execution Context</a>). При вызове вложенной функции создаётся новый контекст, а старый сохраняется в специальной структуре данных - стеке вызовов (Call Stack).</p>
+<p>Вызов любой функции создаёт контекст выполнения (<a href="/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#JavaScript_execution_contexts">Execution Context</a>). При вызове вложенной функции создаётся новый контекст, а старый сохраняется в специальной структуре данных - стеке вызовов (Call Stack).</p>
 
 <pre class="brush: js">function f(b) {
   var a = 12;

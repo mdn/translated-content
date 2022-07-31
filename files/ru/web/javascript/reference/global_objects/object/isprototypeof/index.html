@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>isPrototypeOf()</strong></code> проверяет, входит ли объект в цепочку прототипов другого объекта.</p>
 
@@ -19,11 +19,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 <p><strong>Обратите внимание:</strong> метод <code>isPrototypeOf()</code> отличается от оператора {{jsxref("Operators/instanceof", "instanceof")}}. Выражение "<code>object instanceof AFunction</code>" проверяет, присутствует ли в цепочке прототипов объекта <code>object</code> объект <code>AFunction.prototype</code>, а не сам объект <code>AFunction</code>.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>prototypeObj</var>.isPrototypeOf(<var>object</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>prototypeObj</code></dt>
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
  <dd>Объект, в чьей цепочке прототипов производится поиск.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>isPrototypeOf()</code> позволяет вам проверять, существует ли объект в цепочке прототипов другого объекта.</p>
 
@@ -70,38 +70,15 @@ if (Fi.prototype.isPrototypeOf(fum)) {
 
 <p>Таким образом, вместе с оператором {{jsxref("Operators/instanceof", "instanceof")}}, это особенно пригождается, если у вас есть код, который может работать только с объектами, имеющими определённую цепочку прототипов, к примеру, чтобы он мог гарантировать, что в объекте присутствуют определённые методы или свойства.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Operators/instanceof", "instanceof")}}</li>

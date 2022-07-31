@@ -244,7 +244,7 @@ f(); // выдаст TypeError
 
 <h3 id="Безопасный_JavaScript">"Безопасный" JavaScript</h3>
 
-<p>Строгий режим упрощает написание "безопасного" JavaScript кода. Сейчас некоторые веб-сайты предоставляют пользователям возможность писать JavaScript, который будет выполняться на сайте <em>от имени других пользователей. </em>В браузерах, JavaScript может иметь доступ к приватной информации пользователя, поэтому, в целях ограничения доступа к запретной функциональности, такой JavaScript перед выполнением должен быть частично преобразован. Гибкость JavaScript делает это практически невозможным без многочисленных проверок во время исполнения. Функционал, исполняемый языком иногда столь массивен, что выполнение любых дополнительных проверок во время исполнения скрипта приведёт к значительной потере производительности. Однако, некоторые особенности строгого режима, плюс обязательное требование того, чтобы JavaScript, загруженный пользователем, имел строгий режим и вызывался определённым способом, существенно снижают потребность в таких проверках.</p>
+<p>Строгий режим упрощает написание "безопасного" JavaScript-кода. Сейчас некоторые веб-сайты предоставляют пользователям возможность писать JavaScript, который будет выполняться на сайте <em>от имени других пользователей. </em>В браузерах, JavaScript может иметь доступ к приватной информации пользователя, поэтому, в целях ограничения доступа к запретной функциональности, такой JavaScript перед выполнением должен быть частично преобразован. Гибкость JavaScript делает это практически невозможным без многочисленных проверок во время исполнения. Функционал, исполняемый языком иногда столь массивен, что выполнение любых дополнительных проверок во время исполнения скрипта приведёт к значительной потере производительности. Однако, некоторые особенности строгого режима, плюс обязательное требование того, чтобы JavaScript, загруженный пользователем, имел строгий режим и вызывался определённым способом, существенно снижают потребность в таких проверках.</p>
 
 <p>Во-первых, значение, передаваемое в функцию как <code>this</code>, в строгом режиме не приводится к объекту (не "упаковывается"). В обычной функции <code>this</code> всегда представляет собой объект: либо это непосредственно объект, в случае вызова с <code>this</code>, представляющим объект-значение; либо значение, упакованное в объект, в случае вызова с <code>this</code> типа Boolean, string, или number; либо глобальный объект, если тип <code>this</code> это <code>undefined</code> или <code>null</code>. (Для точного определения конкретного <code>this</code> используйте <code>{{jsxref('Global_Objects/Function/call', 'call')}}</code>, <code>{{jsxref('Global_Objects/Function/apply', 'apply')}}</code>, или <code>{{jsxref('Global_Objects/Function/bind', 'bind')}}</code>.) Автоматическая упаковка не только снижает производительность, но и выставляет на показ глобальный объект, что в браузерах является угрозой безопасности, потому что глобальный объект предоставляет доступ к функциональности, которая должна быть ограничена в среде "безопасного" JavaScript. Таким образом, для функции в строгом режиме точно определённый <code>this</code> не упаковывается в объект, а если не определён точно, <code>this</code> является <code>undefined</code>:</p>
 
@@ -328,40 +328,13 @@ function baz() { // верно
 
 <p>В большинстве браузеров в настоящее время строгий режим реализован. Однако не стоит впадать в слепую зависимость от него, потому что существует множество <a class="external external-icon" href="http://caniuse.com/use-strict" rel="external" title="caniuse.com availability of strict mode">Версий браузеров, поддерживающих строгий режим лишь частично</a> или вовсе не поддерживающих оный (например, Internet Explorer ниже версии 10!). <em>Строгий режим изменяет семантику.</em> Надежда на эти изменения приведёт к ошибкам и погрешностям в браузерах, в которых строгий режим не реализован. Проявляйте осторожность при использовании строгого режима, и подкрепляйте надёжность строгого режима тестами особенностей, которые проверяют, насколько верно реализованы его фрагменты. Наконец, старайтесь <em>тестировать свой код в браузерах, как поддерживающих, так и не поддерживающих строгий режим</em>. Если вы проводите тестирование только в тех браузерах, которые не поддерживают строгий режим, то вполне вероятно у вас появятся проблемы в браузерах, его поддерживающих, и наоборот.</p>
 
-<h2 id="Спецификации">Спецификации</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-10.1.1', 'Strict Mode Code')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Основные определения. Смотрите также: <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-C">Strict mode restriction and exceptions</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-strict-mode-code', 'Strict Mode Code')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-strict-mode-of-ecmascript">Ограничения и исключения строгого режима (Strict mode restriction and exceptions</a>)</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-strict-mode-code', 'Strict Mode Code')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td><a href="https://tc39.github.io/ecma262/#sec-strict-mode-of-ecmascript">Ограничения и исключения строгого режима (Strict mode restriction and exceptions</a>)</td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a class="external" href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/" title="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
- <li><a class="external" href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/" title="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
- <li><a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/" title="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
- <li><a class="external" href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/" title="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
+ <li><a class="external" href="http://whereswalden.com/2010/09/08/new-es5-strict-mode-support-now-with-poison-pills/">Where's Walden? » New ES5 strict mode support: now with poison pills!</a></li>
+ <li><a class="external" href="http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/">Where's Walden? » New ES5 strict mode requirement: function statements not at top level of a program or function are prohibited</a></li>
+ <li><a class="external" href="http://whereswalden.com/2011/01/10/new-es5-strict-mode-support-new-vars-created-by-strict-mode-eval-code-are-local-to-that-code-only/">Where's Walden? » New ES5 strict mode support: new vars created by strict mode eval code are local to that code only</a></li>
+ <li><a class="external" href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">John Resig - ECMAScript 5 Strict Mode, JSON, and More</a></li>
  <li><a class="external" href="http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/">ECMA-262-5 in detail. Chapter 2. Strict Mode.</a></li>
  <li><a class="external" href="http://kangax.github.io/compat-table/strict-mode/">Strict mode compatibility table</a></li>
 </ul>

@@ -12,19 +12,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 <div>{{JSRef("Global_Objects", "Date")}} {{deprecated_header("")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>getYear()</code></strong> возвращает год указанной даты по местному времени. Поскольку метод <code>getYear()</code> не возвращает полный год («проблема 2000 года»), он больше не используется и был заменён методом {{jsxref("Date.prototype.getFullYear", "getFullYear()")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>dateObj</var>.getYear()</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Нет.</p>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Метод <code>getYear()</code> возвращает год минус 1900; таким образом:</p>
 
@@ -36,9 +36,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 
 <p>Чтобы учесть года до и после 2000, вы должны вместо метода <code>getYear()</code> использовать метод {{jsxref("Date.prototype.getFullYear", "getFullYear()")}}, который возвращает полный год.</p>
 
-<h2 id="Backward_compatibility" name="Backward_compatibility">Обратная совместимость</h2>
+<h2 id="Backward_compatibility">Обратная совместимость</h2>
 
-<h3 id="JavaScript_1.2_and_earlier" name="JavaScript_1.2_and_earlier">Поведение в JavaScript 1.2 и ранее</h3>
+<h3 id="JavaScript_1.2_and_earlier">Поведение в JavaScript 1.2 и ранее</h3>
 
 <p>Метод <code>getYear()</code> возвращал 2-х или 4-х значный год:</p>
 
@@ -47,9 +47,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
  <li>Для годов, меньших 1900, либо больших 1999, значение, возвращаемое методом <code>getYear()</code> было четырёхзначным годом. Например, если год равнялся 1856, возвращаемое значение равнялось 1856. Если год равнялся 2026, возвращаемое значение равнялось 2026.</li>
 </ul>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Years_between_1900_and_1999" name="Example:_Years_between_1900_and_1999">Пример: года между 1900 и 1999</h3>
+<h3 id="Example:_Years_between_1900_and_1999">Пример: года между 1900 и 1999</h3>
 
 <p>Вторая инструкция присваивает значение 95 переменной <code>year</code>.</p>
 
@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
 var year = Xmas.getYear(); // вернёт 95
 </pre>
 
-<h3 id="Example:_Years_above_1999" name="Example:_Years_above_1999">Пример: года после 1999</h3>
+<h3 id="Example:_Years_above_1999">Пример: года после 1999</h3>
 
 <p>Вторая инструкция присваивает значение 100 переменной <code>year</code>.</p>
 
@@ -65,7 +65,7 @@ var year = Xmas.getYear(); // вернёт 95
 var year = Xmas.getYear(); // вернёт 100
 </pre>
 
-<h3 id="Example:_Years_below_1900" name="Example:_Years_below_1900">Пример: года до 1900</h3>
+<h3 id="Example:_Years_below_1900">Пример: года до 1900</h3>
 
 <p>Вторая инструкция присваивает значение -100 переменной <code>year</code>.</p>
 
@@ -73,7 +73,7 @@ var year = Xmas.getYear(); // вернёт 100
 var year = Xmas.getYear(); // вернёт -100
 </pre>
 
-<h3 id="Example:_Setting_and_getting_a_year_between_1900_and_1999" name="Example:_Setting_and_getting_a_year_between_1900_and_1999">Пример: установка и получение года между 1900 и 1999</h3>
+<h3 id="Example:_Setting_and_getting_a_year_between_1900_and_1999">Пример: установка и получение года между 1900 и 1999</h3>
 
 <p>Вторая инструкция присваивает значение 95 переменной <code>year</code>, которое представляет 1995 год.</p>
 
@@ -81,40 +81,17 @@ var year = Xmas.getYear(); // вернёт -100
 var year = Xmas.getYear(); // вернёт 95
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализовано в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.4', 'Date.prototype.getYear')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Определён в (информативном) приложении по совместимости.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getyear', 'Date.prototype.getYear')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Определён в (нормативном) приложении по дополнительным возможностям веб-браузеров.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div> </div>
 
-<div id="compat-mobile">{{Compat("javascript.builtins.Date.getYear")}}</div>
+<div id="compat-mobile">{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getFullYear()")}}</li>

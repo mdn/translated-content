@@ -5,12 +5,12 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 ---
 <p>\{{ariaref}}</p>
 
-<p><span class="seoSummary"><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#checkbox" title="http://www.w3.org/TR/wai-aria/roles#checkbox">checkbox role</a> используется для переключаемых интерактивных элементов управления. Элементы, содержащие <code>role="checkbox"</code> также должны включать <code>aria-checked</code> атрибут, чтобы продемонстрировать состояние чекбокса ассистивным технологиям.</span></p>
+<p><span class="seoSummary"><a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#checkbox">checkbox role</a> используется для переключаемых интерактивных элементов управления. Элементы, содержащие <code>role="checkbox"</code> также должны включать <code>aria-checked</code> атрибут, чтобы продемонстрировать состояние чекбокса ассистивным технологиям.</span></p>
 
 <pre class="brush: html">&lt;span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"&gt;
 &lt;/span&gt; &lt;label id="chk1-label"&gt;Remember my preferences&lt;/label&gt;</pre>
 
-<p>Первое правило ARIA -  если у нативного HTML элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA. Вместо этого лучше использовать <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, который изначально предоставляет необходимый функционал:</p>
+<p>Первое правило ARIA -  если у нативного HTML-элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA. Вместо этого лучше использовать <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, который изначально предоставляет необходимый функционал:</p>
 
 <pre class="brush: html">&lt;input type="checkbox" id="chk1-label"&gt;
 &lt;label for="chk1-label"&gt;Запомнить мои предпочтения&lt;/label&gt;</pre>
@@ -111,7 +111,7 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
     }
 }</pre>
 
-<p>{{EmbedLiveSample("Examples", 230, 250)}}</p>
+<p>{{EmbedLiveSample("Примеры", 230, 250)}}</p>
 
 <h2 id="Проблемы_доступности">Проблемы доступности</h2>
 
@@ -132,7 +132,7 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 
 <h2 id="Лучшие_практики">Лучшие практики</h2>
 
-<p>Первое правило ARIA - если у нативного HTML элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA, чтобы сделать его доступным. По существу, рекомендуется использовать нативный <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  вместо воспроизведения функциональности чекбокса с помощью JavaScript и ARIA.</p>
+<p>Первое правило ARIA - если у нативного HTML-элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA, чтобы сделать его доступным. По существу, рекомендуется использовать нативный <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  вместо воспроизведения функциональности чекбокса с помощью JavaScript и ARIA.</p>
 
 <h2 id="Смотрите_также">Смотрите также:</h2>
 
