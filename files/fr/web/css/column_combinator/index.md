@@ -22,9 +22,11 @@ col.selected || td {
 
 ## Syntaxe
 
-    column-selector || cell-selector {
-      /* propriétés pour le style */
-    }
+```css
+column-selector || cell-selector {
+  /* propriétés pour le style */
+}
+```
 
 ## Exemples
 

@@ -15,13 +15,15 @@ La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/doc
 
 ## Syntaxe
 
-    // WebGL1:
-    void gl.bufferData(cible, taille, utilisation);
-    void gl.bufferData(cible, ArrayBuffer? donneesSrc, utilisation);
-    void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation);
+```js
+// WebGL1:
+void gl.bufferData(cible, taille, utilisation);
+void gl.bufferData(cible, ArrayBuffer? donneesSrc, utilisation);
+void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation);
 
-    // WebGL2:
-    void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, longueur);
+// WebGL2:
+void gl.bufferData(cible, ArrayBufferView donneesSrc, utilisation, decalageSrc, longueur);
+```
 
 ### Paramètres
 
@@ -51,7 +53,7 @@ La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/doc
     - `gl.STATIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent mais de ne pas changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - `gl.DYNAMIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être souvent utilisé et de changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - `gl.STREAM_DRAW` : le contenu du tampon est susceptible de ne pas être utilisé souvent&nbsp;; du contenu est écrit dans le tampon, mais non lu ;
-    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes the following values sont en outre disponibles :
+    - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
 
       - `gl.STATIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
       - `gl.DYNAMIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;

@@ -49,8 +49,6 @@ Lorsqu'une seule valeur est indiquée, c'est celle-ci qui est appliquée par dé
   - : Les différents niveaux sont appliqués dans l'ordre normal.
 - `stroke`
 
-
-
   `fill`
 
   `markers`

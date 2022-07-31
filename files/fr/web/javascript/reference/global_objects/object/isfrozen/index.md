@@ -19,7 +19,9 @@ La méthode **`Object.isFrozen()`**permet de déterminer si un objet est {{jsxre
 
 ## Syntaxe
 
-    Object.isFrozen(obj)
+```js
+Object.isFrozen(obj)
+```
 
 ### Paramètres
 

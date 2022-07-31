@@ -19,7 +19,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/Date
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
 
-
 ## 構文
 
 ```js
@@ -228,7 +227,7 @@ console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
 const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
-	
+ 
 for (const zoneName of timezoneNames) {
   // Do something with currentValue
   var formatter = new Intl.DateTimeFormat('en-US', {
@@ -237,7 +236,7 @@ for (const zoneName of timezoneNames) {
   });
   console.log(zoneName + ": " + formatter.format(date) );
 }
-	
+ 
 // expected output: 
 // > "short: 12/16/2021, PST"
 // > "long: 12/16/2021, Pacific Standard Time"

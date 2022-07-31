@@ -11,7 +11,7 @@ translation_of: 'Web/CSS/:target'
  <code class="plain">http://example.com/folder/document.html<code style="border: 1px dotted gray;">#section2</code></code><br>
  The <em>anchor</em> can be any element with an<code> id </code>attribute, e.g.<code> &lt;h1 id="section2"&gt; </code>in our example. The <em>target element</em><code> h1 </code>can be represented by the<code> :target </code>pseudo-class.</p>
 
-<div class="note"><strong>Note:</strong> The<code> id </code>attribute was new in HTML 4 (December 1997).  In old-style HTML <code>&lt;a&gt;</code> is a target element.  The<code> :target </code>pseudo-class applies to those targets as well.</div>
+<div class="note"><strong>Note:</strong> The<code> id </code>attribute was new in HTML 4 (December 1997).  In old-style HTML <code>&lt;a&gt;</code> is a target element.  The<code> :target </code>pseudo-class applies to those targets as well.</div>
 
 <h2 id="範例">範例</h2>
 
@@ -63,10 +63,10 @@ translation_of: 'Web/CSS/:target'
 &lt;body&gt;
  &lt;p&gt;&lt;a href="#newcomment"&gt;Add a comment&lt;/a&gt;&lt;/p&gt;
  &lt;div id="newcomment"&gt;
-  &lt;form&gt;
-  &lt;p&gt;Write your comment:&lt;br /&gt;
-  &lt;textarea&gt;&lt;/textarea&gt;&lt;/p&gt;
-  &lt;/form&gt;
+  &lt;form&gt;
+  &lt;p&gt;Write your comment:&lt;br /&gt;
+  &lt;textarea&gt;&lt;/textarea&gt;&lt;/p&gt;
+  &lt;/form&gt;
  &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -74,7 +74,7 @@ translation_of: 'Web/CSS/:target'
 
 <h3 id="Creating_a_pure_CSS_lightbox">Creating a pure CSS "lightbox"</h3>
 
-<p>The <code>:target</code> pseudo-class is useful to switch on/off some invisible elements. In this way you can create a pure-CSS lightbox (<a href="https://developer.mozilla.org/files/4607/lightbox.html">live demo</a>).</p>
+<p>The <code>:target</code> pseudo-class is useful to switch on/off some invisible elements. In this way you can create a pure-CSS lightbox (<a href="/files/4607/lightbox.html">live demo</a>).</p>
 
 <div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
@@ -198,25 +198,7 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>No changes</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器兼容性">瀏覽器兼容性</h2>
 

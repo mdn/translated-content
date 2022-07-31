@@ -251,7 +251,6 @@ draw();
   - : 現在の座標変換を単位行列にリセットして、同じ引数で `transform()` メソッドを呼び出します。これは基本的に、現在の座標変換をアンドゥしてから指定した座標変換を行う操作を一度に行うものです。
 - {{domxref("CanvasRenderingContext2D.resetTransform", "resetTransform()")}}
   - : 現在の座標変換を単位行列にリセットします。これは `ctx.setTransform(1, 0, 0, 1, 0, 0);` を呼び出すことと同じです。
-</dl>
 
 ### `transform` と `setTransform` の例
 

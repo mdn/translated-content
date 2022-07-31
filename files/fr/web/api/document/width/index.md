@@ -13,7 +13,9 @@ Non pris en charge par Internet Explorer.
 
 ## Syntaxe
 
-    pixels = document.width;
+```js
+pixels = document.width;
+```
 
 ## Exemple
 
@@ -25,9 +27,11 @@ function init() {
 
 ## Alternatives
 
-    document.body.clientWidth              /* largeur de <body> */
-    document.documentElement.clientWidth   /* largeur de <html> */
-    window.innerWidth                      /* largeur de la fenêtre */
+```js
+document.body.clientWidth              /* largeur de <body> */
+document.documentElement.clientWidth   /* largeur de <html> */
+window.innerWidth                      /* largeur de la fenêtre */
+```
 
 ## Spécification
 

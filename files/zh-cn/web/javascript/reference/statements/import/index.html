@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Statements/import
 ---
 <p>{{jsSidebar("Statements")}}</p>
 
-<p>静态的 <code><strong>import</strong></code> 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，<code>import</code> 语句只能在声明了 <code>type="module"</code> 的 <code>script</code> 的标签中使用。</p>
+<p>静态的 <code><strong>import</strong></code> 语句用于导入由另一个模块导出的绑定。无论是否声明了 {{jsxref("Strict_mode","strict mode")}}，导入的模块都运行在严格模式下。在浏览器中，<code>import</code> 语句只能在声明了 <code>type="module"</code> 的 <code>script</code> 的标签中使用。</p>
 
 <p>此外，还有一个类似函数的动态 <code>import()</code>，它不需要依赖 <code>type="module"</code> 的 script 标签。</p>
 
@@ -86,14 +86,14 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 <p>使用别名导入模块的多个接口。</p>
 
 <pre class="brush: js">import {
-  reallyReallyLongModuleMemberName as shortName,
-  anotherLongModuleName as short
+  reallyReallyLongModuleMemberName as shortName,
+  anotherLongModuleName as short
 } from '/modules/my-module.js';
 </pre>
 
 <h3 id="仅为副作用而导入一个模块">仅为副作用而导入一个模块</h3>
 
-<p>整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。 这将运行模块中的全局代码, 但实际上不导入任何值。</p>
+<p>整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。 这将运行模块中的全局代码，但实际上不导入任何值。</p>
 
 <pre class="brush: js">import '/modules/my-module.js';</pre>
 
@@ -120,11 +120,11 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 <pre class="brush: js">(async () =&gt; {
   if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
+    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
   }
 })();</pre>
 
-<h3 id="动态import">动态import</h3>
+<h3 id="动态import">动态 import</h3>
 
 <p>标准用法的 import 导入的模块是静态的，会使所有被导入的模块，在加载时就被编译（无法做到按需编译，降低首页加载速度）。有些场景中，你可能希望根据条件导入模块或者按需导入模块，这时你可以使用动态导入代替静态导入。下面的是你可能会需要动态导入的场景：</p>
 
@@ -199,25 +199,11 @@ for (const link of document.querySelectorAll("nav &gt; a")) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://tc39.es/proposal-dynamic-import/#sec-import-calls">"function-like" dynamic <code>import()</code> proposal</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("ESDraft", "#sec-imports", "Imports")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="sect1"></h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.statements.import")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 
@@ -227,6 +213,6 @@ for (const link of document.querySelectorAll("nav &gt; a")) {
  <li>Limin Zhu, Brian Terlson and Microsoft Edge Team: <a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/">Previewing ES6 Modules and more from ES2015, ES2016 and beyond</a></li>
  <li>Hacks blog post by Jason Orendorff: <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a></li>
  <li>Hacks blog post by Lin Clark: <a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a></li>
- <li>Axel Rauschmayer's book: <a class="external" href="https://exploringjs.com/es6/ch_modules.html">"Exploring JS: Modules"</a></li>
- <li>The Modern JavaScript Tutorial(javascript.info): <a class="external" href="https://javascript.info/import-export">Export and Import</a></li>
+ <li>Axel Rauschmayer's book: <a href="https://exploringjs.com/es6/ch_modules.html">"Exploring JS: Modules"</a></li>
+ <li>The Modern JavaScript Tutorial(javascript.info): <a href="https://javascript.info/import-export">Export and Import</a></li>
 </ul>

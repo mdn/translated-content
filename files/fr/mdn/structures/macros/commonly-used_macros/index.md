@@ -120,7 +120,7 @@ Elles utilisent généralement un premier paramètre indiquant le nom de l'élé
     </tr>
     <tr>
       <td>
-        <code><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code>
+        <code><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a></code>
       </td>
       <td>
         <a href="/fr/docs/Web/HTTP/Headers">Référence des en-têtes HTTP</a> (/Web/HTTP/Headers).
@@ -161,7 +161,7 @@ Elles utilisent généralement un premier paramètre indiquant le nom de l'élé
       <td>
         <div class="note">
           <p>
-            <strong>Note :</strong> Cette macro n'est plus particulièrement utile, car les évènements sont désormais placés sous leur élément DOM associé. <code>\{{DOMxRef("Document.wheel_event")}}</code> devrait être remplacé par 
+            <strong>Note :</strong> Cette macro n'est plus particulièrement utile, car les évènements sont désormais placés sous leur élément DOM associé. <code>\{{DOMxRef("Document.wheel_event")}}</code> devrait être remplacé par
             <code>[`Document.wheel_event`](/fr/docs/Web/API/Document/wheel_event)</code>
           </p>
         </div>

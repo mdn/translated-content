@@ -82,4 +82,3 @@ Cet objet ne fait partie d'aucune spécification.
 
 - [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
 - [`InternalError: too much recursion`](/fr/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
-

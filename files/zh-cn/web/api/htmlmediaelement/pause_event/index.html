@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLMediaElement/pause_event
 
 
 
-<p>当暂停媒体播放时 <code>pause</code> 事件触发， 并且媒体进入暂停状态，最常见的是通过<code>pause()</code>方法来触发。 当<code>pause()</code> 触发时<code>pause</code>状态只改变1次，并且媒体的<code>pause</code>变成 <code>true</code>。</p>
+<p>当暂停媒体播放时 <code>pause</code> 事件触发， 并且媒体进入暂停状态，最常见的是通过<code>pause()</code>方法来触发。 当<code>pause()</code> 触发时<code>pause</code>状态只改变 1 次，并且媒体的<code>pause</code>变成 <code>true</code>。</p>
 
 <h2 id="General_info">General info</h2>
 
@@ -39,16 +39,16 @@ translation_of: Web/API/HTMLMediaElement/pause_event
   </tr>
   <tr>
    <th scope="row">Specification</th>
-   <td><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
+   <td><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing">HTML5 media</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="例子">例子</h2>
 
-<p>下面例子给媒体添加 <code>pause</code> 事件监听handler，然后事件发生时会给handler发送一个提醒信息</p>
+<p>下面例子给媒体添加 <code>pause</code> 事件监听 handler，然后事件发生时会给 handler 发送一个提醒信息</p>
 
-<p>使用 <code>addEventListener()：</code></p>
+<p>使用 <code>addEventListener()：</code></p>
 
 <pre class="brush: js">const video = document.querySelector('video');
 
@@ -57,7 +57,7 @@ video.addEventListener('pause', (event) =&gt; {
   'pause() method was called or the autoplay attribute was toggled.');
 });</pre>
 
-<p>使用 <code>onpause</code> 事件监听属性：</p>
+<p>使用 <code>onpause</code> 事件监听属性：</p>
 
 <pre class="brush: js">const video = document.querySelector('video');
 
@@ -66,26 +66,9 @@ video.onpause = (event) =&gt; {
   'pause() method was called or the autoplay attribute was toggled.');
 };</pre>
 
-<h2 id="说明">说明</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "media.html#event-media-pause", "pause media event")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-pause", "pause media event")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

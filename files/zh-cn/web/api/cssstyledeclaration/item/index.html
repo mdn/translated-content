@@ -5,7 +5,7 @@ translation_of: Web/API/CSSStyleDeclaration/item
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
-<p id="Summary"><code>CSSStyleDeclaration.item()</code> 通过下标从 {{domxref('CSSStyleDeclaration')}} 返回一个 CSS 属性值。只要传入参数这个方法就不会抛出异常； 当传入的下标越界时会返回空字符串，当未传入参数时会抛出一个 <code>TypeError</code> 。</p>
+<p><code>CSSStyleDeclaration.item()</code> 通过下标从 {{domxref('CSSStyleDeclaration')}} 返回一个 CSS 属性值。只要传入参数这个方法就不会抛出异常； 当传入的下标越界时会返回空字符串，当未传入参数时会抛出一个 <code>TypeError</code> 。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/CSSStyleDeclaration/item
 <h3 id="Return_value">Return value</h3>
 
 <ul>
- <li><em><code>propertyName</code></em> 是一个 {{domxref('DOMString')}} ，是在特定索引位置下的属性的名称。</li>
+ <li><em><code>propertyName</code></em> 是一个 {{domxref('DOMString')}} ，是在特定索引位置下的属性的名称。</li>
 </ul>
 
 <p>使用以下的 javascript 语法可以通过索引从 style 的节点列表中获取对应值：</p>
@@ -36,28 +36,8 @@ var propertyName = style.item(1); // or simply style[1] - returns the second sty
 
 <h2 id="规范">规范</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#dom-cssstyledeclaration-item', 'CSSStyleDeclaration.item()')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<p><strong>浏览器兼容性</strong></p>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-{{Compat("api.CSSStyleDeclaration.item")}}
+{{Compat}}

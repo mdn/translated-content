@@ -18,7 +18,9 @@ La méthode **`valueOf()`** renvoie la valeur primitive d'un objet {{jsxref("Dat
 
 ## Syntaxe
 
-    date.valueOf()
+```js
+date.valueOf()
+```
 
 ### Valeur de retour
 

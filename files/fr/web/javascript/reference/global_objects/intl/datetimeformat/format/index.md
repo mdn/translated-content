@@ -20,7 +20,9 @@ La méthode **`Intl.DateTimeFormat.prototype.format()`** est un accesseur format
 
 ## Syntaxe
 
-    dateTimeFormat.format(date)
+```js
+dateTimeFormat.format(date)
+```
 
 ### Paramètres
 

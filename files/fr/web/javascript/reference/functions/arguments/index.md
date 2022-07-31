@@ -24,7 +24,9 @@ L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant
 
 ## Syntaxe
 
-    arguments
+```js
+arguments
+```
 
 ## Description
 

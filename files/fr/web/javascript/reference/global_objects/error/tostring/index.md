@@ -16,7 +16,9 @@ La méthode **`toString()`** renvoie une représentation de l'objet {{jsxref("Er
 
 ## Syntaxe
 
-    e.toString()
+```js
+e.toString()
+```
 
 ### Valeur de retour
 

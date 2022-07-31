@@ -142,7 +142,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <h4 id="Handling_the_end_of_a_touch">Handling the end of a touch</h4>
 
-<p>When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle both of these the same way: by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.</p>
+<p>When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle both of these the same way: by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.</p>
 
 <pre class="brush: js">function handleEnd(evt) {
   evt.preventDefault();
@@ -293,25 +293,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events 2', '#touch-interface', 'Touch')}}</td>
-   <td>{{Spec2('Touch Events 2')}}</td>
-   <td>Added <code>radiusX</code>, <code>radiusY</code>, <code>rotationAngle</code>, <code>force</code> properties</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Touch Events', '#touch-interface', 'Touch')}}</td>
-   <td>{{Spec2('Touch Events')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

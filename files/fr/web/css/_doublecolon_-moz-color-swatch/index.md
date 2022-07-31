@@ -14,7 +14,7 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-color-swatch`*
 
 > **Note :** Utiliser `::-moz-color-swatch` sur tout autre élément qu'un  `<input type="color">` n'aura aucun effet.
 
-## Syntax
+## Syntaxe
 
 {{csssyntax}}
 

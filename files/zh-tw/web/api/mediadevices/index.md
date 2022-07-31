@@ -22,8 +22,7 @@ browser-compat: api.MediaDevices
 
 {{APIRef("Media Capture and Streams")}}
 
-
-<code><b>MediaDevices</b></code>介面可以存取連接的媒體輸入設備，像是相機、麥克風，以及螢幕分享。它可以存取任何硬體資源的媒體數據。
+<code>MediaDevices</code>介面可以存取連接的媒體輸入設備，像是相機、麥克風，以及螢幕分享。它可以存取任何硬體資源的媒體數據。
 
 {{InheritanceDiagram}}
 

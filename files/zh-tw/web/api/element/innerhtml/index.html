@@ -12,9 +12,9 @@ translation_of: Web/API/Element/innerHTML
 
 
 
-<p> <a href="/zh-TW/docs/Glossary/Element">Element</a>  的「innerHTML」屬性獲取或設置元素中包含的HTML或XML標記。</p>
+<p> <a href="/zh-TW/docs/Glossary/Element">Element</a>  的「innerHTML」屬性獲取或設置元素中包含的HTML或XML標記。</p>
 
-<div class="note"><strong>Note:  </strong>如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（&lt;）或（&gt;），innerHTML分別地回傳這些字符成為HTML的<code>“&amp;” </code>，<code>“&lt;” </code>和<code> “&gt;” </code>。 使用 <code>Node.textContent</code> 得到的這些文本節點的內容的原始拷貝件。</div>
+<div class="note"><strong>Note:  </strong>如{{HTMLElement("div")}}, {{HTMLElement("span")}}, or {{HTMLElement("noembed")}} 節點有包含字符（＆），（&lt;）或（&gt;），innerHTML分別地回傳這些字符成為HTML的<code>“&amp;” </code>，<code>“&lt;” </code>和<code> “&gt;” </code>。 使用 <code>Node.textContent</code> 得到的這些文本節點的內容的原始拷貝件。</div>
 
 <p>To insert the HTML into the document rather than replace the contents of an element, use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
 
@@ -119,7 +119,7 @@ el.innerHTML = name; // shows the alert</pre>
 
   var time = new Date();
   var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "&lt;br/&gt;";
+  logElem.innerHTML += timeStr + ": " + msg + "&lt;br/&gt;";
 }
 
 log("Logging mouse events inside this container...");

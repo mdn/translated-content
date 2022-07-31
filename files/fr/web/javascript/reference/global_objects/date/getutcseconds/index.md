@@ -18,7 +18,9 @@ La méthode **`getUTCSeconds()`** renvoie les secondes de la date renseignée, d
 
 ## Syntaxe
 
-    dateObj.getUTCSeconds()
+```js
+dateObj.getUTCSeconds()
+```
 
 ### Valeur de retour
 

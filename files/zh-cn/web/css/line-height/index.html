@@ -8,11 +8,10 @@ translation_of: Web/CSS/line-height
 ---
 <div>{{CSSRef}}</div>
 
-<p><strong><code>line-height</code></strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非<a href="/en-US/docs/Web/CSS/Replaced_element">替代</a>的 inline 元素，它用于计算行盒（line box）的高度。</p>
+<p><strong><code>line-height</code></strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非<a href="/en-US/docs/Web/CSS/Replaced_element">替代</a>的 inline 元素，它用于计算行盒（line box）的高度。</p>
 
 <p>{{EmbedInteractiveExample("pages/css/line-height.html")}}</p>
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -47,9 +46,9 @@ line-height: unset;
 <h3 id="取值">取值</h3>
 
 <dl>
- <dt> </dt>
+ <dt> </dt>
  <dt><code>normal</code></dt>
- <dd>取决于用户端。桌面浏览器（包括Firefox）使用默认值，约为<code>1.2</code>，这取决于元素的 <code>font-family</code>。</dd>
+ <dd>取决于用户端。桌面浏览器（包括 Firefox）使用默认值，约为<code>1.2</code>，这取决于元素的 <code>font-family</code>。</dd>
  <dt><code>&lt;数字&gt;</code></dt>
  <dd>该属性的应用值是这个无单位数字{{cssxref("&lt;number&gt;", "&lt;数字&gt;")}}乘以该元素的字体大小。计算值与指定值相同。大多数情况下，这是设置<code>line-height</code>的<strong>推荐方法</strong>，不会在继承时产生不确定的结果。</dd>
  <dt><code>&lt;长度&gt;</code></dt>
@@ -128,38 +127,13 @@ h1 {
 
 <h2 id="无障碍方面">无障碍方面</h2>
 
-<p>主段落内容的 <code>line-height</code> 至少应为 <code>1.5</code>。 这将有助于改善低可视条件下的体验，也对认知阻碍者，如阅读困难者，有帮助。如果文字的大小要随页面的缩放而变化，请使用无单位的值，以确保行高也会等比例缩放。</p>
+<p>主段落内容的 <code>line-height</code> 至少应为 <code>1.5</code>。 这将有助于改善低可视条件下的体验，也对认知阻碍者，如阅读困难者，有帮助。如果文字的大小要随页面的缩放而变化，请使用无单位的值，以确保行高也会等比例缩放。</p>
 
-<p><a href="https://www.w3.org/TR/WCAG21/#visual-presentation" rel="noopener">W3C Understanding WCAG 2.1</a></p>
+<p><a href="https://www.w3.org/TR/WCAG21/#visual-presentation">W3C Understanding WCAG 2.1</a></p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>将 <code>line-height</code> 定义为 animatable.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>无改动。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#line-height', 'line-height')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初始定义。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 

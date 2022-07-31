@@ -25,7 +25,7 @@ translation_of: Web/CSS/text-transform
 - オランダ語 (`nl`) では二重音字 `ij` が、単語の最初の文字のみ大文字にする `text-transform: capitalize` を指定しても `IJ` になります。
 - ギリシャ語 (`el`) では離接的接続のエータ (`ή`/`Ή`) を除き、単語全体が大文字であるときに母音のアクセント記号がなくなります (`ά`/`Α`)。また、1 文字目にアクセント記号がある二重母音はアクセント記号がなくなり、2 文字目の母音にトレマがつきます (`άι`/`ΑΪ`)。
 - ギリシャ語 (`el`) で、小文字のシグマは `σ` と `ς` の 2 種類あります。`ς` は、単語の末尾にあるシグマに限り使用します。大文字のシグマ (`Σ`) に `text-transform: lowercase` を適用すると、ブラウザーは状況に応じて正しい小文字を選択しなければなりません。
-- アイルランド語 (`ga`) では、頭文字が大文字化されていても特定の接頭辞文字が小文字のままになります。例えば `text-transform: uppercase` は `ar aon tslí` を、予想される `AR AON TSLÍ ` ではなく `AR AON tSLÍ` にします (Firefox に限る)。大文字化によりハイフンが削除される場合もあり、`an t-uisce` は `AN tUISCE ` になります (また、`text-transform: lowercase` ではハイフンが適切に再挿入されます)。
+- アイルランド語 (`ga`) では、頭文字が大文字化されていても特定の接頭辞文字が小文字のままになります。例えば `text-transform: uppercase` は `ar aon tslí` を、予想される `AR AON TSLÍ` ではなく `AR AON tSLÍ` にします (Firefox に限る)。大文字化によりハイフンが削除される場合もあり、`an t-uisce` は `AN tUISCE` になります (また、`text-transform: lowercase` ではハイフンが適切に再挿入されます)。
 
 言語は HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性や XML の [`xml:lang`](/ja/docs/Web/SVG/Attribute/xml:lang) 属性で定義します。
 

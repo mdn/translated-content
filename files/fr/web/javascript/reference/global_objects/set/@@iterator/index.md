@@ -20,7 +20,9 @@ La valeur initiale de la propriété **`@@iterator`** est le même objet fonctio
 
 ## Syntaxe
 
-    monSet[Symbol.iterator]
+```js
+monSet[Symbol.iterator]
+```
 
 ### Valeur de retour
 

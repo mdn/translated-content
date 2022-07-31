@@ -20,14 +20,14 @@ boolean <var><em>ctx</em>.isPointInPath(path, x, y, fillRule);</var></var></var>
 
 <dl>
  <dt>x</dt>
- <dd>检测点的X坐标</dd>
+ <dd>检测点的 X 坐标</dd>
  <dt>y</dt>
- <dd>检测点的Y坐标</dd>
+ <dd>检测点的 Y 坐标</dd>
  <dt><code>fillRule</code></dt>
  <dd>用来决定点在路径内还是在路径外的算法。<br>
  允许的值：
  <ul>
-  <li><code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">非零环绕规则 </a>，默认的规则。</li>
+  <li><code><strong>"nonzero</strong></code>": <a href="http://en.wikipedia.org/wiki/Nonzero-rule">非零环绕规则 </a>，默认的规则。</li>
   <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">奇偶环绕原则 </a>。</li>
  </ul>
  </dd>
@@ -39,7 +39,7 @@ boolean <var><em>ctx</em>.isPointInPath(path, x, y, fillRule);</var></var></var>
 
 <dl>
  <dt>{{jsxref("Boolean")}}</dt>
- <dd>一个Boolean值，当检测点包含在当前或指定的路径内，返回 true；否则返回 false。</dd>
+ <dd>一个 Boolean 值，当检测点包含在当前或指定的路径内，返回 true；否则返回 false。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -63,15 +63,15 @@ ctx.stroke();
 console.log(ctx.isPointInPath(10, 10)); // true
 </pre>
 
-<p>修改下面的代码， 在线查看 canvas的变化并在你的 <a href="/en-US/docs/Tools/Browser_Console">控制台</a> 中观察日志信息：</p>
+<p>修改下面的代码，在线查看 canvas 的变化并在你的 <a href="/en-US/docs/Tools/Browser_Console">控制台</a> 中观察日志信息：</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.rect(10, 10, 100, 100);
@@ -109,20 +109,7 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-ispointinpath", "CanvasRenderingContext2D.isPointInPath")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

@@ -13,7 +13,9 @@ Ferme la fenêtre référencée.
 
 ### Syntaxe
 
-    window.close();
+```js
+window.close();
+```
 
 ### Description
 

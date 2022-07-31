@@ -1,0 +1,106 @@
+---
+title: 'Document: keyup イベント'
+slug: Web/API/Element/keyup_event
+tags:
+  - DOM
+  - Document
+  - Event
+  - KeyboardEvent
+  - Reference
+  - keyup
+  - イベント
+translation_of: Web/API/Document/keyup_event
+original_slug: Web/API/Document/keyup_event
+---
+<div>{{APIRef}}</div>
+
+<p><strong><code>keyup</code></strong> イベントは、キーが離されたときに発生します。</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">バブリング</th>
+   <td>あり</td>
+  </tr>
+  <tr>
+   <th scope="row">キャンセル</th>
+   <td>可</td>
+  </tr>
+  <tr>
+   <th scope="row">インターフェイス</th>
+   <td>{{domxref("KeyboardEvent")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">イベントハンドラープロパティ</th>
+   <td>{{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{domxref("Document/keydown_event", "keydown")}} および <code>keyup</code> イベントが、どのキーが押されたのかを示すコードを提供するのに対し、 {{domxref("Document/keypress_event", "keypress")}} はどの<em>文字</em>が入力されたかを示します。例えば、小文字の "a" は <code>keydown</code> および <code>keyup</code> では65になるのに対し、 <code>keypress</code> では97になります。大文字の "A" はどのイベントでも65と報告されます。</p>
+
+<div class="blockIndicator note">
+<p><strong>注:</strong> 入力値の変更に反応する方法を探しているのであれば、 <a href="/ja/docs/Web/API/HTMLElement/input_event"><code>input</code> イベント</a>を使用してください。 <code>keyup</code> では、テキスト入力のコンテキストニューからテキストを貼り付けた場合など、一部の変更が検出されません。</p>
+</div>
+
+<p>Firefox 65 から、 {{domxref("Document/keydown_event", "keydown")}} および <code>keyup</code> イベントは IME 入力中でも発生するようになり、 CJKT のユーザーのブラウザー間の互換性が向上しました ({{bug(354358)}})。 IME 入力中のすべての <code>keyup</code> イベントを無視するには、次のようにします (229 は IME によって処理されたイベントに関連する <code>keyCode</code> の特殊な値のセットです)。</p>
+
+<pre class="brush: js notranslate">eventTarget.addEventListener("keyup", event =&gt; {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // 何かをする
+});
+</pre>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<p>この例はキーを離すたびに {{domxref("KeyboardEvent.code")}} の値をログ出力します。</p>
+
+<h3 id="addEventListener_keyup_example" name="addEventListener_keyup_example">addEventListener の keyup の例</h3>
+
+<pre class="brush: html notranslate">&lt;p&gt;Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.&lt;/p&gt;
+&lt;p id="log"&gt;&lt;/p&gt;</pre>
+
+<pre class="brush: js notranslate">const log = document.getElementById('log');
+
+document.addEventListener('keyup', logKey);
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}</pre>
+
+<p>{{EmbedLiveSample("addEventListener_keyup_example")}}</p>
+
+<h3 id="onkeyup_equivalent" name="onkeyup_equivalent">onkeyup を用いた同等のもの</h3>
+
+<pre class="brush: js notranslate">document.onkeyup = logKey;</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("UI Events", "#event-type-keyup")}}</td>
+   <td>{{Spec2("UI Events")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.Document.keyup_event")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("Document/keydown_event", "keydown")}}</li>
+ <li>{{domxref("Document/keypress_event", "keypress")}}</li>
+ <li>{{domxref("Element")}} の {{domxref("Element/keyup_event", "keyup")}} イベント</li>
+</ul>

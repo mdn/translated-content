@@ -45,4 +45,3 @@ instanceOfFileReader.readAsArrayBuffer(blob);
 ## Véase también
 
 - {{domxref("FileReader")}}
-

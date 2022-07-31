@@ -14,7 +14,7 @@ translation_of: Web/API/Element/attributes
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><strong><code>Element.attributes</code></strong> 属性返回该元素所有属性节点的一个实时集合。该集合是一个 {{domxref("NamedNodeMap")}} 对象，不是一个数组，所以它没有 {{jsxref("Array", "数组")}} 的方法，其包含的 {{domxref("Attr", "属性")}} 节点的索引顺序随浏览器不同而不同。更确切地说，<code style="font-style: normal;">attributes</code> 是字符串形式的名/值对，每一对名/值对对应一个属性节点。</p>
+<p><strong><code>Element.attributes</code></strong> 属性返回该元素所有属性节点的一个实时集合。该集合是一个 {{domxref("NamedNodeMap")}} 对象，不是一个数组，所以它没有 {{jsxref("Array", "数组")}} 的方法，其包含的 {{domxref("Attr", "属性")}} 节点的索引顺序随浏览器不同而不同。更确切地说，<code style="font-style: normal;">attributes</code> 是字符串形式的名/值对，每一对名/值对对应一个属性节点。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -77,41 +77,13 @@ var atts = para.attributes;
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-attributes', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>From {{SpecName('DOM3 Core')}}, moved from {{domxref("Node")}} to {{domxref("Element")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>No change from {{SpecName('DOM2 Core')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>No change from {{SpecName('DOM1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("api.Element.attributes")}}</p>
 
-<p>在 Firefox 22 版本之前，这个属性是被用在 {{domxref("Node")}} 上（继承至 {{domxref("Element")}}）。它需要被使用在其他符合这个接口规范的浏览器上使用。</p>
+<p>在 Firefox 22 版本之前，这个属性是被用在 {{domxref("Node")}} 上（继承至 {{domxref("Element")}}）。它需要被使用在其他符合这个接口规范的浏览器上使用。</p>
 
 <p>IE5.5 返回的是一个 map 形式的键值对而不是一个 attribute 的属性对象。</p>
 
@@ -119,5 +91,5 @@ var atts = para.attributes;
 
 <ul>
  <li>{{domxref("NamedNodeMap")}}，返回对象的接口</li>
- <li>跨浏览器兼容性问题可参考： <a class="external external-icon" href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
+ <li>跨浏览器兼容性问题可参考： <a href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a></li>
 </ul>

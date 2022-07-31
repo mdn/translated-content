@@ -20,7 +20,9 @@ Une **expression `yield*`** est utilisée afin de déléguer le mécanisme d'it�
 
 ## Syntaxe
 
-     yield* [[expression]];
+```js
+yield* expression
+```
 
 - `expression`
   - : L'expression qui renvoie un objet itérable.

@@ -15,7 +15,9 @@ Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent"
 
 ## Syntaxe
 
-     event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```js
+event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```
 
 ### Valeurs
 

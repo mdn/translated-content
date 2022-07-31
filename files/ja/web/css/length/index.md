@@ -41,7 +41,7 @@ translation_of: Web/CSS/length
 - `ch`
 
   - : その要素の {{Cssxref("font")}} における "0" (ゼロ、Unicode 文字 U+0030) の幅、より正確に言えば advance measure です。
- 
+
     "0" の文字の大きさを判断することが不可能または無意味である場合、幅が 0.5em、高さが 1em と仮定します。
 
 - `em`

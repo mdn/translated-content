@@ -17,7 +17,9 @@ La **déclaration `const`** permet de créer une constante nommée accessible un
 
 ## Syntaxe
 
-    const nom1 = valeur1 [, nom2 = valeur2 [, ... [, nomN = valeurN]]];
+```js
+const nom1 = valeur1 [, nom2 = valeur2 [, … [, nomN = valeurN]]];
+```
 
 - `nomN`
   - : Le nom de la constante. Ce nom peut être n'importe quel identifiant valide.

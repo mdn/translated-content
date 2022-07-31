@@ -88,10 +88,8 @@ function usePerformanceEntryMethods() {
 
 | Spécification                                                                                                                                        | Statut                                                   | Commentaire          |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performance-getentriesbytype',
-        'getEntriesByType()')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
-| {{SpecName('Performance Timeline', '#dom-performance-getentriesbytype',
-        'getEntriesByType()')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
+| {{SpecName('Performance Timeline Level 2', '#dom-performance-getentriesbytype', 'getEntriesByType()')}} | {{Spec2('Performance Timeline Level 2')}} |                      |
+| {{SpecName('Performance Timeline', '#dom-performance-getentriesbytype', 'getEntriesByType()')}}             | {{Spec2('Performance Timeline')}}             | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

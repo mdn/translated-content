@@ -42,10 +42,6 @@ A noter que les restrictions précédentes sont spécifiques à l'usage de SVG e
 | {{SpecName("HTML5 W3C", "embedded-content-0.html#the-img-element", "SVG within &lt;img&gt; element")}} | {{Spec2("HTML5 W3C")}}             | Définit l'usage de SVG dans les éléments {{HTMLElement("img")}}.             |
 | {{SpecName("CSS3 Backgrounds", "#the-background-image", "SVG within 'background-image' CSS property")}} | {{Spec2("CSS3 Backgrounds")}} | Définit l'usage de SVG dans la propriété {{cssxref("background-image")}}. |
 
-
-
 ## Voir aussi
-
-
 
 - [Introduction à SVG dans HTML](/fr/docs/Introduction_à_SVG_dans_HTML)

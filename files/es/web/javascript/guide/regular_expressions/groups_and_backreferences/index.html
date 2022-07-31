@@ -1,0 +1,177 @@
+---
+title: Grupos y rangos
+slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
+tags:
+  - Expresiones Regulares
+  - Guía
+  - JavaScript
+  - Rangos
+  - Referencia
+  - grupos
+  - regex
+translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+---
+<p>{{jsSidebar("JavaScript Guide")}}</p>
+
+<p>Los grupos y rangos indican grupos y rangos de caracteres de expresión.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/regexp-groups-ranges.html")}}</div>
+
+<h2 id="Tipos">Tipos</h2>
+
+<div class="hidden">La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Hoja_de_referencia", "esta hoja de trucos")}}. No olvides editarla también, ¡gracias!</div>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Caracteres</th>
+   <th scope="col">Significado</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code><em>x</em>|<em>y</em></code></td>
+   <td>
+    <p>Coincide con "x" o "y". Por ejemplo, <code>/verde|roja/</code> coincide con "verde" en "manzana verde" y "roja" en "manzana roja".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>[xyz]<br>
+    [a-c]</code></td>
+   <td>
+    <p>Un juego de caracteres. Coincide con cualquiera de los caracteres incluidos. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. También es posible incluir una clase de caracteres en un juego de caracteres.</p>
+
+    <p>Por ejemplo, <code>[abcd]</code> es lo mismo que <code>[a-d]</code>. Coincide con la "b" en "brisket" y la "c" en "chop".</p>
+
+    <p>Por ejemplo, <code>[abcd-]</code> y <code>[-abcd]</code> coinciden con la "b" en "brisket", la "c" en "chop" y el "-" (guión) en "sin-fin".</p>
+
+    <p>Por ejemplo, <code>[\w-]</code> es lo mismo que <code>[A-Za-z0-9_-]</code>. Ambos reconocen la "b" en "brisket", la "c" en "chop" y la "s" en "sin-fin".</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p><code>[^xyz]<br>
+     [^a-c]</code></p>
+   </td>
+   <td>
+    <p>Un juego de caracteres negado o complementado. Es decir, hallan cualquier cosa que no esté encerrada entre corchetes. Puedes especificar un rango de caracteres mediante el uso de un guión, pero si el guión aparece como el primero o último caracter entre corchetes, se toma como un guión literal para incluirse en el juego de caracteres como un caracter normal. Por ejemplo, <code>[^abc]</code> es lo mismo que <code>[^a-c]</code>. Inicialmente halla la "o" en "bacon" y la "h" en "chuleta".</p>
+
+    <div class="blockIndicator note">
+    <p>El caracter ^ también puede indicar el {{JSxRef("../Guide/Regular_Expressions/Assertions", "comienzo de la entrada")}}.</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>(<em>x</em>)</code></td>
+   <td>
+    <p><strong>Grupo de captura</strong>: Coincide con <code><em>x</em></code> y recuerda la coincidencia. Por ejemplo, <code>/(foo)/</code> encuentra y recuerda "foo" en "foo bar". </p>
+
+    <p>Una expresión regular puede tener varios grupos de captura. En los resultados, coincide con los grupos capturados normalmente en un arreglo cuyos miembros están en el mismo orden que los paréntesis de la izquierda en el grupo capturado. Este suele ser solo el orden de los propios grupos capturados. Esto se vuelve importante cuando los grupos capturados están anidados. Se accede a las coincidencias utilizando el índice de los elementos del resultado (<code>[1], ..., [n]</code>) o desde las propiedades predefinidas del objeto <code>RegExp</code> (<code>$1, ..., $9</code>).</p>
+
+    <p>Los grupos de captura tienen una penalización de rendimiento. Si no necesitas que se recupere la subcadena coincidente, prefiere los grupos de no captura (ve <a href="#gpodenocaptura">más abajo</a>).</p>
+
+    <p>{{JSxRef("Objetos_globales/String/match", "String.match()")}} no devolverá grupos si se establece el indicador <code>/.../g</code>. Sin embargo, aún puedes usar {{JSxRef("Objetos_globales/String/matchAll", "String.matchAll()")}} para obtener todas las coincidencias.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\<em>n</em></code></td>
+   <td>
+    <p>Donde "n" es un número entero positivo. Una referencia inversa a la última subcadena que coincide con el paréntesis <code>n</code> en la expresión regular (contando los paréntesis izquierdos). Por ejemplo, <code>/manzana(,)\snaranja\1/</code> coincide con "manzana, naranja," en "manzana, naranja, cereza, melocotón".</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\k&lt;Nombre&gt;</code></td>
+   <td>
+    <p>Una referencia inversa a la última subcadena que coincide con el grupo de captura <strong>N</strong><strong>ombrado</strong> especificado por <code>&lt;Nombre&gt;</code>.</p>
+
+    <p>Por ejemplo, <code>/(?&lt;trato&gt;\w+), si \k&lt;trato&gt;/</code> coincide con "Sr., sí Sr." en "¿Me copias? ¡Sr., sí Sr.!".</p>
+
+    <div class="blockIndicator note">
+    <p>aquí se usa <code>\k</code> literalmente para indicar el comienzo de una referencia inversa a un grupo de captura con nombre.</p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>(?&lt;Nombre&gt;x)</code></td>
+   <td>
+    <p><strong>Grupo de captura con nombre</strong>: Coincide con "x" y la almacena en la propiedad de grupos de las coincidencias devueltas con el nombre especificado por <code>&lt;Nombre&gt;</code>. Los corchetes angulares (<code>&lt;</code> y <code>&gt;</code>) son necesarios para el nombre del grupo.</p>
+
+    <p>Por ejemplo, para extraer el código de área de Estados Unidos de un número de teléfono, podrías usar <code>/\((?&lt;area&gt;\d\d\d)\)/</code>. El número resultante aparecería en <code>matches.groups.area</code>.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>(?:<em>x</em>)</code></td>
+   <td><span id="GpoDeNoCaptura"><strong>Grupo de no captura</strong></span>: Coincide con "x" pero no recuerda la coincidencia. La subcadena coincidente no se puede recuperar de los elementos del arreglo resultante (<code>[1], ..., [n]</code>) o de las propiedades predefinidas del objeto <code>RegExp</code> (<code>$1, ..., $9</code>).</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Conteo_de_vocales">Conteo de vocales</h3>
+
+<pre class="brush: js notranslate">var aliceExcerpt = "Hubo un largo silencio después de esto, y Alicia solo podía escuchar susurros de vez en cuando.";
+var regexpVowels = /[aeiouy]/g;
+
+console.log("Número de vocales minúsculas: ", aliceExcerpt.match(regexpVowels).length);
+// Número de vocales: 34</pre>
+
+<h3 id="Uso_de_grupos">Uso de grupos</h3>
+
+<pre class="brush: js notranslate">let personList = `First_Name: John, Last_Name: Doe
+First_Name: Jane, Last_Name: Smith`;
+
+let regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+let match = regexpNames.exec(personList);
+do {
+  console.log(`Hola ${match[1]} ${match[2]}`);
+} while((match = regexpNames.exec(personList)) !== null);
+</pre>
+
+<h3 id="Uso_de_grupos_con_nombre">Uso de grupos con nombre</h3>
+
+<pre class="brush: js notranslate">let personList = `First_Name: John, Last_Name: Doe
+First_Name: Jane, Last_Name: Smith`;
+
+let regexpNames =  /First_Name: (?&lt;firstname&gt;\w+), Last_Name: (?&lt;lastname&gt;\w+)/mg;
+let match = regexpNames.exec(personList);
+do {
+  console.log(`Hola ${match.groups.firstname} ${match.groups.lastname}`);
+} while((match = regexpNames.exec(personList)) !== null);</pre>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: No todos los navegadores admiten esta función; consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla de compatibilidad", "#Compatibilidad_del_navegador")}}.</p>
+</div>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-classranges', 'RegExp: Ranges')}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+
+<p>Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.</p>
+
+<h2 id="Ve_también">Ve también</h2>
+
+<ul>
+ <li>{{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
+
+  <ul>
+   <li>{{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}</li>
+   <li>{{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}</li>
+   <li>{{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}</li>
+   <li>{{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}</li>
+  </ul>
+ </li>
+ <li>{{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}</li>
+</ul>
