@@ -10,7 +10,7 @@ translation_of: Web/CSS/@import
 
 <h2 id="概述">概述</h2>
 
-<p><strong><code>@import </code></strong><a href="/en-US/docs/Web/CSS">CSS</a><a href="/en-US/docs/Web/CSS/At-rule">@规则</a>，用于从其他样式表导入样式规则。这些规则必须先于所有其他类型的规则，{{cssxref("@charset")}} 规则除外; 因为它不是一个<a href="/zh-CN/docs/Web/CSS/Syntax#nested_statements">嵌套语句</a>，@import 不能在<a href="/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules">条件组的规则</a>中使用。</p>
+<p><strong><code>@import </code></strong><a href="/en-US/docs/Web/CSS">CSS</a><a href="/en-US/docs/Web/CSS/At-rule">@规则</a>，用于从其他样式表导入样式规则。这些规则必须先于所有其他类型的规则，{{cssxref("@charset")}} 规则除外; 因为它不是一个<a href="/zh-CN/docs/Web/CSS/Syntax#nested_statements">嵌套语句</a>，@import 不能在<a href="/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules">条件组的规则</a>中使用。</p>
 
 <p>因此，用户代理可以避免为不支持的媒体类型检索资源，作者可以指定依赖媒体的 @import 规则。这些条件导入在 URI 之后指定逗号分隔的<a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">媒体查询</a>。在没有任何媒体查询的情况下，导入是无条件的。指定所有的媒体具有相同的效果。</p>
 
@@ -43,35 +43,9 @@ translation_of: Web/CSS/@import
 @import url('landscape.css') screen and (orientation:landscape);
 </pre>
 
-<h2 id="技术规格">技术规格</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">技术规格</th>
-   <th scope="col">Status</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#media0', '@import')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>扩展语法以支持任何媒体查询，而不仅仅是简单的<a href="/en-US/docs/Web/CSS/@media#Media_types">媒体类型</a>。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'cascade.html#at-import', '@import')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>支持用{{cssxref("&lt;string&gt;")}}直接表示样式表的 url，<br>
-    并要求<code>@import</code>规则必须在 CSS 文档的开头。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#the-cascade', '@import')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

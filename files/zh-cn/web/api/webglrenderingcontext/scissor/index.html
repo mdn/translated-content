@@ -7,7 +7,7 @@ translation_of: Web/API/WebGLRenderingContext/scissor
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p> <strong><code>WebGLRenderingContext.scissor()</code></strong> 方法指定了一个裁剪区域，用来将绘图区域限制在其限定的盒形区域内。</p>
+<p> <strong><code>WebGLRenderingContext.scissor()</code></strong> 方法指定了一个裁剪区域，用来将绘图区域限制在其限定的盒形区域内。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/WebGLRenderingContext/scissor
  <dt><code>x</code></dt>
  <dd>{{domxref("GLint")}} ，指定盒形裁剪区域左下角所在的横坐标，默认为 0。</dd>
  <dt><code>y</code></dt>
- <dd> {{domxref("GLint")}} 指定盒形裁剪区域左下角的纵坐标，默认为 0。</dd>
+ <dd> {{domxref("GLint")}} 指定盒形裁剪区域左下角的纵坐标，默认为 0。</dd>
  <dt>width</dt>
  <dd>{{domxref("Glsizei")}}，用来确定盒型裁剪区域宽度的非负数，默认为 canvas 的宽度。</dd>
  <dt>height</dt>
@@ -33,7 +33,7 @@ translation_of: Web/API/WebGLRenderingContext/scissor
 
 <h3 id="抛错">抛错</h3>
 
-<p>宽或高为负值时，抛出  <code>gl.INVALID_VALUE</code> 错误。</p>
+<p>宽或高为负值时，抛出  <code>gl.INVALID_VALUE</code> 错误。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -51,33 +51,15 @@ gl.scissor(x, y, width, height);
 gl.disable(gl.SCISSOR_TEST);
 </pre>
 
-<p>通过查询 <code>SCISSOR_BOX</code> 常量来获取裁剪区域的维度信息，返回值是一个 {{jsxref("Int32Array")}} 对象。</p>
+<p>通过查询 <code>SCISSOR_BOX</code> 常量来获取裁剪区域的维度信息，返回值是一个 {{jsxref("Int32Array")}} 对象。</p>
 
 <pre class="brush: js notranslate">gl.scissor(0, 0, 200, 200);
 gl.getParameter(gl.SCISSOR_BOX);
 // Int32Array[0, 0, 200, 200]</pre>
 
-<h2 id="标准">标准</h2>
+<h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebGL', "#5.14.4", "scissor")}}</td>
-   <td>{{Spec2('WebGL')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('OpenGL ES 2.0', "glScissor.xml", "glScissor")}}</td>
-   <td>{{Spec2('OpenGL ES 2.0')}}</td>
-   <td>Man page of the OpenGL API.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

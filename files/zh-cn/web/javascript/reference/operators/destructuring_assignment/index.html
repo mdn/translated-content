@@ -94,7 +94,7 @@ console.log(b); // 7</pre>
 
 <p>在一个解构表达式中可以交换两个变量的值。</p>
 
-<p>没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的<a class="external" href="http://en.wikipedia.org/wiki/XOR_swap">XOR-swap 技巧</a>）。</p>
+<p>没有解构赋值的情况下，交换两个变量需要一个临时变量（或者用低级语言中的<a href="http://en.wikipedia.org/wiki/XOR_swap">XOR-swap 技巧</a>）。</p>
 
 <pre class="brush: js">var a = 1;
 var b = 3;
@@ -188,13 +188,13 @@ console.log(q); // true
 </pre>
 
 <div class="note">
-<p><strong>备注：</strong>赋值语句周围的圆括号 <code>( ... )</code> 在使用对象字面量无声明解构赋值时是必须的。</p>
+<p><strong>备注：</strong>赋值语句周围的圆括号 <code>( ... )</code> 在使用对象字面量无声明解构赋值时是必须的。</p>
 
 <p><code>{a, b} = {a: 1, b: 2}</code> 不是有效的独立语法，因为左边的 <code>{a, b}</code> 被认为是一个块而不是对象字面量。</p>
 
 <p>然而，<code>({a, b} = {a: 1, b: 2})</code> 是有效的，正如 <code>var {a, b} = {a: 1, b: 2}</code></p>
 
-<p>你的 <code>( ... )</code> 表达式之前需要有一个分号，否则它可能会被当成上一行中的函数执行。</p>
+<p>你的 <code>( ... )</code> 表达式之前需要有一个分号，否则它可能会被当成上一行中的函数执行。</p>
 </div>
 
 <h3 id="给新的变量名赋值">给新的变量名赋值</h3>
@@ -219,7 +219,7 @@ console.log(b); // 5
 
 <h3 id="给新的变量命名并提供默认值">给新的变量命名并提供默认值</h3>
 
-<p>一个属性可以同时 1）从一个对象解构，并分配给一个不同名称的变量 2）分配一个默认值，以防未解构的值是 <code>undefined</code>。</p>
+<p>一个属性可以同时 1）从一个对象解构，并分配给一个不同名称的变量 2）分配一个默认值，以防未解构的值是 <code>undefined</code>。</p>
 
 <pre class="brush: js">var {a:aa = 10, b:bb = 5} = {a: 3};
 
@@ -259,7 +259,7 @@ drawES2015Chart({
 });</pre>
 
 <div class="note">
-<p><strong>备注：</strong>在上面的 <strong><code>drawES2015Chart</code></strong> 的函数签名中，解构的左手边被分配给右手边的空对象字面值：<code>{size = 'big', cords = {x: 0, y: 0}, radius = 25} = {}</code>。你也可以在没有右侧分配的情况下编写函数。但是，如果你忽略了右边的赋值，那么函数会在被调用的时候查找至少一个被提供的参数，而在当前的形式下，你可以直接调用 <code><strong>drawES2015Chart()</strong></code> 而不提供任何参数。如果你希望能够在不提供任何参数的情况下调用该函数，则当前的设计非常有用，而另一种方法在您确保将对象传递给函数时非常有用。</p>
+<p><strong>备注：</strong>在上面的 <strong><code>drawES2015Chart</code></strong> 的函数签名中，解构的左手边被分配给右手边的空对象字面值：<code>{size = 'big', cords = {x: 0, y: 0}, radius = 25} = {}</code>。你也可以在没有右侧分配的情况下编写函数。但是，如果你忽略了右边的赋值，那么函数会在被调用的时候查找至少一个被提供的参数，而在当前的形式下，你可以直接调用 <code><strong>drawES2015Chart()</strong></code> 而不提供任何参数。如果你希望能够在不提供任何参数的情况下调用该函数，则当前的设计非常有用，而另一种方法在您确保将对象传递给函数时非常有用。</p>
 </div>
 
 <h3 id="解构嵌套对象和数组">解构嵌套对象和数组</h3>
@@ -342,11 +342,11 @@ var user = {
 console.log("userId: " + userId(user)); // "userId: 42"
 whois(user); // "jdoe is John"</pre>
 
-<p>这段代码从 user 对象中提取并输出<code>id、</code><code>displayName</code> 和 <code>firstName</code>。</p>
+<p>这段代码从 user 对象中提取并输出<code>id、</code><code>displayName</code> 和 <code>firstName</code>。</p>
 
 <h3 id="对象属性计算名和解构">对象属性计算名和解构</h3>
 
-<p>计算属性名，如 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">object literals</a>，可以被解构。</p>
+<p>计算属性名，如 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">object literals</a>，可以被解构。</p>
 
 <pre class="brush: js">let key = "z";
 let { [key]: foo } = { z: "bar" };
@@ -386,29 +386,11 @@ const {self, prot} = obj;
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.operators.destructuring")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 
@@ -422,8 +404,8 @@ const {self, prot} = obj;
 <p>为什么在示例代码中出现了那么多 42？如果有什么特别的原因的话，以下是译者的猜测。</p>
 
 <ul>
- <li><a class="external-icon" href="https://zh.wikipedia.org/wiki/42#%E5%9C%A8%E4%BA%BA%E7%B1%BB%E6%96%87%E5%8C%96%E4%B8%AD">42#在人类文化中 - 维基百科</a></li>
- <li><a class="external-icon" href="https://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD%E3%80%81%E5%AE%87%E5%AE%99%E4%BB%A5%E5%8F%8A%E4%BB%BB%E4%BD%95%E4%BA%8B%E6%83%85%E7%9A%84%E7%B5%82%E6%A5%B5%E7%AD%94%E6%A1%88">生命、宇宙以及任何事情的终极答案 - 维基百科</a></li>
- <li><a class="external-icon" href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy">42_(number)#The Hitchhiker's Guide to the Galaxy - Wikipedia</a></li>
- <li><a class="external-icon" href="https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)">Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42) - Wikipedia</a></li>
+ <li><a href="https://zh.wikipedia.org/wiki/42#%E5%9C%A8%E4%BA%BA%E7%B1%BB%E6%96%87%E5%8C%96%E4%B8%AD">42#在人类文化中 - 维基百科</a></li>
+ <li><a href="https://zh.wikipedia.org/wiki/%E7%94%9F%E5%91%BD%E3%80%81%E5%AE%87%E5%AE%99%E4%BB%A5%E5%8F%8A%E4%BB%BB%E4%BD%95%E4%BA%8B%E6%83%85%E7%9A%84%E7%B5%82%E6%A5%B5%E7%AD%94%E6%A1%88">生命、宇宙以及任何事情的终极答案 - 维基百科</a></li>
+ <li><a href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy">42_(number)#The Hitchhiker's Guide to the Galaxy - Wikipedia</a></li>
+ <li><a href="https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)">Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42) - Wikipedia</a></li>
 </ul>

@@ -1,0 +1,61 @@
+---
+title: GlobalEventHandlers.onkeydown
+slug: conflicting/Web/API/Element/keydown_event
+tags:
+  - API
+  - HTML DOM
+  - NeedsContent
+  - NeedsExample
+translation_of: Web/API/GlobalEventHandlers/onkeydown
+original_slug: Web/API/GlobalEventHandlers/onkeydown
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<p><code><strong>onkeydown</strong></code> 속성은 현재 요소(element)의 <code>onKeyDown</code> 이벤트 핸들러 코드를 돌려줍니다</p>
+
+<pre class="syntaxbox">element.onkeydown = <var>event handling code</var></pre>
+
+<h2 id="Example">Example</h2>
+
+<p>This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press down a key inside the {{HtmlElement("input")}} element.</p>
+
+<h3 id="HTML">HTML</h3>
+
+<pre><code>&lt;input&gt;
+&lt;p id="log"&gt;&lt;/p&gt;</code></pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre><code>const input = document.querySelector('input');
+const log = document.getElementById('log');
+
+input.onkeydown = logKey;
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}</code></pre>
+
+<h3 id="Result">Result</h3>
+
+<p>{{EmbedLiveSample("Example")}}</p>
+
+<h2 id="명세">명세</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">명세</th>
+   <th scope="col">상태</th>
+   <th scope="col">비고</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeydown','onkeydown')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="브라우저_호환성">브라우저 호환성</h2>
+
+<p>{{Compat("api.GlobalEventHandlers.onkeydown")}}</p>

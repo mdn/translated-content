@@ -38,7 +38,7 @@ X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
  <dd>启用 XSS 过滤（通常浏览器是默认的）。 如果检测到跨站脚本攻击，浏览器将清除页面（删除不安全的部分）。</dd>
  <dt>1;mode=block</dt>
  <dd>启用 XSS 过滤。 如果检测到攻击，浏览器将不会清除页面，而是阻止页面加载。</dd>
- <dt>1; report=&lt;reporting-URI&gt;  (Chromium only)</dt>
+ <dt>1; report=&lt;reporting-URI&gt;  (Chromium only)</dt>
  <dd>启用 XSS 过滤。 如果检测到跨站脚本攻击，浏览器将清除页面并使用 CSP {{CSP("report-uri")}}指令的功能发送违规报告。</dd>
 </dl>
 

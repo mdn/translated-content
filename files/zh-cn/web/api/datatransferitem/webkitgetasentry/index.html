@@ -19,7 +19,7 @@ translation_of: Web/API/DataTransferItem/webkitGetAsEntry
 
 <h3 id="返回值">返回值</h3>
 
-<p><a href="/en-US/docs/Web/API/FileSystemEntry"><code>FileSystemEntry</code></a>基于 A 的对象描述被删除的项目。这将是<a href="/en-US/docs/Web/API/FileSystemFileEntry"><code>FileSystemFileEntry</code></a>或<a href="/en-US/docs/Web/API/FileSystemDirectoryEntry"><code>FileSystemDirectoryEntry</code></a>。</p>
+<p><a href="/en-US/docs/Web/API/FileSystemEntry"><code>FileSystemEntry</code></a>基于 A 的对象描述被删除的项目。这将是<a href="/en-US/docs/Web/API/FileSystemFileEntry"><code>FileSystemFileEntry</code></a>或<a href="/en-US/docs/Web/API/FileSystemDirectoryEntry"><code>FileSystemDirectoryEntry</code></a>。</p>
 
 <h2 id="Example">示例</h2>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/DataTransferItem/webkitGetAsEntry
 
 <h3 id="HTML内容">HTML 内容</h3>
 
-<p>HTML 建立了放置区本身，它是<a href="/en-US/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a>具有 ID 的元素<code>"dropzone"</code>，以及带有 ID 的无序列表元素<code>"listing"</code>。</p>
+<p>HTML 建立了放置区本身，它是<a href="/en-US/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a>具有 ID 的元素<code>"dropzone"</code>，以及带有 ID 的无序列表元素<code>"listing"</code>。</p>
 
 <pre><code>&lt;p&gt;Drag files and/or directories to the box below!&lt;/p&gt;
 
@@ -101,9 +101,9 @@ function scanFiles(item, container) {
 
 <p><code>scanFiles()</code>首先创建一个新<a href="/en-US/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。容器在此示例中始终是列表元素，您很快就会看到。</p>
 
-<p>一旦当前项目在列表中，<a href="/en-US/docs/Web/API/FileSystemEntry/isDirectory"><code>isDirectory</code></a>就会检查项目的属性。如果该项目是目录，我们需要递归到该目录。第一步是创建一个<a href="/en-US/docs/Web/API/FileSystemDirectoryReader"><code>FileSystemDirectoryReader</code></a>to 来处理获取目录的内容。这是通过调用 item 的<a href="/en-US/docs/Web/API/FileSystemDirectoryEntry/createReader"><code>createReader()</code></a>方法完成的。然后<a href="/en-US/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a>创建一个 new 并将其附加到父列表; 这将包含列表层次结构中下一级别的目录内容。</p>
+<p>一旦当前项目在列表中，<a href="/en-US/docs/Web/API/FileSystemEntry/isDirectory"><code>isDirectory</code></a>就会检查项目的属性。如果该项目是目录，我们需要递归到该目录。第一步是创建一个<a href="/en-US/docs/Web/API/FileSystemDirectoryReader"><code>FileSystemDirectoryReader</code></a>to 来处理获取目录的内容。这是通过调用 item 的<a href="/en-US/docs/Web/API/FileSystemDirectoryEntry/createReader"><code>createReader()</code></a>方法完成的。然后<a href="/en-US/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a>创建一个 new 并将其附加到父列表; 这将包含列表层次结构中下一级别的目录内容。</p>
 
-<p>之后，<a href="/en-US/docs/Web/API/FileSystemDirectoryReader/readEntries"><code>directoryReader.readEntries()</code></a>调用读取目录中的所有条目。反过来，这些都被传递到递归调用<code>scanFiles()</code>以处理它们。其中任何文件都只是插入到列表中; 将任何目录插入到列表中，并在下面添加列表层次结构的新级别，依此类推。</p>
+<p>之后，<a href="/en-US/docs/Web/API/FileSystemDirectoryReader/readEntries"><code>directoryReader.readEntries()</code></a>调用读取目录中的所有条目。反过来，这些都被传递到递归调用<code>scanFiles()</code>以处理它们。其中任何文件都只是插入到列表中; 将任何目录插入到列表中，并在下面添加列表层次结构的新级别，依此类推。</p>
 
 <p>然后是事件处理程序。首先，我们阻止<code><a href="/en-US/docs/Web/Events/dragover">dragover</a></code>事件由默认处理程序处理，以便我们的 drop 区域可以接收 drop：</p>
 

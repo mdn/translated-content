@@ -8,7 +8,7 @@ translation_of: Web/API/WebGL_API/WebGL_model_view_projection
 <p>本文探讨如何在 WebGL 项目中获取数据，并将其投影到适当的空间以在屏幕上显示。 它假定了你具备用于平移，缩放和旋转的基本矩阵数学知识。它解释了组成 3D 场景时通常使用的三个核心矩阵：模型，视图和投影矩阵。</p>
 
 <div class="note">
-<p><strong>注意：</strong>本文还可作为 <a href="https://github.com/TatumCreative/mdn-model-view-projection">MDN 内容套件</a> 提供。它还使用 <code>MDN</code>全局对象下可用的 <a href="https://github.com/TatumCreative/mdn-webgl">实用函数</a> 集合。</p>
+<p><strong>注意：</strong>本文还可作为 <a href="https://github.com/TatumCreative/mdn-model-view-projection">MDN 内容套件</a> 提供。它还使用 <code>MDN</code>全局对象下可用的 <a href="https://github.com/TatumCreative/mdn-webgl">实用函数</a> 集合。</p>
 </div>
 
 <h2 id="模型、视图、投影矩阵">模型、视图、投影矩阵</h2>
@@ -34,7 +34,7 @@ translation_of: Web/API/WebGL_API/WebGL_model_view_projection
 <p>本示例将创建一个自定义 WebGL 对象，该对象将在屏幕上绘制一个 2D 框。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 每一个 WebGL 示例代码在此 <a href="https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons">github repo</a> 中可找到，并按章节组织。此外，每个章节底部都有一个 JSFiddle 链接。</p>
+<p><strong>注意</strong>: 每一个 WebGL 示例代码在此 <a href="https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons">github repo</a> 中可找到，并按章节组织。此外，每个章节底部都有一个 JSFiddle 链接。</p>
 </div>
 
 <h4 id="WebGLBox_Constructor">WebGLBox Constructor</h4>
@@ -112,7 +112,7 @@ translation_of: Web/API/WebGL_API/WebGL_model_view_projection
 }
 </pre>
 
-<p>着色器是用 GLSL 编写的代码片段，它接收我们的点数据并最终将它们渲染到屏幕上。为了方便起见，这些着色器存储在 {{htmlelement("script")}} 元素之中，该元素通过自定义函数 <code>MDN.createWebGLProgramFromIds()</code> 引入程序中。这个方法是为这些教程编写的 <a href="https://github.com/TatumCreative/mdn-webgl">实用函数</a> 集合的一部分，此处不再赘述。此函数用于处理获取一些 GLSL 源代码并将其编译为 WebGL 程序的基础操作。该函数具有三个参数 - 用于渲染程序的上下文，包含顶点着色器的 {{htmlelement("script")}} 元素的 ID 和包含片段着色器的 {{htmlelement("script")}} 元素的 ID。顶点着色器放置顶点，片段着色器为每个像素着色。</p>
+<p>着色器是用 GLSL 编写的代码片段，它接收我们的点数据并最终将它们渲染到屏幕上。为了方便起见，这些着色器存储在 {{htmlelement("script")}} 元素之中，该元素通过自定义函数 <code>MDN.createWebGLProgramFromIds()</code> 引入程序中。这个方法是为这些教程编写的 <a href="https://github.com/TatumCreative/mdn-webgl">实用函数</a> 集合的一部分，此处不再赘述。此函数用于处理获取一些 GLSL 源代码并将其编译为 WebGL 程序的基础操作。该函数具有三个参数 - 用于渲染程序的上下文，包含顶点着色器的 {{htmlelement("script")}} 元素的 ID 和包含片段着色器的 {{htmlelement("script")}} 元素的 ID。顶点着色器放置顶点，片段着色器为每个像素着色。</p>
 
 <p>首先看一下将在屏幕上移动顶点的顶点着色器：</p>
 
@@ -200,11 +200,11 @@ void main() {
 <pre class="brush: js">gl_Position = vec4(position, 1.0);
 </pre>
 
-<p>位置变量是在 <code>draw()</code> 方法中定义的，并作为 attribute 传递给着色器。这是一个三维点，但最终通过管线传递的 <code>gl_Position</code> 变量实际上是四维的 - 是 <code>(x,y,z,w)</code> 而不是  <code>(x,y,z)</code> 。 <code>z</code> 后面没有字母了，因此习惯上将第四维标记为 <code>w</code>。在上面的示例中，  <code>w</code> 坐标设置为 1.0。</p>
+<p>位置变量是在 <code>draw()</code> 方法中定义的，并作为 attribute 传递给着色器。这是一个三维点，但最终通过管线传递的 <code>gl_Position</code> 变量实际上是四维的 - 是 <code>(x,y,z,w)</code> 而不是  <code>(x,y,z)</code> 。 <code>z</code> 后面没有字母了，因此习惯上将第四维标记为 <code>w</code>。在上面的示例中，  <code>w</code> 坐标设置为 1.0。</p>
 
-<p>显而易见的问题是：“为什么要增加维度？”。事实证明，这种增加允许使用许多不错的技术来处理 3D 数据。这个增加的维度将透视的概念引入坐标系中。将其放置在适当的位置后，我们可以将 3D 坐标映射到 2D 空间中，从而允许两条平行线当它们延伸到远方时相交。 <code>w</code> 的值被用作该坐标的其他分量放除数，因此  <code>x</code>,   <code>y</code> 和  <code>z</code> 的真实值被计算为  <code>x/w</code> ,  <code>y/w</code> 和  <code>z/w</code>（然后 <code>w</code> 也  <code>w/w</code> , 变成 1）。</p>
+<p>显而易见的问题是：“为什么要增加维度？”。事实证明，这种增加允许使用许多不错的技术来处理 3D 数据。这个增加的维度将透视的概念引入坐标系中。将其放置在适当的位置后，我们可以将 3D 坐标映射到 2D 空间中，从而允许两条平行线当它们延伸到远方时相交。 <code>w</code> 的值被用作该坐标的其他分量放除数，因此  <code>x</code>,   <code>y</code> 和  <code>z</code> 的真实值被计算为  <code>x/w</code> ,  <code>y/w</code> 和  <code>z/w</code>（然后 <code>w</code> 也  <code>w/w</code> , 变成 1）。</p>
 
-<p>三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为  {{interwiki("wikipedia", "homogeneous coordinates", "齐次坐标")}} 。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。</p>
+<p>三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为  {{interwiki("wikipedia", "homogeneous coordinates", "齐次坐标")}} 。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。</p>
 
 <pre class="brush: js">function cartesianToHomogeneous(point) {
 
@@ -231,7 +231,7 @@ function homogeneousToCartesian(point) {
 <pre class="brush: js">homogeneousToCartesian([10, 4, 5, 0]);
 </pre>
 
-<p>计算结果为： <code>[Infinity, Infinity, Infinity]</code>.</p>
+<p>计算结果为： <code>[Infinity, Infinity, Infinity]</code>.</p>
 
 <p>该齐次坐标表示无穷大的某个点。这是一种方便的方式表示从原点向特定方向发射的射线。除了射线，还可以将其视为方向矢量的表示。如果将此齐次坐标和带有平移的矩阵相乘，则该平移将被有效地消去了。</p>
 
@@ -241,7 +241,7 @@ function homogeneousToCartesian(point) {
 
 <p>实际上，在将齐次坐标转换回笛卡尔坐标之后（通过除以 w），会发生从裁剪空间中裁剪点和多边形的情况。该最终空间称为<strong>归一化设备坐标</strong>或 NDC。</p>
 
-<p>为了开始使用这个思想，可以修改前面的示例，以允许使用 <code>w</code> 分量。</p>
+<p>为了开始使用这个思想，可以修改前面的示例，以允许使用 <code>w</code> 分量。</p>
 
 <pre class="brush: js">// 重新定义三角形以使用 W 分量
 var data = new Float32Array([
@@ -333,7 +333,7 @@ void main() {
 
 <p>在这种情况下，对于动画的每一帧，一系列缩放，旋转和平移矩阵会将数据移动到裁剪空间中所需的位置。这个立方体是裁剪空间 (-1, -1, -1) 到 (1, 1, 1) 的大小，因此需要缩小以不填满整个裁剪空间。该矩阵事先已经在 JavaScript 中进行了乘法运算，直接发到着色器。</p>
 
-<p>以下代码示例在  <code>CubeDemo</code> 对象上定义了一个创建模型矩阵的方法。它使用了自定义函数来创建和乘以 <a href="https://github.com/TatumCreative/mdn-webgl">MDN WebGL</a> 共享代码中定义的矩阵。新的函数如下：</p>
+<p>以下代码示例在  <code>CubeDemo</code> 对象上定义了一个创建模型矩阵的方法。它使用了自定义函数来创建和乘以 <a href="https://github.com/TatumCreative/mdn-webgl">MDN WebGL</a> 共享代码中定义的矩阵。新的函数如下：</p>
 
 <pre class="brush: js">CubeDemo.prototype.computeModelMatrix = function(now) {
 
@@ -359,7 +359,7 @@ void main() {
 };
 </pre>
 
-<p>为了在着色器中使用它，必须将其设置在 uniforms 的位置。uniforms 的位置保存在 <code>locations</code> 对象中，如下所示：</p>
+<p>为了在着色器中使用它，必须将其设置在 uniforms 的位置。uniforms 的位置保存在 <code>locations</code> 对象中，如下所示：</p>
 
 <pre class="brush: js">this.locations.model = gl.getUniformLocation(webglProgram, 'model');
 </pre>
@@ -392,12 +392,12 @@ void main() {
  <li>使用缩放矩阵缩小立方体，并将其放置在裁剪空间中不同位置。</li>
  <li>尝试将其移到裁剪空间之外。</li>
  <li>调整窗口大小，然后观察盒子的变形情况。</li>
- <li>添加一个 <code>rotateZ</code> 。</li>
+ <li>添加一个 <code>rotateZ</code> 。</li>
 </ul>
 
 <h2 id="除以_W">除以 W</h2>
 
-<p>一个开始了解立方体模型透视的简单方法是获取 Z 坐标并将其复制到 w 坐标。通常，将笛卡尔点转换为齐次坐标时，它变为  <code>(x,y,z,1)</code> ，但我们将其设置为  <code>(x,y,z,z)</code> 。实际上，我们希望确保视图中的点的 z 值大于 0，因此我们将其值改为  <code>((1.0 + z) * scaleFactor)</code> 对其进行轻微的修改。这将需要一个通常位于裁剪空间（-1 到 1）中的点，并将其移到更像（0 到 1）的空间中，具体取决于比例因子设置为什么。比例因子将最终 w 值更改为总体上更高或更低。</p>
+<p>一个开始了解立方体模型透视的简单方法是获取 Z 坐标并将其复制到 w 坐标。通常，将笛卡尔点转换为齐次坐标时，它变为  <code>(x,y,z,1)</code> ，但我们将其设置为  <code>(x,y,z,z)</code> 。实际上，我们希望确保视图中的点的 z 值大于 0，因此我们将其值改为  <code>((1.0 + z) * scaleFactor)</code> 对其进行轻微的修改。这将需要一个通常位于裁剪空间（-1 到 1）中的点，并将其移到更像（0 到 1）的空间中，具体取决于比例因子设置为什么。比例因子将最终 w 值更改为总体上更高或更低。</p>
 
 <p>着色器代码如下：</p>
 
@@ -421,7 +421,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 <p><img alt="Filling the W component and creating some projection." src="part4.png"></p>
 
-<p>看到那个深蓝色的小三角形吗？那是添加到对象上的另一个面，因为形状的旋转导致了该角延伸到裁剪空间之外，从而导致该角被裁剪掉。有关如何使用更复杂的矩阵来帮助控制和防止裁剪的介绍，请参照下面的 <a href="#perspective_matrix">Perspective matrix</a>。</p>
+<p>看到那个深蓝色的小三角形吗？那是添加到对象上的另一个面，因为形状的旋转导致了该角延伸到裁剪空间之外，从而导致该角被裁剪掉。有关如何使用更复杂的矩阵来帮助控制和防止裁剪的介绍，请参照下面的 <a href="#perspective_matrix">Perspective matrix</a>。</p>
 
 <h3 id="练习_4">练习</h3>
 
@@ -431,7 +431,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 <h2 id="简单投影">简单投影</h2>
 
-<p>填充 w 分量的最后一步实际上可以用一个简单的矩阵完成。从 identity 矩阵开始：</p>
+<p>填充 w 分量的最后一步实际上可以用一个简单的矩阵完成。从 identity 矩阵开始：</p>
 
 <pre class="brush: js">var identity = [
   1, 0, 0, 0,
@@ -457,7 +457,7 @@ MDN.multiplyPoint(copyZ, [2, 3, 4, 1]);
 //&gt; [2, 3, 4, 4]
 </pre>
 
-<p>但是，在最后一个示例中，我们执行了 <code>(z + 1) * scaleFactor</code>:</p>
+<p>但是，在最后一个示例中，我们执行了 <code>(z + 1) * scaleFactor</code>:</p>
 
 <pre>var scaleFactor = 0.5;
 
@@ -490,9 +490,9 @@ var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
 <pre class="brush: js">w = (4 + 1) * scaleFactor
 </pre>
 
-<p>这与我们在前面示例中使用的  <code>(z + 1) * scaleFactor</code> 完全相同。</p>
+<p>这与我们在前面示例中使用的  <code>(z + 1) * scaleFactor</code> 完全相同。</p>
 
-<p>在 box demo 中，添加了一个额外的 <code>.computeSimpleProjectionMatrix()</code> 方法。在 <code>.draw()</code> 方法中调用，并将比例因子传递给它。结果应该与上一个示例相同：</p>
+<p>在 box demo 中，添加了一个额外的 <code>.computeSimpleProjectionMatrix()</code> 方法。在 <code>.draw()</code> 方法中调用，并将比例因子传递给它。结果应该与上一个示例相同：</p>
 
 <pre class="brush: js">CubeDemo.prototype.computeSimpleProjectionMatrix = function(scaleFactor) {
 
@@ -506,7 +506,7 @@ var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
 };
 </pre>
 
-<p>尽管结果相同，但重要的步骤还是在顶点着色器中。与其直接修改顶点，不如将其乘以一个附加的 <strong><a href="#projection_matrix">projection matrix</a></strong>，该矩阵将 3D 点投影到 2D 绘图表面上：</p>
+<p>尽管结果相同，但重要的步骤还是在顶点着色器中。与其直接修改顶点，不如将其乘以一个附加的 <strong><a href="#projection_matrix">projection matrix</a></strong>，该矩阵将 3D 点投影到 2D 绘图表面上：</p>
 
 <pre class="brush: glsl">// 确保以相反的顺序读取转换矩阵
 gl_Position = projection * model * vec4(position, 1.0);
@@ -522,7 +522,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>至此，我们逐步构建了自己的 3D 渲染设置。但是，我们当前构建的代码存在一些问题。首先，每当我们调整窗口大小时，它就会倾斜。另外是我们的简单投影无法处理场景数据的大范围值。大多数场景在裁剪空间中不起作用。定义与场景相关的距离是很有帮助的，这样在转换数字时不会损失精度。最后，对哪些点放在裁剪空间的内部和外部进行精度控制非常有帮助。在前面的例子中，立方体的角偶尔会被裁剪。</p>
 
-<p>透视矩阵是一种可以满足这些要求的投影矩阵。也开始涉及数学更多的内容，这些示例中将不做充分解释。简而言之，它结合了除以 w（与前面的例子相同）和基于 <a href="https://en.wikipedia.org/wiki/Similarity_%28geometry%29">相似三角形</a> 相似三角形的一些巧妙操作。如果你想阅读有关其背后数学的完整说明，请查看以下一些链接：</p>
+<p>透视矩阵是一种可以满足这些要求的投影矩阵。也开始涉及数学更多的内容，这些示例中将不做充分解释。简而言之，它结合了除以 w（与前面的例子相同）和基于 <a href="https://en.wikipedia.org/wiki/Similarity_%28geometry%29">相似三角形</a> 相似三角形的一些巧妙操作。如果你想阅读有关其背后数学的完整说明，请查看以下一些链接：</p>
 
 <ul>
  <li><a href="http://www.songho.ca/opengl/gl_projectionmatrix.html">OpenGL 投影矩阵</a></li>
@@ -532,9 +532,9 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>关于下面使用的透视矩阵，需要注意的一件重要的事是它会翻转 z 轴。在裁剪空间中，z+ 原理观察者，而使用此矩阵，它朝向观察者。</p>
 
-<p>翻转 z 轴的原因是，裁剪空间坐标系是左手坐标系（z 轴指向远离观察者并指入屏幕的位置），而数学，物理学和 3D 建模中的惯例与 OpenGL 中视图/眼睛坐标系一样，是使用右手坐标系（z 轴指向屏幕，朝向观察者）。有关的 Wikipedia 文章的更多信息：<a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness">直角坐标系</a>, <a href="https://en.wikipedia.org/wiki/Right-hand_rule">右手法则</a>。</p>
+<p>翻转 z 轴的原因是，裁剪空间坐标系是左手坐标系（z 轴指向远离观察者并指入屏幕的位置），而数学，物理学和 3D 建模中的惯例与 OpenGL 中视图/眼睛坐标系一样，是使用右手坐标系（z 轴指向屏幕，朝向观察者）。有关的 Wikipedia 文章的更多信息：<a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness">直角坐标系</a>, <a href="https://en.wikipedia.org/wiki/Right-hand_rule">右手法则</a>。</p>
 
-<p>让我们看一下  <code>perspectiveMatrix()</code> 函数，该函数计算了透视矩阵。</p>
+<p>让我们看一下  <code>perspectiveMatrix()</code> 函数，该函数计算了透视矩阵。</p>
 
 <pre class="brush:js">MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
 
@@ -561,7 +561,7 @@ gl_Position = projection * model * vec4(position, 1.0);
  <dd>一个正数，表示到屏幕的距离是垂直于地板的平面的距离，该距离比将所有内容都裁剪的距离更近。它在裁剪空间中映射为-1，并且不应设置为 0。</dd>
  <dt><code>farClippingPlaneDistance</code></dt>
  <dd>一个正数，表示与平面之间的距离，超出该距离将裁剪几何体。它在裁剪空间中映射为 1.该值应保持合理的距离以接近几何图形的距离，以免在渲染时出现精度误差。</dd>
- <dd>在最新版本的盒子 demo 中， <code>computeSimpleProjectionMatrix()</code> 函数已替换为 <code>computePerspectiveMatrix()</code> 函数。</dd>
+ <dd>在最新版本的盒子 demo 中， <code>computeSimpleProjectionMatrix()</code> 函数已替换为 <code>computePerspectiveMatrix()</code> 函数。</dd>
 </dl>
 
 <pre class="brush: js">CubeDemo.prototype.computePerspectiveMatrix = function() {
@@ -597,7 +597,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <ul>
  <li>使用透视矩阵和模型矩阵的参数进行体验。</li>
- <li>将透视矩阵替换为 {{interwiki("wikipedia", "正交矩阵")}}。在 MDN WebGL 共享代码中可以找到 <code>MDN.orthographicMatrix()</code> 替换 <code>CubeDemo.prototype.computePerspectiveMatrix()</code> 中的 <code>MDN.perspectiveMatrix()</code> 函数。</li>
+ <li>将透视矩阵替换为 {{interwiki("wikipedia", "正交矩阵")}}。在 MDN WebGL 共享代码中可以找到 <code>MDN.orthographicMatrix()</code> 替换 <code>CubeDemo.prototype.computePerspectiveMatrix()</code> 中的 <code>MDN.perspectiveMatrix()</code> 函数。</li>
 </ul>
 
 <h2 id="视图矩阵">视图矩阵</h2>
@@ -622,7 +622,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>与直接转换模型顶点的模型矩阵不同，视图矩阵会移动一个抽象的相机。实际上，顶点着色器仍然移动的是模型，而“相机”保持在原位。为了使此计算正确，必须使用变换矩阵的逆。逆矩阵实质上是逆转了变换，因此，如果我们向前移动相机，则逆矩阵会导致场景中的物体向后移动。</p>
 
-<p>以下的  <code>computeViewMatrix()</code> 函数通过向内和向外，向左和向右移动的视图矩阵来激活视图矩阵。</p>
+<p>以下的  <code>computeViewMatrix()</code> 函数通过向内和向外，向左和向右移动的视图矩阵来激活视图矩阵。</p>
 
 <pre class="brush: js">CubeDemo.prototype.computeViewMatrix = function(now) {
 
@@ -640,7 +640,7 @@ gl_Position = projection * model * vec4(position, 1.0);
   ]);
 
   // 翻转相机的运动操作，因为我们实际上是
-  // 移动场景中的几何图形，而不是相机本身
+  // 移动场景中的几何图形，而不是相机本身
   this.transforms.view = MDN.invertMatrix(matrix);
 };
 </pre>
@@ -662,7 +662,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>此时，回顾并标记我们使用的各种坐标系是很有用的。首先，在<strong>模型空间</strong>中定义了立方体的顶点。在场景中移动模型。这些顶点需要通过应用模型矩阵转换到<strong>世界空间</strong>。</p>
 
-<p>模型空间 → 模型矩阵 → 世界空间</p>
+<p>模型空间 → 模型矩阵 → 世界空间</p>
 
 <p>相机尚未执行任何操作，需要再次移动这些点。目前它们在世界空间中，但需要将它们移动到<strong>视图空间</strong>（使用视图矩阵）以表示相机的位置。</p>
 

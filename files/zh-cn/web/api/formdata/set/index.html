@@ -5,12 +5,12 @@ translation_of: Web/API/FormData/set
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p><code><strong>set()</strong></code> 方法会对 <code>FormData</code> <code>对象里的某个</code> <code>key</code> <code>设置一个新的值，如果该</code> <code>key</code> <code>不存在，则添加。</code></p>
+<p><code><strong>set()</strong></code> 方法会对 <code>FormData</code> <code>对象里的某个</code> <code>key</code> <code>设置一个新的值，如果该</code> <code>key</code> <code>不存在，则添加。</code></p>
 
-<p><code>set()</code> 和 {{domxref("FormData.append")}} 不同之处在于：如果某个 key 已经存在，<code>set()</code> 会直接覆盖所有该 key 对应的值，而 {{domxref("FormData.append")}} 则是在该 key 的最后位置再追加一个值。</p>
+<p><code>set()</code> 和 {{domxref("FormData.append")}} 不同之处在于：如果某个 key 已经存在，<code>set()</code> 会直接覆盖所有该 key 对应的值，而 {{domxref("FormData.append")}} 则是在该 key 的最后位置再追加一个值。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 该方法在 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a> 可用。</p>
+<p><strong>注意</strong>: 该方法在 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a> 可用。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -38,11 +38,11 @@ formData.set(name, value, filename);</pre>
 
 <h2 id="示例">示例</h2>
 
-<p>先创建一个空的 <code>FormData</code> <code>对象：</code></p>
+<p>先创建一个空的 <code>FormData</code> <code>对象：</code></p>
 
 <pre class="brush: js">var formData = new FormData(); // Currently empty</pre>
 
-<p>使用 {{domxref("FormData.set")}} 设置键/值 ：</p>
+<p>使用 {{domxref("FormData.set")}} 设置键/值 ：</p>
 
 <pre class="brush: js">formData.set('username', 'Chris');
 formData.set('userpic', myFileInput.files[0], 'chris.jpg');</pre>

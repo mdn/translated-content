@@ -50,8 +50,6 @@ original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 - [Typed Arrays](/en-US/docs/JavaScript/Typed_arrays)
   - : 从 JavaScript 中访问原始二进制数据; 操纵 GL 纹理，游戏数据或其他任何东西。
 
-<!---->
-
 - [Web Audio API](/en-US/docs/Web_Audio_API)
   - : 实时控制音频的播放，合成和操纵。
 - [WebGL](/en-US/docs/WebGL)

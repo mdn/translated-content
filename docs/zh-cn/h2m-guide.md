@@ -65,7 +65,9 @@ yarn md h2m web/css/_colon_focus --locale=zh-CN --mode=dry
 Could not automatically convert 2 elements. Saving report to md-conversion-problems-report-xxxx.md
 ```
 
-在 translated-content 目录下新建一个 Git 分支，在 Yari 目录下打开提示的 Markdown 文件，根据提示修改相关 HTML 文件，直至执行上述命令不再出现类似提示。
+在 translated-content 目录下新建一个 Git 分支，在 Yari 目录下打开提示的 Markdown 文件，根据提示修改相关 HTML 文件，直至符合要求。
+
+> 注意：并不是所有不能转换的元素都需要处理，特别是“属性表”（参见 [MDN 的 Markdown 关于属性表的说明](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Markdown_in_MDN#何时使用_html_表格)）。是否需要处理应根据 `content` 仓库的原文决定。如确实不需要处理，可以忽略，直接开始下面的操作。
 
 运行：
 
@@ -85,7 +87,7 @@ yarn md h2m web/css/_colon_focus --locale=zh-CN --mode=replace
 - `id` 属性只能出现在标题标签里。
 - `<a>` 标签的 `title` 属性应被移除。
 - 非 ASCII 编码的 Unicode 空格会影响转换，需要将它们替换为 ASCII 编码的空格。
-- 没有提到的情况欢迎和维护者一起讨论，并加入到本文档。
+- 没有提到的情况请参照原仓库修改，也欢迎和维护者一起讨论，并将其加入到本文档。
 - 由于元数据的限制，我们的卡片只能使用这些样式和文字：
 
 ```html

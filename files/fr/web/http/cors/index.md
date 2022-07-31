@@ -307,7 +307,7 @@ Le protocole CORS demandait initialement ce comportement. Toutefois, [il a été
 
 En attendant que les navigateurs comblent ce manque, il est possible de contourner cette limitation en utilisant l'une de ces deux méthodes :
 
-- Modifier le comportement côté serveur afin d'éviter la requête préliminaire ou la redirection (dans le cas où vous contrôler le serveur sur lequel la requête est effectuée)
+- Modifier le comportement côté serveur afin d'éviter la requête préliminaire ou la redirection (dans le cas où vous contrôlez le serveur sur lequel la requête est effectuée)
 - Modifier la requête afin que ce soit une [requête simple](#simples) qui ne nécessite pas de requête préliminaire.
 
 S'il n'est pas possible d'appliquer ces changements, on peut également :

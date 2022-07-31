@@ -4,14 +4,14 @@ slug: Web/API/Document/createEvent
 translation_of: Web/API/Document/createEvent
 ---
 <div class="warning">
-<p><code>createEvent</code> 使用的许多方法，如 <code>initCustomEvent</code>，都被废弃了。请使用 <a href="/zh-CN/docs/Web/API/CustomEvent">event constructors</a> 来替代。</p>
+<p><code>createEvent</code> 使用的许多方法，如 <code>initCustomEvent</code>，都被废弃了。请使用 <a href="/zh-CN/docs/Web/API/CustomEvent">event constructors</a> 来替代。</p>
 </div>
 
 <div>{{ ApiRef("DOM") }}</div>
 
-<div> </div>
+<div> </div>
 
-<p>创建一个指定类型的<a href="/zh-CN/docs/Web/API/Event">事件</a>。其返回的对象必须先初始化并可以被传递给 <a href="/zh-CN/docs/DOM/element.dispatchEvent">element.dispatchEvent</a>。</p>
+<p>创建一个指定类型的<a href="/zh-CN/docs/Web/API/Event">事件</a>。其返回的对象必须先初始化并可以被传递给 <a href="/zh-CN/docs/DOM/element.dispatchEvent">element.dispatchEvent</a>。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -19,8 +19,8 @@ translation_of: Web/API/Document/createEvent
 </pre>
 
 <ul>
- <li><code>event</code> 就是被创建的 <a href="/zh-CN/docs/DOM/event">Event</a> 对象。</li>
- <li><code>type</code> 是一个字符串，表示要创建的事件类型。事件类型可能包括<code>"UIEvents"</code>, <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, 或者 <code>"HTMLEvents"</code>。请查看 <a href="#notes">Notes</a> 章节获取详细信息 。</li>
+ <li><code>event</code> 就是被创建的 <a href="/zh-CN/docs/DOM/event">Event</a> 对象。</li>
+ <li><code>type</code> 是一个字符串，表示要创建的事件类型。事件类型可能包括<code>"UIEvents"</code>, <code>"MouseEvents"</code>, <code>"MutationEvents"</code>, 或者 <code>"HTMLEvents"</code>。请查看 <a href="#notes">Notes</a> 章节获取详细信息 。</li>
 </ul>
 
 <h2 id="Example">示例</h2>
@@ -56,7 +56,7 @@ elem.dispatchEvent(event);
  <tbody>
   <tr>
    <th>事件模块</th>
-   <th>传递给 <code>createEvent</code> 的 Event type</th>
+   <th>传递给 <code>createEvent</code> 的 Event type</th>
    <th>事件初始化方法</th>
   </tr>
   <tr style="background-color: #eee;">
@@ -184,6 +184,6 @@ elem.dispatchEvent(event);
  <li><a href="http://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent">DOM Level 3 Events: createEvent</a></li>
 </ul>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>

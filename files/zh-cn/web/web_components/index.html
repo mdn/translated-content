@@ -51,7 +51,7 @@ translation_of: Web/Web_Components
  <dt>{{domxref("CustomElementRegistry")}}</dt>
  <dd>包含自定义元素相关功能，最值得注意的是 {{domxref("CustomElementRegistry.define()")}} 方法用来注册新的自定义元素，这样就可以在文档中使用它们。</dd>
  <dt>{{domxref("Window.customElements")}}</dt>
- <dd>返回 <code>CustomElementRegistry</code> 对象的引用。</dd>
+ <dd>返回 <code>CustomElementRegistry</code> 对象的引用。</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks">生命周期回调</a></dt>
  <dd>定义在自定义元素的类定义中的特殊回调函数，影响其行为：
  <ul>
@@ -81,7 +81,7 @@ translation_of: Web/Web_Components
   <li>{{cssxref(":defined")}}: 匹配任何已定义的元素，包括内置元素和使用<code>CustomElementRegistry.define()</code>定义的自定义元素。</li>
   <li>{{cssxref(":host")}}: 选择 <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM </a>的 shadow host ，内容是它内部使用的 CSS（ containing the CSS it is used inside ）。</li>
   <li>{{cssxref(":host()")}}: 选择 <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM </a>的 shadow host ，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器的 shadow host 元素。</li>
-  <li>{{cssxref(":host-context()")}}: 选择 <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM </a>的 shadow host ，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器匹配元素的子 shadow host 元素。</li>
+  <li>{{cssxref(":host-context", ":host-context()")}}: 选择 <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM </a>的 shadow host ，内容是它内部使用的 CSS（这样您可以从 shadow DOM 内部选择自定义元素）— 但只匹配给定方法的选择器匹配元素的子 shadow host 元素。</li>
  </ul>
  </dd>
 </dl>
@@ -94,10 +94,10 @@ translation_of: Web/Web_Components
  <dt>{{domxref("DocumentOrShadowRoot")}}</dt>
  <dd>定义了可在文档和 shadow 根中使用的功能的 mixin。</dd>
  <dt>{{domxref("Element")}} extensions</dt>
- <dd>与 shadow DOM 有关的<code>Element</code> 接口的扩展：
+ <dd>与 shadow DOM 有关的<code>Element</code> 接口的扩展：
  <ul>
   <li>{{domxref("Element.attachShadow()")}} 方法将 shadow DOM 树附加给特定元素。</li>
-  <li>{{domxref("Element.shadowRoot")}} 属性返回附加给特定元素的 shadow root，或者 <code>null</code> 如果没有 shadow root 被附加。</li>
+  <li>{{domxref("Element.shadowRoot")}} 属性返回附加给特定元素的 shadow root，或者 <code>null</code> 如果没有 shadow root 被附加。</li>
  </ul>
  </dd>
  <dt>{{domxref("Node")}} 相关拓展</dt>
@@ -144,7 +144,7 @@ translation_of: Web/Web_Components
  </ul>
  </dd>
  <dt>The {{event("slotchange")}} event</dt>
- <dd>当插槽中的节点改变时在 {{domxref("HTMLSlotElement")}} 实例（<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/slot" title="HTML &lt;slot> element—是 Web Components 技术的一部分，是自定义web组件的占位符，目的是分离创建DOM树和DOM树的表现（）。"><code>&lt;slot&gt;</code></a> 元素）上触发。</dd>
+ <dd>当插槽中的节点改变时在 {{domxref("HTMLSlotElement")}} 实例（<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a> 元素）上触发。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -153,52 +153,11 @@ translation_of: Web/Web_Components
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG","scripting.html#the-template-element","&lt;template&gt; element")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>The definition of {{HTMLElement("template")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>The definition of <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">HTML Custom Elements</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>The definition of <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML Imports", "", "")}}</td>
-   <td>{{Spec2("HTML Imports")}}</td>
-   <td>Initial <a href="/en-US/docs/Web/Web_Components/HTML_Imports">HTML Imports</a> definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Shadow DOM", "", "")}}</td>
-   <td>{{Spec2("Shadow DOM")}}</td>
-   <td>Initial <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>通常来说：</p>
-
-<ul>
- <li>Firefox(版本 63)、Chrome 和 Opera 都默认支持 Web 组件。</li>
- <li>Safari 支持许多 web 组件特性，但比上述浏览器少。</li>
- <li>Edge 正在开发一个实现。</li>
-</ul>
-
-<p>要获得特定特性的详细浏览器支持，您必须参考上面列出的参考页面。</p>
+{{Compat}}
 
 <h2 id="另见">另见</h2>
 

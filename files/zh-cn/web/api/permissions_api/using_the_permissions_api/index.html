@@ -83,11 +83,11 @@ handlePermission();</pre>
 
 <h3 id="权限描述符">权限描述符</h3>
 
-<p>{{domxref("Permissions.query()")}} 方法接受一个 <code>PermissionDescriptor</code> 字典作为参数 — 它包含你感兴趣的 API 的名称。一些 API 有继承自默认的 <code>PermissionDescriptor</code>  的更加复杂的 <code>PermissionDescriptor</code>s 以包含更多额外的信息。例如，<code>PushPermissionDescriptor</code> 也包含一个比尔值指定 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe#Parameters">userVisibleOnly</a></code> 是 <code>true</code> 还是 <code>false</code>.</p>
+<p>{{domxref("Permissions.query()")}} 方法接受一个 <code>PermissionDescriptor</code> 字典作为参数 — 它包含你感兴趣的 API 的名称。一些 API 有继承自默认的 <code>PermissionDescriptor</code>  的更加复杂的 <code>PermissionDescriptor</code>s 以包含更多额外的信息。例如，<code>PushPermissionDescriptor</code> 也包含一个比尔值指定 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe#Parameters">userVisibleOnly</a></code> 是 <code>true</code> 还是 <code>false</code>.</p>
 
 <h3 id="重置权限">重置权限</h3>
 
-<p>从 Firefox 47 开始，你可以使用 {{domxref("Permissions.revoke()")}}  方法重置现有权限。它的调用方式和 {{domxref("Permissions.query()")}} 方法几乎一模一样，区别是，当 promise 成功 resolve 时，它会让一个现有的权限恢复默认状态（通常是 <code>prompt</code>）。让我们看看 demo 中的代码：</p>
+<p>从 Firefox 47 开始，你可以使用 {{domxref("Permissions.revoke()")}}  方法重置现有权限。它的调用方式和 {{domxref("Permissions.query()")}} 方法几乎一模一样，区别是，当 promise 成功 resolve 时，它会让一个现有的权限恢复默认状态（通常是 <code>prompt</code>）。让我们看看 demo 中的代码：</p>
 
 <pre class="brush: js notranslate">var revokeBtn = document.querySelector('.revoke');
 
@@ -106,12 +106,12 @@ function revokePermission() {
 }</pre>
 
 <div class="note">
-<p>自 Firefox 51 开始 <code>revoke()</code> 函数被默认关闭了，因为它的设计带来了 <a href="https://www.w3.org/2011/webappsec/">Web Applications Security Working Group</a> 中提到的问题。可以通过将设置项  <code>dom.permissions.revoke.enable</code> 置为 <code>true</code> 来重新开启它。</p>
+<p>自 Firefox 51 开始 <code>revoke()</code> 函数被默认关闭了，因为它的设计带来了 <a href="https://www.w3.org/2011/webappsec/">Web Applications Security Working Group</a> 中提到的问题。可以通过将设置项  <code>dom.permissions.revoke.enable</code> 置为 <code>true</code> 来重新开启它。</p>
 </div>
 
 <h3 id="响应权限状态变化">响应权限状态变化</h3>
 
-<p>你会注意到，在上面的代码中，在 {{domxref("PermissionStatus")}} 对象上有一个 <code>onchange</code> 事件回调 — 这让我们可以对感兴趣的 API 的状态变化做出响应。目前，我们只是上报了状态的变化。</p>
+<p>你会注意到，在上面的代码中，在 {{domxref("PermissionStatus")}} 对象上有一个 <code>onchange</code> 事件回调 — 这让我们可以对感兴趣的 API 的状态变化做出响应。目前，我们只是上报了状态的变化。</p>
 
 <h2 id="总结和展望未来">总结和展望未来</h2>
 

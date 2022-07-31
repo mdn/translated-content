@@ -14,11 +14,11 @@ translation_of: Web/API/Node/baseURI
 <div>{{APIRef("DOM")}}</div>
 </div>
 
-<p><code><strong>Node.baseURI</strong></code> 是只读属性，返回一个节点的绝对基址 URL。</p>
+<p><code><strong>Node.baseURI</strong></code> 是只读属性，返回一个节点的绝对基址 URL。</p>
 
-<p>当浏览器要获取绝对 URL 时，就需要用基 URL 去解析相对 URL。例如，解析 HTML {{HTMLElement("img")}} 元素的 <code>src </code>属性时，或者 处理 XML <code><a href="https://developer.mozilla.org/en-US/docs/XLink">xlink</a>:href</code> 属性时—。</p>
+<p>当浏览器要获取绝对 URL 时，就需要用基 URL 去解析相对 URL。例如，解析 HTML {{HTMLElement("img")}} 元素的 <code>src </code>属性时，或者 处理 XML <code><a href="https://developer.mozilla.org/en-US/docs/XLink">xlink</a>:href</code> 属性时—。</p>
 
-<p>一般情况下，基 URL 是 document 的 location ，但是它受诸多方面因素的影响，例如 HTML 的 {{HTMLElement("base")}} 元素和 XML <code><a href="https://developer.mozilla.org/en-US/docs/XML/xml:base">xml:base</a></code> 属性。</p>
+<p>一般情况下，基 URL 是 document 的 location ，但是它受诸多方面因素的影响，例如 HTML 的 {{HTMLElement("base")}} 元素和 XML <code><a href="https://developer.mozilla.org/en-US/docs/XML/xml:base">xml:base</a></code> 属性。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/API/Node/baseURI
 </pre>
 
 <ul>
- <li><code>baseURI</code> 是一个 {{ domxref("DOMString") }} 代表当前 {{domxref("Node", "节点")}} 所在文档的基 URI 。如果无法获取则可能返回 <code>null</code> 。</li>
+ <li><code>baseURI</code> 是一个 {{ domxref("DOMString") }} 代表当前 {{domxref("Node", "节点")}} 所在文档的基 URI 。如果无法获取则可能返回 <code>null</code> 。</li>
  <li><code><em>node</em>.baseURI</code> 是只读的。</li>
  <li><code><em>node</em>.baseURI</code> 可能会随时间发生变化。</li>
 </ul>
@@ -50,7 +50,7 @@ translation_of: Web/API/Node/baseURI
 
 <p>元素的基 URL 一般和其所在的文档相同。</p>
 
-<p>如果文档中有 <code><a href="https://developer.mozilla.org/en-US/docs/XML/xml:base">xml:base</a></code> 属性（不要在 HTML 文档中这样做），在 <code><em>node</em>.baseURI </code>计算基 URL 时，会把 <code>xml:base</code> 属性考虑进去。参考 <a href="https://developer.mozilla.org/en-US/docs/XML/xml:base">xml:base</a> 来了解更多。</p>
+<p>如果文档中有 <code><a href="https://developer.mozilla.org/en-US/docs/XML/xml:base">xml:base</a></code> 属性（不要在 HTML 文档中这样做），在 <code><em>node</em>.baseURI </code>计算基 URL 时，会把 <code>xml:base</code> 属性考虑进去。参考 <a href="https://developer.mozilla.org/en-US/docs/XML/xml:base">xml:base</a> 来了解更多。</p>
 
 <p>可以通过 <code><em>{{domxref("element")}}</em>.baseURI</code> 获取某个元素的基 URL。</p>
 

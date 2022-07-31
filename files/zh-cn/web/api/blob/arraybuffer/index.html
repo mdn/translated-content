@@ -5,7 +5,7 @@ translation_of: Web/API/Blob/arrayBuffer
 ---
 <p>{{APIRef("File API")}}</p>
 
-<p><code><strong>arrayBuffer()</strong></code> 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的数据，并在 {{domxref("ArrayBuffer")}} 中以二进制数据的形式呈现。</p>
+<p><code><strong>arrayBuffer()</strong></code> 方法返回一个 {{jsxref("Promise")}} 对象，包含 blob 中的数据，并在 {{domxref("ArrayBuffer")}} 中以二进制数据的形式呈现。</p>
 
 <ul>
 </ul>
@@ -24,7 +24,7 @@ var <em>buffer</em> = await <em>blob</em>.arrayBuffer();</pre>
 
 <h3 id="返回值">返回值</h3>
 
-<p>返回一个 promise 对象，在 resolved 状态中以二进制的形式包含 blob 中的数据，并呈现在 {{domxref("ArrayBuffer")}} 中。</p>
+<p>返回一个 promise 对象，在 resolved 状态中以二进制的形式包含 blob 中的数据，并呈现在 {{domxref("ArrayBuffer")}} 中。</p>
 
 <h3 id="异常">异常</h3>
 
@@ -32,7 +32,7 @@ var <em>buffer</em> = await <em>blob</em>.arrayBuffer();</pre>
 
 <h2 id="使用须知">使用须知</h2>
 
-<p>{{domxref("FileReader.readAsArrayBuffer()")}} 这个方法与之类似，但 <code>arrayBuffer()</code> 返回一个 promise 对象，而不是像 <code>FileReader</code> 一样返回一个基于事件的 API。</p>
+<p>{{domxref("FileReader.readAsArrayBuffer()")}} 这个方法与之类似，但 <code>arrayBuffer()</code> 返回一个 promise 对象，而不是像 <code>FileReader</code> 一样返回一个基于事件的 API。</p>
 
 <h2 id="规范">规范</h2>
 

@@ -26,9 +26,9 @@ translation_of: Web/HTML/Element/applet
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#embedded_content">埋め込みコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>,
         対話型コンテンツ,
         知覚可能コンテンツ
       </td>
@@ -36,7 +36,7 @@ translation_of: Web/HTML/Element/applet
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-      0 個以上の {{HTMLElement("param")}} 要素、その後で <a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a>
+      0 個以上の {{HTMLElement("param")}} 要素、その後で <a href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/applet
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#embedded_content">埋め込みコンテンツ</a>を受け付けるすべての要素</td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>を受け付けるすべての要素</td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

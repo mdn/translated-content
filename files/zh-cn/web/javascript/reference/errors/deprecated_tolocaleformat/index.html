@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 
 <h2 id="哪里出错了？">哪里出错了？</h2>
 
-<p>{{jsxref("Date.prototype.toLocaleFormat")}} 是非标准化的方法，已经被废弃，不应该再进行使用。该方法需要传入与 C 语言中的 strftime() 方法相似的格式化字符串。该实现将会在 {{bug(818634)}} 中完全移除。</p>
+<p>{{jsxref("Date.prototype.toLocaleFormat")}} 是非标准化的方法，已经被废弃，不应该再进行使用。该方法需要传入与 C 语言中的 strftime() 方法相似的格式化字符串。该实现将会在 {{bug(818634)}} 中完全移除。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -34,7 +34,7 @@ console.log(date);
 // In German locale
 // "Freitag, 10. März 2017"</pre>
 
-<h3 id="备选标准语法之一：使用_ECMAScript_Intl_API">备选标准语法之一：使用 ECMAScript Intl API </h3>
+<h3 id="备选标准语法之一：使用_ECMAScript_Intl_API">备选标准语法之一：使用 ECMAScript Intl API </h3>
 
 <p>ECMA-402 (ECMAScript Intl API) 标准规定了支持不同语言的日期和时间格式化形式的对象和方法（在 Chrome 24+, Firefox 29+, IE11+, Safari10+ 中可用）。</p>
 
@@ -49,7 +49,7 @@ console.log(date);
 // "Freitag, 10. März 2017"
 </pre>
 
-<p>或者，可以使用 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} 对象，该对象允许你将格式化器对象缓存起来，省去很多重复性的计算工作，所以格式化操作会很快。这在需要对一系列的日期对象进行格式化的时候非常有用。</p>
+<p>或者，可以使用 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} 对象，该对象允许你将格式化器对象缓存起来，省去很多重复性的计算工作，所以格式化操作会很快。这在需要对一系列的日期对象进行格式化的时候非常有用。</p>
 
 <pre class="brush: js example-good">var options = { weekday: 'long', year: 'numeric',
                 month: 'long', day: 'numeric' };

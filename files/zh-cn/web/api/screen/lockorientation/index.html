@@ -5,10 +5,10 @@ translation_of: Web/API/Screen/lockOrientation
 ---
 <p>{{APIRef("CSSOM View")}}{{SeeCompatTable}}</p>
 
-<p><code>lockOrientation</code> 此方法会把屏幕锁定为指定的方向。</p>
+<p><code>lockOrientation</code> 此方法会把屏幕锁定为指定的方向。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 此方法仅适用于已安装的 Web apps 或 <a href="/en-US/docs/Web/Guide/DOM/Using_full_screen_mode">全屏模式</a> 的 Web 页面。</p>
+<p><strong>注意：</strong> 此方法仅适用于已安装的 Web apps 或 <a href="/en-US/docs/Web/Guide/DOM/Using_full_screen_mode">全屏模式</a> 的 Web 页面。</p>
 </div>
 
 <h2 id="使用方法">使用方法</h2>
@@ -36,14 +36,14 @@ translation_of: Web/API/Screen/lockOrientation
  <dt><code>landscape-secondary</code></dt>
  <dd>它代表了屏幕处于次要风景模式时的方向。如果设备与其正常位置保持 180°并且该位置处于横向，或者如果设备的正常位置是纵向的，并且所保持的设备逆时针旋转 90°，则将其视为次要横向模式。正常的位置是依赖于设备的。</dd>
  <dt><code>portrait</code></dt>
- <dd>它表示同时包含 <code>portrait-primary</code> 和 <code>portrait-secondary</code>.</dd>
+ <dd>它表示同时包含 <code>portrait-primary</code> 和 <code>portrait-secondary</code>.</dd>
  <dt><code>landscape</code></dt>
- <dd>它表示同时包含 <code>landscape-primary</code> 和 <code>landscape-secondary</code>.</dd>
+ <dd>它表示同时包含 <code>landscape-primary</code> 和 <code>landscape-secondary</code>.</dd>
 </dl>
 
 <dl>
  <dt><code>default</code></dt>
- <dd>它代表 <code>portrait-primary</code> 和 <code>landscape-primary</code> 主要取决于设备的自然方向。例如，如果面板分辨率为 1280 * 800，则 <code>default</code> 为横向，如果分辨率为 800 * 1280，则 <code>default</code> 为纵向。</dd>
+ <dd>它代表 <code>portrait-primary</code> 和 <code>landscape-primary</code> 主要取决于设备的自然方向。例如，如果面板分辨率为 1280 * 800，则 <code>default</code> 为横向，如果分辨率为 800 * 1280，则 <code>default</code> 为纵向。</dd>
 </dl>
 
 <div class="note">
@@ -52,11 +52,11 @@ translation_of: Web/API/Screen/lockOrientation
 
 <h2 id="返回值">返回值</h2>
 
-<p>如果方向被授权锁定，则返回 <code>true</code> ;如果方向锁定被拒绝，则返回 <code>false</code>。请注意，返回值并不表示屏幕方向确实被锁定：可能会有延迟。</p>
+<p>如果方向被授权锁定，则返回 <code>true</code> ;如果方向锁定被拒绝，则返回 <code>false</code>。请注意，返回值并不表示屏幕方向确实被锁定：可能会有延迟。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="使用_DOMString_参数">使用 <code>DOMString</code> 参数</h3>
+<h3 id="使用_DOMString_参数">使用 <code>DOMString</code> 参数</h3>
 
 <pre class="brush: js">screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 
@@ -67,7 +67,7 @@ if (screen.lockOrientationUniversal("landscape-primary")) {
 }
 </pre>
 
-<h3 id="使用_Array_参数">使用 <code>Array</code> 参数</h3>
+<h3 id="使用_Array_参数">使用 <code>Array</code> 参数</h3>
 
 <pre class="brush: js">screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 

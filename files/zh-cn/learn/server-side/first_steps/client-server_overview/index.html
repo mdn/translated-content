@@ -28,17 +28,17 @@ translation_of: Learn/Server-side/First_steps/Client-Server_overview
 
 <h2 id="网络服务器和HTTP（入门）">网络服务器和 HTTP（入门）</h2>
 
-<p>网络浏览器通过超文本标记语言传输协议（<a href="/en-US/docs/Web/HTTP">HTTP</a>）与网络服务器（<a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">web servers</a>）。 当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。</p>
+<p>网络浏览器通过超文本标记语言传输协议（<a href="/en-US/docs/Web/HTTP">HTTP</a>）与网络服务器（<a href="/en-US/docs/Learn/Common_questions/What_is_a_web_server">web servers</a>）。 当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。</p>
 
 <p>这个请求包含：</p>
 
 <ul>
- <li>一个用来识别目标服务器和资源（比如一个 HTML 文档、存储在服务器上的一个特定的数据、或者一个用来运行的工具等）的 URL。 </li>
+ <li>一个用来识别目标服务器和资源（比如一个 HTML 文档、存储在服务器上的一个特定的数据、或者一个用来运行的工具等）的 URL。 </li>
  <li>一个定义了请求行为的方法（比如，获得一个文档或者上传某些数据）。不同的方法/动作以及与他们相关的行为罗列如下：
   <ul>
    <li>GET：获取一份指定（比如一个包含了一个产品或者一系列产品相关信息的 HTML 文档）。</li>
    <li>POST：创建一份新的资源（比如给 wiki 增加一片新的文章、给数据库增加一个新的节点）。</li>
-   <li><code>HEAD</code>:  获取有关指定资源的元数据信息，而不会得到像 GET 的内容部分。例如，您可以使用 HEAD 请求来查找上次更新资源的时间，然后仅使用（更“昂贵”）GET 请求下载资源（如果已更改）。</li>
+   <li><code>HEAD</code>:  获取有关指定资源的元数据信息，而不会得到像 GET 的内容部分。例如，您可以使用 HEAD 请求来查找上次更新资源的时间，然后仅使用（更“昂贵”）GET 请求下载资源（如果已更改）。</li>
    <li>PUT：更新一份已经存在的资源（或者在该资源不存在的情况下创建一份新的）。</li>
    <li>DELETE：删除指定的资源。</li>
    <li><code>TRACE</code>、<code>OPTIONS</code>、<code>CONNECT、PATCH</code>等动作是为一些不常见任务设计的，因此我们在这里的讲解不会涉及到他们。</li>
@@ -53,7 +53,7 @@ translation_of: Learn/Server-side/First_steps/Client-Server_overview
  </li>
 </ul>
 
-<p>网络服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 HTTP 响应状态码（<a href="/en-US/docs/Web/HTTP/Status">HTTP Response status code</a>）来暗示请求是否成功 (比如 "<code>200 OK</code>" 连接成功， "<code>404 Not Found</code>" 资源没有找到，"<code>403 Forbidden</code>" 用户没有被授权查看资源，等等).  一个成功的响应主体，会包含 GET 请求所请求的资源。</p>
+<p>网络服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 HTTP 响应状态码（<a href="/en-US/docs/Web/HTTP/Status">HTTP Response status code</a>）来暗示请求是否成功 (比如 "<code>200 OK</code>" 连接成功， "<code>404 Not Found</code>" 资源没有找到，"<code>403 Forbidden</code>" 用户没有被授权查看资源，等等).  一个成功的响应主体，会包含 GET 请求所请求的资源。</p>
 
 <p>当一个 HTML 页面被返时，页面会被网络浏览器呈现出来。作为处理工作的一部分，浏览器会发现指向其他资源的链接（比如，一个 HTML 页面通常会参考 Javascript 和 CSS 页面），并且会发送独立的 HTTP 请求来下载这些文件。</p>
 
@@ -105,7 +105,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
  <li>我的浏览器上 (<code>User-Agent</code>) 是火狐 (<code>Mozilla/5.0</code>).</li>
  <li>它可以接收 gzip 压缩信息 (<code>Accept-Encoding: gzip</code>).</li>
  <li>它可以接收的具体编码类型 (<code>Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7</code>) 和语言 (<code>Accept-Language: de,en;q=0.7,en-us;q=0.3</code>).</li>
- <li>The <code>Referer</code> line 提示包含资源链接的网络地址 (或者说请求的来源是 <code>https://developer.mozilla.org/en-US/</code>).</li>
+ <li>The <code>Referer</code> line 提示包含资源链接的网络地址 (或者说请求的来源是 <code>https://developer.mozilla.org/en-US/</code>).</li>
 </ul>
 
 <p>请求也可以有一个请求体，不过在这个例子中请求的请求体是空的。</p>
@@ -116,7 +116,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 <ul>
  <li>第一行包括了回应状态码 200 OK，这告诉我们请求是成功的。</li>
- <li> 我们可以看到回应是文本<code>/html格式的</code>(<code>Content-Type</code>).</li>
+ <li> 我们可以看到回应是文本<code>/html格式的</code>(<code>Content-Type</code>).</li>
  <li>我们也可以看到它使用的是 UTF-8 字符集 (<code>Content-Type: text/html; charset=utf-8</code>).</li>
  <li>The head 也告诉我们它有多大 (<code>Content-Length: 41823</code>).</li>
 </ul>
@@ -139,15 +139,15 @@ Content-Length: 41823
 
 
 &lt;!DOCTYPE html&gt;
-&lt;html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false &gt;
+&lt;html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false &gt;
 &lt;head prefix="og: http://ogp.me/ns#"&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
-  &lt;script&gt;(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);&lt;/script&gt;
-  ...
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
+  &lt;script&gt;(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);&lt;/script&gt;
+  ...
 </pre>
 
-<p>header 的剩余部分还包括一些回应的其他信息（比如回应在什么时候生成的），有关服务器的信息，还有它期望浏览器如何处理这个包（比如， <code>X-Frame-Options: DENY</code> 告诉浏览器不允许这个网页嵌入在其他网站的 HTML 元素{{htmlelement("iframe")}}上。</p>
+<p>header 的剩余部分还包括一些回应的其他信息（比如回应在什么时候生成的），有关服务器的信息，还有它期望浏览器如何处理这个包（比如， <code>X-Frame-Options: DENY</code> 告诉浏览器不允许这个网页嵌入在其他网站的 HTML 元素{{htmlelement("iframe")}}上。</p>
 
 <h3 id="POST_请求响应举例">POST 请求/响应举例</h3>
 
@@ -205,7 +205,7 @@ Content-Length: 0
 <p>静态网站是指每当请求一个特定的资源时，会从服务器返回相同的硬编码内容。因此，例如，如果您在 <code>/static/myproduct1.html</code> 有一个关于产品的页面，则该页面将返回给每个用户。如果您添加另一个类似的产品到您的网站，您将需要添加另一个页面（例如 <code>myproduct2.html</code> ）等。这可能开始变得非常低效：当您访问数千个产品页面时会发生什么——你会在每个页面（基本的页面模板，结构等等）上重复很多代码，如果你想改变页面结构的任何东西，比如添加一个新的“相关产品”部分，必须单独更改每个页面。</p>
 
 <div class="note">
-<p><strong>注释</strong>: 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择， 然而随着页面数量的增加，它们的维护成本也会很高。</p>
+<p><strong>注释</strong>: 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择， 然而随着页面数量的增加，它们的维护成本也会很高。</p>
 </div>
 
 <p>让我们回顾一下在上一篇文章中看到的静态网站架构图，看看它是如何工作的。</p>
@@ -267,7 +267,7 @@ Content-Length: 0
 
 <p>web 框架可以提供的一个最重要的功能就是，提供简单的机制，以将不同的资源和页面定位到具体的处理函数。这使得保持代码和各个不同形式的资源的联系变得简单。它也非常利于代码的维护，因为你可以直接改变在一个地方用来传输特定功能的 URL，而不用改变处理函数。</p>
 
-<p>举个例子，我们来思考一下下面的 Django(python) 代码，这些代码将两个 URL 地址定位到两个页面。第一个地址确保了，一个包含了 <code>/best/</code> URL 的 HTTP 请求，可以被传递到一个在<code>views</code>模块的被命名为<code>index()</code>的函数。一个含有"<code>/best/junior</code>"的请求则会被传递到<code>junior()</code>视图函数。</p>
+<p>举个例子，我们来思考一下下面的 Django(python) 代码，这些代码将两个 URL 地址定位到两个页面。第一个地址确保了，一个包含了 <code>/best/</code> URL 的 HTTP 请求，可以被传递到一个在<code>views</code>模块的被命名为<code>index()</code>的函数。一个含有"<code>/best/junior</code>"的请求则会被传递到<code>junior()</code>视图函数。</p>
 
 <pre class="brush: python"># file: best/urls.py
 #
@@ -284,7 +284,7 @@ urlpatterns = [
 ]</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 在<code>url()</code>函数中的第一个参数可能看起来有点古怪 (比如<code>r'^junior/$</code>)  因为他们使用一个叫做“正则表达式”(RegEx, or RE) 的字符匹配机制。在这里，你还不需要知道正则表达式是如何工作的，除了要知道它们是如何允许我们在 URL 中匹配到字符的 (而不是像上面的硬编码) 并且知道如何在我们的视图函数中将它们用作参数。举个例子，一个真正简单的正则表达式可能会说“匹配一个大写字母，后面跟着 4 到 7 个小写字母”"</p>
+<p><strong>注意</strong>: 在<code>url()</code>函数中的第一个参数可能看起来有点古怪 (比如<code>r'^junior/$</code>)  因为他们使用一个叫做“正则表达式”(RegEx, or RE) 的字符匹配机制。在这里，你还不需要知道正则表达式是如何工作的，除了要知道它们是如何允许我们在 URL 中匹配到字符的 (而不是像上面的硬编码) 并且知道如何在我们的视图函数中将它们用作参数。举个例子，一个真正简单的正则表达式可能会说“匹配一个大写字母，后面跟着 4 到 7 个小写字母”"</p>
 </div>
 
 <p>Web 框架还可以轻松地使用查看函数，从数据库获取信息。我们的数据结构是在模型中定义的，模型是定义要存储在底层数据库中的字段的 Python 类。如果我们有一个名为 Team 的模型，其中有一个“<em>team_type</em>”字段，那么我们可以使用一个简单的查询语法来取回所有具有特定类型的球队。</p>
@@ -299,9 +299,9 @@ from .models import Team
 
 
 def junior(request):
-    list_teams = Team.objects.filter(team_type__exact="junior")
-    context = {'list': list_teams}
-    return render(request, 'best/index.html', context)
+    list_teams = Team.objects.filter(team_type__exact="junior")
+    context = {'list': list_teams}
+    return render(request, 'best/index.html', context)
 </pre>
 
 <p><code>junior()</code>函数获得少年组列表后，它调用<code>render()</code>函数，传递原始的 HttpRequest，一个 HTML 模板和一个定义要包含在模板中的信息的“context”对象。 <code>render()</code>函数是一个方便的函数，它使用上下文和 HTML 模板生成 HTML，并将其返回到 <code>HttpResponse</code> 对象中</p>

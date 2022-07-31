@@ -14,7 +14,7 @@ original_slug: Learn/HTML/Forms/Data_form_validation
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>计算机基础能力，对 <a href="/en-US/docs/Learn/HTML">HTML</a>、<a href="/en-US/docs/Learn/CSS">CSS</a> 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。</td>
+   <td>计算机基础能力，对 <a href="/en-US/docs/Learn/HTML">HTML</a>、<a href="/en-US/docs/Learn/CSS">CSS</a> 和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -34,20 +34,20 @@ original_slug: Learn/HTML/Forms/Data_form_validation
  <li>“你的密码长度应该是 8 至 30 位的，并且至少应该包含一个大写字母、一个符号以及一个数字”</li>
 </ul>
 
-<p>这就是<strong>表单校验</strong> —— 当你向 Web 应用输入数据时，应用会验证你输入的数据是否是正确的。如果验证通过，应用允许提交这些数据到服务器并储存到数据库中（通常情况下），如果验证未通过，则 Web 应用会提示你有错误的数据，并且一般都会明确的告诉你错误发生在哪里。表单校验可以通过许多不同的方式实现。</p>
+<p>这就是<strong>表单校验</strong> —— 当你向 Web 应用输入数据时，应用会验证你输入的数据是否是正确的。如果验证通过，应用允许提交这些数据到服务器并储存到数据库中（通常情况下），如果验证未通过，则 Web 应用会提示你有错误的数据，并且一般都会明确的告诉你错误发生在哪里。表单校验可以通过许多不同的方式实现。</p>
 
 <div class="note">
 <p><strong>译者注</strong>：下面一段在英文原文中已经删除</p>
 </div>
 
-<p>(事实上，没有人愿意填写表单 —— 很多证据表明，用户对填写表单这件事情都感到很烦恼，如果他们在填写表单的过程中遇到一些自己无法理解的问题，通常都会导致他们直接离开你的 Web 应用，简而言之，<a href="https://www.slideshare.net/jwegesin/forms-suck/">表单是一个很烦人的东西</a>。)</p>
+<p>(事实上，没有人愿意填写表单 —— 很多证据表明，用户对填写表单这件事情都感到很烦恼，如果他们在填写表单的过程中遇到一些自己无法理解的问题，通常都会导致他们直接离开你的 Web 应用，简而言之，<a href="https://www.slideshare.net/jwegesin/forms-suck/">表单是一个很烦人的东西</a>。)</p>
 
 <p>我们希望把填写表单变的越简单越好。那么，为什么我们还坚持进行表单的数据校验呢？这有三个最主要的原因：</p>
 
 <ul>
- <li><strong>我们希望以正确的格式获取到正确的数据</strong> —— 如果我们的用户数据以不正确的格式存储，或者他们没有输入正确的信息/完全省略信息，我们的应用程序将无法正常运行。</li>
+ <li><strong>我们希望以正确的格式获取到正确的数据</strong> —— 如果我们的用户数据以不正确的格式存储，或者他们没有输入正确的信息/完全省略信息，我们的应用程序将无法正常运行。</li>
  <li><strong>我们希望保护我们的用户</strong> ——强制用户输入安全的密码，有利于保护他们的账户信息。</li>
- <li><strong>我们希望保护我们自己</strong> —— 恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见<a href="/zh-CN/docs/learn/Server-side/First_steps/Website_security">网站安全</a>）。</li>
+ <li><strong>我们希望保护我们自己</strong> —— 恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见<a href="/zh-CN/docs/learn/Server-side/First_steps/Website_security">网站安全</a>）。</li>
 </ul>
 
 <div class="blockIndicator warning">
@@ -56,44 +56,44 @@ original_slug: Learn/HTML/Forms/Data_form_validation
 
 <h3 id="不同类型的表单数据校验">不同类型的表单数据校验</h3>
 
-<p>在 Web 中，你可能会遇见各种不同的表单校验：</p>
+<p>在 Web 中，你可能会遇见各种不同的表单校验：</p>
 
 <ul>
  <li><strong>客户端校验</strong>发生在浏览器端，表单数据被提交到服务器之前，这种方式相较于服务器端校验来说，用户体验更好，它能实时的反馈用户的输入校验结果，这种类型的校验可以进一步细分成下面这些方式：
 
   <ul>
-   <li><strong>JavaScript</strong> 校验，这是可以完全自定义的实现方式；</li>
-   <li>HTML5 <strong>内置校验</strong>，这不需要 JavaScript，而且性能更好，但是不能像 JavaScript 那样可自定义。</li>
+   <li><strong>JavaScript</strong> 校验，这是可以完全自定义的实现方式；</li>
+   <li>HTML5 <strong>内置校验</strong>，这不需要 JavaScript，而且性能更好，但是不能像 JavaScript 那样可自定义。</li>
   </ul>
  </li>
- <li><strong>服务器端校验</strong>则是发生在浏览器提交数据并被服务器端程序接收之后 —— 通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今<a href="/zh-CN/docs/learn/Server-side/First_steps/Web_frameworks">所有的服务端框架</a>都提供了数据<strong>校验</strong>与<strong>清洁</strong>功能（让数据更安全）。</li>
+ <li><strong>服务器端校验</strong>则是发生在浏览器提交数据并被服务器端程序接收之后 —— 通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今<a href="/zh-CN/docs/learn/Server-side/First_steps/Web_frameworks">所有的服务端框架</a>都提供了数据<strong>校验</strong>与<strong>清洁</strong>功能（让数据更安全）。</li>
 </ul>
 
 <p>在真实的项目开发过程中，开发者一般都倾向于使用客户端校验与服务器端校验的组合校验方式以更好的保证数据的正确性与安全性。</p>
 
 <h2 id="使用内置表单数据校验">使用内置表单数据校验</h2>
 
-<p><a href="/en-US/docs/HTML/HTML5">HTML5</a> 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的<a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">校验属性</a>实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。</p>
+<p><a href="/en-US/docs/HTML/HTML5">HTML5</a> 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的<a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">校验属性</a>实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。</p>
 
 <p>当一个元素校验通过时：</p>
 
 <ul>
- <li>该元素将可以通过 CSS 伪类 {{cssxref(":valid")}} 进行特殊的样式化；</li>
+ <li>该元素将可以通过 CSS 伪类 {{cssxref(":valid")}} 进行特殊的样式化；</li>
  <li>如果用户尝试提交表单，如果没有其它的控制来阻止该操作（比如 JavaScript 即可阻止提交），那么该表单的数据会被提交。</li>
 </ul>
 
 <p>如果一个元素未校验通过：</p>
 
 <ul>
- <li>该元素将可以通过 CSS 伪类 {{cssxref(":invalid")}} 进行特殊的样式化；</li>
- <li>如果用户尝试提交表单，浏览器会展示出错误消息，并停止表单的提交。 </li>
+ <li>该元素将可以通过 CSS 伪类 {{cssxref(":invalid")}} 进行特殊的样式化；</li>
+ <li>如果用户尝试提交表单，浏览器会展示出错误消息，并停止表单的提交。 </li>
 </ul>
 
 <h3 id="input_元素的校验约束_—_starting_simple">input 元素的校验约束 — starting simple</h3>
 
 <p>在这一节，我们将会看到一些用于{{HTMLElement("input")}}元素校验的 HTML5 的特性。</p>
 
-<p>让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。 这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>找到源码，在线例子如下：</p>
+<p>让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。 这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>找到源码，在线例子如下：</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -115,11 +115,11 @@ input:valid {
 
 <p>{{EmbedLiveSample("Hidden_code", "100%", 50)}}</p>
 
-<p>开始之前，先拷贝一份 <code>fruit-start.html</code> 放在你硬盘上的新目录里。</p>
+<p>开始之前，先拷贝一份 <code>fruit-start.html</code> 放在你硬盘上的新目录里。</p>
 
 <h3 id="required_属性">required 属性</h3>
 
-<p>最简单的 HTML5 校验功能是 {{htmlattrxref("required", "input")}}属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。</p>
+<p>最简单的 HTML5 校验功能是 {{htmlattrxref("required", "input")}}属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。</p>
 
 <p>添加一个 <code>required</code> 属性到你的 input 元素，如下所示：</p>
 
@@ -152,17 +152,17 @@ input:valid {
 <p>下面是一些例子，让你对它们的工作原理有个基本的了解：</p>
 
 <ul>
- <li><code>a</code> — 匹配一个字符<code>a</code>(不能匹配 <code>b</code>,  <code>aa</code>等等.)</li>
- <li><code>abc</code> — 匹配 <code>a</code>, 其次 <code>b</code>, 最后  <code>c</code>.</li>
- <li><code>a*</code> — 匹配 0 个或者多个字符 <code>a</code> (<code>+</code> 代表至少匹配一个或者多个).</li>
+ <li><code>a</code> — 匹配一个字符<code>a</code>(不能匹配 <code>b</code>,  <code>aa</code>等等.)</li>
+ <li><code>abc</code> — 匹配 <code>a</code>, 其次 <code>b</code>, 最后  <code>c</code>.</li>
+ <li><code>a*</code> — 匹配 0 个或者多个字符 <code>a</code> (<code>+</code> 代表至少匹配一个或者多个).</li>
  <li><code>[^a]</code> — 匹配一个字符，但它<strong>不能</strong>是<code>a</code>.</li>
- <li><code>a|b</code> — 匹配一个字符 <code>a</code> 或者 <code>b</code>.</li>
+ <li><code>a|b</code> — 匹配一个字符 <code>a</code> 或者 <code>b</code>.</li>
  <li><code>[abc]</code> — 匹配一个字符，它可以是<code>a</code>,<code>b</code>或<code>c</code>.</li>
  <li><code>[^abc]</code> — 匹配一个字符，但它<strong>不可以</strong>是<code>a</code>,<code>b</code>或<code>c</code>.</li>
- <li><code>[a-z]</code> — 匹配字符范围 <code>a-z</code>且全部小写  (你可以使用 <code>[A-Za-z]</code> 涵盖大小写，或 <code>[A-Z]</code> 来限制必须大写).</li>
- <li><code>a.c</code> — 匹配字符 <code>a</code>,中间匹配任意一个字符，最后匹配字符<code> c</code>.</li>
- <li><code>a{5}</code> — 匹配字符 <code>a</code>五次。</li>
- <li><code>a{5,7}</code> — 匹配字符 <code>a</code>五到七次，不能多或者少。</li>
+ <li><code>[a-z]</code> — 匹配字符范围 <code>a-z</code>且全部小写  (你可以使用 <code>[A-Za-z]</code> 涵盖大小写，或 <code>[A-Z]</code> 来限制必须大写).</li>
+ <li><code>a.c</code> — 匹配字符 <code>a</code>,中间匹配任意一个字符，最后匹配字符<code> c</code>.</li>
+ <li><code>a{5}</code> — 匹配字符 <code>a</code>五次。</li>
+ <li><code>a{5,7}</code> — 匹配字符 <code>a</code>五到七次，不能多或者少。</li>
 </ul>
 
 <p>你也可以在这些表达式中使用数字和其他字符，例如：</p>
@@ -214,26 +214,26 @@ input:valid {
 
 <h3 id="限制输入的长度">限制输入的长度</h3>
 
-<p>所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用{{htmlattrxref("minlength","input")}} 和 {{htmlattrxref("maxlength","input")}} 属性来限制长度。如果输入的字段长度小于 {{htmlattrxref("minlength","input")}} 的值或大于 {{htmlattrxref("maxlength","input")}} 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。</p>
+<p>所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用{{htmlattrxref("minlength","input")}} 和 {{htmlattrxref("maxlength","input")}} 属性来限制长度。如果输入的字段长度小于 {{htmlattrxref("minlength","input")}} 的值或大于 {{htmlattrxref("maxlength","input")}} 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。</p>
 
 <p>在数字条目中 (i.e. <code>&lt;input type="number"&gt;</code>), 该 {{htmlattrxref("min","input")}} 和 {{htmlattrxref("max","input")}} 属性同样提供校验约束。如果字段的值小于{{htmlattrxref("min","input")}} 属性的值或大于 {{htmlattrxref("max","input")}} 属性的值，该字段则无效。</p>
 
 <p>让我来看看另外一个例子。创建一个 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a> 文件副本。</p>
 
-<p>现在删除 <code>&lt;body&gt;</code> 元素中的内容，替换成下面的代码：</p>
+<p>现在删除 <code>&lt;body&gt;</code> 元素中的内容，替换成下面的代码：</p>
 
 <pre class="brush: html">&lt;form&gt;
-  &lt;div&gt;
-    &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
-    &lt;input id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="number"&gt;How many would you like?&lt;/label&gt;
-    &lt;input type="number" id="number" name="amount" value="1" min="1" max="10"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
+    &lt;input id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="number"&gt;How many would you like?&lt;/label&gt;
+    &lt;input type="number" id="number" name="amount" value="1" min="1" max="10"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <ul>
@@ -278,7 +278,7 @@ div {
   &lt;p&gt;
     &lt;label for="n1"&gt;How old are you?&lt;/label&gt;
     &lt;!-- 这里的 pattern 属性可以用作不支持 number 类 input 浏览器的备用方法
-         请注意当与数字输入框一起使用时，支持 pattern 属性的浏览器会使它沉默失效。
+         请注意当与数字输入框一起使用时，支持 pattern 属性的浏览器会使它沉默失效。
          它仅仅是在这里用作备用 --&gt;
     &lt;input type="number" min="12" max="120" step="1" id="n1" name="age"
            pattern="\d+"&gt;
@@ -404,16 +404,16 @@ input:focus:invalid {
 <pre class="brush: js">var email = document.getElementById("mail");
 
 email.addEventListener("input", function (event) {
-  if (email.validity.typeMismatch) {
-    email.setCustomValidity("I expect an e-mail, darling!");
-  } else {
-    email.setCustomValidity("");
-  }
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("I expect an e-mail, darling!");
+  } else {
+    email.setCustomValidity("");
+  }
 });</pre>
 
 <p>{{EmbedLiveSample("自定义错误信息", "100%", 50)}}</p>
 
-<h2 id="使用_JavaScript校验表单"> 使用 JavaScript 校验表单</h2>
+<h2 id="使用_JavaScript校验表单"> 使用 JavaScript 校验表单</h2>
 
 <p>如果你想控制原生错误信息的界面外观，或者你想处理不支持 HTML 内置表单校验的浏览器，则必须使用 Javascript。</p>
 
@@ -442,7 +442,7 @@ email.addEventListener("input", function (event) {
  <tbody>
   <tr>
    <td><code>validationMessage</code></td>
-   <td>一个本地化消息，描述元素不满足校验条件时（如果有的话）的文本信息。如果元素无需校验（<code>willValidate</code> 为 <code>false</code>），或元素的值满足校验条件时，为空字符串。</td>
+   <td>一个本地化消息，描述元素不满足校验条件时（如果有的话）的文本信息。如果元素无需校验（<code>willValidate</code> 为 <code>false</code>），或元素的值满足校验条件时，为空字符串。</td>
   </tr>
   <tr>
    <td><code>validity</code></td>
@@ -450,55 +450,55 @@ email.addEventListener("input", function (event) {
   </tr>
   <tr>
    <td><code>validity.customError</code></td>
-   <td>如果元素设置了自定义错误，返回 <code>true</code> ；否则返回<code>false</code>。</td>
+   <td>如果元素设置了自定义错误，返回 <code>true</code> ；否则返回<code>false</code>。</td>
   </tr>
   <tr>
    <td><code>validity.patternMismatch</code></td>
-   <td>如果元素的值不匹配所设置的正则表达式，返回 <code>true</code>，否则返回 <code>false</code>。<br>
+   <td>如果元素的值不匹配所设置的正则表达式，返回 <code>true</code>，否则返回 <code>false</code>。<br>
     <br>
-    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
+    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
   </tr>
   <tr>
    <td><code>validity.rangeOverflow</code></td>
    <td>如果元素的值高于所设置的最大值，返回 <code>true</code>，否则返回 <code>false</code>。<br>
     <br>
-    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
+    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
   </tr>
   <tr>
    <td><code>validity.rangeUnderflow</code></td>
    <td>如果元素的值低于所设置的最小值，返回 <code>true</code>，否则返回 <code>false</code>。<br>
     <br>
-    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
+    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
   </tr>
   <tr>
    <td><code>validity.stepMismatch</code></td>
    <td>如果元素的值不符合 step 属性的规则，返回 <code>true</code>，否则返回 <code>false</code>。<br>
     <br>
-    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
+    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
   </tr>
   <tr>
    <td><code>validity.tooLong</code></td>
    <td>如果元素的值超过所设置的最大长度，返回 <code>true</code>，否则返回 <code>false</code>。<br>
     <br>
-    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
+    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
   </tr>
   <tr>
    <td><code>validity.typeMismatch</code></td>
    <td>如果元素的值出现语法错误，返回 <code>true</code>，否则返回 <code>false</code>。<br>
     <br>
-    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
+    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
   </tr>
   <tr>
    <td><code>validity.valid</code></td>
    <td>如果元素的值不存在校验问题，返回 <code>true</code>，否则返回 <code>false</code>。<br>
     <br>
-    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":valid")}} CSS 伪类，否则命中 {{cssxref(":invalid")}} CSS 伪类。</td>
+    当此属性为 <code>true</code> 时，元素将命中  {{cssxref(":valid")}} CSS 伪类，否则命中 {{cssxref(":invalid")}} CSS 伪类。</td>
   </tr>
   <tr>
    <td><code>validity.valueMissing</code></td>
    <td>如果元素设置了 required 属性且值为空，返回 <code>true</code>，否则返回 <code>false</code>。<br>
     <br>
-    当此属性为 true 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
+    当此属性为 true 时，元素将命中  {{cssxref(":invalid")}} CSS 伪类。</td>
   </tr>
   <tr>
    <td><code>willValidate</code></td>
@@ -523,7 +523,7 @@ email.addEventListener("input", function (event) {
   </tr>
   <tr>
    <td>{{domxref("HTMLFormElement.reportValidity()")}}</td>
-   <td>如果元素或它的子元素控件符合校验的限制，返回 <code>true</code> . 当返回为 <code>false</code> 时，对每个无效元素可撤销 {{event("invalid")}} 事件会被唤起并且校验错误会报告给用户。</td>
+   <td>如果元素或它的子元素控件符合校验的限制，返回 <code>true</code> . 当返回为 <code>false</code> 时，对每个无效元素可撤销 {{event("invalid")}} 事件会被唤起并且校验错误会报告给用户。</td>
   </tr>
   <tr>
    <td>
@@ -536,7 +536,7 @@ email.addEventListener("input", function (event) {
  </tbody>
 </table>
 
-<p>对于旧版浏览器，可以使用 <a href="https://hyperform.js.org/">polyfill（例如 Hyperform</a>），来弥补其对约束校验 API 支持的不足。既然你已经使用 JavaScript，在您的网站或 Web 应用程序的设计和实现中使用 polyfill 并不是累赘。</p>
+<p>对于旧版浏览器，可以使用 <a href="https://hyperform.js.org/">polyfill（例如 Hyperform</a>），来弥补其对约束校验 API 支持的不足。既然你已经使用 JavaScript，在您的网站或 Web 应用程序的设计和实现中使用 polyfill 并不是累赘。</p>
 
 <h4 id="使用约束校验_API_的例子">使用约束校验 API 的例子</h4>
 
@@ -559,7 +559,7 @@ email.addEventListener("input", function (event) {
 
 <h5 id="CSS">CSS</h5>
 
-<p>以下 CSS 样式使我们的表单和其错误输出看起来更有吸引力。</p>
+<p>以下 CSS 样式使我们的表单和其错误输出看起来更有吸引力。</p>
 
 <pre class="brush: css">/* 仅为了使示例更好看 */
 body {
@@ -698,7 +698,7 @@ form.addEventListener("submit", function (event) {
 
 <h5 id="CSS_2">CSS</h5>
 
-<p>同样的，CSS 也不需要太多的改动，我们只需将 {{cssxref(":invalid")}} 伪类变成真实的类，并避免使用不适用于 Internet Explorer 6 的属性选择器。</p>
+<p>同样的，CSS 也不需要太多的改动，我们只需将 {{cssxref(":invalid")}} 伪类变成真实的类，并避免使用不适用于 Internet Explorer 6 的属性选择器。</p>
 
 <pre class="brush: css">/* 仅为了使示例更好看 */
 body {
@@ -846,7 +846,7 @@ addEvent(form, "submit", function () {
  <li>jQuery 插件：
   <ul>
    <li><a href="http://bassistance.de/jquery-plugins/jquery-plugin-validation/">Validation</a></li>
-   <li><a href="http://unwrongest.com/projects/valid8/">Valid8</a> </li>
+   <li><a href="http://unwrongest.com/projects/valid8/">Valid8</a> </li>
   </ul>
  </li>
 </ul>

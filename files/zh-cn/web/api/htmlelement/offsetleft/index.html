@@ -11,11 +11,11 @@ translation_of: Web/API/HTMLElement/offsetLeft
 ---
 <div>{{ APIRef("HTML DOM") }}</div>
 
-<p> <strong><code>HTMLElement.offsetLeft</code></strong> 是一个只读属性，返回当前元素<em>左上角</em>相对于  {{domxref("HTMLElement.offsetParent")}} 节点的左边界偏移的像素值。</p>
+<p> <strong><code>HTMLElement.offsetLeft</code></strong> 是一个只读属性，返回当前元素<em>左上角</em>相对于  {{domxref("HTMLElement.offsetParent")}} 节点的左边界偏移的像素值。</p>
 
 <p>对块级元素来说，<code>offsetTop</code>、<code>offsetLeft</code>、<code>offsetWidth</code> 及 <code>offsetHeight</code> 描述了元素相对于 <code>offsetParent</code> 的边界框。</p>
 
-<p>然而，对于可被截断到下一行的行内元素（如 <strong>span</strong>），<code>offsetTop</code> 和 <code>offsetLeft</code> 描述的是<em>第一个</em>边界框的位置（使用 {{domxref("Element.getClientRects()")}} 来获取其宽度和高度），而 <code>offsetWidth</code> 和 <code>offsetHeight</code> 描述的是边界框的尺寸（使用 {{domxref("Element.getBoundingClientRect")}} 来获取其位置）。因此，使用 <code>offsetLeft、offsetTop、offsetWidth</code>、<code>offsetHeight</code> 来对应 left、top、width 和 height 的一个盒子将不会是文本容器 span 的盒子边界。</p>
+<p>然而，对于可被截断到下一行的行内元素（如 <strong>span</strong>），<code>offsetTop</code> 和 <code>offsetLeft</code> 描述的是<em>第一个</em>边界框的位置（使用 {{domxref("Element.getClientRects()")}} 来获取其宽度和高度），而 <code>offsetWidth</code> 和 <code>offsetHeight</code> 描述的是边界框的尺寸（使用 {{domxref("Element.getBoundingClientRect")}} 来获取其位置）。因此，使用 <code>offsetLeft、offsetTop、offsetWidth</code>、<code>offsetHeight</code> 来对应 left、top、width 和 height 的一个盒子将不会是文本容器 span 的盒子边界。</p>
 
 <h2 id="Syntax">语法</h2>
 
