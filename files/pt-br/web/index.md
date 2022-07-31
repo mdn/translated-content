@@ -48,7 +48,7 @@ A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para ti
 - [WebDriver](/pt-BR/docs/Web/WebDriver)
   - : WebDriver é um mecanismo de automação de navegador para controlar remotamente um navegador, emulando as ações de uma pessoa real usando o navegador. É amplamente usado para testes entre navegadores de aplicativos da Web.
 - [Extensões Web](/pt-BR/docs/Mozilla/Add-ons/WebExtensions)
-  - : .As Extensões da Web são uma maneira de fornecer aos usuários recursos aprimorados em seus navegadores — para fazer coisas como bloquear anúncios e outros conteúdos, personalizar a aparência das páginas e muito mais.
+  - : As Extensões da Web são uma maneira de fornecer aos usuários recursos aprimorados em seus navegadores — para fazer coisas como bloquear anúncios e outros conteúdos, personalizar a aparência das páginas e muito mais.
 - [Web App Manifests](/pt-BR/docs/Web/Manifest)
   - : Os manifestos de aplicativos da Web permitem que os usuários instalem aplicativos da Web nas telas iniciais de seus dispositivos, com aspectos como orientação de tela retrato/paisagem e modo de exibição (por exemplo, tela cheia) predefinidos.
 - [Progressive Web Apps (PWAs)](/pt-BR/docs/Web/Progressive_web_apps)
