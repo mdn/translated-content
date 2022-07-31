@@ -3,54 +3,54 @@ title: 使用 moment 做日期格式化
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
-<p>我们模型的日期预设呈现很难看：<em>Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)</em>。在本节中，我们将展示如何更新上一节中的 書本實例 BookInstance 列表页面，以更友好的格式显示<code>due_date</code>字段：December 6th, 2016。</p>
+我们模型的日期预设呈现很难看：_Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_。在本节中，我们将展示如何更新上一节中的 書本實例 BookInstance 列表页面，以更友好的格式显示`due_date`字段：December 6th, 2016。
 
-<p>我们将使用的方法，是在我们的<code>BookInstance</code>模型中，创建一个返回格式化日期的虚拟屬性。我们将使用<a href="https://www.npmjs.com/package/moment">moment</a> 来做实际的格式化，这是一个轻量级 JavaScript 日期库，用于解析，验证，操作和格式化日期。</p>
+我们将使用的方法，是在我们的`BookInstance`模型中，创建一个返回格式化日期的虚拟屬性。我们将使用[moment](https://www.npmjs.com/package/moment) 来做实际的格式化，这是一个轻量级 JavaScript 日期库，用于解析，验证，操作和格式化日期。
 
-<div class="note">
-<p><strong>备注：</strong> 我们可以直接在 Pug 模板中，使用 <em>moment </em>格式化字符串，或者可以在许多其它地方格式化字符串。使用虚拟属性，可以使我们获得格式化的日期，這与我们当前获取 <code>due_date</code> 的方式完全相同。</p>
-</div>
+> **备注：** 我们可以直接在 Pug 模板中，使用 _moment_ 格式化字符串，或者可以在许多其它地方格式化字符串。使用虚拟属性，可以使我们获得格式化的日期，這与我们当前获取 `due_date` 的方式完全相同。
 
-<h2 id="安装_moment">安装 moment</h2>
+## 安装 moment
 
-<p>在项目的根目录，输入下列命令</p>
+在项目的根目录，输入下列命令
 
-<pre class="brush: bash">npm install moment</pre>
+```bash
+npm install moment
+```
 
-<h2 id="创建虚拟属性">创建虚拟属性</h2>
+## 创建虚拟属性
 
-<ol>
- <li>打开 <strong>./models/bookinstance.js</strong>.</li>
- <li>在此页面最上方，引用 moment
-  <pre class="brush: js">var moment = require('moment');</pre>
- </li>
-</ol>
+1.  打开 **./models/bookinstance.js**.
+2.  在此页面最上方，引用 moment
 
-<p>在 url 属性后面，加入虚拟属性 <code>due_back_formatted</code> 。</p>
+    ```js
+    var moment = require('moment');
+    ```
 
-<pre class="brush: js">BookInstanceSchema
+在 url 属性后面，加入虚拟属性 `due_back_formatted` 。
+
+```js
+BookInstanceSchema
 .virtual('due_back_formatted')
 .get(function () {
   return moment(this.due_back).format('MMMM Do, YYYY');
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>备注：</strong> 格式化方法可以使用几乎任何模式显示日期。<a href="http://momentjs.com/docs/#/displaying/">moment 文档</a>中，可以找到表示不同日期组件的语法。</p>
-</div>
+> **备注：** 格式化方法可以使用几乎任何模式显示日期。[moment 文档](http://momentjs.com/docs/#/displaying/)中，可以找到表示不同日期组件的语法。
 
-<h2 id="更新视图">更新视图</h2>
+## 更新视图
 
-<p>打开 <strong>/views/bookinstance_list.pug</strong> ，然后用  <code>due_back_formatted</code> 取代 <code>due_back</code> 。</p>
+打开 **/views/bookinstance_list.pug** ，然后用 `due_back_formatted` 取代 `due_back` 。
 
-<pre class="brush: js">      if val.status!='Available'
+```js
+      if val.status!='Available'
         //span  (Due: #{val.due_back} )
-        span  (Due: #{val.due_back_formatted} )</pre>
+        span  (Due: #{val.due_back_formatted} )
+```
 
-<p>这就是本章节的全部了。如果你访问侧边栏的 All book-instances，你应该会看到所有的归还日期都更吸引人了！</p>
+这就是本章节的全部了。如果你访问侧边栏的 All book-instances，你应该会看到所有的归还日期都更吸引人了！
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<ul>
- <li>回到 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教程 5: 呈现图书馆数据</a></li>
- <li>继续教程 5 下一個部分：<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page">作者列表页面、种类列表页面、与自我挑战</a></li>
-</ul>
+- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 继续教程 5 下一個部分：[作者列表页面、种类列表页面、与自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
