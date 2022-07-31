@@ -32,20 +32,26 @@ Les valeurs retournées pour les différents types de noeuds sont :
 
 ## Syntaxe
 
-    var str = node.nodeName;
+```js
+var str = node.nodeName;
+```
 
 ## Exemple
 
 Avec le balisage suivant&nbsp;:
 
-    <div id="d1">hello world</div>
-    <input type="text" id="t"/>
+```html
+<div id="d1">hello world</div>
+<input type="text" id="t"/>
+```
 
 et le script suivant&nbsp;:
 
-    var div1 = document.getElementById("d1");
-    var text_field = document.getElementById("t");
-    text_field.value = div1.nodeName;
+```js
+var div1 = document.getElementById("d1");
+var text_field = document.getElementById("t");
+text_field.value = div1.nodeName;
+```
 
 En XHTML (ou tout autre format XML), la valeur de `text_field` sera «&nbsp;div&nbsp;». Cependant, en HTML, la valeur de `text_field` sera «&nbsp;DIV&nbsp;», parce que `nodeName` et `tagName` renvoient en casse majuscule sur les éléments HTML dans les DOM marqués comme des documents HTML. En lire plus [détails sur la sensibilité à la casse de nodeName dans différents navigateurs](http://ejohn.org/blog/nodename-case-sensitivity/) (en).
 

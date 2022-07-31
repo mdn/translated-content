@@ -17,7 +17,9 @@ Indique si l'événement donné se propage à travers le DOM ou non.
 
 ## Syntaxe
 
-    event.bubbles
+```js
+event.bubbles
+```
 
 ### Valeur
 

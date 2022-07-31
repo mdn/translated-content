@@ -17,10 +17,14 @@ Si un élément du formulaire (comme un bouton reset par exemple) a un `name` ou
 
 ## Syntaxe
 
-    HTMLFormElement.reset()
+```js
+HTMLFormElement.reset()
+```
 
 ## Exemple
 
-    document.getElementById("myform").reset();
+```js
+document.getElementById("myform").reset();
+```
 
 ## Spécification

@@ -69,7 +69,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 ## 重定向消息
 
 - {{HTTPStatus(300, "300 Multiple Choice")}}
-  - : 请求拥有不只一个的可鞥响应。用户带来或者用户应当从中选择一个。 (没有标准化的方法来选择其中一个响应，但是建议使用指向可能性的 HTML 链接，以便用户可以选择。)
+  - : 请求拥有多个可能的响应。用户代理或者用户应当从中选择一个。（没有标准化的方法来选择其中一个响应，但是建议使用指向可能性的 HTML 链接，以便用户可以选择。）
 - {{HTTPStatus(301, "301 Moved Permanently")}}
   - : 请求资源的 URL 已永久更改。在响应中给出了新的 URL。
 - {{HTTPStatus(302, "302 Found")}}
@@ -102,7 +102,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : 服务器知道请求方法，但目标资源不支持该方法。例如，API 可能不允许调用`DELETE`来删除资源。
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : 当 web 服务器在执行 服务端驱动型内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation#服务端驱动型内容协商机制)后，没有发现任何符合用户代理给定标准的内容时，就会发送此响应。
+  - : 当 web 服务器在执行[服务端驱动型内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation#服务端驱动型内容协商机制)后，没有发现任何符合用户代理给定标准的内容时，就会发送此响应。
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : 类似于 `401 Unauthorized` 但是认证需要由代理完成。
 - {{HTTPStatus(408, "408 Request Timeout")}}

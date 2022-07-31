@@ -35,9 +35,9 @@ translation_of: Web/API/Element/setAttribute
 
 <p>如果指定的属性已经存在，则其值变为传递的值。如果不存在，则创建指定的属性。</p>
 
-<p>尽管对于不存在的属性，<code><a href="/en-US/docs/DOM/element.getAttribute" title="DOM/element.getAttribute">getAttribute()</a></code> 返回 <code>null</code>，你还是应该使用 <code><a href="/en-US/docs/DOM/element.removeAttribute" title="DOM/element.removeAttribute">removeAttribute()</a></code> 代替 <code><em>elt</em>.setAttribute(<em>attr</em>, null)</code> 来删除属性。</p>
+<p>尽管对于不存在的属性，<code><a href="/en-US/docs/DOM/element.getAttribute">getAttribute()</a></code> 返回 <code>null</code>，你还是应该使用 <code><a href="/en-US/docs/DOM/element.removeAttribute">removeAttribute()</a></code> 代替 <code><em>elt</em>.setAttribute(<em>attr</em>, null)</code> 来删除属性。</p>
 
-<p>布尔属性（原文是 Boolean attributes）只要出现在元素上就会被认为是 <code>true</code> ，无论它的值是什么; 一般来说，你应该将 <code>value</code> 设置为空字符串 (<code>""</code>) 。(一些人使用这个属性的名称作为值; 这不会出现什么问题，但这是不规范的). See the <a href="#示例">example</a> below for a practical demonstration.</p>
+<p>布尔属性（原文是 Boolean attributes）只要出现在元素上就会被认为是 <code>true</code> ，无论它的值是什么; 一般来说，你应该将 <code>value</code> 设置为空字符串 (<code>""</code>) 。(一些人使用这个属性的名称作为值; 这不会出现什么问题，但这是不规范的). See the <a href="#示例">example</a> below for a practical demonstration.</p>
 
 <p>由于将指定的值转换为字符串，因此指定 null 不一定能达到您的期望。 而不是删除属性或将其值设置为{{jsxref("null")}}，而是将属性的值设置为字符串“ null”。 如果要删除属性，请调用{{domxref("Element.removeAttribute”，“ removeAttribute（）")}}}。</p>
 
@@ -82,8 +82,8 @@ b.setAttribute("disabled", "");
 <h2 id="规范">规范</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082">DOM Level 2 Core: setAttribute</a> (introduced in <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute">DOM Level 1 Core</a>)</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents">HTML5: APIs in HTML documents</a></li>
+ <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082">DOM Level 2 Core: setAttribute</a> (introduced in <a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute">DOM Level 1 Core</a>)</li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents">HTML5: APIs in HTML documents</a></li>
 </ul>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
@@ -92,6 +92,6 @@ b.setAttribute("disabled", "");
 
 <p>{{Compat("api.Element.setAttribute")}}</p>
 
-<h3 id="Notes" name="Notes">Gecko 备注</h3>
+<h3 id="Notes">Gecko 备注</h3>
 
 <p>使用 <code>setAttribute()</code> 修改某些属性值时，尤其是 XUL 中的 <code>value</code>，可能得不到期望结果。这是由于 <code>attribute</code> 指定的是默认值。要访问或修改当前值，应该使用 <code>property</code> 属性。例如，使用 <code>Element.value</code> 代替 <code>Element.setAttribute()</code>。</p>

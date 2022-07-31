@@ -5,25 +5,23 @@ translation_of: Web/API/CustomEvent
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><code>CustomEvent </code>事件是由程序创建的，可以有任意自定义功能的事件。</p>
+<p><code>CustomEvent </code>事件是由程序创建的，可以有任意自定义功能的事件。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="构造函数">构造函数</h2>
 
-<p><strong style="font-weight: bold;">{{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}  </strong>创建一个自定义事件。</p>
+<p><strong>{{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}  </strong>创建一个自定义事件。</p>
 
 <h2 id="属性">属性</h2>
 
-<p><strong style="font-weight: bold;">{{domxref("CustomEvent.detail")}} {{readonlyinline}} 任何时间初始化时传入的数据</strong></p>
+<p><strong>{{domxref("CustomEvent.detail")}} {{readonlyinline}} 任何时间初始化时传入的数据</strong></p>
 
-<p><em>此接口从父接口继承属性， </em>{{domxref("Event")}}：</p>
+<p><em>此接口从父接口继承属性， </em>{{domxref("Event")}}：</p>
 
 <p>{{Page("/zh-CN/docs/Web/API/Event", "Properties")}}</p>
 
 <h2 id="方法">方法</h2>
-
-<p> </p>
 
 <dl>
  <dt>{{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}</dt>
@@ -32,15 +30,13 @@ translation_of: Web/API/CustomEvent
  </dd>
 </dl>
 
-<p><em>此接口从父接口继承方法， </em>{{domxref("Event")}}：</p>
+<p><em>此接口从父接口继承方法， </em>{{domxref("Event")}}：</p>
 
 <p>{{Page("/zh-CN/docs/Web/API/Event", "Methods")}}</p>
 
-<p> </p>
+<h2 id="Method_overview">方法概述</h2>
 
-<h2 id="Method_overview" name="Method_overview">方法概述</h2>
-
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <td><code>void <a href="#initCustomEvent()">initCustomEvent</a>(in DOMString type, in boolean canBubble, in boolean cancelable, in any detail);</code></td>
@@ -48,9 +44,9 @@ translation_of: Web/API/CustomEvent
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th>属性</th>
@@ -65,9 +61,9 @@ translation_of: Web/API/CustomEvent
  </tbody>
 </table>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
-<h3 id="initCustomEvent()" name="initCustomEvent()">initCustomEvent()</h3>
+<h3 id="initCustomEvent()">initCustomEvent()</h3>
 
 <p>初始化一个自定义事件的方式和初始化一个标准 DOM 事件的方式非常相似。</p>
 
@@ -79,7 +75,7 @@ translation_of: Web/API/CustomEvent
 );
 </pre>
 
-<h4 id="Parameters" name="Parameters">参数</h4>
+<h4 id="Parameters">参数</h4>
 
 <dl>
  <dt><code>type</code></dt>
@@ -94,7 +90,7 @@ translation_of: Web/API/CustomEvent
 
 <h2 id="构造函数_2">构造函数</h2>
 
-<p><a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM4 规范</a> 添加了对 <code>CustomEvent</code> 构造函数的支持。</p>
+<p><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM4 规范</a> 添加了对 <code>CustomEvent</code> 构造函数的支持。</p>
 
 <pre>CustomEvent(
   DOMString type,
@@ -102,7 +98,7 @@ translation_of: Web/API/CustomEvent
 )
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>type</code></dt>
@@ -111,7 +107,7 @@ translation_of: Web/API/CustomEvent
  <dd>一个提供事件的配置信息对象。查看<a href="#CustomEventInit">CustomEventInit</a>了解更多详情。</dd>
 </dl>
 
-<h4 id="CustomEventInit" name="CustomEventInit">CustomEventInit</h4>
+<h4 id="CustomEventInit">CustomEventInit</h4>
 
 <dl>
  <dt><code>bubbles</code></dt>
@@ -122,7 +118,7 @@ translation_of: Web/API/CustomEvent
  <dd>当事件初始化时传递的数据。</dd>
 </dl>
 
-<h3 id="CustomEvent_example_usage" name="CustomEvent_example_usage">CustomEvent 用法示例</h3>
+<h3 id="CustomEvent_example_usage">CustomEvent 用法示例</h3>
 
 <pre class="brush: js">// 添加一个适当的事件监听器
 obj.addEventListener("cat", function(e) { process(e.detail) })
@@ -132,15 +128,10 @@ var event = new CustomEvent("cat", {"detail":{"hazcheeseburger":true}})
 obj.dispatchEvent(event)
 </pre>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Specification">规范</h2>
 
+{{Specifications}}
 
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("api.CustomEvent")}}</p>
-
-<h2 id="Specification" name="Specification">规范</h2>
-
-<ul>
- <li>{{ spec("http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#interface-customevent","DOM4 : Interface CustomEvent","ED") }}</li>
- <li>{{ spec("http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#interface-CustomEvent","DOM Level 3 Events : CustomEvent","WD") }}</li>
-</ul>

@@ -17,7 +17,9 @@ La propriété en lecture seule **origin** de l'interface {{domxref("ExtendableM
 
 ## Syntaxe
 
-    var myOrigin = ExtendableMessageEventInstance.origin;
+```js
+var myOrigin = ExtendableMessageEventInstance.origin;
+```
 
 ### Value
 

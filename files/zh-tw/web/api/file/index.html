@@ -44,7 +44,7 @@ translation_of: Web/API/File
  <dd><code>File</code> 物件所代表之檔案的名稱。</dd>
  <dt>{{domxref("File.size")}} {{readonlyinline}}</dt>
  <dd>回傳檔案大小。</dd>
- <dt>{{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}</dt>
+ <dt>{{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}</dt>
  <dd>回傳相對於 {{domxref("File")}} 的網址位置。</dd>
  <dt>{{domxref("File.type")}} {{readonlyinline}}</dt>
  <dd>回傳檔案的 <a href="/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a> 類型。</dd>
@@ -82,7 +82,7 @@ translation_of: Web/API/File
 <p>{{Compat("api.File")}}</p>
 </div>
 
-<p> </p>
+<p> </p>
 
 <h3 id="實作備註">實作備註</h3>
 
@@ -91,8 +91,8 @@ translation_of: Web/API/File
  <li>Starting from Gecko 6.0 {{geckoRelease("6.0")}}, privileged code (such as extensions) can pass an <code>nsIFile</code> object to the DOM <code>File</code> constructor to specify the file to reference.</li>
  <li>Starting from Gecko 8.0 {{geckoRelease("8.0")}}, you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the <code>nsIDOMFile</code> object directly. The constructor takes, in contrast to {{domxref("Blob")}}, as second argument the filename. The filename can be any String.
   <pre class="syntaxbox">new File(
-  Array parts,
-  String filename,
+  Array parts,
+  String filename,
   BlobPropertyBag properties
 );</pre>
  </li>

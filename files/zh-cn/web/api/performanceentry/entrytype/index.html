@@ -3,18 +3,17 @@ title: PerformanceEntry.entryType
 slug: Web/API/PerformanceEntry/entryType
 translation_of: Web/API/PerformanceEntry/entryType
 ---
-<div> <br>
-  {{APIRef("Performance Timeline API")}}</div>
+<div>{{APIRef("Performance Timeline API")}}</div>
 
-<p>The <strong><code>entryType</code></strong>  返回一个代表 performance metric 类型的{{domxref("DOMString")}} , 例如被 performance.mark("begin") 所创建的 entry 的 entryType 就是 "<code>mark</code>". 此属性只读。</p>
+<p>The <strong><code>entryType</code></strong>  返回一个代表 performance metric 类型的{{domxref("DOMString")}} , 例如被 performance.mark("begin") 所创建的 entry 的 entryType 就是 "<code>mark</code>". 此属性只读。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">var <em>type</em> = <em>entry</em>.entryType;</pre>
 
-<h3 id="Return_Value" name="Return_Value">返回值</h3>
+<h3 id="Return_Value">返回值</h3>
 
-<p>返回值取决于  <code>PerformanceEntry</code> 对象的 subtype， entryType 的取值会影响{{domxref('PerformanceEntry.name')}} 属性， 具体如下表所示. </p>
+<p>返回值取决于 <code>PerformanceEntry</code> 对象的 subtype， entryType 的取值会影响{{domxref('PerformanceEntry.name')}} 属性， 具体如下表所示. </p>
 
 <table class="standard-table">
  <thead>
@@ -42,7 +41,7 @@ translation_of: Web/API/PerformanceEntry/entryType
    <td><code>mark</code></td>
    <td>{{domxref('PerformanceMark')}}</td>
    <td>{{domxref("DOMString")}}</td>
-   <td>The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.</td>
+   <td>The name used when the mark was created by calling {{domxref("Performance.mark","performance.mark()")}}.</td>
   </tr>
   <tr>
    <td><code>measure</code></td>
@@ -59,11 +58,9 @@ translation_of: Web/API/PerformanceEntry/entryType
  </tbody>
 </table>
 
-<p> </p>
-
 <h2 id="范例">范例</h2>
 
-<p>下面的代码说明了  <code>entryType</code> 属性的用法。</p>
+<p>下面的代码说明了  <code>entryType</code> 属性的用法。</p>
 
 <pre class="brush: js">function run_PerformanceEntry() {
 
@@ -79,13 +76,13 @@ translation_of: Web/API/PerformanceEntry/entryType
   // Check the entryType of all the "begin" entries
   var entriesNamedBegin = performance.getEntriesByName("begin");
   //entriesNamedBegin
-  //    Array [ PerformanceMark ]
+  //    Array [ PerformanceMark ]
   //entriesNamedBegin[0]
-  //    PerformanceMark { name: "begin", entryType: "mark", startTime: 94661370.14, duration: 0 }
+  //    PerformanceMark { name: "begin", entryType: "mark", startTime: 94661370.14, duration: 0 }
   //entriesNamedBegin[0].entryType
-  //    "mark"
+  //    "mark"
   //entriesNamedBegin[0].name
-  //    "begin"
+  //    "begin"
 
   for (var i=0; i &lt; entriesNamedBegin.length; i++) {
       var typeOfEntry = entriesNamedBegin[i].entryType;
@@ -97,32 +94,8 @@ translation_of: Web/API/PerformanceEntry/entryType
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-entrytype', 'entryType')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline', '#dom-performanceentry-entrytype', 'entryType')}}</td>
-   <td>{{Spec2('Performance Timeline')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-<div>
-
-
-<p>{{Compat("api.PerformanceEntry.entryType")}}</p>
-</div>
-</div>
+<p>{{Compat}}</p>

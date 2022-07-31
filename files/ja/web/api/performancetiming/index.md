@@ -69,7 +69,7 @@ _`PerformanceTiming` インターフェイスに継承したプロパティは�
 - {{domxref("PerformanceTiming.domContentLoadedEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
   - : 一刻も早く実行する必要のあるスクリプトが、順不同にかかわらず、すべて実行が完了した時刻。
 - {{domxref("PerformanceTiming.domComplete")}} {{readonlyInline}} {{deprecated_inline}}
-  - : パーサーがメイン文書の処理を終了し、その {{domxref("Document.readyState")}} が `'complete' ` に変わり、対応する {{domxref("Document/readystatechange_event", "readystatechange")}} イベントが発行された時刻。
+  - : パーサーがメイン文書の処理を終了し、その {{domxref("Document.readyState")}} が `'complete'` に変わり、対応する {{domxref("Document/readystatechange_event", "readystatechange")}} イベントが発行された時刻。
 - {{domxref("PerformanceTiming.loadEventStart")}} {{readonlyInline}} {{deprecated_inline}}
   - : 現在の文書に対して {{domxref("Window/load_event", "load")}} イベントが送信された時刻。このイベントがまだ送信されていない場合は、 `0` を返します。
 - {{domxref("PerformanceTiming.loadEventEnd")}} {{readonlyInline}} {{deprecated_inline}}

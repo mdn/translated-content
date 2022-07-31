@@ -88,7 +88,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
  <li>您所依賴的“免費”等級，是否會隨著時間的推移而過期，以及遷移到更昂貴等級的成本，是否意味著您最好在一開始就使用其他服務！</li>
 </ul>
 
-<p>當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， <a href="https://www.heroku.com/">Heroku</a>  “永遠” 提供免費但資源有限的 PaaS 環境，而 <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a> 和開源選項 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry</a> 在您第一次加入時，提供免費信用額度。</p>
+<p>當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， <a href="https://www.heroku.com/">Heroku</a>  “永遠” 提供免費但資源有限的 PaaS 環境，而 <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html">Amazon Web Services</a>, <a href="https://azure.microsoft.com/en-us/pricing/details/app-service/">Microsoft Azure</a> 和開源選項 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry">PWS/Cloud Foundry</a> 在您第一次加入時，提供免費信用額度。</p>
 
 <p>許多提供商還擁有“基本”層，可提供更多有用的計算能力，和更少的限制。舉例來說， <a href="https://www.digitalocean.com/">Digital Ocean</a> 是一個流行的託管服務提供商，它提供了一個相對便宜的基本計算層（在本教程寫作時，是每月5美元的較低範圍）。</p>
 
@@ -120,7 +120,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 
 <p>記錄呼叫會對高流量網站產生影響。在生產環境中，您可能需要記錄網站活動（例如，跟踪流量，或記錄API調用），但您應嘗試最小化為調試目的而添加的日誌記錄量。</p>
 
-<p>在生產環境中，最小化“調試”日誌記錄的一種方法，是使用類似調試 <a href="https://www.npmjs.com/package/debug">debug </a> 的模塊，允許您通過設置環境變量，來控制執行的日誌記錄。例如，下面的代碼片段，顯示如何設置 “author” 日誌記錄。調試變量使用名稱 “author” 聲明，並且將自動顯示，來自此對象的所有日誌的前綴 “author”。</p>
+<p>在生產環境中，最小化“調試”日誌記錄的一種方法，是使用類似調試 <a href="https://www.npmjs.com/package/debug">debug </a> 的模塊，允許您通過設置環境變量，來控制執行的日誌記錄。例如，下面的代碼片段，顯示如何設置 “author” 日誌記錄。調試變量使用名稱 “author” 聲明，並且將自動顯示，來自此對象的所有日誌的前綴 “author”。</p>
 
 <pre class="brush: js"><strong>var debug = require('debug')('author');</strong>
 
@@ -132,7 +132,7 @@ exports.author_update_get = function(req, res, next) {
         if (err) {
 <strong>            debug('update error:' + err);</strong>
             return next(err);
-        }
+        }
         //On success
         res.render('author_form', { title: 'Update Author', author: author });
     });
@@ -178,7 +178,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
+app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 ...
 </pre>
@@ -263,7 +263,7 @@ var app = express();
 
 <ol>
  <li>訪問 <a href="https://github.com/">https://github.com/</a> 並創建一個帳戶。</li>
- <li>登錄後，單擊頂部工具欄中的 + 號鏈接，然後選擇新建儲存庫  <strong>New repository</strong>。</li>
+ <li>登錄後，單擊頂部工具欄中的 + 號鏈接，然後選擇新建儲存庫  <strong>New repository</strong>。</li>
  <li>填寫此表單上的所有字段。雖然這些不是強制性的，但強烈建議使用它們。
   <ul>
    <li>輸入新的存儲庫名稱（例如，express-locallibrary-tutorial）和描述（例如 “以Express（node）編寫的本地圖書館網站”）。</li>
@@ -281,7 +281,7 @@ var app = express();
 
 <ol>
  <li>為您的本地計算機安裝 git（您可以在<a href="https://git-scm.com/downloads">此處找到不同平台的版本</a>）。<br>
-   </li>
+   </li>
  <li>打開命令提示符/終端，並使用您在上面複製的 URL ，克隆儲存庫：
   <pre class="brush: bash">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/express-locallibrary-tutorial.git
 </pre>
@@ -305,9 +305,9 @@ var app = express();
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
-  (use "git reset HEAD &lt;file&gt;..." to unstage)
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
 
-        new file:   ...</pre>
+        new file:   ...</pre>
  </li>
  <li>如果您滿意，請將文件提交到本地儲存庫：
   <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
@@ -349,7 +349,7 @@ v8.9.1</pre>
     "node": "8.9.1"
   },</strong>
   "private": true,
-  ...
+  ...
 </pre>
 
 <h4 id="數據庫配置">數據庫配置</h4>
@@ -450,7 +450,7 @@ MONGODB_URI: mongodb://your_user:your_password@ds139278.mlab.com:39278/local_lib
 <pre class="brush: bash">&gt;heroku config
 === limitless-tor-18923 Config Vars
 MONGODB_URI: mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production
-NODE_ENV:    production
+NODE_ENV:    production
 </pre>
 
 <p>Heroku 會在更新變量時，重新啟動應用程序。如果您現在檢查主頁，它應該顯示對象計數的零值，因為上面的更改，意味著我們現在正在使用新的（空）數據庫。</p>
@@ -482,10 +482,10 @@ heroku ps   #Display dyno status
  <li><a href="https://expressjs.com/en/advanced/best-practice-security.html">Production Best Practices: Security</a> (Express docs)</li>
  <li>Heroku
   <ul>
-   <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started on Heroku with Node.js</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node.js Applications on Heroku</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/nodejs-support">Heroku Node.js Support</a> (Heroku docs)</li>
-   <li><a href="https://devcenter.heroku.com/articles/node-concurrency">Optimizing Node.js Application Concurrency</a> (Heroku docs)</li>
+   <li><a href="https://devcenter.heroku.com/articles/node-concurrency">Optimizing Node.js Application Concurrency</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/how-heroku-works">How Heroku works</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/dynos">Dynos and the Dyno Manager</a> (Heroku docs)</li>
    <li><a href="https://devcenter.heroku.com/articles/config-vars">Configuration and Config Vars</a> (Heroku docs)</li>
@@ -495,14 +495,14 @@ heroku ps   #Display dyno status
  <li>Digital Ocean
   <ul>
    <li><a href="https://www.digitalocean.com/community/tutorials?q=express">Express</a> tutorials</li>
-   <li><a href="https://www.digitalocean.com/community/tutorials?q=node.js">Node.js</a> tutorials </li>
+   <li><a href="https://www.digitalocean.com/community/tutorials?q=node.js">Node.js</a> tutorials </li>
   </ul>
  </li>
 </ul>
 
 <p>{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="本教學鏈接">本教學鏈接</h2>
 
@@ -518,4 +518,4 @@ heroku ps   #Display dyno status
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

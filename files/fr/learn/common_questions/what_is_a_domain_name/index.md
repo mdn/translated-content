@@ -77,38 +77,40 @@ Pour déterminer si un nom de domaine est disponible :
 - vous pouvez vous rendre sur le site d'un bureau d'enregistrement. La plupart fournissent un service « whois » (littéralement « qui est-ce ? » en anglais) qui indique si un nom de domaine est disponible.
 - si vous utilisez un système qui possède un outil en ligne de commande, vous pouvez y saisir la commande `whois`. Voici un exemple avec `mozilla.org`:
 
-<!---->
-
-    $ whois mozilla.org
-    Domain Name:MOZILLA.ORG
-    Domain ID: D1409563-LROR
-    Creation Date: 1998-01-24T05:00:00Z
-    Updated Date: 2013-12-08T01:16:57Z
-    Registry Expiry Date: 2015-01-23T05:00:00Z
-    Sponsoring Registrar:MarkMonitor Inc. (R37-LROR)
-    Sponsoring Registrar IANA ID: 292
-    WHOIS Server:
-    Referral URL:
-    Domain Status: clientDeleteProhibited
-    Domain Status: clientTransferProhibited
-    Domain Status: clientUpdateProhibited
-    Registrant ID:mmr-33684
-    Registrant Name:DNS Admin
-    Registrant Organization:Mozilla Foundation
-    Registrant Street: 650 Castro St Ste 300
-    Registrant City:Mountain View
-    Registrant State/Province:CA
-    Registrant Postal Code:94041
-    Registrant Country:US
-    Registrant Phone:+1.6509030800
+  ```
+  $ whois mozilla.org
+  Domain Name:MOZILLA.ORG
+  Domain ID: D1409563-LROR
+  Creation Date: 1998-01-24T05:00:00Z
+  Updated Date: 2013-12-08T01:16:57Z
+  Registry Expiry Date: 2015-01-23T05:00:00Z
+  Sponsoring Registrar:MarkMonitor Inc. (R37-LROR)
+  Sponsoring Registrar IANA ID: 292
+  WHOIS Server:
+  Referral URL:
+  Domain Status: clientDeleteProhibited
+  Domain Status: clientTransferProhibited
+  Domain Status: clientUpdateProhibited
+  Registrant ID:mmr-33684
+  Registrant Name:DNS Admin
+  Registrant Organization:Mozilla Foundation
+  Registrant Street: 650 Castro St Ste 300
+  Registrant City:Mountain View
+  Registrant State/Province:CA
+  Registrant Postal Code:94041
+  Registrant Country:US
+  Registrant Phone:+1.6509030800
+  ```
 
 Comme on peut le voir ici, on ne peut pas réserver `mozilla.org` car ce nom de domaine est déjà réservé par la Fondation Mozilla.
 
 Essayons avec un autre, par exemple `unnométrange.fr` :
 
-    > whois unnométrange.fr
-    ...
-    %% No entries found in the AFNIC Database.
+```
+> whois unnométrange.fr
+...
+%% No entries found in the AFNIC Database.
+```
 
 On voit ici que ce nom de domaine n'existe pas dans les bases de données de serveurs `whois` (au moment où nous écrivons cet article). Si vous le souhaitiez, vous pourriez réserver ce nom !
 
@@ -116,10 +118,10 @@ On voit ici que ce nom de domaine n'existe pas dans les bases de données de ser
 
 Le processus est assez simple :
 
-1.  Aller sur le site web d'un bureau d'enregistrement
-2.  Généralement, celui-ci possède une zone mise en avant pour rechercher la disponibilité d'un nom de domaine et le réserver le cas échéant. Saisissez le nom qui vous intéresse
-3.  Il est ensuite nécessaire de remplir un formulaire avec différentes informations et détails. Assurez-vous de leur exactitude et surtout faites attention à l'orthographe choisie pour votre nom de domaine ! Une fois que vous aurez payé, il sera trop tard !
-4.  Le bureau d'enregistrement vous informera dès que le nom de domaine sera enregistré et vous pourrez alors l'utiliser. Il faut parfois quelques heures pour qu'un nouveau nom de domaine soit enregistré.
+1. Aller sur le site web d'un bureau d'enregistrement
+2. Généralement, celui-ci possède une zone mise en avant pour rechercher la disponibilité d'un nom de domaine et le réserver le cas échéant. Saisissez le nom qui vous intéresse
+3. Il est ensuite nécessaire de remplir un formulaire avec différentes informations et détails. Assurez-vous de leur exactitude et surtout faites attention à l'orthographe choisie pour votre nom de domaine ! Une fois que vous aurez payé, il sera trop tard !
+4. Le bureau d'enregistrement vous informera dès que le nom de domaine sera enregistré et vous pourrez alors l'utiliser. Il faut parfois quelques heures pour qu'un nouveau nom de domaine soit enregistré.
 
 > **Note :** Lors de ces étapes, le bureau d'enregistrement peut vous demander votre adresse postale. Assurez-vous que la valeur saisie est valide car les bureaux d'enregistrement de certains pays peuvent fermer un domaine si l'adresse fournie est invalide.
 
@@ -133,10 +135,10 @@ Des bases de données DNS sont stockées sur chaque serveur DNS, partout dans le
 
 Comme nous l'avons mentionné au début, quand on souhaite se rendre sur un site web via un navigateur, il est plus facile que de saisir une URL avec un nom de domaine que de saisir l'adresse IP du serveur correspondant. Voyons ce qui se passe quand on saisit une adresse :
 
-1.  Vous saisissez `mozilla.org` dans la barre d'adresse du navigateur.
-2.  Le navigateur analyse l'URL (l'adresse) et identifie le nom de domaine. Il demande alors à votre ordinateur si celui-ci connaît l'adresse IP associée à ce nom de domaine (grâce à un cache DNS local). Si l'ordinateur connaît le nom de domaine, il la convertit en une adresse et la transmet au navigateur web qui échange alors avec le serveur qui a cette adresse. C'est tout.
-3.  Si votre ordinateur ne connait pas l'adresse IP associée au nom `mozilla.org`, il continue et demande à un serveur DNS, celui-ci renverra alors l'adresse IP correspondante au nom de domaine demandé.
-4.  Une fois que l'ordinateur connaît l'adresse IP demandée, le navigateur peut commencer à échanger du contenu avec le serveur web.
+1. Vous saisissez `mozilla.org` dans la barre d'adresse du navigateur.
+2. Le navigateur analyse l'URL (l'adresse) et identifie le nom de domaine. Il demande alors à votre ordinateur si celui-ci connaît l'adresse IP associée à ce nom de domaine (grâce à un cache DNS local). Si l'ordinateur connaît le nom de domaine, il la convertit en une adresse et la transmet au navigateur web qui échange alors avec le serveur qui a cette adresse. C'est tout.
+3. Si votre ordinateur ne connait pas l'adresse IP associée au nom `mozilla.org`, il continue et demande à un serveur DNS, celui-ci renverra alors l'adresse IP correspondante au nom de domaine demandé.
+4. Une fois que l'ordinateur connaît l'adresse IP demandée, le navigateur peut commencer à échanger du contenu avec le serveur web.
 
 ![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 

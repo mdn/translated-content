@@ -9,7 +9,7 @@ translation_of: Web/API/Performance/now
 ---
 <p>{{APIRef("High Resolution Timing")}}</p>
 
-<p><code><strong>performance.now()</strong></code>方法返回一个精确到毫秒的  {{domxref("DOMHighResTimeStamp")}} 。</p>
+<p><code><strong>performance.now()</strong></code>方法返回一个精确到毫秒的  {{domxref("DOMHighResTimeStamp")}} 。</p>
 
 <div class="warning">
 <p>这个时间戳实际上并不是高精度的。为了降低像<a href="https://spectreattack.com/">Spectre</a>这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox 从 Firefox 59 开始四舍五入到 2 毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。</p>
@@ -39,7 +39,7 @@ const t1 = window.performance.now();
 console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒.")
 </pre>
 
-<p>和 JavaScript 中其他可用的时间类函数（比如<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now" title="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now">Date.now</a></code>）不同的是，<code>window.performance.now()</code>返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。</p>
+<p>和 JavaScript 中其他可用的时间类函数（比如<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now">Date.now</a></code>）不同的是，<code>window.performance.now()</code>返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。</p>
 
 <p>另外一个不同点是，<code>window.performance.now()</code>是以一个恒定的速率慢慢增加的，它不会受到系统时间的影响（系统时钟可能会被手动调整或被 NTP 等软件篡改）。另外，<code>performance.timing.navigationStart + performance.now()</code> 约等于 <code>Date.now()</code>。</p>
 
@@ -74,25 +74,7 @@ Cross-Origin-Embedder-Policy: require-corp</pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2', '#dom-performance-now', 'performance.now()')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td>Stricter definitions of interfaces and types.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time', '#dom-performance-now', 'performance.now()')}}</td>
-   <td>{{Spec2('Highres Time')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -103,5 +85,5 @@ Cross-Origin-Embedder-Policy: require-corp</pre>
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now" title="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>from HTML5 Rocks</li>
+ <li><a href="http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now">When milliseconds are not enough: performance.now() </a>from HTML5 Rocks</li>
 </ul>

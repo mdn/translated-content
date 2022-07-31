@@ -19,7 +19,7 @@ original_slug: Glossaire/Compression_sans_perte
 
 [Glossary](/fr/docs/Glossary)
 
-1.  {{glossary("GZIP")}}
-2.  {{glossary("Brotli")}}
-3.  {{glossary("PNG")}}
-4.  {{glossary("Lossy compression")}}
+1. {{glossary("GZIP")}}
+2. {{glossary("Brotli")}}
+3. {{glossary("PNG")}}
+4. {{glossary("Lossy compression")}}

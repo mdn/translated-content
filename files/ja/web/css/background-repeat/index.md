@@ -45,7 +45,7 @@ background-repeat: unset;
 ### 値
 
 - `<repeat-style>`
-  - : 値 1 つの構文は完全な値 2 つの構文に対する一括指定です。 
+  - : 値 1 つの構文は完全な値 2 つの構文に対する一括指定です。
 
     <table class="standard-table">
       <tbody>

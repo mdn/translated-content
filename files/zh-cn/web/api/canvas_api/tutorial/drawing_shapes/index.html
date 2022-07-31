@@ -19,7 +19,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <h2 id="栅格">栅格</h2>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;"></p>
+<p><img src="canvas_default_grid.png"></p>
 
 <p>在我们开始画图之前，我们需要了解一下画布栅格（canvas grid）以及坐标空间。上一页中的 HTML 模板中有个宽 150px, 高 150px 的 canvas 元素。如右图所示，canvas 元素默认被网格所覆盖。通常来说网格中的一个单元相当于 canvas 元素中的一像素。栅格的起点为左上角（坐标为（0,0））。所有元素的位置都相对于原点定位。所以图中蓝色方形左上角的坐标为距离左边（X 轴）x 像素，距离上边（Y 轴）y 像素（坐标为（x,y））。在课程的最后我们会平移原点到不同的坐标上，旋转网格以及缩放。现在我们还是使用原来的设置。</p>
 
@@ -48,9 +48,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -82,7 +82,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <ol>
  <li>首先，你需要创建路径起始点。</li>
- <li>然后你使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">画图命令</a>去画出路径。</li>
+ <li>然后你使用<a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">画图命令</a>去画出路径。</li>
  <li>之后你把路径封闭。</li>
  <li>一旦路径生成，你就能通过描边或填充路径区域来渲染图形。</li>
 </ol>
@@ -108,7 +108,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <p>第三，就是闭合路径 closePath(),不是必需的。这个方法会通过绘制一条从当前点到开始点的直线来闭合图形。如果图形是已经闭合了的，即当前点为开始点，该函数什么也不做。</p>
 
-<div class="note"><strong>注意：当你调用 fill() 函数时，所有没有闭合的形状都会自动闭合，所以你不需要调用 closePath() 函数。但是调用 stroke() 时不会自动闭合</strong><strong style="line-height: 1.5;">。</strong></div>
+<div class="note"><p><strong>备注：</strong> 当你调用 fill() 函数时，所有没有闭合的形状都会自动闭合，所以你不需要调用 closePath() 函数。但是调用 stroke() 时不会自动闭合。</p></div>
 
 <h3 id="绘制一个三角形">绘制一个三角形</h3>
 
@@ -116,9 +116,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="100" height="100"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -206,9 +206,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -274,9 +274,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 </div>
@@ -313,7 +313,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <h3 id="二次贝塞尔曲线及三次贝塞尔曲线">二次贝塞尔曲线及三次贝塞尔曲线</h3>
 
-<p>下一个十分有用的路径类型就是<a href="https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A" rel="external">贝塞尔曲线</a>。二次及三次贝塞尔曲线都十分有用，一般用来绘制复杂有规律的图形。</p>
+<p>下一个十分有用的路径类型就是<a href="https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A">贝塞尔曲线</a>。二次及三次贝塞尔曲线都十分有用，一般用来绘制复杂有规律的图形。</p>
 
 <dl>
  <dt><code>quadraticCurveTo(cp1x, cp1y, x, y)</code></dt>
@@ -322,7 +322,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
  <dd>绘制三次贝塞尔曲线，<code>cp1x,cp1y</code>为控制点一，<code>cp2x,cp2y</code>为控制点二，<code>x,y</code>为结束点。</dd>
 </dl>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">右边的图能够很好的描述两者的关系，二次贝塞尔曲线有一个开始点（蓝色）、一个结束点（蓝色）以及一个控制点（红色），而三次贝塞尔曲线有两个控制点。</p>
+<p><img src="canvas_curves.png">右边的图能够很好的描述两者的关系，二次贝塞尔曲线有一个开始点（蓝色）、一个结束点（蓝色）以及一个控制点（红色），而三次贝塞尔曲线有两个控制点。</p>
 
 <p>参数 x、y 在这两个方法中都是结束点坐标。<code>cp1x,cp1y</code>为坐标中的第一个控制点，<code>cp2x,cp2y</code>为坐标中的第二个控制点。</p>
 
@@ -415,9 +415,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
- &lt;body onload="draw();"&gt;
-   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
- &lt;/body&gt;
+ &lt;body onload="draw();"&gt;
+   &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
+ &lt;/body&gt;
 &lt;/html&gt;</pre>
 </div>
 
@@ -574,7 +574,7 @@ new Path2D(d);    // 从 SVG 建立 Path 对象</code></pre>
 
 <p>新的 Path2D API 有另一个强大的特点，就是使用 SVG path data 来初始化 canvas 上的路径。这将使你获取路径时可以以 SVG 或 canvas 的方式来重用它们。</p>
 
-<p>这条路径将先移动到点 <code>(M10 10)</code> 然后再水平移动 80 个单位<code>(h 80)</code>，然后下移 80 个单位 <code>(v 80)</code>，接着左移 80 个单位 <code>(h -80)</code>，再回到起点处 (<code>z</code>)。你可以在<a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths">Path2D constructor</a> 查看这个例子。</p>
+<p>这条路径将先移动到点 <code>(M10 10)</code> 然后再水平移动 80 个单位<code>(h 80)</code>，然后下移 80 个单位 <code>(v 80)</code>，接着左移 80 个单位 <code>(h -80)</code>，再回到起点处 (<code>z</code>)。你可以在<a href="/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths">Path2D constructor</a> 查看这个例子。</p>
 
 <pre class="brush: js; line-numbers  language-js notranslate"><code class="language-js">var p = new Path2D("M10 10 h 80 v 80 h -80 Z");</code></pre>
 </div>

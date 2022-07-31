@@ -15,7 +15,9 @@ Vous pouvez également utiliser `exsl:node-set()` pour transformer des chaînes 
 
 ### Syntaxe
 
-    exsl:node-set(objet)
+```
+exsl:node-set(objet)
+```
 
 ### Arguments
 

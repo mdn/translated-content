@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
 <div>{{ JSRef }}</div>
 
-<p><strong><code>Set</code></strong> 对象允许你存储任何类型的唯一值，无论是{{ Glossary('Primitive', '原始值') }}或者是对象引用。</p>
+<p><strong><code>Set</code></strong> 对象允许你存储任何类型的唯一值，无论是{{ Glossary('Primitive', '原始值') }}或者是对象引用。</p>
 
 <h2 id="简述">简述</h2>
 
@@ -52,7 +52,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
  <dt>{{jsxref("Set.prototype.clear()")}}</dt>
  <dd>移除<code>Set</code>对象内的所有元素。</dd>
  <dt>{{jsxref("Set.delete", "Set.prototype.delete(<em>value</em>)")}}</dt>
- <dd>移除<code>Set</code>中与这个值相等的元素，返回 <code>Set.prototype.has(value)</code> 在这个操作前会返回的值（即如果该元素存在，返回 <code>true</code>，否则返回<code>false</code>）。<code>Set.prototype.has(value)</code> 在此后会返回 <code>false</code>。</dd>
+ <dd>移除值为 <code>value</code> 的元素，并返回一个布尔值来表示是否移除成功。<code>Set.prototype.has(value)</code> 会在此之后返回 <code>false</code>。</dd>
  <dt>{{jsxref("Set.prototype.entries()")}}</dt>
  <dd>返回一个新的迭代器对象，该对象包含 <code>Set</code> 对象中的按插入顺序排列的所有元素的值的 <code>[value, value]</code> 数组。为了使这个方法和 <code>Map</code> 对象保持相似， 每个值的键和值相等。</dd>
  <dt>{{jsxref("Set.forEach", "Set.prototype.forEach(<em>callbackFn</em>[, <em>thisArg</em>])")}}</dt>
@@ -98,7 +98,7 @@ mySet.size; // 4，刚刚移除一个值
 
 console.log(mySet);
 // logs Set(4) [ 1, "some text", {…}, {…} ] in Firefox
-// logs Set(4) { 1, "some text", {…}, {…} } in Chrome</pre>
+// logs Set(4) { 1, "some text", {…}, {…} } in Chrome</pre>
 
 <h3 id="迭代_set">迭代 Set</h3>
 
@@ -206,7 +206,7 @@ symmetricDifference(setA, setC); // =&gt; Set [1, 2, 5, 6]
 difference(setA, setC);          // =&gt; Set [1, 2]
 </pre>
 
-<h3 id="Array_相关"> <code>Array</code> 相关</h3>
+<h3 id="Array_相关"> <code>Array</code> 相关</h3>
 
 <pre class="brush: js">let myArray = ["value1", "value2", "value3"];
 
@@ -227,7 +227,7 @@ console.log([...new Set(numbers)])
 // [2, 3, 4, 5, 6, 7, 32]
 </pre>
 
-<h3 id="String_相关"><code>String</code> 相关</h3>
+<h3 id="String_相关"><code>String</code> 相关</h3>
 
 <pre class="brush: js">let text = 'India';
 
@@ -241,20 +241,11 @@ new Set("firefox")  // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('ESDraft', '#sec-set-objects', 'Set') }}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ Compat('javascript.builtins.Set') }}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 

@@ -72,13 +72,11 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 
 ## 規範
 
-| Specification                            | Status                               | Comment                                         |
-| ---------------------------------------- | ------------------------------------ | ----------------------------------------------- |
-| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Initial draft definition of the JavaScript API. |
+{{Specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## 參見
 

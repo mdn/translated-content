@@ -109,7 +109,7 @@ translation_of: Web/HTML/Element/img
  </dl>
  </dd>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>图像的高度，在 {{HTMLVersionInline(5)}} 中的单位是 CSS 像素，在 {{HTMLVersionInline(4)}} 中既可以是像素，也可以是百分比。可以只指定 <code>width</code> 和 <code>height</code> 中的一个值，浏览器会根据原始图像进行缩放。</dd>
+ <dd>图像的高度，单位是 CSS 像素。可以只指定 <code>width</code> 和 <code>height</code> 中的一个值，浏览器会根据原始图像进行缩放。</dd>
  <dt>{{htmlattrdef("importance")}} {{experimental_inline}}</dt>
  <dd>指示下载资源时相对重要性，或者说优先级。允许的值：
  <dl>
@@ -122,7 +122,7 @@ translation_of: Web/HTML/Element/img
  </dl>
  </dd>
  <dt>{{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}</dt>
- <dd>This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a class="external" href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a class="external" href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
+ <dd>This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and <code>naturalWidth</code>/<code>naturalHeight</code> on images would return the values specified in this attribute. <a href="https://github.com/ojanvafai/intrinsicsize-attribute">Explainer</a>, <a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></dd>
  <dt>{{htmlattrdef("ismap")}}</dt>
  <dd>这个布尔属性表示图像是否是<a href="https://en.wikipedia.org/wiki/Image_map#Server-side">服务器端 map</a> 的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
  <div class="note">
@@ -180,7 +180,7 @@ translation_of: Web/HTML/Element/img
  <p>The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a> tutorial for an example.</p>
  </dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>图像的宽度，在 {{HTMLVersionInline(5)}} 中单位是 CSS 像素， 在 {{HTMLVersionInline(4)}} 中可以是像素也可以是百分比。</dd>
+ <dd>图像的宽度，在单位是 CSS 像素。</dd>
  <dt>{{htmlattrdef("usemap")}}</dt>
  <dd>与元素相关联的 <a href="/zh-CN/docs/HTML/Element/map">image map</a> 的部分 URL（以 '#' 开始的部分）。
  <div class="note">
@@ -192,7 +192,7 @@ translation_of: Web/HTML/Element/img
 <h3 id="已废弃的属性">已废弃的属性</h3>
 
 <dl>
- <dt>{{htmlattrdef("align")}} {{Obsolete_Inline}} 使用 {{cssxref('vertical-align')}} CSS 属性</dt>
+ <dt>{{htmlattrdef("align")}} {{Deprecated_Inline}} 使用 {{cssxref('vertical-align')}} CSS 属性</dt>
  <dd>图像相对于它周围上下文的对齐。使用 {{cssxref('float')}} 和/或 {{cssxref('vertical-align')}} 这两个 {{glossary("CSS")}} 属性作为代替，而不是这个废弃的属性。允许的值：
  <dl>
   <dt><code>top</code></dt>
@@ -207,19 +207,19 @@ translation_of: Web/HTML/Element/img
   <dd>等价于 <code style="white-space: nowrap;">float: right</code></dd>
  </dl>
  </dd>
- <dt>{{htmlattrdef("border")}} {{Obsolete_Inline}}</dt>
+ <dt>{{htmlattrdef("border")}} {{Deprecated_Inline}}</dt>
  <dd>图像周围的边框宽度。使用 {{glossary("CSS")}} 属性 {{cssxref('border')}} 代替此废弃属性。</dd>
- <dt>{{htmlattrdef("hspace")}} {{Obsolete_Inline}}</dt>
+ <dt>{{htmlattrdef("hspace")}} {{Deprecated_Inline}}</dt>
  <dd>插入到图像的左侧和右侧的空白像素的值。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。</dd>
- <dt>{{htmlattrdef("longdesc")}} {{Obsolete_Inline}}</dt>
+ <dt>{{htmlattrdef("longdesc")}} {{Deprecated_Inline}}</dt>
  <dd>一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 {{htmlattrxref("id")}}。
  <div class="note">
- <p><strong>备注：</strong> 此属性的当前最新的 {{glossary("W3C")}} 版本，<a class="external" href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a> 中被提到，但在 {{glossary("WHATWG")}} 组织的 <a class="external" href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a> 中依然处于被移除的状态。它的未来尚无定数；authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a class="external" href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
+ <p><strong>备注：</strong> 此属性的当前最新的 {{glossary("W3C")}} 版本，<a href="https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc">HTML 5.2</a> 中被提到，但在 {{glossary("WHATWG")}} 组织的 <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element">HTML Living Standard</a> 中依然处于被移除的状态。它的未来尚无定数；authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby"><code>aria-describedby</code></a> or <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-details"><code>aria-details</code></a>.</p>
  </div>
  </dd>
- <dt>{{htmlattrdef("name")}} {{Obsolete_Inline}}</dt>
+ <dt>{{htmlattrdef("name")}} {{Deprecated_Inline}}</dt>
  <dd>元素的名字。使用 {{htmlattrxref("id")}} 属性代替此废弃属性。</dd>
- <dt>{{htmlattrdef("vspace")}} {{Obsolete_Inline}}</dt>
+ <dt>{{htmlattrdef("vspace")}} {{Deprecated_Inline}}</dt>
  <dd>插入到图像的上方和下方的空白像素的数组。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。</dd>
 </dl>
 
@@ -309,23 +309,23 @@ translation_of: Web/HTML/Element/img
 <p>当图像上没有 <code>alt</code> 属性时，一些屏幕阅读器可能会读出图像的文件名。如果文件名不能代表图像的内容，甚至是一团乱码，这可只能造成令人迷惑的体验。</p>
 
 <ul>
- <li><a class="external" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
- <li><a class="external" href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
- <li><a class="external" href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
+ <li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></li>
+ <li><a href="https://axesslab.com/alt-texts/">Alt-texts: The Ultimate Guide — Axess Lab</a></li>
+ <li><a href="https://www.deque.com/blog/great-alt-text-introduction/">How to Design Great Alt Text: An Introduction | Deque</a></li>
  <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content">MDN Understanding WCAG, Guideline 1.1 explanations</a></li>
- <li><a class="external" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
 <h3 id="title_属性"><code>title</code> 属性</h3>
 
-<p>{{htmlattrxref("title")}} 属性不是 <code>alt</code> 属性可接受的替代品。并且，避免将 <code>alt</code> 属性的值直接复制到同一幅图片的<code>title</code> 属性上。这样可能会让一些屏幕阅读器把同一段描述读两遍，造成一定程度上的困扰。</p>
+<p>{{htmlattrxref("title")}} 属性不是 <code>alt</code> 属性可接受的替代品。并且，避免将 <code>alt</code> 属性的值直接复制到同一幅图片的<code>title</code> 属性上。这样可能会让一些屏幕阅读器把同一段描述读两遍，造成一定程度上的困扰。</p>
 
-<p><code>title</code> 属性也不该被用作一幅图片在 <code>alt</code> 之外的补充说明信息。如果一幅图片需要小标题，使用 <code><a href="/zh-CN/docs/Web/HTML/Element/figure">figure</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/figcaption">figcaption</a></code> 元素。</p>
+<p><code>title</code> 属性也不该被用作一幅图片在 <code>alt</code> 之外的补充说明信息。如果一幅图片需要小标题，使用 <code><a href="/zh-CN/docs/Web/HTML/Element/figure">figure</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/figcaption">figcaption</a></code> 元素。</p>
 
 <p><code>title</code> 元素的值一般作为提示条 (tooltip) 呈现给用户，在光标于图片上停下后显示出来。尽管这<em>确实</em>能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 <code>title</code> 。</p>
 
 <ul>
- <li><a class="external" href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
+ <li><a href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>
 </ul>
 
 <h2 id="技术信息">技术信息</h2>
@@ -361,37 +361,7 @@ translation_of: Web/HTML/Element/img
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Added the <code>referrerpolicy</code> attribute.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#the-img-element', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'embedded-content-0.html#the-img-element', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/objects.html#h-13.2', '&lt;img&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

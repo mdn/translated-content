@@ -21,7 +21,9 @@ Lors de leur usage, ces fonctions n'acceptent que des valeurs typées et non fal
 
 ## Syntaxe
 
-    Content-Security-Policy: require-trusted-types-for 'script';
+```
+Content-Security-Policy: require-trusted-types-for 'script';
+```
 
 - `'script'`
   - : Interdit l'usage de chaine de caractères avec les fonctions du puits d'injection XSS du DOM, et requiert que les types correspondant soient créés par des règles de Trusted Type.

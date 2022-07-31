@@ -1,61 +1,110 @@
 ---
-title: '-webkit-print-color-adjust'
+title: print-color-adjust
 slug: Web/CSS/print-color-adjust
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-print-color-adjust
+translation_of: Web/CSS/print-color-adjust
 original_slug: Web/CSS/-webkit-print-color-adjust
+browser-compat: css.properties.print-color-adjust
 ---
-{{CSSRef}}{{Non-standard_header}}
+{{CSSRef}}
 
-La propriété **`-webkit-print-color-adjust`** est une extension non-standard qui peut être utilisée pour forcer l'impression des images et couleurs utilisées en arrière-plan pour les navigateurs basés sur WebKit.
-
-```css
-/* Valeurs avec un mot-clé */
--webkit-print-color-adjust: economy;
--webkit-print-color-adjust: exact;
-
-/* Valeurs globales */
--webkit-print-color-adjust: inherit;
--webkit-print-color-adjust: initial;
--webkit-print-color-adjust: unset;
-```
+La propriété CSS **`print-color-adjust`** définit ce que [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra éventuellement faire pour optimiser l'apparence de l'élément sur l'appareil de sortie. Par défaut, le navigateur peut réaliser des ajustements sur l'apparence de l'élément qu'il estime nécessaires et prudents selon le type et les capacités de l'appareil de sortie.
 
 ## Syntaxe
 
-La propriété `-webkit-print-color-adjust` peut être définie avec l'un des mots-clés suivants.
+```css
+print-color-adjust: economy;
+print-color-adjust: exact;
+
+/* Valeurs globales */
+print-color-adjust: inherit;
+print-color-adjust: initial;
+print-color-adjust: revert;
+print-color-adjust: revert-layer;
+print-color-adjust: unset;
+```
+
+La valeur de la propriété `print-color-adjust` doit être l'un des mots-clés suivants.
 
 ### Valeurs
 
 - `economy`
-  - : Le comportement normal : les images et couleurs d'arrière-plan sont uniquement imprimées si l'utilisateur a explicitement permis cette impression dans la boîte de dialogue pour les réglages d'impression.
+  - : L'agent utilisateur peut réaliser des ajustements sur l'élément qu'il estime appropriés et prudents afin d'optimiser la sortie sur l'appareil de rendu. Par exemple, lors de l'impression, un navigateur pourra choisir de ne pas inclure les images d'arrière-plan et d'ajuster les couleurs du texte afin que le contraste soit optimisé pour la lecture sur du papier blanc. Il s'agit de la valeur par défaut.
 - `exact`
-  - : Les images et couleurs d'arrière-plan de l'élément auquel la règle CSS est appliquée seront toujours imprimées, les réglages d'impression sont donc surchargés.
+  - : Le contenu de l'élément a été conçu pour utiliser précisément ces couleurs, ces images et ces styles de façon réfléchie et/ou avec un rôle important et où tout changement apporté par le navigateur dégraderait la page plutôt que de l'améliorer. L'apparence du contenu ne devrait pas être modifiée à moins que l'utilisatrice ou l'utilisateur ne le demande. Par exemple, une page pourrait inclure une liste d'information avec des lignes dont la couleur d'arrière-plan alterne entre blanc et gris clair&nbsp;: retirer la couleur d'arrière-plan réduirait la lisibilité du contenu.
+
+## Notes d'utilisation
+
+Il existe plusieurs raisons pour lesquelles un navigateur pourrait dévier de l'apparence indiquée&nbsp;:
+
+- Le contenu utilise des couleurs trop proches pour le texte et l'arrière-plan, telles que le résultat produit sur l'appareil ne serait pas suffisamment lisible.
+- Si l'appareil de sortie est une imprimante, les images d'arrière-plan noires ou très foncées peuvent être retirées afin d'économiser de l'encre.
+- Lors de l'impression d'une page, le navigateur pourra choisir de remplacer du texte écrit avec une couleur claire sur un fond sombre par du texte écrit en couleur sombre sur un fond blanc.
+
+Les options de configuration fournies par l'agent utilisateur auront la priorité sur la valeur de `print-color-adjust`. Autrement dit, il n'y a aucune garantie que `print-color-adjust` ait un quelconque effet. Non seulement, la personne peut surcharger ce comportement en paramétrant son navigateur, mais de plus, chaque agent utilisateur pourra décider pour lui-même comment gérer `print-color-adjust` pour chaque situation.
+
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
+
+{{csssyntax}}
 
 ## Exemples
 
+### Préserver un contraste faible
+
+Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/CSS/background-image) avec [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient) pour avoir un dégradé bleu foncé sur un fond noir. Le texte par-dessus est écrit en rouge. Pour cet exemple, on estime que c'est l'apparence voulue dans chaque environnement de rendu, y compris sur le papier et on utilise donc `print-color-adjust: exact` pour indiquer au navigateur de ne pas effectuer d'ajustements sur la boîte lors du rendu.
+
+#### CSS
+
 ```css
-/* Force l'article à être imprimé en noir et blanc */
-article {
-  -webkit-print-color-adjust: exact;
-  background: #222;
-  color: #eee;
+.ma-boite {
+  background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 180, 0.5), rgba(70, 140, 220, 0.5));
+  color: #900;
+  width: 15rem;
+  height: 6rem;
+  text-align: center;
+  font: 24px "Helvetica", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  print-color-adjust: exact;
 }
 ```
 
+#### HTML
+
+```html
+<div class="ma-boite">
+  <p>Il faut plus de contraste !</p>
+</div>
+```
+
+#### Résultat
+
+{{EmbedLiveSample("", 640, 120)}}
+
 ## Spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Il existe [une proposition sur le wiki du groupe de travail CSS](https://wiki.csswg.org/ideas/print-backgrounds) pour standardiser cette propriété.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-print-color-adjust")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Bug WebKit 64583](https://bugs.webkit.org/show_bug.cgi?id=64583) : Ajout d'une propriété CSS permettant de contrôler l'impression des arrière-plans des éléments.
-- Wiki du groupe de travail CSS : [print-backgrounds](https://wiki.csswg.org/ideas/print-backgrounds) - une proposition de standardisation pour cette propriété.
-- La spécification du module des couleurs CSS (CSS Color) de niveau 4 ajoute la propriété [`color-adjust`](https://drafts.csswg.org/css-color-4/#color-adjust) pour standardiser cette propriété.
+- [Appliquer des couleurs aux éléments HTML en utilisant CSS](/fr/docs/Web/CSS/CSS_Colors/Applying_color)
+- Les autres propriétés relatives aux couleurs&nbsp;:
+  - [`color`](/fr/docs/Web/CSS/color)
+  - [`background-color`](/fr/docs/Web/CSS/background-color)
+  - [`border-color`](/fr/docs/Web/CSS/border-color)
+  - [`outline-color`](/fr/docs/Web/CSS/outline-color)
+  - [`text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color)
+  - [`text-emphasis-color`](/fr/docs/Web/CSS/text-emphasis-color)
+  - [`text-shadow`](/fr/docs/Web/CSS/text-shadow)
+  - [`caret-color`](/fr/docs/Web/CSS/caret-color)
+  - [`column-rule-color`](/fr/docs/Web/CSS/column-rule-color)
+- [`background-image`](/fr/docs/Web/CSS/background-image)

@@ -24,12 +24,14 @@ Si le serveur ne peut servir aucun jeu de caract√®res correspondant, il peut th√
   </tbody>
 </table>
 
-## Syntax
+## Syntaxe
 
-    Accept-Charset: <charset>
+```
+Accept-Charset: <charset>
 
-    // Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
-    Accept-Charset: utf-8, iso-8859-1;q=0.5
+// Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
+Accept-Charset: utf-8, iso-8859-1;q=0.5
+```
 
 ## Les directives
 
@@ -42,11 +44,13 @@ Si le serveur ne peut servir aucun jeu de caract√®res correspondant, il peut th√
 
 ## Examples
 
-    Accept-Charset: iso-8859-1
+```
+Accept-Charset: iso-8859-1
 
-    Accept-Charset: utf-8, iso-8859-1;q=0.5
+Accept-Charset: utf-8, iso-8859-1;q=0.5
 
-    Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
+Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
+```
 
 ## Specifications
 

@@ -7,9 +7,9 @@ original_slug: Web/API/AudioContext/createDelay
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>  <code>createDelay() 是 </code> {{ domxref("AudioContext") }}   的一个方法，作用是将输入音频信号延迟一定时间。（比如可以实现 对着话筒说句话，然后几秒后 这句话从音响里播放出来）</p>
+<p>  <code>createDelay() 是 </code> {{ domxref("AudioContext") }}   的一个方法，作用是将输入音频信号延迟一定时间。（比如可以实现 对着话筒说句话，然后几秒后 这句话从音响里播放出来）</p>
 
-<p> </p>
+<p> </p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -30,7 +30,7 @@ var synthDelay = audioCtx.createDelay(<em>maxDelayTime</em>);</pre>
 
 <p>以上是原文，大意是返回延时时间，没有设置时默认是 0</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="示例">示例</h2>
 
@@ -39,10 +39,10 @@ var synthDelay = audioCtx.createDelay(<em>maxDelayTime</em>);</pre>
 <pre>window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
 
 <code>try {//音频相关api
-    var audioContext = new window.AudioContext();
+    var audioContext = new window.AudioContext();
 </code>    var synthDelay = <code>audioContext</code>.createDelay(5.0);
 <code>} catch (e) {
-    alert("你浏览器不支持");
+    alert("你浏览器不支持");
 }
 
 
@@ -53,46 +53,46 @@ if (navigator.getUserMedia) { //标准api
  navigator.getUserMedia({ "audio": true },
  function (stream) {
  micto(stream);    //具体工作
-                   }, error);
+                   }, error);
 }else if(navigator.webkitGetUserMedia) {   //webkit api
- navigator.webkitGetUserMedia({audio:true, video:  false },
+ navigator.webkitGetUserMedia({audio:true, video:  false },
  function (stream) {
   micto(stream); //具体工作
-                   }, error);
- }else if (navigator.mozGetUserMedia) {  //火狐 api
+                   }, error);
+ }else if (navigator.mozGetUserMedia) {  //火狐 api
  navigator.mozGetUserMedia({ "audio": true },
  function (stream) {
   micto(stream);//具体工作
-                   }, error);
- }else if (navigator.msGetUserMedia) { //ie api
+                   }, error);
+ }else if (navigator.msGetUserMedia) { //ie api
  navigator.msGetUserMedia({ "audio": true },
  function (stream) {
   micto(stream);//具体工作
-                   }, error);
- } else {
-   alert("您的浏览器版不支持这个api");
+                   }, error);
+ } else {
+   alert("您的浏览器版不支持这个api");
 }
 
 
 
 
 
- var micto = function(stream) {
+ var micto = function(stream) {
 
   synthDelay.delayTime.value = 3.0;   //延迟3秒
 
-  var source = audioContext.createMediaStreamSource(stream);
+  var source = audioContext.createMediaStreamSource(stream);
 
-  source.connect(synthDelay);
+  source.connect(synthDelay);
 
-  synthDelay.connect(audioContext.destination);
+  synthDelay.connect(audioContext.destination);
 
-      }
+      }
  </code></pre>
 
-<p> </p>
+<p> </p>
 
-<p> 以下是英文版示例</p>
+<p> 以下是英文版示例</p>
 
 <p>We have created a simple example that allows you to play three different samples on a constant loop — see <a href="http://chrisdavidmills.github.io/create-delay/">create-delay</a> (you can also <a href="https://github.com/chrisdavidmills/create-delay">view the source code</a>). If you just press the play buttons, the loops will start immediately; if you slide the sliders up to the right, then press the play buttons, a delay will be introduced, so the looping sounds don't start playing for a short amount of time.</p>
 

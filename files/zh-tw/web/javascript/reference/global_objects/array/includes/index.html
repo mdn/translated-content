@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
  <dt><code>searchElement</code></dt>
  <dd>要搜尋的元素。</dd>
  <dt><code>fromIndex</code> {{optional_inline}}</dt>
- <dd>要於此陣列中開始搜尋 <code>searchElement</code> 的位置。如為負數值，則自 <code>array.length + fromIndex</code> 開始向後搜尋。預設值為 0。</dd>
+ <dd>要於此陣列中開始搜尋 <code>searchElement</code> 的位置。如為負數值，則自 <code>array.length + fromIndex</code> 開始向後搜尋。預設值為 0。</dd>
 </dl>
 
 <h3 id="回傳值">回傳值</h3>
@@ -45,9 +45,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 [1, 2, NaN].includes(NaN); // true
 </pre>
 
-<h3 id="fromIndex_大於或等於陣列長度"><code>fromIndex</code> 大於或等於陣列長度</h3>
+<h3 id="fromIndex_大於或等於陣列長度"><code>fromIndex</code> 大於或等於陣列長度</h3>
 
-<p>如果 <code>fromIndex</code>大於或等於陣列長度, 會回傳<code>false</code>. 此陣列將不會被搜尋.</p>
+<p>如果 <code>fromIndex</code>大於或等於陣列長度, 會回傳<code>false</code>. 此陣列將不會被搜尋.</p>
 
 <pre class="brush: js">var arr = ['a', 'b', 'c'];
 
@@ -56,7 +56,7 @@ arr.includes('c', 100); // false</pre>
 
 <h3 id="Computed_index_is_less_than_0">Computed index is less than 0</h3>
 
-<p>If <code>fromIndex</code> is negative, the computed index is calculated to be used as a position in the array at which to begin searching for <code>searchElement</code>. If the computed index is less than 0, the entire array will be searched.</p>
+<p>If <code>fromIndex</code> is negative, the computed index is calculated to be used as a position in the array at which to begin searching for <code>searchElement</code>. If the computed index is less than 0, the entire array will be searched.</p>
 
 <pre class="brush: js">// array length is 3
 // fromIndex is -100
@@ -68,13 +68,13 @@ arr.includes('a', -100); // true
 arr.includes('b', -100); // true
 arr.includes('c', -100); // true</pre>
 
-<h3 id="includes_used_as_a_generic_method"><code>includes()</code> used as a generic method</h3>
+<h3 id="includes_used_as_a_generic_method"><code>includes()</code> used as a generic method</h3>
 
-<p><code>includes()</code> method is intentionally generic. It does not require <code>this</code> value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects). The example below illustrates <code>includes()</code> method called on the function's <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> object.</p>
+<p><code>includes()</code> method is intentionally generic. It does not require <code>this</code> value to be an Array object, so it can be applied to other kinds of objects (e.g. array-like objects). The example below illustrates <code>includes()</code> method called on the function's <a href="/en-US/docs/Web/JavaScript/Reference/Functions/arguments">arguments</a> object.</p>
 
 <pre class="brush: js">(function() {
   console.log([].includes.call(arguments, 'a')); // true
-  console.log([].includes.call(arguments, 'd')); // false
+  console.log([].includes.call(arguments, 'd')); // false
 })('a','b','c');</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
@@ -110,9 +110,9 @@ if (!Array.prototype.includes) {
       //  b. If k &lt; 0, let k be 0.
       var k = Math.max(n &gt;= 0 ? n : len - Math.abs(n), 0);
 
-      function sameValueZero(x, y) {
+      function sameValueZero(x, y) {
         return x === y || (typeof x === 'number' &amp;&amp; typeof y === 'number' &amp;&amp; isNaN(x) &amp;&amp; isNaN(y));
-      }
+      }
 
       // 7. Repeat, while k &lt; len
       while (k &lt; len) {
@@ -121,7 +121,7 @@ if (!Array.prototype.includes) {
         if (sameValueZero(o[k], searchElement)) {
           return true;
         }
-        // c. Increase k by 1.
+        // c. Increase k by 1.
         k++;
       }
 

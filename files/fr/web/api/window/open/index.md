@@ -143,6 +143,7 @@ function openMozillaPopup() {
 Le fragment de code qui précède corrige certains problèmes relatifs aux liens ouvrants des fenêtres secondaires. L'instruction `return false;` présente dans l'attribut `onclick` permet d'annuler l'action par défaut du lien. Toutefois, si la prise en charge de JavaScript est désactivée ou inexistante, ce gestionnaire d'évènement est ignoré et le navigateur charge la ressource référencée avec le nom "MozillaWindowName" si elle existe ou, dans le cas contraire, crée une nouvelle fenêtre et l'appelle "MozillaWindowName".
 
 Pour en savoir plus sur l'attribut `target`, voir&nbsp;:
+
 - [La page de référence pour l'élément `<a>`](/fr/docs/Web/HTML/Element/a#target)
 - [La page de référence pour l'élément `<form>`](/fr/docs/Web/HTML/Element/Form#target)
 
@@ -322,7 +323,7 @@ Lorsque le contenu dépasse de la zone d'affichage (<i lang="en">viewport</i>), 
 
 ### Note sur les corrections de position et de dimensions
 
-La position et les dimensions demandées via la liste des fonctionnalités **sera corrigée** par le navigateur si une des valeurs demandée empêche que la fenêtre du navigateur soit affichée complètement dans la zone de travail des applications fournies par le système d'exploitation. 
+La position et les dimensions demandées via la liste des fonctionnalités **sera corrigée** par le navigateur si une des valeurs demandée empêche que la fenêtre du navigateur soit affichée complètement dans la zone de travail des applications fournies par le système d'exploitation.
 
 **Aucune partie de la nouvelle fenêtre ne pourra être initialement située en dehors de l'écran (il s'agit du comportement par défaut pour Firefox).**
 

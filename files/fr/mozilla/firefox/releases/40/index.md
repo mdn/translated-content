@@ -54,7 +54,7 @@ _pas de changement._
 - Passing an object which has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value to {{jsxref("String.prototype.startsWith")}}, {{jsxref("String.prototype.endsWith")}}, and {{jsxref("String.prototype.contains")}} now throws a {{jsxref("TypeError")}} ({{bug(1054755)}}).
 - {{jsxref("RegExp")}} function returns pattern itself if called without {{jsxref("Operators/new", "new")}} and pattern object has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value, and the pattern object's `constructor` property equals to  {{jsxref("RegExp")}} function. ({{bug(1147817)}}).
 - Support for the non-standard JS1.7 destructuring for-in has been dropped ({{bug(1083498)}}).
-- [Les initialiseurs d'expression non-standard ](/fr/docs/Web/JavaScript/Reference/Statements/for...in#Firefox-specific_notes)dans les boucles [for...in](/fr/docs/Web/JavaScript/Reference/Statements/for...in) sont dorénavant ignorés et seront indiqués par un avertissement dans la console. ({{bug(748550)}} et {{bug(1164741)}}).
+- [Les initialiseurs d'expression non-standard](/fr/docs/Web/JavaScript/Reference/Statements/for...in#Firefox-specific_notes) dans les boucles [for...in](/fr/docs/Web/JavaScript/Reference/Statements/for...in) sont dorénavant ignorés et seront indiqués par un avertissement dans la console. ({{bug(748550)}} et {{bug(1164741)}}).
 - [`\u{xxxxxx}`](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Unicode_code_point_escapes) Unicode code point escapes have been added ({{bug(320500)}}).
 - {{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} has been replaced with {{jsxref("String.prototype.includes")}}, `String.prototype.contains` is kept as an alias ({{bug(1102219)}}).
 - If the {{jsxref("DataView")}} constructor is called as a function without the {{ jsxref("Operators/new", "new") }} operator, a {{jsxref("TypeError")}} is now thrown as per the ES6 specification.
@@ -66,7 +66,7 @@ _pas de changement._
 
 #### Nouvelles APIs
 
-- Implementation de [l'API Push ](/fr/docs/Web/API/Push_API)({{bug(1038811)}}).
+- Implementation de [l'API Push](/fr/docs/Web/API/Push_API) ({{bug(1038811)}}).
 
 #### Web Animations API
 
@@ -103,7 +103,7 @@ Nouvelles extensions pour l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API):
 
 #### Web Workers
 
-- Légère amélioration dans notre [API Service Worker ](/fr/docs/Web/API/ServiceWorker_API): la méthode {{domxref("ServiceWorkerRegistration.update()", "update()")}} a été changée de {{domxref("ServiceWorkerGlobalScope")}} vers {{domxref("ServiceWorkerRegistration")}} ({{bug(1131350)}}).
+- Légère amélioration dans notre [API Service Worker](/fr/docs/Web/API/ServiceWorker_API) : la méthode {{domxref("ServiceWorkerRegistration.update()", "update()")}} a été changée de {{domxref("ServiceWorkerGlobalScope")}} vers {{domxref("ServiceWorkerRegistration")}} ({{bug(1131350)}}).
 - {{domxref("ServiceWorkerRegistration")}} est maintenant disponible dans les Web workers ({{bug("1131327")}}).
 - {{domxref("DataStore")}} est maintenant disponible dans les Web workers ({{bug(916196)}}).
 

@@ -18,7 +18,9 @@ La propriété en lecture seule **`title`** de l'interface {{domxref ("Notificat
 
 ## Syntaxe
 
-    Notification.title
+```js
+Notification.title
+```
 
 ### Valeur
 

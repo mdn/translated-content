@@ -19,7 +19,9 @@ La méthode **`cmp()`** de l'interface {{domxref("IDBFactory")}} compare deux va
 
 ## Syntaxe
 
-    var resultat = window.indexedDB.cmp(a, b);
+```js
+var resultat = window.indexedDB.cmp(a, b);
+```
 
 ### Paramètres
 

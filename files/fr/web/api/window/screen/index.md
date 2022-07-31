@@ -15,7 +15,9 @@ translation_of: Web/API/Window/screen
 
 ## Syntaxe
 
-    objetEcran = window.screen;
+```js
+objetEcran = window.screen;
+```
 
 ## Examples
 

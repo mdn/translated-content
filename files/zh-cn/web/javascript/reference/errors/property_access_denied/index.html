@@ -26,14 +26,14 @@ translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;head&gt;
-    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
-    &lt;script&gt;
-      console.log(document.getElementById('myframe').contentWindow.document);
+  &lt;head&gt;
+    &lt;iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"&gt;&lt;/iframe&gt;
+    &lt;script&gt;
+      console.log(document.getElementById('myframe').contentWindow.document);
       // Error: Permission denied to access property "document"
-    &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;&lt;/body&gt;
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;&lt;/body&gt;
 &lt;/html&gt;
 </pre>
 

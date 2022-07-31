@@ -35,7 +35,7 @@ MDN のコンテンツを再利用するときは、2 つのことを確認す�
 
     > [MDN Web Docs について](/ja/docs/MDN/About) は [Mozilla Contributors](/ja/docs/MDN/About/contributors.txt) によって [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) の元でライセンスされています。
 
-  この例では、"Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[帰属表示のベストプラクティス](https://wiki.creativecommons.org/wiki/Marking/Users)を参照してください。
+    この例では、"Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[帰属表示のベストプラクティス](https://wiki.creativecommons.org/wiki/Marking/Users)を参照してください。
 
 2. 再利用した場合は、元のコンテンツと同じライセンスで公開する必要があります。つまり CC-BY-SA v2.5 またはそれ以降のバージョンです。
 

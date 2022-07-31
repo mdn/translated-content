@@ -1,0 +1,51 @@
+---
+title: import.meta
+slug: Web/JavaScript/Reference/Operators/import.meta
+tags:
+  - Модули
+translation_of: Web/JavaScript/Reference/Statements/import.meta
+original_slug: Web/JavaScript/Reference/Statements/import.meta
+---
+<div>{{JSSidebar("Statements")}}</div>
+
+<p><code style=""><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Объект </span></font><strong>import.meta</strong></code> это мета-свойство, указывающее мета-данные JavaScript модуля в зависимости от контекста. Он содержит информацию о модуле, например, URL модуля.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">import.meta</pre>
+
+<h2 id="Описание">Описание</h2>
+
+<p>Объект <code>import.meta</code> состоит из ключевого слова {{JSxRef("Statements/import","import")}}, точки и свойства с именем <code>meta</code>. Обычно выражение <code>import.</code> служит для доступа к свойству, но здесь <code>import.</code>, в действительности, не является объектом.</p>
+
+<p>Объект <code>import.meta</code> создан по реализации ECMAScript с прототипом объекта {{JSxRef("null")}}. Этот объект расширяем, и его свойства являются записываемыми, настраиваемыми и перечисляемыми.</p>
+
+<h2 id="Примеры">Примеры</h2>
+
+<p>Допустим, есть модуль <code>my-module.js</code></p>
+
+<pre class="brush: html">&lt;script type="module" src="my-module.js"&gt;&lt;/script&gt;
+</pre>
+
+<p>вы можете получить доступ к мета-информации об этом модуле, используя объект <code>import.meta</code>.</p>
+
+<pre class="brush: js;">console.log(import.meta); // { url: "file:///home/user/my-module.js" }</pre>
+
+<p>Это возвращает объект со свойством <code>url</code> показывающее базовый URL этого модуля. Это может быть либо URL с которого скрипт был получен (для внешних скриптов), либо базовый URL содержащего его документа (для внутренних скриптов).</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+{{Specifications}}
+
+<h2 id="Совместимость_браузеров">Совместимость браузеров</h2>
+
+
+
+<p>{{Compat}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{JSxRef("Statements/import", "import")}}</li>
+ <li>{{JSxRef("Statements/export", "export")}}</li>
+</ul>

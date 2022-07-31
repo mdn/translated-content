@@ -41,10 +41,10 @@ La méthode **`clear()`** de l'accès au magasin d'objet fait une {{domxref("IDB
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-	note.innerHTML += '<li>Connexion établie.</li>';
+  note.innerHTML += '<li>Connexion établie.</li>';
 
-	//Affecte la connexion à la variable db.
-	db = DBOpenRequest.result;
+  //Affecte la connexion à la variable db.
+  db = DBOpenRequest.result;
 
   // Exécutez la fonction clearData () pour vider les données dans le magasin d'objet
   clearData();
@@ -56,7 +56,7 @@ function clearData() {
 
   // en cas de succès de l'ouverture de la transaction
   transaction.oncomplete = function(event) {
-	note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
+  note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
   };
 
   // en cas d'échec de l'ouverture de la transaction
