@@ -131,7 +131,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
     </tr>
     <tr>
       <td>
-        <code><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a></code>
+        <code><a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a></code>
       </td>
       <td>
         <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a> (/Web/HTTP/Headers).

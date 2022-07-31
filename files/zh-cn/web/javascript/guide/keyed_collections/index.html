@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Guide/Keyed_collections
 
 <h3 id="Map对象"><code>Map</code>对象</h3>
 
-<p>ECMAScript 2015 引入了一个新的数据结构来将一个值映射到另一个值。一个{{jsxref("Map")}}对象就是一个简单的键值对映射集合，可以按照数据插入时的顺序遍历所有的元素。</p>
+<p>ECMAScript 2015 引入了一个新的数据结构来将一个值映射到另一个值。一个{{jsxref("Map")}}对象就是一个简单的键值对映射集合，可以按照数据插入时的顺序遍历所有的元素。</p>
 
 <p>下面的代码演示了使用<code>Map</code>进行的一些基本操作。请参考{{jsxref("Map")}}以获取更多的样例和完整的 API。你可以使用{{jsxref("Statements/for...of","for...of")}}循环来得到所有的<code>[key, value]</code>。</p>
 
@@ -48,7 +48,7 @@ sayings.size; // 0</pre>
  <li><code>Object</code>的键均为<code>Strings</code>类型，在<code>Map</code>里键可以是任意类型。</li>
  <li>必须手动计算<code>Object</code>的尺寸，但是可以很容易地获取使用<code>Map</code>的尺寸。</li>
  <li><code>Map</code>的遍历遵循元素的插入顺序。</li>
- <li><code>Object</code>有原型，所以映射中有一些缺省的键。（可以用 <code>map = Object.create(null) 回避</code>）。</li>
+ <li><code>Object</code>有原型，所以映射中有一些缺省的键。（可以用 <code>map = Object.create(null) 回避</code>）。</li>
 </ul>
 
 <p>这三条提示可以帮你决定用<code>Map</code>还是<code>Object</code>：</p>

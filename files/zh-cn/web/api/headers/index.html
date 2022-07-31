@@ -10,15 +10,15 @@ translation_of: Web/API/Headers
 ---
 <p>{{ APIRef("Fetch") }}</p>
 
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <strong>Headers </strong>接口允许您对 HTTP 请求和响应头执行各种操作。 这些操作包括检索，设置，添加和删除。 一个 Headers 对象具有关联的头列表，它最初为空，由零个或多个键值对组成。你可以使用 {{domxref("Headers.append","append()")}} 方法添加 之类的方法添加到此 (参见 <a href="#示例">示例</a>)。在该接口的所有方法中，标题名称由不区分大小写的字节序列匹配。</p>
+<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <strong>Headers </strong>接口允许您对 HTTP 请求和响应头执行各种操作。 这些操作包括检索，设置，添加和删除。 一个 Headers 对象具有关联的头列表，它最初为空，由零个或多个键值对组成。你可以使用 {{domxref("Headers.append","append()")}} 方法添加 之类的方法添加到此 (参见 <a href="#示例">示例</a>)。在该接口的所有方法中，标题名称由不区分大小写的字节序列匹配。</p>
 
-<p>出于安全考虑，某些头只能由用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
+<p>出于安全考虑，某些头只能由用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
 
-<p>一个 Headers 对象也有一个关联的 guard，它具有不可变的值，<code>request</code>，<code>request-no-cors</code>，<code>response</code>或<code>none</code>。 这会影响 {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, 和{{domxref("Headers.append","append()")}} 方法 改变 header. 参考更多信息，请看 {{Glossary("Guard")}}.</p>
+<p>一个 Headers 对象也有一个关联的 guard，它具有不可变的值，<code>request</code>，<code>request-no-cors</code>，<code>response</code>或<code>none</code>。 这会影响 {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, 和{{domxref("Headers.append","append()")}} 方法 改变 header. 参考更多信息，请看 {{Glossary("Guard")}}.</p>
 
-<p>你可以通过 {{domxref("Request.headers")}} 和{{domxref("Response.headers")}} 属性检索一个<code>Headers</code>对象，并使用 {{domxref("Headers.Headers()")}} 构造函数创建一个新的<code>Headers</code> 对象。</p>
+<p>你可以通过 {{domxref("Request.headers")}} 和{{domxref("Response.headers")}} 属性检索一个<code>Headers</code>对象，并使用 {{domxref("Headers.Headers()")}} 构造函数创建一个新的<code>Headers</code> 对象。</p>
 
-<p>一个实现了<code>Headers</code> 的对象可以直接用于 {{jsxref("Statements/for...of", "for...of")}} 结构中，而不是 {{domxref('Headers.entries()', 'entries()')}}: <code>for (var p of myHeaders)</code> 等价于 <code>for (var p of myHeaders.entries())</code>.</p>
+<p>一个实现了<code>Headers</code> 的对象可以直接用于 {{jsxref("Statements/for...of", "for...of")}} 结构中，而不是 {{domxref('Headers.entries()', 'entries()')}}: <code>for (var p of myHeaders)</code> 等价于 <code>for (var p of myHeaders.entries())</code>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: 您可以通过阅读我们的 <a href="/en-US/docs/Web/HTTP/Headers">HTTP headers</a>参考找到更多关于可用 headers 的信息。</p>
@@ -64,7 +64,7 @@ translation_of: Web/API/Headers
 
 <dl>
  <dt>{{domxref("Headers.getAll()")}}</dt>
- <dd>用于返回具有给定名称的 <code>Headers</code> 对象中所有值的数组; 这个方法现在已经从规范中删除了，{{domxref("Headers.get()")}} 方法现在返回所有的值而不是一个。</dd>
+ <dd>用于返回具有给定名称的 <code>Headers</code> 对象中所有值的数组; 这个方法现在已经从规范中删除了，{{domxref("Headers.get()")}} 方法现在返回所有的值而不是一个。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -95,4 +95,4 @@ myHeaders.get('Content-Type');
  <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

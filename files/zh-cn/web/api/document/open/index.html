@@ -9,7 +9,7 @@ translation_of: Web/API/Document/open
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><strong><code>Document.open()</code></strong> 方法打开一个要<a href="/zh-US/docs/Web/API/Document/write" title="en/DOM/document.write">写入</a>的文档。</p>
+<p><strong><code>Document.open()</code></strong> 方法打开一个要<a href="/zh-US/docs/Web/API/Document/write">写入</a>的文档。</p>
 
 <p>这将会有一些连带的影响。例如：</p>
 
@@ -29,7 +29,7 @@ translation_of: Web/API/Document/open
 
 <h3 id="返回值">返回值</h3>
 
-<p>一个 <code>Document</code> 对象实例。</p>
+<p>一个 <code>Document</code> 对象实例。</p>
 
 <h2 id="Example">示例</h2>
 
@@ -43,22 +43,22 @@ document.close();</code></pre>
 
 <h2 id="Notes">注意</h2>
 
-<p>当 <a href="/en/DOM/document.write" title="en/DOM/document.write">document.write()</a> 在页面加载后调用，会发生自动的 <code>document.open()</code>调用。</p>
+<p>当 <a href="/en/DOM/document.write">document.write()</a> 在页面加载后调用，会发生自动的 <code>document.open()</code>调用。</p>
 
 <p>很多年以来，Firefox 和 IE 浏览器会在清除所有节点的同时，将所有 Javascript 变量等一并清除，但现在已经不采用这一做法。<br>
  document non-spec'ed parameters to document.open</p>
 
-<p>不要和 <a href="/en/DOM/window.open" title="en/DOM/window.open">window.open()</a> 方法混淆。<code>document.open</code> 可用于重写当前的文档内容或者追加内容，而 <code>window.open 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 window 是一个全局对象，直接调用 open(...)  和 window.open(...) 的效果是一样的。你可以使用 document.close（）关闭打开的文档。</code></p>
+<p>不要和 <a href="/en/DOM/window.open">window.open()</a> 方法混淆。<code>document.open</code> 可用于重写当前的文档内容或者追加内容，而 <code>window.open 是提供了打开一个新的窗口的方法，当前的网页文档内容会被保留。由于 window 是一个全局对象，直接调用 open(...)  和 window.open(...) 的效果是一样的。你可以使用 document.close（）关闭打开的文档。</code></p>
 
-<p>See <a href="/en/Security_check_basics" title="en/Security check basics">Security check basics</a> for more about principals.</p>
+<p>See <a href="/en/Security_check_basics">Security check basics</a> for more about principals.</p>
 
-<p>如果不想在当前文本追加内容， 使用 <code>open("text/html", "replace") 替换</code> <code>open()</code> .</p>
+<p>如果不想在当前文本追加内容， 使用 <code>open("text/html", "replace") 替换</code> <code>open()</code> .</p>
 
 <h3 id="针对Gecko的注意事项">针对 Gecko 的注意事项</h3>
 
 <p>从 Gecko 1.9 开始，这个方法与其他属性一样受到同源策略的控制，若调用会使文档的源产生变化则不可用。</p>
 
-<p>从 Gecko 1.9.2 开始，<code>document.open()</code> 使用文档的使用的 URI 的<a href="/docs/Security_check_basics">principal</a>大，而不是从 stack 中取来 principal。因此，你无需再在不可信的文档里调用 {{domxref("document.write()")}} ，包括使用<a href="https://developer.mozilla.org/en/wrappedJSObject"><code>wrappedJSObject</code></a>。关于 principal 的更多信息详见<a href="https://developer.mozilla.org/en/Security_check_basics" title="en/Security check basics">Security check basics</a>。</p>
+<p>从 Gecko 1.9.2 开始，<code>document.open()</code> 使用文档的使用的 URI 的<a href="/docs/Security_check_basics">principal</a>大，而不是从 stack 中取来 principal。因此，你无需再在不可信的文档里调用 {{domxref("document.write()")}} ，包括使用<a href="/en/wrappedJSObject"><code>wrappedJSObject</code></a>。关于 principal 的更多信息详见<a href="/en/Security_check_basics">Security check basics</a>。</p>
 
 
 
@@ -84,39 +84,13 @@ document.close();</code></pre>
 
 <h2 id="规范">规范</h2>
 
-
-
-<table>
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("api.Document.open")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
-
-
 
 <ul>
  <li>{{domxref("Document")}}</li>

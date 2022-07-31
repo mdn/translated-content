@@ -133,7 +133,7 @@ li {
 
 <h3 id="監聽方向變化">監聽方向變化</h3>
 
-<p>只要裝置改變了畫面方向與本身方向，就會觸發 {{event("orientationchange")}} 事件，再由 {{domxref("Screen.orientation")}} 屬性讀取之。</p>
+<p>只要裝置改變了畫面方向與本身方向，就會觸發 {{event("orientationchange")}} 事件，再由 {{domxref("Screen.orientation")}} 屬性讀取之。</p>
 
 <pre class="brush: js">screen.addEventListener("orientationchange", function () {
   console.log("The orientation of the screen is: " + screen.orientation);
@@ -144,14 +144,14 @@ li {
 
 <p>任何 Web Apps 均可鎖定畫面以符合本身需求。{{domxref("Screen.lockOrientation()")}} 函式可鎖定畫面方向；{{domxref("Screen.unlockOrientation()")}} 函式可解鎖畫面方向。</p>
 
-<p>{{domxref("Screen.lockOrientation()")}} 將接受一組字串或系列字串，以定義畫面鎖定的方向。有效字串為：「<code>portrait-primary</code>」、「<code>portrait-secondary</code>」、「<code>landscape-primary</code>」、「<code>landscape-secondary</code>」、「<code>portrait</code>」、「<code>landscape</code>」。另可參閱 {{domxref("Screen.lockOrientation")}} 進一步了解這些有效值。</p>
+<p>{{domxref("Screen.lockOrientation()")}} 將接受一組字串或系列字串，以定義畫面鎖定的方向。有效字串為：「<code>portrait-primary</code>」、「<code>portrait-secondary</code>」、「<code>landscape-primary</code>」、「<code>landscape-secondary</code>」、「<code>portrait</code>」、「<code>landscape</code>」。另可參閱 {{domxref("Screen.lockOrientation")}} 進一步了解這些有效值。</p>
 
 <pre class="brush: js">screen.lockOrientation('landscape');</pre>
 
 <div class="note">
-<p><strong>注意：</strong>畫面鎖定功能將依 Web Apps 而有所不同。如果 App A 鎖定為 <code>landscape</code>；App B 鎖定為 <code>portrait，則此兩款 Apps 均將維持自己的方向。所以不論如何切換</code> A 與 B，均不會觸發 {{event("orientationchange")}} 事件。</p>
+<p><strong>注意：</strong>畫面鎖定功能將依 Web Apps 而有所不同。如果 App A 鎖定為 <code>landscape</code>；App B 鎖定為 <code>portrait，則此兩款 Apps 均將維持自己的方向。所以不論如何切換</code> A 與 B，均不會觸發 {{event("orientationchange")}} 事件。</p>
 
-<p>但若必須改變方向以滿足畫面鎖定的需求，則鎖定方向時就會觸發 {{event("orientationchange")}} 事件。</p>
+<p>但若必須改變方向以滿足畫面鎖定的需求，則鎖定方向時就會觸發 {{event("orientationchange")}} 事件。</p>
 </div>
 
 <h2 id="Firefox_OS_and_Android_Orientation_lock_using_the_manifest">Firefox OS and Android: Orientation lock using the manifest</h2>

@@ -62,7 +62,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <pre class="brush: html">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</pre>
 
-<p>要注意的是，每個元素都有自己的起始和結束標籤，一層一層的包覆。所以最外層是&lt;p&gt;  ，接著&lt;strong&gt; ；先結束strong元素，所以先寫&lt;/strong&gt;，最外面才是 &lt;/p&gt;。</p>
+<p>要注意的是，每個元素都有自己的起始和結束標籤，一層一層的包覆。所以最外層是&lt;p&gt;  ，接著&lt;strong&gt; ；先結束strong元素，所以先寫&lt;/strong&gt;，最外面才是 &lt;/p&gt;。</p>
 
 <pre class="example-bad brush: html">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</pre>
 
@@ -96,8 +96,8 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 <ul>
  <li><code>&lt;!DOCTYPE html&gt;</code> — 文件類型（doctype）。 在 HTML 發展初期（約莫 1991/2 的年代）文件類型是用來連結一些應遵守的規則，有點像自動校正的功能。然而，現在大家其實不太管文件類型，它就是個必須放在程式碼中的東西，現階段大家只需要知道這點就夠了。</li>
  <li><code>&lt;html&gt;&lt;/html&gt;</code> — <code>&lt;html&gt;</code> 元素，又被視為根元素（root element），包含了所有顯示在這個頁面上的內容。</li>
- <li><code>&lt;head&gt;&lt;/head&gt;</code> —  <code>&lt;head&gt;</code> 元素，裡面放的是你想涵括的重要資訊，但<strong>不會顯示於網頁瀏覽者眼前的</strong>。例如，顯示於搜尋結果的關鍵字、頁面說明<em>、</em>CSS、字元實體集...等。</li>
- <li><code>&lt;body&gt;&lt;/body&gt;</code> —  <code>&lt;body&gt;</code> 元素，包含了<strong>所有會顯示於網頁瀏覽者眼前的內容。</strong> 無論是文字、圖片、影面、互動遊戲...等。</li>
+ <li><code>&lt;head&gt;&lt;/head&gt;</code> —  <code>&lt;head&gt;</code> 元素，裡面放的是你想涵括的重要資訊，但<strong>不會顯示於網頁瀏覽者眼前的</strong>。例如，顯示於搜尋結果的關鍵字、頁面說明<em>、</em>CSS、字元實體集...等。</li>
+ <li><code>&lt;body&gt;&lt;/body&gt;</code> —  <code>&lt;body&gt;</code> 元素，包含了<strong>所有會顯示於網頁瀏覽者眼前的內容。</strong> 無論是文字、圖片、影面、互動遊戲...等。</li>
  <li><code>&lt;meta charset="utf-8"&gt;</code> — 這個元素指定了你的文件使用utf-8這種字元編碼， 建議大家都要使用這個元素，它會幫助你免去許多文字無法正確呈現的煩惱。</li>
  <li><code>&lt;title&gt;&lt;/title&gt;</code> — 呈現於網頁瀏覽者眼前的網頁標題。</li>
 </ul>
@@ -119,7 +119,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <p><img src="alt-text-example.png"></p>
 
-<p>說明文字應該要好好呈現這個圖片的內容，上面這個例子就很差。好的例子像是：「Firefox  Logo：有一隻狐狸繞著地球」</p>
+<p>說明文字應該要好好呈現這個圖片的內容，上面這個例子就很差。好的例子像是：「Firefox  Logo：有一隻狐狸繞著地球」</p>
 
 <div class="note">
 <p><strong>注意</strong>：你可以在 <a href="/zh-TW/docs/Web/Accessibility">MDN's Accessibility landing page</a> 查看無障礙頁面的資訊。</p>
@@ -153,7 +153,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 <p>清單至少會包含兩個元素，以下是最常見的清單類，無順序性與有順序性的：</p>
 
 <ol>
- <li><strong>無順序性清單（Unordered lists）</strong> 代表這些項目的順序改變，不影響任何是，例如購物清單。項目會包含在  {{htmlelement("ul")}} 裡面。</li>
+ <li><strong>無順序性清單（Unordered lists）</strong> 代表這些項目的順序改變，不影響任何是，例如購物清單。項目會包含在  {{htmlelement("ul")}} 裡面。</li>
  <li><strong>有順序性清單（Ordered lists）</strong>代表這些項目的順序是有意義的，例如食譜裡的製作步驟。項目會包含在 {{htmlelement("ol")}} 裡面。</li>
 </ol>
 
@@ -179,7 +179,7 @@ translation_of: Learn/Getting_started_with_the_web/HTML_basics
 
 <h2 id="連結_link">連結 (link)</h2>
 
-<p>連結對於網頁來說是非常重要的。要加上連結，我們需要用到這個元素 — {{htmlelement("a")}} —  <em>a</em> 代表了「anchor」。要讓文字變成連結的步驟如下：</p>
+<p>連結對於網頁來說是非常重要的。要加上連結，我們需要用到這個元素 — {{htmlelement("a")}} —  <em>a</em> 代表了「anchor」。要讓文字變成連結的步驟如下：</p>
 
 <ol>
  <li>選擇一些文字，例如「Mozilla Manifesto」。</li>

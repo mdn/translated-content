@@ -37,13 +37,13 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
  <li>保存 <code>index.html</code> 并用浏览器将其打开。应该看到以下页面：</li>
 </ol>
 
-<p><img alt="测试页面，文字设置为红色" src="https://mdn.mozillademos.org/files/16480/beginner-site-red.png">如果段落文字变红，那么祝贺你，你已经成功地迈出了 CSS 学习的第一步。</p>
+<p><img alt="测试页面，文字设置为红色" src="website-screenshot-styled.png">如果段落文字变红，那么祝贺你，你已经成功地迈出了 CSS 学习的第一步。</p>
 
 <h3 id="“CSS_规则集”详解">“CSS 规则集”详解</h3>
 
 <p>让我们来仔细看一看上述 CSS：</p>
 
-<p><img alt="图解CSS声明" src="https://mdn.mozillademos.org/files/16483/css-declaration.png"></p>
+<p><img alt="图解CSS声明" src="css-declaration-small.png"></p>
 
 <p>整个结构称为 <strong>规则集</strong>（通常简称“规则”），各部分释义如下：</p>
 
@@ -170,7 +170,7 @@ translation_of: Learn/Getting_started_with_the_web/CSS_basics
 
 p, li {
   font-size: 16px;
-  /* line-height 后而可以跟不同的参数，如果是数字，就是当前字体大小乘上数字 */
+  /* line-height 后面可以跟不同的参数，如果是数字，就是当前字体大小乘上数字 */
   line-height: 2;
   letter-spacing: 1px;
 }</pre>
@@ -179,13 +179,13 @@ p, li {
 
 <p>可以随时调整这些 <code>px</code><strong> </strong>值来获得满意的结果，以下是大体效果：</p>
 
-<p><img alt="测试页面，设置了文字间距和行间距等格式。" src="https://mdn.mozillademos.org/files/16481/beginner-site-text.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="测试页面，设置了文字间距和行间距等格式。" src="website-screenshot-font-small.png"></p>
 
 <h2 id="一切皆盒子">一切皆盒子</h2>
 
 <p>编写 CSS 时你会发现，你的工作好像是围绕着一个一个盒子展开的——设置尺寸、颜色、位置，等等。页面里大部分 HTML 元素都可以被看作若干层叠的盒子。</p>
 
-<p><img alt="a big stack of boxes or crates sat on top of one another" src="https://mdn.mozillademos.org/files/9441/boxes.jpg" style="display: block; margin: 0px auto;"></p>
+<p><img alt="a big stack of boxes or crates sat on top of one another" src="boxes.jpg"></p>
 
 <p>并不意外，CSS 布局主要就是基于盒模型的。每个占据页面空间的块都有这样的属性：</p>
 
@@ -195,7 +195,7 @@ p, li {
  <li><code>margin</code>：即外边距，围绕元素外部的空间。</li>
 </ul>
 
-<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="https://mdn.mozillademos.org/files/9443/box-model.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="three boxes sat inside one another. From outside to in they are labelled margin, border and padding" src="box-model.png"></p>
 
 <p>这里还使用了：</p>
 
@@ -246,7 +246,7 @@ p, li {
   text-shadow: 3px 3px 1px black;
 }</pre>
 
-<p>你可能发现页面的顶部有一个难看的间隙，那是因为浏览器会在没有任何 CSS 的情况下<strong> </strong>给 {{htmlelement("h1")}} 等元素设置一些<strong>默认样式</strong>。但这并不是个好主意，因为我们希望一个没有任何样式的网页也有基本的可读性。为了去掉那个间隙，我们通过设置 <code>margin: 0;</code> 来覆盖默认样式。</p>
+<p>你可能发现页面的顶部有一个难看的间隙，那是因为浏览器会在没有任何 CSS 的情况下<strong> </strong>给 {{htmlelement("h1")}} 等元素设置一些<strong>默认样式</strong>。但这并不是个好主意，因为我们希望一个没有任何样式的网页也有基本的可读性。为了去掉那个间隙，我们通过设置 <code>margin: 0;</code> 来覆盖默认样式。</p>
 
 <p>至此，我们已经把标题的上下内边距设置为 20 像素，并且将标题文本与 HTML<strong> </strong>的背景颜色设为一致。</p>
 
@@ -284,7 +284,7 @@ p, li {
 
 <p>如果你按部就班完成本文的实践，那么最终可以得到以下页面（可以 <a href="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site-styled/">查看我们的版本</a>）：</p>
 
-<p><img alt="测试页面，设置了标题、正文字体，图片居中，背景色、文字块颜色。" src="https://mdn.mozillademos.org/files/16482/beginner-site-styled.png"></p>
+<p><img alt="测试页面，设置了标题、正文字体，图片居中，背景色、文字块颜色。" src="website-screenshot-final.png"></p>
 
 <p>若遇到问题，可以参考 GitHub 上的 <a href="https://github.com/roy-tian/learning-area/tree/master/extras/getting-started-web/beginner-html-site-styled">完整示例代码</a> 做对比。</p>
 
@@ -295,12 +295,12 @@ p, li {
 <h2 id="本章目录">本章目录</h2>
 
 <ul>
- <li id="Installing_basic_software"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a></li>
- <li id="What_will_your_website_look_like"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">设计网站的外观</a></li>
- <li id="Dealing_with_files"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a></li>
- <li id="HTML_basics"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML 基础</a></li>
- <li id="CSS_basics"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS 基础</a></li>
- <li id="JavaScript_basics"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript 基础</a></li>
- <li id="Publishing_your_website"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website">发布网站</a></li>
- <li id="How_the_web_works"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Web 是如何运作的</a></li>
+ <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a></li>
+ <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">设计网站的外观</a></li>
+ <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a></li>
+ <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML 基础</a></li>
+ <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS 基础</a></li>
+ <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript 基础</a></li>
+ <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website">发布网站</a></li>
+ <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Web 是如何运作的</a></li>
 </ul>

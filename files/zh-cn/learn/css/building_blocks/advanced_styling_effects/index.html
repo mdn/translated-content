@@ -13,7 +13,7 @@ translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>HTML 基础 (学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>) ，了解 CSS 工作原理 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
+   <td>HTML 基础 (学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>) ，了解 CSS 工作原理 (学习 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>.)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -94,12 +94,12 @@ article {
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow: 1px 1px 1px black,
+              2px 2px 1px black,
+              3px 3px 1px red,
+              4px 4px 1px red,
+              5px 5px 1px black,
+              6px 6px 1px black;
 }</pre>
 
 <p>结果如下：</p>
@@ -191,14 +191,14 @@ button:active {
 
 <ul>
  <li>滤镜很新——它们可以被大多数的现代的浏览器支持，包括 Microsoft Edge，但它们一点也不能被 IE 浏览器支持。因此如果你在你的设计中使用滤镜，你需要确保你的内容即使没有滤镜也是可用的。</li>
- <li>你会看到我们在<code>filter</code>属性中通过<code>-webkit-</code>前缀包含了一个版本信息，这被称为一个 {{glossary("Vendor Prefix")}}，有时会被浏览器使用，以在一个新特性完整实现之前，当它与无前缀版本没有冲突的时候支持并实验这个特性。Vendor prefixes 永远都不被指望着被 web 开发人员使用，但是它们有时候确实会被在产品页面中使用，即当实验性的特性确实被需要时。在这个实例中，Chrome/Safari/Opera 目前要求这些属性的<code>-webkit-</code>版本，而 Edge 和 Firefox 则使用后者，无前缀版本。</li>
+ <li>你会看到我们在<code>filter</code>属性中通过<code>-webkit-</code>前缀包含了一个版本信息，这被称为一个 {{glossary("Vendor Prefix")}}，有时会被浏览器使用，以在一个新特性完整实现之前，当它与无前缀版本没有冲突的时候支持并实验这个特性。Vendor prefixes 永远都不被指望着被 web 开发人员使用，但是它们有时候确实会被在产品页面中使用，即当实验性的特性确实被需要时。在这个实例中，Chrome/Safari/Opera 目前要求这些属性的<code>-webkit-</code>版本，而 Edge 和 Firefox 则使用后者，无前缀版本。</li>
 </ul>
 
 <div class="note">
 <p><strong>注意</strong>: 如果你确实决定在你的代码中使用前缀，确保你包括了所有需要的前缀以及无前缀的版本，这样才会有尽可能多的浏览器能够使用这些特性，并且如果浏览器落下了前缀，它们也能够使用无前缀的版本。另外需要注意的是这些实验性的特性可能会有改变，这可能会导致你的代码被破坏，在前缀被去除之前，最好还是仅仅实验这些特性。</p>
 </div>
 
-<p> 你可以看到更多关于滤镜的例子，在 <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html">filters.html</a> (也可以看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html">source code</a>).</p>
+<p> 你可以看到更多关于滤镜的例子，在 <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html">filters.html</a> (也可以看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html">source code</a>).</p>
 
 <h2 id="Blend_modes（混合模式）">Blend modes（混合模式）</h2>
 
@@ -211,10 +211,10 @@ button:active {
  <li>{{cssxref("mix-blend-mode")}}, 用来将一个元素与它覆盖的那些元素各自所设置的背景（background）和内容 (content) 混合在一起。</li>
 </ul>
 
-<p>你可以找到比这里用到的更多的例子，在我们的<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html">blend-modes.html</a> 示例页面 (查看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html">source code</a>), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。</p>
+<p>你可以找到比这里用到的更多的例子，在我们的<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html">blend-modes.html</a> 示例页面 (查看 <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html">source code</a>), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。</p>
+<p><strong>注意</strong>: 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。</p>
 </div>
 
 <h3 id="background-blend-mode">background-blend-mode</h3>
@@ -226,7 +226,7 @@ button:active {
 &lt;div class="multiply"&gt;
 &lt;/div&gt;</pre>
 
-<p>现在来点 CSS — 我们正在给<code>&lt;div&gt;</code>添加一个背景图像和一个绿色的背景色：</p>
+<p>现在来点 CSS — 我们正在给<code>&lt;div&gt;</code>添加一个背景图像和一个绿色的背景色：</p>
 
 <pre class="brush: css">div {
   width: 250px;
@@ -248,7 +248,7 @@ button:active {
 
 <h3 id="mix-blend-mode">mix-blend-mode</h3>
 
-<p>现在让我们看一看 {{cssxref("mix-blend-mode")}}。 这里我们将给出两个相同的<code>&lt;div&gt;</code>s，但是每个都位于一个有着紫色背景的简单的<code>&lt;div&gt;</code>上，来向你展示元素们将会怎样混合在一起：</p>
+<p>现在让我们看一看 {{cssxref("mix-blend-mode")}}。 这里我们将给出两个相同的<code>&lt;div&gt;</code>，但是每个都位于一个有着紫色背景的简单的<code>&lt;div&gt;</code>上，来向你展示元素们将会怎样混合在一起：</p>
 
 <pre class="brush: html">&lt;article&gt;
   No mix blend mode
@@ -312,31 +312,31 @@ article div:last-child {
 <p>你可以看到，多层混合（mix-blend）不仅混合了两种背景图像，还混合了在<code>&lt;div&gt;</code>下面的颜色。</p>
 
 <div class="note">
-<p><strong>注意：</strong>如果您不理解上面的一些布局属性，请不要担心，像 {{cssxref("position")}}， {{cssxref("top")}}， {{cssxref("bottom")}}， {{cssxref("z-index")}}等。我们将在<a href="/zh-CN/docs/Learn/CSS/CSS_layout">CSS Layout</a>模块中详细地介绍这些内容。</p>
+<p><strong>备注：</strong> 如果你不理解上面的一些布局属性，请不要担心，像 {{cssxref("position")}}、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("z-index")}} 等。我们将在 <a href="/zh-CN/docs/Learn/CSS/CSS_layout">CSS Layout</a> 模块中详细地介绍这些内容。</p>
 </div>
 
 <h2 id="-webkit-background-clip_text">-webkit-background-clip: text</h2>
 
-<p>另一个我们认为在继续之前会提到的新特性 (目前支持 Chrome、Safari 和 Opera，和在 Firefox 正在实现) 是{{cssxref("background-clip")}}的 <code>text</code> 值。当与专有 <code>-webkit-text-fill-color: transparent;</code> 特性一起使用时，这允许您将背景图像剪贴到元素文本的形状，从而产生一些不错的效果。这不是一个正式的标准，但是已经在多个浏览器中实现了，因为它很流行，并且被开发人员广泛使用。在这种情况下，这两种属性都需要一个<code>-webkit-</code>供应商前缀，甚至对于非 webkit/Chrome-based 的浏览器来说也是如此。</p>
+<p>另一个我们认为在继续之前会提到的新特性 (目前支持 Chrome、Safari 和 Opera，和 Firefox 正在实现) 是{{cssxref("background-clip")}}的 <code>text</code> 值。当与专有 <code>-webkit-text-fill-color: transparent;</code> 特性一起使用时，这允许您将背景图像剪贴到元素文本的形状，从而产生一些不错的效果。这不是一个正式的标准，但是已经在多个浏览器中实现了，因为它很流行，并且被开发人员广泛使用。在这种情况下，这两种属性都需要一个<code>-webkit-</code>供应商前缀，甚至对于非 webkit/Chrome-based 的浏览器来说也是如此。</p>
 
 <pre class="brush: css">.text-clip {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }</pre>
 
-<p>那么为什么其他浏览器会实现一个<code>-webkit-</code>前缀？主要是为了浏览器兼容性——许多 web 开发人员已经开始使用<code>-webkit-</code>前缀来实现 web 站点，它开始看起来像其他的浏览器一样被破坏了，而实际上他们遵循的是标准。因此，他们被迫实施了一些这样的功能。这就凸显了在你的工作中使用非标准和/或带前缀的 CSS 特性的危险——这不仅会导致浏览器兼容性问题，而且还会发生变化，因此你的代码随时可能崩溃。坚持标准要好得多。</p>
+<p>那么为什么其他浏览器会实现一个 <code>-webkit-</code> 前缀？主要是为了浏览器兼容性——许多 web 开发人员已经开始使用 <code>-webkit-</code> 前缀来实现 web 站点，它开始看起来像其他的浏览器一样被破坏了，而实际上他们遵循的是标准。因此，他们被迫实施了一些这样的功能。这就凸显了在你的工作中使用非标准和/或带前缀的 CSS 特性的危险——这不仅会导致浏览器兼容性问题，而且还会发生变化，因此你的代码随时可能崩溃。坚持标准要好得多。</p>
 
 <p>如果您确实希望在您的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。</p>
 
 <div class="note">
-<p><strong>注意：</strong>对于一个完整的<code>-webkit-background-clip: text</code>代码示例，见<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a>（也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">源码</a>）。</p>
+<p><strong>注意：</strong>对于一个完整的 <code>-webkit-background-clip: text</code> 代码示例，见<a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html">background-clip-text.html</a>（也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html">源码</a>）。</p>
 </div>
 
 <h2 id="自主学习尝试一些效果">自主学习：尝试一些效果</h2>
 
 <p>现在轮到你了。对于这种自主学习，我们希望您使用下面所提供的代码来试验上面所读到的一些效果。</p>
 
-<p>如果你犯了一个错误，你可以用<em>Reset</em>按钮来重置这个例子。</p>
+<p>如果你犯了一个错误，你可以用 <em>Reset</em> 按钮来重置这个例子。</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -361,7 +361,7 @@ article div:last-child {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+  &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -383,9 +383,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 htmlInput.addEventListener("input", drawOutput);

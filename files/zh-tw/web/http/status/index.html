@@ -81,7 +81,7 @@ translation_of: Web/HTTP/Status
  <dt><code>306 unused</code></dt>
  <dd>該狀態碼已不再被使用，僅被保留。該狀態碼曾在先前得的 HTTP 1.1 規範中被使用。</dd>
  <dt>{{HTTPStatus(307, "307 Temporary Redirect")}}</dt>
- <dd>伺服器發送此回應來使客戶端保持請求方法不變向新的地址發出請求。 與 <code>302 Found</code> 相同，差別在於客戶端不許變更請求方法。例如，應使用另一個 <code>POST</code> 請求來重複發送 <code>POST</code> 請求。</dd>
+ <dd>伺服器發送此回應來使客戶端保持請求方法不變向新的地址發出請求。 與 <code>302 Found</code> 相同，差別在於客戶端不許變更請求方法。例如，應使用另一個 <code>POST</code> 請求來重複發送 <code>POST</code> 請求。</dd>
  <dt>{{HTTPStatus(308, "308 Permanent Redirect")}}</dt>
  <dd>This means that the resource is now permanently located at another URI, specified by the <code>Location:</code> HTTP Response header. This has the same semantics as the <code>301 Moved Permanently</code> HTTP response code, with the exception that the user agent <em>must not</em> change the HTTP method used: if a <code>POST</code> was used in the first request, a <code>POST</code> must be used in the second request.</dd>
 </dl>
@@ -93,7 +93,7 @@ translation_of: Web/HTTP/Status
  <dd>此回應意味伺服器因為收到無效語法，而無法理解請求。</dd>
  <dt>{{HTTPStatus(401, "401 Unauthorized")}}</dt>
  <dd>需要授權以回應請求。它有點像 403，但這裡的授權，是有可能辦到的。</dd>
- <dt>{{HTTPStatus(402, "402 Payment Required")}} {{experimental_inline}}</dt>
+ <dt>{{HTTPStatus(402, "402 Payment Required")}} {{experimental_inline}}</dt>
  <dd>此回應碼留作未來使用。一開始此碼旨在用於數位交易系統，然而，目前極少被使用，且不存在標準或慣例。</dd>
  <dt>{{HTTPStatus(403, "403 Forbidden")}}</dt>
  <dd>用戶端並無訪問權限，例如未被授權，所以伺服器拒絕給予應有的回應。不同於 401，伺服端知道用戶端的身份。</dd>
@@ -112,7 +112,7 @@ translation_of: Web/HTTP/Status
  <dt>{{HTTPStatus(410, "410 Gone")}}</dt>
  <dd>當伺服器已刪除請求的內容時會送出此回應。</dd>
  <dt>{{HTTPStatus(411, "411 Length Required")}}</dt>
- <dd>伺服器拒絕該請求，因為 <code>Content-Length</code> 頭沒有被定義，然而伺服器要求。</dd>
+ <dd>伺服器拒絕該請求，因為 <code>Content-Length</code> 頭沒有被定義，然而伺服器要求。</dd>
  <dt>{{HTTPStatus(412, "412 Precondition Failed")}}</dt>
  <dd>The client has indicated preconditions in its headers which the server does not meet.</dd>
  <dt>{{HTTPStatus(413, "413 Payload Too Large")}}</dt>

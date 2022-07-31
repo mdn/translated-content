@@ -363,11 +363,11 @@ try {
 
 <h4 id="Nesting_try...catch_Statements">巢狀 try...catch 陳述式</h4>
 
-<p>你可以使用一個或多個的 <code>try...catch</code> 陳述式。 假如一個內層的<code>try...catch</code> 陳述式不具有 <code>catch</code> 區塊， 它將必須要有 <code>finally</code> 區塊與及封閉的 <code>try...catch</code> 陳述式來檢測是否有符合的例外。</p>
+<p>你可以使用一個或多個的 <code>try...catch</code> 陳述式。 假如一個內層的<code>try...catch</code> 陳述式不具有 <code>catch</code> 區塊， 它將必須要有 <code>finally</code> 區塊與及封閉的 <code>try...catch</code> 陳述式來檢測是否有符合的例外。</p>
 
 <h3 id="使用_Error_物件">使用 <code>Error</code> 物件</h3>
 
-<p>根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見<a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks">巢狀 try 區塊</a>位於 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> 參考資料頁面。</p>
+<p>根據錯誤的類型，您可以使用 "name" 和 "message" 屬性來獲取更精確的資訊。"name" 提供了錯誤所屬的類別（class）（例如，"DOMException" 或 "Error"），而 "message" 通常提供藉由將錯誤物件轉換為字串所獲得的更簡潔的資訊。參見<a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks">巢狀 try 區塊</a>位於 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> 參考資料頁面。</p>
 
 <p>假如您要丟出自定義的例外， 為了方便使用這些屬性（例如，如果你的 <code>catch</code> 區塊並不要區分你自己的例外和系統的），你可以使用 <code>Error</code> 構造子。舉例來說：</p>
 
@@ -394,7 +394,7 @@ catch (e) {
 <p><code>Promise</code> 有以下幾種狀態:</p>
 
 <ul>
- <li><em>pending</em>：等待中，為初始之狀態，即不是 fulfilled 也不是 rejected。</li>
+ <li><em>pending</em>：等待中，為初始之狀態，即不是 fulfilled 也不是 rejected。</li>
  <li><em>fulfilled</em>：已實現，表示操作成功完成。</li>
  <li><em>rejected</em>：已拒絕，表示操作失敗。</li>
  <li><em>settled</em>：已完成，表示 Promise 狀態為已實現或已拒絕，但不是等待中。</li>

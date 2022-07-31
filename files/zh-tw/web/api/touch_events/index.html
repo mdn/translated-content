@@ -142,7 +142,7 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <h4 id="Handling_the_end_of_a_touch">Handling the end of a touch</h4>
 
-<p>When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle both of these the same way: by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.</p>
+<p>When the user lifts a finger off the surface, a {{event("touchend")}} event is sent. We handle both of these the same way: by calling the <code>handleEnd()</code> function below. Its job is to draw the last line segment for each touch that ended and remove the touch point from the ongoing touch list.</p>
 
 <pre class="brush: js">function handleEnd(evt) {
   evt.preventDefault();

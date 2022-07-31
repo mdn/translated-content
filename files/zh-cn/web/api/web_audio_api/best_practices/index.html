@@ -17,7 +17,7 @@ original_slug: Web/API/Web_Audio_API/最佳实践
 
 <p>使用 Web Audio API 加载声音的主要方式有四种，你可能会对于应当使用哪种方式有些困惑。</p>
 
-<p>在从文件中加载声音时，你可能会采取从{{domxref("HTMLMediaElement")}} (即  {{htmlelement("audio")}} 或{{htmlelement("video")}} ) 中抓取的方式，或提取文件并将其解码到缓冲区。两种工作方式都是合理的，然而，在处理全长音轨时，前一种方法会更加常见。而后一种方法更常见于处理更短的（例如样本）的音轨。</p>
+<p>在从文件中加载声音时，你可能会采取从{{domxref("HTMLMediaElement")}} (即  {{htmlelement("audio")}} 或{{htmlelement("video")}} ) 中抓取的方式，或提取文件并将其解码到缓冲区。两种工作方式都是合理的，然而，在处理全长音轨时，前一种方法会更加常见。而后一种方法更常见于处理更短的（例如样本）的音轨。</p>
 
 <p>多媒体类 HTML 元素有开箱即用的媒体流支持。音频会在浏览器判断可以在播放完成之前加载文件的剩余部分时进行播放 (when the browser determines it can load the rest of the file before playing finishes.)。你可以在<a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API tutorial</a>这篇文档中看到一个把多媒体类 HTML 元素与 Web Audio API 结合使用的例子。</p>
 

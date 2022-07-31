@@ -10,7 +10,7 @@ translation_of: Web/API/Headers/append
 
 <p>在一个<code>Headers</code>对象内部，{{domxref("Headers")}}接口的<strong><code>append()</code></strong>方法可以追加一个新值到已存在的 headers 上，或者新增一个原本不存在的 header。</p>
 
-<p>{{domxref("Headers.set")}} 和 <code>append()</code> 两者之间的不同之处在于当指定 header 是已经存在的并且允许接收多个值时，{{domxref("Headers.set")}}会重写此值为新值，而<code>append()</code>会追加到值序列的尾部。</p>
+<p>{{domxref("Headers.set")}} 和 <code>append()</code> 两者之间的不同之处在于当指定 header 是已经存在的并且允许接收多个值时，{{domxref("Headers.set")}}会重写此值为新值，而<code>append()</code>会追加到值序列的尾部。</p>
 
 <p>因为安全性原因，一些 headers 仅受用户代理控制。包括{{Glossary("Forbidden_header_name", "forbidden header names", 1)}}和{{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
 
@@ -43,7 +43,7 @@ translation_of: Web/API/Headers/append
 myHeaders.get('Content-Type'); // Returns 'image/jpeg'
 </pre>
 
-<p>如果指定 header 不存在，<code>append()</code>将会添加这个 header 并赋值 . 如果指定 header 已存在并允许有多个值，<code>append()</code>将会把指定值添加到值队列的末尾。</p>
+<p>如果指定 header 不存在，<code>append()</code>将会添加这个 header 并赋值 . 如果指定 header 已存在并允许有多个值，<code>append()</code>将会把指定值添加到值队列的末尾。</p>
 
 <pre class="brush: js">myHeaders.append('Accept-Encoding', 'deflate');
 myHeaders.append('Accept-Encoding', 'gzip');
@@ -60,7 +60,7 @@ myHeaders.getAll('Accept-Encoding'); // Returns [ "deflate", "gzip" ]
 
 <p>{{Compat("api.Headers.append")}}</p>
 
-<div id="compat-mobile"> </div>
+<div id="compat-mobile"> </div>
 
 <h2 id="参见">参见</h2>
 
