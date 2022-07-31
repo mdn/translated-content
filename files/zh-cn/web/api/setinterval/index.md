@@ -13,7 +13,7 @@ tags:
   - Timers
   - setInterval
   - Polyfill
-translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
+translation_of: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 {{ApiRef("HTML DOM")}}

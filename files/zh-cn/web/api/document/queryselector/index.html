@@ -11,13 +11,13 @@ translation_of: Web/API/Document/querySelector
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<p>文档对象模型{{domxref("Document")}}引用的<code><strong>querySelector()</strong></code>方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。 如果找不到匹配项，则返回<code>null</code>。</p>
+<p>文档对象模型{{domxref("Document")}}引用的<code><strong>querySelector()</strong></code>方法返回文档中与指定选择器或选择器组匹配的第一个 {{domxref("Element")}}对象。 如果找不到匹配项，则返回<code>null</code>。</p>
 
 <div class="note">
 <p><strong>提示</strong>: 匹配是使用深度优先先序遍历，从文档标记中的第一个元素开始，并按子节点的顺序依次遍历。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="brush: js notranslate">element = document.querySelector(selectors);</pre>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/Document/querySelector
 
 <h3 id="返回值">返回值</h3>
 
-<p>表示文档中与指定的一组 CSS 选择器匹配的第一个元素，一个 {{domxref("Element")}}对象。如果没有匹配到，则返回 null。</p>
+<p>表示文档中与指定的一组 CSS 选择器匹配的第一个元素，一个 {{domxref("Element")}}对象。如果没有匹配到，则返回 null。</p>
 
 <p>如果您需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。</p>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/Document/querySelector
  <dd>指定<code>selectors</code>的语法无效。</dd>
 </dl>
 
-<h2 id="Notes" name="Notes">注意</h2>
+<h2 id="Notes">注意</h2>
 
 <p>如果选择器是一个 ID，并且这个 ID 在文档中错误地使用了多次，那么返回第一个匹配该 ID 的元素。</p>
 
@@ -91,11 +91,11 @@ translation_of: Web/API/Document/querySelector
 
 {{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
+<h2 id="Browser_Compatibility">浏览器兼容性</h2>
 
 <p>{{Compat("api.Document.querySelector")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors">Locating DOM elements using selectors</a></li>

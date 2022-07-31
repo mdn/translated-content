@@ -59,15 +59,15 @@ translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 <ul>
  <li>如果一个网站为<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">表单</a>设置了<code>autocomplete="off"</code>，表单中包含用户名和密码字段，浏览器仍会为这次登录提供记忆功能，并且如果用户同意，用户在下一次访问网站时，浏览器会自动填写这些字段。</li>
- <li>如果网站给用户名和密码的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">输入</a>框设置了 <code>autocomplete="off"</code>，浏览器仍会为这次登录提供记忆功能，并且如果用户同意，用户在下一次访问网站时，浏览器会自动填写这些字段。</li>
+ <li>如果网站给用户名和密码的<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">输入</a>框设置了 <code>autocomplete="off"</code>，浏览器仍会为这次登录提供记忆功能，并且如果用户同意，用户在下一次访问网站时，浏览器会自动填写这些字段。</li>
 </ul>
 
 <p>这是 Firefox（38+）、Google Chrome（34+）、Internet Explorer（11+）上的表现。</p>
 
-<h3 id="使用_autocompletenew-password_阻止自动填充">使用 autocomplete="new-password" 阻止自动填充</h3>
+<h3 id="使用_autocompletenew-password_阻止自动填充">使用 autocomplete="new-password" 阻止自动填充</h3>
 
-<p>如果你定义了一个用户管理页面，其中用户可以为其他人指定新的密码，因此你想阻止密码字段的自动填充，你可以使用 <code>autocomplete="new-password"</code>。</p>
+<p>如果你定义了一个用户管理页面，其中用户可以为其他人指定新的密码，因此你想阻止密码字段的自动填充，你可以使用 <code>autocomplete="new-password"</code>。</p>
 
-<p>这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 <code>autocomplete="new-password"</code> 的 <code>&lt;input&gt;</code> 元素上使用自动填充。例如，Firefox 67 版（见 {{bug(1119063)}}）在这种情况下会停止自动填充；而 Firefox 70 版（见 {{bug(1565407)}}）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见  <a href="/zh-CN/docs/Web/HTML/Attributes/autocomplete#Browser_compatibility"><code>autocomplete</code> compat table</a>。</p>
+<p>这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 <code>autocomplete="new-password"</code> 的 <code>&lt;input&gt;</code> 元素上使用自动填充。例如，Firefox 67 版（见 {{bug(1119063)}}）在这种情况下会停止自动填充；而 Firefox 70 版（见 {{bug(1565407)}}）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见  <a href="/zh-CN/docs/Web/HTML/Attributes/autocomplete#Browser_compatibility"><code>autocomplete</code> compat table</a>。</p>
 
 <p>{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}</p>

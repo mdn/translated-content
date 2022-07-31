@@ -340,7 +340,9 @@ body {
 
 このモバイルレンダリングの動作を上書きする方法として、 {{HTMLElement("meta")}} タグの形で HTML ページに挿入される viewport があります。この例では、 HTML の {{HTMLElement("head")}} に以下を追加してみましょう。
 
-    <meta name="viewport" content="width=480">
+```html
+<meta name="viewport" content="width=480">
+```
 
 これにより、ブラウザーはモバイルアプリのレイアウトを適切にレンダリングします。 `width=480` はブラウザーに「このマークアップを 480 ピクセル幅でレンダリングしてください」と伝え、その結果、メディアクエリーが適切に機能するようになります。 viewport meta タグには、他にも多くのオプションがあり、[viewport meta タグを使ってモバイルブラウザーでのレイアウトを制御する](/ja/docs/Mozilla/Mobile/Viewport_meta_tag)で紹介されています。
 

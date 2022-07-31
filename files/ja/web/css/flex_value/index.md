@@ -46,4 +46,4 @@ translation_of: Web/CSS/flex_value
 
 ## 関連情報
 
- - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)

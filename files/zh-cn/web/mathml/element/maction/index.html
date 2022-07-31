@@ -70,37 +70,17 @@ translation_of: Web/MathML/Element/maction
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('MathML3', 'chapter3.html#presm.maction', 'maction') }}</td>
-   <td>{{ Spec2('MathML3') }}</td>
-   <td>Current specification</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('MathML2', 'chapter3.html#presm.maction', 'maction') }}</td>
-   <td>{{ Spec2('MathML2') }}</td>
-   <td>Initial specification</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-{{Compat("mathml.elements.maction")}}
+{{Compat}}
 
 <h2 id="Gecko具体说明">Gecko 具体说明</h2>
 
 <ul>
  <li>在 Gecko 9.0 {{ geckoRelease("9.0") }} 之前，<code><strong>actiontype</strong></code>属性支持的非标准的<code><strong>restyle</strong></code>值，如今它已经不再支持。</li>
- <li>在 Gecko 14.0 {{ geckoRelease("14.0") }} 之前，<strong><code>statusline</code></strong> 行为类型使用了如下所示的非标准语法，如今它已按照 MathML 规范被修复了。
+ <li>在 Gecko 14.0 {{ geckoRelease("14.0") }} 之前，<strong><code>statusline</code></strong> 行为类型使用了如下所示的非标准语法，如今它已按照 MathML 规范被修复了。
   <pre class="brush: html">&lt;maction actiontype="statusline#(message)"&gt;
 (expression)
 &lt;/maction&gt;

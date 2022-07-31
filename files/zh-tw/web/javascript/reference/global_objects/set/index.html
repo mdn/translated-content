@@ -34,24 +34,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h2 id="描述">描述</h2>
 
-<p><code>Set</code> 對象是數值的收集器。您可以按插入順序迭代收集器中的元素。在 <code>Set</code> 裡的元素只會出現一次<strong>；</strong> 意即在<code>Set</code>裡的元素都是獨一無二</p>
+<p><code>Set</code> 對象是數值的收集器。您可以按插入順序迭代收集器中的元素。在 <code>Set</code> 裡的元素只會出現一次<strong>；</strong> 意即在<code>Set</code>裡的元素都是獨一無二</p>
 
 <h3 id="值的相等性">值的相等性</h3>
 
-<p>因為在 Set 裡每個值都是獨立的，所以都會檢查值的相等性。在早期的ECMAScript規範版本中，此處算法跟基於===操作符中使用的算法並不相同。具體來說，在 <code>Set</code>裡+0(在嚴格模式是和-0相等)和-0是不同的值。然而在 ECMAScript 2015規範中這點已被更改。請參閱 <a href="#Browser_compatibility">瀏覽器兼容性</a> 中的"Value equality for -0 and 0"。</p>
+<p>因為在 Set 裡每個值都是獨立的，所以都會檢查值的相等性。在早期的ECMAScript規範版本中，此處算法跟基於===操作符中使用的算法並不相同。具體來說，在 <code>Set</code>裡+0(在嚴格模式是和-0相等)和-0是不同的值。然而在 ECMAScript 2015規範中這點已被更改。請參閱 <a href="#Browser_compatibility">瀏覽器兼容性</a> 中的"Value equality for -0 and 0"。</p>
 
 <p>另外，NaN和undefined都可以被放置在Set 中， NaN之間被視為相同的值（儘管 NaN !== NaN）。</p>
 
 <dl>
  <dt><code>Set.length</code></dt>
- <dd>The value of the <code>length</code> property is 0.</dd>
+ <dd>The value of the <code>length</code> property is 0.</dd>
  <dt>{{jsxref("Set.@@species", "get Set[@@species]")}}</dt>
  <dd>The constructor function that is used to create derived objects.</dd>
  <dt>{{jsxref("Set.prototype")}}</dt>
  <dd>Represents the prototype for the <code>Set</code> constructor. Allows the addition of properties to all <code>Set</code> objects.</dd>
 </dl>
 
-<h2 id="Set_物件實體"><code>Set</code> 物件實體</h2>
+<h2 id="Set_物件實體"><code>Set</code> 物件實體</h2>
 
 <p>All <code>Set</code> instances inherit from {{jsxref("Set.prototype")}}.</p>
 
@@ -65,7 +65,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 <h2 id="範例">範例</h2>
 
-<h3 id="使用_Set_物件">使用 <code>Set</code> 物件</h3>
+<h3 id="使用_Set_物件">使用 <code>Set</code> 物件</h3>
 
 <pre class="brush: js">var mySet = new Set();
 
@@ -137,7 +137,7 @@ mySet.forEach(function(value) {
 // 3
 // 4</pre>
 
-<h3 id="實作基本的_set_操作">實作基本的 set 操作</h3>
+<h3 id="實作基本的_set_操作">實作基本的 set 操作</h3>
 
 <pre class="brush: js">Set.prototype.isSuperset = function(subset) {
     for (var elem of subset) {
@@ -186,7 +186,7 @@ setA.difference(setC); // =&gt; Set [1, 2]
 
 </pre>
 
-<h3 id="與_Array_物件關聯">與 <code>Array</code> 物件關聯</h3>
+<h3 id="與_Array_物件關聯">與 <code>Array</code> 物件關聯</h3>
 
 <pre class="brush: js">var myArray = ['value1', 'value2', 'value3'];
 
@@ -198,7 +198,7 @@ mySet.has('value1'); // returns true
 // Use the spread operator to transform a set into an Array.
 console.log([...mySet]); // Will show you exactly the same Array as myArray</pre>
 
-<h3 id="與_Strings_關聯">與 <code>Strings</code> 關聯</h3>
+<h3 id="與_Strings_關聯">與 <code>Strings</code> 關聯</h3>
 
 <pre class="brush: js">var text = 'India';
 

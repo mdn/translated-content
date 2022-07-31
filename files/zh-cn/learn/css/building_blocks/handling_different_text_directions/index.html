@@ -14,7 +14,7 @@ original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
  <tbody>
   <tr>
    <th scope="row">先决条件：</th>
-   <td>计算机基础知识，基本软件（参见<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>），文件管理的基本知识（参见<a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>），HTML 基础（HTML 学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>）以及 CSS 基础（学习<a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>）。</td>
+   <td>计算机基础知识，基本软件（参见<a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>），文件管理的基本知识（参见<a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>），HTML 基础（HTML 学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>）以及 CSS 基础（学习<a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>）。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -49,13 +49,13 @@ original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}</p>
 
-<p>当我们切换书写模式时，我们也在改变块和内联文本的方向。<code>horizontal-tb</code>书写模式下块的方向是从上到下的横向的，而 <code>vertical-rl</code>书写模式下块的方向是从右到左的纵向的。因此，块维度指的总是块在页面书写模式下的显示方向。而内联维度指的总是文本方向。 </p>
+<p>当我们切换书写模式时，我们也在改变块和内联文本的方向。<code>horizontal-tb</code>书写模式下块的方向是从上到下的横向的，而 <code>vertical-rl</code>书写模式下块的方向是从右到左的纵向的。因此，块维度指的总是块在页面书写模式下的显示方向。而内联维度指的总是文本方向。 </p>
 
-<p>这张图展示了在水平书写模式下的两种维度。<img alt="" src="https://mdn.mozillademos.org/files/17148/horizontal-tb-zh.png" style="height: 353px; width: 634px;"></p>
+<p>这张图展示了在水平书写模式下的两种维度。<img src="horizontal-tb.png"></p>
 
 <p>这张图片展示了纵向书写模式下的两种维度。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17149/vertical-zh.png"></p>
+<p><img src="vertical.png"></p>
 
 <p>一旦你开始接触 CSS 布局，尤其是更新的布局方法，这些关于块级元素和内联元素的概念会变得非常重要。我之后会返回来再看。</p>
 
@@ -83,7 +83,7 @@ original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 
 <h3 id="逻辑外边距、边框和内边距属性">逻辑外边距、边框和内边距属性</h3>
 
-<p>我们在前面两节中学习了 CSS 的盒模型和 CSS 边框。在外边距、边框和内边距属性中，你会发现许多物理属性，例如 {{cssxref("margin-top")}}、 {{cssxref("padding-left")}}和 {{cssxref("border-bottom")}}。就像 width 和 height 有映射，这些属性也有相应的映射。</p>
+<p>我们在前面两节中学习了 CSS 的盒模型和 CSS 边框。在外边距、边框和内边距属性中，你会发现许多物理属性，例如 {{cssxref("margin-top")}}、 {{cssxref("padding-left")}}和 {{cssxref("border-bottom")}}。就像 width 和 height 有映射，这些属性也有相应的映射。</p>
 
 <p><code>margin-top</code>属性的映射是{{cssxref("margin-block-start")}}——总是指向块级维度开始处的边距。</p>
 

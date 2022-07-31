@@ -7,7 +7,9 @@ La méthode **`Range.createContextualFragment()`** retourne un {{domxref("Docume
 
 ## Syntaxe
 
-    documentFragment = range.createContextualFragment( chaineHTML )
+```js
+documentFragment = range.createContextualFragment( chaineHTML )
+```
 
 ### Paramètres
 

@@ -94,7 +94,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPHeader.ejs">HTTPHeader</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a>
       </td>
       <td><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 消息头</a>（/Web/HTTP/Headers）</td>
       <td><code>\{{HTTPHeader("ACCEPT")}}</code> 会指向 {{HTTPHeader("ACCEPT")}}。</td>
@@ -166,9 +166,9 @@ original_slug: MDN/Structures/Macros/Custom_macros
 用法：`\{{optional_inline}}` 或 `\{{ReadOnlyInline}}`。示例：
 
 - `isCustomObject` {{ReadOnlyInline}}
-  - 如果此项值为 `true`，表明该对象是一个自定义对象。
+  - : 如果此项值为 `true`，表明该对象是一个自定义对象。
 - `parameterX` {{optional_inline}}
-  - 参数描述
+  - : 参数描述
 
 ## 状态和兼容性指示器
 

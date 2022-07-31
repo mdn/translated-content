@@ -69,6 +69,7 @@ CSS はこのようにあふれて表示させますが、これは他の方法�
 {{EmbedGHLiveSample("css-examples/css-text/wbr.html", '100%', 460)}}
 
 ## 関連情報
+
 - HTML の {{HTMLElement("wbr")}} 要素
 - CSS の {{cssxref("word-break")}} プロパティ
 - CSS の {{cssxref("overflow-wrap")}} プロパティ

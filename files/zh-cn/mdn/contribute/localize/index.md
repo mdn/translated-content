@@ -24,7 +24,7 @@ tags:
 ### 汉语（zh-CN，zh-TW）
 
 - 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)
-- 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[dibery](https://github.com/dibery)
+- 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)
 
 ### 法语（fr）
 
@@ -39,17 +39,17 @@ tags:
 ### 韩语（ko）
 
 - 讨论组：[Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- 目前的志愿者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[cos18](https://github.com/cos18)、[GwangYeol-Im](https://github.com/GwangYeol-Im)、[pje1740](https://github.com/pje1740)、[nKiNk](https://github.com/nKiNk)、[yujo11](https://github.com/yujo11)
+- 目前的志愿者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[cos18](https://github.com/cos18)、[GwangYeol-Im](https://github.com/GwangYeol-Im)、[pje1740](https://github.com/pje1740)、[yujo11](https://github.com/yujo11)
 
 ### 俄语（ru）
 
 - 讨论组：[Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- 目前的志愿者：[armanpwnz](https://github.com/armanpwnz)、[captainspring](https://github.com/captainspring)、[mpstv](https://github.com/mpstv)、[myshov](https://github.com/myshov)、[Saionaro](https://github.com/Saionaro)、[sashasushko](https://github.com/sashasushko)、[lex111](https://github.com/lex111)
+- 目前的志愿者：[armanpwnz](https://github.com/armanpwnz)、[captainspring](https://github.com/captainspring)、[myshov](https://github.com/myshov)、[Saionaro](https://github.com/Saionaro)、[sashasushko](https://github.com/sashasushko)、[lex111](https://github.com/lex111)
 
 ### 西班牙语（es）
 
 - 讨论组：[Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
-- 目前的志愿者：[@JuanVqz](https://github.com/JuanVqz)、[@dacalderonp](https://github.com/dacalderonp)、[@lasr21](https://github.com/lasr21)、[@tuxxy](https://github.com/tuxxy)
+- 目前的志愿者：[JuanVqz](https://github.com/JuanVqz)、[davbrito](https://github.com/davbrito)、[Graywolf9](https://github.com/Graywolf9)、[Vallejoanderson](https://github.com/Vallejoanderson)、[marcelozarate](https://github.com/marcelozarate)、[Jalkhov](https://github.com/Jalkhov)
 
 > **备注：** 如果你想解冻某个语言的内容本地化工作，请先了解 [解冻所需要的准备工作](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)。
 

@@ -18,7 +18,9 @@ Si vous définissez le point de départ en dessous (plus bas dans le document), 
 
 ## Syntaxe
 
-    range.setStart(startNode, startOffset);
+```js
+range.setStart(startNode, startOffset);
+```
 
 ### Paramètres
 

@@ -17,8 +17,10 @@ La méthode **`count()`**, rattachée à l'interface {{domxref("IDBIndex")}}, re
 
 ## Syntaxe
 
-    var request = monIndex.count();
-    var request = monIndex.count(cle);
+```js
+var request = monIndex.count();
+var request = monIndex.count(cle);
+```
 
 ### Paramètres
 

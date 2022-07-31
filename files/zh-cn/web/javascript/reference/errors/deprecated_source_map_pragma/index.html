@@ -24,9 +24,9 @@ Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecat
 
 <h2 id="哪里错了">哪里错了？</h2>
 
-<p>在 JavaScript 源码中使用了已废弃的 source map 语法。</p>
+<p>在 JavaScript 源码中使用了已废弃的 source map 语法。</p>
 
-<p>JavaScript 源代码经常被组合和压缩，以便能更高效地从服务器获取它们。使用了 <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source maps</a>，调试器就可以将正在执行的代码映射到原始源文件。</p>
+<p>JavaScript 源代码经常被组合和压缩，以便能更高效地从服务器获取它们。使用了 <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source maps</a>，调试器就可以将正在执行的代码映射到原始源文件。</p>
 
 <p>因为在 IE 浏览器中，只要页面存在 <code>//@cc_on</code> 注释，都会被 IE JScript 引擎解释为要打开条件编译，所以 source map 的规范更改了语法。<a href="https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx">条件编译注释</a> 是 IE 的一个鲜为人知的特性，但是它破坏了 <a href="https://bugs.jquery.com/ticket/13274">jQuery</a> 和其他库的 source map。</p>
 

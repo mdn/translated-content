@@ -13,15 +13,15 @@ Un _worker_ actif contrôle un {{domxref("ServiceWorkerClient")}} si l’URL du 
 
 ## Syntaxe
 
-    sw = ServiceWorker.active
+```js
+sw = ServiceWorker.active
+```
 
 ### Valeur
 
 Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un état `activating` ou `activated`.
 
 ## Spécifications
-
-
 
 | Spécification                                                                                                                                                | Statut                               | Commentaire            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |

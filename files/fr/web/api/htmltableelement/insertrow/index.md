@@ -16,7 +16,9 @@ La méthode **`HTMLTableElement.insertRow()`** insère une nouvelle ligne dans l
 
 ## Syntaxe
 
-    var ligne = HTMLTableElement.insertRow(optionnel indice = -1);
+```js
+var ligne = HTMLTableElement.insertRow(optionnel indice = -1);
+```
 
 - [`HTMLTableElement`](/en-US/docs/DOM/HTMLTableElement) est une référence à un élément table HTML.
 - `indice` est l'indice de ligne de la nouvelle ligne.

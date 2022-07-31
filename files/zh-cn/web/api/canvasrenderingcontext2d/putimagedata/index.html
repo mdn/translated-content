@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/putImageData
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>CanvasRenderingContext2D.putImageData()</code></strong> 是 Canvas 2D API 将数据从已有的 {{domxref("ImageData")}} 对象绘制到位图的方法。如果提供了一个绘制过的矩形，则只绘制该矩形的像素。此方法不受画布转换矩阵的影响。</p>
+<p><strong><code>CanvasRenderingContext2D.putImageData()</code></strong> 是 Canvas 2D API 将数据从已有的 {{domxref("ImageData")}} 对象绘制到位图的方法。如果提供了一个绘制过的矩形，则只绘制该矩形的像素。此方法不受画布转换矩阵的影响。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,7 +17,7 @@ void <var><em>ctx</em>.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidt
 
 <p><strong>imageData</strong></p>
 
-<p>     {{domxref("ImageData")}} ，包含像素值的数组对象。</p>
+<p>     {{domxref("ImageData")}} ，包含像素值的数组对象。</p>
 
 <dl>
  <dt><code>dx</code></dt>
@@ -27,7 +27,7 @@ void <var><em>ctx</em>.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidt
  <dt><code>dirtyX</code> {{optional_inline}}</dt>
  <dd>在源图像数据中，矩形区域左上角的位置。默认是整个图像数据的左上角（x 坐标）。</dd>
  <dt><code>dirtyY</code> {{optional_inline}}</dt>
- <dd>在源图像数据中，矩形区域左上角的位置。默认是整个图像数据的左上角（y 坐标）。</dd>
+ <dd>在源图像数据中，矩形区域左上角的位置。默认是整个图像数据的左上角（y 坐标）。</dd>
  <dt><code>dirtyWidth</code> {{optional_inline}}</dt>
  <dd>在源图像数据中，矩形区域的宽度。默认是图像数据的宽度。</dd>
  <dt><code>dirtyHeight</code> {{optional_inline}}</dt>
@@ -47,7 +47,7 @@ void <var><em>ctx</em>.putImageData(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidt
 
 <h3 id="理解putImageData">理解<code>putImageData</code></h3>
 
-<p>通过{{domxref("CanvasRenderingContext2D.fillRect()")}}方法实现，更好地理解 putImageData 的执行算法。获取更多信息，参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">使用 Canvas 控制像素</a> 和 {{domxref("ImageData")}} 对象。</p>
+<p>通过{{domxref("CanvasRenderingContext2D.fillRect()")}}方法实现，更好地理解 putImageData 的执行算法。获取更多信息，参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">使用 Canvas 控制像素</a> 和 {{domxref("ImageData")}} 对象。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -97,8 +97,8 @@ putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.fillRect(0,0,100,100);

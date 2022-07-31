@@ -41,11 +41,11 @@ Il existe plusieurs types [d'attributs de réponse](http://www.w3.org/TR/XMLHttp
 
 Si vous utilisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML distant, la propriété `responseXML` sera un objet DOM contenant le document XML parsé, qui peut être difficile à manipuler et analyser. Il y a quatre moyens principaux d'analyser ce document XML&nbsp;:
 
-1.  Utiliser [XPath](/en-US/docs/XPath) pour localiser des parties.
-2.  Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
-3.  Manuellement [parser et serializer le XML](/en-US/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
-4.  Utiliser [XMLSerializer](/en-US/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
-5.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
+1. Utiliser [XPath](/en-US/docs/XPath) pour localiser des parties.
+2. Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
+3. Manuellement [parser et serializer le XML](/en-US/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
+4. Utiliser [XMLSerializer](/en-US/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
+5. [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ### Analyser et manipuler une propriété `responseText` contenant un document HTML
 
@@ -53,9 +53,9 @@ Si vous utilisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML dista
 
 Si vous utilisez `XMLHttpRequest` pour récupérer le contenu d'une page HTML distante, la propriété `responseText` est une chaîne de caractères contenant une "soupe" de tous les tags HTML, qui peut être difficile à manipuler et à analyser. Il y a trois moyens principaux d'analyser cette soupe de HTML :
 
-1.  Utiliser la propriété `XMLHttpRequest.responseXML`.
-2.  Injecter le contenu dans le body d'un [fragment de document](/en-US/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
-3.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
+1. Utiliser la propriété `XMLHttpRequest.responseXML`.
+2. Injecter le contenu dans le body d'un [fragment de document](/en-US/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
+3. [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ## Gérer les données binaires
 
@@ -192,37 +192,45 @@ Maintenant, considérons qu'on envoie un formulaire contenant seulement deux cha
 
 - Méthode: `POST`; Encodage: `application/x-www-form-urlencoded` (par défaut):
 
-      Content-Type: application/x-www-form-urlencoded
+  ```
+  Content-Type: application/x-www-form-urlencoded
 
-      foo=bar&baz=The+first+line.&#37;0D%0AThe+second+line.%0D%0A
+  foo=bar&baz=The+first+line.&#37;0D%0AThe+second+line.%0D%0A
+  ```
 
 - Méthode: `POST`; Encodage: `text/plain`:
 
-      Content-Type: text/plain
+  ```
+  Content-Type: text/plain
 
-      foo=bar
-      baz=The first line.
-      The second line.
+  foo=bar
+  baz=The first line.
+  The second line.
+  ```
 
 - Méthode: `POST`; Encodage: `multipart/form-data`:
 
-      Content-Type: multipart/form-data; boundary=---------------------------314911788813839
+  ```
+  Content-Type: multipart/form-data; boundary=---------------------------314911788813839
 
-      -----------------------------314911788813839
-      Content-Disposition: form-data; name="foo"
+  -----------------------------314911788813839
+  Content-Disposition: form-data; name="foo"
 
-      bar
-      -----------------------------314911788813839
-      Content-Disposition: form-data; name="baz"
+  bar
+  -----------------------------314911788813839
+  Content-Disposition: form-data; name="baz"
 
-      The first line.
-      The second line.
+  The first line.
+  The second line.
 
-      -----------------------------314911788813839--
+  -----------------------------314911788813839--
+  ```
 
 Si vous utilisez la méthode `GET` à la place, une chaîne comme celle-ci sera simplement ajoutée à l'URL :
 
-    ?foo=bar&baz=The%20first%20line.%0AThe%20second%20line.
+```
+?foo=bar&baz=The%20first%20line.%0AThe%20second%20line.
+```
 
 #### Un petit framework vanilla
 
@@ -502,7 +510,9 @@ print_r($_FILES);
 
 La syntaxe de ce script est la suivante:
 
-    AJAXSubmit(myForm);
+```
+AJAXSubmit(myForm);
+```
 
 > **Note :** Ce framework utilise l'API [`FileReader`](/en-US/docs/DOM/FileReader) pour transmettre les fichiers uploadés. C'est une API récente qui n'est pas implémentée dans IE9 ou inférieur. Pour cette raison, l'upload via AJAX uniquement **est une technique expérimentale**. Si vous n'avez pas besoin de transférer des fichiers binaires, ce framework fonctionne bien dans la majorité des navigateurs.
 
@@ -697,8 +707,10 @@ Les navigateurs récents supportent les requêtes cross-site en implémentant le
 
 Une approche cross-browser pour contourner le cache est d'ajouter le timestamp à l'URL, en étant sûr d'inclure un "?" ou un "&" selon les cas. Par exemple :
 
-    http://foo.com/bar.html -> http://foo.com/bar.html?12345
-    http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
+```
+http://foo.com/bar.html -> http://foo.com/bar.html?12345
+http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
+```
 
 Comme le cache local est indexé selon les URL, celà permet à toutes les requêtes d'être uniques, et du coup de contourner le cache.
 
@@ -742,13 +754,13 @@ var oReq = new XMLHttpRequest();
 
 ## Voir aussi
 
-1.  [MDN AJAX introduction](/en-US/docs/AJAX/Getting_Started)
-2.  [HTTP access control](/en-US/docs/HTTP_access_control)
-3.  [How to check the security state of an XMLHTTPRequest over SSL](/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-4.  [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-5.  [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-6.  [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-7.  ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-8.  [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
-9.  [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
+1. [MDN AJAX introduction](/en-US/docs/AJAX/Getting_Started)
+2. [HTTP access control](/en-US/docs/HTTP_access_control)
+3. [How to check the security state of an XMLHTTPRequest over SSL](/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
+4. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
+5. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
+6. [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
+7. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
+8. [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
+9. [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
 10. [XMLHttpRequest (Référence Web API)](/fr/docs/Web/API/XMLHttpRequest)

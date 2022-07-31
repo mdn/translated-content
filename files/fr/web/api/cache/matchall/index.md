@@ -69,4 +69,4 @@ caches.open('v1').then(function(cache) {
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WindowOrWorkerGlobalScope.caches")}}
+- [`caches`](/fr/docs/Web/API/caches)

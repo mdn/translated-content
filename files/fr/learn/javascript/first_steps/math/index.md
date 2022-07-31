@@ -59,7 +59,7 @@ L'autre bonne nouvelle, c'est que contrairement à d'autres langages de programm
 
 Amusons‑nous avec quelques nombres pour nous familiariser avec la syntaxe de base dont nous aurons besoin. Entrez les commandes listées ci-dessous dans la [console JavaScript des outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools), ou utilisez la simple console intégrée que vous voyez ci-dessous si vous préférez.
 
-1.  Premièrement, déclarons une paire de variables et initialisons‑les respectivement avec un entier et un nombre avec des décimales, puis saisissons les noms des variables à nouveau pour vérifier que tout est correct&nbsp;:
+1. Premièrement, déclarons une paire de variables et initialisons‑les respectivement avec un entier et un nombre avec des décimales, puis saisissons les noms des variables à nouveau pour vérifier que tout est correct&nbsp;:
 
     ```js
     const monEntier = 5;
@@ -68,8 +68,8 @@ Amusons‑nous avec quelques nombres pour nous familiariser avec la syntaxe de b
     monFlottant;
     ```
 
-2.  Les nombres sont saisis sans guillemets. Essayez de déclarer et initialiser deux ou trois variables de plus contenant des nombres avant de continuer.
-3.  Maintenant vérifions que les deux variables d'origine sont du même type de donnée. En JavaScript, l'opérateur nommé [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) est prévu pour cela. Entrez les deux lignes ci‑dessous comme indiqué&nbsp;:
+2. Les nombres sont saisis sans guillemets. Essayez de déclarer et initialiser deux ou trois variables de plus contenant des nombres avant de continuer.
+3. Maintenant vérifions que les deux variables d'origine sont du même type de donnée. En JavaScript, l'opérateur nommé [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) est prévu pour cela. Entrez les deux lignes ci‑dessous comme indiqué&nbsp;:
 
     ```js
     typeof monEntier;
@@ -180,7 +180,7 @@ Les opérateurs arithmétiques sont les opérateurs de base pour effectuer diver
 
 Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, mais ce serait bien de tester si vous avez bien compris la syntaxe. Entrez les exemples ci‑dessous dans la [console des outils de développement JavaScript](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
-1.  Essayez de saisir quelques exemples simples de votre cru, comme&nbsp;:
+1. Essayez de saisir quelques exemples simples de votre cru, comme&nbsp;:
 
     ```js
     10 + 7
@@ -188,7 +188,7 @@ Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, m
     60 % 3
     ```
 
-2.  Déclarez et initialisez quelques variables, puis utilisez‑les dans des opérations. Les variables se comporteront exactement comme les valeurs qu'elles contiennent pour les besoins de l'opération. Par exemple&nbsp;:
+2. Déclarez et initialisez quelques variables, puis utilisez‑les dans des opérations. Les variables se comporteront exactement comme les valeurs qu'elles contiennent pour les besoins de l'opération. Par exemple&nbsp;:
 
     ```js
     const num1 = 10;
@@ -198,7 +198,7 @@ Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, m
     num2 / num1;
     ```
 
-3.  Pour terminer cette partie, entrez quelques expressions plus compliquées, comme&nbsp;:
+3. Pour terminer cette partie, entrez quelques expressions plus compliquées, comme&nbsp;:
 
     ```js
     5 + 10 * 3;

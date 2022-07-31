@@ -26,7 +26,9 @@ En CSS 3, l'astérisque peut être combinée avec les espaces de nom :
 
 ## Syntaxe
 
-    * { style properties }
+```
+* { style properties }
+```
 
 L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs simples. Par exemple, `*.warning` et `.warning` seront équivalents.
 

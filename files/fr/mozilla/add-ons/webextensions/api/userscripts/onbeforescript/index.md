@@ -20,10 +20,12 @@ L'événement `beforeScript` se déclenche juste avant l'exécution d'un script 
 
 ## Syntaxe
 
-    browser.userScripts.onBeforeScript = functionRef
-    browser.userScripts.onBeforeScript.addListener(functionRef)
-    browser.userScripts.onBeforeScript.removeListener(functionRef)
-    browser.userScripts.onBeforeScript.hasListener(functionRef)
+```js
+browser.userScripts.onBeforeScript = functionRef
+browser.userScripts.onBeforeScript.addListener(functionRef)
+browser.userScripts.onBeforeScript.removeListener(functionRef)
+browser.userScripts.onBeforeScript.hasListener(functionRef)
+```
 
 ### Value
 

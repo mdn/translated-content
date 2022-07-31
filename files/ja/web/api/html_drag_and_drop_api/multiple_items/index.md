@@ -157,6 +157,7 @@ function output(text)
 </body>
 </html>
 ```
+
 この例では、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} と `{{domxref("HTMLElement/dragover_event", "dragover")}}` の両イベントを {{domxref("Event.preventDefault","preventDefault()")}} メソッドでキャンセルします。これにより、要素の上でのドロップが可能になっています。
 
 アイテムをドロップした時に、 `dodrop` イベントハンドラーが呼び出されます。この関数は {{domxref("DataTransfer.mozItemCount","mozItemCount")}} プロパティを見て、いくつのアイテムがドロップされたのかを調べ、それらに繰り返し処理を行います。それぞれのアイテムについて、型の一覧を得るために {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} メソッドが呼ばれます。この一覧の生成処理は、ドラッグに対して関連づけられたすべてのデータに対して繰り返されます。

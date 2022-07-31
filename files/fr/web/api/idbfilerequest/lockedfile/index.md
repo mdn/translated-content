@@ -17,7 +17,9 @@ La propriété `lockedFile` représente l'objet {{domxref("LockedFile")}} à par
 
 ## Syntaxe
 
-    var lockedFile = instanceOfFileRequest.lockedFile
+```js
+var lockedFile = instanceOfFileRequest.lockedFile
+```
 
 ## Valeur
 

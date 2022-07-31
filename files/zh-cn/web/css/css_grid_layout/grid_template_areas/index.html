@@ -22,7 +22,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 <p>在用网格线定义网格区域时，我们是通过指定围绕网格区域的四条线来定义的。</p>
 
-<p><img alt="The Grid Area defined by lines" src="https://mdn.mozillademos.org/files/14667/4_Area.png" style="height: 354px; width: 951px;"></p>
+<p><img alt="The Grid Area defined by lines" src="4_area.png"></p>
 
 <p>我们也可以先给一个区域命名，然后在 {{cssxref("grid-template-areas")}} 属性值中指定这个区域的位置。你可以随意为区域命名，比如，如果我要创建下面的布局，我可以先划分出 4 个主要的区域：</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
  <li>主要内容（content）</li>
 </ul>
 
-<p><img alt="An image showing a simple two column layout with header and footer" src="https://mdn.mozillademos.org/files/14669/4_Layout.png" style="height: 397px; width: 900px;"></p>
+<p><img alt="An image showing a simple two column layout with header and footer" src="4_layout.png"></p>
 
 <p>通过 {{cssxref("grid-area")}} 属性为这些区域各分配一个名字，这不会影响布局。我们现在已经有了用于布局的命名过的区域了。</p>
 
@@ -86,13 +86,13 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 </pre>
 </div>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="header"&gt;Header&lt;/div&gt;
-    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="content"&gt;Content&lt;/div&gt;
-    &lt;div class="footer"&gt;Footer&lt;/div&gt;
+    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="content"&gt;Content&lt;/div&gt;
+    &lt;div class="footer"&gt;Footer&lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <p>{{ EmbedLiveSample('Grid_Area_1', '300', '330') }}</p>
@@ -153,9 +153,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="header"&gt;Header&lt;/div&gt;
-    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="content"&gt;Content&lt;/div&gt;
-    &lt;div class="footer"&gt;Footer&lt;/div&gt;
+    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="content"&gt;Content&lt;/div&gt;
+    &lt;div class="footer"&gt;Footer&lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <p>{{ EmbedLiveSample('Leaving_1', '300', '330') }}</p>
@@ -167,7 +167,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 <p>在上面的例子中，每个区域都跨越了多个网格单元，为了实现这个效果，要把区域名字在它的区域内重复写多次，中间用空格分隔。你也可以在 <code>grid-template-areas</code> 中添加额外的空格以便让列对齐。你可以看到我把 <code>hd</code> 和 <code>ft</code> 都跟 <code>main</code> 对齐了。</p>
 
-<p>用区域名连接起来的区域必须是矩形的，目前还不能创建 L 形的区域，尽管规范中指出未来的版本可能会提供这项功能。你可以像跨列那样实现跨行，举个例子，要让侧边栏向下跨到底部，只需要用  sd  标识替换掉  '.'  符号就可以了。</p>
+<p>用区域名连接起来的区域必须是矩形的，目前还不能创建 L 形的区域，尽管规范中指出未来的版本可能会提供这项功能。你可以像跨列那样实现跨行，举个例子，要让侧边栏向下跨到底部，只需要用  sd  标识替换掉  '.'  符号就可以了。</p>
 
 <div id="Spanning_1">
 <pre class="brush: css">.header {
@@ -219,9 +219,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 <div class="hidden">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="header"&gt;Header&lt;/div&gt;
-    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="content"&gt;Content&lt;/div&gt;
-    &lt;div class="footer"&gt;Footer&lt;/div&gt;
+    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="content"&gt;Content&lt;/div&gt;
+    &lt;div class="footer"&gt;Footer&lt;/div&gt;
 &lt;/div&gt;</pre>
 </div>
 
@@ -308,9 +308,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 <div class="hidden">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
     &lt;div class="header"&gt;Header&lt;/div&gt;
-    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
-    &lt;div class="content"&gt;Content&lt;/div&gt;
-    &lt;div class="footer"&gt;Footer&lt;/div&gt;
+    &lt;div class="sidebar"&gt;Sidebar&lt;/div&gt;
+    &lt;div class="content"&gt;Content&lt;/div&gt;
+    &lt;div class="footer"&gt;Footer&lt;/div&gt;
 &lt;/div&gt;</pre>
 </div>
 
@@ -323,7 +323,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 <p>下面我们举一个非常简单的例子，来创建一个“媒体对象”。这个组件由一侧的图片或其他媒体以及另一侧的内容组成，图片将显示在盒子的右边或左边。</p>
 
-<p><img alt="Images showing an example media object design" src="https://mdn.mozillademos.org/files/14671/4_Media_objects.png" style="height: 432px; width: 800px;"></p>
+<p><img alt="Images showing an example media object design" src="4_media_objects.png"></p>
 
 <p>定义一个两个列轨道的网格，图片列的尺寸是 <code>1fr</code>，文本列的尺寸是 <code>3fr</code>。如果你想让图片区域占据固定的宽度，就可以把图片列的尺寸设定一个像素值，把文本区域的尺寸设定为 <code>1fr</code>。只有一个 <code>1fr</code> 的列轨道的意思是让它占据剩余的空间。</p>
 
@@ -360,8 +360,8 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 <pre class="brush: html">&lt;div class="media"&gt;
     &lt;div class="image"&gt;&lt;/div&gt;
     &lt;div class="text"&gt;This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    &lt;/div&gt;
+      We can use grid-template-areas to switch around the image and text part of the media object.
+    &lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <p>{{ EmbedLiveSample('Media_1', '300', '200') }}</p>
@@ -405,10 +405,10 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 </pre>
 
 <pre class="brush: html">&lt;div class="media flipped"&gt;
-    &lt;div class="image"&gt;&lt;/div&gt;
-    &lt;div class="text"&gt;This is a media object example.
-      We can use grid-template-areas to switch around the image and text part of the media object.
-    &lt;/div&gt;
+    &lt;div class="image"&gt;&lt;/div&gt;
+    &lt;div class="text"&gt;This is a media object example.
+      We can use grid-template-areas to switch around the image and text part of the media object.
+    &lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <p>{{ EmbedLiveSample('Media_2', '300', '200') }}</p>
@@ -487,7 +487,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
  <li><a href="/zh-CN/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/zh-CN/docs/Web/CSS/Reference"><strong>CSS 参考</strong></a></li>
  <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS 网格布局</a></li>
- <li data-default-state="open"><a href="#"><strong>指南</strong></a>
+ <li><a href="#"><strong>指南</strong></a>
   <ol>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">网格布局的基本概念</a></li>
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">与其他布局方法的关系</a></li>
@@ -502,7 +502,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
    <li><a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">使用网格实现常见布局</a></li>
   </ol>
  </li>
- <li data-default-state="open"><a href="#"><strong>属性</strong></a>
+ <li><a href="#"><strong>属性</strong></a>
   <ol>
    <li><a href="/en-US/docs/Web/CSS/grid">grid</a></li>
    <li><a href="/en-US/docs/Web/CSS/grid-area">grid-area</a></li>
@@ -524,7 +524,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
    <li><a href="/en-US/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
   </ol>
  </li>
- <li data-default-state="open"><a href="#"><strong>词汇</strong></a>
+ <li><a href="#"><strong>词汇</strong></a>
   <ol>
    <li><a href="/en-US/docs/Glossary/Grid">Grid</a></li>
    <li><a href="/en-US/docs/Glossary/Grid_lines">Grid lines</a></li>

@@ -10,8 +10,8 @@ Jusqu'à présent, nous avons créé nos propres [formes](/fr/docs/Web/API/Canva
 
 L'importation d'images dans un canevas se déroule en deux étapes :
 
-1.  L'obtention d'une référence à un objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) ou à un autre élément canvas en tant que source. Il est également possible d'utiliser des images en fournissant une URL.
-2.  Le dessin de l'image à l'aide de la fonction `drawImage()` .
+1. L'obtention d'une référence à un objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) ou à un autre élément canvas en tant que source. Il est également possible d'utiliser des images en fournissant une URL.
+2. Le dessin de l'image à l'aide de la fonction `drawImage()` .
 
 Voyons comment faire.
 

@@ -19,7 +19,9 @@ Renvoie la fenêtre elle-même, qui est semblable à un objet de type Array, lis
 
 ## Syntaxe
 
-    frameList = window.frames;
+```js
+frameList = window.frames;
+```
 
 - `frameList` est une liste d'objets frame, semblable à un tableau grâce à la propriété `length` . Ses éléments sont accessibles en utilisant la notation  `{{ mediawiki.external('i') }}`.
 - `frameList === window` est évalué à `true`.

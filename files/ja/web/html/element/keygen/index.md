@@ -22,12 +22,12 @@ translation_of: Web/HTML/Element/keygen
     <tr>
       <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a></th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>, 対話型コンテンツ,
-        <a href="/ja/docs/Web/HTML/Content_categories#Form_listed">リスト化</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#Form_labelable">ラベル付け可能</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#Form_submittable">サブミット可能</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#Form_resettable">リセット可能</a>な<a href="/ja/docs/Web/HTML/Content_categories#Form-associated_content">フォーム関連要素</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 対話型コンテンツ,
+        <a href="/ja/docs/Web/HTML/Content_categories#リスト化">リスト化</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能">ラベル付け可能</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#送信可能">サブミット可能</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#リセット可能">リセット可能</a>な<a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>,
         知覚可能コンテンツ
       </td>
     </tr>
@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/keygen
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>

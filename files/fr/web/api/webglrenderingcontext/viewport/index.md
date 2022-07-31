@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.viewport()`** de l'[API WebGL](/fr-FR/docs/
 
 ## Syntaxe
 
-    void gl.viewport(x, y, largeur, hauteur);
+```js
+void gl.viewport(x, y, largeur, hauteur);
+```
 
 ### Paramètres
 

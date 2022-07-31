@@ -9,7 +9,9 @@ La propriété en lecture seule **`History.length`** retourne un entier indiquan
 
 ## Syntaxe
 
-    const length = history.length
+```js
+const length = history.length
+```
 
 ## Spécification
 

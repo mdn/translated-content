@@ -79,9 +79,9 @@ translation_of: Web/API/XMLHttpRequest
  <dd>一个布尔值，如果为真，则在请求时不会强制执行同源策略。</dd>
  <dt>{{domxref("XMLHttpRequest.mozBackgroundRequest")}}</dt>
  <dd>一个布尔值，它指示对象是否是后台服务器端的请求。</dd>
- <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{Deprecated_Inline}} {{ReadOnlyInline}}</dt>
  <dd>一个 {{jsxref("ArrayBuffer")}}，把请求的响应作为一个 JavaScript TypedArray。</dd>
- <dt>{{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}</dt>
+ <dt>{{domxref("XMLHttpRequest.multipart")}}{{Deprecated_Inline}}</dt>
  <dd><strong>这是一个 Gecko 专有属性，是一个布尔值，已在 Firefox/Gecko 22 中被删除。</strong>请考虑使用 <a href="/en-US/docs/Web/API/Server-sent_events">Server-Sent Event</a>、<a href="/en-US/docs/Web/API/WebSockets_API">Web Socket</a>、或来自进度事件的 <code>responseText</code> 代替。</dd>
 </dl>
 
@@ -103,7 +103,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt>{{domxref("XMLHttpRequest.getResponseHeader()")}}</dt>
  <dd>返回包含指定响应头的字符串，如果响应尚未收到或响应中不存在该报头，则返回 <code>null</code>。</dd>
  <dt>{{domxref("XMLHttpRequest.open()")}}</dt>
- <dd>初始化一个请求。该方法只能在 JavaScript 代码中使用，若要在 native code 中初始化请求，请使用 <a class="internal" href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest"><code>openRequest()</code></a>。</dd>
+ <dd>初始化一个请求。该方法只能在 JavaScript 代码中使用，若要在 native code 中初始化请求，请使用 <a href="/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest"><code>openRequest()</code></a>。</dd>
  <dt>{{domxref("XMLHttpRequest.overrideMimeType()")}}</dt>
  <dd>覆写由服务器返回的 MIME 类型。</dd>
  <dt>{{domxref("XMLHttpRequest.send()")}}</dt>
@@ -153,22 +153,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td>Live standard, latest version</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -187,6 +172,6 @@ translation_of: Web/API/XMLHttpRequest
    <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML in XMLHttpRequest</a></li>
   </ul>
  </li>
- <li><a class="external" href="http://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — New Tricks in XMLHttpRequest2</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/file/xhr2/">HTML5 Rocks — New Tricks in XMLHttpRequest2</a></li>
  <li>HTTP Feature-Policy 指令 {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}</li>
 </ul>
