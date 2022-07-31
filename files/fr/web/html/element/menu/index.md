@@ -1,128 +1,73 @@
 ---
-title: <menu>
+title: "<menu> : l'élément de menu"
 slug: Web/HTML/Element/menu
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
+browser-compat: html.elements.menu
 translation_of: Web/HTML/Element/menu
 ---
-{{HTMLRef}}{{SeeCompatTable}}
+{{HTMLRef}}
 
-L'élément HTML **`<menu>`** représente un groupe de commandes que l'utilisateur peut utiliser ou activer. Il peut être utilisé afin de créer des menus (affichés en haut d'un écran par exemple) et des menus contextuels (qui apparaissent au clic-droit ou après avoir cliqué sur un bouton).
+L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à [`<ul>`](/fr/docs/Web/HTML/Element/ul), mais est traité par les navigateurs, et en termes d'accessibilité comme un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul). Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément [`<li>`](/fr/docs/Web/HTML/Element/li)).
 
 ## Attributs
 
-Comme pour tous les autres éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels) sur `<menu>`.
-
-- {{htmlattrdef("label")}} {{Deprecated_inline}}
-  - : Le nom du menu qui est affiché pour l'utilisateur. Lorsque cet attribut est utilisé dans un menu imbriqué, c'est le nom affiché pour le sous-menu. Cet attribut doit uniquement être utilisé lorsque l'élément parent est un élément {{HTMLElement("menu")}}.
-- {{htmlattrdef("type")}}
-
-  - : Cet attribut indique le type de menu qui est déclaré. C'est un attribut à valeur contrainte qui peut prendre l'une des valeurs suivantes :
-
-    - `context` {{Deprecated_inline}} : Cette valeur indique que le menu est dans un état de popup et qu'il contient des commandes relatives à un autre élément. Ce menu peut être référencé via l'attribut {{htmlattrxref("menu", "button")}} d'un élément {{HTMLElement("button")}} ou via l'attribut [`contextmenu`](/fr/docs/Web/HTML/Attributs_universels#attr-contextmenu) d'un élément. Cette valeur est la valeur par défaut de l'attribut lorsque l'élément parent est également un élément `<menu>`.
-    - `toolbar` : Cette valeur indique que le menu est une barre d'outils qui contient différentes commandes disponibles. Ces commandes peuvent être construites avec plusieurs éléments {{HTMLElement("li")}} ou avec du contenu de flux qui décrit les commandes disponibles. Cette valeur est la valeur par défaut de l'attribut.
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
-- Les éléments {{HTMLElement("menu")}} et {{HTMLElement("ul")}} représentent tous les deux une liste non-ordonnées d'éléments. {{HTMLElement("ul")}} doit être utilisés pour des éléments qui doivent uniquement être affichés alors que {{HTMLElement("menu")}} est conçu pour des éléments interactifs.
-- **Un menu contextuel** se compose d'un élément `<menu>` qui contient des éléments {{HTMLElement("menuitem")}} dont chacun représente une option sélectionnable dans le menu. D'autres éléments `<menu>` peuvent être imbriqués afin de créer des sous-menus et l'élément {{HTMLElement("hr")}} peut être utilisé afin d'ajouter des séparateurs. Les menus contextuels sont associés à un élément d'u document au travers de son attribut {{htmlattrxref("contextmenu")}}. Lorsqu'il s'agit d'un bouton de menu, c'est l'attribut {{htmlattrxref("menu", "button")}} de {{HTMLElement("button")}} qui décrit ce lien.
-- **Les menus de barre d'outils** se composent d'un élément `<menu>` dont le contenu est décrit avec des éléments {{HTMLElement("li")}} qui forment une liste non-ordonnée ou avec du [contenu de flux](/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux) qui décrit les commandes et les options disponibles.
-- Cet élément a été déprécié en HTML4 mais fut réintroduit dans la spécification HTML5.1 et dans le standard évolutif HTML.
+Les éléments `<menu>` et [`<ul>`](/fr/docs/Web/HTML/Element/ul) représentent tous les deux une liste non-ordonnée d'éléments. [`<ul>`](/fr/docs/Web/HTML/Element/ul) doit être utilisés pour des éléments qui doivent uniquement être affichés alors que `<menu>` était initialement conçu pour des éléments interactifs.
+
+L'élément connexe [`<menuitem>`](/fr/docs/Web/HTML/Element/menuitem) a été déprécié.
+
+> **Note :** Dans d'anciennes versions de la spécification HTML, l'élément `<menu>` pouvait être utilisé pour représenter un menu contextuel. Cette fonctionnalité est désormais considérée comme obsolète et ne fait plus partie de la spécification.
 
 ## Exemples
 
-### Menu contextuel
+### Barre d'outils
 
-{{Deprecated_header}}
+Dans cet exemple, on utilise un élément `<menu>` afin de créer une barre d'outils pour une application d'édition.
 
 #### HTML
 
 ```html
-<!-- Un élément <div> avec un menu contextuel -->
-<div contextmenu="popup-menu">
-  Vous pouvez effectuer un clic-droit pour voir le menu.
-</div>
-
-<menu type="context" id="popup-menu">
-  <menuitem>Action</menuitem>
-  <menuitem>Une autre action</menuitem>
-  <hr>
-  <menuitem>Une action après un séparateur</menuitem>
+<menu>
+  <li><button onclick="copy()">Copier</button></li>
+  <li><button onclick="cut()">Couper</button></li>
+  <li><button onclick="paste()">Coller</button></li>
 </menu>
+```
+  
+On notera que, sur le plan fonctionnel, cela est équivalent à&nbsp;:
+
+```html
+<ul>
+  <li><button onclick="copy()">Copier</button></li>
+  <li><button onclick="cut()">Couper</button></li>
+  <li><button onclick="paste()">Coller</button></li>
+</ul>
 ```
 
 #### CSS
 
 ```css
-div {
-  width: 300px;
-  height: 80px;
-  background-color: lightgreen;
+menu, ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 400px;
+}
+
+li {
+  flex-grow: 1;
+}
+
+button {
+  width: 100%;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('Menu_contextuel', '100%', '80')}}
-
-### Bouton de menu
-
-> **Attention :** Les boutons de menu n'ont pas encore été implémentés dans les navigateurs et {{HTMLElement("menuitem")}} est désormais obsolète.
-
-#### HTML
-
-```html
-<!-- Un bouton qui affiche un menu lorsqu'on clique dessus. -->
-<button type="menu" menu="popup-menu">
-  Dérouler
-</button>
-
-<menu type="context" id="popup-menu">
-  <menuitem>Action</menuitem>
-  <menuitem>Une autre action</menuitem>
-  <hr>
-  <menuitem>Une action après un séparateur</menuitem>
-</menu>
-```
-
-#### Résultat
-
-{{EmbedLiveSample('Bouton_de_menu', '100%', '50')}}
-
-### Barre d'outils
-
-> **Attention :** Les menus sous forme de barres d'outils n'ont pas encore été implémentés dans les navigateurs.
-
-#### HTML
-
-```html
-<!-- Un menu pour un éditeur basique
-     avec deux boutons de menu. -->
-<menu type="toolbar">
-  <li>
-    <button type="menu" menu="file-menu">Fichier</button>
-    <menu type="context" id="file-menu">
-      <menuitem label="Nouveau" onclick="newFile()">
-      <menuitem label="Enregistrer" onclick="saveFile()">
-    </menu>
-  </li>
-  <li>
-    <button type="menu" menu="edit-menu">Éditer</button>
-    <menu type="context" id="edit-menu">
-      <menuitem label="Couper" onclick="cutEdit()">
-      <menuitem label="Copier" onclick="copyEdit()">
-      <menuitem label="Coller" onclick="pasteEdit()">
-    </menu>
-  </li>
-</menu>
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Barre_doutils", '100%', '100')}}
+{{EmbedLiveSample("", "100%", 100)}}
 
 ## Résumé technique
 
@@ -130,84 +75,58 @@ div {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-          >Catégories de contenu</a
-        >
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >Contenu de flux</a
-        >
-        et
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >
-        si le menu est une liste (l'état par défaut, sauf si l'élément parent
-        est lui-même un élément <code>&#x3C;menu></code> auquel cas le menu est
-        dans un état contextuel).
+        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a> et <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible">contenu tangible</a> si au moins un enfant du menu est un élément <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>
-        Si le menu est une liste : du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >
-        ou zéro ou plusieurs éléments {{HTMLElement("li")}},
-        {{HTMLElement("script")}} et
-        {{HTMLElement("template")}}.<br />Si le menu est dans un menu
-        contextuel : zéro ou plusieurs éléments
-        {{HTMLElement("menu")}}, {{HTMLElement("menuitem")}},
-        {{HTMLElement("hr")}}, {{HTMLElement("script")}} et
-        {{HTMLElement("template")}}.
+      <td>Zéro ou plusieurs occurrences de  <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>,  <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a>, et  <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune balise ne doit être omise</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
-          >contenu de flux</a
-        >.
+        Tout élément qui accepte du <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">contenu de flux</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/List_role"><code>list</code></a>
       </td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
+      <td>
+        <a href="https://w3c.github.io/aria/#directory"><code>directory</code></a>, <a href="https://w3c.github.io/aria/#group"><code>group</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="https://w3c.github.io/aria/#menu"><code>menu</code></a>, <a href="https://w3c.github.io/aria/#menubar"><code>menubar</code></a>, <a href="https://w3c.github.io/aria/#none"><code>none</code></a>, <a href="https://w3c.github.io/aria/#presentation"><code>presentation</code></a>, <a href="https://w3c.github.io/aria/#radiogroup"><code>radiogroup</code></a>, <a href="https://w3c.github.io/aria/#tablist"><code>tablist</code></a>, <a href="https://w3c.github.io/aria/#toolbar"><code>toolbar</code></a> ou <a href="https://w3c.github.io/aria/#tree"><code>tree</code></a>
+      </td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLMenuElement")}}</td>
+      <td><a href="/fr/docs/Web/API/HTMLMenuElement"><code>HTMLMenuElement</code></a></td>
     </tr>
   </tbody>
 </table>
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML WHATWG")}} | Aucune modification depuis la dernière dérivation, {{SpecName("HTML5.3")}} |
-| {{SpecName("HTML5.3", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}}     | {{Spec2("HTML5.3")}}     | Aucune modification.                                                                |
-| {{SpecName("HTML5.2", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}}     | {{Spec2("HTML5.2")}}     | Dérivation {{SpecName("HTML WHATWG")}}, suppression du type `context`.     |
-| {{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML5.1")}}     | Dérivation de {{SpecName("HTML WHATWG")}}, définition initiale.            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux listes :
+- Les autres éléments HTML relatifs aux listes&nbsp;:
 
-  - {{HTMLElement("ol")}}
-  - {{HTMLElement("ul")}}
-  - {{HTMLElement("li")}}
-  - {{HTMLElement("hr")}}
-  - {{HTMLElement("dir")}} {{obsolete_inline}}
-
-- L'attribut universel [`contextmenu`](/fr/docs/Web/HTML/Attributs_universels#attr-contextmenu) qui peut être utilisé sur un élément et qui fait référence à l'attribut `id` d'un élément `menu` avec `context` qui vaut {{htmlattrxref("type","menu",'type="context"')}}.
+  - [`<ol>`](/fr/docs/Web/HTML/Element/ol)
+  - [`<ul>`](/fr/docs/Web/HTML/Element/ul)
+  - [`<li>`](/fr/docs/Web/HTML/Element/li)

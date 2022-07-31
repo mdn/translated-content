@@ -23,7 +23,7 @@ Un nouveau document a un unique noeud `Text` pour chaque bloc de texte. Au fil d
 
 _Hérite des propriétés de son parent {{domxref("CharacterData")}}._
 
-- {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{ obsolete_inline() }}
+- {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{deprecated_inline}}
   - : Renvoie une marque {{domxref("Boolean")}} indiquant si le noeud de texte contient uniquement des espaces.
 - {{domxref("Text.wholeText")}} {{readonlyInline}}
   - : Renvoie une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le texte de tous les noeuds `Text` adjacents logiquement à ce {{domxref("Node")}}, concaténé dans l'ordre du document.
@@ -36,7 +36,7 @@ _Hérite des méthodes de son parent {{domxref("CharacterData")}}._
 
 <!---->
 
-- {{domxref("Text.replaceWholeText")}} {{ obsolete_inline() }}
+- {{domxref("Text.replaceWholeText")}} {{deprecated_inline}}
   - : Remplace le texte du noeud en cours et tous les noeuds logiquement adjacents avec le texte spécifié.
 
 <!---->

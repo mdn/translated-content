@@ -1,0 +1,42 @@
+---
+title: USVString
+slug: >-
+  conflicting/Web/JavaScript/Reference/Global_Objects/String_9094f63a1f7efd350dd69d6a8ae174fb
+tags:
+  - API
+  - DOM
+  - Reference
+  - String
+  - WebIDL
+translation_of: Web/API/USVString
+original_slug: Web/API/USVString
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p><strong><code>USVString</code></strong> соответствует набору всех возможных последовательностей скалярных значений Unicode. <code>USVString</code> сопоставляется с {{JSxRef("String")}} при возврате в JavaScript; обычно он используется только для API, которые выполняют обработку текста и для работы нуждаются в строке скалярных значений Unicode. USVString эквивалентна {{DOMxRef("DOMString")}} за исключением того, что не позволяет использовать непарные суррогатные кодовые точки. Непарные суррогатные кодовые точки, присутствующие в USVString, конвертируются браузером в «замещающий символ» Unicode <code>U+FFFD</code>, (�).</p>
+
+<h2 id="Specification">Спецификации</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("WebIDL", "#idl-USVString", "USVString")}}</td>
+   <td>{{Spec2("WebIDL")}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{JSxRef("String")}}</li>
+ <li>{{DOMxRef("DOMString")}}</li>
+ <li>{{DOMxRef("CSSOMString")}}</li>
+ <li><a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a></li>
+</ul>

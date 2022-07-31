@@ -18,7 +18,9 @@ La méthode **`unshift()`** ajoute un ou plusieurs éléments au début d'un tab
 
 ## Syntaxe
 
-    arr.unshift([élém1[, ...[, élémN]]])
+```js
+arr.unshift([élém1[, ...[, élémN]]])
+```
 
 ### Paramètres
 

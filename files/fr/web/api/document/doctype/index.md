@@ -16,7 +16,9 @@ Renvoie la "Document Type Declaration (DTD)" (_déclaration de type de document_
 
 ## Syntaxe
 
-    doctype = document.doctype;
+```js
+doctype = document.doctype;
+```
 
 - `doctype` est une propriété en lecture seule.
 

@@ -17,14 +17,14 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 ---
 <p>{{APIRef("HTML DOM")}}{{non-standard_header}}</p>
 
-<p><span class="seoSummary">
+<p>
     <code><strong>HTMLInputElement.webkitdirectory</strong></code>是属于{{HTMLElement("input")}}元素的一个HTML属性{{htmlattrxref("webkitdirectory", "input")}}，它指示<code>&lt;input&gt;</code>元素应该允许用户选择文件目录，而不是文件。当一个文件目录被选中，该目录及其整个内容层次结构将包含在所选项目集里面。可以使用{{domxref("HTMLInputElement.webkitEntries",
-    "webkitEntries")}}属性获取选定的文件系统条目。</span></p>
+    "webkitEntries")}}属性获取选定的文件系统条目。</p>
 
 <h2 id="Syntax">语法</h2>
 
 <pre
-  class="brush: js"> <em>HTMLInputElement</em>.webkitdirectory = <em>boolValue</em></pre>
+  class="brush: js"> <em>HTMLInputElement</em>.webkitdirectory = <em>boolValue</em></pre>
 
 <h3 id="Value">值</h3>
 
@@ -76,8 +76,7 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 <p>如果用户选择了<code>PhotoAlbums</code>，则文件列表上将会包含上面列出的每个文件的{{domxref("File")}}对象，而不是文件目录。条目<code>PIC2343.jpg</code>的<code>webkitRelativePath</code>属性将会得到<code>PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg</code>的值。即使{{domxref("FileList")}}是扁平的，这也使得知道层次结构成为可能。</p>
 
 <div class="note">
-  <p><strong>注意：</strong>在<em>Chromium &lt; 72</em>里，<code>webkitRelativePath</code>的行为表现有所不同。有关更多详细信息，请参见<a
-      href="https://bugs.chromium.org/p/chromium/issues/detail?id=124187">此bug</a>。</p>
+  <p><strong>注意：</strong>在<em>Chromium &lt; 72</em>里，<code>webkitRelativePath</code>的行为表现有所不同。有关更多详细信息，请参见<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=124187">此bug</a>。</p>
 </div>
 
 <h2 id="Example">示例</h2>
@@ -109,23 +108,7 @@ translation_of: Web/API/HTMLInputElement/webkitdirectory
 
 <h2 id="Specifications">规范</h2>
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('File System API', '#dom-htmlinputelement-webkitdirectory',
-        'webkitdirectory') }}</td>
-      <td>{{ Spec2('File System API') }}</td>
-      <td>Initial specification.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 <p>这个API没有官方的W3C或者WHATWG规范。</p>
 

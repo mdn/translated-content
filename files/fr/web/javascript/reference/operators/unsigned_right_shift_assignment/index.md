@@ -15,7 +15,7 @@ L'opérateur de décalage à droite non signé et d'affectation (_`>>>=`_) déca
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
 
-## Syntax
+## Syntaxe
 
 ```js
 Opérateur : x >>>= y

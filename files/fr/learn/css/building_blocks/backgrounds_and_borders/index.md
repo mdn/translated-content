@@ -295,9 +295,9 @@ Dans l'exemple ci-dessus, nous avons d'abord fixé la valeur pour les quatre coi
 
 Testons vos nouvelles connaissances : en partant de l'exemple fourni plus bas :
 
-1.  Donnez au bloc une bordure en trait plein noir de 5px de large, avec des coins arrondis de 10px.
-2.  Ajouter une image de fond (utiliser l'URL `balloons.jpg`) à redimensionner pour qu'elle recouvre la boîte.
-3.  Donnez au `<h2>` une couleur de fond noire semi-transparente, avec un texte en blanc.
+1. Donnez au bloc une bordure en trait plein noir de 5px de large, avec des coins arrondis de 10px.
+2. Ajouter une image de fond (utiliser l'URL `balloons.jpg`) à redimensionner pour qu'elle recouvre la boîte.
+3. Donnez au `<h2>` une couleur de fond noire semi-transparente, avec un texte en blanc.
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 700)}}
 
@@ -313,21 +313,21 @@ Dans la leçon suivante nous découvrirons comment le mode d'écriture de votre 
 
 ## Dans ce cours
 
-1.  [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  Arrières-plans et bordures
-5.  [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+4. Arrières-plans et bordures
+5. [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

@@ -146,7 +146,7 @@ req.sendAsBinary(aBody);
 
 <div class="note"><strong>Примечание:</strong> Нестандартный метод <code>sendAsBinary</code> начиная с Gecko 31 {{ geckoRelease(31) }} считается устаревшим и скоро будет удалён. Вместо него, как показывалось выше, можно использовать стандартный метод <code>send(Blob data)</code>.</div>
 
-<p>Кроме того, чтобы отправить бинарные данные можно передать экземпляр {{interface("nsIFileInputStream")}} в метод <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. В этом случае заголовок <code>Content-Length</code> заполнять явно необязательно, поскольку информация получается из потока автоматически:</p>
+<p>Кроме того, чтобы отправить бинарные данные можно передать экземпляр <code>nsIFileInputStream</code> в метод <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. В этом случае заголовок <code>Content-Length</code> заполнять явно необязательно, поскольку информация получается из потока автоматически:</p>
 
 <pre class="brush: js">// Создание потока из файла.
 var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]

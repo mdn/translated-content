@@ -50,12 +50,6 @@
       "Jeremie"
     ]
   },
-  "Glossary/404": {
-    "modified": "2019-07-15T09:45:26.682Z",
-    "contributors": [
-      "Siudzi"
-    ]
-  },
   "Glossary/API": {
     "modified": "2020-12-01T17:59:12.054Z",
     "contributors": [
@@ -1158,96 +1152,6 @@
       "Bobqu"
     ]
   },
-  "Tools": {
-    "modified": "2020-07-16T22:44:16.950Z",
-    "contributors": [
-      "SphinxKnight",
-      "Katarzyna89",
-      "Arekusandoru",
-      "rolevicz",
-      "kasia725792",
-      "Zioberokr",
-      "Emerson2718",
-      "Bajerka86",
-      "alimar@poczta.onet.pl",
-      "Woren82",
-      "dawisko1",
-      "SCPD",
-      "teoli",
-      "Andrzej.Salata",
-      "Kosia90",
-      "splewako",
-      "mirekczechxmm",
-      "Diablownik",
-      "Ptak82",
-      "Mgjbot",
-      "Andreas Wuest",
-      "Listek",
-      "Dria"
-    ]
-  },
-  "Tools/Debugger": {
-    "modified": "2020-07-16T22:35:05.314Z",
-    "contributors": [
-      "kaiga747",
-      "bassam",
-      "kuba1o3"
-    ]
-  },
-  "Tools/Debugger/How_to": {
-    "modified": "2020-07-16T22:35:08.058Z",
-    "contributors": [
-      "jwhitlock",
-      "wbamberg"
-    ]
-  },
-  "Tools/Page_Inspector": {
-    "modified": "2020-07-16T22:34:28.762Z",
-    "contributors": [
-      "kubutekf",
-      "Mlodyemoka"
-    ]
-  },
-  "Tools/Page_Inspector/How_to": {
-    "modified": "2020-07-16T22:34:31.602Z",
-    "contributors": [
-      "jwhitlock",
-      "sidgan"
-    ]
-  },
-  "Tools/Page_Inspector/How_to/Open_the_Inspector": {
-    "modified": "2020-07-16T22:34:32.873Z",
-    "contributors": [
-      "jwhitlock",
-      "kubutekf",
-      "Mlodyemoka"
-    ]
-  },
-  "Tools/Page_Inspector/UI_Tour": {
-    "modified": "2020-07-16T22:34:49.477Z",
-    "contributors": [
-      "kubutekf"
-    ]
-  },
-  "Tools/Validators": {
-    "modified": "2020-07-16T22:35:03.596Z",
-    "contributors": [
-      "vviruzz",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82",
-      "Witia",
-      "Chlopczyk"
-    ]
-  },
-  "Tools/about:debugging": {
-    "modified": "2020-07-16T22:36:32.890Z",
-    "contributors": [
-      "programistka",
-      "Jacob99",
-      "BajlandoKG"
-    ]
-  },
   "Web": {
     "modified": "2019-03-23T23:30:00.154Z",
     "contributors": [
@@ -2041,6 +1945,16 @@
       "Ptak82"
     ]
   },
+  "Web/API/Element/click_event": {
+    "modified": "2019-03-24T00:04:00.144Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "fscholz",
+      "Bedi",
+      "Jan Dudek"
+    ]
+  },
   "Web/API/Element/clientHeight": {
     "modified": "2019-03-23T23:43:28.841Z",
     "contributors": [
@@ -2179,6 +2093,32 @@
       "RetupK"
     ]
   },
+  "Web/API/Element/keydown_event": {
+    "modified": "2019-03-23T23:46:41.310Z",
+    "contributors": [
+      "AshfaqHossain",
+      "Mgjbot",
+      "Ptak82",
+      "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/keypress_event": {
+    "modified": "2019-03-23T23:41:39.155Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/keyup_event": {
+    "modified": "2019-03-23T23:46:25.129Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "Mgjbot",
+      "Jan Dudek"
+    ]
+  },
   "Web/API/Element/localName": {
     "modified": "2019-03-23T23:46:58.657Z",
     "contributors": [
@@ -2187,6 +2127,26 @@
       "Mgjbot",
       "Ptak82",
       "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/mousedown_event": {
+    "modified": "2019-03-23T23:47:20.727Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Bedi",
+      "Mgjbot",
+      "Ptak82"
+    ]
+  },
+  "Web/API/Element/mousemove_event": {
+    "modified": "2019-03-24T00:00:26.392Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Hasilt",
+      "mwysinski",
+      "Bedi"
     ]
   },
   "Web/API/Element/namespaceURI": {
@@ -2471,85 +2431,6 @@
     "modified": "2019-03-18T21:40:36.589Z",
     "contributors": [
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onblur": {
-    "modified": "2020-10-15T22:17:26.802Z",
-    "contributors": [
-      "mateuszpigula",
-      "bartosz-bieniek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2019-03-24T00:04:00.144Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "fscholz",
-      "Bedi",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onfocus": {
-    "modified": "2020-10-15T22:17:27.888Z",
-    "contributors": [
-      "bartosz-bieniek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeydown": {
-    "modified": "2019-03-23T23:46:41.310Z",
-    "contributors": [
-      "AshfaqHossain",
-      "Mgjbot",
-      "Ptak82",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeypress": {
-    "modified": "2019-03-23T23:41:39.155Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onkeyup": {
-    "modified": "2019-03-23T23:46:25.129Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "Mgjbot",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onload": {
-    "modified": "2019-03-24T00:18:31.426Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "AshfaqHossain",
-      "wojciech.fornal",
-      "Ptak82"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmousedown": {
-    "modified": "2019-03-23T23:47:20.727Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Bedi",
-      "Mgjbot",
-      "Ptak82"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/onmousemove": {
-    "modified": "2019-03-24T00:00:26.392Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Hasilt",
-      "mwysinski",
-      "Bedi"
     ]
   },
   "Web/API/HTMLCanvasElement": {
@@ -2904,6 +2785,24 @@
       "Mgjbot",
       "Ptak82",
       "Jan Dudek"
+    ]
+  },
+  "Web/API/MouseEvent/layerX": {
+    "modified": "2019-03-23T23:41:12.332Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Jan Dudek",
+      "Ptak82"
+    ]
+  },
+  "Web/API/MouseEvent/layerY": {
+    "modified": "2019-03-23T23:41:12.787Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Jan Dudek",
+      "Ptak82"
     ]
   },
   "Web/API/MouseEvent/metaKey": {
@@ -3536,24 +3435,6 @@
       "Ptak82"
     ]
   },
-  "Web/API/UIEvent/layerX": {
-    "modified": "2019-03-23T23:41:12.332Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
-  "Web/API/UIEvent/layerY": {
-    "modified": "2019-03-23T23:41:12.787Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
   "Web/API/UIEvent/view": {
     "modified": "2019-03-23T23:41:50.711Z",
     "contributors": [
@@ -3628,6 +3509,13 @@
       "Rafal2228"
     ]
   },
+  "Web/API/Window/blur_event": {
+    "modified": "2020-10-15T22:17:26.802Z",
+    "contributors": [
+      "mateuszpigula",
+      "bartosz-bieniek"
+    ]
+  },
   "Web/API/Window/closed": {
     "modified": "2019-03-23T23:49:15.119Z",
     "contributors": [
@@ -3699,6 +3587,12 @@
       "Robson"
     ]
   },
+  "Web/API/Window/focus_event": {
+    "modified": "2020-10-15T22:17:27.888Z",
+    "contributors": [
+      "bartosz-bieniek"
+    ]
+  },
   "Web/API/Window/frameElement": {
     "modified": "2019-03-23T23:49:48.399Z",
     "contributors": [
@@ -3728,6 +3622,16 @@
       "Witia",
       "Ptak82",
       "Rev"
+    ]
+  },
+  "Web/API/Window/load_event": {
+    "modified": "2019-03-24T00:18:31.426Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "AshfaqHossain",
+      "wojciech.fornal",
+      "Ptak82"
     ]
   },
   "Web/API/Window/localStorage": {
@@ -4191,7 +4095,7 @@
       "P0lip"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2019-03-23T22:10:25.437Z",
     "contributors": [
       "Krenair"
@@ -4229,6 +4133,13 @@
     "modified": "2019-03-18T21:39:51.689Z",
     "contributors": [
       "andrzejkrecicki"
+    ]
+  },
+  "Web/CSS/CSS_Fonts": {
+    "modified": "2019-01-22T18:17:17.900Z",
+    "contributors": [
+      "teoli",
+      "Witia"
     ]
   },
   "Web/CSS/CSS_Grid_Layout": {
@@ -5424,13 +5335,6 @@
       "Witia"
     ]
   },
-  "Web/HTML/Element/basefont": {
-    "modified": "2019-01-22T18:17:17.900Z",
-    "contributors": [
-      "teoli",
-      "Witia"
-    ]
-  },
   "Web/HTML/Element/bdo": {
     "modified": "2019-03-18T21:12:41.027Z",
     "contributors": [
@@ -5832,6 +5736,12 @@
       "drm404"
     ]
   },
+  "Web/HTTP/Status/404": {
+    "modified": "2019-07-15T09:45:26.682Z",
+    "contributors": [
+      "Siudzi"
+    ]
+  },
   "Web/JavaScript": {
     "modified": "2020-03-12T19:36:18.888Z",
     "contributors": [
@@ -5929,15 +5839,6 @@
       "maciejmarczak"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2019-01-16T16:02:28.093Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2019-01-16T15:45:03.435Z",
     "contributors": [
@@ -6031,7 +5932,7 @@
       "pceuropa"
     ]
   },
-  "Web/JavaScript/Language_Resources": {
+  "Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2019-01-16T16:04:32.529Z",
     "contributors": [
       "teoli",
@@ -6633,15 +6534,6 @@
       "kwarpechowski"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/toSource": {
-    "modified": "2019-03-23T23:49:50.954Z",
-    "contributors": [
-      "teoli",
-      "Diablownik",
-      "Mgjbot",
-      "Ptak82"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T23:47:24.621Z",
     "contributors": [
@@ -6715,18 +6607,6 @@
       "Internauta1024A",
       "Ptak82",
       "Mgjbot",
-      "Marcoos"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
-    "modified": "2019-03-23T23:58:05.520Z",
-    "contributors": [
-      "teoli",
-      "Witia",
-      "Mgjbot",
-      "Ptak82",
-      "telendt",
-      "Takenbot",
       "Marcoos"
     ]
   },
@@ -7126,13 +7006,6 @@
       "Ptak82"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toSource": {
-    "modified": "2019-03-23T23:43:26.646Z",
-    "contributors": [
-      "teoli",
-      "Ptak82"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2019-03-23T23:46:38.804Z",
     "contributors": [
@@ -7200,12 +7073,6 @@
     "contributors": [
       "fscholz",
       "adam-tokarski"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Error/toSource": {
-    "modified": "2020-10-15T22:32:18.167Z",
-    "contributors": [
-      "jangromko"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Error/toString": {
@@ -7787,16 +7654,6 @@
       "Ptak82"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Object/toSource": {
-    "modified": "2019-03-23T23:53:51.317Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Ptak82",
-      "Takenbot",
-      "Marcoos"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Object/toString": {
     "modified": "2019-03-23T23:48:38.071Z",
     "contributors": [
@@ -7920,14 +7777,6 @@
       "Chrisraven",
       "Ptak82",
       "Nux",
-      "Mgjbot"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/toSource": {
-    "modified": "2019-03-23T23:47:09.941Z",
-    "contributors": [
-      "teoli",
-      "Ptak82",
       "Mgjbot"
     ]
   },
@@ -8157,15 +8006,6 @@
       "Ptak82"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/toSource": {
-    "modified": "2019-03-23T23:45:16.121Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Ptak82",
-      "Diablownik"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/toString": {
     "modified": "2019-03-23T23:48:31.894Z",
     "contributors": [
@@ -8267,12 +8107,6 @@
       "Ptak82",
       "Internauta1024A",
       "Takenbot"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/null": {
-    "modified": "2020-03-12T19:45:50.208Z",
-    "contributors": [
-      "JacobDesight"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/parseFloat": {
@@ -8462,6 +8296,12 @@
     "modified": "2020-03-12T19:45:06.300Z",
     "contributors": [
       "ssuperczynski"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/null": {
+    "modified": "2020-03-12T19:45:50.208Z",
+    "contributors": [
+      "JacobDesight"
     ]
   },
   "Web/JavaScript/Reference/Operators/super": {
@@ -10135,6 +9975,24 @@
       "gandalf"
     ]
   },
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2019-01-16T16:02:28.093Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
+    "modified": "2019-03-23T23:49:50.954Z",
+    "contributors": [
+      "teoli",
+      "Diablownik",
+      "Mgjbot",
+      "Ptak82"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
     "modified": "2019-03-23T23:58:08.032Z",
     "contributors": [
@@ -10146,6 +10004,18 @@
       "Marcoos"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean/toString": {
+    "modified": "2019-03-23T23:58:05.520Z",
+    "contributors": [
+      "teoli",
+      "Witia",
+      "Mgjbot",
+      "Ptak82",
+      "telendt",
+      "Takenbot",
+      "Marcoos"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Date": {
     "modified": "2019-01-16T14:55:06.466Z",
     "contributors": [
@@ -10153,6 +10023,13 @@
       "Witia",
       "Marcoos",
       "Mgjbot",
+      "Ptak82"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
+    "modified": "2019-03-23T23:43:26.646Z",
+    "contributors": [
+      "teoli",
       "Ptak82"
     ]
   },
@@ -10171,6 +10048,12 @@
     "contributors": [
       "mitelak",
       "fscholz"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
+    "modified": "2020-10-15T22:32:18.167Z",
+    "contributors": [
+      "jangromko"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Number": {
@@ -10194,6 +10077,16 @@
       "Marcoos"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString": {
+    "modified": "2019-03-23T23:53:51.317Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Ptak82",
+      "Takenbot",
+      "Marcoos"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/RangeError": {
     "modified": "2019-03-23T22:51:15.660Z",
     "contributors": [
@@ -10208,6 +10101,14 @@
       "Ptak82"
     ]
   },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/RegExp/toString": {
+    "modified": "2019-03-23T23:47:09.941Z",
+    "contributors": [
+      "teoli",
+      "Ptak82",
+      "Mgjbot"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
     "modified": "2019-03-18T20:37:36.182Z",
     "contributors": [
@@ -10215,6 +10116,15 @@
       "teoli",
       "Mgjbot",
       "Ptak82"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
+    "modified": "2019-03-23T23:45:16.121Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Ptak82",
+      "Diablownik"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Lexical_grammar": {

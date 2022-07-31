@@ -7,7 +7,7 @@ translation_of: Web/API/EventTarget/addEventListener
 
 \>La méthode **`addEventListener()`** de {{domxref("EventTarget")}} attache une fonction à appeler chaque fois que l'évènement spécifié est envoyé à la cible.
 
-Les cibles courantes sont un {{domxref("Element")}}, le {{domxref("Document")}} lui-même et une {{domxref("Window")}}, mais on peut tout à fait cible n'importe quel objet prenant en charge les évènements (comme {{domxref("XMLHttpRequest")}}).
+Les cibles courantes sont un {{domxref("Element")}}, le {{domxref("Document")}} lui-même et une {{domxref("Window")}}, mais on peut tout à fait cibler n'importe quel objet prenant en charge les évènements (comme {{domxref("XMLHttpRequest")}}).
 
 `addEventListener()` agit en ajoutant une fonction ou un objet qui implémente {{domxref("EventListener")}} à la liste des gestionnaires d'évènement pour le type d'évènement spécifié sur la cible ({{domxref("EventTarget")}}) à partir de laquelle il est appelé.
 

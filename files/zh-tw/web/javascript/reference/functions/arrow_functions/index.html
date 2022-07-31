@@ -60,12 +60,12 @@ elements.<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
 
 // 上方這種一般的函式，可以被改寫成下方的箭頭函式
 elements.map((element) =&gt; {
-  return element.length;
+  return element.length;
 }); // [8, 6, 7, 9]
 
 // 如果輸入的參數只有一個，我們可以移除掉外面的括號
 elements.map(element =&gt; {
-  return element.length;
+  return element.length;
 }); // [8, 6, 7, 9]
 
 // 當箭頭函式裡的內容只有'return'的時候，我們可以拿掉return和外面的大括號
@@ -84,7 +84,7 @@ elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]
 
 <h3 id="this_不分家"><code>this</code> 不分家</h3>
 
-<p>在有箭頭函數之前，每個新函式是依據如何被呼叫來定義自己的 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 變數<br>
+<p>在有箭頭函數之前，每個新函式是依據如何被呼叫來定義自己的 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/this">this</a></code> 變數<br>
  例如:</p>
 
 <ul>
@@ -102,7 +102,7 @@ elements.map(({ length }) =&gt; length); // [8, 6, 7, 9]
 
   setInterval(function growUp() {
     // 在非嚴格模式下, growUp() 函式把 this 定義為全域物件
-    // (因為那是 growUp()執行的所在)，
+    // (因為那是 growUp()執行的所在)，
     // 與 Person() 建構式所定義的 this 有所不同
     this.age++;
   }, 1000);
@@ -243,7 +243,7 @@ console.log(Foo.prototype); // undefined
 
 <h3 id="使用關鍵字_yield">使用關鍵字 <code>yield</code></h3>
 
-<p><code><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 關鍵字無法用於箭頭函式的 body（except when permitted within functions further nested within it）。因此，箭頭函式無法使用 generator。</p>
+<p><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 關鍵字無法用於箭頭函式的 body（except when permitted within functions further nested within it）。因此，箭頭函式無法使用 generator。</p>
 
 <h2 id="函式主體（Function_body）">函式主體（Function body）</h2>
 
@@ -278,7 +278,7 @@ var func = () =&gt; ({ foo: function() {} }); </code>
 
 <h2 id="Parsing_order">Parsing order</h2>
 
-<p>箭頭函式的箭頭儘管不是操作符，但藉著<a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">運算子優先等級</a>，箭頭函式有著和普通函式不相同的特殊解析規則。</p>
+<p>箭頭函式的箭頭儘管不是操作符，但藉著<a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">運算子優先等級</a>，箭頭函式有著和普通函式不相同的特殊解析規則。</p>
 
 <pre class="brush: js"><code>let callback;
 
@@ -310,20 +310,7 @@ var double = arr.map(v =&gt; v * 2);       // [10, 12, 26, 0, 2, 36, 46]
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

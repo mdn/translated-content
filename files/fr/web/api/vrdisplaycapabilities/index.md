@@ -24,7 +24,7 @@ Cet interface est accessible à partir de la propriété {{domxref("VRDisplay.ca
 
 ## Exemples
 
-    TBD.
+TBD.
 
 ## Spécifications
 

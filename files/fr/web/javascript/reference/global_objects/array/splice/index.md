@@ -18,7 +18,9 @@ La méthode **`splice()`** modifie le contenu d'un tableau en retirant des élé
 
 ## Syntaxe
 
-    var tabElementsSupprimes = array.splice(début, nbASupprimer[, élem1[, élem2[, ...]]])
+```js
+var tabElementsSupprimes = array.splice(début, nbASupprimer[, élem1[, élem2[, ...]]])
+```
 
 ### Paramètres
 

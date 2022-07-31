@@ -16,12 +16,14 @@ La méthode **`finally()`** renvoie un objet `Promise` et accepte en argument un
 
 ## Syntaxe
 
-    p.finally(onFinally);
+```js
+p.finally(onFinally);
 
-    p.finally(function() {
-       // appelée dans tous les
-       // cas de terminaison
-    });
+p.finally(function() {
+  // appelée dans tous les
+  // cas de terminaison
+});
+```
 
 ### Paramètres
 

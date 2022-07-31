@@ -14,7 +14,9 @@ L'opérateur **`await`** permet d'attendre la résolution d'une promesse ({{jsxr
 
 ## Syntaxe
 
-    [rv] = await expression;
+```js
+[rv] = await expression;
+```
 
 - `expression`
   - : Une promesse ({{jsxref("Promise")}}) ou toute autre valeur dont on souhaite attendre la résolution.

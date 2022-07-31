@@ -11,7 +11,9 @@ Retourne l'élément {{HTMLElement("head")}} du document courant. S'il y a plus 
 
 ## Syntaxe
 
-    var objRef = document.head;
+```js
+var objRef = document.head;
+```
 
 ## Exemple
 

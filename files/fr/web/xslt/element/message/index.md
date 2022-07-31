@@ -12,9 +12,11 @@ L'élément `<xsl:message>` écrit un message de sortie (dans la console JavaScr
 
 ### Syntaxe
 
-    <xsl:message terminate="yes" | "no" >
-    	MODÈLE
-    </xsl:message>
+```xml
+<xsl:message terminate="yes" | "no" >
+  MODÈLE
+</xsl:message>
+```
 
 ### Attributs obligatoires
 

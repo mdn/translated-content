@@ -19,7 +19,9 @@ La méthode **`Object.preventExtensions()`** permet d'empêcher l'ajout de nouve
 
 ## Syntaxe
 
-    Object.preventExtensions(obj)
+```js
+Object.preventExtensions(obj)
+```
 
 ### Paramètres
 

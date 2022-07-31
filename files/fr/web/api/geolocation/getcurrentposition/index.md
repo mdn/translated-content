@@ -14,7 +14,9 @@ La méthode **`Geolocation.getCurrentPosition()`** fournit la position actuelle 
 
 ## Syntaxe
 
-    navigator.geolocation.getCurrentPosition(success[, error[, [options]])
+```js
+navigator.geolocation.getCurrentPosition(success[, error[, [options]])
+```
 
 ### Paramètres
 

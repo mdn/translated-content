@@ -17,7 +17,9 @@ C'est d'autant plus important pour les intranets et autres sites non-publics; s'
 
 Quand un attribut de gestion d'évenement (`onclick`, `onmouseover`, etc) est utilisé sur un élément HTML, toutes les résolutions de variable dans l'attribut sont d'abord résolues sur l'élément lui-même, puis sur le formulaire contenant l'élément (si c'est un élément de formulaire), puis sur `document`, puis finalement sur `window` (là où se trouvent les variables globales que vous avez définies).Par exemple, si vous avez le balisage suivant :
 
-    <div onclick="alert(ownerDocument)">Cliquez moi</div>
+```html
+<div onclick="alert(ownerDocument)">Cliquez moi</div>
+```
 
 Alors cliquer sur le texte affichera le `ownerDocument` du `div`. Il en sera toujours ainsi, même s'il y a une `var ownerDocument` déclarée dans l'espace de visibilité global.
 
@@ -26,12 +28,14 @@ Si cela arrive, alors soudainement votre function ne sera plus appellée. Ceci e
 
 Pour éviter ce problème, qualifiez complétement vos variables globales en utilisant `window.`, comme ceci :
 
-    <script>
-      function nomLocal() {
-        alert('La fonction nomLocal a été appellée.');
-      }
-    </script>
-    <div onclick="window.nomLocal()">Cliquer ici devrait faire apparaitre un message.<div>
+```html
+<script>
+  function nomLocal() {
+    alert('La fonction nomLocal a été appellée.');
+  }
+</script>
+<div onclick="window.nomLocal()">Cliquer ici devrait faire apparaitre un message.<div>
+```
 
 ### Ne concatenez pas les scripts dont vous n'avez pas le contrôle.
 

@@ -1,79 +1,62 @@
 ---
 title: Écrire et référencer une entrée de glossaire
 slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
-tags:
-  - Comment…
-  - Glossaire
-  - Guide
-  - MDN Méta(2)
 translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
 {{MDNSidebar}}
 
-Le [glossaire](/fr/docs/Glossary) MDN est le lieu privilégié où nous définissons la terminologie, le jargon et les abréviations utilisés dans la documentation et les codes.  Contribuer à ce glossaire est une moyen simple de rendre le Web plus compréhensible pour n'importe qui. Nul besoin de posséder un haut niveau de compétence pour écrire des entrées du glossaire,  elles doivent rester simples et évidentes.
+Dans cet article, nous allons voir comment ajouter des entrées au [glossaire MDN Web Docs](/fr/docs/Glossary) et comment y faire référence. Nous verrons également quelques règles quant à la structure et au contenu des entrées du glossaire. Le glossaire fournit des définitions pour tous les termes, abréviations, acronymes et tout le jargon que vous pourrez rencontrer en consultant le contenu de MDN à propos du Web et du développement web.
 
-## Comment créer une entrée
+Le glossaire ne sera potentiellement jamais complet, car le Web est en perpétuelle évolution. En contribuant à l'édition de nouvelles entrées ou en corrigeant les erreurs, vous pouvez nous aider à mettre à jour le glossaire et à améliorer son contenu.
 
-Pour trouver des sujets ayant besoin d'entrées de glossaire, consultez la [liste des termes à documenter](/fr/docs/Glossary#Contribute_to_the_glossary) à la fin de la page concernant le sujet en question ; cliquez n'importe lequel de ses liens pour commencer une nouvelle page de glossaire, puis suivez les étapes ci-dessous.
+Contribuer au glossaire est une façon simple de rendre le Web plus compréhensible pour tout le monde. Il n'est pas nécessaire d'avoir des compétences techniques approfondies pour le faire. Les entrées du glossaire sont conçues pour être simples et concises.
 
-### Étape 1: écrire un résumé
+> **Note :** La suite de cet article explique comment créer une entrée du glossaire. Toutefois, la structure du contenu de MDN utilise le contenu anglophone comme référence. Aussi, toute page devra d'abord être créée en anglais avant d'être localisée en français. Vous pouvez également aider à la traduction du glossaire en français, voir [Localiser MDN](/fr/docs/MDN/Contribute/Localize).
 
-Le premier paragraphe d'une page de glossaire consiste en une description courte et simple du terme — de préférence n'exédant pas les deux lignes. Assurez-vous que n'importe qui lisant cette description puisse immédiatement saisir le sens du terme concerné.
+## Comment rédiger une entrée
 
-> **Note :** ne copiez-collez pas la définition d'un autre endroit (spécialement pas de Wikipédia, puisque leurs licences sont réduites et donc incompatiles avec celles de MDN).
+Tout d'abord, choisissez un sujet pour lequel vous souhaiteriez écrire une entrée dans le glossaire.
 
-> **Note :** il est important également de s'assurer que le contenu est simple et compréhensible. Cela vaut la peine de passer un peu de temps dessus plutôt que de trahir le sens. Ce glossaire doit contenir du contenu nouveau et utile, pas répéter ce que l'on peut trouver partout ailleurs.
+Si vous avez une idée pour une nouvelle entrée, [créez une nouvelle page](https://github.com/mdn/content#adding-a-new-document) pour ce terme, sous [la page du glossaire](https://github.com/mdn/content/tree/main/files/en-us/glossary).
 
-Les liens conduisant à cette entrée de glossaire feront apparaitre ce résumé au survol de la souris, de telle sorte que le lecteur pourra obtenir une définition sans avoir à naviguer jusqu'à la page concernée (voyez ci-dessous comment insérer un lien vers une entrée de glossaire avec la macro \\{{Glossary}}).
+### Écrire un résumé
 
-Si vous y tenez, vous pouvez ajouter quelques paragraphes supplémentaires, mais prenez garde de ne pas vous retrouver à écrire tout un article. Écrire un article complet est une bonne chose, mais ne le placez pas dans le glossaire. Si vous ne savez pas où placer cet article, n'hésitez pas à [prendre la parole pour en parler ici](/fr/docs/MDN/Community#Join_our_mailing_lists).
+Pour toute page du glossaire, le premier paragraphe consiste en une description simple et concise du terme. Idéalement, ce paragraphe ne devrait pas dépasser deux phrases. Assurez-vous que toute personne qui lit cette description peut immédiatement comprendre le terme qui est défini.
 
-### Étape 2 : offrir d'autres sources
+> **Note :** Veillez à ne pas copier-coller de définitions ou de contenus provenant d'autres pages sur Internet, notamment depuis Wikipédia (les versions de sa licence sont plus restreintes et incompatibles avec celle de MDN). Le contenu de votre entrée de glossaire doit être original.
 
-Pour terminer, une entrée de glossaire devrait toujours s'achever sur une section « En savoir plus ». Cette section devrait contenir des liens qui aideront le lecteur à aller plus loin : découvrir le sujet plus en détail, apprendre à utiliser la technologie en question, etc.
+#### Rédiger une bonne entrée dans le glossaire
 
-Il est recommandé de trier ces liens en au moins trois groupes :
+Ajoutez quelques paragraphes si nécessaire, mais attention au risque d'écrire un article complet. Un article complet est intéressant mais n'a pas sa place dans le glossaire. Si vous n'êtes pas certaine ou certain de l'emplacement de votre page, n'hésitez pas à [nous contacter pour en discuter](/fr/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
 
-- Connaissance générale
-  - : Liens qui fournissent plus d'information générale ; par exemple, un lien vers [Wikipédia](http://fr.wikipedia.org/) est un excellent début.
-- Références techniques
-  - : Liens vers une information technique plus avancée, sur MDN par exemple.
-- Apprentissage et tutoriels
-  - : Liens vers des tutoriels, des exercices ou tout autre matériel susceptible d'apprendre au lecteur à maitriser les technologies liées au terme défini.
+Voici quelques lignes directrices à garder à l'esprit pour écrire une bonne entrée de glossaire&nbsp;:
 
-## Termes suggérés
+- Lorsque vous utilisez des termes ou des abréviations dans la description du terme, veillez à créer les liens correspondants. Généralement, cela consiste à créer des liens vers les autres pages du glossaire.
+- Utilisez les termes associés appropriés avec des liens si cela peut être effectué sans que l'article soit difficile à suivre. Avoir un réseau de pages liées entre elles avec des liens utiles sera plus simple à utiliser.
+- Pensez aux mots-clés que vous utiliseriez lors d'une recherche pour trouver cette page. Essayez alors de les utiliser sur cette page (sans non plus que l'entrée devienne incohérente, longue ou difficilement lisible).
 
-Vous désirez contribuer mais vous ignorez quel terme doit être défini ? [Voici une liste](https://developer.mozilla.org/fr/docs/Glossary#Contribute_to_the_glossary) de suggestions. Cliquez un mot et lancez-vous !
+### Ajouter des liens
 
-## Gérer les ambiguïtés
+Une entrée du glossaire devrait toujours finir par une section _En savoir plus_. Dans cette section, on devrait trouver des liens qui aident la lectrice ou le lecteur à aller plus loin en découvrant plus de détails, ou en apprenant à utiliser la technologie associée.
 
-Parfois, en fonction du contexte, un même terme peut connaitre plusieurs définitions. Pour traiter ces ambiguïtés, vous devez suivre ce guide :
+Une bonne pratique consiste à organiser ces liens en trois groupes&nbsp;:
 
-- La page principale du terme doit être une page de « désambiguïsation » contenant la macro {{TemplateLink("GlossaryDisambiguation")}}.
-- Des sous-pages définissent ensuite le terme dans chacun de ses contextes propres.
+- Connaissances générales
+  - : Ces liens fournissent des informations généralistes à propos du terme ou du sujet. Il peut par exemple s'agir d'un lien vers une page [Wikipédia](https://www.wikipedia.org/) correspondante.
+- Référence technique
+  - : Ces liens fournissent des ressources avec des informations techniques détaillées, sur MDN ou d'autres sites.
+- En apprendre plus
+  - : Ce sont des liens vers des tutoriels, des exercices, des exemples ou tout autre contenu éducatif qui aide à l'apprentissage.
 
-Illustrons cela par un exemple. Le terme _signature_ peut avoir différentes significations dans au moins trois contextes différents : la _sécurité_, les _fonctions_ et les _mèls_.
+## Gérer les homonymies et ambiguïtés
 
-1.  La page [Glossaire/Signature](/fr/docs/Glossary/Signature) est la page de « désambiguïsation » avec la macro {{TemplateLink("GlossaryDisambiguation")}} macro.
-2.  La sous-page [Glossaire/Signature/Sécurité](/fr/docs/Glossary/Signature/Security) est la page définissant le terme dans le contexte de la sécurité informatique.
-3.  La sous-page [Glossaire/Signature/Fonction](/fr/docs/Glossary/Signature/Function) est la page définissant les _signatures de fonction_.
-4.  La sous-page [Glossaire/Signature/Mèl](/en-US/docs/Glossary/Signature/Email) est la page définissant les signatures de mèl.
+Certains termes peuvent avoir plusieurs significations selon le contexte. Pour résoudre ces ambiguïtés, on suivra les règles suivantes&nbsp;:
 
-## Utiliser la macro \\{{Glossary}}
+- La page principale du terme doit être une page de désambiguïsation contenant la macro [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs).
+- Les sous-pages de cette page principale définissent le terme dans les différents contextes.
 
-Le glossaire devient beaucoup plus utile lorsque le lecteur peut atteindre les définitions depuis un autre document sans avoir à naviguer hors de ce document. C'est la raison pour laquelle nous vous incitons à créer des liens vers le glossaire dès que vous le pouvez, en utilisant la macro {{TemplateLink("Glossary")}} :
+Prenons un exemple pour illustrer ce cas. Le terme _signature_ peut avoir plusieurs sens, dans au moins deux contextes&nbsp;: la sécurité cryptographique d'une part, et les fonctions d'autre part.
 
-| Macro                                                      | Result                                               | Note                                                                                                                                                    |
-| ---------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \\{{Glossary("browser")}}                         | {{Glossary("browser")}}                     | Quand un terme correspond à un terme à définir, utilisez simplement la macro telle quelle (notez qu'elle est sensible à la casse — minuscule/majuscule) |
-| \\{{Glossary("browser", "Web browser")}}     | {{Glossary("browser","Web browser")}}     | Fournissez en deuxième argument un texte alternatif à afficher.                                                                                         |
-| \\{{Glossary("browser", "Web browser", 1)}} | {{Glossary("browser","Web browser",1)}} | Optionnellement, entrez le chiffre `1` comme troisième argument pour afficher le lien de façon classique plutôt que comme une mise en exergue subtile.  |
-
-Les liens créés avec la macro \\{{Glossary}} affichent toujours un texte au survol de la souris, qui contient le résumé de l'entrée du glossaire (cf. ci-dessus).
-
-### Conventions
-
-Dans la plupart des cas, sur MDN, l'usage de la macro est sûr. Il y a cependant quelques exceptions que vous devez aborder avec précaution :
-
-- Si un terme est déjà lié à une autre partie de MDN, n'y touchez pas et n'utilisez pas la macro \\{{Glossary}}.
-- À l'intérieur d'une même section d'article, n'utilisez la macro \\{{Glossary}} qu'une seule fois pour le même terme (_astuce : une section commence toujours par un titre_).
+1. La page [Glossary/Signature](/fr/docs/Glossary/Signature) constitue la page de désambiguïsation avec la macro [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs).
+2. La page [Glossary/Signature/Security](/fr/docs/Glossary/Signature/Security) est celle qui définit le terme dans le contexte de la sécurité.
+3. La page [Glossary/Signature/Function](/fr/docs/Glossary/Signature/Function) est celle qui définit la signature d'une fonction.

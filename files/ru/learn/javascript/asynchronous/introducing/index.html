@@ -109,7 +109,7 @@ let blob = response.blob();
 <p>Вы можете написать свою собственную функцию, содержащую колбэк-функцию. Давайте взглянем на ещё один пример, в котором происходит загрузка ресурсов через <a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">запустите пример</a>, и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">посмотрите исходный код</a>):</p>
 
 <pre class="brush: js">function loadAsset(url, type, callback) {
-  let xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.responseType = type;
 
@@ -121,9 +121,9 @@ let blob = response.blob();
 }
 
 function displayImage(blob) {
-  let objectURL = URL.createObjectURL(blob);
+  const objectURL = URL.createObjectURL(blob);
 
-  let image = document.createElement('img');
+  const image = document.createElement('img');
   image.src = objectURL;
   document.body.appendChild(image);
 }
@@ -148,17 +148,18 @@ gods.forEach(function (eachName, index){
 
 <p>Промисы — новый стиль написания асинхронного кода, который используется в современных Web API. Хорошим примером является <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code> API, который современнее и эффективнее чем {{domxref("XMLHttpRequest")}}. Посмотрим на краткий пример, из нашей статьи <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a>:</p>
 
-<pre class="brush: js">fetch('products.json').then(function(response) {
-  return response.json();
-}).then(function(json) {
-  products = json;
-  initialize();
-}).catch(function(err) {
-  console.log('Ошибка загрузки: ' + err.message);
-});</pre>
+<pre class="brush: js">fetch('products.json')
+  .then( response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then( json => initialize(json) )
+  .catch( err => console.error(`Fetch problem: ${err.message}`) );</pre>
 
 <div class="blockIndicator note">
-<p><strong>Примечание</strong>: вы можете посмотреть законченную версию на github (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">посмотрите исходный код</a> и <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">запустите пример</a>).</p>
+<p><strong>Примечание</strong>: вы можете посмотреть законченную версию на github (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js">посмотрите исходный код</a> и <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/">запустите пример</a>).</p>
 </div>
 
 <p>В примере видно, как <code>fetch()</code> принимает один параметр — URL ресурса, который нужно  получить из сети, — и возвращает <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">промис</a>. Промис — это объект, представляющий асинхронную операцию, выполненную удачно или неудачно. Он представляет собой как бы промежуточное состояние. По сути, это способ браузера сказать: "я обещаю вернуться к вам с ответом как можно скорее", поэтому в дословном переводе "промис" (promise) означает "обещание".</p>
@@ -166,7 +167,7 @@ gods.forEach(function (eachName, index){
 <p>Может понадобиться много времени, чтобы привыкнуть к данной концепции; это немного напоминает {{interwiki("wikipedia", "Кот Шрёдингера")}} в действии. Ни один из возможных результатов ещё не произошёл, поэтому операция fetch в настоящее время ожидает результата. Далее у нас есть три блока кода следующих сразу после <code>fetch()</code>:</p>
 
 <ul>
- <li>Два <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> блока. Оба включают в себя функцию обратного, которая запустится, если предыдущая операция закончилась успешно, и каждая колбэк-функция принимает на вход результат предыдущей успешно выполненной операции, таким образом вы можете выполнять операции последовательно. Каждый <code>.then()</code> блок возвращает новый promise, это значит что вы можете объединять в цепочки блоки <code>.then()</code>, таким образом можно выполнить несколько асинхронных операций по порядку, одну за другой.</li>
+ <li>Два <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> блока. Оба включают в себя функцию обратного вызова, которая запустится, если предыдущая операция закончилась успешно, и каждая колбэк-функция принимает на вход результат предыдущей успешно выполненной операции, таким образом вы можете выполнять операции последовательно. Каждый <code>.then()</code> блок возвращает новый promise, это значит что вы можете объединять в цепочки блоки <code>.then()</code>, таким образом можно выполнить несколько асинхронных операций по порядку, одну за другой.</li>
  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">catch()</a></code> блок описывается в конце и будет запущен если какой-либо <code>.then()</code> блок завершится с ошибкой — это аналогично синхронному <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code>, ошибка становится доступной внутри <code>catch()</code>, что может быть использовано для сообщения пользователю о типе возникшей ошибки. Однако синхронный <code>try...catch</code> не будет работать с promise, хотя будет работать с <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">async/await</a>, с которыми вы познакомитесь позже.</li>
 </ul>
 
@@ -176,7 +177,7 @@ gods.forEach(function (eachName, index){
 
 <h3 id="Очередь_событий">Очередь событий</h3>
 
-<p>Асинхронные операции, такие как промисы, помещаются в <strong>очередь событий</strong>, которая запускается после завершения обработки основного потока, чтобы они <em>не блокировали</em> выполнение JavaScript-кода. Поставленные в очередь операции завершатся как можно скорее, а затем вернут свои результаты в среду JavaScript  .</p>
+<p>Асинхронные операции, такие как промисы, помещаются в <strong>очередь событий</strong>, которая запускается после завершения обработки основного потока, чтобы они <em>не блокировали</em> выполнение JavaScript-кода. Поставленные в очередь операции завершатся как можно скорее, а затем вернут свои результаты в среду JavaScript.</p>
 
 <h3 id="Промисы_и_колбэк-функции">Промисы и колбэк-функции</h3>
 
@@ -202,7 +203,7 @@ fetch('coffee.jpg').then((response) =&gt; {
   console.log('It worked :)')
   return response.blob();
 }).then((myBlob) =&gt; {
-  let objectURL = URL.createObjectURL(myBlob);
+  const objectURL = URL.createObjectURL(myBlob);
   image = document.createElement('img');
   image.src = objectURL;
   document.body.appendChild(image);

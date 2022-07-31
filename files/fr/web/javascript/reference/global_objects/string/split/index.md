@@ -19,7 +19,9 @@ La méthode **`split()`** divise une [chaîne de caractères](/fr/docs/Web/JavaS
 
 ## Syntaxe
 
-    str.split([separator[, limit]])
+```js
+str.split([separator[, limit]])
+```
 
 ### Paramètres
 

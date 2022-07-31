@@ -20,8 +20,10 @@ La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque �
 
 ## Syntaxe
 
-    arr.forEach(callback);
-    arr.forEach(callback, thisArg);
+```js
+arr.forEach(callback);
+arr.forEach(callback, thisArg);
+```
 
 ### Paramètres
 
@@ -211,7 +213,7 @@ var obj2 = copie(obj1); // obj2 ressemble désormais à obj1
 Dans l'exemple qui suit, on utilise un tableau qui contient quatre élément : `"un"`, `"deux"`, `"trois"`, `"quatre"`. Lorsque le parcours du tableau arrive à l'élément `"deux"`, on décale le tableau d'un cran vers les premiers éléments. Aussi, l'élément `"quatre"` est décalé à la place de `"trois"` et `"trois"` est déplacé à la place de `"deux"`. Pour cette raison, lorsque `forEach` poursuit son parcours, elle saute la valeur "trois". Autrement dit, `forEach` n'utilise pas une copie du tableau au moment où elle est appelée, elle manipule le tableau directement. On voit aussi dans cet exemple que les éléments non initialisés ne sont pas traités par la fonction de rappel.
 
 ```js
-var mots = ["un", "deux", "trois",, "quatre"];
+var mots = ["un", "deux", "trois", "quatre"];
 mots.forEach(function(mot) {
   console.log(mot);
   if (mot === "deux") {

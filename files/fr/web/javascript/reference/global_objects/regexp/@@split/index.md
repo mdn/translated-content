@@ -19,7 +19,9 @@ La méthode **`[@@split]()`** permet de découper une chaîne de caractères ({{
 
 ## Syntaxe
 
-    regexp[Symbol.split](str[, limite])
+```js
+regexp[Symbol.split](str[, limite])
+```
 
 ### Paramètres
 

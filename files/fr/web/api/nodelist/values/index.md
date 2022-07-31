@@ -16,7 +16,9 @@ La méthode **`NodeList.values()`** renvoie un {{jsxref("Les_protocoles_iteratio
 
 ## Syntaxe
 
-    nodeList.values();
+```js
+nodeList.values();
+```
 
 ### Valeur retournée
 
@@ -44,9 +46,11 @@ for(var value of list.values()) {
 
 Le résultat est :
 
-    <p>
-    #text "hey"
-    <span>
+```
+<p>
+#text "hey"
+<span>
+```
 
 ## Spécifications
 

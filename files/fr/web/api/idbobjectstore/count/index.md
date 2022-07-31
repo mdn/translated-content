@@ -17,7 +17,9 @@ La méthode **`count()`**, rattachée à l'interface {{domxref("IDBObjectStore")
 
 ## Syntaxe
 
-    var requete = ObjectStore.count(optionalKeyRange);
+```js
+var requete = ObjectStore.count(optionalKeyRange);
+```
 
 ### Paramètres
 

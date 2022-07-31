@@ -37,7 +37,7 @@ browser-compat: javascript.builtins.Map.forEach
   <dt><code><var>key</var></code> {{Optional_Inline}}</dt>
   <dd>每个迭代的键。</dd>
   <dt><code><var>map</var></code> {{Optional_Inline}}</dt>
-  <dd>被迭代的map（上文语法框中的 <code><var>myMap</var></code>）。</dd>
+  <dd>被迭代的 map（上文语法框中的 <code><var>myMap</var></code>）。</dd>
  </dl>
  </dd>
  <dt><code><var>thisArg</var></code> {{Optional_Inline}}</dt>
@@ -50,7 +50,7 @@ browser-compat: javascript.builtins.Map.forEach
 
 <h2 id="描述">描述</h2>
 
-<p><code>forEach</code> 方法会对map中每个真实存在的键执行一次给定的 <code><var>callback</var></code> 函数。它不会对被删除的键执行函数。然而，它会对每个值为 <code>undefined</code> 的键执行函数。</p>
+<p><code>forEach</code> 方法会对 map 中每个真实存在的键执行一次给定的 <code>callback</code> 函数。它不会对被删除的键执行函数。然而，它会对每个值为 <code>undefined</code> 的键执行函数。</p>
 
 <p><code><var>callback</var></code> 接收<strong>三个参数</strong>：</p>
 
@@ -84,24 +84,11 @@ new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("javascript.builtins.Map.forEach")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 

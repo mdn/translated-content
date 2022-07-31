@@ -17,11 +17,13 @@ La fonction CSS **`counters()`** permet d'obtenir des compteurs imbriqués en re
 
 Cette fonction est généralement utilisée sur des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) mais peut théoriquement être utilisée à tout endroit où une valeur [`<string>`](/fr/docs/Web/CSS/string) est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera `decimal`).
 
-    /* Utilisation simple - style decimal par défaut */
-    counters(countername, '-');
+```css
+/* Utilisation simple - style decimal par défaut */
+counters(countername, '-');
 
-    /* Changement du style d'affichage */
-    counters(countername, '.', upper-roman)
+/* Changement du style d'affichage */
+counters(countername, '.', upper-roman)
+```
 
 Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`counter()`](/fr/docs/Web/CSS/counter_function) doivent être utilisées pour créer du contenu.
 

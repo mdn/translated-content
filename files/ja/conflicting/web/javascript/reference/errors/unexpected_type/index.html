@@ -1,0 +1,63 @@
+---
+title: 'TypeError: can''t access property "x" of "y"'
+slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
+tags:
+  - Error
+  - Errors
+  - JavaScript
+  - TypeError
+translation_of: Web/JavaScript/Reference/Errors/Cant_access_property
+original_slug: Web/JavaScript/Reference/Errors/Cant_access_property
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<p>JavaScript の例外 "can't access property" は、 {{jsxref("undefined")}} または {{jsxref("null")}} の値に対してプロパティのアクセスが行われた場合に発生します。</p>
+
+<h2 id="Message">エラーメッセージ</h2>
+
+<pre class="brush: js">TypeError: Unable to get property {x} of undefined or null reference (Edge)
+TypeError: can't access property {x} of {y} (Firefox)
+TypeError: {y} is undefined, can't access property {x} of it (Firefox)
+TypeError: {y} is null, can't access property {x} of it (Firefox)
+
+例:
+TypeError: x is undefined, can't access property "prop" of it
+TypeError: x is null, can't access property "prop" of it
+TypeError: can't access property "prop" of undefined
+TypeError: can't access property "prop" of null
+</pre>
+
+<h2 id="Error_type">エラーの種類</h2>
+
+<p>{{jsxref("TypeError")}}</p>
+
+<h2 id="What_went_wrong">エラーの原因</h2>
+
+<p>{{jsxref("undefined")}} か {{jsxref("null")}} に対してプロパティアクセスを行いました。</p>
+
+<h2 id="Examples">例</h2>
+
+<h3 id="Invalid_cases">無効な場合</h3>
+
+<pre class="brush: js example-bad">// undefined and null cases on which the substring method won't work
+var foo = undefined;
+foo.substring(1); // TypeError: x is undefined, can't access property "substring" of it
+
+var foo = null;
+foo.substring(1); // TypeError: x is null, can't access property "substring" of it
+</pre>
+
+<h3 id="Fixing_the_issue">問題の修正</h3>
+
+<p><code>undefined</code> か <code>null</code> のヌルポインターアクセスを修正するには、たとえば <a href="/ja/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> 演算子を使用することができます。</p>
+
+<pre class="brush: js">if (typeof foo !== 'undefined') {
+  // Now we know that foo is defined, we are good to go.
+}</pre>
+
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+  <li>{{jsxref("undefined")}}</li>
+  <li>{{jsxref("null")}}</li>
+</ul>

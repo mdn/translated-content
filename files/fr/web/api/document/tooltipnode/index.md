@@ -11,13 +11,13 @@ translation_of: Web/API/Document/tooltipNode
 ---
 {{ ApiRef("DOM") }}
 
-{{draft}}
-
 Renvoie le noeud qui est la cible de l'actuel {{ XULElem("tooltip") }}.
 
 ## Syntaxe
 
-    document.tooltipNode;
+```js
+document.tooltipNode;
+```
 
 ## Spécification
 

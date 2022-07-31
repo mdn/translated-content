@@ -16,7 +16,9 @@ Par défaut, aucun style n'est appliqué. Vous pouvez utiliser cette pseudo-clas
 
 ## Syntaxe
 
-    :-moz-submit-invalid
+```css
+:-moz-submit-invalid
+```
 
 ## Spécifications
 

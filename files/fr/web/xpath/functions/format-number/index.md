@@ -12,7 +12,9 @@ La fonction `format-number` évalue un nombre et retourne une chaîne représent
 
 ### Syntaxe
 
-    format-number( nombre , motif [, format-décimal] )
+```
+format-number( nombre , motif [, format-décimal] )
+```
 
 ### Arguments
 

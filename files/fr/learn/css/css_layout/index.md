@@ -36,9 +36,9 @@ original_slug: Apprendre/CSS/CSS_layout
 
 Avant de commencer ce module, vous devriez déjà :
 
-1.  Connaître les bases du HTML, telles qu'exposées dans le module [Introduction au HTML.](/fr/docs/Learn/HTML/Introduction_to_HTML)
-2.  Être à l'aise avec les fondamentaux du CSS, telles qu'exposés dans [Introduction à CSS](/fr/docs/Learn/CSS/First_steps).
-3.  Savoir [mettre en forme les boîtes.](/fr/docs/Learn/CSS/Building_blocks)
+1. Connaître les bases du HTML, telles qu'exposées dans le module [Introduction au HTML.](/fr/docs/Learn/HTML/Introduction_to_HTML)
+2. Être à l'aise avec les fondamentaux du CSS, telles qu'exposés dans [Introduction à CSS](/fr/docs/Learn/CSS/First_steps).
+3. Savoir [mettre en forme les boîtes.](/fr/docs/Learn/CSS/Building_blocks)
 
 > **Note :** Si vous travaillez sur un ordinateur, une tablette ou autre périphérique sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez essayer (la plupart) les exemples de code dans des sites de développement en ligne tels que [JSBin](http://jsbin.com/) ou [Glitch](https://glitch.com/)
 

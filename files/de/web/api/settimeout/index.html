@@ -26,7 +26,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
  <dt><code>code</code></dt>
  <dd><code>code</code> in der alternativen Syntax ist eine Zeichenkette, die Code enthält, der nach <code>zeitspanne</code> Millisekunden ausgeführt werden soll.  <code>code</code> sollte aus den gleichen Gründen, die auch <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!" title="en-US/docs/Core JavaScript 1.5 Reference/Global Functions/Eval#Don't use eval!">eval()</a> zum Sicherheitsrisiko machen, <strong>nicht verwendet</strong> werden.</dd>
  <dt><code>zeitspanne</code> {{optional_inline}}</dt>
- <dd><code>zeitspanne</code> ist die Wartezeit in Millisekunden (ein Tausendstel einer Sekunde), nach der <code>funktion</code> bzw. <code>code</code> ausgeführt werden soll. Dieser Wert ist ein Mindestwert, die tatsächlich abgelaufene Zeit kann länger sein, siehe {{anch("Gründe für längere als gegebene Wartezeiten")}} weiter unten.</dd>
+ <dd><code>zeitspanne</code> ist die Wartezeit in Millisekunden (ein Tausendstel einer Sekunde), nach der <code>funktion</code> bzw. <code>code</code> ausgeführt werden soll. Dieser Wert ist ein Mindestwert, die tatsächlich abgelaufene Zeit kann länger sein, siehe <a href="#gründe_für_längere_als_gegebene_wartezeiten">Gründe für längere als gegebene Wartezeiten</a> weiter unten.</dd>
  <dt><code>parameter1, ..., parameterN</code> {{optional_inline}}</dt>
  <dd>Diese Parameter werden an die <code>funktion</code><em> </em>oder den <code>code</code> übergeben.</dd>
 </dl>
@@ -180,7 +180,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
   } : vCallback, nDelay);
 };</pre>
 
-<div class="note"><strong>Hinweis:</strong> Diese beiden Ersatzfunktionen ermöglichen es auch, im Internet Explorer Parameter an die aufzurufende Funktion zu übergeben, wie es HTML5 vorsieht. Sie können daher auch als {{anch("Polyfill")}} benutzt werden.</div>
+<div class="note"><strong>Hinweis:</strong> Diese beiden Ersatzfunktionen ermöglichen es auch, im Internet Explorer Parameter an die aufzurufende Funktion zu übergeben, wie es HTML5 vorsieht. Sie können daher auch als <a href="#polyfill">Polyfill</a> benutzt werden.</div>
 
 <h2 id="Anmerkungen">Anmerkungen</h2>
 

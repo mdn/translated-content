@@ -28,13 +28,13 @@ foo = true // foo가 이제 불리언
 JavaScript 언어의 타입은 [원시 값](#원시_값)과 [객체](#객체)로 나뉩니다.
 
 - [원시 값](#원시_값) (언어의 최고 로우레벨에서 직접 표현되는 불변 데이터)
-  - [Boolean 타입](#불리언_타입)
+  - [Boolean 타입](#boolean_타입)
   - [Null 타입](#null_타입)
   - [Undefined 타입](#undefined_타입)
-  - [Number 타입](#숫자_타입)
+  - [Number 타입](#Number_타입)
   - [BigInt 타입](#bigint_타입)
-  - [String 타입](#문자열_타입)
-  - [Symbol 타입](#심볼_타입)
+  - [String 타입](#string_타입)
+  - [Symbol 타입](#symbol_타입)
 - [객체](#객체) (속성의 컬렉션)
 
 ## 원시 값

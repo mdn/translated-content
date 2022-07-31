@@ -32,7 +32,7 @@ sayings.delete('dog');
 sayings.has('dog'); // false
 
 for (var [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+  console.log(key + ' goes ' + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -52,11 +52,11 @@ sayings.size; // 0
  <li>An <code>Object</code> has a prototype, so there are default keys in the map. (this can be bypassed using <code>map = Object.create(null)</code>).</li>
 </ul>
 
-<p>These three tips can help you to decide whether to use a <code>Map</code> or an <code>Object</code>:</p>
+<p>These three tips can help you to decide whether to use a <code>Map</code> or an <code>Object</code>:</p>
 
 <ul>
  <li>Use maps over objects when keys are unknown until run time, and when all keys are the same type and all values are the same type.</li>
- <li>Use maps in case if there is a need to store primitive values as keys because object treats each key as a string whether it's a number value, boolean value or any other primitive value.</li>
+ <li>Use maps in case if there is a need to store primitive values as keys because object treats each key as a string whether it's a number value, boolean value or any other primitive value.</li>
  <li>Use objects when there is logic that operates on individual elements.</li>
 </ul>
 
@@ -109,7 +109,7 @@ for (let item of mySet) console.log(item);
 // "some text"
 </pre>
 
-<h3 id="Array_和_Set_之間的相互轉換">Array 和 Set 之間的相互轉換</h3>
+<h3 id="Array_和_Set_之間的相互轉換">Array 和 Set 之間的相互轉換</h3>
 
 <p>You can create an {{jsxref("Array")}} from a Set using {{jsxref("Array.from")}} or the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a>. Also, the <code>Set</code> constructor accepts an <code>Array</code> to convert in the other direction. Note again that <code>Set</code> objects store unique values, so any duplicate elements from an Array are deleted when converting.</p>
 
@@ -119,7 +119,7 @@ for (let item of mySet) console.log(item);
 mySet2 = new Set([1, 2, 3, 4]);
 </pre>
 
-<h3 id="比較_Array_和_Set"><code>比較 Array</code> 和 <code>Set</code> </h3>
+<h3 id="比較_Array_和_Set"><code>比較 Array</code> 和 <code>Set</code> </h3>
 
 <p>Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The new <code>Set</code> object, however, has some advantages:</p>
 

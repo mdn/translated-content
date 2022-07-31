@@ -17,13 +17,17 @@ Certains exemples utilisent `_content` à la place de `content`. Cette forme est
 
 ### Syntaxe
 
-    var windowObject = window.content;
+```js
+var windowObject = window.content;
+```
 
 ### Exemple
 
 L'exécution du code suivant dans une fenêtre chrome XUL contenant un élement `<browser type="content-primary"/>` dessine une bordure rouge autour du premier élément div de la page actuellement affichée dans le navigateur&nbsp;:
 
-    content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+```js
+content.document.getElementsByTagName("div")[0].style.border = "solid red 1px";
+```
 
 ### Spécification
 

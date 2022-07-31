@@ -18,7 +18,9 @@ La méthode **`setFullYear()`** définit l'année complête pour une date, d'apr
 
 ## Syntaxe
 
-    dateObj.setFullYear(valeurAnnée[, valeurMois[, valeurJour]])
+```js
+dateObj.setFullYear(valeurAnnée[, valeurMois[, valeurJour]])
+```
 
 ### Paramètres
 

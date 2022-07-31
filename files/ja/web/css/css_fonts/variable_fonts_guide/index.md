@@ -53,7 +53,7 @@ translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
 #### メモ
 
-1.  `font-variation-settings` を使用する際には、軸名の大文字と小文字が区別されることに注意する必要があります。登録済みの軸名は小文字で、カスタム軸は大文字でなければなりません。例えば、以下のようになります。
+1. `font-variation-settings` を使用する際には、軸名の大文字と小文字が区別されることに注意する必要があります。登録済みの軸名は小文字で、カスタム軸は大文字でなければなりません。例えば、以下のようになります。
 
     ```css
     font-variation-settings: 'wght' 375, 'GRAD' 88;
@@ -61,7 +61,7 @@ translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 
     `wght` (太さ) は登録済みの軸で、`GRAD` (等級) はカスタム軸です。
 
-2.  `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
+2. `font-variation-settings` を使って値を設定していて、そのうちの 1 つの値を変更したい場合は、すべての値を再宣言しなければなりません ({{cssxref("font-feature-settings")}} を使って OpenType フォントの特性を設定したときと同じ方法です)。この制限を回避するには、個々の値に [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) (CSS 変数)を使用し、個々のカスタムプロパティの値を変更してください。ガイドの最後にサンプルコードを掲載しています。
 
 ### 太さ (Weight)
 

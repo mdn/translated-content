@@ -50,7 +50,7 @@ Object.defineProperty(obj,
 // TypeError: can't define property "x": "obj" is not extensible
 </pre>
 
-<p>为了修复这个错误，你可以彻底移除 {{jsxref("Object.preventExtensions()")}} 语句，或者将其移动位置，使得属性在对象被标记为不可扩展之前添加。当然如果不需要试图添加的属性的话，你也可以将其移除。</p>
+<p>为了修复这个错误，你可以彻底移除 {{jsxref("Object.preventExtensions()")}} 语句，或者将其移动位置，使得属性在对象被标记为不可扩展之前添加。当然如果不需要试图添加的属性的话，你也可以将其移除。</p>
 
 <pre class="brush: js example-good">'use strict';
 

@@ -12,7 +12,9 @@ La méthode **`Window.resizeBy()`** redimensionne la fenêtre actuelle d'une tai
 
 ## Syntaxe
 
-    window.resizeBy(xDelta, yDelta)
+```js
+window.resizeBy(xDelta, yDelta)
+```
 
 ### Paramètres
 

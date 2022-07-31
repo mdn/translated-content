@@ -18,7 +18,9 @@ La méthode **`Intl.Numberformat.prototype.formatToParts()`** permet de produire
 
 ## Syntaxe
 
-    Intl.NumberFormat.prototype.formatToParts(nombre)
+```js
+Intl.NumberFormat.prototype.formatToParts(nombre)
+```
 
 ### Paramètres
 

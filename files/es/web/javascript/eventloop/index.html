@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="Representación_visual">Representación visual</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="/files/4617/default.svg" style="height: 270px; width: 294px;"></p>
+<p style="text-align: center;"><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg"></p>
 
 <h3 id="Pila_(Stack)">Pila (Stack)</h3>
 
@@ -67,7 +67,7 @@ g(21);
 
 <p>En los navegadores web, los mensajes son añadidos cada vez que un evento ocurre y hay un escuchador de eventos asociado a él. Si no hay un escuchador, el evento se pierde. De este modo, al hacer click en un elemento con un manejador de eventos tipo click, se añadirá un mensaje. Lo mismo sucede en otros tipos de eventos.</p>
 
-<p>Al llamar <code><a href="/en-US/docs/Web/API/WindowTimers.setTimeout" title="/en-US/docs/window.setTimeout">setTimeout</a></code> se añadirá un mensaje a la cola después de el tiempo especificado como segundo parámetro. Si no hay ningún otro mensaje en la cola, el mensaje es procesado en el momento; sin embargo, si hay mensajes en la cola, el mensaje de <code>setTimeout </code>tendrá que esperar a que los otros mensajes sean procesados. Por esta razón el segundo parámetro indica el tiempo mínimo tiempo esperado y no es una garantía.</p>
+<p>Al llamar <code><a href="/es/docs/Web/API/setTimeout" title="/es/docs/Web/API/setTimeout">setTimeout</a></code> se añadirá un mensaje a la cola después de el tiempo especificado como segundo parámetro. Si no hay ningún otro mensaje en la cola, el mensaje es procesado en el momento; sin embargo, si hay mensajes en la cola, el mensaje de <code>setTimeout </code>tendrá que esperar a que los otros mensajes sean procesados. Por esta razón el segundo parámetro indica el tiempo mínimo tiempo esperado y no es una garantía.</p>
 
 <h3 id="Cero_retraso">Cero retraso</h3>
 
@@ -101,10 +101,10 @@ g(21);
 
 <h3 id="Varios_programas_comunicandose_al_mismo_tiempo">Varios programas comunicandose al mismo tiempo</h3>
 
-<p>Un web worker o cross-origin <code>iframe</code> tiene su propia pila, montículo y cola de mensajes. Dos programas diferentes solo se pueden comunicar enviando mensajes a través del método  <code><a href="/en-US/docs/DOM/window.postMessage" title="/en-US/docs/DOM/window.postMessage">postMessage</a></code>. Este método añade un mensaje al otro programa si éste último escucha eventos de tipo <code>message</code>.</p>
+<p>Un web worker o cross-origin <code>iframe</code> tiene su propia pila, montículo y cola de mensajes. Dos programas diferentes solo se pueden comunicar enviando mensajes a través del método  <code><a href="/es/docs/Web/API/Window/postMessage" title="/es/docs/Web/API/Window/postMessage">postMessage</a></code>. Este método añade un mensaje al otro programa si éste último escucha eventos de tipo <code>message</code>.</p>
 
 <h2 id="Nunca_se_interrumpe">Nunca se interrumpe</h2>
 
-<p>Una propiedad muy interesante del modelo de loop de eventos es que JavaScript, a diferencia de otros lenguajes, nunca interrumpe otros programas en ejecución. Manejar operaciones de I/O (entrada/salida) es normalmente hecho a través de eventos y llamadas a función, de modo que cuando la aplicación, por ejemplo, está esperando por el retorno de una consulta <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API" title="/en-US/docs/IndexedDB">IndexedDB</a> o una petición <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" title="/en-US/docs/DOM/XMLHttpRequest">XHR</a>, ésta puede continuar procesando otras cosas como interacciones con el usuario (e.g. clicks).</p>
+<p>Una propiedad muy interesante del modelo de loop de eventos es que JavaScript, a diferencia de otros lenguajes, nunca interrumpe otros programas en ejecución. Manejar operaciones de I/O (entrada/salida) es normalmente hecho a través de eventos y llamadas a función, de modo que cuando la aplicación, por ejemplo, está esperando por el retorno de una consulta <a href="/es/docs/Web/API/IndexedDB_API" title="/es/docs/IndexedDB">IndexedDB</a> o una petición <a href="/es/docs/Web/API/XMLHttpRequest" title="/es/docs/DOM/XMLHttpRequest">XHR</a>, ésta puede continuar procesando otras cosas como interacciones con el usuario (e.g. clicks).</p>
 
-<p>Excepciones a esta regla existe en versiones anteriores del lenguaje, tales como <code>alert</code> o XHR síncrono, pero es considerada una buena práctica evitar su uso. Finalmente, hay que estar conscientes que hay <a href="http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">excepciones</a> a las excepciones (pero son usualmente errores de implementación mas que otra cosa).</p>
+<p>Excepciones a esta regla existe en versiones anteriores del lenguaje, tales como <code>alert</code> o XHR síncrono, pero es considerada una buena práctica evitar su uso. Finalmente, hay que estar conscientes que hay <a href="https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">excepciones</a> a las excepciones (pero son usualmente errores de implementación mas que otra cosa).</p>
