@@ -28,7 +28,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_f
 
 本模块中讨论的所有框架都基于 JavaScript，并且都允许你使用领域特定语言（DSL）来构建应用程序。特别地，React 已经普及了使用 **JSX** 来编写其组件，而 Ember 则使用 **Handlebars** 。与 HTML 不同，这些语言知道如何读取数据变量，并且此数据可用于简化编写 UI 的过程。
 
-基于 Angular 框架的应用程序总是大量地使用 **TypeScript**。TypeScript 不关心用户界面的编写，但它仍然是一种领域特定语言（DSL），而且与原生 JavaScript 有着很大的不同。
+基于 Angular 框架的应用程序会大量地使用 **TypeScript**。TypeScript 不关心用户界面的编写，但它仍然是一种领域特定语言（DSL），而且与原生 JavaScript 有着很大的不同。
 
 DSL 不能直接由浏览器解析；它们首先要被转换成 JavaScript 或 HTML。虽然[转换在开发流程中是一个额外的步骤](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#转换)，但是框架通常会包含处理此步骤所需的工具, or can be adjusted to include this step.虽然你可以构建框架应用程序而不使用这些领域特定语言，但使用它们会简化你的开发过程，还能更容易地从这些框架的周边社区中找到帮助。
 
