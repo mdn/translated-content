@@ -92,11 +92,11 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
 <ol>
  <li>Uma <strong>condição de mídia</strong> (<code>(max-width:480px)</code>) — Você vai aprender mais sobre isso no  <a href="/en-US/docs/Learn/CSS">tema CSS</a>, mas para agora vamos somente dizer que a condição de mídia descreve um possível estado em que a tela pode estar. Neste caso, nós estamos dizendo "quando a largura da tela é 480px ou menos".</li>
  <li>Um espaço.</li>
- <li>A <strong>largura do slot da imagem</strong> vai preencher quando a condição de mídia for verdadeira (<code>440px</code>).</li>
+ <li>A <strong>largura do slot</strong> que a imagem irá preencher quando a condição de mídia for verdadeira (<code>440px</code>).</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: Para a largura do slot, você pode fornecer um tamanho absoluto (<code>px</code>, <code>em</code>) ou um tamanho relativo (como porcentagem).Você pode ter notado que o último slot de largura não tem condição de mídia - isto é o padrão que será escolhido quando nenhuma condição for verdadeira. O navegador ignora tudo depois da primeira condição satisfeita, então tenha cuidado com a ordem de condições.</p>
+<p><strong>Note</strong>: Para a largura do slot, você pode fornecer um tamanho absoluto (<code>px</code>, <code>em</code>) ou um tamanho relativo (como porcentagem). Você pode ter notado que o último slot de largura não tem condição de mídia - isto é o padrão que será escolhido quando nenhuma condição for verdadeira. O navegador ignora tudo depois da primeira condição satisfeita, então tenha cuidado com a ordem de condições.</p>
 </div>
 
 <p>Então, com estes atributos no lugar, o navegador irá:</p>
@@ -105,7 +105,7 @@ original_slug: Aprender/HTML/Multimedia_and_embedding/Responsive_images
  <li>Ver a largura do dispositivo.</li>
  <li>Ver qual condição de mídia na lista <code>sizes</code> é a primeira a ser verdadeira.</li>
  <li>Ver qual é o slot para aquela condição de mída.</li>
- <li>Carregar a imagem definida na lista <code>srcset</code> que mais chega perto do tamanho do slot.</li>
+ <li>Carregar a imagem definida na lista <code>srcset</code> que possui o mesmo tamanho do slot ou, se não houver, da primeira imagem que é maior que o tamanho do slot escolhido.</li>
 </ol>
 
 <p>E é isto! Então neste ponto, se um navegador suportado com uma largurar de 480px carregar a página, a condição (<code>max-width: 480px</code>) será verdadeira, então o slot <code>440px</code> será escolhido, então o <code>elva-fairy-480w.jpg</code> será carregada, como a largura inerente (<code>480w</code>) é a mais próxima de <code>440px</code>. A imagem de 800px é 128KB no disco enquanto que a versão de 480px é somente 63KB - economizando 65KB. Agora imagine se fosse uma página que tivesse várias imagens. Usando esta técnica poderia economizar os dados de usuários de celular.</p>

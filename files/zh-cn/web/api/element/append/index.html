@@ -13,9 +13,9 @@ browser-compat: api.Element.append
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<div> <strong><code>Element.append</code></strong> 方法在 <code>Element</code>的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。</div>
+<div> <strong><code>Element.append</code></strong> 方法在 <code>Element</code>的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。</div>
 
-<div>被插入的 {{domxref("DOMString")}} 对象等价为 {{domxref("Text")}} 节点。</div>
+<div>被插入的 {{domxref("DOMString")}} 对象等价为 {{domxref("Text")}} 节点。</div>
 
 
 
@@ -24,9 +24,9 @@ browser-compat: api.Element.append
 
 
 <ul>
- <li><code>Element.append()</code>允许追加  {{domxref("DOMString")}} 对象，而<code> Node.appendChild()</code> 只接受 {{domxref("Node")}} 对象。</li>
- <li><code>Element.append()</code> <a href="https://repl.it/FgPh/1">没有返回值</a>，而 <code>Node.appendChild()</code> 返回追加的 {{domxref("Node")}} 对象。</li>
- <li><code>Element.append()</code> 可以追加多个节点和字符串，而 <code>Node.appendChild()</code> 只能追加一个节点。</li>
+ <li><code>Element.append()</code>允许追加  {{domxref("DOMString")}} 对象，而<code> Node.appendChild()</code> 只接受 {{domxref("Node")}} 对象。</li>
+ <li><code>Element.append()</code> <a href="https://repl.it/FgPh/1">没有返回值</a>，而 <code>Node.appendChild()</code> 返回追加的 {{domxref("Node")}} 对象。</li>
+ <li><code>Element.append()</code> 可以追加多个节点和字符串，而 <code>Node.appendChild()</code> 只能追加一个节点。</li>
 </ul>
 
 <h2 id="语法">语法</h2>
@@ -45,7 +45,7 @@ void Element.append((Node or DOMString)... nodes);
 <h3 id="异常">异常</h3>
 
 <ul>
- <li>{{domxref("HierarchyRequestError")}}: 在层次结构中的指定点不能插入节点。</li>
+ <li>{{domxref("HierarchyRequestError")}}: 在层次结构中的指定点不能插入节点。</li>
 </ul>
 
 <h2 id="示例">示例</h2>
@@ -74,9 +74,9 @@ parent.append("Some text", p);
 
 console.log(parent.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
 
-<h3 id="Element.append_方法在_with_语句中不生效"><code>Element.append()</code> 方法在 with 语句中不生效</h3>
+<h3 id="Element.append_方法在_with_语句中不生效"><code>Element.append()</code> 方法在 with 语句中不生效</h3>
 
-<p>为了保证向后兼容，append 方法在 with 语句中会被特殊处理，详情请看 {{jsxref("Symbol.unscopables")}}。</p>
+<p>为了保证向后兼容，append 方法在 with 语句中会被特殊处理，详情请看 {{jsxref("Symbol.unscopables")}}。</p>
 
 <pre class="brush: js">var parent = document.createElement("div");
 
@@ -87,7 +87,7 @@ with(parent) {
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>下面的 Polyfill 只支持到 IE 9  及以上：</p>
+<p>下面的 Polyfill 只支持到 IE 9  及以上：</p>
 
 <pre class="brush: js">// Source: https://github.com/jserz/js_piece/blob/master/DOM/Element/append()/append().md
 (function (arr) {

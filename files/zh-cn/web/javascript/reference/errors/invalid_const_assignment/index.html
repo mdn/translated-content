@@ -22,7 +22,7 @@ TypeError: Redeclaration of const 'x' (IE/Edge)
 
 <h2 id="哪里出错了？">哪里出错了？</h2>
 
-<p>常量指的是无法在程序正常运行过程中进行修改的值。一方面无法通过重新赋值进行修改，另外一方面也无法进行重新声明。在 JavaScript 中，常量通过关键字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 来声明。</p>
+<p>常量指的是无法在程序正常运行过程中进行修改的值。一方面无法通过重新赋值进行修改，另外一方面也无法进行重新声明。在 JavaScript 中，常量通过关键字 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 来声明。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -49,7 +49,7 @@ const WIDE_COLUMNS = 120;</pre>
 
 <h4 id="const_let_or_var"><code>const</code>, <code>let</code> or <code>var</code>?</h4>
 
-<p>如果你的目的不是为了创建一个常量的话，那么就不要使用 const 关键字。可以使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 关键字来声明一个拥有块作用域的变量，或者使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a> </code>来声明一个全局变量。</p>
+<p>如果你的目的不是为了创建一个常量的话，那么就不要使用 const 关键字。可以使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 关键字来声明一个拥有块作用域的变量，或者使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a> </code>来声明一个全局变量。</p>
 
 <pre class="brush: js example-good">let columns = 80;
 
@@ -76,7 +76,7 @@ function setupBigScreenEnvironment() {
 obj = {foo: 'baz'}; // TypeError: invalid assignment to const `obj'
 </pre>
 
-<p>但是可以改变它引用的值的属性： </p>
+<p>但是可以改变它引用的值的属性： </p>
 
 <pre class="brush: js example-good">obj.foo = 'baz';
 obj; // Object { foo: "baz" }</pre>

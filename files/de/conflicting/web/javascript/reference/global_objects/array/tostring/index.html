@@ -1,0 +1,70 @@
+---
+title: Array.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
+tags:
+  - Array
+  - JavaScript
+  - Method
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>Die <code><strong>toSource()</strong></code> Methode gibt einen String zurück, welcher den Quelltext des Arrays repräsentiert.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>arr</var>.toSource()</pre>
+
+<h3 id="Rückgabewert">Rückgabewert</h3>
+
+<p>Ein String, der den Quelltext des Array repräsentiert.</p>
+
+<h2 id="Beschreibung">Beschreibung</h2>
+
+<p>Die <code>toSource</code> Methode gibt folgende Werte zurück:</p>
+
+<ul>
+ <li>Für das eingebaute {{jsxref("Array")}} Objekt gibt <code>toSource</code> den folgenden String zurück, um anzudeuten, dass der Quelltext nicht verfügbar ist:
+
+  <pre class="brush: js">function Array() {
+    [native code]
+}
+</pre>
+ </li>
+ <li>Für Instanzen von {{jsxref("Array")}} gibt <code>toSource</code> einen String zurück, welcher den Quelltext des Arrays repräsentiert.</li>
+</ul>
+
+<p>Diese Methode wird für gewöhnlich von JavaScript intern aufgerufen und nicht explizit in einem QUelltext. Man kann <code>toSource</code> beim Debuggen aufrufen, um den Inhalt eines Arrays abzufragen.</p>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<h3 id="Untersuchen_des_Quelltextes_eines_Arrays">Untersuchen des Quelltextes eines Arrays</h3>
+
+<p><span class="short_text" id="result_box" lang="de"><span>Um den Quellcode eines Arrays zu untersuchen:</span></span></p>
+
+<pre class="brush: js">var alpha = new Array('a', 'b', 'c');
+
+alpha.toSource();
+//returns ['a', 'b', 'c']
+</pre>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>In keiner Spezifikation enthalten. Implementiert in JavaScript 1.3.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Array.toSource")}}</p>
+</div>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+ <li>{{jsxref("Array.prototype.toString()")}}</li>
+</ul>

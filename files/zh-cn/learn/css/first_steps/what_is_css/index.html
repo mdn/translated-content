@@ -7,13 +7,13 @@ translation_of: Learn/CSS/First_steps/What_is_CSS
 
 <div>{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}</div>
 
-<p><strong>{{Glossary("CSS")}}</strong> (层叠样式表) 让你可以创建好看的网页，但是它具体是怎么工作的呢？ 这篇文章通过一些很简单的例子，告诉我们什么是 CSS，同时还会涉及一些和 CSS 相关的专业术语。</p>
+<p><strong>{{Glossary("CSS")}}</strong> (层叠样式表) 让你可以创建好看的网页，但是它具体是怎么工作的呢？ 这篇文章通过一些很简单的例子，告诉我们什么是 CSS，同时还会涉及一些和 CSS 相关的专业术语。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">预备知识：</th>
-   <td>基本的计算机知识，<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>, <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a> 的基础知识，还有 HTML 基础 (学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a>。)</td>
+   <td>基本的计算机知识，<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>, <a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a> 的基础知识，还有 HTML 基础 (学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a>。)</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -22,7 +22,7 @@ translation_of: Learn/CSS/First_steps/What_is_CSS
  </tbody>
 </table>
 
-<p>在 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a> 模块我们学习了 HTML 是什么，以及如何使用它来组成页面。 浏览器能够解析这些页面。标题部分看起来会比正常文本更大，段落则会另起一行，并且相互之间会有一定间隔。链接通过下划线和不同的颜色与其他文本区分开来。这些都是浏览器的默认样式——当开发者没有指定样式时，浏览器通过这些最简单的样式使页面具有基本可读性。</p>
+<p>在 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a> 模块我们学习了 HTML 是什么，以及如何使用它来组成页面。 浏览器能够解析这些页面。标题部分看起来会比正常文本更大，段落则会另起一行，并且相互之间会有一定间隔。链接通过下划线和不同的颜色与其他文本区分开来。这些都是浏览器的默认样式——当开发者没有指定样式时，浏览器通过这些最简单的样式使页面具有基本可读性。</p>
 
 <p><img alt="这是浏览器默认样式" src="https://mdn.mozillademos.org/files/17150/example_dlnb526_zh.png" style="height: 463px; width: 1220px;"></p>
 
@@ -30,21 +30,21 @@ translation_of: Learn/CSS/First_steps/What_is_CSS
 
 <h2 id="CSS用来干什么">CSS 用来干什么？</h2>
 
-<p>前文提到过，CSS 是用来指定文档如何展示给用户的一门语言——如网页的样式、布局、等等。</p>
+<p>前文提到过，CSS 是用来指定文档如何展示给用户的一门语言——如网页的样式、布局、等等。</p>
 
-<p>一份<strong>文档</strong>是由标记语言组织起来的文本文件 —— {{Glossary("HTML")}} 是最常见的标记语言， 但你可能也听说过其他可标记语言，如 {{Glossary("SVG")}} 或 {{Glossary("XML")}}。</p>
+<p>一份<strong>文档</strong>是由标记语言组织起来的文本文件 —— {{Glossary("HTML")}} 是最常见的标记语言， 但你可能也听说过其他可标记语言，如 {{Glossary("SVG")}} 或 {{Glossary("XML")}}。</p>
 
-<p><strong>展示</strong>一份文档给用户实际上是将文档变成用户可用的文件。{{Glossary("browser","Browsers")}}：如 {{Glossary("Mozilla Firefox","Firefox")}}，{{Glossary("Google Chrome","Chrome")}}, 或 {{Glossary("Microsoft Edge","Edge")}}，都可以将文档在电脑屏幕、投影仪或打印机等设备上进行可视化。</p>
+<p><strong>展示</strong>一份文档给用户实际上是将文档变成用户可用的文件。{{Glossary("browser","Browsers")}}：如 {{Glossary("Mozilla Firefox","Firefox")}}，{{Glossary("Google Chrome","Chrome")}}, 或 {{Glossary("Microsoft Edge","Edge")}}，都可以将文档在电脑屏幕、投影仪或打印机等设备上进行可视化。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意</strong>: 浏览器有时候也被称为 {{Glossary("User agent","user agent")}}，大致可以当这个程序是一个存在于计算机系统中的人。当我们讨论 CSS 时，浏览器是 User agent 的主要形式，然而它并不是唯一的一个。还有其他可用的 user agents — 像是那些可以把 HTML 和 CSS 文档转换为可以打印的 PDF 文档的软件。</p>
+<p><strong>注意</strong>: 浏览器有时候也被称为 {{Glossary("User agent","user agent")}}，大致可以当这个程序是一个存在于计算机系统中的人。当我们讨论 CSS 时，浏览器是 User agent 的主要形式，然而它并不是唯一的一个。还有其他可用的 user agents — 像是那些可以把 HTML 和 CSS 文档转换为可以打印的 PDF 文档的软件。</p>
 </div>
 
-<p>CSS 可以用于给文档添加样式 —— 比如改变标题和链接的<a href="/zh-CN/docs/Web/CSS/color_value">颜色</a>及<a href="/zh-CN/docs/Web/CSS/font-size">大小</a>。它也可用于创建布局 —— 比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的<a href="/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts">布局</a>。它甚至还可以用来做一些特效，比如<a href="/zh-CN/docs/Web/CSS/CSS_Animations">动画</a>。查看本段内容中所给出的特定案例。</p>
+<p>CSS 可以用于给文档添加样式 —— 比如改变标题和链接的<a href="/zh-CN/docs/Web/CSS/color_value">颜色</a>及<a href="/zh-CN/docs/Web/CSS/font-size">大小</a>。它也可用于创建布局 —— 比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的<a href="/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts">布局</a>。它甚至还可以用来做一些特效，比如<a href="/zh-CN/docs/Web/CSS/CSS_Animations">动画</a>。查看本段内容中所给出的特定案例。</p>
 
-<h2 id="CSS_语法">CSS 语法</h2>
+<h2 id="CSS_语法">CSS 语法</h2>
 
-<p>CSS 是一门基于规则的语言 —— 你能定义用于你的网页中特定元素样式的一组规则. 比如“我希望页面中的主标题是红色的大字”</p>
+<p>CSS 是一门基于规则的语言 —— 你能定义用于你的网页中特定元素样式的一组规则. 比如“我希望页面中的主标题是红色的大字”</p>
 
 <p>下面这段代码使用非常简单的 CSS 规则实现了之前提到的效果：</p>
 
@@ -96,7 +96,7 @@ p {
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p>当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 <a href="/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works">CSS 如何工作</a> 一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期 — 一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态 (implementation status) 是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。</p>
+<p>当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 <a href="/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works">CSS 如何工作</a> 一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期 — 一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态 (implementation status) 是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。</p>
 
 <p>以下是 CSS <code><a href="/en-US/docs/Web/CSS/font-family">font-family</a></code> 属性的兼容数据表。</p>
 

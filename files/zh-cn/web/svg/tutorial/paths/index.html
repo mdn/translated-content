@@ -5,17 +5,17 @@ translation_of: Web/SVG/Tutorial/Paths
 ---
 <p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}</p>
 
-<p>如上一章所说，<a href="/zh-CN/docs/Web/SVG/Element/path" title="zh-CN/SVG/Element/path"><code>&lt;path&gt;</code></a>元素是 SVG<a href="/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes">基本形状</a>中最强大的一个。  你可以用它创建线条，曲线，弧形等等。</p>
+<p>如上一章所说，<a href="/zh-CN/docs/Web/SVG/Element/path"><code>&lt;path&gt;</code></a>元素是 SVG<a href="/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes">基本形状</a>中最强大的一个。  你可以用它创建线条，曲线，弧形等等。</p>
 
 <p>另外，path 只需要设定很少的点，就可以创建平滑流畅的线条（比如曲线）。虽然<code>polyline</code>元素也能实现类似的效果，但是必须设置大量的点（点越密集，越接近连续，看起来越平滑流畅），并且这种做法不能够放大（放大后，点的离散更明显）。所以在绘制 SVG 时，对路径的良好理解很重要。虽然不建议使用 XML 编辑器或文本编辑器创建复杂的路径，但了解它们的工作方式将有助于识别和修复 SVG 中的显示问题。</p>
 
-<p><a href="/ㄣ/SVG/Tutorial/Basic_Shapes" title="ㄣ/SVG/Tutorial/Basic Shapes">上一章</a>提到过，path 元素的形状是通过属性<code>{{ SVGAttr("d") }}</code>定义的，属性<code>d</code>的值是一个 “命令 + 参数” 的序列，我们将讲解这些可用的命令，并且展示一些示例。</p>
+<p><a href="/ㄣ/SVG/Tutorial/Basic_Shapes">上一章</a>提到过，path 元素的形状是通过属性<code>{{ SVGAttr("d") }}</code>定义的，属性<code>d</code>的值是一个 “命令 + 参数” 的序列，我们将讲解这些可用的命令，并且展示一些示例。</p>
 
 <p>每一个命令都用一个关键字母来表示，比如，字母“M”表示的是“Move to”命令，当解析器读到这个命令时，它就知道你是打算移动到某个点。跟在命令字母后面的，是你需要移动到的那个点的 x 和 y 轴坐标。比如移动到 (10,10) 这个点的命令，应该写成“M 10 10”。这一段字符结束后，解析器就会去读下一段命令。每一个命令都有两种表示方式，一种是用<strong>大写字母</strong>，表示采用绝对定位。另一种是用<strong>小写字母</strong>，表示采用相对定位（例如：<em>从上一个点开始，向上移动 10px，向左移动 7px</em>）。</p>
 
 <p><code>因为属性 d</code>采用的是用户坐标系统，所以<strong>不需标明单位</strong>。在后面的教程中，我们会学到如何让变换路径，以满足更多需求。</p>
 
-<h2 id="Line_commands" name="Line_commands">直线命令</h2>
+<h2 id="Line_commands">直线命令</h2>
 
 <p><code>&lt;path&gt;</code>元素里有 5 个画直线的命令，顾名思义，直线命令就是在两个点之间画直线。首先是“Move to”命令，M，前面已经提到过，它需要两个参数，分别是需要移动到的点的 x 轴和 y 轴的坐标。假设，你的画笔当前位于一个点，在使用 M 命令移动画笔后，只会移动画笔，但不会在两点之间画线。因为 M 命令仅仅是移动画笔，但不画线。所以 M 命令经常出现在路径的开始处，用来指明从何处开始画。</p>
 
@@ -85,11 +85,11 @@ translation_of: Web/SVG/Tutorial/Paths
 
 <p>你可能会问这些命令有什么用，因为 <code>&lt;polygon&gt;</code> 和 <code>&lt;polyline&gt;</code> 可以做到画出一样的图形。答案是，这些命令可以做得更多。如果你只是画直线，那么其他元素可能会更好用，但是，path 却是众多开发者在 SVG 绘制中经常用到的。据我所知，它们之间不存在性能上的优劣。但是通过脚本生成 path 可能有所不同，因为另外两种方法只需要指明点，而 path 在这方面的语法会更复杂一些。</p>
 
-<h2 id="Curve_commands" name="Curve_commands">曲线命令</h2>
+<h2 id="Curve_commands">曲线命令</h2>
 
-<p>绘制平滑曲线的命令有三个，其中两个用来绘制贝塞尔曲线，另外一个用来绘制弧形或者说是圆的一部分。如果你在 Inkscape、Illustrator 或者 Photoshop 中用过路径工具，可能对贝塞尔曲线有一定程度的了解。欲了解贝塞尔曲线的完整数学讲解，请阅读这份<a class="external" href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">Wikipedia 的文档</a>。在这里不用讲得太多。贝塞尔曲线的类型有很多，但是在 path 元素里，只存在两种贝塞尔曲线：三次贝塞尔曲线 C，和二次贝塞尔曲线 Q。</p>
+<p>绘制平滑曲线的命令有三个，其中两个用来绘制贝塞尔曲线，另外一个用来绘制弧形或者说是圆的一部分。如果你在 Inkscape、Illustrator 或者 Photoshop 中用过路径工具，可能对贝塞尔曲线有一定程度的了解。欲了解贝塞尔曲线的完整数学讲解，请阅读这份<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve">Wikipedia 的文档</a>。在这里不用讲得太多。贝塞尔曲线的类型有很多，但是在 path 元素里，只存在两种贝塞尔曲线：三次贝塞尔曲线 C，和二次贝塞尔曲线 Q。</p>
 
-<h3 id="Bezier_Curves" name="Bezier_Curves">贝塞尔曲线</h3>
+<h3 id="Bezier_Curves">贝塞尔曲线</h3>
 
 <p>我们从稍微复杂一点的三次贝塞尔曲线 C 入手，三次贝塞尔曲线需要定义一个点和两个控制点，所以用 C 命令创建三次贝塞尔曲线，需要设置三组坐标参数：</p>
 
@@ -159,7 +159,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 <p>虽然三次贝塞尔曲线拥有更大的自由度，但是两种曲线能达到的效果总是差不多的。具体使用哪种曲线，通常取决于需求，以及对曲线对称性的依赖程度。</p>
 
-<h3 id="Arcs" name="Arcs">弧形</h3>
+<h3 id="Arcs">弧形</h3>
 
 <p>弧形命令 A 是另一个创建 SVG 曲线的命令。基本上，弧形可以视为圆形或椭圆形的一部分。假设，已知椭圆形的长轴半径和短轴半径，并且已知两个点（在椭圆上），根据半径和两点，可以画出两个椭圆，在每个椭圆上根据两点都可以画出两种弧形。所以，仅仅根据半径和两点，可以画出四种弧形。为了保证创建的弧形唯一，A 命令需要用到比较多的参数：</p>
 
@@ -167,7 +167,7 @@ translation_of: Web/SVG/Tutorial/Paths
  a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 </pre>
 
-<p>弧形命令 A 的前两个参数分别是 x 轴半径和 y 轴半径，它们的作用很明显，不用多做解释，如果你不是很清楚它们的作用，可以参考一下椭圆<a href="/zh-CN/docs/Web/SVG/Element/ellipse" title="zh-CN/SVG/Element/ellipse">ellipse</a>命令中的相同参数。弧形命令 A 的第三个参数表示弧形的旋转情况，下面的例子可以很好地解释它：</p>
+<p>弧形命令 A 的前两个参数分别是 x 轴半径和 y 轴半径，它们的作用很明显，不用多做解释，如果你不是很清楚它们的作用，可以参考一下椭圆<a href="/zh-CN/docs/Web/SVG/Element/ellipse">ellipse</a>命令中的相同参数。弧形命令 A 的第三个参数表示弧形的旋转情况，下面的例子可以很好地解释它：</p>
 
 <p><img alt="" class="internal" src="/@api/deki/files/346/=SVGArcs_XAxisRotation.png" style="float: right;"></p>
 
@@ -185,7 +185,7 @@ translation_of: Web/SVG/Tutorial/Paths
 
 <p>对于上图没有旋转的椭圆，只有 2 种弧形可以选择，不是 4 种，因为两点连线（也就是对角线）正好穿过了椭圆的中心。像下面这张图，就是普通的情况，可以画出两个椭圆，四种弧。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15822/SVGArcs_XAxisRotation_with_grid_ellipses.png" style="height: 320px; width: 320px;"></p>
+<p><img src="svgarcs_xaxisrotation_with_grid_ellipses.png"></p>
 
 <p>上面提到的四种不同路径将由接下来的两个参数决定。如前所讲，还有两种可能的椭圆用来形成路径，它们给出的四种可能的路径中，有两种不同的路径。这里要讲的参数是 large-arc-flag（角度大小）和 sweep-flag（弧线方向），large-arc-flag 决定弧线是大于还是小于 180 度，0 表示小角度弧，1 表示大角度弧。sweep-flag 表示弧线的方向，0 表示从起点到终点沿逆时针画弧，1 表示从起点到终点沿顺时针画弧。下面的例子展示了这四种情况。</p>
 
@@ -209,6 +209,6 @@ translation_of: Web/SVG/Tutorial/Paths
 
 <p>你应该已经猜到了，最后两个参数是指定弧形的终点，弧形可以简单地创建圆形或椭圆形图标，比如你可以创建若干片弧形，组成一个<em>饼图</em>。</p>
 
-<p>如果你是从<a href="/zh-CN/HTML/Canvas" title="zh-CN/HTML/Canvas">Canvas</a>过渡到 SVG，那么弧形会比较难以掌握，但它也是非常强大的。用路径来绘制完整的圆或者椭圆是比较困难的，因为圆上的任意点都可以是起点同时也是终点，无数种方案可以选择，真正的路径无法定义。通过绘制连续的路径段落，也可以达到近似的效果，但使用真正的 circle 或者 ellipse 元素会更容易一些。</p>
+<p>如果你是从<a href="/zh-CN/HTML/Canvas">Canvas</a>过渡到 SVG，那么弧形会比较难以掌握，但它也是非常强大的。用路径来绘制完整的圆或者椭圆是比较困难的，因为圆上的任意点都可以是起点同时也是终点，无数种方案可以选择，真正的路径无法定义。通过绘制连续的路径段落，也可以达到近似的效果，但使用真正的 circle 或者 ellipse 元素会更容易一些。</p>
 
 <p>{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}</p>

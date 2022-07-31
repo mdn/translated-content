@@ -1,5 +1,5 @@
 ---
-title: 用語集の項目を書いたり参照したりする方法
+title: 用語集の項目を書いたり参照したりするには
 slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 tags:
   - 協力

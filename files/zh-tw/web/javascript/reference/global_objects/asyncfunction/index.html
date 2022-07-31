@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Async</strong></code><strong><code>Function</code> 建構子</strong>建立一個新的 {{jsxref("Statements/async_function", "async function")}}  物件。在 JavaScript 中，每一個非同步函數實際上是一個 <code>AsyncFunction</code> 物件。</p>
+<p><code><strong>Async</strong></code><strong><code>Function</code> 建構子</strong>建立一個新的 {{jsxref("Statements/async_function", "async function")}}  物件。在 JavaScript 中，每一個非同步函數實際上是一個 <code>AsyncFunction</code> 物件。</p>
 
-<p>注意 <code>AsyncFunction</code> 不是一個全域物件。 它可以以下程式碼獲得。</p>
+<p>注意 <code>AsyncFunction</code> 不是一個全域物件。 它可以以下程式碼獲得。</p>
 
 <pre class="brush: js">Object.getPrototypeOf(async function(){}).constructor
 </pre>
@@ -35,30 +35,30 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 <p><strong>Note:</strong> {{jsxref("Statements/async_function", "async functions")}} created with the <code>AsyncFunction</code> constructor do not create closures to their creation contexts; they are always created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the <code>AsyncFunction</code> constructor was called. This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for an async function expression.</p>
 </div>
 
-<p>以函數的方式執行 <code>AsyncFunction</code> 建構式 (不使用 <code>new</code> 運算子) 和以建構子的方式執行是等效的。</p>
+<p>以函數的方式執行 <code>AsyncFunction</code> 建構式 (不使用 <code>new</code> 運算子) 和以建構子的方式執行是等效的。</p>
 
 <h2 id="屬性">屬性</h2>
 
 <dl>
  <dt><code><strong>AsyncFunction.length</strong></code></dt>
- <dd><code>AsyncFuction</code> 建構子的長度為 1。</dd>
+ <dd><code>AsyncFuction</code> 建構子的長度為 1。</dd>
  <dt>{{jsxref("AsyncFunction.prototype")}}</dt>
  <dd>可加入屬性至所有陣列物件。</dd>
 </dl>
 
-<h2 id="AsyncFunction_原型物件"><code>AsyncFunction</code> 原型物件</h2>
+<h2 id="AsyncFunction_原型物件"><code>AsyncFunction</code> 原型物件</h2>
 
 <h3 id="屬性_2">屬性</h3>
 
 <div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype', 'Properties')}}</div>
 
-<h2 id="AsyncFunction_實例"><code>AsyncFunction</code> 實例</h2>
+<h2 id="AsyncFunction_實例"><code>AsyncFunction</code> 實例</h2>
 
-<p><code>AsyncFunction</code> 實例繼承 {{jsxref("AsyncFunction.prototype")}} 的屬性和方法. 和所有的建構子一樣，變更該建構子 (constructor) 的原型物件 (prototype object)將會影響所有的 <code>AsyncFunction</code> 實例。</p>
+<p><code>AsyncFunction</code> 實例繼承 {{jsxref("AsyncFunction.prototype")}} 的屬性和方法. 和所有的建構子一樣，變更該建構子 (constructor) 的原型物件 (prototype object)將會影響所有的 <code>AsyncFunction</code> 實例。</p>
 
 <h2 id="範例">範例</h2>
 
-<h3 id="AsyncFunction_建構子建立一個非同步函數"> <code>AsyncFunction</code> 建構子建立一個非同步函數</h3>
+<h3 id="AsyncFunction_建構子建立一個非同步函數"> <code>AsyncFunction</code> 建構子建立一個非同步函數</h3>
 
 <pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {

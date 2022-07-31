@@ -22,7 +22,7 @@ Dans un navigateur utilisant des onglets, comme Firefox, chaque onglet contient 
 
 ## Propriétés
 
-_Cette interface hérite des propriétés de l'interface {{domxref("EventTarget")}} et implémente les propriétés des mixins {{domxref("WindowOrWorkerGlobalScope")}} et {{domxref("WindowEventHandlers")}}._
+_Cette interface hérite des propriétés de l'interface {{domxref("EventTarget")}}._
 
 Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le prototype d'éléments intrinsèques) sont répertoriées dans une section distincte ci-dessous.
 
@@ -170,18 +170,18 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 
 ### Propriétés implémentées depuis ailleurs
 
-- {{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}
+- [`caches`](/fr/docs/Web/API/caches) {{readOnlyinline}}
   - : Renvoie l'objet {{domxref("CacheStorage")}} associé au contexte en cours. Cet objet active des fonctionnalités telles que le stockage des ressources pour une utilisation hors connexion, et la génération de réponses personnalisées aux requêtes.
-- {{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}
+- [`indexedDB`](/fr/docs/Web/API/indexedDB) {{readonlyInline}}
   - : Fournit un mécanisme permettant aux applications d'accéder de manière asynchrone à des bases de données indexées ; renvoie un objet {{domxref("IDBFactory")}}.
-- {{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}
+- [`isSecureContext`](/fr/docs/Web/API/isSecureContext) {{readOnlyinline}}
   - : Renvoie un booléen indiquant si le contexte actuel est sécurisé (`true`) ou non (`false`).
-- {{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}
+- [`origin`](/fr/docs/Web/API/origin) {{readOnlyinline}}
   - : Renvoie l'origine de l'objet global, sérialisé comme une chaîne. (Cela ne semble pas encore être implémenté dans aucun navigateur.)
 
 ## Méthodes
 
-_Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}} et implémente les méthodes de {{domxref("WindowOrWorkerGlobalScope")}} et {{domxref("EventTarget")}}._
+_Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}._
 
 - {{domxref("Window.alert()")}}
   - : Affiche une boîte de message d'alerte.
@@ -288,23 +288,23 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : Enregistre un gestionnaire d'événement pour un type d'événement spécifique dans la fenêtre.
-- {{domxref("WindowOrWorkerGlobalScope.atob()")}}
+- [`atob()`](/fr/docs/Web/API/atob)
   - : Décode une chaîne de données qui a été codée en utilisant l'encodage en base 64.
-- {{domxref("WindowOrWorkerGlobalScope.btoa()")}}
+- [`btoa()`](/fr/docs/Web/API/btoa)
   - : Crée une chaîne ASCII codée en base 64 à partir d'une chaîne de données binaires.
-- {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
-  - : Annule l'exécution répétée définie en utilisant {{domxref("WindowOrWorkerGlobalScope.setInterval ()")}}.
-- {{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}
-  - : Annule l'exécution différée définie en utilisant {{domxref("WindowOrWorkerGlobalScope.setTimeout ()")}}.
-- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}
+- [`clearInterval()`](/fr/docs/Web/API/clearInterval)
+  - : Annule l'exécution répétée définie en utilisant [`setInterval()`](/fr/docs/Web/API/setInterval).
+- [`clearTimeout()`](/fr/docs/Web/API/atob)
+  - : Annule l'exécution différée définie en utilisant [`setTimeout()`](/fr/docs/Web/API/setTimeout).
+- [`createImageBitmap()`](/fr/docs/Web/API/createImageBitmap)
   - : Accepte une variété de sources d'images différentes, et renvoie un {{domxref("Promise")}} qui se résout en une {{domxref("ImageBitmap")}}. En option, la source est détourée avec le rectangle des pixels d'origine en (sx, sy) et de largeur sw, et de hauteur sh.
-- {{domxref("WindowOrWorkerGlobalScope.fetch()")}}
+- [`fetch()`](/fr/docs/Web/API/fetch)
   - : Démarre le processus de récupération d'une ressource à partir du réseau.
 - {{domxref("EventTarget.removeEventListener")}}
   - : Supprime un gestionnaire d'événement de la fenêtre.
-- {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
+- [`setInterval()`](/fr/docs/Web/API/setInterval)
   - : Planifie une fonction à exécuter à chaque fois qu'un nombre donné de millisecondes s'est écoulé.
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}
+- [`setTimeout()`](/fr/docs/Web/API/setTimeout)
   - : Planifie une fonction à exécuter dans un laps de temps donné.
 
 ### Méthodes obsolètes

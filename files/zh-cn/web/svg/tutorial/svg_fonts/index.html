@@ -34,7 +34,7 @@ Internet Explorer<a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-mo
 
 <p>我们从{{ SVGElement("font") }}元素开始。这个携带了一个 ID 属性，使它能够通过一个<code>URI</code>被引用（如下所示）。属性<code>horiz-adv-x</code>定义了相比之单一字形的路径定义，一个字符的平均宽度。值<code>1000</code>设置了一个起作用的合理值。有一些陪同的属性，帮助进一步定义基本的字形盒布局。</p>
 
-<p>{{ SVGElement("font-face") }}元素在 SVG 中等同于 CSS 的 <a href="/en/CSS/@font-face" title="en/css/@font-face"><code>@font-face</code></a> 声明。它定义了最终字体的基本属性，比如说 weight、style，等等。在上面这个示例中，最重要的是定义<code>font-family</code>，后面的 CSS 和 SVG <code>font-family</code>属性可以引用它的值。属性<code>font-weight</code>和<code>font-style</code>跟 CSS 中的描述符有同样的目的。所有后面的属性都是字体布局引擎的呈现指令，举个例子，字形的全部高度可以<a href="http://en.wikipedia.org/wiki/Ascender_%28typography%29">提升</a>多少。</p>
+<p>{{ SVGElement("font-face") }}元素在 SVG 中等同于 CSS 的 <a href="/en/CSS/@font-face"><code>@font-face</code></a> 声明。它定义了最终字体的基本属性，比如说 weight、style，等等。在上面这个示例中，最重要的是定义<code>font-family</code>，后面的 CSS 和 SVG <code>font-family</code>属性可以引用它的值。属性<code>font-weight</code>和<code>font-style</code>跟 CSS 中的描述符有同样的目的。所有后面的属性都是字体布局引擎的呈现指令，举个例子，字形的全部高度可以<a href="http://en.wikipedia.org/wiki/Ascender_%28typography%29">提升</a>多少。</p>
 
 <p>它的子元素，{{ SVGElement("font-face-src") }}元素，相对于 CSS 的<code>@font-face</code>描述符中的<code>src</code>描述符。你可以利用它的子元素 {{ SVGElement("font-face-name") }}和{{ SVGElement("font-face-uri") }}把字体声明指向外源。以上示例表达了如果渲染器有一个名为“Super Sans Bold”的本地字体可用，它将使用这个本地字体。</p>
 

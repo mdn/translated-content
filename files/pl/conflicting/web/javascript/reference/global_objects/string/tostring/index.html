@@ -1,0 +1,42 @@
+---
+title: String.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
+tags:
+  - JavaScript
+  - Method
+  - Non-standard
+  - Prototype
+  - String
+translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
+---
+<p>{{JSRef}}{{non-standard_header}}</p>
+
+<h2 id="Podsumowanie" name="Podsumowanie">Podsumowanie</h2>
+
+<p>Zwraca łańcuch znaków reprezentujący kod źródłowy obiektu.</p>
+
+<h2 id="Sk.C5.82adnia" name="Sk.C5.82adnia">Składnia</h2>
+
+<pre class="syntaxbox"><code>String.toSource()
+<var>str</var>.toSource()
+</code></pre>
+
+<h2 id="Opis" name="Opis">Opis</h2>
+
+<p>Metoda <code>toSource()</code> zwraca następujące wartości:</p>
+
+<ul>
+ <li>Dla wbudowanego obiektu {{jsxref("String")}}, <code>toSource()</code> zwraca następujący łańcuch znaków wskazujący, że kod źródłowy nie jest dostępny:
+
+  <pre class="brush: js">function String() {
+   [natywny kod]
+}
+</pre>
+ </li>
+ <li>W przypadku obiektu {{jsxref("String")}} lub łańcuchów znaków, <code>toSource()</code> zwraca łańcuch znaków reprezentujący kod źródłowy.</li>
+</ul>
+
+<p>Ta metoda jest w JavaScript wywoływana zazwyczaj wewnętrznie, nie bezpośrednio w kodzie.</p>
+
+<div class="noinclude"> </div>

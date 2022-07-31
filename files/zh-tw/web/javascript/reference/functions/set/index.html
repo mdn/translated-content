@@ -34,12 +34,12 @@ translation_of: Web/JavaScript/Reference/Functions/set
 <div>
 <ul>
  <li>可以擁有一個以數字或字串為代表的標示符；</li>
- <li>最少要有一個參數（請參見 <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> 的詳細資料）；</li>
+ <li>最少要有一個參數（請參見 <a href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> 的詳細資料）；</li>
  <li>不能以有另一個 <code>set</code> 的 object literal、或相同屬性入口（data entry）的 data 形式出現（不能使用 <code>{ set x(v) { }, set x(v) { } }</code> and <code>{ x: ..., set x(v) { } }</code>）</li>
 </ul>
 </div>
 
-<p><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/delete" title="zh-TW/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a> 操作符可移除 setter。</p>
+<p><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/delete"><code>delete</code></a> 操作符可移除 setter。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -65,7 +65,7 @@ console.log(language.log); // ['EN', 'FA']
 
 <h3 id="使用_delete_操作符移除_setter">使用 <code>delete</code> 操作符移除 setter</h3>
 
-<p>若想移除 setter 的話，可以直接使用 <code><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>：</p>
+<p>若想移除 setter 的話，可以直接使用 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>：</p>
 
 <pre class="brush: js">delete o.current;
 </pre>

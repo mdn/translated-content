@@ -28,7 +28,7 @@ Chrome:
 
 <h2 id="哪里出错了">哪里出错了？</h2>
 
-<p>在函数顶部直接写了 <code>"use strict"</code> ，而该函数拥有以下的参数其中之一：</p>
+<p>在函数顶部直接写了 <code>"use strict"</code> ，而该函数拥有以下的参数其中之一：</p>
 
 <ul>
  <li>{{jsxref("Functions/Default_parameters", "默认参数", "", 1)}}</li>
@@ -51,7 +51,7 @@ Chrome:
 }
 </pre>
 
-<p>如果这个函数应该处于 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：</p>
+<p>如果这个函数应该处于 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>，并且整个脚本或封装函数也可以在严格模式下，可以移动 "use strict" 指令到函数之外：</p>
 
 <pre class="brush: js example-good">"use strict";
 function sum(a=1, b=2) {

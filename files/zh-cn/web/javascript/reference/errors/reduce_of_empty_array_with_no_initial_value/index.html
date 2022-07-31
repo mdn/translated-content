@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_in
  <li>{{jsxref("TypedArray.prototype.reduce()")}}， {{jsxref("TypedArray.prototype.reduceRight()")}})。</li>
 </ul>
 
-<p>这些函数有选择性的接收 <code>initialValue</code> (将会被用作回调函数第一次被调用的参数)。然而，如果没有初始值提供，它会用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 的第一个元素作为初始值。当提供一个空数组的时候这个错误会出现，因为那种情况下没有初始值被返回。</p>
+<p>这些函数有选择性的接收 <code>initialValue</code> (将会被用作回调函数第一次被调用的参数)。然而，如果没有初始值提供，它会用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 的第一个元素作为初始值。当提供一个空数组的时候这个错误会出现，因为那种情况下没有初始值被返回。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -57,7 +57,7 @@ ints.filter(x =&gt; x &lt; 0)         // removes all elements
     .reduce((x, y) =&gt; x + y, 0) // the initial value is the neutral element of the addition
 </pre>
 
-<p>另一种办法是两方处理空的情况，要么在调用 <code>reduce</code> 之前，或者是在添加一个未预料的初始虚拟址后的回调函数中：</p>
+<p>另一种办法是两方处理空的情况，要么在调用 <code>reduce</code> 之前，或者是在添加一个未预料的初始虚拟址后的回调函数中：</p>
 
 <pre class="brush: js example-good">var names = document.getElementsByClassName("names");
 

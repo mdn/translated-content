@@ -18,11 +18,11 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 <h2 id="原因">原因</h2>
 
-<p>在 {{jsxref("Strict_mode")}}下，当试图给一个{{Glossary("symbol")}},{{Glossary("string")}},{{Glossary("number")}}或者一个{{Glossary("boolean")}}类型的数据创建一个属性时就会报 {{jsxref("TypeError")}}, 任何 {{Glossary("Primitive")}} 值都不允许有{{Glossary("property/JavaScript", "property")}}.</p>
+<p>在 {{jsxref("Strict_mode")}}下，当试图给一个{{Glossary("symbol")}},{{Glossary("string")}},{{Glossary("number")}}或者一个{{Glossary("boolean")}}类型的数据创建一个属性时就会报 {{jsxref("TypeError")}}, 任何 {{Glossary("Primitive")}} 值都不允许有{{Glossary("property/JavaScript", "property")}}.</p>
 
 <p>这个问题可能是由一个错误的值被放在了一个错误的地方导致的，或者预期{{jsxref("String")}}或{{jsxref("Number")}}的对象变体</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="示例">示例</h2>
 

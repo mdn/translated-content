@@ -104,8 +104,8 @@ o = Object.create(Object.prototype, {
     get: function() { return 10; },
     set: function(value) { console.log('Setting `o.bar` to', value); }
 /* com os ES5 Accessors nosso código pode ser escrito como:
-    get function() { return 10; },
-    set function(value) { console.log('setting `o.bar` to', value); } */
+    get() { return 10; },
+    set(value) { console.log('setting `o.bar` to', value); } */
   }
 });
 

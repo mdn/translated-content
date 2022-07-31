@@ -5,7 +5,7 @@ translation_of: Web/CSS/opacity
 ---
 <div>{{CSSRef}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p>opacity 属性指定了一个元素的<strong>不透明度</strong>。换言之，opacity 属性指定了一个元素后面的背景的被覆盖程度。</p>
 
@@ -15,7 +15,7 @@ translation_of: Web/CSS/opacity
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="brush:css notranslate">/* 完全不透明 */
 opacity: 1;
@@ -31,11 +31,11 @@ opacity: 0;
 opacity: inherit;
 </pre>
 
-<h3 id="Values" name="Values">属性值</h3>
+<h3 id="Values">属性值</h3>
 
 <dl>
  <dt><code>&lt;number&gt;</code></dt>
- <dd> {{cssxref("&lt;number&gt;")}} 是一个 0.0 到 1.0 范围内的数字值，这个数值既包含也代表通道的透明度，也就是 alpha 通道的值。任何一个溢出这个取值区间的值，尽管有效，但会被解析为在取值范围内最靠近它的值。
+ <dd> {{cssxref("&lt;number&gt;")}} 是一个 0.0 到 1.0 范围内的数字值，这个数值既包含也代表通道的透明度，也就是 alpha 通道的值。任何一个溢出这个取值区间的值，尽管有效，但会被解析为在取值范围内最靠近它的值。
  <table class="standard-table">
   <tbody>
    <tr>
@@ -47,8 +47,8 @@ opacity: inherit;
     <td>元素完全透明 (即元素不可见).</td>
    </tr>
    <tr>
-    <td>任何一个位于 0.0-1.0 之间的 {{cssxref("&lt;number&gt;")}}</td>
-    <td>元素半透明 (即元素后面的背景可见).</td>
+    <td>任何一个位于 0.0-1.0 之间的 {{cssxref("&lt;number&gt;")}}</td>
+    <td>元素半透明 (即元素后面的背景可见).</td>
    </tr>
    <tr>
     <td><code>1</code></td>
@@ -65,7 +65,7 @@ opacity: inherit;
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Basic_example" name="Basic_example">基本示例</h3>
+<h3 id="Basic_example">基本示例</h3>
 
 <pre class="brush: css notranslate">div { background-color: yellow; }
 .light {
@@ -86,7 +86,7 @@ opacity: inherit;
 
 <pre class="syntaxbox language-html notranslate">{{EmbedLiveSample('Basic_example', '640', '64')}}</pre>
 
-<h3 id="Different_opacity_with_hover" name="Different_opacity_with_hover">:hover 时 opacity 的不同</h3>
+<h3 id="Different_opacity_with_hover">:hover 时 opacity 的不同</h3>
 
 <pre class="brush: css notranslate">img.opacity {
   opacity: 1;
@@ -107,47 +107,15 @@ img.opacity:hover {
 
 <p>{{EmbedLiveSample('Different_opacity_with_hover', '150', '175')}}</p>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'opacity')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>定义动态透明度</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors', '#propdef-opacity', 'opacity')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td>初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
-<div>{{Compat("css.properties.opacity", 2)}}</div>
+<div>{{Compat}}</div>
 
-<div id="compat-mobile"></div>
-
-<ul>
- <li><strong>历史：</strong> 在 Mozilla 1.7 (Firefox 0.9) 版本 之前，“<code>-moz-opacity</code>”<code> 属性一直以一种非标准的方式在使用。在</code>Firefox 0.9 版本中 ，这种行为得到了改变，这个属性被重命名为 opacity。从那以后，<code>-moz-opacity属性仅作为opacity属性的别名而存在。</code></li>
- <li>Gecko 1.9.1 (Firefox 3.5) 以后的版本不再支持<code> -moz-opacity属性 和 Javascript中的MozOpacity属性（Gecko13中删除），到目前为止，你应该使用opacity属性。</code></li>
- <li>在 9.0 版本之前，Internet Explore 浏览器不支持 opacity 属性，它宁愿使用私有滤镜代替。.</li>
- <li>IE4 —IE9 支持下面的扩展形式： <code>progid:DXImageTransform.Microsoft.Alpha(Opacity=xx)</code>.</li>
- <li>IE8 引入了与“fliter 滤镜”同义的"-ms-filter" 属性。在 IE10 中不再支持这两个属性。</li>
- <li>和“<code>-moz-opacity</code>”属性相似，"<code>-khtml-opacity"从2004年年初</code> (Safari 1.2 发布)，<code>已经不再受到支持。</code><br>
-  Konqueror 从来不支持 <code>-khtml-opacity</code> 属性，从第四版开始，它一直支持 opacity 属性。</li>
-</ul>
-
-<h2 id="See_also" name="See_also">阅读更多</h2>
+<h2 id="See_also">阅读更多</h2>
 
 <ul>
  <li><a href="http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx">MSDN Microsoft's filter:alpha(opacity=xx)</a></li>

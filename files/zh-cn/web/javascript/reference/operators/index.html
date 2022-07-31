@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Operators
  <dt>{{jsxref("Operators/yield*", "yield*")}}</dt>
  <dd>委派给另外一个 generator 函数或可迭代的对象。</dd>
  <dt>{{jsxref("Operators/async_function", "async function")}}</dt>
- <dd><code>async function</code> 定义一个异步函数表达式。</dd>
+ <dd><code>async function</code> 定义一个异步函数表达式。</dd>
  <dt>{{jsxref("Operators/await", "await")}}</dt>
  <dd>暂停或恢复执行异步函数，并等待 promise 的 resolve/reject 回调。</dd>
  <dt>{{jsxref("Global_Objects/Array", "[]")}}</dt>
@@ -52,11 +52,11 @@ translation_of: Web/JavaScript/Reference/Operators
 <dl>
  <dt>{{jsxref("Operators/Property_accessors", "属性访问符", "", 1)}}</dt>
  <dd>成员运算符提供了对对象的属性或方法的访问。<br>
- (<code>object.property</code> 和 <code>object["property"]</code>).</dd>
+ (<code>object.property</code> 和 <code>object["property"]</code>).</dd>
  <dt>{{jsxref("Operators/new", "new")}}</dt>
  <dd><code>new</code> 运算符创建了构造函数实例。</dd>
  <dt>{{JSxRef("Operators/new%2Etarget", "new.target")}}</dt>
- <dd>在构造器中，<code>new.target</code> 指向{{jsxref("Operators/new", "new")}}调用的构造器。</dd>
+ <dd>在构造器中，<code>new.target</code> 指向{{jsxref("Operators/new", "new")}}调用的构造器。</dd>
  <dt>{{jsxref("Operators/super", "super")}}</dt>
  <dd><code>super</code> 关键字调用父类的构造器。</dd>
  <dt>{{jsxref("Operators/Spread_operator", "...obj")}}</dt>
@@ -132,11 +132,11 @@ translation_of: Web/JavaScript/Reference/Operators
  <dt>{{jsxref("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}</dt>
  <dd>小于等于运算符。</dd>
  <dt>{{jsxref("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}</dt>
- <dd>大于等于运算符。 </dd>
+ <dd>大于等于运算符。 </dd>
 </dl>
 
 <div class="note">
-<p><strong>备注：</strong> 不是运算符，而是{{jsxref("Functions/Arrow_functions", "箭头函数")}}的表示符。</p>
+<p><strong>备注：</strong> 不是运算符，而是{{jsxref("Functions/Arrow_functions", "箭头函数")}}的表示符。</p>
 </div>
 
 <h3 id="相等运算符">相等运算符</h3>
@@ -247,54 +247,24 @@ translation_of: Web/JavaScript/Reference/Operators
  </dt>
  <dd>逗号操作符允许在一个判断状态中有多个表达式去进行运算并且最后返回最后一个表达式的值。</dd>
  <dt>
-  非标准化特性 {{JSxRef("Operators/Expression_closures", "Expression closures", "", 1)}} {{non-standard_inline}}{{obsolete_inline(60)}}
+  非标准化特性 {{JSxRef("Operators/Expression_closures", "Expression closures", "", 1)}} {{non-standard_inline}}{{Deprecated_Inline}}
  </dt>
  <dd>闭包表达式语法是一个缩写简单的函数。</dd>
- <dt>{{JSxRef("Operators/Legacy_generator_function", "Legacy generator function", "", 1)}} {{non-standard_inline}}{{obsolete_inline(58)}}</dt>
+ <dt>{{JSxRef("Operators/Legacy_generator_function", "Legacy generator function", "", 1)}} {{non-standard_inline}}{{Deprecated_Inline}}</dt>
  <dd>function 关键字能用来定义表达式内部未执行完的 function 的余下功能。 为了能执行 function 内部余下的代码，这个 function 的内部至少包含一个{{jsxref("Operators/yield", "yield")}} 表达式。</dd>
- <dt>{{JSxRef("Operators/Array_comprehensions", "[for (x of y) x]")}} {{non-standard_inline}}{{obsolete_inline(58)}}</dt>
+ <dt>{{JSxRef("Operators/Array_comprehensions", "[for (x of y) x]")}} {{non-standard_inline}}{{Deprecated_Inline}}</dt>
  <dd>数组解析</dd>
- <dt>{{JSxRef("Operators/Generator_comprehensions", "(for (x of y) y)")}} {{non-standard_inline}}{{obsolete_inline(58)}}</dt>
+ <dt>{{JSxRef("Operators/Generator_comprehensions", "(for (x of y) y)")}} {{non-standard_inline}}{{Deprecated_Inline}}</dt>
  <dd>生成器解析</dd>
 </dl>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11', 'Expressions')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11', 'Expressions')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>New: Spread syntax, rest syntax, destructuring assignment, <code>super</code> keyword.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("javascript.operators")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 

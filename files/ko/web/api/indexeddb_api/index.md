@@ -37,7 +37,7 @@ IndexedDB 작업은 애플리케이션 블록을 방지하기 위해 모두 비�
 
 ## 인터페이스
 
-데이터베이스에 접속하기 위해서는 [window](/ko/docs/Web/API/Window) 객체의 [`indexedDB` (en-US)](/en-US/docs/Web/API/indexedDB) 속성에서 [`open()` (en-US)](/en-US/docs/Web/API/IDBFactory/open)을 호춣해야 합니다. 이 메소드는 {{domxref("IDBRequest")}} 객체를 반환합니다. 비동기 작업은 {{domxref("IDBRequest")}} 객체에서 이벤트를 발생시켜 호출한 애플리케이션과 통신합니다.
+데이터베이스에 접속하기 위해서는 [window](/ko/docs/Web/API/Window) 객체의 [`indexedDB` (en-US)](/en-US/docs/Web/API/indexedDB) 속성에서 [`open()` (en-US)](/en-US/docs/Web/API/IDBFactory/open)을 호출해야 합니다. 이 메소드는 {{domxref("IDBRequest")}} 객체를 반환합니다. 비동기 작업은 {{domxref("IDBRequest")}} 객체에서 이벤트를 발생시켜 호출한 애플리케이션과 통신합니다.
 
 ### 데이터베이스에 연결하기
 

@@ -28,7 +28,7 @@ SyntaxError: for-of loop variable declaration may not have an initializer. (Chro
 
 <h2 id="示例">示例</h2>
 
-<h3 id="非法的_for-of_循环形式">非法的 <code>for-of</code> 循环形式</h3>
+<h3 id="非法的_for-of_循环形式">非法的 <code>for-of</code> 循环形式</h3>
 
 <pre class="brush: js example-bad">let iterable = [10, 20, 30];
 
@@ -39,7 +39,7 @@ for (let value = 50 of iterable) {
 // SyntaxError: a declaration in the head of a for-of loop can't
 // have an initializer</pre>
 
-<h3 id="合法的_for-of_循环形式">合法的 <code>for-of</code> 循环形式</h3>
+<h3 id="合法的_for-of_循环形式">合法的 <code>for-of</code> 循环形式</h3>
 
 <p>需要将初始化器 (<code>value = 50</code>) 从<code>for-of</code> 循环的头部移除。或许你的本意是给每个值添加 50 的偏移量，在这种情况下，可以在循环体中进行添加。</p>
 

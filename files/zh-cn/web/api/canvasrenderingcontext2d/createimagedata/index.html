@@ -43,7 +43,7 @@ ImageData <var><em>ctx</em>.createImageData(imagedata);</var>
 
 <h3 id="使用_createImageData_方法">使用 <code>createImageData</code> 方法</h3>
 
-<p>这是一段简单地使用 <code>createImageData</code> 方法的代码片段。 获取更多信息，请看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas 像素控制</a> 和 {{domxref("ImageData")}} 对象。</p>
+<p>这是一段简单地使用 <code>createImageData</code> 方法的代码片段。 获取更多信息，请看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">canvas 像素控制</a> 和 {{domxref("ImageData")}} 对象。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -74,8 +74,8 @@ console.log(ctx.createImageData(100, 100));
 <ul>
  <li>从 {{geckoRelease("5.0")}}开始：
   <ul>
-   <li>如果矩形小于指定的 1 个像素，<code>createImageData()</code> 会返回图像数据至少 1 个像素值。</li>
-   <li>当调用 <code>createImageData()</code> 指定非限制值时，会抛出<code>NOT_SUPPORTED_ERR</code> exception 异常。</li>
+   <li>如果矩形小于指定的 1 个像素，<code>createImageData()</code> 会返回图像数据至少 1 个像素值。</li>
+   <li>当调用 <code>createImageData()</code> 指定非限制值时，会抛出<code>NOT_SUPPORTED_ERR</code> exception 异常。</li>
    <li><code>createImageData()</code> 根据规定处理负数变量，会围绕对称轴翻转矩形区域。</li>
   </ul>
  </li>

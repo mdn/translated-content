@@ -21,7 +21,7 @@ MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다! 이 글은 Jav
   <tbody>
     <tr>
       <th scope="row">필요한 사전 지식:</th>
-      <td>기본적인 컴퓨터 능력, HTML과 CSS 기초.</td>
+      <td>기본적인 컴퓨터 이해 능력, HTML과 CSS 기초.</td>
     </tr>
     <tr>
       <th scope="row">목표:</th>
