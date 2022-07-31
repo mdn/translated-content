@@ -2,11 +2,11 @@
 title: MDN の慣習と定義
 slug: MDN/Guidelines/Conventions_definitions
 tags:
-  - ドキュメント
-  - ガイド
-  - ガイドライン
+  - Documentation
+  - Guide
+  - Guidelines
   - MDN
-  - MDN メタ
+  - MDN Meta
 translation_of: MDN/Guidelines/Conventions_definitions
 ---
 {{MDNSidebar}}
