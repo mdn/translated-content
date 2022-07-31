@@ -115,7 +115,6 @@
 /zh-TW/docs/Core_JavaScript_1.5_教學/預先定義的核心物件/Number_物件	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Number_物件
 /zh-TW/docs/Core_JavaScript_1.5_教學/預先定義的核心物件/RegExp_物件	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/RegExp_物件
 /zh-TW/docs/Core_JavaScript_1.5_教學/預先定義的核心物件/String_物件	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/String_物件
-/zh-TW/docs/Core_JavaScript_1.5_正規表達式的建立	/zh-TW/docs/orphaned/Core_JavaScript_1.5_正規表達式的建立
 /zh-TW/docs/Core_JavaScript_1.5_正規表達式的建立/正規表達式的建立	/zh-TW/docs/orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的建立
 /zh-TW/docs/Cross-site_XMLHttpRequest	/zh-TW/docs/orphaned/Cross-site_XMLHttpRequest
 /zh-TW/docs/DOM	/en-US/docs/Web/API/Document_Object_Model
@@ -125,7 +124,6 @@
 /zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest	/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /zh-TW/docs/DOM/window.location	/zh-TW/docs/Web/API/Window/location
 /zh-TW/docs/DOM_中的空白字元	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
-/zh-TW/docs/DOM_觀察器	/zh-TW/docs/orphaned/DOM_觀察器
 /zh-TW/docs/DragDrop	/zh-TW/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/DragDrop/Drag_and_Drop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/Drawing_text_using_a_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -166,7 +164,6 @@
 /zh-TW/docs/HTML/HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5
 /zh-TW/docs/HTML/HTML5_表單	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
-/zh-TW/docs/HTML5_Cross_Browser_Polyfills	/zh-TW/docs/orphaned/HTML5_Cross_Browser_Polyfills
 /zh-TW/docs/HTTP	/zh-TW/docs/Web/HTTP
 /zh-TW/docs/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/HTTP/Browser_detection_using_the_user_agent	/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent
@@ -527,7 +524,7 @@
 /zh-TW/docs/Tools/Web_Audio_Editor	https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html
 /zh-TW/docs/Tools/Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /zh-TW/docs/Tools/Web_Console/Console_messages	https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html
-/zh-TW/docs/Tools/Web_Console/Keyboard_shortcuts	/zh-TW/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
+/zh-TW/docs/Tools/Web_Console/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#web_console
 /zh-TW/docs/Tools/Web_Console/Opening_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/ui_tour/index.html
 /zh-TW/docs/Tools/Web_Console/Rich_output	https://firefox-source-docs.mozilla.org/devtools-user/web_console/rich_output/index.html
 /zh-TW/docs/Tools/Web_Console/Split_console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/split_console/index.html
@@ -888,9 +885,7 @@
 /zh-TW/docs/XHTML	/zh-TW/docs/Glossary/XHTML
 /zh-TW/docs/XPCNativeWrapper	/zh-TW/docs/orphaned/XPCNativeWrapper
 /zh-TW/docs/en	/en-US/
-/zh-TW/docs/zh-tw	/zh-TW/docs/orphaned/zh-tw
-/zh-TW/docs/參與_Mozilla_專案	/zh-TW/docs/orphaned/參與_Mozilla_專案
-/zh-TW/docs/建立擴充套件	/zh-TW/docs/orphaned/建立擴充套件
+/zh-TW/docs/zh-tw	/zh-TW/
 /zh-TW/docs/控制_HTML_表單中的拼字檢查功能	/zh-TW/docs/Web/HTML/Global_attributes/spellcheck
 /zh-TW/docs/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/本地化	/zh-TW/docs/Glossary/Localization

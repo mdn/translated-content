@@ -8224,25 +8224,12 @@
       "BobChao"
     ]
   },
-  "orphaned/Core_JavaScript_1.5_正規表達式的建立": {
-    "modified": "2019-03-24T00:00:58.216Z",
-    "contributors": [
-      "wbamberg",
-      "happysadman"
-    ]
-  },
   "orphaned/Cross-site_XMLHttpRequest": {
     "modified": "2019-01-16T15:28:10.716Z",
     "contributors": [
       "Mgjbot",
       "BobChao",
       "Coolcd"
-    ]
-  },
-  "orphaned/DOM_觀察器": {
-    "modified": "2019-01-16T13:41:41.852Z",
-    "contributors": [
-      "273K"
     ]
   },
   "orphaned/Firefox_3.5_技術文件": {
@@ -8253,12 +8240,6 @@
       "teoli",
       "Littlebtc",
       "BobChao"
-    ]
-  },
-  "orphaned/HTML5_Cross_Browser_Polyfills": {
-    "modified": "2019-01-16T13:58:45.342Z",
-    "contributors": [
-      "Kennyluck"
     ]
   },
   "orphaned/Learn/HTML/Forms/HTML5_updates": {
@@ -8323,12 +8304,6 @@
       "wbamberg",
       "Astrid-GitHub",
       "RSyehann"
-    ]
-  },
-  "orphaned/Tools/Web_Console/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:24.444Z",
-    "contributors": [
-      "iigmir"
     ]
   },
   "orphaned/Web/API/Ambient_Light_Events": {
@@ -8844,25 +8819,6 @@
     "contributors": [
       "ethertank",
       "Clydewu"
-    ]
-  },
-  "orphaned/zh-tw": {
-    "modified": "2019-01-16T13:51:15.538Z",
-    "contributors": [
-      "CQD"
-    ]
-  },
-  "orphaned/參與_Mozilla_專案": {
-    "modified": "2019-03-24T00:01:01.475Z",
-    "contributors": [
-      "happysadman"
-    ]
-  },
-  "orphaned/建立擴充套件": {
-    "modified": "2019-01-16T16:02:32.252Z",
-    "contributors": [
-      "Josesun",
-      "Haka"
     ]
   }
 }
