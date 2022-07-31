@@ -99,7 +99,7 @@ Handlebars 将像这样构建 HTML：
 
 ### TypeScript
 
-[TypeScript](https://www.typescriptlang.org/) 是 JavaScript 的 _超集_, 这意味着它*扩展*了 JavaScript——所有 JavaScript 代码都是有效的 TypeScript 代码，但反之则不然。TypeScript 可以让开发者们“严格地”执行他们的代码。例如，要写一个函数 `add()`，它接受整数 `a` 和 `b` 并返回它们的总和。
+[TypeScript](https://www.typescriptlang.org/) 是 JavaScript 的*超集*，这意味着它*扩展*了 JavaScript——所有 JavaScript 代码都是有效的 TypeScript 代码，但反之则不然。TypeScript 可以让开发者们“严格地”执行他们的代码。例如，要写一个函数 `add()`，它接受整数 `a` 和 `b` 并返回它们的总和。
 
 在 JavaScript 中，可以这样编写：
 
