@@ -40,13 +40,13 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>以下内容介绍了应用生成器的用法，以及视图 / CSS 的一些不同选项。还介绍了骨架站点的组织结构。最后，我们将介绍站点的运行方法，从而对其进行验证。</p>
 
 <div class="note">
-<p><strong>注：</strong>Express 应用生成器并非唯一的 Express 应用生成工具，而且生成项目的结构也不是组织文件和目录的唯一可行方式。但生成项目具有易于扩展和理解的模块化结构。最简单的 Express 应用请参阅 <a href="http://expressjs.com.cn/starter/hello-world.html">Hello world 示例</a>（Express 镜像站）。</p>
+<p><strong>备注：</strong> Express 应用生成器并非唯一的 Express 应用生成工具，而且生成项目的结构也不是组织文件和目录的唯一可行方式。但生成项目具有易于扩展和理解的模块化结构。最简单的 Express 应用请参阅 <a href="http://expressjs.com.cn/starter/hello-world.html">Hello world 示例</a>（Express 镜像站）。</p>
 </div>
 
 <h2 id="使用应用生成器">使用应用生成器</h2>
 
 <div class="blockIndicator note">
-<p><strong>译注：</strong>本教程中命令操作基于 Linux/macOS 的 bash 终端，Windows 的命令提示符 cmd/PowerShell 与 bash 的概念和用法略有不同，为在 Windows 上获得一致的体验，可以：</p>
+<p><strong>备注：</strong> 本教程中命令操作基于 Linux/macOS 的 bash 终端，Windows 的命令提示符 cmd/PowerShell 与 bash 的概念和用法略有不同，为在 Windows 上获得一致的体验，可以：</p>
 
 <ul>
  <li>自己弄懂 cmd/PowerShell 与 bash 的区别。</li>
@@ -56,7 +56,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 </div>
 
 <div class="blockIndicator note">
-<p><strong>译注：</strong>你可能已经发现国内用 NPM 太慢了！这是由众所周知的不可抗力造成的。可用淘宝提供的 <a href="https://npm.taobao.org/">CNPM</a> 代替之，功能和用法基本一致（只是不能上传自己的包）。</p>
+<p><strong>备注：</strong> 你可能已经发现国内用 NPM 太慢了！这是由众所周知的不可抗力造成的。可用淘宝提供的 <a href="https://npm.taobao.org/">CNPM</a> 代替之，功能和用法基本一致（只是不能上传自己的包）。</p>
 </div>
 
 <p>你应该已经安装好了生成器，它是 <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment">设置 Node 开发环境</a> 的一部分。可以使用 NPM 来安装全局的生成器，如下所示：</p>
@@ -94,7 +94,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>还可以使用 <code>--view</code> 选择视图（模板）引擎，并且/或者使用 <code>--css</code> 选择 CSS 生成引擎。</p>
 
 <div class="note">
-<p><strong>注：</strong>不推荐用 <code>--hogan</code>、<code>--ejs</code>、<code>--hbs</code> 等参数选用模板引擎。请使用 <code>--view</code>（或 <code>-v</code>）。</p>
+<p><strong>备注：</strong> 不推荐用 <code>--hogan</code>、<code>--ejs</code>、<code>--hbs</code> 等参数选用模板引擎。请使用 <code>--view</code>（或 <code>-v</code>）。</p>
 </div>
 
 <h3 id="我应该用哪个视图引擎？">我应该用哪个视图引擎？</h3>
@@ -102,7 +102,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>Express 应用生成器支持多款流行的视图/模板引擎，包括 <a href="https://www.npmjs.com/package/ejs">EJS</a>、<a href="http://github.com/donpark/hbs">Hbs</a>、<a href="https://pugjs.org/api/getting-started.html">Pug</a> (Jade)、<a href="https://www.npmjs.com/package/twig">Twig</a> 和 <a href="https://www.npmjs.com/package/vash">Vash</a>，缺省选项是 Jade。Express 本身也支持大量其他模板语言，<a href="https://github.com/expressjs/express/wiki#template-engines">开箱即用</a>。</p>
 
 <div class="note">
-<p><strong>注：</strong>如果要使用生成器不支持的模板引擎，请参阅 <a href="http://expressjs.com.cn/guide/using-template-engines.html">在 Express 中使用模板引擎</a>（Express 文档）和所选视图引擎的文档。</p>
+<p><strong>备注：</strong> 如果要使用生成器不支持的模板引擎，请参阅 <a href="http://expressjs.com.cn/guide/using-template-engines.html">在 Express 中使用模板引擎</a>（Express 文档）和所选视图引擎的文档。</p>
 </div>
 
 <p>一般来说，你应该选择一个大而全的模板引擎，可以尽快进入生产状态。就像你选择其他组件一样！选用模板引擎需要考虑以下因素：</p>
@@ -126,7 +126,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 </ul>
 
 <div class="note">
-<p><strong>提示：</strong>互联网上有许多资源，可帮助你选择合适的视图/模板引擎。</p>
+<p><strong>备注：</strong> 互联网上有许多资源，可帮助你选择合适的视图/模板引擎。</p>
 </div>
 
 <p>本项目选用<a href="https://pugjs.org/api/getting-started.html"> Pug </a>模板引擎（Jade 是它不久前的曾用名），它是最流行的 Express / JavaScript 模板语言之一，且对 Express 生成器 <a href="https://github.com/expressjs/express/wiki#template-engines">开箱即用</a>。</p>
@@ -136,7 +136,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>Express 应用生成器支持最常见的 CSS 引擎：<a href="http://lesscss.org/">LESS</a>, <a href="http://sass-lang.com/">SASS</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://stylus-lang.com/">Stylus</a>。</p>
 
 <div class="note">
-<p><strong>注：</strong>CSS 的一些限制导致某些任务完成起来非常困难。CSS 引擎提供了更强大的语法来定义 CSS，然后将定义编译为纯 CSS 供浏览器使用。</p>
+<p><strong>备注：</strong> CSS 的一些限制导致某些任务完成起来非常困难。CSS 引擎提供了更强大的语法来定义 CSS，然后将定义编译为纯 CSS 供浏览器使用。</p>
 </div>
 
 <p>与模板引擎一样，你也应该使用样式表引擎，这可以最大化团队生产力。本项目将使用原始 CSS（默认的），因为我们对 CSS 要求不复杂，没有必要使用引擎。</p>
@@ -174,7 +174,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>一个 Express 应用就配置成功了，它托管于 localhost:3000。</p>
 
-<div class="note"><strong>注：</strong>指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： <img alt="用 npm start 启动这个应用" src="https://mdn.mozillademos.org/files/16409/npm-start.png"> 直接通过 <code>npm start</code> 命令启动应用也可以，但不会看到调试信息。</div>
+<div class="note"><p><strong>备注：</strong> 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： <img alt="用 npm start 启动这个应用" src="https://mdn.mozillademos.org/files/16409/npm-start.png"> 直接通过 <code>npm start</code> 命令启动应用也可以，但不会看到调试信息。</p></div>
 
 <h2 id="文件改动时重启服务器">文件改动时重启服务器</h2>
 
@@ -210,7 +210,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>现在，如果编辑项目中的任何文件，服务器将自动重启（或者可以随时使用 rs 命令来重启）。查看更新后的页面需要点击浏览器的“刷新”按钮。</p>
 
 <div class="note">
-<p><strong>注：</strong>这里必须使用“<code>npm <strong>run <em>&lt;scriptname&gt;</em></strong></code>”命令，而不是 <code>npm start</code>，因为“start”本质上是映射到脚本的一条 NPM 命令。我们可以在 <code>start</code> 脚本中替换它，但我们只想在开发期间使用 nodemon，因此有必要创建一条新的脚本命令。</p>
+<p><strong>备注：</strong> 这里必须使用“<code>npm run &lt;scriptname&gt;</code>”命令，而不是 <code>npm start</code>，因为“start”本质上是映射到脚本的一条 NPM 命令。我们可以在 <code>start</code> 脚本中替换它，但我们只想在开发期间使用 nodemon，因此有必要创建一条新的脚本命令。</p>
 </div>
 
 <h2 id="生成的项目">生成的项目</h2>
@@ -221,7 +221,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>安装好依赖项的生成项目具有如下文件结构（<strong>不</strong>带“/”前缀的是文件）：</p>
 
-<pre class="notranslate">/express-locallibrary-tutorial
+<pre class="brush: plain">/express-locallibrary-tutorial
     <strong>app.js</strong>
     /bin
         <strong>www</strong>
@@ -305,7 +305,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 </pre>
 
 <div class="note">
-<p><strong>注：</strong><code>require()</code> 是一个全局的 node 函数，可将模块导入当前文件。这里使用相对路径指定<strong> app.js</strong> 模块，并省略了 .<strong>js</strong> 扩展名（可选）。</p>
+<p><strong>备注：</strong> <code>require()</code> 是一个全局的 node 函数，可将模块导入当前文件。这里使用相对路径指定<strong> app.js</strong> 模块，并省略了 .<strong>js</strong> 扩展名（可选）。</p>
 </div>
 
 <p>文件的其余部分先为 <code>app</code> 设置端口（环境变量中的预定义值或默认值 3000），再创建一个 HTTP 服务器，然后开始监听请求，报告服务器错误和连接信息。其它内容可暂时忽略（这里所有内容都是机器生成的模板），但感兴趣的话可以随时回来看看。</p>
@@ -338,7 +338,7 @@ var usersRouter = require('./routes/users');
 </pre>
 
 <div class="note">
-<p><strong>注意：</strong> 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。</p>
+<p><strong>备注：</strong> 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。</p>
 </div>
 
 <p>下面我们用导入的 <code>express</code> 模块来创建 <code>app</code> 对象，然后使用它来设置视图（模板）引擎。设置引擎分两步：首先设置 '<code>views</code>' 以指定模板的存储文件夹（此处设为子文件夹 <strong>/views</strong>）。然后设置 '<code>view engine</code>' 以指定模板库（本例中设为“pug” ）。</p>
@@ -367,7 +367,7 @@ app.use('/users', usersRouter);
 </pre>
 
 <div class="note">
-<p><strong>注：</strong>这些路径（<code>'/'</code> 和 '<code>/users'</code>）将作为导入路由的前缀。如果导入的模块 <code>users在</code><code>/profile</code> 定义了路由，则可以在 <code>/users/profile</code> 访问该路由。我们将在后面的文章中，详细讨论路由。</p>
+<p><strong>备注：</strong> 这些路径（<code>'/'</code> 和 '<code>/users'</code>）将作为导入路由的前缀。如果导入的模块 <code>users在</code><code>/profile</code> 定义了路由，则可以在 <code>/users/profile</code> 访问该路由。我们将在后面的文章中，详细讨论路由。</p>
 </div>
 
 <p>最后一个中间件为错误和 HTTP 404 响应添加处理方法。</p>
@@ -415,7 +415,7 @@ module.exports = router;
 <p>该路由定义了一个回调，在检测到正确模式的 HTTP <code>GET</code> 请求时将调用该回调。正确模式即导入模块时指定的路由（'<code>/users</code>'）加该模块（'<code>/</code>'）中定义的任何内容。换句话说，在收到 <code>/users/</code> URL 时使用此路由。</p>
 
 <div class="note">
-<p><strong>提示：</strong>用 node 启动该应用并访问 <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>，浏览器会返回一条消息：'respond with a resource'。</p>
+<p><strong>备注：</strong> 用 node 启动该应用并访问 <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>，浏览器会返回一条消息：'respond with a resource'。</p>
 </div>
 
 <p>值得注意的是，上述回调函数有第三个参数 '<code>next</code>'，因此它是一个中间件函数，而不是简单的路由回调。<code>next</code> 参数暂时还用不到，在 <code>'/'</code> 路径中添加多个路由处理器时才会涉及。</p>
@@ -432,7 +432,7 @@ router.get('/', function(req, res) {
 
 <p>以下是上文代码中涉及到的模板（<strong>index.pug</strong>）。pug 语法稍后再详细讨论。现在只需要知道：<code>title</code> 变量将以 <code>'Express'</code> 作为值插入模板的指定位置。</p>
 
-<pre class="notranslate">extends layout
+<pre class="brush: plain">extends layout
 
 block content
   h1= title
@@ -442,9 +442,6 @@ block content
 <h2 id="挑战自我">挑战自我</h2>
 
 <p>在 <strong>/routes/users.js</strong> 中添加一个新路由，在 URL <code>/users/cool/</code> 处显示文本 "你好酷"。运行服务器，并在浏览器中访问 <a href="http://localhost:3000/users/cool/">http://localhost:3000/users/cool/ </a>，测试一下是否成功。</p>
-
-<ul>
-</ul>
 
 <h2 id="小结">小结</h2>
 

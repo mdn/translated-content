@@ -1,12 +1,12 @@
 ---
 title: 使用 async 进行非同步流控制
-slug: learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async
 ---
 <p>有些本地图书馆网页的控制器代码，会依赖多重非同步要求的结果，可能会需要以某种特定次序运行，或者以平行方式运行。为了管理流控制，并在我们所有需要用到的信息，都已经可以取用的时候，再绘制网页，我们将使用许多人采用的 node <a href="https://www.npmjs.com/package/async">async</a> 模组。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 在 JavaScript 中有许多其他方法，可以管理异步行为和流控制，包括相对较新的 JavaScript 语言功能，如 <a href="/en-US/docs/Mozilla/Add-ons/Techniques/Promises">Promises</a>。</p>
+<p><strong>备注：</strong> 在 JavaScript 中有许多其他方法，可以管理异步行为和流控制，包括相对较新的 JavaScript 语言功能，如 <a href="/en-US/docs/Mozilla/Add-ons/Techniques/Promises">Promises</a>。</p>
 </div>
 
 <p>Async 有很多有用的方法（请查看<a href="http://caolan.github.io/async/docs.html">文档</a>）。一些最重要的功能是：</p>
@@ -23,15 +23,15 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>如果控制器只需要执行<strong>一个</strong>异步操作，来获取呈现页面所需的信息，那么实现很简单 - 我们只需在回调中呈现模板。下面的代码片段，显示了一个函数，该函数呈现模型 <code>SomeModel</code> 的计数（使用 Mongoose <code><a href="http://mongoosejs.com/docs/api.html#model_Model.count">count()</a></code>方法）：</p>
 
-<pre class="brush: js"><code>exports.some_model_count = function(req, res, next) {
+<pre class="brush: js">exports.some_model_count = function(req, res, next) {
 
-</code>  SomeModel.count({ a_model_field: 'match_value' }, function (err, count) {
+  SomeModel.count({ a_model_field: 'match_value' }, function (err, count) {
     // ... do something if there is an err
 
     // On success, render the result by passing count into the render function (here, as the variable 'data').
     res.render('the_template', { data: count } );
   });
-<code>}</code>
+}
 </pre>
 
 <p>但是，如果您需要进行<strong>多个</strong>异步查询，并且在完成所有操作之前，无法呈现页面，该怎么办？一个单纯的实现可以用“菊花链”连接请求，在先前请求的回调中，启动后续请求，并在最终回调中呈现响应。这种方法的问题，是我们的请求必须串行运行，即使并行运行它们可能更有效。这也可能导致复杂的嵌套代码，通常称为<a href="http://callbackhell.com/">回调地狱</a>。</p>
@@ -40,7 +40,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <h2 id="平行的非同步操作">平行的非同步操作</h2>
 
-<p>方法<code><a href="http://caolan.github.io/async/docs.html#parallel">async.parallel()</a></code>用于并行运行多个异步操作。</p>
+<p>方法<code><a href="https://caolan.github.io/async/docs.html#parallel">async.parallel()</a></code>用于并行运行多个异步操作。</p>
 
 <p><code>async.parallel()</code> 的第一个参数，是要运行的异步函数的集合（数组，对象或其他可迭代的）。每个函数都传递一个回调函数<code>callback(err, result)</code> ，它必须在完成时调用错误<code>err</code>（可以为<code>null</code>）和可选的结果值。</p>
 
@@ -48,7 +48,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>下面的示例，显示了当我们将对象作为第一个参数传递时它是如何工作的。如您所见，结果将返回到一个对象中，该对象具有与传入的原始函数相同的属性名称。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">async.parallel({
+<pre class="brush: js">async.parallel({
   one: function(callback) { ... },
   two: function(callback) { ... },
   ...
@@ -58,15 +58,15 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
   function(err, results) {
     // 'results' is now equal to: {one: 1, two: 2, ..., something_else: some_value}
   }
-);</code></pre>
+);</pre>
 
 <p>如果您将一组函数，作为第一个参数传递，则结果将是一个数组（数组顺序结果，将与声明函数的原始顺序匹配 - 而不是它们完成的顺序）。</p>
 
 <h2 id="序列的非同步操作">序列的非同步操作</h2>
 
-<p><code><a href="http://caolan.github.io/async/docs.html#series">async.series()</a></code>方法用于按顺序运行多个异步操作，后续函数不依赖于先前函数的输出。它本质上是声明的，并且行为与<code>async.parallel()</code>.相同。</p>
+<p><code><a href="https://caolan.github.io/async/docs.html#series">async.series()</a></code>方法用于按顺序运行多个异步操作，后续函数不依赖于先前函数的输出。它本质上是声明的，并且行为与<code>async.parallel()</code>.相同。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">async.series({
+<pre class="brush: js">async.series({
   one: function(callback) { ... },
   two: function(callback) { ... },
   ...
@@ -76,13 +76,13 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
   function(err, results) {
     // 'results' is now equals to: {one: 1, two: 2, ..., something_else: some_value} 
   }
-);</code></pre>
+);</pre>
 
 <div class="note">
-<p><strong>注意：</strong> ECMAScript（JavaScript）语言规范指出，对象的枚举顺序是未定义的，因此可能不会按照在所有平台上指定它们的顺序，调用这些函数。如果顺序真的很重要，那么你应该传递一个数组而不是一个对象，如下所示。</p>
+<p><strong>备注：</strong> ECMAScript（JavaScript）语言规范指出，对象的枚举顺序是未定义的，因此可能不会按照在所有平台上指定它们的顺序，调用这些函数。如果顺序真的很重要，那么你应该传递一个数组而不是一个对象，如下所示。</p>
 </div>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">async.series([
+<pre class="brush: js">async.series([
   function(callback) {
     // do some stuff ...
     callback(null, 'one');
@@ -96,7 +96,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
   function(err, results) {
   // results is now equal to ['one', 'two'] 
   }
-);</code></pre>
+);</pre>
 
 <h2 id="依赖序列的非同步操作">依赖序列的非同步操作</h2>
 
@@ -106,7 +106,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>完成所有操作后，将使用上一操作的结果，调用最终回调。当您参考下面的代码片段时，这种工作方式会更加明确（此示例来自 <em>async</em> 文档）：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">async.waterfall([
+<pre class="brush: js">async.waterfall([
   function(callback) {
     callback(null, 'one', 'two');
   },
@@ -121,15 +121,13 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 ], function (err, result) {
   // result now equals 'done'
 }
-);</code></pre>
+);</pre>
 
 <h2 id="安装_async">安装 async</h2>
 
 <p>使用 NPM 包管理器安装 async 模块，以便我们可以在代码中使用它。您可以常规方式执行此操作，在 LocalLibrary 项目的根目录中，打开命令提示并输入以下命令：</p>
 
-<p> </p>
-
-<pre class="brush: bash line-numbers  language-bash"><code class="language-bash">npm install async</code></pre>
+<pre class="brush: bash">npm install async</pre>
 
 <h2 id="下一步">下一步</h2>
 

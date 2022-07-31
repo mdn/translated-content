@@ -11,7 +11,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_pag
 
 <p>打开<strong>/controllers/authorController.js</strong>。在文件顶部附近，找到导出的<code>author_list()</code> 控制器方法，并将其替换为以下代码（更改后的代码以粗体显示）。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display list of all Authors.
+<pre class="brush: js">// Display list of all Authors.
 exports.author_list = function(req, res, next) {
 
   Author.find()
@@ -22,7 +22,7 @@ exports.author_list = function(req, res, next) {
       res.render('author_list', { title: 'Author List', author_list: list_authors });
     });
 
-};</code></pre>
+};</pre>
 
 <p>该方法使用模型的 <code>find()</code>, <code>sort()</code> 和 <code>exec()</code> 函数，以返回所有<code>Author</code>对象，并按<code>family_name</code>的字母顺排列。传递给<code>exec()</code>方法的回调被调用，并将传入任何错误（或<code>null</code>）作为第一个参数，或者成功时，传入所有作者列表。如果出现错误，则调用带有错误值的下一个中间件函数，如果没有错误，则呈现<strong> author_list</strong>（.pug）模板，传递页面标题<code>title，</code>和作者列表（<code>author_list</code>）。</p>
 
@@ -30,7 +30,7 @@ exports.author_list = function(req, res, next) {
 
 <p>打开 <strong>/views/author_list.pug </strong>，用底下文字取代它的内容。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">extends layout
+<pre class="brush: js">extends layout
 
 block content
   h1= title
@@ -42,7 +42,7 @@ block content
       | (#{author.date_of_birth} - #{author.date_of_death})
 
   else
-    li There are no authors.</code></pre>
+    li There are no authors.</pre>
 
 <p>如同我们其它的模板，上面视图也依照着同样的模式。</p>
 
@@ -53,7 +53,7 @@ block content
 <p><img alt="Author List Page - Express Local Library site" src="locallibary_express_author_list.png"></p>
 
 <div class="note">
-<p><strong>注意：</strong> 作者生命日期的外观是丑陋的！您可以使用我们用于<code>BookInstance</code> 列表的<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">相同方法</a>（将生命周期的虚拟属性，添加到 <code>Author</code> 模型），来改进此方法。</p>
+<p><strong>备注：</strong> 作者生命日期的外观是丑陋的！您可以使用我们用于<code>BookInstance</code> 列表的<a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">相同方法</a>（将生命周期的虚拟属性，添加到 <code>Author</code> 模型），来改进此方法。</p>
 
 <p>但是，这次缺少日期，除非严格模式生效，否则将忽略对不存在的属性的引用。<code>moment()</code>返回当前时间，并且您不希望将缺少的日期格式化为就像今天一样。</p>
 

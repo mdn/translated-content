@@ -1,6 +1,6 @@
 ---
 title: 创建作者表单
-slug: learn/Server-side/Express_Nodejs/forms/Create_author_form
+slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 ---
 <p><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_author_form">Ed</a>本章节演示，如何为创建作者对象<code>Author</code>定义一个页面。</p>
@@ -11,23 +11,23 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 
 <p>打开 <strong>/controllers/authorController.js</strong>，并在档案最上方加入底下几行：</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');</code></pre>
+<pre class="brush: js">const { body,validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');</pre>
 
 <h2 id="控制器—get_路由">控制器—get 路由</h2>
 
 <p>找到导出的 <code>author_create_get()</code>控制器方法，并替换为底下代码。这里单纯呈现 <strong>author_form.pug</strong> 视图，传送 <code>title</code> 变数。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display Author create form on GET.
+<pre class="brush: js">// Display Author create form on GET.
 exports.author_create_get = function(req, res, next) {
     res.render('author_form', { title: 'Create Author'});
-};</code></pre>
+};</pre>
 
 <h2 id="控制器—post_路由">控制器—post 路由</h2>
 
 <p>找到导出的 <code>author_create_post()</code> 控制器方法，并替换为底下代码。</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Handle Author create on POST.
+<pre class="brush: js">// Handle Author create on POST.
 exports.author_create_post = [
 
     // Validate fields.
@@ -73,12 +73,12 @@ exports.author_create_post = [
             });
         }
     }
-];</code></pre>
+];</pre>
 
 <p>此代码的结构和行为，几乎与创建<code>Genre</code>对象完全相同。首先，我们验证并清理数据。如果数据无效，那么我们将重新显示表单，以及用户最初输入的数据，和错误消息列表。如果数据有效，那么我们保存新的作者记录，并将用户重定向到作者详细信息页面。</p>
 
 <div class="note">
-<p><strong>注意：</strong>与<code>Genre</code> post 处理程序不同，我们不会在保存之前，检查<code>Author</code>对象是否已存在。可以说，我们应该这样做，尽管现在我们可以有多个具有相同名称的作者。</p>
+<p><strong>备注：</strong> 与<code>Genre</code> post 处理程序不同，我们不会在保存之前，检查<code>Author</code>对象是否已存在。可以说，我们应该这样做，尽管现在我们可以有多个具有相同名称的作者。</p>
 </div>
 
 <p>验证代码演示了几个新功能：</p>
@@ -92,14 +92,14 @@ body('first_name').isLength({ min: 1 }).trim().withMessage('First name must be s
 </code></pre>
  </li>
  <li>我们可以使用<code>optional()</code>函数，仅在输入字段时运行后续验证（这允许我们验证可选字段）。例如，下面我们检查可选的出生日期是否符合 ISO8601 标准（<code>checkFalsy</code> 旗标，表示我们接受空字符串或<code>null</code>作为空值）。
-  <pre class="line-numbers  language-html"><code class="language-html">body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601(),</code></pre>
+  <pre class="brush: js">body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601(),</pre>
  </li>
 </ul>
 
 <ul>
  <li>参数从请求中作为字符串接收。我们可以使用<code>toDate()</code>（或<code>toBoolean()</code>等）将这些转换为正确的 JavaScript 类型。
 
-  <pre class="brush: js line-numbers  language-js"><code class="language-js">sanitizeBody('date_of_birth').toDate(),</code></pre>
+  <pre class="brush: js">sanitizeBody('date_of_birth').toDate(),</pre>
  </li>
 </ul>
 
@@ -107,7 +107,7 @@ body('first_name').isLength({ min: 1 }).trim().withMessage('First name must be s
 
 <p>创建 <strong>/views/author_form.pug</strong> 并复制贴上以下文字。</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">extends layout
+<pre class="brush: plain">extends layout
 
 block content
   h1=title
@@ -125,12 +125,12 @@ block content
   if errors
     ul
       for error in errors
-        li!= error.msg</code></pre>
+        li!= error.msg</pre>
 
 <p>此视图的结构和行为与<strong>genre_form.pug</strong>模板完全相同，因此我们不再对其进行描述。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 某些浏览器不支持 input <code>type=“date”</code>，因此您不会获得日期选取部件或默认的<em><code>dd/mm/yyyy</code></em>占位符，而是获取一个空的纯文本字段。一种解决方法，是明确添加属性<code>placeholder='dd/mm/yyyy'</code>，以便在功能较少的浏览器上，仍然可以获得有关所需文本格式的信息。</p>
+<p><strong>备注：</strong> 某些浏览器不支持 input <code>type=“date”</code>，因此您不会获得日期选取部件或默认的<em><code>dd/mm/yyyy</code></em>占位符，而是获取一个空的纯文本字段。一种解决方法，是明确添加属性<code>placeholder='dd/mm/yyyy'</code>，以便在功能较少的浏览器上，仍然可以获得有关所需文本格式的信息。</p>
 </div>
 
 <h3 id="自我挑战_加入死亡日期">自我挑战：加入死亡日期</h3>
@@ -144,7 +144,7 @@ block content
 <p><img alt="Author Create Page - Express Local Library site" src="locallibary_express_author_create_empty.png"></p>
 
 <div class="note">
-<p><strong>注意：</strong> 如果您尝试使用日期的各种输入格式，您可能会发现格式<code>yyyy-mm-dd</code>行为不正常。这是因为 JavaScript 将日期字符串，视为包含 0 小时的时间，但另外将该格式的日期字符串（ISO 8601 标准）视为包括 0 小时 UTC 时间，而不是本地时间。如果您的时区在 UTC 以西，则日期显示（即本地）将在您输入的日期之前一天。这是我们在这里没有解决的几个复杂问题之一（例如多字姓和有多个作者的书本）。</p>
+<p><strong>备注：</strong> 如果您尝试使用日期的各种输入格式，您可能会发现格式<code>yyyy-mm-dd</code>行为不正常。这是因为 JavaScript 将日期字符串，视为包含 0 小时的时间，但另外将该格式的日期字符串（ISO 8601 标准）视为包括 0 小时 UTC 时间，而不是本地时间。如果您的时区在 UTC 以西，则日期显示（即本地）将在您输入的日期之前一天。这是我们在这里没有解决的几个复杂问题之一（例如多字姓和有多个作者的书本）。</p>
 </div>
 
 <h2 id="下一步">下一步</h2>

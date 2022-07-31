@@ -44,7 +44,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 <p>NPM 也可以安装（全局的）<strong>Express 应用生成器</strong>，可用于创建遵循 <a href="/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC 模式</a> 的 Express 应用框架。它不是必备的，因为无需这个工具就可以创建 Express 应用（或相同架构布局或依赖的 Express 应用）。但我们还是会使用它，因为它更容易上手，还有助于应用结构的模块化管理。</p>
 
 <div class="note">
-<p><strong>注：</strong> 与某些其他 Web 框架不同，开发环境不包含单独的开发 Web 服务器。在 Node / Express 中，Web 应用程序将创建并运行自己的 Web 服务器！</p>
+<p><strong>备注：</strong> 与某些其他 Web 框架不同，开发环境不包含单独的开发 Web 服务器。在 Node / Express 中，Web 应用程序将创建并运行自己的 Web 服务器！</p>
 </div>
 
 <p>典型的开发环境中还需要一些外围工具，包括用于编写代码的 <a href="zh-CN/docs/Learn/Common_questions/实用文本编辑器">文本编辑器</a> 或 IDE，用于代码控制管理的工具（比如代码版本控制工具 <a href="https://git-scm.com/">Git</a>）。这里假定你已经安装了这些工具（尤其是文本编辑器）。</p>
@@ -72,7 +72,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 <p>先在操作系统上安装 Node.js 和 NPM 后才可使用 Express。接下来将介绍如何最简便地在 Ubuntu 18.04、macOS Mojave 以及 Windows 10 上安装 Node.js 最新的 LTS 版本。.</p>
 
 <div class="note">
-<p><strong>提示：</strong>以下内容将介绍在上述三种 OS 上安装 Node 和 NPM 的最简便方法。对于其它操作系统，以及更多的安装方法，可以参考 <a href="https://nodejs.org/zh-cn/download/package-manager/">通过包管理器方式安装 Node.js</a> (nodejs.org).</p>
+<p><strong>备注：</strong> 以下内容将介绍在上述三种 OS 上安装 Node 和 NPM 的最简便方法。对于其它操作系统，以及更多的安装方法，可以参考 <a href="https://nodejs.org/zh-cn/download/package-manager/">通过包管理器方式安装 Node.js</a> (nodejs.org).</p>
 </div>
 
 <h3 id="Windows_和_macOS">Windows 和 macOS</h3>
@@ -146,7 +146,7 @@ server.listen(port, hostname, () =&gt; {
   <p>代码导入了 <code>"http"</code> 模块，并用它（<code>createServer()</code>）创建了一个服务器来监听 3000 端口的 HTTP 请求。随后在控制台打印一条信息，提示测试服务器的正确 URL。<code>createServer()</code> 函数接受一个回调函数作为参数，并在接收 HTTP 请求后进行回调。直接返回了 HTTP 状态码 200（"<code>OK</code>"），以及纯文本信息 "Hello World"。</p>
 
   <div class="note">
-  <p><strong>注：</strong>现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。</p>
+  <p><strong>备注：</strong> 现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。</p>
   </div>
  </li>
  <li>在命令行工具中进入 hellonode.js 文件所在的目录，输入“node + 文件名”并运行，服务器就启动了：
@@ -162,7 +162,7 @@ server.listen(port, hostname, () =&gt; {
 <p>构建 Node 应用过程中，<a href="https://docs.npmjs.com/">NPM</a> 是除了 Node 本身之外最重要的工具。可用于获取应用开发、测试以及生产所需的所有包（JavaScript 库）。也可运行开发过程中使用的测试单元和工具。</p>
 
 <div class="note">
-<p><strong>注：</strong>以 Node 的角度来看，Express 只是一个用 NPM 安装、供人使用的包而已。</p>
+<p><strong>备注：</strong> 以 Node 的角度来看，Express 只是一个用 NPM 安装、供人使用的包而已。</p>
 </div>
 
 <p>可以用 NPM 手动逐个安装所需包。但通常可用 <a href="https://docs.npmjs.com/files/package.json">package.json</a> 文件来管理依赖。把每个依赖以一个 JavaScript“包”的形式（其中包括名称、版本、描述，初始执行文件、生产依赖，开发依赖、支持的 <em>Node </em>版本，等等）罗列在这个文件中。package.json 文件包含 NPM 获取和运行应用程序所需的所有内容（在编写可重用的库时，可以用它把包上传到 NPM 仓库中供其他用户使用）。</p>
@@ -172,7 +172,7 @@ server.listen(port, hostname, () =&gt; {
 <p>下面介绍用 NPM 下载包、将包保存进工程依赖树，以及在 Node 应用中调用包的方法和步骤。</p>
 
 <div class="note">
-<p><strong>注：</strong>现在来讲解获取和安装 Express 包的步骤。稍后解释为什么可以直接对 Express 包（乃至其它包）使用 <strong>Express 应用生成器</strong>。这段对理解 NPM 的工作原理和应用生成器的工作机制有一定的帮助。</p>
+<p><strong>备注：</strong> 现在来讲解获取和安装 Express 包的步骤。稍后解释为什么可以直接对 Express 包（乃至其它包）使用 <strong>Express 应用生成器</strong>。这段对理解 NPM 的工作原理和应用生成器的工作机制有一定的帮助。</p>
 </div>
 
 <ol>
@@ -220,7 +220,7 @@ $ cd myapp</pre>
 </pre>
  </li>
  <li>可以调用 <code>require()</code> 函数来使用库：
-  <pre><code><strong>const express = require('express');
+  <pre class="brush: js"><code><strong>const express = require('express');
 </strong>const app = express();
 
 app.get('/', (req, res) =&gt; {
@@ -258,7 +258,7 @@ app.listen(8000, () =&gt; {
 </pre>
 
 <div class="note">
-<p><strong>注：</strong>"<a href="https://zh.wikipedia.org/wiki/Lint">lint</a>" 是用于对软件进行静态分析的工具，可以发现并报告软件是否遵循某些最佳编程惯例。</p>
+<p><strong>备注：</strong> "<a href="https://zh.wikipedia.org/wiki/Lint">lint</a>" 是用于对软件进行静态分析的工具，可以发现并报告软件是否遵循某些最佳编程惯例。</p>
 </div>
 
 <h3 id="运行任务">运行任务</h3>
@@ -266,7 +266,7 @@ app.listen(8000, () =&gt; {
 <p>在 <strong>package.json</strong> 中，除了定义和获取依赖，还可以定义脚本，然后通过 NPM 的 <a href="https://docs.npmjs.com/cli/run-script">run-script</a> 命令来运行。这个用法普遍用于自动运行测试单元或部分应用，也可用于构建工具链（比如运行工具来压缩 JavaScript 文件或图片，lint 或分析代码，等等）。</p>
 
 <div class="note">
-<p><strong>注：</strong><a href="http://gulpjs.com/">Gulp</a> 和 <a href="http://gruntjs.com/">Grunt</a> 等任务运行器可用于运行测试单元或其它外部工具。</p>
+<p><strong>备注：</strong> <a href="http://gulpjs.com/">Gulp</a> 和 <a href="http://gruntjs.com/">Grunt</a> 等任务运行器可用于运行测试单元或其它外部工具。</p>
 </div>
 
 <p>比如，可以在 <strong>package.json</strong> 文件中添加以下内容来定义一个脚本，从而对上文的代码运行 eslint（假设应用代码在 /src/js 文件夹下）：</p>
@@ -301,7 +301,7 @@ app.listen(8000, () =&gt; {
 <pre class="brush: bash">$ express helloworld</pre>
 
 <div class="note">
-<p><strong>注：</strong>也可以指定模板库来使用其它丰富的设置。可通过 help 命令来查看所有选项：</p>
+<p><strong>备注：</strong> 也可以指定模板库来使用其它丰富的设置。可通过 help 命令来查看所有选项：</p>
 
 <pre class="brush: bash">$ express --help
 </pre>
@@ -310,7 +310,7 @@ app.listen(8000, () =&gt; {
 <p>NPM 将在当前位置的子目录中创建新的 Express 应用，可以在控制台看到构建的过程。在完成时，NPM 会提示你需要安装哪些 Node 依赖，以及如何开启应用。</p>
 
 <div class="note">
-<p>新应用的根目录有一个 <strong>package.json</strong> 文件。可以打开它看看都安装了哪些依赖，其中可以看到 Express 和 Jade 模板库：</p>
+<p><strong>备注：</strong> 新应用的根目录有一个 <strong>package.json</strong> 文件。可以打开它看看都安装了哪些依赖，其中可以看到 Express 和 Jade 模板库：</p>
 
 <pre class="brush: js">{
   "name": "helloworld",
