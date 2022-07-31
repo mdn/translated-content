@@ -54,7 +54,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 <p>这个属性定义了发送数据要去的位置。它的值必须是一个有效的 URL。如果没有提供此属性，则数据将被发送到包含这个表单的页面的 URL。</p>
 
-<p>在这个例子中，数据被发送到一个绝对 URL —— <code>http://foo.com</code>：</p>
+<p>在这个例子中，数据被发送到一个绝对 URL —— <code>http://foo.com</code>：</p>
 
 <pre class="brush: html">&lt;form action="http://foo.com"&gt;</pre>
 
@@ -90,17 +90,17 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 <p>考虑下面这个表单：</p>
 
 <pre class="brush: html">&lt;form action="http://foo.com" method="get"&gt;
-  &lt;div&gt;
-    &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
-    &lt;input name="say" id="say" value="Hi"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="to"&gt;Who do you want to say it to?&lt;/label&gt;
-    &lt;input name="to" id="to" value="Mom"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Send my greetings&lt;/button&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
+    &lt;input name="say" id="say" value="Hi"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="to"&gt;Who do you want to say it to?&lt;/label&gt;
+    &lt;input name="to" id="to" value="Mom"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button&gt;Send my greetings&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <p>由于已经使用了<code>GET</code>方法，当你提交表单的时候，您将看到<code>www.foo.com/?say=Hi&amp;to=Mom</code>在浏览器地址栏里。</p>
@@ -108,7 +108,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 <p><img src="url-parameters.png">数据作为一系列的名称/值对被附加到URL。在URL web 地址结束之后，我们得到一个问号 (<code>?</code>)，后面跟着由一个与符号 (<code>&amp;</code>) 互相分隔开的名称/值对。在本例中，我们将两个数据传递给服务器。</p>
 
 <ul>
- <li><code>say</code>, 它有一个 <code>Hi</code>的值。</li>
+ <li><code>say</code>, 它有一个 <code>Hi</code>的值。</li>
  <li><code>to</code>, 它有一个 <code>Mom</code>的值。</li>
 </ul>
 
@@ -118,7 +118,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 Host: foo.com</pre>
 
 <div class="note">
-<p><strong>注意：</strong>你可以在 GitHub 上看到本例子——见 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html">get-method.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">预览版</a>).</p>
+<p><strong>注意：</strong>你可以在 GitHub 上看到本例子——见 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html">get-method.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html">预览版</a>).</p>
 </div>
 
 <h5 id="POST_方法">POST 方法</h5>
@@ -128,17 +128,17 @@ Host: foo.com</pre>
 <p>让我们来看一个例子，这是我们在上面的<code>GET</code>部分中所看到的相同的形式，但是使用{{htmlattrxref("method","form")}}属性设置为<code>post</code>。</p>
 
 <pre class="brush: html">&lt;form action="http://foo.com" method="post"&gt;
-  &lt;div&gt;
-    &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
-    &lt;input name="say" id="say" value="Hi"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;label for="to"&gt;Who do you want to say it to?&lt;/label&gt;
-    &lt;input name="to" id="to" value="Mom"&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button&gt;Send my greetings&lt;/button&gt;
-  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="say"&gt;What greeting do you want to say?&lt;/label&gt;
+    &lt;input name="say" id="say" value="Hi"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="to"&gt;Who do you want to say it to?&lt;/label&gt;
+    &lt;input name="to" id="to" value="Mom"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button&gt;Send my greetings&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 
 <p>当使用<code>POST</code>方法提交表单时，没有数据会附加到 URL，HTTP 请求看起来是这样的，而请求主体中包含的数据是这样的：</p>
@@ -153,7 +153,7 @@ say=Hi&amp;to=Mom</pre>
 <p><code>Content-Length</code>数据头表示主体的大小，<code>Content-Type</code>数据头表示发送到服务器的资源类型。稍后我们将讨论这些标头。</p>
 
 <div class="note">
-<p><strong>注意：</strong>你可以在 GitHub 上看到本例—— 见 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html">post-method.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html">预览版</a>).</p>
+<p><strong>注意：</strong>你可以在 GitHub 上看到本例—— 见 <a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html">post-method.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html">预览版</a>).</p>
 </div>
 
 <h4 id="查看HTTP请求">查看 HTTP 请求</h4>
@@ -164,8 +164,8 @@ say=Hi&amp;to=Mom</pre>
  <li>按下 F12</li>
  <li>选择 "Network"</li>
  <li>选择 "All"</li>
- <li>在 "Name" 标签页选择 "foo.com"</li>
- <li>选择 "Headers"</li>
+ <li>在 "Name" 标签页选择 "foo.com"</li>
+ <li>选择 "Headers"</li>
 </ol>
 
 <p>你可以获得表单数据，像下图显示的那样</p>
@@ -240,11 +240,11 @@ if __name__ == "__main__":
 <p>还有许多其他的服务器端技术可以用于表单处理，包括<a href="/en-US/docs/">Perl</a>、<a href="/en-US/docs/">Java</a>、 <a href="http://www.microsoft.com/net">.Net</a>、<a href="/en-US/docs/">Ruby</a>等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：</p>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django">Django</a> for Python（比<a href="http://flask.pocoo.org/">Flask</a>要重量级一些，但是有更多的工具和选项。）</li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Express</a> for Node.js</li>
- <li><a href="https://laravel.com/">Laravel</a> for PHP</li>
- <li><a href="https://rubyonrails.org/">Ruby On Rails</a> for Ruby</li>
- <li><a href="https://phoenixframework.org/">Phoenix</a> for Elixir</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django">Django</a> for Python（比<a href="http://flask.pocoo.org/">Flask</a>要重量级一些，但是有更多的工具和选项。）</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Express</a> for Node.js</li>
+ <li><a href="https://laravel.com/">Laravel</a> for PHP</li>
+ <li><a href="https://rubyonrails.org/">Ruby On Rails</a> for Ruby</li>
+ <li><a href="https://phoenixframework.org/">Phoenix</a> for Elixir</li>
 </ul>
 
 <p>要注意的是，即使使用这些框架，使用表单也不一定很容易。但这比从头开始编写所有功能要简单得多，而且会节省很多时间。</p>
@@ -273,7 +273,7 @@ if __name__ == "__main__":
 
 <pre class="brush: html">&lt;form method="post" enctype="multipart/form-data"&gt;
   &lt;div&gt;
-    &lt;label for="file"&gt;Choose a file&lt;/label&gt;
+    &lt;label for="file"&gt;Choose a file&lt;/label&gt;
     &lt;input type="file" id="file" name="myFile"&gt;
   &lt;/div&gt;
   &lt;div&gt;
@@ -309,7 +309,7 @@ if __name__ == "__main__":
 
 <h3 id="SQL注入">SQL 注入</h3>
 
-<p>SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作的攻击类型。这通常包括发送一个 SQL 请求，希望服务器能够执行它（通常发生在应用服务器试图存储由用户发送的数据时）。这实际上是<a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">攻击网站的主要途径之一</a>。 </p>
+<p>SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作的攻击类型。这通常包括发送一个 SQL 请求，希望服务器能够执行它（通常发生在应用服务器试图存储由用户发送的数据时）。这实际上是<a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">攻击网站的主要途径之一</a>。 </p>
 
 <p>其后果可能是可怕的，从数据丢失到通过使用特权升级控制整个网站基础设施的攻击。这是一个非常严重的威胁，您永远不应该存储用户发送的数据，而不执行一些清理工作 (例如，在 php/mysql 基础设施上使用<code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php">mysql_real_escape_string()</a></code>。</p>
 

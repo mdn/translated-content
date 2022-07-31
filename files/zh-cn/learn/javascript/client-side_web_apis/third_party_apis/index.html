@@ -21,16 +21,16 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
   </tr>
   <tr>
    <th scope="row">目的：</th>
-   <td> 学习了解第三方 API 的运作方式，以及如何运用它们来提高你的网站性能</td>
+   <td> 学习了解第三方 API 的运作方式，以及如何运用它们来提高你的网站性能</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="什么是第三方API">什么是第三方 API?</h2>
 
-<p>第三方 API 是由第三方（通常是 Facebook，Twitter 或 Google 等公司）提供的 API，允许您通过 JavaScript 访问其功能，并在您自己的站点上使用它。正如我们在 <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">API 介绍章节</a> 所展示的，最显著的例子就是运用 <a href="https://developers.google.com/maps/">Google Maps APIs</a> 在你的网页上展示自定义地图。</p>
+<p>第三方 API 是由第三方（通常是 Facebook，Twitter 或 Google 等公司）提供的 API，允许您通过 JavaScript 访问其功能，并在您自己的站点上使用它。正如我们在 <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">API 介绍章节</a> 所展示的，最显著的例子就是运用 <a href="https://developers.google.com/maps/">Google Maps APIs</a> 在你的网页上展示自定义地图。</p>
 
-<p>让我们再来瞧一眼这个地图的例子 (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">source code on GitHub</a>; <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">see it live also</a>), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。</p>
+<p>让我们再来瞧一眼这个地图的例子 (see the <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">source code on GitHub</a>; <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">see it live also</a>), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。</p>
 
 <div class="note">
 <p><strong>Note</strong>: 您可能想要一次获得所有的代码示例，在这种情况下，您可以搜索 repo 来获取每个部分中需要的示例文件。</p>
@@ -38,11 +38,11 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 <h3 id="它们植根于第三方服务器">它们植根于第三方服务器</h3>
 
-<p>浏览器 API 在浏览器构建之初就存在 — 用 JavaScript 就可以立即访问它们。例如，例子中所使用的 <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> 就是通过使用 <code><a href="/en-US/docs/Web/API/Navigator">Navigator</a></code> 对象的属性 geolocation 来访问的，它返回一个名为 <code><a href="/en-US/docs/Web/API/Geolocation">Geolocation</a></code> 的对象。 这个例子使用了这个对象的方法 <code><a href="/en-US/docs/Web/API/Geolocation/getCurrentPosition">getCurrentPosition()</a></code> 来请求当前设备所处的地点：</p>
+<p>浏览器 API 在浏览器构建之初就存在 — 用 JavaScript 就可以立即访问它们。例如，例子中所使用的 <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Geolocation API</a> 就是通过使用 <code><a href="/en-US/docs/Web/API/Navigator">Navigator</a></code> 对象的属性 geolocation 来访问的，它返回一个名为 <code><a href="/en-US/docs/Web/API/Geolocation">Geolocation</a></code> 的对象。 这个例子使用了这个对象的方法 <code><a href="/en-US/docs/Web/API/Geolocation/getCurrentPosition">getCurrentPosition()</a></code> 来请求当前设备所处的地点：</p>
 
 <pre class="brush: js notranslate">navigator.geolocation.getCurrentPosition(function(position) { ... });</pre>
 
-<p>第三方 API，从某种角度讲，植根于第三方服务器上。要通过 JavaScript 获取它们，您首先需要链接到其功能接口上并使其在您的页面上生效。通常来说，这首先需要您通过一个 {{htmlelement("script")}} 元素连接到第三方服务器所开放的 JavaScript 库，如下所示：</p>
+<p>第三方 API，从某种角度讲，植根于第三方服务器上。要通过 JavaScript 获取它们，您首先需要链接到其功能接口上并使其在您的页面上生效。通常来说，这首先需要您通过一个 {{htmlelement("script")}} 元素连接到第三方服务器所开放的 JavaScript 库，如下所示：</p>
 
 <pre class="brush: js notranslate">&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"&gt;&lt;/script&gt;</pre>
 
@@ -58,7 +58,7 @@ var myOptions = {
 
 var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);</pre>
 
-<p>代码中我们用 <code>google.maps.LatLng()</code> 构造器创建了一个新的 <code>LatLng</code> 对象，它包含了我们想展示的地址的纬度和经度，作为一个 Geolocation API 返回。然后，我们创建了包含这个对象，和其他有关地图显示信息的选项对象 (<code>myOptions</code>) 。最后，用 <code>google.maps.Map()</code> 构造器创建了<code>map</code>对象，它接受网页元素（地图展示处）和选项对象两个参数。</p>
+<p>代码中我们用 <code>google.maps.LatLng()</code> 构造器创建了一个新的 <code>LatLng</code> 对象，它包含了我们想展示的地址的纬度和经度，作为一个 Geolocation API 返回。然后，我们创建了包含这个对象，和其他有关地图显示信息的选项对象 (<code>myOptions</code>) 。最后，用 <code>google.maps.Map()</code> 构造器创建了<code>map</code>对象，它接受网页元素（地图展示处）和选项对象两个参数。</p>
 
 <p>以上就是用 Google Maps API 建立一个简单地图所需要的所有信息。所有复杂的工作都全由你所连接的第三方服务器处理，包括展示正确地理位置的地图块，等等。</p>
 
@@ -86,7 +86,7 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 <ol>
  <li>
-  <p>要开始这个部分，确保你已经在一个新的目录复制 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html">Google Maps 启动文件</a>。 如果你已经 <a href="/en-US/docs/Learn#Getting_our_code_examples">克隆了示例存储库</a>，那么你已经拥有了一个这个文件的拷贝，你可以在<em>javascript/apis/third-party-apis/google-maps目录中找到该文件。</em></p>
+  <p>要开始这个部分，确保你已经在一个新的目录复制 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html">Google Maps 启动文件</a>。 如果你已经 <a href="/en-US/docs/Learn#Getting_our_code_examples">克隆了示例存储库</a>，那么你已经拥有了一个这个文件的拷贝，你可以在<em>javascript/apis/third-party-apis/google-maps目录中找到该文件。</em></p>
  </li>
  <li>
   <p>接下来，用以下步骤获取你自己的开发者密钥：</p>
@@ -209,7 +209,7 @@ scaleControl: true,</pre>
 
 <p>就是现在 - 看看 <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps APIs documentation</a>，发现更多乐趣！</p>
 
-<h2 id="一个RESTful_API_—_NYTimes">一个 RESTful API — NYTimes</h2>
+<h2 id="一个RESTful_API_—_NYTimes">一个 RESTful API — NYTimes</h2>
 
 <p>现在让我们看看另一个 API 示例 - <a href="https://developer.nytimes.com">New York Times API</a>。此 API 允许您检索纽约时报的新闻故事信息并将其显示在您的网站上。这种类型的 API 称为 RESTful API - 我们不像使用 Google 地图那样使用 JavaScript 库的功能获取数据，而是通过向特定网址发出 HTTP 请求来获取数据，其中包含搜索术语和其他属性编码的数据 URL（通常作为 URL 参数）。这是您在 API 中遇到的常见模式。</p>
 
@@ -233,11 +233,11 @@ scaleControl: true,</pre>
   <p>从结果页面获取 API。</p>
  </li>
  <li>
-  <p>现在开始构建这个应用，下载 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html">nytimes_start.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css">nytimes.css</a> 到一个新的本地目录。如果已经克隆过这个仓库 <a href="/en-US/docs/Learn#Getting_our_code_examples">cloned the examples repository</a>, 里面就已经有这 2 个文件了，它们存放在 <em>javascript/apis/third-party-apis/nytimes</em> 目录下。HTML 文件里的 <code>&lt;script&gt;</code> 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。</p>
+  <p>现在开始构建这个应用，下载 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html">nytimes_start.html</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css">nytimes.css</a> 到一个新的本地目录。如果已经克隆过这个仓库 <a href="/en-US/docs/Learn#Getting_our_code_examples">cloned the examples repository</a>, 里面就已经有这 2 个文件了，它们存放在 <em>javascript/apis/third-party-apis/nytimes</em> 目录下。HTML 文件里的 <code>&lt;script&gt;</code> 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。</p>
  </li>
 </ol>
 
-<p>下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。</p>
+<p>下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14821/nytimes-search.png" style="border-style: solid; border-width: 1px; display: block; height: 374px; margin: 0px auto; width: 700px;"></p>
 
@@ -251,15 +251,15 @@ scaleControl: true,</pre>
 
   <pre class="brush: js notranslate">var key = 'INSERT-YOUR-API-KEY-HERE';</pre>
 
-  <p>把 <code>INSERT-YOUR-API-KEY-HERE</code> 替换为在上一节中获得的 API key.</p>
+  <p>把 <code>INSERT-YOUR-API-KEY-HERE</code> 替换为在上一节中获得的 API key.</p>
  </li>
  <li>
-  <p>添加下面这行代码到 JavaScript 代码中。添加到注释 "<code>// Event listeners to control the functionality</code>" 的下面。当表单提交时 (按钮按下时) 运行这个函数  <code>submitSearch()</code> .</p>
+  <p>添加下面这行代码到 JavaScript 代码中。添加到注释 "<code>// Event listeners to control the functionality</code>" 的下面。当表单提交时 (按钮按下时) 运行这个函数  <code>submitSearch()</code> .</p>
 
   <pre class="brush: js notranslate">searchForm.addEventListener('submit', <code>submitSearch</code>);</pre>
  </li>
  <li>
-  <p>添加 <code>submitSearch()</code> 和 <code>fetchResults()</code> 函数如下：</p>
+  <p>添加 <code>submitSearch()</code> 和 <code>fetchResults()</code> 函数如下：</p>
 
   <pre class="notranslate">function submitSearch(e) {
   pageNumber = 0;
@@ -285,16 +285,16 @@ function fetchResults(e) {
  </li>
 </ol>
 
-<p><code>submitSearch()</code> 设置起始页码为 0，然后调用 <code>fetchResults()</code> 函数。其中，先调用事件对象的 <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code> 函数，阻止实际的表单提交事件 (会破坏应用，至于为什么可以自己试一试)。然后，处理字符串，构建完整的请求 URL。以下是几个必要的步骤：</p>
+<p><code>submitSearch()</code> 设置起始页码为 0，然后调用 <code>fetchResults()</code> 函数。其中，先调用事件对象的 <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code> 函数，阻止实际的表单提交事件 (会破坏应用，至于为什么可以自己试一试)。然后，处理字符串，构建完整的请求 URL。以下是几个必要的步骤：</p>
 
 <ul>
- <li>基本的 URL ( <code>baseURL</code> 变量).</li>
- <li> API key，需要放到 <code>api-key</code> URL 参数里面去 ( <code>key</code> 变量).</li>
- <li>页码，需要放到 <code>page</code> URL 参数里面去 ( <code>pageNumber</code> 变量).</li>
- <li>搜索项，需要放到 <code>q</code> URL 参数里面去 ( <code>searchTerm</code> 输入框的文字 {{htmlelement("input")}}).</li>
+ <li>基本的 URL ( <code>baseURL</code> 变量).</li>
+ <li> API key，需要放到 <code>api-key</code> URL 参数里面去 ( <code>key</code> 变量).</li>
+ <li>页码，需要放到 <code>page</code> URL 参数里面去 ( <code>pageNumber</code> 变量).</li>
+ <li>搜索项，需要放到 <code>q</code> URL 参数里面去 ( <code>searchTerm</code> 输入框的文字 {{htmlelement("input")}}).</li>
 </ul>
 
-<p>然后，用几个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if()</a></code> 代码块检测 <code>startDate</code> 和 <code>endDate</code> <code>&lt;input&gt;</code> 输入框里面是否有文字内容。如果有，再把输入框里的内容分别填写到 <code>begin_date</code> 和 <code>end_date</code> URL 参数里面去。</p>
+<p>然后，用几个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if()</a></code> 代码块检测 <code>startDate</code> 和 <code>endDate</code> <code>&lt;input&gt;</code> 输入框里面是否有文字内容。如果有，再把输入框里的内容分别填写到 <code>begin_date</code> 和 <code>end_date</code> URL 参数里面去。</p>
 
 <p>最后，完整的 URL 如下所示：</p>
 
@@ -302,18 +302,18 @@ function fetchResults(e) {
 &amp;begin_date=20170301&amp;end_date=20170312</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 更多 URL 参数的说明参考 <a href="https://developer.nytimes.com/">NYTimes developer docs</a>.</p>
+<p><strong>Note</strong>: 更多 URL 参数的说明参考 <a href="https://developer.nytimes.com/">NYTimes developer docs</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: 示例包含了基本的表单数据验证操作 — 表项提交之前必须有内容 (用 <code>required</code> 属性实现)，此外，日期字段有确定的 <code>pattern</code> 属性，它们的值必须由 8 个数字组成 (<code>pattern="[0-9]{8}"</code>)，否则不能提交。更多细节参考 <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a> </p>
+<p><strong>Note</strong>: 示例包含了基本的表单数据验证操作 — 表项提交之前必须有内容 (用 <code>required</code> 属性实现)，此外，日期字段有确定的 <code>pattern</code> 属性，它们的值必须由 8 个数字组成 (<code>pattern="[0-9]{8}"</code>)，否则不能提交。更多细节参考 <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a> </p>
 </div>
 
 <h3 id="从api请求数据">从 api 请求数据</h3>
 
-<p>现在 URL 已经构造好了，下面向它发起请求。本例使用 <a href="/ch-CN/docs/Web/API/Fetch_API/Using_Fetch">Fetch API </a></p>
+<p>现在 URL 已经构造好了，下面向它发起请求。本例使用 <a href="/ch-CN/docs/Web/API/Fetch_API/Using_Fetch">Fetch API </a></p>
 
-<p>把下面的代码块添加到 <code>fetchResults()</code> 函数末尾的大括号里面：</p>
+<p>把下面的代码块添加到 <code>fetchResults()</code> 函数末尾的大括号里面：</p>
 
 <pre class="brush: js notranslate">// Use fetch() to make the request to the API
 fetch(url).then(function(result) {
@@ -322,11 +322,11 @@ fetch(url).then(function(result) {
   displayResults(json);
 });</pre>
 
-<p>这段代码用于发起请求，把变量 <code>url</code> 作为 <code><a href="/en-US/docs/Web/API/fetch">fetch()</a></code> 函数的参数，用 <code><a href="/en-US/docs/Web/API/Body/json">json()</a></code> 函数把响应的结果转换为 JSON 格式，然后把 JSON 数据传递给 <code>displayResults()</code> 函数，数据就可以在 UI 中显示出来了。</p>
+<p>这段代码用于发起请求，把变量 <code>url</code> 作为 <code><a href="/en-US/docs/Web/API/fetch">fetch()</a></code> 函数的参数，用 <code><a href="/en-US/docs/Web/API/Body/json">json()</a></code> 函数把响应的结果转换为 JSON 格式，然后把 JSON 数据传递给 <code>displayResults()</code> 函数，数据就可以在 UI 中显示出来了。</p>
 
 <h3 id="显示数据">显示数据</h3>
 
-<p>OK，下面是显示数据的部分。把下面的函数添加到 <code>fetchResults()</code> 函数下面。</p>
+<p>OK，下面是显示数据的部分。把下面的函数添加到 <code>fetchResults()</code> 函数下面。</p>
 
 <pre class="brush: js notranslate">function displayResults(json) {
   while (section.firstChild) {
@@ -389,34 +389,34 @@ fetch(url).then(function(result) {
 <p>这一段有好多代码；下面一一解释：</p>
 
 <ul>
- <li>第一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> 循环是通用的操作，用于删除 DOM 结点里面的所有内容，在本例中是 {{htmlelement("section")}} 元素。不断查询 <code>&lt;section&gt;</code> 结点是否有子节点，如果有，就删除。当 <code>&lt;section&gt;</code> 没有子节点时退出循环。</li>
- <li>然后，把 <code>articles</code> 变量赋值为 <code>json.response.docs</code> — 它来自查询结果，是所有文章对象构成的数组。单独写出这一行来，下面的代码会清晰一些。</li>
- <li>第一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if()</a></code> 检测查询到的文章数量是否是 10  (该 API 一次最多返回 10 篇文章) 如果是，就把 {{htmlelement("nav")}} 显示出来，里面包含有 <em>前 10/后 10(Previous 10/Next 10) </em>翻页按钮。如果返回的文章数量不足 10，就直接显示在 1 页里，不需要显示翻页按钮。在下一节中将展示翻页功能的实现。</li>
- <li>下一个 <code>if()</code> 检测是否没有文章返回。如果是，就什么都不显示 — 创建一个 {{htmlelement("p")}} 结点，填写提示 "无结果。" 然后把该结点插入到 <code>&lt;section&gt;</code> 结点中。</li>
- <li>如果有一些文章返回，第一步，创建所有用于展示新闻信息的结点，依次填写对应的文章内容，再把这些结点插入到合适的 DOM 结点下。至于文章对象里面的哪个属性包含需要展示的信息，查询 <a href="https://developer.nytimes.com/article_search_v2.json">Article Search API reference</a>. 大部分操作都很简单，但是个别需要提示一下：
+ <li>第一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> 循环是通用的操作，用于删除 DOM 结点里面的所有内容，在本例中是 {{htmlelement("section")}} 元素。不断查询 <code>&lt;section&gt;</code> 结点是否有子节点，如果有，就删除。当 <code>&lt;section&gt;</code> 没有子节点时退出循环。</li>
+ <li>然后，把 <code>articles</code> 变量赋值为 <code>json.response.docs</code> — 它来自查询结果，是所有文章对象构成的数组。单独写出这一行来，下面的代码会清晰一些。</li>
+ <li>第一个 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if()</a></code> 检测查询到的文章数量是否是 10  (该 API 一次最多返回 10 篇文章) 如果是，就把 {{htmlelement("nav")}} 显示出来，里面包含有 <em>前 10/后 10(Previous 10/Next 10) </em>翻页按钮。如果返回的文章数量不足 10，就直接显示在 1 页里，不需要显示翻页按钮。在下一节中将展示翻页功能的实现。</li>
+ <li>下一个 <code>if()</code> 检测是否没有文章返回。如果是，就什么都不显示 — 创建一个 {{htmlelement("p")}} 结点，填写提示 "无结果。" 然后把该结点插入到 <code>&lt;section&gt;</code> 结点中。</li>
+ <li>如果有一些文章返回，第一步，创建所有用于展示新闻信息的结点，依次填写对应的文章内容，再把这些结点插入到合适的 DOM 结点下。至于文章对象里面的哪个属性包含需要展示的信息，查询 <a href="https://developer.nytimes.com/article_search_v2.json">Article Search API reference</a>. 大部分操作都很简单，但是个别需要提示一下：
   <ul>
-   <li>使用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for loop</a> (<code>for(var j = 0; j &lt; current.keywords.length; j++) { ... }</code> ) 遍历每篇文章关联的关键字，再把它们插入到各自的 {{htmlelement("span")}} 标签，在 <code>&lt;p&gt;</code> 标签里面，这样做可以方便样式表的编辑。</li>
-   <li>使用 <code>if()</code> 代码块 (<code>if(current.multimedia.length &gt; 0) { ... }</code>) 检测每篇文章是否有对应的图片 (有些没有) 。只有当检测到有时，显示首张图片 (否则抛出异常)。</li>
-   <li>把 &lt;div&gt; 结点设置一个 class 属性 "clearfix"，这样清理操作 (apply clearing to it) 就很容易了。</li>
+   <li>使用 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for loop</a> (<code>for(var j = 0; j &lt; current.keywords.length; j++) { ... }</code> ) 遍历每篇文章关联的关键字，再把它们插入到各自的 {{htmlelement("span")}} 标签，在 <code>&lt;p&gt;</code> 标签里面，这样做可以方便样式表的编辑。</li>
+   <li>使用 <code>if()</code> 代码块 (<code>if(current.multimedia.length &gt; 0) { ... }</code>) 检测每篇文章是否有对应的图片 (有些没有) 。只有当检测到有时，显示首张图片 (否则抛出异常)。</li>
+   <li>把 &lt;div&gt; 结点设置一个 class 属性 "clearfix"，这样清理操作 (apply clearing to it) 就很容易了。</li>
   </ul>
  </li>
 </ul>
 
 <h3 id="添加分页按钮">添加分页按钮</h3>
 
-<p>为了使分页按钮工作，我们将增加（或减少）<code>pageNumber</code> 变量的值，然后用页面 url 参数中包含的新值重新运行 fetch 请求。这么做是因为 NYTimes API 每次最多只返回 10 篇文章 — 如果查询结果超过 10 篇，而 <code>page</code> URL 参数设为 0 (或者忽略这个参数 — 0 是默认值)，只返回前 10 篇 (0-9) ，后续的 10 篇 (10-19) 对应参数值 1，以此类推。</p>
+<p>为了使分页按钮工作，我们将增加（或减少）<code>pageNumber</code> 变量的值，然后用页面 url 参数中包含的新值重新运行 fetch 请求。这么做是因为 NYTimes API 每次最多只返回 10 篇文章 — 如果查询结果超过 10 篇，而 <code>page</code> URL 参数设为 0 (或者忽略这个参数 — 0 是默认值)，只返回前 10 篇 (0-9) ，后续的 10 篇 (10-19) 对应参数值 1，以此类推。</p>
 
 <p>根据这个特性就可以轻松实现一个简单的翻页函数。</p>
 
 <ol>
  <li>
-  <p>下面的代码中，在 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> 函数中添加这 2 个新事件，即把 <code>nextPage()</code> 和 <code>previousPage()</code> 函数链接到相应的按键点击事件上：</p>
+  <p>下面的代码中，在 <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> 函数中添加这 2 个新事件，即把 <code>nextPage()</code> 和 <code>previousPage()</code> 函数链接到相应的按键点击事件上：</p>
 
   <pre class="brush: js notranslate">nextBtn.addEventListener('click', nextPage);
 previousBtn.addEventListener('click', previousPage);</pre>
  </li>
  <li>
-  <p>在上边代码的基础上，定义这 2 个函数 — 添加下面代码：</p>
+  <p>在上边代码的基础上，定义这 2 个函数 — 添加下面代码：</p>
 
   <pre class="brush: js notranslate">function nextPage(e) {
   pageNumber++;
@@ -432,37 +432,37 @@ function previousPage(e) {
   fetchResults(e);
 };</pre>
 
-  <p>第一个函数很简单 — 增加 <code>pageNumber</code> 变量，然后再次运行 <code>fetchResults()</code> 函数 展示下一页的结果。</p>
+  <p>第一个函数很简单 — 增加 <code>pageNumber</code> 变量，然后再次运行 <code>fetchResults()</code> 函数 展示下一页的结果。</p>
 
-  <p>第二个函数基本上执行相反的操作，不过有个额外的步骤是检测 <code>pageNumber</code> 在 -1 之前是否已经是 0 — 如果 fetch 请求的 <code>page</code> URL 参数是负数，会导致错误。如果 <code>pageNumber</code> 已经是 0，则直接执行 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 退出函数，避免多余的计算。 (如果当前页面已经是首页，就不需要重新加载)。</p>
+  <p>第二个函数基本上执行相反的操作，不过有个额外的步骤是检测 <code>pageNumber</code> 在 -1 之前是否已经是 0 — 如果 fetch 请求的 <code>page</code> URL 参数是负数，会导致错误。如果 <code>pageNumber</code> 已经是 0，则直接执行 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 退出函数，避免多余的计算。 (如果当前页面已经是首页，就不需要重新加载)。</p>
  </li>
 </ol>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: 完整代码参考 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html">finished nytimes API example code on GitHub</a> (实例参考 <a href="https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/">see it running live here</a>).</p>
+<p><strong>Note</strong>: 完整代码参考 <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html">finished nytimes API example code on GitHub</a> (实例参考 <a href="https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/">see it running live here</a>).</p>
 </div>
 
 <h2 id="YouTube示例">YouTube 示例</h2>
 
-<p>我们还做了另外一个示例用来学习 — 参考 <a href="https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/">YouTube video search example</a>. 这个示例用了下面 2 个 API：</p>
+<p>我们还做了另外一个示例用来学习 — 参考 <a href="https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/">YouTube video search example</a>. 这个示例用了下面 2 个 API：</p>
 
 <ul>
  <li><a href="https://developers.google.com/youtube/v3/docs/">YouTube Data API</a> ，搜索 YouTube 视频并返回结果。</li>
- <li><a href="https://developers.google.com/youtube/iframe_api_reference">YouTube IFrame Player API</a> ，把返回的视频查询结果展示到 IFrame 视频播放器里，然后就可以播放了。</li>
+ <li><a href="https://developers.google.com/youtube/iframe_api_reference">YouTube IFrame Player API</a> ，把返回的视频查询结果展示到 IFrame 视频播放器里，然后就可以播放了。</li>
 </ul>
 
-<p>这个示例的有趣之处在于，它把两个第三方 API 结合起来做了一个应用。第一个 API 是 RESTful API，而第二个 API 更像是 Mapquest (有 API 专用方法 (API-specific methods), etc.)。但是，值得注意的是，这两个 API 均需要将 JavaScript 库应用于该页面。RESTful API 自己有用于处理 HTTP 请求并返回结果的函数。</p>
+<p>这个示例的有趣之处在于，它把两个第三方 API 结合起来做了一个应用。第一个 API 是 RESTful API，而第二个 API 更像是 Mapquest (有 API 专用方法 (API-specific methods), etc.)。但是，值得注意的是，这两个 API 均需要将 JavaScript 库应用于该页面。RESTful API 自己有用于处理 HTTP 请求并返回结果的函数。</p>
 
 <p><img src="youtube-example.png"></p>
 
-<p>本文不会对该示例做过多的叙述 — <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube">源码</a> 中有详细的注释。</p>
+<p>本文不会对该示例做过多的叙述 — <a href="https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube">源码</a> 中有详细的注释。</p>
 
 <p>运行源码需要：</p>
 
 <ul>
- <li>从 <a href="https://cloud.google.com/">Google Cloud</a> 获取 API key.</li>
- <li>找到源码中的 <code>ENTER-API-KEY-HERE</code> 字符串，替换为 API key.</li>
- <li>把示例运行在 web 服务器上。只是用浏览器打开文件是不会工作的 (例如，通过 <code>file://</code> URL 打开).</li>
+ <li>从 <a href="https://cloud.google.com/">Google Cloud</a> 获取 API key.</li>
+ <li>找到源码中的 <code>ENTER-API-KEY-HERE</code> 字符串，替换为 API key.</li>
+ <li>把示例运行在 web 服务器上。只是用浏览器打开文件是不会工作的 (例如，通过 <code>file://</code> URL 打开).</li>
 </ul>
 
 <h2 id="小结">小结</h2>

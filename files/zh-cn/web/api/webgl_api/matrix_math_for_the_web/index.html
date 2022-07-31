@@ -131,7 +131,7 @@ var someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 </pre>
 
 <div class="warning">
-<p><strong>重要：</strong> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组， 可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如<a href="http://glmatrix.net/">glMatrix</a>就是一个注重速度和性能的库。</p>
+<p><strong>重要：</strong> 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组， 可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如<a href="http://glmatrix.net/">glMatrix</a>就是一个注重速度和性能的库。</p>
 </div>
 
 <h2 id="平移矩阵">平移矩阵</h2>
@@ -154,7 +154,7 @@ var translationMatrix = [
 
 <h2 id="用矩阵操作DOM">用矩阵操作 DOM</h2>
 
-<p>一个非常简单的开始使用矩阵的方法是使用 CSS3 里的<code>matrix3d<a href="/zh-CN/docs/Web/CSS/transform">变换</a>。首先，</code> 我们新建一个简单的{{htmlelement("div")}}并加上一些内容。这里样式没有展示出来，但我们将其设置成了页面居中且固定宽度与高度。我们同样为变换设定了动画以便清晰的观察发生的变化。</p>
+<p>一个非常简单的开始使用矩阵的方法是使用 CSS3 里的<code>matrix3d<a href="/zh-CN/docs/Web/CSS/transform">变换</a>。首先，</code> 我们新建一个简单的{{htmlelement("div")}}并加上一些内容。这里样式没有展示出来，但我们将其设置成了页面居中且固定宽度与高度。我们同样为变换设定了动画以便清晰的观察发生的变化。</p>
 
 <pre class="brush: html">&lt;div id='move-me' class='transformable'&gt;
   &lt;h2&gt;Move me with a matrix&lt;/h2&gt;
@@ -222,7 +222,7 @@ var transformedPoint = [
 ];
 </pre>
 
-<p>我们可以将上述步骤表示为一个矩阵，并且单独应用到 x， y，和 z 坐标。下面是绕 Z 轴旋转的表示：</p>
+<p>我们可以将上述步骤表示为一个矩阵，并且单独应用到 x， y，和 z 坐标。下面是绕 Z 轴旋转的表示：</p>
 
 <pre class="brush: js">var sin = Math.sin;
 var cos = Math.cos;
@@ -284,7 +284,7 @@ function rotateAroundZAxis(a) {
 
 <p>矩阵的真正厉害之处在于矩阵的组合。当一组特定类型的矩阵连乘起来，它们保留了变换的经过并且是可逆的。这意味着如果平移、旋转和缩放矩阵组合在一起，当我们使用逆变换并颠倒应用的顺序，可以得到原来的点。</p>
 
-<p>矩阵相乘的结果与顺序有关。两个数相乘时，a * b = c，和 b * a = c 都是正确的。例如，3 * 4 = 12，和 4 * 3 = 12。在数学上这些数被称为<strong>可交换</strong>。矩阵不能保证交换顺序后的运算结果，所以矩阵是<strong>不可交换</strong>的。</p>
+<p>矩阵相乘的结果与顺序有关。两个数相乘时，a * b = c，和 b * a = c 都是正确的。例如，3 * 4 = 12，和 4 * 3 = 12。在数学上这些数被称为<strong>可交换</strong>。矩阵不能保证交换顺序后的运算结果，所以矩阵是<strong>不可交换</strong>的。</p>
 
 <p>另一个需要记住的点是在 WebGL 和 CSS3 中的矩阵相乘需要和变换发生的顺序相反。例如，缩放对象到 80%，向下移动 200 像素，然后绕原点旋转 90 度在伪代码中应该像下面这样。</p>
 

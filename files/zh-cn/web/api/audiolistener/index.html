@@ -5,7 +5,7 @@ translation_of: Web/API/AudioListener
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p><code>AudioListener</code> 接口代表了人听音乐场景时声音的位置和方向，和用于<a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">音频空间化</a>。 所有{{domxref("PannerNode")}} 相对于 <code>AudioListener</code> 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里。</p>
+<p><code>AudioListener</code> 接口代表了人听音乐场景时声音的位置和方向，和用于<a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">音频空间化</a>。 所有{{domxref("PannerNode")}} 相对于 <code>AudioListener</code> 的空间化储存在{{domxref("BaseAudioContext.listener")}} 属性里。</p>
 
 <p>特别需要注意的是一个环境中只能有一个收听者而且这不是{{domxref("AudioNode")}}.</p>
 
@@ -14,28 +14,28 @@ translation_of: Web/API/AudioListener
 <h2 id="Properties">Properties</h2>
 
 <div class="note">
-<p>position,forward 和 up 值是以不同的语法设置和检索的。检索是通过访问来实现的，比如说 <code>AudioListener.positionX</code> ，设置相同属性时可以通过使用 <code>AudioListener.positionX.value</code> 来完成。 这就是为什么他们不被标记为只读， 这在规范的接口定义中就是这么说的。</p>
+<p>position,forward 和 up 值是以不同的语法设置和检索的。检索是通过访问来实现的，比如说 <code>AudioListener.positionX</code> ，设置相同属性时可以通过使用 <code>AudioListener.positionX.value</code> 来完成。 这就是为什么他们不被标记为只读， 这在规范的接口定义中就是这么说的。</p>
 </div>
 
 <dl>
  <dt>{{domxref("AudioListener.positionX")}}</dt>
- <dd>在笛卡尔右手坐标系中代表一个收听者的水平坐标。默认值是 0.</dd>
+ <dd>在笛卡尔右手坐标系中代表一个收听者的水平坐标。默认值是 0.</dd>
  <dt>{{domxref("AudioListener.positionY")}}</dt>
- <dd>Represents the vertical position of the listener in a right-hand cartesian coordinate sytem. The default is 0.</dd>
+ <dd>Represents the vertical position of the listener in a right-hand cartesian coordinate sytem. The default is 0.</dd>
  <dt>{{domxref("AudioListener.positionZ")}}</dt>
- <dd>Represents the longitudinal (back and forth) position of the listener in a right-hand cartesian coordinate sytem. The default is 0.</dd>
+ <dd>Represents the longitudinal (back and forth) position of the listener in a right-hand cartesian coordinate sytem. The default is 0.</dd>
  <dt>{{domxref("AudioListener.forwardX")}}</dt>
- <dd>在相同的笛卡尔坐标系中代表了收听者的面向的方向的水平坐标，就像 (<code>positionX</code>, <code>positionY</code>, 和 <code>positionZ</code>) 值一样。前方和上方值互相线性无关。默认值是 0.</dd>
+ <dd>在相同的笛卡尔坐标系中代表了收听者的面向的方向的水平坐标，就像 (<code>positionX</code>, <code>positionY</code>, 和 <code>positionZ</code>) 值一样。前方和上方值互相线性无关。默认值是 0.</dd>
  <dt>{{domxref("AudioListener.forwardY")}}</dt>
- <dd>Represents the vertical position of the listener's forward direction in the same cartesian coordinate sytem as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 0.</dd>
+ <dd>Represents the vertical position of the listener's forward direction in the same cartesian coordinate sytem as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 0.</dd>
  <dt>{{domxref("AudioListener.forwardZ")}}</dt>
- <dd>Represents the longitudinal (back and forth) position of the listener's forward direction in the same cartesian coordinate sytem as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is -1.</dd>
+ <dd>Represents the longitudinal (back and forth) position of the listener's forward direction in the same cartesian coordinate sytem as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is -1.</dd>
  <dt>{{domxref("AudioListener.upX")}}</dt>
- <dd>代表了收听者头顶在笛卡尔坐标系的水平位置，就像 (<code>positionX</code>, <code>positionY</code>, 和<code>positionZ</code>) 值一样。 前方和上方值线性无关。默认值是 0.</dd>
+ <dd>代表了收听者头顶在笛卡尔坐标系的水平位置，就像 (<code>positionX</code>, <code>positionY</code>, 和<code>positionZ</code>) 值一样。 前方和上方值线性无关。默认值是 0.</dd>
  <dt>{{domxref("AudioListener.upY")}}</dt>
- <dd>Represents the vertical position of the top of the listener's head in the same cartesian coordinate sytem as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 1.</dd>
+ <dd>Represents the vertical position of the top of the listener's head in the same cartesian coordinate sytem as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 1.</dd>
  <dt>{{domxref("AudioListener.upZ")}}</dt>
- <dd>Represents the longitudinal (back and forth) position of the top of the listener's head in the same cartesian coordinate sytem as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 0.</dd>
+ <dd>Represents the longitudinal (back and forth) position of the top of the listener's head in the same cartesian coordinate sytem as the position (<code>positionX</code>, <code>positionY</code>, and <code>positionZ</code>) values. The forward and up values are linearly independent of each other. The default is 0.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -55,7 +55,7 @@ translation_of: Web/API/AudioListener
 
 <dl>
  <dt>{{domxref("AudioListener.dopplerFactor")}} {{Deprecated_Inline}}</dt>
- <dd>一个 Double 值，表示在呈现 <a href="http://en.wikipedia.org/wiki/Doppler_effect">多普勒效应</a> 时要使用的音高偏移量。</dd>
+ <dd>一个 Double 值，表示在呈现 <a href="http://en.wikipedia.org/wiki/Doppler_effect">多普勒效应</a> 时要使用的音高偏移量。</dd>
  <dt>{{domxref("AudioListener.speedOfSound")}} {{Deprecated_Inline}}</dt>
  <dd>一个 Double 值代表了声音的速度，以米每秒的单位计算。</dd>
 </dl>
@@ -70,7 +70,7 @@ translation_of: Web/API/AudioListener
 
 <p>Because of these issues, these properties and methods have been removed.</p>
 
-<p>The <code>setOrientation()</code> and <code>setPosition()</code> methods have been replaced by setting their property value equivilents. For example <code>setPosition(x, y, z)</code> can be achieved by setting <code>positionX.value</code>, <code>positionY.value</code>, and <code>positionZ.value</code> respectively.</p>
+<p>The <code>setOrientation()</code> and <code>setPosition()</code> methods have been replaced by setting their property value equivilents. For example <code>setPosition(x, y, z)</code> can be achieved by setting <code>positionX.value</code>, <code>positionY.value</code>, and <code>positionZ.value</code> respectively.</p>
 
 <dl>
 </dl>

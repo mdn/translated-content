@@ -18,16 +18,16 @@ translation_of: Web/API/CanvasRenderingContext2D/scale
 
 <dl>
  <dt><code>x</code></dt>
- <dd>水平方向的缩放因子。A negative value flips pixels across the vertical axis. A value of <code>1</code> results in no horizontal scaling.</dd>
+ <dd>水平方向的缩放因子。A negative value flips pixels across the vertical axis. A value of <code>1</code> results in no horizontal scaling.</dd>
  <dt>y</dt>
- <dd>垂直方向的缩放因子。A negative value flips pixels across the horizontal axis. A value of <code>1</code> results in no vertical scaling.</dd>
+ <dd>垂直方向的缩放因子。A negative value flips pixels across the horizontal axis. A value of <code>1</code> results in no vertical scaling.</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="Scaling_a_shape">使用 <code>scale</code> 方法</h3>
 
-<p>这是一段使用 <code>scale</code> 方法的简单的代码片段。</p>
+<p>这是一段使用 <code>scale</code> 方法的简单的代码片段。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -63,7 +63,7 @@ ctx.fillRect(10, 10, 8, 20);</pre>
 
 <h3 id="Flipping_things_horizontally_or_vertically">使用 scale 水平或竖直翻转</h3>
 
-<p>你可以使用 <code>ctx.scale(-1, 1)</code> 水平翻转上下文，使用 <code>ctx.scale(1, -1)</code> 垂直翻转上下文。在这个例子中，"Hello world!" 被水平翻转。</p>
+<p>你可以使用 <code>ctx.scale(-1, 1)</code> 水平翻转上下文，使用 <code>ctx.scale(1, -1)</code> 垂直翻转上下文。在这个例子中，"Hello world!" 被水平翻转。</p>
 
 <p>Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}} specifies a negative x coordinate. This is to adjust for the negative scaling factor: <code>-280 * -1</code> becomes <code>280</code>, and text is drawn leftwards from that point.</p>
 

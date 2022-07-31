@@ -9,7 +9,7 @@ translation_of: Web/API/Navigator/getUserMedia
 
 <p>{{APIRef}}{{deprecated_header}}</p>
 
-<p><strong>Navigator.getUserMedia()</strong> 方法提醒用户需要使用音频（0 或者 1）和（0 或者 1）视频输入设备，比如相机，屏幕共享，或者麦克风。如果用户给予许可，<strong>successCallback</strong> 回调就会被调用，{{domxref("MediaStream")}} 对象作为回调函数的参数。如果用户拒绝许可或者没有媒体可用，<strong>errorCallback</strong> 就会被调用，类似的，<strong><code>PermissionDeniedError</code> </strong>或者<strong> <code>NotFoundError</code></strong> 对象作为它的参数。注意，有可能以上两个回调函数都不被调用，因为不要求用户一定作出选择（允许或者拒绝）。</p>
+<p><strong>Navigator.getUserMedia()</strong> 方法提醒用户需要使用音频（0 或者 1）和（0 或者 1）视频输入设备，比如相机，屏幕共享，或者麦克风。如果用户给予许可，<strong>successCallback</strong> 回调就会被调用，{{domxref("MediaStream")}} 对象作为回调函数的参数。如果用户拒绝许可或者没有媒体可用，<strong>errorCallback</strong> 就会被调用，类似的，<strong><code>PermissionDeniedError</code> </strong>或者<strong> <code>NotFoundError</code></strong> 对象作为它的参数。注意，有可能以上两个回调函数都不被调用，因为不要求用户一定作出选择（允许或者拒绝）。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,9 +17,9 @@ translation_of: Web/API/Navigator/getUserMedia
 
 <h3 id="参数">参数</h3>
 
-<p><strong>constraints </strong></p>
+<p><strong>constraints </strong></p>
 
-<p>{{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Parameters">constraints</a> 部分。</p>
+<p>{{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#Parameters">constraints</a> 部分。</p>
 
 <p><strong>successCallback</strong></p>
 
@@ -101,7 +101,7 @@ if (navigator.getUserMedia) {
   }
 }</code></pre>
 
-<p>参见 <a href="https://developer.mozilla.org/en-US/Apps/Developing/App_permissions#audio-capture">permission: audio-capture</a> 和 <a href="https://developer.mozilla.org/en-US/Apps/Developing/App_permissions#video-capture">permission: video-capture</a> 以查看更多信息。</p>
+<p>参见 <a href="https://developer.mozilla.org/en-US/Apps/Developing/App_permissions#audio-capture">permission: audio-capture</a> 和 <a href="https://developer.mozilla.org/en-US/Apps/Developing/App_permissions#video-capture">permission: video-capture</a> 以查看更多信息。</p>
 
 <h2 id="规格">规格</h2>
 
@@ -128,11 +128,11 @@ if (navigator.getUserMedia) {
 
 {{Compat("api.Navigator.getUserMedia")}}
 
-<h2 id="更多参见">更多参见 </h2>
+<h2 id="更多参见">更多参见 </h2>
 
 <ul>
  <li>{{domxref("MediaDevices.getUserMedia()")}} 替代了当前废弃的版本。</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebRTC">WebRTC</a> - the introductory page to the API</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebRTC/MediaStream_API">MediaStream API</a> - the API for the media stream objects</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a> - a tutorial on using <code>getUserMedia() for taking photos rather than video.</code></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebRTC">WebRTC</a> - the introductory page to the API</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebRTC/MediaStream_API">MediaStream API</a> - the API for the media stream objects</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebRTC/taking_webcam_photos">Taking webcam photos</a> - a tutorial on using <code>getUserMedia() for taking photos rather than video.</code></li>
 </ul>

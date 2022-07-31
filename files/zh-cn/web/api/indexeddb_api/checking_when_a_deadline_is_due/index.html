@@ -29,7 +29,7 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
  <li>{{HTMLElement("select")}} 是用于输入截止日期的日期，月份和年份的元素。因为这些值对于用户来说是最模糊的（7，星期日，太阳？04,4，4 月，4 月？2013，'13，13？），我认为最好的解决方案是给他们一个选择，这也为移动用户节省了恼人的打字。日期记录为月份的数字天数，月份记录为完整月份名称，年份记录为完整的四位数年份数字</li>
 </ul>
 
-<p>当我们点击 submit 按钮是，将会运行函数 <code>addData()</code> , 示例：</p>
+<p>当我们点击 submit 按钮是，将会运行函数 <code>addData()</code> , 示例：</p>
 
 <pre class="brush: js">function addData(e) {
   e.preventDefault();
@@ -146,7 +146,7 @@ translation_of: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
           alert('Incorrect month entered in database.');
       }</pre>
 
-<p>我们要做的第一件事是将我们存储在数据库中的月份名称转换为 JavaScript 将理解的月份号码。如前所述，JavaScript Date 对象将月份值创建为 0 到 11 之间的数字。   </p>
+<p>我们要做的第一件事是将我们存储在数据库中的月份名称转换为 JavaScript 将理解的月份号码。如前所述，JavaScript Date 对象将月份值创建为 0 到 11 之间的数字。   </p>
 
 <pre class="brush: js">      if(+(cursor.value.hours) == hourCheck &amp;&amp;
          +(cursor.value.minutes) == minuteCheck &amp;&amp;

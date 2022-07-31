@@ -22,8 +22,6 @@ Check for:
 - HTML tags appearing inside a macro call
   - : If you apply styling to a macro, it will often break because, for example, a `</code>` tag may have appeared inside the macro code in the source code. Check the source view to see what's there, and remove any unnecessary styling.
 
-<!---->
-
 ## TemplateLoadingError
 
 `TemplateLoadingError` errors appear when KumaScript has trouble finding which [macro](/en-US/docs/MDN/Contribute/Content/Macros) to include on a page.

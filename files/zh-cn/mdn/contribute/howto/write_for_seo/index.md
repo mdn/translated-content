@@ -11,7 +11,7 @@ tags:
   - 搜索引擎优化
 translation_of: MDN/Contribute/Howto/Write_for_SEO
 ---
-{{MDNSidebar}}{{draft("为了更好的将 MDN 的文档符合 SEO 要求，我们在此提供了一些提升 MDN 搜索引擎优化的技术建议。本文是由 MDN 的志愿者们整理翻译完成的。")}}
+{{MDNSidebar}}
 
 本指南涵盖了我们对内容的基础要求、推荐和实践参考，以确保搜索引擎可以更好的对我们的内容进行分类和索引，同时确保用户可以轻松地获取到所需的内容。
 

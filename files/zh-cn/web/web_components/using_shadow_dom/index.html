@@ -13,12 +13,12 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 <p>Web components 的一个重要属性是封装——可以将标记结构、样式和行为隐藏起来，并与页面上的其他代码相隔离，保证不同的部分不会混在一起，可使代码更加干净、整洁。其中，Shadow DOM 接口是关键所在，它可以将一个隐藏的、独立的 DOM 附加到一个元素上。本篇文章将会介绍 Shadow DOM 的基础使用。</p>
 
 <div class="note">
-<p><strong>备注：</strong> Firefox（从版本 63 开始），Chrome，Opera 和 Safari 默认支持 Shadow DOM。基于 Chromium 的新 Edge 也支持 Shadow DOM；而旧 Edge 未能撑到支持此特性。</p>
+<p><strong>备注：</strong> Firefox（从版本 63 开始），Chrome，Opera 和 Safari 默认支持 Shadow DOM。基于 Chromium 的新 Edge 也支持 Shadow DOM；而旧 Edge 未能撑到支持此特性。</p>
 </div>
 
 <h2 id="概况">概况</h2>
 
-<p>本文章假设你对 <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM（文档对象模型）</a>有一定的了解，它是由不同的元素节点、文本节点连接而成的一个树状结构，应用于标记文档中（例如  Web 文档中常见的 HTML 文档）。请看如下示例，一段 HTML 代码：</p>
+<p>本文章假设你对 <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM（文档对象模型）</a>有一定的了解，它是由不同的元素节点、文本节点连接而成的一个树状结构，应用于标记文档中（例如  Web 文档中常见的 HTML 文档）。请看如下示例，一段 HTML 代码：</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -62,14 +62,14 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 <pre class="brush: js">let shadow = elementRef.attachShadow({mode: 'open'});
 let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
 
-<p><code>open</code> 表示可以通过页面内的 JavaScript 方法来获取 Shadow DOM，例如使用 {{domxref("Element.shadowRoot")}} 属性：</p>
+<p><code>open</code> 表示可以通过页面内的 JavaScript 方法来获取 Shadow DOM，例如使用 {{domxref("Element.shadowRoot")}} 属性：</p>
 
 <pre class="brush: js">let myShadowDom = myCustomElem.shadowRoot;</pre>
 
-<p>如果你将一个 Shadow root 附加到一个 Custom element 上，并且将 <code>mode</code> 设置为 <code>closed</code>，那么就不可以从外部获取 Shadow DOM 了——<code>myCustomElem.shadowRoot</code> 将会返回 <code>null</code>。浏览器中的某些内置元素就是如此，例如<code>&lt;video&gt;</code>，包含了不可访问的 Shadow DOM。</p>
+<p>如果你将一个 Shadow root 附加到一个 Custom element 上，并且将 <code>mode</code> 设置为 <code>closed</code>，那么就不可以从外部获取 Shadow DOM 了——<code>myCustomElem.shadowRoot</code> 将会返回 <code>null</code>。浏览器中的某些内置元素就是如此，例如<code>&lt;video&gt;</code>，包含了不可访问的 Shadow DOM。</p>
 
 <div class="note">
-<p><strong>备注：</strong> 正如<a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">这篇文章所阐述的</a>，处理 closed Shadow DOM 实际上很简单，往往也很值得这么做。</p>
+<p><strong>备注：</strong> 正如<a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">这篇文章所阐述的</a>，处理 closed Shadow DOM 实际上很简单，往往也很值得这么做。</p>
 </div>
 
 <p>如果你想将一个 Shadow DOM 附加到 custom element 上，可以在 custom element 的构造函数中添加如下实现（目前，这是 shadow DOM 最实用的用法）：</p>
@@ -198,7 +198,7 @@ customElements.define('popup-info', PopUpInfo);</pre>
 
 <p>在上面的示例中，我们使用行内{{htmlelement("style")}} 元素为 Shadow DOM 添加样式，但是完全可以通过{{htmlelement("link")}} 标签引用外部样式表来替代行内样式。</p>
 
-<p>例如，我们可以看下 <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> 例子 (查看源代码 <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">source code</a>):</p>
+<p>例如，我们可以看下 <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> 例子 (查看源代码 <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">source code</a>):</p>
 
 <pre class="brush: js">// 将外部引用的样式添加到 Shadow DOM 上
 const linkElem = document.createElement('link');
@@ -209,7 +209,7 @@ linkElem.setAttribute('href', 'style.css');
 
 shadow.appendChild(linkElem);</pre>
 
-<p>请注意， 因为{{htmlelement("link")}} 元素不会打断 shadow root 的绘制，因此在加载样式表时可能会出现未添加样式内容（FOUC），导致闪烁。</p>
+<p>请注意， 因为{{htmlelement("link")}} 元素不会打断 shadow root 的绘制，因此在加载样式表时可能会出现未添加样式内容（FOUC），导致闪烁。</p>
 
 <p>许多现代浏览器都对从公共节点克隆的或具有相同文本的{{htmlelement("style")}} 标签实现了优化，以允许它们共享单个支持样式表，通过这种优化，外部和内部样式的性能表现比较接近。</p>
 

@@ -12,7 +12,7 @@ translation_of: Web/API/MutationObserver/MutationObserver
 ---
 <div>{{APIRef("DOM WHATWG")}}</div>
 
-<p>DOM 规范中的 <code>MutationObserver()</code> 构造函数——是 {{domxref("MutationObserver")}} 接口内容的一部分——创建并返回一个新的观察器，它会在触发指定 DOM 事件时，调用指定的回调函数。MutationObserver 对 DOM 的观察不会立即启动；而必须先调用 {{domxref("MutationObserver.observe", "observe()")}} 方法来确定，要监听哪一部分的 DOM 以及要响应哪些更改。</p>
+<p>DOM 规范中的 <code>MutationObserver()</code> 构造函数——是 {{domxref("MutationObserver")}} 接口内容的一部分——创建并返回一个新的观察器，它会在触发指定 DOM 事件时，调用指定的回调函数。MutationObserver 对 DOM 的观察不会立即启动；而必须先调用 {{domxref("MutationObserver.observe", "observe()")}} 方法来确定，要监听哪一部分的 DOM 以及要响应哪些更改。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -51,7 +51,7 @@ translation_of: Web/API/MutationObserver/MutationObserver
 }
 </pre>
 
-<p>调用 {{domxref("MutationObserver.observe", "observe()")}} 即可开始观察 DOM。当观察者 observer 发现匹配观察请求中指定的配置项的更改时，<code>callback()</code> 方法便会被调用。</p>
+<p>调用 {{domxref("MutationObserver.observe", "observe()")}} 即可开始观察 DOM。当观察者 observer 发现匹配观察请求中指定的配置项的更改时，<code>callback()</code> 方法便会被调用。</p>
 
 <p>使用 {{domxref("MutationRecord.type", "mutation.type")}} 获取发生的变动类别（无论是子节点的变动，还是节点属性的变动）。</p>
 
@@ -63,17 +63,17 @@ translation_of: Web/API/MutationObserver/MutationObserver
 var observerOptions = {
   childList: true,  // 观察目标子节点的变化，是否有添加或者删除
   attributes: true, // 观察属性变动
-  subtree: true     // 观察后代节点，默认为 false
+  subtree: true     // 观察后代节点，默认为 false
 }
 
 var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);</pre>
 
-<p>使用 ID <code>someElement</code> 来获取目标节点树。<code>observerOptions</code> 中设定了观察者的选项，通过设定 <code>childList</code> 和 <code>attributes</code> 为 <code>true</code> 来获取所需信息。</p>
+<p>使用 ID <code>someElement</code> 来获取目标节点树。<code>observerOptions</code> 中设定了观察者的选项，通过设定 <code>childList</code> 和 <code>attributes</code> 为 <code>true</code> 来获取所需信息。</p>
 
-<p>当 observer 实例化时，指定 <code>callback()</code> 函数。之后指定目标节点与记录选项，我们开始观察使用 <code>observe()</code> 指定的 DOM 节点。</p>
+<p>当 observer 实例化时，指定 <code>callback()</code> 函数。之后指定目标节点与记录选项，我们开始观察使用 <code>observe()</code> 指定的 DOM 节点。</p>
 
-<p>从现在开始直到调用 {{domxref("MutationObserver.disconnect", "disconnect()")}} ，每次以 <code>targetNode</code> 为根节点的 DOM 树添加或移除元素时，以及这些元素的任意属性改变时，<em><code>callback()</code> 都会被调用。</em></p>
+<p>从现在开始直到调用 {{domxref("MutationObserver.disconnect", "disconnect()")}} ，每次以 <code>targetNode</code> 为根节点的 DOM 树添加或移除元素时，以及这些元素的任意属性改变时，<em><code>callback()</code> 都会被调用。</em></p>
 
 <h2 id="Specifications">规范</h2>
 

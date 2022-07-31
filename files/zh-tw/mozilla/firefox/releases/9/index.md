@@ -35,8 +35,6 @@ _No change._
 - [Using full-screen mode](/en-US/docs/DOM/Using_full-screen_mode)
   - : The new full-screen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.
 
-<!---->
-
 - The [`Node.contains()`](/zh-TW/docs/Web/API/Node/contains) method is now implemented; this lets you determine if a given node is a descendant of another node.
 - The [`Node.parentElement`](/zh-TW/docs/Web/API/Node/parentElement) attribute has been implemented; this returns the parent [`Element`](/zh-TW/docs/Web/API/Element) of a DOM node, or `null` if the parent isn't an element.
 - DOM Level 3 [composition events](/en-US/docs/DOM/CompositionEvent) are now supported.

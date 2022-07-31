@@ -13,7 +13,7 @@ translation_of: Web/API/BroadcastChannel
 ---
 <p>{{APIRef("Broadcast Channel API")}}</p>
 
-<p><code><strong>BroadcastChannel</strong></code> 接口代理了一个命名频道，可以让指定 {{glossary("origin")}} 下的任意 {{glossary("browsing context")}} 来订阅它。它允许同源的不同浏览器窗口，Tab 页，frame 或者 iframe 下的不同文档之间相互通信。通过触发一个 {{event("message")}} 事件，消息可以广播到所有监听了该频道的 <code>BroadcastChannel</code> 对象。</p>
+<p><code><strong>BroadcastChannel</strong></code> 接口代理了一个命名频道，可以让指定 {{glossary("origin")}} 下的任意 {{glossary("browsing context")}} 来订阅它。它允许同源的不同浏览器窗口，Tab 页，frame 或者 iframe 下的不同文档之间相互通信。通过触发一个 {{event("message")}} 事件，消息可以广播到所有监听了该频道的 <code>BroadcastChannel</code> 对象。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -35,9 +35,9 @@ translation_of: Web/API/BroadcastChannel
  <h3 id="事件处理程序">事件处理程序</h3>
  </dt>
  <dt>{{domxref("BroadcastChannel.onmessage")}}</dt>
- <dd>{{event("Event_handlers", "event handler")}} ，用于定义当该对象上触发了 {{event("message")}} 事件时要执行的函数。</dd>
+ <dd>{{event("Event_handlers", "event handler")}} ，用于定义当该对象上触发了 {{event("message")}} 事件时要执行的函数。</dd>
  <dt>{{domxref("BroadcastChannel.onmessageerror")}}</dt>
- <dd>{{event("Event_handlers", "event handler")}} ，用于定义当该对象上触发了类型为 {{domxref("MessageError")}} 的 {{domxref("MessageEvent")}} 事件时要执行的函数。当接收到一条无法反序列化的消息时会触发此事件。</dd>
+ <dd>{{event("Event_handlers", "event handler")}} ，用于定义当该对象上触发了类型为 {{domxref("MessageError")}} 的 {{domxref("MessageEvent")}} 事件时要执行的函数。当接收到一条无法反序列化的消息时会触发此事件。</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
@@ -47,7 +47,7 @@ translation_of: Web/API/BroadcastChannel
 <p>{{domxref("BroadcastChannel.postMessage()")}}</p>
 
 <dl>
- <dd>向所有监听了相同频道的 <code>BroadcastChannel</code> 对象发送一条消息，消息内容可以是任意类型的数据。 </dd>
+ <dd>向所有监听了相同频道的 <code>BroadcastChannel</code> 对象发送一条消息，消息内容可以是任意类型的数据。 </dd>
  <dt>{{domxref("BroadcastChannel.close()")}}</dt>
  <dd>关闭频道对象，告诉它不要再接收新的消息，并允许它最终被垃圾回收。</dd>
 </dl>

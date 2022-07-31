@@ -10,11 +10,11 @@ translation_of: Web/API/Cache/addAll
 <p>{{domxref("Cache")}} 接口的 <strong><code>addAll()</code></strong> 方法接受一个 URL 数组，检索它们，并将生成的 response 对象添加到给定的缓存中。 在检索期间创建的 request 对象成为存储的 response 操作的 key。</p>
 
 <div class="note">
-<p><strong>Note</strong>: <code>addAll()</code> will overwrite any key/value pairs previously stored in the cache that match the request, but will fail if a resulting <code>put()</code> operation would overwrite a previous cache entry created by the same <code>addAll()</code> method.</p>
+<p><strong>Note</strong>: <code>addAll()</code> will overwrite any key/value pairs previously stored in the cache that match the request, but will fail if a resulting <code>put()</code> operation would overwrite a previous cache entry created by the same <code>addAll()</code> method.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage.  More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.</p>
+<p><strong>Note</strong>: Initial Cache implementations (in both Blink and Gecko) resolve {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, and {{domxref("Cache.put")}} promises when the response body is fully written to storage.  More recent spec versions have newer language stating that the browser can resolve the promise as soon as the entry is recorded in the database even if the response body is still streaming in.</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -33,7 +33,7 @@ translation_of: Web/API/Cache/addAll
 
 <h3 id="返回值">返回值</h3>
 
-<p>A {{jsxref("Promise")}} that resolves with void.</p>
+<p>A {{jsxref("Promise")}} that resolves with void.</p>
 
 <h3 id="Exceptions">Exceptions</h3>
 

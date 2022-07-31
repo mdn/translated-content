@@ -19,14 +19,14 @@ translation_of: Web/API/Streams_API
 
 <p>还有更多的优点——你可以检测流何时开始或结束，将流链接在一起，根据需要处理错误和取消流，并对流的读取速度做出反应。</p>
 
-<p>流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 响应 {{domxref("Body")}} 会暴露为 {{domxref("ReadableStream")}}，之后你就可以使用 {{domxref("ReadableStream.getReader()")}} 建立的 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。</p>
+<p>流的基础应用围绕着使响应可以被流处理展开。例如，一个成功的 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 响应 {{domxref("Body")}} 会暴露为 {{domxref("ReadableStream")}}，之后你就可以使用 {{domxref("ReadableStream.getReader()")}} 建立的 reader 读取它，使用 {{domxref("ReadableStream.cancel()")}} 取消它等等。</p>
 
-<p>更复杂的应用包括使用 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 创建你自己的流，比如在 <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> 中处理数据。</p>
+<p>更复杂的应用包括使用 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 创建你自己的流，比如在 <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> 中处理数据。</p>
 
 <p>你还可以使用 {{domxref("WritableStream")}} 将数据写入流中。</p>
 
 <div class="note">
-<p><strong>注意：</strong>你可以在这些文章中找到关于流理论的更多细节和实践 — <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a>, <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</a>，以及 <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a>。</p>
+<p><strong>注意：</strong>你可以在这些文章中找到关于流理论的更多细节和实践 — <a href="/en-US/docs/Web/API/Streams_API/Concepts">Streams API concepts</a>, <a href="/en-US/docs/Web/API/Streams_API/Using_readable_streams">Using readable streams</a>，以及 <a href="/en-US/docs/Web/API/Streams_API/Using_writable_streams">Using writable streams</a>。</p>
 </div>
 
 <h2 id="Stream_接口">Stream 接口</h2>
@@ -35,7 +35,7 @@ translation_of: Web/API/Streams_API
 
 <dl>
  <dt>{{domxref("ReadableStream")}}</dt>
- <dd>表示数据的可读流。用于处理 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 返回的响应，或者开发者自定义的流（例如通过 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造的流）。</dd>
+ <dd>表示数据的可读流。用于处理 <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 返回的响应，或者开发者自定义的流（例如通过 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造的流）。</dd>
  <dt>{{domxref("ReadableStreamDefaultReader")}}</dt>
  <dd>表示默认阅读器，用于阅读来自网络的数据流（例如 fetch 请求）。</dd>
  <dt>{{domxref("ReadableStreamDefaultController")}}</dt>
@@ -50,7 +50,7 @@ translation_of: Web/API/Streams_API
  <dt>{{domxref("WritableStreamDefaultWriter")}}</dt>
  <dd>表示默认写入器，用于将小块的数据写入可写流中。</dd>
  <dt>{{domxref("WritableStreamDefaultController")}}</dt>
- <dd>表示控制器，用于控制 {{domxref("WritableStream")}} 的状态。当创建一个 <code>WritableStream</code> 时，对应的 <code>WritableStreamDefaultController</code> 实例会被提供给底层的 sink 供其操作。</dd>
+ <dd>表示控制器，用于控制 {{domxref("WritableStream")}} 的状态。当创建一个 <code>WritableStream</code> 时，对应的 <code>WritableStreamDefaultController</code> 实例会被提供给底层的 sink 供其操作。</dd>
 </dl>
 
 <h3 id="流相关的_API_及操作">流相关的 API 及操作</h3>
@@ -66,9 +66,9 @@ translation_of: Web/API/Streams_API
 
 <dl>
  <dt>{{domxref("Request")}}</dt>
- <dd>当构造一个新的 <code>Request</code> 对象后，你可以给它的 <code>RequestInit</code> 中的 <code>body</code> 属性传入一个 {{domxref("ReadableStream")}}。这个 <code>Request</code> 对象就可以被传入 {{domxref("fetch()")}} 中，开始接收流。</dd>
+ <dd>当构造一个新的 <code>Request</code> 对象后，你可以给它的 <code>RequestInit</code> 中的 <code>body</code> 属性传入一个 {{domxref("ReadableStream")}}。这个 <code>Request</code> 对象就可以被传入 {{domxref("fetch()")}} 中，开始接收流。</dd>
  <dt>{{domxref("Body")}}</dt>
- <dd>一个成功的 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 响应 {{domxref("Body")}} 会默认暴露为 {{domxref("ReadableStream")}}，从而可以采用相应的阅读器来处理等。</dd>
+ <dd>一个成功的 <a href="/en-US/docs/Web/API/fetch">fetch request</a> 响应 {{domxref("Body")}} 会默认暴露为 {{domxref("ReadableStream")}}，从而可以采用相应的阅读器来处理等。</dd>
 </dl>
 
 <h3 id="字节流相关接口">字节流相关接口</h3>
@@ -79,11 +79,11 @@ translation_of: Web/API/Streams_API
 
 <dl>
  <dt>{{domxref("ReadableStreamBYOBReader")}}</dt>
- <dd>表示 BYOB（"bring your own buffer"）阅读器，用于阅读开发者提供的流数据（如自定义的 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}）。</dd>
+ <dd>表示 BYOB（"bring your own buffer"）阅读器，用于阅读开发者提供的流数据（如自定义的 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}）。</dd>
  <dt>{{domxref("ReadableByteStreamController")}}</dt>
  <dd>表示控制器，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。字节控制器用于处理字节流。</dd>
  <dt>{{domxref("ReadableStreamBYOBRequest")}}</dt>
- <dd>表示 {{domxref("ReadableByteStreamController")}} 中的 BYOB pull request。</dd>
+ <dd>表示 {{domxref("ReadableByteStreamController")}} 中的 BYOB pull request。</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

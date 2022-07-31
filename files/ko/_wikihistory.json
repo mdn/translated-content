@@ -11809,19 +11809,6 @@
       "SooYeonKim"
     ]
   },
-  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
-    "modified": "2020-03-12T19:42:17.394Z",
-    "contributors": [
-      "doong-jo",
-      "nmsohn",
-      "DoublSB",
-      "limkukhyun",
-      "wbamberg",
-      "cmygray",
-      "khseok1060",
-      "ryukato"
-    ]
-  },
   "Web/JavaScript/Guide/Expressions_and_Operators": {
     "modified": "2020-04-30T03:43:48.082Z",
     "contributors": [
@@ -12084,16 +12071,6 @@
       "teoli",
       "ethertank",
       "jaemin_jo"
-    ]
-  },
-  "Web/JavaScript/Language_Resources": {
-    "modified": "2020-03-12T19:39:22.531Z",
-    "contributors": [
-      "ahnzaz",
-      "KSH-code",
-      "Netaras",
-      "teoli",
-      "NFM"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -17241,12 +17218,27 @@
       "Wafe"
     ]
   },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2019-12-13T21:09:57.295Z",
+  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:42:17.394Z",
     "contributors": [
+      "doong-jo",
+      "nmsohn",
+      "DoublSB",
+      "limkukhyun",
       "wbamberg",
+      "cmygray",
+      "khseok1060",
+      "ryukato"
+    ]
+  },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:39:22.531Z",
+    "contributors": [
+      "ahnzaz",
+      "KSH-code",
       "Netaras",
-      "Sebuls"
+      "teoli",
+      "NFM"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {

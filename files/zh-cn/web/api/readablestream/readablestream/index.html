@@ -5,7 +5,7 @@ translation_of: Web/API/ReadableStream/ReadableStream
 ---
 <div>{{SeeCompatTable}}{{APIRef("Streams")}}</div>
 
-<p><strong><code>ReadableStream()</code></strong> 构造器创建并返回包含处理函数的可读流实例。</p>
+<p><strong><code>ReadableStream()</code></strong> 构造器创建并返回包含处理函数的可读流实例。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -15,7 +15,7 @@ translation_of: Web/API/ReadableStream/ReadableStream
 
 <dl>
  <dt>underlyingSource</dt>
- <dd>一个包含定义了构造流行为方法和属性的对象。<code>underlyingSource</code> 包括：
+ <dd>一个包含定义了构造流行为方法和属性的对象。<code>underlyingSource</code> 包括：
  <dl>
   <dt>start(controller)</dt>
   <dd>这是一个当对象被构造时立刻调用的方法。此方法的内容由开发人员定义，并应着眼于访问流，并执行其他任何必需的设置流功能。如果这个过程是异步完成的，它可以返回一个 promise，表明成功或失败。传递给这个方法的<code>controller</code>是一个{{domxref("ReadableStreamDefaultController")}}或{{domxref("ReadableByteStreamController")}},具体取决于<code>type</code>属性的值。开发人员可以使用此方法在设立期间控制流。</dd>

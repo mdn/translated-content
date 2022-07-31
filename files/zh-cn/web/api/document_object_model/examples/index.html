@@ -6,11 +6,11 @@ tags:
   - DOM 参考
 translation_of: Web/API/Document_Object_Model/Examples
 ---
-<p>本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通 API ，技巧以及 JavaScript 模式来操作文档对象。</p>
+<p>本章介绍提供了一些长例子来介绍如何使用 DOM 进行 Web 以及 XML 开发。在可能的情况下，例子只使用普通 API ，技巧以及 JavaScript 模式来操作文档对象。</p>
 
 <h2 id="Example_1:_height_and_width">示例 1: 高度和宽度</h2>
 
-<p>下面的例子展示了在不同尺寸的图片时使用其 height 和 width 属性的情况：</p>
+<p>下面的例子展示了在不同尺寸的图片时使用其 height 和 width 属性的情况：</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -35,7 +35,7 @@ function init()
             ", style.height=" + arrImages[i].style.height +
             ", style.width=" + arrImages[i].style.width +
             "&lt;\/li&gt;";
-  }
+  }
 
   strHtml += "&lt;\/ul&gt;";
 
@@ -81,14 +81,14 @@ function setBorderWidth(width) {
 &lt;body&gt;
 &lt;p&gt;
   &lt;img id="img1"
-       src="image1.gif"
-       style="border: 5px solid green;"
-       width="100" height="100" alt="border test"&gt;
+       src="image1.gif"
+       style="border: 5px solid green;"
+       width="100" height="100" alt="border test"&gt;
 &lt;/p&gt;
 
 &lt;form name="FormName"&gt;
   &lt;input type="button" value="Make border 20px-wide" onclick="setBorderWidth(20);" /&gt;
-  &lt;input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" /&gt;
+  &lt;input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" /&gt;
 &lt;/form&gt;
 
 &lt;/body&gt;
@@ -106,9 +106,9 @@ function setBorderWidth(width) {
 
 &lt;script type="text/javascript"&gt;
 function changeText() {
-  var p = document.getElementById("pid");
+  var p = document.getElementById("pid");
 
-  p.style.color = "blue"
+  p.style.color = "blue"
   p.style.fontSize = "18pt"
 }
 &lt;/script&gt;
@@ -154,9 +154,9 @@ P
 
 <h2 id="Example_5:_Event_Propagation">示例 5: 冒泡事件</h2>
 
-<p>本例以一种简单的方法阐述了事件是如何触发以及在 DOM 中是如何处理的。当这个 HTML 文档 BODY 载入的时候，在 TABLE 的首行注册了一个事件监听器。事件监听器通过执行函数 stopEvent 处理事件，从而改变在该表的底部单元的值。</p>
+<p>本例以一种简单的方法阐述了事件是如何触发以及在 DOM 中是如何处理的。当这个 HTML 文档 BODY 载入的时候，在 TABLE 的首行注册了一个事件监听器。事件监听器通过执行函数 stopEvent 处理事件，从而改变在该表的底部单元的值。</p>
 
-<p>然而，stopEvent 同时也会调用一个事件对象的方法，<a href="/zh-cn/DOM/event.stopPropagation">event.stopPropagation</a>，其阻止了当前事件在 DOM 的进一步冒泡行为。请注意，表本身有一个 {{domxref("element.onclick","onclick")}} 事件处理程序，当表被点击时其会显示一条消息。但 stopEvent 方法已经阻止了冒泡，所以在表中的数据更新后，该事件事件阶段有效地结束（effectively ended），并且显示一个警告框——证实了有效结束。</p>
+<p>然而，stopEvent 同时也会调用一个事件对象的方法，<a href="/zh-cn/DOM/event.stopPropagation">event.stopPropagation</a>，其阻止了当前事件在 DOM 的进一步冒泡行为。请注意，表本身有一个 {{domxref("element.onclick","onclick")}} 事件处理程序，当表被点击时其会显示一条消息。但 stopEvent 方法已经阻止了冒泡，所以在表中的数据更新后，该事件事件阶段有效地结束（effectively ended），并且显示一个警告框——证实了有效结束。</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -203,9 +203,9 @@ function load() {
 
 <h2 id="Example_6:_getComputedStyle">示例 6: getComputedStyle</h2>
 
-<p>这个例子演示了如何用{{domxref("window.getComputedStyle")}}方法来获取一个元素的样式而不是使用 style 属性或 JavaScript 的（例如，elt.style.backgroundColor="RGB(173，216，230)"）。列举在 <a href="/zh-CN/docs/Web/CSS/Reference">DOM CSS Properties List</a> 后面的类型的样式可以用更直接{{domxref("element.style", "elt.style")}} 属性获取。</p>
+<p>这个例子演示了如何用{{domxref("window.getComputedStyle")}}方法来获取一个元素的样式而不是使用 style 属性或 JavaScript 的（例如，elt.style.backgroundColor="RGB(173，216，230)"）。列举在 <a href="/zh-CN/docs/Web/CSS/Reference">DOM CSS Properties List</a> 后面的类型的样式可以用更直接{{domxref("element.style", "elt.style")}} 属性获取。</p>
 
-<p><code>getComputedStyle()</code> 返回了一个 <code>ComputedCSSStyleDeclaration</code> 对象，其独立的样式属性可以用该对象的 getPropertyValue() 方法引用，如同下面的例子一样：</p>
+<p><code>getComputedStyle()</code> 返回了一个 <code>ComputedCSSStyleDeclaration</code> 对象，其独立的样式属性可以用该对象的 getPropertyValue() 方法引用，如同下面的例子一样：</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -219,12 +219,12 @@ function cStyles() {
   var txtHeight = document.getElementById("t1");
   var h_style   = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("height");
 
-  txtHeight.value = h_style;
+  txtHeight.value = h_style;
 
   var txtWidth = document.getElementById("t2");
   var w_style  = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("width");
 
-  txtWidth.value = w_style;
+  txtWidth.value = w_style;
 
   var txtBackgroundColor = document.getElementById("t3");
   var b_style = document.defaultView.getComputedStyle(RefDiv,null).getPropertyValue("background-color");
@@ -235,10 +235,10 @@ function cStyles() {
 
 &lt;style&gt;
 #d1 {
-  margin-left: 10px;
-  background-color: rgb(173, 216, 230);
+  margin-left: 10px;
+  background-color: rgb(173, 216, 230);
   height: 20px;
-  max-width: 20px; }
+  max-width: 20px; }
 &lt;/style&gt;
 
 &lt;/head&gt;
@@ -249,7 +249,7 @@ function cStyles() {
 
 &lt;form action=""&gt;
   &lt;p&gt;
-    &lt;button type="button" onclick="cStyles();"&gt;getComputedStyle&lt;/button&gt;
+    &lt;button type="button" onclick="cStyles();"&gt;getComputedStyle&lt;/button&gt;
     height&lt;input id="t1" type="text" value="1"&gt;
     max-width&lt;input id="t2" type="text" value="2"&gt;
     bg-color&lt;input id="t3" type="text" value="3"&gt;&lt;/p&gt;
@@ -261,7 +261,7 @@ function cStyles() {
 
 <h2 id="Example_7:_Displaying_Event_Object_Properties">示例 7: 显示事件对象的属性</h2>
 
-<p>这个例子使用 DOM 方法来显示{{domxref("window.onload")}} {{domxref("event")}}对象的属性及其在 table 中的值。这个方法也展示一个有用的技术即使用了{{jsxref("Statements/for...in", "for...in")}} 循环来遍历一个对象的属性，以得到他们的值。</p>
+<p>这个例子使用 DOM 方法来显示{{domxref("window.onload")}} {{domxref("event")}}对象的属性及其在 table 中的值。这个方法也展示一个有用的技术即使用了{{jsxref("Statements/for...in", "for...in")}} 循环来遍历一个对象的属性，以得到他们的值。</p>
 
 <p>不同浏览器之间事件对象的属性有很大不同，<a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">W3C DOM2 事件规范</a>规定了事件的标准属性，然而，许多浏览器都大大扩展了这些。</p>
 
@@ -308,7 +308,7 @@ function showEventProperties(e) {
 
   for (var p in e) {
     row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
+    row.className = (row.rowIndex % 2)? 'odd':'even';
     addCell(row, row.rowIndex);
     addCell(row, p);
     addCell(row, e[p]);
@@ -347,7 +347,7 @@ window.onload = function(event){
 var table = document.getElementById('table0');
 var row = table.insertRow(-1);
 var cell,
-    text;
+    text;
 
 for (var i=0; i&lt;2; i++) {
   cell = row.insertCell(-1);
@@ -361,7 +361,7 @@ for (var i=0; i&lt;2; i++) {
 
 <ul>
  <li>表的{{domxref("element.innerHTML","innerHTML")}}属性不应该被用来修改表，虽然你可以用它来写一个完整的表格或单元格的内容。</li>
- <li>如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其它浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。</li>
+ <li>如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其它浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。</li>
  <li><a href="/en-US/docs/Web/API/HTMLTableElement#Methods">表接口</a>还有一些可用于创建和修改的表的便利方法。</li>
 </ul>
 
