@@ -28,11 +28,11 @@ translation_of: Web/API/Window/devicePixelRatio
 
 <h4 id="HTML">HTML</h4>
 
-<pre>&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre>var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Set display size (css pixels).
@@ -61,7 +61,7 @@ var y = size / 2;
 var textString = "I love MDN";
 ctx.fillText(textString, x, y);</pre>
 
-<h2 id="sect1"><img alt="This image describe the impact of different value on retina display. " src="https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png"></h2>
+<img alt="This image describe the impact of different value on retina display. " src="https://mdn.mozillademos.org/files/15023/devicePixelRation%20Diff..png">
 
 <h3 id="监视屏幕分辨率或缩放级别的更改">监视屏幕分辨率或缩放级别的更改</h3>
 
@@ -71,7 +71,7 @@ ctx.fillText(textString, x, y);</pre>
 
 <p>JavaScript 代码创建媒体查询，以监控设备分辨率并在每次更改时检查<code>devicePixelRatio</code>的值。</p>
 
-<pre>let pixelRatioBox = document.querySelector(".pixel-ratio");
+<pre class="brush: js">let pixelRatioBox = document.querySelector(".pixel-ratio");
 let mqString = `(resolution: ${window.devicePixelRatio}dppx)`;
 
 const updatePixelRatio = () =&gt; {
@@ -95,7 +95,7 @@ matchMedia(mqString).addListener(updatePixelRatio);
 
 <p>HTML 将创建包含说明的框和将显示当前像素比率信息的<code>pixel-ratio</code> 框。</p>
 
-<pre>&lt;div class="container"&gt;
+<pre class="brush: html">&lt;div class="container"&gt;
   &lt;div class="inner-container"&gt;
     &lt;p&gt;This example demonstrates the effect of zooming the page in
        and out (or moving it to a screen with a different scaling
@@ -105,11 +105,9 @@ matchMedia(mqString).addListener(updatePixelRatio);
     &lt;div class="pixel-ratio"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<details><summary>
 <h4 id="CSS">CSS</h4>
-</summary>
 
-<pre>body {
+<pre class="brush: css">body {
   font: 22px arial, sans-serif;
 }
 
@@ -138,7 +136,6 @@ matchMedia(mqString).addListener(updatePixelRatio);
   right: 1em;
   font-weight: bold;
 }</pre>
-</details>
 
 <h4 id="Result">Result</h4>
 
@@ -146,28 +143,12 @@ matchMedia(mqString).addListener(updatePixelRatio);
 
 <h2 id="规范">规范</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSSOM View", "#dom-window-devicepixelratio", "Window.devicePixelRatio")}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">浏览器兼容性</h2>
 
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
-<p>{{Compat("api.Window.devicePixelRatio")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 
