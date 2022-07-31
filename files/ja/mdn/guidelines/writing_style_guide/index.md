@@ -3,14 +3,14 @@ title: 執筆スタイルガイド
 slug: MDN/Guidelines/Writing_style_guide
 tags:
   - Documentation
-  - ガイド
-  - ガイドライン
+  - Guide
+  - Guidelines
   - MDN
-  - MDN メタ
+  - MDN Meta
   - MDN Web Docs
-  - MDN スタイルガイド
-  - スタイルガイド
-  - 執筆スタイルガイド
+  - MDN style guide
+  - Style guide
+  - Writing style guide
 translation_of: MDN/Guidelines/Writing_style_guide
 ---
 {{MDNSidebar}}
@@ -56,14 +56,13 @@ translation_of: MDN/Guidelines/Writing_style_guide
 
 あるトピックや主題分野についていくつかの記事を追加する必要がある場合、通常、ランディングページを作成し、次に個々の記事のためのサブページを追加します。
 ランディングページの冒頭には、トピックや技術を説明する 1、2 段落を設け、次に、各ページの説明を含むサブページのリストを提供します。
-このリストへのページの挿入は、いくつかのマクロを使用して自動化することができます。
 
 例えば、[JavaScript](/ja/docs/Web/JavaScript) ガイド を見てみましょう。以下のような構造になっています。
 
 - [JavaScript/Guide](/ja/docs/Web/JavaScript/Guide) – メインの目次となるページ
 - [JavaScript/Guide/JavaScript Overview](/ja/docs/Web/JavaScript/Guide/Introduction)
-- [JavaScript/Guide/Functions](/ja/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- [JavaScript/Guide/Grammar and types](/ja/docs/Web/JavaScript/Guide/Grammar_and_types)
+- …
 
 階層の最上位部に自分の記事を配置しないようにしましょう。サイトのパフォーマンスを下げ、検索とサイト探索を非効率にします。
 
@@ -118,7 +117,7 @@ translation_of: MDN/Guidelines/Writing_style_guide
 > 値が `"left"` の場合は、文字列は指定された X 座標から描画されます。
 > また、 `textAlign` が `"right"` の場合は、指定されたX座標で終わるように描画されます。
 >
-> (等 等 等...)
+> (…)
 >
 > オプションで、4 番目の引数を指定して文字列の最大幅をピクセル単位で指定することもできます。
 > この引数を指定すると、テキストは水平方向に圧縮されるか、描画時にその幅の空間に収まるように拡大縮小 (あるいは調整) されます。
@@ -221,17 +220,6 @@ H2 が最高の見出しレベルなのは H1 がページタイトルのため�
 番号付きリストの項目が、短い段落のように読めることに注意してください。
 番号付きリストは、説明のために日常的に使用されたり、誰かを整然とした手順で案内したりするため、各項目を 1 ステップにつき 1 つの番号付き項目というように、焦点を絞るようにしましょう。
 
-### テキストの書式とスタイル
-
-**「スタイル」** ドロップダウンリストを使うと、あらかじめ設定されたスタイルを選択範囲に適用できます。
-
-> **Note:** **"Note Box"** スタイルは重要な注意を呼びかけるのに使われます。こんな感じです。
-
-> **Warning:** 同様に **"Warning Box"** は警告ボックスをこのように作成します。
-
-特別に指示された場合でない限り、 HTML の `style` 属性を手作業で付加*しない*ようにしてください。
-既存のクラスでうまくいかなければ、 [MDN discussion forum](https://discourse.mozilla.org/c/mdn/236) で質問してみてください。
-
 ### コードサンプルのスタイルと書式
 
 > **Note:** この節では、 MDN の記事に表示されるコードのスタイルや書式について扱います。
@@ -257,7 +245,7 @@ if (condition) {
 
 ```js
 if (class.CONDITION || class.OTHER_CONDITION || class.SOME_OTHER_CONDITION
-       || class.YET_ANOTHER_CONDITION ) {
+       || class.YET_ANOTHER_CONDITION) {
   /* something */
 }
 
@@ -291,7 +279,7 @@ HTML 要素について記述する際に従うべき特定の規則がありま
   - : 属性名の定義には [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) マクロを使用してください（`\{{htmlattrdef("type")}})` のように）。そうすれば他のページから属性の定義を参照するために、 [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) マクロを使用するだけで簡単にリンクすることができます（`\{{htmlattrxref("type","element")}}` のように）。
 - 属性値
   - : 属性値に `<code>` を適用するために "Inline Code" スタイルを使用し、文字列の値はコードサンプルの構文で必要がない限り、引用符で囲まないでください。
-    **例:** 「`<input>` 要素の `type` 属性が `email` または `tel` に設定されている場合...」
+    **例:** 「`<input>` 要素の `type` 属性が `email` または `tel` に設定されている場合…」
 
 ### ラテン文字の略語
 
@@ -300,19 +288,19 @@ HTML 要素について記述する際に従うべき特定の規則がありま
 - よく使われるラテン語の略語 (etc., i.e., e.g.) は括弧や注釈の中で使用できます。
   これらの略語にはピリオドを使用し、カンマや適切な区切り文字を続けてください。
 
-  - **正**: Web browsers (e.g. Firefox) can be used ...
-  - **誤**: Web browsers e.g. Firefox can be used ...
-  - **誤**: Web browsers, e.g. Firefox, can be used ...
-  - **誤**: Web browsers, (eg: Firefox) can be used ...
+  - **正**: Web browsers (e.g. Firefox) can be used…
+  - **誤**: Web browsers e.g. Firefox can be used…
+  - **誤**: Web browsers, e.g. Firefox, can be used…
+  - **誤**: Web browsers, (eg: Firefox) can be used…
 
 #### 通常の文で
 
 - 通常の文では（つまり注釈や括弧の外で）、英語における同等の表現を使用してください。
 
-  - **正**: ... web browsers, and so on.
-  - **誤**: ... web browsers, etc.
-  - **正**: Web browsers such as Firefox can be used ...
-  - **誤**: Web browsers e.g. Firefox can be used ...
+  - **正**: (…) web browsers, and so on.
+  - **誤**: (…) web browsers, etc.
+  - **正**: Web browsers such as Firefox can be used …
+  - **誤**: Web browsers e.g. Firefox can be used …
 
 #### ラテン語の略記表現と対応する英語表現
 
@@ -343,10 +331,10 @@ HTML 要素について記述する際に従うべき特定の規則がありま
 
 #### 略語の展開
 
-ある用語についてページ内で初めて言及がある場合は、ユーザにとって馴染みがないと思われる略語を展開しましょう。よく分からなければ、展開するかもしくは記事や、用語の説明をする[用語集](/ja/docs/Glossary)の項目へのリンクを貼りましょう。
+ある用語についてページ内で初めて言及がある場合は、ユーザーにとって馴染みがないと思われる略語を展開しましょう。よく分からなければ、展開するかもしくは記事や、用語の説明をする[用語集](/ja/docs/Glossary)の項目へのリンクを貼りましょう。
 
-- **正**: "XUL (XML User Interface Language) is Mozilla's XML-based language..."
-- **誤**: "XUL is Mozilla's XML-based language..."
+- **正**: "XUL (XML User Interface Language) is Mozilla's XML-based language…"
+- **誤**: "XUL is Mozilla's XML-based language…"
 
 #### 頭字語と略語の複数形
 
@@ -401,9 +389,21 @@ HTML 要素について記述する際に従うべき特定の規則がありま
 - **正**: email, re-elect, co-op
 - **誤**: e-mail, reelect, coop
 
+### 差別的でない言葉
+
+MDN は幅広く、多様な読者を抱えています。
+私たちは、可能な限り差別的でないテキストを維持することを強く推奨します。
+ここでは、文書で使用される一般的な用語に代わるものをいくつか紹介します。
+
+- **master** （マスター）や **slave** （スレーブ）という用語を避け、 **main** （メイン）や **replica** （レプリカ）を使用してください。
+- **whitelist** （ホワイトリスト）や **blacklist** （ブラックリスト）を **allowlist** （許可リスト）や **denylist** （拒否リスト）に置き換えてください。
+- **sanity** （正気）は **coherence** （正常性）に置き換えてください。
+- **dummy** （ダミー）の代わりに **placeholder** （プレイスホルダー）を使用してください。
+- 文書で **crazy** や **insane** を使用する必要はありませんが、場合によっては **fantastic** （驚異的）を代わりに使用することを検討してください。
+
 #### 性別に中立な言葉
 
-主題に性別が関係ない場合には、性別に中立な言葉を使って、できるだけ包括的な文章にするのが良いでしょう。
+性別が主題と関係ない文章では、性別に関係ない言葉を使用するのが一番です。
 例えば、特定の男性の行動について話している場合は、 "he"/"his" を使用しても問題ありませんが、主語がどちらでもありうる場合は、 "he"/"his" は適切ではありません。
 
 以下に例をあげましょう。
@@ -421,7 +421,7 @@ _A confirmation dialog appears, asking the user if they allow the Web page to ma
 
 三人称複数型を中性名詞として使う (つまり、"they"、"them"、"their"、"theirs" を使う) ことは許容されるやり方で、一般には "[単数形の 'they'](http://en.wikipedia.org/wiki/Singular_they)" として知られています。
 
-ユーザを複数とするとこうなります。
+ユーザーを複数とするとこうなります。
 
 _A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams._
 
