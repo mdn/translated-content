@@ -1,47 +1,56 @@
 ---
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
+page-type: web-api-constructor
 translation_of: Web/API/AnimationEvent/AnimationEvent
+browser-compat: api.AnimationEvent.AnimationEvent
+l10n:
+  sourceCommit: c000698d544f932314050edec3f47b8b8dc906bf
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations API")}}
 
-Le constructeur **`AnimationEvent()`** retourne un nouvel {{domxref("AnimationEvent")}}, représentant un évènement en relation avec une animation.
+Le constructeur **`AnimationEvent()`** renvoie un nouvel objet [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent), qui représente un évènement relatif à une animation.
 
 ## Syntaxe
 
-    animationEvent = new AnimationEvent(type, {animationName: aPropertyName,
-                                               elapsedTime  : aFloat,
-                                               pseudoElement: aPseudoElementName});
+```js
+new AnimationEvent(type)
+new AnimationEvent(type, options)
+```
 
 ### Paramètres
 
-*Le constructeur `AnimationEvent()` hérite également des arguments du constructeur [`Event()`](/fr/docs/Web/API/Event/Event).*
-
 - `type`
-  - : Un {{domxref("DOMString")}} représentant le nom du type de `AnimationEvent`. Il est sensible à la casse (majuscule-minuscule) et peut être: `'animationstart'`, `'animationend'`, or `'animationiteration'`.
-- `animationName` {{optional_inline}}
-  - : Un {{domxref("DOMString")}} contenant la valeur de la propriété associée avec la transition.{{cssxref("animation-name")}} . Prend par défaut `""`.
-- `elapsedTime` {{optional_inline}}
-  - : Un `float` donne le montant de temps d'une application qui a fonctionné, en secondes, quand l'évènement est déclenché, excluant le temps de pause des animations. Pour un évènement `animationstart`, `elapsedTime` est de `0.0` jusqu'à ce qu'il y ait une valeur négative pour une valeur [`animation-delay`](/fr/docs/Web/CSS/animation-delay), dans le cas où l'évènement est déclenché par `elapsedTime` contenant `(-1 * délai)`. Sa valeur par défaut vaut `0.0`.
-- `pseudoElement` {{optional_inline}}
-  - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element itself, specify an empty string: `""`. It defaults to `""`.
+  - : Une chaîne représentant le nom du type de l'objet `AnimationEvent`, sensible à la casse. Les valeurs possibles sont `animationstart`, `animationend` ou `animationiteration`.
+- `options` {{optional_inline}}
+  - : Un objet qui, *en plus des propriétés définies par le constructeur [`Event()`](/fr/docs/Web/API/Event/Event)*, contient les propriétés suivantes&nbsp;:
+    - `animationName` {{optional_inline}}
+      - : Une chaîne contenant la valeur de la propriété CSS [`animation-name`](/fr/docs/Web/CSS/animation-name) associée à la transition. La valeur par défaut est `""`.
+    - `elapsedTime` {{optional_inline}}
+      - : Un nombre à virgule flottante, équivalent à la durée pendant laquelle l'animation s'est déroulée, en secondes, depuis le déclenchement de cet évènement (excluant les temps de pause de l'animation). `elapsedTime` vaudra `0.0` pour un évènement `animationstart`, à moins que [`animation-delay`](/fr/docs/Web/CSS/animation-delay) n'ait une valeur négative. Dans ce cas, l'évènement sera déclenché avec une valeur de `(-1 * délai)` pour `elapsedTime`. La valeur par défaut est `0.0`.
+    - `pseudoElement` {{optional_inline}}
+      - : Une chaîne commençant par `::`, qui contient le nom du [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) sur lequel l'animation s'exécute. Si l'animation est exécutée sur l'élément et non sur un pseudo-élément, la chaîne sera vide (`""`). La valeur par défaut est `""` (chaîne vide).
 
-### Return value
+## Spécifications
 
-A new {{domxref("AnimationEvent")}}, initialized per any provided options.
+{{Specifications}}
 
-## Specifications
+## Compatibilité des navigateurs
 
-| Specification                                                                                                | Status                                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent()') }} | {{ Spec2('CSS3 Animations')}} | Initial definition. |
+{{Compat}}
 
-## Browser compatibility
+## Voir aussi
 
-{{Compat("api.AnimationEvent.AnimationEvent")}}
-
-## See also
-
-- [Using CSS animations](/en-US/docs/CSS/Using_CSS_animations)
-- Animation-related CSS properties and at-rules: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}
-- The {{domxref("AnimationEvent")}} interface it belongs to.
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- Les propriétés CSS et règles @ relatives aux animations&nbsp;:
+  - [`animation`](/fr/docs/Web/CSS/animation)
+  - [`animation-delay`](/fr/docs/Web/CSS/animation-delay)
+  - [`animation-direction`](/fr/docs/Web/CSS/animation-direction)
+  - [`animation-duration`](/fr/docs/Web/CSS/animation-duration)
+  - [`animation-fill-mode`](/fr/docs/Web/CSS/animation-fill-mode)
+  - [`animation-iteration-count`](/fr/docs/Web/CSS/animation-iteration-count)
+  - [`animation-name`](/fr/docs/Web/CSS/animation-name)
+  - [`animation-play-state`](/fr/docs/Web/CSS/animation-play-state)
+  - [`animation-timing-function`](/fr/docs/Web/CSS/animation-timing-function)
+  - [`@keyframes`](/fr/docs/Web/CSS/@keyframes)
+- L'interface qui porte ce constructeur, [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent)

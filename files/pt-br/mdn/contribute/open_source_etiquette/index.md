@@ -65,7 +65,7 @@ Esteja ciente de que existem regras em qualquer OSP para proteger seus contribui
 
 Por exemplo, os repositórios do MDN são governados pelas amplas [Diretrizes de participação na comunidade Mozilla](https://www.mozilla.org/pt-BR/about/governance/policies/participation/). Geralmente, comportamento ligeiramente ofensivo nos repositórios do MDN (Tal qual constantemente estar fora do assunto, ser perturbador ou ser rude) geralmente será respondido com um aviso do repositório, seguido de um aviso final, e então um banimento temporário ou permanente. Problemas comportamentais mais sérios como discurso de ódio ou ameaças contra outro contribuidor não serão tolerados e, provavelmente, resultarão em um banimento instantâneo.
 
-Se você receber qualquer coisa que faça você se sentir desconfortável, você sempre deve reportar usando os mecanismos fornecidos no código de conduta. 
+Se você receber qualquer coisa que faça você se sentir desconfortável, você sempre deve reportar usando os mecanismos fornecidos no código de conduta.
 
 ## Escolha contribuições efetivas
 

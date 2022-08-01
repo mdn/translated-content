@@ -12,10 +12,12 @@ L'élément `<xsl:choose>` définit un choix parmi un certain nombre d'alternati
 
 ### Syntaxe
 
-    <xsl:choose>
-    	<xsl:when>
-    	<xsl:otherwise> [optionnel]
-    </<xsl:choose>
+```xml
+<xsl:choose>
+  <xsl:when>
+  <xsl:otherwise> [optionnel]
+</xsl:choose>
+```
 
 ### Attributs obligatoires
 

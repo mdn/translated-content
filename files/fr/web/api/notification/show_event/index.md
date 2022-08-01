@@ -18,8 +18,10 @@ La propriété **`onshow`** de l'interface {{domxref ("Notification")}} définit
 
 ## Syntaxe
 
-    Notification.onshow = function() { ... }
-    Notification.onshow = () => { ... }
+```js
+Notification.onshow = function() { ... }
+Notification.onshow = () => { ... }
+```
 
 ## Compatibilité des navigateurs
 

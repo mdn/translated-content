@@ -63,7 +63,6 @@ footer p:hover {
 
 この 2 つの違いは、 `:is()` がセレクター全体の詳細度にカウントされる（最も詳細な引数の詳細度を取る）のに対し、 [`:where()`](/ja/docs/Web/CSS/:where) は詳細度の値が 0 であることです。これは、 [`:where()` 参照ページの例](/ja/docs/Web/CSS/:where#examples)で実証されています。
 
-
 ### セレクターの解釈の許容
 
 仕様では `:is()` と `:where()` が[省略可能なセレクターリスト](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)を受け入れることを定義しています。
@@ -245,6 +244,7 @@ h1 {
 ```
 
 ### :is() は擬似要素を選択しない
+
 The `:is()` pseudo-class does not match pseudo-elements. So rather than this:
 
 ```css example-bad

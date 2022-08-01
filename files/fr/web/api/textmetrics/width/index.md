@@ -15,7 +15,9 @@ La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la 
 
 ## Syntaxe
 
-    readonly metrics.width;
+```js
+readonly metrics.width;
+```
 
 ## Exemples
 

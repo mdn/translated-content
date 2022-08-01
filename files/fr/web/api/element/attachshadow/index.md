@@ -9,7 +9,9 @@ La méthode **`Element.attachShadow()`** attache un arbre Shadow DOM à un élé
 
 ## Syntaxe
 
-    var shadowroot = element.attachShadow(shadowRootInit);
+```js
+var shadowroot = element.attachShadow(shadowRootInit);
+```
 
 ### Paramètres
 

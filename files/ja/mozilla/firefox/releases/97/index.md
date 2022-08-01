@@ -50,14 +50,14 @@ tags:
 
 ### API
 
-- [`DedicatedWorkerGlobalScope`](/ja/docs/Web/API/DedicatedWorkerGlobalScope) で `AnimationFrameProvider` が使用可能になりました。これは、専用ワーカーで [`requestAnimationFrame`](/ja/docs/Web/API/window/requestAnimationFrame) および [`cancelAnimationFrame`](/ja/docs/Web/API/Window/cancelAnimationFrame) メソッドが使用できることを意味します 
+- [`DedicatedWorkerGlobalScope`](/ja/docs/Web/API/DedicatedWorkerGlobalScope) で `AnimationFrameProvider` が使用可能になりました。これは、専用ワーカーで [`requestAnimationFrame`](/ja/docs/Web/API/window/requestAnimationFrame) および [`cancelAnimationFrame`](/ja/docs/Web/API/Window/cancelAnimationFrame) メソッドが使用できることを意味します
   (詳しくは {{bug(1388931)}} をご覧ください)。
 
 #### DOM
 
 - 中断シグナルの理由を、{{domxref("AbortController.abort()")}} (または {{domxref("AbortSignal.abort()")}}) を使用して設定できるようになりました。また、{{domxref("AbortSignal.reason")}} プロパティで使用できるようになりました。
   この理由はデフォルトで "AbortError" {{domxref("DOMException")}} になります。
-  この理由は必要に応にて、promise の拒否を通してスローまたは処理することができます 
+  この理由は必要に応にて、promise の拒否を通してスローまたは処理することができます
   ({{bug(1737771)}})。
 - シグナルが中断したかを確認して、そうである場合に {{domxref("AbortSignal.reason()")}} をスローする便利なメソッドである {{domxref("AbortSignal.throwIfAborted()")}} が使用可能になりました。
   これはシグナルを中断可能なメソッドへ単純に渡すことができないコードで、開発者が中断シグナルを処理することを容易にします ({{bug(1745372)}})。

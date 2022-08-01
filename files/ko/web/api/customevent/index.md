@@ -13,6 +13,8 @@ translation_of: Web/API/CustomEvent
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## 생성자
 
 - {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}

@@ -16,9 +16,11 @@ L'instruction **`do...while`** crée une boucle qui exécute une instruction jus
 
 ## Syntaxe
 
-    do
-       instruction
-    while (condition);
+```js
+do
+  instruction
+while (condition);
+```
 
 - `instruction`
   - : Une instruction exécutée au moins une fois et ré-exécutée chaque fois que la condition de test est évaluée à `true`. On peut exécuter plusieurs instructions au sein d'une boucle grâce à l'instruction {{jsxref("Instructions/block", "block")}} (`{ ... }`) qui permet de grouper différentes instructions en une seule.

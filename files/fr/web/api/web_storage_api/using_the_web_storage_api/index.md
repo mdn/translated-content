@@ -72,10 +72,10 @@ Et voici comment l'utiliser :
 
 ```js
 if (storageAvailable('localStorage')) {
-	// Nous pouvons utiliser localStorage
+  // Nous pouvons utiliser localStorage
 }
 else {
-	// Malheureusement, localStorage n'est pas disponible
+  // Malheureusement, localStorage n'est pas disponible
 }
 ```
 

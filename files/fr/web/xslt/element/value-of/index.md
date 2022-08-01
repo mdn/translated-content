@@ -12,7 +12,9 @@ L'élément `<xsl:value-of>` évalue une expression XPath, la convertit en chaî
 
 ### Syntaxe
 
-    <xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
+```xml
+<xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
+```
 
 ### Attribut obligatoire
 

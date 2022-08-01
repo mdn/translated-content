@@ -21,7 +21,9 @@ La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` 
 
 ## Syntaxe
 
-    fun.apply(thisArg, [argsArray])
+```js
+fun.apply(thisArg, [argsArray])
+```
 
 ### Paramètres
 

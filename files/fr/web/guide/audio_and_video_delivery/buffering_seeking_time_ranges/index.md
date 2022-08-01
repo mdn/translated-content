@@ -44,10 +44,12 @@ Un objet {{ domxref("TimeRanges") }} contient les propriétés/méthodes suivant
 
 Sans interraction utilisateur il y a généralement une seule plage de temps, mais si vous sautez dans le média alors plus d'une plage de temps peut apparaître, comme illustré dans la visualisation ci-dessous. Elle représente deux plages de temps en mémoire tampon — une qui s'étend de 0 à 5 secondes et la seconde qui s'étend de 15 à 19 secondes.
 
-    ------------------------------------------------------
-    |=============|                    |===========|     |
-    ------------------------------------------------------
-    0             5                    15          19    21
+```
+------------------------------------------------------
+|=============|                    |===========|     |
+------------------------------------------------------
+0             5                    15          19    21
+```
 
 Pour cette instance audio, l'objet {{ domxref("TimeRanges") }} associé aurait les propriétés suivantes:
 

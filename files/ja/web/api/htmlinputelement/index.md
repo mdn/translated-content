@@ -248,7 +248,7 @@ translation_of: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.maxLength", "maxLength")}}</td>
       <td>
-        <em><code>long</code>:</em> その要素の {{ htmlattrxref("maxlength", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <u><strong>最大文字数</strong></u>が含まれます。 (これを負の数に設定した場合、例外が発生します。)
+        <em><code>long</code>:</em> その要素の {{ htmlattrxref("maxlength", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <strong>最大文字数</strong>が含まれます。 (これを負の数に設定した場合、例外が発生します。)
       </td>
     </tr>
     <tr>
@@ -260,13 +260,13 @@ translation_of: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.minLength", "minLength")}}</td>
       <td>
-        <em><code>long</code>:</em> その要素の {{ htmlattrxref("minlength", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <u><strong>最小文字数</strong></u>が含まれます。 (これを負の数に設定した場合、例外が発生します。)
+        <em><code>long</code>:</em> その要素の {{ htmlattrxref("minlength", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <strong>最小文字数</strong>が含まれます。 (これを負の数に設定した場合、例外が発生します。)
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.pattern", "pattern")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("pattern", "input") }} 属性を<strong>返却または設定</strong>します。ここにはコントロールの値をチェックするための<u><strong>正規表現</strong></u>を含みます。 {{htmlattrxref("title","input")}} 属性を使用してユーザーにパターンを説明してください。この属性は、 {{htmlattrxref("type","input")}} 属性の値が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code> の場合に適用され、それ以外の場合は無視されます。
+        <em>文字列:</em> その要素の {{ htmlattrxref("pattern", "input") }} 属性を<strong>返却または設定</strong>します。ここにはコントロールの値をチェックするための<strong>正規表現</strong>を含みます。 {{htmlattrxref("title","input")}} 属性を使用してユーザーにパターンを説明してください。この属性は、 {{htmlattrxref("type","input")}} 属性の値が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code> の場合に適用され、それ以外の場合は無視されます。
       </td>
     </tr>
     <tr>
@@ -305,7 +305,7 @@ translation_of: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.size", "size")}}</td>
       <td>
-        <em><code>unsigned long</code>:</em> その要素の {{ htmlattrxref("size", "input") }} 属性を<strong>返却または設定</strong>します。これは<u><strong>コントロールの外見の大きさ</strong></u>が入ります。この値は {{htmlattrxref("type","input")}} の値が <code>text</code> または <code>password</code> の場合は整数で文字数であり、それ以外の場合はピクセル単位です。 {{htmlattrxref("type","input")}} が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code>、<code>password</code> のいずれかに設定されている場合のみ適用され、それ以外の場合は無視されます。
+        <em><code>unsigned long</code>:</em> その要素の {{ htmlattrxref("size", "input") }} 属性を<strong>返却または設定</strong>します。これは<strong>コントロールの外見の大きさ</strong>が入ります。この値は {{htmlattrxref("type","input")}} の値が <code>text</code> または <code>password</code> の場合は整数で文字数であり、それ以外の場合はピクセル単位です。 {{htmlattrxref("type","input")}} が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code>、<code>password</code> のいずれかに設定されている場合のみ適用され、それ以外の場合は無視されます。
       </td>
     </tr>
   </tbody>

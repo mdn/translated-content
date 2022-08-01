@@ -144,11 +144,11 @@ const confirmBtn = favDialog.querySelector('#confirmBtn');
 // If a browser doesn't support the dialog, then hide the
 // dialog contents by default.
 if ( typeof favDialog.showModal !== 'function' ) {
-	favDialog.hidden = true;
-	/* a fallback script to allow this dialog/form to function
-	   for legacy browsers that do not support <dialog>
-				could be provided here.
-	*/
+  favDialog.hidden = true;
+  /* a fallback script to allow this dialog/form to function
+    for legacy browsers that do not support <dialog>
+    could be provided here.
+  */
 }
 // "Update details" button opens the <dialog> modally
 updateButton.addEventListener('click', function onOpen() {

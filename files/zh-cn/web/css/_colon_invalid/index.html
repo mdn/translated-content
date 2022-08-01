@@ -3,11 +3,11 @@ title: ':invalid'
 slug: 'Web/CSS/:invalid'
 translation_of: 'Web/CSS/:invalid'
 ---
-<p> </p>
+<p> </p>
 
 <p>{{CSSRef}}</p>
 
-<p><strong><code>:invalid</code></strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">伪类</a> 表示任意内容未通过验证的 {{HTMLElement("input")}} 或其他 {{HTMLElement("form")}} 元素 .</p>
+<p><strong><code>:invalid</code></strong> <a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类</a> 表示任意内容未通过验证的 {{HTMLElement("input")}} 或其他 {{HTMLElement("form")}} 元素 .</p>
 
 <pre><code>/* 可选定任意无效的&lt;input&gt; */
 input:invalid {
@@ -71,13 +71,13 @@ input:required:invalid {
 
 <h3 id="单选钮（Radio_buttons）">单选钮（Radio buttons）</h3>
 
-<p>若一组单选钮被设定为必须选定一个，在该组中没有按钮被选中的情况，:invalid伪类被应用到该组中的所有按钮。（单选钮组按照name属性共享相同值。）</p>
+<p>若一组单选钮被设定为必须选定一个，在该组中没有按钮被选中的情况，:invalid 伪类被应用到该组中的所有按钮。（单选钮组按照 name 属性共享相同值。）</p>
 
 <h3 id="Gecko_默认">Gecko 默认</h3>
 
-<p>默认情况下，Gecko不应用:invalid伪类设置的样式。但是，Gecko可以使用{{cssxref(":-moz-ui-invalid")}}伪类的样式（使用{{Cssxref("box-shadow")}} 属性设置红色发光边框）来达到类似的效果，它可以被应用在:invalid伪类的子集中。</p>
+<p>默认情况下，Gecko 不应用 :invalid 伪类设置的样式。但是，Gecko 可以使用 {{cssxref(":-moz-ui-invalid")}} 伪类的样式（使用 {{Cssxref("box-shadow")}} 属性设置红色发光边框）来达到类似的效果，它可以被应用在:invalid 伪类的子集中。</p>
 
-<p>你可以使用以下CSS禁用红色发光边框,或完全重写它以改变无效输入域的外观：</p>
+<p>你可以使用以下 CSS 禁用红色发光边框，或完全重写它以改变无效输入域的外观：</p>
 
 <pre><code>:invalid {
   box-shadow: none;
@@ -93,43 +93,16 @@ input:required:invalid {
 
 <h2 id="规范">规范</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Defines the semantics of HTML and constraint validation.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#validity-pseudos', ':invalid')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
-<p>{{Compat("css.selectors.invalid")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
  <li>Other validation-related pseudo-classes: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}</li>
  <li>Related Mozilla pseudo-classes: {{cssxref(":-moz-ui-invalid")}}, {{cssxref(":-moz-submit-invalid")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/zh-CN/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
 </ul>

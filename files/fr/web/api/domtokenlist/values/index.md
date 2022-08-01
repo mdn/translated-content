@@ -9,7 +9,9 @@ La méthode **`values()`** (_valeurs_) de l'interface {{domxref("DOMTokenList")}
 
 ## Syntaxe
 
-    tokenList.values();
+```js
+tokenList.values();
+```
 
 ### Paramètres
 

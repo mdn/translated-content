@@ -13,7 +13,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
  <tbody>
   <tr>
    <th scope="row">Prerrequisitos:</th>
-   <td>Conceptos básicos de HTML (véase <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introducción al HTML</a>) y una idea de cómo funciona el CSS (véase <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introducción al CSS</a>).</td>
+   <td>Conceptos básicos de HTML (véase <a href="/es/docs/Learn/HTML/Introduction_to_HTML">Introducción al HTML</a>) y una idea de cómo funciona el CSS (véase <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>).</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -28,7 +28,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
 
 <p>Una cuadrícula en general tiene <strong>columnas</strong>, <strong>filas</strong> y luego espacios entre cada fila y cada columna, conocidos comúnmente como <strong>canales</strong>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13899/grid.png" style="display: block; height: 553px; margin: 0px auto; width: 1196px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/13899/grid.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Crear_tu_cuadrícula_con_CSS">Crear tu cuadrícula con CSS</h2>
 
@@ -231,7 +231,7 @@ translation_of: Learn/CSS/CSS_layout/Grids
 
 <p>Hasta ahora solo hemos especificado trazas de columna y, sin embargo, también creamos filas para contener nuestro contenido. Este es un ejemplo de una cuadrícula explícita con respecto a una implícita. La cuadrícula explícita es la que creas usando <code>grid-template-columns</code> o <code>grid-template-rows</code>. La cuadrícula implícita se crea cuando el contenido se posiciona fuera de esa cuadrícula, como en nuestras filas. Las cuadrículas explícitas e implícitas son análogas a los ejes principales y transversales del método Flexbox.</p>
 
-<p>Por defecto, las trazas que se crean en la cuadrícula implícita tienen un tamaño <code>auto</code>, lo que en general significa que son lo bastante grandes para ajustarse a su contenido. Si deseas asignar un tamaño a las trajas de las cuadrícula implícitas, puedes usar las propiedades {{cssxref ("grid-auto-rows")}} y {{cssxref ("grid-auto-columns")}}. Si añades <code>grid-auto-rows</code> con un valor de <code>100px</code> a tu CSS, observa que esas filas que has creado ahora tienen 100 píxeles de alto.</p>
+<p>Por defecto, las trazas que se crean en la cuadrícula implícita tienen un tamaño <code>auto</code>, lo que en general significa que son lo bastante grandes para ajustarse a su contenido. Si deseas asignar un tamaño a las trazas de las cuadrícula implícitas, puedes usar las propiedades {{cssxref ("grid-auto-rows")}} y {{cssxref ("grid-auto-columns")}}. Si añades <code>grid-auto-rows</code> con un valor de <code>100px</code> a tu CSS, observa que esas filas que has creado ahora tienen 100 píxeles de alto.</p>
 
 <div id="Grid_4">
 <div class="hidden">
@@ -558,7 +558,7 @@ footer {
  <li>Hay que tener todas las celdas de la cuadrícula llenas.</li>
  <li>Para abarcar el ancho de dos celdas, repite el nombre.</li>
  <li>Para dejar una celda vacía, utiliza un punto: <code>.</code>.</li>
- <li>Las áreas han de ser rectangulares; por ejemplo, no puedes haber un área en forma de L.</li>
+ <li>Las áreas han de ser rectangulares; por ejemplo, no puedes tener un área en forma de L.</li>
  <li>Las áreas no pueden repetirse en lugares diferentes.</li>
 </ul>
 
@@ -657,9 +657,9 @@ aside {
 
 <p>{{ EmbedLiveSample('Grid_8', '100%', 400) }}</p>
 
-<p>Si usas el <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">inspector de cuadrícula de Firefox</a> para ver una superposición de las líneas de cuadrícula sobre tu diseño, puedes observar cómo funciona nuestra cuadrícula de 12 columnas.</p>
+<p>Si usas el <a href="https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html">inspector de cuadrícula de Firefox</a> para ver una superposición de las líneas de cuadrícula sobre tu diseño, puedes observar cómo funciona nuestra cuadrícula de 12 columnas.</p>
 
-<p><img alt="Una superposición de la cuadrícula de 12 columnas de nuestro diseño de página." src="https://mdn.mozillademos.org/files/16045/learn-grids-inspector.png" style="height: 1026px; width: 2028px;"></p>
+<p><img alt="Una superposición de la cuadrícula de 12 columnas de nuestro diseño de página." src="https://mdn.mozillademos.org/files/16045/learn-grids-inspector.png"></p>
 
 <h2 id="¡Pon_a_prueba_tus_conocimientos!">¡Pon a prueba tus conocimientos!</h2>
 
@@ -672,8 +672,8 @@ aside {
 <h2 id="Ver_también">Ver también</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout#Guides">Guías de cuadrícula CSS</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Inspector de cuadrícula CSS: Examinar diseños de cuadrícula</a></li>
+ <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout#guides">Guías de cuadrícula CSS</a></li>
+ <li><a href="https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html">Inspector de cuadrícula CSS: Examinar diseños de cuadrícula</a></li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}</p>

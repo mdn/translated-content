@@ -76,7 +76,7 @@ pessoa.saudacao()</pre>
   nomeMembro3: valorMembro3
 };</pre>
 
-<p>O valor de um membro do objeto pode ser praticamente qualquer coisa. Em nosso objeto pessoa, temos uma string, um número, dois arrays e duas functions. Os primeiros quatro são data items (dados) e são referenciados como <strong>propriedades</strong> do objeto. Enquanto os dois últimos ítens são funções que permitem que o objeto faça algo com esses dados. São chamados de <strong>métodos </strong>do objeto.</p>
+<p>O valor de um membro do objeto pode ser praticamente qualquer coisa. Em nosso objeto pessoa, temos uma string, um número, dois arrays e duas functions. Os primeiros quatro são data items (dados) e são referenciados como <strong>propriedades</strong> do objeto. Enquanto os dois últimos itens são funções que permitem que o objeto faça algo com esses dados. São chamados de <strong>métodos </strong>do objeto.</p>
 
 <p>Um objeto como esse é chamado de  <strong>objeto literal</strong> — ao pé da letra, escrevemos o conteúdo do objeto conforme o criamos. Isto está em contraste com objetos instanciados de classes, que veremos mais adiante.</p>
 
@@ -185,7 +185,7 @@ pessoa[myDataName] = myDataValue;</pre>
   alert("Oi! Meu nome é " + this.nome.primeiro + ".");
 }</pre>
 
-<p>Você deve estar se perguntando o que é o "this". A palavra-chave <code>this</code> se refere ao objeto atual em que o código está sendo escrito — nesse caso o <code>this</code> se refere a <code>pessoa</code>. Então por que simplesmente não escrever <code>pessoa</code>? Como verá no artigo <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Orientaçã a objeto em JavaScript para iniciantes</a>, quando começamos a criar funções construtoras, etc, o <code>this</code> é muito útil — sempre lhe assegurará que os valores corretos estão sendo usados quando o contexto de um mebro muda (exemplo: duas instâncias diferentes do objeto <code>pessoa</code> podem ter diferentes nomes, mas vão querer usar seu próprio nome ao usar a saudação).</p>
+<p>Você deve estar se perguntando o que é o "this". A palavra-chave <code>this</code> se refere ao objeto atual em que o código está sendo escrito — nesse caso o <code>this</code> se refere a <code>pessoa</code>. Então por que simplesmente não escrever <code>pessoa</code>? Como verá no artigo <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Orientaçã a objeto em JavaScript para iniciantes</a>, quando começamos a criar funções construtoras, etc, o <code>this</code> é muito útil — sempre lhe assegurará que os valores corretos estão sendo usados quando o contexto de um membro muda (exemplo: duas instâncias diferentes do objeto <code>pessoa</code> podem ter diferentes nomes, mas vão querer usar seu próprio nome ao usar a saudação).</p>
 
 <p>Vamos ilustrar o que queremos dizer com um par de objetos pessoa:</p>
 

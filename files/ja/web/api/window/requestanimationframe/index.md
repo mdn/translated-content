@@ -46,7 +46,7 @@ window.requestAnimationFrame(callback);
 
 ## 返値
 
-`long` 整数値で、リクエスト ID、コールバックリスト内のエントリーを一意に識別するための、` long` 整数値の `requestID` を返します。この値は非ゼロ値ですが、値そのものを推定することはできないでしょう。この値を {{domxref("window.cancelAnimationFrame()")}} に渡すことで、コールバック関数の更新を中止できます。
+`long` 整数値で、リクエスト ID、コールバックリスト内のエントリーを一意に識別するための、`long` 整数値の `requestID` を返します。この値は非ゼロ値ですが、値そのものを推定することはできないでしょう。この値を {{domxref("window.cancelAnimationFrame()")}} に渡すことで、コールバック関数の更新を中止できます。
 
 ## 例
 

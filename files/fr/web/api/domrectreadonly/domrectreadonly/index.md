@@ -15,7 +15,9 @@ Le constructeur **`DOMRectReadOnly()`** crée un nouvel objet {{domxref("DOMRect
 
 ## Syntaxe
 
-    var myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height);
+```js
+var myDOMRectReadOnly = new DOMRectReadOnly(x, y, width, height);
+```
 
 ### Paramètres
 

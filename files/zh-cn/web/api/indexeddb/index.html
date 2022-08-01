@@ -1,5 +1,5 @@
 ---
-title: WindowOrWorkerGlobalScope.indexedDB
+title: indexedDB
 slug: Web/API/indexedDB
 tags:
   - API
@@ -7,15 +7,14 @@ tags:
   - IndexedDB
   - Reference
   - Storage
-  - WindowOrWorkerGlobalScope
   - 参考
   - 属性
-translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
+translation_of: Web/API/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 <p>{{ APIRef() }}</p>
 
-<p><strong><code>indexedDB</code></strong> 是 {{domxref("WindowOrWorkerGlobalScope")}}的一个只读属性，它集成了为应用程序提供异步访问索引数据库的功能的机制。.</p>
+<p><strong><code>indexedDB</code></strong> 是 <code>WindowOrWorkerGlobalScope</code> 的一个只读属性，它集成了为应用程序提供异步访问索引数据库的功能的机制。.</p>
 
 <h2 id="语法">语法</h2>
 
@@ -25,9 +24,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 <h2 id="值">值</h2>
 </div>
 
-<p>一个 {{domxref("IDBFactory")}} 对象.</p>
+<p>一个 {{domxref("IDBFactory")}} 对象。</p>
 
-<p id="示例">示例</p>
+<p>示例</p>
 
 <pre class="brush: js;highlight:[3]">var db;
 function openDB() {
@@ -39,31 +38,13 @@ function openDB() {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB 2')}}</td>
-   <td>Defined in a <code>WindowOrWorkerGlobalScope</code> partial in the newest spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}</td>
-   <td>{{Spec2('IndexedDB')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
 {{Compat("api.indexedDB")}}
 
-<h2 id="相关链接">相关链接</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
@@ -72,5 +53,5 @@ function openDB() {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

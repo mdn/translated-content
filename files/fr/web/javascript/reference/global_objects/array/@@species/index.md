@@ -16,7 +16,9 @@ La propriété d'accesseur **`Array[@@species]`** renvoie le constructeur `Array
 
 ## Syntaxe
 
-    Array[Symbol.species]
+```js
+Array[Symbol.species]
+```
 
 ### Valeur de retour
 

@@ -22,7 +22,9 @@ La méthode **`keys()`** est un alias pour cette méthode (afin de conserver une
 
 ## Syntaxe
 
-    monSet.values();
+```js
+monSet.values();
+```
 
 ### Valeur de retour
 

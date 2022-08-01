@@ -20,7 +20,9 @@ La méthode **`FormData.values()`** renvoie une {{jsxref("Les_protocoles_iterati
 
 ## Syntaxe
 
-    formData.values();
+```js
+formData.values();
+```
 
 ### Valeur de retour
 
@@ -42,8 +44,10 @@ for (var value of formData.values()) {
 
 Le résultat est :
 
-    valeur1
-    valeur2
+```
+valeur1
+valeur2
+```
 
 ## Spécifications
 

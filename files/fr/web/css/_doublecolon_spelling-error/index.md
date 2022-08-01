@@ -33,7 +33,9 @@ Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une
 
 ## Syntaxe
 
-    ::spelling-error
+```css
+::spelling-error
+```
 
 ## Exemples
 

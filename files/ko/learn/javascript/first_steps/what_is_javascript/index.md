@@ -21,7 +21,7 @@ MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다! 이 글은 Jav
   <tbody>
     <tr>
       <th scope="row">필요한 사전 지식:</th>
-      <td>기본적인 컴퓨터 능력, HTML과 CSS 기초.</td>
+      <td>기본적인 컴퓨터 이해 능력, HTML과 CSS 기초.</td>
     </tr>
     <tr>
       <th scope="row">목표:</th>
@@ -435,7 +435,7 @@ for (const button of buttons) {
 ## 이 과정은
 
 - [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript 첫 걸음](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
 - [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
 - [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
 - [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)

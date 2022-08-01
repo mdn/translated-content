@@ -15,7 +15,9 @@ Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est lev√©e si l‚
 
 ## Syntaxe
 
-    noeudRemplacant = noeudTexte.splitText(indice)
+```js
+noeudRemplacant = noeudTexte.splitText(indice)
+```
 
 ## Exemple
 

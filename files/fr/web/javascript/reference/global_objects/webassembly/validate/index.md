@@ -16,7 +16,9 @@ La fonction **`WebAssembly.validate()`** permet de valider un [tableau typé](/f
 
 ## Syntaxe
 
-    WebAssembly.validate(bufferSource);
+```js
+WebAssembly.validate(bufferSource);
+```
 
 ### Paramètres
 

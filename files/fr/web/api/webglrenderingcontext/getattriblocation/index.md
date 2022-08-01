@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.getAttribLocation()`** de l'[API WebGL](/fr
 
 ## Syntaxe
 
-    GLint gl.getAttribLocation(programme, nom);
+```js
+GLint gl.getAttribLocation(programme, nom);
+```
 
 ### Paramètres
 

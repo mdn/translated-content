@@ -37,7 +37,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
     - "policy_not_diverse_scts"
 
 - `cipherSuite` {{optional_inline}}
-  - : `String`. Suite de chiffrement utilisée pour la connexion, formatée selon la [specification TLS ](https://tools.ietf.org/html/rfc5246#appendix-A.5): par exemple, "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256".
+  - : `String`. Suite de chiffrement utilisée pour la connexion, formatée selon la [specification TLS](https://tools.ietf.org/html/rfc5246#appendix-A.5) : par exemple, "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256".
 - `errorMessage` {{optional_inline}}
 
   - : `String`. S'il y a eu un problème avec le protocole TLS  (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then `status` will be "broken" and the `errorMessage` property will contain a string describing the error, taken from Firefox's internal list of error codes.

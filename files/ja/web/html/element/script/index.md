@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/script
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#metadata_content">メタデータコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/script
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#metadata_content">メタデータコンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>を受け入れるすべての要素、または<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ translation_of: Web/HTML/Element/script
 
     これは論理属性です。論理属性が要素にあれば真の値を表し、属性がなければ偽の値を表します。  
 
-    ブラウザーの対応状況については{{anch("ブラウザーの互換性")}}をご覧ください。 [asm.js 向け非同期スクリプト](/ja/docs/Games/Techniques/Async_scripts)もご覧ください。
+    ブラウザーの対応状況については[ブラウザーの互換性](#ブラウザーの互換性)をご覧ください。 [asm.js 向け非同期スクリプト](/ja/docs/Games/Techniques/Async_scripts)もご覧ください。
 
 - {{htmlattrdef("crossorigin")}}
   - : 通常の `script` 要素は標準の {{Glossary("CORS")}} チェックに通らないスクリプトに対して、 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} に最小限の情報しか渡しません。別のドメインを使用するサイトに静的メディアへのエラーログ出力ができるようにするためには、この属性を使用してください。有効な値について、詳しくは [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)をご覧ください。
