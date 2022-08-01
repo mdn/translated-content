@@ -1,274 +1,282 @@
 ---
-title: Three.jsでデモを作る
+title: Three.js を使った基本的なデモの作成
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 tags:
   - 3D
+  - Animation
+  - Beginner
   - Canvas
+  - Games
+  - Tutorial
   - WebGL
+  - camera
+  - lighting
+  - rendering
   - three.js
-  - アニメーション
-  - カメラ
-  - ゲーム
-  - チュートリアル
-  - ライト
-  - レンダリング
-  - 初心者
 translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p class="summary">典型的な3Dゲームのシーン――どんなにシンプルなものでも――には、標準的な項目、すなわち座標に配置された物体、それを見るカメラ、より良い見た目を作る照明と質感の設定、生き生きとしたアニメーションなどが含まれているでしょう。<strong>Three.js</strong> は他の3Dライブラリと同じように、一般的な機能を迅速に実装するための組み込み関数を提供します。この記事では、開発環境の設定や必要なHTML構造、3つの基本的なオブジェクトの構築や初歩的なデモの制作方法など、Three を使用する上での基本的なことがらを解説します。</p>
+ゲームの一般的な 3D シーンは、たとえ最もシンプルなものであっても、座標系に配置された図形、それらを実際に見るためのカメラ、見栄えを良くするためのライトや素材、生き生きと見せるためのアニメーションなど、標準的なアイテムが含まれています。 **Three.js** は、他の 3D ライブラリーと同様に、一般的な 3D 機能をより迅速に実装するためのヘルパー関数が組み込まれています。この記事では、開発環境の設定、必要な HTML の構成、 Three の基本オブジェクト、基本的なデモの作成方法など、 Three を使用するための本当の基本を紹介します。
 
-<div class="note">
-<p><strong>Note</strong>: 私たちは Three を有名な <a href="/ja/docs/Web/API/WebGL_API">WebGL</a>ライブラリの1つであり、簡単に使い始められるという理由で選びました。Three が他のWebGLライブラリと比べて優秀だというつもりはありません。<a href="http://www.ambiera.com/copperlicht/index.html">CopperLicht</a>, <a href="http://www.glge.org/">GLGE</a>, <a href="http://osgjs.org/">OSG.js</a>, <a href="https://code.google.com/p/o3d/">O3D</a>,その他のあなたが使いやすい物を試すと良いでしょう。</p>
-</div>
+> **Note:** 私たちは Three を有名な [WebGL](/ja/docs/Web/API/WebGL_API)ライブラリーの 1 つであり、簡単に使い始められるという理由で選びました。Three が他の WebGL ライブラリーと比べて優秀だというつもりはありません。 [CopperLicht](https://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), [PlayCanvas](https://playcanvas.com/) など、気軽に試してみてください。
 
-<h2 id="Environment_setup" name="Environment_setup">環境構築</h2>
+## 環境構築
 
-<p>あなたがThree.jsで開発を始める上で、必要なものはあまりありません。少なくとも、</p>
+Three.js で開発を始める上で、必要なものはあまりありません。少なくとも、
 
-<ul>
- <li>最新版の Firefox や Chrome など、良く WebGL をサポートしているモダンブラウザを使用してください。</li>
- <li>デモを保存するディレクトリを用意してください。</li>
- <li><a href="http://threejs.org/build/three.min.js">最新で最小版のThree.js</a> をそのディレクトリに保存してください。</li>
- <li>ブラウザの別のタブで <a href="http://threejs.org/docs/">Three.js documentation</a> を開いてください — 参照するのに便利です。</li>
-</ul>
+- [WebGL](/ja/docs/Web/API/WebGL_API) によく対応した最新のブラウザー、例えば最新の Firefox や Chrome を使用していることを確認することです。
+- デモを保存するディレクトリーを用意してください。
+- [最新で最小版の Three.js](https://threejs.org/build/three.min.js) をそのディレクトリーに保存してください。
+- ブラウザーの別のタブで [Three.js のドキュメント](https://threejs.org/docs/) を開いてください — 参照するのに便利です。
 
-<h2 id="HTML_structure" name="HTML_structure">HTMLの構造</h2>
+## HTML の構造
 
-<p>これが今回使用するHTMLのコードです。</p>
+これが今回使用する HTML のコードです。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;meta charset="utf-8"&gt;
-	&lt;title&gt;MDN Games: Three.js demo&lt;/title&gt;
-	&lt;style&gt;
-		body { margin: 0; padding: 0; }
-		canvas { width: 100%; height: 100%; }
-	&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;script src="three.min.js"&gt;&lt;/script&gt;
-&lt;script&gt;
-	var WIDTH = window.innerWidth;
-	var HEIGHT = window.innerHeight;
-	/* 私たちの JavaScript コードはここに来ます */
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MDN Games: Three.js demo</title>
+  <style>
+    body { margin: 0; padding: 0; }
+    canvas { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+<script src="three.min.js"></script>
+<script>
+  const WIDTH = window.innerWidth;
+  const HEIGHT = window.innerHeight;
+	/* すべての JavaScript コードをここに置きます */
+</script>
+</body>
+</html>
+```
 
-<p>このコード内には<code>title</code>のような基本的な情報と<code>canvas</code>要素の幅(<code>width)</code>と高さ(<code>height</code>)を定義する CSS があり、Three.js が全体を使えるようにするために<code>canvas</code>要素が表示領域全体を埋める必要があります。初めの<code>script</code>要素でThree.js ライブラリを埋め込み、2つ目の<code>script</code>要素にサンプルコードを記述していきます。すでに組み込み変数にウィンドウの幅、高さが代入されています。</p>
+これには、文書の {{htmlelement("title")}} のような基本情報と、Three.js がページに挿入する {{htmlelement("canvas")}} 要素の `width` と `height` を、ビューポート空間全体を埋めるために 100% に設定するためのいくつかの CSS が含まれています。最初の {{htmlelement("script")}} 要素は、 Three.js ライブラリをページ内に入れ、 2 つ目の要素内に例のコードを書きます。すでに 2 つのヘルパー変数が含まれており、ウィンドウの `width` と `height` が格納されています。
 
-<p>先に進む前に、このコードを新しいテキストファイルにコピーしデモ用ディレクトリに<code>index.html</code>として保存しましょう。</p>
+先に進む前に、このコードを新しいテキストファイルにコピーしデモ用ディレクトリーに`index.html`として保存しましょう。
 
-<h2 id="Renderer" name="Renderer">レンダラ</h2>
+## レンダラー
 
-<p>レンダラは、ブラウザにおいてシーンを表示する役割を持ちます。デフォルトは WebGL ですが、他にもCanvas や SVG,CSS,DOM といったレンダラがあります。これらは、それぞれシーンがどのようにレンダリングされるかが全く異なり、そのため WebGL と CSS では実装方法が異なります。しかし、レンダリングには様々な方法があるにも関わらず、利用者は全く同じように感じます。この仕組みのおかげで、使いたい技術をブラウザがサポートしていない場合に、サポートされる別のレンダラを使うこともできます。</p>
+レンダラーとは、ブラウザ上でシーンを正しく表示するためのツールです。レンダラーにはいくつかの種類があります。既定では WebGL ですが、その他に Canvas、SVG、CSS、DOM を使用することができます。これらはすべてのレンダリング方法が異なるため、 WebGL の実装と CSS の実装は異なります。目標を達成する方法はさまざまですが、ユーザーにとっての体験は同じになります。このアプローチのおかげで、希望する技術がブラウザーで対応していない場合、代替を使用することができます。
 
-<pre class="brush: js">var renderer = new THREE.WebGLRenderer({antialias:true});
+```js
+const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xDDDDDD, 1);
 document.body.appendChild(renderer.domElement);
-</pre>
+```
 
-<p>新しく WebGL レンダラを作成し、前項で指定した画面いっぱいと同じサイズに設定し、DOM に要素を追加します。あなたは初めの行の <code>antialias</code> というパラメータに気づいたかもしれません。これにより、オブジェクトの境界がよりスムーズにレンダリングされます。また、<code>setClearColor()</code>関数を使って背景色をデフォルトの黒から明るい灰色に変更することができます。</p>
+新しい WebGL レンダラーを作成し、画面上の空き領域全体にフィットするようにサイズを設定し、DOM 構造をページに追加しているところです。最初の行にある `antialias` 引数にお気づきかもしれませんが、これは図形の縁をより滑らかにレンダリングするためのものです。 `setClearColor()` メソッドは、背景を既定値の黒ではなく、明るい灰色に設定しています。
 
-<p>このコードを、<code>index.html</code> の 2番目の {{htmlelement("script")}} 要素として、JavaScript コメント直下に追加しましょう。</p>
+このコードを 2 つ目の {{htmlelement("script")}} 要素に、 JavaScript のコメントのすぐ下に追加してください。
 
-<h2 id="Scene" name="Scene">シーン</h2>
+## シーン
 
-<p>シーンは全てが起こる場所です。新たにオブジェクトを作るときは、シーン内にそれを追加することで画面に表示されるようになります。Three.jsではシーンは <code>Scene</code> オブジェクトで表します。前項のコードの下にこれを追加し、シーンを作成しましょう。</p>
+シーンは全てが起こる場所です。新たにオブジェクトを作るときは、シーン内にそれを追加することで画面に表示されるようになります。 Three.js ではシーンは `Scene` オブジェクトで表します。前項のコードの下にこれを追加し、シーンを作成しましょう。
 
-<pre class="brush: js">var scene = new THREE.Scene();
-</pre>
+```js
+const scene = new THREE.Scene();
+```
 
-<p>追加されると、<code>.add()</code>関数を使いオブジェクトをそのシーンに追加できるようになります。</p>
+追加されると、 `.add()` 関数を使いオブジェクトをそのシーンに追加できるようになります。
 
-<h2 id="Camera" name="Camera">カメラ</h2>
+## カメラ
 
-<p>私たちは既にレンダリングされたシーンは持っていますが、作業の成果を見るにはカメラが必要になります――カメラのない撮影セットを想像すればいいでしょう――。次のコードでは、カメラを3次元座標の指定位置に配置し、オブジェクトの方に向かせることで、何でも見ることができるようになります。</p>
+レンダリングされたシーンはありますが、私たちの作品を見るためにカメラを追加する必要があります。カメラのない映画のセットを想像してみてください。以下の行で、3D 座標系にカメラを設置し、シーンの方向に向けることで、ようやく何かを見ることができるようになります。
 
-<pre class="brush: js">var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
+```js
+const camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
-</pre>
+```
 
-<p>前項のコードの下にこのコードを追加しましょう。</p>
+上記の行を、先に追加した行の下に追加してください。
 
-<p>カメラは他のタイプ(Cube,Orthographic)も利用できますが、最も簡単なのは Perspective です。これを初期化するには、視野角とアスペクト比を設定する必要があります。前者は見る世界の広さを決め、後者はレンダリングするときにオブジェクトが正しい縦横比で表示されるようにします。上のコードについての解説は以下の通りです。</p>
+他の種類のカメラ（Cube、Orthographic）もありますが、最もシンプルなのは Perspective（遠近法）です。このカメラを初期化するには、視野と縦横比を設定する必要があります。前者は見える範囲を設定するのに使用し、後者は画面上のオブジェクトがレンダリング時に正しい比率を持ち、引き伸ばされたように見えないようにするために重要です。上のコードで設定している値を説明しましょう。
 
-<ul>
- <li>視野角に70を指定しましたが、様々な値を試すのも良いでしょう。値が高いほど一度に表示される世界が広くなります。魚眼レンズの写真と普通のカメラの写真のような違いです。デフォルトでは50にセットされています。</li>
- <li>アスペクト比はウィンドウの今の縦横比に合わせ、動的に変化します。勿論比率を固定することもできます。例えば、ワイドスクリーンの16:9などです。デフォルト値は1(1:1)です。</li>
- <li>50にセットされた<code>z</code>座標は、カメラとシーンのz軸上の距離を指定します。ここにカメラを置いているので、シーンにあるオブジェクトを眺めることができます。50に指定すれば近すぎたり遠すぎたりせず、オブジェクトのサイズによりますが視野に映ることができるでしょう。<code>x</code>や<code>y</code>(もちろん<code>z</code>も)座標を指定しない場合、デフォルトで0がセットされます。</li>
-</ul>
+- 視野率に設定した値 70 は、値を大きくすればするほど、カメラが映し出すシーンの量が増えるというもので、実際に試してみることができます。通常のカメラビューと魚眼効果を想像してください。既定値は 50 です。
+- アスペクト比はウィンドウの現在の幅と高さに設定されるため、動的に調整されます。固定された比率を設定することもできます。例：16 ⁄ 9、これはワイドスクリーンテレビのアスペクト比です。既定値は 1 です。
+- `z` 位置は 50 単位で、カメラと `z` 軸上のシーンの中心との距離です。ここでは、カメラを後ろに移動して、シーン内のオブジェクトを見ることができるようにしています。 50 はちょうどいい感じです。近すぎず遠すぎず、またオブジェクトの大きさによって、与えられた視野の中でシーンに留まることができます。 `x` と `y` の値は指定しない場合、既定で 0 になります。
 
-<p>これらのパラメータを調整し、シーンがカメラにどのように映るかを確認する必要があるでしょう。</p>
+これらの値を試してみて、シーンで見えるものがどのように変わるかを見てみるとよいでしょう。
 
-<div class="note">
-<p><strong>Note</strong>: これらの座標（カメラの z 座標など）のパラメータに決まった単位は存在しないため、シーンに適している単位(ミリメートル、メートル、フィートやマイルでも)で構いません。あなたの決めるところです。</p>
-</div>
+> **Note:** これらの座標（カメラの z 位置など）の引数に決まった単位は存在しないため、シーンに適している単位 (ミリメートル、メートル、フィートやマイルでも) で構いません。あなたの決めるところです。
 
-<h2 id="Rendering_the_scene" name="Rendering_the_scene">シーンのレンダリング</h2>
+## シーンのレンダリング
 
-<p>全ての準備が終わりましたが、まだ私たちは何も目にしていません。レンダラを作ったなら、全てをレンダリングしましょう。<code>render()</code>は、そのレンダリングを<code>requestAnimationFrame()</code>の助けを借り行います。このコードは、全フレームで常にシーンがレンダリングされるようになります。</p>
+全ての準備が終わりましたが、まだ私たちは何も目にしていません。レンダラーを作ったなら、全てをレンダリングしましょう。 `render()` は、そのレンダリングを `requestAnimationFrame()` の助けを借り行います。このコードは、全フレームで常にシーンがレンダリングされるようになります。
 
-<pre class="brush: js">function render() {
-	requestAnimationFrame(render);
-	renderer.render(scene, camera);
+```js
+function render() {
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
 }
 render();
-</pre>
+```
 
-<p>こうすることで常にフレームからレンダリング処理が呼び出され、レンダラがカメラに映るシーンをレンダリングします。<code>render()</code>を宣言することでこのループが開始され、永遠に続きます。</p>
+新しいフレームごとに `render` 関数が呼び出され、`renderer` が `scene` と `camera` をレンダリングします。関数宣言の直後、ループを開始するために初めてこの関数を呼び出しています。
 
-<p>また、このコードを前項までのコードの下に追加しましょう。ファイルを上書きし、ブラウザで開きます。グレー一色の画面が表示されるでしょう。おめでとうございます！</p>
+もう一度、この新しいコードを、前に追加したコードの下に追加してください。ファイルを保存して、ブラウザーで開いてみてください。グレーのウィンドウが表示されるはずです。おめでとうございます。
 
-<h2 id="Geometry" name="Geometry">ジオメトリ</h2>
+## ジオメトリー
 
-<p>シーンが正しくレンダリングできることが確認できました。次は、3Dシェイプを追加してみましょう。開発を助けるために、Three.jsにはいくつかのプリミティブなシェイプが既に定義されています。このプリミティブを使うと、1行のコードでシェイプを追加することができます。キューブやボール、円柱、さらに複雑な形状もあります。与えられた図形に必要な頂点、面を描画するような処理はThreeが行うため、開発者はより高度なコーディングに意識を向けることができます。</p>
+シーンが正しくレンダリングされたら、 3D 図形の追加を開始します。開発スピードを上げるために、 Three.js は定義済みのプリミティブを多数提供しており、これを使用すれば、 1 行のコードで即座に図形を作成することができます。立方体、球体、円柱、そしてもっと複雑な図形も用意されています。与えられた図形に必要な頂点や面の描画などの詳細は、 Three フレームワークで処理されるので、私たちはより高度なコーディングに集中することができるのです。まず、立方体の図形のジオメトリーを定義して、 `render()` 関数のすぐ上に続くことを追加します。
 
-<p>初めに、キューブのシェイプのジオメトリを定義し、前項の<code>render()</code>の上にこのコードを書きましょう。</p>
+```js
+const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+```
 
-<pre class="brush: js">var boxGeometry = new THREE.BoxGeometry(10, 10, 10);
-</pre>
+このコードでは、 10 x 10 x 10 の簡単な立方体が生成されます。ジオメトリーだけでは不十分で、図形には素材が必要です。
 
-<p>このコードでは、10x10x10の簡単な立方体が生成されます。ジオメトリだけでは不十分で、シェイプにはマテリアルが必要です。</p>
+## 素材
 
-<h2 id="Material" name="Material">マテリアル</h2>
+素材とは、オブジェクトに応じた、その表面にある色や質感を表すものです。ここでは、シンプルな青色を選んでボックスを塗装します。使用できる素材は、あらかじめ定義されているものが多数あります。基本 (Basic), フォン (Phong), ランバート (Lambert) です。後の 2 つは後で使ってみましょう。
 
-<p>マテリアルとは、色やテクスチャとして物体の表面を覆うものです。今回は、前項のキューブに色を付けるためシンプルな青を使います。マテリアルには、Basic,Phong,Lambertといった事前に定義されたものがあります。後で後ろ2つを使ってみましょうか。今はBasicで十分です。</p>
+```js
+const basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+```
 
-<pre class="brush: js">var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
-</pre>
+前項で追加した定義の下にこれを追加しましょう。
 
-<p>前項で追加した定義の下にこれを追加しましょう。</p>
+遂に素材も使えるようになりました。さて、次は何をしますか？
 
-<p>遂にマテリアルも使えるようになりました。さて、次は何をしますか？</p>
+## メッシュ
 
-<h2 id="Mesh" name="Mesh">メッシュ</h2>
+素材をシェイプのジオメトリーに適用させるには、メッシュを使用します。メッシュは、素材をシェイプの表面に適用してくれます。
 
-<p>マテリアルをシェイプのジオメトリに適用させるには、メッシュを使用します。メッシュは、マテリアルをシェイプの表面に適用してくれます。</p>
+```js
+const cube = new THREE.Mesh(boxGeometry, basicMaterial);
+```
 
-<pre class="brush: js">var cube = new THREE.Mesh(boxGeometry, basicMaterial);
-</pre>
+もう一回前項で追加したコードの下にこれを追加しましょう。
 
-<p>もう一回前項で追加したコードの下にこれを追加しましょう。</p>
+## 立方体をシーンに追加する
 
-<h2 id="Adding_the_cube_to_the_scene" name="Adding_the_cube_to_the_scene">キューブをシーンに追加する</h2>
+これまでに、ジオメトリーや素材を定義して立方体を作り出しました。最後に私たちが行うべきことはシーンに追加することです。さきほどのコードの下にこれを追加してください。
 
-<p>これまでに、ジオメトリやマテリアルを定義してキューブを作り出しました。最後に私たちが行うべきことはシーンに追加することです。さきほどのコードの下にこれを追加してください。</p>
+```js
+scene.add(cube);
+```
 
-<pre class="brush: js">scene.add(cube);
-</pre>
+コードを保存してページを更新すると、オブジェクトがカメラの方向を向いているのでオブジェクトは正方形に見えます。オブジェクトの良いところは、シーン内で移動できるということです。例えば、私たちの思うままに回転や拡大縮小を行ったり。立方体を少し回転させ、複数の面を見てみましょう。また、コードの下にこれを追加します。
 
-<p>コードを保存してページをリフレッシュすると、オブジェクトがカメラの方向を向いているのでオブジェクトは正方形に見えます。オブジェクトの良いところは、シーン内で移動できるということです。例えば、私たちの思うままに回転や拡大縮小を行ったり。キューブを少し回転させ、複数の面を見てみましょう。また、コードの下にこれを追加します。</p>
+```js
+cube.rotation.set(0.4, 0.2, 0);
+```
 
-<pre class="brush: js">cube.rotation.set(0.4, 0.2, 0);
-</pre>
+おめでとうございます！ 3D 環境でオブジェクトを作成しましたね。これは、あなたが最初に考えたよりも簡単だったしょうか？こんな感じです。
 
-<p>おめでとうございます、あなたは3Dの世界にオブジェクトを生み出しました！これで、あなたが思うよりも簡単であることは証明できたでしょうか？　きっとこんな画面があることでしょう。</p>
+![Blue cube on a gray background rendered with Three.js.](cube.png)
 
-<p><img alt="Blue cube on a gray background rendered with Three.js." src="https://mdn.mozillademos.org/files/11849/cube.png" style="display: block; height: 400px; margin: 0px auto; width: 600px;"></p>
+ここまでのサンプルコードは、ここで配布しています。
 
-<p>ここまでのサンプルコードは、ここで配布しています。</p>
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/bwup75fa/","","350")}}
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/end3r/bwup75fa/","","350")}}</p>
+[GitHub でチェックアウト](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html)することもできます。
 
-<p><a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html">GitHubでチェックアウト</a>することもできます。</p>
+## シェイプや素材の追加
 
-<h2 id="More_shapes_and_materials" name="More_shapes_and_materials">シェイプやマテリアルの追加</h2>
+今度は、このシーンにさらに図形を追加し、他の図形や素材、照明などを調べてみましょう。立方体を左側に移動して、友達のための領域を作ってあげましょう。前の行のすぐ下に、次の行を追加してください。
 
-<p>今度は、シーンにシェイプをさらに追加し、色々なシェイプやマテリアル、ライト等々を探検してみましょう。今のキューブを左に動かし、新たな友人のためのスペースを作ってあげます。また、コードにこれを書き足してください。</p>
+```js
+cube.position.x = -25;
+```
 
-<pre class="brush: js">cube.position.x = -25;
-</pre>
+では、さらに図形や素材を増やしてみましょう。フォンの素材で包まれたトーラスを追加するとどうなるでしょうか。立方体を定義している線のすぐ下に、次の線を加えてみてください。
 
-<p>さて、さらにシェイプとマテリアルを追加しましょう。あなたは Phong マテリアルに覆われたリングに何を加えたいですか？　キューブを定義するコードの下に、次のコードを書き足してみましょう。　</p>
-
-<pre class="brush: js">var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-var phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
-var torus = new THREE.Mesh(torusGeometry, phongMaterial);
+```js
+const torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
+const phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
+const torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
-</pre>
+```
 
-<p>これらのコードは、リング状のジオメトリを追加します。<code>TorusGeometry()</code>関数では、半径、管の径、半径の分割数、管の分割数を定義できます。PhongマテリアルはBasicマテリアルより光沢がありますが、今はリングは黒く見えています。</p>
+TorusGeometry()` メソッドの引数で定義します。引数は `radius`, `tube diameter`, `radial segment count`, `tubular segment count` です。フォンの素材は箱のシンプルな基本素材よりも光沢があるように見えますが、今のところトーラスはただの黒にしか見えません。
 
-<p>私たちは、事前に定義されたもっと楽しいシェイプを選択できます。もっと遊ぼう。リングを定義するコードの下にこれを書き足しましょう。</p>
+もっと楽しい定義済み図形を選べます。もう少し遊んでみましょう。トーラスを定義している行の下に、次の行を追加してください。
 
-<pre class="brush: js">var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-var lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
-var dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
+```js
+const dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
+const lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
+const dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
-</pre>
+```
 
-<p>このコードで私たちは、12の面を持つ多面体を追加しました。<code>DodecahedronGeometry()</code>関数では、オブジェクトのサイズを定義することができます。このオブジェクトには Lambert マテリアルを使用しています。これは Phong マテリアルと似ていますが、比べると光沢がありません。しかし、やはりこれも黒に見えます。オブジェクトの座標を右にずらしているので、キューブやリングと違う場所に表示されるでしょう。</p>
+今回は、 12 の平らな面を持つ正十二面体を作成します。引数 `DodecahedronGeometry()' はオブジェクトの大きさを定義します。ランバート素材を使用します。フォンと似ていますが、光沢が少ないほうがいいでしょう。ここでも今のところ黒です。オブジェクトを右に移動して、箱やトーラスと同じ位置にはならないようにしています。
 
-<p>先程言ったように、新しいオブジェクトは今黒く見えています。Phong、Lambert マテリアルをきれいに表示するには、ライトを導入しましょう。</p>
+上記のように、新しいオブジェクトは現在、ただ黒く見えるだけです。フォンとランバートの両方の素材をきちんと見えるようにするには、光源を導入する必要があります。
 
-<h2 id="Lights" name="Lights">ライト</h2>
+## 光源
 
-<p>Three.jsには様々な種類の光源があります。最も基本的なものは <code>PointLight</code> で、懐中電灯のように光り、決められた方向をスポットライトのように照らします。シェイプの定義の下に、これを書き足しましょう。</p>
+Three.js では様々なタイプの光源が利用できます。最も基本的なものは `PointLight` で、これは懐中電灯のように定義された方向にスポットライトを照らすように動作します。以下の行を、図形の定義の下に追加してください。
 
-<pre class="brush: js">var light = new THREE.PointLight(0xFFFFFF);
+```js
+const light = new THREE.PointLight(0xFFFFFF);
 light.position.set(-10, 15, 50);
 scene.add(light);
-</pre>
+```
 
-<p>このコードでは、ライトの照らすべき方向を定義し、その方向をシーンの中心から少しずらすことで全てのオブジェクトの一部を照らすようにし、シーンに追加します。これで3つ全てのオブジェクトがきれいに表示されます。ドキュメントでAmbient,Directional,Hemisphere,spotなど他の光源の種類を調べるのも良いでしょう。是非、シーンに別の種類を配置し、影響を見てみてください。</p>
+白い光の点を定義して、その位置をシーンの中心から少し離して設定し、図形の一部を照らすようにし、最後にシーンに追加します。これはうまくいき、 3 つの図形がすべて見えるようになりました。アンビエント、ディレクショナル、ヘミスフィア、スポットなど、他のタイプのライトについても、ドキュメントで確認する必要があります。それらをシーンに配置して、どのように影響するかを試してみてください。
 
-<p><img alt="Shapes: blue cube, dark yellow torus and dark gray dodecahedron on a gray background rendered with Three.js." src="https://mdn.mozillademos.org/files/11851/shapes.png" style="height: 400px; width: 600px;"></p>
+![Shapes: blue cube, dark yellow torus and dark gray dodecahedron on a gray background rendered with Three.js.](shapes.png)
 
-<p>しかし、これでは相当退屈です。ゲームの世界は、常に何かが起こっているのです。例えば、アニメーションが表示されたり。だったら、このオブジェクトたちに命を吹き込んで、アニメーションさせてみましょう。</p>
+でも、これではちょっと退屈そうですね。ゲームでは、たいてい何かが起こっています。アニメーションを見たりすることもあるでしょう。そこで、この図形に少し命を吹き込んで、アニメーションをつけてみましょう。
 
-<h2 id="Animation" name="Animation">アニメーション</h2>
+## アニメーション
 
-<p>私たちはすでに回転を使ってキューブの位置を調節しました。シェイプのスケーリング、位置の変更を行うこともできます。アニメーションを表示するには、レンダリングのループの中で該当する値を変更します。それがフレームごとに反映されます。</p>
+立方体の位置を調整するために、すでに回転を使用しました。また、図形を拡大縮小したり、位置を変更したりすることもできます。アニメーションを表示するには、レンダリングループの中でこれらの値を変更し、各フレームで更新する必要があります。
 
-<h3 id="Rotation" name="Rotation">回転</h3>
+### 回転
 
-<p>回転の指定は素直です。各フレームで指定された方向に角度を変化させます。このコードを、<code>render()</code>で使った<code>requestAnimationFrame()</code>のあとに追加しましょう。</p>
+回転させるのは簡単です。各フレームで与えられた回転方向の値を追加します。以下のコードを `render` 関数内の `requestAnimationFrame()` 呼び出しの直後に追加してください。
 
-<pre class="brush: js">cube.rotation.y += 0.01;
-</pre>
+```js
+cube.rotation.y += 0.01;
+```
 
-<p>これで、キューブは毎フレームごとに回転してゆきます。少しずつ。そのため、とても滑らかに見えるでしょう。</p>
+これにより、立方体がフレームごとにほんの少し回転し、アニメーションが滑らかに見えるようになります。
 
-<h3 id="Scaling" name="Scaling">スケーリング</h3>
+### 拡大縮小
 
-<p>私たちはオブジェクトをスケーリングすることもできます。値を指定することで、それを成長させたり、縮小させたりできます。もっと面白くしましょう。まず、経過時間をカウントする変数 t を実装しましょう。<code>render()</code>の前に追加してください。</p>
+また、オブジェクトを拡大縮小することもできます。一定の値を適用して、一度だけ大きくしたり、小さくしたりするのだ。もっと面白いことをやってみよう。まず、経過時間をカウントするためのヘルパー変数 `t` を実装します。これを `render()` 関数の直前に追加します。
 
-<pre class="brush: js">var t = 0;
-</pre>
+```js
+let t = 0;
+```
 
-<p>さて、フレームごとに値が増えるようにしましょう。<code>requestAnimationFrame()</code>のすぐ後にこれを書き足しましょう。</p>
+さて、フレームごとに値が増えるようにしましょう。 `requestAnimationFrame()` のすぐ後にこれを書き足しましょう。
 
-<pre class="brush: js">t += 0.01;
+```js
+t += 0.01;
 torus.scale.y = Math.abs(Math.sin(t));
-</pre>
+```
 
-<p>私たちは <code>Math.sin</code> を使うことで非常に面白い結果を見ることができました。sin()は周期的な値を返すため、リングは大きくなったり小さくなったりを繰り返します。返り値を <code>Math.abs</code> でラップするため、必ず0以上の値を得ることができます。スケールに負の値が指定されたとき、スケーリングは全く予期できません。もしそうであった場合、半分の時間はリングは真っ黒になったでしょう。</p>
+私たちは `Math.sin` を使用して、非常に興味深い結果にたどり着きました。 `sin` は周期的な関数なので、これはトーラスを拡大縮小し、そのプロセスを繰り返します。拡大縮小する値を `Math.abs` でラップして、 0 以上の絶対値を渡しています。 sin は -1 から 1 までの値なので、負の値はトーラスを予期しない方法でレンダリングするかもしれません。この場合、半分くらいは黒く見えます。
 
-<p>遂に、動かします。</p>
+遂に、動かします。
 
-<h3 id="Moving" name="Moving">動く、動く</h3>
+### 動かす
 
-<p>回転やスケーリングだけでなく、シーンの中でオブジェクトをさらに自由に動かすこともできます。<code>requestAnimationFrame()</code>のすぐ後にこれを書き足しましょう。</p>
+回転と拡大縮小の他に、オブジェクトをシーン上で移動させることもできます。 `requestAnimationFrame()` 呼び出しのすぐ下に、次のようなものを追加します。
 
-<pre class="brush: js">dodecahedron.position.y = -7*Math.sin(t*2);
-</pre>
+```js
+dodecahedron.position.y = -7*Math.sin(t*2);
+```
 
-<p>このコードでは各フレームの y座標に sin() の値を適用することで十二面体を上下に動かします。また、少し調節して、クールに見えるようにしています。この値を変更して、アニメーションにどのような変化が起きるかを見てみるのもよいでしょう。</p>
+これは、各フレームの y 軸に `sin()` 値を適用することによって、正十二面体を上下に動かし、よりクールな見た目になるように少し調整するものです。これらの値を変えてみて、アニメーションにどのような影響を与えるか見てみましょう。
 
-<h2 id="Conclusion" name="Conclusion">まとめ</h2>
+## まとめ
 
-<p>これは最終的なコードです。</p>
+これは最終的なコードです。
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/rybr720u/","","350")}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/rybr720u/","","350")}}
 
-<p>あなたは今までのコードを<a href="https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html">GitHubで見る</a>こともできるし、ローカル環境で遊びたいと思ったら<a href="https://github.com/end3r/MDN-Games-3D/">リポジトリをフォークする</a>こともできます。今あなたは Three.js の基本を理解しているでしょう。このページの親ページである <a href="/ja/docs/Games/Techniques/3D_on_the_web">Web上の3Dに関するドキュメント</a>に行くこともできます。</p>
+あなたは今までのコードを [GitHubで見る](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html)こともできるし、ローカル環境で遊びたいと思ったら[リポジトリーをフォークする](https://github.com/end3r/MDN-Games-3D/)こともできます。 Three.js の基本が理解できたでしょう。このページの親ページである [ウェブ上の 3D に関するドキュメント](/ja/docs/Games/Techniques/3D_on_the_web)に戻ることもできます。
 
-<p>WebGLを実際に触ることで、内部で何が起こっているのかをより理解することもできます。私たちの<a href="/ja/docs/Web/API/WebGL_API">WebGLドキュメンテーション</a>を参考にしてみてください。</p>
+WebGL を実際に触ることで、内部で何が起こっているのかをより理解することもできます。私たちの [WebGL ドキュメンテーション](/ja/docs/Web/API/WebGL_API)を参考にしてみてください。
