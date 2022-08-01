@@ -46038,13 +46038,6 @@
       "silverskyvicto"
     ]
   },
-  "conflicting/Games": {
-    "modified": "2019-01-16T21:55:46.834Z",
-    "contributors": [
-      "wbamberg",
-      "Marsf"
-    ]
-  },
   "conflicting/Glossary": {
     "modified": "2019-01-16T21:36:54.645Z",
     "contributors": [
@@ -46896,12 +46889,6 @@
       "mfuji09"
     ]
   },
-  "conflicting/Web/API/Window": {
-    "modified": "2020-10-15T22:08:53.974Z",
-    "contributors": [
-      "k-kuwahara"
-    ]
-  },
   "conflicting/Web/API/Window/afterprint_event": {
     "modified": "2020-10-15T21:27:41.445Z",
     "contributors": [
@@ -47146,14 +47133,6 @@
       "inkusu"
     ]
   },
-  "conflicting/Web/Guide": {
-    "modified": "2020-12-07T13:42:04.312Z",
-    "contributors": [
-      "peterbe",
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "conflicting/Web/HTML": {
     "modified": "2020-09-19T11:13:50.506Z",
     "contributors": [
@@ -47327,14 +47306,6 @@
       "Taken Bot"
     ]
   },
-  "orphaned/MDN/Structures/API_references": {
-    "modified": "2020-11-28T12:21:15.783Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "silverskyvicto"
-    ]
-  },
   "orphaned/MDN/Structures/API_references/What_does_an_API_reference_need": {
     "modified": "2020-09-30T09:07:31.593Z",
     "contributors": [
@@ -47363,18 +47334,6 @@
       "SphinxKnight",
       "ethertank",
       "maripo"
-    ]
-  },
-  "orphaned/Monitoring_HTTP_activity": {
-    "modified": "2019-03-24T00:02:05.928Z",
-    "contributors": [
-      "yiwasaki"
-    ]
-  },
-  "orphaned/Monitoring_WiFi_access_points": {
-    "modified": "2019-01-16T14:46:30.090Z",
-    "contributors": [
-      "RobinEgg"
     ]
   },
   "orphaned/New_in_JavaScript_1.8": {
