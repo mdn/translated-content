@@ -14792,12 +14792,6 @@
       "seawin"
     ]
   },
-  "Web/API/IDBEnvironment": {
-    "modified": "2020-10-15T22:16:53.762Z",
-    "contributors": [
-      "CiaoLee"
-    ]
-  },
   "Web/API/IDBFactory": {
     "modified": "2019-04-08T01:11:15.339Z",
     "contributors": [
