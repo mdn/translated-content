@@ -37,7 +37,7 @@ Chaque fois qu'une forme est rendue, le shader de sommet est exécuté pour chaq
 
 Les informations de position sont stockées dans une variable spéciale fournie par GLSL, appelée `gl_Position`.
 
-Le shader de sommet peut, au besoin, aussi faire des choses comme déterminer les coordonnées dans la texture des faces du {{interwiki ("wikipedia", "texel")}} à appliquer au sommet, appliquer les normales pour déterminer le facteur d'éclairage à appliquer au sommet, et ainsi de suite. Ces informations peuvent alors être stockées dans des variations ou des attributs comme approprié, pour être partagées avec le shader de fragment.
+Le shader de sommet peut, au besoin, aussi faire des choses comme déterminer les coordonnées dans la texture des faces du [texel](https://fr.wikipedia.org/wiki/Texel_(infographie)) à appliquer au sommet, appliquer les normales pour déterminer le facteur d'éclairage à appliquer au sommet, et ainsi de suite. Ces informations peuvent alors être stockées dans des variations ou des attributs comme approprié, pour être partagées avec le shader de fragment.
 
 Notre shader de sommet ci-dessous reçoit des valeurs de position de sommet à partir d'un attribut que nous définissons, appelé `aVertexPosition`. Cette position est ensuite multipliée par deux matrices 4x4 que nous fournissons, appelées `uProjectionMatrix` et `uModelMatrix` ; `gl_Position` est définie comme étant le résultat. Pour plus d'informations sur la projection et autres matrices, [vous pourriez trouver cet article utile](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
