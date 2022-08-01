@@ -2,7 +2,6 @@
 title: Accesibilidad
 slug: Web/Accessibility
 translation_of: Web/Accessibility
-  - Landing
 l10n:
   sourceCommit: acebfb2b738c2b3d7caf73607000f1aa4b4393d1
 ---
