@@ -18,7 +18,9 @@ La propriété **`byteLength`** est un accesseur qui représente la longueur, ex
 
 ## Syntaxe
 
-    typedarray.byteLength
+```js
+typedarray.byteLength
+```
 
 ## Description
 
@@ -44,7 +46,7 @@ uint8.byteLength; // 6 (en raison du décalage utilisé pour la construction du 
 | Spécification                                                                                                                                | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

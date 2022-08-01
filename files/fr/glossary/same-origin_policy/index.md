@@ -10,7 +10,7 @@ Voir [Same origin policy](/fr/docs/Web/Security/Same_origin_policy_for_JavaScrip
 
 ## Voir aussi
 
-- [Glossaire MDN](/fr/docs/Glossary) :
+- [Glossaire MDN](/fr/docs/Glossary)&nbsp;:
 
   - {{Glossary("CORS")}}
   - {{Glossary("origine")}}

@@ -171,7 +171,7 @@ Si on sait qu'aucun des éléments ne vaut `false` dans un contexte booléen (pa
 ```js
 let divs = document.getElementsByTagName('div');
 for (let i = 0, div; div = divs[i]; i++) {
-  /* On effectue un traitement sur les  div */
+  /* On effectue un traitement sur les div */
 }
 ```
 
@@ -443,7 +443,6 @@ Lorsqu'un tableau est le résultat d'une correspondance entre une expression rat
 Certains objets JavaScript tels que [`NodeList`](/fr/docs/Web/API/NodeList) (renvoyé par [`document.getElementsByTagName()`](/fr/docs/Web/API/Document/getElementsByTagName)) ou l'objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Functions/arguments) (disponible au sein d'une fonction) ressemblent à des tableaux mais n'en sont pas (ils n'ont pas toutes les méthodes décrites ci-avant par exemple). Ainsi, l'objet `arguments` fournit une propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length) mais n'implémente pas la méthode [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
 
 Les méthodes du prototype des tableaux permettent d'utiliser les méthodes d'objets `Array` sur des objets semblables à des tableaux. Attention, elles ne sont pas appelables directement depuis ces objets&nbsp;:
-
 
 ```js example-bad
 function printArguments() {

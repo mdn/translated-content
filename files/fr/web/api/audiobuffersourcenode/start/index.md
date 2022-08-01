@@ -9,7 +9,9 @@ La méthode `start()` de l'interface {{ domxref("AudioBufferSourceNode") }} perm
 
 ## Syntaxe
 
-    AudioBufferSourceNode.start([when][, offset][, duration]);
+```js
+AudioBufferSourceNode.start([when][, offset][, duration]);
+```
 
 ### Paramètres
 
@@ -53,7 +55,7 @@ source.start(contexteAudio.currentTime + 1,3,10);
 
 | Spécification                                                                                                                                                        | Statut                               | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-start-void-double-when-double-offset-double-duration', 'start()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-start-void-double-when-double-offset-double-duration', 'start()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

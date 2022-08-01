@@ -72,15 +72,15 @@ translation_of: Mozilla/Firefox/Releases/17
 <h3 id="Interface_changes" name="Interface_changes">インタフェースの変更点</h3>
 
 <dl>
- <dt>{{ interface("nsIInputStream") }}</dt>
+ <dt><code>nsIInputStream</code></dt>
  <dd><code>available()</code> メソッドは 32 ビット長ではなく 64 ビット長で値を返します。({{bug("215450")}})</dd>
- <dt>{{ interface("nsIDOMWindowUtils") }}</dt>
+ <dt><code>nsIDOMWindowUtils</code></dt>
  <dd><code>sendMouseScrollEvent()</code> メソッドは <code>sendWheelEvent()</code> に置き換えられました。({{bug("719320")}})</dd>
- <dt>{{ interface("nsIFilePicker") }}</dt>
+ <dt><code>nsIFilePicker</code></dt>
  <dd>ファイルダイアログを非同期的に開くための <code>open()</code> メソッドを追加し、また <code>show()</code> メソッドは非推奨になりました。({{bug("731307")}})</dd>
- <dt>{{ interface("nsIScriptSecurityManager") }}</dt>
+ <dt><code>nsIScriptSecurityManager</code></dt>
  <dd><code>checkLoadURIStr()</code> メソッドおよび <code>checkLoadURI()</code> メソッドが削除されました。({{bug("327244")}})</dd>
- <dt>{{ interface("nsIRefreshURI") }}</dt>
+ <dt><code>nsIRefreshURI</code></dt>
  <dd><code>setupRefreshURIFromHeader()</code> メソッドに引数 <code>principal</code> が追加されました。({{bug("327244")}})</dd>
 </dl>
 

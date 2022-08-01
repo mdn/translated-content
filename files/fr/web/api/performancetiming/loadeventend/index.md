@@ -30,8 +30,7 @@ let time = performanceTiming.loadEventEnd;
 
 | Spécification                                                                                                                                                | Statut                                   | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-loadedeventend',
-        'PerformanceTiming.loadEventEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+| {{SpecName('Navigation Timing', '#dom-performancetiming-loadedeventend', 'PerformanceTiming.loadEventEnd')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs
 

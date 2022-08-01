@@ -1,21 +1,12 @@
 ---
-title: 'CSP: font-src'
+title: 'CSP : font-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-  - font
-  - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/font-src
+browser-compat: http.headers.csp.Content-Security-Policy.font-src
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`font-src`** spécifie les sources valides pour les polices chargés avec {{cssxref("@font-face")}}.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`font-src`** spécifie les sources valides pour les polices de caractères chargées avec [`@font-face`](/fr/docs/Web/CSS/@font-face).
 
 <table class="properties">
   <tbody>
@@ -25,13 +16,12 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`font-src`**
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Fetch directive")}}</td>
+      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la
-        directive <code>default-src</code>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -39,26 +29,30 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`font-src`**
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
 
-    Content-Security-Policy: font-src <source>;
-    Content-Security-Policy: font-src <source> <source>;
+```http
+Content-Security-Policy: font-src <source>;
+Content-Security-Policy: font-src <source> <source>;
+```
 
 ### Sources
 
-{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
 
 ## Exemples
 
 ### Cas de violation
 
-Soit cet en-tête CSP :
+Soit cet en-tête CSP&nbsp;:
 
 ```bash
 Content-Security-Policy: font-src https://example.com/
 ```
 
-Cette définition de police sera bloquée et ne se chargera pas :
+Cette définition de police sera bloquée et ne se chargera pas&nbsp;:
 
 ```html
 <style>
@@ -74,16 +68,13 @@ Cette définition de police sera bloquée et ne se chargera pas :
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-font-src", "font-src")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-font-src", "font-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.font-src")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{cssxref("@font-face")}}
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [`@font-face`](/fr/docs/Web/CSS/@font-face)

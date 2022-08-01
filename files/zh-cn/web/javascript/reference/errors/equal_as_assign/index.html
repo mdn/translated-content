@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 
 <p>{{jsxref("SyntaxError")}} 只在<a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下会出现的警告。</p>
 
-<h2 id="什么地方出错了">什么地方出错了?</h2>
+<h2 id="什么地方出错了">什么地方出错了？</h2>
 
 <p>在通常期望进行相等判定（<code>==</code>）的地方出现了赋值<code>（=</code>）。 为了帮助调试，JavaScript（在开启严格模式的情况下）会对这种情况进行警告。</p>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 
 <h3 id="条件表达式内的赋值">条件表达式内的赋值</h3>
 
-<p>不建议在条件表达式中 （例如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code>） 使用简单赋值语句，因为在扫视代码的时候赋值操作与相等判定容易产生混淆。例如，不要使用以下写法：</p>
+<p>不建议在条件表达式中（例如 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code>）使用简单赋值语句，因为在扫视代码的时候赋值操作与相等判定容易产生混淆。例如，不要使用以下写法：</p>
 
 <pre class="brush: js example-bad">if (x = y) {
   // do the right thing
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
   // do the right thing
 }</pre>
 
-<p>否则， 你的本意可能是想用比较操作符 （如 <code>==</code> 或 <code>===</code>）：</p>
+<p>否则， 你的本意可能是想用比较操作符（如 <code>==</code> 或 <code>===</code>）：</p>
 
 <pre class="brush: js">if (x == y) {
   // do the right thing

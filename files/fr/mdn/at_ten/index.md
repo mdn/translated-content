@@ -21,12 +21,12 @@ Depuis 10 ans, la communauté MDN documente le Web. Qu'il s'agisse de corriger q
 
 [En savoir plus](/fr/docs/MDN_a_dix_ans/Contribuer_à_MDN)
 
-> Quand je souhaite comprendre « pourquoi » plutôt que « comment », j'utilise MDN.
+> Quand je souhaite comprendre «&nbsp;pourquoi&nbsp;» plutôt que «&nbsp;comment&nbsp;», j'utilise MDN.
 
 — [Christian Heilmann](https://twitter.com/codepo8/status/621009648875868160)
 
 ## Subnav
 
-1.  [MDN a 10 ans](/fr/docs/MDN_a_dix_ans/)
-2.  [L'histoire de MDN](/fr/docs/MDN_a_dix_ans/Histoire_MDN)
-3.  [Contribuer à MDN](/en-US/docs/MDN_at_ten/Contributing_to_MDN)
+1. [MDN a 10 ans](/fr/docs/MDN_a_dix_ans/)
+2. [L'histoire de MDN](/fr/docs/MDN_a_dix_ans/Histoire_MDN)
+3. [Contribuer à MDN](/en-US/docs/MDN_at_ten/Contributing_to_MDN)

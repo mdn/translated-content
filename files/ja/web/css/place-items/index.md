@@ -220,7 +220,6 @@ values.addEventListener('change', function (evt) {
 
 {{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
 
-
 <h3 id="Placing_items_in_a_grid_container">グリッドコンテナーでのアイテムの配置</h3>
 
 以下のグリッドコンテナーのアイテムは、配置されるグリッド領域よりも小さいため、`place-items` はブロック方向とインライン方向にアイテムを移動します。

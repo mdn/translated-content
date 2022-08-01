@@ -9,7 +9,7 @@ translation_of: Web/CSS/CSS_Properties_Reference
 
 ## Référence des propriétés CSS usuelles
 
-Voici ci-dessous une liste simple des propriétés CSS les plus fréquemment utilisées avec leur équivalent en notation DOM,  habituellement utilisée avec JavaScript :
+Voici ci-dessous une liste simple des propriétés CSS les plus fréquemment utilisées avec leur équivalent en notation DOM,  habituellement utilisée avec JavaScript :
 
 > **Note :** Cette liste n'est pas exhaustive. Pour davantage de propriétés CSS, voir [la référence CSS](/fr/docs/Web/CSS/Reference) et [les extensions CSS spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions).
 

@@ -104,7 +104,7 @@ La propriété `overflow-inline` se définit avec un mot-clé parmi ceux de la l
 
 | Spécification                                                                                        | État                                 | Commentaires |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow-inline', 'overflow-inline')}} | {{Spec2('CSS3 Overflow')}} |              |
+| {{SpecName('CSS3 Overflow', '#propdef-overflow-inline', 'overflow-inline')}} | {{Spec2('CSS3 Overflow')}} |              |
 
 {{cssinfo}}
 

@@ -25,7 +25,7 @@ La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément 
 
 En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'élément (l'utilisateur ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.
 
-> **Note :** Cette propriété ne fonctionne pas pour les éléments XUL {{XULElem("textbox")}} car l'élément `textbox` en tant que tel ne reçoit jamais le focus. À la place, XBL crée un élément HTML {{HTMLElement("input")}} anonyme à l'intérieur du `textbox` et que l'élément reçoit le focus. On peut empêcher le `textbox` de prendre le focus clavier en passant son index de tabulation à `-1`, pour l'empêcher de prendre le focus souris, on pourra utiliser les événements `mousedown`.
+> **Note :** Cette propriété ne fonctionne pas pour les éléments XUL {{XULElem("textbox")}} car l'élément `textbox` en tant que tel ne reçoit jamais le focus. À la place, XBL crée un élément HTML {{HTMLElement("input")}} anonyme à l'intérieur du `textbox` et que l'élément reçoit le focus. On peut empêcher le `textbox` de prendre le focus clavier en passant son index de tabulation à `-1`, pour l'empêcher de prendre le focus souris, on pourra utiliser les événements `mousedown`.
 
 ## Syntaxe
 

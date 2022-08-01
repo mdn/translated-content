@@ -12,7 +12,9 @@ La fonction `unparsed-entity-url()` retourne l'URI d'une entité non analysée a
 
 ### Syntaxe
 
-    string unparsed-entity-url(chaîne)
+```
+string unparsed-entity-url(chaîne)
+```
 
 ### Arguments
 

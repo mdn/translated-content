@@ -23,7 +23,7 @@ L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyS
 - Default Action
   - : None.
 
-## propriétés
+## Propriétés
 
 | Property                              | Type                                 | Description                                            |
 | ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
@@ -32,7 +32,7 @@ L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyS
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
 
-## exemple
+## Exemple
 
 ```js
 document.readyState === "complete";
@@ -49,7 +49,7 @@ document.onreadystatechange = function () {
 
 ## Navigateur compatible
 
-Cet événement a longtemps été soutenue par Internet Explorer et peut être utilisé comme une alternative à l'evenement [`DOMContentLoaded`](/fr/docs/) (voir la note \[2] de la section [Navigateurs compatibles](/fr/docs/Web/Events/DOMContentLoaded#Navigateurs_compatibles)).
+Cet événement a longtemps été soutenue par Internet Explorer et peut être utilisé comme une alternative à l'evenement [`DOMContentLoaded`](/fr/docs/) (voir la note \[2] de la section [Navigateurs compatibles](/fr/docs/Web/Events/DOMContentLoaded#Navigateurs_compatibles)).
 
 ## Les événements liés
 

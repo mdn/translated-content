@@ -8,7 +8,7 @@ browser-compat: api.Window.location
 
 La propriété en lecture seule **`Window.location`** renvoie un objet [`Location`](/fr/docs/Web/API/Location) qui contient des informations à propos de l'emplacement courant du document.
 
-Bien que `Window.location` soit un objet `Location` en _lecture seule_, on peut lui affecter une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString). Cela signifie qu'on peut, la plupart du temps, manipuler `location` comme une chaîne de caractères : `location = 'http://www.example.com'` est par exemple synonyme de `location.href = 'http://www.example.com'`.
+Bien que `Window.location` soit un objet `Location` en _lecture seule_, on peut lui affecter une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString). Cela signifie qu'on peut, la plupart du temps, manipuler `location` comme une chaîne de caractères&nbsp;: `location = 'http://www.example.com'` est par exemple synonyme de `location.href = 'http://www.example.com'`.
 
 Voir la page de l'interface [`Location`](/fr/docs/Web/API/Location) pour connaître l'ensemble des propriétés disponibles.
 
@@ -140,7 +140,7 @@ La même chose mais avec un défilement animé :
 
 ```js
 var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+  var _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
    /*
    * nDuration: la durée, exprimée en millisecondes, pour chaque frame
    * nFrames: le nombre de frames pour chaque défilement
@@ -188,7 +188,7 @@ var showBookmark = (function () {
 
 ## Voir aussi
 
-- L'interface qui décrit la valeur renvoyée par cette propriété : [`Location`](/fr/docs/Web/API/Location).
-- Une information similaire, mais attachée au document courant : [`Document.location`](/fr/docs/Web/API/Document/location).
+- L'interface qui décrit la valeur renvoyée par cette propriété&nbsp;: [`Location`](/fr/docs/Web/API/Location).
+- Une information similaire, mais attachée au document courant&nbsp;: [`Document.location`](/fr/docs/Web/API/Document/location).
 - [Manipuler l'historique du navigateur avec l'API History](/fr/docs/Web/API/History_API)
 - [`hashchange`](/fr/docs/Web/API/Window/hashchange_event)

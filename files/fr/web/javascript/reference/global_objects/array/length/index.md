@@ -31,7 +31,7 @@ tableauB.length = Math.pow(2,32)-1; // On déclare une longueur inférieure à 2
 console.log(tableauB.length); // 4294967295
 ```
 
-Vous pouvez modifier la propriété `length` d'un tableau à loisir pour le tronquer. Quand vous étendez un tableau en modifiant la valeur de sa propriété `length`, le nombre d'éléments réellement présents dans ce tableau n'augmente pas : par exemple, si vous affectez la valeur 3 à la propriété `length` d'un tableau alors qu'elle vaut 2, le tableau contiendra toujours seulement 2 éléments. La troisième « case » ne sera pas itérable. De ce fait, la propriété `length` d'un tableau ne renseigne en rien sur le nombre de valeurs définies dans le tableau. Voir aussi [la relation entre longueur et propriétés numériques](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array#Relation_entre_length_et_les_propri.C3.A9t.C3.A9s_num.C3.A9riques).
+Vous pouvez modifier la propriété `length` d'un tableau à loisir pour le tronquer. Quand vous étendez un tableau en modifiant la valeur de sa propriété `length`, le nombre d'éléments réellement présents dans ce tableau n'augmente pas : par exemple, si vous affectez la valeur 3 à la propriété `length` d'un tableau alors qu'elle vaut 2, le tableau contiendra toujours seulement 2 éléments. La troisième « case » ne sera pas itérable. De ce fait, la propriété `length` d'un tableau ne renseigne en rien sur le nombre de valeurs définies dans le tableau. Voir aussi [la relation entre longueur et propriétés numériques](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array#Relation_entre_length_et_les_propri.C3.A9t.C3.A9s_num.C3.A9riques).
 
 ```js
 const arr = [1, 2, 3];

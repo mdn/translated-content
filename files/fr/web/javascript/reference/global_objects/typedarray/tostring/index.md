@@ -19,7 +19,9 @@ La méthode **`toString()`** renvoie une chaîne de caractères qui représente 
 
 ## Syntaxe
 
-    typedarray.toString()
+```js
+typedarray.toString()
+```
 
 ### Valeur de retour
 
@@ -50,7 +52,7 @@ numbers.toString(); // "[object Uint8Array]"
 | Spécification                                                                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.tostring', 'TypedArray.prototype.toString')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tostring', 'Array.prototype.toString')}}         | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tostring', 'Array.prototype.toString')}}         | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

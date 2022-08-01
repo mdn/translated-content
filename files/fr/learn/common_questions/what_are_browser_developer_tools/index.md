@@ -13,7 +13,7 @@ tags:
 translation_of: Learn/Common_questions/What_are_browser_developer_tools
 original_slug: Apprendre/Découvrir_outils_développement_navigateurs
 ---
-{{IncludeSubnav("/fr/Apprendre")}}{{Previous("Apprendre/Commencer_avec_le_web")}}
+{{Previous("Apprendre/Commencer_avec_le_web")}}
 
 Tous les navigateurs modernes possèdent un ensemble d'outils destinés aux développeurs. Ces outils permettent de réaliser différentes actions : inspecter le code HTML, CSS ou JavaScript chargé à la volée dans la page, montrer les fichiers téléchargés et le temps de chargement, etc. Dans cet article, nous verrons comment utiliser les fonctionnalités basiques des outils de développements d'un navigateur (parfois appelés avec l'anglicisme « _devtools_ »).
 
@@ -30,7 +30,7 @@ Comment faire pour que cette sous-fenêtre apparaisse ? Trois méthodes :
 - **_Au clavier._** _Ctrl + Shift + I_, sauf pour :
 
   - **Internet Explorer.** _F12_
-  - **Mac OS X.** *⌘ + ⌥ + I*
+  - **Mac OS X.** *⌘ + ⌥ + I*
 
 - **_Via les menus._**
 
@@ -107,31 +107,35 @@ La console JavaScript est un outil formidable pour déboguer du code JavaScript 
 
 Pour voir comment la console se comporte, essayez de saisir les fragments de code suivants dans la console (un par un), en appuyant sur Entrée après chaque :
 
-1.  ```js
-    alert('Coucou !');
-    ```
-2.  ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
-3.  ```js
-    var monImage = document.createElement('img');
-    monImage.setAttribute('src','https://c1.staticflickr.com/1/572/20463320350_58483f6bed.jpg');
-    document.querySelector('h1').appendChild(monImage);
-    ```
+```js
+alert('Coucou !');
+```
+
+```js
+document.querySelector('html').style.backgroundColor = 'purple';
+```
+
+```js
+var monImage = document.createElement('img');
+monImage.setAttribute('src','https://c1.staticflickr.com/1/572/20463320350_58483f6bed.jpg');
+document.querySelector('h1').appendChild(monImage);
+```
 
 Maintenant, essayez de saisir les fragments de code suivants, qui sont incorrects, pour voir ce qui se passe :
 
-1.  ```js
-    alert('coucou !);
-    ```
-2.  ```js
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
-3.  ```js
-    var monImage = document.createElement('img');
-    maBanane.setAttribute('src','https://c1.staticflickr.com/1/572/20463320350_58483f6bed.jpg');
-    document.querySelector('h1').appendChild(monImage);
-    ```
+```js example-bad
+alert('coucou !);
+```
+
+```js example-bad
+document.cheeseSelector('html').style.backgroundColor = 'purple';
+```
+
+```js example-bad
+var monImage = document.createElement('img');
+maBanane.setAttribute('src','https://c1.staticflickr.com/1/572/20463320350_58483f6bed.jpg');
+document.querySelector('h1').appendChild(monImage);
+```
 
 Vous devriez voir différentes erreurs fournies par le navigateur. À première vue, ces erreurs semblent un peu étranges et complexes mais elles devraient être simples à résoudre !
 

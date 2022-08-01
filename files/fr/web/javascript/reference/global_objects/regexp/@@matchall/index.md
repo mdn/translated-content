@@ -18,7 +18,9 @@ La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expr
 
 ## Syntaxe
 
-    regexp[Symbol.matchAll](str)
+```js
+regexp[Symbol.matchAll](str)
+```
 
 ### Paramètres
 
@@ -83,7 +85,7 @@ console.log(resultat[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 | Spécification                                                                                                            | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-regexp-prototype-matchall', 'RegExp.prototype[@@matchAll]')}} | {{Spec2('ESDraft')}} |              |
+| {{SpecName('ESDraft', '#sec-regexp-prototype-matchall', 'RegExp.prototype[@@matchAll]')}} | {{Spec2('ESDraft')}} |              |
 
 ## Compatibilité des navigateurs
 

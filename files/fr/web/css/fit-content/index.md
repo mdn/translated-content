@@ -11,7 +11,7 @@ translation_of: Web/CSS/fit-content
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La fonction CSS **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donnée (en utilisant la formule  `min(taille maximale, max(taille minimale, argument))`.
+La fonction CSS **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donnée (en utilisant la formule  `min(taille maximale, max(taille minimale, argument))`.
 
 ```css
 /* Valeurs de type <length> */
@@ -35,7 +35,7 @@ Elle peut également être utilisée pour définir la taille d'une boîte avec {
 - `<length>`
   - : Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) exprimée de façon absolue.
 - `<percentage>`
-  - : Un pourcentage (valeur de type {{cssxref("&lt;percentage&gt;")}}) relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relative à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en block pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.
+  - : Un pourcentage (valeur de type {{cssxref("&lt;percentage&gt;")}}) relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relative à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en block pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.
 
 ### Syntaxe formelle
 
@@ -84,7 +84,7 @@ Elle peut également être utilisée pour définir la taille d'une boîte avec {
 
 | Spécification                                                                                                            | État                             | Commentaires                                                                                                                                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Définition de la fonction pour les dimensions de boîte avec les propriétés  {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}}. |
+| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Définition de la fonction pour les dimensions de boîte avec les propriétés  {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}}. |
 | {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | Définition initiale, la fonction peut être utilisée pour définir la taille d'une piste au sein d'une grille CSS.                                                                                                                                                                  |
 
 ## Compatibilité des navigateurs

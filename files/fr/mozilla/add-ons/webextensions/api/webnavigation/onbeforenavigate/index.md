@@ -37,7 +37,7 @@ Les événements ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il est écouté, sinon `false`.
 
-## syntaxe addListener
+## Syntaxe addListener
 
 ### Paramètres
 
@@ -49,11 +49,11 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation.
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau`  d'objets {{WebExtAPIRef("events.UrlFilter")}} objects.Un objet contenant une seule propriété  qui correspondent à au moins un `UrlFilter` dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau`  d'objets {{WebExtAPIRef("events.UrlFilter")}} objects.Un objet contenant une seule propriété qui correspondent à au moins un `UrlFilter` dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
 ## Objets supplémentaires
 
-### détails
+### Détails
 
 - `tabId`
   - : `integer`. L'ID de l'onglet dans lequel la navigation est sur le point de se produire.
@@ -74,7 +74,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Logs les URL cibles de `onBeforeNavigate`, si le nom d'hôte de la cible contient "example.com" ou commence avec "developer".
+Logs les URL cibles de `onBeforeNavigate`, si le nom d'hôte de la cible contient "example.com" ou commence avec "developer".
 
 ```js
 var filter = {

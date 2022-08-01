@@ -1,22 +1,12 @@
 ---
-title: 'CSP: media-src'
+title: 'CSP : media-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/media-src
-tags:
-  - CSP
-  - Conten-Security-Policy
-  - Directive
-  - HTTP
-  - Media
-  - Reference
-  - Security
-  - Sécurité
-  - media-src
-  - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/media-src
+browser-compat: http.headers.csp.Content-Security-Policy.media-src
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`media-src`** spécifie les sources valides pour charger des médias en utilisant des éléments tels que {{HTMLElement("audio")}} et {{HTMLElement("video")}}.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`media-src`** spécifie les sources valides pour le chargement des médias avec les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video).
 
 <table class="properties">
   <tbody>
@@ -26,13 +16,12 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`media-src`*
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Fetch directive")}}</td>
+      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la
-        directive <code>default-src</code>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -40,26 +29,30 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`media-src`*
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
 
-    Content-Security-Policy: media-src <source>;
-    Content-Security-Policy: media-src <source> <source>;
+```http
+Content-Security-Policy: media-src <source>;
+Content-Security-Policy: media-src <source> <source>;
+```
 
 ### Sources
 
-{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
 
 ## Exemples
 
 ### Cas de violation
 
-Soit cet en-tête CSP :
+Soit cet en-tête CSP&nbsp;:
 
-```bash
+```http
 Content-Security-Policy: media-src https://example.com/
 ```
 
-Ces éléments {{HTMLElement("audio")}}, {{HTMLElement("video")}} et {{HTMLElement("track")}} seront bloqués et ne se chargeront pas :
+Ces éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<track>`](/fr/docs/Web/HTML/Element/track) seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
 <audio src="https://not-example.com/audio"></audio>
@@ -71,16 +64,13 @@ Ces éléments {{HTMLElement("audio")}}, {{HTMLElement("video")}} et {{HTMLEleme
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-media-src", "media-src")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-media-src", "media-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.media-src")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("audio")}}, {{HTMLElement("video")}} and {{HTMLElement("track")}}
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<track>`](/fr/docs/Web/HTML/Element/track)

@@ -34,7 +34,7 @@ Les événement ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifie si l'auditeur est enregistré à l'événement. Renvoie `true` s'il est à l'écoute, sinon `false` .
 
-## addListener syntaxe
+## Syntaxe addListener
 
 ### Paramètres
 
@@ -55,7 +55,7 @@ Enregistrez les noms des extensions lorsqu'ils sont désactivés.
 
 ```js
 browser.management.onDisabled.addListener((info) => {
-  console.log(info.name + " was disabled");
+  console.log(info.name + " was disabled");
 });
 ```
 

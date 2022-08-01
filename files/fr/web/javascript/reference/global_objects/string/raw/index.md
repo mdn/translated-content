@@ -18,9 +18,11 @@ La méthode statique **`String.raw()`** est une fonction d'étiquetage (_tag fun
 
 ## Syntaxe
 
-    String.raw(callSite, ...substitutions)
+```js
+String.raw(callSite, ...substitutions)
 
-    String.raw`gabaritChaîne`
+String.raw`gabaritChaîne`
+```
 
 ### Paramètres
 

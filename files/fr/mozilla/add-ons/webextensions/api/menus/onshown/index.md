@@ -20,7 +20,7 @@ Une extension peut utiliser cet événement pour mettre à jour ses éléments d
 
 Le gestionnaire peut ajouter, supprimer ou mettre à jour des éléments de menu.
 
-Par exemple, l'extension d'exemple [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open)  ajoute un élément de menu qui s'affiche lorsque l'utilisateur clique sur un lien et qui, lorsqu'il est cliqué, ouvre simplement le lien. Il utilise `onShown` et `refresh()` pour annoter l'élément de menu avec le nom d'hôte du lien, afin que l'utilisateur puisse facilement voir où il ira avant de cliquer.
+Par exemple, l'extension d'exemple [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open)  ajoute un élément de menu qui s'affiche lorsque l'utilisateur clique sur un lien et qui, lorsqu'il est cliqué, ouvre simplement le lien. Il utilise `onShown` et `refresh()` pour annoter l'élément de menu avec le nom d'hôte du lien, afin que l'utilisateur puisse facilement voir où il ira avant de cliquer.
 
 Notez qu'une extension ne devrait pas prendre trop de temps avant d'appeler `refresh()`, sinon la mise à jour sera visible par l'utilisateur.
 

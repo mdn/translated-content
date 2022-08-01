@@ -13,7 +13,9 @@ Un _worker_ actif contrôle un {{domxref("ServiceWorkerClient")}} si l’URL du 
 
 ## Syntaxe
 
-    sw = ServiceWorker.active
+```js
+sw = ServiceWorker.active
+```
 
 ### Valeur
 
@@ -21,11 +23,9 @@ Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un �
 
 ## Spécifications
 
-
-
 | Spécification                                                                                                                                                | Statut                               | Commentaire            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('Service Workers', '#service-worker-registration-active-attribute', 'ServiceWorkerRegistration.active')}} | {{Spec2('Service Workers')}} | Définition initiale.   |
+| {{SpecName('Service Workers', '#service-worker-registration-active-attribute', 'ServiceWorkerRegistration.active')}} | {{Spec2('Service Workers')}} | Définition initiale.   |
 
 ## Compatibilité des navigateurs
 

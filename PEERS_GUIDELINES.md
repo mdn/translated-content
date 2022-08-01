@@ -8,7 +8,7 @@ It is the responsibility of the active community maintenance team for each
 active locale to keep up-to-date with reviews of pull requests and handling
 issues filed against that locale. You can filter the relevant pull requests and
 issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko`
-, `l10n-pt-br`, `l10n-ru`, and `l10n-zh`.
+, `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es`.
 
 ### Requirements for keeping locales up-to-date
 
@@ -30,52 +30,58 @@ will be considered inactive, and edits will stop being accepted.
 The review teams for each locale are:
 
 - Brazilian Portuguese (`pt-BR`) content — the
-[@yari-content-pt-br](https://github.com/orgs/mdn/teams/yari-content-pt-br)
+[yari-content-pt-br](https://github.com/orgs/mdn/teams/yari-content-pt-br)
   team, which consists of:
-  - [@lumigueres](https://github.com/lumigueres)
-  - [@josielrocha](https://github.com/josielrocha)
-  - [@juliosampaio](https://github.com/juliosampaio)
-  - [@clovislima](https://github.com/clovislima)
+  - [josielrocha](https://github.com/josielrocha)
+  - [clovislima](https://github.com/clovislima)
+  - [nathipg](https://github.com/nathipg)
 - French (`fr`) content — the
-[@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
+[yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
   team, which consists of:
-  - [@audrasjb](https://github.com/audrasjb)
-  - [@cw118](https://github.com/cw118)
-  - [@SphinxKnight](https://github.com/SphinxKnight)
-  - [@tristantheb](https://github.com/tristantheb)
+  - [audrasjb](https://github.com/audrasjb)
+  - [cw118](https://github.com/cw118)
+  - [SphinxKnight](https://github.com/SphinxKnight)
+  - [tristantheb](https://github.com/tristantheb)
 - Japanese (`ja`) content — the
-[@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
+[yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
-  - [@hmatrjp](https://github.com/hmatrjp)
-  - [@potappo](https://github.com/potappo)
-  - [@dynamis](https://github.com/dynamis)
-  - [@kenji-yamasaki](https://github.com/kenji-yamasaki)
-  - [@mfuji09](https://github.com/mfuji09)
+  - [hmatrjp](https://github.com/hmatrjp)
+  - [potappo](https://github.com/potappo)
+  - [dynamis](https://github.com/dynamis)
+  - [kenji-yamasaki](https://github.com/kenji-yamasaki)
+  - [mfuji09](https://github.com/mfuji09)
 - Korea (`ko`) content — the
-[@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
+[yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
   team, which consists of:
-  - [@cos18](https://github.com/cos18)
-  - [@yechoi42](https://github.com/yechoi42)
-  - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
-  - [@pje1740](https://github.com/pje1740)
-  - [@nKiNk](https://github.com/nKiNk)
-  - [@yujo11](https://github.com/yujo11)
-  - [@hochan222](https://github.com/hochan222)
+  - [cos18](https://github.com/cos18)
+  - [yechoi42](https://github.com/yechoi42)
+  - [GwangYeol-Im](https://github.com/GwangYeol-Im)
+  - [pje1740](https://github.com/pje1740)
+  - [yujo11](https://github.com/yujo11)
+  - [hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the
-[@yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru)
+[yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru)
   team, which consists of:
-  - [@armanpwnz](https://github.com/armanpwnz)
-  - [@captainspring](https://github.com/captainspring)
-  - [@myshov](https://github.com/myshov)
-  - [@Saionaro](https://github.com/Saionaro)
-  - [@sashasushko](https://github.com/sashasushko)
-  - [@lex111](https://github.com/lex111)
+  - [armanpwnz](https://github.com/armanpwnz)
+  - [captainspring](https://github.com/captainspring)
+  - [myshov](https://github.com/myshov)
+  - [Saionaro](https://github.com/Saionaro)
+  - [sashasushko](https://github.com/sashasushko)
+  - [lex111](https://github.com/lex111)
 - Chinese (`zh-CN` and `zh-TW`) content — the
-[@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
+[yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
   team, which consists of:
-  - [@t7yang](https://github.com/t7yang)
-  - [@dibery](https://github.com/dibery)
-  - [@irvin](https://github.com/irvin)
+  - [t7yang](https://github.com/t7yang)
+  - [irvin](https://github.com/irvin)
+  - [yin1999](https://github.com/yin1999)
+- Spanish (`es`) content - the [yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es)
+  team, which consists of:
+  - [JuanVqz](https://github.com/JuanVqz)
+  - [Graywolf9](https://github.com/Graywolf9)
+  - [davbrito](https://github.com/davbrito)
+  - [Vallejoanderson](https://github.com/vallejoanderson)
+  - [marcelozarate](https://github.com/marcelozarate)
+  - [Jalkhov](https://github.com/Jalkhov)
 
 ---
 
@@ -108,9 +114,8 @@ To activate a locale you must apply with the following information:
 
 ### Your locale
 
-Please specify which of the following three locales you wish to have unfrozen:
+Please specify which of the following two locales you wish to have unfrozen:
 
-- Spanish (es)
 - German (de)
 - Polish (pl)
 

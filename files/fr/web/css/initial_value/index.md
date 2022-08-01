@@ -20,7 +20,7 @@ Le mot-clé {{cssxref("initial")}} a été ajouté en CSS3 afin de permettre aux
 
 | Spécification                                                                                    | État                     | Commentaires          |
 | ------------------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
-| [CSS Cascade 4](https://drafts.csswg.org/css-cascade-4/#initial-values)                          |                          | Définition formelle.  |
+| [CSS Cascade 4](https://drafts.csswg.org/css-cascade-4/#initial-values)                          |                          | Définition formelle.  |
 | {{SpecName("CSS2.1", "cascade.html#specified-value", "initial value")}} | {{Spec2("CSS2.1")}} | Définition implicite. |
 
 ## Voir aussi

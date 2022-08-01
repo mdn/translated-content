@@ -3,7 +3,7 @@ title: Document.height
 slug: Web/API/Document/height
 translation_of: Web/API/Document/height
 ---
-{{APIRef("DOM")}} {{Obsolete_header}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 > **Note :** Apparu avec Gecko 6.0, `document.height` n'est plus supporté. Utilisez à la place `document.body.clientHeight`. Voir [`element.clientHeight`](/fr/docs/Web/API/Element/clientHeight).
 
@@ -13,7 +13,9 @@ Retourne la hauteur de l'objet {{domxref("document")}}. Dans la plupart des cas,
 
 ## Syntaxe
 
-    height_value = document.height
+```js
+height_value = document.height
+```
 
 ## Exemple
 
@@ -24,9 +26,11 @@ alert(document.height);
 
 ## Alternatives
 
-    document.body.clientHeight
-    document.documentElement.clientHeight
-    document.documentElement.scrollHeight
+```js
+document.body.clientHeight
+document.documentElement.clientHeight
+document.documentElement.scrollHeight
+```
 
 ## Spécification
 

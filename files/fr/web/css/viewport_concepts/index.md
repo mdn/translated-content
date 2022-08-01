@@ -113,8 +113,8 @@ Lorsqu'on utilise une requête média à l'intérieur du document de l'_iframe_,
 ```css
 @media screen and (min-width: 500px) {
   p {
-    color: red;
-  }
+    color: red;
+  }
 }
 ```
 

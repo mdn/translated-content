@@ -18,7 +18,9 @@ La méthode **`setUTCMilliseconds()`** définit les millièmes de secondes pour 
 
 ## Syntaxe
 
-    dateObj.setUTCMilliseconds(valeurMs)
+```js
+dateObj.setUTCMilliseconds(valeurMs)
+```
 
 ### Paramètres
 
@@ -47,9 +49,9 @@ leGrandJour.setUTCMilliseconds(500);
 | Spécification                                                                                                                            | État                         | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.29', 'Date.prototype.setUTCMilliseconds')}}                                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.9.5.29', 'Date.prototype.setUTCMilliseconds')}}                                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutcmilliseconds', 'Date.prototype.setUTCMilliseconds')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

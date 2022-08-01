@@ -19,7 +19,9 @@ La méthode **`add()`** permet d'ajouter un nouvel objet à un objet `WeakSet`.
 
 ## Syntaxe
 
-    ws.add(valeur);
+```js
+ws.add(valeur);
+```
 
 ### Paramètres
 
@@ -50,7 +52,7 @@ ws.add(1);
 | Spécification                                                                                            | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -13,8 +13,10 @@ original_slug: Web/JavaScript/Reference/Erreurs/is_not_iterable
 
 ## Message
 
-    TypeError: 'x' is not iterable (Firefox, Chrome)
-    TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+```
+TypeError: 'x' is not iterable (Firefox, Chrome)
+TypeError: 'x' is not a function or its return value is not iterable (Chrome)
+```
 
 ## Type d'erreur
 
@@ -22,7 +24,7 @@ original_slug: Web/JavaScript/Reference/Erreurs/is_not_iterable
 
 ## Quel est le problème ?
 
-La valeur passée comme opérande droit de [`for…of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) ou comme argument d'une fonction telle que {{jsxref("Promise.all")}} ou {{jsxref("TypedArray.from")}} n'est pas [un objet itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration).  Un objet itérable peut être un objet itérable natif tel qu'un objet {{jsxref("Array")}}, {{jsxref("String")}} ou {{jsxref("Map")}} ou le résultat d'un générateur ou un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»).
+La valeur passée comme opérande droit de [`for…of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) ou comme argument d'une fonction telle que {{jsxref("Promise.all")}} ou {{jsxref("TypedArray.from")}} n'est pas [un objet itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration). Un objet itérable peut être un objet itérable natif tel qu'un objet {{jsxref("Array")}}, {{jsxref("String")}} ou {{jsxref("Map")}} ou le résultat d'un générateur ou un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»).
 
 ## Exemples
 

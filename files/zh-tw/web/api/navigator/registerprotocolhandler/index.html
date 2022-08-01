@@ -40,7 +40,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <h2 id="Permitted_schemes">Permitted schemes</h2>
 
-<p>For security reasons, <code>registerProtocolHandler()</code> has restrictions on which schemes may be registered. A custom scheme may be registered as long as the scheme's name begins with "web+", is at least five characters long (including the "web+" prefix), and has only lower-case ASCII letters in its name. For example, "web+burger", as shown in the {{anch("Example")}} below.</p>
+<p>For security reasons, <code>registerProtocolHandler()</code> has restrictions on which schemes may be registered. A custom scheme may be registered as long as the scheme's name begins with "web+", is at least five characters long (including the "web+" prefix), and has only lower-case ASCII letters in its name. For example, "web+burger", as shown in the <a href="#example">Example</a> below.</p>
 
 <p>Otherwise, the scheme must be one of the schemes on the whitelist below:</p>
 
@@ -81,7 +81,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <p>The user will be notified that your code has asked to register the protocol handler, so that they can decide whether or not to permit it. See the screenshot below for an example.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9683/protocolregister.png"></p>
+<p><img src="protocolregister.png"></p>
 
 <div class="note">
 <p>"<a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window">Register a webmail service as mailto handler</a>" shows how to do this from XPCOM scope.</p>
@@ -89,22 +89,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-navigator-registerprotocolhandler', 'registerProtocolHandler()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

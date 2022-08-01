@@ -16,7 +16,9 @@ La propriété en lecture seule **`NodeIterator.whatToShow`** est un `unsigned i
 
 ## Syntaxe
 
-    var nodeTypes = nodeIterator.whatToShow;
+```js
+var nodeTypes = nodeIterator.whatToShow;
+```
 
 Les valeurs pouvant être combinées pour former le masque de bits sont :
 
@@ -143,7 +145,7 @@ var nodeIterator = document.createNodeIterator(
     false
 );
 if( (nodeIterator.whatToShow == NodeFilter.SHOW_ALL) ||
-    (nodeIterator.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
+    (nodeIterator.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
     // nodeIterator affichera les commentaires
 }
 ```

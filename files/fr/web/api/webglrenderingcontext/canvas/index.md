@@ -15,17 +15,19 @@ La propriété `WebGLRenderingContext.canvas` est une référence en lecture seu
 
 ## Syntaxe
 
-    gl.canvas;
+```js
+gl.canvas;
+```
 
 ### Valeur retournée
 
-Soit un objet {{domxref("HTMLCanvasElement")}} ou {{domxref("OffscreenCanvas")}}, soit {{jsxref("null")}}.
+Soit un objet {{domxref("HTMLCanvasElement")}} ou {{domxref("OffscreenCanvas")}}, soit {{jsxref("null")}}.
 
 ## Exemples
 
 ### Élément canevas
 
-Étant donné cet élément {{HTMLElement("canvas")}} :
+Étant donné cet élément {{HTMLElement("canvas")}} :
 
 ```html
 <canvas id="canevas"></canvas>
@@ -41,7 +43,7 @@ gl.canvas; // HTMLCanvasElement
 
 ### Canevas hors écran
 
-Exemple d'utilisation de l'objet expérimental {{domxref("OffscreenCanvas")}}.
+Exemple d'utilisation de l'objet expérimental {{domxref("OffscreenCanvas")}}.
 
 ```js
 var horsEcran = new OffscreenCanvas(256, 256);

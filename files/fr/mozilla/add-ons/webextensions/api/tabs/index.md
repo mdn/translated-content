@@ -20,7 +20,7 @@ Permet d'interagir avec le système d'onglets du navigateur.
 
 Vous pouvez utiliser cette API pour obtenir une liste des onglets ouverts, filtrés par différents critères, ainsi que pour ouvrir, mettre à jour, déplacer, recharger et supprimer des onglets. Vous ne pouvez pas accéder directement au contenu hébergé par les onglets à l'aide de cette API, mais vous pouvez insérer du JavaScript et du CSS dans les onglets en utilisant les API {{WebExtAPIRef("tabs.executeScript()")}} ou {{WebExtAPIRef("tabs.insertCSS()")}}.
 
-Vous pouvez utiliser la majeure partie de cette API sans autorisation spéciale. Toutefois :
+Vous pouvez utiliser la majeure partie de cette API sans autorisation spéciale. Toutefois&nbsp;:
 
 - Pour accéder à `Tab.url`, `Tab.title` et `Tab.favIconUrl`, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`.
 
@@ -119,7 +119,7 @@ De nombreuses opérations d'onglet utilisent un identifiant (`id`) d'onglet. Les
 - {{WebExtAPIRef("tabs.sendMessage()")}}
   - : Envoie un message unique au(x) script(s) de contenu dans l'onglet spécifié.
 - {{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}
-  - : Envoie une requête unique au(x) script(s) de contenu dans l'onglet spécifié. **Déprécié :** utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.
+  - : Envoie une requête unique au(x) script(s) de contenu dans l'onglet spécifié. **Déprécié&nbsp;:** utilisez {{WebExtAPIRef("tabs.sendMessage()")}} à la place.
 - {{WebExtAPIRef("tabs.setZoom()")}}
   - : Effectue un zoom sur l'onglet spécifié.
 - {{WebExtAPIRef("tabs.setZoomSettings()")}}
@@ -136,7 +136,7 @@ De nombreuses opérations d'onglet utilisent un identifiant (`id`) d'onglet. Les
 - {{WebExtAPIRef("tabs.onActivated")}}
   - : Est émis lorsque l'onglet actif dans une fenêtre change. Notez que l'URL de l'onglet peut ne pas être définie au moment où cet évènement a été émis.
 - {{WebExtAPIRef("tabs.onActiveChanged")}} {{deprecated_inline}}
-  - : Est émis lorsque l'onglet sélectionné dans une fenêtre change. **Déprécié :** utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
+  - : Est émis lorsque l'onglet sélectionné dans une fenêtre change. **Déprécié&nbsp;:** utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
 - {{WebExtAPIRef("tabs.onAttached")}}
   - : Est émis lorsqu'un onglet est attaché à une fenêtre, par exemple parce qu'il a été déplacé entre différentes fenêtres.
 - {{WebExtAPIRef("tabs.onCreated")}}
@@ -144,7 +144,7 @@ De nombreuses opérations d'onglet utilisent un identifiant (`id`) d'onglet. Les
 - {{WebExtAPIRef("tabs.onDetached")}}
   - : Est émis lorsqu'un onglet est détaché d'une fenêtre, par exemple parce qu'il a été déplacé entre différentes fenêtres.
 - {{WebExtAPIRef("tabs.onHighlightChanged")}} {{deprecated_inline}}
-  - : Est émis lorsque les onglets en surbrillance ou sélectionnés dans une fenêtre changent. **Déprécié :** utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.
+  - : Est émis lorsque les onglets en surbrillance ou sélectionnés dans une fenêtre changent. **Déprécié&nbsp;:** utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.
 - {{WebExtAPIRef("tabs.onHighlighted")}}
   - : Est émis lorsque les onglets en surbrillance ou sélectionnés dans une fenêtre changent.
 - {{WebExtAPIRef("tabs.onMoved")}}
@@ -160,7 +160,7 @@ De nombreuses opérations d'onglet utilisent un identifiant (`id`) d'onglet. Les
     .
 
 - {{WebExtAPIRef("tabs.onSelectionChanged")}} {{deprecated_inline}}
-  - : Est émis lorsque l'onglet sélectionné dans une fenêtre change. **Déprécié :** utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
+  - : Est émis lorsque l'onglet sélectionné dans une fenêtre change. **Déprécié&nbsp;:** utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
 - {{WebExtAPIRef("tabs.onUpdated")}}
   - : Est émis lorsqu'un onglet est mis à jour.
 - {{WebExtAPIRef("tabs.onZoomChange")}}

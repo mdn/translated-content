@@ -94,7 +94,7 @@ function deleteData() {
 
 | Spécification                                                                                                        | État                         | Commentaires |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-delete-IDBRequest-any-key', 'delete()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-delete-IDBRequest-any-key', 'delete()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

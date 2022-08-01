@@ -43,7 +43,7 @@ La plus simple expression est une déclaration CSS, c'est-à-dire un nom de prop
 @supports ( transform-origin: 5% 5% ) { }
 ```
 
-renvoie le booléen vrai si la propriété {{cssxref("transform-origin")}} du navigateur considère que la valeur `5% 5%` est valide.
+renvoie le booléen vrai si la propriété {{cssxref("transform-origin")}} du navigateur considère que la valeur `5% 5%` est valide.
 
 Une déclaration CSS est toujours encadrée par des parenthèses.
 
@@ -161,9 +161,9 @@ sera ainsi équivalente à :
 
 ```css
 @supports (--toto: green) {
-  body {
-    color: --nomVar;
-  }
+  body {
+    color: --nomVar;
+  }
 }
 ```
 

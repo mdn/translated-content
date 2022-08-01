@@ -17,7 +17,9 @@ La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argume
 
 ## Syntaxe
 
-    parseInt(string, base);
+```js
+parseInt(string, base);
+```
 
 ### Paramètres
 
@@ -104,7 +106,7 @@ parseInt("4e2", 10);
 parseInt("4.7", 10);
 ```
 
-L'exemple suivant renvoie  **`224`** :
+L'exemple suivant renvoie  **`224`** :
 
 ```js
 parseInt("0e0", 16);

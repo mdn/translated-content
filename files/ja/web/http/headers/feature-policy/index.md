@@ -11,6 +11,7 @@ tags:
   - セキュリティ
   - ウェブ
   - ヘッダー
+browser-compat: http.headers.Feature-Policy
 translation_of: Web/HTTP/Headers/Feature-Policy
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
@@ -66,15 +67,15 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/ambient-light-sensor','ambient-light-sensor')}}
   - : 現在の文書が、端末の周囲の環境における光量についての情報を、 {{DOMxRef("AmbientLightSensor")}} インターフェイスを通じて収集することを許可するかどうかを制御します。
 - {{httpheader('Feature-Policy/autoplay','autoplay')}}
-  - : 現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスがメディアの自動再生をリクエストすることを無効にするかどうかを制御します。このポリシーが有効であり、ユーザーによる操作がなかった場合、 {{domxref("HTMLMediaElement.play()")}} が返す {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。 {{HTMLELement("audio")}} および {{HTMLElement("video")}} 要素の `autoplay` 属性は無視されます。
+  - : 現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスがメディアの自動再生をリクエストすることを無効にするかどうかを制御します。このポリシーが有効であり、ユーザーによる操作がなかった場合、 {{domxref("HTMLMediaElement.play()")}} が返す {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素の `autoplay` 属性は無視されます。
 - {{httpheader('Feature-Policy/battery','battery')}}
-  - : [Battery Status API](/ja/docs/Web/API/Battery_Status_API) の使用を許可するかどうかを制御します。このポリシーが無効になっている場合、 {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} が返す {{JSxRef("Promise")}} は {{Exception("NotAllowedError")}} の {{DOMxRef("DOMException")}} で拒否されます。
+  - : [Battery Status API](/ja/docs/Web/API/Battery_Status_API) の使用を許可するかどうかを制御します。このポリシーが無効になっている場合、 {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} が返す {{JSxRef("Promise")}} は `NotAllowedError` の {{DOMxRef("DOMException")}} で拒否されます。
 - {{httpheader('Feature-Policy/camera', 'camera')}}
-  - : 現在の文書が動画入力機器を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} が返す {{jsxref("Promise")}} は {{Exception("NotAllowedError")}} の {{DOMxRef("DOMException")}} で拒否されます。
+  - : 現在の文書が動画入力機器を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} が返す {{jsxref("Promise")}} は `NotAllowedError` の {{DOMxRef("DOMException")}} で拒否されます。
 - {{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}
-  - : 現在の文書が {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッドを使用して画面の内容をキャプチャすることを許可するかどうかを制御します。このポリシーが無効であれば、表示内容をキャプチャする許可がない場合、 `getDisplayMedia()` から返却されるプロミスが {{Exception("NotAllowedError")}} で拒否されます。
+  - : 現在の文書が {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッドを使用して画面の内容をキャプチャすることを許可するかどうかを制御します。このポリシーが無効であれば、表示内容をキャプチャする許可がない場合、 `getDisplayMedia()` から返却されるプロミスが `NotAllowedError` で拒否されます。
 - {{httpheader('Feature-Policy/document-domain','document-domain')}}
-  - : 現在の文書が {{domxref("document.domain")}} を設定することを許可するかどうかを制御します。このポリシーが無効な場合、 {{domxref("document.domain")}} を設定しようとすると失敗し、 {{Exception("SecurityError")}} の {{domxref("DOMException")}} が発生します。
+  - : 現在の文書が {{domxref("document.domain")}} を設定することを許可するかどうかを制御します。このポリシーが無効な場合、 {{domxref("document.domain")}} を設定しようとすると失敗し、 `SecurityError` の {{domxref("DOMException")}} が発生します。
 - {{httpheader('Feature-Policy/encrypted-media', 'encrypted-media')}}
   - : 現在の文書が [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API) API (EME) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxref("Navigator.requestMediaKeySystemAccess()")}} から返却された {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。
 - {{httpheader('Feature-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
@@ -83,7 +84,7 @@ Feature-Policy: <directive> <allowlist>
   - : ビューポートの見える範囲外にあるフレーム内のタスクを実行するかどうかを制御します。
 
 - {{httpheader('Feature-Policy/fullscreen','fullscreen')}}
-  - : 現在の文書が {{DOMxRef('Element.requestFullScreen()')}} を使用することを許可するかどうかを制御します。このポリシーが無効であれば、返却された {{jsxref('Promise')}} が {{jsxref('TypeError')}} で拒否されます。
+  - : 現在の文書が {{DOMxRef("Element.requestFullscreen()")}} を使用することを許可するかどうかを制御します。このポリシーが無効であれば、返却された {{jsxref("Promise")}} が {{jsxref("TypeError")}} で拒否されます。
 - {{httpheader('Feature-Policy/gamepad','gamepad')}}
   - : 現在の文書が [Gamepad API](/ja/docs/Web/API/Gamepad_API) を使用することを許可するかどうかを制御します。
     このポリシーが無効であれば、 {{domxref('Navigator.getGamepads()')}} の呼び出しで `SecurityError` の {{domxref('DOMException')}} が発生するようになり、 {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} および {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} イベントは発生しなくなります。
@@ -100,7 +101,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/magnetometer','magnetometer')}}
   - : 現在の文書が {{DOMxRef("Magnetometer")}} インターフェイスを通じて、端末の方向に関する情報を収集することを許可するかどうかを制御します。
 - {{httpheader('Feature-Policy/microphone','microphone')}}
-  - : 現在の文書がオーディオ入力端末を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxref("MediaDevices.getUserMedia()")}} で返却された {{jsxref('Promise')}} が {{Exception("NotAllowedError")}} で拒否されます。
+  - : 現在の文書がオーディオ入力端末を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxref("MediaDevices.getUserMedia()")}} で返却されたプロミス ({{jsxref('Promise')}}) が `NotAllowedError` の {{domxref("DOMException")}} で拒否されます。
 - {{httpheader('Feature-Policy/midi', 'midi')}}
   - : 現在の文書が [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxref("Navigator.requestMIDIAccess()")}} から返却された {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。
 - {{httpheader('Feature-Policy/navigation-override','navigation-override')}}
@@ -108,7 +109,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/oversized-images','oversized-images')}}
   - : 現在の文書が大きな画像をダウンロードして表示することを許可するかどうかを制御します。
 - {{httpheader('Feature-Policy/payment', 'payment')}}
-  - : 現在の文書が [Payment Request API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("PaymentRequest","PaymentRequest()")}} コンストラクターで {{Exception("SecurityError")}} の {{domxref("DOMException")}} が発生します。
+  - : 現在の文書が [Payment Request API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("PaymentRequest","PaymentRequest()")}} コンストラクターで `SecurityError` の {{domxref("DOMException")}} が発生します。
 - {{httpheader('Feature-Policy/picture-in-picture', 'picture-in-picture')}}
   - : 現在の文書が、該当する API を使用して Picture-in-Picture モードで動画を再生することを許可するかどうかを制御します。
 - {{httpheader("Feature-Policy/publickey-credentials-get", "publickey-credentials-get")}}

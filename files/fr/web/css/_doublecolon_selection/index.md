@@ -34,9 +34,11 @@ On notera que {{cssxref("background-image")}} est ignorée, comme les autres pro
 
 ## Syntaxe
 
-    /*Syntaxe propre à Firefox (61 et antérieur) */
-    ::-moz-selection
-    {{csssyntax}}
+```css
+/*Syntaxe propre à Firefox (61 et antérieur) */
+::-moz-selection
+{{csssyntax}}
+```
 
 ## Exemples
 

@@ -21,9 +21,9 @@ translation_of: Web/API/Force_Touch_events
 - {{event("webkitmouseforcedown")}} {{non-standard_inline}}
   - : Cet évènement est lancé après l'évènement {{event("mousedown")}} dès qu'une pression suffisante a été appliquée pour qu'il puisse être qualifié de "clic de force".
 - {{event("webkitmouseforceup")}} {{non-standard_inline}}
-  - : Cet évènement est lancé après l'évènement {{event("webkitmouseforcedown")}} dès que la pression a été suffisamment réduite pour terminer le "clic de force".
+  - : Cet évènement est lancé après l'évènement {{event("webkitmouseforcedown")}} dès que la pression a été suffisamment réduite pour terminer le "clic de force".
 - {{event("webkitmouseforcechanged")}} {{non-standard_inline}}
-  - : Cet évènement est lancé chaque fois que la quantité de pression change. Il se déclenche d'abord après l'événement {{event ("mousedown")}} et s'arrête avant l'événement {{event ("mouseup")}}.
+  - : Cet évènement est lancé chaque fois que la quantité de pression change. Il se déclenche d'abord après l'événement {{event ("mousedown")}} et s'arrête avant l'événement {{event ("mouseup")}}.
 
 ## Propriété des évènements
 

@@ -31,7 +31,9 @@ L'en-tête de requête HTTP **`Authorization`** contient les identifiants permet
 
 ## Syntaxe
 
-    Authorization: <type> <credentials>
+```
+Authorization: <type> <credentials>
+```
 
 ## Directives
 
@@ -52,7 +54,9 @@ L'en-tête de requête HTTP **`Authorization`** contient les identifiants permet
 
 ## Exemples
 
-    Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
+Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
 
 Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Authentication) avec des exemples de configuration de serveurs Apache ou nginx pour protéger votre site grâce à un mot de passe et l'authentification HTTP basique.
 

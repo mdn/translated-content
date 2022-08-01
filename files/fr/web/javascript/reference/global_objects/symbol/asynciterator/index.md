@@ -53,7 +53,7 @@ Il n'existe actuellement pas d'objets JavaScript natifs qui possèdent la clé `
 
 | Spécification                                                                                        | État                     | Commentaires |
 | ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------ |
-| {{SpecName('ES2018', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} | {{Spec2('ES2018')}} |              |
+| {{SpecName('ES2018', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} | {{Spec2('ES2018')}} |              |
 
 ## Compatibilité des navigateurs
 

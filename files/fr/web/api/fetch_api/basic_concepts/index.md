@@ -3,7 +3,7 @@ title: 'Fetch : concepts de départ'
 slug: Web/API/Fetch_API/Basic_concepts
 translation_of: Web/API/Fetch_API/Basic_concepts
 ---
-{{DefaultAPISidebar("Fetch API")}}{{draft}}
+{{DefaultAPISidebar("Fetch API")}}
 
 L'[API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) fournit une interface pour récupérer des ressources (y compris depuis le réseau). Elle paraîtra familière à quiconque aura déjà utilisé [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), mais elle fournit un jeu de fonctionnalités plus puissantes et plus souples. Cet article explique quelques-uns des principes de base de l'API <i lang="en">Fetch</i>.
 
@@ -61,7 +61,7 @@ When a new {{domxref("Headers")}} object is created using the {{domxref("Headers
   </tbody>
 </table>
 
-A header's guard affects the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods which change the header's contents. A `TypeError` is thrown if you try to modify a {{domxref("Headers")}} object whose guard is `immutable`. However, the operation will work if
+A header's guard affects the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods which change the header's contents. A `TypeError` is thrown if you try to modify a {{domxref("Headers")}} object whose guard is `immutable`. However, the operation will work if
 
 - guard is `request` and the header _name_ isn't a {{Glossary("forbidden header name")}} .
 - guard is `request-no-cors` and the header _name_/_value_ is a {{Glossary("simple header")}} .

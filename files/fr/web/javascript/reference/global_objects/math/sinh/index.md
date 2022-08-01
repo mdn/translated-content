@@ -21,7 +21,9 @@ La fonction **`Math.sinh()`** renvoie le sinus hyperbolique d'un nombre, dont la
 
 ## Syntaxe
 
-    Math.sinh(x)
+```js
+Math.sinh(x)
+```
 
 ### Paramètres
 
@@ -67,7 +69,7 @@ Math.sinh = Math.sinh || function(x){
 | Spécification                                                            | État                         | Commentaires        |
 | ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

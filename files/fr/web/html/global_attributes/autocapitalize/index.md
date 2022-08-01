@@ -26,7 +26,7 @@ L'attribut `autocapitalize` n'entraînera pas de mise en majuscule automatique p
 
 | Spécification                                                                                                    | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', "interaction.html#autocapitalization", "autocapitalize")}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML WHATWG', "interaction.html#autocapitalization", "autocapitalize")}} | {{Spec2('HTML WHATWG')}} |              |
 
 ## Compatibilité des navigateurs
 

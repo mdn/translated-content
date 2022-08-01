@@ -14,16 +14,16 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 <p>JavaScript 有以下幾種運算子。 此處將描述運算子以及一些運算子的優先順序。</p>
 
 <ul>
- <li>{{ web.link("#賦值運算子", "賦值運算子") }}</li>
- <li>{{ web.link("#比較運算子", "比較運算子") }}</li>
- <li>{{ web.link("#算術運算子", "算術運算子") }}</li>
- <li>{{ web.link("#位元運算子", "位元運算子") }}</li>
- <li>{{ web.link("#邏輯運算子", "邏輯運算子") }}</li>
- <li>{{ web.link("#字串運算子", "字串運算子") }}</li>
- <li>{{ web.link("#條件(三元)運算子", "條件(三元)運算子")}}</li>
- <li>{{ web.link("#逗點運算子", "逗點運算子")}}</li>
- <li>{{ web.link("#一元運算子", "一元運算子")}}</li>
- <li>{{ web.link("#關係運算子", "關係運算子")}}</li>
+ <li><a href="#賦值運算子">賦值運算子</a></li>
+ <li><a href="#比較運算子">比較運算子</a></li>
+ <li><a href="#算術運算子">算術運算子</a></li>
+ <li><a href="#位元運算子">位元運算子</a></li>
+ <li><a href="#邏輯運算子">邏輯運算子</a></li>
+ <li><a href="#字串運算子">字串運算子</a></li>
+ <li><a href="#條件（三元）運算子">條件（三元）運算子</a></li>
+ <li><a href="#逗點運算子">逗點運算子</a></li>
+ <li><a href="#一元運算子">一元運算子</a></li>
+ <li><a href="#關係運算子">關係運算子</a></li>
 </ul>
 
 <p>JavaScript 同時具有二元運算子及一元運算子， 以及一種特殊的 三元運算子，也就是 條件運算子。 一個二元運算子需要具備兩個運算元， 一個在運算元之前，一個在運算元之後:</p>
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>也有一些復合的 賦值運算子 是為了縮短下面表中的運算:</p>
 
-<table class="standard-table">
+<table>
  <caption>復合運算子</caption>
  <thead>
   <tr>
@@ -88,8 +88,8 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Remainder_assignment">餘數</a><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment">賦值</a></td>
-   <td><code>x %= y</code></td>
-   <td><code>x = x % y</code></td>
+   <td><code>x %= y</code></td>
+   <td><code>x = x % y</code></td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Exponentiation_assignment">指數</a><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment">賦值</a></td>
@@ -151,7 +151,7 @@ var [one, two, three] = foo;</pre>
 var var2 = 4;
 </pre>
 
-<table class="standard-table">
+<table>
  <caption>比較運算子</caption>
  <thead>
   <tr>
@@ -176,7 +176,7 @@ var var2 = 4;
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">嚴格等於</a> (<code>===</code>)</td>
-   <td>假如運算元具有相同型態且等價則回傳True。參考 {{jsxref("Object.is")}} 及 <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness" title="/en-US/docs/Web/JavaScript/Guide/Sameness">JS中的等價性</a>。</td>
+   <td>假如運算元具有相同型態且等價則回傳True。參考 {{jsxref("Object.is")}} 及 <a href="/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness">JS中的等價性</a>。</td>
    <td><code>3 === var1</code></td>
   </tr>
   <tr>
@@ -273,11 +273,11 @@ var var2 = 4;
 
 <h3 id="位元運算子">位元運算子</h3>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">位元運算子</a> 把運算元當作 32 位元的集合來看待 (0和1)， 而不是十進位，十六進位，或八進位。例如，十進位數字 9 以二進位表示就是  1001。 位元運算子將運算元以上述二進位的形式處理，但是回傳 Javascript 中的數字類型值。</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">位元運算子</a> 把運算元當作 32 位元的集合來看待 (0和1)， 而不是十進位，十六進位，或八進位。例如，十進位數字 9 以二進位表示就是  1001。 位元運算子將運算元以上述二進位的形式處理，但是回傳 Javascript 中的數字類型值。</p>
 
 <p>下列表總結了 JavaScript' 中的位元運算子。</p>
 
-<table class="standard-table">
+<table>
  <caption>位元運算子</caption>
  <thead>
   <tr>
@@ -331,7 +331,7 @@ var var2 = 4;
 
 <ul>
  <li>運算元被轉換為32 bits 的整數以二進位形式表示 (0 和 1)。大於 32 bits 的數字將被捨棄多出來的位元。例如， 下列整數大於32個bit但是會被轉換為32個bit的整數:
-  <pre>轉換之前:  11100110111110100000000000000110000000000001
+  <pre>轉換之前:  11100110111110100000000000000110000000000001
 轉換之後:              10100000000000000110000000000001</pre>
  </li>
  <li>第一個運算元中的每個bit分別對應到第二個運算元的每個bit: 第一個 bit 對 第一個 bit, 第二個 bit 對 第二個 bit， 以此類推。</li>
@@ -340,7 +340,7 @@ var var2 = 4;
 
 <p>例如， 9 的二元表示法是 1001， 15 的二元表示法是 1111。因此，在使用位元運算子的時候，結果如下:</p>
 
-<table class="standard-table">
+<table>
  <caption>位元運算子範例</caption>
  <thead>
   <tr>
@@ -485,8 +485,8 @@ var n3 = !'Cat'; // !t 回傳 false
 <p>邏輯運算式是由左向右解析的， 他們會以下列規則嘗試進行 短路解析:</p>
 
 <ul>
- <li><code>false</code> &amp;&amp;<em> 任何東西  </em> 是 false 的短路解析。</li>
- <li><code>true</code> || <em>任何東西  </em> 是 true 的短路解析。</li>
+ <li><code>false</code> &amp;&amp;<em> 任何東西  </em> 是 false 的短路解析。</li>
+ <li><code>true</code> || <em>任何東西  </em> 是 true 的短路解析。</li>
 </ul>
 
 <p>這些規則保證 解析總是正確的。 值得注意的地方是，剩餘部分的運算式並沒有被解析，所以不會占用任何效能。</p>
@@ -522,7 +522,7 @@ mystring += '母'; // 得到 "字母" 並賦與給變數 mystring.</pre>
 
 <p>這個陳述句會將 "成人" 賦與給變數 <code>status</code> 假如 <code>age</code> 大於等於18。 否則，會將 "小孩" 賦與給變數 <code>status</code>。</p>
 
-<h3 id="Comma_operator">逗號運算子</h3>
+<h3 id="逗點運算子">逗號運算子</h3>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator">逗點運算子</a> (<code>,</code>) 作用是解析兩個運算元並回傳後面那個運算元的值。 這個運算子通常用於for迴圈內部，讓多個變數能在每次迴圈中被更新。</p>
 
@@ -732,7 +732,7 @@ if (theDay instanceof Date) {
 
 <p>下列表格列出了運算子的優先級， 從高到低。</p>
 
-<table class="standard-table">
+<table>
  <caption>運算子優先級</caption>
  <thead>
   <tr>
@@ -823,9 +823,9 @@ if (theDay instanceof Date) {
  JavaScript 運算式有下列幾種種類:</p>
 
 <ul>
- <li>算術: 解析出數字， 例如 3.14159. (通常使用 {{ web.link("#Arithmetic_operators", "算術運算子") }}.)</li>
- <li>字串: 解析出字串， 例如 "Fred" or "234"。 (通常使用 {{ web.link("#String_operators", "字串運算子") }}.)</li>
- <li>邏輯: 解析出 True 或 False (通常與 {{ web.link("#Logical_operators", "邏輯運算子") }} 相關。)</li>
+ <li>算術: 解析出數字， 例如 3.14159。（通常使用<a href="#算術運算子">算術運算子</a>。）</li>
+ <li>字串: 解析出字串， 例如 "Fred" or "234"。（通常使用<a href="#字串運算子">字串運算子</a>。）</li>
+ <li>邏輯: 解析出 True 或 False（通常與<a href="#邏輯運算子">邏輯運算子</a>相關。）</li>
  <li>主流運算式: JavaScript 基本的關鍵字及運算式。</li>
  <li>左側運算式: 左側是指定值的對象。</li>
 </ul>

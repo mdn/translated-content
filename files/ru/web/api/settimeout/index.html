@@ -22,7 +22,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
  <li><code>timeoutID -</code> это <em>числовой</em> ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.</li>
  <li><code>func -</code> это <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function" title="en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function">функция</a>, которую требуется вызвать после <code>delay</code> миллисекунд.</li>
  <li><code>code</code> - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после <code>delay</code> миллисекунд (использовать этот метод <strong>не рекомендуется</strong> по тем же причинам, что и <a href="/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!" title="en-US/docs/Core JavaScript 1.5 Reference/Global Functions/Eval#Don't use eval!">eval()</a>)</li>
- <li><code>delay</code>  {{optional_inline}} -  задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. {{anch("Notes")}} ниже.</li>
+ <li><code>delay</code>  {{optional_inline}} -  задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. <a href="#notes">Notes</a> ниже.</li>
 </ul>
 
 <p>Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел <a href="#Аргументы_колбэк-функции">Аргументы колбэк-функции</a>).</p>

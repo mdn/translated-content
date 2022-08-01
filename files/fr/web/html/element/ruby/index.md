@@ -91,7 +91,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément qui accepte du <a
+        Tout élément qui accepte du <a
           href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
           >contenu de phrasé</a
         >.

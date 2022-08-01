@@ -19,7 +19,9 @@ La méthode **`Array.from()`** permet de créer une nouvelle instance d'`Array` 
 
 ## Syntaxe
 
-    Array.from(arrayLike [, fonctionMap[, thisArg]])
+```js
+Array.from(arrayLike [, fonctionMap[, thisArg]])
+```
 
 ### Paramètres
 

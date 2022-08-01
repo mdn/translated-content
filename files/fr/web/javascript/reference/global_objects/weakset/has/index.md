@@ -19,7 +19,9 @@ La méthode **`has()`** renvoie un booléen indiquant si un objet donné est con
 
 ## Syntaxe
 
-    ws.has(valeur);
+```js
+ws.has(valeur);
+```
 
 ### Paramètres
 
@@ -47,7 +49,7 @@ mySet.has(obj);     // renvoie false
 | Spécification                                                                                            | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

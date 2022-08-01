@@ -13,7 +13,7 @@ Cet article décrit le déroulement normal, c'est-à-dire la façon dont les él
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux du HTML (étudiez
         <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
@@ -24,7 +24,7 @@ Cet article décrit le déroulement normal, c'est-à-dire la façon dont les él
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Expliquer comment les navigateurs composent les pages web par défaut,
         avant que nous commencions à faire des modifications.
@@ -76,14 +76,14 @@ Voici un exemple simple expliquant cela :
  la même ligne. Les débordements des éléments inline
  <span>sont placés sur une nouvelle ligne si possible
  (comme celle‑ci contenant du texte)</span>, sinon ils
- sont placés sur une nouvelle ligne, comme cette image :
+ sont placés sur une nouvelle ligne, comme cette image&nbsp;:
  <img src="long.jpg"></p>
 ```
 
 ```css
 body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {

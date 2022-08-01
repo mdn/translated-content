@@ -10,11 +10,13 @@ translation_of: Web/API/FileRequest/onprogress
 ---
 {{APIRef("File System API")}} {{non-standard_header}}
 
-Cette propriété spécifie une fonction de rappel devant être exécutée de façon répétée pendant que l'opération représentée par un objet  {{ domxref("FileRequest") }} est en cours.
+Cette propriété spécifie une fonction de rappel devant être exécutée de façon répétée pendant que l'opération représentée par un objet  {{ domxref("FileRequest") }} est en cours.
 
 ## Syntaxe
 
-    instanceOfFileRequest.onprogress = function;
+```js
+instanceOfFileRequest.onprogress = function;
+```
 
 Où `instanceOfFileRequest` est un objet {{ domxref("FileRequest") }} et `function` est la fonction JavaScript à exécuter.
 

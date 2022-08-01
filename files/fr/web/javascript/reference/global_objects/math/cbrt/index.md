@@ -21,7 +21,9 @@ La fonction **`Math.cbrt()`** renvoie la racine cubique (le nom anglais étant _
 
 ## Syntaxe
 
-    Math.cbrt(x)
+```js
+Math.cbrt(x)
+```
 
 ### Paramètres
 
@@ -49,7 +51,7 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948732
+Math.cbrt(2);  // 1.2599210498948732
 ```
 
 ## Spécifications

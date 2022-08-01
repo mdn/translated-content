@@ -60,7 +60,7 @@ Il existe trois types de déclarations de variable en JavaScript.
 Les variables sont utilisées comme des noms symboliques désignant les valeurs utilisées dans l'application. Les noms des variables sont appelés _identifiants_. Ces identifiants doivent respecter certaines règles.
 
 Un identifiant JavaScript doit commencer par une lettre, un tiret bas (\_) ou un symbole dollar ($). Les caractères qui suivent peuvent être des chiffres (0 à 9).
-À noter : puisque Javascript est sensible aux majuscules et minuscules: les lettres peuvent comprendre les caractères de « A » à « Z » (en majuscule) mais aussi les caractères  de « a » à « z » (en minuscule).
+À noter : puisque Javascript est sensible aux majuscules et minuscules: les lettres peuvent comprendre les caractères de « A » à « Z » (en majuscule) mais aussi les caractères de « a » à « z » (en minuscule).
 
 On peut aussi utiliser la plupart lettres Unicode ou ISO 8859-1 (comme å et ü, pour plus de détails, voir [ce billet de blog, en anglais](https://mathiasbynens.be/notes/javascript-identifiers-es6)) au sein des identifiants. Il est également possible d'utiliser les \uXXXX [séquences d'échappement Unicode](<#littéraux chaînes>) comme caractères dans les identifiants.
 
@@ -295,7 +295,7 @@ Bien que cette description couvre peu de types de données, ceux-ci vous permett
 
 ### Conversion de types de données
 
-JavaScript est un langage à typage dynamique. Cela signifie qu'il n'est pas nécessaire de spécifier le type de données d'une variable lors de sa déclaration. Les types de données sont convertis automatiquement durant l'exécution du script. Ainsi, il est possible de définir une variable de cette façon :
+JavaScript est un langage à typage dynamique. Cela signifie qu'il n'est pas nécessaire de spécifier le type de données d'une variable lors de sa déclaration. Les types de données sont convertis automatiquement durant l'exécution du script. Ainsi, il est possible de définir une variable de cette façon :
 
 ```js
 var réponse = 42;
@@ -349,13 +349,13 @@ Une autre méthode pour récupérer un nombre à partir d'une chaîne de caract�
 
 Les littéraux sont utilisés pour représenter des valeurs en JavaScript. Ce sont des valeurs fixes, pas des variables, qui sont fournies _littéralement_ au script. Cette section décrit les différents types de littéraux :
 
-- [Littéraux de tableaux](<#littéraux tableaux>)
-- [Littéraux booléens](<#littéraux booléens>)
-- [Littéraux de nombres flottants](<#littéraux décimaux>)
-- [Littéraux numériques](<#littéraux numériques>)
-- [Littéraux d'objets](<#littéraux objets>)
-- [Littéraux d'expressions rationnelles](#regexp)
-- [Littéraux de chaînes de caractères](<#littéraux chaînes>)
+- [Littéraux de tableaux](<#les_littéraux_de_tableaux>)
+- [Littéraux booléens](<#les_littéraux_booléens>)
+- [Littéraux de nombres flottants](<#les_littéraux_de_nombres_décimaux>)
+- [Littéraux numériques](<#les_littéraux_numériques>)
+- [Littéraux d'objets](<#les_littéraux_dobjets>)
+- [Littéraux d'expressions rationnelles](#les_littéraux_dexpressions_rationnelles)
+- [Littéraux de chaînes de caractères](<#les_littéraux_de_chaînes_de_caractères>)
 
 ### Les littéraux de tableaux
 
@@ -422,10 +422,12 @@ Les nombres {{jsxref("Number")}} et les grands entiers {{jsxref("BigInt")}} peuv
 
 Voici des exemples pour ces littéraux :
 
-    0, 117, -345, 123456789123456789n (notation décimale, base 10)
-    015, 0001, -077, 0o7777777777777n (notation octale, base 8)
-    0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn (notation hexadécimale, base 16)
-    0b11, 0B0011, -0b11, 0b11101001010101010101n (notation binaire, base 2)
+```
+0, 117, -345, 123456789123456789n (notation décimale, base 10)
+015, 0001, -077, 0o7777777777777n (notation octale, base 8)
+0x1123, 0x00111, -0xF1A7, 0x123456789ABCDEFn (notation hexadécimale, base 16)
+0b11, 0B0011, -0b11, 0b11101001010101010101n (notation binaire, base 2)
+```
 
 Pour plus d'informations, voir [les littéraux numériques dans la grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Littéraux_numériques).
 
@@ -444,13 +446,17 @@ Des exemples sont : 3.1415, -3.1E12, .1e12, et 2E-12.
 
 On peut raccourcir cette syntaxe en :
 
-    [(+|-)][chiffres].[chiffres][(E|e)[(+|-)]chiffres]
+```
+[(+|-)][chiffres].[chiffres][(E|e)[(+|-)]chiffres]
+```
 
 Par exemple :
 
-    3.14
-    2345.789
-    .3333333333333333333
+```
+3.14
+2345.789
+.3333333333333333333
+```
 
 ### Les littéraux d'objets
 
@@ -607,14 +613,14 @@ Voici un tableau listant les caractères spéciaux qu'il est possible d'utiliser
 |             |                                                                                                                                                                                                      |
 | `\xXX`      | Le caractère dont l'encodage Latin-1 est spécifié par deux chiffres hexadécimaux entre 00 et FF. Ainsi, \xA9 correspond à la séquence hexadécimale pour le caractère copyright.                      |
 |             |                                                                                                                                                                                                      |
-| `\uXXXX`    | Le caractère Unicode spécifié par quatre chiffres hexadécimaux _XXXX_. Ainsi, \u00A9 correspondra à la séquence Unicode du symbole copyright. Voir {{anch("Unicode escape sequences")}}. |
+| `\uXXXX`    | Le caractère Unicode spécifié par quatre chiffres hexadécimaux _XXXX_. Ainsi, \u00A9 correspondra à la séquence Unicode du symbole copyright. Voir [Les caractères d'échappement Unicode](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#littéraux_de_chaînes_de_caractères). |
 | `\u{XXXXX}` | Échappement de codes Unicode. Par exemple, \u{2F804} est équivalent à la combinaison d'échappements « simples » \uD87E\uDC04.                                                                        |
 
 #### Les caractères d'échappement
 
 Pour les caractères qui ne font pas partie du tableau précédent, les barres obliques inversées (_backslash_) les précédant sont ignorées. Cependant, cet usage est obsolète et devrait être évité.
 
-En précédant d'une barre oblique inversée les guillemets droits doubles, on _échappe_ ces caractères. Voici un exemple :
+En précédant d'une barre oblique inversée les guillemets droits doubles, on _échappe_ ces caractères. Voici un exemple :
 
 ```js
 var citation = "Il lit \"Bug Jargal\" de V. Hugo.";
@@ -623,7 +629,9 @@ console.log(citation);
 
 Le résultat serait alors
 
-    Il lit "Bug Jargal" de V. Hugo.
+```
+Il lit "Bug Jargal" de V. Hugo.
+```
 
 Pour inclure une barre oblique inversée dans une chaîne de caractères, il faut aussi l'échapper. Par exemple, pour stocker le chemin `c:\temp` dans une chaîne de caractères, on utilisera le code suivant :
 

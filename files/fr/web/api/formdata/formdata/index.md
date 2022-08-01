@@ -12,9 +12,9 @@ translation_of: Web/API/FormData/FormData
 ---
 {{APIRef("XMLHttpRequest")}}
 
-Le constructeur **`FormData()`** crée un nouvel objet {{domxref("FormData")}}.
+Le constructeur **`FormData()`** crée un nouvel objet {{domxref("FormData")}}.
 
-> **Note :** Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> **Note :** Cette fonctionnalité est disponible dans [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
@@ -25,23 +25,23 @@ var formData = new FormData(form)
 ### Paramètres
 
 - `form` {{optional_inline}}
-  - : Un element HTML {{HTMLElement("form")}} — quand il est spécifié, l'objet {{domxref("FormData")}} sera rempli avec les clés/valeurs du formulaire en utilisant les noms de propriétés de chaque élément pour clé et les valeurs soumises. Cela encodera aussi le contenu des fichiers.
+  - : Un element HTML {{HTMLElement("form")}} — quand il est spécifié, l'objet {{domxref("FormData")}} sera rempli avec les clés/valeurs du formulaire en utilisant les noms de propriétés de chaque élément pour clé et les valeurs soumises. Cela encodera aussi le contenu des fichiers.
 
 ## Exemples
 
-La ligne suivante crée un objet `FormData` vide:
+La ligne suivante crée un objet `FormData` vide:
 
 ```js
 var formData = new FormData(); // Formulaire vide à cet instant
 ```
 
-Vous pouvez ajouter un couple clé/valeur en utilisant {{domxref("FormData.append")}} :
+Vous pouvez ajouter un couple clé/valeur en utilisant {{domxref("FormData.append")}} :
 
 ```js
 formData.append('username', 'Chris');
 ```
 
-Ou vous pouvez spécifier l'argument optionnel `form` à la création de l'objet `FormData` pour le pré-remplir avec les valeurs issues du formulaire spécifié :
+Ou vous pouvez spécifier l'argument optionnel `form` à la création de l'objet `FormData` pour le pré-remplir avec les valeurs issues du formulaire spécifié :
 
 ```html
 <form id="myForm" name="myForm">

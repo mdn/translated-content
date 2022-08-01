@@ -3,7 +3,7 @@ title: ValidityState
 slug: Web/API/ValidityState
 translation_of: Web/API/ValidityState
 ---
-<div>{{APIRef("HTML DOM")}} {{gecko_minversion_header("2.0")}}</div>
+<div>{{APIRef("HTML DOM")}}</div>
 
 <p><strong><code>ValidityState</code></strong> 介面表示了一個元素目前在其檢核條件下驗證的<em>正確性狀態（validity states）</em>。同時，它們也可以協助解釋元素值檢核失敗的原因，如果元素值為不合法的。</p>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/ValidityState
  <dt>{{domxref("ValidityState.tooLong")}} {{ReadOnlyInline}}</dt>
  <dd>Is a {{jsxref("Boolean")}} indicating the value exceeds the specified <code>maxlength</code> for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects. <em><strong>Note:</strong> This will never be <code>true</code> in Gecko, because elements' values are prevented from being longer than <code>maxlength</code>.</em></dd>
  <dt>{{domxref("ValidityState.tooShort")}} {{ReadOnlyInline}}</dt>
- <dd>Is a {{jsxref("Boolean")}} indicating the value fails to meet the specified <code>minlength</code> for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects.</dd>
+ <dd>Is a {{jsxref("Boolean")}} indicating the value fails to meet the specified <code>minlength</code> for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects.</dd>
  <dt>{{domxref("ValidityState.typeMismatch")}} {{ReadOnlyInline}}</dt>
  <dd>Is a {{jsxref("Boolean")}} indicating the value is not in the required syntax (when {{htmlattrxref("type", "input")}} is <code>email</code> or <code>url</code>).</dd>
  <dt>{{domxref("ValidityState.valid")}} {{ReadOnlyInline}}</dt>
@@ -38,30 +38,7 @@ translation_of: Web/API/ValidityState
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'ValidityState') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Live Standard</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5.1', '#the-constraint-validation-api', 'ValidityState') }}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>No change from the previous snapshot {{SpecName('HTML5 W3C')}}.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'ValidityState') }}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>First snapshot of  {{SpecName('HTML WHATWG')}} containing this interface.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 

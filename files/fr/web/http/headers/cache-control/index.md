@@ -44,35 +44,41 @@ Pour être valables, les directives de mise en cache doivent respecter les règl
 
 Les règles standard `Cache-Control` suivantes peuvent être utilisées par un client HTTP dans une requête :
 
-    Cache-Control: max-age=<seconds>
-    Cache-Control: max-stale[=<seconds>]
-    Cache-Control: min-fresh=<seconds>
-    Cache-Control: no-cache
-    Cache-Control: no-store
-    Cache-Control: no-transform
-    Cache-Control: only-if-cached
+```
+Cache-Control: max-age=<seconds>
+Cache-Control: max-stale[=<seconds>]
+Cache-Control: min-fresh=<seconds>
+Cache-Control: no-cache
+Cache-Control: no-store
+Cache-Control: no-transform
+Cache-Control: only-if-cached
+```
 
 ### Règles de cache des réponses
 
 Les règles standard `Cache-Control` suivantes peuvent être utilisées par un serveur HTTP dans une réponse :
 
-    Cache-Control: must-revalidate
-    Cache-Control: no-cache
-    Cache-Control: no-store
-    Cache-Control: no-transform
-    Cache-Control: public
-    Cache-Control: private
-    Cache-Control: proxy-revalidate
-    Cache-Control: max-age=<seconds>
-    Cache-Control: s-maxage=<seconds>
+```
+Cache-Control: must-revalidate
+Cache-Control: no-cache
+Cache-Control: no-store
+Cache-Control: no-transform
+Cache-Control: public
+Cache-Control: private
+Cache-Control: proxy-revalidate
+Cache-Control: max-age=<seconds>
+Cache-Control: s-maxage=<seconds>
+```
 
-### Extensions de `Cache-Control`
+### Extensions de `Cache-Control`
 
 Les directives Extension `Cache-Control` ne font pas partie du document sur les normes de base de la mise en cache HTTP. Vérifiez leur prise en charge dans la [table de compatibilité](#Browser_compatibility) ; les agents-utilisateurs qui ne les reconnaissent pas doivent les ignorer.
 
-    Cache-Control: immutable
-    Cache-Control: stale-while-revalidate=<seconds>
-    Cache-Control: stale-if-error=<seconds>
+```
+Cache-Control: immutable
+Cache-Control: stale-while-revalidate=<seconds>
+Cache-Control: stale-if-error=<seconds>
+```
 
 ## Directives
 
@@ -98,7 +104,7 @@ Une réponse est normalement mise en cache par le navigateur si
 - `no-cache`
   - : Indique de renvoyer systématiquement la requête au serveur et ne servir une éventuelle version en cache que dans le cas où le serveur le demande.
 - `no-store`
-  - : La réponse **ne** peut être stockée dans _aucune_ mémoire cache. Bien que d'autres directives puissent être définies, C'est la seule directive dont vous avez besoin pour empêcher le réponses en cache sur les navigateurs modernes. `max-age=0` **est déjà implicite**. **La définition de la directive** `must-revalidate` **n'a pas de sens** car pour passer la revalidation, vous devez stocker la réponse dans un cache, ce que n'empêche `no-store`.**Ne pas copier-coller les spécifications Internet-Explorer** `pre-check=0,post-check=0` Si vous le voyez en ligne car il est entièrement ignoré, ce que confirme le [tweet du développeur Edge](https://twitter.com/ericlaw/status/685201170260819968).
+  - : La réponse **ne** peut être stockée dans _aucune_ mémoire cache. Bien que d'autres directives puissent être définies, c'est la seule directive dont vous avez besoin pour empêcher les réponses en cache sur les navigateurs modernes. `max-age=0` **est déjà implicite**. **La définition de la directive** `must-revalidate` **n'a pas de sens**, car pour passer la revalidation, vous devez stocker la réponse dans un cache, ce qu'empêche `no-store`. **Ne pas copier-coller les spécifications d'Internet Explorer** `pre-check=0,post-check=0` si vous le voyez en ligne, car il est entièrement ignoré, ce que confirme le [tweet du développeur Edge](https://twitter.com/ericlaw/status/685201170260819968).
 
 ### Expiration
 
@@ -149,15 +155,19 @@ Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,p
 
 Pour les fichiers de l'application qui ne seront pas modifiés, vous pouvez généralement ajouter une mise en cache agressive en envoyant l'en-tête de réponse ci-dessous. Cela inclut les fichiers statiques qui sont servis par l'application comme les images, les fichiers CSS et les fichiers JavaScript, par exemple. En outre, voir l'en-tête `Expires`.
 
-    Cache-Control: public, max-age=604800, immutable
+```
+Cache-Control: public, max-age=604800, immutable
+```
 
 ### Nécessitant une revalidation
 
 Le fait de spécifier no-cache ou `max-age=0` indique que les clients peuvent mettre une ressource en cache et doivent la revalider à chaque fois avant de l'utiliser. Cela signifie que la requête HTTP se produit à chaque fois, mais qu'elle peut sauter le téléchargement du corps HTTP si le contenu est valide.
 
-    Cache-Control: no-cache
-    Cache-Control: no-cache, max-age=0
-    Cache-Control: no-cache, max-age=0, stale-while-revalidate=300
+```
+Cache-Control: no-cache
+Cache-Control: no-cache, max-age=0
+Cache-Control: no-cache, max-age=0, stale-while-revalidate=300
+```
 
 ## Spécifications
 

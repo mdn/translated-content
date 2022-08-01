@@ -17,7 +17,9 @@ La propriété en lecture seule **`body`** de l'interface {{domxref ("Notificati
 
 ## Syntaxe
 
-    Notification.body
+```js
+Notification.body
+```
 
 ### Valeur
 

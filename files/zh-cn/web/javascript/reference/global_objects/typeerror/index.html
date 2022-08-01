@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>TypeError（类型错误）</strong></code> 对象用来表示值的类型非预期类型时发生的错误。</p>
+<p><code><strong>TypeError（类型错误）</strong></code> 对象用来表示值的类型非预期类型时发生的错误。</p>
 
 <h2 id="Syntax">语法</h2>
 
@@ -24,11 +24,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 
 <dl>
  <dt><code>message 消息</code></dt>
- <dd>可选. 描述此错误</dd>
+ <dd>可选。描述此错误</dd>
  <dt><code>fileName 文件名</code> {{non-standard_inline}}</dt>
- <dd>可选. 引起该异常的代码所在的文件的名字。</dd>
+ <dd>可选。引起该异常的代码所在的文件的名字。</dd>
  <dt><code>lineNumber 行号</code> {{non-standard_inline}}</dt>
- <dd>可选. 引起该异常的代码的行号。</dd>
+ <dd>可选。引起该异常的代码的行号。</dd>
 </dl>
 
 <h2 id="Description">描述</h2>
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 
 <p>全局 TypeError 不包含任何方法，不过，它将从原型链中继承一些方法。</p>
 
-<h2 id="TypeError_instances"><code>TypeError</code> 类型错误实例</h2>
+<h2 id="TypeError_instances"><code>TypeError</code> 类型错误实例</h2>
 
 <h3 id="Properties_of_TypeError_instances">属性</h3>
 
@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 
 <h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Catch_an_TypeError">示例: 捕获类型错误</h3>
+<h3 id="Example:_Catch_an_TypeError">示例：捕获类型错误</h3>
 
 <pre class="brush: js">try {
   null.f();
@@ -73,7 +73,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 }
 </pre>
 
-<h3 id="Example:_Create_an_TypeError">示例: 创建一个类型错误</h3>
+<h3 id="Example:_Create_an_TypeError">示例：创建一个类型错误</h3>
 
 <pre class="brush: js">try {
   throw new TypeError('Hello', "someFile.js", 10);
@@ -90,34 +90,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">说明</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-15.11.6.5', 'TypeError')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>初始定义。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{Compat("javascript.builtins.TypeError")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="相关链接">相关链接</h2>
 

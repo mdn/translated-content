@@ -89,7 +89,7 @@ const method = request.method;
 const credentials = request.credentials;
 ```
 
-Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, par exemple:
+Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/fetch), par exemple:
 
 ```js
 fetch(request)
@@ -112,7 +112,7 @@ const bodyUsed = request.bodyUsed;
 
 > **Note :** Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
 
-Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel {{domxref("WindowOrWorkerGlobalScope.fetch()")}}, par exemple et obtenir la réponse:
+Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/fetch), par exemple et obtenir la réponse:
 
 ```js
 fetch(request)

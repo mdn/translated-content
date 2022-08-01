@@ -28,7 +28,7 @@ Et voici le résultat obtenu avec ce fragment HTML&nbsp;:
 
 ## Exécuter des commandes
 
-Lorsqu'un élément HTML a un attribut `contenteditable` qui vaut `true`, la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) devient disponible. Cela permet d'exécuter des [commandes](/fr/docs/Web/API/Document/execCommand#commandes) our manipuler les contenus de la région éditable. Certaines commandes affectent la sélection du document en mettant par exemple en forme le texte (gras, italique, etc.) tandis que d'autres insèrent de nouveaux éléments (par exemple un nouveau lien) ou portent sur tout une ligne (par exemple pour l'indenter). Lorsqu'on utilise `contentEditable`, appeler `execCommand()` aura un impact sur l'ensemble de l'élément éditable courant qui est actif.
+Lorsqu'un élément HTML a un attribut `contenteditable` qui vaut `true`, la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) devient disponible. Cela permet d'exécuter des [commandes](/fr/docs/Web/API/Document/execCommand#commandes) pour manipuler les contenus de la région éditable. Certaines commandes affectent la sélection du document en mettant par exemple en forme le texte (gras, italique, etc.) tandis que d'autres insèrent de nouveaux éléments (par exemple un nouveau lien) ou portent sur tout une ligne (par exemple pour l'indenter). Lorsqu'on utilise `contentEditable`, appeler `execCommand()` aura un impact sur l'ensemble de l'élément éditable courant qui est actif.
 
 ## Différences de génération de balisage
 
@@ -56,10 +56,12 @@ document.execCommand("defaultParagraphSeparator", false, "br");
 
 Pour des raisons de sécurité, par défaut, Firefox ne permet pas au code JavaScript d'utiliser les fonctionnalités du presse-papier (copier, coller, etc.). Cela peut être débrayé dans les préférences `about:config`&nbsp;:
 
-    user_pref("capability.policy.policynames", "allowclipboard");
-    user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
-    user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
-    user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
+```
+user_pref("capability.policy.policynames", "allowclipboard");
+user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
+user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
+user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");
+```
 
 ## Un exemple d'éditeur de texte
 

@@ -3,7 +3,7 @@ title: 'HTMLMediaElement: canplay'
 slug: Web/API/HTMLMediaElement/canplay_event
 translation_of: Web/API/HTMLMediaElement/canplay_event
 ---
-L'événement `canplay` est déclenché lorsque l'[agent utilisateur](/fr/docs/Glossaire/User_agent) peut jouer le média, mais estime que trop peu de données ont été chargées pour le jouer jusqu'à la fin sans avoir à l'arrêter pour charger d'avantage de contenu dans la mémoire tampon (buffer).
+L'événement `canplay` est déclenché lorsque l'[agent utilisateur](/fr/docs/Glossaire/User_agent) peut jouer le média, mais estime que trop peu de données ont été chargées pour le jouer jusqu'à la fin sans avoir à l'arrêter pour charger d'avantage de contenu dans la mémoire tampon (buffer).
 
 ## Informations Générales
 

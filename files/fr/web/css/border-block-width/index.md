@@ -20,7 +20,7 @@ border-block-width: 5px;
 border-block-width: thick;
 ```
 
-The border width in the other dimension can be set with {{cssxref("border-inline-width")}}, which sets {{cssxref("border-block-inline-width")}}, and {{cssxref("border-block-inline-width")}}.
+The border width in the other dimension can be set with {{cssxref("border-inline-width")}}, which sets {{cssxref("border-block-inline-width")}}, and {{cssxref("border-block-inline-width")}}.
 
 {{cssinfo}}
 
@@ -77,5 +77,5 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques qui peuvent correspondre à cette propriété logique {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}
+- Les propriétés physiques qui peuvent correspondre à cette propriété logique {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

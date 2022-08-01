@@ -70,7 +70,7 @@ _Pas de changement._
 
 ## Changements pour les développeurs d'add-on et de Mozilla
 
-- L'interface `nsIDOMWindowUtils` supporte désormais l'attribut booléen `audioMuted` et `audioVolume`, un float dans la plage `[0.0` ,  `1.0]`, permettant de contrôler le son produit par une fenêtre (c'est-à-dire n'importe quel onglet ou iframe). Il n'y a pas d'interface utilisateur pour cela, mais est disponible pour les add-ons. ({{bug(923247)}})
+- L'interface `nsIDOMWindowUtils` supporte désormais l'attribut booléen `audioMuted` et `audioVolume`, un float dans la plage `[0.0` ,  `1.0]`, permettant de contrôler le son produit par une fenêtre (c'est-à-dire n'importe quel onglet ou iframe). Il n'y a pas d'interface utilisateur pour cela, mais est disponible pour les add-ons. ({{bug(923247)}})
 
 ## Voir aussi
 

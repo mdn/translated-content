@@ -13,7 +13,7 @@ original_slug: Web/API/RandomSource/getRandomValues
 ---
 <p>{{APIRef("Web Crypto API")}}</p>
 
-<p><code><strong>Crypto.getRandomValues()</strong></code> 方法让你可以获取符合密码学要求的安全的随机值。传入参数的数组被随机值填充（在加密意义上的随机）。</p>
+<p><code><strong>Crypto.getRandomValues()</strong></code> 方法让你可以获取符合密码学要求的安全的随机值。传入参数的数组被随机值填充（在加密意义上的随机）。</p>
 
 <p>为了确保足够的性能，不使用真正的随机数生成器，但是它们正在使用具有足够熵值伪随机数生成器。它所使用的 PRNG 的实现与其他不同，但适用于加密的用途。该实现还需要使用具有足够熵的种子，如系统级熵源。</p>
 
@@ -30,9 +30,10 @@ original_slug: Web/API/RandomSource/getRandomValues
 
 <h3 id="异常事件">异常事件</h3>
 
-<ul>
- <li>如果请求的长度超过 65536 字节，则异常事件 {{domxref("DOMException")}} {{exception("QuotaExceededError")}} 被抛出。</li>
-</ul>
+<dl>
+ <dt><code>QuotaExceededError</code> {{domxref("DOMException")}}</dt>
+ <dd>如果请求的长度超过 65536 字节，则抛出该异常。</dd>
+</dl>
 
 <h2 id="例子">例子</h2>
 
@@ -43,26 +44,13 @@ window.crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
 for (var i = 0; i &lt; array.length; i++) {
-    console.log(array[i]);
+    console.log(array[i]);
 }
 </pre>
 
 <h2 id="标准">标准</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Crypto API', '#RandomSource-method-getRandomValues')}}</td>
-   <td>{{Spec2('Web Crypto API')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

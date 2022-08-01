@@ -21,30 +21,34 @@ Les évènements initialisés par ce moyen ont été créés par la méthode {{d
 
 ## Syntaxe
 
-    event.initEvent(type, bubbles, cancelable)
+```js
+event.initEvent(type, bubbles, cancelable)
+```
 
 - `type`
-  - : est une {{domxref("DOMString")}}  qui définit le type d'évènement.
+  - : est une {{domxref("DOMString")}}  qui définit le type d'évènement.
 - `bubbles`
-  - : est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule  {{domxref("Event.bubbles")}} donnera sa valeur.
+  - : est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule  {{domxref("Event.bubbles")}} donnera sa valeur.
 - `cancelable`
-  - : Une valeur booléenne définissant si l'évènement peut être annulé. Une fois déterminé, la propriété en lecture seule  {{ domxref("Event.cancelable") }}  donnera sa valeur.
+  - : Une valeur booléenne définissant si l'évènement peut être annulé. Une fois déterminé, la propriété en lecture seule  {{ domxref("Event.cancelable") }}  donnera sa valeur.
 
 ## Exemple
 
-    // Crée un évènement.
-    var event = document.createEvent('Event');
+```js
+// Crée un évènement.
+var event = document.createEvent('Event');
 
-    // Crée un évènement click qui doit se propager vers le haut
-    // et ne peut être annulé
-    event.initEvent('click', true, false);
+// Crée un évènement click qui doit se propager vers le haut
+// et ne peut être annulé
+event.initEvent('click', true, false);
 
-    // Écoute les évènements.
-    elem.addEventListener('click', function (e) {
-      // e.target matches elem
-    }, false);
+// Écoute les évènements.
+elem.addEventListener('click', function (e) {
+  // e.target matches elem
+}, false);
 
-    elem.dispatchEvent(event);
+elem.dispatchEvent(event);
+```
 
 ## Spécifications
 

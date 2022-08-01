@@ -16,7 +16,9 @@ La fonction `floor` évalue un nombre décimal et retourne le plus grand nombre 
 
 ### Syntaxe
 
-    floor(nombre )
+```
+floor(nombre )
+```
 
 ### Arguments
 

@@ -81,7 +81,7 @@ Si vous écrivez votre extension en utilisant `browser` et les promesses, l'équ
 
 La page sur la [compatibilité des navigateurs pour les API JavaScript WebExtension](/fr/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) inclut l'ensemble des tableaux de compatibilité. Lorsqu'il existe des réserves autour du support d'un élément d'API donné, ceci est indiqué dans ces tableaux avec un astérisque "\*". Ces réserves sont détaillées la page de documentation respective de l'API.
 
-Ces tableaux sont générés à partir des données de compatibilité stockées en tant que  [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
+Ces tableaux sont générés à partir des données de compatibilité stockées en tant que  [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
 
 Le reste de cette section décrit les problèmes de compatibilité qui ne sont pas encore pris en compte dans ces tableaux.
 
@@ -93,13 +93,15 @@ Le reste de cette section décrit les problèmes de compatibilité qui ne sont p
 
 #### proxy
 
-- [Cette API est complètement différente de celle conçue par Chrome. Avec l'API de Chrome, une extension peut enregistrer un fichier PAC, mais peut également définir des règles de proxy explicites. Comme cela est également possible en utilisant les fichiers PAC étendus, cette API ne prend en charge que l'approche de fichier PAC. Étant donné que cette API est incompatible avec l'API `proxy` de Chrome, cette API est uniquement disponible via l'espace de nom `browser`.](/fr/Add-ons/WebExtensions/API/proxy)
+- [Cette API est complètement différente de celle conçue par Chrome. Avec l'API de Chrome, une extension peut enregistrer un fichier PAC, mais peut également définir des règles de proxy explicites. Comme cela est également possible en utilisant les fichiers PAC étendus, cette API ne prend en charge que l'approche de fichier PAC. Étant donné que cette API est incompatible avec l'API `proxy` de Chrome, cette API est uniquement disponible via l'espace de nom `browser`.](/fr/Add-ons/WebExtensions/API/proxy)
 
 #### tabs
 
 - Dans Firefox, les URL relatives passées à `tabs.executeScript()` ou `tabs.insertCSS()` sont résolues par rapport à l'URL de la page actuelle. Dans Chrome, ces URL sont résolues par rapport à l'URL de base de l'extension. Pour travailler pour l'ensemble des navigateurs, il est donc nécessaire d'indiquer le chemin comme URL absolue, en commençant par la racine de l'extension, comme ceci:
 
-      /chemin/vers/script.json
+  ```
+  /chemin/vers/script.json
+  ```
 
 - Dans Firefox, interroger les onglets avec des URL avec `tabs.query()` nécessitent une permission `"tabs"`. Dans Chrome, il est possible de le faire sans la permission `"tabs"` mais cela limitera les résultats aux onglets dont les URL correspondent aux permissions de l'hôte.
 - Dans Firefox, la promesse `tabs.remove()` est tenue après l'évènement `beforeunload` alors que pour Chrome, le _callback_ n'attend pas `beforeunload`.
@@ -135,7 +137,7 @@ Firefox ne prend pas en charge [`alert()`](/fr/docs/Web/API/Window/alert), [`con
 
 #### web_accessible_resources
 
-Dans Chrome, lorsqu'une ressource est répertoriée dans `web_accessible_resources`, elle est accessible via `chrome-extension://<id-de-l-extension>/<chemin/vers/la/ressource>`. L'identifiant de l'extension est fixé pour une extension donnée.
+Dans Chrome, lorsqu'une ressource est répertoriée dans `web_accessible_resources`, elle est accessible via `chrome-extension://<id-de-l-extension>/<chemin/vers/la/ressource>`. L'identifiant de l'extension est fixé pour une extension donnée.
 
 Firefox l'implémente différemment en utilisant un UUID aléatoire qui change pour chaque instance de Firefox : `moz-extension://<UUID-aleatoire>/<chemin/vers/la/ressource>`. Cette façon aléatoire peut empêcher certaines choses, comme ajouter l'URL de votre extension spécifique à la politique CSP d'un autre domaine.
 

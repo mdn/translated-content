@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 Injecte du code JavaScript dans une page.
 
-Vous pouvez injecter du code dans des pages dont l'URL peut être exprimée à l'aide d'un [modèle de correspondance ](/fr/Add-ons/WebExtensions/Match_patterns): son schéma doit être "http", "https", "file", "ftp". Pour ce faire, vous devez disposer de la permission pour l'URL de la page, soit explicitement en tant que [permission d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), ou via la [permission activeTab](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+Vous pouvez injecter du code dans des pages dont l'URL peut être exprimée à l'aide d'un [modèle de correspondance](/fr/Add-ons/WebExtensions/Match_patterns)&nbsp;: son schéma doit être "http", "https", "file", "ftp". Pour ce faire, vous devez disposer de la permission pour l'URL de la page, soit explicitement en tant que [permission d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), ou via la [permission activeTab](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
 
 Vous pouvez également injecter du code dans des pages empaquetées avec votre propre extension :
 
@@ -53,12 +53,12 @@ var executing = browser.tabs.executeScript(
   - : `integer`. L’ID de l’onglet dans lequel exécuter le script. Par défaut, l’onglet actif de la fenêtre en cours.
 - `details`
 
-  - : Un objet décrivant le script à exécuter. Il contient les propriétés suivantes :
+  - : Un objet décrivant le script à exécuter. Il contient les propriétés suivantes&nbsp;:
 
     - `allFrames` {{optional_inline}}
       - : `boolean`. Si `true`, le code sera injecté dans toutes les cadres de la page courante. Si `true` et `frameId` est défini, alors il y aura une erreur, frameId et allFrames sont mutuellement exclusifs. Si c'est `false`, le code n'est injecté que dans le cadre supérieur. La valeur par défaut est `false`.
-    - `code `{{optional_inline}}
-      - : `string`. Code à injecter, sous la forme d’une chaine de texte. **Attention :** n’utilisez pas cette propriété pour interpoler des données non sûres dans JavaScript, car cela pourrait introduire une faille de sécurité.
+    - `code` {{optional_inline}}
+      - : `string`. Code à injecter, sous la forme d’une chaine de texte. **Attention :** n’utilisez pas cette propriété pour interpoler des données non sûres dans JavaScript, car cela pourrait introduire une faille de sécurité.
     - `file` {{optional_inline}}
       - : `string`. Chemin d’accès à un fichier contenant le code à injecter. Dans Firefox, les URL relatives ne commençant pas à la racine de l'extension sont résolues par rapport à l'URL de la page en cours. Dans Chrome, ces URL sont résolues par rapport à l’URL de base de l’extension. Pour travailler avec plusieurs navigateurs, vous pouvez spécifier le chemin comme une URL relative, en commençant à la racine de l’extension, comme ceci : `"/path/to/script.js"`.
     - `frameId` {{optional_inline}}
@@ -72,7 +72,7 @@ var executing = browser.tabs.executeScript(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) résolue avec un tableau d’objets représentant le résultat du script dans chaque cadre où le script a été injecté.
 
-Le résultat du script est la dernière instruction évaluée, ce qui est similaire à ce qui serait produit (les résultats, pas les affichages de `console.log()`) si vous exécutiez le script dans la [Console Web](/fr/docs/Outils/Console_Web). Par exemple, considérez un script comme celui-ci :
+Le résultat du script est la dernière instruction évaluée, ce qui est similaire à ce qui serait produit (les résultats, pas les affichages de `console.log()`) si vous exécutiez le script dans la [Console Web](/fr/docs/Outils/Console_Web). Par exemple, considérez un script comme celui-ci&nbsp;:
 
 ```js
 var foo='my result';foo;
@@ -83,7 +83,7 @@ Si une erreur se produit, la promesse sera rejetée avec un message d’erreur.
 
 ## Exemples
 
-Cet exemple exécute un extrait de code d’une ligne dans l’onglet actuellement actif :
+Cet exemple exécute un extrait de code d’une ligne dans l’onglet actuellement actif&nbsp;:
 
 ```js
 function onExecuted(result) {
@@ -102,7 +102,7 @@ var executing = browser.tabs.executeScript({
 executing.then(onExecuted, onError);
 ```
 
-L’exemple suivant exécute un script à partir d’un fichier empaqueté avec l’extension appelé `content-script.js`. Le script est exécuté dans l’onglet actuellement actif. Le script est exécuté dans les sous-cadres ainsi que dans le document principal :
+L’exemple suivant exécute un script à partir d’un fichier empaqueté avec l’extension appelé `content-script.js`. Le script est exécuté dans l’onglet actuellement actif. Le script est exécuté dans les sous-cadres ainsi que dans le document principal&nbsp;:
 
 ```js
 function onExecuted(result) {
@@ -120,7 +120,7 @@ var executing = browser.tabs.executeScript({
 executing.then(onExecuted, onError);
 ```
 
-L’exemple suivant exécute un script à partir d’un fichier empaqueté avec l’extension appelé `content-script.js`. Le script est exécuté dans l’onglet ayant l’ID 2 :
+L’exemple suivant exécute un script à partir d’un fichier empaqueté avec l’extension appelé `content-script.js`. Le script est exécuté dans l’onglet ayant l’ID 2&nbsp;:
 
 ```js
 function onExecuted(result) {

@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.rect()`** de l'API Canvas 2D crée un ch
 
 ## Syntaxe
 
-    void ctx.rect(x, y, width, height);
+```js
+void ctx.rect(x, y, width, height);
+```
 
 ### Paramètres
 
@@ -50,8 +52,8 @@ ctx.fill();
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);

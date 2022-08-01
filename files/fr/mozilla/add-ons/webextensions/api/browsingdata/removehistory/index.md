@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 
 Efface l'enregistrement des pages Web que l'utilisateur a visité (historique de navigation).
 
-Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
+Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
 
 - Effacer uniquement les eenregistrements des pages Web visitées après un certain temps.
 - Contrôlez si vous souhaitez effacer uniquement les enregistrements des pages web normales ou effacer les enregistrements des applications hébergées et des extensions.

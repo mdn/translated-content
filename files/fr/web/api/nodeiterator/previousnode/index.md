@@ -19,7 +19,9 @@ Dans les navigateurs anciens, comme spécifié dans les anciennes version des sp
 
 ## Syntaxe
 
-    node = nodeIterator.previousNode();
+```js
+node = nodeIterator.previousNode();
+```
 
 ## Exemple
 

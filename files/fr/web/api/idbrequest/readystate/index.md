@@ -19,7 +19,9 @@ Chaque requête démarre avec l'état `pending` (c'est-à-dire en attente). Cet 
 
 ## Syntaxe
 
-    var currentReadyState = request.readyState;
+```js
+var currentReadyState = request.readyState;
+```
 
 ### Valeur
 
@@ -66,8 +68,8 @@ objectStoreTitleRequest.onsuccess = function() {
 
 | Spécification                                                                                    | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-readyState', 'readyState')}}     | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbrequest-readystate", "readyState")}} | {{Spec2("IndexedDB 2")}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBRequest-readyState', 'readyState')}}     | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbrequest-readystate", "readyState")}} | {{Spec2("IndexedDB 2")}} |              |
 
 ## Compatibilité des navigateurs
 

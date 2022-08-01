@@ -105,8 +105,8 @@ Le formulaire qui suit fournit un curseur dont la valeur peut aller de 0 à 100 
 
 | Spécification                                                                                                            | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-output-element', '&lt;output&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#the-output-element', '&lt;output&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG', 'the-button-element.html#the-output-element', '&lt;output&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'forms.html#the-output-element', '&lt;output&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

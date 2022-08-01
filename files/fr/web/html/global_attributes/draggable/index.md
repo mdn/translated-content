@@ -30,7 +30,7 @@ En revanche, on pourra correctement utiliser :
 <label draggable="true">Label exemple</label>
 ```
 
-Par défaut, seules les sélections de texte, les images et les liens peuvent être déplacés à la souris. Pour les autres éléments, il faudra définir le gestionnaire d'événements pour {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} afin de faire fonctionner le glisser-déposer. Cela est illustré [dans cet exemple](/fr/docs/Glisser_et_déposer/Opérations_de_glissement).
+Par défaut, seules les sélections de texte, les images et les liens peuvent être déplacés à la souris. Pour les autres éléments, il faudra définir le gestionnaire d'événements pour {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} afin de faire fonctionner le glisser-déposer. Cela est illustré [dans cet exemple](/fr/docs/Glisser_et_déposer/Opérations_de_glissement).
 
 ## Spécifications
 

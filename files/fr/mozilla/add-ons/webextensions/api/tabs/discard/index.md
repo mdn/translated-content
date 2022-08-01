@@ -20,7 +20,7 @@ Certains navigateurs "suppriment" automatiquement les onglets dont ils ne pensen
 
 Les détails de ce qui est supprimé sont spécifiques au navigateur, mais en général, l'abandon d'un onglet permet au navigateur de libérer une partie de la mémoire occupée par cet onglet.
 
-L'API {{WebExtAPIRef("tabs.discard()")}} permet à une extension d'ignorer un ou plusieurs onglets. Il n'est pas possible de supprimer l'onglet actuellement actif ou un onglet dont le document contient un programme d'écoute [`beforeunload`](/fr/docs/Web/Events/beforeunload) qui afficherait une invite.
+L'API {{WebExtAPIRef("tabs.discard()")}} permet à une extension d'ignorer un ou plusieurs onglets. Il n'est pas possible de supprimer l'onglet actuellement actif ou un onglet dont le document contient un programme d'écoute [`beforeunload`](/fr/docs/Web/Events/beforeunload) qui afficherait une invite.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

@@ -61,7 +61,7 @@ function handleOrientationChange(mql) {
 
 ## Terminer la réception des notifications
 
-Lorsqu'on ne souhaite plus recevoir de notifications sur les modifications apportées à la valeur de la requête média, on pourra simplement utiliser `removeListener()` sur l'objet  {{domxref("MediaQueryList") }} :
+Lorsqu'on ne souhaite plus recevoir de notifications sur les modifications apportées à la valeur de la requête média, on pourra simplement utiliser `removeListener()` sur l'objet  {{domxref("MediaQueryList") }} :
 
 ```js
 mql.removeListener(handleOrientationChange);

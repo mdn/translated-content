@@ -10,7 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/mozInnerScreenX
 ---
-{{APIRef}}{{gecko_minversion_header("1.9.2")}}
+{{APIRef}}
 
 ## Résumé
 
@@ -20,7 +20,9 @@ Obtient la coordonnée X du coin supérieur gauche de la fenêtre de la fenêtre
 
 ## Syntaxe
 
-    screenX = window.mozInnerScreenX;
+```js
+screenX = window.mozInnerScreenX;
+```
 
 ### Valeur
 
