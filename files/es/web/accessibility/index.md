@@ -31,7 +31,7 @@ El [área de aprendizaje de accesibilidad](/es/docs/Learn/Accessibility) de MDN 
 ## Otra documentación
 
 - [Comprensión de las pautas de accesibilidad del contenido web](/es/docs/Web/Accessibility/Understanding_WCAG)
-  - : Esto es parte de un grupo de artículos que explican rápidamente los pasos necesario para cumplir con la normativa de W3C Web Content Accessibility Guides 2.0 o 2.1 (también conocida como WCAG).
+  - : Esto es parte de un grupo de artículos que explican rápidamente los pasos necesarios para cumplir con la normativa en las W3C Web Content Accessibility Guidelines 2.0 (WCAG 2.0, o simplemente WCAG, para el fin de este documento).
 - [Introducción al color y la accesibilidad](/es/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : Este artículo analiza nuestra percepción de la luz y el color, proporciona una base para el uso del color en diseños accesibles y demuestra las mejores prácticas para el contenido visual y legible.
 - [Widgets de JavaScript navegables por teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
