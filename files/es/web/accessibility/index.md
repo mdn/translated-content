@@ -43,7 +43,7 @@ El [área de aprendizaje de accesibilidad](/es/docs/Learn/Accessibility) de MDN 
 - [Accesibilidad cognitiva](/es/docs/Web/Accessibility/Cognitive_accessibility)
   - : Este artículo explica cómo asegurarse de que el contenido web que está creando sea accesible para personas con discapacidades cognitivas.
 - [Accesibilidad para trastornos convulsivos](/es/docs/Web/Accessibility/Seizure_disorders)
-  - : Algunos tipos de contenido web visual pueden provocar convulsiones en personas con ciertos trastornos cerebrales. Este artículo le ayuda a comprender los tipos de contenido que pueden ser problemáticos y a encontrar herramientas y estrategias para ayudarlo a evitarlos.
+  - : Algunos tipos de contenido web visual pueden provocar convulsiones en personas con ciertos trastornos cerebrales. Este artículo te ayuda a comprender los tipos de contenido que pueden ser problemáticos y a encontrar herramientas y estrategias para ayudarte a evitarlos.
 
 ## Véase también
 
