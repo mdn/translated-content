@@ -15,4 +15,4 @@ La **cryptanalyse** est la branche de la {{glossary("cryptography","cryptographi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Cryptanalyse")}} sur Wikipédia
+- [Cryptanalyse](https://fr.wikipedia.org/wiki/Cryptanalyse) sur Wikipédia

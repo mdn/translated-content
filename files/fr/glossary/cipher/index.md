@@ -27,4 +27,4 @@ Ils sont également classés en fonction de la manière dont leurs {{glossary("K
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia","Chiffrement")}} sur Wikipedia
+- [Chiffrement](https://fr.wikipedia.org/wiki/Chiffrement) sur Wikipédia
