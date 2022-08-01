@@ -1,81 +1,76 @@
 ---
 title: MediaTrackSupportedConstraints.autoGainControl
 slug: Web/API/MediaTrackSupportedConstraints/autoGainControl
+page-type: web-api-instance-property
+tags:
+  - API
+  - Audio
+  - Constraints
+  - Media
+  - Media Capture and Streams
+  - Media Capture and Streams API
+  - Media Constraints
+  - Media Streams
+  - MediaTrackSupportedConstraints
+  - Property
+  - Volume
+  - Web
+  - autoGainControl
+browser-compat: api.MediaTrackSupportedConstraints.autoGainControl
 translation_of: Web/API/MediaTrackSupportedConstraints/autoGainControl
 ---
-<div>{{domxref("MediaTrackSupportedConstraints")}}ディクショナリーの<strong><code>autoGainControl</code></strong>プロパティは読み取り専用のBooleanの値です。{{Glossary("user agent")}}が<strong><code>autoGainControl</code></strong>の制約をサポートしている場合、{{domxref("MediaDevices.getSupportedConstraints()")}}の戻り値のオブジェクトに含まれ<code>true</code>が設定されます。この制約がサポートされない場合は含まれないため、<code>false</code>になることはありません。</div>
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p>サポートされている制約のディクショナリーは<code>navigator.mediaDevices.getSupportedConstraints()</code>を呼び出すことで取得できます。</p>
+{{domxref("MediaTrackSupportedConstraints")}} 辞書の **`autoGainControl`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が **`autoGainControl`** 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。
 
-<p><code>autoGainControl</code>の制約は、ブラウザが、メディアトラックの(ボリューム)ゲインを自動的に制御する機能を提供するかどうかを示します。当然ながら、これは個々のデバイスが自動ゲイン制御をサポートしているかに依存します。一般的に、この機能はマイクが提供します。</p>
+対応している制約の辞書は `navigator.mediaDevices.getSupportedConstraints()` を呼び出すことで取得できます。
 
-<h2 id="文法">文法</h2>
+`autoGainControl` 制約は、ブラウザーがメディアトラックのゲイン（音量）を自動的にコントロールする機能を提供しているかどうかを示します。これは明らかに、個々の機器が自動ゲインコントロールにも対応しているかどうかが条件となり、通常、マイクによって提供される機能です。
 
-<pre class="syntaxbox"><em>autoGainSupported</em> = <em>supportedConstraintsDictionary</em>["autoGainControl"];</pre>
+### 値
 
-<h3 id="値">値</h3>
+ユーザーエージェントが `aspectRatio` 制約に対応している場合、このプロパティが辞書に現れます（値は常に `true`です）。このプロパティがない場合は、対応している制約の辞書から欠落しており、その値を見ようとすると {{jsxref("undefined")}} が返されます。
 
-<p>ユーザエージェント<code>autoGainControl</code>の制約をサポートしている場合、このプロパティはディクショナリーの中に含まれ、その値は常に<code>true</code>の値です。このプロパティが存在しない場合は、サポートされている制約ディクショナリーには存在しないため、{{jsxref("undefined")}}の値を取ることになります。</p>
+## 例
 
-<h2 id="例">例</h2>
+この例では、ブラウザーが `autoGainControl` 制約に対応しているかどうかを表示します。
 
-<p>この例では、単純に、あなたのブラウザが<code>autoGainControl</code>の制約をサポートしているかどうかを表示するものです。</p>
-
-<div class="hidden">
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div id="result"&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#result {
-  font: 14px "Arial", sans-serif;
-}</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
+```html hidden
+<div id="result">
 </div>
+```
 
-<pre class="brush: js">let result = document.getElementById("result");
+```css hidden
+#result {
+  font: 14px "Arial", sans-serif;
+}
+```
 
-if (navigator.mediaDevices.getSupportedConstraints()["autoGainControl"]) {
-    result.innerHTML = "Supported!";
+```js
+let result = document.getElementById("result");
+
+if (navigator.mediaDevices.getSupportedConstraints().autoGainControl) {
+    result.textContent = "Supported!";
 } else {
-    result.innerHTML = "Not supported!";
-}</pre>
+    result.textContent = "Not supported!";
+}
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Example', 600, 80) }}</p>
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#widl-MediaTrackSupportedConstraints-autoGainControl', 'autoGainControl') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaTrackSupportedConstraints.autoGainControl")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
- <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
- <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
- <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

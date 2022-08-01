@@ -1,83 +1,73 @@
 ---
 title: MediaTrackSupportedConstraints.noiseSuppression
 slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
+page-type: web-api-instance-property
+tags:
+  - API
+  - Audio
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Constraints
+  - Media Streams API
+  - MediaStreamTrackSupportedConstraints
+  - Property
+  - noiseSuppression
+browser-compat: api.MediaTrackSupportedConstraints.noiseSuppression
 translation_of: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p><a href="/ja/docs/Web/API/MediaTrackSupportedConstraints" title="MediaTrackSupportedConstraintsディクショナリは、MediaStreamTrackオブジェクトを実装しているuser agentやブラウザによって理解できる制約可能なプロパティの一覧を表します。MediaDevices.getSupportedConstraints()によって、MediaTrackSupportedConstraintsに適合するオブジェクトが戻り値として返されます。"><code>MediaTrackSupportedConstraints</code></a>ディクショナリーの<strong><code>noiseSuppression</code></strong>プロパティは読み取り専用のBooleanの値です。<a href="/ja/docs/Glossary/user_agent" rel="nofollow" title="この用語 (user agent) の定義はまだ書かれていません。ぜひご寄稿ください！">user agent</a>が<strong><code>noiseSuppression</code></strong>の制約をサポートしている場合、<a href="/ja/docs/Web/API/MediaDevices/getSupportedConstraints" title="MediaDevices インタフェースのgetSupportedConstraints() メソッドは、MediaTrackSupportedConstraintsディクショナリをベースとするオブジェクトを戻り値として返します。このオブジェクトのメンバーフィールドは、user agentが扱えるメディア制約に関するプロパティを表しています。"><code>MediaDevices.getSupportedConstraints()</code></a>の戻り値のオブジェクトに含まれ<code>true</code>が設定されます。この制約がサポートされない場合は含まれないため、<code>false</code>になることはありません。</p>
+{{domxref("MediaTrackSupportedConstraints")}} 辞書の **`noiseSuppression`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が **`noiseSuppression`** 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。
 
-<p>サポートされている制約のディクショナリーは<code>navigator.mediaDevices.getSupportedConstraints()</code>を呼び出すことで取得できます。</p>
+対応している制約の辞書は `navigator.mediaDevices.getSupportedConstraints()` を呼び出すことで取得できます。
 
-<p><code>noiseSuppression</code>の制約は、ブラウザがノイズ抑制の機能を提供しているかどうかを表すものです。当たり前ですが、個々のデバイスがサポートしているかどうかに依存します。</p>
+`noiseSuppression` 制約は、ブラウザーがメディアトラックのゲイン（音量）を自動的に制御する機能を提供しているかどうかを示します。これは明らかに、個々の機器が同様に自動ゲインコントロールに対応しているかどうかに依存しています。
 
-<h2 id="文法">文法</h2>
+### 値
 
-<pre class="syntaxbox"><em>noiseSuppressionSupported</em> = <em>supportedConstraintsDictionary</em>["noiseSuppression"];</pre>
+ユーザーエージェントが `noiseSuppression` 制約に対応している（すなわち、音声トラックのノイズ抑制に対応している）場合、このプロパティが辞書に現れます（値は常に `true`です）。このプロパティがない場合は、対応している制約の辞書から欠落しており、その値を見ようとすると {{jsxref("undefined")}} が返されます。
 
-<h3 id="値">値</h3>
+## 例
 
-<p>ユーザエージェント<code>noiseSuppression</code>の制約をサポートしている場合、このプロパティはディクショナリーの中に含まれ、その値は常に<code>true</code>の値です。このプロパティが存在しない場合は、サポートされている制約ディクショナリーには存在しないため、<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="グローバルプロパティ undefined はプリミティブ値 undefined を表します。これは JavaScript におけるプリミティブ型の一つです。"><code>undefined</code></a>の値を取ることになります。</p>
+この例では、ブラウザーが `noiseSuppression` 制約に対応しているかどうかを表示します。
 
-<h2 id="例">例</h2>
-
-<p>この例では単純に、<code>noiseSuppression</code>の制約をブラウザーがサポートしているかどうかを表示するものです。</p>
-
-<div class="hidden">
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;div id="result"&gt;
-&lt;/div&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#result {
-  font: 14px "Arial", sans-serif;
-}</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
+```html hidden
+<div id="result">
 </div>
+```
 
-<pre class="brush: js">let result = document.getElementById("result");
+```css hidden
+#result {
+  font: 14px "Arial", sans-serif;
+}
+```
 
-if (navigator.mediaDevices.getSupportedConstraints()["noiseSuppression"]) {
-    result.innerHTML = "Supported!";
+```js
+let result = document.getElementById("result");
+
+if (navigator.mediaDevices.getSupportedConstraints().noiseSuppression) {
+    result.textContent = "Supported!";
 } else {
-    result.innerHTML = "Not supported!";
-}</pre>
+    result.textContent = "Not supported!";
+}
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Example', 600, 80) }}</p>
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#widl-MediaTrackSupportedConstraints-noiseSuppression', 'noiseSuppression') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaTrackSupportedConstraints.noiseSuppression")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
- <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
- <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
- <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}
