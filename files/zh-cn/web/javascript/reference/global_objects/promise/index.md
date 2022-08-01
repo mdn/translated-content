@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 {{AvailableInWorkers}}
 
-若想了解 promise 的工作方式以及如何使用它们，我们建议你先阅读[使用 promise](/en-US/docs/Web/JavaScript/Guide/Using_promises)。
+若想了解 promise 的工作方式以及如何使用它们，我们建议你先阅读[使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)。
 
 ## 描述
 
