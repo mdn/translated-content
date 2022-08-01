@@ -13203,16 +13203,6 @@
       "teoli"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncancel": {
-    "modified": "2020-10-15T22:14:52.164Z",
-    "contributors": [
-      "Dante-dan",
-      "zhanghengxin",
-      "kenanGao",
-      "c1er",
-      "linshehai"
-    ]
-  },
   "Web/API/HTMLAnchorElement": {
     "modified": "2019-03-23T22:49:30.797Z",
     "contributors": [
