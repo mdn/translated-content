@@ -21739,12 +21739,6 @@
       "Jee"
     ]
   },
-  "Web/API/Window/isSecureContext": {
-    "modified": "2019-03-23T22:07:53.475Z",
-    "contributors": [
-      "FEhaoxinjie"
-    ]
-  },
   "Web/API/Window/languagechange_event": {
     "modified": "2019-04-02T08:34:33.657Z",
     "contributors": [
