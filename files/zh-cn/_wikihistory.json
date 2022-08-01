@@ -19370,15 +19370,6 @@
       "niugeshenhua"
     ]
   },
-  "Web/API/Transferable": {
-    "modified": "2020-10-15T21:39:40.681Z",
-    "contributors": [
-      "RainSlide",
-      "Xiao4",
-      "teoli",
-      "wintertigerxu"
-    ]
-  },
   "Web/API/TransitionEvent": {
     "modified": "2019-03-23T22:07:03.054Z",
     "contributors": [
