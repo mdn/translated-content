@@ -3,40 +3,37 @@ title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
 translation_of: Web/API/MediaStream/MediaStream
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p> 构造函数<strong><code>MediaStream()</code></strong> 返回新建的 {{domxref("MediaStream")}} 实例，该实例作为媒体流的内容的集合载体，其可能包含多个媒体数据轨，每个数据轨则由一个 {{domxref("MediaStreamTrack")}} 对象表示。如果给出相应参数，在指定的数据轨则被添加到新的流中。否则，该流中不包含任何数据轨。</p>
+构造函数**`MediaStream()`** 返回新建的 {{domxref("MediaStream")}} 实例，该实例作为媒体流的内容的集合载体，其可能包含多个媒体数据轨，每个数据轨则由一个 {{domxref("MediaStreamTrack")}} 对象表示。如果给出相应参数，在指定的数据轨则被添加到新的流中。否则，该流中不包含任何数据轨。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><var>newStream</var> = new MediaStream();
-<var>newStream</var> = new MediaStream(<var>stream</var>);
-<var>newStream</var> = new MediaStream(<var>tracks[]</var>);
-</pre>
+```js
+newStream = new MediaStream();
+newStream = new MediaStream(stream);
+newStream = new MediaStream(tracks[]);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><code><var>stream</var></code></dt>
- <dd>这是另一个 {{domxref("MediaStream")}} 对象，其数据轨会被自动添加到新建的流中。且这些数据轨不会从原流中移除，即变成了两条流共享的数据。</dd>
- <dt><code><var>tracks</var></code></dt>
- <dd>这是 {{domxref("MediaStreamTrack")}} 对象的 {{jsxref("Array")}} 类型的成员，代表了每一个添加到流中的数据轨。</dd>
-</dl>
+- `stream`
+  - : 这是另一个 {{domxref("MediaStream")}} 对象，其数据轨会被自动添加到新建的流中。且这些数据轨不会从原流中移除，即变成了两条流共享的数据。
+- `tracks`
+  - : 这是 {{domxref("MediaStreamTrack")}} 对象的 {{jsxref("Array")}} 类型的成员，代表了每一个添加到流中的数据轨。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>新建的 {{domxref("MediaStream")}} 对象，会包含创建时已给的数据轨内容，若没有给定任何数据轨则内容为空。</p>
+新建的 {{domxref("MediaStream")}} 对象，会包含创建时已给的数据轨内容，若没有给定任何数据轨则内容为空。
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.MediaStream.MediaStream")}}</p>
+{{Compat("api.MediaStream.MediaStream")}}
 
-<h2 id="也可参考">也可参考</h2>
+## 参见
 
-<ul>
- <li>{{domxref("MediaStream")}}</li>
-</ul>
+- {{domxref("MediaStream")}}

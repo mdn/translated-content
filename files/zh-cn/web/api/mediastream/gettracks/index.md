@@ -9,38 +9,42 @@ tags:
   - 方法
 translation_of: Web/API/MediaStream/getTracks
 ---
-<p>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-<p>{{domxref("MediaStream")}} 接口的<strong><dfn><code>getTracks()</code></dfn></strong> 方法会返回一个包含  <code><a href="https://www.w3.org/TR/mediacapture-streams/#track-set">track set</a></code> 流中所有 {{domxref("MediaStreamTrack")}}  对象的序列， 序列内容与{{domxref("MediaStreamTrack.kind")}} 无关。</p>
+{{domxref("MediaStream")}} 接口的**_`getTracks()`_** 方法会返回一个包含 [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) 流中所有 {{domxref("MediaStreamTrack")}} 对象的序列， 序列内容与{{domxref("MediaStreamTrack.kind")}} 无关。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var <em>mediaStreamTracks</em> = <em>mediaStream</em>.getTracks()</pre>
+```js
+var mediaStreamTracks = mediaStream.getTracks()
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无</p>
+无
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{domxref("MediaStreamTrack")}} 对象的数组</p>
+{{domxref("MediaStreamTrack")}} 对象的数组
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<pre class="brush: js">navigator.mediaDevices.getUserMedia({audio: false, video: true})
-.then(mediaStream =&gt; {
+```js
+navigator.mediaDevices.getUserMedia({audio: false, video: true})
+.then(mediaStream => {
   document.querySelector('video').srcObject = mediaStream;
   // Stop the stream after 5 seconds
-  setTimeout(() =&gt; {
+  setTimeout(() => {
     const tracks = mediaStream.getTracks()
     tracks[0].stop()
   }, 5000)
-})</pre>
+})
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.MediaStream.getTracks")}}</p>
+{{Compat("api.MediaStream.getTracks")}}
