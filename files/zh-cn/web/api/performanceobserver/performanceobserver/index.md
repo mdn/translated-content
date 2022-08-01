@@ -3,31 +3,31 @@ title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
 translation_of: Web/API/PerformanceObserver/PerformanceObserver
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p><strong><code>PerformanceObserver()</code></strong> 构造函数使用给定的观察者 <code>callback</code> 生成一个新的 {{domxref("PerformanceObserver")}} 对象。当通过 {{domxref("PerformanceObserver.observe","observe()")}} 方法注册的 {{domxref("PerformanceEntry.entryType","条目类型",'','true')}} 的 {{domxref("PerformanceEntry","性能条目事件", '', 'true')}} 被记录下来时，调用该观察者回调. </p>
+**`PerformanceObserver()`** 构造函数使用给定的观察者 `callback` 生成一个新的 {{domxref("PerformanceObserver")}} 对象。当通过 {{domxref("PerformanceObserver.observe","observe()")}} 方法注册的 {{domxref("PerformanceEntry.entryType","条目类型",'','true')}} 的 {{domxref("PerformanceEntry","性能条目事件", '', 'true')}} 被记录下来时，调用该观察者回调.
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox">var observer = new PerformanceObserver(<em>callback</em>);
-</pre>
+```js
+var observer = new PerformanceObserver(callback);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt><em><code>callback</code></em></dt>
- <dd>观察的性能事件被记录时将调用 <code>PerformanceObserverCallback</code> 回调。调用回调时，其第一个参数是 {{domxref("PerformanceObserverEntryList","性能观察条目列表", '', 'true')}}，第二个参数是 {{domxref("PerformanceObserver","观察者")}} 对象。</dd>
-</dl>
+- _`callback`_
+  - : 观察的性能事件被记录时将调用 `PerformanceObserverCallback` 回调。调用回调时，其第一个参数是 {{domxref("PerformanceObserverEntryList","性能观察条目列表", '', 'true')}}，第二个参数是 {{domxref("PerformanceObserver","观察者")}} 对象。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>一个在观察的性能事件发生时调用指定的 <code>callback</code> 的新 {{domxref("PerformanceObserver")}} 对象。</p>
+一个在观察的性能事件发生时调用指定的 `callback` 的新 {{domxref("PerformanceObserver")}} 对象。
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<pre class="brush: js">var observer = new PerformanceObserver(function(list, obj) {
+```js
+var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i &lt; entries.length; i++) {
+  for (var i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -38,16 +38,12 @@ function perf_observer(list, observer) {
 }
 var observer2 = new PerformanceObserver(perf_observer);
 observer2.observe({entryTypes: ["measure"]});
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.PerformanceObserver.PerformanceObserver")}}</p>
-</div>
+{{Compat}}

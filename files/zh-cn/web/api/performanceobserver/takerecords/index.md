@@ -3,30 +3,30 @@ title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
 translation_of: Web/API/PerformanceObserver/takeRecords
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<div> </div>
+{{domxref('PerformanceObserver')}} 接口的 **`takeRecords()`** 方法返回当前存储在性能观察器中的 {{domxref("PerformanceEntry","性能条目")}} 列表，将其清空。
 
-<p>{{domxref('PerformanceObserver')}} 接口的 <strong><code>takeRecords()</code></strong> 方法返回当前存储在性能观察器中的 {{domxref("PerformanceEntry","性能条目")}}  列表，将其清空。</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var PerformanceEntry[] = performanceObserver.takeRecords();
+```
 
-<pre class="syntaxbox">var PerformanceEntry[] = <em>performanceObserver</em>.takeRecords();
-</pre>
+### 参数
 
-<h3 id="参数">参数</h3>
+None.
 
-<p>None.</p>
+### 返回值
 
-<h3 id="返回值">返回值</h3>
+{{domxref("PerformanceEntry")}} 对象列表。
 
-<p>{{domxref("PerformanceEntry")}} 对象列表。</p>
+## 例子
 
-<h2 id="例子">例子</h2>
-
-<pre class="brush: js">var observer = new PerformanceObserver(function(list, obj) {
+```js
+var observer = new PerformanceObserver(function(list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i &lt; entries.length; i++) {
+  for (var i=0; i < entries.length; i++) {
     // Process "mark" and "frame" events
   }
 });
@@ -35,16 +35,12 @@ var records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);
 console.log(records[0].duration);
-</pre>
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-
-
-<p>{{Compat("api.PerformanceObserver.takeRecords")}}</p>
-</div>
+{{Compat}}
