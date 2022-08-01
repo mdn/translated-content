@@ -1,95 +1,86 @@
 ---
 title: MediaTrackSupportedConstraints.frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
+page-type: web-api-instance-property
+tags:
+  - API
+  - Constraints
+  - Media
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSupportedConstraints
+  - Property
+  - Reference
+  - Web
+  - WebRTC
+  - frameRate
+browser-compat: api.MediaTrackSupportedConstraints.frameRate
 translation_of: Web/API/MediaTrackSupportedConstraints/frameRate
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-<div> </div>
+{{domxref("MediaTrackSupportedConstraints")}} 辞書の **`frameRate`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が {{domxref("MediaTrackConstraints.frameRate", "frameRate")}} 制約に対応しています。
 
-<p><a href="/ja/docs/Web/API/MediaTrackSupportedConstraints" title="MediaTrackSupportedConstraintsディクショナリは、MediaStreamTrackオブジェクトを実装しているuser agentやブラウザによって理解できる制約可能なプロパティの一覧を表します。MediaDevices.getSupportedConstraints()によって、MediaTrackSupportedConstraintsに適合するオブジェクトが戻り値として返されます。"><code>MediaTrackSupportedConstraints</code></a>ディクショナリーの<strong><code>frameRate</code></strong>プロパティは読み取り専用のBooleanの値です。<a href="/ja/docs/Glossary/user_agent" rel="nofollow" title="この用語 (user agent) の定義はまだ書かれていません。ぜひご寄稿ください！">user agent</a>が<strong><code>frameRate</code></strong>の制約をサポートしている場合、<a href="/ja/docs/Web/API/MediaDevices/getSupportedConstraints" title="MediaDevices インタフェースのgetSupportedConstraints() メソッドは、MediaTrackSupportedConstraintsディクショナリをベースとするオブジェクトを戻り値として返します。このオブジェクトのメンバーフィールドは、user agentが扱えるメディア制約に関するプロパティを表しています。"><code>MediaDevices.getSupportedConstraints()</code></a>の戻り値のオブジェクトに含まれ<code>true</code>が設定されます。この制約がサポートされない場合は含まれないため、<code>false</code>になることはありません。</p>
+制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。
 
-<p><code>frameRate</code>制約は、新しいビデオトラックのフレームレートの許容できる上限と下限、あるいは正確なフレームレートを表すのに用いられます。このプロパティの値を確認することで、フレームレートでのビデオトラック設定の制約をユーザーエージェントが対応しているかを特定することができます。どのように使われるかは<a href="#example">example</a>を見てください。</p>
+`frameRate` 制約は、新しい映像トラックの映像フレームレートの許容上限と下限を設定したり、リクエストが成功するために提供されなければならない正確なフレームレートを指定するために使用することができます。このプロパティの値を確認することで、ユーザーエージェントがフレームレートによる映像トラック構成の制約を許可しているかどうかを判断できます。このプロパティがどのように使用できるかは、[例](#例)を参照してください。
 
-<h2 id="文法">文法</h2>
+### 値
 
-<pre class="syntaxbox"><em>frameRateConstraintSupported</em> = <em>supportedConstraintsDictionary</em>["frameRate"];</pre>
+このプロパティは、ユーザーエージェントが `frameRate` 制約に対応している場合に、辞書に現れます。このプロパティが現れない場合、ユーザーエージェントはビデオトラックのフレームレートの制限を指定することを許可していません。
 
-<h3 id="値">値</h3>
+> **Note:** このプロパティが存在する場合は、常に `true` になります。
 
-<p>ユーザーエージェントが<code>frameRate</code>の制約をサポートする場合、このプロパティはディクショナリーに存在します。このプロパティが存在しない場合は、ユーザーエージェントは、ビデオトラックのフレームレートを制限することができません。</p>
+## 例
 
-<div class="note">
-<p>このプロパティが存在する場合は、常に<code>true</code>になります。</p>
-</div>
+この簡単な例では、映像トラックを要求する際に、ブラウザがフレームレートの制約に対応しているかどうかを調べます。
 
-<h2 id="Example" name="Example">例</h2>
+### JavaScript
 
-<p>この簡単な例では、ビデオの要求時でのフレームレートの制約をブラウザがサポートしているかどうかを確認するものです。</p>
+```js
+let result = document.getElementById("result");
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints()["frameRate"]) {
-    result.innerHTML = "Supported!";
+if (navigator.mediaDevices.getSupportedConstraints().frameRate) {
+    result.textContent = "Supported!";
 } else {
-    result.innerHTML = "Not supported!";
-}</pre>
+    result.textContent = "Not supported!";
+}
+```
 
-<details open><summary>
-<h3 id="HTML">HTML</h3>
-</summary>
+### HTML
 
-<pre class="brush: html">&lt;div id="result"&gt;
-&lt;/div&gt;</pre>
-</details>
+```html
+<div id="result">
+</div>
+```
 
-<details open><summary>
-<h3 id="CSS">CSS</h3>
-</summary>
+### CSS
 
-<pre class="brush: css">#result {
+```css
+#result {
   font: 14px "Arial", sans-serif;
-}</pre>
-</details>
+}
+```
 
-<h3 id="結果">結果</h3>
+### 結果
 
-<p>利用中のブラウザが<code>frameRate</code>の制約をサポートしているかどうかは次の通りです。</p>
+ブラウザーが `frameRate` 制約に対応しているかどうかを示す出力は、次のとおりです。
 
-<p>{{ EmbedLiveSample('Example', 600, 80) }}</p>
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
-<p>この例はとても簡単なので、"Supported"と"Not supported"の単純な出力を、視聴覚情報を表現するための別の方法に置き換えることができます。</p>
+この例は些細なものですが、「対応している」対「対応していない」という単純な出力をコードに置き換えることで、ユーザーと共有したい、あるいは一緒に作業したい視聴覚情報を表示するための代替方法を提供することができます。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#widl-MediaTrackSupportedConstraints-frameRate', 'frameRate') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaTrackSupportedConstraints.frameRate")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Media_Streams_API">Media Capture and Streams API</a></li>
- <li>{{domxref("MediaDevices.getSupportedConstraints()")}}</li>
- <li>{{domxref("MediaTrackSupportedConstraints")}}</li>
- <li>{{domxref("MediaStreamTrack")}}</li>
-</ul>
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- {{domxref("MediaDevices.getSupportedConstraints()")}}
+- {{domxref("MediaTrackSupportedConstraints")}}
+- {{domxref("MediaStreamTrack")}}

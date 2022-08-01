@@ -1,61 +1,92 @@
 ---
 title: MediaTrackSupportedConstraints
 slug: Web/API/MediaTrackSupportedConstraints
+page-type: web-api-interface
+tags:
+  - API
+  - Capture
+  - Constraints
+  - Dictionary
+  - Interface
+  - Media Capture and Streams API
+  - Media Streams API
+  - MediaTrackSupportedConstraints
+  - Reference
+  - Screen Capture
+  - Screen Capture API
+  - screen
+browser-compat: api.MediaTrackSupportedConstraints
 translation_of: Web/API/MediaTrackSupportedConstraints
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
-<p><strong><code>MediaTrackSupportedConstraints</code></strong>ディクショナリは、{{domxref("MediaStreamTrack")}}オブジェクトを実装している{{Glossary("user agent")}}やブラウザによって理解できる制約可能なプロパティの一覧を表します。{{domxref("MediaDevices.getSupportedConstraints()")}}によって、<code>MediaTrackSupportedConstraints</code>に適合するオブジェクトが戻り値として返されます。</p>
+**`MediaTrackSupportedConstraints`** 辞書は{{Glossary("user agent", "ユーザーエージェント")}}またはブラウザーが {{domxref("MediaStreamTrack")}} オブジェクトの実装で認識する制約可能なプロパティのリストを確立するものです。 `MediaTrackSupportedConstraints` に適合するオブジェクトは {{domxref("MediaDevices.getSupportedConstraints()")}} によって返されます。
 
-<p>WebIDLでのインタフェース定義の手順で動作するため、制約は受け付けられたがサポートしていない場合エラーは発生しません。代わりに、指定された制約は解釈できなかった制約を除いて適用されるでしょう。これは混乱を招きエラーのデバッグを困難にするので、制約が暗黙的に無視されたのか制約が受け付けられたのかを知りたい場合は、<code>getSupportedConstraints()</code>を用いて、制約の確立を試みる前にこの情報を取得してください。</p>
+WebIDLのインターフェイス定義はこのように動作するため、制約が要求されたが対応していない場合、エラーは発生しません。代わりに、指定された制約が適用され、認識されない制約が要求から取り除かれます。これは混乱をもたらすことがあり、エラーのデバッグが困難になるので、制約を黙って無視することと制約を受け入れることの違いを知る必要がある場合は、制約を確立しようとする前に、必ず `getSupportedConstraints()` を使用してこの情報を取り出してください。
 
-<p>実際の制約セットは{{domxref("MediaTrackConstraints")}}ディクショナリをベースにしたオブジェクトで表現されます。</p>
+実際の制約セットは {{domxref("MediaTrackConstraints")}} 辞書をベースにしたオブジェクトで表現されます。
 
-<p>制約がどのように動作するかについての詳細を知りたい場合は、<a href="/ja/docs/Web/API/Media_Streams_API/Constraints">Capabilities, constraints, and settings</a>を読んでください。</p>
+制約がどのように動作するかについての詳細を知りたい場合は、[能力、制約、設定](/ja/docs/Web/API/Media_Streams_API/Constraints)を読んでください。
 
-<h2 id="プロパティ">プロパティ</h2>
+## プロパティ
 
-<p>オブジェクトは以下のプロパティの組み合わせであり、必ずしも全てのプロパティが含まれるわけではありません。</p>
+オブジェクトは以下のプロパティの組み合わせであり、必ずしも全てのプロパティが含まれるわけではありません。
 
-<dl>
- <dt>{{domxref("MediaTrackSupportedConstraints.autoGainControl", "autoGainControl")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#autoGainControl">autoGainControl</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.width", "width")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#width">width</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.height", "height")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#height">height</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.aspectRatio", "aspectRatio")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#aspectRatio">aspectRatio</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.frameRate", "frameRate")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#frameRate">frameRate</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.facingMode", "facingMode")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#facingMode">facingMode</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.volume", "volume")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#volume">volume</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.sampleRate", "sampleRate")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#sampleRate">sampleRate</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.sampleSize", "sampleSize")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#sampleSize">sampleSize</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.echoCancellation", "echoCancellation")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#echoCancellation">echoCancellation</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.latency", "latency")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#latency">latency</a></code> 制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.noiseSuppression", "noiseSuppression")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#noiseSuppression">noiseSuppression</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.channelCount", "channelCount")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#channelCount">channelCount</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.deviceId", "deviceId")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#deviceId">deviceId</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
- <dt>{{domxref("MediaTrackSupportedConstraints.groupId", "groupId")}}</dt>
- <dd>実行環境で<code><a href="/ja/docs/Web/API/MediaTrackConstraints#groupId">groupId</a></code>制約がサポートされている場合は、Boolean型の<code>true</code>の値になります。</dd>
-</dl>
+- {{domxref("MediaTrackSupportedConstraints.autoGainControl", "autoGainControl")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`autoGainControl`](/ja/docs/Web/API/MediaTrackConstraints#autogaincontrol) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.width", "width")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`width`](/ja/docs/Web/API/MediaTrackConstraints#width) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.height", "height")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`height`](/ja/docs/Web/API/MediaTrackConstraints#height) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.aspectRatio", "aspectRatio")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`aspectRatio`](/ja/docs/Web/API/MediaTrackConstraints#aspectratio) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.frameRate", "frameRate")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`frameRate`](/ja/docs/Web/API/MediaTrackConstraints#framerate) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.facingMode", "facingMode")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`facingMode`](/ja/docs/Web/API/MediaTrackConstraints#facingmode) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.resizeMode", "resizeMode")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`resizeMode`](/ja/docs/Web/API/MediaTrackConstraints#resizemode) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.volume", "volume")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`volume`](/ja/docs/Web/API/MediaTrackConstraints#volume) 制約に対応しています。
 
-<h2 id="関連項目">関連項目</h2>
+- {{domxref("MediaTrackSupportedConstraints.sampleRate", "sampleRate")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`sampleRate`](/ja/docs/Web/API/MediaTrackConstraints#samplerate) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.sampleSize", "sampleSize")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`sampleSize`](/ja/docs/Web/API/MediaTrackConstraints#samplesize) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.echoCancellation", "echoCancellation")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`echoCancellation`](/ja/docs/Web/API/MediaTrackConstraints#echocancellation) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.latency", "latency")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`latency`](/ja/docs/Web/API/MediaTrackConstraints#latency) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.noiseSuppression", "noiseSuppression")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`noiseSuppression`](/ja/docs/Web/API/MediaTrackConstraints#noisesuppression) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.channelCount", "channelCount")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`channelCount`](/ja/docs/Web/API/MediaTrackConstraints#channelcount) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.deviceId", "deviceId")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`deviceId`](/ja/docs/Web/API/MediaTrackConstraints#deviceid) 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.groupId", "groupId")}}
+  - : 論理値で、値が `true` ならば、現在の環境で [`groupId`](/ja/docs/Web/API/MediaTrackConstraints#groupid) 制約に対応しています。
 
-<ul>
- <li>{{domxref("MediaTrackConstraints")}}</li>
- <li>{{domxref("MediaDevices.getUserMedia()")}}</li>
- <li>{{domxref("MediaStreamTrack.getConstraints()")}}</li>
- <li>{{domxref("MediaStreamTrack.applyConstraints()")}}</li>
- <li>{{domxref("MediaStreamTrack.getSettings()")}}</li>
-</ul>
+### 画面共有トラックに固有のプロパティ
+
+ユーザーの画面内コンテンツから映像ソースを含むトラックには、映像トラックで利用可能なプロパティに加え、以下のプロパティを入れることができます。
+
+- {{domxref("MediaTrackSupportedConstraints.displaySurface", "displaySurface")}}
+  - : 論理値で、値が `true` ならば、現在の環境で {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}} 制約に対応しています。
+- {{domxref("MediaTrackSupportedConstraints.logicalSurface", "logicalSurface")}}
+  - : 論理値で、値が `true` ならば、現在の環境で {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} 制約に対応しています。
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [能力、制約、設定](/ja/docs/Web/API/Media_Streams_API/Constraints)
+- [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API)
+- [画面キャプチャ API の使用](/ja/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- {{domxref("MediaTrackConstraints")}}
+- {{domxref("MediaDevices.getUserMedia()")}}
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaStreamTrack.getSettings()")}}
