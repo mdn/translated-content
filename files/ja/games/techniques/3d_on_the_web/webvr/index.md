@@ -1,5 +1,5 @@
 ---
-title: WebVR — Webによる仮想現実
+title: WebVR — ウェブによる仮想現実
 slug: Games/Techniques/3D_on_the_web/WebVR
 tags:
   - 3D
@@ -8,75 +8,74 @@ tags:
   - WebVR
 translation_of: Games/Techniques/3D_on_the_web/WebVR
 ---
-<div>{{GamesSidebar}}</div>
+{{GamesSidebar}}
 
-<p class="summary">仮想現実の概念自体は新しいものではありませんが、今ではそれをあるべき姿で機能させるためのテクノロジーと、それを Web アプリケーションで活用するための JavaScript API があります。 この記事では、ゲームでの使用の観点から WebVR を紹介しています。</p>
+仮想現実の概念自体は新しいものではありませんが、今ではそれをあるべき姿で機能させるためのテクノロジーと、それをウェブアプリケーションで活用するための JavaScript API があります。 この記事では、ゲームでの使用の観点から WebVR を紹介しています。
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: WebVR API は <a href="/ja/docs/Web/API/WebXR_Device_API">WebXR Device API</a> に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーでデフォルトで実装および有効化され、少数のデバイスをサポートしていました。</p>
-</div>
+> **Note:** WebVR API は [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
 
-<h2 id="VR_devices" name="VR_devices">VR デバイス</h2>
+## VR 機器
 
-<p>Oculus Rift の人気とその他の多くのデバイスが間もなく市場に登場することで、未来は明るいように見えます。 ゲームをプレイするのに "十分な" VR 体験を実現するのに十分なテクノロジーがすでにあります。 Oculus Rift や HTC Vive などのデスクトップ型のものから、Playstation VR (現時点では WebVR をサポートしていないことは確かです) を備えたコンソール、Gear VR や Google Cardboard などのモバイルエクスペリエンスまで、選択できるデバイスはたくさんあります。</p>
+Oculus Rift の人気とその他の多くの機器が間もなく市場に登場することで、未来は明るいように見えます。 ゲームをプレイするのに "十分な" VR 体験を実現するのに十分なテクノロジーがすでにあります。 Oculus Rift や HTC Vive などのデスクトップ型のものから、 Playstation VR (現時点では WebVR に対応していないことは確かです) を備えたコンソール、Gear VR や Google Cardboard などのモバイルエクスペリエンスまで、選択できる機器はたくさんあります。
 
-<p><img alt="" src="http://end3r.com/tmp/vr/hmds.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](hmds.jpg)
 
-<div class="note">
-<p><strong>Note</strong>: 詳細については <a href="/ja/docs/Web/API/WebVR_API/WebVR_concepts">WebVR Concepts</a> をご覧ください。</p>
-</div>
+> **Note:** 詳細については [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts) をご覧ください。
 
-<h2 id="The_WebVR_API" name="The_WebVR_API">WebVR API</h2>
+## WebVR API
 
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> は、コンピューターに接続された VR デバイスの情報とヘッドセットの位置/向き/速度/加速度の情報をキャプチャし、それをゲームやその他のアプリケーションで使用できる有用なデータに変換するための中心的な API です。</p>
+[WebVR API](/ja/docs/Web/API/WebVR_API) は、コンピューターに接続された VR 機器の情報とヘッドセットの位置/向き/速度/加速度の情報をキャプチャし、それをゲームやその他のアプリケーションで使用できる有用なデータに変換するための中心的な API です。
 
-<div class="note">
-<p><strong>Note</strong>: もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の <a href="/ja/docs/Web/API/Gamepad_API">The Gamepad API</a> や、モバイルでのディスプレイの方向を扱うための <a href="/ja/docs/Web/API/Detecting_device_orientation">Device Orientation API</a> などです。</p>
-</div>
+> **Note:** もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の [ゲームパッド API](/ja/docs/Web/API/Gamepad_API) や、モバイルでのディスプレイの方向を扱うための [Device Orientation API](/ja/docs/Web/Events/Detecting_device_orientation) などです。
 
-<h3 id="Browser_support_and_spec_status" name="Browser_support_and_spec_status">ブラウザーサポートと仕様の状態</h3>
+### ブラウザーの対応と仕様書の状態
 
-<p>現在、WebVR API のブラウザーサポートはまだ実験的です — <a href="https://nightly.mozilla.org/">nightly builds of Firefox</a> と <a href="https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&amp;usp=sharing#list">experimental builds of Chrome</a> で動作しますが（Mozilla と Google が一丸となって実装に取り組みます）、遅かれ早かれ通常のビルドで見ることができるようになるでしょう。</p>
+現在、 WebVR API のブラウザー対応はまだ実験的です — [nightly builds of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/) と [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&amp;usp=sharing#list) で動作しますが（Mozilla と Google が一丸となって実装に取り組みます）、遅かれ早かれ通常のビルドで見ることができるようになるでしょう。
 
-<p><a href="|http://mozvr.github.io/webvr-spec/webvr.html">WebVR 仕様</a>は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、Mozilla の <a href="https://twitter.com/vvuk">Vladimir Vukicevic</a> と Google の <a href="https://twitter.com/tojiro">Brandon Jones</a> が主導しています。 詳細については、<a href="http://mozvr.com/">MozVR.com</a> および <a href="http://webvr.info/">WebVR.info</a> の Web サイトにアクセスしてください。</p>
+[WebVR 仕様](|http://mozvr.github.io/webvr-spec/webvr.html)は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、Mozilla の [Vladimir Vukicevic](https://twitter.com/vvuk) と Google の [Brandon Jones](https://twitter.com/tojiro) が主導しています。 詳細については、 <https://mixedreality.mozilla.org/> および [WebVR.info](https://webvr.info/) のウェブサイトにアクセスしてください。
 
-<h3 id="Using_the_WebVR_API" name="Using_the_WebVR_API">WebVR API の使用</h3>
+### WebVR API の使用
 
-<p>WebVR API は、ヘッドセットの両方のレンズに<a href="/ja/docs/Web/API/WebVR_API/WebVR_concepts#Stereoscopic_vision">立体画像</a>を送信することと、センサーから頭の位置データを受信することの2つの概念に基づいており、これら2つは {{domxref("HMDVRDevice")}}（head-mounted display virtual reality device、ヘッドマウントディスプレイ仮想現実デバイス）と {{domxref("PositionSensorVRDevice")}} によって処理されます。</p>
+WebVR API は、ヘッドセットの両方のレンズに[立体画像](/ja/docs/Web/API/WebVR_API/Concepts#stereoscopic_vision)を送信することと、センサーから頭の位置データを受信することの 2 つの概念に基づいており、これら 2 つは {{domxref("HMDVRDevice")}}（head-mounted display virtual reality device、ヘッドマウントディスプレイ仮想現実機器）と {{domxref("PositionSensorVRDevice")}} によって処理されます。
 
-<h3 id="Get_the_devices" name="Get_the_devices">デバイスの取得</h3>
+### 機器の取得
 
-<p>コンピューターに接続されているデバイスに関する情報を取得するには、次のように {{domxref("Navigator.getVRDevices")}} メソッドを使用できます。</p>
+コンピューターに接続されている機器に関する情報を取得するには、次のように {{domxref("Navigator/getVRDisplays")}} メソッドを使用できます。
 
-<pre class="brush: js notranslate">navigator.getVRDevices().then(function(devices) {
-  for (var i = 0; i &lt; devices.length; ++i) {
+```js
+navigator.getVRDevices().then(function(devices) {
+  for (var i = 0; i < devices.length; ++i) {
     if (devices[i] instanceof HMDVRDevice) {
       gHMD = devices[i];
       break;
     }
   }
   if (gHMD) {
-    for (var i = 0; i &lt; devices.length; ++i) {
+    for (var i = 0; i < devices.length; ++i) {
       if (devices[i] instanceof PositionSensorVRDevice
-      	 &amp;&amp; devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+         && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
         gPositionSensor = devices[i];
         break;
       }
     }
   }
-});</pre>
+});
+```
 
-<p>このコードは、使用可能なデバイスをループし、ヘッドセットに適切なセンサーを割り当てます — <code>devices</code> 配列の最初には接続されているデバイスが含まれており、{{domxref("HMDVRDevice")}} を見つけるためのチェックが行われ、それを <code>gHMD</code> 変数に割り当てます — これを使用して、 シーンの設定、目のパラメータの取得、視野の設定などを行うことができます。 例えば次のようにです。</p>
+このコードは、利用可能な機器をループして、適切なセンサーをヘッドセットに割り当てます。最初の `devices` 配列には、接続された機器が含まれており、{{domxref("HMDVRDevice")}} を見つけるためのチェックが行われ、変数 `gHMD` に割り当てられます。これを使用して、シーンを設定し、目のパラメーターを得て、フィールドオブビュー等を設定することができます。例として
 
-<pre class="brush: js notranslate">function setCustomFOV(up,right,down,left) {
+```js
+function setCustomFOV(up,right,down,left) {
   var testFOV = new VRFieldOfView(up,right,down,left);
 
   gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
-}</pre>
+}
+```
 
-<p><code>gPositionSensor</code> 変数は {{domxref("PositionSensorVRDevice")}} を保持します — これを使用して、現在の位置や方向の状態を取得したり（例えば、すべてのフレームでシーンビューを更新したり）、センサーをリセットできます。 例えば、次のコードは画面上の位置情報を出力します。</p>
+`gPositionSensor` 変数は {{domxref("PositionSensorVRDevice")}} を保持します — これを使用して、現在の位置や方向の状態を取得したり（例えば、すべてのフレームでシーンビューを更新したり）、センサーをリセットできます。 例えば、次のコードは画面上の位置情報を出力します。
 
-<pre class="brush: js notranslate">function setView() {
+```js
+function setView() {
   var posState = gPositionSensor.getState();
 
   if(posState.hasPosition) {
@@ -85,40 +84,39 @@ translation_of: Games/Techniques/3D_on_the_web/WebVR
                                 + roundToTwo(posState.position.z);
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
-    if(-posState.position.z &gt; 0.01) {
+    if(-posState.position.z > 0.01) {
       zPos = -posState.position.z;
     } else {
       zPos = 0.01;
     }
   }
 
-  ...
+  // …
 
-}</pre>
+}
+```
 
-<p>これを取得するデモの完全な説明と詳細については、<a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">WebVR API の使い方</a>を参照してください。</p>
+これを取得するデモの完全な説明と詳細については、[WebVR API の使い方](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)を参照してください。
 
-<h2 id="Tools_and_techniques" name="Tools_and_techniques">ツールとテクニック</h2>
+## ツールとテクニック
 
-<p>最初の WebVR の実験とデモでは、おそらく Web で最も人気のある 3D エンジンである Three.js を使用しました。 Three.js github で利用可能な <a href="https://github.com/mrdoob/three.js/blob/master/examples/js/effects/VREffect.js">VREffect</a> および <a href="https://github.com/mrdoob/three.js/blob/master/examples/js/controls/VRControls.js">VRControls</a> 関数を参照して、Three.js で WebVR を実装および処理するのに役立ててください。</p>
+最初の WebVR の実験とデモでは、おそらくウェブで最も人気のある 3D エンジンである Three.js を使用しました。 Three.js github で利用可能な [VREffect](https://github.com/mrdoob/three.js/blob/master/examples/js/effects/VREffect.js) および [VRControls](https://github.com/mrdoob/three.js/blob/master/examples/js/controls/VRControls.js) 関数を参照して、Three.js で WebVR を実装および処理するのに役立ててください。
 
-<p><img alt="" src="http://end3r.com/tmp/vr/sechelt.jpg" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+![](sechelt.jpg)
 
-<p>Boris Smus は、<a href="http://smus.com/responsive-vr/">レスポンシブ WebVR</a> の概念について書いています。 このコンセプトでは、VR ハードウェアのないラップトップ、Oculus Rift を搭載した PC、Google Cardboard に内蔵したスマートフォンなど、さまざまなデバイスで単一の Web ゲームをプレイしながら、それらすべてにユニークで価値のある体験を提供できます。 レスポンシブデザインに似ていますが、VR の世界に適用されます — 一度書けば VR ヘッドセットで実行できます ... またはそれなしで。 <a href="http://github.com/borismus/webvr-boilerplate">WebVR ボイラープレート</a>のソースを確認できます。 これは、WebVR の学習を開始する良い例であり、Web ベースの VR 体験の出発点です。</p>
+Boris Smus は、[レスポンシブ WebVR](http://smus.com/responsive-vr/) の概念について書いています。 このコンセプトでは、 VR ハードウェアのないラップトップ、 Oculus Rift を搭載した PC、Google Cardboard に内蔵したスマートフォンなど、さまざまなデバイスで単一のウェブゲームをプレイしながら、それらすべてにユニークで価値のある体験を提供できます。 レスポンシブデザインに似ていますが、 VR の世界に適用されます — 一度書けば VR ヘッドセットで実行できます ... またはそれなしで。 [WebVR ボイラープレート](http://github.com/borismus/webvr-boilerplate)のソースを確認できます。 これは、WebVR の学習を開始する良い例であり、Web ベースの VR 体験の出発点です。
 
-<p>WebVR のシンプルなビルディングブロックを提供する <a href="https://aframe.io/">A-Frame</a> と呼ばれるマークアップフレームワークもあるため、VR Web サイトやゲームをすばやく構築して実験できます。 詳細については、<a href="/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame">A-Frame を使った基本的なデモの作成</a>というチュートリアルを参照してください。</p>
+WebVR のシンプルなビルディングブロックを提供する [A-Frame](https://aframe.io/) と呼ばれるマークアップフレームワークもあるため、VRウェブサイトやゲームをすばやく構築して実験できます。 詳細については、[A-Frame を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)というチュートリアルを参照してください。
 
-<p>没入感は、ゲームプレイやグラフィックスよりも重要です — 体験の "内側にいる" と感じる必要があります。 実現するのは簡単ではありませんが、リアルな画像は必要ありません。 それどころか、基本的な形状を高フレームレートで飛び交うだけで、かなりの効果が得られます。 実験が重要なことを覚えておいてください — 特にあなたのゲームに何が有効かを確認してください。</p>
+没入感は、ゲームプレイやグラフィックスよりも重要です — 体験の "内側にいる" と感じる必要があります。 実現するのは簡単ではありませんが、リアルな画像は必要ありません。 それどころか、基本的な形状を高フレームレートで飛び交うだけで、かなりの効果が得られます。 実験が重要なことを覚えておいてください — 特にあなたのゲームに何が有効かを確認してください。
 
-<h2 id="The_future_of_WebVR" name="The_future_of_WebVR">WebVR の未来</h2>
+## WebVR の未来
 
-<p>それは起こっています — 消費者向けデバイスは現在市場に出回っており、Web 上でそれらをサポートする JavaScript API がすでにあります。 今必要なのは、安定した仕様、優れた UX と UI、より優れたハードウェア、より多くのツールとライブラリーです。 そしてそのすべてが間近に迫っています。 WebVR に飛び込んで実験するのに最適な時期です。</p>
+それは起こっています — 消費者向けデバイスは現在市場に出回っており、Web 上でそれらをサポートする JavaScript API がすでにあります。 今必要なのは、安定した仕様、優れた UX と UI、より優れたハードウェア、より多くのツールとライブラリーです。 そしてそのすべてが間近に迫っています。 WebVR に飛び込んで実験するのに最適な時期です。
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+## 関連項目
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a></li>
- <li><a href="/ja/docs/Web/API/WebVR_API/WebVR_concepts">WebVR concepts</a></li>
- <li><a href="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">WebVR API の使い方</a></li>
- <li><a href="/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame">A-Frame を使った基本的なデモの作成</a></li>
-</ul>
+- [WebVR API](/ja/docs/Web/API/WebVR_API)
+- [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts)
+- [WebVR API の使い方](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)
+- [A-Frame を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
