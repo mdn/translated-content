@@ -1,218 +1,255 @@
 ---
-title: HTML コンテンツへ SVG 効果を適用する
+title: SVG 効果の HTML コンテンツへの適用
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
+tags:
+  - CSS
+  - Guide
+  - HTML
+  - SVG
 translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
-<div>{{ gecko_minversion_header("1.9.1") }}</div>
+最近のブラウザーは、 [SVG](/ja/docs/Web/SVG) を [CSS](/ja/docs/Web/CSS) スタイルの中で使用して、 HTML コンテンツに対してグラフィカルな効果を適用することに対応しています。
 
-<p>最近のブラウザは、CSS スタイルの中での SVG の使用をサポートしており、HTML コンテンツに対してグラフィカルな効果を適用することができます。</p>
+SVG をスタイルで指定するには、同一文書内または外部のスタイルシートで指定することができます。使用できるプロパティは [`mask`](/ja/docs/Web/CSS/mask), [`clip-path`](/ja/docs/Web/CSS/clip-path), [`filter`](/ja/docs/Web/CSS/filter) の 3 つです。
 
-<p>CSS スタイル中の SVG は、HTML ドキュメントと同じファイル内に含めることも、外部スタイルシートに含めることもできます。使用できるプロパティには、mask、clip-path もしくは filter があります。</p>
+> **Note:** 外部ファイル内の SVG を参照する場合、参照側の文書と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)でなければなければなりません。
 
-<div class="note"><strong>注意:</strong> 外部ファイル内の SVG を参照する場合、参照側の文章と<a href="/ja/docs/Web/Security/Same-origin_policy">同じオリジン</a>を持たなければなければなりません。</div>
+## 埋め込み SVG の使用
 
-<h2 id="埋め込み_SVG_を使う">埋め込み SVG を使う</h2>
+SVG 効果を CSS スタイルで適用するには、まず最初に 適用する SVG を参照する CSS スタイルを作る必要があります。
 
-<p>CSS スタイルを用いて SVG 効果を適用するには、まず最初に 適用する SVG を参照する CSS スタイルを作る必要があります。</p>
+```html
+<style>p { mask: url(#my-mask); }</style>
+```
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;style&gt;p { mask: url(#my-mask); }&lt;/style&gt;</code></pre>
+上の例では、すべての段落が、 [ID](/ja/docs/Web/SVG/Element/mask) に `my-mask` を持つ [SVG の `<mask>`](/ja/docs/Web/HTML/Global_attributes/id) によってマスクされます。
 
-<p>上の例では、my-mask という ID を持つ SVG マスクにより、すべての段落がマスクされます。</p>
+### 例: マスキング
 
-<h3 id="例_マスキング">例: マスキング</h3>
+たとえば、次に示すような SVG のコードを HTML 文章に埋め込むと、HTML コンテンツに対してグラデーションマスクを提供する CSS スタイルを宣言することができます。
 
-<p>たとえば、次に示すような SVG のコードを HTML 文章に埋め込むと、HTML コンテンツに対してグラデーションマスクを提供する CSS スタイルを宣言することができます。</p>
+```html
+<svg height="0">
+  <mask id="mask-1">
+    <linearGradient id="gradient-1" y2="1">
+      <stop stop-color="white" offset="0"/>
+      <stop stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white"/>
+    <rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)"/>
+  </mask>
+</svg>
+```
 
-<pre class="brush: html line-numbers  language-html"><code class="language-css">&lt;svg height="0"&gt;
-  &lt;mask id="mask-1"&gt;
-    &lt;linearGradient id="gradient-1" y2="1"&gt;
-      &lt;stop stop-color="white" offset="0"/&gt;
-      &lt;stop stop-opacity="0" offset="1"/&gt;
-    &lt;/linearGradient&gt;
-    &lt;circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white"/&gt;
-    &lt;rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)"/&gt;
-  &lt;/mask&gt;
-&lt;/svg&gt;</code></pre>
-
-<pre class="brush: css line-numbers  language-css"><code class="language-css">.target {
+```css
+.target {
   mask: url(#mask-1);
 }
 p {
   width: 300px;
   border: 1px solid #000;
   display: inline-block;
-}</code></pre>
+}
+```
 
-<p>この CSS の中で、<code>#mask-1</code> という ID への URL を使用してマスクが指定されていることに注目してください。これがその後ろで設定されている SVG マスクのIDです。それ以外の部分は、グラデーションマスクの詳細について記述しています。</p>
+この CSS の中で、`#mask-1` という ID への URL を使用してマスクが指定されていることに注目してください。これがその後ろで設定されている SVG マスクの ID です。それ以外の部分は、グラデーションマスクの詳細について記述しています。
 
-<p>実際に SVG 効果を XHTML や HTML に適用する場合、次のように単純に上で定義した <code>target</code> スタイルをその要素に割り当てるだけです。</p>
+実際に SVG の効果を HTML に適用する場合、次のように単純に上で定義した `target` スタイルをその要素に割り当てるだけです。
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p class="target" style="background:lime;"&gt;
+```html
+<p class="target" style="background:lime;">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-&lt;/p&gt;
-&lt;p&gt;
+</p>
+<p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    &lt;b class="target"&gt;elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.&lt;/b&gt;
+    <em class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</em>
     Ut enim ad minim veniam.
-&lt;/p&gt;</code></pre>
+</p>
+```
 
-<p>上の例では、要素に適用されたマスクがレンダリングされるはずです。</p>
+上の例では、要素に適用されたマスクがレンダリングされるはずです。
 
-<p>{{ EmbedLiveSample('例_マスキング', 360, 270) }}</p>
+{{EmbedLiveSample('Example_Masking', 650, 200)}}
 
-<h3 id="例_クリッピング">例: クリッピング</h3>
+### 例: クリッピング
 
-<p>この例では、SVG を HTML コンテンツを切り抜くために使用する方法を実演します。リンクの反応範囲ごと切り取られていることに注目してください。</p>
+この例では、 SVG を HTML コンテンツを切り抜くために使用する方法を実演します。リンクの反応範囲ごと切り取られていることに注目してください。
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p class="target" style="background:lime;"&gt;
+```html
+<p class="target" style="background:lime;">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-&lt;/p&gt;
-&lt;p&gt;
+</p>
+<p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    &lt;b class="target"&gt;elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.&lt;/b&gt;
+    <em class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</em>
     Ut enim ad minim veniam.
-&lt;/p&gt;
+</p>
 
-&lt;button onclick="toggleRadius()"&gt;Toggle radius&lt;/button&gt;
+<button onclick="toggleRadius()">Toggle radius</button>
 
-&lt;svg height="0"&gt;
-  &lt;clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox"&gt;
-    &lt;circle cx="0.25" cy="0.25" r="0.25" id="circle"/&gt;
-    &lt;rect x="0.5" y="0.2" width="0.5" height="0.8"/&gt;
-  &lt;/clipPath&gt;
-&lt;/svg&gt;</code></pre>
+<svg height="0">
+  <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
+    <circle cx="0.25" cy="0.25" r="0.25" id="circle"/>
+    <rect x="0.5" y="0.2" width="0.5" height="0.8"/>
+  </clipPath>
+</svg>
+```
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css">.target {
+```css
+.target {
   clip-path: url(#clipping-path-1);
 }
 p {
   width: 300px;
   border: 1px solid #000;
   display: inline-block;
-}</code></pre>
+}
+```
 
-<p>これは、円と四角形からなる切り取りエリアを作り、<code>#clipping-path-1</code> という ID に割り当てています。これにより、スタイルから参照されています。このように <code>target</code> スタイルが確立されると、クリップパスはあらゆるエレメントに割り当てることができるようになります。</p>
+これは、円と四角形からなる切り取りエリアを作り、`#clipping-path-1` という ID に割り当てています。これにより、スタイルから参照されています。このように `target` スタイルが確立されると、クリップパスはあらゆるエレメントに割り当てることができるようになります。
 
-<p>SVG にリアルタイムで変更を加えることができ、その変更は HTML のレンダリングに即座に反映されることに注目してください。たとえば、次のコードで上で定義したクリップパスの円の大きさを変更することができます。</p>
+SVG にリアルタイムで変更を加えることができ、その変更は HTML のレンダリングに即座に反映されることに注目してください。たとえば、次のコードで上で定義したクリップパスの円の大きさを変更することができます。
 
-<pre class="brush: js"><code class="language-javascript">
+```js
 function toggleRadius() {
   var circle = document.getElementById("circle");
   circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 }
-</code></pre>
+```
 
-<p>{{ EmbedLiveSample('例_クリッピング', 360,290) }}</p>
+{{EmbedLiveSample('Example_Clipping', 650, 200)}}
 
-<h3 id="例_フィルタリング">例: フィルタリング</h3>
+### 例: フィルタリング
 
-<p>この例では HTML コンテンツに対して SVG を使用してフィルターを適用する方法を実演します。いくつかのフィルタを定義し、CSS を使って3つの要素それぞれに対して、通常の状態とマウスをホバーした状態の2つの状態にフィルターを適用します。</p>
+この例では HTML コンテンツに対して SVG を使用してフィルターを適用する方法を実演します。いくつかのフィルターを定義し、CSS を使って 3 つの要素それぞれに対して、通常の状態とマウスをホバーした状態の2つの状態にフィルターを適用します。
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p class="target" style="background: lime;"&gt;
+```html
+<p class="target" style="background: lime;">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-&lt;/p&gt;
-&lt;pre class="target"&gt;lorem&lt;/pre&gt;
-&lt;p&gt;
+</p>
+<pre class="target">lorem</pre>
+<p>
     Lorem ipsum dolor sit amet, consectetur adipisicing
-    &lt;b class="target"&gt;elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua.&lt;/b&gt;
+    <em class="target">elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua.</em>
     Ut enim ad minim veniam.
-&lt;/p&gt;</code></pre>
+</p>
+```
 
-<p>同じようにしてあらゆる SVG フィルタが適用できます。たとえば、ガウスぼかし効果を適用する場合は次のように書きます。</p>
+同じようにしてあらゆる SVG フィルタが適用できます。たとえば、ガウスぼかし効果を適用する場合は次のように書きます。
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">
-&lt;svg height="0"&gt;
-  &lt;filter id="f1"&gt;
-    &lt;feGaussianBlur stdDeviation="3"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</code></pre>
+```html
+<svg height="0">
+  <filter id="f1">
+    <feGaussianBlur stdDeviation="3"/>
+  </filter>
+</svg>
+```
 
-<p>あるいは色行列を適用するのであれば、次のようにします。</p>
+あるいは色行列を適用するのであれば、次のようにします。
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;svg height="0"&gt;
-  &lt;filter id="f2"&gt;
-    &lt;feColorMatrix values="0.3333 0.3333 0.3333 0 0
+```html
+<svg height="0">
+  <filter id="f2">
+    <feColorMatrix values="0.3333 0.3333 0.3333 0 0
                            0.3333 0.3333 0.3333 0 0
                            0.3333 0.3333 0.3333 0 0
-                           0      0      0      1 0"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</code></pre>
+                           0      0      0      1 0"/>
+  </filter>
+</svg>
+```
 
-<p>さらに、いくつかのフィルタを示します。</p>
+さらに、いくつかのフィルタを示します。
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;svg height="0"&gt;
-  &lt;filter id="f3"&gt;
-    &lt;feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/&gt;
-  &lt;/filter&gt;
-  &lt;filter id="f4"&gt;
-    &lt;feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white"&gt;
-      &lt;fePointLight x="-5000" y="-10000" z="20000"/&gt;
-    &lt;/feSpecularLighting&gt;
-  &lt;/filter&gt;
-  &lt;filter id="f5"&gt;
-    &lt;feColorMatrix values="1 0 0 0 0
+```html
+<svg height="0">
+  <filter id="f3">
+    <feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
+      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
+  </filter>
+  <filter id="f4">
+    <feSpecularLighting surfaceScale="5" specularConstant="1"
+                        specularExponent="10" lighting-color="white">
+      <fePointLight x="-5000" y="-10000" z="20000"/>
+    </feSpecularLighting>
+  </filter>
+  <filter id="f5">
+    <feColorMatrix values="1 0 0 0 0
                            0 1 0 0 0
                            0 0 1 0 0
-                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/&gt;
-  &lt;/filter&gt;
-&lt;/svg&gt;</code></pre>
+                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/>
+  </filter>
+</svg>
+```
 
-<p>5つのフィルターは、次の CSS を用いて適用できます。</p>
+5 つのフィルターは、次の CSS を用いて適用できます。
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css">p.target { filter:url(#f3); }
+```css
+p.target { filter:url(#f3); }
 p.target:hover { filter:url(#f5); }
-b.target { filter:url(#f1); }
-b.target:hover { filter:url(#f4); }
+em.target { filter:url(#f1); }
+em.target:hover { filter:url(#f4); }
 pre.target { filter:url(#f2); }
-pre.target:hover { filter:url(#f3); }</code></pre>
+pre.target:hover { filter:url(#f3); }
+```
 
-<p>{{ EmbedLiveSample('例_フィルタリング', 360,300) }}</p>
+{{EmbedLiveSample('Example_Filtering', 650, 200)}}
 
-<h3 id="例_ぼかし文字">例: ぼかし文字</h3>
+### 例: ぼかし文字
 
-<p>文字にぼかしを入れるには、webkit ベースのブラウザでは（プレフィックス付きの）blur という CSS フィルタが使えます。SVG のフィルタを用いても同じ効果が実現できます。</p>
+文字にぼかしを入れるには、 Webkit ベースのブラウザーでは（接頭辞付きの）blur という CSS フィルターが使えます。 SVG のフィルターを用いても同じ効果が実現できます。
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p class="blur"&gt;Time to clean my glasses&lt;/p&gt;
-&lt;svg height="0"&gt;
-  &lt;defs&gt;
-    &lt;filter id="wherearemyglasses" x="0" y="0"&gt;
-    &lt;feGaussianBlur in="SourceGraphic" stdDeviation="1"/&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</code></pre>
+```html
+<p class="blur">Time to clean my glasses</p>
+<svg height="0">
+  <defs>
+    <filter id="wherearemyglasses" x="0" y="0">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+    </filter>
+  </defs>
+</svg>
+```
 
-<p>SVG と CSS のフィルタは、同じクラス内で適用できます。</p>
+SVG と CSS のフィルタは、同じクラス内で適用できます。
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css">
+```css
 .blur { filter: url(#wherearemyglasses); }
-</code></pre>
+```
 
-<p>{{ EmbedLiveSample('例_ぼかし文字', '', '', '') }}</p>
+{{ EmbedLiveSample('Example_Blurred_Text', 300, 100) }}
 
-<p>ぼかし効果は重たい処理のため、慎重に使用してください。特に、スクロールやアニメーションされる要素では注意が必要です。</p>
+ぼかしは計算が重いので、特にスクロールやアニメーションを行う要素では、控えめに使用するようにしてください。
 
-<h2 id="外部参照を使う">外部参照を使う</h2>
+### Example: テキスト効果
 
-<p>クリッピング、マスキング、そのほかに使われる SVG 要素は、その文章が適用される側の HTML 文章と同じ基点から得られるならば、外部文章から読み込むことができます。</p>
+SVG の効果を使用することで、プレーンな HTML のテキストと比較して、よりダイナミックで柔軟な方法でテキストを追加することができます。
 
-<p>例えば、CSS が <code>default.css</code> という名前のファイルであれば、次のようになります。</p>
+SVG 要素と HTML の組み合わせでテキストを作成することで、さまざまなテキスト効果を作ることができます。テキストを回転させることができます。
 
-<pre class="brush: css" id="line1">.target { clip-path: url(resources.svg#c1); }</pre>
+```html
+<svg height="60" width="200">
+  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">Example text</text>
+</svg>
+```
 
-<p>これで SVG が <code>resources.svg</code> という名前のファイルからインポートされ、クリップパスの ID に <code>c1</code> が使用されます。</p>
+## 外部参照の使用
 
-<h2 id="参照">参照</h2>
+クリッピング、マスキング、フィルタリングに使用できるSVGは、そのソースが適用されるHTMLの文書と同じオリジンである限り、外部ソースから読み込むことができます。
 
-<ul>
- <li><a href="/ja/docs/SVG" title="SVG">SVG</a></li>
- <li><a class="external" href="http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html">SVG Effects for HTML Content</a> (ブログ記事)</li>
- <li><del><a class="external" href="/web-tech/2008/10/10/svg-external-document-references">SVG External Document References</a></del> (ブログ記事) (<a href="http://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/" title="Web Tech Blog » Blog Archive » SVG External Document References">[archive.org] Web Tech Blog » Blog Archive » SVG External Document References</a>)</li>
-</ul>
+例えば、CSS が `default.css` という名前のファイルであれば、次のようになります。
+
+```css
+.target { clip-path: url(resources.svg#c1); }
+```
+
+これで SVG が `resources.svg` という名前のファイルからインポートされ、クリップパスの ID に `c1` が使用されます。
+
+## 関連情報
+
+- [SVG](/ja/docs/Web/SVG)
+- [SVG Effects for HTML Content](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (ブログ記事)
