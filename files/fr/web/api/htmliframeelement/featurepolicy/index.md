@@ -16,7 +16,9 @@ La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("HT
 
 ## Syntaxe
 
-    var policy = HTMLIFrameElement.featurePolicy
+```js
+var policy = HTMLIFrameElement.featurePolicy
+```
 
 ### Valeur
 

@@ -12,9 +12,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Undeclared_var
 
 ## Message
 
-    ReferenceError: assignment to undeclared variable "x" (Firefox)
-    ReferenceError: "x" is not defined (Chrome)
-    ReferenceError: Variable undefined in strict mode (Edge)
+```
+ReferenceError: assignment to undeclared variable "x" (Firefox)
+ReferenceError: "x" is not defined (Chrome)
+ReferenceError: Variable undefined in strict mode (Edge)
+```
 
 ## Type d'erreur
 

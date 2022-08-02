@@ -14,7 +14,9 @@ Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mo
 
 ## Syntaxe
 
-    mode = document.compatMode
+```js
+mode = document.compatMode
+```
 
 ## Valeurs
 
@@ -35,9 +37,11 @@ Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mo
 
 ## Exemple
 
-    if (document.compatMode == "BackCompat") {
-      // en mode Quirks
-    }
+```js
+if (document.compatMode == "BackCompat") {
+  // en mode Quirks
+}
+```
 
 ## Spécifications
 

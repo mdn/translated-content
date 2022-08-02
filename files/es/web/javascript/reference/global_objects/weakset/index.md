@@ -113,4 +113,3 @@ _no son **el mismo objeto**_. Y así ambos se añaden al conjunto.
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
-

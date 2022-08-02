@@ -51,7 +51,6 @@ console.log(new Intl.NumberFormat().format(number));
 
 ### Utilizando la configuración regional
 
-
 Este ejemplo muestra algunas de las variaciones en los formatos de números por región.
 Para obtener el formato del idioma usado en la interfaz de usuario de tu aplicación, asegúrate de especificar dicho idioma (y de ser posible alternativas) utilizando el argumento `locales`:
 
@@ -132,4 +131,3 @@ console.log((16).toLocaleString('en-GB', {
 ## Véase también
 
 - {{jsxref("Intl")}}
-

@@ -17,7 +17,7 @@ Les WCAG sont globalement divisés en quatre principes — éléments majeurs qu
 
 Chacun des liens ci-dessous vous mènera à des pages qui développent davantage ces domaines, vous donnant des conseils pratiques sur la façon de rédiger votre contenu Web afin qu'il soit conforme aux critères de succès décrits dans chacune des directives WCAG 2.0 et 2.1 qui se subdivisent davantage en chaque principe.
 
-- [Perceptile:](/fr/docs/user:chrisdavidmills/Understanding_WCAG/Perceivable) Les utilisateurs doivent pouvoir le percevoir d'une manière ou d'une autre, en utilisant un ou plusieurs de leurs sens.
+- [Perceptible:](/fr/docs/user:chrisdavidmills/Understanding_WCAG/Perceivable) Les utilisateurs doivent pouvoir le percevoir d'une manière ou d'une autre, en utilisant un ou plusieurs de leurs sens.
 - [Opérable](/fr/docs/user:chrisdavidmills/Understanding_WCAG/Operable): Les utilisateurs doivent pouvoir contrôler les éléments de l'interface utilisateur (par exemple, les boutons doivent être cliquables d'une manière ou d'une autre - souris, clavier, commande vocale, etc.).
 - [Compréhensible](/fr/docs/user:chrisdavidmills/Understanding_WCAG/Understandable): Le contenu doit être compréhensible pour ses utilisateurs.
 - [Robuste](/fr/docs/user:chrisdavidmills/Understanding_WCAG/Robust): Le contenu doit être développé à l'aide de normes Web bien adoptées qui fonctionneront sur différents navigateurs, maintenant et à l'avenir.

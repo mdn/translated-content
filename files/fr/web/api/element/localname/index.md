@@ -19,7 +19,9 @@ La propriété en lecture seule **`Element.localName`** renvoie la partie locale
 
 ## Syntaxe
 
-    name = element.localName
+```js
+name = element.localName
+```
 
 ### Valeur renvoyée
 

@@ -122,7 +122,9 @@ Vous pouvez ordonner les colonnes en cliquant sur l'intitulé de la colonne.
 
 ## Syntaxe
 
-    console.table(data [, columns]);
+```js
+console.table(data [, columns]);
+```
 
 ### Paramètres
 

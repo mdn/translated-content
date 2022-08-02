@@ -75,4 +75,3 @@ if (screen.pixelDepth < 8) {
 ## Compatibilidad con navegadores
 
 {{Compat}}
-

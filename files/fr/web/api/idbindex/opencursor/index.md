@@ -26,7 +26,9 @@ La méthode la positionne le curseur de façon approprié, selon la direction in
 
 ## Syntaxe
 
-    var request = myIndex.openCursor(keyRange,direction);
+```js
+var request = myIndex.openCursor(keyRange,direction);
+```
 
 ### Paramètres
 

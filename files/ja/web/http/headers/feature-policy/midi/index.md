@@ -22,7 +22,7 @@ HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `midi` ディ
 Feature-Policy: midi <allowlist>;
 ```
 
- - \<allowlist>
+- \<allowlist>
   - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
 
 ## 既定のポリシー

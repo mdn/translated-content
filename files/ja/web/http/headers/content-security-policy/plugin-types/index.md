@@ -1,0 +1,102 @@
+---
+title: 'CSP: plugin-types'
+slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
+tags:
+  - CSP
+  - Content-Security-Policy
+  - Directive
+  - Flash
+  - HTTP
+  - Java
+  - Plugin
+  - Plugins
+  - Security
+browser-compat: http.headers.Content-Security-Policy.plugin-types
+translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
+---
+{{HTTPSidebar}}{{deprecated_header}}
+
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`plugin-types`** ディレクティブは、文書に埋め込むことができるプラグインのセットを、読み込むことができるリソースの種類を制限することによって制限します。
+
+{{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("applet")}} の各要素のインスタンス化は、次の場合に失敗します。
+
+- 要素が妥当な MIME 型を宣言していなかった場合
+- 宣言された型が `plugin-types` ディレクティブで指定されたもののいずれにも一致しなかった場合
+- 読み込まれたリソースが宣言された型に一致しなかった場合
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">CSP バージョン</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">ディレクティブ種別</th>
+      <td>{{Glossary("Document directive", "文書ディレクティブ")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} による代替</th>
+      <td>なし。これを設定しないと何も許可されない。</td>
+    </tr>
+  </tbody>
+</table>
+
+## 構文
+
+1 つ以上の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を `plugin-types` ポリシーに設定することができます。
+
+```
+Content-Security-Policy: plugin-types <type>/<subtype>;
+Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
+```
+
+- \<type>/\<subtype>
+  - 妥当な [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)。
+
+## 例
+
+### プラグインを不許可にする
+
+全てのプラグインを不許可にするには、 {{CSP("object-src")}} ディレクティブを `'none'` に設定すればプラグインが不許可になります。 `plugin-types` ディレクティブは、 `object-src` でプラグインを許可している場合に限って使用することができます。
+
+```html
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
+```
+
+### Flash コンテンツの許可
+
+以下のコンテンツセキュリティポリシーは、
+
+```
+Content-Security-Policy: plugin-types application/x-shockwave-flash
+```
+
+次のような Flash オブジェクトの読み込みを許可します。
+
+```html
+<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
+```
+
+### Java アプレットの許可
+
+{{HTMLElement("applet")}} を読み込むには、 `application/x-java-applet` を指定する必要があります。
+
+```
+Content-Security-Policy: plugin-types application/x-java-applet
+```
+
+## 仕様書
+
+現在のどの仕様にも属していません。以前は [CSP 2](https://www.w3.org/TR/CSP2/#directive-plugin-types) で定義されていました。
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{HTTPHeader("Content-Security-Policy")}}: {{CSP("object-src")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("applet")}}
+- {{HTTPHeader("X-Content-Type-Options")}}

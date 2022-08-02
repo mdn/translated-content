@@ -16,7 +16,9 @@ La propriété en lecture seule **`NodeIterator.referenceNode`** renvoie le {{do
 
 ## Syntaxe
 
-    node = nodeIterator.referenceNode;
+```js
+node = nodeIterator.referenceNode;
+```
 
 ## Exemple
 

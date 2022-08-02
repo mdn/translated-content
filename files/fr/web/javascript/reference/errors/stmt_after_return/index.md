@@ -11,7 +11,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Stmt_after_return
 
 ## Message
 
-    Warning: unreachable code after return statement (Firefox)
+```
+Warning: unreachable code after return statement (Firefox)
+```
 
 ## Type d'erreur
 

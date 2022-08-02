@@ -16,17 +16,21 @@ translation_of: Web/API/Document/documentElement
 
 ### Syntaxe
 
-    var element = document.documentElement;
+```js
+var element = document.documentElement;
+```
 
 ## Exemple
 
-    var racine = document.documentElement;
-    var premierNiveau = racine.childNodes;
-    // premierNiveau est une NodeList des enfants directs de l'élément racine
-    for (var i = 0; i < premierNiveau.length; i++) {
-       // fait quelque chose avec chaque enfant direct de l'élément racine
-       // en tant que premierNiveau[i]
-    }
+```js
+var racine = document.documentElement;
+var premierNiveau = racine.childNodes;
+// premierNiveau est une NodeList des enfants directs de l'élément racine
+for (var i = 0; i < premierNiveau.length; i++) {
+  // fait quelque chose avec chaque enfant direct de l'élément racine
+  // en tant que premierNiveau[i]
+}
+```
 
 ## Notes
 

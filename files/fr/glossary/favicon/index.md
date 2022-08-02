@@ -17,8 +17,8 @@ Ils sont utilisés pour améliorer l'expérience utilisateur et renforcer la coh
 
 ## Voir aussi
 
-1.  {{interwiki("wikipedia", "Favicon", "Favicon")}} sur Wikipédia
-2.  Outils
+1. {{interwiki("wikipedia", "Favicon", "Favicon")}} sur Wikipédia
+2. Outils
 
-    1.  [Générateur de favicon gratuit](https://favicon.io/)
-    2.  [Générateur d'icônes Favicon.ico et & app](https://www.favicon-generator.org/)
+    1. [Générateur de favicon gratuit](https://favicon.io/)
+    2. [Générateur d'icônes Favicon.ico et & app](https://www.favicon-generator.org/)

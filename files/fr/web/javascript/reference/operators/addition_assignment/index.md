@@ -15,7 +15,7 @@ L'opérateur d'addition et d'affectation (`+=`) calcule la somme ou la concatén
 
 {{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
-## Syntax
+## Syntaxe
 
 ```js
 Opérateur : x += y

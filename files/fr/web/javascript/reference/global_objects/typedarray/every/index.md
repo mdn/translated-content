@@ -20,7 +20,9 @@ La méthode **`every()`** teste si tous les éléments du tableau typé satisfon
 
 ## Syntaxe
 
-    typedarray.every(callback[, thisArg])>
+```js
+typedarray.every(callback[, thisArg])>
+```
 
 ### Paramètres
 

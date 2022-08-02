@@ -7,7 +7,7 @@ browser-compat: css.types.filter-function.contrast
 ---
 {{CSSRef}}
 
-La fonction CSS **`contrast()`** permet d'ajuster le contraste d'une image. Le résultat de cette fonction est une valeur de type [`<filter-function>](/fr/docs/Web/CSS/filter-function).
+La fonction CSS **`contrast()`** permet d'ajuster le contraste d'une image. Le résultat de cette fonction est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
 {{EmbedInteractiveExample("pages/css/function-contrast.html")}}
 
@@ -16,6 +16,7 @@ La fonction CSS **`contrast()`** permet d'ajuster le contraste d'une image. Le r
 ```css
 contrast(multiplicateur)
 ```
+
 ### Paramètres
 
 - `multiplicateur`

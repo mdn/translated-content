@@ -8,9 +8,9 @@ translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeStyle</code></strong> 是 Canvas 2D API 描述画笔（绘制图形）颜色或者样式的属性。默认值是 <code>#000</code> (black)。</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.strokeStyle</code></strong> 是 Canvas 2D API 描述画笔（绘制图形）颜色或者样式的属性。默认值是 <code>#000</code> (black)。</p>
 
-<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
+<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -32,9 +32,9 @@ translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Using_the_strokeStyle_property" name="Using_the_strokeStyle_property">使用 <code>strokeStyle</code> 属性设置不同的颜色</h3>
+<h3 id="Using_the_strokeStyle_property">使用 <code>strokeStyle</code> 属性设置不同的颜色</h3>
 
-<p>这是一段简单的代码片段，使用 <code>strokeStyle</code> 属性设置不同的颜色。</p>
+<p>这是一段简单的代码片段，使用 <code>strokeStyle</code> 属性设置不同的颜色。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -53,12 +53,12 @@ ctx.strokeRect(10, 10, 100, 100);
 <p>修改下面的代码并在线查看 canvas 的变化：</p>
 
 <div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h6 id="Playable_code">Playable code</h6>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.strokeStyle = "blue";
@@ -93,7 +93,7 @@ window.addEventListener("load", drawCanvas);
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
 
-<h3 id="A_strokeStyle_example" name="A_strokeStyle_example"><code>strokeStyle</code> 例子</h3>
+<h3 id="A_strokeStyle_example"><code>strokeStyle</code> 例子</h3>
 
 <p>这个例子使用 <code>strokeStyle 属性改变图形轮廓线的颜色。</code>我们使用 {{domxref("CanvasRenderingContext2D.arc", "arc()")}} 绘制圆形来代替正方形。</p>
 
@@ -119,20 +119,7 @@ for (var i=0;i&lt;6;i++){
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -143,7 +130,7 @@ for (var i=0;i&lt;6;i++){
 <h3 id="WebKitBlink-specific_注解">WebKit/Blink-specific 注解</h3>
 
 <ul>
- <li>在基于 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不标准的并且不赞成使用的方法  <code>ctx.setStrokeColor()</code> 。
+ <li>在基于 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不标准的并且不赞成使用的方法  <code>ctx.setStrokeColor()</code> 。
 
   <pre class="brush: js">setStrokeColor(color, optional alpha);
 setStrokeColor(grayLevel, optional alpha);

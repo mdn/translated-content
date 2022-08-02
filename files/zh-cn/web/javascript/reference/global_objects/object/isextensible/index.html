@@ -22,32 +22,32 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 
 <h3 id="返回值">返回值</h3>
 
-<p>    表示给定对象是否可扩展的一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Boolean" title="此页面仍未被本地化, 期待您的翻译!"><code>Boolean</code></a> 。</p>
+<p>    表示给定对象是否可扩展的一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Boolean"><code>Boolean</code></a> 。</p>
 
 <h2 id="Description">描述</h2>
 
-<p>默认情况下，对象是可扩展的：即可以为他们添加新的属性。以及它们的 {{jsxref("Object.proto", "__proto__")}}{{deprecated_inline}} 属性可以被更改。{{jsxref("Object.preventExtensions")}}，{{jsxref("Object.seal")}} 或 {{jsxref("Object.freeze")}} 方法都可以标记一个对象为不可扩展（non-extensible）。</p>
+<p>默认情况下，对象是可扩展的：即可以为他们添加新的属性。以及它们的 {{jsxref("Object.proto", "__proto__")}}{{deprecated_inline}} 属性可以被更改。{{jsxref("Object.preventExtensions")}}，{{jsxref("Object.seal")}} 或 {{jsxref("Object.freeze")}} 方法都可以标记一个对象为不可扩展（non-extensible）。</p>
 
 <h2 id="Examples">例子</h2>
 
-<pre class="brush: js">// 新对象默认是可扩展的.
+<pre class="brush: js">// 新对象默认是可扩展的。
 var empty = {};
 Object.isExtensible(empty); // === true
 
-// ...可以变的不可扩展.
+// ...可以变的不可扩展。
 Object.preventExtensions(empty);
 Object.isExtensible(empty); // === false
 
-// 密封对象是不可扩展的.
+// 密封对象是不可扩展的。
 var sealed = Object.seal({});
 Object.isExtensible(sealed); // === false
 
-// 冻结对象也是不可扩展.
+// 冻结对象也是不可扩展。
 var frozen = Object.freeze({});
 Object.isExtensible(frozen); // === false
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="注意">注意</h2>
 
@@ -62,26 +62,7 @@ Object.isExtensible(1);
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.13', 'Object.isExtensible')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition.<br>
-    Implemented in JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.isextensible', 'Object.isExtensible')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

@@ -17,7 +17,9 @@ La méthode **`URL.toString()`** retourne un {{domxref("USVString")}} contenant 
 
 ## Syntaxe
 
-    string = url.toString();
+```js
+string = url.toString();
+```
 
 ### Paramètres
 

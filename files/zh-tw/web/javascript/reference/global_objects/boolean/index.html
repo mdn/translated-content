@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Boolean</code></strong> 是布林值的包覆器。</p>
+<p><strong><code>Boolean</code></strong> 是布林值的包覆器。</p>
 
 <h2 id="語法">語法</h2>
 
@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 <h3 id="參數">參數</h3>
 
 <dl>
- <dt><code>value</code> {{optional_inline}}</dt>
+ <dt><code>value</code> {{optional_inline}}</dt>
  <dd>這個<code>Boolean</code>物件的初始值。</dd>
 </dl>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 
 <p>不要將原始型別的布林值和這個布林物件搞混，它們並不相同。</p>
 
-<p>在判斷式中，任何物件只要不是 {{jsxref("undefined")}} 或 {{jsxref("null")}} ，儘管是值為<code>false</code> 的 <code>Boolean</code> 物件，都會被轉換成<code>true</code>。舉例來說，下列的 {{jsxref("Statements/if...else", "if")}} 判斷式中的布林值即為<code>true</code>：</p>
+<p>在判斷式中，任何物件只要不是 {{jsxref("undefined")}} 或 {{jsxref("null")}} ，儘管是值為<code>false</code> 的 <code>Boolean</code> 物件，都會被轉換成<code>true</code>。舉例來說，下列的 {{jsxref("Statements/if...else", "if")}} 判斷式中的布林值即為<code>true</code>：</p>
 
 <pre class="brush: js">var x = new Boolean(false);
 if (x) {
@@ -32,7 +32,7 @@ if (x) {
 }
 </pre>
 
-<p>以上這個行為和<code>Boolean</code>原始型別沒有關連，反倒是下面的 {{jsxref("Statements/if...else", "if")}} 判斷式會正確地將其視為<code>false</code>：</p>
+<p>以上這個行為和<code>Boolean</code>原始型別沒有關連，反倒是下面的 {{jsxref("Statements/if...else", "if")}} 判斷式會正確地將其視為<code>false</code>：</p>
 
 <pre class="brush: js">var x = false;
 if (x) {
@@ -69,9 +69,9 @@ var s = new Boolean(myString);      // 依舊為true
 
 <p>全域的<code>Boolean</code>物件自身沒有任何方法，它只有從原型鏈繼承而來的方法。</p>
 
-<h2 id="Boolean_實體"><code>Boolean</code> 實體</h2>
+<h2 id="Boolean_實體"><code>Boolean</code> 實體</h2>
 
-<p>所有 <code>Boolean</code> 實體會繼承 {{jsxref("Boolean.prototype")}} 。和所有建構式一樣，原型物件會指派給實體那些繼承的屬性和方法。</p>
+<p>所有 <code>Boolean</code> 實體會繼承 {{jsxref("Boolean.prototype")}} 。和所有建構式一樣，原型物件會指派給實體那些繼承的屬性和方法。</p>
 
 <h3 id="屬性_2">屬性</h3>
 
@@ -83,7 +83,7 @@ var s = new Boolean(myString);      // 依舊為true
 
 <h2 id="範例">範例</h2>
 
-<h3 id="用_false_作為初始值建立_Boolean_物件">用 <code>false</code> 作為初始值建立 <code>Boolean</code> 物件</h3>
+<h3 id="用_false_作為初始值建立_Boolean_物件">用 <code>false</code> 作為初始值建立 <code>Boolean</code> 物件</h3>
 
 <pre class="brush: js">var bNoParam = new Boolean();
 var bZero = new Boolean(0);
@@ -92,7 +92,7 @@ var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
 </pre>
 
-<h3 id="用_true_作為初始值建立_Boolean_物件">用 <code>true</code> 作為初始值建立 <code>Boolean</code> 物件</h3>
+<h3 id="用_true_作為初始值建立_Boolean_物件">用 <code>true</code> 作為初始值建立 <code>Boolean</code> 物件</h3>
 
 <pre class="brush: js">var btrue = new Boolean(true);
 var btrueString = new Boolean('true');

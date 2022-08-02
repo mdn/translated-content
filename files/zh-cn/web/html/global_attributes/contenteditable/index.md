@@ -42,7 +42,7 @@ translation_of: Web/HTML/Global_attributes/contenteditable
 ## 参见
 
 - [使内容可编辑](/zh-CN/docs/Web/Guide/HTML/Editable_content)
-- 所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 所有的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} 和 {{domxref("HTMLElement.isContentEditable")}}
 - CSS {{cssxref("caret-color")}} 属性
 - [`HTMLElement` `input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)

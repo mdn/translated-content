@@ -258,7 +258,7 @@ attributeChangedCallback(name, oldValue, newValue) {
 }
 ```
 
-Notez que, pour déclencher le rappel `attributeChangedCallback()` lorsqu'un attribut change, vous devez observer les attributs. Cela est réalisé en appelant le getter `observedAttributes()` dans le constructeur, en incluant à l'intérieur une instruction return qui retourne un tableau contenant les noms des attributs que vous voulez observer :
+Notez que, pour déclencher le rappel `attributeChangedCallback()` lorsqu'un attribut change, vous devez observer les attributs. Cela est réalisé en spécifiant la méthode `static get observedAttributes()` dans la classe de l'élément personnalisé, en incluant à l'intérieur une instruction `return` qui renvoie un tableau contenant les noms des attributs que vous voulez observer&nbsp;:
 
 ```js
 static get observedAttributes() {return ['w', 'l']; }

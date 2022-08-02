@@ -18,7 +18,9 @@ Pour chaque élément, SVG utilise un ensemble de coordonnées aussi appelé gri
 
 #### Exemple
 
-    <rect x="0" y="0" width="100" height="100" />
+```html
+<rect x="0" y="0" width="100" height="100" />
+```
 
 L'élément précédent définit un rectangle dans le coin supérieur gauche de l'écran, d'une taille de 100px par 100px.
 
@@ -28,11 +30,15 @@ Dans le cas le plus basique, un pixel dans un document SVG correspond à un pixe
 
 Par défaut, l'unité utilisateur correspond à l'unité de l'écran. Pour modifier ce comportement de manière explicite, il existe plusieurs méthodes en SVG. Commençons par l'élément racine `svg` :
 
-    <svg width="100" height="100">
+```html
+<svg width="100" height="100">
+```
 
 La déclaration suivante crée un élément SVG d'une taille de 100px par 100px. Ici, une unité utilisateur correspond à l'unité de l'écran.
 
-    <svg width="200" height="200" viewBox="0 0 100 100">
+```html
+<svg width="200" height="200" viewBox="0 0 100 100">
+```
 
 L'image SVG suivante fait 200px par 200px. Toutefois, l'attribut `viewBox` définit que cet élément de 200 par 200 commence au point (0,0) et s'étend sur une grille de 100 unités sur 100 unités vers la droite et vers le bas de l'écran. 100 unités représentant 200 pixels, chaque unité vaut deux pixels : cela permet de doubler la taille de l'image.
 

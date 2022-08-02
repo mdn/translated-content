@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>padEnd()</code></strong>  方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。</p>
+<p><strong><code>padEnd()</code></strong>  方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-padend.html")}}</div>
 
@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js">'abc'.padEnd(10);          // "abc       "
+<pre class="brush: js">'abc'.padEnd(10);          // "abc       "
 'abc'.padEnd(10, "foo");   // "abcfoofoof"
 'abc'.padEnd(6, "123456"); // "abc123"
 'abc'.padEnd(1);           // "abc"
@@ -46,48 +46,30 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 <pre class="brush: js">// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
 if (!String.prototype.padEnd) {
-    String.prototype.padEnd = function padEnd(targetLength,padString) {
-        targetLength = targetLength&gt;&gt;0; //floor if number or convert non-number to 0;
-        padString = String((typeof padString !== 'undefined' ? padString: ''));
-        if (this.length &gt; targetLength) {
-            return String(this);
-        }
-        else {
-            targetLength = targetLength-this.length;
-            if (targetLength &gt; padString.length) {
-                padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
-            }
-            return String(this) + padString.slice(0,targetLength);
-        }
-    };
+    String.prototype.padEnd = function padEnd(targetLength,padString) {
+        targetLength = targetLength&gt;&gt;0; //floor if number or convert non-number to 0;
+        padString = String((typeof padString !== 'undefined' ? padString: ''));
+        if (this.length &gt; targetLength) {
+            return String(this);
+        }
+        else {
+            targetLength = targetLength-this.length;
+            if (targetLength &gt; padString.length) {
+                padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
+            }
+            return String(this) + padString.slice(0,targetLength);
+        }
+    };
 }
 </pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.padend', 'String.prototype.padEnd')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>在 ECMAScript 2017 中首次被定义。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-string.prototype.padend', 'String.prototype.padEnd')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.String.padEnd")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="另请参阅">另请参阅</h2>
 

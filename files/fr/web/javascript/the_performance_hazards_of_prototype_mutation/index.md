@@ -7,8 +7,6 @@ tags:
 translation_of: Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation
 original_slug: Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype
 ---
-{{draft}}
-
 Chaque objet JavaScript possède un prototype (que nous désignerons par la suite par `[[Prototype]]`, la notation utilisée par la spécification et les implémentations). Lorsqu'on recherche des propriétés sur un objet, on consulte d'abord cet objet puis on analyse son prototype (on « remonte la chaîne ») et ensuite le prototype de ce dernier et ainsi de suite jusqu'à trouver la propriété en question ou jusqu'à ce que la chaîne soit terminée. Cette chaîne est particulièrement utile pour émuler [l'héritage entre objets](/fr/docs/Web/JavaScript/Héritage_et_chaîne_de_prototypes).
 
 ECMAScript 6 introduit certaines méthode pour _modifier_ `[[Prototype]]`. Cette flexibilité a un coût : la dégradation significative des performances. **Modifier** **`[[Prototype]]` impacte négativement les performances pour _tous_ les moteurs JavaScript modernes.** Dans cet article, nous expliquerons pourquoi et nous verrons les alternatives à privilégier.
@@ -19,12 +17,14 @@ Les objets sont [des tables de hachage](https://fr.wikipedia.org/wiki/Table_de_h
 
 L'optimisation des moteurs s'applique grâce à l'ordre selon lequel les propriétés sont ajoutées aux objets. La plupart des propriétés ajoutées aux objets sont ajoutés dans un ordre semblable (exception faite des accès effectués sous la forme `obj[val]` où `val` est une valeur dynamique non constante).
 
-    function Landmark(lat, lon, desc) {
-      this.location = { lat: lat, long: lon };
-      this.description = desc;
-    }
-    var lm1 = new Landmark(-90, 0, "South Pole");
-    var lm2 = new Landmark(-24.3756466, -128.311018, "Pitcairn Islands");
+```js
+function Landmark(lat, lon, desc) {
+  this.location = { lat: lat, long: lon };
+  this.description = desc;
+}
+var lm1 = new Landmark(-90, 0, "South Pole");
+var lm2 = new Landmark(-24.3756466, -128.311018, "Pitcairn Islands");
+```
 
 Dans cet exemple, chaque `Landmark` possède les propriétés `location` et `description`, **dans cet ordre.** Chaque objet `location` représentant l'emplacement enregistrera la latitude puis la longitude, **dans cet ordre**. Le code qui suit _pourrait_ supprimer une propriété mais comme c'est peu probable, les moteurs peuvent être amenés à produire du code non optimal pour ces cas de figure. Pour SpiderMonkey, le moteur JavaScript de Firefox, l'ordre spécifique des propriétés (et de certains de leurs aspects en dehors de leurs valeurs) est appelé une _forme_ (le moteur V8, utilisé par Chrome, intitule ce concept _structure ID_). Si deux objets partagent la même forme, leurs propriétés seront stockées de façon identique.
 

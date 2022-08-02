@@ -15,7 +15,9 @@ La méthode **`WebGLRenderingContext.createBuffer()`** de l'[API WebGL](/fr/docs
 
 ## Syntaxe
 
-    WebGLBuffer gl.createBuffer();
+```js
+WebGLBuffer gl.createBuffer();
+```
 
 ### Paramètres
 

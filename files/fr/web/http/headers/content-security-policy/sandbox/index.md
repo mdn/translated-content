@@ -37,8 +37,10 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** 
 
 ## Syntaxe
 
-    Content-Security-Policy: sandbox;
-    Content-Security-Policy: sandbox <valeur>;
+```
+Content-Security-Policy: sandbox;
+Content-Security-Policy: sandbox <valeur>;
+```
 
 Où `<valeur>` peut optionnellement être une valeur parmi :
 

@@ -19,7 +19,9 @@ La fonction **`Math.acos()`** renvoie l'arc cosinus d'une valeur exprimée en ra
 
 ## Syntaxe
 
-    Math.acos(x)
+```js
+Math.acos(x)
+```
 
 ### Paramètres
 

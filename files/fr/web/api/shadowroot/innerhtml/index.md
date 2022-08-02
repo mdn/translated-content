@@ -16,8 +16,10 @@ La propriété **`innerHTML`**, rattachée à l'interface {{domxref("ShadowRoot"
 
 ## Syntaxe
 
-    var domString = shadowRoot.innerHTML
-    shadowRoot.innerHTML = domString
+```js
+var domString = shadowRoot.innerHTML
+shadowRoot.innerHTML = domString
+```
 
 ### Valeur
 

@@ -1,62 +1,71 @@
 ---
 title: WebAssembly.Module()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
-tags:
-  - Constructeur
-  - JavaScript
-  - Module
-  - Reference
-  - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 original_slug: Web/JavaScript/Reference/Objets_globaux/WebAssembly/Module
+browser-compat: javascript.builtins.WebAssembly.Module
 ---
 {{JSRef}}
 
-Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qui a déjà été compilé par le navigateur. Ce code peut être [partagé avec des _web worker_](/fr/docs/Web/API/Worker/postMessage) et être instancié à plusieurs reprises. Pour instancier le module, on pourra appeler la forme secondaire de {{jsxref("WebAssembly.instantiate()")}}.
+Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qui a déjà été compilé par le navigateur. Ce code peut être [partagé avec des <i lang="en">web workers</i>](/fr/docs/Web/API/Worker/postMessage) et être instancié à plusieurs reprises.
 
-Le constructeur `WebAssembly.Module()` peut être appelé de façon synchrone pour compiler du code WebAssembly. Toutefois, on utilisera généralement la fonction asynchrone {{jsxref("WebAssembly.compile()")}} qui permet de compiler du _bytecode_.
+## Constructeur
 
-## Syntaxe
+- [`WebAssembly.Module()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module)
+  - : Crée un nouvel objet `Module`.
 
-> **Attention :** La compilation de modules volumineux peut être consommatrice de ressources et de temps. Le constructeur `Module()` doit uniqument être utilisé lorsqu'il faut absolument avoir une compilation synchrone. Pour tous les autres cas de figures, on privilégiera la méthode asynchrone {{jsxref("WebAssembly.compileStreaming()")}}.
+## Propriétés statiques
 
-    var monModule = new WebAssembly.Module(bufferSource);
+- [`WebAssembly.Module.customSections()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections)
+  - : Soit un objet `Module` et une chaîne de caractères, cette méthode renvoie le contenu de l'ensemble des sections spécifiques du module avec le nom correspondant à la chaîne de caractères.
+- [`WebAssembly.Module.exports()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports)
+  - : Soit un objet `Module`, cette méthode renvoie un tableau dont les éléments sont les descriptions de tous les exports déclarés.
+- [`WebAssembly.Module.imports()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports)
+  - : Soit un objet `Module`, cette méthode renvoie un tableau dont les éléments sont les descriptions de tous les imports déclarés.
 
-### Paramètres
+## Exemples
 
-- `bufferSource`
-  - : Un [tableau typé](/fr/docs/Web/JavaScript/Tableaux_typés) ou un {{jsxref("ArrayBuffer")}} qui contient le _bytecode_ du module WebAssembly qu'on souhaite compiler.
+### Envoyer un module compilé à un <i lang="en">worker</i>
 
-## Méthodes du constructeur `Module`
+Dans l'exemple qui suit (voir le fichier source [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) sur GitHub, et [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le byte code chargé `simple.wasm` en utilisant la méthode [`WebAssembly.compileStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming) puis en envoyant l'instance de `Module` résultante à un [<i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
 
-- {{jsxref("Objets_globaux/WebAssembly/Module/customSections", "WebAssembly.Module.customSections()")}}
-  - : Pour un module donné et une chaîne de caractères donnée, cette méthode renvoie une copie des sections personnalisées (_custom sections_) du module qui ont le nom correspondant à la chaîne.
-- {{jsxref("Objets_globaux/WebAssembly/Module/exports", "WebAssembly.Module.exports()")}}
-  - : Pour un module donné, cette méthode renvoie un tableau dont les éléments sont des descriptions des exports déclarés.
-- {{jsxref("Objets_globaux/WebAssembly/Module/imports", "WebAssembly.Module.imports()")}}
-  - : Pour un module donné, cette méthode renvoie un tableau dont les éléments sont des descriptions des imports déclarés.
+```js
+let worker = new Worker("wasm_worker.js");
 
-## Instances de `Module`
+WebAssembly.compileStreaming(fetch('simple.wasm'))
+.then(mod =>
+  worker.postMessage(mod)
+);
+```
 
-Toutes les instances de `Module` héritent du prototype du constructeur `Module()`, celui-ci peut être modifié afin de moifier le comportement de l'ensemble des instances de `Module`.
+Au sein du <i lang="en">worker</i> (voir le fichier [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)), on définit un objet d'import pour le module à utiliser puis on définit un gestionnaire d'évènement destiné à recevoir le module depuis le fil d'exécution principal. Lorsque le module est reçu, on en crée une instance avec la méthode [`WebAssembly.instantiate()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) puis on appelle une fonction exportée depuis l'instance.
 
-### Propriétés
+```js
+let importObject = {
+  imports: {
+    imported_func: function(arg) {
+      console.log(arg);
+    }
+  }
+};
 
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/Module/prototype', 'Propriétés')}}
+onmessage = function(e) {
+  console.log('module reçu depuis le thread principal');
+  let mod = e.data;
 
-### Méthodes
-
-Les instances de `Module` ne disposent pas de méthodes en propre.
+  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+    instance.exports.exported_func();
+  });
+};
+```
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                 | Commentaires                      |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblymodule-objects', 'WebAssembly.Module()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Module")}}
+{{Compat}}
 
 ## Voir aussi
 

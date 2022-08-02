@@ -55,13 +55,13 @@ border-right-width: unset;
 
 ```css
 .element1{
-	border-right: thick solid red;
+  border-right: thick solid red;
 }
 .element2{
-	border-right: medium solid orange;
+  border-right: medium solid orange;
 }
 .element3{
-	border-right: thin solid green;
+  border-right: thin solid green;
 }
 ```
 

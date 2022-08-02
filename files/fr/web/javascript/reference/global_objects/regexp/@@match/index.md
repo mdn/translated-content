@@ -19,7 +19,9 @@ La méthode **`[@@match]()`** permet de récupérer les correspondances obtenues
 
 ## Syntaxe
 
-    regexp[Symbol.match](str)
+```js
+regexp[Symbol.match](str)
+```
 
 ### Paramètres
 

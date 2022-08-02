@@ -16,7 +16,9 @@ La propriété globale **`globalThis`** renvoie l'objet global de plus haut nive
 
 ## Syntaxe
 
-    globalThis
+```js
+globalThis
+```
 
 ## Description
 
