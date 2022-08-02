@@ -15,7 +15,7 @@ browser-compat: api.URL.search
 
 A propriedade **`search`** da interface {{domxref("URL")}} é uma string de pesquisa, também chamada de _query string_, ela é uma {{domxref("USVString")}} contendo uma `'?'` seguido pelos parâmetros da URL.
 
-Navegadores modernos fornecem a propriedade {{domxref("URL.searchParams")}} para facilitar a a analise de parâmetros da query string.
+Navegadores modernos fornecem a propriedade {{domxref("URL.searchParams")}} para facilitar a análise de parâmetros da query string.
 
 {{AvailableInWorkers}}
 
