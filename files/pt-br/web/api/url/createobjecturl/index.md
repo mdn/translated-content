@@ -1,6 +1,7 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
+page-type: web-api-static-method
 tags:
   - API
   - Blob
@@ -12,6 +13,7 @@ tags:
   - URL API
   - createObjectURL
 browser-compat: api.URL.createObjectURL
+---
 ---
 
 {{APIRef("URL API")}}
