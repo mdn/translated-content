@@ -159,4 +159,5 @@ PostmanRuntime/7.26.5
 - [Detección del agente de usuario, historia y lista de verificación](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
 - [Cadenas del agente de usuario de Firefox](/es/docs/Web/HTTP/Headers/User-Agent/Firefox)
 - [Detección de navegador utilizando el agente de usuario](/es/docs/Web/HTTP/Browser_detection_using_the_user_agent)
-- [Client hints](/es/docs/Web/HTTP/Client_hints)
+- [Sugerencias del cliente](/es/docs/Web/HTTP/Client_hints)
+
