@@ -1,17 +1,18 @@
 ---
-title: URL.searchParams
-slug: Web/API/URL/searchParams
+title: URLSearchParams
+slug: Web/API/URLSearchParams
+page-type: web-api-interface
 tags:
   - API
-  - Property
-  - Read-only
+  - Interface
+  - Landing
   - Reference
-  - URL
+  - URL API
   - URLSearchParams
-browser-compat: api.URL.searchParams
+  - Polyfill
+browser-compat: api.URLSearchParams
 ---
-
-{{APIRef("URL API")}}
+{{ApiRef("URL API")}}
 
 A propriedade **`searchParams`** da interface {{domxref("URL")}} retorna um objeto {{domxref("URLSearchParams")}} permitindo acesso ao {{httpmethod("GET")}} decodificando os argumentos que contém na URL.
 
