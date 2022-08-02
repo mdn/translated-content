@@ -1,6 +1,7 @@
 ---
 title: TimeRanges.start()
 slug: Web/API/TimeRanges/start
+page-type: web-api-instance-method
 tags:
   - API
   - HTML DOM
@@ -8,72 +9,59 @@ tags:
   - Method
   - Reference
   - TimeRanges
+browser-compat: api.TimeRanges.start
 translation_of: Web/API/TimeRanges/start
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{gecko_minversion_header("2.0")}}</p>
+**`start()`** は {{domxref("TimeRanges")}} インターフェイスのメソッドで、指定した時間範囲が開始する時刻オフセットを返します。
 
-<p><span class="seoSummary">指定された時間範囲が始まる時間オフセットを返します。</span></p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+start(index)
+```
 
-<pre class="syntaxbox"><em>startTime</em> = TimeRanges.start(index)
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+- `index`
+  - : 開始時刻を返却する範囲番号です。
 
-<ul>
- <li><code>index</code> は、開始時間を返す範囲の番号です。</li>
-</ul>
+### 返値
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+数値です。
 
-<dl>
- <dt>INDEX_SIZE_ERR</dt>
- <dd>指定されたインデックスが既存の範囲に対応しない場合にスローされる <code>DOMException</code>。</dd>
-</dl>
+### 例外
 
-<h2 id="Example" name="Example">例</h2>
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : 指定されたインデックスが既存の範囲に対応していない場合に発生します。
 
-<p>ID が "myVideo" の動画要素がある場合、</p>
+## 例
 
-<pre class="brush: js">var v = document.getElementById("myVideo");
+ID が "myVideo" の動画要素がある場合、
 
-var buf = v.buffered;
+```js
+const v = document.getElementById("myVideo");
 
-var numRanges = buf.length;
+const buf = v.buffered;
 
-if (buf.length == 1) {
-  // 1つの範囲のみ
-  if (buf.start(0) == 0 &amp;&amp; buf.end(0) == v.duration) {
-    // 1つの範囲が動画の最初から始まり、
+const numRanges = buf.length;
+
+if (buf.length === 1) {
+  // 1 つの範囲のみ
+  if (buf.start(0) === 0 && buf.end(0) === v.duration) {
+    // 1 つの範囲が動画の最初から始まり、
     // 動画の最後で終わるため、すべてが読み込まれています
   }
 }
-</pre>
+```
 
-<p>この例では、時間範囲を見て、動画全体が読み込まれたかどうかを確認します。</p>
+この例では、時間範囲を調べ、動画全体が読み込まれたかどうかを調べます。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "#dom-timeranges-start", "TimeRanges.start()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.TimeRanges.start")}}</p>
+{{Compat}}
