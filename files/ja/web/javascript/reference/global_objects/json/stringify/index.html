@@ -208,7 +208,7 @@ JSON.stringify(foo, replacer);
 
 <ul>
  <li>このオブジェクトがプロパティの値であった場合は、プロパティ名</li>
- <li>配列内の値で会った場合は、配列のインデックス番号を文字列で</li>
+ <li>配列内の値であった場合は、文字列化した配列のインデックス</li>
  <li><code>JSON.stringify()</code> がこのオブジェクトに対して直接呼び出された場合は、空文字列</li>
 </ul>
 
@@ -248,7 +248,7 @@ JSON.stringify(circularReference);
 
 <p>循環参照をシリアライズするためには、これに対応したライブラリを使用したり (Douglas Crockford による <a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> など)、自分自身で解決策を実装したりする方法があります。循環参照を探索してシリアライズされた値に置き換える (または削除する) 必要があるでしょう。</p>
 
-<h3 id="Issue_with_plain_JSON.stringify_for_use_as_JavaScript" name="Issue_with_plain_JSON.stringify_for_use_as_JavaScript">JavaScript としての使用に際してのそのままの JSON.stringify の問題</h3>
+<h3 id="Issue_with_plain_JSON.stringify_for_use_as_JavaScript" name="Issue_with_plain_JSON.stringify_for_use_as_JavaScript">JSON.stringify をそのまま JavaScript として使用する際の問題</h3>
 
 <p>従来、 JSON は <a href="http://timelessrepo.com/json-isnt-a-javascript-subset">JavaScript の完全に厳密なサブセットではありません</a>でした。文字コードポイント U+2028 LINE SEPARATOR (改行) と U+2029 PARAGRAPH SEPARATOR (改段落) は JSON テキスト内の文字列リテラルやプロパティ名に使用することができます。しかし、 JavsScript のテキスト内で同様の文脈では使用することができず、 Unicode エスケープを使用した <code>\u2028</code> および <code>\u2029</code> しか使うことができません。これは最近変更され、どちらのコードポイントも JSON と JavaScript の両方の文字列で使用することができるようになりました。</p>
 

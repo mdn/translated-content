@@ -10,7 +10,7 @@ translation_of: Web/CSS/resize
 
 <h2 id="概述">概述</h2>
 
-<p> <strong><code>resize</code></strong> CSS 属性允许你控制一个元素的可调整大小性。</p>
+<p> <strong><code>resize</code></strong> CSS 属性允许你控制一个元素的可调整大小性。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -47,7 +47,7 @@ resize: unset;
  <dd>Depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value, the element displays a mechanism for allowing the user to resize the element either horizontally or vertically in inline direction.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> 如果一个block元素的 {{cssxref("overflow")}} 属性被设置成了<code>visible</code>，那么<code>resize</code>属性对该元素无效。</div>
+<div class="note"><strong>Note:</strong> 如果一个 block 元素的 {{cssxref("overflow")}} 属性被设置成了<code>visible</code>，那么<code>resize</code>属性对该元素无效。</div>
 
 <h3 id="标准语法">标准语法</h3>
 
@@ -59,10 +59,10 @@ resize: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<p>{{HTMLElement("textarea")}} 元素在{{gecko("2.0")}} (Firefox 4)中默认是可以进行缩放的. 你可以通过下面的CSS代码来重写这种行为：</p>
+<p>{{HTMLElement("textarea")}} 元素在{{gecko("2.0")}} (Firefox 4) 中默认是可以进行缩放的。你可以通过下面的 CSS 代码来重写这种行为：</p>
 
 <pre class="brush: css">textarea.example {
-  resize: none; /* disables resizability */
+  resize: none; /* disables resizability */
 }
 </pre>
 
@@ -76,7 +76,7 @@ resize: unset;
 
 <h3 id="Using_resize_with_arbitrary_elements">Using resize with arbitrary elements</h3>
 
-<p>You can use the resize property to make any element resizable. In the example below, a resizable {{HTMLElement("div")}} box contains a resizable paragraph ({{HTMLElement("p")}} element):</p>
+<p>You can use the resize property to make any element resizable. In the example below, a resizable {{HTMLElement("div")}} box contains a resizable paragraph ({{HTMLElement("p")}} element):</p>
 
 <h4 id="CSS_2">CSS</h4>
 
@@ -103,7 +103,7 @@ p {
   &lt;p class="resizable"&gt;
     This paragraph is resizable, because the CSS resize property is set to 'both' on this
     element.
-  &lt;/p&gt;
+  &lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
@@ -113,27 +113,7 @@ p {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#resize', 'resize')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Adds the values <code>block</code> and <code>inline</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#resize', 'resize')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

@@ -40,7 +40,7 @@ repeating-linear-gradient(to left top, blue, red 20px);
 
 /* 下から上に延び、青で始め、 40% から緑になり、
    赤で終わるグラデーション。最後の色経由点が既定で
-	 100% なので、グラデーションは繰り返されない */
+   100% なので、グラデーションは繰り返されない */
 repeating-linear-gradient(0deg, blue, green 40%, red);
 
 /* 5 回繰り返し、左から右に、赤で始まり、緑に変わり、

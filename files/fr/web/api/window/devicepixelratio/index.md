@@ -11,7 +11,9 @@ Aucun rappel ni événement ne se déclenche lorsque la valeur change (par exemp
 
 ## Syntaxe
 
-    valeur = window.devicePixelRatio;
+```js
+valeur = window.devicePixelRatio;
+```
 
 ## Spécifications
 

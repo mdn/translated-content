@@ -57,8 +57,8 @@ Il existe de nombreux clients FTP. Dans cette démonstration, nous utiliserons F
 
 Pour ouvrir FireFTP dans un nouvel onglet de Firefox, il existe deux méthodes :
 
-1.  **Menu de Firefox ![](2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](Screenshot%20from%202014-11-26%2014:24:56.png) ➤ FireFTP**
-2.  **Outils** ➤ **Développement web** ➤ **FireFTP**
+1. **Menu de Firefox ![](2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](Screenshot%20from%202014-11-26%2014:24:56.png) ➤ FireFTP**
+2. **Outils** ➤ **Développement web** ➤ **FireFTP**
 
 Vous devriez voir apparaître cette fenêtre :
 

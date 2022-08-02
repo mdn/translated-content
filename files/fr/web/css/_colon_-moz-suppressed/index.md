@@ -16,7 +16,9 @@ Ce sélecteur est principalement destiné aux développeurs de thèmes.
 
 ## Syntaxe
 
-    :-moz-suppressed
+```css
+:-moz-suppressed
+```
 
 ## Exemple
 

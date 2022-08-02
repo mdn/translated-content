@@ -1,52 +1,47 @@
 ---
-title: WindowOrWorkerGlobalScope.clearInterval()
+title: clearInterval()
 slug: Web/API/clearInterval
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WindowOrWorkerGlobalScope
-  - clearInterval
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearInterval
+page-type: web-api-global-function
+translation_of: Web/API/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
+browser-compat: api.clearInterval
 ---
 {{APIRef("HTML DOM")}}
 
-La méthode **`clearInterval()`**, rattachée au _mixin_ {{domxref("WindowOrWorkerGlobalScope")}}, permet d'annuler une action répétée minutée initiée via un appel à {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}.
+La méthode globale **`clearInterval()`** permet d'annuler une action répétée minutée initiée via un appel à [`setInterval()`](/fr/docs/Web/API/setInterval). Si le paramètre fourni ne permet pas d'identifier une action lancée précédemment, cette méthode n'a aucun effet.
 
 ## Syntaxe
 
-    scope.clearInterval(intervalID)
+```js
+clearInterval(intervalID)
+```
 
 ### Paramètres
 
 - `intervalID`
   - : L'identifiant de l'intervalle de répétition qu'on souhaite annuler. Cet identifiant est renvoyé lorsqu'on appelle `setInterval()` pour définir l'intervalle de répétition.
 
-On notera que l'ensemble des identifiants utilisés est commun entre ceux fournis par {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} et ceux fournis par {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}. Cela signifie qu'on peut, techniquement, utiliser `clearInterval()` et {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} de façon interchangeable. C'est toutefois une mauvaise pratique, qui nuit à la lisibilité du code et à sa maintenabilité.
+On notera que l'ensemble des identifiants utilisés est commun entre ceux fournis par [`setInterval()`](/fr/docs/Web/API/setInterval) et ceux fournis par [`setTimeout()`](/fr/docs/Web/API/setTimeout). Cela signifie qu'on peut, techniquement, utiliser `clearInterval()` et [`clearTimeout()`](/fr/docs/Web/API/clearTimeout) de façon interchangeable. C'est toutefois une mauvaise pratique, qui nuit à la lisibilité du code et à sa maintenabilité.
 
 ### Valeur de retour
 
-{{jsxref("undefined")}}
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Exemples
 
-Voir [l'exemple `setInterval()`](/fr/docs/Web/API/WindowTimers/setInterval#Exemples).
+Voir [l'exemple `setInterval()`](/fr/docs/Web/API/setInterval#exemples).
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                             | Commentaires                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'WindowOrWorkerGlobalScope.clearInterval()')}} | {{Spec2("HTML WHATWG")}} | Cette méthode a été déplacée sur le _mixin_ `WindowOrWorkerGlobalScope`. |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-clearinterval', 'clearInterval()')}}                                 | {{Spec2('HTML WHATWG')}} |                                                                          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.clearInterval")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}
-- {{domxref("WindowOrWorkerGlobalScope.setInterval")}}
-- {{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}
-- {{domxref("Window.requestAnimationFrame")}}
+- [`setTimeout`](/fr/docs/Web/API/setTimeout)
+- [`setInterval`](/fr/docs/Web/API/setInterval)
+- [`clearTimeout`](/fr/docs/Web/API/clearTimeout)
+- [`Window.requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame)

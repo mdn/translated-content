@@ -14,9 +14,11 @@ original_slug: Web/JavaScript/Reference/Erreurs/Delete_in_strict_mode
 
 ## Message
 
-    SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
-    SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
-    SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+```
+SyntaxError: Calling delete on expression not allowed in strict mode (Edge)
+SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
+SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
+```
 
 ## Type d'erreur
 

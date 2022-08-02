@@ -19,7 +19,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 - Les optimizations [Asm.js](http://asmjs.org/spec/latest/) sont activées, rendant possible la compilation d'applications C / C++ vers un sous-ensemble Javascript pour de meilleures performances.
 - La syntaxe ES6 [Arrow Function](/fr/docs/JavaScript/Reference/arrow_functions) a été implémentée ({{bug(846406)}}).
-- La nouvelle fonction [Object.is ](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is)a été ajoutée ({{bug(839979)}}).
+- La nouvelle fonction [Object.is](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is) a été ajoutée ({{bug(839979)}}).
 
 ### DOM
 
@@ -38,8 +38,8 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 ## Changements pour les développeurs Mozilla et développeurs d'add-on
 
-- Le paramètre `properties` a été supprimé des méthodes {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} et {{ifmethod('nsITreeView','getRowProperties')}} de l'interface `nsITreeView`. Ces méthodes retourneront maintenant un string de noms de propriétés séparées par des espaces. ({{bug('407956')}})
-- La méthode {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} a été implémentée et retourne le nom de toutes les [propriétés CSS](/fr/docs/CSS/CSS_Reference) supportées.
+- Le paramètre `properties` a été supprimé des méthodes `nsITreeView.getCellProperties()` `nsITreeView.getColumnProperties()` et `nsITreeView.getRowProperties()` de l'interface `nsITreeView`. Ces méthodes retourneront maintenant un string de noms de propriétés séparées par des espaces. ({{bug('407956')}})
+- La méthode `inIDOMUtils.getCSSPropertyNames()` a été implémentée et retourne le nom de toutes les [propriétés CSS](/fr/docs/CSS/CSS_Reference) supportées.
 - Voir [tous les changements](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/).
 
 ### Outils pour développeurs de Firefox

@@ -23,11 +23,11 @@ Pour la documentation de référence sur l'API d'IndexedDB, voyez l'article [Ind
 
 Le modèle de base qu'IndexedDB utilise est le suivant :
 
-1.  Ouvrir une base de données.
-2.  Créer un objet de stockage dans la base de données.
-3.  Démarrer une transaction, et faire des requêtes pour faire quelques opérations sur des bases de données, comme ajouter, ou récupérer des données.
-4.  Attendre que l'exécution soit terminée, en écoutant le bon type d'événement DOM.
-5.  Faire quelque chose avec les résultats (qui peuvent être trouvés dans l'objet de la requête).
+1. Ouvrir une base de données.
+2. Créer un objet de stockage dans la base de données.
+3. Démarrer une transaction, et faire des requêtes pour faire quelques opérations sur des bases de données, comme ajouter, ou récupérer des données.
+4. Attendre que l'exécution soit terminée, en écoutant le bon type d'événement DOM.
+5. Faire quelque chose avec les résultats (qui peuvent être trouvés dans l'objet de la requête).
 
 Maintenant que nous avons ces grands concepts en poche, nous pouvons voir des choses plus concrètes.
 
@@ -590,9 +590,9 @@ Le contenu de la fenêtre de tiers (par exemple le contenu de {{htmlelement("ifr
 
 Lorsque le navigateur s'arrête (parce que l'utilisateur a choisi l'option Quit ou Exit), le disque contenant la base de données est supprimé de manière inattendue ou les permissions sont perdues dans le magasin de base de données, les choses suivantes se produisent :
 
-1.  Chaque transaction sur chaque base de données affectée (ou toutes les bases de données ouvertes, dans le cas de l'arrêt du navigateur) est interrompue avec un `AbortError`. L'effet est le même que si {{domxref("IDBTransaction.abort()")}} est appelé sur chaque transaction.
-2.  Une fois toutes les transactions terminées, la connexion à la base de données est fermée .
-3.  Enfin, l'objet {{domxref("IDBDatabase")}} représentant la connexion à la base de données reçoit un évènement {{event("close")}} . Vous pouvez utiliser un gestionnaire d'évènements  {{domxref("IDBDatabase.onclose")}} pour écouter ces évènements, afin de savoir quand une base de données est fermée de façon inattendue .
+1. Chaque transaction sur chaque base de données affectée (ou toutes les bases de données ouvertes, dans le cas de l'arrêt du navigateur) est interrompue avec un `AbortError`. L'effet est le même que si {{domxref("IDBTransaction.abort()")}} est appelé sur chaque transaction.
+2. Une fois toutes les transactions terminées, la connexion à la base de données est fermée .
+3. Enfin, l'objet {{domxref("IDBDatabase")}} représentant la connexion à la base de données reçoit un évènement {{event("close")}} . Vous pouvez utiliser un gestionnaire d'évènements  {{domxref("IDBDatabase.onclose")}} pour écouter ces évènements, afin de savoir quand une base de données est fermée de façon inattendue .
 
 Le comportement décrit ci-dessus est nouveau et n'est disponible que pour les versions de navigateur suivantes : Firefox 50, Google Chrome 31 (approximativement).
 

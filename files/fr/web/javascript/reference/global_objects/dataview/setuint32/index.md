@@ -19,7 +19,9 @@ La méthode **`setUint32()`** permet d'enregister un entier non-signé sur 32 bi
 
 ## Syntaxe
 
-    dataview.setUint32(positionOctet, valeur [, littleEndian])
+```js
+dataview.setUint32(positionOctet, valeur [, littleEndian])
+```
 
 ### Paramètres
 

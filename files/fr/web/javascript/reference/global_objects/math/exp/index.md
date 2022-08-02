@@ -17,7 +17,9 @@ La fonction **`Math.exp()`** renvoie l'exponentielle d'un nombre (donnée par `e
 
 ## Syntaxe
 
-    Math.exp(x)
+```js
+Math.exp(x)
+```
 
 ### Paramètres
 

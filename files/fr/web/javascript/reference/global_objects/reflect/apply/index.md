@@ -18,7 +18,9 @@ La méthode statique **`Reflect.apply()`** permet d'appeler une fonction cible a
 
 ## Syntaxe
 
-    Reflect.apply(cible, argumentThis, listeArguments)
+```js
+Reflect.apply(cible, argumentThis, listeArguments)
+```
 
 ### Paramètres
 

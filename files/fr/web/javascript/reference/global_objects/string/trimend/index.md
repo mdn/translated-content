@@ -18,8 +18,10 @@ La méthode **`trimEnd()`** permet de retirer les blancs situés à la fin d'une
 
 ## Syntaxe
 
-    str.trimEnd();
-    str.trimRight();
+```js
+str.trimEnd();
+str.trimRight();
+```
 
 ### Valeur de retour
 

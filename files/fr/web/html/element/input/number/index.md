@@ -260,7 +260,7 @@ Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et
 
 ### Utilisation d'un motif de validation
 
-Les éléments `<input type="number">` ne prennent pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) qui permet de restreindre les valeurs selon une expression rationnelle. 
+Les éléments `<input type="number">` ne prennent pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) qui permet de restreindre les valeurs selon une expression rationnelle.
 
 En effet, les contrôles de saisie numérique sont destinés à contenir des nombres plutôt que des chaînes de caractères et les autres attributs permettent de paramétrer les valeurs recevables (cf. ci-avant).
 

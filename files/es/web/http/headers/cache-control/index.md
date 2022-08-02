@@ -70,7 +70,7 @@ Nota: Comprueba la [tabla de compatibilidad](#browser_compatibility) para su sop
 
 Los siguientes términos son usados en este documento; muchos pero no todos provienen de la especificación.
 
-- `Caché(HTTP) `
+- `Caché(HTTP)`
   - : Implementación la cual mantiene peticiones y respuestas para reusarlas en peticiones posteriores. Puede ser tanto una cache privada como una compartida.
 - `Caché compartida`
   - : Caché existente entre el servidor de origen y los clientes (p. ej. Proxy, CDN). Almacena una sola respuesta para reutilizarla en multiples usuarios — por tanto los desarrolladores deberían evitar que el almacenamiento de contenidos personalizados sea cacheado en la caché compartida.
@@ -80,9 +80,9 @@ Los siguientes términos son usados en este documento; muchos pero no todos prov
   - : Almacena una respuesta en caches cuando es cacheable. Pero no siempre es reutilizada en ese momento. (Normalmente "caché" significa almacenar una respuesta).
 - `Respuesta reutilizada`
   - : Reutiliza respuestas cacheadas para las subsiguientes peticiones,
-- `Revalidar respuesta `
+- `Revalidar respuesta`
   - : Pregunta al servidor de origen si una respuesta almacenada sigue siendo reciente o no. Normalmente se realiza a través de una petición condicionada.
-- ` Respuesta reciente`
+- `Respuesta reciente`
   - : Indica que una respuesa es reciente. Esto normalmente significa que la respuesta puede ser reutilizada para las subsiguientes peticiones, dependiendo de las directivas de petición.
 - `Respuesta pasada`
   - : Indica que la respuestá está pasada. Normalmente significa que la respuesta ya no puede ser reutilizada. El almacenamiento caché no requiere que las respuestas pasadas sean eliminada inmediatamente, por que la revalidación puede cambiar la respuesta de pasada a reciente de nuevo.

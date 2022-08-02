@@ -46,7 +46,7 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 
 <ul>
  <li>Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the user chooses to (for example, in Firefox you can choose to delete all stored data or only stored data from selected origins by going to <em>Preferences</em> and using the options under <em>Privacy &amp; Security &gt; Cookies &amp; Site Data</em>).</li>
- <li>Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least recently used ({{anch("LRU policy")}}) when {{anch("Storage limits")}} are reached.</li>
+ <li>Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least recently used (<a href="#lru_policy">LRU policy</a>) when <a href="#storage_limits">Storage limits</a> are reached.</li>
 </ul>
 
 <p>In Firefox, when persistent storage is used, the user is given a UI popup to alert them that this data will persist, and asks if they are happy with that. Temporary data storage does not elicit any user prompts.</p>

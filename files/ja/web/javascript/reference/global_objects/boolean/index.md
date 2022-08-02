@@ -54,7 +54,7 @@ var myString = new String('Hello'); // 文字列オブジェクト
 var s = Boolean(myString);      // 初期値は true
 ```
 
-`Boolean` プリミティブの代わりに `Boolean` オブジェクト使用しないでください。
+`Boolean` プリミティブの代わりに `Boolean` オブジェクトを使用しないでください。
 
 > **Note:** 標準外の [`document.all`](/ja/docs/Web/API/Document#properties) プロパティがこのコンストラクターの引数として使用された場合、結果は `Boolean` オブジェクトで値は `false` となります。このプロパティは古く、標準外で、使用するべきではありません。
 

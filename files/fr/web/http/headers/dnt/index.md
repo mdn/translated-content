@@ -20,10 +20,12 @@ Le header de requête **`DNT`** (**D**o **N**ot **T**rack) indique que les préf
   </tbody>
 </table>
 
-## Syntax
+## Syntaxe
 
-    DNT: 0
-    DNT: 1
+```
+DNT: 0
+DNT: 1
+```
 
 ## Directives
 

@@ -21,7 +21,7 @@ SyntaxError: Missing initializer in const declaration (Chrome)
 
 <h2 id="哪里出错了？">哪里出错了？</h2>
 
-<p>常量指的是在程序正常运行过程中不能被修改的值。它的值不能通过二次赋值来改变，同时也不能被再次声明。在 JavaScript 中，常量在声明时使用  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 关键字来修饰。常量需要初始化器；也就是说，必须在声明的同时为其赋值（鉴于常量值指定之后不能再进行修改，这样做是容易理解的）。</p>
+<p>常量指的是在程序正常运行过程中不能被修改的值。它的值不能通过二次赋值来改变，同时也不能被再次声明。在 JavaScript 中，常量在声明时使用  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 关键字来修饰。常量需要初始化器；也就是说，必须在声明的同时为其赋值（鉴于常量值指定之后不能再进行修改，这样做是容易理解的）。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -42,9 +42,9 @@ SyntaxError: Missing initializer in const declaration (Chrome)
 
 <pre class="brush: js example-good">const COLUMNS = 80;</pre>
 
-<h4 id="const_let_还是_var"><code>const</code>, <code>let</code> 还是 <code>var?</code></h4>
+<h4 id="const_let_还是_var"><code>const</code>, <code>let</code> 还是 <code>var?</code></h4>
 
-<p>如果你并不想声明一个常量值，那么就不要使用 const 关键字。或许你想要的是使用  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 来声明一个块状作用域变量或者是用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a> </code>声明一个全局变量。这两者都不需要设置初始值。</p>
+<p>如果你并不想声明一个常量值，那么就不要使用 const 关键字。或许你想要的是使用  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 来声明一个块状作用域变量或者是用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/var">var</a> </code>声明一个全局变量。这两者都不需要设置初始值。</p>
 
 <pre class="brush: js example-good">let columns;
 </pre>

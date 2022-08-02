@@ -21,20 +21,20 @@ original_slug: Glossaire/Whitespace
 
 ## Voir aussi
 
-1.  Spécifications
+1. Spécifications
 
-    1.  [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
-    2.  [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
+    1. [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
+    2. [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
 
-2.  Références
+2. Références
 
-    1.  [How whitespace is handled by HTML, CSS, and in the DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
-    2.  {{cssxref("white-space")}}
+    1. [How whitespace is handled by HTML, CSS, and in the DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
+    2. {{cssxref("white-space")}}
 
-3.  Articles Wikipedia
+3. Articles Wikipedia
 
-    1.  {{interwiki("wikipedia", "Whitespace character")}}
+    1. {{interwiki("wikipedia", "Whitespace character")}}
 
-4.  [Glossaire](/fr/docs/Glossaire)
+4. [Glossaire](/fr/docs/Glossaire)
 
-    1.  {{Glossary("Character")}}
+    1. {{Glossary("Character")}}

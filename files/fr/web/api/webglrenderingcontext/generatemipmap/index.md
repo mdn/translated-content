@@ -18,7 +18,9 @@ Les mipmaps sont utilisées pour créer de la distance avec des objets. Une mipm
 
 ## Syntaxe
 
-    void gl.generateMipmap(cible);
+```js
+void gl.generateMipmap(cible);
+```
 
 ### Paramètres
 

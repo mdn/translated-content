@@ -17,7 +17,9 @@ L'instruction **`let`** permet de déclarer une variable dont la portée est cel
 
 ## Syntaxe
 
-    let var1 [= valeur1] [, var2 [= valeur2]] [, ..., varN [= valeurN]];
+```js
+let var1 [= valeur1] [, var2 [= valeur2]] [, …, varN [= valeurN]];
+```
 
 ### Paramètres
 
@@ -313,7 +315,9 @@ for ( let i = a; i < 10; i++ ) {
 
 #### Règles de portées
 
-    for (let expr1; expr2; expr3) instruction
+```js
+for (let expr1; expr2; expr3) instruction
+```
 
 Dans cet exemple, `expr2`, `expr3`, et `instruction` sont contenues dans un bloc implicite qui contient la variable de bloc local déclarée avec `let expr1`.
 

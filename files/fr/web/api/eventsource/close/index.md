@@ -20,7 +20,9 @@ La fonction **`close()`** de l'interface {{domxref("EventSource")}} coupe la con
 
 ## Syntaxe
 
-    eventSource.close();
+```js
+eventSource.close();
+```
 
 ### Paramètres
 

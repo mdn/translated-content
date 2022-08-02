@@ -50,7 +50,7 @@ original_slug: Web/Web_Components/Status_in_Firefox
 <p>Firefox でポリフィルを使用する際に考慮すべき注意事項があります:</p>
 
 <ul>
- <li><code>about:config</code> の {{pref("dom.webcomponents.enabled")}} 設定を <code>true</code> に変更して Firefox で Web Components を有効にすると、完全でないネイティブ実装が動き始め、ポリフィルが混乱する可能性があります。</li>
+ <li><code>about:config</code> の <code>dom.webcomponents.enabled</code> 設定を <code>true</code> に変更して Firefox で Web Components を有効にすると、完全でないネイティブ実装が動き始め、ポリフィルが混乱する可能性があります。</li>
  <li><a href="https://github.com/webcomponents/webcomponentsjs">webcomponents.js</a> ポリフィルを使用した Shadow DOM のポリフィルは、スタイルをカプセル化できません。そのため、スタイルは bleed through でしょう。ポリフィルを使用して構築されたサイトは、ネイティブの Shadow DOM を <strong>サポートした</strong> 環境と異なる見た目になることに注意してください。</li>
  <li>Shadow DOM のポリフィルは、機能にフックするために DOM 要素のプロトタイプをリライトするため、とても動作が遅いです (ポリフィルというよりポリリプレイスです!)。</li>
  <li>Shadow DOM を使用する必要がない場合、webcomponents.js ポリフィルの <a href="https://github.com/webcomponents/webcomponentsjs">webcomponents-lite.js</a> バージョンを使用することをお勧めします。このバージョンは、Shadow DOM を使用しないポリフィルです。</li>

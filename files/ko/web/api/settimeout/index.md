@@ -27,6 +27,7 @@ var timeoutID = setTimeout(function[, delay, arg1, arg2, ...]);
 var timeoutID = setTimeout(function[, delay]);
 var timeoutID = setTimeout(code[, delay]);
 ```
+
 ### 매개변수
 
 - `function`
@@ -260,7 +261,7 @@ foo 호출
 
 #### 페이지 로드 중 타임아웃 지연
 
-Firefox는 현재 탭이 로딩 중일 땐 `setTimeout()` 타이머 실행을 지연시킵니다. 실제 실행은 메인 스레드가 대기 상태에 들어가기 전까지({{domxref("window.requestIdleCallback()")}}과 비슷), 또는 `load` 이벤트가 발생하기 전까지 미뤄집니다. 
+Firefox는 현재 탭이 로딩 중일 땐 `setTimeout()` 타이머 실행을 지연시킵니다. 실제 실행은 메인 스레드가 대기 상태에 들어가기 전까지({{domxref("window.requestIdleCallback()")}}과 비슷), 또는 `load` 이벤트가 발생하기 전까지 미뤄집니다.
 
 ### WebExtension 백그라운드 페이지와 타이머
 

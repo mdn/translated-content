@@ -17,11 +17,11 @@ translation_of: Web/API/Window
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code>window</code> 对象表示一个包含DOM文档的窗口，<font>其</font> <code>document</code> 属性指向窗口中载入的 <a href="/zh-CN/docs/Web/API/Document">DOM文档</a> 。使用 {{ Domxref("document.defaultView") }} 属性可以获取指定文档所在窗口。</p>
+<p><code>window</code> 对象表示一个包含 DOM 文档的窗口，其 <code>document</code> 属性指向窗口中载入的 <a href="/zh-CN/docs/Web/API/Document">DOM 文档</a> 。使用 {{ Domxref("document.defaultView") }} 属性可以获取指定文档所在窗口。</p>
 
 <p><code>window</code>作为全局变量，代表了脚本正在运行的窗口，暴露给 Javascript 代码。</p>
 
-<p>本节为 DOM <code>Window</code> 对象中可用的所有方法、属性和事件提供简要参考。<code>window</code> 对象实现了 <code>Window</code> 接口，此接口继承自 <code><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code> 接口。一些额外的全局函数、命名空间、对象、接口和构造函数与 window 没有典型的关联，但却是有效的，它们在 <a href="/en-US/docs/JavaScript/Reference">JavaScript参考</a> 和 <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM参考</a> 中列出。</p>
+<p>本节为 DOM <code>Window</code> 对象中可用的所有方法、属性和事件提供简要参考。<code>window</code> 对象实现了 <code>Window</code> 接口，此接口继承自 <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code> 接口。一些额外的全局函数、命名空间、对象、接口和构造函数与 window 没有典型的关联，但却是有效的，它们在 <a href="/en-US/docs/JavaScript/Reference">JavaScript 参考</a> 和 <a href="/en-US/docs/DOM/DOM_Reference">DOM 参考</a> 中列出。</p>
 
 <p>在有标签页功能的浏览器中，每个标签都拥有自己的 <code>window</code> 对象；也就是说，同一个窗口的标签页之间不会共享一个 <code>window</code> 对象。有一些方法，如 {{ Domxref("window.resizeTo") }} 和 {{ Domxref("window.resizeBy") }} 之类的方法会作用于整个窗口而不是 <code>window</code> 对象所属的那个标签。一般而言，如果一样东西无法恰当地作用于标签，那么它就会作用于窗口。</p>
 
@@ -29,11 +29,11 @@ translation_of: Web/API/Window
 
 <h2 id="Constructors">Constructors</h2>
 
-<p>See also the <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Interfaces</a>.</p>
+<p>See also the <a href="/en-US/docs/DOM/DOM_Reference">DOM Interfaces</a>.</p>
 
 <dl>
  <dt>{{domxref("DOMParser")}}</dt>
- <dd><code>DOMParser</code> can parse XML or HTML source stored in a string into a DOM <a href="https://developer.mozilla.org/en-US/docs/DOM/document" title="document">Document</a>. <code>DOMParser</code> is specified in <a href="https://w3c.github.io/DOM-Parsing/" title="http://html5.org/specs/dom-parsing.html">DOM Parsing and Serialization</a>.</dd>
+ <dd><code>DOMParser</code> can parse XML or HTML source stored in a string into a DOM <a href="/en-US/docs/DOM/document">Document</a>. <code>DOMParser</code> is specified in <a href="https://w3c.github.io/DOM-Parsing/">DOM Parsing and Serialization</a>.</dd>
  <dt>{{domxref("Window.GeckoActiveXObject")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Image")}}</dt>
@@ -56,7 +56,7 @@ translation_of: Web/API/Window
 
 <h2 id="属性">属性</h2>
 
-<p><em>这个接口从 {{domxref("EventTarget")}} 接口继承属性，也从 </em> <em>{{domxref("WindowOrWorkerGlobalScope")}} 和 {{domxref("WindowEventHandlers")}} 这两个 mixin 中继承属性。</em></p>
+<p>这个接口从 {{domxref("EventTarget")}} 接口继承属性，也从 <code>WindowOrWorkerGlobalScope</code> 这个 mixin 中继承属性。</p>
 
 <p>注意，对象类型的属性（例如：覆盖内建元素的原型）被列于下面单独的小节之中。</p>
 
@@ -65,7 +65,7 @@ translation_of: Web/API/Window
  <dd>这个属性指示当前窗口是否关闭。</dd>
  <dt>{{domxref("Window.console")}} {{ReadOnlyInline}}</dt>
  <dd>返回 console 对象的引用，该对象提供了对浏览器调试控制台的访问。</dd>
- <dt>{{domxref("Window.content")}} 和 <code>Window._content</code> {{Non-standard_inline}} {{obsolete_inline}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("Window.content")}} 和 <code>Window._content</code> {{Non-standard_inline}} {{Deprecated_Inline}} {{ReadOnlyInline}}</dt>
  <dd>返回当前 window 的 content 元素的引用。通过带下划线的过时变种方法不再可以获得 Web content。</dd>
  <dt>{{domxref("Window.controllers")}} {{non-standard_inline}} {{ReadOnlyInline}}</dt>
  <dd>返回当前 chrome window 的 XUL 控制器对象。</dd>
@@ -73,13 +73,13 @@ translation_of: Web/API/Window
  <dd>returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new <a href="/en-US/docs/Web/Web_Components/Using_custom_elements">custom elements</a> and get information about previously registered custom elements.</dd>
  <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
  <dd>返回浏览器 crypto 对象。</dd>
- <dt>{{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}</dt>
+ <dt>{{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}</dt>
  <dd>获取或设置指定窗口的状态栏文本。</dd>
  <dt>{{domxref("Window.devicePixelRatio")}} {{non-standard_inline}} {{ReadOnlyInline}}</dt>
  <dd>返回当前显示器的物理像素和设备独立像素的比例。</dd>
  <dt>{{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}</dt>
  <dd>获取在调用 {{domxref("window.showModalDialog()")}} 时传递给窗口的参数（如果它是一个对话框）。这是一个 <code>nsIArray</code>。</dd>
- <dt>{{domxref("Window.directories")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.directories")}} {{Deprecated_Inline}}</dt>
  <dd>{{domxref("window.personalbar")}} 的另一种形式。</dd>
  <dt>{{domxref("Window.document")}} {{ReadOnlyInline}}</dt>
  <dd>返回对当前窗口所包含文档的引用。</dd>
@@ -100,26 +100,26 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.event")}} {{ReadOnlyInline}}</dt>
  <dd>Returns the <strong>current event</strong>, which is the event currently being handled by the JavaScript code's context, or <code>undefined</code> if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.</dd>
  <dt>{{domxref("Window.frameElement")}} {{readOnlyInline}}</dt>
- <dd>返回嵌入窗口的元素，如果未嵌入窗口，则返回null。</dd>
+ <dd>返回嵌入窗口的元素，如果未嵌入窗口，则返回 null。</dd>
  <dt>{{domxref("Window.frames")}} {{readOnlyInline}}</dt>
  <dd>返回当前窗口中所有子窗体的数组。</dd>
  <dt>{{domxref("Window.fullScreen")}}</dt>
  <dd>此属性表示窗口是否以全屏显示。</dd>
- <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
+ <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Gecko 13 (Firefox 13) 开始废弃。使用 {{domxref("Window.localStorage")}} 替代它。<br>
  原本是：用于存储跨页面数据的多重存储对象。</dd>
  <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
  <dd>返回一个对 history 对象的引用。</dd>
  <dt>{{domxref("Window.innerHeight")}} {{readOnlyInline}}</dt>
- <dd>获得浏览器窗口的内容区域的高度，包含水平滚动条(如果有的话)。</dd>
+ <dd>获得浏览器窗口的内容区域的高度，包含水平滚动条 (如果有的话)。</dd>
  <dt>{{domxref("Window.innerWidth")}} {{readOnlyInline}}</dt>
- <dd>获得浏览器窗口的内容区域的宽度，包含垂直滚动条(如果有的话)。</dd>
+ <dd>获得浏览器窗口的内容区域的宽度，包含垂直滚动条 (如果有的话)。</dd>
  <dt>{{domxref("Window.isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}</dt>
  <dd>指出上下文环境是否能够使用安全上下文环境的特征。</dd>
  <dt>{{domxref("Window.length")}} {{readOnlyInline}}</dt>
  <dd>返回窗口中的 frames 数量。参见 {{domxref("window.frames")}}。</dd>
  <dt>{{domxref("Window.location")}}</dt>
- <dd>获取、设置 window 对象的 location, 或者当前的 URL.</dd>
+ <dd>获取、设置 window 对象的 location，或者当前的 URL.</dd>
  <dt>{{domxref("Window.locationbar")}} {{ReadOnlyInline}}</dt>
  <dd>返回 locationbar 对象，其可视性可以在窗口中切换。</dd>
  <dt>{{domxref("Window.localStorage")}} {{readOnlyInline}}</dt>
@@ -158,7 +158,7 @@ translation_of: Web/API/Window
  <dd>Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing <a href="/en-US/docs/Navigation_timing">performance-related</a> data. See also <a href="/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing">Using Navigation Timing</a> for additional information and examples.</dd>
  <dt>{{domxref("Window.personalbar")}} {{readOnlyInline}}</dt>
  <dd>返回 personalbar 对象，它的可视性可以在窗口中切换。</dd>
- <dt>{{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}</dt>
+ <dt>{{domxref("Window.pkcs11")}} {{Deprecated_Inline}}</dt>
  <dd>Formerly provided access to install and remove PKCS11 modules.</dd>
  <dt>{{domxref("Window.returnValue")}}</dt>
  <dd>The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.</dd>
@@ -205,24 +205,24 @@ translation_of: Web/API/Window
 <h3 id="Properties_implemented_from_elsewhere">Properties implemented from elsewhere</h3>
 
 <dl>
- <dt>{{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}</dt>
+ <dt>{{domxref("caches")}} {{readOnlyinline}}</dt>
  <dd>Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}</dt>
+ <dt>{{domxref("indexedDB")}} {{readonlyInline}}</dt>
  <dd>Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}</dt>
+ <dt>{{domxref("isSecureContext")}} {{readOnlyinline}}</dt>
  <dd>Returns a boolean indicating whether the current context is secure (<code>true</code>) or not (<code>false</code>).</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}</dt>
+ <dt>{{domxref("origin")}} {{readOnlyinline}}</dt>
  <dd>Returns the global object's origin, serialized as a string. (This does not yet appear to be implemented in any browser.)</dd>
 </dl>
 
 <h2 id="方法">方法</h2>
 
-<p><em>This interface inherits methods from the {{domxref("EventTarget")}} interface and implements methods from {{domxref("WindowOrWorkerGlobalScope")}} and {{domxref("EventTarget")}}.</em></p>
+<p><em>This interface inherits methods from the {{domxref("EventTarget")}} interface and implements methods from <code>WindowOrWorkerGlobalScope</code> and {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("Window.alert()")}}</dt>
  <dd>Displays an alert dialog.</dd>
- <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Moves back one in the window history. This method is obsolete; you should instead use {{domxref("History.back", "window.history.back()")}}.</dd>
  <dt>{{domxref("Window.blur()")}}</dt>
  <dd>Sets focus away from the window.</dd>
@@ -238,21 +238,21 @@ translation_of: Web/API/Window
  <dd>Closes the current window.</dd>
  <dt>{{domxref("Window.confirm()")}}</dt>
  <dd>Displays a dialog with a message that the user needs to respond to.</dd>
- <dt>{{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Window.disableExternalCapture()")}} {{Deprecated_Inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.dispatchEvent()")}}</dt>
  <dd>Used to trigger an event.</dd>
  <dt>{{domxref("Window.dump()")}} {{Non-standard_inline}}</dt>
  <dd>Writes a message to the console.</dd>
- <dt>{{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Window.enableExternalCapture()")}} {{Deprecated_Inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.find()")}}</dt>
  <dd>Searches for a given string in a window.</dd>
  <dt>{{domxref("Window.focus()")}}</dt>
  <dd>Sets focus on the current window.</dd>
- <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Moves the window one document forward in the history. This method is obsolete; you should instead use {{domxref("History.forward", "window.history.forward()")}}.</dd>
- <dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Flashes the application icon.</dd>
  <dt>{{domxref("Window.getAttentionWithCycleCount()")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
@@ -262,7 +262,7 @@ translation_of: Web/API/Window
  <dd>Gets default computed style for the specified element, ignoring author stylesheets.</dd>
  <dt>{{domxref("Window.getSelection()")}}</dt>
  <dd>Returns the selection object representing the selected item(s).</dd>
- <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>Returns the browser to the home page.</dd>
  <dt>{{domxref("Window.matchMedia()")}}</dt>
  <dd>Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.</dd>
@@ -276,7 +276,7 @@ translation_of: Web/API/Window
  <dd>Moves the window to the specified coordinates.</dd>
  <dt>{{domxref("Window.open()")}}</dt>
  <dd>打开一个新窗口。</dd>
- <dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>打开一个新的对话框窗口。</dd>
  <dt>{{domxref("Window.postMessage()")}}</dt>
  <dd>为一个窗口向另一个窗口发送数据字符串提供了一种安全方法，该窗口不必与第一个窗口处于相同的域中。</dd>
@@ -294,9 +294,9 @@ translation_of: Web/API/Window
  <dd>将当前窗口调整到一定的大小。</dd>
  <dt>{{domxref("Window.resizeTo()")}}</dt>
  <dd>动态调整窗口。</dd>
- <dt>{{domxref("Window.restore()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.restore()")}} {{Non-standard_inline}} {{Deprecated_Inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
- <dt>{{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}</dt>
+ <dt>{{domxref("Window.routeEvent()")}} {{Deprecated_Inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.scroll()")}}</dt>
  <dd>滚动窗口到文档中的特定位置。</dd>
@@ -319,7 +319,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.stop()")}}</dt>
  <dd>这个方法停止窗口加载。</dd>
  <dt>{{domxref("Window.updateCommands()")}} {{Non-standard_inline}}</dt>
- <dd>更新当前chrome窗口(UI)命令的状态。</dd>
+ <dd>更新当前 chrome 窗口 (UI) 命令的状态。</dd>
 </dl>
 
 <h3 id="Methods_implemented_from_elsewhere">Methods implemented from elsewhere</h3>
@@ -327,30 +327,30 @@ translation_of: Web/API/Window
 <dl>
  <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
  <dd>Register an event handler to a specific event type on the window.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.atob()")}}</dt>
+ <dt>{{domxref("atob()")}}</dt>
  <dd>Decodes a string of data which has been encoded using base-64 encoding.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.btoa()")}}</dt>
+ <dt>{{domxref("btoa()")}}</dt>
  <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</dt>
- <dd>Cancels the repeated execution set using {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.clearTimeout()")}}</dt>
- <dd>Cancels the delayed execution set using {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.createImageBitmap()")}}</dt>
+ <dt>{{domxref("clearInterval()")}}</dt>
+ <dd>Cancels the repeated execution set using {{domxref("setInterval()")}}.</dd>
+ <dt>{{domxref("clearTimeout()")}}</dt>
+ <dd>Cancels the delayed execution set using {{domxref("setTimeout()")}}.</dd>
+ <dt>{{domxref("createImageBitmap()")}}</dt>
  <dd>Accepts a variety of different image sources, and returns a {{domxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at <em>(sx, sy)</em> with width sw, and height sh.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.fetch()")}}</dt>
+ <dt>{{domxref("fetch()")}}</dt>
  <dd>Starts the process of fetching a resource from the network.</dd>
  <dt>{{domxref("EventTarget.removeEventListener")}}</dt>
  <dd>Removes an event listener from the window.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</dt>
+ <dt>{{domxref("setInterval()")}}</dt>
  <dd>Schedules a function to execute every time a given number of milliseconds elapses.</dd>
- <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</dt>
+ <dt>{{domxref("setTimeout()")}}</dt>
  <dd>Schedules a function to execute in a given amount of time.</dd>
 </dl>
 
 <h3 id="Obsolete_methods">Obsolete methods</h3>
 
 <dl>
- <dt>{{domxref("Window.showModalDialog()")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("Window.showModalDialog()")}} {{Deprecated_Inline}}</dt>
  <dd>Displays a modal dialog. <strong>This method was removed completely in Chrome 43, and Firefox 55.</strong></dd>
 </dl>
 
@@ -358,7 +358,7 @@ translation_of: Web/API/Window
 
 <p>These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.</p>
 
-<p><em>This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}.</em></p>
+<p><em>This interface inherits event handlers from the {{domxref("EventTarget")}} interface.</em></p>
 
 <div class="note">
 <p><strong>Note:</strong> Starting in {{Gecko("9.0")}}, you can now use the syntax <code>if ("onabort" in window)</code> to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See <a href="/en-US/docs/DOM/DOM_event_handlers">DOM event handlers</a> for details.</p>
@@ -502,7 +502,7 @@ translation_of: Web/API/Window
  Also available via the {{domxref("GlobalEventHandlers/onerror", "onerror")}} 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/languagechange_event">languagechange</a></code></dt>
  <dd>Fired at the global scope object when the user's preferred language changes.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onlanguagechange">onlanguagechange</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/languagechange_event">onlanguagechange</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/orientationchange_event">orientationchange</a></code></dt>
  <dd>Fired when the orientation of the device has changed.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/Window/onorientationchange">onorientationchange</a></code> 属性。</dd>
@@ -515,7 +515,7 @@ translation_of: Web/API/Window
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onresize">onresize</a></code> 属性。</dd>
  <dt><code>{{domxref("Document/defaultView/storage_event", "storage")}}</code></dt>
  <dd>Fired when a storage area (<code>localStorage</code> or <code>sessionStorage</code>) has been modified in the context of another document.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onstorage">onstorage</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/storage_event">onstorage</a></code> 属性。</dd>
 </dl>
 
 <h3 id="Animation_events">Animation events</h3>
@@ -542,13 +542,13 @@ translation_of: Web/API/Window
  <dd>Fired when the system clipboard content changes.</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/copy_event">copy</a></code></dt>
  <dd>Fired when the user initiates a copy action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncopy"><code>oncopy</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/HTMLElement/oncopy"><code>oncopy</code></a> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/cut_event">cut</a></code></dt>
  <dd>Fired when the user initiates a cut action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncut"><code>oncut</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/HTMLElement/oncut"><code>oncut</code></a> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/paste_event">paste</a></code></dt>
  <dd>Fired when the user initiates a paste action through the browser's user interface.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onpaste"><code>onpaste</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/HTMLElement/onpaste"><code>onpaste</code></a> 属性。</dd>
 </dl>
 
 <h3 id="Connection_events">Connection events</h3>
@@ -567,10 +567,10 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/blur_event">blur</a></code></dt>
  <dd>Fired when an element has lost focus.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur"><code>onblur</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/GlobalEventHandlers/onblur"><code>onblur</code></a> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/focus_event">focus</a></code></dt>
  <dd>Fired when an element has gained focus.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onfocus"><code>onfocus</code></a> property</dd>
+ Also available via the <a href="/en-US/docs/Web/API/GlobalEventHandlers/onfocus"><code>onfocus</code></a> property</dd>
 </dl>
 
 <h3 id="Gamepad_events">Gamepad events</h3>
@@ -589,7 +589,7 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/hashchange_event">hashchange</a></code></dt>
  <dd>Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the <code>#</code> symbol).<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onhashchange">onhashchange</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/hashchange_event">onhashchange</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a></code></dt>
  <dd>Sent when the browser hides the current document while in the process of switching to displaying in its palce a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.<br>
  Also available through the <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/onpagehide">onpagehide</a></code> event handler 属性。</dd>
@@ -598,7 +598,7 @@ translation_of: Web/API/Window
  Also available using the <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/onpageshow">onpageshow</a></code> event handler 属性。</dd>
  <dt><code>{{domxref("Document/defaultView/popstate_event", "popstate")}}</code></dt>
  <dd>Fired when the active history entry changes.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onpopstate">onpopstate</a></code> event handler 属性。</dd>
+ Also available using the <code><a href="/en-US/docs/Web/API/Window/popstate_event">onpopstate</a></code> event handler 属性。</dd>
 </dl>
 
 <h3 id="Load_unload_events">Load &amp; unload events</h3>
@@ -606,7 +606,7 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a></code></dt>
  <dd>Fired when the window, the document and its resources are about to be unloaded.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload">onbeforeunload</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/beforeunload_event">onbeforeunload</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/DOMContentLoaded_event">DOMContentLoaded</a></code></dt>
  <dd>Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/load_event">load</a></code></dt>
@@ -614,7 +614,7 @@ translation_of: Web/API/Window
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/onload">onload</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/unload_event">unload</a></code></dt>
  <dd>Fired when the document or a child resource is being unloaded.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunload">onunload</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/unload_event">onunload</a></code> 属性。</dd>
 </dl>
 
 <h3 id="Manifest_events">Manifest events</h3>
@@ -633,10 +633,10 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/message_event">message</a></code></dt>
  <dd>Fired when the window receives a message, for example from a call to <code><a href="/en-US/docs/Web/API/Window/postMessage">Window.postMessage()</a></code> from another browsing context.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage">onmessage</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/message_event">onmessage</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/messageerror_event">messageerror</a></code></dt>
  <dd>Fired when a <code>Window</code> object receives a message that can't be deserialized.<br>
- Also available via the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessageerror">onmessageerror</a></code> 属性。</dd>
+ Also available via the <code><a href="/en-US/docs/Web/API/Window/messageerror_event">onmessageerror</a></code> 属性。</dd>
 </dl>
 
 <h3 id="Print_events">Print events</h3>
@@ -644,10 +644,10 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/afterprint_event">afterprint</a></code></dt>
  <dd>Fired after the associated document has started printing or the print preview has been closed.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onafterprint"><code>onafterprint</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/Window/afterprint_event"><code>onafterprint</code></a> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/beforeprint_event">beforeprint</a></code></dt>
  <dd>Fired when the associated document is about to be printed or previewed for printing.<br>
- Also available via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint"><code>onbeforeprint</code></a> 属性。</dd>
+ Also available via the <a href="/en-US/docs/Web/API/Window/beforeprint_event"><code>onbeforeprint</code></a> 属性。</dd>
 </dl>
 
 <h3 id="Promise_rejection_events">Promise rejection events</h3>
@@ -655,26 +655,26 @@ translation_of: Web/API/Window
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">rejectionhandled</a></code></dt>
  <dd>Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.<br>
- Also available through the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled">onrejectionhandled</a></code> event handler 属性。</dd>
+ Also available through the <code><a href="/en-US/docs/Web/API/Window/rejectionhandled_event">onrejectionhandled</a></code> event handler 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">unhandledrejection</a></code></dt>
  <dd>Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.<br>
- Also available using the <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection">onunhandledrejection</a></code> event handler 属性。</dd>
+ Also available using the <code><a href="/en-US/docs/Web/API/Window/unhandledrejection_event">onunhandledrejection</a></code> event handler 属性。</dd>
 </dl>
 
 <h3 id="Transition_events">Transition events</h3>
 
 <dl>
  <dt><code><a href="/en-US/docs/Web/API/Window/transitioncancel_event">transitioncancel</a></code></dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is canceled.<br>
+ <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is canceled.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel">ontransitioncancel</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/transitionend_event">transitionend</a></code></dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed.<br>
+ <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has completed.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">ontransitionend</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/transitionrun_event">transitionrun</a></code></dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is first created.<br>
+ <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> is first created.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun">ontransitionrun</a></code> 属性。</dd>
  <dt><code><a href="/en-US/docs/Web/API/Window/transitionstart_event">transitionstart</a></code></dt>
- <dd>Fired when a <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started.<br>
+ <dd>Fired when a <a href="/en-US/docs/CSS/Using_CSS_transitions">CSS transition</a> has actually started.<br>
  Also available via the <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart">ontransitionstart</a></code> 属性。</dd>
 </dl>
 
@@ -712,7 +712,7 @@ translation_of: Web/API/Window
 
 <h2 id="接口">接口</h2>
 
-<p>See <a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a></p>
+<p>See <a href="/en-US/docs/DOM/DOM_Reference">DOM Reference</a></p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

@@ -17,7 +17,9 @@ La méthode **`padEnd()`** permet de compléter la chaîne courante avec une cha
 
 ## Syntaxe
 
-    str.padEnd(longueurCible [, chaîneComplémentaire])
+```js
+str.padEnd(longueurCible [, chaîneComplémentaire])
+```
 
 ### Paramètres
 

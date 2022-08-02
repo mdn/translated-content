@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 <h3 id="参数">参数</h3>
 
-<p>查阅<a href="#Browser_Compatibility">浏览器兼容性</a>部分，了解哪些浏览器支持 <code>locales</code> 和 <code>options</code> 参数，通过<a href="#Checking_for_support_for_locales_and_options_arguments">示例: 检查 <code>locales</code> 和 <code>options</code> 参数的支持</a>了解特征检测。</p>
+<p>查阅<a href="#浏览器兼容性">浏览器兼容性</a>部分，了解哪些浏览器支持 <code>locales</code> 和 <code>options</code> 参数，通过<a href="#Checking_for_support_for_locales_and_options_arguments">示例：检查 <code>locales</code> 和 <code>options</code> 参数的支持</a>了解特征检测。</p>
 
 <div class="note">
 <p><strong>备注：</strong> ECMAScript 国际化 API，在 Firefox 29 中得以实施，增加了 <code>locales</code> 参数的 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString"><code>Number.toLocaleString</code></a> 方法。如果参数为 <code>undefined</code>，此方法返回本地操作系统指定的位数，而 Firefox 的早期版本中返回<a href="https://en.wikipedia.org/wiki/Arabic_numerals">阿拉伯语</a>数字。这一变化已被报告为向后影响的兼容性问题并可能会被尽快修复。({{ bug(999003) }})</p>
@@ -105,7 +105,7 @@ console.log(number.toLocaleString(['ban', 'id']));
 
 // 要求货币格式
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // 日元不使用小数位
 console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
@@ -122,41 +122,11 @@ console.log(number.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注解</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3rd Edition. Implemented in JavaScript 1.5</td>
-   <td>Standard</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><a href="http://www.ecma-international.org/ecma-402/1.0/#sec-13.2.1">ECMAScript Internationalization API Specification, 1st Edition (ECMA-402)</a></td>
-   <td>Standard</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.Number.toLocaleString")}}</p>
-
-<div> </div>
+<p>{{Compat}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 

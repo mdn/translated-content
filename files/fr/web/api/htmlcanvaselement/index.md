@@ -191,7 +191,7 @@ _Méthodes héritées de son parent,_ _{{domxref("HTMLElement")}}._
         Crée un nouveau flux d'entrée qui, quand il est prêt, fournit le contenu
         du canvas en tant que données d'image. Quand le nouveau flux est prêt,
         la fonction de rappel spécifiée
-        {{ifmethod("nsIInputStreamCallback", "onInputStreamReady")}}
+        <code>nsIInputStreamCallback.onInputStreamReady()</code>
         est appelée. Si <code>type</code> n'est pas précisée, Le format de
         l'image est <code>image/png.</code>
         <div class="note">

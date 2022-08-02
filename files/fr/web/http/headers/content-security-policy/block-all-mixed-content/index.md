@@ -23,17 +23,23 @@ Toutes les requêtes vers des [contenus mixtes](/fr/docs/Sécurité/MixedContent
 
 ## Syntaxe
 
-    Content-Security-Policy: block-all-mixed-content;
+```
+Content-Security-Policy: block-all-mixed-content;
+```
 
 ## Exemples
 
-    Content-Security-Policy: block-all-mixed-content;
+```
+Content-Security-Policy: block-all-mixed-content;
 
-    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+<meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+```
 
 Pour interdire l'usage de HTTP de manière plus fine, vous pouvez aussi configurer individuellement chaque directive sur `https:`. Par exemple, pour interdire les images HTTP non sécurisées :
 
-    Content-Security-Policy: img-src https:
+```
+Content-Security-Policy: img-src https:
+```
 
 ## Spécifications
 

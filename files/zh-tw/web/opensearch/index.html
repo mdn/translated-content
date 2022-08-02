@@ -8,7 +8,7 @@ translation_of: Web/OpenSearch
 ---
 <div>{{AddonSidebar}}</div>
 
-<p><a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document">OpenSearch 描述語法</a>敘述了搜尋引擎，以便網站用戶透過瀏覽器或其他用戶端程式使用之。OpenSearch 支援最新版的 Firefox、Internet Explorer、Safari、Chrome.</p>
+<p><a href="http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document">OpenSearch 描述語法</a>敘述了搜尋引擎，以便網站用戶透過瀏覽器或其他用戶端程式使用之。OpenSearch 支援最新版的 Firefox、Internet Explorer、Safari、Chrome.</p>
 
 <p>Firefox 還支援搜尋建議與 <code>&lt;SearchForm&gt;</code> 元素……等 OpenSearch 標準內尚未包含的功能。這篇文章會聚焦在如何撰寫可支援 Firefox 特殊功能、且和 OpenSearch 格式相容的搜尋套件。</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/OpenSearch
 <dl>
  <dt>Image</dt>
  <dd>
- <p>URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type <code>image/jpeg</code> or <code>image/png</code>. The URI may also use the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs"><code>data:</code> URI scheme</a>. You can generate a <code>data:</code> URI from an icon file at <a class="external" href="http://software.hixie.ch/utilities/cgi/data/data">The <code>data:</code> URI kitchen</a>.</p>
+ <p>URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type <code>image/jpeg</code> or <code>image/png</code>. The URI may also use the <a href="/en-US/docs/Web/HTTP/data_URIs"><code>data:</code> URI scheme</a>. You can generate a <code>data:</code> URI from an icon file at <a href="http://software.hixie.ch/utilities/cgi/data/data">The <code>data:</code> URI kitchen</a>.</p>
 
  <pre class="brush: xml">&lt;Image height="16" width="16" type="image/x-icon"&gt;https://example.com/favicon.ico&lt;/Image&gt;
   &lt;!-- or --&gt;
@@ -84,7 +84,7 @@ translation_of: Web/OpenSearch
  <ul>
  </ul>
 
- <p>這些型態的 URL 都可以使用 <code>{searchTerms}</code> 字串來決定要關鍵字於 URL 中的位置，其他可用的參數請參考<a class="external" href="https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters">OpenSearch 1.1 參數規格</a>。</p>
+ <p>這些型態的 URL 都可以使用 <code>{searchTerms}</code> 字串來決定要關鍵字於 URL 中的位置，其他可用的參數請參考<a href="https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters">OpenSearch 1.1 參數規格</a>。</p>
 
  <p>在支援「搜尋建議」的模組中，搜尋的 URL 應可取回一組以 JSON 格式編寫的數據，提供這類服務的詳細方法請見<a href="/zh-tw/%e8%ae%93%e6%90%9c%e5%b0%8b%e6%a8%a1%e7%b5%84%e6%94%af%e6%8f%b4%e6%90%9c%e5%b0%8b%e5%bb%ba%e8%ad%b0">讓搜尋模組支援搜尋建議</a>。</p>
  </dd>
@@ -152,7 +152,7 @@ translation_of: Web/OpenSearch
      template="http://example.com/mysearchdescription.xml" /&gt;
 </pre>
 
-<div class="note"><strong>註：</strong>目前的<a class="external" href="http://addons.mozilla.org">addons.mozilla.org</a>（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。</div>
+<div class="note"><strong>註：</strong>目前的<a href="http://addons.mozilla.org">addons.mozilla.org</a>（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。</div>
 
 <h2 id="除錯技巧">除錯技巧</h2>
 
@@ -171,9 +171,9 @@ translation_of: Web/OpenSearch
 <h2 id="參考">參考</h2>
 
 <ul>
- <li><a class="external" href="http://opensearch.org/">OpenSearch Documentation</a>, <a class="external" href="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0">OpenSearch Documentation about the Url and Param element</a></li>
- <li>imdb.com has a <a class="external" href="http://i.media-imdb.com/images/SFccbe1e4d909ef8b8077201c3c5aac349/imdbsearch.xml">working osd.xml</a></li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Data:_URI_scheme"><code>data:</code> URI scheme</a></li>
- <li><a class="external" href="http://www.7is7.com/software/firefox/opensearch.html">OpenSearch Plugin Generator</a></li>
- <li><a class="external" href="http://ready.to/search/en">Ready2Search</a> - create OpenSearch plugins. <a class="external" href="http://ready.to/search/make/en_make_plugin.htm">Customized Search through Ready2Search</a></li>
+ <li><a href="http://opensearch.org/">OpenSearch Documentation</a>, <a href="http://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0">OpenSearch Documentation about the Url and Param element</a></li>
+ <li>imdb.com has a <a href="http://i.media-imdb.com/images/SFccbe1e4d909ef8b8077201c3c5aac349/imdbsearch.xml">working osd.xml</a></li>
+ <li><a href="http://en.wikipedia.org/wiki/Data:_URI_scheme"><code>data:</code> URI scheme</a></li>
+ <li><a href="http://www.7is7.com/software/firefox/opensearch.html">OpenSearch Plugin Generator</a></li>
+ <li><a href="http://ready.to/search/en">Ready2Search</a> - create OpenSearch plugins. <a href="http://ready.to/search/make/en_make_plugin.htm">Customized Search through Ready2Search</a></li>
 </ul>
