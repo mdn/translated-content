@@ -14,7 +14,9 @@ La propriété **`type`** de l'objet [`Blob`](fr/docs/Web/API/Blob) fourni le ty
 
 ## Syntaxe
 
-    var mimetype = instanceOfFile.type
+```js
+var mimetype = instanceOfFile.type
+```
 
 ## Valeur
 

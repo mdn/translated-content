@@ -428,7 +428,9 @@ Créez le fichier HTML **/locallibrary/catalog/templates/catalog/book_detail.htm
 
 > **Note :** Le lien vers l'auteur dans le template ci-dessus est vide, parce que nous n'avons pas encore crée de page détail pour un auteur. Une fois que cette page sera créée, vous pourrez remplacer l'URL par ceci :
 >
->     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> ```python
+> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+> ```
 
 Bien qu'en un peu plus grand, presque tout ce qu'il y a dans ce template a été décrit précédemment :
 
@@ -451,34 +453,38 @@ Cette méthode est requise parce que vous déclarez un champ `ForeignKey` (one-t
 >
 > Prenez garde également que, si vous ne définissez pas un ordre (dans votre vue basée sur classe ou votre modèle), vous allez voir des erreurs de ce genre en provenance du serveur de développement :
 >
->     [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
->     /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
->       allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
+> [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
+> /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
+> allow_empty_first_page=allow_empty_first_page, **kwargs)
+> ```
 >
 > Ceci vient du fait que l'[objet paginator](https://docs.djangoproject.com/en/2.1/topics/pagination/#paginator-objects) s'attend à ce qu'un ORDER BY soit exécuté sur votre base de données sous-jacente. Sans cela il ne peut pas être sûr que les enregistrements retournés sont vraiment dans le bon ordre !
 >
 > Ce tutoriel n'a pas (encore !) traité de la **pagination**, mais comme vous ne pouvez pas utiliser `sort_by()` et passer un paramètre (pour la même raison que le `filter()` décrit précédemment), vous avez le choix entre trois options :
 >
-> 1.  Ajouter un `ordering` lors de la déclaration de la `class Meta` dans votre modèle.
-> 2.  Ajouter un attribut `queryset` dans votre vue personnalisée basée sur classe, en spécifiant un `order_by()`.
-> 3.  Ajouter une méthode `get_queryset` à votre vue personnalisée basée sur classe, et préciser de même un `order_by()`.
+> 1. Ajouter un `ordering` lors de la déclaration de la `class Meta` dans votre modèle.
+> 2. Ajouter un attribut `queryset` dans votre vue personnalisée basée sur classe, en spécifiant un `order_by()`.
+> 3. Ajouter une méthode `get_queryset` à votre vue personnalisée basée sur classe, et préciser de même un `order_by()`.
 >
 > Si vous décidez d'ajouter une `class Meta` au modèle `Author` (solution peut-être pas aussi flexible que personnaliser la vue basée sur classe, mais assez facile), vous allez vous retrouver avec quelque chose de ce genre :
 >
->     class Author(models.Model):
->         first_name = models.CharField(max_length=100)
->         last_name = models.CharField(max_length=100)
->         date_of_birth = models.DateField(null=True, blank=True)
->         date_of_death = models.DateField('Died', null=True, blank=True)
+> ```python
+> class Author(models.Model):
+>     first_name = models.CharField(max_length=100)
+>     last_name = models.CharField(max_length=100)
+>     date_of_birth = models.DateField(null=True, blank=True)
+>     date_of_death = models.DateField('Died', null=True, blank=True)
 >
->         def get_absolute_url(self):
->             return reverse('author-detail', args=[str(self.id)])
+>     def get_absolute_url(self):
+>         return reverse('author-detail', args=[str(self.id)])
 >
->         def __str__(self):
->             return f'{self.last_name}, {self.first_name}'
+>     def __str__(self):
+>         return f'{self.last_name}, {self.first_name}'
 >
->         class Meta:
->             ordering = ['last_name']
+>     class Meta:
+>         ordering = ['last_name']
+> ```
 >
 > Bien sûr le champ n'est pas forcément `last_name` : ce pourrait être un autre champ.
 >

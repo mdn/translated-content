@@ -20,7 +20,9 @@ Cette propriété indique la vitesse de rotation autour de l'axe Z -- en degrés
 
 ## Syntaxe
 
-    var alpha = deviceRotationRate.alpha;
+```js
+var alpha = deviceRotationRate.alpha;
+```
 
 Cette propriété est en lecture seule.
 

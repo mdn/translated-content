@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <p>{{JSRef}}{{SeeCompatTable}}</p>
 
-<p><code>BigInt</code> 是一個內建的物件，提供了表示大於2^53的整數的功能 (2^53是JavaScript原生的{{JSxRef("Number")}}能夠表示的最大值)</p>
+<p><code>BigInt</code> 是一個內建的物件，提供了表示大於2^53的整數的功能 (2^53是JavaScript原生的{{JSxRef("Number")}}能夠表示的最大值)</p>
 
 <h2 id="語法">語法</h2>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 
 <h2 id="說明">說明</h2>
 
-<p><code>BigInt</code> 是透過在一個數值後加上 <code>n</code> ，例如 <code>10n</code> ，或呼叫 <code>BigInt()</code> 所生成的。</p>
+<p><code>BigInt</code> 是透過在一個數值後加上 <code>n</code> ，例如 <code>10n</code> ，或呼叫 <code>BigInt()</code> 所生成的。</p>
 
 <pre class="brush: js">const theBiggestInt = 9007199254740991n;
 
@@ -45,30 +45,30 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 // ↪ 9007199254740991n
 </pre>
 
-<p><code>BigInt</code> 跟 {{JSxRef("Number")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{JSxRef("Math")}} 物件方法中、而且不可以跟 <code>Number</code> 的實體混用運算子。</p>
+<p><code>BigInt</code> 跟 {{JSxRef("Number")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{JSxRef("Math")}} 物件方法中、而且不可以跟 <code>Number</code> 的實體混用運算子。</p>
 
 <div class="notecard warning">
-<p><strong>警告：</strong> {{JSxRef("Number")}} 和 <code>BigInt</code> 不能混和計算 — 他們必須被轉換到同一個型態。</p>
+<p><strong>警告：</strong> {{JSxRef("Number")}} 和 <code>BigInt</code> 不能混和計算 — 他們必須被轉換到同一個型態。</p>
 
-<p>然而，在相互轉換時要注意， <code>BigInt</code> 在被轉換成 <code>Number</code> 時可能會遺失部分精度的資訊。</p>
+<p>然而，在相互轉換時要注意， <code>BigInt</code> 在被轉換成 <code>Number</code> 時可能會遺失部分精度的資訊。</p>
 </div>
 
 <h3 id="類別資訊">類別資訊</h3>
 
-<p>當使用 <code>typeof</code> 測試時，一個 <code>BigInt</code> 會回傳 "bigint"：</p>
+<p>當使用 <code>typeof</code> 測試時，一個 <code>BigInt</code> 會回傳 "bigint"：</p>
 
 <pre class="brush: js">typeof 1n === 'bigint'; // true
 typeof BigInt('1') === 'bigint'; // true
 </pre>
 
-<p>當使用 <code>Object</code> 來包裹時，<code>BigInt</code> 會被看成是普通的 "object" 型態：</p>
+<p>當使用 <code>Object</code> 來包裹時，<code>BigInt</code> 會被看成是普通的 "object" 型態：</p>
 
 <pre class="brush: js">typeof Object(1n) === 'object'; // true
 </pre>
 
 <h3 id="Operators">Operators</h3>
 
-<p>下列的運算子可以被用在 <code>BigInt</code> 上 (或由object包裹的 <code>BigInt</code>): <code>+</code>, <code>*</code>, <code>-</code>, <code>**</code>, <code>%</code>.</p>
+<p>下列的運算子可以被用在 <code>BigInt</code> 上 (或由object包裹的 <code>BigInt</code>): <code>+</code>, <code>*</code>, <code>-</code>, <code>**</code>, <code>%</code>.</p>
 
 <pre class="brush: js">const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
 // ↪ 9007199254740991
@@ -95,7 +95,7 @@ bigN * -1n
 // ↪ –18014398509481984n
 </pre>
 
-<p><code>/</code> 運算子也同樣的能夠運行。然而，因為型態是 <code>BigInt</code> 而不是 <code>BigDecimal</code> ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。</p>
+<p><code>/</code> 運算子也同樣的能夠運行。然而，因為型態是 <code>BigInt</code> 而不是 <code>BigDecimal</code> ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。</p>
 
 <div class="notecard warning">
 <p><strong>警告：</strong>回傳值帶小數的運算在使用<code>BigInt</code> 時小數部分會被捨去。</p>
@@ -111,7 +111,7 @@ const rounded = 5n / 2n;
 
 <h3 id="比較">比較</h3>
 
-<p>一個 <code>BigInt</code> 並不嚴格等於一個 {{JSxRef("Global_Objects/Number", "Number")}}，但他們會一般相等。</p>
+<p>一個 <code>BigInt</code> 並不嚴格等於一個 {{JSxRef("Global_Objects/Number", "Number")}}，但他們會一般相等。</p>
 
 <pre class="brush: js">0n === 0
 // ↪ false
@@ -119,7 +119,7 @@ const rounded = 5n / 2n;
 0n == 0
 // ↪ true</pre>
 
-<p>一個 {{JSxRef("Global_Objects/Number", "Number")}} 和 <code>BigInt</code> 可以像普通運算一樣比較。</p>
+<p>一個 {{JSxRef("Global_Objects/Number", "Number")}} 和 <code>BigInt</code> 可以像普通運算一樣比較。</p>
 
 <pre class="brush: js">1n &lt; 2
 // ↪ true
@@ -198,7 +198,7 @@ Boolean(12n)
 
 <dl>
  <dt>{{JSxRef("BigInt.prototype")}}</dt>
- <dd>允許對一個 <code>BigInt</code> 物件增加其屬性。</dd>
+ <dd>允許對一個 <code>BigInt</code> 物件增加其屬性。</dd>
 </dl>
 
 <h2 id="BigInt_物件實體"><code>BigInt</code> 物件實體</h2>
@@ -213,11 +213,11 @@ Boolean(12n)
 
 <h3 id="轉型">轉型</h3>
 
-<p>因為在 {{JSxRef("Global_Objects/Number", "Number")}} 和 <code>BigInt</code> 之間轉換可能造成精度遺失，建議當數值會超過2^53時只使用 <code>BigInt</code> ，而不要在兩者之間進行轉換。</p>
+<p>因為在 {{JSxRef("Global_Objects/Number", "Number")}} 和 <code>BigInt</code> 之間轉換可能造成精度遺失，建議當數值會超過2^53時只使用 <code>BigInt</code> ，而不要在兩者之間進行轉換。</p>
 
 <h3 id="加密">加密</h3>
 
-<p><code>BigInt</code> 支援的運算並非常數時間。因此 <code>BigInt</code> <a href="https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html">不適用在加密學上</a>。</p>
+<p><code>BigInt</code> 支援的運算並非常數時間。因此 <code>BigInt</code> <a href="https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html">不適用在加密學上</a>。</p>
 
 <h2 id="範例">範例</h2>
 

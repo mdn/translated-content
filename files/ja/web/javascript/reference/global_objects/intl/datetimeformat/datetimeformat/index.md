@@ -19,7 +19,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/Date
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat.html", "taller")}}
 
-
 ## 構文
 
 ```js
@@ -31,7 +30,7 @@ new Intl.DateTimeFormat(locales, options)
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。ブラウザーの既定のロケールを使用するには、空の配列を渡してください。。 Unicode 拡張に対応しています (例えば "`en-US-u-ca-buddhist`" など)。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。
+  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。ブラウザーの既定のロケールを使用するには、空の配列を渡してください。 Unicode 拡張に対応しています (例えば "`en-US-u-ca-buddhist`" など)。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。
 
     - `nu`
       - : 番号方式。使用できる値は "`arab`", "`arabext`", "`bali`", "`beng`", "`deva`", "`fullwide`", "`gujr`", "`guru`", "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", "`mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`" です。
@@ -228,7 +227,7 @@ console.log(new Intl.DateTimeFormat('fr', { hour: 'numeric', hourCycle: 'h12',
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
 const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
-	
+ 
 for (const zoneName of timezoneNames) {
   // Do something with currentValue
   var formatter = new Intl.DateTimeFormat('en-US', {
@@ -237,7 +236,7 @@ for (const zoneName of timezoneNames) {
   });
   console.log(zoneName + ": " + formatter.format(date) );
 }
-	
+ 
 // expected output: 
 // > "short: 12/16/2021, PST"
 // > "long: 12/16/2021, Pacific Standard Time"

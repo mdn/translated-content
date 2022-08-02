@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 <pre class="brush: js">Symbol("foo") + "bar";
 // TypeError: Can't convert symbol to string
 Symbol("foo").toString() + "bar"
-// "Symbol(foo)bar"，就相当于下面的:
+// "Symbol(foo)bar"，就相当于下面的：
 Object(Symbol("foo")).toString() + "bar"
 // "Symbol(foo)bar"
 </pre>
@@ -42,20 +42,7 @@ Symbol.for("foo").toString() // "Symbol(foo)"
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

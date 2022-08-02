@@ -18,7 +18,9 @@ La méthode **`sup()`** crée un élément HTML {{HTMLElement("sup")}} qui entra
 
 ## Syntaxe
 
-    str.sup()
+```js
+str.sup()
+```
 
 ### Valeur de retour
 

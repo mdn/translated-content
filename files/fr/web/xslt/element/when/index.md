@@ -12,9 +12,11 @@ L'élément `<xsl:when>` apparaît toujours dans un élément `<xsl:choose>`, et
 
 ### Syntaxe
 
-    <xsl:when test=EXPRESSION>
-    	MODÈLE
-    </xsl:when>
+```xml
+<xsl:when test=EXPRESSION>
+  MODÈLE
+</xsl:when>
+```
 
 ### Attribut obligatoire
 

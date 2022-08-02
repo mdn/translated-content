@@ -18,7 +18,9 @@ La méthode **`pop()`** supprime le **dernier** élément d'un tableau et retour
 
 ## Syntaxe
 
-    arr.pop()
+```js
+arr.pop()
+```
 
 ### Valeur de retour
 

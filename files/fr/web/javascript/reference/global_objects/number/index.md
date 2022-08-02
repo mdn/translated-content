@@ -16,11 +16,13 @@ Le type JavaScript `Number` utilise [une représentation binaire à précision d
 
 ## Syntaxe
 
-    new Number(valeur);
-    var a = new Number('123'); // a === 123 donnera false
-    var b = Number('123'); // b === 123 donnera true
-    a instanceof Number; // donnera true
-    b instanceof Number; // donnera false
+```js
+new Number(valeur);
+var a = new Number('123'); // a === 123 donnera false
+var b = Number('123'); // b === 123 donnera true
+a instanceof Number; // donnera true
+b instanceof Number; // donnera false
+```
 
 ### Paramètres
 
@@ -65,7 +67,7 @@ L'objet `Number` est principalement utilisé dans les cas de figure suivants :
   - : Cette méthode permet de déterminer si la valeur passée en argument est un entier.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Cette méthode permet de déterminer si la valeur passée en argument peut correctement être représentée comme un entier en JavaScript (savoir si elle est comprise entre `-(2^53 - 1)` et `2^53 - 1`).
-- {{jsxref("Number.toInteger()")}} {{obsolete_inline}}
+- {{jsxref("Number.toInteger()")}} {{deprecated_inline}}
   - : Cette méthode est utilisée afin d'évaluer et de convertir la valeur passée en argument en entier (ou en l'{{jsxref("Infinity", "infini","",1)}}). Cette méthode a été supprimée.
 - {{jsxref("Number.parseFloat()", "Number.parseFloat(<var>string</var>)")}}
   - : Cette méthode correspond à la méthode {{jsxref("parseFloat", "parseFloat()")}} de l'objet global.

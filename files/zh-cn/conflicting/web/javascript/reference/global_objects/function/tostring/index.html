@@ -1,0 +1,50 @@
+---
+title: Function.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+translation_of: Web/JavaScript/Reference/Global_Objects/Function/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
+---
+<div>
+<div>{{JSRef("Global_Objects", "Function")}} {{non-standard_header}}</div>
+</div>
+
+<h2 id="Summary">概述</h2>
+
+<p>返回函数的源代码的字符串表示。</p>
+
+<h2 id="Syntax">语法</h2>
+
+<pre class="syntaxbox"><code><var>function</var>.toSource();
+Function.toSource();
+</code></pre>
+
+<h3 id="Parameters">参数</h3>
+
+<p>无</p>
+
+<h2 id="Description">描述</h2>
+
+<p><code>toSource</code> 方法返回下面的值：</p>
+
+
+
+<ul>
+ <li>对于内置的<code>Function</code>对象，<code>toSource</code>返回下面的字符串：</li>
+</ul>
+
+<pre class="brush: js"><code>function Function() {
+    [native code]
+}</code></pre>
+
+<ul>
+ <li>对于自定义函数来说，<code>toSource 返回能定义该函数</code>的 Javascript 源码。</li>
+</ul>
+
+<p>该方法通常在引擎内部调用。你可以在调试的时候用该方法开查看一个函数的源代码。</p>
+
+<h2 id="See_Also">相关链接</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/toString" title="JavaScript/Reference/Global_Objects/Function/toString">toString</a></li>
+ <li><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Object/valueOf" title="JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf</a></li>
+</ul>

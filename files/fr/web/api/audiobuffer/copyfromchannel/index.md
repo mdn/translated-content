@@ -14,7 +14,9 @@ La méthode `copyFromChannel()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/
 
 ## Syntaxe
 
-    tableauDonnees.copyFromChannel(destination,numeroCanal,decalageDebut);
+```js
+tableauDonnees.copyFromChannel(destination,numeroCanal,decalageDebut);
+```
 
 ### Paramètres
 

@@ -9,9 +9,32 @@ translation_of: MDN/Contribute/Markdown_in_MDN
 
 本文介绍了如何使用 Markdown 来编写 MDN 上的文档。我们以 GitHub 风格的 Markdown（GFM）为基础，并添加了一些扩展来支持一些我们在 MDN 上需要而 GFM 仍不支持的东西。
 
-## 基础：Github风格的Markdown
+## 基础：Github 风格的 Markdown
 
 MDN Markdown 的基础是 Github 风格的 Markdown（GFM）：<https://github.github.com/gfm/>。这意味着，对于本文中未指定的内容，你可以参考 GFM 规范。而 GFM 又是 CommonMark（[https://spec.commonmark.org/](https://spec.commonmark.org/)）的超集。
+
+## 链接
+
+GFM 规范定义了两种基础的链接类型：
+
+- [内联链接](https://github.github.com/gfm/#inline-link)：在链接显示的文字后面紧跟链接的地址。
+- [引用链接](https://github.github.com/gfm/#reference-link)：链接的目标在当前文档的其它地方定义。
+
+在 MDN 上，我们仅允许使用内联链接。
+
+以下是 MDN 上正确的编写 GFM 链接的方式：
+
+```md example-good
+[Macarons](https://en.wikipedia.org/wiki/Macaron) are delicious but tricky to make.
+```
+
+以下是 MDN 上错误的编写链接的方式：
+
+```md example-bad
+[Macarons][macaron] are delicious but tricky to make.
+
+[macaron]: https://en.wikipedia.org/wiki/Macaron
+```
 
 ## 示例代码块
 
@@ -30,6 +53,7 @@ MDN Markdown 的基础是 Github 风格的 Markdown（GFM）：<https://github.g
 在 MDN，你可以使用围栏代码块展现示例代码块。且必须使用信息字符串的第一个单词指定示例代码的语言，这将用于提供代码块的语法高亮。MDN 支持以下的语言词：
 
 - `bash`
+- `batch`
 - `cpp`（对于 C/C++）
 - `css`
 - `html`
@@ -55,7 +79,7 @@ const greeting = "I will get syntax highlighting";
 
 - `example-good`：将其标注为一个好的例子（可被参考）
 - `example-bad`：将其标注为一个不好的例子（应避免使用）
-- `hidden`：不在网页中展示此代码块，用于 Live Sample。
+- `hidden`：不在网页中展示此代码块，用于运行实例。
 
 例如：
 
@@ -97,11 +121,11 @@ const greeting = "I'm a bad example";
 
 块引用中的多行由空的块引用生成，就像普通的段落一样。此外，没有空格的多行会像常规 Markdown 行一样被处理和连接。
 
-块引用可以包含代码块和其他块级元素。
+块引用可以包含代码块和其它块级元素。
 
 因为文本 **备注：** 或 **警告：** 也会出现在渲染输出中，因此必须考虑到翻译问题。实际上，这意味这 MDN 支持的每一种语言环境都必须提供这些字符串的翻译，平台必须认识到它们表明了这些结构需要特殊处理。
 
-#### 例子
+#### 示例
 
 ##### 备注
 
@@ -152,7 +176,7 @@ const greeting = "I'm a bad example";
 ##### 标注
 
 ```plain
-> **标注：** **This is how you write a callout**.
+> **标注：** **This is how you write a callout.**
 >
 > It can have multiple paragaphs.
 ```
@@ -179,7 +203,7 @@ const greeting = "I'm a bad example";
 例如，如果我们想在德语中使用“Warnung”来表示“警告”，那么我们在德语页面应该写：
 
 ```plain
-> Warnung: So schreibt man eine Warnung.
+> **Warnung:** So schreibt man eine Warnung.
 ```
 
 ...这会产生：
@@ -238,21 +262,21 @@ const greeting = "I'm a bad example";
 
 - GFM `<ul>` 包含任意数量的顶级 GFM `<li>` 元素。
 - 每一个顶级 GFM `<li>` 元素必须包含一个 GFM `<ul>` 元素作为其最后一个元素。
-- 最内层的 `<ul>` 必须包含一个单独的 GFM `<li>` 元素，其文本内容必须以 `: `（冒号后跟空格）为开头。这个元素可能包含块级元素：包括段落、代码块、嵌套的列表和备注。
+- 最内层的 `<ul>` 必须包含一个单独的 GFM `<li>` 元素，其文本内容必须以“: ”（冒号后跟空格）为开头。这个元素可能包含块级元素：包括段落、代码块、嵌套的列表和备注。
 
 每个顶级的 GFM `<li>` 元素会被转换为 `<dt>`/`<dd>` 对，如下：
 
 - 顶级的 GFM `<li>` 元素会被解析成一个 GFM `<li>` 元素，其内部的内容会组成 `<dt>` 中的内容，除了最内层的 `<ul>` 元素，它将不被包含在 `<dt>` 中。
-- 最内层 `<ui>` 中包含的 `<li>` 元素会被解析成一个 GFM `<li>` 元素，其内部的内容会组成 `<dd>` 中的内容，除了开头的 `: `，它将被丢弃。
+- 最内层 `<ui>` 中包含的 `<li>` 元素会被解析成一个 GFM `<li>` 元素，其内部的内容会组成 `<dd>` 中的内容，除了开头的“: ”，它将被丢弃。
 
 例如，这是一个 `<dl>`：
 
 ````plain
-* term1
-    * : My description of term1
+- term1
+    - : My description of term1
 
-* `term2`
-    * : My description of term2
+- `term2`
+    - : My description of term2
 
       It can have multiple paragraphs, and code blocks too:
 
@@ -327,7 +351,7 @@ const greeting = "I'm a bad example";
 在 GFM（而不是 CommonMark）中，有一个关于表格的语法：<https://github.github.com/gfm/#tables-extension->。我们将会使用它，但是：
 
 - GFM 语法仅支持 HTML 中部分可用的功能，如果你需要使用 GFM 不支持的表格功能，请使用 HTML。
-- 如果表格超过了150个字符宽度，请使用 HTML。
+- 如果表格超过了 150 个字符宽度，请使用 HTML。
 - 我们支持一种称为“属性表”的特殊表格，它有自己的 CSS 类，因此它只能是 HTML。
 
 所以，一般原则是：你应该在能使用 GFM Markdown 语法时使用它，而在 HTML 的可读性更强时才回退到原生的 HTML。参见下方的“何时使用 HTML 表格”。
@@ -407,7 +431,7 @@ GFM 表格语法的主要限制是：
 
 在这种情况下，最好使用 HTML。
 
-所以我们遵循以下原则：_如果表格的 Markdown 表示将超过150个字符宽度，请使用 HTML 编写_。
+所以我们遵循以下原则：_如果表格的 Markdown 表示将超过 150 个字符宽度，请使用 HTML 编写_。
 
 #### 属性表
 
@@ -418,19 +442,19 @@ GFM 表格语法的主要限制是：
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
+      <th scope="row">是否冒泡</th>
+      <td>否</td>
     </tr>
     <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
+      <th scope="row">是否可取消</th>
+      <td>否</td>
     </tr>
     <tr>
-      <th scope="row">Interface</th>
+      <th scope="row">接口</th>
       <td>{{domxref("ProgressEvent")}}</td>
     </tr>
     <tr>
-      <th scope="row">Event handler property</th>
+      <th scope="row">事件处理器属性</th>
       <td>
         {{domxref("XMLHttpRequestEventTarget/onprogress", "onprogress")}}
       </td>
@@ -438,7 +462,7 @@ GFM 表格语法的主要限制是：
   </tbody>
 </table>
 
-因为它们有一个标题列，GFM 无法实现这些页面。因此，应该使用 HTML。为了获得特殊的样式，还需要将`"properties"`类应用于表格：
+因为它们有一个标题列，GFM 无法实现这些页面。因此，应该使用 HTML。为了获得特殊的样式，还需要将 `"properties"` 类应用于表格：
 
 ```html
 <table class="properties">
@@ -467,7 +491,7 @@ GFM 表格语法的主要限制是：
 
 ## 网页摘要
 
-_网页摘要_ 是应用于文章的开头段落——出现在网页 front matter 以及任何 [侧边栏和网页横幅宏](#kumascript) 之后的第一个文本内容。
+*网页摘要*是应用于文章的开头段落——出现在页面元数据（front matter）以及任何[侧边栏和网页横幅宏](#kumascript)之后的第一个文本内容。
 
 此摘要用于搜索引擎优化（SEO），也被一些宏自动包含在网页列表旁。因此，第一段应即简洁又翔实。
 

@@ -1,29 +1,27 @@
 ---
 title: Intl.DateTimeFormat.prototype.formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
-tags:
-  - Internationalisation
-  - Intl
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatRange
+browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
 ---
 {{JSRef}}
 
-La méthode **`Intl.DateTimeFormat.prototype.formatRange()`** permet de formater un intervalle de dates de la façon la plus concise en fonction de la **`locale`** et des **`options`** fournies lors de l'initialisation de l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.
+La méthode **`Intl.DateTimeFormat.prototype.formatRange()`** permet de formater un intervalle de dates de la façon la plus concise en fonction de la **`locale`** et des **`options`** fournies lors de l'initialisation de l'objet [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html")}}
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html","taller")}}
 
 ## Syntaxe
 
-    Intl.DateTimeFormat.prototype.formatRange(dateDébut, dateFin)
+```js
+formatRange(dateDébut, dateFin)
+```
 
 ## Exemples
 
 ### Utilisation simple de `formatRange()`
 
-Cette méthode reçoit comme arguments deux objets {{jsxref("Date")}} et renvoie l'intervalle de la façon la plus concise possible (selon les options fournies lors de l'instanciation du formateur [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat)).
+Cette méthode reçoit comme arguments deux objets [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et renvoie l'intervalle de la façon la plus concise possible (selon les options fournies lors de l'instanciation du formateur [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)).
 
 ```js
 let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
@@ -62,10 +60,12 @@ console.log(fmt2.formatRange(date1, date3));
 
 ## Spécifications
 
-| Spécification                                                                                                                                          | État                  | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- | ------------ |
-| [`Intl.DateTimeFormat.prototype.formatRange`](https://rawgit.com/fabalbon/proposal-intl-DateTimeFormat-formatRange/master/out/#datetimeformat-objects) | Brouillon de niveau 3 |              |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl', 'Voir_aussi')}}
+- [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)

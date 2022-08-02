@@ -5,8 +5,6 @@ translation_of: Web/Security/Secure_Contexts
 ---
 Un navigateur entre dans un **contexte sécurisé** quand il a satisfait les exigences minimale de sécurité. Un contexte sécurisé permet au navigateur de mettre à disposition des APIs qui nécessitent des transferts sécurisés avec l'utilisateur.
 
-
-
 ## Pourquoi certaines fonctionnalitées devraient être limitées ?
 
 Certaines APIs du web peuvent donner beaucoup de pouvoir à un attaqueur, lui permettant par exemple:
@@ -157,10 +155,6 @@ _Note: Safari et Chrome ne supportent pas complètement la spécification des Se
   </tbody>
 </table>
 
-
-
 ## Voir aussi
-
-
 
 - {{domxref("Window.isSecureContext")}}

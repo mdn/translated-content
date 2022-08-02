@@ -14,13 +14,17 @@ L'interface **CanvasRenderingContext2D** est utilisée pour dessiner des rectang
 
 Pour obtenir un objet de cette interface, appelez {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} sur un élément `<canvas>`, en fournissant "2d" comme argument :
 
-    var canevas = document.getElementById('tutorial'); // dans votre HTML, cet élément apparaît comme <canvas id="monCanevas"></canvas>
-    var ctx = canevas.getContext('2d');
+```js
+var canevas = document.getElementById('tutorial'); // dans votre HTML, cet élément apparaît comme <canvas id="monCanevas"></canvas>
+var ctx = canevas.getContext('2d');
+```
 
 Une fois que vous avez le contexte de rendu 2D pour un canevas, vous pouvez dessiner à l'intérieur. Par exemple :
 
-    ctx.fillStyle = "rgb(200,0,0)"; // définit la couleur de remplissage du rectangle
-    ctx.fillRect(10, 10, 55, 50);   // dessine le rectangle à la position 10, 10 d'une largeur de 55 et d'une hauteur de 50
+```js
+ctx.fillStyle = "rgb(200,0,0)"; // définit la couleur de remplissage du rectangle
+ctx.fillRect(10, 10, 55, 50);   // dessine le rectangle à la position 10, 10 d'une largeur de 55 et d'une hauteur de 50
+```
 
 Voir les propriétés et les méthodes dans la barre latérale et plus bas. Le [tutoriel canvas](/fr-FR/docs/Web/API/Canvas_API/Tutorial) a davantage d'informations, d'exemples et de ressources également.
 
@@ -282,13 +286,13 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
   - : Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozDrawText()`
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDrawText()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozMeasureText()`
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozMeasureText()`
   - : This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozPathText()`
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozPathText()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
 
 #### Internal APIs (chrome-context only)

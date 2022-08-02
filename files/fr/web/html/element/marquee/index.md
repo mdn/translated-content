@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/marquee
 ---
-{{HTMLRef}}{{non-standard_header}}{{obsolete_header}}
+{{HTMLRef}}{{non-standard_header}}{{deprecated_header}}
 
 L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte défilant.
 

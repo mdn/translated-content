@@ -30,11 +30,15 @@ Firefox 3 corrige un bug de sécurité dans les éléments `frame` et `iframe` q
 
 L'élément \<script> dans les documents HTML servis en mode `text/html` doit à présent être obligatoirement accompagné d'une balise fermante \</script>, même si aucun contenu n'est fourni entre les deux balises. Dans les versions précédentes de Firefox, il était possible de faire ceci&nbsp;:
 
-    <script ... />
+```html
+<script ... />
+```
 
 Le balisage doit à présent respecter les spécifications HTML (si c'est effectivement du HTML), il devient donc obligatoire de placer une balise de fermeture séparément, comme ceci&nbsp;:
 
-    <script ...></script>
+```html
+<script ...></script>
+```
 
 Ce changement améliore tant la compatibilité que la sécurité.
 
@@ -58,14 +62,18 @@ Firefox 3 ne permet plus au contenu web que d'accéder aux éléments dans les e
 
 Une possibilité existe cependant pour les extensions désirant rendre le contenu accessible aux pages web. Ces extensions peuvent spécifier un paramètre spécial dans leur fichier chrome.manifest comme ceci&nbsp;:
 
-    content mypackage location/ contentaccessible=yes
+```
+content mypackage location/ contentaccessible=yes
+```
 
 Cette manipulation ne devrait pas être nécessaire la plupart du temps, mais elle existe toutefois pour les rares cas où elle reste indispensable. Notez qu'il n'est pas exclu que Firefox avertisse l'utilisateur de cette utilisation du paramètre `contentaccessible`, étant donné qu'il constitue un risque potentiel de sécurité.
 
 > **Note :** Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
 >
->     content mypackage location/
->     content mypackage location/ contentaccessible=yes
+> ```
+> content mypackage location/
+> content mypackage location/ contentaccessible=yes
+> ```
 
 #### Champs d'envoi de fichiers (upload)
 

@@ -19,7 +19,9 @@ La méthode **`getInt16()`** permet de lire un entier signé sur 16 bits (type _
 
 ## Syntaxe
 
-    dataview.getInt16(positionOctet [, littleEndian])
+```js
+dataview.getInt16(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 

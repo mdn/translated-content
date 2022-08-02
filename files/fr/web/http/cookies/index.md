@@ -34,7 +34,9 @@ Après avoir reçu une requête HTTP, un serveur peut renvoyer sa réponse avec 
 
 L'entête de réponse HTTP {{HTTPHeader("Set-Cookie")}} envoie un cookie depuis le serveur vers le navigateur. Un cookie simple est défini comme ceci:
 
-    Set-Cookie: <nom-du-cookie>=<valeur-du-cookie>
+```
+Set-Cookie: <nom-du-cookie>=<valeur-du-cookie>
+```
 
 > **Note :** Voici comment utiliser l'en-tête `Set-Cookie` dans divers langages de programmation côté serveur :
 >
@@ -45,18 +47,22 @@ L'entête de réponse HTTP {{HTTPHeader("Set-Cookie")}} envoie un cookie depuis 
 
 Exemple de réponse HTTP complète:
 
-    HTTP/1.0 200 OK
-    Content-type: text/html
-    Set-Cookie: yummy_cookie=choco
-    Set-Cookie: tasty_cookie=strawberry
+```
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: yummy_cookie=choco
+Set-Cookie: tasty_cookie=strawberry
 
-    [contenu de la page]
+[contenu de la page]
+```
 
 Maintenant, à chaque requête vers le serveur, le navigateur va renvoyer au serveur tous les cookies stockés, avec l'entête {{HTTPHeader("Cookie")}}:
 
-    GET /sample_page.html HTTP/1.1
-    Host: www.example.org
-    Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+```
+GET /sample_page.html HTTP/1.1
+Host: www.example.org
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+```
 
 ### Cookies de session
 
@@ -66,7 +72,9 @@ Le cookie créé ci-dessus est un *cookie de session*&nbsp;: il est effacé quan
 
 Plutôt que d'expirer quand le client ferme, _les cookies permanents_ expirent à une date spécifique (`Expires`) ou après un certain temps (`Max-Age`).
 
-    Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
+```
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
+```
 
 > **Note :** Quand une date d'expiration est définie, le temps et l'heure définis sont relatifs au client auquel le cookie est envoyé, et non au serveur.
 
@@ -76,7 +84,9 @@ Un cookie sécurisé est uniquement envoyé au serveur avec les requêtes chiffr
 
 Pour empêcher les attaques de cross-site scripting ({{Glossary("Cross-site_scripting","XSS")}}), on peut utiliser les cookies `HttpOnly`, qui sont inaccessibles à l'API JavaScript {{domxref("Document.cookie")}}; ils sont uniquement envoyés au serveur. Par exemple, les cookies qui persistent la session côté serveur n'ont pas besoin d'être accessibles via JavaScript, et l'option `HttpOnly` doit être définie.
 
-    Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+```
+Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+```
 
 ### Portée des cookies
 

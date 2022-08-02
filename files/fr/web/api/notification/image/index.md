@@ -17,7 +17,9 @@ La propriété en lecture seule **`image`** de l'interface {{domxref ("Notificat
 
 ## Syntaxe
 
-    Notification.image
+```js
+Notification.image
+```
 
 ### Valeur
 

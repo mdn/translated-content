@@ -9,9 +9,11 @@ La méthode **`CanvasRenderingContext2D.drawImage()`** de l'API 2D des Canvas in
 
 ## Syntaxe
 
-    void ctx.drawImage(image, dx, dy);
-    void ctx.drawImage(image, dx, dy, dLargeur, dHauteur);
-    void ctx.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);
+```js
+void ctx.drawImage(image, dx, dy);
+void ctx.drawImage(image, dx, dy, dLargeur, dHauteur);
+void ctx.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);
+```
 
 ![drawImage](canvas_drawimage.jpg)
 

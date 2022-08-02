@@ -4,9 +4,9 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 translation_of: Learn/Forms/Sending_forms_through_JavaScript
 original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}
 
-Comme dans le [précédent article](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires), les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.
+Comme dans le [précédent article](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires), les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.
 
 ## Un formulaire n'est pas toujours un \<form>
 
@@ -26,8 +26,6 @@ L'envoi asynchrone de données arbitraires est connu sous le nom AJAX, qui signi
 
 > **Note :** Les techniques AJAX anciennes ne se fondaient pas forcément sur {{domxref("XMLHttpRequest")}}. Par exemple, [JSONP](http://en.wikipedia.org/wiki/JSONP) combiné à la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Cela fonctionne, mais n'est pas recommandé en raison de sérieux problèmes de sécurité. La seule raison d'en poursuivre l'utilisation est l'utilisation de navigateurs anciens qui ne prennent pas en charge {{domxref("XMLHttpRequest")}} ou [JSON](/fr/docs/Glossaire/JSON), mais ce sont vraiment des navigateurs anciens ! **Évitez ces techniques.**
 
-
-
 Historiquement, {{domxref("XMLHttpRequest")}} a été conçu pour récupérer et envoyer du XML comme format d'échange. Cependant, [JSON](/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON) a remplacé XML et est de plus en plus courant aujourd'hui.
 
 Mais ni XML ni JSON ne s'adaptent à l'encodage des demandes de données de formulaire. Les données de formulaire (`application/x-www-form-urlencoded`) sont constituées de listes de paires clé/valeur codées par URL. Pour la transmission de données binaires, la requête HTTP est transformée en données `multipart/form‑data`.
@@ -46,7 +44,7 @@ Il y a 3 façons d'envoyer des données de formulaire, allant des techniques exi
 
 {{domxref("XMLHttpRequest")}} est la manière la plus sûre et la plus fiable de faire des requêtes HTTP. Pour envoyer des données de formulaire avec {{domxref("XMLHttpRequest")}}, préparez les données par encodage URL et suivez les spécificités des requêtes de données de formulaire.
 
-> **Note :** Pour en savoir plus sur `XMLHttpRequest`, ces articles pourraient vous intéresser : un article d'introduction à [AJAX](/fr/docs/Web/Guide/AJAX/Premiers_pas) et un didacticiel plus fouillé à ce propos utilisant [`XMLHttpRequest`](/fr/docs/HTML_in_XMLHttpRequest).
+> **Note :** Pour en savoir plus sur `XMLHttpRequest`, ces articles pourraient vous intéresser : un article d'introduction à [AJAX](/fr/docs/Web/Guide/AJAX/Getting_Started) et un didacticiel plus fouillé à ce propos utilisant [`XMLHttpRequest`](/fr/docs/HTML_in_XMLHttpRequest).
 
 Reconstruisons l'exemple précédent :
 
@@ -266,8 +264,6 @@ Voici le résultat en direct :
 
 {{EmbedLiveSample('Construire_un_DOM_dans_un_iframe_caché', "100%", 50)}}
 
-
-
 ## Gestion des données binaires
 
 Si vous utilisez un objet {{domxref("XMLHttpRequest/FormData", "FormData")}} avec un formulaire qui inclut des widgets `<input type="file">`, les données seront traitées automatiquement. Mais pour envoyer des données binaires à la main, il y a un travail supplémentaire à faire.
@@ -428,22 +424,16 @@ Selon le navigateur, l'envoi de données de formulaire par JavaScript peut être
 - [HTML5-formdata](https://github.com/francois2metz/html5-formdata) tente d'opérer un « polyfill » de l'objet `FormData`, mais il requiert un [File API](http://www.w3.org/TR/FileAPI/)
 - [Ce « polyfill »](https://github.com/jimmywarting/FormData) fournit la plupart des nouvelles méthodes dont `FormData` dispose (entrées, clés, valeurs et prise en charge de `for...of`)
 
-
-
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires")}}
-
-
-
 ## Dans ce module
 
-- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets)
+- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
+- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
+- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
+- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
+- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

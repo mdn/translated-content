@@ -12,13 +12,13 @@ original_slug: Glossaire/HTTP_3
 
 ## Voir aussi
 
-1.  Culture générale
+1. Culture générale
 
-    1.  [HTTP sur MDN](/fr/docs/Web/HTTP)
-    2.  {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}} sur Wikipédia
+    1. [HTTP sur MDN](/fr/docs/Web/HTTP)
+    2. {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}} sur Wikipédia
 
-2.  [Glossaire](/fr/docs/Glossary)
+2. [Glossaire](/fr/docs/Glossary)
 
-    1.  {{glossary("HTTP")}}
-    2.  {{glossary("HTTP 2")}}
-    3.  {{glossary("Latency")}}
+    1. {{glossary("HTTP")}}
+    2. {{glossary("HTTP 2")}}
+    3. {{glossary("Latency")}}

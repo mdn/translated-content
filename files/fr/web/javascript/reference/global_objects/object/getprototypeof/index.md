@@ -18,7 +18,9 @@ La méthode **`Object.getPrototypeOf()`** renvoie le prototype d'un objet donné
 
 ## Syntaxe
 
-    Object.getPrototypeOf(obj)
+```js
+Object.getPrototypeOf(obj)
+```
 
 ### Paramètres
 
