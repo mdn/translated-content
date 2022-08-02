@@ -53,7 +53,7 @@ Veja [Usando objeto URL para exibir imagens](/pt-BR/docs/Web/API/File/Using_file
 
 Cada vez que você executa `createObjectURL()`, um novo objeto URL é criado, mesmo que você já tenha criado este objeto. Cada um desses pode ser eliminado executando o método {{domxref("URL.revokeObjectURL()")}} quando você não precisa mais dele.
 
-Os navegadores vão limpar objetos URLs automaticamente quando o document for descarregado; contudo, para otimizar a performace e o uso de memória, se há momentos que é seguro descarregar, você deve fazer isso.
+Os navegadores vão limpar objetos URLs automaticamente quando o documento for descarregado; contudo, para otimizar a performace e o uso de memória, se há momentos que é seguro descarregar, você deve fazer isso.
 
 ### Usando objeto URL para media stream
 
