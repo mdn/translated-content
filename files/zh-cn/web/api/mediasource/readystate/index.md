@@ -3,29 +3,32 @@ title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
 translation_of: Web/API/MediaSource/readyState
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><code><strong>readyState</strong></code>是 {{domxref("MediaSource")}} 接口的一个只读属性。它返回一个集合表明当前<code>MediaSource</code>的状态。它有三种可能的返回值：</p>
+**`readyState`**是 {{domxref("MediaSource")}}
+接口的一个只读属性。它返回一个集合表明当前`MediaSource`的状态。它有三种可能的返回值：
 
-<ul>
- <li><code>closed</code>: 当前源并未附着到一个 media 元素上。</li>
- <li><code>open</code>: 当前源已附着到一个 media 元素并准备好接收 {{domxref("SourceBuffer")}} 对象。</li>
- <li><code>ended</code>: 当前源已附着到一个 media 元素，但流已被{{domxref("MediaSource.endOfStream()")}}结束。</li>
-</ul>
+- `closed`: 当前源并未附着到一个 media 元素上。
+- `open`: 当前源已附着到一个 media 元素并准备好接收 {{domxref("SourceBuffer")}} 对象。
+- `ended`: 当前源已附着到一个 media 元素，但流已被{{domxref("MediaSource.endOfStream()")}}结束。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var myReadyState = mediaSource.readyState;</pre>
+```js
+var myReadyState = mediaSource.readyState;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>A {{domxref("DOMString")}}.</p>
+一个 {{domxref("DOMString")}}.
 
-<h2 id="例子">例子</h2>
+## 示例
 
-<p>The following snippet is from a simple example written by Nick Desaulniers (<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo live</a>, or <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for
+further investigation.)
 
-<pre class="brush: js  language-js"><code class="language-js">if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+```js
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -46,19 +49,18 @@ function sourceOpen (_) {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};</code></pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-{{Compat("api.MediaSource.readyState")}}
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## 参见
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

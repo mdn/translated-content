@@ -3,30 +3,33 @@ title: MediaSource.MediaSource()
 slug: Web/API/MediaSource/MediaSource
 translation_of: Web/API/MediaSource/MediaSource
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><code><strong>MediaSource()</strong></code> 是 {{domxref("MediaSource")}} 的构造函数 返回一个没有分配 source buffers 新的 <code>MediaSource</code> 对象。</p>
+**`MediaSource()`** 是 {{domxref("MediaSource")}} 的构造函数 返回一个没有分配 source buffers 新的 `MediaSource` 对象。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var mediaSource = new MediaSource();</pre>
+```js
+var mediaSource = new MediaSource();
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<p>无。</p>
+无。
 
-<h2 id="例子">例子</h2>
+## 示例
 
-<p>下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 <a href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">查看完整例子</a> 或者 <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下载源代码</a> .)</p>
+下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 [查看完整例子](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) 或者 [下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) .)
 
-<pre class="brush: js">var video = document.querySelector('video');
+```js
+var video = document.querySelector('video');
 
 var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -36,19 +39,13 @@ if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
 }
 
 ...
-</pre>
+```
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat("api.MediaSource.MediaSource")}}
 
+## 相关链接
 
-<p>{{Compat("api.MediaSource.MediaSource")}}</p>
-</div>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

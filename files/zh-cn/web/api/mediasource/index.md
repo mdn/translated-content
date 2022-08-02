@@ -3,68 +3,63 @@ title: MediaSource
 slug: Web/API/MediaSource
 translation_of: Web/API/MediaSource
 ---
-<p>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p><strong><code>MediaSource</code></strong>是<a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions API</a> 表示媒体资源{{domxref("HTMLMediaElement")}}对象的接口。<code>MediaSource</code> 对象可以附着在{{domxref("HTMLMediaElement")}}在客户端进行播放。</p>
+**`MediaSource`**是[Media Source
+Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API) 表示媒体资源{{domxref("HTMLMediaElement")}}对象的接口。`MediaSource`
+对象可以附着在{{domxref("HTMLMediaElement")}}在客户端进行播放。
 
-<h2 id="构造函数">构造函数</h2>
+## 构造函数
 
-<dl>
- <dt>{{domxref("MediaSource.MediaSource", "MediaSource()")}}</dt>
- <dd>构造并且返回一个新的<code>MediaSource</code>的空对象（with no associated source buffers）。</dd>
-</dl>
+- {{domxref("MediaSource.MediaSource", "MediaSource()")}}
+  - : 构造并且返回一个新的`MediaSource`的空对象（with no associated source buffers）。
 
-<h2 id="属性">属性</h2>
+## 属性
 
-<dl>
- <dt>{{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("SourceBufferList")}} 对象，包含了这个 <code>MediaSource</code> 的 {{domxref("SourceBuffer")}}的对象列表。</dd>
- <dt>{{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}</dt>
- <dd>返回一个 {{domxref("SourceBufferList")}} 对象，包含了这个{{domxref("MediaSource.sourceBuffers")}}中的{{domxref("SourceBuffer")}} 子集的对象—即提供当前被选中的视频轨 (video track)，启用的音频轨 (audio tracks) 以及显示/隐藏的字幕轨 (text tracks) 的对象列表。</dd>
- <dt> </dt>
- <dt>{{domxref("MediaSource.readyState")}} {{readonlyInline}}</dt>
- <dd><code>返回一个包含当前 MediaSource</code>状态的集合，即使它当前没有附着到一个 media 元素 (<code>closed</code>)，或者已附着并准备接收{{domxref("SourceBuffer")}} 对象 (<code>open</code>)，亦或者已附着但这个流已被{{domxref("MediaSource.endOfStream()")}}关闭 (<code>ended</code>.)</dd>
- <dt>{{domxref("MediaSource.duration")}}</dt>
- <dd>获取和设置当前正在推流媒体的持续时间。</dd>
-</dl>
+- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
+  - : 返回一个 {{domxref("SourceBufferList")}} 对象，包含了这个 `MediaSource` 的 {{domxref("SourceBuffer")}}的对象列表。
+- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
+  - : 返回一个 {{domxref("SourceBufferList")}} 对象，包含了这个{{domxref("MediaSource.sourceBuffers")}}中的{{domxref("SourceBuffer")}}
+    子集的对象—即提供当前被选中的视频轨 (video track)，启用的音频轨 (audio tracks) 以及显示/隐藏的字幕轨 (text tracks) 的对象列表。
+- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
 
-<dl>
-</dl>
+  - : `返回一个包含当前 MediaSource`状态的集合，即使它当前没有附着到一个 media 元素
+    (`closed`)，或者已附着并准备接收{{domxref("SourceBuffer")}} 对象
+    (`open`)，亦或者已附着但这个流已被{{domxref("MediaSource.endOfStream()")}}关闭 (`ended`.)
 
-<dl>
-</dl>
+- {{domxref("MediaSource.duration")}}
+  - : 获取和设置当前正在推流媒体的持续时间。
 
-<h2 id="方法">方法</h2>
+## 方法
 
-<p><em>从父接口{{domxref("EventTarget")}}上继承而来。</em></p>
+_从父接口{{domxref("EventTarget")}}上继承而来。_
 
-<dl>
- <dt>{{domxref("MediaSource.addSourceBuffer()")}}</dt>
- <dd>创建一个带有给定 MIME 类型的新的 {{domxref("SourceBuffer")}} 并添加到 <code>MediaSource</code> 的 {{domxref("SourceBuffers")}} 列表。</dd>
- <dt>{{domxref("MediaSource.removeSourceBuffer()")}}</dt>
- <dd>删除指定的{{domxref("SourceBuffer")}} 从这个<code>MediaSource</code>对象中的 {{domxref("SourceBuffers")}}列表。</dd>
- <dt>{{domxref("MediaSource.endOfStream()")}}</dt>
- <dd>表示流的结束。</dd>
- <dt>
- <h2 id="静态方法">静态方法</h2>
- </dt>
- <dt>{{domxref("MediaSource.isTypeSupported()")}}</dt>
- <dd>返回一个 {{domxref("Boolean")}} 值表明给定的 MIME 类型是否被当前的浏览器支持——这意味着是否可以成功的创建这个 MIME 类型的{{domxref("SourceBuffer")}} 对象。</dd>
-</dl>
+- {{domxref("MediaSource.addSourceBuffer()")}}
+  - : 创建一个带有给定 MIME 类型的新的 {{domxref("SourceBuffer")}} 并添加到 `MediaSource` 的 {{domxref("SourceBuffers")}} 列表。
+- {{domxref("MediaSource.removeSourceBuffer()")}}
+  - : 删除指定的{{domxref("SourceBuffer")}} 从这个`MediaSource`对象中的 {{domxref("SourceBuffers")}}列表。
+- {{domxref("MediaSource.endOfStream()")}}
+  - : 表示流的结束。
 
-<h2 id="示例">示例</h2>
+## 静态方法
 
-<p>这个例子尽可能快地逐块加载视频，并在加载好后立刻播放。 这个示例是由 Nick Desaulniers 编写，你可以<a href="https://nickdesaulniers.github.io/netfix/demo/bufferAll.html">点这里查看</a>  (你也可以<a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">点这里下载</a>来进一步研究)。</p>
+- {{domxref("MediaSource.isTypeSupported()")}}
+  - : 返回一个 {{domxref("Boolean")}} 值表明给定的 MIME 类型是否被当前的浏览器支持——这意味着是否可以成功的创建这个 MIME 类型的{{domxref("SourceBuffer")}} 对象。
 
-<pre class="brush: js">var video = document.querySelector('video');
+## 示例
 
-var assetURL = 'frag_bunny.mp4';
+这个例子尽可能快地逐块加载视频，并在加载好后立刻播放。 这个示例是由 Nick Desaulniers 编写，你可以[点这里查看](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (你也可以[点这里下载](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)来进一步研究)。
+
+```js
+const video = document.querySelector('video');
+
+const assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource();
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+  const mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener('sourceopen', sourceOpen);
@@ -74,8 +69,8 @@ if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
 
 function sourceOpen (_) {
   //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  const mediaSource = this;
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
     sourceBuffer.addEventListener('updateend', function (_) {
       mediaSource.endOfStream();
@@ -88,28 +83,25 @@ function sourceOpen (_) {
 
 function fetchAB (url, cb) {
   console.log(url);
-  var xhr = new XMLHttpRequest;
+  const xhr = new XMLHttpRequest;
   xhr.open('get', url);
   xhr.responseType = 'arraybuffer';
   xhr.onload = function () {
     cb(xhr.response);
   };
   xhr.send();
-};</pre>
+};
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
-<p>{{Compat("api.MediaSource")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## 参见
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}

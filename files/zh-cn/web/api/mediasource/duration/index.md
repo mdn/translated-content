@@ -3,48 +3,37 @@ title: MediaSource.duration
 slug: Web/API/MediaSource/duration
 translation_of: Web/API/MediaSource/duration
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>{{domxref("MediaSource")}} 接口的属性 <code><strong>duration</strong></code> 用来获取或者设置当前媒体展示的时长。</p>
+{{domxref("MediaSource")}} 接口的属性 **`duration`** 用来获取或者设置当前媒体展示的时长。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">mediaSource.duration = 5.5; // 5.5 seconds
+```js
+mediaSource.duration = 5.5; // 5.5 seconds
 
-var myDuration = mediaSource.duration;</pre>
+var myDuration = mediaSource.duration;
+```
 
-<h3 id="值">值</h3>
+### 值
 
-<p>以秒为单位的 双精度浮点数。</p>
+以秒为单位的 双精度浮点数。
 
-<h3 id="错误">错误</h3>
+### 异常
 
-<p>设置新的值的时候可能会有下面的错误抛出。</p>
+设置新的值的时候可能会有下面的错误抛出。
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">错误</th>
-   <th scope="col">异常</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidAccessError</code></td>
-   <td>时长尝试设置一个负数，或者 <code>NaN</code>.</td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>{{domxref("MediaSource.readyState")}} 状态不是 <code>open</code>, 或者 一个或多个 {{domxref("SourceBuffer")}} 对象在 {{domxref("MediaSource.sourceBuffers")}} 中被更新  (例如。该 {{domxref("SourceBuffer.updating")}}属性 为 <code>true</code>.)</td>
-  </tr>
- </tbody>
-</table>
+| 错误                 | 异常                                                                                                                                                                                                                       |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidAccessError` | 时长尝试设置一个负数，或者 `NaN`.                                                                                                                                                                                          |
+| `InvalidStateError`  | {{domxref("MediaSource.readyState")}} 状态不是 `open`, 或者 一个或多个 {{domxref("SourceBuffer")}} 对象在 {{domxref("MediaSource.sourceBuffers")}} 中被更新 (例如。该 {{domxref("SourceBuffer.updating")}}属性 为 `true`.) |
 
-<h2 id="例子">例子</h2>
+## 示例
 
-<p>下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">查看完整例子</a>, 或者 <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">下载源代码</a> .)</p>
+下面的代码片段取自 Nick Desaulniers 写的简单例子 (想进一步了解 [查看完整例子](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html), 或者 [下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) .)
 
-<pre class="brush: js  language-js"><code class="language-js">function sourceOpen (_) {
+```js
+function sourceOpen (_) {
   //console.log(this.readyState); // open
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
@@ -59,23 +48,18 @@ var myDuration = mediaSource.duration;</pre>
   });
 };
 
-...</code></pre>
+...
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat}}
 
+## 相关链接
 
-<p>{{Compat("api.MediaSource.duration")}}</p>
-</div>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}
