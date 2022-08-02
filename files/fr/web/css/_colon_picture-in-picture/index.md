@@ -22,7 +22,7 @@ La pseudo-classe `:picture-in-picture` permet de configurer les feuilles de styl
 
 ## Exemples
 
-Dans cet exemple, la boîte de la vidéo aura une ombre portée rouge ou non selon qu'elle est affichée en inscrustation vidéo ou non.
+Dans cet exemple, la boîte de la vidéo aura une ombre portée rouge ou non selon qu'elle est affichée en incrustation vidéo ou non.
 
 ### CSS
 
