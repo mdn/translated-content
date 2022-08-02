@@ -57,7 +57,7 @@ Os navegadores vão limpar objetos URLs automaticamente quando o document for de
 
 ### Usando objeto URL para media stream
 
-Em antigas versões da especificação Media Source, anexar stream a um elemento {{HTMLElement("video")}} é obrigatório criar um objeto URL para o {{domxref("MediaStream")}}. Isto não é mais necessário, e os navegadores estão removendo o suporte para isso.
+Em versões antigas da especificação Media Source, anexar stream a um elemento {{HTMLElement("video")}} é obrigatório criar um objeto URL para o {{domxref("MediaStream")}}. Isto não é mais necessário, e os navegadores estão removendo o suporte para isso.
 
 > **Warning:** Se você ainda tem código com
 > {{domxref("URL.createObjectURL", "createObjectURL()")}} para anexar streams em elementos
