@@ -9,17 +9,17 @@ translation_of: Web/API/Navigator/vibrate
 
 <p>该方法若因为提供无效的参数使得无法使设备震动，它将返回 false，否则返回 true。若振动方案导致长时间的震动，它会被截断：最大震动时长取决于每个浏览器的具体实现。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox">var <em>successBool</em> = window.navigator.vibrate(<em><var>pattern</var></em>);
 </pre>
 
 <dl>
  <dt><em>pattern</em></dt>
- <dd>提供一个震动、暂停间隔的模式。每一个值表示交替震动或者暂停的毫秒数。你可以提供一个单个的值（震动一次的毫秒数）或者一个包含整数的数组来交替的震动、暂停、震动。详情参见 <a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration API</a>。</dd>
+ <dd>提供一个震动、暂停间隔的模式。每一个值表示交替震动或者暂停的毫秒数。你可以提供一个单个的值（震动一次的毫秒数）或者一个包含整数的数组来交替的震动、暂停、震动。详情参见 <a href="/en-US/docs/WebAPI/Vibration">Vibration API</a>。</dd>
 </dl>
 
-<p>传递一个 <code>0</code>、一个空数组或者一个元素全部为 <code>0</code> 的数组会结束当前正在运行中的震动模式。</p>
+<p>传递一个 <code>0</code>、一个空数组或者一个元素全部为 <code>0</code> 的数组会结束当前正在运行中的震动模式。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -29,22 +29,7 @@ window.navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Vibration API')}}</td>
-   <td>{{Spec2('Vibration API')}}</td>
-   <td>Linked to spec is the latest editor's draft; W3C version is a REC.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -53,5 +38,5 @@ window.navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100
 <h2 id="更多">更多</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration API</a></li>
+ <li><a href="/en-US/docs/WebAPI/Vibration">Vibration API</a></li>
 </ul>

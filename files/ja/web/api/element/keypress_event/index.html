@@ -1,0 +1,167 @@
+---
+title: GlobalEventHandlers.onkeypress
+slug: Web/API/Element/keypress_event
+tags:
+  - API
+  - Event Handler
+  - GlobalEventHandlers
+  - HTML DOM
+  - Property
+  - Reference
+translation_of: Web/API/GlobalEventHandlers/onkeypress
+original_slug: Web/API/GlobalEventHandlers/onkeypress
+---
+<div>{{ApiRef("HTML DOM")}} {{deprecated_header}}</div>
+
+<p>{{domxref("GlobalEventHandlers")}} ミックスインの <code><strong>onkeypress</strong></code> プロパティは、{{event("onkeypress")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。</p>
+
+<p><code>keypress</code> イベントはユーザーがキーボード上のキーを押下した時に発生<em>すべき</em>ですが、実際のブラウザーでは特定のキーについて <code>keypress</code> イベントを発生させません。</p>
+
+<div class="blockIndicator warning">
+<p><code>onkeypress</code> イベントハンドラーは非推奨です。代わりに {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}} を使用してください。</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox"><em>target</em>.onkeypress = <var>functionRef</var>;
+</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<p><code>functionRef</code> は関数名または <a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a> です。この関数は、{{domxref("KeyboardEvent")}} オブジェクトとその 1 個の引数を受け取ります。</p>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Basic_example" name="Basic_example">基本的な例</h3>
+
+<p>この例は、{{HtmlElement("input")}} 要素内でキーを押すたびに、そのキーの {{domxref("KeyboardEvent.code")}} 値をログ出力します。</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;input&gt;
+&lt;p id="log"&gt;&lt;/p&gt;</pre>
+
+<h4 id="JavaScript">JavaScript</h4>
+
+<pre class="brush: js">const input = document.querySelector('input');
+const log = document.getElementById('log');
+
+input.onkeypress = logKey;
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}</pre>
+
+<h4 id="Result" name="Result">実行結果</h4>
+
+<p>{{EmbedLiveSample("Basic_example", 700, 200)}}</p>
+
+<h3 id="Filter_keys_with_a_regular_expression" name="Filter_keys_with_a_regular_expression">正規表現でキーを絞り込む</h3>
+
+<p>この例は、フォームフィールドに入力された文字を <a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a> を利用して絞り込みます。</p>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html">&lt;label&gt;Enter numbers only:
+  &lt;input&gt;
+&lt;/label&gt;</pre>
+
+<h4 id="JavaScript_2">JavaScript</h4>
+
+<pre class="brush: js">function numbersOnly(event) {
+  return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));
+}
+
+const input = document.querySelector('input');
+input.onkeypress = numbersOnly;
+
+// 貼り付けを抑止 (貼り付けられたコンテンツに数字以外の文字が含まれる可能性があるため)
+input.onpaste = event =&gt; false;</pre>
+
+<h4 id="Result_2" name="Result_2">実行結果</h4>
+
+<p>{{EmbedLiveSample("Filter_keys_with_a_regular_expression")}}</p>
+
+<h3 id="Capture_the_typing_of_a_hidden_word" name="Capture_the_typing_of_a_hidden_word">合言葉の入力を捕捉する</h3>
+
+<p>次の JavaScript 関数は、ユーザーがページ上のどこかに "exit" と入力した後に何かをします。</p>
+
+<pre class="brush: js">/* Type the word "exit" in any point of your page... */
+
+(function () {
+  const sSecret = /* Choose your hidden word...: */ "exit";
+  let nOffset = 0;
+
+  document.onkeypress = function(oPEvt) {
+    let oEvent = oPEvt || window.event,
+        nChr = oEvent.charCode,
+        sNodeType = oEvent.target.nodeName.toUpperCase();
+
+    if (nChr === 0 ||
+        oEvent.target.contentEditable.toUpperCase() === "TRUE" ||
+        sNodeType === "TEXTAREA" ||
+        sNodeType === "INPUT" &amp;&amp; oEvent.target.type.toUpperCase() === "TEXT") {
+      return true;
+    }
+
+    if (nChr !== sSecret.charCodeAt(nOffset)) {
+      nOffset = nChr === sSecret.charCodeAt(0) ? 1 : 0;
+    } else if (nOffset &lt; sSecret.length - 1) {
+      nOffset++;
+    } else {
+      nOffset = 0;
+      /* Do something here... */
+      alert("Yesss!!!");
+      location.assign("https://developer.mozilla.org/");
+    }
+
+    return true;
+  };
+})();</pre>
+
+<div class="blockIndicator note">
+<p><strong>注記:</strong> 合言葉の入力を捕捉する完全なフレームワークは、<a href="https://github.com/madmurphy/spell.js/">GitHub</a> 上にあります。</p>
+</div>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG','webappapis.html#handler-onkeypress','onkeypress')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+<div>
+
+
+<p>{{Compat("api.GlobalEventHandlers.onkeypress")}}</p>
+
+<h3 id="Browser_compatibility_notes" name="Browser_compatibility_notes">ブラウザー互換性ノート</h3>
+
+<ul>
+ <li><code>keypress</code> イベントは <a href="/ja/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)">non-printable keys</a> に対して発生しなくなりました (この Firefox 65 での実装について {{bug(968056)}} を参照)。ただし、<kbd>Enter</kbd> キーおよび <kbd>Shift</kbd> + <kbd>Enter</kbd>、<kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせを除きます (ブラウザー間の互換性を維持するため)。</li>
+</ul>
+</div>
+
+<h2 id="See_also" name="See_also">関連項目</h2>
+
+<ul>
+ <li>{{Event("keypress")}} イベント</li>
+ <li>関連するイベントハンドラー
+  <ul>
+   <li>{{domxref("GlobalEventHandlers.onkeydown")}}</li>
+   <li>{{domxref("GlobalEventHandlers.onkeyup")}}</li>
+  </ul>
+ </li>
+</ul>

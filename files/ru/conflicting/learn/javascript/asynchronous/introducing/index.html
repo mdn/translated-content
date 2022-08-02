@@ -44,7 +44,7 @@ original_slug: Learn/JavaScript/Asynchronous/Concepts
 
 <p>Давайте рассмотрим несколько примеров, которые покажут, что именно значит <strong>блокировка</strong>.</p>
 
-<p>В нашем <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing">simple-sync.html</a> примере (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">see it running live</a>), добавим кнопке событие на клик, чтобы при нажатии на неё запускалась трудоёмкая операция (расчёт 10000000 дат, и вывод последней рассчитанной даты на консоль) после чего в DOM добавляется ещё один параграф:</p>
+<p>В нашем <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html">simple-sync.html</a> примере (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">see it running live</a>), добавим кнопке событие на клик, чтобы при нажатии на неё запускалась трудоёмкая операция (расчёт 10000000 дат, и вывод последней рассчитанной даты на консоль) после чего в DOM добавляется ещё один параграф:</p>
 
 <pre class="brush: js">const btn = document.querySelector('button');
 btn.addEventListener('click', () =&gt; {

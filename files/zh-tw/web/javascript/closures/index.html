@@ -380,16 +380,16 @@ MyObject.prototype.getMessage = function() {
 <p>以上的程式碼，可以寫得如同下例般簡潔：</p>
 
 <pre class="brush: js">function MyObject(name, message) {
-    this.name = name.toString();
-    this.message = message.toString();
+    this.name = name.toString();
+    this.message = message.toString();
 }
 (function() {
-    this.getName = function() {
-        return this.name;
-    };
-    this.getMessage = function() {
-        return this.message;
-    };
+    this.getName = function() {
+        return this.name;
+    };
+    this.getMessage = function() {
+        return this.message;
+    };
 }).call(MyObject.prototype);
 </pre>
 

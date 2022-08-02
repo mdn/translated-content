@@ -6,17 +6,17 @@ translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 <div>{{CanvasSidebar}}</div>
 
 <div>
-<p>通过在一个 canvas（画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为“绿屏效果”）。</p>
+<p>通过在一个 canvas（画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为“绿屏效果”）。</p>
 </div>
 
 <p><a href="/samples/video/chroma-key/index.xhtml">查看该实例</a>。</p>
 
 <h2 id="文档内容">文档内容</h2>
 
-<p>以下是用于渲染该内容的 XHTML 文档。</p>
+<p>以下是用于渲染该内容的 XHTML 文档。</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
   &lt;head&gt;
     &lt;style&gt;
@@ -65,11 +65,11 @@ translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 <h3 id="初始化色键播放器">初始化色键播放器</h3>
 
-<p>当 XHTML 文档最初加载时 <code>doLoad()</code> 方法被调用。这个方法的工作是准备色键处理代码所需的变量，并设置一个监听事件以便我们可以监测用户何时开始播放视频。</p>
+<p>当 XHTML 文档最初加载时 <code>doLoad()</code> 方法被调用。这个方法的工作是准备色键处理代码所需的变量，并设置一个监听事件以便我们可以监测用户何时开始播放视频。</p>
 
 <pre class="brush: js">  var processor;
 
-  processor.doLoad = function doLoad() {
+  processor.doLoad = function doLoad() {
     this.video = document.getElementById('video');
     this.c1 = document.getElementById('c1');
     this.ctx1 = this.c1.getContext('2d');
@@ -117,7 +117,7 @@ translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 <pre class="brush: js">  processor.computeFrame = function computeFrame() {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
     let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
-    let l = frame.data.length / 4;
+    let l = frame.data.length / 4;
 
     for (let i = 0; i &lt; l; i++) {
       let r = frame.data[i * 4 + 0];
@@ -141,9 +141,9 @@ translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 <p>第 3 行通过在第一个上下文里调用 <code>getImageData()</code> 方法获取到视频当前帧的原始图形数据的拷贝。它提供了原始的 32 位像素的图像数据使我们可以继续操作。第 4 行通过用帧的图像数据的总大小除以四来计算图像中的像素数。</p>
 
-<p>从第 6 行开始 <code>for</code> 循环扫描帧的像素，取出每个像素的红、绿和蓝的值，并和用于检测绿幕的预设的数对比。其中绿幕将用从 <code>foo.png</code> 导入的静态背景图像替换。</p>
+<p>从第 6 行开始 <code>for</code> 循环扫描帧的像素，取出每个像素的红、绿和蓝的值，并和用于检测绿幕的预设的数对比。其中绿幕将用从 <code>foo.png</code> 导入的静态背景图像替换。</p>
 
-<p>每一个（数值）范围内得到的被认为是绿幕一部分的帧图像数据里的像素具有的 alpha 值被替换为零，以表示该像素完全透明。因此，最终的图像里的整个绿幕的区域 100% 透明，于是在 13 行当它被绘制到目标上下文中时，效果是作为一层遮罩覆于静态背景上面。</p>
+<p>每一个（数值）范围内得到的被认为是绿幕一部分的帧图像数据里的像素具有的 alpha 值被替换为零，以表示该像素完全透明。因此，最终的图像里的整个绿幕的区域 100% 透明，于是在 13 行当它被绘制到目标上下文中时，效果是作为一层遮罩覆于静态背景上面。</p>
 
 <p>形成的图像像这样：</p>
 

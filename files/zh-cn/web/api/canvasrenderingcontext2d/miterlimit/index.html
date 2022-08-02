@@ -7,7 +7,7 @@ translation_of: Web/API/CanvasRenderingContext2D/miterLimit
 
 <p>The <code><strong>CanvasRenderingContext2D.miterLimit</strong></code> 是 Canvas 2D API 设置斜接面限制比例的属性。当获取属性值时，会返回当前的值（默认值是<code>10.0</code> ）。当给属性赋值时，0、负数、 {{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略；除此之外都会被赋予一个新值。</p>
 
-<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
+<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -24,21 +24,21 @@ translation_of: Web/API/CanvasRenderingContext2D/miterLimit
 
 <pre>ctx.lineJoin = "miter"  // "miter" &gt;   "round" )   "bevel" ]  </pre>
 
-<p>只有当 lineJoin 显示为 "&gt;"  时，miterLimit 才有效。边角的角度越小，斜接长度就会越大。为了避免斜接长度过长，我们可以使用 miterLimit 属性。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 " ] " 类型来显示</p>
+<p>只有当 lineJoin 显示为 "&gt;"  时，miterLimit 才有效。边角的角度越小，斜接长度就会越大。为了避免斜接长度过长，我们可以使用 miterLimit 属性。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 " ] " 类型来显示</p>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="Using_the_lineWidth_property">使用 <code>miterLimit</code> 属性</h3>
 
-<p>查看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property">Applying styles and color</a> 章节，获取更多信息。</p>
+<p>查看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property">Applying styles and color</a> 章节，获取更多信息。</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.beginPath();

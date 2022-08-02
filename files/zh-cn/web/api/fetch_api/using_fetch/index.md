@@ -442,13 +442,11 @@ if (window.fetch) {
 
 ## 规范
 
-| 详细说明                      | 状态                     | 注释               |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Initial definition |
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## 参见
 

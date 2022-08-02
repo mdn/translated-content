@@ -1,13 +1,14 @@
 ---
 title: Range.collapsed
 slug: Web/API/Range/collapsed
+page-type: web-api-instance-property
 tags:
   - API
   - DOM
-  - DOM リファレンス
-  - プロパティ
+  - DOM Reference
+  - Property
   - Range
-  - リファレンス
+  - Reference
 browser-compat: api.Range.collapsed
 translation_of: Web/API/Range/collapsed
 ---

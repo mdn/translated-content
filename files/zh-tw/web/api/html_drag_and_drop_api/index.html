@@ -11,7 +11,7 @@ translation_of: Web/API/HTML_Drag_and_Drop_API
 
 <p>此文件為 HTML 拖放的概述，包含了相關介面的說明、在應用程式中加入拖放支援的基本步驟，以及相關介面使用簡介。</p>
 
-<h2 id="events" name="events">拖曳事件</h2>
+<h2 id="events">拖曳事件</h2>
 
 <p>HTML 拖放操作基於 {{domxref("Event","DOM 事件模型")}}並且使用繼承自{{domxref("MouseEvent","滑鼠事件")}}的<em>{{domxref("DragEvent","拖曳事件")}}</em>介面。一個典型的拖曳操作開始於使用者利用滑鼠選取了一個<em>可拖曳（draggable）</em>元素、移動滑鼠至一個<em>可放置（droppable）</em>元素並放開滑鼠按鍵。在操作的過程中，會觸發多種類型的事件，且一些事件類型可能會被觸發多次（如 {{event("drag")}} 及 {{event("dragover")}} 事件類型）。</p>
 
@@ -228,7 +228,7 @@ function drop_handler(ev) {
 
 <p>As can be seen in the <a href="/en-US/docs/Web/API/DataTransferItem#Browser_compatibility">DataTransferItem interface's Browser Compatibility table</a>, drag-and-drop interoperability is relatively broad among desktop browsers (except the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have less support). This data also indicates drag and drop support among mobile browsers is very low.</p>
 
-<h2 id="Examples_and_demos" name="Examples_and_demos">Examples and demos</h2>
+<h2 id="Examples_and_demos">Examples and demos</h2>
 
 <ul>
  <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html">Copying and moving elements with the <code>DataTransfer</code> interface</a></li>
@@ -242,7 +242,7 @@ function drop_handler(ev) {
 
 {{Specifications}}
 
-<h2 id="See_also" name="See_also">參見</h2>
+<h2 id="See_also">參見</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Drag Operations</a></li>

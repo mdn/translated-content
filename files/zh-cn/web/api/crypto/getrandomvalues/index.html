@@ -13,7 +13,7 @@ original_slug: Web/API/RandomSource/getRandomValues
 ---
 <p>{{APIRef("Web Crypto API")}}</p>
 
-<p><code><strong>Crypto.getRandomValues()</strong></code> 方法让你可以获取符合密码学要求的安全的随机值。传入参数的数组被随机值填充（在加密意义上的随机）。</p>
+<p><code><strong>Crypto.getRandomValues()</strong></code> 方法让你可以获取符合密码学要求的安全的随机值。传入参数的数组被随机值填充（在加密意义上的随机）。</p>
 
 <p>为了确保足够的性能，不使用真正的随机数生成器，但是它们正在使用具有足够熵值伪随机数生成器。它所使用的 PRNG 的实现与其他不同，但适用于加密的用途。该实现还需要使用具有足够熵的种子，如系统级熵源。</p>
 
@@ -44,7 +44,7 @@ window.crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
 for (var i = 0; i &lt; array.length; i++) {
-    console.log(array[i]);
+    console.log(array[i]);
 }
 </pre>
 

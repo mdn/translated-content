@@ -58,13 +58,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
  <li>the <strong>array being traversed</strong></li>
 </ul>
 
-<p>If a <code>thisArg</code> parameter is provided to <code>forEach()</code>, it will be used as callback's <code>this</code> value.  Otherwise, the value {{jsxref("undefined")}} will be used as its <code>this</code> value. The <code>this</code> value ultimately observable by <code>callback</code> is determined according to <a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
+<p>If a <code>thisArg</code> parameter is provided to <code>forEach()</code>, it will be used as callback's <code>this</code> value.  Otherwise, the value {{jsxref("undefined")}} will be used as its <code>this</code> value. The <code>this</code> value ultimately observable by <code>callback</code> is determined according to <a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/this">the usual rules for determining the <code>this</code> seen by a function</a>.</p>
 
 <p>The range of elements processed by <code>forEach()</code> is set before the first invocation of <code>callback</code>. Elements that are appended to the array after the call to <code>forEach()</code> begins will not be visited by <code>callback</code>. If the values of existing elements of the array are changed, the value passed to <code>callback</code> will be the value at the time <code>forEach()</code> visits them; elements that are deleted before being visited are not visited. If elements that are already visited are removed (e.g. using {{jsxref("Array.prototype.shift()", "shift()")}}) during the iteration, later elements will be skipped - see example below.</p>
 
 <p><code>forEach()</code> executes the <code>callback</code> function once for each array element; unlike {{jsxref("Array.prototype.map()", "map()")}} or {{jsxref("Array.prototype.reduce()", "reduce()")}} it always returns the value {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side effects at the end of a chain.</p>
 
-<p><code>forEach()</code> does not mutate the array on which it is called (although <code>callback</code>, if invoked, may do so).</p>
+<p><code>forEach()</code> does not mutate the array on which it is called (although <code>callback</code>, if invoked, may do so).</p>
 
 <div class="notecard note">
 <p><strong>備註：</strong>除非是拋出異常，否則並沒有中止 <code>forEach()</code> 迴圈的辦法。如果你需要這樣做，<code>forEach()</code> 就是錯誤的用法，相反的，應該要用簡單的迴圈。如果你要測試陣列裡面的元素並回傳布林值，可以用 {{jsxref("Array.prototype.every()", "every()")}} 或 {{jsxref("Array.prototype.some()", "some()")}}。如果可以的話，新的方法 {{jsxref("Array.prototype.find()", "find()")}} 或 {{jsxref("Array.prototype.findIndex()", "findIndex()")}} 也可以用於 true 值之後提前終止。</p>
@@ -95,7 +95,7 @@ items.forEach(function(item){
 
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Printing_the_contents_of_an_array">Printing the contents of an array</h3>
 
@@ -138,7 +138,7 @@ obj.sum;
 // 16
 </pre>
 
-<p>Since the <code>thisArg</code> parameter (<code>this</code>) is provided to <code>forEach()</code>, it is passed to <code>callback</code> each time it's invoked, for use as its <code>this</code> value.</p>
+<p>Since the <code>thisArg</code> parameter (<code>this</code>) is provided to <code>forEach()</code>, it is passed to <code>callback</code> each time it's invoked, for use as its <code>this</code> value.</p>
 
 <div class="notecard note">
 <p><strong>Note:</strong> If passing the function argument using an <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function expression</a> the <code>thisArg</code> parameter can be omitted as arrow functions lexically bind the {{jsxref("Operators/this", "this")}} value.</p>
@@ -146,7 +146,7 @@ obj.sum;
 
 <h3 id="An_object_copy_function">An object copy function</h3>
 
-<p>The following code creates a copy of a given object. There are different ways to create a copy of an object; the following is just one way and is presented to explain how <code>Array.prototype.forEach()</code> works by using ECMAScript 5 <code>Object.*</code> meta property functions.</p>
+<p>The following code creates a copy of a given object. There are different ways to create a copy of an object; the following is just one way and is presented to explain how <code>Array.prototype.forEach()</code> works by using ECMAScript 5 <code>Object.*</code> meta property functions.</p>
 
 <pre class="brush: js">function copy(obj) {
   const copy = Object.create(Object.getPrototypeOf(obj));

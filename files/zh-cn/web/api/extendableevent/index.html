@@ -21,7 +21,7 @@ translation_of: Web/API/ExtendableEvent
 
 <div>如果在<code>ExtendableEvent</code>处理程序之外调用{{domxref("ExtendableEvent.waitUntil","waitUntil()")}}，浏览器应该抛出一个<code>InvalidStateError</code>；还要注意，多个调用将堆积起来，结果 promises 将添加到<a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises">extend lifetime promises</a>.</div>
 
-<div> </div>
+<div> </div>
 
 <div class="note">
 <p><strong>提示</strong>: 上述段落中描述的行为在 firefox 43 中得到了修复（参见 {{bug(1180274)}} ）。</p>
@@ -53,7 +53,7 @@ translation_of: Web/API/ExtendableEvent
 <dl>
  <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
  <dd>
- <p>延长事件的生存期。它将在 service worker 的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/install">install</a></code> 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate">activate</a></code> 事件中被调用。</p>
+ <p>延长事件的生存期。它将在 service worker 的 <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/install">install</a></code> 和 <code><a href="/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate">activate</a></code> 事件中被调用。</p>
  </dd>
 </dl>
 
@@ -107,9 +107,9 @@ self.addEventListener('install', function(event) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Service workers basic code example</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li>{{jsxref("Promise")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+ <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
 </ul>

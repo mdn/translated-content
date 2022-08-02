@@ -27,12 +27,12 @@ original_slug: Web/JavaScript/Reference/Statements/import.meta
 
 <h2 id="示例">示例</h2>
 
-<p>这里有一个 <code>my-module.mjs 模块</code></p>
+<p>这里有一个 <code>my-module.mjs 模块</code></p>
 
 <pre class="brush: html">&lt;script type="module" src="my-module.mjs"&gt;&lt;/script&gt;
 </pre>
 
-<p>你可以通过 <code>import.meta</code> 对象获取这个模块的元数据信息。</p>
+<p>你可以通过 <code>import.meta</code> 对象获取这个模块的元数据信息。</p>
 
 <pre class="brush: js">console.log(import.meta); // { url: "file:///home/user/my-module.mjs" }</pre>
 
@@ -59,7 +59,7 @@ import './index2.mjs?someURLInfo=5';
 // index2.mjs
 new URL(import.meta.url).searchParams.get('someURLInfo'); // 5</pre>
 
-<p>虽然在上述例子中，Node.js 允许携带参数（或哈希），但以 Node 14.1.0 为例，使用<code>node --experimental-modules index.mjs?someURLInfo=5</code> 执行脚本，查询 URL 参数将会报错（该环境下<code>index.mjs?someURLInfo=5</code> 被视作一个文件而不是 URL）</p>
+<p>虽然在上述例子中，Node.js 允许携带参数（或哈希），但以 Node 14.1.0 为例，使用<code>node --experimental-modules index.mjs?someURLInfo=5</code> 执行脚本，查询 URL 参数将会报错（该环境下<code>index.mjs?someURLInfo=5</code> 被视作一个文件而不是 URL）</p>
 
 <p>像这种特定于文件的参数传递可能是对应用范围内<code>location.href</code>（ps: 通过在 HTML 路径添加参数或哈希）（而在 Node.js 中是<code>process.env</code>）的补充</p>
 

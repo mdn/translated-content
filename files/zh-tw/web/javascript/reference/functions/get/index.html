@@ -46,11 +46,11 @@ translation_of: Web/JavaScript/Reference/Functions/get
 <p>這程式碼將給 <code>obj</code> 物件建立虛擬屬性 <code>latest</code>，它會回傳 <code>log</code> 陣列的最後一個單元。</p>
 
 <pre class="brush: js">var obj = {
-  log: ['example','test'],
-  get latest() {
-    if (this.log.length == 0) return undefined;
-    return this.log[this.log.length - 1];
-  }
+  log: ['example','test'],
+  get latest() {
+    if (this.log.length == 0) return undefined;
+    return this.log[this.log.length - 1];
+  }
 }
 console.log(obj.latest); // "test".
 </pre>

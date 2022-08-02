@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Object.create()</strong></code> 指定其原型物件與屬性，創建一個新物件。</p>
+<p><code><strong>Object.create()</strong></code> 指定其原型物件與屬性，創建一個新物件。</p>
 
 <h2 id="語法">語法</h2>
 
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
  <dt><code>proto</code></dt>
  <dd>指定新物件的原型 (prototype) 物件。</dd>
  <dt><code>propertiesObject</code></dt>
- <dd>選用，為一物件。如有指定且非 {{jsxref("undefined")}}，則此參數物件中可列舉出的屬性 (即參數物件自身定義的屬性，並非指原型鏈上的 <code>enumerable</code> 特性 ) 對應其屬性名稱，根據其屬性敘述元 (property descriptors) 加進新創建的物件。這些屬性對應到 {{jsxref("Object.defineProperties()")}} 的第二個參數。</dd>
+ <dd>選用，為一物件。如有指定且非 {{jsxref("undefined")}}，則此參數物件中可列舉出的屬性 (即參數物件自身定義的屬性，並非指原型鏈上的 <code>enumerable</code> 特性 ) 對應其屬性名稱，根據其屬性敘述元 (property descriptors) 加進新創建的物件。這些屬性對應到 {{jsxref("Object.defineProperties()")}} 的第二個參數。</dd>
 </dl>
 
 <h3 id="回傳">回傳</h3>
@@ -26,13 +26,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <h3 id="例外">例外</h3>
 
-<p> 如果 <code>proto</code> 參數不是 {{jsxref("null")}} 或一個物件，將會拋出 {{jsxref("TypeError")}} 例外。</p>
+<p> 如果 <code>proto</code> 參數不是 {{jsxref("null")}} 或一個物件，將會拋出 {{jsxref("TypeError")}} 例外。</p>
 
 <h2 id="範例">範例</h2>
 
-<h3 id="使用_Object.create()_實現類別繼承">使用 <code>Object.create() </code>實現類別繼承</h3>
+<h3 id="使用_Object.create()_實現類別繼承">使用 <code>Object.create() </code>實現類別繼承</h3>
 
-<p>下方是如何使用 <code>Object.create()</code> 去實現類別繼承的示範，此為 JavaScript 支援的單一繼承.。</p>
+<p>下方是如何使用 <code>Object.create()</code> 去實現類別繼承的示範，此為 JavaScript 支援的單一繼承.。</p>
 
 <pre class="brush: js">// Shape - 父類別
 function Shape() {
@@ -63,7 +63,7 @@ console.log('Is rect an instance of Shape?', rect instanceof Shape);// true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 </pre>
 
-<p>也可像 mixin 繼承多個物件。</p>
+<p>也可像 mixin 繼承多個物件。</p>
 
 <pre class="brush: js">function MyClass() {
   SuperClass.call(this);
@@ -82,9 +82,9 @@ MyClass.prototype.myMethod = function() {
 };
 </pre>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign</a> 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill">有 polyfill</a>。如需支援較舊的瀏覽器，可使用第三方套件實現如 <a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a> 或 <a href="https://lodash.com/docs/#assign">_.assign()</a> 。</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign">Object.assign</a> 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill">有 polyfill</a>。如需支援較舊的瀏覽器，可使用第三方套件實現如 <a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a> 或 <a href="https://lodash.com/docs/#assign">_.assign()</a> 。</p>
 
-<h3 id="propertiesObject_參數的使用"><code>propertiesObject</code> 參數的使用</h3>
+<h3 id="propertiesObject_參數的使用"><code>propertiesObject</code> 參數的使用</h3>
 
 <pre class="brush: js">var o;
 
@@ -154,7 +154,7 @@ o2 = Object.create({}, {
 
 <p>此 polyfill 涵蓋了主要的使用情境：指定一個原型創建一個新的物件，第二個參數為選用。</p>
 
-<p>要注意的是在 ES5 的<code>Object.create</code>中， <code>[[Prototype]]</code> 可以為 <code>null</code>，但在ECMAScript 5 以前的版本，polyfill 會因為繼承限制( limitation inherent )而不支援此情形。</p>
+<p>要注意的是在 ES5 的<code>Object.create</code>中， <code>[[Prototype]]</code> 可以為 <code>null</code>，但在ECMAScript 5 以前的版本，polyfill 會因為繼承限制( limitation inherent )而不支援此情形。</p>
 
 <pre><code>if (typeof Object.create !== "function") {
     Object.create = function (proto, propertiesObject) {

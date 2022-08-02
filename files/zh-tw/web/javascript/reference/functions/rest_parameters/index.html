@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 
 <p>如果函式的最後一個命名參數以 <code>...</code> 開頭，它會被視為一個陣列。該陣列的元素會被置於索引從 <code>0</code>（含）到的 <code>theArgs.length</code>（不含）位置，並且被視為一個函式的參數。</p>
 
-<p>在上面的範例中，<code>theArgs</code> 會將函式f中第三個(含)以後的參數收集起來。</p>
+<p>在上面的範例中，<code>theArgs</code> 會將函式f中第三個(含)以後的參數收集起來。</p>
 
 <h3 id="其餘參數和_arguments_物件的差異">其餘參數和 <code>arguments</code> 物件的差異</h3>
 
@@ -26,13 +26,13 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 
 <ul>
  <li>其餘參數是 <code>arguments</code> 物件被傳入到函式的時候，還沒被指定變數名稱的引數。</li>
- <li><code>arguments</code> 物件不是一個實際的陣列，而 rest parameter 是陣列的實體，即 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code> 或 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop</a></code> 可以直接在其餘參數被調用。</li>
- <li><code>arguments</code> 物件自身有額外的功能，例如 <code>callee</code> 屬性。</li>
+ <li><code>arguments</code> 物件不是一個實際的陣列，而 rest parameter 是陣列的實體，即 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">sort</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a></code>、<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code> 或 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">pop</a></code> 可以直接在其餘參數被調用。</li>
+ <li><code>arguments</code> 物件自身有額外的功能，例如 <code>callee</code> 屬性。</li>
 </ul>
 
 <h3 id="將參數轉成陣列">將參數轉成陣列</h3>
 
-<p>其餘參數被介紹作為取代用 arguments 寫的範例程式。</p>
+<p>其餘參數被介紹作為取代用 arguments 寫的範例程式。</p>
 
 <pre class="brush: js">// 在有其餘參數之前，你可能見過下面的程式碼：
 function f(a, b) {
@@ -102,7 +102,7 @@ function sortArguments() {
 console.log(sortArguments(5, 3, 7, 1)); // 會拋出 TypeError (arguments.sort is not a function)
 </pre>
 
-<p>為了要在 <code>arguments</code> 物件上使用 <code>Array</code> 的方法，可以將它轉換成真的 <code>Array</code> 實體，或者以 <code>apply()</code> 直接調用需要的方法。</p>
+<p>為了要在 <code>arguments</code> 物件上使用 <code>Array</code> 的方法，可以將它轉換成真的 <code>Array</code> 實體，或者以 <code>apply()</code> 直接調用需要的方法。</p>
 
 <pre class="brush: js">function sortArguments() {
   var args = Array.from(arguments);

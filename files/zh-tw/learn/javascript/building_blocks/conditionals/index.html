@@ -24,7 +24,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <h2 id="你可以擁有一個條件..!">你可以擁有一個條件..!</h2>
 
-<p>從小到大，人們(和其它動物)作出決定的時間會影響到他們的生活 ("我應該吃一個或兩個餅乾?")  ("我應該留在我的家鄉並在我父親的農場工作還是應該要到美國研讀天體物理學?")</p>
+<p>從小到大，人們(和其它動物)作出決定的時間會影響到他們的生活 ("我應該吃一個或兩個餅乾?")  ("我應該留在我的家鄉並在我父親的農場工作還是應該要到美國研讀天體物理學?")</p>
 
 <p>條件敘述句（Conditional statements）讓我們能將這些決定的過程在Javascript表示出來，從一定得做出的選擇（例如：「吃一個或兩個餅乾」），到這些選擇的結果（或許「吃一個餅乾」會出現「還是會餓」這種結果，而「吃兩個餅乾」的結果會是「吃飽了，但因為吃了全部餅乾而被媽媽罵」）。</p>
 
@@ -32,7 +32,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <h2 id="if_..._else_敘述句">if ... else 敘述句</h2>
 
-<p>讓我們來看Javascript中最常見的條件敘述句 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"> statement</a>.</p>
+<p>讓我們來看Javascript中最常見的條件敘述句 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if ... else</a></code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"> statement</a>.</p>
 
 <h3 id="基本的_if_..._else_語法">基本的 if ... else 語法</h3>
 
@@ -47,14 +47,14 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 <p>這邊我們可以得知基礎的架構：</p>
 
 <ol>
- <li>關鍵字 <code>if</code> 和後頭的括號。</li>
- <li>想測試的條件放在括號中（通常像是「這個值是否大於其他值」或是「這個值是否存在」等等）。這裡的條件會使用先前提過的 <a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">比較運算子</a>（<a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">comparison operators</a>），並且最後會回傳 <code>true</code> 或是 <code>false</code>。</li>
- <li>第一組大括號，在大括號裡面有一些程式碼 — 內容可以是任何我們所需要執行的程式碼，並且只有在條件句回傳 <code>true</code> 才會執行。</li>
- <li>關鍵字 <code>else</code>。</li>
- <li>另一組大括號，在大括號中我們一樣是放置所需的程式碼，並只有在條件句回傳 <code>false</code> 才會執行。</li>
+ <li>關鍵字 <code>if</code> 和後頭的括號。</li>
+ <li>想測試的條件放在括號中（通常像是「這個值是否大於其他值」或是「這個值是否存在」等等）。這裡的條件會使用先前提過的 <a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">比較運算子</a>（<a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">comparison operators</a>），並且最後會回傳 <code>true</code> 或是 <code>false</code>。</li>
+ <li>第一組大括號，在大括號裡面有一些程式碼 — 內容可以是任何我們所需要執行的程式碼，並且只有在條件句回傳 <code>true</code> 才會執行。</li>
+ <li>關鍵字 <code>else</code>。</li>
+ <li>另一組大括號，在大括號中我們一樣是放置所需的程式碼，並只有在條件句回傳 <code>false</code> 才會執行。</li>
 </ol>
 
-<p>這個程式碼的架構很容易理解  — 「如果條件回傳 <code>true</code> ，則執行程式A，否則執行程式B」。</p>
+<p>這個程式碼的架構很容易理解  — 「如果條件回傳 <code>true</code> ，則執行程式A，否則執行程式B」。</p>
 
 <p>值得注意的是，<code>else</code> 和第二組大括號並不是必要的。如以下範例也能夠執行：</p>
 
@@ -149,7 +149,7 @@ function setWeather() {
 <p>Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our <a href="/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators">Basic math in JavaScript — numbers and operators</a> article. Our choices are:</p>
 
 <ul>
- <li><code>===</code> and <code>!==</code> — test if one value is identical to, or not identical to, another.</li>
+ <li><code>===</code> and <code>!==</code> — test if one value is identical to, or not identical to, another.</li>
  <li><code>&lt;</code> and <code>&gt;</code> — test if one value is less than or greater than another.</li>
  <li><code>&lt;=</code> and <code>&gt;=</code> — test if one value is less than or equal to, or greater than or equal to, another.</li>
 </ul>
@@ -158,7 +158,7 @@ function setWeather() {
 <p><strong>Note</strong>: Review the material at the previous link if you want to refresh your memories on these.</p>
 </div>
 
-<p>We wanted to make a special mention of testing boolean (<code>true</code>/<code>false</code>) values, and a common pattern you'll come across again and again. Any value that is not <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>, or an empty string (<code>''</code>) actually returns <code>true</code> when tested as a conditional statement, therefore you can simply use a variable name on its own to test whether it is <code>true</code>, or even that it exists (i.e. it is not undefined.) So for example:</p>
+<p>We wanted to make a special mention of testing boolean (<code>true</code>/<code>false</code>) values, and a common pattern you'll come across again and again. Any value that is not <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>, or an empty string (<code>''</code>) actually returns <code>true</code> when tested as a conditional statement, therefore you can simply use a variable name on its own to test whether it is <code>true</code>, or even that it exists (i.e. it is not undefined.) So for example:</p>
 
 <pre class="brush: js">var cheese = 'Cheddar';
 
@@ -241,7 +241,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
   // run my code
 }</pre>
 
-<p>In this case the condition inside <code>if(...)</code>  will always evaluate to true since 7 (or any other non-zero value) always evaluates to true. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:</p>
+<p>In this case the condition inside <code>if(...)</code>  will always evaluate to true since 7 (or any other non-zero value) always evaluates to true. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:</p>
 
 <pre class="brush: js">if (x === 5 || x === 7 || x === 10 ||x === 20) {
   // run my code
@@ -390,7 +390,7 @@ select.onchange = function() {
  <li>A function called <code>createCalendar()</code> that draws the calendar and displays the correct month in the {{htmlelement("h1")}} element.</li>
 </ul>
 
-<p>We need you to write a conditional statement inside the <code>onchange</code> handler function, just below the <code>// ADD CONDITIONAL HERE</code> comment. It should:</p>
+<p>We need you to write a conditional statement inside the <code>onchange</code> handler function, just below the <code>// ADD CONDITIONAL HERE</code> comment. It should:</p>
 
 <ol>
  <li>Look at the selected month (stored in the <code>choice</code> variable. This will be the <code>&lt;select&gt;</code> element value after the value changes, so "January" for example.)</li>

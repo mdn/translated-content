@@ -71,7 +71,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 <p>這看起來和 Person 建構子有許多地方類似，但比較奇怪的就是之前沒看過的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code> 函式。此函式基本上可讓你呼叫在其他地方定義的函數，而非目前內文 (context) 中定義的函式。當執行函式時，第一個參數用來指定你要使用 <code>this</code> 值，其他參數則指定應該傳送到該函式的參數。</p>
 
 <div class="note">
-<p><strong>注意：</strong>我們此範例中建立新的物件實例時，會指定所要繼承的屬性。但必須注意的是，即使實例不需將屬性指定為參數，你還是必須在建構子中將屬性指定為參數  (在建立物件時，你可能獲得設定為隨意值的屬性)。</p>
+<p><strong>注意：</strong>我們此範例中建立新的物件實例時，會指定所要繼承的屬性。但必須注意的是，即使實例不需將屬性指定為參數，你還是必須在建構子中將屬性指定為參數  (在建立物件時，你可能獲得設定為隨意值的屬性)。</p>
 </div>
 
 <p>所以這裡可在 <code>Teacher()</code> 建構子函式之內有效執行 <code>Person() </code>建構子函式 (如上述)，藉以在 <code>Teacher()</code> 之內定義相同的屬性，但使用的是傳送到 <code>Teacher()</code> 的屬性值，而非 <code>Person()</code> 的屬性值 (我們將 <code>this</code> 值設為簡單的「<code>this」並</code>傳送到 <code>call()</code>，代表這個 <code>this</code> 是 <code>Teacher()</code> 的函式)。</p>
@@ -100,7 +100,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 <ol>
  <li>繼續在現有程式碼下方加入：
   <pre class="brush: js">Teacher.prototype = Object.create(Person.prototype);</pre>
-  這裡再次用好朋友 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> 解救。我們透過 <code>create()</code> 並搭配等同於 <code>Person.prototype</code> 的原型，建立新的 <code>prototype</code> 屬性值 (它本身就是物件，包含屬性與函式) ，並將之設定為 <code>Teacher.prototype</code> <code>的值。也就是說</code> <code>Teacher.prototype</code> 現在會繼承 <code>Person.prototype</code> 上的所有可用函式。</li>
+  這裡再次用好朋友 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> 解救。我們透過 <code>create()</code> 並搭配等同於 <code>Person.prototype</code> 的原型，建立新的 <code>prototype</code> 屬性值 (它本身就是物件，包含屬性與函式) ，並將之設定為 <code>Teacher.prototype</code> <code>的值。也就是說</code> <code>Teacher.prototype</code> 現在會繼承 <code>Person.prototype</code> 上的所有可用函式。</li>
  <li>此外，基於我們的繼承方式，<code>Teacher()</code> <code>prototype</code> 的建構子屬性目前設定為 <code>Person()。可參閱</code> <a href="https://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor">Stack Overflow post</a> 進一步了解原因。可先儲存自己的程式碼、在瀏覽器中載入頁面，再將下列程式碼輸入至 JavaScript 主控台以驗證：
   <pre class="brush: js">Teacher.prototype.constructor</pre>
  </li>
@@ -112,7 +112,7 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <h2 id="給_Teacher()_新的_greeting()_函式">給 Teacher() 新的 greeting() 函式</h2>
 
-<p>接著必須在 <code>Teacher()</code> 建構子上定義新的 <code>greeting()</code> 函式。</p>
+<p>接著必須在 <code>Teacher()</code> 建構子上定義新的 <code>greeting()</code> 函式。</p>
 
 <p>最簡單的方法就是在 <code>Teacher()</code> 的原型上定義此函式。將下列加入程式碼最底部：</p>
 

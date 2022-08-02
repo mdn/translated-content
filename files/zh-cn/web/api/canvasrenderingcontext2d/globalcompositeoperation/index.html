@@ -10,7 +10,7 @@ translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 
 <p>Canvas 2D API 的 <strong><code>CanvasRenderingContext2D.globalCompositeOperation</code></strong> 属性设置要在绘制新形状时应用的合成操作的类型，其中 type 是用于标识要使用的合成或混合模式操作的字符串。</p>
 
-<p>在 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中查看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">Compositing</a> 章节。</p>
+<p>在 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中查看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing">Compositing</a> 章节。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 
 <h3 id="Using_the_globalAlpha_property">使用 <code>globalCompositeOperation</code> 属性</h3>
 
-<p>这是一段使用 <code>globalCompositeOperation</code> 属性的简单的代码片段，绘制了 2 个矩形在重叠时相互排斥的情况。</p>
+<p>这是一段使用 <code>globalCompositeOperation</code> 属性的简单的代码片段，绘制了 2 个矩形在重叠时相互排斥的情况。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -52,8 +52,8 @@ ctx.fillRect(50, 50, 100, 100);
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code" style="height:120px;"&gt;
 ctx.globalCompositeOperation = "xor";
@@ -104,13 +104,13 @@ window.addEventListener("load", drawCanvas);
 <h3 id="WebKitBlink-specific_注解">WebKit/Blink-specific 注解</h3>
 
 <ul>
- <li>在基于 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不标准的并且不赞成使用的方法 <code>ctx.setCompositeOperation()</code>。</li>
+ <li>在基于 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不标准的并且不赞成使用的方法 <code>ctx.setCompositeOperation()</code>。</li>
 </ul>
 
 <h3 id="Gecko-specific_注解">Gecko-specific 注解</h3>
 
 <ul>
- <li>早起的规范草案指定了 "darker"值。然而，Firefox 在第 4 个版本 ({{bug(571532)}}) 移除了对 "darker"的支持。参见<a href="http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker">这篇文章</a>建议如何使用不同的值实现和"darker"类似的效果。</li>
+ <li>早起的规范草案指定了 "darker"值。然而，Firefox 在第 4 个版本 ({{bug(571532)}}) 移除了对 "darker"的支持。参见<a href="http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker">这篇文章</a>建议如何使用不同的值实现和"darker"类似的效果。</li>
 </ul>
 
 <h2 id="参见">参见</h2>

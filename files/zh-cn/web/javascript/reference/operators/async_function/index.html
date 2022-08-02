@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Operators/async允许声明一个函数�
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<div> </div>
+<div> </div>
 
 <p><strong><code>async function</code></strong> 关键字用来在表达式中定义异步函数。当然，你也可以用 {{jsxref('Statements/async_function', '异步函数语句')}} 来定义。</p>
 
@@ -59,36 +59,21 @@ add1(10).then(v =&gt; {
 });
 
 (async function(x) { // async function expression used as an IIFE
-  var p_a = resolveAfter2Seconds(20);
-  var p_b = resolveAfter2Seconds(30);
-  return x + await p_a + await p_b;
+  var p_a = resolveAfter2Seconds(20);
+  var p_b = resolveAfter2Seconds(30);
+  return x + await p_a + await p_b;
 })(10).then(v =&gt; {
-  console.log(v);  // 2 秒后打印 60
+  console.log(v);  // 2 秒后打印 60
 });
 </pre>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>ES2017 中的初始定义</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{Compat("javascript.operators.async_function_expression")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="相关链接">相关链接</h2>
 
