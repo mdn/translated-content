@@ -3,66 +3,49 @@ title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
 translation_of: Web/API/MediaSource/addSourceBuffer
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<p>{{domxref("MediaSource")}} 的 <code><strong>addSourceBuffer()</strong></code> 方法会根据给定的 MIME 类型创建一个新的 {{domxref("SourceBuffer")}} 对象，然后会将它追加到 <code>MediaSource 的</code> {{domxref("SourceBuffers")}} 列表中。</p>
+{{domxref("MediaSource")}} 的 **`addSourceBuffer()`** 方法会根据给定的 MIME 类型创建一个新的
+{{domxref("SourceBuffer")}} 对象，然后会将它追加到 `MediaSource 的` {{domxref("SourceBuffers")}} 列表中。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="brush: js">var sourceBuffer = mediaSource.addSourceBuffer(mimeType);</pre>
+```js
+var sourceBuffer = mediaSource.addSourceBuffer(mimeType);
+```
 
-<h3 id="参数">参数</h3>
+### 参数
 
-<dl>
- <dt>mimeType</dt>
- <dd>你想创建的 source buffer 的 MIME 类型。</dd>
-</dl>
+- mimeType
+  - : 你想创建的 source buffer 的 MIME 类型。
 
-<h3 id="返回">返回</h3>
+### 返回值
 
-<p>一个 {{domxref("SourceBuffer")}} 对象。</p>
+一个 {{domxref("SourceBuffer")}} 对象。
 
-<h3 id="错误（_Errors_）">错误（ Errors ）</h3>
+### 异常
 
-<p>下面的错误可能会在调用该方法时被抛出。</p>
+下面的错误可能会在调用该方法时被抛出。
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Error</th>
-   <th scope="col">Explanation</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>InvalidAccessError</code></td>
-   <td>提交的 <code>mimeType</code> 是一个空字符串。</td>
-  </tr>
-  <tr>
-   <td><code>InvalidStateError</code></td>
-   <td>{{domxref("MediaSource.readyState")}} 的值不等于 <code>open</code>.</td>
-  </tr>
-  <tr>
-   <td><code>NotSupportedError</code></td>
-   <td>当前浏览器不支持你提交的 <code>mimeType</code> , 或者 it is not compatible with the <code>mimeType</code>s specified for the {{domxref("SourceBuffer")}} objects that already exist in {{domxref("MediaSource.sourceBuffers")}}.</td>
-  </tr>
-  <tr>
-   <td><code>QuotaExceededError</code></td>
-   <td>The user agent can't handle any more SourceBuffer objects, or creating a SourceBuffer based on this <code>mimeType</code> would result in an unsupported <a href="https://w3c.github.io/media-source/#sourcebuffer-configuration">SourceBuffer configuration.</a></td>
-  </tr>
- </tbody>
-</table>
+| Error                | Explanation                                                                                                                                                                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidAccessError` | 提交的 `mimeType` 是一个空字符串。                                                                                                                                                                                                          |
+| `InvalidStateError`  | {{domxref("MediaSource.readyState")}} 的值不等于 `open`.                                                                                                                                                                                    |
+| `NotSupportedError`  | 当前浏览器不支持你提交的 `mimeType` , 或者 it is not compatible with the `mimeType`s specified for the {{domxref("SourceBuffer")}} objects that already exist in {{domxref("MediaSource.sourceBuffers")}}.                                  |
+| `QuotaExceededError` | The user agent can't handle any more SourceBuffer objects, or creating a SourceBuffer based on this `mimeType` would result in an unsupported [SourceBuffer configuration.](https://w3c.github.io/media-source/#sourcebuffer-configuration) |
 
-<h2 id="Example">Example</h2>
+## 示例
 
-<p>The following snippet is from a simple example written by Nick Desaulniers (<a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">view the full demo live</a>, or <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">download the source</a> for further investigation.)</p>
+The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for
+further investigation.)
 
-<pre class="brush: js  language-js">var assetURL = 'frag_bunny.mp4';
+```js
+var assetURL = 'frag_bunny.mp4';
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-<code class="language-js">if ('MediaSource' in window &amp;&amp; MediaSource.isTypeSupported(mimeCodec)) {
+if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource;
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
@@ -83,19 +66,18 @@ function sourceOpen (_) {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};</code></pre>
+};
+```
 
-<h2 id="Specifications">Specifications</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 浏览器兼容性
 
-{{Compat("api.MediaSource.addSourceBuffer")}}
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## 参见
 
-<ul>
- <li>{{domxref("SourceBuffer")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("SourceBuffer")}}
+- {{domxref("SourceBufferList")}}
