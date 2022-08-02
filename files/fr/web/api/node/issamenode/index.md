@@ -9,7 +9,9 @@ La méthode **`Node.isSameNode()`** teste si deux noeuds sont identiques, c'est-
 
 ## Syntaxe
 
-    var isSameNode = node.isSameNode(other);
+```js
+var isSameNode = node.isSameNode(other);
+```
 
 ### Paramètres
 
@@ -31,12 +33,12 @@ Dans cet exemple, nous créons 3 blocs {{HTMLElement("div")}}. Le premier et le 
 
 ```css hidden
 #output {
-  width: 440px;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 20px;
-  display: block;
+  width: 440px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  display: block;
 }
 ```
 

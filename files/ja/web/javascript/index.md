@@ -54,7 +54,7 @@ JavaScript について学びたいと思っているが、JavaScript あるい�
 - [クライアント側の JavaScript フレームワークの理解](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : JavaScript フレームワークは、最新のフロントエンドウェブ開発に欠かせないもので、拡張性のある双方向のウェブアプリケーションを構築するための、試行錯誤されたツールを開発者に提供します。幾つかの有名なツールについて取り扱うチュートリアルに移動する前に、クライアントサイドのフレームワークがどのように動作するのか、自分のツールセットにどのように適合させるか、についての基本的な背景知識を提供します。
 - [JavaScript 再入門](/ja/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
-  - : JavaScriptについて知っている*と思っている*人のための概要です。
+  - : JavaScript について知っている*と思っている*人のための概要です。
 - [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)
   - : JavaScript で利用可能なデータ構造の概要です。
 - [等値比較と同一性](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)

@@ -117,6 +117,7 @@ function errorCallback(error) {
 ## 例
 
 以下の例では、位置情報 API はユーザーの経度と緯度を取得するために使用されます。成功した場合、その位置を表示する `openstreetmap.org` の URL の有効なハイパーリンクが表示されます。
+
 ```css hidden
 body {
   padding: 20px;

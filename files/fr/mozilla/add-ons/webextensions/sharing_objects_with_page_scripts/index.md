@@ -44,7 +44,7 @@ Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray
 
 ## Accès aux objets de script de page à partir de scripts de contenu
 
-Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une propriété supplémentaire `wrappedJSObject`. C'est une version "déballée" de l'objet, qui inclut toutes les modifications apportées à cet objet par les scripts de page.
+Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une propriété supplémentaire `wrappedJSObject`. C'est une version "déballée" de l'objet, qui inclut toutes les modifications apportées à cet objet par les scripts de page.
 
 Prenons un exemple simple. Supposons qu'une page Web charge un script:
 
@@ -88,7 +88,9 @@ Notez qu'une fois que vous faites cela, vous ne pouvez plus compter sur les prop
 
 Notez également que le déballage est transitif: lorsque vous utilisez `wrappedJSObject`, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:
 
-    XPCNativeWrapper(window.wrappedJSObject.foo);
+```js
+XPCNativeWrapper(window.wrappedJSObject.foo);
+```
 
 voir le document [vision Xray](/fr/Tech/Xray_vision) pour plus de détails à ce sujet.
 
@@ -138,7 +140,7 @@ browser.runtime.onMessage.addListener((message) => {
 Cela fait deux choses :
 
 - exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur
-- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications)  lorsque le message arrive.
+- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications)  lorsque le message arrive.
 
 Le script de contenu ressemble à ceci :
 

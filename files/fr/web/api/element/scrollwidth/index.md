@@ -13,24 +13,28 @@ translation_of: Web/API/Element/scrollWidth
 
 ### Syntaxe
 
-    var xScrollWidth = element.scrollWidth;
+```js
+var xScrollWidth = element.scrollWidth;
+```
 
 _xScrollWidth_ est la largeur du contenu d'_element_ en pixels.
 
 ### Exemple
 
-    <div id="aDiv"
-         style="width: 100px; height: 200px; overflow: auto;"
-    >-FooBar-FooBar-FooBar</div>
-    <br>
-    <input type="button" value="Show scrollWidth"
-           onclick="alert(document.getElementById('aDiv').scrollWidth);">
+```html
+<div id="aDiv"
+      style="width: 100px; height: 200px; overflow: auto;"
+>-FooBar-FooBar-FooBar</div>
+<br>
+<input type="button" value="Show scrollWidth"
+        onclick="alert(document.getElementById('aDiv').scrollWidth);">
+```
 
 ### Spécification
 
 Il n'y a pas de spécification du W3C pour **scrollWidth**.
 
-Un brouillon de l'éditeur existe cependant : [Cascading Style Sheets Object Model (CSSOM)](http://dev.w3.org/cvsweb/~checkout~/csswg/cssom/Overview.src.html)
+Un brouillon de l'éditeur existe cependant&nbsp;: [Cascading Style Sheets Object Model (CSSOM)](http://dev.w3.org/cvsweb/~checkout~/csswg/cssom/Overview.src.html)
 
 ### Références
 

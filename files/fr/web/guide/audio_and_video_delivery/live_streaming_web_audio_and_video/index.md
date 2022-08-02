@@ -66,7 +66,7 @@ Par exemple:
 </video>
 ```
 
-## Extensions de Sources Média  (MSE)
+## Extensions de Sources Média  (MSE)
 
 [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) est un brouillon de travail de W3C qui prévoit d'étendre {{ domxref("HTMLMediaElement") }} pour permettre à JavaScript de générer des flux média pour la lecture. Permettre à JavaScript de générer des streams facilite toute une variété de cas d'utilisations comme le streaming adaptatif et le décalage temporel des live streams.
 
@@ -101,16 +101,16 @@ Au début de la session de streaming, une [playlist M3U étendue (m3u8)](http://
 | Navigateur               | DASH  | HLS   | Opus (Audio) |
 | ------------------------ | ----- | ----- | ------------ |
 | Firefox 32               | ✓ [1] | ✓ [2] | ✓ 14+        |
-| Safari 6+                |       | ✓     |              |
-| Chrome 24+               | ✓ [1] | ✓     |              |
-| Opera 20+                | ✓ [1] |       |              |
-| Internet Explorer 10+    | ✓ 11  | ✓ [2] |              |
+| Safari 6+                |       | ✓     |              |
+| Chrome 24+               | ✓ [1] | ✓     |              |
+| Opera 20+                | ✓ [1] |       |              |
+| Internet Explorer 10+    | ✓ 11  | ✓ [2] |              |
 | Firefox Mobile           | ✓     | ✓     | ✓            |
-| Safari iOS6+             |       | ✓     |              |
-| Chrome Mobile            | ✓     | ✓ [2] |              |
-| Opera Mobile             | ✓ [1] | ✓     |              |
-| Internet Explorer Mobile | ✓ 11  | ✓ [2] |              |
-| Android                  | ✓     |       |              |
+| Safari iOS6+             |       | ✓     |              |
+| Chrome Mobile            | ✓     | ✓ [2] |              |
+| Opera Mobile             | ✓ [1] | ✓     |              |
+| Internet Explorer Mobile | ✓ 11  | ✓ [2] |              |
+| Android                  | ✓     |       |              |
 
 \[1] Via JavaScript et MSE
 
@@ -160,7 +160,7 @@ Pour le transfert RTMP, vous pouvez utiliser le [module Nginx RTMP](https://gith
 
 ### Icecast
 
-Le serveur [Icecast](http://www.icecast.org/) est une technologie open source pour diffuser des média en streaming. Maintenu par [Xiph.org Foundation](http://www.xiph.org/), il diffuse les formats Ogg Vorbis/Theora ainsi que MP3 et AAC  via le protocole SHOUTcast.
+Le serveur [Icecast](http://www.icecast.org/) est une technologie open source pour diffuser des média en streaming. Maintenu par [Xiph.org Foundation](http://www.xiph.org/), il diffuse les formats Ogg Vorbis/Theora ainsi que MP3 et AAC via le protocole SHOUTcast.
 
 > **Note :** SHOUTcast et Icecast font partie des technologies les plus répandues et les plus populaires, mais il existe de nombreux [autres systèmes de diffusion en streaming disponibles](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 

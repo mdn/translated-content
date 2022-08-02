@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<p><code><strong>toLocaleString()</strong></code> 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 <code>toLocaleString</code> 方法转成字符串，这些字符串将使用一个特定语言环境的字符串（例如一个逗号 ","）隔开。</p>
+<p><code><strong>toLocaleString()</strong></code> 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 <code>toLocaleString</code> 方法转成字符串，这些字符串将使用一个特定语言环境的字符串（例如一个逗号 ","）隔开。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}</div>
 
@@ -20,10 +20,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 <h3 id="参数">参数</h3>
 
 <dl>
- <dt><code>locales</code> {{optional_inline}}</dt>
- <dd>带有BCP 47语言标记的字符串或字符串数组，关于<code>locales</code>参数的形式与解释，请看{{jsxref("Intl")}}页面。</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>一个可配置属性的对象，对于数字 {{jsxref("Number.prototype.toLocaleString()")}}，对于日期{{jsxref("Date.prototype.toLocaleString()")}}.</dd>
+ <dt><code>locales</code> {{optional_inline}}</dt>
+ <dd>带有 BCP 47 语言标记的字符串或字符串数组，关于<code>locales</code>参数的形式与解释，请看{{jsxref("Intl")}}页面。</dd>
+ <dt><code>options</code> {{optional_inline}}</dt>
+ <dd>一个可配置属性的对象，对于数字 {{jsxref("Number.prototype.toLocaleString()")}}，对于日期{{jsxref("Date.prototype.toLocaleString()")}}.</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -136,35 +136,17 @@ if (!Array.prototype.toLocaleString) {
 }
 </pre>
 
-<p>如果你需要支持真正不支持<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的JavaScript引擎，最好不要对<code>Array.prototype</code>方法进行填充，因为你不能使它们不可枚举。</p>
+<p>如果你需要支持真正不支持<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的 JavaScript 引擎，最好不要对<code>Array.prototype</code>方法进行填充，因为你不能使它们不可枚举。</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Initial definition was in ECMAScript 3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sup-array.prototype.tolocalestring', 'Array.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td>This definition supersedes the definition provided in ECMA-262.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 
 
-<p>{{Compat("javascript.builtins.Array.toLocaleString")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">参见</h2>
 

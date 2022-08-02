@@ -44,7 +44,7 @@ La précision de la valeur retournée est susceptible de changer si/quand les pr
 
 Contrairement aux autres données de temps disponibles en JavaScript (par exemple [`Date.now`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/now)), les horodatages retournés par `Performance.now()` ne sont pas limités à une précision d'une milliseconde. Au contraire, ils représentent les temps comme des nombres flottants avec une précision pouvant aller jusqu'à une microseconde.
 
-Également contrairement à `Date.now()`, les valeurs retournées par `Performance.now() `sont toujours incrémentées à un taux constant, indépendant de l'horloge du système (qui peut être ajustée manuellement ou par l'intermédiaire d'un logiciel comme NTP). Sinon, `performance.timing.navigationStart + performance.now()` serait approximativement égal à `Date.now().`
+Également contrairement à `Date.now()`, les valeurs retournées par `Performance.now()` sont toujours incrémentées à un taux constant, indépendant de l'horloge du système (qui peut être ajustée manuellement ou par l'intermédiaire d'un logiciel comme NTP). Sinon, `performance.timing.navigationStart + performance.now()` serait approximativement égal à `Date.now()`.
 
 ## Précision réduite du temps
 

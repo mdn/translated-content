@@ -22,7 +22,7 @@ Après l'article précédent, il peut être difficile de créer des contrôles U
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">  Prerequis:</th>
+      <th scope="row">  Prerequis:</th>
       <td>
         Connaissances informatiques de base, une compréhension de base de HTML,
         CSS et JavaScript, une compréhension des
@@ -48,7 +48,7 @@ Commençons par regarder ce que WAI-ARIA est , et ce qu’il peut faire pour nou
 
 Car les applications web ont commencé à devenir plus complexes et dynamiques, un nouvel ensemble de fonctionnalités d'accessibilité et de problèmes ont commencé à apparaître.
 
-Par exemple, HTML5 a introduit un certain nombre d’éléments sémantiques pour définir des fonctionnalités de page communes  ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.)  Avant de les utiliser, les développeurs utilisaient simplement {{htmlelement("div")}} s avec des identifiants ou des classes, par exemple `<div class="nav">` , mais ils posaient problème, car il n’existait pas de moyen facile de trouver facilement une fonctionnalité de page spécifique telle que la navigation principale par programmation. .
+Par exemple, HTML5 a introduit un certain nombre d’éléments sémantiques pour définir des fonctionnalités de page communes  ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.)  Avant de les utiliser, les développeurs utilisaient simplement {{htmlelement("div")}} s avec des identifiants ou des classes, par exemple `<div class="nav">` , mais ils posaient problème, car il n’existait pas de moyen facile de trouver facilement une fonctionnalité de page spécifique telle que la navigation principale par programmation. .
 
 La solution initiale consistait à ajouter un ou plusieurs liens cachés en haut de la page pour créer un lien vers la navigation (ou autre), par exemple:
 
@@ -58,7 +58,7 @@ La solution initiale consistait à ajouter un ou plusieurs liens cachés en haut
 
 Mais ceci n’est pas encore très précis et ne peut être utilisé que lorsque le lecteur d’écran lit en haut de la page.
 
-Autre exemple, les applications ont commencé à comporter des commandes complexes telles que des sélecteurs de date pour choisir les dates, des curseurs pour choisir des valeurs, etc. HTML5 fournit des types spéciaux  input pour rendre de tels contrôles:
+Autre exemple, les applications ont commencé à comporter des commandes complexes telles que des sélecteurs de date pour choisir les dates, des curseurs pour choisir des valeurs, etc. HTML5 fournit des types spéciaux input pour rendre de tels contrôles:
 
 ```html
 <input type="date">
@@ -74,28 +74,28 @@ Le problème ici est que, visuellement, ils fonctionnent, mais que les lecteurs 
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) est une spécification écrite par le W3C et définissant un ensemble d'attributs HTML supplémentaires pouvant être appliqués aux éléments pour fournir une sémantique supplémentaire et améliorer l'accessibilité en cas de manque. Trois caractéristiques principales sont définies dans la spécification:
 
 - **Rôles** - Ceux-ci définissent ce qu'un élément est ou fait. Bon nombre de ces rôles sont des rôles de référence, qui dupliquent en grande partie la valeur sémantique des éléments structurels HTML5, par exemple role = "navigation" ({{htmlelement("nav")}}) ou `role="complementary"` ({{htmlelement("aside")}}) , mais il en existe d'autres qui décrivent différentes structures de pages, telles que `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"`, etc., que l'on trouve couramment dans les UIs.
-- **Propriétés**  — Ceux-ci définissent les propriétés des éléments, qui peuvent être utilisés pour leur donner une signification supplémentaire ou une sémantique. Par exemple, `aria-required="true"` spécifie qu'une entrée de formulaire doit être renseignée pour être valide, alors que `aria-labelledby="label"` vous permet de mettre un ID sur un élément, puis de le référencer en tant qu'étiquette pour tout autre élément de la page, y compris plusieurs éléments, ce qui n'est pas possible avec `<label for="input">`. À titre d'exemple, vous pouvez utiliser `aria-labelledby`  pour spécifier qu'une description de clé contenue dans un {{htmlelement("div")}}  est le label  de plusieurs cellules de tableau, ou vous pouvez l’utiliser comme alternative au texte alternatif d’image —  spécifiez les informations existantes sur la page en tant que texte alternatif d’image,  plutôt que de devoir les répéter à l'intérieur de l'attribut `alt`.  Vous pouvez voir un exemple de celà à [Alternatives textuelles](/fr/docs/Apprendre/a11y/HTML?document_saved=true#Alternatives_textuelles).
-- **États**  —  Propriétés spéciales qui définissent les conditions actuelles des éléments, telles que `aria-disabled="true"`, qui spécifient à un lecteur d'écran que l'entrée de formulaire est actuellement désactivée. Les états diffèrent des propriétés en ce que les propriétés ne changent pas tout au long du cycle de vie d'une application, alors que les états peuvent changer, généralement par programmation via JavaScript.
+- **Propriétés**  — Ceux-ci définissent les propriétés des éléments, qui peuvent être utilisés pour leur donner une signification supplémentaire ou une sémantique. Par exemple, `aria-required="true"` spécifie qu'une entrée de formulaire doit être renseignée pour être valide, alors que `aria-labelledby="label"` vous permet de mettre un ID sur un élément, puis de le référencer en tant qu'étiquette pour tout autre élément de la page, y compris plusieurs éléments, ce qui n'est pas possible avec `<label for="input">`. À titre d'exemple, vous pouvez utiliser `aria-labelledby`  pour spécifier qu'une description de clé contenue dans un {{htmlelement("div")}}  est le label de plusieurs cellules de tableau, ou vous pouvez l’utiliser comme alternative au texte alternatif d’image —  spécifiez les informations existantes sur la page en tant que texte alternatif d’image,  plutôt que de devoir les répéter à l'intérieur de l'attribut `alt`.  Vous pouvez voir un exemple de celà à [Alternatives textuelles](/fr/docs/Apprendre/a11y/HTML?document_saved=true#Alternatives_textuelles).
+- **États**  —  Propriétés spéciales qui définissent les conditions actuelles des éléments, telles que `aria-disabled="true"`, qui spécifient à un lecteur d'écran que l'entrée de formulaire est actuellement désactivée. Les états diffèrent des propriétés en ce que les propriétés ne changent pas tout au long du cycle de vie d'une application, alors que les états peuvent changer, généralement par programmation via JavaScript.
 
 Un point important sur les attributs WAI-ARIA est qu'ils n'affectent en rien la page Web, à l'exception des informations exposées par les API d'accessibilité du navigateur (où les lecteurs d'écran obtiennent leurs informations). WAI-ARIA n'affecte pas la structure de la page Web, le DOM, etc., bien que les attributs puissent être utiles pour sélectionner des éléments par CSS.
 
 > **Note :** Vous pouvez trouver une liste utile de tous les rôles ARIA et de leurs utilisations, avec des liens vers des informations supplémentaires, dans les spécifications WAI-ARIA — voir la [définition des rôles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions).
 >
-> La spécification contient également une liste de toutes les propriétés et de tous les états, avec des liens vers des informations complémentaires - voir  [Définitions des états et des propriétés (tous les attributs aria-*)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+> La spécification contient également une liste de toutes les propriétés et de tous les états, avec des liens vers des informations complémentaires - voir  [Définitions des états et des propriétés (tous les attributs aria-*)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ### Où WAI-ARIA est supporté?
 
 Ce n’est pas une question simple. Il est difficile de trouver une ressource concluante qui explicite quelles fonctionnalités de WAI-ARIA sont supportées où, parce que:
 
-1.  Il y a beaucoup de fonctionnalités dans la spécification WAI-ARIA
-2.  Il y a beaucoup de combinaisons de systèmes d’exploitation, navigateurs et lecteurs d’écrans à considérer
+1. Il y a beaucoup de fonctionnalités dans la spécification WAI-ARIA
+2. Il y a beaucoup de combinaisons de systèmes d’exploitation, navigateurs et lecteurs d’écrans à considérer
 
 Ce dernier point est la clé: pour utiliser un lecteur d’écran, votre système d’exploitation a besoin d’un navigateur ayant les APIs d’accessibilité nécessaires, de manière à présenter l’information dont les lecteurs d’écran ont besoin pour faire leur travail. Les systèmes d’exploitation les plus populaires ont un à deux navigateurs avec les quels les lecteurs d’écrans peuvent travailler. Le Paciello Group a un article plutôt à jour fournissant des informations pour ceci — voir [Rough Guide: browsers, operating systems and screen reader support updated](https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
 
 Ensuite, vous devez vous demander si les navigateurs en question supportent les fonctionnalités ARIA et les présenter via leurs APIs, mais aussi du fait que les lecteurs d’écrans reconnaissent ou non cette information et la présentent à leurs utilisateurs d’une manière utile.
 
-1.  Browser support is generally quite good — at the time of writing, [caniuse.com](http://caniuse.com/#feat=wai-aria) stated that global browser support for WAI-ARIA was around 88%.
-2.  Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/) article.
+1. Browser support is generally quite good — at the time of writing, [caniuse.com](http://caniuse.com/#feat=wai-aria) stated that global browser support for WAI-ARIA was around 88%.
+2. Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/) article.
 
 In this article, we won't attempt to cover every WAI-ARIA feature, and its exact support details. Instead, we will cover the most critical WAI-ARIA features for you to know about; if we don't mention any support details, you can assume that the feature is well-supported. We will clearly mention any exceptions to this.
 
@@ -105,10 +105,10 @@ In this article, we won't attempt to cover every WAI-ARIA feature, and its exact
 
 We talked about some of the problems that prompted WAI-ARIA to be created earlier on, but essentially, there are four main areas that WAI-ARIA is useful in:
 
-1.  **Signposts/Landmarks**: ARIA's `role` attribute values can act as landmarks that either replicate the semantics of HTML5 elements (e.g. {{htmlelement("nav")}}), or go beyond HTML5 semantics to provide signposts to different functional areas, e.g `search`, `tabgroup`, `tab`, `listbox`, etc.
-2.  **Dynamic content updates**: Screenreaders tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screenreader users when an area of content is updated, e.g. via [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest), or [DOM APIs](/fr/docs/Web/API/Document_Object_Model).
-3.  **Enhancing keyboard accessibility**: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
-4.  **Accessibility of non-semantic controls**: When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screenreader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tabgroup`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
+1. **Signposts/Landmarks**: ARIA's `role` attribute values can act as landmarks that either replicate the semantics of HTML5 elements (e.g. {{htmlelement("nav")}}), or go beyond HTML5 semantics to provide signposts to different functional areas, e.g `search`, `tabgroup`, `tab`, `listbox`, etc.
+2. **Dynamic content updates**: Screenreaders tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screenreader users when an area of content is updated, e.g. via [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest), or [DOM APIs](/fr/docs/Web/API/Document_Object_Model).
+3. **Enhancing keyboard accessibility**: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
+4. **Accessibility of non-semantic controls**: When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screenreader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tabgroup`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
 
 One thing to remember though — **you should only use WAI-ARIA when you need to!** Ideally, you should _always_ use [native HTML features](/fr/docs/Learn/Accessibility/HTML) to provide the semantics required by screenreaders to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
 
@@ -194,7 +194,7 @@ Now if we use VoiceOver to look at this example, we get some improvements:
 
 Beyond this, the site is more likely to be accessible to users of older browsers such as IE8; it is worth including ARIA roles for that purpose. And if for some reason your site is built using just `<div>`s, you should definitely include the ARIA roles to provide these much needed semantics!
 
-The improved semantics of the search form have shown what is made possible when ARIA goes beyond the semantics available in HTML5. You'll see a lot more about these semantics and the power of ARIA properties/attributes below, especially in the {{anch("Accessibility of non-semantic controls")}} section. For now though, let's look at how ARIA can help with dynamic content updates.
+The improved semantics of the search form have shown what is made possible when ARIA goes beyond the semantics available in HTML5. You'll see a lot more about these semantics and the power of ARIA properties/attributes below, especially in the [Accessibility of non-semantic controls](#accessibility_of_non-semantic_controls) section. For now though, let's look at how ARIA can help with dynamic content updates.
 
 ### Dynamic content updates
 
@@ -282,15 +282,15 @@ First of all, let's revisit the form example we first looked at in our CSS and J
 
 We could go further with our ARIA usage, and provide some more validation help. How about indicating whether fields are required in the first place, and what range the age should be?
 
-1.  At this point, take a copy of our [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) and [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) files, and save them in a local directory.
-2.  Open them both in a text editor and have a look at how the code works.
-3.  First of all, add a paragraph just above the opening `<form>` tag, like the one below, and mark both the form `<label>`s with an asterisk. This is normally how we mark required fields for sighted users.
+1. At this point, take a copy of our [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) and [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) files, and save them in a local directory.
+2. Open them both in a text editor and have a look at how the code works.
+3. First of all, add a paragraph just above the opening `<form>` tag, like the one below, and mark both the form `<label>`s with an asterisk. This is normally how we mark required fields for sighted users.
 
     ```html
     <p>Fields marked with an asterisk (*) are required.</p>
     ```
 
-4.  This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the `<input>` elements like so:
+4. This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the `<input>` elements like so:
 
     ```html
     <input type="text" name="name" id="name" aria-required="true">
@@ -298,8 +298,8 @@ We could go further with our ARIA usage, and provide some more validation help. 
     <input type="number" name="age" id="age" aria-required="true">
     ```
 
-5.  If you save the example now and test it with a screenreader, you should hear something like "Enter your name star, required, edit text".
-6.  It might also be useful if we give screenreader users and sighted users an idea of what the age value should be. This is often presented as a tooltip, or placeholder inside the form field perhaps. WAI-ARIA does include [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) and [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax) properties to specify min and max values, but these currently don't seem very well supported; a better supported feature is the HTML5 `placeholder` attribute, which can contain a message that is shown in the input when no value is entered, and is read out by a number of screenreaders. Update your number input like this:
+5. If you save the example now and test it with a screenreader, you should hear something like "Enter your name star, required, edit text".
+6. It might also be useful if we give screenreader users and sighted users an idea of what the age value should be. This is often presented as a tooltip, or placeholder inside the form field perhaps. WAI-ARIA does include [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) and [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax) properties to specify min and max values, but these currently don't seem very well supported; a better supported feature is the HTML5 `placeholder` attribute, which can contain a message that is shown in the input when no value is entered, and is read out by a number of screenreaders. Update your number input like this:
 
     ```html
     <input type="number" name="age" id="age" placeholder="Enter 1 to 150" aria-required="true">
@@ -307,7 +307,7 @@ We could go further with our ARIA usage, and provide some more validation help. 
 
 > **Note :** You can see the finished example live at [form-validation-updated.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
 
-WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) property to provide a label where we don't want the label to be visible to sighted users (see the {{anch("Signposts/Landmarks")}} section, above). There are some other labelling techniques that use other properties such as [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) if you want to designate a non-`<label>` element as a label or label multiple form inputs with the same label, and [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby), if you want to associate other information with a form input and have it read out as well. See [WebAIM's Advanced Form Labeling article](http://webaim.org/techniques/forms/advanced) for more details.
+WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) property to provide a label where we don't want the label to be visible to sighted users (see the [Signposts/Landmarks](#signposts/landmarks) section, above). There are some other labelling techniques that use other properties such as [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) if you want to designate a non-`<label>` element as a label or label multiple form inputs with the same label, and [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby), if you want to associate other information with a form input and have it read out as well. See [WebAIM's Advanced Form Labeling article](http://webaim.org/techniques/forms/advanced) for more details.
 
 There are many other useful properties and states too, for indicating the status of form elements. For example, `aria-disabled="true"` can be used to indicate that a form field is disabled. Many browsers will just skip past disabled form fields, and they won't even be read out by screenreaders, but in some cases they will be perceived, so it is a good idea to include this attribute to let the screenreader know that a disabled input is in fact disabled.
 
@@ -339,13 +339,15 @@ function toggleMusician(bool) {
 
 #### Describing non-semantic buttons as buttons
 
-A few times in this course already, we've mentioned the native accessibilty of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [UI controls](/fr/docs/Learn/Accessibility/HTML#UI_controls) in the HTML accessibility article, and {{anch("Enhancing keyboard accessibility")}}, above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
+A few times in this course already, we've mentioned the native accessibilty of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see [UI controls](/fr/docs/Learn/Accessibility/HTML#UI_controls) in the HTML accessibility article, and [Enhancing keyboard accessibility](#enhancing_keyboard_accessibility), above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using `tabindex` and a bit of JavaScript.
 
 But what about screenreaders? They still won't see the elements as buttons. If we test our [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) example in a screenreader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.
 
 We can fix this using a WAI-ARIA role. Make a local copy of [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html), and add [`role="button"`](https://www.w3.org/TR/wai-aria-1.1/#button) to each button `<div>`, for example:
 
-    <div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
+```html
+<div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
+```
 
 Now when you try this using a screenreader, you'll have buttons be reported using phrases like "Click me!, button" — much better.
 
@@ -363,9 +365,9 @@ To improve things, we've created a new version of the example called [aria-tabbe
 
 ```html
 <ul role="tablist">
-  <li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0">Tab 1</li>
-  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0">Tab 2</li>
-  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0">Tab 3</li>
+  <li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0">Tab 1</li>
+  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0">Tab 2</li>
+  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0">Tab 3</li>
 </ul>
 <div class="panels">
   <article class="active-panel" role="tabpanel" aria-hidden="false">
@@ -393,7 +395,7 @@ The new features are as follows:
 
 In our tests, this new structure did serve to improve things overall. The tabs are now recognised as tabs (e.g. "tab" is spoken by the screenreader), the selected tab is indicated by "selected" being read out with the tab name, and the screenreader also tells you which tab number you are currently on. In addition, because of the `aria-hidden` settings (only the non-hidden tab ever has `aria-hidden="false"` set), the non-hidden content is the only one you can navigate down to, meaning the selected content is easier to find.
 
-> **Note :** If there is anything you explicitly don't want screen readers to read out, you can give them the `aria-hidden="true"`  attribute.
+> **Note :** If there is anything you explicitly don't want screen readers to read out, you can give them the `aria-hidden="true"`  attribute.
 
 ## Summary
 

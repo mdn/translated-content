@@ -59,4 +59,3 @@ translation_of: Web/CSS/CSS_Logical_Properties/Sizing
 `both` のキーワード値は物理的または論理的に考えて動作します。これは両方を同時に設定します。以下の例を実行してみてください。
 
 {{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
-

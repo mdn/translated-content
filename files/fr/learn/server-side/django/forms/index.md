@@ -76,23 +76,23 @@ Voici ci-dessous un diagramme représentant les étapes de gestion d'un formulai
 
 En se basant sur la lecture du diagramme ci-dessus, les tâches principales dont s'acquitte Django à l'occasion de la gestion d'un formulaire sont&nbsp;:
 
-1.  Afficher le formulaire sous sa forme par défaut la première fois où il est demandé par l'utilisateur.
+1. Afficher le formulaire sous sa forme par défaut la première fois où il est demandé par l'utilisateur.
 
     - Le formulaire peut contenir des champs vides (par exemple, si vous créez un nouvel enregistrement), ou il peut être prérempli de valeurs initiales (par exemple, si vous modifiez les valeurs d'un enregistrement existant, ou que ces champs ont des valeurs initiales utiles).
     - Le formulaire est qualifié à cette étape de _formulaire libre_, parce qu'il n'est associé à aucune donnée entrée par l'utilisateur (bien qu'il puisse avoir des valeurs initiales).
 
-2.  Recevoir des données d'une requête d'envoi de données et les lier au formulaire.
+2. Recevoir des données d'une requête d'envoi de données et les lier au formulaire.
 
     - Lier les données au formulaire signifie que les données entrées par l'utilisateur, ainsi que les erreurs éventuelles, sont accessibles lorsque nous avons besoin de réafficher le formulaire.
 
-3.  Nettoyer et valider les données.
+3. Nettoyer et valider les données.
 
     - Le nettoyage de données consiste à désinfecter la saisie (par exemple, en supprimant les caractères non valides, et qui pourraient être utilisés pour envoyer du contenu malveillant au serveur) et à convertir ces données en types Python cohérents.
     - La validation vérifie que les valeurs envoyées sont appropriées au champ (par exemple, dans le bon intervalle de dates, ni trop long ni trop court, etc.)
 
-4.  Si une donnée n'est pas valide, réafficher le formulaire, cette fois-ci avec les données déjà saisies par l'utilisateur et les messages d'erreur pour les champs en erreur.
-5.  Si toutes les données sont conformes, effectuer les actions demandées (par exemple, sauvegarder les données, envoyer un e-mail, renvoyer le résultat d'une recherche, télécharger un fichier, etc.)
-6.  Une fois toutes ces actions accomplies, rediriger l'utilisateur vers une autre page.
+4. Si une donnée n'est pas valide, réafficher le formulaire, cette fois-ci avec les données déjà saisies par l'utilisateur et les messages d'erreur pour les champs en erreur.
+5. Si toutes les données sont conformes, effectuer les actions demandées (par exemple, sauvegarder les données, envoyer un e-mail, renvoyer le résultat d'une recherche, télécharger un fichier, etc.)
+6. Une fois toutes ces actions accomplies, rediriger l'utilisateur vers une autre page.
 
 Django fournit une multitude d'outils et de méthodes pour vous assister dans les tâches mentionnées ci-dessus. Parmi eux, la plus importante est la classe `Form`, qui simplifie à la fois la production de formulaire HTML mais aussi la validation des données. Dans la section suivante, nous décrivons comment les formulaires fonctionnent en prenant l'exemple d'une page qui permet aux bibliothécaires de renouveler des livres.
 
@@ -269,7 +269,7 @@ Dans la vue, nous utilisons d'abord l'argument `pk` dans la fonction `get_object
 
 Après la création du formulaire, nous appelons la fonction `render()` pour créer la page HTML, en précisant le template et un contexte qui contient notre formulaire. Dans ce cas, le contexte contient aussi notre `BookInstance`, que nous allons utiliser dans le template pour fournir des informations à propos du livre que nous sommes en train de renouveler.
 
-En revanche, s'il s'agit d'une requête `POST`, alors nous créons notre objet `form` et le peuplons avec des données récupérées dans la requête. Ce processus est appelé "_binding_" (liaison) et nous permet de valider le formulaire. 
+En revanche, s'il s'agit d'une requête `POST`, alors nous créons notre objet `form` et le peuplons avec des données récupérées dans la requête. Ce processus est appelé "_binding_" (liaison) et nous permet de valider le formulaire.
 
 Ensuite nous vérifions que le formulaire est valide, ce qui déclenche tout le code de validation sur tous les champs — ce qui inclut à la fois le code générique vérifiant que notre champ de date est effectivement une date valide, et notre fonction `clean_renewal_date()`, spécifique à notre formulaire, pour vérifier que la date est dans le bon intervalle.
 
@@ -377,7 +377,7 @@ Créez le template référencé dans la vue (**/catalog/templates/catalog/book_r
 {% endblock %}
 ```
 
-La majeure partie de ce code devrait vous être familière si vous avez suivi les tutoriels précédents. 
+La majeure partie de ce code devrait vous être familière si vous avez suivi les tutoriels précédents.
 
 Nous étendons le template de base et ensuite redéfinissons le block "content". Nous sommes en mesure de référencer `\{{ book_instance }}` (et ses variables), puisqu'il a été passé dans l'objet contexte par la fonction `render()`, et nous utilisons tout cela pour lister le titre du livre, son emprunteur et la date originale de retour.
 

@@ -16,7 +16,7 @@ translation_of: Web/API/Document/timeline
 
 <p>此时间轴对于每个文档（<code>document</code>）来说都是唯一的，并在文档的生命周期中保持不变，包括调用 {{domxref("Document.open()")}}。</p>
 
-<p>该时间线的时间值被计算为与全局时钟的固定偏移，使得零时间对应于{{domxref("PerformanceTiming.navigationStart", "navigationStart")}}时刻加上称为原始时间的带符号的delta 。 在建立导航开始时刻之前，文档时间线是不活动的。</p>
+<p>该时间线的时间值被计算为与全局时钟的固定偏移，使得零时间对应于{{domxref("PerformanceTiming.navigationStart", "navigationStart")}}时刻加上称为原始时间的带符号的 delta 。 在建立导航开始时刻之前，文档时间线是不活动的。</p>
 
 <div class="note">
 <p><strong>注意：</strong>与非活动文档相关联的文档时间轴也被视为是<strong>不活动的</strong>。</p>
@@ -35,20 +35,7 @@ var thisMoment = pageTimeline.currentTime;</pre>
 
 <h2 id="规则">规则</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-document-timeline', 'document.timeline' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

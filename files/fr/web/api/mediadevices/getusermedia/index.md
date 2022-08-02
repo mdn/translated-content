@@ -23,7 +23,9 @@ navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 
 ## Syntaxe
 
-    var promise = navigator.mediaDevices.getUserMedia(constraints);
+```js
+var promise = navigator.mediaDevices.getUserMedia(constraints);
+```
 
 ### Paramètres
 
@@ -141,22 +143,24 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 
 Cet exemple donne une préférence pour la résolution de la caméra et attribue l'objet [`MediaStream`](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/docs/Web/API/MediaStream&usg=ALkJrhipdR5n2jQ-BGrPTomESH_A7nof4g) résultant à un élément vidéo.
 
-    // Prefer camera resolution nearest to 1280x720.
-    var constraints = { audio: true, video: { width: 1280, height: 720 } };
+```js
+// Prefer camera resolution nearest to 1280x720.
+var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-    navigator.mediaDevices.getUserMedia(constraints)
-    .then(function(mediaStream) {
-      var video = document.querySelector('video');
-      video.srcObject = mediaStream;
-      video.onloadedmetadata = function(e) {
-        video.play();
-      };
-    })
-    .catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+  var video = document.querySelector('video');
+  video.srcObject = mediaStream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+```
 
 ### Utilisation de la nouvelle API dans les navigateurs plus anciens
 
-Voici un exemple d'utilisation de `navigator.mediaDevices.getUserMedia()` , avec un adaptateur pour faire face aux navigateurs plus anciens. Notez que cet adaptater ne corrige pas les différences existantes dans la syntaxe des contraintes, ce qui signifie que les contraintes ne fonctionneront pas bien dans les navigateurs. Il est recommandé d'utiliser l'adaptateur [adapter.js](https://github.com/webrtc/adapter)  a la place, qui gère les contraintes.
+Voici un exemple d'utilisation de `navigator.mediaDevices.getUserMedia()` , avec un adaptateur pour faire face aux navigateurs plus anciens. Notez que cet adaptater ne corrige pas les différences existantes dans la syntaxe des contraintes, ce qui signifie que les contraintes ne fonctionneront pas bien dans les navigateurs. Il est recommandé d'utiliser l'adaptateur [adapter.js](https://github.com/webrtc/adapter)  a la place, qui gère les contraintes.
 
 ```js
 // Older browsers might not implement mediaDevices at all, so we set an empty object first

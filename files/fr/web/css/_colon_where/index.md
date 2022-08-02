@@ -9,7 +9,7 @@ tags:
   - Sélecteur
 translation_of: Web/CSS/:where
 ---
-{{CSSRef}}{{Draft}}{{SeeCompatTable}}
+{{CSSRef}}{{SeeCompatTable}}
 
 La pseudo-classe fonctionnelle **`:where()`** prend comme argument une liste de sélecteurs et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
 
@@ -31,5 +31,5 @@ La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} est la suivante :
 
 ## Voir aussi
 
-- {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}
+- {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}
 - [Les composants web](/fr/docs/Web/Web_Components)

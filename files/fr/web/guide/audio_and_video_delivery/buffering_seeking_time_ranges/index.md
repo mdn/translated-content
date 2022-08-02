@@ -44,10 +44,12 @@ Un objet {{ domxref("TimeRanges") }} contient les propriétés/méthodes suivant
 
 Sans interraction utilisateur il y a généralement une seule plage de temps, mais si vous sautez dans le média alors plus d'une plage de temps peut apparaître, comme illustré dans la visualisation ci-dessous. Elle représente deux plages de temps en mémoire tampon — une qui s'étend de 0 à 5 secondes et la seconde qui s'étend de 15 à 19 secondes.
 
-    ------------------------------------------------------
-    |=============|                    |===========|     |
-    ------------------------------------------------------
-    0             5                    15          19    21
+```
+------------------------------------------------------
+|=============|                    |===========|     |
+------------------------------------------------------
+0             5                    15          19    21
+```
 
 Pour cette instance audio, l'objet {{ domxref("TimeRanges") }} associé aurait les propriétés suivantes:
 
@@ -96,7 +98,7 @@ Et un peu de JavaScript:
 
         var startX = myAudio.buffered.start(i) * inc;
         var endX = myAudio.buffered.end(i) * inc;
-        var width = endX - startX;
+        var width = endX - startX;
 
         context.fillRect(startX, 0, width, myCanvas.height);
         context.rect(startX, 0, width, myCanvas.height);
@@ -130,7 +132,7 @@ Bien qu'on ait vu que les parties ne sont pas nécessairement contigues, elles l
 var seekableEnd = myAudio.seekable.end(myAudio.seekable.length - 1);
 ```
 
-> **Note :** `myAudio.seekable.end(myAudio.seekable.length - 1)` nous indique en fait le temps de fin de la dernière plage de temps disponible (et non toutes). En pratique, c'est suffisant, car le navigateur peut permettre ou non de requêter des plages d'octets. S'il ne le permet pas — `audio.seekable` sera l'équivalent de `audio.buffered` — on a une indication valide de la fin du média chargée. Sinon, alors cette valeur vaudra la durée du média presque instantannément.
+> **Note :** `myAudio.seekable.end(myAudio.seekable.length - 1)` nous indique en fait le temps de fin de la dernière plage de temps disponible (et non toutes). En pratique, c'est suffisant, car le navigateur peut permettre ou non de requêter des plages d'octets. S'il ne le permet pas — `audio.seekable` sera l'équivalent de `audio.buffered` — on a une indication valide de la fin du média chargée. Sinon, alors cette valeur vaudra la durée du média presque instantannément.
 
 Il est peut-être préférable de donner une indication de la quantité de média effectivement téléchargée — c'est ce que les lecteurs natifs du navigateur semblent indiquer.
 
@@ -190,12 +192,12 @@ window.onload = function(){
   myAudio.addEventListener('progress', function() {
     var duration =  myAudio.duration;
     if (duration > 0) {
-      for (var i = 0; i < myAudio.buffered.length; i++) {
-            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
-                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
-                break;
-            }
-        }
+      for (var i = 0; i < myAudio.buffered.length; i++) {
+            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
+                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
+                break;
+            }
+        }
     }
   });
 

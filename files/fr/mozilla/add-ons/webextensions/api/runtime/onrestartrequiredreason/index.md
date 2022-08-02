@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReaso
 ---
 {{AddonSidebar()}}
 
-La raison pour laquelle l'événement  {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} est en cours d'exécution.
+La raison pour laquelle l'événement  {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} est en cours d'exécution.
 
 ## Type
 

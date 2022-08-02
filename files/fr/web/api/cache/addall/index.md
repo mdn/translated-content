@@ -15,9 +15,9 @@ translation_of: Web/API/Cache/addAll
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La méthode **`addAll()`** de l'interface {{domxref("Cache")}} accepte un tableau d'URLS, les récupères, et ajoute les objets réponse qui en résultent au cache en question. Les objets requêtes crées pendant la phase de récupération deviennent des clés vers les opérations de réponse stockées.
+La méthode **`addAll()`** de l'interface {{domxref("Cache")}} accepte un tableau d'URLS, les récupères, et ajoute les objets réponse qui en résultent au cache en question. Les objets requêtes crées pendant la phase de récupération deviennent des clés vers les opérations de réponse stockées.
 
-> **Note :** `addAll()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à une requête, mais échouera si l'opération `put() `ainsi créée devrait engendrer l'éffacement d'une entrée cache créée par la même méthode `addAll()`.
+> **Note :** `addAll()` écrasera toute paire clé/valeur précédemment stockée en cache et qui correspond à une requête, mais échouera si l'opération `put()` ainsi créée devrait engendrer l'effacement d'une entrée cache créée par la même méthode `addAll()`.
 
 ## Syntaxe
 
@@ -30,11 +30,11 @@ cache.addAll(requests[]).then(function() {
 ### Paramètres
 
 - requests
-  - : Un tableau d'objets {{domxref("Request", "Requête")}} à ajouter au cache.
+  - : Un tableau d'objets {{domxref("Request", "Requête")}} à ajouter au cache.
 
 ### Retour
 
-Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
+Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
 
 ### Exceptions
 
@@ -50,12 +50,12 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
       <td><code>TypeError</code></td>
       <td>
         <p>
-          Le schéma d'URL n'est pas <code>http</code> ou <code>https</code>.
+          Le schéma d'URL n'est pas <code>http</code> ou <code>https</code>.
         </p>
         <p>
-          Le statut de la réponse n'est pas dans les 200 (i.e., une requête qui
+          Le statut de la réponse n'est pas dans les 200 (i.e., une requête qui
           a échoué.) Cela peut arriver si la requête échoue, mais également si
-          la requête est une <em>cross-origin no-cors</em> (auquel cas le statut
+          la requête est une <em>cross-origin no-cors</em> (auquel cas le statut
           retourné est systématiquement 0.)
         </p>
       </td>
@@ -65,7 +65,7 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
 
 ## **Exemples**
 
-Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser `addAll()` pour y ajouter une série de ressources.
+Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser `addAll()` pour y ajouter une série de ressources.
 
 ```js
 this.addEventListener('install', function(event) {

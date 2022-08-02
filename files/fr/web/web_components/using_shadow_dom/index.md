@@ -189,8 +189,8 @@ L'étape finale est d'associer tous les éléments créés à la racine fantôme
 
 ```js
 // Associer les éléments créés au dom fantôme
-shadow.appendChild(style);
-shadow.appendChild(wrapper);
+fantome.appendChild(style);
+fantome.appendChild(wrapper);
 wrapper.appendChild(icon);
 wrapper.appendChild(info);
 ```
@@ -222,7 +222,7 @@ linkElem.setAttribute('rel', 'stylesheet');
 linkElem.setAttribute('href', 'style.css');
 
 // Associer l'élément créé au dom fantôme
-shadow.appendChild(linkElem);
+fantome.appendChild(linkElem);
 ```
 
 Notez que les éléments [`<link>`](/fr/docs/Web/HTML/Element/link) ne bloquent pas la peinture de la racine fantôme, donc il pourrait y avoir une latence où le contenu serait sans style (FOUC) pendant que la feuille de style se charge.

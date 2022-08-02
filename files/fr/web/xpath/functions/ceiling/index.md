@@ -12,7 +12,9 @@ La fonction `ceiling` évalue un nombre décimal et retourne le plus petit nombr
 
 ### Syntaxe
 
-    ceiling( nombre )
+```
+ceiling( nombre )
+```
 
 ### Arguments
 
@@ -23,11 +25,13 @@ La fonction `ceiling` évalue un nombre décimal et retourne le plus petit nombr
 
 Le plus petit entier supérieur ou égal à `nombre`.
 
-Par exemple :
+Par exemple&nbsp;:
 
-    ceiling (5.2) = 6
+```
+ceiling (5.2) = 6
 
-    ceiling (-5.2) = -5
+ceiling (-5.2) = -5
+```
 
 ### Définition
 

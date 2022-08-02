@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.moveTo()`** de l'API Canvas 2D déplace 
 
 ## Syntaxe
 
-    void ctx.moveTo(x, y);
+```js
+void ctx.moveTo(x, y);
+```
 
 ### Paramètres
 
@@ -49,8 +51,8 @@ ctx.stroke();
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();
@@ -91,7 +93,7 @@ window.addEventListener("load", drawCanvas);
 
 | Specification                                                                                                                            | Status                           | Comment |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navigateurs
 

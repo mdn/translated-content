@@ -56,7 +56,9 @@ Les spécifications définissent également des mots-clés utilisables comme val
 
 Lorsque vous consultez une spécification ou un article de MDN à propos d'une propriété, vous pourrez voir les mots-clés autorisés sous la forme suivante. Voici un exemple avec les valeurs autorisées pour la propriété {{cssxref("break-inside")}}.
 
-    auto | avoid | avoid-page | avoid-column | avoid-region
+```
+auto | avoid | avoid-page | avoid-column | avoid-region
+```
 
 Dans une déclaration, on pourra donc écrire (sans quote) :
 
@@ -82,7 +84,7 @@ Une valeur de type {{cssxref("&lt;url&gt;")}} s'utilise avec une notation foncti
 
 ```css
 .box {
-  background-image: url("images/mon-arriere-plan.png");
+  background-image: url("images/mon-arriere-plan.png");
 }
 
 .box {
@@ -173,7 +175,7 @@ Les valeurs temporelles sont de type {{cssxref("&lt;time&gt;")}} et utilisent le
 
 | Unité | Nom           | Description             |
 | ----- | ------------- | ----------------------- |
-| `s`   | Secondes      |                         |
+| `s`   | Secondes      |                         |
 | `ms`  | Millisecondes | Un millième de seconde. |
 
 #### Unités de fréquence
@@ -269,8 +271,8 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>
         Ajout des unités <code>vi</code>, <code>vb</code>, <code>ic</code>,
         <code>cap</code>, <code>lh</code> et <code>rlh</code>.<br />Ajout des
-        notations fonctionnelles  <code>min()</code>, <code>max()</code> et
-        <code>clamp()</code>.<br />Ajout de  <code>toggle()</code>
+        notations fonctionnelles  <code>min()</code>, <code>max()</code> et
+        <code>clamp()</code>.<br />Ajout de  <code>toggle()</code>
       </td>
     </tr>
     <tr>
@@ -279,7 +281,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>
         Ajout de
         <code>calc()</code
-        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
+        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
           >Q</code
         >
       </td>
@@ -289,13 +291,13 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>{{Spec2("CSS4 Colors")}}</td>
       <td>
         Ajout des syntaxes sans virgule pour les fonctions
-        <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et
-        <code>hsla()</code>. Ajout des valeurs alpha pour  <code>rgb()</code> et
+        <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et
+        <code>hsla()</code>. Ajout des valeurs alpha pour  <code>rgb()</code> et
         <code>hsl()</code>, transformant ainsi <code>rgba()</code> et
         <code>hsla()</code> en alias respectifs (dépréciés).<br />Ajout du
         mot-clé de couleur <code>rebeccapurple</code>.<br />Ajout des couleurs
         sur 4 et 8 chiffres hexadécimaux où le dernier chiffre représente la
-        valeur alpha.<br />Ajout des fonctions <code>hwb()</code>, <code
+        valeur alpha.<br />Ajout des fonctions <code>hwb()</code>, <code
           >device-cmyk()</code
         >
         et <code>color()</code>.
@@ -306,7 +308,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>{{Spec2("CSS3 Colors")}}</td>
       <td>
         Dépréciation des couleurs système. Ajout des couleurs SVG. Ajout des
-        fonctions <code>rgba()</code>, <code>hsl()</code> et
+        fonctions <code>rgba()</code>, <code>hsl()</code> et
         <code>hsla()</code>.
       </td>
     </tr>
@@ -329,7 +331,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
     <tr>
       <td>{{SpecName("CSS2.1")}}</td>
       <td>{{Spec2("CSS2.1")}}</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>{{SpecName("CSS1")}}</td>

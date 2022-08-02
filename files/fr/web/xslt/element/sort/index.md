@@ -12,12 +12,14 @@ L'élément `<xsl:sort>` définit les paramètres de tri pour des nœuds sélect
 
 ### Syntaxe
 
-    <xsl:sort
-    	select=EXPRESSION
-    	order="ascending" | "descending"
-    	case-order="upper-first"| "lower-first"
-    	lang=XML:LANG-CODE
-    	data-type="text" | "number" />
+```xml
+<xsl:sort
+  select=EXPRESSION
+  order="ascending" | "descending"
+  case-order="upper-first"| "lower-first"
+  lang=XML:LANG-CODE
+  data-type="text" | "number" />
+```
 
 ### Attributs obligatoires
 
@@ -46,7 +48,7 @@ Aucun.
 <!---->
 
 - `data-type`
-  - : Définit si les éléments doivent être ordonnés alphabétiquement ou numériquement. Les valeurs autorisées sont `text` et `number` ; `text` est la valeur par défaut.
+  - : Définit si les éléments doivent être ordonnés alphabétiquement ou numériquement. Les valeurs autorisées sont `text` et `number`&nbsp;; `text` est la valeur par défaut.
 
 ### Type
 

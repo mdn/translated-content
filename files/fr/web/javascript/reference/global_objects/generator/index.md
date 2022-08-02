@@ -15,13 +15,15 @@ L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","
 
 ## Syntaxe
 
-    function* gen() {
-      yield 1;
-      yield 2;
-      yield 3;
-    }
+```js
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
 
-    var g = gen(); // "Generator { }"
+var g = gen(); // "Generator { }"
+```
 
 ## Méthodes
 
@@ -57,7 +59,7 @@ Firefox (SpiderMonkey) implémente également une version antérieure pour les g
 
 ### Méthodes pour les générateurs historiques
 
-- `Generator.prototype.next() `{{non-standard_inline}}
+- `Generator.prototype.next()` {{non-standard_inline}}
   - : Renvoie une valeur générée par l'expression {{jsxref("Opérateurs/yield", "yield")}}. Cette méthode correspond à `next()` pour les générateurs ES2015.
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : Clôture le générateur, tout appel ultérieur à `next()` renverra une exception {{jsxref("StopIteration")}}. Cela correspond à la méthode `return()` pour les générateurs ES2015.

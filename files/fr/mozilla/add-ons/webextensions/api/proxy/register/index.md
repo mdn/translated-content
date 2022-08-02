@@ -23,10 +23,10 @@ Enregistre un [fichier PAC (Proxy Auto-Configuration)](/fr/docs/Web/HTTP/Proxy_s
 
 Si les fichiers PAC sont enregistrés par plusieurs extensions, les demandes seront initialement transmises à celle qui a été enregistrée en premier.
 
-- Si la fonction `FindProxyForURL()` dans le premier PAC renvoie "DIRECT" pour une demande, alors la demande sera transmise inchangée à la fonction  `FindProxyForURL()` dans le prochain PAC.
+- Si la fonction `FindProxyForURL()` dans le premier PAC renvoie "DIRECT" pour une demande, alors la demande sera transmise inchangée à la fonction  `FindProxyForURL()` dans le prochain PAC.
 - Si la fonction `FindProxyForURL()` dans le premier PAC transfère la requête en renvoyant "PROXY" ou une autre valeur proxy, l'URL du proxy sera transmise à la fonction `FindProxyForURL()` dans le prochain PAC.
 
-Chaque extension ne peut enregistrer qu'un seul fichier PAC : si vous appelez  `register()` deux fois, le second fichier PACremplacera le premier.
+Chaque extension ne peut enregistrer qu'un seul fichier PAC : si vous appelez  `register()` deux fois, le second fichier PACremplacera le premier.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -73,7 +73,7 @@ La syntaxe de base du fichier PAC est décrite dans la [documentation PAC](</fr/
 
 La norme `FindProxyForURL()` [renvoie une chaîne](/fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format). Dans Firefox 55 et 56, le fichier PAC utilisé avec l'API proxy renvoie également une chaîne. Dans Firefox 55 _seulement_, vous devez passer un argument à la valeur de retour "DIRECT", même s'il n'a pas besoin d'argument.
 
-À partir de Firefox 57, `FindProxyForURL()` peut toujours renvoyer une chaîne, mais peut également (et de préférence) renvoyer un tableau d'objets  {{WebExtAPIRef("proxy.ProxyInfo")}}.
+À partir de Firefox 57, `FindProxyForURL()` peut toujours renvoyer une chaîne, mais peut également (et de préférence) renvoyer un tableau d'objets  {{WebExtAPIRef("proxy.ProxyInfo")}}.
 
 Si le tableau contient plus d'un objet, alors tous les objets `ProxyInfo` après le premier représentent les basculements : si le proxy à la position N dans le tableau n'est pas accessible quand son `ProxyInfo.failoverTimeout` expire, alors le navigateur essaiera le proxy à la position N + 1.
 
@@ -100,7 +100,7 @@ Le premier proxy dans le tableau sera essayé en premier. S'il ne répond pas da
 
 ### Environnement du fichier PAC
 
-Les fonctions globales d'assistance généralement disponibles pour les fichiers PAC  ([`isPlainHostName()`](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#isPlainHostName()_2>), [`dnsDomainIs()`](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#dnsDomainIs()>), etc) ne sont pas disponibles.
+Les fonctions globales d'assistance généralement disponibles pour les fichiers PAC  ([`isPlainHostName()`](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#isPlainHostName()_2>), [`dnsDomainIs()`](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#dnsDomainIs()>), etc) ne sont pas disponibles.
 
 Le code qui s'exécute dans le fichier PAC n'a pas accès à :
 

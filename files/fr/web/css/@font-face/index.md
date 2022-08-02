@@ -59,7 +59,7 @@ La règle `@font-face` peut être utilisée au niveau global d'une feuille de st
     Les types utilisables sont : `"woff"`, `"woff2"`, `"truetype"`, `"opentype"`, `"embedded-opentype"` et `"svg"`.
 
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
-  - : L'intervalle des points de code Unicode pour lesquels la règle  `@font-face` s'applique.
+  - : L'intervalle des points de code Unicode pour lesquels la règle  `@font-face` s'applique.
 
 ### Syntaxe formelle
 

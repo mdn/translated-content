@@ -40,7 +40,7 @@ Firefox 3 offre un support [SVG](fr/SVG) amélioré par rapport aux versions pr�
   - `feTurbulence`
   - `feTile`
 
-- L'élément `<a>` géré dans SVG comportent plusieurs bogues résolus : consultez {{ Bug(267664) }}, {{ Bug(268135) }}, {{ Bug(316248) }}, {{ Bug(317270) }} et {{ Bug(320724) }}.
+- L'élément `<a>` géré dans SVG comportent plusieurs bogues résolus&nbsp;: consultez {{ Bug(267664) }}, {{ Bug(268135) }}, {{ Bug(316248) }}, {{ Bug(317270) }} et {{ Bug(320724) }}.
 - Les méthodes DOM SVG `getNumberOfChars()`, `getComputedTextLength()`, `getSubStringLength()`, `getStartPositionOfChar()`, `getEndPositionOfChar()`, `getRotationOfChar()`, et `getCharNumAtPosition()` ont été implentées.
 - support de l'attribut `xml:space` ([spécification](http://www.w3.org/TR/SVG/text.html#WhiteSpace))
 - Les transitions `fill`/`stroke` sont à présent supportées ([spécification](http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint))

@@ -79,5 +79,5 @@ Il ne faut jamais retirer l'indicateur de focus sans le remplacer par un autre i
 
 ## Voir aussi
 
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
 - {{cssxref(":focus-within")}}

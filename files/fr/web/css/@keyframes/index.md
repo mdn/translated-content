@@ -9,7 +9,7 @@ translation_of: Web/CSS/@keyframes
 ---
 {{CSSRef}}
 
-La [règle ](/fr/docs/Web/CSS/R%C3%A8gles_@)**`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_Transitions).
+La [règle](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_Transitions).
 
 ```css
 @keyframes slidein {
@@ -66,16 +66,16 @@ Les déclarations qui utilisent `!important` dans une description d'étape sont 
 
 ```css
 @keyframes important1 {
-  from { margin-top: 50px; }
-  50%  { margin-top: 150px !important; } /* ignorée */
-  to   { margin-top: 100px; }
+  from { margin-top: 50px; }
+  50%  { margin-top: 150px !important; } /* ignorée */
+  to   { margin-top: 100px; }
 }
 
 @keyframes important2 {
   from { margin-top: 50px;
-         margin-bottom: 100px; }
-  to   { margin-top: 150px !important; /* ignorée */
-         margin-bottom: 50px; }
+         margin-bottom: 100px; }
+                         to { margin-top: 150px !important; /* ignorée */
+         margin-bottom: 50px; }
 }
 ```
 

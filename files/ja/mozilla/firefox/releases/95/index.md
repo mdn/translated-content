@@ -36,7 +36,6 @@ Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 
 - 仕様書の更新に合わせて、{{domxref("SpeechSynthesisEvent.elapsedTime")}} が経過時間をミリ秒単位ではなく秒単位で返すようになりました ({{bug(1732498)}})。
 
-
 ### WebDriver conformance (Marionette)
 
 - Marionette が使用する `port` を、プロファイルディレクトリーの `MarionetteActivePort` ファイルへ書き込むようになりました。これを使用すると `port` を容易に取得できます。以前はプロファイルの `prefs.js` ファイルを解析することだけで可能でした ({{bug(1735162)}})。

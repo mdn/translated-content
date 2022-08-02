@@ -51,11 +51,11 @@ border-right: medium dashed green;
 
 ### Valeurs
 
-- `<br-width> `
+- `<br-width>`
   - : Voir {{cssxref("border-right-width")}}.
-- `<br-style> `
+- `<br-style>`
   - : Voir {{cssxref("border-right-style")}}.
-- `<color> `
+- `<color>`
   - : Voir {{cssxref("border-right-color")}}.
 
 ### Syntaxe formelle

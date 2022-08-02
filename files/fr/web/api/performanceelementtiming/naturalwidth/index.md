@@ -14,7 +14,7 @@ translation_of: Web/API/PerformanceElementTiming/naturalWidth
 
 La propriété en lecture seule **`naturalWidth`** de l'interface [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming) renvoie la largeur intrinsèque de l'élément image.
 
-## Syntax
+## Syntaxe
 
 ```js
 var width = PerformanceElementTiming.naturalWidth;

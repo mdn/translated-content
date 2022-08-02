@@ -34,7 +34,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action de navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2), puis ouvre l'aperçu avant impression pour l'onglet actuellement actif :
+Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action de navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2), puis ouvre l'aperçu avant impression pour l'onglet actuellement actif :
 
 ```js
 browser.browserAction.onClicked.addListener(() => {

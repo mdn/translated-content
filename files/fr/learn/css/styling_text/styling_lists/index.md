@@ -300,10 +300,10 @@ vous donne cette sortie&nbsp;:
 
 Dans cette session d'apprentissage actif, vous devez utiliser ce que vous avez appris ci-dessus en donnant un certain style à une liste imbriquée. Avec le code HTML fourni, nous vous demandons de&nbsp;:
 
-1.  Mettre une puce carrée devant les éléments de la liste non ordonnée.
-2.  Donner aux éléments des listes, ordonnées ou non, une hauteur de ligne de 1.5 fois la taille de la police de caractères.
-3.  Donner à la liste ordonnée une puce alphabétique en minuscules.
-4.  Ne pas hésiter à jouer avec l'exemple de liste autant que vous le souhaitez, en expérimentant les types de puces, l'espacement ou tout ce que vous pouvez trouver.
+1. Mettre une puce carrée devant les éléments de la liste non ordonnée.
+2. Donner aux éléments des listes, ordonnées ou non, une hauteur de ligne de 1.5 fois la taille de la police de caractères.
+3. Donner à la liste ordonnée une puce alphabétique en minuscules.
+4. Ne pas hésiter à jouer avec l'exemple de liste autant que vous le souhaitez, en expérimentant les types de puces, l'espacement ou tout ce que vous pouvez trouver.
 
 Si vous faites une erreur, vous pourrez toujours tout remettre à zéro avec le bouton _Réinitialiser_. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour voir une réponse possible.
 
@@ -362,7 +362,7 @@ reset.addEventListener("click", function() {
 
 solution.addEventListener("click", function() {
   htmlInput.value = htmlCode;
-  cssInput.value = 'ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}';
+  cssInput.value = 'ul {\n list-style-type: square;\n}\n\nul li, ol li {\n line-height: 1.5;\n}\n\nol {\n list-style-type: lower-alpha\n}';
   drawOutput();
 });
 

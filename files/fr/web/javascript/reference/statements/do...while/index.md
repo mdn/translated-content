@@ -10,15 +10,17 @@ original_slug: Web/JavaScript/Reference/Instructions/do...while
 ---
 {{jsSidebar("Statements")}}
 
-L'instruction **`do...while`** crée une boucle qui exécute une instruction jusqu'à ce qu'une condition de test ne soit plus vérifiée. La condition est testée après que l'instruction soit exécutée, le bloc d'instructions défini dans la boucle est donc exécuté au moins une fois.
+L'instruction **`do...while`** crée une boucle qui exécute une instruction jusqu'à ce qu'une condition de test ne soit plus vérifiée. La condition est testée après que l'instruction soit exécutée, le bloc d'instructions défini dans la boucle est donc exécuté au moins une fois.
 
 {{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
 
 ## Syntaxe
 
-    do
-       instruction
-    while (condition);
+```js
+do
+  instruction
+while (condition);
+```
 
 - `instruction`
   - : Une instruction exécutée au moins une fois et ré-exécutée chaque fois que la condition de test est évaluée à `true`. On peut exécuter plusieurs instructions au sein d'une boucle grâce à l'instruction {{jsxref("Instructions/block", "block")}} (`{ ... }`) qui permet de grouper différentes instructions en une seule.

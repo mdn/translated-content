@@ -12,7 +12,9 @@ translation_of: Web/EXSLT/str/split
 
 ### Syntaxe
 
-    str:split(chaîne,motif)
+```
+str:split(chaîne,motif)
+```
 
 ### Arguments
 
@@ -25,16 +27,20 @@ translation_of: Web/EXSLT/str/split
 
 Un ensemble de nœuds d'éléments `token`, contenant chacun un `token` provenant de `chaîne`.
 
-Par exemple :
+Par exemple&nbsp;:
 
-    str:split('livre, téléphone, ordinateur, chaise', ', ')
+```
+str:split('livre, téléphone, ordinateur, chaise', ', ')
+```
 
-Retourne l'ensemble de nœuds suivant :
+Retourne l'ensemble de nœuds suivant&nbsp;:
 
-    <token>livre</token>
-    <token>téléphone</token>
-    <token>ordinateur</token>
-    <token>chaise</token>
+```xml
+<token>livre</token>
+<token>téléphone</token>
+<token>ordinateur</token>
+<token>chaise</token>
+```
 
 ### Définition
 

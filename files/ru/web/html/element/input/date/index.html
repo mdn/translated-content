@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/input/date
 
 <p>Элементы {{htmlelement("input")}} типа <strong><code>date</code></strong> создают поля ввода и позволяют пользователю ввести дату, либо использовать <em>text box</em> для автоматической проверки контента или использовать специальный интерфейс <em>date picker</em>. Возвращаемое значение включает год, месяц, день, но <em>не</em> время. Используйте поля ввода {{HTMLElement("input/time", "time")}} или {{HTMLElement("input/datetime-local", "datetime-local")}}, чтобы вводить время или дату+время соответственно.</p>
 
-<p>Отображение <strong><code>date</code></strong> различается в зависимости от браузера, кроме того не все браузеры поддерживают <strong><code>date</code></strong>. Подробнее см. {{anch("Browser compatibility")}}. В неподдерживаемых браузерах элемент будет отображаться как обычный <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
+<p>Отображение <strong><code>date</code></strong> различается в зависимости от браузера, кроме того не все браузеры поддерживают <strong><code>date</code></strong>. Подробнее см. <a href="#browser_compatibility">Browser compatibility</a>. В неподдерживаемых браузерах элемент будет отображаться как обычный <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-standard")}}</div>
 
@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/input/date
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>Возвращает {{domxref("DOMString")}}, с датой в формате <strong>гггг-мм-дд</strong>,<strong> </strong>или <strong>пустую строку</strong></td>
   </tr>
   <tr>
@@ -85,15 +85,15 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#max">max</a></code></td>
    <td>Максимально возможная дата для установки</td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#min">min</a></code></td>
    <td>Минимально возможная дата для установки</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#step">step</a></code></td>
    <td>Шаг (в днях), с которым будет изменяться дата при нажатии кнопок вниз или вверх данного элемента</td>
   </tr>
  </tbody>
@@ -101,13 +101,13 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
 
-<p>Максимально возможная дата для установки. Если {{htmlattrxref("value", "input")}} является более поздней датой, чем дата, указанная в атрибуте <code>{{anch("max")}}</code>, элемент отобразит ошибку при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. Если в атрибуте <code>max</code> указано значение, не удовлетворяющее формату <code>yyyy-MM-dd</code>, значит элемент не будет иметь максимальной даты.</p>
+<p>Максимально возможная дата для установки. Если {{htmlattrxref("value", "input")}} является более поздней датой, чем дата, указанная в атрибуте <code><a href="#max">max</a></code>, элемент отобразит ошибку при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. Если в атрибуте <code>max</code> указано значение, не удовлетворяющее формату <code>yyyy-MM-dd</code>, значит элемент не будет иметь максимальной даты.</p>
 
 <p>В атрибуте <code>max</code> должна быть указана строка с датой, которая больше или равна дате, указанной в атрибуте <code>min</code>.</p>
 
 <h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
 
-<p>Минимально возможная дата для установки. Если {{htmlattrxref("value", "input")}} является более ранней датой, чем дата, указанная в атрибуте <code>{{anch("min")}}</code>, элемент отобразит ошибку при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. Если в атрибуте <code>min</code> указано значение, не удовлетворяющее формату <code>yyyy-MM-dd</code>, значит элемент не будет иметь минимальной даты.</p>
+<p>Минимально возможная дата для установки. Если {{htmlattrxref("value", "input")}} является более ранней датой, чем дата, указанная в атрибуте <code><a href="#min">min</a></code>, элемент отобразит ошибку при помощи <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. Если в атрибуте <code>min</code> указано значение, не удовлетворяющее формату <code>yyyy-MM-dd</code>, значит элемент не будет иметь минимальной даты.</p>
 
 <p>В атрибуте <code>min</code> должна быть указана строка с датой, которая меньше или равна дате, указанной в атрибуте <code>max</code>.</p>
 
@@ -125,7 +125,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>На первый взгляд, элемент <code>&lt;input type="date"&gt;</code> выглядит заманчиво — он предоставляет лёгкий графический интерфейс для выбора даты, нормализует формат даты, отправляемой на сервер независимо от локальных настроек пользователя. Тем не менее, есть проблемы с <code>&lt;input type="date"&gt;</code> в связи с ограниченной поддержкой браузеров.</p>
 
-<p>В этом разделе мы посмотрим на простые, а затем и более сложные способы использования <code>&lt;input type="date"&gt;</code>, и позже дадим советы по уменьшению влияния поддержки браузерами (смотрите {{anch("Handling browser support")}}).</p>
+<p>В этом разделе мы посмотрим на простые, а затем и более сложные способы использования <code>&lt;input type="date"&gt;</code>, и позже дадим советы по уменьшению влияния поддержки браузерами (смотрите <a href="#handling_browser_support">Handling browser support</a>).</p>
 
 <div class="blockIndicator note">
 <p>Надеемся, со временем поддержка браузерами станет повсеместной, и эта проблема исчезнет.</p>
@@ -171,7 +171,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 <p>By default, <code>&lt;input type="date"&gt;</code> does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still leave the field empty or  (in browsers where the input falls back to type <code>text</code>) enter an invalid date (e.g. the 32nd of April).</p>
 
-<p>If you use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see {{anch("Setting maximum and minimum dates")}}), supporting browsers will display an error if you try to submit a date that is outside the set bounds. However, you'll have to check the results to be sure the value is within these dates, since they're only enforced if the date picker is fully supported on the user's device.</p>
+<p>If you use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see <a href="#setting_maximum_and_minimum_dates">Setting maximum and minimum dates</a>), supporting browsers will display an error if you try to submit a date that is outside the set bounds. However, you'll have to check the results to be sure the value is within these dates, since they're only enforced if the date picker is fully supported on the user's device.</p>
 
 <p>In addition, you can use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory — again, an error will be displayed if you try to submit an empty date field. This, at least, should work in most browsers.</p>
 
@@ -225,7 +225,7 @@ input:valid+span:after {
 
 <h2 id="Handling_browser_support">Handling browser support</h2>
 
-<p>As mentioned above, the major problem with using date inputs at the time of writing is {{anch("Browser compatibility", "browser support")}}. As an example, the date picker on Firefox for Android looks like this:</p>
+<p>As mentioned above, the major problem with using date inputs at the time of writing is <a href="#browser_compatibility">browser support</a>. As an example, the date picker on Firefox for Android looks like this:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14915/date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
 

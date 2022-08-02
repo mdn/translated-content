@@ -59,8 +59,7 @@ observer2.observe({entryTypes: ["measure"]});
 
 | Spécification                                                                                                                            | Statut                                                   | Commentaire                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-observe',
-        'observe()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `observe()`. |
+| {{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-observe', 'observe()')}} | {{Spec2('Performance Timeline Level 2')}} | Définition initiale de la méthode `observe()`. |
 
 ## Compatibilité des navigateurs
 

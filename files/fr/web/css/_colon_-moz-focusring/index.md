@@ -18,7 +18,9 @@ Si `:-moz-focusring` correspond à un élément, `:focus` correspondra égalemen
 
 ## Syntaxe
 
-    :-moz-focusring
+```css
+:-moz-focusring
+```
 
 ## Exemple
 

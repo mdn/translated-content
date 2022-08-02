@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 
 Action quand une extension est installée.
 
-Cette API requière l'[API de permission ](/fr/Add-ons/WebExtensions/manifest.json/permissions)"management".
+Cette API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
 ## Syntaxe
 
@@ -34,7 +34,7 @@ Les événements ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifie si un auditeur est enregistré pour cet événement. Renvoie `vrai` si elle est à l'écoute, sinon `faux` .
 
-## addListener syntaxe
+## Syntaxe addListener
 
 ### Paramètres
 
@@ -55,7 +55,7 @@ Enregistrez les noms des extensions lorsqu'ils sont installés :
 
 ```js
 browser.management.onInstalled.addListener((info) => {
-  console.log(info.name + " was installed");
+  console.log(info.name + " was installed");
 });
 ```
 

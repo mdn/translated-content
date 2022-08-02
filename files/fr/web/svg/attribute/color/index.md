@@ -23,7 +23,7 @@ L'attribut `color` est utilisé pour définir indirectement une valeur potentiel
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/SVG/Content_type#Color" title="en/SVG/Content_type#Color"
+        <a href="/fr/SVG/Content_type#Color"
           >&#x3C;color></a
         >
         | inherit
@@ -62,7 +62,7 @@ L'attribut `color` est utilisé pour définir indirectement une valeur potentiel
 Les éléments suivants peuvent utiliser l'attribut `color`:
 
 - [Éléments de contenu textuel](/fr/docs/Web/SVG/Element#Éléments_de_contenu_textuel "en/SVG/Element#Text_content_elements") »
-- [Éléments de formes](/fr/docs/Web/SVG/Element#Éléments_de_formes "en/SVG/Element#Shape_elements")  »
+- [Éléments de formes](/fr/docs/Web/SVG/Element#Éléments_de_formes "en/SVG/Element#Shape_elements")  »
 - {{ SVGElement("stop") }}
 - {{ SVGElement("feFlood") }}
 - {{ SVGElement("feDiffuseLighting") }}

@@ -1,6 +1,7 @@
 ---
 title: HTMLMediaElement.captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
+page-type: web-api-instance-method
 tags:
   - API
   - Audio
@@ -12,85 +13,68 @@ tags:
   - Reference
   - Video
   - captureStream
+browser-compat: api.HTMLMediaElement.captureStream
 translation_of: Web/API/HTMLMediaElement/captureStream
 ---
-<div>{{APIRef("HTML Media Capture")}}</div>
+{{APIRef("HTML Media Capture")}}
 
-<p>{{domxref("HTMLMediaElement")}} インターフェイスの <strong><code>captureStream()</code></strong> プロパティは、メディア要素でレンダリングされているコンテンツのリアルタイムキャプチャをストリーミングしている {{domxref('MediaStream')}} オブジェクトを返します。</p>
+**`captureStream()`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、このメディア要素でレンダリングされているコンテンツのリアルタイムキャプチャをストリーミングしている {{domxref('MediaStream')}} オブジェクトを返します。
 
-<p>これは、例えば <a href="/ja/docs/Web/API/WebRTC_API">WebRTC</a> の {{domxref("RTCPeerConnection")}} のソースとして使用できます。</p>
+これは、例えば [WebRTC](/ja/docs/Web/API/WebRTC_API) の {{domxref("RTCPeerConnection")}} のソースとして使用できます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>mediaStream</em> = mediaElement.captureStream()</pre>
+```js
+captureStream()
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### 引数
 
-<p>無し。</p>
+無し。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 返値
 
-<p>他のメディア処理コードによる音声データおよび/または動画データのソースとして、または <a href="/ja/docs/Glossary/WebRTC">WebRTC</a> のソースとして使用できる {{domxref('MediaStream')}} オブジェクト。</p>
+他のメディア処理コードによる音声データおよび/または動画データのソースとして、または [WebRTC](/ja/docs/Glossary/WebRTC) のソースとして使用できる {{domxref('MediaStream')}} オブジェクトです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>この例では、イベントハンドラが確立されているため、ボタンをクリックすると、ID が <code>"playback"</code> のメディア要素のコンテンツの {{domxref("MediaStream")}} へのキャプチャを開始します。 これにより、WebRTC を介したストリーミングのソースなど、他の目的にストリームを使用して、動画通話中に録画済みの動画を他の人と共有できるようになります。</p>
+この例では、イベントハンドラーが確立されているため、ボタンをクリックすると、ID が `"playback"` のメディア要素のコンテンツの {{domxref("MediaStream")}} へのキャプチャを開始します。 これにより、WebRTC を介したストリーミングのソースなど、他の目的にストリームを使用して、動画通話中に録画済みの動画を他の人と共有できるようになります。
 
-<pre class="brush: js">document.querySelector('.playAndRecord').addEventListener('click', function() {
-  var playbackElement = document.getElementById("playback");
-  var captureStream = playbackElement.captureStream();
-  playbackElement.play();
+```js
+document.querySelector('.playAndRecord').addEventListener('click', function() {
+  const playbackElement = document.getElementById("playback");
+  const captureStream = playbackElement.captureStream();
+  playbackElement.play();
 });
-</pre>
+```
 
-<p>より長くより複雑な例と説明については、<a href="/ja/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">メディア要素の記録</a>を参照してください。</p>
+より長くより複雑な例と説明については、[メディア要素の記録](/ja/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)を参照してください。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture DOM Elements','#widl-HTMLMediaElement-captureStream-MediaStream','captureStream()')}}</td>
-   <td>{{Spec2('Media Capture DOM Elements')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat}}
 
+### Firefox 特有のメモ
 
-<p>{{Compat("api.HTMLMediaElement.captureStream")}}</p>
+Firefox 51 より前のバージョンでは、 `captureStream()` はソースそれ自体が {{domxref("MediaStream")}} であるメディア要素では使用できませんでした（{{domxref("RTCPeerConnection")}} を介して受信されるストリームを表示している {{HTMLElement("video")}} 要素など）。 Firefox 51 以降では機能します。これは、動画要素からストリームをキャプチャし、それを記録するために {{domxref("MediaRecorder")}} を使用できることを意味します。 詳細は {{bug(1259788)}} をご覧ください。
 
-<h3 id="Firefox-specific_notes" name="Firefox-specific_notes">Firefox 特有のメモ</h3>
-</div>
+ただし、明確な理由から、Firefox では `captureStream()` に接頭辞が付いて `mozCaptureStream()` となっています。現在の実装には、次のような注目に値するいくつかの奇妙な点があるからです。
 
-<p>Firefox 51 より前のバージョンでは、ソースがそれ自体が {{domxref("MediaStream")}} であるメディア要素では、<strong><code>captureStream()</code></strong> を使用できませんでした（{{domxref("RTCPeerConnection")}} を介して受信されるストリームを表示している {{HTMLElement("video")}} 要素など）。 Firefox 51 以降、これは機能します。 これは、動画要素からストリームをキャプチャし、それを記録するために {{domxref("MediaRecorder")}} を使用できることを意味します。 詳細は {{bug(1259788)}} をご覧ください。</p>
+- Firefox の実装は現在、メディア要素のソース自体が {{domxref("MediaStream")}} である場合にのみ、仕様書での説明通りに動作します。
+- メディア要素のソースが `MediaStream` ではない場合、このメソッドからの出力は仕様書と互換性がありません。 そして、キャプチャの開始後にソースを変更した場合、その非互換性のために出力キャプチャストリームは新しいソースデータを受け入れることができません。したがって、新しいソースの `MediaStream` からの {{domxref("MediaStreamTrack")}} はキャプチャしたストリームに追加されず、更新されたソースをキャプチャしない出力になります。
+- ソースを `MediaStream` に戻すと、トラックをストリームに戻して追加し、期待どおりに機能します。
+- `mozCaptureMediaStream()` を `MediaStream` のソースを使用して要素に対して呼び出すと、要素が `MediaStream` を再生している間はトラックのみを含むストリームを返します。
+- ソースメディアのないメディア要素で `mozCaptureMediaStream()` を呼び出すと、その互換モードは最初に追加されたソースに基づきます。 例えば、`MediaStream` の場合、キャプチャストリームはそれ以降 MediaStream のソースでのみ機能します。
+- `MediaStream` 以外のソースのサポートが仕様に達した時点で、接頭辞なしのメソッドの場合、この特別なふるまいは取り除かれます。 詳細は {{bug(1259788, "bug", 160)}} をご覧ください。
 
-<p>ただし、正当な理由で、Firefox では <code>captureStream()</code> の先頭に <code>mozCaptureStream()</code> が付いています。 現在の実装には、次のような注目に値するいくつかの奇妙な点があります。</p>
+## 関連情報
 
-<ul>
- <li>Firefox の実装は現在、メディア要素のソース自体が {{domxref("MediaStream")}} である場合にのみ、仕様で説明しているように機能します。</li>
- <li>メディア要素のソースが <code>MediaStream</code> ではない場合、このメソッドからの出力は仕様と互換性がありません。 そして、キャプチャの開始後にソースを変更した場合、その非互換性のために出力キャプチャストリームは新しいソースデータを受け入れることができません。 したがって、新しいソースの <code>MediaStream</code> からの {{domxref("MediaStreamTrack")}} はキャプチャしたストリームに追加されず、更新されたソースをキャプチャしない出力になります。</li>
- <li>ソースを <code>MediaStream</code> に戻すと、トラックをストリームに戻して追加し、期待どおりに機能します。</li>
- <li><code>MediaStream</code> のソースを使用して要素に対して <code>mozCaptureMediaStream()</code> を呼び出すと、要素が <code>MediaStream</code> を再生している間はトラックのみを含むストリームを返します。</li>
- <li>ソースメディアのないメディア要素で <code>mozCaptureMediaStream()</code> を呼び出すと、その互換モードは最初に追加されたソースに基づきます。 例えば、<code>MediaStream</code> の場合、キャプチャストリームはそれ以降 <code>MediaStream</code> のソースでのみ機能します。</li>
- <li><code>MediaStream</code> 以外のソースのサポートが仕様に達した時点で、接頭辞なしのメソッドの場合、この特別なふるまいは取り除かれます。 詳細は {{bug(1259788, "bug", 160)}} をご覧ください。</li>
-</ul>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element">メディア要素の記録</a></li>
- <li><a href="/ja/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a></li>
- <li>{{domxref("HTMLCanvasElement.captureStream()")}}</li>
- <li>{{domxref("MediaStream")}}</li>
- <li><a href="/ja/docs/Web/API/WebRTC_API">WebRTC API</a></li>
-</ul>
+- [メディア要素の記録](/ja/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
+- [MediaStream 記録 API](/ja/docs/Web/API/MediaStream_Recording_API)
+- {{domxref("HTMLCanvasElement.captureStream()")}}
+- {{domxref("MediaStream")}}
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API)

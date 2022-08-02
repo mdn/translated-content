@@ -16,7 +16,7 @@ La cible d'origine de l'évènement avant tout reciblage. (spécifique à Mozill
 
 En présence de contenu anonyme [XBL](/fr/docs/XBL), ce sera le nœud anonyme sur lequel l'événement a été déclenché à l'origine. Voir [Anonymous Content#Event_Flow_and_Targeting](/fr/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting) pour plus de détails.
 
-**Note :** `originalTarget` peut aussi être un contenu anonyme natif  (voir {{Bug("208427")}}), dans ce cas, il est inutile pour le code non privilégié.
+**Note :** `originalTarget` peut aussi être un contenu anonyme natif  (voir {{Bug("208427")}}), dans ce cas, il est inutile pour le code non privilégié.
 
 Voir aussi [Comparaison des cibles d'évènements.](/fr/docs/Web/API/Event/Comparaison_des_cibles_d_%C3%A9v%C3%A8nements)
 

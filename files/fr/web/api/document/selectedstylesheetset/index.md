@@ -9,15 +9,17 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/selectedStyleSheetSet
 ---
-{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}
+{{ APIRef("DOM") }}
 
 Indique le nom du jeu de feuilles de styles actuellement utilisé.
 
 ## Syntaxe
 
-    currentStyleSheetSet = document.selectedStyleSheetSet
+```js
+currentStyleSheetSet = document.selectedStyleSheetSet
 
-    document.selectedStyleSheet = newStyleSheetSet
+document.selectedStyleSheet = newStyleSheetSet
+```
 
 En retour, `currentStyleSheetSet` indique le nom du jeu de feuilles de styles en cours d'utilisation. Vous pouvez aussi définir celui-ci en utilisant cette propriété.
 
@@ -28,7 +30,7 @@ La définition de la valeur de cette propriété équivaut à appeler {{ domxref
 ## Exemple
 
 ```js
-console.log("Current style sheet set: " + document.selectedStyleSheetSet);
+console.log("Current style sheet set: " + document.selectedStyleSheetSet);
 
 document.selectedStyleSheetSet = "Some other style sheet";
 ```
@@ -44,4 +46,4 @@ document.selectedStyleSheetSet = "Some other style sheet";
 
 ## Spécifications
 
-- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)

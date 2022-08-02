@@ -1,20 +1,12 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
-tags:
-  - CSS
-  - Descripteur
-  - Experimental
-  - Reference
 translation_of: Web/CSS/@font-face/unicode-range
+browser-compat: css.at-rules.font-face.unicode-range
 ---
 {{cssref}}
 
-Le descripteur **`unicode-range`**, associé à la règle @ {{cssxref("@font-face")}}, définit l'intervalle de caractères qui peuvent être représentés par cette police pour la page. Si la page n'utilise aucun caractère de cet intervalle, la police n'est pas téléchargée. Si, au contraire, elle utilise au moins un caractère appartenant à cet intervalle, toute la police est téléchargée.
-
-Le but de ce descripteur est de segmenter les ressources liées aux polices afin que le navigateur puisse ne télécharger que les polices dont il a besoin pour le texte d'un document. Ainsi, un site disposant de nombreuses traductions pourrait proposer des ressources distinctes pour l'anglais, le grec et le japonais et seules les ressources nécessaires (dont les fichiers de polices) seraient téléchargées.
-
-{{cssinfo}}
+Le descripteur **`unicode-range`**, associé à la règle @ [`@font-face`](/fr/docs/Web/CSS/@font-face), définit l'intervalle de caractères qui peuvent être représentés par cette police pour la page. Si la page n'utilise aucun caractère de cet intervalle, la police n'est pas téléchargée. Si, au contraire, elle utilise au moins un caractère appartenant à cet intervalle, toute la police est téléchargée.
 
 ## Syntaxe
 
@@ -29,31 +21,45 @@ unicode-range: U+0025-00FF, U+4??;   /* plusieurs valeurs             */
 
 ### Valeurs
 
-Une valeur de type `<unicode-range>` peut se présenter de trois façons différentes :
+Une valeur de type `<unicode-range>` peut se présenter de trois façons différentes&nbsp;:
 
-- un seul point de code
+- Un seul point de code
 
-  - Ex : `U+26`
+  - : Par exemple `U+26`
 
-- un intervalle spécifique de points de code
+- Un intervalle spécifique de points de code
 
-  - Ex : `U+0025-00FF` indique que l'intervalle contient tous les caractères contenus entre les points de code `U+0025` et `U+00FF`
+  - : Par exemple `U+0025-00FF` indique que l'intervalle contient tous les caractères contenus entre les points de code `U+0025` et `U+00FF`
 
-- un intervalle de substitution indiqué par `?`
+- Un intervalle de substitution indiqué par `?`
 
-  - Un intervalle de points de code Unicode indiqué par une valeur contenant un point d'interrogation. Ainsi, `U+4??` signifie « tous les caractères contenus dans l'intervalle entre les points de code `U+400` et `U+4FF`).
+  - : Un intervalle de points de code Unicode indiqué par une valeur contenant un point d'interrogation. Ainsi, `U+4??` signifie «&nbsp;tous les caractères contenus dans l'intervalle entre les points de code `U+400` et `U+4FF`&nbsp;».
 
-### Syntaxe formelle
+## Description
+
+Le but de ce descripteur est de segmenter les ressources liées aux polices afin que le navigateur puisse ne télécharger que les polices dont il a besoin pour le texte d'un document. Ainsi, un site disposant de nombreuses traductions pourrait proposer des ressources distinctes pour l'anglais, le grec et le japonais et seules les ressources nécessaires (dont les fichiers de polices) seraient téléchargées.
+
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-Dans cet exemple, on crée un élément HTML {{HTMLElement("div")}} pour lequel on veut que l'esperluette soit mise en forme avec une police différente. Pour que le résultat soit apparent, on utilisera une police sans empattement pour le texte (_Helvetica_) et une police avec des empattements (_Times New Roman_) pour l'esperluette.
+Dans cet exemple, on crée un élément HTML [`<div>`](/fr/docs/Web/HTML/Element/div) pour lequel on veut que l'esperluette soit mise en forme avec une police différente. Pour que le résultat soit apparent, on utilisera une police sans empattement pour le texte (_Helvetica_) et une police avec des empattements (_Times New Roman_) pour l'esperluette.
+
+### HTML
+
+```html
+<div>Me & You = Us</div>
+```
 
 ### CSS
 
-Dans la feuille de style CSS, on définit une règle {{cssxref("@font-face")}} qui n'inclue qu'un seul caractère. Cela signifie que seul ce caractère sera affiché avec cette police. On aurait également pu encadrer l'esperluette dans un élément {{HTMLElement("span")}} et appliquer une autre règle sur cet élément mais on aurait alors eu un balisage plus lourd et une règle spécifique en plus sur la feuille de style.
+Dans la feuille de style CSS, on définit une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui n'inclue qu'un seul caractère. Cela signifie que seul ce caractère sera affiché avec cette police. On aurait également pu encadrer l'esperluette dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) et appliquer une autre règle sur cet élément, mais on aurait alors eu un balisage plus lourd et une règle spécifique en plus sur la feuille de style.
 
 ```css
 @font-face {
@@ -68,26 +74,26 @@ div {
 }
 ```
 
-### HTML
+### Résultat
 
-```html
-<div>Me & You = Us</div>
-```
-
-### Résultat de référence (image statique)
-
-![](https://mdn.mozillademos.org/files/6043/Refresult.png)
-
-### Résultat du navigateur
-
-{{EmbedLiveSample("Exemples", 500,104)}}
+{{EmbedLiveSample("", 500,104)}}
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.unicode-range")}}
+{{Compat}}
+
+## Voir aussi
+
+- [`font-display`](/fr/docs/Web/CSS/@font-face/font-display)
+- [`font-family`](/fr/docs/Web/CSS/@font-face/font-family)
+- [`font-stretch`](/fr/docs/Web/CSS/@font-face/font-stretch)
+- [`font-style`](/fr/docs/Web/CSS/@font-face/font-style)
+- [`font-weight`](/fr/docs/Web/CSS/@font-face/font-weight)
+- [`font-variant`](/fr/docs/Web/CSS/@font-face/font-variant)
+- [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings)
+- [`font-variation-settings`](/fr/docs/Web/CSS/@font-face/font-variation-settings)
+- [`src`](/fr/docs/Web/CSS/@font-face/src)

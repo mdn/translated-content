@@ -18,12 +18,14 @@ translation_of: Web/API/Document/createProcessingInstruction
 
 ## Syntaxe
 
-    Processing instruction node = document.createProcessingInstruction(target, data)
+```js
+Processing instruction node = document.createProcessingInstruction(target, data)
+```
 
 ### Paramètres
 
 - `Processing Instruction node` est un noeud {{domxref("ProcessingInstruction")}}.
-- `target` fait référence à la partie cible du noeud d'instructions de traitement (par exemple, \<?_target_ ... ?>).
+- `target` fait référence à la partie cible du noeud d'instructions de traitement (par exemple, \<?_target_ ...&nbsp;?>).
 - `data` est une string (_chaîne de caractères_) contenant les données à ajouter aux données du noeud.
 
 ### Exceptions
@@ -35,14 +37,16 @@ translation_of: Web/API/Document/createProcessingInstruction
 
 ## Exemple
 
-    var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
+```js
+var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
 
-    var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
+var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" type="text/css"');
 
-    docu.insertBefore(pi, docu.firstChild);
+docu.insertBefore(pi, docu.firstChild);
 
-    alert(new XMLSerializer().serializeToString(docu));
-    // Affiche: <?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+alert(new XMLSerializer().serializeToString(docu));
+// Affiche: <?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+```
 
 ## Spécifications
 

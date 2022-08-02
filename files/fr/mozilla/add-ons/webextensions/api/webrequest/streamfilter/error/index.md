@@ -21,7 +21,7 @@ Une chaîne de caractères qui contiendra un message d'erreur après le déclenc
 
 ## Exemples
 
-Cet exemple ajoute un écouteur {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} qui enregistre la valeur de `error`.
+Cet exemple ajoute un écouteur {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} qui enregistre la valeur de `error`.
 
 ```js
 function listener(details) {

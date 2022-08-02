@@ -22,11 +22,15 @@ Lorsque la méthode `deleteDatabase()` est invoquée, toutes les autres connexio
 
 La syntaxe actuellement standard est :
 
-    var request = indexedDB.deleteDatabase(nom);
+```js
+var request = indexedDB.deleteDatabase(nom);
+```
 
 Une version expérimentale permet de gérer des options (cf. ci-après) :
 
-    var request = indexedDB.deleteDatabase(nom, options);
+```js
+var request = indexedDB.deleteDatabase(nom, options);
+```
 
 ### Paramètres
 
@@ -59,8 +63,8 @@ DBDeleteRequest.onsuccess = function(event) {
 
 | Spécification                                                                                                                                        | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-deleteDatabase-IDBOpenDBRequest-DOMString-name', 'deleteDatabase()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbfactory-deletedatabase", "deleteDatabase()")}}                                         | {{Spec2("IndexedDB 2")}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBFactory-deleteDatabase-IDBOpenDBRequest-DOMString-name', 'deleteDatabase()')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbfactory-deletedatabase", "deleteDatabase()")}}                                         | {{Spec2("IndexedDB 2")}} |              |
 
 ## Compatibilité des navigateurs
 

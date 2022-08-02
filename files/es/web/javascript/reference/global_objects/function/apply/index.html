@@ -28,7 +28,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
  <dt><code>thisArg</code></dt>
  <dd>El valor del objeto <strong>this</strong> a utilizar dentro de la llamada a <em>fun</em>. Cabe mencionar que éste puede no ser el valor visto por el método: si el método es una función del tipo {{jsxref("Functions_and_function_scope/Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} o {{jsxref("Global_Objects/undefined", "undefined")}} será reemplazado por el objeto global, y los valores primitivos serán encapsulados.</dd>
  <dt><code>argsArray</code></dt>
- <dd>Un objeto similar a un array (<a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects" title="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects">array like object</a>), que contiene los parámetros con los que será llamada <em><code>fun</code></em>, o <code>null</code> o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase {{anch("Browser_compatibility", "browser compatibility")}} para mayor información.</dd>
+ <dd>Un objeto similar a un array (<a href="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects" title="/en-US/docs/JavaScript/Guide/Predefined_Core_Objects#Working_with_Array-like_objects">array like object</a>), que contiene los parámetros con los que será llamada <em><code>fun</code></em>, o <code>null</code> o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase <a href="#browser_compatibility">browser compatibility</a> para mayor información.</dd>
  <dt>
  <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
@@ -42,7 +42,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 
 <p><code>apply</code> es muy similar a {{jsxref("Function.call", "call()")}}, excepto por el tipo de argumentos que soporta. Puede utilizarse un arreglo de parámetros en lugar de un conjunto de pares nombre-valor. Con <code>apply</code>, puede utilizarse un arreglo literal, por ejemplo, <code><em>fun</em>.apply(this, ['eat', 'bananas'])</code>, o un objeto <code>Array</code>, por ejemplo, <code><em>fun</em>.apply(this, new Array('eat', 'bananas'))</code>.</p>
 
-<p>Puede también utilizarse {{jsxref("Funciones/arguments", "arguments")}} como parámetro <code>argsArray</code>. <code>arguments</code> es una variable local a la función. Puede utilizarse para acceder a todos los argumentos no específicados en la llamada al objeto. Por lo tanto, no se requiere conocer todos los argumentos del objeto invocado cuando se utiliza el método <code>apply</code>. Puede utilizarse <code>arguments</code> para pasar los argumentos al objeto invocado. El objeto invocado es entonces responsable por el manejo de los argumentos.</p>
+<p>Puede también utilizarse {{jsxref("Functions/arguments", "arguments")}} como parámetro <code>argsArray</code>. <code>arguments</code> es una variable local a la función. Puede utilizarse para acceder a todos los argumentos no específicados en la llamada al objeto. Por lo tanto, no se requiere conocer todos los argumentos del objeto invocado cuando se utiliza el método <code>apply</code>. Puede utilizarse <code>arguments</code> para pasar los argumentos al objeto invocado. El objeto invocado es entonces responsable por el manejo de los argumentos.</p>
 
 <p>Desde la 5ta edición de ECMAScript se puede utilizar también cualquier tipo de objeto similar a un arreglo, que en términos prácticos significa que tendrá una propiedad <code>length</code> y propiedades integer en el rango (<code>0...length)</code>. Por ejemplo, ahora puede utilizarse un {{domxref("NodeList")}} o un objeto personalizado como: <code>{'length': 2, '0': 'eat', '1': 'bananas'}</code>.</p>
 
@@ -54,7 +54,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 
 <h3 id="Using_apply_to_chain_constructors" name="Using_apply_to_chain_constructors">Utilizando <strong><code>apply</code></strong> para encadenar constructores</h3>
 
-<p>Puedes utilizar <code>apply</code> para encadenar {{jsxref("Operadores/new", "constructors")}} para un objeto, similar a Java. En el ejemplo siguiente se crea un método global a {{jsxref("Function")}} llamado <code>construct</code>, en cual posibilita el uso de un objeto similar a un arreglo en un constructor en lugar de una lista de argumentos.</p>
+<p>Puedes utilizar <code>apply</code> para encadenar {{jsxref("Operators/new", "constructors")}} para un objeto, similar a Java. En el ejemplo siguiente se crea un método global a {{jsxref("Function")}} llamado <code>construct</code>, en cual posibilita el uso de un objeto similar a un arreglo en un constructor en lugar de una lista de argumentos.</p>
 
 <pre class="brush: js">Function.prototype.construct = function (aArgs) {
     var fConstructor = this, fNewConstr = function () { fConstructor.apply(this, aArgs); };
@@ -122,14 +122,14 @@ var min = minOfArray([5, 6, 2, 3, 7]);</pre>
 
 <p><code>apply </code>puede ser la mejor manera de reemplazar dinámicamente una función 'built-in' de Firefox, o de una librería de JavaScript. Dada una función <code>someobject.foo</code>, puedes modificar la función de una forma 'hacker', como ésta:</p>
 
-<pre><code>var originalfoo = someobject.foo;
+<pre class="brush: js">var originalfoo = someobject.foo;
 someobject.foo = function() {
   // Haz algo antes de llamar a la función
   console.log(arguments);
   // Llama a la función como la hubieras llamado normalmente
   originalfoo.apply(this, arguments);
   // Aquí, ejecuta algo después
-}</code></pre>
+}</pre>
 
 <p>Este método es especialmente útil cuando quieres depurar eventos, o interfaces con algún elemento que no tiene API, al igual que los diversos <code>.on</code> (eventos<code> [event]..., </code>como los que se usan en el <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#Developer_API">Devtools Inspector</a>)</p>
 
@@ -167,68 +167,12 @@ someobject.foo = function() {
 
 <h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>ES 5.1 generic array-like object as {{jsxref("Functions/arguments", "arguments")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>ES 5.1 generic array-like object as {{jsxref("Functions/arguments", "arguments")}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat("javascript.builtins.Function.apply")}}
 
 <h2 id="See_also" name="See_also">Véase también</h2>
 
 <ul>
- <li>{{jsxref("Funciones/arguments", "arguments")}} objetos</li>
+ <li>{{jsxref("Functions/arguments", "arguments")}} objetos</li>
  <li>{{jsxref("Function.prototype.bind()")}}</li>
  <li>{{jsxref("Function.prototype.call()")}}</li>
 </ul>

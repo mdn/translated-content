@@ -13,7 +13,7 @@ translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 
-**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (*対象要素*) を表します。
+**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (*対象要素*) を表します。
 
 ```css
 /* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */
@@ -24,7 +24,9 @@ translation_of: Web/CSS/:target
 
 例えば、以下の URL には `section2` と呼ばれる要素を指すフラグメント (_#_ 記号で記述) があります。
 
-    http://www.example.com/index.html#section2
+```
+http://www.example.com/index.html#section2
+```
 
 現在の URL が上記の通りの場合、以下の要素が `:target` セレクターで選択されます。
 
@@ -87,7 +89,7 @@ p:target i {
 
 ### 純粋な CSS のライトボックス
 
-`:target` 擬似クラスを使用して JavaScript を使わずにライトボックスを作成することができます。この技術はページ内の最初は非表示の要素をリンクを作ることができることを利用しています。いったん対象となれば、 CSS で `display` を変更して表示させます。
+`:target` 擬似クラスを使用して JavaScript を使わずにライトボックスを作成することができます。このテクニックはページ内の最初は非表示の要素にリンクを作ることができることを利用しています。いったん対象となれば、 CSS で `display` を変更して表示させます。
 
 > **Note:** `:target` 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 [GitHub で利用できます](https://github.com/madmurphy/takefive.css/) ([デモ](https://madmurphy.github.io/takefive.css/))。
 

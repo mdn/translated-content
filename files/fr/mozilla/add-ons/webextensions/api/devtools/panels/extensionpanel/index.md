@@ -19,7 +19,7 @@ Une `ExtensionPanel` représente un panneau ajouté aux devtools. C'est la réso
 
 Les valeurs de ce type sont des objets. Définissez deux événements, `onShown` et `onHidden`.
 
-- `onShown` est émis lorsque le panneau est affiché dans les devtools (par exemple, quand l'utilisateur a cliqué sur le panneau dans la fenêtre des  devtools).
+- `onShown` est émis lorsque le panneau est affiché dans les devtools (par exemple, quand l'utilisateur a cliqué sur le panneau dans la fenêtre des devtools).
 - `onHidden` est émis lorsque le panneau est caché (par exemple, quand l'utilisateur a basculé sur un onglet différent dans la fenêtre devtools).
 
 ## Compatibilité du navigateur

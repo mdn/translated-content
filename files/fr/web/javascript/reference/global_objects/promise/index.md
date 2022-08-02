@@ -345,9 +345,9 @@ Un autre exemple simple utilisant `Promise` et [`XMLHttpRequest`](/fr/docs/Web/A
 
 - [Manipuler les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [Venkatraman.R - JS Promise (Part 1, Basics) ](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)(en anglais)
-- [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js) ](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)(en anglais)
-- [Venkatraman.R - Tools for Promises Unit Testing ](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)(en anglais)
+- [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53) (en anglais)
+- [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski) (en anglais)
+- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction) (en anglais)
 - [Jake Archibald : _JavaScript Promises : There and Back Again_](https://www.html5rocks.com/en/tutorials/es6/promises/) (tutoriel en anglais)
 - [Domenic Denicola : _Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript_](https://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript) (présentation en anglais sur l'asynchronisme en JavaScript)
 - [Matt Greer : _JavaScript Promises ... In Wicked Detail_](https://www.mattgreer.org/articles/promises-in-wicked-detail/) (en anglais)

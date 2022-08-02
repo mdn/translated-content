@@ -190,7 +190,7 @@ function attemptMutation(v) {
 
 `Object.defineProperty` lancera une exception pour tout changement de la propriété qui serait réellement un changement. Rien ne se passera si aucun changement n'est nécessaire. Ainsi, si `v` vaut `-0`, aucun changement n'est nécessaire et il n'y aura pas d'erreur. Mais si `v` vaut `+0`, `Number.NEGATIVE_ZERO` n'aurait plus la même valeur immuable. De façon interne à l'implémentation, la nouvelle valeur est comparée avec la valeur courante en utilisant une égalité de valeurs.
 
-L'égalité de valeurs peut être testée grâce à la méthode {{jsxref("Object.is")}}.
+L'égalité de valeurs peut être testée grâce à la méthode {{jsxref("Object.is")}}.
 
 ## Égalité de valeurs nulles
 
@@ -236,7 +236,7 @@ Cependant, ce « modèle de pensées » ne peut pas être étendu avec l'arrivé
 | `'toto'`             | `NaN`                | `false` | `false` | `false`     | `false`         |
 | `NaN`                | `NaN`                | `false` | `false` | `true`      | `true`          |
 
-## Quand utiliser {{jsxref("Object.is")}} et quand utiliser l'égalité stricte
+## Quand utiliser {{jsxref("Object.is")}} et quand utiliser l'égalité stricte
 
 En plus de la façon dont {{jsxref("Object.is")}} traite `NaN`, la spécificité d'`Object.is()` réside dans sa façon de traiter les valeurs proches de zéro. Dans des cas d'utilisation où on a besoin d'effectuer de la méta-programmation, notamment pour imiter certaines caractéristiques de {{jsxref("Object.defineProperty")}}. Si le scénario d'utilisation ne nécessite pas ce comportement, il est conseillé d'utiliser [`===`](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>). Même si on souhaite pouvoir comparer `NaN` avec lui-même et que ce test vaille `true`, il sera plus simple d'utiliser la méthode {{jsxref("isNaN")}} disponible avec les versions antérieures d'ECMAScript. En effet, cela évite d'avoir à traiter des cas plus complexes où il faudrait gérer les signes des zéros dans les différentes comparaisons.
 

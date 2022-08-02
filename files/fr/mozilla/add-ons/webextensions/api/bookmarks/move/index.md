@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
 {{AddonSidebar()}}
 
-La méthode **`bookmarks.move()`** déplace le  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.
+La méthode **`bookmarks.move()`** déplace le  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.
 
 > **Attention :** Si votre extension tente de déplacer un signet dans le nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le déplacement ne sera pas terminé.
 
@@ -45,7 +45,7 @@ var movingBookmark = browser.bookmarks.move(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode)  décrivant le noeud déplacé.Si le noeud correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode)  décrivant le noeud déplacé.Si le noeud correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -74,7 +74,7 @@ movingBookmark.then(onMoved, onRejected);
 
 > **Note :**
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

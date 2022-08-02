@@ -24,7 +24,7 @@ Avec le message lui-même, l'écouteur est transmis :
 
 Cette API ne peut pas être utilisée dans un script de contenu.
 
-## Syntax
+## Syntaxe
 
 ```js
 browser.runtime.onMessageExternal.addListener()
@@ -76,7 +76,7 @@ Les événements ont trois fonctions:
 
 ## Exemples
 
-Dans cet exemple, l'extension "blue\@mozilla.org" envoie un message  à l'extension "red\@mozilla.org":
+Dans cet exemple, l'extension "blue\@mozilla.org" envoie un message à l'extension "red\@mozilla.org":
 
 ```js
 // sender: browser.runtime.id == "blue@mozilla.org"

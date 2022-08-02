@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
 
 Obtient le document HTML défini comme la popup pour cette action du navigateur.
 
-Il s'agit d'une fonction asynchrone  qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
 ## Syntaxe
 

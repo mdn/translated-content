@@ -9,7 +9,7 @@ translation_of: Web/CSS/@media/monochrome
 ---
 {{CSSRef}}
 
-**`monochrome`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin d'appliquer des styles en fonction du nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil.
+**`monochrome`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin d'appliquer des styles en fonction du nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil.
 
 ## Syntaxe
 

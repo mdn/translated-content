@@ -18,19 +18,23 @@ Retourne un booléen indiquant si {{domxref("event.preventDefault()")}} a été 
 
 ## Syntaxe
 
-    bool = event.defaultPrevented
+```js
+bool = event.defaultPrevented
+```
 
 ## Exemple
 
-     if (e.defaultPrevented) {
-       /* Le comportement par défaut a été inhibé */
-     }
+```js
+if (e.defaultPrevented) {
+  /* Le comportement par défaut a été inhibé */
+}
+```
 
 ## Spécification
 
 | Spécification                                                                                                    | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-event-defaultprevented', 'Event.defaultPrevented()')}} | {{ Spec2('DOM WHATWG') }} |             |
+| {{SpecName('DOM WHATWG', '#dom-event-defaultprevented', 'Event.defaultPrevented()')}} | {{ Spec2('DOM WHATWG') }} |             |
 
 ## Compatibilité des navigateurs
 

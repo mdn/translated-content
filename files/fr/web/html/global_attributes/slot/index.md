@@ -19,8 +19,8 @@ Pour des exemples d'application, consulter le guide [Utiliser les modèles (_tem
 
 | Spécification                                                                            | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}} | {{Spec2('DOM WHATWG')}} |              |
+| {{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}} | {{Spec2('DOM WHATWG')}} |              |
 
 ## Compatibilité des navigateurs
 

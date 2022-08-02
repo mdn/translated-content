@@ -28,7 +28,7 @@ Nous pouvons contrôler ce qui est demandé au serveur et ce qui est récupéré
 
 ### Pourquoi dois-je l'utiliser ?
 
-Cette architecture permet à un site web de bénéficier de la plupart des fonctionnalités PWA - elle met en cache l'app shell et gère le contenu dynamique d'une manière qui améliore grandement les performances. En plus de la structure de base, vous pouvez ajouter d'autres fonctionnalités telles que [l'ajouter à l'écran d'accueil](/fr/docs/Web/Apps/Progressive/Add_to_home_screen) ou [l'envoi de notifications](/fr/docs/Web/API/Push_API), sachant que l'application fonctionnera toujours correctement si elles ne sont pas prises en charge par le navigateur de l'utilisateur - c'est la beauté de l'amélioration continue.
+Cette architecture permet à un site web de bénéficier de la plupart des fonctionnalités PWA - elle met en cache l'app shell et gère le contenu dynamique d'une manière qui améliore grandement les performances. En plus de la structure de base, vous pouvez ajouter d'autres fonctionnalités telles que [l'ajouter à l'écran d'accueil](/fr/docs/Web/Apps/Progressive/Add_to_home_screen) ou [l'envoi de notifications](/fr/docs/Web/API/Push_API), sachant que l'application fonctionnera toujours correctement si elles ne sont pas prises en charge par le navigateur de l'utilisateur - c'est la beauté de l'amélioration continue.
 
 Le site web se comporte comme une application native, offrant une interaction instantannée et de solides performances tout en conservant les avantages du web.
 
@@ -38,7 +38,7 @@ Il est important de se rappeler les avantages des PWA et de les garder à l'espr
 
 - Accessible par un lien: Même s'il se comporte comme une application native, il reste un site web - vous pouvez cliquer sur les liens d'une page et envoyer une URL à quelqu'un si vous voulez le partager.
 - Progressive: Commencer avec un "bon vieux site web basic” et ajouter progressivement de nouvelles fonctionnalités tout en se rappelant de détecter si elles sont disponibles dans le navigateur et de gérer proprement toute erreur qui pourrait survenir si la prise en charge n'est pas disponible. Par exemple, un mode déconnecté possible grâce aux service workers n'est qu'une caractéristique bonus qui améliore l'expérience sur le site web, mais ce dernier reste totalement fonctionnel sans elle.
-- Adaptatif: La conception web adaptative s'applique également aux applications web progressives, attendu que les deux sont principalement destinés aux appareils mobiles. Il y a tellements d'appareils différents en plus des navigateurs - il est important de préparer votre site web à fonctionner sur différentes tailles d'écran, supports d'affichage ou densité de pixels, en utilisant des technologies telles que  [les tags meta viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), [les reqêtes media CSS](/fr/docs/Web/CSS/Media_Queries/Using_media_queries), [les Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et les [Grid CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
+- Adaptatif: La conception web adaptative s'applique également aux applications web progressives, attendu que les deux sont principalement destinés aux appareils mobiles. Il y a tellements d'appareils différents en plus des navigateurs - il est important de préparer votre site web à fonctionner sur différentes tailles d'écran, supports d'affichage ou densité de pixels, en utilisant des technologies telles que  [les tags meta viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), [les reqêtes media CSS](/fr/docs/Web/CSS/Media_Queries/Using_media_queries), [les Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et les [Grid CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
 
 ## Approche différente : les streams
 
@@ -66,39 +66,39 @@ Du point de vue HTML, l'app shell est tout ce qui est à l'extérieur de la sect
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>js13kGames A-Frame entries</title>
-	<meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
-	<meta name="author" content="end3r">
-	<meta name="theme-color" content="#B12A34">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:image" content="icons/icon-512.png">
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="style.css">
-	<link rel="manifest" href="js13kpwa.webmanifest">
-	<script src="data/games.js" defer></script>
-	<script src="app.js" defer></script>
+  <meta charset="utf-8">
+  <title>js13kGames A-Frame entries</title>
+  <meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
+  <meta name="author" content="end3r">
+  <meta name="theme-color" content="#B12A34">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="icons/icon-512.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="js13kpwa.webmanifest">
+  <script src="data/games.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
 <header>
-	<p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
+  <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
 </header>
 <main>
-	<h1>js13kGames A-Frame entries</h1>
-	<p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
-	<button id="notifications">Request dummy notifications</button>
-	<section id="content">
-		// Le contenu est inséré ici
-	</section>
+  <h1>js13kGames A-Frame entries</h1>
+  <p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
+  <button id="notifications">Request dummy notifications</button>
+  <section id="content">
+    // Le contenu est inséré ici
+  </section>
 </main>
 <footer>
-	<p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
+  <p>© js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
 </footer>
 </body>
 </html>
 ```
 
-La section {{htmlelement("head")}} contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et  app.js — c'est là où notre application JavaScript est initialisée. Le {{htmlelement("body")}} est divisé en {{htmlelement("header")}} (contenant les images liées), {{htmlelement("main")}} la page (avec le titre, la description et un emplacement pour le contenu) et  {{htmlelement("footer")}} (le copyright et les liens).
+La section {{htmlelement("head")}} contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et app.js — c'est là où notre application JavaScript est initialisée. Le {{htmlelement("body")}} est divisé en {{htmlelement("header")}} (contenant les images liées), {{htmlelement("main")}} la page (avec le titre, la description et un emplacement pour le contenu) et  {{htmlelement("footer")}} (le copyright et les liens).
 
 Le seul travail de l'application est de lister toutes les entrées A-Frame de la compétition js13kGames 2017. Comme vous pouvez le voir, c'est un site web en une page tout ce qu'il y a de plus ordinaire - le but est d'avoir quelque chose de simple afin que nous puissions nous concentrer sur l'implémentation des réelles fonctionnalités PWA.
 
@@ -158,7 +158,7 @@ button.addEventListener('click', function(e) {
 });
 ```
 
-Le dernier bloc crée des notifications qui affichent  un élément choisi au hasard dans la liste des jeux:
+Le dernier bloc crée des notifications qui affichent un élément choisi au hasard dans la liste des jeux:
 
 ```js
 function randomNotification() {

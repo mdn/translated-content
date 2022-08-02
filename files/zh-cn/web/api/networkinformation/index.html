@@ -5,7 +5,7 @@ translation_of: Web/API/NetworkInformation
 ---
 <div>{{APIRef("Network Information API")}}{{SeeCompatTable}}</div>
 
-<p><code><strong>NetworkInformation</strong></code> 提供有关设备正在使用的连接与网络进行通信的信息，并提供了在连接类型更改时通知脚本的事件。<code>NetworkInformation</code> 接口不能被是实例化， 而是通过 {{domxref("Navigator")}} 的 <code>connection</code> 属性进行访问。</p>
+<p><code><strong>NetworkInformation</strong></code> 提供有关设备正在使用的连接与网络进行通信的信息，并提供了在连接类型更改时通知脚本的事件。<code>NetworkInformation</code> 接口不能被是实例化， 而是通过 {{domxref("Navigator")}} 的 <code>connection</code> 属性进行访问。</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/NetworkInformation
 
 <dl>
  <dt>{{domxref("NetworkInformation.onchange")}}</dt>
- <dd>当连接信息更改并在此对象上触发更改时触发的 {{event("change")}}  。</dd>
+ <dd>当连接信息更改并在此对象上触发更改时触发的 {{event("change")}}  。</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
@@ -44,86 +44,11 @@ translation_of: Web/API/NetworkInformation
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Network Information', '#idl-def-NetworkInformation', 'NetworkInformation')}}</td>
-   <td>{{Spec2('Network Information')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>20 {{property_prefix("webkit")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(31)}} {{property_prefix("moz")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(53)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.NetworkInformation")}}
 
 <h2 id="See_also">See also</h2>
 

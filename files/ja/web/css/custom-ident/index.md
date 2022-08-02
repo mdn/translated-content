@@ -48,7 +48,6 @@ translation_of: Web/CSS/custom-ident
 
 ### 有効な識別子
 
-
 ```plain example-good
 nono79            アルファベットと数字の組み合わせ
 ground-level      アルファベットとダッシュの組み合わせ

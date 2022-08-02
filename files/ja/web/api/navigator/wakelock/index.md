@@ -4,7 +4,7 @@ slug: Web/API/Navigator/wakeLock
 tags:
   - API
   - リファレンス
-  - Screen Wake Lock API
+  - 画面起動ロック API
 browser-compat: api.Navigator.wakeLock
 translation_of: Web/API/Navigator/wakeLock
 ---
@@ -29,5 +29,5 @@ const wakeLock = navigator.wakeLock;
 ## 関連情報
 
 - {{DOMxRef("WakeLock.request","WakeLock.request()")}}
-- [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API)
+- [画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API)
 - [Blog post - Stay awake with the Screen Wake Lock API](https://web.dev/wakelock/)

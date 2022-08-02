@@ -13,7 +13,7 @@ Cet article illustre comment publier votre site en ligne grâce à des outils {{
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez au préalable comprendre
         <a href="/fr/Apprendre/Qu_est-ce_qu_un_serveur_web"
@@ -33,7 +33,7 @@ Cet article illustre comment publier votre site en ligne grâce à des outils {{
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Apprendre à envoyer des fichiers vers un serveur en utilisant FTP.
       </td>
@@ -57,8 +57,8 @@ Il existe de nombreux clients FTP. Dans cette démonstration, nous utiliserons F
 
 Pour ouvrir FireFTP dans un nouvel onglet de Firefox, il existe deux méthodes :
 
-1.  **Menu de Firefox ![](2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](Screenshot%20from%202014-11-26%2014:24:56.png) ➤ FireFTP**
-2.  **Outils** ➤ **Développement web** ➤ **FireFTP**
+1. **Menu de Firefox ![](2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](Screenshot%20from%202014-11-26%2014:24:56.png) ➤ FireFTP**
+2. **Outils** ➤ **Développement web** ➤ **FireFTP**
 
 Vous devriez voir apparaître cette fenêtre :
 

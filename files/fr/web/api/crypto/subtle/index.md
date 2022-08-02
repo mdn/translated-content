@@ -11,7 +11,9 @@ La propriété **`Crypto.subtle`** en mode lecture seule retourne un objet {{dom
 
 ## Syntaxe
 
-    var crypto = crypto.subtle;
+```js
+var crypto = crypto.subtle;
+```
 
 ## Spécifications
 

@@ -17,8 +17,10 @@ La propriété **`name`**, rattachée à l'interface {{domxref("IDBIndex")}}, co
 
 ## Syntaxe
 
-    var indexName = IDBIndex.name;
-    IDBIndex.name = indexName;
+```js
+var indexName = IDBIndex.name;
+IDBIndex.name = indexName;
+```
 
 ### Valeur
 
@@ -80,7 +82,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                | État                         | Commentaires |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

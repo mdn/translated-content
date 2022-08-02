@@ -78,8 +78,8 @@ La clé background est un objet qui peut avoir l'une des deux propriétés suiva
           <p>
             <strong>Note :</strong> Si vous souhaitez récupérer un script à
             partir d'un emplacement distant avec la balise &#x3C;script> (par
-            exemple : &#x3C;script src =
-            "https://code.jquery.com/jquery-1.7.1.min.js"> ), vous devrez
+            exemple : &#x3C;script src =
+            "https://code.jquery.com/jquery-1.7.1.min.js"> ), vous devrez
             également modifier la clé
             <code
               ><a

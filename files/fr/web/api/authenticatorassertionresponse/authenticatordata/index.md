@@ -9,9 +9,9 @@ tags:
   - WebAuthn
 translation_of: Web/API/AuthenticatorAssertionResponse/authenticatorData
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
-La propriété **`authenticatorData`** (rattachée à  l'interface {{domxref("AuthenticatorAssertionResponse")}}) fournit un {{jsxref("ArrayBuffer")}} qui contient les informations relatives à l'authenticateur tels que :
+La propriété **`authenticatorData`** (rattachée à l'interface {{domxref("AuthenticatorAssertionResponse")}}) fournit un {{jsxref("ArrayBuffer")}} qui contient les informations relatives à l'authenticateur tels que :
 
 - l'empreinte d'identifiant (rpIdHash pour _Relying Party ID Hash_)
 - un compteur de signature

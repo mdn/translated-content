@@ -7,7 +7,7 @@ tags:
   - Files
 translation_of: Web/API/FileList
 ---
-{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}
+{{APIRef("File API")}}
 
 Un objet **`FileList`** est renvoyé par la propriété `files` d'un élément HTML {{HTMLElement("input")}}. Il permet d'accéder à la liste des fichiers sélectionnés via l'élément `<input type="file">`. Cet objet peut également être utilisé pour les fichiers glissés-déposés dans du contenu web via l'[API Drag & Drop](/fr/docs/Web/API/API_HTML_Drag_and_Drop) (voir l'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer) pour plus de détails).
 
@@ -15,7 +15,9 @@ Un objet **`FileList`** est renvoyé par la propriété `files` d'un élément H
 
 Tous les éléments `<input>` possèdent un attribut `files` de type `FileList` qui permet d'accéder aux éléments de cette liste. Ainsi, si le code HTML utilisé est :
 
-    <input id="fileItem" type="file">
+```html
+<input id="fileItem" type="file">
+```
 
 On pourra utiliser la ligne suivant pour récupérer le premier fichier de la liste sous la forme d'un objet [`File`](/fr/docs/Web/API/File) :
 
@@ -49,9 +51,11 @@ var file = document.getElementById('fileItem').files[0]
 
 Cette méthode renvoie un objet [`File`](/fr/docs/Web/API/File) qui représente le fichier à l'indice fourni.
 
-     File item(
-       index
-     );
+```
+File item(
+  index
+);
+```
 
 #### Paramètres
 

@@ -22,7 +22,7 @@ Lancé lorsqu'une nouvelle fenêtre ou un nouvel onglet dans une fenêtre exista
 
 L'événement n'est pas envoyé si un onglet ou une fenêtre est créé sans cible de navigation (par exemple, si l'utilisateur ouvre un nouvel onglet en appuyant sur Ctrl+T).
 
-Si cet événement est déclenché, il sera déclenché avant  {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.
+Si cet événement est déclenché, il sera déclenché avant  {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.
 
 ## Syntaxe
 
@@ -44,7 +44,7 @@ Les événements ont trois fonctions :
 - `hasListener(listener)`
   - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il est écouté, sinon `false`.
 
-## addListener syntax
+## Syntaxe addListener
 
 ### Paramètres
 
@@ -56,11 +56,11 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation Voir les [détails](#details) ci-dessous.
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un `Array` d'objets {{WebExtAPIRef("events.UrlFilter")}}.  Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions. Notez que le `filtre`n'est pas supporté dans Firefox.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `Array` d'objets {{WebExtAPIRef("events.UrlFilter")}}.  Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions. Notez que le `filtre`n'est pas supporté dans Firefox.
 
 ## Objets supplémentaires
 
-### détails
+### Détails
 
 - `sourceFrameId`
   - : `integer`. ID de l'image à partir de laquelle la navigation est initiée. 0 indique que le cadre est le contexte de navigation de niveau supérieur de l'onglet, et non un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation est initiée à partir d'un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.

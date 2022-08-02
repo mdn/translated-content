@@ -9,7 +9,9 @@ La méthode **`DOMTokenList.entries()`** renvoie un {{jsxref("Les_protocoles_ite
 
 ## Syntaxe
 
-    tokenList.entries();
+```js
+tokenList.entries();
+```
 
 ### Valeur retournée
 
@@ -17,7 +19,7 @@ Renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}}.
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les paires clé / valeur en utilisant `entries()`, puis parcourons chacune d'entre elles en utilisant une boucle [for ... of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) , et les écrivons dans un  {{domxref("Node.textContent")}}  du `<span>`.
+Dans l'exemple suivant, nous récupérons la liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList` en utilisant {{domxref("Element.classList")}}. Nous récupérons un itérateur contenant les paires clé / valeur en utilisant `entries()`, puis parcourons chacune d'entre elles en utilisant une boucle [for ... of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) , et les écrivons dans un  {{domxref("Node.textContent")}}  du `<span>`.
 
 D'abord le HTML :
 

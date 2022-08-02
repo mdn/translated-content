@@ -11,7 +11,7 @@ Dans l'étude de HTML, nous avons vu les attributs d'un élément. En CSS, on pe
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Maîtrise élémentaire de l'informatique,
         <a
@@ -30,7 +30,7 @@ Dans l'étude de HTML, nous avons vu les attributs d'un élément. En CSS, on pe
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Découvrir les sélecteurs d'attribut et comment les utiliser.</td>
     </tr>
   </tbody>
@@ -137,21 +137,21 @@ Nous en avons fini avec les sélecteurs d'attribut, vous pouvez maintenant conti
 
 ## Dans ce cours
 
-1.  [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - Sélecteurs d'attribut
     - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

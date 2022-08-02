@@ -44,7 +44,7 @@ var port = browser.runtime.connect(
     - `name`{{optional_inline}}
       - : `string`. Sera passé dans {{WebExtAPIRef("runtime.onConnect")}} pour les processus qui écoutent un évènement de type connexion.
     - `includeTlsChannelId`{{optional_inline}}
-      - : `boolean`. indique si l'ID du canal TLS sera transmis à  {{WebExtAPIRef("runtime.onConnectExternal")}} pour le processus qui écoutent l'événement de connexion.
+      - : `boolean`. indique si l'ID du canal TLS sera transmis à  {{WebExtAPIRef("runtime.onConnectExternal")}} pour le processus qui écoutent l'événement de connexion.
 
 ### Valeur retournée
 

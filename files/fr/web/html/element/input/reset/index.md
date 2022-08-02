@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/input/reset
 ---
 {{HTMLRef}}
 
-Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sous la forme de boutons permettant de réiniatiliser l'ensemble des champs du formulaire avec leurs valeurs initiales.
+Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sous la forme de boutons permettant de réinitialiser l'ensemble des champs du formulaire avec leurs valeurs initiales.
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
@@ -110,7 +110,7 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères qui est utilisée comme intitulé pour le bouton.
       </td>
@@ -122,7 +122,7 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}} et 
+        {{htmlattrxref("type", "input")}} et
         {{htmlattrxref("value", "input")}}
       </td>
     </tr>

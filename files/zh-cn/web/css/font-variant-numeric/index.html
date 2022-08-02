@@ -33,7 +33,7 @@ font-variant-numeric: unset;
 <p>此属性以以下两种方式之一指定：</p>
 
 <ul>
- <li>关键字值 <code>normal</code></li>
+ <li>关键字值 <code>normal</code></li>
  <li>或下列的一个或多个其他值，按任意顺序排列并以空格分隔。</li>
 </ul>
 
@@ -47,26 +47,26 @@ font-variant-numeric: unset;
  <dt><code>ordinal</code></dt>
  <dd>启用序数形式显示。对序号标记强制启用特殊字形，如英文中的 1<sup>st</sup>，2<sup>nd</sup>，3<sup>rd</sup>，4<sup>th </sup>，意大利文中的 1<sup>a</sup>。等同于 OpenType 特性 <code>ordn</code>。</dd>
  <dt><code>slashed-zero</code></dt>
- <dd>启用区分零显示。强制使用带有斜杠的 0；常用于区分 O 和 0。等同于 OpenType 特性 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">zero</span></font>。</dd>
+ <dd>启用区分零显示。强制使用带有斜杠的 0；常用于区分 O 和 0。等同于 OpenType 特性 zero。</dd>
  <dt><em>&lt;numeric-figure-values</em>&gt;</dt>
  <dd>下列值用于控制数字样式，可用值如下：
  <ul>
-  <li><code>lining-nums</code> 启用内衬数字显示。使数字全部对齐到基线。等同于 OpenType 特性 <code>lnum</code>。</li>
-  <li><code>oldstyle-nums</code> 启用旧式数字显示。部分数字如 3、4、7、9 会有下沉。等同于 OpenType 特性 <code>onum</code>。</li>
+  <li><code>lining-nums</code> 启用内衬数字显示。使数字全部对齐到基线。等同于 OpenType 特性 <code>lnum</code>。</li>
+  <li><code>oldstyle-nums</code> 启用旧式数字显示。部分数字如 3、4、7、9 会有下沉。等同于 OpenType 特性 <code>onum</code>。</li>
  </ul>
  </dd>
  <dt><em>&lt;numeric-spacing-values</em>&gt;</dt>
  <dd>下列值用于控制数字宽度，可用值如下：
  <ul>
-  <li><code>proportional-nums</code> 启用比例数字显示。使数字变成基于字形本身形状下的特定宽度表现。等同于 OpenType 特性 <code>pnum</code>。</li>
-  <li><code>tabular-nums</code> 启用表格数字显示。使数字等宽，易于像表格那样对齐。等同于 OpenType 特性 <code>tnum</code>。</li>
+  <li><code>proportional-nums</code> 启用比例数字显示。使数字变成基于字形本身形状下的特定宽度表现。等同于 OpenType 特性 <code>pnum</code>。</li>
+  <li><code>tabular-nums</code> 启用表格数字显示。使数字等宽，易于像表格那样对齐。等同于 OpenType 特性 <code>tnum</code>。</li>
  </ul>
  </dd>
  <dt><em>&lt;numeric-fraction-values</em>&gt;</dt>
  <dd>下列值用于控制分数字形，可用值如下：
  <ul>
-  <li><code>diagonal-fractions</code> 启用斜角分数显示。使分子和分母变成像下标字，并用变长的斜线分隔。等同于 OpenType 特性 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">frac</span></font>。</li>
-  <li><code>stacked-fractions</code> 启用标准分数显示。使分子在上，分母在下，并用水平线分隔。等同于 OpenType 特性 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">afrc</span></font>。</li>
+  <li><code>diagonal-fractions</code> 启用斜角分数显示。使分子和分母变成像下标字，并用变长的斜线分隔。等同于 OpenType 特性 frac。</li>
+  <li><code>stacked-fractions</code> 启用标准分数显示。使分子在上，分母在下，并用水平线分隔。等同于 OpenType 特性 afrc。</li>
  </ul>
  </dd>
 </dl>
@@ -96,15 +96,15 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 */
 
 @font-face {
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://mdn.mozillademos.org/files/15757/SourceSansPro-Regular.otf") format("opentype");
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://mdn.mozillademos.org/files/15757/SourceSansPro-Regular.otf") format("opentype");
 }
 
 .ordinal {
-  font-variant-numeric: ordinal;
-  font-family: "Source Sans Pro";
+  font-variant-numeric: ordinal;
+  font-family: "Source Sans Pro";
 }
 </pre>
 
@@ -114,22 +114,7 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-variant-numeric', 'font-variant-numeric')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 

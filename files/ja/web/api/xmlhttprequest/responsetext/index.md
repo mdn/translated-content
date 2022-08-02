@@ -13,7 +13,7 @@ tags:
 browser-compat: api.XMLHttpRequest.responseText
 translation_of: Web/API/XMLHttpRequest/responseText
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+{{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`responseText`** プロパティは読み取り専用で、送信されたリクエストに続いてサーバーから受け取ったテキストを返します。
 

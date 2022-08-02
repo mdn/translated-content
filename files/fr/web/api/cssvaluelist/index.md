@@ -23,13 +23,13 @@ Les éléments dans `CSSValueList` sont accessibles par un index integral commen
 
 _Hérite des propriétés de son parent {{domxref("CSSValue")}}_.
 
-- {{domxref("CSSValueList.length")}} {{readonlyInline}}
+- {{domxref("CSSValueList.length")}} {{readonlyInline}}
   - : Un `unsigned long` représentant le nombre de `CSSValues` (_valeurs CSS_) dans la liste.
 
 ## Méthodes
 
 - {{domxref("CSSValueList.item()")}}
-  - : Cette méthode est utilisée pour  récupérer une {{domxref("CSSValue")}} _(valeur CSS_) par index ordinal. L'ordre dans cette collection représente l'ordre des valeurs dans la propriété de style CSS. Si index est supérieur ou égal au nombre de valeurs de la liste, elle renvoie `null`.
+  - : Cette méthode est utilisée pour récupérer une {{domxref("CSSValue")}} _(valeur CSS_) par index ordinal. L'ordre dans cette collection représente l'ordre des valeurs dans la propriété de style CSS. Si index est supérieur ou égal au nombre de valeurs de la liste, elle renvoie `null`.
 
 ## Spécifications
 

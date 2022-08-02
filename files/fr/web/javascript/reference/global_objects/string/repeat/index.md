@@ -20,7 +20,9 @@ La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractèr
 
 ## Syntaxe
 
-    str.repeat(compte)
+```js
+str.repeat(compte)
+```
 
 ### Paramètres
 

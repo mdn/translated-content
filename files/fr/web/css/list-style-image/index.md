@@ -2,14 +2,17 @@
 title: list-style-image
 slug: Web/CSS/list-style-image
 translation_of: Web/CSS/list-style-image
+browser-compat: css.properties.list-style-image
 ---
 {{CSSRef}}
 
-La propriété **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](fr/HTML/%c3%89l%c3%a9ment/li). On peut également utiliser la propriété raccourcie {{cssxref("list-style")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](/fr/docs/Web/HTML/Element/li).
+
+On peut également utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/list-style).
 
 {{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
-> **Note :** Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels {{cssxref("display")}}` : list-item``; `}}). Par défaut, cela inclut les éléments {{HTMLElement("li")}}. Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à {{HTMLElement("ol")}} ou à {{HTMLElement("ul")}}).
+> **Note :** Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). Par défaut, cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).
 
 ## Syntaxe
 
@@ -20,62 +23,91 @@ list-style-image: none;
 /*  Valeurs pointant vers une image */
 list-style-image: url('starsolid.gif');
 
+/* Valeurs avec une image */
+list-style-image: linear-gradient(to left bottom, red, blue);
+
 /* Valeurs globales */
 list-style-image: inherit;
 list-style-image: initial;
+list-style-image: revert;
 list-style-image: unset;
 ```
 
 ### Valeurs
 
-- `url`
-  - : Emplacement de l'image à utiliser comme puce (cf. {{cssxref("&lt;url&gt;")}} pour plus de détails sur les valeurs possibles pour ce type).
+- [`<image>`](/fr/docs/Web/CSS/image)
+  - : Une valeur représentant une image valide, qui sera utilisée comme puce.
 - `none`
-  - : Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec {{cssxref("list-style-type")}} sera utilisé à la place.
+  - : Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec [`list-style-type`](/fr/docs/Web/CSS/list-style-type) sera utilisé à la place.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Utiliser une URL
 
-```css
-ul {
-  list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
-}
-```
-
-### HTML
+#### HTML
 
 ```html
 <ul>
-    <li>Élément 1</li>
-    <li>Élément 2</li>
+  <li>Élément 1</li>
+  <li>Élément 2</li>
 </ul>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample('Exemples')}}
+```css
+ul {
+  list-style-image: url("starsolid.gif");
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
+
+### Utiliser un dégradé
+
+#### HTML
+
+```html
+<ul>
+  <li>Élément 1</li>
+  <li>Élément 2</li>
+</ul>
+```
+
+#### CSS
+
+```css
+ul {
+  font-size: 200%;
+  list-style-image: linear-gradient(to left bottom, red, blue);
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                             | Commentaires                                                                               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Lists', '#propdef-list-style-image', 'list-style-image')}}             | {{Spec2('CSS3 Lists')}} | Propriété étendue pour supporter n'importe quel type {{cssxref("&lt;image&gt;")}}. |
-| {{SpecName('CSS2.1', 'generate.html#propdef-list-style-image', 'list-style-image')}} | {{Spec2('CSS2.1')}}         | Définition initiale.                                                                       |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.list-style-image")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("list-style")}}
-- {{cssxref("list-style-type")}}
-- {{cssxref("list-style-position")}}
-- La fonction {{cssxref("url()", "url()")}}
+- [`list-style`](/fr/docs/Web/CSS/list-style)
+- [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
+- [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
+- La fonction [`url()`](/fr/docs/Web/CSS/url())

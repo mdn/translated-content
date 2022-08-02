@@ -18,7 +18,7 @@ Souligne les résultats d'un précédent appel à {{WebExtAPIRef("find.find()")}
 
 Lorsqu'une extension appelle `find()`, les correspondances ne sont pas automatiquement mises en surbrillance, mais elles sont stockées par le navigateur. Appelez `highlightResults()` pour les mettre en surbrillance.
 
-Notez que les résultats stockés sont globaux pour toutes les extensions, par exemple, si l'extension appelle `find("apple")`, alors si l'extensions B appelle `find("banana")`, alors si l'extensions A appelle  `highlightResults()`, le résultat pour "banana" sera mis en évidence.
+Notez que les résultats stockés sont globaux pour toutes les extensions, par exemple, si l'extension appelle `find("apple")`, alors si l'extensions B appelle `find("banana")`, alors si l'extensions A appelle  `highlightResults()`, le résultat pour "banana" sera mis en évidence.
 
 ## Syntaxe
 

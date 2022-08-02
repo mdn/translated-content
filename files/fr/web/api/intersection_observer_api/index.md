@@ -46,7 +46,7 @@ Un palier de 1.0 signifie que lorsque 100% de la cible est visible dans l'élém
 
 #### Options de l'observateur d'intersection
 
-L'objet `options` qui est passé dans le constructeur  {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} permet de contrôler les circonstances selon lesquelles la fonction _callback_ de l'observateur est invoquée. Il possède les champs suivants :
+L'objet `options` qui est passé dans le constructeur  {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} permet de contrôler les circonstances selon lesquelles la fonction _callback_ de l'observateur est invoquée. Il possède les champs suivants :
 
 - `root`
   - : L'élément qui est utilisé comme zone d'affichage au moment d'évaluer la visibilité de la cible. Il doit être un ancêtre de la cible. S'il n'est pas spécifié ou s'il prend la valeur `null`, sa valeur par défaut est la zone d'affichage (le _viewport_) du navigateur.
@@ -71,14 +71,14 @@ var callback = function(entries, observer) {
   entries.forEach(entry => {
     // chaque élément de entries correspond à une variation
     // d'intersection pour un des éléments cible:
-    //   entry.boundingClientRect
-    //   entry.intersectionRatio
-    //   entry.intersectionRect
-    //   entry.isIntersecting
-    //   entry.rootBounds
-    //   entry.target
-    //   entry.time
-  });
+    //   entry.boundingClientRect
+    //   entry.intersectionRatio
+    //   entry.intersectionRect
+    //   entry.isIntersecting
+    //   entry.rootBounds
+    //   entry.target
+    //   entry.time
+  });
 };
 ```
 
@@ -102,7 +102,7 @@ Le rectangle utilisé pour délimiter la racine de l'intersection peut être aju
 
 Plutôt que de rapporter le moindre changement de variation de la visibilité d'un élément, l'API Intersection Observer utilise des **paliers**. Lors de la création d'un observateur, vous pouvez fournir une ou plusieurs valeurs numériques qui représentent des pourcentages de visibilité de l'élément cible. Dans ce cas, l'API ne rapportent que les changements de visibilité qui franchissent ces paliers.
 
-Par exemple, si vous voulez être informé à chaque fois que la visibilité d'une cible passe au dessus ou en dessous de chaque multiple de 25%, il faudra fournir le tableau \[0, 0.25, 0.5, 0.75, 1] comme liste de paliers lors de la création de l'observateur. Vous pouvez préciser dans quelle direction a changé la visibilité (c'est-à-dire, si l'élément est devenu plus ou moins visible) en lisant la valeur de la propriété {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} du  {{domxref("IntersectionObserverEntry")}} passé dans la fonction `callback` lors du changement de visibilité. Si `isIntersecting` est `true`, l'élément cible est devenu au moins aussi visible quand le palier a été franchi. Si elle vaut `false`, la cible n'est plus aussi visible que le palier spécifié.
+Par exemple, si vous voulez être informé à chaque fois que la visibilité d'une cible passe au dessus ou en dessous de chaque multiple de 25%, il faudra fournir le tableau \[0, 0.25, 0.5, 0.75, 1] comme liste de paliers lors de la création de l'observateur. Vous pouvez préciser dans quelle direction a changé la visibilité (c'est-à-dire, si l'élément est devenu plus ou moins visible) en lisant la valeur de la propriété {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} du  {{domxref("IntersectionObserverEntry")}} passé dans la fonction `callback` lors du changement de visibilité. Si `isIntersecting` est `true`, l'élément cible est devenu au moins aussi visible quand le palier a été franchi. Si elle vaut `false`, la cible n'est plus aussi visible que le palier spécifié.
 
 Pour mieux comprendre comment fonctionnent les paliers, faites défiler la boîte ci-dessous. A l'intérieur, chacune des boîtes colorées affiche son pourcentage de visibilité sur chacun de ses quatre coins, de telle sorte que l'on peut voir ces ratios changer tandis que le conteneur défile. Chaque boîte a un ensemble différent de paliers :
 

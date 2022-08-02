@@ -19,7 +19,9 @@ La méthode **`get()`** permet de renvoyer un élément donné d'un objet `WeakM
 
 ## Syntaxe
 
-    wm.get(clé);
+```js
+wm.get(clé);
+```
 
 ### Paramètre
 
@@ -45,7 +47,7 @@ wm.get("machin");  // Renvoie undefined.
 | Spécification                                                                                            | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.get', 'WeakMap.prototype.get')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

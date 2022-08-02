@@ -25,7 +25,7 @@ _Cette interface hérite des propriétés de l'interface {{domxref("EventTarget"
 - {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
   - : Renvoie le {{domxref("WorkerNavigator")}} associé au worker. C'est un objet navigator spécifique, principalement un sous-ensemble de {{domxref("Navigator")}} pour la navigation dans les portées, mais adapté aux workers.
 - {{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}
-  - : Renvoie une référence au `WorkerGlobalScope` lui-même. La plupart du temps, il s'agit d'une portée spécifique comme {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} ou {{domxref("ServiceWorkerGlobalScope")}}.
+  - : Renvoie une référence au `WorkerGlobalScope` lui-même. La plupart du temps, il s'agit d'une portée spécifique comme {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} ou {{domxref("ServiceWorkerGlobalScope")}}.
 - {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
   - : Renvoie le {{domxref("WorkerLocation")}} associé au worker. Il s'agit d'un objet de localisation spécifique, principalement un sous-ensemble de {{domxref ("Location")}} pour les portées de navigation, mais adapté aux workers.
 
@@ -63,7 +63,7 @@ Cette interface hérite des méthodes de l'interface {{domxref ("EventTarget")}}
 - {{domxref("WorkerGlobalScope.close()")}}
   - : Ignore toutes les tâches mises en file d'attente dans la boucle d'événements de `WorkerGlobalScope`, fermant ainsi cette portée particulière.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Importe un ou plusieurs scripts dans la portée du worker. Vous pouvez en spécifier autant que vous le souhaitez, séparés par des virgules. Par exemple:` importScripts('foo.js', 'bar.js');`
+  - : Importe un ou plusieurs scripts dans la portée du worker. Vous pouvez en spécifier autant que vous le souhaitez, séparés par des virgules. Par exemple&nbsp;: `importScripts('foo.js', 'bar.js');`
 
 ### Méthodes non standard
 

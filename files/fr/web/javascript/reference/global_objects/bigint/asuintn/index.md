@@ -18,7 +18,9 @@ La méthode statique **`BigInt.asUintN()`** permet d'écréter un `BigInt` pour 
 
 ## Syntaxe
 
-    var résultat = BigInt.asUintN(largeur, bigint);
+```js
+var résultat = BigInt.asUintN(largeur, bigint);
+```
 
 ### Paramètres
 

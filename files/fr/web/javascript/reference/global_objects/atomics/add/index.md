@@ -18,7 +18,9 @@ La méthode statique **`Atomics.add()`** ajoute une valeur donnée à un éléme
 
 ## Syntaxe
 
-    Atomics.add(typedArray, index, valeur)
+```js
+Atomics.add(typedArray, index, valeur)
+```
 
 ### Paramètres
 
@@ -35,7 +37,7 @@ L'ancienne valeur qui était contenue à (`typedArray[index]`).
 
 ### Exceptions levées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 

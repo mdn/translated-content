@@ -22,7 +22,7 @@ Une signature peut comporter :
 
 ### Signatures en JavaScript
 
-{{Glossary("JavaScript")}} est un langage à *typage faible et* *dynamique*. Cela signifie que vous n'avez pas à déclarer le type d'une variable à l'avance. Il sera déterminé automatiquement pendant le traitement du programme. Une signature en JavaScript peut vous apporter certaines informations sur la méthode :
+{{Glossary("JavaScript")}} est un langage à *typage faible et* *dynamique*. Cela signifie que vous n'avez pas à déclarer le type d'une variable à l'avance. Il sera déterminé automatiquement pendant le traitement du programme. Une signature en JavaScript peut vous apporter certaines informations sur la méthode :
 
 ```js
 MonObjet.prototype.maFonction(valeur)

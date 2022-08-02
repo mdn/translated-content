@@ -24,7 +24,7 @@ a::before {
 
 {{csssyntax}}
 
-La notation `::before` a été introduite par CSS 3 pour différencier les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) et les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi la notation `:before `introduite par CSS 2.
+La notation `::before` a été introduite par CSS 3 pour différencier les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) et les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi la notation `:before` introduite par CSS 2.
 
 ## Exemples
 

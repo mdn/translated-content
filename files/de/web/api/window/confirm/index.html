@@ -42,7 +42,7 @@ translation_of: Web/API/Window/confirm
 
 <p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.alert</span> Dialogfenster sind <em>modal </em>- sie verhindern, dass der Anwender auf den Rest der Seite zugreifen kann, bis das Dialogfenster geschlossen wurde. Aus diesen Grund sollte man Funktionen, die Dialogfenster anzeigen, nicht zu oft verwenden. Und unabhängig davon gibt es gute Gründe dafür, <a href="http://alistapart.com/article/neveruseawarning">Dialogfenster zum Bestätigen einer Aktion zu vermeiden</a>.</p>
 
-<p><a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a>-Nutzer (z.B. Firefox-Erweiterungen) sollten stattdessen {{interface("nsIPromptService")}} verwenden.</p>
+<p><a href="/en-US/Chrome" title="Chrome">Mozilla Chrome</a>-Nutzer (z.B. Firefox-Erweiterungen) sollten stattdessen <code>nsIPromptService</code> verwenden.</p>
 
 <p>Seit Chrome {{CompatChrome(46.0)}} wird diese Funktion innerhalb eines {{htmlelement("iframe")}}s blockiert, es sei denn, dessen sandbox-Attribut hat den Wert <code>allow-modal</code>.</p>
 

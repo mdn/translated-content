@@ -26,7 +26,7 @@ Dans ce module, nous vous recommandons d'utiliser Flexbox et les grilles CSS com
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases du HTML (étudiez
         <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"

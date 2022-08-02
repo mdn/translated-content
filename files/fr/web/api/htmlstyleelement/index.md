@@ -9,7 +9,7 @@ translation_of: Web/API/HTMLStyleElement
 
 ### Notes
 
-Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM :
+Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM&nbsp;:
 
 - [L'objet DOM element.style](fr/DOM/element.style)
 - [L'objet DOM stylesheet](fr/DOM/stylesheet)
@@ -24,8 +24,10 @@ _DOM Level 2 Style_
 
 Pour obtenir les objets `style` depuis un objet `document`, il est possible d'utiliser la propriété `document.styleSheets` et d'accéder aux objets individuels par un index (par exemple, `document.styleSheets{{ mediawiki.external(0) }}` est la première feuille de style définie pour le document, et ainsi de suite). Bien qu'il existe plusieurs syntaxes pour exprimer les feuilles de style d'un document, les navigateurs basés sur Mozilla gèrent uniquement CSS. Par conséquent, l'objet `style` récupéré depuis ce tableau implémente à la fois les interfaces StyleSheet et CSSStyleSheet.
 
-    var ss = document.styleSheets[1];
-    ss.cssRules[0].style.backgroundColor="blue";
+```js
+var ss = document.styleSheets[1];
+ss.cssRules[0].style.backgroundColor="blue";
+```
 
 La liste des propriétés disponibles dans le DOM pour la propriété de style est donnée dans la [liste des propriétés DOM CSS](fr/DOM/CSS).
 
@@ -35,7 +37,7 @@ ou directement sur cet élément à l'aide de `element.style.propertyName` (par 
 
 De plus, lorsque cette propriété est définie sur un élément, elle écrase et efface tout style qui peut avoir été défini ailleurs pour cette propriété particulière de l'élément. Par exemple, définir la propriété `border` écrasera les réglages définis ailleurs pour la propriété `border` de cet élément dans la section `head` du document ou dans des feuilles de style externes. Cependant, cela n'affectera pas les autres déclarations de propriétés pour les styles de cet élément, comme `padding`, `margin` ou `font` par exemple.
 
-Pour changer le style d'un élément particulier, l'exemple suivant peut être adapté :
+Pour changer le style d'un élément particulier, l'exemple suivant peut être adapté&nbsp;:
 
 ```html
 <html>
@@ -82,34 +84,38 @@ L'objet `style` représente une règle de style individuelle. Contrairement aux 
 _in-line_
 d'un élément particulier.
 
-Mais il y a plus important que les deux propriétés exposées ici, c'est l'utilisation de l'objet `style` pour définir des propriétés de style individuelles sur un élément :
+Mais il y a plus important que les deux propriétés exposées ici, c'est l'utilisation de l'objet `style` pour définir des propriétés de style individuelles sur un élément&nbsp;:
 
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-      "http://www.w3.org/TR/html4/loose.dtd">
-    <html>
-     <head>
-      <title>style Property Example</title>
-      <link rel="StyleSheet" href="example.css" type="text/css">
-      <script type="text/javascript">
-        function stilo()
-        {
-          document.getElementById("d").style.color = "orange";
-        }
-      </script>
-     </head>
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <title>style Property Example</title>
+  <link rel="StyleSheet" href="example.css" type="text/css">
+  <script type="text/javascript">
+    function stilo()
+    {
+      document.getElementById("d").style.color = "orange";
+    }
+  </script>
+  </head>
 
-     <body>
-      <div id="d" class="thunder">Thunder</div>
-      <button onclick="stilo()">ss</button>
-     </body>
-    </html>
+  <body>
+  <div id="d" class="thunder">Thunder</div>
+  <button onclick="stilo()">ss</button>
+  </body>
+</html>
+```
 
 Les attributs **media** et **type** du style peuvent être donnés ou non. Notez qu'il est également possible de changer les styles d'un élément en obtenant une référence vers cet élément et en utilisant ensuite sa méthode DOM [setAttribute()](fr/DOM/element.setAttribute) pour spécifier à la fois la propriété CSS et sa valeur.
 
-    var el = document.getElementById("un-element");
-    el.setAttribute("style", "background-color:darkblue;");
+```js
+var el = document.getElementById("un-element");
+el.setAttribute("style", "background-color:darkblue;");
+```
 
-Soyez cependant conscient que `setAttribute` écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément « un-element » ci-dessus avait déjà un attribut indiquant par exemple `style="font-size: 18px"`, cette valeur serait supprimée par l'utilisation de `setAttribute`.
+Soyez cependant conscient que `setAttribute` écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément «&nbsp;un-element&nbsp;» ci-dessus avait déjà un attribut indiquant par exemple `style="font-size: 18px"`, cette valeur serait supprimée par l'utilisation de `setAttribute`.
 
 ##### Propriétés
 

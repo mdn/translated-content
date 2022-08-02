@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/install
 ---
 {{AddonSidebar()}}Installe et active une extension de thème à partir de l'URL donnée.
 
-Cette API nécessite la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management" et ne fonctionnera qu'avec des thèmes signés.
+Cette API nécessite la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management" et ne fonctionnera qu'avec des thèmes signés.
 
 C'est une fonction asynchrone qui renvoie une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

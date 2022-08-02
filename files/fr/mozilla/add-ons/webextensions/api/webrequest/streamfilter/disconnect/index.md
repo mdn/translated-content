@@ -10,7 +10,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/disconnect
 ---
-{{AddonSidebar()}}Déconnecte le filtre de la requête. Après cela, le navigateur continuera à traiter la réponse, mais plus aucun événement de filtrage ne se déclenchera, et plus aucun appel de fonction de filtrage n'aura d'effet.Notez la différence entre cette fonction et {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}. Avec  `disconnect()`, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec `close()`, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.
+{{AddonSidebar()}}Déconnecte le filtre de la requête. Après cela, le navigateur continuera à traiter la réponse, mais plus aucun événement de filtrage ne se déclenchera, et plus aucun appel de fonction de filtrage n'aura d'effet.Notez la différence entre cette fonction et {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}. Avec  `disconnect()`, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec `close()`, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.
 
 Vous devriez toujours appeler `disconnect()` ou `close()` une fois que vous n'avez plus besoin d'interagir avec la réponse.
 

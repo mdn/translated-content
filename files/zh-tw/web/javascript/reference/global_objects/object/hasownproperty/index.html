@@ -22,7 +22,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 <h2 id="說明">說明</h2>
 
-<p>每個為 {{jsxref("Object")}} 後代的物件都繼承 <code>hasOwnProperty</code> 方法。這個方法可以被使用來決定物件是否擁有特定的直接屬性；跟 {{jsxref("Operators/in", "in")}} 不一樣，這個方法並未檢查物件的原型鏈。</p>
+<p>每個為 {{jsxref("Object")}} 後代的物件都繼承 <code>hasOwnProperty</code> 方法。這個方法可以被使用來決定物件是否擁有特定的直接屬性；跟 {{jsxref("Operators/in", "in")}} 不一樣，這個方法並未檢查物件的原型鏈。</p>
 
 <h2 id="範例">範例</h2>
 
@@ -56,7 +56,7 @@ o.hasOwnProperty('hasOwnProperty');   // 回傳 false
 
 <h3 id="遍歷物件的屬性">遍歷物件的屬性</h3>
 
-<p>這個範例顯示如何不執行繼承的屬性去遍歷物件的屬性。注意 {{jsxref("Statements/for...in", "for...in")}} 已經遍歷了可以被列舉的項目，所以不該基於缺乏不可列舉的屬性(如下)而假設 <code>hasOwnProperty</code> 被嚴格地限制在列舉的項目（如同 {{jsxref("Object.getOwnPropertyNames()")}}）。</p>
+<p>這個範例顯示如何不執行繼承的屬性去遍歷物件的屬性。注意 {{jsxref("Statements/for...in", "for...in")}} 已經遍歷了可以被列舉的項目，所以不該基於缺乏不可列舉的屬性(如下)而假設 <code>hasOwnProperty</code> 被嚴格地限制在列舉的項目（如同 {{jsxref("Object.getOwnPropertyNames()")}}）。</p>
 
 <pre class="brush: js">var buz = {
   fog: 'stack'
@@ -72,9 +72,9 @@ for (var name in buz) {
 }
 </pre>
 
-<h3 id="將_hasOwnProperty_作為屬性"><code>將 hasOwnProperty</code> 作為屬性</h3>
+<h3 id="將_hasOwnProperty_作為屬性"><code>將 hasOwnProperty</code> 作為屬性</h3>
 
-<p>JavaScript 並未保護 <code>hasOwnProperty</code>；因此，如果一個物件擁有一樣的屬性名稱，為了獲得正確的結果需要使用 <em>external</em> <code>hasOwnProperty</code>：</p>
+<p>JavaScript 並未保護 <code>hasOwnProperty</code>；因此，如果一個物件擁有一樣的屬性名稱，為了獲得正確的結果需要使用 <em>external</em> <code>hasOwnProperty</code>：</p>
 
 <pre class="brush: js">var foo = {
   hasOwnProperty: function() {
