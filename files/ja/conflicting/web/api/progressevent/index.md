@@ -1,14 +1,15 @@
 ---
 title: ProgressEvent.initProgressEvent()
-slug: Web/API/ProgressEvent/initProgressEvent
+slug: conflicting/Web/API/ProgressEvent
 tags:
   - API
   - 非推奨
   - メソッド
   - 進捗イベント
   - ProgressEvent
-browser-compat: api.ProgressEvent.initProgressEvent
 translation_of: Web/API/ProgressEvent/initProgressEvent
+original_slug: Web/API/ProgressEvent/initProgressEvent
+browser-compat: api.ProgressEvent.initProgressEvent
 ---
 {{apiref("DOM Events")}} {{deprecated_header}}{{non-standard_header}}
 

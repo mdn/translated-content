@@ -3444,6 +3444,7 @@
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/PositionOptions	/ja/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/ja/docs/Web/API/ProgressEvent/initProgressEvent	/ja/docs/conflicting/Web/API/ProgressEvent
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions	/ja/docs/conflicting/Web/API/CredentialsContainer/create_18148a708412fc42b1affe2f08eab270
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection	/ja/docs/Web/API/CredentialsContainer/create
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials	/ja/docs/conflicting/Web/API/CredentialsContainer/create
