@@ -45,7 +45,7 @@ Uma {{domxref("DOMString")}} contendo o objeto URL e pode ser usado para referen
 
 ## Exemplos
 
-Veja [Usando objeto URL para exibir imagens](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+Veja [Usando objeto URL para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Notas de uso
 
