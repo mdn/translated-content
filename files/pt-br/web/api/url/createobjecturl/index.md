@@ -24,7 +24,7 @@ Para anular um objeto URL, execute o método {{domxref("URL.revokeObjectURL", "r
 
 {{AvailableInWorkers}}
 
-> **Note:** Esta feature não esta disponível em [Service Workers](/en-US/docs/Web/API/Service_Worker_API) devido ao potencial de criar vazamento de memória
+> **Nota:** Esta funcionalidade não está disponível em [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) devido ao potencial de criar vazamento de memória
 
 ## Sintaxe
 
