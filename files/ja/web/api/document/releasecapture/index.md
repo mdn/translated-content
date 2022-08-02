@@ -1,40 +1,48 @@
 ---
 title: Document.releaseCapture()
 slug: Web/API/Document/releaseCapture
+page-type: web-api-instance-method
 tags:
   - API
   - DOM
-  - Document
+  - Method
   - Reference
-  - releaseCapture
-  - メソッド
+browser-compat: api.Document.releaseCapture
 translation_of: Web/API/Document/releaseCapture
 ---
-<div>{{ApiRef("DOM")}}{{gecko_minversion_header("2.0")}}</div>
+{{ApiRef("DOM")}}
 
-<p><strong><code>releaseCapture()</code></strong> メソッドは、この文書内の要素で現在有効になっているマウスキャプチャを解放します。要素におけるマウスキャプチャの有効化は {{domxref("element.setCapture()")}} を呼び出すことで実行できます。</p>
+**`releaseCapture()`** メソッドは、この文書内の要素でマウスキャプチャが有効になっている場合、それを解除します。
+マウスキャプチャが解除されると、キャプチャが有効になっている要素に全てのマウスイベントが送られるという状態は解除されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+ある要素でマウスキャプチャを有効にするには {{domxref("element.setCapture()")}} を呼び出すことで行われます。
 
-<pre class="syntaxbox"><var>document</var>.releaseCapture();
-</pre>
+## 構文
 
-<p>マウスキャプチャが解放されると、マウスイベントはキャプチャが有効になっていた要素にすべては来なくなります。</p>
+```js
+releaseCapture()
+```
 
-<h2 id="Example" name="Example">例</h2>
+### 引数
 
-<p>{{domxref("element.setCapture()")}} の<a href="/ja/docs/Web/API/element.setCapture#Example">例</a>をご覧ください。</p>
+なし。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### 返値
 
-<p>Internet Explorer の実装に基づく。</p>
+なし ({{jsxref("undefined")}})。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## 例
 
-<div>{{Compat("api.Document.releaseCapture")}}</div>
+[例](/ja/docs/Web/API/Element/setCapture#例) については {{domxref("element.setCapture()")}} で確認してください。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 仕様書
 
-<ul>
- <li>{{domxref("element.setCapture()")}}</li>
-</ul>
+Internet Explorer の実装に基づく。
+
+## ブラウザーの対応
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("element.setCapture()")}}
