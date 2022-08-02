@@ -308,6 +308,6 @@ Voir aussi&nbsp;:
 
 - les [matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) sur WebGLFundamentals ;
 - les [matrices](http://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
-- l'article [matrice](<https://fr.wikipedia.org/wiki/Matrice_(math%C3%A9matiques)>) sur Wikipedia.
+- l'article [matrice](https://fr.wikipedia.org/wiki/Matrice_(math%C3%A9matiques)) sur Wikipédia.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

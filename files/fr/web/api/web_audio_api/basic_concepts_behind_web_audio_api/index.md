@@ -34,7 +34,7 @@ Les sources audio peuvent être de provenance variée&nbsp;:
 
 Lors du traitement d'un signal audio, **l'échantillonage** désigne la conversion d'un [signal continu](http://en.wikipedia.org/wiki/Continuous_signal) en [signal discret](http://en.wikipedia.org/wiki/Discrete_signal); formulé autrement, une onde de son continue, comme un groupe qui joue en live, est convertie en une séquence d'échantillons (un signal temporel discret) qui permet à l'ordinateur de traiter le son en blocs distincts.
 
-On peut trouver davantage de détails sur la page Wikipedia [Echantillonage (signal)](<https://fr.wikipedia.org/wiki/%C3%89chantillonnage_(signal)>).
+On peut trouver davantage de détails sur la page Wikipédia [Echantillonage (signal)](https://fr.wikipedia.org/wiki/%C3%89chantillonnage_(signal)).
 
 ## Mémoire tampon&nbsp;: trames, échantillons et canaux
 

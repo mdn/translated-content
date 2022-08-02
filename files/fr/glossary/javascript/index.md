@@ -25,7 +25,7 @@ Récemment, JavaScript est revenu du côté serveur grâce au succès de la plat
 
 ### Culture générale
 
-- [JavaScript](https://fr.wikipedia.org/wiki/JavaScript) sur Wikipedia
+- [JavaScript](https://fr.wikipedia.org/wiki/JavaScript) sur Wikipédia
 
 ### Apprentissage
 

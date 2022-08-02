@@ -15,7 +15,7 @@ Un **moteur de rendu** est un logiciel qui trace du texte et des images à l'éc
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Moteur de rendu HTML")}} sur Wikipédia
+- [Moteur de rendu HTML](https://fr.wikipedia.org/wiki/Moteur_de_rendu_HTML) sur Wikipédia
 
 ### Référence technique
 

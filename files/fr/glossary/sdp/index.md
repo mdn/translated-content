@@ -36,4 +36,4 @@ SDP n'est jamais employé seul, mais des protocoles comme {{Glossary("RTP")}} et
 ### Culture générale
 
 - [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
-- {{Interwiki("wikipedia", "Session Description Protocol")}} sur Wikipédia
+- [SDP](https://fr.wikipedia.org/wiki/Session_Description_Protocol) sur Wikipédia
