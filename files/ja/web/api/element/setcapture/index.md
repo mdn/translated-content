@@ -1,48 +1,64 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
+page-type: web-api-instance-method
+tags:
+  - API
+  - DOM
+  - Element
+  - Method
+  - Non-standard
+  - Reference
+  - Deprecated
+browser-compat: api.Element.setCapture
 translation_of: Web/API/Element/setCapture
 ---
-<p>{{ APIRef("DOM") }}{{ gecko_minversion_header("2.0") }}</p>
+{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 
-<p>mousedownイベントの処理中にこのメソッドを呼び出すと、マウスボタンが離されるか、{{ domxref("document.releaseCapture()") }}が呼び出されるまで、すべてのマウスイベントをこの要素にリターゲットします。</p>
+mousedown イベントの処理中にこのメソッドを呼び出すと、マウスボタンが離されるか {{domxref("document.releaseCapture()")}} が呼び出されるまで、この要素にすべてのマウスイベントを捕捉します。
 
-<div class="warning"><strong>Warning:</strong> このインターフェースにはブラウザ間のサポートはほとんどありませんでした。代わりに、Pointer Events APIから{{domxref("element.setPointerCapture")}}を探していました。</div>
+> **Warning:** このインターフェイスにはブラウザー間の対応がほとんどありませんでした。おそらくお探しのものは {{domxref("element.setPointerCapture")}}  （ポインターイベント API）でしょう。
 
-<h2 id="シンタックス">シンタックス</h2>
+## 構文
 
-<pre class="syntaxbox">element.setCapture(<em>retargetToElement</em>);
-</pre>
+```js
+setCapture(retargetToElement)
+```
 
-<dl>
- <dt><code>retargetToElement</code></dt>
- <dd><code>true</code>の場合、すべてのイベントはこの要素を直接対象とします。<code>false</code>の場合、イベントはこの要素の子孫でも発生する可能性があります。</dd>
-</dl>
+### 引数
 
-<h2 id="例">例</h2>
+- `retargetToElement`
+  - : もし `true` ならば、すべてのイベントはこの要素に直接向けられます。もし `false` ならば、イベントはこの要素の子孫にも発行されることがあります。
 
-<p>この例では、現在のマウスの座標が、要素をクリックして押した後にマウスを移動しながら描画されます。</p>
+### 返値
 
-<pre class="brush: html">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Mouse Capture Example&lt;/title&gt;
-  &lt;style type="text/css"&gt;
+なし ({{jsxref("undefined")}})。
+
+## 例
+
+この例では、現在のマウスの座標が、要素をクリックして押した後にマウスを移動しながら描画されます。
+
+```html
+<html>
+<head>
+  <title>Mouse Capture Example</title>
+  <style type="text/css">
     #myButton {
       border: solid black 1px;
       color: black;
       padding: 2px;
       box-shadow: black 2px 2px;
     }
-  &lt;/style&gt;
+  </style>
 
-  &lt;script type="text/javascript"&gt;
+  <script type="text/javascript">
     function init() {
-      var btn = document.getElementById("myButton");
+      const btn = document.getElementById("myButton");
       if (btn.setCapture) {
         btn.addEventListener("mousedown", mouseDown, false);
         btn.addEventListener("mouseup", mouseUp, false);
       } else {
-        document.getElementById("output").innerHTML
+        document.getElementById("output").textContent
           = "Sorry, there appears to be no setCapture support on this browser";
       }
     }
@@ -57,36 +73,34 @@ translation_of: Web/API/Element/setCapture
     }
 
     function mouseMoved(e) {
-      var output = document.getElementById("output");
-      output.innerHTML = "Position: " + e.clientX + ", " + e.clientY;
+      const output = document.getElementById("output");
+      output.textContent = `Position: ${e.clientX}, ${e.clientY}`;
     }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init()"&gt;
-  &lt;p&gt;This is an example of how to use mouse capture on elements in Gecko 2.0.&lt;/p&gt;
-  &lt;p&gt;&lt;a id="myButton" href="#"&gt;Test Me&lt;/a&gt;&lt;/p&gt;
-  &lt;div id="output"&gt;No events yet&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+  </script>
+</head>
+<body onload="init()">
+  <p>This is an example of how to use mouse capture on elements in Gecko 2.0.</p>
+  <p><a id="myButton" href="#">Test Me</a></p>
+  <div id="output">No events yet</div>
+</body>
+</html>
+```
 
-<p><a href="/samples/domref/mousecapture.html">查看在线演示</a></p>
+[ライブ例を表示](https://media.prod.mdn.mozit.cloud/samples/domref/mousecapture.html)
 
-<h2 id="注意">注意</h2>
+## メモ
 
-<p><span id="result_box" lang="ja"><span>要素は、他の要素のレイアウトに応じて、上または下に完全にスクロールすることはできません。</span></span></p>
+他の要素のレイアウトによっては、完全に上下にスクロールされない場合があります。
 
-<h2 id="指定">指定</h2>
+## 指定
 
-<p>Internet Explorerの実装に基づいています。</p>
+Internet Explorer の実装に基づいています。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザの互換性
 
-<p>{{Compat("api.Element.setCapture")}}</p>
+{{Compat}}
 
-<h2 id="関連資料">関連資料</h2>
+## 関連資料
 
-<ul>
- <li>{{ domxref("document.releaseCapture()") }}</li>
- <li>{{domxref("element.setPointerCapture")}}</li>
-</ul>
+- {{ domxref("document.releaseCapture()") }}
+- {{domxref("element.setPointerCapture")}}
