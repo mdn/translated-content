@@ -1,48 +1,55 @@
 ---
-title: element.onbeforescriptexecute
+title: 'Document: beforescriptexecute イベント'
 slug: Web/API/Document/beforescriptexecute_event
+page-type: web-api-event
 tags:
-  - DOM
-translation_of: Web/API/Document/onbeforescriptexecute
+ - Document
+ - beforescriptexecute
+ - API
+ - Event
+ - Reference
+ - Non-standard
+browser-compat: api.Document.beforescriptexecute_event
+translation_of: Web/API/Document/beforescriptexecute_event
 original_slug: Web/API/Document/onbeforescriptexecute
 ---
-<div>{{ApiRef}}{{gecko_minversion_header("2")}}</div>
+{{APIRef}}{{non-standard_header}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+`beforescriptexecute` イベントは、静的な {{HTMLElement("script")}} が実行されようとするときに発行されます。このイベントは {{domxref("Node.appendChild()", "appendChild()")}} のように動的に要素が追加された場合には発行されません。
 
-<p>HTML 文書内で宣言された {{HTMLElement("script")}} 要素内のコードの実行開始直前に発生するイベントをハンドリングします。<code>appendChild()</code> などを用いるなどして動的に追加された script 要素ではこのイベントは発生しません。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
 
-<pre class="syntaxbox"><em>document.onbeforescriptexecute = funcRef;</em>
-</pre>
+```js
+addEventListener('beforescriptexecute', (event) => { });
 
-<ul>
- <li><em>funcRef</em> : イベント発生時に呼ばれる関数への参照。イベントの <code>target</code> 属性は実行される script 要素に設定されます。</li>
-</ul>
+onbeforescriptexecute = (event) => { };
+```
 
-<h2 id="Example" name="Example">例</h2>
+## イベント型
 
-<pre class="brush: js">// ※ logMessage 関数は定義済みとする
+一般的な {{domxref("Event")}} です。
 
+## 例
+
+```js
 function starting(e) {
-  logMessage("スクリプト実行開始(ID:" + e.target.id + ")");
+  logMessage(`スクリプト実行開始 (ID:  ${e.target.id})`);
 }
 
-document.addEventListener("beforescriptexecute", starting, true);
-</pre>
+document.addEventListener('beforescriptexecute', starting, true);
+// または
+document.onbeforescriptexecute = starting;
+```
 
-<p><a href="/samples/html/currentScript.html">実際の表示を確認</a></p>
+[ライブ例を表示](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<ul>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#the-script-element">HTML5</a></li>
-</ul>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("element.onafterscriptexecute")}}</li>
- <li>{{domxref("document.currentScript")}}</li>
-</ul>
+- {{domxref("Document.afterscriptexecute_event")}}
+- {{domxref("Document.currentScript")}}
