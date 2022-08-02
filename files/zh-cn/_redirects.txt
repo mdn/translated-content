@@ -2172,7 +2172,6 @@
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_text	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Finale	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Finale
-/zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Hit_regions_and_accessibility	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations

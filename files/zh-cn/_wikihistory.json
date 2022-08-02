@@ -7951,13 +7951,6 @@
       "jack_chen"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/addHitRegion": {
-    "modified": "2020-05-08T12:57:25.872Z",
-    "contributors": [
-      "Yayure",
-      "ice-i-snow"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/arc": {
     "modified": "2019-09-29T12:06:14.549Z",
     "contributors": [
@@ -7992,13 +7985,6 @@
     "modified": "2020-10-15T21:34:07.928Z",
     "contributors": [
       "zhangchen",
-      "ice-i-snow"
-    ]
-  },
-  "Web/API/CanvasRenderingContext2D/clearHitRegions": {
-    "modified": "2020-05-08T13:01:10.208Z",
-    "contributors": [
-      "Yayure",
       "ice-i-snow"
     ]
   },
@@ -8284,13 +8270,6 @@
   "Web/API/CanvasRenderingContext2D/rect": {
     "modified": "2019-03-23T22:53:31.279Z",
     "contributors": [
-      "ice-i-snow"
-    ]
-  },
-  "Web/API/CanvasRenderingContext2D/removeHitRegion": {
-    "modified": "2020-05-08T13:03:28.767Z",
-    "contributors": [
-      "Yayure",
       "ice-i-snow"
     ]
   },
@@ -8671,20 +8650,6 @@
       "wth",
       "Dengjiansheng",
       "ziyunfei",
-      "jasonworg"
-    ]
-  },
-  "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility": {
-    "modified": "2019-03-18T21:11:42.305Z",
-    "contributors": [
-      "fenyu",
-      "bluelifeleer",
-      "May",
-      "luojia",
-      "codingwangxiansen",
-      "ziyunfei",
-      "Sheppy",
-      "fiona23",
       "jasonworg"
     ]
   },
@@ -12812,13 +12777,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/FileRequest": {
-    "modified": "2019-03-23T23:02:38.410Z",
-    "contributors": [
-      "teoli",
-      "phoenix_in_the_sky"
-    ]
-  },
   "Web/API/FileSystem": {
     "modified": "2019-03-23T22:48:51.462Z",
     "contributors": [
@@ -13243,16 +13201,6 @@
       "vaynewang",
       "chenqingyue",
       "teoli"
-    ]
-  },
-  "Web/API/GlobalEventHandlers/oncancel": {
-    "modified": "2020-10-15T22:14:52.164Z",
-    "contributors": [
-      "Dante-dan",
-      "zhanghengxin",
-      "kenanGao",
-      "c1er",
-      "linshehai"
     ]
   },
   "Web/API/HTMLAnchorElement": {
@@ -14842,12 +14790,6 @@
     "modified": "2020-10-15T22:17:00.625Z",
     "contributors": [
       "seawin"
-    ]
-  },
-  "Web/API/IDBEnvironment": {
-    "modified": "2020-10-15T22:16:53.762Z",
-    "contributors": [
-      "CiaoLee"
     ]
   },
   "Web/API/IDBFactory": {
@@ -19428,15 +19370,6 @@
       "niugeshenhua"
     ]
   },
-  "Web/API/Transferable": {
-    "modified": "2020-10-15T21:39:40.681Z",
-    "contributors": [
-      "RainSlide",
-      "Xiao4",
-      "teoli",
-      "wintertigerxu"
-    ]
-  },
   "Web/API/TransitionEvent": {
     "modified": "2019-03-23T22:07:03.054Z",
     "contributors": [
@@ -21804,12 +21737,6 @@
     "modified": "2020-10-15T22:30:06.986Z",
     "contributors": [
       "Jee"
-    ]
-  },
-  "Web/API/Window/isSecureContext": {
-    "modified": "2019-03-23T22:07:53.475Z",
-    "contributors": [
-      "FEhaoxinjie"
     ]
   },
   "Web/API/Window/languagechange_event": {
