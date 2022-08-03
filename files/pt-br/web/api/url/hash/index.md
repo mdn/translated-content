@@ -15,7 +15,7 @@ browser-compat: api.URL.hash
 
 A propriedade **`hash`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o `'#'` seguido pelo identificador de fragmento da URL.
 
-O fragmento não é [percent-decoded](/en-US/docs/Glossary/percent-encoding). Se a URL não tem o framento de identificação, esta propriedade contém uma string — `""`.
+O fragmento não é [percent-decoded](/pt-BR/docs/Glossary/percent-encoding). Se a URL não tem o framento de identificação, esta propriedade contém uma string vazia - `""`.
 
 {{AvailableInWorkers}}
 
