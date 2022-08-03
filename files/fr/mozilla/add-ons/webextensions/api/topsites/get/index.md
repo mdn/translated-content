@@ -44,12 +44,12 @@ var gettingTopSites = browser.topSites.get()
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`. Inclure les pages que l'utilisateur a supprimées de la page "Nouvel onglet". La valeur par défaut est `false`.
     - `includeFavicon` {{optional_inline}}
-      - : `Boolean`.  Inclure les favicons dans les résultats, pour les pages où ils sont disponibles. La valeur par défaut est `false`.
+      - : `Boolean`.  Inclure les favicons dans les résultats, pour les pages où ils sont disponibles. La valeur par défaut est `false`.
     - `includePinned` {{optional_inline}}
       - : `Boolean`. inclure les sites que l'utilisateur a épinglés dans le nouvel onglet Firefox.
         Par défaut à `false`.
     - `includeSearchShortcuts` {{optional_inline}}
-      - : `Boolean`.  Inclut les raccourcis de recherche qui apparaissent dans le nouvel onglet Firefox.
+      - : `Boolean`.  Inclut les raccourcis de recherche qui apparaissent dans le nouvel onglet Firefox.
         Par défaut à `false`.
     - `limit` {{optional_inline}}
       - : `Integer`. Le nombre de pages à retourner. Ce chiffre doit être compris entre 1 et 100 inclusivement. La valeur par défaut est 12.
@@ -58,7 +58,7 @@ var gettingTopSites = browser.topSites.get()
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Ceci sera réalisé avec un tableau d'objets  {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Ceci sera réalisé avec un tableau d'objets  {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
 
 ## Compatibilité du navigateur
 

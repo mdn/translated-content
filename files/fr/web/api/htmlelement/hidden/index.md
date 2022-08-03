@@ -25,9 +25,11 @@ Des cas inappropriés d'utilisation comprennent :
 
 ## Syntaxe
 
-    estCaché = HTMLElement.hidden;
+```js
+estCaché = HTMLElement.hidden;
 
-    HTMLElement.hidden = true | false;
+HTMLElement.hidden = true | false;
+```
 
 ### Valeur
 
@@ -42,8 +44,8 @@ Voici un exemple où un bloc caché est utilisé pour contenir un message de rem
 ```js
 document.getElementById("boutonOk")
         .addEventListener("click", function() {
-  document.getElementById("bienvenue").hidden = true;
-  document.getElementById("impressionnant").hidden = false;
+  document.getElementById("bienvenue").hidden = true;
+  document.getElementById("impressionnant").hidden = false;
 }, false);
 ```
 

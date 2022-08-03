@@ -30,15 +30,15 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `canResume`
   - : Un `boolean` indiquant si un téléchargement actuellement interrompu (par exemple en pause) peut être repris à partir du point où il a été interrompu (`true`), ou non (`false`).
 - `danger`
-  - : Une chaîne indiquant si ce téléchargement est considéré comme sûr ou suspect. Ses valeurs possibles sont définies dans le type  {{WebExtAPIRef('downloads.DangerType')}}.
+  - : Une chaîne indiquant si ce téléchargement est considéré comme sûr ou suspect. Ses valeurs possibles sont définies dans le type  {{WebExtAPIRef('downloads.DangerType')}}.
 - `endTime`{{optional_inline}}
   - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre de millisecondes entre l'époque UNIX et la fin de ce téléchargement. Ceci n'est pas défini si le téléchargement n'est pas encore terminé.
 - `error`{{optional_inline}}
   - : Une chaîne indiquant pourquoi un téléchargement a été interrompu. Les valeurs possibles sont définies dans le type {{WebExtAPIRef('downloads.InterruptReason')}}. Ceci n'est pas défini si une erreur ne s'est pas produite.
 - `estimatedEndTime`{{optional_inline}}
-  - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre estimé de millisecondes entre l'époque UNIX et la date à laquelle ce téléchargement est estimé terminé. Ceci est indéfini s'il n'est pas connu (en particulier, il n'est pas défini dans le  `DownloadItem` qui est passé dans {{WebExtAPIRef("downloads.onCreated")}}).
+  - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre estimé de millisecondes entre l'époque UNIX et la date à laquelle ce téléchargement est estimé terminé. Ceci est indéfini s'il n'est pas connu (en particulier, il n'est pas défini dans le  `DownloadItem` qui est passé dans {{WebExtAPIRef("downloads.onCreated")}}).
 - `exists`
-  - : Un `boolean` indiquant si un fichier téléchargé existe toujours (`true`) ou non (`false`). Ces informations peuvent être périmées, car les navigateurs ne surveillent pas automatiquement la suppression des fichiers. Pour vérifier si un fichier existe, appelez la méthode {{WebExtAPIRef('downloads.search()')}}, en filtrant le fichier question.
+  - : Un `boolean` indiquant si un fichier téléchargé existe toujours (`true`) ou non (`false`). Ces informations peuvent être périmées, car les navigateurs ne surveillent pas automatiquement la suppression des fichiers. Pour vérifier si un fichier existe, appelez la méthode {{WebExtAPIRef('downloads.search()')}}, en filtrant le fichier question.
 - `filename`
   - : Un `string` représentant le chemin local absolu du fichier.
 - `fileSize`

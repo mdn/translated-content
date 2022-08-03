@@ -25,7 +25,7 @@ ou [`pattern`](/fr/docs/Web/HTML/Element/input#htmlattrdefpattern) pour afficher
 
 ### Valeurs
 
-L'attribut `enterkeyhint` est un attribut à valeur contrainte et accepte uniquement les valeurs suivantes :
+L'attribut `enterkeyhint` est un attribut à valeur contrainte et accepte uniquement les valeurs suivantes&nbsp;:
 
 | Valeur                    | Description                                                                                                        | Libellé de l'exemple (dépend de l'agent utilisateur et de la langue) |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |

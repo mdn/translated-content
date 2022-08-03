@@ -71,7 +71,7 @@ IDBKeyRange.prototype.includes = IDBKeyRange.prototype.includes || function(key)
 
 | Spécification                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB 2', '#dom-idbkeyrange-includes', 'includes()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB 2', '#dom-idbkeyrange-includes', 'includes()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

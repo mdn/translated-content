@@ -20,12 +20,12 @@ Lorsqu’on navigue entre les différents éléments d’une liste, le premier �
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-Lorsque le rôle `listbox` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :
+Lorsque le rôle `listbox` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
-- Présenter l’élément comme ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation. Alternativement, s’il est un enfant de ou s’il appartient à une boîte combinée [combobox](http://www.w3.org/TR/wai-aria/roles#combobox), présenter l’élément comme un [menu](http://www.w3.org/TR/wai-aria/roles#menu) ;
+- Présenter l’élément comme ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation. Alternativement, s’il est un enfant de ou s’il appartient à une boîte combinée [combobox](http://www.w3.org/TR/wai-aria/roles#combobox), présenter l’élément comme un [menu](http://www.w3.org/TR/wai-aria/roles#menu)&nbsp;;
 - Déclencher un événement liste (ou dans les cas spéciaux, un événement menu) accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
-Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence :
+Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence&nbsp;:
 
 - Les lecteurs d’écran devraient annoncer le label et le rôle de la boîte liste lorsqu’elle obtient le focus. Si un élément de la liste obtient le focus, il devrait être annoncé après, suivi par une indication de la position de l’élément dans la liste si le lecteur d’écran prend en charge cette fonction. Lorsque le focus se déplace dans la liste, le lecteur d’écran devrait annoncer les éléments de la liste appropriés.
 - Les loupes d’écran devraient agrandir la boîte liste.
@@ -34,9 +34,9 @@ Les technologies d’assistance devraient être à l’écoute de tels événeme
 
 ### Exemples
 
-#### Exemple 1 : une liste de sélection simple qui utilise l’attribut `aria-activedescendant`
+#### Exemple 1&nbsp;: une liste de sélection simple qui utilise l’attribut `aria-activedescendant`
 
-L’extrait de code ci-dessous montre comment le rôle `listbox` est ajouté directement dans le code source HTML :
+L’extrait de code ci-dessous montre comment le rôle `listbox` est ajouté directement dans le code source HTML&nbsp;:
 
 ```html
 <div role="listbox" tabindex="0" id="listbox1" onclick="return listItemClick(event);"
@@ -53,7 +53,7 @@ L’extrait de code ci-dessous montre comment le rôle `listbox` est ajouté dir
 
 Voir l’[exemple](http://codetalks.org/source/widgets/listbox/listbox.html) CodeTalks pour plus de détails.
 
-#### Exemples concrets :
+#### Exemples concrets&nbsp;:
 
 - <https://www.w3.org/TR/wai-aria-practices/examples/listbox/listbox.html>
 
@@ -75,5 +75,5 @@ Voir l’[exemple](http://codetalks.org/source/widgets/listbox/listbox.html) Cod
 
 ### Autres ressources
 
-- Bonnes pratiques ARIA – Listbox : [#listbox_div](http://www.w3.org/TR/wai-aria-practices/#listbox_div)
-- Le modèle de rôles ARIA – Listbox : [#listbox](http://www.w3.org/TR/wai-aria/roles#listbox)
+- Bonnes pratiques ARIA – Listbox&nbsp;: [#listbox_div](http://www.w3.org/TR/wai-aria-practices/#listbox_div)
+- Le modèle de rôles ARIA – Listbox&nbsp;: [#listbox](http://www.w3.org/TR/wai-aria/roles#listbox)

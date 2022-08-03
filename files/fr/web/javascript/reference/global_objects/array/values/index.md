@@ -31,7 +31,9 @@ console.log(iterateur.next().value); // u
 
 ## Syntaxe
 
-    array.values()
+```js
+array.values()
+```
 
 ### Valeur de retour
 
@@ -68,7 +70,7 @@ console.log(eArr.next().value); // p
 | Spécification                                                                                                | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-array.prototype.values', 'Array.prototype.values')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

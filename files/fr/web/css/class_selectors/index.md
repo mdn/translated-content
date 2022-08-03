@@ -34,11 +34,15 @@ L'attribut {{htmlattrxref("class")}} est une liste de termes séparés par des e
 
 ## Syntaxe
 
-    .nomdeclasse { déclarations CSS }
+```
+.nomdeclasse { déclarations CSS }
+```
 
 Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut) de la façon suivante :
 
-    [class~=nomdeclasse] { déclarations CSS }
+```
+[class~=nomdeclasse] { déclarations CSS }
+```
 
 ## Exemples
 
@@ -70,8 +74,8 @@ Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/
 | Spécification                                                                                | État                                 | Commentaires         |
 | -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
 | {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS4 Selectors')}} | Aucune modification. |
-| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                      |
-| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                      |
+| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                      |
+| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                      |
 | {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}             | {{Spec2('CSS1')}}             | Définition initiale. |
 
 ## Compatibilité des navigateurs

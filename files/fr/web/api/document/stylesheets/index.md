@@ -11,7 +11,9 @@ La propriété **`Document.styleSheets`** est en lecture seule et retourne une l
 
 ## Syntaxe
 
-    var styleSheetList = document.styleSheets;
+```js
+var styleSheetList = document.styleSheets;
+```
 
 L'objet retourné est une liste {{domxref("StyleSheetList")}}.
 
@@ -21,8 +23,8 @@ Il s'agit d'une collection ordonnée d'objets [`CSSStyleSheet`](/fr/docs/Web/API
 
 | Spécification                                                                                                                        | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('CSSOM', '#dom-document-stylesheets', 'styleSheets')}}                                             | {{Spec2('CSSOM')}}         |             |
-| {{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-DocumentStyle-styleSheets', 'styleSheets')}} | {{Spec2('DOM2 Style')}} |             |
+| {{SpecName('CSSOM', '#dom-document-stylesheets', 'styleSheets')}}                                             | {{Spec2('CSSOM')}}         |             |
+| {{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-DocumentStyle-styleSheets', 'styleSheets')}} | {{Spec2('DOM2 Style')}} |             |
 
 ## Voir aussi
 

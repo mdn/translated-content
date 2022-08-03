@@ -13,13 +13,15 @@ La propriété **`interval`** renvoie la granularité temporelle, exprimée en m
 
 ## Syntaxe
 
-    var interval = instanceOfDeviceMotionEvent.interval;
+```js
+var interval = instanceOfDeviceMotionEvent.interval;
+```
 
 ## Spécifications
 
 | Spécification                                | État                                     | Commentaires |
 | -------------------------------------------- | ---------------------------------------- | ------------ |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} |              |
+| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} |              |
 
 ## Compatibilité des navigateurs
 

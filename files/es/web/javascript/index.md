@@ -20,9 +20,9 @@ No confundas JavaScript con el [lenguaje de programación Java](https://es.wikip
 > **Observación:** **Quieres transformarte en un desarrollador web front-end?**
 >
 > Hemos reunido un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
-> 
+>
 > [Empieza aquí](es/docs/Learn/Front-end_web_developer)
-> 
+>
 
 ## Tutoriales
 
@@ -109,7 +109,7 @@ Herramientas útiles para escribir y depurar tu código **JavaScript**.
   - : Plunker es una comunidad en línea para crear, colaborar y compartir sus ideas de desarrollo web. Edita sus archivos JavaScript, CSS, HTML y obtén resultados en vivo y estructuras de archivos.
 - [JSBin](https://jsbin.com/)
   - : JSBin es una herramienta de depuración de desarrollo web colaborativo de código abierto.
-- [Codepen](https://codepen.io/) 
+- [Codepen](https://codepen.io/)
   - : Codepen es otra herramienta colaborativa de desarrollo web usada como un espacio para mostrar resultados en vivo.
 - [StackBlitz](https://stackblitz.com/)
   - : StackBlitz es otra herramienta de depuración/visualización en línea, que puede alojar e implementar aplicaciones full-stack usando React, Angular, etc.

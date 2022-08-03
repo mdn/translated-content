@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLAreaElement
 <div>{{APIRef("HTML DOM")}}</div>
 </div>
 
-<p><strong><code>HTMLAreaElement</code></strong> 接口提供了一些属性和方法 (除了常见的对象{{domxref("HTMLElement")}} 接口提供的属性和方法通过继承也能获取到) 用来控制一个area元素的布局和展现。</p>
+<p><strong><code>HTMLAreaElement</code></strong> 接口提供了一些属性和方法 (除了常见的对象{{domxref("HTMLElement")}} 接口提供的属性和方法通过继承也能获取到) 用来控制一个area元素的布局和展现。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/HTMLAreaElement
  <dd>Is a {{domxref("DOMString")}} containing that reflects the {{ htmlattrxref("hreflang", "area") }} HTML attribute, indicating the language of the linked resource.</dd>
  <dt>{{domxref("HTMLAreaElement.media")}}</dt>
  <dd>Is a {{domxref("DOMString")}} containing that reflects the {{ htmlattrxref("media", "area") }} HTML attribute, indicating target media of the linked resource.</dd>
- <dt>{{domxref("HTMLAreaElement.noHref")}} {{obsolete_inline}}</dt>
+ <dt>{{domxref("HTMLAreaElement.noHref")}} {{Deprecated_Inline}}</dt>
  <dd>Is a {{domxref("Boolean")}} flag indicating if the area is inactive (<code>true</code>) or active (<code>false</code>).</dd>
  <dt>{{domxref("URLUtils.password")}}</dt>
  <dd>Is a {{domxref("DOMString")}} containing the password specified before the domain name.</dd>
@@ -66,7 +66,7 @@ translation_of: Web/API/HTMLAreaElement
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}} and  implement those from {{domxref("URLUtils")}}.</em></p>
+<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}} and  implement those from {{domxref("URLUtils")}}.</em></p>
 
 <dl>
  <dt>{{domxref("URLUtils.toString()")}}</dt>
@@ -75,120 +75,11 @@ translation_of: Web/API/HTMLAreaElement
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-map-element.html#the-area-element", "HTMLAreaElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>The following property has been added: <code>download</code>.<br>
-    Technically, the URL-related properties, <code>media</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>, have been moving to the {{domxref("URLUtils")}} interface, and <code>HTMLAreaElement</code> implements this interface.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-area-element", "HTMLAreaElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Technically, the properties <code>tabindex</code> and <code>accesskey</code> are now defined on {{domxref("HTMLElement")}}.<br>
-    The following property is now obsolete:  <code>nohref</code>.<br>
-    The following properties have been added: <code>rel</code>, <code>relList</code>, <code>media</code>, <code>hreflang</code>, <code>type</code>, <code>host</code>, <code>hostname</code>, <code>pathname</code>, <code>port</code>, <code>protocol</code>, <code>search</code>, and <code>hash</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-26019118', 'HTMLAreaElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>No change from {{SpecName("DOM1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-26019118', 'HTMLAreaElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>download</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>username</code>, <code>password</code>, and <code>origin</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>download</code> {{experimental_inline}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>username</code>, <code>password</code>, and <code>origin</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.HTMLAreaElement")}}
 
 <h2 id="See_also">See also</h2>
 

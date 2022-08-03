@@ -47,7 +47,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Créer un nouveau panneau, et ajoute des auditeurs à ces événements onShown et  onHidden :
+Créer un nouveau panneau, et ajoute des auditeurs à ces événements onShown et onHidden :
 
 ```js
 function handleShown() {

@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 
 Stocke un ou plusieurs éléments dans la zone de stockage ou met à jour les éléments existants..
 
-Lorsque vous stockez ou mettez à jour une valeur à l'aide de cette API, l'événement  {{WebExtAPIRef("storage.onChanged")}} se déclenche.
+Lorsque vous stockez ou mettez à jour une valeur à l'aide de cette API, l'événement  {{WebExtAPIRef("storage.onChanged")}} se déclenche.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

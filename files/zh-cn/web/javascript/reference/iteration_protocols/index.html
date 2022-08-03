@@ -60,12 +60,12 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
   <tr>
    <td><code>next</code></td>
    <td>
-    <p>一个无参数或者一个参数的函数，返回一个应当拥有以下两个属性的对象：</p>
+    <p>一个无参数的或者可以接受一个参数的函数，返回一个应当拥有以下两个属性的对象：</p>
 
     <dl>
      <dt><code>done</code>（boolean）</dt>
      <dd>
-     <p>如果迭代器可以产生序列中的下一个值，则为 <code>false</code>。（这等价于没有指定  <code>done</code> 这个属性。）</p>
+     <p>如果迭代器可以产生序列中的下一个值，则为 <code>false</code>。（这等价于没有指定  <code>done</code> 这个属性。）</p>
 
      <p>如果迭代器已将序列迭代完毕，则为 <code>true</code>。这种情况下，<code>value</code> 是可选的，如果它依然存在，即为迭代结束之后的默认返回值。</p>
      </dd>
@@ -73,7 +73,7 @@ translation_of: Web/JavaScript/Reference/Iteration_protocols
      <dd>迭代器返回的任何 JavaScript 值。done 为 true 时可省略。</dd>
     </dl>
 
-    <p><code>next()</code> 方法必须返回一个对象，该对象应当有两个属性： <code>done</code> 和 <code>value</code>，如果返回了一个非对象值（比如 <code>false</code> 或 <code>undefined</code>），则会抛出一个 {{jsxref("TypeError")}} 异常（<code>"iterator.next() returned a non-object value"</code>）。</p>
+    <p><code>next()</code> 方法必须返回一个对象，该对象应当有两个属性： <code>done</code> 和 <code>value</code>，如果返回了一个非对象值（比如 <code>false</code> 或 <code>undefined</code>），则会抛出一个 {{jsxref("TypeError")}} 异常（<code>"iterator.next() returned a non-object value"</code>）。</p>
    </td>
   </tr>
  </tbody>
@@ -146,7 +146,7 @@ someString + "";                              // "hi"
 
 <h3 id="自定义可迭代对象">自定义可迭代对象</h3>
 
-<p>我们可以实现一个自己的可迭代对象，就像这样:</p>
+<p>我们可以实现一个自己的可迭代对象，就像这样：</p>
 
 <pre class="brush: js">var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
@@ -272,9 +272,9 @@ console.log(it.next().done);  // true
 
 let it = idMaker();
 
-console.log(it.next().value); // '0'
-console.log(it.next().value); // '1'
-console.log(it.next().value); // '2'
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
+console.log(it.next().value); // 2
 // ...
 </pre>
 
@@ -305,9 +305,9 @@ function* idMaker() {
 
 let gen = idMaker();
 
-console.log(gen.next().value); // '0'
-console.log(gen.next().value); // '1'
-console.log(gen.next().value); // '2'
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
 // ...
 </pre>
 
@@ -339,13 +339,13 @@ console.log(gen.next().value); // '2'
 const simple = new SimpleClass([1,2,3,4,5])
 
 for (const val of simple) {
-  console.log(val)   //'1' '2' '3' '4' '5'
+  console.log(val)   // 1 2 3 4 5
 }
 </pre>
 
 <h2 id="生成器对象到底是一个迭代器，还是一个可迭代对象？">生成器对象到底是一个迭代器，还是一个可迭代对象？</h2>
 
-<p>{{jsxref("Generator", "生成器")}}对象既是迭代器，也是可迭代对象:</p>
+<p>{{jsxref("Generator", "生成器")}}对象既是迭代器，也是可迭代对象：</p>
 
 <pre class="brush: js">let aGeneratorObject = function* (){
     yield 1;
@@ -354,19 +354,19 @@ for (const val of simple) {
 }();
 
 typeof aGeneratorObject.next;
-// 返回"function", 因为有一个next方法，所以这是一个迭代器
+// 返回"function", 因为有一个 next 方法，所以这是一个迭代器
 
 typeof aGeneratorObject[Symbol.iterator];
-// 返回"function", 因为有一个@@iterator方法，所以这是一个可迭代对象
+// 返回"function", 因为有一个 @@iterator 方法，所以这是一个可迭代对象
 
 aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
-// 返回true, 因为@@iterator方法返回自身（即迭代器），所以这是一个格式良好的可迭代对象
+// 返回 true，因为 @@iterator 方法返回自身（即迭代器），所以这是一个格式良好的可迭代对象
 
 [...aGeneratorObject];
-// 返回[1, 2, 3]
+// 返回 [1, 2, 3]
 
 console.log(Symbol.iterator in aGeneratorObject)
-// 返回true, 因为@@iterator方法是aGeneratorObject的一个属性</pre>
+// 返回 true，因为 @@iterator 方法是 aGeneratorObject 的一个属性</pre>
 
 <h2 id="规范">规范</h2>
 

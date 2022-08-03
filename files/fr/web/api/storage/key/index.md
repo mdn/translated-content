@@ -14,9 +14,11 @@ translation_of: Web/API/Storage/key
 
 La méthode `key()` de l'interface {{domxref("Storage")}} prend un nombre n en argument et retourne la n-ième clé contenue dans storage. L'ordre des clés étant définie par le navigateur, il est recommandé de ne pas s'y référer .
 
-## Syntax
+## Syntaxe
 
-    var unNomDeCle = storage.key(cle);
+```js
+var unNomDeCle = storage.key(cle);
+```
 
 ### Paramètres
 
@@ -35,7 +37,7 @@ La fonction suivante parcours les éléments présents dans le local storage.
 function forEachKey(callback) {
   for (var i = 0; i < localStorage.length; i++) {
     callback(localStorage.key(i));
-  }
+  }
 }
 ```
 
@@ -43,11 +45,11 @@ function forEachKey(callback) {
 
 ## Autre exemple
 
-La fonction suivante parcourt chaque clé présente dans le localStorage et affiche les valeurs correspondantes.
+La fonction suivante parcourt chaque clé présente dans le localStorage et affiche les valeurs correspondantes.
 
 ```js
 for (var i = 0; i < localStorage.length; i++) {
-   console.log(localStorage.getItem(localStorage.key(i)));
+   console.log(localStorage.getItem(localStorage.key(i)));
 }
 ```
 
@@ -55,7 +57,7 @@ for (var i = 0; i < localStorage.length; i++) {
 
 | Specification                                                                                            | Status                           | Comment |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-key', 'Storage.key')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navigateurs
 

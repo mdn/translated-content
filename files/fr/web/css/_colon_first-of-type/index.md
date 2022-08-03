@@ -31,7 +31,7 @@ p:first-of-type {
 
 ```css
 div :first-of-type {
-  background-color: lime;
+  background-color: lime;
 }
 ```
 

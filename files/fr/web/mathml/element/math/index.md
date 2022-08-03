@@ -9,7 +9,7 @@ translation_of: Web/MathML/Element/math
 ---
 {{MathMLRef}}
 
-L'élément racine de MathML est` <math>`. Tout objet représenté en MathML doit être encadré de balises `<math>`. De plus, il est interdit d'imbriquer un autre élément `<math>` à l'intérieur d'un premier. Il est toutefois possible d'avoir un nombre arbitraire d'éléments fils à l'intérieur d'un élément `<math>`.
+L'élément racine de MathML est `<math>`. Tout objet représenté en MathML doit être encadré de balises `<math>`. De plus, il est interdit d'imbriquer un autre élément `<math>` à l'intérieur d'un premier. Il est toutefois possible d'avoir un nombre arbitraire d'éléments fils à l'intérieur d'un élément `<math>`.
 
 ## Attributs
 
@@ -49,10 +49,10 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MathML en HTML5</title>
-  </head>
-  <body>
+  <head>
+    <title>MathML en HTML5</title>
+  </head>
+  <body>
 
   <math>
     <mrow>
@@ -75,7 +75,7 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
     </mrow>
   </math>
 
-  </body>
+  </body>
 </html>
 ```
 

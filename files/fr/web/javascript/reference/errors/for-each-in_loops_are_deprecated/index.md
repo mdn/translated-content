@@ -11,7 +11,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/For-each-in_loops_are_deprecated
 
 ## Message
 
-    Warning: JavaScript 1.6's for-each-in loops are deprecated; consider using ES6 for-of instead
+```
+Warning: JavaScript 1.6's for-each-in loops are deprecated; consider using ES6 for-of instead
+```
 
 ## Type d'erreur
 
@@ -19,7 +21,7 @@ Avertissement.
 
 ## Quel est le problème ?
 
-L'instruction {{jsxref("Instructions/for_each...in", "for each (variable in obj)")}} présente à partir de JavaScript 1.6 est une instruction dépréciée et est amenée à disparaître dans un avenir proche.
+L'instruction {{jsxref("Instructions/for_each...in", "for each (variable in obj)")}} présente à partir de JavaScript 1.6 est une instruction dépréciée et est amenée à disparaître dans un avenir proche.
 
 ## Exemples
 

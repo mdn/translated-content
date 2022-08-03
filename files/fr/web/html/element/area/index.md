@@ -137,7 +137,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : Cet attribut dans quel _contexte de navigation_ afficher la ressource liée. Les mots-clés peuvent avoir les significations suivantes :
 
     - `_self` (valeur par défaut) : Charge la réponse dans le contexte de navigation actuel.
-    - `_blank `: Charge la réponse dans un nouveau contexte de navigation (sans nom).
+    - `_blank`&nbsp;: Charge la réponse dans un nouveau contexte de navigation (sans nom).
     - `_parent` : Charge la réponse dans le contexte de navigation parent. Si la page courante n'est pas incluse via une _frame_, cette valeur agit comme `_self`.
     - `_top` : Charge la réponse dans le contexte de navigation avec le plus haut niveau (autrement dit l'ancêtre du contexte actuel qui n'a pas de parent). Si le contexte actuel n'a pas de parent alors cette valeur aura le même effet que la valeur `_self`.
 

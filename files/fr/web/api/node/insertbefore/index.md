@@ -20,7 +20,9 @@ Cela signifie qu'un nœud ne peut pas se trouver simultanément à deux endroits
 
 ## Syntaxe
 
-    var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```js
+var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```
 
 - `insertedNode`
   - : Le nœud en cours d'insertion (le même que `newNode`).
@@ -93,7 +95,7 @@ parentDiv.insertBefore(sp1, sp2)
 
 Il n'existe pas de méthode `insertAfter()`. Il peut être émulé avec une combinaison des méthodes `insertBefore()` et [`Node.nextSibling`](/fr/docs/Web/API/Node/nextSibling).
 
-Dans l'exemple ci-dessus, `sp1` pourrait être inséré après `sp2` en utilisant :
+Dans l'exemple ci-dessus, `sp1` pourrait être inséré après `sp2` en utilisant&nbsp;:
 
 ```js
 parentDiv.insertBefore(sp1, sp2.nextSibling);

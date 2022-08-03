@@ -19,7 +19,9 @@ La méthode **`getFloat32()`** permet de lire un nombre flottant signé sur 32 b
 
 ## Syntaxe
 
-    dataview.getFloat32(positionOctet [, littleEndian])
+```js
+dataview.getFloat32(positionOctet [, littleEndian])
+```
 
 ### Paramètres
 
@@ -57,7 +59,7 @@ dataview.getFloat32(1); // 0
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
 | {{SpecName('ES2015', '#sec-dataview.prototype.getfloat32', 'DataView.prototype.getFloat32')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat32', 'DataView.prototype.getFloat32')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat32', 'DataView.prototype.getFloat32')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

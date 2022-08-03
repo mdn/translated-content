@@ -10,7 +10,7 @@ Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Maîtrise élémentaire de l'informatique,
         <a
@@ -29,7 +29,7 @@ Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de 
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Approfondir les structures syntaxiques fondamentales de CSS</td>
     </tr>
   </tbody>
@@ -307,7 +307,7 @@ La page devrait s'afficher comme ceci :
 
 Une fonction est composée du nom de la fonction suivi d'une paire de parenthèses entre lesquelles sont placées les valeurs autorisées pour cette fonction. Dans le cas de l'exemple `calc()` ci-dessus, on demande que la largeur de cette zone soit égale à 90% de la largeur du bloc conteneur, moins 30 pixels. Ce n'est pas quelque chose que l'on peut calculer à l'avance et simplement entrer la valeur dans le CSS, car on ne sait pas ce que seront 90%. Comme pour toutes les valeurs, chaque fonction a sa page de documentation sur MDN avec des exemples d'utilisation pour en voir le fonctionnement.
 
-Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/<transform>), telles que `rotate()`.
+Un autre exemple serait les différentes valeurs de la propriété [`<transform>`](/fr/docs/Web/CSS/transform), telles que `rotate()`.
 
 #### Exemple transform
 
@@ -551,8 +551,8 @@ Il est utile de comprendre, au moins dans les grandes lignes, comment votre navi
 
 ## Dans ce cours
 
-1.  [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3.  Comment CSS est structuré
-4.  [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
+3. Comment CSS est structuré
+4. [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

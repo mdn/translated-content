@@ -63,7 +63,6 @@ Chaque `@counter-style` est identifié par un nom et possède un ensemble de des
     }
     ```
 
-
 - [`additive-symbols`](/fr/docs/Web/CSS/@counter-style/additive-symbols)
   - : Certains symboles définis via le descripteur `symbols` sont utilisés par la plupart des algorithmes. Certains systèmes dits «&nbsp;additifs&nbsp;» s'appuient sur des _tuples additifs_ décrit avec ce descripteur. Chaque tuple additif se compose d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids.
 

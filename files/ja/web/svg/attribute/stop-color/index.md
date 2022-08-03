@@ -18,7 +18,7 @@ translation_of: Web/SVG/Attribute/stop-color
 
 この属性は以下の SVG 要素で使用することができます。
 
-*   {{SVGElement("stop")}}
+- {{SVGElement("stop")}}
 
 ## 使用上のメモ
 
@@ -47,12 +47,12 @@ translation_of: Web/SVG/Attribute/stop-color
   </tbody>
 </table>
 
-*   `currentcolor`
-    *   : このキーワードは、現在の塗りつぶしの色を表し、 [`<paint>`](/en-US/docs/Web/SVG/Content_type#paint) の指定の中で、{{SVGAttr("fill")}} および {{SVGAttr("stroke")}} 属性と同じ方法で指定することができます。
-*   `<color>`
-    *   : この値は色の値を示します。
-*   `<icccolor>`
-    *   : この値は ICC カラープロファイルを参照します。
+- `currentcolor`
+  - : このキーワードは、現在の塗りつぶしの色を表し、 [`<paint>`](/en-US/docs/Web/SVG/Content_type#paint) の指定の中で、{{SVGAttr("fill")}} および {{SVGAttr("stroke")}} 属性と同じ方法で指定することができます。
+- `<color>`
+  - : この値は色の値を示します。
+- `<icccolor>`
+  - : この値は ICC カラープロファイルを参照します。
 
 ## 仕様書
 
@@ -90,4 +90,4 @@ translation_of: Web/SVG/Attribute/stop-color
 
 ## 関連情報
 
-*   {{SVGAttr("stop-opacity")}}
+- {{SVGAttr("stop-opacity")}}

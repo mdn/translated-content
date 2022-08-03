@@ -14,7 +14,7 @@ HTML fournit plusieurs méthodes pour décrire la sémantique du contenu qu'on e
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devez au préalable savoir comment
         <a href="/fr/Learn/HTML/Write_a_simple_page_in_HTML"
@@ -23,7 +23,7 @@ HTML fournit plusieurs méthodes pour décrire la sémantique du contenu qu'on e
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Apprendre comment introduire de nouveaux mots-clés et comment construire
         une liste de définitions.

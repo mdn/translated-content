@@ -54,7 +54,7 @@ Les boîtes flexibles peuvent être utilisées afin de diviser du contenu en col
 
 > **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/columns-flexbox--download.html)
 
-Les boîtes flexibles peuvent également être utilisées afin de créer des dispositions où les objets flexibles « passent à la ligne » en utilisant la propriété {{cssxref("flex-wrap")}} et la valeur `wrap` sur le conteneur.  Les nouvelles lignes répartiront l'espace pour cette ligne uniquement, il n'y aura pas d'alignement d'une ligne à l'autre (comme on peut le voir dans l'exemple qui suit). C'est pour cette raison qu'on décrit les boîtes flexibles comme étant une méthode de disposition sur une seul dimension : cette méthode permet de contrôler la disposition en ligne ou en colonne mais pas de gérer les deux à la fois.
+Les boîtes flexibles peuvent également être utilisées afin de créer des dispositions où les objets flexibles « passent à la ligne » en utilisant la propriété {{cssxref("flex-wrap")}} et la valeur `wrap` sur le conteneur.  Les nouvelles lignes répartiront l'espace pour cette ligne uniquement, il n'y aura pas d'alignement d'une ligne à l'autre (comme on peut le voir dans l'exemple qui suit). C'est pour cette raison qu'on décrit les boîtes flexibles comme étant une méthode de disposition sur une seul dimension : cette méthode permet de contrôler la disposition en ligne ou en colonne mais pas de gérer les deux à la fois.
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
 

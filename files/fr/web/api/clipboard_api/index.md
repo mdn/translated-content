@@ -5,7 +5,7 @@ translation_of: Web/API/Clipboard_API
 ---
 {{DefaultAPISidebar("Clipboard API")}}
 
-L'**API Clipboard** (en français : API Presse-papiers) fournit la possibilité de répondre aux commandes du presse-papiers (couper, copier et coller) ainsi que de lire et écrire sur le presse-papiers système de façon asynchrone. L'accès aux contenus du presse-papiers est protégé par l'[API Permissions](/fr/docs/Web/API/Permissions_API) : la permission `clipboard-write` est donnée automatiquement aux pages lorsqu'elles sont dans l'onglet actif. La permission `clipboard-read` doit quant à elle être demandée, ce que vous pouvez faire en tentant de lire les données du presse-papiers.
+L'**API Clipboard** (en français&nbsp;: API Presse-papiers) fournit la possibilité de répondre aux commandes du presse-papiers (couper, copier et coller) ainsi que de lire et écrire sur le presse-papiers système de façon asynchrone. L'accès aux contenus du presse-papiers est protégé par l'[API Permissions](/fr/docs/Web/API/Permissions_API)&nbsp;: la permission `clipboard-write` est donnée automatiquement aux pages lorsqu'elles sont dans l'onglet actif. La permission `clipboard-read` doit quant à elle être demandée, ce que vous pouvez faire en tentant de lire les données du presse-papiers.
 
 > **Note :** Cette API _n'est pas disponible_ dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via {{domxref("WorkerNavigator")}}).
 
@@ -13,7 +13,7 @@ Cette API est conçue pour remplacer l'accès au presse-papiers précédemment p
 
 ## Accéder au presse-papier
 
-Au lieu de créer un objet `Clipboard` lors de l'instanciation, vous pouvez accéder au presse-papier du système avec la globale {{domxref("Navigator.clipboard")}} :
+Au lieu de créer un objet `Clipboard` lors de l'instanciation, vous pouvez accéder au presse-papier du système avec la globale {{domxref("Navigator.clipboard")}}&nbsp;:
 
 ```js
 navigator.clipboard.readText().then(

@@ -42,7 +42,7 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
   console.log(otherTable.get(1)());
 });</pre>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Здесь мы создаём таблицу </span></font>otherTable</code> из JavaScript используя конструктор {{jsxref("WebAssembly.Table")}}, после этого мы загружаем модуль <code>table.wasm</code> при помощи функции {{jsxref("WebAssembly.instantiateStreaming()")}}.</p>
+<p>Здесь мы создаём таблицу (<code>otherTable</code>) из JavaScript используя конструктор {{jsxref("WebAssembly.Table")}}, после этого мы загружаем модуль <code>table.wasm</code> при помощи функции {{jsxref("WebAssembly.instantiateStreaming()")}}.</p>
 
 <p>Затем мы получаем объект содержащий все функции, экспортированные из экземпляра модуля. Извлекаем ссылки на эти функции через  <code><a href="/en-US/docs/WebAssembly/API/Table/get">tbl.get()</a>,</code> вызываем их и выводим результат работы в консоль. Затем мы используем <code>set()</code> чтобы таблица  <code>otherTable</code> содержала ссылки на те же функции, что и таблица <code>tbl</code>.</p>
 

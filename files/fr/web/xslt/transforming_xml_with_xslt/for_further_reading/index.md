@@ -16,9 +16,9 @@ original_slug: Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources
 
 - **XSLT: Programmer's Reference, Second Edition**
 
-  - **Auteur** : Michael H. Kay
-  - **Nombre de page** : 992 pages
-  - **Éditeur** : Wrox; 2 edition (May 3, 2001)
+  - **Auteur**&nbsp;: Michael H. Kay
+  - **Nombre de page**&nbsp;: 992 pages
+  - **Éditeur**&nbsp;: Wrox; 2 edition (May 3, 2001)
   - **ISBN**: 0764543814
   - Michael Kay est membre du groupe de travail XSL du W3C et le développeur de son propre processeur XSLT libre,
     Saxon. Il est également l'auteur du seul livre sur ce sujet à avoir bénéficié d'une seconde édition. C'est un
@@ -28,9 +28,9 @@ original_slug: Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources
 
 - **XSLT**
 
-  - **Auteur** : Doug Tidwell
-  - **Nombre de page** : 473 pages
-  - **Éditeur** : O'Reilly Media; 1 edition (August 15, 2001)
+  - **Auteur**&nbsp;: Doug Tidwell
+  - **Nombre de page**&nbsp;: 473 pages
+  - **Éditeur**&nbsp;: O'Reilly Media; 1 edition (August 15, 2001)
   - **ISBN**: 0596000537
   - Doug Tidwell est un développeur senior chez IBM et un*évangéliste* reconnu des technologies XML en
     général. Il est l'auteur de plusieurs articles et tutoriels concernant divers aspects de XML sur l'exhaustif
@@ -40,9 +40,9 @@ original_slug: Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources
 
 - **Learning XML, Second Edition**
 
-  - **Auteur** : Erik T. Ray
-  - **Nombre de page** : 432 pages
-  - **Éditeur** : O'Reilly Media; 2 edition (September 22, 2003)
+  - **Auteur**&nbsp;: Erik T. Ray
+  - **Nombre de page**&nbsp;: 432 pages
+  - **Éditeur**&nbsp;: O'Reilly Media; 2 edition (September 22, 2003)
   - **ISBN**: 0596004206
   - Comme l'indique le titre, il s'agit d'un aperçu général de XML. Le chapitre 6 est dédié spécifiquement à XSLT.
   - <http://www.amazon.com/gp/product/0596004206>
@@ -53,11 +53,11 @@ original_slug: Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources
 
 - **World Wide Web Consortium**
 
-  - **Page d'accueil du W3C** : <http://www.w3.org/>
-  - **Page de XSL** : <http://www.w3.org/Style/XSL/>
-  - **Recommandation XSLT 1.0** : <http://www.w3.org/TR/xslt>
-  - **Archive of public style (CSS and XSLT) discussions** : <http://lists.w3.org/Archives/Public/www-style/>
-  - **Recommandation XPath 1.0** : <http://www.w3.org/TR/xpath>
+  - **Page d'accueil du W3C**&nbsp;: <http://www.w3.org/>
+  - **Page de XSL**&nbsp;: <http://www.w3.org/Style/XSL/>
+  - **Recommandation XSLT 1.0**&nbsp;: <http://www.w3.org/TR/xslt>
+  - **Archive of public style (CSS and XSLT) discussions**&nbsp;: <http://lists.w3.org/Archives/Public/www-style/>
+  - **Recommandation XPath 1.0**&nbsp;: <http://www.w3.org/TR/xpath>
   - Le World Wide Web Consortium est l'organisme qui publie des recommandations sur un certain nombre de technologies Web, dont beaucoup deviennent de-facto des standards.
 
 #### Articles

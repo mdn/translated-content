@@ -10,9 +10,9 @@ translation_of: Web/CSS/page-break-after
 
 <div>{{CSSRef}}</div>
 
-<p><strong><code>page-break-after</code></strong> CSS 属性调整当前元素之后的分页符。</p>
+<p><strong><code>page-break-after</code></strong> CSS 属性调整当前元素之后的分页符。</p>
 
-<p>此属性适用于生成一个盒子的块元素。它不适用于不会生成一个盒子的空 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div" title="HTML &lt;div> 元素 (或 HTML 文档分区元素) 是一个通用型的流内容容器，它在语义上不代表任何特定类型的内容，它可以被用来对其它元素进行分组，一般用于样式化相关的需求（使用 class 或 id 特性) 或者对具有相同特性的一组元素进行分组 (比如 lang)，它应该在没有任何其它语义元素可用时才使用 (比如 &lt;article> 或 &lt;nav>) 。"><code>&lt;div&gt;</code></a>。</p>
+<p>此属性适用于生成一个盒子的块元素。它不适用于不会生成一个盒子的空 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a>。</p>
 
 
 
@@ -33,9 +33,9 @@ page-break-after: unset;</code></pre>
 
 
 <div class="note">
-<p><strong>Note:</strong> 这个属性正在被更通用的 {{ cssxref("break-after")}} 取代。这个新的属性也处理列和区域中断，并在语法上兼容 <code>page-break-after</code>。</p>
+<p><strong>Note:</strong> 这个属性正在被更通用的 {{ cssxref("break-after")}} 取代。这个新的属性也处理列和区域中断，并在语法上兼容 <code>page-break-after</code>。</p>
 
-<p>在使用 <code>page-break-after</code> 之前，请检查是否可以使用 <code>break-after</code> 代替。 在将来， <code>page-break-after</code> 将只是它的一些值的别名。</p>
+<p>在使用 <code>page-break-after</code> 之前，请检查是否可以使用 <code>break-after</code> 代替。在将来， <code>page-break-after</code> 将只是它的一些值的别名。</p>
 </div>
 
 
@@ -63,7 +63,7 @@ page-break-after: unset;
 
 <dl>
  <dt><code>auto</code></dt>
- <dd>初始值。 自动分页符（既不强制也不禁止）。</dd>
+ <dd>初始值。自动分页符（既不强制也不禁止）。</dd>
  <dt><code>always</code></dt>
  <dd>始终在元素后强制分页。</dd>
  <dt><code>avoid</code></dt>
@@ -92,108 +92,15 @@ div.footnotes {
 
 <h2 id="Specification">Specification</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#logical-page', 'recto and verso')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Adds the values <code>recto</code> and <code>verso</code>.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Paged Media', '#page-break-after', 'page-break-after') }}</td>
-   <td>{{ Spec2('CSS3 Paged Media') }}</td>
-   <td>Extends the element that this property applies to table rows and table row groups.</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS2.1', 'page.html#propdef-page-break-after', 'page-break-after') }}</td>
-   <td>{{ Spec2('CSS2.1') }}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Browser compatibility</h2>
+<h2 id="Browser_Compatibility">Browser compatibility</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support (<code>auto</code>, <code>always</code>)</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>4.0</td>
-   <td>7.0</td>
-   <td>1.2 (125)</td>
-  </tr>
-  <tr>
-   <td><code>avoid</code>, <code>left</code>, <code>right</code></td>
-   <td>1.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatNo() }} ({{ bug("132035") }})</td>
-   <td>4.0</td>
-   <td>7.0</td>
-   <td>1.2 (125)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>avoid</code>, <code>left</code>, <code>right</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatNo() }} ({{ bug("132035") }})</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.properties.page-break-after")}}
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="/en/CSS/page-break-before" title="en/CSS/page-break-before"><code>page-break-before</code></a>, <a href="/en/CSS/page-break-inside" title="en/CSS/page-break-inside"><code>page-break-inside</code></a></li>
- <li><a href="/en/CSS/orphans" title="de/CSS/orphans"><code>orphans</code></a>, <a href="/en/CSS/widows" title="en/CSS/widows"><code>widows</code></a></li>
+ <li><a href="/en/CSS/page-break-before"><code>page-break-before</code></a>, <a href="/en/CSS/page-break-inside"><code>page-break-inside</code></a></li>
+ <li><a href="/en/CSS/orphans"><code>orphans</code></a>, <a href="/en/CSS/widows"><code>widows</code></a></li>
 </ul>

@@ -16,9 +16,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 
 Ajouter des écouteurs d'événement pour les différentes étapes d'une navigation. Une navigation se compose d'un cadre dans le navigateur passant d'une URL à l'autre, généralement (mais pas toujours) en réponse à une action de l'utilisateur comme cliquer sur un lien ou entrer une URL dans la barre d'adresse.
 
-Comparable à l'API {{WebExtAPIRef("webRequest")}}: Les navigations entrainent le navigateur à faire des requetes web, mais l'API webRequest travaille au niveau inférieur de la couche HTTP, contrairement à l'API webNavigation qui travaille directement au niveau de l'interface utilisateur du navigateur elle-même.
+Comparable à l'API {{WebExtAPIRef("webRequest")}}: Les navigations entrainent le navigateur à faire des requetes web, mais l'API webRequest travaille au niveau inférieur de la couche HTTP, contrairement à l'API webNavigation qui travaille directement au niveau de l'interface utilisateur du navigateur elle-même.
 
-Chaque evenement correspond directement à un état précis dans la navigation. La séquence des évenements est comme suit:
+Chaque evenement correspond directement à un état précis dans la navigation. La séquence des évenements est comme suit:
 
 ![](we-flow.png)
 
@@ -33,14 +33,14 @@ Chaque evenement correspond directement à un état précis dans la navigation.
 
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` est déclenché avant `onBeforeNavigate` si le navigateur a besoin de créer un nouvel onglet ou une nouvelle fenêtre pour la navigation (par exemple, parce que l'utilisateur a ouvert un lien dans un nouvel onglet).
   - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} est déclenché si une page utilise l'[API historique](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur.
-  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} est déclenché si [fl'identificateur de fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié.
+  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} est déclenché si [l'identificateur de fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} peut être déclenché à tout moment.
 
 Chaque navigation est une transition d'URL dans un cadre de navigateur particulier. Le cadre du navigateur est identifié par un ID d'onglet et un ID de trame. Le cadre peut être le contexte de navigation de niveau supérieur dans l'onglet ou peut être un contexte de navigation imbriqué implémenté en tant qu'[iframe](/fr/docs/Web/HTML/Element/iframe).
 
 L'appel `addListener()` de chaque événement accepte un paramètre de filtre facultatif. Le filtre spécifiera un ou plusieurs modèles d'URL, et l'événement ne sera alors déclenché que pour les navigations dans lesquelles l'URL cible correspond à l'un des modèles.
 
-L'écouteur d'événement `onCommitted`reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un  {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.
+L'écouteur d'événement `onCommitted`reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un  {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.
 
 Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "webNavigation".
 

@@ -92,7 +92,7 @@ p {
       <td>
         La balise de début est obligatoire. La balise de fin peut être absente
         si l'élément {{HTMLElement("p")}} est immédiatement suivi d'un
-        élément  {{HTMLElement("address")}},
+        élément  {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
         {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
         {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},

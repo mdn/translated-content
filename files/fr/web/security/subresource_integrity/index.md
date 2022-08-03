@@ -24,7 +24,9 @@ Une valeur de l'attribut **`integrity`** commence par au moins une chaîne, chaq
 
 Voici un exemple de valeur pour l'attribut **`integrity`** avec un hash sha384 encodé en base64 :
 
-    sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
+```
+sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
+```
 
 > **Note :** Le « _hash_ » est à proprement parler une **_fonction de hachage cryptographique_** formé en appliquant une fonction de hachage particulière à une certaine entrée (par exemple, un script ou un fichier de feuille de styles). Mais il est plus commun d'utiliser le mot **_hash_** pour indiquer _fonction de hachage cryptographique_, d'où son utilisation dans cet article.
 
@@ -33,7 +35,7 @@ Voici un exemple de valeur pour l'attribut **`integrity`** avec un hash sha384 e
 Vous pouvez générer des _hashes_ SRI en ligne de commande avec OpenSSL en utilisant une commande de ce genre :
 
 ```bash
-cat FILENAME.js | openssl dgst -sha384 -binary | openssl enc -base64 -A
+cat FILENAME.js | openssl dgst -sha384 -binary | openssl enc -base64 -A
 ```
 
 Il existe également, **SRI Hash Generator** : <https://srihash.org/> qui est un utilitaire en ligne permettant de générer des _hashes_ SRI.
@@ -58,15 +60,15 @@ Vous pouvez utiliser l'élément {{HTMLElement("script")}} suivant pour dire au 
 
 Les navigateurs gèrent SRI en effectuant les étapes suivantes :
 
-1.  Lorsqu'un navigateur rencontre un élément {{HTMLElement("script")}} ou {{HTMLElement("link")}} avec un attribut **`integrity`**, avant d'exécuter le script ou avant d'appliquer les styles spécifiés par l'élément {{HTMLElement("link")}}, la navigateur doit comparer le script ou la feuille de style à la valeur donnée dans l'attribut **`integrity`**.
-2.  Si le script ou la feuille de styles ne correspond pas à la valeur de l'attribut **`integrity`** qui lui est associée, alors le navigateur doit refuser d'exécuter le script ou d'appliquer la feuille de style et doit retourner une erreur indiquant que le chargement de la ressource a échoué.
+1. Lorsqu'un navigateur rencontre un élément {{HTMLElement("script")}} ou {{HTMLElement("link")}} avec un attribut **`integrity`**, avant d'exécuter le script ou avant d'appliquer les styles spécifiés par l'élément {{HTMLElement("link")}}, la navigateur doit comparer le script ou la feuille de style à la valeur donnée dans l'attribut **`integrity`**.
+2. Si le script ou la feuille de styles ne correspond pas à la valeur de l'attribut **`integrity`** qui lui est associée, alors le navigateur doit refuser d'exécuter le script ou d'appliquer la feuille de style et doit retourner une erreur indiquant que le chargement de la ressource a échoué.
 
 ## Spécifications
 
 | Spécification                                    | État                                         | Commentaires |
 | ------------------------------------------------ | -------------------------------------------- | ------------ |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
+| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
+| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
 
 ## Compatibilité des navigateurs
 

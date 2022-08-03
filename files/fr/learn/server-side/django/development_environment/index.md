@@ -130,12 +130,12 @@ python3 -V
 
 Vous pouvez facilement installer Python 3 (ainsi que l'outil _pip3_) sur [python.org](https://www.python.org/):
 
-1.  Téléchargez l'installeur requis :
+1. Téléchargez l'installeur requis :
 
-    1.  Allez sur <https://www.python.org/downloads/>
-    2.  Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
+    1. Allez sur <https://www.python.org/downloads/>
+    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
-2.  Localisez le fichier en utilisant le _Finder_, puis double-cliquez le fichier package. Suivez les consignes d'installation.
+2. Localisez le fichier en utilisant le _Finder_, puis double-cliquez le fichier package. Suivez les consignes d'installation.
 
 Vous pouvez désormais confirmer la bonne installation en vérifiant votre version de Python 3 comme indiqué ci-dessous :
 
@@ -152,15 +152,15 @@ pip3 list
 
 ### Windows 10
 
-Windows n'inclut pas Python par défaut, mais vous pouvez facilement l'installer (ainsi que l'outil _pip3_) sur[ python.org](https://www.python.org/):
+Windows n'inclut pas Python par défaut, mais vous pouvez facilement l'installer (ainsi que l'outil _pip3_) sur [python.org](https://www.python.org/)&nbsp;:
 
-1.  Téléchargez l'installeur requis :
+1. Téléchargez l'installeur requis :
 
-    1.  Allez sur <https://www.python.org/downloads/>
-    2.  Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
+    1. Allez sur <https://www.python.org/downloads/>
+    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
-2.  Installez Python en double-cliquant sur le fichier télécharger puis en suivant les consignes d'installation
-3.  Assurez-vous d'avoir coché la case intitulée "Ajouter Python au PATH".
+2. Installez Python en double-cliquant sur le fichier télécharger puis en suivant les consignes d'installation
+3. Assurez-vous d'avoir coché la case intitulée "Ajouter Python au PATH".
 
 Vous pouvez ensuite vérifier que Python s'est correctement installé en tapant le texte suivant dans votre invite de commande :
 
@@ -203,7 +203,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note :** Les variables `VIRTUALENVWRAPPER_PYTHON` et `VIRTUALENVWRAPPER_VIRTUALENV_ARGS `pointent vers l'emplacement d'installation par défaut de Python3, et `source /usr/local/bin/virtualenvwrapper.sh` pointe vers l'emplacement par défaut du script `virtualenvwrapper.sh`. Si le _virtualenv_ ne fonctionne pas quand vous le testez, vérifiez que Python et le script sont bien aux emplacements attendus (puis modifiez le fichier de configuration en conséquence).
+> **Note :** Les variables `VIRTUALENVWRAPPER_PYTHON` et `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` pointent vers l'emplacement d'installation par défaut de Python3, et `source /usr/local/bin/virtualenvwrapper.sh` pointe vers l'emplacement par défaut du script `virtualenvwrapper.sh`. Si le _virtualenv_ ne fonctionne pas quand vous le testez, vérifiez que Python et le script sont bien aux emplacements attendus (puis modifiez le fichier de configuration en conséquence).
 >
 > Vous pourrez trouver les bons emplacements de votre système en utilisant les commandes `which virtualenvwrapper.sh` et `which python3`.
 
@@ -264,11 +264,13 @@ Ce sont les mêmes lignes que pour Ubuntu, mais le nom du fichier de configurati
 >
 > La commande sera la suivante :
 >
->     >cd ~  # Naviguer vers le répertoire home
->     ls -la # Listez le contenu du répertoire. Vous devriez voir .bash_profile.
->     nano .bash_profile # Ouvrez le fichier avec l'éditeur de texte nano, depuis le terminal.
->     # Allez à la fin du fichier, puis copiez-collez les lignes ci-dessus.
->     # Utilisez Ctrl+X pour quitter nano, sélectionnez Y pour sauvegarder le fichier.
+> ```bash
+> >cd ~  # Naviguer vers le répertoire home
+> ls -la # Listez le contenu du répertoire. Vous devriez voir .bash_profile.
+> nano .bash_profile # Ouvrez le fichier avec l'éditeur de texte nano, depuis le terminal.
+> # Allez à la fin du fichier, puis copiez-collez les lignes ci-dessus.
+> # Utilisez Ctrl+X pour quitter nano, sélectionnez Y pour sauvegarder le fichier.
+> ```
 
 Puis relancez le fichier de configuration en appelant la ligne suivante depuis le terminal :
 
@@ -282,7 +284,9 @@ Vous devriez alors voir apparaître plusieurs lignes de script (les mêmes scrip
 
 Installer [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) est encore plus simple qu'installer _virtualenvwrapper_ , parce que vous n'avez pas besoin de configurer là où l'outil enregistre les informations de l'environnement virtuel (il y a des valeurs par défaut). Tout ce que vous avez besoin de faire est de lancer la commande suivante depuis l'invite de commande :
 
-    pip3 install virtualenvwrapper-win
+```bash
+pip3 install virtualenvwrapper-win
+```
 
 Vous pouvez désormais créer un nouvel environnement virtuel avec la commande `mkvirtualenv`
 
@@ -292,12 +296,14 @@ Maintenant que vous avez installé _virtualenvwrapper_ ou _virtualenvwrapper-win
 
 Vous pouvez désormais créer un nouvel environnement virtuel avec la commande `mkvirtualenv`. Lors de son exécution, vous pourrez voir l'environnement être configuré (ce que vous verrez changera légèrement en fonction de votre plateforme). Lorsque l'exécution de la commande sera terminée, votre environnement virtuel sera actif — vous pouvez voir au début de la ligne de commande le nom de votre environnement entre parenthèses (nous vous montrons le résultat pour Ubuntu ci-dessous, mais la dernière ligne est similaire sur Windows/macOS).
 
-    $ mkvirtualenv my_django_environment
+```bash
+$ mkvirtualenv my_django_environment
 
-    Running virtualenv with interpreter /usr/bin/python3
-    ...
-    virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-    (my_django_environment) ubuntu@ubuntu:~$
+Running virtualenv with interpreter /usr/bin/python3
+...
+virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
+(my_django_environment) ubuntu@ubuntu:~$
+```
 
 Maintenant que vous êtes dans votre environnement virtuel vous pouvez installer Django et commencer à développer.
 
@@ -338,7 +344,7 @@ py -3 -m django --version
 > py -m django --version
 > ```
 >
-> Dans Windows, les scripts _Python 3_ sont exécutés en préfixant la commande avec `py -3`, bien que ceci puisse varier suivant votre installation. Essayer en enlevant le modificateur `-3 `si vous rencontrez un problème avec la commande. Dans Linux/macOS, la commande est `python3.`
+> Dans Windows, les scripts _Python 3_ sont exécutés en préfixant la commande avec `py -3`, bien que ceci puisse varier suivant votre installation. Essayer en enlevant le modificateur `-3` si vous rencontrez un problème avec la commande. Dans Linux/macOS, la commande est `python3.`
 
 > **Attention :** Le reste de ce **module** utilise les commandes _Linux_ pour invoquer Python 3 (`python3`) . . Si vous travaillez sous _Windows_ , remplacez simplement ce préfixe avec : `py -3`
 

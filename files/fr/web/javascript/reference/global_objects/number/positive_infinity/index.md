@@ -23,7 +23,7 @@ La valeur de `Number.POSITIVE_INFINITY` est identique à la valeur de la propri�
 
 Cette valeur possède un comportement légèrement différent de l'infini au sens mathématique :
 
-- Tout valeur positive, y compris `POSITIVE_INFINITY,` multipliée par  `POSITIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
+- Tout valeur positive, y compris `POSITIVE_INFINITY,` multipliée par  `POSITIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
 - Toute valeur négative, y compris {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, multipliée par `POSITIVE_INFINITY` sera égale à `NEGATIVE_INFINITY`.
 - Zéro multiplié par `POSITIVE_INFINITY` sera égal à {{jsxref("NaN")}}.
 - NaN multiplié par `POSITIVE_INFINITY` sera égal à NaN.
@@ -55,9 +55,9 @@ if (grosNombre == Number.POSITIVE_INFINITY) {
 | Spécification                                                                                                    | Statut                       | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.6', 'Number.POSITIVE_INFINITY')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.7.3.6', 'Number.POSITIVE_INFINITY')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-number.positive_infinity', 'Number.POSITIVE_INFINITY')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

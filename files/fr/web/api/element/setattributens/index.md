@@ -27,14 +27,16 @@ value)
 
 ## Exemple
 
-    var d = document.getElementById("d1");
-    d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+```js
+var d = document.getElementById("d1");
+d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
+```
 
 ## Notes
 
 {{ DOMAttributeMethods() }}
 
-`setAttributeNS`  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
+`setAttributeNS`  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
 
 ## Spécification
 

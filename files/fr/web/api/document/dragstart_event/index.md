@@ -51,7 +51,7 @@ L'événement **dragstart** est déclenché lorsque l'utilisateur glisse un él�
 <div class="dropzone">
   <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
     This div is draggable
-  </div>
+  </div>
 </div>
 <div class="dropzone"></div>
 <div class="dropzone"></div>
@@ -61,77 +61,77 @@ L'événement **dragstart** est déclenché lorsque l'utilisateur glisse un él�
 ### CSS Content
 
 ```css
-  #draggable {
-    width: 200px;
-    height: 20px;
-    text-align: center;
-    background: white;
-  }
+  #draggable {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: white;
+  }
 
-  .dropzone {
-    width: 200px;
-    height: 20px;
-    background: blueviolet;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
+  .dropzone {
+    width: 200px;
+    height: 20px;
+    background: blueviolet;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
 ```
 
 ### JavaScript Content
 
 ```js
-  var dragged;
+  var dragged;
 
-  /* Les événements sont déclenchés sur les objets glissables */
-  document.addEventListener("drag", function( event ) {
+  /* Les événements sont déclenchés sur les objets glissables */
+  document.addEventListener("drag", function( event ) {
 
-  }, false);
+  }, false);
 
-  document.addEventListener("dragstart", function( event ) {
-      // Stocke une référence sur l'objet glissable
-      dragged = event.target;
-      // transparence 50%
-      event.target.style.opacity = .5;
-  }, false);
+  document.addEventListener("dragstart", function( event ) {
+      // Stocke une référence sur l'objet glissable
+      dragged = event.target;
+      // transparence 50%
+      event.target.style.opacity = .5;
+  }, false);
 
-  document.addEventListener("dragend", function( event ) {
-      // reset de la transparence
-      event.target.style.opacity = "";
-  }, false);
+  document.addEventListener("dragend", function( event ) {
+      // reset de la transparence
+      event.target.style.opacity = "";
+  }, false);
 
-  /* Les événements sont déclenchés sur les cibles du drop */
-  document.addEventListener("dragover", function( event ) {
-      // Empêche default d'autoriser le drop
-      event.preventDefault();
-  }, false);
+  /* Les événements sont déclenchés sur les cibles du drop */
+  document.addEventListener("dragover", function( event ) {
+      // Empêche default d'autoriser le drop
+      event.preventDefault();
+  }, false);
 
-  document.addEventListener("dragenter", function( event ) {
-      // Met en surbrillance la cible de drop potentielle lorsque l'élément glissable y entre
-      if ( event.target.className == "dropzone" ) {
-          event.target.style.background = "purple";
-      }
+  document.addEventListener("dragenter", function( event ) {
+      // Met en surbrillance la cible de drop potentielle lorsque l'élément glissable y entre
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "purple";
+      }
 
-  }, false);
+  }, false);
 
-  document.addEventListener("dragleave", function( event ) {
-      // reset de l'arrière-plan des potentielles cible du drop lorsque les éléments glissables les quittent
-      if ( event.target.className == "dropzone" ) {
-          event.target.style.background = "";
-      }
+  document.addEventListener("dragleave", function( event ) {
+      // reset de l'arrière-plan des potentielles cible du drop lorsque les éléments glissables les quittent
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "";
+      }
 
-  }, false);
+  }, false);
 
-  document.addEventListener("drop", function( event ) {
-      // Empêche l'action par défaut (ouvrir comme lien pour certains éléments)
-      event.preventDefault();
-      // Déplace l'élément traîné vers la cible du drop sélectionnée
-      if ( event.target.className == "dropzone" ) {
-          event.target.style.background = "";
-          dragged.parentNode.removeChild( dragged );
-          event.target.appendChild( dragged );
-      }
+  document.addEventListener("drop", function( event ) {
+      // Empêche l'action par défaut (ouvrir comme lien pour certains éléments)
+      event.preventDefault();
+      // Déplace l'élément traîné vers la cible du drop sélectionnée
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "";
+          dragged.parentNode.removeChild( dragged );
+          event.target.appendChild( dragged );
+      }
 
-  }, false);
+  }, false);
 ```
 
 {{ EmbedLiveSample('Exemple_dropzone') }}
@@ -140,7 +140,7 @@ L'événement **dragstart** est déclenché lorsque l'utilisateur glisse un él�
 
 | Spécification                                                                                | Statut                           | Commentaire         |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragstart")}} | {{Spec2("HTML WHATWG")}} |                     |
+| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "dragstart")}} | {{Spec2("HTML WHATWG")}} |                     |
 | {{SpecName("HTML5.1", "editing.html#dndevents", "dragstart")}}         | {{Spec2("HTML5.1")}}     | Définition initiale |
 
 ## Compatibilités navigateur

@@ -33,20 +33,22 @@ var gettingPanel = browser.sidebarAction.getPanel(
   - : `object`. Un objet avec les propriétés suivantes :
 
     - `tabId`{{optional_inline}}
-      - : `integer`.  Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.
+      - : `integer`.  Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.
     - `windowId` {{optional_inline}}
       - : `integer`. Obtenir le panneau pour la barre latérale spécifique à la fenêtre donnée.
 
 <!---->
 
-- Si `windowId` et `tabId`  sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
+- Si `windowId` et `tabId`  sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
 - Si `windowId` et `tabId` sont tous les deux omis, le panneau global est renvoyé.
 
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant l'URL du document du panel. Ce sera une URL entièrement qualifiée, telle que :
 
-    moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
+```
+moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
+```
 
 ## Compatibilité du navigateur
 

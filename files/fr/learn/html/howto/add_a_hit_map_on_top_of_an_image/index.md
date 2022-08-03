@@ -14,7 +14,7 @@ Dans cet article, nous verrons comment construire une carte imagée cliquable en
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devez au préalable savoir comment
         <a href="/fr/Apprendre/HTML/Écrire_une_simple_page_HTML"
@@ -27,7 +27,7 @@ Dans cet article, nous verrons comment construire une carte imagée cliquable en
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Apprendre comment faire pour que différentes zones d'une même image
         pointent vers différentes pages.

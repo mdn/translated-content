@@ -83,7 +83,7 @@ a[href*="example"] {
 }
 
 /* URL のどこかに "insensitive" が含まれるリンクで、
-			大文字小文字は区別しない */
+   大文字小文字は区別しない */
 a[href*="insensitive" i] {
   color: cyan;
 }

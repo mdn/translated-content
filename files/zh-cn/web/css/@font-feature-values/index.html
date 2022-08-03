@@ -7,10 +7,10 @@ translation_of: Web/CSS/@font-feature-values
 
 <h2 id="概要">概要</h2>
 
-<p><strong><code>@font-feature-values</code></strong> <a href="/en-US/docs/Web/CSS" title="CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule" title="At-rule">at-rule</a> 允许作者在{{cssxref("font-variant-alternates")}} 中使用通用名称，用于在OpenType中以不同方式激活功能。它允许在使用几种字体时简化CSS。</p>
+<p><strong><code>@font-feature-values</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/At-rule">at-rule</a> 允许作者在{{cssxref("font-variant-alternates")}} 中使用通用名称，用于在 OpenType 中以不同方式激活功能。它允许在使用几种字体时简化 CSS。</p>
 
 <pre class="brush: css notranslate">@font-feature-values Font One { /* How to activate nice-style in Font One */
-  @styleset {
+  @styleset {
     nice-style: 12;
   }
 }
@@ -26,7 +26,7 @@ translation_of: Web/CSS/@font-feature-values
 .nice-look { font-variant-alternates: styleset(nice-style); } /* Independent of the font */
 </pre>
 
-<p>The <code>@font-feature-values</code> at-rule may be used at the top level of a CSS, but also inside any <a href="/en-US/docs/Web/CSS/At-rule#Conditional_Group_Rules" title="CSS/At-rule#Conditional_Group_Rules">CSS conditional-group at-rule</a>.</p>
+<p>The <code>@font-feature-values</code> at-rule may be used at the top level of a CSS, but also inside any <a href="/en-US/docs/Web/CSS/At-rule#Conditional_Group_Rules">CSS conditional-group at-rule</a>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -44,7 +44,7 @@ translation_of: Web/CSS/@font-feature-values
  <dt><a name="@styleset"><code>@styleset</code></a></dt>
  <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylset feature value definition allows and illimited amount of values: <code>ident1: 2 4 12 1</code>maps to the OpenType values <code>ss02</code>, <code>ss04</code>, <code>ss12</code>, <code>ss01</code>. Note that values higher than <code>99</code> are valid, but doesn't map to any OpenType values and are ignored.</dd>
  <dt><a name="@character-variant"><code>@character-variant</code></a></dt>
- <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} functional notation of {{cssxref("font-variant-alternates")}}. A character-variant feature value definition allows one or two values: <code>ident1: 2</code>  maps to <code>cv02=1</code> and <code>ident2: 2 4</code> maps to <code>cv02)4</code> and <code>ident2: 2 4 5</code> isn't valid.</dd>
+ <dd>Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} functional notation of {{cssxref("font-variant-alternates")}}. A character-variant feature value definition allows one or two values: <code>ident1: 2</code>  maps to <code>cv02=1</code> and <code>ident2: 2 4</code> maps to <code>cv02)4</code> and <code>ident2: 2 4 5</code> isn't valid.</dd>
 </dl>
 
 <h3 id="Formal_syntax">Formal syntax</h3>
@@ -53,74 +53,11 @@ translation_of: Web/CSS/@font-feature-values
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-feature-values', '@font-feature-values')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("34")}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("34")}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Experimental implementation of the CSS Fonts Level 3 extensions was available since Gecko 24. It was governed by the preference <code>layout.css.font-features.enabled</code> defaulting to <code>true</code> on Nightly and Aurora only.</p>
+{{Compat("css.at-rules.font-feature-values")}}
 
 <h2 id="See_also">See also</h2>
 

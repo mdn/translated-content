@@ -35,7 +35,7 @@ background-color: rgb(255, 255, 128);
 background-color: rgba(117, 190, 218, 0.0); /* 0.0 - transparent */
 background-color: rgba(117, 190, 218, 0.5); /* 0.5 - semi-transparent */
 background-color: rgba(117, 190, 218, 1.0); /* 1.0 - opaque */
-​​​​​​​
+
 /* Valeur HSLA */
 background-color: hsla(50, 33%, 25%, 0.75);
 
@@ -116,8 +116,8 @@ Le ratio de contraste entre les couleurs est déterminé en comparant la luminos
 | Spécification                                                                                                | Commentaires                                                                                                                                                                    | Retours                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('CSS3 Backgrounds', '#background-color', 'background-color')}}             | Le mot-clé `transparent` a été retiré de la propriété pour être intégré au type de données {{cssxref("&lt;color&gt;")}} (dans la pratique, il n'y a aucune différence). | [_Issues_ GitHub pour la spécification Background de niveau 3 (en anglais)](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}} | Aucune modification.                                                                                                                                                            |                                                                                                                                           |
-| {{SpecName('CSS1', '#background-color', 'background-color')}}                             | Définition initiale.                                                                                                                                                            |                                                                                                                                           |
+| {{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}} | Aucune modification.                                                                                                                                                            |                                                                                                                                           |
+| {{SpecName('CSS1', '#background-color', 'background-color')}}                             | Définition initiale.                                                                                                                                                            |                                                                                                                                           |
 
 {{cssinfo}}
 

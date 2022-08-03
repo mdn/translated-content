@@ -16,18 +16,20 @@ Le tableau typé **`Int32Array`** permet de représenter un tableau d'entiers si
 
 ## Syntaxe
 
-    new Int32Array(); // apparu avec ES2017
-    new Int32Array(longueur);
-    new Int32Array(tableauTypé);
-    new Int32Array(objet);
-    new Int32Array(buffer [, positionOctet [, longueur]]);
+```js
+new Int32Array(); // apparu avec ES2017
+new Int32Array(longueur);
+new Int32Array(tableauTypé);
+new Int32Array(objet);
+new Int32Array(buffer [, positionOctet [, longueur]]);
+```
 
 Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe) _(TypedArray)_.
 
 ## Propriétés
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}
-  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int32Array`, la propriété vaudra 4.
+  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int32Array`, la propriété vaudra 4.
 - `Int32Array.length`
   - : Une propriété de longueur statique qui vaut 3. Pour connaître le nombre d'éléments, voir {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Int32Array.name")}}
@@ -49,7 +51,7 @@ Tous les objets `Int32Array` héritent de {{jsxref("TypedArray.prototype", "%Typ
 ### Propriétés
 
 - `Int32Array.prototype.constructor`
-  - : Renvoie la fonction qui a créé le prototype de l'instance. Par défaut, ce sera le constructeur natif` Int32Array`.
+  - : Renvoie la fonction qui a créé le prototype de l'instance. Par défaut, ce sera le constructeur natif `Int32Array`.
 - {{jsxref("TypedArray.prototype.buffer", "Int32Array.prototype.buffer")}} {{readonlyInline}}
   - : Renvoie l'{{jsxref("ArrayBuffer")}} référencée par l'objet `Int32Array`. Cette propriété est déterminée lors de la construction de l'objet et n'est accessible qu'en **lecture seule**.
 - {{jsxref("TypedArray.prototype.byteLength", "Int32Array.prototype.byteLength")}} {{readonlyInline}}

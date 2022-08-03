@@ -24,7 +24,7 @@ translation_of: Web/Manifest/theme_color
   </tbody>
 </table>
 
-Le champ `theme_color` est une chaîne de caractères qui défini la couleur du thème par défaut de l'application. Cela peut parfois affecter la manière dont l'OS affiche le site (e.g., avec la bare des tâches sous Android, la couleur du thème entoure le site).
+Le champ `theme_color` est une chaîne de caractères qui défini la couleur du thème par défaut de l'application. Cela peut parfois affecter la manière dont l'OS affiche le site (e.g., avec la bare des tâches sous Android, la couleur du thème entoure le site).
 
 ## Exemples
 

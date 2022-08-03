@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/q
 ---
 {{HTMLRef}}
 
-L'élément HTML** `<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
+L'élément HTML **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}
 
@@ -102,8 +102,8 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 | Spécification                                                                                                | État                             | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}             | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-q-element', '&lt;q&gt;')}} | {{Spec2('HTML5 W3C')}}     |                      |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}             | {{Spec2('HTML WHATWG')}} |                      |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-q-element', '&lt;q&gt;')}} | {{Spec2('HTML5 W3C')}}     |                      |
 | {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;')}}                     | {{Spec2('HTML4.01')}}     | Définition initiale. |
 
 ## Compatibilité des navigateurs

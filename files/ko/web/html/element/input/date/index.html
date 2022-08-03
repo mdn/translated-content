@@ -21,7 +21,7 @@ translation_of: Web/HTML/Element/input/date
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<p>입력 UI는 브라우저마다 다릅니다. {{anch("브라우저 호환성")}}에서 더 자세한 정보를 알아보세요. 날짜 입력 유형을 지원하지 않는 브라우저에서는 우아하게 <code><a href="/ko/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>로 저하됩니다.</p>
+<p>입력 UI는 브라우저마다 다릅니다. <a href="#브라우저_호환성">브라우저 호환성</a>에서 더 자세한 정보를 알아보세요. 날짜 입력 유형을 지원하지 않는 브라우저에서는 우아하게 <code><a href="/ko/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>로 저하됩니다.</p>
 
 <p>날짜 선택을 위한 별도의 인터페이스를 갖춘 브라우저 중, Chrome과 Opera는 다음과 같은 모양의 달력을 보여줍니다.</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/HTML/Element/input/date
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("값")}}</strong></td>
+   <td><strong><a href="#값">값</a></strong></td>
    <td>YYYY-MM-DD 형식으로 날짜를 나타내거나, 빈 {{domxref("DOMString")}}.</td>
   </tr>
   <tr>
@@ -96,15 +96,15 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a UNIX timestam
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#max">max</a></code></td>
    <td>허용하는 가장 늦은 날짜</td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#min">min</a></code></td>
    <td>허용하는 가장 이른 날짜</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#step">step</a></code></td>
    <td>위/아래 조절 버튼을 눌렀을 때와, 날짜 유효성을 검증할 때 사용하는 스텝 간격.</td>
   </tr>
  </tbody>
@@ -124,11 +124,17 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a UNIX timestam
 
 <h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code><a href="#min">min</a></code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code><a href="#min">min</a></code> and <code><a href="#max">max</a></code>).</p>
+
+<div class="note notecard">
+<p><strong>참고:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p><code>date</code> 입력 칸의 <code>step</code> 값은 날짜 단위, 즉 밀리초 단위로 86,400,000 ✕ <code>step</code>로 처리합니다. 기본값은 1로, 하루를 나타냅니다.</p>
 
-<div class="blockIndicator note">
+<div class="note notecard">
 <p><strong>참고:</strong> <code>date</code> 입력 칸에서 <code>step</code>의 값으로 <code>any</code>를 지정하면 <code>1</code>과 같습니다.</p>
 </div>
 
@@ -136,7 +142,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a UNIX timestam
 
 <p>날짜 입력 칸은 꽤 편리하게 보입니다. 날짜를 선택할 수 있는 쉬운 인터페이스를 제공하고, 서버로 값을 전송할 땐 현재 사용자의 로케일과 관계 없이 정규화하니까요. 그러나, 지금은 제한적인 브라우저 지원으로 인한 문제가 존재합니다.</p>
 
-<p>이 구획에서는 <code>&lt;input type="date"&gt;</code>의 기본 사용법과 복잡한 사용법을 살펴볼 것이고, 뒤에서는 브라우저 지원 문제를 처리할 때 사용할 수 있는 조언을 드리겠습니다. ({{anch("미지원 브라우저 처리하기")}}로 가세요.)</p>
+<p>이 구획에서는 <code>&lt;input type="date"&gt;</code>의 기본 사용법과 복잡한 사용법을 살펴볼 것이고, 뒤에서는 브라우저 지원 문제를 처리할 때 사용할 수 있는 조언을 드리겠습니다. (<a href="#미지원_브라우저_처리하기">미지원 브라우저 처리하기</a>로 가세요.)</p>
 
 <div class="blockIndicator note">
 <p>모든 브라우저에서 날짜 입력 칸을 지원하는 날이 오면 이 문제도 자연스럽게 사라질 것입니다.</p>
@@ -185,7 +191,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a UNIX timestam
 
 <p><code>&lt;input type="date"&gt;</code>는 기본값에선 값의 형식 외에 다른 유효성 검사는 수행하지 않습니다. 보통 날짜 입력 칸의 인터페이스가 날짜 이외의 값을 처음부터 허용하지 않는 것이 유용하긴 하나, 아무 값을 입력하지 않을 수도 있고, 미지원 브라우저에서 텍스트 입력 칸으로 대체된 경우 4월 32일처럼 유효하지 않은 날짜도 입력할 수 있습니다.</p>
 
-<p>{{htmlattrxref("min", "input")}}과 {{htmlattrxref("max", "input")}}를 사용해 가능한 날짜 범위를 제한({{anch("최대와 최소 날짜 설정")}})한 경우, 지원하는 브라우저에서는 범위 밖의 값을 받았을 때 오류를 표시합니다. 그러나 브라우저가 온전히 지원하지 않을 수도 있기 때문에, 제출받은 값을 이중으로 검증하는 것이 필요합니다.</p>
+<p>{{htmlattrxref("min", "input")}}과 {{htmlattrxref("max", "input")}}를 사용해 가능한 날짜 범위를 제한(<a href="#최대와_최소_날짜_설정">최대와 최소 날짜 설정</a>)한 경우, 지원하는 브라우저에서는 범위 밖의 값을 받았을 때 오류를 표시합니다. 그러나 브라우저가 온전히 지원하지 않을 수도 있기 때문에, 제출받은 값을 이중으로 검증하는 것이 필요합니다.</p>
 
 <p>{{htmlattrxref("required", "input")}} 특성을 사용해 값을 필수로 요구할 수도 있으며, 빈 입력 칸을 제출하려고 하면 오류를 표시합니다. required는 대부분의 브라우저에서, 텍스트 입력 칸으로 대체되더라도 지원하고 있습니다.</p>
 
@@ -236,7 +242,7 @@ input:valid+span::after {
 
 <h2 id="미지원_브라우저_처리하기">미지원 브라우저 처리하기</h2>
 
-<p>위에서 언급했듯, 현재 날짜 입력 칸의 큰 문제는 {{anch("브라우저 호환성", "브라우저 지원")}}입니다. 예를 하나 들자면, Firefox for Android의 날짜 입력기는 다음과 같은 모습입니다.</p>
+<p>위에서 언급했듯, 현재 날짜 입력 칸의 큰 문제는 <a href="#브라우저_호환성">브라우저 지원</a>입니다. 예를 하나 들자면, Firefox for Android의 날짜 입력기는 다음과 같은 모습입니다.</p>
 
 <p><img alt="A popup calendar picker modal floats above the web page and browser UI." src="https://mdn.mozillademos.org/files/14915/date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
 

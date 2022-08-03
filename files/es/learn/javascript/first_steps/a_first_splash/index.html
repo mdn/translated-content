@@ -38,10 +38,10 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 <p>No esperes entender todo el código inmediatamente — por ahora sólo queremos presentarte los conceptos de alto nivel, y darte una idea de como funciona JavaScript (y otros lenguajes de programación). ¡Más adelante vas a volver a ver estas características con mucho más detalle!</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Muchas de las características que vas a ver en JavaScript son las mismas que en otros lenguajes de programación — funciones, bucles, etc. La sintaxis del código es diferente, pero los conceptos siguen siendo básicamente los mismos. La sintaxis del código es diferente, pero los conceptos siguen siendo básicamente los mismos.</p>
+<p><strong>Nota</strong>: Muchas de las características que vas a ver en JavaScript son las mismas que en otros lenguajes de programación — funciones, bucles, etc. La sintaxis del código es diferente, pero los conceptos siguen siendo básicamente los mismos.</p>
 </div>
 
-<h2 id="Pensando_como_un_programador">Pensando como un  programador</h2>
+<h2 id="Pensando_como_un_programador">Pensando como un programador</h2>
 
 <p>Una de las cosas más difíciles de aprender en programación no es la sintaxis que necesita aprender, sino cómo aplicarla para resolver problemas del mundo real. Debes comenzar a pensar como un programador — esto generalmente implica mirar descripciones de lo que necesita hacer tu programa, determinar qué características de código necesitas para alcanzar esas cosas y cómo hacer que funcionen juntas.</p>
 
@@ -180,7 +180,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
  <li>Generar un número aleatorio entre 1 y 100.</li>
  <li>Registrar el número del intento en el que el jugador se encuentre. Empezando en 1.</li>
  <li>Darle al jugador una forma de adivinar cuál es el número.</li>
- <li>Una vez que se ha introducido en número, registrarlo en alguna parte para que el jugador pueda ver sus intentos previos.</li>
+ <li>Una vez que se ha introducido el número, registrarlo en alguna parte para que el jugador pueda ver sus intentos previos.</li>
  <li>A continuación, comprobar si el número es correcto.</li>
  <li>Si es correcto:
   <ol>
@@ -237,7 +237,7 @@ const guessField = document.querySelector('.guessField');
 let guessCount = 1;
 let resetButton;</pre>
 
-<p>Esta sección del código establece las variables y constantes que necesitamos para almacenar los datos que nuestro programa utilizará. Las variables básicamente son contenedores de valores (como números o cadenas de texto). Creas una variable con la palabra clave <code>let</code> (o <code>var</code>) seguida de un nombre para tu variable (leerás más sobre la diferencia entre las palabras clave en el <a href="/es/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">siguiente artículo</a>). Las constantes se utilizan para almacenar valores que no deseas modificar y se crean con la palabra clave <code>const</code>. En este caso, estamos usando constantes para almacenar referencias a partes de nuestra interfaz de usuario; el texto dentro de algunas de ellas puede cambiar, pero los elementos HTML a los que se hace referencia permanecer iguales.</p>
+<p>Esta sección del código establece las variables y constantes que necesitamos para almacenar los datos que nuestro programa utilizará. Las variables básicamente son contenedores de valores (como números o cadenas de texto). Creas una variable con la palabra clave <code>let</code> (o <code>var</code>) seguida de un nombre para tu variable (leerás más sobre la diferencia entre las palabras clave en el <a href="/es/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">siguiente artículo</a>). Las constantes se utilizan para almacenar valores que no deseas modificar y se crean con la palabra clave <code>const</code>. En este caso, estamos usando constantes para almacenar referencias a partes de nuestra interfaz de usuario; el texto dentro de algunas de ellas puede cambiar, pero los elementos HTML a los que se hace referencia permanecen iguales.</p>
 
 <p>Puedes asignar un valor a tu variable o constante con un signo igual (<code>=</code>) seguido del valor que deseas darle.</p>
 
@@ -343,7 +343,7 @@ greeting;</pre>
 
 <pre class="brush: js notranslate">name = name + ' dice hola!';</pre>
 
-<p>Cuando ejecutamos pruebas de verdadero/falso (por ejemplo, dentro de condicionales — consulta {{anch("Conditionals", "abajo")}}) usamos <a href="/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">operadores de comparación</a>. Por ejemplo:</p>
+<p>Cuando ejecutamos pruebas de verdadero/falso (por ejemplo, dentro de condicionales — consulta <a href="#conditionals">abajo</a>) usamos <a href="/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">operadores de comparación</a>. Por ejemplo:</p>
 
 <table class="standard-table">
  <thead>
@@ -416,7 +416,7 @@ greeting;</pre>
     lowOrHi.textContent = '';
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = '!!!Fin del juego!!!';
+    lastResult.textContent = '¡¡¡Fin del juego!!!';
     setGameOver();
   } else {
     lastResult.textContent = '¡Incorrecto!';

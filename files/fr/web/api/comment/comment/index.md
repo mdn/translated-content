@@ -13,8 +13,10 @@ Le constructeur **`Comment()`** renvoie un objet {{domxref("Comment")}} _(Commen
 
 ## Syntaxe
 
-    comment1 = new Comment(); // Create an empty comment
-    comment2 = new Comment("This is a comment");
+```js
+comment1 = new Comment(); // Create an empty comment
+comment2 = new Comment("This is a comment");
+```
 
 ## Exemple
 

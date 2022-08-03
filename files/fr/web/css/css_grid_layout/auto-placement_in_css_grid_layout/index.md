@@ -133,13 +133,13 @@ On peut utiliser la fonction {{cssxref("minmax","minmax()")}} pour la valeur de 
   <div>Deux</div>
   <div>Trois</div>
   <div>Quatre
-    <br>Cette cellule
-    <br>a du contenu
-    <br>supplémentaire
-    <br>et max vaut auto
-    <br>afin que la ligne
+    <br>Cette cellule
+    <br>a du contenu
+    <br>supplémentaire
+    <br>et max vaut auto
+    <br>afin que la ligne
     <br>se développe.
-  </div>
+  </div>
   <div>Five</div>
 </div>
 ```
@@ -256,7 +256,7 @@ Une grille peut contenir un mélange d'éléments. Certains éléments peuvent a
 
 ### Modification de l'ordre du document
 
-Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section  _“order modified document order”_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
+Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section _“order modified document order”_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
 
 ### Les éléments avec des propriétés de placement
 
@@ -508,7 +508,7 @@ Le placement automatique peut être utile lorsqu'on a un ensemble d'objets qui s
 
 {{EmbedLiveSample('Les_cas_dutilisation_pour_le_placement_automatique', '500', '1300')}}
 
-Le placement automatique peut également aider à disposer des éléments d'interface utilisateur qui ont un ordre logique. Dans l'exemple suivant, on voit comment manipuler les listes de définition. Les listes de définition sont intéressantes car il n'y a pas de niveau de regroupement pour regrouper un terme et ses définitions. Dans cet exemple, on autorise le placement automatique mais on a une classe pour qu'un élément `dt` démarre sur la première ligne et que l'élément  `dd` sur la  ligne 2. On s'assure ainsi que les termes sont bien en face de chaque définition, peu importe le nombre de définitions qu'on a pour un terme.
+Le placement automatique peut également aider à disposer des éléments d'interface utilisateur qui ont un ordre logique. Dans l'exemple suivant, on voit comment manipuler les listes de définition. Les listes de définition sont intéressantes car il n'y a pas de niveau de regroupement pour regrouper un terme et ses définitions. Dans cet exemple, on autorise le placement automatique mais on a une classe pour qu'un élément `dt` démarre sur la première ligne et que l'élément  `dd` sur la ligne 2. On s'assure ainsi que les termes sont bien en face de chaque définition, peu importe le nombre de définitions qu'on a pour un terme.
 
 ### Autre exemple
 

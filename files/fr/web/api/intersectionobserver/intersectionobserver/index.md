@@ -17,7 +17,9 @@ Le constructeur **`IntersectionObserver()`** crée et retourne un nouvel objet [
 
 ## Syntaxe
 
-    let observer = new IntersectionObserver(callback[, options]);
+```js
+let observer = new IntersectionObserver(callback[, options]);
+```
 
 ### Paramètres
 

@@ -21,7 +21,7 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
 ## Notes d'utilisation
 
 - Tous les liens d'un document ne doivent pas faire partie d'un élément `<nav>`. Ce dernier est fait pour créer des blocs conséquents contenants des liens de navigations au sein du document. L'élément {{HTMLElement("footer")}} possède souvent différents liens, il n'a pour autant pas besoin d'être dans un élément {{HTMLElement("nav")}}.
-- Un document peut avoir plusieurs éléments {{HTMLElement("nav")}}, par exemple un pour la navigation sur le site et  un autre pour la navigation au sein de la page. L'attribut [`aria-labelledby`](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby) pourra être utilisé afin d'améliorer l'accessibilité.
+- Un document peut avoir plusieurs éléments {{HTMLElement("nav")}}, par exemple un pour la navigation sur le site et un autre pour la navigation au sein de la page. L'attribut [`aria-labelledby`](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby) pourra être utilisé afin d'améliorer l'accessibilité.
 - Les agents utilisateurs, tels que les lecteurs d'écrans assistant les utilisateurs handicapés, peuvent utiliser cet élément pour déterminer s'il faut omettre ou non le rendu initial du contenu relatif uniquement à la navigation.
 
 ## Exemples

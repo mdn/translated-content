@@ -8,6 +8,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnalités offertes par la syntaxe des objets `RegExp` en agrégeant le contenu des articles contenus dans le guide sur les expressions rationnelles. Si vous avez besoin de plus d'informations sur un sujet donné, vous pouvez suivre le lien donné en début de chaque section pour accéder à l'article correspondant. Vous pouvez également aller consulter [le guide en question](/fr/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 ## Classes de caractères
+
 [Les classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) permettent de distinguer différents types de caractères comme, entre autres, les lettres ou les chiffres.
 
 <table class="standard-table">
@@ -121,7 +122,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
       </td>
       <td>
         <p>
-          Correspond à un caractère de contrôle représenté par sa <a href="https://fr.wikipedia.org/wiki/Notation_caret">notation caret</a>, où "X" est une lettre de  A à Z (correspondant respectivement aux points de code <code>U+0001</code><em> à </em><code>U+001F</code>). Ainsi, <code>/\cM/</code> correspondra à "\r" dans "\r\n".
+          Correspond à un caractère de contrôle représenté par sa <a href="https://fr.wikipedia.org/wiki/Notation_caret">notation caret</a>, où "X" est une lettre de A à Z (correspondant respectivement aux points de code <code>U+0001</code><em> à </em><code>U+001F</code>). Ainsi, <code>/\cM/</code> correspondra à "\r" dans "\r\n".
         </p>
       </td>
     </tr>

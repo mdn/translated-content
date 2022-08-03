@@ -7,7 +7,7 @@ translation_of: Web/API/CSS_Font_Loading_API
 
 L'API CSS Font Loading API fournit des évènements et interfaces pour le chargement dynamique des ressources associées aux polices.
 
-> **Note :** cette fonctionnalité est disponible dans [l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) (`self.fonts` donne accès à {{domxref('FontFaceSet')}}).
+> **Note :** cette fonctionnalité est disponible dans [l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) (`self.fonts` donne accès à {{domxref('FontFaceSet')}}).
 
 ## Interfaces
 

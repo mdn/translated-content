@@ -111,7 +111,6 @@ let arEG = new Intl.Locale("ar-EG");
 console.log(arEG.numberingSystems); // affiche ["arab"]
 ```
 
-
 ```js
 let ja = new Intl.Locale("ja");
 console.log(ja.numberingSystems); // affiche ["latn"]

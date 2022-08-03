@@ -23,7 +23,7 @@ La propriété **`arguments.callee`** contient la fonction en cours d'exécution
 
 ### Pourquoi `arguments.callee` a-t-il été retiré du mode strict ES5 ?
 
-(adapté d'une réponse[ Stack Overflow par olliej](http://stackoverflow.com/a/235760/578288 "http://stackoverflow.com/a/235760/578288"))
+(adapté d'une réponse [Stack Overflow par olliej](http://stackoverflow.com/a/235760/578288 "http://stackoverflow.com/a/235760/578288"))
 
 Aux débuts de JavaScript, il n'était pas possible d'utiliser des expressions de fonction avec des noms. Il était donc impossible de faire une expression de fonction récursive.
 
@@ -53,7 +53,7 @@ ne fonctionnait pas. Pour que cela puisse fonctionner, on ajouta `arguments.call
 });
 ```
 
-Cependant, ce fut une mauvaise solution (avec `caller` également) car elle rendit impossible l'[extension inline](https://fr.wikipedia.org/wiki/Extension_inline) et la [récursion terminale](https://fr.wikipedia.org/wiki/R%C3%A9cursion_terminale) de façon générale (il est possible d'y arriver de certaines façons mais cela entraînerait nécessairement un code moins efficace). Le second problème que cela entraîne est que l'appel récursif aura une autre valeur `this` :
+Cependant, ce fut une mauvaise solution (avec `caller` également) car elle rendit impossible l'[extension inline](https://fr.wikipedia.org/wiki/Extension_inline) et la [récursion terminale](https://fr.wikipedia.org/wiki/R%C3%A9cursion_terminale) de façon générale (il est possible d'y arriver de certaines façons mais cela entraînerait nécessairement un code moins efficace). Le second problème que cela entraîne est que l'appel récursif aura une autre valeur `this` :
 
 ```js
 var global = this;
@@ -133,9 +133,9 @@ jean();
 | Spécification                                                                                                    | État                         | Commentaires                                         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                      |
+| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                      |
+| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilité des navigateurs
 

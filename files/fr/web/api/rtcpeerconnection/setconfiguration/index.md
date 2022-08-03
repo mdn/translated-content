@@ -22,7 +22,9 @@ Le cas d'usage le plus probable (bien qu'il ne soit probablement pas répandu) e
 
 ## Syntaxe
 
-    RTCPeerConnection.setConfiguration(configuration);
+```js
+RTCPeerConnection.setConfiguration(configuration);
+```
 
 ### Paramètres
 
@@ -46,10 +48,10 @@ Dans cet exemple, on a déjà determiné qu'un redémarrage ICE est nécessaire 
 
 ```js
 var restartConfig = { iceServers: [{
-                          urls: "turn:asia.myturnserver.net",
-                          username: "allie@oopcode.com",
-                          credential: "topsecretpassword"
-                      }]
+                          urls: "turn:asia.myturnserver.net",
+                          username: "allie@oopcode.com",
+                          credential: "topsecretpassword"
+                      }]
 };
 
 myPeerConnection.setConfiguration(restartConfig);

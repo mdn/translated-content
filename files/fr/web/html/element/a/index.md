@@ -418,7 +418,7 @@ Les personnes qui utilisent des outils d'assistance à la navigation comme des l
 Si une icône est utilisée en lieu et place du texte pour indiquer ce comportement, on s'assurera qu'elle contient bien [une description alternative](/fr/docs/Web/HTML/Element/Img#attr-alt).
 
 ```html
-<a  target="_blank" href="https://www.wikipedia.org">
+<a target="_blank" href="https://www.wikipedia.org">
   Wikipédia
   <img alt="(s'ouvre dans un nouvel onglet)" src="newtab.svg">
 </a>

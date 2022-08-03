@@ -5,9 +5,9 @@ translation_of: Web/API/CanvasRenderingContext2D/miterLimit
 ---
 <div>{{APIRef}}</div>
 
-<p>The <code><strong>CanvasRenderingContext2D.miterLimit</strong></code> 是 Canvas 2D API 设置斜接面限制比例的属性。 当获取属性值时， 会返回当前的值（默认值是<code>10.0</code> ）。当给属性赋值时， 0、负数、 {{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略；除此之外都会被赋予一个新值。</p>
+<p>The <code><strong>CanvasRenderingContext2D.miterLimit</strong></code> 是 Canvas 2D API 设置斜接面限制比例的属性。当获取属性值时，会返回当前的值（默认值是<code>10.0</code> ）。当给属性赋值时，0、负数、 {{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略；除此之外都会被赋予一个新值。</p>
 
-<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
+<p>参见 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a> 章节。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -17,28 +17,28 @@ translation_of: Web/API/CanvasRenderingContext2D/miterLimit
 
 <dl>
  <dt><code>value</code></dt>
- <dd>斜接面限制比例的的数字。 0、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略。</dd>
+ <dd>斜接面限制比例的的数字。0、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略。</dd>
 </dl>
 
 <h2 id="简释">简释</h2>
 
 <pre>ctx.lineJoin = "miter"  // "miter" &gt;   "round" )   "bevel" ]  </pre>
 
-<p>只有当 lineJoin 显示为 "&gt;"  时，miterLimit 才有效。边角的角度越小，斜接长度就会越大。为了避免斜接长度过长，我们可以使用 miterLimit 属性。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 " ] " 类型来显示</p>
+<p>只有当 lineJoin 显示为 "&gt;"  时，miterLimit 才有效。边角的角度越小，斜接长度就会越大。为了避免斜接长度过长，我们可以使用 miterLimit 属性。如果斜接长度超过 miterLimit 的值，边角会以 lineJoin 的 " ] " 类型来显示</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Using_the_lineWidth_property" name="Using_the_lineWidth_property">使用 <code>miterLimit</code> 属性</h3>
+<h3 id="Using_the_lineWidth_property">使用 <code>miterLimit</code> 属性</h3>
 
-<p>查看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property">Applying styles and color</a> 章节，获取更多信息。</p>
+<p>查看 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a> 中的 <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property">Applying styles and color</a> 章节，获取更多信息。</p>
 
 <div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h6 id="Playable_code">Playable code</h6>
 
 <pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
+  &lt;input id="edit" type="button" value="Edit" /&gt;
+  &lt;input id="reset" type="button" value="Reset" /&gt;
 &lt;/div&gt;
 &lt;textarea id="code" class="playable-code"&gt;
 ctx.beginPath();
@@ -78,84 +78,11 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="规范描述">规范描述</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-miterlimit", "CanvasRenderingContext2D.miterLimit")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="WebKitBlink-specific_注解">WebKit/Blink-specific 注解</h3>
-
-<ul>
- <li>在基与 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不标准的并且不赞成使用的方法 <code>ctx.setMiterLimit()</code> 。</li>
-</ul>
-
-<h3 id="Gecko-specific_注解">Gecko-specific 注解</h3>
-
-<ul>
- <li>从 Gecko 2.0 {{geckoRelease("2.0")}}版本开始， 给 <code>miterLimit</code> 设置负数不再抛出异常，所有的非正数都会被忽略。</li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.miterLimit")}}
 
 <h2 id="参见">参见</h2>
 

@@ -5,11 +5,13 @@ translation_of: Web/API/SharedWorker/port
 ---
 {{APIRef("Web Workers API")}}
 
-La propriété **`port`** de l'interface {{domxref("SharedWorker")}} retourne un objet {{domxref("MessagePort")}} utilisé pour contrôler et communiquer avec le _worker_ partagé.
+La propriété **`port`** de l'interface {{domxref("SharedWorker")}} retourne un objet {{domxref("MessagePort")}} utilisé pour contrôler et communiquer avec le _worker_ partagé.
 
 ## Syntaxe
 
-    myWorker.port;
+```js
+myWorker.port;
+```
 
 ### Valeur
 

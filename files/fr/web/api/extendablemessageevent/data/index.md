@@ -15,7 +15,9 @@ La propriété **`data`** est une propriété en lecture seule rattachée à l'i
 
 ## Syntaxe
 
-    var mesDonnees = ExtendableMessageEventInstance.data;
+```js
+var mesDonnees = ExtendableMessageEventInstance.data;
+```
 
 ### Valeur
 
@@ -23,7 +25,7 @@ N'importe quel type de donnée.
 
 ## Exemples
 
-Quand le code suivant est utilisé dans un service worker pour répondre à un message _push_ en envoyant les données reçues par {{domxref("PushMessageData")}} au contexte principal via un [message](/fr/docs/Web/API/Channel_Messaging_API), l'objet de l'évènement `onmessage` sera un `ExtendableMessageEvent`.
+Quand le code suivant est utilisé dans un service worker pour répondre à un message _push_ en envoyant les données reçues par {{domxref("PushMessageData")}} au contexte principal via un [message](/fr/docs/Web/API/Channel_Messaging_API), l'objet de l'évènement `onmessage` sera un `ExtendableMessageEvent`.
 
 ```js
 var port;

@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Memory_Management
 
 <h2 id="介紹">介紹</h2>
 
-<p>像 C 語言一樣低階的語言，都有著如 malloc() 跟 free() 的低階函式記憶體控管權限。另一方面，當 JavaScript 建立事物(如物件、字串等)時會分配空間給值且自動釋放不再使用的值。後者的流程稱作為回收機制。這個自動化的回收流程是一個混亂的根源，它會使 JavaScript 的開發者 (或者其他高階語言的開發者) 產生可以不須理會「記憶體管理」的錯誤認知。</p>
+<p>像 C 語言一樣低階的語言，都有著如 malloc() 跟 free() 的低階函式記憶體控管權限。另一方面，當 JavaScript 建立事物(如物件、字串等)時會分配空間給值且自動釋放不再使用的值。後者的流程稱作為回收機制。這個自動化的回收流程是一個混亂的根源，它會使 JavaScript 的開發者 (或者其他高階語言的開發者) 產生可以不須理會「記憶體管理」的錯誤認知。</p>
 
 <h2 id="記憶體生命週期">記憶體生命週期</h2>
 
@@ -84,7 +84,7 @@ var a3 = a.concat(a2);
 
 <p>當我們談論到記憶體管理，問題通常出現在這個階段。最困難的工作是尋找「已不再被使用的記憶體配置空間」。</p>
 
-<p>Low-level languages require the developer to manually determine at which point in the program the allocated memory is no longer needed and to release it.</p>
+<p>低階語言需要開發者自己決定，當程序執行道某個地方時，是否有已被分配的記憶體不再需要。並手動將其釋放。</p>
 
 <p>高階的語言 (e.g. JavaScript) 有一個叫作垃圾回收器(garbage collector) 的系統，他的工作是追蹤記憶體分配的使用情況，以便自動釋放一些不再使用的記憶體空間。但這個垃圾回收器只是「儘量」做到自動釋放記憶體空間，因為判斷記憶體空間是否要繼續使用，這件事是「不可判定(<a href="https://en.wikipedia.org/wiki/Decidability_%28logic%29">undecidable</a>)」的（不能用演算法來解決）。</p>
 
@@ -187,18 +187,18 @@ window.onload = function() {
 
 <h4 id="V8_Engine_Flags">V8 Engine Flags</h4>
 
-<p>The max amount of available heap memory can be increased with a flag:</p>
+<p>The max amount of available heap memory can be increased with a flag:</p>
 
-<p><code>node --<em>max-old-space-size=6000</em> index.js</code></p>
+<p><code>node --<em>max-old-space-size=6000</em> index.js</code></p>
 
-<p>We can also expose the garbage collector for debugging memory issues using a flag and the <a href="https://nodejs.org/en/docs/guides/debugging-getting-started/">Chrome Debugger</a>:</p>
+<p>We can also expose the garbage collector for debugging memory issues using a flag and the <a href="https://nodejs.org/en/docs/guides/debugging-getting-started/">Chrome Debugger</a>:</p>
 
 <pre>node --expose-gc --inspect index.js</pre>
 
 <h2 id="可以參考">可以參考</h2>
 
 <ul>
- <li><a class="external" href="http://www.ibm.com/developerworks/web/library/wa-memleak/">IBM article on "Memory leak patterns in JavaScript" (2007)</a></li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/magazine/ff728624.aspx">Kangax article on how to register event handler and avoid memory leaks (2010)</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance" title="https://developer.mozilla.org/en-US/docs/Mozilla/Performance">Performance</a></li>
+ <li><a href="http://www.ibm.com/developerworks/web/library/wa-memleak/">IBM article on "Memory leak patterns in JavaScript" (2007)</a></li>
+ <li><a href="http://msdn.microsoft.com/en-us/magazine/ff728624.aspx">Kangax article on how to register event handler and avoid memory leaks (2010)</a></li>
+ <li><a href="/en-US/docs/Mozilla/Performance">Performance</a></li>
 </ul>

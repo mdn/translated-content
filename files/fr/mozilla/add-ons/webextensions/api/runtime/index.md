@@ -55,7 +55,7 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : Ouvre une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) de votre extension.
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Obtient le fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) complet,  sérialisé en tant qu'objet.
+  - : Obtient le fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) complet,  sérialisé en tant qu'objet.
 - {{WebExtAPIRef("runtime.getURL()")}}
   - : Etant donné un chemin relatif de [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoie une URL entièrement qualifiée.
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
@@ -69,7 +69,7 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.connectNative()")}}
   - : Connecte l'extension à une application native sur l'ordinateur de l'utilisateur.
 - {{WebExtAPIRef("runtime.sendMessage()")}}
-  - : Envoie un seul message aux écouteurs d'événement dans votre extension ou une extension différente. Similaire à  {{WebExtAPIRef('runtime.connect')}} mais n'envoie qu'un seul message, avec une réponse facultative.
+  - : Envoie un seul message aux écouteurs d'événement dans votre extension ou une extension différente. Similaire à  {{WebExtAPIRef('runtime.connect')}} mais n'envoie qu'un seul message, avec une réponse facultative.
 - {{WebExtAPIRef("runtime.sendNativeMessage()")}}
   - : Envoie un seul message d'une extension à une application native.
 - {{WebExtAPIRef("runtime.getPlatformInfo()")}}

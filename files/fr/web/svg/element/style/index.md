@@ -42,7 +42,7 @@ Résultat en direct:
 
 ### Attributs Globaux
 
-- [Core attributes](/fr/SVG/Attribute#Core) »
+- [Core attributes](/fr/SVG/Attribute#Core)&nbsp;»
 
 ### Attributs Specifiques
 
@@ -58,7 +58,7 @@ Cet élément implemente l'interface [`SVGStyleElement`](/fr/DOM/SVGStyleElement
 
 | Specification                                                                                | Status                   | Commentaire        |
 | -------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'styling.html#StyleElement', '&lt;style&gt;')}}     | {{Spec2('SVG2')}} |                    |
+| {{SpecName('SVG2', 'styling.html#StyleElement', '&lt;style&gt;')}}     | {{Spec2('SVG2')}} |                    |
 | {{SpecName('SVG1.1', 'styling.html#StyleElement', '&lt;style&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
 ## Compatibilité des navigateurs

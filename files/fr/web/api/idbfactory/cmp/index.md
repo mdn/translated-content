@@ -19,7 +19,9 @@ La méthode **`cmp()`** de l'interface {{domxref("IDBFactory")}} compare deux va
 
 ## Syntaxe
 
-    var resultat = window.indexedDB.cmp(a, b);
+```js
+var resultat = window.indexedDB.cmp(a, b);
+```
 
 ### Paramètres
 
@@ -59,7 +61,7 @@ console.log( "Résultat de la comparaison : " + result );
 
 | Spécification                                                                                                    | État                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-cmp-short-any-first-any-second', 'cmp')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBFactory-cmp-short-any-first-any-second', 'cmp')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

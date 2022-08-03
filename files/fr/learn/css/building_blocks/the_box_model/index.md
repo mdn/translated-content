@@ -11,7 +11,7 @@ En CSS, tout élément est inclus dans une boîte ("_box_" en anglais). Comprend
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Compétences informatique basiques,
         <a
@@ -28,7 +28,7 @@ En CSS, tout élément est inclus dans une boîte ("_box_" en anglais). Comprend
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Apprendre les principes du Modèle de Boîte en CSS, ce qui constitue le
         Modèle de Boîte et comment passer au modèle alternatif.
@@ -120,20 +120,20 @@ Le modèle de boîte que nous allons voir s'applique totalement aux boîtes en b
 
 Lorsque l'on crée une boîte en bloc, on se retrouve avec les composants suivant :
 
-- **La boîte de contenu** : Il s'agit de la zone où sont affichés les éléments contenus par notre boîte, qui peut être dimensionnée en utilisant les propriétés CSS [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height).
-- **La boîte de <i lang="en">padding</i>** **(marge intérieure)** : Le
+- **La boîte de contenu**&nbsp;: Il s'agit de la zone où sont affichés les éléments contenus par notre boîte, qui peut être dimensionnée en utilisant les propriétés CSS [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height).
+- **La boîte de <i lang="en">padding</i>** **(marge intérieure)**&nbsp;: Le
 
   <i lang="en">padding</i>
 
   (ou remplissage en français) est une zone vierge qui se présente comme un espacement encadrant le contenu; sa taille peut être contrôlée sur chaque côté en utilisant la propriété [`padding`](/fr/docs/Web/CSS/padding) et ses autres propriétés connexes.
 
-- **La boîte de bordure** : La bordure englobe le contenu et le
+- **La boîte de bordure**&nbsp;: La bordure englobe le contenu et le
 
   <i lang="en">padding</i>
 
   pour former une bordure. Sa taille et son style sont paramétrés par la propriété [`border`](/fr/docs/Web/CSS/border) et ses propriétés sous-jacentes.
 
-- **La boîte de marge** : La marge est la couche la plus à l'extérieur, englobant le contenu, le
+- **La boîte de marge**&nbsp;: La marge est la couche la plus à l'extérieur, englobant le contenu, le
 
   <i lang="en">padding</i>
 
@@ -310,7 +310,7 @@ Dans l'exemple ci-après, nous avons un élément `<span>` inclus dans un paragr
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 600)}}
 
-## le positionnement display: inline-block
+## Le positionnement display: inline-block
 
 Il existe une valeur spéciale pour la propriété `display`, qui constitue un compromis entre la disposition en ligne et la disposition en bloc, une sorte d'entre-deux qui combine ces deux dispositions. Cet état peut-être utile dans les situations où l'on désire utiliser les propriétés `width` et `height`, et éviter les superpositions (voir l'exemple précédent), tout en conservant la disposition dans une même ligne (i.e. sans créer de nouvelle ligne, comme le ferait une disposition en bloc).
 
@@ -343,21 +343,21 @@ Dans la leçon suivante, ce sont les arrières-plans et les bordures qui captero
 
 ## Dans ce module
 
-1.  [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  Le modèle de boîte
-4.  [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. Le modèle de boîte
+4. [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

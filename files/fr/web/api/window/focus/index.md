@@ -11,14 +11,18 @@ Demande la mise au premier plan de la fenêtre. Cet appel peut échouer en fonct
 
 ## Syntaxe
 
-    window.focus()
+```js
+window.focus()
+```
 
 ## Exemple
 
-    if (clicked) { window.focus(); }
+```js
+if (clicked) { window.focus(); }
+```
 
 ## Spécification
 
 | Specification                                                                                                | Status                           | Comment |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','interaction.html#dom-window-focus','Window.focus()')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG','interaction.html#dom-window-focus','Window.focus()')}} | {{Spec2('HTML WHATWG')}} |         |

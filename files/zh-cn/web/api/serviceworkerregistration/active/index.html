@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorkerRegistration/active
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p>The <strong><code>active</code></strong> property of the {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose {{domxref("ServiceWorker.state")}} is <code style="font-style: normal;">activating</code> or <code style="font-style: normal;">activated</code>. This property is initially set to <code style="font-style: normal;">null</code>.</p>
+<p>The <strong><code>active</code></strong> property of the {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose {{domxref("ServiceWorker.state")}} is <code style="font-style: normal;">activating</code> or <code style="font-style: normal;">activated</code>. This property is initially set to <code style="font-style: normal;">null</code>.</p>
 
 <p>An active worker controls a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the <code>scope</code> option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)</p>
 
@@ -13,7 +13,7 @@ translation_of: Web/API/ServiceWorkerRegistration/active
 <p><strong>Note</strong>: This feature is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Syntax</h2>
+<h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox" style="font-size: 14px;">sw = ServiceWorker.active
 </pre>
@@ -22,99 +22,13 @@ translation_of: Web/API/ServiceWorkerRegistration/active
 
 <p>A {{domxref("ServiceWorker")}} object, if it is currently in an <code>activating</code> or <code>activated</code> state.</p>
 
-<h2 id="Specifications" style="line-height: 30px; font-size: 2.14285714285714rem;">Specifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
-<div> </div>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Specification</span></font></th>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Status</span></font></th>
-   <th scope="col"><font face="Open Sans, sans-serif"><span style="font-weight: normal;">Comment</span></font></th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-registration-active-attribute', 'ServiceWorkerRegistration.active')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Initial definition.<br>
-     </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{ CompatGeckoDesktop("44.0") }}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Available in web workers</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("44.0")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44.0") }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Available in web workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Service workers (and <a href="/en-US/docs/Web/API/Push_API">Push</a>) have been disabled in the <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 and 52 Extended Support Releases</a> (ESR.)</p>
+{{Compat("api.ServiceWorkerRegistration.active")}}
 
 <h2 id="See_also">See also</h2>
 

@@ -14,7 +14,9 @@ La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud coura
 
 ## Syntaxe
 
-    value = node.nodeValue;
+```js
+value = node.nodeValue;
+```
 
 `value` (_valeur_) est une chaîne contenant la valeur du nœud courant, s'il y en a une.
 
@@ -22,7 +24,7 @@ La propriété **`Node.nodeValue`** renvoie ou définit la valeur du nœud coura
 
 Pour le document lui-même, `nodeValue` renvoie `null`. Pour des nœuds texte, de commentaires et CDATA, `nodeValue` renvoie le contenu du nœud. Pour les nœuds d'attributs, il s'agira de la valeur de l'attribut.
 
-Le tableau suivant montre les valeurs de retour pour différents types de nœuds :
+Le tableau suivant montre les valeurs de retour pour différents types de nœuds&nbsp;:
 
 <table>
   <tbody>

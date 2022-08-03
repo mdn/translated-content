@@ -5,7 +5,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
 {{AddonSidebar()}}Si votre extension a défini une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages), cette méthode l'ouvre.
 
-C'est une fonction asynchrone  qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ var openingPage = browser.runtime.openOptionsPage()
 
 None.
 
-### valeur retournée
+### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la page d'options a été créée avec succés, ou rejetée avec un message d'erreur si l'opération a échoué.
 

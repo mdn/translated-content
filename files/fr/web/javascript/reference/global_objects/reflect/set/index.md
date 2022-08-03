@@ -18,7 +18,9 @@ La méthode statique **`Reflect.set()`** permet de définir ou de modifier une p
 
 ## Syntaxe
 
-    Reflect.set(cible, cléPropriété, valeur[, récepteur])
+```js
+Reflect.set(cible, cléPropriété, valeur[, récepteur])
+```
 
 ### Paramètres
 
@@ -75,7 +77,7 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.set', 'Reflect.set')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

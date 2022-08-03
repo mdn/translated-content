@@ -239,7 +239,7 @@ L'ordre des valeurs est également important pour chaque définition d'animation
 ### Valeurs
 
 - `<single-animation-iteration-count>`
-  - : Le nombre de fois où l'animation est jouée, cf.  {{cssxref("animation-iteration-count")}}.
+  - : Le nombre de fois où l'animation est jouée, cf.  {{cssxref("animation-iteration-count")}}.
 - `<single-animation-direction>`
   - : La direction dans laquelle s'effectue l'animation, cf. {{cssxref("animation-direction")}}.
 - `<single-animation-fill-mode>`

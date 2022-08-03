@@ -21,7 +21,7 @@ Cela prend deux paramètres obligatoires : le nom de l'application native et un 
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). The first message sent by the native application is treated as a response to the `sendNativeMessage()` call, and the promise will be fulfilled with this message as a parameter. Note that you can't use {{WebExtAPIRef("runtime.onMessage")}} to get responses from the application: you must use the callback function instead.
 
-Une nouvelle instance de l'application est lancée pour appel à  `runtime.sendNativeMessage()`. Le navigateur terminera l'application native après avoir reçu une réponse. Pour mettre fin à une application native, le navigateur ferme le canal, donne au processus quelques secondes pour quitter normalement, puis le tue s'il ne s'est pas arrêté.
+Une nouvelle instance de l'application est lancée pour appel à  `runtime.sendNativeMessage()`. Le navigateur terminera l'application native après avoir reçu une réponse. Pour mettre fin à une application native, le navigateur ferme le canal, donne au processus quelques secondes pour quitter normalement, puis le tue s'il ne s'est pas arrêté.
 
 Pour plus d'informations, voir [Native messaging](/fr/Add-ons/WebExtensions/Native_messaging).
 
@@ -59,7 +59,7 @@ function onResponse(response) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
 /*

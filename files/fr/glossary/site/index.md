@@ -14,17 +14,17 @@ Le concept de _site_ est utilisé dans les [cookies SameSite](/fr/docs/Web/HTTP/
 
 ## Exemples
 
-Pour les deux URL qui suivent, on a le même site car le domaine enregistrable est le même _mozilla.org_ (les noms d'hôte et chemins de fichier différents n'ont pas d'importance) :
+Pour les deux URL qui suivent, on a le même site car le domaine enregistrable est le même _mozilla.org_ (les noms d'hôte et chemins de fichier différents n'ont pas d'importance)&nbsp;:
 
 - `https://developer.mozilla.org/fr/docs/`
 - `https://support.mozilla.org/fr/`
 
-Là encore, ce sont les mêmes sites, car le schéma et le port ne sont pas pertinents :
+Là encore, ce sont les mêmes sites, car le schéma et le port ne sont pas pertinents&nbsp;:
 
 - `http://example.com:8080`
 - `https://example.com`
 
-Ici, ce ne sont pas les mêmes sites car les domaines enregistrables des deux URL sont différents :
+Ici, ce ne sont pas les mêmes sites car les domaines enregistrables des deux URL sont différents&nbsp;:
 
 - `https://developer.mozilla.org/fr/docs/`
 - `https://example.com`

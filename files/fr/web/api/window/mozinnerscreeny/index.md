@@ -10,7 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/mozInnerScreenY
 ---
-{{APIRef}}{{gecko_minversion_header("1.9.2")}}
+{{APIRef}}
 
 ## Résumé
 
@@ -20,7 +20,9 @@ Obtient la coordonnée Y du coin supérieur gauche de la fenêtre de la fenêtre
 
 ## Syntaxe
 
-    screenY = window.mozInnerScreenY;
+```js
+screenY = window.mozInnerScreenY;
+```
 
 ### Valeur
 

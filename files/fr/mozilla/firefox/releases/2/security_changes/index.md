@@ -20,10 +20,10 @@ Si le support de SSLv2 doit être activé, vous devrez définir avec la valeur `
 
 ### Nouvelles fonctionnalités
 
-- Firefox 2 supporte la [cryptographie sur courbes elliptiques](http://fr.wikipedia.org/wiki/Cryptographie_sur_les_courbes_elliptiques) (ECC) dans TLS. Le support est pour l'instant limité aux courbes de 256, 384 et 521 (oui, 521 !) bits.
+- Firefox 2 supporte la [cryptographie sur courbes elliptiques](http://fr.wikipedia.org/wiki/Cryptographie_sur_les_courbes_elliptiques) (ECC) dans TLS. Le support est pour l'instant limité aux courbes de 256, 384 et 521 (oui, 521&nbsp;!) bits.
 - Firefox 2 supporte l'extension d'identification de nom de serveur TLS pour faciliter les connexions sécurisées sur des serveurs hébergeant plusieurs serveurs virtuels sous la même adresse réseau, suivant la [RFC 3546](http://tools.ietf.org/html/rfc3546).
 - Lorsque Firefox 2 effectue une requête [OSCP](http://fr.wikipedia.org/wiki/OCSP) pour valider un certificat d'un serveur Web, il utilise désormais le proxy configuré pour le trafic HTTP normal.
 
 ### Détermination du chiffrement disponible
 
-Comme toujours, vous pouvez vérifier le chiffrement supporté — celui qui a été activé ou désactivé — en cherchant « ssl » ou « tls » dans about:config.
+Comme toujours, vous pouvez vérifier le chiffrement supporté — celui qui a été activé ou désactivé — en cherchant «&nbsp;ssl&nbsp;» ou «&nbsp;tls&nbsp;» dans about:config.

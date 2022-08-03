@@ -13,11 +13,11 @@ translation_of: Web/API/VRPose
 
 <p>The <strong><code>VRPose</code></strong> interface of the <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)</p>
 
-<p><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>  中的 <strong><code>VRPose</code></strong> 接口表示在一个给定的时间戳中，一个VR传感器的状态（包括了方向、位置、速度和加速度信息）。</p>
+<p><a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a>  中的 <strong><code>VRPose</code></strong> 接口表示在一个给定的时间戳中，一个 VR 传感器的状态（包括了方向、位置、速度和加速度信息）。</p>
 
-<p>This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getImmediatePose()")}} methods.</p>
+<p>This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getImmediatePose()")}} methods.</p>
 
-<p>这个接口能通过 {{domxref("VRDisplay.getPose()")}} 和 {{domxref("VRDisplay.getImmediatePose()")}} 方法访问</p>
+<p>这个接口能通过 {{domxref("VRDisplay.getPose()")}} 和 {{domxref("VRDisplay.getImmediatePose()")}} 方法访问</p>
 
 <h2 id="Properties">Properties</h2>
 
@@ -27,22 +27,22 @@ translation_of: Web/API/VRPose
  <dd>返回当前系统的时间戳。此单调递增的值可以有助于确定位置数据是否有更新，以及更新的顺序。</dd>
  <dt>{{domxref("VRPose.position")}} {{readonlyInline}}</dt>
  <dd>Returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector</dd>
- <dd>以三维向量的形式返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的位置信息。</dd>
+ <dd>以三维向量的形式返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的位置信息。</dd>
  <dt>{{domxref("VRPose.linearVelocity")}} {{readonlyInline}}</dt>
  <dd>Returns the linear velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.</dd>
- <dd>返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的线速度，单位为米/秒。</dd>
+ <dd>返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的线速度，单位为米/秒。</dd>
  <dt>{{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}</dt>
  <dd>Returns the linear acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.</dd>
- <dd>返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的线加速度，单位为米/平方秒。</dd>
+ <dd>返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的线加速度，单位为米/平方秒。</dd>
  <dt>{{domxref("VRPose.orientation")}} {{readonlyInline}}</dt>
  <dd>Returns the orientation of the sensor at the current {{domxref("VRPose.timestamp")}}, as a quarternion value.</dd>
- <dd>以四元数的形式返回当前时间戳 {{domxref("VRPose.timestamp")}}  时传感器的方向，</dd>
+ <dd>以四元数的形式返回当前时间戳 {{domxref("VRPose.timestamp")}}  时传感器的方向，</dd>
  <dt>{{domxref("VRPose.angularVelocity")}} {{readonlyInline}}</dt>
  <dd>Returns the angular velocity of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in radians per second.</dd>
- <dd>返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的角速度，单位为弧度/秒。</dd>
+ <dd>返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的角速度，单位为弧度/秒。</dd>
  <dt>{{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}</dt>
  <dd>Returns the angular acceleration of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.</dd>
- <dd>返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的角加速度，单位为弧度/平方秒。</dd>
+ <dd>返回当前时间戳 {{domxref("VRPose.timestamp")}}  时 {{domxref("VRDisplay")}}  的角加速度，单位为弧度/平方秒。</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
@@ -51,72 +51,13 @@ translation_of: Web/API/VRPose
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('WebVR', '#interface-vrpose', 'VRPose')}}</td>
-   <td>{{Spec2('WebVR')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<p>该 API 在旧的 <a href="https://immersive-web.github.io/webvr/spec/1.1/">WebVR API</a>（已被 <a href="https://immersive-web.github.io/webxr/">WebXR Device API</a> 取代）中定义。它不再有望成为标准。</p>
+
+<p>在所有浏览器都实现新的 <a href="/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals">WebXR API</a> 之前，建议使用框架（如：<a href="https://aframe.io/">A-Frame</a>、<a href="https://www.babylonjs.com/">Babylon.js</a> 或 <a href="https://threejs.org/">Three.js</a>）或 <a href="https://github.com/immersive-web/webxr-polyfill">polyfill</a> 来开发适用于所有浏览器的 WebXR 应用程序。<a href="https://developer.oculus.com/documentation/web/port-vr-xr/">[1]</a></p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

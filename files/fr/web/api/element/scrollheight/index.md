@@ -11,7 +11,9 @@ L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la haut
 
 ## Syntaxe
 
-    var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
+```js
+var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
+```
 
 `intElemScrollHeight` est une variable contenant un entier correspondant à la valeur en pixels de la hauteur défilable de l'élément. `scrollHeight` est une propriété en lecture seule.
 
@@ -127,23 +129,23 @@ Associée à l'événement [element.onscroll](/fr/docs/DOM/element.onscroll), l'
 <title>MDN Example</title>
 <script type="text/javascript">
 function checkReading () {
-  if (checkReading.read) { return; }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ?
-    "Merci." :
-    "Veuillez faire défiler la page et lire le texte qui suit.";
+  if (checkReading.read) { return; }
+  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
+  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
+  checkReading.noticeBox.innerHTML = checkReading.read ?
+    "Merci." :
+    "Veuillez faire défiler la page et lire le texte qui suit.";
 }
 
 onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
+  var oToBeRead = document.getElementById("rules");
+  checkReading.noticeBox = document.createElement("span");
+  document.registration.accept.checked = false;
+  checkReading.noticeBox.id = "notice";
+  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
+  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
+  oToBeRead.onscroll = checkReading;
+  checkReading.call(oToBeRead);
 }
 ```
 

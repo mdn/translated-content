@@ -76,7 +76,7 @@ Si la ressource n'a pas changé, le serveur renvoie une réponse [`304`](/fr/doc
 
 ![Avec un cache périmé, la requête conditionnelle est envoyée. Le serveur peut déterminer si une ressource a changé et, dans ce cas, décider de ne pas la renvoyer si c'est la même.](httpcache2.png)
 
-Si la ressource a changé, le serveur renvoie simplement une réponse [`200`](/fr/docs/Web/HTTP/Status/200)` OK` avec la nouvelle version de la ressource comme si la requête n'était pas conditionnelle et le client utilise cette nouvelle ressource et la met en cache.
+Si la ressource a changé, le serveur renvoie simplement une réponse [`200 OK`](/fr/docs/Web/HTTP/Status/200) avec la nouvelle version de la ressource comme si la requête n'était pas conditionnelle et le client utilise cette nouvelle ressource et la met en cache.
 
 ![Dans le cas où la ressource a changé, elle est renvoyée, comme si la requête n'était pas conditionnelle.](httpcache3.png)
 

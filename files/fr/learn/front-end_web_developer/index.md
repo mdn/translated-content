@@ -67,7 +67,7 @@ Rien d'autre que des connaissances informatiques de base, et un environnement de
 
 #### Comment saurai-je que je suis prêt à passer à autre chose ?
 
-Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant.
+Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant.
 
 #### Guides fondamentaux
 
@@ -85,7 +85,7 @@ Il est recommandé d'avoir des connaissances de base en HTML avant de commencer 
 
 #### Comment saurai-je que je suis prêt à passer à autre chose ?
 
-Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant.
+Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant.
 
 #### Guides fondamentaux
 
@@ -108,7 +108,7 @@ ll est recommandé d'avoir des connaissances de base en HTML avant de commencer 
 
 #### Comment saurai-je que je suis prêt à passer à autre chose ?
 
-Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant.
+Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant.
 
 #### Guides fondamentaux
 
@@ -128,7 +128,7 @@ Les formulaires nécessitent des connaissances en HTML, CSS et JavaScript. Étan
 
 #### Comment saurai-je que je suis prêt à passer à autre chose ?
 
-Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant.
+Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant.
 
 #### Guides fondamentaux
 
@@ -144,7 +144,7 @@ Il est conseillé de connaître les langages HTML, CSS et JavaScript avant de pa
 
 #### Comment saurai-je que je suis prêt à passer à autre chose ?
 
-Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant..
+Les évaluations de chaque module sont conçues pour tester vos connaissances sur le sujet.  En complétant les évaluations, vous confirmez que vous êtes prêt à passer au module suivant..
 
 #### Guides fondamentaux
 

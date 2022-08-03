@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
 
 Lancé lorsqu'un onglet est déplacé dans une fenêtre
 
-Un seul événement de déplacement est déclenché, représentant l'onglet que l'utilisateur a déplacé directement. Les événements de déplacement ne sont pas déclenchés pour les autres onglets qui doivent se déplacer en réponse. Cet événement n'est pas déclenché lorsqu'un onglet est déplacé entre des fenêtres. Pour cela, voir  {{WebExtAPIRef('tabs.onDetached')}}.
+Un seul événement de déplacement est déclenché, représentant l'onglet que l'utilisateur a déplacé directement. Les événements de déplacement ne sont pas déclenchés pour les autres onglets qui doivent se déplacer en réponse. Cet événement n'est pas déclenché lorsqu'un onglet est déplacé entre des fenêtres. Pour cela, voir  {{WebExtAPIRef('tabs.onDetached')}}.
 
 ## Syntaxe
 

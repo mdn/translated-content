@@ -13,7 +13,7 @@ translation_of: Web/API/BlobBuilder
 ---
 <p>{{APIRef("File API")}}{{ obsolete_header}}</p>
 
-<p>La interfaz BlobBuilder provee una manera fácil de construir objetos {{domxref("Blob")}} . Solo crea un BlobBuilder y anexa trozos de datos invocando  el método {{manch("append")}} . Cuando termines de construir tu objeto, llama al método {{manch("getBlob")}} para obtener un objeto  {{domxref("Blob")}}  que contiene los datos que le enviaste al blob builder.</p>
+<p>La interfaz BlobBuilder provee una manera fácil de construir objetos {{domxref("Blob")}} . Solo crea un BlobBuilder y anexa trozos de datos invocando  el método <a href="#append">append</a> . Cuando termines de construir tu objeto, llama al método <a href="#getblob">getBlob</a> para obtener un objeto  {{domxref("Blob")}}  que contiene los datos que le enviaste al blob builder.</p>
 
 <div class="note"><strong>Nota:</strong> La interfaz <code>BlobBuilder</code> ha sido descontinuada en favor de introducir el constructor mas reciente {{domxref('Blob')}}.</div>
 
@@ -71,7 +71,7 @@ void append(
 
 <h3 id="getBlob()">getBlob()</h3>
 
-<p>Regresa el objeto  {{domxref("Blob")}} que ha sido construido usando los datos pasados atraves del método {{manch("append")}}.</p>
+<p>Regresa el objeto  {{domxref("Blob")}} que ha sido construido usando los datos pasados atraves del método <a href="#append">append</a>.</p>
 
 <pre class="syntaxbox">Blob getBlob(
   in DOMString contentType {{optional_inline}}
@@ -87,7 +87,7 @@ void append(
 
 <h3 id="Valor_de_Retorno">Valor de Retorno</h3>
 
-<p>Un objeto  {{domxref("Blob")}} conteniendo todos los datos pasados por cualquier llamada hecha  al método {{manch("append")}} desde que el  <code>BlobBuilder</code> fue creado. Esto tambien reinicializa el  <code>BlobBuilder</code> sí que la siguiente llamada al metodo {{manch("append")}} es empezar de nuevo , un blob vacio.</p>
+<p>Un objeto  {{domxref("Blob")}} conteniendo todos los datos pasados por cualquier llamada hecha  al método <a href="#append">append</a> desde que el  <code>BlobBuilder</code> fue creado. Esto tambien reinicializa el  <code>BlobBuilder</code> sí que la siguiente llamada al metodo <a href="#append">append</a> es empezar de nuevo , un blob vacio.</p>
 
 <h3 id="getFile()_non-standard_inline">getFile() {{non-standard_inline}}</h3>
 
@@ -114,75 +114,7 @@ void append(
 
 <h2 id="Compatibilidad_con_Nevegadores">Compatibilidad con Nevegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support (soporte básico)</td>
-   <td>8[1]</td>
-   <td>{{CompatNo}}[2]</td>
-   <td>10[3]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}[1]</td>
-  </tr>
-  <tr>
-   <td><code>getfile()</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support (soporte básico)</td>
-   <td>3[1]</td>
-   <td>{{CompatNo}}[2]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}[1]</td>
-  </tr>
-  <tr>
-   <td><code>getfile()</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] WebKit implementa el API como <code>WebKitBlobBuilder</code>, aunque es obsoleta ahora y ha hecho su soporte configurable. Actualmente Safari deshabilita esta caracteristica  en Nightly, asi que probablemente no venga en la version final. Por otra parte, Chrome, que lo ha soportado desde Chrome 8, mantiene disponible esta caracteristica. Asi que Chrome podrá continuar soportando esta caracteristica. (Visita <a href="http://trac.webkit.org/changeset/115666">WebKit changeset</a> para mas detalles).</p>
-
-<p>[2] Gecko implementa el API como <code>MozBlobBuilder</code>. Empezando con Firefox 14, usando <code>MozBlobBuilder mostrará un mensaje de advertencia en la consola de que usar </code><code>MozBlobBuilder</code> es obsoleto y se sugiere usar el constructor  {{domxref("Blob")}} en su lugar. En Gecko 18.0 esta caracteristica fue removida..</p>
-
-<p>[3] Trident implementa el API como <code>MSBlobBuilder</code>.</p>
+{{Compat("api.BlobBuilder")}}
 
 <h2 id="Vea_también">Vea también</h2>
 

@@ -21,7 +21,9 @@ La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les 
 
 ## Syntaxe
 
-    arr.keys()
+```js
+arr.keys()
+```
 
 ### Valeur de retour
 
@@ -59,7 +61,7 @@ console.log(eArr.next().value); // 4
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

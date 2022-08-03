@@ -16,7 +16,9 @@ La méthode **`[@@toPrimitive]()`** permet de convertir un objet `Date` en une v
 
 ## Syntaxe
 
-    Date()[Symbol.toPrimitive](hint);
+```js
+Date()[Symbol.toPrimitive](hint);
+```
 
 ### Valeur de retour
 
@@ -26,7 +28,7 @@ La valeur primitive de l'objet {{jsxref("Date")}}. Selon la valeur de l'argument
 
 La méthode `[@@toPrimitive]()` de {{jsxref("Date")}} renvoie une valeur primitive qui est un nombre ou une chaîne de caractère.
 
-Si le paramètre `hint` vaut `"string"` ou `"default"`, `[@@toPrimitive]()` tentera d'appeler la méthode {{jsxref("Object.prototype.toString()", "toString")}}, si la propriété `toString()` n'existe pas, elle tentera alors d'appeler la méthode {{jsxref("Object.prototype.valueOf()", "valueOf")}}, si cette dernière n'existe pas non plus, `[@@toPrimitive]()` lèvera une exception {{jsxref("TypeError")}}.
+Si le paramètre `hint` vaut `"string"` ou `"default"`, `[@@toPrimitive]()` tentera d'appeler la méthode {{jsxref("Object.prototype.toString()", "toString")}}, si la propriété `toString()` n'existe pas, elle tentera alors d'appeler la méthode {{jsxref("Object.prototype.valueOf()", "valueOf")}}, si cette dernière n'existe pas non plus, `[@@toPrimitive]()` lèvera une exception {{jsxref("TypeError")}}.
 
 Si le paramètre `hint` vaut `"number"`, `[@@toPrimitive]()` tentera d'abord un appel à `valueOf()` puis ensuite un appel à `toString()`.
 
@@ -37,7 +39,7 @@ Le moteur JavaScript appelle la méthode `[@@toPrimitive]()` afin de convertir u
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-date.prototype-@@toprimitive', 'Date.prototype.@@toPrimitive')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -6,8 +6,8 @@ tags:
   - Intl
   - JavaScript
   - メソッド
-  - Prototype
-  - Reference
+  - プロトタイプ
+  - リファレンス
 browser-compat: javascript.builtins.Intl.Locale.minimize
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 ---
@@ -16,7 +16,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 **`Intl.Locale.prototype.minimize()`** メソッドは、 {{jsxref("Intl/Locale/maximize", "Locale.maximize()")}} を呼び出したことで追加されるロケールに関する情報を削除しようとします。
 
 {{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html", "taller")}}
-
 
 ## 構文
 

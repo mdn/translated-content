@@ -1,0 +1,100 @@
+---
+title: Online and offline events
+slug: Web/API/Navigator/onLine
+tags:
+  - AJAX
+  - DOM
+  - Web Development
+translation_of: Web/API/Navigator/Online_and_offline_events
+original_slug: Web/API/Navigator/Online_and_offline_events
+---
+<p>In progress <a href="ko/Firefox_3_for_developers">Firefox 3</a>는 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/">WHATWG 웹 애플리케이션 1.0 명세</a>에 기술된 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">온라인/오프라인 이벤트</a>를 구현합니다.</p>
+
+<h3 id=".EA.B0.9C.EC.9A.94" name=".EA.B0.9C.EC.9A.94">개요</h3>
+
+<p>좋은 오프라인 가능(offline-capable) 웹 애플리케이션을 작성하려면 여러분의 애플리케이션이 실제로 오프라인이 되는 때를 알아야 합니다. 덧붙여, 여러분의 애플리케이션이 '온라인' 상태로 돌아오는 때도 알아야 합니다. 사실, 이 요구사항은 다음과 같이 정리할 수 있습니다.</p>
+
+<ol>
+ <li>여러분이 서버와 재동기화할 수 있도록 사용자가 온라인으로 돌아오는 때를 알아야 합니다.</li>
+ <li>여러분의 서버 요청을 나중에 처리하기 위해 대기시킬 수 있도록 사용자가 오프라인이 되는 때를 알아야 합니다.</li>
+</ol>
+
+<p>온라인/오프라인 이벤트는 이 과정을 단순하게 만드는 것을 도와줍니다.</p>
+
+<p>여러분의 웹 애플리케이션은 특정 문서가 오프라인 자원 캐시에 보관되는 것을 확실하게 할 필요도 있습니다. 이를 위해서는 다음과 같이 <code>HEAD</code> 섹션에 <code>LINK</code> 요소를 포함합니다.</p>
+
+<pre class="eval"><span class="nowiki">&lt;link rel="offline-resource" href="myresource"&gt;</span>
+</pre>
+
+<p>이는 Firefox 3 및 이후 버전에서 HTML을 처리할 때, 참조하는 자원을 오프라인에서 사용할 수 있도록 특별한 오프라인 자원 캐시에 저장하도록 합니다.</p>
+
+<h3 id="API" name="API">API</h3>
+
+<h4 id="navigator.onLine" name="navigator.onLine"><code>navigator.onLine</code></h4>
+
+<p><code><a href="ko/DOM/window.navigator.onLine">navigator.onLine</a></code>는 <code>true</code>/<code>false</code>(온라인은 <code>true</code>, 오프라인은 <code>false</code>)를 보관하는 속성입니다. 이 속성은 사용자가 해당 메뉴 항목(파일 -&gt; 오프라인 작업)을 선택하여 "오프라인 모드"로 전환할 때마다 갱신됩니다.</p>
+
+<p>또한 이 속성은 브라우저가 네트워크에 더 이상 연결할 수 없을 때마다 갱신됩니다. 명세에 따르면:</p>
+
+<blockquote cite="http://www.whatwg.org/specs/web-apps/current-work/#offline">사용자가 링크를 따라가거나 스크립트가 원격 페이지를 요청할 때 사용자 에이전트가 네트워크에 접속할 수 없으면 (혹은 그러한 시도가 실패할 것이라는 것을 안다면) <code>navigator.onLine</code> 속성은 false를 반환해야 합니다...</blockquote>
+
+<p>Firefox 2는 윈도우와 리눅스에서 브라우저의 온라인/오프라인 모드가 바뀔 때와 네트워크가 끊어지거나 다시 접속될 때 이 속성을 갱신합니다.</p>
+
+<p>이 속성은 Firefox와 Internet Explorer의 이전 버전에도 있으므로 (명세는 이러한 기존 구현을 바탕으로 합니다) 이를 즉시 사용할 수 있습니다. 네트워크 상태의 자동 감지는 Firefox 2에서 구현되었습니다.</p>
+
+<h4 id=".22online.22.EA.B3.BC_.22offline.22_.EC.9D.B4.EB.B2.A4.ED.8A.B8" name=".22online.22.EA.B3.BC_.22offline.22_.EC.9D.B4.EB.B2.A4.ED.8A.B8">"<code>online</code>"과 "<code>offline</code>" 이벤트</h4>
+
+<p><a href="ko/Firefox_3">Firefox 3</a>는 두 가지 새로운 이벤트를 도입하고 있습니다: 바로 "<code>online</code>"과 "<code>offline</code>"입니다. 이 두 가지 이벤트는 브라우저가 온라인과 오프라인 모드를 전환할 때 각 페이지의 <code>&lt;body&gt;</code>에서 발생합니다. 덧붙여, 이 이벤트는 <code>document.body</code>에서 <code>document</code>로 전달되고 <code>window</code>에서 끝납니다. 두 가지 이벤트 모두 취소 불가능한(non-cancellable) 이벤트입니다(여러분은 사용자가 온라인이 되거나 오프라인이 되는 것을 막을 수 없습니다).</p>
+
+<p>널리 알려진 몇 가지 방법으로 해당 이벤트에 대한 리스너(listener)를 등록할 수 있습니다.</p>
+
+<ul>
+ <li><code>window</code>, <code>document</code>, <code>document.body</code>에서 <code><a href="ko/DOM/element.addEventListener">addEventListener</a></code>를 이용</li>
+ <li>자바스크립트의 <code>Function</code> 개체에서 <code>document</code>나 <code>document.body</code>에 <code>.ononline</code> 혹은 <code>.onoffline</code> 속성을 설정 (<strong>참고:</strong> 호환성 때문에<code>window.ononline</code>이나 <code>window.onoffline</code>은 올바로 동작하지 않습니다.)</li>
+ <li>HTML 마크업의 <code>&lt;body&gt;</code> 태그에 <code>ononline="..."</code> 혹은 <code>onoffline="..."</code> 속성을 지정</li>
+</ul>
+
+<h3 id=".EC.98.88.EC.A0.9C" name=".EC.98.88.EC.A0.9C">예제</h3>
+
+<p>이벤트가 동작하는지 확인할 수 있는 <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">간단한 테스트 케이스</a>가 있습니다. <span class="comment">XXX When mochitests for this are created, point to those instead and update this example -nickolay</span></p>
+
+<pre class="eval"> &lt;!doctype html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+   &lt;script&gt;
+     function updateOnlineStatus(msg) {
+       var status = document.getElementById("status");
+       var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
+       status.setAttribute("class", condition);
+       var state = document.getElementById("state");
+       state.innerHTML = condition;
+       var log = document.getElementById("log");
+       log.appendChild(document.createTextNode("Event: " + msg + "; status=" + condition + "\n"));
+     }
+     function loaded() {
+       updateOnlineStatus("load");
+       document.body.addEventListener("offline", function () {
+         updateOnlineStatus("offline")
+       }, false);
+       document.body.addEventListener("online", function () {
+         updateOnlineStatus("online")
+       }, false);
+     }
+   &lt;/script&gt;
+   &lt;style&gt;...&lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body onload="loaded()"&gt;
+   &lt;div id="status"&gt;&lt;p id="state"&gt;&lt;/p&gt;&lt;/div&gt;
+   &lt;div id="log"&gt;&lt;/div&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+</pre>
+
+<h3 id=".EC.B0.B8.EA.B3.A0" name=".EC.B0.B8.EA.B3.A0">참고</h3>
+
+<ul>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336359">The bug tracking online/offline events implementation in Firefox</a> and a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336682">follow-up</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">A simple test case</a></li>
+ <li><a class="external" href="http://ejohn.org/blog/offline-events/">An explanation of Online/Offline events</a></li>
+</ul>

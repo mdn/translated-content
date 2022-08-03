@@ -10,7 +10,7 @@ translation_of: Web/CSS/resize
 
 <h2 id="概述">概述</h2>
 
-<p> <strong><code>resize</code></strong> CSS 属性允许你控制一个元素的可调整大小性。</p>
+<p> <strong><code>resize</code></strong> CSS 属性允许你控制一个元素的可调整大小性。</p>
 
 <p>{{cssinfo}}</p>
 
@@ -47,7 +47,7 @@ resize: unset;
  <dd>Depending on the {{cssxref("writing-mode")}} and {{cssxref("direction")}} value, the element displays a mechanism for allowing the user to resize the element either horizontally or vertically in inline direction.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> 如果一个block元素的 {{cssxref("overflow")}} 属性被设置成了<code>visible</code>，那么<code>resize</code>属性对该元素无效。</div>
+<div class="note"><strong>Note:</strong> 如果一个 block 元素的 {{cssxref("overflow")}} 属性被设置成了<code>visible</code>，那么<code>resize</code>属性对该元素无效。</div>
 
 <h3 id="标准语法">标准语法</h3>
 
@@ -59,10 +59,10 @@ resize: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<p>{{HTMLElement("textarea")}} 元素在{{gecko("2.0")}} (Firefox 4)中默认是可以进行缩放的. 你可以通过下面的CSS代码来重写这种行为：</p>
+<p>{{HTMLElement("textarea")}} 元素在{{gecko("2.0")}} (Firefox 4) 中默认是可以进行缩放的。你可以通过下面的 CSS 代码来重写这种行为：</p>
 
 <pre class="brush: css">textarea.example {
-  resize: none; /* disables resizability */
+  resize: none; /* disables resizability */
 }
 </pre>
 
@@ -76,7 +76,7 @@ resize: unset;
 
 <h3 id="Using_resize_with_arbitrary_elements">Using resize with arbitrary elements</h3>
 
-<p>You can use the resize property to make any element resizable. In the example below, a resizable {{HTMLElement("div")}} box contains a resizable paragraph ({{HTMLElement("p")}} element):</p>
+<p>You can use the resize property to make any element resizable. In the example below, a resizable {{HTMLElement("div")}} box contains a resizable paragraph ({{HTMLElement("p")}} element):</p>
 
 <h4 id="CSS_2">CSS</h4>
 
@@ -103,7 +103,7 @@ p {
   &lt;p class="resizable"&gt;
     This paragraph is resizable, because the CSS resize property is set to 'both' on this
     element.
-  &lt;/p&gt;
+  &lt;/p&gt;
 &lt;/div&gt;
 </pre>
 
@@ -113,95 +113,11 @@ p {
 
 <h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#resize', 'resize')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Adds the values <code>block</code> and <code>inline</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#resize', 'resize')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support (on {{HTMLElement("textarea")}})</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("2.0")}}{{property_prefix("-moz")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12.1</td>
-   <td>3.0 (522)</td>
-  </tr>
-  <tr>
-   <td>On any block-level and replaced element, table cell, and inline block element (unless {{cssxref("overflow")}} is <code>visible</code>)</td>
-   <td>4.0</td>
-   <td>{{CompatGeckoDesktop("5.0")}}[1]</td>
-   <td>{{CompatNo}}</td>
-   <td>15</td>
-   <td>4.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support (on {{HTMLElement("textarea")}})</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>On any block-level and replaced element, table cell, and inline block element (unless {{cssxref("overflow")}} is <code>visible</code>)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] <code>resize</code> doesn't have any effect on {{HTMLElement("iframe")}} (cf. {{bug(680823)}})</p>
+{{Compat("css.properties.resize")}}
 
 <h2 id="See_also">See also</h2>
 

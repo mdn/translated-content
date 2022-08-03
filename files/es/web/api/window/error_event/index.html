@@ -1,0 +1,66 @@
+---
+title: GlobalEventHandlers.onerror
+slug: Web/API/Window/error_event
+translation_of: Web/API/GlobalEventHandlers/onerror
+original_slug: Web/API/GlobalEventHandlers/onerror
+---
+<div>{{ ApiRef("HTML DOM") }}</div>
+
+<p>Un manejador de eventos para errores en scripts en tiempo de ejecución.</p>
+
+<p>Note that some/many <code>error</code> events do not trigger <code>window.onerror</code>, you have to listen for them specifically.</p>
+
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+
+<pre>window.onerror = funcRef;
+</pre>
+
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
+
+<ul>
+ <li><code>funcRef</code> es una referencia a una función. Cuando la función devuelva <code>true</code>, se prevendrá el disparado del manejador de eventos por defecto. Parámetros de la función:
+
+  <ul>
+   <li>Mensaje de error (string)</li>
+   <li>Url en la que el error fue lanzado (string)</li>
+   <li>Número de línea en la que el error fue lanzado (number)</li>
+   <li>Dentro de la línea en la que el error ocurrió, número de columna correspondiente (number) {{gecko_minversion_inline("31.0")}}</li>
+   <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error Object</a> (object) {{gecko_minversion_inline("31.0")}}</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Example" name="Example">Ejemplos</h2>
+
+<pre class="brush: js">// Example 1:
+
+// Prevent error dialogs from displaying -which is the window's normal
+// behavior- by overriding the default event handler for error events that
+// go to the window.
+window.onerror = null;
+
+// Example 2:
+
+var gOldOnError = window.onerror;
+// Override previous handler.
+window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
+  if (gOldOnError)
+    // Call previous handler.
+    return gOldOnError(errorMsg, url, lineNumber);
+
+  // Just let default handler run.
+  return false;
+}
+</pre>
+
+<h2 id="Notes" name="Notes">Notas</h2>
+
+<p>El evento de error es lanzado cuando ocurre un error en el script.</p>
+
+<p>Cuando se use el marcado html en línea (<span class="nowiki">&lt;body onerror="alert('an error occurred')&gt;...</span>), los argumentos son anónimos. Pueden ser referenciados usando desde <code>arguments{{ mediawiki.external(0) }}</code> hasta <code>arguments{{ mediawiki.external(2) }}</code>.</p>
+
+<p>No hay llamante <code><a class="external" href="/en/Components.stack" title="https://developer.mozilla.org/En/Components.stack">Components.stack</a>.caller</code> que recuperar. (Vea <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=355430"><strong>bug 355430</strong></a>.)</p>
+
+<h2 id="Specification" name="Specification">Especificación</h2>
+
+<p><a class="external" href="http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/handlers.html#1120097">JavaScript 1.1</a></p>

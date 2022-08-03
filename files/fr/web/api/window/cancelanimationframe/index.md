@@ -11,11 +11,13 @@ tags:
   - Window
 translation_of: Web/API/Window/cancelAnimationFrame
 ---
-{{APIRef}}La méthode **`window.cancelAnimationFrame()`** met fin à une animation précédement configurée par un appel à {{domxref("window.requestAnimationFrame()")}}.
+{{APIRef}}La méthode **`window.cancelAnimationFrame()`** met fin à une animation précédement configurée par un appel à {{domxref("window.requestAnimationFrame()")}}.
 
 ## Syntaxe
 
-    window.cancelAnimationFrame(requestID);
+```js
+window.cancelAnimationFrame(requestID);
+```
 
 ### Paramètres
 

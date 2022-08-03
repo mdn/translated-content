@@ -11,7 +11,9 @@ Il prend en argument un identifiant pour l'algorithme de condensé et les donné
 
 ## Syntaxe
 
-    const digest = crypto.subtle.digest(algorithm, data);
+```js
+const digest = crypto.subtle.digest(algorithm, data);
+```
 
 ### Paramètres
 
@@ -26,7 +28,7 @@ Il prend en argument un identifiant pour l'algorithme de condensé et les donné
 
 ### Valeur retournée
 
-- `digest` est une {{jsxref("Promise")}} pour accéder {{jsxref("ArrayBuffer")}} au condensé.
+- `digest` est une {{jsxref("Promise")}} pour accéder {{jsxref("ArrayBuffer")}} au condensé.
 
 ## Algorithmes supportés
 

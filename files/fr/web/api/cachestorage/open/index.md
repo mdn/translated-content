@@ -14,17 +14,19 @@ translation_of: Web/API/CacheStorage/open
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La fonction **`open()`**de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.
+La fonction **`open()`**de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.
 
-Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
+Vous pouvez accéder à `CacheStorage` via la propriété globale [`caches`](/fr/docs/Web/API/caches).
 
-> **Note :** Si le {{domxref("Cache")}} spécifié n'existe pas, un nouveau cache sera crée avec `cacheName` et retournera une {{jsxref("Promise", "Promesse")}} renvoyant le nouvel objet {{domxref("Cache")}}.
+> **Note :** Si le {{domxref("Cache")}} spécifié n'existe pas, un nouveau cache sera crée avec `cacheName` et retournera une {{jsxref("Promise", "Promesse")}} renvoyant le nouvel objet {{domxref("Cache")}}.
 
 ## Syntaxe
 
-    caches.open(cacheName).then(function(cache) {
-      // faire quelque-chose avec le cache
-    });
+```js
+caches.open(cacheName).then(function(cache) {
+  // faire quelque-chose avec le cache
+});
+```
 
 ### Paramètres
 
@@ -33,7 +35,7 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("Win
 
 ### Retour
 
-Une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} demandé.
+Une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} demandé.
 
 ## Exemples
 
@@ -70,6 +72,6 @@ self.addEventListener('install', function(event) {
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

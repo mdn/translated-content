@@ -20,16 +20,16 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lignes indiquant la position des glyphes -->
-  <line x1="10%" x2="10%"  y1="0"   y2="100%" />
-  <line x1="0"   x2="100%" y1="30%" y2="30%"  />
-  <line x1="0"   x2="100%" y1="80%" y2="80%"  />
+  <!-- Lignes indiquant la position des glyphes -->
+  <line x1="10%" x2="10%"  y1="0"   y2="100%" />
+  <line x1="0"   x2="100%" y1="30%" y2="30%"  />
+  <line x1="0"   x2="100%" y1="80%" y2="80%"  />
 
-  <!-- Un texte de référence -->
-  <text x="10%" y="30%" fill="grey">SVG</text>
+  <!-- Un texte de référence -->
+  <text x="10%" y="30%" fill="grey">SVG</text>
 
-  <!-- Le même texte avec un décalage sur l'axe y -->
-  <text dy="50%" x="10%" y="30%">SVG</text>
+  <!-- Le même texte avec un décalage sur l'axe y -->
+  <text dy="50%" x="10%" y="30%">SVG</text>
 </svg>
 ```
 
@@ -186,29 +186,29 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Lignes horizontales -->
-  <line x1="0" x2="100%" y1="30" y2="30" />
-  <line x1="0" x2="100%" y1="40" y2="40" />
-  <line x1="0" x2="100%" y1="50" y2="50" />
-  <line x1="0" x2="100%" y1="60" y2="60" />
+  <!-- Lignes horizontales -->
+  <line x1="0" x2="100%" y1="30" y2="30" />
+  <line x1="0" x2="100%" y1="40" y2="40" />
+  <line x1="0" x2="100%" y1="50" y2="50" />
+  <line x1="0" x2="100%" y1="60" y2="60" />
 
-  <!-- Lignes verticales -->
-  <line x1="10" x2="10" y1="0" y2="100%" />
-  <line x1="50" x2="50" y1="0" y2="100%" />
-  <line x1="90" x2="90" y1="0" y2="100%" />
+  <!-- Lignes verticales -->
+  <line x1="10" x2="10" y1="0" y2="100%" />
+  <line x1="50" x2="50" y1="0" y2="100%" />
+  <line x1="90" x2="90" y1="0" y2="100%" />
 
-  <!-- Le comportement change en fonction du nombre de valeurs de l'attribut -->
-  <text dy="20"      x="10" y="30">SVG</text>
-  <text dy="0 10"    x="50" y="30">SVG</text>
-  <text dy="0 10 20" x="90" y="30">SVG</text>
+  <!-- Le comportement change en fonction du nombre de valeurs de l'attribut -->
+  <text dy="20"      x="10" y="30">SVG</text>
+  <text dy="0 10"    x="50" y="30">SVG</text>
+  <text dy="0 10 20" x="90" y="30">SVG</text>
 </svg>
 ```
 
 ```css
 line {
-  stroke: red;
-  stroke-width: .5px;
-  stroke-dasharray: 3px;
+  stroke: red;
+  stroke-width: .5px;
+  stroke-dasharray: 3px;
 }
 ```
 

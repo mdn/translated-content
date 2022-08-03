@@ -10,7 +10,7 @@ translation_of: Web/CSS/contain
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété CSS **`contain`** permet d'indiquer qu'un élément, ainsi que son contenu, sont, autant que possible, indépendants du reste de l'arbre du document. Cela permet au navigateur de recalculer la disposition, la mise en forme, la taille, les _peintures_ ou toute combinaison de ces éléments pour une zone donnée du DOM plutôt que pour la page complète.
+La propriété CSS **`contain`** permet d'indiquer qu'un élément, ainsi que son contenu, sont, autant que possible, indépendants du reste de l'arbre du document. Cela permet au navigateur de recalculer la disposition, la mise en forme, la taille, les _peintures_ ou toute combinaison de ces éléments pour une zone donnée du DOM plutôt que pour la page complète.
 
 ```css
 /* Valeurs avec un mot-clé */

@@ -1,0 +1,163 @@
+---
+title: WindowEventHandlers.onhashchange
+slug: Web/API/Window/hashchange_event
+tags:
+  - Eigenschaft
+  - Event
+  - HTML-DOM
+  - Referenz
+  - WindowEventHandlers
+translation_of: Web/API/WindowEventHandlers/onhashchange
+original_slug: Web/API/WindowEventHandlers/onhashchange
+---
+<div>
+<div>{{APIRef("HTML DOM")}}</div>
+</div>
+
+<p>Das <strong>hashchange</strong> Event wird ausgelöst wenn sich der window.hash verändert (siehe {{domxref("Window.location", "location.hash")}}).</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">window.onhashchange = funcRef;
+</pre>
+
+<p><strong>oder</strong></p>
+
+<pre class="syntaxbox">&lt;body onhashchange="funcRef();"&gt;
+</pre>
+
+<p><strong>oder</strong></p>
+
+<pre class="syntaxbox">window.addEventListener("hashchange", funcRef, false);
+</pre>
+
+<h3 id="Parameter">Parameter</h3>
+
+<dl>
+ <dt><code>funcRef</code></dt>
+ <dd>Ein Verweis auf eine Funktion.</dd>
+</dl>
+
+<h2 id="Beispiel">Beispiel</h2>
+
+<pre class="brush:js">if ("onhashchange" in window) {
+    alert("Der Browser unterstützt das hashchange-Event!");
+}
+
+function locationHashChanged() {
+    if (location.hash === "#irgendeinCoolesFeature") {
+        featureFunction();
+    }
+}
+
+window.onhashchange = locationHashChanged;
+</pre>
+
+<h2 id="Das_hashchange_Event">Das hashchange Event</h2>
+
+<p>Das ausgelöste <code>hashchange</code> Event hat folgende Eigenschaften:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Eigenschaft</td>
+   <td class="header">Typ</td>
+   <td class="header">Beschreibung</td>
+  </tr>
+  <tr>
+   <td><code>newURL</code> {{gecko_minversion_inline("6.0")}}</td>
+   <td><code>DOMString</code></td>
+   <td>Die neue URL zu der das Fenster nun navigiert.</td>
+  </tr>
+  <tr>
+   <td><code>oldURL</code> {{gecko_minversion_inline("6.0")}}</td>
+   <td><code>DOMString</code></td>
+   <td>Die vorherige URL, von der aus das Fenster navigierte.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Browser-Kompatiblität</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>5.0</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
+   <td>
+    <p>8.0</p>
+
+    <p><code style="font-size: 14px;">oldURL</code>/<code style="font-size: 14px;">newURL</code> Eigenschaften werden nicht unterstützt.</p>
+   </td>
+   <td>10.6</td>
+   <td>5.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.2</td>
+   <td>{{CompatGeckoMobile("1.9.2")}}</td>
+   <td>9.0</td>
+   <td>11.0</td>
+   <td>5.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<ul>
+ <li><a href="/en-US/docs/DOM/Manipulating_the_browser_history" title="DOM/Manipulating the browser history">Browserverlauf manipulieren</a>, <a href="/en-US/docs/DOM/window.history" title="DOM/window.history">history.pushState() und history.replaceState()</a>-Methoden, <a href="/en-US/docs/DOM/window.onpopstate" title="DOM/window.onpopstate">popstate</a>-Event.</li>
+</ul>

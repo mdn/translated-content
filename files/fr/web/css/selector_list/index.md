@@ -22,7 +22,9 @@ Afin de réduire la taille d'une feuille de style, on peut grouper les sélecteu
 
 ## Syntaxe
 
-    element, element, element { propriétés de style }
+```
+element, element, element { propriétés de style }
+```
 
 ## Exemples
 
@@ -87,4 +89,4 @@ h3 { font-family: sans-serif }
 
 ## Voir aussi
 
-- Les pseudo-classes {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} et {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} qui n'ont pas ce problème historique d'invalidation des listes de sélecteurs.
+- Les pseudo-classes {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} et {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} qui n'ont pas ce problème historique d'invalidation des listes de sélecteurs.
