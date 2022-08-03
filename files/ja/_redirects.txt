@@ -115,11 +115,11 @@
 /ja/docs/About_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Accessibility	/ja/docs/Web/Accessibility
 /ja/docs/Accessibility/ARIA	/ja/docs/Web/Accessibility/ARIA
-/ja/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
+/ja/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/ja/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
 /ja/docs/Accessibility/ARIA/forms	/ja/docs/Web/Accessibility/ARIA/forms
-/ja/docs/Accessibility/ARIA/forms/Basic_form_hints	/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
+/ja/docs/Accessibility/ARIA/forms/Basic_form_hints	/ja/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /ja/docs/Accessibility/ARIA/forms/Multipart_labels	/ja/docs/Web/Accessibility/ARIA/forms/Multipart_labels
-/ja/docs/Accessibility/ARIA/forms/alerts	/ja/docs/Web/Accessibility/ARIA/forms/alerts
+/ja/docs/Accessibility/ARIA/forms/alerts	/ja/docs/conflicting/Web/Accessibility/ARIA
 /ja/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /ja/docs/Accessibility/Community	/ja/docs/Web/Accessibility/Community
 /ja/docs/Accessibility:Community	/ja/docs/Web/Accessibility/Community
@@ -3873,6 +3873,9 @@
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/ja/docs/Web/Accessibility/ARIA/Roles/slider_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/ja/docs/Web/Accessibility/ARIA/Roles/status_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role
+/ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/ja/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
+/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/ja/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+/ja/docs/Web/Accessibility/ARIA/forms/alerts	/ja/docs/conflicting/Web/Accessibility/ARIA
 /ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
 /ja/docs/Web/Accessibility/Accessibility_FAQ	/ja/docs/Web/Accessibility/FAQ
 /ja/docs/Web/Accessibility/Index	/ja/docs/conflicting/Web/Accessibility
@@ -4679,6 +4682,9 @@
 /ja/docs/Web/JavaScript/Typed_arrays/Uint16Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
 /ja/docs/Web/JavaScript/Typed_arrays/Uint32Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
+/ja/docs/Web/Manifest/dir	/ja/docs/conflicting/Web/Manifest
+/ja/docs/Web/Manifest/iarc_rating_id	/ja/docs/conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205
+/ja/docs/Web/Manifest/lang	/ja/docs/conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c
 /ja/docs/Web/MathML/Index	/ja/docs/conflicting/Web/MathML
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps

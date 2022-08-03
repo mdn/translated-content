@@ -8954,23 +8954,11 @@
       "malonson"
     ]
   },
-  "Web/Accessibility/ARIA/forms/Basic_form_hints": {
-    "modified": "2019-03-18T21:22:07.007Z",
-    "contributors": [
-      "IsraelFloresDGA"
-    ]
-  },
   "Web/Accessibility/ARIA/forms/Multipart_labels": {
     "modified": "2019-11-27T15:16:55.571Z",
     "contributors": [
       "IsaacAaron",
       "IsraelFloresDGA"
-    ]
-  },
-  "Web/Accessibility/ARIA/forms/alerts": {
-    "modified": "2020-08-13T01:22:34.331Z",
-    "contributors": [
-      "Nachec"
     ]
   },
   "Web/Accessibility/Community": {
@@ -21003,6 +20991,18 @@
       "maedca",
       "ethertank",
       "Jeremie"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2020-08-13T01:22:34.331Z",
+    "contributors": [
+      "Nachec"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
+    "modified": "2019-03-18T21:22:07.007Z",
+    "contributors": [
+      "IsraelFloresDGA"
     ]
   },
   "conflicting/Web/CSS": {

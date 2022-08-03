@@ -4590,14 +4590,6 @@
       "Sheppy"
     ]
   },
-  "Web/Accessibility/ARIA/forms/Basic_form_hints": {
-    "modified": "2019-03-23T22:50:58.911Z",
-    "contributors": [
-      "PatrickTaiwan",
-      "Shiyou",
-      "alk03073135"
-    ]
-  },
   "Web/Accessibility/Mobile_accessibility_checklist": {
     "modified": "2019-03-18T21:32:14.782Z",
     "contributors": [
@@ -7809,6 +7801,14 @@
     "contributors": [
       "teoli",
       "Kennyluck"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-03-23T22:50:58.911Z",
+    "contributors": [
+      "PatrickTaiwan",
+      "Shiyou",
+      "alk03073135"
     ]
   },
   "conflicting/Web/CSS/@viewport": {
