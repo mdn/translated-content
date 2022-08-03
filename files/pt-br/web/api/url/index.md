@@ -27,7 +27,7 @@ A interface **`URL`** é usada para analisar, construir, normalizar e codificar 
 
 Normalmente você cria um novo objeto `URL` especificando a URL como string quando seu construtor é chamado, ou provendo uma URL relativa e URL base. Você pode facilmente ler e analisar os compoentes de uma URL ou fazer alterações na URL.
 
-Se o seu navegaor não tem suporte ao construtor {{domxref("URL.URL", "URL()")}}, você pode acessar o objeto URL utilizando a interface {{domxref("Window")}} propriedade {{domxref("URL")}}. Mas verifique se algum de seus browser precisa deste prefixo.
+Se o seu navegador não tem suporte ao construtor {{domxref("URL.URL", "URL()")}}, você pode acessar o objeto URL utilizando a interface {{domxref("Window")}} propriedade {{domxref("URL")}}. Certifique-se de verificar se algum de seus navegadores precisa deste prefixo.
 
 {{AvailableInWorkers}}
 
