@@ -64,7 +64,7 @@ translation_of: Learn/Server-side/First_steps/Client-Server_overview
 <p>你可以通过点击一个链接或者在网站进行一次搜索（比如搜索引擎的首页）做出一次简单的 GET 请求。比如，当你在 MDN 上进行一次对“客户端概览”词条的搜索时，HTTP 请求就被发送出去了，你将会看到正如下面一样被展示出来的文本信息（展示出来的信息不一定是相同的，因为其中一部分信息还取决于你的浏览器）。</p>
 
 <div class="note">
-<p>HTTP 消息的格式是在“网络标准”（<a href="http://www.rfc-editor.org/rfc/rfc7230.txt">RFC7230</a>）中定义的。你不需要知道这个标准的细节，但是现在你至少得知道所有这些是来自哪儿的！</p>
+<p><strong>备注：</strong> HTTP 消息的格式是在“网络标准”（<a href="http://www.rfc-editor.org/rfc/rfc7230.txt">RFC7230</a>）中定义的。你不需要知道这个标准的细节，但是现在你至少得知道所有这些是来自哪儿的！</p>
 </div>
 
 <h4 id="请求">请求</h4>
@@ -197,7 +197,7 @@ Content-Length: 0
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<a href="http://web-sniffer.net/">http://web-sniffer.net/</a>）或者使用浏览器扩展例如 <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> 工具)。</p>
+<p><strong>备注：</strong> 上面展示的 HTTP 请求和响应式通过 Fiddler 软件来捕获的，你也可以得到相似的信息通过使用网络嗅探器（比如<a href="http://web-sniffer.net/">http://web-sniffer.net/</a>）或者使用浏览器扩展例如 <a href="https://addons.mozilla.org/en-US/firefox/addon/httpfox/">HttpFox</a>。你可以自己尝试一下。使用任何一个上面链接的工具，浏览一个站点并修改主要信息来观察不同的请求和响应。更多的现代浏览器拥有网络监控工具（例如，在 Firefox 上的 <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> 工具)。</p>
 </div>
 
 <h2 id="静态网站">静态网站</h2>
@@ -205,7 +205,7 @@ Content-Length: 0
 <p>静态网站是指每当请求一个特定的资源时，会从服务器返回相同的硬编码内容。因此，例如，如果您在 <code>/static/myproduct1.html</code> 有一个关于产品的页面，则该页面将返回给每个用户。如果您添加另一个类似的产品到您的网站，您将需要添加另一个页面（例如 <code>myproduct2.html</code> ）等。这可能开始变得非常低效：当您访问数千个产品页面时会发生什么——你会在每个页面（基本的页面模板，结构等等）上重复很多代码，如果你想改变页面结构的任何东西，比如添加一个新的“相关产品”部分，必须单独更改每个页面。</p>
 
 <div class="note">
-<p><strong>注释</strong>: 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择， 然而随着页面数量的增加，它们的维护成本也会很高。</p>
+<p><strong>备注：</strong> 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择， 然而随着页面数量的增加，它们的维护成本也会很高。</p>
 </div>
 
 <p>让我们回顾一下在上一篇文章中看到的静态网站架构图，看看它是如何工作的。</p>
@@ -284,7 +284,7 @@ urlpatterns = [
 ]</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 在<code>url()</code>函数中的第一个参数可能看起来有点古怪 (比如<code>r'^junior/$</code>)  因为他们使用一个叫做“正则表达式”(RegEx, or RE) 的字符匹配机制。在这里，你还不需要知道正则表达式是如何工作的，除了要知道它们是如何允许我们在 URL 中匹配到字符的 (而不是像上面的硬编码) 并且知道如何在我们的视图函数中将它们用作参数。举个例子，一个真正简单的正则表达式可能会说“匹配一个大写字母，后面跟着 4 到 7 个小写字母”"</p>
+<p><strong>备注：</strong> 在<code>url()</code>函数中的第一个参数可能看起来有点古怪 (比如<code>r'^junior/$</code>)  因为他们使用一个叫做“正则表达式”(RegEx, or RE) 的字符匹配机制。在这里，你还不需要知道正则表达式是如何工作的，除了要知道它们是如何允许我们在 URL 中匹配到字符的 (而不是像上面的硬编码) 并且知道如何在我们的视图函数中将它们用作参数。举个例子，一个真正简单的正则表达式可能会说“匹配一个大写字母，后面跟着 4 到 7 个小写字母”"</p>
 </div>
 
 <p>Web 框架还可以轻松地使用查看函数，从数据库获取信息。我们的数据结构是在模型中定义的，模型是定义要存储在底层数据库中的字段的 Python 类。如果我们有一个名为 Team 的模型，其中有一个“<em>team_type</em>”字段，那么我们可以使用一个简单的查询语法来取回所有具有特定类型的球队。</p>
