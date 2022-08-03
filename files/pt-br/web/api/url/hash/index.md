@@ -36,7 +36,7 @@ console.log(url.hash); // Logs: '#Examples'
 
 {{Specifications}}
 
-## Compatibildiade de browser
+## Compatibilidade de browser
 
 {{Compat}}
 
