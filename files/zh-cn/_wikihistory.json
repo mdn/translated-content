@@ -23279,12 +23279,6 @@
       "jack-chensonglin"
     ]
   },
-  "Web/Accessibility/ARIA/forms/alerts": {
-    "modified": "2020-10-07T05:07:53.958Z",
-    "contributors": [
-      "phone-burner"
-    ]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-23T22:13:24.205Z",
     "contributors": [
@@ -46171,6 +46165,12 @@
     "modified": "2019-03-23T22:29:25.203Z",
     "contributors": [
       "qianzhangcheng"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2020-10-07T05:07:53.958Z",
+    "contributors": [
+      "phone-burner"
     ]
   },
   "conflicting/Web/CSS": {

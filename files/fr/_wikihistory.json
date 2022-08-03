@@ -20925,15 +20925,6 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
-    "modified": "2019-03-23T23:16:38.785Z",
-    "contributors": [
-      "sdumetz",
-      "dFegnoux",
-      "Mozinet",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/forms": {
     "modified": "2019-03-23T23:18:04.282Z",
     "contributors": [
@@ -20941,27 +20932,10 @@
       "Fredchat"
     ]
   },
-  "Web/Accessibility/ARIA/forms/Basic_form_hints": {
-    "modified": "2019-03-23T23:17:50.755Z",
-    "contributors": [
-      "hmore",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
   "Web/Accessibility/ARIA/forms/Multipart_labels": {
     "modified": "2019-03-23T23:17:46.968Z",
     "contributors": [
       "hmore",
-      "Fredchat"
-    ]
-  },
-  "Web/Accessibility/ARIA/forms/alerts": {
-    "modified": "2019-03-23T23:17:54.084Z",
-    "contributors": [
-      "P45QU10U",
-      "hmore",
-      "Goofy",
       "Fredchat"
     ]
   },
@@ -40711,6 +40685,32 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-03-23T23:17:54.084Z",
+    "contributors": [
+      "P45QU10U",
+      "hmore",
+      "Goofy",
+      "Fredchat"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
+    "modified": "2019-03-23T23:16:38.785Z",
+    "contributors": [
+      "sdumetz",
+      "dFegnoux",
+      "Mozinet",
+      "Fredchat"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
+    "modified": "2019-03-23T23:17:50.755Z",
+    "contributors": [
+      "hmore",
+      "Goofy",
+      "Fredchat"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {

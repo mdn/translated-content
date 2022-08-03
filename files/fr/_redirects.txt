@@ -19,7 +19,7 @@
 /fr/docs/Accessibilité/ARIA/Accessible_Rich_Internet_Applications	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/Applications_riches_Internet_accessibles	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Accessibilité/ARIA/Comment_deposer_un_bug_lie_a_ARIA	/fr/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
-/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA	/fr/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
+/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA	/fr/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
 /fr/docs/Accessibilité/ARIA/Guides_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Guides
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utilisation_du_groupe_switch	/fr/docs/Web/Accessibility/ARIA/Roles/Switch_role
@@ -52,8 +52,8 @@
 /fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog	/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role
 /fr/docs/Accessibilité/ARIA/Zones_live_ARIA	/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /fr/docs/Accessibilité/ARIA/formulaires	/fr/docs/Web/Accessibility/ARIA/forms
-/fr/docs/Accessibilité/ARIA/formulaires/Alertes	/fr/docs/Web/Accessibility/ARIA/forms/alerts
-/fr/docs/Accessibilité/ARIA/formulaires/Indications_elementaires_pour_les_formulaires	/fr/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
+/fr/docs/Accessibilité/ARIA/formulaires/Alertes	/fr/docs/conflicting/Web/Accessibility/ARIA
+/fr/docs/Accessibilité/ARIA/formulaires/Indications_elementaires_pour_les_formulaires	/fr/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /fr/docs/Accessibilité/ARIA/formulaires/Labels_multi-options	/fr/docs/Web/Accessibility/ARIA/forms/Multipart_labels
 /fr/docs/Accessibilité/An_overview_of_accessible_web_applications_and_widgets	/fr/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /fr/docs/Accessibilité/Aperçu_d_applications_Web_et_de_composants_dynamiques_accessibles	/fr/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
@@ -4059,6 +4059,9 @@
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role	/fr/docs/Web/Accessibility/ARIA/Roles/progressbar_role
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/fr/docs/Web/Accessibility/ARIA/Roles/slider_role
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/fr/docs/Web/Accessibility/ARIA/Roles/status_role
+/fr/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/fr/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
+/fr/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/fr/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+/fr/docs/Web/Accessibility/ARIA/forms/alerts	/fr/docs/conflicting/Web/Accessibility/ARIA
 /fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/Web/Accessibility/ARIA/widgets
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /fr/docs/Web/Accessibility/Web_Development	/fr/docs/Web/Accessibility

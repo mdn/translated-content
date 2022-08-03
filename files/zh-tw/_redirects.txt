@@ -614,6 +614,7 @@
 /zh-TW/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-TW/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-TW/docs/Web/API/document.createTreeWalker	/zh-TW/docs/Web/API/Document/createTreeWalker
 /zh-TW/docs/Web/API/document.querySelector	/zh-TW/docs/Web/API/Document/querySelector
+/zh-TW/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/zh-TW/docs/conflicting/Web/Accessibility/ARIA
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/orphaned/Web/CSS/border-image/border-image
 /zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/conflicting/Web/CSS/@viewport

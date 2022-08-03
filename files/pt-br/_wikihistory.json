@@ -6680,12 +6680,6 @@
       "rener_bz"
     ]
   },
-  "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
-    "modified": "2019-03-23T22:27:11.984Z",
-    "contributors": [
-      "Aschlla"
-    ]
-  },
   "Web/Accessibility/ARIA/forms": {
     "modified": "2019-03-23T22:29:43.271Z",
     "contributors": [
@@ -6693,24 +6687,10 @@
       "caio.rrs"
     ]
   },
-  "Web/Accessibility/ARIA/forms/Basic_form_hints": {
-    "modified": "2019-03-23T22:29:41.083Z",
-    "contributors": [
-      "rener_bz",
-      "Fernandolrs",
-      "caio.rrs"
-    ]
-  },
   "Web/Accessibility/ARIA/forms/Multipart_labels": {
     "modified": "2019-03-23T22:27:34.088Z",
     "contributors": [
       "Aschlla"
-    ]
-  },
-  "Web/Accessibility/ARIA/forms/alerts": {
-    "modified": "2019-09-09T08:04:08.002Z",
-    "contributors": [
-      "brunopulis"
     ]
   },
   "Web/Accessibility/ARIA/widgets": {
@@ -15987,10 +15967,30 @@
       "takahan"
     ]
   },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-09-09T08:04:08.002Z",
+    "contributors": [
+      "brunopulis"
+    ]
+  },
   "conflicting/Web/Accessibility/ARIA/widgets": {
     "modified": "2019-03-23T22:29:34.759Z",
     "contributors": [
       "Aschlla",
+      "caio.rrs"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
+    "modified": "2019-03-23T22:27:11.984Z",
+    "contributors": [
+      "Aschlla"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
+    "modified": "2019-03-23T22:29:41.083Z",
+    "contributors": [
+      "rener_bz",
+      "Fernandolrs",
       "caio.rrs"
     ]
   },
