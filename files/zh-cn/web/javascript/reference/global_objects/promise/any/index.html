@@ -54,7 +54,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <h3 id="拒绝（rejection）">拒绝（Rejection）</h3>
 
-<p>如果可迭代对象内所有的 <code>promises</code> 都被拒绝了，那么该方法所返回的 <code>promise</code> 就会异步的切换至被拒状态，并用一个  {{JSxRef("AggregateError")}}（继承自  {{JSxRef("Error")}}）实例来作为它的拒因。它包含一个 <code>errors</code> 属性，该属性是一个用于存储拒因的数组。
+<p>如果可迭代对象内所有的 <code>promises</code> 都被拒绝了，那么该方法所返回的 <code>promise</code> 就会异步的切换至被拒状态，并用一个 {{JSxRef("AggregateError")}}（继承自  {{JSxRef("Error")}}）实例来作为它的拒因。它包含一个 <code>errors</code> 属性，该属性是一个用于存储拒因的数组。
 
 <ul>
   <li>如果传入了一个空的可迭代数组，那么该方法就会返回一个已经被拒 <code>promise</code>，其拒因是一个 <code>AggregateError</code> 实例，该实例的 <code>errors</code> 属性会是一个空数组。</li>
