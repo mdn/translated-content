@@ -87,7 +87,7 @@ emp[1] = 'Phil Lesh';
 emp[2] = 'August West';
 ```
 
-> **Nota :** se você fornece um valor não inteiro ao operador do array, como no código acima, a propriedade será criada no objeto representando o array, ao invés do elemento do array.
+> **Nota:** se você fornece um valor não inteiro ao operador do array, como no código acima, a propriedade será criada no objeto representando o array, ao invés do elemento do array.
 
 ```js
 var arr = [];
