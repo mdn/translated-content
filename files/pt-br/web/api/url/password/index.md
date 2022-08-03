@@ -16,7 +16,7 @@ browser-compat: api.URL.password
 
 A propriedade **`password`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} que contém a senha especificada antes do nome do domínio.
 
-Se for configudaro primeiramente sem a propriedade {{domxref("URL.username", "username")}}, ele ira falhar silenciosamente.
+Se for definido primeiramente sem a propriedade {{domxref("URL.username", "username")}}, ele irá falhar silenciosamente.
 
 {{AvailableInWorkers}}
 
