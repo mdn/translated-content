@@ -19,31 +19,23 @@ mediaSource.endOfStream(endOfStreamError);
 
   - : 一个 {{domxref("DOMString")}}，表示当流结束之时需要抛出的异常名。可选的值为：
 
-    - `network`: Terminates playback and signals that a network error has occured. This can be used
-      create a custom error handler related to media streams. For example, you might have a function that handles
-      media chunk requests, separate from other network requests. When you make an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) call for a media chunk, and `onabort`
-      or `onerror` triggers, you might want to call `endOfStream('network')`, display a
-      descriptive message in the UI, and maybe retry the network request immediately or wait until the network is back
-      up (via some kind of polling.)
-    - `decode`: Terminates playback and signals that a decoding error has occured. This can be used to
-      indicate that a parsing error has occured while fetching media data; maybe the data is corrupt, or is encoded
-      using a codec that the browser doesn't know how to decode.
+    - `network`
+      - : 中止播放并且发生网络错误的信号。这可用于创建一个与媒体流相关的自定义处理程序。例如，你可能有一个处理媒体块请求的函数，与其他网络请求分开。当你对媒体块进行 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 调用并触发 `onabort` 或 `onerror` 时，你可能需要调用 `endOfStream('network')` 在 UI 中展示描述性的错误，并且立即重试网络请求或者等到网络备份（通过某种轮询）。
+    - `decode`
+      - : 中止播放并且发生一个解码错误。这可用于指示当获取媒体数据时发生了解析错误；可能数据已损坏，或者是解码使用的解码器是浏览器不支持的。
 
 ### 返回值
 
-无。
+无（{{jsxref("undefined")}}）。
 
-### 错误
+### 异常
 
-修改此属性值的时候，以下异常可能会被触发。
-
-| 错误                | 解释                                                                                                                                                                                                                                                        |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError` | {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is `true`.) |
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : {{domxref("MediaSource.readyState")}} 的状态不是 `open`，或者一个或多个 {{domxref("SourceBuffer")}} 对象在 {{domxref("MediaSource.sourceBuffers")}} 被更新则抛出（例如他们的 {{domxref("SourceBuffer.updating")}} 属性是 `true`）。
 
 ## 示例
 
-下面的代码段来自于 Nick Desaulniers 的一个简单的例子。([查看完整示例](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)以供学习。)
+以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
 
 ```js
 var assetURL = 'frag_bunny.mp4';

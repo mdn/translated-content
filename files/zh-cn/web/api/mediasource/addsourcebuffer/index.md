@@ -24,18 +24,18 @@ var sourceBuffer = mediaSource.addSourceBuffer(mimeType);
 
 ### 异常
 
-下面的错误可能会在调用该方法时被抛出。
-
-| Error                | Explanation                                                                                                                                                                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidAccessError` | 提交的 `mimeType` 是一个空字符串。                                                                                                                                                                                                          |
-| `InvalidStateError`  | {{domxref("MediaSource.readyState")}} 的值不等于 `open`.                                                                                                                                                                                    |
-| `NotSupportedError`  | 当前浏览器不支持你提交的 `mimeType` , 或者 it is not compatible with the `mimeType`s specified for the {{domxref("SourceBuffer")}} objects that already exist in {{domxref("MediaSource.sourceBuffers")}}.                                  |
-| `QuotaExceededError` | The user agent can't handle any more SourceBuffer objects, or creating a SourceBuffer based on this `mimeType` would result in an unsupported [SourceBuffer configuration.](https://w3c.github.io/media-source/#sourcebuffer-configuration) |
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : 如果 `mimeType` 指定的值是一个空字符串而不是有效的字符串，则抛出异常。
+- `InvalidStateError` {{domxref("DOMException")}}
+  - :  {{domxref("MediaSource.readyState")}} 的状态不是 `open`，则抛出异常。
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : 如果 {{Glossary("user agent")}} 不支持指定的 `mimeType`，或者与媒体源 {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} 列表中已包含的其他 {{domxref("SourceBuffer")}} 对象的 MIME 类型不兼容，则抛出异常。
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : 如果用户代理不能处理更多的 `SourceBuffer` 对象，或者使用给定的 `mimeType` 创建了一个新的 `SourceBuffer`，这将导致 [`SourceBuffer` 的配置不受支持](https://w3c.github.io/media-source/#sourcebuffer-configuration)。
 
 ## 示例
 
-以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究。）
+以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究）。
 
 ```js
 var assetURL = 'frag_bunny.mp4';
