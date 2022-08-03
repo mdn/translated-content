@@ -3871,12 +3871,6 @@
       "Tigt"
     ]
   },
-  "Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ": {
-    "modified": "2019-03-23T22:15:44.866Z",
-    "contributors": [
-      "konradluka"
-    ]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-18T21:27:40.893Z",
     "contributors": [
@@ -9628,6 +9622,12 @@
       "Mgjbot",
       "Ptak82",
       "Jan Dudek"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-03-23T22:15:44.866Z",
+    "contributors": [
+      "konradluka"
     ]
   },
   "conflicting/Web/CSS": {

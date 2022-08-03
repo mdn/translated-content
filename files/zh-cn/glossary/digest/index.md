@@ -22,4 +22,4 @@ translation_of: Glossary/Digest
 ## 参见
 
 - {{glossary("Cryptographic hash function", "密码散列函数")}}
-- 维基百科上的{{interwiki("wikipedia", "Cryptographic_hash_function", "密码散列函数")}}
+- 维基百科上的[密码散列函数](https://zh.wikipedia.org/wiki/Cryptographic_hash_function)

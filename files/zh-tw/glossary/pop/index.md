@@ -17,4 +17,4 @@ translation_of: Glossary/POP
 - [RFC 2449](http://www.faqs.org/rfcs/rfc2449.html) (POP3 的規範擴展機制)
 - [RFC 1734](http://www.faqs.org/rfcs/rfc1734.html) (POP3 的規範認證機制)
 - {{Glossary("IMAP4")}}
-- 維基百科上的{{Interwiki("wikipedia", "Post Office Protocol", "POP")}}
+- 維基百科上的[POP](https://zh.wikipedia.org/wiki/Post_Office_Protocol)

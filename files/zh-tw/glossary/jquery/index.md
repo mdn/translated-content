@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "jQuery")}}
+- 維基百科的 [jQuery](https://zh.wikipedia.org/wiki/jQuery)
 - [jQuery 官方網站](https://jquery.com/)
 
 ### 技術資訊

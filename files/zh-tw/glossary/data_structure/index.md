@@ -9,4 +9,4 @@ translation_of: Glossary/Data_structure
 
 ## 了解更多
 
-- 維基百科:{{interwiki("wikipedia", "Data_structure", "Data structure")}}
+- 維基百科:[Data structure](https://zh.wikipedia.org/wiki/Data_structure)

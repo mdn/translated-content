@@ -12,7 +12,7 @@ translation_of: Glossary/Accessibility
 ### 基本知識
 
 - [資源在 MDN](/en-US/docs/Web/Accessibility)
-- 維基百科上的{{Interwiki("wikipedia", "Web accessibility")}}
+- 維基百科上的[Web accessibility](https://zh.wikipedia.org/wiki/Web_accessibility)
 
 ### 學習網頁無障礙化
 

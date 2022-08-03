@@ -18,6 +18,6 @@ translation_of: Glossary/CSRF
 
 ### 公共知识
 
-- {{Interwiki("wikipedia", "跨站请求伪造")}} on Wikipedia
+- [跨站请求伪造](https://zh.wikipedia.org/wiki/跨站请求伪造) on Wikipedia
 - [防御方法](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>)
 - [MDN 安全手册](/zh-CN/Learn/tutorial/Information_Security_Basics)

@@ -21,7 +21,7 @@ translation_of: Glossary/API
 
 ### 基本知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Application_programming_interface", "API")}}
+- 維基百科上的 [API](https://zh.wikipedia.org/wiki/Application_programming_interface)
 
 ### 技術參考
 

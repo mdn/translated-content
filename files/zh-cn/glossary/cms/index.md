@@ -9,4 +9,4 @@ translation_of: Glossary/CMS
 
 ### 基础知识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "内容管理系统", "CMS（内容管理系统）")}}
+- 在维基百科上的 [CMS（内容管理系统）](https://zh.wikipedia.org/wiki/内容管理系统)

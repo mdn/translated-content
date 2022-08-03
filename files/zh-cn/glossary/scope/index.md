@@ -55,4 +55,4 @@ fun(); // "bar in foo"
 
 ### 基础知识
 
-- Wikipedia 上的 {{Interwiki("wikipedia", "Scope (computer science)")}}
+- Wikipedia 上的 [Scope (computer science)](https://zh.wikipedia.org/wiki/Scope_(computer_science))

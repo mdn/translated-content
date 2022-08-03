@@ -9,4 +9,4 @@ Java 是一个旨在实现最小的依赖关系的基于{{Glossary("class","类"
 
 ### 基础知识
 
-- 在维基百科上的 {{interwiki("wikipedia", "Java")}}
+- 在维基百科上的 [Java](https://zh.wikipedia.org/wiki/Java)

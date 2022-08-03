@@ -1,0 +1,119 @@
+---
+title: Dicas básicas de form
+slug: conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
+original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
+---
+<div class="twocolumns">
+<h2 id="Form_labels" name="Form_labels">Form labels</h2>
+</div>
+
+<p>Quando estiver implementando forms usando elementos HTML tradicionais relacionados à foms, é importante fornecer labels para controles e para explicitamente associar um label com o seu ocntrole. Quando um usuário de leitor de tela navega uma página, o leitor de tel irá descrever os controles do form, mas sem uma associação direta entre o controle e seu label, o leitor de tela não tem maneira de saber qual label é o correto.</p>
+
+<p>O exemplo abaixo mostra um form simples com labels. Note que cada elemento {{HTMLElement("input")}} tem um <strong>id</strong>, e cada elemento {{HTMLElement("label")}} tem um atributo <strong>for</strong> indicando o <strong>id</strong> do {{HTMLElement("input")}} associado.</p>
+
+<p><em>Exempl0 1. Form simples com labels</em></p>
+
+<pre class="brush: html">&lt;form&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;input id="wine-1" type="checkbox" value="riesling"/&gt;
+      &lt;label for="wine-1"&gt;Berg Rottland Riesling&lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;input id="wine-2" type="checkbox" value="weissbergunder"/&gt;
+      &lt;label for="wine-2"&gt;Weissbergunder&lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;input id="wine-3" type="checkbox" value="pinot-grigio"/&gt;
+      &lt;label for="wine-3"&gt;Pinot Grigio&lt;/label&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;input id="wine-4" type="checkbox" value="gewurztraminer"/&gt;
+      &lt;label for="wine-4"&gt;Berg Rottland Riesling&lt;/label&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/form&gt;
+</pre>
+
+<h2 id="Labeling_with_ARIA" name="Labeling_with_ARIA">Rotulando com ARIA</h2>
+
+<p>O elemento HTML {{HTMLElement("label")}} é apropriado para elementos relacionados com form, mas muitos controles de form são implementados como widget JavaScript dinâmico, usando {{HTMLElement("div")}}s ou {{HTMLElement("span")}}s. <a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, a especificação de <strong>Aplicações Internet Ricas em Acessibilidade</strong> da W3C <a href="http://www.w3.org/WAI/">Iniciativa de Acessibilidade Web</a>, fornece o atributo <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><strong>aria-labelledby</strong></a> para esses casos.</p>
+
+<p>O exemplo abaixo mostra um grupo de botões rádio usando um lista não ordenada. Note que na linha 3, o elemento {{HTMLElement("li")}} seta o atributo <strong>aria-labelledby</strong> para "rg1_label," o <strong>id</strong> do elemento {{HTMLElement("h3")}} na linha 1, que é o label para o grupo rádio.</p>
+
+<p><em>Exemplo 2. Um grupo rádio implementado usando uma lista não ordenada</em></p>
+
+<pre class="brush: html">&lt;h3 id="rg1_label"&gt;Lunch Options&lt;/h3&gt;
+
+&lt;ul class="radiogroup" id="rg1"  role="radiogroup" aria-labelledby="rg1_label"&gt;
+  &lt;li id="r1"  tabindex="-1" role="radio" aria-checked="false"&gt;
+    &lt;img role="presentation" src="radio-unchecked.gif" /&gt; Thai
+  &lt;/li&gt;
+  &lt;li id="r2"  tabindex="-1" role="radio"  aria-checked="false"&gt;
+    &lt;img role="presentation" src="radio-unchecked.gif" /&gt; Subway
+  &lt;/li&gt;
+  &lt;li id="r3"   tabindex="0" role="radio" aria-checked="true"&gt;
+    &lt;img role="presentation" src="radio-checked.gif" /&gt; Radio Maria
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h2 id="Describing_with_ARIA" name="Describing_with_ARIA">Descrevendo com ARIA</h2>
+
+<p>Controles form às vezes tem uma descrição associada com eles, em adição ao label. ARIA fornece o atributo <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby"><strong>aria-describedby</strong></a> para diretamente associar a descrição com o controle.</p>
+
+<p>O exemplo abaixo mostra um elemento {{HTMLElement("button")}} que é descrito por uma sentença num elemento {{HTMLElement("div")}} separado. O atributo <strong>aria-describedby</strong> no {{HTMLElement("button")}} referencia o <strong>id</strong> de {{HTMLElement("div")}}.</p>
+
+<p><em>Exemplo 3. Um botão descrito por um elemento separado.</em></p>
+
+<pre class="brush: html">&lt;button aria-describedby="descriptionRevert"&gt;Revert&lt;/button&gt;
+&lt;div id="descriptionRevert"&gt;Reverting will undo any changes that have been made since the last save.&lt;/div&gt;</pre>
+
+<p>(Note que o atributo <strong>aria-describedby</strong> é usado para outros propósitos, além de controles do form.)</p>
+
+<h2 id="Required_and_invalid_fields" name="Required_and_invalid_fields">Campos inválidos e obrigatórios</h2>
+
+<p>Web developers tipicamente usam estratégias de apresentação para indicar campos obrigatórios ou campos inválidos, mas tecnologias assistivas (TAs) não podem necessariamente inferir essa informação a partir da apresentação. ARIA fornece atributos para indicar que os controles do form são obrigatórios ou inválidos:</p>
+
+<ul>
+ <li>A propriedade <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required"><strong>aria-required</strong></a> pode ser aplicada a um elemento form para indicar para uma TA que é obrigatório preencher o formulário.</li>
+ <li>O estado <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid"><strong>aria-invalid</strong></a> pode ser programaticamente aplicado para indicar para uma TA quais campos de dados têm dados incorretos, então o usuário sabe que ele entrou um dado inválido.</li>
+</ul>
+
+<p>O exemplo abaixo mostra um form simples com três campos. Nas linhas 4 e 12, o atributo <strong>aria-required</strong> é setado para true (em adição aos asteriscos próximos aos labels) indicando que os campos de nome e e-mail são obrigatórios. A segunda parte do exemplo é um trecho de JavaScript que valida o e-mail e seta o atributo <strong>aria-invalid</strong> do campo e-mail (linha 12 do HTML) de acordo com o resultado (em adição à mudança de apresentação do elemento).</p>
+
+<p><em>Exemplo 4a. Um form com campos obrigatórios.</em></p>
+
+<pre class="brush: html">&lt;form&gt;
+  &lt;div&gt;
+    &lt;label for="name"&gt;* Name:&lt;/label&gt;
+    &lt;input type="text" value="name" id="name" aria-required="true"/&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="phone"&gt;Phone:&lt;/label&gt;
+    &lt;input type="text" value="phone" id="phone" aria-required="false"/&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="email"&gt;* E-mail:&lt;/label&gt;
+    &lt;input type="text" value="email" id="email" aria-required="true"/&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+<p><em>Exemplo 4b. Parte de um script que valida a entrada no form.</em></p>
+
+<pre class="brush: js">var validate = function () {
+  var emailElement = document.getElementById(emailFieldId);
+  var valid = emailValid(formData.email); // returns true if valid, false otherwise
+
+  emailElement.setAttribute("aria-invalid", !valid);
+  setElementBorderColour(emailElement, valid); // sets the border to red if second arg is false
+};</pre>
+
+<h2 id="Providing_Helpful_Error_Messages" name="Providing_Helpful_Error_Messages">Fornecendo Mensagens de Erro Úteis</h2>
+
+<p>Leia como usar <a href="/en-US/docs/aria/forms/alerts" title="aria/forms/alerts">alertas ARIA para melhorar forms</a>.</p>
+
+<div class="note">A ser decidido: <span id="result_box" lang="pt"><span>devemos</span> <span>ou</span> <span>combinar em</span> <span>um</span> <span>artigo ou</span> <span>separar em</span> <span>técnicas</span><span>, ou ambos.</span> <span>Além disso,</span> <span>é</span> <span>ARIA</span> <span>marcação apropriada</span> <span>para mensagens de erro</span> <span>em uma</span> <span>página carregada</span> <span>após a validação</span> <span>do lado do servidor</span><span>?</span></span></div>
+
+<p>Para maiores informações usando ARIA para acessibilidade de forms, veja o documento <a href="http://www.w3.org/TR/wai-aria-practices/">Práticas de Cricação de WAI-ARIA</a>.</p>

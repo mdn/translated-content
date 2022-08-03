@@ -544,6 +544,8 @@
 /ko/docs/Web/API/window.screen.onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
 /ko/docs/Web/API/window.screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
+/ko/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/ko/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+/ko/docs/Web/Accessibility/ARIA/forms/alerts	/ko/docs/conflicting/Web/Accessibility/ARIA
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator

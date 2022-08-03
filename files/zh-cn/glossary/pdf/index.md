@@ -11,4 +11,4 @@ translation_of: Glossary/PDF
 
 ### 常识
 
-- 维基百科：{{Interwiki("wikipedia", "Portable Document Format", "PDF")}}
+- 维基百科：[PDF](https://zh.wikipedia.org/wiki/Portable_Document_Format)

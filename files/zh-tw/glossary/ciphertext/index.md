@@ -13,4 +13,4 @@ translation_of: Glossary/Ciphertext
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "密文")}}
+- 維基百科上的 [密文](https://zh.wikipedia.org/wiki/密文)

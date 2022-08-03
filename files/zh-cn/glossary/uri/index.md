@@ -14,7 +14,7 @@ translation_of: Glossary/URI
 
 ### 基础知识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "URI")}}
+- 在维基百科上的 [URI](https://zh.wikipedia.org/wiki/URI)
 - [RFC 3986 on URI](https://tools.ietf.org/html/rfc3986)
 - [data URIs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - [www vs non-www](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)

@@ -9,4 +9,4 @@ translation_of: Glossary/Information_architecture
 
 ### **基本知识**
 
-- {{interwiki("wikipedia", "Information_architecture", "Information architecture")}} on Wikipedia
+- [Information architecture](https://zh.wikipedia.org/wiki/Information_architecture) on Wikipedia

@@ -15,4 +15,4 @@ translation_of: Glossary/firewall
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Firewall (computing)")}}
+- 維基百科上的 [Firewall (computing)](https://zh.wikipedia.org/wiki/Firewall_(computing))

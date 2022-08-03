@@ -93,7 +93,7 @@ name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
 el.innerHTML = name; // harmless in this case</code>
 </pre>
 
-<p>尽管这看上去像 {{interwiki("wikipedia", "cross-site scripting")}} 攻击，结果并不会导致什么。HTML 5 中指定不执行由 <code>innerHTML</code> 插入的 {{HTMLElement("script")}} 标签。</p>
+<p>尽管这看上去像 <a href="https://zh.wikipedia.org/wiki/cross-site_scripting">cross-site scripting</a> 攻击，结果并不会导致什么。HTML 5 中指定不执行由 <code>innerHTML</code> 插入的 {{HTMLElement("script")}} 标签。</p>
 
 <p>然而，有很多不依赖 {{HTMLElement("script")}} 标签去执行 JavaScript 的方式。所以当你使用<code>innerHTML</code> 去设置你无法控制的字符串时，这仍然是一个安全问题。例如：</p>
 

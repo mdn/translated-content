@@ -13,4 +13,4 @@ translation_of: Glossary/ARPA
 ### 基礎知識
 
 - [官方站點](http://www.iana.org/domains/arpa)
-- 維基百科上的{{Interwiki("wikipedia", ".arpa")}}
+- 維基百科上的[.arpa](https://zh.wikipedia.org/wiki/.arpa)

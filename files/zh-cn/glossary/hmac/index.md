@@ -17,7 +17,7 @@ HMAC 通常用于确保完整性和身份验证。
 
 ### 基础知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "密钥散列消息认证码", "HMAC")}}
+- 维基百科上的 [HMAC](https://zh.wikipedia.org/wiki/密钥散列消息认证码)
 
 ### 技术参考
 

@@ -12,7 +12,7 @@ Firefox OS 是 Mozilla's 手機操作系統，基於 Linux 和 {{glossary("Mozil
 
 ### 基礎知識
 
-- 維基百科上的 {{interwiki("wikipedia", "Firefox OS")}}
+- 維基百科上的 [Firefox OS](https://zh.wikipedia.org/wiki/Firefox_OS)
 
 ### 技術參考
 

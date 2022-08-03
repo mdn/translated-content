@@ -1541,7 +1541,8 @@
 /pl/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/pl/docs/Web/API/setTimeout
 /pl/docs/Web/API/Zdarzenia_dotykowe	/pl/docs/Web/API/Touch_events
 /pl/docs/Web/API/powiadomienie	/pl/docs/Web/API/Notification
-/pl/docs/Web/Accessibility/ARIA/Aplikacje_internetowe_i_ARIA_FAQ	/pl/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
+/pl/docs/Web/Accessibility/ARIA/Aplikacje_internetowe_i_ARIA_FAQ	/pl/docs/conflicting/Web/Accessibility/ARIA
+/pl/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/pl/docs/conflicting/Web/Accessibility/ARIA
 /pl/docs/Web/Bezpieczeństwo	/pl/docs/Web/Security
 /pl/docs/Web/Bezpieczeństwo/Certificate_Transparency	/pl/docs/Web/Security/Certificate_Transparency
 /pl/docs/Web/Bezpieczeństwo/Same-origin_policy	/pl/docs/Web/Security/Same-origin_policy

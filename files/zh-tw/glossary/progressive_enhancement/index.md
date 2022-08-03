@@ -9,4 +9,4 @@ translation_of: Glossary/Progressive_Enhancement
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "漸進增強")}}
+- 維基百科的 [漸進增強](https://zh.wikipedia.org/wiki/漸進增強)

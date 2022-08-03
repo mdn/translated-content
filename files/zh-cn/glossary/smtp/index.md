@@ -18,4 +18,4 @@ translation_of: Glossary/SMTP
 
 - 维基百科
 
-  - {{Interwiki("wikipedia", "SMTP")}}
+  - [SMTP](https://zh.wikipedia.org/wiki/SMTP)

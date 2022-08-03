@@ -204,7 +204,7 @@ void main() {
 
 <p>显而易见的问题是：“为什么要增加维度？”。事实证明，这种增加允许使用许多不错的技术来处理 3D 数据。这个增加的维度将透视的概念引入坐标系中。将其放置在适当的位置后，我们可以将 3D 坐标映射到 2D 空间中，从而允许两条平行线当它们延伸到远方时相交。 <code>w</code> 的值被用作该坐标的其他分量放除数，因此  <code>x</code>,   <code>y</code> 和  <code>z</code> 的真实值被计算为  <code>x/w</code> ,  <code>y/w</code> 和  <code>z/w</code>（然后 <code>w</code> 也  <code>w/w</code> , 变成 1）。</p>
 
-<p>三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为  {{interwiki("wikipedia", "homogeneous coordinates", "齐次坐标")}} 。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。</p>
+<p>三维点定义在典型的笛卡尔坐标系中。增加的第四维将这一点变为  <a href="https://zh.wikipedia.org/wiki/homogeneous_coordinates">齐次坐标</a> 。它仍然代表 3D 空间中的一个点，并且可以通过一对简单的函数轻松地演示如何构造这种类型的坐标。</p>
 
 <pre class="brush: js">function cartesianToHomogeneous(point) {
 
@@ -597,7 +597,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <ul>
  <li>使用透视矩阵和模型矩阵的参数进行体验。</li>
- <li>将透视矩阵替换为 {{interwiki("wikipedia", "正交矩阵")}}。在 MDN WebGL 共享代码中可以找到 <code>MDN.orthographicMatrix()</code> 替换 <code>CubeDemo.prototype.computePerspectiveMatrix()</code> 中的 <code>MDN.perspectiveMatrix()</code> 函数。</li>
+ <li>将透视矩阵替换为 <a href="https://zh.wikipedia.org/wiki/正交矩阵">正交矩阵</a>。在 MDN WebGL 共享代码中可以找到 <code>MDN.orthographicMatrix()</code> 替换 <code>CubeDemo.prototype.computePerspectiveMatrix()</code> 中的 <code>MDN.perspectiveMatrix()</code> 函数。</li>
 </ul>
 
 <h2 id="视图矩阵">视图矩阵</h2>
@@ -686,5 +686,5 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <ul>
  <li><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a></li>
- <li>{{interwiki("wikipedia", "3D projection")}}</li>
+ <li><a href="https://zh.wikipedia.org/wiki/3D_projection">3D projection</a></li>
 </ul>

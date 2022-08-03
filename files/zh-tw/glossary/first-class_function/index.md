@@ -91,4 +91,4 @@ sayHello()();
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "First-class_function", "First-class functions")}} on Wikipedia
+- [First-class functions](https://zh.wikipedia.org/wiki/First-class_function) on Wikipedia

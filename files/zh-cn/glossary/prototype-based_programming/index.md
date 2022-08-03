@@ -14,4 +14,4 @@ translation_of: Glossary/Prototype-based_programming
 
 ### 常识
 
-- {{Interwiki("wikipedia", "Prototype-based programming", "原型编程")}} 的维基页面
+- [原型编程](https://zh.wikipedia.org/wiki/Prototype-based_programming) 的维基页面
