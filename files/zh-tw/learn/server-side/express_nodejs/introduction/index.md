@@ -10,47 +10,53 @@ tags:
   - 學習
 translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
-<div>
-<p>{{LearnSidebar}}</p>
+{{LearnSidebar}}
 
-<p>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</p>
-</div>
+{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
-<p>在這篇文章中回答了「什麼是Node？」和「什麼是Express」，同時概述是什麼讓Express框架如此特別。本文將概述主要特性、展示一些Express應用的主要建構模塊(雖然此時你還沒有能測試它的開發環境)</p>
+在這篇文章中回答了「什麼是 Node？」和「什麼是 Express」，同時概述是什麼讓 Express 框架如此特別。本文將概述主要特性、展示一些 Express 應用的主要建構模塊(雖然此時你還沒有能測試它的開發環境)
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前置需求:</th>
-   <td>基本的電腦知識。 對<a href="/en-US/docs/Learn/Server-side/First_steps">伺服器端網站程式設計</a>的基本了解，特別是網站中<a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">客戶端 - 伺服器交互的機制</a>。</td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>提升對Express的了解、如何與Node搭配使用、提供的功能和Express應用的主要建構模塊。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">前置需求:</th>
+      <td>
+        基本的電腦知識。 對<a href="/en-US/docs/Learn/Server-side/First_steps"
+          >伺服器端網站程式設計</a
+        >的基本了解，特別是網站中<a
+          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          >客戶端 - 伺服器交互的機制</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        提升對Express的了解、如何與Node搭配使用、提供的功能和Express應用的主要建構模塊。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="什麼是Express和Node">什麼是Express和Node?</h2>
+## 什麼是 Express 和 Node?
 
-<p><a href="https://nodejs.org/">Node</a> (或者說<em>Node.js</em>) 是一個開源、跨平台和允許開發者使用<a href="/en-US/docs/Glossary/JavaScript">Javascript</a>創造伺服器端工具和應用的執行環境。運行的目的是為了能在瀏覽器外使用，例如：直接執行在電腦或伺服器上。所以該環境捨棄了瀏覽器限定的JavaScript APIs並增加更多傳統OS APIs的支援，例如：HTTP和檔案系統的程式庫。</p>
+[Node](https://nodejs.org/) (或者說*Node.js*) 是一個開源、跨平台和允許開發者使用[Javascript](/en-US/docs/Glossary/JavaScript)創造伺服器端工具和應用的執行環境。運行的目的是為了能在瀏覽器外使用，例如：直接執行在電腦或伺服器上。所以該環境捨棄了瀏覽器限定的 JavaScript APIs 並增加更多傳統 OS APIs 的支援，例如：HTTP 和檔案系統的程式庫。
 
-<p>從網站伺服器開發的觀點來看Node有幾項優點：</p>
+從網站伺服器開發的觀點來看 Node 有幾項優點：
 
-<ul>
- <li>高效能!Node 旨在提升生產率和網頁應用的可擴充性。而且它非常適合網站開發常見的問題，例如：即時網站應用</li>
- <li>使用舊版本的JavaScript進行程式編寫，這表示不用多花力氣在轉換瀏覽器和伺服器上的程式碼</li>
- <li>與其他傳統的Web伺服器語言（例如Python，PHP等）相比，JavaScript是一種相對新的程式語言，它受益於語言設計的改進。許多其他新的和流行的語言都可以編譯/轉換成JavaScript，因此你還可以使用CoffeeScript， ClojureScript，Scala，LiveScript等</li>
- <li>Node Package Manager(NPM) 提供數十萬個第三方套件，是最佳的依賴解決方案也可以用來自動化大部分構建工具鏈。</li>
- <li>它是可移植的，能夠在Windows, OS x, Linux, Solaris, FreeBSD, OpenBSD, WebOS和NonStop OS上執行。許多web主機提供方也支援使用Node，通常會提供特定的基礎設施和文件</li>
- <li>擁有非常活耀的第三方生態系統和開發者社群，許多人樂意提供幫助</li>
-</ul>
+- 高效能!Node 旨在提升生產率和網頁應用的可擴充性。而且它非常適合網站開發常見的問題，例如：即時網站應用
+- 使用舊版本的 JavaScript 進行程式編寫，這表示不用多花力氣在轉換瀏覽器和伺服器上的程式碼
+- 與其他傳統的 Web 伺服器語言（例如 Python，PHP 等）相比，JavaScript 是一種相對新的程式語言，它受益於語言設計的改進。許多其他新的和流行的語言都可以編譯/轉換成 JavaScript，因此你還可以使用 CoffeeScript， ClojureScript，Scala，LiveScript 等
+- Node Package Manager(NPM) 提供數十萬個第三方套件，是最佳的依賴解決方案也可以用來自動化大部分構建工具鏈。
+- 它是可移植的，能夠在 Windows, OS x, Linux, Solaris, FreeBSD, OpenBSD, WebOS 和 NonStop OS 上執行。許多 web 主機提供方也支援使用 Node，通常會提供特定的基礎設施和文件
+- 擁有非常活耀的第三方生態系統和開發者社群，許多人樂意提供幫助
 
-<p>你可以只用Node的HTTP模組創造一個簡單的web伺服器來回應任何請求，如下所示。此教學不會告訴建議的檔案名稱或如何執行該檔案 ;-)</p>
+你可以只用 Node 的 HTTP 模組創造一個簡單的 web 伺服器來回應任何請求，如下所示。此教學不會告訴建議的檔案名稱或如何執行該檔案 ;-)
 
-<p>這將創造一個伺服器並會監聽<code>http://127.0.0.1:8000/</code>上任何種類的HTTP請求，當接收到任何請求時回傳一個「Hello World」的純文字回應。</p>
+這將創造一個伺服器並會監聽`http://127.0.0.1:8000/`上任何種類的 HTTP 請求，當接收到任何請求時回傳一個「Hello World」的純文字回應。
 
-<pre class="brush: js">// 載入 HTTP 模組
+```js
+// 載入 HTTP 模組
 var http = require("http");
 
 // 創建 HTTP 伺服器並監聽8000 port
@@ -64,121 +70,116 @@ http.createServer(function(request, response) {
 }).listen(8000);
 
 // Print URL for accessing server
-console.log('Server running at http://127.0.0.1:8000/');</pre>
+console.log('Server running at http://127.0.0.1:8000/');
+```
 
-<p>Node並不原生支持其他常見的web開發任務，如果你想為不同的HTTP方法(例如：<code>GET</code>, <code>POST</code>, <code>DELETE</code>等)增加特定的處理、替不同的URL路徑提供靜態檔案、使用樣板或動態性的產生response，你需要自己完成相關的程式<strong>或者是</strong>避免重新造輪子 - 使用web框架！</p>
+Node 並不原生支持其他常見的 web 開發任務，如果你想為不同的 HTTP 方法(例如：`GET`, `POST`, `DELETE`等)增加特定的處理、替不同的 URL 路徑提供靜態檔案、使用樣板或動態性的產生 response，你需要自己完成相關的程式**或者是**避免重新造輪子 - 使用 web 框架！
 
-<p><a href="https://expressjs.com/">Express</a> 是最受歡迎的Node web框架，還是其他許多流行的<a href="https://expressjs.com/en/resources/frameworks.html">Node web框架</a>的底層庫，它提供：</p>
+[Express](https://expressjs.com/) 是最受歡迎的 Node web 框架，還是其他許多流行的[Node web 框架](https://expressjs.com/en/resources/frameworks.html)的底層庫，它提供：
 
-<ul>
- <li>替不同HTTP Method、不同URL路徑的requests編寫不同的處理方法</li>
- <li>透過整合「畫面」的渲染引擎來達到插入資料到樣板中產生response</li>
- <li>設定常見的web應用設定，例如：連線用的port和產生response的樣板位置</li>
- <li>在request的處理流程中增加額外的「中間層」進行處理</li>
-</ul>
+- 替不同 HTTP Method、不同 URL 路徑的 requests 編寫不同的處理方法
+- 透過整合「畫面」的渲染引擎來達到插入資料到樣板中產生 response
+- 設定常見的 web 應用設定，例如：連線用的 port 和產生 response 的樣板位置
+- 在 request 的處理流程中增加額外的「中間層」進行處理
 
-<p>雖然Express本身非常簡單，但開發者們已經創造相容的中間層套件來解決大部份web開發的問題，這些套件能處理cookies, sessions，登入，URL參數，POST資料，安全標頭等等，你能在<a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a>中找到這些套件的列表（以及其他流行的第三方套件）</p>
+雖然 Express 本身非常簡單，但開發者們已經創造相容的中間層套件來解決大部份 web 開發的問題，這些套件能處理 cookies, sessions，登入，URL 參數，POST 資料，安全標頭等等，你能在[Express Middleware](http://expressjs.com/en/resources/middleware.html)中找到這些套件的列表（以及其他流行的第三方套件）
 
-<div class="note">
-<p><strong>備註：</strong> 這種靈活性是一把雙刃劍。有一些中間層套件能解決大部份的問題或需求，但使用正確的套件有時會是一個問題。也沒有「正確的方法」來創建應用，你在網路上找到的範例也並非都是最佳解或是只有開發上所需要做的一小部份。</p>
-</div>
+> **備註：** 這種靈活性是一把雙刃劍。有一些中間層套件能解決大部份的問題或需求，但使用正確的套件有時會是一個問題。也沒有「正確的方法」來創建應用，你在網路上找到的範例也並非都是最佳解或是只有開發上所需要做的一小部份。
 
-<h2 id="歷史">歷史</h2>
+## 歷史
 
-<p>2009年Node在Linux平台上初次發佈. 2010年NPM套件管利器發佈, 2012年增加Windows的原生支援. 現在的LTS版本為Node v8.11.2，最新版本為Node v10.1.0。這只是它深厚歷史的一小片斷，欲知更多詳情請洽 <a href="https://en.wikipedia.org/wiki/Node.js#History">Wikipedia</a>。</p>
+2009 年 Node 在 Linux 平台上初次發佈. 2010 年 NPM 套件管利器發佈, 2012 年增加 Windows 的原生支援. 現在的 LTS 版本為 Node v8.11.2，最新版本為 Node v10.1.0。這只是它深厚歷史的一小片斷，欲知更多詳情請洽 [Wikipedia](https://en.wikipedia.org/wiki/Node.js#History)。
 
-<p>2010年11月Express初次發佈，現在的API版本為 4.16。你可以查閱<a href="https://expressjs.com/en/changelog/4x.html">更新紀錄</a>來了解此版本做了甚麼更改或是從<a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a>中了解詳細的歷史紀錄。</p>
+2010 年 11 月 Express 初次發佈，現在的 API 版本為 4.16。你可以查閱[更新紀錄](https://expressjs.com/en/changelog/4x.html)來了解此版本做了甚麼更改或是從[GitHub](https://github.com/expressjs/express/blob/master/History.md)中了解詳細的歷史紀錄。
 
-<h2 id="NodeExpress有多流行">Node/Express有多流行?</h2>
+## Node/Express 有多流行?
 
-<p>對於web 框架而言流行度很重要，這代表他會不會被繼續更新、文件、附加套件和技術支援方面有多少資源</p>
+對於 web 框架而言流行度很重要，這代表他會不會被繼續更新、文件、附加套件和技術支援方面有多少資源
 
-<p>現在沒有一個明確的指標來評斷伺服器端框架的流行度，雖然有 <a href="http://hotframeworks.com/">Hot Frameworks</a>透過計算GitHub的專案數量和StackOverflow的問題來衡量流行度。更好的問題是，Node和Express是否「夠流行」以避免成為不流行的平台。有沒有持續進步？需要時是否能得到幫助？能不能找到Express相關的工作？</p>
+現在沒有一個明確的指標來評斷伺服器端框架的流行度，雖然有 [Hot Frameworks](http://hotframeworks.com/)透過計算 GitHub 的專案數量和 StackOverflow 的問題來衡量流行度。更好的問題是，Node 和 Express 是否「夠流行」以避免成為不流行的平台。有沒有持續進步？需要時是否能得到幫助？能不能找到 Express 相關的工作？
 
-<p>從眾多使用Express的<a href="https://expressjs.com/en/resources/companies-using-express.html">公司</a>、貢獻程式碼的人數和那些提供免費/收費支援的人員來看，是的！Express是一個流行的框架。</p>
+從眾多使用 Express 的[公司](https://expressjs.com/en/resources/companies-using-express.html)、貢獻程式碼的人數和那些提供免費/收費支援的人員來看，是的！Express 是一個流行的框架。
 
-<h2 id="Is_Express_opinionated">Is Express opinionated?</h2>
+## Is Express opinionated?
 
-<p>Web 框架通常自稱為 "opinionated" 或 "unopinionated".</p>
+Web 框架通常自稱為 "opinionated" 或 "unopinionated".
 
-<p>Opinionated指的是那些有「正確」方法解決特定問題的框架。在特定的需求上他們通常能快速開發，因為正確的方法通常易懂且有良好的文件，然而在面對其他問題時則會失去靈活性。這類型的框架通常傾向於提供較少的選擇和套件來解決問題。</p>
+Opinionated 指的是那些有「正確」方法解決特定問題的框架。在特定的需求上他們通常能快速開發，因為正確的方法通常易懂且有良好的文件，然而在面對其他問題時則會失去靈活性。這類型的框架通常傾向於提供較少的選擇和套件來解決問題。
 
-<p>反過來說Unopinionated 框架，對於如何組合套件來解決問題尚有較少的限制，開發者可以更輕易的使用適當的套件來解決特定問題，儘管代價是你需要自己找到適合的套件。</p>
+反過來說 Unopinionated 框架，對於如何組合套件來解決問題尚有較少的限制，開發者可以更輕易的使用適當的套件來解決特定問題，儘管代價是你需要自己找到適合的套件。
 
-<p>Express是Unopinionated 框架，你可以在request處理流程中使用任何相容套件，使用單一或複數個檔案來建構應用，有時候甚至會覺得擁有太多選擇了。</p>
+Express 是 Unopinionated 框架，你可以在 request 處理流程中使用任何相容套件，使用單一或複數個檔案來建構應用，有時候甚至會覺得擁有太多選擇了。
 
-<h2 id="Express的程式碼長怎樣">Express的程式碼長怎樣?</h2>
+## Express 的程式碼長怎樣?
 
-<p>傳統的資料驅動網站中，web應用程式會等待來自瀏覽器(或其他客戶端)的HTTP Request，接收到Request後根據URL和可能夾帶的<code>POST</code>/<code>GET</code>資料來決定需要回應什麼動作，根據需要可能對資料庫進行讀寫或執行滿足Request所需的其他任務。web應用程式會回應Response給瀏覽器，通常是藉由插入檢所到的資料到HTML 模板中動態產生HTML頁面讓瀏覽器顯示。</p>
+傳統的資料驅動網站中，web 應用程式會等待來自瀏覽器(或其他客戶端)的 HTTP Request，接收到 Request 後根據 URL 和可能夾帶的`POST`/`GET`資料來決定需要回應什麼動作，根據需要可能對資料庫進行讀寫或執行滿足 Request 所需的其他任務。web 應用程式會回應 Response 給瀏覽器，通常是藉由插入檢所到的資料到 HTML 模板中動態產生 HTML 頁面讓瀏覽器顯示。
 
+Express provides methods to specify what function is called for a particular HTTP verb (`GET`, `POST`, `SET`, etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response. You can use Express middleware to add support for cookies, sessions, and users, getting `POST`/`GET` parameters, etc. You can use any database mechanism supported by Node (Express does not define any database-related behaviour).
 
+The following sections explain some of the common things you'll see when working with _Express_ and _Node_ code.
 
-<p>Express provides methods to specify what function is called for a particular HTTP verb (<code>GET</code>, <code>POST</code>, <code>SET</code>, etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response. You can use Express middleware to add support for cookies, sessions, and users, getting <code>POST</code>/<code>GET</code> parameters, etc. You can use any database mechanism supported by Node (Express does not define any database-related behaviour).</p>
+### Helloworld Express
 
-<p>The following sections explain some of the common things you'll see when working with <em>Express</em> and <em>Node</em> code.</p>
+First lets consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world.html) example (we discuss each part of this below, and in the following sections).
 
-<h3 id="Helloworld_Express">Helloworld Express</h3>
+> **備註：** If you have Node and Express already installed (or if you install them as shown in the [next article](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)), you can save this code in a text file called **app.js** and run it in a bash command prompt by calling:
+>
+> **`./node ./app.js`**
 
-<p>First lets consider the standard Express <a href="https://expressjs.com/en/starter/hello-world.html">Hello World</a> example (we discuss each part of this below, and in the following sections).</p>
-
-<div class="note">
-<p><strong>備註：</strong> If you have Node and Express already installed (or if you install them as shown in the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">next article</a>), you can save this code in a text file called <strong>app.js</strong> and run it in a bash command prompt by calling:   </p>
-
-<p><strong><code>./node ./app.js</code></strong></p>
-</div>
-
-<pre class="brush: js">var express = require('express');
+```js
+var express = require('express');
 var app = express();
 
-<strong>app.get('/', function(req, res) {
+app.get('/', function(req, res) {
   res.send('Hello World!');
-});</strong>
+});
 
 app.listen(3000, function() {
   console.log('Example app listening on port 3000!');
 });
-</pre>
+```
 
-<p>The first two lines <code>require()</code> (import) the express module and create an <a href="https://expressjs.com/en/4x/api.html#app">Express application</a>. This object, which is traditionally named <code>app</code>, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying <a href="https://expressjs.com/en/4x/api.html#app.settings.table">application settings</a> that control how the application behaves (e.g. the environment mode, whether route definitions are case sensitive, etc.)</p>
+The first two lines `require()` (import) the express module and create an [Express application](https://expressjs.com/en/4x/api.html#app). This object, which is traditionally named `app`, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying [application settings](https://expressjs.com/en/4x/api.html#app.settings.table) that control how the application behaves (e.g. the environment mode, whether route definitions are case sensitive, etc.)
 
-<p>The middle part of the code (the three lines starting with <code>app.get</code>) shows a <em>route definition</em>. The <code>app.get()</code> method specifies a callback function that will be invoked whenever there is an HTTP <code>GET</code> request with a path (<code>'/'</code>) relative to the site root. The callback function takes a request and a response object as arguments, and simply calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!"</p>
+The middle part of the code (the three lines starting with `app.get`) shows a _route definition_. The `app.get()` method specifies a callback function that will be invoked whenever there is an HTTP `GET` request with a path (`'/'`) relative to the site root. The callback function takes a request and a response object as arguments, and simply calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "Hello World!"
 
-<p>The final block starts up the server on port '3000' and prints a log comment to the console. With the server running, you could go to <code>localhost:3000</code> in your browser to see the example response returned.</p>
+The final block starts up the server on port '3000' and prints a log comment to the console. With the server running, you could go to `localhost:3000` in your browser to see the example response returned.
 
-<h3 id="Importing_and_creating_modules">Importing and creating modules</h3>
+### Importing and creating modules
 
-<p>A module is a JavaScript library/file that you can import into other code using Node's <code>require()</code> function. <em>Express</em> itself is a module, as are the middleware and database libraries that we use in our <em>Express</em> applications.</p>
+A module is a JavaScript library/file that you can import into other code using Node's `require()` function. _Express_ itself is a module, as are the middleware and database libraries that we use in our _Express_ applications.
 
-<p>The code below shows how we import a module by name, using the <em>Express</em> framework as an example. First we invoke the <code>require()</code> function, specifying the name of the module as a string (<code>'express'</code>), and calling the returned object to create an <a href="https://expressjs.com/en/4x/api.html#app">Express application</a>. We can then access the properties and functions of the application object.</p>
+The code below shows how we import a module by name, using the _Express_ framework as an example. First we invoke the `require()` function, specifying the name of the module as a string (`'express'`), and calling the returned object to create an [Express application](https://expressjs.com/en/4x/api.html#app). We can then access the properties and functions of the application object.
 
-<pre class="brush: js">var express = require('express');
+```js
+var express = require('express');
 var app = express();
-</pre>
+```
 
-<p>You can also create your own modules that can be imported in the same way.</p>
+You can also create your own modules that can be imported in the same way.
 
-<div class="note">
-<p><strong>備註：</strong> You will <em>want </em>to create your own modules, because this allows you to organise your code into managable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.</p>
-</div>
+> **備註：** You will _want_ to create your own modules, because this allows you to organise your code into managable parts — a monolithic single-file application is hard to understand and maintain. Using modules also helps you manage your namespace, because only the variables you explicitly export are imported when you use a module.
 
-<p>To make objects available outside of a module you just need to assign them to the <code>exports</code> object. For example, the <strong>square.js</strong> module below is a file that exports <code>area()</code> and <code>perimeter()</code> methods:</p>
+To make objects available outside of a module you just need to assign them to the `exports` object. For example, the **square.js** module below is a file that exports `area()` and `perimeter()` methods:
 
-<pre class="brush: js">exports.area = function(width) { return width * width; };
+```js
+exports.area = function(width) { return width * width; };
 exports.perimeter = function(width) { return 4 * width; };
-</pre>
+```
 
-<p>We can import this module using <code>require()</code>, and then call the exported method(s) as shown:</p>
+We can import this module using `require()`, and then call the exported method(s) as shown:
 
-<pre class="brush: js">var square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
-console.log('The area of a square with a width of 4 is ' + square.area(4));</pre>
+```js
+var square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
+console.log('The area of a square with a width of 4 is ' + square.area(4));
+```
 
-<div class="note">
-<p><strong>備註：</strong> You can also specify an absolute path to the module (or a name, as we did initially).</p>
-</div>
+> **備註：** You can also specify an absolute path to the module (or a name, as we did initially).
 
-<p>If you want to export a complete object in one assignment instead of building it one property at a time, assign it to <code>module.exports</code> as shown below (you can also do this to make the root of the exports object a constructor or other function):</p>
+If you want to export a complete object in one assignment instead of building it one property at a time, assign it to `module.exports` as shown below (you can also do this to make the root of the exports object a constructor or other function):
 
-<pre class="brush: js">module.exports = {
+```js
+module.exports = {
   area: function(width) {
     return width * width;
   },
@@ -187,67 +188,67 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
     return 4 * width;
   }
 };
-</pre>
+```
 
-<p>For a lot more information about modules see <a href="https://nodejs.org/api/modules.html#modules_modules">Modules</a> (Node API docs).</p>
+For a lot more information about modules see [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs).
 
-<h3 id="Using_asynchronous_APIs">Using asynchronous APIs</h3>
+### Using asynchronous APIs
 
-<p>JavaScript code frequently uses asynchronous rather than synchronous APIs for operations that may take some time to complete. A synchronous API is one in which each operation must complete before the next operation can start. For example, the following log functions are synchronous, and will print the text to the console in order (First, Second).</p>
+JavaScript code frequently uses asynchronous rather than synchronous APIs for operations that may take some time to complete. A synchronous API is one in which each operation must complete before the next operation can start. For example, the following log functions are synchronous, and will print the text to the console in order (First, Second).
 
-<pre class="brush: js">console.log('First');
+```js
+console.log('First');
 console.log('Second');
-</pre>
+```
 
-<p>By contrast, an asynchronous API is one in which the API will start an operation and immediately return (before the operation is complete). Once the operation finishes, the API will use some mechanism to perform additional operations. For example, the code below will print out "Second, First" because even though <code>setTimeout()</code> method is called first, and returns immediately, the operation doesn't complete for several seconds.</p>
+By contrast, an asynchronous API is one in which the API will start an operation and immediately return (before the operation is complete). Once the operation finishes, the API will use some mechanism to perform additional operations. For example, the code below will print out "Second, First" because even though `setTimeout()` method is called first, and returns immediately, the operation doesn't complete for several seconds.
 
-<pre class="brush: js">setTimeout(function() {
+```js
+setTimeout(function() {
    console.log('First');
    }, 3000);
 console.log('Second');
-</pre>
+```
 
-<p>Using non-blocking asynchronous APIs is even more important on Node than in the browser, because <em>Node</em> is a single threaded event-driven execution environment. "single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources, but it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not just the current request, but every other request being handled by your web application.</p>
+Using non-blocking asynchronous APIs is even more important on Node than in the browser, because _Node_ is a single threaded event-driven execution environment. "single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources, but it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not just the current request, but every other request being handled by your web application.
 
-<p>There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.</p>
+There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.
 
-<div class="note">
-<p><strong>備註：</strong> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order, because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <a href="http://callbackhell.com/">http://callbackhell.com/</a>), using a module like <a href="https://www.npmjs.com/package/async">async</a>, or even moving to ES6 features like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.</p>
-</div>
+> **備註：** Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order, because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or even moving to ES6 features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<div class="note">
-<p><strong>備註：</strong> A common convention for Node and Express is to use error-first callbacks. In this convention the first value in your <em>callback functions</em> is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: <a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js">The Node.js Way - Understanding Error-First Callbacks</a> (fredkschott.com).</p>
-</div>
+> **備註：** A common convention for Node and Express is to use error-first callbacks. In this convention the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js) (fredkschott.com).
 
-<h3 id="Creating_route_handlers">Creating route handlers</h3>
+### Creating route handlers
 
-<p>In our <em>Hello World</em> Express example (see above), we defined a (callback) route handler function for HTTP <code>GET</code> requests to the site root (<code>'/'</code>).</p>
+In our _Hello World_ Express example (see above), we defined a (callback) route handler function for HTTP `GET` requests to the site root (`'/'`).
 
-<pre class="brush: js">app.<strong>get</strong>('/', function(req, res) {
+```js
+app.get('/', function(req, res) {
   res.send('Hello World!');
 });
-</pre>
+```
 
-<p>The callback function takes a request and a response object as arguments. In this case the method simply calls <code><a href="https://expressjs.com/en/4x/api.html#res.send">send()</a></code> on the response to return the string "Hello World!" There are a <a href="https://expressjs.com/en/guide/routing.html#response-methods">number of other response methods</a> for ending the request/response cycle, for example you could call <code><a href="https://expressjs.com/en/4x/api.html#res.json">res.json()</a></code> to send a JSON response or <code><a href="https://expressjs.com/en/4x/api.html#res.sendFile">res.sendFile()</a></code> to send a file.</p>
+The callback function takes a request and a response object as arguments. In this case the method simply calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "Hello World!" There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle, for example you could call [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) to send a file.
 
-<div class="note">
-<p><strong>備註：</strong> You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.</p>
-</div>
+> **備註：** You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.
 
-<p>The <em>Express application</em> object also provides methods to define route handlers for all the other HTTP verbs, which are mostly used in exactly the same way: <code>post()</code>, <code>put()</code>, <code>delete()</code>, <code>options()</code>, <code>trace()</code>, <code>copy()</code>, <code>lock()</code>, <code>mkcol()</code>, <code>move()</code>, <code>purge()</code>, <code>propfind()</code>, <code>proppatch()</code>, <code>unlock()</code>, <code>report()</code>, <code>mkactivity()</code>, <code>checkout()</code>, <code>merge()</code>, <code>m-</code><code>search()</code>, <code>notify()</code>, <code>subscribe()</code>, <code>unsubscribe()</code>, <code>patch()</code>, <code>search()</code>, and <code>connect()</code>.</p>
+The _Express application_ object also provides methods to define route handlers for all the other HTTP verbs, which are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, ` m-``search() `, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
-<p>There is a special routing method, <code>app.all()</code>, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to <code>/secret</code> irrespective of the HTTP verb used (provided it is supported by the <a href="https://nodejs.org/api/http.html#http_http_methods">http module</a>).</p>
+There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/api/http.html#http_http_methods)).
 
-<pre class="brush: js">app.all('/secret', function(req, res, next) {
+```js
+app.all('/secret', function(req, res, next) {
   console.log('Accessing the secret section ...');
   next(); // pass control to the next handler
-});</pre>
+});
+```
 
-<p>Routes allow you to match particular patterns of characters in a URL, and extract some values from the URL and pass them as parameters to the route handler (as attributes of the request object passed as a parameter).</p>
+Routes allow you to match particular patterns of characters in a URL, and extract some values from the URL and pass them as parameters to the route handler (as attributes of the request object passed as a parameter).
 
-<p>Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g. a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of <em>/wiki/</em>). In <em>Express</em> this is achieved by using the <code><a href="http://expressjs.com/en/guide/routing.html#express-router">express.Router</a></code> object. For example, we can create our wiki route in a module named <strong>wiki.js</strong>, and then export the <code>Router</code> object, as shown below:</p>
+Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g. a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of _/wiki/_). In _Express_ this is achieved by using the [`express.Router`](http://expressjs.com/en/guide/routing.html#express-router) object. For example, we can create our wiki route in a module named **wiki.js**, and then export the `Router` object, as shown below:
 
-<pre class="brush: js">// wiki.js - Wiki route module
+```js
+// wiki.js - Wiki route module
 
 var express = require('express');
 var router = express.Router();
@@ -263,58 +264,58 @@ router.get('/about', function(req, res) {
 });
 
 module.exports = router;
-</pre>
+```
 
-<div class="note">
-<p><strong>備註：</strong> Adding routes to the <code>Router</code> object is just like adding routes to the <code>app</code> object (as shown previously).</p>
-</div>
+> **備註：** Adding routes to the `Router` object is just like adding routes to the `app` object (as shown previously).
 
-<p>To use the router in our main app file we would then <code>require()</code> the route module (<strong>wiki.js</strong>), then call <code>use()</code> on the <em>Express</em> application to add the Router to the middleware handling path. The two routes will then be accessible from <code>/wiki/</code> and <code>/wiki/about/</code>.</p>
+To use the router in our main app file we would then `require()` the route module (**wiki.js**), then call `use()` on the _Express_ application to add the Router to the middleware handling path. The two routes will then be accessible from `/wiki/` and `/wiki/about/`.
 
-<pre class="brush: js">var wiki = require('./wiki.js');
+```js
+var wiki = require('./wiki.js');
 // ...
-app.use('/wiki', wiki);</pre>
+app.use('/wiki', wiki);
+```
 
-<p>We'll show you a lot more about working with routes, and in particular about using the <code>Router</code>, later on in the linked section<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes"> Routes and controllers .</a></p>
+We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section[ Routes and controllers .](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
 
-<h3 id="Using_middleware">Using middleware</h3>
+### Using middleware
 
-<p>Middleware is used extensively in Express apps, for tasks from serving static files to error handling, to compressing HTTP responses. Whereas route functions end the HTTP request-response cycle by returning some response to the HTTP client, middleware functions <em>typically</em> perform some operation on the request or response and then call the next function in the "stack", which might be more middleware or a route handler. The order in which middleware is called is up to the app developer.</p>
+Middleware is used extensively in Express apps, for tasks from serving static files to error handling, to compressing HTTP responses. Whereas route functions end the HTTP request-response cycle by returning some response to the HTTP client, middleware functions _typically_ perform some operation on the request or response and then call the next function in the "stack", which might be more middleware or a route handler. The order in which middleware is called is up to the app developer.
 
-<div class="note">
-<p><strong>備註：</strong> The middleware can perform any operation, execute any code, make changes to the request and response object, and it can<em> also end the request-response cycle</em>. If it does not end the cycle then it must call <code>next()</code> to pass control to the next middleware function (or the request will be left hanging).</p>
-</div>
+> **備註：** The middleware can perform any operation, execute any code, make changes to the request and response object, and it can _also end the request-response cycle_. If it does not end the cycle then it must call `next()` to pass control to the next middleware function (or the request will be left hanging).
 
-<p>Most apps will use <em>third-party</em> middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request <code>POST</code> and JSON data, logging, etc. You can find a <a href="http://expressjs.com/en/resources/middleware.html">list of middleware packages maintained by the Express team</a> (which also includes other popular 3rd party packages). Other Express packages are available on the NPM package manager.</p>
+Most apps will use _third-party_ middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request `POST` and JSON data, logging, etc. You can find a [list of middleware packages maintained by the Express team](http://expressjs.com/en/resources/middleware.html) (which also includes other popular 3rd party packages). Other Express packages are available on the NPM package manager.
 
-<p>To use third party middleware you first need to install it into your app using NPM. For example, to install the <a href="http://expressjs.com/en/resources/middleware/morgan.html">morgan</a> HTTP request logger middleware, you'd do this:</p>
+To use third party middleware you first need to install it into your app using NPM. For example, to install the [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP request logger middleware, you'd do this:
 
-<pre class="brush: bash"><code>$ npm install morgan
-</code></pre>
+```bash
+$ npm install morgan
+```
 
-<p>You could then call <code>use()</code> on the <em>Express application object</em> to add the middleware to the stack:</p>
+You could then call `use()` on the _Express application object_ to add the middleware to the stack:
 
-<pre class="brush: js">var express = require('express');
-<strong>var logger = require('morgan');</strong>
+```js
+var express = require('express');
+var logger = require('morgan');
 var app = express();
-<strong>app.use(logger('dev'));</strong>
-...</pre>
+app.use(logger('dev'));
+...
+```
 
-<div class="note">
-<p><strong>備註：</strong> Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.</p>
-</div>
+> **備註：** Middleware and routing functions are called in the order that they are declared. For some middleware the order is important (for example if session middleware depends on cookie middleware, then the cookie handler must be added first). It is almost always the case that middleware is called before setting routes, or your route handlers will not have access to functionality added by your middleware.
 
-<p>You can write your own middleware functions, and you are likely to have to do so (if only to create error handling code). The <strong>only</strong> difference between a middleware function and a route handler callback is that middleware functions have a third argument <code>next</code>, which middleware functions are expected to call if they are not that which completes the request cycle (when the middleware function is called, this contains the <em>next</em> function that must be called).</p>
+You can write your own middleware functions, and you are likely to have to do so (if only to create error handling code). The **only** difference between a middleware function and a route handler callback is that middleware functions have a third argument `next`, which middleware functions are expected to call if they are not that which completes the request cycle (when the middleware function is called, this contains the _next_ function that must be called).
 
-<p>You can add a middleware function to the processing chain with either <code>app.use()</code> or <code>app.add()</code>, depending on whether you want to apply the middleware to all responses or to responses with a particular HTTP verb (<code>GET</code>, <code>POST</code>, etc). You specify routes the same in both cases, though the route is optional when calling <strong>app.use()</strong>.</p>
+You can add a middleware function to the processing chain with either `app.use()` or `app.add()`, depending on whether you want to apply the middleware to all responses or to responses with a particular HTTP verb (`GET`, `POST`, etc). You specify routes the same in both cases, though the route is optional when calling **app.use()**.
 
-<p>The example below shows how you can add the middleware function using both methods, and with/without a route.</p>
+The example below shows how you can add the middleware function using both methods, and with/without a route.
 
-<pre class="brush: js">var express = require('express');
+```js
+var express = require('express');
 var app = express();
 
 // An example middleware function
-var a_middleware_function = function(req, res, <em>next</em>) {
+var a_middleware_function = function(req, res, next) {
   // ... perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
@@ -328,85 +329,88 @@ app.use('/someroute', a_middleware_function);
 // A middleware function added for a specific HTTP verb and route
 app.get('/', a_middleware_function);
 
-app.listen(3000);</pre>
+app.listen(3000);
+```
 
-<div class="note">
-<p><strong>備註：</strong> Above we declare the middleware function separately and then set it as the callback. In our previous route handler function we declared the callback function when it was used. In JavaScript, either approach is valid.</p>
-</div>
+> **備註：** Above we declare the middleware function separately and then set it as the callback. In our previous route handler function we declared the callback function when it was used. In JavaScript, either approach is valid.
 
-<p>The Express documentation has a lot more excellent documentation about <a href="https://expressjs.com/en/guide/using-middleware.html">using</a> and <a href="http://expressjs.com/en/guide/writing-middleware.html">writing</a> Express middleware.</p>
+The Express documentation has a lot more excellent documentation about [using](https://expressjs.com/en/guide/using-middleware.html) and [writing](http://expressjs.com/en/guide/writing-middleware.html) Express middleware.
 
-<h3 id="Serving_static_files">Serving static files</h3>
+### Serving static files
 
-<p>You can use the <a href="http://expressjs.com/en/4x/api.html#express.static">express.static</a> middleware to serve static files, including your images, CSS and JavaScript (<code>static()</code> is the only middleware function that is actually <strong>part</strong> of <em>Express</em>). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '<strong>public'</strong> at the same level as where you call node:</p>
+You can use the [express.static](http://expressjs.com/en/4x/api.html#express.static) middleware to serve static files, including your images, CSS and JavaScript (`static()` is the only middleware function that is actually **part** of _Express_). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '**public'** at the same level as where you call node:
 
-<pre class="brush: js">app.use(express.static('public'));
-</pre>
+```js
+app.use(express.static('public'));
+```
 
-<p>Any files in the public directory are served by adding their filename (<em>relative</em> to the base "public" directory) to the base URL. So for example:</p>
+Any files in the public directory are served by adding their filename (_relative_ to the base "public" directory) to the base URL. So for example:
 
-<pre><code>http://localhost:3000/images/dog.jpg
+```plain
+http://localhost:3000/images/dog.jpg
 http://localhost:3000/css/style.css
 http://localhost:3000/js/app.js
 http://localhost:3000/about.html
-</code></pre>
+```
 
-<p>You can call <code>static()</code> multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will simply be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).</p>
+You can call `static()` multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will simply be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).
 
-<pre class="brush: js">app.use(express.static('public'));
+```js
+app.use(express.static('public'));
 app.use(express.static('media'));
-</pre>
+```
 
-<p>You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we <a href="http://expressjs.com/en/4x/api.html#app.use">specify a mount path</a> so that the files are loaded with the prefix "/media":</p>
+You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we [specify a mount path](http://expressjs.com/en/4x/api.html#app.use) so that the files are loaded with the prefix "/media":
 
-<pre class="brush: js">app.use('/media', express.static('public'));
-</pre>
+```js
+app.use('/media', express.static('public'));
+```
 
-<p>Now, you can load the files that are in the <code>public</code> directory from the <code>/media</code> path prefix.</p>
+Now, you can load the files that are in the `public` directory from the `/media` path prefix.
 
-<pre><code>http://localhost:3000/media/images/dog.jpg
+```plain
+http://localhost:3000/media/images/dog.jpg
 http://localhost:3000/media/video/cat.mp4
-http://localhost:3000/media/cry.mp3</code>
-</pre>
+http://localhost:3000/media/cry.mp3
+```
 
-<p>For more information, see <a href="Serving static files in Express">Serving static files in Express</a>.</p>
+For more information, see [Serving static files in Express](<Serving static files in Express>).
 
-<h3 id="Handling_errors">Handling errors</h3>
+### Handling errors
 
-<p>Errors are handled by one or more special middleware functions that have four arguments, instead of the usual three: <code>(err, req, res, next)</code>. For example:</p>
+Errors are handled by one or more special middleware functions that have four arguments, instead of the usual three: `(err, req, res, next)`. For example:
 
-<pre class="brush: js">app.use(function(err, req, res, next) {
+```js
+app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
-</pre>
+```
 
-<p>These can return any content required, but must be called after all other <code>app.use()</code> and routes calls so that they are the last middleware in the request handling process!</p>
+These can return any content required, but must be called after all other `app.use()` and routes calls so that they are the last middleware in the request handling process!
 
-<p>Express comes with a built-in error handler, which takes care of any remaining errors that might be encountered in the app. This default error-handling middleware function is added at the end of the middleware function stack. If you pass an error to <code>next()</code> and you do not handle it in an error handler, it will be handled by the built-in error handler; the error will be written to the client with the stack trace.</p>
+Express comes with a built-in error handler, which takes care of any remaining errors that might be encountered in the app. This default error-handling middleware function is added at the end of the middleware function stack. If you pass an error to `next()` and you do not handle it in an error handler, it will be handled by the built-in error handler; the error will be written to the client with the stack trace.
 
-<div class="note">
-<p><strong>Note:</strong> The stack trace is not included in the production environment. To run it in production mode you need to set the the environment variable <code>NODE_ENV</code> to '<code>production'</code>.</p>
-</div>
+> **備註：** The stack trace is not included in the production environment. To run it in production mode you need to set the the environment variable `NODE_ENV` to '`production'`.
 
-<div class="note">
-<p><strong>Note:</strong> HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so. For more information see the <a href="http://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses">FAQ</a>.</p>
-</div>
+> **備註：** HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so. For more information see the [FAQ](http://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses).
 
-<p>For more information see <a href="http://expressjs.com/en/guide/error-handling.html">Error handling</a> (Express docs).</p>
+For more information see [Error handling](http://expressjs.com/en/guide/error-handling.html) (Express docs).
 
-<h3 id="Using_databases">Using databases</h3>
+### Using databases
 
-<p><em>Express</em> apps can use any database mechanism supported by <em>Node</em> (<em>Express</em> itself doesn't define any specific additional behaviour/requirements for database management). There are many options, including PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.</p>
+_Express_ apps can use any database mechanism supported by _Node_ (_Express_ itself doesn't define any specific additional behaviour/requirements for database management). There are many options, including PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.
 
-<p>In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:</p>
+In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:
 
-<pre class="brush: bash"><code>$ npm install mongodb
-</code></pre>
+```bash
+$ npm install mongodb
+```
 
-<p>The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.</p>
+The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
 
-<pre class="brush: js">//this works with older versions of  mongodb version ~ 2.2.33
+```js
+//this works with older versions of  mongodb version ~ 2.2.33
 var MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
@@ -432,25 +436,20 @@ MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
      client.close();
    });
 }
-</pre>
+```
 
+Another popular approach is to access your database indirectly, via an Object Relational Mapper ("ORM"). In this approach you define your data as "objects" or "models" and the ORM maps these through to the underlying database format. This approach has the benefit that as a developer you can continue to think in terms of JavaScript objects rather than database semantics, and that there is an obvious place to perform validation and checking of incoming data. We'll talk more about databases in a later article.
 
+For more information see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
 
+### Rendering data (views)
 
+Template engines (referred to as "view engines" by _Express_) allow you to specify the _structure_ of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for [a number of template engines](https://github.com/expressjs/express/wiki#template-engines), and there is a useful comparison of the more popular engines here: [Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More](https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/).
 
+In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)
 
-
-<p>Another popular approach is to access your database indirectly, via an Object Relational Mapper ("ORM"). In this approach you define your data as "objects" or "models" and the ORM maps these through to the underlying database format. This approach has the benefit that as a developer you can continue to think in terms of JavaScript objects rather than database semantics, and that there is an obvious place to perform validation and checking of incoming data. We'll talk more about databases in a later article.</p>
-
-<p>For more information see <a href="https://expressjs.com/en/guide/database-integration.html">Database integration</a> (Express docs).</p>
-
-<h3 id="Rendering_data_(views)">Rendering data (views)</h3>
-
-<p>Template engines (referred to as "view engines" by <em>Express</em>) allow you to specify the <em>structure</em> of an output document in a template, using placeholders for data that will be filled in when a page is generated. Templates are often used to create HTML, but can also create other types of documents. Express has support for <a href="https://github.com/expressjs/express/wiki#template-engines">a number of template engines</a>, and there is a useful comparison of the more popular engines here: <a href="https://strongloop.com/strongblog/compare-javascript-templates-jade-mustache-dust/">Comparing JavaScript Templating Engines: Jade, Mustache, Dust and More</a>.</p>
-
-<p>In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)</p>
-
-<pre class="brush: js">var express = require('express');
+```js
+var express = require('express');
 var app = express();
 
 // Set directory to contain the templates ('views')
@@ -458,59 +457,54 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Set view engine to use, in this case 'some_template_engine_name'
 app.set('view engine', 'some_template_engine_name');
-</pre>
+```
 
-<p>The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.&lt;template_extension&gt;" that contains placeholders for data variables named 'title' and "message", you would call <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> in a route handler function to create and send the HTML response:</p>
+The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.\<template_extension>" that contains placeholders for data variables named 'title' and "message", you would call [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) in a route handler function to create and send the HTML response:
 
-<pre class="brush: js">app.get('/', function(req, res) {
+```js
+app.get('/', function(req, res) {
   res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
-});</pre>
+});
+```
 
-<p>For more information see <a href="http://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a> (Express docs).</p>
+For more information see [Using template engines with Express](http://expressjs.com/en/guide/using-template-engines.html) (Express docs).
 
-<h3 id="File_structure">File structure</h3>
+### File structure
 
-<p>Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole <em>Express</em> application in one file, typically it makes sense to split your application into files based on function (e.g. account management, blogs, discussion boards) and architectural problem domain (e.g. model, view or controller if you happen to be using an <a href="/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC architecture</a>).</p>
+Express makes no assumptions in terms of structure or what components you use. Routes, views, static files, and other application-specific logic can live in any number of files with any directory structure. While it is perfectly possible to have the whole _Express_ application in one file, typically it makes sense to split your application into files based on function (e.g. account management, blogs, discussion boards) and architectural problem domain (e.g. model, view or controller if you happen to be using an [MVC architecture](/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)).
 
-<p>In a later topic we'll use the <em>Express Application Generator</em>, which creates a modular app skeleton that we can easily extend for creating web applications.</p>
+In a later topic we'll use the _Express Application Generator_, which creates a modular app skeleton that we can easily extend for creating web applications.
 
-<ul>
-</ul>
+## 總結
 
-<h2 id="總結">總結</h2>
+恭喜，您已完成 Express / Node 之旅的第一步！您現在應該了解 Express 和 Node 的主要優點，以及 Express 應用程序的主要部分（路由，中間件，錯誤處理和模板代碼）。您還應該明白，Express 是一個不固執己見的框架，您將這些組件組合在一起的方式以及您使用的函式庫，在很大程度上取決於您！
 
-<p>恭喜，您已完成 Express / Node之旅的第一步！您現在應該了解 Express 和 Node 的主要優點，以及 Express 應用程序的主要部分（路由，中間件，錯誤處理和模板代碼）。您還應該明白，Express 是一個不固執己見的框架，您將這些組件組合在一起的方式以及您使用的函式庫，在很大程度上取決於您！</p>
+當然，Express 是一個非常輕量級的 Web 應用程序框架，它的許多好處和潛力來自第三方函式庫和功能。我們將在以下文章中更詳細地介紹這些內容。在下一篇文章中，我們將介紹如何設置 Node 開發環境，以便您可以開始查看一些 Express 代碼。
 
-<p>當然，Express是一個非常輕量級的 Web 應用程序框架，它的許多好處和潛力來自第三方函式庫和功能。我們將在以下文章中更詳細地介紹這些內容。在下一篇文章中，我們將介紹如何設置 Node 開發環境，以便您可以開始查看一些 Express 代碼。</p>
+## See also
 
-<h2 id="See_also">See also</h2>
+- [Venkat.R - Manage Multiple Node versions](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)
+- [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
+- [Express](https://expressjs.com/) (home page)
+- [Basic routing](http://expressjs.com/en/starter/basic-routing.html) (Express docs)
+- [Routing guide](http://expressjs.com/en/guide/routing.html) (Express docs)
+- [Using template engines with Express](http://expressjs.com/en/guide/using-template-engines.html) (Express docs)
+- [Using middleware](https://expressjs.com/en/guide/using-middleware.html) (Express docs)
+- [Writing middleware for use in Express apps](http://expressjs.com/en/guide/writing-middleware.html) (Express docs)
+- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
+- [Serving static files in Express](http://expressjs.com/en/starter/static-files.html) (Express docs)
+- [Error handling](http://expressjs.com/en/guide/error-handling.html) (Express docs)
 
-<ul>
- <li><a href="https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44">Venkat.R - Manage Multiple Node versions</a></li>
- <li><a href="https://nodejs.org/api/modules.html#modules_modules">Modules</a> (Node API docs)</li>
- <li><a href="https://expressjs.com/">Express</a> (home page)</li>
- <li><a href="http://expressjs.com/en/starter/basic-routing.html">Basic routing</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/routing.html">Routing guide</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/using-template-engines.html">Using template engines with Express</a> (Express docs)</li>
- <li><a href="https://expressjs.com/en/guide/using-middleware.html">Using middleware</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/writing-middleware.html">Writing middleware for use in Express apps</a> (Express docs)</li>
- <li><a href="https://expressjs.com/en/guide/database-integration.html">Database integration</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/starter/static-files.html">Serving static files in Express</a> (Express docs)</li>
- <li><a href="http://expressjs.com/en/guide/error-handling.html">Error handling</a> (Express docs)</li>
-</ul>
+{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
-<div>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</div>
+## In this module
 
-<h2 id="In_this_module">In this module</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
-</ul>
+- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)

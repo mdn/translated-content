@@ -3,380 +3,380 @@ title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
 translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
-<div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}</div>
-
-<p>現在你已經了解Express的目的了，接下來繼續說明如何設定和測試 Windows、Linux (Ubuntu)和Mac OS X上的Node/Express開發環境。不管你用的是什麼作業系統，你都能在本文中找到開發Express應用的入門需知。</p>
+現在你已經了解 Express 的目的了，接下來繼續說明如何設定和測試 Windows、Linux (Ubuntu)和 Mac OS X 上的 Node/Express 開發環境。不管你用的是什麼作業系統，你都能在本文中找到開發 Express 應用的入門需知。
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前置需求:</th>
-   <td>了解如何開啟terminal / command line. 了解如何在開發系統上安裝套件。</td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>在你的電腦上設定Express(X.XX)開發環境。</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">前置需求:</th>
+      <td>
+        了解如何開啟terminal / command line. 了解如何在開發系統上安裝套件。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>在你的電腦上設定Express(X.XX)開發環境。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Express_開發環境概覽">Express 開發環境概覽</h2>
+## Express 開發環境概覽
 
-<p>為了使你能快速的開發web應用，<em>Node</em> 和 <em>Express</em> 非常容易安裝，這個部分說明哪些工具是需要的、在Ubuntu、macOS和Windows中安裝Node和Express的最簡單方法、展示如何測試安裝成功與否。</p>
+為了使你能快速的開發 web 應用，_Node_ 和 _Express_ 非常容易安裝，這個部分說明哪些工具是需要的、在 Ubuntu、macOS 和 Windows 中安裝 Node 和 Express 的最簡單方法、展示如何測試安裝成功與否。
 
-<h3 id="什麼是Express開發環境">什麼是Express開發環境?</h3>
+### 什麼是 Express 開發環境?
 
-<p><em>Express</em> 開發環境包含 <em>Nodejs、</em><em>NPM </em>套件管理器的安裝, 還有 <em>Express Application </em>產生器(可選)<em>。</em></p>
+_Express_ 開發環境包含 _Nodejs、NPM_ 套件管理器的安裝, 還有 _Express Application_ 產生器(可選)。
 
-<p><em>Node </em>和 <em>NPM</em> 套件管理器會從準備好的 binary package、安裝檔、 作業系統的套件管理器或是從源檔一起安裝。接著 <em>Express </em>會透過 NPM 進行安裝，成為你所有個別 Express web 應用的依賴項(以及其他函式庫，如模板引擎，資料庫驅動程式，身份驗證中間層，用於提供靜態文件的中間件等)</p>
+_Node_ 和 _NPM_ 套件管理器會從準備好的 binary package、安裝檔、 作業系統的套件管理器或是從源檔一起安裝。接著 _Express_ 會透過 NPM 進行安裝，成為你所有個別 Express web 應用的依賴項(以及其他函式庫，如模板引擎，資料庫驅動程式，身份驗證中間層，用於提供靜態文件的中間件等)
 
-<p>NPM 也可用來安裝 Express 應用程式產生器(全域用)，一個方便的工具幫助你創造符合 <a href="/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC模式</a>的 Express web app 骨架。你不一定要使用應用程式產生器，因為每個Express應用程式不需要擁有同樣的檔案結構或依賴項。但為了專注於學習本身以及習慣模組化架構，我們會在接下來的教學中使用它。</p>
+NPM 也可用來安裝 Express 應用程式產生器(全域用)，一個方便的工具幫助你創造符合 [MVC 模式](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)的 Express web app 骨架。你不一定要使用應用程式產生器，因為每個 Express 應用程式不需要擁有同樣的檔案結構或依賴項。但為了專注於學習本身以及習慣模組化架構，我們會在接下來的教學中使用它。
 
-<div class="note">
-<p><strong>備註：</strong> 與其他不包含單獨的web開發伺服器的Web框架不同。 在Node / Express中，Web應用程式創建並運行自己的Web伺服器！</p>
-</div>
+> **備註：** 與其他不包含單獨的 web 開發伺服器的 Web 框架不同。 在 Node / Express 中，Web 應用程式創建並運行自己的 Web 伺服器！
 
-<p>典型的開發環境還包含其他工具，例如：編輯程式碼使用的<a href="/en-US/docs/Learn/Common_questions/Available_text_editors">文字編輯器</a>、IDE，進行版本控置管理不同版本程式碼的<a href="/zh-TW/docs/Glossary/Git">Git</a>。這邊假設你已經有這種工具了(尤其是文字編輯器)</p>
+典型的開發環境還包含其他工具，例如：編輯程式碼使用的[文字編輯器](/en-US/docs/Learn/Common_questions/Available_text_editors)、IDE，進行版本控置管理不同版本程式碼的[Git](/zh-TW/docs/Glossary/Git)。這邊假設你已經有這種工具了(尤其是文字編輯器)
 
-<h3 id="哪些作業系統有支援">哪些作業系統有支援?</h3>
+### 哪些作業系統有支援?
 
-<p>Node 可以執行在 Windows、macOS、各種 Linux、Docker 等等(nodejs 的<a href="https://nodejs.org/en/download/">下載</a>頁面有完整的列表)，在開發階段中個人電腦應該都有足夠的效能來執行 Node 。Express 執行在 Node 環境中，所以也能所有有安裝Node的平台上執行。</p>
+Node 可以執行在 Windows、macOS、各種 Linux、Docker 等等(nodejs 的[下載](https://nodejs.org/en/download/)頁面有完整的列表)，在開發階段中個人電腦應該都有足夠的效能來執行 Node 。Express 執行在 Node 環境中，所以也能所有有安裝 Node 的平台上執行。
 
-<p>在這份教學中我們提供 Windows、macOS 和 Ubuntu Linux 的 Node 安裝教學。</p>
+在這份教學中我們提供 Windows、macOS 和 Ubuntu Linux 的 Node 安裝教學。
 
-<h3 id="該用什麼版本的_NodeExpress">該用什麼版本的 Node/Express?</h3>
+### 該用什麼版本的 Node/Express?
 
-<p>Node 有許多<a href="https://nodejs.org/en/blog/release/">版本</a>，更新的版本代表著 bug 的修復、支援更新版本的 ECMAScript(JavaScript)標準和更好的 Node APIs 。</p>
+Node 有許多[版本](https://nodejs.org/en/blog/release/)，更新的版本代表著 bug 的修復、支援更新版本的 ECMAScript(JavaScript)標準和更好的 Node APIs 。
 
-<p>基本上你應該使用最新的 LTS 版本(<em>long-term supported，</em>長期維護版)。這種版本比『Current』版本更穩定而且還擁有最新的功能及持續性的更新維護。除非LTS不支援你需要的功能才使用『Current』版本。</p>
+基本上你應該使用最新的 LTS 版本(*long-term supported，*長期維護版)。這種版本比『Current』版本更穩定而且還擁有最新的功能及持續性的更新維護。除非 LTS 不支援你需要的功能才使用『Current』版本。
 
-<p>而 Express ？永遠使用最新版！</p>
+而 Express ？永遠使用最新版！
 
-<h3 id="關於資料庫和其他依賴項呢">關於資料庫和其他依賴項呢?</h3>
+### 關於資料庫和其他依賴項呢?
 
-<p>諸如資料庫、模版引擎、驗證引擎等等都屬於應用程式的一部分，這些依賴項會透過NPM導入應用程式環境中，在後續的章節將會進一步探討。</p>
+諸如資料庫、模版引擎、驗證引擎等等都屬於應用程式的一部分，這些依賴項會透過 NPM 導入應用程式環境中，在後續的章節將會進一步探討。
 
-<h2 id="安裝Node">安裝Node</h2>
+## 安裝 Node
 
-<p>為了使用Express，首先要在你的電腦上安裝Node和<a href="https://docs.npmjs.com/">Node Package Manager (NPM)</a>。接下來用最簡單的方法在 Ubuntu Linux 16.04、 macOS和 Windows 10上安裝Nodejs的 Long Term Supported (LTS)版本吧</p>
+為了使用 Express，首先要在你的電腦上安裝 Node 和[Node Package Manager (NPM)](https://docs.npmjs.com/)。接下來用最簡單的方法在 Ubuntu Linux 16.04、 macOS 和 Windows 10 上安裝 Nodejs 的 Long Term Supported (LTS)版本吧
 
-<div class="note">
-<p><strong>備註：</strong> 以下的部分用最簡單的方法在上述的作業系統中安裝Node和NPM。如果你使用其他作業系統或想看看其他平台的安裝方式，請查閱<a href="https://nodejs.org/en/download/package-manager/">透過套件管理器安裝Node.js</a> (nodejs.org)。</p>
-</div>
+> **備註：** 以下的部分用最簡單的方法在上述的作業系統中安裝 Node 和 NPM。如果你使用其他作業系統或想看看其他平台的安裝方式，請查閱[透過套件管理器安裝 Node.js](https://nodejs.org/en/download/package-manager/) (nodejs.org)。
 
-<h3 id="Windows_和macOS">Windows 和macOS</h3>
+### Windows 和 macOS
 
-<p>直接使用安裝檔吧！</p>
+直接使用安裝檔吧！
 
-<ol>
- <li>下載需要的安裝檔：
-  <ol>
-   <li>開啟 <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
-   <li>對於大部分的使用者來說，直接下載LTS版本</li>
-  </ol>
- </li>
- <li>下載完成後雙擊安裝檔，並照著安裝流程繼續。</li>
-</ol>
+1.  下載需要的安裝檔：
 
-<h3 id="Ubuntu_16.04">Ubuntu 16.04</h3>
+    1.  開啟 <https://nodejs.org/en/>
+    2.  對於大部分的使用者來說，直接下載 LTS 版本
 
-<p>安裝Node 8.x LTS版本最簡單的方法是使用<a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">套件管理器</a>，只要在terminal上執行兩行指令</p>
+2.  下載完成後雙擊安裝檔，並照著安裝流程繼續。
 
-<pre class="brush: bash notranslate"><code>curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs</code>
+### Ubuntu 16.04
 
-</pre>
+安裝 Node 8.x LTS 版本最簡單的方法是使用[套件管理器](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)，只要在 terminal 上執行兩行指令
 
-<div class="warning">
-<p><strong>警告：</strong> 不要直接從普通的Ubuntu repositories 安裝，那邊只有很舊的版本。</p>
-</div>
+```bash
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
 
-<h3 id="測試_Nodejs_和NPM_的安裝">測試 Nodejs 和NPM 的安裝</h3>
+> **警告：** 不要直接從普通的 Ubuntu repositories 安裝，那邊只有很舊的版本。
 
-<p>測試Node安裝最簡單的方法是在terminal/command上執行"version"這個指令，它會顯示當前的Node版本:</p>
+### 測試 Nodejs 和 NPM 的安裝
 
-<pre class="brush: bash notranslate">&gt;node -v
-v8.9.4</pre>
+測試 Node 安裝最簡單的方法是在 terminal/command 上執行"version"這個指令，它會顯示當前的 Node 版本:
 
-<p>NPM應該會隨著Node一起安裝，可以用相同的方法進行測試:</p>
+```bash
+>node -v
+v8.9.4
+```
 
-<pre class="brush: bash notranslate">&gt;npm -v
-5.6.0</pre>
+NPM 應該會隨著 Node 一起安裝，可以用相同的方法進行測試:
 
-<p>接著用稍為令人興奮的方法來測試吧！讓我們創件一個非常基本的『純Node』伺服器，當你開啟正確的網頁時它會在瀏覽器上顯示"Hello World"</p>
+```bash
+>npm -v
+5.6.0
+```
 
-<ol>
- <li>複製以下的文字到名為<strong>hellonode.js</strong>的檔案中，目前我們只用到Node而已。
+接著用稍為令人興奮的方法來測試吧！讓我們創件一個非常基本的『純 Node』伺服器，當你開啟正確的網頁時它會在瀏覽器上顯示"Hello World"
 
-  <pre class="brush: js notranslate">//載入HTTP模組
-var http = require("http");
+1.  複製以下的文字到名為**hellonode.js**的檔案中，目前我們只用到 Node 而已。
 
-//創建HTTP 伺服器並監聽8000埠
-http.createServer(function (request, response) {
+    ```js
+    //載入HTTP模組
+    var http = require("http");
 
-   // Set the response HTTP header with HTTP status and Content type
-   response.writeHead(200, {'Content-Type': 'text/plain'});
+    //創建HTTP 伺服器並監聽8000埠
+    http.createServer(function (request, response) {
 
-   // Send the response body "Hello World"
-   response.end('Hello World\n');
-}).listen(8000);
+       // Set the response HTTP header with HTTP status and Content type
+       response.writeHead(200, {'Content-Type': 'text/plain'});
 
-// Print URL for accessing server
-console.log('Server running at http://127.0.0.1:8000/')
-</pre>
+       // Send the response body "Hello World"
+       response.end('Hello World\n');
+    }).listen(8000);
 
-  <p>這段程式載入『http』模組，並創建一個伺服器 (<code>createServer()</code>，並在8000埠上監聽HTTP requests。 The script then prints a message to the console about what browser URL you can use to test the server. The <code>createServer()</code> function takes as an argument a callback function that will be invoked when an HTTP request is received — this simply returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".</p>
- </li>
- <li>
-  <div class="note">
-  <p><strong>備註：</strong> Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!</p>
-  </div>
- </li>
- <li>Start the server by navigating into the same directory as your <code>hellonode.js</code> file in your command prompt, and calling <code>node</code> along with the script name, like so:
-  <pre class="brush: bash notranslate">&gt;node hellonode.js
-Server running at http://127.0.0.1:8000/
-</pre>
- </li>
- <li>Navigate to the URL (<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>). If everything is working, the browser should simply display the string "Hello World".</li>
-</ol>
+    // Print URL for accessing server
+    console.log('Server running at http://127.0.0.1:8000/')
+    ```
 
-<h2 id="Using_NPM">Using NPM</h2>
+    這段程式載入『http』模組，並創建一個伺服器 (`createServer()`，並在 8000 埠上監聽 HTTP requests。 The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this simply returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
 
-<p>Next to <em>Node</em> itself, <a href="https://docs.npmjs.com/">NPM</a> is the most important tool for working with<em> Node </em>applications. NPM is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process. </p>
+2.  > **備註：** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
+3.  Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
-<div class="note">
-<p><strong>備註：</strong> From Node's perspective, <em>Express</em> is just another package that you need to install using NPM and then require in your own code.</p>
-</div>
+    ```bash
+    >node hellonode.js
+    Server running at http://127.0.0.1:8000/
+    ```
 
-<p>You can manually use NPM to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named <a href="https://docs.npmjs.com/files/package.json">package.json</a>. This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of <em>Node</em> it can work with, etc. The <strong>package.json</strong> file should contain everything NPM needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm respository and make it available for other users).</p>
+4.  Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World".
 
-<h3 id="Adding_dependencies">Adding dependencies</h3>
+## Using NPM
 
-<p>The following steps show how you can use NPM to download a package, save it into the project dependencies, and then require it in a Node application.</p>
+Next to _Node_ itself, [NPM](https://docs.npmjs.com/) is the most important tool for working with _Node_ applications. NPM is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process.
 
-<div class="note">
-<p><strong>備註：</strong> Here we show the instructions to fetch and install the <em>Express</em> package. Later on we'll show how this package, and others, are already specified for us using the <em>Express Application Generator</em>. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.</p>
-</div>
+> **備註：** From Node's perspective, _Express_ is just another package that you need to install using NPM and then require in your own code.
 
-<ol>
- <li>First create a directory for your new application and navigate into it:
-  <pre class="brush: bash notranslate">mkdir myapp
-cd myapp</pre>
- </li>
- <li>Use the npm <code>init</code> command to create a <strong>package.json</strong> file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is <strong>index.js</strong>). For now, just accept the defaults:
-  <pre class="brush: bash notranslate">npm init</pre>
+You can manually use NPM to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named [package.json](https://docs.npmjs.com/files/package.json). This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of _Node_ it can work with, etc. The **package.json** file should contain everything NPM needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm respository and make it available for other users).
 
-  <p>If you display the <strong>package.json</strong> file (<code>cat package.json</code>), you will see the defaults that you accepted, ending with the license.</p>
+### Adding dependencies
 
-  <pre class="brush: json notranslate">{
-  "name": "myapp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
-  },
-  "author": "",
-  "license": "ISC"
-}
-</pre>
- </li>
- <li>Now install the <em>Express</em> library in the <strong>myapp</strong> directory. The package will automatically be saved to the dependencies list in your <strong>package.json</strong> file.
-  <pre class="brush: bash notranslate">npm install express</pre>
+The following steps show how you can use NPM to download a package, save it into the project dependencies, and then require it in a Node application.
 
-  <p>The dependencies section of your <strong>package.json</strong> will now appear at the end of the <strong>package.json</strong> file and will include <em>Express</em>.</p>
+> **備註：** Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the _Express Application Generator_. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.
 
-  <pre class="brush: json notranslate">{
-  "name": "myapp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-<strong>  "dependencies": {
-    "express": "^4.16.2"
-  }</strong>
-}
-</pre>
- </li>
- <li>To use the library you call the <code>require()</code> function as shown below.
-  <pre class="notranslate"><code><strong>var express = require('express')</strong>
-var app = express()
+1.  First create a directory for your new application and navigate into it:
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
+    ```bash
+    mkdir myapp
+    cd myapp
+    ```
 
-app.listen(</code>8000<code>, function () {
-  console.log('Example app listening on port </code>8000<code>!')
-})</code>
-</pre>
+2.  Use the npm `init` command to create a **package.json** file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is **index.js**). For now, just accept the defaults:
 
-  <p>This code shows a minimal "HelloWorld" Express web application. This imports the "express" module and uses it to create a server (<code>app</code>) that listens for HTTP requests on port 8000 and prints a message to the console explaining what browser URL you can use to test the server. The <code>app.get()</code> function only responds to HTTP <code>GET</code> requests with the specified URL path ('/'), in this case by calling a function to send our <em>Hello World!</em> message. <br>
-   <br>
-   Create a file named <strong>index.js</strong> in the root of the "myapp" application directory and give it the contents shown above.</p>
- </li>
- <li>You can start the server by calling node with the script in your command prompt:
-  <pre class="brush: bash notranslate">&gt;node index.js
-Example app listening on port 8000
-</pre>
- </li>
- <li>Navigate to the URL (<a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>). If everything is working, the browser should simply display the string "Hello World!".</li>
-</ol>
+    ```bash
+    npm init
+    ```
 
-<h3 id="Development_dependencies">Development dependencies</h3>
+    If you display the **package.json** file (`cat package.json`), you will see the defaults that you accepted, ending with the license.
 
-<p>If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool <a href="http://eslint.org/">eslint</a> you would call NPM as shown:</p>
+    ```json
+    {
+      "name": "myapp",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "",
+      "license": "ISC"
+    }
+    ```
 
-<pre class="brush: bash notranslate"><code>npm install eslint --save-dev</code></pre>
+3.  Now install the _Express_ library in the **myapp** directory. The package will automatically be saved to the dependencies list in your **package.json** file.
 
-<p>The following entry would then be added to your application's <strong>package.json</strong>:</p>
+    ```bash
+    npm install express
+    ```
 
-<pre class="brush: js notranslate">  "devDependencies": {
+    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
+
+    ```json
+    {
+      "name": "myapp",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+        "express": "^4.16.2"
+      }
+    }
+    ```
+
+4.  To use the library you call the `require()` function as shown below.
+
+    ```plain
+    var express = require('express')
+    var app = express()
+
+    app.get('/', function (req, res) {
+      res.send('Hello World!')
+    })
+
+    app.listen(8000, function () {
+      console.log('Example app listening on port 8000!')
+    })
+    ```
+
+    This code shows a minimal "HelloWorld" Express web application. This imports the "express" module and uses it to create a server (`app`) that listens for HTTP requests on port 8000 and prints a message to the console explaining what browser URL you can use to test the server. The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
+
+    Create a file named **index.js** in the root of the "myapp" application directory and give it the contents shown above.
+
+5.  You can start the server by calling node with the script in your command prompt:
+
+    ```bash
+    >node index.js
+    Example app listening on port 8000
+    ```
+
+6.  Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World!".
+
+### Development dependencies
+
+If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool [eslint](http://eslint.org/) you would call NPM as shown:
+
+```bash
+npm install eslint --save-dev
+```
+
+The following entry would then be added to your application's **package.json**:
+
+```js
+  "devDependencies": {
     "eslint": "^4.12.1"
   }
-</pre>
+```
 
-<div class="note">
-<p><strong>備註：</strong> "<a href="https://en.wikipedia.org/wiki/Lint_(software)">Linters</a>" are tools that perform static analysis on software in order to recognise and report adherence/non-adherance to some set of coding best practice.</p>
-</div>
+> **備註：** "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" are tools that perform static analysis on software in order to recognise and report adherence/non-adherance to some set of coding best practice.
 
-<h3 id="Running_tasks">Running tasks</h3>
+### Running tasks
 
-<p>In addition to defining and fetching dependencies you can also define <em>named</em> scripts in your <strong>package.json</strong> files and call NPM to execute them with the <a href="https://docs.npmjs.com/cli/run-script">run-script</a> command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyse your code, etc).</p>
+In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call NPM to execute them with the [run-script](https://docs.npmjs.com/cli/run-script) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyse your code, etc).
 
-<div class="note">
-<p><strong>備註：</strong> Task runners like <a href="http://gulpjs.com/">Gulp</a> and <a href="http://gruntjs.com/">Grunt</a> can also be used to run tests and other external tools.</p>
-</div>
+> **備註：** Task runners like [Gulp](http://gulpjs.com/) and [Grunt](http://gruntjs.com/) can also be used to run tests and other external tools.
 
-<p>For example, to define a script to run the <em>eslint</em> development dependency that we specified in the previous section we might add the following script block to our <strong>package.json</strong> file (assuming that our application source is in a folder /src/js):</p>
+For example, to define a script to run the _eslint_ development dependency that we specified in the previous section we might add the following script block to our **package.json** file (assuming that our application source is in a folder /src/js):
 
-<pre class="brush: js notranslate">"scripts": {
+```js
+"scripts": {
   ...
   "lint": "eslint src/js"
   ...
 }
-</pre>
+```
 
-<p>To explain a little further, <code>eslint src/js</code> is a command that we could enter in our terminal/command line to run <code>eslint</code> on JavaScript files contained in the <code>src/js</code> directory inside our app directory. Including the above inside our app's package.json file provides a shortcut for this command — <code>lint</code>.</p>
+To explain a little further, `eslint src/js` is a command that we could enter in our terminal/command line to run `eslint` on JavaScript files contained in the `src/js` directory inside our app directory. Including the above inside our app's package.json file provides a shortcut for this command — `lint`.
 
-<p>We would then be able to run <em>eslint</em> using NPM by calling:</p>
+We would then be able to run _eslint_ using NPM by calling:
 
-<pre class="brush: bash notranslate"><code>npm run-script lint
+```bash
+npm run-script lint
 # OR (using the alias)
-npm run lint</code>
-</pre>
+npm run lint
+```
 
-<p>This example may not look any shorter than the original command, but you can include much bigger commands inside your npm scripts, including chains of multiple commands. You could identify a single npm script that runs all your tests at once.</p>
+This example may not look any shorter than the original command, but you can include much bigger commands inside your npm scripts, including chains of multiple commands. You could identify a single npm script that runs all your tests at once.
 
-<h2 id="Installing_the_Express_Application_Generator">Installing the Express Application Generator</h2>
+## Installing the Express Application Generator
 
-<p>The <a href="https://expressjs.com/en/starter/generator.html">Express Application Generator</a> tool generates an Express application "skeleton". Install the generator using NPM as shown (the <code>-g</code> flag installs the tool globally so that you can call it from anywhere):</p>
+The [Express Application Generator](https://expressjs.com/en/starter/generator.html) tool generates an Express application "skeleton". Install the generator using NPM as shown (the `-g` flag installs the tool globally so that you can call it from anywhere):
 
-<pre class="notranslate"><code>npm install express-generator -g</code></pre>
+```plain
+npm install express-generator -g
+```
 
-<p>To create an <em>Express</em> app named "helloworld" with the default settings, navigate to where you want to create it and run the app as shown:</p>
+To create an _Express_ app named "helloworld" with the default settings, navigate to where you want to create it and run the app as shown:
 
-<pre class="brush: bash notranslate">express helloworld</pre>
+```bash
+express helloworld
+```
 
-<div class="note">
-<p><strong>備註：</strong> You can also specify the template library to use and a number of other settings. Use the <code>help</code> command to see all the options:</p>
+> **備註：** You can also specify the template library to use and a number of other settings. Use the `help` command to see all the options:
+>
+> ```bash
+> express --help
+> ```
 
-<pre class="brush: bash notranslate">express --help
-</pre>
-</div>
+NPM will create the new Express app in a sub folder of your current location, displaying build progress on the console. On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.
 
-<p>NPM will create the new Express app in a sub folder of your current location, displaying build progress on the console. On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.</p>
+> **備註：** The new app will have a **package.json** file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:
+>
+> ```js
+> {
+>   "name": "helloworld",
+>   "version": "0.0.0",
+>   "private": true,
+>   "scripts": {
+>     "start": "node ./bin/www"
+>   },
+>   "dependencies": {
+>     "body-parser": "~1.18.2",
+>     "cookie-parser": "~1.4.3",
+>     "debug": "~2.6.9",
+>     "express": "~4.15.5",
+>     "jade": "~1.11.0",
+>     "morgan": "~1.9.0",
+>     "serve-favicon": "~2.4.5"
+>   }
+> }
+> ```
 
-<div class="note">
-<p><strong>備註：</strong> The new app will have a <strong>package.json</strong> file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:</p>
+Install all the dependencies for the helloworld app using NPM as shown:
 
-<pre class="brush: js notranslate">{
-  "name": "helloworld",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "serve-favicon": "~2.4.5"
-  }
-}</pre>
-</div>
-
-<p>Install all the dependencies for the helloworld app using NPM as shown:</p>
-
-<pre class="brush: bash notranslate">cd helloworld
+```bash
+cd helloworld
 npm install
-</pre>
+```
 
-<p>Then run the app (the commands are slightly different for Windows and Linux/macOS), as shown below:</p>
+Then run the app (the commands are slightly different for Windows and Linux/macOS), as shown below:
 
-<pre class="brush: bash notranslate"># Run the helloworld on Windows
-SET DEBUG=helloworld:* &amp; npm start
+```bash
+# Run the helloworld on Windows
+SET DEBUG=helloworld:* & npm start
 
 # Run helloworld on Linux/macOS
 DEBUG=helloworld:* npm start
-</pre>
+```
 
-<p>The DEBUG command creates useful logging, resulting in an output like that shown below.</p>
+The DEBUG command creates useful logging, resulting in an output like that shown below.
 
-<pre class="brush: bash notranslate">&gt;SET DEBUG=helloworld:* &amp; npm start
+```bash
+>SET DEBUG=helloworld:* & npm start
 
-&gt; helloworld@0.0.0 start D:\Github\expresstests\helloworld
-&gt; node ./bin/www
+> helloworld@0.0.0 start D:\Github\expresstests\helloworld
+> node ./bin/www
 
-  helloworld:server Listening on port 3000 +0ms</pre>
+  helloworld:server Listening on port 3000 +0ms
+```
 
-<p>Open a browser and navigate to <a href="http://127.0.0.1:3000/">http://127.0.0.1:3000/</a> to see the default Express welcome page.</p>
+Open a browser and navigate to <http://127.0.0.1:3000/> to see the default Express welcome page.
 
-<p><img alt="Express - Generated App Default Screen" src="express_default_screen.png"></p>
+![Express - Generated App Default Screen](express_default_screen.png)
 
-<p>We'll talk more about the generated app when we get to the article on generating a skeleton application.</p>
+We'll talk more about the generated app when we get to the article on generating a skeleton application.
 
-<ul>
-</ul>
+## 總結
 
-<h2 id="總結">總結</h2>
+你現在有一個 Node 開發環境在你的電腦上運行，可以用來創造 Express 網頁應用。你也看到如何用 NPM 來加載 Express 到一個應用中，以及看到如何使用 Express 應用產生器，創建應用，然後執行它們。
 
-<p>你現在有一個 Node 開發環境在你的電腦上運行，可以用來創造 Express 網頁應用。你也看到如何用 NPM 來加載 Express到一個應用中，以及看到如何使用 Express 應用產生器，創建應用，然後執行它們。</p>
+下一篇文章，我們開始跟著教程一步一步實作，使用這個開發環境與搭配工具，建立一個完整的網頁應用。
 
-<p>下一篇文章，我們開始跟著教程一步一步實作，使用這個開發環境與搭配工具，建立一個完整的網頁應用。</p>
+## See also
 
-<h2 id="See_also">See also</h2>
+- [Downloads](https://nodejs.org/en/download/) page (nodejs.org)
+- [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org)
+- [Installing Express](http://expressjs.com/en/starter/installing.html) (expressjs.com)
+- [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 
-<ul>
- <li><a href="https://nodejs.org/en/download/">Downloads</a> page (nodejs.org)</li>
- <li><a href="https://nodejs.org/en/download/package-manager/">Installing Node.js via package manager</a> (nodejs.org)</li>
- <li><a href="http://expressjs.com/en/starter/installing.html">Installing Express</a> (expressjs.com)</li>
- <li><a href="https://expressjs.com/en/starter/generator.html">Express Application Generator</a> (expressjs.com)</li>
-</ul>
+{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
-<p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}</p>
+## In this module
 
-
-
-<h2 id="In_this_module">In this module</h2>
-
-<ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
-</ul>
+- [Express/Node introduction](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
