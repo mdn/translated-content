@@ -47,6 +47,6 @@ Veja [Usando o objeto URL para exibir imagens](/en-US/docs/Web/API/File/Using_fi
 
 ## Veja também
 
-- [Usando arquivo de uma aplicação web](/en-US/docs/Web/API/File/Using_files_from_web_applications)
-- [Usando objetos Url para exibir imagens](/en-US/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- [Usando arquivo de uma aplicação web](/pt-BR/docs/Web/API/File/Using_files_from_web_applications)
+- [Usando objetos Url para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.createObjectURL()") }}
