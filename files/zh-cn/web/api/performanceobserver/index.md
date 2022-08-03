@@ -1,5 +1,5 @@
 ---
-title: 性能检测对象
+title: 性能监测对象
 slug: Web/API/PerformanceObserver
 page-type: web-api-interface
 tags:
