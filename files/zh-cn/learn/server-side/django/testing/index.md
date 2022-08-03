@@ -107,12 +107,14 @@ class Author(models.Model):
 
 Django 使用 unittest 模块的[内置测试查找](https://docs.python.org/3/library/unittest.html#unittest-test-discovery)，它将在任何使用模式**test\*.py** 命名的文件中，查找当前工作目录下的测试。如果您正确命名文件，则可以使用您喜欢的任何结构。我们建议您为测试代码创建一个模块，并为模型，视图，表单和您需要测试的任何其他类型的代码，分别创建文件。例如：
 
-    catalog/
-      /tests/
-        __init__.py
-        test_models.py
-        test_forms.py
-        test_views.py
+```
+catalog/
+    /tests/
+    __init__.py
+    test_models.py
+    test_forms.py
+    test_views.py
+```
 
 在 LocalLibrary 项目中，创建如上所示的文件结构。**\_\_init\_\_.py** 应该是一个空文件（这告诉 Python 该目录是一个套件包）。您可以通过复制和重命名框架测试文件 **/catalog/tests.py**，来创建三个测试文件。
 
