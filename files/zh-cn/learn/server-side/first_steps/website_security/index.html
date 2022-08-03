@@ -1,6 +1,6 @@
 ---
 title: 站点安全
-slug: learn/Server-side/First_steps/Website_security
+slug: Learn/Server-side/First_steps/Website_security
 tags:
   - 安全
   - 站点安全
@@ -38,7 +38,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 <p>文章的剩余部分列举了一些常见威胁的细节以及用来保护站点的一些简单措施。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 这只是一篇介绍性的主题，旨在帮你开始思考站点安全。它并不详尽。</p>
+<p><strong>备注：</strong> 这只是一篇介绍性的主题，旨在帮你开始思考站点安全。它并不详尽。</p>
 </div>
 
 <h2 id="站点安全威胁">站点安全威胁</h2>
@@ -50,7 +50,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 <p>XSS 是一个术语，用来描述一类允许攻击者通过网站将客户端脚本代码注入到其他用户的浏览器中的攻击手段。由于注入到浏览器的代码来自站点，其是可信赖的，因此可以做类似将该用户用于站点认证的 cookie 发送给攻击者的事情。一旦攻击者拿到了这个 cookie，他们就可以登陆到站点，就好像他们就是那个用户，可以做任何那个用户能做的事情。根据站点的不同，这些可能包括访问他们的信用卡信息、查看联系人、更改密码等。</p>
 
 <div class="note">
-<p><strong>Note</strong>: XSS 攻击在历史上较其他类型更为常见。</p>
+<p><strong>备注：</strong> XSS 攻击在历史上较其他类型更为常见。</p>
 </div>
 
 <p>有两种主要的方法可以让站点将注入的脚本返回到浏览器 -- 通常被称做 反射型 和 持久型 XSS 攻击。</p>
@@ -89,7 +89,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 <p>避免此种攻击的方法就是确保任何传递给 SQL 查询语句的用户数据都无法更改查询的本来用意。有种方式便是将用户输入中任何在 SQL 语句中有特殊含义的字符进行转义。</p>
 
 <div class="note">
-<p><strong>Note</strong>: SQL 语句把 ' 号作为一个字符串常量的开头的结尾。通过在前面放置一个斜杠，我们把单引号进行了转义 ( \' )，然后 SQL 就会将其视为一个字符（作为字符串的一部分）。</p>
+<p><strong>备注：</strong> SQL 语句把 ' 号作为一个字符串常量的开头的结尾。通过在前面放置一个斜杠，我们把单引号进行了转义 ( \' )，然后 SQL 就会将其视为一个字符（作为字符串的一部分）。</p>
 </div>
 
 <p>在下面的语句中我们对 ' 字符进行了转义。SQL 会将<strong>粗体</strong>显示的整段字符串解释为 name(这个 name 很古怪，但至少是没有危害的！)</p>
@@ -101,7 +101,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 <p>Web 框架通常会为你进行这种转义操作。例如 Django，可以确保任何传递给查询集合 (model 查询) 的用户数据都是已经转义过的。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 本章节引用了大量来自 <a href="https://en.wikipedia.org/wiki/SQL_injection">Wikipedia </a>的内容。</p>
+<p><strong>备注：</strong> 本章节引用了大量来自 <a href="https://en.wikipedia.org/wiki/SQL_injection">Wikipedia </a>的内容。</p>
 </div>
 
 <h3 id="跨站请求伪造_CSRF">跨站请求伪造 (CSRF)</h3>
@@ -115,7 +115,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 <p>最终的结果就是任何已登陆到站点的用户在点击了提交按钮后都会进行这个交易。John 发财啦！</p>
 
 <div class="note">
-<p><strong>Note</strong>: 这里的诀窍是，John 不需要访问那些用户的 cookie(或者说身份信息) -- 用户的浏览器存储了这些信息，而且会自动将其包含在发送给对应服务器的请求中。</p>
+<p><strong>备注：</strong> 这里的诀窍是，John 不需要访问那些用户的 cookie(或者说身份信息) -- 用户的浏览器存储了这些信息，而且会自动将其包含在发送给对应服务器的请求中。</p>
 </div>
 
 <p>杜绝此类攻击的一种方式是在服务器端要求每个 POST 请求都包含一个用户特定的由站点生成的密钥 ( 这个密钥值可以由服务器在发送用来传输数据的网页表单时提供）。这种方式可以使 John 无法创建自己的表单，因为他必须知道服务器提供给那个用户的密钥值。即使他找出了那个密钥值，并为那个用户创建了表单，他也无法用同样的表单来攻击其他的所有用户。</p>
@@ -141,7 +141,7 @@ translation_of: Learn/Server-side/First_steps/Website_security
 <p>当 Web 应用信任来自浏览器的数据时，上述章节里提到的大多数攻击利用手段才能成功。无论你做什么其它的事情来提升你的网站的安全性能，在将信息展示在浏览器之前、在使用 SQL 语句进行查询之前、在传递给一个操作系统或者文件系统之前，你应该过滤掉所有的用户源信息。</p>
 
 <div class="warning">
-<p>重要：在你可以了解到的有关网站安全大多数 课程之中，最重要的就是<strong>不要相信来自浏览器的数据</strong>。包括在 URL 参数中的 GET 请求、POST 请求、HTTP 头、cookies、用户上传的文件等等。一定要每次都检查用户输入的信息。每次都预想最坏的结果。</p>
+<p><strong>警告：</strong> 在你可以了解到的有关网站安全大多数 课程之中，最重要的就是<strong>不要相信来自浏览器的数据</strong>。包括在 URL 参数中的 GET 请求、POST 请求、HTTP 头、cookies、用户上传的文件等等。一定要每次都检查用户输入的信息。每次都预想最坏的结果。</p>
 </div>
 
 <p>你可以采取一些简单的步骤：</p>

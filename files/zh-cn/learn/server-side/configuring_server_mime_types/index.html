@@ -32,8 +32,6 @@ original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
 
 <h3 id="Why_are_correct_MIME_types_important.3F">Why are correct MIME types important?</h3>
 
-<p><img alt="Example of an incorrect MIME type result" class="internal" src="/@api/deki/files/729/=Incorrect-mime-screen.jpg" style="float: right;"> 假如 web 服务器或者应用报告内容的 MIME 类型不正确，根据 HTTP 规范，或许发起人想要处理和显示内容通过他所规定的 MIME 类型，因此 web 浏览器无法采取任何措施。</p>
-
 <p>对于某些浏览器，例如 IE，它尝试允许 web 服务器对于错误配置通过其源码猜测它可能的正确 MIME 类型。</p>
 
 <p>这种做法将会避免许多由 web 管理员他们的错误。因为当内容的 MIME 类型错误，IE 将会用可能正确的 MIME 类型来继续处理内容。例如你设置一个<code>img</code>的类型为<code>text/plain</code> ,IE 可能会设置它为正确的 MIME 类型<code>images/*</code></p>
@@ -41,7 +39,7 @@ original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
 <p>出于安全原因，使用正确的 MIME 类型的服务内容也是重要的；恶意内容可能会影响用户的计算机，假装它是一个安全类型文档，实际上不是。</p>
 
 <div class="note">
-<p><strong>注意：</strong> 从历史角度，只要 HTML 文档请求处理 CSS 文件，Firefox 能够正常加载 CSS 即使它设置了错误的 MIME 类型。处于安全原因，{{ gecko("2.0") }} 对于从请求文档不同来源加载的样式表，将不再这样做。如果 CSS 来自于不同来源，你必须设置它的正确 MIME 类型 (<code>text/css</code>).</p>
+<p><strong>备注：</strong> 从历史角度，只要 HTML 文档请求处理 CSS 文件，Firefox 能够正常加载 CSS 即使它设置了错误的 MIME 类型。处于安全原因，{{ gecko("2.0") }} 对于从请求文档不同来源加载的样式表，将不再这样做。如果 CSS 来自于不同来源，你必须设置它的正确 MIME 类型 (<code>text/css</code>).</p>
 
 <p>Gecko 1.9.1.11 (Firefox 3.5.11) 和 Gecko 1.9.2.5 (Firefox 3.6.5) 同样实施这种安全措施，但是提高它的实用性。如果样式表中的第一行看起来是一个很好的 CSS 构造，则存在允许加载的临时启发式算法。在 Firefox 4 中已经删除了启发式，您必须正确设置<code>text/css</code> 的 MIME 类型，才能够识别 CSS。</p>
 </div>
@@ -109,11 +107,3 @@ original_slug: Web/Security/Securing_your_site/Configuring_server_MIME_types
  <li><a href="http://www.microsoft.com/windows/ie/downloads/critical/q290108/">Microsoft - Security Update, March 29, 2001</a></li>
  <li><a href="http://www.microsoft.com/windows/ie/downloads/critical/Q313675/">Microsoft - Security Update, December 13, 2001</a></li>
 </ul>
-
-<div class="originaldocinfo">
-<h3 id="Original_Document_Information">Original Document Information</h3>
-
-<ul>
- <li>Author: Bob Clary, date: 20 Feb 2003</li>
-</ul>
-</div>
