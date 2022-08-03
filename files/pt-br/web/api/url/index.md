@@ -74,7 +74,7 @@ Se o seu navegador não tem suporte ao construtor {{domxref("URL.URL", "URL()")}
 ## Métodos estáticos
 
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : Retorna um {{domxref("DOMString")}} contendo uma única blob URL, isto é a URL com `blob:` com seu esquema, segjido de uma string com identificador único do objeto no navegador.
+  - : Retorna um {{domxref("DOMString")}} contendo uma única blob URL, isto é a URL com `blob:` com seu esquema, seguido de uma string com identificador único do objeto no navegador.
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : Anula uma URL criada anteriormente utilizando o {{domxref("URL.createObjectURL()")}}.
 
