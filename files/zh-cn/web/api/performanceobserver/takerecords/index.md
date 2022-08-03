@@ -14,7 +14,7 @@ translation_of: Web/API/PerformanceObserver/takeRecords
 ---
 {{APIRef("Performance Timeline API")}}
 
-{{domxref('PerformanceObserver')}} 接口的 **`takeRecords()`** 方法返回当前存储在性能观察器中的 {{domxref("PerformanceEntry","性能条目")}} 列表，并将其清空。
+{{domxref('PerformanceObserver')}} 接口的 **`takeRecords()`** 方法返回当前存储在性能观察器中的{{domxref("PerformanceEntry","性能条目")}}列表，并将其清空。
 
 ## 语法
 
