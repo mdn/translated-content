@@ -5,8 +5,7 @@ translation_of: Web/API/MediaSource/addSourceBuffer
 ---
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-{{domxref("MediaSource")}} 的 **`addSourceBuffer()`** 方法会根据给定的 MIME 类型创建一个新的
-{{domxref("SourceBuffer")}} 对象，然后会将它追加到 `MediaSource 的` {{domxref("SourceBuffers")}} 列表中。
+{{domxref("MediaSource")}} 的 **`addSourceBuffer()`** 方法会根据给定的 MIME 类型创建一个新的 {{domxref("SourceBuffer")}} 对象，然后会将它追加到 `MediaSource` 的 {{domxref("SourceBuffers")}} 列表中。
 
 ## 语法
 
@@ -36,8 +35,7 @@ var sourceBuffer = mediaSource.addSourceBuffer(mimeType);
 
 ## 示例
 
-The following snippet is from a simple example written by Nick Desaulniers ([view the full demo live](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html), or [download the source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) for
-further investigation.)
+以下片段基于 Nick Desaulniers 编写的一个简单示例（[查看完整的在线演示](https://nickdesaulniers.github.io/netfix/demo/bufferAll.html)，或者[下载源代码](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)进行进一步研究。）
 
 ```js
 var assetURL = 'frag_bunny.mp4';
