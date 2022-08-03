@@ -30,7 +30,7 @@ translation_of: Web/API/PerformanceObserver
 - {{domxref("PerformanceObserver.disconnect","PerformanceObserver.disconnect()")}}
   - : 性能监测回调停止接收 {{domxref("PerformanceEntry","性能条目", '', 'true')}}。
 - {{domxref("PerformanceObserver.takeRecords","PerformanceObserver.takeRecords()")}}
-  - : 返回当前存储在性能观察器的 {{domxref("PerformanceEntry","performance entries")}} 列表，并将其清空。
+  - : 返回当前存储在性能观察器的 {{domxref("PerformanceEntry","performance entry")}} 列表，并将其清空。
 
 ## 示例
 
