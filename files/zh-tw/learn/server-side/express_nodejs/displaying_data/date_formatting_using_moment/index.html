@@ -8,7 +8,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 <p>我們將使用的方法，是在我們的<code>BookInstance</code>模型中，創建一個返回格式化日期的虛擬屬性。我們將使用 <a href="https://www.npmjs.com/package/moment">moment</a> 來做實際的格式化，這是一個輕量級 JavaScript日期庫，用於解析，驗證，操作和格式化日期。</p>
 
 <div class="note">
-<p><strong>注意:</strong>  我們可以直接在 Pug 模板中，使用 moment 格式化字符串，或者可以在許多其它地方格式化字符串。使用虛擬屬性，可以使我們獲得格式化的日期，這與我們當前獲取 <code>due_date</code> 的方式完全相同。</p>
+<p><strong>備註：</strong> 我們可以直接在 Pug 模板中，使用 moment 格式化字符串，或者可以在許多其它地方格式化字符串。使用虛擬屬性，可以使我們獲得格式化的日期，這與我們當前獲取 <code>due_date</code> 的方式完全相同。</p>
 </div>
 
 <h2 id="安裝_moment">安裝 moment</h2>
@@ -37,7 +37,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting
 });</code></pre>
 
 <div class="note">
-<p><strong>注意:</strong>  格式化方法可以使用幾乎任何模式顯示日期。 <a href="http://momentjs.com/docs/#/displaying/">moment</a>文檔中，可以找到表示不同日期組件的語法。</p>
+<p><strong>備註：</strong> 格式化方法可以使用幾乎任何模式顯示日期。<a href="http://momentjs.com/docs/#/displaying/">moment</a>文檔中，可以找到表示不同日期組件的語法。</p>
 </div>
 
 <h2 id="更新視圖">更新視圖</h2>

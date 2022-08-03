@@ -35,7 +35,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 <p>NPM 也可用來安裝 Express 應用程式產生器(全域用)，一個方便的工具幫助你創造符合 <a href="/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">MVC模式</a>的 Express web app 骨架。你不一定要使用應用程式產生器，因為每個Express應用程式不需要擁有同樣的檔案結構或依賴項。但為了專注於學習本身以及習慣模組化架構，我們會在接下來的教學中使用它。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 與其他不包含單獨的web開發伺服器的Web框架不同。 在Node / Express中，Web應用程式創建並運行自己的Web伺服器！</p>
+<p><strong>備註：</strong> 與其他不包含單獨的web開發伺服器的Web框架不同。 在Node / Express中，Web應用程式創建並運行自己的Web伺服器！</p>
 </div>
 
 <p>典型的開發環境還包含其他工具，例如：編輯程式碼使用的<a href="/en-US/docs/Learn/Common_questions/Available_text_editors">文字編輯器</a>、IDE，進行版本控置管理不同版本程式碼的<a href="/zh-TW/docs/Glossary/Git">Git</a>。這邊假設你已經有這種工具了(尤其是文字編輯器)</p>
@@ -63,7 +63,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 <p>為了使用Express，首先要在你的電腦上安裝Node和<a href="https://docs.npmjs.com/">Node Package Manager (NPM)</a>。接下來用最簡單的方法在 Ubuntu Linux 16.04、 macOS和 Windows 10上安裝Nodejs的 Long Term Supported (LTS)版本吧</p>
 
 <div class="note">
-<p>以下的部分用最簡單的方法在上述的作業系統中安裝Node和NPM。如果你使用其他作業系統或想看看其他平台的安裝方式，請查閱<a href="https://nodejs.org/en/download/package-manager/">透過套件管理器安裝Node.js</a> (nodejs.org)。</p>
+<p><strong>備註：</strong> 以下的部分用最簡單的方法在上述的作業系統中安裝Node和NPM。如果你使用其他作業系統或想看看其他平台的安裝方式，請查閱<a href="https://nodejs.org/en/download/package-manager/">透過套件管理器安裝Node.js</a> (nodejs.org)。</p>
 </div>
 
 <h3 id="Windows_和macOS">Windows 和macOS</h3>
@@ -90,11 +90,8 @@ sudo apt-get install -y nodejs</code>
 </pre>
 
 <div class="warning">
-<p><strong>警告:</strong> 不要直接從普通的Ubuntu repositories 安裝，那邊只有很舊的版本。</p>
+<p><strong>警告：</strong> 不要直接從普通的Ubuntu repositories 安裝，那邊只有很舊的版本。</p>
 </div>
-
-<ol>
-</ol>
 
 <h3 id="測試_Nodejs_和NPM_的安裝">測試 Nodejs 和NPM 的安裝</h3>
 
@@ -134,7 +131,7 @@ console.log('Server running at http://127.0.0.1:8000/')
  </li>
  <li>
   <div class="note">
-  <p><strong>Note:</strong>  Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!</p>
+  <p><strong>備註：</strong> Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!</p>
   </div>
  </li>
  <li>Start the server by navigating into the same directory as your <code>hellonode.js</code> file in your command prompt, and calling <code>node</code> along with the script name, like so:
@@ -150,7 +147,7 @@ Server running at http://127.0.0.1:8000/
 <p>Next to <em>Node</em> itself, <a href="https://docs.npmjs.com/">NPM</a> is the most important tool for working with<em> Node </em>applications. NPM is used to fetch any packages (JavaScript libraries) that an application needs for development, testing, and/or production, and may also be used to run tests and tools used in the development process. </p>
 
 <div class="note">
-<p><strong>Note:</strong> From Node's perspective, <em>Express</em> is just another package that you need to install using NPM and then require in your own code.</p>
+<p><strong>備註：</strong> From Node's perspective, <em>Express</em> is just another package that you need to install using NPM and then require in your own code.</p>
 </div>
 
 <p>You can manually use NPM to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named <a href="https://docs.npmjs.com/files/package.json">package.json</a>. This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of <em>Node</em> it can work with, etc. The <strong>package.json</strong> file should contain everything NPM needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm respository and make it available for other users).</p>
@@ -160,7 +157,7 @@ Server running at http://127.0.0.1:8000/
 <p>The following steps show how you can use NPM to download a package, save it into the project dependencies, and then require it in a Node application.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Here we show the instructions to fetch and install the <em>Express</em> package. Later on we'll show how this package, and others, are already specified for us using the <em>Express Application Generator</em>. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.</p>
+<p><strong>備註：</strong> Here we show the instructions to fetch and install the <em>Express</em> package. Later on we'll show how this package, and others, are already specified for us using the <em>Express Application Generator</em>. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.</p>
 </div>
 
 <ol>
@@ -246,7 +243,7 @@ Example app listening on port 8000
 </pre>
 
 <div class="note">
-<p><strong>Note:</strong> "<a href="https://en.wikipedia.org/wiki/Lint_(software)">Linters</a>" are tools that perform static analysis on software in order to recognise and report adherence/non-adherance to some set of coding best practice.</p>
+<p><strong>備註：</strong> "<a href="https://en.wikipedia.org/wiki/Lint_(software)">Linters</a>" are tools that perform static analysis on software in order to recognise and report adherence/non-adherance to some set of coding best practice.</p>
 </div>
 
 <h3 id="Running_tasks">Running tasks</h3>
@@ -254,7 +251,7 @@ Example app listening on port 8000
 <p>In addition to defining and fetching dependencies you can also define <em>named</em> scripts in your <strong>package.json</strong> files and call NPM to execute them with the <a href="https://docs.npmjs.com/cli/run-script">run-script</a> command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyse your code, etc).</p>
 
 <div class="note">
-<p><strong>Note:</strong> Task runners like <a href="http://gulpjs.com/">Gulp</a> and <a href="http://gruntjs.com/">Grunt</a> can also be used to run tests and other external tools.</p>
+<p><strong>備註：</strong> Task runners like <a href="http://gulpjs.com/">Gulp</a> and <a href="http://gruntjs.com/">Grunt</a> can also be used to run tests and other external tools.</p>
 </div>
 
 <p>For example, to define a script to run the <em>eslint</em> development dependency that we specified in the previous section we might add the following script block to our <strong>package.json</strong> file (assuming that our application source is in a folder /src/js):</p>
@@ -288,7 +285,7 @@ npm run lint</code>
 <pre class="brush: bash notranslate">express helloworld</pre>
 
 <div class="note">
-<p><strong>Note: </strong>You can also specify the template library to use and a number of other settings. Use the <code>help</code> command to see all the options:</p>
+<p><strong>備註：</strong> You can also specify the template library to use and a number of other settings. Use the <code>help</code> command to see all the options:</p>
 
 <pre class="brush: bash notranslate">express --help
 </pre>
@@ -297,7 +294,7 @@ npm run lint</code>
 <p>NPM will create the new Express app in a sub folder of your current location, displaying build progress on the console. On completion, the tool will display the commands you need to enter to install the Node dependencies and start the app.</p>
 
 <div class="note">
-<p>The new app will have a <strong>package.json</strong> file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:</p>
+<p><strong>備註：</strong> The new app will have a <strong>package.json</strong> file in its root directory. You can open this to see what dependencies are installed, including Express and the template library Jade:</p>
 
 <pre class="brush: js notranslate">{
   "name": "helloworld",

@@ -29,7 +29,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>以下部分向您展示如何調用應用程序生成器，並提供關於視圖或CSS的不同選項的一些解釋。我們還將解釋骨架網站的結構。最後，我們將展示如何運行網站，來驗證它是否有效。</p>
 
 <div class="note">
-<p><strong>注意</strong>: Express Application Generator並非 Express 應用程序的唯一生成器，生成的項目不是構建文件和目錄的唯一可行方式。然而，生成的網站具有易於擴展和理解的模塊化結構。有關最小 Express 應用程序的信息，請參閱 <a href="https://expressjs.com/en/starter/hello-world.html">Hello world </a>示例（Express docs）。</p>
+<p><strong>備註：</strong> Express Application Generator並非 Express 應用程序的唯一生成器，生成的項目不是構建文件和目錄的唯一可行方式。然而，生成的網站具有易於擴展和理解的模塊化結構。有關最小 Express 應用程序的信息，請參閱 <a href="https://expressjs.com/en/starter/hello-world.html">Hello world </a>示例（Express docs）。</p>
 </div>
 
 <h2 id="使用應用產生器">使用應用產生器</h2>
@@ -65,7 +65,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>您還可以使用<code>--view</code>選擇視圖（模板）引擎，並且/或者使用<code>--css</code>選擇 CSS 生成引擎。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 選擇模板引擎的其他選項（例如 <code>--hogan</code>, <code>--ejs</code>, <code>--hbs</code>等）已被棄用。請用 <code>--view</code> (或 <code>-v</code>)!</p>
+<p><strong>備註：</strong> 選擇模板引擎的其他選項（例如 <code>--hogan</code>, <code>--ejs</code>, <code>--hbs</code>等）已被棄用。請用 <code>--view</code> (或 <code>-v</code>)!</p>
 </div>
 
 <h3 id="我應該用哪個視圖引擎">我應該用哪個視圖引擎?</h3>
@@ -73,7 +73,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>Express Application Generator 允許您配置許多流行的視圖/模板引擎，包括 <a href="https://www.npmjs.com/package/ejs">EJS</a>, <a href="http://github.com/donpark/hbs">Hbs</a>, <a href="https://pugjs.org/api/getting-started.html">Pug</a> (Jade), <a href="https://www.npmjs.com/package/twig">Twig</a>, 和 <a href="https://www.npmjs.com/package/vash">Vash</a>，但如果您沒有指定視圖選項，它會默認選擇Jade。 Express 本身也可以支持大量其他模板語言，是「<a href="https://github.com/expressjs/express/wiki#template-engines">開箱即可使用</a>」的。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 如果要使用生成器不支持的模板引擎，請參閱<a href="https://expressjs.com/en/guide/using-template-engines.html">在Express中使用模板引擎（Express文檔）</a>，並參閱目標視圖引擎的文檔。</p>
+<p><strong>備註：</strong> 如果要使用生成器不支持的模板引擎，請參閱<a href="https://expressjs.com/en/guide/using-template-engines.html">在Express中使用模板引擎（Express文檔）</a>，並參閱目標視圖引擎的文檔。</p>
 </div>
 
 <p>一般來說，您應該選擇一種「可以提供您所需的所有功能」的模板引擎，<br>
@@ -98,7 +98,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 </ul>
 
 <div class="note">
-<p><strong>提示:</strong> 互聯網上有許多資源，可幫助您比較不同的視圖/模板引擎選擇！</p>
+<p><strong>備註：</strong> 互聯網上有許多資源，可幫助您比較不同的視圖/模板引擎選擇！</p>
 </div>
 
 <p>對於這個項目，我們將使用 <a href="https://pugjs.org/api/getting-started.html">Pug</a> 模板引擎（這是最近更名的 Jade 引擎），因為這是最流行的 Express / JavaScript 模板語言之一，並且應用發生器支持開箱即用。</p>
@@ -108,7 +108,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>Express 應用生成器允許您創建一個項目，並配置最常見的 CSS 樣式表引擎：<a href="http://lesscss.org/">LESS</a>, <a href="http://sass-lang.com/">SASS</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://stylus-lang.com/">Stylus</a>。</p>
 
 <div class="note">
-<p><strong>注意: </strong>CSS有一些限制，使某些任務變得困難。 CSS 樣式表引擎允許您使用更強大的語法來定義您的 CSS，然後將定義編譯為純粹的舊式 CSS，以供瀏覽器使用。</p>
+<p><strong>備註：</strong> CSS有一些限制，使某些任務變得困難。 CSS 樣式表引擎允許您使用更強大的語法來定義您的 CSS，然後將定義編譯為純粹的舊式 CSS，以供瀏覽器使用。</p>
 </div>
 
 <p>與模板引擎一樣，您應該使用樣式表引擎，這樣可以讓您的團隊獲得最高生產力。對於這個項目，我們將使用普通的 CSS（默認值），因為我們的 CSS 要求不夠複雜，沒有必要使用其他任何東西。</p>
@@ -186,7 +186,7 @@ npm install</pre>
 <p>你有一個能工作的 Express 應用了，讓它在 <a href="http://localhost:3000/">http://localhost:3000/ </a>服務。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 您也可以使用 <code>npm start</code>命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：</p>
+<p><strong>備註：</strong> 您也可以使用 <code>npm start</code>命令啟動應用程序。如下圖所示，指定 DEBUG 變量可啟用控制台日誌記錄/調試。例如，當你訪問上面的頁面時，你會看到像這樣的調試輸出：</p>
 
 <pre class="brush: bash notranslate">&gt;SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
 
@@ -237,7 +237,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 </ul>
 
 <div class="note">
-<p><strong>注意:</strong> 現在，如果您編輯項目中的任何文件，服務器將重新啟動（或者您可以隨時在命令提示符下，鍵入<code>rs</code>來重新啟動它）。您仍需要重新加載瀏覽器，以刷新頁面。</p>
+<p><strong>備註：</strong> 現在，如果您編輯項目中的任何文件，服務器將重新啟動（或者您可以隨時在命令提示符下，鍵入<code>rs</code>來重新啟動它）。您仍需要重新加載瀏覽器，以刷新頁面。</p>
 
 <p>我們現在必須調用“<code>npm run &lt;scriptname&gt;</code>”而不是 <code>npm start</code>，因為“start”實際上是映射到指定腳本的 NPM 命令。我們可以在啟動腳本中替換該命令，但我們只想在開發期間使用 nodemon，因此創建新的腳本命令是有意義的。</p>
 </div>
@@ -333,7 +333,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> <code>require()</code> 是一個全局 node 函數，用於將模塊導入當前文件。這裡我們使用相對路徑指定 <strong>app.js</strong> 模塊，並省略可選的（<strong>.js</strong>）文件擴展名。</p>
+<p><strong>備註：</strong> <code>require()</code> 是一個全局 node 函數，用於將模塊導入當前文件。這裡我們使用相對路徑指定 <strong>app.js</strong> 模塊，並省略可選的（<strong>.js</strong>）文件擴展名。</p>
 </div>
 
 <p>此文件中的其餘代碼，將設置一個node 運行的HTTP 服務器，並將應用app 設置為特定的端口（在環境變量中定義，如果變量未定義，則定義為3000），並開始監聽和報告服務器錯誤和連接。現在你並不需要知道代碼的其他內容（這個文件中的所有內容都是 “樣板文件” ），但如果你感興趣，可以隨時查看它。</p>
@@ -367,7 +367,7 @@ var usersRouter = require('./routes/users');
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> 此時我們剛剛導入了模塊；我們還沒有真正使用過它的路由（在文件的更下方一點將使用到路由）。</p>
+<p><strong>備註：</strong> 此時我們剛剛導入了模塊；我們還沒有真正使用過它的路由（在文件的更下方一點將使用到路由）。</p>
 </div>
 
 <p>接下來，我們使用導入的 express 模塊​​，創建應用程序 <code>app</code> 對象，然後使用它來設置視圖（模板）引擎。引擎的設置有兩個部分。首先我們設置 '<code>views</code>' 值，來指定模板將被存儲的文件夾（在這種情況下是子文件夾<strong> /views</strong>）。然後我們設置 '<code>view engine</code>' 的值，來指定模板庫（在本例中為 “pug” ）。</p>
@@ -397,7 +397,7 @@ app.use('/users', usersRouter);
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> 上面指定的路徑 ('/' and '<code>/users</code>')，被視為定義在導入文件中的路由前綴。因此，例如，如果導入的用戶模塊 <strong>users</strong>為<code>/profile</code>定義了路由，則可以在 <code>/users/profile</code>中訪問該路由。我們將在後面的文章中，詳細討論路由。</p>
+<p><strong>備註：</strong> 上面指定的路徑 ('/' and '<code>/users</code>')，被視為定義在導入文件中的路由前綴。因此，例如，如果導入的用戶模塊 <strong>users</strong>為<code>/profile</code>定義了路由，則可以在 <code>/users/profile</code>中訪問該路由。我們將在後面的文章中，詳細討論路由。</p>
 </div>
 
 <p>文件中的最後一個中間件，為錯誤和 HTTP 404 響應添加了處理程序方法。</p>
@@ -443,7 +443,7 @@ module.exports = router;
 <p>該路由定義了一個回調，只要檢測到具有正確模式的HTTP <code>GET</code> 請求，就會調用該回調。匹配模式是模塊導入時指定的路由（'<code>/users</code>'），加上（'<code>/</code>'）文件中定義的任何內容。換句話說，當收到<code>/users/</code>的 URL 時，將使用此路由。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 嘗試運行帶有 node 的服務器，並在瀏覽器中訪問以下 URL: <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>。您應該看到一條消息：'respond with a resource'。</p>
+<p><strong>備註：</strong> 嘗試運行帶有 node 的服務器，並在瀏覽器中訪問以下 URL: <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>。您應該看到一條消息：'respond with a resource'。</p>
 </div>
 
 <p>上面有趣的事情是，回調函數有第三個參數 '<code>next</code>'，因此是一個中間件函數，而不是簡單的路由回調。雖然代碼當前不使用 <code>next</code> 參數，但如果要在'<code>/</code>'根路由路徑中，添加多個路由處理程序，將來可能會有用。</p>

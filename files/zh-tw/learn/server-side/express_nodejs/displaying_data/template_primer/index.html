@@ -12,7 +12,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 <p>不同的模板語言使用不同的方法，來定義佈局和標記數據的佔位符 — 一些使用 HTML 來定義佈局，而另一些則使用可以編譯為 HTML 的不同標記格式。 Pug 是第二種類型；它使用 HTML 的<em>表示形式</em>，其中任何行中的第一個單詞，通常表示HTML元素，後續行中的縮進，用於表示嵌套在這些元素中的任何內容。結果是一個頁面定義直接轉換為 HTML，但可以說更簡潔，更容易閱讀。</p>
 
 <div class="note">
-<p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
+<p><strong>備註：</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
 </div>
 
 <h2 id="Template_configuration">Template configuration</h2>
@@ -94,7 +94,7 @@ p= 'Evaluated and &lt;em&gt;escaped expression&lt;/em&gt;:' + title</code></pre>
 p This line has an un-escaped string: !{'&lt;em&gt; is emphasised&lt;/em&gt;'}, an escaped string: #{'&lt;em&gt; is not emphasised&lt;/em&gt;'}, and escaped variables: #{title}.</code></pre>
 
 <div class="note">
-<p><strong>Tip:</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
+<p><strong>備註：</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
 </div>
 
 <p>You can use the pipe ('<strong>|</strong>') character at the beginning of a line to indicate "<a href="https://pugjs.org/language/plain-text.html">plain text</a>". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.</p>

@@ -55,7 +55,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>這種可遠程訪問的計算/網絡硬件，稱為基礎架構即服務（IaaS）。許多 IaaS 供應商，提供預安裝特定操作系統的選項，您必須在其上，安裝生產環境的其他組件。其他供應商，允許您選擇功能更全面的環境，可能包括完整的 node 設置。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 預構建環境，可以使您的網站設置變得非常簡單，因為它們會減少配置，但可用選項可能會限制您使用不熟悉的服務器（或其他組件），並且可能基於較舊版本的操作系統。通常最好自己安裝組件，以便獲得所需的組件，並且當您需要升級系統的某些部分時，您可以知道從哪裡開始！</p>
+<p><strong>備註：</strong> 預構建環境，可以使您的網站設置變得非常簡單，因為它們會減少配置，但可用選項可能會限制您使用不熟悉的服務器（或其他組件），並且可能基於較舊版本的操作系統。通常最好自己安裝組件，以便獲得所需的組件，並且當您需要升級系統的某些部分時，您可以知道從哪裡開始！</p>
 </div>
 
 <p>其他託管服務提供商，支持 Express 作為平台即服務（PaaS）產品的一部分。使用此類託管時，您無需擔心大多數生產環境（服務器，負載平衡器等），因為主機平台會為您處理這些問題。這使得部署非常簡單，因為您只需要專注於 Web 應用程序，而不是任何其他服務器基礎結構。</p>
@@ -63,7 +63,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>一些開發人員選擇 IaaS ，相對於 PaaS ，IaaS 提供更高靈活性，而其他開發人員偏好 PaaS 的降低維護開銷，和更輕鬆的擴展性。當您在一開始使用時，在 PaaS 系統上設置您的網站，要容易得多，因此我們將在本教程中使用 PaaS。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 如果您選擇 Node/Express 友好的託管服務提供商，他們應該提供，有關如何使用 Web 服務器，應用程序服務器，反向代理等不同配置，來設置 Express 網站的說明。例如，在<a href="https://www.digitalocean.com/community/tutorials?q=node"> Digital Ocean</a> 的node 社區文檔中，有許多各種配置的手把手指南。</p>
+<p><strong>備註：</strong> 如果您選擇 Node/Express 友好的託管服務提供商，他們應該提供，有關如何使用 Web 服務器，應用程序服務器，反向代理等不同配置，來設置 Express 網站的說明。例如，在<a href="https://www.digitalocean.com/community/tutorials?q=node"> Digital Ocean</a> 的node 社區文檔中，有許多各種配置的手把手指南。</p>
 </div>
 
 <h2 id="選擇一個主機供應商">選擇一個主機供應商</h2>
@@ -71,7 +71,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>眾所周知，眾多託管服務提供商，都積極支持或與 Node（和Express）合作。這些供應商提供不同類型的環境（IaaS，PaaS），以及不同價格的不同級別的計算和網絡資源。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 有很多託管解決方案，他們的服務和定價，可能會隨著時間而改變。雖然我們在下面介紹幾個選項，但在選擇託管服務提供商之前，有必要自己進行互聯網搜索。</p>
+<p><strong>備註：</strong> 有很多託管解決方案，他們的服務和定價，可能會隨著時間而改變。雖然我們在下面介紹幾個選項，但在選擇託管服務提供商之前，有必要自己進行互聯網搜索。</p>
 </div>
 
 <p>選擇主機時需要考慮的一些事項：</p>
@@ -93,7 +93,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>許多提供商還擁有“基本”層，可提供更多有用的計算能力，和更少的限制。舉例來說， <a href="https://www.digitalocean.com/">Digital Ocean</a> 是一個流行的託管服務提供商，它提供了一個相對便宜的基本計算層（在本教程寫作時，是每月5美元的較低範圍）。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 請記住，價格不是唯一的選擇標準。如果您的網站成功，可能會發現可擴展性是最重要的考慮因素。</p>
+<p><strong>備註：</strong> 請記住，價格不是唯一的選擇標準。如果您的網站成功，可能會發現可擴展性是最重要的考慮因素。</p>
 </div>
 
 <h2 id="準備好發布你的網站">準備好發布你的網站</h2>
@@ -103,7 +103,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>在以下小節中，我們概述了您應該對應用進行的、最重要的更改。</p>
 
 <div class="note">
-<p><strong>提示:</strong> Express文檔中還有其他有用的提示 - 請參閱“<a href="https://expressjs.com/en/advanced/best-practice-performance.html">生產最佳實踐：性能和可靠性</a>”，以及“<a href="https://expressjs.com/en/advanced/best-practice-security.html">生產最佳實踐：安全性</a>”。</p>
+<p><strong>備註：</strong> Express文檔中還有其他有用的提示 - 請參閱“<a href="https://expressjs.com/en/advanced/best-practice-performance.html">生產最佳實踐：性能和可靠性</a>”，以及“<a href="https://expressjs.com/en/advanced/best-practice-security.html">生產最佳實踐：安全性</a>”。</p>
 </div>
 
 <h3 id="設置_NODE_ENV_為_'production'">設置 NODE_ENV 為 'production'</h3>
@@ -113,7 +113,7 @@ translation_of: Learn/Server-side/Express_Nodejs/deployment
 <p>可以使用導出或環境文件，或使用 OS 初始化系統，以進行此更改。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 這實際上是在環境設置，而不是應用中所做的更改，但重要的是，要注意這裡！我們將在下面，展示我們的託管示例要如何設置。</p>
+<p><strong>備註：</strong> 這實際上是在環境設置，而不是應用中所做的更改，但重要的是，要注意這裡！我們將在下面，展示我們的託管示例要如何設置。</p>
 </div>
 
 <h3 id="Log_appropriately">Log appropriately</h3>
@@ -149,7 +149,7 @@ export DEBUG="author,book"
 </pre>
 
 <div class="note">
-<p><strong>挑戰:</strong> 調用<code>debug</code>可以替換您以前使用 <code>console.log()</code>或<code>console.error()</code>執行的日誌記錄。通過調試模塊 <a href="https://www.npmjs.com/package/debug">debug </a>進行日誌記錄，替換代碼中的所有<code>console.log()</code>調用。通過設置 DEBUG 變量，並在其中記錄對日誌記錄的影響，在開發環境中，打開和關閉日誌記錄。</p>
+<p><strong>備註：</strong> 調用<code>debug</code>可以替換您以前使用 <code>console.log()</code>或<code>console.error()</code>執行的日誌記錄。通過調試模塊 <a href="https://www.npmjs.com/package/debug">debug </a>進行日誌記錄，替換代碼中的所有<code>console.log()</code>調用。通過設置 DEBUG 變量，並在其中記錄對日誌記錄的影響，在開發環境中，打開和關閉日誌記錄。</p>
 </div>
 
 <p>如果您需要記錄網站活動，可以使用 Winston 或 Bunyan 等日誌庫。有關此主題的更多信息，請參閱：<a href="https://expressjs.com/en/advanced/best-practice-performance.html">生產最佳實踐：性能和可靠性</a>。</p>
@@ -184,7 +184,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 </pre>
 
 <div class="note">
-<p><strong>注意</strong>: 對於生產中流量較大的網站，您不會使用此中間件。相反，你會使用像 Nginx 這樣的反向代理。</p>
+<p><strong>備註：</strong> 對於生產中流量較大的網站，您不會使用此中間件。相反，你會使用像 Nginx 這樣的反向代理。</p>
 </div>
 
 <h3 id="使用_Helmet_避免被常見漏洞侵襲">使用 Helmet 避免被常見漏洞侵襲</h3>
@@ -208,7 +208,7 @@ var app = express();
 ...</pre>
 
 <div class="note">
-<p><strong>注意:</strong> 上面的命令，添加了對大多數站點有意義的可用標頭子集。您可以按照 <a href="https://www.npmjs.com/package/helmet">npm </a>上的說明，根據需要添加/禁用特定標頭。</p>
+<p><strong>備註：</strong> 上面的命令，添加了對大多數站點有意義的可用標頭子集。您可以按照 <a href="https://www.npmjs.com/package/helmet">npm </a>上的說明，根據需要添加/禁用特定標頭。</p>
 </div>
 
 <h2 id="例子：在_Heroku_上安裝本地圖書館">例子：在 Heroku 上安裝本地圖書館</h2>
@@ -256,7 +256,7 @@ var app = express();
 <p>Heroku 與 <strong>git</strong> 源代碼版本控制系統緊密集成，使用它來上傳/同步您對實時運行系統所做的任何更改。它通過添加一個名為 heroku 的新 Heroku“遠程”儲存庫，來指向您在Heroku雲上的源儲存庫。在開發期間，您使用 git 在“主”儲存庫 master 中儲存更改。如果要部署站點，請將更改同步到 Heroku 存儲庫。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 如果您習慣於遵循良好的軟件開發實踐，那麼您可能已經在使用 git 或其他一些 SCM 系統。如果您已有 git 儲存庫，則可以跳過此步驟。</p>
+<p><strong>備註：</strong> 如果您習慣於遵循良好的軟件開發實踐，那麼您可能已經在使用 git 或其他一些 SCM 系統。如果您已有 git 儲存庫，則可以跳過此步驟。</p>
 </div>
 
 <p>有很多方法可以使用git，但最簡單的方法之一，是首先在 <a href="https://github.com/">GitHub </a>上建立一個帳戶，在那裡創建儲存庫，然後在本地同步它：</p>
@@ -320,7 +320,7 @@ Changes to be committed:
 <p>完成此操作後，您應該可以返回創建儲存庫的 Github 上的頁面，刷新頁面，並查看您的整個應用程序現已上傳。使用此添加/提交/推送循環，您可以在文件更改時，繼續更新儲存庫。</p>
 
 <div class="note">
-<p><strong>提示:</strong> 這是備份你的“vanilla”項目的好時機 - 雖然我們將在以下部分中進行的一些更改，可能對任何平台（或開發）上的部署有用，而一些其他的更改可能沒有用。</p>
+<p><strong>備註：</strong> 這是備份你的“vanilla”項目的好時機 - 雖然我們將在以下部分中進行的一些更改，可能對任何平台（或開發）上的部署有用，而一些其他的更改可能沒有用。</p>
 
 <p>執行此操作的最佳方法，是使用 git 來管理您的修訂。使用 git，您不僅可以回到特定的舊版本，而且可以在生產變更的單獨“分支”中進行維護，並選擇在生產和開發分支之間移動的任何更改。<a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">學習Git</a>非常值得，但超出了本主題的範圍。</p>
 
@@ -414,7 +414,7 @@ git push origin master</pre>
 <pre class="brush: bash">heroku create</pre>
 
 <div class="note">
-<p><strong>注意:</strong> 如果您願意，可以在“創建”create 之後指定遠程儲存庫的命名。如果你不這樣做，你會得到一個隨機的名字。該名稱用於默認 URL。</p>
+<p><strong>備註：</strong> 如果您願意，可以在“創建”create 之後指定遠程儲存庫的命名。如果你不這樣做，你會得到一個隨機的名字。該名稱用於默認 URL。</p>
 </div>
 
 <p>然後，我們可以將我們的應用程序，推送到 Heroku 儲存庫，如下所示。這將上傳應用程序，獲取所有依賴項，將其打包到 dyno 中，然後啟動該站點。</p>
@@ -426,7 +426,7 @@ git push origin master</pre>
 <pre class="brush: bash">heroku open</pre>
 
 <div class="note">
-<p><strong>注意</strong>: 該站點將使用我們的開發數據庫運行。創建一些書本和其他對象，並檢查該網站是否按預期運行。在下一節中，我們將其設置為使用我們的新數據庫。</p>
+<p><strong>備註：</strong> 該站點將使用我們的開發數據庫運行。創建一些書本和其他對象，並檢查該網站是否按預期運行。在下一節中，我們將其設置為使用我們的新數據庫。</p>
 </div>
 
 <h3 id="設定配置變量">設定配置變量</h3>

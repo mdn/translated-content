@@ -31,7 +31,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 <p>此教程將展示上述的操作，如何在 Express 中實現。在此過程中，我們將擴展 LocalLibrary 網站，以允許用戶創建、編輯、和刪除圖書館中的項目。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 我們還沒有考慮如何將特定路由，限制為經過身份驗證或授權的用戶，因此在這個時間點，任何用戶都可以對數據庫進行更改。</p>
+<p><strong>備註：</strong> 我們還沒有考慮如何將特定路由，限制為經過身份驗證或授權的用戶，因此在這個時間點，任何用戶都可以對數據庫進行更改。</p>
 </div>
 
 <h3 id="HTML_表單">HTML 表單</h3>
@@ -48,7 +48,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
     &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>雖然這裡，我們只包含一個（文本）字段，用於輸入團隊名稱，但表單可能包含任意數量的其他輸入元素，及其相關標籤。字段的 <code>type</code> 屬性，定義將顯示哪種窗口小部件。該字段的名稱<code>name</code>和<code>id</code> ，用於標識JavaScript/CSS/HTML 中的字段，而 <code>value</code>定義字段首次顯示時的初始值。匹配團隊標籤使用 <code style="font-style: normal; font-weight: normal;">label </code>標籤，指定（請參閱上面的“輸入名稱” "Enter name"），其中 <code style="font-style: normal; font-weight: normal;">for</code> 字段，包含 <code style="font-style: normal; font-weight: normal;">input </code>相關輸入的 <code style="font-style: normal; font-weight: normal;">id</code>值。</p>
+<p>雖然這裡，我們只包含一個（文本）字段，用於輸入團隊名稱，但表單可能包含任意數量的其他輸入元素，及其相關標籤。字段的 <code>type</code> 屬性，定義將顯示哪種窗口小部件。該字段的名稱<code>name</code>和<code>id</code> ，用於標識JavaScript/CSS/HTML 中的字段，而 <code>value</code>定義字段首次顯示時的初始值。匹配團隊標籤使用 <code>label</code> 標籤，指定（請參閱上面的“輸入名稱” "Enter name"），其中 <code>for</code> 字段，包含 <code>input</code> 相關輸入的 <code>id</code>值。</p>
 
 <p>提交輸入（<code>submit</code>）將顯示為按鈕（默認情況下） - 用戶可以按此按鈕，將其他輸入元素包含的數據，上傳到服務器（在本例中，只有 <code>team_name</code>）。表單屬性，定義用於發送數據的HTTP <code>method</code>方法，和服務器上數據的目標（<code>action</code>）：</p>
 
@@ -110,11 +110,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 <h4 id="使用_express-validator">使用 express-validator</h4>
 
 <div class="note">
-<p><strong>注意:</strong> Github上的 <a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a> 指南，提供了API的良好概述。我們建議您閱讀該內容，以了解其所有功能（包括創建自定義驗證程序）。下面我們只介紹一個對 LocalLibrary 有用的子集。</p>
-
-<p> </p>
-
-<p> </p>
+<p><strong>備註：</strong> Github上的 <a href="https://github.com/ctavan/express-validator#express-validator">express-validator</a> 指南，提供了API的良好概述。我們建議您閱讀該內容，以了解其所有功能（包括創建自定義驗證程序）。下面我們只介紹一個對 LocalLibrary 有用的子集。</p>
 </div>
 
 <p>要在我們的控制器中使用驗證器，我們必須從 'e<strong>xpress-validator/check</strong>'和'<strong>express-validator/filter</strong>'模塊中，導入我們想要使用的函數，如下所示：</p>
@@ -140,7 +136,7 @@ body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
 </pre>
 
   <div class="note">
-  <p><strong>注意:</strong> 您還可以添加內聯清理器，如<code>trim()</code>，如上所示。但是，此處應用清理器，僅適用於驗證步驟。如果要對最終輸出進行消毒，則需要使用單獨的清理器方法，如下所示。</p>
+  <p><strong>備註：</strong> 您還可以添加內聯清理器，如<code>trim()</code>，如上所示。但是，此處應用清理器，僅適用於驗證步驟。如果要對最終輸出進行消毒，則需要使用單獨的清理器方法，如下所示。</p>
   </div>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#sanitizebodyfields">sanitizeBody(fields)</a></code>: 指定一個正文要清理的字段。然後將清理操作，以菊花鏈形式連接到此方法。例如，下面的 <code>escape()</code>清理操作，會從名稱變量中，刪除可能在 JavaScript 跨站點腳本攻擊中使用的 HTML 字符。
@@ -185,7 +181,7 @@ sanitizeBody('date').toDate(),</pre>
 </ul>
 
 <div class="note">
-<p><strong>注意:</strong> 更“牢固”的實現，可能允許您在創建新對象時，創建依賴對象，並隨時刪除任何對象（例如，通過刪除依賴對象，或從數據庫中，刪除對已刪除對象的引用） 。</p>
+<p><strong>備註：</strong> 更“牢固”的實現，可能允許您在創建新對象時，創建依賴對象，並隨時刪除任何對象（例如，通過刪除依賴對象，或從數據庫中，刪除對已刪除對象的引用） 。</p>
 </div>
 
 <h3 id="路由">路由</h3>
@@ -270,5 +266,3 @@ router.post('/genre/create', genre_controller.genre_create_post);
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
 </ul>
-
-<p> </p>
