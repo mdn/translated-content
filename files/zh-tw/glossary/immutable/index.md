@@ -15,4 +15,4 @@ translation_of: Glossary/Immutable
 
 ### 基本知識
 
-- Wikipedia 上的{{interwiki("wikipedia", "不可變物件", "不可變物件")}}
+- Wikipedia 上的[不可變物件](https://zh.wikipedia.org/wiki/不可變物件)

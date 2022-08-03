@@ -11,4 +11,4 @@ translation_of: Glossary/Ligature
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Typographic ligature", "Ligature")}} on Wikipedia
+- [Ligature](https://zh.wikipedia.org/wiki/Typographic_ligature) on Wikipedia

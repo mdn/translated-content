@@ -166,7 +166,7 @@ gods.forEach(function (eachName, index){
 
 <p>在這裡我們看到 <code>fetch</code><code>()</code> 帶一個參數——你想要在網路上提取資源的網址——並回傳一個 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a> 。這一個 promise 用來表示一個完成或失敗的非同步操作的物件。它代表的是一種中間的狀態。本質上，它代表瀏覽器述說著：「我承諾我會盡快給予你一個答覆」，因此名稱就叫做「 promise 」。</p>
 
-<p>我們可以透過練習來習慣這個概念；在動作上它感覺有點像是 {{interwiki("wikipedia", "薛丁格的貓")}}。任何可能的結果已經發生，所以 fetch 指令正在等待瀏覽器在未來的某個時間點完成操作後並回傳的結果。我們接著在 <code>fetch()</code> 的結束會鏈結三個程式區塊：</p>
+<p>我們可以透過練習來習慣這個概念；在動作上它感覺有點像是 <a href="https://zh.wikipedia.org/wiki/薛丁格的貓">薛丁格的貓</a>。任何可能的結果已經發生，所以 fetch 指令正在等待瀏覽器在未來的某個時間點完成操作後並回傳的結果。我們接著在 <code>fetch()</code> 的結束會鏈結三個程式區塊：</p>
 
 <ul>
  <li>兩個 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> 區塊。兩個都含有回呼函式且先前的操作成功時就會執行，每一個回呼函式都會收到上一個成功完成操作的結果，因此你可以繼續執行一些事情。每一個 <code>.then()</code> 區塊都會回傳另一個 promise ，代表你可以將多個 <code>.then()</code> 區塊彼此作連結，所以多個非同步操作可以一個接著一個被用來依序執行。</li>

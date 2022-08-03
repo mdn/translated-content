@@ -13,4 +13,4 @@ translation_of: Glossary/ASCII
 
 ### 基礎知識
 
-維基百科上的 {{Interwiki("wikipedia", "ASCII")}}
+維基百科上的 [ASCII](https://zh.wikipedia.org/wiki/ASCII)

@@ -5,7 +5,7 @@ translation_of: Glossary/JavaScript
 ---
 JavaScript（JS）是個程式語言。通常用於用戶端（client-side）的動態網頁腳本，不過也常藉由 [Node.js](http://nodejs.org/) 之類的軟體包，使用到{{Glossary("Server","伺服器")}}端（Server-side）。
 
-不要把 JavaScript 與 {{interwiki("wikipedia", "Java")}} 這兩個程式語言混淆了。雖然「Java」與「JavaScript」都是甲骨文公司（Oracle）在美國和其他國家或地區註冊的商標，但這兩個程式語言在語法、語意、還有用處上，都有極大的不同。
+不要把 JavaScript 與 [Java](https://zh.wikipedia.org/wiki/Java) 這兩個程式語言混淆了。雖然「Java」與「JavaScript」都是甲骨文公司（Oracle）在美國和其他國家或地區註冊的商標，但這兩個程式語言在語法、語意、還有用處上，都有極大的不同。
 
 前 Netscape 員工 Brendan Eich 原本想讓 JavaScript 成為伺服器端語言。但 JavaScript 卻在 1995 年九月於 Netscape Navigator 2.0 降生並得到隨之而來的成功。{{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} 也在 1996 年八月以 JScript 的名義支援 JavaScript。
 
@@ -19,7 +19,7 @@ JavaScript 通常用於瀏覽器，使開發者能透過 {{Glossary("DOM")}} 操
 
 ### 基本知識
 
-- 維基百科的 {{interwiki("wikipedia", "JavaScript", "JavaScript")}}
+- 維基百科的 [JavaScript](https://zh.wikipedia.org/wiki/JavaScript)
 
 ### 學習 JavaScript
 

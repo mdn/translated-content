@@ -30,5 +30,5 @@ processUserInput(greeting);
 
 ### 一般常識
 
-- 維基百科的 {{interwiki("wikipedia", "回呼函式")}}
+- 維基百科的 [回呼函式](https://zh.wikipedia.org/wiki/回呼函式)
 - [Understand JavaScript Callback Functions and Use Them](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/)
