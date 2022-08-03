@@ -1,5 +1,5 @@
 ---
-title: Introducing the CSS Cascade
+title: Introduction à la cascade CSS
 slug: Web/CSS/Cascade
 translation_of: Web/CSS/Cascade
 spec-urls: https://drafts.csswg.org/css-cascade/
@@ -89,29 +89,37 @@ Pour cet exemple, nous aurons une feuille de style provenant de l'agent utilisat
 **Feuille de style de l'agent utilisateur**
 
 ```css
-li { margin-left: 10px }
+li {
+  margin-left: 10px;
+}
 ```
 
 **Feuille de style du site 1**
 
 ```css
-li { margin-left: 0 } /* Une règle de réinitialisation */
+li {
+  margin-left: 0;
+} /* Une règle de réinitialisation */
 ```
 
 **Feuille de style du site 2**
 
 ```css
 @media screen {
-  li { margin-left: 3px }
+  li {
+    margin-left: 3px;
+  }
 }
 
 @media print {
-  li { margin-left: 1px }
+  li {
+    margin-left: 1px;
+  }
 }
 
 @layer namedLayer {
   li {
-    margin-left: 5px ;
+    margin-left: 5px;
   }
 }
 ```
@@ -119,7 +127,9 @@ li { margin-left: 0 } /* Une règle de réinitialisation */
 **Feuille de style de l'utilisatrice ou de l'utilisateur**
 
 ```css
-.specific { margin-left: 1em }
+.specific {
+  margin-left: 1em;
+}
 ```
 
 **HTML**
@@ -144,55 +154,59 @@ La règle avec une marge de `1px` s'applique aux médias imprimés. Par manque d
 
 Aucune déclaration n'est marquée avec `!important`,  l'ordre porté par la précédence indique que les feuilles de style du site l'emportent sur celles de l'utilisatrice ou de l'utilisateur qui l'emportent sur celles de l'agent utilisateur. Selon _l'origine et l'importance_, la règle à `1em` de la feuille de style de l'utilisatrice ou de l'utilisateur, ainsi que la règle à `10px` qui provient de l'agent utilisateur sont retirées des règles à considérer.
 
-Note that even though the user style on `.specific` of `1em` has a higher specificity, it's a normal declaration in a user style sheet. As such, it has a lower precedence than any author styles, and gets removed by the origin and importance step of the algorithm before specificity even comes into play.
+On notera que, bien que la feuille de style de l'utilisatrice ou de l'utilisateur utilise un sélecteur `.specific` pour la règle avec la valeur `1em`, qui a une spécificité supérieure, il s'agit d'une déclaration normale pour cette origine. Ainsi, elle a une précédence inférieure à celles des styles du site et est donc éliminée lors de l'étape de l'algorithme pour l'origine et l'importance, avant même que la spécificité ait un rôle à jouer.
 
-There are three declarations in author stylesheets:
+Il y a trois déclarations dans les feuilles de style du site&nbsp;:
 
 ```css
-li { margin-left: 0 } /* from author css 1 */
+li {
+  margin-left: 0;
+} /* De la première feuille de style du site */
 ```
 
 ```css
 @media screen {
-  li { margin-left: 3px }
+  li {
+    margin-left: 3px;
+  }
 }
 ```
 
 ```css
 @layer namedLayer {
   li {
-    margin-left: 5px ;
+    margin-left: 5px;
   }
 }
 ```
 
-The last one, the `5px` is part of a cascade layer. Normal declarations in layers have lower precedence than normal styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
+La dernière, avec `5px`, fait partie d'une couche de cascade. Les déclarations normales dans les couches ont une précédence inférieure aux styles normaux qui ne sont pas présents dans une couche et qui appartiennent au même type d'origine. Aussi, cette règle est également éliminée à la deuxième étape de l'algorithme, sur _l'origine et l'importance_.
 
-This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_.
+Il reste donc les déclarations avec les valeurs `0` et `3px`, qui ont le même sélecteur, et donc la même _spécificité_.
 
-We then look at _order of appearance_. The second one, the last of the two unlayered author styles, wins.
+On regarde donc _l'ordre d'apparence_. C'est la seconde, la dernière parmi les styles du site qui n'appartient pas à une couche, qui l'emporte.
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
-> **Note:** The declaration defined in the user CSS, while it may have greater specificity, is not chosen as the cascade algorithm's _origin and importance_ is applied before the _specificity_ algorithm. The declaration defined in a cascade layer, though it may come later in the code, will not have precedence either as normal styles in cascade layers have less precedence than normal unlayered styles.  _Order of appearance_ only matters when both origin, importance, and specificity are equal.
+> **Note :** La déclaration définie dans la feuille de style de l'utilisatrice ou de l'utilisateur a beau avoir une spécificité supérieure, elle n'est pas choisie car l'étape sur _l'origine et l'importance_ de l'algorithme de la cascade est appliqué avant l'algorithme de _la spécificité_. La déclaration définie dans une couche de la cascade, bien qu'ell arrive ensuite dans le code, n'aura pas la précédence non plus, car les couches de la cascade ont une précédence moindre que les styles qui ne sont pas rattachés à une couche. _L'ordre d'apparence_ fonctionne uniquement lorsque l'origine, l'importance et la spécificité sont égales.
 
-## Author styles: inline styles, layers, and precedence
+## Styles du site&nbsp;: styles en incise HTML, couches, et précédence
 
-The [table in Cascading order](#cascading_order) provided a precedence order overview. The table summarized the user-agent, user, and author origin type styles in two lines each with "origin type - normal" and "origin type - !important". The precedence within each origin type is more nuanced. Styles can be contained within layers within their origin type, and, with author styles, there is also the issue of where inline styles land in the cascade order.
+[Le tableau de la section précédente](#lordre_de_la_cascade) nous fournit un aperçu sur l'ordre de précédence. On y trouvait deux lignes pour chaque origine, l'une pour les déclarations normales et la deuxième pour les déclarations importantes. En réalité, la précédence est plus nuancée pour chacune de ces origines. En effet, les styles peuvent être contenus au sein de couche. De plus, pour les styles provenant du site, se pose également la question de la place  dans l'ordre de la cascade pour les styles déclarés dans le document HTML.
 
-The order in which layers are declared is important in determining precedence. Normal styles in a layer take precedence over styles declared in prior layers; with normal styles declared outside of any layer taking precedence over normal layered styles regardless of specificity.
+L'ordre de déclaration des couches a son importance pour la détermination de la précédence. Les styles normaux situés dans une couche l'emportent sur les styles déclarés dans les couches antérieures. Les styles normaux déclarés en dehors de toute couche l'emportent sur les styles normaux situés dans des couches, quelle que soit la spécificité.
 
-In this example, the author used CSS's [`@import`](/fr/docs/Web/CSS/@import) rule to import five external style sheets within a [`<style>`](/fr/docs/Web/HTML/Element/style) information element.
+Dans cet exemple, le site utilise la règle [`@import`](/fr/docs/Web/CSS/@import) pour importer cinq feuilles de styles externes dans un élément [`<style>`](/fr/docs/Web/HTML/Element/style).
 
 ```html
 <style>
-  @import unlayeredStyles.css;
-  @import AStyles.css layer(A);
-  @import moreUnlayeredStyles.css;
-  @import BStyles.css layer(B);
-  @import CStyles.css layer(C);
+  @import stylesSansCouche.css;
+  @import StylesA.css layer(A);
+  @import morestylesSansCouche.css;
+  @import StylesB.css layer(B);
+  @import StylesC.css layer(C);
   p {
     color: red;
     padding: 1em !important;
@@ -200,33 +214,32 @@ In this example, the author used CSS's [`@import`](/fr/docs/Web/CSS/@import) rul
 </style>
 ```
 
-and then in the body of the document we have inline styles:
+Et dans le corps du document, on a des styles en incise (<i lang="en">inline styles</i>)&nbsp;:
 
 ```html
-<p style="line-height: 1.6em; text-decoration: overline !important;">Hello</p>
+<p style="line-height: 1.6em; text-decoration: overline !important;">Coucou</p>
 ```
 
- In the CSS code block above, three cascade layers named "A", "B", and "C", were created, in that order. Three stylesheets were imported directly into layers and two were imported without creating or being assigned to a layer.
-The "All unlayered styles" in the list below (normal author style precedence - order 4) includes styles from these two stylesheets and the additional unlayered CSS style blocks. In addition, there are two inline styles, a normal `line-height` declaration and an important `text-decoration` declaration:
+Dans le bloc de code CSS précédent, on a trois couches de cascade qui sont créées et nommées dans cet ordre&nbsp;: A, B, et C. Trois feuilles de styles ont directement été importées dans des couches et deux ont été importées sans créer de couches ou sans y être affectées. Dans la liste qui suit, «&nbsp;Tous les styles sans couche&nbsp;» (au quatrième range) inclut les styles de ces deux feuilles de styles et les éventuels blocs CSS supplémentaires qui ne seraient pas rattachés à une couche. On a en plus deux styles en incise, une déclaration normale pour `line-height` et une déclaration importante pour `text-decoration`&nbsp;:
 
-|  Order (low to high)    | Author style      | Importance   |
-| --- | ----------- | ------------ |
-| 1   | A - first layer | normal       |
-| 2   | B - second layer | normal       |
-| 3  | C - last layer      | normal       |
-| 4   | All unlayered styles       | normal       |
-| 5   | inline `style`        | normal       |
-| 6   | animations  |              |
-| 7   | All unlayered styles      | `!important` |
-| 8   | C - last layer   | `!important` |
-| 9   |  B - second layer | `!important`       |
-| 10   | A - first layer    | `!important` |
-| 11   | inline `style`      | `!important` |
-| 12   | transitions |              |
+|  Ordre (du plus faible au plus élevé)    | Style du site               | Importance   |
+| ---------------------------------------- | --------------------------- | ------------ |
+| 1                                        | A - première couche         | normal       |
+| 2                                        | B - deuxième couche         | normal       |
+| 3                                        | C - dernière couche         | normal       |
+| 4                                        | Tous les styles sans couche | normal       |
+| 5                                        | Styles en incise            | normal       |
+| 6                                        | Animations                  |              |
+| 7                                        | Tous les styles sans couche | `!important` |
+| 8                                        | C - dernière couche         | `!important` |
+| 9                                        | B - deuxième couche         | `!important` |
+| 10                                       | A - première couche         | `!important` |
+| 11                                       | inline `style`              | `!important` |
+| 12                                       | Transitions                 |              |
 
-In all origin types, the non important styles contained in layers have the lowest precedence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precedence than all normal unlayered styles, which includes normal styles from `unlayeredStyles.css`, `moreUnlayeredStyles.css`, and the `color` of `p` in the `<style>` itself.
+In all origin types, the non important styles contained in layers have the lowest precedence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precedence than all normal unlayered styles, which includes normal styles from `stylesSansCouche.css`, `morestylesSansCouche.css`, and the `color` of `p` in the `<style>` itself.
 
-If any of the layered styles in A, B, or C, have selectors with higher specificity matching an element, similar to `:root body p { color: black;}`, it doesn't matter. Those declarations are removed from consideration because of _origin_; normal layered styles have less precedence than normal unlayered styles. If, however, the more specific selector `:root body p { color: black;}` was found in `unlayeredStyles.css`, as both _origin and importance_ have the same precedence, _specificity_ would mean the more specific, black declaration would win.
+If any of the layered styles in A, B, or C, have selectors with higher specificity matching an element, similar to `:root body p { color: black;}`, it doesn't matter. Those declarations are removed from consideration because of _origin_; normal layered styles have less precedence than normal unlayered styles. If, however, the more specific selector `:root body p { color: black;}` was found in `stylesSansCouche.css`, as both _origin and importance_ have the same precedence, _specificity_ would mean the more specific, black declaration would win.
 
 The layer order of precedence is inverted for styles declared as `!important`. Important styles declared in a layer take precedence over important styles declared outside of a layer. Important styles in the first declared layer (A) take precedence over important declarations found in layer B, which takes precedence over C, which have precedence over important declarations in the unlayered styles.
 
