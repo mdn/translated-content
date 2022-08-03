@@ -1,58 +1,45 @@
 ---
 title: Plugin
 slug: Web/API/Plugin
+page-type: web-api-interface
 tags:
+  - API
   - Add-ons
   - DOM
+  - NeedsContent
   - Plug-in
+  - Plugins
+browser-compat: api.Plugin
 translation_of: Web/API/Plugin
 ---
-<div>{{ApiRef}} {{non-standard_header}}</div>
+{{ApiRef("HTML DOM")}}{{deprecated_header}}
 
-<p><code>Plugin</code> インタフェースはブラウザのプラグインについての情報を提供する DOM インタフェースです。</p>
+Plugin` インターフェイスは、 ブラウザーのプラグインに関する情報を提供します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+> **Note:** 最新のブラウザーでは、 `Plugin` オブジェクトのプロパティを列挙することができなくなりました。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>プロパティ名</th>
-   <th>説明</th>
-   <th>戻り値の型</th>
-   <th>可用性</th>
-  </tr>
-  <tr>
-   <td>{{domxref("Plugin.description")}} {{readonlyInline}}</td>
-   <td>人間の読みやすい形式の、プラグインに関する説明</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>DOM 0</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Plugin.filename")}} {{readonlyInline}}</td>
-   <td>プラグインのファイルのファイル名</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>DOM 0</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Plugin.name")}} {{readonlyInline}}</td>
-   <td>プラグインの名称</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>DOM 0</td>
-  </tr>
-  <tr>
-   <td>{{domxref("Plugin.version")}} {{readonlyInline}}</td>
-   <td>プラグインのバージョンナンバーを示す<strong>文字列</strong></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{gecko_minversion_inline("1.9.2")}}</td>
-  </tr>
- </tbody>
-</table>
+## プロパティ
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+- {{domxref("Plugin.description")}} {{readonlyinline}}
+  - : 人間の読みやすい形式の、プラグインに関する説明。
+- {{domxref("Plugin.filename")}} {{readonlyinline}}
+  - : プラグインのファイルのファイル名。
+- {{domxref("Plugin.name")}} {{readonlyinline}}
+  - : プラグインの名称。
+- {{domxref("Plugin.version")}} {{readonlyinline}}
+  - : プラグインのバージョン番号文字列。
 
-<dl>
- <dt>{{domxref("Plugin.item")}}</dt>
- <dd>サポートされている型のリストの index を指定する事により、サポートされる content 型 の MIME 型 が返される</dd>
- <dt>{{domxref("Plugin.namedItem")}}</dt>
- <dd>サポートされるアイテムの MIME 型 を返す</dd>
-</dl>
+## メソッド
+
+- {{domxref("Plugin.item")}}
+  - : 対応するコンテンツ型の MIME タイプを返します。対応する型のリストへのインデックス番号を指定します。
+- {{domxref("Plugin.namedItem")}}
+  - : 対応している項目の MIME タイプを返します。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
