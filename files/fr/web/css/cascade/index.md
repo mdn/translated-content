@@ -456,7 +456,7 @@ Après que le contenu a fini de modifier les styles, on peut être dans une situ
 ## Voir aussi
 
 - [Une introduction simple à la cascade CSS](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- Concepts-clé de CSS&nbsp;:
+- Concepts clés de CSS&nbsp;:
   - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
   - [Spécificité](/fr/docs/Web/CSS/Specificity)
   - [Héritage](/fr/docs/Web/CSS/inheritance)
