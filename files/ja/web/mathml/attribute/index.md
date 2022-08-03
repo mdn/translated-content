@@ -6,471 +6,465 @@ tags:
   - MathML Reference
 translation_of: Web/MathML/Attribute
 ---
-<p>これは MathML 属性のアルファベット順リストです。各属性の詳細はそれぞれの <a href="/ja/docs/MathML/Element" title="/docs/MathML/Element">要素のページ</a> にあります。</p>
+{{MathMLRef}}
 
-<p>補足:</p>
+これは MathML 属性のアルファベット順リストです。それぞれの属性の詳細は、関連する[要素のページ](/ja/docs/Web/MathML/Element)および[グローバル属性ページ](/ja/docs/Web/MathML/Global_attributes)にあります。 MathML における値と単位についてのメモは[値](/ja/docs/Web/MathML/Attribute/Values)ページにあります。
 
-<ul>
- <li>MathML {{ MathMLElement("mstyle") }} 要素と {{ MathMLElement("math") }} {{ gecko_minversion_inline("7.0") }} 要素は、すべての MathML プレゼンテーション要素のすべての属性を受け入れます。</li>
- <li>MathML の値と単位についての補足は、<a href="/ja/docs/MathML/Attributes/Values" title="/docs/MathML/Attributes/Values">値</a> を参照してください。</li>
-</ul>
+> **Note:** 主要な [MathML](/ja/docs/Web/MathML) ページで説明されているように、このドキュメントは言語のうちブラウザーに関連するサブセットに焦点を当てています。それ以外の MathML 属性の詳細については、 [MathML Full](https://w3c.github.io/mathml/) 仕様書を参照してください。
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th>属性名</th>
-   <th>この属性を取る要素</th>
-   <th>説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr id="accent">
-   <td><code>accent</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mover") }}, {{ MathMLElement("munderover") }}</td>
-   <td>演算子がアクセント記号として扱われるべきか否かを指定する真偽値。</td>
-  </tr>
-  <tr id="accentunder">
-   <td><code>accentunder</code></td>
-   <td>{{ MathMLElement("munder") }}, {{ MathMLElement("munderover") }}</td>
-   <td>演算子がアクセント記号として扱われるべきか否かを指定する真偽値。</td>
-  </tr>
-  <tr id="actiontype">
-   <td><code>actiontype</code></td>
-   <td>{{ MathMLElement("maction") }}</td>
-   <td>この要素で起こるアクションを指定する文字列値。</td>
-  </tr>
-  <tr id="align">
-   <td><code>align</code></td>
-   <td>{{ MathMLElement("mtable") }}<br>
-    {{ MathMLElement("munder") }}, {{ MathMLElement("mover") }}, {{ MathMLElement("munderover") }}<br>
-    {{ MathMLElement("mstack") }}</td>
-   <td>いくつかの要素の揃える位置を指定する (詳細は要素のページを参照)。</td>
-  </tr>
-  <tr id="alignmentscope">
-   <td>{{ unimplemented_inline() }} <code>alignmentscope</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>テーブル列が整列スコープとして振る舞うか否かを指定する真偽値。</td>
-  </tr>
-  <tr id="alt-*">
-   <td>{{ unimplemented_inline() }}<br>
-    <code>altimg</code><br>
-    <code>altimg-width</code><br>
-    <code>altimg-height</code><br>
-    <code>altimg-valign</code><br>
-    <code>alttext</code></td>
-   <td>{{ MathMLElement("math") }}</td>
-   <td>視覚的およびテキストへのフォールバックオプション。</td>
-  </tr>
-  <tr id="bevelled">
-   <td><code>bevelled</code></td>
-   <td>{{ MathMLElement("mfrac") }}</td>
-   <td>分数がどのように表示されるべきかを指定する。</td>
-  </tr>
-  <tr id="charalign">
-   <td>{{ unimplemented_inline() }} <code>charalign</code></td>
-   <td>{{ MathMLElement("mstack") }}</td>
-   <td>桁の水平方向の揃えを指定する。</td>
-  </tr>
-  <tr id="close">
-   <td><code>close</code></td>
-   <td>{{ MathMLElement("mfenced") }}</td>
-   <td>閉じデリミタの文字列。</td>
-  </tr>
-  <tr id="columnalign">
-   <td><code>columnalign</code></td>
-   <td>{{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}, {{ MathMLElement("mlabeledtr") }}</td>
-   <td>表のセルの水平方向の揃えを指定する。</td>
-  </tr>
-  <tr id="columnlines">
-   <td><code>columnlines</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>表の列間罫線を指定する。</td>
-  </tr>
-  <tr id="columnspacing">
-   <td><code>columnspacing</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>表の列間スペースを指定する。</td>
-  </tr>
-  <tr id="columnspan">
-   <td><code>columnspan</code></td>
-   <td>{{ MathMLElement("mtd") }}</td>
-   <td>表のセルが何列分を占めるかを指定する非負整数。</td>
-  </tr>
-  <tr id="columnwidth">
-   <td>{{ unimplemented_inline() }} <code>columnwidth</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>表の列の幅を指定する。</td>
-  </tr>
-  <tr id="crossout">
-   <td>{{ unimplemented_inline() }} <code>crossout</code></td>
-   <td>{{ MathMLElement("mscarry") }}</td>
-   <td>Specifies what kind of line is drawn to cross out carries.</td>
-  </tr>
-  <tr id="decimalpoint">
-   <td>{{ unimplemented_inline() }} <code>decimalpoint</code></td>
-   <td>{{ MathMLElement("mstyle") }}</td>
-   <td>If the <code>decimalpoint</code> value is used to specify the <a href="#align">alignment</a>, this attribute is specifying the character for the alignment point within {{ MathMLElement("mstack") }} and {{ MathMLElement("mtable") }} columns.</td>
-  </tr>
-  <tr id="denomalign">
-   <td><code>denomalign</code></td>
-   <td>{{ MathMLElement("mfrac") }}</td>
-   <td>分数の分母の揃え方。</td>
-  </tr>
-  <tr id="depth">
-   <td><code>depth</code></td>
-   <td>{{ MathMLElement("mpadded") }}</td>
-   <td>Sets or increments the depth. See <a href="/ja/docs/MathML/Attributes/Values">length</a>.</td>
-  </tr>
-  <tr id="dir">
-   <td><code>dir</code></td>
-   <td>{{ MathMLElement("math") }}, {{ MathMLElement("mi") }}, {{ MathMLElement("mo") }}, {{ MathMLElement("mrow") }}, {{ MathMLElement("ms") }}, {{ MathMLElement("mtext") }}</td>
-   <td>The text direction. Possible values are either ltr (left to right) or rtl (right to left).</td>
-  </tr>
-  <tr id="display">
-   <td><code>display</code></td>
-   <td>{{ MathMLElement("math") }}</td>
-   <td>レンダリングモードを指定する。取り得る値は <code>block</code> と <code>inline</code>。</td>
-  </tr>
-  <tr id="displaystyle">
-   <td><code>displaystyle</code></td>
-   <td>{{ MathMLElement("mstyle") }}, {{ MathMLElement("mtable") }}</td>
-   <td>A Boolean value specifying whether more vertical space is used for displayed equations or, if set to <code>false</code>, a more compact layout is used to display formulas.</td>
-  </tr>
-  <tr id="edge">
-   <td>{{ unimplemented_inline() }} <code>edge</code></td>
-   <td>{{ MathMLElement("malignmark") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="equalcolumns">
-   <td>{{ unimplemented_inline() }} <code>equalcolumns</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>A Boolean value indicating whether to force all columns to have the same total height.</td>
-  </tr>
-  <tr id="equalrows">
-   <td>{{ unimplemented_inline() }} <code>equalrows</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>A Boolean value indicating whether to force all rows to have the same total height.</td>
-  </tr>
-  <tr id="fence">
-   <td><code>fence</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>A Boolean value specifying whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.</td>
-  </tr>
-  <tr id="form">
-   <td>{{ unimplemented_inline() }} <code>form</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>Specifies the role of the operator in an enclosed expression.</td>
-  </tr>
-  <tr id="frame">
-   <td><code>frame</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>Specifies borders of an entire {{ MathMLElement("mtable") }}. Possible values are: <code>none</code> (default), <code>solid</code> and <code>dashed</code>.</td>
-  </tr>
-  <tr id="framespacing">
-   <td><code>framespacing</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>Specifies additional space added between the table and <code>frame</code>.</td>
-  </tr>
-  <tr id="groupalign">
-   <td>{{ unimplemented_inline() }} <code>groupalign</code></td>
-   <td>{{ MathMLElement("maligngroup") }}, {{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="height">
-   <td><code>height</code></td>
-   <td>{{ MathMLElement("mglyph") }}, {{ MathMLElement("mpadded") }}, {{ MathMLElement("mspace") }}</td>
-   <td>Specifies the desired height. See <a href="/ja/docs/MathML/Attributes/Values#Lengths" title="/docs/MathML/Attributes/Values#Lengths">lengths</a> for possible values.</td>
-  </tr>
-  <tr id="href">
-   <td><code>href</code></td>
-   <td><em>All</em></td>
-   <td>Used to set a hyperlink to a specified URI.</td>
-  </tr>
-  <tr id="id">
-   <td><code>id</code></td>
-   <td><em>All</em></td>
-   <td>Sets up a unique identifier associated with the element.</td>
-  </tr>
-  <tr id="indentalign">
-   <td>{{ unimplemented_inline() }} <code>indentalign</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="indentalignfirst">
-   <td>{{ unimplemented_inline() }} <code>indentalignfirst</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="indentalignlast">
-   <td>{{ unimplemented_inline() }} <code>indentalignlast</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="indentshift">
-   <td>{{ unimplemented_inline() }} <code>indentshift</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="indentshiftfirst">
-   <td>{{ unimplemented_inline() }} <code>indentshiftfirst</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="indentshiftlast">
-   <td>{{ unimplemented_inline() }} <code>indentshiftlast</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="indenttarget">
-   <td>{{ unimplemented_inline() }} <code>indenttarget</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="infixlinebreakstyle">
-   <td>{{ unimplemented_inline() }} <code>infixlinebreakstyle</code></td>
-   <td>{{ MathMLElement("mstyle") }}</td>
-   <td>Specifies the default <code>linebreakstyle</code> to use for infix operators.</td>
-  </tr>
-  <tr id="largeop">
-   <td><code>largeop</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>演算子が通常よりも大きく書かれるべきかを指定する。</td>
-  </tr>
-  <tr id="length">
-   <td><code>length</code></td>
-   <td>{{ MathMLElement("msline") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="linebreak">
-   <td>{{ unimplemented_inline() }} <code>linebreak</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="linebreakmultchar">
-   <td>{{ unimplemented_inline() }} <code>linebreakmultchar</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="linebreakstyle">
-   <td>{{ unimplemented_inline() }} <code>linebreakstyle</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="lineleading">
-   <td>{{ unimplemented_inline() }} <code>lineleading</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mspace") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="linethickness">
-   <td><code>linethickness</code></td>
-   <td>{{ MathMLElement("mfrac") }}</td>
-   <td>水平分数線の幅</td>
-  </tr>
-  <tr id="location">
-   <td>{{ unimplemented_inline() }} <code>location</code></td>
-   <td>{{ MathMLElement("mscarries") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="longdivstyle">
-   <td>{{ unimplemented_inline() }} <code>longdivstyle</code></td>
-   <td>{{ MathMLElement("mlongdiv") }}</td>
-   <td>割り算の筆算レイアウトのスタイルを制御する。</td>
-  </tr>
-  <tr id="lspace">
-   <td><code>lspace</code></td>
-   <td>{{ MathMLElement("mo") }}, {{ MathMLElement("mpadded") }}</td>
-   <td>演算子の前側の空き量 (値と単位は <a href="/ja/docs/MathML/Attributes/Values#Lengths">length</a> を参照)。</td>
-  </tr>
-  <tr id="lquote">
-   <td><code>lquote</code></td>
-   <td>{{ MathMLElement("ms") }}</td>
-   <td>コンテンツを囲む引用開始文字 (<code>dir</code> に依存します)。デフォルト値は、"<code>&amp;quot;</code>"。</td>
-  </tr>
-  <tr id="mathbackground">
-   <td><code>mathbackground</code></td>
-   <td><em>All</em></td>
-   <td>背景色。<code>#rgb</code> および <code>#rrggbb</code>、<a href="/ja/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords">HTML カラー名</a> が使用できます。</td>
-  </tr>
-  <tr id="mathcolor">
-   <td><code>mathcolor</code></td>
-   <td><em>All</em></td>
-   <td>テキスト色。<code>#rgb</code> および <code>#rrggbb</code>、<a href="/ja/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords">HTML カラー名</a> が使用できます。</td>
-  </tr>
-  <tr id="mathsize">
-   <td><code>mathsize</code></td>
-   <td>{{ MathMLElement("mi") }}, {{ MathMLElement("mn") }}, {{ MathMLElement("mo") }}, {{ MathMLElement("ms") }}, {{ MathMLElement("mtext") }}</td>
-   <td>コンテンツのサイズ。Gecko 20.0 {{geckoRelease("20")}} 以降、単位無しの値が使用でき、デフォルト値の N 倍の値として解釈されます。</td>
-  </tr>
-  <tr id="mathvariant">
-   <td><code>mathvariant</code></td>
-   <td>{{ MathMLElement("mi") }}, {{ MathMLElement("mn") }}, {{ MathMLElement("mo") }}, {{ MathMLElement("ms") }}, {{ MathMLElement("mtext") }}</td>
-   <td>識別子の論理クラス。タイポグラフィーによって様々です。</td>
-  </tr>
-  <tr id="maxsize">
-   <td><code>maxsize</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>演算子の最大サイズ。</td>
-  </tr>
-  <tr id="minlabelspacing">
-   <td>{{ unimplemented_inline() }} <code>minlabelspacing</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>A <a href="/ja/docs/MathML/Attributes/Values">length value</a> specifing the minimum space between a <a href="Element/mlabeledtr" rel="internal">label</a> and the adjacent cell in the row.</td>
-  </tr>
-  <tr id="minsize">
-   <td><code>minsize</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>演算子の最小サイズ。</td>
-  </tr>
-  <tr id="movablelimits">
-   <td><code>movablelimits</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>Specifies whether attached under- and overscripts move to sub- and superscript positions.</td>
-  </tr>
-  <tr id="notation">
-   <td><code>notation</code></td>
-   <td>{{ MathMLElement("menclose") }}</td>
-   <td>A list of notations, separated by white space, to apply to the child elements.</td>
-  </tr>
-  <tr id="numalign">
-   <td><code>numalign</code></td>
-   <td>{{ MathMLElement("mfrac") }}</td>
-   <td>分数の分子の揃え方。</td>
-  </tr>
-  <tr id="open">
-   <td><code>open</code></td>
-   <td>{{ MathMLElement("mfenced") }}</td>
-   <td>開きデリミタの文字列。</td>
-  </tr>
-  <tr id="overflow">
-   <td>{{ unimplemented_inline() }} <code>overflow</code></td>
-   <td>{{ MathMLElement("math") }}</td>
-   <td>If an expression is too long to fit in the allowed width, this attribute sets the preferred handling.</td>
-  </tr>
-  <tr id="position">
-   <td>{{ unimplemented_inline() }} <code>position</code></td>
-   <td>{{ MathMLElement("msgroup") }}, {{ MathMLElement("msrow") }}, {{ MathMLElement("mscarries") }}, {{ MathMLElement("msline") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="rowalign">
-   <td><code>rowalign</code></td>
-   <td>{{ MathMLElement("mtable") }}, {{ MathMLElement("mtd") }}, {{ MathMLElement("mtr") }}</td>
-   <td>表のセルの垂直方向の揃えを指定する。</td>
-  </tr>
-  <tr id="rowlines">
-   <td><code>rowlines</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>表の行間罫線を指定する。</td>
-  </tr>
-  <tr id="rowspacing">
-   <td><code>rowspacing</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>表の行間スペースを指定する。</td>
-  </tr>
-  <tr id="rowspan">
-   <td><code>rowspan</code></td>
-   <td>{{ MathMLElement("mtd") }}</td>
-   <td>表のセルが何行分を占めるかを指定する非負整数。</td>
-  </tr>
-  <tr id="rspace">
-   <td><code>rspace</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>演算子の後ろ側の空き量。</td>
-  </tr>
-  <tr id="rquote">
-   <td><code>rquote</code></td>
-   <td>{{ MathMLElement("ms") }}</td>
-   <td>コンテンツを囲む引用終了文字 (<code>dir</code> に依存します)。デフォルト値は、"<code>&amp;quot;</code>"。</td>
-  </tr>
-  <tr id="scriptlevel">
-   <td><code>scriptlevel</code></td>
-   <td>{{ MathMLElement("mstyle") }}</td>
-   <td>Controls mostly the font-size. The higher the <code>scriptlevel</code>, the smaller the font size.</td>
-  </tr>
-  <tr id="scriptminsize">
-   <td><code>scriptminsize</code></td>
-   <td>{{ MathMLElement("mstyle") }}</td>
-   <td>Specifies a minimum font size allowed due to changes in <code>scriptlevel</code>.<br>
-    Starting with Gecko 20.0 {{geckoRelease("20")}} unitless values and percent values are allowed and interpreted as multiple of "8pt".</td>
-  </tr>
-  <tr id="scriptsizemultiplier">
-   <td><code>scriptsizemultiplier</code></td>
-   <td>{{ MathMLElement("mstyle") }}</td>
-   <td>Specifies the multiplier to be used to adjust font size due to changes in <code>scriptlevel</code>.</td>
-  </tr>
-  <tr id="selection">
-   <td><code>selection</code></td>
-   <td>{{ MathMLElement("maction") }}</td>
-   <td>The child element which is addressed by the action.</td>
-  </tr>
-  <tr id="separator">
-   <td><code>separator</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>視覚的には変わらないが，演算子が区切り記号（カンマなど）であるか否かを指定する。</td>
-  </tr>
-  <tr id="separators">
-   <td><code>separators</code></td>
-   <td>{{ MathMLElement("mfenced") }}</td>
-   <td>区切り記号として使うゼロ個以上の文字の列</td>
-  </tr>
-  <tr id="shift">
-   <td>{{ unimplemented_inline() }} <code>shift</code></td>
-   <td>{{ MathMLElement("msgroup") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="side">
-   <td>{{ unimplemented_inline() }} <code>side</code></td>
-   <td>{{ MathMLElement("mtable") }}</td>
-   <td>Specifies the position where {{ MathMLElement("mlabeledtr") }} label elements should be placed.</td>
-  </tr>
-  <tr id="src">
-   <td>{{ unimplemented_inline() }} <code>src</code></td>
-   <td>{{ MathMLElement("mglyph") }}</td>
-   <td>画像リソースの場所</td>
-  </tr>
-  <tr id="stackalign">
-   <td>{{ unimplemented_inline() }} <code>stackalign</code></td>
-   <td>{{ MathMLElement("mstack") }}</td>
-   <td> </td>
-  </tr>
-  <tr id="stretchy">
-   <td><code>stretchy</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>Specifies whether the operator stretches to the size of the adjacent element.</td>
-  </tr>
-  <tr id="subscriptshift">
-   <td><code>subscriptshift</code></td>
-   <td>{{ MathMLElement("mmultiscripts") }}, {{ MathMLElement("msub") }}, {{ MathMLElement("msubsup") }}</td>
-   <td>The minimum space by which to shift the subscript below the baseline of the expression.</td>
-  </tr>
-  <tr id="supscriptshift">
-   <td><code>supscriptshift</code></td>
-   <td>{{ MathMLElement("mmultiscripts") }}, {{ MathMLElement("msup") }}, {{ MathMLElement("msubsup") }}</td>
-   <td>The minimum space by which to shift the superscript above the baseline of the expression.</td>
-  </tr>
-  <tr id="symmetric">
-   <td><code>symmetric</code></td>
-   <td>{{ MathMLElement("mo") }}</td>
-   <td>If <code>stretchy</code> is <code>true</code>, this attribute specifies whether the operator should be vertically symmetric around the imaginary math axis (centered fraction line).</td>
-  </tr>
-  <tr id="voffset">
-   <td><code>voffset</code></td>
-   <td>{{ MathMLElement("mpadded") }}</td>
-   <td>Sets the vertical position of the child content.</td>
-  </tr>
-  <tr id="width">
-   <td><code>width</code></td>
-   <td>{{ MathMLElement("mglyph") }}, {{ MathMLElement("mpadded") }}, {{ MathMLElement("mspace") }}, {{ MathMLElement("mtable") }}</td>
-   <td>Specifies the desired width. See <a href="/ja/docs/MathML/Attributes/Values#Lengths">lengths</a> for possible values.</td>
-  </tr>
-  <tr id="xlink-href">
-   <td><code>xlink:href</code></td>
-   <td><em>All</em></td>
-   <td>Can be used to set a hyperlink to a specfied URI. However, authors are encouraged to use the <code>href</code> attribute instead.</td>
-  </tr>
-  <tr id="xmlns">
-   <td><code>xmlns</code></td>
-   <td>{{ MathMLElement("math") }}</td>
-   <td>MathML 名前空間の URI (<code><a class="external" href="http://www.w3.org/1998/Math/MathML" rel="freelink">http://www.w3.org/1998/Math/MathML</a></code>) を指定する</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th>属性名</th>
+      <th>この属性を取る要素</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>accent</code></td>
+      <td>
+        {{ MathMLElement("mo") }}, {{ MathMLElement("mover") }},
+        {{ MathMLElement("munderover") }}
+      </td>
+      <td>
+        論理値で、演算子がアクセント記号として扱われるべきか否かを指定します。
+      </td>
+    </tr>
+    <tr>
+      <td><code>accentunder</code></td>
+      <td>
+        {{ MathMLElement("munder") }},
+        {{ MathMLElement("munderover") }}
+      </td>
+      <td>
+        論理値で、演算子がアクセント記号として扱われるべきか否かを指定します。
+      </td>
+    </tr>
+    <tr>
+      <td><code>actiontype</code></td>
+      <td>{{ MathMLElement("maction") }}</td>
+      <td>文字列で、この要素で起こるアクションを指定します。</td>
+    </tr>
+    <tr>
+      <td><code>align</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("mtable") }}<br />{{ MathMLElement("munder") }},
+        {{ MathMLElement("mover") }},
+        {{ MathMLElement("munderover") }}
+      </td>
+      <td>
+        いくつかの要素の揃える位置を指定します（詳細は要素のページを参照）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>background</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        代わりに CSS の <a href="/ja/docs/Web/CSS/background-color"><code>background-color</code></a> を使用してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>bevelled</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>
+        分数の表示方法を指定します。非推奨です。
+        代わりに U+2044 （分数スラッシュ）を使用してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>close</code></td>
+      <td>{{ MathMLElement("mfenced") }}</td>
+      <td>閉じ区切り文字列です。</td>
+    </tr>
+    <tr>
+      <td><code>color</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        代わりに CSS の <a href="/ja/docs/Web/CSS/color"><code>color</code></a> を使用してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>columnalign</code></td>
+      <td>
+        {{ MathMLElement("mtable") }},
+        {{ MathMLElement("mtd") }},
+        {{ MathMLElement("mtr") }}
+      </td>
+      <td>表のセルの水平方向の配置を指定します。</td>
+    </tr>
+    <tr>
+      <td><code>columnlines</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>表の列の境界線を指定します。</td>
+    </tr>
+    <tr>
+      <td><code>columnspacing</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>表の列間の空間を指定します。</td>
+    </tr>
+    <tr>
+      <td><code>columnspan</code></td>
+      <td>{{ MathMLElement("mtd") }}</td>
+      <td>
+        非負の整数値で、セルが表の何列分に及ぶかを示します。
+      </td>
+    </tr>
+    <tr>
+      <td><code>denomalign</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>分数の下の分母の配置を示します。</td>
+    </tr>
+    <tr>
+      <td><code>depth</code></td>
+      <td>{{ MathMLElement("mpadded") }}</td>
+      <td>
+        深さを設定または増加します。
+        <a href="/ja/docs/Web/MathML/Attribute/Values">length</a> を参照してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>dir</code></td>
+      <td>
+        {{ MathMLElement("math") }}, {{ MathMLElement("mi") }},
+        {{ MathMLElement("mo") }}, {{ MathMLElement("mrow") }},
+        {{ MathMLElement("ms") }}, {{ MathMLElement("mtext") }}
+      </td>
+      <td>
+        テキストの方向です。可能な値は、 ltr （左から右）または rtl （右から左）です。
+      </td>
+    </tr>
+    <tr>
+      <td><code>display</code></td>
+      <td>{{ MathMLElement("math") }}</td>
+      <td>
+        レンダリングモードを指定します。指定できる値は <code>block</code> と <code>inline</code> です。
+      </td>
+    </tr>
+    <tr>
+      <td><code>displaystyle</code></td>
+      <td><em>すべて</em></td>
+      <td>
+        <p>
+          論理値で、表示される数式にもっと縦の空間を使用するか、 <code>false</code> に設定すると、よりコンパクトなレイアウトで数式を使用するかを指定します。
+        </p>
+        <p>
+          <em
+            >MathML 3 では、この属性は {{ MathMLElement("mstyle") }}, {{ MathMLElement("mtable") }}, および {{ MathMLElement("math") }} でのみ有効でした。</em
+          >
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>fence</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        論理値で、演算子がフェンス（括弧など）であるかどうかを指定します。この属性には視覚的効果はありません。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontfamily</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        代わりに CSS の <a href="/ja/docs/Web/CSS/font-family"><code>font-family</code></a> を使用してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontsize</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        代わりに CSS の <a href="/ja/docs/Web/CSS/font-size"><code>font-size</code></a> を使用してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontstyle</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        代わりに CSS の <a href="/ja/docs/Web/CSS/font-style"><code>font-style</code></a> を使用してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>fontweight</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        代わりに CSS の <a href="/ja/docs/Web/CSS/font-weight"><code>font-weight</code></a> を使用してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>frame</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>
+        {{ MathMLElement("mtable") }} 全体の境界線を指定します。可能な値は <code>none</code>（既定値）、<code>solid</code>、<code>dashed</code> です。
+      </td>
+    </tr>
+    <tr>
+      <td><code>framespacing</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>
+        表と <code>frame</code> の間に追加される空間を指定します。
+      </td>
+    </tr>
+    <tr>
+      <td><code>height</code></td>
+      <td>
+        {{ MathMLElement("mpadded") }},
+        {{ MathMLElement("mspace") }}
+      </td>
+      <td>
+        希望する高さを指定します。取りうる値は <a href="/ja/docs/Web/MathML/Attribute/Values#lengths">lengths</a> を参照してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>href</code></td>
+      <td><em>すべて</em></td>
+      <td>指定された URI へのハイパーリンクを設定するために使用します。</td>
+    </tr>
+    <tr>
+      <td><code>id</code></td>
+      <td><em>すべて</em></td>
+      <td>この要素に関連する一意の識別子を設定します。</td>
+    </tr>
+    <tr>
+      <td><code>length</code></td>
+      <td>{{ MathMLElement("msline") }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>linethickness</code></td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>水平方向の分数線の太さです。</td>
+    </tr>
+    <tr>
+      <td><code>lspace</code></td>
+      <td>
+        {{ MathMLElement("mo") }},
+        {{ MathMLElement("mpadded") }}
+      </td>
+      <td>
+        演算子の前の空間の大きさです（数値や単位は<a href="/ja/docs/Web/MathML/Attribute/Values#lengths">length</a> を参照してください）。
+      </td>
+    </tr>
+    <tr>
+      <td><code>lquote</code></td>
+      <td>{{ MathMLElement("ms") }}</td>
+      <td>
+        内容を囲む開始引用文字（<code>dir</code> に依存）です。既定値は "<code>&#x26;quot;</code>" です。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathbackground</code></td>
+      <td><em>すべて</em></td>
+      <td>
+        背景色です。 <code>#rgb</code>、<code>#rrggbb</code>、<a
+          href="/ja/docs/Web/CSS/color_value#html.2fsvg.2fx11.c2.a0_color_keywords"
+          >HTML 色名</a
+        >を使用することができます。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathcolor</code></td>
+      <td><em>すべて</em></td>
+      <td>
+        テキストの色です。 <code>#rgb</code>、<code>#rrggbb</code>、<a
+          href="/ja/docs/Web/CSS/color_value#html.2fsvg.2fx11.c2.a0_color_keywords"
+          >HTML 色名</a
+        >を使用することができます。
+      </td>
+    </tr>
+    <tr>
+      <td><code>mathsize</code></td>
+      <td>
+        {{ MathMLElement("mi") }}, {{ MathMLElement("mn") }},
+        {{ MathMLElement("mo") }}, {{ MathMLElement("ms") }},
+        {{ MathMLElement("mtext") }}
+      </td>
+      <td>中身の大きさです。</td>
+    </tr>
+    <tr>
+      <td><code>mathvariant</code></td>
+      <td>
+        {{ MathMLElement("mi") }}, {{ MathMLElement("mn") }},
+        {{ MathMLElement("mo") }}, {{ MathMLElement("ms") }},
+        {{ MathMLElement("mtext") }}
+      </td>
+      <td>識別子の論理クラスで、字体は様々です。</td>
+    </tr>
+    <tr>
+      <td><code>maxsize</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>演算子の最大サイズ。</td>
+    </tr>
+    <tr>
+      <td><code>minsize</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>演算子の最小サイズ。</td>
+    </tr>
+    <tr>
+      <td><code>movablelimits</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        添字の下付き・上付きが、下付き・上付きに移動するかどうかを指定します。
+      </td>
+    </tr>
+    <tr>
+      <td><code>notation</code></td>
+      <td>{{ MathMLElement("menclose") }}</td>
+      <td>
+        子要素に適用する表記法のリスト。ホワイトスペースで区切られます。
+      </td>
+    </tr>
+    <tr>
+      <td><code>numalign</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mfrac") }}</td>
+      <td>分数上の分子の配置を示します。</td>
+    </tr>
+    <tr>
+      <td><code>open</code></td>
+      <td>{{ MathMLElement("mfenced") }}</td>
+      <td>開き区切り文字用の文字列。</td>
+    </tr>
+    <tr>
+      <td><code>rowalign</code></td>
+      <td>
+        {{ MathMLElement("mtable") }},
+        {{ MathMLElement("mtd") }},
+        {{ MathMLElement("mtr") }}
+      </td>
+      <td>表セルの垂直方向の配置を指定します。</td>
+    </tr>
+    <tr>
+      <td><code>rowlines</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>表の行の境界線を指定します。</td>
+    </tr>
+    <tr>
+      <td><code>rowspacing</code></td>
+      <td>{{ MathMLElement("mtable") }}</td>
+      <td>テーブルの行間の空間を指定します。</td>
+    </tr>
+    <tr>
+      <td><code>rowspan</code></td>
+      <td>{{ MathMLElement("mtd") }}</td>
+      <td>
+        セルが何行目に拡張されるかを示す非負の整数値。
+      </td>
+    </tr>
+    <tr>
+      <td><code>rspace</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>演算子の後の空間の大きさ。</td>
+    </tr>
+    <tr>
+      <td><code>rquote</code></td>
+      <td>{{ MathMLElement("ms") }}</td>
+      <td>
+        内容を囲む引用符です（<code>dir</code> に依存）。既定値は "<code>&#x26;quot;</code>" です。
+      </td>
+    </tr>
+    <tr>
+      <td><code>scriptlevel</code></td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        主にフォントサイズを制御します。 <code>scriptlevel</code> が高いほど、フォントサイズは小さくなります。
+      </td>
+    </tr>
+    <tr>
+      <td><code>scriptminsize</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        <code>scriptlevel</code> の変更により許容される最小フォントサイズを指定します。
+      </td>
+    </tr>
+    <tr>
+      <td><code>scriptsizemultiplier</code> {{deprecated_inline}}</td>
+      <td>{{ MathMLElement("mstyle") }}</td>
+      <td>
+        <code>scriptlevel</code> の変化によるフォントサイズの調整に使用する倍率を指定します。
+      </td>
+    </tr>
+    <tr>
+      <td><code>selection</code></td>
+      <td>{{ MathMLElement("maction") }}</td>
+      <td>アクションの対象となる子要素。</td>
+    </tr>
+    <tr>
+      <td><code>separator</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        この属性には視覚的な効果はありませんが、演算子が区切り文字（カンマなど）であるかどうかを指定するものです。
+      </td>
+    </tr>
+    <tr>
+      <td><code>separators</code></td>
+      <td>{{ MathMLElement("mfenced") }}</td>
+      <td>
+        異なる区切り文字に使用する 0 文字以上の文字列です。
+      </td>
+    </tr>
+    <tr>
+      <td><code>stretchy</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        演算子を隣接する要素のサイズに引き伸ばすかどうかを指定する。
+      </td>
+    </tr>
+    <tr>
+      <td><code>subscriptshift</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("mmultiscripts") }},
+        {{ MathMLElement("msub") }},
+        {{ MathMLElement("msubsup") }}
+      </td>
+      <td>
+        式のベースラインより下に添字を移動させる最小の空間。
+      </td>
+    </tr>
+    <tr>
+      <td><code>supscriptshift</code> {{deprecated_inline}}</td>
+      <td>
+        {{ MathMLElement("mmultiscripts") }},
+        {{ MathMLElement("msup") }},
+        {{ MathMLElement("msubsup") }}
+      </td>
+      <td>
+        式のベースライン上に上付き文字を移動させる最小限の空間です。
+      </td>
+    </tr>
+    <tr>
+      <td><code>symmetric</code></td>
+      <td>{{ MathMLElement("mo") }}</td>
+      <td>
+        <code>stretchy</code> が <code>true</code> の場合、この属性は、演算子が虚数軸（中央の分数線）の周りに上下対称であるべきかを指定します。
+      </td>
+    </tr>
+    <tr>
+      <td><code>voffset</code></td>
+      <td>{{ MathMLElement("mpadded") }}</td>
+      <td>子コンテンツの縦方向の位置を設定します。</td>
+    </tr>
+    <tr>
+      <td><code>width</code></td>
+      <td>
+        {{ MathMLElement("mpadded") }},
+        {{ MathMLElement("mspace") }},
+        {{ MathMLElement("mtable") }}
+      </td>
+      <td>
+        希望する幅を指定します。取りうる値は
+        <a href="/ja/docs/Web/MathML/Attribute/Values#lengths">lengths</a>
+        を参照してください。
+      </td>
+    </tr>
+    <tr>
+      <td><code>xmlns</code></td>
+      <td>{{ MathMLElement("math") }}</td>
+      <td>
+        MathML 名前空間の URI を指定します。 (<code
+          ><a href="https://www.w3.org/1998/Math/MathML"
+            >http://www.w3.org/1998/Math/MathML</a
+          ></code
+        >)
+      </td>
+    </tr>
+  </tbody>
 </table>
