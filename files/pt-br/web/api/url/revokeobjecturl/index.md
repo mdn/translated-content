@@ -19,8 +19,8 @@ Execute este método quando terminar de utilizar um objeto URL para informar o b
 
 {{AvailableInWorkers}}
 
-> **Note:** Este método não esta disponível em service workers, devido a
-> issues com cliclo de vida da interface {{domxref("Blob")}} e potencias vazamentos.
+> **Observação:** Este método não esta disponível em service workers, devido a
+> questões com cliclo de vida da interface {{domxref("Blob")}} e potenciais vazamentos.
 
 ## Sintaxe
 
