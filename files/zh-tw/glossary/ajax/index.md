@@ -12,7 +12,7 @@ AJAX（Asynchronous {{glossary("JavaScript")}} And {{glossary("XML")}}、非同�
 
 ### 基本知識
 
-- 維基百科的 {{interwiki("wikipedia", "AJAX")}}
+- 維基百科的 [AJAX](https://zh.wikipedia.org/wiki/AJAX)
 - [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
 
 ### 技術資訊

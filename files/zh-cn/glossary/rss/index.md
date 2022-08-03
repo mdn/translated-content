@@ -15,7 +15,7 @@ translation_of: Glossary/RSS
 
 ### 基础知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "RSS")}}
+- 维基百科上的 [RSS](https://zh.wikipedia.org/wiki/RSS)
 
 ### 技术参考
 

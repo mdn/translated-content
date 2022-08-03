@@ -14,4 +14,4 @@ original_slug: Glossary/地址路由参数域
 ### 通用知识库
 
 - [官方网站](https://www.iana.org/domains/arpa)
-- {{Interwiki("wikipedia", ".arpa")}}，来自维基百科
+- [.arpa](https://zh.wikipedia.org/wiki/.arpa)，来自维基百科

@@ -13,6 +13,6 @@ translation_of: Glossary/Cryptography
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "密碼學")}}
+- 維基百科上的 [密碼學](https://zh.wikipedia.org/wiki/密碼學)
 - {{glossary("cryptanalysis")}}
 - [信息安全教程](/en-US/Learn/tutorial/Information_Security_Basics)

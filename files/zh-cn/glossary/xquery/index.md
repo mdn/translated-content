@@ -10,7 +10,7 @@ translation_of: Glossary/XQuery
 ### 基本信息
 
 - [Official website](https://www.w3.org/XML/Query/)
-- 维基百科上的{{Interwiki("wikipedia", "XQuery")}}
+- 维基百科上的[XQuery](https://zh.wikipedia.org/wiki/XQuery)
 
 ### 技术参考
 

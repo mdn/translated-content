@@ -9,7 +9,7 @@ Apache Subversion (**SVN**) 是一个开源免费的源代码控制管理（{{Gl
 
 ### 基础知识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "SVN")}}
+- 在维基百科上的 [SVN](https://zh.wikipedia.org/wiki/SVN)
 - [官方网站](https://subversion.apache.org/)
 
 ### 学习

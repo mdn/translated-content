@@ -95,4 +95,4 @@ sayHello()();
 
 ### 常识
 
-- {{Interwiki("wikipedia", "First-class functions", "First-class functions")}} 在维基百科
+- [First-class functions](https://zh.wikipedia.org/wiki/First-class_functions) 在维基百科

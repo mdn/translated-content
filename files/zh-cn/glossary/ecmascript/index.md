@@ -9,7 +9,7 @@ translation_of: Glossary/ECMAScript
 
 ### 常规知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "ECMAScript")}}
+- 维基百科上的 [ECMAScript](https://zh.wikipedia.org/wiki/ECMAScript)
 
 ### 技术参考
 

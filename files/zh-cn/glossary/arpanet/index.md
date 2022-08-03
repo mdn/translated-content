@@ -9,4 +9,4 @@ translation_of: Glossary/Arpanet
 
 ### 基础知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "Arpanet")}}
+- 维基百科上的 [Arpanet](https://zh.wikipedia.org/wiki/Arpanet)

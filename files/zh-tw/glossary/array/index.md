@@ -22,7 +22,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### 常規知識
 
-- 維基百科的{{Interwiki("wikipedia", "陣列")}}
+- 維基百科的[陣列](https://zh.wikipedia.org/wiki/陣列)
 
 ### 技術參考
 

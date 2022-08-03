@@ -3,6 +3,8 @@ title: DataTransferItem.webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 translation_of: Web/API/DataTransferItem/webkitGetAsEntry
 ---
+<div>{{APIRef("HTML Drag and Drop API")}}{{Non-standard_header}}</div>
+
 <p>如果由文件描述的项目<a href="/en-US/docs/Web/API/DataTransferItem"><code>DataTransferItem</code></a>是文件，则<code>webkitGetAsEntry()</code>返回<a href="/en-US/docs/Web/API/FileSystemFileEntry"><code>FileSystemFileEntry</code></a>或<a href="/en-US/docs/Web/API/FileSystemDirectoryEntry"><code>FileSystemDirectoryEntry</code></a>表示它。如果该项不是文件，<code>null</code>则返回。</p>
 
 <div class="note">
@@ -141,24 +143,7 @@ function scanFiles(item, container) {
 
 <p>{{ EmbedLiveSample('Example', 600, 400) }}</p>
 
-<h2 id="Specifications">Specifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName("File System API", "#dom-datatransferitem-webkitgetasentry", "webkitGetAsEntry()") }}</td>
-   <td>{{ Spec2("File System API") }}</td>
-   <td>初始规格。</td>
-  </tr>
- </tbody>
-</table>
+<h2 id="Specifications">规范</h2>
 
 <p>此 API 没有官方的 W3C 或 WHATWG 规范。</p>
 

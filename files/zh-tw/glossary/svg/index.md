@@ -15,7 +15,7 @@ translation_of: Glossary/SVG
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "SVG")}}
+- 維基百科的 [SVG](https://zh.wikipedia.org/wiki/SVG)
 
 ### 理解 SVG
 

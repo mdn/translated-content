@@ -15,7 +15,7 @@ translation_of: Glossary/undefined
 
 ### 基本知识
 
-- {{Interwiki("wikipedia", "Undefined value")}} on Wikipedia
+- [Undefined value](https://zh.wikipedia.org/wiki/Undefined_value) on Wikipedia
 
 ### 技术参考
 

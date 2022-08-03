@@ -21945,13 +21945,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Manifest/dir": {
-    "modified": "2020-10-15T22:28:08.586Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
   "Web/Manifest/display": {
     "modified": "2020-10-15T22:28:07.850Z",
     "contributors": [
@@ -21959,22 +21952,8 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Manifest/iarc_rating_id": {
-    "modified": "2020-10-15T22:28:08.596Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
   "Web/Manifest/icons": {
     "modified": "2020-10-15T22:28:09.358Z",
-    "contributors": [
-      "almaceleste",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/Manifest/lang": {
-    "modified": "2020-10-15T22:28:09.577Z",
     "contributors": [
       "almaceleste",
       "chrisdavidmills"
@@ -24150,6 +24129,27 @@
     "contributors": [
       "ekirpichyov",
       "AntonPtitsyn"
+    ]
+  },
+  "conflicting/Web/Manifest": {
+    "modified": "2020-10-15T22:28:08.586Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c": {
+    "modified": "2020-10-15T22:28:09.577Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
+    ]
+  },
+  "conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205": {
+    "modified": "2020-10-15T22:28:08.596Z",
+    "contributors": [
+      "almaceleste",
+      "chrisdavidmills"
     ]
   },
   "conflicting/Web/Media/Formats": {

@@ -292,7 +292,7 @@ HTML 元素的样式有一套自己的规则。遵守这些规则可以让元素
 
 某些单词应始终大写（例如商标中的大写字母），或源自某人姓名的单词（除非它在代码中使用，并且代码的语法要求小写）。以下是一些例子：
 
-- Boolean（其源自英国数学家和逻辑学家的姓名 {{interwiki("wikipedia", "George Boole")}}）
+- Boolean（其源自英国数学家和逻辑学家的姓名 [George Boole](https://zh.wikipedia.org/wiki/George_Boole)）
 - JavaScript（甲骨文公司的商标，应始终写成商标的样式）
 - Python、TypeScript、Django 以及其他编程语言和框架名称
 

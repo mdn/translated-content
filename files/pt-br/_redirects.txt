@@ -546,7 +546,7 @@
 /pt-BR/docs/Web/API/Document/defaultView/resize_event	/pt-BR/docs/Web/API/Window/resize_event
 /pt-BR/docs/Web/API/Document/keydown_event	/pt-BR/docs/Web/API/Element/keydown_event
 /pt-BR/docs/Web/API/Document/keypress_event	/pt-BR/docs/Web/API/Element/keypress_event
-/pt-BR/docs/Web/API/Document/keyup_event	/pt-BR/docs/Web/API/Element/keyup_event
+/pt-BR/docs/Web/API/Document/keyup_event	/pt-BR/docs/conflicting/Web/API/Element/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection
@@ -638,7 +638,10 @@
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/slider_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-/pt-BR/docs/Web/Accessibility/ARIA/forms/Dicas_básicas_de_form	/pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
+/pt-BR/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
+/pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+/pt-BR/docs/Web/Accessibility/ARIA/forms/Dicas_básicas_de_form	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+/pt-BR/docs/Web/Accessibility/ARIA/forms/alerts	/pt-BR/docs/conflicting/Web/Accessibility/ARIA
 /pt-BR/docs/Web/Acessibilidade	/pt-BR/docs/Web/Accessibility
 /pt-BR/docs/Web/Acessibilidade/Accessibilidade_para_plataforma_movel	/pt-BR/docs/Web/Accessibility/Mobile_accessibility_checklist
 /pt-BR/docs/Web/Acessibilidade/An_overview_of_accessible_web_applications_and_widgets	/pt-BR/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets

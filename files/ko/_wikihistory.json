@@ -7218,18 +7218,6 @@
       "dasom0801"
     ]
   },
-  "Web/Accessibility/ARIA/forms/Basic_form_hints": {
-    "modified": "2019-05-20T01:53:49.386Z",
-    "contributors": [
-      "dasom0801"
-    ]
-  },
-  "Web/Accessibility/ARIA/forms/alerts": {
-    "modified": "2019-04-06T02:12:01.060Z",
-    "contributors": [
-      "dasom0801"
-    ]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-23T23:21:28.496Z",
     "contributors": [
@@ -17074,6 +17062,18 @@
     "contributors": [
       "fscholz",
       "hanmomhanda"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA": {
+    "modified": "2019-04-06T02:12:01.060Z",
+    "contributors": [
+      "dasom0801"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
+    "modified": "2019-05-20T01:53:49.386Z",
+    "contributors": [
+      "dasom0801"
     ]
   },
   "conflicting/Web/CSS/@viewport": {

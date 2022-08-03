@@ -11,7 +11,7 @@ translation_of: Glossary/Regular_expression
 
 ### 基本知识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "正则表达式")}}
+- 在维基百科上的 [正则表达式](https://zh.wikipedia.org/wiki/正则表达式)
 - [互动教程](https://regexone.com/)
 - [虚拟化的正则表达式](https://regexper.com/)
 
