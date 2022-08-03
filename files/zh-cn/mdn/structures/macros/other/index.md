@@ -13,7 +13,7 @@ tags:
 
 这些宏仅用于特定的上下文，例如特定的 API 参考。
 
-- [`Interwiki`](https://github.com/mdn/yari/blob/main/kumascript/macros/Interwiki.ejs) 使创建跨 wiki 链接变得容易。目前它支持链接到 Wikipedia 和 Wikimo。第一个参数是维基的名称（“wikipedia”或“wikimo”），第二个参数是文章的路径。例如，`\{{interwiki("wikipedia", "Firefox")}}` 显示为 {{ interwiki("wikipedia", "Firefox") }}。此模板也会自动检测页面语言并指向维基百科上的相同语言。
+- [`Interwiki`](https://github.com/mdn/yari/blob/main/kumascript/macros/Interwiki.ejs) 使创建跨 wiki 链接变得容易。目前它支持链接到 Wikipedia 和 Wikimo。第一个参数是维基的名称（“wikipedia”或“wikimo”），第二个参数是文章的路径。例如，`\[Firefox](https://zh.wikipedia.org/wiki/Firefox)` 显示为 [Firefox](https://zh.wikipedia.org/wiki/Firefox)。此模板也会自动检测页面语言并指向维基百科上的相同语言。
 - [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) 仅需给定编号即可创建指向指定 RFC 的链接。语法为：`\{{RFC(number)}}`。例如，`\{{RFC(2616)}}` 显示为 {{ RFC(2616) }}。
 
 ### 着陆页组件

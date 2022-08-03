@@ -13,4 +13,4 @@ translation_of: Glossary/Native
 
 ### 常规知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "Native (computing)")}}
+- 维基百科上的 [Native (computing)](https://zh.wikipedia.org/wiki/Native_(computing))

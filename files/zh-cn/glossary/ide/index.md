@@ -7,4 +7,4 @@ translation_of: Glossary/IDE
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Integrated_development_environment", "IDE")}} on Wikipedia
+- [IDE](https://zh.wikipedia.org/wiki/Integrated_development_environment) on Wikipedia

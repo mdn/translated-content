@@ -96,7 +96,7 @@ translation_of: Glossary/Primitive
 ### 基本知识
 
 - [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
-- 维基百科上的{{Interwiki("wikipedia", "Primitive data type", "基本类型")}}
+- 维基百科上的[基本类型](https://zh.wikipedia.org/wiki/Primitive_data_type)
 
 1.  [术语表](/zh-CN/docs/Glossary)
 

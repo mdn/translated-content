@@ -15,7 +15,7 @@ translation_of: Glossary/Doctype
 
 ### General Knowledge
 
-- {{interwiki("wikipedia", "Document_type_declaration", "Document Type Declaration")}} 维基百科的解释
+- [Document Type Declaration](https://zh.wikipedia.org/wiki/Document_type_declaration) 维基百科的解释
 - [Quirks Mode and Standards Mode](/zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) 怪异模式（兼容模式）和标准模式
 
 ### **技术参考**

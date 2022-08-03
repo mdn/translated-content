@@ -25,7 +25,7 @@ _控制流_ 是计算机执行一个程序中语句的顺序。
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Control flow")}} on Wikipedia
+- [Control flow](https://zh.wikipedia.org/wiki/Control_flow) on Wikipedia
 
 ### Technical reference
 

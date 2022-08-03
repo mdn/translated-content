@@ -10,5 +10,5 @@ original_slug: Glossary/域名
 
 ### **基础知识**
 
-- 在维基百科的 {{interwiki("wikipedia", "域名", "域名")}}
+- 在维基百科的 [域名](https://zh.wikipedia.org/wiki/域名)
 - [了解“域名“](/zh-CN/Learn/Understanding_domain_names)

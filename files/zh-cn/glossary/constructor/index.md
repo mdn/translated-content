@@ -31,7 +31,7 @@ var defaultReference = new Default();
 
 ### 基本常识
 
-- 维基百科上的 {{Interwiki("wikipedia", "Constructor_%28object-oriented_programming%29", "构造函数")}}
+- 维基百科上的 [构造函数](https://zh.wikipedia.org/wiki/Constructor_%28object-oriented_programming%29)
 
 ### 技术参考
 
