@@ -15,7 +15,7 @@ browser-compat: api.URL.origin
 
 {{APIRef("URL API")}}
 
-A propriedade somente de leitura **`origin`** da interface {{domxref("URL")}} retorna uma {{domxref("USVString")}} contendo uma serialization Unicode da origem da URL representada.
+A propriedade somente de leitura **`origin`** da interface {{domxref("URL")}} retorna uma {{domxref("USVString")}} contendo a serialização Unicode da origem da URL representada.
 
 A estrutur aexata tem uma variação dependendo do tipo de URL:
 
