@@ -9,7 +9,7 @@ translation_of: Glossary/SQL
 
 ### 基本知識
 
-- 維基百科的 {{Interwiki("wikipedia", "SQL")}}
+- 維基百科的 [SQL](https://zh.wikipedia.org/wiki/SQL)
 
 ### 了解 SQL
 

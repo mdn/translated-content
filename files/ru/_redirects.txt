@@ -777,6 +777,9 @@
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Операторы	/ru/docs/Web/JavaScript/Reference/Operators
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Операции	/ru/docs/Web/JavaScript/Reference/Operators
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Операции/Assignment_Operators	/ru/docs/Web/JavaScript/Reference/Operators
+/ru/docs/Web/Manifest/dir	/ru/docs/conflicting/Web/Manifest
+/ru/docs/Web/Manifest/iarc_rating_id	/ru/docs/conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205
+/ru/docs/Web/Manifest/lang	/ru/docs/conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c
 /ru/docs/Web/MathML/Атрибут	/ru/docs/Web/MathML/Attribute
 /ru/docs/Web/MathML/Примеры	/ru/docs/Web/MathML/Examples
 /ru/docs/Web/MathML/Примеры/Deriving_the_Quadratic_Formula	/ru/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula
@@ -822,11 +825,11 @@
 /ru/docs/Web/Манифест/background_color	/ru/docs/Web/Manifest/background_color
 /ru/docs/Web/Манифест/categories	/ru/docs/Web/Manifest/categories
 /ru/docs/Web/Манифест/description	/ru/docs/Web/Manifest/description
-/ru/docs/Web/Манифест/dir	/ru/docs/Web/Manifest/dir
+/ru/docs/Web/Манифест/dir	/ru/docs/conflicting/Web/Manifest
 /ru/docs/Web/Манифест/display	/ru/docs/Web/Manifest/display
-/ru/docs/Web/Манифест/iarc_rating_id	/ru/docs/Web/Manifest/iarc_rating_id
+/ru/docs/Web/Манифест/iarc_rating_id	/ru/docs/conflicting/Web/Manifest_e8c4835b067e177a000dc29c18483205
 /ru/docs/Web/Манифест/icons	/ru/docs/Web/Manifest/icons
-/ru/docs/Web/Манифест/lang	/ru/docs/Web/Manifest/lang
+/ru/docs/Web/Манифест/lang	/ru/docs/conflicting/Web/Manifest_7ec32c6987e59d5f1cb08f8c9d900a4c
 /ru/docs/Web/Манифест/name	/ru/docs/Web/Manifest/name
 /ru/docs/Web/Манифест/orientation	/ru/docs/Web/Manifest/orientation
 /ru/docs/Web/Манифест/prefer_related_applications	/ru/docs/Web/Manifest/prefer_related_applications

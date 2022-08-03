@@ -14,7 +14,7 @@ translation_of: Glossary/Viewport
 
 ### General Knowledge
 
-- {{Interwiki("wikipedia", "Viewport")}} on Wikipedia
+- [Viewport](https://zh.wikipedia.org/wiki/Viewport) on Wikipedia
 - [What is viewport in HTML](https://stackoverflow.com/questions/2939693/what-is-viewport-in-html) on Stackoverflow
 - [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)

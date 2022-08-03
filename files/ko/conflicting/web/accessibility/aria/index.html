@@ -1,0 +1,147 @@
+---
+title: Alerts
+slug: conflicting/Web/Accessibility/ARIA
+tags:
+  - ARIA
+  - Forms
+  - Web
+  - 접근성
+translation_of: Web/Accessibility/ARIA/forms/alerts
+original_slug: Web/Accessibility/ARIA/forms/alerts
+---
+<h2 id="문제점">문제점</h2>
+
+<p>엑세스 가능한 오류 검사를 포함하고 싶은 폼, 예를 들어 콘택트 폼이 있습니다. 자주 있는 문제점으로는 Email이 유효하지 않거나, 이름 필드에 성이나 이름이 포함되지 않은 것이 있습니다.</p>
+
+<h2 id="폼">폼</h2>
+
+<p>우선 <a href="https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA/forms/Basic_form_hints#Required_and_invalid_fields" title="/en/Web/Accessibility/ARIA/forms/Basic_form_hints"><code>aria-required</code> 기술</a>을 읽지 않았다면 먼저 읽어주세요. 여기서는 그것의 확장된 내용을 다룹니다. </p>
+
+<p>여기에 샘플 폼이 있습니다:</p>
+
+<pre class="brush: html"> &lt;form method="post" action="post.php"&gt;
+   &lt;fieldset&gt;
+     &lt;legend&gt;Please enter your contact details&lt;/legend&gt;
+     &lt;label for="name"&gt;Your name (required):&lt;/label&gt;
+     &lt;input name="name" id="name" aria-required="true"/&gt;
+     &lt;br /&gt;
+     &lt;label for="email"&gt;E-Mail address (required):&lt;/label&gt;
+     &lt;input name="email" id="email" aria-required="true"/&gt;
+     &lt;br /&gt;
+     &lt;label for="website"&gt;Website (optional):&lt;/label&gt;
+     &lt;input name="website" id="website"/&gt;
+   &lt;/fieldset&gt;
+   &lt;label for="message"&gt;Please enter your message (required):&lt;/label&gt;
+   &lt;br /&gt;
+   &lt;textarea name="message" id="message" rows="5" cols="80"
+             aria-required="true"&gt;&lt;/textarea&gt;
+   &lt;br /&gt;
+   &lt;input type="submit" name="submit" value="Send message"/&gt;
+   &lt;input type="reset" name="reset" value="Reset form"/&gt;
+ &lt;/form&gt;
+</pre>
+
+<h2 id="유효성_검사_및_사용자에게_알림"><span class="mw-headline" id="Checking_for_validity_and_notifying_the_user">유효성 검사 및 사용자에게 알림</span></h2>
+
+<p>폼 유효성 검사는 여러 단계로 구성됩니다. :</p>
+
+<ol>
+ <li>Email 또는 입력한 이름이 유효한지 확인하십시오. 각 필드는 유효성 검사를 통과하기 위해 충족되어야 하는 일련의 기준이 있습니다. 이 예제를 단순화하기 위해, Email에 '@' 마크가 있는지 이름에는 적어도 하나의 문자가 포함되어 있는지를 확인할 것입니다. </li>
+ <li>만약 위의 기준이 충족되지 않으면, 필드의  <code>aria-invalid</code> 속성에 “<code>true</code>” 값이 주어질 것입니다.</li>
+ <li>기준이 충족되지 않으면 경고를 통해 사용자에게 알립니다. JavaScript의 ‘<code>alert</code>’ function을 사용하는 대신 아림을 위해 간단한 WAI-ARIA 위젯을 사용할 것입니다. 이것은 사용자에게 에러를 알려주지만, Javascript의 기본 ‘<code>alert</code>’ function의 “<code>onblur</code>”로 인해 발생하는 포커스 손실 없이 계속해서 폼을 수정할 수 있게 해줍니다. </li>
+</ol>
+
+<p>아래의 예제는  “<code>head</code>” 의 닫는 태그를 삽입하는 Javascript 코드입니다.:</p>
+
+<pre class="brush: js"> &lt;script type="application/javascript"&gt;
+ function removeOldAlert()
+ {
+   var oldAlert = document.getElementById("alert");
+   if (oldAlert){
+     document.body.removeChild(oldAlert);
+   }
+ }
+
+ function addAlert(aMsg)
+ {
+   removeOldAlert();
+   var newAlert = document.createElement("div");
+   newAlert.setAttribute("role", "alert");
+   newAlert.setAttribute("id", "alert");
+   var msg = document.createTextNode(aMsg);
+   newAlert.appendChild(msg);
+   document.body.appendChild(newAlert);
+ }
+
+ function checkValidity(aID, aSearchTerm, aMsg)
+ {
+   var elem = document.getElementById(aID);
+   var invalid = (elem.value.indexOf(aSearchTerm) &lt; 0);
+   if (invalid) {
+     elem.setAttribute("aria-invalid", "true");
+     addAlert(aMsg);
+   } else {
+     elem.setAttribute("aria-invalid", "false");
+     removeOldAlert();
+   }
+ }
+ &lt;/script&gt;
+</pre>
+
+<h2 id="checkValidity_함수"><span class="mw-headline" id="The_checkValidity_function"><code>checkValidity</code> 함수</span></h2>
+
+<p>Javascript에서 폼 유효성 검사에 사용되는 기본 메소드는 <code>checkValidity</code> 함수입니다. 이 메소드는 세 개의 파라미터를 가집니다: 유효성 검사를 할 <code>input</code>의 ID, 유효성을 확인하기 위해 검색할 검색어, alert에 삽입할 에러 메시지입니다.</p>
+
+<p>유효성을 확인하기 위해, 이 함수는 <code>input</code>의 값 <code>indexOf</code>가 -1보다 큰지 확인합니다. 검색어를 찾을 수 없을 때 <code>-1</code> 혹은 그보다 작은 값을 반환합니다. </p>
+
+<p>만약에 값이 유효하지 않다면 이 함수는 2가지 작업을 수행합니다. </p>
+
+<ol>
+ <li>요소의 <code>aria-invalid</code> 속성을 “<code>true</code>”로 설정합니다. 이 속성은 사용자에게 여기에 유효하지 않은 값이 있다는 것을 알립니다. </li>
+ <li><code>addAlert</code> 함수를 호출하여 제공된 에러 메시지와 함께 alert을 추가합니다. </li>
+</ol>
+
+<p>검색어가 발견되면 <code>aria-invalid</code> 속성은 “<code>false</code>”로 재설정됩니다. 또한 남아있는 모든 alert가 제거됩니다. </p>
+
+<h2 id="addAlert_함수"><span class="mw-headline" id="The_addAlert_function"><code>addAlert</code> 함수</span></h2>
+
+<p>이 함수는 일단 오래된 alert을 제거합니다. 이 함수는 간단합니다. : id가 “<code>alert</code>”인 요소를 찾고, 발견되면 <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Document_Object_Model">document object model</a>.에서 해당 요소를 제거합니다. </p>
+
+<p>다음으로 함수는 alert 테스트를 저장할 <code>div</code> 요소를 만듭니다. 그 <code>div</code>요소는 “<code>alert</code>”이라는 ID를 갖습니다. 그리고  “alert”이라는 role을 갖습니다. 이름에 "aria"가 없지만 사실은 ARIA에서 만들어진 것입니다. role이 간소화를 위해 단순히 HTML로 이식된 <a class="external text" href="http://www.w3.org/TR/xhtml-role/" title="XHTML Role Attribute Module">XHTML Role Attribute Module</a>에 기반하기 때문입니다.</p>
+
+<p>텍스트가 <code>div</code> 요소에 추가되고 <code>div</code> 요소는 문서에 추가됩니다. </p>
+
+<p>이 <code>div</code>  요소가 나타나면 Firefox는 보조기기에 "alert" 이벤트를 발생시킵니다. 대부분의 스크린 리더는 자동으로 그것을 주워서 읽습니다. 이건 암호 저장 여부를 묻는 Firefox의 알림 표시 줄과 비슷합니다. 방금 만든 alert에는 버튼이 없으므로 단순히 무엇이 문제인지만을 알려줍니다. </p>
+
+<h2 id="“onblur”_이벤트_수정하기"><span class="mw-headline" id="Adding_the_magic_to_the_.E2.80.9Conblur.E2.80.9D_event">“<code>onblur</code>” 이벤트 수정하기</span></h2>
+
+<p>이제 남은 것은 이벤트 핸들러를 추가하는 것뿐입니다. 우리는 Email과 이름에 대한 두개의 인풋을 다음과 같이 변경해야합니다. :</p>
+
+<pre class="brush: html"> &lt;input name="name" id="name" aria-required="true"
+        onblur="checkValidity('name', ' ', 'Invalid name entered!');"/&gt;
+ &lt;br /&gt;
+ &lt;input name="email" id="email" aria-required="true"
+        onblur="checkValidity('email', '@', 'Invalid e-mail address');"/&gt;
+</pre>
+
+<p><strong>예제 테스트하기</strong></p>
+
+<p>만약 Firefox 3 와 현재 지원되는 스크린 리더를 사용하고 있다면 다음을 시도해보세요.:</p>
+
+<ol>
+ <li>이름에 성만을 입력해보세요. 탭을 하면 유효하지 않은 이름을 입력했다는 알림을 들을 수 있을 겁니다. shift-tab을 눌러서 돌아간 다음 에러를 수정할 수 있습니다. </li>
+ <li>"@"없이 Email 주소를 입력해보세요. 탭을 해서 필드를 벗어나면 유효하지 않은 Email을 입력했다는 알림을 들을 수 있을 겁니다. </li>
+</ol>
+
+<p>두 경우 모두 필드로 포커스가 돌아가면 스크린 리더는 해당 필드가 유효하지 않음을 알려주어야 합니다. JAWS 9는 이것을 지원하지만,  JAWS 8는 지원하지 않습니다. 그렇기때문에 이것은 스크린 리더 버전에 따라서 동작하지 않을 수 있습니다. </p>
+
+<h2 id="자주_하는_질문">자주 하는 질문</h2>
+
+<dl>
+ <dt>Q. 왜 label에 “<code>(required)</code>” 를 넣고 일부 input에 <code>aria-required</code> 속성을 넣었나요?</dt>
+ <dd>A. 만약 이게 실제 폼이고 아직 ARIA를 지원하지 않는 브라우저에서 사이트를 방문한 경우에도 이것이 필수 입력란임을 알려주는 것이 좋습니다. </dd>
+ <dt>Q. 왜 유효하지 않은 필드로 자동 포커스되도록 하지 않나요?</dt>
+ <dd>A. 왜냐하면 Windows API 사양 및 기타 사양에 따라 허용되지 않기 때문입니다. 또한, 사용자 상호작용 없이 포커스를 자주 이동하는 것은  좋지 않습니다. </dd>
+</dl>
+
+<div class="warning">TBD: 이건 다시 생각해봅시다. 개인적으로 키보드 트랩을 발생시키지 않는다면 포커스를 설정하는 것이 좋을 것 같습니다.</div>

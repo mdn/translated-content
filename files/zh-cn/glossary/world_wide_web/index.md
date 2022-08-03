@@ -31,5 +31,5 @@ Tim Berners-Lee 在发明 Web 之后不久就创建了 {{Glossary("W3C")}}（万
 
 ### 基本知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "World Wide Web")}}
+- 维基百科上的 [World Wide Web](https://zh.wikipedia.org/wiki/World_Wide_Web)
 - [W3C 网站](https://w3.org)

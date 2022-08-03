@@ -16,4 +16,4 @@ DNS 最突出的功能是将易于记忆的域名 (例如 mozilla.org) 翻译成
 ### 常识
 
 - [理解域名](/zh-CN/Learn/Understanding_domain_names)
-- 在维基百科上的 {{interwiki("wikipedia", "Domain_Name_System", "Domain Name System")}} （DNS）
+- 在维基百科上的 [Domain Name System](https://zh.wikipedia.org/wiki/Domain_Name_System) （DNS）

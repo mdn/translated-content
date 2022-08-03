@@ -11,4 +11,4 @@ translation_of: Glossary/Prototype
 
 ### 一般知識
 
-- 維基百科的{{Interwiki("wikipedia", "軟體原型")}}
+- 維基百科的[軟體原型](https://zh.wikipedia.org/wiki/軟體原型)

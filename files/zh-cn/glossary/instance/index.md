@@ -11,4 +11,4 @@ translation_of: Glossary/Instance
 
 ### 知识
 
-- {{interwiki("wikipedia", "Instance (computer science)", "实例")}} - 维基百科
+- [实例](https://zh.wikipedia.org/wiki/Instance_(computer_science)) - 维基百科

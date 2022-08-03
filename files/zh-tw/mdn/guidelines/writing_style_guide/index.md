@@ -324,7 +324,7 @@ HTML 元素在撰寫時有它們特殊的規則。這些規則可以對元素及
 
 特定的詞彙都應首字大寫（譬如包含大寫字母的商標）或以人物姓名作為詞彙的術語（除非出現在程式碼中且程式碼的語法要求以小寫書寫）。一些範例：
 
-- Boolean （源自英國數學家和邏輯學家 {{interwiki("wikipedia", "George Boole")}} ）
+- Boolean （源自英國數學家和邏輯學家 [George Boole](https://zh.wikipedia.org/wiki/George_Boole) ）
 - JavaScript （甲骨文公司的商標，總是作為商標來書寫）
 - Python 、 TypeScript 、 Django 、 其他程式語言和框架名稱
 

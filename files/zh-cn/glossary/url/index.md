@@ -16,7 +16,7 @@ URL 也可用于文件传输（{{Glossary("FTP")}}） ，电子邮件（{{Glossa
 
 ### **基本知识**
 
-- 在维基百科的 {{Interwiki("wikipedia", "URL")}}
+- 在维基百科的 [URL](https://zh.wikipedia.org/wiki/URL)
 
 ### 了解
 

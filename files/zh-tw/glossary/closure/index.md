@@ -12,7 +12,7 @@ translation_of: Glossary/Closure
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Closure_%28computer_programming%29", "Closure")}}
+- 維基百科上的 [Closure](https://zh.wikipedia.org/wiki/Closure_%28computer_programming%29)
 
 ### 技術參考
 

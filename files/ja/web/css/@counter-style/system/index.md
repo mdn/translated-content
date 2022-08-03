@@ -3,11 +3,11 @@ title: system
 slug: Web/CSS/@counter-style/system
 tags:
   - '@counter-style'
-  - アットルール記述子
+  - At-rule descriptor
   - CSS
-  - CSS カウンタースタイル
-  - CSS 記述子
-  - リファレンス
+  - CSS Counter Styles
+  - CSS Descriptor
+  - Reference
 browser-compat: css.at-rules.counter-style.system
 translation_of: Web/CSS/@counter-style/system
 ---
@@ -77,7 +77,17 @@ system: extends decimal;
 
 ## 形式文法
 
-{{csssyntax}}
+```
+cyclic                             |
+numeric                            |
+alphabetic                         |
+symbolic                           |
+additive                           |
+[ fixed <integer>? ]               |
+[ extends <counter-style-name> ]
+
+<counter-style-name> = <custom-ident>
+```
 
 ## 例
 
@@ -95,9 +105,9 @@ system: extends decimal;
 
 ```html hidden
 <ul>
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
 </ul>
 ```
 
@@ -413,4 +423,4 @@ ul {
 ## 関連情報
 
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}、無名のカウンタースタイルを生成する関数記法
+- {{cssxref("symbols", "symbols()")}}、無名のカウンタースタイルを生成する関数記法

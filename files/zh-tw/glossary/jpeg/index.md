@@ -9,4 +9,4 @@ translation_of: Glossary/jpeg
 
 ### 一般資訊
 
-- 維基百科的 {{Interwiki("wikipedia", "JPEG")}}
+- 維基百科的 [JPEG](https://zh.wikipedia.org/wiki/JPEG)

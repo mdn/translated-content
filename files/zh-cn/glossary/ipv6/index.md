@@ -16,4 +16,4 @@ translation_of: Glossary/IPv6
 
 ### 基本知识
 
-- {{interwiki("wikipedia", "IPv6", "IPv6")}} on Wikipedia
+- [IPv6](https://zh.wikipedia.org/wiki/IPv6) on Wikipedia

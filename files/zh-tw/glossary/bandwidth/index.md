@@ -11,4 +11,4 @@ translation_of: Glossary/Bandwidth
 
 ## 了解更多
 
-- 維基百科上的 {{Interwiki("wikipedia", "Bandwidth")}}
+- 維基百科上的 [Bandwidth](https://zh.wikipedia.org/wiki/Bandwidth)
