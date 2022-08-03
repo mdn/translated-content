@@ -17,7 +17,7 @@ browser-compat: api.URL.origin
 
 A propriedade somente de leitura **`origin`** da interface {{domxref("URL")}} retorna uma {{domxref("USVString")}} contendo a serialização Unicode da origem da URL representada.
 
-A estrutur aexata tem uma variação dependendo do tipo de URL:
+A estrutura exata tem uma variação dependendo do tipo de URL:
 
 - Para URLs `http` ou `https`, o esquema é seguido por `'://'`, seguido pelo domímio, seguido por `':'`, seguido pela porta (a porta padrão, `80` e `443` respectivamente, se for especificada explicitamente ).
 - Para as URls `file:`, o valor é dependente do browser.
