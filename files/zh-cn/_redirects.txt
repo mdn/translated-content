@@ -2352,7 +2352,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Locale	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale

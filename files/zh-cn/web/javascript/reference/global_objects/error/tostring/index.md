@@ -3,62 +3,86 @@ title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 ---
-<div>
- {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
-<h2 id="Summary">概述</h2>
-<p><code><strong>toString()</strong></code> 方法返回一个指定的错误对象（Error object）的字符串表示。</p>
-<h2 id="Syntax">语法</h2>
-<pre class="syntaxbox"><code><em>e</em>.toString();</code></pre>
-<h2 id="Description">描述</h2>
-<p>{{jsxref("Error")}} 对象覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。该方法实现如下：（假定 <code>Object</code> 和 <code>String</code> 没有被更改）：</p>
-<pre class="brush:js">Error.prototype.toString = function()
-{
-  "use strict";
+{{JSRef}}
 
-  var obj = Object(this);
-  if (obj !== this)
+**`toString()`** 方法返回一个表示指定 {{jsxref("Error")}} 对象的字符串。
+
+## 语法
+
+```js
+toString()
+```
+
+### 返回值
+
+一个表示指定 {{jsxref("Error")}} 对象的字符串。
+
+## 描述
+
+{{jsxref("Error")}} 对象覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。该方法实现如下（假定 {{jsxref("Object")}} 和 {{jsxref("String")}} 没有被更改）：
+
+```js
+Error.prototype.toString = function() {
+  'use strict';
+
+  const obj = Object(this);
+  if (obj !== this) {
     throw new TypeError();
+  }
 
-  var name = this.name;
-  name = (name === undefined) ? "Error" : String(name);
+  let name = this.name;
+  name = (name === undefined) ? 'Error' : String(name);
 
-  var msg = this.message;
-  msg = (msg === undefined) ? "" : String(msg);
+  let msg = this.message;
+  msg = (msg === undefined) ? '' : String(msg);
 
-  if (name === "")
+  if (name === '') {
     return msg;
-  if (msg === "")
+  }
+  if (msg === '') {
     return name;
+  }
 
-  return name + ": " + msg;
+  return name + ': ' + msg;
 };
-</pre>
-<h2 id="Example">示例</h2>
-<pre class="brush:js">var e = new Error("fatal error");
-print(e.toString()); // "Error: fatal error"
+```
 
-e.name = undefined;
-print(e.toString()); // "Error: fatal error"
+## 示例
 
-e.name = "";
-print(e.toString()); // "fatal error"
+### 使用 toString()
 
-e.message = undefined;
-print(e.toString()); // "Error"
+```js
+const e1 = new Error('fatal error');
+console.log(e1.toString()); // 'Error: fatal error'
 
-e.name = "hello";
-print(e.toString()); // "hello"
-</pre>
+const e2 = new Error('fatal error');
+e2.name = undefined;
+console.log(e2.toString()); // 'Error: fatal error'
 
-<h2 id="规范">规范</h2>
+const e3 = new Error('fatal error');
+e3.name = '';
+console.log(e3.toString()); // 'fatal error'
+
+const e4 = new Error('fatal error');
+e4.name = '';
+e4.message = undefined;
+console.log(e4.toString()); // ''
+
+const e5 = new Error('fatal error');
+e5.name = 'hello';
+e5.message = undefined;
+console.log(e5.toString()); // 'hello'
+```
+
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
 {{Compat}}
 
-<h2 id="See_also">相关链接</h2>
-<ul>
- <li>{{jsxref("Error.prototype.toSource()")}}</li>
-</ul>
+## 参见
+
+- [`core-js`](https://github.com/zloirock/core-js) 中关于 [`Error.prototype.toString` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-error)（修复了多个错误）
+
