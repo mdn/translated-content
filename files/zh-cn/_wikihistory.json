@@ -46602,13 +46602,6 @@
       "shajiquan"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {
-    "modified": "2020-10-15T22:04:46.786Z",
-    "contributors": [
-      "zxsunrise",
-      "yuchaoWu"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/EvalError": {
     "modified": "2020-10-15T21:59:36.134Z",
     "contributors": [
