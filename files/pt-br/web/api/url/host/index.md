@@ -29,7 +29,7 @@ console.log(url.host); // "developer.mozilla.org"
 
 url = new URL("https://developer.mozilla.org:443/pt-BR/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org"
-// O número da porta não é incluso porque 443 é o esquema padrão de porta
+// O número da porta não está incluso porque 443 é o esquema padrão de porta
 
 url = new URL("https://developer.mozilla.org:4097/pt-BR/docs/Web/API/URL/host");
 console.log(url.host); // "developer.mozilla.org:4097"
