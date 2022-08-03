@@ -1,16 +1,20 @@
 ---
 title: 性能监测对象
 slug: Web/API/PerformanceObserver
+page-type: web-api-interface
 tags:
   - API
-  - 性能
-  - 性能记录
-  - 接口
+  - Interface
+  - Performance Observer API
+  - PerformanceObserver
+  - Reference
+  - Web Performance
+  - observers
 translation_of: Web/API/PerformanceObserver
 ---
 {{APIRef("Performance Timeline API")}}
 
-**`PerformanceObserver`** 用于监测性能度量事件，在浏览器的性能时间轴记录下一个新的 {{domxref("PerformanceEntry","performance entries", '', 'true')}} 的时候将会被通知 。
+**`PerformanceObserver`** 用于*监测*性能度量事件，在浏览器的性能时间轴记录新的 {{domxref("PerformanceEntry","performance entry", '', 'true')}} 的时候将会被通知。
 
 {{AvailableInWorkers}}
 
@@ -22,9 +26,11 @@ translation_of: Web/API/PerformanceObserver
 ## 方法
 
 - {{domxref("PerformanceObserver.observe","PerformanceObserver.observe()")}}
-  - : 指定监测的 {{domxref("PerformanceEntry.entryType","entry types")}} 的集合。 当 {{domxref("PerformanceEntry","performance entry")}} 被记录并且是指定的 `entryTypes` 之一的时候，性能观察者对象的回调函数会被调用。
+  - : 指定监测的 {{domxref("PerformanceEntry.entryType","entry types")}} 的集合。当 {{domxref("PerformanceEntry","performance entry")}} 被记录并且是指定的 `entryTypes` 之一的时候，性能观察者对象的回调函数会被调用。
 - {{domxref("PerformanceObserver.disconnect","PerformanceObserver.disconnect()")}}
   - : 性能监测回调停止接收 {{domxref("PerformanceEntry","性能条目", '', 'true')}}。
+- {{domxref("PerformanceObserver.takeRecords","PerformanceObserver.takeRecords()")}}
+  - : 返回当前存储在性能观察器的 {{domxref("PerformanceEntry","performance entry")}} 列表，并将其清空。
 
 ## 示例
 
