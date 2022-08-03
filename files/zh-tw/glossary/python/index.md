@@ -11,7 +11,7 @@ Python 是在 OSI 認可的開源許可證規範下開發的，使其能自由�
 
 ## 參見
 
-- 維基百科的 {{interwiki('wikipedia','Python')}}
+- 維基百科的 [Python](https://zh.wikipedia.org/wiki/Python)
 - [Python 官方教學文件](https://docs.python.org/3/tutorial/index.html)
 - [Tutorialspoint Python 教學](http://www.tutorialspoint.com/python/index.htm)
 - [AlphaCodingSkills Python 教學](https://www.alphacodingskills.com/python/python-tutorial.php)

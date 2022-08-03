@@ -33,7 +33,7 @@ p {
 ### 基本知識
 
 - [Learn CSS](/zh-TW/docs/Learn/CSS)
-- 維基百科的 {{interwiki("wikipedia", "CSS")}}
+- 維基百科的 [CSS](https://zh.wikipedia.org/wiki/CSS)
 
 ### 技術參考
 

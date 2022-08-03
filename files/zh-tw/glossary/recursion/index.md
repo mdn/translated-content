@@ -9,5 +9,5 @@ translation_of: Glossary/Recursion
 
 ### 基本知識
 
-- 維基百科的{{Interwiki("wikipedia", "遞迴")}}
+- 維基百科的[遞迴](https://zh.wikipedia.org/wiki/遞迴)
 - [關於 JavaScript 遞迴的詳情](/zh-TW/docs/Web/JavaScript/Guide/Functions#Recursion)

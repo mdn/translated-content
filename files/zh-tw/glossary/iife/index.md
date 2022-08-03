@@ -70,4 +70,4 @@ Async function 版本，目前主要為了 top level await 而使用：
 
 ### 基本知識
 
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} 維基百科
+- [IIFE](https://zh.wikipedia.org/wiki/Immediately-invoked_function_expression) 維基百科

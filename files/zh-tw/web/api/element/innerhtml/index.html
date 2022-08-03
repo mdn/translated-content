@@ -95,7 +95,7 @@ el.innerHTML = name; // harmless in this case
 name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
 el.innerHTML = name; // harmless in this case</pre>
 
-<p>Although this may look like a {{interwiki("wikipedia", "cross-site scripting")}} attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag inserted with <code>innerHTML</code> <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">should not execute</a>.</p>
+<p>Although this may look like a <a href="https://zh.wikipedia.org/wiki/cross-site_scripting">cross-site scripting</a> attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag inserted with <code>innerHTML</code> <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">should not execute</a>.</p>
 
 <p>However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, so there is still a security risk whenever you use <code>innerHTML</code> to set strings over which you have no control. For example:</p>
 

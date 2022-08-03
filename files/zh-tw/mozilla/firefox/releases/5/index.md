@@ -65,7 +65,7 @@ Firefox 5，基於 Gecko 5.0，在 2011 年六月 21 日發行。本文將提供
 ### HTTP
 
 - Firefox no longer sends the `Keep-Alive` HTTP header; we weren't formatting it correctly, and it was redundant since we were also sending the {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header with the value "keep-alive" anyway.
-- The HTTP transaction model has been updated to be more intelligent about reusing connections in the persistent connection pool; instead of treating the pool as a {{ interwiki("wikipedia", "FIFO") }} queue, Necko now attempts to sort the pool with connections with the largest {{ interwiki("wikipedia", "congestion window") }} (CWND) first. This can reduce the round-trip time (RTT) of HTTP transactions by avoiding the need to grow connections' windows in many cases.
+- The HTTP transaction model has been updated to be more intelligent about reusing connections in the persistent connection pool; instead of treating the pool as a [FIFO](https://zh.wikipedia.org/wiki/FIFO) queue, Necko now attempts to sort the pool with connections with the largest [congestion window](https://zh.wikipedia.org/wiki/congestion_window) (CWND) first. This can reduce the round-trip time (RTT) of HTTP transactions by avoiding the need to grow connections' windows in many cases.
 - Firefox now handles the `Content-Disposition` HTTP response header more effectively if both the `filename` and `filename*` parameters are provided; it looks through all provided names, using the `filename*` parameter if one is available, even if a `filename` parameter is included first. Previously, the first matching parameter would be used, thereby preventing a more appropriate name from being used. See {{ bug(588781) }}.
 
 ### MathML

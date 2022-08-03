@@ -14,7 +14,7 @@ translation_of: Glossary/Null
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Null pointer")}}
+- 維基百科上的 [Null pointer](https://zh.wikipedia.org/wiki/Null_pointer)
 
 ### 技術參考
 

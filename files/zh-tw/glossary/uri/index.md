@@ -9,5 +9,5 @@ translation_of: Glossary/URI
 
 ### 一般常識篇
 
-- {{Interwiki("wikipedia", "URI")}} on Wikipedia
+- [URI](https://zh.wikipedia.org/wiki/URI) on Wikipedia
 - [RFC 3986 on URI](http://tools.ietf.org/html/rfc3986)

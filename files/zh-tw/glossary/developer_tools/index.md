@@ -14,7 +14,7 @@ translation_of: Glossary/Developer_Tools
 
 ### 基礎知識
 
-- 維基百科上的{{interwiki("wikipedia", "網頁開發工具", "Web development tools")}}
+- 維基百科上的[Web development tools](https://zh.wikipedia.org/wiki/網頁開發工具)
 
 ### 技術參考
 

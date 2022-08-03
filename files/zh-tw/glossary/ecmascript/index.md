@@ -11,7 +11,7 @@ translation_of: Glossary/ECMAScript
 
 ### 基本知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "ECMAScript")}}
+- 維基百科上的 [ECMAScript](https://zh.wikipedia.org/wiki/ECMAScript)
 
 ### 技術參考
 
