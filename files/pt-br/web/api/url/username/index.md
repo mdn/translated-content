@@ -13,7 +13,7 @@ browser-compat: api.URL.username
 
 {{ApiRef("URL API")}}
 
-A propriedade **`username`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o nome de usuário especificdao antes do nome do domínio.
+A propriedade **`username`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o nome de usuário especificado antes do nome do domínio.
 
 {{AvailableInWorkers}}
 
