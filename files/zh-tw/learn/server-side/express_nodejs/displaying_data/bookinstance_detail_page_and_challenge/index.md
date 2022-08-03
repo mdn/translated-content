@@ -5,18 +5,19 @@ slug: >-
 translation_of: >-
   Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
-<h2 id="書本實例詳情頁面">書本實例詳情頁面</h2>
+## 書本實例詳情頁面
 
-<p><code>BookInstance</code> 詳情頁面，需要呈現每一個 <code>BookInstance </code>的信息，用 <code>_id</code> 欄位字段值（自動產生）做識別。它包含了 <code>Book</code> 名稱 (也是一個連結，連到 <em>書本細節</em>頁面)，接著是紀錄中的其它的信息。</p>
+`BookInstance` 詳情頁面，需要呈現每一個 `BookInstance `的信息，用 `_id` 欄位字段值（自動產生）做識別。它包含了 `Book` 名稱 (也是一個連結，連到 *書本細節*頁面)，接著是紀錄中的其它的信息。
 
-<h3 id="Controller_控制器">Controller 控制器</h3>
+### Controller 控制器
 
-<p>打開 <strong>/controllers/bookinstanceController.js</strong>. 找到 exported <code>bookinstance_detail()</code> 控制器方法，並用底下代碼置換。</p>
+打開 **/controllers/bookinstanceController.js**. 找到 exported `bookinstance_detail()` 控制器方法，並用底下代碼置換。
 
-<pre class="brush: js">// Display detail page for a specific BookInstance.
+```js
+// Display detail page for a specific BookInstance.
 exports.bookinstance_detail = function(req, res, next) {
 
-<strong>    BookInstance.findById(req.params.id)
+    BookInstance.findById(req.params.id)
     .populate('book')
     .exec(function (err, bookinstance) {
       if (err) { return next(err); }
@@ -27,22 +28,23 @@ exports.bookinstance_detail = function(req, res, next) {
         }
       // Successful, so render.
       res.render('bookinstance_detail', { title: 'Book:', bookinstance:  bookinstance});
-    })</strong>
+    })
 
 };
-</pre>
+```
 
-<p>該方法使用從 URL（使用路由）中提取的特定書本實例的ID，調用<code>BookInstance.findById()</code>，並通過請求參數（<code>req.params.id</code>），在控制器中訪問。然後調用<code>populate()</code>來獲取相關 <code>Book </code>的詳細信息。</p>
+該方法使用從 URL（使用路由）中提取的特定書本實例的 ID，調用`BookInstance.findById()`，並通過請求參數（`req.params.id`），在控制器中訪問。然後調用`populate()`來獲取相關 `Book `的詳細信息。
 
-<h3 id="View_視圖">View 視圖</h3>
+### View 視圖
 
-<p>創建 <strong>/views/bookinstance_detail.pug</strong> ，並複製下面的內容。</p>
+創建 **/views/bookinstance_detail.pug** ，並複製下面的內容。
 
-<pre class="brush: js">extends layout
+```js
+extends layout
 
 block content
 
-<strong>  h1 ID: #{bookinstance._id}</strong>
+  h1 ID: #{bookinstance._id}
 
   p #[strong Title:]
     a(href=bookinstance.book.url) #{bookinstance.book.title}
@@ -58,34 +60,28 @@ block content
 
   if bookinstance.status!='Available'
     p #[strong Due back:] #{bookinstance.due_back}
-</pre>
+```
 
-<p>本模組中的所有東西，都在先前的章節演示過了。</p>
+本模組中的所有東西，都在先前的章節演示過了。
 
-<h3 id="它看起來像是">它看起來像是?</h3>
+### 它看起來像是?
 
-<p>運行本應用，並打開瀏覽器訪問 <a href="http://localhost:3000/">http://localhost:3000/</a>/。選擇 <em>All book-instances</em> 連結，然後選擇其中一本。如果每個東西都設定正確了，你的網站看起來應該像是底下的截圖。</p>
+運行本應用，並打開瀏覽器訪問 <http://localhost:3000/>/。選擇 _All book-instances_ 連結，然後選擇其中一本。如果每個東西都設定正確了，你的網站看起來應該像是底下的截圖。
 
-<p><img alt="BookInstance Detail Page - Express Local Library site" src="locallibary_express_bookinstance_detail.png"></p>
+![BookInstance Detail Page - Express Local Library site](locallibary_express_bookinstance_detail.png)
 
-<h2 id="自我挑戰">自我挑戰</h2>
+## 自我挑戰
 
-<p>目前，我們網站上顯示的大多數日期，都使用默認的 JavaScript 格式（例如 <em>Tue Dec 06 2016 15:49:58 GMT+1100 </em>（AUS東部夏令時間））。本文的挑戰，是改善作者<code>Author</code>生命週期日期顯示的外觀信息（死亡/誔生日期）和<em>BookInstance詳細信息</em>頁面，使用格式：December 6th, 2016。</p>
+目前，我們網站上顯示的大多數日期，都使用默認的 JavaScript 格式（例如 _Tue Dec 06 2016 15:49:58 GMT+1100_ （AUS 東部夏令時間））。本文的挑戰，是改善作者`Author`生命週期日期顯示的外觀信息（死亡/誔生日期）和*BookInstance 詳細信息*頁面，使用格式：December 6th, 2016。
 
-<div class="note">
-<p><strong>備註：</strong> 您可以使用與我們用於 <em>Book Instance List</em> 的相同方法（將生命週期的虛擬屬性，添加到<code>Author</code>模型，並使用 <a href="https://www.npmjs.com/package/moment">moment </a>來設置日期字符串的格式）。</p>
-</div>
+> **備註：** 您可以使用與我們用於 _Book Instance List_ 的相同方法（將生命週期的虛擬屬性，添加到`Author`模型，並使用 [moment ](https://www.npmjs.com/package/moment)來設置日期字符串的格式）。
 
-<p>這個挑戰的要求：</p>
+這個挑戰的要求：
 
-<ol>
- <li>用 BookInstance 詳細信息頁面中的 <code>due_back_formatted</code> 替換 <code>due_back</code>。</li>
- <li>更新作者模塊以添加壽命虛擬屬性。壽命應該有兩個值： <em>date_of_birth - date_of_death</em>，這兩個值的格式與 <code>BookInstance.due_back_formatted</code>的日期格式相同。</li>
- <li>在當前使用 <code>date_of_birth</code> 和 <code>date_of_death</code>的所有視圖中，使用 <code>Author.lifespan</code> 。</li>
-</ol>
+1.  用 BookInstance 詳細信息頁面中的 `due_back_formatted` 替換 `due_back`。
+2.  更新作者模塊以添加壽命虛擬屬性。壽命應該有兩個值： _date_of_birth - date_of_death_，這兩個值的格式與 `BookInstance.due_back_formatted`的日期格式相同。
+3.  在當前使用 `date_of_birth` 和 `date_of_death`的所有視圖中，使用 `Author.lifespan` 。
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<ul>
- <li>回到 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教學 5: 呈現圖書館資料</a></li>
-</ul>
+- 回到 [Express 教學 5: 呈現圖書館資料](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)

@@ -3,23 +3,26 @@ title: 作者詳情頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 ---
-<p>作者細節頁面，需要呈現指定作者 <code>Author </code>的信息，使用 <code>_id</code> 欄位的值（自動產生）識別，接著是這個作者 <code>Author </code>的所有書本物件 <code>Book </code>的列表。</p>
+作者細節頁面，需要呈現指定作者 `Author `的信息，使用 `_id` 欄位的值（自動產生）識別，接著是這個作者 `Author `的所有書本物件 `Book `的列表。
 
-<h2 id="Controller_控制器">Controller 控制器</h2>
+## Controller 控制器
 
-<p>打開 <strong>/controllers/authorController.js</strong>.</p>
+打開 **/controllers/authorController.js**.
 
-<p>在檔案最上方，加入底下幾行，引入 <em>async</em> 和 <em>Book</em> 模組(作者細節頁面需要它們)。</p>
+在檔案最上方，加入底下幾行，引入 _async_ 和 _Book_ 模組(作者細節頁面需要它們)。
 
-<pre class="brush: js">var async = require('async');
-var Book = require('../models/book');</pre>
+```js
+var async = require('async');
+var Book = require('../models/book');
+```
 
-<p>找到 exported <code>author_detail()</code> 控制器方法，並用底下代碼置換。</p>
+找到 exported `author_detail()` 控制器方法，並用底下代碼置換。
 
-<pre class="brush: js">// Display detail page for a specific Author.
+```js
+// Display detail page for a specific Author.
 exports.author_detail = function(req, res, next) {
 
-<strong>    async.parallel({
+    async.parallel({
         author: function(callback) {
             Author.findById(req.params.id)
               .exec(callback)
@@ -37,22 +40,23 @@ exports.author_detail = function(req, res, next) {
         }
         // Successful, so render.
         res.render('author_detail', { title: 'Author Detail', author: results.author, author_books: results.authors_books } );
-    });</strong>
+    });
 
 };
-</pre>
+```
 
-<p>此處的控制器方法使用<code> async.parallel()</code>，用平行的方式，查詢作者 <code>Author</code>和相應的書本實例，並附加上繪製本頁面的回調，如果 2 個要求都成功完成，就運行回調。這個方式，就跟前面的<em>種類細節頁面</em>所說明的完全相同。</p>
+此處的控制器方法使用` async.parallel()`，用平行的方式，查詢作者 `Author`和相應的書本實例，並附加上繪製本頁面的回調，如果 2 個要求都成功完成，就運行回調。這個方式，就跟前面的*種類細節頁面*所說明的完全相同。
 
-<h2 id="View_視圖">View 視圖</h2>
+## View 視圖
 
-<p>創建 <strong>/views/author_detail.pug</strong> ，並複制貼上底下的文字。</p>
+創建 **/views/author_detail.pug** ，並複制貼上底下的文字。
 
-<pre class="brush: js">extends layout
+```js
+extends layout
 
 block content
 
-<strong>  h1 Author: #{author.name}</strong>
+  h1 Author: #{author.name}
   p #{author.date_of_birth} - #{author.date_of_death}
 
   div(style='margin-left:20px;margin-top:20px')
@@ -67,23 +71,19 @@ block content
 
       else
         p This author has no books.
-</pre>
+```
 
-<p>本模板裡的所有事物，都在先前的章節演示過了。</p>
+本模板裡的所有事物，都在先前的章節演示過了。
 
-<h2 id="它看起來像是">它看起來像是?</h2>
+## 它看起來像是?
 
-<p>運行本應用，並打開瀏覽器訪問 <a href="http://localhost:3000/">http://localhost:3000/</a>。選擇 <em>All Authors</em> 連結，然後選擇一個作者。如果每個東西都設定正確了，你的網站看起來應該會像底下的截圖。</p>
+運行本應用，並打開瀏覽器訪問 <http://localhost:3000/>。選擇 _All Authors_ 連結，然後選擇一個作者。如果每個東西都設定正確了，你的網站看起來應該會像底下的截圖。
 
-<p><img alt="Author Detail Page - Express Local Library site" src="locallibary_express_author_detail.png"></p>
+![Author Detail Page - Express Local Library site](locallibary_express_author_detail.png)
 
-<div class="note">
-<p><strong>備註：</strong> 作者的出生與死亡日期的外觀很醜！我們將在本文最後的自我挑戰處理它。</p>
-</div>
+> **備註：** 作者的出生與死亡日期的外觀很醜！我們將在本文最後的自我挑戰處理它。
 
-<h2 id="下一步">下一步</h2>
+## 下一步
 
-<ul>
- <li>回到 <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express 教學 5: 呈現圖書館資料</a></li>
- <li>繼續教學 5 的最後一個部分: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge">書本實例詳情頁面與自我挑戰</a></li>
-</ul>
+- 回到 [Express 教學 5: 呈現圖書館資料](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 繼續教學 5 的最後一個部分: [書本實例詳情頁面與自我挑戰](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)

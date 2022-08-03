@@ -3,15 +3,16 @@ title: Author list page and Genre list page challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
-<p>作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。</p>
+作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。
 
-<h2 id="Controller_控制器">Controller 控制器</h2>
+## Controller 控制器
 
-<p>作者列表控制器函數，需要獲取所有作者實例的列表，然後將這些實例傳遞給模板進行渲染。</p>
+作者列表控制器函數，需要獲取所有作者實例的列表，然後將這些實例傳遞給模板進行渲染。
 
-<p>打開 <strong>/controllers/authorController.js</strong>。在文件頂部附近，找到導出的 <code>author_list() </code>控制器方法，並將其替換為以下代碼（更改後的代碼以<strong>粗體</strong>顯示）。</p>
+打開 **/controllers/authorController.js**。在文件頂部附近，找到導出的 `author_list() `控制器方法，並將其替換為以下代碼（更改後的代碼以**粗體**顯示）。
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Display list of all Authors.
+```js
+// Display list of all Authors.
 exports.author_list = function(req, res, next) {
 
   Author.find()
@@ -22,15 +23,17 @@ exports.author_list = function(req, res, next) {
       res.render('author_list', { title: 'Author List', author_list: list_authors });
     });
 
-};</code></pre>
+};
+```
 
-<p>The method uses the model's <code>find()</code>, <code>sort()</code> and <code>exec()</code> functions to return all <code>Author</code> objects sorted by <code>family_name</code> in alphabetic order. The callback passed to the <code>exec()</code> method is called with any errors (or <code>null</code>) as the first parameter, or a list of all authors on success. If there is an error it calls the next middleware function with the error value, and if not it renders the <strong>author_list</strong>(.pug) template, passing the page <code>title</code> and the list of authors (<code>author_list</code>).</p>
+The method uses the model's `find()`, `sort()` and `exec()` functions to return all `Author` objects sorted by `family_name` in alphabetic order. The callback passed to the `exec()` method is called with any errors (or `null`) as the first parameter, or a list of all authors on success. If there is an error it calls the next middleware function with the error value, and if not it renders the **author_list**(.pug) template, passing the page `title` and the list of authors (`author_list`).
 
-<h2 id="View">View</h2>
+## View
 
-<p>Create <strong>/views/author_list.pug</strong> and replace its content with the text below.</p>
+Create **/views/author_list.pug** and replace its content with the text below.
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">extends layout
+```js
+extends layout
 
 block content
   h1= title
@@ -42,44 +45,40 @@ block content
         |  (#{author.date_of_birth} - #{author.date_of_death})
 
     else
-      li There are no authors.</code></pre>
+      li There are no authors.
+```
 
-<p>The view follows exactly the same pattern as our other templates.</p>
+The view follows exactly the same pattern as our other templates.
 
-<h2 id="What_does_it_look_like">What does it look like?</h2>
+## What does it look like?
 
-<p>Run the application and open your browser to <a href="http://localhost:3000/">http://localhost:3000/</a>. Then select the <em>All authors </em>link. If everything is set up correctly, the page should look something like the following screenshot.</p>
+Run the application and open your browser to <http://localhost:3000/>. Then select the _All authors_ link. If everything is set up correctly, the page should look something like the following screenshot.
 
-<p><img alt="Author List Page - Express Local Library site" src="locallibary_express_author_list.png"></p>
+![Author List Page - Express Local Library site](locallibary_express_author_list.png)
 
-<div class="note">
-<p><strong>Note:</strong> The appearance of the author <em>lifespan </em>dates is ugly! You can improve this using the <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting">same approach</a> as we used for the <code>BookInstance</code> list (adding the virtual property for the lifespan to the <code>Author</code> model). This time, however, there are missing dates, and references to nonexistent properties are ignored unless strict mode is in effect. <code>moment()</code> returns the current time, and you don't want missing dates to be formatted as if they were today. One way to deal with this is to define the body of the function that returns a formatted date so it returns a blank string unless the date actually exists. For example:</p>
+> **備註：** The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model). This time, however, there are missing dates, and references to nonexistent properties are ignored unless strict mode is in effect. `moment()` returns the current time, and you don't want missing dates to be formatted as if they were today. One way to deal with this is to define the body of the function that returns a formatted date so it returns a blank string unless the date actually exists. For example:
+>
+> `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-<p><code>return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';</code></p>
-</div>
+## Genre list page—challenge\![Edit](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
 
-<h2 id="Genre_list_page—challenge!Edit">Genre list page—challenge!<a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!">Edit</a></h2>
+In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.
 
-<p>In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.</p>
+![Genre List - Express Local Library site](locallibary_express_genre_list.png)
 
-<p><img alt="Genre List - Express Local Library site" src="locallibary_express_genre_list.png"></p>
+The genre list controller function needs to get a list of all `Genre` instances, and then pass these to the template for rendering.
 
-<p>The genre list controller function needs to get a list of all <code>Genre</code> instances, and then pass these to the template for rendering.</p>
+1.  You will need to edit `genre_list()` in **/controllers/genreController.js**.
+2.  The implementation is almost exactly the same as the `author_list()` controller.
 
-<ol>
- <li>You will need to edit <code>genre_list()</code> in <strong>/controllers/genreController.js</strong>. </li>
- <li>The implementation is almost exactly the same as the <code>author_list()</code> controller.
-  <ul>
-   <li>Sort the results by name, in ascending order.</li>
-  </ul>
- </li>
- <li>The template to be rendered should be named <strong>genre_list.pug</strong>.</li>
- <li>The template to be rendered should be passed the variables <code>title</code> ('Genre List') and <code>genre_list</code> (the list of genres returned from your <code>Genre.find()</code> callback.</li>
- <li>The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).</li>
-</ol>
+    - Sort the results by name, in ascending order.
 
-<h2 id="Next_steps">Next steps</h2>
+3.  The template to be rendered should be named **genre_list.pug**.
+4.  The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback.
+5.  The view should match the screenshot/requirements above (this should have a very similar structure/format to the Author list view, except for the fact that genres do not have dates).
 
-<p>Return to <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</p>
+## Next steps
 
-<p>Proceed to the next subarticle of part 5: <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page">Genre detail page</a>.</p>
+Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+
+Proceed to the next subarticle of part 5: [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
