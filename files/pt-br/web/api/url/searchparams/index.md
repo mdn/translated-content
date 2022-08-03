@@ -14,29 +14,10 @@ browser-compat: api.URLSearchParams
 ---
 {{ApiRef("URL API")}}
 
-A propriedade **`searchParams`** da interface {{domxref("URL")}} retorna um objeto {{domxref("URLSearchParams")}} permitindo acesso ao {{httpmethod("GET")}} decodificando os argumentos que contém na URL.
+A interface *`URLSearchParams`** define métodos utilitários para trabalhar com os parâmetros de uma URL.
 
-{{AvailableInWorkers}}
-
-## Valor
-
-Um objeto {{domxref("URLSearchParams")}}.
-
-## Exemplos
-
-Se a URl da sua página é
-`https://example.com/?name=Jonathan%20Smith&age=18` você pode analisar os parâmetros `name` e `age` utilizando:
+Um objeto que implementa `URLSearchParams` pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} para iterar sobre pares chave/valor na mesma ordem em que elas aparecem nos parâmetros, por exemplo as linhas a seguir são equivalentes:
 
 ```js
-let params = new URL(document.location).searchParams;
-let name = params.get("name"); // é a string "Jonathan Smith".
-let age = parseInt(params.get("age")); // é o número 18
-```
-
-## Especificações
-
-{{Specifications}}
-
-## Compatibilidade de browser
-
-{{Compat}}
+for (const [key, value] of mySearchParams) {}
+for (const [key, value] of mySearchParams.entries()) {}
