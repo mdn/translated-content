@@ -14,4 +14,4 @@ original_slug: Glossary/卡片分类法
 
 ### **常识**
 
-- {{interwiki("wikipedia", "Card_sorting", "Card sorting")}} on Wikipedia
+- [Card sorting](https://zh.wikipedia.org/wiki/Card_sorting) on Wikipedia

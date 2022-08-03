@@ -16,4 +16,4 @@ translation_of: Glossary/Host
 
 ### 基本知识
 
-- {{interwiki("wikipedia", "Host (network)", "Host (network)")}} on Wikipedia
+- [Host (network)](https://zh.wikipedia.org/wiki/Host_(network)) on Wikipedia

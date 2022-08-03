@@ -10,4 +10,4 @@ translation_of: Glossary/OpenGL
 
 ## 深入了解
 
-- {{Interwiki("wikipedia", "OpenGL")}} on Wikipedia
+- [OpenGL](https://zh.wikipedia.org/wiki/OpenGL) on Wikipedia

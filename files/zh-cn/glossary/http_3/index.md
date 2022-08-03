@@ -14,7 +14,7 @@ translation_of: Glossary/HTTP_3
 - 基础知识
 
   - [HTTP on MDN](/zh-CN/docs/Web/HTTP)
-  - {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}}
+  - [HTTP/3](https://zh.wikipedia.org/wiki/HTTP/3)
 
 - 词汇表
 
