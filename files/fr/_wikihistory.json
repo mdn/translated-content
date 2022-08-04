@@ -40687,32 +40687,6 @@
       "tristantheb"
     ]
   },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T23:17:54.084Z",
-    "contributors": [
-      "P45QU10U",
-      "hmore",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
-    "modified": "2019-03-23T23:16:38.785Z",
-    "contributors": [
-      "sdumetz",
-      "dFegnoux",
-      "Mozinet",
-      "Fredchat"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
-    "modified": "2019-03-23T23:17:50.755Z",
-    "contributors": [
-      "hmore",
-      "Goofy",
-      "Fredchat"
-    ]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
     "modified": "2020-10-15T21:27:51.341Z",
     "contributors": [
