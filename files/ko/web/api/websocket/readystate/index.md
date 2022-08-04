@@ -13,11 +13,11 @@ translation_of: Web/API/WebSocket/readyState
 
 {{APIRef("Web Sockets API")}}
 
-**`WebSocket.readyState`** 읽기 전용 속성은 {{domxref("WebSocket")}} 연결의 현재 상태를 반환합니다.
+**`WebSocket.readyState`** 읽기 전용 속성은 {{domxref("WebSocket")}} 연결의 현재 상태를 반환합니다.
 
 ## 값
 
-아래의 `unsigned short` 값 중 하나입니다.
+아래의 `unsigned short` 값 중 하나입니다.
 
 | 값  | 상태         | 설명                                               |
 | --- | ------------ | -------------------------------------------------- |

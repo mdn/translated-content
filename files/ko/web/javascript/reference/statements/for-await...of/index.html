@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong><code>for await...of</code> 구문</strong>은 보통 비동기에 대응하는 열거자를 나열할 때 쓰이지만, {{jsxref("String")}}, {{jsxref("Array")}}, <code>Array</code> 같은 객체 (e.g., {{jsxref("Functions/arguments", "arguments")}} or <a href="/en-US/docs/Web/API/NodeList" title="NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."><code>NodeList</code></a>), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 같은 동기적으로 열거 가능한 객체 또한 가능하며, 사용자가 직접 정의한 동기 또는 비동기 객체도 나열할 수 있도록 해준다. 일반적인 <strong><code>for ...of</code></strong> 문과 마찬가지로 열거자 심볼이 정의한 속성을 실행하게 되어 열거한 값을 변수로 받아 처리한다.</p>
+<p><strong><code>for await...of</code> 구문</strong>은 보통 비동기에 대응하는 열거자를 나열할 때 쓰이지만, {{jsxref("String")}}, {{jsxref("Array")}}, <code>Array</code> 같은 객체 (e.g., {{jsxref("Functions/arguments", "arguments")}} or <a href="/en-US/docs/Web/API/NodeList" title="NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."><code>NodeList</code></a>), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 같은 동기적으로 열거 가능한 객체 또한 가능하며, 사용자가 직접 정의한 동기 또는 비동기 객체도 나열할 수 있도록 해준다. 일반적인 <strong><code>for ...of</code></strong> 문과 마찬가지로 열거자 심볼이 정의한 속성을 실행하게 되어 열거한 값을 변수로 받아 처리한다.</p>
 
 
 
@@ -25,14 +25,14 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 
 <dl>
  <dt><code><var>variable</var></code></dt>
- <dd>열거할 때마다 <code><var>variable</var></code>. 문을 통해 변수로 받을 수 있다. <code><var>variable</var></code> 문 안에서는 <code>const</code>, <code>let</code> 및 <code>var</code>. 문으로 선언된 변수 및 상수를 선언할 수 있다.</dd>
+ <dd>열거할 때마다 <code><var>variable</var></code>. 문을 통해 변수로 받을 수 있다. <code><var>variable</var></code> 문 안에서는 <code>const</code>, <code>let</code> 및 <code>var</code>. 문으로 선언된 변수 및 상수를 선언할 수 있다.</dd>
  <dt><code><var>iterable</var></code></dt>
- <dd>열거 가능한 속성이 들어가 있는 객체 및 식을 포함한다.</dd>
+ <dd>열거 가능한 속성이 들어가 있는 객체 및 식을 포함한다.</dd>
 </dl>
 
-<h3 id="비동기_열거_속성을_통한_열거_식">비동기 열거 속성을 통한 열거 식</h3>
+<h3 id="비동기_열거_속성을_통한_열거_식">비동기 열거 속성을 통한 열거 식</h3>
 
-<p>비동기 열거 프로토콜을 담은 객체를 아래와 같이 열거할 수 있다.</p>
+<p>비동기 열거 프로토콜을 담은 객체를 아래와 같이 열거할 수 있다.</p>
 
 <pre class="brush:js">const asyncIterable = {
   [Symbol.asyncIterator]() {
@@ -50,9 +50,9 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 };
 
 (async function() {
-   for await (let num of asyncIterable) {
-     console.log(num);
-   }
+   for await (let num of asyncIterable) {
+     console.log(num);
+   }
 })();
 
 // 0
@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 
 <h3 id="비동기_생성자를_통한_열거_식">비동기 생성자를 통한 열거 식</h3>
 
-<p>비동기 생성자는 애초부터 비동기 열거 프로토콜을 탑재한 채로 정의한다.이를 <code>for await...of</code> 식으로 아래와 같이 사용할 수 있다.</p>
+<p>비동기 생성자는 애초부터 비동기 열거 프로토콜을 탑재한 채로 정의한다.이를 <code>for await...of</code> 식으로 아래와 같이 사용할 수 있다.</p>
 
 <pre class="brush: js">async function* asyncGenerator() {
   let i = 0;
@@ -80,7 +80,7 @@ translation_of: Web/JavaScript/Reference/Statements/for-await...of
 // 1
 // 2</pre>
 
-<p>좀 더 상세한 비동기 생성자를 통한 <code>for await...of </code>식의 사용법을 위해 기본 API를 통해 값을 비동기적으로 열거하는 방법을 알아본다.</p>
+<p>좀 더 상세한 비동기 생성자를 통한 <code>for await...of </code>식의 사용법을 위해 기본 API를 통해 값을 비동기적으로 열거하는 방법을 알아본다.</p>
 
 <p>아래 예제를 통해 먼저 API를 사용하여 스트림 데이터를 통해 비동기 열거자를 만든 뒤, 스트림에서 응답이 끝나면 최종 응답 데이터 크기를 가져온다.</p>
 

@@ -36,7 +36,7 @@ Number.parseInt(string, radix)
 
 주어진 `string`에서 파싱한 정수입니다.
 
-다음과 같은 경우에는 {{jsxref("NaN")}}을 반환합니다.
+다음과 같은 경우에는 {{jsxref("NaN")}}을 반환합니다.
 
 - `radix`가 2보다 작거나 36보다 큰 경우.
 - 공백이 아닌 첫 문자를 숫자로 변환할 수 없는 경우.
@@ -51,7 +51,7 @@ Number.parseInt(string, radix)
 Number.parseInt === parseInt; // true
 ```
 
-`Number.parseInt()`는 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseInt", "parseInt()")}}를 참고하세요.
+`Number.parseInt()`는 ECMAScript 2015에서 전역 객체의 모듈화를 위해 추가됐습니다. 상세한 정보와 예제는 {{jsxref("parseInt", "parseInt()")}}를 참고하세요.
 
 ## 명세
 

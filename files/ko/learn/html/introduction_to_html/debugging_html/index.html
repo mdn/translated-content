@@ -7,13 +7,13 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <div>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}</div>
 
-<p class="summary">HTML을 작성을 할 수 있지만, 문제가 생겼을 때  코드의 오류가 발생한 부분을 해결할 수 없나요? 이 기사에서는 HTML의 오류를 찾고 수정하는 데 도움이되는 몇 가지 도구를 소개합니다.</p>
+<p class="summary">HTML을 작성을 할 수 있지만, 문제가 생겼을 때  코드의 오류가 발생한 부분을 해결할 수 없나요? 이 기사에서는 HTML의 오류를 찾고 수정하는 데 도움이되는 몇 가지 도구를 소개합니다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">선행사항:</th>
-   <td>HTML이 익숙해야 합니다. 다음문서를 이해하는 정도면 충분합니다. <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">HTML로 시작하기</a>, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 텍스트 기본사항</a>, and <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">하이파링크 만들기</a>.</td>
+   <td>HTML이 익숙해야 합니다. 다음문서를 이해하는 정도면 충분합니다. <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">HTML로 시작하기</a>, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 텍스트 기본사항</a>, and <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">하이파링크 만들기</a>.</td>
   </tr>
   <tr>
    <th scope="row">목표:</th>
@@ -24,15 +24,15 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <h2 id="디버깅은_무섭지_않아요.">디버깅은 무섭지 않아요.</h2>
 
-<p>여러분이 원하든 원하지않든 무언가 잘못되면 코드가 동작하지 않거나 검파일 애러가 나는 무시무시한 순간이 다가옵니다. 다음과 같이 말이죠</p>
+<p>여러분이 원하든 원하지않든 무언가 잘못되면 코드가 동작하지 않거나 검파일 애러가 나는 무시무시한 순간이 다가옵니다. 다음과 같이 말이죠</p>
 
-<p>아래는 <a href="https://www.rust-lang.org/">Rust</a> 언어로 작성된 간단한 프로그램을 {{glossary ( "compile")}}할 때 발생한 오류를 보여줍니다.</p>
+<p>아래는 <a href="https://www.rust-lang.org/">Rust</a> 언어로 작성된 간단한 프로그램을 {{glossary ( "compile")}}할 때 발생한 오류를 보여줍니다.</p>
 
 <p><img alt="A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string." src="https://mdn.mozillademos.org/files/12435/error-message.png" style="display: block; height: 520px; margin: 0px auto; width: 711px;"></p>
 
-<p>여기나온 오류 메시지는 상대적으로 이해하기 쉽습니다. "끝나지 않은 큰 따옴표 문자열". 애러 내용을 보면 코드 2번째 줄의 <code>println! (Hello, world! ");</code>에 큰 따옴표가 누락 된 것을 금방 볼 수 있습니다. 하지만 프로그램이 커질수록 오류 메시지는 점점더 복잡해지고 해석하기가 쉽지 않아집니다. 단순한 경우라 할지라도 Rust에 대해 전혀 모르는 사람에게 약간 무섭게 보일 수 있습니다.(보통은 점점 무서워지죠..)</p>
+<p>여기나온 오류 메시지는 상대적으로 이해하기 쉽습니다. "끝나지 않은 큰 따옴표 문자열". 애러 내용을 보면 코드 2번째 줄의 <code>println! (Hello, world! ");</code>에 큰 따옴표가 누락 된 것을 금방 볼 수 있습니다. 하지만 프로그램이 커질수록 오류 메시지는 점점더 복잡해지고 해석하기가 쉽지 않아집니다. 단순한 경우라 할지라도 Rust에 대해 전혀 모르는 사람에게 약간 무섭게 보일 수 있습니다.(보통은 점점 무서워지죠..)</p>
 
-<p>그래도 디버깅을 무서워하지 않으셔도 됩니다! 프로그래밍 언어나 코드를 작성하고 디버깅하는 데 있어 중요한 것은 언어와 도구에 익숙해지는 것입니다. (익숙해져야 합니다!)</p>
+<p>그래도 디버깅을 무서워하지 않으셔도 됩니다! 프로그래밍 언어나 코드를 작성하고 디버깅하는 데 있어 중요한 것은 언어와 도구에 익숙해지는 것입니다. (익숙해져야 합니다!)</p>
 
 <h2 id="HTML과_디버깅">HTML과 디버깅</h2>
 
@@ -40,17 +40,17 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <h3 id="허용_코드">허용 코드</h3>
 
-<p>그렇다면 유연함(<strong>permissive</strong>)이란 무엇일까요? 음, 일반적으로 코드에서 뭔가 잘못했을 때, 두 가지 주요 유형의 오류가 발생합니다.</p>
+<p>그렇다면 유연함(<strong>permissive</strong>)이란 무엇일까요? 음, 일반적으로 코드에서 뭔가 잘못했을 때, 두 가지 주요 유형의 오류가 발생합니다.</p>
 
 <ul>
- <li><strong>문법 오류(Syntax errors)</strong>: 이러한 오류는 위에 표시된 Rust 오류와 같이 실제로 프로그램이 실행되지 않는 코드의 맞춤법 오류입니다. 이들은 일반적으로 언어 구문에 익숙하고 오류 메시지의 의미를 알고있다면 수정하기 쉽습니다.</li>
- <li><strong>논리 에러(Logic errors)</strong>: 언어 문법이 올바르게 작성된 오류입니다. 동작은 하지만 코드가 의도한 것과 다르게 동작하므로 프로그램이 잘못 실행됩니다. 오류의 원인을 알려주는 오류 메시지가 없으므로 구문 오류보다 수정하기가 더 어렵습니다.</li>
+ <li><strong>문법 오류(Syntax errors)</strong>: 이러한 오류는 위에 표시된 Rust 오류와 같이 실제로 프로그램이 실행되지 않는 코드의 맞춤법 오류입니다. 이들은 일반적으로 언어 구문에 익숙하고 오류 메시지의 의미를 알고있다면 수정하기 쉽습니다.</li>
+ <li><strong>논리 에러(Logic errors)</strong>: 언어 문법이 올바르게 작성된 오류입니다. 동작은 하지만 코드가 의도한 것과 다르게 동작하므로 프로그램이 잘못 실행됩니다. 오류의 원인을 알려주는 오류 메시지가 없으므로 구문 오류보다 수정하기가 더 어렵습니다.</li>
 </ul>
 
-<p>브라우저 자체에서 구문 분석을하기 때문에 HTML 자체는 문법 오류가 발생하지 않으므로 문법 오류가 있어도 페이지가 계속 표시됩니다. 브라우저에는 잘못 작성된 마크 업을 해석하는 방법을 설명하는 규칙이 내장되어 있으므로 여러분이 생각한대로 결과가 나오지 않더라도 HTML페이지가 표시됩니다. 물론 문제가 될 수 있습니다!</p>
+<p>브라우저 자체에서 구문 분석을하기 때문에 HTML 자체는 문법 오류가 발생하지 않으므로 문법 오류가 있어도 페이지가 계속 표시됩니다. 브라우저에는 잘못 작성된 마크 업을 해석하는 방법을 설명하는 규칙이 내장되어 있으므로 여러분이 생각한대로 결과가 나오지 않더라도 HTML페이지가 표시됩니다. 물론 문제가 될 수 있습니다!</p>
 
 <div class="note">
-<p><strong>Note</strong>: 웹이 처음 만들어지면 사람들이 자신의 콘텐트를 게시 할 수 있도록 허용하는 것이 문법이 정확한지 확인하는 것보다 중요하기 때문에 HTML은 허용 된 방식으로 구문 분석됩니다. 처음부터 웹 사이트가 문법오류에 엄격했다면 웹은 오늘날처럼 인기가 있지 않았을 것입니다.</p>
+<p><strong>Note</strong>: 웹이 처음 만들어지면 사람들이 자신의 콘텐트를 게시 할 수 있도록 허용하는 것이 문법이 정확한지 확인하는 것보다 중요하기 때문에 HTML은 허용 된 방식으로 구문 분석됩니다. 처음부터 웹 사이트가 문법오류에 엄격했다면 웹은 오늘날처럼 인기가 있지 않았을 것입니다.</p>
 </div>
 
 <h3 id="자발적_학습_Permissive한_코드를_배웁니다.">자발적 학습 : Permissive한 코드를 배웁니다.</h3>
@@ -58,7 +58,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 <p>유연한 성질의 HTML 코드를 배울 시간입니다.</p>
 
 <ol>
- <li>첫째로,  우리의 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html">debug-example demo</a>를 다운로드하고 Local에 저장하세요. This demo is deliberately written to have some errors in it for us to explore (the HTML markup is said to be <strong>badly-formed</strong>, as opposed to <strong>well-formed</strong>).</li>
+ <li>첫째로,  우리의 <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html">debug-example demo</a>를 다운로드하고 Local에 저장하세요. This demo is deliberately written to have some errors in it for us to explore (the HTML markup is said to be <strong>badly-formed</strong>, as opposed to <strong>well-formed</strong>).</li>
  <li>Next, open it in a browser. You will see something like this:<img alt="A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. " src="https://mdn.mozillademos.org/files/12437/badly-formed-html.png" style="display: block; margin: 0 auto;"></li>
  <li>This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
   <pre class="brush: html notranslate">&lt;h1&gt;HTML debugging examples&lt;/h1&gt;
@@ -92,7 +92,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
   <ul>
    <li>The paragraphs and list items have been given closing tags.</li>
    <li>It isn't clear where the first <code>&lt;strong&gt;</code> element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!</li>
-   <li>The  incorrect nesting has been fixed by the browser like this:
+   <li>The  incorrect nesting has been fixed by the browser like this:
     <pre class="brush: html notranslate">&lt;strong&gt;strong
   &lt;em&gt;strong emphasised?&lt;/em&gt;
 &lt;/strong&gt;
@@ -123,7 +123,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 <p>Let's try this with our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html">sample document</a>.</p>
 
 <ol>
- <li>First, load up the <a href="https://validator.w3.org/">Markup Validation Service</a> in one browser tab, if it isn't already.</li>
+ <li>First, load up the <a href="https://validator.w3.org/">Markup Validation Service</a> in one browser tab, if it isn't already.</li>
  <li>Switch to the <a href="https://validator.w3.org/#validate_by_input">Validate by Direct Input</a> tab.</li>
  <li>Copy all the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.</li>
  <li>Press the <em>Check</em> button.</li>
@@ -160,7 +160,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 <h2 id="요약">요약</h2>
 
-<p>그래서 HTML을 디버깅하는 방법에 대해 소개합니다. 이 방법은 나중에 CSS, JavaScript 및 다른 유형의 코드를 디버깅 할 때 유용한 기술을 제공합니다. 이것은 또한 HTML 모듈 학습 입문의 끝 부분입니다. 이제 평가를 통해 스스로 테스트 할 수 있습니다. 첫 번째 것은 아래에 링크되어 있습니다.</p>
+<p>그래서 HTML을 디버깅하는 방법에 대해 소개합니다. 이 방법은 나중에 CSS, JavaScript 및 다른 유형의 코드를 디버깅 할 때 유용한 기술을 제공합니다. 이것은 또한 HTML 모듈 학습 입문의 끝 부분입니다. 이제 평가를 통해 스스로 테스트 할 수 있습니다. 첫 번째 것은 아래에 링크되어 있습니다.</p>
 
 <p>{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}</p>
 

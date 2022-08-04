@@ -14,7 +14,7 @@ original_slug: Web/Guide/CSS/Media_queries
 ---
 <div>{{cssref}}</div>
 
-<p><strong>미디어 쿼리</strong>는 단말기의 유형(출력물 vs. 화면)과, 어떤 특성이나 수치(화면 해상도, {{glossary("viewport", "뷰포트")}} 너비 등)에 따라 웹 사이트나 앱의 스타일을 수정할 때 유용합니다.</p>
+<p><strong>미디어 쿼리</strong>는 단말기의 유형(출력물 vs. 화면)과, 어떤 특성이나 수치(화면 해상도, {{glossary("viewport", "뷰포트")}} 너비 등)에 따라 웹 사이트나 앱의 스타일을 수정할 때 유용합니다.</p>
 
 <p>미디어 쿼리는 다음과 같은 상황에 사용할 수 있습니다.</p>
 
@@ -47,7 +47,7 @@ original_slug: Web/Guide/CSS/Media_queries
  <dd>모든 장치에 적합합니다.</dd>
  <dt><code>print</code></dt>
  <dd>인쇄 결과물 및 출력 미리보기 화면에 표시 중인 문서입니다.<br>
- (<a href="/ko/docs/Web/CSS/Paged_Media">인쇄 미디어</a> 문서를 방문해 <code>print</code> 형식에서 발생 가능한 서식 문제의 정보를 확인해주세요.)</dd>
+ (<a href="/ko/docs/Web/CSS/Paged_Media">인쇄 미디어</a> 문서를 방문해 <code>print</code> 형식에서 발생 가능한 서식 문제의 정보를 확인해주세요.)</dd>
  <dt><code>screen</code></dt>
  <dd>주로 화면이 대상입니다.</dd>
  <dt><code>speech</code></dt>
@@ -230,7 +230,7 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h4 id="and"><code>and</code></h4>
 
-<p><code>and</code> 연산자는 다수의 미디어 특성을 조합하여 하나의 미디어 쿼리를 만들 때 사용합니다. 쿼리가 참이려면 모든 구성 특성이 참을 반환해야 합니다. 미디어 특성과 미디어 유형을 같이 사용할 때도 쓰입니다.</p>
+<p><code>and</code> 연산자는 다수의 미디어 특성을 조합하여 하나의 미디어 쿼리를 만들 때 사용합니다. 쿼리가 참이려면 모든 구성 특성이 참을 반환해야 합니다. 미디어 특성과 미디어 유형을 같이 사용할 때도 쓰입니다.</p>
 
 <h4 id="not"><code>not</code></h4>
 
@@ -282,17 +282,17 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h2 id="복잡한_미디어_쿼리_생성">복잡한 미디어 쿼리 생성</h2>
 
-<p>때로는 사용자가 다수의 조건으로 구성된 쿼리를 생성하기 원할 수도 있습니다. 이때 논리연산자인 : <code>not</code>, <code>and</code>, 그리고 <code>only</code>를 사용하면 됩니다.  더 나아가 , 사용자는 복수의 미디어쿼리를 쉼표로 연결하여 리스트를 작성할수도 있습니다. 이렇게 함으로써 사용자는 다양한 상황에서 같은 스타일을 적용할 수 있습니다.</p>
+<p>때로는 사용자가 다수의 조건으로 구성된 쿼리를 생성하기 원할 수도 있습니다. 이때 논리연산자인 : <code>not</code>, <code>and</code>, 그리고 <code>only</code>를 사용하면 됩니다.  더 나아가 , 사용자는 복수의 미디어쿼리를 쉼표로 연결하여 리스트를 작성할수도 있습니다. 이렇게 함으로써 사용자는 다양한 상황에서 같은 스타일을 적용할 수 있습니다.</p>
 
-<p>앞서 예와 같이,  <code>and</code> 연산자를 사용하여 미디어유형과 미디어기능을 그룹지을 수 있습니다. 또한 <code>and</code> 를 사용하여 복수의 미디어 기능을 하나의 미디어 쿼리로 결합해낼수도 있습니다. 하지만 <code>not</code> 연산자는 미디어쿼리 자체를 부정시키는데, 근본적으로 원래의 의미를 반전시킵니다. <code>only</code> 연산자는 구형 브라우저가 스타일을 적용시키지 못하게 합니다.</p>
+<p>앞서 예와 같이,  <code>and</code> 연산자를 사용하여 미디어유형과 미디어기능을 그룹지을 수 있습니다. 또한 <code>and</code> 를 사용하여 복수의 미디어 기능을 하나의 미디어 쿼리로 결합해낼수도 있습니다. 하지만 <code>not</code> 연산자는 미디어쿼리 자체를 부정시키는데, 근본적으로 원래의 의미를 반전시킵니다. <code>only</code> 연산자는 구형 브라우저가 스타일을 적용시키지 못하게 합니다.</p>
 
 <div class="note">
-<p><strong>Note:</strong> 대부분의 경우,  <code>all</code> 미디어유형은 다른 유형이 특정되지 않았을 때 디폴트로 적용됩니다. 하지만, 사용자가 <code>not</code> 이나 <code>only</code> 연산자를 사용하면, 사용자는 반드시 미디어유형을 특정해야 합니다.</p>
+<p><strong>Note:</strong> 대부분의 경우,  <code>all</code> 미디어유형은 다른 유형이 특정되지 않았을 때 디폴트로 적용됩니다. 하지만, 사용자가 <code>not</code> 이나 <code>only</code> 연산자를 사용하면, 사용자는 반드시 미디어유형을 특정해야 합니다.</p>
 </div>
 
 <h3 id="다수의_유형과_기능_조합하기">다수의 유형과 기능 조합하기</h3>
 
-<p>The <code>and</code> 연산자는 미디어기능과 미디어유형 혹은 다른 미디어 기능들과 연결해줍니다. 이 예에서는 두개의 미디어기능을 기기의 랜스케입(가로방향화면)방향으로 제한시키고 최소폭을 30 ems로 지정합니다:</p>
+<p>The <code>and</code> 연산자는 미디어기능과 미디어유형 혹은 다른 미디어 기능들과 연결해줍니다. 이 예에서는 두개의 미디어기능을 기기의 랜스케입(가로방향화면)방향으로 제한시키고 최소폭을 30 ems로 지정합니다:</p>
 
 <pre class="brush: css notranslate">@media (min-width: 30em) and (orientation: landscape) { ... }</pre>
 
@@ -302,15 +302,15 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h3 id="다수의_쿼리_판별">다수의 쿼리 판별</h3>
 
-<p>쉼표로 연결된 리스트를 작성하여 사용자의 기기가 다양한 미디어타입, 기능, 상태 어떤 것과 맞는 것이 있을 때 스타일을 적용하게 할 수 있습니다. 예를 들면, 다음의 룰은 사용자의 기기가 최소한 높이가 680px 이거나 화면이 세로로 긴 모드일 때 스타일이 적용됩니다:</p>
+<p>쉼표로 연결된 리스트를 작성하여 사용자의 기기가 다양한 미디어타입, 기능, 상태 어떤 것과 맞는 것이 있을 때 스타일을 적용하게 할 수 있습니다. 예를 들면, 다음의 룰은 사용자의 기기가 최소한 높이가 680px 이거나 화면이 세로로 긴 모드일 때 스타일이 적용됩니다:</p>
 
 <pre class="brush: css notranslate">@media (min-height: 680px), screen and (orientation: portrait) { ... }</pre>
 
-<p>위에 예에서 보면, 만일 사용자가 페이지높이가 800px인 프린터를 사용한다면, 첫번째 쿼리가 적용되기에 참 (true)값을 반환할 것입니다. 마찬가지로, 만일 사용자가 화면 높이가 480px인 스마트폰을 사용한다면 두번째 쿼리가 적용될 것이고, 미디어 문은 참값을 반환하게 됩니다.</p>
+<p>위에 예에서 보면, 만일 사용자가 페이지높이가 800px인 프린터를 사용한다면, 첫번째 쿼리가 적용되기에 참 (true)값을 반환할 것입니다. 마찬가지로, 만일 사용자가 화면 높이가 480px인 스마트폰을 사용한다면 두번째 쿼리가 적용될 것이고, 미디어 문은 참값을 반환하게 됩니다.</p>
 
 <h3 id="쿼리의_뜻_반전하기">쿼리의 뜻 반전하기</h3>
 
-<p><code>not</code> 키워드는 미디어쿼리 전체의 의미를 반전시킵니다.  이 키워드는 적용된 미디어쿼리를 반전시킵니다. (즉, 쉼표로 연결된 미디어쿼리 리스트의 하나하나의 미디어쿼리에 적용되는 것이 아닙니다) <code>not</code> 키워드는 개별적인 기능의 쿼리를 부정하는데 사용할 수 없고, 오직 미디어쿼리 전체를 부정하는 데에만 사용됩니다.  <code>not</code> 연산자 키워드는 다음의 쿼리에서 보여지듯이 가장 나중에 적용됩니다:</p>
+<p><code>not</code> 키워드는 미디어쿼리 전체의 의미를 반전시킵니다.  이 키워드는 적용된 미디어쿼리를 반전시킵니다. (즉, 쉼표로 연결된 미디어쿼리 리스트의 하나하나의 미디어쿼리에 적용되는 것이 아닙니다) <code>not</code> 키워드는 개별적인 기능의 쿼리를 부정하는데 사용할 수 없고, 오직 미디어쿼리 전체를 부정하는 데에만 사용됩니다.  <code>not</code> 연산자 키워드는 다음의 쿼리에서 보여지듯이 가장 나중에 적용됩니다:</p>
 
 <pre class="brush: css notranslate">@media not all and (monochrome) { ... }
 </pre>
@@ -335,17 +335,17 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <h3 id="구형_브라우저와의_호환성_향상하기">구형 브라우저와의 호환성 향상하기</h3>
 
-<p><code>only</code> 키워드는 미디어기능을 가진 미디어쿼리를 지원하지 않는 구형 브라우저가 주어진 스타일을 적용하지 못하게 합니다. <em>신형브라우저에는 아무런 영향을 주지 않습니다.</em></p>
+<p><code>only</code> 키워드는 미디어기능을 가진 미디어쿼리를 지원하지 않는 구형 브라우저가 주어진 스타일을 적용하지 못하게 합니다. <em>신형브라우저에는 아무런 영향을 주지 않습니다.</em></p>
 
 <pre class="brush: css notranslate">@media only screen and (color) { ... }
 </pre>
 
 <h2 id="Level_4의_구문_향상">Level 4의 구문 향상</h2>
 
-<p>미디어쿼리 Level 4 사양은 향상된 구문을 포함하는데 그를 통해 미디어쿼리가 '범위' 유형을 가진 기능을 사용할 수 있습니다. 예를 들면, 폭, 높이 처럼 말보다는 숫자에 관련된 것들입니다. Level 4 는 그러한 쿼리들을 작성하는데에 필요한 범위 구문을 제공합니다. 예를 들면, adds a <em>range context</em> for writing such queries. 폭을 표현하기 위해 <code>max-</code> 함수를 써서 사용자는 다음과 같이 쓸 수 있습니다:</p>
+<p>미디어쿼리 Level 4 사양은 향상된 구문을 포함하는데 그를 통해 미디어쿼리가 '범위' 유형을 가진 기능을 사용할 수 있습니다. 예를 들면, 폭, 높이 처럼 말보다는 숫자에 관련된 것들입니다. Level 4 는 그러한 쿼리들을 작성하는데에 필요한 범위 구문을 제공합니다. 예를 들면, adds a <em>range context</em> for writing such queries. 폭을 표현하기 위해 <code>max-</code> 함수를 써서 사용자는 다음과 같이 쓸 수 있습니다:</p>
 
 <div class="note">
-<p><strong>Note:</strong> 미디어쿼리 Level 4 사양에는 상당수의 최신 브라우저를 지원하지만,  몇몇 미디어기능들은 잘 지원되지 않습니다. 자세한 사항은 <a href="/en-US/docs/Web/CSS/@media#Browser_compatibility"><code>@media</code> browser compatibility table</a> 를 참조해 주십시요. </p>
+<p><strong>Note:</strong> 미디어쿼리 Level 4 사양에는 상당수의 최신 브라우저를 지원하지만,  몇몇 미디어기능들은 잘 지원되지 않습니다. 자세한 사항은 <a href="/en-US/docs/Web/CSS/@media#Browser_compatibility"><code>@media</code> browser compatibility table</a> 를 참조해 주십시요. </p>
 </div>
 
 <pre class="brush: css notranslate">@media (max-width: 30em) { ... }</pre>
@@ -354,7 +354,7 @@ original_slug: Web/Guide/CSS/Media_queries
 
 <pre class="brush: css notranslate">@media (width &lt;= 30em) { ... }</pre>
 
-<p><code>min-</code> 과 <code>max-</code> 를 사용하여 사용자가 두 값 사이에서 폭 값을 시험해 보고 싶은 상황이라면:</p>
+<p><code>min-</code> 과 <code>max-</code> 를 사용하여 사용자가 두 값 사이에서 폭 값을 시험해 보고 싶은 상황이라면:</p>
 
 <pre class="brush: css notranslate">@media (min-width: 30em) and (max-width: 50em) { ... }</pre>
 
@@ -363,17 +363,17 @@ original_slug: Web/Guide/CSS/Media_queries
 <pre class="brush: css notranslate">@media (30em &lt;= width &lt;= 50em ) { ... }
 </pre>
 
-<p> Level 4 미디어쿼리는 또한 완전한 불리언 대수법을 사용하는 미디어쿼리들과 <strong>and</strong>, <strong>not</strong>, <strong>or</strong>.연산자를 결합할 수 있습니다. </p>
+<p> Level 4 미디어쿼리는 또한 완전한 불리언 대수법을 사용하는 미디어쿼리들과 <strong>and</strong>, <strong>not</strong>, <strong>or</strong>.연산자를 결합할 수 있습니다. </p>
 
 <h3 id="not으로_기능_부정"><code>not</code>으로 기능 부정</h3>
 
-<p>미디어기능에 <code>not()</code> 을 사용하면 쿼리에 있는 기능을 부정합니다. 예를 들어, hover를 할 수 없는 장치를 사용할 때 <code>not(hover)</code> 를 사용할 수 있습니다.</p>
+<p>미디어기능에 <code>not()</code> 을 사용하면 쿼리에 있는 기능을 부정합니다. 예를 들어, hover를 할 수 없는 장치를 사용할 때 <code>not(hover)</code> 를 사용할 수 있습니다.</p>
 
 <pre class="brush: css notranslate">@media (not(hover)) { ... }</pre>
 
 <h3 id="or로_다수의_기능_판별"><code>or</code>로 다수의 기능 판별</h3>
 
-<p><code>or</code> 를 사용하면 다수의 기능 가운데 맞는 것이 하나라도 있는지를 테스트하여, 그중에 맞는 것이 하나라도 있으면 <code>true</code> 값을 반환하게 할 수 있습니다. 예를 들어, 다음에 보이는 쿼리에서는 흑백화면인지 혹은 hover가 가능한 지를 시험하고 있습니다.</p>
+<p><code>or</code> 를 사용하면 다수의 기능 가운데 맞는 것이 하나라도 있는지를 테스트하여, 그중에 맞는 것이 하나라도 있으면 <code>true</code> 값을 반환하게 할 수 있습니다. 예를 들어, 다음에 보이는 쿼리에서는 흑백화면인지 혹은 hover가 가능한 지를 시험하고 있습니다.</p>
 
 <pre class="brush: css notranslate">@media (not (color)) or (hover) { ... }
 </pre>
