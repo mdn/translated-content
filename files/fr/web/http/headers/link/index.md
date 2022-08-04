@@ -37,7 +37,7 @@ Link: https://bad.example; rel="preconnect"
 
 ### Déclarer plusieurs liens
 
-Il est possible de spécifier plusieurs liens, en les séparant par des virgules :
+Il est possible de spécifier plusieurs liens, en les séparant par des virgules&nbsp;:
 
 ```
 Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
