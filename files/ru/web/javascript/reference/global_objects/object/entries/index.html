@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Object.entries()</strong></code> метод возвращает массив собственных перечисляемых свойств указанного объекта в формате <code>[key, value]</code>, в том же порядке, что и в цикле {{jsxref("Statements/for...in", "for...in")}} (разница в том, что for-in перечисляет свойства из цепочки прототипов). Порядок элементов в массиве который возвращается <code><strong>Object.entries()</strong></code> не зависит от того как объект объявлен. Если существует необходимость в определённом порядке, то  массив должен быть отсортирован до вызова метода, например <code>Object.entries(obj).sort((a, b) =&gt; a[0] - b[0]);</code>.</p>
+<p><code><strong>Object.entries()</strong></code> метод возвращает массив собственных перечисляемых свойств указанного объекта в формате <code>[key, value]</code>, в том же порядке, что и в цикле {{jsxref("Statements/for...in", "for...in")}} (разница в том, что for-in перечисляет свойства из цепочки прототипов). Порядок элементов в массиве который возвращается <code><strong>Object.entries()</strong></code> не зависит от того как объект объявлен. Если существует необходимость в определённом порядке, то  массив должен быть отсортирован до вызова метода, например <code>Object.entries(obj).sort((a, b) =&gt; a[0] - b[0]);</code>.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/object-entries.html")}}</p>
 
@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 <dl>
  <dt><code>obj</code></dt>
- <dd>Объект, чьи перечислимые свойства будут возвращены в виде массива <code>[key, value]</code>.</dd>
+ <dd>Объект, чьи перечислимые свойства будут возвращены в виде массива <code>[key, value]</code>.</dd>
  <dt>
  <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
  </dt>
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 <h2 id="Описание">Описание</h2>
 
-<p><code>Object.entries()</code> возвращает массив, элементами которого являются массивы, соответствующие перечисляемому свойству пары <code>[key, value],</code> найденной прямо в <code>object</code>. Порядок свойств тот же, что и при прохождении циклом по свойствам объекта вручную.</p>
+<p><code>Object.entries()</code> возвращает массив, элементами которого являются массивы, соответствующие перечисляемому свойству пары <code>[key, value],</code> найденной прямо в <code>object</code>. Порядок свойств тот же, что и при прохождении циклом по свойствам объекта вручную.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -65,22 +65,22 @@ Object.entries(obj).forEach(([key, value]) =&gt; {
 
 <h3 id="Преобразование_Object_в_Map">Преобразование <code>Object</code> в <code>Map</code></h3>
 
-<p>Конструктор {{jsxref("Map", "new Map()")}} принимает повторение <em>значений</em>. С <code>Object.entries </code>вы легко можете преобразовать {{jsxref("Object")}} в {{jsxref("Map")}}:</p>
+<p>Конструктор {{jsxref("Map", "new Map()")}} принимает повторение <em>значений</em>. С <code>Object.entries </code>вы легко можете преобразовать {{jsxref("Object")}} в {{jsxref("Map")}}:</p>
 
 <pre class="brush: js">var obj = { foo: "bar", baz: 42 };
 var map = new Map(Object.entries(obj));
 console.log(map); // Map { foo: "bar", baz: 42 }</pre>
 
-<h3 id="Итерация_по_Object">Итерация по <code>Object</code></h3>
+<h3 id="Итерация_по_Object">Итерация по <code>Object</code></h3>
 
-<p>Используя <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2">метод Разбора Массивов</a> Вы можете легко итерировать объекты.</p>
+<p>Используя <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2">метод Разбора Массивов</a> Вы можете легко итерировать объекты.</p>
 
 <pre><code>const obj = { foo: 'bar', baz: 42 };
 Object.entries(obj).forEach(([key, value]) =&gt; console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"</code></pre>
 
 <h2 id="Полифил">Полифил</h2>
 
-<p>Чтобы добавить поддержку <code>Object.entries</code> в более старых окружениях, которые не поддерживают его нативно, вы можете найти полифил в <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> или <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> репозиториях.</p>
+<p>Чтобы добавить поддержку <code>Object.entries</code> в более старых окружениях, которые не поддерживают его нативно, вы можете найти полифил в <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> или <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a> репозиториях.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

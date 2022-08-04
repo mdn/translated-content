@@ -5,16 +5,16 @@ translation_of: Web/API/Element/clientLeft
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<div>Ширина от левого края элемента в пикселях. При наличии overflow заключает в себя ширину от вертикального scrollbar для письма справа налево.</div>
+<div>Ширина от левого края элемента в пикселях. При наличии overflow заключает в себя ширину от вертикального scrollbar для письма справа налево.</div>
 
-<p><code>clientLeft</code> не включает в себя ни левый padding ни margin с той же стороны. <code>clientLeft</code> только для чтения.</p>
+<p><code>clientLeft</code> не включает в себя ни левый padding ни margin с той же стороны. <code>clientLeft</code> только для чтения.</p>
 
 <p><a href="en/Gecko">Gecko</a>-based applications support <code>clientLeft</code> starting with Gecko 1.9 (<a href="en/Firefox_3">Firefox 3</a>, implemented in {{ Bug(111207) }}). This property is not supported in Firefox 2 and earlier.</p>
 
 <p>Когда <a class="external" href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code> </a>значение установлено от 1 до 3 и направление текста справа налево, <strong>то вертикальный scrollbar будет спозиционирован слева</strong> и как следствие будет вычислен clientLeft.</p>
 
 <div class="note">
-<p><strong>Внимание:</strong> Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
+<p><strong>Внимание:</strong> Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -48,7 +48,7 @@ translation_of: Web/API/Element/clientLeft
   <tr>
    <td>{{SpecName('CSSOM View', '#dom-element-clientleft', 'clientLeft')}}</td>
    <td>{{Spec2("CSSOM View")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -63,6 +63,6 @@ translation_of: Web/API/Element/clientLeft
 
 <p><code>clientLeft</code> был впервые введён MS IE DHTML object model.</p>
 
-<p>Расположение вертикального scrollbar для письма справа налево применённого для элемента будет назначаются следующим свойством <a class="external" href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code> preference</a></p>
+<p>Расположение вертикального scrollbar для письма справа налево применённого для элемента будет назначаются следующим свойством <a class="external" href="http://kb.mozillazine.org/Layout.scrollbar.side"><code>layout.scrollbar.side</code> preference</a></p>
 
-<p>Когда установлены стили элемента <code>display: inline</code>, то <code>clientLeft</code> вернёт <code>0</code> несмотря на границы элемента.</p>
+<p>Когда установлены стили элемента <code>display: inline</code>, то <code>clientLeft</code> вернёт <code>0</code> несмотря на границы элемента.</p>

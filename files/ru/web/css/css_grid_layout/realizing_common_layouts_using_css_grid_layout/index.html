@@ -50,7 +50,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
             &lt;/ul&gt;
         &lt;/nav&gt;
         &lt;article class="content"&gt;
-            &lt;h1&gt;Main article area&lt;/h1&gt;
+            &lt;h1&gt;Main article area&lt;/h1&gt;
             &lt;p&gt;In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.&lt;/p&gt;
         &lt;/article&gt;
         &lt;aside class="side"&gt;Sidebar&lt;/aside&gt;
@@ -81,7 +81,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 }
 </pre>
 
-<p>Это не создаст никакого макета, однако наши элементы теперь имеют имена, которые мы можем использовать для создания. Оставаясь вне каких-либо медиавыражений, я теперь собираюсь настроить макет для мобильной платформы. Здесь я держу все в исходном порядке, пытаясь избежать любого разрыва между источником и дисплеем, как описано в руководстве <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">Grid layout and accessibility</a></em>. У меня нет столбцов или строк, т. к. такой макет предполагает один столбец, и строки будут создаваться по мере необходимости для каждого из элементов неявной сетки.</p>
+<p>Это не создаст никакого макета, однако наши элементы теперь имеют имена, которые мы можем использовать для создания. Оставаясь вне каких-либо медиавыражений, я теперь собираюсь настроить макет для мобильной платформы. Здесь я держу все в исходном порядке, пытаясь избежать любого разрыва между источником и дисплеем, как описано в руководстве <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">Grid layout and accessibility</a></em>. У меня нет столбцов или строк, т. к. такой макет предполагает один столбец, и строки будут создаваться по мере необходимости для каждого из элементов неявной сетки.</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -328,7 +328,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 <p>{{ EmbedLiveSample('layout_3', '800', '450') }}</p>
 </div>
 
-<p>Снова смотрим <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a>, чтобы увидеть, какую форму принял наш макет.</p>
+<p>Снова смотрим <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Inspector</a>, чтобы увидеть, какую форму принял наш макет.</p>
 
 <p><img alt="Showing the layout with grid tracks highlighted by the grid inspector." src="https://mdn.mozillademos.org/files/14755/11-grid-inspector-12col-layout.png" style="height: 614px; width: 2050px;"></p>
 
@@ -394,7 +394,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 </pre>
 </div>
 
-<p>Мы собираемся создать сетку с гибким количеством гибких столбцов. Я хочу, чтобы они никогда не становились меньше 200 пикселей, а затем делили любое доступное оставшееся пространство поровну – так мы всегда получаем одинаковые по ширине дорожки столбцов. Мы достигаем этого с помощью функции  <code>minmax()</code> в нашей повторной нотации для определения размера трека.</p>
+<p>Мы собираемся создать сетку с гибким количеством гибких столбцов. Я хочу, чтобы они никогда не становились меньше 200 пикселей, а затем делили любое доступное оставшееся пространство поровну – так мы всегда получаем одинаковые по ширине дорожки столбцов. Мы достигаем этого с помощью функции  <code>minmax()</code> в нашей повторной нотации для определения размера трека.</p>
 
 <pre class="brush: css">.listing {
   list-style: none;
@@ -407,7 +407,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 
 <p>Как только я добавляю этот CSS, элементы начинают раскладываться в виде сетки. Если я сделаю окно меньше или шире, количество дорожек столбцов изменится – без необходимости переопределять сетку.</p>
 
-<p>Затем я могу привести в порядок внутренние части ячеек, используя flexbox. Я установил для элемента списка <code>display: flex</code> and и <code>flex-direction</code> для <code>column</code>. Затем я могу использовать margin auto для   <code>.cta</code> чтобы подтолкнуть этот элемент вниз к нижней части ячейки.</p>
+<p>Затем я могу привести в порядок внутренние части ячеек, используя flexbox. Я установил для элемента списка <code>display: flex</code> and и <code>flex-direction</code> для <code>column</code>. Затем я могу использовать margin auto для   <code>.cta</code> чтобы подтолкнуть этот элемент вниз к нижней части ячейки.</p>
 
 <pre class="brush: css">.listing li {
   border: 1px solid #ffe066;
@@ -431,11 +431,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_
 <p>{{ EmbedLiveSample('layout_4', '800', '900') }}</p>
 </div>
 
-<p>Теперь все это выглядит более завершённым. Однако иногда у нас есть эти элементы, которые содержат больше контента, чем другие. Было бы неплохо, чтобы они охватывали два трека, и тогда они не будут такими высокими. У меня есть класс <code>wide</code> для большого элемента, и я добавляю правило {{cssxref("grid-column-end")}} со значением  <code>span 2</code>. Теперь, когда grid столкнётся с этим элементом, он назначит ему два трека. В некоторых точках это означает, что мы получим разрыв в сетке – там, где нет места для размещения двухтрекового элемента.</p>
+<p>Теперь все это выглядит более завершённым. Однако иногда у нас есть эти элементы, которые содержат больше контента, чем другие. Было бы неплохо, чтобы они охватывали два трека, и тогда они не будут такими высокими. У меня есть класс <code>wide</code> для большого элемента, и я добавляю правило {{cssxref("grid-column-end")}} со значением  <code>span 2</code>. Теперь, когда grid столкнётся с этим элементом, он назначит ему два трека. В некоторых точках это означает, что мы получим разрыв в сетке – там, где нет места для размещения двухтрекового элемента.</p>
 
 <p><img alt="The layout has gaps as there is not space to layout a two track item." src="https://mdn.mozillademos.org/files/14751/11-grid-auto-flow-sparse.png" style="height: 812px; width: 800px;"></p>
 
-<p>Я могу привести причину недостатка заполнения с помощью {{cssxref("grid-auto-flow")}}<code>: dense </code> в грид ячейке. Будьте осторожны, когда делаете это, поскольку это действительно уводит элементы от их логического исходного порядка. Вы должны делать это только в том случае, если ваши элементы не имеют установленного порядка – и быть в курсе проблем порядка вкладок после источника, а не вашего переупорядоченного отображения.</p>
+<p>Я могу привести причину недостатка заполнения с помощью {{cssxref("grid-auto-flow")}}<code>: dense </code> в грид ячейке. Будьте осторожны, когда делаете это, поскольку это действительно уводит элементы от их логического исходного порядка. Вы должны делать это только в том случае, если ваши элементы не имеют установленного порядка – и быть в курсе проблем порядка вкладок после источника, а не вашего переупорядоченного отображения.</p>
 
 <div id="layout_5">
 <div class="hidden">

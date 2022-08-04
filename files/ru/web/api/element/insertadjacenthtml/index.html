@@ -15,12 +15,12 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <dl>
  <dt><code>position</code></dt>
- <dd>{{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
+ <dd>{{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
  <ul>
-  <li><code style="color: red;">'beforebegin'</code>: до самого <code>element</code> (до открывающего тега).</li>
-  <li><code style="color: green;">'afterbegin'</code>: сразу после открывающего тега  <code>element </code>(перед первым потомком).</li>
-  <li><code style="color: blue;">'beforeend'</code>: сразу перед закрывающим тегом <code>element</code> (после последнего потомка).</li>
-  <li><code style="color: magenta;">'afterend'</code>: после <code>element</code> (после закрывающего тега).</li>
+  <li><code style="color: red;">'beforebegin'</code>: до самого <code>element</code> (до открывающего тега).</li>
+  <li><code style="color: green;">'afterbegin'</code>: сразу после открывающего тега  <code>element </code>(перед первым потомком).</li>
+  <li><code style="color: blue;">'beforeend'</code>: сразу перед закрывающим тегом <code>element</code> (после последнего потомка).</li>
+  <li><code style="color: magenta;">'afterend'</code>: после <code>element</code> (после закрывающего тега).</li>
  </ul>
  </dd>
  <dt><code>text</code></dt>
@@ -41,7 +41,7 @@ foo
 </div>
 </div>
 
-<div class="note"><strong>Примечание:</strong>  позиции <code>beforebegin</code> и <code>afterend</code> работают только если узел имеет родительский элемент.</div>
+<div class="note"><strong>Примечание:</strong>  позиции <code>beforebegin</code> и <code>afterend</code> работают только если узел имеет родительский элемент.</div>
 
 <h2 id="Example">Пример</h2>
 
@@ -56,9 +56,9 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <h3 id="Соображения_безопасности">Соображения безопасности</h3>
 
-<p>Будьте осторожны при использовании вставки HTML на страницу с помощью <code>insertAdjacentHTML()</code>, не используете пользовательский ввод, который не был экранирован.</p>
+<p>Будьте осторожны при использовании вставки HTML на страницу с помощью <code>insertAdjacentHTML()</code>, не используете пользовательский ввод, который не был экранирован.</p>
 
-<p>Не рекомендуется использовать <code>insertAdjacentHTML()</code>, когда требуется ввести простой текст. Используйте для этого свойство {{domxref("Node.textContent")}} или метод {{domxref("Element.insertAdjacentText()")}}. Они не будут интерпретировать текст как HTML, а вставят необработанный текст.</p>
+<p>Не рекомендуется использовать <code>insertAdjacentHTML()</code>, когда требуется ввести простой текст. Используйте для этого свойство {{domxref("Node.textContent")}} или метод {{domxref("Element.insertAdjacentText()")}}. Они не будут интерпретировать текст как HTML, а вставят необработанный текст.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
@@ -68,6 +68,6 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <p>{{Compat}}</p>
 
-<h2 id="Specification"><span style="font-size: 2.33333rem; letter-spacing: -0.00278rem;">Смотрите также</span></h2>
+<h2 id="Specification"><span style="font-size: 2.33333rem; letter-spacing: -0.00278rem;">Смотрите также</span></h2>
 
 <p><a class="external" href="http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post by Henri Sivonen including benchmark showing that insertAdjacentHTML can be way faster in some cases.</a></p>
