@@ -19,33 +19,14 @@ original_slug: Web/API/RTCPeerConnection/onaddstream
  <li><code>function</code> 是用户自定义的一个函数，写法上不带 <code>()</code> 和任何参数，也可以是一个匿名函数，例如 <code>function(event) {...}</code>。事件处理函数通常有个 event 做参数，类型为 {{domxref("MediaStreamEvent")}}.</li>
 </ul>
 
-<h2 id="例子">例子</h2>
+<h2 id="示例">示例</h2>
 
 <pre class="brush: js">pc.onaddstream = function(ev) { alert("onaddstream event detected!"); };
 </pre>
 
-<h2 id="Specifications">规范</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-onaddstream', 'RTCPeerConnection.onaddstream') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
-
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-{{Compat("api.RTCPeerConnection.onaddstream")}}
+{{Compat}}
 
 <h2 id="扩展阅读">扩展阅读</h2>
 

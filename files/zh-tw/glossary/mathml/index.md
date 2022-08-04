@@ -12,7 +12,7 @@ translation_of: Glossary/MathML
 
 ### 基礎知識
 
-- 維基百科上的 {{interwiki("wikipedia", "MathML", "MathML")}}
+- 維基百科上的 [MathML](https://zh.wikipedia.org/wiki/MathML)
 
 ### 技術參考
 

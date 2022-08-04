@@ -13,4 +13,4 @@ translation_of: Glossary/FTP
 ### 基礎知識
 
 - [初學者指引通過 FTP 上傳文件](/en-US/Learn/Upload_files_to_a_web_server)
-- 維基百科上的{{interwiki("wikipedia", "File Transfer Protocol", "FTP")}}
+- 維基百科上的[FTP](https://zh.wikipedia.org/wiki/File_Transfer_Protocol)

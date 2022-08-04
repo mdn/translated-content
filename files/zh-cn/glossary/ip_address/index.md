@@ -16,4 +16,4 @@ IP 地址是分配给连接到使用 Internet 协议的网络的每个设备的�
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "IP address", "IP address")}} on Wikipedia
+- [IP address](https://zh.wikipedia.org/wiki/IP_address) on Wikipedia

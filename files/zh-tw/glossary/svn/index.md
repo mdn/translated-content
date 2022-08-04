@@ -12,7 +12,7 @@ Apache Subversion (**SVN**) 是免費的資源控制管理({{Glossary("SCM")}}) 
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Apache Subversion")}}
+- 維基百科上的 [Apache Subversion](https://zh.wikipedia.org/wiki/Apache_Subversion)
 - [官方站點](https://subversion.apache.org/)
 
 ### 學習使用

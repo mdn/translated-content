@@ -15,7 +15,7 @@ MVC 在定義方面有爭議，但通常會包含：
 
 ### 基本知識
 
-- 維基百科的 {{interwiki("wikipedia", "MVC")}}
+- 維基百科的 [MVC](https://zh.wikipedia.org/wiki/MVC)
 
 ### 學習 MVC
 

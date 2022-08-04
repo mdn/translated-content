@@ -31,7 +31,7 @@ translation_of: Glossary/Boolean
 
 ### 通用知识
 
-- 维基百科上的布尔值 {{Interwiki("wikipedia", "Boolean data type", "Boolean")}}
+- 维基百科上的布尔值 [Boolean](https://zh.wikipedia.org/wiki/Boolean_data_type)
 
 ### 技术参考文档
 

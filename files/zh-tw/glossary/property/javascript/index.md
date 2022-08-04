@@ -14,5 +14,5 @@ translation_of: Glossary/property/JavaScript
 
 ### 基本知識
 
-- 維基百科的 {{InterWiki('wikipedia','Property (programming)')}}
+- 維基百科的 [Property (programming)](https://zh.wikipedia.org/wiki/Property_(programming))
 - [JavaScript 物件導向介紹](/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)

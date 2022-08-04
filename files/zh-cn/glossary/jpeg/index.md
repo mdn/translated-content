@@ -53,5 +53,5 @@ JPEG 的复杂度之低和使用时间之长，给人以深刻的印象。以下
 
 ### 常识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "JPEG")}}
+- 在维基百科上的 [JPEG](https://zh.wikipedia.org/wiki/JPEG)
 - 在百度百科上的 [jpeg](https://baike.baidu.com/item/JPEG%E6%A0%BC%E5%BC%8F/3462770)

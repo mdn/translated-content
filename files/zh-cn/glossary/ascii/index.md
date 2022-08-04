@@ -12,4 +12,4 @@ translation_of: Glossary/ASCII
 
 ### 基本知识
 
-{{Interwiki("wikipedia", "ASCII")}} on Wikipedia
+[ASCII](https://zh.wikipedia.org/wiki/ASCII) on Wikipedia

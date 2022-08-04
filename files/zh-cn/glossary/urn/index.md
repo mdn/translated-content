@@ -9,4 +9,4 @@ URN（统一资源名称）是标准格式的 URI，指的是资源而不指定�
 
 ### 基础知识
 
-- {{Interwiki("wikipedia", "URN")}} on Wikipedia
+- [URN](https://zh.wikipedia.org/wiki/URN) on Wikipedia

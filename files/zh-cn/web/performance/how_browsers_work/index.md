@@ -155,7 +155,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 #### JavaScript 编译
 
-当 CSS 被解析并创建 CSSOM 时，其他资源，包括 JavaScript 文件正在下载（借助预加载扫描器）。JavaScript 被解释、编译、解析和执行。脚本被解析为抽象语法树。一些浏览器引擎使用{{interwiki('wikipedia', '抽象语法树')}}并将其传递到解释器中，输出在主线程上执行的字节码。这就是所谓的 JavaScript 编译。
+当 CSS 被解析并创建 CSSOM 时，其他资源，包括 JavaScript 文件正在下载（借助预加载扫描器）。JavaScript 被解释、编译、解析和执行。脚本被解析为抽象语法树。一些浏览器引擎使用[抽象语法树](https://zh.wikipedia.org/wiki/抽象语法树)并将其传递到解释器中，输出在主线程上执行的字节码。这就是所谓的 JavaScript 编译。
 
 #### 构建辅助功能树
 

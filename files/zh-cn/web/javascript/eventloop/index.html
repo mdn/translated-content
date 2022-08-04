@@ -133,27 +133,3 @@ while(true) {
 <p>JavaScript 的事件循环模型与许多其他语言不同的一个非常有趣的特性是，它永不阻塞。 处理 I/O 通常通过事件和回调来执行，所以当一个应用正等待一个 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 查询返回或者一个 <a href="/zh-CN/docs/Web/API/XMLHttpRequest">XHR</a> 请求返回时，它仍然可以处理其它事情，比如用户输入。</p>
 
 <p>由于历史原因有一些例外，如 <code>alert</code> 或者同步 XHR，但应该尽量避免使用它们。注意，<a href="https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">例外的例外也是存在的</a>（但通常是实现错误而非其它原因）。</p>
-
-<h2 id="标准规范">标准规范</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">标准规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#event-loops', 'Event loops')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td><a href="https://nodejs.org/zh-cn/docs/guides/event-loop-timers-and-nexttick/#what-is-the-event-loop">Node.js 事件循环</a></td>
-   <td>Living Standard</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>

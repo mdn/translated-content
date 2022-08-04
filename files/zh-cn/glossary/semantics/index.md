@@ -71,7 +71,7 @@ When approaching which markup to use, ask yourself, "What element(s) best descri
 - [HTML element reference](/zh-CN/docs/Web/HTML/Element#Inline_text_semantics) on MDN
 - [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements#Problems_solved_by_HTML5) on MDN
 - [HTML5 Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) on w3schools
-- {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
+- [The meaning of semantics in computer science](https://zh.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
 
   - {{Glossary("SEO")}}

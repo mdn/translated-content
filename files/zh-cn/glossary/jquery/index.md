@@ -37,7 +37,7 @@ window.onload = function() {
 
 ### 基本知识
 
-- 维基百科上的 {{Interwiki("wikipedia", "jQuery")}}
+- 维基百科上的 [jQuery](https://zh.wikipedia.org/wiki/jQuery)
 - [jQuery 官方网站](https://jquery.com/)
 
 ### 技术信息

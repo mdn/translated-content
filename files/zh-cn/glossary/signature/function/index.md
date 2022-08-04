@@ -51,4 +51,4 @@ public static void main(String[] args)
 
 ### `基本知识`
 
-- {{Interwiki("wikipedia", "Type signature#Java", "Java 内部类型签名")}} 在维基百科上
+- [Java 内部类型签名](https://zh.wikipedia.org/wiki/Type_signature#Java) 在维基百科上

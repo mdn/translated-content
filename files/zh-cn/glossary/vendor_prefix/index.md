@@ -64,4 +64,4 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 
 ### 基础知识
 
-- 维基百科{{Interwiki("wikipedia", "CSS_hack#Browser_prefixes", "浏览器引擎前缀（Vendor prefix）")}}
+- 维基百科[浏览器引擎前缀（Vendor prefix）](https://zh.wikipedia.org/wiki/CSS_hack#Browser_prefixes)

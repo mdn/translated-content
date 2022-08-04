@@ -9,4 +9,4 @@ translation_of: Glossary/CRUD
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "CRUD")}} on Wikipedia
+- [CRUD](https://zh.wikipedia.org/wiki/CRUD) on Wikipedia

@@ -14,4 +14,4 @@ translation_of: Glossary/Identifier
 
 ### 基礎知識
 
-- 維基百科上的 {{interwiki("wikipedia", "Identifier#In_computer_science", "識別字")}}
+- 維基百科上的 [識別字](https://zh.wikipedia.org/wiki/Identifier#In_computer_science)

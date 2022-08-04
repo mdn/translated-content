@@ -15,7 +15,7 @@ AJAX 允许只更新一个 {{glossary("HTML")}} 页面的部分 {{glossary("DOM"
 
 ### 基础知识
 
-- 维基百科上的 {{interwiki("wikipedia", "AJAX")}}
+- 维基百科上的 [AJAX](https://zh.wikipedia.org/wiki/AJAX)
 - [MDN 上的 AJAX - Getting started](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)
 - [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
 

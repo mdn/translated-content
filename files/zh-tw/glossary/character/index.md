@@ -13,8 +13,8 @@ translation_of: Glossary/Character
 
 ### 基本知識
 
-- {{interwiki("wikipedia", "Character (computing)")}} (維基百科)
-- {{interwiki("wikipedia", "Character encoding")}} (維基百科)
-- {{interwiki("wikipedia", "ASCII")}} (維基百科)
-- {{interwiki("wikipedia", "UTF-8")}} (維基百科)
-- {{interwiki("wikipedia", "Unicode")}} (維基百科)
+- [Character (computing)](https://zh.wikipedia.org/wiki/Character_(computing)) (維基百科)
+- [Character encoding](https://zh.wikipedia.org/wiki/Character_encoding) (維基百科)
+- [ASCII](https://zh.wikipedia.org/wiki/ASCII) (維基百科)
+- [UTF-8](https://zh.wikipedia.org/wiki/UTF-8) (維基百科)
+- [Unicode](https://zh.wikipedia.org/wiki/Unicode) (維基百科)

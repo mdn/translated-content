@@ -9,4 +9,4 @@ Copyleft 是一个术语，通常指许可证，用于表示此类许可要求�
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Copyleft")}} on Wikipedia
+- [Copyleft](https://zh.wikipedia.org/wiki/Copyleft) on Wikipedia

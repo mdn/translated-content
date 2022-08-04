@@ -14,7 +14,7 @@ translation_of: Glossary/routers
 
 針對網路層：
 
-- 維基百科的{{Interwiki("wikipedia", "路由器")}}
+- 維基百科的[路由器](https://zh.wikipedia.org/wiki/路由器)
 
 針對應用層，訪間熱門的 SPA 框架都有自己的路由器函式庫：
 

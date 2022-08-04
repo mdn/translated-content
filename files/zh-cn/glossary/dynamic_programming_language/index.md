@@ -16,4 +16,4 @@ translation_of: Glossary/Dynamic_programming_language
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Dynamic programming language")}} on Wikipedia
+- [Dynamic programming language](https://zh.wikipedia.org/wiki/Dynamic_programming_language) on Wikipedia

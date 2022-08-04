@@ -12,7 +12,7 @@ Chrome 浏览器是 Google 开发的一个免费网络{{glossary("浏览器")}}.
 
 ### 一般知识
 
-- {{interwiki("wikipedia", "Google Chrome", "Google Chrome")}} 维基百科
+- [Google Chrome](https://zh.wikipedia.org/wiki/Google_Chrome) 维基百科
 
 ### 对于使用者
 
