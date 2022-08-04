@@ -1,110 +1,114 @@
 ---
-title: ローカルのテストサーバーはどのようにセットアップしますか？
+title: ローカルにテスト用サーバーを用意するには？
 slug: Learn/Common_questions/set_up_a_local_testing_server
 tags:
+  - Beginner
   - Express
   - Flask
+  - Learn
   - Node
   - PHP
   - Python
   - django
   - lamp
-  - サーバ
-  - サーバーサイド
-  - 初心者
-  - 学習
+  - server-side
+  - servers
 translation_of: Learn/Common_questions/set_up_a_local_testing_server
 ---
-<div class="summary">
-<p>この記事では、マシン上に簡単なローカルテストサーバを設定する方法と、その使い方の基本について説明します。</p>
-</div>
+この記事では、マシン上に簡単なローカルテストサーバーを設定する方法と、その使い方の基本について説明します。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td>最初に<a href="/ja/docs/Learn/Common_questions/How_does_the_Internet_work">インターネットの仕組み</a>や <a href="/ja/docs/Learn/Common_questions/What_is_a_web_server">Web サーバについて</a>知っておく必要があります。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>ローカルのテストサーバを設定する方法を学習します。</td>
-  </tr>
- </tbody>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        <a href="/ja/docs/Learn/Common_questions/How_does_the_Internet_work"
+          >インターネットの仕組み</a
+        >および<a href="/ja/docs/Learn/Common_questions/What_is_a_web_server">ウェブサーバーとは何かを</a>知っておく必要があります。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>ローカルのテストサーバーを設定する方法を学習します。</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="ローカルファイルとリモートファイル">ローカルファイルとリモートファイル</h2>
+## ローカルファイルとリモートファイル
 
-<p>ほとんどの学習領域では、ブラウザでサンプルを直接開くだけで済みます。HTML ファイルをダブルクリックするか、ブラウザウィンドウにドラッグ ＆ ドロップするか、ファイル &gt; 開く...を選択して HTML ファイルを選択するなどです。これを達成する方法はたくさんあります。</p>
+ほとんどの学習領域では、ブラウザーでサンプルを直接開くだけで済みます。 HTML ファイルをダブルクリックするか、ブラウザーウィンドウにドラッグ＆ドロップするか、ファイル > 開く...を選択して HTML ファイルを選択するなどです。これを達成する方法はたくさんあります。
 
-<p>Web アドレスのパスが <code>file://</code> で始まり、その後にローカルハードドライブのファイルへのパスが続く場合、ローカルファイルが使用されています。対照的に、GitHub でホストされている例 (または他のリモートサーバの例) を見ると、Web アドレスは <code>http://</code> または <code>https://</code> で始まっており、ファイルが HTTP 経由で受信されたことを示します。</p>
+ウェブアドレスのパスが `file://` で始まり、その後にローカルハードドライブのファイルへのパスが続く場合、ローカルファイルが使用されています。対照的に、 GitHub でホストされている例 (または他のリモートサーバーの例) を見ると、ウェブアドレスは `http://` または `https://` で始まっており、ファイルが HTTP 経由で受信されたことを示します。
 
-<h2 id="ローカルファイルのテストに関する問題">ローカルファイルのテストに関する問題</h2>
+## ローカルファイルのテストに関する問題
 
-<p>一部のサンプルはローカルファイルとして開くと実行されません。これにはさまざまな理由があります。最も可能性が高いのは、</p>
+一部のサンプルはローカルファイルとして開くと実行されません。これにはさまざまな理由があります。最も可能性が高いのは、
 
-<ul>
- <li><strong>それらは非同期リクエストを特徴とします。</strong>一部のブラウザ (Chrome を含む) は、ローカルファイルからサンプルを実行するだけでは非同期リクエストは実行しません (<a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">サーバからのデータの取得</a>を参照)。これはセキュリティ上の制限があるためです (Web セキュリティの詳細については、<a href="/ja/docs/Learn/Server-side/First_steps/Website_security">Web サイトのセキュリティ</a>を参照してください)</li>
- <li><strong>それらはサーバサイドの言語を備えています。</strong>サーバサイドの言語 (PHP や Python など) では、コードを解釈して結果を提供する特別なサーバが必要です</li>
-</ul>
+- **非同期リクエストを特徴としている**。 一部のブラウザー (Chrome を含む) は、ローカルファイルからサンプルを実行するだけでは非同期リクエストは実行しません ([サーバーからのデータの取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)を参照)。これはセキュリティ上の制限があるためです (ウェブセキュリティの詳細については、[ウェブサイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を参照してください)
+- **サーバー側の言語を使用している**。 サーバー側の言語 (PHP や Python など) では、コードを解釈して結果を提供する特別なサーバーが必要です。
+- **他のファイルをインクルードしている**。 ブラウザーは通常、`file://` スキーマを使用してリソースを読み込むリクエストをオリジン間リクエストとして扱います。
+  そのため、他のローカルファイルを入れることができるローカルファイルを読み込むと、 {{Glossary("CORS")}} エラーが発生することがあります。
 
-<h2 id="シンプルなローカル_HTTP_サーバの実行">シンプルなローカル HTTP サーバの実行</h2>
+## シンプルなローカル HTTP サーバーの実行
 
-<p>非同期リクエストの問題を回避するには、ローカル Web サーバを介して実行することによって、そのようなサンプルをテストする必要があります。私たちの目的のためにこれを行う最も簡単な方法の1つは、Python の <code>SimpleHTTPServer</code> モジュールを使うことです。</p>
+非同期リクエストの問題を回避するには、ローカルウェブサーバーを介して実行することによって、そのようなサンプルをテストする必要があります。
+私たちの目的のためにこれを行う最も簡単な方法の 1 つは、 Python の `http.server` モジュールを使用することです。
 
-<p>これをするためには：</p>
+> **Note:** 古いバージョンの Python (バージョン 2.7 まで) では、`SimpleHTTPServer` という名前の似たようなモジュールが提供されていました。Python 2.x を使用している場合、`http.server` の使用をすべて `SimpleHTTPServer` に置き換えることで、このガイドを実行することができます。しかし、最新バージョンの Python を使用することをお勧めします。
 
-<ol>
- <li>
-  <p>Python をインストールします。Linux または Mac OS X を使用している場合は、既にシステム上で使用可能になっているはずです。Windows ユーザの方は、Python ホームページからインストーラを入手し、インストーラの指示に従ってインストールすることができます：</p>
+このためには次のようにします。
 
-  <ul>
-   <li><a href="https://www.python.org/">python.org</a> に進みます</li>
-   <li>ダウンロードセクションの下で、Python "3.xxx" のリンクをクリックします</li>
-   <li>ページ下部の Windows x86 実行可能インストーラを選択してダウンロードします</li>
-   <li>ダウンロードしたら、それを実行します</li>
-   <li>インストーラの最初のページで、"Add Python 3.xxx to PATH" チェックボックスをオンにします</li>
-   <li>[インストール]をクリックし、インストールが完了したら[閉じる]をクリックします</li>
-  </ul>
- </li>
- <li>
-  <p>コマンドプロンプト (Windows)/ターミナル (OS X/Linux) を開きます。Python がインストールされていることを確認するには、次のコマンドを入力します</p>
+1. Python をインストールします。 Linux または Mac OS X を使用している場合は、既にシステム上で使用可能になっているはずです。 Windows ユーザーの方は、 Python ホームページからインストーラーを入手し、インストーラーの指示に従ってインストールすることができます。
 
-  <pre class="brush: bash">python -V</pre>
- </li>
- <li>
-  <p>これによりバージョン番号が返されます。OK の場合は、<code>cd</code> コマンドを使用してサンプルが入っているディレクトリに移動します</p>
+    - [python.org](https://www.python.org/) に進みます
+    - ダウンロードセクションの下で、 Python "3.xxx" のリンクをクリックします
+    - ページ下部の  _Windows Installer_ を選択してダウンロードします
+    - ダウンロードしたら、実行します
+    - インストーラーの最初のページで、 "Add Python 3.xxx to PATH" チェックボックスをオンにします
+    - [インストール]をクリックし、インストールが完了したら[閉じる]をクリックします
 
-  <pre class="brush: bash"># include the directory name to enter it, for example
-cd Desktop
-# use two dots to jump up one directory level if you need to
-cd ..</pre>
- </li>
- <li>
-  <p>ディレクトリの中でサーバを起動するコマンドを入力します</p>
+2. コマンドプロンプト (Windows)/ターミナル (OS X/Linux) を開きます。 Python がインストールされていることを確認するには、次のコマンドを入力してください。
 
-  <pre class="brush: bash"># If Python version returned above is 3.X
-python -m http.server
-# If Python version returned above is 2.X
-python -m <code>SimpleHTTPServer</code></pre>
- </li>
- <li>
-  <p>デフォルトでは、これはローカル Web サーバ上のディレクトリの内容を 8000 番ポート上で実行します。このサーバにアクセスするには、Web ブラウザで <code>localhost:8000</code> のURL に移動します。ここにディレクトリの内容が表示されるので、実行する HTML ファイルをクリックします</p>
- </li>
-</ol>
+    ```bash
+    python -V
+    # If the above fails, try:
+    python3 -V
+    # Or, if the "py" command is available, try:
+    py -V
+    ```
 
-<div class="note">
-<p><strong>メモ</strong>: すでに 8000 番ポートで何かが稼働している場合は、server コマンドを実行して別のポート番号を選択することができます。例えば <code>python3 -m http.server 7800</code> (Python 3.x) または <code>python -m SimpleHTTPServer 7800</code> (Python 2.x) です。これで <code>localhost:7800</code> でコンテンツにアクセスできます。</p>
-</div>
+3. これによりバージョン番号が返されます。 OK の場合は、`cd` コマンドを使用してサンプルが入っているディレクトリーに移動します
 
-<h2 id="サーバサイドの言語をローカルで実行する">サーバサイドの言語をローカルで実行する</h2>
+    ```bash
+    # include the directory name to enter it, for example
+    cd Desktop
+    # use two dots to jump up one directory level if you need to
+    cd ..
+    ```
 
-<p>Python の SimpleHTTPServer (python 2.0) http.server (python 3.0) モジュールは便利ですが、Python、PHP、JavaScript などの言語で書かれたコードの実行方法はわかりません。これを処理するには、必要なことがあります。必要なのは、実行しようとしているサーバサイドの言語に依存します。いくつかの例があります：</p>
+4. そのディレクトリーにあるサーバーを起動するコマンドを入力します。
 
-<ul>
- <li>Python のサーバサイドコードを実行するには、Python Web フレームワークを使用する必要があります。Django フレームワークの使い方については、<a href="/ja/docs/Learn/Server-side/Django">Django Web Framework (Python)</a> を参照してください。<a href="http://flask.pocoo.org/">Flask</a> はまた、Django の代わりとしても良い (わずかに重量の少ない) 代替品です。これを実行するには <a href="/ja/docs/Learn/Server-side/Django/development_environment#Installing_Python_3">Python/PIP をインストール</a>し、 <code>pip3 install flask</code> を使用して Flask をインストールする必要があります。この段階で、<code>python3 python-example.py</code> を使ってPython Flaskのサンプルを実行し、ブラウザの <code>localhost:5000</code> に遷移することができます</li>
- <li>Node.js (JavaScript) サーバサイドコードを実行するには、生のノードまたはその上に構築されたフレームワークを使用する必要があります。Express は良い選択です - <a href="/ja/docs/Learn/Server-side/Express_Nodejs">Express Web Framework (Node.js/JavaScript)</a> を参照してください</li>
- <li>PHP サーバサイドコードを実行するには、<a href="http://php.net/manual/ja/features.commandline.webserver.php">PHP の組み込み開発サーバ</a>を起動します</li>
-</ul>
+    ```bash
+    # If Python version returned above is 3.X
+    # On Windows, try "python -m http.server" or "py -3 -m http.server"
+    python3 -m http.server
+    # If Python version returned above is 2.X
+    python -m SimpleHTTPServer
+    ```
 
-<pre class="shellcode">$ cd path/to/your/php/code
-$ php -S localhost:8000</pre>
+5. 既定では、これはローカルウェブサーバー上のディレクトリーの内容を 8000 番ポート上で実行します。このサーバーにアクセスするには、ウェブブラウザーで `localhost:8000` の URL に移動します。ここにディレクトリーの内容が表示されるので、実行する HTML ファイルをクリックしてください。
+
+> **Note:** すでに 8000 番ポートで何かが稼働している場合は、 server コマンドを実行して別のポート番号を選択することができます。例えば `python3 -m http.server 7800` (Python 3.x) または `python -m SimpleHTTPServer 7800` (Python 2.x) です。これで `localhost:7800` でコンテンツにアクセスできます。
+
+## サーバー側の言語をローカルで実行する
+
+Python の `http.server` （Python 2.0 では `SimpleHTTPServer`）モジュールは便利ですが、単なる静的ファイルサーバーに過ぎません。 Python、PHP、JavaScript などの言語で書かれたコードの実行方法はわかりません。これを処理するには、必要なことがあります。必要なのは、実行しようとしているサーバー側の言語に依存します。いくつかの例があります。
+
+- Python のサーバー側コードを実行するには、Python ウェブフレームワークを使用する必要があります。 Python のウェブフレームワークには、 Django（[ガイド](/ja/docs/Learn/Server-side/Django)が利用できます）、[Flask](https://flask.palletsprojects.com/)、[Pyramid](https://trypyramid.com) など人気のものが多く存在します。
+- Node.js (JavaScript) サーバー側コードを実行するには、生のノードまたはその上に構築されたフレームワークを使用する必要があります。 Express は良い選択です - [Express Web Framework (Node.js/JavaScript)](/ja/docs/Learn/Server-side/Express_Nodejs) を参照してください
+- PHP サーバー側コードを実行するには、[PHP の組み込み開発サーバー](http://php.net/manual/ja/features.commandline.webserver.php)を起動してください。
+
+  ```bash
+  $ cd path/to/your/php/code
+  $ php -S localhost:8000
+  ```
