@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/Method_definitions
 
 <div>A partir de ECMAScript 2015 (ES6), se introdujo una sintaxis abreviada para la definición de métodos en inicializadores de objetos. Es una forma abreviada para la asignación de una función al nombre del método.</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/Method_definitions
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>La sintaxis abreviada es similar a la introducida en ECMAScript 5 con <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> y <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>.</p>
+<p>La sintaxis abreviada es similar a la introducida en ECMAScript 5 con <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> y <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>.</p>
 
 <p>Dado el siguiente código:</p>
 
@@ -39,7 +39,7 @@ original_slug: Web/JavaScript/Referencia/Funciones/Method_definitions
 
 <pre class="brush: js">var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };</pre>
 
 <div class="note">
@@ -129,12 +129,12 @@ console.log(bar.foo2()); // 2</pre>
   <tr>
    <td>{{SpecName('ES7', '#sec-method-definitions', 'Method definitions')}}</td>
    <td>{{Spec2('ES7')}}</td>
-   <td>Cambiado el que los métodos generadores no deban tener una  trampa [[Construct]] y deban fallar cuando se usen con <code>new</code>.</td>
+   <td>Cambiado el que los métodos generadores no deban tener una  trampa [[Construct]] y deban fallar cuando se usen con <code>new</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -146,7 +146,7 @@ console.log(bar.foo2()); // 2</pre>
 <h2 id="Notas_específicas_para_SpiderMonkey">Notas específicas para SpiderMonkey</h2>
 
 <ul>
- <li>Anteriormente a SpiderMonkey 38 {{geckoRelease(38)}},  "<code>get</code>" y "<code>set</code>" eran nombres no válidos para métodos generadores. Esto ha sido corregido en {{bug(1073809)}}.</li>
+ <li>Anteriormente a SpiderMonkey 38 {{geckoRelease(38)}},  "<code>get</code>" y "<code>set</code>" eran nombres no válidos para métodos generadores. Esto ha sido corregido en {{bug(1073809)}}.</li>
  <li>Anteriormente a SpiderMonkey 41 {{geckoRelease(41)}}, las llaves no eran requeridas en las definiciones de métodos. Estas son requeridas de ahora en adelante conforme a la especificación ES6 y su omisión arrojará un {{jsxref("SyntaxError")}} en esta versión y posteriores ({{bug(1150855)}}).
   <pre class="brush: js example-bad">var o = {x() 12}; // SyntaxError</pre>
  </li>

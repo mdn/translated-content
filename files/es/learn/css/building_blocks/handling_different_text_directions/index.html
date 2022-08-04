@@ -69,41 +69,41 @@ original_slug: Learn/CSS/Building_blocks/Manejando_diferentes_direcciones_de_tex
 
 <h3 id="Dirección">Dirección</h3>
 
-<p>Además del modo de escritura también tenemos la dirección del texto. Como se mencionó antes, algunos idiomas como el Árabe se escriben horizontalmente, de derecha a izquierda. Esto no es algo que usarías en un sentido creativo. Si tu simplemente quieres alinear algún elemento a la derecha, existen otras formas de hacerlo. Sin embargo es importante entender esto como parte de la naturaleza del CSS. La web no es solo para lenguajes que son escritos de izquierda a derecha!</p>
+<p>Además del modo de escritura también tenemos la dirección del texto. Como se mencionó antes, algunos idiomas como el Árabe se escriben horizontalmente, de derecha a izquierda. Esto no es algo que usarías en un sentido creativo. Si tu simplemente quieres alinear algún elemento a la derecha, existen otras formas de hacerlo. Sin embargo es importante entender esto como parte de la naturaleza del CSS. La web no es solo para lenguajes que son escritos de izquierda a derecha!</p>
 
-<p>Debido al hecho de que el modo de escritura y la dirección del texto pueden cambiar, los nuevos métodos de diseño CSS no toman como referencia la izquierda y derecha, ni la parte superior e inferior. En su lugar, hablarán de inicio y fin junto con esta idea de en línea y bloque. No te preocupes mucho por eso en este momento, pero ten en cuenta estas ideas a medida que empiezas a mirar el diseño de una página web; va a ser de gran ayuda en tu entendimiento de CSS.</p>
+<p>Debido al hecho de que el modo de escritura y la dirección del texto pueden cambiar, los nuevos métodos de diseño CSS no toman como referencia la izquierda y derecha, ni la parte superior e inferior. En su lugar, hablarán de inicio y fin junto con esta idea de en línea y bloque. No te preocupes mucho por eso en este momento, pero ten en cuenta estas ideas a medida que empiezas a mirar el diseño de una página web; va a ser de gran ayuda en tu entendimiento de CSS.</p>
 
 <h2 id="Valores_y_propiedades_lógicas">Valores y propiedades lógicas</h2>
 
-<p>La razón de hablar acerca de modos de escritura y dirección en este punto en tu aprendizaje, es por el hecho de que ya vimos muchas de estas propiedades que están atadas a las dimensiones físicas de la pantalla, y tienen más sentido cuando está en un modo de escritura horizontal.</p>
+<p>La razón de hablar acerca de modos de escritura y dirección en este punto en tu aprendizaje, es por el hecho de que ya vimos muchas de estas propiedades que están atadas a las dimensiones físicas de la pantalla, y tienen más sentido cuando está en un modo de escritura horizontal.</p>
 
-<p>Vamos a echarle un vistzo a nuestras dos cajas de nuevo, una con el modo escritura <code>horizontal-tb</code> y otro con <code>vertical-rl</code>. Le hemos dado a estas dos cajas un {{cssxref("width")}}. Puedes ver que cuando la caja está en el modo de escritura vertical, aún tiene una anchura, y esto está causando que el texto se desborde.</p>
+<p>Vamos a echarle un vistzo a nuestras dos cajas de nuevo, una con el modo escritura <code>horizontal-tb</code> y otro con <code>vertical-rl</code>. Le hemos dado a estas dos cajas un {{cssxref("width")}}. Puedes ver que cuando la caja está en el modo de escritura vertical, aún tiene una anchura, y esto está causando que el texto se desborde.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}</p>
 
-<p>Lo que nosotros realmente queremos en este escenario, es esencialmente intercambiar altura y anchura junto con el modo de escritura. Cuando estamos en el modo de escritura vertical, queremos que la caja se expanda en la dimensión del bloque así como lo hace en el modo horizontal.</p>
+<p>Lo que nosotros realmente queremos en este escenario, es esencialmente intercambiar altura y anchura junto con el modo de escritura. Cuando estamos en el modo de escritura vertical, queremos que la caja se expanda en la dimensión del bloque así como lo hace en el modo horizontal.</p>
 
-<p>Para hacerlo más fácil, CSS ha desarrollado recientemente un conjunto de propiedades asignadas. Estas esencialmente reemplazan las propiedades físicas como <code>width </code>and <code>height</code>, con versiones <strong>lógicas</strong> o <strong>relativas al flujo</strong>.</p>
+<p>Para hacerlo más fácil, CSS ha desarrollado recientemente un conjunto de propiedades asignadas. Estas esencialmente reemplazan las propiedades físicas como <code>width </code>and <code>height</code>, con versiones <strong>lógicas</strong> o <strong>relativas al flujo</strong>.</p>
 
-<p>La propiedad asignada a <code>width</code> cuando está en el modo de escritura horizontal se llama {{cssxref("inline-size")}}, se refiere al tamaño en la dimensión inline. La propiedad para <code>height </code>se llama {{cssxref("block-size")}} y es el tamaño en la dimensión de bloque. Puedes ver como funciona en el ejemplo de abajo, donde reemplazamos <code>width</code> con <code>inline-size</code>.</p>
+<p>La propiedad asignada a <code>width</code> cuando está en el modo de escritura horizontal se llama {{cssxref("inline-size")}}, se refiere al tamaño en la dimensión inline. La propiedad para <code>height </code>se llama {{cssxref("block-size")}} y es el tamaño en la dimensión de bloque. Puedes ver como funciona en el ejemplo de abajo, donde reemplazamos <code>width</code> con <code>inline-size</code>.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1200)}}</p>
 
 <h3 id="Propiedades_lógicas_margin_border_y_padding">Propiedades lógicas <code>margin</code>, <code>border</code> y <code>padding</code></h3>
 
-<p>En las últimas dos lecciones aprendimos acerca del modelo de cajas con CSS, y los bordes CSS. En las propiedades margin, border y padding vas a encontrar varias instancias de propiedades físicas, por ejemplo {{cssxref("margin-top")}}, {{cssxref("padding-left")}}, y {{cssxref("border-bottom")}}. Del mismo modo que tenemos asignaciones para ancho y alto, hay asignaciones para estas propiedades.</p>
+<p>En las últimas dos lecciones aprendimos acerca del modelo de cajas con CSS, y los bordes CSS. En las propiedades margin, border y padding vas a encontrar varias instancias de propiedades físicas, por ejemplo {{cssxref("margin-top")}}, {{cssxref("padding-left")}}, y {{cssxref("border-bottom")}}. Del mismo modo que tenemos asignaciones para ancho y alto, hay asignaciones para estas propiedades.</p>
 
-<p>La propiedad <code>margin-top</code> está asignada a {{cssxref("margin-block-start")}}, esto siempre se va a referir al margen al inicio de la dimensión del bloque. </p>
+<p>La propiedad <code>margin-top</code> está asignada a {{cssxref("margin-block-start")}}, esto siempre se va a referir al margen al inicio de la dimensión del bloque. </p>
 
-<p>La propiedad {{cssxref("padding-left")}} se asigna a {{cssxref("padding-inline-start")}}, el padding que se aplica al inicio de la dirección inline. Aquí será donde las oraciones comienzan en ese modo de escritura. La propiedad {{cssxref("border-bottom")}} se asigna a {{cssxref("border-block-end")}}, que es el borde del final de la dimensión del bloque.</p>
+<p>La propiedad {{cssxref("padding-left")}} se asigna a {{cssxref("padding-inline-start")}}, el padding que se aplica al inicio de la dirección inline. Aquí será donde las oraciones comienzan en ese modo de escritura. La propiedad {{cssxref("border-bottom")}} se asigna a {{cssxref("border-block-end")}}, que es el borde del final de la dimensión del bloque.</p>
 
 <p>Puedes ver una comparación entre las propiedades físicas y lógicas a continuación.</p>
 
 
 
-<p><strong>Si cambias el modo de escritura de las cajas asignando a la propiedad <code>writing-mode</code> en <code>.box</code> a <code>vertical-rl</code>, vas a ver como las propiedades físicas se quedan ligadas a sus direcciones físicas, mientras que las propiedades lógicas cambian con el modo de escritura.</strong></p>
+<p><strong>Si cambias el modo de escritura de las cajas asignando a la propiedad <code>writing-mode</code> en <code>.box</code> a <code>vertical-rl</code>, vas a ver como las propiedades físicas se quedan ligadas a sus direcciones físicas, mientras que las propiedades lógicas cambian con el modo de escritura.</strong></p>
 
-<p><strong>También puedes ver que el </strong><strong>{{htmlelement("h2")}} tiene  un <code>border-bottom</code> negro. ¿Puedes averiguar como hacer que el borde inferior siempre esté debajo del texto en ambos modos de escritura?</strong></p>
+<p><strong>También puedes ver que el </strong><strong>{{htmlelement("h2")}} tiene  un <code>border-bottom</code> negro. ¿Puedes averiguar como hacer que el borde inferior siempre esté debajo del texto en ambos modos de escritura?</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}</p>
 
@@ -111,27 +111,27 @@ original_slug: Learn/CSS/Building_blocks/Manejando_diferentes_direcciones_de_tex
 
 <h3 id="Valores_lógicos">Valores lógicos</h3>
 
-<p>Hasta ahora hemos examinado los nombres de las propiedades lógicas. Existen también algunas propiedades que toman valores físicos de <code>top</code>, <code>right</code>, <code>bottom</code>, y <code>left</code>. Estos valores también tienen asignaciones a valores lógicos: <code>block-start</code>, <code>inline-end</code>, <code>block-end</code>, y <code>inline-start</code>.</p>
+<p>Hasta ahora hemos examinado los nombres de las propiedades lógicas. Existen también algunas propiedades que toman valores físicos de <code>top</code>, <code>right</code>, <code>bottom</code>, y <code>left</code>. Estos valores también tienen asignaciones a valores lógicos: <code>block-start</code>, <code>inline-end</code>, <code>block-end</code>, y <code>inline-start</code>.</p>
 
-<p>Por ejemplo, puedes hacer que una imagen flote a la izquierda para hacer que el texto se ajuste alrededor de la imagen. Puedes reemplazar <code>left</code> con <code>inline-start</code> como se muestra en el ejemplo a continuación.</p>
+<p>Por ejemplo, puedes hacer que una imagen flote a la izquierda para hacer que el texto se ajuste alrededor de la imagen. Puedes reemplazar <code>left</code> con <code>inline-start</code> como se muestra en el ejemplo a continuación.</p>
 
-<p><strong>Cambia el modo de escritura en este ejemplo a <code>vertical-rl</code> para ver que sucede con la imagen. Cambia <code>inline-start</code> por <code>inline-end</code> para cambiar el modo en que flota.</strong></p>
+<p><strong>Cambia el modo de escritura en este ejemplo a <code>vertical-rl</code> para ver que sucede con la imagen. Cambia <code>inline-start</code> por <code>inline-end</code> para cambiar el modo en que flota.</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1200)}}</p>
 
-<p>Aquí también estamos usando valores lógicos de margen para asegurar que el margen está en el sitio correcto sin importar que modo de escritura es.</p>
+<p>Aquí también estamos usando valores lógicos de margen para asegurar que el margen está en el sitio correcto sin importar que modo de escritura es.</p>
 
 <div class="blockIndicator note">
-<p>Actualmente, solo Firefox soporta valores relativos de flujo para <code>float</code>. Si estás usando <strong>Google Chrome </strong>o <strong>Microsoft Edge</strong>, deberías ver que la imagen no flota.</p>
+<p>Actualmente, solo Firefox soporta valores relativos de flujo para <code>float</code>. Si estás usando <strong>Google Chrome </strong>o <strong>Microsoft Edge</strong>, deberías ver que la imagen no flota.</p>
 </div>
 
 <h3 id="¿Debería_usar_propiedades_físicas_o_lógicas">¿Debería usar propiedades físicas o lógicas?</h3>
 
-<p>Las propiedades lógicas y los valores son más recientes que su equivalente físico, y por lo tanto se han implementado recientemente en los navegadores. Puedes revisar cualquier página de propiedades en MDN para ver hasta donde llega el soporte del navegador. Si no estás usando multiples modos de escritura, entonces, por ahora, deberías preferir usar las versiones físicas. Sin embargo, en última instancia, esperamos que la gente va a pasar a las versiones lógicas para la mayoría de las cosas, ya que tienen mucho sentido una vez que comienzas a tratar también con métodos de diseño como Flexbox y Grid.</p>
+<p>Las propiedades lógicas y los valores son más recientes que su equivalente físico, y por lo tanto se han implementado recientemente en los navegadores. Puedes revisar cualquier página de propiedades en MDN para ver hasta donde llega el soporte del navegador. Si no estás usando multiples modos de escritura, entonces, por ahora, deberías preferir usar las versiones físicas. Sin embargo, en última instancia, esperamos que la gente va a pasar a las versiones lógicas para la mayoría de las cosas, ya que tienen mucho sentido una vez que comienzas a tratar también con métodos de diseño como Flexbox y Grid.</p>
 
 <h2 id="¡Prueba_tus_habilidades!">¡Prueba tus habilidades!</h2>
 
-<p>Tenemos mucho terreno cubierto en este artículo, pero puedes recordad la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que has retenido esta información antes de seguir adelante: <a href="/en-US/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks">Prueba tus habilidades: modos de escritura.</a></p>
+<p>Tenemos mucho terreno cubierto en este artículo, pero puedes recordad la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que has retenido esta información antes de seguir adelante: <a href="/en-US/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks">Prueba tus habilidades: modos de escritura.</a></p>
 
 <h2 id="Resumen">Resumen</h2>
 

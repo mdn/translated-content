@@ -13,13 +13,13 @@ translation_of: Web/API/Element/innerHTML
 
 <h2 id="Summary" name="Summary">Resumen</h2>
 
-<p>La propiedad <strong><code>Element.innerHTML</code></strong> devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.</p>
+<p>La propiedad <strong><code>Element.innerHTML</code></strong> devuelve o establece la sintaxis HTML describiendo los descendientes del elemento.</p>
 
-<p>Al establecerse se reemplaza la sintaxis HTML del elemento por la nueva.</p>
+<p>Al establecerse se reemplaza la sintaxis HTML del elemento por la nueva.</p>
 
-<div class="note"><strong>Nota: </strong>Si un nodo tiene un texto secundario que incluye los caracteres <code>(&amp;), (&lt;),</code> o <code>(&gt;)</code>, <code>innerHTML</code> devuelve estos caracteres como &amp;amp, &amp;lt y &amp;gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.</div>
+<div class="note"><strong>Nota: </strong>Si un nodo tiene un texto secundario que incluye los caracteres <code>(&amp;), (&lt;),</code> o <code>(&gt;)</code>, <code>innerHTML</code> devuelve estos caracteres como &amp;amp, &amp;lt y &amp;gt respectivamente. Use {{ domxref("Node.textContent") }} para conseguir una copia correcta del contenido de estos nodos de texto.</div>
 
-<p>Para <strong>insertar el código HTML</strong> en el documento en lugar de cambiar el contenido de un elemento, use el método <a href="https://developer.mozilla.org/es/docs/Web/API/Element/insertAdjacentHTML">insertAdjacentHTML().</a></p>
+<p>Para <strong>insertar el código HTML</strong> en el documento en lugar de cambiar el contenido de un elemento, use el método <a href="https://developer.mozilla.org/es/docs/Web/API/Element/insertAdjacentHTML">insertAdjacentHTML().</a></p>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
@@ -29,7 +29,7 @@ translation_of: Web/API/Element/innerHTML
 
 <h3 class="brush: js" id="Valor">Valor</h3>
 
-<p>La variable constante <code>content</code> contiene un <a href="https://developer.mozilla.org/es/docs/Web/API/DOMString">DOMString</a> que contiene el código HTML serializado describiendo todos los descendientes de <code>element</code>. Cuando se establece el valor de innerHTML, <strong>se eliminan todos los descendientes de <code>element</code></strong>, analiza la cadena <code>htmString</code> y asigna los nodos resultantes como descendientes de <code>element</code>.</p>
+<p>La variable constante <code>content</code> contiene un <a href="https://developer.mozilla.org/es/docs/Web/API/DOMString">DOMString</a> que contiene el código HTML serializado describiendo todos los descendientes de <code>element</code>. Cuando se establece el valor de innerHTML, <strong>se eliminan todos los descendientes de <code>element</code></strong>, analiza la cadena <code>htmString</code> y asigna los nodos resultantes como descendientes de <code>element</code>.</p>
 
 <h3 id="Excepciones">Excepciones</h3>
 
@@ -37,16 +37,16 @@ translation_of: Web/API/Element/innerHTML
  <dt><code>SyntaxError</code></dt>
  <dd>Se intentó establecer el valor de <code>innerHTML</code> utilizando una cadena que no está formada correctamente en HTML</dd>
  <dt><code>NoModificationAllowedError</code></dt>
- <dd>Se intentó insertar el código HTML en un nodo cuyo elemento primario es <a href="https://developer.mozilla.org/es/docs/Web/API/Document">document</a>.</dd>
+ <dd>Se intentó insertar el código HTML en un nodo cuyo elemento primario es <a href="https://developer.mozilla.org/es/docs/Web/API/Document">document</a>.</dd>
 </dl>
 
 <h2 id="Notes" name="Notes">Notas de uso</h2>
 
-<p>La propiedad <code>innerHTML</code> de muchos tipos de elementos—incluyendo {{ HTMLElement("body") }} o {{ HTMLElement("html") }}—puede ser devuelta o establecida. Esta propiedad se puede usar para ver el código HTML de la página actual, incluida la que haya sido modificada dinámicamente:</p>
+<p>La propiedad <code>innerHTML</code> de muchos tipos de elementos—incluyendo {{ HTMLElement("body") }} o {{ HTMLElement("html") }}—puede ser devuelta o establecida. Esta propiedad se puede usar para ver el código HTML de la página actual, incluida la que haya sido modificada dinámicamente:</p>
 
-<h3 id="Devolver_la_sintaxis_HTML_de_un_elemento">Devolver la sintaxis HTML de un elemento</h3>
+<h3 id="Devolver_la_sintaxis_HTML_de_un_elemento">Devolver la sintaxis HTML de un elemento</h3>
 
-<p>Devolver el valor de <code>innerHTML</code><font><font>hace que el agente de usuario serialice el fragmento HTML compuesto por los descendientes del elemento. </font><font>La cadena resultante es devuelta.</font></font></p>
+<p>Devolver el valor de <code>innerHTML</code><font><font>hace que el agente de usuario serialice el fragmento HTML compuesto por los descendientes del elemento. </font><font>La cadena resultante es devuelta.</font></font></p>
 
 <pre><em>const content</em><code> = </code><em>element</em>.innerHTML;
 </pre>
@@ -68,12 +68,12 @@ translation_of: Web/API/Element/innerHTML
 </pre>
 
 <div class="note">
-<p>Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de <strong>texto multilinea (elemento <code>textarea</code>)</strong>, Internet Explorer <font><font>cambiará el valor de la propiedad <code>innerHTML</code> del </font></font><strong>elemento <code>textarea</code></strong><font><font>, mientras que los navegadores Gecko no lo hacen.</font></font></p>
+<p>Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de <strong>texto multilinea (elemento <code>textarea</code>)</strong>, Internet Explorer <font><font>cambiará el valor de la propiedad <code>innerHTML</code> del </font></font><strong>elemento <code>textarea</code></strong><font><font>, mientras que los navegadores Gecko no lo hacen.</font></font></p>
 </div>
 
 <h3 id="Consideración_de_seguridad">Consideración de seguridad</h3>
 
-<p>No es extraño que <code>innerHTML</code> sea usado para  introducir texto en una página web. Esto añade un riesgo de seguridad.</p>
+<p>No es extraño que <code>innerHTML</code> sea usado para  introducir texto en una página web. Esto añade un riesgo de seguridad.</p>
 
 <pre class="brush: js">//ejemplo 1
 var name = "Juan";
@@ -107,7 +107,7 @@ el.innerHTML = name; // con peligro, la alerta ahora si es mostrada</pre>
   &lt;body&gt;
     &lt;div id="txt"&gt;
       &lt;p&gt;primer parrafo hijo de div id="txt"&lt;/p&gt;
-      &lt;p&gt;segundo parrafo hijo de id="txt" txt&lt;/p&gt;
+      &lt;p&gt;segundo parrafo hijo de id="txt" txt&lt;/p&gt;
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
@@ -135,17 +135,17 @@ La siguiente cadena (string) se muestra en la ventana de la consola:
 </ul>
 
 <div class="s3gt_translate_tooltip_mini_box" id="s3gt_translate_tooltip_mini" style="background: initial !important; border: initial !important; border-radius: initial !important; border-collapse: initial !important; direction: ltr !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; max-width: initial !important; min-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; text-align: initial !important; text-shadow: initial !important; width: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 163px; top: 957px; opacity: 0.85;">
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_logo" title="Traducir texto seleccionado"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_logo" title="Traducir texto seleccionado"> </div>
 
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_sound" title="Escuchar"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_sound" title="Escuchar"> </div>
 
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_copy" title="Copiar texto al Portapapeles"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_copy" title="Copiar texto al Portapapeles"> </div>
 </div>
 
 <div class="s3gt_translate_tooltip_mini_box" id="s3gt_translate_tooltip_mini" style="background: initial !important; border: initial !important; border-radius: initial !important; border-collapse: initial !important; direction: ltr !important; font-weight: initial !important; height: initial !important; letter-spacing: initial !important; max-width: initial !important; min-height: initial !important; margin: auto !important; outline: initial !important; padding: initial !important; position: absolute; text-align: initial !important; text-shadow: initial !important; width: initial !important; display: initial !important; color: inherit !important; font-size: 13px !important; font-family: X-LocaleSpecific, sans-serif, Tahoma, Helvetica !important; line-height: 13px !important; vertical-align: top !important; white-space: inherit !important; left: 503px; top: 778px; opacity: 0.15;">
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_logo" title="Traducir texto seleccionado"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_logo" title="Traducir texto seleccionado"> </div>
 
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_sound" title="Escuchar"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_sound" title="Escuchar"> </div>
 
-<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_copy" title="Copiar texto al Portapapeles"> </div>
+<div class="s3gt_translate_tooltip_mini" id="s3gt_translate_tooltip_mini_copy" title="Copiar texto al Portapapeles"> </div>
 </div>

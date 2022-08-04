@@ -133,7 +133,7 @@ original_slug: Web/API/WebRTC_API/Taking_still_photos
       streaming = true;
     }
   }, false);</pre>
-<p>Nos subscribimos al evento <code>canplay </code>del video y leemos sus dimensiones utilizando <code>videoHeight</code> y <code>videoWidth</code>. Estas no están disponible realmente hasta que el evento sea iniciado. Establecemos <code>streaming</code> a verdadero (true) para que compruebe esto solo una vez, mientras que el evento <code>canplay</code>  siga en actividad.</p>
+<p>Nos subscribimos al evento <code>canplay </code>del video y leemos sus dimensiones utilizando <code>videoHeight</code> y <code>videoWidth</code>. Estas no están disponible realmente hasta que el evento sea iniciado. Establecemos <code>streaming</code> a verdadero (true) para que compruebe esto solo una vez, mientras que el evento <code>canplay</code>  siga en actividad.</p>
 <p>Esto es todo lo que se necesita para que inicie el video.</p>
 <h3 id="Capturar_una_imagen">Capturar una imagen</h3>
 <p>Ahora necesitamos capturar una imagen utilizando un lienzo (canvas). Asignamos un manejador de eventos al botón de inicio para llamar a la función de <code>takepicture</code>.</p>

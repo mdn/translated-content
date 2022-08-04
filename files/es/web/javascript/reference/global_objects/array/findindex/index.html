@@ -14,11 +14,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>findIndex()</strong></code> devuelve el <strong>índice</strong> del <strong>primer elemento</strong> de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.</p>
+<p>El método <code><strong>findIndex()</strong></code> devuelve el <strong>índice</strong> del <strong>primer elemento</strong> de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}</div>
 
-<p>Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el <strong>valor </strong>de un elemento encontrado en el array en lugar de su índice.</p>
+<p>Vea también el método {{jsxref("Array.find", "find()")}}, que devuelve el <strong>valor </strong>de un elemento encontrado en el array en lugar de su índice.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -32,19 +32,19 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
  <dd>
  <p>Función a ejecutar en cada uno de los valores del array hasta que devuelve <code>true</code>, indicando que el elemento que la cumple fue encontrado.</p>
 
- <p>Recibe tres argumentos:</p>
+ <p>Recibe tres argumentos:</p>
 
  <dl>
   <dt><code><var>element</var></code></dt>
   <dd>El elemento actual siendo procesado en el array.</dd>
   <dt><code><var>index</var></code> {{optional_inline}}</dt>
-  <dd>El índice del elemento actual que está siendo procesado en el array.</dd>
-  <dt><code><var>array</var></code> {{optional_inline}}</dt>
+  <dd>El índice del elemento actual que está siendo procesado en el array.</dd>
+  <dt><code><var>array</var></code> {{optional_inline}}</dt>
   <dd>El array <code>findIndex()</code> de donde fue llamado.</dd>
  </dl>
  </dd>
  <dt><code><var>thisArg</var></code> {{optional_inline}}</dt>
- <dd>Objeto opcional para usar como <code>this</code> cuando se ejecuta el <code><var>callback</var></code>.</dd>
+ <dd>Objeto opcional para usar como <code>this</code> cuando se ejecuta el <code><var>callback</var></code>.</dd>
 </dl>
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
@@ -53,12 +53,12 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>El método <code>findIndex()</code> ejecuta la función de <em><code>callback</code></em> una vez por cada índice del array hasta que encuentre uno donde <em><code>callback</code></em> devuelva un valor verdadero (eso es, un valor que <a href="/en-US/docs/Glossary/Type_Conversion">fuerza</a> un <code>true</code>).</p>
+<p>El método <code>findIndex()</code> ejecuta la función de <em><code>callback</code></em> una vez por cada índice del array hasta que encuentre uno donde <em><code>callback</code></em> devuelva un valor verdadero (eso es, un valor que <a href="/en-US/docs/Glossary/Type_Conversion">fuerza</a> un <code>true</code>).</p>
 
-<p>Si dicho elemento es encontrado, <code>findIndex()</code> inmediatamente devuelve el índice del elemento. Si la función <em><code>callback</code></em> nunca devuelve un valor verdadero (o el tamaño del array es 0), <code>findIndex</code> devuelve <code>-1</code>.</p>
+<p>Si dicho elemento es encontrado, <code>findIndex()</code> inmediatamente devuelve el índice del elemento. Si la función <em><code>callback</code></em> nunca devuelve un valor verdadero (o el tamaño del array es 0), <code>findIndex</code> devuelve <code>-1</code>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Alerta de Edge Case:</strong> A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, <code><var>callback</var></code> se ejecuta incluso en índices sin valores asignados.</p>
+<p><strong>Alerta de Edge Case:</strong> A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, <code><var>callback</var></code> se ejecuta incluso en índices sin valores asignados.</p>
 </div>
 
 <p><em><code>callback</code></em> se invoca con tres argumentos:</p>
@@ -66,12 +66,12 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
 <ol>
  <li>El valor del elemento</li>
  <li>El índice del elemento</li>
- <li>El Array que será recorrido.</li>
+ <li>El Array que será recorrido.</li>
 </ol>
 
-<p>Si el parámetro <code>thisArg</code> es provisto a findIndex, entonces será usado como el this para cada invocación del <code>callback</code>. Si no es provisto, entonces {{jsxref("undefined")}} será utilizado. </p>
+<p>Si el parámetro <code>thisArg</code> es provisto a findIndex, entonces será usado como el this para cada invocación del <code>callback</code>. Si no es provisto, entonces {{jsxref("undefined")}} será utilizado. </p>
 
-<p>El rango de elementos procesados por <code>findIndex()</code> se establece antes de la primera invocación de la función <em><code>callback</code></em>. Los elementos añadidos al array después de que la llamada a <code>findIndex()</code> comience no serán visitados por el <code>callback</code>. Si un elemento existente que no ha sido visitado en el array es modificado por el <em><code>callback</code></em>, el valor pasado al <em><code>callback</code></em> que lo visite será el valor en el momento en que <code>findIndex()</code> visite el índice del elemento.</p>
+<p>El rango de elementos procesados por <code>findIndex()</code> se establece antes de la primera invocación de la función <em><code>callback</code></em>. Los elementos añadidos al array después de que la llamada a <code>findIndex()</code> comience no serán visitados por el <code>callback</code>. Si un elemento existente que no ha sido visitado en el array es modificado por el <em><code>callback</code></em>, el valor pasado al <em><code>callback</code></em> que lo visite será el valor en el momento en que <code>findIndex()</code> visite el índice del elemento.</p>
 
 <p>Los elementos <a href="/es/docs/Web/JavaScript/Referencia/Operadores/delete">eliminados</a> aún son visitados.</p>
 
@@ -87,8 +87,8 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
     if (element % start &lt; 1) {
       return false;
     } else {
-      start++;
-    }
+      start++;
+    }
   }
   return element &gt; 1;
 }
@@ -159,7 +159,7 @@ if (!Array.prototype.findIndex) {
 }
 </pre>
 
-<p>Si necesita soporte para motores de JavaScript obsoletos que no soportan <code><a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty">Object.defineProperty</a></code> es mejor no emplear polyfills para métodos <code>Array.prototype</code>, ya que no puede hacerlos no-enumerables.</p>
+<p>Si necesita soporte para motores de JavaScript obsoletos que no soportan <code><a href="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty">Object.defineProperty</a></code> es mejor no emplear polyfills para métodos <code>Array.prototype</code>, ya que no puede hacerlos no-enumerables.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 

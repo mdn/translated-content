@@ -13,7 +13,7 @@ translation_of: Web/API/Node/childNodes
 <div>{{APIRef("DOM")}}</div>
 </div>
 
-<p>La propiedad de solo lectura <code><strong>Node.childNodes</strong></code>  devuelve una colección de hijos {{domxref("Node","nodes")}} del elemento dado donde el primer nodo hijo es asignado un índice 0.</p>
+<p>La propiedad de solo lectura <code><strong>Node.childNodes</strong></code>  devuelve una colección de hijos {{domxref("Node","nodes")}} del elemento dado donde el primer nodo hijo es asignado un índice 0.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -50,7 +50,7 @@ while (box.firstChild) {
 
 <p>Los items en una colección de nodos son objetos y no cadenas de caracteres. Para obtener los datos de los objetos del nodo, use sus propiedades (ej. <code>elementNodeReference.childNodes[1].nodeName</code> para obtener el nombre, etc.).</p>
 
-<p>El objeto <code>document</code> contiene 2 hijos: la declaración del Doctype y el elemento raíz, generalmente referido como  <code>documentElement</code>. (En documentos (X)HTML  es el elemento <code>HTML</code>)</p>
+<p>El objeto <code>document</code> contiene 2 hijos: la declaración del Doctype y el elemento raíz, generalmente referido como  <code>documentElement</code>. (En documentos (X)HTML  es el elemento <code>HTML</code>)</p>
 
 <p><code>childNodes</code> incluye todos los nodos hijos, incluidos los nodos no elementos, como nodos de tipo textos y comentarios. Para obtener una colección de solo elementos, use {{domxref("ParentNode.children")}}.</p>
 
