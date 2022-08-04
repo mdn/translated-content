@@ -36,7 +36,7 @@ original_slug: Web/HTML/Elemento/a
   </tr>
   <tr>
    <th scope="row">Elementos principales permitidos</th>
-   <td>Cualquier elemento que acepte contenido de párrafo o cualquier elemento que acepte contenido de flujo, sin embargo simpre excluyendo los elementos &lt;a&gt; (de acuerdo con el principio lógico de simetría, si una etiqueta &lt;a&gt; como padre, no puede contener contenido interactivo, entonces el mismo contenido de &lt;a&gt; no puede tener una etiqueta &lt;a&gt; como su padre).</td>
+   <td>Cualquier elemento que acepte contenido de párrafo o cualquier elemento que acepte contenido de flujo, sin embargo simpre excluyendo los elementos &lt;a&gt; (de acuerdo con el principio lógico de simetría, si una etiqueta &lt;a&gt; como padre, no puede contener contenido interactivo, entonces el mismo contenido de &lt;a&gt; no puede tener una etiqueta &lt;a&gt; como su padre).</td>
   </tr>
   <tr>
    <th scope="row">Roles ARIA permitidos</th>
@@ -55,7 +55,7 @@ original_slug: Web/HTML/Elemento/a
 
 <dl>
  <dt>{{htmlattrdef("download")}} {{HTMLVersionInline(5)}}</dt>
- <dd>Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local.  Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (<em>underscores</em>), lo que evitará sugerencias de ruta específicas.  Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
+ <dd>Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local.  Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (<em>underscores</em>), lo que evitará sugerencias de ruta específicas.  Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
  <div class="note"><strong>Notas:</strong>
  <ul>
   <li>Este atributo sólo funciona para las <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">políticas de mismo origen (same-origin URLs)</a>.</li>
@@ -93,7 +93,7 @@ original_slug: Web/HTML/Elemento/a
   <li><code>_self</code>: Carga la URL en el mismo contexto de navegación que el actual. Este es el comportamiento por defecto.</li>
   <li><code>_blank</code>: Carga la URL en un nuevo contexto de navegación. Usualmente es una pestaña, sin embargo, los usuarios pueden configurar los navegadores para utilizar una ventana nueva en lugar de la pestaña.</li>
   <li><code>_parent</code>: Carga la URL en el contexto de navegación padre (<em>parent</em>) del actual. Si no existe el padre, este se comporta del mismo modo que <code>_self</code>.</li>
-  <li><code>_top</code>: Carga la URL en le contexto más alto de navegación (el cual es un ancestro del actual, y no tiene padre (<em>parent</em>)). Si no hay padre (<em>parent</em>), este se comporta del mismo modo que <code>_self</code>.</li>
+  <li><code>_top</code>: Carga la URL en le contexto más alto de navegación (el cual es un ancestro del actual, y no tiene padre (<em>parent</em>)). Si no hay padre (<em>parent</em>), este se comporta del mismo modo que <code>_self</code>.</li>
  </ul>
 
  <div class="note">
@@ -122,7 +122,7 @@ original_slug: Web/HTML/Elemento/a
  <dt>{{htmlattrdef("rev")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
  <dd>Este atributo especifica un enlace inverso, la relación inversa del atributo <strong>rel</strong>. Fue desechado por ser muy confuso.</dd>
  <dt>{{htmlattrdef("shape")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es <code>circle</code>, <code>default</code>, <code>polygon</code>, y <code>rect</code>. El formato del atributo <code>coords</code> depende del valor de la forma geométrica. Para <code>circle</code>, el valor es <code>x,y,r</code> donde <code>x</code> y <code>y</code> son las coordenadas en pixel para el centro del círculo y  <code>r</code> es el valor del radio en pixeles. Para <code>rect</code>, el atributo <code>coords</code> debe ser <code>x,y,w,h</code>. Los valores <code>x y y</code> definen la esquina superior izquierda del rectángulo, mientras que <code>w</code> y <code>h</code> definen el ancho y el alto respectivamente. Un valor del <code>polygon</code> para <code>shape</code> requiere los valores <code>x1,y1,x2,y2,...</code>para <code>coords</code>. Cada uno de los pares <code>x,y</code> definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor <code>default</code> para <code>shape</code> Requiere que el área encerrada, típicamente una imágen, sea utilizada.
+ <dd>Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es <code>circle</code>, <code>default</code>, <code>polygon</code>, y <code>rect</code>. El formato del atributo <code>coords</code> depende del valor de la forma geométrica. Para <code>circle</code>, el valor es <code>x,y,r</code> donde <code>x</code> y <code>y</code> son las coordenadas en pixel para el centro del círculo y  <code>r</code> es el valor del radio en pixeles. Para <code>rect</code>, el atributo <code>coords</code> debe ser <code>x,y,w,h</code>. Los valores <code>x y y</code> definen la esquina superior izquierda del rectángulo, mientras que <code>w</code> y <code>h</code> definen el ancho y el alto respectivamente. Un valor del <code>polygon</code> para <code>shape</code> requiere los valores <code>x1,y1,x2,y2,...</code>para <code>coords</code>. Cada uno de los pares <code>x,y</code> definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor <code>default</code> para <code>shape</code> Requiere que el área encerrada, típicamente una imágen, sea utilizada.
  <div class="note"><strong>Nota:</strong> Utilice el <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-usemap">atributo <code>usemap</code></a> para el elemento {{HTMLElement("img")}} y el elemento asociado {{HTMLElement("map")}} para definir puntos de acceso (<em>hotspots</em>) en lugar del atributo <code>shape</code>.</div>
  </dd>
 </dl>
@@ -189,7 +189,7 @@ Descripción de enlaces de la misma página
 
 <p>Para detalles adicionales acerca del esquema de la URL <code>tel</code>, consultar {{RFC(2806)}} y {{RFC(2396)}}.</p>
 
-<h3 id="Utilizando_el_atributo_download_para_guardar_un_&lt;canvas>_como_PNG">Utilizando el atributo <code>download</code> para guardar un  <code>&lt;canvas&gt;</code> como PNG</h3>
+<h3 id="Utilizando_el_atributo_download_para_guardar_un_&lt;canvas>_como_PNG">Utilizando el atributo <code>download</code> para guardar un  <code>&lt;canvas&gt;</code> como PNG</h3>
 
 <p>Si deseas permitir a los usurios descargar una elemento HTML {{HTMLElement("canvas")}} como una imagen, puedes crear un enlace con una atributo <code>download</code> y la información canvas como un archivo URL:</p>
 

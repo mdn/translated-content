@@ -20,14 +20,14 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 <div>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</div>
 
 <div class="summary">
-<p>Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen tamaño de archivo pequeños y son altamente escalables, por lo que no se pixelan cuando se amplían a un tamaño más grande. En este artículo le mostraremos cómo incluir uno en su página web.</p>
+<p>Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen tamaño de archivo pequeños y son altamente escalables, por lo que no se pixelan cuando se amplían a un tamaño más grande. En este artículo le mostraremos cómo incluir uno en su página web.</p>
 </div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prerequisitos:</th>
-   <td>Debe conocer los <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">conceptos básicos de HTML</a> y cómo <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">insertar imágenes en su documento</a></td>
+   <td>Debe conocer los <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">conceptos básicos de HTML</a> y cómo <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">insertar imágenes en su documento</a></td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -42,16 +42,16 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 
 <h2 id="¿Qué_son_los_gráficos_vectoriales">¿Qué son los gráficos vectoriales?</h2>
 
-<p>En la web, trabajarás con dos tipos de imágenes — <strong>imágenes rasterizadas</strong>, e <strong>imágenes vectoriales</strong>:</p>
+<p>En la web, trabajarás con dos tipos de imágenes — <strong>imágenes rasterizadas</strong>, e <strong>imágenes vectoriales</strong>:</p>
 
 <ul>
- <li><strong>Las imágenes ráster</strong> se definen mediante una cuadrícula de píxeles — un archivo de imagen rasterizado contiene información que muestra exactamente dónde se colocará cada píxel y exactamente de qué color debe ser. Los formatos de ráster web populares incluyen mapa de bits (<code>.bmp</code>), PNG (<code>.png</code>), JPEG (<code>.jpg</code>), and GIF (<code>.gif</code>.)</li>
- <li><strong>Las imágenes vectoriales</strong> se definen mediante algoritmos — un archivo de imagen vectorial contiene definiciones de forma y ruta que la computadora puede usar para determinar cómo debería verse la imagen cuando se representa en la pantalla. El formato {{glossary("SVG")}} nos permite crear poderosos gráficos vectoriales para usar en la Web.</li>
+ <li><strong>Las imágenes ráster</strong> se definen mediante una cuadrícula de píxeles — un archivo de imagen rasterizado contiene información que muestra exactamente dónde se colocará cada píxel y exactamente de qué color debe ser. Los formatos de ráster web populares incluyen mapa de bits (<code>.bmp</code>), PNG (<code>.png</code>), JPEG (<code>.jpg</code>), and GIF (<code>.gif</code>.)</li>
+ <li><strong>Las imágenes vectoriales</strong> se definen mediante algoritmos — un archivo de imagen vectorial contiene definiciones de forma y ruta que la computadora puede usar para determinar cómo debería verse la imagen cuando se representa en la pantalla. El formato {{glossary("SVG")}} nos permite crear poderosos gráficos vectoriales para usar en la Web.</li>
 </ul>
 
-<p>Para darte una idea de la diferencia entre los dos, veamos un ejemplo. Puede encontrar este ejemplo en vivo en nuestro repositorio de Github como <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> — muestra dos imágenes aparentemente idénticas una al lado de la otra, de una estrella roja con una sombra negra. La diferencia es que el de la izquierda es un PNG y el de la derecha es una imagen SVG.</p>
+<p>Para darte una idea de la diferencia entre los dos, veamos un ejemplo. Puede encontrar este ejemplo en vivo en nuestro repositorio de Github como <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html">vector-versus-raster.html</a> — muestra dos imágenes aparentemente idénticas una al lado de la otra, de una estrella roja con una sombra negra. La diferencia es que el de la izquierda es un PNG y el de la derecha es una imagen SVG.</p>
 
-<p>La diferencia se hace evidente cuando amplía la página — la imagen PNG se pixela a medida que se acerca porque contiene información sobre dónde debería estar cada píxel (y de qué color). Cuando se amplía, cada píxel simplemente aumenta de tamaño para llenar varios píxeles en la pantalla, por lo que la imagen comienza a verse borrosa. Sin embargo, la imagen vectorial sigue luciendo agradable y nítida, porque no importa el tamaño que tenga, los algoritmos se utilizan para resolver las formas en la imagen, y los valores simplemente se escalan a medida que aumenta.</p>
+<p>La diferencia se hace evidente cuando amplía la página — la imagen PNG se pixela a medida que se acerca porque contiene información sobre dónde debería estar cada píxel (y de qué color). Cuando se amplía, cada píxel simplemente aumenta de tamaño para llenar varios píxeles en la pantalla, por lo que la imagen comienza a verse borrosa. Sin embargo, la imagen vectorial sigue luciendo agradable y nítida, porque no importa el tamaño que tenga, los algoritmos se utilizan para resolver las formas en la imagen, y los valores simplemente se escalan a medida que aumenta.</p>
 
 <p><img alt="Two star images" src="https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png" style="display: block; height: 112px; margin: 0px auto; width: 223px;"></p>
 
@@ -65,7 +65,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 
 <h2 id="¿Qué_es_SVG">¿Qué es SVG?</h2>
 
-<p><a href="/en-US/docs/Web/SVG">SVG</a> es un lenguaje basado en {{glossary("XML")}}-para describir imágenes vectoriales. Básicamente es un marcado, como HTML, excepto que tiene muchos elementos diferentes para definir las formas que desea que aparezcan en su imagen y los efectos que desea aplicar a esas formas. SVG es para marcar gráficos, no contenido. En el extremo más simple del espectro, tienes elementos para crear formas simples, como {{svgelement("circle")}} and {{svgelement("rect")}}. Las funciones SVG más avanzadas incluyen {{svgelement("feColorMatrix")}} (transformar colores usando una matriz de transformación), {{svgelement("animate")}} (animar partes de su gráfico vectorial), and {{svgelement("mask")}} (aplica una máscara sobre la parte superior de tu imagen).</p>
+<p><a href="/en-US/docs/Web/SVG">SVG</a> es un lenguaje basado en {{glossary("XML")}}-para describir imágenes vectoriales. Básicamente es un marcado, como HTML, excepto que tiene muchos elementos diferentes para definir las formas que desea que aparezcan en su imagen y los efectos que desea aplicar a esas formas. SVG es para marcar gráficos, no contenido. En el extremo más simple del espectro, tienes elementos para crear formas simples, como {{svgelement("circle")}} and {{svgelement("rect")}}. Las funciones SVG más avanzadas incluyen {{svgelement("feColorMatrix")}} (transformar colores usando una matriz de transformación), {{svgelement("animate")}} (animar partes de su gráfico vectorial), and {{svgelement("mask")}} (aplica una máscara sobre la parte superior de tu imagen).</p>
 
 <p>Como ejemplo simple, el siguiente código crea un círculo y un rectángulo:</p>
 
@@ -86,19 +86,19 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_th
 <p>SVG tiene algunas ventajas adicionales además de las descritas hasta ahora:</p>
 
 <ul>
- <li>El texto en imágenes vectoriales sigue siendo accesible (lo que también beneficia a su {{glossary("SEO")}}).</li>
+ <li>El texto en imágenes vectoriales sigue siendo accesible (lo que también beneficia a su {{glossary("SEO")}}).</li>
  <li>Los SVG se prestan bien al estilo / scripting, porque cada componente de la imagen es un elemento que se puede diseñar a través de CSS o scripting a través de JavaScript.</li>
 </ul>
 
 <p>Entonces, ¿por qué alguien querría usar gráficos rasterizados sobre SVG? Bueno, SVG tiene algunas desventajas:</p>
 
 <ul>
- <li>SVG puede complicarse rápidamente, lo que significa que el tamaño de los archivos puede crecer. Además, los SVG complejos también pueden requerir un tiempo de procesamiento significativo en el navegador.</li>
+ <li>SVG puede complicarse rápidamente, lo que significa que el tamaño de los archivos puede crecer. Además, los SVG complejos también pueden requerir un tiempo de procesamiento significativo en el navegador.</li>
  <li>SVG puede ser más difícil de crear que las imágenes rasterizadas, dependiendo del tipo de imagen que intente crear.</li>
- <li>SVG no es compatible con navegadores más antiguos, por lo que puede no ser adecuado si necesita admitir versiones anteriores de Internet Explorer con su sitio web (SVG comenzó a ser compatible a partir de IE9).</li>
+ <li>SVG no es compatible con navegadores más antiguos, por lo que puede no ser adecuado si necesita admitir versiones anteriores de Internet Explorer con su sitio web (SVG comenzó a ser compatible a partir de IE9).</li>
 </ul>
 
-<p>Los gráficos rasterizados son posiblemente mejores para imágenes de precisión complejas, como fotos, por las razones descritas anteriormente.</p>
+<p>Los gráficos rasterizados son posiblemente mejores para imágenes de precisión complejas, como fotos, por las razones descritas anteriormente.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: En Inkscape, guarde sus archivos como SVG simple para ahorrar espacio. Además, consulte este artículo que describe<a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html"> </a><a href="http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html">cómo preparar SVGs para la web</a>.</p>
@@ -184,7 +184,7 @@ background-size: contain;</code></pre>
 
 <h3 id="Cómo_incrustar_un_SVG_con_un_htmlelementiframe">Cómo incrustar un SVG con un {{htmlelement("iframe")}}</h3>
 
-<p>Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un <code>&lt;iframe&gt;</code> se realiza tal como lo estudiamos en <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">De &lt;object&gt; a &lt;iframe&gt; </a><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">—</a><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies"> otras tecnologías de incrustación</a>.</p>
+<p>Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un <code>&lt;iframe&gt;</code> se realiza tal como lo estudiamos en <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">De &lt;object&gt; a &lt;iframe&gt; </a><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">—</a><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies"> otras tecnologías de incrustación</a>.</p>
 
 <p>Aquí hay una revisión rápida:</p>
 
@@ -203,7 +203,7 @@ background-size: contain;</code></pre>
 
 <h2 id="Aprendizaje_activo_jugar_con_SVG">Aprendizaje activo: jugar con SVG</h2>
 
-<p>En esta sección de aprendizaje activo, nos gustaría que simplemente probaras a jugar con algunos SVG por diversión. En la entrada a continuación, verá que ya le hemos proporcionado algunas muestras para que pueda comenzar. También puedes ir a la <a href="/en-US/docs/Web/SVG/Element">Referencia de Elementos SVG</a>, descubrir más detalles sobre otros juguetes que puedes usar en SVG y probarlos también. Esta sección trata sobre cómo practicar sus habilidades de investigación y divertirse.</p>
+<p>En esta sección de aprendizaje activo, nos gustaría que simplemente probaras a jugar con algunos SVG por diversión. En la entrada a continuación, verá que ya le hemos proporcionado algunas muestras para que pueda comenzar. También puedes ir a la <a href="/en-US/docs/Web/SVG/Element">Referencia de Elementos SVG</a>, descubrir más detalles sobre otros juguetes que puedes usar en SVG y probarlos también. Esta sección trata sobre cómo practicar sus habilidades de investigación y divertirse.</p>
 
 <p>Si se queda atascado y no puede hacer que su código funcione, siempre puede restablecerlo con el <em>botón Restablecer</em>.</p>
 
@@ -340,16 +340,16 @@ textarea.onkeyup = function(){
 
 <p>Este artículo le ha proporcionado un recorrido rápido por qué son los gráficos vectoriales y SVG, por qué es útil conocerlos y cómo incluir SVG en sus páginas web. Nunca tuvo la intención de ser una guía completa para aprender SVG, solo un indicador para que sepa qué es SVG si lo encuentra en sus viajes por la Web. Así que no se preocupe si todavía no siente que es un experto en SVG. Hemos incluido algunos enlaces a continuación que pueden ayudarlo si desea ir y obtener más información sobre cómo funciona.</p>
 
-<p>En el próximo artículo de este módulo, exploraremos las imágenes adaptables en detalle, observando las herramientas que tiene HTML para permitirle hacer que sus imágenes funcionen mejor en diferentes dispositivos.</p>
+<p>En el próximo artículo de este módulo, exploraremos las imágenes adaptables en detalle, observando las herramientas que tiene HTML para permitirle hacer que sus imágenes funcionen mejor en diferentes dispositivos.</p>
 
-<h2 id="Vea_también">Vea también</h2>
+<h2 id="Vea_también">Vea también</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started">Tutorial de SVG</a> en MDN</li>
+ <li><a href="/en-US/docs/Web/SVG/Tutorial/Getting_Started">Tutorial de SVG</a> en MDN</li>
  <li><a href="http://thenewcode.com/744/Making-SVG-Responsive">Consejos rápidos para SVGs adaptables</a></li>
  <li><a href="https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/">Tutorial de Sara Soueidan sobre imágenes SVG adaptables</a></li>
  <li><a href="https://www.w3.org/TR/SVG-access/">Beneficios de accesibilidad de SVG</a></li>
- <li><a href="https://css-tricks.com/scale-svg/">Cómo escalar SVGs</a> (¡no es tan simple como los gráficos rasterizados!)</li>
+ <li><a href="https://css-tricks.com/scale-svg/">Cómo escalar SVGs</a> (¡no es tan simple como los gráficos rasterizados!)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}</p>

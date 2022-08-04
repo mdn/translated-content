@@ -9,10 +9,10 @@ browser-compat: api.FileError
 <p>Se ha presentado un error al utilizar la interfaz {{ domxref("FileReader") }}.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Esta interfaz es obsoleta de acuerdo a la última especificación. Use la nueva DOM4 {{ domxref("DOMError") }} en su lugar.</p>
+<p><strong>Nota:</strong> Esta interfaz es obsoleta de acuerdo a la última especificación. Use la nueva DOM4 {{ domxref("DOMError") }} en su lugar.</p>
 </div>
 
-<p>La <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_APIB">File System API</a>, a <code>FileError Representa un error que puede surgir al acceder al sistema de archivos utilizando la API asíncrona. Se extiende la interfaz FileERror descrita en la escritura del archivo y añadiendo así códigos de error nuevos.</code></p>
+<p>La <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_APIB">File System API</a>, a <code>FileError Representa un error que puede surgir al acceder al sistema de archivos utilizando la API asíncrona. Se extiende la interfaz FileERror descrita en la escritura del archivo y añadiendo así códigos de error nuevos.</code></p>
 
 <p>FileError Objects son pasados una vez se haya lanzado un error. Los objetos tiene un código que muestra el tipo de error que haya ocurrido.</p>
 
@@ -24,9 +24,9 @@ browser-compat: api.FileError
 
 <p>Aunque las devoluciones de llamada de error son opcionales, usted debe incluirlos en los argumentos de los métodos. Una aplicación web puede fallar por diversas razones, por lo que no requiere pasar el resto de su día adivinando lo que está pasando y/o realizando el sistema.</p>
 
-<h3 id="No_haga_funcionar_su_aplicación_desde_ruta_(file)">No haga funcionar su aplicación desde ruta://  (file://)</h3>
+<h3 id="No_haga_funcionar_su_aplicación_desde_ruta_(file)">No haga funcionar su aplicación desde ruta://  (file://)</h3>
 
-<p>Por razones de seguridad, los navegadores no le permiten ejecutar su aplicación desde file://. De hecho, muchas de las API de almacenamiento de gran alcance(como sistema de archivos, BlobBuilder y FileReader) lanzan errores si ejecuta la aplicación a nivel local de file://. Cuando estás haciendo una prueba de su aplicación y no deseas configurar un servidor web, puede pasarse por alto la restricción de seguridad en Chrome. Simplemente comienza a Chrome con la restricción de seguridad en Chrome con la bandera --allow-file- access-from-files Utilice la bandera sólo para propósitos de prueba.</p>
+<p>Por razones de seguridad, los navegadores no le permiten ejecutar su aplicación desde file://. De hecho, muchas de las API de almacenamiento de gran alcance(como sistema de archivos, BlobBuilder y FileReader) lanzan errores si ejecuta la aplicación a nivel local de file://. Cuando estás haciendo una prueba de su aplicación y no deseas configurar un servidor web, puede pasarse por alto la restricción de seguridad en Chrome. Simplemente comienza a Chrome con la restricción de seguridad en Chrome con la bandera --allow-file- access-from-files Utilice la bandera sólo para propósitos de prueba.</p>
 
 <p><strong><em>Tradución a español en proceso...</em></strong></p>
 
@@ -140,5 +140,5 @@ browser-compat: api.FileError
  <li>{{ domxref("FileReader") }}</li>
  <li>{{ domxref("File") }}</li>
  <li>{{ domxref("Blob") }}</li>
- <li>{{ spec("http://www.w3.org/TR/file-system-api/#errors-and-exceptions", "Specification: FileAPI Errors and exceptions", "WD") }}</li>
+ <li>{{ spec("http://www.w3.org/TR/file-system-api/#errors-and-exceptions", "Specification: FileAPI Errors and exceptions", "WD") }}</li>
 </ul>

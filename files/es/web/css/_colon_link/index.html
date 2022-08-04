@@ -11,14 +11,14 @@ translation_of: 'Web/CSS/:link'
 ---
 <div>{{ CSSRef }}</div>
 
-<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:link</code></strong> <a href="/es/docs/Web/CSS">CSS</a> representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado {{HTMLElement("a")}}, {{HTMLElement("area")}}, o {{HTMLElement("link")}} que tiene un atributo <code>href</code>.</p>
+<p>La <a href="/es/docs/Web/CSS/Pseudo-classes">pseudo-clase</a> <strong><code>:link</code></strong> <a href="/es/docs/Web/CSS">CSS</a> representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado {{HTMLElement("a")}}, {{HTMLElement("area")}}, o {{HTMLElement("link")}} que tiene un atributo <code>href</code>.</p>
 
 <pre class="brush: css no-line-numbers">/* Selecciona cualquier &lt;a&gt; que aún no se haya visitado */
 a:link {
   color: red;
 }</pre>
 
-<p>Los estilos definidos por la pseudo-clase <code>:link</code> serán anulados por cualquier pseudo-clase posterior relacionada con el enlace ({{cssxref(":active")}}, {{cssxref(":hover")}}, o {{cssxref(":visited")}}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla <code>:link</code> antes de todas las demás reglas relacionadas con el enlace, tal como lo define el <em>orden LVHA</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
+<p>Los estilos definidos por la pseudo-clase <code>:link</code> serán anulados por cualquier pseudo-clase posterior relacionada con el enlace ({{cssxref(":active")}}, {{cssxref(":hover")}}, o {{cssxref(":visited")}}) que tenga al menos la misma especificidad. Para darle un estilo apropiado a los enlaces, coloque la regla <code>:link</code> antes de todas las demás reglas relacionadas con el enlace, tal como lo define el <em>orden LVHA</em>: <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code>.</p>
 
 <div class="note">
 <p><strong>Nota:</strong> Use {{cssxref(":any-link")}} para seleccionar un elemento independientemente de si ha sido visitado o no.</p>
@@ -65,7 +65,7 @@ a:link {
   <tr>
    <td>{{ SpecName('HTML WHATWG', 'scripting.html#selector-link', ':link') }}</td>
    <td>{{ Spec2('HTML WHATWG') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{ SpecName('CSS4 Selectors', '#link', ':link') }}</td>

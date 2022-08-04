@@ -9,7 +9,7 @@ translation_of: Web/CSS/-moz-context-properties
 </div>
 </div>
 
-<p>Si mencionas una imagen SVG en una pagina web({{htmlelement("img")}} como elemento o como fondo de pagina), la imagen SVG puede coordinarse con el elemento incrustado(su contexto) para que la imagen adopte las propiedades puestas en el elemento incrustado. Para hacer esto, el elemento incrustado necesita listar las propiedades que deben estar disponibles para la imagen listadolas como valores de la propiedad<strong><code>-moz-context-properties</code></strong>, y la imagen necesita optar a usar esas propiedades utilizando valores tales como el valor de  <code>context-fill</code>.</p>
+<p>Si mencionas una imagen SVG en una pagina web({{htmlelement("img")}} como elemento o como fondo de pagina), la imagen SVG puede coordinarse con el elemento incrustado(su contexto) para que la imagen adopte las propiedades puestas en el elemento incrustado. Para hacer esto, el elemento incrustado necesita listar las propiedades que deben estar disponibles para la imagen listadolas como valores de la propiedad<strong><code>-moz-context-properties</code></strong>, y la imagen necesita optar a usar esas propiedades utilizando valores tales como el valor de  <code>context-fill</code>.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -62,7 +62,7 @@ translation_of: Web/CSS/-moz-context-properties
                        &lt;rect width='100%' height='100%' stroke-width='30px'
                        fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/&gt;&lt;/svg&gt;"&gt;</pre>
 
-<p>Aqui hemos puesto que la imagen <code>src</code> sea una URL de datos que contiene una imagen SVG simple; el <code>&lt;rect&gt;</code>de dentro ha sido hecho para coger sus valores de <code>fill</code> y <code>stroke</code> de {{cssxref("fill")}} y {{cssxref("stroke")}} puestos en el elemento <code>&lt;img&gt;</code>poniendo  <code>context-fill</code>/<code>context-stroke</code> en sus valores asi como un color para rellenar(rojo) que sera utilizado en caso que el SVG es cargado independientemente en una ventana superior(donde no tendra contexto para dar los valores ). Tener en cuenta que si un colore es directamente puesto en el SVG, pero el color del contexto tambien es especificado, el color del contexto sobreescribe el color directo.</p>
+<p>Aqui hemos puesto que la imagen <code>src</code> sea una URL de datos que contiene una imagen SVG simple; el <code>&lt;rect&gt;</code>de dentro ha sido hecho para coger sus valores de <code>fill</code> y <code>stroke</code> de {{cssxref("fill")}} y {{cssxref("stroke")}} puestos en el elemento <code>&lt;img&gt;</code>poniendo  <code>context-fill</code>/<code>context-stroke</code> en sus valores asi como un color para rellenar(rojo) que sera utilizado en caso que el SVG es cargado independientemente en una ventana superior(donde no tendra contexto para dar los valores ). Tener en cuenta que si un colore es directamente puesto en el SVG, pero el color del contexto tambien es especificado, el color del contexto sobreescribe el color directo.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Puedes en contrar un <a href="https://mdn.github.io/css-examples/moz-context-properties/">ejemplo de ejecucion en Github</a>.</p>

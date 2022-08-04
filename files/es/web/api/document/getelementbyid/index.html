@@ -14,9 +14,9 @@ translation_of: Web/API/Document/getElementById
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<div> </div>
+<div> </div>
 
-<p>Devuelve una referencia al elemento por su <a href="/en-US/docs/DOM/element.id" title="en-US/docs/DOM/element.id">ID</a>.</p>
+<p>Devuelve una referencia al elemento por su <a href="/en-US/docs/DOM/element.id" title="en-US/docs/DOM/element.id">ID</a>.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/Document/getElementById
 
 <dl>
  <dt><code><strong>element</strong></code></dt>
- <dd>Es una referencia a un objeto {{domxref("Element")}}, o <code>null</code> si un elemento con el ID especificado no se encuentra en el documento.</dd>
+ <dd>Es una referencia a un objeto {{domxref("Element")}}, o <code>null</code> si un elemento con el ID especificado no se encuentra en el documento.</dd>
  <dt>
  <h2 id="Ejemplo">Ejemplo</h2>
 
@@ -55,8 +55,8 @@ translation_of: Web/API/Document/getElementById
  <h3 id="JavaScript">JavaScript</h3>
 
  <pre class="brush: js">function changeColor(newColor) {
-   var elem = document.getElementById('para');
-   elem.style.color = newColor;
+   var elem = document.getElementById('para');
+   elem.style.color = newColor;
 }
 </pre>
 
@@ -70,7 +70,7 @@ translation_of: Web/API/Document/getElementById
 
 <p>Los usuarios nuevos deberían notar que escribir en mayúsculas 'Id' en el nombre de este método <em>debe ser corregida</em> para que el código sea válido - 'getElementByID' no funcionará a pesar de que parezca natural.</p>
 
-<p>A diferencia de otros métodos similares, getElementById sólo está disponible como un método del objeto global document, y no se encuentra disponible como un método en todos los objetos  del DOM. Como los valores ID deben ser únicos a traves del documento, no existe necesidad para versiones "locales" de la función.</p>
+<p>A diferencia de otros métodos similares, getElementById sólo está disponible como un método del objeto global document, y no se encuentra disponible como un método en todos los objetos  del DOM. Como los valores ID deben ser únicos a traves del documento, no existe necesidad para versiones "locales" de la función.</p>
 
 <h2 id="Ejemplo_2">Ejemplo</h2>
 
@@ -106,7 +106,7 @@ element.id = 'testqq';
 var el = document.getElementById('testqq'); // el será null!
 </pre>
 
-<p><strong>Documentos no-HTML</strong>. La implementación de DOM debe tener información que diga que atributos son del tipo ID. Los atributos con el nombre "id" son son del tipo ID a menos que se los defina en el DTD del documento. El atributo <code>id</code> es definido para ser del tipo ID en los casos comunes de <a href="https://developer.mozilla.org/en-US/docs/XHTML">XHTML</a>, <a href="/es/docs/Mozilla/Tech/XUL">XUL</a>,  y otros. Las implementaciones que no sepan si los atributos son o no del tipo ID se espera que retornen null.</p>
+<p><strong>Documentos no-HTML</strong>. La implementación de DOM debe tener información que diga que atributos son del tipo ID. Los atributos con el nombre "id" son son del tipo ID a menos que se los defina en el DTD del documento. El atributo <code>id</code> es definido para ser del tipo ID en los casos comunes de <a href="https://developer.mozilla.org/en-US/docs/XHTML">XHTML</a>, <a href="/es/docs/Mozilla/Tech/XUL">XUL</a>,  y otros. Las implementaciones que no sepan si los atributos son o no del tipo ID se espera que retornen null.</p>
 
 <h2 id="Specification" name="Specification">Especificación</h2>
 
@@ -147,8 +147,8 @@ var el = document.getElementById('testqq'); // el será null!
 <h2 id="See_also" name="See_also">Ver también</h2>
 
 <ul>
- <li>La referencia <a href="/en-US/docs/DOM/document" title="en-US/docs/DOM/document">document</a> para otros métodos y propiedades que se pueden usar para obtener referencias a elementos en el documento.</li>
- <li><a href="/en-US/docs/Web/API/document.querySelector">document.querySelector()</a> para selectores via consultas como <code>'div.myclass'</code></li>
- <li><a href="/en-US/docs/xml/xml:id" title="en-US/docs/xml/id">xml:id</a> - tiene un método utilitario para permitir que <code>getElementById()</code> obtenga 'xml:id' en documentos XML documents (como los retornados por llamadas Ajax.</li>
+ <li>La referencia <a href="/en-US/docs/DOM/document" title="en-US/docs/DOM/document">document</a> para otros métodos y propiedades que se pueden usar para obtener referencias a elementos en el documento.</li>
+ <li><a href="/en-US/docs/Web/API/document.querySelector">document.querySelector()</a> para selectores via consultas como <code>'div.myclass'</code></li>
+ <li><a href="/en-US/docs/xml/xml:id" title="en-US/docs/xml/id">xml:id</a> - tiene un método utilitario para permitir que <code>getElementById()</code> obtenga 'xml:id' en documentos XML documents (como los retornados por llamadas Ajax.</li>
 </ul>
 </div>

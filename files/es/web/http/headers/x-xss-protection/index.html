@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>El encabezado de respuesta HTTP <strong><code>X-XSS-Protection</code></strong> es una característica de Internet Explorer, Chrome y Safari que impide la carga de una página cuando detecta ataques del tipo Cross-Site ({{Glossary("XSS")}}). Esta protección ya no es necesaria en los navegadores modernos cuando el sitio implementa una fuerte {{HTTPHeader("Content-Security-Policy")}}  que deshabilita el uso de Javascript inline (<code>'unsafe-inline'</code>). Sin embargo da protección a los usuarios de navegadores más antiguos que no soportan  {{Glossary("CSP")}}</p>
+<p>El encabezado de respuesta HTTP <strong><code>X-XSS-Protection</code></strong> es una característica de Internet Explorer, Chrome y Safari que impide la carga de una página cuando detecta ataques del tipo Cross-Site ({{Glossary("XSS")}}). Esta protección ya no es necesaria en los navegadores modernos cuando el sitio implementa una fuerte {{HTTPHeader("Content-Security-Policy")}}  que deshabilita el uso de Javascript inline (<code>'unsafe-inline'</code>). Sin embargo da protección a los usuarios de navegadores más antiguos que no soportan  {{Glossary("CSP")}}</p>
 
 <table class="properties">
  <tbody>
@@ -36,24 +36,24 @@ X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
 
 <dl>
  <dt>0</dt>
- <dd>Desativa el filtro XSS.</dd>
+ <dd>Desativa el filtro XSS.</dd>
  <dt>1</dt>
- <dd>Habilita el filtro XSS (generalmente está predeterminado en los navegadores). En caso de detección de un ataque cross-site scripting, el navegador sanitizará a página (eliminará las partes inseguras).</dd>
+ <dd>Habilita el filtro XSS (generalmente está predeterminado en los navegadores). En caso de detección de un ataque cross-site scripting, el navegador sanitizará a página (eliminará las partes inseguras).</dd>
  <dt>1; mode=block</dt>
- <dd>Habilita el filtrado XSS. En vez de sanitizar la página, el navegador evitará la visualización de la página en caso de que algún ataque sea detectado.</dd>
- <dt>1; report=&lt;reporting-URI&gt;  (Chromium solamente)</dt>
- <dd>Habilita el filtro XSS. En caso de que algún ataque de cross-site scripting sea detectado, el navegador sanitizará la página e informará sobre la infracción. Utiliza la funcionalidad de la directiva CSP {{CSP("report-uri")}} para enviar um reporte.</dd>
+ <dd>Habilita el filtrado XSS. En vez de sanitizar la página, el navegador evitará la visualización de la página en caso de que algún ataque sea detectado.</dd>
+ <dt>1; report=&lt;reporting-URI&gt;  (Chromium solamente)</dt>
+ <dd>Habilita el filtro XSS. En caso de que algún ataque de cross-site scripting sea detectado, el navegador sanitizará la página e informará sobre la infracción. Utiliza la funcionalidad de la directiva CSP {{CSP("report-uri")}} para enviar um reporte.</dd>
 </dl>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
 <p>Bloquea las páginas en las que se detecta un ataque XSS:</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: bash">X-XSS-Protection: 1; mode=block</pre>
 
-<p> </p>
+<p> </p>
 
 <p>PHP</p>
 
@@ -69,11 +69,11 @@ X-XSS-Protection: 1; report=&lt;reporting-uri&gt;
 
 <p>No forma parte de ninguna especificación o borrador.</p>
 
-<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
+<h2 id="Compatibilidad_de_los_navegadores">Compatibilidad de los navegadores</h2>
 
 <p>{{Compat("http.headers.X-XSS-Protection")}}</p>
 
-<h2 id="Vea_también">Vea también</h2>
+<h2 id="Vea_también">Vea también</h2>
 
 <ul>
  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
