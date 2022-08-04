@@ -1,6 +1,6 @@
 ---
 title: 在代码中做决定 - 条件语句
-slug: learn/JavaScript/Building_blocks/conditionals
+slug: Learn/JavaScript/Building_blocks/conditionals
 translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
 <div>{{LearnSidebar}}</div>
@@ -38,7 +38,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <p>基本的 if…else 语法看起来像下面的 {{glossary("伪代码")}}:</p>
 
-<pre class="notranslate">if (condition) {
+<pre class="brush: js">if (condition) {
   code to run if condition is true
 } else {
   run some other code instead
@@ -58,7 +58,7 @@ translation_of: Learn/JavaScript/Building_blocks/conditionals
 
 <p>注意：你不一定需要 else 和第二个花括号——下面的代码也是符合语法规则的：</p>
 
-<pre class="notranslate">if (condition) {
+<pre class="brush: js">if (condition) {
   code to run if condition is true
 }
 
@@ -68,7 +68,7 @@ run some other code</pre>
 
 <p>最后，有时候你可能会看到 if…else 语句没有写花括号，像下面的速记风格：</p>
 
-<pre class="notranslate">if (condition) code to run if condition is true
+<pre class="brush: js">if (condition) code to run if condition is true
 else run some other code instead</pre>
 
 <p>这是完全有效的代码，但不建议这样使用——因为如果有花括号进行代码切割的话，整体代码被切割为多行代码，更易读和易用。</p>
@@ -88,7 +88,7 @@ if (shoppingDone === true) {
 <p>这段代码显示的结果是变量 <code>shoppingDone </code>总是返回 <code>false</code>， 意味着对我们的穷孩子来说很失望。如果孩子去购物的话，就需要依靠我们提供机制来使父母把变量 <code>shoppingDone</code> 变成 <code>true</code>。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以看到在<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">Github 上这个例子的完整版本</a>（也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">在线运行</a>）</p>
+<p><strong>备注：</strong> 你可以看到在<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">Github 上这个例子的完整版本</a>（也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">在线运行</a>）</p>
 </div>
 
 <h3 id="else_if">else if</h3>
@@ -141,7 +141,7 @@ function setWeather() {
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">在 GitHub 上找到这个例子</a> （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">在线运行</a>。）</p>
+<p><strong>备注：</strong> 你可以 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">在 GitHub 上找到这个例子</a> （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">在线运行</a>。）</p>
 </div>
 
 <h3 id="关于比较运算符">关于比较运算符</h3>
@@ -155,7 +155,7 @@ function setWeather() {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: 如果你想复习这些内容，可以回顾之前链接上的材料。</p>
+<p><strong>备注：</strong> 如果你想复习这些内容，可以回顾之前链接上的材料。</p>
 </div>
 
 <p>我们想特别提到测试布尔值（true / false），和一个通用模式，你会频繁遇到它，任何不是 <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code> 的值，或一个空字符串（''）在作为条件语句进行测试时实际返回 true，因此您可以简单地使用变量名称来测试它是否为真，甚至是否存在（即它不是未定义的）。例如: </p>
@@ -282,7 +282,7 @@ if (shoppingDone) { // don't need to explicitly specify '=== true'
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: <code>default</code> 部分不是必须的 - 如果表达式不可能存在未知值，则可以安全地省略它。如果有机会，您需要包括它来处理未知的情况。</p>
+<p><strong>备注：</strong> <code>default</code> 部分不是必须的 - 如果表达式不可能存在未知值，则可以安全地省略它。如果有机会，您需要包括它来处理未知的情况。</p>
 </div>
 
 <h3 id="switch语句示例">switch 语句示例</h3>
@@ -330,7 +330,7 @@ function setWeather() {
 <p>{{ EmbedLiveSample('A_switch_example', '100%', 100) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">在 GitHub 上找到这个例子</a> （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">在线运行</a>。）</p>
+<p><strong>备注：</strong> 你可以 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">在 GitHub 上找到这个例子</a> （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">在线运行</a>。）</p>
 </div>
 
 <h2 id="三元运算符">三元运算符</h2>
@@ -378,7 +378,7 @@ select.onchange = function() {
 <p>最后，我们还有一个<a href="/en-US/docs/Web/API/GlobalEventHandlers/onchange">onchange</a>事件监听器，用于运行一个包含三元运算符的函数。它以测试条件开始<code>select.value === 'black'</code>。如果这返回<code>true</code>，我们运行<code>update()</code>带有黑色和白色参数的函数，这意味着我们最终得到黑色的背景颜色和白色的文字颜色。如果返回<code>false</code>，我们运行<code>update()</code>带有白色和黑色参数的函数，这意味着站点颜色被反转。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 你可以 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">在 GitHub 上找到这个例子</a> （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">在线运行</a>。）</p>
+<p><strong>备注：</strong> 你可以 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">在 GitHub 上找到这个例子</a> （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">在线运行</a>。）</p>
 </div>
 
 <h2 id="主动学习：一个简单的日历">主动学习：一个简单的日历</h2>
@@ -407,10 +407,7 @@ select.onchange = function() {
 
 <p>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。如果真的卡住了，请按“Show solution”查看解决方案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html notranslate">&lt;div class="output" style="height: 500px;overflow: auto;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="height: 500px;overflow: auto;"&gt;
   &lt;label for="month"&gt;Select month: &lt;/label&gt;
   &lt;select id="month"&gt;
     &lt;option value="January"&gt;January&lt;/option&gt;
@@ -466,7 +463,7 @@ createCalendar(31,'January');
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">.output * {
+<pre class="brush: css hidden">.output * {
   box-sizing: border-box;
 }
 
@@ -486,7 +483,7 @@ createCalendar(31,'January');
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -510,9 +507,8 @@ var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = d
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', '100%', 1110) }}</p>
+<p>{{ EmbedLiveSample('主动学习：一个简单的日历', '100%', 1110) }}</p>
 
 <h2 id="主动学习：更多颜色选择！">主动学习：更多颜色选择！</h2>
 
@@ -526,10 +522,7 @@ window.addEventListener('load', updateCode);
 
 <p>如果您犯了错误，您可以随时使用“Reset”按钮重置该示例。如果真的卡住了，请按“Show solution”查看解决方案。</p>
 
-<div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
-
-<pre class="brush: html notranslate">&lt;div class="output" style="height: 300px;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="height: 300px;"&gt;
   &lt;label for="theme"&gt;Select theme: &lt;/label&gt;
   &lt;select id="theme"&gt;
     &lt;option value="white"&gt;White&lt;/option&gt;
@@ -565,7 +558,7 @@ function update(bgColor, textColor) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -589,9 +582,8 @@ var jsSolution = 'var select = document.querySelector(\'select\');\nvar html = d
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code_2', '100%', 850) }}</p>
+<p>{{ EmbedLiveSample('主动学习：更多颜色选择！', '100%', 850) }}</p>
 
 <h2 id="结论">结论</h2>
 
