@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
 <div>{{JSRef}} {{non-standard_header}}</div>
 
-<p>A propriedade <code><strong><em>function</em>.displayName</strong></code> retorna o nome de exibição da função.</p>
+<p>A propriedade <code><strong><em>function</em>.displayName</strong></code> retorna o nome de exibição da função.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Quando definida, a propriedade <code>displayName</code> retorna o nome de exibição da função.</p>
+<p>Quando definida, a propriedade <code>displayName</code> retorna o nome de exibição da função.</p>
 
 <pre class="brush: js">function doSomething() {}
 
@@ -27,7 +27,7 @@ popup.displayName = 'Show Popup';
 console.log(popup.displayName); // "Show Popup"
 </pre>
 
-<p>Você pode definir uma função com uma nome de exibição em um {{jsxref("Functions", "function expression", "", 1)}}:</p>
+<p>Você pode definir uma função com uma nome de exibição em um {{jsxref("Functions", "function expression", "", 1)}}:</p>
 
 <pre class="brush: js">var object = {
   someMethod: function() {}
@@ -41,7 +41,7 @@ try { someMethod } catch(e) { console.log(e); }
 // ReferenceError: someMethod is not defined
 </pre>
 
-<p>Você pode mudar dinamicamente o<code>displayName</code> de uma função:</p>
+<p>Você pode mudar dinamicamente o<code>displayName</code> de uma função:</p>
 
 <pre class="brush: js">var object = {
   // anonymous
@@ -58,9 +58,9 @@ console.log(object.someMethod.displayName); // "someMethod (123)"
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<p>Geralmente, é preferida por consoles e perfis em vez de  {{jsxref("Function.name", "func.name")}} mostrar o nome de uma função.</p>
+<p>Geralmente, é preferida por consoles e perfis em vez de  {{jsxref("Function.name", "func.name")}} mostrar o nome de uma função.</p>
 
-<p>Entrando com o seguinte em um console, isso deverá mostrar algo como  "<code>function My Function()</code>":</p>
+<p>Entrando com o seguinte em um console, isso deverá mostrar algo como  "<code>function My Function()</code>":</p>
 
 <pre class="brush: js">var a = function() {};
 a.displayName = 'My Function';
