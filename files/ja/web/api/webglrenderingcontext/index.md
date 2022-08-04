@@ -157,20 +157,20 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
   - : `WebGLFrameBuffer` オブジェクトを削除します。
 - {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
-  - : `WebGLRenderingBuffer` オブジェクトを `WebGLFrameBuffer` オブジェクトにアタッチします。
+  - : `WebGLRenderingBuffer` オブジェクトを `WebGLFrameBuffer` オブジェクトにアタッチします。
 - {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
-  - : テクスチャ画像を `WebGLFrameBuffer` オブジェクトにアタッチします。
+  - : テクスチャ画像を `WebGLFrameBuffer` オブジェクトにアタッチします。
 - {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
   - : フレームバッファーについての情報を返します。
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-  - : 渡された `WebGLFrameBuffer` オブジェクトが有効かどうかを表す論理値を返します。
+  - : 渡された `WebGLFrameBuffer` オブジェクトが有効かどうかを表す論理値を返します。
 - {{domxref("WebGLRenderingContext.readPixels()")}}
-  - : `WebGLFrameBuffer` からピクセルブロックを読み取ります。
+  - : `WebGLFrameBuffer` からピクセルブロックを読み取ります。
 
 <h2 id="レンダーバッファー">レンダーバッファー</h2>
 
 - {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
-  - : 与えられたターゲットに `WebGLRenderBuffer` オブジェクトをバインドします。
+  - : 与えられたターゲットに `WebGLRenderBuffer` オブジェクトをバインドします。
 - {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
   - : `WebGLRenderBuffer` オブジェクトを作成します。
 - {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
@@ -178,14 +178,14 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
   - : レンダーバッファーについての情報を返します。
 - {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
-  - : 渡された `WebGLRenderingBuffer` が有効かどうかを表す論理値を返します。
+  - : 渡された `WebGLRenderingBuffer` が有効かどうかを表す論理値を返します。
 - {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
   - : レンダーバッファーデータストアを作成します。
 
 <h2 id="テクスチャ">テクスチャ</h2>
 
 - {{domxref("WebGLRenderingContext.bindTexture()")}}
-  - : 与えられたターゲットに `WebGLTexture` オブジェクトをバインドします。
+  - : 与えられたターゲットに `WebGLTexture` オブジェクトをバインドします。
 - {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
   - : 2D テクスチャ画像を圧縮フォーマットで指定します。
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
@@ -203,11 +203,11 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.getTexParameter()")}}
   - : テクスチャに対しての情報を返します。
 - {{domxref("WebGLRenderingContext.isTexture()")}}
-  - : 渡された `WebGLTexture` が有効かどうかを表す論理値を返します。
+  - : 渡された `WebGLTexture` が有効かどうかを表す論理値を返します。
 - {{domxref("WebGLRenderingContext.texImage2D()")}}
   - : 2D テクスチャ画像を指定します。
 - {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-  - : 現在の `WebGLTexture` の部分矩形を更新します。
+  - : 現在の `WebGLTexture` の部分矩形を更新します。
 - {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
   - : テクスチャ引数を設定します。
 - {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
@@ -216,23 +216,23 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 ## プログラムとシェーダー
 
 - {{domxref("WebGLRenderingContext.attachShader()")}}
-  - : `WebGLShader` を `WebGLProgram` にアタッチします。
+  - : `WebGLShader` を `WebGLProgram` にアタッチします。
 - {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
   - : 汎用頂点インデックスを名前付き属性変数にバインドします。
 - {{domxref("WebGLRenderingContext.compileShader()")}}
-  - : `WebGLShader` をコンパイルします。
+  - : `WebGLShader` をコンパイルします。
 - {{domxref("WebGLRenderingContext.createProgram()")}}
-  - : `WebGLProgram` を作成します。
+  - : `WebGLProgram` を作成します。
 - {{domxref("WebGLRenderingContext.createShader()")}}
-  - : `WebGLShader` を作成します。
+  - : `WebGLShader` を作成します。
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
-  - : `WebGLProgram` を削除します。
+  - : `WebGLProgram` を削除します。
 - {{domxref("WebGLRenderingContext.deleteShader()")}}
-  - : `WebGLShader` を削除します。
+  - : `WebGLShader` を削除します。
 - {{domxref("WebGLRenderingContext.detachShader()")}}
-  - : `WebGLShader` をでタッチします。
+  - : `WebGLShader` をでタッチします。
 - {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-  - : `WebGLProgram` にアタッチされた `WebGLShader` オブジェクトのリストを返します。
+  - : `WebGLProgram` にアタッチされた `WebGLShader` オブジェクトのリストを返します。
 - {{domxref("WebGLRenderingContext.getProgramParameter()")}}
   - : プログラムについての情報を返します。
 - {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
@@ -246,17 +246,17 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.getShaderSource()")}}
   - : `WebGLShader` のソースコードを文字列として返します。
 - {{domxref("WebGLRenderingContext.isProgram()")}}
-  - : 渡された `WebGLProgram` 有効かを表す論理値を返します。
+  - : 渡された `WebGLProgram` 有効かを表す論理値を返します。
 - {{domxref("WebGLRenderingContext.isShader()")}}
-  - : 渡された `WebGLShader` 有効かを表す論理値を返します。
+  - : 渡された `WebGLShader` 有効かを表す論理値を返します。
 - {{domxref("WebGLRenderingContext.linkProgram()")}}
-  - : 渡された `WebGLProgram` オブジェクトをリンクします。
+  - : 渡された `WebGLProgram` オブジェクトをリンクします。
 - {{domxref("WebGLRenderingContext.shaderSource()")}}
-  - : `WebGLShader` にソースコードを設定します。
+  - : `WebGLShader` にソースコードを設定します。
 - {{domxref("WebGLRenderingContext.useProgram()")}}
-  - : 指定した `WebGLProgram` を現在のレンダリングステートの一部として使用します。
+  - : 指定した `WebGLProgram` を現在のレンダリングステートの一部として使用します。
 - {{domxref("WebGLRenderingContext.validateProgram()")}}
-  - : `WebGLProgram` を検証します。
+  - : `WebGLProgram` を検証します。
 
 ## ユニフォームと属性
 

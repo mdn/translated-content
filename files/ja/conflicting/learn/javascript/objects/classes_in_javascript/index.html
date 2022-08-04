@@ -61,7 +61,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
 
-<p>これは実に役立ちます。教師と生徒は名前、性別、年齢のように多数の共通機能を共有しており、これらの機能を一度だけ定義すればいいので便利です。異なるクラスで、同じ機能を分けて定義することもでき、その機能の各定義は異なる名前空間に置かれます。例えば、生徒の挨拶は "Yo, I'm [firstName]" (例：<em>Yo, I'm Sam) という形式とし、一方の教師の挨拶は、より形式的に </em>"Hello, my name is [Prefix] [lastName], and I teach [Subject]." (例：<em>Hello, My name is Mr Griffiths, and I teach Chemistry) のように。</em></p>
+<p>これは実に役立ちます。教師と生徒は名前、性別、年齢のように多数の共通機能を共有しており、これらの機能を一度だけ定義すればいいので便利です。異なるクラスで、同じ機能を分けて定義することもでき、その機能の各定義は異なる名前空間に置かれます。例えば、生徒の挨拶は "Yo, I'm [firstName]" (例：<em>Yo, I'm Sam) という形式とし、一方の教師の挨拶は、より形式的に </em>"Hello, my name is [Prefix] [lastName], and I teach [Subject]." (例：<em>Hello, My name is Mr Griffiths, and I teach Chemistry) のように。</em></p>
 
 <div class="note">
 <p><strong>注</strong>: 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、<strong>ポリモーフィズム</strong>があります。不思議に感じているかも知れないので念のため。</p>
@@ -225,7 +225,7 @@ person1.bio()
  <li>このコードを JavaScript コンソールに入力してみましょう。
   <pre class="brush: js notranslate">let person1 = new Object();</pre>
  </li>
- <li><code>person1</code> 変数に空のオブジェクトが格納されました。このオブジェクトに、ドット記法とブラケット記法を使ってプロパティを追加することができます。次の例を JavaScript コンソールで試してみましょう。
+ <li><code>person1</code> 変数に空のオブジェクトが格納されました。このオブジェクトに、ドット記法とブラケット記法を使ってプロパティを追加することができます。次の例を JavaScript コンソールで試してみましょう。
   <pre class="brush: js notranslate">person1.name = 'Chris';
 person1['age'] = 38;
 person1.greeting = function() {

@@ -16,7 +16,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 
 <div class="note"><strong>注</strong>: 可能であれば、ネイティブ要素は古いユーザーエージェントや支援技術によって広くサポートされているため、<code>link</code> ロールではなくネイティブの {{HTMLElement("a")}} 要素を使用することをお勧めします。 ネイティブ {{HTMLElement("a")}} 要素は、追加のカスタマイズを必要とせずに、デフォルトでキーボードとフォーカスの要件もサポートしています。</div>
 
-<p class="p1"><code><a class="external" href="https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex">tabindex</a></code> 属性は、タブの順序で要素の位置を直接指定するために、このロールで任意に使用できます。</p>
+<p class="p1"><code><a class="external" href="https://www.w3.org/TR/wai-aria-practices/#kbd_roving_tabindex">tabindex</a></code> 属性は、タブの順序で要素の位置を直接指定するために、このロールで任意に使用できます。</p>
 
 <h3 id="Possible_effects_on_user_agents_and_assistive_technology" name="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
 
@@ -34,7 +34,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
  <li class="li2">スクリーン拡大鏡はリンクを拡大することがあります。</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <p><strong>注</strong>: 支援技術がどのようにこの技術を扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</p>
 
@@ -52,20 +52,20 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role
 sap = {ui:{keycodes:{SPACE:32, ENTER:13 }}};
 //リンク上のクリックとキーダウンを処理する
 function navigateLink(evt) {
-    if (evt.type=="click" ||
-        evt.keyCode == sap.ui.keycodes.ENTER) {
-        var ref = evt.target != null ? evt.target : evt.srcElement;
-        if (ref) window.open(ref.getAttribute("href"),"_blank");
-    }
+    if (evt.type=="click" ||
+        evt.keyCode == sap.ui.keycodes.ENTER) {
+        var ref = evt.target != null ? evt.target : evt.srcElement;
+        if (ref) window.open(ref.getAttribute("href"),"_blank");
+    }
 }
 &lt;/script&gt;
 
 &lt;body role="application"&gt;
 
-    &lt;h3&gt;span を使った単純なリンクの構築&lt;/h3&gt;
-    &lt;span href="http://www.w3c.org" onkeydown="navigateLink(event)" onclick="navigateLink(event)" tabindex="0" id="link1" role="link" class="link"&gt;
-      スペースバーまたはエンターキーを使用してこのリンクをアクティブ化します。
-    &lt;/span&gt;
+    &lt;h3&gt;span を使った単純なリンクの構築&lt;/h3&gt;
+    &lt;span href="http://www.w3c.org" onkeydown="navigateLink(event)" onclick="navigateLink(event)" tabindex="0" id="link1" role="link" class="link"&gt;
+      スペースバーまたはエンターキーを使用してこのリンクをアクティブ化します。
+    &lt;/span&gt;
 &lt;/body&gt;
 </pre>
 

@@ -17,7 +17,7 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 ```css
 .myclass {
-  background: background1, background2, ..., backgroundN;
+  background: background1, background2, ..., backgroundN;
 }
 ```
 
@@ -37,15 +37,15 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 
 ```css
 .multi-bg-example {
-  width: 100%;
-  height: 400px;
-  background-image: url(firefox.png),
+  width: 100%;
+  height: 400px;
+  background-image: url(firefox.png),
       url(bubbles.png),
       linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat,
+  background-repeat: no-repeat,
       no-repeat,
       no-repeat;
-  background-position: bottom right,
+  background-position: bottom right,
       left,
       right;
 }

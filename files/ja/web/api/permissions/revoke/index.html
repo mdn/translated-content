@@ -59,9 +59,9 @@ translation_of: Web/API/Permissions/revoke
 <p>この関数をアプリで使用して、それが有する Geolocation API のパーミッションを取り消すように要求できます。</p>
 
 <pre class="brush: js">function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
-    report(result.state);
-  });
+  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
+    report(result.state);
+  });
 }</pre>
 
 <h2 id="Specification" name="Specification">仕様</h2>

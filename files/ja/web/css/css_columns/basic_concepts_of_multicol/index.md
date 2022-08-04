@@ -73,7 +73,7 @@ translation_of: Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 
 ```css
 .container {
-  columns: 3;
+  columns: 3;
 }
 ```
 

@@ -17,7 +17,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 <p>始めに、ビデオフレームを取り出すのに使う {{HTMLElement("video")}} 要素を作成する HTML を追加します:</p>
 
 <pre class="brush: html">&lt;video id="video"&gt;
-  HTML5 &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; 要素をサポートしていません。
+  HTML5 &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; 要素をサポートしていません。
 &lt;/video&gt;
 </pre>
 
@@ -59,7 +59,7 @@ videoElement.src = "Firefox.ogv";</pre>
 <p>また、ビデオの再生が終わったときにアニメーションを停止できるように、video の "ended" イベントにイベントリスナを追加します。そうしなければ、正当な理由がないのに CPU 時間を浪費することになってしまうためです。</p>
 
 <pre class="brush: js">function videoDone() {
-  clearInterval(intervalID);
+  clearInterval(intervalID);
 }</pre>
 
 <p><code>videoDone()</code> 関数は単純に、アニメーションの更新を終わらせるために {{domxref("window.clearInterval()")}} を呼び出します。</p>

@@ -29,7 +29,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
  <tbody>
   <tr>
    <th scope="row">前提知識:</th>
-   <td>基本的なコンピューターの知識、 HTML 、 CSS 、 JavaScript に対する基本的な理解、 <a href="/ja/docs/Learn/Accessibility">前回までの記事</a>に対する理解</td>
+   <td>基本的なコンピューターの知識、 HTML 、 CSS 、 JavaScript に対する基本的な理解、 <a href="/ja/docs/Learn/Accessibility">前回までの記事</a>に対する理解</td>
   </tr>
   <tr>
    <th scope="row">学習目標:</th>
@@ -46,7 +46,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>ウェブアプリがより複雑で動的なものになると、新しいアクセシビリティの機能と問題が明らかになってきます。</p>
 
-<p>例えば、 HTML5 は普遍的なページの機能を定義するためにいくつもの意味論的要素を取り入れました（{{htmlelement("nav")}} 、 {{htmlelement("footer")}} 等）。 これらが利用可能になる以前は、開発者は  <code>&lt;div class="nav"&gt;</code> のように単に {{htmlelement("div")}} を ID や class と共に使っていましたが、メインナビゲーションのようなページ内の機能をプログラムで識別する簡単な方法が無いために問題がありました。</p>
+<p>例えば、 HTML5 は普遍的なページの機能を定義するためにいくつもの意味論的要素を取り入れました（{{htmlelement("nav")}} 、 {{htmlelement("footer")}} 等）。 これらが利用可能になる以前は、開発者は  <code>&lt;div class="nav"&gt;</code> のように単に {{htmlelement("div")}} を ID や class と共に使っていましたが、メインナビゲーションのようなページ内の機能をプログラムで識別する簡単な方法が無いために問題がありました。</p>
 
 <p>初期の解決方法は、ナビゲーションへとリンクさせるため、次のようにページ上部に1つ以上の隠しリンク（もしくは他の何か）を追加することでした。</p>
 
@@ -65,20 +65,20 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <h3 id="Enter_WAI-ARIA" name="Enter_WAI-ARIA">WAI-ARIA の導入</h3>
 
-<p><a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> は W3C によって定められた仕様で、要素に適用できる追加の意味論を提供する一連の HTML 属性を定義しており、それが欠けているどのような場所でもアクセシビリティを向上させます。 この仕様では、主に次の3つの機能があります。</p>
+<p><a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA</a> は W3C によって定められた仕様で、要素に適用できる追加の意味論を提供する一連の HTML 属性を定義しており、それが欠けているどのような場所でもアクセシビリティを向上させます。 この仕様では、主に次の3つの機能があります。</p>
 
 <ul>
- <li><strong>ロール（Role）</strong> — これは要素が何か、もしくは何をするかを定義します。 多くの場合はいわゆるランドマークロール（landmark role）であり、主に HTML5 構造要素の意味論を複製します。 例えば、 <code>role="navigation"</code> ({{htmlelement("nav")}}) や <code>role="complementary"</code> ({{htmlelement("aside")}}) などです。 しかし、それ以外にも別のページ構造を定義するものもあります。 例えば、 <code>role="banner"</code> 、 <code>role="search"</code> 、 <code>role="tabgroup"</code> 、 <code>role="tab"</code> 等で、 UI に多く見られます。</li>
- <li><strong>プロパティ（Property）</strong> — これは要素の性質を定義するものであり、追加の意図や意味論を与えるために使用することができます。 例えば、 <code>aria-required="true"</code> はフォーム入力が有効となるために値を入力しなければならないことを定義し、 <code>aria-labelledby="label"</code> は、要素に ID を追加することで、複数の場合も含めてページ内の他のどの要素からもラベルとして参照することを可能にします。 これは <code>&lt;label for="input"&gt;</code> ではできません。 別の例として、 <code>aria-labelledby</code> を使って主な説明を含む1つの {{htmlelement("div")}} が表の複数セルのラベルであると指定することができますし、画像の代替テキストの代わりとして使用することもできます。 これは、 <code>alt</code> 属性で繰り返すのではなく、ページの既存の情報を画像の代替テキストとして指定します。 <a href="/ja/docs/Learn/Accessibility/HTML#Text_alternatives">代替テキスト</a> で例を確認することができます。</li>
- <li><strong>ステート（State）</strong> — 要素の現在の状態を定義する特別なプロパティです。 例えば、 <code>aria-disabled="true"</code> は、フォーム入力が現在 disabled であることをスクリーンリーダーに対して伝えます。 ステートはプロパティとは異なり、プロパティはアプリのライフサイクルを通して変化しないのに対して、ステートは主に JavaScript によって変更されます。</li>
+ <li><strong>ロール（Role）</strong> — これは要素が何か、もしくは何をするかを定義します。 多くの場合はいわゆるランドマークロール（landmark role）であり、主に HTML5 構造要素の意味論を複製します。 例えば、 <code>role="navigation"</code> ({{htmlelement("nav")}}) や <code>role="complementary"</code> ({{htmlelement("aside")}}) などです。 しかし、それ以外にも別のページ構造を定義するものもあります。 例えば、 <code>role="banner"</code> 、 <code>role="search"</code> 、 <code>role="tabgroup"</code> 、 <code>role="tab"</code> 等で、 UI に多く見られます。</li>
+ <li><strong>プロパティ（Property）</strong> — これは要素の性質を定義するものであり、追加の意図や意味論を与えるために使用することができます。 例えば、 <code>aria-required="true"</code> はフォーム入力が有効となるために値を入力しなければならないことを定義し、 <code>aria-labelledby="label"</code> は、要素に ID を追加することで、複数の場合も含めてページ内の他のどの要素からもラベルとして参照することを可能にします。 これは <code>&lt;label for="input"&gt;</code> ではできません。 別の例として、 <code>aria-labelledby</code> を使って主な説明を含む1つの {{htmlelement("div")}} が表の複数セルのラベルであると指定することができますし、画像の代替テキストの代わりとして使用することもできます。 これは、 <code>alt</code> 属性で繰り返すのではなく、ページの既存の情報を画像の代替テキストとして指定します。 <a href="/ja/docs/Learn/Accessibility/HTML#Text_alternatives">代替テキスト</a> で例を確認することができます。</li>
+ <li><strong>ステート（State）</strong> — 要素の現在の状態を定義する特別なプロパティです。 例えば、 <code>aria-disabled="true"</code> は、フォーム入力が現在 disabled であることをスクリーンリーダーに対して伝えます。 ステートはプロパティとは異なり、プロパティはアプリのライフサイクルを通して変化しないのに対して、ステートは主に JavaScript によって変更されます。</li>
 </ul>
 
 <p>WAI-ARIA 属性の重要な点は、ブラウザーのアクセシビリティ API（スクリーンリーダーはここから情報を取得する）によって提供される情報を除いて、それらはウェブページに何の影響も与えないという点です。 WAI-ARIA はウェブページの構造や DOM に影響を与えませんが、 CSS の要素選択で利用することが可能です。</p>
 
 <div class="note">
-<p><strong>注</strong>: WAI-ARIA の仕様で、ARIA ロールの使用方法と追加情報へのリンクを含む便利なリストを確認することができます。 <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">ロールの定義</a>（英語）を見てください。</p>
+<p><strong>注</strong>: WAI-ARIA の仕様で、ARIA ロールの使用方法と追加情報へのリンクを含む便利なリストを確認することができます。 <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions">ロールの定義</a>（英語）を見てください。</p>
 
-<p>この仕様では、プロパティとステートの追加情報を含んだリストも確認することができます。 <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">ステートとプロパティの定義（すべての aria-* 属性）</a>（英語）を見てください。</p>
+<p>この仕様では、プロパティとステートの追加情報を含んだリストも確認することができます。 <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">ステートとプロパティの定義（すべての aria-* 属性）</a>（英語）を見てください。</p>
 </div>
 
 <h3 id="Where_is_WAI-ARIA_supported" name="Where_is_WAI-ARIA_supported">WAI-ARIA はどこでサポートされていますか？</h3>
@@ -90,49 +90,49 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
  <li>検討しなければいけないオペレーティングシステム、ブラウザー、スクリーンリーダーの組み合わせが大量にある。</li>
 </ol>
 
-<p>最後の点は重要です。 そもそもスクリーンリーダーを使用するためには、オペレーティングシステムが所定のアクセシビリティ API を持つブラウザーを動作させる必要があり、それはスクリーンリーダーが動作するために必要となる情報を提供しなければいけません。 ほとんどの人気の OS は、スクリーンリーダーが動作可能である1つか2つの所定のブラウザーを持っています。 Paciello Group は、この件に関してほぼ最新のデータを投稿しています — <a href="https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/">ラフガイド: ブラウザ、オペレーティングシステム、スクリーンリーダーのサポート</a>（英語）を見てください。</p>
+<p>最後の点は重要です。 そもそもスクリーンリーダーを使用するためには、オペレーティングシステムが所定のアクセシビリティ API を持つブラウザーを動作させる必要があり、それはスクリーンリーダーが動作するために必要となる情報を提供しなければいけません。 ほとんどの人気の OS は、スクリーンリーダーが動作可能である1つか2つの所定のブラウザーを持っています。 Paciello Group は、この件に関してほぼ最新のデータを投稿しています — <a href="https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/">ラフガイド: ブラウザ、オペレーティングシステム、スクリーンリーダーのサポート</a>（英語）を見てください。</p>
 
 <p>次に、ブラウザーが問題となっている ARIA の機能をサポートしているのか、および API を通してそれらを公開しているのかという点を気にする必要があります。 しかし、スクリーンリーダーがそれらの情報を認識し、ユーザーに有益なやり方で伝えているのかという点もまた気にしなければいけません。</p>
 
 <ol>
- <li>ブラウザーのサポート状況は概ね良いです。 本記事の執筆時点で、 <a href="http://caniuse.com/#feat=wai-aria">caniuse.com</a> は全体のブラウザーの WAI-ARIA のサポート状況は 88% だとしています。</li>
- <li>スクリーンリーダーの ARIA のサポート状況はそこまでではありませんが、多くの一般的なスクリーンリーダーはそれに近いものになってきています。 Powermapper による <a href="http://www.powermapper.com/tests/screen-readers/aria/">WAI-ARIA のスクリーンリーダーの互換性</a>（英語）の記事で、サポート状況を確認することができます。</li>
+ <li>ブラウザーのサポート状況は概ね良いです。 本記事の執筆時点で、 <a href="http://caniuse.com/#feat=wai-aria">caniuse.com</a> は全体のブラウザーの WAI-ARIA のサポート状況は 88% だとしています。</li>
+ <li>スクリーンリーダーの ARIA のサポート状況はそこまでではありませんが、多くの一般的なスクリーンリーダーはそれに近いものになってきています。 Powermapper による <a href="http://www.powermapper.com/tests/screen-readers/aria/">WAI-ARIA のスクリーンリーダーの互換性</a>（英語）の記事で、サポート状況を確認することができます。</li>
 </ol>
 
-<p>この記事では、全ての WAI-ARIA の機能と詳細についてカバーするわけではありません。 代わりに、あなたが知るべき最も重要な WAI-ARIA の機能についてカバーします。 もしサポートの詳細について何も記述してしない場合は、その機能が十分にサポートされていると想定してください。 この例外がある場合は、明確に記述します。 </p>
+<p>この記事では、全ての WAI-ARIA の機能と詳細についてカバーするわけではありません。 代わりに、あなたが知るべき最も重要な WAI-ARIA の機能についてカバーします。 もしサポートの詳細について何も記述してしない場合は、その機能が十分にサポートされていると想定してください。 この例外がある場合は、明確に記述します。 </p>
 
 <div class="note">
-<p><strong>注</strong>: JavaScript ライブラリには WAI-ARIA をサポートしているものがありますが、それはライブラリが複雑なフォームコントロールのような UI を生成した場合に、アクセシビリティを向上させるための ARIA 属性を追加することを意味します。 迅速な UI 開発のためにサードパーティーの JavaScript ライブラリを探しているのであれば、その決断を下す際、UI のアクセシビリティのサポートを重要な要素として必ず考慮すべきです。 良い例としては、 jQuery UI（<a href="https://jqueryui.com/about/#deep-accessibility-support">jQuery UI について: ディープアクセシビリティサポート</a>（英語）を見てください）、 <a href="https://www.sencha.com/products/extjs/">ExtJS</a> 、 <a href="https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html">Dojo/Dijit</a> があります。</p>
+<p><strong>注</strong>: JavaScript ライブラリには WAI-ARIA をサポートしているものがありますが、それはライブラリが複雑なフォームコントロールのような UI を生成した場合に、アクセシビリティを向上させるための ARIA 属性を追加することを意味します。 迅速な UI 開発のためにサードパーティーの JavaScript ライブラリを探しているのであれば、その決断を下す際、UI のアクセシビリティのサポートを重要な要素として必ず考慮すべきです。 良い例としては、 jQuery UI（<a href="https://jqueryui.com/about/#deep-accessibility-support">jQuery UI について: ディープアクセシビリティサポート</a>（英語）を見てください）、 <a href="https://www.sencha.com/products/extjs/">ExtJS</a> 、 <a href="https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html">Dojo/Dijit</a> があります。</p>
 </div>
 
 <h3 id="When_should_you_use_WAI-ARIA" name="When_should_you_use_WAI-ARIA">いつ WAI-ARIA を使うべき？</h3>
 
-<p>私達は WAI-ARIA が作られるに至ったいくつかの問題について最初の方で話しましたが、基本的には WAI-ARIA が有用となる4つの主な場面があります。</p>
+<p>私達は WAI-ARIA が作られるに至ったいくつかの問題について最初の方で話しましたが、基本的には WAI-ARIA が有用となる4つの主な場面があります。</p>
 
 <ol>
- <li><strong>道しるべ/ランドマーク（Signpost/Landmark）</strong>: ARIA の <code>role</code> 属性の値は、HTML 要素の意味論（例えば {{htmlelement("nav")}}）を再現するランドマークとして振る舞ったり、 <code>search</code> 、 <code>tabgroup</code> 、 <code>tab</code> 、 <code>listbox</code> のようにHTML5 の意味論の範囲外となる道しるべ（signpost）を異なる機能エリアに提供することができます。</li>
- <li><strong>動的なコンテンツの更新</strong>: スクリーンリーダーは、絶えず更新されるコンテンツが得意ではない傾向があります。 ARIA の <code>aria-live</code> を使うことで、 <a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> や <a href="/ja/docs/Web/API/Document_Object_Model">DOM API</a> を通してコンテンツが更新された場合に、スクリーンリーダーのユーザーに対してそれを伝えることができます。</li>
- <li><strong>キーボードのアクセシビリティの向上</strong>: キーボードのアクセシビリティを最初から持つ HTML 要素がありますが、 JavaScript を使ってそれ以外の要素に同じようなインタラクションをさせる場合、スクリーンリーダーにとって困難が生じます。 こうしなければならない場合、 WAI-ARIA は他の要素に対してフォーカスを得る手段を提供しています（<code>tabindex</code> の使用）。</li>
- <li><strong>意味論的ではないコントロールのアクセシビリティ</strong>: ネストした一連の <code>&lt;div&gt;</code> が CSS/JavaScript と共に複雑な UI 機能を構成していたり、ネイティブのコントロールが JavaScript によって大きく強化/変更されている場合、アクセシビリティの提供は困難になります。 そこに意味論や手がかりが無ければ、スクリーンリーダーのユーザーはその機能が何をするのか判断するのが難しくなるでしょう。 このような状況では、 <code>button</code> 、 <code>listbox</code> 、または <code>tabgroup</code> といったロールの組み合わせ、もしくは <code>aria-required</code> や <code>aria-posinset</code> などのプロパティにより機能の手がかりを提供することで、 ARIA は足りないものを補うことができます。</li>
+ <li><strong>道しるべ/ランドマーク（Signpost/Landmark）</strong>: ARIA の <code>role</code> 属性の値は、HTML 要素の意味論（例えば {{htmlelement("nav")}}）を再現するランドマークとして振る舞ったり、 <code>search</code> 、 <code>tabgroup</code> 、 <code>tab</code> 、 <code>listbox</code> のようにHTML5 の意味論の範囲外となる道しるべ（signpost）を異なる機能エリアに提供することができます。</li>
+ <li><strong>動的なコンテンツの更新</strong>: スクリーンリーダーは、絶えず更新されるコンテンツが得意ではない傾向があります。 ARIA の <code>aria-live</code> を使うことで、 <a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> や <a href="/ja/docs/Web/API/Document_Object_Model">DOM API</a> を通してコンテンツが更新された場合に、スクリーンリーダーのユーザーに対してそれを伝えることができます。</li>
+ <li><strong>キーボードのアクセシビリティの向上</strong>: キーボードのアクセシビリティを最初から持つ HTML 要素がありますが、 JavaScript を使ってそれ以外の要素に同じようなインタラクションをさせる場合、スクリーンリーダーにとって困難が生じます。 こうしなければならない場合、 WAI-ARIA は他の要素に対してフォーカスを得る手段を提供しています（<code>tabindex</code> の使用）。</li>
+ <li><strong>意味論的ではないコントロールのアクセシビリティ</strong>: ネストした一連の <code>&lt;div&gt;</code> が CSS/JavaScript と共に複雑な UI 機能を構成していたり、ネイティブのコントロールが JavaScript によって大きく強化/変更されている場合、アクセシビリティの提供は困難になります。 そこに意味論や手がかりが無ければ、スクリーンリーダーのユーザーはその機能が何をするのか判断するのが難しくなるでしょう。 このような状況では、 <code>button</code> 、 <code>listbox</code> 、または <code>tabgroup</code> といったロールの組み合わせ、もしくは <code>aria-required</code> や <code>aria-posinset</code> などのプロパティにより機能の手がかりを提供することで、 ARIA は足りないものを補うことができます。</li>
 </ol>
 
-<p>一点忘れてはいけないのが、 <strong>WAI-ARIA は必要な場合のみ使用する</strong>という点です。 理想的には、スクリーンリーダーのユーザーの理解に必要となる意味論の提供は、常に <a href="/ja/docs/Learn/Accessibility/HTML">ネイティブの HTML 機能</a>  を使用して行うべきです。 しかし、コードの制御が限定されていたり、 HTML 要素への実装が容易ではない複雑なものを作っているなどの理由で、これが困難となるケースがあります。 そのような場合、 WAI-ARIA はアクセシビリティを向上させる上で価値のあるツールとなります。</p>
+<p>一点忘れてはいけないのが、 <strong>WAI-ARIA は必要な場合のみ使用する</strong>という点です。 理想的には、スクリーンリーダーのユーザーの理解に必要となる意味論の提供は、常に <a href="/ja/docs/Learn/Accessibility/HTML">ネイティブの HTML 機能</a>  を使用して行うべきです。 しかし、コードの制御が限定されていたり、 HTML 要素への実装が容易ではない複雑なものを作っているなどの理由で、これが困難となるケースがあります。 そのような場合、 WAI-ARIA はアクセシビリティを向上させる上で価値のあるツールとなります。</p>
 
 <p>もう一度言いますが、必要な時だけ使ってください！</p>
 
 <div class="note">
-<p><strong>注</strong>: 実際のさまざまなユーザーによってあなたのサイトをテストすることも忘れないでください — 障害のないユーザー、スクリーンリーダーを使用するユーザー、キーボードナビゲーションを使用するユーザーなどです。 どれだけうまく動作するかという点で、彼らはあなたよりもうまく観察してくれるでしょう。 </p>
+<p><strong>注</strong>: 実際のさまざまなユーザーによってあなたのサイトをテストすることも忘れないでください — 障害のないユーザー、スクリーンリーダーを使用するユーザー、キーボードナビゲーションを使用するユーザーなどです。 どれだけうまく動作するかという点で、彼らはあなたよりもうまく観察してくれるでしょう。 </p>
 </div>
 
 <h2 id="Practical_WAI-ARIA_implementations" name="Practical_WAI-ARIA_implementations">実際的な WAI-ARIA の実装</h2>
 
-<p>次のセクションでは、実際の例と共に、より詳細な4つのエリアを見てみます。 続行する前に、これから見る例をテストできるように、スクリーンリーダーのテスト環境を用意してください。 </p>
+<p>次のセクションでは、実際の例と共に、より詳細な4つのエリアを見てみます。 続行する前に、これから見る例をテストできるように、スクリーンリーダーのテスト環境を用意してください。 </p>
 
-<p>詳細は <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">スクリーンリーダーのテスト</a> を確認してください。</p>
+<p>詳細は <a href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">スクリーンリーダーのテスト</a> を確認してください。</p>
 
 <h3 id="SignpostsLandmarks" name="SignpostsLandmarks">道しるべ/ランドマーク（Signpost/Landmark）</h3>
 
-<p>WAI-ARIA は <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions"><code>role</code> 属性</a>（英語）をブラウザーに追加することで、必要に応じてあなたのサイトに付加的な意味論的<span class="tlid-translation translation"><span title="">価値</span></span>を追加することができます。 これが有用となる最初の領域は、スクリーンリーダーのユーザーが共通のページ要素を見つけることができるようになる情報の提供です。 例を見てみましょう。私達の <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles">website-no-roles</a> の例（<a href="http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/">実際の動作</a>）は、次の構造を持っています。</p>
+<p>WAI-ARIA は <a href="https://www.w3.org/TR/wai-aria-1.1/#role_definitions"><code>role</code> 属性</a>（英語）をブラウザーに追加することで、必要に応じてあなたのサイトに付加的な意味論的<span class="tlid-translation translation"><span title="">価値</span></span>を追加することができます。 これが有用となる最初の領域は、スクリーンリーダーのユーザーが共通のページ要素を見つけることができるようになる情報の提供です。 例を見てみましょう。私達の <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles">website-no-roles</a> の例（<a href="http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/">実際の動作</a>）は、次の構造を持っています。</p>
 
 <pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;...&lt;/h1&gt;
@@ -154,21 +154,21 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>もしあなたがモダンなブラウザーでスクリーンリーダーのテストをした場合、いくつかの有用な情報を手に入れるでしょう。 例えば、 VoiceOver は次の内容を読み上げます:</p>
 
 <ul>
- <li><code>&lt;header&gt;</code> 要素の上 — "banner, 2 items"（見出しと <code>&lt;nav&gt;</code> を含んでいる）</li>
- <li><code>&lt;nav&gt;</code> 要素の上 — "navigation 2 items"（リストとフォームを含む）</li>
- <li><code>&lt;main&gt;</code> 要素の上 — "main 2 items"（記事（article）と余談（aside）を含む）</li>
- <li><code>&lt;aside&gt;</code> 要素の上 — "complementary 2 items"（見出しとリストを含む）</li>
+ <li><code>&lt;header&gt;</code> 要素の上 — "banner, 2 items"（見出しと <code>&lt;nav&gt;</code> を含んでいる）</li>
+ <li><code>&lt;nav&gt;</code> 要素の上 — "navigation 2 items"（リストとフォームを含む）</li>
+ <li><code>&lt;main&gt;</code> 要素の上 — "main 2 items"（記事（article）と余談（aside）を含む）</li>
+ <li><code>&lt;aside&gt;</code> 要素の上 — "complementary 2 items"（見出しとリストを含む）</li>
  <li>検索フォーム入力の上 — "Search query, insertion at beginning of text"</li>
- <li><code>&lt;footer&gt;</code> 要素の上 — "footer 1 item"</li>
+ <li><code>&lt;footer&gt;</code> 要素の上 — "footer 1 item"</li>
 </ul>
 
 <p>VoiceOver の Landmarks メニューを見ると（VoiceOver キー + U でアクセスし、矢印キーでメニューを選択する）、多くの要素が素早くアクセスできるように綺麗に並んでいることが確認できます。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14420/landmarks-list.png" style="display: block; margin: 0 auto;"></p>
 
-<p>しかし、これは改善することができます。 検索フォームはユーザーが見つけたいと考える重要なランドマークですが、ここでは Landmarks メニューの中に列挙されておらず、検索入力<code>（&lt;input type="search"&gt;</code>）であるということ以上に目立つランドマークとしても扱われていません。 加えて、いくつかの古いブラウザー（特に IE8）は HTML5 要素の意味論を認識しません。</p>
+<p>しかし、これは改善することができます。 検索フォームはユーザーが見つけたいと考える重要なランドマークですが、ここでは Landmarks メニューの中に列挙されておらず、検索入力<code>（&lt;input type="search"&gt;</code>）であるということ以上に目立つランドマークとしても扱われていません。 加えて、いくつかの古いブラウザー（特に IE8）は HTML5 要素の意味論を認識しません。</p>
 
-<p>ARIA の機能を使用してこれを改善しましょう。 まず、 HTMLに対していくつかの <code>role</code> 属性を追加します。 私達のオリジナルファイルをコピーするか（<a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html">index.html</a> と <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css">style.css</a> を参照）、 <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> の例（<a href="http://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">実際の動作</a>）へ移動すると、次の構造を確認できます。</p>
+<p>ARIA の機能を使用してこれを改善しましょう。 まず、 HTMLに対していくつかの <code>role</code> 属性を追加します。 私達のオリジナルファイルをコピーするか（<a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/index.html">index.html</a> と <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/website-no-roles/style.css">style.css</a> を参照）、 <a href="https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles">website-aria-roles</a> の例（<a href="http://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">実際の動作</a>）へ移動すると、次の構造を確認できます。</p>
 
 <pre class="brush: html">&lt;header&gt;
   &lt;h1&gt;...&lt;/h1&gt;
@@ -187,7 +187,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 &lt;footer&gt;...&lt;/footer&gt;</pre>
 
-<p>この例では、ボーナス機能も提供しています — {{htmlelement("input")}} は <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> 属性が設定されていますが、これは {{htmlelement("label")}} 要素が含まれていない場合でもスクリーンリーダーによって読み上げられる説明ラベルを設定します。 こういうケースでは、この機能はとても便利です — このような検索フォームはよくあるものであり、簡単に識別できるので、見えるラベルを設定するとデザインを台無しにしてしまうのです。</p>
+<p>この例では、ボーナス機能も提供しています — {{htmlelement("input")}} は <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> 属性が設定されていますが、これは {{htmlelement("label")}} 要素が含まれていない場合でもスクリーンリーダーによって読み上げられる説明ラベルを設定します。 こういうケースでは、この機能はとても便利です — このような検索フォームはよくあるものであり、簡単に識別できるので、見えるラベルを設定するとデザインを台無しにしてしまうのです。</p>
 
 <pre class="brush: html">&lt;input type="search" name="q" placeholder="Search query" aria-label="Search through site content"&gt;</pre>
 
@@ -198,7 +198,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
  <li>フォーム入力がハイライトされた時、 <code>aria-label</code> に含まれているテキストが読み上げられる。</li>
 </ul>
 
-<p>さらに、このサイトは IE8 のような古いブラウザーを使用しているユーザーにとってもアクセス可能となる可能性が高いので、そのために ARIA ロールを含める価値もあります。 そして、もしあなたのサイトが何らかの理由により <code>&lt;div&gt;</code> のみで構成されているなら、必要な意味論を提供するために確実に ARIA ロールを含めるべきです！</p>
+<p>さらに、このサイトは IE8 のような古いブラウザーを使用しているユーザーにとってもアクセス可能となる可能性が高いので、そのために ARIA ロールを含める価値もあります。 そして、もしあなたのサイトが何らかの理由により <code>&lt;div&gt;</code> のみで構成されているなら、必要な意味論を提供するために確実に ARIA ロールを含めるべきです！</p>
 
 <p>改善された検索フォームは、 HTML5 で利用できる意味論以上に ARIA が可能とすることを見せてくれました。 あなたは以下の記事、特に <a href="#accessibility_of_non-semantic_controls">意味論的でないコントロールのアクセシビリティ</a> のセクションで、より多くの意味論や ARIA のプロパティ/属性が持つ力を見ることがでしょう。 まずは、 ARIA が動的コンテンツの更新をどのように助けるかを見てみましょう。</p>
 
@@ -208,7 +208,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>問題はモダンなウェブアプリが静的なテキストだけを使うことは少ないという点です。 それらは動的に更新されるコンテンツ、すなわち、<a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>、<a href="/ja/docs/Web/API/Fetch_API">Fetch</a>、<a href="/ja/docs/Web/API/Document_Object_Model">DOM API</a> などの機構を通してページ全体をリロードすることなく更新を行うコンテンツで構成されることが多いです。 このような箇所はしばしば<strong>ライブリージョン（live region）</strong>と呼ばれます。</p>
 
-<p>簡単な例を見てみましょう。 <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html">aria-no-live.html</a> をご覧ください（もしくは <a href="http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html">動作版をご覧ください</a>）。 この例では、ランダムに引用文を表示する1つの箱があります。</p>
+<p>簡単な例を見てみましょう。 <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html">aria-no-live.html</a> をご覧ください（もしくは <a href="http://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html">動作版をご覧ください</a>）。 この例では、ランダムに引用文を表示する1つの箱があります。</p>
 
 <pre class="brush: html">&lt;section&gt;
   &lt;h1&gt;Random quote&lt;/h1&gt;
@@ -217,62 +217,62 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
   &lt;/blockquote&gt;
 &lt;/section&gt;</pre>
 
-<p>JavaScript が <code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> を通して JSON ファイルを読み込みます。 この JSON ファイルには、複数のランダムな引用文とその著者が含まれています。 読み込みの完了後に <code><a href="/ja/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code> ループを開始し、引用文の表示を10秒ごとに新しいものに切り替えます。</p>
+<p>JavaScript が <code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> を通して JSON ファイルを読み込みます。 この JSON ファイルには、複数のランダムな引用文とその著者が含まれています。 読み込みの完了後に <code><a href="/ja/docs/Web/API/WindowTimers/setInterval">setInterval()</a></code> ループを開始し、引用文の表示を10秒ごとに新しいものに切り替えます。</p>
 
 <pre class="brush: js">var intervalID = window.setInterval(showQuote, 10000);</pre>
 
 <p>これは正しく動作しますが、アクセシビリティとしてはよくありません。 コンテンツの更新がスクリーンリーダーに検知されないため、ユーザーは何が起こっているかを知ることができないからです。 これはつまらない例ですが、更新され続けるコンテンツを多く含む複雑な UI をあなたが作ることを想像してください（チャットルームや戦略ゲームの UI、動的に更新されるショッピングカートの表示など）。 ユーザーに更新を知らせる何かしらの手段がない限り、それがどんなに実用的なアプリであっても使いこなすことはできないでしょう。</p>
 
-<p>幸いなことに WAI-ARIA はそのような通知を行う便利な機構を提供しています。 それが <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-live">aria-live</a></code> プロパティです。 このプロパティを要素に適用すると、スクリーンリーダーが更新されたコンテンツを読み上げてくれるようになります。 どのような緊急性をもってコンテンツを読み上げてくれるかは、次のように属性値によって変わります。</p>
+<p>幸いなことに WAI-ARIA はそのような通知を行う便利な機構を提供しています。 それが <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-live">aria-live</a></code> プロパティです。 このプロパティを要素に適用すると、スクリーンリーダーが更新されたコンテンツを読み上げてくれるようになります。 どのような緊急性をもってコンテンツを読み上げてくれるかは、次のように属性値によって変わります。</p>
 
 <ul>
- <li><code>off:</code> デフォルト値。更新は通知されない (should not)。</li>
+ <li><code>off:</code> デフォルト値。更新は通知されない (should not)。</li>
  <li><code>polite</code>: 更新はユーザが暇になったときのみ通知される (should)。</li>
  <li><code>assertive</code>: 更新は可能な限り早くユーザに通知される (should)。</li>
 </ul>
 
-<p><a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html">aria-no-live.html</a> と <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/quotes.json">quotes.json</a> のコピーを作成し、<code>&lt;section&gt;</code> タグの内容を次のように更新してください。</p>
+<p><a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html">aria-no-live.html</a> と <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/quotes.json">quotes.json</a> のコピーを作成し、<code>&lt;section&gt;</code> タグの内容を次のように更新してください。</p>
 
 <pre class="brush: html">&lt;section aria-live="assertive"&gt;</pre>
 
 <p>これにより、コンテンツの更新があった際にスクリーンリーダーがその内容を読み上げてくれるようになります。</p>
 
 <div class="note">
-<p><strong>注</strong>: <code>file://</code> URL をもつページから <code>XMLHttpRequest</code> を呼び出そうとするとほとんどのブラウザーはセキュリティ例外を投げます。 例えば、（ダブルクリックなどにより）ファイルを直接ブラウザーで読み込んだ場合に <code>file://</code> URLで開かれます。 動作させるためには、 ウェブサーバー（<a href="/ja/docs/Learn/Common_questions/Using_Github_pages">GitHub を利用</a>するなど）やローカルウェブサーバー（<a href="http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python の SimpleHTTPServer</a>（英語）など）にファイルをアップロードする必要があります。</p>
+<p><strong>注</strong>: <code>file://</code> URL をもつページから <code>XMLHttpRequest</code> を呼び出そうとするとほとんどのブラウザーはセキュリティ例外を投げます。 例えば、（ダブルクリックなどにより）ファイルを直接ブラウザーで読み込んだ場合に <code>file://</code> URLで開かれます。 動作させるためには、 ウェブサーバー（<a href="/ja/docs/Learn/Common_questions/Using_Github_pages">GitHub を利用</a>するなど）やローカルウェブサーバー（<a href="http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/">Python の SimpleHTTPServer</a>（英語）など）にファイルをアップロードする必要があります。</p>
 </div>
 
-<p>加えて、考慮すべきことがあります。 テキストの更新された部分だけを読み上げるべきかどうかです。 常に見出し全体を読み上げる方が、何を読み上げられているかをユーザーが認識できるという点で望ましいかもしれません。 その対象に <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-atomic">aria-atomic</a></code> プロパティを追加することで、このような動作を得ることができます。 手元の <code>&lt;section&gt;</code> タグを再度更新して、次のようにしてください。</p>
+<p>加えて、考慮すべきことがあります。 テキストの更新された部分だけを読み上げるべきかどうかです。 常に見出し全体を読み上げる方が、何を読み上げられているかをユーザーが認識できるという点で望ましいかもしれません。 その対象に <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-atomic">aria-atomic</a></code> プロパティを追加することで、このような動作を得ることができます。 手元の <code>&lt;section&gt;</code> タグを再度更新して、次のようにしてください。</p>
 
 <pre class="brush: html">&lt;section aria-live="assertive" aria-atomic="true"&gt;</pre>
 
-<p>この <code>aria-atomic="true"</code> 属性が、更新された一部分だけではなく、要素全体のコンテンツを1つのまとまりとして読み上げるようスクリーンリーダーに伝えます。</p>
+<p>この <code>aria-atomic="true"</code> 属性が、更新された一部分だけではなく、要素全体のコンテンツを1つのまとまりとして読み上げるようスクリーンリーダーに伝えます。</p>
 
 <div class="note">
-<p><strong>注</strong>: 完成した例は <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html">aria-live.html</a> をご覧ください（もしくは<a href="http://mdn.github.io/learning-area/accessibility/aria/aria-live.html">動作版をご覧ください</a>）。</p>
+<p><strong>注</strong>: 完成した例は <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html">aria-live.html</a> をご覧ください（もしくは<a href="http://mdn.github.io/learning-area/accessibility/aria/aria-live.html">動作版をご覧ください</a>）。</p>
 </div>
 
 <div class="note">
-<p><strong>注</strong>: <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant">aria-relevant</a></code> プロパティはライブリージョンが更新された際に何が読み上げられるかを制御するのに非常に役に立ちます。 例えば、追加や削除をされた内容だけを読み上げさせることもできます。</p>
+<p><strong>注</strong>: <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-relevant">aria-relevant</a></code> プロパティはライブリージョンが更新された際に何が読み上げられるかを制御するのに非常に役に立ちます。 例えば、追加や削除をされた内容だけを読み上げさせることもできます。</p>
 </div>
 
 <h3 id="Enhancing_keyboard_accessibility" name="Enhancing_keyboard_accessibility">キーボードでのアクセシビリティの拡張</h3>
 
-<p>このモジュールの他の箇所でも何度か言及したように、アクセシビリティという観点での HTML がもつ重要な能力の1つが、キーボードでのアクセシビリティが組み込まれていることです。 キーボードから、ボタンやフォームコントロール、リンクなどの機能にアクセスできます。 一般的に、タブキーでコントロール間を移動したり、エンター/リターンキーでコントロールの選択や活性化をしたり、必要に応じたその他の制御（例えば、上下矢印キーでの <code>&lt;select&gt;</code> ボックス内のオプション間の移動）ができます。</p>
+<p>このモジュールの他の箇所でも何度か言及したように、アクセシビリティという観点での HTML がもつ重要な能力の1つが、キーボードでのアクセシビリティが組み込まれていることです。 キーボードから、ボタンやフォームコントロール、リンクなどの機能にアクセスできます。 一般的に、タブキーでコントロール間を移動したり、エンター/リターンキーでコントロールの選択や活性化をしたり、必要に応じたその他の制御（例えば、上下矢印キーでの <code>&lt;select&gt;</code> ボックス内のオプション間の移動）ができます。</p>
 
 <p>しかし、時には（ボタンや他のタイプのコントロールとして）意味論的でない要素や正しい用途ではないフォーカス可能な要素を利用するコードを書かざるをえないこともあるでしょう。 あなたが引き継いだ作りの悪いコードを修正したり、そのようなコードを必要とする複雑なウィジェットを作ったりする場合があるかもしれません。</p>
 
-<p>フォーカスできないコードをフォーカス可能にするために、WAI-ARIA では <code>tabindex</code> 属性を拡張して次のようにいくつかの値を加えています。</p>
+<p>フォーカスできないコードをフォーカス可能にするために、WAI-ARIA では <code>tabindex</code> 属性を拡張して次のようにいくつかの値を加えています。</p>
 
 <ul>
- <li><code>tabindex="0"</code> — 上で示したように、この値は通常タブキーでの移動対象とならない要素をタブ移動可能にします。 この値は <code>tabindex</code> の値の中で最も便利なものです。</li>
+ <li><code>tabindex="0"</code> — 上で示したように、この値は通常タブキーでの移動対象とならない要素をタブ移動可能にします。 この値は <code>tabindex</code> の値の中で最も便利なものです。</li>
  <li><code>tabindex="-1"</code> — この値は通常タブキーでの移動対象とならない要素がプログラム的にフォーカスを受け付けられるようにします。 例えば、JavaScript を利用したりリンクのターゲットとしてフォーカスするケースです。</li>
 </ul>
 
-<p>より詳細な議論や典型的な実装例については、HTML のアクセシビリティに関する記事 —  <a href="/ja/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">キーボード・アクセシビリティを呼び戻すように盛り込む</a> をご覧ください。</p>
+<p>より詳細な議論や典型的な実装例については、HTML のアクセシビリティに関する記事 —  <a href="/ja/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">キーボード・アクセシビリティを呼び戻すように盛り込む</a> をご覧ください。</p>
 
 <h3 id="Accessibility_of_non-semantic_controls" name="Accessibility_of_non-semantic_controls">意味論的でないコントロールのアクセシビリティ</h3>
 
-<p>このセクションの内容は前セクションの続きです。 多くの入れ子になった <code>&lt;div&gt;</code> 要素と CSS/JavaScript を利用して複雑な UI 機能を構築した場合、また、JavaScript で本来のコントロールの機能を拡張/改変した場合を考えてみましょう。 そのようなときには、キーボードでのアクセシビリティが損なわれるだけでなく、スクリーンリーダーのユーザーが各機能のふるまいを理解することは何らかの意味論や手がかりがない限り困難となってしまう。 そのような状況においても、ARIA はそこにあるべき意味論を補足する手助けができます。</p>
+<p>このセクションの内容は前セクションの続きです。 多くの入れ子になった <code>&lt;div&gt;</code> 要素と CSS/JavaScript を利用して複雑な UI 機能を構築した場合、また、JavaScript で本来のコントロールの機能を拡張/改変した場合を考えてみましょう。 そのようなときには、キーボードでのアクセシビリティが損なわれるだけでなく、スクリーンリーダーのユーザーが各機能のふるまいを理解することは何らかの意味論や手がかりがない限り困難となってしまう。 そのような状況においても、ARIA はそこにあるべき意味論を補足する手助けができます。</p>
 
 <h4 id="Form_validation_and_error_alerts" name="Form_validation_and_error_alerts">フォーム検査とエラー警告</h4>
 
@@ -297,7 +297,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
   <pre class="brush: html">&lt;p&gt;Fields marked with an asterisk (*) are required.&lt;/p&gt;
 訳: &lt;p&gt;アスタリスク（*）が付いているフィールドは必須です。&lt;/p&gt;</pre>
  </li>
- <li>これは視覚的に意味をなしますが、スクリーンリーダーのユーザーにとっては、理解するのがそれほど容易ではありません。 さいわい、WAI-ARIA には、フォーム入力欄を埋める必要があることをユーザーに伝えるべきだとスクリーンリーダーにヒントを与えるための、<code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-required">aria-required</a></code> 属性があります。 <code>&lt;input&gt;</code>  要素を次のように更新してください。
+ <li>これは視覚的に意味をなしますが、スクリーンリーダーのユーザーにとっては、理解するのがそれほど容易ではありません。 さいわい、WAI-ARIA には、フォーム入力欄を埋める必要があることをユーザーに伝えるべきだとスクリーンリーダーにヒントを与えるための、<code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-required">aria-required</a></code> 属性があります。 <code>&lt;input&gt;</code>  要素を次のように更新してください。
   <pre class="brush: html">&lt;input type="text" name="name" id="name" aria-required="true"&gt;
 
 &lt;input type="number" name="age" id="age" aria-required="true"&gt;</pre>
@@ -316,7 +316,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 
 <p>フォーム要素の状態を示すための有用なプロパティやステートは、ほかにもたくさんあります。 例えば、フォーム・フィールドが無効化されていることを示すには、<span class="subtitle"><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> </span>が使えます。 多くのブラウザーは、無効化されたフォーム・フィールドを単に飛ばすだけでしょうし、無効化されたフォーム・フィールドは、スクリーンリーダーに読み上げられることすらないでしょう。 しかし、無効化されたフォーム・フィールドが認識される場合もあるでしょう。 ですから、無効化されている入力欄が実際に無効化されているのだ、とスクリーンリーダーに知らせるために、この（<span class="subtitle"><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code></span> という）属性を含めておくことは、良い考えです。</p>
 
-<p>もし入力欄の無効化ステートが変化する可能性が高いなら、その変化が起きた時点と、その結果どうなったのかを示すことも、良い考えです。 例えば、<span class="subtitle"><a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a>  </span>のデモには、チェックされると他のフォーム入力欄への更なる情報の入力を可能とするようなチェックボックスがあります。 次のように隠しライブリージョンを設定してあります。</p>
+<p>もし入力欄の無効化ステートが変化する可能性が高いなら、その変化が起きた時点と、その結果どうなったのかを示すことも、良い考えです。 例えば、<span class="subtitle"><a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html">form-validation-checkbox-disabled.html</a>  </span>のデモには、チェックされると他のフォーム入力欄への更なる情報の入力を可能とするようなチェックボックスがあります。 次のように隠しライブリージョンを設定してあります。</p>
 
 <pre class="brush: html">&lt;p class="hidden-alert" aria-live="assertive"&gt;&lt;/p&gt;</pre>
 
@@ -343,7 +343,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>この課程の中で既に二、三回、ボタンやリンクやフォーム要素に本来備わったアクセシビリティ（および、ボタンやリンクやフォーム要素の外見を模倣するために他の要素を使うことの背後に隠れた、アクセシビリティの問題）について述べました（HTML アクセシビリティの記事の <a href="/ja/docs/Learn/Accessibility/HTML#UI_controls">UI コントロール</a> と、上記の <a href="#enhancing_keyboard_accessibility">キーボードでのアクセシビリティの拡張</a> を参照）。<br>
  基本的には、多くの場合、<code>tabindex</code> とほんの少しの JavaScript を使えば、それほど問題を生じずにキーボード・アクセシビリティを追加して呼び戻せます。</p>
 
-<p>しかし、スクリーンリーダーについてはどうでしょうか？  スクリーンリーダーはそれでもまだ、そうした要素をボタンとは見なさないことでしょう。 もし <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> の例をスクリーンリーダーで試してみれば、見せかけのボタンは「Click me!, group（クリックしてください！、グループ）」のような語句を使って報告されるでしょうし、それは明らかに混乱を招くものです。</p>
+<p>しかし、スクリーンリーダーについてはどうでしょうか？  スクリーンリーダーはそれでもまだ、そうした要素をボタンとは見なさないことでしょう。 もし <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> の例をスクリーンリーダーで試してみれば、見せかけのボタンは「Click me!, group（クリックしてください！、グループ）」のような語句を使って報告されるでしょうし、それは明らかに混乱を招くものです。</p>
 
 <p>WAI-ARIA ロールを用いてこれを修正できます。 <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> のローカルコピーを作って、ボタンとしての <code>&lt;div&gt;</code> の各々に <code><a href="https://www.w3.org/TR/wai-aria-1.1/#button">role="button"</a></code> と追加してください。 例えば次のようにします。</p>
 
@@ -366,9 +366,9 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 <p>ものごとを改善するために、わたしたちは、<a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html">aria-tabbed-info-box.html</a> と呼ばれる、本例の新たなバージョンを作成しました（<a href="http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html">これがライブ版で動くところも参照</a>）。 タブ付きのインターフェイスの構造を次のように更新しておきました。</p>
 
 <pre class="brush: html">&lt;ul role="tablist"&gt;
-  &lt;li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0"&gt;Tab 1&lt;/li&gt;
-  &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0"&gt;Tab 2&lt;/li&gt;
-  &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0"&gt;Tab 3&lt;/li&gt;
+  &lt;li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0"&gt;Tab 1&lt;/li&gt;
+  &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0"&gt;Tab 2&lt;/li&gt;
+  &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0"&gt;Tab 3&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="panels"&gt;
   &lt;article class="active-panel" role="tabpanel" aria-hidden="false"&gt;
@@ -383,7 +383,7 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
 &lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>注</strong>:  ここでの最も際立った変更点は、この例にもともと存在していたリンクを削除して、単にリスト項目をタブとして使ったことです。 このようにした理由は、スクリーンリーダーのユーザーにとっての物事の紛らわしさを減らせるからであり（これらのリンクは、実際にどこかへ連れて行ってくれるものではなく、ただ見かけを変化させるだけのものなのです）、また、セット機能における setsize/position が、よりうまく機能できるようになるからです。 setsize/position がリンク上に設定されている場合、ブラウザーは、「3 分の 1」「3 分の 2」などではなく、常に「1 分の 1」と報告し続けます。</p>
+<p><strong>注</strong>:  ここでの最も際立った変更点は、この例にもともと存在していたリンクを削除して、単にリスト項目をタブとして使ったことです。 このようにした理由は、スクリーンリーダーのユーザーにとっての物事の紛らわしさを減らせるからであり（これらのリンクは、実際にどこかへ連れて行ってくれるものではなく、ただ見かけを変化させるだけのものなのです）、また、セット機能における setsize/position が、よりうまく機能できるようになるからです。 setsize/position がリンク上に設定されている場合、ブラウザーは、「3 分の 1」「3 分の 2」などではなく、常に「1 分の 1」と報告し続けます。</p>
 </div>
 
 <p>新たな機能は次の通りです。</p>
@@ -394,13 +394,13 @@ translation_of: Learn/Accessibility/WAI-ARIA_basics
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-hidden">aria-hidden</a></code> — スクリーンリーダーに読み上げられないように、要素を隠します。 別のタブがユーザーにより選択されると、その別のタブ上のこの属性の値が、JavaScript を介して更新されます。</li>
  <li><code>tabindex="0"</code> — リンクを削除したので、リスト項目にキーボード・フォーカスを与えるためには、リスト項目にこの属性を与える必要があります。</li>
  <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-setsize">aria-setsize</a></code> — 要素が一連のもののうちの一部なのだということと、その一連のものの中にいくつの項目があるのかということを、スクリーンリーダーに対して指定することが、このプロパティによって可能となります。</li>
- <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-posinset">aria-posinset</a></code> —  一連のものの中で要素がどの位置にあるのかを指定することが、このプロパティによって可能となります。 このプロパティを <code>aria-setsize</code> と一緒に用いると、現在「3 分の 1」の項目にいます、などと知らせるのに十分な情報を、スクリーンリーダーに対して提供してくれます。 多くの場合、ブラウザーは、要素の階層構造からこの情報を推測できるはずですが、<code>aria-posinset</code> は、更なる手がかりを与えるのに確かに役立ちます。</li>
+ <li><code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-posinset">aria-posinset</a></code> —  一連のものの中で要素がどの位置にあるのかを指定することが、このプロパティによって可能となります。 このプロパティを <code>aria-setsize</code> と一緒に用いると、現在「3 分の 1」の項目にいます、などと知らせるのに十分な情報を、スクリーンリーダーに対して提供してくれます。 多くの場合、ブラウザーは、要素の階層構造からこの情報を推測できるはずですが、<code>aria-posinset</code> は、更なる手がかりを与えるのに確かに役立ちます。</li>
 </ul>
 
 <p>わたしたちの検査では、この新たな構造は、物事を全体的に改善するのに確かに役立ちました。 今や、タブはタブとして認識されます（例えば、スクリーンリーダーが「タブ」と話します）し、選択されたタブは、そのタブ名で読み上げられて「選択中」と示されますし、スクリーンリーダーは、どのタブ番号のところに今いるのかということも教えてくれます。 さらに、<code>aria-hidden</code> の設定（まさに隠されていないタブのみに、<code>aria-hidden="false"</code> と設定されている）のおかげで、隠されていないコンテンツのみが、ナビゲートして下ってゆける唯一のコンテンツとなっており、このことは、選択されたコンテンツを見つけやすくなったことを意味します。</p>
 
 <div class="note">
-<p><strong>注</strong>: スクリーンリーダーに読み上げさせたくないと明示的に思うものが何かある場合、スクリーンリーダーに対して、<code>aria-hidden="true"</code>  属性を与えることができます。</p>
+<p><strong>注</strong>: スクリーンリーダーに読み上げさせたくないと明示的に思うものが何かある場合、スクリーンリーダーに対して、<code>aria-hidden="true"</code>  属性を与えることができます。</p>
 </div>
 
 <h2 id="Summary" name="Summary">まとめ</h2>
