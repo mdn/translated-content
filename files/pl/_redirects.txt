@@ -1351,10 +1351,13 @@
 /pl/docs/Learn/Server-side/Express_Nodejs/Szkolenie_aplikacja_biblioteka	/pl/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 /pl/docs/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /pl/docs/Lokalizacja	/pl/docs/Glossary/Localization
-/pl/docs/MDN/Contribute/Content	/pl/docs/MDN/Guidelines
-/pl/docs/MDN/Feedback	/pl/docs/MDN/Contribute/Feedback
+/pl/docs/MDN/Contribute/Content	/pl/docs/MDN/Writing_guidelines
+/pl/docs/MDN/Contribute/Feedback	/pl/docs/MDN/Community
+/pl/docs/MDN/Contribute/Getting_started	/pl/docs/MDN/Community/Contributing/Getting_started
+/pl/docs/MDN/Feedback	/pl/docs/MDN/Community
+/pl/docs/MDN/Guidelines	/pl/docs/MDN/Writing_guidelines
 /pl/docs/MDN/Kuma	/pl/docs/MDN/Yari
-/pl/docs/MDN/rozpocznij_mdn	/pl/docs/MDN/Contribute/Getting_started
+/pl/docs/MDN/rozpocznij_mdn	/pl/docs/MDN/Community/Contributing/Getting_started
 /pl/docs/MathML	/pl/docs/Web/MathML
 /pl/docs/Mozilla/Add-ons/WebExtensions/Twój_pierwszy_WebExtension	/pl/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /pl/docs/Narzędzia	https://firefox-source-docs.mozilla.org/devtools-user/index.html

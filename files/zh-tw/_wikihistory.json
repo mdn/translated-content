@@ -2068,39 +2068,13 @@
       "Sheppy"
     ]
   },
-  "MDN/About": {
-    "modified": "2019-09-10T08:57:06.612Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "jackblackevo",
-      "Rocker",
-      "jmlntw",
-      "jswisher",
-      "iigmir",
-      "teoli",
-      "young3578671",
-      "irvinfly",
-      "abs0986211642"
-    ]
-  },
   "MDN/At_ten": {
     "modified": "2019-03-23T22:49:37.556Z",
     "contributors": [
       "alk03073135"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2019-01-16T19:25:51.462Z",
-    "contributors": [
-      "wbamberg",
-      "iigmir",
-      "irvinfly",
-      "PHIDIAS",
-      "emmanuelodenyire"
-    ]
-  },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-09-30T17:17:21.724Z",
     "contributors": [
       "chrisdavidmills",
@@ -2120,56 +2094,22 @@
       "wildsky"
     ]
   },
+  "MDN/Contribute": {
+    "modified": "2019-01-16T19:25:51.462Z",
+    "contributors": [
+      "wbamberg",
+      "iigmir",
+      "irvinfly",
+      "PHIDIAS",
+      "emmanuelodenyire"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2019-01-16T20:46:52.062Z",
     "contributors": [
       "wbamberg",
       "ArvinH",
       "klez"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_and_edit_pages": {
-    "modified": "2019-04-23T05:30:19.186Z",
-    "contributors": [
-      "jackblackevo",
-      "wbamberg",
-      "Shiyou",
-      "Supaplex",
-      "darksnidget",
-      "SecondSpirit",
-      "coby777"
-    ]
-  },
-  "MDN/Contribute/Howto/Tag": {
-    "modified": "2019-03-23T22:54:12.092Z",
-    "contributors": [
-      "wbamberg",
-      "yami"
-    ]
-  },
-  "MDN/Guidelines": {
-    "modified": "2020-09-30T15:33:00.096Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "fscholz",
-      "irvinfly",
-      "Sheppy"
-    ]
-  },
-  "MDN/Guidelines/Writing_style_guide": {
-    "modified": "2020-09-30T15:33:00.614Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jswisher",
-      "wbamberg",
-      "flyinglimao",
-      "iigmir",
-      "fscholz",
-      "BrianHuang",
-      "irvinfly",
-      "kiss007sky",
-      "wildsky"
     ]
   },
   "MDN/Tools": {
@@ -2196,6 +2136,56 @@
       "jackblackevo",
       "iigmir",
       "alk03073135"
+    ]
+  },
+  "MDN/Writing_guidelines": {
+    "modified": "2019-09-10T08:57:06.612Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "jackblackevo",
+      "Rocker",
+      "jmlntw",
+      "jswisher",
+      "iigmir",
+      "teoli",
+      "young3578671",
+      "irvinfly",
+      "abs0986211642"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Creating_moving_deleting": {
+    "modified": "2019-04-23T05:30:19.186Z",
+    "contributors": [
+      "jackblackevo",
+      "wbamberg",
+      "Shiyou",
+      "Supaplex",
+      "darksnidget",
+      "SecondSpirit",
+      "coby777"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Tag": {
+    "modified": "2019-03-23T22:54:12.092Z",
+    "contributors": [
+      "wbamberg",
+      "yami"
+    ]
+  },
+  "MDN/Writing_guidelines/Writing_style_guide": {
+    "modified": "2020-09-30T15:33:00.614Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jswisher",
+      "wbamberg",
+      "flyinglimao",
+      "iigmir",
+      "fscholz",
+      "BrianHuang",
+      "irvinfly",
+      "kiss007sky",
+      "wildsky"
     ]
   },
   "MDN/Yari": {
@@ -7726,6 +7716,16 @@
     "modified": "2019-03-23T23:33:19.493Z",
     "contributors": [
       "garylai1990"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines": {
+    "modified": "2020-09-30T15:33:00.096Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "fscholz",
+      "irvinfly",
+      "Sheppy"
     ]
   },
   "conflicting/Web/API": {
