@@ -38,24 +38,24 @@ translation_of: Web/HTTP/Headers/WWW-Authenticate
  <dd>Le indica al cliente el tipo de encoding scheme preferido por el servidor cuando se envía un nombre de usuario y contraseña. El único valor permitido es la cadena de texto (no diferencia entre mayúsculas o mínusculas) "UTF-8".  Esto no esta relacionado a el encoding del parámetro realm.</dd>
 </dl>
 
-<h2 id="Examples">Examples</h2>
+<h2 id="Examples">Ejemplos</h2>
 
-<p>Typically, a server response contains a <code>WWW-Authenticate</code> header that looks like these:</p>
+<p>Típicamente, la respuesta del servidor contiene una cabecera <code>WWW-Authenticate</code> que se parece a estas:
 
 <pre class="notranslate">WWW-Authenticate: Basic
 
 WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 </pre>
 
-<p>See also <a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a> for examples on how to configure Apache or nginx servers to password protect your site with HTTP basic authentication.</p>
+<p>Vea también <a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a> por ejemplos sobre como configurar un servidor Apache o nginx para proteger con contraseña tu sitio con autenticación básica HTTP.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
+   <th scope="col">Espeficicación</th>
+   <th scope="col">Título</th>
   </tr>
  </thead>
  <tbody>
@@ -70,13 +70,11 @@ WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
+<h2 id="Browser_compatibility">Compatibilidad con navegadores</h2>
 
 <p>{{Compat("http.headers.WWW-Authenticate")}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">Véase también</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/HTTP/Authentication">HTTP authentication</a></li>
