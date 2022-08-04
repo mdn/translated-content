@@ -14,13 +14,13 @@ original_slug: MDN/Structures/Compatibility_tables
 
 <h2 id="Como_acessar_o_repositório_de_dados">Como acessar o repositório de dados</h2>
 
-<p>Os dados são armazenados em um repositório do GitHub — consulte <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>. Para acessá-lo, você precisa obter uma conta do GitHub, bifurcar (fork) o repositório de dados compatível com o navegador em sua própria conta e, em seguida, clonar seu fork na sua máquina local.</p>
+<p>Os dados são armazenados em um repositório do GitHub — consulte <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>. Para acessá-lo, você precisa obter uma conta do GitHub, bifurcar (fork) o repositório de dados compatível com o navegador em sua própria conta e, em seguida, clonar seu fork na sua máquina local.</p>
 
 <h2 id="Preparando_para_adicionar_os_dados">Preparando para adicionar os dados</h2>
 
-<p>Antes de adicionar dados novos, verifique que o <em>fork </em>criado tenha o mesmo conteúdo que o repositório principal. Após isso, crie uma nova <em>branch, </em>dentro do<em> fork </em>criado, para conter as mudanças e adições a serem realizadas, em seguida, faça um <em>pull</em> dessa branch no clone local, para então começar a contribuir com o projeto.</p>
+<p>Antes de adicionar dados novos, verifique que o <em>fork </em>criado tenha o mesmo conteúdo que o repositório principal. Após isso, crie uma nova <em>branch, </em>dentro do<em> fork </em>criado, para conter as mudanças e adições a serem realizadas, em seguida, faça um <em>pull</em> dessa branch no clone local, para então começar a contribuir com o projeto.</p>
 
-<p>Uma forma simples para ter certeza que o seu <em>fork </em>tem o mesmo conteúdo, e está tão atualizado quanto o repositório principal, é descrita abaixo:</p>
+<p>Uma forma simples para ter certeza que o seu <em>fork </em>tem o mesmo conteúdo, e está tão atualizado quanto o repositório principal, é descrita abaixo:</p>
 
 <h3 id="Adicionando_o_repositório_principal_browser-compat-data_como_um_controle_remoto">Adicionando o repositório principal browser-compat-data como um controle remoto</h3>
 
@@ -59,21 +59,21 @@ original_slug: MDN/Structures/Compatibility_tables
  </li>
 </ol>
 
-<h3 id="Criando_um_novo_branch_ramo_para_fazer_o_seu_trabalho">Criando um novo branch (ramo) para fazer o seu trabalho</h3>
+<h3 id="Criando_um_novo_branch_ramo_para_fazer_o_seu_trabalho">Criando um novo branch (ramo) para fazer o seu trabalho</h3>
 
-<p>Em seguida, vá à sua bifurcação remota (será em <code>https://github.com/<em>seu-nome-de-usuario</em>/browser-compat-data</code>) e crie um novo ramo para guardar suas mudanças de adição de conteúdo. Isso pode ser feito em:</p>
+<p>Em seguida, vá à sua bifurcação remota (será em <code>https://github.com/<em>seu-nome-de-usuario</em>/browser-compat-data</code>) e crie um novo ramo para guardar suas mudanças de adição de conteúdo. Isso pode ser feito em:</p>
 
 <ol>
  <li>Clicando no botão "Branch: Master".</li>
- <li>Colocando um novo nome de ramo dentro do campo de texto de "Encontre ou crie seu ramo...".</li>
- <li>Clicando no botão "Criar ramo <em>nome-do-ramo</em> a partir de Master".</li>
+ <li>Colocando um novo nome de ramo dentro do campo de texto de "Encontre ou crie seu ramo...".</li>
+ <li>Clicando no botão "Criar ramo <em>nome-do-ramo</em> a partir de Master".</li>
 </ol>
 
 <p>Por exemplo, se você quisesse adicionar informações sobre WebVR API, você criaria um ramno chamado algo como "webvr".</p>
 
 <h3 id="Mudando_para_o_novo_branch_ramo">Mudando para o novo branch (ramo)</h3>
 
-<p>Agora,volte para o seu terminal/linha de comando, e atualize seu clone local da sua bifurcação para incluir o seu novo ramo usando o seguinte comando:</p>
+<p>Agora,volte para o seu terminal/linha de comando, e atualize seu clone local da sua bifurcação para incluir o seu novo ramo usando o seguinte comando:</p>
 
 <pre class="brush: bash notranslate">git pull</pre>
 
@@ -155,7 +155,7 @@ original_slug: MDN/Structures/Compatibility_tables
 <p>Inside the <code>status</code> member, you'll include three submembers:</p>
 
 <ul>
- <li> "experimental": This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>, or <code>false</code> otherwise.</li>
+ <li> "experimental": This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>, or <code>false</code> otherwise.</li>
  <li>"standard_track": This should be set to <code>true</code> if a feature is on some kind of standards track (most commonly W3C/WHATWG, but there are also other standards efforts such as Khronos, TC39, etc.) or <code>false</code> otherwise.</li>
  <li>"deprecated": This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>, or <code>false</code> otherwise.</li>
 </ul>
@@ -291,7 +291,7 @@ original_slug: MDN/Structures/Compatibility_tables
 
 <h3 id="Incluindo_uma_nota_de_rodapé">Incluindo uma nota de rodapé</h3>
 
-<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "<span class="pl-s">Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</span></p>
+<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "<span class="pl-s">Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</span></p>
 
 <pre class="brush: json notranslate">"chrome_android": {
   "version_added": true,

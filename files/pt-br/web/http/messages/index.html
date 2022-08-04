@@ -14,7 +14,7 @@ original_slug: Web/HTTP/Mensagens
 
 <p>Mensagens HTTP são compostas de informação textual codificada em ASCII, e se espalham por multiplas linhas. Em HTTP/1.1, e versões anteriores do protocolo, estas mensagens eram abertamente enviadas através da conexão. Em HTTP/2, a mensagem antes legível por humanos é agora dividida em quadros HTTP, resultando em otimização e melhora de desempenho.</p>
 
-<p>Desenvolvedores Web, ou webmasters, raramente lidam com essas mensagens textuais diretamente: um programa, um navegador, um proxy, ou um servidor Web, executam essa ação. Eles proveem mensagens HTTP por meio de arquivos de configuração (para  proxys ou servidores), APIs (para navegadores) ou outras interfaces.</p>
+<p>Desenvolvedores Web, ou webmasters, raramente lidam com essas mensagens textuais diretamente: um programa, um navegador, um proxy, ou um servidor Web, executam essa ação. Eles proveem mensagens HTTP por meio de arquivos de configuração (para  proxys ou servidores), APIs (para navegadores) ou outras interfaces.</p>
 
 <p><img alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." src="https://mdn.mozillademos.org/files/13825/HTTPMsg2.png" style="height: 538px; width: 1174px;"></p>
 
@@ -52,11 +52,11 @@ original_slug: Web/HTTP/Mensagens
     <code>GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1</code></li>
    <li>O componente autoridade de um URL, que consiste no nome do domínio e opcionalmente uma porta (prefixada por <code>':'</code>), chamada de <em>forma autoridade</em>. Só usada com <code>CONNECT</code> ao estabelecer um túnel HTTP.<br>
     <code>CONNECT developer.mozilla.org:80 HTTP/1.1</code></li>
-   <li>A  <em>forma asterisco</em>, um simples asterisco (<code>'*'</code>), usada com <code>OPTIONS</code>. Representa o servidor como um todo.<br>
+   <li>A  <em>forma asterisco</em>, um simples asterisco (<code>'*'</code>), usada com <code>OPTIONS</code>. Representa o servidor como um todo.<br>
     <code>OPTIONS * HTTP/1.1</code></li>
   </ul>
  </li>
- <li>A  <em>versão HTTP</em>, que define a estrutura do restante da mensagem, atuando como um indicador da versão esperada para uso na resposta.</li>
+ <li>A  <em>versão HTTP</em>, que define a estrutura do restante da mensagem, atuando como um indicador da versão esperada para uso na resposta.</li>
 </ol>
 
 <h3 id="Cabeçalhos">Cabeçalhos</h3>
@@ -66,7 +66,7 @@ original_slug: Web/HTTP/Mensagens
 <p>Há numerosos cabeçalhos de requisição disponíveis. Eles podem ser divididos em vários grupos:</p>
 
 <ul>
- <li><em>Cabeçalhos gerais</em>, como {{HTTPHeader("Via")}},  se aplicam à mensagem como um todo.</li>
+ <li><em>Cabeçalhos gerais</em>, como {{HTTPHeader("Via")}},  se aplicam à mensagem como um todo.</li>
  <li><em>Cabeçalhos de requisição</em>, como {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, modificam a requisição, especificando-a mais (como {{HTTPHeader("Accept-Language")}}), dando-a contexto (como {{HTTPHeader("Referer")}}), ou restringindo-a condicionalmente (como {{HTTPHeader("If-None")}}).</li>
  <li><em>Cabeçalhos de entidade</em>, como {{HTTPHeader("Content-Length")}} que se aplicam ao corpo da mensagem. Obviamente este cabeçalho não será transmitido se não houver corpo na requisição.</li>
 </ul>

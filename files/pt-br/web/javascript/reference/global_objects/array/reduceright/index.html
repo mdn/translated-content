@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>O método <code><strong>reduceRight()</strong></code> aplica à uma função um acumulador e cada valor do array (da direita para esquerda) é reduzido para um valor único.</p>
+<p>O método <code><strong>reduceRight()</strong></code> aplica à uma função um acumulador e cada valor do array (da direita para esquerda) é reduzido para um valor único.</p>
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
@@ -37,16 +37,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <p><code>reduceRight</code> executa a função callback uma vez para cada elemento presente no array, excluindo buracos no array, recebendo quatro argumentos: o valor inicial (ou o valor da chamada anterior do callback), o valor do elemento atual, o índice do elemento atual, e o array onde a operação está acontecendo.</p>
 
-<p>A chamada ao callback reduceRight <font face="Consolas, Liberation Mono, Courier, monospace">irá parecer com uma chamada assim</font>:</p>
+<p>A chamada ao callback reduceRight <font face="Consolas, Liberation Mono, Courier, monospace">irá parecer com uma chamada assim</font>:</p>
 
 <pre class="brush: js">array.reduceRight(function(previousValue, currentValue, index, array) {
   // ...
 });
 </pre>
 
-<p>A primeira vez que a função é chamada, o <code>previousValue</code> e o <code>currentValue</code> podem ser um de dois valores. Se um <code>initialValue</code> foi recebido na chamada do <code>reduceRight</code>, então o <code>previousValue</code> sera iqual ao <code>initialValue</code> e o <code>currentValue</code> será igual ao ultimo valor no array. Se o <code>initialValue</code> não foi recebido, então o <code>previousValue será igual ao ultimo valor no array e o </code><code>currentValue</code> será igual ao penultimo valor no array.</p>
+<p>A primeira vez que a função é chamada, o <code>previousValue</code> e o <code>currentValue</code> podem ser um de dois valores. Se um <code>initialValue</code> foi recebido na chamada do <code>reduceRight</code>, então o <code>previousValue</code> sera iqual ao <code>initialValue</code> e o <code>currentValue</code> será igual ao ultimo valor no array. Se o <code>initialValue</code> não foi recebido, então o <code>previousValue será igual ao ultimo valor no array e o </code><code>currentValue</code> será igual ao penultimo valor no array.</p>
 
-<p>Se o array é vazio e nenhum <code>initialValue </code>foi recebido, {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançado. Se o array somente tem um elemento (independentemente da posição dele) e o <code>initialValue </code>não foi recebido, ou se o <code>initialValue</code> foi recebido mas o array é vazio, o valor em si será retornado sem chamar o <code>callback</code>.</p>
+<p>Se o array é vazio e nenhum <code>initialValue </code>foi recebido, {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançado. Se o array somente tem um elemento (independentemente da posição dele) e o <code>initialValue </code>não foi recebido, ou se o <code>initialValue</code> foi recebido mas o array é vazio, o valor em si será retornado sem chamar o <code>callback</code>.</p>
 
 <p>Alguns exemplos de execuções da função e como será parecida a chamada:</p>
 
@@ -104,9 +104,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
  </tbody>
 </table>
 
-<p>O valor retornado pelo <code>reduceRight</code> será o valor retornado pela ultima chamada ao callback(<code>10</code>).</p>
+<p>O valor retornado pelo <code>reduceRight</code> será o valor retornado pela ultima chamada ao callback(<code>10</code>).</p>
 
-<p>E se você também passou um <code>initialValue</code>, o resultado irá ser como a seguir:</p>
+<p>E se você também passou um <code>initialValue</code>, o resultado irá ser como a seguir:</p>
 
 <pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
   return previousValue + currentValue;
@@ -168,7 +168,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
  </tbody>
 </table>
 
-<p>O valor retornado pelo <code>reduceRight</code> desta vez será, obviamente, <code>20</code>.</p>
+<p>O valor retornado pelo <code>reduceRight</code> desta vez será, obviamente, <code>20</code>.</p>
 
 <h2 id="Examples" name="Examples">Exemplos</h2>
 
@@ -190,7 +190,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <h2 id="Polyfill" name="Polyfill">Polyfill</h2>
 
-<p><code>reduceRight</code> foi adicionado no padrão ECMA-262 em sua Quinta edição; sendo assim pode não estar presente em todas as implementações deste padrão. Você pode contornar isso adicionando o seguinte codigo ao inicio do seu script, adicionando a possibilidade de uso do <code>reduceRight</code> em implementações que não o suportam nativamente.</p>
+<p><code>reduceRight</code> foi adicionado no padrão ECMA-262 em sua Quinta edição; sendo assim pode não estar presente em todas as implementações deste padrão. Você pode contornar isso adicionando o seguinte codigo ao inicio do seu script, adicionando a possibilidade de uso do <code>reduceRight</code> em implementações que não o suportam nativamente.</p>
 
 <pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.22
 // Reference: http://es5.github.io/#x15.4.4.22

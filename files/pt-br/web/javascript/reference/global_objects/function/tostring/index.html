@@ -10,11 +10,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>toString()</strong></code> retorna uma string representando o código fonte da função.</p>
+<p>O método <code><strong>toString()</strong></code> retorna uma string representando o código fonte da função.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/function-tostring.html")}}</div>
 
-<p class="hidden">A fonte deste exemplo interativo está armazenado no repositório do GitHub. Se você gostaria de contrubuir para este exemplos de projeto interativo, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie um pull request.</p>
+<p class="hidden">A fonte deste exemplo interativo está armazenado no repositório do GitHub. Se você gostaria de contrubuir para este exemplos de projeto interativo, por favor clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie um pull request.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -26,21 +26,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O objeto da {{jsxref("Function")}} substitui o método {{jsxref("Object.prototype.toString", "toString")}} herdado de {{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}} definidos pelo usuário, o método <code>toString</code> retorna uma string contendo o seguimento de texto de origem que foi usado para definir a função</p>
+<p>O objeto da {{jsxref("Function")}} substitui o método {{jsxref("Object.prototype.toString", "toString")}} herdado de {{jsxref("Object")}}; ele não herda {{jsxref("Object.prototype.toString")}}. Para objetos {{jsxref("Function")}} definidos pelo usuário, o método <code>toString</code> retorna uma string contendo o seguimento de texto de origem que foi usado para definir a função</p>
 
-<p>O JavaScript chama o método <code>toString</code> automaticamente quando uma {{jsxref("Function")}} pode ser representada como um valor de texto. e.x. quando uma função é concatenada com uma string.</p>
+<p>O JavaScript chama o método <code>toString</code> automaticamente quando uma {{jsxref("Function")}} pode ser representada como um valor de texto. e.x. quando uma função é concatenada com uma string.</p>
 
-<p>O método <code>toString()</code> lançará uma exceção do tipo {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object") se o valor <code>this</code> do objeto não é um objeto do tipo <code>Function.</code></p>
+<p>O método <code>toString()</code> lançará uma exceção do tipo {{jsxref("TypeError")}} ("Function.prototype.toString called on incompatible object") se o valor <code>this</code> do objeto não é um objeto do tipo <code>Function.</code></p>
 
 <pre class="brush: js example-bad notranslate">Function.prototype.toString.call('foo'); // TypeError
 </pre>
 
-<p>Se o método <code>toString()</code> é chamado por objetos de funções embutidas ou por uma função criada por <code>Function.prototype.bind</code>, <code>toString()</code> retorna uma string de uma função nativa que parece</p>
+<p>Se o método <code>toString()</code> é chamado por objetos de funções embutidas ou por uma função criada por <code>Function.prototype.bind</code>, <code>toString()</code> retorna uma string de uma função nativa que parece</p>
 
-<pre class="brush: js notranslate">"function () {\n    [native code]\n}"
+<pre class="brush: js notranslate">"function () {\n    [native code]\n}"
 </pre>
 
-<p>Se o método <code>toString()</code> é chamado por uma função criada pelo contrutor de <code>Function</code>, <code>toString()</code> retorna o código fonte de uma declaração de função sintetizada chamada "anonymous" usando os parâmetros passados e o corpo da função.</p>
+<p>Se o método <code>toString()</code> é chamado por uma função criada pelo contrutor de <code>Function</code>, <code>toString()</code> retorna o código fonte de uma declaração de função sintetizada chamada "anonymous" usando os parâmetros passados e o corpo da função.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -126,7 +126,7 @@ a =&gt; a</pre>
    <td>
     <pre class="notranslate">
 Object.getOwnPropertyDescriptor({
-    get a(){}
+    get a(){}
 }, "a").get</pre>
    </td>
    <td>
@@ -138,7 +138,7 @@ Object.getOwnPropertyDescriptor({
    <td>
     <pre class="notranslate">
 Object.getOwnPropertyDescriptor({
-    set a(x){}
+    set a(x){}
 }, "a").set</pre>
    </td>
    <td>
@@ -228,8 +228,8 @@ Function("a", "b")</pre>
 <h2 id="Notas_específicas_do_Firefox">Notas específicas do Firefox</h2>
 
 <ul>
- <li>Desde o Firefox 17 a função <code>Function.prototype.toString()</code> tem sido implementada salvando o fonte da função. O descompilador foi removido o que torna o parâmetro <code>indentation</code> desnecessário. Veja {{bug("761723")}} para mais detalhes.</li>
- <li>Do Firefox 38 para o 63 a função <code>Function.prototype.toString()</code> lançava exceções para objetos {{jsxref("Proxy")}} ({{bug(1100936)}} e {{bug(1440468)}}).</li>
+ <li>Desde o Firefox 17 a função <code>Function.prototype.toString()</code> tem sido implementada salvando o fonte da função. O descompilador foi removido o que torna o parâmetro <code>indentation</code> desnecessário. Veja {{bug("761723")}} para mais detalhes.</li>
+ <li>Do Firefox 38 para o 63 a função <code>Function.prototype.toString()</code> lançava exceções para objetos {{jsxref("Proxy")}} ({{bug(1100936)}} e {{bug(1440468)}}).</li>
 </ul>
 
 <h2 id="Veja_também">Veja também</h2>
