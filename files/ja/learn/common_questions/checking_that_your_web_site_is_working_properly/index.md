@@ -1,147 +1,153 @@
 ---
-title: Web サイトが正しく機能することをどうやって確認しますか？
+title: ウェブサイトが正しく動作することをどうやって確認する？
 slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 tags:
-  - ガイド
-  - トラブルシューティング
-  - ドキュメント
-  - 初心者
+  - Beginner
+  - Document
+  - Guide
+  - NeedsActiveLearning
+  - Web
+  - Web Development
+  - WebMechanics
+  - troubleshooting
 translation_of: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 ---
-<div class="summary">
-<p>この記事では、Webサイトのさまざまなトラブルシューティングの手順と、これらの問題を解決するための基本的な操作について説明します。</p>
-</div>
+この記事では、ウェブサイトのさまざまなトラブルシューティングの手順と、これらの問題を解決するための基本的な操作について説明します。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提条件:</th>
-   <td><a href="/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server">Web サーバにファイルをアップロードする</a>方法を知る必要があります。</td>
-  </tr>
-  <tr>
-   <th scope="row">目標:</th>
-   <td>自身の Web サイトで実行できるいくつかの基本的な問題を診断して解決する方法を学びます。</td>
-  </tr>
- </tbody>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        <a
+          href="/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server"
+          >ウェブサーバーにファイルをアップロードする</a
+        >方法を知っている必要があります。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        自身のウェブサイトで実行できるいくつかの基本的な問題を診断して解決する方法を学びます。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p id="Summary">自身の Web サイトをオンラインで公開しましたか？ 素晴らしい！ ただ、それは適切に動作しているでしょうか？</p>
+自身のウェブサイトをオンラインで公開しましたか？ 素晴らしい！ ただ、それは正しく動作しているでしょうか？
 
-<p>別の場所にある Web サーバ は、ローカル Web サーバとはまったく異なった動作をすることが多いため、オンラインになったら Web サイトをテストすることをお勧めします。画像が表示されない、ページが読み込まれない、または読み込みが遅くなるなど、多くの問題が発生するのに驚くかもしれません。ほとんどの場合、大したことではなく、簡単な間違いや Web ホスティング設定の問題です。</p>
+別の場所にあるウェブサーバーは、ローカルウェブサーバーとはまったく異なった動作をすることが多いため、オンラインになったらウェブサイトをテストすることをお勧めします。画像が表示されない、ページが読み込まれない、または読み込みが遅くなるなど、多くの問題が発生するのに驚くかもしれません。ほとんどの場合、大したことではなく、単純な間違いやウェブホスティング設定の問題です。
 
-<p>これらの問題を診断して解決する方法を見てみましょう。</p>
+これらの問題を診断して解決する方法を見てみましょう。
 
-<h2 id="アクティブラーニング">アクティブラーニング</h2>
+## アクティブラーニング
 
-<p><em>アクティブラーニングはまだありません。 <a href="/ja/docs/MDN/Getting_started">貢献をご検討ください</a>。</em></p>
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Contribute/Getting_started)。_
 
-<h2 id="より深く掘り下げる">より深く掘り下げる</h2>
+## より深く掘り下げる
 
-<h3 id="ブラウザでテストする">ブラウザでテストする</h3>
+### ブラウザーでテストする
 
-<p>Web サイトが正しく機能しているかどうかを知りたければ、まずブラウザを起動し、テストしたいページに移動します。</p>
+ウェブサイトが正しく機能しているかどうかを知りたければ、まずブラウザーを起動し、テストしたいページに移動します。
 
-<h4 id="ええと、そのイメージはどこですか？">ええと、そのイメージはどこですか？</h4>
+#### ええと、そのイメージはどこですか？
 
-<p>個人的な Web サイト <code>http://demozilla.examplehostingprovider.net/</code> を見てみましょう。予想していた画像ではありません。</p>
+個人的なウェブサイト `http://demozilla.examplehostingprovider.net/` を見てみましょう。予想していた画像ではありません。
 
-<p><img alt="Oops, the ‘unicorn’ image is missing" src="https://mdn.mozillademos.org/files/9643/image-missing.png" style="height: 189px; width: 380px;"></p>
+![Oops, the 'unicorn' image is missing](image-missing.png)
 
-<p>Firefox のネットワークツール (<strong>ツール</strong> ➤ <strong>Web 開発者</strong> ➤ <strong>ネットワーク</strong>) を開き、ページをリロードします。</p>
+Firefox のネットワークツール (**ツール ➤ ウェブ開発者 ➤ ネットワーク**) を開き、ページを再読み込みします。
 
-<p><img alt="The image has a 404 error" src="https://mdn.mozillademos.org/files/9645/error404.png" style="height: 304px; width: 562px;"></p>
+![The image has a 404 error](error404.png)
 
-<p>一番下に「404」という問題があります。「404」は「リソースが見つかりません」という意味です。そのため、画像が表示されませんでした。</p>
+一番下に「404」という問題があります。「404」は「リソースが見つかりません」という意味です。そのため、画像が表示されなかったのです。
 
-<h4 id="HTTP_ステータス">HTTP ステータス</h4>
+#### HTTP ステータス
 
-<p>サーバは、リクエストを受信するたびにステータスメッセージで応答します。最も一般的なステータスは次のとおりです。</p>
+サーバーは、リクエストを受信するたびにステータスメッセージで応答します。最も一般的なステータスは次のとおりです。
 
-<dl>
- <dt><strong><span id="cke_bm_110S" class="hidden"> </span>200: OK</strong></dt>
- <dd>求めているリソースが配信されました。</dd>
- <dt><strong>301: Moved permanently</strong></dt>
- <dd>リソースは新しい場所に移動しました。あなたのブラウザでこれをあまり見ないでしょう、しかし検索エンジンがインデックスを更新するのにこの情報をたくさん使うので "301" について知るのは良いことです。</dd>
- <dt><strong>304: Not modified</strong></dt>
- <dd>最後にファイルをリクエストしてからファイルが変更されていないため、ブラウザはキャッシュからバージョンを表示できるので、応答時間が短縮され、帯域幅がより効率的に使用されます。</dd>
- <dt><strong>403: Forbidden</strong></dt>
- <dd>そのリソースを表示することを許可されていません。通常それは設定ミス (例えばあなたのホスティングプロバイダがディレクトリへのアクセス権を与えるのを忘れた) と関係があります。</dd>
- <dt><strong>404: Not found</strong></dt>
- <dd>一目瞭然です。これを解決する方法を以下で説明します。</dd>
- <dt><strong>500: Internal server error</strong></dt>
- <dd>サーバで何か問題が発生しました。たとえば、サーバサイドの言語 ({{Glossary("PHP")}}、.Net など) が機能しなくなった、または Web サーバ自体に構成上の問題がある可能性があります。通常、ホスティングプロバイダのサポートチームに頼るのが最善です。</dd>
- <dt><strong>503: Service unavailable</strong></dt>
- <dd>通常、短期間のシステム過負荷が原因です。サーバに何らかの問題があります。しばらくしてからもう一度試してください。</dd>
-</dl>
+- **200: OK**
+  - : 求めているリソースが配信されました。
+- **301: Moved permanently**
+  - : リソースは新しい場所に移動しました。あなたのブラウザーでこれをあまり見ないでしょう、しかし検索エンジンがインデックスを更新するのにこの情報をたくさん使うので "301" について知るのは良いことです。
+- **304: Not modified**
+  - : 最後にファイルをリクエストしてからファイルが変更されていないため、ブラウザーはキャッシュからバージョンを表示できるので、応答時間が短縮され、帯域幅がより効率的に使用されます。
+- **403: Forbidden**
+  - : そのリソースを表示することを許可されていません。通常それは設定ミス (例えばあなたのホスティングプロバイダーがディレクトリーへのアクセス権を与えるのを忘れた) と関係があります。
+- **404: Not found**
+  - : 一目瞭然です。これを解決する方法を以下で説明します。
+- **500: Internal server error**
+  - : サーバーで何か問題が発生しました。たとえば、サーバーサイドの言語 ({{Glossary("PHP")}}、.Net など) が機能しなくなった、またはウェブサーバー自体に構成上の問題がある可能性があります。通常、ホスティングプロバイダーのサポートチームに頼るのが最善です。
+- **503: Service unavailable**
+  - : 通常、短期間のシステム過負荷が原因です。サーバーに何らかの問題があります。しばらくしてからもう一度試してください。
 
-<p>初心者が私たちの (単純な) Web サイトをチェックするとき、私たちは200、304、403、そして404を最もよく扱うでしょう。</p>
+初心者が（簡単な）ウェブサイトをチェックする場合、200、304、403、404 を扱うことが最も多いでしょう。
 
-<h4 id="404_を修正する">404 を修正する</h4>
+#### 404 を修正する
 
-<p>では何が悪かったのでしょうか？</p>
+では何が悪かったのでしょうか？
 
-<p><img alt="Le list of images in our project" src="https://mdn.mozillademos.org/files/9649/demozilla-images-list.png" style="height: 71px; width: 407px;"></p>
+![Le list of images in our project](demozilla-images-list.png)
 
-<p>一見したところ、私たちが求める画像は正しい場所にあるようです...しかしネットワークツールは「404」を報告しました。 <span class="tlid-translation translation" lang="ja"><span title="">HTML コードに </span></span><code>unicorn_pic.png</code><span class="tlid-translation translation" lang="ja"><span title=""> ではなく </span></span><code>unicorn_pics.png</code><span class="tlid-translation translation" lang="ja"><span title=""> という入力ミスをしたことがわかりました。</span></span>画像の <code>src</code> 属性を変更して、コードエディタのタイプミスを修正します。</p>
+一見、依頼した画像は正しい場所にあるように見えますが、ネットワークツールは「404」を報告しました。それは、 HTML のコードにタイプミスがあったことが判明しました。 `unicorn_pic.png`ではなく、 `unicorn_pics.png`です。そこで、コードエディターで画像の `src` 属性を変更し、タイプミスを修正してください。
 
-<p><img alt="Deleting the ‘s’" src="https://mdn.mozillademos.org/files/9651/code-correct.png" style="height: 125px; width: 775px;"></p>
+![Deleting the 's'](code-correct.png)
 
-<p>保存して<a href="/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server">サーバにプッシュし</a>、ブラウザでページをリロードします。</p>
+保存して[サーバーにプッシュし](/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server)、ブラウザーでページを再読み込みします。
 
-<p><img alt="The image loads corectly in the browser" src="https://mdn.mozillademos.org/files/9655/image-corrected.png" style="height: 554px; width: 565px;"></p>
+![The image loads correctly in the browser](image-corrected.png)
 
-<p>そこに行きます！{{Glossary("HTTP")}} ステータスをもう一度見てみましょう：</p>
+そこに行きます！ {{Glossary("HTTP")}} ステータスをもう一度見てみましょう。
 
-<ul>
- <li><code>/</code> と <code>unicorn_pic.png</code> が <strong>200</strong> の場合は、ページと画像の再読み込みに成功したことを意味します。</li>
- <li><code>basic.css</code> の <strong>304</strong>  は、このファイルが最後のリクエスト以降変更されていないことを意味します。したがって、ブラウザは新しいコピーを受信するのではなく、キャッシュ内のファイルを使用できます。</li>
-</ul>
+- `/` と `unicorn_pic.png` が **200** の場合は、ページと画像の再読み込みに成功したことを意味します。
+- `basic.css` の **304**  は、このファイルが最後のリクエスト以降変更されていないことを意味します。したがって、ブラウザーは新しいコピーを受信するのではなく、キャッシュ内のファイルを使用できます。
 
-<p>さて、エラーを修正し、途中でいくつかの HTTP ステータスを学習しました。</p>
+さて、エラーを修正し、途中でいくつかの HTTP ステータスを学習しました。
 
-<h3 id="よくあるエラー">よくあるエラー</h3>
+### よくあるエラー
 
-<p>最もよく見かけるエラーはこれらです：</p>
+最もよく見かけるエラーはこれらです。
 
-<h4 id="アドレスのタイプミス">アドレスのタイプミス</h4>
+#### アドレスのタイプミス
 
-<p><code>http://demozilla.examplehostingprovider.net/</code> と入力したいのですが、入力が速すぎて「l」を忘れていました。</p>
+`http://demozilla.examplehostingprovider.net/` と入力したいのですが、入力が速すぎて「l」を忘れていました。
 
-<p><img alt="Address unreachable" src="https://mdn.mozillademos.org/files/9657/cannot-find-server.png" style="height: 425px; width: 908px;"></p>
+![Address unreachable](cannot-find-server.png)
 
-<p>アドレスが見つかりません。確かに。</p>
+アドレスが見つかりません。確かに。
 
-<h4 id="404_エラー">404 エラー</h4>
+#### 404 エラー
 
-<p>多くの場合、エラーは単にタイプミスが原因ですが、リソースのアップロードを忘れたか、アップロード中にネットワーク接続が切断された可能性もあります。まずファイルパスの綴りと正確さを確認し、それでも問題が解決しない場合は、ファイルをもう一度アップロードしてください。おそらく問題は解決するでしょう。</p>
+多くの場合、エラーは単にタイプミスが原因ですが、リソースのアップロードを忘れたか、アップロード中にネットワーク接続が切断された可能性もあります。まずファイルパスの綴りと正確さを確認し、それでも問題が解決しない場合は、ファイルをもう一度アップロードしてください。おそらく問題は解決するでしょう。
 
-<h4 id="JavaScript_エラー">JavaScript エラー</h4>
+#### JavaScript エラー
 
-<p>誰か (おそらくあなた) がそのページにスクリプトを追加する中で間違えました。これでページの読み込みが妨げられることはありませんが、問題が発生したと感じるでしょう。</p>
+誰か（おそらくあなた）がそのページにスクリプトを追加する中で間違えました。これでページの読み込みが妨げられることはありませんが、問題が発生したと感じるでしょう。
 
-<p>コンソールを開き (<strong>ツール</strong> ➤ <strong>Web 開発者</strong> ➤ <strong>Web コンソール</strong>)、ページをリロードします。</p>
+コンソールを開き (**ツール ➤ ウェブ開発者 ➤ ウェブコンソール**)、ページを再読み込みします。
 
-<p><img alt="A Javascript error is shown in the Console" src="https://mdn.mozillademos.org/files/9659/js-error.png" style="height: 511px; width: 523px;"></p>
+![A Javascript error is shown in the Console](js-error.png)
 
-<p>この例では、エラーが何かを (非常に明確に) 学び、それを修正することができます (<a href="/ja/docs/Learn/JavaScript">別の一連</a>の記事で JavaScript について説明します)。</p>
+この例では、エラーが何かを（非常に明確に）学び、それを修正することができます（[別の一連](/ja/docs/Learn/JavaScript)の記事で JavaScript について説明します）。
 
-<h3 id="その他の事項を確認する">その他の事項を確認する</h3>
+### その他の事項を確認する
 
-<p>Web サイトが正しく機能していることを確認する簡単な方法、および発生する可能性がある最も一般的なエラーとそれらの修正方法を示しました。ページがこれらの基準を満たしているかどうかをテストすることもできます。</p>
+ウェブサイトが正しく機能していることを確認する簡単な方法、および発生する可能性がある最も一般的なエラーとそれらの修正方法を示しました。ページがこれらの基準を満たしているかどうかをテストすることもできます。
 
-<h4 id="パフォーマンスはどうですか？">パフォーマンスはどうですか？</h4>
+#### パフォーマンスはどうですか？
 
-<p>ページの読み込みは十分速いですか？ <a href="http://www.webpagetest.org/">WebPagetest.org</a> のようなリソースや <a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow</a> のようなブラウザアドオンをしようすることで、いくつか興味深いことが分かります。</p>
+ページの読み込みは十分速いですか？ [WebPageTest.org](http://www.webpagetest.org/) のようなリソースや [YSlow](https://github.com/marcelduran/yslow) のようなブラウザーアドオンをしようすることで、いくつか興味深いことが分かります。
 
-<p><img alt="Yslow diagnostics" src="https://mdn.mozillademos.org/files/9661/yslow-diagnostics.png" style="height: 766px; width: 637px;"></p>
+![Yslow diagnostics](yslow-diagnostics.png)
 
-<p>グレードは A から F までです。私たちのページはごくわずかで、ほとんどの基準を満たしています。しかし、{{Glossary("CDN")}} を使った方が良いでしょう。1つの画像だけを配信する場合はそれほど重要ではありませんが、広帯域幅の Web サイトで何千もの画像を配信する場合は重要になります。</p>
+グレードは A から F までです。私たちのページはごくわずかで、ほとんどの基準を満たしています。しかし、 {{Glossary("CDN")}} を使った方が良いでしょう。 1 つの画像だけを配信する場合はそれほど重要ではありませんが、広帯域幅のウェブサイトで何千もの画像を配信する場合は重要になります。
 
-<h4 id="サーバーは十分に応答しますか？">サーバーは十分に応答しますか？</h4>
+#### サーバーは十分に応答しますか？
 
-<p><code>ping</code> は指定したドメイン名をテストし、サーバが応答しているかどうかを知らせる便利なシェルツールです。</p>
+`ping` は指定したドメイン名をテストし、サーバーが応答しているかどうかを知らせる便利なシェルツールです。
 
-<pre class="line-numbers language-html notranslate"><code class="language-html">$ ping mozilla.org
+```
+$ ping mozilla.org
 PING mozilla.org (63.245.215.20): 56 data bytes
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=44 time=148.741 ms
 64 bytes from 63.245.215.20: icmp_seq=1 ttl=44 time=148.541 ms
@@ -150,23 +156,20 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 ^C
 --- mozilla.org ping statistics ---
 4 packets transmitted, 4 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms</code></pre>
+round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
+```
 
-<p>便利なキーボードショートカット、すなわち <strong>Ctrl+C</strong> を覚えておいてください。Ctrl+C はランタイムに「割り込み」信号を送り、停止するように伝えます。ランタイムを停止しないと、<code>ping</code> は サーバに無期限に ping を実行します。</p>
+便利なキーボードショートカット、すなわち **Ctrl+C** を覚えておいてください。Ctrl+C はランタイムに「割り込み」信号を送り、停止するように伝えます。ランタイムを停止しないと、`ping` は サーバーに無期限に ping を実行します。
 
-<h3 id="簡単なチェックリスト">簡単なチェックリスト</h3>
+### 簡単なチェックリスト
 
-<ul>
- <li>404 をチェックします</li>
- <li>すべての Web ページが期待通りに動作していることを確認します</li>
- <li>それが一貫してレンダリングすることを確認するためにいくつかのブラウザで Web サイトをチェックしてください</li>
-</ul>
+- 404 をチェックします
+- すべてのウェブページが期待通りに動作していることを確認します
+- それが一貫してレンダリングすることを確認するためにいくつかのブラウザーでウェブサイトをチェックしてください
 
-<h2 id="次のステップ">次のステップ</h2>
+## 次のステップ
 
-<p>おめでとうございます、Web サイトは誰もが訪れることができるようになっています。それは大きな成果です。これで、さまざまなテーマに深く掘り下げていくことができます。</p>
+おめでとうございます、ウェブサイトは誰もが訪れることができるようになっています。それは大きな成果です。これで、さまざまなテーマに深く掘り下げていくことができます。
 
-<ul>
- <li>人々は世界中からあなたの Web サイトに来ることができるので、あなたはそれを<a href="/ja/docs/Learn/Common_questions/What_is_accessibility">誰にでもアクセス可能</a>にすることを考慮すべきです。</li>
- <li>Web サイトのデザインは少し荒すぎますか？ <a href="/ja/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">CSS についてもっと学ぶ</a>時が来ました。</li>
-</ul>
+- 人々は世界中からあなたのウェブサイトに来ることができるので、あなたはそれを[誰にでもアクセス可能](/ja/docs/Learn/Common_questions/What_is_accessibility)にすることを考慮すべきです。
+- ウェブサイトのデザインは少し荒すぎますか？ [CSS についてもっと学ぶ](/ja/docs/Learn/CSS/First_steps/How_CSS_works)時が来ました。
