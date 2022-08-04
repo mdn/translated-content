@@ -9,20 +9,20 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_ф�
 
 <h2 id="Краткое_описание">Краткое описание</h2>
 
-<p><span class="seoSummary">С помощью <a href="/en/CSS/CSS3" title="CSS3">CSS3</a> вы можете применить несколько фонов к элементам. Они будут располагаться поверх друг друга: фон, заданный первым - в самом верху, последний фон - в самом низу.</span></p>
+<p><span class="seoSummary">С помощью <a href="/en/CSS/CSS3" title="CSS3">CSS3</a> вы можете применить несколько фонов к элементам. Они будут располагаться поверх друг друга: фон, заданный первым - в самом верху, последний фон - в самом низу.</span></p>
 
 <p>Задать множественные фоны легко:</p>
 
 <pre class="brush: css">.myclass {
-  background: background1, background 2, ..., backgroundN;
+  background: background1, background 2, ..., backgroundN;
 }
 </pre>
 
-<p>Вы можете сделать это сокращённым {{ cssxref("background") }} свойством и отдельными свойствами кроме {{ cssxref("background-color") }}. Таким образом следующие свойства могут быть определены в виде списка по одному на фон: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }},<code> </code>{{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.</p>
+<p>Вы можете сделать это сокращённым {{ cssxref("background") }} свойством и отдельными свойствами кроме {{ cssxref("background-color") }}. Таким образом следующие свойства могут быть определены в виде списка по одному на фон: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }},<code> </code>{{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.</p>
 
 <h2 id="Example">Пример</h2>
 
-<p>В этом примере три фона: логотип Firefox, <a href="/en/CSS/linear-gradient" title="en/CSS/-moz-linear-gradient">линейный градиент</a> и изображение пузырей:</p>
+<p>В этом примере три фона: логотип Firefox, <a href="/en/CSS/linear-gradient" title="en/CSS/-moz-linear-gradient">линейный градиент</a> и изображение пузырей:</p>
 
 <h3 id="HTML">HTML</h3>
 
@@ -31,12 +31,12 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_ф�
 <h3 id="CSS">CSS</h3>
 
 <pre class="brush: css">.multi_bg_example {
-  width: 100%;
-  height: 400px;
-  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png), url(https://mdn.mozillademos.org/files/11307/bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: bottom right, left, right;
-  background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  width: 100%;
+  height: 400px;
+  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png), url(https://mdn.mozillademos.org/files/11307/bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom right, left, right;
+  background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
 }</pre>
 
 <h2 id="Результат">Результат</h2>
@@ -45,7 +45,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_ф�
 
 <p>{{EmbedLiveSample('Example','100%','400')}}</p>
 
-<p>Как вы можете видеть, логотип Firefox (первый в списке) расположен сверху, далее идёт градиент и в самом низу фон с пузырями. Каждое последующее под-свойство ({{ cssxref("background-repeat") }} и {{ cssxref("background-position") }}) применяется к соответствующим фонам. Например первое значение свойства {{ cssxref("background-repeat") }} применяется к первому фону, и т.д.</p>
+<p>Как вы можете видеть, логотип Firefox (первый в списке) расположен сверху, далее идёт градиент и в самом низу фон с пузырями. Каждое последующее под-свойство ({{ cssxref("background-repeat") }} и {{ cssxref("background-position") }}) применяется к соответствующим фонам. Например первое значение свойства {{ cssxref("background-repeat") }} применяется к первому фону, и т.д.</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

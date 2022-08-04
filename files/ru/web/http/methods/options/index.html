@@ -9,7 +9,7 @@ translation_of: Web/HTTP/Methods/OPTIONS
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong>HTTP-метод</strong><strong> <code>OPTIONS</code> </strong>используется для описания параметров соединения с целевым ресурсом. Клиент может указать особый URL для обработки метода OPTIONS, или * (звёздочку) чтобы указать весь сервер целиком.</p>
+<p><strong>HTTP-метод</strong><strong> <code>OPTIONS</code> </strong>используется для описания параметров соединения с целевым ресурсом. Клиент может указать особый URL для обработки метода OPTIONS, или * (звёздочку) чтобы указать весь сервер целиком.</p>
 
 <table class="properties">
  <tbody>
@@ -34,7 +34,7 @@ translation_of: Web/HTTP/Methods/OPTIONS
    <td>Нет</td>
   </tr>
   <tr>
-   <th scope="row">Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a></th>
+   <th scope="row">Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a></th>
    <td>Нет</td>
   </tr>
  </tbody>
@@ -48,13 +48,13 @@ OPTIONS * HTTP/1.1
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Определение_разрешённых_сервером_методов_запроса">Определение разрешённых сервером методов запроса</h3>
+<h3 id="Определение_разрешённых_сервером_методов_запроса">Определение разрешённых сервером методов запроса</h3>
 
-<p>Для того, чтобы узнать какие методы запросов поддерживаются сервером, можно воспользоваться curl направить OPTIONS запрос:</p>
+<p>Для того, чтобы узнать какие методы запросов поддерживаются сервером, можно воспользоваться curl направить OPTIONS запрос:</p>
 
 <pre>curl -X OPTIONS http://example.org -i</pre>
 
-<p>Ответ на запрос содержит {{HTTPHeader("Allow")}} заголовок с поддерживаемыми методами:</p>
+<p>Ответ на запрос содержит {{HTTPHeader("Allow")}} заголовок с поддерживаемыми методами:</p>
 
 <pre>HTTP/1.1 200 OK
 Allow: OPTIONS, GET, HEAD, POST
@@ -66,9 +66,9 @@ x-ec-custom-error: 1
 Content-Length: 0
 </pre>
 
-<h3 id="Предзапросы_по_технологии_CORS">Предзапросы по технологии CORS</h3>
+<h3 id="Предзапросы_по_технологии_CORS">Предзапросы по технологии CORS</h3>
 
-<p>По технологии <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, с помощью метода <code>OPTIONS</code> направляется предварительный запрос, поэтому сервер может ответить приемлемо ли отправлять запросы этим методом. {{HTTPHeader("Access-Control-Request-Method")}} заголовок уведомляет сервер в составе предварительного запроса о том что, запрос  <code>OPTIONS</code> будет отправляться на сервер вместе с <code>POST</code> запросом. {{HTTPHeader("Access-Control-Request-Headers")}} заголовок уведомляет сервер о том, что при отправке фактического запроса, он будет отправлен с помощью пользовательских заголовков <code>X-PINGOTHER</code> и <code>Content-Type</code>.  В этом случае сервер имеет возможность определять возможно ли принять запрос с такими параметрами.</p>
+<p>По технологии <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a>, с помощью метода <code>OPTIONS</code> направляется предварительный запрос, поэтому сервер может ответить приемлемо ли отправлять запросы этим методом. {{HTTPHeader("Access-Control-Request-Method")}} заголовок уведомляет сервер в составе предварительного запроса о том что, запрос  <code>OPTIONS</code> будет отправляться на сервер вместе с <code>POST</code> запросом. {{HTTPHeader("Access-Control-Request-Headers")}} заголовок уведомляет сервер о том, что при отправке фактического запроса, он будет отправлен с помощью пользовательских заголовков <code>X-PINGOTHER</code> и <code>Content-Type</code>.  В этом случае сервер имеет возможность определять возможно ли принять запрос с такими параметрами.</p>
 
 <pre>OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.other
@@ -81,7 +81,7 @@ Origin: http://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type</pre>
 
-<p>Ответ сервера содержит параметр {{HTTPHeader("Access-Control-Allow-Methods")}} и сообщает, что  <code>POST</code>, <code>GET</code>, и <code>OPTIONS</code> методы являются приемлемыми для данного ресурса. Этот заголовок похож на заголовок {{HTTPHeader("Allow")}} , но используется строго в контексте CORS.</p>
+<p>Ответ сервера содержит параметр {{HTTPHeader("Access-Control-Allow-Methods")}} и сообщает, что  <code>POST</code>, <code>GET</code>, и <code>OPTIONS</code> методы являются приемлемыми для данного ресурса. Этот заголовок похож на заголовок {{HTTPHeader("Allow")}} , но используется строго в контексте CORS.</p>
 
 <pre>HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT

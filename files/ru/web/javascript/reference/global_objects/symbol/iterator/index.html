@@ -10,15 +10,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Symbol.iterator</strong></code> — известный символ, задающий итератор объекта, используемый по умолчанию. Применяется в конструкции <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>.</p>
+<p><code><strong>Symbol.iterator</strong></code> — известный символ, задающий итератор объекта, используемый по умолчанию. Применяется в конструкции <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>.</p>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Каждый раз, когда объект должен быть проитерирован (как, например, в начале цикла <code>for..of</code>), метод <code>@@iterator</code> вызывается без аргументов, а возвращённый итератор используется непосредственно для получения значений.</p>
+<p>Каждый раз, когда объект должен быть проитерирован (как, например, в начале цикла <code>for..of</code>), метод <code>@@iterator</code> вызывается без аргументов, а возвращённый итератор используется непосредственно для получения значений.</p>
 
-<p>Некоторые встроенные типы имеют стандартное итерационное поведение, в то время как другие типы (как {{jsxref("Object")}}) таким свойством не обладают. Метод <code>@@iterator</code> имеют следующие встроенные типы:</p>
+<p>Некоторые встроенные типы имеют стандартное итерационное поведение, в то время как другие типы (как {{jsxref("Object")}}) таким свойством не обладают. Метод <code>@@iterator</code> имеют следующие встроенные типы:</p>
 
 <ul>
  <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
  <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
 </ul>
 
-<p>Смотрите также<a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols"> </a><a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols">Протоколы перебора</a> для получения дополнительных сведений.</p>
+<p>Смотрите также<a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols"> </a><a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols">Протоколы перебора</a> для получения дополнительных сведений.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -47,7 +47,7 @@ myIterable[Symbol.iterator] = function* () {
 
 <h3 id="Плохо_оформленные_итераторы">Плохо оформленные итераторы</h3>
 
-<p>Если метод <code>@@iterator</code> объекта не возвращает итератор, то это плохо оформленный итерируемый объект, его использование, скорее всего, приведёт к возникновению исключений или неправильному поведению:</p>
+<p>Если метод <code>@@iterator</code> объекта не возвращает итератор, то это плохо оформленный итерируемый объект, его использование, скорее всего, приведёт к возникновению исключений или неправильному поведению:</p>
 
 <pre class="brush: js">var nonWellFormedIterable = {}
 nonWellFormedIterable[Symbol.iterator] = () =&gt; 1

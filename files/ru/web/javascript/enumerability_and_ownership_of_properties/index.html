@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
 <div>{{JsSidebar("More")}}</div>
 
-<p>В языке JavaScript свойства объектов могут быть перечисляемыми или неперечисляемыми (встречается вариант перевода: счётные или несчётные). Если внутреннему флагу [[Enumerable]] свойства присвоить значение true, то данное свойство становится перечисляемым. Это происходит по умолчанию для свойств, созданных простым присваиванием или через инициализацию свойств (свойства, определённые через <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> получают по умолчанию значение флага [[Enumerable]] равным false). Перечисляемые свойства участвуют в итерации в цикле <a href="/ru/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a>, если только имя свойства не <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Символ</a>. Принадлежность свойства определяется тем, принадлежит ли оно непосредственно объекту или получено из цепочки прототипов. Также можно получить весь список свойств объекта. Ниже, в таблице, указаны возможные способы нахождения, получения и итерации свойств объектов. Некоторые из них нельзя использовать без дополнительного кода, примеры которого приведены после таблицы.</p>
+<p>В языке JavaScript свойства объектов могут быть перечисляемыми или неперечисляемыми (встречается вариант перевода: счётные или несчётные). Если внутреннему флагу [[Enumerable]] свойства присвоить значение true, то данное свойство становится перечисляемым. Это происходит по умолчанию для свойств, созданных простым присваиванием или через инициализацию свойств (свойства, определённые через <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> получают по умолчанию значение флага [[Enumerable]] равным false). Перечисляемые свойства участвуют в итерации в цикле <a href="/ru/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a>, если только имя свойства не <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Символ</a>. Принадлежность свойства определяется тем, принадлежит ли оно непосредственно объекту или получено из цепочки прототипов. Также можно получить весь список свойств объекта. Ниже, в таблице, указаны возможные способы нахождения, получения и итерации свойств объектов. Некоторые из них нельзя использовать без дополнительного кода, примеры которого приведены после таблицы.</p>
 
 <table>
  <caption>Перечисляемость и принадлежность свойств - встроенные методы определения, получения и итерации</caption>
@@ -24,13 +24,13 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
       <tr>
        <th scope="col">Перечисляемые</th>
        <th scope="col">Неперечисляемые</th>
-       <th scope="col">Перечисляемые и Неперечисляемые</th>
+       <th scope="col">Перечисляемые и Неперечисляемые</th>
       </tr>
      </thead>
      <tbody>
       <tr>
        <td><code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
-       <td><code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code> и !<code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
+       <td><code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code> и !<code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
        <td><code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">hasOwnProperty</a></code></td>
       </tr>
      </tbody>
@@ -47,13 +47,13 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
       <tr>
        <th scope="col">Перечисляемые</th>
        <th scope="col">Неперечисляемые</th>
-       <th scope="col">Перечисляемые и Неперечисляемые</th>
+       <th scope="col">Перечисляемые и Неперечисляемые</th>
       </tr>
      </thead>
      <tbody>
       <tr>
        <td><code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/keys" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code></td>
-       <td>Получить <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code>, выбрать свойства, не удовлетворяющие <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
+       <td>Получить <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code>, выбрать свойства, не удовлетворяющие <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
        <td><code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code></td>
       </tr>
      </tbody>
@@ -70,13 +70,13 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
       <tr>
        <th scope="col">Перечисляемые</th>
        <th scope="col">Неперечисляемые</th>
-       <th scope="col">Перечисляемые и Неперечисляемые</th>
+       <th scope="col">Перечисляемые и Неперечисляемые</th>
       </tr>
      </thead>
      <tbody>
       <tr>
-       <td>Итерация по массиву <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/keys" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code></td>
-       <td>Итерация по <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code>, с выбранными свойствами, не удовлетворяющими <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
+       <td>Итерация по массиву <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/keys" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a></code></td>
+       <td>Итерация по <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code>, с выбранными свойствами, не удовлетворяющими <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable">propertyIsEnumerable</a></code></td>
        <td>Итерация по <code><a href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" title="/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">getOwnPropertyNames</a></code></td>
       </tr>
      </tbody>
@@ -88,7 +88,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
       <tr>
        <th scope="col">Перечисляемые</th>
        <th scope="col">Неперечисляемые</th>
-       <th scope="col">Перечисляемые и Неперечисляемые</th>
+       <th scope="col">Перечисляемые и Неперечисляемые</th>
       </tr>
      </thead>
      <tbody>
@@ -110,8 +110,8 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 <p>Хотим заметить, что данный алгоритм эффективен не для всех классов.</p>
 
 <ul>
- <li>Определение свойства:    <code>SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) &gt; -1</code></li>
- <li>Итерация:   <code>SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});</code> (or use<code> filter()</code>, <code>map()</code>, etc.)</li>
+ <li>Определение свойства:    <code>SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) &gt; -1</code></li>
+ <li>Итерация:   <code>SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});</code> (or use<code> filter()</code>, <code>map()</code>, etc.)</li>
 </ul>
 
 <pre class="brush: js">var SimplePropertyRetriever = {
@@ -177,12 +177,12 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
     }
 };</pre>
 
-<h2 id="Определимость_свойств">Определимость свойств</h2>
+<h2 id="Определимость_свойств">Определимость свойств</h2>
 
 <table>
  <thead>
   <tr>
-   <th scope="row"> </th>
+   <th scope="row"> </th>
    <th scope="col"><code>in</code></th>
    <th scope="col"><code>for..in</code></th>
    <th scope="col"><code>hasOwnProperty</code></th>
