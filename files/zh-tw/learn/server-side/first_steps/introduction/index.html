@@ -88,7 +88,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p>再者，儘管用戶端與伺服端程式碼都使用框架，但會因為非常不同的域，而使得框架也不同。用戶端網頁框架簡化佈局與呈現的任務，而伺服端網頁框架則提供大量＂通用＂的網頁伺服器功能，否則你可能必須要自己實現（例如：對sessions的支援、對使用者認證的支援、簡易資料庫存取、樣板庫等）。</p>
 
 <div class="note">
-<p><strong>Note</strong>: Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple web site UI.</p>
+<p><strong>備註：</strong> Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple web site UI.</p>
 
 <p>In contrast, you would almost never consider writing the server-side component of a web app without a framework — implementing a vital feature like an HTTP server is really hard to do from scratch in say Python, but Python web frameworks like Django provide one out of the box, along with other very useful tools.</p>
 </div>
@@ -116,7 +116,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p>由於資訊存在於資料庫中，它可以輕易地與其他商業系統進行分享與更新（例如：當產品在線上或在店家中售完，店家可能會更新該產品的庫存資料庫）。</p>
 
 <div class="note">
-<p><strong>Note</strong>: Your imagination doesn't have to work hard to see the benefit of server-side code for efficient storage and delivery of information:</p>
+<p><strong>備註：</strong> Your imagination doesn't have to work hard to see the benefit of server-side code for efficient storage and delivery of information:</p>
 
 <ol>
  <li>Go to <a href="https://www.amazon.com">Amazon</a> or some other e-commerce site.</li>
@@ -134,7 +134,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p>一個使用者習慣更深層的分析，可以使用在預測他的興趣以及更進一步客製回應與提醒，例如在地圖中提供你可能想去看得過去遊歷過的或是熱門的地點列表。</p>
 
 <div class="note">
-<p><strong>Note: </strong><a href="https://maps.google.com/">Google Maps</a> saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.</p>
+<p><strong>備註：</strong> <a href="https://maps.google.com/">Google Maps</a> saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.</p>
 
 <p>Google search results are optimized based on previous searches.</p>
 
@@ -161,7 +161,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?</p>
+<p><strong>備註：</strong> Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?</p>
 </div>
 
 <h3 id="儲存sessionstate資訊">儲存session/state資訊</h3>
@@ -171,7 +171,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p>例如，這允許網站了解一個使用者先前已登入過，以及將訂購歷史紀錄在他們的電子郵件中顯示連結，或者也許會儲存一個基本的遊戲狀態，讓使用者能再次回到網站的同時，拿回他們留在網站的資訊。</p>
 
 <div class="note">
-<p><strong>Note</strong>: Visit a newspaper site that has a subscription model and open a bunch of tabs (e.g. <a href="http://www.theage.com.au/">The Age</a>). Continue to visit the site over a few hours/days. Eventually, you will start to be redirected to pages explaining how to subscribe, and you will be unable to access articles. This information is an example of session information stored in cookies.</p>
+<p><strong>備註：</strong> Visit a newspaper site that has a subscription model and open a bunch of tabs (e.g. <a href="http://www.theage.com.au/">The Age</a>). Continue to visit the site over a few hours/days. Eventually, you will start to be redirected to pages explaining how to subscribe, and you will be unable to access articles. This information is an example of session information stored in cookies.</p>
 </div>
 
 <h3 id="提醒與溝通">提醒與溝通</h3>
@@ -187,7 +187,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: The most common type of notification is a "confirmation of registration". Pick almost any large site that you are interested in (Google, Amazon, Instagram, etc.) and create a new account using your email address. You will shortly receive an email confirming your registration, or requiring acknowledgment to activate your account.</p>
+<p><strong>備註：</strong> The most common type of notification is a "confirmation of registration". Pick almost any large site that you are interested in (Google, Amazon, Instagram, etc.) and create a new account using your email address. You will shortly receive an email confirming your registration, or requiring acknowledgment to activate your account.</p>
 </div>
 
 <h3 id="資料分析">資料分析</h3>
@@ -197,7 +197,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 <p>例如，Amazon與Google都根據過往搜尋（與購買）紀錄來廣告產品。</p>
 
 <div class="note">
-<p><strong>Note</strong>: If you're a Facebook user, go to your main feed and look at the stream of posts. Note how some of the posts are out of numerical order - in particular, posts with more "likes" are often higher on the list than more recent posts.</p>
+<p><strong>備註：</strong> If you're a Facebook user, go to your main feed and look at the stream of posts. Note how some of the posts are out of numerical order - in particular, posts with more "likes" are often higher on the list than more recent posts.</p>
 
 <p>Also look at what kind of ads you are being shown — you might see ads for things you looked at on other sites. Facebook's algorithm for highlighting content and advertising can be a bit of a mystery, but it is clear that it does depend on your likes and viewing habits!</p>
 </div>
