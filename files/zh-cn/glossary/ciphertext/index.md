@@ -12,4 +12,4 @@ translation_of: Glossary/Ciphertext
 
 ## 另请参阅
 
-- 维基百科上的 [密文](https://zh.wikipedia.org/wiki/%E5%AF%86%E6%96%87) 介绍
+- 维基百科上的[密文](https://zh.wikipedia.org/wiki/密文)介绍
