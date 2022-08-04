@@ -3626,24 +3626,6 @@
       "Sheppy"
     ]
   },
-  "MDN/About": {
-    "modified": "2020-05-03T01:47:58.469Z",
-    "contributors": [
-      "Beatriz_Ortega_Valdes",
-      "ecedenyo",
-      "wbamberg",
-      "jswisher",
-      "hecaxmmx",
-      "SoftwareRVG",
-      "Jeremie",
-      "carloslazaro",
-      "cosmesantos",
-      "wilo",
-      "LuisArt",
-      "sinfallas",
-      "maedca"
-    ]
-  },
   "MDN/At_ten": {
     "modified": "2019-03-23T22:49:57.954Z",
     "contributors": [
@@ -3651,19 +3633,7 @@
       "diego.mauricio.meneses.rios"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2019-03-22T01:52:35.495Z",
-    "contributors": [
-      "Beatriz_Ortega_Valdes",
-      "wbamberg",
-      "Rrxxxx",
-      "Ibrahim1997",
-      "LeoHirsch",
-      "MauricioGil",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Feedback": {
+  "MDN/Community": {
     "modified": "2020-12-02T14:04:57.487Z",
     "contributors": [
       "SphinxKnight",
@@ -3683,7 +3653,7 @@
       "DracotMolver"
     ]
   },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-12-02T19:26:24.923Z",
     "contributors": [
       "chrisdavidmills",
@@ -3706,6 +3676,18 @@
       "cototion"
     ]
   },
+  "MDN/Contribute": {
+    "modified": "2019-03-22T01:52:35.495Z",
+    "contributors": [
+      "Beatriz_Ortega_Valdes",
+      "wbamberg",
+      "Rrxxxx",
+      "Ibrahim1997",
+      "LeoHirsch",
+      "MauricioGil",
+      "Mars"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2019-01-16T18:56:52.965Z",
     "contributors": [
@@ -3716,138 +3698,11 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
-    "modified": "2019-01-16T19:10:19.469Z",
-    "contributors": [
-      "wbamberg",
-      "javierdp",
-      "gpadilla",
-      "RoxPulido",
-      "LeoHirsch"
-    ]
-  },
-  "MDN/Contribute/Howto/Tag": {
-    "modified": "2019-03-23T23:15:01.953Z",
-    "contributors": [
-      "wbamberg",
-      "Creasick",
-      "blanchart",
-      "meCarrion17",
-      "rafamagno",
-      "teoli",
-      "PepeAntonio",
-      "CristianMar25",
-      "anmartinez",
-      "LeoHirsch"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary": {
-    "modified": "2019-03-23T23:09:23.417Z",
-    "contributors": [
-      "wbamberg",
-      "astrapotro",
-      "teoli",
-      "L_e_o"
-    ]
-  },
-  "MDN/Contribute/Markdown_in_MDN": {
-    "modified": "2020-09-30T15:28:56.171Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "LeoHirsch"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-17T02:12:44.469Z",
     "contributors": [
       "wbamberg",
       "astrapotro"
-    ]
-  },
-  "MDN/Guidelines": {
-    "modified": "2020-09-30T15:28:55.816Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "LeoHirsch"
-    ]
-  },
-  "MDN/Guidelines/Conventions_definitions": {
-    "modified": "2020-09-30T15:28:56.412Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Nachec"
-    ]
-  },
-  "MDN/Guidelines/Writing_style_guide": {
-    "modified": "2020-09-30T15:28:56.038Z",
-    "contributors": [
-      "chrisdavidmills",
-      "blanchart",
-      "clarii",
-      "wbamberg",
-      "Jeremie",
-      "Salamandra101",
-      "Dgeek",
-      "fscholz",
-      "LeoHirsch",
-      "teoli",
-      "Pgulijczuk",
-      "DoctorRomi",
-      "Nukeador",
-      "Nanomo",
-      "Eqx",
-      "Jorolo"
-    ]
-  },
-  "MDN/Structures": {
-    "modified": "2020-09-30T09:06:15.403Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jswisher"
-    ]
-  },
-  "MDN/Structures/Compatibility_tables": {
-    "modified": "2020-10-15T22:33:39.399Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Nachec"
-    ]
-  },
-  "MDN/Structures/Live_samples": {
-    "modified": "2020-09-30T09:06:15.983Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "emanuelvega",
-      "LUISTGMDN",
-      "elihro"
-    ]
-  },
-  "MDN/Structures/Macros": {
-    "modified": "2020-09-30T09:06:16.658Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Nachec",
-      "wbamberg"
-    ]
-  },
-  "MDN/Structures/Macros/Commonly-used_macros": {
-    "modified": "2020-09-30T09:06:17.138Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Nachec"
-    ]
-  },
-  "MDN/Structures/Macros/Other": {
-    "modified": "2020-09-30T09:06:17.522Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Nachec"
     ]
   },
   "MDN/Tools": {
@@ -3868,6 +3723,116 @@
       "velizluisma",
       "Jeremie",
       "LeoHirsch"
+    ]
+  },
+  "MDN/Writing_guidelines": {
+    "modified": "2020-05-03T01:47:58.469Z",
+    "contributors": [
+      "Beatriz_Ortega_Valdes",
+      "ecedenyo",
+      "wbamberg",
+      "jswisher",
+      "hecaxmmx",
+      "SoftwareRVG",
+      "Jeremie",
+      "carloslazaro",
+      "cosmesantos",
+      "wilo",
+      "LuisArt",
+      "sinfallas",
+      "maedca"
+    ]
+  },
+  "MDN/Writing_guidelines/Experimental_deprecated_obsolete": {
+    "modified": "2020-09-30T15:28:56.412Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Nachec"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Markdown_in_MDN": {
+    "modified": "2020-09-30T15:28:56.171Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Jeremie",
+      "LeoHirsch"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Tag": {
+    "modified": "2019-03-23T23:15:01.953Z",
+    "contributors": [
+      "wbamberg",
+      "Creasick",
+      "blanchart",
+      "meCarrion17",
+      "rafamagno",
+      "teoli",
+      "PepeAntonio",
+      "CristianMar25",
+      "anmartinez",
+      "LeoHirsch"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
+    "modified": "2019-03-23T23:09:23.417Z",
+    "contributors": [
+      "wbamberg",
+      "astrapotro",
+      "teoli",
+      "L_e_o"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-10-15T22:33:39.399Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Nachec"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Live_samples": {
+    "modified": "2019-01-16T19:10:19.469Z",
+    "contributors": [
+      "wbamberg",
+      "javierdp",
+      "gpadilla",
+      "RoxPulido",
+      "LeoHirsch"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros": {
+    "modified": "2020-09-30T09:06:17.138Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Nachec"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Macros/Other": {
+    "modified": "2020-09-30T09:06:17.522Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Nachec"
+    ]
+  },
+  "MDN/Writing_guidelines/Writing_style_guide": {
+    "modified": "2020-09-30T15:28:56.038Z",
+    "contributors": [
+      "chrisdavidmills",
+      "blanchart",
+      "clarii",
+      "wbamberg",
+      "Jeremie",
+      "Salamandra101",
+      "Dgeek",
+      "fscholz",
+      "LeoHirsch",
+      "teoli",
+      "Pgulijczuk",
+      "DoctorRomi",
+      "Nukeador",
+      "Nanomo",
+      "Eqx",
+      "Jorolo"
     ]
   },
   "MDN/Yari": {
@@ -20702,6 +20667,41 @@
     "contributors": [
       "wbamberg",
       "Sheppy"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines": {
+    "modified": "2020-09-30T15:28:55.816Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Jeremie",
+      "LeoHirsch"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-09-30T09:06:15.403Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "jswisher"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692": {
+    "modified": "2020-09-30T09:06:15.983Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "emanuelvega",
+      "LUISTGMDN",
+      "elihro"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
+    "modified": "2020-09-30T09:06:16.658Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Nachec",
+      "wbamberg"
     ]
   },
   "conflicting/MDN/Yari": {

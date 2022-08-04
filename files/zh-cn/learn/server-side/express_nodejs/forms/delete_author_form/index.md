@@ -34,7 +34,7 @@ exports.author_delete_get = function(req, res, next) {
 };
 ```
 
-控制器从 URL 参数（`req.params.id`）中，获取要删除的`Author`实例的 id。它使用`async.parallel()` 方法，并行获取作者记录和所有相关书本。当两个操作都完成后，它将呈现**`author_delete`\*\***.pug\*\*视图，为`title`、`author`、和 `author_books`传递变量。
+控制器从 URL 参数（`req.params.id`）中，获取要删除的`Author`实例的 id。它使用`async.parallel()` 方法，并行获取作者记录和所有相关书本。当两个操作都完成后，它将呈现 **author_delete.pug** 视图，为 `title`、`author` 和 `author_books` 传递变量。
 
 > **备注：** 如果`findById()`返回“没有结果”，则作者不在数据库中。在这种情况下，没有什么可以删除，所以我们立即呈现所有作者的列表。
 >
