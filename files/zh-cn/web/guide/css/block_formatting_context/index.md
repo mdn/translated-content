@@ -10,7 +10,7 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 ---
 {{ CSSRef }}
 
-**块格式化上下文（Block Formatting Context，BFC）** 是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
+**块格式化上下文**（Block Formatting Context，BFC）是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
 
 下列方式会创建块格式化上下文：
 
@@ -200,4 +200,23 @@ section {
 ## 参见
 
 - {{ cssxref("float") }}, {{ cssxref("clear") }}
-- {{ css_key_concepts }}
+- CSS 重要概念：
+  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 值
+    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
+    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
+  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
