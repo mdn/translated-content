@@ -20,7 +20,7 @@ mediaSource.endOfStream(endOfStreamError);
   - : 一个 {{domxref("DOMString")}}，表示当流结束之时需要抛出的异常名。可选的值为：
 
     - `network`
-      - : 中止播放并且发出发生网络错误的信号。这可用于创建一个与媒体流相关的自定义处理程序。例如，你可能有一个与其他网络请求分开的，单独处理媒体分块请求的函数。当你对媒体分块进行 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 调用并触发 `onabort` 或 `onerror` 时，你可能需要调用 `endOfStream('network')` 在 UI 中展示描述性的错误，并且立即重试网络请求或者等到网络备份（通过某种轮询）。
+      - : 中止播放并且发出发生网络错误的信号。这可用于创建一个与媒体流相关的自定义处理程序。例如，你可能有一个与其他网络请求分开的，单独处理媒体分块请求的函数。当你调用 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)（以获取媒体分块）而触发 `onabort` 或 `onerror` 时，你可能需要调用 `endOfStream('network')`，在 UI 中展示描述性的错误，并且立即重试网络请求或者等到网络恢复（通过某种轮询）。
     - `decode`
       - : 中止播放并且发出发生解码错误的信号。这可用于指示当获取媒体数据时发生了解析错误；可能数据已损坏，或者是使用浏览器不知道如何解码的编解码器进行编码。
 
