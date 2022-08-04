@@ -2414,19 +2414,6 @@
       "jswisher"
     ]
   },
-  "MDN/About": {
-    "modified": "2019-09-10T08:53:31.700Z",
-    "contributors": [
-      "SphinxKnight",
-      "alattalatta",
-      "wbamberg",
-      "zziuni",
-      "jswisher",
-      "LimeClover",
-      "empol",
-      "leosangwon"
-    ]
-  },
   "MDN/At_ten": {
     "modified": "2019-03-23T22:41:30.825Z",
     "contributors": [
@@ -2434,17 +2421,7 @@
       "jefflee0127"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2019-01-16T19:13:18.509Z",
-    "contributors": [
-      "wbamberg",
-      "zziuni",
-      "hoony",
-      "Junny",
-      "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Feedback": {
+  "MDN/Community": {
     "modified": "2020-09-30T17:51:50.022Z",
     "contributors": [
       "chrisdavidmills",
@@ -2455,7 +2432,7 @@
       "LimeClover"
     ]
   },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-11-09T03:14:41.161Z",
     "contributors": [
       "SphinxKnight",
@@ -2476,6 +2453,24 @@
       "loslch"
     ]
   },
+  "MDN/Community/Issues": {
+    "modified": "2020-01-07T12:20:00.841Z",
+    "contributors": [
+      "peterbe",
+      "wbamberg",
+      "LimeClover"
+    ]
+  },
+  "MDN/Contribute": {
+    "modified": "2019-01-16T19:13:18.509Z",
+    "contributors": [
+      "wbamberg",
+      "zziuni",
+      "hoony",
+      "Junny",
+      "Sheppy"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2019-01-16T19:13:26.954Z",
     "contributors": [
@@ -2487,14 +2482,35 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
-    "modified": "2019-01-16T19:48:52.048Z",
+  "MDN/Contribute/Processes": {
+    "modified": "2019-01-17T02:54:48.050Z",
     "contributors": [
       "wbamberg",
-      "Junbong"
+      "zziuni"
     ]
   },
-  "MDN/Contribute/Howto/Create_and_edit_pages": {
+  "MDN/Writing_guidelines": {
+    "modified": "2019-09-10T08:53:31.700Z",
+    "contributors": [
+      "SphinxKnight",
+      "alattalatta",
+      "wbamberg",
+      "zziuni",
+      "jswisher",
+      "LimeClover",
+      "empol",
+      "leosangwon"
+    ]
+  },
+  "MDN/Writing_guidelines/Experimental_deprecated_obsolete": {
+    "modified": "2020-09-30T15:30:34.436Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Netaras"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Creating_moving_deleting": {
     "modified": "2019-03-23T23:13:39.002Z",
     "contributors": [
       "wbamberg",
@@ -2506,15 +2522,7 @@
       "KwanHong_Lee66"
     ]
   },
-  "MDN/Contribute/Howto/Report_a_problem": {
-    "modified": "2020-01-07T12:20:00.841Z",
-    "contributors": [
-      "peterbe",
-      "wbamberg",
-      "LimeClover"
-    ]
-  },
-  "MDN/Contribute/Howto/Tag": {
+  "MDN/Writing_guidelines/Howto/Tag": {
     "modified": "2019-03-18T20:41:26.193Z",
     "contributors": [
       "alattalatta",
@@ -2523,59 +2531,40 @@
       "plzfday"
     ]
   },
-  "MDN/Contribute/Howto/Write_an_API_reference/Sidebars": {
+  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars": {
     "modified": "2020-09-30T12:56:35.846Z",
     "contributors": [
       "chrisdavidmills",
       "zziuni"
     ]
   },
-  "MDN/Contribute/Processes": {
-    "modified": "2019-01-17T02:54:48.050Z",
-    "contributors": [
-      "wbamberg",
-      "zziuni"
-    ]
-  },
-  "MDN/Guidelines": {
-    "modified": "2020-09-30T15:30:34.264Z",
+  "MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-10-15T22:03:04.448Z",
     "contributors": [
       "chrisdavidmills",
       "wbamberg",
-      "zziuni",
-      "Netaras",
-      "Sheppy"
+      "Kuiprux",
+      "kewlbear"
     ]
   },
-  "MDN/Guidelines/Code_guidelines": {
-    "modified": "2020-09-30T15:30:34.683Z",
+  "MDN/Writing_guidelines/Page_structures/Live_samples": {
+    "modified": "2019-01-16T19:48:52.048Z",
     "contributors": [
-      "chrisdavidmills"
+      "wbamberg",
+      "Junbong"
     ]
   },
-  "MDN/Guidelines/Code_guidelines/CSS": {
-    "modified": "2020-09-30T15:30:35.142Z",
-    "contributors": [
-      "chrisdavidmills",
-      "java2020007"
-    ]
-  },
-  "MDN/Guidelines/Code_guidelines/General": {
-    "modified": "2020-09-30T15:30:35.323Z",
-    "contributors": [
-      "chrisdavidmills",
-      "honggaruy"
-    ]
-  },
-  "MDN/Guidelines/Conventions_definitions": {
-    "modified": "2020-09-30T15:30:34.436Z",
+  "MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros": {
+    "modified": "2020-09-30T12:56:36.084Z",
     "contributors": [
       "chrisdavidmills",
       "wbamberg",
+      "teoli",
+      "fscholz",
       "Netaras"
     ]
   },
-  "MDN/Guidelines/Does_this_belong_on_MDN": {
+  "MDN/Writing_guidelines/What_we_write": {
     "modified": "2019-01-16T19:22:53.277Z",
     "contributors": [
       "wbamberg",
@@ -2584,7 +2573,7 @@
       "leosangwon"
     ]
   },
-  "MDN/Guidelines/Writing_style_guide": {
+  "MDN/Writing_guidelines/Writing_style_guide": {
     "modified": "2020-09-30T15:30:35.279Z",
     "contributors": [
       "chrisdavidmills",
@@ -2598,41 +2587,18 @@
       "epicsaga"
     ]
   },
-  "MDN/Structures": {
-    "modified": "2020-09-30T12:56:35.534Z",
+  "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
+    "modified": "2020-09-30T15:30:35.323Z",
     "contributors": [
       "chrisdavidmills",
-      "zziuni",
-      "wbamberg",
-      "Netaras",
-      "hoony"
+      "honggaruy"
     ]
   },
-  "MDN/Structures/Compatibility_tables": {
-    "modified": "2020-10-15T22:03:04.448Z",
+  "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS": {
+    "modified": "2020-09-30T15:30:35.142Z",
     "contributors": [
       "chrisdavidmills",
-      "wbamberg",
-      "Kuiprux",
-      "kewlbear"
-    ]
-  },
-  "MDN/Structures/Macros": {
-    "modified": "2020-09-30T12:56:35.761Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Netaras"
-    ]
-  },
-  "MDN/Structures/Macros/Commonly-used_macros": {
-    "modified": "2020-09-30T12:56:36.084Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "teoli",
-      "fscholz",
-      "Netaras"
+      "java2020007"
     ]
   },
   "MDN/Yari": {
@@ -16989,6 +16955,40 @@
     "contributors": [
       "wbamberg",
       "andrewJYjang"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines": {
+    "modified": "2020-09-30T15:30:34.264Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "zziuni",
+      "Netaras",
+      "Sheppy"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-09-30T12:56:35.534Z",
+    "contributors": [
+      "chrisdavidmills",
+      "zziuni",
+      "wbamberg",
+      "Netaras",
+      "hoony"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
+    "modified": "2020-09-30T12:56:35.761Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Netaras"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
+    "modified": "2020-09-30T15:30:34.683Z",
+    "contributors": [
+      "chrisdavidmills"
     ]
   },
   "conflicting/Mozilla/Add-ons": {

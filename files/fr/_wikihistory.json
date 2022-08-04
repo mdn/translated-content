@@ -5424,30 +5424,6 @@
       "Sheppy"
     ]
   },
-  "MDN/About": {
-    "modified": "2019-03-24T00:12:46.908Z",
-    "contributors": [
-      "wbamberg",
-      "Porkepix",
-      "Mozinet",
-      "fscholz",
-      "jswisher",
-      "microsoft",
-      "wakka27",
-      "Jeremie",
-      "teoli",
-      "tregagnon",
-      "le penseur",
-      "Akiro",
-      "BenoitL",
-      "Petrus",
-      "Omnisilver",
-      "Gege2",
-      "Dria",
-      "Cbeard",
-      "Anonymous"
-    ]
-  },
   "MDN/At_ten": {
     "modified": "2019-03-23T22:50:40.435Z",
     "contributors": [
@@ -5468,25 +5444,7 @@
       "SphinxKnight"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2020-08-31T06:19:39.661Z",
-    "contributors": [
-      "Voulto",
-      "wbamberg",
-      "zakaila",
-      "callmemagnus",
-      "Danette41240",
-      "SphinxKnight",
-      "Porkepix",
-      "thbil",
-      "Goofy",
-      "Baball",
-      "teoli",
-      "wakka27",
-      "jswisher"
-    ]
-  },
-  "MDN/Contribute/Feedback": {
+  "MDN/Community": {
     "modified": "2020-09-30T17:50:52.899Z",
     "contributors": [
       "chrisdavidmills",
@@ -5498,7 +5456,7 @@
       "PifyZ"
     ]
   },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-09-30T17:11:12.542Z",
     "contributors": [
       "chrisdavidmills",
@@ -5529,6 +5487,24 @@
       "wakka27"
     ]
   },
+  "MDN/Contribute": {
+    "modified": "2020-08-31T06:19:39.661Z",
+    "contributors": [
+      "Voulto",
+      "wbamberg",
+      "zakaila",
+      "callmemagnus",
+      "Danette41240",
+      "SphinxKnight",
+      "Porkepix",
+      "thbil",
+      "Goofy",
+      "Baball",
+      "teoli",
+      "wakka27",
+      "jswisher"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2019-01-16T18:23:52.592Z",
     "contributors": [
@@ -5536,22 +5512,6 @@
       "Porkepix",
       "Baball",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
-    "modified": "2019-01-16T20:18:20.962Z",
-    "contributors": [
-      "wbamberg",
-      "Maamouch",
-      "Goofy",
-      "Lamaw"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary": {
-    "modified": "2019-03-23T22:09:42.767Z",
-    "contributors": [
-      "wbamberg",
-      "PhilippePerret"
     ]
   },
   "MDN/Contribute/Processes": {
@@ -5562,23 +5522,47 @@
       "jswisher"
     ]
   },
-  "MDN/Guidelines": {
-    "modified": "2020-09-30T15:29:18.429Z",
+  "MDN/Tools": {
+    "modified": "2020-09-30T16:48:32.947Z",
     "contributors": [
       "chrisdavidmills",
+      "Voulto",
+      "wbamberg",
+      "jswisher"
+    ]
+  },
+  "MDN/Writing_guidelines": {
+    "modified": "2019-03-24T00:12:46.908Z",
+    "contributors": [
       "wbamberg",
       "Porkepix",
-      "thbil"
+      "Mozinet",
+      "fscholz",
+      "jswisher",
+      "microsoft",
+      "wakka27",
+      "Jeremie",
+      "teoli",
+      "tregagnon",
+      "le penseur",
+      "Akiro",
+      "BenoitL",
+      "Petrus",
+      "Omnisilver",
+      "Gege2",
+      "Dria",
+      "Cbeard",
+      "Anonymous"
     ]
   },
-  "MDN/Guidelines/Code_guidelines": {
-    "modified": "2020-09-30T15:29:18.597Z",
+  "MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary": {
+    "modified": "2019-03-23T22:09:42.767Z",
     "contributors": [
-      "chrisdavidmills",
-      "tristantheb"
+      "wbamberg",
+      "PhilippePerret"
     ]
   },
-  "MDN/Structures": {
+  "MDN/Writing_guidelines/Page_structures": {
     "modified": "2020-09-30T09:06:58.853Z",
     "contributors": [
       "chrisdavidmills",
@@ -5587,24 +5571,16 @@
       "jswisher"
     ]
   },
-  "MDN/Structures/Live_samples": {
-    "modified": "2020-09-30T09:06:59.551Z",
+  "MDN/Writing_guidelines/Page_structures/Live_samples": {
+    "modified": "2019-01-16T20:18:20.962Z",
     "contributors": [
-      "chrisdavidmills",
-      "tristantheb",
       "wbamberg",
-      "Johann-S"
+      "Maamouch",
+      "Goofy",
+      "Lamaw"
     ]
   },
-  "MDN/Structures/Macros": {
-    "modified": "2020-09-30T09:06:59.189Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jmh"
-    ]
-  },
-  "MDN/Structures/Macros/Commonly-used_macros": {
+  "MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros": {
     "modified": "2020-09-30T09:06:59.707Z",
     "contributors": [
       "chrisdavidmills",
@@ -5612,15 +5588,6 @@
       "teoli",
       "fscholz",
       "jmh"
-    ]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:48:32.947Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Voulto",
-      "wbamberg",
-      "jswisher"
     ]
   },
   "MDN/Yari": {
@@ -40685,6 +40652,39 @@
       "nvana",
       "si0ls",
       "dattaz"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines": {
+    "modified": "2020-09-30T15:29:18.429Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Porkepix",
+      "thbil"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-09-30T09:06:59.551Z",
+    "contributors": [
+      "chrisdavidmills",
+      "tristantheb",
+      "wbamberg",
+      "Johann-S"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
+    "modified": "2020-09-30T09:06:59.189Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "jmh"
+    ]
+  },
+  "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
+    "modified": "2020-09-30T15:29:18.597Z",
+    "contributors": [
+      "chrisdavidmills",
+      "tristantheb"
     ]
   },
   "conflicting/Web/Accessibility/ARIA": {

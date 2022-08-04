@@ -1,0 +1,147 @@
+---
+title: Guía de estilo
+slug: MDN/Writing_guidelines/Writing_style_guide
+tags:
+  - Proyecto_MDC
+  - Todas_las_Categorías
+translation_of: MDN/Guidelines/Writing_style_guide
+original_slug: MDN/Guidelines/Writing_style_guide
+---
+<div>{{MDNSidebar}}</div>
+
+<p><span class="seoSummary">Para mostrar la documentación de forma organizada, estandarizada y fácil de leer, la guía de estilos de MDN describe cómo debe organizarse, escribirse y formatearse el texto. Se trata de pautas más que de reglas estrictas.</span> Interesa más el contenido que el formato, así que no te sientas obligado a aprenderte la guía de estilos antes de colaborar. No te enojes ni te sorprendas si después un voluntario edita tu trabajo para que quede de acuerdo con esta guía.</p>
+
+<p>Los aspectos lingüísticos de esta guía se refieren principalmente a la documentación en idioma inglés.Se pueden (y se anima a) crear guías de estilo en otros idiomas. Estas deben publicarse como subpáginas de la página del equipo de localización.</p>
+
+<p>Si buscas especificaciones de cómo debe estructurarse un determinado tipo de página, mira la <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Content/Layout" style="line-height: 1.5;">guía de diseño de MDN</a>.</p>
+
+<p>Aquí se enumeran los usos y costumbres recomendados a la hora de editar los artículos de este wiki. Si ves que falta contenido o crees que deberíamos mejorar o corregir algo, por favor coméntalo en la página de discusión.</p>
+
+<h2 id="Uso_de_may.C3.BAsculas_en_el_nombre_de_las_p.C3.A1ginas_y_los_encabezados" name="Uso_de_may.C3.BAsculas_en_el_nombre_de_las_p.C3.A1ginas_y_los_encabezados">Uso de mayúsculas en el nombre de las páginas y los encabezados</h2>
+
+<ul>
+ <li>Cuando escribas los nombres de las páginas y de los encabezados, recuerda que sólo debe empezar con mayúscula la primera palabra de la frase.
+  <ul>
+   <li><font color="green"><strong>Correcto</strong></font>: "Guía de estilo"</li>
+   <li><font color="red"><strong>Incorrecto</strong></font>: "Guía de Estilo"</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Infinitivos_y_gerundios" name="Infinitivos_y_gerundios">Infinitivos y gerundios</h2>
+
+<ul>
+ <li>En inglés, una práctica muy habitual es la de utilizar verbos acabados en "-ing" en los títulos: "Configuring Firefox", por ejemplo. En estos casos la traducción correcta al español consiste en utilizar el infinitivo del verbo y no el gerundio.
+  <ul>
+   <li><font color="green"><strong>Correcto</strong></font>: Configurar Firefox</li>
+   <li><font color="red"><strong>Incorrecto</strong></font>: Configurando Firefox</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="Siglas_y_abreviaturas" name="Siglas_y_abreviaturas">Siglas y abreviaturas</h2>
+
+<h3 id="Capitalizaci.C3.B3n_y_espaciado" name="Capitalizaci.C3.B3n_y_espaciado">Mayúsculas y espacios</h3>
+
+<ul>
+ <li>Escribe las siglas en mayúsculas y sin puntos.
+  <ul>
+   <li><font color="green"><strong>Correcto</strong></font>: XUL</li>
+   <li><font color="red"><strong>Incorrecto</strong></font>: X.U.L.; Xul</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Expansi.C3.B3n" name="Expansi.C3.B3n">Expansión</h3>
+
+<ul>
+ <li>Siempre que sea posible, cuando uses siglas deberás expandirlas, es decir, explicar su significado. Recuerda que esto es necesario sólo la primera vez que dicha sigla aparezca en tu artículo.
+  <ul>
+   <li><font color="green"><strong>Correcto</strong></font>: "SVG (Gráficos vectoriales escalables) es un lenguaje de marcado XML..."</li>
+   <li><font color="red"><strong>Incorrecto</strong></font>: "SVG es un lenguaje de marcado XML..."</li>
+  </ul>
+ </li>
+</ul>
+
+<ul>
+ <li>También existe la opción de usar el elemento abbr:
+  <ul>
+   <li>El siguiente código: <span class="nowiki">&lt;abbr title='Gráficos vectoriales escalables'&gt;SVG&lt;/abbr&gt;</span></li>
+   <li>Se muestra de la siguiente forma: <abbr title="Gráficos vectoriales escalables">SVG</abbr></li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Plurales" name="Plurales">Plurales</h3>
+
+<ul>
+ <li>Para indicar el plural de una sigla usas "s".
+  <ul>
+   <li><font color="green"><strong>Correcto</strong></font>: CD-ROMs</li>
+   <li><font color="red"><strong>Incorrecto</strong></font>: CD-ROM's</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="N.C3.BAmeros" name="N.C3.BAmeros">Números</h2>
+
+<h3 id="Fechas" name="Fechas">Fechas</h3>
+
+<ul>
+ <li>Para las fechas usa el formato: día mes año.
+  <ul>
+   <li><font color="green"><strong>Correcto</strong></font>: 1 de enero de 2006</li>
+   <li><font color="red"><strong>Incorrecto</strong></font>: 01/02/06</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="Cantidades" name="Cantidades">Cantidades</h3>
+
+<ul>
+ <li>Usa coma para separar los decimales y punto para indicar miles:
+  <ul>
+   <li><font color="green"><strong>Correcto</strong></font>: 1,5 GB son 1.536 MB</li>
+   <li><font color="red"><strong>Incorrecto</strong></font>: 1.5 GB son 1536 MB</li>
+  </ul>
+ </li>
+</ul>
+
+<p>Esta regla tiene una excepción: en un documento que trate del lenguaje 'X', las cantidades deben expresarse del modo definido por ese lenguaje.</p>
+
+<h2 id="Usted.2C_t.C3.BA.2C_y_yo" name="Usted.2C_t.C3.BA.2C_y_yo">Usted, tú y yo</h2>
+
+<h3 id="El_tuteo" name="El_tuteo">El tuteo</h3>
+
+<p>Este es un problema complejo, puede que no exista la solución perfecta a gusto de todos. Pero sería interesante ponernos de acuerdo.</p>
+
+<p>Por lo pronto, hemos decidido usar el tú y evitar regionalismos en nuestras traducciones. Te invitamos a comentar tus opiniones en nuestra lista de correo. </p>
+
+<h3 id="La_1ª_persona">La 1ª persona</h3>
+
+<p>Salvo rarísimas excepciones, nunca debe usarse.</p>
+
+<ul>
+ <li><font color="green"><strong>Correcto</strong></font>: es recomendable...</li>
+ <li><font color="red"><strong>Incorrecto</strong></font>: te recomiendo...</li>
+</ul>
+
+<h2 id="Otras_guías_de_estilo_recomendadas">Otras guías de estilo recomendadas</h2>
+
+<p>Si tienes dudas sobre usos y estilos que no sean tratados en este documento, te recomendamos consultar:</p>
+
+<ul>
+ <li><a class="external" href="http://usuario.cicese.mx/~mechevar/manual/">Manual de estilo del CICESE</a> Sobre como escribir documentación técnica.</li>
+ <li><a class="external" href="http://es.wikipedia.org/wiki/Manual_de_estilo">Manual de estilo de Wikipedia</a> Sobre como escribir en un wiki.</li>
+</ul>
+
+<p>Los traductores también deberían consultar <a href="/Project:en/Writer%27s_guide">Writer's guide</a> para conocer el estilo usado en la edición inglesa.</p>
+
+<h2 id="Diccionarios_recomendados" name="Diccionarios_recomendados">Diccionarios recomendados</h2>
+
+<p>Si tienes dudas sobre gramática y ortografía, puedes visitar:</p>
+
+<ul>
+ <li><a class="external" href="http://www.rae.es/rae.html"><abbr title="Real Academia Española">Diccionario de la Real Academia Española</abbr></a></li>
+ <li><a class="external" href="http://www.rae.es/rae.html">Diccionario Panhispánico de Dudas</a></li>
+</ul>
