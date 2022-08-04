@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form
 
 <h2 class="highlight-spanned" id="Импорт_методов_проверки_и_очистки"><span class="highlight-span">Импорт методов проверки и очистки</span></h2>
 
-<p>Откройте <strong>/controllers/bookinstanceController.js</strong> и добавьте следующие строки вверху файла:</p>
+<p>Откройте <strong>/controllers/bookinstanceController.js</strong> и добавьте следующие строки вверху файла:</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">const</span> <span class="punctuation token">{</span> body<span class="punctuation token">,</span>validationResult <span class="punctuation token">}</span> <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'express-validator/check'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="keyword token">const</span> <span class="punctuation token">{</span> sanitizeBody <span class="punctuation token">}</span> <span class="operator token">=</span> <span class="function token">require</span><span class="punctuation token">(</span><span class="string token">'express-validator/filter'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
@@ -103,7 +103,7 @@ block content
       label(for='book') Book:
       select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
         - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA &lt; textB) ? -1 : (textA &gt; textB) ? 1 : 0;});
-        for book in book_list
+        for book in book_list
           if bookinstance
             option(value=book._id selected=(bookinstance.book.toString()==book._id.toString() ? 'selected' : false)) #{book.title}
           else
@@ -139,7 +139,7 @@ block content
 
 <h2 class="highlight-spanned" id="Как_это_выглядит"><span class="highlight-span">Как это выглядит?</span></h2>
 
-<p>Запустите приложение и откройте в браузере  <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Затем выберите ссылку <em>Create new book instance (copy)</em>. Если все настроено правильно, ваш сайт должен выглядеть примерно так, как показано на скриншоте. После того, как вы отправите валидный <code>BookInstance</code>, он должен быть сохранён, и вы попадёте на страницу сведений.</p>
+<p>Запустите приложение и откройте в браузере  <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Затем выберите ссылку <em>Create new book instance (copy)</em>. Если все настроено правильно, ваш сайт должен выглядеть примерно так, как показано на скриншоте. После того, как вы отправите валидный <code>BookInstance</code>, он должен быть сохранён, и вы попадёте на страницу сведений.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14490/LocalLibary_Express_BookInstance_Create_Empty.png" style="display: block; height: 554px; margin: 0px auto; width: 1000px;"></p>
 

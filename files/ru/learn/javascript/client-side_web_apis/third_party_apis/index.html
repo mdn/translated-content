@@ -29,7 +29,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 <p>Сторонние API - это API, предоставляемые третьими лицами — как правило, такими компаниями, как Facebook, Twitter, or Google — чтобы вы могли получить доступ к их функциям с помощью JavaScript и использовать его на своём собственном сайте. Как мы показали в нашей <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">вводной статье об API</a>, одним из наиболее очевидных примеров является использование <a href="https://developers.google.com/maps/">Google Maps APIs</a> для отображения пользовательских карт на ваших страницах.</p>
 
-<p>Давайте снова посмотрим на наш пример карты (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">исходный код на GitHub</a>; <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">см. это в действии</a>),  и используем его для иллюстрации того, как сторонние API отличаются от API-интерфейсов браузера.</p>
+<p>Давайте снова посмотрим на наш пример карты (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html">исходный код на GitHub</a>; <a href="https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html">см. это в действии</a>),  и используем его для иллюстрации того, как сторонние API отличаются от API-интерфейсов браузера.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: По умолчанию использование сторонних API на вашем сайте позволит им отслеживать файлы cookie своих доменов, устанавливать файлы cookie в исходное состояние, получать заголовки ссылок, определяющие посещаемые страницы, и разрешать им выполнять JavaScript на страницах, на которых они загружаются с теми же разрешениями (например, выполнить запросы AJAX на ваши серверы с теми же кукисами сеанса). Должны быть оценены вопросы регулирования, безопасности и конфиденциальности.</p>
@@ -79,8 +79,8 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 <p>Параметр URL, указанный в конце URL-адреса, является ключом разработчика - разработчик приложения должен применять его для получения ключа, а затем включать его в свой код определённым образом, чтобы иметь доступ к функциям API. В случае с Картами Google (и другими API Google) вы подаёте заявку на получение ключа на <a href="https://console.cloud.google.com/">Google Cloud Platform</a>.</p>
 
-<p>Другие API могут потребовать, чтобы вы включили ключ немного по-другому, но шаблон для большинства из них довольно схож. <br>
-  <br>
+<p>Другие API могут потребовать, чтобы вы включили ключ немного по-другому, но шаблон для большинства из них довольно схож. <br>
+  <br>
  Требование к ключу заключается в том, что не каждый может использовать функциональность API без какой-либо подотчётности. Когда разработчик зарегистрировался для ключа, они затем известны поставщику API, и действие может быть предпринято, если они начинают делать что-то вредоносное с помощью API (например, отслеживать местоположение пользователей или пытаться спамить API с множеством запросов для остановки его работы, например). Самое простое действие - просто отменить их привилегии API.</p>
 
 <h2 id="Расширенный_пример_Карт_Google">Расширенный пример Карт Google</h2>
@@ -212,7 +212,7 @@ scaleControl: true,</pre>
 
 <p>That's it for now — have a look around the <a href="https://developers.google.com/maps/documentation/javascript/">Google Maps APIs documentation</a>, and have some more fun playing!</p>
 
-<h2 id="A_RESTful_API_—_NYTimes">A RESTful API — NYTimes</h2>
+<h2 id="A_RESTful_API_—_NYTimes">A RESTful API — NYTimes</h2>
 
 <p>Now let's look at another API example — the <a href="https://developer.nytimes.com">New York Times API</a>. This API allows you to retrieve New York Times news story information and display it on your site. This type of API is known as a <strong>RESTful API</strong> — instead of getting data using the features of a JavaScript library like we did with Google Maps, we get data by making HTTP requests to specific URLs, with data like search terms and other properties encoded in the URL (often as URL parameters). This is a common pattern you'll encounter with APIs.</p>
 
@@ -467,7 +467,7 @@ function previousPage(e) {
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module">In this module</h2>
 
