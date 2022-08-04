@@ -14,7 +14,7 @@ A propriedade **`name`** representa o nome do tipo do erro. O valor inicial é "
 
 ## Descrição
 
-Por padrão, instâncias {{jsxref("Error")}} são dado o nome "Error". A propriedade `name`, em adição na propriedade {{jsxref("Error.prototype.message", "message")}}, é usado pelo metodo {{jsxref("Error.prototype.toString()")}} para criar a string de representação do erro.
+Por padrão, instâncias {{jsxref("Error")}} recebem o nome "Error". A propriedade `name`, em adição na propriedade {{jsxref("Error.prototype.message", "message")}}, é usado pelo metodo {{jsxref("Error.prototype.toString()")}} para criar a string de representação do erro.
 
 ## Exemplos
 
