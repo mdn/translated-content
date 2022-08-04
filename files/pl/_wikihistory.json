@@ -845,14 +845,7 @@
       "kamilcios"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2020-12-14T09:30:58.653Z",
-    "contributors": [
-      "wbamberg",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Feedback": {
+  "MDN/Community": {
     "modified": "2020-09-30T17:52:07.531Z",
     "contributors": [
       "chrisdavidmills",
@@ -865,7 +858,7 @@
       "Dominik9522"
     ]
   },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-09-30T17:15:08.485Z",
     "contributors": [
       "chrisdavidmills",
@@ -884,6 +877,13 @@
       "marin_s"
     ]
   },
+  "MDN/Contribute": {
+    "modified": "2020-12-14T09:30:58.653Z",
+    "contributors": [
+      "wbamberg",
+      "Mars"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2020-12-14T11:30:10.778Z",
     "contributors": [
@@ -891,7 +891,7 @@
       "klez"
     ]
   },
-  "MDN/Guidelines": {
+  "MDN/Writing_guidelines": {
     "modified": "2020-09-30T15:31:06.666Z",
     "contributors": [
       "chrisdavidmills",
