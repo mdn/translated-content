@@ -1,6 +1,6 @@
 ---
 title: 循环吧代码
-slug: learn/JavaScript/Building_blocks/Looping_code
+slug: Learn/JavaScript/Building_blocks/Looping_code
 tags:
   - JavaScript
   - break
@@ -37,8 +37,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <p>让我们来想一下下图，这位农夫考虑为他的家庭做一周的食物计划，他或许就需要执行一段循环：</p>
 
-<p><img alt="" src="https://raw.githubusercontent.com/agnoCJY/agno.github.io/master/loop_js-02-farm-cn.png" style="height: 563px; width: 900px;"><br>
-  </p>
+<p><img alt="" src="https://raw.githubusercontent.com/agnoCJY/agno.github.io/master/loop_js-02-farm-cn.png"></p>
 
 <p>一段循环通常需要一个或多个条件：</p>
 
@@ -50,7 +49,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <p>在 {{glossary("伪代码")}} 中，这看起来就像下面这样：</p>
 
-<pre>loop(food = 0; foodNeeded = 10) {
+<pre class="brush: js">loop(food = 0; foodNeeded = 10) {
   if (food = foodNeeded) {
     exit loop;
     // 我们有足够的食物了，回家吧。
@@ -70,10 +69,7 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
 <p>让我们来看一个例子来完美地说明为什么循环是一件好事。假设我们想在{{htmlelement("canvas")}}元素上绘制 100 个随机圆（按更新按钮一次又一次地运行示例以查看不同的随机集）：</p>
 
-<div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -138,9 +134,8 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code', '100%', 400, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('为何？', '100%', 400) }}</p>
 
 <p>您现在不需要理解所有代码，但我们来看看实际绘制 100 个圆的那部分代码：</p>
 
@@ -152,14 +147,10 @@ translation_of: Learn/JavaScript/Building_blocks/Looping_code
 }
 </pre>
 
-<p> </p>
-
 <ul>
  <li><code>random()</code>,在前面的代码中定义过了，返回一个 <code>0</code> 到 x-1 间的整数。</li>
  <li><code>WIDTH</code> 和<code>HEIGHT</code> 浏览器内部窗口的宽度和高度。</li>
 </ul>
-
-<p> </p>
 
 <p>您应该有一个基本的想法 - 我们使用一个循环来运行这个代码的 100 次迭代，其中每一个在页面上的随机位置绘制一个圆。无论我们绘制 100 个圆，1000 还是 10,000，所需的代码量将是相同的。只有一个数字必须改变。</p>
 
@@ -208,10 +199,7 @@ para.textContent = info;</pre>
 
 <p>这给我们以下输出：</p>
 
-<div class="hidden">
-<h6 id="Hidden_code_2">Hidden code 2</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -242,10 +230,10 @@ para.textContent = info;</pre>
 &lt;/html&gt;</pre>
 </div>
 
-<p>{{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('循环的标准', '100%', 60, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>注</strong>: 您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">在 GitHub 上找到这段示例代码</a>。 （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">在线运行</a>）。</p>
+<p><strong>备注：</strong> 您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">在 GitHub 上找到这段示例代码</a>。 （也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">在线运行</a>）。</p>
 </div>
 
 <p>这显示了一个循环用于迭代数组中的项目，并与每个项目进行一些操作 - JavaScript 中非常常见的模式。这里：</p>
@@ -264,11 +252,11 @@ para.textContent = info;</pre>
 </ol>
 
 <div class="note">
-<p><strong>注</strong>: 我们将退出条件设为<code>&lt; cats.length</code>，而不是<code>&lt;= cats.length</code>是因为计算机从 0 开始，而不是 1 - 开始时<code>i</code>是 0，并且逐步增加到 i<code> = 4</code>（最后一个数组的索引）。 <code>cats.length</code>返回 5，因为数组中有 5 个项目，但是我们不希望达到<code>i = 5</code>，因为这将返回未定义的最后一个项目（没有索引为 5 的数组项目）。所以我们想要比<code>cats.length</code>（<code>i &lt;</code>）少 1，而不是<code>cats.length</code>（<code>i &lt;=</code>）。</p>
+<p><strong>备注：</strong> 我们将退出条件设为<code>&lt; cats.length</code>，而不是<code>&lt;= cats.length</code>是因为计算机从 0 开始，而不是 1 - 开始时<code>i</code>是 0，并且逐步增加到 i<code> = 4</code>（最后一个数组的索引）。 <code>cats.length</code>返回 5，因为数组中有 5 个项目，但是我们不希望达到<code>i = 5</code>，因为这将返回未定义的最后一个项目（没有索引为 5 的数组项目）。所以我们想要比<code>cats.length</code>（<code>i &lt;</code>）少 1，而不是<code>cats.length</code>（<code>i &lt;=</code>）。</p>
 </div>
 
 <div class="note">
-<p><strong>注</strong>:  退出条件的一个常见错误是使它们使用“等于”(<code>===</code>) 而不是说“小于或等于”(<code>&lt;=</code>)。如果我们想要运行我的循环到<code>i = 5</code>，退出条件将需要是<code>i &lt;= cats.length</code>。如果我们设置为<code>i === cats.length</code>，循环将不会运行，因为在第一次循环迭代时 i 不等于 5，所以循环会立即停止。</p>
+<p><strong>备注：</strong> 退出条件的一个常见错误是使它们使用“等于”(<code>===</code>) 而不是说“小于或等于”(<code>&lt;=</code>)。如果我们想要运行我的循环到<code>i = 5</code>，退出条件将需要是<code>i &lt;= cats.length</code>。如果我们设置为<code>i === cats.length</code>，循环将不会运行，因为在第一次循环迭代时 i 不等于 5，所以循环会立即停止。</p>
 </div>
 
 <p>我们留下的一个小问题是最后的输出句子形式不是很好：</p>
@@ -288,21 +276,20 @@ para.textContent = info;</pre>
 }</pre>
 
 <div class="note">
-<p><strong>注</strong>: 您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html">在 GitHub 上找到这个例子</a>。（也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">在线运行</a>）</p>
+<p><strong>备注：</strong> 您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html">在 GitHub 上找到这个例子</a>。（也可以<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">在线运行</a>）</p>
 </div>
 
 <div class="warning">
-<p><strong>重要：</strong> 使用<code>for</code>- 与所有循环一样，您必须确保初始化程序被迭代，以便最终达到退出条件。如果没有，循环将永不停止，浏览器将强制它停止，否则会崩溃。这被称为无限循环。</p>
+<p><strong>警告：</strong> 使用<code>for</code>- 与所有循环一样，您必须确保初始化程序被迭代，以便最终达到退出条件。如果没有，循环将永不停止，浏览器将强制它停止，否则会崩溃。这被称为无限循环。</p>
 </div>
 
-<h2 id="使用break退出循环">使用 break 退出循环</h2>
+<h2 id="使用_break_退出循环">使用 break 退出循环</h2>
 
 <p>如果要在所有迭代完成之前退出循环，可以使用 break 语句。当我们查看 switch 语句时，我们已经在上一篇文章中遇到过这样的情况 - 当 switch 语句中符合输入表达式的情况满足时，break 语句立即退出 switch 语句并移动到代码之后。</p>
 
 <p>与循环相同 - break 语句将立即退出循环，并使浏览器移动到跟随它的任何代码。</p>
 
-<p>说我们想搜索一系列联系人和电话号码，只返回我们想要找的号码？首先，一些简单的 HTML - 一个文本{{htmlelement("input")}}，允许我们输入一个名称来搜索，一个{{htmlelement("button")}}元素来提交搜索，以及一个{{htmlelement ("p")}}元素显示结果：<br>
-  </p>
+<p>说我们想搜索一系列联系人和电话号码，只返回我们想要找的号码？首先，一些简单的 HTML - 一个文本{{htmlelement("input")}}，允许我们输入一个名称来搜索，一个{{htmlelement("button")}}元素来提交搜索，以及一个{{htmlelement ("p")}}元素显示结果：</p>
 
 <pre class="brush: html">&lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
 &lt;input id="search" type="text"&gt;
@@ -332,10 +319,7 @@ btn.addEventListener('click', function() {
   }
 });</pre>
 
-<div class="hidden">
-<h6 id="Hidden_code_3">Hidden code 3</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -377,9 +361,8 @@ btn.addEventListener('click', function() {
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code_3', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('使用 break 退出循环', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <ol>
  <li>首先我们有一些变量定义 - 我们有一个联系信息数组，每个项目是一个字符串，包含一个以冒号分隔的名称和电话号码。</li>
@@ -396,7 +379,7 @@ btn.addEventListener('click', function() {
 </ol>
 
 <div class="note">
-<p><strong>注：</strong>您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html">在 GitHub 上找到这个例子</a>或<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html">在线运行</a>。</p>
+<p><strong>备注：</strong> 您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html">在 GitHub 上找到这个例子</a>或<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html">在线运行</a>。</p>
 </div>
 
 <h2 id="使用continue跳过迭代">使用 continue 跳过迭代</h2>
@@ -418,10 +401,7 @@ for (var i = 1; i &lt;= num; i++) {
 
 <p>Here's the output:</p>
 
-<div class="hidden">
-<h6 id="Hidden_code_4">Hidden code 4</h6>
-
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html hidden">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -462,9 +442,8 @@ for (var i = 1; i &lt;= num; i++) {
 
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
-<p>{{ EmbedLiveSample('Hidden_code_4', '100%', 100, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('使用 continue 跳过迭代', '100%', 100) }}</p>
 
 <ol>
  <li>在这种情况下，输入应为数字（<code>num</code>）。for 循环给定一个从 1 开始的计数器（在这种情况下，我们对 0 不感兴趣），一个退出条件，当计数器大于输入<code>num</code>时循环将停止，并且迭代器的计数器将每次增加 1。</li>
@@ -474,7 +453,7 @@ for (var i = 1; i &lt;= num; i++) {
 </ol>
 
 <div class="note">
-<p><strong>注：</strong>您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html">在 GitHub 上查看完整代码</a>，或者<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html">在线运行</a>。</p>
+<p><strong>备注：</strong> 您可以<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html">在 GitHub 上查看完整代码</a>，或者<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html">在线运行</a>。</p>
 </div>
 
 <h2 id="while语句和do_..._while语句">while 语句和 do ... while 语句</h2>
@@ -509,7 +488,7 @@ while (i &lt; cats.length) {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: This still works just the same as expected — have a look at it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">full source code</a>).</p>
+<p><strong>备注：</strong> This still works just the same as expected — have a look at it <a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (also view the <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">full source code</a>).</p>
 </div>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a>循环非常类似但在 while 后提供了终止条件：</p>
@@ -540,11 +519,11 @@ do {
 } while (i &lt; cats.length);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: 再一次，它正如我们期望的那样工作 — 看一看它在<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">Github 在线运行</a> (或者查看<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">完整源代码</a>).</p>
+<p><strong>备注：</strong> 再一次，它正如我们期望的那样工作 — 看一看它在<a href="http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">Github 在线运行</a> (或者查看<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">完整源代码</a>).</p>
 </div>
 
 <div class="warning">
-<p><strong>Important</strong>: 使用 while 和 do...while — 所有循环都一样 — 你必须保证初始变量是迭代的，那么它才会逐渐地达到退出条件。不然，它将会永远循环下去，要么浏览器会强制终止它，要么它自己会崩溃。这称为无限循环。</p>
+<p><strong>警告：</strong> 使用 while 和 do...while — 所有循环都一样 — 你必须保证初始变量是迭代的，那么它才会逐渐地达到退出条件。不然，它将会永远循环下去，要么浏览器会强制终止它，要么它自己会崩溃。这称为无限循环。</p>
 </div>
 
 <h2 id="主动学习：启动倒计时！">主动学习：启动倒计时！</h2>
@@ -572,10 +551,7 @@ do {
 
 <p>如果您犯了错误，您可以随时使用“重置”按钮重置该示例。如果你真的卡住了，请按“显示解决方案”来查看解决方案。</p>
 
-<div class="hidden">
-<h6 id="Active_learning">Active learning</h6>
-
-<pre class="brush: html">&lt;div class="output" style="height: 410px;overflow: auto;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="height: 410px;overflow: auto;"&gt;
 
 &lt;/div&gt;
 
@@ -597,7 +573,7 @@ output.innerHTML = '';
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -621,9 +597,8 @@ var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.inne
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Active_learning', '100%', 880, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('主动学习：启动倒计时！', '100%', 880) }}</p>
 
 <h2 id="主动学习：填写来宾列表">主动学习：填写来宾列表</h2>
 
@@ -653,10 +628,7 @@ window.addEventListener('load', updateCode);
 
 <p>如果您犯了错误，您可以随时使用“重置”按钮重置该示例。如果你真的卡住了，请按“显示解决方案”来查看解决方案。</p>
 
-<div class="hidden">
-<h6 id="Active_learning_2">Active learning 2</h6>
-
-<pre class="brush: html">&lt;div class="output" style="height: 100px;overflow: auto;"&gt;
+<pre class="brush: html hidden">&lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
   &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
 &lt;/div&gt;
@@ -682,7 +654,7 @@ refused.textContent = 'Refuse: '
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+<pre class="brush: js hidden">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -706,9 +678,8 @@ var jsSolution = 'var people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phi
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Active_learning_2', '100%', 680, "", "", "hide-codepen-jsfiddle") }}</p>
+<p>{{ EmbedLiveSample('主动学习：填写来宾列表', '100%', 680) }}</p>
 
 <h2 id="应该使用哪种循环类型？">应该使用哪种循环类型？</h2>
 
@@ -741,7 +712,7 @@ do {
 <p>我们建议使用<code>for</code>，因为它可能是最简单地帮你记住一切 - 初始化程序，退出条件和最终表达式都必须整齐地放入括号，所以很容易看到他们在哪里并检查你没有丢失他们。</p>
 
 <div class="note">
-<p><strong>注：</strong>还有其他循环类型/特性，这些特性在 高级/专门 的情况下是有用的，超出了本文的范围。如果您想进一步了解循环学习，请阅读我们的高级<a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">循环和迭代指南</a>。</p>
+<p><strong>备注：</strong> 还有其他循环类型/特性，这些特性在 高级/专门 的情况下是有用的，超出了本文的范围。如果您想进一步了解循环学习，请阅读我们的高级<a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">循环和迭代指南</a>。</p>
 </div>
 
 <h2 id="结论">结论</h2>
@@ -758,13 +729,11 @@ do {
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> references</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a> and <a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a> references</li>
  <li>
-  <p><a href="https://www.impressivewebs.com/javascript-for-loop/">What’s the Best Way to Write a JavaScript For Loop?</a> — some advanced loop best practices</p>
+  <p><a href="https://www.impressivewebs.com/javascript-for-loop/">What's the Best Way to Write a JavaScript For Loop?</a> — some advanced loop best practices</p>
  </li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}</p>
-
-<p> </p>
 
 <h2 id="在本单元中">在本单元中</h2>
 
@@ -777,5 +746,3 @@ do {
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
  <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery">Image gallery</a></li>
 </ul>
-
-<p> </p>
