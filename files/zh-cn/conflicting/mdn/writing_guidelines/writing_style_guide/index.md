@@ -80,27 +80,27 @@ original_slug: MDN/Guidelines/Writing_style_guide
 
 ##### 示例：过于冗长的简介
 
-下面是上面那个简介的修改版，但是这次它又太过冗长了。其中包含了过多的细节，并且还包含了很多其他方法和属性，但实际上它应该将重点聚焦在 `strokeText()`  方法上，然后给出详细介绍它的文章的链接即可。
+下面是上面那个简介的修改版，但是这次它又太过冗长了。其中包含了过多的细节，并且还包含了很多其他方法和属性，但实际上它应该将重点聚焦在 `strokeText()`  方法上，然后给出详细介绍它的文章的链接即可。
 
-> When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`**strokes the characters in the specified string beginning at the coordinates specified, using the current pen color. In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
+> When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`**strokes the characters in the specified string beginning at the coordinates specified, using the current pen color. In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
 >
 > The text is drawn using the context's current font as specified in the context's {{domxref("CanvasRenderingContext2D.font", "font")}} property.
 >
-> The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties. `textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string. If the value is `"left"`, the string is drawn starting at the specified value of `x`. And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
+> The placement of the text relative to the specified coordinates are determined by the context's `textAlign`, `textBaseline`, and `direction` properties. `textAlign` controls the placement of the string relative to the X coordinate specified; if the value is `"center"`, then the string is drawn starting at `x - (stringWidth / 2)`, placing the specified X-coordinate in the middle of the string. If the value is `"left"`, the string is drawn starting at the specified value of `x`. And if `textAlign` is `"right"`, the text is drawn such that it ends at the specified X-coordinate.
 >
 > (etc etc etc...)
 >
 > You can, optionally, provide a fourth parameter that lets you specify a maximum width for the string, in pixels. If you provide this parameter, the text is compressed horizontally or scaled (or otherwise adjusted) to fit inside a space that wide when being drawn.
 >
-> You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
+> You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
 
 ##### 示例：这次好多了
 
 下面这个简介比前两个要好很多。
 
-> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
+> The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes—that is, draws the outlines of—the characters of a specified string, anchored at the position indicated by the given X and Y coordinates. The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
 >
-> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+> For more details and further examples, see {{SectionOnPage("/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Text")}} in the Learning Area as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 #### 多提供一些示例
 
@@ -114,7 +114,7 @@ original_slug: MDN/Guidelines/Writing_style_guide
 
 每段示例代码都应该就其工作原理给出说明。最好将一段较长的代码分解成多个较小的部分，并提供每个部分的说明，说明时注意细节的层次。如果代码很简单并且不直接涉及到当前 API，可以只给出一个简单的介绍，说明其用途，以及为何要把它放在这里；而如果代码比较复杂、或用到了当前的 API、或在技术上比较有创造性，那么你应该提供更详细的说明。
 
-如果使用的是[在线演示](/zh-CN/docs/MDN/Structures/Live_samples)的方式，则可以将 HTML、CSS、JavaScript 拆分到不同的  {{HTMLElement("pre")}} 中，它们在运行时会自动组合到一起，但使用这种方式每个里面都可以有自己的说明。因此这是一种很好很强大的方式。
+如果使用的是[在线演示](/zh-CN/docs/MDN/Structures/Live_samples)的方式，则可以将 HTML、CSS、JavaScript 拆分到不同的  {{HTMLElement("pre")}} 中，它们在运行时会自动组合到一起，但使用这种方式每个里面都可以有自己的说明。因此这是一种很好很强大的方式。
 
 #### 过短的文章难以被搜索到
 
@@ -202,7 +202,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 #### 语法高亮
 
-对于整行或多行代码，此时别再使用  {{HTMLElement("code")}}  元素来格式化了，而应该对其进行[语法高亮](/zh-CN/docs/MDN/Contribute/Markdown_in_MDN#示例代码块)。
+对于整行或多行代码，此时别再使用  {{HTMLElement("code")}}  元素来格式化了，而应该对其进行[语法高亮](/zh-CN/docs/MDN/Contribute/Markdown_in_MDN#示例代码块)。
 
 #### HTML 元素的样式
 
@@ -213,9 +213,9 @@ HTML 元素的样式有一套自己的规则。遵守这些规则可以让元素
 - 属性名称
   - : 请使用内联代码样式，并且使用**粗体**。
 - 属性定义
-  - : 对正在定义的术语使用  [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) 宏（如  \\{{htmlattrdef("type")}}），这样其他页面就可以使用 [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) 宏来链接到该页面了（例如 \\{{htmlattrxref("type","element")}}）。
+  - : 对正在定义的术语使用  [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) 宏（如  \\{{htmlattrdef("type")}}），这样其他页面就可以使用 [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) 宏来链接到该页面了（例如 \\{{htmlattrxref("type","element")}}）。
 - 属性值
-  - : 请使用内联代码样式，并且注意字符串两边不要加引号，除非是代码的语法要求加引号。举例：当将  `<input>` 元素的  **type** 属性设置为 `email` 或 `tel` 时……
+  - : 请使用内联代码样式，并且注意字符串两边不要加引号，除非是代码的语法要求加引号。举例：当将  `<input>` 元素的  **type** 属性设置为 `email` 或 `tel` 时……
 
 ### 拉丁文缩写
 
@@ -423,14 +423,14 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 
 #### HTML 元素
 
-请使用“element”来表示 HTML 和 XML 元素，不要使用“tag”。另外，请在元素名称两边使用尖括号“<>”括起来，并使用  {{HTMLElement("code")}} 样式。当文章中第一次出现某个元素的时候，应该用  [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。
+请使用“element”来表示 HTML 和 XML 元素，不要使用“tag”。另外，请在元素名称两边使用尖括号“<>”括起来，并使用  {{HTMLElement("code")}} 样式。当文章中第一次出现某个元素的时候，应该用  [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。
 
 - **正确**: {{HTMLElement("span")}} element
 - **错误**: span tag
 
 #### 函数参数
 
-在 MDN 上推荐使用 **parameters**  来表示函数的参数，为了保持一致性，如果可能的话请尽量避免使用“arguments”。
+在 MDN 上推荐使用 **parameters**  来表示函数的参数，为了保持一致性，如果可能的话请尽量避免使用“arguments”。
 
 #### 描述用户的操作
 
@@ -459,8 +459,8 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 
 如果你对提高写作和编辑能力感兴趣，下面的资料会对你有所帮助：
 
-- [更好的写作](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548)（Amazon），作者  William Zinsser
-- [清晰与优雅的格式基础](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/)（Amazon），作者  Joseph Williams 和 Gregory Colomb
+- [更好的写作](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548)（Amazon），作者  William Zinsser
+- [清晰与优雅的格式基础](https://www.amazon.com/Style-Basics-Clarity-Grace-4th/dp/0205830765/)（Amazon），作者  Joseph Williams 和 Gregory Colomb
 - [使用英文时的常见错误](https://brians.wsu.edu/common-errors-in-english-usage/)
 - [英语语法 FAQ](https://www-personal.umich.edu/~jlawler/aue.html)
 - [Bob 的撇号快速指南，你个笨蛋](https://www.angryflower.com/bobsqu.gif)（这很有趣）

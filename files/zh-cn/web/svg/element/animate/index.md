@@ -51,7 +51,7 @@ html,body,svg { height:100%; margin:0; padding:0; }
 
 ## 用法
 
-该元素实现了 {{domxref("SVGAnimateElement")}} 接口。
+该元素实现了 {{domxref("SVGAnimateElement")}} 接口。
 
 ## 无障碍说明
 

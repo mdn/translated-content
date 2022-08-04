@@ -22,37 +22,37 @@ original_slug: Web/API/GlobalEventHandlers/onmouseout
 &lt;head&gt;
 &lt;title&gt;onmouseover/onmouseout event example&lt;/title&gt;
 &lt;script type="text/javascript"&gt;
-    function initElement()
-    {
-        var p = document.getElementById("foo");
+    function initElement()
+    {
+        var p = document.getElementById("foo");
 
-        p.onmouseover = showMouseOver;
-        p.onmouseout = showMouseOut;
-    };
+        p.onmouseover = showMouseOver;
+        p.onmouseout = showMouseOut;
+    };
 
-    function showMouseOver()
-    {
-        var notice = document.getElementById("notice");
-        notice.innerHTML = '检测到鼠标移进';
-    }
+    function showMouseOver()
+    {
+        var notice = document.getElementById("notice");
+        notice.innerHTML = '检测到鼠标移进';
+    }
 
-    function showMouseOut()
-    {
-        var notice = document.getElementById("notice");
-        notice.innerHTML = '检测到鼠标移出';
-    }
+    function showMouseOut()
+    {
+        var notice = document.getElementById("notice");
+        notice.innerHTML = '检测到鼠标移出';
+    }
 
 
 &lt;/script&gt;
 &lt;style type="text/css"&gt;
-    #foo {
-    border: solid blue 2px;
-    }
+    #foo {
+    border: solid blue 2px;
+    }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body onload="initElement()";&gt;
-    &lt;span id="foo"&gt;移动鼠标，在该元素上移进移出&lt;/span&gt;
-    &lt;div id="notice"&gt;&lt;/div&gt;
+    &lt;span id="foo"&gt;移动鼠标，在该元素上移进移出&lt;/span&gt;
+    &lt;div id="notice"&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>

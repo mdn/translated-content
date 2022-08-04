@@ -16,7 +16,7 @@ translation_of: Web/API/Element/scrollHeight
 
 ![](scrollheight.png)
 
-`scrollHeight` 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。没有垂直滚动条的情况下，scrollHeight 值与元素视图填充所有内容所需要的最小值{{domxref("Element.clientHeight", "clientHeight")}}相同。包括元素的 padding，但不包括元素的 border 和 margin。`scrollHeight` 也包括 {{cssxref("::before")}} 和 {{cssxref("::after")}}这样的伪元素。
+`scrollHeight` 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。没有垂直滚动条的情况下，scrollHeight 值与元素视图填充所有内容所需要的最小值{{domxref("Element.clientHeight", "clientHeight")}}相同。包括元素的 padding，但不包括元素的 border 和 margin。`scrollHeight` 也包括 {{cssxref("::before")}} 和 {{cssxref("::after")}}这样的伪元素。
 如果元素的内容不需要垂直滚动条就可以容纳，则其 `scrollHeight` 等于{{domref("Element.clientHeight", "clientHeight")}}
 
 > **备注：** 属性将会对值取整。如果需要小数值，使用
