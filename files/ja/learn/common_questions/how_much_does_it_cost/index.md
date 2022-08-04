@@ -1,155 +1,149 @@
 ---
-title: Web で何かをするためにどのくらいコストがかかりますか？
+title: ウェブ上で何かをするためにどれくらいコストがかかる？
 slug: Learn/Common_questions/How_much_does_it_cost
+tags:
+  - Beginner
+  - WebMechanics
+  - cost
+  - hosting
+  - web development tools
 translation_of: Learn/Common_questions/How_much_does_it_cost
 ---
-<div class="summary">
-<p>Web に参加することは、見かけほど容易ではありません。この記事では、あなたがどのくらい費用をかける必要があるのか、そしてその理由について説明します。</p>
-</div>
+ウェブに関わることは、見た目ほど安いものではありません。この記事では、あなたがどれくらいの費用を負担しなければならないか、またその理由について説明します。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">学習の前提:</th>
-   <td><a href="/ja/docs/Learn/Common_questions/ウェブサイトを作成するのにどんなソフトウェアが必要か？">どのソフトウェアが必要か</a>、<a href="/ja/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines">Web ページ、Web サイトなどの違い</a>、<a href="/ja/docs/Learn/Common_questions/What_is_a_domain_name">ドメイン名とは何か</a>を理解しているべきです。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習の目標:</th>
-   <td>Web サイトを作成するための完全なプロセスを確認し、各ステップにかかる費用を確認します。</td>
-  </tr>
- </tbody>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        すでに<a href="/ja/docs/Learn/Common_questions/What_software_do_I_need">どのソフトウェアが必要か</a>、<a href="/ja/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines">ウェブページやウェブサイトなどの違い</a>、<a href="/ja/docs/Learn/Common_questions/What_is_a_domain_name">ドメイン名とは何か</a>を理解していること。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        ウェブサイトを作成するための完全なプロセスを確認し、各ステップでどれくらいのコストがかかるかを確認すること。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="要約">要約</h2>
+## 概要
 
-<p><span class="seoSummary">Web サイトを立ち上げるとき、費用は何も掛からないかもしれませんし、青天井かもしれません。 この記事では、費用の有無にかかわらず、どのように準備し、またどれだけ費用がかかるかについて議論します。</span></p>
+ウェブサイトを立ち上げるとき、費用は何も掛からないかもしれませんし、青天井かもしれません。 この記事では、費用の有無にかかわらず、どのように準備し、またどれだけ費用がかかるかについて議論します。
 
-<h2 id="ソフトウェア">ソフトウェア</h2>
+## ソフトウェア
 
-<h3 id="テキストエディタ">テキストエディタ</h3>
+### テキストエディター
 
-<p>Windows のメモ帳、Linux の Gedit、Mac の TextEdit などのテキストエディタを使った経験はおありでしょう。色分けしたり、文法をチェックしたり、コードの構築を手助けしたりするエディタを選択すれば、コードを書くのが楽になります。</p>
+Windows のメモ帳、Linux の Gedit、Mac の TextEdit などのテキストエディターを使った経験はおありでしょう。色分けしたり、文法をチェックしたり、コードの構築を手助けしたりするエディターを選択すれば、コードを書くのが楽になります。
 
-<p>無料のエディタは多くあります。たとえば、<a href="https://atom.io/">Atom</a>、<a href="http://brackets.io/">Brackets</a>、<a href="http://bluefish.openoffice.nl/">Bluefish</a>、<a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>、<a href="http://eclipse.org/">Eclipse</a>、<a href="https://netbeans.org/">Netbeans</a>などです。また<a href="http://www.sublimetext.com/">Sublime Text</a>のように好きなだけ試用できるが、料金を支払ったほうが良いものもあります。なかには、<a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>,のように、購入ライセンスによって、価格が数百円から２万円の間になるものもあります。<a href="http://www.visualstudio.com/">Microsoft Visual Studio</a>は数万円から数十万円しますが、Visual Studio Expressは個人やオープンソースプロジェクトでは無料で使えます。 有料ソフトウエアには、無料の試用期間を設けているものもあります。</p>
+無料のエディターは多くあります。たとえば、 [Atom](https://atom.io/)、[Brackets](https://brackets.io/)、[Bluefish](https://bluefish.openoffice.nl/)、[TextWrangler](https://www.barebones.com/products/textwrangler/)、[Eclipse](https://www.eclipse.org/)、[Netbeans](https://netbeans.org/) などです。また[Sublime Text](https://www.sublimetext.com/)のように好きなだけ試用できるが、料金を支払ったほうが良いものもあります。なかには、 [PhpStorm](https://www.jetbrains.com/phpstorm/) のように、購入ライセンスによって、価格が数百円から 2 万円程度になるものもあります。 [Microsoft Visual Studio](https://visualstudio.microsoft.com/) は数万円から数十万円しますが、 Visual Studio Express は個人やオープンソースプロジェクトでは無料で使えます。 有料ソフトウエアには、無料の試用期間を設けているものもあります。
 
-<p>最初に何種類かのエディタを試して、用途に合うのはどれか調べるといいでしょう。T {{Glossary("HTML")}}や{{Glossary("CSS")}}、それに{{Glossary("Javascript")}}で簡単なコードを書くのであれば、単純なエディタをお勧めします。</p>
+最初に何種類かのエディターを試して、用途に合うのはどれか調べるといいでしょう。 {{Glossary("HTML")}} や {{Glossary("CSS")}}、それに {{Glossary("Javascript")}} で簡単なコードを書くのであれば、シンプルなエディターをお勧めします。
 
-<p>テキストエディタの品質と使いやすさは、あまり価格と連動しません。実際に使ってみて、目的に合うか調べるようにしてください。例えばSublime Textは安価ですが、多くの無料プラグインがあり、拡張性が高いエディタです。</p>
+テキストエディターの品質と使いやすさは、あまり価格と連動しません。実際に使ってみて、目的に合うか調べるようにしてください。例えば Sublime Text は安価ですが、多くの無料プラグインがあり、拡張性が高いエディターです。
 
-<h3 id="画像エディタ">画像エディタ</h3>
+### 画像エディター
 
-<p>あなたが使用しているシステムには、単純な画像編集ソフトまたはビューアーが搭載されているでしょう。WindowsではPaint、UbuntuではEye of Gnome、MacではPreviewです。これらのプログラムは比較的制限されているので、レイヤー、エフェクト、およびグループ化を追加するなどのために高機能なエディタが、すぐに必要になります。</p>
+お使いのシステムには、簡単な画像エディタやビューアが入っているはずです。 Windows ではペイント、 Ubuntuでは Eye of Gnome、 Mac では Preview などです。これらのプログラムは比較的限定的で、レイヤー、高か、グループ化を追加できる、より強力なエディタがすぐに必要になります。
 
-<p>編集ソフトは無料 (<a href="http://www.gimp.org/">GIMP</a>, <a href="https://www.getpaint.net/">Paint.NET</a>)、やや高価 (<a href="http://www.paintshoppro.com/">PaintShop Pro</a>, less than $100)、または数百ドル (<a href="https://www.adobe.com/products/photoshop.html">Adobe Photoshop</a>)のものもあります。</p>
+編集ソフトは無料のもの ([GIMP](https://www.gimp.org/), [Paint.NET](https://www.getpaint.net/))、やや高価なもの ([PaintShop Pro](https://www.paintshoppro.com/), less than $100)、または数百ドルのもの ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)) もあります。
 
-<p>これらは似たような機能を持っているので、どれを使用しても構いません。この中には様々な機能を網羅しているソフトもありますが、すべての機能を使う日は決して来ないでしょう。 ある時点で他の設計者とプロジェクトを交換する必要がある場合は、彼らがどのツールを使用しているかを調べる必要があります。 編集ソフトは完成したプロジェクトを標準のファイル形式にエクスポートできますが、各編集ソフトは進行中のプロジェクトを独自の特別な形式で保存します。 インターネット上のほとんどの画像は著作権で保護されているので、使用する前にファイルのライセンスを確認することをお勧めします。 <a href="https://pixabay.com/">Pixabay</a> のようなサイトは、CC0ライセンスの下で画像提供を行なっているので、商用利用のための変更・編集を加えても公開することができます。</p>
+これらは似たような機能を持っているので、どれを使用しても構いません。この中には様々な機能を網羅しているソフトもありますが、すべての機能を使う日は決して来ないでしょう。 ある時点で他の設計者とプロジェクトを交換する必要がある場合は、彼らがどのツールを使用しているかを調べる必要があります。 編集ソフトは完成したプロジェクトを標準のファイル形式にエクスポートできますが、各編集ソフトは進行中のプロジェクトを独自の特別な形式で保存します。 インターネット上のほとんどの画像は著作権で保護されているので、使用する前にファイルのライセンスを確認することをお勧めします。 [Pixabay](https://pixabay.com/) のようなサイトは、 CC0 ライセンスの下で画像提供を行なっているので、商用利用のための変更・編集を加えても公開することができます。
 
-<h3 id="メディアエディタ">メディアエディタ</h3>
+### メディアエディター
 
-<p>If you want to include video or audio into your website, you can either embed online services (for example YouTube, Vimeo, or Dailymotion), or include your own videos (see below for bandwidth costs).</p>
+ウェブサイトに動画や音声を入れたい場合は、オンラインサービス（YouTube、Vimeo、Dailymotion など）を埋め込むか、自作の動画を入れることができます（帯域幅のコストについては下記をご覧ください）。
 
-<p>For audio files, you can find free software (<a href="http://audacity.sourceforge.net/?lang=en">Audacity</a>, <a href="http://www.wavosaur.com/">Wavosaur</a>), or paying up to a few hundred dollars (<a href="http://www.sonycreativesoftware.com/soundforge">Sony Sound Forge</a>, <a href="http://www.adobe.com/products/audition.html">Adobe Audition</a>). Likewise, video-editing software can be free (<a href="http://www.pitivi.org/">PiTiVi</a>, <a href="http://www.openshot.org/">OpenShot</a> for Linux, <a href="https://www.apple.com/mac/imovie/">iMovie</a> for Mac), less than $100 (<a href="https://www.adobe.com/us/products/premiere-elements.html">Adobe Premiere Elements</a>), or several hundred dollars (<a href="https://www.adobe.com/products/premiere.html">Adobe Premiere Pro</a>, <a href="http://www.avid.com/US/products/family/Media-Composer">Avid Media Composer</a>, <a href="https://www.apple.com/final-cut-pro/">Final Cut Pro</a>). The software you received with your digital camera may cover all your needs.</p>
+音声ファイルの場合、フリーソフト（[Audacity](https://www.audacityteam.org/), [Wavosaur](https://www.wavosaur.com/)）、数百円の有料ソフト（[Sound Forge](https://www.magix.com/us/music-editing/sound-forge/), [Adobe Audition](https://www.adobe.com/products/audition.html)）などがあります。同様に、動画編集ソフトもフリーソフト（[PiTiVi](https://www.pitivi.org/), [OpenShot](https://www.openshot.org/) for Linux, [iMovie](https://www.apple.com/imovie/) for Mac）、低価格のもの（[Adobe Premiere Elements](https://www.adobe.com/products/premiere-elements.html)）、高価格のもの（[Adobe Premiere Pro](https://www.adobe.com/products/premiere.html), [Avid Media Composer](https://www.avid.com/media-composer), [Final Cut Pro](https://www.apple.com/final-cut-pro/)）があります。デジタルカメラに付属しているソフトウェアで、すべてのニーズを満たすことができるかもしれません。
 
-<h3 id="パブリッシングツール">パブリッシングツール</h3>
+### 公開ツール
 
-<p>You also need a way to upload files: from your hard drive to a distant web server. To do that you should use a publishing tool such as an (S)<a href="/ja/docs/Glossary/FTP">FTP client</a>, <a href="https://en.wikipedia.org/wiki/Rsync">RSync</a>, or <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">Git/GitHub</a>.</p>
+また、ファイルをアップロードする方法も必要です。あなたの ハードディスクから遠くのウェブサーバーにアップロードします。そのためには、 (S)[FTP クライアント](/ja/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync), [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) などの公開ツールを使用する必要があります。
 
-<p>Each operating system includes an (S)FTP client, as part of its file manager. Windows Explorer, Nautilus (a common Linux file manager), and the Mac Finder all include this functionality. However, people often choose dedicated (S)FTP clients to display local or remote directories side-by-side and store server passwords.</p>
+各オペレーティングシステムには、ファイルマネージャの一部として、 (S)FTP クライアントが入っています。 Windows のエクスプローラー、 Nautilus （Linux の一般的なファイルマネージャー）、 Mac の Finder はすべてこの機能を入れています。しかし、ローカルやリモートのディレクトリーを並べて表示したり、サーバーのパスワードを格納するために、専用の (S)FTP クライアントを選ぶ人がよくいます。
 
-<p>If you want to install an (S)FTP client, there are several reliable and free options: for example, <a href="https://filezilla-project.org/">FileZilla</a> for all platforms, <a href="http://winscp.net/">WinSCP</a> for Windows, <a href="https://cyberduck.io/">Cyberduck</a> for Mac or Windows, <a href="https://en.wikipedia.org/wiki/List_of_FTP_server_software">and more</a>.</p>
+(S)FTP クライアントをインストールする場合、信頼性が高く無料の選択肢がいくつかあります。例えば、すべてのプラットフォーム用の [FileZilla](https://filezilla-project.org/)、 Windows 用の [WinSCP](https://winscp.net/eng/index.php)、 Mac または Windows 用の[Cyberduck](https://cyberduck.io/)、[その他](https://en.wikipedia.org/wiki/List_of_FTP_server_software)があります。
 
-<p>Because FTP is inherently insecure, you should make sure to use SFTP — the secure, encrypted version of FTP that most hosting sites you'll deal with these days will offer by default — or another secure solution like Rsync over SSH.</p>
+FTP は本質的に安全ではないので、 SFTP - 最近ではほとんどのホスティングサイトが既定値で提供している安全で暗号化されたバージョンの FTP - または SSH 上の Rsync のような別の安全なソリューションを使用するようにすべきです。
 
-<h2 id="ブラウザ">ブラウザ</h2>
+## ブラウザー
 
-<p>あなたはすでにブラウザを持っているか、無料でそれを手に入れることができます。必要に応じて、ここから Firefox または Google Chrome をダウンロードしてください。</p>
+ブラウザーはすでにお持ちか、無料で取得することができます。必要に応じて、 Firefox を[こちら](https://www.mozilla.org/en-US/firefox/all/)で、または Google Chrome を[こちら](https://www.google.com/chrome/)でダウンロードしてください。
 
-<h2 id="Web_アクセス">Web アクセス</h2>
+## ウェブアクセス
 
-<h3 id="コンピュータ_モデム">コンピュータ / モデム</h3>
+### コンピューター / モデム
 
-<p>You need a computer. Costs can vary tremendously, depending on your budget, and where you live. To publish a barebones website, you only need a basic computer capable of launching an editor, and a Web browser, so the entry level can be quite low.</p>
+コンピューターが必要です。費用は、予算や住んでいる地域によって大きく異なります。最小限のウェブサイトを公開するには、エディターとウェブブラウザーを起動できる基本的なコンピューターがあればよいので、入門レベルはかなり低く抑えることができます。
 
-<p>Of course, you'll need a more serious computer if you want to produce complicated designs, touch up photos, or produce audio and video files.</p>
+もちろん、複雑なデザインや写真の加工、音声や動画のファイルを作成する場合は、より本格的なコンピューターが必要になります。
 
-<p>You need to upload content to a remote server (see <em>Hosting</em> below), so you need a modem. Your {{Glossary("ISP")}} can rent Internet connectivity to you for a few dollars per month, though your budget might vary, depending on your location.</p>
+また、遠隔地のサーバーにコンテンツをアップロードする必要があるため、モデムが必要になります（後述の「ホスティング」参照）。インターネット接続は、 {{Glossary("ISP")}} から月々数百円で借りることができますが、地域によって費用が異なる場合があります。
 
-<h3 id="ISP_access">ISP access</h3>
+### ISP アクセス
 
-<p>Make sure that you have sufficient {{Glossary("Bandwidth", "bandwidth")}}:</p>
+十分な{{Glossary("Bandwidth", " 帯域幅")}}があることを確認してください。
 
-<ul>
- <li>Low-bandwidth access may be adequate to support a 'simple' website: reasonably-sized images, texts, some CSS and JavaScript. That will likely cost you a few dozen dollars, including the rent for the modem.</li>
- <li>On the other hand, you'll need a high-bandwidth connections, such as DSL, cable, or fiber access, if you want a more advanced website with hundreds of files, or if you want to deliver heavy video/audio files directly from your web server. It could cost the same as low-bandwidth access, upwards to several hundred dollars per month for more professional needs.</li>
-</ul>
+- 低帯域幅のアクセスでも、「シンプルな」ウェブサイト（適度な大きさの画像、テキスト、いくつかの CSS と JavaScript）に対応するのには十分かもしれません。その場合、モデムのレンタル料を含めて、数百円程度のコストで済むでしょう。
+- 一方、何百ものファイルを扱う高度なウェブサイトや、重い動画・音声ファイルをウェブサーバーから直接配信する場合は、DSL、ケーブル、ファイバーアクセスなどの広帯域接続が必要になります。この場合、低帯域幅のアクセス回線と同じ料金になる場合ありますし、より専門的なニーズには月額数万円かかることもあります。
 
-<h2 id="Hosting">Hosting</h2>
+## ホスティング
 
-<h3 id="Understanding_bandwidth">Understanding bandwidth</h3>
+### 帯域幅を理解する
 
-<p>Hosting providers charge you according to how much {{Glossary("Bandwidth", "bandwidth")}} your website consumes. This depends on how many people, and Web crawling robots, access your content during a given time, and how much server space your content takes up. This is why people usually store their videos on dedicated services such as Youtube, Dailymotion, and Vimeo. For example, your provider may have a plan that includes up to several thousand visitors per day, for “reasonable” bandwidth usage. Be careful, however as this is defined differently from one hosting provider to another. As a rule of thumb, recognize that reliable, paid, personal hosting can cost around ten to fifteen dollars per month.</p>
+ホスティングプロバイダーは、ウェブサイトが消費する{{Glossary("Bandwidth", "帯域幅")}}の量に応じて料金を請求します。これは、一定時間内に何人の人々やウェブクローリングロボットがコンテンツにアクセスしたか、またコンテンツがどれだけのサーバー空間を占有したかによって決まります。動画を YouTube, Dailymotion, Vimeo などの専用サービスに格納するのが一般的なのは、このためです。例えば、プロバイダーは「合理的な」帯域幅の使用のために、 1 日あたりの訪問者を数千人までに制限しているプランを提供しているかもしれません。ただし、これはプロバイダによって定義が異なるため、注意が必要です。信頼性の高い、有料の、私用ホスティングは、月額 10 〜 15 ドル程度を要することに留意してください。
 
-<div class="note">
-<p>Note that there is no such thing as “unlimited” bandwidth. If you consume a huge amount of bandwidth, expect to pay a huge amount of money.</p>
-</div>
+> **Note:** 「無制限」の帯域幅というものは存在しません。膨大な量の帯域幅を消費する場合は、膨大な金額を支払うことが予想されます。
 
-<h3 id="Domain_names">Domain names</h3>
+### ドメイン名
 
-<p>Your domain name has to be purchased through a domain name provider (a registrar). Your hosting provider may also be a registrar (<a href="https://www.1and1.com/">1&amp;1</a>, <a href="https://www.gandi.net/?lang=en">Gandi</a> for instance are at the same time registrars and hosting providers). The domain name usually costs $5-15 per year. This cost varies depending on:</p>
+ドメイン名は、ドメイン名提供会社（レジストラ）を通じて購入する必要があります。ホスティングプロバイダーがレジストラーで ある場合もあります（例えば[Ionos](https://www.ionos.com/)、[Gandi](https://www.gandi.net/en-US)はレジストラーであり、同時にホスティングプロバイダーでもあります）。ドメイン名は通常、年間 5 ～ 15 ドルかかります。このコストは、以下によって変化します。
 
-<ul>
- <li>Local obligations: some country top-level domain names are more costly, as different countries set different prices.</li>
- <li>Services associated with the domain name: some registrars provide spam protection by hiding your postal address and email address behind their own addresses: the postal address can be provided in care of the registrar, and your email address can be obscured via your registrar's alias.</li>
-</ul>
+- 現地の事情: 国によってトップレベルドメイン名の価格が異なるため、より高価なものもあります。
+- ドメイン名に関連するサービス: 一部のレジストラーは、住所や 電子メールアドレスを独自のアドレスで隠すことにより、 スパム防止機能を提供しています。住所はレジストラーが代行することで提供し、電子メールアドレスはレジストラーのエイリアスで隠蔽することができます。
 
-<h3 id="Do-it-yourself_hosting_vs._“packaged”_hosting">Do-it-yourself hosting vs. “packaged” hosting</h3>
+### 自分で作るホスティングと「パッケージ」ホスティングの比較
 
-<p>When you want to publish a website, you could do everything by yourself: set up a database (if needed), Content Management System, or {{Glossary("CMS")}} (like <a href="http://wordpress.org/">Wordpress</a>, <a href="http://dotclear.org/">Dotclear</a>, <a href="http://www.spip.net/en_rubrique25.html">spip</a>, etc.), upload pre-made or your own templates.</p>
+ウェブサイトを公開する場合、データベースの設定（必要な場合）やコンテンツ管理システム ({{Glossary("CMS")}}) （[Wordpress](https://wordpress.org/), [Dotclear](https://dotclear.org/), [spip](https://www.spip.net/en_rubrique25.html) など）の導入、既製または独自のテンプレートのアップロードなどを、すべてを自分自身で行うことが可能です。
 
-<p>You could use your hosting provider's environment, for roughly ten to fifteen dollars per month, or subscribe directly to a dedicated hosting service with pre-packaged CMSs (e.g., <a href="http://wordpress.com/">Wordpress</a>, <a href="https://www.tumblr.com/">Tumblr</a>, <a href="https://www.blogger.com/">Blogger</a>). For the latter, you won't have to pay anything, but you may have less control over templating and other options.</p>
+ホスティングプロバイダーの環境を使用することもできますし、月額 10 ～ 15 ドル程度で、あらかじめ CMS がパッケージされた専用のホスティングサービス（[Wordpress](https://wordpress.com/), [Tumblr](https://www.tumblr.com/), [Blogger](https://www.blogger.com/) など）を直接契約して利用することもできます。後者の場合、何も支払う必要はありませんが、テンプレートやその他のオプションの制御が難しくなる可能性があります。
 
-<h3 id="Free_hosting_vs._paid_hosting">Free hosting vs. paid hosting</h3>
+### 無料のホスティングと有料のホスティングの比較
 
-<p>You might ask, why should I pay for my hosting when there are so many free services?</p>
+無料のサービスがたくさんあるのに、なぜホスティングにお金を払わなければならないのか、と思うかもしれません。
 
-<ul>
- <li>You have more freedom when you pay. Your website is yours, and you can migrate seamlessly from one hosting provider to the next.</li>
- <li>Free hosting providers may add advertising to your content, beyond your control.</li>
-</ul>
+-有料であれば、より多くの自由をお持ちいただけます。ウェブサイトは自分自身のものであり、別のプロバイダーへシームレスに移行することができます。
+- 無料のホスティングプロバイダーは、自分で管理できないところで、コンテンツに広告を追加することがあります。
 
-<p>It is better to go for paid hosting rather than relying on free hosting, as it is possible to move your files easily and uptime is <span>guaranteed </span>by most paid sites. Most hosting providers give you a huge discount to start with.</p>
+ファイルを簡単に移動することが可能であり、ほとんどの有料サイトで稼働時間が保証されているため、無料ホスティングに頼るよりも、有料ホスティングに行くことをお勧めします。ほとんどのホスティングプロバイダは、開始するために大きな割引を提供しています。
 
-<p>Some people opt for a mixed approach. For example, their main blog on a paid host with a full domain name, and spontaneous, less strategic, content on a free host service.</p>
+混合型のアプローチを選択する人もいます。例えば、メインのブログはフルドメイン名の有料ホスティングサービスに置き、自発的で戦略的でないコンテンツは無料ホスティングサービスに置くという方法です。
 
-<h2 id="Professional_website_agencies_and_hosting">Professional website agencies and hosting</h2>
+## プロのためのウェブサイト制作会社とホスティング
 
-<p>If you desire a professional website, you will likely ask a web agency to do it for you.<br>
- <br>
- Here, costs depend on multiple factors, such as:</p>
+プロのウェブサイトを望むなら、おそらくウェブ会社に依頼することでしょう。
 
-<ul>
- <li>Is this a simple website with a few pages of text? Or a more complex, thousand-pages-long website?</li>
- <li>Will you want to update it regularly? Or will it be a static website?</li>
- <li>Must the website connect to your company’s IT structure to gather content (say, internal data)?</li>
- <li>Do you want some shiny new feature that is the rage of the moment? At the time of writing, clients are seeking single pages with complex parallax</li>
- <li>Will you need the agency to think up user stories or solve complex {{Glossary("UX")}} problems? For example, creating a strategy to engage users, or A/B testing to choose a solution among several ideas</li>
-</ul>
+ここで、コストは以下のような複数の要素に左右されます。
 
-<p>...and for hosting:</p>
+- 数ページのテキストからなるシンプルなウェブサイトでしょうか？それとももっと複雑な、何千ページもあるようなウェブサイトですか？
+- 定期的に更新しますか？それとも静的なウェブサイトになるのでしょうか？
+- ウェブサイトは、コンテンツ（例えば内部データ）を収集するために、社内の IT 構造と接続する必要があるでしょうか？
+- 今流行っているピカピカの新機能が欲しいのでしょうか？この記事の執筆時点では、クライアントは複雑なパララックスを備えた単一のページを求めています。
+- ユーザーストーリーを考えたり、複雑な {{Glossary("UX")}} 問題を解決したりするために広告代理店が必要でしょうか。例えば、ユーザーを引き込むための戦略を作成したり、いくつかのアイデアの中から解決策を選ぶための A/B テストなどです。
 
-<ul>
- <li>Do you want redundant servers, in case your server goes down?</li>
- <li>Is 95% percent reliability adequate, or do you need professional, around-the-clock service?</li>
- <li>Do you want high-profile, ultra-responsive dedicated servers, or can you cope with a slower, shared machine?</li>
-</ul>
+また、ホスティングについては、次のような選択肢を検討する必要があります。
 
-<p>Depending on how you answer these questions, your site could cost thousands to hundreds of thousands of dollars.</p>
+- サーバーが故障したときのために、サーバーを冗長化したいですか？
+- 95％ の信頼性で十分でしょうか、それとも 24 時間体制のプロのサービスが必要でしょうか？
+- 注目の超高速専用サーバーが欲しいのか、それとも低速の共有機で対応できるのでしょうか？
 
-<h2 id="Next_steps">Next steps</h2>
+これらの質問にどう答えるかによって、サイトのコストは数十万円から数千万円になる可能性があります。
 
-<p>Now that you understand what kind of money your website may cost you, it's time to start designing that website and <a href="/ja/docs/Learn/Set_up_a_basic_working_environment">setting up your work environment</a>.</p>
+## 次のステップ
 
-<ul>
- <li>Read on about <a href="/ja/docs/Learn/Choose,_Install_and_set_up_a_text_editor">how to choose and install a text editor</a>.</li>
- <li>If you're more focused on design, take a look at the <a href="/ja/Learn/Anatomy_of_a_web_page">anatomy of a web page</a>.</li>
-</ul>
+さて、ウェブサイトがどのような費用を要するかを理解したところで、いよいよそのウェブサイトの設計と[作業環境の設定](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server)を開始することになります。
+
+- [テキストエディターの選び方とインストール方法](/ja/docs/Learn/Common_questions/Available_text_editors)について読んでください。
+- デザイン重視の方は、[ウェブページの解剖](/ja/docs/Learn/Common_questions/Common_web_layouts)を見てみてください。
