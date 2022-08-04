@@ -1,51 +1,45 @@
 ---
 title: SourceBuffer.appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
+page-type: web-api-instance-method
 translation_of: Web/API/SourceBuffer/appendBuffer
 ---
-<div>{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}</div>
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-<div><code><strong>appendBuffer()</strong></code>方法将媒体片段数据添加到<code>SourceBuffer</code>对象中，其中媒体片段用{{domxref("ArrayBuffer")}} 或 <code>ArrayBufferView</code> 对象存储 。</div>
+{{domxref("SourceBuffer")}} 的 **`appendBuffer()`** 方法将 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 中的媒体片段数据添加到 `SourceBuffer` 对象中。
 
-<h2 id="Syntax">Syntax</h2>
+## 语法
 
-<pre class="brush: js"><em>sourceBuffer</em>.appendBuffer(<em>source</em>);
-</pre>
+```js
+appendBuffer(source)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### 参数
 
-<dl>
- <dt><code>source</code></dt>
- <dd>一个 {{domxref("BufferSource")}} 对象（{{domxref("ArrayBufferView")}} 或 {{domxref("ArrayBuffer")}}），存储了你要添加到 SourceBuffer 中去的媒体片段数据。</dd>
-</dl>
+- `source`
+  - : 一个 {{domxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或一个 {{jsxref("DataView")}} 对象，其中包含了你想要添加到 `SourceBuffer` 的媒体片段数据。
 
-<h3 id="Return_value">Return value</h3>
+### 返回值
 
-<p><code>undefined</code>.</p>
+无（{{jsxref("undefined")}}）。
 
-<h3 id="Exceptions">Exceptions</h3>
+### 异常
 
-<p>None.</p>
+无。
 
-<h2 id="Example">Example</h2>
+## 示例
 
-<p>TBD.</p>
+待定。
 
-<h2 id="Specifications">Specifications</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 浏览器兼容性
 
-<div>
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("api.SourceBuffer.appendBuffer")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{domxref("MediaSource")}}</li>
- <li>{{domxref("SourceBufferList")}}</li>
-</ul>
+- {{domxref("MediaSource")}}
+- {{domxref("SourceBufferList")}}
