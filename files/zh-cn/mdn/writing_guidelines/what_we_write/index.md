@@ -23,7 +23,7 @@ original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 
 请注意，对 MDN 的所有贡献都基于特定的开源许可证。这些在我们的[关于 MDN](/zh-CN/docs/MDN/About) 页面中有[详细介绍](/zh-CN/docs/MDN/About#版权和许可)。
 
-> **备注：** Mozilla 的 [Websites & Communications Terms of Use](https://www.mozilla.org/zh-CN/about/legal/terms/mozilla/) 所声明的条例在你使用 MDN 或对其做贡献时是生效的。仔细阅读这个文档，确保你知道在 Mozilla 的网站上什么是能发表的，什么是不能发表的。
+> **备注：** Mozilla 的 [Websites & Communications Terms of Use](https://www.mozilla.org/zh-CN/about/legal/terms/mozilla/) 所声明的条例在你使用 MDN 或对其做贡献时是生效的。仔细阅读这个文档，确保你知道在 Mozilla 的网站上什么是能发表的，什么是不能发表的。
 
 ## 哪些话题在 MDN 的范畴内？
 
@@ -39,7 +39,7 @@ original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
 - 等等。
 
-> **备注：** 后端技术通常在其他地方有自己的文档， MDN 不会试图取代这些文档，尽管我们确实有一些[例外](/zh-CN/docs/learn/Server-side)。
+> **备注：** 后端技术通常在其他地方有自己的文档， MDN 不会试图取代这些文档，尽管我们确实有一些[例外](/zh-CN/docs/learn/Server-side)。
 
 我们还欢迎一些跨端技术但与 Web 开发相关的主题，例如：
 
@@ -49,7 +49,7 @@ original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 - [Progressive web apps](/zh-CN/docs/Web/Progressive_web_apps)
 - [Web-based games](/zh-CN/docs/Games)
 
-> **备注：** MDN 涵盖了一些在网络上公开的非标准功能，特别是它们很常用的时候。例如，我们有 WebKit特定的CSS属性的文档。MDN 还涵盖了一些非Web 标准技术，如果这些技术被认为对 Web 开发人员很有用——参阅我们的 [Web 相关技术](/zh-CN/docs/Related)部分。
+> **备注：** MDN 涵盖了一些在网络上公开的非标准功能，特别是它们很常用的时候。例如，我们有 WebKit特定的CSS属性的文档。MDN 还涵盖了一些非Web 标准技术，如果这些技术被认为对 Web 开发人员很有用——参阅我们的 [Web 相关技术](/zh-CN/docs/Related)部分。
 
 ## 哪些主题不属于 MDN Web 文档？
 

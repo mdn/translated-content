@@ -14,7 +14,7 @@ original_slug: MDN/About
 ---
 {{MDNSidebar}}
 
-MDN Web Docs（以前称为 MDN——the Mozilla Developer Network）是一个提供 Web 技术和促进 Web  技术软件的不断发展的学习平台，包括：[CSS](/zh-CN/docs/Web/CSS)、[HTML](/zh-CN/docs/Web/HTML) 和 [JavaScript](/zh-CN/docs/Web/JavaScript)。我们还有一套详细的给初学者的学习资料——参见[学习 Web 开发](/zh-CN/docs/Learn)。
+MDN Web Docs（以前称为 MDN——the Mozilla Developer Network）是一个提供 Web 技术和促进 Web  技术软件的不断发展的学习平台，包括：[CSS](/zh-CN/docs/Web/CSS)、[HTML](/zh-CN/docs/Web/HTML) 和 [JavaScript](/zh-CN/docs/Web/JavaScript)。我们还有一套详细的给初学者的学习资料——参见[学习 Web 开发](/zh-CN/docs/Learn)。
 
 ## 使用 MDN 的内容
 
@@ -58,7 +58,7 @@ MDN的内容在各种开源许可证下完全可用。本节介绍我们提供�
 
 一些历史内容是在不同于以上的版权许可之下发布的，这些已在页面底部通过*其它版权许可*的方式进行了标注。
 
-> **警告：** 任何新建的页面都不可以使用其它版权许可。
+> **警告：** 任何新建的页面都不可以使用其它版权许可。
 
 **贡献的内容的版权在作者未授予他人之前归原作者所有**。
 

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 {{JSRef}}
 
-JavaScript 的 **`Array`** 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
+JavaScript 的 **`Array`** 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
 
 ## 描述
 
@@ -130,7 +130,7 @@ let shallowCopy = fruits.slice() // this is how to make a copy
 
 JavaScript 数组的索引是从 0 开始的，第一个元素的索引为 0，最后一个元素的索引等于该数组的 {{jsxref("Array.length", "长度")}} 减 1。
 
-如果指定的索引是一个无效值，JavaScript 数组并不会报错，而是会返回 `undefined`。
+如果指定的索引是一个无效值，JavaScript 数组并不会报错，而是会返回 `undefined`。
 
 ```js
 let arr = ['this is the first element', 'this is the second element', 'this is the last element']
@@ -139,15 +139,15 @@ console.log(arr[1])              // logs 'this is the second element'
 console.log(arr[arr.length - 1]) // logs 'this is the last element'
 ```
 
-虽然数组元素可以看做是数组对象的属性，就像 `toString` 一样，但是下面的写法是错误的，运行时会抛出 `SyntaxError` 异常，而原因则是使用了非法的属性名：
+虽然数组元素可以看做是数组对象的属性，就像 `toString` 一样，但是下面的写法是错误的，运行时会抛出 `SyntaxError` 异常，而原因则是使用了非法的属性名：
 
 ```js
 console.log(arr.0) // a syntax error
 ```
 
-并不是 JavaScript 数组有什么特殊之处，而是因为在 JavaScript 中，以数字开头的属性不能用点号引用，必须用方括号。
+并不是 JavaScript 数组有什么特殊之处，而是因为在 JavaScript 中，以数字开头的属性不能用点号引用，必须用方括号。
 
-比如，如果一个对象有一个名为 `3d` 的属性，那么只能用方括号来引用它。下面是具体的例子：
+比如，如果一个对象有一个名为 `3d` 的属性，那么只能用方括号来引用它。下面是具体的例子：
 
 ```js
 let years = [1950, 1960, 1970, 1980, 1990, 2000, 2010]
@@ -160,9 +160,9 @@ renderer.3d.setTexture(model, 'character.png')     // a syntax error
 renderer['3d'].setTexture(model, 'character.png')  // works properly
 ```
 
-注意在 `3d` 那个例子中，引号是必须的。你也可以将数组的索引用引号引起来，比如 `years[2]` 可以写成 `years['2']`。
+注意在 `3d` 那个例子中，引号是必须的。你也可以将数组的索引用引号引起来，比如 `years[2]` 可以写成 `years['2']`。
 
-`years[2]` 中的 2 会被 JavaScript 解释器通过调用 `toString` 隐式转换成字符串。正因为这样，`'2'` 和 `'02'` 在 `years` 中所引用的可能是不同位置上的元素。而下面这个例子也可能会打印 `true`：
+`years[2]` 中的 2 会被 JavaScript 解释器通过调用 `toString` 隐式转换成字符串。正因为这样，`'2'` 和 `'02'` 在 `years` 中所引用的可能是不同位置上的元素。而下面这个例子也可能会打印 `true`：
 
 ```js
 console.log(years['2'] != years['02'])
@@ -170,11 +170,11 @@ console.log(years['2'] != years['02'])
 
 ### 数组长度与数字下标之间的关系
 
-JavaScript 数组的 {{jsxref("Array.length", "length")}} 属性和其数字下标之间有着紧密的联系。
+JavaScript 数组的 {{jsxref("Array.length", "length")}} 属性和其数字下标之间有着紧密的联系。
 
-数组内置的几个方法（例如 {{jsxref("Array.join", "join")}}、{{jsxref("Array.slice", "slice")}}、{{jsxref("Array.indexOf", "indexOf")}} 等）都会考虑 {{jsxref("Array.length", "length")}} 的值。
+数组内置的几个方法（例如 {{jsxref("Array.join", "join")}}、{{jsxref("Array.slice", "slice")}}、{{jsxref("Array.indexOf", "indexOf")}} 等）都会考虑 {{jsxref("Array.length", "length")}} 的值。
 
-另外还有一些方法（例如 {{jsxref("Array.push", "push")}}、{{jsxref("Array.splice", "splice")}} 等）还会改变 {{jsxref("Array.length", "length")}} 的值。
+另外还有一些方法（例如 {{jsxref("Array.push", "push")}}、{{jsxref("Array.splice", "splice")}} 等）还会改变 {{jsxref("Array.length", "length")}} 的值。
 
 ```js
 const fruits = []
@@ -183,7 +183,7 @@ fruits.push('banana', 'apple', 'peach')
 console.log(fruits.length) // 3
 ```
 
-使用一个合法的下标为数组元素赋值，并且该下标超出了当前数组的大小的时候，解释器会同时修改 {{jsxref("Array.length", "length")}} 的值：
+使用一个合法的下标为数组元素赋值，并且该下标超出了当前数组的大小的时候，解释器会同时修改 {{jsxref("Array.length", "length")}} 的值：
 
 ```js
 fruits[5] = 'mango'
@@ -192,7 +192,7 @@ console.log(Object.keys(fruits))  // ['0', '1', '2', '5']
 console.log(fruits.length)        // 6
 ```
 
-也可以显式地给 {{jsxref("Array.length", "length")}} 赋一个更大的值：
+也可以显式地给 {{jsxref("Array.length", "length")}} 赋一个更大的值：
 
 ```js
 fruits.length = 10
@@ -202,7 +202,7 @@ console.log(fruits.length)       // 10
 console.log(fruits[8])           // undefined
 ```
 
-而为 {{jsxref("Array.length", "length")}} 赋一个更小的值则会删掉一部分元素：
+而为 {{jsxref("Array.length", "length")}} 赋一个更小的值则会删掉一部分元素：
 
 ```js
 fruits.length = 2
@@ -210,11 +210,11 @@ console.log(Object.keys(fruits)) // ['0', '1']
 console.log(fruits.length)       // 2
 ```
 
-这一节的内容在 {{jsxref("Array.length")}} 中有更详细的介绍。
+这一节的内容在 {{jsxref("Array.length")}} 中有更详细的介绍。
 
 ### 正则匹配结果所返回的数组
 
-使用正则表达式匹配字符串可以得到一个数组。这个数组中包含本次匹配的相关信息和匹配结果。{{jsxref("RegExp.exec")}}、{{jsxref("String.match")}}、{{jsxref("String.replace")}} 都会返回这样的数组。
+使用正则表达式匹配字符串可以得到一个数组。这个数组中包含本次匹配的相关信息和匹配结果。{{jsxref("RegExp.exec")}}、{{jsxref("String.match")}}、{{jsxref("String.replace")}} 都会返回这样的数组。
 
 看下面的例子和例子下面的表格：
 
@@ -362,7 +362,7 @@ const myArray = myRe.exec('cdbBdbsbz')
 
 ### 创建数组
 
-下面这个例子创建了一个长度为 `0` 的数组 `msgArray`，然后给 `msgArray[0]` 和 `msgArray[99]` 赋值，从而导致数组长度变为了 `100`。
+下面这个例子创建了一个长度为 `0` 的数组 `msgArray`，然后给 `msgArray[0]` 和 `msgArray[99]` 赋值，从而导致数组长度变为了 `100`。
 
 ```js
 let msgArray = []
@@ -376,7 +376,7 @@ if (msgArray.length === 100) {
 
 ### 创建二维数组
 
-下面的例子创建了一个代表国际象棋棋盘的二维数组，然后将 `[6][4]` 上的 `p` (Pawn 兵) 拷贝到 `[4][4]`，而原本的 `[6][4]` 位置则被设置为空格。
+下面的例子创建了一个代表国际象棋棋盘的二维数组，然后将 `[6][4]` 上的 `p` (Pawn 兵) 拷贝到 `[4][4]`，而原本的 `[6][4]` 位置则被设置为空格。
 
 ```js
 let board = [

@@ -27,7 +27,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 <p>最先，讓我們從簡單、高層次的視角來看物件導向程式設計 (Object-oriented programming；OOP) 最基本的概念。我們說簡單是因為 OOP 很容易變得複雜，就算現在就設法完整解釋，也可能讓大家越來越混亂。OOP 基本概念是：採用物件（objects）來模塑真實的實物世界：也就是在程式中的呈現是透過 objects 來塑造其模型，且＼或提供簡單方式存取其「難以或不可能採用的功能」。</p>
 
-<p>物件可裝載相關的資料與程式碼，資料部分是你塑造某個模型的資訊，而程式碼部分則用是操作行為(<strong>Method</strong>)實現。Object data  -- 函式部分通常也使用 ---可工整地儲存 (正式一點應該是<strong>封裝 Encapsulated</strong>) 在物件包裹(這個包裹有特定的稱呼方式，有時候即所謂的<strong>命名空間 Namespace</strong>) ，使其能輕鬆地建構性存取。物件也常作為「資料儲存 (Datastore)，促成簡易實現跨網傳送。</p>
+<p>物件可裝載相關的資料與程式碼，資料部分是你塑造某個模型的資訊，而程式碼部分則用是操作行為(<strong>Method</strong>)實現。Object data  -- 函式部分通常也使用 ---可工整地儲存 (正式一點應該是<strong>封裝 Encapsulated</strong>) 在物件包裹(這個包裹有特定的稱呼方式，有時候即所謂的<strong>命名空間 Namespace</strong>) ，使其能輕鬆地建構性存取。物件也常作為「資料儲存 (Datastore)，促成簡易實現跨網傳送。</p>
 
 <h3 id="定義物件範本">定義物件範本</h3>
 
@@ -128,7 +128,7 @@ person2.greeting()</pre>
 <pre class="brush: js">var person1 = new Person('Bob');
 var person2 = new Person('Sarah');</pre>
 
-<p>這裡用了「<code>new</code>」關鍵字告知瀏覽器「我們要建立新的物件實例」，並接著在函式名稱之後的括號內傳入函式所需要的參數，並將結果儲存於變數之中 — 相當類似普通函式被呼叫的方式 。各個實例均根據此定義所建立：</p>
+<p>這裡用了「<code>new</code>」關鍵字告知瀏覽器「我們要建立新的物件實例」，並接著在函式名稱之後的括號內傳入函式所需要的參數，並將結果儲存於變數之中 — 相當類似普通函式被呼叫的方式 。各個實例均根據此定義所建立：</p>
 
 <pre class="brush: js">function Person(name) {
   this.name = name;
@@ -237,7 +237,7 @@ person1.greeting = function() {
 
 <h3 id="使用_create_函式">使用 create() 函式</h3>
 
-<p>建構子可以幫助你保持程式的可讀性 — 你可以將建構子建立在同一個地方，並根據需求從這些建構子中建立物件實例，這樣做可以讓你清楚地得知它們的來源。</p>
+<p>建構子可以幫助你保持程式的可讀性 — 你可以將建構子建立在同一個地方，並根據需求從這些建構子中建立物件實例，這樣做可以讓你清楚地得知它們的來源。</p>
 
 <p>不過，有些人偏好建立物件實例，而不先做建構子，尤其是他們的物件不會用很多實例時。JavaScript 有個稱作 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> 的內建函式能讓你這麼做。有了它，你就能根據現有物件，建立新的物件。</p>
 
