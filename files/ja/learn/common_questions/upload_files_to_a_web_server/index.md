@@ -1,177 +1,163 @@
 ---
-title: どのようにファイルを Web サーバにアップロードしますか？
+title: ウェブサーバーにファイルをアップロードするには？
 slug: Learn/Common_questions/Upload_files_to_a_web_server
 tags:
+  - Beginner
   - FTP
   - GitHub
+  - Uploading
   - WebMechanics
+  - hosting
   - rsync
-  - sftp
-  - アップロード
-  - ホスティング
-  - 初心者
+  - SFTP
 translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 ---
-<div class="summary">
-<p>この記事ではファイル転送ツールを使用してオンラインでサイトを公開する方法を説明します。</p>
-</div>
+この記事では、ファイル転送ツールを使用してオンラインでサイトを公開する方法を説明します。
 
-<table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">学習の前提</th>
-   <td><a href="/ja/docs/Learn/Common_questions/What_is_a_web_server">Web サーバが何であるか</a>、<a href="/ja/docs/Learn/Common_questions/What_is_a_domain_name">ドメイン名の仕組み</a>を知っていなければなりません。また、<a href="/ja/docs/Learn/Common_questions/set_up_a_local_testing_server">基本的な環境の設定方法</a>や<a href="/ja/docs/Learn/Getting_started_with_the_web">簡単な Web ページの作成方法</a>も理解しておく必要があります。</td>
-  </tr>
-  <tr>
-   <th scope="row">学習の目的</th>
-   <td>FTP を使用してファイルをサーバにプッシュする方法を学びます。</td>
-  </tr>
- </tbody>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        <a href="/ja/docs/Learn/Common_questions/What_is_a_web_server">ウェブサーバとは何か</a>と<a href="/ja/docs/Learn/Common_questions/What_is_a_domain_name">ドメイン名の仕組み</a>を知っている必要があります。<a href="/ja/docs/Learn/Common_questions/set_up_a_local_testing_server"
+          >基本的な環境設定方法</a>と<a href="/ja/docs/Learn/Getting_started_with_the_web">簡単なウェブページの作成方法</a>も理解しておく必要があります。
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        様々なファイル転送ツールを使用し、ファイルをサーバーにプッシュする方法について説明します。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="概要">概要</h2>
+## 概要
 
-<p>シンプルな Web ページを作成している場合 (例として <a href="/ja/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML の基本</a>を参照)、Web サーバ上にオンラインで転送したいと思うかもしれません。この記事では SFTP クライアント、RSync、GitHub などの選択肢をとおして、その方法を説明します。</p>
+シンプルなウェブページを作成している場合 (例として [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)を参照)、ウェブサーバー上にオンラインで転送したいと思うかもしれません。この記事では SFTP クライアント、RSync、GitHub などの選択肢をとおして、その方法を説明します。
 
-<h2 id="SFTP">SFTP</h2>
+## SFTP
 
-<p> SFTP クライアントには、いくつもの選択肢があります。ここのデモは <a href="https://filezilla-project.org/">FileZilla</a> を使うことにします。 Windows、macOS、Linux で使え、無料だからです。FileZilla をインストールするには、<a href="https://filezilla-project.org/download.php?type=client">FileZilla ダウンロードページ</a>に移動し、大きなダウンロードボタンをクリックしてから、通常の方法でインストーラファイルからインストールします。</p>
+SFTP クライアントには、いくつもの選択肢があります。ここのデモは [FileZilla](https://filezilla-project.org/) を使うことにします。 Windows、macOS、Linux で使え、無料だからです。 FileZilla をインストールするには、 [FileZilla ダウンロードページ](https://filezilla-project.org/download.php?type=client)に移動し、大きなダウンロードボタンをクリックしてから、通常の方法でインストーラーファイルからインストールします。
 
-<div class="note">
-<p><strong>メモ</strong>: もちろん他にもたくさんのオプションがあります。詳細については<a href="/ja/docs/Learn/Common_questions/How_much_does_it_cost#Publishing_tools.3A_FTP_client">パブリッシングツール</a>を参照してください。</p>
-</div>
+> **Note:** もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn/Common_questions/How_much_does_it_cost#公開ツール)を参照してください。
 
-<p>FileZilla アプリケーションを開きます。次のようなものが表示されます。</p>
+FileZilla アプリケーションを開きます。次のようなものが表示されます。
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15767/filezilla-ui.png" style="display: block; height: 451px; margin: 0px auto; width: 690px;"></p>
+![](filezilla-ui.png)
 
-<h3 id="ログイン">ログイン</h3>
+### ログイン
 
-<p>この例では、ホスティングプロバイダ (私たちの HTTP Web サーバをホストするサービス) は架空の会社 "Example Hosting Provider" であり、URL は次のようになります：<code>mypersonalwebsite.examplehostingprovider.net</code></p>
+この例では、ホスティングプロバイダー (私たちの HTTP ウェブサーバーをホスティングするサービス) が架空の会社 "Example Hosting Provider" であり、 URL は `mypersonalwebsite.examplehostingprovider.net` であったとします。
 
-<p>私たちはアカウントを開設し、その情報を受け取ったばかりです：</p>
+私たちはアカウントを開設し、その情報を受け取ったばかりです。
 
-<blockquote>
-<p>Example Hosting Provider でアカウントを開設しましたことをお祝いします。</p>
+> Example Hosting Provider でアカウントを開設しましたことをお祝いします。
+>
+> アカウント: `demozilla`
+>
+> あなたのウェブサイトは `demozilla.examplehostingprovider.net` で表示されます。
+>
+> このアカウントに公開するには、 SFTP を使用して次の資格情報で接続してください。
+>
+> - SFTP サーバー: `sftp://demozilla.examplehostingprovider.net`
+> - ユーザー名: `demozilla`
+> - パスワード: `quickbrownfox`
+> - ポート: `5548`
+> - ウェブ上に公開するには、ファイルを `Public/htdocs` ディレクトリーに置いてください。
 
-<p>アカウント: <code>demozilla</code></p>
+最初に `http://demozilla.examplehostingprovider.net/` を見てみましょう。見ての通り、まだそこには何もありません。
 
-<p>あなたのWebサイトは <code>demozilla.examplehostingprovider.net</code> で表示されます。</p>
+![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-<p>このアカウントに公開するには、SFTP を使用して次の資格情報で接続してください：</p>
+> **Note:** ホスティングプロバイダーによっては、最初にあなたのウェブアドレスに行ったときに、「このウェブサイトは[ホスティングサービス]によってホストされています。」というようなページが表示されます。
 
-<ul>
- <li>SFTP サーバ: <code>sftp://demozilla.examplehostingprovider.net</code></li>
- <li>ユーザ名: <code>demozilla</code></li>
- <li>パスワード: <code>quickbrownfox</code></li>
- <li>ポート: <code>5548</code></li>
- <li>Web 上に公開するには、ファイルを <code>Public/htdocs</code> ディレクトリに置きます</li>
-</ul>
-</blockquote>
+SFTP クライアントを遠隔のサーバーに接続するには、次の手順を実行します。
 
-<p>最初に <code>http://demozilla.examplehostingprovider.net/</code> を見てみましょう。見ての通り、まだそこには何もありません：</p>
+1. メインメニューから**ファイル > サイトマネージャ...** を選択します。
+2. **サイトマネージャ**ウィンドウで、**新規サイト**ボタンをクリックし、提供されたスペースにサイト名を **demozilla** として入力します。
+3. ホスティングプロバイダーから提供された SFTP サーバーのホストを　**Host:** フィールドに入力します。
+4. **ログオンの種類**ドロップダウンで**標準**を選択し、提供されたユーザー名とパスワードを該当するフィールドに入力します。
+5. 正しいポートおよびその他の情報を入力します。
 
-<p><img alt="Our demozilla personal website, seen in a browser: it's empty" src="https://mdn.mozillademos.org/files/9615/demozilla-empty.png" style="border-style: solid; border-width: 1px; display: block; height: 233px; margin: 0 auto; width: 409px;"></p>
+ウィンドウは次のようになります。
 
-<div class="note">
-<p><strong>メモ</strong>: ホスティングプロバイダによっては、最初にあなたの Web アドレスに行ったときに、「このWebサイトは[ホスティングサービス]によってホストされています。」というようなページが表示されます。</p>
-</div>
+![](site-manager.png)
 
-<p>SFTP クライアントを遠隔のサーバに接続するには、次の手順を実行します。</p>
+次に Connect を押して SFTP サーバーに接続します。
 
-<ol>
- <li>メインメニューから <em>ファイル &gt; サイトマネージャ と選択します</em></li>
- <li>[サイトマネージャ] ウィンドウで、[新規サイト] ボタンをクリックし、提供されたスペースにサイト名を <strong>demozilla</strong> として入力します</li>
- <li>ホスティングプロバイダから提供された SFTP サーバのホストを<em> Host:</em> フィールドに入力します</li>
- <li>[ログオンの種類] ドロップダウンで [標準] を選択し、提供されたユーザ名とパスワードを該当するフィールドに入力します</li>
- <li>正しいポートおよびその他の情報を入力します</li>
-</ol>
+注意: ホスティングプロバイダーがホスティングスペースへの SFTP (セキュア FTP) 接続を提供していることを確認してください。 FTP は本質的に安全ではないため、使用しないでください。
 
-<p>ウィンドウは次のようになります：</p>
+### こちらとあちら：ローカルビューとリモートビュー
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15769/site-manager.png" style="display: block; height: 561px; margin: 0px auto; width: 684px;"></p>
+一度接続すると、画面は次のようになります（私たち自身の例と結びつけて、イメージをつかんでください。）
 
-<p>次に Connect を押して SFTP サーバに接続します。</p>
+![](connected.png)
 
-<p>注意: ホスティングプロバイダがホスティングスペースへの SFTP (セキュア FTP) 接続を提供していることを確認してください。FTP は本質的に安全ではないため、使用しないでください。</p>
+あなたが見ているものを調べてみましょう。
 
-<h3 id="こちらとあちら：ローカルビューとリモートビュー">こちらとあちら：ローカルビューとリモートビュー</h3>
+- 中央の左ペインには、ローカルファイルが表示されます。ウェブサイトを保存しているディレクトリー (例: `mdn`) に移動します
+- 中央の右ペインには、リモートファイルが表示されます。遠くの FTP ルート (このケースでは、`users/demozilla`) にログインしています
+- 今のところ、下部と上部のペインを無視することができます。それぞれ、あなたのコンピューターと SFTP サーバー間の接続状態を示すメッセージのログ、 SFTP クライアントとサーバー間のすべてのインタラクションのライブログです
 
-<p>一度接続すると、画面は次のようになります (私たちはあなた自身のアイデアを伝えるために例を挙げています)。</p>
+### サーバーへのアップロード
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15768/connected.png" style="border-style: solid; border-width: 1px; display: block; height: 199px; margin: 0px auto; width: 700px;"></p>
+私たちのホスト命令の例では、「ウェブ上に公開するには、ファイルを `Public/htdocs` ディレクトリーに入れてください」となっています。右ペインの指定されたディレクトリーに移動する必要があります。このディレクトリーは実質的にあなたのウェブサイトのルートで、`index.html` ファイルやその他の資産がどこに行くかを示します。
 
-<p>あなたが見ているものを調べてみましょう：</p>
+ファイルを置く正しいリモートディレクトリーが見つかったら、サーバーにファイルをアップロードしますが、それにはファイルを左ペインから右ペインにドラッグ＆ドロップする必要があります。
 
-<ul>
- <li>中央の左ペインには、ローカルファイルが表示されます。Web サイトを保存しているディレクトリ (例: <code>mdn</code>) に移動します</li>
- <li>中央の右ペインには、リモートファイルが表示されます。遠くの FTP ルート (このケースでは、<code>users/demozilla</code>) にログインしています</li>
- <li>今のところ、下部と上部のペインを無視することができます。それぞれ、あなたのコンピュータと SFTP サーバ間の接続状態を示すメッセージのログ、SFTP クライアントとサーバ間のすべてのインタラクションのライブログです</li>
-</ul>
+### 本当にオンラインですか？
 
-<h3 id="サーバへのアップロード">サーバへのアップロード</h3>
+これまでのところとても良いですが、ファイルは本当にオンラインですか？ ブラウザーでウェブサイト (例えば `http://demozilla.examplehostingprovider.net/`) に戻って再確認することができます。
 
-<p>私たちのホスト命令の例では、「Web 上に公開するには、ファイルを <code>Public/htdocs</code> ディレクトリに入れてください」となっています。右ペインの指定されたディレクトリに移動する必要があります。このディレクトリは実質的にあなたの Web サイトのルートで、<code>index.html</code> ファイルやその他のアセットがどこに行くかを示します。</p>
+![Here we go: our website is live!](here-we-go.png)
 
-<p>ファイルを置く正しいリモートディレクトリが見つかったら、サーバにファイルをアップロードしますが、それにはファイルを左ペインから右ペインにドラッグ &amp; ドロップする必要があります。</p>
+やりました！ウェブサイトは動いています！
 
-<h3 id="本当にオンラインですか？">本当にオンラインですか？</h3>
+## Rsync
 
-<p>これまでのところとても良いですが、ファイルは本当にオンラインですか？ ブラウザでWebサイト (例えば <code>http://demozilla.examplehostingprovider.net/</code>) に戻って再確認することができます。</p>
+{{Glossary("Rsync")}} はローカルからリモートへのファイル同期ツールで、ほとんどの Unix ベースのシステム (macOS や Linux など) で一般的に利用可能ですが、Windows 版も存在します。
 
-<p><img alt="Here we go: our website is live!" src="https://mdn.mozillademos.org/files/9627/here-we-go.png" style="border-style: solid; border-width: 1px; display: block; height: 442px; margin: 0 auto; width: 400px;"></p>
+既定ではコマンドラインで使用されるため、SFTP よりも高度なツールと見なされています。基本的なコマンドはこんな感じです。
 
-<p>そしてやりました！ Web サイトは動いています！</p>
+```bash
+rsync [-options] SOURCE user@x.x.x.x:DESTINATION
+```
 
-<h2 id="Rsync">Rsync</h2>
+- `-options` はダッシュの後に 1 つ以上の文字が続きます。たとえば、詳細エラーメッセージの場合は `-v`、バックアップを作成する場合は `-b` です。完全なリストは [rsync の man ページ](https://linux.die.net/man/1/rsync)にあります ("Options summary" を検索してください)。
+- `SOURCE` は、ファイルのコピー元となるローカルファイルまたはディレクトリーへのパスです。
+- `user@` は、ファイルのコピー先となるリモートサーバー上のユーザーの資格情報です。
+- `x.x.x.x` はリモートサーバーの IP アドレスです。
+- `DESTINATION` は、リモートサーバー上のディレクトリーまたはファイルをコピーする場所へのパスです。
 
-<p>{{Glossary("Rsync")}} はローカルからリモートへのファイル同期ツールで、ほとんどの Unix ベースのシステム (macOS や Linux など) で一般的に利用可能ですが、Windows 版も存在します。</p>
+あなたはホスティングプロバイダーからそのような詳細を得る必要があるでしょう。
 
-<p>デフォルトではコマンドラインで使用されるため、SFTP よりも高度なツールと見なされています。基本的なコマンドはこんな感じです：</p>
+詳細およびその他の例については、 [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/hipaa-compliant-cloud-hosting-services/how-to-use-rsync-copy-sync-files-servers/) を参照してください。
 
-<pre class="brush: bash line-numbers"><code>rsync [-options] SOURCE user@x.x.x.x:DESTINATION</code></pre>
+もちろん、FTP の時と同じように安全な接続のもとで使用することをお勧めします。Rsync の場合は `-e` オプションを使用して、SSH を介した接続を確立するための SSH 詳細を指定します。
 
-<ul>
- <li><code>-options</code> はダッシュの後に1つ以上の文字が続きます。たとえば、詳細エラーメッセージの場合は <code>-v</code>、バックアップを作成する場合は <code>-b</code> です。完全なリストは <a href="https://linux.die.net/man/1/rsync">rsync の man ページ</a>にあります ("Options summary" を検索してください)。</li>
- <li><code>SOURCE</code> は、ファイルのコピー元となるローカルファイルまたはディレクトリへのパスです。</li>
- <li><code>user@</code> は、ファイルのコピー先となるリモートサーバ上のユーザの資格情報です。</li>
- <li><code>x.x.x.x</code> はリモートサーバのIPアドレスです。</li>
- <li><code>DESTINATION</code> は、リモートサーバ上のディレクトリまたはファイルをコピーする場所へのパスです。</li>
-</ul>
+```bash
+rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
+```
 
-<p>あなたはホスティングプロバイダからそのような詳細を得る必要があるでしょう。</p>
+必要なものの詳細については、[How To Copy Files With Rsync Over SSH](https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh) を参照してください。
 
-<p>詳細およびその他の例については、 <a href="https://www.atlantic.net/hipaa-compliant-cloud-hosting-services/how-to-use-rsync-copy-sync-files-servers/">How to Use Rsync to Copy/Sync Files Between Servers</a> を参照してください。</p>
+### Rsync GUI ツール
 
-<p>もちろん、FTP の時と同じように安全な接続のもとで使用することをお勧めします。Rsync の場合は <code>-e</code> オプションを使用して、SSH を介した接続を確立するための SSH 詳細を指定します。例えば：</p>
+他のコマンドラインツールと同様に、コマンドラインの使用に慣れていない人向けに Rsync 用の GUI ツールもあります。 [Acrosync](https://acrosync.com/mac.html) はそのようなツールの1つで、Windows と macOS で利用可能です。
 
-<pre class="brush: bash line-numbers"><code>rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION</code></pre>
+繰り返しになりますが、ホスティングプロバイダーから接続認証情報を取得する必要がありますが、この方法でそれらを入力するための GUI が得られます。
 
-<p>必要なものの詳細については、<a href="https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh">How To Copy Files With Rsync Over SSH</a> を参照してください。</p>
+## GitHub
 
-<h3 id="Rsync_GUI_ツール">Rsync GUI ツール</h3>
+GitHub では、[GitHub pages](https://pages.github.com/) (gh-pages) を介してウェブサイトを公開することができます。
 
-<p>他のコマンドラインツールと同様に、コマンドラインの使用に慣れていない人向けに Rsync 用の GUI ツールもあります。<a href="https://acrosync.com/mac.html">Acrosync</a> はそのようなツールの1つで、Windows と macOS で利用可能です。</p>
+これの使い方の基本については、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)の[ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)の記事で説明しているので、ここでは繰り返しません。
 
-<p>繰り返しになりますが、ホスティングプロバイダから接続認証情報を取得する必要がありますが、この方法でそれらを入力するための GUI が得られます。</p>
+ただし、 GitHub でウェブサイトをホスティングすることはできますが、カスタムドメインを使用することもできます。詳しいガイドは [Using a custom domain with GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) をご覧ください。
 
+## ファイルをアップロードするその他の方法
 
+FTP プロトコルは、ウェブサイトを公開するためのよく知られた方法の 1 つですが、唯一の方法ではありません。 他にもいくつかのやり方があります。
 
-<h2 id="GitHub">GitHub</h2>
-
-<p>GitHub では、<a href="https://pages.github.com/">GitHub pages</a> (gh-pages) を介して Web サイトを公開することができます。</p>
-
-<p>これの使い方の基本については、<a href="/ja/docs/Learn/Getting_started_with_the_web">Web 入門</a>の <a href="/ja/docs/Learn/Getting_started_with_the_web/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%85%AC%E9%96%8B%E3%81%99%E3%82%8B">Web サイトの公開</a>の記事で説明しているので、ここでは繰り返しません。</p>
-
-<p>ただし、GitHub で Web サイトをホストすることはできますが、カスタムドメインを使用することもできます。詳しいガイドは <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">Using a custom domain with GitHub Pages</a> をご覧ください。</p>
-
-
-
-<h2 id="ファイルをアップロードするその他の方法">ファイルをアップロードするその他の方法</h2>
-
-<p>FTP プロトコルは、Web サイトを公開するためのよく知られた方法の1つですが、唯一の方法ではありません。 他にもいくつかのやり方があります。</p>
-
-<ul>
- <li><strong>Web インターフェイス</strong>。リモートファイルアップロードサービスのフロントエンドとして機能する HTML インターフェイス。ホスティングサービスから提供されます。</li>
- <li><strong>{{Glossary("WebDAV")}}</strong>。より高度なファイル管理を可能にする {{Glossary("HTTP")}} プロトコルの拡張。</li>
-</ul>
+- **ウェブインターフェイス**。リモートファイルアップロードサービスのフロントエンドとして機能する HTML インターフェイス。ホスティングサービスから提供されます。
+- **{{Glossary("WebDAV")}}**。より高度なファイル管理を可能にする {{Glossary("HTTP")}} プロトコルの拡張。
