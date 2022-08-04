@@ -26,25 +26,25 @@ translation_of: Web/API/Clipboard
 
 
 
-<p><span class="seoSummary"><strong><code>Clipboard</code></strong> インターフェイスは <a href="/ja-jp/docs/Web/API/Clipboard_API">Clipboard API</a> を実装します。この API は、ユーザーが許可する場合、システムクリップボードの内容に対する読み取りと書き込みの両方を提供します。</span> Clipboard API は、ウェブアプリケーションにカット (切り取り)、コピー (複写)、ペースト (貼り付け) の機能を実装するために使うことができます。</p>
+<p><span class="seoSummary"><strong><code>Clipboard</code></strong> インターフェイスは <a href="/ja-jp/docs/Web/API/Clipboard_API">Clipboard API</a> を実装します。この API は、ユーザーが許可する場合、システムクリップボードの内容に対する読み取りと書き込みの両方を提供します。</span> Clipboard API は、ウェブアプリケーションにカット (切り取り)、コピー (複写)、ペースト (貼り付け) の機能を実装するために使うことができます。</p>
 
 <p>システムクリップボードは、グローバルの {{domxref("Navigator.clipboard")}} プロパティにより公開されています。</p>
 
 <p><code>Clipboard</code> オブジェクトのメソッド呼び出しは、ユーザーが <a href="/ja-jp/docs/Web/API/Permissions_API">Permissions API</a> と <code>"clipboard-read"</code> や <code>"clipboard-write"</code> パーミッションを適切に使って必要なパーミッションを与えていない場合、成功しません。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 現実には、ブラウザーがクリップボードへアクセスする場合に必要となることは、非常に多岐に渡ります。詳細は <a href="#clipboard_availability">クリップボードの可用性</a> を参照してください。</p>
+<p><strong>注意:</strong> 現実には、ブラウザーがクリップボードへアクセスする場合に必要となることは、非常に多岐に渡ります。詳細は <a href="#clipboard_availability">クリップボードの可用性</a> を参照してください。</p>
 </div>
 
-<p>Clipboard API の全てのメソッドは非同期で動作します。つまり、それらはクリップボードにアクセスできたときに解決される {{jsxref("Promise")}} オブジェクトを返します。この Promise は、クリップボードへのアクセスが拒絶された場合には拒否されます。</p>
+<p>Clipboard API の全てのメソッドは非同期で動作します。つまり、それらはクリップボードにアクセスできたときに解決される {{jsxref("Promise")}} オブジェクトを返します。この Promise は、クリップボードへのアクセスが拒絶された場合には拒否されます。</p>
 
 <h2 id="Methods" name="Methods">メソッド</h2>
 
-<p><em><code>Clipboard</code> は、{{domxref("EventTarget")}} インターフェイスに基づいており、そのメソッドを含みます。</em></p>
+<p><em><code>Clipboard</code> は、{{domxref("EventTarget")}} インターフェイスに基づいており、そのメソッドを含みます。</em></p>
 
 <dl>
  <dt>{{domxref("Clipboard.read()","read()")}}</dt>
- <dd>クリップボードから任意のデータ (画像など) を要求し、{jsxref("Promise")}} を返します。データが取得されたとき、この Promise はそのデータを提供する {{domxref("DataTransfer")}} オブジェクトにより解決されます。</dd>
+ <dd>クリップボードから任意のデータ (画像など) を要求し、{jsxref("Promise")}} を返します。データが取得されたとき、この Promise はそのデータを提供する {{domxref("DataTransfer")}} オブジェクトにより解決されます。</dd>
  <dt>{{domxref("Clipboard.readText()","readText()")}}</dt>
  <dd>システムクリップボードからテキストを要求します。利用可能になるとクリップボードのテキストを含む {{domxref("DOMString")}} により解決される <code>Promise</code> を返します。</dd>
  <dt>{{domxref("Clipboard.write()","write()")}}</dt>
@@ -59,7 +59,7 @@ translation_of: Web/API/Clipboard
 
 <p>例えば、Firefox はまだ <code>"clipboard-read"</code> と <code>"clipboard-write"</code> パーミッションをサポートしていないため、これとは異なる方法でクリップボードの内容にアクセスし変更するメソッドへのアクセスを制限します。</p>
 
-<p>WebExtension の場合、clipboardRead や clipboardWrite パーミッションを要求することで clipboard.readText() や clipboard.writeText() を使うことができます。HTTPサイトに適用されたコンテンツスクリプトは、Clipboard オブジェクトにアクセスすることはできません。<a href="https://blog.mozilla.org/addons/2018/08/31/extensions-in-firefox-63/">Extensions in Firefox 63</a> を参照してください。</p>
+<p>WebExtension の場合、clipboardRead や clipboardWrite パーミッションを要求することで clipboard.readText() や clipboard.writeText() を使うことができます。HTTPサイトに適用されたコンテンツスクリプトは、Clipboard オブジェクトにアクセスすることはできません。<a href="https://blog.mozilla.org/addons/2018/08/31/extensions-in-firefox-63/">Extensions in Firefox 63</a> を参照してください。</p>
 
 <p>また、{{domxref("Clipboard.read", "read()")}} と {{domxref("Clipboard.write", "write()")}} はデフォルトで無効にされており、これらを有効にするには設定を変更する必要があります。これらを使う前にブラウザー実装状況の表を確認してください。</p>
 

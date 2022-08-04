@@ -39,15 +39,15 @@ original_slug: Web/API/XRHandedness
 <p><code>handedness</code> の重要な使用方法の1つは、コントローラーがどちらの手にあるかを判別して、仮想空間でその手（またはその手が制御しているデバイス）の表現を描画できるようにすることです。</p>
 
 <pre class="brush: js notranslate">function updateInputSources(session, frame, refSpace) {
-  for (let source of session.inputSources) {
-    if (source.gripSpace) {
-      let gripPose = frame.getPose(source.gripSpace, refSpace);
+  for (let source of session.inputSources) {
+    if (source.gripSpace) {
+      let gripPose = frame.getPose(source.gripSpace, refSpace);
 
-      if (gripPose) {
-        myRenderHandObject(gripPose, inputSource.handedness);
-      }
-    }
-  }
+      if (gripPose) {
+        myRenderHandObject(gripPose, inputSource.handedness);
+      }
+    }
+  }
 }
 </pre>
 

@@ -36,60 +36,60 @@ translation_of: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 <p>The following example illustrates using the resource timing properties to calculate the amount of time the following phases take: redirection ({{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} ), DNS lookup ({{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} and {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}}), TCP handshake ({{domxref('PerformanceResourceTiming.connectStart','connectStart')}} and {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}}), and response ({{domxref('PerformanceResourceTiming.responseStart','responseStart')}} and {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}). This example also calculates the time from the start of the fetch and request start phases ({{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} and {{domxref("PerformanceResourceTiming.requestStart","requestStart")}}, respectively), until the response has ended ({{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}). This timing data provides a detailed profile of the resource loading phases and this data can be used to help identify performance bottlenecks.</p>
 
 <pre class="brush: js">function calculate_load_times() {
-  // Check performance support
-  if (performance === undefined) {
-    console.log("= Calculate Load Times: performance NOT supported");
-    return;
-  }
+  // Check performance support
+  if (performance === undefined) {
+    console.log("= Calculate Load Times: performance NOT supported");
+    return;
+  }
 
-  // Get a list of "resource" performance entries
-  var resources = performance.getEntriesByType("resource");
-  if (resources === undefined || resources.length &lt;= 0) {
-    console.log("= Calculate Load Times: there are NO `resource` performance records");
-    return;
-  }
+  // Get a list of "resource" performance entries
+  var resources = performance.getEntriesByType("resource");
+  if (resources === undefined || resources.length &lt;= 0) {
+    console.log("= Calculate Load Times: there are NO `resource` performance records");
+    return;
+  }
 
-  console.log("= Calculate Load Times");
-  for (var i=0; i &lt; resources.length; i++) {
-    console.log("== Resource[" + i + "] - " + resources[i].name);
-    // Redirect time
-    var t = resources[i].redirectEnd - resources[i].redirectStart;
-    console.log("... Redirect time = " + t);
+  console.log("= Calculate Load Times");
+  for (var i=0; i &lt; resources.length; i++) {
+    console.log("== Resource[" + i + "] - " + resources[i].name);
+    // Redirect time
+    var t = resources[i].redirectEnd - resources[i].redirectStart;
+    console.log("... Redirect time = " + t);
 
-    // DNS time
-    t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
-    console.log("... DNS lookup time = " + t);
+    // DNS time
+    t = resources[i].domainLookupEnd - resources[i].domainLookupStart;
+    console.log("... DNS lookup time = " + t);
 
-    // TCP handshake time
-    t = resources[i].connectEnd - resources[i].connectStart;
-    console.log("... TCP time = " + t);
+    // TCP handshake time
+    t = resources[i].connectEnd - resources[i].connectStart;
+    console.log("... TCP time = " + t);
 
-    // Secure connection time
-    t = (resources[i].secureConnectionStart &gt; 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
-    console.log("... Secure connection time = " + t);
+    // Secure connection time
+    t = (resources[i].secureConnectionStart &gt; 0) ? (resources[i].connectEnd - resources[i].secureConnectionStart) : "0";
+    console.log("... Secure connection time = " + t);
 
-    // Response time
-    t = resources[i].responseEnd - resources[i].responseStart;
-    console.log("... Response time = " + t);
+    // Response time
+    t = resources[i].responseEnd - resources[i].responseStart;
+    console.log("... Response time = " + t);
 
-    // Fetch until response end
-    t = (resources[i].fetchStart &gt; 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
-    console.log("... Fetch until response end time = " + t);
+    // Fetch until response end
+    t = (resources[i].fetchStart &gt; 0) ? (resources[i].responseEnd - resources[i].fetchStart) : "0";
+    console.log("... Fetch until response end time = " + t);
 
-    // Request start until reponse end
-    t = (resources[i].requestStart &gt; 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
-    console.log("... Request start until response end time = " + t);
+    // Request start until reponse end
+    t = (resources[i].requestStart &gt; 0) ? (resources[i].responseEnd - resources[i].requestStart) : "0";
+    console.log("... Request start until response end time = " + t);
 
-    // Start until reponse end
-    t = (resources[i].startTime &gt; 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
-    console.log("... Start until response end time = " + t);
-  }
+    // Start until reponse end
+    t = (resources[i].startTime &gt; 0) ? (resources[i].responseEnd - resources[i].startTime) : "0";
+    console.log("... Start until response end time = " + t);
+  }
 }
 </pre>
 
 <h2 id="Size_matters">Size matters?</h2>
 
-<p>アプリケーションのリソースのサイズはアプリケーションのパフォーマンスに影響を与える可能性があるため、リソースサイズに関する正確なデータを取得することが重要になる可能性があります（特に非ホストリソースの場合）。{{domxref("PerformanceResourceTiming")}} インターフェースには、リソースに関するサイズデータを取得するために使用できる3つのプロパティがあります。 {{domxref('PerformanceResourceTiming.transferSize','transferSize')}}  プロパティは、レスポンスヘッダフィールドとレスポンスペイロードボディを含む、取得したリソースのサイズ（オクテット単位）を返します。{{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} プロパティは、適用されたコンテンツコーディングを削除する前に、フェッチ（HTTPまたはキャッシュ）から受け取ったサイズ（オクテット単位）を返します。{{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} は、適用されたコンテンツコーディングを削除した後、メッセージ本文のフェッチ（HTTPまたはキャッシュ）から受け取ったサイズ（オクテット単位）を返します。</p>
+<p>アプリケーションのリソースのサイズはアプリケーションのパフォーマンスに影響を与える可能性があるため、リソースサイズに関する正確なデータを取得することが重要になる可能性があります（特に非ホストリソースの場合）。{{domxref("PerformanceResourceTiming")}} インターフェースには、リソースに関するサイズデータを取得するために使用できる3つのプロパティがあります。 {{domxref('PerformanceResourceTiming.transferSize','transferSize')}}  プロパティは、レスポンスヘッダフィールドとレスポンスペイロードボディを含む、取得したリソースのサイズ（オクテット単位）を返します。{{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} プロパティは、適用されたコンテンツコーディングを削除する前に、フェッチ（HTTPまたはキャッシュ）から受け取ったサイズ（オクテット単位）を返します。{{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} は、適用されたコンテンツコーディングを削除した後、メッセージ本文のフェッチ（HTTPまたはキャッシュ）から受け取ったサイズ（オクテット単位）を返します。</p>
 
 <p>次の例は、これら3つのプロパティの使い方を示しています。</p>
 
@@ -131,7 +131,7 @@ translation_of: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 
 <h2 id="Managing_the_resource_buffer">Managing the resource buffer</h2>
 
-<p>ブラウザは、リソースタイミングバッファ内で少なくとも150のリソースタイミングパフォーマンスエントリをサポートする必要がありますが、アプリケーションによっては、その制限を超えるリソースを使用することがあります。開発者がバッファサイズを管理しやすくするために、Resource Timingは{{domxref("Performance")}}インターフェースを拡張する2つのメソッドを定義します。{{domxref("Performance.clearResourceTimings","clearResourceTimings()")}} メソッドは、ブラウザのリソースパフォーマンスエントリバッファからすべての "リソース"タイプのパフォーマンスエントリを削除します。 {{domxref("Performance.setResourceTimingBufferSize","setResourceTimingBufferSize()")}} メソッドは、リソースパフォーマンスエントリのバッファサイズを、指定された数のリソースに設定します{{domxref("PerformanceEntry","performance entries")}}.。</p>
+<p>ブラウザは、リソースタイミングバッファ内で少なくとも150のリソースタイミングパフォーマンスエントリをサポートする必要がありますが、アプリケーションによっては、その制限を超えるリソースを使用することがあります。開発者がバッファサイズを管理しやすくするために、Resource Timingは{{domxref("Performance")}}インターフェースを拡張する2つのメソッドを定義します。{{domxref("Performance.clearResourceTimings","clearResourceTimings()")}} メソッドは、ブラウザのリソースパフォーマンスエントリバッファからすべての "リソース"タイプのパフォーマンスエントリを削除します。 {{domxref("Performance.setResourceTimingBufferSize","setResourceTimingBufferSize()")}} メソッドは、リソースパフォーマンスエントリのバッファサイズを、指定された数のリソースに設定します{{domxref("PerformanceEntry","performance entries")}}.。</p>
 
 
 

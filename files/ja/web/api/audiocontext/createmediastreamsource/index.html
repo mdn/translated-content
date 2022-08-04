@@ -70,7 +70,7 @@ if (navigator.getUserMedia) {
          video: true
       },
 
-      // 成功時のコールバック
+      // 成功時のコールバック
       function(stream) {
          video.src = (window.URL &amp;&amp; window.URL.createObjectURL(stream)) || stream;
          video.onloadedmetadata = function(e) {
@@ -92,7 +92,7 @@ if (navigator.getUserMedia) {
           source.connect(biquadFilter);
           biquadFilter.connect(audioCtx.destination);
 
-          // マウスが動いたとき新しい座標を得る
+          // マウスが動いたとき新しい座標を得る
           // そして増幅量を更新する
 
           range.oninput = function() {
@@ -130,7 +130,7 @@ pre.innerHTML = myScript.innerHTML;</pre>
   <tr>
    <td>{{SpecName('Web Audio API', '#widl-AudioContext-createMediaStreamSource-MediaStreamAudioSourceNode-MediaStream-mediaStream', 'createMediaStreamSource()')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

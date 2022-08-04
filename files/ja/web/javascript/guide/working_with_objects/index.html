@@ -41,8 +41,8 @@ myCar.year = 1969;
 
 <pre class="brush: js notranslate">var myCar = {
     make: 'Ford',
-    model: 'Mustang',
-    year: 1969
+    model: 'Mustang',
+    year: 1969
 };
 </pre>
 
@@ -299,11 +299,11 @@ car1.color = 'black';
 var myObj = {
   myMethod: function(params) {
     // ...処理を行う
-  }
+  }
 
   // これでも動作します
 
-  myOtherMethod(params) {
+  myOtherMethod(params) {
     // ...他の処理を行う
   }
 };
@@ -352,21 +352,21 @@ car2.displayCar();
 <h2 id="Using_this_for_object_references" name="Using_this_for_object_references">オブジェクト参照のための <code>this</code> の使用</h2>
 
 <p>JavaScript には、メソッド内で現在のオブジェクトを参照するための <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a></code>
-という特別なキーワードがあります。以下の例には、<code>Manager</code> と <code>Intern</code> という 2 つのオブジェクトがあり、それぞれが独自の <code>name</code>, <code>age</code>, <code>job</code> を持っています。関数 <code>sayHi()</code> の中に <code>this.name</code> があることに注目してください。2 つのオブジェクトに追加してそれらを呼び出すことで、<code>'Hello, My name is'</code> を返し、その特定のオブジェクトから <code>name</code> の値を追加しています。</p>
+という特別なキーワードがあります。以下の例には、<code>Manager</code> と <code>Intern</code> という 2 つのオブジェクトがあり、それぞれが独自の <code>name</code>, <code>age</code>, <code>job</code> を持っています。関数 <code>sayHi()</code> の中に <code>this.name</code> があることに注目してください。2 つのオブジェクトに追加してそれらを呼び出すことで、<code>'Hello, My name is'</code> を返し、その特定のオブジェクトから <code>name</code> の値を追加しています。</p>
 
 <pre class="brush: js notranslate">const Manager = {
-  name: "John",
-  age: 27,
-  job: "Software Engineer"
+  name: "John",
+  age: 27,
+  job: "Software Engineer"
 }
 const Intern = {
-  name: "Ben",
-  age: 21,
-  job: "Software Engineer Intern"
+  name: "Ben",
+  age: 21,
+  job: "Software Engineer Intern"
 }
 
 function sayHi() {
-    console.log('Hello, my name is', this.name)
+    console.log('Hello, my name is', this.name)
 }
 
 // 両方のオブジェクトに sayHi 関数を追加

@@ -12,7 +12,7 @@ translation_of: Web/API/Window/vrdisplayfocus_event
 <div>{{APIRef("Window")}}</div>
 
 <div>
-<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>vrdisplayfocus</code></strong> イベントは VR ディスプレイへのプレゼンテーションがぼやけた後に再開されたときに発生します。</p>
+<p><a href="/ja/docs/Web/API/WebVR_API">WebVR API</a> の <strong><code>vrdisplayfocus</code></strong> イベントは VR ディスプレイへのプレゼンテーションがぼやけた後に再開されたときに発生します。</p>
 </div>
 
 <table class="properties">
@@ -38,14 +38,14 @@ translation_of: Web/API/Window/vrdisplayfocus_event
 
 <h2 id="例">例</h2>
 
-<p><code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> メソッドで <code>vrdisplayfocus</code> イベントを使用できます:</p>
+<p><code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> メソッドで <code>vrdisplayfocus</code> イベントを使用できます:</p>
 
 <pre class="brush: js notranslate">window.addEventListener('vrdisplayfocus', function() {
-  info.textContent = 'Display focused.';
-  reportDisplays();
+  info.textContent = 'Display focused.';
+  reportDisplays();
 });</pre>
 
-<p>または、 <code><a href="/ja/docs/Web/API/Window/onvrdisplayfocus">onvrdisplayfocus</a></code> イベントハンドラープロパティを使用します:</p>
+<p>または、 <code><a href="/ja/docs/Web/API/Window/onvrdisplayfocus">onvrdisplayfocus</a></code> イベントハンドラープロパティを使用します:</p>
 
 <pre class="brush: js notranslate">window.onvrdisplayfocus = function() {
   info.textContent = 'Display focused.';

@@ -7,12 +7,12 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 
 <h2 id="Express_template_choices">Express template choices</h2>
 
-<p>Express can be used with many different <a class="external external-icon" href="https://expressjs.com/en/guide/using-template-engines.html" rel="noopener">template rendering engines</a>. In this tutorial we use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> (formerly known as <em>Jade</em>) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml</a>".</p>
+<p>Express can be used with many different <a class="external external-icon" href="https://expressjs.com/en/guide/using-template-engines.html" rel="noopener">template rendering engines</a>. In this tutorial we use <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> (formerly known as <em>Jade</em>) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml</a>".</p>
 
 <p>Different template languages use different approaches for defining the layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be compiled to HTML. Pug is of the second type; it uses a <em>representation </em>of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent any content nested within those elements. The result is a page definition that translates directly to HTML, but is arguably more concise and easier to read.</p>
 
 <div class="note">
-<p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
+<p><strong>Note:</strong> The downside of using <em>Pug</em> is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). However once you have your templates in place, they are very easy to read and maintain.</p>
 </div>
 
 <h2 class="highlight-spanned" id="Template_configuration"><span class="highlight-span">Template configuration</span></h2>
@@ -74,16 +74,16 @@ html(lang="en")
       each val in [1, 2, 3, 4, 5]
         li= val</code></pre>
 
-<p>Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:</p>
+<p>Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:</p>
 
 <ul>
  <li><code>script(type='text/javascript')</code>, <code>link(rel='stylesheet', href='/stylesheets/style.css')</code></li>
  <li><code>meta(name='viewport' content='width=device-width initial-scale=1')</code></li>
 </ul>
 
-<p>The values of all attributes are <em>escaped</em> (e.g. characters like "<code>&gt;</code>" are converted to their HTML code equivalents like "<code>&amp;gt;"</code>) to prevent injection of JavaScript/cross-site scripting attacks.</p>
+<p>The values of all attributes are <em>escaped</em> (e.g. characters like "<code>&gt;</code>" are converted to their HTML code equivalents like "<code>&amp;gt;"</code>) to prevent injection of JavaScript/cross-site scripting attacks.</p>
 
-<p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the <code>title</code> variable. In both cases the default behaviour is to <em>escape</em> the line.</p>
+<p>If a tag is followed by the equals sign, the following text is treated as a JavaScript <em>expression</em>. So for example, in the first line below, the content of the <code>h1</code> tag will be <em>variable</em> <code>title</code> (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatented with the <code>title</code> variable. In both cases the default behaviour is to <em>escape</em> the line.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
 p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>
@@ -94,7 +94,7 @@ p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="p
 p This line has an un-escaped string: !{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, an escaped string: #{'<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span> is not emphasised<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>'}, and escaped variables: #{title}.</code></pre>
 
 <div class="note">
-<p><strong>Tip:</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
+<p><strong>Tip:</strong> You will almost always want to escape data from users (via the <strong><code>#{}</code></strong> syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.</p>
 </div>
 
 <p>You can use the pipe ('<strong>|</strong>') character at the beginning of a line to indicate "<a class="external external-icon" href="https://pugjs.org/language/plain-text.html" rel="noopener">plain text</a>". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.</p>
@@ -144,6 +144,6 @@ block content
 <h2 id="Next_steps">Next steps</h2>
 
 <ul>
- <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
+ <li>Return to <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a>.</li>
  <li>Proceed to the next subarticle of part 5: <a href="/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template">The LocalLibrary base template</a>.</li>
 </ul>

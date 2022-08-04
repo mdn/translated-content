@@ -69,14 +69,14 @@ knotBSphere.radius = knot.geometry.radius * 2;
 
 <h3 id="Intersection_tests" name="Intersection_tests">交差テスト</h3>
 
-<h4 id="Point_vs._Box3_Sphere" name="Point_vs._Box3_Sphere">点 対 <code>Box3</code> / <code>Sphere</code></h4>
+<h4 id="Point_vs._Box3_Sphere" name="Point_vs._Box3_Sphere">点 対 <code>Box3</code> / <code>Sphere</code></h4>
 
 <p><code>Box3</code> と <code>Sphere</code> の両方に、このテストを実行するための <strong><code>containsPoint</code></strong> メソッドがあります。</p>
 
 <pre class="brush: js notranslate">var point = new THREE.Vector3(2, 4, 7);
 knotBBox.containsPoint(point);</pre>
 
-<h4 id="Box3_vs._Box3" name="Box3_vs._Box3"><code>Box3</code> 対 <code>Box3</code></h4>
+<h4 id="Box3_vs._Box3" name="Box3_vs._Box3"><code>Box3</code> 対 <code>Box3</code></h4>
 
 <p><strong><code>Box3.intersectsBox</code></strong> メソッドは、このテストを実行するために使用できます。</p>
 
@@ -86,13 +86,13 @@ knotBBox.containsPoint(point);</pre>
 <p><strong>注</strong>: これは、<code>Box3</code> が別のものを<em>完全に</em>包んでいるかどうかをチェックする <code>Box3.containsBox</code> メソッドとは異なります。</p>
 </div>
 
-<h4 id="Sphere_vs._Sphere" name="Sphere_vs._Sphere"><code>Sphere</code> 対 <code>Sphere</code></h4>
+<h4 id="Sphere_vs._Sphere" name="Sphere_vs._Sphere"><code>Sphere</code> 対 <code>Sphere</code></h4>
 
 <p>前のものと同様の方法で、このテストを実行するための <strong><code>Sphere.intersectsSphere</code></strong> メソッドがあります。</p>
 
 <pre class="brush: js notranslate">knotBSphere.intersectsSphere(otherSphere);</pre>
 
-<h4 id="Sphere_vs._Box3" name="Sphere_vs._Box3"><code>Sphere</code> 対 <code>Box3</code></h4>
+<h4 id="Sphere_vs._Box3" name="Sphere_vs._Box3"><code>Sphere</code> 対 <code>Box3</code></h4>
 
 <p>残念ながら、このテストは Three.js には実装されていませんが、<code>Sphere</code> にパッチを適用して<a href="/ja/docs/Games/Techniques/3D_collision_detection">球対 AABB の交差</a>アルゴリズムを実装できます。</p>
 

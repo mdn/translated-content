@@ -322,7 +322,7 @@ let audioSettingsText = document.getElementById("audioSettingsText");
  <dt><code>audioConstraintEditor</code></dt>
  <dd>ユーザーが音声トラックの制約セットのコードを編集できるようにする {{HTMLElement("textarea")}} 要素。</dd>
  <dt><code>videoSettingsText</code></dt>
- <dd> 動画トラックの制約可能なプロパティの現在の設定を表示する {{HTMLElement("textarea")}}（常に <code>disabled</code>）。</dd>
+ <dd> 動画トラックの制約可能なプロパティの現在の設定を表示する {{HTMLElement("textarea")}}（常に <code>disabled</code>）。</dd>
  <dt><code>audioSettingsText</code></dt>
  <dd>音声トラックの制約可能なプロパティの現在の設定を表示する {{HTMLElement("textarea")}}（常に <code>disabled</code>）。</dd>
 </dl>
@@ -377,16 +377,16 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
     video: videoConstraints,
     audio: audioConstraints
   }).then(function(stream) {
-    let audioTracks = stream.getAudioTracks();
-    let videoTracks = stream.getVideoTracks();
+    let audioTracks = stream.getAudioTracks();
+    let videoTracks = stream.getVideoTracks();
 
-    videoElement.srcObject = stream;
-    if (audioTracks.length) {
-        audioTrack = audioTracks[0];
-    }
-    if (videoTracks.length) {
-        videoTrack = videoTracks[0];
-    }
+    videoElement.srcObject = stream;
+    if (audioTracks.length) {
+        audioTrack = audioTracks[0];
+    }
+    if (videoTracks.length) {
+        videoTrack = videoTracks[0];
+    }
   }).then(function() {
     new Promise(function(resolve) {
       videoElement.onloadedmetadata = resolve;
@@ -453,10 +453,10 @@ audioConstraintEditor.value = audioDefaultConstraintString;</pre>
 <pre class="brush: js">document.getElementById("stopButton").addEventListener("click", function() {
   if (videoTrack) {
     videoTrack.stop();
-  }
-  if (audioTrack) {
+  }
+  if (audioTrack) {
     audioTrack.stop();
-  }
+  }
 
   videoTrack = audioTrack = null;
   videoElement.srcObject = null;

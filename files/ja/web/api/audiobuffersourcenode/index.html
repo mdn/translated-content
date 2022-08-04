@@ -105,19 +105,19 @@ pre<span class="punctuation token">.</span>innerHTML <span class="operator token
 
 button<span class="punctuation token">.</span>onclick <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
  <span class="comment token"> // </span></code>バッファにホワイトノイズを書き込む;
-  // 単なる-1.0から1.0の間の乱数の値である<code class="language-js"><span class="comment token">
+  // 単なる-1.0から1.0の間の乱数の値である<code class="language-js"><span class="comment token">
 </span>  <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> channel <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> channel <span class="operator token">&lt;</span> channels<span class="punctuation token">;</span> channel<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="comment token"> // </span></code>実際のデータの配列を得る<code class="language-js"><span class="comment token">
 </span>   <span class="keyword token">var</span> nowBuffering <span class="operator token">=</span> myArrayBuffer<span class="punctuation token">.</span><span class="function token">getChannelData<span class="punctuation token">(</span></span>channel<span class="punctuation token">)</span><span class="punctuation token">;</span>
    <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> frameCount<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
     <span class="comment token"> // </span></code>Math.random()は[0; 1.0]である
-     // 音声は[-1.0; 1.0]である必要がある<code class="language-js"><span class="comment token">
+     // 音声は[-1.0; 1.0]である必要がある<code class="language-js"><span class="comment token">
 </span>     nowBuffering<span class="punctuation token">[</span>i<span class="punctuation token">]</span> <span class="operator token">=</span> Math<span class="punctuation token">.</span><span class="function token">random<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="operator token">*</span> <span class="number token">2</span> <span class="operator token">-</span> <span class="number token">1</span><span class="punctuation token">;</span>
    <span class="punctuation token">}</span>
   <span class="punctuation token">}</span>
 
  <span class="comment token"> // </span></code>AudioBufferSourceNodeを得る
-  // これはAudioBufferを再生するときに使うAudioNodeである<code class="language-js"><span class="comment token">
+  // これはAudioBufferを再生するときに使うAudioNodeである<code class="language-js"><span class="comment token">
 </span>  <span class="keyword token">var</span> source <span class="operator token">=</span> audioCtx<span class="punctuation token">.</span><span class="function token">createBufferSource<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
  <span class="comment token"> // </span></code>AudioBufferSourceNodeにバッファを設定する<code class="language-js"><span class="comment token">
 </span>  source<span class="punctuation token">.</span>buffer <span class="operator token">=</span> myArrayBuffer<span class="punctuation token">;</span>
@@ -143,7 +143,7 @@ button<span class="punctuation token">.</span>onclick <span class="operator toke
   <tr>
    <td>{{SpecName('Web Audio API', '#AudioBufferSourceNode-section', 'AudioBufferSourceNode')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -157,7 +157,7 @@ button<span class="punctuation token">.</span>onclick <span class="operator toke
 <p>The buffer property was removed in {{CompatChrome(44.0)}}.</p>
 </div>
 
-<p> </p>
+<p> </p>
 
 <h2 id="関連情報">関連情報</h2>
 

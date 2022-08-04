@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}</div>
 
-<p class="summary">正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec()")}} および {{jsxref("RegExp.test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match()")}}、 {{jsxref("String.matchAll()", "matchAll")}}、{{jsxref("String.replace()", "replace")}}、{{jsxref("String.search()", "search")}}、{{jsxref("String.split()", "split")}} メソッドで使用できます。本章では、 JavaScript の正規表現について説明します。</p>
+<p class="summary">正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec()")}} および {{jsxref("RegExp.test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match()")}}、 {{jsxref("String.matchAll()", "matchAll")}}、{{jsxref("String.replace()", "replace")}}、{{jsxref("String.search()", "search")}}、{{jsxref("String.split()", "split")}} メソッドで使用できます。本章では、 JavaScript の正規表現について説明します。</p>
 
 <h2 id="Creating_a_Regular_Expression">正規表現の作成</h2>
 
@@ -93,7 +93,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><code>(x)</code>, <code>(?:x)</code>, <code>(?&lt;Name&gt;x)</code>, <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>, <code>\<em>Number</em></code></td>
+   <td><code>(x)</code>, <code>(?:x)</code>, <code>(?&lt;Name&gt;x)</code>, <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>, <code>\<em>Number</em></code></td>
    <td>
     <p><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">グループと範囲</a></p>
    </td>
@@ -314,7 +314,7 @@ console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
   </tr>
   <tr>
    <td><code>s</code></td>
-   <td><code>.</code> を改行文字と一致するようにします。</td>
+   <td><code>.</code> を改行文字と一致するようにします。</td>
    <td><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll">RegExp.prototype.dotAll</a></code></td>
   </tr>
   <tr>

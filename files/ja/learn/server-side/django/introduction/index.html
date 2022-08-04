@@ -18,7 +18,7 @@ translation_of: Learn/Server-side/Django/Introduction
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシーを持っていること。<a href="/ja/docs/Learn/Server-side/First_steps">サーバーサイドウェブプログラミング</a> の一般的な理解、特に<a href="/ja/docs/Learn/Server-side/First_steps/Client-Server_overview">ウェブサイトにおけるクライントとサーバーのやりとりの仕組み</a>を理解していること。</td>
+   <td>基本的なコンピューターリテラシーを持っていること。<a href="/ja/docs/Learn/Server-side/First_steps">サーバーサイドウェブプログラミング</a> の一般的な理解、特に<a href="/ja/docs/Learn/Server-side/First_steps/Client-Server_overview">ウェブサイトにおけるクライントとサーバーのやりとりの仕組み</a>を理解していること。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -29,7 +29,7 @@ translation_of: Learn/Server-side/Django/Introduction
 
 <h2 id="Djangoとは何ですか？">Djangoとは何ですか？</h2>
 
-<p>Djangoは、安全でメンテナンス可能なWebサイトの迅速な開発を可能にする、高度なPython Webフレームワークです。経験豊富な開発者によって開発されたDjangoは、Web開発の多くの面倒事を引き受けてくれます。そのため車輪の再発明が不要で、アプリケーションを書くことに集中できます。無料でオープンソースであり、活発なコミュニティ、偉大なドキュメントがあります。また、無料と有料のサポートの多くのオプションもあります。 </p>
+<p>Djangoは、安全でメンテナンス可能なWebサイトの迅速な開発を可能にする、高度なPython Webフレームワークです。経験豊富な開発者によって開発されたDjangoは、Web開発の多くの面倒事を引き受けてくれます。そのため車輪の再発明が不要で、アプリケーションを書くことに集中できます。無料でオープンソースであり、活発なコミュニティ、偉大なドキュメントがあります。また、無料と有料のサポートの多くのオプションもあります。 </p>
 
 <p>Djangoの以下の特徴はソフトウェアを書くのに役立ちます:</p>
 
@@ -43,9 +43,9 @@ translation_of: Learn/Server-side/Django/Introduction
  <dt>安全</dt>
  <dd>Djangoは、Webサイトを自動的に保護するために "正しいことをする" ように設計されたフレームワークです。多くの一般的なセキュリティミスを開発者が避けられるようにできています。例えば、セッション情報を脆弱な場所に置いたり、パスワードを直接保存するといった一般的なミスをDjangoでは避けるようになっています。セッション情報は、クッキーにセッションキーだけを格納し、実際のセッションデータはデータベースに保存されます。パスワードはパスワードハッシュをデータベースに格納します。このようにユーザーアカウントとパスワードを安全に管理する方法を提供しています。<br>
  <br>
- <em>パスワードハッシュは、送信されたパスワードから <a href="https://ja.wikipedia.org/wiki/%E6%9A%97%E5%8F%B7%E5%AD%A6%E7%9A%84%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E9%96%A2%E6%95%B0">暗号化ハッシュ関数</a>を介して生成された固定長の値です。 Djangoは入力されたパスワードが正しいかどうかを、ハッシュ関数を介した値と保存されたハッシュ値を比較することでチェックできます。これは "一方向性" の機能であり、もし保存されているハッシュ値が侵害されても、攻撃者が元のパスワードを解読するのは困難です。</em><br>
+ <em>パスワードハッシュは、送信されたパスワードから <a href="https://ja.wikipedia.org/wiki/%E6%9A%97%E5%8F%B7%E5%AD%A6%E7%9A%84%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E9%96%A2%E6%95%B0">暗号化ハッシュ関数</a>を介して生成された固定長の値です。 Djangoは入力されたパスワードが正しいかどうかを、ハッシュ関数を介した値と保存されたハッシュ値を比較することでチェックできます。これは "一方向性" の機能であり、もし保存されているハッシュ値が侵害されても、攻撃者が元のパスワードを解読するのは困難です。</em><br>
  <br>
- Djangoは、SQLインジェクション、クロスサイトスクリプティング(XSS)、クロスサイトリクエストフォージェリ(CSRF)、クリックジャッキングなどの多くの脆弱性に対する保護が有効です（これらの攻撃についての詳細は、 <a href="/ja/docs/Learn/Server-side/First_steps/Website_security">ウェブサイトのセキュリティ</a> を参照してください）。</dd>
+ Djangoは、SQLインジェクション、クロスサイトスクリプティング(XSS)、クロスサイトリクエストフォージェリ(CSRF)、クリックジャッキングなどの多くの脆弱性に対する保護が有効です（これらの攻撃についての詳細は、 <a href="/ja/docs/Learn/Server-side/First_steps/Website_security">ウェブサイトのセキュリティ</a> を参照してください）。</dd>
  <dt>スケーラブル</dt>
  <dd>Djangoはコンポーネントベースの “<a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%A7%E3%82%A2%E3%83%BC%E3%83%89%E3%83%BB%E3%83%8A%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%BB%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">シェアードナッシング</a>” アーキテクチャを採用しています（アーキテクチャの各部分は他と独立しており、必要に応じて置き換え、変更できます）。異なる部分を明確に分離しているため、キャッシュサーバー、データベースサーバー、アプリケーションサーバーの各ハードウェアをそれぞれ追加することによって、トラフィックの増加に合わせてスケールできるようになっています。いくつかの最も忙しいサイトは、ニーズを満たすためにDjangoを適切にスケールさせています（InstagramやDisqusなど）</dd>
  <dt>メンテナンス可能</dt>
@@ -56,19 +56,19 @@ translation_of: Learn/Server-side/Django/Introduction
 
 <h2 id="どこから来たの？">どこから来たの？</h2>
 
-<p>Djangoは当初、2003年から2005年の間に、新聞のウェブサイトの作成とメンテナンスを担当するWebチームによって開発されました。いくつかのサイトを作成した後、チームは多くの共通コードとデザインパターンを除外、再利用するようになりました。この共通コードは、"Django" プロジェクトとして2005年7月にオープンソース化され、汎用のWeb開発フレームワークに発展しました。 </p>
+<p>Djangoは当初、2003年から2005年の間に、新聞のウェブサイトの作成とメンテナンスを担当するWebチームによって開発されました。いくつかのサイトを作成した後、チームは多くの共通コードとデザインパターンを除外、再利用するようになりました。この共通コードは、"Django" プロジェクトとして2005年7月にオープンソース化され、汎用のWeb開発フレームワークに発展しました。 </p>
 
-<p>Djangoは、2008年9月の最初のマイルストーンリリース（1.0）から、最新のリリースバージョンである2.0（2017）まで、成長を続けています。 各リリースでは、新しいタイプのデータベース、テンプレートエンジン、キャッシュのサポートから、"汎用"ビュー機能とクラスの追加（プログラミングタスクで開発者が記述しなければならないコード量を削減します）などの新機能追加やバグフィックスがありました。 </p>
+<p>Djangoは、2008年9月の最初のマイルストーンリリース（1.0）から、最新のリリースバージョンである2.0（2017）まで、成長を続けています。 各リリースでは、新しいタイプのデータベース、テンプレートエンジン、キャッシュのサポートから、"汎用"ビュー機能とクラスの追加（プログラミングタスクで開発者が記述しなければならないコード量を削減します）などの新機能追加やバグフィックスがありました。 </p>
 
 <div class="note">
-<p><strong>ノート</strong>: DjangoのWebサイトの<span style="line-height: 1.5;"> <a href="https://docs.djangoproject.com/en/2.0/releases/">リリースノート</a> をチェックして、最近のバージョンで何が変わったのか、どのような作業がDjangoを改善しているのか確認してください。</span></p>
+<p><strong>ノート</strong>: DjangoのWebサイトの<span style="line-height: 1.5;"> <a href="https://docs.djangoproject.com/en/2.0/releases/">リリースノート</a> をチェックして、最近のバージョンで何が変わったのか、どのような作業がDjangoを改善しているのか確認してください。</span></p>
 </div>
 
-<p>Djangoは現在、活発なオープンソースプロジェクトであり、何千人ものユーザーとコントリビュータがいます。元々の起源に関連するいくつかの機能はまだありますが、DjangoはあらゆるタイプのWebサイトを開発できる汎用フレームワークに進化しました。<span style="line-height: 1.5;"> </span></p>
+<p>Djangoは現在、活発なオープンソースプロジェクトであり、何千人ものユーザーとコントリビュータがいます。元々の起源に関連するいくつかの機能はまだありますが、DjangoはあらゆるタイプのWebサイトを開発できる汎用フレームワークに進化しました。<span style="line-height: 1.5;"> </span></p>
 
 <h2 id="Djangoはどれくらい普及していますか？">Djangoはどれくらい普及していますか？</h2>
 
-<p>サーバーサイドのフレームワークの普及率を決定的に測定する、すぐに利用できるものはありません （<a href="http://hotframeworks.com/">Hot Frameworks</a> のようなサイトでは、GitHubプロジェクトの数や、各プラットフォームのStackOverflowの質問数をカウントするなどのメカニズムを使用して人気を評価しています） より良い質問は、「人気のないプラットフォームで問題を避けるために、Djangoは "人気がある" かどうか」、「それは進化し続けていますか？」「必要なときに助けを得ることができますか？」「Djangoを学べば、仕事を得る機会がありますか？」などです。</p>
+<p>サーバーサイドのフレームワークの普及率を決定的に測定する、すぐに利用できるものはありません （<a href="http://hotframeworks.com/">Hot Frameworks</a> のようなサイトでは、GitHubプロジェクトの数や、各プラットフォームのStackOverflowの質問数をカウントするなどのメカニズムを使用して人気を評価しています） より良い質問は、「人気のないプラットフォームで問題を避けるために、Djangoは "人気がある" かどうか」、「それは進化し続けていますか？」「必要なときに助けを得ることができますか？」「Djangoを学べば、仕事を得る機会がありますか？」などです。</p>
 
 <p>Djangoを使用している有名なサイトの数、コードベースにコントリビュートする人数、無料と有料の両方でサポートを提供する人数に基づいて、Djangoは普及しているフレームワークと言えるでしょう。</p>
 
@@ -86,21 +86,21 @@ translation_of: Learn/Server-side/Django/Introduction
 
 <h2 id="Djangoコードはどのように見えますか">Djangoコードはどのように見えますか?</h2>
 
-<p>昔ながらのデータ駆動型Webサイトでは、WebアプリケーションはWebブラウザ（または他のクライアント）からのHTTPリクエストを待ちます。リクエストを受信すると、アプリケーションは、URLおよび、<code>GET</code> や <code>POST</code> データの情報に基づいて必要な処理を行います。 必要に応じてデータベースの情報を読み書きしたり、要求を満たすために必要なタスクを実行できます。 アプリケーションはWebブラウザに応答を返す際、検索したデータをHTMLテンプレートのプレースホルダに挿入し、動的にHTMLページを生成することがよくあります。</p>
+<p>昔ながらのデータ駆動型Webサイトでは、WebアプリケーションはWebブラウザ（または他のクライアント）からのHTTPリクエストを待ちます。リクエストを受信すると、アプリケーションは、URLおよび、<code>GET</code> や <code>POST</code> データの情報に基づいて必要な処理を行います。 必要に応じてデータベースの情報を読み書きしたり、要求を満たすために必要なタスクを実行できます。 アプリケーションはWebブラウザに応答を返す際、検索したデータをHTMLテンプレートのプレースホルダに挿入し、動的にHTMLページを生成することがよくあります。</p>
 
 <p>Django Webアプリケーションは、通常、これらの各ステップを処理するコードを別々のファイルにグループ化します:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13931/basic-django.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <ul>
- <li><strong>URL: </strong>単一URLから単一の関数を介してすべてのリクエストを処理することは可能ですが、各リソースを処理する別々のビュー関数を作成する方がはるかにメンテナンスが容易です。 URLマッパーは、URLに基づいてHTTPリクエストを適切なビューにリダイレクトするために使われます。 URLマッパーは、URLに含まれる特定のパターンの文字列または数字を照合し、これらをデータとしてビュー関数に渡すこともできます。</li>
- <li><strong>ビュー:</strong> ビューは、HTTPリクエストを受け取り、HTTPレスポンスを返すリクエストハンドラ関数です。ビューは、モデルを介して要求を満たすために必要なデータにアクセスし、レスポンスのフォーマットをテンプレートに委任します。</li>
- <li><strong>モデル:</strong> モデルは、アプリケーションのデータ構造を定義し、データベース内のレコードを管理（追加、変更、削除）および照会するための機能を提供するPythonオブジェクトです。</li>
- <li><strong>テンプレート:</strong> テンプレートは、ファイルの構造やレイアウト（HTMLページなど）を定義するテキストファイルで、プレースホルダを使用して実際のコンテンツを表します。 ビューは、モデルから取得したデータとHTMLテンプレートを使用して動的にHTMLページを作成できます。 テンプレートを使用して、あらゆる種類のファイル（HTMLである必要はありません!）の構造を定義できます。</li>
+ <li><strong>URL: </strong>単一URLから単一の関数を介してすべてのリクエストを処理することは可能ですが、各リソースを処理する別々のビュー関数を作成する方がはるかにメンテナンスが容易です。 URLマッパーは、URLに基づいてHTTPリクエストを適切なビューにリダイレクトするために使われます。 URLマッパーは、URLに含まれる特定のパターンの文字列または数字を照合し、これらをデータとしてビュー関数に渡すこともできます。</li>
+ <li><strong>ビュー:</strong> ビューは、HTTPリクエストを受け取り、HTTPレスポンスを返すリクエストハンドラ関数です。ビューは、モデルを介して要求を満たすために必要なデータにアクセスし、レスポンスのフォーマットをテンプレートに委任します。</li>
+ <li><strong>モデル:</strong> モデルは、アプリケーションのデータ構造を定義し、データベース内のレコードを管理（追加、変更、削除）および照会するための機能を提供するPythonオブジェクトです。</li>
+ <li><strong>テンプレート:</strong> テンプレートは、ファイルの構造やレイアウト（HTMLページなど）を定義するテキストファイルで、プレースホルダを使用して実際のコンテンツを表します。 ビューは、モデルから取得したデータとHTMLテンプレートを使用して動的にHTMLページを作成できます。 テンプレートを使用して、あらゆる種類のファイル（HTMLである必要はありません!）の構造を定義できます。</li>
 </ul>
 
 <div class="note">
-<p><strong>ノート</strong>: Djangoはこの構成を "モデルビューテンプレート（Model View Template, MVT）" アーキテクチャと呼んでいます。これは <a href="/ja/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a> アーキテクチャとよく似ています。 </p>
+<p><strong>ノート</strong>: Djangoはこの構成を "モデルビューテンプレート（Model View Template, MVT）" アーキテクチャと呼んでいます。これは <a href="/ja/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture">Model View Controller</a> アーキテクチャとよく似ています。 </p>
 </div>
 
 <ul>
@@ -114,27 +114,27 @@ translation_of: Learn/Server-side/Django/Introduction
 
 <pre>urlpatterns = [
     <strong>path('admin/', admin.site.urls),
-    </strong>path('book/&lt;int:id&gt;/', views.book-detail, name='book_detail'),
+    </strong>path('book/&lt;int:id&gt;/', views.book-detail, name='book_detail'),
     path('catalog/', include('catalog.urls')),
     re_path(r'^([0-9]+)/$', views.best),
 ]
 </pre>
 
-<p> </p>
+<p> </p>
 
-<p><code>urlpatterns</code>オブジェクトは<code>path()</code>や<code>re_path()</code>関数のリストです（Pythonのリストは角括弧を使って定義され、アイテムはカンマ区切りです。<a href="https://docs.python.jp/3/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples">末尾のカンマは任意です</a>。例:  <code>[item1, item2, item3,]</code>）</p>
+<p><code>urlpatterns</code>オブジェクトは<code>path()</code>や<code>re_path()</code>関数のリストです（Pythonのリストは角括弧を使って定義され、アイテムはカンマ区切りです。<a href="https://docs.python.jp/3/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples">末尾のカンマは任意です</a>。例:  <code>[item1, item2, item3,]</code>）</p>
 
-<p>両方の関数の最初の引数は、一致させたいルート（パターン）です。<code>path()</code> 関数では、かぎ括弧を使って、ビュー関数に名前付き引数として渡されるURLの部分を定義します。 <code>re_path()</code> 関数では、柔軟なパターンマッチング方法として知られている正規表現を使います。 これらについては後の記事で説明します。</p>
+<p>両方の関数の最初の引数は、一致させたいルート（パターン）です。<code>path()</code> 関数では、かぎ括弧を使って、ビュー関数に名前付き引数として渡されるURLの部分を定義します。 <code>re_path()</code> 関数では、柔軟なパターンマッチング方法として知られている正規表現を使います。 これらについては後の記事で説明します。</p>
 
 <p>2つ目の引数は、パターンに一致したときに呼び出される別の関数です。<code>views.book_detail</code>という表記は、呼び出された<code>views</code>モジュール内（<code>views.py</code>という名前のファイル内部）で見つかる<code>book_detail()</code>関数が呼び出されることを示します。</p>
 
-<p> </p>
+<p> </p>
 
 <h3 id="リクエストの処理（views.py）">リクエストの処理（views.py）</h3>
 
 <p>ビューは、Webアプリケーションの中心であり、WebクライアントからHTTPリクエストを受け取り、HTTPレスポンスを返します。その中では、データベースにアクセスしたり、テンプレートをレンダリングしたりして、フレームワークの他のリソースを変換します。</p>
 
-<p>以下の例は、前のセクションのURLマッパーによって呼び出される最小限の <code>index()</code> ビュー関数を示しています。すべてのビュー関数と同様に、<code>HttpRequest</code>オブジェクトをパラメータ（<code>request</code>）として受け取り、<code>HttpResponse</code>オブジェクトを返却します。この場合、リクエストには何もしません。レスポンスはハードコードされた文字列を返します。後のセクションで、もっと興味深いことをするリクエストを示します。</p>
+<p>以下の例は、前のセクションのURLマッパーによって呼び出される最小限の <code>index()</code> ビュー関数を示しています。すべてのビュー関数と同様に、<code>HttpRequest</code>オブジェクトをパラメータ（<code>request</code>）として受け取り、<code>HttpResponse</code>オブジェクトを返却します。この場合、リクエストには何もしません。レスポンスはハードコードされた文字列を返します。後のセクションで、もっと興味深いことをするリクエストを示します。</p>
 
 <pre class="brush: python">## filename: views.py (Django view functions)
 
@@ -143,7 +143,7 @@ from django.http import HttpResponse
 def index(request):
     # Get an HttpRequest - the request parameter
     # perform operations using information from the request.
-    # Return HttpResponse
+    # Return HttpResponse
     return HttpResponse('Hello from Django!')
 </pre>
 
@@ -151,7 +151,7 @@ def index(request):
 <p><strong>ノート</strong>: Pythonについて少し:</p>
 
 <ul>
- <li><a href="https://docs.python.org/3/tutorial/modules.html">Pythonモジュール</a>は、コードで使用したい関数を別々のファイルに格納した"ライブラリ"です。ここでは、<code>HttpResponse</code>オブジェクトを <code>django.http</code>モジュールからインポートし、ビューで使用できるようにします: <code>from django.http import HttpResponse</code> モジュールからオブジェクトの一部または全部をインポートする方法は他にもあります。</li>
+ <li><a href="https://docs.python.org/3/tutorial/modules.html">Pythonモジュール</a>は、コードで使用したい関数を別々のファイルに格納した"ライブラリ"です。ここでは、<code>HttpResponse</code>オブジェクトを <code>django.http</code>モジュールからインポートし、ビューで使用できるようにします: <code>from django.http import HttpResponse</code> モジュールからオブジェクトの一部または全部をインポートする方法は他にもあります。</li>
  <li>関数は、上記のように <code>def</code> キーワードを使用して宣言し、名前付きのパラメータは関数の名前の後に括弧内に列挙します。行全体はコロンで終わります。次の行がどのように<strong>インデント</strong>されているかに注意してください。インデントは重要です。コード行が特定のブロックの内側にあることを指定しています（必須のインデントは、Pythonの重要な機能であり、Pythonコードを読むのが簡単な理由の1つです）。</li>
 </ul>
 </div>
@@ -159,7 +159,7 @@ def index(request):
 <ul>
 </ul>
 
-<p>ビューは通常 <strong>views.py</strong> ファイルに格納します。</p>
+<p>ビューは通常 <strong>views.py</strong> ファイルに格納します。</p>
 
 <h3 id="データモデルの定義（models.py）">データモデルの定義（models.py）</h3>
 
@@ -172,15 +172,15 @@ def index(request):
 from django.db import models
 
 class Team(models.Model):
-    team_name = models.CharField(max_length=40)
+    team_name = models.CharField(max_length=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11', 'Under 11s'),
-        ...  #list other team levels
-    )
-    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
+    TEAM_LEVELS = (
+        ('U09', 'Under 09s'),
+        ('U10', 'Under 10s'),
+        ('U11', 'Under 11s'),
+        ...  #list other team levels
+    )
+    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 </pre>
 
 <div class="note">
@@ -197,7 +197,7 @@ class Team(models.Model):
 
 <p>Djangoモデルは、データベースを検索するための簡単なクエリAPIを提供します。これは、さまざまな照合基準（例：完全一致、大文字小文字を区別しない、大なりなど）を使用して一度にいくつかのフィールドと照合でき、複雑なステートメントをサポートできます（たとえば、「U11チームのうち、"Fr"で始まるか"al"で終わる名前」）。</p>
 
-<p>コードスニペットには、U09チームのすべてを表示するためのビュー機能（リソースハンドラ）が示されています。太字の線は、モデルクエリAPIを使用して、<code>team_level</code> フィールドに完全一致でテキスト 'U09' があるすべてのレコードをフィルタリングする方法を示しています。 （<code>filter()</code> 関数には、照合基準としてフィールド名とマッチタイプをダブルアンダースコアで区切った引数で渡していることに注意してください: <strong>team_level__exact）</strong></p>
+<p>コードスニペットには、U09チームのすべてを表示するためのビュー機能（リソースハンドラ）が示されています。太字の線は、モデルクエリAPIを使用して、<code>team_level</code> フィールドに完全一致でテキスト 'U09' があるすべてのレコードをフィルタリングする方法を示しています。 （<code>filter()</code> 関数には、照合基準としてフィールド名とマッチタイプをダブルアンダースコアで区切った引数で渡していることに注意してください: <strong>team_level__exact）</strong></p>
 
 <pre class="brush: python">## filename: views.py
 
@@ -205,21 +205,21 @@ from django.shortcuts import render
 from .models import Team
 
 def index(request):
-    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
-    context = {'youngest_teams': list_teams}
-    return render(request, '/best/index.html', context)
+    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
+    context = {'youngest_teams': list_teams}
+    return render(request, '/best/index.html', context)
 </pre>
 
 <dl>
 </dl>
 
-<p>この関数は、ブラウザに返信される<code>HttpResponse</code>を生成するために <code>render()</code> 関数を使います。この関数はショートカットです。指定されたHTMLテンプレートとテンプレートに挿入するいくつかのデータ（"<code>context</code>"という名前の変数で提供される）を組み合わせてHTMLファイルを作成します。次のセクションでは、HTMLを作成するためにテンプレートにデータがどのように挿入されているかを示します。</p>
+<p>この関数は、ブラウザに返信される<code>HttpResponse</code>を生成するために <code>render()</code> 関数を使います。この関数はショートカットです。指定されたHTMLテンプレートとテンプレートに挿入するいくつかのデータ（"<code>context</code>"という名前の変数で提供される）を組み合わせてHTMLファイルを作成します。次のセクションでは、HTMLを作成するためにテンプレートにデータがどのように挿入されているかを示します。</p>
 
 <h3 id="データのレンダリング（HTMLテンプレート）">データのレンダリング（HTMLテンプレート）</h3>
 
 <p>テンプレートシステムでは、出力ドキュメントの構造を指定できます。ページの生成時に埋められるデータはプレースホルダを使用します。テンプレートはHTMLを作成するためによく使われますが、他のタイプドキュメントも作成できます。Djangoはネイティブのテンプレートシステムと、Jinja2と呼ばれる一般的なPythonライブラリの両方をサポートしています。（必要に応じて他のシステムもサポートできます）</p>
 
-<p>コードスニペットは、前のセクションの <code>render()</code>関数で呼び出されるHTMLテンプレートの外観を示しています。 このテンプレートは、レンダリング時に<code>youngest_teams</code> というリスト変数（上記の<code>render()</code>関数によってコンテキスト変数に含まれます）にアクセスできる前提で作成されています。HTMLスケルトンでは、<code>youngest_teams</code>変数が存在するかどうかを最初にチェックし、それを <code>for</code>ループで繰り返す式があります。各繰り返しにおいて、テンプレートは各チームの<code>team_name</code>値を{{htmlelement("li")}}要素に表示します。</p>
+<p>コードスニペットは、前のセクションの <code>render()</code>関数で呼び出されるHTMLテンプレートの外観を示しています。 このテンプレートは、レンダリング時に<code>youngest_teams</code> というリスト変数（上記の<code>render()</code>関数によってコンテキスト変数に含まれます）にアクセスできる前提で作成されています。HTMLスケルトンでは、<code>youngest_teams</code>変数が存在するかどうかを最初にチェックし、それを <code>for</code>ループで繰り返す式があります。各繰り返しにおいて、テンプレートは各チームの<code>team_name</code>値を{{htmlelement("li")}}要素に表示します。</p>
 
 <pre class="brush: python">## filename: best/templates/best/index.html
 
@@ -228,13 +228,13 @@ def index(request):
 &lt;body&gt;
 
  {% if youngest_teams %}
-    &lt;ul&gt;
-    {% for team in youngest_teams %}
-        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
-    {% endfor %}
-    &lt;/ul&gt;
+    &lt;ul&gt;
+    {% for team in youngest_teams %}
+        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
 {% else %}
-    &lt;p&gt;No teams are available.&lt;/p&gt;
+    &lt;p&gt;No teams are available.&lt;/p&gt;
 {% endif %}
 
 &lt;/body&gt;
@@ -246,7 +246,7 @@ def index(request):
 
 <ul>
  <li><strong>フォーム</strong>: HTMLフォームはユーザーデータを集めて、サーバー上で処理するために使われます。Djangoは、フォームの作成、検証、および処理を簡素化します。</li>
- <li><strong>ユーザー認証と権限</strong>: Djangoは、セキュリティを考慮して構築された強固なユーザー認証および権限システムを含んでいます。 </li>
+ <li><strong>ユーザー認証と権限</strong>: Djangoは、セキュリティを考慮して構築された強固なユーザー認証および権限システムを含んでいます。 </li>
  <li><strong>キャッシュ</strong>: コンテンツを動的に作成することは、静的なコンテンツを提供するよりもはるかに計算処理が多い（かつ低速）です。Djangoは、レンダリングされたページのすべて、または一部を保存できるように、柔軟なキャッシュを提供し、必要な場合を除いて再レンダリングされないようにします。</li>
  <li><strong>管理サイト</strong>: Djangoの管理サイトは、基本的な骨組みを使ってアプリケーションを作成すると、デフォルトで含まれています。サイト管理者がサイト内のデータモデルを作成、編集、表示するための管理ページを簡単に提供できます。</li>
  <li><strong>データのシリアライズ</strong>: Djangoを使用すると、簡単にXMLやJSONとしてデータをシリアライズして提供できます。これは、Webサービス（他のアプリケーションやサイトで使われるデータを純粋に提供し、何も表示しないWebサイト）を作成する場合や、クライアントサイドのコードがすべてのデータのレンダリングする場合に便利です。</li>

@@ -30,7 +30,7 @@ ECMAScript 第 5 版では[厳格モード](/ja/docs/Web/JavaScript/Reference/St
 - (ECMAScript 2015 を見越した) 新しい[予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)、 `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, `yield` のうちの一つの使用
 - 明らかなエラー
 
-  - オブジェクトリテラル内でプロパティ名に同じ名前を 2 回宣言すること `{a: 1, b: 3, a: 7}` これは ECMAScript 2015 では問題なくなりました ([bug 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128))。
+  - オブジェクトリテラル内でプロパティ名に同じ名前を 2 回宣言すること `{a: 1, b: 3, a: 7}` これは ECMAScript 2015 では問題なくなりました ([bug 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128))。
   - 関数の 2 つの引数を同じ名前で宣言すること `function f(a, b, b) {}`
 
 単純なエラーや悪習を明らかにするので、こういったエラーは良いものです。これらのエラーは、コードが実行される前に発生します。

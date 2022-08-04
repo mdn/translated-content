@@ -41,7 +41,7 @@ var mediaStreamTracks[] = mediaStream.getVideoTracks();
 ## 例
 
 次の例は、 [Chrome's
-Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html) (英語)から抜粋したものであり、 `getVideoTracks()` を用いて取得したトラックを {{domxref("ImageCapture.ImageCapture", "ImageCapture()")}} コンストラクターへ渡しています。
+Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html) (英語)から抜粋したものであり、 `getVideoTracks()` を用いて取得したトラックを {{domxref("ImageCapture.ImageCapture", "ImageCapture()")}} コンストラクターへ渡しています。
 
 ```js
 var imageCapture;

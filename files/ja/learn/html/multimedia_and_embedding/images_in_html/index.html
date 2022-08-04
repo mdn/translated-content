@@ -95,13 +95,13 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="恐竜の骨格の頭と胴体、
-          それは長い鋭い歯を持つ大きな頭を持っています"&gt;</pre>
+          それは長い鋭い歯を持つ大きな頭を持っています"&gt;</pre>
 
 <p><code>alt</code> テキストをテストする最も簡単な方法は、意図的にファイル名のスペルミスをすることです。たとえば、画像名のスペルが <code>dinosooooor.jpg</code> の場合、ブラウザは画像を表示せず、代わりに代替テキストを表示します。</p>
 
 <p><img alt="Images in HTMLというタイトルですが、今回は恐竜の画像が表示されず、代替テキストが代わりに表示されます。" src="https://mdn.mozillademos.org/files/12702/alt-text.png" style="display: block; height: 700px; margin: 0px auto; width: 700px;"></p>
 
-<p>それでは、なぜ代替テキストを見たり、必要とするのでしょうか?  いくつかの理由から便利です。</p>
+<p>それでは、なぜ代替テキストを見たり、必要とするのでしょうか?  いくつかの理由から便利です。</p>
 
 <ul>
  <li>ユーザは視覚障害があり、<a href="https://ja.wikipedia.org/wiki/スクリーンリーダー">スクリーンリーダー</a>を使用して Web を読むことができます。実際、画像を記述するための代替テキストを用意することは、ほとんどのユーザにとって有益です。</li>
@@ -111,11 +111,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
  <li>ユーザは画像をオフにして、データ転送量や目移りを減らしました。これは特に、携帯電話や帯域幅が限られて高価な国では一般的です。</li>
 </ul>
 
-<p><code>alt</code> 属性の中にぴったりの何を書きますか?  それは最初の場所に画像がある理由に依存します。言い換えれば、画像が表示されない場合に失うもの。</p>
+<p><code>alt</code> 属性の中にぴったりの何を書きますか?  それは最初の場所に画像がある理由に依存します。言い換えれば、画像が表示されない場合に失うもの。</p>
 
 <ul>
- <li><strong>装飾</strong>。装飾画像に <a href="#css_background_images">CSS 背景画像</a>を使用する必要がありますが、HTML を使用する必要がある場合は空白の <code>alt=""</code> を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは時間を浪費してはなりません。</li>
- <li><strong>コンテンツ</strong>。画像が重要な情報を提供している場合は、簡単な代替テキストで同じ情報を提供する。それよりもっと良いのは、誰もが見ることができる本文の中で提供する。冗長な代替テキストを書き込まないでください。すべての段落がメインコンテンツに2回書かれていると、目に見えるユーザにとってはどれほど迷惑でしょうか?  画像が主たる本文で十分に記述されている場合は、単に <code>alt=""</code> を使用できます。</li>
+ <li><strong>装飾</strong>。装飾画像に <a href="#css_background_images">CSS 背景画像</a>を使用する必要がありますが、HTML を使用する必要がある場合は空白の <code>alt=""</code> を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは時間を浪費してはなりません。</li>
+ <li><strong>コンテンツ</strong>。画像が重要な情報を提供している場合は、簡単な代替テキストで同じ情報を提供する。それよりもっと良いのは、誰もが見ることができる本文の中で提供する。冗長な代替テキストを書き込まないでください。すべての段落がメインコンテンツに2回書かれていると、目に見えるユーザにとってはどれほど迷惑でしょうか?  画像が主たる本文で十分に記述されている場合は、単に <code>alt=""</code> を使用できます。</li>
  <li><strong>リンク</strong>。{{htmlelement("a")}} タグ内に画像を置くと、画像をリンクに変えるためには、依然として<a href="/ja/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Use_clear_link_wording">アクセス可能なリンクテキスト</a>を提供する必要があります。そのような場合は、同じ <code>&lt;a&gt;</code> 要素内に、または画像の <code>alt</code> 属性内に書き込むことができます。</li>
  <li><strong>テキスト</strong>。テキストを画像に入れないでください。たとえば、メインの見出しにドロップシャドウが必要な場合は、テキストを画像に入れるのではなく、<a href="/ja/docs/Web/CSS/text-shadow">CSS を使用</a>します。しかし、これが避けられない場合は、<code>alt</code> 属性にテキストを与える必要があります。</li>
 </ul>
@@ -169,7 +169,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 <h3 id="Active_learning_embedding_an_image" name="Active_learning_embedding_an_image">アクティブラーニング: 画像の埋め込み</h3>
 
-<p>今度はあなたの番です!  この能動的学習セクションでは、あなたに簡単な埋め込み練習をさせていただきます。基本的な {{htmlelement("img")}} タグが提供されています。次の URL の画像を埋め込むようにしてください。</p>
+<p>今度はあなたの番です!  この能動的学習セクションでは、あなたに簡単な埋め込み練習をさせていただきます。基本的な {{htmlelement("img")}} タグが提供されています。次の URL の画像を埋め込むようにしてください。</p>
 
 <p>https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg</p>
 
@@ -497,7 +497,7 @@ textarea.onkeyup = function(){
   background-image: url("images/dinosaur.jpg");
 }</pre>
 
-<p>結果として得られる埋め込み画像は、HTML 画像よりも位置付けと制御が容易であることは間違いありません。それでは、なぜ HTML 画像を気にするのですか?  上記のとおり、CSS 背景画像は装飾用です。ビジュアルを向上させるためにページに何かを追加したいだけなら、これは問題ありません。しかし、そのような画像には意味論的な意味は全くありません。同等のテキストを持つことはできず、スクリーンリーダーには見えません。これは HTML 画像の輝く時です!</p>
+<p>結果として得られる埋め込み画像は、HTML 画像よりも位置付けと制御が容易であることは間違いありません。それでは、なぜ HTML 画像を気にするのですか?  上記のとおり、CSS 背景画像は装飾用です。ビジュアルを向上させるためにページに何かを追加したいだけなら、これは問題ありません。しかし、そのような画像には意味論的な意味は全くありません。同等のテキストを持つことはできず、スクリーンリーダーには見えません。これは HTML 画像の輝く時です!</p>
 
 <p><strong>要約</strong>: 画像に意味がある場合は、コンテンツに関して、HTML 画像を使用する必要があります。画像が純粋に装飾である場合は、CSS 背景画像を使用する必要があります。</p>
 
