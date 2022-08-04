@@ -6,12 +6,12 @@ original_slug: MDN/Structures/Compatibility_tables
 ---
 <div>{{MDNSidebar}}</div><div>{{IncludeSubnav("/en-US/docs/MDN")}}</div>
 
-<p class="summary">MDN에는 우리의 열린 웹 문서화(즉 모든 브라우저가 공유하는 DOM, HTML, CSS, JavaScript, SVG 등의 기술에 대한 문서화) 의 호환성 표를 위한 표준 형식이 있습니다. 이 글은 우리의 기능들을 이용하여 MDN 페이지들에 호환성 데이터를 추가하는 방법을 다룹니다.</p>
+<p class="summary">MDN에는 우리의 열린 웹 문서화(즉 모든 브라우저가 공유하는 DOM, HTML, CSS, JavaScript, SVG 등의 기술에 대한 문서화) 의 호환성 표를 위한 표준 형식이 있습니다. 이 글은 우리의 기능들을 이용하여 MDN 페이지들에 호환성 데이터를 추가하는 방법을 다룹니다.</p>
 
 <div class="warning">
-<p><strong>중요</strong>: <strong><em>데이터가 생성되는 방법이 바뀌었습니다</em></strong>. 예전에는 페이지에 넣는 표의 값을 수동으로 넣었습니다. 이 방법은 비효율적이고 유지보수를 어렵도록 하며 데이터가 유연하지 못하게 만듭니다. 그래서 브라우저 호환 데이터를 깃허브 레포지토리(주소: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>)로 옮기고 호환성 표를 코드를 통해 생성하는 방식으로 바꾸었습니다.</p>
+<p><strong>중요</strong>: <strong><em>데이터가 생성되는 방법이 바뀌었습니다</em></strong>. 예전에는 페이지에 넣는 표의 값을 수동으로 넣었습니다. 이 방법은 비효율적이고 유지보수를 어렵도록 하며 데이터가 유연하지 못하게 만듭니다. 그래서 브라우저 호환 데이터를 깃허브 레포지토리(주소: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>)로 옮기고 호환성 표를 코드를 통해 생성하는 방식으로 바꾸었습니다.</p>
 
-<p>In this guide, we document the new way to add compat data to MDN, but we've still kept documentation covering the old way, as you'll see manual tables on MDN for a while. If you need to see the old documentation, check out our <a href="/en-US/docs/MDN/Contribute/Structures/Old_compatibility_tables">Old compatibility tables</a> article.</p>
+<p>In this guide, we document the new way to add compat data to MDN, but we've still kept documentation covering the old way, as you'll see manual tables on MDN for a while. If you need to see the old documentation, check out our <a href="/en-US/docs/MDN/Contribute/Structures/Old_compatibility_tables">Old compatibility tables</a> article.</p>
 </div>
 
 <div class="note">
@@ -176,7 +176,7 @@ original_slug: MDN/Structures/Compatibility_tables
 <p>Inside the <code>status</code> member, you'll include three submembers:</p>
 
 <ul>
- <li> "experimental": This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>, or <code>false</code> otherwise.</li>
+ <li> "experimental": This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental">experimental</a>, or <code>false</code> otherwise.</li>
  <li>"standard_track": This should be set to <code>true</code> if a feature is on some kind of standards track (most commonly W3C/WHATWG, but there are also other standards efforts such as Khronos, TC39, etc.) or <code>false</code> otherwise.</li>
  <li>"deprecated": This should be set to <code>true</code> if the feature is <a href="/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Deprecated_and_obsolete">deprecated</a>, or <code>false</code> otherwise.</li>
 </ul>
@@ -312,7 +312,7 @@ original_slug: MDN/Structures/Compatibility_tables
 
 <h3 id="Including_a_footnote">Including a footnote</h3>
 
-<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "<span class="pl-s">Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</span></p>
+<p>Often compat tables will include footnotes related to certain entries that explain useful details or strange behavior that developers will find useful. As an example, the Chrome Android entry for {{domxref("VRDisplay.capabilities")}} (see also <a href="https://github.com/mdn/browser-compat-data/blob/master/api/VRDisplay.json">VRDisplay.json</a>)  (at the time of writing) had a footnote "<span class="pl-s">Currently supported only by Google Daydream." To include this in the capabilities data, we added a "notes" submember inside the relevant "chrome_android" submember; it would look like this:</span></p>
 
 <pre class="brush: json notranslate">"chrome_android": {
   "version_added": true,

@@ -10,7 +10,7 @@ tags:
 browser-compat: javascript.builtins.Number
 ---
 
-{{JSRef}}**`Number`** 는 `37`이나 `-9.25`와 같은 숫자를 표현하고 다룰 때 사용하는 [원시 래퍼 객체](/ko/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)입니다.
+{{JSRef}}**`Number`** 는 `37`이나 `-9.25`와 같은 숫자를 표현하고 다룰 때 사용하는 [원시 래퍼 객체](/ko/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)입니다.
 
 `Number` 생성자는 숫자를 다루기 위해 상수와 메소드를 가지고 있습니다. 다른 타입의 값은 `Number()` 함수를 사용하여 숫자로 바꿀 수 있습니다.
 

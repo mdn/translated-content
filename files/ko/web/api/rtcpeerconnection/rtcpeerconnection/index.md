@@ -12,7 +12,7 @@ translation_of: Web/API/RTCPeerConnection/RTCPeerConnection
 ---
 {{APIRef("WebRTC")}}
 
-**`RTCPeerConnection()`** 생성자는 로컬 기기와 원격 피어 간의 연결을 나타내는 {{domxref("RTCPeerConnection")}} 객체를 새로 만들어 반환합니다.
+**`RTCPeerConnection()`** 생성자는 로컬 기기와 원격 피어 간의 연결을 나타내는 {{domxref("RTCPeerConnection")}} 객체를 새로 만들어 반환합니다.
 
 ## 구문
 
@@ -77,7 +77,7 @@ pc = new RTCPeerConnection([configuration]);
 
 ### 반환 값
 
-`configuration`이 지정된 경우 그에 맞게 구성한, 그렇지 않은 경우 기본값 구성을 이용한 {{domxref("RTCPeerConnection")}} 객체입니다.
+`configuration`이 지정된 경우 그에 맞게 구성한, 그렇지 않은 경우 기본값 구성을 이용한 {{domxref("RTCPeerConnection")}} 객체입니다.
 
 ### 인증서 사용하기
 

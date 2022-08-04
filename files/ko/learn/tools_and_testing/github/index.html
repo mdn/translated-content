@@ -9,7 +9,7 @@ translation_of: Learn/Tools_and_testing/GitHub
 ---
 <div>{{LearnSidebar}}</div>
 
-<p class="summary">모든 개발자는 <strong>버전 관리 시스템 </strong>(<strong>VCS</strong>)을 사용하거나 앞으로 그럴 것이다. VCS는 다른 개발자와의 협업 시 코드 중복작성으로 인한 손실을 방지해 주고, 문재가 생겼을 시 이전 버전으로의 롤백을 쉽게 해준다. 가장 유명한 VCS는 Git와 그와 관련된 소셜 코딩 사이트, GitHub이다. 이 글은 이 두가지에 대해 설명할 것이다.</p>
+<p class="summary">모든 개발자는 <strong>버전 관리 시스템 </strong>(<strong>VCS</strong>)을 사용하거나 앞으로 그럴 것이다. VCS는 다른 개발자와의 협업 시 코드 중복작성으로 인한 손실을 방지해 주고, 문재가 생겼을 시 이전 버전으로의 롤백을 쉽게 해준다. 가장 유명한 VCS는 Git와 그와 관련된 소셜 코딩 사이트, GitHub이다. 이 글은 이 두가지에 대해 설명할 것이다.</p>
 
 <h2 id="개요">개요</h2>
 
@@ -18,7 +18,7 @@ translation_of: Learn/Tools_and_testing/GitHub
 <ul>
  <li>프로젝트를 완전히 직접 수행하는 일은 드물며 다른 사람들과 작업을 시작하자마자 서로의 작업과 충돌할 위험이 있다. 대표적인 예시가 두 사람이 같은 부분을 업데이트하려고 할 때이다. 동시에 코드의. 발생을 관리하고 결과적으로 작업 손실을 피할 수있는 메커니즘이 필요하다.</li>
  <li>혼자 또는 다른 사람들과 함께 프로젝트를 수행 할 때 중앙 위치에 코드를 백업 할 수 있기 때문에 컴퓨터가 고장 나더라도 코드가 손실되지 않는다.</li>
- <li>추후에 문제가 발견될 경우, 이전 버전을 찾게 될 수 있다. 우리는 이미 같은 파일의 다른 버전들을 생성함으로써 우리는 버전 컨트롤을 하고 있었을지도 모른다. 예를 들어, <code>myCode.js</code>, <code>myCode_v2.js</code>, <code>myCode_v3.js</code>, <code>myCode_final.js</code>, <code>myCode_really_really_final.js</code>, 등 이런식으로 말이다. 그러나 이런 방식은 에러에 취약하며 신뢰성이 떨어진다.</li>
+ <li>추후에 문제가 발견될 경우, 이전 버전을 찾게 될 수 있다. 우리는 이미 같은 파일의 다른 버전들을 생성함으로써 우리는 버전 컨트롤을 하고 있었을지도 모른다. 예를 들어, <code>myCode.js</code>, <code>myCode_v2.js</code>, <code>myCode_v3.js</code>, <code>myCode_final.js</code>, <code>myCode_really_really_final.js</code>, 등 이런식으로 말이다. 그러나 이런 방식은 에러에 취약하며 신뢰성이 떨어진다.</li>
  <li>Different team members will commonly want to create their own separate versions of the code (called <strong>branches</strong> in Git), work on a new feature in that version, and then get it merged in a controlled manner (in GitHub we use <strong>pull requests</strong>) with the master version when they are done with it.</li>
 </ul>
 
@@ -30,11 +30,11 @@ translation_of: Learn/Tools_and_testing/GitHub
 
 <h2 id="전제_조건">전제 조건</h2>
 
-<p>Git와 GitHub를 사용하려면, 다음과 같은 사양이 요구된다:</p>
+<p>Git와 GitHub를 사용하려면, 다음과 같은 사양이 요구된다:</p>
 
 <ul>
  <li>Git가 설치된 데스크탑 컴퓨터(<a href="https://git-scm.com/downloads">Git 설치 페이지</a>를 참고하라).</li>
- <li>Git을 사용할 도구. 당신이 어떻게 일하고 싶은지에 따라 취향에 맞게 <a href="https://git-scm.com/downloads/guis/">Git GUI client</a> (GitHub Desktop, SourceTree, Git Kraken을 추천합니다) 와 터미널 중에 고르실 수 있습니다. GUI를 사용하더라도 기본적인 git 터미널 명령어들을 숙지하고 있다면 더 큰 도움이 될 것입니다.</li>
+ <li>Git을 사용할 도구. 당신이 어떻게 일하고 싶은지에 따라 취향에 맞게 <a href="https://git-scm.com/downloads/guis/">Git GUI client</a> (GitHub Desktop, SourceTree, Git Kraken을 추천합니다) 와 터미널 중에 고르실 수 있습니다. GUI를 사용하더라도 기본적인 git 터미널 명령어들을 숙지하고 있다면 더 큰 도움이 될 것입니다.</li>
  <li><a href="https://github.com/join">GitHub 계정</a>. 만일 계정이 없다면, 이 링크에서 계정을 만들 수 있다.</li>
 </ul>
 
@@ -48,7 +48,7 @@ translation_of: Learn/Tools_and_testing/GitHub
 
 <h2 id="가이드">가이드</h2>
 
-<p>아래 링크들은 모두 외부 사이트로 연결된다. Mozilla는 Mozilla만의 독자적인 Git/Github 과정을 만드는 것을 목표로 하고 있으나 당장은 아래에 있는 항목들이 Github을 직접 해볼 수 있도록 도와줄 것이다.</p>
+<p>아래 링크들은 모두 외부 사이트로 연결된다. Mozilla는 Mozilla만의 독자적인 Git/Github 과정을 만드는 것을 목표로 하고 있으나 당장은 아래에 있는 항목들이 Github을 직접 해볼 수 있도록 도와줄 것이다.</p>
 
 <dl>
  <dt><a href="https://guides.github.com/activities/hello-world/">Hello World (from GitHub)</a></dt>

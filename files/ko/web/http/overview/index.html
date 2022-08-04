@@ -10,19 +10,19 @@ translation_of: Web/HTTP/Overview
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><strong>HTTP는 HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는 </strong>{{glossary("protocol", "프로토콜")}}입니다. HTTP는 웹에서 이루어지는 모든 데이터 교환의 기초이며, 클라이언트-서버 프로토콜이기도 합니다. 클라이언트-서버 프로토콜이란 (보통 웹브라우저인) 수신자 측에 의해 요청이 초기화되는 프로토콜을 의미합니다. 하나의 완전한 문서는 텍스트, 레이아웃 설명, 이미지, 비디오, 스크립트 등 불러온(fetched) 하위 문서들로 재구성됩니다.</p>
+<p class="summary"><strong>HTTP는 HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는 </strong>{{glossary("protocol", "프로토콜")}}입니다. HTTP는 웹에서 이루어지는 모든 데이터 교환의 기초이며, 클라이언트-서버 프로토콜이기도 합니다. 클라이언트-서버 프로토콜이란 (보통 웹브라우저인) 수신자 측에 의해 요청이 초기화되는 프로토콜을 의미합니다. 하나의 완전한 문서는 텍스트, 레이아웃 설명, 이미지, 비디오, 스크립트 등 불러온(fetched) 하위 문서들로 재구성됩니다.</p>
 
 <p><img alt="A Web document is the composition of different resources" src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png" style="height: 319px; width: 545px;"></p>
 
 <p>클라이언트와 서버들은 (데이터 스트림과 대조적으로) 개별적인 메시지 교환에 의해 통신합니다. 보통 브라우저인 클라이언트에 의해 전송되는 메시지를 <em>요청(requests)이</em>라고 부르며, 그에 대해 서버에서 응답으로 전송되는 메시지를 응답(<em>responses)이</em>라고 부릅니다.</p>
 
-<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;">1990년대 초에 설계된 HTTP는 거듭하여 진화해온 확장 가능한 프로토콜입니다. HTTP는 애플리케이션 계층의 프로토콜로, 신뢰 가능한 전송 프로토콜이라면 이론상으로는 무엇이든 사용할 수 있으나 {{glossary("TCP")}} 혹은 암호화된 TCP 연결인 {{glossary("TLS")}}를 통해 전송됩니다. HTTP의 확장성 덕분에, 오늘날 하이퍼텍스트 문서 뿐만 아니라 이미지와 비디오 혹은 HTML 폼 결과와 같은 내용을 서버로 포스트(POST)하기 위해서도 사용됩니다. HTTP는 또한 필요할 때마다 웹 페이지를 갱신하기 위해 문서의 일부를 가져오는데 사용될 수도 있습니다.</p>
+<p><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;">1990년대 초에 설계된 HTTP는 거듭하여 진화해온 확장 가능한 프로토콜입니다. HTTP는 애플리케이션 계층의 프로토콜로, 신뢰 가능한 전송 프로토콜이라면 이론상으로는 무엇이든 사용할 수 있으나 {{glossary("TCP")}} 혹은 암호화된 TCP 연결인 {{glossary("TLS")}}를 통해 전송됩니다. HTTP의 확장성 덕분에, 오늘날 하이퍼텍스트 문서 뿐만 아니라 이미지와 비디오 혹은 HTML 폼 결과와 같은 내용을 서버로 포스트(POST)하기 위해서도 사용됩니다. HTTP는 또한 필요할 때마다 웹 페이지를 갱신하기 위해 문서의 일부를 가져오는데 사용될 수도 있습니다.</p>
 
 <h2 id="HTTP_기반_시스템의_구성요소">HTTP 기반 시스템의 구성요소</h2>
 
 <p>HTTP는 클라이언트-서버 프로토콜입니다. 요청은 하나의 개체, 사용자 에이전트(또는 그것을 대신하는 프록시)에 의해 전송됩니다. 대부분의 경우, 사용자 에이전트는 브라우저지만, 무엇이든 될 수 있습니다. 예를 들어, 검색 엔진 인덱스를 채워넣고 유지하기 위해 웹을 돌아다니는 로봇이 그러한 경우입니다.</p>
 
-<p>각각의 개별적인 요청들은 서버로 보내지며, 서버는 요청을 처리하고 <em>response</em>라고 불리는 응답을 제공합니다. 이 요청과 응답 사이에는 여러 개체들이 있는데, 예를 들면 다양한 작업을 수행하는 게이트웨이 또는 {{glossary("Cache", "캐시")}} 역할을 하는 {{glossary("Proxy_server", "프록시")}} 등이 있습니다.</p>
+<p>각각의 개별적인 요청들은 서버로 보내지며, 서버는 요청을 처리하고 <em>response</em>라고 불리는 응답을 제공합니다. 이 요청과 응답 사이에는 여러 개체들이 있는데, 예를 들면 다양한 작업을 수행하는 게이트웨이 또는 {{glossary("Cache", "캐시")}} 역할을 하는 {{glossary("Proxy_server", "프록시")}} 등이 있습니다.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13679/Client-server-chain.png" style="height: 121px; width: 819px;"></p>
 
@@ -46,7 +46,7 @@ translation_of: Web/HTTP/Overview
 
 <h3 id="프록시">프록시</h3>
 
-<p>웹 브라우저와 서버 사이에서는 수많은 컴퓨터와 머신이 HTTP 메시지를 이어 받고 전달합니다. 여러 계층으로 이루어진 웹 스택 구조에서 이러한 컴퓨터/머신들은 대부분은 전송, 네트워크 혹은 물리 계층에서 동작하며, 성능에 상당히 큰 영향을 주지만 HTTP 계층에서는 이들이 어떻게 동작하는지 눈에 보이지 않습니다. 이러한 컴퓨터/머신 중에서도 애플리케이션 계층에서 동작하는 것들을 일반적으로 <strong>프록시</strong>라고 부릅니다. 프록시는 눈에 보이거나 그렇지 않을 수도 있으며(프록시를 통해 요청이 변경되거나 변경되지 않는 경우를 말함) 다양한 기능들을 수행할 수 있습니다:</p>
+<p>웹 브라우저와 서버 사이에서는 수많은 컴퓨터와 머신이 HTTP 메시지를 이어 받고 전달합니다. 여러 계층으로 이루어진 웹 스택 구조에서 이러한 컴퓨터/머신들은 대부분은 전송, 네트워크 혹은 물리 계층에서 동작하며, 성능에 상당히 큰 영향을 주지만 HTTP 계층에서는 이들이 어떻게 동작하는지 눈에 보이지 않습니다. 이러한 컴퓨터/머신 중에서도 애플리케이션 계층에서 동작하는 것들을 일반적으로 <strong>프록시</strong>라고 부릅니다. 프록시는 눈에 보이거나 그렇지 않을 수도 있으며(프록시를 통해 요청이 변경되거나 변경되지 않는 경우를 말함) 다양한 기능들을 수행할 수 있습니다:</p>
 
 <ul>
  <li>캐싱 (캐시는 공개 또는 비공개가 될 수 있습니다 (예: 브라우저 캐시))</li>
@@ -64,11 +64,11 @@ translation_of: Web/HTTP/Overview
 
 <h3 id="HTTP은_확장_가능합니다">HTTP은 확장 가능합니다</h3>
 
-<p>HTTP/1.0에서 소개된, <a href="/en-US/docs/Web/HTTP/Headers">HTTP 헤더</a>는 HTTP를 확장하고 실험하기 쉽게 만들어주었습니다. 클라이언트와 서버가 새로운 헤더의 시맨틱에 대해 간단한 합의만 한다면, 언제든지 새로운 기능을 추가할 수 있습니다.</p>
+<p>HTTP/1.0에서 소개된, <a href="/en-US/docs/Web/HTTP/Headers">HTTP 헤더</a>는 HTTP를 확장하고 실험하기 쉽게 만들어주었습니다. 클라이언트와 서버가 새로운 헤더의 시맨틱에 대해 간단한 합의만 한다면, 언제든지 새로운 기능을 추가할 수 있습니다.</p>
 
 <h3 id="HTTP은_상태가_없지만_세션은_있습니다">HTTP은 상태가 없지만, 세션은 있습니다</h3>
 
-<p>HTTP는 상태를 저장하지 않습니다(Stateless). 동일한 연결 상에서 연속하여 전달된 두 개의 요청 사이에는 연결고리가 없습니다. 이는 e-커머스 쇼핑 바구니처럼, 일관된 방식으로 사용자가 페이지와 상호작용하길 원할 때 문제가 됩니다. 하지만, HTTP의 핵심은 상태가 없는 것이지만 HTTP 쿠키는 상태가 있는 세션을 만들도록 해줍니다.<br>
+<p>HTTP는 상태를 저장하지 않습니다(Stateless). 동일한 연결 상에서 연속하여 전달된 두 개의 요청 사이에는 연결고리가 없습니다. 이는 e-커머스 쇼핑 바구니처럼, 일관된 방식으로 사용자가 페이지와 상호작용하길 원할 때 문제가 됩니다. 하지만, HTTP의 핵심은 상태가 없는 것이지만 HTTP 쿠키는 상태가 있는 세션을 만들도록 해줍니다.<br>
  헤더 확장성을 사용하여, 동일한 컨텍스트 또는 동일한 상태를 공유하기 위해 각각의 요청들에 세션을 만들도록 HTTP 쿠키가 추가됩니다.</p>
 
 <h3 id="HTTP와_연결">HTTP와 연결</h3>
@@ -93,7 +93,7 @@ translation_of: Web/HTTP/Overview
  <li><em>origin 제약사항을 완화하기</em><br>
   스누핑과 다른 프라이버시 침해를 막기 위해, 브라우저는 웹 사이트 간의 엄격한 분리를 강제합니다. <strong>동일한 origin</strong>으로부터 온 페이지만이 웹 페이지의 전체 정보에 접근할 수 있죠. 그런 제약 사항은 서버에 부담이 되지만, HTTP 헤더를 통해 그것을 완화시킬 수 있습니다. 그런 덕분에 문서는 다른 도메인으로부터 전달된 정보를 패치워크할 수 있습니다(그렇게 하려면 어떤 경우에 보안과 관련된 사항이 있을 수도 있습니다).</li>
  <li><em>인증</em><br>
-  어떤 페이지들은 보호되어 오로지 특정 사용자만이 그것에 접근할 수도 있습니다. 기본 인증은 HTTP를 통해 {{HTTPHeader("WWW-Authenticate")}} 또는 유사한 헤더를 사용해 제공되거나, <a href="/ko/docs/Web/HTTP/Cookies">HTTP 쿠키</a>를 사용해 특정 세션을 설정하여 이루어질 수도 있습니다.</li>
+  어떤 페이지들은 보호되어 오로지 특정 사용자만이 그것에 접근할 수도 있습니다. 기본 인증은 HTTP를 통해 {{HTTPHeader("WWW-Authenticate")}} 또는 유사한 헤더를 사용해 제공되거나, <a href="/ko/docs/Web/HTTP/Cookies">HTTP 쿠키</a>를 사용해 특정 세션을 설정하여 이루어질 수도 있습니다.</li>
  <li><a href="/ko/docs/Web/HTTP/Proxy_servers_and_tunneling">프록시와 터널링</a><br>
   서버 혹은 클라이언트 혹은 그 둘 모두는 종종 인트라넷에 위치하며 다른 개체들에게 그들의 실제 주소를 숨기기도 합니다. HTTP 요청은 네트워크 장벽을 가로지르기 위해 프록시를 통해 나가게 되죠. 모든 프록시가 HTTP 프록시는 아닙니다. 예를 들면 SOCKS 프로토콜은 좀 더 저수준에서 동작합니다. FTP와 같은 다른 프로토콜도 이 프록시를 통해 처리될 수 있습니다.</li>
  <li><em>세션</em><br>

@@ -7,13 +7,13 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">이 튜토리얼에서는, 당신의 사이트에 그들의 계정으로 로그인을 어떻게 허락할 것인지, 그리고 그들의 로그인 여부와 그들에게 허가한 퍼미션에 따라서 사이트에서 무엇을 할 수 있게 하거나, 볼 수 있게 할 것인지에 대해서 알려줄 것입니다. 또한 예시의 일부분으로, 우리는 이 LocalLibrary website를 확장시켜서, 로그인, 로그아웃 페이지를 덧붙이고, 사용자와 staff들이 그들이 빌려간 책들을 볼 수 있는 특별한 페이지들도 추가할 것입니다.</p>
+<p class="summary">이 튜토리얼에서는, 당신의 사이트에 그들의 계정으로 로그인을 어떻게 허락할 것인지, 그리고 그들의 로그인 여부와 그들에게 허가한 퍼미션에 따라서 사이트에서 무엇을 할 수 있게 하거나, 볼 수 있게 할 것인지에 대해서 알려줄 것입니다. 또한 예시의 일부분으로, 우리는 이 LocalLibrary website를 확장시켜서, 로그인, 로그아웃 페이지를 덧붙이고, 사용자와 staff들이 그들이 빌려간 책들을 볼 수 있는 특별한 페이지들도 추가할 것입니다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">선행학습:</th>
-   <td>앞의 모든 튜토리얼을 모두 끝내세요.  up to and including <a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a>.</td>
+   <td>앞의 모든 튜토리얼을 모두 끝내세요.  up to and including <a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a>.</td>
   </tr>
   <tr>
    <th scope="row">목표:</th>
@@ -24,21 +24,21 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <h2 id="개요">개요</h2>
 
-<p>Django는 인증과 권위 부여 ("허가") 시스템을 제공합니다. 이것은 <a href="/en-US/docs/Learn/Server-side/Django/Sessions">previous tutorial</a> 에서 논의된 session framework에서 찾아볼 수 있는데, 사용자의 credentials을 검증하고 사용자들이 행동들의 허가 여부를 정의합니다. 이 프레임워크는 <code>Users</code> 와 <code>Groups</code> (한 번에 한 명 이상의 유저에게 허가를 적용하는 일반적인 방법)을 위한 빌트인 모델을 포함하는데, permissions/flags는 that designate whether 사용자들이 일이나 , forms, 로그인 한 유저들의 뷰, 그리고 컨텐츠를 제한하는 뷰 툴을 조정합니다.</p>
+<p>Django는 인증과 권위 부여 ("허가") 시스템을 제공합니다. 이것은 <a href="/en-US/docs/Learn/Server-side/Django/Sessions">previous tutorial</a> 에서 논의된 session framework에서 찾아볼 수 있는데, 사용자의 credentials을 검증하고 사용자들이 행동들의 허가 여부를 정의합니다. 이 프레임워크는 <code>Users</code> 와 <code>Groups</code> (한 번에 한 명 이상의 유저에게 허가를 적용하는 일반적인 방법)을 위한 빌트인 모델을 포함하는데, permissions/flags는 that designate whether 사용자들이 일이나 , forms, 로그인 한 유저들의 뷰, 그리고 컨텐츠를 제한하는 뷰 툴을 조정합니다.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Django의 인증시스템은 매우 일반적인 것을 목표로하기 때문에, 다른 웹사이트 인증시스템에서 제공하는 특정한 기능들을 제공하지 않습니다. 이런 문제에 대한 해결방법은 서드파티 솔루션을 이용하는 것입니다. 예를 들면, 로그인 시도 제한과 제3자에 대한 인증(e.g.OAuth)과 같은 기능들은 제공하지 않습니다.</p>
 </div>
 
-<p>이 튜토리얼에서 우리는 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website안에서의 유저 인증을 어떻게 활성화하는지 보여주고, 당신의 로그인, 로그아웃 페이지를 만들며 당신의 모델과 페이지에 대한 권한 및 그 조정에 대해서 살펴볼 것입니다. 우리는 인증과 허가(권한)을 사용해서 사용자나 사서가 빌린 책들을 표시할 것입니다.</p>
+<p>이 튜토리얼에서 우리는 <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> website안에서의 유저 인증을 어떻게 활성화하는지 보여주고, 당신의 로그인, 로그아웃 페이지를 만들며 당신의 모델과 페이지에 대한 권한 및 그 조정에 대해서 살펴볼 것입니다. 우리는 인증과 허가(권한)을 사용해서 사용자나 사서가 빌린 책들을 표시할 것입니다.</p>
 
-<p>이 인증시스템은 매우 유연하므로 당신이 원한다면 단지 제공된 로그인  API를 호출하는 것만으로 scratch에서 온 당신의 URLs, forms, views와 templates를 작성할 수 있습니다. 그렇지만, 이 단계에서는 Django가 "보유한" 인증 views와 forms를 이용하여 우리의 로그인과 로그아웃페이지를 만들 것입니다. 우리는 여전히 어떤 템플릿들을 만들어야 합니다. 그러나, 이것들은 꽤 쉽습니다.</p>
+<p>이 인증시스템은 매우 유연하므로 당신이 원한다면 단지 제공된 로그인  API를 호출하는 것만으로 scratch에서 온 당신의 URLs, forms, views와 templates를 작성할 수 있습니다. 그렇지만, 이 단계에서는 Django가 "보유한" 인증 views와 forms를 이용하여 우리의 로그인과 로그아웃페이지를 만들 것입니다. 우리는 여전히 어떤 템플릿들을 만들어야 합니다. 그러나, 이것들은 꽤 쉽습니다.</p>
 
 <p>우리는 어떻게 퍼미션을 만드는지, 그리고 로그인 상태와 퍼미션을 views와 templates에서 어떻게 체크하는지에 대해서도 보여줄 것입니다.</p>
 
 <h2 id="인증하도록_하기">인증하도록 하기</h2>
 
-<p>Authentication은 우리가 이미 <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">skeleton website</a> 을 생성했을 때 (in tutorial 2) 자동적으로 생서되었으므로 이 점에서는 할 것이 없습니다..</p>
+<p>Authentication은 우리가 이미 <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">skeleton website</a> 을 생성했을 때 (in tutorial 2) 자동적으로 생서되었으므로 이 점에서는 할 것이 없습니다..</p>
 
 <div class="note">
 <p><strong>Note</strong>: 설정을 위해 필요한 것들은 모두 django-admin startproject 명령을 이용하여 앱을 생성했을 때 끝났습니다. 사용자들과 모델 퍼미션을 위한 데이터베이스 테이블들은 우리가 처음으로 python manage.py migrate을 실행했을 때 만들어졌습니다.</p>
@@ -48,21 +48,21 @@ translation_of: Learn/Server-side/Django/Authentication
 
 <pre class="brush: python notranslate">INSTALLED_APPS = [
     ...
-<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
-<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
+<strong>    'django.contrib.auth',  </strong>#Core authentication framework and its default models.
+<strong>    'django.contrib.contenttypes',  #</strong>Django content type system (allows permissions to be associated with models).
     ....
 
 MIDDLEWARE = [
     ...
-<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
+<strong>    'django.contrib.sessions.middleware.SessionMiddleware',</strong>  #Manages sessions across requests
     ...
-<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
+<strong>    'django.contrib.auth.middleware.AuthenticationMiddleware',</strong>  #Associates users with requests using sessions.
     ....
 </pre>
 
-<h2 id="users와_groups_만들기">users와 groups 만들기</h2>
+<h2 id="users와_groups_만들기">users와 groups 만들기</h2>
 
-<p><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django admin site</a>를 tutorial 4에서 봤을 때 이미 당신은 첫번째 유저를 만들었습니다. 이는 슈퍼유저로서 <code>python manage.py createsuperuser</code>라는 명령으로 만들었죠. 우리의 슈퍼 유저는 이미 인증이 되어있고 모든 허가 권한을 가지고 있으므로, 우리는 일반적인 사이트 유저를 대표하는 테스트 유저를 만들 것입니다. 우리의 <em>locallibrary</em> groups과 website logins을 위해서 우리는 admin 사이트를 이용할 것인데, 이것이 가장 빠른 방법 중에 하나입니다.</p>
+<p><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django admin site</a>를 tutorial 4에서 봤을 때 이미 당신은 첫번째 유저를 만들었습니다. 이는 슈퍼유저로서 <code>python manage.py createsuperuser</code>라는 명령으로 만들었죠. 우리의 슈퍼 유저는 이미 인증이 되어있고 모든 허가 권한을 가지고 있으므로, 우리는 일반적인 사이트 유저를 대표하는 테스트 유저를 만들 것입니다. 우리의 <em>locallibrary</em> groups과 website logins을 위해서 우리는 admin 사이트를 이용할 것인데, 이것이 가장 빠른 방법 중에 하나입니다.</p>
 
 <div class="note">
 <p>Note: 당신은 아래에서 보여주는 것처럼 프로그램적으로 사용자를 추가할 수 있습니다. 만약에 사용자가 로그인하는 사이트를 개발한다면, 당신은 이것을 해야합니다. (사용자들이 admin site를 접근하게 해서는 안됩니다.)</p>
@@ -79,7 +79,7 @@ user.save()
 </pre>
 </div>
 
-<p>아래에서 우리는 첫번째 그룹과 그 그룹의 사용자를 만들 것입니다. 아직까지는 우리의 도서관 멤버로서 아무런 퍼미션도 부여하지는 않습니다.  그러나 나중에 필요하다면, 개인들에게 각각 하는 것보다는 그룹에 한번에 하는 것이 휠씬 쉬운 일입니다.</p>
+<p>아래에서 우리는 첫번째 그룹과 그 그룹의 사용자를 만들 것입니다. 아직까지는 우리의 도서관 멤버로서 아무런 퍼미션도 부여하지는 않습니다.  그러나 나중에 필요하다면, 개인들에게 각각 하는 것보다는 그룹에 한번에 하는 것이 휠씬 쉬운 일입니다.</p>
 
 <p>개발서버를 시작하고, 웹브라우저를 통해 admin site(<a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin/</a>)에 접속하십시오. 그리고 당신의 superuser 계정으로 로그인하십시오. admin site의 최상위 단계에서는 "Django application"에 의해 소트된 당신의 모델들이 있습니다. Authentication and Authorisation 섹션에 있는 Users or Groups 링크를 클릭하여 현재의 등록된 기록들을 볼 수 있습니다.</p>
 
@@ -96,25 +96,25 @@ user.save()
 
 
 <ol>
- <li>우리는 그룹을 위한 어떠한 권한도 필요하지 않습니다. 그러므로 <strong>SAVE </strong>를 누르세요. (you will be taken to a list of groups).</li>
+ <li>우리는 그룹을 위한 어떠한 권한도 필요하지 않습니다. 그러므로 <strong>SAVE </strong>를 누르세요. (you will be taken to a list of groups).</li>
 </ol>
 
 
 
-<p>자 이제 사용자(user)를 만들어봅시다 :</p>
+<p>자 이제 사용자(user)를 만들어봅시다 :</p>
 
 <ol>
  <li>admin 사이트의 홈페이지로 돌아가주세요.</li>
- <li>Users 옆 <strong>Add</strong> 버튼을 클릭하여 user dialog를 열어줍니다.<img alt="Admin site - add user pt1" src="https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; height: 409px; margin: 0px auto; width: 800px;"></li>
- <li>당신의 테스트 사용자(user)를 위해 적절한 사용자이름(<strong>Username)</strong> 과 비밀번호(<strong>Password</strong>/<strong>Password confirmation)</strong> 를 입력해주세요.</li>
- <li>사용자(user)를 만들기 위해<strong> SAVE</strong> 를 눌러줍시다.<br>
+ <li>Users 옆 <strong>Add</strong> 버튼을 클릭하여 user dialog를 열어줍니다.<img alt="Admin site - add user pt1" src="https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png" style="border-style: solid; border-width: 1px; display: block; height: 409px; margin: 0px auto; width: 800px;"></li>
+ <li>당신의 테스트 사용자(user)를 위해 적절한 사용자이름(<strong>Username)</strong> 과 비밀번호(<strong>Password</strong>/<strong>Password confirmation)</strong> 를 입력해주세요.</li>
+ <li>사용자(user)를 만들기 위해<strong> SAVE</strong> 를 눌러줍시다.<br>
   <br>
-  관리자 사이트는 새로운 유저를 만들고, <strong>username</strong>을 바꿀 수 있고 유저모델의 선택 필드에 정보를 추가할 수 있는 <em>Change user화면으로 즉각 당신에게 보여줄 것입니다. 이 필드들은 이름, 성, 이메일 주소, 유저 상태 및 권한 (오직 </em><strong>Active </strong>표시만 가능합니다)를 포함합니다. 더 밑으로 내려가면 당신의 그룹과 권한 유저와 관련된 중요한 날짜들(예를 들어 가입일과 마지막 로그인 날짜)을 기입할 수 있습니다. <img alt="Admin site - add user pt2" src="https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; height: 635px; margin: 0px auto; width: 800px;"></li>
- <li>그룹 섹션에서, Available groups목록에서 <strong>Library Member</strong> 를 선택하고두 박스 사이에 있는<strong> 오른쪽 화살표</strong>를 누르면 Chosen groups box로 이동이 될 거에요<img alt="Admin site - add user to group" src="https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 414px; margin: 0px auto; width: 933px;"></li>
- <li>여기서는 아무것도 필요치 않습니다, 그저 <strong>SAVE</strong> 를 선택하고, 유저 목록으로 가십시오.</li>
+  관리자 사이트는 새로운 유저를 만들고, <strong>username</strong>을 바꿀 수 있고 유저모델의 선택 필드에 정보를 추가할 수 있는 <em>Change user화면으로 즉각 당신에게 보여줄 것입니다. 이 필드들은 이름, 성, 이메일 주소, 유저 상태 및 권한 (오직 </em><strong>Active </strong>표시만 가능합니다)를 포함합니다. 더 밑으로 내려가면 당신의 그룹과 권한 유저와 관련된 중요한 날짜들(예를 들어 가입일과 마지막 로그인 날짜)을 기입할 수 있습니다. <img alt="Admin site - add user pt2" src="https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png" style="border-style: solid; border-width: 1px; display: block; height: 635px; margin: 0px auto; width: 800px;"></li>
+ <li>그룹 섹션에서, Available groups목록에서 <strong>Library Member</strong> 를 선택하고두 박스 사이에 있는<strong> 오른쪽 화살표</strong>를 누르면 Chosen groups box로 이동이 될 거에요<img alt="Admin site - add user to group" src="https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png" style="border-style: solid; border-width: 1px; display: block; height: 414px; margin: 0px auto; width: 933px;"></li>
+ <li>여기서는 아무것도 필요치 않습니다, 그저 <strong>SAVE</strong> 를 선택하고, 유저 목록으로 가십시오.</li>
 </ol>
 
-<p>다됬습니다! 이제 당신은 테스트를 위해 사용할 수 있는 "normal library member"  계정을 갖게 되었습니다(이들이 로그인할 수 있도록 페이지를 만들 때 말이죠).</p>
+<p>다됬습니다! 이제 당신은 테스트를 위해 사용할 수 있는 "normal library member"  계정을 갖게 되었습니다(이들이 로그인할 수 있도록 페이지를 만들 때 말이죠).</p>
 
 <div class="note">
 <p><strong>Note</strong>: 다른 도서관 유저 만들기를 시도해보아야 합니다. 또한 사서들을 위한 그룹을 만들고 유저를 추가해보세요!</p>
@@ -122,21 +122,21 @@ user.save()
 
 <h2 id="authentication_views_세팅하기">authentication views 세팅하기</h2>
 
-<p>Django는 authentication pages에서 login, log out, and password 조정을 위한 거의 모든 것을 제공해 줍니다. "out of the box". 이것은 URL mapper, views와 forms들을 포함하지만 templates은 포함하지 않습니다 — 우리가 만들어야 하죠!</p>
+<p>Django는 authentication pages에서 login, log out, and password 조정을 위한 거의 모든 것을 제공해 줍니다. "out of the box". 이것은 URL mapper, views와 forms들을 포함하지만 templates은 포함하지 않습니다 — 우리가 만들어야 하죠!</p>
 
 <p>여기서, 우리는 기본 시스템들에 LocalLibrary를 통합하고, template들을 만들 수 있는 지를 볼 거에요.그리고 이것들을 프로젝트 메인 URL들에 넣을 것입니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 어떤 코드도 사용하지 않으셔도 되지만, 아마 스스로 원할 가능성이 높아요. 더 쉽게 해주거든요. 만약 user model을 바꾸고자 한다면, form을 다루는 코드를 바꾸게 될 가능성이 아주 높아요. (앞으로 나올 주제에요!) 그렇다고 하더라도, stock view 함수들은 사용할 수 있어야 합니다.</p>
+<p><strong>Note</strong>: 어떤 코드도 사용하지 않으셔도 되지만, 아마 스스로 원할 가능성이 높아요. 더 쉽게 해주거든요. 만약 user model을 바꾸고자 한다면, form을 다루는 코드를 바꾸게 될 가능성이 아주 높아요. (앞으로 나올 주제에요!) 그렇다고 하더라도, stock view 함수들은 사용할 수 있어야 합니다.</p>
 </div>
 
 <div class="note">
-<p><strong>Note: </strong>이 경우에, catalog application에 URL과 템플릿을 포함해서 인authentication page들을 넣는게 합리적입니다. 그러나 많은 application들을 가지고 있다면, 공통적으로 로그인 해야하는 것을 분리하고 사이트 전체에서 로그인하는 것을 가능하게끔하는 게 좋을겁니다. 이게 우리가 여기서 볼려고하는 것이죠!</p>
+<p><strong>Note: </strong>이 경우에, catalog application에 URL과 템플릿을 포함해서 인authentication page들을 넣는게 합리적입니다. 그러나 많은 application들을 가지고 있다면, 공통적으로 로그인 해야하는 것을 분리하고 사이트 전체에서 로그인하는 것을 가능하게끔하는 게 좋을겁니다. 이게 우리가 여기서 볼려고하는 것이죠!</p>
 </div>
 
 <h3 id="Project_URLs">Project URLs</h3>
 
-<p> (<strong>locallibrary/locallibrary/urls.py</strong>) 파일에 다음 코드를 추가해주세요:</p>
+<p> (<strong>locallibrary/locallibrary/urls.py</strong>) 파일에 다음 코드를 추가해주세요:</p>
 
 <pre class="brush: python notranslate">#Add Django site authentication urls (for login, logout, password management)
 urlpatterns += [
@@ -144,10 +144,10 @@ urlpatterns += [
 ]
 </pre>
 
-<p>이 URL( <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a>)로 접속하세요.  URL ('/'의 연결에 주의하세요!) 그러면 장고는 이 URL을 찾을 수 없기 때문에 에러메세지를 보여줄겁니다. 그리고 그 URL들을 어디에서 찾았는지 시도했던 모든 리스트들도 보여줍니다. 이것으로부터 당신은 예를들면, 어떤 URL들이 작동되는지 볼 수 있습니다.</p>
+<p>이 URL( <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a>)로 접속하세요.  URL ('/'의 연결에 주의하세요!) 그러면 장고는 이 URL을 찾을 수 없기 때문에 에러메세지를 보여줄겁니다. 그리고 그 URL들을 어디에서 찾았는지 시도했던 모든 리스트들도 보여줍니다. 이것으로부터 당신은 예를들면, 어떤 URL들이 작동되는지 볼 수 있습니다.</p>
 
 <div class="note">
-<p><strong>Note: </strong>Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.</p>
+<p><strong>Note: </strong>Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.</p>
 </div>
 
 <div class="note">
@@ -172,15 +172,15 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>The URLs (and implicitly views) that we just added expect to find their associated templates in a directory <strong>/registration/</strong> somewhere in the templates search path.</p>
 
-<p>For this site, we'll put our HTML pages in the <strong>templates/registration/</strong> directory. This directory should be in your project root directory, i.e the same directory as the <strong>catalog</strong> and <strong>locallibrary</strong> folders). Please create these folders now.</p>
+<p>For this site, we'll put our HTML pages in the <strong>templates/registration/</strong> directory. This directory should be in your project root directory, i.e the same directory as the <strong>catalog</strong> and <strong>locallibrary</strong> folders). Please create these folders now.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Your folder structure should now look like the below:<br>
  locallibrary (Django project folder)<br>
-    |_catalog<br>
-    |_locallibrary<br>
-    |_templates <strong>(new)</strong><br>
-                 |_registration</p>
+    |_catalog<br>
+    |_locallibrary<br>
+    |_templates <strong>(new)</strong><br>
+                 |_registration</p>
 </div>
 
 <p>To make these directories visible to the template loader (i.e. to put this directory in the template search path) open the project settings (<strong>/locallibrary/locallibrary/settings.py</strong>), and update the <code>TEMPLATES</code> section's <code>'DIRS'</code> line as shown.</p>
@@ -211,28 +211,28 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 {% if next %}
   {% if user.is_authenticated %}
-    &lt;p&gt;Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.&lt;/p&gt;
-  {% else %}
-    &lt;p&gt;Please login to see this page.&lt;/p&gt;
-  {% endif %}
+    &lt;p&gt;Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.&lt;/p&gt;
+  {% else %}
+    &lt;p&gt;Please login to see this page.&lt;/p&gt;
+  {% endif %}
 {% endif %}
 
 &lt;form method="post" action="{% url 'login' %}"&gt;
 {% csrf_token %}
 
 &lt;div&gt;
-  &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
-  &lt;td&gt;\{{ form.username }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.username }}&lt;/td&gt;
 &lt;/div&gt;
 &lt;div&gt;
-  &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
-  &lt;td&gt;\{{ form.password }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.password }}&lt;/td&gt;
 &lt;/div&gt;
 
 &lt;div&gt;
-  &lt;input type="submit" value="login" /&gt;
-  &lt;input type="hidden" name="next" value="\{{ next }}" /&gt;
+  &lt;input type="submit" value="login" /&gt;
+  &lt;input type="hidden" name="next" value="\{{ next }}" /&gt;
 &lt;/div&gt;
 &lt;/form&gt;
 
@@ -309,7 +309,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <h4 id="Password_reset_email">Password reset email</h4>
 
-<p>This template provides the text of the HTML email containing the reset link that we will send to users. Create <strong>/locallibrary/templates/registration/password_reset_email.html</strong>, and give it the following contents:</p>
+<p>This template provides the text of the HTML email containing the reset link that we will send to users. Create <strong>/locallibrary/templates/registration/password_reset_email.html</strong>, and give it the following contents:</p>
 
 <pre class="brush: html notranslate">Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
@@ -389,9 +389,9 @@ LOGIN_REDIRECT_URL = '/'
 
 <h3 id="Testing_in_templates">Testing in templates</h3>
 
-<p>당신은 템플릿에서 <code>\{{ user }}</code> 라는 템플릿 변수로 현재 로그인한 사용자에 대한 정보를 얻을 수 있습니다  (이것은 우리의 스켈레톤을 만들때 프로젝트에서 세팅했을 때 템플릿 컨텍스트의 기본 값으로 추가된 것입니다).</p>
+<p>당신은 템플릿에서 <code>\{{ user }}</code> 라는 템플릿 변수로 현재 로그인한 사용자에 대한 정보를 얻을 수 있습니다  (이것은 우리의 스켈레톤을 만들때 프로젝트에서 세팅했을 때 템플릿 컨텍스트의 기본 값으로 추가된 것입니다).</p>
 
-<p>보통 처음으로 <code>\{{ user.is_authenticated }}</code> 라는 템플릿 변수를 통해서 당신은  사용자가 특정 내용을 볼 수 있는 지여부에 대해서 테스트하게 될 것입니다. 이를 시험하기 위해서, 우리는 사이트바에 로그인와 로그아웃 링크를 업데이트 할 것입니다.</p>
+<p>보통 처음으로 <code>\{{ user.is_authenticated }}</code> 라는 템플릿 변수를 통해서 당신은  사용자가 특정 내용을 볼 수 있는 지여부에 대해서 테스트하게 될 것입니다. 이를 시험하기 위해서, 우리는 사이트바에 로그인와 로그아웃 링크를 업데이트 할 것입니다.</p>
 
 <p>Open the base template (<strong>/locallibrary/catalog/templates/base_generic.html</strong>) and copy the following text into the <code>sidebar</code> block, immediately before the <code>endblock</code> template tag.</p>
 
@@ -407,9 +407,9 @@ LOGIN_REDIRECT_URL = '/'
    <strong>{% endif %} </strong>
   &lt;/ul&gt;</pre>
 
-<p>As you can see, we use <code>if</code>-<code>else</code>-<code>endif</code> template tags to conditionally display text based on whether <code>\{{ user.is_authenticated }}</code> is true. If the user is authenticated then we know that we have a valid user, so we call <strong>\{{ user.get_username }} </strong>to display their name.</p>
+<p>As you can see, we use <code>if</code>-<code>else</code>-<code>endif</code> template tags to conditionally display text based on whether <code>\{{ user.is_authenticated }}</code> is true. If the user is authenticated then we know that we have a valid user, so we call <strong>\{{ user.get_username }} </strong>to display their name.</p>
 
-<p>We create the login and logout link URLs using the <code>url</code> template tag and the names of the respective URL configurations. Note also how we have appended <code>?next=\{{request.path}}</code> to the end of the URLs. What this does is add a URL parameter <font face="Consolas, Liberation Mono, Courier, monospace">next</font> containing the address (URL) of the <em>current</em> page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "<code>next</code>" value to redirect the user back to the page where they first clicked the login/logout link.</p>
+<p>We create the login and logout link URLs using the <code>url</code> template tag and the names of the respective URL configurations. Note also how we have appended <code>?next=\{{request.path}}</code> to the end of the URLs. What this does is add a URL parameter <font face="Consolas, Liberation Mono, Courier, monospace">next</font> containing the address (URL) of the <em>current</em> page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "<code>next</code>" value to redirect the user back to the page where they first clicked the login/logout link.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.</p>
@@ -417,7 +417,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <h3 id="Testing_in_views">Testing in views</h3>
 
-<p>If you're using function-based views, the easiest way to restrict access to your functions is to apply the <code>login_required</code> decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (<code>settings.LOGIN_URL</code>), passing the current absolute path as the <code>next</code> URL parameter. If the user succeeds in logging in then they will be returned back to this page, but this time authenticated.</p>
+<p>If you're using function-based views, the easiest way to restrict access to your functions is to apply the <code>login_required</code> decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (<code>settings.LOGIN_URL</code>), passing the current absolute path as the <code>next</code> URL parameter. If the user succeeds in logging in then they will be returned back to this page, but this time authenticated.</p>
 
 <pre class="brush: python notranslate">from django.contrib.auth.decorators import login_required
 
@@ -426,17 +426,17 @@ def my_view(request):
     ...</pre>
 
 <div class="note">
-<p><strong>Note:</strong> You can do the same sort of thing manually by testing on <code>request.user.is_authenticated</code>, but the decorator is much more convenient!</p>
+<p><strong>Note:</strong> You can do the same sort of thing manually by testing on <code>request.user.is_authenticated</code>, but the decorator is much more convenient!</p>
 </div>
 
-<p>Similarly, the easiest way to restrict access to logged-in users in your class-based views is to derive from <code>LoginRequiredMixin</code>. You need to declare this mixin first in the superclass list, before the main view class.</p>
+<p>Similarly, the easiest way to restrict access to logged-in users in your class-based views is to derive from <code>LoginRequiredMixin</code>. You need to declare this mixin first in the superclass list, before the main view class.</p>
 
 <pre class="brush: python notranslate">from django.contrib.auth.mixins import LoginRequiredMixin
 
 class MyView(LoginRequiredMixin, View):
     ...</pre>
 
-<p>This has exactly the same redirect behaviour as the <code>login_required</code> decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (<code>login_url</code>), and a URL parameter name instead of "<code>next</code>" to insert the current absolute path (<code>redirect_field_name</code>).</p>
+<p>This has exactly the same redirect behaviour as the <code>login_required</code> decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (<code>login_url</code>), and a URL parameter name instead of "<code>next</code>" to insert the current absolute path (<code>redirect_field_name</code>).</p>
 
 <pre class="brush: python notranslate">class MyView(LoginRequiredMixin, View):
     login_url = '/login/'
@@ -449,7 +449,7 @@ class MyView(LoginRequiredMixin, View):
 
 <p>Now that we know how to restrict a page to a particular user, let's create a view of the books that the current user has borrowed.</p>
 
-<p>Unfortunately, we don't yet have any way for users to borrow books! So before we can create the book list we'll first extend the <code>BookInstance</code> model to support the concept of borrowing and use the Django Admin application to loan a number of books to our test user.</p>
+<p>Unfortunately, we don't yet have any way for users to borrow books! So before we can create the book list we'll first extend the <code>BookInstance</code> model to support the concept of borrowing and use the Django Admin application to loan a number of books to our test user.</p>
 
 <h3 id="Models">Models</h3>
 
@@ -495,17 +495,17 @@ python3 manage.py migrate
 
 <pre class="brush: python notranslate">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
-    list_filter = ('status', 'due_back')
+    list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
+    list_filter = ('status', 'due_back')
 
-    fieldsets = (
-        (None, {
-            'fields': ('book','imprint', 'id')
-        }),
-        ('Availability', {
-            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
-        }),
-    )</pre>
+    fieldsets = (
+        (None, {
+            'fields': ('book','imprint', 'id')
+        }),
+        ('Availability', {
+            'fields': ('status', 'due_back'<strong>,'borrower'</strong>)
+        }),
+    )</pre>
 
 <h3 id="Loan_a_few_books">Loan a few books</h3>
 
@@ -595,7 +595,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <h2 id="허가">허가</h2>
 
-<p>Permissions 는 모델과 연관되어 허가를 가진 유저에 의한 model instance 작업들을 정의하게 됩니다. 기본적으로 Django 자동적으로 <em>add</em>, <em>change</em>, 그리고 <em>delete</em> permissions 을 모든 모델에 제공하는데, 유저가 관리자 사이트를 통해서 (권한)허가를 가지고 연고나도니 작업들을 하게 합니다. 당신은 권한을 모델이나 특정 유저에게 부여하도록 정의할 수 있습니다. You can also change the permissions associated with different instances of the same model.</p>
+<p>Permissions 는 모델과 연관되어 허가를 가진 유저에 의한 model instance 작업들을 정의하게 됩니다. 기본적으로 Django 자동적으로 <em>add</em>, <em>change</em>, 그리고 <em>delete</em> permissions 을 모든 모델에 제공하는데, 유저가 관리자 사이트를 통해서 (권한)허가를 가지고 연고나도니 작업들을 하게 합니다. 당신은 권한을 모델이나 특정 유저에게 부여하도록 정의할 수 있습니다. You can also change the permissions associated with different instances of the same model.</p>
 
 <p>Testing on permissions in views and templates is then very similar for testing on the authentication status (and in fact, testing for a permission also tests for authentication).</p>
 
@@ -605,8 +605,8 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <pre class="brush: python notranslate">class BookInstance(models.Model):
     ...
-    class Meta:
-        ...
+    class Meta:
+        ...
 <strong>        permissions = (("can_mark_returned", "Set book as returned"),)  </strong> </pre>
 
 <p>We could then assign the permission to a "Librarian" group in the Admin site.</p>
@@ -615,11 +615,11 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <h3 id="Templates">Templates</h3>
 
-<p>The current user's permissions are stored in a template variable called <code>\{{ perms }}</code>. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. <code>\{{ perms.catalog.can_mark_returned }}</code> will be <code>True</code> if the user has this permission, and <code>False</code> otherwise. We typically test for the permission using the template <code>{% if %}</code> tag as shown:</p>
+<p>The current user's permissions are stored in a template variable called <code>\{{ perms }}</code>. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. <code>\{{ perms.catalog.can_mark_returned }}</code> will be <code>True</code> if the user has this permission, and <code>False</code> otherwise. We typically test for the permission using the template <code>{% if %}</code> tag as shown:</p>
 
 <pre class="brush: python notranslate">{% if perms.catalog.<code>can_mark_returned</code> %}
     &lt;!-- We can mark a BookInstance as returned. --&gt;
-    &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
+    &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
 {% endif %}
 </pre>
 
@@ -672,7 +672,7 @@ class MyView(PermissionRequiredMixin, View):
 
 <p>Excellent work — you've now created a website that library members can log in into and view their own content and that librarians (with the correct permission) can use to view all loaned books and their borrowers. At the moment we're still just viewing content, but the same principles and techniques are used when you want to start modifying and adding data.</p>
 
-<p>In our next article, we'll look at how you can use Django forms to collect user input, and then start modifying some of our stored data.</p>
+<p>In our next article, we'll look at how you can use Django forms to collect user input, and then start modifying some of our stored data.</p>
 
 <h2 id="See_also">See also</h2>
 
