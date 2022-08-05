@@ -81,84 +81,85 @@ font-size: unset;
 
 <h3 id="Keywords">Ключевые слова</h3>
 
-<p>Keywords are a good way to set the size of fonts on the web. By setting a keyword font size on the body element, you can set relative font-sizing everywhere else on the page, giving you the ability to easily scale the font up or down on the entire page accordingly.</p>
+<p>Ключевые слова — это хороший способ задать размер шрифта. Задав размер шрифта ключевого слова в элементе body, вы можете установить относительный размер шрифта везде на странице, что даст вам возможность легко увеличивать или уменьшать размер шрифта на всей странице соответственно.</p>
 
-<h3 id="Pixels">Pixels</h3>
+<h3 id="Pixels">Пиксели</h3>
 
-<p>Setting the font size in pixel values (<code>px</code>) is a good choice when you need pixel accuracy. A px value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified. The results may vary slightly across browsers, as they may use different algorithms to achieve a similar effect.</p>
+<p>Установка размера шрифта в пикселях (<code>px</code>) хороший выбор, когда вам нужна точность пикселей. Значение px является статическим. Это независимый от операционной системы и кросс-браузерный способ буквально указать браузерам отображать текст точно с указанным количеством пикселей. Результаты могут немного различаться в разных браузерах, поскольку они могут использовать разные алгоритмы для достижения одинакового эффекта.</p>
 
-<p>Font sizing settings can also be used in combination. For example, if a parent element is set to <code>16px</code> and its child element is set to <code>larger</code>, the child element displays larger than the parent element in the page.</p>
+<p>Параметры <code>font-size</code> также можно использовать в комбинациях. Например, если для родительского элемента установлено значение <code>16px</code>, а для дочернего <code>larger</code>, то размер текста дочернего элемента будет больше, чем родительского.</p>
 
-<div class="note"><strong>Note:</strong> Defining font sizes in pixel is <em><a href="https://en.wikipedia.org/wiki/Web_accessibility">not accessible</a></em>, because the user cannot change the font size from the browser. (For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer.) Therefore, avoid using pixels for font sizes if you wish to create an inclusive design.</div>
+<div class="note"><strong>Примечание:</strong> Определение размера шрифта в пикселях не лучшим образом сказывается на <em><a href="https://en.wikipedia.org/wiki/Web_accessibility">доступности</a></em>, потому что пользователь не может изменить размер шрифта из браузера. (Например, пользователи с ограниченным зрением могут захотеть установить размер шрифта намного больше, чем размер, выбранный веб-дизайнером.) Поэтому избегайте использования пикселей для размеров шрифта, если вы хотите создать дизайн доступный пользователям с ограниченными возможностями.</div>
 
-<h3 id="Ems">Ems</h3>
+<h3 id="Ems">Em</h3>
 
-<p>Another way of setting the font size is with <code>em</code> values. The size of an <code>em</code> value is dynamic. When defining the <code>font-size</code> property, an em is equal to the size of the font that applies to the parent of the element in question. If you haven't set the font size anywhere on the page, then it is the browser default, which is probably 16px. So, by default 1em = 16px, and 2em = 32px. If you set a <code>font-size</code> of 20px on the body element, then 1em = 20px and 2em = 40px. Note that the value 2 is essentially a multiplier of the current em size.</p>
+<p>Еще один способ установить размер шрифта - это использование <code>em</code>. Значение <code>em</code> является динамическим. При определении свойства <code>font-size</code>, em равно размеру шрифта, который применяется к родителю рассматриваемого элемента. Если вы нигде на странице не установили <code>font-size</code>, то это будет значение браузера по умолчанию, которое, вероятно, составляет 16px. Итак, по умолчанию 1em = 16px, а 2em = 32px. Если вы установите 20px для элемента body, то 1em = 20px, а 2em = 40px. Обратите внимание, что значение 2, по сути, является множителем текущего размера em.</p>
 
-<p>In order to calculate the em equivalent for any pixel value required, you can use this formula:</p>
+<p>Чтобы вычислить эквивалент <code>em</code> для любого требуемого значения пикселя, вы можете использовать эту формулу:</p>
 
-<pre>em = desired element pixel value / parent element font-size in pixels</pre>
+<pre>em = желаемое значение элемента в пикселях / размер шрифта родительского элемента в пикселях</pre>
 
-<p>For example, suppose the font-size of the body of the page is set to 1em, with the browser standard of 1em = 16px; if the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). Similarly, if you want a font size of 10px, then specify 0.625em (10/16 = 0.625); for 22px, specify 1.375em (22/16).</p>
+<p>Например, предположим, что размер шрифта основной части страницы установлен 1em, а стандарт браузера 1em = 16px; если размер шрифта, который вы хотите, составляет 12px, вы должны указать 0.75em (поскольку 12/16 = 0.75). Точно так же, если вы хотите чтобы размер шрифта был 10px, укажите 0.625em (10/16 = 0.625); для 22px укажите 1.375em (22/16).</p>
 
-<p>A popular technique to use throughout the document is to set the the font-size of the body to 62.5% (that is 62.5% of the default of 16px), which equates to 10px, or 0.625em. Now you can set the font-size for any elements using em units, with an easy-to-remember conversion, by dividing the px value by 10. This way 6px = 0.6em, 8px = 0.8em, 12px = 1.2em, 14px = 1.4em, 16px = 1.6em. For example:</p>
+<p>Популярный метод — установить размер шрифта body в 62.5% (то есть 62.5% от значения по умолчанию 16px), что соответствует 10px или 0.625em. В таком случае вы можете устанавливать размер шрифта для любых элементов, используя единицы em, с легко запоминающимся преобразованием, разделив значение px на 10. Таким образом, 6px = 0.6em, 8px = 0.8em, 12px = 1.2em, 14px = 1.4em, 16px = 1.6em. Например:</p>
 
 <pre class="brush:css">body {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+  font-size: 62.5%; /* font-size 1em = 10px в настройках браузера по умолчанию */
 }
 span {
   font-size: 1.6em; /* 1.6em = 16px */
 }</pre>
 
-<p>The em is a very useful unit in CSS, since it automatically adapts its length relative to the font that the reader chooses to use.</p>
+<p>em — очень полезная единица в CSS, поскольку она автоматически адаптирует свою длину в зависимости от шрифта, который выберет пользователь.</p>
 
-<p>One important fact to keep in mind:  em values compound. Take the following HTML and apply it with the previous CSS above:</p>
+<p>Следует иметь в виду один важный факт: значения em составные. Возьмите следующий HTML-код и примените его к предыдущему CSS:</p>
 
 <pre class="brush: html">&lt;div&gt;
-&lt;span&gt;Outer &lt;span&gt;inner&lt;/span&gt; outer&lt;/span&gt;
+&lt;span&gt;Внешний &lt;span&gt;внутренний&lt;/span&gt; внешний&lt;/span&gt;
 &lt;/div&gt;
 </pre>
 
-<p>The result is:</p>
+<p>Результат:</p>
 
 <p>{{EmbedLiveSample("Ems", 400, 40)}}</p>
 
-<p>Assuming that the browser's default <code>font-size</code> is 16px, the words "outer" would be rendered at 16px, but the word "inner" would be rendered at 25.6px. This is because the inner span's <code>font-size</code> is 1.6 em which is relative to its parent's <code>font-size</code>, which is in turn relative to its parent's <code>font-size</code>. This is often called <strong>compounding</strong>.</p>
+<p>Предполагая, что <code>font-size</code> браузера по умолчанию составляет 16px, слова «внешний» будут отображаться с размером 16px, а слово «внутренний» — 25.6px. Это связано с тем, что <code>font-size</code> внутреннего элемента span составляет 1.6em относительно <code>font-size</code> его родителя, который, в свою очередь, зависит от <code>font-size</code> своего родителя. Это часто называют <strong>смешиванием</strong>.</p>
 
-<h3 id="Rems">Rems</h3>
+<h3 id="Rems">Rem</h3>
 
-<p><code>rem</code> values were invented in order to sidestep the compounding problem. <code>rem</code> values are relative to the root <code>html</code> element, not the parent element. In other words, it lets you specify a font size in a relative fashion without being affected by the size of the parent, thereby eliminating compounding.</p>
+<p><code>rem</code> были разработаны для того, чтобы обойти проблему смешивания. Значения <code>rem</code> зависят от размера шрифта корневого элемента <code>html</code>, а не родительского элемента. Другими словами, <code>rem</code> позволяет вам указать размер шрифта относительным образом, не влияя на размер родителя, тем самым избегая смешивания.</p>
 
-<p>The CSS below is nearly identical to the previous example. The only exception is that the unit has been changed to <code>rem</code>.</p>
+<p>Приведенный ниже CSS почти идентичен предыдущему примеру. Единственным исключением является то, что единица измерения была изменена на <code>rem</code>.</p>
 
 <pre class="brush: css">html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+  font-size: 62.5%; /* font-size 1em = 10px в настройках браузера по умолчанию */
 }
 span {
   font-size: 1.6rem;
 }
 </pre>
 
-<p>Then we apply this CSS to the same HTML, which looks like this:</p>
+<p>Затем мы применяем этот CSS к тому же HTML, который выглядит так:</p>
 
-<pre class="brush: html">&lt;span&gt;Outer &lt;span&gt;inner&lt;/span&gt; outer&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span&gt;Внешний &lt;span&gt;внутренний&lt;/span&gt; внешний&lt;/span&gt;</pre>
 
 <p>{{EmbedLiveSample("Rems", 400, 40)}}</p>
 
-<p>In this example, the words "outer inner outer" are all displayed at 16px (assuming that the browser's font-size has been left at the default value of 16px).</p>
+<p>В этом примере все слова «внешний внутренний внешний» отображаются с размером 16px (при условии, что размер шрифта браузера по умолчанию равен 16px).</p>
 
 <h2 id="Examples">Примеры</h2>
 
 <h3 id="Example_1">Пример 1</h3>
 
-<pre class="brush: css">/* Set paragraph text to be very large. */
+<pre class="brush: css">/* Устанавливает "очень большой" размер
+ * текста для элемента p. */
 p { font-size: xx-large }
 
-/* Set h1 (level 1 heading) text to be 2.5 times the size
- * of the text around it. */
+/* Уставновливает размер текста h1 (заголовок 1 уровня) в 2.5 раза
+ * больше чем текст вокруг него. */
 h1 { font-size: 250% }
 
-/* Sets text enclosed within span tag to be 16px */
+/* Устанавливает размер текста, заключенного в теге span, равным 16px */
 span { font-size: 16px; }
 </pre>
 
@@ -183,13 +184,13 @@ span { font-size: 16px; }
 <span>&lt;h1 class="point"&gt;24 point H1&lt;/h1&gt;
 &lt;h1 class="percent"&gt;200% H1&lt;/h1&gt;</span></pre>
 
-<h4 id="Live_Sample">Live Sample</h4>
+<h4 id="Live_Sample">Живой пример</h4>
 
 <p>{{EmbedLiveSample('Пример_2','600','200')}}</p>
 
 <h2 id="Notes">Примечание</h2>
 
-<p><code>em</code> and <code>ex</code> units on the {{Cssxref("font-size")}} property are relative to the parent element's font size (unlike all other properties, where they're relative to the font size on the element). This means <code>em</code> units and percentages do the same thing for {{Cssxref("font-size")}}.</p>
+<p>Единицы измерения <code>em</code> и <code>ex</code> свойства {{Cssxref("font-size")}} зависят от размера шрифта родительского элемента (в отличие от всех других свойств, которые зависят от размера шрифта элемента). Это означает, что значения <code>em</code> и проценты делают то же самое для {{Cssxref("font-size")}}.</p>
 
 <h2 id="Specifications">Спецификации</h2>
 
