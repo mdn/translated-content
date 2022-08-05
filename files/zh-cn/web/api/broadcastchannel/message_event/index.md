@@ -1,53 +1,57 @@
 ---
-title: 'BroadcastChannel: message event'
+title: BroadcastChannel：message 事件
 slug: Web/API/BroadcastChannel/message_event
-tags:
-  - 事件
-  - 消息
-  - 通信
 translation_of: Web/API/BroadcastChannel/message_event
-original_slug: Web/Events/message
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>当频道收到一条消息时，会在关联的 {{domxref('BroadcastChannel')}} 对象上触发 <code>message</code> 事件。</p>
+当频道收到一条消息时，会在关联的 {{domxref('BroadcastChannel')}} 对象上触发 `message` 事件。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Bubbles</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Cancelable</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Event handler property</th>
-   <td><code><a href="/zh-CN/docs/Web/API/BroadcastChannel/onmessage">onmessage</a></code></td>
-  </tr>
- </tbody>
-</table>
+## 语法
 
-<h2 id="示例">示例</h2>
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-<h3 id="实时示例">实时示例</h3>
+```js
+addEventListener('message', (event) => { })
+onmessage = (event) => { }
+```
 
-<p>在这个例子中，有一个 <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> 作为发送者，当用户点击按钮之后，会广播 <code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code> 中的内容。同时，有两个 <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> 作为接收者，会监听广播的消息，并将结果写入 <code><a href="/en-US/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 元素。</p>
+## 事件类型
 
-<h4 id="发送者">发送者</h4>
+一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;发送者&lt;/h1&gt;
-&lt;label for="message"&gt;输入要广播的信息：&lt;/label&gt;&lt;br/&gt;
-&lt;textarea id="message" name="message" rows="1" cols="40"&gt;Hello&lt;/textarea&gt;
-&lt;button id="broadcast-message" type="button"&gt;开始广播&lt;/button&gt;</pre>
+{{InheritanceDiagram("MessageEvent")}}
 
-<pre class="brush: css">body {
+## 事件属性
+
+_除了下面列出的属性之外，还可以使用父接口 {{domxref("Event")}} 的属性。_
+
+- {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
+  - : 由消息发送者发送的数据。
+- {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
+  - : 一个表示消息发送者来源的字符串。
+- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
+  - : 一个表示事件唯一 ID 的字符串。
+- {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
+  - : 一个*消息事件源*，可以是一个用于表示消息发送者的 {{glossary("WindowProxy")}}、{{domxref("MessagePort")}} 或 {{domxref("ServiceWorker")}} 对象。
+- {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}
+  - : 一个与发送消息（通过频道发送消息或向 SharedWorker 发送消息）的频道相关联的 {{domxref("MessagePort")}} 对象的数组。
+
+## 示例
+
+在这个示例中，有一个 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 作为发送者，当用户点击按钮之后，会广播 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) 中的内容。同时，有两个 `iframe` 作为接收者，会监听广播的消息，并将结果写入 [`<div>`](/zh-CN/docs/Web/HTML/Element/div) 元素。
+
+### 发送者
+
+```html hidden
+<h1>发送者</h1>
+<label for="message">请输入要广播的信息：</label><br/>
+<textarea id="message" name="message" rows="1" cols="40">Hello</textarea>
+<button id="broadcast-message" type="button">广播信息</button>
+```
+
+```css hidden
+body {
      border: 1px solid black;
      padding: .5rem;
      height: 150px;
@@ -70,25 +74,28 @@ label, br {
 button {
     vertical-align: top;
     height: 1.5rem;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
+```js
+const channel = new BroadcastChannel('example-channel');
 const messageControl = document.querySelector('#message');
 const broadcastMessageButton = document.querySelector('#broadcast-message');
 
-broadcastMessageButton.addEventListener('click', () =&gt; {
+broadcastMessageButton.addEventListener('click', () => {
     channel.postMessage(messageControl.value);
 })
-</pre>
+```
 
-<h4 id="接收者_1">接收者 1</h4>
+### 接收者 1
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;接收者 1&lt;/h1&gt;
-&lt;div id="received"&gt;&lt;/div&gt;</pre>
+```html hidden
+<h1>接收者 1</h1>
+<div id="received"></div>
+```
 
-<pre class="brush: css">body {
+```css hidden
+body {
     border: 1px solid black;
     padding: .5rem;
     height: 100px;
@@ -99,21 +106,24 @@ h1 {
     font: 1.6em "Fira Sans",
     sans-serif; margin-bottom: 1rem;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) =&gt; {
+```js
+const channel = new BroadcastChannel('example-channel');
+channel.addEventListener('message', (event) => {
   received.textContent = event.data;
-});</pre>
+});
+```
 
-<h4 id="接收者_2">接收者 2</h4>
+### 接收者 2
 
-<div class="hidden">
-<pre class="brush: html">&lt;h1&gt;接收者 2&lt;/h1&gt;
-&lt;div id="received"&gt;&lt;/div&gt;</pre>
+```html hidden
+<h1>接收者 2</h1>
+<div id="received"></div>
+```
 
-<pre class="brush: css">body {
+```css hidden
+body {
     border: 1px solid black;
     padding: .5rem;
     height: 100px;
@@ -124,34 +134,31 @@ h1 {
     font: 1.6em "Fira Sans", sans-serif;
     margin-bottom: 1rem;
 }
-</pre>
-</div>
+```
 
-<pre class="brush: js">const channel = new BroadcastChannel('example-channel');
-channel.addEventListener('message', (event) =&gt; {
+```js
+const channel = new BroadcastChannel('example-channel');
+channel.addEventListener('message', (event) => {
   received.textContent = event.data;
-});</pre>
+});
+```
 
-<h3 id="结果">结果</h3>
+### 结果
 
-<p>{{ EmbedLiveSample('发送者', '100%', '170px','' ,'' , 'dummy') }}</p>
+{{ EmbedLiveSample('发送者', '100%', 220) }}
 
-<p>{{ EmbedLiveSample('接收者_1', '100%', '150px','' ,'' , 'dummy') }}</p>
+{{ EmbedLiveSample('接收者 1', '100%', 160) }}
 
-<p>{{ EmbedLiveSample('接收者_2', '100%', '150px','' ,'' , 'dummy') }}</p>
+{{ EmbedLiveSample('接收者 2', '100%', 160) }}
 
-<h2 id="规范">规范</h2>
+## 规范
 
 {{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("api.BroadcastChannel.message_event")}}</p>
-
-<h2 id="相关信息">相关信息</h2>
-
-<ul>
- <li>相关事件：<code><a href="/docs/Web/API/BroadcastChannel/messageerror_event">messageerror</a></code></li>
-</ul>
+- 相关事件：[`messageerror`](/zh-CN/docs/Web/API/BroadcastChannel/messageerror_event)。
