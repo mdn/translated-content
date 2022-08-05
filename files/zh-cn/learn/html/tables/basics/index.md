@@ -114,7 +114,7 @@ translation_of: Learn/HTML/Tables/Basics
 
 你可以在 GitHub 上找到上面表格的 [HTML 源码](https://github.com/mdn/learning-area/blob/master/html/tables/basic/personal-pronouns.html)；先去看看，当然也可以[看看这个在线示例](http://mdn.github.io/learning-area/html/tables/basic/personal-pronouns.html)！你也许会注意到一件事情，那就是这个表格看上去可读性不是很好，那是因为现在这个页面上面的那个表格通过 MDN 站点添加了一些样式，而 GitHub 上面的并没有添加。
 
-不要幻想；为了能够让表格在网页上有效，你需要提供一些 CSS 的样式信息，以及尽可能好的 HTML 固定结构。在这个模块中，我们将专注于 HTML 部分；在你完成这里的内容之后，你可以浏览 [样式化表格](/zh-CN/docs/Learn/CSS/Styling_boxes/Styling_tables) 来了解 CSS 的部分。
+不要幻想；为了能够让表格在网页上有效，你需要提供一些 CSS 的样式信息，以及尽可能好的 HTML 固定结构。在这个模块中，我们将专注于 HTML 部分；在你完成这里的内容之后，你可以浏览 [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables) 来了解 CSS 的部分。
 
 虽然在这个模块中我们不会专注于 CSS，但是我们提供了一个较小的 CSS 样式表让你使用，和默认的没有采用任何 CSS 样式的表相比，表格会更加可读。你可以在[这里](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css)获取样式表，以及在 [HTML template](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) 获取 HTML 文件来应用样式表，这些会让你在“测试 HTML 表格”中有一个好的起点。
 
@@ -122,7 +122,7 @@ translation_of: Learn/HTML/Tables/Basics
 
 ### 什么时候你不应该使用 HTML 表格？
 
-HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途。不幸的是，许多人习惯用 HTML 表格来实现网页布局，例如：一行包含头部，一行包含几列内容，一行包含尾部。你可以在我们的[模块：学习可访问性](/zh-CN/docs/Learn/Accessibility)中的[页面布局](/zh-CN/docs/Learn/Accessibility/HTML#页面布局)章节获得更多细节内容和一个示例。这种做法以前是很常见的，因为以前 CSS 在不同浏览器上的兼容性比较糟糕；表格布局现在不太普遍，但您可能仍然会在网络的某些角落看到它们。
+HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途。不幸的是，许多人习惯用 HTML 表格来实现网页布局，例如：一行包含头部，一行包含几列内容，一行包含尾部。你可以在我们的[模块：学习可访问性](/zh-CN/docs/learn/Accessibility)中的[页面布局](/zh-CN/docs/Learn/Accessibility/HTML#页面布局)章节获得更多细节内容和一个示例。这种做法以前是很常见的，因为以前 CSS 在不同浏览器上的兼容性比较糟糕；表格布局现在不太普遍，但您可能仍然会在网络的某些角落看到它们。
 
 简单来说，使用表格布局而不使用 [CSS 布局技巧](/zh-CN/docs/Learn/CSS/CSS_layout) 是很糟糕的。主要的理由有以下几个：
 
