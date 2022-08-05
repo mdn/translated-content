@@ -501,6 +501,7 @@
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
+/ko/docs/Web/API/Media_Streams_API	/ko/docs/Web/API/Media_Capture_and_Streams_API
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/getBattery
 /ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/getBattery
 /ko/docs/Web/API/Navigator.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection

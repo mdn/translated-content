@@ -8731,18 +8731,18 @@
       "Ibadichan"
     ]
   },
-  "Web/API/Media_Session_API": {
-    "modified": "2020-10-15T22:31:42.491Z",
-    "contributors": [
-      "sh7dm"
-    ]
-  },
-  "Web/API/Media_Streams_API/Taking_still_photos": {
+  "Web/API/Media_Capture_and_Streams_API/Taking_still_photos": {
     "modified": "2020-02-17T09:19:46.393Z",
     "contributors": [
       "mechtool",
       "lolyanepizdi",
       "tifund"
+    ]
+  },
+  "Web/API/Media_Session_API": {
+    "modified": "2020-10-15T22:31:42.491Z",
+    "contributors": [
+      "sh7dm"
     ]
   },
   "Web/API/MouseEvent": {

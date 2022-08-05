@@ -16613,7 +16613,7 @@
       "Voulto"
     ]
   },
-  "Web/API/Media_Streams_API": {
+  "Web/API/Media_Capture_and_Streams_API": {
     "modified": "2020-10-15T21:25:08.658Z",
     "contributors": [
       "SphinxKnight",
@@ -16622,7 +16622,7 @@
       "AbrahamT"
     ]
   },
-  "Web/API/Media_Streams_API/Taking_still_photos": {
+  "Web/API/Media_Capture_and_Streams_API/Taking_still_photos": {
     "modified": "2019-03-23T23:34:23.933Z",
     "contributors": [
       "teoli",

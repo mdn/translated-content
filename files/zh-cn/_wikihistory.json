@@ -15657,15 +15657,7 @@
       "webber007"
     ]
   },
-  "Web/API/Media_Source_Extensions_API": {
-    "modified": "2019-06-03T00:30:57.632Z",
-    "contributors": [
-      "758915145",
-      "maicss",
-      "xcffl"
-    ]
-  },
-  "Web/API/Media_Streams_API": {
+  "Web/API/Media_Capture_and_Streams_API": {
     "modified": "2020-10-15T21:43:49.900Z",
     "contributors": [
       "StorytellerF",
@@ -15674,12 +15666,20 @@
       "w05163"
     ]
   },
-  "Web/API/Media_Streams_API/Taking_still_photos": {
+  "Web/API/Media_Capture_and_Streams_API/Taking_still_photos": {
     "modified": "2020-03-10T16:08:27.768Z",
     "contributors": [
       "lxuewu",
       "崮生",
       "Move"
+    ]
+  },
+  "Web/API/Media_Source_Extensions_API": {
+    "modified": "2019-06-03T00:30:57.632Z",
+    "contributors": [
+      "758915145",
+      "maicss",
+      "xcffl"
     ]
   },
   "Web/API/MessageChannel": {

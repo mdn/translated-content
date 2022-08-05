@@ -7020,14 +7020,14 @@
       "maedca"
     ]
   },
-  "Web/API/Media_Streams_API": {
+  "Web/API/Media_Capture_and_Streams_API": {
     "modified": "2019-03-23T23:26:56.897Z",
     "contributors": [
       "palfrei",
       "maedca"
     ]
   },
-  "Web/API/Media_Streams_API/Taking_still_photos": {
+  "Web/API/Media_Capture_and_Streams_API/Taking_still_photos": {
     "modified": "2019-03-23T23:26:57.758Z",
     "contributors": [
       "robertoasq",
