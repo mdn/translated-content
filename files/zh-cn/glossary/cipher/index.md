@@ -13,8 +13,8 @@ translation_of: Glossary/Cipher
 
 密码以处理{{glossary("key", "密钥")}}的方式不同可以分为两类：
 
-- [对称密钥加密算法](https://zh.wikipedia.org/zh-cn/对称密钥加密) 使用同样的密钥进行消息的加密和解密。如果消息有保密性需求，那么密钥也应该进行安全的传送。
-- [公开密钥加密算法](https://zh.wikipedia.org/zh-cn/公开密钥加密) 使用不同的密钥进行消息的加密和解密。
+- [对称密钥加密算法](https://zh.wikipedia.org/zh-cn/对称密钥加密)使用同样的密钥进行消息的加密和解密。如果消息有保密性需求，那么密钥也应该进行安全的传送。
+- [非对称密钥加密算法](https://zh.wikipedia.org/zh-cn/公开密钥加密)使用不同的密钥进行消息的加密和解密。
 
 ## 参见
 
