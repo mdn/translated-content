@@ -29,7 +29,7 @@ translation_of: Web/API/SourceBuffer
 - {{domxref("SourceBuffer.updating")}} {{readonlyInline}}
   - : 一个布尔值，表示 `SourceBuffer` 当前是否正在更新——即当前是否正在进行 {{domxref("SourceBuffer.appendBuffer()")}}、{{domxref("SourceBuffer.appendStream()")}} 或 {{domxref("SourceBuffer.remove()")}} 操作。
 - {{domxref("SourceBuffer.videoTracks")}} {{readonlyInline}}
-  - : 当前包含在 `SourceBuffer` 中的视频列表。
+  - : 当前包含在 `SourceBuffer` 中的视频轨列表。
 
 ## 方法
 
