@@ -59,7 +59,7 @@ _从它的父接口 {{domxref("EventTarget")}} 继承方法。_
 - {{domxref("SourceBuffer.update_event", "update")}}
   - : 在 {{domxref("SourceBuffer.appendBuffer()")}} 或 {{domxref("SourceBuffer.remove()")}} 完成时触发。{{domxref("SourceBuffer.updating")}} 从 `true` 改变为 `false`。这个事件在 `updateend` 之前触发。
 - {{domxref("SourceBuffer.updateend_event", "updateend")}}
-  - : 在 {{domxref("SourceBuffer.appendBuffer()")}} 或 {{domxref("SourceBuffer.remove()")}} 结束后触发。这个事件在 `update` 后被调用。
+  - : 在 {{domxref("SourceBuffer.appendBuffer()")}} 或 {{domxref("SourceBuffer.remove()")}} 结束后触发。这个事件在 `update` 后触发。
 - {{domxref("SourceBuffer.updatestart_event", "updatestart")}}
   - : 当 {{domxref("SourceBuffer.updating")}} 从 `false` 改变为 `true` 时触发。
 
