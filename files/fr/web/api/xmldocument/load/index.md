@@ -32,8 +32,8 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 ```js
 const xmlDoc = document.implementation.createDocument("", "test", null);
 
-function documentLoaded (e) {
-  console.log(new XMLSerializer().serializeToString(e.target)); // Gives querydata.xml contents as string
+function documentLoaded(e) {
+  console.log(new XMLSerializer().serializeToString(e.target)); // Affiche le contenu de querydata.xml sous forme de chaîne
 }
 
 xmlDoc.addEventListener("load", documentLoaded, false);

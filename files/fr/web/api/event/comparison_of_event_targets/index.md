@@ -54,9 +54,9 @@ Voici les cibles à considérer&nbsp;:
   </tbody>
 </table>
 
-### Exemples
+## Exemples
 
-#### HTML
+### HTML
 
 ```html
 <table>
@@ -75,7 +75,7 @@ Voici les cibles à considérer&nbsp;:
 </table>
 ```
 
-#### CSS
+### CSS
 
 ```css
 table {
@@ -96,7 +96,7 @@ thead tr {
 }
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 function handleClicks(e) {
@@ -114,13 +114,13 @@ document.addEventListener('click', handleClicks);
 document.addEventListener('mouseover', handleMouseover);
 ```
 
-#### Résultat
+### Résultat
 
 Cliquer sur le texte dans le tableau vous permettra d'observer la différence entre `explicitOriginalTarget`, `originalTarget`, et `target`.
 
 {{EmbedLiveSample("","",180)}}
 
-### Utilisation de `target` et de `relatedTarget`
+## Utilisation de `target` et de `relatedTarget`
 
 La propriété `relatedTarget` de l'évènement `mouseover` contient le nœud sur lequel la souris était précédemment. Pour l'évènement `mouseout`, elle contient le nœud sur lequel la souris s'est déplacée.
 
@@ -129,9 +129,9 @@ La propriété `relatedTarget` de l'évènement `mouseover` contient le nœud su
 | `mouseover`       | L'objet `EventTarget` sur lequel le dispositif de pointage est entré. | L'objet `EventTarget` que le dispositif de pointage quitte.           |
 | `mouseout`        | L'objet `EventTarget` que le dispositif de pointage quitte.           | L'objet `EventTarget` sur lequel le dispositif de pointage est entré. |
 
-#### Exemple
+### Exemple
 
-##### HTML
+#### HTML
 
 ```html
 <div id="outer">
@@ -141,7 +141,7 @@ La propriété `relatedTarget` de l'évènement `mouseover` contient le nœud su
 <p id="log"/>
 ```
 
-##### CSS
+#### CSS
 
 ```css
 #outer {
@@ -155,7 +155,7 @@ La propriété `relatedTarget` de l'évènement `mouseover` contient le nœud su
 }
 ```
 
-##### JavaScript
+#### JavaScript
 
 ```js
 const inner = document.getElementById("inner");
@@ -173,7 +173,7 @@ inner.addEventListener('mouseover',handleMouseOver);
 inner.addEventListener('mouseout',handleMouseOut);
 ```
 
-##### Résultat
+#### Résultat
 
 Déplacez votre pointeur dans le carré noir et en dehors.
 
