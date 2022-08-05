@@ -15,7 +15,7 @@ translation_of: Web/API/SourceBuffer
 - {{domxref("SourceBuffer.appendWindowEnd")}}
   - : 控制 append window 结束的时间戳。
 - {{domxref("SourceBuffer.appendWindowStart")}}
-  - : 控制 [append window](https://w3c.github.io/media-source/#append-window) 开始的时间戳。这是一个时间戳范围，可以用于过滤哪些媒体数据附加到 `SourceBuffer`。此时间戳范围的编码媒体帧将被附加，而超出此范围的将被忽略。
+  - : 控制 [append window](https://w3c.github.io/media-source/#append-window) 开始的时间戳。这是一个时间戳范围，可以用于过滤附加到 `SourceBuffer` 的媒体数据。此时间戳范围的编码媒体帧将被附加，而超出此范围的将被忽略。
 - {{domxref("SourceBuffer.audioTracks")}} {{readonlyInline}}
   - : 当前包含在 `SourceBuffer` 中的音轨列表。
 - {{domxref("SourceBuffer.buffered")}} {{readonlyInline}}
