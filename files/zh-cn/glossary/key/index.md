@@ -7,7 +7,7 @@ translation_of: Glossary/Key
 
 经加密的消息需要保证即使{{Glossary("cryptosystem","密码体制")}}中除了密钥外的其他部分在公开可见的情况下，依然保持安全性。
 
-在{{Glossary("symmetric-key cryptography", "对称密钥加密算法")}}中，加密与解密过程使用同样的密钥。在{{Glossary("public-key cryptography", "公钥加密算法")}}中，存在一对相互关联的 _公钥_ 和 _私钥_，公钥可以公开获取，私钥需要保密。公钥加密的消息，只有对应的私钥才能解密，反之亦然。
+在{{Glossary("symmetric-key cryptography", "对称密钥加密算法")}}中，加密与解密过程使用同样的密钥。在{{Glossary("public-key cryptography", "公钥加密算法")}}中，存在一对相互关联的*公钥*和*私钥*，公钥可以公开获取，私钥需要保密。公钥加密的消息，只有对应的私钥才能解密，反之亦然。
 
 ## 参见
 
