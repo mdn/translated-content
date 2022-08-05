@@ -1,108 +1,112 @@
 ---
-title: 一般的な Web レイアウトには何が含まれていますか？
+title: 一般的なウェブレイアウトには何が含まれているのか？
 slug: Learn/Common_questions/Common_web_layouts
+tags:
+  - Beginner
+  - CSS
+  - Design
+  - HTML
+  - NeedsActiveLearning
 translation_of: Learn/Common_questions/Common_web_layouts
 ---
-<div>{{IncludeSubnav("/en-US/Learn")}}</div>
+ウェブサイトのページをデザインする際、最も一般的なレイアウトを把握しておくとよいでしょう。
 
-<div class="summary">
-<p>When designing pages for your website, it's good to have an idea of the most common layouts.</p>
-</div>
-
-<table class="learn-box nostripe standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Make sure you've already thought about <a href="/ja/Learn/Thinking_before_coding">what you want to accomplish</a> with your web project.</td>
-  </tr>
-  <tr>
-   <th scope="row">Objective:</th>
-   <td>Learn where to put things on your webpages, and how to put them there.</td>
-  </tr>
- </tbody>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        ウェブプロジェクトで<a href="/ja/docs/Learn/Common_questions/Thinking_before_coding">何を実現したいのか</a>について既に考えていること。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        ウェブページのどこに何を置くか、どのように置くかを学びます。
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Summary">Summary</h2>
+## 概要
 
-<p>There's a reason we talk about web design. You start out with a blank page, and you can take it so many directions. And if you don't have much experience, starting out with a blank page might be a bit scary. We have over 25 years' experience and we'll give you some common rules of thumb to help you design your site.</p>
+ウェブデザインについて語るのには理由があります。ウェブデザインは白紙の状態からスタートし、さまざまな方向へ展開することができます。また、あまり経験がない場合、白紙のページから始めるのは少し怖いかもしれません。 25 年以上の経験を持つ私たちが、サイト設計に役立つ共通の経験則をお教えします。
 
-<p>Even now with the new focus on mobile Web, almost all mainstream webpages are built from these parts:</p>
+モバイルウェブに新たに注目が集まっている現在でも、主流のウェブページはほぼすべてこのパーツから作られています。
 
-<dl>
- <dt>Header</dt>
- <dd>Visible at the top of every page on the site. Contains information relevant to all pages (like site name or logo) and an easy-to-use navigation system.</dd>
- <dt>Main content</dt>
- <dd>The biggest region, containing content unique to the current page.</dd>
- <dt>Stuff on the side</dt>
- <dd>1) Information complementing the main content; 2) information shared among a subset of pages; 3) alternative navigation system. In fact, everything not absolutely required by the page's main content.</dd>
- <dt>Footer</dt>
- <dd>Visible at the bottom of every page on the site. Like the header, contains less prominent global information like legal notices or contact info.</dd>
-</dl>
+- ヘッダー
+  - : サイト内の全ページの上部に表示されます。すべてのページに関連する情報（サイト名やロゴなど）と、使いやすいナビゲーションシステムが含まれています。
+- 本文
+  - : 最大の領域で、現在のページに固有のコンテンツを含みます。
+- サイドにあるもの
+  - : 1) 本文を補完する情報。 2) ページ間で共有される情報。 3) 代替ナビゲーションシステム。実際、すべてがこのページの本文で絶対には必要でないものです。
+- フッター
+  - : 本サイトの各ページの下部に表示されます。ヘッダーと同様、法的な通知や連絡先など、あまり目立たないグローバルな情報が含まれています。
 
-<p>These elements are quite common in all form factors, but they can be laid out different ways. Here are some examples (<strong>1 </strong>represents header, <strong>2 </strong>footer; <strong>A </strong>main content; <strong>B1, B2 </strong>things on the side):</p>
+これらの要素は、すべてのフォームファクターで非常に一般的ですが、さまざまな方法でレイアウトすることができます。以下に例を示します（**1** はヘッダー、 **2** はフッター、 **A** は本文、 **B1, B2** はサイドにあるものを表します）。
 
-<p><strong>1-column layout.</strong> Especially important for mobile browsers so you don't clutter the small screen up.</p>
+**1 列レイアウト**。特にモバイルブラウザでは、小さな画面の中でごちゃごちゃしないようにすることが重要です。
 
-<p><img alt="Example of a 1 column layout: Main on top and asides stacked beneath it." src="https://mdn.mozillademos.org/files/9501/1-col-layout.png" style="height: 100px; width: 160px;"></p>
+![1 列レイアウトの例。本文が一番上で、その下にサイド記事が積み重なっています。](1-col-layout.png)
 
-<p><strong>2-column layout.</strong> Often used to target tablets, since they have medium-size screens.</p>
+**2 列レイアウト**。タブレットは中型の画面であるため、タブレットをターゲットによく使用されます。
 
-<p> <img alt="Example of a basic 2 column layout: One aside on the left column, and main on the right column." src="https://mdn.mozillademos.org/files/9499/2-col-layout-right.png" style="height: 100px; width: 160px;"> <img alt="Example of a basic 2 column layout: One aside on the right column, and main on the left column." src="https://mdn.mozillademos.org/files/9497/2-col-layout-left.png" style="height: 100px; width: 160px;"></p>
+![基本的な 2 列レイアウトの例。左列にサイド記事、右列に本文を配置。](2-col-layout-right.png) ![基本的な 2 列レイアウトの例。右列にサイド記事、左列に本文を配置。](2-col-layout-left.png)
 
-<p><strong>3-column layouts</strong>. Only suitable for desktops with big screens. (Even many desktop-users prefer viewing things in small windows rather than full-screen.)</p>
+**3 列レイアウト**。画面の大きなデスクトップのみに適しています。（ただし、デスクトップユーザーの多くも、全画面表示よりも小さなウィンドウで見ることを好みます）。
 
-<p><img alt="Example of a basic 3 column layout: Aside on the left and right column, Main on the middle column." src="https://mdn.mozillademos.org/files/9491/3-col-layout.png" style="height: 100px; width: 160px;"> <img alt="Another example of a 3 column layout: Aside side by side on the left, Main on the right column." src="https://mdn.mozillademos.org/files/9493/3-col-layout-alt.png" style="height: 100px; width: 160px;"> <img alt="Another example of a 3 column layout: Aside side by side on the right, Main on the left column." src="https://mdn.mozillademos.org/files/9495/3-col-layout-alt2.png" style="height: 100px; width: 160px;"></p>
+![基本的な 3 列レイアウトの例。左右の列にサイド記事、中央の列に本文。](3-col-layout.png) ![もう一つの 3 列レイアウトの例。左側が横並び、右側の列が本文です。](3-col-layout-alt.png) ![もう一つの 3 列レイアウトの例。右側が横並び、左側の列が本文です。](3-col-layout-alt2.png)
 
-<p>The real fun begins when you start mixing them all together:</p>
+それらを一斉に混ぜ合わせるところから、本当の楽しみが始まるのです。
 
-<p><img alt="Example of mixed layout: Main on top and asides beneath it side by side." src="https://mdn.mozillademos.org/files/9503/1-col-layout-alt.png" style="height: 100px; width: 160px;"> <img alt="Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column" src="https://mdn.mozillademos.org/files/9505/2-col-layout-left-alt.png" style="height: 100px; width: 160px;"> <img alt="Example of a mixed layout: one aside on the left column and main in the right column with a aside beneath main." src="https://mdn.mozillademos.org/files/9507/2-col-layout-mix.png" style="height: 100px; width: 160px;"> <img alt="Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside convering the whole second row." src="https://mdn.mozillademos.org/files/9509/2-col-layout-mix-alt.png" style="height: 100px; width: 160px;">…</p>
+![混合レイアウトの例。本文が上、その下にサイド記事が横に並んでいます。](1-col-layout-alt.png) ![混合レイアウトの例。左列に本文、右列にサイド記事を積み重ねたもの。](2-col-layout-left-alt.png) ![混合レイアウトの例。左列にサイド記事、右列に本文を配置し、本文の下にサイド記事を配置したもの。](2-col-layout-mix.png) ![混合レイアウトの例。 1 行目の左側に本文、同じ行の右側に 1 つ目のサイド記事、2 行目に 2 つ目のサイド記事が行全体に配置。](2-col-layout-mix-alt.png)…
 
-<p>These are just examples and you're quite free to lay things out as you want. You may notice that, while the content can move around on the screen, we always keep the header (1) on top and the footer (2) at the bottom. Also, the main content (A) matters most, so give it most of the space.</p>
+これらはあくまで例であり、レイアウトは自由です。画面上でコンテンツが動くこともありますが、常にヘッダー（1）を一番上に、フッター（2）を一番下に置いていることにお気づきでしょうか。また、本文（A）は最も重要なので、ほとんどの空間をそれに充てます。
 
-<p>These are rules of thumb you can draw on. There are complex designs and exceptions, of course. In other articles we'll discuss how to design responsive sites (sites that change depending on the screen size) and sites whose layouts vary between pages. For now, it's best to keep your layout consistent throughout your site.</p>
+これらは、みなさんが描くことのできる経験則です。もちろん、複雑なデザインや例外もあります。他の記事では、レスポンシブなサイト（画面の大きさに従って変化するサイト）や、ページごとにレイアウトが異なるサイトのデザイン方法について説明します。今のところ、サイト全体でレイアウトを統一するのが最善です。
 
-<h2 id="Active_learning">Active learning</h2>
+## アクティブラーニング
 
-<p><em>There is no active learning available yet. <a href="/ja/docs/MDN/Getting_started">Please, consider contributing</a>.</em></p>
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Contribute/Getting_started)。_
 
-<h2 id="Deeper_dive">Deeper dive</h2>
+## より深く掘り下げる
 
-<p>Let's study some more concrete examples taken from well-known websites.</p>
+ここで、有名なウェブサイトから、もう少し具体的な例を取り上げてみましょう。
 
-<h3 id="One-column_layout">One-column layout</h3>
+### 1 列レイアウト
 
-<p><strong><a href="http://www.invisionapp.com/" rel="external">Invision application</a></strong>. A typical one-column layout providing all the information linearly on one page.</p>
+**[Invision application](https://www.invisionapp.com/)**. 一般的な 1 列レイアウトで、ひとつのページにすべての情報を直線的に提供するものです。
 
-<p><img alt="Example of a 1 column layout in the wild" src="https://mdn.mozillademos.org/files/9523/screenshot-product.jpg" style="height: 643px; width: 200px;">        <img alt="1 column layout with header, main content, a stack of aside contents and a footer" src="https://mdn.mozillademos.org/files/9525/screenshot-product-overlay.jpg" style="height: 643px; width: 200px;"></p>
+![1　列レイアウトの例](screenshot-product.jpg)        ![ヘッダー、本文、サイド記事の積み重ね、フッターの1列レイアウト](screenshot-product-overlay.jpg)
 
-<p>Quite straightforward. Just remember, many people will still browse your site from desktops, so make your content usable/readable there as well.</p>
+とても簡単です。ただ、多くの人がデスクトップからサイトを閲覧することに変わりはないので、デスクトップでも使いやすく、読みやすいコンテンツにしてください。
 
-<h3 id="Two-column_layout.">Two-column layout.</h3>
+### 2 列レイアウト
 
-<p><strong><a href="http://abduzeedo.com/typography-mania-261" rel="external">Abduzeedo</a></strong>, a simple blog layout. Blogs usually have two columns, a fat one for the main content and a thin one for stuff on the side (like widgets, secondary navigation levels, and ads).</p>
+**[Abduzeedo](https://abduzeedo.com/typography-mania-261)** はシンプルなブログレイアウトです。ブログは通常、 2 つの列を持っています。太い列は本分用で、細い列は横に並べるもの（ウィジェット、副次ナビゲーションレベル、広告など）用の列です。
 
-<p><img alt="Example of a 2 column layout for a blog" src="https://mdn.mozillademos.org/files/9527/screenshot-blog.jpg" style="height: 643px; width: 200px;">        <img alt="A 2 column layout with the main content on the left column" src="https://mdn.mozillademos.org/files/9529/screenshot-blog-overlay.jpg" style="height: 643px; width: 200px;"></p>
+![Example of a 2 column layout for a blog](screenshot-blog.jpg)        ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
 
-<p>In this example, look at the image (B1) right underneath the header. It's related to the main content, but the main content makes sense without it, so you could think of the image either as main content or as side content. It doesn't really matter. What does matter is, if you put something right under the header, it should either be main content or <em>directly related </em>to the main content.</p>
+この例では、ヘッダーのすぐ下にある画像（B1）を見てください。これは本文と関係がありますが、本文はこれがなくても意味をなすので、この画像を本文と考えることも、横に並んでいるコンテンツと考えることもできます。それはどうでもいいことです。重要なのは、ヘッダーの下に何かを置く場合、それは本文か、本文に直接関連するものでなければならないということです。
 
-<h3 id="It's_a_trap">It's a trap</h3>
+### 罠
 
-<p><strong><a href="http://www.mica.edu/About_MICA.html" rel="external">MICA</a></strong>. This is a bit trickier. It looks like a three-column layout...</p>
+**[MICA](https://www.mica.edu/about-mica/)**. これはちょっとやっかいですね。3 列レイアウトのようです。
 
-<p><img alt="Example of a false 3 columns layout" src="https://mdn.mozillademos.org/files/9531/screenshot-education.jpg" style="height: 267px; width: 200px;">        <img alt="It looks like a 3 columns layout but actually, the aside content is floating around." src="https://mdn.mozillademos.org/files/9533/screenshot-education-overlay.jpg" style="height: 267px; width: 200px;"></p>
+![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
-<p>...but it's not. B1 and B2 float around the main content. Remember that word "float"--it will ring a bell when you start learning about {{Glossary("CSS")}}.</p>
+しかし、そうではありません。 B1 と B2 は本文の周りに浮かんでいるのです。 "float" という単語を覚えておいてください。 {{Glossary("CSS")}} について学び始めると、ピンとくるはずです。
 
-<p>Why would you think it's a three-column layout? Because the image on the top-right is L-shaped, because B1 looks like a column supporting the shifted main content, and because the "M" and "I" of the MICA logo create a vertical line of force.</p>
+なぜ 3 列レイアウトだと思ったのでしょうか？右上の画像が L 字型だから、 B1 が移動した本文の補助列のように見えるから、そして MICA ロゴの "M" と "I" が縦の力線を作成しているからです。
 
-<p>This is a good example of a classic layout supporting some design creativity. Simple layouts are easier to implement, but allow yourself room to express your creativity in this area.</p>
+これは、古典的なレイアウトがデザインの創造性を支えている良い例です。シンプルなレイアウトは実装が簡単ですが、この分野では自分の創造性を発揮する余地を与えてください。
 
-<h3 id="A_much_trickier_layout">A much trickier layout</h3>
+### より巧妙なレイアウト
 
-<p><strong>The <a href="https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini" rel="external">Opera de Paris</a>.</strong></p>
+**The Opera de Paris**.
 
-<p><img alt="An example of a tricky layout." src="https://mdn.mozillademos.org/files/9535/screenshot-opera.jpg" style="height: 424px; width: 200px;">        <img alt="This is a 2 column layout but the header is overlaping the main content." src="https://mdn.mozillademos.org/files/9537/screenshot-opera-overlay.jpg" style="height: 424px; width: 200px;"></p>
+![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
 
-<p>Basically a two-column layout, but you'll notice many tweaks here and there that visually break up the layout. Especially, the header overlaps the image of the main content. The way the curve of the header's menu ties in with the curve at the bottom of the image, the header and main content look like one thing even though they're technically completely different. The Opera example looks more complex than the MICA example, but it's actually easier to implement (all right, "easy" <em>is </em>a relative concept).</p>
+基本的には 2 列レイアウトですが、視覚的にレイアウトを崩すような工夫があちこちに見受けられます。特に、ヘッダーが本文の画像に重なっていること。ヘッダーのメニューの曲線と画像の下部の曲線が結びついて、ヘッダーと本文は技術的には完全に別物であるにもかかわらず、一つのもののように見えます。 Opera の例は MICA の例よりも複雑に見えますが、実際には簡単に実装できます（正確には、「簡単」というのは相対的な概念です）。
 
-<p>As you see, you can craft stunning websites even with just basic layouts. Have a look at your own favorite websites and ask yourself, where's the header, the footer, the main content, and the side content? That will inspire you for your own design and give you good hints for which designs work and which ones don't.</p>
+このように、基本的なレイアウトだけでも、魅力的なウェブサイトを作ることができます。自分の好きなウェブサイトを保有し、ヘッダー、フッター、本文、サイドコンテンツはどこにあるのか、自問してみてください。これはうまくいくデザイン、いかないデザインのヒントになりますよ。
