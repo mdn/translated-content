@@ -1,5 +1,5 @@
 ---
-title: GitHub Pagesを使うには？
+title: GitHub Pages を使うには？
 slug: Learn/Common_questions/Using_Github_pages
 tags:
   - Beginner
@@ -11,98 +11,96 @@ tags:
   - publish
 translation_of: Learn/Common_questions/Using_Github_pages
 ---
-<p class="summary"><a href="https://github.com/">GitHub</a> は "ソーシャル・コーディング" のサイトです。<a href="http://git-scm.com/">Git</a> <strong>バージョン管理システム</strong>のストレージに対して、ソースコードリポジトリーのアップロードを許可します。その後、コードプロジェクトで共同作業を行うことができます。また、システムはオープンソースに自動設定されています。つまり、世界中の誰もが GitHub コードを検索・使用また、そこから学習しコードを改善することができます。他の人のコードでもそれが可能です！この記事は Github の gh-pages 機能を使って、公開コンテンツに関する基本的なガイドを提供します。</p>
+[GitHub](https://github.com/) は「ソーシャルコーディング」のサイトです。 [Git](https://git-scm.com/) **バージョン管理システム**のストレージに対して、ソースコードリポジトリーのアップロードを許可します。その後、コードプロジェクトで共同作業を行うことができます。また、システムはオープンソースに自動設定されています。つまり、世界中の誰もが GitHub コードを検索・使用また、そこから学習しコードを改善することができます。他の人のコードでもそれが可能です！この記事は GitHub の gh-pages 機能を使って、公開コンテンツに関する基本的なガイドを提供します。
 
-<h2 id="Publishing_content" name="Publishing_content">公開コンテンツ</h2>
+## 公開コンテンツ
 
-<p>GitHub は非常に重要で役に立つコミュニティの一つで、Git / GitHub は非常に人気のある<a href="http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">バージョン管理システム</a>です。現在、ほとんどのハイテク企業がワークフローでそれを使用しています。GitHub は <a href="https://pages.github.com/">GitHub ページ</a>と呼ばれる非常に便利な機能を持っています。これはあなたがウェブ上にライブでウェブサイトのコードを公開することを可能にします。</p>
+GitHub は非常に重要で役に立つコミュニティの一つで、Git / GitHub は非常に人気のある[バージョン管理システム](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)です。現在、ほとんどのハイテク企業がワークフローでそれを使用しています。 GitHub は [GitHub Pages](https://pages.github.com/) と呼ばれるとても便利な機能を持っています。これでウェブ上にライブでウェブサイトのコードを公開することが可能です。
 
-<h3 id="Basic_Github_setup" name="Basic_Github_setup">Github の基本設定</h3>
+### GitHub の基本設定
 
-<ol>
- <li>初めに、システムに <a href="http://git-scm.com/downloads">Git をインストール</a>してください。これは GitHub が動作する基盤となるバージョン管理システムのソフトウェアです。</li>
- <li>次に、<a href="https://github.com/join">GitHub アカウント</a>に<a href="/ja/docs/">サインアップ</a>します。それは単純かつ簡単です。</li>
- <li>サインアップしたら、ユーザー名とパスワードを使って <a href="https://github.com">github.com</a>  にログインします。</li>
-</ol>
+1. 初めに、システムに [Git をインストール](http://git-scm.com/downloads)してください。これは GitHub が動作する基盤となるバージョン管理システムのソフトウェアです。
+2. 次に、[GitHub アカウント](https://github.com/join)に[サインアップ](/ja/docs/Web)します。それは単純かつ簡単です。
+3. サインアップしたら、ユーザー名とパスワードを使って [github.com](https://github.com)  にログインします。
 
-<h3 id="Preparing_your_code_for_upload" name="Preparing_your_code_for_upload">ソースコードのアップロード準備</h3>
+### ソースコードのアップロード準備
 
-<p>GitHub リポジトリーに好きなコードを保存できますが、GitHub ページ機能を最大限に活用するには、コードを典型的なウェブサイトとして構成する必要があります。主なエントリーポイントは、<code>index.html</code> という HTML ファイルです。</p>
+GitHub リポジトリーに好きなコードを保存できますが、GitHub Pages 機能を最大限に活用するには、コードを典型的なウェブサイトとして構成する必要があります。主なエントリーポイントは、`index.html` という HTML ファイルです。
 
-<p>次に進む前に、自身のコードディレクトリーを Git リポジトリとして初期化する必要があります。このために、以下のことを実行してください:</p>
+次に進む前に、自身のコードディレクトリーを Git リポジトリーとして初期化する必要があります。このために、以下のことを実行してください:
 
-<ol>
- <li>コマンドラインで <code>test-site</code> のディレクトリー (またはウェブサイトを含むディレクトリーと呼んだもの) を指定します。これには、<code>cd</code> コマンドを使用します (つまり、「ディレクトリーの変更」)。ウェブサイトをデスクトップの <code>test-site</code> というディレクトリーに配置した場合は、次のように入力します:
+1. コマンドラインで `test-site` のディレクトリー (またはウェブサイトを含むディレクトリーと呼んだもの) を指定します。これには、`cd` コマンドを使用します (つまり、「ディレクトリーの変更」)。ウェブサイトをデスクトップの `test-site` というディレクトリーに配置した場合は、次のように入力します。
 
-  <pre class="brush: bash">cd Desktop/test-site</pre>
- </li>
- <li>コマンドラインが、あなたのウェブサイトディレクトリーの中を指しているとき、ディレクトリーを git リポジトリにそのまま変えるように <code>git</code> ツールに指示する、次のコマンドを入力してください:
-  <pre class="brush: bash">git init</pre>
- </li>
-</ol>
+    ```bash
+    cd Desktop/test-site
+    ```
 
-<h4 id="An_aside_on_command_line_interfaces" name="An_aside_on_command_line_interfaces">コマンドラインインターフェイスの余談</h4>
+2. コマンドラインがウェブサイトのディレクトリー内を指しているときに、次のコマンドを入力します。これは `git` ツールに、そのディレクトリーを git リポジトリーにするように指示するものです。
 
-<p>Github にコードをアップロードする最良の方法は、コマンドラインを使用することです。これは、ユーザーインターフェイス内をクリックするのではなく、ファイルを作成・プログラム実行のような動作のためのコマンドを入力するウィンドウです。それは次のようなものです:</p>
+    ```bash
+    git init
+    ```
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9483/command-line.png" style="display: block; height: 478px; margin: 0px auto; width: 697px;"></p>
+#### コマンドラインインターフェイスの余談
 
-<div class="note">
-<p><strong>補足: </strong>コマンドラインに不安がある場合は、<a href="/ja/docs/">Git グラフィカルユーザーインターフェイス</a>を使用して、同じ作業を行うことも検討できます。</p>
-</div>
+GitHub にコードをアップロードする最良の方法は、コマンドラインを使用することです。これは、ユーザーインターフェイス内をクリックするのではなく、ファイルを作成・プログラム実行のような動作のためのコマンドを入力するウィンドウです。それは次のようなものです:
 
-<p><span id="command-line">すべてのオペレーティングシステムには、コマンドラインツールが付属しています：</span></p>
+![](command-line.png)
 
-<ul>
- <li><strong>Windows</strong>: Windows のキーを押して、<em>コマンドプロンプト</em>と入力し、表示されるリストから選択すると、<strong>コマンドプロンプト</strong>にアクセスできます。Windows は、Linux や OS X とは異なる、独自のコマンド規約を持っているので、下記のコマンドは、あなたのマシンでは異なるかもしれません。</li>
- <li><strong>OS X</strong>: <strong>ターミナル</strong>は、<em>アプリケーション &gt; ユーティリティ</em>にあります。</li>
- <li><strong>Linux</strong>: 通常、<em>Ctrl + Alt + T</em> で端末を起動できます。それでもうまくいかない場合は、アプリバーまたはメニューで<strong>ターミナル</strong>を探します。</li>
-</ul>
+> **Note:** コマンドラインに不安がある場合は、[Git グラフィカルユーザーインターフェイス](/ja/docs/Web)を使用して、同じ作業を行うことも検討できます。
 
-<p>これには最初は、少し戸惑うかもしれませんが、心配しないでください — すぐに基本のコツをつかむでしょう。上記のようにコマンドを入力して、Enter キーを押すことで、端末で動作するようにコンピューターに指示します。</p>
+すべてのオペレーティングシステムには、コマンドラインツールが付属しています。
 
-<h3 id="Creating_a_repo_for_your_code" name="Creating_a_repo_for_your_code">ソースコードのリポジトリの作成</h3>
+- **Windows**: Windows のキーを押して、**コマンドプロンプト**と入力し、表示されるリストから選択すると、**コマンドプロンプト**にアクセスできます。Windows は、Linux や OS X とは異なる、独自のコマンド規約を持っているので、下記のコマンドは、あなたのマシンでは異なるかもしれません。
+- **OS X**: **ターミナル**は、**アプリケーション > ユーティリティ**にあります。
+- **Linux**: 通常、**Ctrl + Alt + T** で端末を起動できます。それでもうまくいかない場合は、アプリバーまたはメニューで**ターミナル**を探します。
 
-<ol>
- <li>次に、ファイルを保存するための新しいリポジトリーを作成する必要があります。GitHub ホームページの右上にあるプラス (+) をクリックしてから、<em>新しいリポジトリー</em> を選択します。</li>
- <li>このページの <em>リポジトリー名ボックス</em> に、ソースコードのリポジトリー名 (例: <em>my-repository</em>) を入力します。</li>
- <li>また、説明を入力することで、リポジトリーに何を格納しようとしているのかを記述します。画面は次のようなものです：<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12143/create-new-repo.png" style="display: block; height: 548px; margin: 0px auto; width: 800px;"></li>
- <li><em>Create repository</em> をクリックします。これにより、次のページに移動します:<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12141/github-repo.png" style="display: block; height: 520px; margin: 0px auto; width: 800px;"></li>
-</ol>
+これには最初は、少し戸惑うかもしれませんが、心配しないでください — すぐに基本のコツをつかむでしょう。上記のようにコマンドを入力して、 Enter キーを押すことで、端末で動作するようにコンピューターに指示します。
 
-<h3 id="Uploading_your_files_to_GitHub" name="Uploading_your_files_to_GitHub">GitHub へのファイル格納</h3>
+### ソースコードのリポジトリーの作成
 
-<ol>
- <li>現在のページで、あなたはセクションに興味を持っています... <em>または、コマンドラインから既存のリポジトリーをプッシュします。</em>このセクションに 2 行のコードがリストされているはずです。最初の行全体をコピーしてコマンドラインに貼り付け、Enter キーを押します。コマンドは次のようなものです:
+1. 次に、ファイルを保存するための新しいリポジトリーを作成する必要があります。GitHub ホームページの右上にあるプラス (+) をクリックしてから、**新しいリポジトリー** を選択します。
+2. このページの**リポジトリー名ボックス** に、ソースコードのリポジトリー名 (例:**my-repository**) を入力します。
+3. また、説明を入力することで、リポジトリーに何を格納しようとしているのかを記述します。画面は次のようなものです。
+    ![](create-new-repo.png)
+4. **Create repository** をクリックします。これにより、次のページに移動します。
+    ![](github-repo.png)
 
-  <pre class="copyable-terminal-content js-zeroclipboard-target"><span class="user-select-contain">git remote add origin <span class="js-live-clone-url">https://github.com/chrisdavidmills/my-repository.git</span></span></pre>
- </li>
- <li>次に、以下の 2 つのコマンドを入力し、それぞれの後に Enter キーを押します。これらは GitHub にアップロードするためのコードを用意し、Git にこれらのファイルを管理するように依頼します。
-  <pre class="brush: bash">git add --all
-git commit -m 'adding my files to my repository'</pre>
- </li>
- <li>最後に、表示されている 2 つのコマンドの内、2 番目のコマンドを端末に入力する「または、コマンドラインセクションから既存のリポジトリーをプッシュして」、コードを GitHub にプッシュします：
-  <pre class="brush: bash">git push -u origin master</pre>
- </li>
- <li>ここで、リポジトリーの gh-pages ブランチを作成する必要があります。現在のページを更新すると、以下のようなリポジトリページが表示されます。<em>Branch: <strong>master</strong></em> というボタンを押し、テキスト入力に <em>gh-pages</em> と入力してから <em>Create branch: gh-pages</em> という青いボタンを押す必要があります。これにより、gh-pages という特別な場所に公開されている、特別なコードブランチが作成されます。URL は、<em>username.github.io/my-repository-name</em> の形式を取ります。したがって、この例の場合、URL は <em>https://chrisdavidmills.github.io/my-repository</em> になります。表示されているページは index.html ページです。<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/12145/repo-site.png" style="display: block; margin: 0 auto;"></li>
- <li>新しいブラウザータブで、GitHub Pages のウェブアドレスに移動すると、サイトがオンラインなります！友人にそれを電子メールで送って、あなたの習熟を披露してください。</li>
-</ol>
+### GitHub へのファイルのアップロード
 
-<div class="note">
-<p><strong>注</strong>: 困った場合は、<a href="https://pages.github.com/">GitHub Pages ホームページ</a>も大いに役立ちます。</p>
-</div>
+1. 現在のページのこの節、*既存のリポジトリーをコマンドラインからプッシュする*ことに興味があるわけですね。この節に 2 行のコードが並んでいるはずです。最初の行全体をコピーしてコマンドラインに貼り付け、 Enter キーを押してください。コマンドは次のようなものです。
 
-<h3 id="Further_GitHub_knowledge" name="Further_GitHub_knowledge">GitHub の詳細</h3>
+    ```bash
+    git remote add origin https://github.com/chrisdavidmills/my-repository.git
+    ```
 
-<p>テストサイトにさらに変更を加えて、GitHub にアップロードしたい場合は、以前と同じようにファイルに変更を加えるだけです。それから、以下のコマンドを入力して (それぞれ Enter キーを押して) GitHub にそれらの変更をプッシュする必要があります:</p>
+2. 次に、次の 2 つのコマンドを入力して、それぞれの後に Enter キーを押します。これらは、コードを GitHub にアップロードする準備をし、これらのファイルを管理するように Git に依頼するものです。
 
-<pre>git add --all
+    ```bash
+    git add --all
+    git commit -m 'adding my files to my repository'
+    ```
+
+3. 最後に、表示されている 2 つのコマンドの内、2 番目のコマンドを端末に入力する、または、コマンドラインセクションから既存のリポジトリーをプッシュして」、コードを GitHub にプッシュします。
+
+    ```bash
+    git push -u origin main
+    ```
+
+4. ここで、リポジトリーの GitHub Pages を有効にする必要があります。これを行うには、リポジトリーのトップページから _Settings_ を選び、左のサイドバーから _Pages_ を選択します。 *Source* の下にある "main" ブランチを選びます。ページが更新されるはずです。
+5. GitHub Pages セクションに再度アクセスすると、"Your site is ready to be published at https\://xxxxxx." という行が表示されるはずです。
+6. この URL をクリックすると、ホームページが `index.html` という名前であれば、例のライブバージョンに移動するはずです - このエントリーポイントに既定値で移動します。もし、あなたのサイトのエントリーポイントが何か別のもの、例えば `myPage.html` と呼ばれている場合は、 `https://xxxxxx/myPage.html` にアクセスする必要があります。
+
+### GitHub の詳細
+
+テストサイトにさらに変更を加えて、GitHub にアップロードしたい場合は、以前と同じようにファイルに変更を加えるだけです。それから、以下のコマンドを入力して (それぞれ Enter キーを押して) GitHub にそれらの変更をプッシュする必要があります。
+
+```
+git add --all
 git commit -m 'another commit'
-git push</pre>
+git push
+```
 
-<p><em>another commit</em> をより適切なメッセージに置換して、今行った変更を説明できます。</p>
+_another commit_ をより適切なメッセージに置き換えることで、今何を変更したかを記述することができます。
 
-<p>私たちは、Git の表面を引っ掻いてみたにすぎません。詳細については、<a href="https://help.github.com/index.html">GitHub ヘルプサイト </a>から始めてください。</p>
+私たちは、Git の表面に触れたにすぎません。詳細については、 [Git と GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を参照してください。
