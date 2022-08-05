@@ -148,7 +148,6 @@ const flattened = [...flatten(arr, Infinity)];
 // [1, 2, 3, 4, 5, 6]
 ```
 
-
 ## Spécifications
 
 {{Specifications}}
