@@ -11,7 +11,7 @@ translation_of: Glossary/Cipher
 
 密码通常以两种方式工作，或者在连续的数据块、缓冲区中作为[分块密码](https://zh.wikipedia.org/zh-cn/分组密码)使用，或者在数据流（通常是音频或视频流）中作为[流密码](https://zh.wikipedia.org/zh-cn/流密码)使用。
 
-密码依处理{{glossary("key", "密钥")}}的方式不同可以分为两类：
+密码以处理{{glossary("key", "密钥")}}的方式不同可以分为两类：
 
 - [对称密钥加密算法](https://zh.wikipedia.org/zh-cn/对称密钥加密) 使用同样的密钥进行消息的加密和解密。如果消息有保密性需求，那么密钥也应该进行安全的传送。
 - [公开密钥加密算法](https://zh.wikipedia.org/zh-cn/公开密钥加密) 使用不同的密钥进行消息的加密和解密。
