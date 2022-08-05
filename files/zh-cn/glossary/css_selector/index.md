@@ -84,7 +84,3 @@ div.warning {
 
   - [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) `:`
   - [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) `::`
-
-- 定义参考
-
-  - {{SpecName("CSS3 Selectors")}}
