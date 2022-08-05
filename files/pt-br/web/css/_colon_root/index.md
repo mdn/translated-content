@@ -5,17 +5,27 @@ translation_of: Web/CSS/:root
 ---
 {{CSSRef}}
 
-## Sumário
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)  **`:root`** se equipara à raiz de uma árvore, que por sua vez representa o documento. Aplicado ao HTML, `:root` representa o elemento {{HTMLElement("html")}}  e é idêntico ao seletor `html`, exceto que sua [especificidade](/pt-BR/docs/Web/CSS/Specificity) é mais alta.
 
-A [pseudo-classe CSS](/en-US/docs/Web/CSS/Pseudo-classes) **`:root`** se equipara à raíz de uma árvore, que por sua vez representa o documento. Aplicado ao HTML, `:root` representa o elemento {{HTMLElement("html")}} e é identico ao seletor html, exceto que sua [especificidade](/pt-BR/docs/Web/CSS/Specificity) é mais alta.
+```css
+/* Seleciona o elemento raiz do documento:
+   <html> no caso do HTML */
+:root {
+  background: yellow;
+}
+```
 
 ## Sintaxe
 
-{{csssyntax}}
+```
+:root
+```
 
-## Exemplo
+## Exemplos
 
-Usar `:root` pode ser útil para declarar uma [variável CSS](/en-US/docs/Web/CSS/Using_CSS_variables) global:
+### Declarando variáveis CSS globais
+
+O`:root` pode ser útil para declarar uma [variável CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties) global:
 
 ```css
 :root {
@@ -26,15 +36,16 @@ Usar `:root` pode ser útil para declarar uma [variável CSS](/en-US/docs/Web/CS
 
 ## Especificações
 
-| Especificação                                                            | Status                               | Comentário        |
-| ------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('CSS4 Selectors', '#root-pseudo', ':root')}} | {{Spec2('CSS4 Selectors')}} | Sem mudança       |
-| {{SpecName('CSS3 Selectors', '#root-pseudo', ':root')}} | {{Spec2('CSS3 Selectors')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{CompatibilityTable}}
+{{Compat}}
 
-<div id="compat-desktop"><table class="compat-table"><tbody><tr><th>Feature</th><th>Chrome</th><th>Firefox (Gecko)</th><th>Internet Explorer</th><th>Opera</th><th>Safari</th></tr><tr><td>Basic support</td><td>1</td><td>{{CompatGeckoDesktop("1.7")}}</td><td>9</td><td>9.5</td><td>1.0</td></tr></tbody></table></div>
+## Veja também
 
-<div id="compat-mobile"><table class="compat-table"><tbody><tr><th>Feature</th><th>Android</th><th>Firefox Mobile (Gecko)</th><th>IE Mobile</th><th>Opera Mobile</th><th>Safari Mobile</th></tr><tr><td>Basic support</td><td>{{CompatUnknown}}</td><td>{{CompatUnknown}}</td><td>{{CompatUnknown}}</td><td>{{CompatUnknown}}</td><td>{{CompatUnknown}}</td></tr></tbody></table></div>
+- {{HTMLElement("html")}}
+- {{domxref("Document.rootElement")}}
+- {{domxref("Node.getRootNode()")}}
+- {{domxref("Element.shadowRoot")}}
+- {{domxref("ShadowRoot")}}
