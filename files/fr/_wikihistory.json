@@ -13068,13 +13068,6 @@
       "loella16"
     ]
   },
-  "Web/API/Document/popupNode": {
-    "modified": "2019-04-19T19:08:29.481Z",
-    "contributors": [
-      "wbamberg",
-      "loella16"
-    ]
-  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2019-03-18T21:17:09.649Z",
     "contributors": [
@@ -13208,12 +13201,6 @@
     "contributors": [
       "Hell_Carlito",
       "Akio08"
-    ]
-  },
-  "Web/API/Document/tooltipNode": {
-    "modified": "2019-03-18T21:39:13.843Z",
-    "contributors": [
-      "loella16"
     ]
   },
   "Web/API/Document/touchend_event": {
