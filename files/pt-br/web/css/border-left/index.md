@@ -102,7 +102,7 @@ div {
 
 {{Specifications}}
 
-## Compatibilidade com o browser
+## Compatibilidade com navegadores
 
 {{Compat}}
 
