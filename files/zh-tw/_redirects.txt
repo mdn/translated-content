@@ -587,6 +587,7 @@
 /zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/HTMLOrForeignElement/dataset	/zh-TW/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-TW/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/zh-TW/docs/Web/API/Media_Streams_API	/zh-TW/docs/Web/API/Media_Capture_and_Streams_API
 /zh-TW/docs/Web/API/NavigatorLanguage/language	/zh-TW/docs/orphaned/Web/API/NavigatorLanguage/language
 /zh-TW/docs/Web/API/NavigatorOnLine	/zh-TW/docs/orphaned/Web/API/NavigatorOnLine
 /zh-TW/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/zh-TW/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
