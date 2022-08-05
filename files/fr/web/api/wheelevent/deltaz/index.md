@@ -42,5 +42,5 @@ console.log(syntheticEvent.deltaZ);
 
 ## Voir aussi
 
-- {{ event("wheel") }}
-- {{domxref("WheelEvent")}}
+- L'évènement [`wheel`](/fr/docs/Web/API/Element/wheel_event)
+- [`WheelEvent`](/fr/docs/Web/API/WheelEvent)
