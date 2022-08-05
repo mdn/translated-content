@@ -17,7 +17,7 @@ Les navigateurs courants fournissent des outils de développement intégrés, qu
 
 ### Culture générale
 
-- {{interwiki("wikipedia","Environnement_de_développement","Environnement de développement")}} sur Wikipedia
+- [Environnement de développement](https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement) sur Wikipédia
 
 ### Références techniques
 

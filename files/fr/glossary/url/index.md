@@ -17,7 +17,7 @@ Les URL peuvent également être utilisées pour le transfert de fichiers ({{Glo
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "URL")}} sur Wikipédia
+- [URL](https://fr.wikipedia.org/wiki/Uniform_Resource_Locator) sur Wikipédia
 
 ### En savoir plus
 

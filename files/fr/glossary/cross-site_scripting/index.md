@@ -31,6 +31,6 @@ Les attaques XSS peuvent être classées en 3 catégories : stockée (aussi appe
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Cross-site_scripting")}} sur Wikipedia
+- [<i lang="en">Cross-site_scripting</i>](https://fr.wikipedia.org/wiki/Cross-site_scripting) sur Wikipédia
 - [Cross-site scripting sur OWASP](https://www.owasp.org/index.php/XSS) (en)
 - [Un autre article à propos de Cross-site scripting](http://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/) (en)
