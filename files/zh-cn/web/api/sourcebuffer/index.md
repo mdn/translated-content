@@ -23,7 +23,7 @@ translation_of: Web/API/SourceBuffer
 - {{domxref("SourceBuffer.mode")}}
   - : 控制如何处理 `SourceBuffer` 中媒体片段的顺序，即它们是否可以按任何顺序被加载，或者他们必须保持一个严格的顺序。
 - {{domxref("SourceBuffer.textTracks")}} {{readonlyInline}}
-  - : 当前包含在 `SourceBuffer` 中的文本列表。
+  - : 当前包含在 `SourceBuffer` 中的文本轨列表。
 - {{domxref("SourceBuffer.timestampOffset")}}
   - : 控制应用于随后附加到 `SourceBuffer` 的媒体片段内的时间戳偏移量。
 - {{domxref("SourceBuffer.updating")}} {{readonlyInline}}
