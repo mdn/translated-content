@@ -7,15 +7,15 @@ translation_of: Web/CSS/border-left
 
 ## Resumo
 
-O propriedade **`border-left`** [CSS](/en/CSS "CSS") é um atalho que define os valores de {{ Cssxref("border-left-color") }}, {{ Cssxref("border-left-style") }}, e {{ Cssxref("border-left-width") }}. Estas propriedades descrevem a borda esquerda de elementos.
+A propriedade **`border-left`** [CSS](/en/CSS "CSS") é um atalho que define os valores de {{ Cssxref("border-left-color") }}, {{ Cssxref("border-left-style") }}, e {{ Cssxref("border-left-width") }}. Estas propriedades descrevem a borda esquerda de elementos.
 
-Os três valores da propriedade estenográfica pode ser especificada em qualquer ordem, e um ou dois deles podem ser omitidos.
+Os três valores da propriedade estenográfica podem ser especificados em qualquer ordem, e um ou dois deles podem ser omitidos.
 
-<div class="note">Tal como acontece com todas as propriedades abreviadas, fronteira esquerda sempre define os valores de todas as propriedades que podem ser definidas, ainda que não são especificadas. Ele define aqueles que não são especificados para os valores padrão. Isso significa que:<pre class="brush: css">  border-left-style: dotted;
+<div class="note">Tal como acontece com todas as propriedades abreviadas, a borda esquerda sempre define os valores de todas as propriedades que possam ser definidas, ainda que não tenham sido especificadas. Ela define aqueles que não forem especificados para os valores padrão. Isso significa que:<pre class="brush: css">  border-left-style: dotted;
   border-left: thick green;
 </pre><p>é o mesmo que</p><pre class="brush: css">  border-left-style: dotted;
   border-left: none thick green;
-</pre><p>e o valor de {{ Cssxref("border-left-style") }} dado antes <code>border-left é ignorado</code>.</p><p>Uma vez que o valor padrão de {{ Cssxref("border-left-style") }} é <code>none</code>, não especificando o border-style parte do valor significa que a propriedade especifica o valor padrão que é none e não significa nenhum border.</p></div>
+</pre><p>e o valor de {{ Cssxref("border-left-style") }} dado antes de <code>border-left</code> é ignorado.</p><p>Uma vez que o valor padrão de {{ Cssxref("border-left-style") }} é <code>none</code>, não especificando o border-style parte do valor significa que a propriedade especifica o valor padrão que é none e não significa nenhum border.</p></div>
 
 {{cssinfo}}
 
