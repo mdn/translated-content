@@ -1,15 +1,7 @@
 ---
 title: 使用宏
-slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
-tags:
-  - Guide
-  - Kuma
-  - KumaScript
-  - MDN Meta
-  - Structures
-translation_of: MDN/Structures/Macros
-original_slug: MDN/Structures/Macros
+slug: MDN/Writing_guidelines/Page_structures/Macros
+translation_of: MDN/Writing_guidelines/Page_structures/Macros
 ---
 {{MDNSidebar}}
 
@@ -19,13 +11,13 @@ original_slug: MDN/Structures/Macros
 
 ## 宏是如何实现的
 
-MDN 使用的宏基于运行于服务器上的 JavaScript 代码来实现的，并由 [Node.js](https://nodejs.org/) 解释执行。在此之上，已经实现了一个丰富的工具库，让宏可以与这个平台以及其中的内容进行交互。
+MDN 使用的宏基于运行于服务器上的 [JavaScript](/zh-CN/docs/Web/JavaScript) 代码来实现的，并由 [Node.js](https://nodejs.org/) 解释执行。在此之上，我们已经实现了一个丰富的工具库，让宏可以与这个平台以及其中的内容进行交互。
 
 ## 在文章中使用宏
 
 要在文章中实际使用宏，只需将对宏的调用和可能需要的参数写在一对双括号中，如下：
 
-```js
+```plain
 \{{macroname(parameter-list)}}
 ```
 
@@ -41,4 +33,4 @@ MDN 使用的宏基于运行于服务器上的 JavaScript 代码来实现的，�
 
 宏既可以用来做一些简单的工作，比如插入更大的文本块或用 MDN 的替换文章中的内容。也可以通过搜索站点的各个部分，设置输出样式和添加链接来构建整个内容索引。
 
-你可以在[常用的宏](/zh-CN/docs/MDN/Structures/Macros/Commonly-used_macros)页面看到一些我们最常用到的宏，还可以在我们 Github 的仓库中，浏览[所有可用的宏](https://github.com/mdn/yari/tree/master/kumascript/macros)。大多数宏顶部的注释中，都有内置的文档帮助你了解它的作用。
+你可以在[常用的宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)页面看到一些我们最常用到的宏，还可以在我们 Github 的仓库中，浏览[所有可用的宏](https://github.com/mdn/yari/tree/main/kumascript/macros)。大多数宏顶部的注释中，都有内置的文档帮助你了解它的作用。

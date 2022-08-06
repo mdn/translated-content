@@ -45055,46 +45055,6 @@
       "Sheppy"
     ]
   },
-  "conflicting/MDN/Writing_guidelines/Page_structures": {
-    "modified": "2020-09-30T12:57:46.743Z",
-    "contributors": [
-      "chrisdavidmills",
-      "shiguang",
-      "wbamberg",
-      "ArcherGrey",
-      "maksyuki",
-      "wth",
-      "jswisher"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures/Live_samples": {
-    "modified": "2019-03-18T21:43:40.910Z",
-    "contributors": [
-      "wbamberg",
-      "ZweiZhao"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692": {
-    "modified": "2020-09-30T12:57:48.040Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "mhy",
-      "jiahui"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
-    "modified": "2020-09-30T12:57:46.893Z",
-    "contributors": [
-      "chrisdavidmills",
-      "PYGC",
-      "wangfangping",
-      "wbamberg",
-      "ufoqhmdt",
-      "Ende93",
-      "jswisher"
-    ]
-  },
   "conflicting/MDN/Writing_guidelines/Writing_style_guide": {
     "modified": "2020-11-14T07:38:19.734Z",
     "contributors": [
