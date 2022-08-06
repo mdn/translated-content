@@ -13,7 +13,7 @@ browser-compat: javascript.operators.in
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p> <strong><code>in</code> 연산자</strong>는 명시된 속성이 명시된 객체에 존재하면 <code>true</code>를 반환합니다.</p>
+<p> <strong><code>in</code> 연산자</strong>는 명시된 속성이 명시된 객체에 존재하면 <code>true</code>를 반환합니다.</p>
 
 <h2 id="구문">구문</h2>
 
@@ -33,7 +33,7 @@ browser-compat: javascript.operators.in
 
 <h2 id="설명">설명</h2>
 
-<p> 다음 예제들은 <code>in</code> 연산자의 용도를 보여 줍니다.</p>
+<p> 다음 예제들은 <code>in</code> 연산자의 용도를 보여 줍니다.</p>
 
 <pre class="brush:js">// 배열
 var trees = new Array("redwood", "bay", "cedar", "oak", "maple");
@@ -54,7 +54,7 @@ var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year:
 "model" in myCar   // true를 반환합니다.
 </pre>
 
-<p> 당신은 반드시 <code>in</code> 연산자의 오른쪽에 객체를 명시하여야 합니다. 예컨대 당신은 <code>String</code> 생성자로 만들어진 문자열을 명시할 수 있지만 문자열 리터럴은 명시할 수 없습니다.</p>
+<p> 당신은 반드시 <code>in</code> 연산자의 오른쪽에 객체를 명시하여야 합니다. 예컨대 당신은 <code>String</code> 생성자로 만들어진 문자열을 명시할 수 있지만 문자열 리터럴은 명시할 수 없습니다.</p>
 
 <pre class="brush:js">var color1 = new String("green");
 "length" in color1 // true를 반환합니다.
@@ -63,9 +63,9 @@ var color2 = "coral";
 "length" in color2 // color2는 String 객체가 아니기에 오류를 냅니다.
 </pre>
 
-<h3 id="제거되었거나_정의되지_않은_속성에_대하여_in_연산자_사용하기">제거되었거나 정의되지 않은 속성에 대하여 <code>in</code> 연산자 사용하기</h3>
+<h3 id="제거되었거나_정의되지_않은_속성에_대하여_in_연산자_사용하기">제거되었거나 정의되지 않은 속성에 대하여 <code>in</code> 연산자 사용하기</h3>
 
-<p> <code>in</code> 연산자는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code> 연산자로 제거된 속성에 대하여 <code>false</code>를 반환합니다.</p>
+<p> <code>in</code> 연산자는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code> 연산자로 제거된 속성에 대하여 <code>false</code>를 반환합니다.</p>
 
 <pre class="brush:js">var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
 delete myCar.company;
@@ -76,7 +76,7 @@ delete trees[3];
 3 in trees; // false를 반환합니다.
 </pre>
 
-<p> 만약 당신이 속성을 {{jsxref("Global_Objects/undefined", "undefined")}}로 설정하였는데 그것을 제거하지 않으면, <code>in</code> 연산자는 그 속성에 대하여 <code>true</code>를 반환합니다.</p>
+<p> 만약 당신이 속성을 {{jsxref("Global_Objects/undefined", "undefined")}}로 설정하였는데 그것을 제거하지 않으면, <code>in</code> 연산자는 그 속성에 대하여 <code>true</code>를 반환합니다.</p>
 
 <pre class="brush:js">var myCar = {company: "Lamborghini", model: "Lamborghini Veneno Roadster", year: 2014};
 myCar.company = undefined;
@@ -90,7 +90,7 @@ trees[3] = undefined;
 
 <h3 id="상속된_속성">상속된 속성</h3>
 
-<p> <code>in</code> 연산자는 프로토타입 체인에 의하여 접근할 수 있는 속성에 대하여 <code>true</code>를 반환합니다.</p>
+<p> <code>in</code> 연산자는 프로토타입 체인에 의하여 접근할 수 있는 속성에 대하여 <code>true</code>를 반환합니다.</p>
 
 <pre class="brush:js">"toString" in {}; // true를 반환합니다.
 </pre>
@@ -109,5 +109,5 @@ trees[3] = undefined;
  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code></li>
  <li>{{jsxref("Object.prototype.hasOwnProperty()")}}</li>
  <li>{{jsxref("Reflect.has()")}}</li>
- <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties" title="/en-US/docs/Enumerability_and_ownership_of_properties">속성의, 소유와 셀 수 있는 성질</a></li>
+ <li><a href="/en-US/docs/Enumerability_and_ownership_of_properties" title="/en-US/docs/Enumerability_and_ownership_of_properties">속성의, 소유와 셀 수 있는 성질</a></li>
 </ul>

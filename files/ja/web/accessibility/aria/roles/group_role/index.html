@@ -45,27 +45,27 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 <p class="p1">以下のスニペットは、HTML ソースコードに group ロールを直接追加する方法を示しています。</p>
 
 <pre class="brush: html">&lt;div id="tree1" role="tree" tabindex="-1"&gt;
-  &lt;div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true"&gt;
-    &lt;img role="presentation" tabindex="-1" src="images/treeExpanded.gif" /&gt;
-    &lt;span role="treeitem" tabindex="0"&gt;動物&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div id="animalGroup" role="group"&gt;
-    &lt;div id="birds" role="treeitem"&gt;
-      &lt;span tabindex="-1"&gt;鳥&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false"&gt;
-      &lt;img role="presentation" tabindex="-1" src="images/treeContracted.gif" /&gt;
-      &lt;span role="treeitem" tabindex="0"&gt;猫&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div id="catGroup" role="group"&gt;
-      &lt;div id="siamese" role="treeitem"&gt;
-        &lt;span tabindex="-1"&gt;シャム猫&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="tabby" role="treeitem"&gt;
-        &lt;span tabindex="-1"&gt;虎猫&lt;/span&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  &lt;div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true"&gt;
+    &lt;img role="presentation" tabindex="-1" src="images/treeExpanded.gif" /&gt;
+    &lt;span role="treeitem" tabindex="0"&gt;動物&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div id="animalGroup" role="group"&gt;
+    &lt;div id="birds" role="treeitem"&gt;
+      &lt;span tabindex="-1"&gt;鳥&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false"&gt;
+      &lt;img role="presentation" tabindex="-1" src="images/treeContracted.gif" /&gt;
+      &lt;span role="treeitem" tabindex="0"&gt;猫&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="catGroup" role="group"&gt;
+      &lt;div id="siamese" role="treeitem"&gt;
+        &lt;span tabindex="-1"&gt;シャム猫&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="tabby" role="treeitem"&gt;
+        &lt;span tabindex="-1"&gt;虎猫&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <h4 class="p1" id="Example_2_Using_the_group_role_with_a_HTML_drop-down_menu" name="Example_2_Using_the_group_role_with_a_HTML_drop-down_menu">例 2: HTML ドロップダウンメニューでの group ロールの使用</h4>
@@ -73,19 +73,19 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 <p class="p2">以下のスニペットは、HTML ソースコードに group ロールを直接追加する方法を示しています。</p>
 
 <pre class="brush: html">&lt;div role="menu"&gt;
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;受信トレイ&lt;/li&gt;
-    &lt;li role="menuitem"&gt;アーカイブ&lt;/li&gt;
-    &lt;li role="menuitem"&gt;ごみ箱&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;カスタムフォルダ 1&lt;/li&gt;
-    &lt;li role="menuitem"&gt;カスタムフォルダ 2&lt;/li&gt;
-    &lt;li role="menuitem"&gt;カスタムフォルダ 3&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;ul role="group"&gt;
-    &lt;li role="menuitem"&gt;新規フォルダ&lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;受信トレイ&lt;/li&gt;
+    &lt;li role="menuitem"&gt;アーカイブ&lt;/li&gt;
+    &lt;li role="menuitem"&gt;ごみ箱&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;カスタムフォルダ 1&lt;/li&gt;
+    &lt;li role="menuitem"&gt;カスタムフォルダ 2&lt;/li&gt;
+    &lt;li role="menuitem"&gt;カスタムフォルダ 3&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul role="group"&gt;
+    &lt;li role="menuitem"&gt;新規フォルダ&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="Working_Examples" name="Working_Examples">動作する例</h4>
@@ -121,5 +121,5 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 <h3 class="p1" id="Additional_resources" name="Additional_resources">その他のリソース</h3>
 
 <ul class="ul1">
- <li class="li2">ARIA Best Practices – Directories, Groups and Regions: <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading">http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading</a> （該当項目は削除されています。）</li>
+ <li class="li2">ARIA Best Practices – Directories, Groups and Regions: <a class="external" href="http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading">http://www.w3.org/TR/wai-aria-practices/#kbd_layout_groupheading</a> （該当項目は削除されています。）</li>
 </ul>

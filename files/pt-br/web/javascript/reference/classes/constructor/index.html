@@ -25,25 +25,25 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <p>Um construtor pode usar a palavra reservada <em>super</em> para se referir ao construtor da classe pai (<strong>superior</strong>).</p>
 
-<p>Um construtor padrão será usado se você não especificá-lo<em>.</em></p>
+<p>Um construtor padrão será usado se você não especificá-lo<em>.</em></p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
 <h3 id="Usando_o_método_constructor">Usando o método <em>constructor</em></h3>
 
-<p>O trecho de código foi fornecido por <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">exemplo de classes</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).</p>
+<p>O trecho de código foi fornecido por <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">exemplo de classes</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>).</p>
 
 <pre class="brush: js notranslate">class Quadrado extends Poligono {
   constructor(comprimento) {
-    // super chama o construtor da classe pai que vai atribuir comprimento para
-    // os atributos comprimento e altura herdados pela nossa classe filha Quadrado
+    // super chama o construtor da classe pai que vai atribuir comprimento para
+    // os atributos comprimento e altura herdados pela nossa classe filha Quadrado
     super(comprimento, comprimento);
     // Nas classes filhas, <em>super()</em> deve ser chamado antes de usar o <em>this</em>. Sem ele
-    // vai ocorrer um erro de referência. O <em>this</em> agora se refere a classe filha Quadrado
+    // vai ocorrer um erro de referência. O <em>this</em> agora se refere a classe filha Quadrado
     this.nome = 'Quadrado';
   }
 
-  // os atributos a seguir são herdados da classe pai Poligono: altura, comprimento e area.
+  // os atributos a seguir são herdados da classe pai Poligono: altura, comprimento e area.
 
   get area() {
     return this.altura * this.comprimento;
@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <h3 id="Construtores_padrão_constructors">Construtores padrão (<em>constructors</em>)</h3>
 
-<p>Um construtor padrão será usado pela classe caso nenhum seja especificado. Para as classes de base o construtor padrão é:</p>
+<p>Um construtor padrão será usado pela classe caso nenhum seja especificado. Para as classes de base o construtor padrão é:</p>
 
 <pre class="brush: js notranslate">constructor() {} //construtor criado por padrão
 </pre>
@@ -92,7 +92,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p><br>
- Download da versão Firefox para testes (Nightly) em: https://nightly.mozilla.org/</p>
+ Download da versão Firefox para testes (Nightly) em: https://nightly.mozilla.org/</p>
 
 <div id="compat-desktop">
 <table class="compat-table">
@@ -168,7 +168,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expressão</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaração</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> expressão</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class"><code>class</code> declaração</a></li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a></li>
 </ul>

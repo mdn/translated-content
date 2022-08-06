@@ -59,7 +59,7 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 
 ### 简单请求
 
-某些请求不会触发 {{Glossary("Preflight_request","CORS 预检请求")}}。本文称这样的请求为“简单请求”，请注意，该术语并不属于 {{SpecName('Fetch')}}（其中定义了 CORS）规范。若请求 **满足所有下述条件**，则该请求可视为“简单请求”：
+某些请求不会触发 {{Glossary("Preflight_request","CORS 预检请求")}}。本文称这样的请求为“简单请求”，请注意，该术语并不属于 [Fetch](https://fetch.spec.whatwg.org/)（其中定义了 CORS）规范。若请求 **满足所有下述条件**，则该请求可视为“简单请求”：
 
 - 使用下列方法之一：
 
@@ -336,9 +336,9 @@ Content-Type: text/plain
 
 #### 预检请求和凭据
 
-CORS 预检请求不能包含凭据。预检请求的 _响应_ 必须指定 `Access-Control-Allow-Credentials: true` 来表明可以携带凭据进行实际的请求。
+CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Access-Control-Allow-Credentials: true` 来表明可以携带凭据进行实际的请求。
 
-> **备注：** 一些企业认证服务要求在预检请求时发送 TLS 客户端证书，这违反了 {{SpecName("Fetch","#cors-protocol-and-credentials")}} 的规范。
+> **备注：** 一些企业认证服务要求在预检请求时发送 TLS 客户端证书，这违反了 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 的规范。
 >
 > Firefox 87 允许通过在设置中设定 `network.cors_preflight.allow_client_cert` 为 `true`（{{bug(1511151)}}）来允许这种不规范的行为。基于 chromium 的浏览器目前总是在 CORS 预检请求中发送 TLS 客户端证书（[Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)）。
 
@@ -479,13 +479,11 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 规范
 
-| Specification                                                    | Status                   | Comment                                                                          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | New definition; supplants [W3C CORS](https://www.w3.org/TR/cors/) specification. |
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## 参见
 

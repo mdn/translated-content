@@ -16,4 +16,4 @@ translation_of: Glossary/NAT
 ### 通用知识
 
 - [WebRTC 协议](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
-- {{interwiki("wikipedia", "NAT")}} 在 Wikipedia
+- [NAT](https://zh.wikipedia.org/wiki/NAT) 在 Wikipedia

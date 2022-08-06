@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/Multiplication_assignment
 ---
 {{jsSidebar("Operators")}}
 
-乗算代入演算子 (`*=`) は、変数に右のオペランドの値を乗算し、結果を変数に代入します。
+乗算代入演算子 (`*=`) は、変数に右のオペランドの値を乗算し、結果を変数に代入します。
 
 {{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
 

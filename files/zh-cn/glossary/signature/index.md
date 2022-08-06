@@ -12,4 +12,4 @@ translation_of: Glossary/Signature
 
 ## 了解更多
 
-- {{Interwiki("wikipedia", "Signature_(disambiguation)", "Signature")}} on Wikipedia
+- [Signature](https://zh.wikipedia.org/wiki/Signature_(disambiguation)) on Wikipedia

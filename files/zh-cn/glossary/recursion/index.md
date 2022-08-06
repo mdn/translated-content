@@ -12,5 +12,5 @@ translation_of: Glossary/Recursion
 
 ### 通用信息
 
-- Wikipedia 页面：{{Interwiki("wikipedia", "Recursion (computer science)")}}
+- Wikipedia 页面：[Recursion (computer science)](https://zh.wikipedia.org/wiki/Recursion_(computer_science))
 - [更多关于 JavaScript 中递归的细节](/zh-CN/docs/Web/JavaScript/Guide/Functions#Recursion)

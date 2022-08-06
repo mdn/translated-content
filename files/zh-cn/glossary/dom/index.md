@@ -17,7 +17,7 @@ DOM 并不是天生就被规范好了的，它是浏览器开始实现{{Glossary
 
 ### 一般的知识
 
-- {{interwiki("wikipedia", "Document_Object_Model", "The Document Object Model")}} 在维基百科上的解释
+- [The Document Object Model](https://zh.wikipedia.org/wiki/Document_Object_Model) 在维基百科上的解释
 
 ### 技术信息
 

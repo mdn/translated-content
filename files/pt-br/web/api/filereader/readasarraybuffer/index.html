@@ -14,7 +14,7 @@ translation_of: Web/API/FileReader/readAsArrayBuffer
 ---
 <p>{{APIRef("File API")}}</p>
 
-<p>O método <strong><code>readAsArrayBuffer() </code></strong>do objeto {{domxref("FileReader")}} é utilizado para ler o conteúdo de um {{domxref("Blob")}} ou {{domxref("File")}} específico. Quando a operação de leitura é finalizada, o {{domxref("FileReader.readyState","readyState")}} torna-se <code>DONE </code>(finalizado), e o evento {{event("loadend")}} é acionado. Então, o atributo {{domxref("FileReader.result","result")}} retorna um {{domxref("ArrayBuffer")}} representando os dados do arquivo.</p>
+<p>O método <strong><code>readAsArrayBuffer() </code></strong>do objeto {{domxref("FileReader")}} é utilizado para ler o conteúdo de um {{domxref("Blob")}} ou {{domxref("File")}} específico. Quando a operação de leitura é finalizada, o {{domxref("FileReader.readyState","readyState")}} torna-se <code>DONE </code>(finalizado), e o evento {{event("loadend")}} é acionado. Então, o atributo {{domxref("FileReader.result","result")}} retorna um {{domxref("ArrayBuffer")}} representando os dados do arquivo.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/FileReader/readAsArrayBuffer
 
 <dl>
  <dt><code>blob</code></dt>
- <dd>O {{domxref("Blob")}} ou {{domxref("File")}} que será lido.</dd>
+ <dd>O {{domxref("Blob")}} ou {{domxref("File")}} que será lido.</dd>
 </dl>
 
 <h2 id="Especificações">Especificações</h2>
@@ -94,11 +94,11 @@ translation_of: Web/API/FileReader/readAsArrayBuffer
 </table>
 </div>
 
-<p>[1] Antes da versão 2.0 beta 7 do Gecko (Firefox 4.0 beta 7), todos os parâmetros do {{domxref("Blob")}} abaixo eram parâmetros do {{domxref("File")}}; a atualização foi realizada pra corresponder corretamente à especificação. Antes da versão 13.0 do Gecko {{geckoRelease("13.0")}} A propriedade <code>.error do FileReader</code> retornava um objeto {{domxref("FileError")}}. Esta interface foi removida e <code>FileReader.error</code> agora retorna o objeto {{domxref("DOMError")}} como definido na última versão da documentação do FileAPI.</p>
+<p>[1] Antes da versão 2.0 beta 7 do Gecko (Firefox 4.0 beta 7), todos os parâmetros do {{domxref("Blob")}} abaixo eram parâmetros do {{domxref("File")}}; a atualização foi realizada pra corresponder corretamente à especificação. Antes da versão 13.0 do Gecko {{geckoRelease("13.0")}} A propriedade <code>.error do FileReader</code> retornava um objeto {{domxref("FileError")}}. Esta interface foi removida e <code>FileReader.error</code> agora retorna o objeto {{domxref("DOMError")}} como definido na última versão da documentação do FileAPI.</p>
 
-<p>[2] IE9 possui <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</p>
+<p>[2] IE9 possui <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</p>
 
-<p>[3] Opera <a href="http://www.opera.com/docs/specs/presto28/file/">suporta parcialmente</a> na versão 11.1.</p>
+<p>[3] Opera <a href="http://www.opera.com/docs/specs/presto28/file/">suporta parcialmente</a> na versão 11.1.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 

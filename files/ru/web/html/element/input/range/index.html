@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/input/range
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}</div>
 
-<p class="hidden">Исходный код данного примера расположен в GitHub репозитории. Если вы хотите внести внести изменения в привер, пожалуйста склонируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам пул реквест.</p>
+<p class="hidden">Исходный код данного примера расположен в GitHub репозитории. Если вы хотите внести внести изменения в привер, пожалуйста склонируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам пул реквест.</p>
 
 <p>Если используемый браузер не поддерживает тип <code>range</code>, он будет отображаться как input<code>{{HTMLElement('input/text', 'text')}}.</code></p>
 
@@ -43,13 +43,13 @@ translation_of: Web/HTML/Element/input/range
 
 <h3 id="Валидация">Валидация</h3>
 
-<p>Для этого поля нет доступного паттерна валидации, но следующая валидация реализованы следующие проверки</p>
+<p>Для этого поля нет доступного паттерна валидации, но следующая валидация реализованы следующие проверки</p>
 
 <ul>
  <li>Если значение {{htmlattrxref("value", "input")}} содержит что-то что не может быть конвертированно в число с плавающей точкой, произойдёт ошибка некорректного ввода.</li>
- <li>Значение не может быть меньше чем {{htmlattrxref("min", "input")}}. По умолчанию: 0.</li>
- <li> Значение не может быть больше чем {{htmlattrxref("max", "input")}}. По умолчанию: 100.</li>
- <li>Значение должно кратно {{htmlattrxref("step", "input")}}. По умолчанию: 1.</li>
+ <li>Значение не может быть меньше чем {{htmlattrxref("min", "input")}}. По умолчанию: 0.</li>
+ <li> Значение не может быть больше чем {{htmlattrxref("max", "input")}}. По умолчанию: 100.</li>
+ <li>Значение должно кратно {{htmlattrxref("step", "input")}}. По умолчанию: 1.</li>
 </ul>
 
 <h3 id="sect1"></h3>
@@ -94,15 +94,15 @@ translation_of: Web/HTML/Element/input/range
 
 <p id="htmlattrdeflist">{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
 
-<p>Смотрите <a href="/ru/docs/Web/HTML/Element/Input/range$edit#A_range_control_with_hash_marks">управление диапазоном с помощью решётки</a> ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.</p>
+<p>Смотрите <a href="/ru/docs/Web/HTML/Element/Input/range$edit#A_range_control_with_hash_marks">управление диапазоном с помощью решётки</a> ниже, для примера того, как параметры диапазона обозначаются в поддерживаемых браузерах.</p>
 
 <h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
 
-<p>Это значение должно быть больше или равно значению атрибута  <code>min</code>.</p>
+<p>Это значение должно быть больше или равно значению атрибута  <code>min</code>.</p>
 
 <h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
 
-<p>Наименьшее значение в диапазоне допустимых значений. Если {{htmlattrxref("value", "input")}}, введённый в элемент, меньше этого значения, то элемент не проходит  <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">проверку ограничения</a>. Если значение атрибута <code>min</code> не является числом, то элемент не имеет максимального значения.</p>
+<p>Наименьшее значение в диапазоне допустимых значений. Если {{htmlattrxref("value", "input")}}, введённый в элемент, меньше этого значения, то элемент не проходит  <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">проверку ограничения</a>. Если значение атрибута <code>min</code> не является числом, то элемент не имеет максимального значения.</p>
 
 <p>Это значение должно быть меньше или равно значению атрибута <code>max</code>.</p>
 
@@ -110,7 +110,7 @@ translation_of: Web/HTML/Element/input/range
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
-<p>По умолчанию шаг для инпута с типом <code>range</code> равен 1, допустим ввод только целых чисел, <em>если </em> база шага не является целым; например, если вы установили <code>min</code> на -10 и <code>value</code> на 1.5, то <code>step</code>  1 позволит только такие значения как 1.5, 2.5, 3.5,... в положительном направлении и -0.5, -1.5, -2.5,... в отрицательном направлении.</p>
+<p>По умолчанию шаг для инпута с типом <code>range</code> равен 1, допустим ввод только целых чисел, <em>если </em> база шага не является целым; например, если вы установили <code>min</code> на -10 и <code>value</code> на 1.5, то <code>step</code>  1 позволит только такие значения как 1.5, 2.5, 3.5,... в положительном направлении и -0.5, -1.5, -2.5,... в отрицательном направлении.</p>
 
 <h3 id="Не_стандартные_атрибуты">Не стандартные атрибуты</h3>
 
@@ -124,18 +124,18 @@ translation_of: Web/HTML/Element/input/range
  <tbody>
   <tr>
    <td><code><a href="#orient">orient</a></code></td>
-   <td>Устанавливает ориентацию слайдера. <strong>Firefox only.</strong></td>
+   <td>Устанавливает ориентацию слайдера. <strong>Firefox only.</strong></td>
   </tr>
  </tbody>
 </table>
 
 <dl>
  <dt>{{htmlattrdef("orient")}} {{non-standard_inline}}</dt>
- <dd id="orient-include">Похоже на  -moz-orient не стандартное CSS-свойство влияющее на {{htmlelement('progress')}} и{{htmlelement('meter')}} элементы, <code>orient</code> атрибут определяем ориентацию слайдера. Значение <code>horizontal</code>, значит что слайдер будет отображён горизонтально, а <code>vertical</code>- что вертикально .</dd>
+ <dd id="orient-include">Похоже на  -moz-orient не стандартное CSS-свойство влияющее на {{htmlelement('progress')}} и{{htmlelement('meter')}} элементы, <code>orient</code> атрибут определяем ориентацию слайдера. Значение <code>horizontal</code>, значит что слайдер будет отображён горизонтально, а <code>vertical</code>- что вертикально .</dd>
 </dl>
 
 <div class="blockIndicator note">
-<p>Note: Следующие атрибуты не применимы: <code>accept</code>, <code>alt</code>, <code>checked</code>, <code>dirname</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code>, <code>height</code>, <code>maxlength</code>, <code>minlength</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>readonly</code>, <code>required</code>, <code>size</code>, <code>src</code>, и <code>width</code>. Каждый из них будет проигнорирован в случае употребления.</p>
+<p>Note: Следующие атрибуты не применимы: <code>accept</code>, <code>alt</code>, <code>checked</code>, <code>dirname</code>, <code>formaction</code>, <code>formenctype</code>, <code>formmethod</code>, <code>formnovalidate</code>, <code>formtarget</code>, <code>height</code>, <code>maxlength</code>, <code>minlength</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>readonly</code>, <code>required</code>, <code>size</code>, <code>src</code>, и <code>width</code>. Каждый из них будет проигнорирован в случае употребления.</p>
 </div>
 
 <h2 id="Examples">Examples</h2>
@@ -147,7 +147,7 @@ translation_of: Web/HTML/Element/input/range
 <ul>
  <li>Аудио-контроллеры громкости и баланса, или контроллеры фильтра.</li>
  <li>Контроллеры настройки цвета, такие как цветовые каналы, прозрачность, яркость, и т.д.</li>
- <li>Контроллеры игровой настройки, такие как  сложность, дальность видимости, размер мира и т.д.</li>
+ <li>Контроллеры игровой настройки, такие как  сложность, дальность видимости, размер мира и т.д.</li>
  <li>Длина пароля для сгенерированных паролей менеджера паролей.</li>
 </ul>
 
@@ -282,14 +282,14 @@ translation_of: Web/HTML/Element/input/range
 </table>
 
 <div class="note">
-<p><strong>Примечание</strong>: В настоящее время ни один браузер полностью не поддерживает эти возможности. Firefox не поддерживает хэш-метки и лейблы, например, в то время как Chrome поддерживает хэш-метки, но не поддерживает лейблы. Версия 66 (66.0.3359.181) Chrome поддерживает лейблы, но тэг {{htmlelement("datalist")}} должен быть стилизован с помощью  CSS, так как его свойство {{cssxref("display")}} по умолчанию -  <code>none</code>, тем самым скрывая лейблы.</p>
+<p><strong>Примечание</strong>: В настоящее время ни один браузер полностью не поддерживает эти возможности. Firefox не поддерживает хэш-метки и лейблы, например, в то время как Chrome поддерживает хэш-метки, но не поддерживает лейблы. Версия 66 (66.0.3359.181) Chrome поддерживает лейблы, но тэг {{htmlelement("datalist")}} должен быть стилизован с помощью  CSS, так как его свойство {{cssxref("display")}} по умолчанию -  <code>none</code>, тем самым скрывая лейблы.</p>
 </div>
 
 <h3 id="Изменение_ориентации">Изменение ориентации</h3>
 
-<p>По умолчанию, если браузер отображает инпут диапазона как слайдер, он отобразит его так чтоб ползунок ездил в право и в лево. Когда поддержка браузерами будет реализовано, можно будет делать слайдер вертикальным, так чтобы ползунок мог ездить вверх и вниз. Ни один из наиболее используемых браузеров не имплементировал это пока. (Firefox {{bug(981916)}}, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=341071">Chrome bug 341071</a>). также, возможно, <a href="https://github.com/whatwg/html/issues/4177">следующий баг под вопросом</a>.</p>
+<p>По умолчанию, если браузер отображает инпут диапазона как слайдер, он отобразит его так чтоб ползунок ездил в право и в лево. Когда поддержка браузерами будет реализовано, можно будет делать слайдер вертикальным, так чтобы ползунок мог ездить вверх и вниз. Ни один из наиболее используемых браузеров не имплементировал это пока. (Firefox {{bug(981916)}}, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=341071">Chrome bug 341071</a>). также, возможно, <a href="https://github.com/whatwg/html/issues/4177">следующий баг под вопросом</a>.</p>
 
-<p>В реальности, мы можем сделать слайдер вертикальным используя CSS трансформации, или применяя уникальный метод для каждого браузера в отдельности, включая: настройки {{cssxref('appearance')}}  для <code>slider-vertical</code>, использование нестандартной ориентации <code>orient</code> в Firefox,или изменение text direction для Internet Explorer и Edge</p>
+<p>В реальности, мы можем сделать слайдер вертикальным используя CSS трансформации, или применяя уникальный метод для каждого браузера в отдельности, включая: настройки {{cssxref('appearance')}}  для <code>slider-vertical</code>, использование нестандартной ориентации <code>orient</code> в Firefox,или изменение text direction для Internet Explorer и Edge</p>
 
 <p>Рассмотрим контроллер диапазона:</p>
 
@@ -322,7 +322,7 @@ translation_of: Web/HTML/Element/input/range
 <p>{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}</p>
 </div>
 
-<p>К сожалению, большинство браузеров сейчас не поддерживают вертикальные контроллы напрямую.</p>
+<p>К сожалению, большинство браузеров сейчас не поддерживают вертикальные контроллы напрямую.</p>
 
 <h3 id="transform_rotate-90deg">transform: rotate(-90deg)</h3>
 
@@ -331,7 +331,7 @@ translation_of: Web/HTML/Element/input/range
 <div id="Orientation_sample3">
 <h4 id="HTML_2">HTML</h4>
 
-<p>В HTML нужно добавить обёртку вокруг {{HTMLElement("input")}}  - {{HTMLElement("div")}}, что позволит нам исправить макет после выполнения трансформации (т.к. трансформация автоматически не влияет на макет страницы):</p>
+<p>В HTML нужно добавить обёртку вокруг {{HTMLElement("input")}}  - {{HTMLElement("div")}}, что позволит нам исправить макет после выполнения трансформации (т.к. трансформация автоматически не влияет на макет страницы):</p>
 
 <pre class="brush: html">&lt;div class="slider-wrapper"&gt;
   &lt;input type="range" min="0" max="11" value="7" step="1"&gt;
@@ -359,13 +359,13 @@ translation_of: Web/HTML/Element/input/range
   transform: rotate(-90deg);
 }</pre>
 
-<p>Размеры контроллера это набор из 150 пикселей длины и 20 пикселей высоты. Маржинги установлены на  0 и {{cssxref("transform-origin")}} смещается в середину пространства, на котором вращается слайдер; поскольку слайдер имеет ширину 150 пикселей, он вращается через прямоугольник по 150 пикселей с каждой стороны. Смещение начала координат на 75px по каждой оси означает, что мы будем вращаться вокруг центра этого пространства. Наконец, мы поворачиваем против часовой стрелки на 90°. Результат: инпут range, который вращается таким образом, что максимальное значение находится сверху, а минимальное снизу.</p>
+<p>Размеры контроллера это набор из 150 пикселей длины и 20 пикселей высоты. Маржинги установлены на  0 и {{cssxref("transform-origin")}} смещается в середину пространства, на котором вращается слайдер; поскольку слайдер имеет ширину 150 пикселей, он вращается через прямоугольник по 150 пикселей с каждой стороны. Смещение начала координат на 75px по каждой оси означает, что мы будем вращаться вокруг центра этого пространства. Наконец, мы поворачиваем против часовой стрелки на 90°. Результат: инпут range, который вращается таким образом, что максимальное значение находится сверху, а минимальное снизу.</p>
 
 <p>{{EmbedLiveSample("Orientation_sample3", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}</p>
 
 <h3 id="appearance_property">appearance property</h3>
 
-<p>Свойство {{cssxref('appearance')}} имеет нестандартное значение <code>slider-vertical</code> , которое делает слайдер вертикальным.</p>
+<p>Свойство {{cssxref('appearance')}} имеет нестандартное значение <code>slider-vertical</code> , которое делает слайдер вертикальным.</p>
 
 <h4 id="HTML_3">HTML</h4>
 
@@ -386,11 +386,11 @@ translation_of: Web/HTML/Element/input/range
 
 <h3 id="orient_attribute">orient attribute</h3>
 
-<p>В Firefox, реализовано нестандартное свойство <code>orient</code>.</p>
+<p>В Firefox, реализовано нестандартное свойство <code>orient</code>.</p>
 
 <h4 id="HTML_4">HTML</h4>
 
-<p>Используем тот же HTML что и в предыдущем примере и добавляем атрибут со значением <code>vertical</code>:</p>
+<p>Используем тот же HTML что и в предыдущем примере и добавляем атрибут со значением <code>vertical</code>:</p>
 
 <pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
@@ -399,7 +399,7 @@ translation_of: Web/HTML/Element/input/range
 
 <h3 id="writing-mode_bt-lr">writing-mode: bt-lr;</h3>
 
-<p>Свойство {{cssxref('writing-mode')}} может быть использовано для специальных эффектов </p>
+<p>Свойство {{cssxref('writing-mode')}} может быть использовано для специальных эффектов </p>
 
 <h4 id="HTML_5">HTML</h4>
 
@@ -410,7 +410,7 @@ translation_of: Web/HTML/Element/input/range
 
 <h4 id="CSS_4">CSS</h4>
 
-<p>Берём только те инпуты что имеют тип range, меняем writing mode с default на <code>bt-lr</code>, или bottom-to-top и left-to-right:</p>
+<p>Берём только те инпуты что имеют тип range, меняем writing mode с default на <code>bt-lr</code>, или bottom-to-top и left-to-right:</p>
 
 <pre class="brush: css">input[type="range"] {
   writing-mode: bt-lr;
@@ -424,14 +424,14 @@ translation_of: Web/HTML/Element/input/range
 
 <h4 id="HTML_6">HTML</h4>
 
-<p>Оставим <code>orient</code> атрибут  со значением <code>vertical</code> для Firefox:</p>
+<p>Оставим <code>orient</code> атрибут  со значением <code>vertical</code> для Firefox:</p>
 
 <pre class="brush: html">&lt;input type="range" min="0" max="11" value="7" step="1" orient="vertical"&gt;
 </pre>
 
 <h4 id="CSS_5">CSS</h4>
 
-<p>Берём только те инпуты что имеют тип range, меняем writing mode с default на <code>bt-lr</code>, или bottom-to-top и left-to-right, для Edge и Internet Explorer, и добавляем <code>-webkit-appearance: slider-vertical</code> для всех -webkit-based браузеров:</p>
+<p>Берём только те инпуты что имеют тип range, меняем writing mode с default на <code>bt-lr</code>, или bottom-to-top и left-to-right, для Edge и Internet Explorer, и добавляем <code>-webkit-appearance: slider-vertical</code> для всех -webkit-based браузеров:</p>
 
 <pre class="brush: css">input[type="range"] {
   writing-mode: bt-lr;

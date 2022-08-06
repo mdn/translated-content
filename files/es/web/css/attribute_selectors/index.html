@@ -18,7 +18,7 @@ a[title] {
   color: purple;
 }
 
-/* Elementos &lt;a&gt; con un href que coincida con "https://example.org" */
+/* Elementos &lt;a&gt; con un href que coincida con "https://example.org" */
 a[href="https://example.org"] {
   color: green;
 }
@@ -35,12 +35,12 @@ a[href^="#"] {
 
 /* Elementos &lt;a&gt; con un href que termine en ".org" */
 a[href$=".org"] {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* Elementos &lt;a&gt; cuyo atributo class contenga la palabra "logo" */
 a[class~="logo"] {
-  padding: 2px;
+  padding: 2px;
 }
 </pre>
 
@@ -56,13 +56,13 @@ a[class~="logo"] {
  <dt><code>[<em>attr</em>|=<em>value</em>]</code></dt>
  <dd>Selecciona los elementos cuyo atributo <em>attr</em> tenga exactamente el valor <em>value</em> o empiece por <em>value</em> seguido de un guión <code>-</code> (U+002D). Se puede usar para coincidencias de subcódigos en otros idiomas.</dd>
  <dt><code>[<em>attr</em>^=<em>value</em>]</code></dt>
- <dd>Selecciona los elementos cuyo atributo <em>attr</em> tenga un valor prefijado  por <em>value</em>.</dd>
+ <dd>Selecciona los elementos cuyo atributo <em>attr</em> tenga un valor prefijado  por <em>value</em>.</dd>
  <dt><code>[<em>attr</em>$=<em>value</em>]</code></dt>
  <dd>Selecciona los elementos cuyo atributo <em>attr</em> cuyo valor tiene el sufijo (seguido) de <em>value</em>.</dd>
  <dt><code>[<em>attr</em>*=<em>value</em>]</code></dt>
  <dd>Selecciona los elementos cuyo atributo <em>attr</em> tenga un valor que contenga <em>value</em>.</dd>
  <dt id="case-insensitive"><code>[<em>attr</em> <em>operator</em> <em>value</em> i]</code></dt>
- <dd>Agregar una <code>i</code> (o <code>I</code>) antes del corchete de cierre hace que el valor sea comparado sin distinguir entre mayúsculas y minúsculas (para caracteres dentro del rango ASCII).</dd>
+ <dd>Agregar una <code>i</code> (o <code>I</code>) antes del corchete de cierre hace que el valor sea comparado sin distinguir entre mayúsculas y minúsculas (para caracteres dentro del rango ASCII).</dd>
  <dt id="case-insensitive"><code>[<em>attr</em> <em>operator</em> <em>value</em> s]</code> {{Experimental_Inline}}</dt>
  <dd>Agregar una <code>s</code> (o <code>S</code>) antes del corchete de cierre hace que el valor sea comparado distinguiendo entre mayúsculas y minúsculas (para caracteres dentro del rango ASCII).</dd>
 </dl>
@@ -163,7 +163,7 @@ div[data-lang="zh-TW"] {
 
 <p>{{SeeCompatTable}}</p>
 
-<p><span class="tlid-translation translation" lang="es"><span title="">La especificación HTML requiere que el atributo </span></span>{{htmlattrxref("type", "input")}}<span class="tlid-translation translation" lang="es"><span title=""> distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento </span></span>{{HTMLElement("input")}}<span class="tlid-translation translation" lang="es"><span title="">, tratando de usar selectores de atributos con el atributo </span></span>{{htmlattrxref("type", "ol")}}<span class="tlid-translation translation" lang="es"><span title=""> de una </span></span>{{HTMLElement("ol", "lista ordenada")}}<span class="tlid-translation translation" lang="es"><span title=""> no funciona sin el modificador de mayúsculas y minúsculas</span><span title="">.</span></span></p>
+<p><span class="tlid-translation translation" lang="es"><span title="">La especificación HTML requiere que el atributo </span></span>{{htmlattrxref("type", "input")}}<span class="tlid-translation translation" lang="es"><span title=""> distinga entre mayúsculas y minúsculas debido a que se usa principalmente en el elemento </span></span>{{HTMLElement("input")}}<span class="tlid-translation translation" lang="es"><span title="">, tratando de usar selectores de atributos con el atributo </span></span>{{htmlattrxref("type", "ol")}}<span class="tlid-translation translation" lang="es"><span title=""> de una </span></span>{{HTMLElement("ol", "lista ordenada")}}<span class="tlid-translation translation" lang="es"><span title=""> no funciona sin el modificador de mayúsculas y minúsculas</span><span title="">.</span></span></p>
 
 <h4 id="CSS_3">CSS</h4>
 
@@ -236,7 +236,7 @@ con el atributo "type"
 <h2 id="Ver_también">Ver también</h2>
 
 <ul>
- <li>Seleccionando un solo elemento:{{domxref("Document.querySelector()")}}, {{domxref("DocumentFragment.querySelector()")}}, o {{domxref("Element.querySelector()")}}</li>
- <li>Seleccionar todos los elementos coincidentes:{{domxref("Document.querySelectorAll()")}}, {{domxref("DocumentFragment.querySelectorAll()")}}, o {{domxref("Element.querySelectorAll()")}}</li>
- <li>Todos los métodos anteriores se implementan en base a {{domxref("ParentNode")}} mixin; vea  {{domxref("ParentNode.querySelector()")}} y {{domxref("ParentNode.querySelectorAll()")}}</li>
+ <li>Seleccionando un solo elemento:{{domxref("Document.querySelector()")}}, {{domxref("DocumentFragment.querySelector()")}}, o {{domxref("Element.querySelector()")}}</li>
+ <li>Seleccionar todos los elementos coincidentes:{{domxref("Document.querySelectorAll()")}}, {{domxref("DocumentFragment.querySelectorAll()")}}, o {{domxref("Element.querySelectorAll()")}}</li>
+ <li>Todos los métodos anteriores se implementan en base a {{domxref("ParentNode")}} mixin; vea  {{domxref("ParentNode.querySelector()")}} y {{domxref("ParentNode.querySelectorAll()")}}</li>
 </ul>

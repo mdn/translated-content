@@ -29,20 +29,20 @@ translation_of: Web/API/Element/className
 <pre class="brush: js">let elm = document.getElementById('item');
 
 if(elm.className === 'active'){
-    elm.className = 'inactive';
+    elm.className = 'inactive';
 } else {
-    elm.className = 'active';
+    elm.className = 'active';
 }</pre>
 
 <h2 id="Notes" name="Notes">Notas</h2>
 
 <p>El nombre <code>className</code> es utilizado para esta propiedad en lugar de <code>class</code> para evitar conflictos con la palabra clave "class" existente en muchos de los lenguages que son usados para manipular el DOM.</p>
 
-<p><code>className</code> también puede ser una instancia de {{domxref("SVGAnimatedString")}} si <code>element</code> es un {{domxref("SVGElement")}}. Es mejor de obtener/establecer la propiedad <code>className</code> de un elemento utilizando {{domxref("Element.getAttribute")}} y {{domxref("Element.setAttribute")}} si estás tratando con elementos SVG.</p>
+<p><code>className</code> también puede ser una instancia de {{domxref("SVGAnimatedString")}} si <code>element</code> es un {{domxref("SVGElement")}}. Es mejor de obtener/establecer la propiedad <code>className</code> de un elemento utilizando {{domxref("Element.getAttribute")}} y {{domxref("Element.setAttribute")}} si estás tratando con elementos SVG.</p>
 
 <pre class="brush: js">elm.setAttribute('class', elm.getAttribute('class'))</pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -56,12 +56,12 @@ if(elm.className === 'active'){
   <tr>
    <td>{{SpecName("DOM WHATWG", "#dom-element-classname", "element.className")}}</td>
    <td>{{Spec2("DOM WHATWG")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM4", "#dom-element-classname", "element.className")}}</td>
    <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM2 HTML", "html.html#ID-95362176", "element.className")}}</td>

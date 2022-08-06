@@ -29,7 +29,7 @@ TypeError: Atomics is not a constructor
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
-<p>Была попытка использовать объект или переменную как конструктор, однако этот объект или переменная - не конструктор. Смотрите {{Glossary("constructor")}}  или <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, чтобы получить больше информации о том, что такое конструктор.</p>
+<p>Была попытка использовать объект или переменную как конструктор, однако этот объект или переменная - не конструктор. Смотрите {{Glossary("constructor")}}  или <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, чтобы получить больше информации о том, что такое конструктор.</p>
 
 <p>Существует множество глобальных объектов, таких как {{jsxref("String")}} или {{jsxref("Array")}}, которые можно построить с использованием <code>new</code>. Однако, некоторые глобальные объекты - нельзя, т.к. их свойства и методы статичны. Следующие стандартные встроенные объекты JavaScript - не конструкторы: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.</p>
 
@@ -78,7 +78,7 @@ var obj = new f;
 <pre class="brush: js example-bad">return new Promise.resolve(true);
 </pre>
 
-<p>Вместо этого используйте <a href="https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods">статические методы</a> - <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">Promise.resolve()</a> или <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">Promise.reject()</a> :</p>
+<p>Вместо этого используйте <a href="https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods">статические методы</a> - <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">Promise.resolve()</a> или <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">Promise.reject()</a> :</p>
 
 <pre class="brush: js">// Это допустимо, но слишком длинно, в этом нет необходимости:
 return new Promise((resolve, reject) =&gt; { resolve(true); })

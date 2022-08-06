@@ -13,15 +13,15 @@ translation_of: Glossary/API
 例如：
 
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia) API 可用於從用戶的攝像頭抓取音頻和視頻，甚至給提供開發者其他的用途，如：錄製視頻和音頻，與其他用戶一起開視訊會議，或是從視頻中捕捉靜態圖像。
-- [Geolocation API](/en-US/docs/Web/API/Geolocation) 可從用戶的設備中通過任意服務獲取定位信息 (如：GPS), 然後可以使用 [Google Maps APIs](https://developers.google.com/maps/) 關連。如：在用戶地圖上繪製用戶的定位並向他們展示附近的旅游景點。
-- [Twitter APIs](https://dev.twitter.com/overview/api) 可從用戶的賬戶上拿取數據，如：在網頁上展示他們最新的 tweets。
-- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) 可用於製作網頁的動畫部分，如：讓圖片動起來或旋轉。
+- [Geolocation API](/en-US/docs/Web/API/Geolocation) 可從用戶的設備中通過任意服務獲取定位信息 (如：GPS), 然後可以使用 [Google Maps APIs](https://developers.google.com/maps/) 關連。如：在用戶地圖上繪製用戶的定位並向他們展示附近的旅游景點。
+- [Twitter APIs](https://dev.twitter.com/overview/api) 可從用戶的賬戶上拿取數據，如：在網頁上展示他們最新的 tweets。
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) 可用於製作網頁的動畫部分，如：讓圖片動起來或旋轉。
 
 ## 了解更多
 
 ### 基本知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Application_programming_interface", "API")}}
+- 維基百科上的 [API](https://zh.wikipedia.org/wiki/Application_programming_interface)
 
 ### 技術參考
 

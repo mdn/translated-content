@@ -36,9 +36,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 <p>新しいプロパティを追加できる場合、オブジェクトは拡張可能です。 <code>Object.preventExtensions()</code> はオブジェクトを拡張不可能と標示することで、その時点で持っているプロパティ以外のプロパティを持たせることを不可能にします。拡張不可能なオブジェクトのプロパティは通常、依然として<em>削除</em>できることに注意してください。拡張不可能なオブジェクトへ新たにプロパティを追加しようとしても、暗黙的あるいは {{jsxref("TypeError")}} エラーを発生させて失敗します (通常は {{jsxref("Functions_and_function_scope/Strict_mode", "strict mode", "", 1)}} において、ただしこれに限定はされません)。</p>
 
-<p><code>Object.preventExtensions()</code> は、自身のプロパティの追加のみを抑制します。オブジェクトプロトタイプにプロパティを追加することは可能です。</p>
+<p><code>Object.preventExtensions()</code> は、自身のプロパティの追加のみを抑制します。オブジェクトプロトタイプにプロパティを追加することは可能です。</p>
 
-<p>このメソッドは対象の <code>[[prototype]]</code> を不変にし、それ以降のあらゆる <code>[[prototype]]</code> への再代入は {{jsxref("TypeError")}} を発生します。この動作は <code>[[prototype]]</code> 内部プロパティ固有のものであり、他のプロパティは変更可能なままです。</p>
+<p>このメソッドは対象の <code>[[prototype]]</code> を不変にし、それ以降のあらゆる <code>[[prototype]]</code> への再代入は {{jsxref("TypeError")}} を発生します。この動作は <code>[[prototype]]</code> 内部プロパティ固有のものであり、他のプロパティは変更可能なままです。</p>
 
 <p>拡張可能なオブジェクトを拡張不可能にする方法はありますが、逆の方法はありません。</p>
 

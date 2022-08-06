@@ -26,7 +26,7 @@ i18n（取自 "internationalization", 共 20 个字母）是让产品或服务�
 
 ### 基本知识
 
-- {{interwiki("wikipedia", "Internationalization and localization", "i18n")}} on Wikipedia
+- [i18n](https://zh.wikipedia.org/wiki/Internationalization_and_localization) on Wikipedia
 
 ### 技术参考
 

@@ -7,4 +7,4 @@ translation_of: Glossary/Bandwidth
 
 ## 了解更多
 
-- {{Interwiki("wikipedia", "Bandwidth")}} on Wikipedia
+- [Bandwidth](https://zh.wikipedia.org/wiki/Bandwidth) on Wikipedia

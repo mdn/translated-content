@@ -6,13 +6,13 @@ original_slug: Web/JavaScript/Referencia/Operadores/Encadenamiento_opcional
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<p>El operador de <strong>encadenamiento opcional</strong> <strong><code>?.</code></strong> permite leer el valor de una propiedad ubicada dentro de una cadena de objetos conectados sin tener que validar expresamente que cada referencia en la cadena sea válida. <span class="seoSummary">El operador <code>?.</code> funciona de manera similar a el operador de encadenamiento <code>.</code>, excepto que en lugar de causar un error si una referencia es <a href="/en-US/docs/Glossary/nullish">casi-nula</a> ({{JSxRef("null")}} o {{JSxRef("undefined")}}), la expresión hace una evaluación de circuito corto con un valor de retorno de <code>undefined</code>.</span> Cuando se usa con llamadas a funciones, devuelve <code>undefined</code> si la función dada no existe.</p>
+<p>El operador de <strong>encadenamiento opcional</strong> <strong><code>?.</code></strong> permite leer el valor de una propiedad ubicada dentro de una cadena de objetos conectados sin tener que validar expresamente que cada referencia en la cadena sea válida. <span class="seoSummary">El operador <code>?.</code> funciona de manera similar a el operador de encadenamiento <code>.</code>, excepto que en lugar de causar un error si una referencia es <a href="/en-US/docs/Glossary/nullish">casi-nula</a> ({{JSxRef("null")}} o {{JSxRef("undefined")}}), la expresión hace una evaluación de circuito corto con un valor de retorno de <code>undefined</code>.</span> Cuando se usa con llamadas a funciones, devuelve <code>undefined</code> si la función dada no existe.</p>
 
-<p>Esto da como resultado expresiones más cortas y simples cuando se accede a propiedades encadenadas dónde existe la posibilidad de que falte una referencia. También puede ser útil al explorar el contenido de un objeto cuando no hay una garantía conocida de qué propiedades se requieren.</p>
+<p>Esto da como resultado expresiones más cortas y simples cuando se accede a propiedades encadenadas dónde existe la posibilidad de que falte una referencia. También puede ser útil al explorar el contenido de un objeto cuando no hay una garantía conocida de qué propiedades se requieren.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
+<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -24,21 +24,21 @@ original_slug: Web/JavaScript/Referencia/Operadores/Encadenamiento_opcional
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>El operador de encadenamiento opcional proporciona una forma de simplificar el acceso a los valores a través de objetos conectados cuando es posible que una referencia o función sea <code>undefined</code> o <code>null</code>.</p>
+<p>El operador de encadenamiento opcional proporciona una forma de simplificar el acceso a los valores a través de objetos conectados cuando es posible que una referencia o función sea <code>undefined</code> o <code>null</code>.</p>
 
 <p>Por ejemplo, considere un objeto <code>obj</code> que tiene una estructura anidada. Sin encadenamiento opcional, buscar una subpropiedad profundamente anidada requiere validar las referencias intermedias, como:</p>
 
 <pre class="brush: js">let nestedProp = obj.first &amp;&amp; obj.first.second;
 </pre>
 
-<p>Se confirma que el valor de <code>obj.first</code> no es <code>null</code> (y no es <code>undefined</code>) antes de acceder al valor de <code>obj.first.second</code>. Esto evita el error que ocurriría si simplemente accediera a <code>obj.first.second</code> directamente sin probar <code>obj.first</code>.</p>
+<p>Se confirma que el valor de <code>obj.first</code> no es <code>null</code> (y no es <code>undefined</code>) antes de acceder al valor de <code>obj.first.second</code>. Esto evita el error que ocurriría si simplemente accediera a <code>obj.first.second</code> directamente sin probar <code>obj.first</code>.</p>
 
-<p>Sin embargo, con el operador de encadenamiento opcional (<code>?.</code>), No tiene que probar explícitamente, ni realizar una evaluación de circuito corto basada en el estado de <code>obj.first</code> antes de intentar acceder a <code>obj.first.second</code>:</p>
+<p>Sin embargo, con el operador de encadenamiento opcional (<code>?.</code>), No tiene que probar explícitamente, ni realizar una evaluación de circuito corto basada en el estado de <code>obj.first</code> antes de intentar acceder a <code>obj.first.second</code>:</p>
 
 <pre class="brush: js">let nestedProp = obj.first?.second;
 </pre>
 
-<p>Al usar el operador <code>?.</code> en lugar de solo el <code>.</code>, JavaScript sabe verificar implícitamente para asegurarse de que <code>obj.first</code> no es <code>null</code> o <code>undefined</code> antes de intentar acceder  <code>obj.first.second</code>. Si <code>obj.first</code> es <code>null</code> o <code>undefined</code>, la expresión hace una evaluación de circuito corto automáticamente y retorna <code>undefined</code>.</p>
+<p>Al usar el operador <code>?.</code> en lugar de solo el <code>.</code>, JavaScript sabe verificar implícitamente para asegurarse de que <code>obj.first</code> no es <code>null</code> o <code>undefined</code> antes de intentar acceder  <code>obj.first.second</code>. Si <code>obj.first</code> es <code>null</code> o <code>undefined</code>, la expresión hace una evaluación de circuito corto automáticamente y retorna <code>undefined</code>.</p>
 
 <p>Esto es equivalente a lo siguiente, excepto que la variable temporal es de hecho no creada:</p>
 
@@ -55,12 +55,12 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 <pre class="brush: js">let result = someInterface.customMethod?.();</pre>
 
 <div class="blockIndicator note">
-<p><strong>Nota:</strong> Si hay una propiedad con ese nombre y que no es una función, usar <code>?.</code> aún levantará una excepción {{JSxRef("TypeError")}} (<code>x.y</code><code> is not a function</code>).</p>
+<p><strong>Nota:</strong> Si hay una propiedad con ese nombre y que no es una función, usar <code>?.</code> aún levantará una excepción {{JSxRef("TypeError")}} (<code>x.y</code><code> is not a function</code>).</p>
 </div>
 
 <h4 id="Manejo_de_callbacks_opcionales_o_manejadores_de_eventos">Manejo de callbacks opcionales o manejadores de eventos</h4>
 
-<p>Si utiliza callbacks o métodos de recuperación de un objeto con<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring"> una asignación de desestructuración</a>, es posible que tenga valores inexistentes que no puede llamar como funciones a menos que haya probado su existencia. Usando <code>?.</code>, Puede evitar esta prueba adicional:</p>
+<p>Si utiliza callbacks o métodos de recuperación de un objeto con<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring"> una asignación de desestructuración</a>, es posible que tenga valores inexistentes que no puede llamar como funciones a menos que haya probado su existencia. Usando <code>?.</code>, Puede evitar esta prueba adicional:</p>
 
 <pre class="brush: js">// Escrito a partir de ES2019
 function doSomething(onContent, onError) {
@@ -93,7 +93,7 @@ function doSomething(onContent, onError) {
 <pre class="brush: js">let nestedProp = obj?.['prop' + 'Name'];
 </pre>
 
-<h3 id="El_encadenamiento_opcional_no_es_válido_al_lado_izquierdo_de_una_asignación">El encadenamiento opcional no es válido al lado izquierdo de una asignación</h3>
+<h3 id="El_encadenamiento_opcional_no_es_válido_al_lado_izquierdo_de_una_asignación">El encadenamiento opcional no es válido al lado izquierdo de una asignación</h3>
 
 <pre class="brush: js"><code>let object = {};
 object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment</code></pre>
@@ -106,7 +106,7 @@ object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignm
 
 <h3 id="Ejemplo_básico">Ejemplo básico</h3>
 
-<p>Este ejemplo busca el valor de la propiedad <code>name</code> para el miembro <code>bar</code> en un mapa cuando no existe dicho miembro. El resultado es por lo tanto es <code>undefined</code>.</p>
+<p>Este ejemplo busca el valor de la propiedad <code>name</code> para el miembro <code>bar</code> en un mapa cuando no existe dicho miembro. El resultado es por lo tanto es <code>undefined</code>.</p>
 
 <pre class="brush: js">let myMap = new Map();
 myMap.set("foo", {name: "baz", desc: "inga"});
@@ -167,7 +167,7 @@ console.log(customerCity); // Unknown city</pre>
  </tbody>
 </table>
 
-<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
 <p>{{Compat("javascript.operators.optional_chaining")}}</p>
 

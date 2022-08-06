@@ -8,13 +8,13 @@ translation_of: Web/SVG/Attribute/fill
 ---
 <div>{{SVGRef}}</div>
 
-<div>O atributo <strong><code>fill</code></strong> pode ter duas diferentes interpretações. Para formas e textos, é definido como um atributo de apresentação que define a cor (ou qualquer modelo de pintura SVG como gradientes ou padrões) utilizada para colorir um elemento; para animações ele é quem define o estado final de uma animação.</div>
+<div>O atributo <strong><code>fill</code></strong> pode ter duas diferentes interpretações. Para formas e textos, é definido como um atributo de apresentação que define a cor (ou qualquer modelo de pintura SVG como gradientes ou padrões) utilizada para colorir um elemento; para animações ele é quem define o estado final de uma animação.</div>
 
 
 
-<p>Como um atributo de apresentação, ele pode ser aplicado a qualquer elemento, mas só tem efeito nestes onze elementos seguintes: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, e {{SVGElement('tspan')}}.</p>
+<p>Como um atributo de apresentação, ele pode ser aplicado a qualquer elemento, mas só tem efeito nestes onze elementos seguintes: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, e {{SVGElement('tspan')}}.</p>
 
-<p>Para animação, apenas cinco elementos utilizam este atributo, sendo elas: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, e {{SVGElement('set')}}.</p>
+<p>Para animação, apenas cinco elementos utilizam este atributo, sendo elas: {{SVGElement('animate')}}, {{SVGElement('animateColor')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, e {{SVGElement('set')}}.</p>
 
 <div id="topExample">
 <div class="hidden">
@@ -22,31 +22,31 @@ translation_of: Web/SVG/Attribute/fill
 </div>
 
 <pre class="brush: html notranslate">&lt;svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;!-- Preenchimento simples com apenas uma cor --&gt;
-  &lt;circle cx="50" cy="50" r="40" fill="pink" /&gt;
+  &lt;!-- Preenchimento simples com apenas uma cor --&gt;
+  &lt;circle cx="50" cy="50" r="40" fill="pink" /&gt;
 
 
-  &lt;!-- Preenchimento do circulo com gradiente --&gt;
-  &lt;defs&gt;
-    &lt;radialGradient id="myGradient"&gt;
-      &lt;stop offset="0%"   stop-color="pink" /&gt;
-      &lt;stop offset="100%" stop-color="black" /&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
+  &lt;!-- Preenchimento do circulo com gradiente --&gt;
+  &lt;defs&gt;
+    &lt;radialGradient id="myGradient"&gt;
+      &lt;stop offset="0%"   stop-color="pink" /&gt;
+      &lt;stop offset="100%" stop-color="black" /&gt;
+    &lt;/radialGradient&gt;
+  &lt;/defs&gt;
 
-  &lt;circle cx="150" cy="50" r="40" fill="url(#myGradient)" /&gt;
+  &lt;circle cx="150" cy="50" r="40" fill="url(#myGradient)" /&gt;
 
 
-  &lt;!--
+  &lt;!--
    Mantendo o estado final de um círculo animado
    sendo um círculo com o raio de 40px.
-  --&gt;
-  &lt;circle cx="250" cy="50" r="20"&gt;
-    &lt;animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" /&gt;
-  &lt;/circle&gt;
+  --&gt;
+  &lt;circle cx="250" cy="50" r="20"&gt;
+    &lt;animate attributeType="XML"
+             attributeName="r"
+             from="0" to="40" dur="5s"
+             fill="freeze" /&gt;
+  &lt;/circle&gt;
 &lt;/svg&gt;
 </pre>
 
@@ -55,9 +55,9 @@ translation_of: Web/SVG/Attribute/fill
 
 <h2 id="altGlyph">altGlyph</h2>
 
-<p class="warning"><strong>Aviso</strong>: a partir da versão SVG2, a tag {{SVGElement('altGlyph')}} está obsoleta e não deve ser utilizada.</p>
+<p class="warning"><strong>Aviso</strong>: a partir da versão SVG2, a tag {{SVGElement('altGlyph')}} está obsoleta e não deve ser utilizada.</p>
 
-<p>Para {{SVGElement('altGlyph')}}, <code>fill</code> é a apresentação do atributo que define a coloração de um glifo (figura, ícone, simbolo).</p>
+<p>Para {{SVGElement('altGlyph')}}, <code>fill</code> é a apresentação do atributo que define a coloração de um glifo (figura, ícone, simbolo).</p>
 
 <table class="standard-table">
  <tbody>
@@ -76,11 +76,11 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota</strong>: Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota</strong>: Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="animate">animate</h2>
 
-<p>Para {{SVGElement('animate')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
+<p>Para {{SVGElement('animate')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
 
 <table class="standard-table">
  <tbody>
@@ -101,9 +101,9 @@ translation_of: Web/SVG/Attribute/fill
 
 <h2 id="animateColor">animateColor</h2>
 
-<p class="warning"><strong>Aviso: </strong>A partir da versão de animação para modelos SVG2 {{SVGElement('animateColor')}} está obsoleto e não deve ser utilizado. Ao invés disso utilize {{SVGElement('animate')}}.</p>
+<p class="warning"><strong>Aviso: </strong>A partir da versão de animação para modelos SVG2 {{SVGElement('animateColor')}} está obsoleto e não deve ser utilizado. Ao invés disso utilize {{SVGElement('animate')}}.</p>
 
-<p>Para {{SVGElement('animateColor')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
+<p>Para {{SVGElement('animateColor')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
 
 <table class="standard-table">
  <tbody>
@@ -124,7 +124,7 @@ translation_of: Web/SVG/Attribute/fill
 
 <h2 id="animateMotion">animateMotion</h2>
 
-<p>Para {{SVGElement('animateMotion')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
+<p>Para {{SVGElement('animateMotion')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
 
 <table class="standard-table">
  <tbody>
@@ -145,7 +145,7 @@ translation_of: Web/SVG/Attribute/fill
 
 <h2 id="animateTransform">animateTransform</h2>
 
-<p>Para {{SVGElement('animateTransform')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
+<p>Para {{SVGElement('animateTransform')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
 
 <table class="standard-table">
  <tbody>
@@ -166,7 +166,7 @@ translation_of: Web/SVG/Attribute/fill
 
 <h2 id="circle">circle</h2>
 
-<p>Para {{SVGElement('circle')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a coloração de um círculo.</p>
+<p>Para {{SVGElement('circle')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a coloração de um círculo.</p>
 
 <table class="standard-table">
  <tbody>
@@ -185,7 +185,7 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="ellipse">ellipse</h2>
 
@@ -208,11 +208,11 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="path">path</h2>
 
-<p>Para {{SVGElement('path')}}, <code>fill</code> é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo <em>{{SVGAttr('fill-rule')}}</em>).</p>
+<p>Para {{SVGElement('path')}}, <code>fill</code> é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo <em>{{SVGAttr('fill-rule')}}</em>).</p>
 
 <table class="standard-table">
  <tbody>
@@ -231,11 +231,11 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="polygon">polygon</h2>
 
-<p>Para {{SVGElement('polygon')}}, <code>fill</code> é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo <em>{{SVGAttr('fill-rule')}}</em>).</p>
+<p>Para {{SVGElement('polygon')}}, <code>fill</code> é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo <em>{{SVGAttr('fill-rule')}}</em>).</p>
 
 <table class="standard-table">
  <tbody>
@@ -254,11 +254,11 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="polyline">polyline</h2>
 
-<p>For {{SVGElement('polyline')}}, <code>fill</code> é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo <em>{{SVGAttr('fill-rule')}}</em>).</p>
+<p>For {{SVGElement('polyline')}}, <code>fill</code> é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo <em>{{SVGAttr('fill-rule')}}</em>).</p>
 
 <table class="standard-table">
  <tbody>
@@ -277,7 +277,7 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="rect">rect</h2>
 
@@ -300,11 +300,11 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="set">set</h2>
 
-<p>Para {{SVGElement('set')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
+<p>Para {{SVGElement('set')}}, o atributo <code>fill</code> define o estado final de uma animação.</p>
 
 <table class="standard-table">
  <tbody>
@@ -325,7 +325,7 @@ translation_of: Web/SVG/Attribute/fill
 
 <h2 id="text">text</h2>
 
-<p>Para {{SVGElement('text')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a cor de um texto.</p>
+<p>Para {{SVGElement('text')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a cor de um texto.</p>
 
 <table class="standard-table">
  <tbody>
@@ -344,11 +344,11 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="textPath">textPath</h2>
 
-<p>For {{SVGElement('textPath')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a cor de um texto</p>
+<p>For {{SVGElement('textPath')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a cor de um texto</p>
 
 <table class="standard-table">
  <tbody>
@@ -367,13 +367,13 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="tref">tref</h2>
 
-<p class="warning"><strong>Aviso</strong>: a partir da versão SVG2, a tag {{SVGElement('tref')}} está obsoleta e não deve ser utilizada.</p>
+<p class="warning"><strong>Aviso</strong>: a partir da versão SVG2, a tag {{SVGElement('tref')}} está obsoleta e não deve ser utilizada.</p>
 
-<p>Para {{SVGElement('tref')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a cor de um texto</p>
+<p>Para {{SVGElement('tref')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a cor de um texto</p>
 
 <table class="standard-table">
  <tbody>
@@ -392,11 +392,11 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="tspan">tspan</h2>
 
-<p>Para {{SVGElement('tspan')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a cor de um texto</p>
+<p>Para {{SVGElement('tspan')}}, <code>fill</code> é o atributo de apresentação utilizado para definir a cor de um texto</p>
 
 <table class="standard-table">
  <tbody>
@@ -415,7 +415,7 @@ translation_of: Web/SVG/Attribute/fill
  </tbody>
 </table>
 
-<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
+<p class="note"><strong>Nota:</strong> Por ser um atributo de apresentação, <code>fill</code> pode ser usado como uma propriedade CSS.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -437,7 +437,7 @@ translation_of: Web/SVG/Attribute/fill
    <td>{{SpecName("SVG2", "painting.html#FillProperty", "fill")}}</td>
    <td>{{Spec2("SVG2")}}</td>
    <td>Definição para formas e textos.<br>
-    Adiciona <code style="white-space: nowrap;">context-fill</code> e <code style="white-space: nowrap;">context-stroke</code>.</td>
+    Adiciona <code style="white-space: nowrap;">context-fill</code> e <code style="white-space: nowrap;">context-stroke</code>.</td>
   </tr>
   <tr>
    <td>{{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}</td>
@@ -456,4 +456,4 @@ translation_of: Web/SVG/Attribute/fill
 
 <p>{{Compat("svg.attributes.presentation.fill")}}</p>
 
-<p class="note">Nota: Para obter informações do uso do <code style="white-space: nowrap;">context-fill</code> (e do <code style="white-space: nowrap;">context-stroke</code>) de documentos HTML, consulte a documentação da propriedade não-padrão <span style="white-space: nowrap;">{{cssxref("-moz-context-properties")}}</span> .</p>
+<p class="note">Nota: Para obter informações do uso do <code style="white-space: nowrap;">context-fill</code> (e do <code style="white-space: nowrap;">context-stroke</code>) de documentos HTML, consulte a documentação da propriedade não-padrão <span style="white-space: nowrap;">{{cssxref("-moz-context-properties")}}</span> .</p>

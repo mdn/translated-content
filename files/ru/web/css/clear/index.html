@@ -8,17 +8,17 @@ translation_of: Web/CSS/clear
 ---
 <div>{{CSSRef}}</div>
 
-<p>Свойство <strong><code>clear</code></strong> CSS указывает, может ли элемент быть рядом с плавающими  <a href="https://developer.mozilla.org/en-US/docs/CSS/float" title="CSS/float">floating</a> элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. Свойство <code>clear</code> применяется как к плавающим, так и к неплавающим элементам.</p>
+<p>Свойство <strong><code>clear</code></strong> CSS указывает, может ли элемент быть рядом с плавающими  <a href="https://developer.mozilla.org/en-US/docs/CSS/float" title="CSS/float">floating</a> элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. Свойство <code>clear</code> применяется как к плавающим, так и к неплавающим элементам.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
 
-<p class="hidden">Источник этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, скопируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам запрос на перенос.</p>
+<p class="hidden">Источник этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, скопируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам запрос на перенос.</p>
 
 <p>При применении к неплавающим блокам он перемещает границу края <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">border edge</a> элемента до тех пор, пока не окажется ниже края <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">margin edge</a> поля всех соответствующих поплавков. Вертикальный край неплавающего блока сжимается.</p>
 
-<p>Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам -  <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">margin edge</a> нижнего элемента перемещается ниже <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">margin edge</a> всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.</p>
+<p>Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам -  <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">margin edge</a> нижнего элемента перемещается ниже <a href="/en-US/docs/CSS/box_model" title="CSS/box_model">margin edge</a> всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.</p>
 
-<p>Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же <a href="/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">контексте форматирования блоков</a>. </p>
+<p>Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же <a href="/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">контексте форматирования блоков</a>. </p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Если элемент содержит только плавающие элементы, его высота сворачивается в ничто. Если вы хотите, чтобы он всегда мог изменять размер, чтобы он содержал в себе плавающие элементы, вам нужно самоочистить своих детей. Это называется <strong>clearfix,</strong> и один из способов сделать это - это заменит <code>clear</code> заменённый {{cssxref("::after")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">псевдоэлемент</a> на нем.</p>
@@ -59,9 +59,9 @@ clear: unset;
  <dt><code>both</code></dt>
  <dd>Это ключевое слово, указывающее, что элемент перемещается вниз, чтобы очистить как левые, так и правые поплавки.</dd>
  <dt><code>inline-start</code></dt>
- <dd>Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков <em>в начале содержащего его блока</em>, то есть <em>левые</em> поплавки на скриптах <strong>ltr</strong> и <em>правые</em> поплавки на скриптах <strong>rtl</strong>.</dd>
+ <dd>Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков <em>в начале содержащего его блока</em>, то есть <em>левые</em> поплавки на скриптах <strong>ltr</strong> и <em>правые</em> поплавки на скриптах <strong>rtl</strong>.</dd>
  <dt><code>inline-end</code></dt>
- <dd>Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков <em>в конце содержащего его блока</em>, то есть <em>правые</em> поплавки на скриптах <strong>ltr</strong> и <em>левые</em> поплавки на скриптах <strong>rtl</strong>.</dd>
+ <dd>Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков <em>в конце содержащего его блока</em>, то есть <em>правые</em> поплавки на скриптах <strong>ltr</strong> и <em>левые</em> поплавки на скриптах <strong>rtl</strong>.</dd>
 </dl>
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
@@ -205,7 +205,7 @@ p {
   <tr>
    <td>{{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}}</td>
    <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Добавляет значения <code>inline-start</code> и <code>inline-end</code>. </td>
+   <td>Добавляет значения <code>inline-start</code> и <code>inline-end</code>. </td>
   </tr>
   <tr>
    <td>{{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}</td>
@@ -225,7 +225,7 @@ p {
 <h2 id="Browser_compatibility">Совместимость с браузером</h2>
 <p>{{Compat}}</p>
 
-<div> </div>
+<div> </div>
 
 <h2 id="See_also">Смотрите также</h2>
 

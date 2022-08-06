@@ -12,9 +12,9 @@ translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 <div class="note">
 <p><strong>注記</strong>: 支援技術はライブリージョンへのコンテンツの動的な変更を通知します。ライブリージョンはブラウザーと支援技術が認識できるように最初から（かつ空で）存在しなければなりません。続いて後に起こる変更は通知されます。</p>
 
-<p>単に読み込まれた最初のマークアップに <code>aria-live</code> 属性もしくは 特化したライブリージョン <code>role</code> （例えば <code>role="alert"</code> など）を含めても何も効果はありません。</p>
+<p>単に読み込まれた最初のマークアップに <code>aria-live</code> 属性もしくは 特化したライブリージョン <code>role</code> （例えば <code>role="alert"</code> など）を含めても何も効果はありません。</p>
 
-<p><code>aria-live</code> 属性もしくは特化した <code>role</code> をドキュメントへ動的に追加しても支援技術による通知は発生しません (その時点で支援技術はまだライブリージョンを認識していないので、変更を監視することができません)。</p>
+<p><code>aria-live</code> 属性もしくは特化した <code>role</code> をドキュメントへ動的に追加しても支援技術による通知は発生しません (その時点で支援技術はまだライブリージョンを認識していないので、変更を監視することができません)。</p>
 
 <p>常にライブリージョンが最初からドキュメントに存在することを確認して動的なコンテンツの追加／変更をしてください。</p>
 </div>
@@ -43,21 +43,21 @@ translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 <h4 id="HTML">HTML</h4>
 
 <pre class="brush: html notranslate">&lt;fieldset&gt;
-  &lt;legend&gt;Planet information&lt;/legend&gt;
-  &lt;label for="planetsSelect"&gt;Planet:&lt;/label&gt;
-  &lt;select id="planetsSelect" aria-controls="planetInfo"&gt;
-    &lt;option value=""&gt;Select a planet&amp;hellip;&lt;/option&gt;
-    &lt;option value="mercury"&gt;Mercury&lt;/option&gt;
-    &lt;option value="venus"&gt;Venus&lt;/option&gt;
-    &lt;option value="earth"&gt;Earth&lt;/option&gt;
-    &lt;option value="mars"&gt;Mars&lt;/option&gt;
-  &lt;/select&gt;
+  &lt;legend&gt;Planet information&lt;/legend&gt;
+  &lt;label for="planetsSelect"&gt;Planet:&lt;/label&gt;
+  &lt;select id="planetsSelect" aria-controls="planetInfo"&gt;
+    &lt;option value=""&gt;Select a planet&amp;hellip;&lt;/option&gt;
+    &lt;option value="mercury"&gt;Mercury&lt;/option&gt;
+    &lt;option value="venus"&gt;Venus&lt;/option&gt;
+    &lt;option value="earth"&gt;Earth&lt;/option&gt;
+    &lt;option value="mars"&gt;Mars&lt;/option&gt;
+  &lt;/select&gt;
   &lt;button id="renderPlanetInfoButton"&gt;Go&lt;/button&gt;
 &lt;/fieldset&gt;
 
 &lt;div role="region" id="planetInfo" aria-live="polite"&gt;
-  &lt;h2 id="planetTitle"&gt;No planet selected&lt;/h2&gt;
-  &lt;p id="planetDescription"&gt;Select a planet to view its description&lt;/p&gt;
+  &lt;h2 id="planetTitle"&gt;No planet selected&lt;/h2&gt;
+  &lt;p id="planetDescription"&gt;Select a planet to view its description&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;small&gt;Information courtesy &lt;a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System"&gt;Wikipedia&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
@@ -66,47 +66,47 @@ translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 <h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js notranslate">const PLANETS_INFO = {
-  mercury: {
-    title: 'Mercury',
-    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
-  },
+  mercury: {
+    title: 'Mercury',
+    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
+  },
 
-  venus: {
-    title: "Venus",
-    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
-  },
+  venus: {
+    title: "Venus",
+    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
+  },
 
-  earth: {
-    title: "Earth",
-    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
-  },
+  earth: {
+    title: "Earth",
+    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
+  },
 
-  mars: {
-    title: "Mars",
-    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
-  }
+  mars: {
+    title: "Mars",
+    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
+  }
 };
 
 function renderPlanetInfo(planet) {
-  const planetTitle = document.querySelector('#planetTitle');
-  const planetDescription = document.querySelector('#planetDescription');
+  const planetTitle = document.querySelector('#planetTitle');
+  const planetDescription = document.querySelector('#planetDescription');
 
-  if (planet in PLANETS_INFO) {
-    planetTitle.textContent = PLANETS_INFO[planet].title;
-    planetDescription.textContent = PLANETS_INFO[planet].description;
-  } else {
-    planetTitle.textContent = 'No planet selected';
-    planetDescription.textContent = 'Select a planet to view its description';
-  }
+  if (planet in PLANETS_INFO) {
+    planetTitle.textContent = PLANETS_INFO[planet].title;
+    planetDescription.textContent = PLANETS_INFO[planet].description;
+  } else {
+    planetTitle.textContent = 'No planet selected';
+    planetDescription.textContent = 'Select a planet to view its description';
+  }
 }
 
 const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
 
 renderPlanetInfoButton.addEventListener('click', event =&gt; {
-  const planetsSelect = document.querySelector('#planetsSelect');
-  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
+  const planetsSelect = document.querySelector('#planetsSelect');
+  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
 
-  renderPlanetInfo(selectedPlanet);
+  renderPlanetInfo(selectedPlanet);
 });
 </pre>
 
@@ -181,7 +181,7 @@ renderPlanetInfoButton.addEventListener('click', event =&gt; {
 
 <h3 id="Advanced_Use_Case_Clock" name="Advanced_Use_Case_Clock"><span class="mw-headline" id="Use_Case:_Clock">高度なユースケース: Clock</span></h3>
 
-<p><code>aria-atomic</code> についての説明のために、時間と分を表するシンプルな時計を表示するサイトを考えます。時計は単に現在のコンテンツを上書きする、新しい残り時間により毎分更新されます。</p>
+<p><code>aria-atomic</code> についての説明のために、時間と分を表するシンプルな時計を表示するサイトを考えます。時計は単に現在のコンテンツを上書きする、新しい残り時間により毎分更新されます。</p>
 
 <pre class="notranslate">&lt;div id="clock" role="timer" aria-live="polite"&gt;&lt;/div&gt;
 </pre>
@@ -194,11 +194,11 @@ setInterval(function() {
 }, 60000);
 </pre>
 
-<p>最初の関数が実行されると、追加された文字列のすべてが通知されます。 その後の呼び出しでは、過去のコンテンツと比較して変更されたコンテンツの一部が通知されます。例えば、時計が "17:33" から "17:34" へ変更されたとき、支援技術は "4" のみを通知します。これはユーザーにとってほとんど役に立たないでしょう。</p>
+<p>最初の関数が実行されると、追加された文字列のすべてが通知されます。 その後の呼び出しでは、過去のコンテンツと比較して変更されたコンテンツの一部が通知されます。例えば、時計が "17:33" から "17:34" へ変更されたとき、支援技術は "4" のみを通知します。これはユーザーにとってほとんど役に立たないでしょう。</p>
 
 <p>一つの回避策は最初にライブリージョンのコンテンツをクリアしてから、新しいコンテンツを挿入することです。しかしながら、この方法はこれら二更新の正確なタイミングに依存するため、しばしば信頼性にかけることがあります。</p>
 
-<p><code>aria-atomic="true"</code> はライブリージョンが更新されるたびに、コンテンツの更新がすべて (例 "Time: 17:34") 通知されることを保証します。</p>
+<p><code>aria-atomic="true"</code> はライブリージョンが更新されるたびに、コンテンツの更新がすべて (例 "Time: 17:34") 通知されることを保証します。</p>
 
 <pre class="notranslate">&lt;div id="clock" role="timer" aria-live="polite" aria-atomic="true"&gt;&lt;/div&gt;
 </pre>

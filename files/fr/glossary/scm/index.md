@@ -16,4 +16,4 @@ Parmi les systèmes de SCM figurent CVS, SVN, GIT.
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Gestion de versions")}} sur Wikipédia
+- [Gestion de versions](https://fr.wikipedia.org/wiki/Gestion_de_versions) sur Wikipédia

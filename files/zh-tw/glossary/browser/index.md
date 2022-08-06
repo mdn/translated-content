@@ -9,7 +9,7 @@ translation_of: Glossary/Browser
 
 ### 一般知識
 
-- 維基百科的 {{Interwiki("wikipedia", "網頁瀏覽器")}}
+- 維基百科的 [網頁瀏覽器](https://zh.wikipedia.org/wiki/網頁瀏覽器)
 - [網路演進](http://www.evolutionoftheweb.com/)
 
 ### 下載瀏覽器

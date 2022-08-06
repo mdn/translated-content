@@ -20,4 +20,4 @@ original_slug: Glossary/渐进增强
 
 ### 基本知识
 
-- 维基百科的{{Interwiki("wikipedia", "渐进增强")}}
+- 维基百科的[渐进增强](https://zh.wikipedia.org/wiki/渐进增强)

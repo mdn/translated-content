@@ -13,7 +13,7 @@ translation_of: Glossary/Number
 
 ### 基礎知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Data type#Numeric_types", "數字類型")}}
+- 維基百科上的 [數字類型](https://zh.wikipedia.org/wiki/Data_type#Numeric_types)
 
 ### 技術參考
 

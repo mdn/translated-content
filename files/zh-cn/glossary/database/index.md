@@ -16,7 +16,7 @@ original_slug: Glossary/数据库
 
 ## 参见
 
-- 维基百科上的词条 {{Interwiki("wikipedia", "Database")}}
+- 维基百科上的词条 [Database](https://zh.wikipedia.org/wiki/Database)
 
   - {{Glossary("IndexedDB")}}
   - {{Glossary("SQL")}}

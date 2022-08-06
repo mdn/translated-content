@@ -13,6 +13,6 @@ translation_of: Glossary/Object
 
 ### 常用的知识点
 
-- {{Interwiki("wikipedia", "Object-oriented programming")}} on Wikipedia
+- [Object-oriented programming](https://zh.wikipedia.org/wiki/Object-oriented_programming) on Wikipedia
 - {{jsxref("Object")}} in the [JavaScript reference](/zh-CN/docs/Web/JavaScript/Reference)
 - [Object data structures in JavaScript](/zh-CN/docs/Web/JavaScript/Data_structures#Objects)

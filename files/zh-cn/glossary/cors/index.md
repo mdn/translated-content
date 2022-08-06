@@ -15,7 +15,7 @@ translation_of: Glossary/CORS
 ### 总体了解
 
 - MDN 上的 [Cross-Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS)
-- 维基百科上的 {{Interwiki("wikipedia", "Cross-origin resource sharing")}}
+- 维基百科上的 [Cross-origin resource sharing](https://zh.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
 ### CORS 头
 

@@ -21,7 +21,7 @@ translation_of: Mozilla/Firefox/Releases/31
  <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Copy_as_cURL">команда «copy as cURL» в Network Monitor</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/tools/Keyboard_shortcuts#Source_editor">клавишные привязки Sublime Text в редакторе источника</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Network_request_list">возможность сделать логи Network Monitor персистентными</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console#JavaScript_errors_and_warnings">JavaScript-предупреждения включены по умолчанию в  Web-консоли</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console#JavaScript_errors_and_warnings">JavaScript-предупреждения включены по умолчанию в  Web-консоли</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#HTML_pane_2">Alt+клик раскрывает всех потомков узла</a></li>
 </ul>
 
@@ -92,7 +92,7 @@ translation_of: Mozilla/Firefox/Releases/31
 <ul>
  <li>Атрибут «<code>align</code>» для <code>urlbar-wrapper</code> (ранее для <code>urlbar-container</code>), который был установлен в «<code>center</code>» со <a href="http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&amp;whitespace_mode=show&amp;root=/cvsroot&amp;subdir=mozilla/browser/base/content&amp;command=DIFF_FRAMESET&amp;file=browser.xul&amp;rev2=1.10&amp;rev1=1.9">времён незапамятных</a>, удалён. Это, как известно, влияет на сторонние темы. Вам следует внимательно посмотреть, какое исправление будет правильным для вашей темы, но для поддержания эквивалентного эффекта вы можете добавить в свою тему следующее CSS-правило:<br>
   <code>#urlbar-wrapper {<br>
-    -moz-box-align: center;<br>
+    -moz-box-align: center;<br>
   }</code></li>
  <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()"><code>nsIDOMWindowUtils.sendQueryContentEvent()</code></a> и <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29"><code>nsIDOMWindowUtils.sendSelectionSetEvent()</code></a> имеют <code>aAdditionalFlags</code> как необязательный аргумент. Если вы вызываете <code>nsIDOMWindowUtils.sendSelectionSetEvent()</code> со значением <code>true</code> для <code>aReverse</code>, поведение может быть сломано этим изменением. См. подробности о <code>aAdditionalFlags</code> в <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants">объяснении каждого флага</a> (<code>QUERY_CONTENT_FLAG_*</code> and <code>SELECTION_SET_FLAG_*</code>).</li>
 </ul>

@@ -5,20 +5,20 @@ translation_of: Web/API/FileList
 ---
 <div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
 
-<p>Um objeto desse tipo é retornado pela propriedade <code>files</code> do elemento HTML {{HTMLElement("input")}}; isso permite acessar a lista de arquivos selecionados com o elemento <code>&lt;input type="file"&gt;</code>. Também é usado para uma lista de arquivos soltos no conteúdo web usando a API drag and drop; consulte o objeto <a href="/en-US/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> para detalhes de seu uso.</p>
+<p>Um objeto desse tipo é retornado pela propriedade <code>files</code> do elemento HTML {{HTMLElement("input")}}; isso permite acessar a lista de arquivos selecionados com o elemento <code>&lt;input type="file"&gt;</code>. Também é usado para uma lista de arquivos soltos no conteúdo web usando a API drag and drop; consulte o objeto <a href="/en-US/docs/DragDrop/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> para detalhes de seu uso.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> Antes do {{Gecko("1.9.2")}}, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do {{Gecko("1.9.2")}}, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.</p>
+<p><strong>Nota:</strong> Antes do {{Gecko("1.9.2")}}, o elemento input suportava apenas um arquivo selecionado por vez, ou seja, o array FileList conteria apenas um arquivo. A partir do {{Gecko("1.9.2")}}, se o atributo multiple do elemento for definido, FileList pode conter múltiplos arquivos.</p>
 </div>
 
 <h2 id="Using_the_file_list" name="Using_the_file_list">Utilizando a lista de arquivos</h2>
 
-<p>Todo elemento <code>&lt;input&gt;</code> possui um array <code>files</code> que permite o acesso aos seus arquivos. Por exemplo, se o HTML inclui o seguinte elemento:</p>
+<p>Todo elemento <code>&lt;input&gt;</code> possui um array <code>files</code> que permite o acesso aos seus arquivos. Por exemplo, se o HTML inclui o seguinte elemento:</p>
 
 <pre>&lt;input id="fileItem" type="file"&gt;
 </pre>
 
-<p>O código a seguir acessa o primeiro elemento da lista de arquivos como um objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a>:</p>
+<p>O código a seguir acessa o primeiro elemento da lista de arquivos como um objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a>:</p>
 
 <pre class="brush: js">var file = document.getElementById('fileItem').files[0];
 </pre>
@@ -54,7 +54,7 @@ translation_of: Web/API/FileList
 
 <h3 id="item()" name="item()">item()</h3>
 
-<p>Retorna um objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> representando o arquivo no índice especificado na lista.</p>
+<p>Retorna um objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> representando o arquivo no índice especificado na lista.</p>
 
 <pre> File item(
    index
@@ -70,11 +70,11 @@ translation_of: Web/API/FileList
 
 <h6 id="Return_value" name="Return_value">Valor de retorno</h6>
 
-<p>O objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> representando o arquivo requisitado.</p>
+<p>O objeto <a href="/en-US/docs/DOM/File" title="DOM/File"><code>File</code></a> representando o arquivo requisitado.</p>
 
 <h2 id="Example" name="Example">Exemplo</h2>
 
-<p>Este exemplo itera por todos os arquivos selecionados pelo usuário em um elemento <code>input</code>:</p>
+<p>Este exemplo itera por todos os arquivos selecionados pelo usuário em um elemento <code>input</code>:</p>
 
 <pre class="brush:js">// fileInput é um elemento HTML input: &lt;input type="file" id="myfileinput" multiple&gt;
 var fileInput = document.getElementById("myfileinput");
@@ -112,7 +112,7 @@ for (var i = 0; i &lt; files.length; i++) {
 
 &lt;script&gt;
 var puxarArquivos = function() {
-    var fileInput = document.querySelector("#myfiles");
+    var fileInput = document.querySelector("#myfiles");
     var files = fileInput.files;
 
     for (var i = 0; i &lt; files.length; i++) {

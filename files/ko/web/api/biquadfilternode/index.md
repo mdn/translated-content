@@ -147,11 +147,11 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
         <tr>
           <th scope="row"><code>notch</code></th>
           <td>
-            밴드 스톱, 혹은 밴드 리젝션으로 불리는 표준 <a
+            밴드 스톱, 혹은 밴드 리젝션으로 불리는 표준 <a
               href="http://en.wikipedia.org/wiki/Band-stop_filter"
               title="/en-US/docs/"
               >notch</a
-            > 필터입니다. 이는 밴드패스 필터와 반대입니다. 주어진 대역폭 바깥의
+            > 필터입니다. 이는 밴드패스 필터와 반대입니다. 주어진 대역폭 바깥의
             주파수는 통과하며, 안쪽의 주파수는 감쇠합니다.
           </td>
           <td>주파수 대역의 중앙</td>
@@ -163,15 +163,15 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
         <tr>
           <th scope="row"><code>allpass</code></th>
           <td>
-            표준 2차 <a
+            표준 2차 <a
               href="http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation"
               title="/en-US/docs/"
               >allpass</a
-            > 필터입니다. 이는 모든 주파수를 통과시키지만, 가변 주파수 사이의 위상
+            > 필터입니다. 이는 모든 주파수를 통과시키지만, 가변 주파수 사이의 위상
             관계를 변화시킵니다.
           </td>
           <td>
-            최대 <a
+            최대 <a
               href="http://en.wikipedia.org/wiki/Group_delay_and_phase_delay"
               title="/en-US/docs/"
               >group delay</a
@@ -191,7 +191,7 @@ _Inherits properties from its parent,_ _{{domxref("AudioNode")}}_.
 _{{domxref("AudioNode")}} 로부터 메서드를 상속받습니다_.
 
 - {{domxref("BiquadFilterNode.getFrequencyResponse()")}}
-  - : 이 메서드는 현재 필터 파라미터 설정으로부터 제공된 주파수 배열에 지정된 주파수에 대한 주파수 응답을 계산합니다
+  - : 이 메서드는 현재 필터 파라미터 설정으로부터 제공된 주파수 배열에 지정된 주파수에 대한 주파수 응답을 계산합니다
 
 ## Example
 

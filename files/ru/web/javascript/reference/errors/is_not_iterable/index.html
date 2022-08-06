@@ -17,7 +17,7 @@ TypeError: 'x' не является функцией или её возвращ
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
-<p>Значение, которое даётся как правая сторона for...of или как аргумент функции, такой как {{jsxref("Promise.all")}} или {{jsxref("TypedArray.from")}}, не является итерационным объектом.  Повторяемое может быть, встроенный итератор типа, такие как {{jsxref("Array")}}, {{jsxref("String")}} или {{jsxref("Map")}}, генератор результатом, или объект, реализующий итератор протокол.</p>
+<p>Значение, которое даётся как правая сторона for...of или как аргумент функции, такой как {{jsxref("Promise.all")}} или {{jsxref("TypedArray.from")}}, не является итерационным объектом.  Повторяемое может быть, встроенный итератор типа, такие как {{jsxref("Array")}}, {{jsxref("String")}} или {{jsxref("Map")}}, генератор результатом, или объект, реализующий итератор протокол.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -46,7 +46,7 @@ for (const [country, capital] of Object.entries(obj))
 
 </pre>
 
-<p>Другим вариантом для этого варианта использования может быть использование  {{jsxref("Map")}}:</p>
+<p>Другим вариантом для этого варианта использования может быть использование  {{jsxref("Map")}}:</p>
 
 <pre class="brush: js example-good">var map = new Map;
 map.set('France', 'Paris');
@@ -91,10 +91,10 @@ for (let x of generate(1,2))
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable protocol</a> </li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol">iterable protocol</a> </li>
  <li>{{jsxref("Object.keys")}}</li>
  <li>{{jsxref("Object.entries")}}</li>
  <li>{{jsxref("Map")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">generators</a> </li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generators">generators</a> </li>
  <li><a href="/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement">for…of</a></li>
 </ul>

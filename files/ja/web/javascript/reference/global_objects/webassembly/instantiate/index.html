@@ -100,11 +100,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 };
 
 fetch('simple.wasm').then(response =&gt;
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(bytes =&gt;
-  WebAssembly.instantiate(bytes, importObject)
+  WebAssembly.instantiate(bytes, importObject)
 ).then(result =&gt;
-  result.instance.exports.exported_func()
+  result.instance.exports.exported_func()
 );</pre>
 
 <div class="note">
@@ -119,7 +119,7 @@ fetch('simple.wasm').then(response =&gt;
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(mod =&gt;
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );</pre>
 
 <p>ワーカーでは (<code><a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js">wasm_worker.js</a>を参照</code>) モジュールで使用するためのインポートオブジェクトを定義して、メインスレッドからモジュールを受け取るイベントハンドラーを設定し、 {{jsxref("WebAssembly.instantiate()")}} メソッドを使用してインスタンスを生成し、エクスポートされた関数を呼び出します。</p>

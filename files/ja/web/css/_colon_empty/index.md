@@ -90,5 +90,5 @@ body {
 
 ## 関連情報
 
-- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – {{glossary("prefix", "接頭辞付き")}}で、 {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} の変更を実装
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – {{glossary("prefix", "接頭辞付き")}}で、 {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} の変更を実装
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}

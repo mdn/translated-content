@@ -5,17 +5,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
 <div>{{JSRef}}</div>
 
-<p>A propriedade <strong><code>sticky</code></strong> indica se a busca é "pegajosa" (percorre a string somente a partir do índice indicado pela propriedade {{jsxref("RegExp.lastIndex", "lastIndex")}} desta expressão regular). A propriedade <code>sticky</code> em um objeto de expressão regular é somente para leitura.</p>
+<p>A propriedade <strong><code>sticky</code></strong> indica se a busca é "pegajosa" (percorre a string somente a partir do índice indicado pela propriedade {{jsxref("RegExp.lastIndex", "lastIndex")}} desta expressão regular). A propriedade <code>sticky</code> em um objeto de expressão regular é somente para leitura.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html")}}</div>
 
-<p class="hidden">O código fonte para este exemplo interativo está armazenado em um repositório GitHub. Caso deseje contribuir com o projeto de exemplos interativos, clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um <em>pull request</em>.</p>
+<p class="hidden">O código fonte para este exemplo interativo está armazenado em um repositório GitHub. Caso deseje contribuir com o projeto de exemplos interativos, clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um <em>pull request</em>.</p>
 
 <div>{{js_property_attributes(0, 0, 1)}}</div>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O valor de <code>sticky</code> é do tipo {{jsxref("Boolean")}} e será  <em>true </em>quando a flag "<code>y</code>" for utilizada; senão, será <em>false</em>. A flag "<code>y</code>" indica que as correspondências ocorrerão apenas a partir do indice indicado pela propriedade {{jsxref("RegExp.lastIndex", "lastIndex")}} desta expressão regular na string alvo (e não buscará correspondência em nenhum índice anterior). Uma expressão regular definida como <code>sticky</code> e <code>global</code> ignora a flag <code>global</code>.</p>
+<p>O valor de <code>sticky</code> é do tipo {{jsxref("Boolean")}} e será  <em>true </em>quando a flag "<code>y</code>" for utilizada; senão, será <em>false</em>. A flag "<code>y</code>" indica que as correspondências ocorrerão apenas a partir do indice indicado pela propriedade {{jsxref("RegExp.lastIndex", "lastIndex")}} desta expressão regular na string alvo (e não buscará correspondência em nenhum índice anterior). Uma expressão regular definida como <code>sticky</code> e <code>global</code> ignora a flag <code>global</code>.</p>
 
 <p>Você não pode alterar essa propriedade diretamente. Ela é somente para leitura.</p>
 
@@ -35,13 +35,13 @@ regex.lastIndex; // 0 (reinicia quando não ocorre correspondência)
 
 <h3 id="Flag_sticky_ancorada">Flag sticky ancorada</h3>
 
-<p>Por diversas versões, a engine SpiderMonkey do Firefox apresentou um<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=773687"> bug</a> na asserção de <code>^</code> com a flag <em>sticky </em>que fazia expressões iniciando com <code>^</code> e usando a flag <em>sticky </em>encontrarem correspondências onde não deveriam. O bug foi introduzido algum tempo após o Firefox 3.6 (que possuía a flag sticky mas não apresentava o bug) e corrigido em 2015. Talvez por este motivo, a especificação ES2015 <a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion">destaca especificamente</a> que:</p>
+<p>Por diversas versões, a engine SpiderMonkey do Firefox apresentou um<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=773687"> bug</a> na asserção de <code>^</code> com a flag <em>sticky </em>que fazia expressões iniciando com <code>^</code> e usando a flag <em>sticky </em>encontrarem correspondências onde não deveriam. O bug foi introduzido algum tempo após o Firefox 3.6 (que possuía a flag sticky mas não apresentava o bug) e corrigido em 2015. Talvez por este motivo, a especificação ES2015 <a href="http://www.ecma-international.org/ecma-262/7.0/index.html#sec-assertion">destaca especificamente</a> que:</p>
 
 <blockquote>
-<p>Quando a flag <code>y</code> for usada em um padrão, ^ indica que a correspondência ocorrerá apenas no início da entrada, ou (se <code>multiline</code> for <code>true</code>) no início de uma linha.</p>
+<p>Quando a flag <code>y</code> for usada em um padrão, ^ indica que a correspondência ocorrerá apenas no início da entrada, ou (se <code>multiline</code> for <code>true</code>) no início de uma linha.</p>
 </blockquote>
 
-<p>Exemplos de comportamento esperado:</p>
+<p>Exemplos de comportamento esperado:</p>
 
 <pre class="brush: js">var regex = /^foo/y;
 regex.lastIndex = 2;
@@ -71,7 +71,7 @@ regex2.test('.\nfoo'); // true - índice 2 é o início da linha
   <tr>
    <td>{{SpecName('ESDraft', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

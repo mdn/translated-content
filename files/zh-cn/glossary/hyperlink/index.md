@@ -13,7 +13,7 @@ translation_of: Glossary/Hyperlink
 
 ### 基础知识
 
-- {{interwiki("wikipedia", "Hyperlink", "Hyperlink")}} on Wikipedia
+- [Hyperlink](https://zh.wikipedia.org/wiki/Hyperlink) on Wikipedia
 - The [Hyperlink](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) guide on MDN
 
 ### 技术资讯

@@ -18,4 +18,4 @@ translation_of: Glossary/Port
 
 ### 一般知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Port (computer networking)" , "Port")}} 條目
+- 維基百科上的 [Port](https://zh.wikipedia.org/wiki/Port_(computer_networking)) 條目

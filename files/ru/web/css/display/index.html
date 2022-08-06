@@ -134,13 +134,13 @@ display: unset;
 
 <h3 id="display_none"><code>display: none;</code></h3>
 
-<p>Если свойство <code>display</code> принимает значение <code>none</code> на элементе,  то элемент удаляется из <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дерева доступности</a>. Это приводит к тому, что элемент и все его дочерние элементы больше не будут восприниматься технологиями чтения экрана.</p>
+<p>Если свойство <code>display</code> принимает значение <code>none</code> на элементе,  то элемент удаляется из <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дерева доступности</a>. Это приводит к тому, что элемент и все его дочерние элементы больше не будут восприниматься технологиями чтения экрана.</p>
 
 <p>Если вы хотите визуально скрыть элемент, более доступной альтернативой является использование <a class="external" href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">комбинации свойств</a> для визуального удаления изображения с экрана, но это сохраняет его для синтаксического анализа с помощью вспомогательных технологий, таких как считыватели экрана.</p>
 
 <h3 id="display_contents"><code>display: contents;</code></h3>
 
-<p>Браузеры удаляют любой элемент со свойством <code>display,</code> имеющим значение <code>contents</code> из  <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дерева доступности</a>. Это приводит к тому, что элемент (но не его дочерние элементы) больше не будут восприниматься технологиями чтения экрана. <span id="result_box" lang="ru"><span>Дочерние элементы становятся дочерними элементами элемента следующего уровня в DOM</span></span>.</p>
+<p>Браузеры удаляют любой элемент со свойством <code>display,</code> имеющим значение <code>contents</code> из  <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дерева доступности</a>. Это приводит к тому, что элемент (но не его дочерние элементы) больше не будут восприниматься технологиями чтения экрана. <span id="result_box" lang="ru"><span>Дочерние элементы становятся дочерними элементами элемента следующего уровня в DOM</span></span>.</p>
 
 <ul>
  <li><a class="external" href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html">Display: Contents Is Not a CSS Reset | Adrian Roselli</a></li>
@@ -149,7 +149,7 @@ display: unset;
 
 <h3 id="Таблицы">Таблицы</h3>
 
-<p>Если у элемента {{HTMLElement("table")}} изменить значение свойства <code>display на </code><code>block</code>, <code>grid</code> или <code>flex, это изменит</code> его представление в  <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дереве доступности</a>. Это приводит к тому, что таблица<span id="result_box" lang="ru"><span> не будет объявлена должным образом с помощью технологии чтения экрана.</span></span></p>
+<p>Если у элемента {{HTMLElement("table")}} изменить значение свойства <code>display на </code><code>block</code>, <code>grid</code> или <code>flex, это изменит</code> его представление в  <a href="/ru/docs/Learn/Доступность/What_is_accessibility">дереве доступности</a>. Это приводит к тому, что таблица<span id="result_box" lang="ru"><span> не будет объявлена должным образом с помощью технологии чтения экрана.</span></span></p>
 
 <ul>
  <li><a class="external" href="https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/">Short note on what CSS display properties do to table semantics — The Paciello Group</a></li>

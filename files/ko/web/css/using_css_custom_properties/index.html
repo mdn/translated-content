@@ -205,7 +205,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <h2 id="유효하지_않은_변수를_만날_때">유효하지 않은 변수를 만날 때</h2>
 
-<p> 만일 브라우저가 유효하지 않은   <code>var()</code> 구문을 만나게 되면, 그 속성의 초기값이나 상속된 값이 사용된다.</p>
+<p> 만일 브라우저가 유효하지 않은   <code>var()</code> 구문을 만나게 되면, 그 속성의 초기값이나 상속된 값이 사용된다.</p>
 
 <p>아래의 코드를 보자.</p>
 
@@ -220,21 +220,21 @@ p { color: blue; }
 p { color: var(--text-color); }
 </pre>
 
-<p>예상대로 브라우저는  <code>--text-color</code> 의 값으로  <code>var(--text-color)</code> 를 대체했지만  <code>16px</code> 는 {{cssxref("color")}}에 유효한 값이 아니다. 대체한 결과, 그 속성은 의미가 통하지 않는다. 브라우저는 이 상황을 두 단계로 처리한다:</p>
+<p>예상대로 브라우저는  <code>--text-color</code> 의 값으로  <code>var(--text-color)</code> 를 대체했지만  <code>16px</code> 는 {{cssxref("color")}}에 유효한 값이 아니다. 대체한 결과, 그 속성은 의미가 통하지 않는다. 브라우저는 이 상황을 두 단계로 처리한다:</p>
 
 <ol>
- <li>color 속성이 상속되었는지를 확인한다. 확인, 그런데 <code>&lt;p&gt;</code> 가 color 속성과 연관된 부모 엘리먼트가 없다. 그렇다면 다음 단계로 넘어간다.</li>
- <li>값을 <strong>default initial value</strong>,(초기 설정 디폴트값) 즉, black 으로 처리한다.</li>
+ <li>color 속성이 상속되었는지를 확인한다. 확인, 그런데 <code>&lt;p&gt;</code> 가 color 속성과 연관된 부모 엘리먼트가 없다. 그렇다면 다음 단계로 넘어간다.</li>
+ <li>값을 <strong>default initial value</strong>,(초기 설정 디폴트값) 즉, black 으로 처리한다.</li>
 </ol>
 
 <h3 id="결과">결과</h3>
 
 <p>{{EmbedLiveSample('What_happens_with_invalid_variables')}}</p>
 
-<p>단락의 color 값은 blue가 되지 못한다. 유효하지 않은 값이 폴백 (fallback)이 아닌 초기설정 디포트값으로 대체되었기 때문이다. 만일 사용자가 어떠한 매개변수값 없이 <code>color: 16px</code> 를 쓴다면 에러(syntax error)를 받게 될 것이다. 대신 그 전에 지정된 선언이 사용된다.</p>
+<p>단락의 color 값은 blue가 되지 못한다. 유효하지 않은 값이 폴백 (fallback)이 아닌 초기설정 디포트값으로 대체되었기 때문이다. 만일 사용자가 어떠한 매개변수값 없이 <code>color: 16px</code> 를 쓴다면 에러(syntax error)를 받게 될 것이다. 대신 그 전에 지정된 선언이 사용된다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: CSS 속성/값 쌍에서 에러(syntax error)가 나면 그 라인은 무시되지만 계단식으로 지정된 값, 유효하지 않은 대체적용(substitution) - 유효하지 않은 사용자 지정값을 사용하는 것 - 은 무시되지 않으며, 그 값은 상속된다.</p>
+<p><strong>Note</strong>: CSS 속성/값 쌍에서 에러(syntax error)가 나면 그 라인은 무시되지만 계단식으로 지정된 값, 유효하지 않은 대체적용(substitution) - 유효하지 않은 사용자 지정값을 사용하는 것 - 은 무시되지 않으며, 그 값은 상속된다.</p>
 </div>
 
 <h2 id="JavaScript에서의_값">JavaScript에서의 값</h2>

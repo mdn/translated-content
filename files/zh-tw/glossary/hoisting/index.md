@@ -56,14 +56,14 @@ var num;
 JavaScript 僅提升宣告的部分，而不是初始化。如果在使用該變數後才宣告和初始化，那麼該值將是 undefined。以下兩個範例顯示了這個特性。
 
 ```js
-var x = 1; // 初始化 x
-console.log(x + " " + y);  // '1 undefined'
+var x = 1; // 初始化 x
+console.log(x + " " + y);  // '1 undefined'
 var y = 2;
 //上下的程式結果都一樣
 
-var x = 1; // 初始化 x
+var x = 1; // 初始化 x
 var y; // 宣告 y
-console.log(x + " " + y);  // '1 undefined'
+console.log(x + " " + y);  // '1 undefined'
 y = 2; // 初始化 y
 ```
 

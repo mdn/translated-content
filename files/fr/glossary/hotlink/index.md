@@ -13,4 +13,4 @@ La pratique est souvent désapprouvée car elle peut provoquer une utilisation n
 
 ## En apprendre plus
 
-- {{Interwiki("wikipedia","Hotlinking")}} sur Wikipedia
+- [<i lang="en">Hotlinking</i>](https://fr.wikipedia.org/wiki/Hotlinking) sur Wikipédia

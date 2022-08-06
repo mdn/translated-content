@@ -6,7 +6,7 @@ original_slug: Web/API/Document/abrir
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>El método <strong><code>Document.open()</code></strong> abre un documento para escritura (<a href="/en-US/docs/Web/API/Document/write" title="en/DOM/document.write">writing</a>)</p>
+<p>El método <strong><code>Document.open()</code></strong> abre un documento para escritura (<a href="/en-US/docs/Web/API/Document/write" title="en/DOM/document.write">writing</a>)</p>
 
 <p>Esto viene con algunos efectos secundarios. Por ejemplo:</p>
 
@@ -30,7 +30,7 @@ original_slug: Web/API/Document/abrir
 
 <h2 id="Example" name="Example">Ejemplos</h2>
 
-<p>El código simple a continuación abre el documento y reemplaza su contenido con un número de diferentes fragmentos HTML antes de cerrarlo nuevamente.</p>
+<p>El código simple a continuación abre el documento y reemplaza su contenido con un número de diferentes fragmentos HTML antes de cerrarlo nuevamente.</p>
 
 <pre class="notranslate">document.open();
 document.write("&lt;p&gt;Hola mundo!&lt;/p&gt;");
@@ -70,7 +70,7 @@ document.close();</pre>
 
 <p>Where <code>type</code> specified the MIME type of the data you are writing (e.g. <code>text/html</code>) and replace if set (i.e. a string of <code>"replace"</code>) specified that the history entry for the new document would replace the current history entry of the document being written to.</p>
 
-<p>This form is now obsolete; it won't throw an error, but instead just forwards to <code>document.open()</code> (i.e. is the equivalent of just running it with no arguments).  The history-replacement behavior now always happens.</p>
+<p>This form is now obsolete; it won't throw an error, but instead just forwards to <code>document.open()</code> (i.e. is the equivalent of just running it with no arguments).  The history-replacement behavior now always happens.</p>
 
 <h2 id="Specifications">Specifications</h2>
 

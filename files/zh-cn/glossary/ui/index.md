@@ -13,5 +13,5 @@ _用户界面_ (UI) 是实现人机交互的一类事物的总称。在计算机
 
 ### 常识
 
-- 维基百科上的 {{interwiki("wikipedia", "用户界面", "用户界面")}}
-- 维基百科上的 {{interwiki("wikipedia", "前端开发", "前端开发")}}
+- 维基百科上的 [用户界面](https://zh.wikipedia.org/wiki/用户界面)
+- 维基百科上的 [前端开发](https://zh.wikipedia.org/wiki/前端开发)

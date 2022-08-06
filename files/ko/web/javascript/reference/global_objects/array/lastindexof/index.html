@@ -42,7 +42,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 <h2 id="예제">예제</h2>
 
-<h3 id="lastIndexOf_사용하기"><code>lastIndexOf</code> 사용하기</h3>
+<h3 id="lastIndexOf_사용하기"><code>lastIndexOf</code> 사용하기</h3>
 
 <p>다음 예제에서는 <code>lastIndexOf</code>를 사용하여 배열의 값을 찾습니다.</p>
 
@@ -63,9 +63,9 @@ array.lastIndexOf(2, -1); // 3
 var array = ['a', 'b', 'a', 'c', 'a', 'd'];
 var element = 'a';
 var idx = array.lastIndexOf(element);
-while (idx != -1) {
+while (idx != -1) {
   indices.push(idx);
-  idx = (idx &gt; 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = (idx &gt; 0 ? array.lastIndexOf(element, idx - 1) : -1);
 }
 
 console.log(indices);

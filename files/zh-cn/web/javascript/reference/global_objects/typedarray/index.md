@@ -29,6 +29,8 @@ original_slug: Web/API/ArrayBufferView
 
 ## 规范
 
-| Specification                                                                    | Status                   | Comment             |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('WebIDL', "#ArrayBufferView", "ArrayBufferView")}} | {{Spec2('WebIDL')}} | Initial definition. |
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

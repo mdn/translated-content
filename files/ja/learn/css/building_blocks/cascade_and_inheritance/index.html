@@ -45,7 +45,7 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 
 <p><font><font>スタイルシートの</font></font><strong><font><font>カスケード</font></font></strong><font><font>に</font></font><font><font>ついて</font></font><font><font>、とてもシンプルに考えるなら CSS ルールの順序が重要であることを意味します。等しい詳細度を持つ 2 つ のルールが適用される場合、CSS の最後に来るものが使用されます。</font></font></p>
 
-<p>以下の例では、 <code>h1</code> に対して 2 つ のルールがあります。この <code>h1</code> は最終的に青色になります。これらのルールは個別のセレクターを持つため同じ詳細度であるので、ソースで最後にきている方が採用されています。</p>
+<p>以下の例では、 <code>h1</code> に対して 2 つ のルールがあります。この <code>h1</code> は最終的に青色になります。これらのルールは個別のセレクターを持つため同じ詳細度であるので、ソースで最後にきている方が採用されています。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 400)}}</p>
 
@@ -55,10 +55,10 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 
 <ul>
  <li>要素セレクターはそれほど具体的ではありません。ページに表示されるそのタイプのすべての要素を選択するため、スコアが低くなります。</li>
- <li>クラスセレクターはより具体的です。ページ上の特定の <code>class</code> 属性値を持つ要素のみを選択するため、スコアはより高くなります。</li>
+ <li>クラスセレクターはより具体的です。ページ上の特定の <code>class</code> 属性値を持つ要素のみを選択するため、スコアはより高くなります。</li>
 </ul>
 
-<p>例を見てみましょう。以下に <code>h1</code> に適用できる 2 つ のルールを再度示します。この <code>h1</code> は最終的には赤色になります。クラスセレクターはルールにより高い詳細度を与えるため、要素セレクターを使用したルールがソースの順序でさらに下の方にあっても適用されます。</p>
+<p>例を見てみましょう。以下に <code>h1</code> に適用できる 2 つ のルールを再度示します。この <code>h1</code> は最終的には赤色になります。クラスセレクターはルールにより高い詳細度を与えるため、要素セレクターを使用したルールがソースの順序でさらに下の方にあっても適用されます。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 500)}}</p>
 
@@ -68,14 +68,14 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 
 <p>ここでは継承についても理解する必要があります。親要素に設定された CSS プロパティ値には、子要素に継承されるものとそうでないものがあります。</p>
 
-<p>例えば、要素に <code>color</code> と <code>font-family</code> を設定すると、異なる色とフォントの値を直接適用しない限り、その中のすべての要素もその色とフォントでスタイルされます。</p>
+<p>例えば、要素に <code>color</code> と <code>font-family</code> を設定すると、異なる色とフォントの値を直接適用しない限り、その中のすべての要素もその色とフォントでスタイルされます。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 550)}}</p>
 
-<p>いくつかのプロパティは継承されません。例えば、要素に {{cssxref("width")}} 50% と設定した場合、すべての子孫要素は親の幅の 50% の幅を取得しません。もしそんなことになるのら CSS を使うととてもイライラするでしょう。</p>
+<p>いくつかのプロパティは継承されません。例えば、要素に {{cssxref("width")}} 50% と設定した場合、すべての子孫要素は親の幅の 50% の幅を取得しません。もしそんなことになるのら CSS を使うととてもイライラするでしょう。</p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: MDN の CSS プロパティリファレンスページには、仕様書セクションの下部に技術情報ボックスがあるのが通例です。このボックスには、そのプロパティに関する多数のデータポイント（継承されているかどうかなど）が一覧表示されます。例として <a href="/ja/docs/Web/CSS/color#Specifications">color プロパティの仕様書セクション</a> を参照してください。</p>
+<p><strong>注</strong>: MDN の CSS プロパティリファレンスページには、仕様書セクションの下部に技術情報ボックスがあるのが通例です。このボックスには、そのプロパティに関する多数のデータポイント（継承されているかどうかなど）が一覧表示されます。例として <a href="/ja/docs/Web/CSS/color#Specifications">color プロパティの仕様書セクション</a> を参照してください。</p>
 </div>
 
 <h2 id="Understanding_how_the_concepts_work_together" name="Understanding_how_the_concepts_work_together">これらの概念がどう連携するか理解する</h2>
@@ -84,9 +84,9 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 
 <h2 id="Understanding_inheritance" name="Understanding_inheritance">継承を理解する</h2>
 
-<p>継承から始めます。次の例では {{HTMLElement("ul")}} があり、内部にさらに 2 つ のレベルの順序なしリストがネストされています。外側の <code>&lt;ul&gt;</code> に境界線、パディング、および文字色が指定されています。</p>
+<p>継承から始めます。次の例では {{HTMLElement("ul")}} があり、内部にさらに 2 つ のレベルの順序なしリストがネストされています。外側の <code>&lt;ul&gt;</code> に境界線、パディング、および文字色が指定されています。</p>
 
-<p>文字色については直接の子だけでなく、間接の子にも適用されています。つまり直接の子である <code>&lt;li&gt;</code> 、それに最初のネストされたリスト内のものにも適用されています。そして 2番目 にネストされたリストに <code>special</code> クラスを追加し、別の色が適用されています。これは子に継承します。</p>
+<p>文字色については直接の子だけでなく、間接の子にも適用されています。つまり直接の子である <code>&lt;li&gt;</code> 、それに最初のネストされたリスト内のものにも適用されています。そして 2番目 にネストされたリストに <code>special</code> クラスを追加し、別の色が適用されています。これは子に継承します。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 700)}}</p>
 
@@ -102,13 +102,13 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
  <dt>{{cssxref("inherit")}}</dt>
  <dd>選択した要素に適用されるプロパティ値を、その親要素と同じものに設定します。これは「継承を有効にする」ことを意味します。</dd>
  <dt>{{cssxref("initial")}}</dt>
- <dd><font><font>選択された要素に適用されるプロパティ値を、ブラウザーのデフォルトスタイルシートでその要素に設定されているものと同じ値に設定します。</font><font>ブラウザーのデフォルトのスタイルシートで値が設定されておらず、かつ、そのプロパティが自然に継承される場合は </font></font><code>inherit</code><font><font> が代わりにプロパティ値として設定され</font><font>ます。</font></font></dd>
+ <dd><font><font>選択された要素に適用されるプロパティ値を、ブラウザーのデフォルトスタイルシートでその要素に設定されているものと同じ値に設定します。</font><font>ブラウザーのデフォルトのスタイルシートで値が設定されておらず、かつ、そのプロパティが自然に継承される場合は </font></font><code>inherit</code><font><font> が代わりにプロパティ値として設定され</font><font>ます。</font></font></dd>
  <dt>{{cssxref("unset")}}</dt>
- <dd>プロパティを自然な値にリセットします。つまり、プロパティが自然に継承される場合は <code>inherit</code> のように動作し、そうでない場合は <code>initial</code> のように動作します。</dd>
+ <dd>プロパティを自然な値にリセットします。つまり、プロパティが自然に継承される場合は <code>inherit</code> のように動作し、そうでない場合は <code>initial</code> のように動作します。</dd>
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: 新しい値で {{cssxref("revert")}} もありますが、これはブラウザーのサポートが制限されます。</p>
+<p><strong>注</strong>: 新しい値で {{cssxref("revert")}} もありますが、これはブラウザーのサポートが制限されます。</p>
 </div>
 
 <div class="blockIndicator note">
@@ -120,9 +120,9 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 <p>以下を試してみてください。</p>
 
 <ol>
- <li><font><font>2番目 のリストアイテムには、</font></font><code>my-class-1</code><font><font> が適用されています。これは、内部にネストされた </font></font><code>&lt;a&gt;</code><font><font> 要素に色を継承します。</font><font>ルールを削除すると、リンクの色はどのように変わるでしょうか？</font></font></li>
+ <li><font><font>2番目 のリストアイテムには、</font></font><code>my-class-1</code><font><font> が適用されています。これは、内部にネストされた </font></font><code>&lt;a&gt;</code><font><font> 要素に色を継承します。</font><font>ルールを削除すると、リンクの色はどのように変わるでしょうか？</font></font></li>
  <li>なぜ 3番目 と 4番目 のリンクがその色であるのか理解できていますか？そうでない場合は、上述しているそれぞれの値の説明を確認してください。</li>
- <li>例えば <code>a { color: red; }</code> というように <code>&lt;a&gt;</code> 要素に新しい色を定義すると、どのリンクの色が変わるでしょうか？</li>
+ <li>例えば <code>a { color: red; }</code> というように <code>&lt;a&gt;</code> 要素に新しい色を定義すると、どのリンクの色が変わるでしょうか？</li>
 </ol>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}}</p>
@@ -131,11 +131,11 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 
 <p><font><font>CSS の一括指定プロパティ </font></font><code>all</code><font><font> を使用して、これらの継承値の 1 つ を（ほぼ）すべてのプロパティに一度に適用できます。その値として、いずれかの継承値 (</font></font><code>inherit</code><font><font>、</font></font><code>initial</code><font><font>、</font></font><code>unset</code><font><font>、または </font></font><code>revert</code><font><font>) を指定できます。新しく変更を開始する際、既知の開始点に戻ることができるように、変更されたスタイルを元に戻す便利な方法です。</font></font></p>
 
-<p><font><font>以下の例では 2 つ のブロック引用要素 <em>(blockquote)</em> があります。最初のスタイルは blockquote 要素自体に適用され、2 つ目には </font></font><code>all</code><font><font> に </font></font><code>unset</code><font><font> をセットするようにblockquote に適用されるクラスがあります。</font></font></p>
+<p><font><font>以下の例では 2 つ のブロック引用要素 <em>(blockquote)</em> があります。最初のスタイルは blockquote 要素自体に適用され、2 つ目には </font></font><code>all</code><font><font> に </font></font><code>unset</code><font><font> をセットするようにblockquote に適用されるクラスがあります。</font></font></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 700)}}</p>
 
-<p><code>all</code> の値を他の有効な値に設定してみて、違いを観察してみてください。</p>
+<p><code>all</code> の値を他の有効な値に設定してみて、違いを観察してみてください。</p>
 
 <h2 id="Understanding_the_cascade" name="Understanding_the_cascade">カスケードを理解する</h2>
 
@@ -172,17 +172,17 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 <p>セレクターが持つ詳細度の量は、4 つ の異なる値（またはコンポーネント）を使用して測定されます。これは、1,000、100、10、1 のそれぞれの位として考えることができます。</p>
 
 <ol>
- <li><strong>「1,000」 </strong>宣言が {{htmlattrxref("style")}} 属性（別名、インラインスタイル）内にある場合、これがスコアされます。このような宣言にはセレクターがないため、その詳細度は常にシンプルに 1,000 です。</li>
+ <li><strong>「1,000」 </strong>宣言が {{htmlattrxref("style")}} 属性（別名、インラインスタイル）内にある場合、これがスコアされます。このような宣言にはセレクターがないため、その詳細度は常にシンプルに 1,000 です。</li>
  <li><strong>「100」 </strong>全体のセレクターの内部にある ID セレクターは、これがスコアされます。</li>
- <li><strong>「10」 </strong>全体のセレクターの内部にあるクラスセレクター・属性セレクター・擬似クラスは、これがスコアされます。</li>
- <li><strong>「1」 </strong>全体のセレクターの内部にある要素セレクターまたは疑似要素には、これがスコアされます。</li>
+ <li><strong>「10」 </strong>全体のセレクターの内部にあるクラスセレクター・属性セレクター・擬似クラスは、これがスコアされます。</li>
+ <li><strong>「1」 </strong>全体のセレクターの内部にある要素セレクターまたは疑似要素には、これがスコアされます。</li>
 </ol>
 
 <div class="note">
 <p><strong>注</strong>: <font><font>ユニバーサルセレクタ (</font></font><code>*</code><font><font>)、コンビネータ (</font></font><code>+</code><font><font>、</font></font><code>&gt;</code><font><font>、</font></font><code>~</code><font><font>、' ') 、及び否定擬似クラス（</font></font><code>:not</code><font><font>）は詳細度に影響を及ぼしません。</font></font></p>
 </div>
 
-<p><font><font>次の表でわかりやすいいくつかの例を示します。</font><font>これらを試してみて、なぜ詳細度が与えられるのかをしっかり理解してください。</font><font>セレクターについてはまだ詳しく説明していませんが、MDN の </font></font><a href="/ja/docs/Web/CSS/CSS_Selectors"><font><font>CSS セレクター</font></font></a><font><font>で詳細を参照することができます。</font></font></p>
+<p><font><font>次の表でわかりやすいいくつかの例を示します。</font><font>これらを試してみて、なぜ詳細度が与えられるのかをしっかり理解してください。</font><font>セレクターについてはまだ詳しく説明していませんが、MDN の </font></font><a href="/ja/docs/Web/CSS/CSS_Selectors"><font><font>CSS セレクター</font></font></a><font><font>で詳細を参照することができます。</font></font></p>
 
 <table class="standard-table">
  <thead>
@@ -246,13 +246,13 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 <p><font>何が起こっているのでしょうか？まず、この例の最初の 7 つ のルールにのみ関心があり、お気づきのように、各ルールの前に詳細度の値をコメントしてあります。</font></p>
 
 <ul>
- <li>最初の 2 つ のセレクターはリンクの背景色について競合しています。2番目 のセレクターには ID セレクター があるのでそれが優先され青になります。詳細度は 101 対 201 でした。</li>
- <li><font>3番目 と 4番目 のセレクターはリンクテキストの色について競合しています。2番目 のセレクターは 1 つ は要素セレクターの代わりに</font><font>クラスセレクターが使われているため、白が適用されます。詳細度は 104 対 113 でした。</font></li>
- <li><font>セレクター 5〜7 は、リンクホバー時の境界線について競合しています。セレクター6 は 5 に対して要素セレクターが 1 つ少ないため、詳細度 23 対 24 で負けています。一方で、セレクター7 は 5 と 6 の両方に勝っています。サブセレクターの数は 5 と同じですが、クラスセレクターの要素が使われているためです。詳細度は 24 対 23 対 33 でした。</font></li>
+ <li>最初の 2 つ のセレクターはリンクの背景色について競合しています。2番目 のセレクターには ID セレクター があるのでそれが優先され青になります。詳細度は 101 対 201 でした。</li>
+ <li><font>3番目 と 4番目 のセレクターはリンクテキストの色について競合しています。2番目 のセレクターは 1 つ は要素セレクターの代わりに</font><font>クラスセレクターが使われているため、白が適用されます。詳細度は 104 対 113 でした。</font></li>
+ <li><font>セレクター 5〜7 は、リンクホバー時の境界線について競合しています。セレクター6 は 5 に対して要素セレクターが 1 つ少ないため、詳細度 23 対 24 で負けています。一方で、セレクター7 は 5 と 6 の両方に勝っています。サブセレクターの数は 5 と同じですが、クラスセレクターの要素が使われているためです。詳細度は 24 対 23 対 33 でした。</font></li>
 </ul>
 
 <div class="note">
-<p><strong>注</strong>: <font><font>これは理解しやすくするためのざっくりとした一例に過ぎません。</font><font>実際には、セレクタータイプごとにはそれぞれレベルの詳細度があり、より低い詳細度レベルのセレクターによって上書きすることはできません。</font><font>例えば </font></font><em><font><font>100万 の</font></font></em><strong><font><font>クラス</font></font></strong><font><font>セレクターを組み合わせても、</font></font><em><font><font>1 つ の</font></font></em> <strong><font><font>ID </font></font></strong><font><font>セレクターの</font><font>ルールを上書きすることはできません</font><font>。</font></font></p>
+<p><strong>注</strong>: <font><font>これは理解しやすくするためのざっくりとした一例に過ぎません。</font><font>実際には、セレクタータイプごとにはそれぞれレベルの詳細度があり、より低い詳細度レベルのセレクターによって上書きすることはできません。</font><font>例えば </font></font><em><font><font>100万 の</font></font></em><strong><font><font>クラス</font></font></strong><font><font>セレクターを組み合わせても、</font></font><em><font><font>1 つ の</font></font></em> <strong><font><font>ID </font></font></strong><font><font>セレクターの</font><font>ルールを上書きすることはできません</font><font>。</font></font></p>
 
 <p><font>詳細度を評価するためのより正確な方法は、詳細度を高レベルから開始し必要に応じて低レベルにしていくことです。高い方の詳細度</font><font>のセレクタースコアが同点の場合にのみ、低レベルを評価することになります。</font><font>同点でない場合、より高い詳細度レベルを上書きできないため、より低い詳細度レベルのセレクターを無視できます。</font></p>
 </div>
@@ -268,17 +268,17 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 <p>何が起きているのかを見てみましょう。理解しにくい場合は、いくつかのプロパティを削除しながら、どうなるか見てみてください。</p>
 
 <ol>
- <li><font><font>3番目のルールでは </font></font>{{cssxref("color")}} と {{cssxref("padding")}} <font><font>が適用されていますが、</font></font>{{cssxref("background-color")}} は<font><font>適用されて</font></font><font><font>いない</font><font>ことようです</font><font>。</font><font>なぜでしょうか？</font><font>ソースオーダーの後の方は、普通は前の方のルールをオーバーライドするため、その観点では 3 つ すべてが適用されるはずです。</font></font></li>
+ <li><font><font>3番目のルールでは </font></font>{{cssxref("color")}} と {{cssxref("padding")}} <font><font>が適用されていますが、</font></font>{{cssxref("background-color")}} は<font><font>適用されて</font></font><font><font>いない</font><font>ことようです</font><font>。</font><font>なぜでしょうか？</font><font>ソースオーダーの後の方は、普通は前の方のルールをオーバーライドするため、その観点では 3 つ すべてが適用されるはずです。</font></font></li>
  <li><font><font>とはいえ、クラスセレクターは要素セレクターよりも詳細度が高いため前者のルールが優先されます</font></font><font><font>。</font></font></li>
- <li><font><font>両方の要素には </font></font><code>better</code><font><font> という </font></font>{{htmlattrxref("class")}} <font><font>が</font></font><font><font>ありますが、2番目 の</font><font>要素には </font></font><code>winning</code><font><font> という </font></font>{{htmlattrxref("id")}} もありま<font><font>す。ID はクラスよりも<strong>より高い詳細度</strong>があるため（ページ上では ID を持つ要素は一意に 1 つ しか置けないのに対し、同じクラスを持つ多くの要素がありえるため、ID セレクターの方が<strong>非常に限定的</strong>になります）、2番目の要素には赤い背景色と 1 ピクセルの黒い境界線が適用され、最初の要素についてはクラスで指定されたように灰色の背景色となり、境界線は消えます。</font></font></li>
- <li><font><font>2番目 の要素は赤い背景が適用されていま</font></font><font><font>すが</font><font>、あるはずの境界線はありません</font><font>。</font><font>なぜでしょうか？ </font></font><font><font>2番目 のルールでは </font></font><code>border: none</code><font><font> のあとに </font></font><code>!important</code><font><font> と宣言されており、高い詳細度であるはずの ID よりも重要なものとして扱われているためです。</font></font></li>
+ <li><font><font>両方の要素には </font></font><code>better</code><font><font> という </font></font>{{htmlattrxref("class")}} <font><font>が</font></font><font><font>ありますが、2番目 の</font><font>要素には </font></font><code>winning</code><font><font> という </font></font>{{htmlattrxref("id")}} もありま<font><font>す。ID はクラスよりも<strong>より高い詳細度</strong>があるため（ページ上では ID を持つ要素は一意に 1 つ しか置けないのに対し、同じクラスを持つ多くの要素がありえるため、ID セレクターの方が<strong>非常に限定的</strong>になります）、2番目の要素には赤い背景色と 1 ピクセルの黒い境界線が適用され、最初の要素についてはクラスで指定されたように灰色の背景色となり、境界線は消えます。</font></font></li>
+ <li><font><font>2番目 の要素は赤い背景が適用されていま</font></font><font><font>すが</font><font>、あるはずの境界線はありません</font><font>。</font><font>なぜでしょうか？ </font></font><font><font>2番目 のルールでは </font></font><code>border: none</code><font><font> のあとに </font></font><code>!important</code><font><font> と宣言されており、高い詳細度であるはずの ID よりも重要なものとして扱われているためです。</font></font></li>
 </ol>
 
 <div class="note">
-<p><strong>注</strong>: <font><font>この </font></font><code>!important</code><font><font> 宣言をオーバーライドする唯一の方法</font><font>は、ソースオーダーの後半で同じ詳細度を持つように</font><em><font> </font></em></font><code>!important</code><font><font> 宣言するか</font><font>、またはより高い詳細度を持つ</font><font>宣言に</font><font>含める</font><font>ことです。</font></font></p>
+<p><strong>注</strong>: <font><font>この </font></font><code>!important</code><font><font> 宣言をオーバーライドする唯一の方法</font><font>は、ソースオーダーの後半で同じ詳細度を持つように</font><em><font> </font></em></font><code>!important</code><font><font> 宣言するか</font><font>、またはより高い詳細度を持つ</font><font>宣言に</font><font>含める</font><font>ことです。</font></font></p>
 </div>
 
-<p><code>!important</code><font><font> を知っていると便利です。他人のコードでも見かけることがあるからです。</font></font><strong><font><font>ただし絶対に必要な場合を除きあまり使用しないことを強くお勧めします。</font></font></strong> <code>!important</code><font><font> はカスケードの普通の挙動とは異なってしまうため、特に大きなスタイルシートで CSS に関わるデバッグが非常に困難になるためです。</font></font></p>
+<p><code>!important</code><font><font> を知っていると便利です。他人のコードでも見かけることがあるからです。</font></font><strong><font><font>ただし絶対に必要な場合を除きあまり使用しないことを強くお勧めします。</font></font></strong> <code>!important</code><font><font> はカスケードの普通の挙動とは異なってしまうため、特に大きなスタイルシートで CSS に関わるデバッグが非常に困難になるためです。</font></font></p>
 
 <p><font>使用しなければならない状況の 1 つ としては、コアにある CSS モジュールを編集できない CMS で作業している等で、他の方法では難しい場合にスタイルを実際にオーバーライドしたい場合等があります。</font><font>でも本当に、回避できる場合は使用しないでください。</font></p>
 
@@ -298,7 +298,7 @@ translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
  <li>ユーザーのスタイルシートの重要 <em>(important)</em> な宣言</li>
 </ol>
 
-<p><font><font>ウェブ開発者のスタイルシートがユーザー</font></font>の<font><font>それを上書きするのは理にかなっているので設計を意図どおりに保つことができますが、前述したとおり、ユーザーがウェブ開発者スタイルをオーバーライドする正当な理由がある場合もあります。それは </font></font><code>!important</code><font><font> ルールを使用する</font><font>ことで実現でき</font><font>ます。</font></font></p>
+<p><font><font>ウェブ開発者のスタイルシートがユーザー</font></font>の<font><font>それを上書きするのは理にかなっているので設計を意図どおりに保つことができますが、前述したとおり、ユーザーがウェブ開発者スタイルをオーバーライドする正当な理由がある場合もあります。それは </font></font><code>!important</code><font><font> ルールを使用する</font><font>ことで実現でき</font><font>ます。</font></font></p>
 
 <h2 id="スキルをテストしよう!">スキルをテストしよう!</h2>
 

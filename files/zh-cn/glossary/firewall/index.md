@@ -17,4 +17,4 @@ translation_of: Glossary/firewall
 
 ### 基本知识
 
-- {{Interwiki("wikipedia", "Firewall (computing)")}} on Wikipedia
+- [Firewall (computing)](https://zh.wikipedia.org/wiki/Firewall_(computing)) on Wikipedia

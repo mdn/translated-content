@@ -102,9 +102,9 @@ var promise = import("<em>module-name</em>");
 
 <pre class="brush: js notranslate">(async () =&gt; {
   if (somethingIsTrue) {
-    // 副作用のためのインポートモジュール
-    await import('/modules/my-module.js');
-  }
+    // 副作用のためのインポートモジュール
+    await import('/modules/my-module.js');
+  }
 })();</pre>
 
 <p>プロジェクトで ESM をエクスポートするパッケージを使用している場合は、副作用のためだけにインポートすることもできます。これにより、パッケージエントリーポイントファイル（およびインポートするすべてのファイル）のコードのみが実行されます。</p>
@@ -133,7 +133,7 @@ var promise = import("<em>module-name</em>");
 
 <pre class="brush: js notranslate">(async () =&gt; {
   if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
+    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
   }
 })();</pre>
 
@@ -154,9 +154,9 @@ var promise = import("<em>module-name</em>");
 <p>モジュールを動的にインポートするために、<code>import</code> キーワードを関数として呼び出すことができます。この方法で使用すると、promise が返されます。</p>
 
 <pre class="brush: js notranslate">import('/modules/my-module.js')
-  .then((module) =&gt; {
-    // module を使った何らかの処理
-  });
+  .then((module) =&gt; {
+    // module を使った何らかの処理
+  });
 </pre>
 
 <p>この方法は <code>await</code> キーワードを使えます。</p>

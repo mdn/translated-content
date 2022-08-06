@@ -24,4 +24,4 @@ translation_of: Glossary/Server
 ### 常识
 
 - [服务器介绍](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)
-- 维基百科上的 {{Interwiki("wikipedia", "服务器")}}
+- 维基百科上的 [服务器](https://zh.wikipedia.org/wiki/服务器)

@@ -102,7 +102,7 @@ function print_PerformanceEntries() {
 }
 </pre>
 
-<p>This interface also includes a {{domxref("PerformanceEntry.toJSON","toJSON()")}} method that returns the serialization of the {{domxref("PerformanceEntry")}} object. The following examples show the use of this method.</p>
+<p>This interface also includes a {{domxref("PerformanceEntry.toJSON","toJSON()")}} method that returns the serialization of the {{domxref("PerformanceEntry")}} object. The following examples show the use of this method.</p>
 
 <pre class="brush: js">function PerfEntry_toJSON() {
 
@@ -130,7 +130,7 @@ function print_PerformanceEntries() {
 
 <p>{{SeeCompatTable}}</p>
 
-<p>The <em>performance observer</em> interfaces allow an application to register an <em>observer</em> for specific performance event types, and when one of those event types is recorded, the application is <em>notified</em> of the event via the observer's callback function that was specified at the time, the observer was created. When the observer (callback) is invoked  the callback's parameters include a <em>{{domxref("PerformanceObserverEntryList","performance observer entry list")}}</em> that only contains <em>observed</em> {{domxref("PerformanceEntry","performance entries")}}. That is, the list only contains entries for the event types that were specified when the observer's {{domxref("PerformanceObserver.observe","observe()")}} method was invoked.</p>
+<p>The <em>performance observer</em> interfaces allow an application to register an <em>observer</em> for specific performance event types, and when one of those event types is recorded, the application is <em>notified</em> of the event via the observer's callback function that was specified at the time, the observer was created. When the observer (callback) is invoked  the callback's parameters include a <em>{{domxref("PerformanceObserverEntryList","performance observer entry list")}}</em> that only contains <em>observed</em> {{domxref("PerformanceEntry","performance entries")}}. That is, the list only contains entries for the event types that were specified when the observer's {{domxref("PerformanceObserver.observe","observe()")}} method was invoked.</p>
 
 <p>The following example shows how to register two observers: the first one registers for several event types and the second observer only registers for one event type.</p>
 
@@ -179,7 +179,7 @@ function print_perf_entry(pe) {
 }
 </pre>
 
-<p>The {{domxref("PerformanceObserverEntryList","performance observer entry list")}} interface has the same three <code>getEntries*()</code> methods as the {{domxref("Performance")}} interface and these methods are used to retrieve <em>observed</em> performance entries within the observer callback. These methods have been used in the above stated example.</p>
+<p>The {{domxref("PerformanceObserverEntryList","performance observer entry list")}} interface has the same three <code>getEntries*()</code> methods as the {{domxref("Performance")}} interface and these methods are used to retrieve <em>observed</em> performance entries within the observer callback. These methods have been used in the above stated example.</p>
 
 <h2 id="仕様">仕様</h2>
 

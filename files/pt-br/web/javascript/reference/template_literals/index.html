@@ -72,7 +72,7 @@ var b = 10;
 
 function tag(strings, ...values) {
   console.log(strings[0]); // "Hello "
-  console.log(strings[1]); // " world"
+  console.log(strings[1]); // " world "
   console.log(values[0]);  // 15
   console.log(values[1]);  // 50
 
@@ -85,7 +85,7 @@ tag`Hello ${ a + b } world ${ a * b}`;
 
 <h3 id="Strings_Raw">Strings <em>Raw</em></h3>
 
-<p>A propriedade especial <code>raw</code>, disponível no primeiro argumento da função da <em>tagged template string</em> acima, permite o acesso as strings de maneira pura (<em>raw</em>) exatamente como elas foram especificadas:</p>
+<p>A propriedade especial <code>raw</code>, disponível no primeiro argumento da função da <em>tagged template string</em> acima, permite o acesso as strings de maneira pura (<em>raw</em>) exatamente como elas foram especificadas:</p>
 
 <pre class="brush: js notranslate">function tag(strings, ...values) {
   return strings.raw[0];
@@ -95,7 +95,7 @@ tag`string text line 1 \n string text line 2`;
 // "string text line 1 \\n string text line 2"
 </pre>
 
-<p>Adicionalmente, o método {{jsxref("String.raw()")}} permite a criação de strings cruas, exatamente como as <em>template functions</em> e as concatenações deveram criar.</p>
+<p>Adicionalmente, o método {{jsxref("String.raw()")}} permite a criação de strings cruas, exatamente como as <em>template functions</em> e as concatenações deveram criar.</p>
 
 <pre class="brush: js notranslate">String.raw`Hi\n${2+3}!`; // "Hi\\n5!"</pre>
 

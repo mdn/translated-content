@@ -7,4 +7,4 @@ translation_of: Glossary/Data_structure
 
 ## 参见
 
-- 维基百科上的 {{interwiki("wikipedia", "Data_structure", "Data structure")}}
+- 维基百科上的 [Data structure](https://zh.wikipedia.org/wiki/Data_structure)

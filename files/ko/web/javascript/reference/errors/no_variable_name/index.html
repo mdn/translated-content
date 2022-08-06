@@ -16,7 +16,7 @@ SyntaxError: Unexpected token = (Chrome)</pre>
 
 <h2 id="무엇이_잘_못_되었을까">무엇이 잘 못 되었을까?</h2>
 
-<p>변수에 이름이 없습니다. 이것은 코드 내의 구문 에러 때문일 수도 있습니다. 어쩌면 콤마를 잘 못 된 곳에 찍었거나, 변수명을 지을 때 애를 먹었을 수도 있습니다. 그럴 수도 있죠! 작명은 너무 어려우니까요. </p>
+<p>변수에 이름이 없습니다. 이것은 코드 내의 구문 에러 때문일 수도 있습니다. 어쩌면 콤마를 잘 못 된 곳에 찍었거나, 변수명을 지을 때 애를 먹었을 수도 있습니다. 그럴 수도 있죠! 작명은 너무 어려우니까요. </p>
 
 <h2 id="예제">예제</h2>
 
@@ -39,7 +39,7 @@ SyntaxError: Unexpected token = (Chrome)</pre>
 
 <h3 id="여러_변수를_선언하기">여러 변수를 선언하기</h3>
 
-<p>여러 변수를 한 번에 선언할 때에는 콤마에 주의를 기울여야 합니다. 쓸 데없는 콤마를 더 찍지는 않았는지? 무심코 세미콜론 대신 콤마를 찍지는 않았는지? </p>
+<p>여러 변수를 한 번에 선언할 때에는 콤마에 주의를 기울여야 합니다. 쓸 데없는 콤마를 더 찍지는 않았는지? 무심코 세미콜론 대신 콤마를 찍지는 않았는지? </p>
 
 <pre class="brush: js example-bad">var x, y = "foo",
 var x, = "foo"
@@ -60,7 +60,7 @@ var second = document.getElementById('two');</pre>
 
 <h3 id="배열">배열</h3>
 
-<p>JavaScript 의 {{jsxref("Array")}} 리터럴은 대괄호로 감싸주어야 합니다. 이건 동작하지 않아요.</p>
+<p>JavaScript 의 {{jsxref("Array")}} 리터럴은 대괄호로 감싸주어야 합니다. 이건 동작하지 않아요.</p>
 
 <pre class="brush: js example-bad">var arr = 1,2,3,4,5;
 // SyntaxError: missing variable name

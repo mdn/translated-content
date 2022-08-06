@@ -20,7 +20,7 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
   <tr>
    <th scope="row">Необходимые знания:</th>
    <td>
-    <p>Перед выполнением этого задания вы должны проработать все статьи в этом модуле.</p>
+    <p>Перед выполнением этого задания вы должны проработать все статьи в этом модуле.</p>
    </td>
   </tr>
   <tr>
@@ -35,12 +35,12 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 <p>Для начала скачайте <a href="https://github.com/ConstantineZz/learning-area/raw/master/javascript/building-blocks/gallery/gallery-start-rv.zip">ZIP файл</a> для примера и распакуйте его содержимое у себя на компьютере.</p>
 
 <div class="note">
-<p><strong>Замечание</strong>: вы также можете использовать такие сайты как    <a class="external external-icon" href="http://jsbin.com/">JSBin</a> или <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> для выполнения задания. Вы можете скопировать HTML, CSS и JavaScript в один из этих редакторов. Если онлайн редактор, который вы выбрали, не имеет отдельных панелей для JavaScript/CSS, вы можете выставить код в теги <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> расположенные на самой HTML странице.</p>
+<p><strong>Замечание</strong>: вы также можете использовать такие сайты как    <a class="external external-icon" href="http://jsbin.com/">JSBin</a> или <a class="external external-icon" href="https://thimble.mozilla.org/">Thimble</a> для выполнения задания. Вы можете скопировать HTML, CSS и JavaScript в один из этих редакторов. Если онлайн редактор, который вы выбрали, не имеет отдельных панелей для JavaScript/CSS, вы можете выставить код в теги <code>&lt;script&gt;</code>/<code>&lt;style&gt;</code> расположенные на самой HTML странице.</p>
 </div>
 
 <h2 id="Обзор_проекта">Обзор проекта</h2>
 
-<p>В примере вы увидите несколько файлов HTML, CSS и изображений и несколько строк JavaScript-кода. Вам нужно написать недостающий JavaScript-код для того чтобы галерея заработала. Каркас HTML страницы выглядит так:</p>
+<p>В примере вы увидите несколько файлов HTML, CSS и изображений и несколько строк JavaScript-кода. Вам нужно написать недостающий JavaScript-код для того чтобы галерея заработала. Каркас HTML страницы выглядит так:</p>
 
 <pre class="brush: html">&lt;h1&gt;Пример фотогалереи&lt;/h1&gt;
 
@@ -64,15 +64,15 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 <p>Наиболее интересные части CSS файла из примера:</p>
 
 <ul>
- <li>Абсолютно позиционированы три элемента внутри <code>&lt;div class="full-img"&gt;</code>:  <code>&lt;img&gt;</code>, в котором отображается полноразмерное изображение, пустой <code>&lt;div class="overlay"&gt;</code>, размер которого имеет тот же размер, что и <code>&lt;img&gt;</code> помещается прямо над предыдущим div-ом (это используется для нанесения эффекта затемнения на изображение через полупрозрачный цвет фона) и <code>&lt;button&gt;</code>, который используется для управления эффектом затемнения.</li>
- <li>Задана ширина  любых изображений внутри <code>&lt;div class="thumb-bar"&gt;</code> (так называемые «уменьшенные изображения») до 20% и размещены слева так, чтобы они следовали друг за другом на линии.</li>
+ <li>Абсолютно позиционированы три элемента внутри <code>&lt;div class="full-img"&gt;</code>:  <code>&lt;img&gt;</code>, в котором отображается полноразмерное изображение, пустой <code>&lt;div class="overlay"&gt;</code>, размер которого имеет тот же размер, что и <code>&lt;img&gt;</code> помещается прямо над предыдущим div-ом (это используется для нанесения эффекта затемнения на изображение через полупрозрачный цвет фона) и <code>&lt;button&gt;</code>, который используется для управления эффектом затемнения.</li>
+ <li>Задана ширина  любых изображений внутри <code>&lt;div class="thumb-bar"&gt;</code> (так называемые «уменьшенные изображения») до 20% и размещены слева так, чтобы они следовали друг за другом на линии.</li>
 </ul>
 
 <p>Ваш JavaScript должен:</p>
 
 <ul>
- <li>Переберите все изображения, и для каждого вставьте элемент <code>&lt;img&gt;</code> внутри <code>thumb-bar &lt;div&gt;</code>, который будет вставлять это изображение на страницу.</li>
- <li>Прикрепите обработчик <code>onclick</code> к каждому <code>&lt;img&gt;</code> внутри <code>thumb-bar &lt;div&gt;</code>, чтобы при нажатии на них соответствующее изображение отображалось в элементе <code>display-img &lt;img&gt;</code>.</li>
+ <li>Переберите все изображения, и для каждого вставьте элемент <code>&lt;img&gt;</code> внутри <code>thumb-bar &lt;div&gt;</code>, который будет вставлять это изображение на страницу.</li>
+ <li>Прикрепите обработчик <code>onclick</code> к каждому <code>&lt;img&gt;</code> внутри <code>thumb-bar &lt;div&gt;</code>, чтобы при нажатии на них соответствующее изображение отображалось в элементе <code>display-img &lt;img&gt;</code>.</li>
  <li>Прикрепите обработчик <code>onclick</code> к кнопке <code>&lt;button&gt;</code>, чтобы при нажатии на неё к полноразмерному изображению был применён эффект затемнения. При повторном нажатии эффект затемнения снова удаляется.</li>
 </ul>
 
@@ -98,7 +98,7 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 <p>В каждой итерации цикла вам нужно добавить обработчик <code>onclick</code> к текущему <code>newImage</code>:</p>
 
 <ol>
- <li>Найдите значение атрибута <code>src</code> текущего изображения. Это можно сделать, запустив функцию <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">getAttribute()</a></code> в <code>&lt;img&gt;</code> в каждом случае и передав ей параметр <code>«src»</code> в каждом случае. Но как получить изображение? Использование <code>newImage</code> не будет работать, так как цикл завершается до применения обработчиков событий; это приведёт к тому, что значение <code>src</code> последнего <code>&lt;img&gt;</code> будет возвращено в каждом случае. Чтобы решить это, имейте в виду, что в случае каждого обработчика события <code>&lt;img&gt;</code> является целью обработчика. Как получить информацию от объекта события?</li>
+ <li>Найдите значение атрибута <code>src</code> текущего изображения. Это можно сделать, запустив функцию <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">getAttribute()</a></code> в <code>&lt;img&gt;</code> в каждом случае и передав ей параметр <code>«src»</code> в каждом случае. Но как получить изображение? Использование <code>newImage</code> не будет работать, так как цикл завершается до применения обработчиков событий; это приведёт к тому, что значение <code>src</code> последнего <code>&lt;img&gt;</code> будет возвращено в каждом случае. Чтобы решить это, имейте в виду, что в случае каждого обработчика события <code>&lt;img&gt;</code> является целью обработчика. Как получить информацию от объекта события?</li>
  <li>Запустите функцию, передав ей возвращаемое значение <code>src</code> в качестве параметра. Вы можете вызвать эту функцию, как хотите.</li>
  <li>Эта функция обработчика событий должна установить значение атрибута <code>src</code> <code>displayed-img &lt;img&gt;</code> равным значению <code>src</code>, переданному в качестве параметра. Мы уже предоставили вам строку, в которой хранится ссылка на соответствующий <code>&lt;img&gt;</code> в переменной с именем <code>displayedImg</code>. Обратите внимание, что здесь нам нужна определённая именованная функция.</li>
 </ol>
@@ -108,8 +108,8 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 <p>Мы уже предоставили строку, в которой хранится ссылка на <code>&lt;button&gt;</code> в переменной <code>btn</code>. Вам нужно добавить обработчик <code>onclick</code>, который:</p>
 
 <ol>
- <li>Проверяет текущее имя класса, установленное на кнопке <code>&lt;button&gt;</code> — для этого снова можно использовать <code>getAttribute()</code>.</li>
- <li>Если имя класса <code>"dark"</code>, изменяет класс <code>&lt;button&gt;</code> на <code>"light"</code> (с помощью <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute">setAttribute()</a></code>), его текстовое содержимое на "Светлее" и {{cssxref("background-color")}} наложения <code>&lt;div&gt;</code> на <code>"rgba (0,0,0,0.5)"</code>.</li>
+ <li>Проверяет текущее имя класса, установленное на кнопке <code>&lt;button&gt;</code> — для этого снова можно использовать <code>getAttribute()</code>.</li>
+ <li>Если имя класса <code>"dark"</code>, изменяет класс <code>&lt;button&gt;</code> на <code>"light"</code> (с помощью <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute">setAttribute()</a></code>), его текстовое содержимое на "Светлее" и {{cssxref("background-color")}} наложения <code>&lt;div&gt;</code> на <code>"rgba (0,0,0,0.5)"</code>.</li>
  <li>Если имя класса не «тёмное», изменяет класс <code>&lt;button&gt;</code> на <code>"dark"</code>, его текстовое содержимое обратно на "Темнее" и {{cssxref("background-color")}} наложения <code>&lt;div&gt;</code> на <code>"rgba(0,0,0,0)"</code>.</li>
 </ol>
 
@@ -127,11 +127,11 @@ overlay.style.backgroundColor = xxx;</pre>
 
 <h2 id="Оценка">Оценка</h2>
 
-<p>Если вы проводите эту оценку в рамках организованного курса, вы должны уметь отдать свою работу своему учителю/наставнику для маркировки. Если вы самообучаетесь, то вы можете получить руководство по маркировке довольно легко, задав тему <a href="https://discourse.mozilla.org/t/image-gallery-assessment/24687">обсуждения об этом упражнении</a> или в IRC-канале <a href="irc://irc.mozilla.org/mdn">#mdn</a> в <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>. Сначала попробуйте упражнение - ничего не выиграть от обмана!</p>
+<p>Если вы проводите эту оценку в рамках организованного курса, вы должны уметь отдать свою работу своему учителю/наставнику для маркировки. Если вы самообучаетесь, то вы можете получить руководство по маркировке довольно легко, задав тему <a href="https://discourse.mozilla.org/t/image-gallery-assessment/24687">обсуждения об этом упражнении</a> или в IRC-канале <a href="irc://irc.mozilla.org/mdn">#mdn</a> в <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a>. Сначала попробуйте упражнение - ничего не выиграть от обмана!</p>
 
 <p>{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="В_этом_модуле">В этом модуле</h2>
 

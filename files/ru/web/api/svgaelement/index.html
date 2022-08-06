@@ -23,7 +23,7 @@ translation_of: Web/API/SVGAElement
  <dt>{{domxref("SVGAElement.hreflang")}}</dt>
  <dd>Является {{domxref("DOMString")}}, который отражает атрибут <code>hreflang</code>, указывающий язык связанного ресурса.</dd>
  <dt>{{domxref("SVGAElement.ping")}}</dt>
- <dd>Является {{domxref("DOMString")}}, отражая атрибут ping, содержащий список URL-адресов, разделённых пробелами, к которым, когда выполняется гиперссылка, {{HTTPMethod("POST")}} запрос с телом <code>PING</code> будет отправлен браузером (в фоновом режиме). Обычно используется для отслеживания.</dd>
+ <dd>Является {{domxref("DOMString")}}, отражая атрибут ping, содержащий список URL-адресов, разделённых пробелами, к которым, когда выполняется гиперссылка, {{HTTPMethod("POST")}} запрос с телом <code>PING</code> будет отправлен браузером (в фоновом режиме). Обычно используется для отслеживания.</dd>
  <dt>{{domxref("SVGAElement.referrerPolicy")}}</dt>
  <dd>См. {{domxref("HTMLAnchorElement.referrerPolicy")}}.</dd>
  <dt>{{domxref("SVGAElement.rel")}}</dt>
@@ -31,21 +31,21 @@ translation_of: Web/API/SVGAElement
  <dt>{{domxref("SVGAElement.relList")}}</dt>
  <dd>См. {{domxref("HTMLAnchorElement.relList")}}.</dd>
  <dt>{{domxref("SVGAElement.target")}} {{readonlyInline}}</dt>
- <dd>соответствует атрибуту {{SVGAttr("target")}} данного элемента. </dd>
+ <dd>соответствует атрибуту {{SVGAttr("target")}} данного элемента. </dd>
  <dt>{{domxref("SVGAElement.text")}}</dt>
- <dd>Является {{domxref("DOMString")}} синонимом свойства {{domxref("Node.textContent")}}. </dd>
+ <dd>Является {{domxref("DOMString")}} синонимом свойства {{domxref("Node.textContent")}}. </dd>
  <dt>{{domxref("SVGAElement.type")}}</dt>
- <dd>Is a that reflects theattribute, indicating the MIME type of the linked resource. <br>
- Является {{domxref("DOMString")}}, который отражает атрибут <code>type</code> , указывающий тип MIME связанного ресурса.</dd>
+ <dd>Is a that reflects theattribute, indicating the MIME type of the linked resource. <br>
+ Является {{domxref("DOMString")}}, который отражает атрибут <code>type</code> , указывающий тип MIME связанного ресурса.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
 
-<p><em>Этот интерфейс не имеет методов, но наследует методы от его родителя, {{domxref ("SVGGraphicsElement")}}. </em></p>
+<p><em>Этот интерфейс не имеет методов, но наследует методы от его родителя, {{domxref ("SVGGraphicsElement")}}. </em></p>
 
 <h2 id="Пример">Пример</h2>
 
-<p>В примере ниже, атрибуту {{SVGAttr("target")}} элемента {{SVGElement('a')}} присвоено значение <em>_blank</em> и при клике по ссылке, при соблюдении условий, выведется сообщение в модальном окне. </p>
+<p>В примере ниже, атрибуту {{SVGAttr("target")}} элемента {{SVGElement('a')}} присвоено значение <em>_blank</em> и при клике по ссылке, при соблюдении условий, выведется сообщение в модальном окне. </p>
 
 <pre class="brush: js">var linkRef = document.querySelector('a');
 linkRef.target ='_self';

@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>repeat()</code></strong> constrói e retorna uma nova string com um determinado número de cópias concatenadas da string original.</p>
+<p>O método <strong><code>repeat()</code></strong> constrói e retorna uma nova string com um determinado número de cópias concatenadas da string original.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 <dl>
  <dt><code>count</code></dt>
- <dd>Um número inteiro entre 0 e  {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicando o número de vezes que a string deve ser repetida.</dd>
+ <dd>Um número inteiro entre 0 e  {{jsxref("Global_Objects/Number/POSITIVE_INFINITY", "+Infinity")}}, indicando o número de vezes que a string deve ser repetida.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -34,8 +34,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 <h3 id="Exceções">Exceções</h3>
 
 <ul>
- <li>{{jsxref("Errors/Negative_repetition_count", "RangeError")}}: o número de repetições não pode ser negativo.</li>
- <li>{{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: o número de repetições deve ser menor que infinito e não deve ultrapassar o tamanho máximo da string.</li>
+ <li>{{jsxref("Errors/Negative_repetition_count", "RangeError")}}: o número de repetições não pode ser negativo.</li>
+ <li>{{jsxref("Errors/Resulting_string_too_large", "RangeError")}}: o número de repetições deve ser menor que infinito e não deve ultrapassar o tamanho máximo da string.</li>
 </ul>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>O método <code>repeat()</code> foi adicionado à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o seguinte polyfill para implementar o <code>String.prototype.repeat()</code>:</p>
+<p>O método <code>repeat()</code> foi adicionado à especificação ECMAScript 2015 e pode ainda não estar disponível em todas as implementações do JavaScript. No entanto, você pode usar o seguinte polyfill para implementar o <code>String.prototype.repeat()</code>:</p>
 
 <pre class="brush: js notranslate">if (!String.prototype.repeat) {
   String.prototype.repeat = function(count) {

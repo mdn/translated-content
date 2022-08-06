@@ -38,7 +38,7 @@ var lifeLostText;
 
 <h2 id="Definiendo_las_nuevas_etiquetas_de_texto">Definiendo las nuevas etiquetas de texto</h2>
 
-<p>Definir los textos es parecido a algo que ya hicimos en la lección de la <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score"> puntuación</a>. Añade las siguientes líneas debajo de la definición de <code>scoreText</code> dentro de la función <code>create()</code>:</p>
+<p>Definir los textos es parecido a algo que ya hicimos en la lección de la <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score"> puntuación</a>. Añade las siguientes líneas debajo de la definición de <code>scoreText</code> dentro de la función <code>create()</code>:</p>
 
 <pre class="brush: js">livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
 livesText.anchor.set(1,0);
@@ -112,7 +112,7 @@ lifeLostText.visible = false;
 
 <h2 id="Eventos">Eventos</h2>
 
-<p>Probablemente hayas notado las llamadas a los métodos <code>add()</code> y <code>addOnce()</code> en los dos bloques de código de arriba y te hayas preguntado en qué se diferencian. La diferencia es que el método <code>add()</code> vincula la función dada y hace que se ejecute cada vez que se produce el evento, mientras que  <code>addOnce()</code>  es útil cuando deseas que la función enlazada se ejecute solo una vez y luego se desvincule para que no se ejecute otra vez. En nuestro caso, en cada evento <code>outOfBounds</code> el <code>ballLeaveScreen</code> se ejecutará, pero cuando la pelota abandona la pantalla  solo queremos quitar el mensaje de la pantalla una sola vez.</p>
+<p>Probablemente hayas notado las llamadas a los métodos <code>add()</code> y <code>addOnce()</code> en los dos bloques de código de arriba y te hayas preguntado en qué se diferencian. La diferencia es que el método <code>add()</code> vincula la función dada y hace que se ejecute cada vez que se produce el evento, mientras que  <code>addOnce()</code>  es útil cuando deseas que la función enlazada se ejecute solo una vez y luego se desvincule para que no se ejecute otra vez. En nuestro caso, en cada evento <code>outOfBounds</code> el <code>ballLeaveScreen</code> se ejecutará, pero cuando la pelota abandona la pantalla  solo queremos quitar el mensaje de la pantalla una sola vez.</p>
 
 <h2 id="Compare_tu_código">Compare tu código</h2>
 

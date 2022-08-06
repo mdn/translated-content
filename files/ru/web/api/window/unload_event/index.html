@@ -8,7 +8,7 @@ original_slug: Web/API/WindowEventHandlers/onunload
 
 <h2 id="Описание">Описание</h2>
 
-<p>Событие <code>unload</code> возникает когда window выгружает своё содержимое и ресурсы. Удаление ресурсов происходит <em>после</em> возникновения события <code>unload</code>.</p>
+<p>Событие <code>unload</code> возникает когда window выгружает своё содержимое и ресурсы. Удаление ресурсов происходит <em>после</em> возникновения события <code>unload</code>.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -21,9 +21,9 @@ original_slug: Web/API/WindowEventHandlers/onunload
 
 <h2 id="Примечание">Примечание</h2>
 
-<p>Using this event handler in your page prevents Firefox 1.5 from caching the page in the in-memory bfcache. Смотрите <a href="/En/Using_Firefox_1.5_caching" title="En/Using_Firefox_1.5_caching">Использование кеширования в  Firefox 1.5</a> для получения более детальной информации.</p>
+<p>Using this event handler in your page prevents Firefox 1.5 from caching the page in the in-memory bfcache. Смотрите <a href="/En/Using_Firefox_1.5_caching" title="En/Using_Firefox_1.5_caching">Использование кеширования в  Firefox 1.5</a> для получения более детальной информации.</p>
 
-<p>Браузеры, оснащённые блокировщиками всплывающих окон будут игнорировать все вызовы метода <code>window.open()</code> внутри функции обработчика события <code>onunload</code>.</p>
+<p>Браузеры, оснащённые блокировщиками всплывающих окон будут игнорировать все вызовы метода <code>window.open()</code> внутри функции обработчика события <code>onunload</code>.</p>
 
 <p>You <em>can</em> and <em>should</em> handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the {{event("unload")}} event. More documentation is available there.</p>
 

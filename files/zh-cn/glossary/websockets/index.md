@@ -19,7 +19,7 @@ WebSocket 是一种在客户端与{{Glossary("Server", "服务器")}}之间保�
 
 ### 基本知识
 
-- {{Interwiki("wikipedia", "Websocket")}} 维基百科
+- [Websocket](https://zh.wikipedia.org/wiki/Websocket) 维基百科
 
 ### 技术参考
 

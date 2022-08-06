@@ -147,11 +147,11 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
   <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
 .then(results =&gt; {
-  // add code here
+  // add code here
 });</pre>
  </li>
  <li>
-  <p>Так как модуль экспортирует свою память, которая была передана экземпляру этого модуля при его создании, мы можем наполнить ранее импортированный массив прямо в линейной памяти экземпляра модуля (<code>mem</code>), и вызвать экспортированную функцию <code>accumulate()</code> для расчёта суммы значений. Добавьте следующий код, в обозначенном месте: </p>
+  <p>Так как модуль экспортирует свою память, которая была передана экземпляру этого модуля при его создании, мы можем наполнить ранее импортированный массив прямо в линейной памяти экземпляра модуля (<code>mem</code>), и вызвать экспортированную функцию <code>accumulate()</code> для расчёта суммы значений. Добавьте следующий код, в обозначенном месте: </p>
 
   <pre class="brush: js">var i32 = new Uint32Array(memory.buffer);
 
@@ -174,7 +174,7 @@ console.log(sum);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Примечание</strong>: вы можете найти полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">см. её также вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
+<p><strong>Примечание</strong>: вы можете найти полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">см. её также вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
 </div>
 
 <h2 id="Таблицы">Таблицы</h2>
@@ -187,7 +187,7 @@ console.log(sum);</pre>
 
 <p><span class="tlid-translation translation"><span title="">Когда приходит время для вызова указателя на функцию, вызывающая сторона WebAssembly предоставляет индекс, который затем может быть проверен на безопасность по таблице перед индексацией и вызовом ссылки на индексированную функцию. Таким образом, таблицы в настоящее время являются лучшим низкоуровневым примитивом, используемым для безопасной и удобной компиляции низкоуровневых возможностей языка программирования.</span></span></p>
 
-<p>Таблицы могут изменятся с помощью метода <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a></code>, который обновляет одно из значений в таблице, и метода <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a></code>, который увеличивает количество значений, которое может быть размещено в таблице. Это позволяет этому "непрямо-вызываемому набору функций" изменяться со временем, что необходимо для <a href="http://webassembly.org/docs/dynamic-linking/">техник динамического связывания</a>. Изменения немедленно становятся доступными с помощью метода <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> в JavaScript-коде и wasm-модулях.</p>
+<p>Таблицы могут изменятся с помощью метода <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set">Table.prototype.set()</a></code>, который обновляет одно из значений в таблице, и метода <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow">Table.prototype.grow()</a></code>, который увеличивает количество значений, которое может быть размещено в таблице. Это позволяет этому "непрямо-вызываемому набору функций" изменяться со временем, что необходимо для <a href="http://webassembly.org/docs/dynamic-linking/">техник динамического связывания</a>. Изменения немедленно становятся доступными с помощью метода <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code> в JavaScript-коде и wasm-модулях.</p>
 
 <h3 id="Пример_таблицы">Пример таблицы</h3>
 
@@ -209,15 +209,15 @@ console.log(sum);</pre>
 
   <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('table.wasm'))
 .then(function(results) {
-  // add code here
+  // add code here
 });</pre>
  </li>
  <li>
   <p>Теперь давайте получим доступ к данным в таблицах - добавим следующие строки в ваш код, в обозначенном месте:</p>
 
   <pre class="brush: js">var tbl = results.instance.exports.tbl;
-console.log(tbl.get(0)());  // 13
-console.log(tbl.get(1)());  // 42</pre>
+console.log(tbl.get(0)());  // 13
+console.log(tbl.get(1)());  // 42</pre>
  </li>
 </ol>
 
@@ -273,7 +273,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: вы можете увидеть этот пример вживую на <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html"> GitHub</a>; смотрите также <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">исходники</a>.</p>
+<p><strong>Примечание</strong>: вы можете увидеть этот пример вживую на <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html"> GitHub</a>; смотрите также <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">исходники</a>.</p>
 </div>
 
 <h2 id="Множественность">Множественность</h2>

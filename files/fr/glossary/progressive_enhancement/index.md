@@ -20,4 +20,4 @@ C'est une technique très utile qui permet aux développeurs Web de se concentre
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Amélioration progressive")}} sur Wikipédia
+- [Amélioration progressive](https://fr.wikipedia.org/wiki/Am%C3%A9lioration_progressive) sur Wikipédia

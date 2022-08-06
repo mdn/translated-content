@@ -47,9 +47,9 @@ _Web과 함께 시작하기_ 는 여러분에게 웹 개발의 실질적인 측�
   - : 웹사이트를 위한 코드 작성과 파일 구성을 마쳤다면, 사람들이 찾아볼 수 있도록 이 모든 것을 온라인에 둘 필요가 있습니다. 이 문서에서는 여러분이 간단한 예제 코드를 적은 노력으로 온라인 시키는 방법을 설명할 것입니다.
 
 - [웹의 동작 방식](/ko/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-  - : 여러분이 가장 선호하는 웹사이트에 접근할 때, 여러분이 모르는 많은 복잡한 것들이 눈에 띄지 않는 곳에서 발생합니다. 이 문서에서는 여러분이 컴퓨터로 웹페이지를 볼 때 발생하는 것들에 대해 간단하게 설명을 할 것입니다.
+  - : 여러분이 가장 선호하는 웹사이트에 접근할 때, 여러분이 모르는 많은 복잡한 것들이 눈에 띄지 않는 곳에서 발생합니다. 이 문서에서는 여러분이 컴퓨터로 웹페이지를 볼 때 발생하는 것들에 대해 간단하게 설명을 할 것입니다.
 
 ## 같이 보기
 
-- [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): 웹 개발을 처음 시작하는 분을 위해 웹 기초를 설명하는 뛰어난 비디오 시리즈입니다. [Jérémie Patonnier](https://twitter.com/JeremiePat)께서 제작하셨습니다.
+- [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): 웹 개발을 처음 시작하는 분을 위해 웹 기초를 설명하는 뛰어난 비디오 시리즈입니다. [Jérémie Patonnier](https://twitter.com/JeremiePat)께서 제작하셨습니다.
 - [The web and web standards](/ko/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards): 이 글은 웹에 대한 유용한 배경지식을 알려줍니다. 웹이 어떻게 생겨났는지, 웹의 표준 기술이 무엇인지, 어떻게 함께 작동하는지, 왜 "웹 개발자"가 직업으로 삼기 좋은지, 그리고 이 과정을 통해 어떤 모범 사례를 배울 수 있는지 알 수 있습니다.

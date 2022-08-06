@@ -6,7 +6,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
 <h3 id="Descrição">Descrição</h3>
 
-<p>Essa técnica demosntrará como usar o <a class="external" href="http://www.w3.org/TR/wai-aria/roles#slider" rel="external">slider</a> role. </p>
+<p>Essa técnica demosntrará como usar o <a class="external" href="http://www.w3.org/TR/wai-aria/roles#slider" rel="external">slider</a> role. </p>
 
 <p>The<code> slider</code><code> </code>role is used for markup that allows a user to select a value from within a given range. The slider role is assigned to the "thumb," the control that is adjusted to change the value. Typically, another element is styled to visually represent the range of possible valued, and the thumb positioned visually to represent the value within that range. As the user interacts with the thumb, the application must programmatically adjust the slider's <code>aria-valuenow</code> (and possible <code>aria-valuetext</code>) attribute to reflect the current value. See the <a href="#examples">Examples</a> section below for more information.</p>
 
@@ -23,7 +23,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
  </thead>
  <tbody>
   <tr>
-   <td>Setas para direita e para cima </td>
+   <td>Setas para direita e para cima </td>
    <td>Incrementa o valor selecionado</td>
   </tr>
   <tr>
@@ -37,11 +37,11 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
  </tbody>
 </table>
 
-<h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
+<h3 id="Possible_effects_on_user_agents_and_assistive_technology">Possible effects on user agents and assistive technology </h3>
 
-<p> </p>
+<p> </p>
 
-<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
 
 <p id="Examples">Exemplos</p>
 
@@ -52,21 +52,21 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 <pre class="brush: html">&lt;label for="fader"&gt;Volume&lt;/label&gt;
 &lt;input type="range"
   id="fader"
-  min="1"
-  max="100"
-  value="50"
-  step="1"
-  aria-valuemin="1"
-  aria-valuemax="100"
-  aria-valuenow="50"
-  oninput="outputUpdate(value)"&gt;
+  min="1"
+  max="100"
+  value="50"
+  step="1"
+  aria-valuemin="1"
+  aria-valuemax="100"
+  aria-valuenow="50"
+  oninput="outputUpdate(value)"&gt;
 &lt;output for="fader" id="volume"&gt;50&lt;/output&gt;
 </pre>
 
-<p>The following code snippet allows you to return the output as it is updated by user input:</p>
+<p>The following code snippet allows you to return the output as it is updated by user input:</p>
 
 <pre>function outputUpdate(vol) {
-  document.querySelector('#volume').value = vol;
+  document.querySelector('#volume').value = vol;
 }
 </pre>
 
@@ -76,12 +76,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 
 <pre class="brush: html">&lt;label for="day-handle"&gt;Days&lt;/label&gt;
 &lt;div class="day-slider"&gt;
-  &lt;div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-handle"
-     aria-valuemin="1"
-     aria-valuemax="7"
-     aria-valuenow="2"
-     aria-valuetext="Monday"&gt;
- &lt;/div&gt;
+  &lt;div id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="day-handle"
+     aria-valuemin="1"
+     aria-valuemax="7"
+     aria-valuenow="2"
+     aria-valuetext="Monday"&gt;
+ &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -95,7 +95,7 @@ var updateSlider = function (newValue) {
 };
 </pre>
 
-<h3 id="Notas">Notas </h3>
+<h3 id="Notas">Notas </h3>
 
 <h3 id="Atributos_ARIA_usados">Atributos ARIA usados</h3>
 
@@ -107,7 +107,7 @@ var updateSlider = function (newValue) {
  <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute" title="en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute">aria-orientation</a></li>
 </ul>
 
-<h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
+<h3 id="Related_ARIA_techniques">Related ARIA techniques </h3>
 
 <h3 id="Compatibility">Compatibility</h3>
 

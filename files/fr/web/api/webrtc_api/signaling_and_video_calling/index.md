@@ -15,7 +15,7 @@ Les informations ci-dessous proviennent de RTCPeerConnection; elles pourraient r
 
 ## Usage basique
 
-l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine et une machine distante,et ce, en générant {{interwiki("wikipedia", "Session Description Protocol")}} a échanger entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
+l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine et une machine distante,et ce, au format [SDP](https://fr.wikipedia.org/wiki/Session_Description_Protocol) entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
 
 Les deux parties (l'appelant et l'appelé) doivent mettre en place leurs propres instances de RTCPeerConnection pour représenter leurs extrémités de la connexion peer-to-peer:
 

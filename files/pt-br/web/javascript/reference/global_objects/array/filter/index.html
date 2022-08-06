@@ -30,7 +30,7 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>Função é um predicado, para testar cada elemento do array. Retorna <code>true</code> para manter o elemento, <code>false</code> caso contrário, recebendo três argumentos:</dd>
+ <dd>Função é um predicado, para testar cada elemento do array. Retorna <code>true</code> para manter o elemento, <code>false</code> caso contrário, recebendo três argumentos:</dd>
  <dd>
  <dl>
   <dt><code>element</code></dt>
@@ -40,10 +40,10 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
   <dt><code>index</code></dt>
   <dd>O índice do elemento atual que está sendo processado no array.</dd>
   <dt><code>array</code></dt>
-  <dd>O array para qual <code>filter</code> foi chamada.</dd>
+  <dd>O array para qual <code>filter</code> foi chamada.</dd>
  </dl>
  </dd>
- <dt><code>thisArg {{Optional_inline}}</code></dt>
+ <dt><code>thisArg {{Optional_inline}}</code></dt>
  <dd>Opcional. Valor a ser usado como <code>this</code> durante a execução do <code>callback</code>.</dd>
 </dl>
 
@@ -53,7 +53,7 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 
 <h2 id="Descrição">Descrição</h2>
 
-<p><code>filter()</code> chama a função callback fornecida, uma vez para cada elemento do array, e constrói um novo array com todos os valores para os quais o <code>callback</code> retornou o valor <code>true</code> ou  <a href="/en-US/docs/Glossary/Truthy">um valor que seja convertido para true</a>. O <code>callback</code> é chamado apenas para índices do array que possuem valores atribuídos; Ele não é invocado para índices que foram excluídos ou para aqueles que não tiveram valor atribuído. Elementos do array que não passaram no teste do <code>callback</code> são simplesmente ignorados, e não são incluídos no novo array.</p>
+<p><code>filter()</code> chama a função callback fornecida, uma vez para cada elemento do array, e constrói um novo array com todos os valores para os quais o <code>callback</code> retornou o valor <code>true</code> ou  <a href="/en-US/docs/Glossary/Truthy">um valor que seja convertido para true</a>. O <code>callback</code> é chamado apenas para índices do array que possuem valores atribuídos; Ele não é invocado para índices que foram excluídos ou para aqueles que não tiveram valor atribuído. Elementos do array que não passaram no teste do <code>callback</code> são simplesmente ignorados, e não são incluídos no novo array.</p>
 
 <p><code>callback</code> é invocado com estes três argumentos:</p>
 
@@ -63,17 +63,17 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
  <li>o objeto do array a ser preenchido</li>
 </ol>
 
-<p>Se o parâmetro <code>thisArg</code> for provido para o filter, ele será passado para o callback<code> quando invocado</code>, para ser usado como o valor do this. Caso contrário, será passado <code>undefined</code> como o valor de <code>this</code>. O valor do <code>this</code> finalmente observado pela função de <code>callback</code> é determinado de acordo com <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">a regra que define o valor do <code>this</code> geralmente visto por uma função</a>.</p>
+<p>Se o parâmetro <code>thisArg</code> for provido para o filter, ele será passado para o callback<code> quando invocado</code>, para ser usado como o valor do this. Caso contrário, será passado <code>undefined</code> como o valor de <code>this</code>. O valor do <code>this</code> finalmente observado pela função de <code>callback</code> é determinado de acordo com <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this">a regra que define o valor do <code>this</code> geralmente visto por uma função</a>.</p>
 
-<p><code>filter()</code> não altera o <code>array</code> a partir da qual foi invocado.</p>
+<p><code>filter()</code> não altera o <code>array</code> a partir da qual foi invocado.</p>
 
-<p>O intervalo de elementos processados pela função <code>filter()</code> é definido antes da invocação do primeiro callback. Elementos que forem adicionados ao array depois da invocação do <code>filter()</code> não serão visitados pelo <code>callback</code>. Se elementos existentes no array forem alterados ou deletados, os valores deles que serão passados para o callback são os que eles tiverem quando o  <code>filter()</code> visitá-los; Elementos que forem deletados não são visitados.</p>
+<p>O intervalo de elementos processados pela função <code>filter()</code> é definido antes da invocação do primeiro callback. Elementos que forem adicionados ao array depois da invocação do <code>filter()</code> não serão visitados pelo <code>callback</code>. Se elementos existentes no array forem alterados ou deletados, os valores deles que serão passados para o callback são os que eles tiverem quando o  <code>filter()</code> visitá-los; Elementos que forem deletados não são visitados.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
 <h3 id="Exemplo_Filtrando_todos_os_valores_pequenos">Exemplo: Filtrando todos os valores pequenos</h3>
 
-<p>Os exemplos a seguir usam <code>filter()</code> para criar um <code>array</code> filtrado em que todos os elementos com valores menores que 10 são removidos.</p>
+<p>Os exemplos a seguir usam <code>filter()</code> para criar um <code>array</code> filtrado em que todos os elementos com valores menores que 10 são removidos.</p>
 
 <pre class="brush: js">function isBigEnough(value) {
   return value &gt;= 10;
@@ -84,7 +84,7 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 
 <h3 id="Exemplo_Filtrando_entradas_inválidas_para_JSON">Exemplo: Filtrando entradas inválidas para JSON</h3>
 
-<p>O exemplo a seguir usa <code>filter()</code> para criar um <code>JSON</code> filtrado com todos seus elementos diferentes de zero, e <code>id</code> numérico.</p>
+<p>O exemplo a seguir usa <code>filter()</code> para criar um <code>JSON</code> filtrado com todos seus elementos diferentes de zero, e <code>id</code> numérico.</p>
 
 <pre class="brush: js">var arr = [
   { id: 15 },
@@ -152,7 +152,7 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']</pre>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p><code>filter()</code> foi adicionado ao padrão ECMA-262 na 5ª edição; assim como pode não estar presente em todas as implementações do padrão. Você pode trabalhar com isso adicionando o seguinte código no início de seus scripts, permitindo o uso do <code>filter()</code> na implementação ECMA-262 que não tem suporte nativo. Esse algoritmo é exatamente aquele especificado na 5ª edição do ECMA-262, assumindo que <code>fn.call</code> veja o valor original de {{jsxref("Function.prototype.call()")}}, e que {{jsxref("Array.prototype.push()")}} tenha seu valor original.</p>
+<p><code>filter()</code> foi adicionado ao padrão ECMA-262 na 5ª edição; assim como pode não estar presente em todas as implementações do padrão. Você pode trabalhar com isso adicionando o seguinte código no início de seus scripts, permitindo o uso do <code>filter()</code> na implementação ECMA-262 que não tem suporte nativo. Esse algoritmo é exatamente aquele especificado na 5ª edição do ECMA-262, assumindo que <code>fn.call</code> veja o valor original de {{jsxref("Function.prototype.call()")}}, e que {{jsxref("Array.prototype.push()")}} tenha seu valor original.</p>
 
 <pre class="brush: js">if (!Array.prototype.filter) {
   Array.prototype.filter = function(fun/*, thisArg*/) {
