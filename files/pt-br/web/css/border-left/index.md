@@ -118,5 +118,5 @@ div {
 - {{cssxref("border")}}
 - {{cssxref("border-block")}}
 - {{cssxref("outline")}}
-- [Backgrounds and borders (en-US)](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
-- [Learn CSS: Backgrounds and borders (en-US)](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Planos de fundo e bordas](/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Aprenda CSS: planos de fundo e bordas](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
