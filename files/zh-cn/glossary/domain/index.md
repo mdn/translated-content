@@ -11,10 +11,10 @@ translation_of: Glossary/Domain
 
 For example, in "developer.mozilla.org":
 
-1.  "org" is called a {{interwiki("wikipedia", "Top-level_domain", "top-level domain")}}. They are registered as an internet standard by the {{interwiki("wikipedia", "Internet_Assigned_Numbers_Authority", "IANA")}} . Here, "org" means "organization" which is defined in a top-level _domain registry_.
-2.  "mozilla" is the domain. If you like to own a domain you have to register it with one of the many {{interwiki("wikipedia", "Domain_name_registrar", "registrars")}} who are allowed to do so with a top-level domain registry.
+1.  "org" is called a [top-level domain](https://zh.wikipedia.org/wiki/Top-level_domain). They are registered as an internet standard by the [IANA](https://zh.wikipedia.org/wiki/Internet_Assigned_Numbers_Authority) . Here, "org" means "organization" which is defined in a top-level _domain registry_.
+2.  "mozilla" is the domain. If you like to own a domain you have to register it with one of the many [registrars](https://zh.wikipedia.org/wiki/Domain_name_registrar) who are allowed to do so with a top-level domain registry.
 3.  "developer" is a "sub-domain", something you as the owner of a domain may define yourself. Many owners choose to have a subdomain "www" to point to their {{Glossary("World_Wide_Web")}} resource, but that's not required (and has even fallen somewhat out of favor).
 
 ## 学习更多
 
-- 在维基百科中的 {{interwiki("wikipedia", "域")}}
+- 在维基百科中的 [域](https://zh.wikipedia.org/wiki/域)

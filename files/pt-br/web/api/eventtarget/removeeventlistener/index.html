@@ -22,9 +22,9 @@ translation_of: Web/API/EventTarget/removeEventListener
  <dt><code>type</code></dt>
  <dd>Uma string indicando o tipo de evento a ser removido.</dd>
  <dt><code>listener</code></dt>
- <dd>A função {{ domxref("EventListener") }}  a ser removida do event target.</dd>
+ <dd>A função {{ domxref("EventListener") }}  a ser removida do event target.</dd>
  <dt><code>useCapture</code> {{ optional_inline() }}</dt>
- <dd>Indica quando o {{ domxref("EventListener") }} a ser removido foi registrado ou não como <em>capturing listener</em>. Caso este parâmetro seja omitido, o valor <em>false</em> será assumido por padrão.</dd>
+ <dd>Indica quando o {{ domxref("EventListener") }} a ser removido foi registrado ou não como <em>capturing listener</em>. Caso este parâmetro seja omitido, o valor <em>false</em> será assumido por padrão.</dd>
  <dd>Se um listener foi registrado duas vezes, uma com o parâmetro <em>capture</em> especificado e outra sem, cada um deve ser removido separadamente. A remoção de um <em>capturing listener</em> não afeta a versão <em>non-capturing</em> do mesmo listener, e vice versa.</dd>
 </dl>
 
@@ -57,7 +57,7 @@ div.removeEventListener('click', listener, false);
 <h3 id="Notas_para_Gecko">Notas para Gecko</h3>
 
 <ul>
- <li>Antes do Firefox 6, o navegador poderia retornar um erro se o parâmetro  <code>useCapture não estive explicitamente cofigurado como</code> <font face="'Courier New', 'Andale Mono', monospace"><span style="line-height: normal;">false</span></font>. Antes do Gecko 9.0 {{ geckoRelease("9.0") }}, <code>addEventListener()</code> retornaria uma exception se o parâmetro do listener fosse <code>null</code>; agora o método retorna sem erros, mas sem fazer nada.</li>
+ <li>Antes do Firefox 6, o navegador poderia retornar um erro se o parâmetro  <code>useCapture não estive explicitamente cofigurado como</code> <font face="'Courier New', 'Andale Mono', monospace"><span style="line-height: normal;">false</span></font>. Antes do Gecko 9.0 {{ geckoRelease("9.0") }}, <code>addEventListener()</code> retornaria uma exception se o parâmetro do listener fosse <code>null</code>; agora o método retorna sem erros, mas sem fazer nada.</li>
 </ul>
 
 <h3 id="Notas_para_Opera">Notas para Opera</h3>
@@ -84,7 +84,7 @@ div.removeEventListener('click', listener, false);
 
 <h2 id="Polyfill_para_oferecer_suporte_aos_navegadores_antigos">Polyfill para oferecer suporte aos navegadores antigos</h2>
 
-<p><code>addEventListener()</code> e <code>removeEventListener()</code> não estão presentes em navegadores antigos. Isto pode ser contornado se você inserir o código abaixo no início dos seus scripts, permitindo o uso de <code>addEventListener()</code> e <code>removeEventListener()</code>  em implementações as quais não oferecem suporte nativo. Entretanto, este método não funciona para o Internet Explorer 7 ou versões anteriores, uma vez que não era possível extender o Element.prototype até o Internet Explorer 8.</p>
+<p><code>addEventListener()</code> e <code>removeEventListener()</code> não estão presentes em navegadores antigos. Isto pode ser contornado se você inserir o código abaixo no início dos seus scripts, permitindo o uso de <code>addEventListener()</code> e <code>removeEventListener()</code>  em implementações as quais não oferecem suporte nativo. Entretanto, este método não funciona para o Internet Explorer 7 ou versões anteriores, uma vez que não era possível extender o Element.prototype até o Internet Explorer 8.</p>
 
 <pre class="brush: js">if (!Element.prototype.addEventListener) {
   var oListeners = {};

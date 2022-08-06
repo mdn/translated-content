@@ -9,7 +9,7 @@ translation_of: Glossary/Metadata
 
 ### 通俗释义
 
-- {{interwiki("wikipedia", "metadata", "metadata")}} 来自维基百科
+- [metadata](https://zh.wikipedia.org/wiki/metadata) 来自维基百科
 
 ### HTML 中的 metadata 元素
 

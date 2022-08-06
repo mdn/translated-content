@@ -13,7 +13,7 @@ translation_of: Web/HTTP/Messages
 
 <p>Сообщения HTTP состоят из текстовой информации в кодировке ASCII, записанной в несколько строк. В HTTP/1.1 и более ранних версиях они пересылались в качестве обычного текста. В HTTP/2 текстовое сообщение разделяется на фреймы, что позволяет выполнить оптимизацию и повысить производительность.</p>
 
-<p>Веб разработчики  не создают текстовые сообщения HTTP самостоятельно - это делает программа, браузер, прокси или веб-сервер. Они обеспечивают создание HTTP сообщений через конфигурационные файлы (для прокси и серверов), APIs (для браузеров) или другие интерфейсы.</p>
+<p>Веб разработчики  не создают текстовые сообщения HTTP самостоятельно - это делает программа, браузер, прокси или веб-сервер. Они обеспечивают создание HTTP сообщений через конфигурационные файлы (для прокси и серверов), APIs (для браузеров) или другие интерфейсы.</p>
 
 <p><img alt="From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent." src="https://mdn.mozillademos.org/files/13825/HTTPMsg2.png" style="height: 538px; width: 1174px;"></p>
 
@@ -40,7 +40,7 @@ translation_of: Web/HTTP/Messages
 
 <ol>
  <li>
-  <p><em><a href="/ru/docs/Web/HTTP/Methods">Метод HTTP</a></em>, глагол (например, {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} или {{HTTPMethod("POST")}}) или существительное (например,  {{HTTPMethod("HEAD")}} или {{HTTPMethod("OPTIONS")}}), описывающие требуемое действие. Например, <code>GET</code> указывает, что нужно доставить некоторый ресурс, а <code>POST</code> означает отправку данных на сервер (для создания или модификации ресурса, или генерации возвращаемого документа).</p>
+  <p><em><a href="/ru/docs/Web/HTTP/Methods">Метод HTTP</a></em>, глагол (например, {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} или {{HTTPMethod("POST")}}) или существительное (например,  {{HTTPMethod("HEAD")}} или {{HTTPMethod("OPTIONS")}}), описывающие требуемое действие. Например, <code>GET</code> указывает, что нужно доставить некоторый ресурс, а <code>POST</code> означает отправку данных на сервер (для создания или модификации ресурса, или генерации возвращаемого документа).</p>
  </li>
  <li><em>Цель запроса</em>, обычно {{glossary("URL")}}, или абсолютный путь протокола, порт и домен обычно характеризуются контекстом запроса. Формат цели запроса зависит от используемого HTTP-метода. Это может быть
   <ul>
@@ -67,7 +67,7 @@ translation_of: Web/HTTP/Messages
 <p>Существует множество заголовков запроса. Их можно разделить на несколько групп:</p>
 
 <ul>
- <li><em>Основные заголовки (General headers</em>), например, {{HTTPHeader("Via")}},  относящиеся к сообщению в целом</li>
+ <li><em>Основные заголовки (General headers</em>), например, {{HTTPHeader("Via")}},  относящиеся к сообщению в целом</li>
  <li><em>Заголовки запроса (Request headers</em>), например, {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, уточняющие запрос (как, например, {{HTTPHeader("Accept-Language")}}), придающие контекст (как {{HTTPHeader("Referer")}}), или накладывающие ограничения на условия (like {{HTTPHeader("If-None")}}).</li>
  <li><em>Заголовки сущности</em>, например {{HTTPHeader("Content-Length")}}, относящиеся к телу сообщения. Как легко понять, они отсутствуют, если у запроса нет тела.</li>
  <li><img alt="Example of headers in an HTTP request" src="https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png" style="height: 280px; width: 872px;"></li>
@@ -77,7 +77,7 @@ translation_of: Web/HTTP/Messages
 
 <h3 id="Тело">Тело</h3>
 
-<p>Последней частью запроса является его тело. Оно бывает не у всех запросов: запросы, собирающие (fetching) ресурсы, такие как <code>GET</code>, <code>HEAD</code>, <code>DELETE</code>, или <code>OPTIONS</code>, в нем обычно не нуждаются. Но некоторые запросы отправляют на сервер данные для обновления, как это часто бывает с запросами <code>POST</code> (содержащими данные HTML-форм).</p>
+<p>Последней частью запроса является его тело. Оно бывает не у всех запросов: запросы, собирающие (fetching) ресурсы, такие как <code>GET</code>, <code>HEAD</code>, <code>DELETE</code>, или <code>OPTIONS</code>, в нем обычно не нуждаются. Но некоторые запросы отправляют на сервер данные для обновления, как это часто бывает с запросами <code>POST</code> (содержащими данные HTML-форм).</p>
 
 <p>Тела можно грубо разделить на две категории:</p>
 
@@ -107,7 +107,7 @@ translation_of: Web/HTTP/Messages
 <p>Существует множество заголовков ответов. Их можно разделить на несколько групп:</p>
 
 <ul>
- <li><em>Основные заголовки (General headers</em>), например, {{HTTPHeader("Via")}},  относящиеся к сообщению в целом.</li>
+ <li><em>Основные заголовки (General headers</em>), например, {{HTTPHeader("Via")}},  относящиеся к сообщению в целом.</li>
  <li><em>Заголовки ответа (Response headers</em>), например, {{HTTPHeader("Vary")}} и {{HTTPHeader("Accept-Ranges")}}, сообщающие дополнительную информацию о сервере, которая не уместилась в строку состояния.</li>
  <li><em>Заголовки сущности (Entity headers</em>), например, {{HTTPHeader("Content-Length")}}, относящиеся к телу ответа. Отсутствуют, если у запроса нет тела.</li>
 </ul>
@@ -122,7 +122,7 @@ translation_of: Web/HTTP/Messages
 
 <ul>
  <li>Одноресурсные тела (Single-resource bodies), состоящие из отдельного файла известной длины, определяемые двумя заголовками: {{HTTPHeader("Content-Type")}} и {{HTTPHeader("Content-Length")}}.</li>
- <li>Одноресурсные тела (Single-resource bodies), состоящие из отдельного файла неизвестной длины, разбитого на небольшие части (chunks) с заголовком {{HTTPHeader("Transfer-Encoding")}}, значением которого  является <code>chunked</code>.</li>
+ <li>Одноресурсные тела (Single-resource bodies), состоящие из отдельного файла неизвестной длины, разбитого на небольшие части (chunks) с заголовком {{HTTPHeader("Transfer-Encoding")}}, значением которого  является <code>chunked</code>.</li>
  <li><a href="https://developer.mozilla.org/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data">Многоресурсные тела (Multiple-resource bodies)</a>, состоящие из многокомпонентного тела, каждая часть которого содержит свой сегмент информации. Они относительно редки.</li>
 </ul>
 

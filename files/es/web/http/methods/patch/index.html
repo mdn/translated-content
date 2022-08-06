@@ -10,15 +10,15 @@ translation_of: Web/HTTP/Methods/PATCH
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>El <strong>método HTTP PATCH</strong> aplica modificaciones parciales a un recurso.</p>
+<p>El <strong>método HTTP PATCH</strong> aplica modificaciones parciales a un recurso.</p>
 
-<p>El método HTTP PUT únicamente permite reemplazar completamente un documento. A diferencia de <code>PUT</code>, el método <code>PATCH</code> no es idempotente, esto quiere decir que peticiones identicas sucesivas <em>pueden </em>tener efectos diferentes. Sin embargo,  es posible emitir peticiones <code>PATCH</code> de tal forma que sean idempotentes.</p>
+<p>El método HTTP PUT únicamente permite reemplazar completamente un documento. A diferencia de <code>PUT</code>, el método <code>PATCH</code> no es idempotente, esto quiere decir que peticiones identicas sucesivas <em>pueden </em>tener efectos diferentes. Sin embargo,  es posible emitir peticiones <code>PATCH</code> de tal forma que sean idempotentes.</p>
 
-<p><code>PATCH</code> (al igual que <code>POST</code>) <em>puede </em>provocar efectos secundarios a otros recursos.</p>
+<p><code>PATCH</code> (al igual que <code>POST</code>) <em>puede </em>provocar efectos secundarios a otros recursos.</p>
 
-<p>Para averiguar si un servidor soporta <code>PATCH</code>, el servidor puede notificar su compatibilidad al añadirlo a la lista en el header: {{HTTPHeader("Allow")}} o {{HTTPHeader("Access-Control-Allow-Methods")}} (para CORS).</p>
+<p>Para averiguar si un servidor soporta <code>PATCH</code>, el servidor puede notificar su compatibilidad al añadirlo a la lista en el header: {{HTTPHeader("Allow")}} o {{HTTPHeader("Access-Control-Allow-Methods")}} (para CORS).</p>
 
-<p>Otra indicación (implícita) de que las peticiones PATCH son permitidas, es la presencia del header: {{HTTPHeader("Accept-Patch")}}, el cual especifica los formatos de documento patch aceptados por el servidor. </p>
+<p>Otra indicación (implícita) de que las peticiones PATCH son permitidas, es la presencia del header: {{HTTPHeader("Accept-Patch")}}, el cual especifica los formatos de documento patch aceptados por el servidor. </p>
 
 <table class="properties">
  <tbody>
@@ -43,7 +43,7 @@ translation_of: Web/HTTP/Methods/PATCH
    <td>No</td>
   </tr>
   <tr>
-   <th scope="row">Permitido en <a href="/en-US/docs/Web/Guide/HTML/Forms">formularios HTML</a></th>
+   <th scope="row">Permitido en <a href="/en-US/docs/Web/Guide/HTML/Forms">formularios HTML</a></th>
    <td>No</td>
   </tr>
  </tbody>

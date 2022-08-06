@@ -8,23 +8,23 @@ translation_of: Web/JavaScript/Reference/Operators/typeof
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>Оператор <strong><code>typeof</code></strong> возвращает строку, указывающую тип операнда.</p>
+<p>Оператор <strong><code>typeof</code></strong> возвращает строку, указывающую тип операнда.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}</div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<p>Операнд следует за оператором <code>typeof</code>:</p>
+<p>Операнд следует за оператором <code>typeof</code>:</p>
 
 <pre class="syntaxbox">typeof <em>operand</em></pre>
 
 <h3 id="Параметры">Параметры</h3>
 
-<p><code><em>operand</em></code> является выражением, представляющим объект или {{Glossary("Primitive", "примитив")}}, тип которого должен быть возвращён.</p>
+<p><code><em>operand</em></code> является выражением, представляющим объект или {{Glossary("Primitive", "примитив")}}, тип которого должен быть возвращён.</p>
 
 <h2 id="Описание">Описание</h2>
 
-<p>В следующей таблице приведены возможные возвращаемые значения <code>typeof</code>. Дополнительная информация о типах и примитивах находится на странице <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures">структуры данных JavaScript</a>.</p>
+<p>В следующей таблице приведены возможные возвращаемые значения <code>typeof</code>. Дополнительная информация о типах и примитивах находится на странице <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Data_structures">структуры данных JavaScript</a>.</p>
 
 <table class="standard-table">
  <thead>
@@ -139,13 +139,13 @@ typeof Math.sin === 'function';
 typeof null === 'object';
 </pre>
 
-<p> </p>
+<p> </p>
 
-<p>В первой реализации JavaScript значения были представлены парой тип тега и значение. Тип тега для объектов равнялся 0. <code>null</code> был представлен как нулевой указатель (0x00 в большинстве платформ). Следовательно, тип тега для <code>null</code> равнялся нулю, поэтому возвращаемое значение <code>typeof</code> является фиктивным. (<a href="http://www.2ality.com/2013/10/typeof-null.html">подробнее</a>)</p>
+<p>В первой реализации JavaScript значения были представлены парой тип тега и значение. Тип тега для объектов равнялся 0. <code>null</code> был представлен как нулевой указатель (0x00 в большинстве платформ). Следовательно, тип тега для <code>null</code> равнялся нулю, поэтому возвращаемое значение <code>typeof</code> является фиктивным. (<a href="http://www.2ality.com/2013/10/typeof-null.html">подробнее</a>)</p>
 
 <p>Исправление было предложено в ECMAScript (через отключение), но <a href="http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null">было отклонено</a>. Это привело бы к тому, что <code>typeof null === 'null'</code>.</p>
 
-<h3 id="Использование_оператора_new">Использование оператора <code>new</code></h3>
+<h3 id="Использование_оператора_new">Использование оператора <code>new</code></h3>
 
 <pre class="brush:js">// Все функции-конструкторы, созданные с помощью 'new', будут иметь тип 'object'
 var str = new String('String');
@@ -171,7 +171,7 @@ typeof /s/ === 'object';   // Firefox 5+  Соответствует ECMAScript 
 
 <h3 id="Ошибки_связанные_с_временными_мёртвыми_зонами">Ошибки, связанные с временными мёртвыми зонами</h3>
 
-<p>До ECMAScript 2015, гарантировалось, что оператор <code>typeof</code> вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления не поднимающихся объявлений <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/const">const</a></code> с блочной областью  видимости. Теперь, если переменные объявлены с помощью <code>let</code> и <code>const</code>, и для них вызывается <code>typeof</code> в блоке объявления переменных, но до объявления, то выбрасывается <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code>. Поведение отличается от необъявленных переменных, для которых <code>typeof</code> вернёт 'undefined'. Переменные с блочной областью видимости находятся в "<a href="/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">временной мёртвой зоне</a>", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.</p>
+<p>До ECMAScript 2015, гарантировалось, что оператор <code>typeof</code> вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления не поднимающихся объявлений <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/const">const</a></code> с блочной областью  видимости. Теперь, если переменные объявлены с помощью <code>let</code> и <code>const</code>, и для них вызывается <code>typeof</code> в блоке объявления переменных, но до объявления, то выбрасывается <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code>. Поведение отличается от необъявленных переменных, для которых <code>typeof</code> вернёт 'undefined'. Переменные с блочной областью видимости находятся в "<a href="/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">временной мёртвой зоне</a>", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.</p>
 
 <pre class="brush: js">typeof undeclaredVariable === 'undefined';
 typeof newLetVariable; let newLetVariable; // ReferenceError
@@ -180,12 +180,12 @@ typeof newConstVariable; const newConstVariable = 'hello'; // ReferenceError
 
 <h3 id="Исключения">Исключения</h3>
 
-<p>Во всех текущих браузерах существует нестандартный host-объект {{domxref("document.all")}}, который имеет тип Undefined.</p>
+<p>Во всех текущих браузерах существует нестандартный host-объект {{domxref("document.all")}}, который имеет тип Undefined.</p>
 
 <pre class="brush:js">typeof document.all === 'undefined';
 </pre>
 
-<p>Хотя спецификация разрешает собственные имена типов для нестандартных экзотических объектов, требуется чтобы эти имена отличались от предопределённых. Ситуация, когда <code>document.all</code> имеет тип <code>undefined</code> должна рассматриваться как исключительное нарушение правил.</p>
+<p>Хотя спецификация разрешает собственные имена типов для нестандартных экзотических объектов, требуется чтобы эти имена отличались от предопределённых. Ситуация, когда <code>document.all</code> имеет тип <code>undefined</code> должна рассматриваться как исключительное нарушение правил.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
@@ -195,9 +195,9 @@ typeof newConstVariable; const newConstVariable = 'hello'; // ReferenceError
 
 <p>{{Compat}}</p>
 
-<h2 id="IE-специфичные_замечания">IE-специфичные замечания</h2>
+<h2 id="IE-специфичные_замечания">IE-специфичные замечания</h2>
 
-<p>В IE 6, 7 и 8 многие host-объекты являются объектами, но не функциями. Например:</p>
+<p>В IE 6, 7 и 8 многие host-объекты являются объектами, но не функциями. Например:</p>
 
 <pre class="brush: js">typeof alert === 'object'</pre>
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
 <p>{{JSRef}}</p>
 
-<p>Метод <code><strong>Promise.allSettled()</strong></code> возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.</p>
+<p>Метод <code><strong>Promise.allSettled()</strong></code> возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}</div>
 
@@ -17,14 +17,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 
 <dl>
  <dt><code>iterable</code></dt>
- <dd>Любой <a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols">итерируемый</a> объект, такой как {{jsxref("Array")}}, в котором каждый элемент является <code>Promise</code>.</dd>
+ <dd>Любой <a href="/ru/docs/Web/JavaScript/Reference/Iteration_protocols">итерируемый</a> объект, такой как {{jsxref("Array")}}, в котором каждый элемент является <code>Promise</code>.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>{{jsxref("Promise")}}, который будет выполнен после завершения каждого промиса, вне зависимости от того выполнился он успешно или был отклонён. В то же время, в возвращаемый обработчик промиса передаётся массив, который содержит результат каждого промиса в исходном наборе промисов.</p>
+<p>{{jsxref("Promise")}}, который будет выполнен после завершения каждого промиса, вне зависимости от того выполнился он успешно или был отклонён. В то же время, в возвращаемый обработчик промиса передаётся массив, который содержит результат каждого промиса в исходном наборе промисов.</p>
 
-<p>Объект каждого результата содержит свойство <code>status</code>. Если <code>status</code> имеет значение <code>fulfilled</code> (выполнено), то объект будет содержать свойство <code>value</code>. Если <code>status</code> имеет значение <code>rejected</code> (отклонено), то объект будет содержать свойство <code>reason</code>. Свойство <code>value</code> (или <code>reason</code>) будет содержать значение с которым был выполнен (или отклонён) промис.</p>
+<p>Объект каждого результата содержит свойство <code>status</code>. Если <code>status</code> имеет значение <code>fulfilled</code> (выполнено), то объект будет содержать свойство <code>value</code>. Если <code>status</code> имеет значение <code>rejected</code> (отклонено), то объект будет содержать свойство <code>reason</code>. Свойство <code>value</code> (или <code>reason</code>) будет содержать значение с которым был выполнен (или отклонён) промис.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

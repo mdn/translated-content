@@ -18,9 +18,9 @@ translation_of: Web/Performance/Lazy_loading
 
 <h2 id="Стратегии">Стратегии</h2>
 
-<p>Ленивая загрузка (Lazy loading) может применяться к разным ресурсам и разными подходами.   </p>
+<p>Ленивая загрузка (Lazy loading) может применяться к разным ресурсам и разными подходами.   </p>
 
-<h3 id="Общий_подход">    Общий подход</h3>
+<h3 id="Общий_подход">    Общий подход</h3>
 
 <p id="Code_splitting"><strong>Разделение кода (code splitting)</strong><br>
  JavaScript, CSS и HTML могут быть разделены на небольшие части, называемые чанками (chunks). При первоначальной загрузке приложения вы можете отправлять не цельное приложение, а только необходимые части, например, только каркас разметки. Данные для заполнения этого каркаса могут быть подгружены позже, например, с помощью AJAX. Есть два вида разделения кода:</p>
@@ -30,12 +30,12 @@ translation_of: Web/Performance/Lazy_loading
  <li>Динамическое (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">dynamic import()</a>)</li>
 </ul>
 
-<h3 id="JavaScript">    JavaScript</h3>
+<h3 id="JavaScript">    JavaScript</h3>
 
 <p><strong>Указание типа "module</strong>"<br>
  Любой тег скрипта с <code>type="module"</code> рассматривается как <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">JavaScript module</a>, а его загрузка откладывается по умолчанию.</p>
 
-<h3 id="CSS">    CSS</h3>
+<h3 id="CSS">    CSS</h3>
 
 <p>По умолчанию CSS считается ресурсом, блокирующим рендеринг (<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a>). Это означает, что браузер не будет отображать контент до тех пор, пока не будет построена объектная модель CSS (<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a>). Поэтому CSS-файл должен быть небольшим, чтобы он был доставлен так быстро, насколько это возможно. Рекомендуется использовать медиавыражения, для того чтобы вместо одного монолитного CSS-файла грузить специализированные.</p>
 
@@ -46,7 +46,7 @@ translation_of: Web/Performance/Lazy_loading
 
 <p>Также в целях ускорения CSS можно применять оптимизации (<a href="https://developer.mozilla.org/en-US/docs/Learn/Performance/CSS">CSS optimizations</a>).</p>
 
-<h3 id="Шрифты">    Шрифты</h3>
+<h3 id="Шрифты">    Шрифты</h3>
 
 <p>По умолчанию, загрузка шрифтов откладывается на тот момент, пока дерево рендера (render tree) не сформировано полностью. Это приводит к тому, что текст страницы может появиться не сразу.</p>
 
@@ -54,12 +54,12 @@ translation_of: Web/Performance/Lazy_loading
  <br>
  Смотрите также: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link">Element Link</a></p>
 
-<h3 id="Изображения">    Изображения</h3>
+<h3 id="Изображения">    Изображения</h3>
 
 <p>Очень часто веб-страницы содержат множество изображений, загрузка которых заметно нагружает канал передачи данных и увеличивает длительность загрузки. Подавляющая часть этих изображений находятся за видимой областью экрана и не являются необходимым (<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">non-critical</a>), а для взаимодействия с пользователем требуют действия (например, прокрутки до них).</p>
 
 <p><strong>Атрибут Loading </strong><br>
- Атрибут {{htmlattrxref("loading", "img")}} элемента {{HTMLElement("img")}} (или  {{htmlattrxref("loading", "iframe")}} атрибут для {{HTMLElement("iframe")}}) могут быть использованы, чтобы указать браузеру на необходимость отложить загрузку изображений / iframe до тех пор, пока пользователь не доскроллит до них.</p>
+ Атрибут {{htmlattrxref("loading", "img")}} элемента {{HTMLElement("img")}} (или  {{htmlattrxref("loading", "iframe")}} атрибут для {{HTMLElement("iframe")}}) могут быть использованы, чтобы указать браузеру на необходимость отложить загрузку изображений / iframe до тех пор, пока пользователь не доскроллит до них.</p>
 
 <pre>&lt;img src="image.jpg" loading="lazy" alt="..." /&gt;
 &lt;iframe src="video-player.html" loading="lazy"&gt;&lt;/iframe&gt;</pre>

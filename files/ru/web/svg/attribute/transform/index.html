@@ -8,7 +8,7 @@ translation_of: Web/SVG/Attribute/transform
 ---
 <p>« <a href="/ru/docs/Web/SVG/Attribute" title="Справочник SVG атрибутов">Справочник SVG атрибутов</a></p>
 
-<p>В атрибуте <code>transform</code> перечисляются описания преобразований, применяемых как к самому элементу, так и к его последователям. Описания в списке разделяются пробелами или запятыми и применяются в порядке слева направо.</p>
+<p>В атрибуте <code>transform</code> перечисляются описания преобразований, применяемых как к самому элементу, так и к его последователям. Описания в списке разделяются пробелами или запятыми и применяются в порядке слева направо.</p>
 
 <h2 id="Контекст_использования">Контекст использования</h2>
 
@@ -86,19 +86,19 @@ translation_of: Web/SVG/Attribute/transform
 
 <pre class="brush: html">&lt;svg width="160" height="230" xmlns="http://www.w3.org/2000/svg"&gt;
 
-  &lt;g transform="matrix(1,2,3,4,5,6)"&gt;
-    &lt;!-- Новая система координат (жирная синяя линия)
-         x1 = 10 | x2 = 30
-         y1 = 20 | y2 = 40
-      --&gt;
-    &lt;line x1="10" y1="20" x2="30" y2="40" style="stroke-width: 10px; stroke: blue;"/&gt;
-  &lt;/g&gt;
+  &lt;g transform="matrix(1,2,3,4,5,6)"&gt;
+    &lt;!-- Новая система координат (жирная синяя линия)
+         x1 = 10 | x2 = 30
+         y1 = 20 | y2 = 40
+      --&gt;
+    &lt;line x1="10" y1="20" x2="30" y2="40" style="stroke-width: 10px; stroke: blue;"/&gt;
+  &lt;/g&gt;
 
-  &lt;!-- Предыдущая система координат (тонкая белая линия)
-       x1 = 1 * 10 + 3 * 20 + 5 = 75  | x2 = 1 * 30 + 3 * 40 + 5 = 155
-       y1 = 2 * 10 + 4 * 20 + 6 = 106 | y2 = 2 * 30 + 4 * 40 + 6 = 226
-    --&gt;
-  &lt;line x1="75" y1="106" x2="155" y2="226" style="stroke-width: 1px; stroke: white;"/&gt;
+  &lt;!-- Предыдущая система координат (тонкая белая линия)
+       x1 = 1 * 10 + 3 * 20 + 5 = 75  | x2 = 1 * 30 + 3 * 40 + 5 = 155
+       y1 = 2 * 10 + 4 * 20 + 6 = 106 | y2 = 2 * 30 + 4 * 40 + 6 = 226
+    --&gt;
+  &lt;line x1="75" y1="106" x2="155" y2="226" style="stroke-width: 1px; stroke: white;"/&gt;
 
 &lt;/svg&gt;
 </pre>
@@ -117,5 +117,5 @@ translation_of: Web/SVG/Attribute/transform
  <li>{{ SVGElement("g") }}</li>
  <li>{{ SVGElement("switch") }}</li>
  <li>{{ SVGElement("use") }}</li>
- <li><a href="/en/SVG/Element#Graphics" title="en/SVG/Element#Graphics">Графические элементы</a> »</li>
+ <li><a href="/en/SVG/Element#Graphics" title="en/SVG/Element#Graphics">Графические элементы</a> »</li>
 </ul>

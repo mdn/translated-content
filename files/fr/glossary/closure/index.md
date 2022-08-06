@@ -13,7 +13,7 @@ La contrainte qui définit la **{{glossary("scope","portée")}}** d'exécution. 
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Fermeture (informatique)", "Fermeture")}} sur Wikipédia
+- [Fermeture](https://fr.wikipedia.org/wiki/Fermeture_(informatique)) sur Wikipédia
 
 ### Référence technique
 

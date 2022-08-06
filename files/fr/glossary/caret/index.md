@@ -16,7 +16,7 @@ Sur le web, un curseur "_caret_" est utilisé pour représenter le point d'inser
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Curseur")}} sur Wikipedia
+- [Curseur](https://fr.wikipedia.org/wiki/Curseur) sur Wikipédia
 
 ### CSS lié au curseur "_caret_"
 

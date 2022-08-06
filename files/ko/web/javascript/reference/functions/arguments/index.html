@@ -11,10 +11,10 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 <div>{{jsSidebar("Functions")}}</div>
 </div>
 
-<p><strong><code>arguments</code></strong> 객체는 함수에 전달된 인수에 해당하는 <code>Array</code> 형태의 객체입니다.</p>
+<p><strong><code>arguments</code></strong> 객체는 함수에 전달된 인수에 해당하는 <code>Array</code> 형태의 객체입니다.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> ES6 호환 코드를 작성 중이라면 되도록 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters">나머지 매개변수</a> 구문을 사용해야 합니다.</p>
+<p><strong>Note:</strong> ES6 호환 코드를 작성 중이라면 되도록 <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters">나머지 매개변수</a> 구문을 사용해야 합니다.</p>
 </div>
 
 <div class="blockIndicator note">
@@ -45,7 +45,7 @@ arguments[2]
 <pre class="brush: js">arguments[1] = 'new value';
 </pre>
 
-<p><code>arguments</code> 객체는 {{jsxref("Array")}}가 아닙니다. <code>Array</code>와 비슷하지만, {{jsxref("Array.prototype.length", "length")}} 빼고는 {{jsxref("Array.prototype.pop", "pop()")}}과 같은 어떤 <code>Array</code> 속성도 없습니다. 그러나 실제 <code>Array</code>로 변환할 수 있습니다:</p>
+<p><code>arguments</code> 객체는 {{jsxref("Array")}}가 아닙니다. <code>Array</code>와 비슷하지만, {{jsxref("Array.prototype.length", "length")}} 빼고는 {{jsxref("Array.prototype.pop", "pop()")}}과 같은 어떤 <code>Array</code> 속성도 없습니다. 그러나 실제 <code>Array</code>로 변환할 수 있습니다:</p>
 
 <pre class="brush: js">var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
@@ -163,17 +163,17 @@ zoo(10); // 100
   <tr>
    <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

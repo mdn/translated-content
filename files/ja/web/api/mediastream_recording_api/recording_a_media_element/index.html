@@ -167,9 +167,9 @@ let recordingTimeMS = 5000;
     recorder.onerror = event =&gt; reject(event.name);
   });
 
-  let recorded = wait(lengthInMS).then(
+  let recorded = wait(lengthInMS).then(
     () =&gt; recorder.state == "recording" &amp;&amp; recorder.stop()
-  );
+  );
 
   return Promise.all([
     stopped,

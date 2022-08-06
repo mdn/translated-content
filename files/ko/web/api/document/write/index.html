@@ -47,7 +47,7 @@ translation_of: Web/API/Document/write
 
 <h2 id="주">주</h2>
 
-<p>Writing to a document that has already loaded without calling {{domxref("document.open()")}} will automatically call <code>document.open</code>. Once you have finished writing, it is recommended to call {{domxref("document.close()")}} to tell the browser to finish loading the page. The text you write is parsed into the document's structure model. In the example above, the <code>h1</code> element becomes a node in the document.</p>
+<p>Writing to a document that has already loaded without calling {{domxref("document.open()")}} will automatically call <code>document.open</code>. Once you have finished writing, it is recommended to call {{domxref("document.close()")}} to tell the browser to finish loading the page. The text you write is parsed into the document's structure model. In the example above, the <code>h1</code> element becomes a node in the document.</p>
 
 <p>If the <code>document.write()</code> call is embedded within an inlined HTML <code>&lt;script&gt;</code> tag, then it will not call <code>document.open()</code>. For example:</p>
 
@@ -60,7 +60,7 @@ translation_of: Web/API/Document/write
 
 <div class="note"><strong>Note</strong>: <code>document.write</code> in <a href="/en-US/docs/Web/HTML/Element/script#attr-defer">deferred</a> or <a href="/en-US/docs/Web/HTML/Element/script#attr-async">asynchronous</a> scripts will be ignored, and you'll get a message like "A call to <code>document.write()</code> from an asynchronously-loaded external script was ignored" in the error console.</div>
 
-<div class="note"><strong>Note</strong>: In Edge only, calling <code>document.write</code> more than once in an iframe causes the error SCRIPT70: Permission denied.</div>
+<div class="note"><strong>Note</strong>: In Edge only, calling <code>document.write</code> more than once in an iframe causes the error SCRIPT70: Permission denied.</div>
 
 <div class="note"><strong>Note</strong>: Starting in 55, Chrome will not execute <code>&lt;script&gt;</code> elements injected via <code>document.write()</code> in case of an HTTP cache miss for users on a 2G connection.</div>
 
@@ -78,12 +78,12 @@ translation_of: Web/API/Document/write
   <tr>
    <td>{{SpecName("HTML WHATWG", "#dom-document-write", "document.write(...)")}}</td>
    <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName("DOM2 HTML", "html.html#ID-75233634", "document.write(...)")}}</td>
    <td>{{Spec2("DOM2 HTML")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

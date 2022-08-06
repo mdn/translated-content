@@ -23,16 +23,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 
 <h2 id="Описание">Описание</h2>
 
-<p>Метод <code>species</code>  возвращает стандартный конструктор объектов <code>Array</code> . Дочерние элементы могут переопределить метод для смены назначения конструктора.</p>
+<p>Метод <code>species</code>  возвращает стандартный конструктор объектов <code>Array</code> . Дочерние элементы могут переопределить метод для смены назначения конструктора.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
 <p>Метод <code>species</code> возвращает стандартное значение функции конструктора, то есть<br>
-  <code>Array</code> конструктор для <code>Array</code> объектов:</p>
+  <code>Array</code> конструктор для <code>Array</code> объектов:</p>
 
 <pre class="brush: js">Array[Symbol.species]; // функция Array()</pre>
 
-<p>В полученном объекте (на примере обычного массива <code>MyArray</code>),  <code>MyArray</code> является конструктором <code>MyArray</code>. В случае, если вы захотите вернуть родительские объекты <code>Array</code> в полученных классовых методах, вы можете переопределить метод:</p>
+<p>В полученном объекте (на примере обычного массива <code>MyArray</code>),  <code>MyArray</code> является конструктором <code>MyArray</code>. В случае, если вы захотите вернуть родительские объекты <code>Array</code> в полученных классовых методах, вы можете переопределить метод:</p>
 
 <pre class="brush: js">class MyArray extends Array {
   //  <span id="result_box" lang="ru"><span>Переписывает тип MyArray в родительский конструктор Array</span></span>

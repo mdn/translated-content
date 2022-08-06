@@ -24,5 +24,5 @@ Parce que HTTP, le protocole derrière le World Wide Web (WWW), transfère des d
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Representational_state_transfer", "REST")}} sur Wikipédia
+- [REST](https://fr.wikipedia.org/wiki/Representational_state_transfer) sur Wikipédia
 - [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html) (en)

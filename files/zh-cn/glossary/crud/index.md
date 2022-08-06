@@ -9,4 +9,4 @@ translation_of: Glossary/CRUD
 
 ### 常识
 
-- 在 Wikipedia 上的相关信息：{{Interwiki("wikipedia", "CRUD")}}
+- 在 Wikipedia 上的相关信息：[CRUD](https://zh.wikipedia.org/wiki/CRUD)

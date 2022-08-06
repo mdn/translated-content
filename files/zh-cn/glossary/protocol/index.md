@@ -12,7 +12,7 @@ translation_of: Glossary/Protocol
 
 ### 基础知识
 
-- 在维基百科中的 {{Interwiki("wikipedia", "通信协议")}}
+- 在维基百科中的 [通信协议](https://zh.wikipedia.org/wiki/通信协议)
 - [RFC 官方互联网协议标准](https://www.rfc-editor.org/search/standards.php)
 
 ## 参见

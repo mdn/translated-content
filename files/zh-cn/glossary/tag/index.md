@@ -9,7 +9,7 @@ translation_of: Glossary/Tag
 
 ### 基本信息
 
-- 维基百科上的{{Interwiki("wikipedia", "HTML element")}}
+- 维基百科上的[HTML element](https://zh.wikipedia.org/wiki/HTML_element)
 - [HTML Tags on W3](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
 ### 技术参考

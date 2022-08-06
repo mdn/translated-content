@@ -5,9 +5,9 @@ translation_of: Web/API/Worker
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>Интерфейс <strong><code>Worker</code></strong> из <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> является представителем фоновой задачи, которая легко может быть создана и может передавать сообщения обратно создателю. Создание worker  - это вызов конструктора <code>Worker()</code> и задание скрипта, выполняемого в потоке worker.</p>
+<p>Интерфейс <strong><code>Worker</code></strong> из <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers API</a> является представителем фоновой задачи, которая легко может быть создана и может передавать сообщения обратно создателю. Создание worker  - это вызов конструктора <code>Worker()</code> и задание скрипта, выполняемого в потоке worker.</p>
 
-<p>Workers могут, в свою очередь, порождать новые workers, если эти workers расположены в одном каталоге с родительской страницей (Примечание: вложенные workers в настоящее время <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">не поддерживаются в Blink</a>).  Кроме того, workers могут использовать <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> для network I/O, при условии, что атрибуты <code>responseXML</code> и <code>channel</code> <code>XMLHttpRequest</code> всегда возвращают<code> null</code>.</p>
+<p>Workers могут, в свою очередь, порождать новые workers, если эти workers расположены в одном каталоге с родительской страницей (Примечание: вложенные workers в настоящее время <a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">не поддерживаются в Blink</a>).  Кроме того, workers могут использовать <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> для network I/O, при условии, что атрибуты <code>responseXML</code> и <code>channel</code> <code>XMLHttpRequest</code> всегда возвращают<code> null</code>.</p>
 
 <p>Не <a href="/En/DOM/Worker/Functions_available_to_workers" title="En/DOM/Worker/Functions available to workers">все интерфейсы и функции могут быть использованы</a> в скрипте, ассоциированном с <code>Worker</code>.</p>
 
@@ -21,16 +21,16 @@ translation_of: Web/API/Worker
 
 <dl>
  <dt>{{domxref("AbstractWorker.onerror")}}</dt>
- <dd>{{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("ErrorEvent")}} с типом <code>error</code>. Это событие унаследовано от {{domxref("AbstractWorker")}}.</dd>
+ <dd>{{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("ErrorEvent")}} с типом <code>error</code>. Это событие унаследовано от {{domxref("AbstractWorker")}}.</dd>
  <dt>{{domxref("Worker.onmessage")}}</dt>
- <dd>{{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("MessageEvent")}} с типом <code>message</code> — то есть когда сообщение было отправлено воркером в родительский документ с помощью {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Сообщение передаётся в свойстве объекта события {{domxref("MessageEvent.data", "data")}}.</dd>
+ <dd>{{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("MessageEvent")}} с типом <code>message</code> — то есть когда сообщение было отправлено воркером в родительский документ с помощью {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Сообщение передаётся в свойстве объекта события {{domxref("MessageEvent.data", "data")}}.</dd>
 </dl>
 
 <h2 id="Конструкторы">Конструкторы</h2>
 
 <dl>
  <dt>{{domxref("Worker.Worker", "Worker()")}}</dt>
- <dd>Создаёт dedicated web worker, выполняющий скрипт, расположенный по указанному URL. Воркеры также могут быть созданы с использованием <a href="/en-US/docs/Web/API/Blob">Blobs</a>.</dd>
+ <dd>Создаёт dedicated web worker, выполняющий скрипт, расположенный по указанному URL. Воркеры также могут быть созданы с использованием <a href="/en-US/docs/Web/API/Blob">Blobs</a>.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -39,14 +39,14 @@ translation_of: Web/API/Worker
 
 <dl>
  <dt>{{domxref("Worker.postMessage()")}}</dt>
- <dd>Отправляет сообщение — которое может являться <code>любым</code> JavaScript объектом — во внутреннюю область видимости воркера.</dd>
+ <dd>Отправляет сообщение — которое может являться <code>любым</code> JavaScript объектом — во внутреннюю область видимости воркера.</dd>
  <dt>{{domxref("Worker.terminate()")}}</dt>
- <dd>Немедленно завершает выполнение воркера. Не даёт воркеру возможности завершить выполняемые операции; просто сразу останавливается. Экземпляры ServiceWorker не поддерживают этот метод.</dd>
+ <dd>Немедленно завершает выполнение воркера. Не даёт воркеру возможности завершить выполняемые операции; просто сразу останавливается. Экземпляры ServiceWorker не поддерживают этот метод.</dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Представленный фрагмент кода показывает создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, а также его использование:</p>
+<p>Представленный фрагмент кода показывает создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, а также его использование:</p>
 
 <pre class="brush: js">var myWorker = new Worker("worker.js");
 

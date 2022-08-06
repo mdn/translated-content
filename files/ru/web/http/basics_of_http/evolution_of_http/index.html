@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 
 <h2 id="Invention_of_the_World_Wide_Web">Invention of the World Wide Web</h2>
 
-<p>In 1989, while he was working at CERN, Tim Berners-Lee wrote a proposal to build a hypertext system over the Internet. Initially calling it the <em>Mesh</em>, it was later renamed to <em>World Wide Web</em> during its implementation in 1990. Built over the existing TCP and IP protocols, it consisted of 4 building blocks:</p>
+<p>In 1989, while he was working at CERN, Tim Berners-Lee wrote a proposal to build a hypertext system over the Internet. Initially calling it the <em>Mesh</em>, it was later renamed to <em>World Wide Web</em> during its implementation in 1990. Built over the existing TCP and IP protocols, it consisted of 4 building blocks:</p>
 
 <ul>
  <li>A textual format to represent hypertext documents, the <em><a href="/en-US/docs/Web/HTML">HyperText Markup Language</a></em> (HTML).</li>
@@ -151,7 +151,7 @@ Server: Apache
 
 <h3 id="Using_HTTP_for_complex_applications">Using HTTP for complex applications</h3>
 
-<p>The original vision of Tim Berners-Lee for the Web wasn't a read-only medium. He envisioned a Web were people can add and move documents remotely, a kind of distributed file system. Around 1996, HTTP has been extended to allow authoring, and a standard called WebDAV was created. It has been further extended for specific applications like CardDAV to handle address book entries and CalDAV to deal with calendars. But all these *DAV extensions had a flaw: they had to be implemented by the servers to be used, which was quite complex. Their use on Web realms stayed confidential.</p>
+<p>The original vision of Tim Berners-Lee for the Web wasn't a read-only medium. He envisioned a Web were people can add and move documents remotely, a kind of distributed file system. Around 1996, HTTP has been extended to allow authoring, and a standard called WebDAV was created. It has been further extended for specific applications like CardDAV to handle address book entries and CalDAV to deal with calendars. But all these *DAV extensions had a flaw: they had to be implemented by the servers to be used, which was quite complex. Their use on Web realms stayed confidential.</p>
 
 <p>In 2000, a new pattern for using HTTP was designed: {{glossary("REST", "representational state transfer")}} (or REST). The actions induced by the API were no more conveyed by new HTTP methods, but only by accessing specific URIs with basic HTTP/1.1 methods. This allowed any Web application to provide an API to allow retrieval and modification of its data without having to updated the browsers or the servers: all what is needed was embedded in the files served by the Web sites through standard HTTP/1.1. The drawback of the REST model resides in the fact that each website defines its own non-standard RESTful API and has total control on it; unlike the *DAV extensions were clients and servers are interoperable. RESTful APIs became very common in the 2010s.</p>
 
@@ -170,7 +170,7 @@ Server: Apache
 
 <h2 id="HTTP2_–_A_protocol_for_greater_performance">HTTP/2 – A protocol for greater performance</h2>
 
-<p>Over the years, Web pages have become much more complex, even becoming applications in their own right. The amount of visual media displayed, the volume and size of  scripts adding interactivity, has also increased: much more data is transmitted over significantly more HTTP requests. HTTP/1.1 connections need requests sent in the correct order. Theoretically, several parallel connections could be used (typically between 5 and 8), bringing considerable overhead and complexity. For example, HTTP pipelining has emerged as a resource burden in Web development.</p>
+<p>Over the years, Web pages have become much more complex, even becoming applications in their own right. The amount of visual media displayed, the volume and size of  scripts adding interactivity, has also increased: much more data is transmitted over significantly more HTTP requests. HTTP/1.1 connections need requests sent in the correct order. Theoretically, several parallel connections could be used (typically between 5 and 8), bringing considerable overhead and complexity. For example, HTTP pipelining has emerged as a resource burden in Web development.</p>
 
 <p>In the first half of the 2010s, Google demonstrated an alternative way of exchanging data between client and server, by implementing an experimental protocol SPDY. This amassed interest from developers working on both browsers and servers. Defining an increase in responsiveness, and solving the problem of duplication of data transmitted, SPDY served as the foundations of the HTTP/2 protocol.</p>
 
@@ -197,4 +197,4 @@ Server: Apache
  <li>The introduction of security-related prefixes in the {{HTTPHeader("Cookie")}} header, now helps guarantee a secure cookie has not been altered.</li>
 </ul>
 
-<p>This evolution of HTTP proves its extensibility and simplicity, liberating creation of many applications and compelling the adoption of the protocol. The environment in which HTTP is used today is quite different from that seen in the early 1990s. HTTP's original design proved to be a masterpiece, allowing the Web to evolve over a quarter of a century, without the need of a mutiny. By healing flaws, yet retaining the flexibility and extensibility which made HTTP such a success, the adoption of HTTP/2 hints at a bright future for the protocol.</p>
+<p>This evolution of HTTP proves its extensibility and simplicity, liberating creation of many applications and compelling the adoption of the protocol. The environment in which HTTP is used today is quite different from that seen in the early 1990s. HTTP's original design proved to be a masterpiece, allowing the Web to evolve over a quarter of a century, without the need of a mutiny. By healing flaws, yet retaining the flexibility and extensibility which made HTTP such a success, the adoption of HTTP/2 hints at a bright future for the protocol.</p>

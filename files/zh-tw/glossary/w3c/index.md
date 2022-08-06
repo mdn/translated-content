@@ -14,4 +14,4 @@ _全球資訊網協會_（World Wide Web Consortium，W3C）是維護{{Glossary(
 ### 基本知識
 
 - [W3C 官方網站](http://www.w3.org/)
-- 維基百科的 {{Interwiki("wikipedia", "全球資訊網協會", "W3C")}}
+- 維基百科的 [W3C](https://zh.wikipedia.org/wiki/全球資訊網協會)

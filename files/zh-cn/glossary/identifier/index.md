@@ -13,4 +13,4 @@ translation_of: Glossary/Identifier
 
 ### 基本知识
 
-- {{interwiki("wikipedia", "Identifier#In_computer_science", "Identifier")}} on Wikipedia
+- [Identifier](https://zh.wikipedia.org/wiki/Identifier#In_computer_science) on Wikipedia

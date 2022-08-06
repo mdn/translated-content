@@ -12,4 +12,4 @@ GIF（图形交换格式）是一种使用无损压缩并可用于动画的图�
 
 ### 常识
 
-- 在维基百科上的 {{Interwiki("wikipedia", "GIF")}}
+- 在维基百科上的 [GIF](https://zh.wikipedia.org/wiki/GIF)

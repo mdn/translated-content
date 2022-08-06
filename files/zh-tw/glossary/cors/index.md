@@ -15,7 +15,7 @@ translation_of: Glossary/CORS
 ### 一般知識
 
 - MDN 上的 [HTTP 存取控制（CORS）](/zh-TW/docs/Web/HTTP/Access_control_CORS)
-- 維基百科上的 {{Interwiki("wikipedia", "Cross-origin resource sharing")}}
+- 維基百科上的 [Cross-origin resource sharing](https://zh.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
 ### CORS 標頭
 

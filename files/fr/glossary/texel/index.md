@@ -21,7 +21,7 @@ Les textures sont caractérisées par des collections de Texel, comme la façon 
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Texel (graphics)")}} sur Wikipédia
+- [Texel](https://fr.wikipedia.org/wiki/Texel_(infographie)) sur Wikipédia
 
 ### En savoir plus
 

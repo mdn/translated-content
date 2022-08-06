@@ -8,7 +8,7 @@ translation_of: Web/API/SVGTextContentElement
 ---
 <div>{{APIRef("SVG")}}</div>
 
-<p>Интерфейс <strong><code>SVGTextContentElement</code></strong> реализуется элементами, которые поддерживают рендеринг дочернего текстового содержимого. Он наследуется различными текстовыми интерфейсами, такими как {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}}, {{domxref("SVGAltGlyphElement")}} и {{domxref("SVGTextPathElement")}}.</p>
+<p>Интерфейс <strong><code>SVGTextContentElement</code></strong> реализуется элементами, которые поддерживают рендеринг дочернего текстового содержимого. Он наследуется различными текстовыми интерфейсами, такими как {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}}, {{domxref("SVGAltGlyphElement")}} и {{domxref("SVGTextPathElement")}}.</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/SVGTextContentElement
  <tbody>
   <tr>
    <td>Константа</td>
-   <td>Значение </td>
+   <td>Значение </td>
    <td>Описание</td>
   </tr>
   <tr>
@@ -42,14 +42,14 @@ translation_of: Web/API/SVGTextContentElement
 <h2 id="Свойства">Свойства</h2>
 
 <p><em>Этот интерфейс также наследует свойства от его родителя,<br>
- {{domxref("SVGGraphicsElement")}}. </em></p>
+ {{domxref("SVGGraphicsElement")}}. </em></p>
 
 <dl>
- <dt>{{domxref("SVGTextContentElement.textLength")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("SVGTextContentElement.textLength")}} {{ReadOnlyInline}}</dt>
  <dd>{{domxref("SVGAnimatedLength")}}, отражает атрибут {{SVGAttr("textLength")}} данного элемента.</dd>
- <dt>{{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}</dt>
+ <dt>{{domxref("SVGTextContentElement.lengthAdjust")}} {{ReadOnlyInline}}</dt>
  <dd>{{domxref("SVGAnimatedEnumeration")}}, отражает атрибут {{SVGAttr("lengthAdjust")}} данного элемента. Значения числового типа представляют одно из значений константы выше.</dd>
- <dt> </dt>
+ <dt> </dt>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -65,7 +65,7 @@ translation_of: Web/API/SVGTextContentElement
  <dd>Возвращает float, представляющий вычисленную длину форматированного расстояния продвижения текста для подстроки текста внутри элемента. Обратите внимание, что этот метод учитывает только ширину глифов в подстроке и любые дополнительные интервалы, вставленные свойствами CSS «letter-spacing» и «word-spacing». Настройки визуального интервала, сделанные атрибутом «x», игнорируются.</dd>
  <dt>{{domxref("SVGTextContentElement.getStartPositionOfChar()")}}</dt>
  <dd>Возвращает {{domxref("DOMPoint")}}, представляющий позицию типографического символа после выполнения макета текста.
- <p class="note"><strong>Примечание:</strong> В SVG 1.1 этот метод вернул {{domxref("SVGPoint")}}.</p>
+ <p class="note"><strong>Примечание:</strong> В SVG 1.1 этот метод вернул {{domxref("SVGPoint")}}.</p>
  </dd>
  <dt>{{domxref("SVGTextContentElement.getEndPositionOfChar()")}}</dt>
  <dd>Возвращает {{domxref("DOMPoint")}}, представляющий конечную позицию типографического символа после выполнения макета текста.
@@ -76,7 +76,7 @@ translation_of: Web/API/SVGTextContentElement
  <dt>{{domxref("SVGTextContentElement.getRotationOfChar()")}}</dt>
  <dd>Возвращает поплавок <code>float</code>, представляющий поворот типографического символа.</dd>
  <dt>{{domxref("SVGTextContentElement.getCharNumAtPosition()")}}</dt>
- <dd>Возвращает длину символа, заставляющего текстовый глиф отображаться в заданной позиции в системе координат. Поскольку связь между символами и глифами не является взаимно однозначной, возвращается только первый символ соответствующего типографического символа. </dd>
+ <dd>Возвращает длину символа, заставляющего текстовый глиф отображаться в заданной позиции в системе координат. Поскольку связь между символами и глифами не является взаимно однозначной, возвращается только первый символ соответствующего типографического символа. </dd>
  <dt>{{domxref("SVGTextContentElement.selectSubString()")}} {{deprecated_inline}}</dt>
  <dd>Выбирает текст внутри элемента.</dd>
 </dl>

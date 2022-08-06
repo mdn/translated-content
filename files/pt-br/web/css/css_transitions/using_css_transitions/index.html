@@ -5,29 +5,29 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
 <p>{{CSSref}}</p>
 
-<p><span class="seoSummary"><strong>CSS transitions</strong> provê uma forma de controlar a velocidade de uma animação quando há mudanças de propriedades CSS. Ao invés de uma propriedade entrar em vigor imediatamente, você pode fazer com que as mudanças em uma propriedade ocorram durante um periodo de tempo. Por exemplo, se você mudar a cor de um elemento de branco para preto, a alteração será instantanea. Utilizando transições CSS, as alterações acontecem em uma intervalo de tempo que seguem uma curva de aceleração, e todas podem ser personalizadas</span></p>
+<p><span class="seoSummary"><strong>CSS transitions</strong> provê uma forma de controlar a velocidade de uma animação quando há mudanças de propriedades CSS. Ao invés de uma propriedade entrar em vigor imediatamente, você pode fazer com que as mudanças em uma propriedade ocorram durante um periodo de tempo. Por exemplo, se você mudar a cor de um elemento de branco para preto, a alteração será instantanea. Utilizando transições CSS, as alterações acontecem em uma intervalo de tempo que seguem uma curva de aceleração, e todas podem ser personalizadas</span></p>
 
-<p>Animações que envolvem transições entre dois estados geralmente são chamadas de <em>transições implicitas, </em>como os estados entre o começo e o fim são implicitamente definidos pelo browser</p>
+<p>Animações que envolvem transições entre dois estados geralmente são chamadas de <em>transições implicitas, </em>como os estados entre o começo e o fim são implicitamente definidos pelo browser</p>
 
 <p><img alt="A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions." src="/files/4529/TransitionsPrinciple.png" style="display: block; height: 196px; margin: auto; width: 680px;"></p>
 
-<p>Animações CSS permitem que você decida quais propriedades animar (listando-os explicitamente), quando a animação deve começar (definindo o delay), quão longa a transição será (definindo a duração), e como a transição irá ocorrer (definindo o tempo da função, linear ou rápido no início, lento no final).</p>
+<p>Animações CSS permitem que você decida quais propriedades animar (listando-os explicitamente), quando a animação deve começar (definindo o delay), quão longa a transição será (definindo a duração), e como a transição irá ocorrer (definindo o tempo da função, linear ou rápido no início, lento no final).</p>
 
 <h2 id="Quais_propriedade_CSS_podem_transicionadas">Quais propriedade CSS podem transicionadas?</h2>
 
-<p>Você mesmo pode definir qual propriedade será transicionada e de qual maneira. E isso permite a criação de transições complexas. Como não faz sentido animar algumas propriedades, existe uma lista finita <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">com propriedades que podem ser transicionadas</a>.</p>
+<p>Você mesmo pode definir qual propriedade será transicionada e de qual maneira. E isso permite a criação de transições complexas. Como não faz sentido animar algumas propriedades, existe uma lista finita <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">com propriedades que podem ser transicionadas</a>.</p>
 
-<div class="note">Observação:  A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.</div>
+<div class="note">Observação:  A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.</div>
 
-<p class="note">O valor <code>automatico</code> ,  geralmente é complexo.  A especificação recomenda não animar com valores automaticos. Alguns <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent">user agents</a>, como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor <code>automatico,</code> podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.</p>
+<p class="note">O valor <code>automatico</code> ,  geralmente é complexo.  A especificação recomenda não animar com valores automaticos. Alguns <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent">user agents</a>, como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor <code>automatico,</code> podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.</p>
 
 <h2 id="Definindo_transições">Definindo transições</h2>
 
-<p>Transições CSS são controladas usando a propriedade {{cssxref("transition")}}. Essa é a melhor maneira de configurar uma transição, assim evitamos parâmetros fora de sintonia, o que pode ser muito frustrante desperdiçar tanto tempo debuggando CSS.</p>
+<p>Transições CSS são controladas usando a propriedade {{cssxref("transition")}}. Essa é a melhor maneira de configurar uma transição, assim evitamos parâmetros fora de sintonia, o que pode ser muito frustrante desperdiçar tanto tempo debuggando CSS.</p>
 
 <p>Você pode controlar componentes individuais da transição com a seguinte sub propriedade:</p>
 
-<p><strong>(Observe que essas transições fazem um loop infinitamente apenas para o propósito de nossos exemplos; <code>transitions</code> apenas visualizam a mudança na propriedade de começo ao fim. Se você precisar de visualizações desse loop, procure na propriedade {{cssxref("animation")}}.)</strong></p>
+<p><strong>(Observe que essas transições fazem um loop infinitamente apenas para o propósito de nossos exemplos; <code>transitions</code> apenas visualizam a mudança na propriedade de começo ao fim. Se você precisar de visualizações desse loop, procure na propriedade {{cssxref("animation")}}.)</strong></p>
 
 <dl>
  <dt>{{cssxref("transition-property")}}</dt>
@@ -299,7 +299,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
  </dd>
  <dt>{{cssxref("transition-timing-function")}}</dt>
  <dt></dt>
- <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;"> Especifica uma função para definir como os valores intermediários das propriedades são calculados. As<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function"> timing functions</a> determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o <a href="http://easings.net/">Easing Functions Cheat Sheet</a>.
+ <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;"> Especifica uma função para definir como os valores intermediários das propriedades são calculados. As<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function"> timing functions</a> determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o <a href="http://easings.net/">Easing Functions Cheat Sheet</a>.
  <div class="cleared">
  <div id="ttf_ease" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
  <p><code>transition-timing-function: ease</code></p>
@@ -872,36 +872,36 @@ var intervalID = window.setInterval(updateTransition, 7000);
 }
 </pre>
 
-<h3 id="Exemplo_de_multiplicas_animações_de_propriedades">Exemplo de multiplicas animações de propriedades </h3>
+<h3 id="Exemplo_de_multiplicas_animações_de_propriedades">Exemplo de multiplicas animações de propriedades </h3>
 
 <div class="hidden">
 <h4 id="Conteúdo_HTML">Conteúdo HTML</h4>
 
 <pre class="brush: html; highlight:[3]">&lt;body&gt;
-    &lt;p&gt;The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.&lt;/p&gt;
-    &lt;div class="box"&gt;Sample&lt;/div&gt;
+    &lt;p&gt;The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.&lt;/p&gt;
+    &lt;div class="box"&gt;Sample&lt;/div&gt;
 &lt;/body&gt;</pre>
 </div>
 
 <h4 id="Conteúdo_CSS">Conteúdo CSS</h4>
 
 <pre class="brush: css; highlight:[8,9]">.box {
-    border-style: solid;
-    border-width: 1px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: #0000FF;
-    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
 .box:hover {
-    background-color: #FFCCCC;
-    width: 200px;
-    height: 200px;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 </pre>
 
@@ -920,11 +920,11 @@ var intervalID = window.setInterval(updateTransition, 7000);
 <p>Isso é tratado como se fosse:</p>
 
 <pre class="brush: css">div {
-  transition-property: opacity, left, top, height;
-  transition-duration: 3s, 5s, 3s, 5s;
+  transition-property: opacity, left, top, height;
+  transition-duration: 3s, 5s, 3s, 5s;
 }</pre>
 
-<p>Da mesma forma, se um valor da propriedade da lista, for maior que a {{cssxref("transition-property")}}, ela será truncada, então você terá o seguinte CSS:</p>
+<p>Da mesma forma, se um valor da propriedade da lista, for maior que a {{cssxref("transition-property")}}, ela será truncada, então você terá o seguinte CSS:</p>
 
 <pre class="brush: css">div {
   transition-property: opacity, left;
@@ -944,7 +944,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 <p>Antes de olharmos para os códigos, você poderia dar uma olhada nesse <a href="https://codepen.io/anon/pen/WOEpva">live demo</a> (assumindo que seu browser suporte transições).</p>
 
-<p>Primeiro, nós criamos o menu utilizando apenas HTML</p>
+<p>Primeiro, nós criamos o menu utilizando apenas HTML</p>
 
 <pre class="brush: html">&lt;nav&gt;
   &lt;a href="#"&gt;Home&lt;/a&gt;
@@ -968,7 +968,7 @@ a:focus {
 }
 </pre>
 
-<p>Este CSS estabelece a aparência do menu, com as cores de fundo e texto mudando quando o o ocorre o evento de {{cssxref(":hover")}} e estado de {{cssxref(":focus")}}.</p>
+<p>Este CSS estabelece a aparência do menu, com as cores de fundo e texto mudando quando o o ocorre o evento de {{cssxref(":hover")}} e estado de {{cssxref(":focus")}}.</p>
 
 <h2 id="Exemplos_JavaScript">Exemplos JavaScript</h2>
 
@@ -996,7 +996,7 @@ a:focus {
 <pre class="brush: js">var f = document.getElementById('foo');
 document.addEventListener('click', function(ev){
     f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
-    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+    f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
 },false);
 </pre>
 
@@ -1018,11 +1018,11 @@ document.addEventListener('click', function(ev){
 }
 </pre>
 
-<p>Você pode brincar um pouco aqui: <a href="http://jsfiddle.net/9h261pzo/291/">http://jsfiddle.net/9h261pzo/291/</a></p>
+<p>Você pode brincar um pouco aqui: <a href="http://jsfiddle.net/9h261pzo/291/">http://jsfiddle.net/9h261pzo/291/</a></p>
 
 <h3 id="Detectando_o_começo_e_a_completude_de_uma_transição">Detectando o começo e a completude de uma transição</h3>
 
-<p>Você pode usar o evento {{event("transitionend")}} para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico </p>
+<p>Você pode usar o evento {{event("transitionend")}} para detectar a uma animação que estava sendo executada chegou ao fim. Esse é o objeto {{domxref("TransitionEvent")}}, que possúi duas propriedades adicionadas além do objeto típico </p>
 
 <dl>
  <dt><code>propertyName</code></dt>
@@ -1046,7 +1046,7 @@ document.addEventListener('click', function(ev){
 <pre class="brush: js">el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);</pre>
 
-<div class="note"><strong>Observação</strong>: O evento <code>transitionend</code> não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}<code>: none</code></div>
+<div class="note"><strong>Observação</strong>: O evento <code>transitionend</code> não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}<code>: none</code></div>
 
 <h2 id="Especificações">Especificações</h2>
 

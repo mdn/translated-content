@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 ---
 {{JSRef}}
 
-**`AggregateError`** 객체는 다수의 에러가 한 에러로 랩핑되어야 할 때의 오류를 나타냅니다. 한 작업에서 여러개의 오류가 보고될 때 발생하는데, 대표적으로 {{JSxRef("Promise.any()")}}에 전달된 모든 promise들이 거부되었을 때 발생합니다.
+**`AggregateError`** 객체는 다수의 에러가 한 에러로 랩핑되어야 할 때의 오류를 나타냅니다. 한 작업에서 여러개의 오류가 보고될 때 발생하는데, 대표적으로 {{JSxRef("Promise.any()")}}에 전달된 모든 promise들이 거부되었을 때 발생합니다.
 
 ## 생성자
 

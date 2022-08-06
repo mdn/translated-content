@@ -14,5 +14,5 @@ Sur internet, Ecma est célèbre pour être l'organisation qui maintient [la sp�
 
 ## En savoir plus
 
-- {{interwiki("wikipedia", "Ecma_International", "Ecma International")}} sur Wikipedia
+- [Ecma International](https://fr.wikipedia.org/wiki/Ecma_International) sur Wikipédia
 - [Le site officiel Ecma International](http://www.ecma-international.org/)

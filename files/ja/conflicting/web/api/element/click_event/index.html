@@ -27,7 +27,7 @@ browser-compat: api.GlobalEventHandlers.onclick
 
 <h3 id="Value">値</h3>
 
-<p><code><var>functionRef</var></code> は、関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は、{{domxref("MouseEvent")}} オブジェクトを唯一の引数として受け取ります。関数内では、 {{jsxref("Operators/this", "this")}} は <code>onclick</code> が結びつけられたオブジェクトになります (<code>event.currentTarget</code> にも一致します)。</p>
+<p><code><var>functionRef</var></code> は、関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は、{{domxref("MouseEvent")}} オブジェクトを唯一の引数として受け取ります。関数内では、 {{jsxref("Operators/this", "this")}} は <code>onclick</code> が結びつけられたオブジェクトになります (<code>event.currentTarget</code> にも一致します)。</p>
 
 <p>一度に 1 つのオブジェクトに割り当てることができる <code>onclick</code> ハンドラーは 1 つだけです。より柔軟性のある {{domxref("EventTarget.addEventListener()")}} メソッドを使用することをお勧めします。</p>
 
@@ -45,8 +45,8 @@ browser-compat: api.GlobalEventHandlers.onclick
 
 <pre class="brush: js">document.getElementById('demo').onclick = function changeContent() {
 
-   document.getElementById('demo').textContent = "Help me";
-   document.getElementById('demo').style = "Color: red";
+   document.getElementById('demo').textContent = "Help me";
+   document.getElementById('demo').style = "Color: red";
 
 }</pre>
 

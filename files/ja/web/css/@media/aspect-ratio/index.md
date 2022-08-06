@@ -28,7 +28,7 @@ translation_of: Web/CSS/@media/aspect-ratio
 
 ```html
 <div id='inner'>
-  ビューポートの幅と高さを変更しながら、この要素を見ていてください。
+  ビューポートの幅と高さを変更しながら、この要素を見ていてください。
 </div>
 ```
 
@@ -37,23 +37,23 @@ translation_of: Web/CSS/@media/aspect-ratio
 ```css
 /* 最小アスペクト比 */
 @media (min-aspect-ratio: 8/5) {
-  div {
-    background: #9af; /* blue */
-  }
+  div {
+    background: #9af; /* blue */
+  }
 }
 
 /* 最大アスペクト比 */
 @media (max-aspect-ratio: 3/2) {
-  div {
-    background: #9ff;  /* cyan */
-  }
+  div {
+    background: #9ff;  /* cyan */
+  }
 }
 
 /* 正確なアスペクト比。上書きを防ぐために最下部に配置 */
 @media (aspect-ratio: 1/1) {
-  div {
-    background: #f9a; /* red */
-  }
+  div {
+    background: #f9a; /* red */
+  }
 }
 ```
 
@@ -72,7 +72,7 @@ translation_of: Web/CSS/@media/aspect-ratio
 
 ```css hidden
 iframe{
-  display:block;
+  display:block;
 }
 ```
 

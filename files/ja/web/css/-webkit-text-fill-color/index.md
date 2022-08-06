@@ -12,7 +12,7 @@ translation_of: Web/CSS/-webkit-text-fill-color
 ---
 {{CSSRef}}{{Non-standard_header}}
 
-`**-webkit-text-fill-color**` は CSS のプロパティで、テキストの文字の塗りつぶしの[色](/ja/docs/Web/CSS/color_value)を指定します。このプロパティが設定されていない場合、 {{cssxref("color")}} プロパティの値が使用されます。
+`**-webkit-text-fill-color**` は CSS のプロパティで、テキストの文字の塗りつぶしの[色](/ja/docs/Web/CSS/color_value)を指定します。このプロパティが設定されていない場合、 {{cssxref("color")}} プロパティの値が使用されます。
 
 ```css
 /* <color> 値 */

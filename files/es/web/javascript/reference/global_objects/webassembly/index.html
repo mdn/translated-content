@@ -74,11 +74,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/WebAssembly
 };
 
 fetch('simple.wasm').then(response =&gt;
-  response.arrayBuffer()
+  response.arrayBuffer()
 ).then(bytes =&gt;
-  WebAssembly.instantiate(bytes, importObject)
+  WebAssembly.instantiate(bytes, importObject)
 ).then(result =&gt;
-  result.instance.exports.exported_func()
+  result.instance.exports.exported_func()
 );</pre>
 
 <div class="note">

@@ -29,7 +29,7 @@ translation_of: Web/API/Worker/postMessage
 <dl>
  <dt><em>message</em></dt>
  <dd>ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.onmessage")}} ハンドラーに配信されるイベントの <code>data</code> フィールドに入ります。このデータは任意の値、または循環参照を含む場合は<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">構造化クローン</a>アルゴリズムで扱う JavaScript オブジェクトが許可されます。</dd>
- <dd><code>message</code> 引数が提供されて<em>いない</em>場合は、 <code>TypeError</code> が発生します。ワーカーに渡すデータが重要でない場合は、 <code>null</code> または <code>undefined</code> を明示的に渡すことができます。</dd>
+ <dd><code>message</code> 引数が提供されて<em>いない</em>場合は、 <code>TypeError</code> が発生します。ワーカーに渡すデータが重要でない場合は、 <code>null</code> または <code>undefined</code> を明示的に渡すことができます。</dd>
  <dt><em>transfer</em> {{optional_inline}}</dt>
  <dd>オプションで、所有権を移転する {{domxref("Transferable")}} オブジェクトの<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array">配列</a>です。オブジェクトの所有権が移転されると、そのオブジェクトは送信元のコンテキストでは使用できなくなり、送信先のワーカーのみが使用できるようになります。</dd>
  <dd>Transferable オブジェクトは {{jsxref("ArrayBuffer")}}、{{domxref("MessagePort")}}、{{domxref("ImageBitmap")}} のような移転可能なクラスのインスタンスです。 <code>null</code> を <code>transfer</code> の値として受け付けることはできません。</dd>
@@ -51,8 +51,8 @@ first.onchange = function() {
 }
 
 second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
 }
 </pre>
 
@@ -131,11 +131,11 @@ self.onmessage = function handleMessageFromMain(msg) {
 buf.byteLength in main BEFORE transfer to worker:        8                     main.js:19
 buf.byteLength in main AFTER transfer to worker:         0                     main.js:27
 
-message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
+message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
 buf.byteLength in worker BEFORE transfer back to main:   8                     myWorker.js:7
 buf.byteLength in worker AFTER transfer back to main:    0                     myWorker.js:15
 
-message from worker received in main:                    MessageEvent { ... }  main.js:6
+message from worker received in main:                    MessageEvent { ... }  main.js:6
 buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
 </pre>
 

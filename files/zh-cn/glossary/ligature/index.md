@@ -9,4 +9,4 @@ translation_of: Glossary/Ligature
 
 ## 参见
 
-- {{interwiki("wikipedia", "Typographic ligature", "Ligature")}} on Wikipedia
+- [Ligature](https://zh.wikipedia.org/wiki/Typographic_ligature) on Wikipedia

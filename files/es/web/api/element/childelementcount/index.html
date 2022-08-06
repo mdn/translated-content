@@ -15,10 +15,10 @@ original_slug: Web/API/ParentNode/childElementCount
 <p>{{ APIRef("DOM") }}</p>
 </div>
 
-<p>La propiedad de sólo lectura <code><strong>ParentNode.childElementCount</strong></code> devuelve un número del tipo <code>unsigned long</code> que representa la cantidad de elementos hijo que penden del elemento padre (ParentNode).</p>
+<p>La propiedad de sólo lectura <code><strong>ParentNode.childElementCount</strong></code> devuelve un número del tipo <code>unsigned long</code> que representa la cantidad de elementos hijo que penden del elemento padre (ParentNode).</p>
 
 <div class="note">
-<p>Esta propiedad fue inicialmente definida en la interfaz pura {{domxref("ElementTraversal")}}. Como esta interfaz contenía dos conjuntos distintos de propiedades: una apuntaba al {{domxref("Node")}} con hijos y otra a los hijos, fueron trasladados a dos interfaces puras separadas: {{domxref("ParentNode")}} y {{domxref("ChildNode")}}. En este caso, <code>childElementCount</code> se mudó a {{domxref("ParentNode")}}. Este es un cambio bastante técnico que no debería afectar a la compatibilidad.</p>
+<p>Esta propiedad fue inicialmente definida en la interfaz pura {{domxref("ElementTraversal")}}. Como esta interfaz contenía dos conjuntos distintos de propiedades: una apuntaba al {{domxref("Node")}} con hijos y otra a los hijos, fueron trasladados a dos interfaces puras separadas: {{domxref("ParentNode")}} y {{domxref("ChildNode")}}. En este caso, <code>childElementCount</code> se mudó a {{domxref("ParentNode")}}. Este es un cambio bastante técnico que no debería afectar a la compatibilidad.</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
@@ -38,18 +38,18 @@ original_slug: Web/API/ParentNode/childElementCount
   <tr>
    <td>{{SpecName('DOM WHATWG', '#dom-parentnode-childElementCount', 'ParentNode.childElementCount')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Dividida la interfaz <code>ElementTraversal</code> en {{domxref("ChildNode")}} y <code>ParentNode</code>. Este método está ahora definido en la segunda.<br>
+   <td>Dividida la interfaz <code>ElementTraversal</code> en {{domxref("ChildNode")}} y <code>ParentNode</code>. Este método está ahora definido en la segunda.<br>
     Se implementaron las nuevas interfaces en {{domxref("Document")}} y {{domxref("DocumentFragment")}}.</td>
   </tr>
   <tr>
    <td>{{SpecName('Element Traversal', '#attribute-childElementCount', 'ElementTraversal.childElementCount')}}</td>
    <td>{{Spec2('Element Traversal')}}</td>
-   <td>Añadida su definición inicial a la interfaz pura <code>ElementTraversal</code> y se emplea en {{domxref("Element")}}.</td>
+   <td>Añadida su definición inicial a la interfaz pura <code>ElementTraversal</code> y se emplea en {{domxref("Element")}}.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
 {{Compat("api.Element.childElementCount")}}
 

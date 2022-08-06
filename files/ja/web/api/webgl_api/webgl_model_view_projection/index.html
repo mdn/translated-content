@@ -15,7 +15,7 @@ translation_of: Web/API/WebGL_API/WebGL_model_view_projection
 
 <p>WebGLの空間内の点とポリゴンの個々の変換は、並進、拡縮、回転などの基本的な変換行列によって処理されます。 <span class="tlid-translation translation" lang="ja"><span title="">これらの行列は、複雑な3Dシーンの描画に役立つように、一緒に構成し、特別な方法でグループ化できます。</span></span>これらの構成された行列は、最終的に元のモデルデータを<strong>クリップ空間</strong>と呼ばれる特別な座標空間に移動します。これは2ユニットの幅の立方体で、中心が (0,0,0) 、対角が (-1,-1,-1) から (1,1,1) になります。このクリップ空間は2次元平面に圧縮され、画像へラスタライズされます。</p>
 
-<p><span class="tlid-translation translation" lang="ja"><span title="">以下で説明する最初の行列は<strong>モデル行列</strong>です。これは、元のモデルデータを取得して3次元ワールド空間内で移動する方法を定義します。</span></span> <span class="tlid-translation translation" lang="ja"><span title=""><strong>射影行列</strong>は、ワールド空間座標をクリップ空間座標に変換するために使用されます。</span></span> <span class="tlid-translation translation" lang="ja"><span title="">一般的に使用される射影行列である<strong>透視投影射影行列</strong>は、3D仮想世界の視聴者の代理として機能する一般的なカメラの<em>効果</em>を模倣するために使用されます。</span></span> <span class="tlid-translation translation" lang="ja"><span title=""><strong>ビュー行列</strong>は、変更されるカメラの位置をシミュレートし、シーン内のオブジェクトを移動して視聴者が現在何を見られるかを変更します</span></span>。</p>
+<p><span class="tlid-translation translation" lang="ja"><span title="">以下で説明する最初の行列は<strong>モデル行列</strong>です。これは、元のモデルデータを取得して3次元ワールド空間内で移動する方法を定義します。</span></span> <span class="tlid-translation translation" lang="ja"><span title=""><strong>射影行列</strong>は、ワールド空間座標をクリップ空間座標に変換するために使用されます。</span></span> <span class="tlid-translation translation" lang="ja"><span title="">一般的に使用される射影行列である<strong>透視投影射影行列</strong>は、3D仮想世界の視聴者の代理として機能する一般的なカメラの<em>効果</em>を模倣するために使用されます。</span></span> <span class="tlid-translation translation" lang="ja"><span title=""><strong>ビュー行列</strong>は、変更されるカメラの位置をシミュレートし、シーン内のオブジェクトを移動して視聴者が現在何を見られるかを変更します</span></span>。</p>
 
 <p><span class="tlid-translation translation" lang="ja"><span title="">以下のセクションでは、モデル、ビュー、射影行列の背景にある考え方と実装について詳説します。</span> <span title="">これらの行列は、画面上でデータを移動するための根幹であり、個々のフレームワークやエンジンを超える概念です。</span></span></p>
 
@@ -196,7 +196,7 @@ void main() {
 
 <p><span class="tlid-translation translation" lang="ja"><span title="">変数</span></span> <code>position</code> <span class="tlid-translation translation" lang="ja"><span title="">は、</span></span> <code>draw()</code> <span class="tlid-translation translation" lang="ja"><span title="">メソッドで定義され、属性としてシェーダーに渡されました。</span><span title="">これは3次元の点ですが、パイプラインを介して渡されることになる変数</span></span> <code>gl_Position</code> <span class="tlid-translation translation" lang="ja"><span title="">は実際には4次元です</span></span>。すなわち、 <code>(x, y, z)</code> <span class="tlid-translation translation" lang="ja"><span title="">の代わりに</span></span> <code>(x, y, z, w)</code><span class="tlid-translation translation" lang="ja"><span title=""> となっています</span></span><span class="tlid-translation translation" lang="ja"><span title="">。</span></span><code>z</code> <span class="tlid-translation translation" lang="ja"><span title="">の後には文字がないため、慣例により、この4番目の次元には</span></span> <code>w</code> <span class="tlid-translation translation" lang="ja"><span title="">というラベルが付いています。</span> <span title="">上記の例では、</span></span> <code>w</code> <span class="tlid-translation translation" lang="ja"><span title="">座標は 1.0 に設定されています。</span></span></p>
 
-<p><span class="tlid-translation translation" lang="ja"><span title="">明らかな疑問は、「なぜ余分な次元があるのか？」です。</span><span title="">この追加により、3Dデータを操作するための多くの優れた手法が可能になることが分かります。</span><span title="">この追加された次元により、遠近法の概念が座標系に導入されます。</span><span title="">それを配置すると、3D座標を2D空間にマッピングできます。これにより、2本の平行線が遠くに離れるときに交差するようになります。</span><span title="">値</span></span> <code>w</code> <span class="tlid-translation translation" lang="ja"><span title="">は、座標の他のコンポーネントの除数として使用されるため、</span></span> <code>x</code><span class="tlid-translation translation" lang="ja"><span title="">、</span></span><code>y</code><span class="tlid-translation translation" lang="ja"><span title="">、</span></span><code>z</code><span class="tlid-translation translation" lang="ja"><span title="">の真の値は、</span></span><code>x/w</code><span class="tlid-translation translation" lang="ja"><span title="">、</span></span><code>y/w</code><span class="tlid-translation translation" lang="ja"><span title="">、</span></span><code>z/w</code><span class="tlid-translation translation" lang="ja"><span title="">として計算されます（そして、</span></span><code>w</code><span class="tlid-translation translation" lang="ja"><span title="">も</span> </span><code>w/w</code><span class="tlid-translation translation" lang="ja"><span title="">で1になる）。</span></span></p>
+<p><span class="tlid-translation translation" lang="ja"><span title="">明らかな疑問は、「なぜ余分な次元があるのか？」です。</span><span title="">この追加により、3Dデータを操作するための多くの優れた手法が可能になることが分かります。</span><span title="">この追加された次元により、遠近法の概念が座標系に導入されます。</span><span title="">それを配置すると、3D座標を2D空間にマッピングできます。これにより、2本の平行線が遠くに離れるときに交差するようになります。</span><span title="">値</span></span> <code>w</code> <span class="tlid-translation translation" lang="ja"><span title="">は、座標の他のコンポーネントの除数として使用されるため、</span></span> <code>x</code><span class="tlid-translation translation" lang="ja"><span title="">、</span></span><code>y</code><span class="tlid-translation translation" lang="ja"><span title="">、</span></span><code>z</code><span class="tlid-translation translation" lang="ja"><span title="">の真の値は、</span></span><code>x/w</code><span class="tlid-translation translation" lang="ja"><span title="">、</span></span><code>y/w</code><span class="tlid-translation translation" lang="ja"><span title="">、</span></span><code>z/w</code><span class="tlid-translation translation" lang="ja"><span title="">として計算されます（そして、</span></span><code>w</code><span class="tlid-translation translation" lang="ja"><span title="">も</span> </span><code>w/w</code><span class="tlid-translation translation" lang="ja"><span title="">で1になる）。</span></span></p>
 
 <p>A three dimensional point is defined in a typical Cartesian coordinate system. The added fourth dimension changes this point into a {{interwiki("wikipedia", "homogeneous coordinates", "homogeneous coordinate")}}. It still represents a point in 3D space and it can easily be demonstrated how to construct this type of coordinate through a pair of simple functions.</p>
 
@@ -231,7 +231,7 @@ function homogeneousToCartesian(point) {
 
 <p>The final benefit of using homogeneous coordinates is that they fit very nicely for multiplying against 4x4 matrices. A vertex must match at least one of the dimensions of a matrix in order to be multiplied against it. The 4x4 matrix can be used to encode a variety of useful transformations. In fact, the typical perspective projection matrix uses the division by the w component to achieve its transformation.</p>
 
-<p>The clipping of points and polygons from clip space actually happens after the homogeneous coordinates have been transformed back into Cartesian coordinates (by dividing by w). This final space is known as <strong>normalized device coordinates</strong> or NDC.</p>
+<p>The clipping of points and polygons from clip space actually happens after the homogeneous coordinates have been transformed back into Cartesian coordinates (by dividing by w). This final space is known as <strong>normalized device coordinates</strong> or NDC.</p>
 
 <p>To start playing with this idea the previous example can be modified to allow for the use of the <code>w</code> component.</p>
 
@@ -315,9 +315,9 @@ void main() {
 
 <h2 id="Model_transform">Model transform</h2>
 
-<p>Placing points directly into clip space is of limited use. In real world applications, you don't have all your source coordinates already in clip space coordinates. So most of the time, you need to transform the model data and other coordinates into clip space. The humble cube is an easy example of how to do this. Cube data consists of vertex positions, the colors of the faces of the cube, and the order of the vertex positions that make up the individual polygons (in groups of 3 vertices to construct the triangles composing the cube's faces). The positions and colors are stored in GL buffers, sent to the shader as attributes, and then operated upon individually.</p>
+<p>Placing points directly into clip space is of limited use. In real world applications, you don't have all your source coordinates already in clip space coordinates. So most of the time, you need to transform the model data and other coordinates into clip space. The humble cube is an easy example of how to do this. Cube data consists of vertex positions, the colors of the faces of the cube, and the order of the vertex positions that make up the individual polygons (in groups of 3 vertices to construct the triangles composing the cube's faces). The positions and colors are stored in GL buffers, sent to the shader as attributes, and then operated upon individually.</p>
 
-<p>Finally a single model matrix is computed and set. This matrix represents the transformations to be performed on every point making up the model in order to move it into the correct space, and to perform any other needed transforms on each point in the model. This applies not just to each vertex, but to every single point on every surface of the model as well.</p>
+<p>Finally a single model matrix is computed and set. This matrix represents the transformations to be performed on every point making up the model in order to move it into the correct space, and to perform any other needed transforms on each point in the model. This applies not just to each vertex, but to every single point on every surface of the model as well.</p>
 
 <p>In this case, for every frame of the animation a series of scale, rotation, and translation matrices move the data into the desired spot in clip space. The cube is the size of clip space (-1,-1,-1) to (1,1,1) so it will need to be shrunk down in order to not fill the entirety of clip space. This matrix is sent directly to the shader, having been multiplied in JavaScript beforehand.</p>
 
@@ -356,7 +356,7 @@ void main() {
 <pre class="brush: js notranslate">gl.uniformMatrix4fv(this.locations.model, false, new Float32Array(this.transforms.model));
 </pre>
 
-<p>In the shader, each position vertex is first transformed into a homogeneous coordinate (a <code>vec4</code> object), and then multiplied against the model matrix.</p>
+<p>In the shader, each position vertex is first transformed into a homogeneous coordinate (a <code>vec4</code> object), and then multiplied against the model matrix.</p>
 
 <pre class="brush: glsl notranslate">gl_Position = model * vec4(position, 1.0);
 </pre>
@@ -505,7 +505,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <h2 id="The_viewing_frustum">The viewing frustum</h2>
 
-<p>Before we move on to covering how to compute a perspective projection matrix, we need to introduce the concept of the <strong>{{interwiki("wikipedia", "viewing frustum")}}</strong> (also known as the <strong>view frustum</strong>). This is the region of space whose contents are visible to the user at the current time. It's the 3D region of space defined by the field of view and the distances specified as the nearest and farthest content that should be rendered.</p>
+<p>Before we move on to covering how to compute a perspective projection matrix, we need to introduce the concept of the <strong>{{interwiki("wikipedia", "viewing frustum")}}</strong> (also known as the <strong>view frustum</strong>). This is the region of space whose contents are visible to the user at the current time. It's the 3D region of space defined by the field of view and the distances specified as the nearest and farthest content that should be rendered.</p>
 
 <p>While rendering, we need to determine which polygons need to be rendered in order to represent the scene. This is what the viewing frustum defines. But what's a frustum in the first place?</p>
 
@@ -515,21 +515,21 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>If we simply used this to determine the polygons to be rendered each frame, our renderer would need to render every polygon within this pyramid, all the way off into infinity, including also polygons that are very close to the lens—likely too close to be useful (and certainly including things that are so close that a real human wouldn't be able to focus on them in the same setting).</p>
 
-<p>So the first step in reducing the number of polygons we need to compute and render, we turn this pyramid into the viewing frustum. The two planes we'll use to chop away vertices in order to reduce the polygon count are the <strong>near clipping plane</strong> and the <strong>far clipping plane</strong>.</p>
+<p>So the first step in reducing the number of polygons we need to compute and render, we turn this pyramid into the viewing frustum. The two planes we'll use to chop away vertices in order to reduce the polygon count are the <strong>near clipping plane</strong> and the <strong>far clipping plane</strong>.</p>
 
-<p>In WebXR, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. <span>Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:</span></p>
+<p>In WebXR, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. <span>Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:</span></p>
 
 <div style="width: 42em; margin-bottom: 1em;"><img alt="A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count." src="https://mdn.mozillademos.org/files/17296/CameraViewFustum.svg" style="display: block; margin: 0 auto; width: 36em;"></div>
 
-<p>The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are <em>entirely</em> outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustrum so that they no longer exit it.</p>
+<p>The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are <em>entirely</em> outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustrum so that they no longer exit it.</p>
 
-<p>Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like {{interwiki("wikipedia", "back-face culling")}} (removing polygons whose back side is facing the camera) and occlusion culling using {{interwiki("wikipedia", "hidden-surface determination")}} (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).</p>
+<p>Once that's been done, we have the largest set of polygons which are entirely within the viewing frustum. This list is usually further reduced using processes like {{interwiki("wikipedia", "back-face culling")}} (removing polygons whose back side is facing the camera) and occlusion culling using {{interwiki("wikipedia", "hidden-surface determination")}} (removing polygons which can't be seen because they're entirely blocked by polygons that are closer to the lens).</p>
 
 <h2 id="Perspective_projection_matrix">Perspective projection matrix</h2>
 
-<p>Up to this point, we've built up our own 3D rendering setup, step by step. However the current code as we've built it has some issues. For one, it gets skewed whenever we resize our window. Another is that our simple projection doesn't handle a wide range of values for the scene data. Most scenes don't work in clip space. It would be helpful to define what distance is relevant to the scene so that precision isn't lost in converting the numbers. Finally it's very helpful to have a fine-tuned control over what points get placed inside and outside of clip space. In the previous examples the corners of the cube occasionally get clipped.</p>
+<p>Up to this point, we've built up our own 3D rendering setup, step by step. However the current code as we've built it has some issues. For one, it gets skewed whenever we resize our window. Another is that our simple projection doesn't handle a wide range of values for the scene data. Most scenes don't work in clip space. It would be helpful to define what distance is relevant to the scene so that precision isn't lost in converting the numbers. Finally it's very helpful to have a fine-tuned control over what points get placed inside and outside of clip space. In the previous examples the corners of the cube occasionally get clipped.</p>
 
-<p>The <strong>perspective projection matrix</strong> is a type of projection matrix that accomplishes all of these requirements. The math also starts to get a bit more involved and won't be fully explained in these examples. In short, it combines dividing by w (as done with the previous examples) with some ingenious manipulations based on <a href="https://en.wikipedia.org/wiki/Similarity_%28geometry%29">similar triangles</a>. If you want to read a full explanation of the math behind it check out some of the following links:</p>
+<p>The <strong>perspective projection matrix</strong> is a type of projection matrix that accomplishes all of these requirements. The math also starts to get a bit more involved and won't be fully explained in these examples. In short, it combines dividing by w (as done with the previous examples) with some ingenious manipulations based on <a href="https://en.wikipedia.org/wiki/Similarity_%28geometry%29">similar triangles</a>. If you want to read a full explanation of the math behind it check out some of the following links:</p>
 
 <ul>
  <li><a href="http://www.songho.ca/opengl/gl_projectionmatrix.html">OpenGL Projection Matrix</a></li>
@@ -539,9 +539,9 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>One important thing to note about the perspective projection matrix used below is that it flips the z axis. In clip space the z+ goes away from the viewer, while with this matrix it comes towards the viewer.</p>
 
-<p>The reason to flip the z axis is that the clip space coordinate system is a left-handed coordinate system (wherein the z-axis points away from the viewer and into the screen), while the convention in mathematics, physics and 3D modeling, as well as for the view/eye coordinate system in OpenGL, is to use a right-handed coordinate system (z-axis points out of the screen towards the viewer) . More on that in the relevant Wikipedia articles: <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness">Cartesian coordinate system</a>, <a href="https://en.wikipedia.org/wiki/Right-hand_rule">Right-hand rule</a>.</p>
+<p>The reason to flip the z axis is that the clip space coordinate system is a left-handed coordinate system (wherein the z-axis points away from the viewer and into the screen), while the convention in mathematics, physics and 3D modeling, as well as for the view/eye coordinate system in OpenGL, is to use a right-handed coordinate system (z-axis points out of the screen towards the viewer) . More on that in the relevant Wikipedia articles: <a href="https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Orientation_and_handedness">Cartesian coordinate system</a>, <a href="https://en.wikipedia.org/wiki/Right-hand_rule">Right-hand rule</a>.</p>
 
-<p>Let's take a look at a <code>perspectiveMatrix()</code> function, which computes the perspective projection matrix.</p>
+<p>Let's take a look at a <code>perspectiveMatrix()</code> function, which computes the perspective projection matrix.</p>
 
 <pre class="brush:js notranslate">MDN.perspectiveMatrix = function(fieldOfViewInRadians, aspectRatio, near, far) {
   var f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
@@ -562,11 +562,11 @@ gl_Position = projection * model * vec4(position, 1.0);
  <dt><code>fieldOfviewInRadians</code></dt>
  <dd>An angle, given in radians, indicating how much of the scene is visible to the viewer at once. The larger the number is, the more is visible by the camera. The geometry at the edges becomes more and more distorted, equivalent to a wide angle lens. When the field of view is larger, the objects typically get smaller. When the field of view is smaller, then the camera can see less and less in the scene. The objects are distorted much less by perspective and objects seem much closer to the camera</dd>
  <dt><code>aspectRatio</code></dt>
- <dd>The scene's aspect ratio, which is equivalent to its width divided by its height. In these examples, that's the window's width divided by the window height. The introduction of this parameter finally solves the problem wherein the model gets warped as the canvas is resized and reshaped.</dd>
+ <dd>The scene's aspect ratio, which is equivalent to its width divided by its height. In these examples, that's the window's width divided by the window height. The introduction of this parameter finally solves the problem wherein the model gets warped as the canvas is resized and reshaped.</dd>
  <dt><code>nearClippingPlaneDistance</code></dt>
  <dd>A positive number indicating the distance into the screen to a plane which is perpendicular to the floor, nearer than which everything gets clipped away. This is mapped to -1 in clip space, and should not be set to 0.</dd>
  <dt><code>farClippingPlaneDistance</code></dt>
- <dd>A positive number indicating the distance to the plane beyond which geometry is clipped away. This is mapped to 1 in clip space. This value should be kept reasonably close to the distance of the geometry in order to avoid precision errors creeping in while rendering.</dd>
+ <dd>A positive number indicating the distance to the plane beyond which geometry is clipped away. This is mapped to 1 in clip space. This value should be kept reasonably close to the distance of the geometry in order to avoid precision errors creeping in while rendering.</dd>
 </dl>
 
 <p>In the latest version of the box demo, the <code>computeSimpleProjectionMatrix()</code> method has been replaced with the <code>computePerspectiveMatrix()</code> method.</p>
@@ -591,7 +591,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 <pre class="brush: js notranslate">gl_Position = projection * model * vec4(position, 1.0);
 </pre>
 
-<p>Additionally (not shown), the position and scale matrices of the model have been changed to take it out of clip space and into the larger coordinate system.</p>
+<p>Additionally (not shown), the position and scale matrices of the model have been changed to take it out of clip space and into the larger coordinate system.</p>
 
 <h3 id="The_results_5">The results</h3>
 
@@ -624,7 +624,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <p>The final step in all of this is to create the <strong>view matrix</strong>, which transforms the objects in the scene so they're positioned to simulate the camera's current location and orientation. Our code as it stands can move the cube around in world space and project everything to have perspective, but we still can't move the camera.</p>
 
-<p>Imagine shooting a movie with a physical camera. You have the freedom to place the camera essentially anywhere you wish, and to aim the camera in whichever direction you choose. To simulate this in 3D graphics, we use a view matrix to simulate the position and rotation of that physical camera.</p>
+<p>Imagine shooting a movie with a physical camera. You have the freedom to place the camera essentially anywhere you wish, and to aim the camera in whichever direction you choose. To simulate this in 3D graphics, we use a view matrix to simulate the position and rotation of that physical camera.</p>
 
 <p>Unlike the model matrix, which directly transforms the model vertices, the view matrix moves an abstract camera around. In reality, the vertex shader is still only moving the models while the "camera" stays in place. In order for this to work out correctly, the inverse of the transform matrix must be used. The inverse matrix essentially reverses a transformation, so if we move the camera view forward, the inverse matrix causes the objects in the scene to move back.</p>
 
@@ -664,11 +664,11 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 <h3 id="Relating_the_coordinate_systems">Relating the coordinate systems</h3>
 
-<p>At this point it would be beneficial to take a step back and look at and label the various coordinate systems we use. First off, the cube's vertices are defined in <strong>model space</strong>. To move the model around the scene. these vertices need to be converted into <strong>world space</strong> by applying the model matrix.</p>
+<p>At this point it would be beneficial to take a step back and look at and label the various coordinate systems we use. First off, the cube's vertices are defined in <strong>model space</strong>. To move the model around the scene. these vertices need to be converted into <strong>world space</strong> by applying the model matrix.</p>
 
 <p>model space → model matrix → world space</p>
 
-<p>The camera hasn't done anything yet, and the points need to be moved again. Currently they are in world space, but they need to be moved to <strong>view space</strong> (using the view matrix) in order to represent the camera placement.</p>
+<p>The camera hasn't done anything yet, and the points need to be moved again. Currently they are in world space, but they need to be moved to <strong>view space</strong> (using the view matrix) in order to represent the camera placement.</p>
 
 <p>world space → view matrix → view space</p>
 

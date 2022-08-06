@@ -13,4 +13,4 @@ Dans les langages de programmation tels que JavaScript, un wrapper est une fonct
 
 ### Culture générale
 
-{{Interwiki("wikipedia","fonction_wrapper")}} sur Wikipedia
+- [Fonction <i lang="en">wrapper</i>](https://fr.wikipedia.org/wiki/Fonction_wrapper) sur Wikipédia

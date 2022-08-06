@@ -19,4 +19,4 @@ original_slug: Glossary/类型转换
 
 - 维基百科相关内容
 
-  - {{Interwiki("wikipedia", "Type conversion")}}
+  - [Type conversion](https://zh.wikipedia.org/wiki/Type_conversion)

@@ -15,7 +15,7 @@ translation_of: Glossary/MVC
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Model–view–controller")}} on Wikipedia
+- [Model–view–controller](https://zh.wikipedia.org/wiki/Model–view–controller) on Wikipedia
 
 ### Learning MVC
 

@@ -1493,15 +1493,6 @@
       "Sheppy"
     ]
   },
-  "MDN/About": {
-    "modified": "2019-09-10T08:51:50.833Z",
-    "contributors": [
-      "SphinxKnight",
-      "Streamities",
-      "wbamberg",
-      "rs-github"
-    ]
-  },
   "MDN/At_ten": {
     "modified": "2019-03-23T22:49:50.216Z",
     "contributors": [
@@ -1518,16 +1509,7 @@
       "Sebastianz"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2019-03-23T23:20:05.396Z",
-    "contributors": [
-      "wbamberg",
-      "matze",
-      "sbarthel",
-      "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Feedback": {
+  "MDN/Community": {
     "modified": "2020-11-28T23:34:47.349Z",
     "contributors": [
       "chrisdavidmills",
@@ -1538,7 +1520,7 @@
       "Sebastianz"
     ]
   },
-  "MDN/Contribute/Getting_started": {
+  "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-09-30T17:09:44.157Z",
     "contributors": [
       "chrisdavidmills",
@@ -1548,42 +1530,21 @@
       "sbarthel"
     ]
   },
+  "MDN/Contribute": {
+    "modified": "2019-03-23T23:20:05.396Z",
+    "contributors": [
+      "wbamberg",
+      "matze",
+      "sbarthel",
+      "Sheppy"
+    ]
+  },
   "MDN/Contribute/Howto": {
     "modified": "2019-03-23T23:17:41.242Z",
     "contributors": [
       "wbamberg",
       "sbarthel",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
-    "modified": "2019-01-16T23:07:11.407Z",
-    "contributors": [
-      "wbamberg",
-      "lmoench",
-      "Tutz"
-    ]
-  },
-  "MDN/Contribute/Howto/Tag": {
-    "modified": "2019-07-04T23:25:18.289Z",
-    "contributors": [
-      "PercyGitarrist",
-      "wbamberg",
-      "Sixl-Daniel",
-      "vssn",
-      "hictox",
-      "ichlebelangeweb.de",
-      "drillmeister",
-      "clone"
-    ]
-  },
-  "MDN/Structures": {
-    "modified": "2020-09-30T09:04:48.225Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "SphinxKnight",
-      "hartmann2012"
     ]
   },
   "MDN/Tools": {
@@ -1599,6 +1560,45 @@
     "contributors": [
       "wbamberg",
       "rolandm"
+    ]
+  },
+  "MDN/Writing_guidelines": {
+    "modified": "2019-09-10T08:51:50.833Z",
+    "contributors": [
+      "SphinxKnight",
+      "Streamities",
+      "wbamberg",
+      "rs-github"
+    ]
+  },
+  "MDN/Writing_guidelines/Howto/Tag": {
+    "modified": "2019-07-04T23:25:18.289Z",
+    "contributors": [
+      "PercyGitarrist",
+      "wbamberg",
+      "Sixl-Daniel",
+      "vssn",
+      "hictox",
+      "ichlebelangeweb.de",
+      "drillmeister",
+      "clone"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures": {
+    "modified": "2020-09-30T09:04:48.225Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "SphinxKnight",
+      "hartmann2012"
+    ]
+  },
+  "MDN/Writing_guidelines/Page_structures/Live_samples": {
+    "modified": "2019-01-16T23:07:11.407Z",
+    "contributors": [
+      "wbamberg",
+      "lmoench",
+      "Tutz"
     ]
   },
   "MDN/Yari": {

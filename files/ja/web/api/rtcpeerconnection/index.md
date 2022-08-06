@@ -140,7 +140,7 @@ _{{DOMxRef("EventTarget")}} から継承したメソッドもあります。_
   - : 音声または映像のローカルソースとして {{DOMxRef("MediaStream")}} を追加します。
     この古いメソッドを使用する代わりに、リモートピアに送信したいトラックごとに {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}} を 1 回使用する必要があります。
 - {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{deprecated_inline}}
-  - : 特定の {{DOMxRef("MediaStreamTrack")}} と関連付けられた新たな {{DOMxRef("RTCDTMFSender")}} を生成します。これにより、その接続において {{Glossary("DTMF")}} 音（電話のトーン信号、プッシュ音）を送れるようになります。
+  - : 特定の {{DOMxRef("MediaStreamTrack")}} と関連付けられた新たな {{DOMxRef("RTCDTMFSender")}} を生成します。これにより、その接続において {{Glossary("DTMF")}} 音（電話のトーン信号、プッシュ音）を送れるようになります。
 - {{DOMxRef("RTCPeerConnection.getStreamById", "getStreamById()")}} {{deprecated_inline}}
   - : 接続のローカルまたはリモート側に関連する、指定された ID の {{DOMxRef("MediaStream")}} を返します。
     このプロパティは {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}} と {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}} メソッドに置き換えられました。

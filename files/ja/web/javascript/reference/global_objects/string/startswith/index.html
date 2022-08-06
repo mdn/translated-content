@@ -56,12 +56,12 @@ console.log(str.startsWith('not to be', 10))  // true
 <p>このメソッドは ECMAScript 2015 で追加されました。すべてのJavaScriptの実装でまだ利用可能ではないかもしれません。しかしながら、次のコードで<code>String.prototype.startsWith()</code>をエミュレートできます。</p>
 
 <pre class="brush: js notranslate">if (!String.prototype.startsWith) {
-    Object.defineProperty(String.prototype, 'startsWith', {
-        value: function(search, rawPos) {
-            var pos = rawPos &gt; 0 ? rawPos|0 : 0;
-            return this.substring(pos, pos + search.length) === search;
-        }
-    });
+    Object.defineProperty(String.prototype, 'startsWith', {
+        value: function(search, rawPos) {
+            var pos = rawPos &gt; 0 ? rawPos|0 : 0;
+            return this.substring(pos, pos + search.length) === search;
+        }
+    });
 }
 </pre>
 

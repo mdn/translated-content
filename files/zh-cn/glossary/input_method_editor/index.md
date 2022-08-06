@@ -17,7 +17,7 @@ translation_of: Glossary/Input_method_editor
 
 - 维基百科文章
 
-  - {{Interwiki("wikipedia", "Input method")}}
+  - [Input method](https://zh.wikipedia.org/wiki/Input_method)
 
 - [词汇表](/zh-CN/docs/Glossary)
 

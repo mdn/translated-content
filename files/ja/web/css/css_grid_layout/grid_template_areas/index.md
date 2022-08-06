@@ -88,9 +88,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ```html
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -152,9 +152,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ```html
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -218,9 +218,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ```html hidden
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -306,9 +306,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 ```html hidden
 <div class="wrapper">
     <div class="header">Header</div>
-    <div class="sidebar">Sidebar</div>
-    <div class="content">Content</div>
-    <div class="footer">Footer</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
 </div>
 ```
 
@@ -360,8 +360,8 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 <div class="media">
     <div class="image"></div>
     <div class="text">これはメディアオブジェクトの例です。
-      grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
-    </div>
+      grid-template-areas を使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
+    </div>
 </div>
 ```
 
@@ -406,10 +406,10 @@ translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 
 ```html
 <div class="media flipped">
-    <div class="image"></div>
-    <div class="text">これはメディアオブジェクトの例です。
-      grid-template-areasを使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
-    </div>
+    <div class="image"></div>
+    <div class="text">これはメディアオブジェクトの例です。
+      grid-template-areasを使って、メディアオブジェクトの画像部分とテキスト部分を切り替えることができます。
+    </div>
 </div>
 ```
 

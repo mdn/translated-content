@@ -3,14 +3,14 @@ title: grid
 slug: Web/CSS/grid
 translation_of: Web/CSS/grid
 ---
-<p>A propriedade <strong><code>grid</code></strong> do CSS é uma <a href="/en-US/docs/Web/CSS/Shorthand_properties">abreviação</a> das propriedades que definem todas as propriedades da grade explícita ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, e {{cssxref("grid-template-areas")}}), e todas as propriedades implícitas da grade ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, e {{cssxref("grid-auto-flow")}}), em uma única declaração.</p>
+<p>A propriedade <strong><code>grid</code></strong> do CSS é uma <a href="/en-US/docs/Web/CSS/Shorthand_properties">abreviação</a> das propriedades que definem todas as propriedades da grade explícita ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, e {{cssxref("grid-template-areas")}}), e todas as propriedades implícitas da grade ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, e {{cssxref("grid-auto-flow")}}), em uma única declaração.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid.html")}}</div>
 
-<p class="hidden">A fonte deste exemplo interativo é armazenada em um repositório GitHub. Se você quiser contribuir com o projeto de exemplos interativos, clone  <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie-nos um pull request.</p>
+<p class="hidden">A fonte deste exemplo interativo é armazenada em um repositório GitHub. Se você quiser contribuir com o projeto de exemplos interativos, clone  <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e envie-nos um pull request.</p>
 
 <div class="note">
-<p><strong><font><font>Nota:</font></font></strong><font><font> Você pode especificar apenas as propriedades explícitas </font></font><em><font><font>ou</font></font></em><font><font> implícitas da grade em uma única declaração</font></font> <code>grid</code>. <font>As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. </font><font>Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.</font></p>
+<p><strong><font><font>Nota:</font></font></strong><font><font> Você pode especificar apenas as propriedades explícitas </font></font><em><font><font>ou</font></font></em><font><font> implícitas da grade em uma única declaração</font></font> <code>grid</code>. <font>As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. </font><font>Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.</font></p>
 </div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
@@ -48,14 +48,14 @@ grid: unset;
 
 <dl>
  <dt><code>&lt;'grid-template'&gt;</code></dt>
- <dd>Define o {{cssxref("grid-template")}} incluindo {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-areas")}}.</dd>
+ <dd>Define o {{cssxref("grid-template")}} incluindo {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-areas")}}.</dd>
  <dt><code>&lt;'grid-template-rows'&gt; / [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;?</code></dt>
- <dd>Configura um fluxo automático definindo as faixas de linha explicitamente por meio da propriedade {{cssxref("grid-template-rows")}} (e a propriedade {{cssxref("grid-template-columns")}} para <code>none</code>) e especificando como repetir automaticamente as faixas da coluna via {{cssxref("grid-auto-columns")}} (e setando {{cssxref("grid-auto-rows")}} para <code>auto</code>). {{cssxref("grid-auto-flow")}} também é definido para a <code>column</code>, de acordo com <code>dense</code>, se especificado.
+ <dd>Configura um fluxo automático definindo as faixas de linha explicitamente por meio da propriedade {{cssxref("grid-template-rows")}} (e a propriedade {{cssxref("grid-template-columns")}} para <code>none</code>) e especificando como repetir automaticamente as faixas da coluna via {{cssxref("grid-auto-columns")}} (e setando {{cssxref("grid-auto-rows")}} para <code>auto</code>). {{cssxref("grid-auto-flow")}} também é definido para a <code>column</code>, de acordo com <code>dense</code>, se especificado.
  <p>Todas as outras subpropriedades <code>grid</code> são redefinidas para seus valores iniciais.</p>
  </dd>
  <dt><code>[ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-rows'&gt;? / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>Configura um fluxo automático definindo as faixas da coluna explicitamente por meio da propriedade {{cssxref("grid-template-columns")}} (e a propriedade {{cssxref("grid-template-rows")}} para <code>none</code>) e especificando como repetir automaticamente as faixas de linha via {{cssxref("grid-auto-rows")}} (e setando {{cssxref("grid-auto-columns")}} para <code>auto</code>). {{cssxref("grid-auto-flow")}} também é definido para  <code>row</code> de acordo com <code>dense</code>, se especificado.
- <p><font><font>Todas as outras </font></font><font><font>subpropriedades</font></font> <code>grid</code> são redefinidas para seus valores iniciais.</p>
+ <dd>Configura um fluxo automático definindo as faixas da coluna explicitamente por meio da propriedade {{cssxref("grid-template-columns")}} (e a propriedade {{cssxref("grid-template-rows")}} para <code>none</code>) e especificando como repetir automaticamente as faixas de linha via {{cssxref("grid-auto-rows")}} (e setando {{cssxref("grid-auto-columns")}} para <code>auto</code>). {{cssxref("grid-auto-flow")}} também é definido para  <code>row</code> de acordo com <code>dense</code>, se especificado.
+ <p><font><font>Todas as outras </font></font><font><font>subpropriedades</font></font> <code>grid</code> são redefinidas para seus valores iniciais.</p>
  </dd>
 </dl>
 

@@ -52,7 +52,7 @@ result; // "Barry"
 
 ### 常识
 
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} 维基百科
+- [IIFE](https://zh.wikipedia.org/wiki/Immediately-invoked_function_expression) 维基百科
 
 - [相关术语](/zh-CN/docs/Glossary)
 

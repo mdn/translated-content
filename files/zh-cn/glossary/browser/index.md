@@ -10,7 +10,7 @@ original_slug: Glossary/浏览器
 
 ### 基础知识
 
-- 维基百科上的{{Interwiki("wikipedia", "浏览器")}}
+- 维基百科上的[浏览器](https://zh.wikipedia.org/wiki/浏览器)
 - [网络的演变](http://www.evolutionoftheweb.com/?hl=zh-cn)
 
 ### 下载一个浏览器

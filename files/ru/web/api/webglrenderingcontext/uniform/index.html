@@ -5,7 +5,7 @@ translation_of: Web/API/WebGLRenderingContext/uniform
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p><strong><code>WebGLRenderingContext.uniform[1234][fi][v]()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> устанавливает значение для постоянных переменных Uniform.</p>
+<p><strong><code>WebGLRenderingContext.uniform[1234][fi][v]()</code></strong> метод <a href="/en-US/docs/Web/API/WebGL_API">WebGL API</a> устанавливает значение для постоянных переменных Uniform.</p>
 
 <div class="note">
 <p>Многие из описанных в этом разделе функцию имеют расширенные интерфейсы WebGL 2, которые можно найти {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.</p>
@@ -44,19 +44,19 @@ gl.uniform1iv(samplerCubeUniformLoc, [v]); // для samplerCube или масс
 
 <dl>
  <dt>location</dt>
- <dd>{{domxref("WebGLUniformLocation")}} объект содержащий uniform атрибут для его изменения.</dd>
+ <dd>{{domxref("WebGLUniformLocation")}} объект содержащий uniform атрибут для его изменения.</dd>
  <dt><code>value, v0, v1, v2, v3</code></dt>
  <dd>Новое значение для uniform переменной. Допустимые типы:
  <ul>
   <li>Тип float {{jsxref("Number")}} для этого типа (методы с "f").</li>
   <li>Последовательность чисел с плавающей точкой (пример {{jsxref("Float32Array")}} или {{jsxref("Array")}} чисел) для векторных методов с плавающей точкой (методы с "fv").</li>
-  <li>Тип  {{jsxref("Number")}} для этого типа (методы с "i").</li>
-  <li>{{jsxref("Int32Array")}} вектор чисел {{jsxref("Number")}} (методы с "iv").</li>
+  <li>Тип  {{jsxref("Number")}} для этого типа (методы с "i").</li>
+  <li>{{jsxref("Int32Array")}} вектор чисел {{jsxref("Number")}} (методы с "iv").</li>
  </ul>
  </dd>
 </dl>
 
-<h3 id="Возвращаемое_значение"><span style="background-color: #333333; letter-spacing: -0.00278rem;">Возвращаемое значение </span></h3>
+<h3 id="Возвращаемое_значение"><span style="background-color: #333333; letter-spacing: -0.00278rem;">Возвращаемое значение </span></h3>
 
 <p><span style="background-color: #ffffff; color: #333333; font-family: Arial,x-locale-body,sans-serif; font-size: 1rem; letter-spacing: -0.00278rem;">None.</span></p>
 

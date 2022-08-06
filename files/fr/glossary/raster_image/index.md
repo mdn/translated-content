@@ -14,4 +14,4 @@ Les fichiers d'image matricielle contiennent généralement un ensemble de dimen
 ## Voir aussi
 
 - {{glossary("Vector images","Image vectorielle")}}
-- {{Interwiki("wikipedia","Image_matricielle","Image matricielle")}} sur Wikipédia
+- [Image matricielle](https://fr.wikipedia.org/wiki/Image_matricielle) sur Wikipédia

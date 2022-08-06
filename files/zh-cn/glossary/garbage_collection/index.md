@@ -13,8 +13,8 @@ translation_of: Glossary/Garbage_collection
 
 ### 基本知识
 
-- {{interwiki("wikipedia", "Memory management")}} on Wikipedia
-- {{interwiki("wikipedia", "Garbage collection")}} on Wikipedia
+- [Memory management](https://zh.wikipedia.org/wiki/Memory_management) on Wikipedia
+- [Garbage collection](https://zh.wikipedia.org/wiki/Garbage_collection) on Wikipedia
 
 ### 技术参考
 

@@ -29,10 +29,10 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p>Далее показано, как вызвать генератор приложений, и даётся небольшое пояснение различных вариантов представлений и CSS. Мы поясним структуру каркаса веб-сайта. В конце мы покажем, как запустить веб-сайт, чтобы убедиться, что он работает.</p>
 
 <div class="note">
-<p><span style="line-height: 1.5;"><strong>Замечание</strong>: </span><em>Express Application Generator</em> — не единственный генератор Express-приложений, и созданный проект --не единственный жизнеспособный способ организации ваших файлов и каталогов. Однако созданный сайт имеет модульную структуру, которую легко понять и расширить. О <em>минимальном</em> Express приложении смотрите <a href="https://expressjs.com/en/starter/hello-world.html">Hello world example</a> в документации Express.</p>
+<p><span style="line-height: 1.5;"><strong>Замечание</strong>: </span><em>Express Application Generator</em> — не единственный генератор Express-приложений, и созданный проект --не единственный жизнеспособный способ организации ваших файлов и каталогов. Однако созданный сайт имеет модульную структуру, которую легко понять и расширить. О <em>минимальном</em> Express приложении смотрите <a href="https://expressjs.com/en/starter/hello-world.html">Hello world example</a> в документации Express.</p>
 </div>
 
-<h2 id="Применение_генератора_приложений">Применение генератора приложений</h2>
+<h2 id="Применение_генератора_приложений">Применение генератора приложений</h2>
 
 <p>Вы уже должны были установить <code>express-generator</code>, читая статью <a>установка среды разработки Node</a>. Напомним, что генератор установлен с помощью менеджера пакетов NPM, при выполнении команды:</p>
 
@@ -43,25 +43,25 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <pre class="brush: bash">&gt; express --help
 
-  Usage: express [options] [dir]
+  Usage: express [options] [dir]
 
-  Options:
+  Options:
 
-    -h, --help           output usage information (информация по применению)
-        --version        output the version number (номер версии express)
-    -e, --ejs            add ejs engine support (добавить поддержку движка ejs)
-        --pug            add pug engine support (добавить поддержку движка pug)
-        --hbs            add handlebars engine support (добавить поддержку движка handlebar)
-    -H, --hogan          add hogan.js engine support (добавить поддержку движка hogan.js)
-    -v, --view &lt;engine&gt;  add view &lt;engine&gt; support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+    -h, --help           output usage information (информация по применению)
+        --version        output the version number (номер версии express)
+    -e, --ejs            add ejs engine support (добавить поддержку движка ejs)
+        --pug            add pug engine support (добавить поддержку движка pug)
+        --hbs            add handlebars engine support (добавить поддержку движка handlebar)
+    -H, --hogan          add hogan.js engine support (добавить поддержку движка hogan.js)
+    -v, --view &lt;engine&gt;  add view &lt;engine&gt; support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
                          (добавить поддержку движков представлений. По умолчанию - jade)
-    -c, --css &lt;engine&gt;   add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain css)
-                         (добавить поддержку движков стилей, по умолчанию - простой CSS)
-        --git            add .gitignore (добавить поддержку .gitignore)
-    -f, --force          force on non-empty directory (работать в каталоге с файлами)
+    -c, --css &lt;engine&gt;   add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain css)
+                         (добавить поддержку движков стилей, по умолчанию - простой CSS)
+        --git            add .gitignore (добавить поддержку .gitignore)
+    -f, --force          force on non-empty directory (работать в каталоге с файлами)
 </pre>
 
-<p>Команда <code>express</code> создаст проект в <em>текущем</em> каталоге с использованием (устаревшего) движка представления <em>Jade</em> и обычного CSS. Если указать <font face="Courier New, monospace">express </font><font face="Courier New, monospace">name</font>, проект будет создан в подкаталоге name текущего каталога. </p>
+<p>Команда <code>express</code> создаст проект в <em>текущем</em> каталоге с использованием (устаревшего) движка представления <em>Jade</em> и обычного CSS. Если указать <font face="Courier New, monospace">express </font><font face="Courier New, monospace">name</font>, проект будет создан в подкаталоге name текущего каталога. </p>
 
 <pre class="brush: bash"><code>express</code></pre>
 
@@ -71,55 +71,55 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <p><strong>Примечание:</strong> Другие опции (<code>--hogan</code>, <code>--ejs</code>, <code>--hbs</code> и пр.) для выбора шаблонизатора устарели. Используйте <code>--view</code> (или<code> -v</code>)!</p>
 </div>
 
-<h3 id="Какой_движок_представлений_следует_использовать">Какой движок представлений следует использовать?</h3>
+<h3 id="Какой_движок_представлений_следует_использовать">Какой движок представлений следует использовать?</h3>
 
-<p><em>Express-generator</em><em> </em>даёт возможность сконфигурировать несколько популярных движков, включая <a href="https://www.npmjs.com/package/ejs">EJS</a>, <a href="http://github.com/donpark/hbs">Hbs</a>, <a href="https://pugjs.org/api/getting-started.html">Pug</a> (Jade), <a href="https://www.npmjs.com/package/twig">Twig</a>, и <a href="https://www.npmjs.com/package/vash">Vash</a>, но по умолчанию  выбран Jade. Экспресс сразу после установки может поддерживать большое количество и других шаблонизаторов.</p>
+<p><em>Express-generator</em><em> </em>даёт возможность сконфигурировать несколько популярных движков, включая <a href="https://www.npmjs.com/package/ejs">EJS</a>, <a href="http://github.com/donpark/hbs">Hbs</a>, <a href="https://pugjs.org/api/getting-started.html">Pug</a> (Jade), <a href="https://www.npmjs.com/package/twig">Twig</a>, и <a href="https://www.npmjs.com/package/vash">Vash</a>, но по умолчанию  выбран Jade. Экспресс сразу после установки может поддерживать большое количество и других шаблонизаторов.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> При желании использовать шаблонизатор, который не поддерживается генератором,  просмотрите  документацию <a href="https://expressjs.com/en/guide/using-template-engines.html"><font color="#3d7e9a"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><font size="3">Using template engines with Express</font></font></font></a><font color="#333333"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><font size="3"> </font></font></font> и документацию для нужного шаблонизатора.</p>
+<p><strong>Примечание:</strong> При желании использовать шаблонизатор, который не поддерживается генератором,  просмотрите  документацию <a href="https://expressjs.com/en/guide/using-template-engines.html"><font color="#3d7e9a"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><font size="3">Using template engines with Express</font></font></font></a><font color="#333333"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><font size="3"> </font></font></font> и документацию для нужного шаблонизатора.</p>
 </div>
 
 <p>Как правило, следует выбрать шаблонизатор, который имеет всю необходимую вам функциональность и обеспечивает вам высокую производительность - так же, как вы выбираете любой другой компонент! Некоторые критерии для сравнения шаблонизаторов:</p>
 
 <ul>
- <li>Время до  получения результата — если ваша команда уже имела дело с шаблонизатором, то, скорее всего, продуктивнее будет использовать этот шаблонизатор. Если нет, тогда следует учесть  все относительные сложности изучения кандидатов в шаблонизаторы.</li>
- <li>Популярность и активность — проверьте популярность движка, возможно, у него есть активное сообщество. Очень важно иметь поддержку для движка, если у вас возникнут проблемы в течении жизни веб-сайта.</li>
- <li>Стиль — некоторые шаблонизаторы используют особую разметку для отображения вставленного контента внутри "обычного" HTML, а другие строят  HTML, используя специальный синтаксис (например, используя отступы или блочные имена).</li>
+ <li>Время до  получения результата — если ваша команда уже имела дело с шаблонизатором, то, скорее всего, продуктивнее будет использовать этот шаблонизатор. Если нет, тогда следует учесть  все относительные сложности изучения кандидатов в шаблонизаторы.</li>
+ <li>Популярность и активность — проверьте популярность движка, возможно, у него есть активное сообщество. Очень важно иметь поддержку для движка, если у вас возникнут проблемы в течении жизни веб-сайта.</li>
+ <li>Стиль — некоторые шаблонизаторы используют особую разметку для отображения вставленного контента внутри "обычного" HTML, а другие строят  HTML, используя специальный синтаксис (например, используя отступы или блочные имена).</li>
  <li>Производительность и время интерпретации.</li>
- <li>Особенности — следует выбирать движок  с учётом таких особенностей:
+ <li>Особенности — следует выбирать движок  с учётом таких особенностей:
   <ul>
-   <li>Наследование макета: позволяет определить базовый шаблон и затем наследовать только те части, которые отличаются для конкретной страницы. Это, как правило, лучший подход, чем создание шаблонов путём включения нескольких необходимых компонентов или создания шаблона с нуля каждый раз.</li>
+   <li>Наследование макета: позволяет определить базовый шаблон и затем наследовать только те части, которые отличаются для конкретной страницы. Это, как правило, лучший подход, чем создание шаблонов путём включения нескольких необходимых компонентов или создания шаблона с нуля каждый раз.</li>
    <li>Поддержка «Include»: позволяет создавать шаблоны, включая другие шаблоны.</li>
-   <li>Краткий синтаксис управления переменными и циклами.</li>
+   <li>Краткий синтаксис управления переменными и циклами.</li>
    <li>Возможность фильтровать значения переменных на уровне шаблона (например, делать переменные в верхнем регистре или форматировать значение даты).</li>
    <li>Возможность создавать выходные форматы, отличные от HTML (например, JSON или XML).</li>
    <li>Поддержка асинхронных операций и потоковой передачи.</li>
-   <li> Возможность использования как на клиенте, так и на сервере. Возможность применения движка шаблона на клиенте позволяет обслуживать данные и выполнять все действия или их большую часть на стороне клиента.</li>
+   <li> Возможность использования как на клиенте, так и на сервере. Возможность применения движка шаблона на клиенте позволяет обслуживать данные и выполнять все действия или их большую часть на стороне клиента.</li>
   </ul>
  </li>
 </ul>
 
 <div class="note">
-<p><strong>Совет:</strong> В интернете множество ресурсов, которые помогут сравнить различные варианты!</p>
+<p><strong>Совет:</strong> В интернете множество ресурсов, которые помогут сравнить различные варианты!</p>
 </div>
 
-<p>Для этого проекта мы  используем шаблонизатор <a href="https://pugjs.org/api/getting-started.html">Pug</a> (в прошлом назывался Jade) -- один из популярнейших Express/JavaScript шаблонизаторов, который поддерживается в Express-generator "из коробки".</p>
+<p>Для этого проекта мы  используем шаблонизатор <a href="https://pugjs.org/api/getting-started.html">Pug</a> (в прошлом назывался Jade) -- один из популярнейших Express/JavaScript шаблонизаторов, который поддерживается в Express-generator "из коробки".</p>
 
 <h3 id="Какие_шаблонизаторы_CSS_следует_использовать">Какие шаблонизаторы CSS следует использовать?</h3>
 
-<p><em>Express Application Generator</em> позволяет создавать проекты, настроенные для применения шаблонизаторов CSS: <a href="http://lesscss.org/">LESS</a>, <a href="http://sass-lang.com/">SASS</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://stylus-lang.com/">Stylus</a>.</p>
+<p><em>Express Application Generator</em> позволяет создавать проекты, настроенные для применения шаблонизаторов CSS: <a href="http://lesscss.org/">LESS</a>, <a href="http://sass-lang.com/">SASS</a>, <a href="http://compass-style.org/">Compass</a>, <a href="http://stylus-lang.com/">Stylus</a>.</p>
 
 <div class="note">
-<p><strong>Примечание: </strong>простой<strong> </strong>CSS имеет некоторые ограничения, затрудняющие выполнение задач. Шаблонизаторы CSS позволяют использовать более эффективный подход для создании таблиц стилей CSS, но требуют компиляции файлов таблиц стилей в стандартный CSS для применения в браузере.</p>
+<p><strong>Примечание: </strong>простой<strong> </strong>CSS имеет некоторые ограничения, затрудняющие выполнение задач. Шаблонизаторы CSS позволяют использовать более эффективный подход для создании таблиц стилей CSS, но требуют компиляции файлов таблиц стилей в стандартный CSS для применения в браузере.</p>
 </div>
 
-<p>Как и в случае с шаблонизаторами сайта, следует применять шаблонизатор, обеспечивающий высокую производительность работы. В этом проекте мы используем обычный CSS (по умолчанию), поскольку простота наших требований к CSS не оправдает применение чего-то более сложного.</p>
+<p>Как и в случае с шаблонизаторами сайта, следует применять шаблонизатор, обеспечивающий высокую производительность работы. В этом проекте мы используем обычный CSS (по умолчанию), поскольку простота наших требований к CSS не оправдает применение чего-то более сложного.</p>
 
 <h3 id="Какую_базу_данных_следует_использовать">Какую базу данных следует использовать?</h3>
 
-<p>Сгенерированный код не использует и не содержит в себе какой-либо базы данных. <em>Express</em> может использовать любой движок <a href="https://expressjs.com/en/guide/database-integration.html">базы данных</a>, который поддерживается <em>Node</em> (<em>Express</em> не предъявляет каких-либо особых требований к базе данных).</p>
+<p>Сгенерированный код не использует и не содержит в себе какой-либо базы данных. <em>Express</em> может использовать любой движок <a href="https://expressjs.com/en/guide/database-integration.html">базы данных</a>, который поддерживается <em>Node</em> (<em>Express</em> не предъявляет каких-либо особых требований к базе данных).</p>
 
-<p>Мы обсудим взаимодействие с базой данных в следующей статье.</p>
+<p>Мы обсудим взаимодействие с базой данных в следующей статье.</p>
 
 <h2 id="Создание_проекта">Создание проекта</h2>
 
@@ -156,42 +156,42 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
    run the app:
      &gt; SET DEBUG=express-locallibrary-tutorial:* &amp; npm start</pre>
 
-<p>После списка файлов генератор выведет инструкции для установки зависимостей (указанных в файле <strong>package.json</strong>) и запуска приложения (инструкции предназначены для Windows; для Linux/Mac OS X они могут слегка отличаться).</p>
+<p>После списка файлов генератор выведет инструкции для установки зависимостей (указанных в файле <strong>package.json</strong>) и запуска приложения (инструкции предназначены для Windows; для Linux/Mac OS X они могут слегка отличаться).</p>
 
-<h2 id="Запускаем_каркас_сайта">Запускаем каркас сайта</h2>
+<h2 id="Запускаем_каркас_сайта">Запускаем каркас сайта</h2>
 
 
 
-<p>Сейчас у нас есть готовый каркас проекта. Сайт пока ничего не делает, но его стоит запустить, чтобы убедиться в его работоспособности.</p>
+<p>Сейчас у нас есть готовый каркас проекта. Сайт пока ничего не делает, но его стоит запустить, чтобы убедиться в его работоспособности.</p>
 
 
 
 <ol>
- <li>Прежде всего установим зависимости (команда <code>install</code> запросит все пакеты зависимостей, указанные в файле<strong> package.json</strong>).
+ <li>Прежде всего установим зависимости (команда <code>install</code> запросит все пакеты зависимостей, указанные в файле<strong> package.json</strong>).
 
   <pre class="brush: bash">cd express-locallibrary-tutorial
 npm install</pre>
  </li>
- <li>Затем запустим приложение.
+ <li>Затем запустим приложение.
   <ul>
    <li>В Windows используйте команду:
     <pre class="brush: bash">SET DEBUG=express-locallibrary-tutorial:* &amp; npm start</pre>
    </li>
-   <li>В Mac OS X или Linux используйте команду:
+   <li>В Mac OS X или Linux используйте команду:
     <pre class="brush: bash">DEBUG=express-locallibrary-tutorial:* npm start
 </pre>
    </li>
   </ul>
  </li>
- <li>Откроем <a href="http://localhost:3000/">http://localhost:3000/</a> в браузере. Мы должны увидеть такую страницу:</li>
+ <li>Откроем <a href="http://localhost:3000/">http://localhost:3000/</a> в браузере. Мы должны увидеть такую страницу:</li>
 </ol>
 
 <p><img alt="Browser for default Express app generator website" src="https://mdn.mozillademos.org/files/14375/ExpressGeneratorSkeletonWebsite.png" style="display: block; height: 403px; margin: 0px auto; width: 576px;"></p>
 
-<p>У нас получилось веб-приложение на базе Express, работающее по адресу <em>localhost:3000</em>.</p>
+<p>У нас получилось веб-приложение на базе Express, работающее по адресу <em>localhost:3000</em>.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> Можно также запустить приложение командой <code>npm start</code>. Переменная DEBUG, указанная в примере, включает логирование в консоль для дальнейшей отладки. Так, при посещении страницы веб-приложения, вы увидите похожий вывод в консоль:</p>
+<p><strong>Примечание:</strong> Можно также запустить приложение командой <code>npm start</code>. Переменная DEBUG, указанная в примере, включает логирование в консоль для дальнейшей отладки. Так, при посещении страницы веб-приложения, вы увидите похожий вывод в консоль:</p>
 
 <pre class="brush: bash">&gt;SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
 
@@ -207,10 +207,10 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 <h2 id="Обеспечиваем_перезапуск_сервера_при_изменении_файлов">Обеспечиваем<br>
  перезапуск сервера при изменении файлов</h2>
 
-<p>Любые изменения, внесённые на веб-сайт Express, не будут отображаться до перезапуска сервера. Остановка (Ctrl-C) и перезапуск сервера каждый раз после внесения изменений быстро становится раздражающей, поэтому стоит автоматизировать перезапуск.</p>
+<p>Любые изменения, внесённые на веб-сайт Express, не будут отображаться до перезапуска сервера. Остановка (Ctrl-C) и перезапуск сервера каждый раз после внесения изменений быстро становится раздражающей, поэтому стоит автоматизировать перезапуск.</p>
 
-<p>Одно из самых простых средств для этого --<br>
- <a href="https://github.com/remy/nodemon">nodemon</a>. Его обычно устанавливают глобально (так как это "инструмент"), но  сейчас мы установим его и будем применять локально как зависимость разработки, так что любые разработчики проекта получат его автоматически при установке приложения. Выполним следующую команду (предполагаем, что мы находимся в корневом каталоге):</p>
+<p>Одно из самых простых средств для этого --<br>
+ <a href="https://github.com/remy/nodemon">nodemon</a>. Его обычно устанавливают глобально (так как это "инструмент"), но  сейчас мы установим его и будем применять локально как зависимость разработки, так что любые разработчики проекта получат его автоматически при установке приложения. Выполним следующую команду (предполагаем, что мы находимся в корневом каталоге):</p>
 
 <pre class="brush: bash">npm install --save-dev nodemon</pre>
 
@@ -224,14 +224,14 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 
 
-<p>В файле <strong>package.json </strong>проекта появится  новый раздел с этой зависимостью (на вашей машине номер версии nodemon может быть другим) :</p>
+<p>В файле <strong>package.json </strong>проекта появится  новый раздел с этой зависимостью (на вашей машине номер версии nodemon может быть другим) :</p>
 
 <pre class="brush: json">  "devDependencies": {
     "nodemon": "^1.11.0"
   }
 </pre>
 
-<p>Поскольку nodemon не установлен глобально, его нельзя запустить из командной строки (пока мы не добавим его в путь), но его можно вызвать из сценария NPM, так как NPM знает все об установленных пакетах.  Раздел  <code>scripts</code> в файле package.json исходно будет содержать одну строку, которая начинается с  <code>"start"</code>. Обновите его, поставив запятую в конце строки, и добавьте строку <code>"devstart",</code>  показанную ниже:</p>
+<p>Поскольку nodemon не установлен глобально, его нельзя запустить из командной строки (пока мы не добавим его в путь), но его можно вызвать из сценария NPM, так как NPM знает все об установленных пакетах.  Раздел  <code>scripts</code> в файле package.json исходно будет содержать одну строку, которая начинается с  <code>"start"</code>. Обновите его, поставив запятую в конце строки, и добавьте строку <code>"devstart",</code>  показанную ниже:</p>
 
 <pre class="brush: json">  "scripts": {
     "start": "node ./bin/www"<strong>,</strong>
@@ -239,24 +239,24 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
   },
 </pre>
 
-<p>Теперь можно запустить сервер почти так же, как и ранее, но командой npm run devstart:</p>
+<p>Теперь можно запустить сервер почти так же, как и ранее, но командой npm run devstart:</p>
 
 <ul>
- <li>В Windows:</li>
+ <li>В Windows:</li>
 </ul>
 
 <pre class="brush: bash">SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong></pre>
 
 <ul>
- <li>Для macOS или Linux:</li>
+ <li>Для macOS или Linux:</li>
 </ul>
 
 <pre><code>DEBUG=express-locallibrary-tutorial:* npm <strong>run devstart</strong></code></pre>
 
 <div class="note">
-<p><strong>Примечание:</strong> Сейчас после изменения любого файла проекта сервер будет перезапускаться (или можно самостоятельно перезапустить его, введя <code>rs</code> в командной строке). Вам всё равно придётся обновить страницу в браузере .</p>
+<p><strong>Примечание:</strong> Сейчас после изменения любого файла проекта сервер будет перезапускаться (или можно самостоятельно перезапустить его, введя <code>rs</code> в командной строке). Вам всё равно придётся обновить страницу в браузере .</p>
 
-<p>Теперь мы должны выполнять команду "<code>npm run </code><em>&lt;scriptname&gt;</em>" а не просто  <code>npm start</code>, поскольку "start", это, по сути, команда NPM, сопоставленная сценарию в файле package.json. Можно заменить команду в сценарии "start", но, так как мы хотим использовать nodemon только во время разработки, разумно создать новую команду сценария.</p>
+<p>Теперь мы должны выполнять команду "<code>npm run </code><em>&lt;scriptname&gt;</em>" а не просто  <code>npm start</code>, поскольку "start", это, по сути, команда NPM, сопоставленная сценарию в файле package.json. Можно заменить команду в сценарии "start", но, так как мы хотим использовать nodemon только во время разработки, разумно создать новую команду сценария.</p>
 </div>
 
 <h2 id="Созданный_проект">Созданный проект</h2>
@@ -265,27 +265,27 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <h3 id="Структура_каталогов">Структура каталогов</h3>
 
-<p>После установки зависимостей проект имеет такую структуру файлов (файлы - это элементы <strong>без </strong>префикса"/"). Файл <strong>package.json</strong> определяет имя файла с приложением, сценарии запуска, зависимости и др.  Сценарий запуска задаёт точку входа приложения, у нас -- файл JavaScript <strong>/bin/www</strong>. Этот файл настраивает некоторые обработчики ошибок приложения, а затем загружает  <strong>app.js </strong>для выполнения остальной работы. Пути приложения хранятся в отдельных модулях каталога <strong>routes/</strong>.  Шаблоны хранятся в каталоге /<strong>views</strong>.</p>
+<p>После установки зависимостей проект имеет такую структуру файлов (файлы - это элементы <strong>без </strong>префикса"/"). Файл <strong>package.json</strong> определяет имя файла с приложением, сценарии запуска, зависимости и др.  Сценарий запуска задаёт точку входа приложения, у нас -- файл JavaScript <strong>/bin/www</strong>. Этот файл настраивает некоторые обработчики ошибок приложения, а затем загружает  <strong>app.js </strong>для выполнения остальной работы. Пути приложения хранятся в отдельных модулях каталога <strong>routes/</strong>.  Шаблоны хранятся в каталоге /<strong>views</strong>.</p>
 
 <pre>/express-locallibrary-tutorial
     <strong>app.js</strong>
     /bin
-        <strong>www</strong>
+        <strong>www</strong>
     <strong>package.json</strong>
     /node_modules
-        [about 4,500 subdirectories and files]
+        [about 4,500 subdirectories and files]
     /public
-        /images
-        /javascripts
-        /stylesheets
-            <strong>style.css</strong>
+        /images
+        /javascripts
+        /stylesheets
+            <strong>style.css</strong>
     /routes
         <strong>index.js</strong>
-        <strong>users.js</strong>
+        <strong>users.js</strong>
     /views
-        <strong>error.pug</strong>
+        <strong>error.pug</strong>
         <strong>index.pug</strong>
-        <strong>layout.pug</strong>
+        <strong>layout.pug</strong>
 
 </pre>
 
@@ -293,7 +293,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <h3 id="package.json">package.json</h3>
 
-<p>Файл <strong>package.json </strong>указывает зависимости приложения и содержит другие данные:</p>
+<p>Файл <strong>package.json </strong>указывает зависимости приложения и содержит другие данные:</p>
 
 <pre class="brush: json">{
   "name": "express-locallibrary-tutorial",
@@ -317,17 +317,17 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
   }
 }</pre>
 
-<p>Зависимости включают пакет express и пакет для выбранного движка представления (pug). Кроме того, указаны пакеты, полезные во многих веб-приложениях:</p>
+<p>Зависимости включают пакет express и пакет для выбранного движка представления (pug). Кроме того, указаны пакеты, полезные во многих веб-приложениях:</p>
 
 <ul>
- <li><a href="https://www.npmjs.com/package/body-parser">body-parser</a>: -- анализирует часть тела входящего запроса HTTP и облегчает извлечение из него различных частей. Например, мы можно читать <code>POST-</code>параметры.</li>
- <li><a href="https://www.npmjs.com/package/cookie-parser">cookie-parser</a>: разбирает заголовок и заполняет <code>req.cookies</code> (по сути, даёт удобный метод для доступа к информации cookie).</li>
+ <li><a href="https://www.npmjs.com/package/body-parser">body-parser</a>: -- анализирует часть тела входящего запроса HTTP и облегчает извлечение из него различных частей. Например, мы можно читать <code>POST-</code>параметры.</li>
+ <li><a href="https://www.npmjs.com/package/cookie-parser">cookie-parser</a>: разбирает заголовок и заполняет <code>req.cookies</code> (по сути, даёт удобный метод для доступа к информации cookie).</li>
  <li><a href="https://www.npmjs.com/package/debug">debug</a>: небольшой отладчик, работающий по образцу методики отладки ядра node.</li>
  <li><a href="https://www.npmjs.com/package/morgan">morgan</a>: средство логирования запросов HTTP для node.</li>
- <li><a href="https://www.npmjs.com/package/serve-favicon">serve-favicon</a>: средство обработки <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a> (значка, используемого для представления сайта на вкладках браузера, закладках и т. д).</li>
+ <li><a href="https://www.npmjs.com/package/serve-favicon">serve-favicon</a>: средство обработки <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a> (значка, используемого для представления сайта на вкладках браузера, закладках и т. д).</li>
 </ul>
 
-<p>Раздел "scripts" определяет скрипт" start", выполняемый при запуске сервера командой <code>npm start</code>.  Можно видеть, что самом деле выполняется команда node <strong>./bin/www</strong>.  Кроме того, определяется script "<em>devstart</em>", который вызывается командой <code>npm run devstart</code>. Запускается тот же файл <strong>./bin/www</strong> ,но командой <em>nodemon</em> вместо <em>node</em>.</p>
+<p>Раздел "scripts" определяет скрипт" start", выполняемый при запуске сервера командой <code>npm start</code>.  Можно видеть, что самом деле выполняется команда node <strong>./bin/www</strong>.  Кроме того, определяется script "<em>devstart</em>", который вызывается командой <code>npm run devstart</code>. Запускается тот же файл <strong>./bin/www</strong> ,но командой <em>nodemon</em> вместо <em>node</em>.</p>
 
 <pre><code>"scripts": {
     "start": "node ./bin/www",
@@ -336,7 +336,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <h3 id="Файл_www">Файл www</h3>
 
-<p>Файл <strong>/bin/www</strong> – это входная точка приложения. Сначала в файле создаётся объект основного приложения, расположенного в app.js — выполняется app=<code>require(./</code><code>app</code><code>).</code></p>
+<p>Файл <strong>/bin/www</strong> – это входная точка приложения. Сначала в файле создаётся объект основного приложения, расположенного в app.js — выполняется app=<code>require(./</code><code>app</code><code>).</code></p>
 
 <pre class="brush: js">#!/usr/bin/env node
 
@@ -348,14 +348,14 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 </pre>
 
 <div class="note">
-<p><strong>Примечание:</strong> <code>require()</code> -- это глобальная функция node  для импорта модулей в текущий файл.  Для модуля <strong>app.js </strong>указан относительный путь, а расширение файла по умолчанию (.js) опущено.</p>
+<p><strong>Примечание:</strong> <code>require()</code> -- это глобальная функция node  для импорта модулей в текущий файл.  Для модуля <strong>app.js </strong>указан относительный путь, а расширение файла по умолчанию (.js) опущено.</p>
 </div>
 
-<p>Оставшаяся часть кода настраивает порт сервера node для HTTP (определён в переменной среды или 3000, если не определён), и начинает обработку и протоколирование соединений и ошибок сервера. Сейчас вам не требуется дополнительных сведений о коде (все в этом файле шаблонно), но, при желании, его можно посмотреть.</p>
+<p>Оставшаяся часть кода настраивает порт сервера node для HTTP (определён в переменной среды или 3000, если не определён), и начинает обработку и протоколирование соединений и ошибок сервера. Сейчас вам не требуется дополнительных сведений о коде (все в этом файле шаблонно), но, при желании, его можно посмотреть.</p>
 
 <h3 id="Файл_app.js">Файл app.js</h3>
 
-<p>Этот файл создаёт объект приложения  <code>express </code>(с именем<code>app</code>, по соглашению), настраивает приложение и промежуточное ПО, а затем экспортирует приложение из модуля. В приведённом ниже коде показаны только те части файла, которые создают и экспортируют объект приложения:</p>
+<p>Этот файл создаёт объект приложения  <code>express </code>(с именем<code>app</code>, по соглашению), настраивает приложение и промежуточное ПО, а затем экспортирует приложение из модуля. В приведённом ниже коде показаны только те части файла, которые создают и экспортируют объект приложения:</p>
 
 <pre class="brush: js"><code>var express = require('express');
 var app = express();
@@ -365,7 +365,7 @@ var app = express();
 
 <p>Именно этот экспортированный объект использован в рассмотренном ранее файле www.</p>
 
-<p>Рассмотрим детали файла app.js. Сначала при помощи require(...) выполняется импорт некоторых полезных библиотек node: <em>express,</em> s<em>erve-favicon</em>, <em>morgan</em>, <em>cookie-parse, body-parser </em>(они ранее были загружены для нашего приложения командой npm install), а также path из основной библиотеки node (применяется для разбора путей каталогов и файлов).</p>
+<p>Рассмотрим детали файла app.js. Сначала при помощи require(...) выполняется импорт некоторых полезных библиотек node: <em>express,</em> s<em>erve-favicon</em>, <em>morgan</em>, <em>cookie-parse, body-parser </em>(они ранее были загружены для нашего приложения командой npm install), а также path из основной библиотеки node (применяется для разбора путей каталогов и файлов).</p>
 
 <pre class="brush: js">var express = require('express');
 var path = require('path');
@@ -412,7 +412,7 @@ app.use('/users', users);
 </pre>
 
 <div class="note">
-<p><strong>Примечание:</strong> . пути, указанные выше ('/' и '<code>/users'</code>) рассматриваются как префиксы путей, определённых в импортированных файлах. Так, например, если импортированный модуль users определяет путь для /profile, для доступа следует указать /users/profile.  Мы поговорим подробнее о путях в последующей статье.</p>
+<p><strong>Примечание:</strong> . пути, указанные выше ('/' и '<code>/users'</code>) рассматриваются как префиксы путей, определённых в импортированных файлах. Так, например, если импортированный модуль users определяет путь для /profile, для доступа следует указать /users/profile.  Мы поговорим подробнее о путях в последующей статье.</p>
 </div>
 
 <p>Последняя в файле промежуточная библиотека добавляет методы обработки ошибок и ответов 404 от HTTP.</p>
@@ -449,7 +449,7 @@ var router = express.Router();
 
 /* GET users listing. */
 <strong>router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.send('respond with a resource');
 });</strong>
 
 module.exports = router;
@@ -461,11 +461,11 @@ module.exports = router;
 <p><strong>Совет:</strong> запустите сервер и задайте в браузере URL <a href="http://localhost:3000/users/">http://localhost:3000/users/</a>. Вы должны увидеть<strong> </strong>сообщение: 'respond with a resource'.</p>
 </div>
 
-<p>Стоит отметить, что колбэк-функция имеет третий аргумент - '<code>next</code>', т. е. является не простой колбэк-функцией, а колбэк-функцией промежуточного модуля. Пока третий аргумент не используется, но будет полезен в дальнейшем, если мы захотим создать несколько обработчиков пути <code><font color="#333333"><font face="consolas, Liberation Mono, courier, monospace"><font size="3">'/'</font></font></font></code>.</p>
+<p>Стоит отметить, что колбэк-функция имеет третий аргумент - '<code>next</code>', т. е. является не простой колбэк-функцией, а колбэк-функцией промежуточного модуля. Пока третий аргумент не используется, но будет полезен в дальнейшем, если мы захотим создать несколько обработчиков пути <code><font color="#333333"><font face="consolas, Liberation Mono, courier, monospace"><font size="3">'/'</font></font></font></code>.</p>
 
 <h3 id="Представления_шаблоны">Представления (шаблоны)</h3>
 
-<p>Файлы преставлений (шаблонов) хранятся в каталоге <strong><font color="#333333"><font face="Arial, x-locale-body, sans-serif"><font size="3">/views </font></font></font></strong><font color="#333333"><font face="Times New Roman, serif"><font size="3">(это указано в </font></font><font face="Courier New, monospace"><font size="3">app.js</font></font><font face="Times New Roman, serif"><font size="3">) и имеют расширение</font></font></font><strong><font color="#333333"><font face="Times New Roman, serif"><font size="3"> </font></font></font></strong><strong>.pug</strong>. Метод <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> выполняет указанный шаблон, передавая объекту значение именованной переменной, и затем посылает результат как ответ. В коде из <strong>/routes/index.js</strong> (приводится ниже) можно увидеть, что роут отвечает, используя шаблон "index" с переданным значением переменной "title" из шаблона.</p>
+<p>Файлы преставлений (шаблонов) хранятся в каталоге <strong><font color="#333333"><font face="Arial, x-locale-body, sans-serif"><font size="3">/views </font></font></font></strong><font color="#333333"><font face="Times New Roman, serif"><font size="3">(это указано в </font></font><font face="Courier New, monospace"><font size="3">app.js</font></font><font face="Times New Roman, serif"><font size="3">) и имеют расширение</font></font></font><strong><font color="#333333"><font face="Times New Roman, serif"><font size="3"> </font></font></font></strong><strong>.pug</strong>. Метод <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> выполняет указанный шаблон, передавая объекту значение именованной переменной, и затем посылает результат как ответ. В коде из <strong>/routes/index.js</strong> (приводится ниже) можно увидеть, что роут отвечает, используя шаблон "index" с переданным значением переменной "title" из шаблона.</p>
 
 <pre class="brush: js">/* GET home page. */
 router.get('/', function(req, res) {
@@ -473,7 +473,7 @@ router.get('/', function(req, res) {
 });
 </pre>
 
-<p>Шаблон для пути '/' приведён ниже (файл <strong>index.pug</strong>). О синтаксисе мы поговорим позже. Сейчас важно знать, что переменная title со значением 'Express' помещена в определённое место шаблона.</p>
+<p>Шаблон для пути '/' приведён ниже (файл <strong>index.pug</strong>). О синтаксисе мы поговорим позже. Сейчас важно знать, что переменная title со значением 'Express' помещена в определённое место шаблона.</p>
 
 <pre>extends layout
 
@@ -501,7 +501,7 @@ block content
 
 <ul>
  <li><a href="https://expressjs.com/en/starter/generator.html">Express application generator</a> (документация Express)</li>
- <li><a href="https://expressjs.com/en/guide/using-template-engines.html">Using template engi nes with Express</a> (документация Express) </li>
+ <li><a href="https://expressjs.com/en/guide/using-template-engines.html">Using template engi nes with Express</a> (документация Express) </li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}</p>

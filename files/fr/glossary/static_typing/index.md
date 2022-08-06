@@ -14,4 +14,4 @@ Un langage à **typage statique** est un langage (comme Java, C ou C++) avec leq
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Type (informatique)")}} sur Wikipédia
+- [Type](https://fr.wikipedia.org/wiki/Type_(informatique)) sur Wikipédia

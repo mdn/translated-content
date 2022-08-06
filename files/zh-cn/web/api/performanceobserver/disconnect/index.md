@@ -1,6 +1,16 @@
 ---
-title: PeformanceObserver.disconnect()
+title: PerformanceObserver.disconnect()
 slug: Web/API/PerformanceObserver/disconnect
+page-type: web-api-instance-method
+tags:
+  - API
+  - Method
+  - Performance Observer API
+  - PerformanceObserver
+  - Reference
+  - Web Performance
+  - disconnect()
+  - observers
 translation_of: Web/API/PerformanceObserver/disconnect
 ---
 {{APIRef("Performance Timeline API")}}
@@ -10,10 +20,18 @@ translation_of: Web/API/PerformanceObserver/disconnect
 ## 语法
 
 ```js
-performanceObserver.disconnect();
+disconnect()
 ```
 
-## 例子
+### 参数
+
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
+
+## 示例
 
 ```js
 var observer = new PerformanceObserver(function(list, obj) {

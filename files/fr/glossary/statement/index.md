@@ -14,7 +14,7 @@ Dans un langage de programmation informatique, une **instruction** est une ligne
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Instruction informatique")}} sur Wikipédia
+- [Instruction informatique](https://fr.wikipedia.org/wiki/Instruction_informatique) sur Wikipédia
 
 ### Référence technique
 

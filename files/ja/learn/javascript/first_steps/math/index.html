@@ -55,9 +55,9 @@ translation_of: Learn/JavaScript/First_steps/Math
 <p>さらに通常とは異なる数値表現も使います！今まで出てきた数値は 10 を基数 (0 ～ 9 を 1 つの桁として扱う) とした十進数でしたが、他にも以下のようなものがあります。</p>
 
 <ul>
- <li><strong>二進数</strong> — 0 と 1 だけで表現される、コンピューターの最も低レベルな言語です。</li>
- <li><strong>八進数</strong> — 8 を基数として、1 桁を 0 ～ 7 で表します。</li>
- <li><strong>十六進数</strong> — 16 を基数として、1 桁を 0 ～ 9、a ～ f で表します。もしかしたら <a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values">CSS の色</a>を設定するときに見たかもしれませんね。</li>
+ <li><strong>二進数</strong> — 0 と 1 だけで表現される、コンピューターの最も低レベルな言語です。</li>
+ <li><strong>八進数</strong> — 8 を基数として、1 桁を 0 ～ 7 で表します。</li>
+ <li><strong>十六進数</strong> — 16 を基数として、1 桁を 0 ～ 9、a ～ f で表します。もしかしたら <a href="/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values">CSS の色</a>を設定するときに見たかもしれませんね。</li>
 </ul>
 
 <p><strong>脳みそが溶けそうだと思う前に、少し待ってください！</strong>まず、この講座では十進数しか扱いません。それに「もしかすれば」ですが、他の数値表現について考える機会は訪れないということだってあり得ます。</p>
@@ -83,12 +83,12 @@ myFloat;</pre>
  <li>さて、それでは上で入力した 2 つの変数が同じデータ型であるか確認してみましょう。JavaScript では、{{jsxref("Operators/typeof", "typeof")}} という演算子を使用することで、データ型を確認することができます。次の 2 行を入力してみましょう。
   <pre class="brush: js notranslate">typeof myInt;
 typeof myFloat;</pre>
-  どちらの変数についても <code>"number"</code> という文字が戻ってきましたね。もし、別々の数値型が存在しているとすれば、別々に処理しなければならないので、そう考えるととても簡単に思えますよね！</li>
+  どちらの変数についても <code>"number"</code> という文字が戻ってきましたね。もし、別々の数値型が存在しているとすれば、別々に処理しなければならないので、そう考えるととても簡単に思えますよね！</li>
 </ol>
 
 <h3 id="便利な_Number_メソッド">便利な Number メソッド</h3>
 
-<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> オブジェクトは、あなたが JavaScript を使う時すべての基本的な数値を表現するインスタンスですが、その中には、数値を操作するための沢山の便利なメソッドがあります。この記事では、簡単な紹介と基本的な要点だけまとめたいので、詳しくは割愛しますが、この段落を何回か読んだら、オブジェクト参照ページに行って、どんなメソッドが使えるのかを勉強するのが良いと思います。</p>
+<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> オブジェクトは、あなたが JavaScript を使う時すべての基本的な数値を表現するインスタンスですが、その中には、数値を操作するための沢山の便利なメソッドがあります。この記事では、簡単な紹介と基本的な要点だけまとめたいので、詳しくは割愛しますが、この段落を何回か読んだら、オブジェクト参照ページに行って、どんなメソッドが使えるのかを勉強するのが良いと思います。</p>
 
 <p>例えば、数値を固定の桁数に丸めるには <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed">toFixed()</a></code> メソッドを使用します。ブラウザの<a href="/ja/docs/Tools/Web_Console">コンソール</a>に次の行を入力します。</p>
 
@@ -106,7 +106,7 @@ twoDecimalPlaces;</pre>
 <pre class="brush: js notranslate">let myNumber = '74';
 myNumber + 3;</pre>
 
-<p>答えは 743 です。77 ではありません。 なぜなら <code>myNumber</code> は string として定義されているからです。以下の命令で確認することができます。</p>
+<p>答えは 743 です。77 ではありません。 なぜなら <code>myNumber</code> は string として定義されているからです。以下の命令で確認することができます。</p>
 
 <pre class="brush: js notranslate">typeof myNumber;</pre>
 
@@ -154,7 +154,7 @@ myNumber + 3;</pre>
   </tr>
   <tr>
    <td><code>%</code></td>
-   <td>剰余 (モジューロともいう)  </td>
+   <td>剰余 (モジューロともいう)  </td>
    <td>
     <p>左項を右項で割った余りを求める。</p>
    </td>
@@ -205,7 +205,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <h3 id="Operator_precedence" name="Operator_precedence">演算子の優先順位</h3>
 
-<p>先ほどの計算式の一番最後の例を見てみましょう。<code>num2</code> に 50、<code>num1</code> に 10 が格納されているものとします。(最初はそうでしたよね。)</p>
+<p>先ほどの計算式の一番最後の例を見てみましょう。<code>num2</code> に 50、<code>num1</code> に 10 が格納されているものとします。(最初はそうでしたよね。)</p>
 
 <pre class="brush: js notranslate">num2 + num1 / 8 + 2;</pre>
 
@@ -227,7 +227,7 @@ num2 + num1 / 8 + 2;</pre>
 
 <h2 id="Increment_and_decrement_operators" name="Increment_and_decrement_operators">インクリメント演算子とデクリメント演算子</h2>
 
-<p>たまに、繰り返し値を足したり引いたりしたいときがあるでしょう。そんなときに便利なのがインクリメント演算子 (<code>++</code>) とデクリメント演算子 (<code>--</code>) です。もう既に、<a href="/ja/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash">JavaScript への最初のダイブ</a>に出てくる「数字当てゲーム」で、ユーザーの残り予想回数を求めるために使用する <code>guessCount</code> 変数に 1 を加えるのに <code>++</code> を使用しましたね。</p>
+<p>たまに、繰り返し値を足したり引いたりしたいときがあるでしょう。そんなときに便利なのがインクリメント演算子 (<code>++</code>) とデクリメント演算子 (<code>--</code>) です。もう既に、<a href="/ja/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash">JavaScript への最初のダイブ</a>に出てくる「数字当てゲーム」で、ユーザーの残り予想回数を求めるために使用する <code>guessCount</code> 変数に 1 を加えるのに <code>++</code> を使用しましたね。</p>
 
 <pre class="brush: js notranslate">guessCount++;</pre>
 
@@ -248,19 +248,19 @@ num1++;</pre>
 
 <pre class="brush: js notranslate">num1;</pre>
 
-<p>それは <code>--</code> 演算子についても同様です。以下のコードも試してみてください。</p>
+<p>それは <code>--</code> 演算子についても同様です。以下のコードも試してみてください。</p>
 
 <pre class="brush: js notranslate">var num2 = 6;
 num2--;
 num2;</pre>
 
 <div class="note">
-<p><strong>メモ</strong>: 変数の前に演算子を置くことで、ブラウザにインクリメントまたはデクリメントを先にさせてから値を戻すようにすることもできます。上記の例に戻って今度は <code>++num1</code> や <code>--num2</code> のように入力してみてください。</p>
+<p><strong>メモ</strong>: 変数の前に演算子を置くことで、ブラウザにインクリメントまたはデクリメントを先にさせてから値を戻すようにすることもできます。上記の例に戻って今度は <code>++num1</code> や <code>--num2</code> のように入力してみてください。</p>
 </div>
 
 <h2 id="Assignment_operators" name="Assignment_operators">代入演算子</h2>
 
-<p>代入演算子は変数に値を代入します。すでに一番基本的な <code>=</code> 演算子を何度も使用しています。この演算子は単に左辺に記述された値を右辺に代入します。</p>
+<p>代入演算子は変数に値を代入します。すでに一番基本的な <code>=</code> 演算子を何度も使用しています。この演算子は単に左辺に記述された値を右辺に代入します。</p>
 
 <pre class="brush: js notranslate">let x = 3; // x には 3 が入る
 let y = 4; // y には 4 が入る
@@ -324,7 +324,7 @@ x *= y; // x は 12 になる</pre>
 
 <h2 id="Active_learning_sizing_a_canvas_box" name="Active_learning_sizing_a_canvas_box">アクティブラーニング: Canvas のボックスのサイズを変更する</h2>
 
-<p>練習として、数値と演算子を使用してボックスのサイズを変更してみましょう。ブラウザの {{domxref("Canvas API", "", "", "true")}} を使用してボックスを描きます。どうやって描くかについて気にする必要はありません。今は計算に集中しましょう。ボックスの幅と高さ (ピクセル単位で) 変数 <code>x</code> と <code>y</code> で宣言しています。最初は 50 になっています。</p>
+<p>練習として、数値と演算子を使用してボックスのサイズを変更してみましょう。ブラウザの {{domxref("Canvas API", "", "", "true")}} を使用してボックスを描きます。どうやって描くかについて気にする必要はありません。今は計算に集中しましょう。ボックスの幅と高さ (ピクセル単位で) 変数 <code>x</code> と <code>y</code> で宣言しています。最初は 50 になっています。</p>
 
 <p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 620)}}</p>
 
@@ -395,10 +395,10 @@ x *= y; // x は 12 になる</pre>
 </table>
 
 <div class="note">
-<p><strong>メモ</strong>: もしかしたら <code>==</code> や <code>!=</code> といった演算子を同値かどうかの判定に使用する人を見かけることがあるかもしれません。これらも JavaScript の有効な演算子ですが、<code>===</code> や <code>!==</code> とは異なります。前者のバージョンは値が同様であるかを判定しますが、データ型が同様かは判定しません。後者は厳格なバージョンで値とデータ型の両方を判定します。厳格なバージョンはエラーとなることが少ないため後者を使用することをお勧めします。</p>
+<p><strong>メモ</strong>: もしかしたら <code>==</code> や <code>!=</code> といった演算子を同値かどうかの判定に使用する人を見かけることがあるかもしれません。これらも JavaScript の有効な演算子ですが、<code>===</code> や <code>!==</code> とは異なります。前者のバージョンは値が同様であるかを判定しますが、データ型が同様かは判定しません。後者は厳格なバージョンで値とデータ型の両方を判定します。厳格なバージョンはエラーとなることが少ないため後者を使用することをお勧めします。</p>
 </div>
 
-<p>もし、これらの値をコンソールに入力したら、すべて <code>true<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;"> または </span></font></code><code>false</code> の値を返します。これは前回の記事で言及した、真偽値です。真偽値はとても便利です。コードで判断をすることを可能にしてくれます。また選択肢を選ぶときには毎回使うことになるでしょう。例えば以下のような場合に。</p>
+<p>もし、これらの値をコンソールに入力したら、すべて <code>true<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;"> または </span></font></code><code>false</code> の値を返します。これは前回の記事で言及した、真偽値です。真偽値はとても便利です。コードで判断をすることを可能にしてくれます。また選択肢を選ぶときには毎回使うことになるでしょう。例えば以下のような場合に。</p>
 
 <ul>
  <li>機能が使用可能かどうかに応じてボタンに表示するテキストを変更する</li>
@@ -432,7 +432,7 @@ function updateBtn() {
 
 <p><strong><a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html">新しいウィンドウで開く</a></strong></p>
 
-<p>等価演算子が <code>updateBtn()</code> 関数の中で使用されていることがわかりますね。今回の場合は数値が同じ値かを判定するためには使用していません。ボタンの内容として設定されている文字列が、特定の文字列であるかどうかを比較しています。ただし、原理的には同じ働きです。もしボタンに「起動する」と書かれていれば、押されたときにボタンのラベルが「停止する」に代わります。もしボタンに「停止する」と書かれていれば、再度入れ替わって元に戻ります。</p>
+<p>等価演算子が <code>updateBtn()</code> 関数の中で使用されていることがわかりますね。今回の場合は数値が同じ値かを判定するためには使用していません。ボタンの内容として設定されている文字列が、特定の文字列であるかどうかを比較しています。ただし、原理的には同じ働きです。もしボタンに「起動する」と書かれていれば、押されたときにボタンのラベルが「停止する」に代わります。もしボタンに「停止する」と書かれていれば、再度入れ替わって元に戻ります。</p>
 
 <div class="note">
 <p><strong>メモ</strong>: 2 つの状態を行き来するこのような操作を一般的に<strong>トグル</strong>といいます。スイッチの ON/OFF のように、ある状態がもう一つの状態にトグル (切り替え) するといいます。</p>

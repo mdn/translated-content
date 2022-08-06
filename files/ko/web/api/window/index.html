@@ -12,13 +12,13 @@ translation_of: Web/API/Window
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>Window</code></strong> 인터페이스는 {{glossary("DOM")}} 문서를 담은 창을 나타냅니다.</span> <code>document</code> 속성이 창에 불러온 <a href="/ko/docs/Web/API/Document">DOM 문서</a>를 가리킵니다. 반대로, 주어진 문서의 창은 {{domxref("document.defaultView")}}를 사용해 접근할 수 있습니다.</p>
+<p><span class="seoSummary"><strong><code>Window</code></strong> 인터페이스는 {{glossary("DOM")}} 문서를 담은 창을 나타냅니다.</span> <code>document</code> 속성이 창에 불러온 <a href="/ko/docs/Web/API/Document">DOM 문서</a>를 가리킵니다. 반대로, 주어진 문서의 창은 {{domxref("document.defaultView")}}를 사용해 접근할 수 있습니다.</p>
 
 <p>JavaScript 코드에 노출된 전역 변수 <code>window</code>는 현재 스크립트가 작동 중인 창을 나타냅니다.</p>
 
-<p><code>Window</code> 인터페이스는 다양한 함수, 이름공간, 객체, 생성자가 머무는 장소입니다. 그 중엔 사용자 인터페이스로서의 창 개념과는 직접 관련되지 않은 것도 존재하며, 대신 전역적으로 접근할 수 있어야 하는 항목에 적합합니다. 많은 수의 항목이 <a href="/ko/docs/Web/JavaScript/Reference">JavaScript 참고서</a>와 <a href="/ko/docs/Web/API/Document_Object_Model">DOM 참고서</a>에 문서화되어 있습니다.</p>
+<p><code>Window</code> 인터페이스는 다양한 함수, 이름공간, 객체, 생성자가 머무는 장소입니다. 그 중엔 사용자 인터페이스로서의 창 개념과는 직접 관련되지 않은 것도 존재하며, 대신 전역적으로 접근할 수 있어야 하는 항목에 적합합니다. 많은 수의 항목이 <a href="/ko/docs/Web/JavaScript/Reference">JavaScript 참고서</a>와 <a href="/ko/docs/Web/API/Document_Object_Model">DOM 참고서</a>에 문서화되어 있습니다.</p>
 
-<p>탭 기능이 있는 브라우저에서는 각각의 탭을 각각의 <code>Window</code> 객체로 나타냅니다. 주어진 탭에서 동작 중인 JavaScript 코드의 전역 <code>window</code> 객체는 항상 자신의 탭을 나타냅니다. 그렇지만 {{domxref("Window.resizeTo", "resizeTo()")}}와 {{domxref("Window.innerHeight", "innerHeight")}}처럼, 일부 속성과 메서드는 탭이 아닌 창 전체에 적용됩니다. 보통 탭과 합리적으로는 연관 지을 수 없는 경우 창에 속합니다.</p>
+<p>탭 기능이 있는 브라우저에서는 각각의 탭을 각각의 <code>Window</code> 객체로 나타냅니다. 주어진 탭에서 동작 중인 JavaScript 코드의 전역 <code>window</code> 객체는 항상 자신의 탭을 나타냅니다. 그렇지만 {{domxref("Window.resizeTo", "resizeTo()")}}와 {{domxref("Window.innerHeight", "innerHeight")}}처럼, 일부 속성과 메서드는 탭이 아닌 창 전체에 적용됩니다. 보통 탭과 합리적으로는 연관 지을 수 없는 경우 창에 속합니다.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -46,9 +46,9 @@ translation_of: Web/API/Window
 <p>{{domxref("EventTarget")}}의 속성을 상속하고, {{domxref("WindowOrWorkerGlobalScope")}}와 {{domxref("WindowEventHandlers")}} 믹스인의 속성을 구현합니다.</p>
 
 <dl>
- <dt>{{domxref("Window.closed")}} {{readOnlyInline}}</dt>
+ <dt>{{domxref("Window.closed")}} {{readOnlyInline}}</dt>
  <dd>현재 창이 닫혔는지 나타냅니다.</dd>
- <dt>{{domxref("Window.console")}} {{readOnlyInline}}</dt>
+ <dt>{{domxref("Window.console")}} {{readOnlyInline}}</dt>
  <dd>브라우저 디버깅 콘솔에 접근할 수 있는 콘솔 객체를 반환합니다.</dd>
  <dt>{{domxref("Window.controllers")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
  <dd>현재 크롬 창의 XUL 컨트롤러 객체를 반환합니다.</dd>
@@ -195,7 +195,7 @@ translation_of: Web/API/Window
  <dd>The time in milliseconds since epoch at which the current animation cycle began. Use {{domxref("Animation.startTime")}} instead.</dd>
  <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.</dd>
- <dt>{{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}</dt>
+ <dt>{{domxref("Window.orientation")}} {{readOnlyInline}} {{deprecated_inline}}</dt>
  <dd>Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.</dd>
  <dt>{{domxref("Window.pkcs11")}} {{deprecated_inline}}</dt>
  <dd>Formerly provided access to install and remove PKCS11 modules.</dd>
@@ -612,7 +612,7 @@ translation_of: Web/API/Window
  <dd>Fired when the window receives a message, for example from a call to {{domxref("Window/postMessage", "Window.postMessage()")}} from another browsing context.<br>
  Also available via the {{domxref("WindowEventHandlers/onmessage", "onmessage")}} property.</dd>
  <dt>{{domxref("Window/messageerror_event", "messageerror")}}</dt>
- <dd>Fired when a <code>Window</code> object receives a message that can't be deserialized.<br>
+ <dd>Fired when a <code>Window</code> object receives a message that can't be deserialized.<br>
  Also available via the {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} property.</dd>
 </dl>
 
@@ -680,10 +680,10 @@ translation_of: Web/API/Window
  <dd>Fired when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.<br>
  Also available via the {{domxref("Window/onvrdisplaypresentchange", "onvrdisplaypresentchange")}} property.</dd>
  <dt>{{domxref("Window/vrdisplaypointerrestricted_event", "vrdisplaypointerrestricted")}}</dt>
- <dd>Fired when the VR display's pointer input is restricted to consumption via a <a href="/en-US/docs/Web/API/Pointer_Lock_API">pointerlocked element</a>.<br>
+ <dd>Fired when the VR display's pointer input is restricted to consumption via a <a href="/en-US/docs/Web/API/Pointer_Lock_API">pointerlocked element</a>.<br>
  Also available via the {{domxref("Window/onvrdisplaypointerrestricted", "onvrdisplaypointerrestricted")}} property.</dd>
  <dt>{{domxref("Window/vrdisplaypointerunrestricted_event", "vrdisplaypointerunrestricted")}}</dt>
- <dd>Fired when the VR display's pointer input is no longer restricted to consumption via a <a href="/en-US/docs/Web/API/Pointer_Lock_API">pointerlocked element</a>.<br>
+ <dd>Fired when the VR display's pointer input is no longer restricted to consumption via a <a href="/en-US/docs/Web/API/Pointer_Lock_API">pointerlocked element</a>.<br>
  Also available via the {{domxref("Window/onvrdisplaypointerunrestricted", "onvrdisplaypointerunrestricted")}} property.</dd>
 </dl>
 

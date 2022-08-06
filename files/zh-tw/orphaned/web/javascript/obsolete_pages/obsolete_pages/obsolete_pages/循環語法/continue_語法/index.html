@@ -29,15 +29,15 @@ while (i &lt; 5) {
 <p><strong>範例 2</strong><br>
  已加上標籤的語法 <code>checkiandj</code> 內含已加上標籤的語法 <code>checkj</code>。如果遇到 <code>continue</code>，程式會終止 <code>checkj</code> 這一次的反覆過程，並開始下一次的反覆過程。每當遇到 <code>continue</code>，就會反覆執行 <code>checkj</code> 直到他的條件返回 false 為止。當返回 false 時，<code>checkiandj</code> 語句完成了餘數的計算，且 <code>checkiandj</code> 會反覆執行，直到他的條件返回為 false 為止。當返回 false 時，程式繼續執行 <code>checkiandj</code> 後面的語句。</p>
 <p>如果 <code>continue</code> 有一個 <code>checkiandj</code> 標籤，程式就會從 <code>checkiandj</code> 語句的開始處繼續執行。</p>
-<pre>checkiandj :
+<pre>checkiandj :
    while (i &lt; 4) {
       document.write(i + "&lt;br/&gt;");
       i += 1;
-      checkj :
+      checkj :
          while (j &gt; 4) {
             document.write(j + "&lt;br/&gt;");
             j -= 1;
-            if ((j % 2) == 0)
+            if ((j % 2) == 0)
                continue checkj;
             document.write(j + " is odd.&lt;br/&gt;");
          }
@@ -48,4 +48,4 @@ while (i &lt; 5) {
 <div class="noinclude">
  <p>{{ PreviousNext("Core_JavaScript_1.5_教學:循環語法:break_語法", "Core_JavaScript_1.5_教學:物件的操作語法") }}</p>
 </div>
-<p> </p>
+<p> </p>

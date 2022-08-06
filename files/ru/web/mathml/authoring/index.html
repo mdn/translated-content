@@ -23,25 +23,25 @@ translation_of: Web/MathML/Authoring
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
- &lt;title&gt;MathML in HTML5&lt;/title&gt;
+ &lt;title&gt;MathML in HTML5&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
-  &lt;h1&gt;MathML in HTML5&lt;/h1&gt;
+  &lt;h1&gt;MathML in HTML5&lt;/h1&gt;
 
-  &lt;p&gt;
-    Square root of two:
-    &lt;math&gt;
-      &lt;msqrt&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msqrt&gt;
-    &lt;/math&gt;
-  &lt;/p&gt;
+  &lt;p&gt;
+    Square root of two:
+    &lt;math&gt;
+      &lt;msqrt&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+      &lt;/msqrt&gt;
+    &lt;/math&gt;
+  &lt;/p&gt;
 
 &lt;/body&gt;
 &lt;/html&gt; </pre>
 
-<p>Content MathML не поддерживается браузерами. Рекомендуется преобразовать ваш макет из Content MathML в Presentation MathML перед его публикацией, например, с помощью таблицы стилей <a class="external" href="https://code.google.com/p/web-xslt/source/browse/trunk/#trunk/ctop">ctop.xsl</a> . Инструменты, упомянутые на этой странице, генерируют Presentation MathML.</p>
+<p>Content MathML не поддерживается браузерами. Рекомендуется преобразовать ваш макет из Content MathML в Presentation MathML перед его публикацией, например, с помощью таблицы стилей <a class="external" href="https://code.google.com/p/web-xslt/source/browse/trunk/#trunk/ctop">ctop.xsl</a> . Инструменты, упомянутые на этой странице, генерируют Presentation MathML.</p>
 
 <h4 id="Варианты_для_браузеров_без_поддержки_MathML">Варианты для браузеров без поддержки MathML</h4>
 
@@ -59,13 +59,13 @@ translation_of: Web/MathML/Authoring
 
 <p>Если вы не хотите использовать эту ссылку на GitHub, но вместо этого хотите интегрировать эти полифилы или нечто другое в свой проект, тогда вам может понадобиться скрипт, проверяющий уровень поддержки MathML. Например, следующая функция проверяет поддержку MathML путём тестирования элемента mspace (вы можете заменить <code>mspace</code> на <code>mpadded</code>):</p>
 
-<pre class="brush: js"> function hasMathMLSupport() {
-  var div = document.createElement("div"), box;
-  div.innerHTML = "&lt;math&gt;&lt;mspace height='23px' width='77px'/&gt;&lt;/math&gt;";
-  document.body.appendChild(div);
-  box = div.firstChild.firstChild.getBoundingClientRect();
-  document.body.removeChild(div);
-  return Math.abs(box.height - 23) &lt;= 1  &amp;&amp; Math.abs(box.width - 77) &lt;= 1;
+<pre class="brush: js"> function hasMathMLSupport() {
+  var div = document.createElement("div"), box;
+  div.innerHTML = "&lt;math&gt;&lt;mspace height='23px' width='77px'/&gt;&lt;/math&gt;";
+  document.body.appendChild(div);
+  box = div.firstChild.firstChild.getBoundingClientRect();
+  document.body.removeChild(div);
+  return Math.abs(box.height - 23) &lt;= 1  &amp;&amp; Math.abs(box.width - 77) &lt;= 1;
 }</pre>
 
 <p>В качестве альтернативы, следующий анализ строки UA позволит определить движок рендеринга с родной поддержкой MathML (Gecko и WebKit). Обратите внимание, что анализ строки UA является не самым надёжным методом и может сбоить от версии к версии:</p>
@@ -85,38 +85,38 @@ var isWebKit = ua.indexOf('AppleWebKit') &gt; -1 &amp;&amp; ua.indexOf('Chrome')
 @namespace m url('http://www.w3.org/1998/Math/MathML');
 
 body, m|mtext {
-    font-family: Latin Modern;
+    font-family: Latin Modern;
 }
 m|math {
-    font-family: Latin Modern Math;
+    font-family: Latin Modern Math;
 }</pre>
 
-<p><span id="result_box" lang="ru"><span>Затем вы можете использовать правило</span></span> <a href="/ru/docs/Web/CSS/@font-face">@font-face</a>, как обычно, для обеспечения выбора WOFF для Latin Modern и Latin Modern Math. Смотрите <a href="https://github.com/fred-wang/MathFonts">репозиторий GitHub с  WOFF шрифтами и примерами таблиц стилей CSS</a> для использования на вашем Web-сайте, а также этот <a href="http://fred-wang.github.io/MathFonts/">ресурс с тестами</a>.</p>
+<p><span id="result_box" lang="ru"><span>Затем вы можете использовать правило</span></span> <a href="/ru/docs/Web/CSS/@font-face">@font-face</a>, как обычно, для обеспечения выбора WOFF для Latin Modern и Latin Modern Math. Смотрите <a href="https://github.com/fred-wang/MathFonts">репозиторий GitHub с  WOFF шрифтами и примерами таблиц стилей CSS</a> для использования на вашем Web-сайте, а также этот <a href="http://fred-wang.github.io/MathFonts/">ресурс с тестами</a>.</p>
 
 <h4 id="MathML_в_документах_XML_(XHTML_EPUB_и_т.д.)">MathML в документах XML (XHTML, EPUB, и т.д.)</h4>
 
 <p>Если по какой-то причине вам нужно использовать MathML в документах XML, обязательно выполняйте обычные требования: хорошо сформированный документ, использование правильного MIME-типа, пространство имён MathML <code>"http://www.w3.org/1998/Math/MathML"</code> с корневым элементом <code>&lt;math&gt;</code>. Например, версия XHTML предыдущего примера выглядит так:<br>
-  </p>
+  </p>
 
 <pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
-  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
+  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
 &lt;head&gt;
- &lt;title&gt;XHTML+MathML Example&lt;/title&gt;
+ &lt;title&gt;XHTML+MathML Example&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
 &lt;h1&gt;Пример XHTML+MathML&lt;/h1&gt;
 
-  &lt;p&gt;
-    Квадратный корень из двух:
-    &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
-      &lt;msqrt&gt;
-        &lt;mn&gt;2&lt;/mn&gt;
-      &lt;/msqrt&gt;
-    &lt;/math&gt;
-  &lt;/p&gt;
+  &lt;p&gt;
+    Квадратный корень из двух:
+    &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
+      &lt;msqrt&gt;
+        &lt;mn&gt;2&lt;/mn&gt;
+      &lt;/msqrt&gt;
+    &lt;/math&gt;
+  &lt;/p&gt;
 
 &lt;/body&gt;
 &lt;/html&gt; </pre>
@@ -175,7 +175,7 @@ m|math {
 
 <p>и автоматически преобразуется в MathML. Это все ещё в процессе разработки и может быть улучшено в будущем благодаря Web-компонентам и DOM. Кроме того, вы можете использовать более традиционный <a href="https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page">Javascript парсинг выражений в процессе загрузки</a> как это используют и все другие инструменты, описанные в этом разделе.</p>
 
-<p>Одним из простых инструментов конвертации на стороне клиента является <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Просто загрузите скрипт <a href="https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> и скопируйте его на ваш Web-сайт. Затем на ваших веб-страницах добавьте тег <code>&lt;script&gt;</code> для загрузки ASCIIMathML и математические выражения, выделенные символом <code>`</code> (знак акцента) будут автоматически обработаны и преобразованы в MathML:</p>
+<p>Одним из простых инструментов конвертации на стороне клиента является <a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">ASCIIMathML</a>. Просто загрузите скрипт <a href="https://mathcs.chapman.edu/~jipsen/mathml/ASCIIMathML.js">ASCIIMathML.js</a> и скопируйте его на ваш Web-сайт. Затем на ваших веб-страницах добавьте тег <code>&lt;script&gt;</code> для загрузки ASCIIMathML и математические выражения, выделенные символом <code>`</code> (знак акцента) будут автоматически обработаны и преобразованы в MathML:</p>
 
 <pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
@@ -215,13 +215,13 @@ This is a sample LaTeXML document.
 
 \section{First Section}
 
-  $$ \sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6} $$
+  $$ \sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6} $$
 
 \end{document}
 &lt;/div&gt;
 ...</pre>
 
-<p><a href="https://mathscribe.com/author/jqmath.html">jqMath</a> - это ещё один скрипт для парсинга простого LaTeX-подобного синтаксиса, который также принимает не-ASCII символы, такие как  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code> , чтобы написать <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. Установка похожа: загрузите и скопируйте соответствующие файлы <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript и CSS files</a> на ваш Web сайт и сделайте ссылку на них в заголовке вашей страницы (смотрите файл <code>COPY-ME.html</code> из архива zip в качестве примера). Одним из преимуществ jqMath над предыдущими сценариями является то, что он автоматически добавит некоторые простые правила CSS для математической разметки и сделает формулы доступными для браузеров с ограниченной поддержкой MathML.</p>
+<p><a href="https://mathscribe.com/author/jqmath.html">jqMath</a> - это ещё один скрипт для парсинга простого LaTeX-подобного синтаксиса, который также принимает не-ASCII символы, такие как  <code>√{∑↙{n=1}↖{+∞} 6/n^2} = π</code> , чтобы написать <math> <mrow> <msqrt> <mrow class="ma-repel-adj"> <munderover> <mo>∑</mo> <mrow> <mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mo>+</mo> <mi>∞</mi> </mrow> </munderover> <mfrac> <mn>6</mn> <msup> <mi>n</mi> <mn>2</mn> </msup> </mfrac> </mrow> </msqrt> <mo>=</mo> <mi>π</mi> </mrow> </math>. Установка похожа: загрузите и скопируйте соответствующие файлы <a href="https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip">Javascript и CSS files</a> на ваш Web сайт и сделайте ссылку на них в заголовке вашей страницы (смотрите файл <code>COPY-ME.html</code> из архива zip в качестве примера). Одним из преимуществ jqMath над предыдущими сценариями является то, что он автоматически добавит некоторые простые правила CSS для математической разметки и сделает формулы доступными для браузеров с ограниченной поддержкой MathML.</p>
 
 <h3 id="Программы_командной_строки">Программы командной строки</h3>
 
@@ -310,7 +310,7 @@ sudo make install
  </li>
 </ul>
 
-<p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a>, <a href="https://dlmf.nist.gov/LaTeXML/">LaTeXML</a> и <a href="https://github.com/gwicke/mathoid">Mathoid</a>  могут использоваться для выполнения преобразования LaTeX-to-MathML на стороне сервера.<a href="http://instiki.org/show/HomePage"> Instiki</a> и <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a> - это два wiki движка, которые поддерживают преобразование LaTeX-to-MathML.</p>
+<p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a>, <a href="https://dlmf.nist.gov/LaTeXML/">LaTeXML</a> и <a href="https://github.com/gwicke/mathoid">Mathoid</a>  могут использоваться для выполнения преобразования LaTeX-to-MathML на стороне сервера.<a href="http://instiki.org/show/HomePage"> Instiki</a> и <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a> - это два wiki движка, которые поддерживают преобразование LaTeX-to-MathML.</p>
 
 <h2 id="Графический_интерфейс">Графический интерфейс</h2>
 
@@ -346,4 +346,4 @@ sudo make install
 </ul>
 </div>
 
-<p> </p>
+<p> </p>

@@ -10,24 +10,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>Symbol.match</strong></code> — известный символ, определяющий соответствие строки регулярному выражению. Этот метод вызывается функцией {{jsxref("String.prototype.match()")}}.</p>
+<p><code><strong>Symbol.match</strong></code> — известный символ, определяющий соответствие строки регулярному выражению. Этот метод вызывается функцией {{jsxref("String.prototype.match()")}}.</p>
 
 <div>{{js_property_attributes(0,0,0)}}</div>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Данный метод также используется для того, чтобы определить, обладает ли объект поведением регулярного выражения. Например, методы {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} и {{jsxref("String.prototype.includes()")}} проверяют, является ли первый аргумент регулярным выражением, и бросают {{jsxref("TypeError")}}, если это так. Соответственно, если символ <code>match</code> установлен в <code>false</code> (или имеет {{Glossary("Falsy", "ложное")}} значение) — это говорит о том, что объект не предназначен для использования в качестве регулярного выражения.</p>
+<p>Данный метод также используется для того, чтобы определить, обладает ли объект поведением регулярного выражения. Например, методы {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} и {{jsxref("String.prototype.includes()")}} проверяют, является ли первый аргумент регулярным выражением, и бросают {{jsxref("TypeError")}}, если это так. Соответственно, если символ <code>match</code> установлен в <code>false</code> (или имеет {{Glossary("Falsy", "ложное")}} значение) — это говорит о том, что объект не предназначен для использования в качестве регулярного выражения.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Блокировка_проверки_isRegExp">Блокировка проверки i<code>sRegExp</code></h3>
+<h3 id="Блокировка_проверки_isRegExp">Блокировка проверки i<code>sRegExp</code></h3>
 
-<p>Следующий код выбросит {{jsxref("TypeError")}}:</p>
+<p>Следующий код выбросит {{jsxref("TypeError")}}:</p>
 
 <pre class="brush: js">"/bar/".startsWith(/bar/); // Бросает TypeError, так как /bar/ является
-                           // регулярным выражением и Symbol.match не изменён.</pre>
+                           // регулярным выражением и Symbol.match не изменён.</pre>
 
-<p>Несмотря на это, если вы зададите свойству <code>Symbol.match</code> значение <code>false</code>, проверка <code>isRegExp</code> (которая использует свойство <code>match</code>) покажет, что объект не является регулярным выражением — как следствие, методы <code>startsWith</code> и <code>endsWith</code> не станут бросать <code>TypeError</code>.</p>
+<p>Несмотря на это, если вы зададите свойству <code>Symbol.match</code> значение <code>false</code>, проверка <code>isRegExp</code> (которая использует свойство <code>match</code>) покажет, что объект не является регулярным выражением — как следствие, методы <code>startsWith</code> и <code>endsWith</code> не станут бросать <code>TypeError</code>.</p>
 
 <pre class="brush: js">var re = /foo/;
 re[Symbol.match] = false;

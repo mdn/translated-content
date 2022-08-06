@@ -5,13 +5,13 @@ tags:
   - Funciones
 translation_of: Glossary/IIFE
 ---
-<p>Las expresiones de función ejecutadas inmediatamente (<strong>IIFE</strong> por su sigla en inglés) son funciones que se ejecutan tan pronto como se definen.</p>
+<p>Las expresiones de función ejecutadas inmediatamente (<strong>IIFE</strong> por su sigla en inglés) son funciones que se ejecutan tan pronto como se definen.</p>
 
 <pre class="brush: js">(function () {
     statements
 })();</pre>
 
-<p>Es un patrón de diseño también conocido cómo <strong>función autoejecutable </strong>({{glossary("Self-Executing Anonymous Function")}}  ) y se compone por dos partes. La primera es la función anónima con alcance léxico encerrado por el  {{jsxref("Operadores/Grouping", "Operador de Agrupación")}} <code>()</code>. Esto impide accesar variables fuera del IIFE, así cómo contaminar el alcance (scope) global. </p>
+<p>Es un patrón de diseño también conocido cómo <strong>función autoejecutable </strong>({{glossary("Self-Executing Anonymous Function")}}  ) y se compone por dos partes. La primera es la función anónima con alcance léxico encerrado por el  {{jsxref("Operadores/Grouping", "Operador de Agrupación")}} <code>()</code>. Esto impide accesar variables fuera del IIFE, así cómo contaminar el alcance (scope) global. </p>
 
 <p>La segunda parte crea la expresión de función cuya ejecución es inmediata <code>()</code>, siendo interpretado directamente en el engine de JavaScript.</p>
 
@@ -35,7 +35,7 @@ aName </span>// throws "Uncaught ReferenceError: aName is not defined"
 // Immediately creates the output:
 result; // "Barry"</span></pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Aprende_mas">Aprende mas</h2>
 
@@ -43,7 +43,7 @@ result; // "Barry"</span></pre>
 
 <ul>
  <li><a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/">Ben Alman's blog post defining IIFEs</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions">Quick example</a> "Ejemplo Rápido"(al final de la sección "Functions" , justo despues de "Custom objects")</li>
+ <li><a href="/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions">Quick example</a> "Ejemplo Rápido"(al final de la sección "Functions" , justo despues de "Custom objects")</li>
 </ul>
 
 <h3 id="General_knowledge">General knowledge</h3>

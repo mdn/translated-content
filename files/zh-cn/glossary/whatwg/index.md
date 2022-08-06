@@ -13,5 +13,5 @@ WHATWG（*Web Hypertext Application Technology Working Group*Web 超文本应用
 
 ### General Knowledge
 
-- Wikipedia 上的 {{Interwiki("wikipedia", "WHATWG")}}
+- Wikipedia 上的 [WHATWG](https://zh.wikipedia.org/wiki/WHATWG)
 - [WHATWG 的网站](https://whatwg.org/)

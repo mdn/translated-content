@@ -72,63 +72,63 @@ translation_of: Web/Accessibility/ARIA/Roles/Tab_Role
 <p>この例では、タブ (<code>tab</code>) ロールとタブリスト (<code>tablist</code>) 、そして要素とタブパネル (<code>tabpanel</code>) を組み合わせて、タブ付きコンテンツのインタラクティブなグループを作成します。 ここでは、コンテンツのグループを <code>div</code> で囲んでいます。 タブリスト (<code>tablist</code>) には、支援技術用にラベルを付けるための <code>aria-label</code> があります。 各タブ (<code>tab</code>) は、前述の属性を持つボタン (<code>button</code>) です。 最初のタブ (<code>tab</code>) には <code>tabindex=0</code> があり、後で <code>aria-selected=true</code> のタブに変更します。 すべてのタブパネル (<code>tabpanel</code>) 要素には Tab 可能にするために <code>tabindex=0</code> があり、現在アクティブな要素を除くすべてに <code>hidden</code> 属性があって、これは JavaScript で変更されます。 ボタンのスタイルを変更し、タブ (<code>tab</code>) 要素の <code><a href="/ja/docs/Web/CSS/z-index">z-index</a></code> を変更して、アクティブな要素のタブパネル (<code>tabpanel</code>) に接続しているように見せたり、非アクティブな要素がアクティブなタブパネル (<code>tabpanel</code>) の後ろにあるように見せたりする基本的なスタイルが適用されます。</p>
 
 <pre class="brush: html">&lt;div class="tabs"&gt;
-  &lt;div role="tablist" aria-label="Sample Tabs"&gt;
-    &lt;button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"&gt;
-          First Tab
-        &lt;/button&gt;
-    &lt;button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1"&gt;
-          Second Tab
-        &lt;/button&gt;
-    &lt;button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1"&gt;
-          Third Tab
-        &lt;/button&gt;
+  &lt;div role="tablist" aria-label="Sample Tabs"&gt;
+    &lt;button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0"&gt;
+          First Tab
+        &lt;/button&gt;
+    &lt;button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1"&gt;
+          Second Tab
+        &lt;/button&gt;
+    &lt;button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1"&gt;
+          Third Tab
+        &lt;/button&gt;
   &lt;/div&gt;
   &lt;div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1"&gt;
-    &lt;p&gt;Content for the first panel&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden&gt;
-    &lt;p&gt;Content for the second panel&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden&gt;
-    &lt;p&gt;Content for the third panel&lt;/p&gt;
-  &lt;/div&gt;
+    &lt;p&gt;Content for the first panel&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden&gt;
+    &lt;p&gt;Content for the second panel&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden&gt;
+    &lt;p&gt;Content for the third panel&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</pre>
 
 <div class="hidden">
 <pre class="brush: css">.tabs {
-  padding: 1em;
+  padding: 1em;
 }
 
 [role="tablist"] {
-  margin-bottom: -1px;
+  margin-bottom: -1px;
 }
 
 [role="tab"] {
-  position: relative;
-  z-index: 1;
-  background: white;
-  border-radius: 5px 5px 0 0;
-  border: 1px solid grey;
-  border-bottom: 0;
-  padding: 0.2em;
+  position: relative;
+  z-index: 1;
+  background: white;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid grey;
+  border-bottom: 0;
+  padding: 0.2em;
 }
 
 [role="tab"][aria-selected="true"] {
-  z-index: 3;
+  z-index: 3;
 }
 
 [role="tabpanel"] {
-  position: relative;
-  padding: 0 0.5em 0.5em 0.7em;
-  border: 1px solid grey;
-  border-radius: 0 0 5px 5px;
-  background: white;
-  z-index: 2;
+  position: relative;
+  padding: 0 0.5em 0.5em 0.7em;
+  border: 1px solid grey;
+  border-radius: 0 0 5px 5px;
+  background: white;
+  z-index: 2;
 }
 
 [role="tabpanel"]:focus {
-  border-color: orange;
-  outline: 1px solid orange;
+  border-color: orange;
+  outline: 1px solid orange;
 }</pre>
 </div>
 
@@ -140,64 +140,64 @@ translation_of: Web/Accessibility/ARIA/Roles/Tab_Role
 <p>アクティブなタブ (<code>tab</code>) とタブパネル (<code>tabpanel</code>) の変更を処理するために、イベントを受け取り、イベントをトリガーした要素、トリガーした要素の親要素、およびその祖父母要素を取得する関数があります。 次に、親要素内で <code>aria-selected=true</code> を持つすべてのタブを検索し、それを <code>false</code> に設定してから、トリガーした要素の <code>aria-selected</code> を <code>true</code> に設定します。 その後、祖父母要素内のすべてのタブパネル (<code>tabpanel</code>) 要素を見つけてすべて <code>hidden</code> にし、最後に、トリガーしたタブ (<code>tab</code>) の <code>aria-controls</code> と等しい <code>id</code> の要素を選択して、<code>hidden</code> 属性を削除して表示します。</p>
 
 <pre class="brush: js">window.addEventListener("DOMContentLoaded", () =&gt; {
-  const tabs = document.querySelectorAll('[role="tab"]');
-  const tabList = document.querySelector('[role="tablist"]');
+  const tabs = document.querySelectorAll('[role="tab"]');
+  const tabList = document.querySelector('[role="tablist"]');
 
-  // 各タブに click イベントハンドラーを追加します
-  tabs.forEach(tab =&gt; {
-    tab.addEventListener("click", changeTabs);
-  });
+  // 各タブに click イベントハンドラーを追加します
+  tabs.forEach(tab =&gt; {
+    tab.addEventListener("click", changeTabs);
+  });
 
-  // タブリストのタブ間の矢印ナビゲーションを有効にします
-  let tabFocus = 0;
+  // タブリストのタブ間の矢印ナビゲーションを有効にします
+  let tabFocus = 0;
 
-  tabList.addEventListener("keydown", e =&gt; {
-    // 右に移動
-    if (e.keyCode === 39 || e.keyCode === 37) {
-      tabs[tabFocus].setAttribute("tabindex", -1);
-      if (e.keyCode === 39) {
-        tabFocus++;
-        // 最後にいる場合は、最初に移動します
-        if (tabFocus &gt;= tabs.length) {
-          tabFocus = 0;
-        }
-        // 左に移動
-      } else if (e.keyCode === 37) {
-        tabFocus--;
-        // 最初にいる場合は、最後に移動します
-        if (tabFocus &lt; 0) {
-          tabFocus = tabs.length - 1;
-        }
-      }
+  tabList.addEventListener("keydown", e =&gt; {
+    // 右に移動
+    if (e.keyCode === 39 || e.keyCode === 37) {
+      tabs[tabFocus].setAttribute("tabindex", -1);
+      if (e.keyCode === 39) {
+        tabFocus++;
+        // 最後にいる場合は、最初に移動します
+        if (tabFocus &gt;= tabs.length) {
+          tabFocus = 0;
+        }
+        // 左に移動
+      } else if (e.keyCode === 37) {
+        tabFocus--;
+        // 最初にいる場合は、最後に移動します
+        if (tabFocus &lt; 0) {
+          tabFocus = tabs.length - 1;
+        }
+      }
 
-      tabs[tabFocus].setAttribute("tabindex", 0);
-      tabs[tabFocus].focus();
-    }
-  });
+      tabs[tabFocus].setAttribute("tabindex", 0);
+      tabs[tabFocus].focus();
+    }
+  });
 });
 
 function changeTabs(e) {
-  const target = e.target;
-  const parent = target.parentNode;
-  const grandparent = parent.parentNode;
+  const target = e.target;
+  const parent = target.parentNode;
+  const grandparent = parent.parentNode;
 
-  // タブから現在すべての選択状態を取り除きます
-  parent
-    .querySelectorAll('[aria-selected="true"]')
-    .forEach(t =&gt; t.setAttribute("aria-selected", false));
+  // タブから現在すべての選択状態を取り除きます
+  parent
+    .querySelectorAll('[aria-selected="true"]')
+    .forEach(t =&gt; t.setAttribute("aria-selected", false));
 
-  // このタブを選択されたタブとして設定します
-  target.setAttribute("aria-selected", true);
+  // このタブを選択されたタブとして設定します
+  target.setAttribute("aria-selected", true);
 
-  // すべてのタブパネルを非表示にします
-  grandparent
-    .querySelectorAll('[role="tabpanel"]')
-    .forEach(p =&gt; p.setAttribute("hidden", true));
+  // すべてのタブパネルを非表示にします
+  grandparent
+    .querySelectorAll('[role="tabpanel"]')
+    .forEach(p =&gt; p.setAttribute("hidden", true));
 
-  // 選択されたパネルを表示します
-  grandparent.parentNode
-    .querySelector(`#${target.getAttribute("aria-controls")}`)
-    .removeAttribute("hidden");
+  // 選択されたパネルを表示します
+  grandparent.parentNode
+    .querySelector(`#${target.getAttribute("aria-controls")}`)
+    .removeAttribute("hidden");
 }</pre>
 
 <p>{{EmbedLiveSample("Example", 600, 130)}}</p>

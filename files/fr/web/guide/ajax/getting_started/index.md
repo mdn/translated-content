@@ -219,8 +219,6 @@ Ce code prend l’objet `XMLDocument` donné par `responseXML` et utilise les m�
 
 Catégories
 
-Interwiki
-
 ### Étape 5 – Manipuler les données
 
 Pour finir, envoyons quelques données au serveur et réceptionnons la réponse. Notre JavaScript demandera cette fois-ci une page dynamique, `test.php`, qui prendra notre contenu envoyé et revera une chaîne «&nbsp;calculée&nbsp;» – "Bonjour, \[user data] !" – que nous afficherons via `alert()`.

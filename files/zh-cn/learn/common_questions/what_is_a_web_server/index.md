@@ -98,7 +98,7 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 
 以你正在阅读的页面为例子。在正在托管它的网络服务器里，有一个应用服务器会从数据库提取文章内容，安排它的布局，把它放置在一些 HTML 模板中，然后为你传输结果。在这里，这个应用服务器叫做 [Kuma](/en-US/docs/MDN/Kuma) 并且是由 [Python](https://www.python.org/) （使用 [Django](https://www.djangoproject.com/) 构架) 构建的。Mozilla 团队为了 MDN 的特殊要求开发 Kuma，但是这里有很多相似的建立在很多其他技术之上的应用。
 
-这里有太多的应用服务器，所以提供一个具体的服务器是挺难的。有些应用服务器迎合具体的网站类别，像是博客，百科或者电子商店；其他的应用服务器，叫做 {{Glossary("CMS", "CMSs")}}（内容管理系统 \[content management systems]），则更加通用。如果你正在开发一个动态网站，请花一些时间去选择适合你需求的工具。除非你想要学习一些网络服务器编程 \[web server programming]（而这本身就是一个令人兴奋的领域！），否则你不需要去创建你自己的应用服务器。这只是在重新创造轮子（{{Interwiki("wikipedia", "reinventing the wheel")}}）。
+这里有太多的应用服务器，所以提供一个具体的服务器是挺难的。有些应用服务器迎合具体的网站类别，像是博客，百科或者电子商店；其他的应用服务器，叫做 {{Glossary("CMS", "CMSs")}}（内容管理系统 \[content management systems]），则更加通用。如果你正在开发一个动态网站，请花一些时间去选择适合你需求的工具。除非你想要学习一些网络服务器编程 \[web server programming]（而这本身就是一个令人兴奋的领域！），否则你不需要去创建你自己的应用服务器。这只是在重新创造轮子（[reinventing the wheel](https://zh.wikipedia.org/wiki/reinventing_the_wheel)）。
 
 ## 下一步
 

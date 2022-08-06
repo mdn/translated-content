@@ -51,28 +51,28 @@ original_slug: Web/HTML/Element/conteúdo
 <p>Here is a simple example of using the <code>&lt;content&gt;</code> element. It is an HTML file with everything needed in it.</p>
 
 <div class="note">
-<p><strong>Note:</strong> For this code to work, the browser you display it in must support Web Components. See <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
+<p><strong>Note:</strong> For this code to work, the browser you display it in must support Web Components. See <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a>.</p>
 </div>
 
 <pre class="brush: html">&lt;html&gt;
   &lt;head&gt;&lt;/head&gt;
   &lt;body&gt;
-  &lt;!-- The original content accessed by &lt;content&gt; --&gt;
-  &lt;div&gt;
-    &lt;h4&gt;My Content Heading&lt;/h4&gt;
-    &lt;p&gt;My content text&lt;/p&gt;
-  &lt;/div&gt;
+  &lt;!-- The original content accessed by &lt;content&gt; --&gt;
+  &lt;div&gt;
+    &lt;h4&gt;My Content Heading&lt;/h4&gt;
+    &lt;p&gt;My content text&lt;/p&gt;
+  &lt;/div&gt;
 
-  &lt;script&gt;
-  // Get the &lt;div&gt; above.
-  var myContent = document.querySelector('div');
-  // Create a shadow DOM on the &lt;div&gt;
-  var shadowroot = myContent.createShadowRoot();
-  // Insert into the shadow DOM a new heading and
-  // part of the original content: the &lt;p&gt; tag.
-  shadowroot.innerHTML =
-   '&lt;h2&gt;Inserted Heading&lt;/h2&gt; &lt;content select="p"&gt;&lt;/content&gt;';
-  &lt;/script&gt;
+  &lt;script&gt;
+  // Get the &lt;div&gt; above.
+  var myContent = document.querySelector('div');
+  // Create a shadow DOM on the &lt;div&gt;
+  var shadowroot = myContent.createShadowRoot();
+  // Insert into the shadow DOM a new heading and
+  // part of the original content: the &lt;p&gt; tag.
+  shadowroot.innerHTML =
+   '&lt;h2&gt;Inserted Heading&lt;/h2&gt; &lt;content select="p"&gt;&lt;/content&gt;';
+  &lt;/script&gt;
 
   &lt;/body&gt;
 &lt;/html&gt;
@@ -96,7 +96,7 @@ original_slug: Web/HTML/Element/conteúdo
 
 <ul>
  <li><a href="/en-US/docs/Web/Web_Components">Web Components</a></li>
- <li>{{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}</li>
+ <li>{{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}</li>
 </ul>
 
 <div>{{HTMLRef}}</div>
