@@ -19,32 +19,32 @@ browser-compat: api.BackgroundFetchManager
 
 Довольно часто, когда веб-приложение требует от пользователя скачивания больших файлов, это создает проблему, поскольку пользователю необходимо оставаться подключенным к странице до завершения скачивания. Если же соединение пропадает, например пользователь закрыват вкладку или уходит со страницы, то скачивание останавливается.
 
-The {{domxref("Background Synchronization API")}} provides a way for service workers to defer processing until a user is connected; however it can't be used for long running tasks such as downloading a large file. Background Sync requires that the service worker stays alive until the fetch is completed, and to conserve battery life and to prevent unwanted tasks happening in the background the browser will at some point terminate the task.
+{{domxref("Background Synchronization API")}} предоставляет сервис-воркерам отложить обработку до тех пор, пока пользователь не подключится; однако такой подход не может быть использован для длительных задач, таких как скачивание больших файлов. Background Sync требует чтобы сервис-воркер оставался активным до завершения запроса, но для экономии заряда батареии и предотвращения возникновения нежелательных задач, выполняемых в фоновом режиме, браузер в какой-то момент завершит задачу.
 
-The Background Fetch API solves this problem. It creates a way for a web developer to tell the browser to perform some fetches in the background, for example when the user clicks a button to download a video file. The browser then performs the fetches in a user-visible way, displaying progress to the user and giving them a method to cancel the download. Once the download is complete the browser then opens the service worker, at which point your application can do something with the response if required.
+Background Fetch API решает это проблему. Он позволяет веб-разработчику сообщать браузеру, что некоторые запросы нужно выполнять в фоновом режиме, например, когда пользователь нажимает на кнопку "скачать видеофайл". Затем браузер выполняет запрос "видимым" для пользователя способом, отображая прогресс и предоставляя способ отменить скачивание. После завершения загрузки браузер открывает сервис-воркер, и ваше приложение может, по необходимости, сделать что-то с ответом.
 
-The Background Fetch API will enable the fetch to happen if the user starts the process while offline. Once they are connected it will begin. If the user goes off line, the process pauses until the user is on again.
+Background Fetch API позволит выполнить запрос, если пользователь начал процесс в автономном режиме. Как только соединение будет установлено, Background Fetch API начнёт выполнение. Если пользователь переходит в автономный режим, процесс приостанавливается до тех пор, пока пользователь не подключится снова.
 
-## Interfaces
+## Интерфейсы
 
 - {{domxref("BackgroundFetchManager")}}
-  - : A map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.
+  - : Коллекция пар ключ/значение, где ключи это идентификаторы фоновых запросов, а значения - объекты {{domxref("BackgroundFetchRegistration")}}.
 - {{domxref("BackgroundFetchRegistration")}}
-  - : Represents a Background Fetch.
+  - : Представляет фоновый запрос.
 - {{domxref("BackgroundFetchRecord")}}
-  - : Represents an individual fetch request and response.
+  - : Представляет отдельный запрос и ответ.
 - {{domxref("BackgroundFetchEvent")}}
-  - : The event type passed to `onbackgroundfetchabort` and `onbackgroundfetchclick`.
+  - : Тип события, который передаётся в `onbackgroundfetchabort` и `onbackgroundfetchclick`.
 - {{domxref("BackgroundFetchUpdateUIEvent")}}
-  - : The event type passed to `onbackgroundfetchsuccess` and `onbackgroundfetchfail`.
+  - : Тип события, который передаётся в `onbackgroundfetchsuccess` и `onbackgroundfetchfail`.
 
-## Examples
+## Примеры
 
-Before using Background Fetch, check for browser support.
+Перед использованием Background Fetch проверьте браузерную совместимость.
 
 ```css
 if (!('BackgroundFetchManager' in self)) {
-  // Provide fallback downloading.
+  // Обеспечьте резервный способ загрузки
 }
 ```
 
