@@ -45150,12 +45150,6 @@
       "xgqfrms"
     ]
   },
-  "conflicting/Web/API/BroadcastChannel/message_event": {
-    "modified": "2020-10-15T22:26:22.393Z",
-    "contributors": [
-      "Spikef"
-    ]
-  },
   "conflicting/Web/API/BroadcastChannel/messageerror_event": {
     "modified": "2020-10-15T22:26:22.343Z",
     "contributors": [
