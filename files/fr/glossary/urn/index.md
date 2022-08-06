@@ -15,4 +15,4 @@ Un URN (Uniform Resource Name) est un {{Glossary("URI")}} dans un format standar
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Uniform Resource Name", "URN")}} sur Wikipédia
+- [URN](https://fr.wikipedia.org/wiki/Uniform_Resource_Name) sur Wikipédia

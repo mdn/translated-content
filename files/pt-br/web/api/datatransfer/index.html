@@ -5,7 +5,7 @@ translation_of: Web/API/DataTransfer
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>{{ gecko_minversion_header("1.9") }} O objeto <code>DataTransfer</code> é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja <a class="internal" href="/En/DragDrop/Drag_and_Drop" title="En/DragDrop/Drag and Drop">Drag and Drop</a>.</p>
+<p>{{ gecko_minversion_header("1.9") }} O objeto <code>DataTransfer</code> é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar). Ele pode guardar um ou mais itens de dados, cada um de um ou mais tipos de dados. Para mais informações sobre drag e drop (arrastar e soltar), veja <a class="internal" href="/En/DragDrop/Drag_and_Drop" title="En/DragDrop/Drag and Drop">Drag and Drop</a>.</p>
 
 <p>Esse objeto está disponível pela propriedade <code>dataTransfer</code> de todos os eventos de drag. Ele não pode ser criado separadamente.</p>
 
@@ -94,9 +94,9 @@ translation_of: Web/API/DataTransfer
 
 <p>Para os eventos <code>dragenter</code> e <code>dragover</code>, o <code>dropEffect</code> será inicializado com base na ação que o usuário está solicitando. Como isso é determinado é específico da plataforma, mas, normalmente o usuário pode pressionar teclas de modificação, como a tecla alt, para ajustar qual ação é desejada. Com um manipulador de evento para os eventos <code>dragenter</code> e <code>dragover, o dropEffect</code> deverá ser modificado se a ação desejada é diferente da ação que o usuário está solicitando.</p>
 
-<p>Para os eventos <code>dragstart, drag,</code> e <code>dragleave</code>, o <code>dropEffect</code> será inicializado como "none". Qualquer valor atribuído à <code>dropEffect</code> será definido, mas o valor não será usado para nada.</p>
+<p>Para os eventos <code>dragstart, drag,</code> e <code>dragleave</code>, o <code>dropEffect</code> será inicializado como "none". Qualquer valor atribuído à <code>dropEffect</code> será definido, mas o valor não será usado para nada.</p>
 
-<p>Para os eventos <code>drop</code> e <code>dragend</code>, o <code>dropEffect</code> será inicializado para a ação que foi desejada, que será o valor que o <code>dropEffect</code> tinha depois do último evento de <code>dragenter</code> ou <code>dragover</code>. Em um evento de dragend, por exemplo, se a o <code>dropEffect</code> desejado for "move", então os dados que estão sendo arrastados deverão ser removidos da origem.</p>
+<p>Para os eventos <code>drop</code> e <code>dragend</code>, o <code>dropEffect</code> será inicializado para a ação que foi desejada, que será o valor que o <code>dropEffect</code> tinha depois do último evento de <code>dragenter</code> ou <code>dragover</code>. Em um evento de dragend, por exemplo, se a o <code>dropEffect</code> desejado for "move", então os dados que estão sendo arrastados deverão ser removidos da origem.</p>
 
 <p>Valores possíveis:</p>
 
@@ -107,22 +107,22 @@ translation_of: Web/API/DataTransfer
  <li><strong>none</strong>: O ítem não pode ser solto.</li>
 </ul>
 
-<p>Atribuindo qualquer outro valor não terá efeito e o valor antigo será mantido.</p>
+<p>Atribuindo qualquer outro valor não terá efeito e o valor antigo será mantido.</p>
 
 <h3 id="effectAllowed.28.29" name="effectAllowed.28.29">effectAllowed</h3>
 
-<p>Especifica os efeitos que são permitidos para esse drag. Você pode definir isso no evento <code>dragstart</code> para definir os efeitos desejados para a origem. Com os eventos <code>dragenter</code> e <code>dragover</code>, o <code>effectAllowed</code> será definido para qualquer que seja o valor que foi atribuído durante o evento <code>dragstart</code>. Isso pode ser usado para determinar quais efeitos são permitidos. Atribuindo um valor para <code>effectAllowed</code> nos outros eventos, exceto <code>dragstart</code>, não terá efeito.</p>
+<p>Especifica os efeitos que são permitidos para esse drag. Você pode definir isso no evento <code>dragstart</code> para definir os efeitos desejados para a origem. Com os eventos <code>dragenter</code> e <code>dragover</code>, o <code>effectAllowed</code> será definido para qualquer que seja o valor que foi atribuído durante o evento <code>dragstart</code>. Isso pode ser usado para determinar quais efeitos são permitidos. Atribuindo um valor para <code>effectAllowed</code> nos outros eventos, exceto <code>dragstart</code>, não terá efeito.</p>
 
 <p>Valores possíveis:</p>
 
 <ul>
- <li><strong>copy</strong>: Uma cópia do ítem de origem pode ser feita na nova localização.</li>
+ <li><strong>copy</strong>: Uma cópia do ítem de origem pode ser feita na nova localização.</li>
  <li><strong>move</strong>: Um itém pode ser movido para a nova localização.</li>
  <li><strong>link</strong>: Um link pode ser estabelicido com a origem na nova localização.</li>
- <li><strong>copyLink</strong>: As operações de copy e link são permitidas.</li>
- <li><strong>copyMove</strong>: As operações de copy e move são permitidas.</li>
- <li><strong>linkMove</strong>: As operações de link e move são permitidas.</li>
- <li><strong>all</strong>: Todas as operações são permitidas. </li>
+ <li><strong>copyLink</strong>: As operações de copy e link são permitidas.</li>
+ <li><strong>copyMove</strong>: As operações de copy e move são permitidas.</li>
+ <li><strong>linkMove</strong>: As operações de link e move são permitidas.</li>
+ <li><strong>all</strong>: Todas as operações são permitidas. </li>
  <li><strong>none</strong>: O ítem não pode ser solto.</li>
  <li><strong>uninitialized</strong>: O valor padrão quando o efeito não foi definido, equivalente a all.</li>
 </ul>
@@ -140,19 +140,19 @@ translation_of: Web/API/DataTransfer
 <p>These examples dump the list of files dragged into the browser window.</p>
 
 <ul>
- <li>(Firefox only):  <a class="external" href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
- <li>(All browsers):  <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
+ <li>(Firefox only):  <a class="external" href="http://jsfiddle.net/9C2EF/">http://jsfiddle.net/9C2EF/</a></li>
+ <li>(All browsers):  <a class="external" href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
 </ul>
 
 <h3 id="types.28.29" name="types.28.29">types</h3>
 
 <p>Guarda uma lista dos tipos de formato dos dados que estão armazenados para o primeiro ítem, na mesma ordem que os dados foram adicionados. Uma lista vazia será retornada caso nenhum dado tenha sido adicionado.</p>
 
-<p>{{ h3_gecko_minversion("mozCursor", "1.9.1", "mozCursor") }}</p>
+<h3>mozCursor</h3>
 
-<p>O estado do cursor de drag. Isto é usado principalmente para controlar o cursor durante a guia de drag.</p>
+<p>O estado do cursor de drag. Isto é usado principalmente para controlar o cursor durante a guia de drag.</p>
 
-<div class="note"><strong>Nota:</strong> Esse método está atualmente implementado somento no Windows.</div>
+<div class="note"><strong>Nota:</strong> Esse método está atualmente implementado somento no Windows.</div>
 
 <h4 id="Valores_possíveis">Valores possíveis</h4>
 
@@ -163,27 +163,27 @@ translation_of: Web/API/DataTransfer
  <dd>Utiliza o comportamento padrão Gecko, que é definir o cursor para uma seta durante a operação de arrastar.</dd>
 </dl>
 
-<div class="note"><strong>Nota:</strong> Se você especificar qualquer valor diferente de "default", "auto" é assumido.</div>
+<div class="note"><strong>Nota:</strong> Se você especificar qualquer valor diferente de "default", "auto" é assumido.</div>
 
 <h3 id="mozItemCount.28.29" name="mozItemCount.28.29">mozItemCount</h3>
 
 <p>O número de ítens sendo arrastados.</p>
 
-<div class="note"><strong>Nota:</strong> Essa propriedade é específica Gecko.</div>
+<div class="note"><strong>Nota:</strong> Essa propriedade é específica Gecko.</div>
 
 <h3 id="mozSourceNode">mozSourceNode</h3>
 
 <p>{{ gecko_minversion_header("2") }}</p>
 
-<p>O {{ domxref("Node") }} sobre o qual o cursor do mouse estava localizado quando o botão foi pressionado para iniciar a operação de arrastar. O valor é <code>null</code> para drags externos ou se o elmento não pode acessar o node.</p>
+<p>O {{ domxref("Node") }} sobre o qual o cursor do mouse estava localizado quando o botão foi pressionado para iniciar a operação de arrastar. O valor é <code>null</code> para drags externos ou se o elmento não pode acessar o node.</p>
 
-<div class="note"><strong>Nota:</strong> Essa propriedade é específica Gecko.</div>
+<div class="note"><strong>Nota:</strong> Essa propriedade é específica Gecko.</div>
 
 <h3 id="mozItemCount.28.29" name="mozItemCount.28.29">mozUserCancelled</h3>
 
-<p>Essa propriedade é aplicada apenas no evento <code>dragend</code>, e é <code>true</code> se o usuário cancelar a operação de arrastar pressionando escape (esc). Será <code>false</code> em qualquer outro caso, incluindo se a operação de arrastar falhar por algum motivo, por exemplo devido a ação de soltar em um local inválido.</p>
+<p>Essa propriedade é aplicada apenas no evento <code>dragend</code>, e é <code>true</code> se o usuário cancelar a operação de arrastar pressionando escape (esc). Será <code>false</code> em qualquer outro caso, incluindo se a operação de arrastar falhar por algum motivo, por exemplo devido a ação de soltar em um local inválido.</p>
 
-<div class="note"><strong>Nota:</strong> Essa propriedade é específica Gecko.</div>
+<div class="note"><strong>Nota:</strong> Essa propriedade é específica Gecko.</div>
 
 <h2 id="Methods" name="Methods">Methods</h2>
 
@@ -334,7 +334,7 @@ translation_of: Web/API/DataTransfer
 
 <p>Data should be added in order of preference, with the most specific format added first and the least specific format added last. If data of the given format already exists, it is replaced in the same position as the old data.</p>
 
-<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an {{ interface("nsISupports") }}.</p>
+<p>The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an <code>nsISupports</code>.</p>
 
 <div class="note"><strong>Note:</strong> This method is Gecko-specific.</div>
 

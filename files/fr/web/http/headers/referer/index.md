@@ -15,7 +15,7 @@ L'en-tête de requête **`Referer`** contient l'adresse de la page web précéde
 
 > **Attention :** Bien que cet en-tête puisse être utilisé à de nombreuses fins légitimes, il peut avoir des effets indésirables sur la sécurité et la vie privée. Voir la page [Questions de sécurité et de vie privée : quid de l'en-tête `referer`](fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pour plus d'informations et des méthodes d'atténuation.
 
-Note : le terme `referer` est orthographié ainsi bien qu'il s'agisse d'une erreur à partir du mot anglais "_referrer_". Voir {{interwiki("wikipedia", "HTTP_referer", "L'en-tête <code>referer</code> HTTP sur Wikipédia")}} pour plus de détails.
+Note : le terme `referer` est orthographié ainsi bien qu'il s'agisse d'une erreur à partir du mot anglais "_referrer_". Voir [la page Wikipédia sur le référent et la note sur la graphie de <i lang="en">referer</i>](https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rent_(informatique)#cite_ref-3) pour plus de détails.
 
 Un en-tête `Referer` n'est pas envoyé par les navigateurs si :
 
@@ -41,7 +41,9 @@ Un en-tête `Referer` n'est pas envoyé par les navigateurs si :
 
 ## Syntaxe
 
-    Referer: <url>
+```
+Referer: <url>
+```
 
 ## Directives
 
@@ -50,7 +52,9 @@ Un en-tête `Referer` n'est pas envoyé par les navigateurs si :
 
 ## Exemples
 
-    Referer: https://developer.mozilla.org/fr/docs/Web/JavaScript
+```
+Referer: https://developer.mozilla.org/fr/docs/Web/JavaScript
+```
 
 ## Spécifications
 
@@ -64,5 +68,5 @@ Un en-tête `Referer` n'est pas envoyé par les navigateurs si :
 
 ## Voir aussi
 
-- {{interwiki("wikipedia", "HTTP_referer", "L'en-tête HTTP <code>referer</code> sur Wikipédia")}}
+- [Référent](https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rent_(informatique)) sur Wikipédia
 - {{HTTPHeader("Referrer-Policy")}}

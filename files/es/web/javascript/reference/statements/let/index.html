@@ -11,13 +11,14 @@ tags:
   - sentencias
 translation_of: Web/JavaScript/Reference/Statements/let
 original_slug: Web/JavaScript/Referencia/Sentencias/let
+browser-compat: javascript.statements.let
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>La instrucción <strong><code>let</code></strong> declara una variable de alcance local con ámbito de bloque<font><font>(</font></font><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/block">block </a>scope<font><font>)</font></font>, la cual, opcionalmente, puede ser inicializada con algún valor.</p>
+<p>La instrucción <strong><code>let</code></strong> declara una variable de alcance local con ámbito de bloque<font><font>(</font></font><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/block">block </a>scope<font><font>)</font></font>, la cual, opcionalmente, puede ser inicializada con algún valor.</p>
 
 <div class="warning">
-<p class="p1">La palabra reservada <strong><code><span class="s1">let </span></code></strong>en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta <code><span class="s1">&lt;script type="application/javascript;version=1.7"&gt;</span></code> (o de una version mayor). Las etiquetas <a href="https://developer.mozilla.org/en-US/docs/XUL">XUL</a> tienen acceso a esas características sin necesidad de dicho bloque.  Es necesario tomar en cuenta que esta es una característica <s>no estándar</s> <u>que ya se ha hecho actualmente estándar</u>, <s>esto</s> <u>pero</u> puede crear conflictos con otros navegadores<u>, ya que fue una característica no estándar.</u></p>
+<p class="p1">La palabra reservada <strong><code><span class="s1">let </span></code></strong>en Mozilla Firefox 44 y anteriores, está solo disponible para bloques de código en HTML que esten envueltos en una etiqueta <code><span class="s1">&lt;script type="application/javascript;version=1.7"&gt;</span></code> (o de una version mayor). Las etiquetas <a href="https://developer.mozilla.org/en-US/docs/XUL">XUL</a> tienen acceso a esas características sin necesidad de dicho bloque.  Es necesario tomar en cuenta que esta es una característica <s>no estándar</s> <u>que ya se ha hecho actualmente estándar</u>, <s>esto</s> <u>pero</u> puede crear conflictos con otros navegadores<u>, ya que fue una característica no estándar.</u></p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -35,13 +36,13 @@ original_slug: Web/JavaScript/Referencia/Sentencias/let
 
 <h2 id="Descripción">Descripción</h2>
 
-<p><strong><code>let</code> </strong>te permite declarar variables limitando su alcance (<em>scope</em>) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave <code>var</code> la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre <code>var</code> y <code>let</code> <span class="VIiyi" lang="es"><span class="ChMk0b JLqJ4b"><span>es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).</span></span></span></p>
+<p><strong><code>let</code> </strong>te permite declarar variables limitando su alcance (<em>scope</em>) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave <code>var</code> la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre <code>var</code> y <code>let</code> <span class="VIiyi" lang="es"><span class="ChMk0b JLqJ4b"><span>es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).</span></span></span></p>
 
 <p>Al igual que <code>const</code>, <code>let </code>no crea propiedades del objeto se declara globalmente (en el alcance más alto).</p>
 
-<h3 id="Alcance_scope_a_nivel_de_bloque_con_let">Alcance (<em>scope</em>) a nivel de bloque con <code>let</code></h3>
+<h3 id="Alcance_scope_a_nivel_de_bloque_con_let">Alcance (<em>scope</em>) a nivel de bloque con <code>let</code></h3>
 
-<p>Usar la palabra reservada <code>let</code> para definir variables dentro de un bloque.</p>
+<p>Usar la palabra reservada <code>let</code> para definir variables dentro de un bloque.</p>
 
 <pre class="brush:js notranslate">if (x &gt; y) {
   let gamma = 12.7 + y;
@@ -49,12 +50,12 @@ original_slug: Web/JavaScript/Referencia/Sentencias/let
 }
 </pre>
 
-<p>Es posible usar definiciones <code>let</code> para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver <a href="/en-US/docs/Security_best_practices_in_extensions" title="en-US/docs/Security_best_practices_in_extensions">Mejores prácticas de seguridad en extensiones</a>.)</p>
+<p>Es posible usar definiciones <code>let</code> para asociar código en extensiones con un pseudo-espacio-de-nombre (pseudo-namespace). (Ver <a href="/en-US/docs/Security_best_practices_in_extensions" title="en-US/docs/Security_best_practices_in_extensions">Mejores prácticas de seguridad en extensiones</a>.)</p>
 
 <pre class="brush:js notranslate">let Cc = Components.classes, Ci = Components.interfaces;
 </pre>
 
-<p><code>let</code> puede ser útil para escribir código más limpio cuando usamos funciones internas.</p>
+<p><code>let</code> puede ser útil para escribir código más limpio cuando usamos funciones internas.</p>
 
 <pre class="brush:js notranslate">var list = document.getElementById("list");
 
@@ -62,7 +63,7 @@ for (var i = 1; i &lt;= 5; i++) {
   var item = document.createElement("LI");
   item.appendChild(document.createTextNode("Item " + i));
 
-  let j = i;
+  let j = i;
   item.onclick = function (ev) {
     console.log("Item " + j + " is clicked.");
   };
@@ -70,11 +71,11 @@ for (var i = 1; i &lt;= 5; i++) {
 }
 </pre>
 
-<p>El ejemplo anterior trabaja como se espera porque las cinco instancias de la función (anónima) interna hacen referencia a cinco diferentes instancias de la variable <code>j</code>. Nótese que esto no funcionaría como se espera si reemplazamos <code>let</code> con <code>var</code> o si removemos la variable <code>j</code> y simplemente usamos la variable <code>i</code> dentro de la función interna.</p>
+<p>El ejemplo anterior trabaja como se espera porque las cinco instancias de la función (anónima) interna hacen referencia a cinco diferentes instancias de la variable <code>j</code>. Nótese que esto no funcionaría como se espera si reemplazamos <code>let</code> con <code>var</code> o si removemos la variable <code>j</code> y simplemente usamos la variable <code>i</code> dentro de la función interna.</p>
 
 <h4 id="Reglas_de_alcance">Reglas de alcance</h4>
 
-<p>Variables declaradas por <code>let</code> tienen por alcance el bloque en el que se han definido, así mismo, como en cualquier bloque interno. De esta manera, <code>let</code> trabaja muy parecido a <code>var</code>. La más notable diferencia es que el alcance de una variable <code>var</code> es la función contenedora:</p>
+<p>Variables declaradas por <code>let</code> tienen por alcance el bloque en el que se han definido, así mismo, como en cualquier bloque interno. De esta manera, <code>let</code> trabaja muy parecido a <code>var</code>. La más notable diferencia es que el alcance de una variable <code>var</code> es la función contenedora:</p>
 
 <pre class="brush:js notranslate">function varTest() {
   var x = 31;
@@ -98,7 +99,7 @@ varTest();
 letTest();
 </pre>
 
-<p>En el nivel superior de un programa y funciones, <code>let</code> , a diferencia de <code>var</code>, <strong>no crea</strong> una propiedad en el objeto global, por ejemplo:</p>
+<p>En el nivel superior de un programa y funciones, <code>let</code> , a diferencia de <code>var</code>, <strong>no crea</strong> una propiedad en el objeto global, por ejemplo:</p>
 
 <pre class="brush:js notranslate">var x = 'global';
 let y = 'global';
@@ -108,21 +109,21 @@ console.log(this.y); // undefined
 
 <p>La salida de este código desplegaría "global" una vez.</p>
 
-<h3 id="Zona_muerta_temporal_y_errores_con_let">Zona muerta temporal y errores con <code>let<a id="muerta" name="muerta"></a></code></h3>
+<h3 id="Zona_muerta_temporal_y_errores_con_let">Zona muerta temporal y errores con <code>let<a id="muerta" name="muerta"></a></code></h3>
 
-<p>La <strong>redeclaración</strong> de la misma variable bajo un mismo <font><font><a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments">ámbito léxico</a> </font></font>terminaría en un error de tipo <code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError" title="SyntaxError">SyntaxError</a></code>. Esto también es <strong>extensible</strong> si usamos <code>var</code> dentro del <font><font>ámbito léxico</font></font>. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible  solo con <code>var.</code></p>
+<p>La <strong>redeclaración</strong> de la misma variable bajo un mismo <font><font><a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments">ámbito léxico</a> </font></font>terminaría en un error de tipo <code><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError" title="SyntaxError">SyntaxError</a></code>. Esto también es <strong>extensible</strong> si usamos <code>var</code> dentro del <font><font>ámbito léxico</font></font>. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible  solo con <code>var.</code></p>
 
 <pre class="brush: js notranslate">if (x) {
   let foo;
   let foo; // Terminamos con un SyntaxError.
 }
 if (x) {
-  let foo;
-  var foo; // Terminamos con un SyntaxError.
+  let foo;
+  var foo; // Terminamos con un SyntaxError.
 }
 </pre>
 
-<p>En ECMAScript 2015, <code>let</code> <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description">no eleva</a> la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con <code>let</code> (<code>let foo</code>) antes de su declaración, terminaríamos con un error de tipo <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError" title="TypeError">ReferenceError</a> </code>(al contrario de la variable declarada con <code>var</code>, que tendrá el valor <code>undefined</code>), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.</p>
+<p>En ECMAScript 2015, <code>let</code> <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description">no eleva</a> la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con <code>let</code> (<code>let foo</code>) antes de su declaración, terminaríamos con un error de tipo <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError" title="TypeError">ReferenceError</a> </code>(al contrario de la variable declarada con <code>var</code>, que tendrá el valor <code>undefined</code>), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.</p>
 
 <pre class="notranslate"><code>function do_something() {
   console.log(bar); // undefined
@@ -131,7 +132,7 @@ if (x) {
   let foo = 2;
 }</code></pre>
 
-<p>Es posible encontrar errores en bloques de control <a href="/en-US/docs/JavaScript/Reference/Statements/switch" title="switch"><code>switch</code></a> debido a que solamente existe un block subyacente.</p>
+<p>Es posible encontrar errores en bloques de control <a href="/en-US/docs/JavaScript/Reference/Statements/switch" title="switch"><code>switch</code></a> debido a que solamente existe un block subyacente.</p>
 
 <pre class="brush: js notranslate">switch (x) {
   case 0:
@@ -140,7 +141,7 @@ if (x) {
 
   case 1:
     let foo; // Terminamos con un error de tipo SyntaxError.
-             // esto debido a la redeclaracion
+             // esto debido a la redeclaracion
     break;
 }</pre>
 
@@ -163,7 +164,7 @@ prueba();</code>
 
 <h3 id="let_vs_var"><code>let</code> vs <code>var</code></h3>
 
-<p>Cuando usamos <code>let</code> dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia con <code>var</code>, cuyo alcance reside dentro de la función donde ha sido declarada la variable.</p>
+<p>Cuando usamos <code>let</code> dentro de un bloque, podemos limitar el alcance de la variable a dicho bloque. Notemos la diferencia con <code>var</code>, cuyo alcance reside dentro de la función donde ha sido declarada la variable.</p>
 
 <pre class="brush: js notranslate">var a = 5;
 var b = 10;
@@ -179,7 +180,7 @@ if (a === 5) {
 console.log(a); // 5
 console.log(b); // 1</pre>
 
-<h3 id="let_en_bucles"><code>let</code> en bucles</h3>
+<h3 id="let_en_bucles"><code>let</code> en bucles</h3>
 
 <p>Es posible usar la palabra reservada <code>let</code> para enlazar variables con alcance local dentro del alcance de un bucle en lugar de usar una variable global (definida usando <code>var</code>) para dicho propósito.</p>
 
@@ -190,15 +191,15 @@ console.log(b); // 1</pre>
 console.log(i); // ReferenceError: i is not defined
 </pre>
 
-<h2 id="Extensiones_let_no-estandar">Extensiones <code>let</code> no-estandar</h2>
+<h2 id="Extensiones_let_no-estandar">Extensiones <code>let</code> no-estandar</h2>
 
 <h3 id="Bloques_let">Bloques<code> let</code></h3>
 
 <div class="warning">
-<p>La <strong>sintaxis del bloque y expresion</strong> <code>let</code> es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1023609" rel="noopener" title="FIXED: Remove SpiderMonkey support for let expressions">error 1023609</a> y <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1167029" rel="noopener" title="FIXED: Remove SpiderMonkey support for let blocks">error 1167029</a> para mas detalles.</p>
+<p>La <strong>sintaxis del bloque y expresion</strong> <code>let</code> es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1023609" rel="noopener" title="FIXED: Remove SpiderMonkey support for let expressions">error 1023609</a> y <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1167029" rel="noopener" title="FIXED: Remove SpiderMonkey support for let blocks">error 1167029</a> para mas detalles.</p>
 </div>
 
-<p>Un <strong>bloque <code>let</code></strong> provee una manera de asociar valores con variables dentro del alcance de un bloque sin afectar el valor de variables con nombre similar fuera del bloque.</p>
+<p>Un <strong>bloque <code>let</code></strong> provee una manera de asociar valores con variables dentro del alcance de un bloque sin afectar el valor de variables con nombre similar fuera del bloque.</p>
 
 <h4 id="Sintaxis_2">Sintaxis</h4>
 
@@ -224,15 +225,15 @@ console.log(x + y); // 5
 
 <h4 id="Reglas_de_alcance_2">Reglas de alcance</h4>
 
-<p>El alcance de las variables definidas usando <code>let</code> es el mismo bloque <code>let</code>, así como cualquier bloque interno contenido dentro de el bloque, a menos que esos bloques internos definan variables con el mismo nombre.</p>
+<p>El alcance de las variables definidas usando <code>let</code> es el mismo bloque <code>let</code>, así como cualquier bloque interno contenido dentro de el bloque, a menos que esos bloques internos definan variables con el mismo nombre.</p>
 
-<h3 id="expresiones_let">expresiones <code>let</code></h3>
+<h3 id="expresiones_let">expresiones <code>let</code></h3>
 
 <div class="warning">
-<p><code>Soporte de <strong>expresiones</strong> let</code> ha sido removido en Gecko 41 ({{bug(1023609)}}).</p>
+<p><code>Soporte de <strong>expresiones</strong> let</code> ha sido removido en Gecko 41 ({{bug(1023609)}}).</p>
 </div>
 
-<p>Una <strong>expresion <code>let</code></strong> permite establecer variables con alcance dentro de una expresión.</p>
+<p>Una <strong>expresion <code>let</code></strong> permite establecer variables con alcance dentro de una expresión.</p>
 
 <h4 id="Sintaxis_3">Sintaxis</h4>
 
@@ -257,136 +258,11 @@ console.log(a); // 5</pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentarios</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Definición initial. No especifica expresiones ni declaraciones let.</td>
-  </tr>
- </tbody>
-</table>
+{{Specification}}
 
 <h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-{{Compat("javascript.statements.let")}}
-
-<h2 id="CompatibilityTable"><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">{{CompatibilityTable}}</span></h2>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>
-    <p class="p1">{{CompatChrome(41.0)}}</p>
-   </td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }} [1]</td>
-   <td>11</td>
-   <td>17</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Zona muerta temporal</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop("35") }} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Expresión<code> let</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }}-{{ CompatGeckoDesktop("40") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Bloque<code> let</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatUnknown}}</td>
-   <td>
-    <p class="p1">{{CompatChrome(41.0)}}</p>
-   </td>
-   <td>{{ CompatGeckoMobile("1.8.1") }} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Zona muerta temporal</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("35") }} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Expresión<code> let</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }}-{{ CompatGeckoMobile("40") }}[1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Bloque<code> let</code> {{non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_específicas_a_Firefox">Notas específicas a Firefox</h3>
-
-<ul>
- <li>[1]: Solo disponible para bloques de codigo HTML dentro de una etiqueta <code>&lt;script&gt; type="application/javascript;version=1.7"&gt;</code> (o de una versión mayor). Es necesario tomar en cuenta que esta es una característica no estándar, esto puede crear conflictos con otros navegadores. Las etiquetas <a href="https://developer.mozilla.org/en-US/docs/XUL">XUL</a> tienen acceso a esas características sin necesidad de dicho bloque. Ver<span style="line-height: 1.5;">{{bug(932513)}}.</span></li>
- <li>Conformidad con ES2015 para <code>let</code> en SpIderMonkey es monitoreado en {{bug(950547)}} y extensiones no-standar seran eliminadas en el futuro {{bug(1023609)}}.</li>
-</ul>
+{{Compat}}
 
 <h2 id="Ver_también">Ver también</h2>
 

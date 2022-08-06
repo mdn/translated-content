@@ -18,18 +18,18 @@ original_slug: Web/API/Fetch_API/Utilizando_Fetch
 <p>{{DefaultAPISidebar("Fetch API")}}{{ SeeCompatTable }}</p>
 
 <div class="summary">
-<p>La <a href="/en-US/docs/Web/API/Fetch_API">API Fetch</a> proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas. También provee un método global {{domxref("GlobalFetch.fetch","fetch()")}} que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.</p>
+<p>La <a href="/en-US/docs/Web/API/Fetch_API">API Fetch</a> proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas. También provee un método global {{domxref("GlobalFetch.fetch","fetch()")}} que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.</p>
 </div>
 
-<p>Este tipo de funcionalidad se conseguía previamente haciendo uso de {{domxref("XMLHttpRequest")}}. Fetch proporciona una alternativa mejor que puede ser empleada fácilmente por otras tecnologías como {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch también aporta un único lugar lógico en el que definir otros conceptos relacionados con HTTP como CORS y extensiones para HTTP.</p>
+<p>Este tipo de funcionalidad se conseguía previamente haciendo uso de {{domxref("XMLHttpRequest")}}. Fetch proporciona una alternativa mejor que puede ser empleada fácilmente por otras tecnologías como {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch también aporta un único lugar lógico en el que definir otros conceptos relacionados con HTTP como CORS y extensiones para HTTP.</p>
 
-<p>La especificación fetch difiere de <code>JQuery.ajax()</code> en dos formas principales:</p>
+<p>La especificación fetch difiere de <code>JQuery.ajax()</code> en dos formas principales:</p>
 
 <ul>
  <li>
-  <p>El objeto Promise devuelto desde <code>fetch()</code> <strong>no será rechazado con un estado de error HTTP</strong> incluso si la respuesta es un error HTTP 404 o 500. En cambio, este se resolverá normalmente (con un estado <code>ok</code> configurado a false), y  este solo sera rechazado ante un fallo de red o si algo impidió completar la solicitud.</p>
+  <p>El objeto Promise devuelto desde <code>fetch()</code> <strong>no será rechazado con un estado de error HTTP</strong> incluso si la respuesta es un error HTTP 404 o 500. En cambio, este se resolverá normalmente (con un estado <code>ok</code> configurado a false), y  este solo sera rechazado ante un fallo de red o si algo impidió completar la solicitud.</p>
  </li>
- <li>Por defecto, <code>fetch</code> no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, <em>credentials</em> de la opción <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init</a> deberan ser configuradas). Desde <a href="https://github.com/whatwg/fetch/pull/585">el 25 de agosto de 2017</a>. La especificación cambió la politica por defecto de las credenciales a <code>same-origin</code>. Firefox cambió desde la versión 61.0b13.</li>
+ <li>Por defecto, <code>fetch</code> no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantentener una sesión de usuario (para mandar cookies, <em>credentials</em> de la opción <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init</a> deberan ser configuradas). Desde <a href="https://github.com/whatwg/fetch/pull/585">el 25 de agosto de 2017</a>. La especificación cambió la politica por defecto de las credenciales a <code>same-origin</code>. Firefox cambió desde la versión 61.0b13.</li>
 </ul>
 
 <p>Una petición básica de <code>fetch</code> es realmente simple de realizar. Eche un vistazo al siguente código:</p>
@@ -38,19 +38,19 @@ original_slug: Web/API/Fetch_API/Utilizando_Fetch
   .then(response =&gt; response.json())
   .then(data =&gt; console.log(data));</pre>
 
-<p>Aquí estamos recuperando un archivo JSON a través de red e imprimiendo en la consola. El uso de <code>fetch()</code> más simple toma un argumento (la ruta del recurso que quieres obtener) y devuelve un objeto Promise conteniendo la respuesta, un objeto {{domxref("Response")}}.</p>
+<p>Aquí estamos recuperando un archivo JSON a través de red e imprimiendo en la consola. El uso de <code>fetch()</code> más simple toma un argumento (la ruta del recurso que quieres obtener) y devuelve un objeto Promise conteniendo la respuesta, un objeto {{domxref("Response")}}.</p>
 
 <p>Esto es, por supuesto, una respuesta HTTP no el archivo JSON. Para extraer el contenido en el cuerpo del JSON desde la respuesta, usamos el método {{domxref("Body.json","json()")}} (definido en el <a href="https://es.wikipedia.org/wiki/Mixin">mixin</a> de {{domxref("Body")}}, el cual está implementado por los objetos {{domxref("Request")}} y {{domxref("Response")}}).</p>
 
 <div class="note">
-<p><strong>Nota</strong>: El mixin de <code>Body</code> tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease {{anch("Body")}} para más información.</p>
+<p><strong>Nota</strong>: El mixin de <code>Body</code> tambien tiene metodos parecidos para extraer otros tipos de contenido del cuerpo. Vease <a href="#body">Body</a> para más información.</p>
 </div>
 
 <p>Las peticiones de Fetch son controladas por la directiva de <code>connect-src</code> de <a href="https://developer.mozilla.org/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> en vez de la directiva de los recursos que se han devuelto.</p>
 
 <h3 id="Suministrando_opciones_de_petición">Suministrando opciones de petición</h3>
 
-<p>El método <code>fetch()</code> puede aceptar opcionalmente un segundo parámetro, un objeto <code>init</code> que permite controlar un numero de diferentes ajustes:</p>
+<p>El método <code>fetch()</code> puede aceptar opcionalmente un segundo parámetro, un objeto <code>init</code> que permite controlar un numero de diferentes ajustes:</p>
 
 <p>Vea {{domxref("GlobalFetch.fetch","fetch()")}}, para ver todas las opciones disponibles y más detalles.</p>
 
@@ -78,18 +78,18 @@ postData('https://example.com/answer', { answer: 42 })
     console.log(data); // JSON data parsed by `data.json()` call
   });</pre>
 
-<p>Tenga en cuenta que  <code>mode: "no-cors"</code> solo permite un conjunto limitado de encabezados en la solicitud:</p>
+<p>Tenga en cuenta que  <code>mode: "no-cors"</code> solo permite un conjunto limitado de encabezados en la solicitud:</p>
 
 <ul>
  <li><code>Accept</code></li>
  <li><code>Accept-Language</code></li>
  <li><code>Content-Language</code></li>
- <li><code>Content-Type</code> with a value of <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, or <code>text/plain</code></li>
+ <li><code>Content-Type</code> with a value of <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, or <code>text/plain</code></li>
 </ul>
 
 <h3 id="Comprobando_que_la_petición_es_satisfactoria">Comprobando que la petición es satisfactoria</h3>
 
-<p>Una petición promise {{domxref("GlobalFetch.fetch","fetch()")}} será rechazada con {{jsxref("TypeError")}} cuando se encuentre un error de red, aunque esto normalmente significa problemas de permisos o similares — por ejemplo, un 404 no constituye un error de red. Una forma precisa de comprobar que la petición <code>fetch()</code> es satisfactoria pasa por comprobar si la promesa ha sido resuelta, además de comprobar que la propiedad {{domxref("Response.ok")}} tiene el valor <code>true</code> que indica que el estado de la petición HTTP es OK (código 200-299). El código sería algo así:</p>
+<p>Una petición promise {{domxref("GlobalFetch.fetch","fetch()")}} será rechazada con {{jsxref("TypeError")}} cuando se encuentre un error de red, aunque esto normalmente significa problemas de permisos o similares — por ejemplo, un 404 no constituye un error de red. Una forma precisa de comprobar que la petición <code>fetch()</code> es satisfactoria pasa por comprobar si la promesa ha sido resuelta, además de comprobar que la propiedad {{domxref("Response.ok")}} tiene el valor <code>true</code> que indica que el estado de la petición HTTP es OK (código 200-299). El código sería algo así:</p>
 
 <pre class="brush: js notranslate">fetch('flores.jpg').then(function(response) {
   if(response.ok) {
@@ -107,7 +107,7 @@ postData('https://example.com/answer', { answer: 42 })
 
 <h3 id="Proporcionando_tu_propio_objeto_Request">Proporcionando tu propio objeto Request</h3>
 
-<p>En lugar de pasar la ruta al recurso que deseas solicitar a la llamada del método <code>fetch()</code>, puedes crear un objeto de petición utilizando el constructor {{domxref("Request.Request","Request()")}}, y pasarlo como un argumento del método <code>fetch()</code>:</p>
+<p>En lugar de pasar la ruta al recurso que deseas solicitar a la llamada del método <code>fetch()</code>, puedes crear un objeto de petición utilizando el constructor {{domxref("Request.Request","Request()")}}, y pasarlo como un argumento del método <code>fetch()</code>:</p>
 
 <pre class="brush: js notranslate">var myHeaders = new Headers();
 
@@ -127,14 +127,14 @@ fetch(myRequest)
   myImage.src = objectURL;
 });</pre>
 
-<p><code>Request()</code> acepta exactamente los mismos parámetros que el método <code>fetch()</code>. Puedes incluso pasar un objeto de petición existente para crear una copia del mismo:</p>
+<p><code>Request()</code> acepta exactamente los mismos parámetros que el método <code>fetch()</code>. Puedes incluso pasar un objeto de petición existente para crear una copia del mismo:</p>
 
 <pre class="brush: js notranslate">var anotherRequest = new Request(myRequest, myInit);</pre>
 
-<p>Esto es muy útil ya que el cuerpo de las solicitudes y respuestas son de un sólo uso. Haciendo una copia como esta te permite utilizar la petición/respuesta de nuevo, y al mismo tiempo, si lo deseas, modificar las opciones de <code>init</code>. La copia debe estar hecha antes de la lectura del &lt;body&gt;, y leyendo el &lt;body&gt; en la copia, se marcará como leido en la petición original.</p>
+<p>Esto es muy útil ya que el cuerpo de las solicitudes y respuestas son de un sólo uso. Haciendo una copia como esta te permite utilizar la petición/respuesta de nuevo, y al mismo tiempo, si lo deseas, modificar las opciones de <code>init</code>. La copia debe estar hecha antes de la lectura del &lt;body&gt;, y leyendo el &lt;body&gt; en la copia, se marcará como leido en la petición original.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Existe también un método {{domxref("Request.clone","clone()")}} que crea una copia. Este tiene una semántica ligeramente distinta al otro método de copia — el primero fallará si el cuerpo de la petición anterior ya ha sido leído (lo mismo para copiar una respuesta), mientras que <code>clone()</code> no.</p>
+<p><strong>Nota</strong>: Existe también un método {{domxref("Request.clone","clone()")}} que crea una copia. Este tiene una semántica ligeramente distinta al otro método de copia — el primero fallará si el cuerpo de la petición anterior ya ha sido leído (lo mismo para copiar una respuesta), mientras que <code>clone()</code> no.</p>
 </div>
 
 <h3 id="Enviar_una_petición_con_credenciales_incluido">Enviar una petición con credenciales incluido</h3>
@@ -225,7 +225,7 @@ console.log(myHeaders.getAll("X-Custom-Header")); // ["ProcessThisImmediately", 
 myHeaders.delete("X-Custom-Header");
 console.log(myHeaders.getAll("X-Custom-Header")); // [ ]</pre>
 
-<p>Algunas de estas operaciones solo serán utiles en  {{domxref("ServiceWorker_API","ServiceWorkers")}}, pero estas disponen de una mejor API  para manipular <code>headers</code>.</p>
+<p>Algunas de estas operaciones solo serán utiles en  {{domxref("ServiceWorker_API","ServiceWorkers")}}, pero estas disponen de una mejor API  para manipular <code>headers</code>.</p>
 
 <p>Todos los métodosde de <code>headers</code> lanzan un <code>TypeError</code> si un nombre de cabecera no es un nombre de cabecera HTTP válido. Las operaciones de mutación lanzarán un <code>TypeError</code> si hay un guarda inmutable (ver más abajo). Si no, fallan silenciosamente. Por ejemplo:</p>
 
@@ -239,7 +239,7 @@ try {
 <p>Un buen caso de uso para <code>headers</code> es comprobar cuando el tipo de contenido es correcto antes de que se procese:</p>
 
 <pre class="brush: js notranslate">fetch(myRequest).then(function(response) {
-  var contentType = response.headers.get("content-type");
+  var contentType = response.headers.get("content-type");
   if(contentType &amp;&amp; contentType.indexOf("application/json") !== -1) {
     return response.json().then(function(json) {
       // process your JSON further
@@ -251,7 +251,7 @@ try {
 
 <h3 id="Guarda_Guard">Guarda (Guard)</h3>
 
-<p>Desde que las cabeceras pueden ser enviadas  en peticiones y recibidas en respuestas, y tienen limitaciones sobre que información puede y debería ser mutable, los objeto headers tienen una propierdad de guarda. Este no está expuesto a la Web, pero puede afectar a que operaciones de mutación son permitidas sobre el objeto headers.</p>
+<p>Desde que las cabeceras pueden ser enviadas  en peticiones y recibidas en respuestas, y tienen limitaciones sobre que información puede y debería ser mutable, los objeto headers tienen una propierdad de guarda. Este no está expuesto a la Web, pero puede afectar a que operaciones de mutación son permitidas sobre el objeto headers.</p>
 
 <p>Los valores posibles de guarda (guard) son:</p>
 
@@ -264,7 +264,7 @@ try {
 </ul>
 
 <div class="note">
-<p><strong>Nota</strong>:  No se debería añadir o establecer una petición a un objeto headers <em>guardado</em> con la cabecera <code>Content-Length</code>. De igual manera, insertar <code>Set-Cookie</code> en la respuesta de la cabecera no esta permitido: ServiceWorkers no estan autorizados a establecer cookies a través de respuestas sintéticas.</p>
+<p><strong>Nota</strong>:  No se debería añadir o establecer una petición a un objeto headers <em>guardado</em> con la cabecera <code>Content-Length</code>. De igual manera, insertar <code>Set-Cookie</code> en la respuesta de la cabecera no esta permitido: ServiceWorkers no estan autorizados a establecer cookies a través de respuestas sintéticas.</p>
 </div>
 
 <h2 id="Objetos_Response">Objetos Response</h2>
@@ -279,7 +279,7 @@ try {
  <li>{{domxref("Response.ok")}} — Visto en uso anteriormente, es una clave para comprobar que el estado está dentro del rango 200-299 (ambos incluidos). Este devuelve un valor {{domxref("Boolean")}}, siendo <code>true</code> si lo anterior se cumple y <code>false</code> en otro caso.</li>
 </ul>
 
-<p>Estos pueden también creados programáticamente a través de JavaScript, pero esto solamente es realmete útil en {{domxref("ServiceWorker_API", "ServiceWorkers")}},  cuando pones un objeto response personalizado a una respuesta recibida usando un método {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
+<p>Estos pueden también creados programáticamente a través de JavaScript, pero esto solamente es realmete útil en {{domxref("ServiceWorker_API", "ServiceWorkers")}},  cuando pones un objeto response personalizado a una respuesta recibida usando un método {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
 
 <pre class="brush: js notranslate">var myBody = new Blob();
 
@@ -288,10 +288,10 @@ addEventListener('fetch', function(event) {
     new Response(myBody, {
       headers: { "Content-Type" : "text/plain" }
     })
-  );
+  );
 });</pre>
 
-<p>El constructor {{domxref("Response.Response","Response()")}} toma dos argurmentos opcionales, un cuerpo para la respuesta y un objeto init (similar al que acepta {{domxref("Request.Request","Request()")}}).</p>
+<p>El constructor {{domxref("Response.Response","Response()")}} toma dos argurmentos opcionales, un cuerpo para la respuesta y un objeto init (similar al que acepta {{domxref("Request.Request","Request()")}}).</p>
 
 <div class="note">
 <p><strong>Nota</strong>: El método estático {{domxref("Response.error","error()")}} simplemente devuelve un error en la respuesta. De igual manera que {{domxref("Response.redirect","redirect()")}} devuelve una respuesta que resulta en un redirección a una URL especificada. Estos son solo relevantes tambien a ServiceWorkers.</p>
@@ -334,7 +334,7 @@ fetch("/login", {
 
 <h2 id="Detectar_característica">Detectar característica</h2>
 
-<p>Puedes comprobar si el navegador soporta  la API de Fetch comprobando la existencia de {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} o {{domxref("GlobalFetch.fetch","fetch()")}} sobre el ámbito de {{domxref("Window")}} o {{domxref("Worker")}}. Por ejemplo:</p>
+<p>Puedes comprobar si el navegador soporta  la API de Fetch comprobando la existencia de {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} o {{domxref("GlobalFetch.fetch","fetch()")}} sobre el ámbito de {{domxref("Window")}} o {{domxref("Worker")}}. Por ejemplo:</p>
 
 <pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span>self<span class="punctuation token">.</span>fetch<span class="punctuation token">)</span> <span class="punctuation token">{</span>
     <span class="comment token">// run my fetch request here</span>
@@ -344,28 +344,15 @@ fetch("/login", {
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Para utilizar <code>fetch()</code> en un explorador no soportado, hay disponible un <a href="https://github.com/github/fetch">Fetch Polyfill</a> que recrea la funcionalidad para navegadores no soportados.</p>
+<p>Para utilizar <code>fetch()</code> en un explorador no soportado, hay disponible un <a href="https://github.com/github/fetch">Fetch Polyfill</a> que recrea la funcionalidad para navegadores no soportados.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Definición inicial</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}</p>
+{{Compat}}
 
 <h2 id="Vea_también">Vea también</h2>
 

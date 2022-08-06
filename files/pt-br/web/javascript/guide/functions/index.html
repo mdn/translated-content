@@ -11,15 +11,15 @@ original_slug: Web/JavaScript/Guide/Funções
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}</div>
 
-<p class="summary">Funções são blocos de construção fundamentais em JavaScript. Uma função é um procedimento de JavaScript - um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.</p>
+<p class="summary">Funções são blocos de construção fundamentais em JavaScript. Uma função é um procedimento de JavaScript - um conjunto de instruções que executa uma tarefa ou calcula um valor. Para usar uma função, você deve defini-la em algum lugar no escopo do qual você quiser chamá-la.</p>
 
 <p>Veja também o capítulo de <a href="/pt-BR/docs/Web/JavaScript/Reference/Functions">referência sobre funções JavaScript</a> para conhecer os detalhes.</p>
 
 <h2 id="Defining_functions" name="Defining_functions">Definindo Funções</h2>
 
-<h3 id="Declarando_uma_função">Declarando uma função</h3>
+<h3 id="Declarando_uma_função">Declarando uma função</h3>
 
-<p>A <strong>definição da função </strong>(também chamada de <strong>declaração de função</strong>) consiste no uso da palavra chave <a href="/pt-BR/docs/JavaScript/Reference/Statements/function" title="function"><code>function</code></a>, seguida por:</p>
+<p>A <strong>definição da função </strong>(também chamada de <strong>declaração de função</strong>) consiste no uso da palavra chave <a href="/pt-BR/docs/JavaScript/Reference/Statements/function" title="function"><code>function</code></a>, seguida por:</p>
 
 <ul>
  <li>Nome da Função.</li>
@@ -30,18 +30,18 @@ original_slug: Web/JavaScript/Guide/Funções
 <p>Por exemplo, o código a seguir define uma função simples chamada <code>square</code>:</p>
 
 <pre class="brush: js">function square(numero) {
-  return numero * numero;
+  return numero * numero;
 }
 </pre>
 
-<p>A função <code>square</code> recebe um argumento chamado <code>numero</code>. A função consiste em uma instrução que indica para retornar o argumento da função (isto é, <code>numero</code>) multiplicado por si mesmo. A declaração <a href="/pt-BR/docs/JavaScript/Reference/Statements/return" title="return"><code>return</code></a> especifica o valor retornado pela função.</p>
+<p>A função <code>square</code> recebe um argumento chamado <code>numero</code>. A função consiste em uma instrução que indica para retornar o argumento da função (isto é, <code>numero</code>) multiplicado por si mesmo. A declaração <a href="/pt-BR/docs/JavaScript/Reference/Statements/return" title="return"><code>return</code></a> especifica o valor retornado pela função.</p>
 
 <pre class="brush: js">return numero * numero;
 </pre>
 
 <p>Parâmetros primitivos (como um número) são passados para as funções por <strong>valor</strong>; o valor é passado para a função, mas se a função altera o valor do parâmetro, esta mudança não reflete globalmente ou na função chamada.</p>
 
-<p>Se você passar um objeto (ou seja, um  <a href="/pt-BR/docs/JavaScript/Glossary" title="en-US/docs/JavaScript/Glossary">valor não primitivo</a>, tal como {{jsxref("Array")}} ou um objeto definido por você) como um parâmetro e a função alterar as propriedades do objeto, essa mudança é visível fora da função, conforme mostrado no exemplo a seguir:</p>
+<p>Se você passar um objeto (ou seja, um  <a href="/pt-BR/docs/JavaScript/Glossary" title="en-US/docs/JavaScript/Glossary">valor não primitivo</a>, tal como {{jsxref("Array")}} ou um objeto definido por você) como um parâmetro e a função alterar as propriedades do objeto, essa mudança é visível fora da função, conforme mostrado no exemplo a seguir:</p>
 
 <pre class="brush: js">function minhaFuncao(objeto) {
   objeto.make = "Toyota";
@@ -59,7 +59,7 @@ y = meucarro.make;     // y recebe o valor "Toyota"
 
 <h3 id="Expressão_de_função">Expressão de função</h3>
 
-<p>Embora a declaração de função acima seja sintaticamente uma declaração, funções também podem ser criadas por uma <strong>expressão de função</strong>. Tal função pode ser <strong>anônima</strong>; ele não tem que ter um nome. Por exemplo, a função <code style="font-size: 14px;">square</code> poderia ter sido definida como:</p>
+<p>Embora a declaração de função acima seja sintaticamente uma declaração, funções também podem ser criadas por uma <strong>expressão de função</strong>. Tal função pode ser <strong>anônima</strong>; ele não tem que ter um nome. Por exemplo, a função <code style="font-size: 14px;">square</code> poderia ter sido definida como:</p>
 
 <pre class="brush: js">var square = function(numero) {return numero * numero};
 var x = square(4) //x recebe o valor 16</pre>
@@ -71,7 +71,7 @@ var x = square(4) //x recebe o valor 16</pre>
 console.log(fatorial(3));
 </pre>
 
-<p>As expressões de função são convenientes ao passar uma função como um argumento para outra função. O exemplo a seguir mostra uma função <code>map </code>sendo definida e, em seguida, chamada com uma função anônima como seu primeiro parâmetro:</p>
+<p>As expressões de função são convenientes ao passar uma função como um argumento para outra função. O exemplo a seguir mostra uma função <code>map </code>sendo definida e, em seguida, chamada com uma função anônima como seu primeiro parâmetro:</p>
 
 <pre class="brush: js" style="font-size: 14px;">function map(f,a) {
   var result = []; // Cria um novo Array
@@ -89,7 +89,7 @@ console.log(fatorial(3));
 
 <p>retorna [0, 1, 8, 125, 1000].</p>
 
-<p>Em JavaScript, uma função pode ser definida com base numa condição. Por exemplo, a seguinte definição de função define <code>minhaFuncao</code> somente se <code>num</code>  é igual a 0:</p>
+<p>Em JavaScript, uma função pode ser definida com base numa condição. Por exemplo, a seguinte definição de função define <code>minhaFuncao</code> somente se <code>num</code>  é igual a 0:</p>
 
 <pre class="brush: js">var minhaFuncao;
 if (num == 0){
@@ -98,20 +98,20 @@ if (num == 0){
   }
 }</pre>
 
-<p><span style="line-height: 1.572;">Além de definir funções, você também pode usar o construtor </span>{{jsxref("Function")}} <span style="line-height: 1.572;">para criar funções a partir de uma string<code> </code>em tempo real, como no método </span>{{jsxref("eval()")}}<span style="line-height: 1.572;">.</span></p>
+<p><span style="line-height: 1.572;">Além de definir funções, você também pode usar o construtor </span>{{jsxref("Function")}} <span style="line-height: 1.572;">para criar funções a partir de uma string<code> </code>em tempo real, como no método </span>{{jsxref("eval()")}}<span style="line-height: 1.572;">.</span></p>
 
 <p>Um <strong>método</strong> é uma função invocada por um objeto. Leia mais sobre objetos e métodos em <a href="/pt-BR/docs/JavaScript/Guide/Working_with_Objects" title="en-US/docs/JavaScript/Guide/Working with Objects">Trabalhando com Objetos</a>.</p>
 
 <h2 id="Calling_functions" name="Calling_functions">Chamando funções</h2>
 
-<p>A definição de uma função não a executa. Definir a função é simplesmente nomear a função e especificar o que fazer quando a função é chamada. Chamar a função executa realmente as ações especificadas com os parâmetros indicados. Por exemplo, se você definir a função <code>square</code>, você pode chamá-la do seguinte modo: </p>
+<p>A definição de uma função não a executa. Definir a função é simplesmente nomear a função e especificar o que fazer quando a função é chamada. Chamar a função executa realmente as ações especificadas com os parâmetros indicados. Por exemplo, se você definir a função <code>square</code>, você pode chamá-la do seguinte modo: </p>
 
 <pre class="brush: js">square(5);
 </pre>
 
 <p>A declaração anterior chama a função com o argumento 5. A função executa as instruções e retorna o valor 25.</p>
 
-<p>Funções devem estar no escopo quando são chamadas, mas a declaração de uma função pode ser puxada para o topo (aparecem abaixo da chamada no código), como neste exemplo:</p>
+<p>Funções devem estar no escopo quando são chamadas, mas a declaração de uma função pode ser puxada para o topo (aparecem abaixo da chamada no código), como neste exemplo:</p>
 
 <pre>console.log(square(5));
 /* ... */
@@ -121,7 +121,7 @@ function square(n){return n*n}
 <p>O escopo de uma função é a função na qual ela é declarada, ou todo o programa se ela é declarada no nível superior.</p>
 
 <div class="note">
-<p>Nota: Isso funciona apenas quando a definição da função usa a sintaxe acima (ex., <code>function funcNome(){ })</code>. O código a seguir não vai funcionar.</p>
+<p>Nota: Isso funciona apenas quando a definição da função usa a sintaxe acima (ex., <code>function funcNome(){ })</code>. O código a seguir não vai funcionar.</p>
 </div>
 
 <pre class="brush: js">console.log(square(5));
@@ -130,7 +130,7 @@ var square = function (n) {
 }
 </pre>
 
-<p>Os argumentos de uma função não estão limitados a strings e números. Você pode passar objetos para uma função. A função <code>show_props</code> (definido em <a href="/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Trabalhando com Objetos</a>) é um exemplo de uma função que recebe um objeto como um argumento.</p>
+<p>Os argumentos de uma função não estão limitados a strings e números. Você pode passar objetos para uma função. A função <code>show_props</code> (definido em <a href="/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties">Trabalhando com Objetos</a>) é um exemplo de uma função que recebe um objeto como um argumento.</p>
 
 <p>Um função pode chamar a si mesma. Por exemplo, a função que calcula os fatoriais recursivamente:</p>
 
@@ -152,7 +152,7 @@ d = fatorial(4); // d recebe o valor 24
 e = fatorial(5); // e recebe o valor 120
 </pre>
 
-<p>Há outras maneiras de chamar funções. Muitas vezes há casos em que uma função precisa ser chamada dinamicamente, ou o número de argumentos de uma função varia, ou em que o contexto da chamada de função precisa ser definido para um objeto específico determinado em tempo de execução. Acontece que as funções são, por si mesmas, objetos, e esses objetos por sua vez têm métodos (veja objeto {{jsxref("Function")}}). Um desses, o método {{jsxref("Function.apply", "apply()")}}, pode ser usado para atingir esse objetivo.</p>
+<p>Há outras maneiras de chamar funções. Muitas vezes há casos em que uma função precisa ser chamada dinamicamente, ou o número de argumentos de uma função varia, ou em que o contexto da chamada de função precisa ser definido para um objeto específico determinado em tempo de execução. Acontece que as funções são, por si mesmas, objetos, e esses objetos por sua vez têm métodos (veja objeto {{jsxref("Function")}}). Um desses, o método {{jsxref("Function.apply", "apply()")}}, pode ser usado para atingir esse objetivo.</p>
 
 <h2 class="deki-transform" id="Function_scope" name="Function_scope">Escopo da função</h2>
 
@@ -204,7 +204,7 @@ getScore(); // Retorna "Chamahk scored 5"
 };
 </pre>
 
-<p>Dentro do corpo da função, todos, a seguir, são equivalentes:</p>
+<p>Dentro do corpo da função, todos, a seguir, são equivalentes:</p>
 
 <ol>
  <li><code>bar()</code></li>
@@ -212,11 +212,11 @@ getScore(); // Retorna "Chamahk scored 5"
  <li><code>foo()</code></li>
 </ol>
 
-<p>Uma função que chama a si mesma é chamada de função recursiva. Em alguns casos, a recursividade é análoga a um laço. Ambos executam o código várias vezes, e ambos necessitam de uma condição (para evitar um laço infinito, ou melhor, recursão infinita, neste caso). Por exemplo,  o seguinte laço:</p>
+<p>Uma função que chama a si mesma é chamada de função recursiva. Em alguns casos, a recursividade é análoga a um laço. Ambos executam o código várias vezes, e ambos necessitam de uma condição (para evitar um laço infinito, ou melhor, recursão infinita, neste caso). Por exemplo,  o seguinte laço:</p>
 
 <pre class="brush: js">var x = 0;
 while (x &lt; 10) { // "x &lt; 10" a condição do laço
-   // faça coisas
+   // faça coisas
    x++;
 }
 </pre>
@@ -246,7 +246,7 @@ loop(0);
 
 <p>Em comparação ao laço da função, cada chamada recursiva realiza outras chamadas recursivas.</p>
 
-<p>É possível converter qualquer algoritmo recursivo para um não recursivo, mas muitas vezes a lógica é muito mais complexa e exige o uso de pilhas. Na verdade a própria recursão usa pilha: a pilha de função.</p>
+<p>É possível converter qualquer algoritmo recursivo para um não recursivo, mas muitas vezes a lógica é muito mais complexa e exige o uso de pilhas. Na verdade a própria recursão usa pilha: a pilha de função.</p>
 
 <p>O comportamento da pilha pode ser vista a seguir no exemplo:</p>
 
@@ -281,11 +281,11 @@ end:3
 <p>Em resumo:</p>
 
 <ul>
- <li>A função interna só pode ser acessada a partir de declarações em função externa.</li>
- <li>A função interna forma uma closure: a função  interna pode usar os argumentos e variáveis da função externa, enquanto a função externa não pode usar os argumentos e variáveis da função interna.</li>
+ <li>A função interna só pode ser acessada a partir de declarações em função externa.</li>
+ <li>A função interna forma uma closure: a função  interna pode usar os argumentos e variáveis da função externa, enquanto a função externa não pode usar os argumentos e variáveis da função interna.</li>
 </ul>
 
-<p>O exemplo a seguir mostra as funções aninhadas:</p>
+<p>O exemplo a seguir mostra as funções aninhadas:</p>
 
 <pre class="brush: js">function addSquares(a,b) {
    function square(x) {
@@ -312,7 +312,7 @@ result = fn_inside(5); // retorna 8
 result1 = fora(3)(5); // retorna 8
 </pre>
 
-<h3 id="Efficiency_considerations" name="Efficiency_considerations">Preservação  de variáveis</h3>
+<h3 id="Efficiency_considerations" name="Efficiency_considerations">Preservação  de variáveis</h3>
 
 <p>Observe como <code>x</code> é preservado quando <code>dentro</code> é retornado. Uma <em>closure</em> deve preservar os argumentos e variáveis em todos os escopos que ela referencia. Uma vez que cada chamada fornece potencialmente argumentos diferentes, uma nova closure é criada para cada chamada de <code>fora</code>. A memória só poderá ser liberada quando o <code>dentro</code> retornado já não é mais acessível.</p>
 
@@ -320,7 +320,7 @@ result1 = fora(3)(5); // retorna 8
 
 <h3 id="Multiply-nested_functions" name="Multiply-nested_functions">Múltiplas funções aninhadas</h3>
 
-<p>Funções podem ter múltiplo aninhamento, por exemplo, a função (A) contém a função (B) que contém a função (C). Tanto as funções B e C formam uma <em>closure</em>, então B pode acessar A, e C pode acessar B. Além disso, uma vez que C pode acessar B que pode acessar A, C também pode acessar A. Assim, a <em>closure</em> pode conter vários escopos; eles recursivamente contém o escopo das funções que os contém. Isso é chamado <em><code>encadeamento de escopo</code></em>. (O motivo de ser chamado "encadeamento" será explicado mais tarde).</p>
+<p>Funções podem ter múltiplo aninhamento, por exemplo, a função (A) contém a função (B) que contém a função (C). Tanto as funções B e C formam uma <em>closure</em>, então B pode acessar A, e C pode acessar B. Além disso, uma vez que C pode acessar B que pode acessar A, C também pode acessar A. Assim, a <em>closure</em> pode conter vários escopos; eles recursivamente contém o escopo das funções que os contém. Isso é chamado <em><code>encadeamento de escopo</code></em>. (O motivo de ser chamado "encadeamento" será explicado mais tarde).</p>
 
 <p>Considere o seguinte exemplo:</p>
 
@@ -341,7 +341,7 @@ A(1); // Exibe um alerta com o valor 6 (1 + 2 + 3)
 <ol>
  <li>B forma uma <em>closure</em> incluindo <code>A</code>, isto é, <code>B</code> pode acessar argumentos e variáveis de <code>A</code>.</li>
  <li>C forma uma <em>closure </em>incluindo <code>B</code>.</li>
- <li> Devido a closure <code>B</code> inclui <code>A</code>, a <em>closure</em> <code>C</code> inclui <code>A</code>, <code>C</code> pode acessar tanto argumentos e variáveis de <code>B</code> como de <code>A</code>. Em outras palavras, <code>C</code> <em>encadeia </em>o escopo de <code>B</code> e <code>A</code>, nesta ordem.</li>
+ <li> Devido a closure <code>B</code> inclui <code>A</code>, a <em>closure</em> <code>C</code> inclui <code>A</code>, <code>C</code> pode acessar tanto argumentos e variáveis de <code>B</code> como de <code>A</code>. Em outras palavras, <code>C</code> <em>encadeia </em>o escopo de <code>B</code> e <code>A</code>, nesta ordem.</li>
 </ol>
 
 <p>O inverso, no entanto, não é verdadeiro. <code>A</code> não pode acessar <code>C</code>, porque <code>A</code> não pode acessar qualquer argumento ou variável de <code>B</code>. Assim, <code>C</code> é privado somente a <code>B</code>.</p>
@@ -360,11 +360,11 @@ A(1); // Exibe um alerta com o valor 6 (1 + 2 + 3)
 result = fora()(20); // retorna 20 em vez de 10
 </pre>
 
-<p>O  conflito de nome acontece na declaração <code>return x</code> e está entre o parâmetro <code>x</code> de <code>dentro</code> e a variável <code>x</code> de <code>fora</code>. A cadeia de escopo aqui é {<code>dentro</code>, <code>fora</code>, objeto global}. Por isso o <code>x</code> de <code>dentro</code> tem precedência sobre o <code>x</code> de <code>fora</code>, e 20 (<code>x</code> de <code>dentro</code>) é retornado em vez de 10 (<code>x</code> de fora).</p>
+<p>O  conflito de nome acontece na declaração <code>return x</code> e está entre o parâmetro <code>x</code> de <code>dentro</code> e a variável <code>x</code> de <code>fora</code>. A cadeia de escopo aqui é {<code>dentro</code>, <code>fora</code>, objeto global}. Por isso o <code>x</code> de <code>dentro</code> tem precedência sobre o <code>x</code> de <code>fora</code>, e 20 (<code>x</code> de <code>dentro</code>) é retornado em vez de 10 (<code>x</code> de fora).</p>
 
 <h2 id="Closures" name="Closures">Closures</h2>
 
-<p><em>Closures </em>são um dos recursos mais poderosos de JavaScript. JavaScript permite o aninhamento de funções e garante acesso completo à função interna a todas as variáveis e funções definidas dentro da função externa (e todas as outras variáveis e funções que a função externa tem acesso). No entanto, a função externa não tem acesso às variáveis e funções definidas dentro da função interna. Isto proporciona uma espécie de segurança para as variáveis da função interna. Além disso, uma vez  que a função interna tem acesso ao escopo da função externa, as variáveis e funções definidas na função externa vão durar na memória mais do que a própria função externa, isto se a função interna permanecer na memória mais tempo do que a função externa. Uma <em>closure</em> é criada quando a função interna é de alguma forma disponibilizada para qualquer escopo fora da função externa.</p>
+<p><em>Closures </em>são um dos recursos mais poderosos de JavaScript. JavaScript permite o aninhamento de funções e garante acesso completo à função interna a todas as variáveis e funções definidas dentro da função externa (e todas as outras variáveis e funções que a função externa tem acesso). No entanto, a função externa não tem acesso às variáveis e funções definidas dentro da função interna. Isto proporciona uma espécie de segurança para as variáveis da função interna. Além disso, uma vez  que a função interna tem acesso ao escopo da função externa, as variáveis e funções definidas na função externa vão durar na memória mais do que a própria função externa, isto se a função interna permanecer na memória mais tempo do que a função externa. Uma <em>closure</em> é criada quando a função interna é de alguma forma disponibilizada para qualquer escopo fora da função externa.</p>
 
 <pre class="brush: js">var pet = function(nome) {          // A função externa define uma variável "nome"
       var getNome = function() {
@@ -378,7 +378,7 @@ result = fora()(20); // retorna 20 em vez de 10
 myPet();                            // Retorna "Vivie"
 </pre>
 
-<p>Ela pode ser  mais complexa que o código acima. Um objeto contendo métodos para manipular as variáveis da função externa pode ser devolvida.</p>
+<p>Ela pode ser  mais complexa que o código acima. Um objeto contendo métodos para manipular as variáveis da função externa pode ser devolvida.</p>
 
 <pre class="brush: js">var criarPet = function(nome) {
   var sex;
@@ -413,7 +413,7 @@ pet.getSex();                   // macho
 pet.getNome();                  // Oliver
 </pre>
 
-<p>Nos códigos acima, a variável <code>nome</code> da função externa é acessível para as funções internas, e não há nenhuma outra maneira para acessar as variáveis internas, exceto pelas funções internas. As variáveis internas da função interna atuam como armazenamento seguro para as funções internas. Elas armazenam "persistentes", mas seguros, os dados com os quais as funções internas irão trabalhar. As funções não tem  que ser atribuídas a uma variável, ou ter um nome.</p>
+<p>Nos códigos acima, a variável <code>nome</code> da função externa é acessível para as funções internas, e não há nenhuma outra maneira para acessar as variáveis internas, exceto pelas funções internas. As variáveis internas da função interna atuam como armazenamento seguro para as funções internas. Elas armazenam "persistentes", mas seguros, os dados com os quais as funções internas irão trabalhar. As funções não tem  que ser atribuídas a uma variável, ou ter um nome.</p>
 
 <pre class="brush: js">var getCode = (function(){
   var secureCode = "0]Eal(eh&amp;2";    // Um código que não queremos que pessoas de fora sejam capazes de modificar
@@ -437,20 +437,20 @@ getCode();    // Retorna o secureCode
 }
 </pre>
 
-<p>A palavra reservada <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this">this</a> é muito complicada em <em>closures,</em> elas têm de ser usadas com muito cuidado. O objeto ao que <code>this</code> se refere depende completamente de onde a função foi chamada, ao invés de onde ela foi definida.</p>
+<p>A palavra reservada <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this">this</a> é muito complicada em <em>closures,</em> elas têm de ser usadas com muito cuidado. O objeto ao que <code>this</code> se refere depende completamente de onde a função foi chamada, ao invés de onde ela foi definida.</p>
 
 <h2 id="Using_the_arguments_object" name="Using_the_arguments_object">Usando objeto de argumentos</h2>
 
-<p>Os argumentos de uma função são mantidos em um objeto do tipo array. Dentro de uma função, você pode endereçar os argumentos passados para ele conforme: </p>
+<p>Os argumentos de uma função são mantidos em um objeto do tipo array. Dentro de uma função, você pode endereçar os argumentos passados para ele conforme: </p>
 
 <pre class="brush: js">arguments[i]
 </pre>
 
-<p>onde <code>i</code> é um número ordinal do argumento, começando com zero. Então, o primeiro argumento passado para a função seria <code>arguments[0]</code>. O número total de argumentos é indicado por <code>arguments.length</code>.</p>
+<p>onde <code>i</code> é um número ordinal do argumento, começando com zero. Então, o primeiro argumento passado para a função seria <code>arguments[0]</code>. O número total de argumentos é indicado por <code>arguments.length</code>.</p>
 
-<p>Usando o objeto <code>arguments</code>, você pode chamar a função com mais argumentos do que o formalmente declarado. Isso muitas vezes é útil se você não sabe de antemão quantos argumentos serão passados para a função. Você pode usar <code>arguments.length</code> para determinar a quantidade de argumentos passados para a função, e então acessar cada argumento usando o objeto <code>arguments</code>.</p>
+<p>Usando o objeto <code>arguments</code>, você pode chamar a função com mais argumentos do que o formalmente declarado. Isso muitas vezes é útil se você não sabe de antemão quantos argumentos serão passados para a função. Você pode usar <code>arguments.length</code> para determinar a quantidade de argumentos passados para a função, e então acessar cada argumento usando o objeto <code>arguments</code>.</p>
 
-<p>Por exemplo, considere uma função que concatena várias <em>strings</em>. O argumento formal para a função é uma <em>string</em> que especifica os caracteres que separam os itens para concatenar.  A função definida como segue:</p>
+<p>Por exemplo, considere uma função que concatena várias <em>strings</em>. O argumento formal para a função é uma <em>string</em> que especifica os caracteres que separam os itens para concatenar.  A função definida como segue:</p>
 
 <pre class="brush: js">function myConcat(separador) {
    var result = "", // inicializa a lista
@@ -463,7 +463,7 @@ getCode();    // Retorna o secureCode
 }
 </pre>
 
-<p>Você pode passar qualquer quantidade de argumentos para esta função, e ela concatena cada argumento na <em>string</em> "list":</p>
+<p>Você pode passar qualquer quantidade de argumentos para esta função, e ela concatena cada argumento na <em>string</em> "list":</p>
 
 <pre class="brush: js">// retorna "red, orange, blue, "
 myConcat(", ", "red", "orange", "blue");
@@ -476,10 +476,10 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 </pre>
 
 <div class="note">
-<p>Nota: A variável <code>arguments</code> é "como um array", mas não é um array. Ela é como um array pois possui um índice numerado e a propriedade <code>length</code>. No entanto, não possui todos os métodos de manipulação de array. </p>
+<p>Nota: A variável <code>arguments</code> é "como um array", mas não é um array. Ela é como um array pois possui um índice numerado e a propriedade <code>length</code>. No entanto, não possui todos os métodos de manipulação de array. </p>
 </div>
 
-<p>Veja objeto {{jsxref("Function")}} na referência do JavaScript para maiores informações.</p>
+<p>Veja objeto {{jsxref("Function")}} na referência do JavaScript para maiores informações.</p>
 
 <h2 id="Function_parameters" name="Function_parameters">Parâmetros de função</h2>
 
@@ -543,14 +543,14 @@ var a3 = a.map( s =&gt; s.length );</code></pre>
 
 <h3 id="Léxico_this">Léxico this</h3>
 
-<p>Até as funções de seta, cada nova função definia seu próprio valor <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a> (um novo objeto no caso de um construtor, indefinido em chamadas de função no modo estrito, o objeto de contexto se a função é chamada como um "método de objeto", etc.). Isso pode ser irritante com um estilo de programação orientada a objetos.</p>
+<p>Até as funções de seta, cada nova função definia seu próprio valor <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a> (um novo objeto no caso de um construtor, indefinido em chamadas de função no modo estrito, o objeto de contexto se a função é chamada como um "método de objeto", etc.). Isso pode ser irritante com um estilo de programação orientada a objetos.</p>
 
 <pre class="brush: js">function Pessoa() {      // O construtor Pessoa() define 'this' como sendo ele.
-    this.idade = 0;
-    setInterval(function crescer() {    // No modo não estrito, a função crescer define 'this'
-            // como o objeto global, o que é diferente do 'this'
-            // definido pelo construtor Pessoa().
-            this.idade++;
+    this.idade = 0;
+    setInterval(function crescer() {    // No modo não estrito, a função crescer define 'this'
+            // como o objeto global, o que é diferente do 'this'
+            // definido pelo construtor Pessoa().
+            this.idade++;
      }, 1000);
 }
 var p = new Pessoa();</pre>
@@ -590,51 +590,51 @@ var p = new Pessoa();</code></pre>
 <dl>
  <dt>{{jsxref("Global_Objects/eval", "eval()")}}</dt>
  <dd>
- <p>O método <code><strong>eval()</strong></code> avalia código JavaScript representado como uma <em>string</em>.</p>
+ <p>O método <code><strong>eval()</strong></code> avalia código JavaScript representado como uma <em>string</em>.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}</dt>
  <dd>
- <p>O método <code><strong>uneval()</strong></code> cria uma representação de <em>string</em> do código-fonte de um  {{jsxref("Object")}}.</p>
+ <p>O método <code><strong>uneval()</strong></code> cria uma representação de <em>string</em> do código-fonte de um  {{jsxref("Object")}}.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/isFinite", "isFinite()")}}</dt>
  <dd>
- <p>A função global <code><strong>isFinite()</strong></code> determina se o valor passado é um número finito. Se necessário, o parâmetro é primeiro convertido para um número.</p>
+ <p>A função global <code><strong>isFinite()</strong></code> determina se o valor passado é um número finito. Se necessário, o parâmetro é primeiro convertido para um número.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</dt>
  <dd>
- <p>A função <code><strong>isNaN()</strong></code> determina se um valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Nota: coerção dentro da função <code>isNaN</code> tem <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">regras interessantes</a>; você pode, alternativamente, querer usar {{jsxref("Number.isNaN()")}}, como definido no ECMAScript 6,  ou você pode usar <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> </code>para determinar se o valor não é um número.</p>
+ <p>A função <code><strong>isNaN()</strong></code> determina se um valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Nota: coerção dentro da função <code>isNaN</code> tem <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description">regras interessantes</a>; você pode, alternativamente, querer usar {{jsxref("Number.isNaN()")}}, como definido no ECMAScript 6,  ou você pode usar <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a> </code>para determinar se o valor não é um número.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</dt>
  <dd>
- <p>A função <code><strong>parseFloat()</strong></code> analisa um argumento do tipo <em>string</em> e retorna um número de ponto flutuante.</p>
+ <p>A função <code><strong>parseFloat()</strong></code> analisa um argumento do tipo <em>string</em> e retorna um número de ponto flutuante.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/parseInt", "parseInt()")}}</dt>
  <dd>
- <p>A função <code><strong>parseInt()</strong></code> analisa um argumento do tipo <em>string</em> e retorna um inteiro da base especificada (base do sistema numérico).</p>
+ <p>A função <code><strong>parseInt()</strong></code> analisa um argumento do tipo <em>string</em> e retorna um inteiro da base especificada (base do sistema numérico).</p>
  </dd>
  <dt>{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}</dt>
  <dd>
- <p>A função <code><strong>decodeURI()</strong></code> decodifica uma <em>Uniform Resource Identifier</em> (URI) criada anteriormente por {{jsxref("Global_Objects/encodeURI", "encodeURI")}} ou por uma rotina similar.</p>
+ <p>A função <code><strong>decodeURI()</strong></code> decodifica uma <em>Uniform Resource Identifier</em> (URI) criada anteriormente por {{jsxref("Global_Objects/encodeURI", "encodeURI")}} ou por uma rotina similar.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}</dt>
  <dd>
- <p>O método <code><strong>decodeURIComponent()</strong></code> decodifica um componente <em>Uniform Resource Identifier</em> (URI) criado anteriormente por {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} ou por uma rotina similar.</p>
+ <p>O método <code><strong>decodeURIComponent()</strong></code> decodifica um componente <em>Uniform Resource Identifier</em> (URI) criado anteriormente por {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} ou por uma rotina similar.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/encodeURI", "encodeURI()")}}</dt>
  <dd>
- <p>O método <code><strong>encodeURI()</strong></code> codifica um Uniform Resource Identifier (URI), substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro sequências de escape que representa a codificação UTF-8 do caractere (só serão quatro sequências de escape para caracteres compostos de dois caracteres "substitutos").</p>
+ <p>O método <code><strong>encodeURI()</strong></code> codifica um Uniform Resource Identifier (URI), substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro sequências de escape que representa a codificação UTF-8 do caractere (só serão quatro sequências de escape para caracteres compostos de dois caracteres "substitutos").</p>
  </dd>
  <dt>{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</dt>
  <dd>
- <p>O método <code><strong>encodeURIComponent()</strong></code> codifica um componente <em>Uniform Resource Identifier</em> (URI), substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro sequências de escape que representa a codificação UTF-8 do caractere (só serão quatro sequências de escape para caracteres compostos de dois caracteres "substitutos").</p>
+ <p>O método <code><strong>encodeURIComponent()</strong></code> codifica um componente <em>Uniform Resource Identifier</em> (URI), substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro sequências de escape que representa a codificação UTF-8 do caractere (só serão quatro sequências de escape para caracteres compostos de dois caracteres "substitutos").</p>
  </dd>
  <dt>{{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}</dt>
  <dd>
- <p>O método obsoleto <code><strong>escape()</strong></code> calcula uma nova <em>string</em> na qual certos caracteres foram substituídos por uma sequência de escape hexadecimal. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} ou {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} em vez disso.</p>
+ <p>O método obsoleto <code><strong>escape()</strong></code> calcula uma nova <em>string</em> na qual certos caracteres foram substituídos por uma sequência de escape hexadecimal. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} ou {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} em vez disso.</p>
  </dd>
  <dt>{{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}</dt>
  <dd>
- <p>O método obsoleto <code><strong>unescape()</strong></code> calcula uma nova <em>string</em> na qual sequências de escape hexadecimais são substituídas pelo caractere que ela representa. As sequências de escape podem ser introduzidas por uma função como {{jsxref("Global_Objects/escape", "escape")}}. Por <code>unescape()</code> estar obsoleto, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} ou {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} ao invés dele.</p>
+ <p>O método obsoleto <code><strong>unescape()</strong></code> calcula uma nova <em>string</em> na qual sequências de escape hexadecimais são substituídas pelo caractere que ela representa. As sequências de escape podem ser introduzidas por uma função como {{jsxref("Global_Objects/escape", "escape")}}. Por <code>unescape()</code> estar obsoleto, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} ou {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} ao invés dele.</p>
  </dd>
 </dl>
 

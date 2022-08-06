@@ -17,7 +17,9 @@ La fonction **`Math.min()`** renvoie le plus petit nombre d'une série de 0 ou p
 
 ## Syntaxe
 
-    Math.min([valeur1[,valeur2, ...]])
+```js
+Math.min([valeur1[,valeur2, ...]])
+```
 
 ### Paramètres
 

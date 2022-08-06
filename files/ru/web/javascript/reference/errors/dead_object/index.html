@@ -22,14 +22,14 @@ translation_of: Web/JavaScript/Reference/Errors/Dead_object
 
 <h2 id="Проверка_если_объект_мёртв">Проверка, если объект мёртв</h2>
 
-<p><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils">Components.utils</a> предлагает <code>isDeadWrapper()</code>метод, который может использовать привилегированный код. <br>
-  </p>
+<p><a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils">Components.utils</a> предлагает <code>isDeadWrapper()</code>метод, который может использовать привилегированный код. <br>
+  </p>
 
 <pre class="brush: js">if (Components.utils.isDeadWrapper(window)) {
   // dead
 }</pre>
 
-<p>Непривилегированный код не имеет доступа к Component.utils и мог бы просто быть в состоянии поймать исключение.</p>
+<p>Непривилегированный код не имеет доступа к Component.utils и мог бы просто быть в состоянии поймать исключение.</p>
 
 <pre class="brush: js">try {
   String(window);

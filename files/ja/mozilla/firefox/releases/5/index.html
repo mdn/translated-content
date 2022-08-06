@@ -112,18 +112,18 @@ translation_of: Mozilla/Firefox/Releases/5
 <h4 id="NetUtil.jsm">NetUtil.jsm</h4>
 
 <ul>
- <li><a href="/ja/docs/JavaScript_code_modules/NetUtil.jsm#asyncFetch()"><code>asyncFetch()</code></a> メソッドは今回から{{ interface("nsIInputStream") }} として入力ソースの特定をサポートします。</li>
+ <li><a href="/ja/docs/JavaScript_code_modules/NetUtil.jsm#asyncFetch()"><code>asyncFetch()</code></a> メソッドは今回から<code>nsIInputStream</code> として入力ソースの特定をサポートします。</li>
 </ul>
 
 <h3 id="インターフェースの変更点">インターフェースの変更点</h3>
 
 <ul>
- <li>{{ interface("nsIHttpChannelInternal") }} インターフェースはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。</li>
+ <li><code>nsIHttpChannelInternal</code> インターフェースはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。</li>
  <li>{{ HTMLElement("canvas") }} エレメントの {{ htmlattrxref("width", "canvas") }} と {{ htmlattrxref("height", "canvas") }} 属性は今回から符号付き整数から符合なし整数に変わり、IDLにおけるリフレクトを行います（<a href="/ja/docs/DOM/HTMLCanvasElement"><code>HTMLCanvasElement</code></a> をご覧ください）。</li>
- <li><code>nsIAppStartup2</code> と {{ interface("nsIAppStartup_MOZILLA_2_0") }} インターフェースは{{ interface("nsIAppStartup") }} インターフェースに統合されました。</li>
- <li><code>nsIDocShell_MOZILLA_2_0_BRANCH は</code> {{ interface("nsIDocShell") }} インターフェースに統合されました。</li>
- <li><code>nsIFocusManager_MOZILLA_2_0_BRANCH インターフェースは </code>{{ interface("<code><code>nsIFocusManager</code></code>") }} インターフェースに統合されました。</li>
- <li><code>nsIHTMLEditor_MOZILLA_2_0_BRANCH</code> インターフェースは {{ interface("nsIHTMLEditor") }} インターフェースに統合されました。</li>
+ <li><code>nsIAppStartup2</code> と <code>nsIAppStartup_MOZILLA_2_0</code> インターフェースは<code>nsIAppStartup</code> インターフェースに統合されました。</li>
+ <li><code>nsIDocShell_MOZILLA_2_0_BRANCH は</code> <code>nsIDocShell</code> インターフェースに統合されました。</li>
+ <li><code>nsIFocusManager_MOZILLA_2_0_BRANCH インターフェースは </code><code><code><code>nsIFocusManager</code></code></code> インターフェースに統合されました。</li>
+ <li><code>nsIHTMLEditor_MOZILLA_2_0_BRANCH</code> インターフェースは <code>nsIHTMLEditor</code> インターフェースに統合されました。</li>
 </ul>
 
 <h4 id="新しいインターフェース">新しいインターフェース</h4>

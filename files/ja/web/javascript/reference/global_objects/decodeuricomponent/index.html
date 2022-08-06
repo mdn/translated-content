@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 <p>decodeURIComponent は、URL からのクエリパラメータを解析するために直接使用することはできません。少し準備が必要です。</p>
 
 <pre class="brush: js notranslate">function decodeQueryParam(p) {
-  return decodeURIComponent(p.replace(/\+/g, ' '));
+  return decodeURIComponent(p.replace(/\+/g, ' '));
 }
 
 decodeQueryParam('search+query%20%28correct%29');

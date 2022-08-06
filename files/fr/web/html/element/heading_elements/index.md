@@ -96,30 +96,30 @@ Les personnes utilisant des lecteurs d'écran utilisent fréquemment les niveaux
 
 Les niveaux de titres peuvent être imbriqués afin de créer des sous-sections qui reflètent l'organisation de la page. La plupart des lecteurs d'écran peuvent également générer une liste ordonnée des titres de la page afin d'aider les visiteurs à connaître la hiérarchie du contenu :
 
-1.  `h1` Les abeilles
+1. `h1` Les abeilles
 
-    1.  `h2` Étymologie
-    2.  `h2` Répartition
-    3.  `h2` Évolution
+    1. `h2` Étymologie
+    2. `h2` Répartition
+    3. `h2` Évolution
 
-        1.  `h3` Paléozoïque ancien
-        2.  `h3` Jurassique
-        3.  `h3` Crétacée
+        1. `h3` Paléozoïque ancien
+        2. `h3` Jurassique
+        3. `h3` Crétacée
 
-    4.  `h2` Morphologie externe
+    4. `h2` Morphologie externe
 
-        1.  `h3`Tête
+        1. `h3`Tête
 
-            1.  `h4` Mandibules
+            1. `h4` Mandibules
 
-        2.  `h3` Thorax
+        2. `h3` Thorax
 
-            1.  `h4` Prothorax
-            2.  `h4` Ptérothorax
+            1. `h4` Prothorax
+            2. `h4` Ptérothorax
 
-        3.  `h3` Pattes
-        4.  `h3` Ailes
-        5.  `h3` Abdomen
+        3. `h3` Pattes
+        4. `h3` Ailes
+        5. `h3` Abdomen
 
 Lorsque les niveaux sont imbriqués, il est possible de sauter un niveau lorsqu'on **ferme** une sous-section
 

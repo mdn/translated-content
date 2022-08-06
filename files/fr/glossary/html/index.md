@@ -33,7 +33,7 @@ Un fichier HTML est généralement enregistré avec une extension `.htm` ou `.ht
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "HTML", "Hypertext_Markup_Language")}} sur Wikipédia
+- [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) sur Wikipédia
 
 ### Apprendre le HTML
 

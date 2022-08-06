@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 ---
 <div>{{JSRef}}</div>
 
-<p>A função <strong><code>Math.asinh()</code></strong> retorna o arco-seno hiperbólico de um número, isto é:</p>
+<p>A função <strong><code>Math.asinh()</code></strong> retorna o arco-seno hiperbólico de um número, isto é:</p>
 
 <p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> the unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sinh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.asinh}(x)} = \operatorname{arsinh}(x) = \text{o} \; y \; \text{único tal que} \; \sinh(y) = x</annotation></semantics></math></p>
 
@@ -33,11 +33,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Como <code>asinh()</code> é um métodos estático de <code>Math</code>, você deve sempre chamá-lo como <code>Math.asinh()</code>, ao invés de um método de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
+<p>Como <code>asinh()</code> é um métodos estático de <code>Math</code>, você deve sempre chamá-lo como <code>Math.asinh()</code>, ao invés de um método de um objeto <code>Math</code> que você criou (<code>Math</code> não é um construtor).</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<h3 id="Usando_Math.asinh()">Usando <code>Math.asinh()</code></h3>
+<h3 id="Usando_Math.asinh()">Usando <code>Math.asinh()</code></h3>
 
 <pre class="brush: js">Math.asinh(1);  // 0.881373587019543
 Math.asinh(0);  // 0
@@ -45,7 +45,7 @@ Math.asinh(0);  // 0
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Como uma solução simples a expressçao<math><semantics><annotation encoding="TeX">\operatorname {arsinh} (x) = \ln \left(x + \sqrt{x^{2} + 1} \right)</annotation></semantics></math> pode ser usada diretamente para uma emulação grosseira pela seguinte função:</p>
+<p>Como uma solução simples a expressçao<math><semantics><annotation encoding="TeX">\operatorname {arsinh} (x) = \ln \left(x + \sqrt{x^{2} + 1} \right)</annotation></semantics></math> pode ser usada diretamente para uma emulação grosseira pela seguinte função:</p>
 
 <pre class="brush: js">Math.asinh = Math.asinh || function(x) {
   if (x === -Infinity) {
@@ -56,7 +56,7 @@ Math.asinh(0);  // 0
 };
 </pre>
 
-<p>Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à computação de ponto flutuante. Resultados precisos precisam de tratamento especial de positivos/negativos e argumentos pequenos/grandes como feitos por exemplo em em <a href="https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c">glibc</a> ou<a href="http://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c">GNU Scientific Library</a>.</p>
+<p>Apesar de formalmente correta, ela sofre de algumas problemas relacionadas à computação de ponto flutuante. Resultados precisos precisam de tratamento especial de positivos/negativos e argumentos pequenos/grandes como feitos por exemplo em em <a href="https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c">glibc</a> ou<a href="http://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c">GNU Scientific Library</a>.</p>
 
 <h2 id="Especificações">Especificações</h2>
 
@@ -75,7 +75,7 @@ Math.asinh(0);  // 0
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

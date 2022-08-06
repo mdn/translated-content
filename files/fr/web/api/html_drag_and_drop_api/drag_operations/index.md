@@ -22,9 +22,11 @@ Pour rendre un autre élément HTML glissable, deux choses doivent être faites&
 
 Voici un exemple qui permet à une section de contenu d'être glissée&nbsp;:
 
-    <div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
-      Ce texte <strong>peut</strong> être glissé.
-    </div>
+```html
+<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
+  Ce texte <strong>peut</strong> être glissé.
+</div>
+```
 
 L'attribut `{{htmlattrxref("draggable")}}` est défini à true, ce qui rend l'élément glissant. Si cet attribut est omis ou défini à false, l'élément ne serait pas glissant et le texte serait alors simplement sélectionné. Cet attribut peut être placé sur n'importe quel élément, y compris des images et des liens. Toutefois, pour les deux derniers, la valeur par défaut est true, donc vous n'utiliserez l'attribut `{{htmlattrxref("draggable")}}` ``que pour le définir à `false` pour interdire le glissement de ces éléments.
 
@@ -32,17 +34,19 @@ Notez que lorsqu'un élément est rendu glissable, le texte ou les autres élém
 
 Pour des éléments XUL, il n'est pas nécessaire d'utiliser l'attribut `{{htmlattrxref("draggable")}}`, car tous les éléments XUL sont glissables.
 
-    <button label="Glisse moi" ondragstart="event.dataTransfer.setData('text/plain', 'Bouton à glisser');">
-
-
+```html
+<button label="Glisse moi" ondragstart="event.dataTransfer.setData('text/plain', 'Bouton à glisser');">
+```
 
 ## Démarrer une opération de glissement
 
 Dans cet exemple, un scrutateur est ajouté à l'événement dragstart en utilisant l'attribut `ondragstart`.
 
-    <div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
-      Ce texte <strong>peut</strong> être glissé.
-    </div>
+```html
+<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être glissé')">
+  Ce texte <strong>peut</strong> être glissé.
+</div>
+```
 
 Lorsqu'un utilisateur commence un glissement, l'événement dragstart est déclenché. Dans cet exemple, le scrutateur dragstart a été ajouté à l'élément à déplacer lui-même. Vous pouvez toutefois mettre le scrutateur sur un ancètre plus élevé car l'événement drag diffuse comme le font les autres événements. À l'intérieur de l'événement dragstart, vous devez spécifier la donnée de glissement, l'image filligrane et les effets du glissement tels que décrits ci-dessous. Cependant, seule la donnée de glissement est nécessaire&nbsp;; l'image et les effets du glissement par défaut sont suffisants pour la majorité des cas.
 
@@ -60,16 +64,20 @@ Un glissement peut fournir une donnée dans différents types. Ceci permet à un
 
 Pour définir une donnée dans un dataTransfer, utilisez la méthode [setData](/Fr/GlisserD%C3%A9poser/DataTransfer#setData). Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple&nbsp;:
 
-    event.dataTransfer.setData("text/plain", "Texte à glisser");
+```js
+event.dataTransfer.setData("text/plain", "Texte à glisser");
+```
 
 Dans ce cas, la valeur de la donnée est "Texte à glisser" et son format est [text/plain](/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text).
 
 Vous pouvez fournir une donnée dans de multiples formats. Il suffit d'appeler la méthode [setData](/Fr/GlisserD%C3%A9poser/DataTransfer#setData) plusieurs fois avec chacun des formats. Vous devez l'appeler dans l'ordre du format le plus spécifique au moins spécifique.
 
-    var dt = event.dataTransfer;
-    dt.setData("application/x-bookmark", bookmarkString);
-    dt.setData("text/uri-list", "http://www.mozilla.org");
-    dt.setData("text/plain", "http://www.mozilla.org");
+```js
+var dt = event.dataTransfer;
+dt.setData("application/x-bookmark", bookmarkString);
+dt.setData("text/uri-list", "http://www.mozilla.org");
+dt.setData("text/plain", "http://www.mozilla.org");
+```
 
 Ici, une donnée est ajoutée avec trois types différents. Le premier type 'application/x-bookmark' est un type personnalisé. Toutes les applications ne vont pas supporter ce type, mais vous pouvez l'utiliser pour le glissement entre des zones d'une même application ou d'un même site. En fournissant la donnée avec d'autres types, vous la rendez disponible à moindre échelle pour d'autres applications. Le type 'application/x-bookmark' fournira ainsi plus de détail à l'application qu'avec les autres types qui ne seraient que de simples liens ou textes.
 
@@ -79,7 +87,9 @@ Si vous essayez d'ajouter une donnée deux fois avec le même format, alors la n
 
 Vous pouvez effacer la donnée en utilisant la méthode [clearData](/Fr/GlisserD%C3%A9poser/DataTransfer#clearData), avec un seul argument qui est le type de la donnée à effacer.
 
-    event.dataTransfer.clearData("text/uri-list");
+```js
+event.dataTransfer.clearData("text/uri-list");
+```
 
 L'argument de type de la méthode [clearData](/Fr/GlisserD%C3%A9poser/DataTransfer#clearData) est optionnel. S'il n'est pas précisé, la donnée associée à tous les types est effacée. Et si aucune donnée à glisser n'est ajoutée, alors l'opération de glissement ne s'effectue pas.
 
@@ -87,27 +97,31 @@ L'argument de type de la méthode [clearData](/Fr/GlisserD%C3%A9poser/DataTransf
 
 Lorsqu'un glissement a lieu, une image translucide est générée à partir de l'origine du glissement (l'élément d'origine ayant déclenché l'événement), et cette image suit le déplacement de la souris. Elle est créée automatiquement donc vous n'avez pas à le faire vous même. Toutefois, vous pouvez personnaliser cette image filigrane grâce à [setDragImage](/Fr/GlisserD%C3%A9poser/DataTransfer#setDragImage).
 
-    event.dataTransfer.setDragImage(image, xOffset, yOffset);
+```js
+event.dataTransfer.setDragImage(image, xOffset, yOffset);
+```
 
 Trois arguments sont nécessaires. Le premier est la référence à une image. Cette référence pointera en gérénal vers un élément image, mais elle peut pointer aussi vers un canvas ou vers tous autres éléments. L'image filigrane sera simplement générée telle qu'elle ressemble à l'écran, et dessinée à sa taille d'origine. Il est également possible d'utiliser des images et des canvas qui ne sont pas dans un document, comme le montre cet exemple&nbsp;:
 
-    function dragWithCustomImage(event)
-    {
-      var canvas = document.createElement("canvas");
-      canvas.width = canvas.height = 50;
+```js
+function dragWithCustomImage(event)
+{
+  var canvas = document.createElement("canvas");
+  canvas.width = canvas.height = 50;
 
-      var ctx = canvas.getContext("2d");
-      ctx.lineWidth = 4;
-      ctx.moveTo(0, 0);
-      ctx.lineTo(50, 50);
-      ctx.moveTo(0, 50);
-      ctx.lineTo(50, 0);
-      ctx.stroke();
+  var ctx = canvas.getContext("2d");
+  ctx.lineWidth = 4;
+  ctx.moveTo(0, 0);
+  ctx.lineTo(50, 50);
+  ctx.moveTo(0, 50);
+  ctx.lineTo(50, 0);
+  ctx.stroke();
 
-      var dt = event.dataTransfer;
-      dt.setData('text/plain', 'Data to Drag');
-      dt.setDragImage(canvas, 25, 25);
-    }
+  var dt = event.dataTransfer;
+  dt.setData('text/plain', 'Data to Drag');
+  dt.setDragImage(canvas, 25, 25);
+}
+```
 
 Cette technique est utile pour dessiner des images filigranes personnalisées en utilisant l'élément canvas.
 
@@ -119,7 +133,9 @@ Lors d'un glisser/déposer, plusieur opérations se déroulent. L'opération `co
 
 Vous pouvez spécifier laquelle de ces trois opérations sera autorisée au niveau de l'origine du glissement, en définissant la propriété [effectAllowed](/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed) dans un scrutateur d'événement `dragstart`.
 
-    event.dataTransfer.effectAllowed = "copy";
+```js
+event.dataTransfer.effectAllowed = "copy";
+```
 
 Dans cet exemple, seule une copie n'est autorisée. Vous pouvez combiner les valeurs de plusieurs façons&nbsp;:
 
@@ -150,8 +166,10 @@ Vous pouvez modifier les propriétés [effectAllowed](/Fr/GlisserD%C3%A9poser/Da
 
 Vous pouvez modifier la propriété [dropEffect](/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect) en remplaçant l'effet de l'utilisateur, et forcer à obtenir une opération spécifique. Notez que cet effet doit être un de ceux listé dans la propriété [effectAllowed](/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed), sinon une valeur alternative sera attribuée.
 
-    event.dataTransfer.effectAllowed = "copyMove";
-    event.dataTransfer.dropEffect = "copy";
+```js
+event.dataTransfer.effectAllowed = "copyMove";
+event.dataTransfer.dropEffect = "copy";
+```
 
 Dans cet exemple, la copie est l'effet proposé qui est inclus dans la liste des effets autorisés.
 
@@ -163,19 +181,23 @@ Un scrutateur pour les événements `dragenter` et `dragover` est utilisé pour 
 
 Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par défaut en annulant l'événement. Il suffit soit de retourner `false` à partir d'un scrutateur d'événement, ou par l'appel de la méthode événementielle [event.preventDefault](/fr/DOM/event.preventDefault). Cette dernière solution est plus faisable avec une fonction définie dans un script séparé.
 
-    <div ondragover="return false">
-    <div ondragover="event.preventDefault()">
+```html
+<div ondragover="return false">
+<div ondragover="event.preventDefault()">
+```
 
 L'appel de la méthode [event.preventDefault](/fr/DOM/event.preventDefault) pendant les événements `dragenter` et `dragover` indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode [event.preventDefault](/fr/DOM/event.preventDefault) seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.
 
 Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les [types](/fr/GlisserD%C3%A9poser/DataTransfer#types) de l'objet `dataTransfer`. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.
 
-    function doDragOver(event)
-    {
-      var isLink = event.dataTransfer.types.contains("text/uri-list");
-      if (isLink)
-        event.preventDefault();
-    }
+```js
+function doDragOver(event)
+{
+  var isLink = event.dataTransfer.types.contains("text/uri-list");
+  if (isLink)
+    event.preventDefault();
+}
+```
 
 Dans cet exemple, la méthode `contains` est utilisée pour vérifier si le type [text/uri-list](/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link) est présent dans la liste des types. S'il l'est, l'événement est annulé, ce qui autorise un dépôt. Si la donnée ne contient pas un lien, l'événement ne sera pas annulé et le dépôt ne sera pas autorisé à cet endroit.
 
@@ -187,9 +209,11 @@ Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est aut
 
 De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe `-moz-drag-over`sur la cible du dépôt.
 
-    .droparea:-moz-drag-over {
-      border: 1px solid black;
-    }
+```css
+.droparea:-moz-drag-over {
+  border: 1px solid black;
+}
+```
 
 Dans cet example, l'élement comportant la classe `droparea` va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode [event.preventDefault](/en/DOM/event.preventDefault) est appelé durant l'évenement `dragenter`. Il est à noter que vous devez annuler l'évenement `dragenter` de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement `dragover`.
 
@@ -207,12 +231,14 @@ During the `drop` event, you should retrieve that data that was dropped from the
 
 As with all drag related events, the event's `dataTransfer` property will hold the data that is being dragged. The [getData](/En/DragDrop/DataTransfer#getData.28.29) method may be used to retrieve the data again.
 
-    function onDrop(event)
-    {
-      var data = event.dataTransfer.getData("text/plain");
-      event.target.textContent = data;
-      event.preventDefault();
-    }
+```js
+function onDrop(event)
+{
+  var data = event.dataTransfer.getData("text/plain");
+  event.target.textContent = data;
+  event.preventDefault();
+}
+```
 
 The [getData](/En/DragDrop/DataTransfer#getData.28.29) method takes one argument, the type of data to retrieve. It will return the string value that was set when the [setData](/En/DragDrop/DataTransfer#setData.28.29) was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. Naturally though, you would likely know that the right type of data was available, as it was previously checked during a `dragover` event.
 
@@ -222,26 +248,30 @@ In a web page, you should call the [preventDefault](/en/DOM/event.preventDefault
 
 You can retrieve other types of data as well. If the data is a link, it should have the type [text/uri-list](/En/DragDrop/Recommended_Drag_Types#link). You could then insert a link into the content.
 
-    function doDrop(event)
-    {
-      var links = event.dataTransfer.getData("text/uri-list").split("\n");
-      for each (var link in links) {
-        if (link.indexOf("#") == 0)
-          continue;
+```js
+function doDrop(event)
+{
+  var links = event.dataTransfer.getData("text/uri-list").split("\n");
+  for each (var link in links) {
+    if (link.indexOf("#") == 0)
+      continue;
 
-        var newlink = document.createElement("a");
-        newlink.href = link;
-        newlink.textContent = link;
-        event.target.appendChild(newlink);
-      }
-      event.preventDefault();
-    }
+    var newlink = document.createElement("a");
+    newlink.href = link;
+    newlink.textContent = link;
+    event.target.appendChild(newlink);
+  }
+  event.preventDefault();
+}
+```
 
 This example inserts a link from the dragged data. As you might be able to guess from the name, the [text/uri-list](/En/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. In this code, we use the [split](/en/Core_JavaScript_1.5_Reference/Global_Objects/String/split) to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.
 
 For simple cases, you can use the special type `URL` to just retrieve the first valid URL in the list. For example:
 
-    var link = event.dataTransfer.getData("URL");
+```js
+var link = event.dataTransfer.getData("URL");
+```
 
 This eliminates the need to check for comments or iterate through lines yourself, however it is limited to only the first URL in the list.
 
@@ -251,15 +281,17 @@ Sometimes you may support a number of different formats, and you want to retriev
 
 The following example returns the data associated with the best supported format:
 
-    function doDrop(event)
-    {
-      var types = event.dataTransfer.types;
-      var supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
-      types = supportedTypes.filter(function (value) types.contains(value));
-      if (types.length)
-        var data = event.dataTransfer.getData(types[0]);
-      event.preventDefault();
-    }
+```js
+function doDrop(event)
+{
+  var types = event.dataTransfer.types;
+  var supportedTypes = ["application/x-moz-file", "text/uri-list", "text/plain"];
+  types = supportedTypes.filter(function (value) types.contains(value));
+  if (types.length)
+    var data = event.dataTransfer.getData(types[0]);
+  event.preventDefault();
+}
+```
 
 This method relies on JavaScript functionality available in Firefox 3. However the code could be adjusted to support other platforms.
 

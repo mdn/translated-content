@@ -23,7 +23,7 @@ Avec les sites web interactifs et les standards modernes du web, AJAX est progre
 
   - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
 
-- {{interwiki("wikipedia", "AJAX")}} sur Wikipedia
+- [AJAX](https://fr.wikipedia.org/wiki/Ajax_(informatique)) sur Wikipédia
 - [AJAX](/fr/docs/Web/Guide/AJAX)
 - [AJAX - Premiers pas](/fr/docs/Web/Guide/AJAX/Premiers_pas)
 - {{DOMxRef("XMLHttpRequest")}}

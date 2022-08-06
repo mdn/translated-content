@@ -15,7 +15,9 @@ La méthode **`getRootNode()`** de l'interface {{domxref("Node")}} renvoie le co
 
 ## Syntaxe
 
-    var root = node.getRootNode(options)
+```js
+var root = node.getRootNode(options)
+```
 
 ### Paramètres
 

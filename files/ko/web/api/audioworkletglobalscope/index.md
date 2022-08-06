@@ -55,7 +55,7 @@ class TestProcessor extends AudioWorkletProcessor {
     console.log(currentTime)
   }
   // process 메서드는 필수적입니다 - 아무 소리도 나지 않는데,
-  // outputs에 값을 넣지 않았기 때문입니다
+  // outputs에 값을 넣지 않았기 때문입니다
   process (inputs, outputs, parameters) {
     return true
   }
@@ -75,6 +75,7 @@ registerProcessor('test-processor', TestProcessor)
 ```
 
 다음으로, 메인 스크립트 파일에서 우리는 프로세서를 로드하고, `AudioWorkletNode`에 프로세서의 이름을 전달하며 `AudioWorkletNode`의 인스턴스를 생성하고, 노드를 오디오 그래프에 연결할 것입니다. 우리는 콘솔에서 `console.log` 호출의 출력을 볼 수 있을 것입니다.
+
 ```js
 const audioContext = new AudioContext()
 await audioContext.audioWorklet.addModule('test-processor.js')

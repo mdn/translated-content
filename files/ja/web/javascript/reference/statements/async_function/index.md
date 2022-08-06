@@ -114,9 +114,9 @@ function foo() {
 
 次の例では、 2 つのプロミスを連続して待ち受けます。関数 `foo` の処理は 3 段階に分かれています。
 
-1.  関数 foo の本体の最初の行は、保留中のプロミスで await 式が構成された状態で、同期的に実行されます。その後、`foo` の処理は中断され、`foo` を呼び出した関数に制御が返されます。
-2.  しばらくして、最初のプロミスが履行されるか拒否されると、制御は `foo` に戻ります。 (拒否されなかった場合は) 最初のプロミスが履行された結果が await 式から返されます。ここでは `1` が `result1` に代入されます。処理は続き、2 つ目の await 式が評価されます。このときも `foo` の処理が中断され、制御が移譲されます。
-3.  しばらくして、2 つ目のプロミスが履行されたか拒否されたとき、制御は `foo` に再び入ります。2 つ目のプロミスが解決した結果が 2 番目の await 式から返されます。ここでは `2` が `result2` に代入されます。制御は (もしあれば) return 式に移ります。既定の返値である `undefined` が、現在のプロミスの解決値として返されます。
+1. 関数 foo の本体の最初の行は、保留中のプロミスで await 式が構成された状態で、同期的に実行されます。その後、`foo` の処理は中断され、`foo` を呼び出した関数に制御が返されます。
+2. しばらくして、最初のプロミスが履行されるか拒否されると、制御は `foo` に戻ります。 (拒否されなかった場合は) 最初のプロミスが履行された結果が await 式から返されます。ここでは `1` が `result1` に代入されます。処理は続き、2 つ目の await 式が評価されます。このときも `foo` の処理が中断され、制御が移譲されます。
+3. しばらくして、2 つ目のプロミスが履行されたか拒否されたとき、制御は `foo` に再び入ります。2 つ目のプロミスが解決した結果が 2 番目の await 式から返されます。ここでは `2` が `result2` に代入されます。制御は (もしあれば) return 式に移ります。既定の返値である `undefined` が、現在のプロミスの解決値として返されます。
 
 ```js
 async function foo() {
@@ -134,7 +134,7 @@ foo()
 async function foo() {
    const p1 = new Promise((resolve) => setTimeout(() => resolve('1'), 1000))
    const p2 = new Promise((_,reject) => setTimeout(() => reject('2'), 500))
-   const results = [await p1, await p2] // こうしないでください。 Promise.all または Promise.allSettled を使用してください。
+   const results = [await p1, await p2] // こうしないでください。 Promise.all または Promise.allSettled を使用してください。
 }
 foo().catch(() => {}) // すべてのエラーを浅くしようとする...
 ```
@@ -222,12 +222,12 @@ setTimeout(parallel, 10000) // 本当に並列処理となるため 1 秒後に 
 `concurrentStart` では、両方のタイマーが作成され、両方とも `await` される、すなわち待機させられます。タイマーは同時に実行されているため、 3 秒後ではなく 2 秒後に、すなわち最も遅いタイマーにあわせて終了します。
  しかし、 `await` の呼び出しは依然として逐次処理であり、これは 2 つ目の `await` が 1 つ目の終了まで待つことを意味します。このケースでは、最も速いタイマーが最も遅いタイマーのあとに処理されることになります。
 
-複数の処理を安全に並列に実行したい場合は、 [`Promise.all`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) または
+複数の処理を安全に並列に実行したい場合は、 [`Promise.all`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) または
 [`Promise.allSettled`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled) の呼び出しで待つ必要があります。
 
 > **Warning:** 関数 `concurrentStart` と `concurrentPromise` は機能的に同等ではありません。
 >
-> `concurrentStart` では、プロミス `fast` がプロミス `slow` の履行よりも前に拒否された場合、呼び出し元が catch 節を構成しているかどうかにかかわらず、プロミスの拒否が処理されないというエラーが発生します。
+> `concurrentStart` では、プロミス `fast` がプロミス `slow` の履行よりも前に拒否された場合、呼び出し元が catch 節を構成しているかどうかにかかわらず、プロミスの拒否が処理されないというエラーが発生します。
 >
 > `concurrentPromise` では、`Promise.all` がプロミスチェーンを一括して配線します。つまり、操作はプロミスの拒否の順番に関係なくすばやく失敗し、エラーは構成されたプロミスチェーン内で常に発生するため、通常の方法で捕捉することができます。
 

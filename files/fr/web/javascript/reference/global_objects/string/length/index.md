@@ -18,11 +18,13 @@ La propriété **`length`** représente la longueur d'une chaine de caractères,
 
 ## Syntaxe
 
-    str.length
+```js
+str.length
+```
 
 ## Description
 
-Cette propriété renvoie le nombre de « codets » (ou unités de code ou bien _code units_ en anglais) d'une chaîne de caractères. {{interwiki("wikipedia", "UTF-16")}}. Le format utilisé pour représenter les chaînes de caractères en JavaScript utilise un seul codet sur 16 bits pour représenter la plupart des caractères communs. En revanche, pour représenter les caractères plus rares, deux codets seront utilisés : la valeur renvoyée par `length` ne correspondra alors pas au nombre de caractères dans la chaîne.
+Cette propriété renvoie le nombre de « codets » (ou unités de code ou bien _code units_ en anglais) d'une chaîne de caractères [UTF-16](https://fr.wikipedia.org/wiki/UTF-16). Le format utilisé pour représenter les chaînes de caractères en JavaScript utilise un seul codet sur 16 bits pour représenter la plupart des caractères communs. En revanche, pour représenter les caractères plus rares, deux codets seront utilisés : la valeur renvoyée par `length` ne correspondra alors pas au nombre de caractères dans la chaîne.
 
 ECMAScript 2016 (la septième édition) établit une longueur maximale de `2^53 - 1` éléments. Auparavant, aucune longueur maximale n'était spécifiée. Pour Firefox, les chaînes ont une longueur maximale de `2^30-2` caractères (environ 1 Go). Pour les versions de Firefox antérieures à Firefox 65, la taille maximale était de de `2^28-1` (environ 256 Mo).
 

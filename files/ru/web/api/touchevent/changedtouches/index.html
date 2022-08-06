@@ -11,8 +11,8 @@ translation_of: Web/API/TouchEvent/changedTouches
 
 <ul>
  <li>Для события <code>touchstart</code>, это список точек касания, в которых появилось взаимодействие с поверхностью экрана.</li>
- <li>Для события <code>touchmove</code>,  это список точек касания, которые изменились с момента последнего события.</li>
- <li>Для события <code>touchend</code>, это список точек касания, на которых прекратилось взаимодействие с поверхностью экрана (т. е. набор точек,  где прервалось касание пальцами).</li>
+ <li>Для события <code>touchmove</code>,  это список точек касания, которые изменились с момента последнего события.</li>
+ <li>Для события <code>touchend</code>, это список точек касания, на которых прекратилось взаимодействие с поверхностью экрана (т. е. набор точек,  где прервалось касание пальцами).</li>
 </ul>
 
 <p>Это свойство предназначено {{readonlyInline}}.</p>
@@ -31,9 +31,9 @@ translation_of: Web/API/TouchEvent/changedTouches
 
 <h2 id="Пример">Пример</h2>
 
-<p>Этот пример демонстрирует свойство {{domxref("TouchEvent.changedTouches")}} объекта  {{domxref("TouchEvent")}}. Свойство {{domxref("TouchEvent.changedTouches")}} это — объект {{domxref("TouchList")}}, который содержит объект {{domxref("Touch")}} для каждой точки, где произошло событие.</p>
+<p>Этот пример демонстрирует свойство {{domxref("TouchEvent.changedTouches")}} объекта  {{domxref("TouchEvent")}}. Свойство {{domxref("TouchEvent.changedTouches")}} это — объект {{domxref("TouchList")}}, который содержит объект {{domxref("Touch")}} для каждой точки, где произошло событие.</p>
 
-<p>В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка  <code>changedTouches</code> и выводит в консоль <span id="result_box" lang="ru"><span>идентификатор каждой точки касания, где произошло изменение с последнего события.</span></span></p>
+<p>В этом фрагменте кода обработчик события {{event("touchmove")}} выполняет перебор списка  <code>changedTouches</code> и выводит в консоль <span id="result_box" lang="ru"><span>идентификатор каждой точки касания, где произошло изменение с последнего события.</span></span></p>
 
 <pre class="brush: js">someElement.addEventListener('touchmove', function(e) {
    // Iterate through the list of touch points that changed

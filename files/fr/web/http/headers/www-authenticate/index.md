@@ -23,7 +23,9 @@ L'entête `WWW-Authenticate` est envoyée en même temps qu'une réponse {{HTTPS
 
 ## Syntaxe
 
-    WWW-Authenticate: <type> realm=<realm>
+```
+WWW-Authenticate: <type> realm=<realm>
+```
 
 ## Directives
 
@@ -38,9 +40,11 @@ L'entête `WWW-Authenticate` est envoyée en même temps qu'une réponse {{HTTPS
 
 La réponse d'un serveur contient généralement l'entête `WWW-Authenticate` qui ressemble à ça :
 
-    WWW-Authenticate: Basic
+```
+WWW-Authenticate: Basic
 
-    WWW-Authenticate: Basic realm="Accès au site de staging", charset="UTF-8"
+WWW-Authenticate: Basic realm="Accès au site de staging", charset="UTF-8"
+```
 
 Voir aussi [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) pour des exemples sur la configuration des serveurs Apache ou nginx pour protéger protéger votre site par mot de passe en utilisant l'authentification HTTP basic.
 

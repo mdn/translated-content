@@ -67,15 +67,15 @@ masonry-auto-flow: unset;
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
-  <div id="item4"></div>
-  <div id="item5"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
 </div>
 <select id="flow">
-  <option value="pack">pack</option>
-  <option value="next">next</option>
+  <option value="pack">pack</option>
+  <option value="next">next</option>
 </select>
 ```
 
@@ -88,7 +88,7 @@ masonry-auto-flow: unset;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: masonry;
+  grid-template-rows: masonry;
   masonry-auto-flow: pack;
 }
 
@@ -103,17 +103,17 @@ masonry-auto-flow: unset;
 
 #item3 {
   background-color: blue;
-  height: 3em;
+  height: 3em;
 }
 
 #item4 {
   background-color: red;
-  height: 2.5em;
+  height: 2.5em;
 }
 
 #item5 {
   background-color: aqua;
-  height: 4em;
+  height: 4em;
 }
 ```
 
@@ -145,4 +145,4 @@ selectElem.addEventListener('change', changeMasonryFlow);
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}
+- 関連する CSS プロパティ: {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}

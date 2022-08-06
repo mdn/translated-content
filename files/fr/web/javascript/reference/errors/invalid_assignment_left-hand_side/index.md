@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Reference/Erreurs/Invalid_assignment_left-hand_sid
 
 ## Message
 
-    ReferenceError: invalid assignment left-hand side
+```
+ReferenceError: invalid assignment left-hand side
+```
 
 ## Type d'erreur
 

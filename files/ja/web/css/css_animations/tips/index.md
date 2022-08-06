@@ -90,9 +90,9 @@ function play() {
 
 `play()` 関数が呼び出された時に起きることは次の通りです。
 
-1.  box の CSS クラスのリストを単純な `"box"` にリセットします。 これは、その box に現在適用されている他のどのクラスを取り除く効果を持ちます。 これにはアニメーションを扱う `"changing"` クラスが含まれます。 言い換えると、ボックスからアニメーション効果を取り除きます。 しかし、クラスのリストを変更することはそのスタイルの再計算が完了するまで効果を持たず、更新はその変更を反映するために発生し続けます。
-2.  スタイルが確実に再計算されるように、{{domxref("window.requestAnimationFrame()")}} を使用し、コールバックを指定します。このコールバックは、文書の次の再描画の直前に実行されます。問題は、再描画の前なので、スタイルの再計算がまだ行われていないということです。
-3.  このコールバックは、巧妙に `requestAnimationFrame()` を 2 回目に呼び出しています。今回のコールバックは、スタイルの再計算が行われた後の、次の再描画の前に実行されます。このコールバックは、ボックスに `"changing"` クラスを追加し、再描画で再びアニメーションを開始するようにしています。
+1. box の CSS クラスのリストを単純な `"box"` にリセットします。 これは、その box に現在適用されている他のどのクラスを取り除く効果を持ちます。 これにはアニメーションを扱う `"changing"` クラスが含まれます。 言い換えると、ボックスからアニメーション効果を取り除きます。 しかし、クラスのリストを変更することはそのスタイルの再計算が完了するまで効果を持たず、更新はその変更を反映するために発生し続けます。
+2. スタイルが確実に再計算されるように、{{domxref("window.requestAnimationFrame()")}} を使用し、コールバックを指定します。このコールバックは、文書の次の再描画の直前に実行されます。問題は、再描画の前なので、スタイルの再計算がまだ行われていないということです。
+3. このコールバックは、巧妙に `requestAnimationFrame()` を 2 回目に呼び出しています。今回のコールバックは、スタイルの再計算が行われた後の、次の再描画の前に実行されます。このコールバックは、ボックスに `"changing"` クラスを追加し、再描画で再びアニメーションを開始するようにしています。
 
 もちろん、実際に動作するために "Run" ボタンにイベントハンドラーを追加する必要があります。
 
@@ -108,32 +108,32 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 要素に適用されている {{cssxref("animation-name")}} を削除すると、その要素は次の状態にジャンプまたはカットします。しかし、アニメーションを完了させてから停止させたい場合は、別の方法を取らなければなりません。主なトリックは以下の通りです。
 
-1.  可能なら自身を含めるようアニメーションさせること。 これは `animation-direction: alternate` を信頼するべきではないことを意味します。 代わりに一回の繰り返しの中で完全なアニメーションを経過するキーフレームアニメーションを明示的に書くべきです。
-2.  JavaScript を使用し、`animationiteration` イベントが発生した時に使われるアニメーションをクリアーすること。
+1. 可能なら自身を含めるようアニメーションさせること。 これは `animation-direction: alternate` を信頼するべきではないことを意味します。 代わりに一回の繰り返しの中で完全なアニメーションを経過するキーフレームアニメーションを明示的に書くべきです。
+2. JavaScript を使用し、`animationiteration` イベントが発生した時に使われるアニメーションをクリアーすること。
 
 次のデモは前述の JavaScript テクニックをどのように利用するかを示します。
 
 ```css
 .slidein {
-  animation-duration: 5s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
 }
 
 .stopped {
-  animation-name: none;
+  animation-name: none;
 }
 
 @keyframes slidein {
-  0% {
-    margin-left: 0%;
-  }
-  50% {
-    margin-left: 50%;
-  }
-  100% {
-    margin-left: 0%;
-  }
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }
 ```
 
@@ -146,10 +146,10 @@ let watchme = document.getElementById('watchme')
 
 watchme.className = 'slidein'
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
+  watchme.className = 'slidein stopped'
 }
 watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
+  watchme.addEventListener('animationiteration', listener, false)
 )
 ```
 

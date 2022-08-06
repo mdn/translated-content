@@ -30,4 +30,4 @@ La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Objec
 ### Culture générale
 
 - [Introduction aux types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es)
-- {{Interwiki("wikipedia", "Type (informatique)")}} on Wikipedia
+- [Type](https://fr.wikipedia.org/wiki/Type_(informatique)) sur Wikipédia

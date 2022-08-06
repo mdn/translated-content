@@ -37,11 +37,11 @@ translation_of: Web/CSS/:host-context()
 /* .dark-theme クラスが文書の body に適用されているとき、
     段落のテキストの色を黒から白に変更します。 */
 p {
-  color: #000;
+  color: #000;
 }
 
 :host-context(body.dark-theme) p {
-  color: #fff;
+  color: #fff;
 }
 ```
 

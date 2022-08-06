@@ -32,19 +32,19 @@ translation_of: Web/CSS/@media/color-index
 
 ```css
 p {
-  color: black;
+  color: black;
 }
 
 @media (color-index) {
-  p {
-    color: red;
-  }
+  p {
+    color: red;
+  }
 }
 
 @media (min-color-index: 15000) {
-  p {
-    color: #1475ef;
-  }
+  p {
+    color: #1475ef;
+  }
 }
 ```
 

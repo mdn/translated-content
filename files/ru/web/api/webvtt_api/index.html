@@ -5,7 +5,7 @@ translation_of: Web/API/WebVTT_API
 ---
 <div>{{APIRef("WebVTT")}}</div>
 
-<p><span class="seoSummary"><strong>Формат Web Video Text Tracks</strong> (<strong>WebVTT</strong>)</span>это формат для отображения синхронизированных текстовых треков<span class="seoSummary"> (</span>такие как субтитры или подписи<span class="seoSummary">) </span>с помощью <span class="seoSummary"> элементов {{HTMLElement("track")}}.</span> Основная цель файлов WebVTT — добавить текстовые наложения к элементам {{HTMLElement("video")}}. WebVTT является текстовым форматом, который должен быть закодирован с использованием {{Glossary("UTF-8")}}. В этих файлах вы можете использовать пробелы и табы для отступов. Существует также небольшой API для представления и управления этими дорожками и данными, необходимыми для отображения текста в нужное время.</p>
+<p><span class="seoSummary"><strong>Формат Web Video Text Tracks</strong> (<strong>WebVTT</strong>)</span>это формат для отображения синхронизированных текстовых треков<span class="seoSummary"> (</span>такие как субтитры или подписи<span class="seoSummary">) </span>с помощью <span class="seoSummary"> элементов {{HTMLElement("track")}}.</span> Основная цель файлов WebVTT — добавить текстовые наложения к элементам {{HTMLElement("video")}}. WebVTT является текстовым форматом, который должен быть закодирован с использованием {{Glossary("UTF-8")}}. В этих файлах вы можете использовать пробелы и табы для отступов. Существует также небольшой API для представления и управления этими дорожками и данными, необходимыми для отображения текста в нужное время.</p>
 
 <h2 id="Файлы_WebVTT">Файлы WebVTT</h2>
 
@@ -29,12 +29,12 @@ translation_of: Web/API/WebVTT_API
 
 <ul>
  <li>Необязательный знак порядка байтов (BOM).</li>
- <li>Строка  "<code>WEBVTT</code>".</li>
+ <li>Строка  "<code>WEBVTT</code>".</li>
  <li>Дополнительный текстовый заголовок справа от <code>WEBVTT.</code>
   <ul>
-   <li>Должен быть хотя бы один пробел после  <code>WEBVTT.</code></li>
+   <li>Должен быть хотя бы один пробел после  <code>WEBVTT.</code></li>
    <li>Вы можете использовать его, чтобы добавить описание к файлу.</li>
-   <li>Вы можете использовать что угодно в текстовом заголовке, кроме перевода строки или  "<code>--&gt;</code>".</li>
+   <li>Вы можете использовать что угодно в текстовом заголовке, кроме перевода строки или  "<code>--&gt;</code>".</li>
   </ul>
  </li>
  <li>Пустая строка, которая эквивалентна двум последовательным переводам строки.</li>
@@ -90,12 +90,12 @@ NOTE Это последняя строка в файле</pre>
 
 <ul>
  <li>Первая строка начинается с метки времени, которое определяет начало отображения нижележащего текста.</li>
- <li>На той же строке далее идут символы  <code>--&gt;</code>.</li>
- <li>Первая строка заканчивается  второй меткой времени, которое определяет прекращения отображения связанного текста.</li>
- <li>Затем может быть одна или несколько строк, начинающихся с дефиса  (-), каждая из которых содержит часть текстовой дорожки для отображения.</li>
+ <li>На той же строке далее идут символы  <code>--&gt;</code>.</li>
+ <li>Первая строка заканчивается  второй меткой времени, которое определяет прекращения отображения связанного текста.</li>
+ <li>Затем может быть одна или несколько строк, начинающихся с дефиса  (-), каждая из которых содержит часть текстовой дорожки для отображения.</li>
 </ul>
 
-<p>Мы также можем разместить комментарии в нашем файле <code>.vtt</code>, чтобы помочь нам запомнить важную информацию о частях нашего файла. Они должны быть в отдельных строках, начинающихся со слова <code>NOTE</code>. Подробнее об этом сказано  в следующем разделе.</p>
+<p>Мы также можем разместить комментарии в нашем файле <code>.vtt</code>, чтобы помочь нам запомнить важную информацию о частях нашего файла. Они должны быть в отдельных строках, начинающихся со слова <code>NOTE</code>. Подробнее об этом сказано  в следующем разделе.</p>
 
 <p>Важно не использовать дополнительные пустые строки в реплике, например, между строкой синхронизации и текстом реплики. WebVTT использует строчные разделители, поэтому пустая строка обозначит окончание реплики.</p>
 
@@ -103,7 +103,7 @@ NOTE Это последняя строка в файле</pre>
 
 <p>Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.</p>
 
-<p>A comment cannot contain the string "<code>--&gt;",</code> the ampersand character (&amp;), or the less-than sign (&lt;). If you wish to use such characters, you need to escape them using for example <code>&amp;amp;</code> for ampersand and <code>&amp;lt;</code> for less-than. It is also recommended that you use the greater-than escape sequence (<code>&amp;gt;</code>) instead of the greater-than character (<code>&gt;</code>) to avoid confusion with tags.</p>
+<p>A comment cannot contain the string "<code>--&gt;",</code> the ampersand character (&amp;), or the less-than sign (&lt;). If you wish to use such characters, you need to escape them using for example <code>&amp;amp;</code> for ampersand and <code>&amp;lt;</code> for less-than. It is also recommended that you use the greater-than escape sequence (<code>&amp;gt;</code>) instead of the greater-than character (<code>&gt;</code>) to avoid confusion with tags.</p>
 
 <p>A comment consists of three parts:</p>
 
@@ -219,7 +219,7 @@ Transcrit par Célestes™
 <pre class="brush: css">::cue(#\31) { color: lime; }
 ::cue(#crédit\ de\ transcription) { color: red; }</pre>
 
-<p>Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):</p>
+<p>Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see <a href="#cue_settings">Cue settings</a> for more information):</p>
 
 <pre>WEBVTT
 
@@ -563,7 +563,7 @@ Third
 
 <h3 id="Cue_payload">Cue payload</h3>
 
-<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
+<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
 
 <p>A cue text payload cannot contain the string "<code>--&gt;"</code>, the ampersand character (&amp;), or the less-than sign (&lt;). Instead use the escape sequence "&amp;amp;" for ampersand and "&amp;lt;" for less-than. It is also recommended that you use the greater-than escape sequence "&amp;gt;" instead of the greater-than character (&gt;) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.</p>
 
@@ -608,7 +608,7 @@ Third
   </tr>
   <tr>
    <td>Non-breaking space</td>
-   <td><code> </code></td>
+   <td><code> </code></td>
    <td><code>&amp;nbsp;</code></td>
   </tr>
  </tbody>
@@ -622,7 +622,7 @@ Third
  <li><strong>Timestamp tag</strong>
 
   <ul>
-   <li>The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The <em>active text</em> is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the <em>active text</em> in the payload is <em>previous text</em> . Any text beyond the <em>active text</em> is <em>future text</em> . This enables karaoke style captions.</li>
+   <li>The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The <em>active text</em> is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the <em>active text</em> in the payload is <em>previous text</em> . Any text beyond the <em>active text</em> is <em>future text</em> . This enables karaoke style captions.</li>
   </ul>
 
   <div>
@@ -644,7 +644,7 @@ That's &lt;00:00:21.000&gt;amore
  </li>
 </ul>
 
-<p>The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., <code>&lt;b&gt;text&lt;/b&gt;</code>).</p>
+<p>The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., <code>&lt;b&gt;text&lt;/b&gt;</code>).</p>
 
 <ul>
  <li><strong>Class tag</strong> (<code>&lt;c&gt;&lt;/c&gt;</code>)
@@ -821,7 +821,7 @@ interface <dfn>VTTRegion</dfn> {
 
 <pre>WEBVTT</pre>
 
-<p>      3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:</p>
+<p>      3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:</p>
 
 <pre>00:01.000 --&gt; 00:05.000</pre>
 
@@ -898,6 +898,6 @@ Sur les &lt;i.foreignphrase&gt;&lt;lang en&gt;playground&lt;/lang&gt;&lt;/i&gt;,
 
 <p>Prior to Firefox 50, the <code>AlignSetting</code> enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value <code>"middle"</code> instead of <code>"center"</code>. This has been corrected.</p>
 
-<p>WebVTT was implemented in Firefox 24 behind the preference {{pref("media.webvtt.enabled")}}, which is disabled by default; you can enable it by setting this preference to <code>true</code>. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to <code>false</code>.</p>
+<p>WebVTT was implemented in Firefox 24 behind the preference <code>media.webvtt.enabled</code>, which is disabled by default; you can enable it by setting this preference to <code>true</code>. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to <code>false</code>.</p>
 
 <p>Prior to Firefox 58, the <code>REGION</code> keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports <code>VTTRegion</code> and its use; however, this feature is disabled by default behind the preference <code>media.webvtt.regions.enabled</code>; set it to <code>true</code> to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).</p>

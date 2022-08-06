@@ -20,7 +20,9 @@ La méthode **`codePointAt()`** renvoie un entier positif qui correspond au code
 
 ## Syntaxe
 
-    str.codePointAt(pos)
+```js
+str.codePointAt(pos)
+```
 
 ### Paramètres
 

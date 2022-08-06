@@ -31,7 +31,7 @@ original_slug: Web/HTML/Elemento/input/range
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>Un {{domxref("DOMString")}} que contiene la cadena que representa el valor numérico seleccionado; use {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} to get the value as a {{jsxref("Number")}}.</td>
   </tr>
   <tr>
@@ -75,7 +75,7 @@ original_slug: Web/HTML/Elemento/input/range
  <li>Longitud de contraseñas para un gestor de contraseñas generadas.</li>
 </ul>
 
-<p>Como regla general, si el usuario está más interesado en la distancia entre un mínimo y un máximo más que en el propio valor en sí  mismo, el input de tipo rango es el candidato perfecto. Por ejemplo, en el caso del control del volumen de un equipo estéreo, el usuario normalmente piensa "pon el volumen a la midad" en lugar de "pon el volumen al 0,5".</p>
+<p>Como regla general, si el usuario está más interesado en la distancia entre un mínimo y un máximo más que en el propio valor en sí  mismo, el input de tipo rango es el candidato perfecto. Por ejemplo, en el caso del control del volumen de un equipo estéreo, el usuario normalmente piensa "pon el volumen a la midad" en lugar de "pon el volumen al 0,5".</p>
 
 <h3 id="Especificar_los_valores_mínimo_y_máximo">Especificar los valores mínimo y máximo</h3>
 
@@ -97,7 +97,7 @@ original_slug: Web/HTML/Elemento/input/range
 <p>{{EmbedLiveSample("Granularity_sample1", 600, 40)}}</p>
 </div>
 
-<p><span id="result_box" lang="es"><span>Si quieres aceptar cualquier valor independientemente de la cantidad de decimales, puede especificar un valor de </span></span><code>"any"</code> al atrtibuto {{htmlattrxref("step", "input")}}:</p>
+<p><span id="result_box" lang="es"><span>Si quieres aceptar cualquier valor independientemente de la cantidad de decimales, puede especificar un valor de </span></span><code>"any"</code> al atrtibuto {{htmlattrxref("step", "input")}}:</p>
 
 <div id="Granularity_sample2">
 <pre class="brush: html">&lt;input type="range" min="0" max="3.14" step="any"&gt;</pre>
@@ -137,7 +137,7 @@ original_slug: Web/HTML/Elemento/input/range
 
 <h5 id="Un_control_rango_con_marcas">Un control rango con marcas</h5>
 
-<p>El siguiente rango utiliza el atributo <code>list</code> (al cual le especificamos el ID del elemento {{HTMLElement("datalist")}}) para definir la serie de marcas del rango. Hay once marcas, cada una de ellas mide un 10%, representadas por el  {{htmlattrxref("value", "option")}} de cada elemento {{HTMLElement("option")}}.</p>
+<p>El siguiente rango utiliza el atributo <code>list</code> (al cual le especificamos el ID del elemento {{HTMLElement("datalist")}}) para definir la serie de marcas del rango. Hay once marcas, cada una de ellas mide un 10%, representadas por el  {{htmlattrxref("value", "option")}} de cada elemento {{HTMLElement("option")}}.</p>
 
 <table class="fullwidth standard-table">
  <tbody>
@@ -265,19 +265,19 @@ original_slug: Web/HTML/Elemento/input/range
 
 <pre class="brush: css">.slider-wrapper {
   display: inline-block;
-  width: 20px;
-  height: 150px;
-  padding: 0;
+  width: 20px;
+  height: 150px;
+  padding: 0;
 }
 </pre>
 Después ponemos la información para el elemento <code>&lt;input&gt;</code>:
 
 <pre class="brush: css">.slider-wrapper input {
-  width: 150px;
-  height: 20px;
-  margin: 0;
-  transform-origin: 75px 75px;
-  transform: rotate(-90deg);
+  width: 150px;
+  height: 20px;
+  margin: 0;
+  transform-origin: 75px 75px;
+  transform: rotate(-90deg);
 }</pre>
 
 <p>El tamaño del range es 150 pixeles de ancho por 20 pixeles de alto. Ponemos los márgenes a 0 y con {{cssxref("transform-origin")}} cambiamos centro que usaremos para rotar el range. Como el input mide 150 pixeles de ancho y largo, girará en una cuadrado de 150 pixeles de lado. Colocamos el centro de giro a 75px horizontal y verticalmente y, finalmente, rotamos 90º en sentido contrario a las agujas del reloj. El resultado final es un input range que ha girado y cuyo valor máximo está en la parte superior y el valor mínimo en la parte inferior.</p>
@@ -295,15 +295,15 @@ Después ponemos la información para el elemento <code>&lt;input&gt;</code>:
 <div id="gt-res-wrap">
 <div id="gt-res-content">
 <div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr">
-<div id="tts_button"> </div>
-<span id="result_box" lang="es"><span>No hay un patrón de validación</span></span><span lang="es"><span> disponible;</span> <span>sin embargo, se realizan las siguientes formas de validación automática:</span></span></div>
+<div id="tts_button"> </div>
+<span id="result_box" lang="es"><span>No hay un patrón de validación</span></span><span lang="es"><span> disponible;</span> <span>sin embargo, se realizan las siguientes formas de validación automática:</span></span></div>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li>Si el {{htmlattrxref("value", "input")}} <span id="result_box" lang="es"><span>está configurado con un valor que no se puede convertir en un número de coma flotante válido, la validación falla porque recibe una entrada incorrecta.</span></span></li>

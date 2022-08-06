@@ -269,7 +269,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
   - : サイトが証明書の透明性要件の報告や実施を選択できるようにします。これにより、そのサイトで不正な証明書の使用に気づかないことを防ぎます。サイトが Expect-CT ヘッダーを有効にした場合、そのサイトの証明書が公開CTログに表示されることを Chrome が確認するようにリクエストしています。
 - {{HTTPHeader("Feature-Policy")}}
   - : 自身のフレームまたはその中の iframe で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
+- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : ウェブアプリケーションをオリジンから独立させるための仕組みを提供します。
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : HTTP の代わりに HTTPS による通信を強制します。

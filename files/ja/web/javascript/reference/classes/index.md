@@ -69,7 +69,7 @@ console.log(Rectangle.name);
 // 出力: "Rectangle2"
 ```
 
-> **Note:** クラス**式**にも{{anch("Class declarations", "クラス宣言")}}で言及したのと同様の巻き上げ問題があります。
+> **Note:** クラス**式**にも[クラス宣言](#class_declarations)で言及したのと同様の巻き上げ問題があります。
 
 ## クラス本体とメソッド定義
 
@@ -117,13 +117,13 @@ console.log(square.area); // 100
 ```js
 class Polygon {
   constructor(...sides) {
-    this.sides = sides;
+    this.sides = sides;
   }
   // Method
   *getSides() {
     for(const side of this.sides){
       yield side;
-    }
+    }
   }
 }
 
@@ -143,7 +143,7 @@ class Point {
     this.y = y;
   }
 
-  static displayName = "Point";
+  static displayName = "Point";
   static distance(a, b) {
     const dx = a.x - b.x;
     const dy = a.y - b.y;

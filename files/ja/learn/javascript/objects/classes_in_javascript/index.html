@@ -37,13 +37,13 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 
 <h2 id="Prototypal_inheritance" name="Prototypal_inheritance">プロトタイプでの継承</h2>
 
-<p>ここまで動作している継承 ー プロトタイプチェーンがどのように動作するか、どのようにメンバーが繋がるチェーンから継承されるのかを見てきました。しかし、これらの大半はブラウザーの組み込み関数で実行されています。我々が他のオブジェクトから継承したオブジェクトを作成するには JavaScript でどのようにするのでしょうか。</p>
+<p>ここまで動作している継承 ー プロトタイプチェーンがどのように動作するか、どのようにメンバーが繋がるチェーンから継承されるのかを見てきました。しかし、これらの大半はブラウザーの組み込み関数で実行されています。我々が他のオブジェクトから継承したオブジェクトを作成するには JavaScript でどのようにするのでしょうか。</p>
 
 <p>具体的な例を使ってどのようの継承が行われているかを見てゆきましょう。</p>
 
 <h2 id="Getting_started" name="Getting_started">さあ始めてみよう</h2>
 
-<p>まず、<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html">oojs-class-inheritance-start.html</a> ファイルをローカルにコピーしましょう (あるいは<a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html">ライブ版の実行</a>でも確認できます)。ここでこのモジュールで幅広く使用されてきた <code>Person()</code> というコンストラクタの例を見つけることができます。わずかな違いがあって、コンストラクタ内部にプロパティのみが定義されています。</p>
+<p>まず、<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html">oojs-class-inheritance-start.html</a> ファイルをローカルにコピーしましょう (あるいは<a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html">ライブ版の実行</a>でも確認できます)。ここでこのモジュールで幅広く使用されてきた <code>Person()</code> というコンストラクタの例を見つけることができます。わずかな違いがあって、コンストラクタ内部にプロパティのみが定義されています。</p>
 
 <pre class="brush: js notranslate">function Person(first, last, age, gender, interests) {
   this.name = {
@@ -62,19 +62,19 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 };</pre>
 
 <div class="note">
-<p><strong>注意</strong>: ソースコードに、<code>bio()</code> と <code>farewell()</code> が定義されています。後ほどこれらのメソッドがどのようにほかのコンストラクタで継承されるのかを確認します。</p>
+<p><strong>注意</strong>: ソースコードに、<code>bio()</code> と <code>farewell()</code> が定義されています。後ほどこれらのメソッドがどのようにほかのコンストラクタで継承されるのかを確認します。</p>
 </div>
 
 <p><code>Teacher</code> クラスを作成したい場合を考えましょう。これは最初のオブジェクト指向の特徴にて述べたもののようなクラスで、<code>Person</code> からすべてのメンバーを継承しますが、次のものも内包しています。</p>
 
 <ol>
  <li>新しいプロパティの <code>subject</code> — これはその先生の教える科目を格納します。</li>
- <li>上書きされた <code>greeting()</code> メソッド、標準の <code>greeting()</code> メソッドよりわずかに固く感じられる — 学校で生徒に語りかける先生により相応しい。</li>
+ <li>上書きされた <code>greeting()</code> メソッド、標準の <code>greeting()</code> メソッドよりわずかに固く感じられる — 学校で生徒に語りかける先生により相応しい。</li>
 </ol>
 
 <h2 id="Defining_a_Teacher_constructor_function" name="Defining_a_Teacher_constructor_function">Teacher() コンストラクタの機能を定義しよう</h2>
 
-<p>われわれのまずすべき事は <code>Teacher()</code> コンストラクタを作成する事です — 以下に続くコードを既存コードの下に追加してください。</p>
+<p>われわれのまずすべき事は <code>Teacher()</code> コンストラクタを作成する事です — 以下に続くコードを既存コードの下に追加してください。</p>
 
 <pre class="brush: js notranslate">function Teacher(first, last, age, gender, interests, subject) {
   Person.call(this, first, last, age, gender, interests);
@@ -82,11 +82,11 @@ original_slug: Learn/JavaScript/Objects/Inheritance
   this.subject = subject;
 }</pre>
 
-<p>これは多くの点で Person コンストラクタと似ていますが、これまでに見てきたものと異なったものがあります—  <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code> 関数です。この関数は基本的に別の場所で定義された関数を、しかし現在のコンテキストで呼び出すことができます。最初の引数は関数を実行するときに使用したい <code>this</code> の値を指定します、また他の引数は実行される関数に渡されるべき値です。</p>
+<p>これは多くの点で Person コンストラクタと似ていますが、これまでに見てきたものと異なったものがあります—  <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call()</a></code> 関数です。この関数は基本的に別の場所で定義された関数を、しかし現在のコンテキストで呼び出すことができます。最初の引数は関数を実行するときに使用したい <code>this</code> の値を指定します、また他の引数は実行される関数に渡されるべき値です。</p>
 
-<p><code>Teacher()</code> コンストラクタは継承元の <code>Person()</code> コンストラクタと同じ引数を取りたいため、 <code>call()</code> を呼び出して、すべての引き数を引数として渡します。</p>
+<p><code>Teacher()</code> コンストラクタは継承元の <code>Person()</code> コンストラクタと同じ引数を取りたいため、 <code>call()</code> を呼び出して、すべての引き数を引数として渡します。</p>
 
-<p>コンストラクタの最後の行は、先生が行うべきであり、一般の人が持たない新たな <code>subject</code>(授業) のプロパティを定義しています。</p>
+<p>コンストラクタの最後の行は、先生が行うべきであり、一般の人が持たない新たな <code>subject</code>(授業) のプロパティを定義しています。</p>
 
 <p>注意として、下記のソースのように、このようにシンプルにも書けます。</p>
 
@@ -101,18 +101,18 @@ original_slug: Learn/JavaScript/Objects/Inheritance
   this.subject = subject;
 }</pre>
 
-<p>しかしながらこれはただ改めてプロパティを再定義しているだけで、 <code>Person()</code> から継承していません、そのため、説明しようとしたポイントが伝わりません。またコード行数が多くもなります。</p>
+<p>しかしながらこれはただ改めてプロパティを再定義しているだけで、 <code>Person()</code> から継承していません、そのため、説明しようとしたポイントが伝わりません。またコード行数が多くもなります。</p>
 
 <h3 id="Inheriting_from_a_constructor_with_no_parameters" name="Inheriting_from_a_constructor_with_no_parameters">引数なしのコンストラクタからの継承</h3>
 
-<p>もし継承したコンストラクタがパラメータからプロパティの値を取得しない場合、 <code>call()</code> の呼び出しで追加の引数を指定する必要がないことを示しておきます。そのため、例えば、このような本当にシンプルなものがある場合、</p>
+<p>もし継承したコンストラクタがパラメータからプロパティの値を取得しない場合、 <code>call()</code> の呼び出しで追加の引数を指定する必要がないことを示しておきます。そのため、例えば、このような本当にシンプルなものがある場合、</p>
 
 <pre class="brush: js notranslate">function Brick() {
   this.width = 10;
   this.height = 20;
 }</pre>
 
-<p>このように書くことで <code>width</code> と <code>height</code> プロパティを継承することができます(もちろん、下に挙げる数行のステップの様にすることもできます)。</p>
+<p>このように書くことで <code>width</code> と <code>height</code> プロパティを継承することができます(もちろん、下に挙げる数行のステップの様にすることもできます)。</p>
 
 <pre class="brush: js notranslate">function BlueGlassBrick() {
   Brick.call(this);
@@ -121,32 +121,32 @@ original_slug: Learn/JavaScript/Objects/Inheritance
   this.color = 'blue';
 }</pre>
 
-<p> <code>call()</code> の中に <code>this</code> だけを記載していることに注意して下さい— 引数を介して親より設定されるどのプロパティも継承しないので他の引数は不要です。</p>
+<p> <code>call()</code> の中に <code>this</code> だけを記載していることに注意して下さい— 引数を介して親より設定されるどのプロパティも継承しないので他の引数は不要です。</p>
 
 <h2 id="Setting_Teachers_prototype_and_constructor_reference" name="Setting_Teachers_prototype_and_constructor_reference">Teacher()のプロトタイプ とコンストラクタの参照への設定方法</h2>
 
-<p>今まではすべて順調でしたが、1点問題があります。新しいコンストラクタを定義して、その中に 1 つの <code>prototype</code> プロパティを持たせ、これはデフォルトでただ自身のコンストラクタ関数への参照を保持しています。Person のコンストラクタの <code>prototype</code> プロパティへのメソッド群は持っていません。このことを見てみたいのならば <code>Object.getOwnPropertyNames(Teacher.prototype)</code>  をテキスト入力フィールドや JavaScript コンソールへ入力を試してみてください。そして再度入力する時には、<code>Teacher</code> を <code>Person</code> で置き換えてみてください。新しいコンストラクタもそれらのメソッドを継承していません。このことを確認するために、<code>Person.prototype.greeting</code> と <code>Teacher.prototype.greeting</code> の出力結果を比べてみてください。<code>Person()</code>  のプロトタイプに定義されたメソッドを継承するために <code>Teacher()</code> を生成する必要があります。ではどのようにすればよいのでしょうか。</p>
+<p>今まではすべて順調でしたが、1点問題があります。新しいコンストラクタを定義して、その中に 1 つの <code>prototype</code> プロパティを持たせ、これはデフォルトでただ自身のコンストラクタ関数への参照を保持しています。Person のコンストラクタの <code>prototype</code> プロパティへのメソッド群は持っていません。このことを見てみたいのならば <code>Object.getOwnPropertyNames(Teacher.prototype)</code>  をテキスト入力フィールドや JavaScript コンソールへ入力を試してみてください。そして再度入力する時には、<code>Teacher</code> を <code>Person</code> で置き換えてみてください。新しいコンストラクタもそれらのメソッドを継承していません。このことを確認するために、<code>Person.prototype.greeting</code> と <code>Teacher.prototype.greeting</code> の出力結果を比べてみてください。<code>Person()</code>  のプロトタイプに定義されたメソッドを継承するために <code>Teacher()</code> を生成する必要があります。ではどのようにすればよいのでしょうか。</p>
 
 <ol>
  <li>前回追加した部分の下に以下の行を追加してみましょう:
   <pre class="brush: js notranslate">Teacher.prototype = Object.create(Person.prototype);</pre>
-  ここで我々に馴染み深い <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> に再度助けてもらいましょう。この場合に新しいオブジェクトを作ってそれを <code>Teacher.prototype</code> の値とするのに使います。新しいオブジェクトは <code>Person.prototype</code> を自身のプロトタイプとして保持し、それがゆえに(必要となる時には) <code>Person.prototype</code> 上で利用できるすべてのメソッドを継承します。</li>
+  ここで我々に馴染み深い <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> に再度助けてもらいましょう。この場合に新しいオブジェクトを作ってそれを <code>Teacher.prototype</code> の値とするのに使います。新しいオブジェクトは <code>Person.prototype</code> を自身のプロトタイプとして保持し、それがゆえに(必要となる時には) <code>Person.prototype</code> 上で利用できるすべてのメソッドを継承します。</li>
  <li>先に進む前にもう一つやることがあります。<br>
   最後の行を追加した後、<code>Teacher.</code><code>prototype</code> の <code>constructor</code> プロパティは <code>Person()</code> と同じになりました。なぜなら、<code>Person.prototype</code> からプロパティを継承するオブジェクトを参照するように <code>Teacher.prototype</code> を設定しただけだからです。コードを保存し、ブラウザでページを読み込み、コンソールに <code>Teacher.prototype.constructor</code> と入力して確認してみてください。</li>
- <li>これは問題になるかもしれません、なので以下の内容をすぐに設定しましょう。 ソースコードにまた戻って最後に以下の行を追加しましょう。
+ <li>これは問題になるかもしれません、なので以下の内容をすぐに設定しましょう。 ソースコードにまた戻って最後に以下の行を追加しましょう。
   <pre class="brush: js notranslate">Object.defineProperty(Teacher.prototype, 'constructor', {
     value: Teacher,
     enumerable: false, // 'for in'ループで現れないようにする
     writable: true });</pre>
  </li>
- <li>ソースコードを保存およびページの再読み込みを行って、 <code>Teacher.prototype.constructor</code> と入力したならば <code>Teacher()</code> と返すでしょう、希望した通りに <code>Person()</code> から継承することができました！</li>
+ <li>ソースコードを保存およびページの再読み込みを行って、 <code>Teacher.prototype.constructor</code> と入力したならば <code>Teacher()</code> と返すでしょう、希望した通りに <code>Person()</code> から継承することができました！</li>
 </ol>
 
 <h2 id="Giving_Teacher_a_new_greeting_function" name="Giving_Teacher_a_new_greeting_function">Teacher() に greeting() ファンクションを付け加える</h2>
 
-<p>コードを完成させる前に、<code>Teacher()</code> コンストラクタに新たに <code>greeting()</code> 関数を追加する必要があります。</p>
+<p>コードを完成させる前に、<code>Teacher()</code> コンストラクタに新たに <code>greeting()</code> 関数を追加する必要があります。</p>
 
-<p>このようにする一番簡単な方法は <code>Teacher()</code> のプロトタイプに定義することです — コードの最後に以下のコードを追加します。</p>
+<p>このようにする一番簡単な方法は <code>Teacher()</code> のプロトタイプに定義することです — コードの最後に以下のコードを追加します。</p>
 
 <pre class="brush: js notranslate">Teacher.prototype.greeting = function() {
   let prefix;
@@ -189,7 +189,7 @@ teacher1.farewell();</pre>
 
 <p>また JavaScript でより明瞭に継承を行えるようにした新しい{{glossary("ECMAScript")}}の機能(<a href="/ja/docs/Web/JavaScript/Reference/Classes">Classes</a> を参照)にも興味を持つかもしれません。ここではそれらについて言及はしませんでした、それはまだブラウザー間で幅広くサポートされていないためです。一連の記事で検討してきた他のコード構造はすべて、IE9 やそれ以前のバージョンといった、はるか以前よりサポートされており、それより早くからのサポートを確認する方法となります。</p>
 
-<p>一般的な方法は JavaScript ライブラリを使用することです — よく知られた選択肢のうちの大部分は、よりたやすく素早く利用できる簡易な機能セットを持っています。例えば <a href="http://coffeescript.org/#classes">CoffeeScript</a> は <code>class</code>, <code>extends</code> などを提供します。</p>
+<p>一般的な方法は JavaScript ライブラリを使用することです — よく知られた選択肢のうちの大部分は、よりたやすく素早く利用できる簡易な機能セットを持っています。例えば <a href="http://coffeescript.org/#classes">CoffeeScript</a> は <code>class</code>, <code>extends</code> などを提供します。</p>
 
 <h2 id="A_further_exercise" name="A_further_exercise">追加の特訓</h2>
 
@@ -204,7 +204,7 @@ teacher1.farewell();</pre>
 <p>要約すると、気になるプロパティ/メソッドは4種類あります。</p>
 
 <ol>
- <li>コンストラクタ関数の内部で定義され、オブジェクトインスタンスに与えられるもの。独自のカスタムコードでは、コンストラクタの内部で <code>this.x = x</code> 型の行を使用して定義されたメンバです。組み込みのブラウザコードでは、オブジェクトインスタンス (通常は <code>new</code> キーワードを使用してコンストラクタを呼び出すことで作成されます。例:  <code>let myInstance = new myConstructor()</code>) のみが利用可能なメンバです</li>
+ <li>コンストラクタ関数の内部で定義され、オブジェクトインスタンスに与えられるもの。独自のカスタムコードでは、コンストラクタの内部で <code>this.x = x</code> 型の行を使用して定義されたメンバです。組み込みのブラウザコードでは、オブジェクトインスタンス (通常は <code>new</code> キーワードを使用してコンストラクタを呼び出すことで作成されます。例:  <code>let myInstance = new myConstructor()</code>) のみが利用可能なメンバです</li>
  <li>コンストラクタ自身で直接定義されたもので、コンストラクタ上でのみ利用可能なもの。これらは一般的に組み込みのブラウザオブジェクトでのみ利用可能であり、インスタンスではなくコンストラクタに直接連結されていることで認識されます。たとえば <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code> などです。これらは<strong>静的プロパティ/メソッド</strong>としても知られています</li>
  <li>コンストラクタのプロトタイプに定義されているもので、すべてのインスタンスに継承され、オブジェクトクラスを継承しているもの。これらには、コンストラクタの <code>prototype</code> プロパティに定義されている任意のメンバ (例: <code>myConstructor.prototype.x()</code>) が含まれます</li>
  <li>これらは、上で見たようにコンストラクタがインスタンス化されたときに作成されるオブジェクト (例えば <code>let teacher1 = new Teacher('Chris');</code> の後に <code>teacher1.name</code>)、またはオブジェクトリテラル (<code>let teacher1 = { name : 'Chris' }</code> の後に <code>teacher1.name</code>) のいずれかであることができます</li>
@@ -246,7 +246,7 @@ teacher1.farewell();</pre>
 
 <ul>
  <li><code><a href="/ja/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> メソッドは、<code>Person</code>クラスを表すコンストラクタ関数を定義します</li>
- <li><code>greeting()</code> と <code>farewell()</code> はクラスメソッドです。クラスに関連付けたいメソッドは、コンストラクタの後に定義されます。この例では、コードを読みやすくするために、文字列連結ではなく<a href="/ja/docs/Web/JavaScript/Reference/template_strings">テンプレート文字列</a>を使用しています</li>
+ <li><code>greeting()</code> と <code>farewell()</code> はクラスメソッドです。クラスに関連付けたいメソッドは、コンストラクタの後に定義されます。この例では、コードを読みやすくするために、文字列連結ではなく<a href="/ja/docs/Web/JavaScript/Reference/template_strings">テンプレート文字列</a>を使用しています</li>
 </ul>
 
 <p>以前と同じように<a href="/ja/docs/Web/JavaScript/Reference/Operators/new">new演算子</a>を使用してオブジェクトインスタンスをインスタンス化できるようになりました。</p>
@@ -386,9 +386,9 @@ console<span class="punctuation token">.</span><span class="function token">log<
 
 <h2 id="Summary" name="Summary">まとめ</h2>
 
-<p>この記事は今知っておくべき考えられる OOJS の核となる理論および文法の残りの部分をカバーしています。この時点で、 JavaScript オブジェクトおよび オブジェクト指向プログラミングの基本、プロトタイプとプロトタイプにおける継承、クラス(コンストラクタ)とオブジェクトのインスタンスの生成、クラスへの機能の追加、他のクラスから継承されたサブクラスの生成をどのように行うか、を理解しているでしょう。</p>
+<p>この記事は今知っておくべき考えられる OOJS の核となる理論および文法の残りの部分をカバーしています。この時点で、 JavaScript オブジェクトおよび オブジェクト指向プログラミングの基本、プロトタイプとプロトタイプにおける継承、クラス(コンストラクタ)とオブジェクトのインスタンスの生成、クラスへの機能の追加、他のクラスから継承されたサブクラスの生成をどのように行うか、を理解しているでしょう。</p>
 
-<p>次の記事では JavaScript Object Notaion (JSON) 、つまり  JavaScript オブジェクトを使用して書かれた共通データ交換フォーマット、がどのように動作するかをを見て行きましょう。</p>
+<p>次の記事では JavaScript Object Notaion (JSON) 、つまり  JavaScript オブジェクトを使用して書かれた共通データ交換フォーマット、がどのように動作するかをを見て行きましょう。</p>
 
 <h2 id="See_also" name="See_also">あわせて参照</h2>
 

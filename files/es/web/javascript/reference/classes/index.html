@@ -20,11 +20,11 @@ original_slug: Web/JavaScript/Referencia/Classes
 
 <h2 id="Definiendo_clases">Definiendo clases</h2>
 
-<p>Las clases son "<a href="/en-US/docs/Web/JavaScript/Reference/Functions">funciones</a> especiales", como las <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">expresiones de funciones</a> y <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">declaraciones de funciones</a>, la sintaxis de una clase tiene dos componentes: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">expresiones de clases</a> y <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">declaraciones de clases</a>.</p>
+<p>Las clases son "<a href="/en-US/docs/Web/JavaScript/Reference/Functions">funciones</a> especiales", como las <a href="/en-US/docs/Web/JavaScript/Reference/Operators/function">expresiones de funciones</a> y <a href="/en-US/docs/Web/JavaScript/Reference/Statements/function">declaraciones de funciones</a>, la sintaxis de una clase tiene dos componentes: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">expresiones de clases</a> y <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">declaraciones de clases</a>.</p>
 
 <h3 id="Declaración_de_clases">Declaración de clases</h3>
 
-<p>Una manera de definir una clase es mediante una <strong>declaración de clase</strong><em>. </em>Para declarar una clase, se utiliza la palabra reservada <code>class</code> y un nombre para la clase "Rectangulo".</p>
+<p>Una manera de definir una clase es mediante una <strong>declaración de clase</strong><em>. </em>Para declarar una clase, se utiliza la palabra reservada <code>class</code> y un nombre para la clase "Rectangulo".</p>
 
 <pre class="brush: js notranslate">class Rectangulo {
   constructor(alto, ancho) {
@@ -35,7 +35,7 @@ original_slug: Web/JavaScript/Referencia/Classes
 
 <h4 id="Alojamiento">Alojamiento</h4>
 
-<p>Una importante diferencia entre las <strong>declaraciones de funciones</strong><em> y </em>las <strong>declaraciones de clases</strong> es que las <strong>declaraciones de funciones</strong><em> </em>son alojadas y las <strong>declaraciones de clases</strong><em> </em>no lo son. En primer lugar necesitas declarar tu clase y luego acceder a ella, de otro modo el ejemplo de código siguiente arrojará un {{jsxref("ReferenceError")}}:</p>
+<p>Una importante diferencia entre las <strong>declaraciones de funciones</strong><em> y </em>las <strong>declaraciones de clases</strong> es que las <strong>declaraciones de funciones</strong><em> </em>son alojadas y las <strong>declaraciones de clases</strong><em> </em>no lo son. En primer lugar necesitas declarar tu clase y luego acceder a ella, de otro modo el ejemplo de código siguiente arrojará un {{jsxref("ReferenceError")}}:</p>
 
 <pre class="brush: js example-bad notranslate">const p = new Rectangle(); // ReferenceError
 
@@ -69,12 +69,12 @@ console.log(Rectangulo.name);
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>Nota:</strong> Las <strong>expresiones</strong> de clase están sujetas a las mismas restricciones de elevación que se describen en la sección {{anch("Class declarations")}}.</p>
+<p><strong>Nota:</strong> Las <strong>expresiones</strong> de clase están sujetas a las mismas restricciones de elevación que se describen en la sección <a href="#class_declarations">Class declarations</a>.</p>
 </div>
 
 <h2 id="Cuerpo_de_la_clase_y_definición_de_métodos">Cuerpo de la clase y definición de métodos</h2>
 
-<p>El contenido<em> </em>de una <strong>clase </strong>es la parte que se encuentra entre las llaves <code>{}</code>. Este es el lugar se definen los <strong>miembros de clase,</strong> como los <strong>métodos </strong>o <strong>constructores.</strong></p>
+<p>El contenido<em> </em>de una <strong>clase </strong>es la parte que se encuentra entre las llaves <code>{}</code>. Este es el lugar se definen los <strong>miembros de clase,</strong> como los <strong>métodos </strong>o <strong>constructores.</strong></p>
 
 <h3 id="Modo_estricto">Modo estricto</h3>
 
@@ -136,7 +136,7 @@ console.log (Punto.distancia(p1, p2)); // 7.0710678118654755</pre>
 
 <h3 id="Boxing_con_prototipos_y_métodos_estáticos">"Boxing" con prototipos y métodos estáticos</h3>
 
-<p>Cuando un método estático o método del prototipo es llamado sin un valor para "this" (o con "this" como booleano, cadena, número, undefined o null), entonces el valor de "this" será <strong>undefined</strong> dentro de la funciona llamada. <em>Autoboxing </em>no ocurrirá. El comportamiento será igual inclusive si se escribe el código en modo no estricto.</p>
+<p>Cuando un método estático o método del prototipo es llamado sin un valor para "this" (o con "this" como booleano, cadena, número, undefined o null), entonces el valor de "this" será <strong>undefined</strong> dentro de la funciona llamada. <em>Autoboxing </em>no ocurrirá. El comportamiento será igual inclusive si se escribe el código en modo no estricto.</p>
 
 <pre class="notranslate"><code>class Animal {
   hablar() {

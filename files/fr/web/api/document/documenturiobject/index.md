@@ -24,15 +24,17 @@ var uri = doc.documentURIObject;
 
 ## Exemple
 
-    // Vérifie que le schéma d'URI pour l'onglet courant dans Firefox est «&nbsp;http&nbsp;»,
-    // en supposant que ce code s'exécute dans le contexte de browser.xul
+```js
+// Vérifie que le schéma d'URI pour l'onglet courant dans Firefox est «&nbsp;http&nbsp;»,
+// en supposant que ce code s'exécute dans le contexte de browser.xul
 
-    var uriObj = content.document.documentURIObject;
-    var uriPort = uriObj.port;
+var uriObj = content.document.documentURIObject;
+var uriPort = uriObj.port;
 
-    if (uriObj.schemeIs('http')) {
-      ...
-    }
+if (uriObj.schemeIs('http')) {
+  ...
+}
+```
 
 ## Spécifications
 

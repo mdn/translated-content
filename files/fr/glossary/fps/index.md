@@ -9,10 +9,5 @@ Les films ont généralement une fréquence d'images de 24fps. Ils sont capables
 
 ## Voir aussi
 
-1.  [Glossaire](/fr/docs/Glossary)
-
-    1.  {{glossary("FPS")}}
-
-2.  Articles Wikipedia
-
-    1.  {{Interwiki("wikipedia", "Frame rate")}}
+- {{glossary("FPS")}}
+- [Images par seconde](https://fr.wikipedia.org/wiki/Images_par_seconde) sur Wikipédia

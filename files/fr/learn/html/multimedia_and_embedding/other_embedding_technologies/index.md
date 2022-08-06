@@ -1,5 +1,5 @@
 ---
-title: Des objets aux «&nbsp;iframe&nbsp;» — autres techniques d'intégration
+title: Des objets aux iframes — autres techniques d'intégration
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 tags:
   - Apprentissage
@@ -56,32 +56,28 @@ Maintenant, vous devriez vraiment avoir la main pour intégrer des choses dans l
 
 Il y a longtemps, sur le Web, il était courant d'utiliser des **cadres** pour créer des sites Web - des petites parties de site Web stockées dans des pages HTML individuelles. Ces cadres étaient intégrés dans un document maître appelé **frameset** (ensemble de cadres) qui permettait de préciser la zone de l'écran que chaque cadre devait occuper, un peu comme le dimensionnement de colonnes et de lignes dans un tableau. Cette technique a été considérée comme le summum de la zénitude du milieu des années 90 jusqu'à leur fin. Il était évident qu'une page Web éclatée en petits morceaux était meilleure pour la vitesse du téléchargement — et tout à fait remarquable avec des connexions réseau si lentes à l'époque. Cette façon de procéder posait cependant de nombreux problèmes, qui l'emportaient de loin sur tout ce qui était positif à mesure que la vitesse du réseau s'accélérait, de sorte que vous ne la verrez plus utilisée.
 
-
-
 Un peu plus tard (fin des années 90, début des années 2000), la technique des greffons est devenue très populaire, citons les [applets Java](/fr/docs/Glossary/Java) et [Flash](/fr/docs/Glossary/Adobe_Flash) — ils permettaient aux développeurs web d'intégrer du contenu riche dans des pages web telles que des vidéos et des animations, ce qui n'était tout simplement pas possible avec le HTML. L'intégration de ces techniques a été réalisée grâce à des éléments comme {{htmlelement("object")}} et {{htmlelement("embed")}}, un peu moins utilisé. Ils étaient très utiles à l'époque. Ils sont depuis tombés en désuétude en raison de nombreux problèmes&nbsp;: accessibilité, sécurité, taille de fichier et autres ; de nos jours, la plupart des mobiles ne prennent plus en charge de tels greffons, et les ordinateurs de bureau sont en train de les abandonner.
 
 Enfin, l'élément {{htmlelement("iframe")}} est apparu (avec d'autres moyens d'intégration de contenu, comme {{htmlelement("canvas")}}, {{htmlelement("video")}}, etc). Cet élément permet d'intégrer un document web entier dans un autre, comme s'il s'agissait d'un élément {{htmlelement("img")}}} ou d'un autre élément de ce type. Il est régulièrement utilisé aujourd'hui.
 
 Maintenant que la leçon d'histoire est terminée, passons à autre chose et voyons comment utiliser certains d'entre eux.
 
-
-
 ## Apprentissage actif&nbsp;: utilisations classiques de l'intégration
 
 Dans cet article, passons directement à l'apprentissage actif pour vous donner tout de suite une idée concrète de l'utilité des techniques d'intégration. Le monde en ligne connaît très bien [Youtube](https://www.youtube.com/), mais beaucoup de gens ne connaissent pas les facilités de partage dont il dispose. Voyons comment Youtube nous permet d'intégrer une vidéo dans toute page qui nous plairait à l'aide d'un élément {{htmlelement("iframe")}}}.
 
-1.  D'abord, allez sur Youtube et choisissez une vidéo qui vous plaise.
-2.  Au‑dessous de la vidéo, vous devez trouver un bouton _Share (Partager)_ — cliquez‑le pour afficher les options de partage.
-3.  Sélectionnez le bouton _Embed (Intégrer)_ et vous obtiendrez un morceau de code `<iframe>` — copiez‑le.
-4.  Inserez ce code dans la boîte _Input_ ci‑dessous, et voyez le résultat dans _Output_.
+1. D'abord, allez sur Youtube et choisissez une vidéo qui vous plaise.
+2. Au‑dessous de la vidéo, vous devez trouver un bouton _Share (Partager)_ — cliquez‑le pour afficher les options de partage.
+3. Sélectionnez le bouton _Embed (Intégrer)_ et vous obtiendrez un morceau de code `<iframe>` — copiez‑le.
+4. Inserez ce code dans la boîte _Input_ ci‑dessous, et voyez le résultat dans _Output_.
 
 En prime, vous pouvez aussi essayer d'intégrer une carte [Google Map](https://www.google.com/maps/) dans l'exemple.
 
-1.  Allez sur Google Maps et trouvez une carte qui vous plaise.
-2.  Cliquez sur le  «&nbsp;Menu Hamburger&nbsp;» (trois lignes horizontales) en haut à gauche de l'interface utilisateur.
-3.  Selectionnez l'option _Share or embed map_ (Partager ou intégrer une carte).
-4.  Selectionnez l'option _Embed map_ (intégrer une carte), qui vous fournira du code `<iframe>` — copiez‑le.
-5.  Inserez‑le dans la boîte _Input_ di‑dessous et voyez le résultat dans _Output_.
+1. Allez sur Google Maps et trouvez une carte qui vous plaise.
+2. Cliquez sur le  «&nbsp;Menu Hamburger&nbsp;» (trois lignes horizontales) en haut à gauche de l'interface utilisateur.
+3. Selectionnez l'option _Share or embed map_ (Partager ou intégrer une carte).
+4. Selectionnez l'option _Embed map_ (intégrer une carte), qui vous fournira du code `<iframe>` — copiez‑le.
+5. Inserez‑le dans la boîte _Input_ di‑dessous et voyez le résultat dans _Output_.
 
 Si vous faites une erreur, vous pouvez toujours réinitialiser le tout avec le bouton _Réinitialiser_. Si vous êtes vraiment bloqué, pressez le bouton _Afficher la solution_ pour voir la réponse.
 
@@ -213,12 +209,14 @@ Alors, facile et amusant, non ? Les éléments {{htmlelement("iframe")}} sont co
 
 Il y a de sérieux [problèmes de sécurité](#problèmes_de_sécurité) à prendre en considération avec \<iframe>, comme nous le verrons plus loin, mais cela ne veut pas dire que vous ne devez pas les utiliser dans vos sites Web — cela demande juste un peu de connaissance et de soin à la conception. Examinons le code un peu plus en détail. Disons que vous voulez intégrer le glossaire MDN dans une de vos pages Web — vous pourriez tenter quelque chose comme&nbsp;:
 
-    <iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
-            width="100%" height="500" frameborder="0"
-            allowfullscreen sandbox>
-      <p> <a href="https://developer.mozilla.org/en-US/docs/Glossary">
-        Lien de repli pour les navigateurs ne prenant pas en charge iframe  </a> </p>
-    </iframe>
+```html
+<iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+        width="100%" height="500" frameborder="0"
+        allowfullscreen sandbox>
+  <p> <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+    Lien de repli pour les navigateurs ne prenant pas en charge iframe  </a> </p>
+</iframe>
+```
 
 Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisation d'un `<iframe>`&nbsp;:
 
@@ -243,7 +241,7 @@ Nous avons dit plus haut qu'il y avait des problèmes en matière de sécurité 
 
 Fabricants de navigateurs et développeurs Web ont appris à la dure que `<iframe>` constitue sur le Web une cible commune (terme officiel : un **vecteur d'attaque**) pour des personnes mal intentionnées.  `<iframe>` est une porte d'entrée pour les attaques de ces personnes quand ils essaient de modifier malicieusement une page Web ou d'amener des utilisateurs à faire quelque chose qu'ils ne voudraient pas faire, comme révéler des informations confidentielles comme noms d'utilisateur et mots de passe. Pour cette raison, les ingénieurs spécialistes et les développeurs de navigateurs ont développé divers mécanismes de sécurité pour rendre `<iframe>` plus sûr. De meilleures pratiques sont aussi à prendre en compte — nous allons développer certaines d'entre elles ci-dessous.
 
-> **Note :** Le {{interwiki('wikipedia','détournement de clic')}} est un type d'attaque courant par l'intermédiaire de `<iframe>`&nbsp;: les hackeurs incorporent un `<iframe>` invisible dans votre document (ou intégrent votre document dans leur propre site malveillant) et s'en servent pour capturer les interactions utilisateur. C'est un moyen courant pour tromper des utilisateurs ou voler leurs données confidentielles.
+> **Note :** Le [détournement de clic](https://fr.wikipedia.org/wiki/D%C3%A9tournement_de_clic) est un type d'attaque courant par l'intermédiaire de `<iframe>`&nbsp;: les hackeurs incorporent un `<iframe>` invisible dans votre document (ou intégrent votre document dans leur propre site malveillant) et s'en servent pour capturer les interactions utilisateur. C'est un moyen courant pour tromper des utilisateurs ou voler leurs données confidentielles.
 
 Un exemple rapide d'abord - essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur - vous pouvez le [trouver en direct sur Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (voyez le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi). Vous ne verrez rien d'affiché sur la page, et si vous regardez la _Console_ dans les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) du navigateur, vous verrez un message vous disant pourquoi. Dans Firefox, ce message indique _Load denied by X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary does not permit framing_ (_Chargement interdit par X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary ne permet pas la mise en cadre_) . C'est parce que les développeurs qui ont construit MDN ont inclus un paramètre sur le serveur des pages du site empêchant l'intégration de ces pages sur un autre site avec `<iframe>` (voir [Configurer les directives CSP](#configurer_les_directives_csp), ci-dessous). Parfaitement sensé — il n'y a aucune raison d'intégrer une page entière de MDN dans d'autres pages, sauf à vouloir les intégrer dans votre site et les prétendre vôtres, ou bien tenter de voler des données par l'intermédiaire d'un détournement de clic, actions qui sont tous les deux des malhonnêtetés. De plus, si tout le monde se mettait à faire cela, toute la bande passante supplémentaire nécessaire commencerait à coûter un paquet d'argent à Mozilla.
 
@@ -259,8 +257,8 @@ Si le contenu est sous licence, vous devez en respecter les termes. Par exemple,
 
 {{Glossary("HTTPS")}} est la version chiffrée de {{Glossary("HTTP")}}. Vous devriez alimenter vos serveurs Web en utilisant HTTPS chaque fois que c'est possible :
 
-1.  HTTPS réduit les risques d'altération du contenu distant lors du transfert,
-2.  HTTPS empêche le contenu intégré d'accéder à celui du document parent, et inversement.
+1. HTTPS réduit les risques d'altération du contenu distant lors du transfert,
+2. HTTPS empêche le contenu intégré d'accéder à celui du document parent, et inversement.
 
 L'utilisation de HTTPS nécessite un certificat de sécurité, ce qui peut être coûteux (bien que [Let's Encrypt](https://letsencrypt.org/) facilite les choses) — si vous ne pouvez pas en obtenir un, vous pouvez charger votre document parent sur le serveur en HTTP. Cependant, en raison de la deuxième fonctionnalité de HTTPS indiquée ci-dessus, _et dans ce cas les histoires de coût n'interviennent plus, vous ne devez jamais intégrer du contenu tierce partie avec HTTP_ (dans le meilleur des cas, le navigateur Web de votre utilisateur lui affichera un avertissement effrayant). Toutes les sociétés sérieuses, rendant leur contenu disponible pour une intégration via un `<iframe>`, le rendront disponible avec HTTPS — regardez les URLs à l'intérieur de l'attribut `src` de `<iframe>` lorsque vous intégrez du contenu Google Maps ou YouTube, par exemple.
 
@@ -278,7 +276,7 @@ Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une 
 
 #### Configurer les directives CSP
 
-{{Glossary("CSP")}} est un acronyme pour «&nbsp;**[content security policy](/fr/docs/Web/Security/CSP)** » (politique de sécurité du contenu)&nbsp;; les directives CSP fournissent un [ensemble d'en‑têtes HTTP](/fr/docs/Web/Security/CSP/CSP_policy_directives) (métadonnées adressées en même temps que les pages Web quand elles sont diffusées à partir d'un serveur web) conçues pour améliorer la sécurité des documents HTML. Quand elles sont destinées à sécuriser les `<iframe>`, vous pouvez _[configurer votre serveur pour qu'il adresse une en‑tête appropriée `X-Frame-Options`](/fr/docs/Web/HTTP/X-Frame-Options)._ Elle empêchera d'autres sites Web d'intégrer votre contenu dans leurs pages (ce qui pourrait permettre le {{interwiki('wikipedia','détournement de clic')}} ou accueillir d'autres attaques)&nbsp;; c'est exactement ce que les développeurs de MDN ont fait, comme nous l'avons vu plus haut.
+{{Glossary("CSP")}} est un acronyme pour «&nbsp;**[content security policy](/fr/docs/Web/Security/CSP)** » (politique de sécurité du contenu)&nbsp;; les directives CSP fournissent un [ensemble d'en‑têtes HTTP](/fr/docs/Web/Security/CSP/CSP_policy_directives) (métadonnées adressées en même temps que les pages Web quand elles sont diffusées à partir d'un serveur web) conçues pour améliorer la sécurité des documents HTML. Quand elles sont destinées à sécuriser les `<iframe>`, vous pouvez _[configurer votre serveur pour qu'il adresse une en‑tête appropriée `X-Frame-Options`](/fr/docs/Web/HTTP/X-Frame-Options)._ Elle empêchera d'autres sites Web d'intégrer votre contenu dans leurs pages (ce qui pourrait permettre le [détournement de clic](https://fr.wikipedia.org/wiki/D%C3%A9tournement_de_clic) ou accueillir d'autres attaques)&nbsp;; c'est exactement ce que les développeurs de MDN ont fait, comme nous l'avons vu plus haut.
 
 > **Note :** Lisez le post de Frederik Braun sur [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) pour plus d'informations sur le fond de ce sujet. Manifestement, une explication complète est hors des limites de cet article.
 
@@ -292,8 +290,6 @@ Cependant, il est peu probable que vous utilisiez beaucoup ces éléments — le
 
 Si vous avez besoin d'intégrer du contenu de greffon, vous aurez besoin de ce minimum d'information :
 
-
-
 |                                                                                      | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
 | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | {{glossary("URL")}} du contenu à intégrer                                       | {{htmlattrxref('src','embed')}}                                                  | {{htmlattrxref('data','object')}}                                                  |
@@ -301,8 +297,6 @@ Si vous avez besoin d'intégrer du contenu de greffon, vous aurez besoin de ce m
 | hauteur et largeur (en pixels CSS) de la boîte contrôlée par le greffon              | {{htmlattrxref('height','embed')}} {{htmlattrxref('width','embed')}} | {{htmlattrxref('height','object')}} {{htmlattrxref('width','object')}} |
 | noms et valeurs à passer en paramètre au greffon                                     | attributs adéquats avec ces noms et valeurs                                               | éléments de la simple balise {{htmlelement("param")}}, contenus dans `<object>`       |
 | contenu HTML indépendant en repli en cas de ressources inaccessibles                 | non pris en charge (`<noembed>` a été abandonné)                                          | contenu dans `<object>`, après `les éléments <param>`                                         |
-
-
 
 > **Note :** `<object>` requiert un attribut `data`, un attribut `type`, ou les deux. Si vous utilisez les deux, vous devez aussi utiliser l'attribut {{htmlattrxref('typemustmatch','object')}} (uniquement implémenté dans Firefox, au moment de la rédaction du présent document). `typemustmatch` empêche le fichier incorporé d'être exécuté avant que l'attribut `type` indique le type exact de média. `typemustmatch`  peut donc conférer d'importants avantages sur le plan de la sécurité quand vous intégrez du contenu de diverses {{glossary("origin","origines")}} (il peut empêcher un attaquant d'exécuter n'importe quel script par l'intermédiaire du greffon).
 
@@ -346,11 +340,7 @@ Le problème de l'intégration de contenus tiers dans des documents web peut rap
 
 D'autres techniques impliquent l'intégration de contenu externe en plus de celles discutées ici. Nous en avons vu dans des articles précédents, comme {{htmlelement("video")}}}, {{htmlelement("audio")}}, et {{htmlelement("img")}}}, mais il y en a d'autres à découvrir, comme {{htmlelement("canvas")}} pour les graphiques 2D et 3D générés en JavaScript, et {{htmlelement("svg")}} pour intégrer des graphiques vectoriels. Nous verrons SVG dans le prochain article de ce module.
 
-
-
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
-
-
 
 ## Dans ce module
 

@@ -22,8 +22,10 @@ Il y a une confusion fréquente autour de la signification et de l'utilisation d
 
 ## Syntaxe
 
-    serviceWorkerContainer.register(scriptURL, options)
-      .then(function(serviceWorkerRegistration) { ... })
+```js
+serviceWorkerContainer.register(scriptURL, options)
+  .then(function(serviceWorkerRegistration) { ... })
+```
 
 ### Paramètres
 

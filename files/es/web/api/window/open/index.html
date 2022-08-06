@@ -15,18 +15,18 @@ translation_of: Web/API/Window/open
 
 <dl>
  <dt><code><em>referencia_objeto_window</em></code></dt>
- <dd><code><em>Una referencia de la ventana creada. La referencia puede ser usada para acceder a propiedades y métodos de la nueva ventana.</em></code></dd>
+ <dd><code><em>Una referencia de la ventana creada. La referencia puede ser usada para acceder a propiedades y métodos de la nueva ventana.</em></code></dd>
  <dt><code><var>url (opcional)</var></code></dt>
- <dd><code>La <strong>URL </strong>especifica que página se va cargar en la ventana creada. La URL puede ser una página web <strong>(http://www.ejemplo.com.co)</strong> o un documento que se encuentre en algun directorio de su PC <strong>(html, imagenes y demás). </strong>Si no se expecifica una <strong>URL</strong>, por defecto abrira la ventana en blanco</code></dd>
+ <dd><code>La <strong>URL </strong>especifica que página se va cargar en la ventana creada. La URL puede ser una página web <strong>(http://www.ejemplo.com.co)</strong> o un documento que se encuentre en algun directorio de su PC <strong>(html, imagenes y demás). </strong>Si no se expecifica una <strong>URL</strong>, por defecto abrira la ventana en blanco</code></dd>
  <dt><code><var>nombre_de_la_ventana (opcional)</var></code></dt>
- <dd>Un nombre para la nueva ventana. El nombre puede ser usado como el destino de enlaces y formularios usando el atributo de un elemento {{HTMLElement("a")}} ó {{HTMLElement("form")}}. El nombre no debe contener ningun caracter de espacio en blanco. Notese que <code>nombre_de_la_ventana</code> <strong>no</strong> especifica el titulo de la nueva ventana.</dd>
+ <dd>Un nombre para la nueva ventana. El nombre puede ser usado como el destino de enlaces y formularios usando el atributo de un elemento {{HTMLElement("a")}} ó {{HTMLElement("form")}}. El nombre no debe contener ningun caracter de espacio en blanco. Notese que <code>nombre_de_la_ventana</code> <strong>no</strong> especifica el titulo de la nueva ventana.</dd>
  <dt><code>strWindowFeatures</code></dt>
- <dd>An optional parameter listing the features (size, position, scrollbars, etc.) of the new window as a string. The string must not contain any whitespace, and each feature name and its value must be separated by a comma. See {{anch("Position and size features")}} below for details.</dd>
+ <dd>An optional parameter listing the features (size, position, scrollbars, etc.) of the new window as a string. The string must not contain any whitespace, and each feature name and its value must be separated by a comma. See <a href="#position_and_size_features">Position and size features</a> below for details.</dd>
 </dl>
 
 <h2 id="Description" name="Description">Descripción</h2>
 
-<p class="brush: js">El metodo <code>open()</code> crea una nueva ventana secundaria del navegador, similar a seleccionar Nueva ventana desde el menú archivo. El parámetro <code>url</code> especifica la URL a ser solicitada y cargada en la nueva ventana. Si <code>url</code> es una cadena de caracteres vacia, entonces se creará una nueva ventana en blanco (URL <code>about:blank</code>) con las barras de herramientas por defecto de la ventana principal.</p>
+<p class="brush: js">El metodo <code>open()</code> crea una nueva ventana secundaria del navegador, similar a seleccionar Nueva ventana desde el menú archivo. El parámetro <code>url</code> especifica la URL a ser solicitada y cargada en la nueva ventana. Si <code>url</code> es una cadena de caracteres vacia, entonces se creará una nueva ventana en blanco (URL <code>about:blank</code>) con las barras de herramientas por defecto de la ventana principal.</p>
 
 <p>Observe que las URLs no cargarán inmediatamente. Cuando <code>window.open()</code> retorna, la ventana siempre contiene <code>about:blank</code>. La solicitud de la URL es diferida y comienza luego de que el bloque actual se termine de ejecutar. La creación de la ventana y la carga de los recursos referenciados suceden de forma asíncrona.</p>
 
@@ -125,7 +125,7 @@ function openRequestedPopup() {
 <h3 id="Toolbar_and_chrome_features" name="Toolbar_and_chrome_features">Barra de herramienta y características de chrome</h3>
 
 <dl>
- <dt>NOTE: All features can be set to yes, 1 or just be present to be "on", set to <em>no</em> or<em> 0 </em>or in most cases just not present to be "off"</dt>
+ <dt>NOTE: All features can be set to yes, 1 or just be present to be "on", set to <em>no</em> or<em> 0 </em>or in most cases just not present to be "off"</dt>
  <dd>example "status=yes", "status=1" and "status" have identical results</dd>
  <dt></dt>
  <dt>menubar</dt>
@@ -154,7 +154,7 @@ function openRequestedPopup() {
 
 
 
-<h3 id="Window_functionality_features" name="Window_functionality_features">Características de funcionalidad de window</h3>
+<h3 id="Window_functionality_features" name="Window_functionality_features">Características de funcionalidad de window</h3>
 
 <dl>
  <dt></dt>

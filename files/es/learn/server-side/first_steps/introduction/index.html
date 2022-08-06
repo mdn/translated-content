@@ -31,15 +31,15 @@ original_slug: Learn/Server-side/Primeros_pasos/Introducción
  </tbody>
 </table>
 
-<p>La mayoría de los grandes sitios web usan código de lado servidor para presentar, cuando se necesitan, diferentes datos, generalmente extraidos de una base de datos almacenada en un servidor y enviada al cliente para ser presentada mediante algún código (ej, HTML y JavaScript). Quizá el beneficio más significativo de la codificación de lado servidor es que te permite confeccionar el contenido del sitio web para usuarios individuales. Los sitios dinámicos pueden resaltar contenido que es más relevante basándose en las preferencias del usuario y sus hábitos. Puede hacer también que los sitios sean más fáciles de usar al almacenar las preferencias personales y la información - por ejemplo reusando los detalles de la tarjeta de crédito guardados para agilizar los pagos siguientes. Puede incluso permitir la interacción con los usuarios fuera del sitio, enviando notificaciones y actualizaciones via email o a traves de otros canales. Todas estas capacidades permite un mayor compromiso con los usuarios. </p>
+<p>La mayoría de los grandes sitios web usan código de lado servidor para presentar, cuando se necesitan, diferentes datos, generalmente extraidos de una base de datos almacenada en un servidor y enviada al cliente para ser presentada mediante algún código (ej, HTML y JavaScript). Quizá el beneficio más significativo de la codificación de lado servidor es que te permite confeccionar el contenido del sitio web para usuarios individuales. Los sitios dinámicos pueden resaltar contenido que es más relevante basándose en las preferencias del usuario y sus hábitos. Puede hacer también que los sitios sean más fáciles de usar al almacenar las preferencias personales y la información - por ejemplo reusando los detalles de la tarjeta de crédito guardados para agilizar los pagos siguientes. Puede incluso permitir la interacción con los usuarios fuera del sitio, enviando notificaciones y actualizaciones via email o a traves de otros canales. Todas estas capacidades permite un mayor compromiso con los usuarios. </p>
 
 <p>En el mundo moderno del desarrollo web, el aprendizaje sobre desarrollo de lado servidor es altamente recomendable.</p>
 
 <h2 id="¿Qué_es_la_programación_de_sitios_web_de_lado_servidor">¿Qué es la programación de sitios web de lado servidor?</h2>
 
-<p>Los exploradores web se comunican con los <a href="/es-ES/docs/Learn/Common_questions/What_is_a_web_server">servidores web</a> usando el Protocolo de Transporte de Hyper Texto (HyperText Transport Protocol ({{glossary("HTTP")}}). Cuando pinchas en un enlace en una página web, envías un formulario o ejecutas una búsqueda, se envía una peticion HTTP desde tu explorador web al servidor web de destino. La petición incluye un URL que identifica el recurso afectado, un método que define la acción requerida (por ejemplo, obtener, borrar o publicar el recurso), y puede incluir información adicional codificada en parámetros en el URL (los pares campo-valor enviados en una cadena de consulta (<a href="https://en.wikipedia.org/wiki/Query_string">query string</a>), como datos POST (datos enviados mediate el método POST de HTTP,  <a href="/es/docs/Web/HTTP/Methods/POST">HTTP POST method</a>), o en {{glossary("Cookie", "associated cookies")}}.</p>
+<p>Los exploradores web se comunican con los <a href="/es-ES/docs/Learn/Common_questions/What_is_a_web_server">servidores web</a> usando el Protocolo de Transporte de Hyper Texto (HyperText Transport Protocol ({{glossary("HTTP")}}). Cuando pinchas en un enlace en una página web, envías un formulario o ejecutas una búsqueda, se envía una peticion HTTP desde tu explorador web al servidor web de destino. La petición incluye un URL que identifica el recurso afectado, un método que define la acción requerida (por ejemplo, obtener, borrar o publicar el recurso), y puede incluir información adicional codificada en parámetros en el URL (los pares campo-valor enviados en una cadena de consulta (<a href="https://en.wikipedia.org/wiki/Query_string">query string</a>), como datos POST (datos enviados mediate el método POST de HTTP,  <a href="/es/docs/Web/HTTP/Methods/POST">HTTP POST method</a>), o en {{glossary("Cookie", "associated cookies")}}.</p>
 
-<p>Los servidores web esperan los mensajes de petición de los clientes, los procesan cuando llegan y responden al explorador web con un mensaje de respuesta HTTP. La repuesta contiene una línea de estado indicando si la petición ha tenido éxito o no (ej, "HTTP/1.1 200 OK" en caso de éxito). El cuerpo de una respuesta exitosa a una petición podría contener el resurso solicitado (ej, una nueva página HTML, o una imagen, etc...), que el explorador web podría presetar en pantalla.</p>
+<p>Los servidores web esperan los mensajes de petición de los clientes, los procesan cuando llegan y responden al explorador web con un mensaje de respuesta HTTP. La repuesta contiene una línea de estado indicando si la petición ha tenido éxito o no (ej, "HTTP/1.1 200 OK" en caso de éxito). El cuerpo de una respuesta exitosa a una petición podría contener el resurso solicitado (ej, una nueva página HTML, o una imagen, etc...), que el explorador web podría presentar en pantalla.</p>
 
 <h3 id="Sitios_Estáticos">Sitios Estáticos</h3>
 
@@ -57,7 +57,7 @@ original_slug: Learn/Server-side/Primeros_pasos/Introducción
 
 <p><img alt="A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview." src="https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png"></p>
 
-<p>Las peticiones de recursos dinámicos, por el contrario, son reenviadas (2) al código del lado-servidor (mostrado en el diagrama como <em>Web Application</em>). Para las "peticiones dinámicas" el servidor interpreta la petición, lee de la base de datos la información requerida (3), combina los datos recuperados con las plantillas HTML (4), y envía de vuelta una respuesta que contiene el HTML generado (5,6). </p>
+<p>Las peticiones de recursos dinámicos, por el contrario, son reenviadas (2) al código del lado-servidor (mostrado en el diagrama como <em>Web Application</em>). Para las "peticiones dinámicas" el servidor interpreta la petición, lee de la base de datos la información requerida (3), combina los datos recuperados con las plantillas HTML (4), y envía de vuelta una respuesta que contiene el HTML generado (5,6). </p>
 
 <div>
 <h2 id="¿Son_iguales_la_programación_del_lado-servidor_y_lado-cliente">¿Son iguales la programación del lado-servidor y lado-cliente?</h2>
@@ -73,18 +73,18 @@ original_slug: Learn/Server-side/Primeros_pasos/Introducción
 
 <p>El código que se ejecuta en el explorador se conoce como código de lado-cliente, y su principal preocupación es la mejora de la apariencia y el comportamiento de una página web entregada. Esto incluye la selección y estilo de los componentes UI, la creación de layouts, navegación, validación de formularios, etc. Por otro lado, la programación de sitios web de lado servidor en su mayor parte implica la elección de <em>qué contenido</em> se ha de devolver al explorador como respuesta a sus peticiones. El código de lado-servidor gestiona tareas como la validación de los datos enviados y las peticiones, usando bases de datos para almacenar y recuperar datos, y enviando los datos correctos al cliente según se requiera.</p>
 
-<p>El código del lado cliente está escrito usando <a href="/es/docs/Learn/HTML">HTML</a>, <a href="/es/docs/Learn/CSS">CSS</a>, y <a href="/es/docs/Learn/JavaScript">JavaScript</a> — es ejecutado dentro del explorador web y tiene poco o ningún acceso al sistema operativo subyacente (incluyendo un acceso limitado al sistema de ficheros).</p>
+<p>El código del lado cliente está escrito usando <a href="/es/docs/Learn/HTML">HTML</a>, <a href="/es/docs/Learn/CSS">CSS</a>, y <a href="/es/docs/Learn/JavaScript">JavaScript</a> — es ejecutado dentro del explorador web y tiene poco o ningún acceso al sistema operativo subyacente (incluyendo un acceso limitado al sistema de ficheros).</p>
 
 <p>Los desarrolladores web no pueden controlar qué explorador web usará cada usuario para visualizar un sitio web — los exploradores web proporcionan niveles de compatibilidad inconsistentes con las características de codificación lado cliente, y parte del reto de la programación de lado cliente es gestionar con dignidad las diferencias de soporte entre exploradores.</p>
 
-<div>El código del lado servidor puede escribirse en cualquier número de lenguajes de programación — ejemplos de lenguajes de programación populares incluyen PHP, Python, Ruby, C# y NodeJS(JavaScript). El código del lado servidor tiene acceso completo al sistema operativo del servidor y el desarrollador puede elegir qué lenguaje de programación (y qué versión específica) desea usar.</div>
+<div>El código del lado servidor puede escribirse en cualquier número de lenguajes de programación — ejemplos de lenguajes de programación populares incluyen PHP, Python, Ruby, C# y NodeJS(JavaScript). El código del lado servidor tiene acceso completo al sistema operativo del servidor y el desarrollador puede elegir qué lenguaje de programación (y qué versión específica) desea usar.</div>
 
 <div>Los desarrolladores generalmente escriben su código usando web frameworks. Los web framworks son colecciones de funciones, objetos, reglas y otras construcciones de código diseñadas para resolver problemas comunes, acelerar el desarrollo y simplificar los diferentes tipos de tareas que se han de abordar en un dominio en particular.</div>
 
 <div>De nuevo, mientras que, tanto el código lado cliente y el lado servidor usan frameworks, los dominios son muy diferentes, y por lo tanto también lo son los frameworks. Los frameworks del lado cliente simplifican los diseños y las tareas de presentación mientras que los del lado servidor proporcionan un montón de funcionalidades "comunes" que tendría que haber implementado uno mismo (ej, soporte para las sesiones, soporte para los usuarios y autenticación, acceso fácil a la base de datos, librerías de plantillas, etc...).</div>
 
 <div class="note">
-<p>Nota: Los frameworks del lado cliente se usan con frecuencia para acelerar el desarrollo del código del lado cliente, pero también se puede elegir escribir todo el código a mano; de hecho, escribir el código a mano puede ser más rápido y más eficiente si sólo se necesita una UI para sitio web pequeña y simple. Por contra, casi nunca se consideraría escribir el componente del lado servidor de una aplicación web ("web app") sin un framework — implementar una característica vital como un servidor HTTP es realmente difícil de hacer de la nada en un lenguaje como, por ejemplo, Python, pero los  web frameworks de Python como Django proporcionan uno  listo para usar, junto con otras herramientas muy útiles.</p>
+<p>Nota: Los frameworks del lado cliente se usan con frecuencia para acelerar el desarrollo del código del lado cliente, pero también se puede elegir escribir todo el código a mano; de hecho, escribir el código a mano puede ser más rápido y más eficiente si sólo se necesita una UI para sitio web pequeña y simple. Por contra, casi nunca se consideraría escribir el componente del lado servidor de una aplicación web ("web app") sin un framework — implementar una característica vital como un servidor HTTP es realmente difícil de hacer de la nada en un lenguaje como, por ejemplo, Python, pero los  web frameworks de Python como Django proporcionan uno  listo para usar, junto con otras herramientas muy útiles.</p>
 </div>
 
 <h2 id="¿Qué_se_puede_hacer_en_el_lado-servidor">¿Qué se puede hacer en el lado-servidor?</h2>
@@ -99,7 +99,7 @@ original_slug: Learn/Server-side/Primeros_pasos/Introducción
 
 <p>Imagina cuántos productos están disponibles en Amazon, e imagina cuántas entradas se han escrito en Facebook. Crear una página estática separada para cada producto o entrada sería completamente ineficiente.</p>
 
-<p>La programación de lado-servidor nos permite por el contrario almacenar la información en una base de datos y construir dinámicamente y devolver ficheros HTML y de otros tipos (ej, PDFs, imágenes, etc.). También es posible devolver simplemente datos ({{glossary("JSON")}}, {{glossary("XML")}}, etc.) para presentar mediante los web frameworks adecuados del lado-cliente (esto reduce la carga de procesamiento del servidor y la cantidad de datos que se necesitan enviar).</p>
+<p>La programación de lado-servidor nos permite por el contrario almacenar la información en una base de datos y construir dinámicamente y devolver ficheros HTML y de otros tipos (ej, PDFs, imágenes, etc.). También es posible devolver simplemente datos ({{glossary("JSON")}}, {{glossary("XML")}}, etc.) para presentar mediante los web frameworks adecuados del lado-cliente (esto reduce la carga de procesamiento del servidor y la cantidad de datos que se necesitan enviar).</p>
 
 <p>El servidor no se limita a enviar información de las bases de datos, y podría además devolver el resultado de herramientas de software o datos de servicios de comunicación. El contenido puede incluso ser dirigido por el tipo de dispositivo cliente que lo está recibiendo.</p>
 
@@ -110,7 +110,7 @@ original_slug: Learn/Server-side/Primeros_pasos/Introducción
 
 <ol>
  <li>Vete a <a href="https://www.amazon.com">Amazon</a> o a cualquier otro sitio de comercio electrónico "e-commerce".</li>
- <li>Busca por un número de palabras clave y nota como la estructura de la página no cambia, incluso aunque cambien los resultados. </li>
+ <li>Busca por un número de palabras clave y nota como la estructura de la página no cambia, incluso aunque cambien los resultados. </li>
  <li>Abre dos o tres productos diferentes. Fíjate de nuevo como tienen una estructura y diseño común, pero el contenido para los diferentes productos ha sido extraido de la base de datos.</li>
 </ol>
 
@@ -127,7 +127,7 @@ original_slug: Learn/Server-side/Primeros_pasos/Introducción
 <p>Nota: Vete a <a href="https://maps.google.com/">Google Maps</a> como usuario anónimo, selecciona el botón Direcciones, e introduce los puntos de partida y destino de un viaje. Ahora inicia sesión en el sistema con tu cuenta de Google, si tienes una (en el panel de abajo aparece información acerca de este proceso donde seleccionas direcciones). El sitio web te permitirá ahora seleccionar las localizaciones de casa y trabajo como puntos de partida y destino (o almacenar estos detalles si no lo has hecho así).</p>
 </div>
 
-<h3 id="Acceso_controlado_al_contenido">Acceso controlado al contenido </h3>
+<h3 id="Acceso_controlado_al_contenido">Acceso controlado al contenido </h3>
 
 <p>La programación de lado-servidor permite a los sitios restringir el acceso a usuarios autorizados y servir sólo la información que se le permite ver al usuario.</p>
 
@@ -180,9 +180,9 @@ original_slug: Learn/Server-side/Primeros_pasos/Introducción
 
 <h2 id="Sumario">Sumario</h2>
 
-<p>Felicidades, has alcanzado el final de primer artículo sobre programación de lado-servidor. </p>
+<p>Felicidades, has alcanzado el final de primer artículo sobre programación de lado-servidor. </p>
 
-<p>Ahora ya has aprendido que el código de lado-servidor se ejecuta en un servidor web y que su papel principal es controlar <em>qué </em>información se envía al usuario (mientras que el código de lado-cliente gestiona principalmente la estructura y presentación  de esos datos al usuario).</p>
+<p>Ahora ya has aprendido que el código de lado-servidor se ejecuta en un servidor web y que su papel principal es controlar <em>qué </em>información se envía al usuario (mientras que el código de lado-cliente gestiona principalmente la estructura y presentación  de esos datos al usuario).</p>
 
 <p>También deberías comprender que es útil porque nos permite crear sitios web que distribuyen <em>de forma eficiente</em> información seleccionada dirigida a usuarios individuales y tener una buena idea de algunas de las cosas que podrías ser capaz de hacer cuando seas un programador de lado-servidor.</p>
 

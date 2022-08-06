@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/propertyIsEnume
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>propertyIsEnumerable()</strong></code> regresa un Boleano indicando si la propiedad especificada es enumerable.</p>
+<p>El método <code><strong>propertyIsEnumerable()</strong></code> regresa un Boleano indicando si la propiedad especificada es enumerable.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -26,13 +26,13 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/propertyIsEnume
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Todos los objetos tienen un método <code>propertyIsEnumerable</code>. Este método puede determinar si la propiedad especificada en el objeto puede ser enumerada por un ciclo {{jsxref("Statements/for...in", "for...in")}}, con la excepción de propiedades heredadas a través de prototype. Si el objeto no tiene la propiedad especificada, este método regresa un valor <code>false</code>.</p>
+<p>Todos los objetos tienen un método <code>propertyIsEnumerable</code>. Este método puede determinar si la propiedad especificada en el objeto puede ser enumerada por un ciclo {{jsxref("Statements/for...in", "for...in")}}, con la excepción de propiedades heredadas a través de prototype. Si el objeto no tiene la propiedad especificada, este método regresa un valor <code>false</code>.</p>
 
 <h2 id="Ejemplo">Ejemplo</h2>
 
 <h3 id="Uso_básico_de_propertyIsEnumerable">Uso básico de <code>propertyIsEnumerable</code></h3>
 
-<p>El siguiente ejemplo muestra el uso de <code>propertyIsEnumerable</code> en objetos y arrays:</p>
+<p>El siguiente ejemplo muestra el uso de <code>propertyIsEnumerable</code> en objetos y arrays:</p>
 
 <pre class="brush: js">var o = {};
 var a = [];
@@ -56,7 +56,7 @@ Math.propertyIsEnumerable('random');   // regresa false
 this.propertyIsEnumerable('Math');     // regresa false
 </pre>
 
-<h3 id="Directa_vs_heredadas">Directa vs  heredadas</h3>
+<h3 id="Directa_vs_heredadas">Directa vs  heredadas</h3>
 
 <pre class="brush: js">var a = [];
 a.propertyIsEnumerable('constructor');         // regresa false
@@ -110,12 +110,12 @@ o.propertyIsEnumerable('firstMethod'); // regresa false
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -124,9 +124,9 @@ o.propertyIsEnumerable('firstMethod'); // regresa false
 
 {{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
 
-<h2 id="Notas_específicas_para_Gecko">Notas específicas para Gecko</h2>
+<h2 id="Notas_específicas_para_Gecko">Notas específicas para Gecko</h2>
 
-<p>Al inicio de JavaScript 1.8.1 (in Firefox 3.6), <code>propertyIsEnumerable('prototype')</code> regresa <code>false</code> en lugar de <code>true</code>; esto hace que el resultado cumpla con la especificación de ECMAScript 5.</p>
+<p>Al inicio de JavaScript 1.8.1 (in Firefox 3.6), <code>propertyIsEnumerable('prototype')</code> regresa <code>false</code> en lugar de <code>true</code>; esto hace que el resultado cumpla con la especificación de ECMAScript 5.</p>
 
 <h2 id="Véase_también">Véase también</h2>
 

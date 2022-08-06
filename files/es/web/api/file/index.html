@@ -11,9 +11,9 @@ translation_of: Web/API/File
 ---
 <div>{{APIRef }}</div>
 
-<p>La interfaz <strong><code>File</code></strong> provee información acerca de los archivos y permite que el código JavaScript en una página web tenga acceso a su contenido.</p>
+<p>La interfaz <strong><code>File</code></strong> provee información acerca de los archivos y permite que el código JavaScript en una página web tenga acceso a su contenido.</p>
 
-<p>Los objetos <code>File</code> son generalmente recuperados a través de un objeto {{domxref("FileList")}} retornado como resultado de un usuario seleccionado archivos por medio de un elemento {{ HTMLElement("input") }} , desde las operaciones drag y drop de un objeto  {{domxref("DataTransfer")}} ,<span style="line-height: 1.5;"> o desde la API </span><code style="font-size: 14px;">mozGetAsFile()</code><span style="line-height: 1.5;"> en un {{ domxref("HTMLCanvasElement") }}. En Gecko, desde código con privilegios es posible crear objetos <code>File</code> representando cualquier archivo local sin esperar la interacción del usuario </span> (ver {{anch("Implementation notes")}} para más información.)</p>
+<p>Los objetos <code>File</code> son generalmente recuperados a través de un objeto {{domxref("FileList")}} retornado como resultado de un usuario seleccionado archivos por medio de un elemento {{ HTMLElement("input") }} , desde las operaciones drag y drop de un objeto  {{domxref("DataTransfer")}} ,<span style="line-height: 1.5;"> o desde la API </span><code style="font-size: 14px;">mozGetAsFile()</code><span style="line-height: 1.5;"> en un {{ domxref("HTMLCanvasElement") }}. En Gecko, desde código con privilegios es posible crear objetos <code>File</code> representando cualquier archivo local sin esperar la interacción del usuario </span> (ver <a href="#implementation_notes">Implementation notes</a> para más información.)</p>
 
 <p>Un objeto <code>File</code> es una especie específica de {{DOMxRef("Blob")}}, y puede ser utilizada en cualquier contexto que un Blob puede ser usado. En particular, {{DOMxRef("FileReader")}}, {{DOMxRef("URL.createObjectURL()")}}, {{DOMxRef("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, y {{DOMxRef("XMLHttpRequest", "", "send()")}} aceptan tanto <code>Blob</code>s y <code>File</code>s.</p>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/File
 
 <dl>
  <dt>{{domxref("File.File", "File()")}}</dt>
- <dd>Retorna un nuevo objeto de tipo <code>File</code>.</dd>
+ <dd>Retorna un nuevo objeto de tipo <code>File</code>.</dd>
 </dl>
 
 <h2 id="Propiedades">Propiedades</h2>
@@ -50,7 +50,7 @@ translation_of: Web/API/File
 
 <h2 id="Métodos">Métodos</h2>
 
-<p><em>La interfaz <code>File</code> no define algún método, pero los hereda de la interfaz {{domxref("Blob")}}:</em></p>
+<p><em>La interfaz <code>File</code> no define algún método, pero los hereda de la interfaz {{domxref("Blob")}}:</em></p>
 
 <dl>
  <dt>{{DOMxRef("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}</dt>
@@ -92,21 +92,21 @@ translation_of: Web/API/File
 
 <ul>
  <li>En Gecko, puedes hacer uso de esta API desde código chrome. Vea <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Using the DOM File API in chrome code">Utilizando la API DOM File en código chrome (Using the DOM File API in chrome code)</a> para más detalles.</li>
- <li>Empezando desde Gecko 6.0 {{geckoRelease("6.0")}}, código privilegiado (como las extensiones por ejemplo) puede pasar un objeto {{interface("nsIFile")}} al constructor  DOM <code>File</code> para especificar el archivo a referenciar.</li>
- <li>Empezando desde Gecko 8.0 {{geckoRelease("8.0")}}, usted puede usar <code>new File</code> para la creación de objetos <code>File</code> a partir de código de componentes XPCOM en lugar de tener que instanciar el objeto {{interface("nsIDOMFile")}} directamente. El constructor toma, en contraste a Blob, un segundo argumento como nombre de archivo. El nombre de archivo puede ser cualquier String.
+ <li>Empezando desde Gecko 6.0 {{geckoRelease("6.0")}}, código privilegiado (como las extensiones por ejemplo) puede pasar un objeto <code>nsIFile</code> al constructor  DOM <code>File</code> para especificar el archivo a referenciar.</li>
+ <li>Empezando desde Gecko 8.0 {{geckoRelease("8.0")}}, usted puede usar <code>new File</code> para la creación de objetos <code>File</code> a partir de código de componentes XPCOM en lugar de tener que instanciar el objeto <code>nsIDOMFile</code> directamente. El constructor toma, en contraste a Blob, un segundo argumento como nombre de archivo. El nombre de archivo puede ser cualquier String.
   <pre class="syntaxbox">File File(
-  Array parts,
-  String filename,
+  Array parts,
+  String filename,
   BlobPropertyBag properties
 );</pre>
  </li>
- <li> Las siguientes propiedades y métodos no estándar fueron removidos en Gecko 7 {{GeckoRelease("7.0")}}: {{DOMxRef("File.fileName")}}, {{DOMxRef("File.fileSize")}}, {{DOMxRef("File.getAsBinary()")}}, {{DOMxRef("File.getAsDataURL()")}}, {{DOMxRef("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Propiedades estándar {{DOMxRef("File.name")}}, {{DOMxRef("Blob.size")}}, y métodos en {{DOMxRef("FileReader")}} deberían ser usados en su lugar.</li>
+ <li> Las siguientes propiedades y métodos no estándar fueron removidos en Gecko 7 {{GeckoRelease("7.0")}}: {{DOMxRef("File.fileName")}}, {{DOMxRef("File.fileSize")}}, {{DOMxRef("File.getAsBinary()")}}, {{DOMxRef("File.getAsDataURL()")}}, {{DOMxRef("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Propiedades estándar {{DOMxRef("File.name")}}, {{DOMxRef("Blob.size")}}, y métodos en {{DOMxRef("FileReader")}} deberían ser usados en su lugar.</li>
 </ul>
 
 <h2 id="See_also" name="See_also">Ver también</h2>
 
 <ul>
  <li><a href="/en-US/docs/Using_files_from_web_applications" title="Using files from web applications">Usando archivos desde aplicaciones web</a></li>
- <li><a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Extensions/Using the DOM File API in chrome code">Usando la API DOM File en código chrome</a></li>
+ <li><a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Extensions/Using the DOM File API in chrome code">Usando la API DOM File en código chrome</a></li>
  <li>{{domxref("FileReader")}}</li>
 </ul>

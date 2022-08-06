@@ -8,104 +8,35 @@ tags:
   - Referencia
 translation_of: Web/HTML/Global_attributes/draggable
 original_slug: Web/HTML/Atributos_Globales/draggable
+browser-compat: html.global_elements.draggable
 ---
 <p class="note">{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}</p>
 
-<p>El <a href="/es/docs/Web/HTML/Atributos_Globales">atributo global </a>draggable es un atributo enumerado que indica si el elemento puede ser arrastrado , usando el {{domxref("HTML_Drag_and_Drop_API","HTML Drag and Drop API")}} . Puede tener los siguientes valores :</p>
+<p>El <a href="/es/docs/Web/HTML/Atributos_Globales">atributo global </a>draggable es un atributo enumerado que indica si el elemento puede ser arrastrado , usando el {{domxref("HTML_Drag_and_Drop_API","HTML Drag and Drop API")}} . Puede tener los siguientes valores :</p>
 
 <ul>
- <li><code>true</code> , indica que el elemento puede ser arrastrado.</li>
+ <li><code>true</code> , indica que el elemento puede ser arrastrado.</li>
  <li><code>false</code>, indica que el elemento no puede ser arrastrado .</li>
 </ul>
 
-<p>Si este atriuto no se establece , su valor por default es <code>auto</code> , significando que el comportamiento debe de ser el definido por default en el explorador .</p>
+<p>Si este atriuto no se establece , su valor por default es <code>auto</code> , significando que el comportamiento debe de ser el definido por default en el explorador .</p>
 
-<p>Este es un atributo <em>enumerado </em> y no uno <em>booleano</em> . Esto signigica que el uso explícito de uno de los valores <em>true </em>o <em>false </em>es obligatorio y que una declaración como <code>&lt;label draggable&gt;Example Label&lt;/label&gt; </code>no está permitida . El uso correcto es  <code>&lt;label draggable="true"&gt;Example Label&lt;/label&gt;</code>.</p>
+<p>Este es un atributo <em>enumerado </em> y no uno <em>booleano</em> . Esto signigica que el uso explícito de uno de los valores <em>true </em>o <em>false </em>es obligatorio y que una declaración como <code>&lt;label draggable&gt;Example Label&lt;/label&gt; </code>no está permitida . El uso correcto es  <code>&lt;label draggable="true"&gt;Example Label&lt;/label&gt;</code>.</p>
 
-<p>Por default , unicamente el texto , las imagenes y los vínculos pueden ser arrastrados . Para todos los demás elementos el evento <strong>{{domxref('GlobalEventHandlers.ondragstart','ondragstart')}}</strong>  debe de ser establecido para el mecanismo de arrastrar y soltar para que funcione , como se muestra en este <a href="/en-US/docs/DragDrop/Drag_Operations" title="https://developer.mozilla.org/En/DragDrop/Drag_Operations">ejempl</a>o .</p>
+<p>Por default , unicamente el texto , las imagenes y los vínculos pueden ser arrastrados . Para todos los demás elementos el evento <strong>{{domxref('GlobalEventHandlers.ondragstart','ondragstart')}}</strong>  debe de ser establecido para el mecanismo de arrastrar y soltar para que funcione , como se muestra en este <a href="/en-US/docs/DragDrop/Drag_Operations" title="https://developer.mozilla.org/En/DragDrop/Drag_Operations">ejempl</a>o .</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificación</th>
-   <th scope="col">Estatus</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#the-draggable-attribute", "draggable")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#the-draggable-attribute", "draggable")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial .</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Compatibilidad_en_exploradores">Compatibilidad en exploradores</h2>
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
 
-{{Compat("html.global_attributes.draggable")}}
-
-<h2 id="CompatibilityTable()"><span style="font-size: 14px; font-weight: normal; line-height: 1.5;">{{ CompatibilityTable() }}</span></h2>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Caracterísitica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("1.8.1") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Caracterísitica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.8.1") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p> </p>
+{{Compat}}
 
 <p><span style="font-size: 30.002px; letter-spacing: -1px; line-height: 30.002px;"><strong>Ver también</strong></span></p>
 
 <ul>
- <li><a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales </a></li>
+ <li><a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales </a></li>
 </ul>

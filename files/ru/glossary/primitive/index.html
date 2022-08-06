@@ -8,11 +8,11 @@ tags:
 translation_of: Glossary/Primitive
 original_slug: Глоссарий/Primitive
 ---
-<p><strong>Примитив</strong> (значение примитивного типа, примитивный тип данных) это данные, которые не являются {{glossary("object", "объектом")}} и не имеют {{glossary("method","методов")}}. В {{Glossary("JavaScript")}} 7 простых типов данных: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("boolean")}}, {{Glossary("null")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}} (новое в {{Glossary("ECMAScript")}} 2015), {{Glossary("bigint")}}.</p>
+<p><strong>Примитив</strong> (значение примитивного типа, примитивный тип данных) это данные, которые не являются {{glossary("object", "объектом")}} и не имеют {{glossary("method","методов")}}. В {{Glossary("JavaScript")}} 7 простых типов данных: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("boolean")}}, {{Glossary("null")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}} (новое в {{Glossary("ECMAScript")}} 2015), {{Glossary("bigint")}}.</p>
 
 <p>Чаще всего значение примитивного типа представлено в низкоуровневой реализации языка.</p>
 
-<p>Все<strong> </strong>примитивы <strong>неизменяемы (immutable)</strong>, то есть они не могут быть изменены. <span id="result_box" lang="ru"><span>Важно не путать сам примитив с переменной, которой присвоено значение примитивного типа.</span> <span>Переменной может быть переприсвоено новое значение, но существующее значение примитивного типа не может быть изменено подобно объектам, массивам и функциям.</span></span></p>
+<p>Все<strong> </strong>примитивы <strong>неизменяемы (immutable)</strong>, то есть они не могут быть изменены. <span id="result_box" lang="ru"><span>Важно не путать сам примитив с переменной, которой присвоено значение примитивного типа.</span> <span>Переменной может быть переприсвоено новое значение, но существующее значение примитивного типа не может быть изменено подобно объектам, массивам и функциям.</span></span></p>
 
 <h2 id="Пример">Пример</h2>
 
@@ -75,7 +75,7 @@ console.log(foo);   // 5
  <li><span class="short_text" id="result_box" lang="ru"><span>Затем выполняются операторы функций</span></span>:
   <ul>
    <li>В первой функции был создан локальный аргумент <code>num</code>. <span id="result_box" lang="ru"><span>Мы увеличиваем его значение на 2</span></span> (а не значение исходной переменной <code>foo</code>).</li>
-   <li>Во второй функции был создан локальный аргумент<code> foo</code>. Мы увеличиваем его значение на 2 (а не значение исходной (внешней) переменной <code>foo</code>).  <span id="result_box" lang="ru"><span>Кроме того, в этой ситуации, внешняя переменная</span></span> <code>foo</code> является недоступной <strong>никаким</strong> способом. Это связано с лексическими областями JavaScript и, как следствие, с затенением переменных. Локальная переменная <code>foo</code> скрывает внешнюю переменную <code>foo</code>. Чтобы получить больше информации, смотри <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a>.</li>
+   <li>Во второй функции был создан локальный аргумент<code> foo</code>. Мы увеличиваем его значение на 2 (а не значение исходной (внешней) переменной <code>foo</code>).  <span id="result_box" lang="ru"><span>Кроме того, в этой ситуации, внешняя переменная</span></span> <code>foo</code> является недоступной <strong>никаким</strong> способом. Это связано с лексическими областями JavaScript и, как следствие, с затенением переменных. Локальная переменная <code>foo</code> скрывает внешнюю переменную <code>foo</code>. Чтобы получить больше информации, смотри <a href="/en-US/docs/Web/JavaScript/Closures">Closures</a>.</li>
   </ul>
  </li>
  <li>Таким образом, никакие изменения внутри наших функций <strong>не будут</strong> влиять на ИСХОДНУЮ <code>foo</code> вообще, так как мы работаем с её <strong>копиями</strong></li>
@@ -85,16 +85,17 @@ console.log(foo);   // 5
 
 <h2 id="Обёртки_примитивных_типов_в_JavaScript">Обёртки примитивных типов в JavaScript</h2>
 
-<p>За исключением <code>null</code> и <code>undefined</code>, все примитивные значения имеют объектный аналог, который оборачивает значение примитивного типа:</p>
+<p>За исключением <code>null</code> и <code>undefined</code>, все примитивные значения имеют объектный аналог, который оборачивает значение примитивного типа:</p>
 
 <ul>
- <li>{{jsxref("String")}} для string примитива.</li>
+ <li>{{jsxref("String")}} для string примитива.</li>
  <li>{{jsxref("Number")}} для number примитива.</li>
- <li>{{jsxref("Boolean")}} для Boolean примитива.</li>
- <li>{{jsxref("Symbol")}} для Symbol примитива.</li>
+ <li>{{jsxref("BigInt")}} для bigint примитива.</li>
+ <li>{{jsxref("Boolean")}} для boolean примитива.</li>
+ <li>{{jsxref("Symbol")}} для symbol примитива.</li>
 </ul>
 
-<p>Метод <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf"><code>valueOf()</code></a> типа обёртки возвращает значение примитивного типа.</p>
+<p>Метод <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf"><code>valueOf()</code></a> типа обёртки возвращает значение примитивного типа.</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
@@ -102,5 +103,5 @@ console.log(foo);   // 5
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">Введение в типы данных JavaScript</a></li>
- <li> <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BC%D0%B8%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%82%D0%B8%D0%BF">Примитивный тип</a> на Wikipedia</li>
+ <li> <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BC%D0%B8%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%82%D0%B8%D0%BF">Примитивный тип</a> на Wikipedia</li>
 </ul>

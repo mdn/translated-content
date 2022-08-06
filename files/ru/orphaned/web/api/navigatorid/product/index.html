@@ -29,15 +29,15 @@ function prod() {
 &lt;/script&gt;
 
 &lt;button onclick="prod();"&gt;product&lt;/button&gt;
-&lt;div id="d"&gt; &lt;/div&gt;
+&lt;div id="d"&gt; &lt;/div&gt;
 &lt;!-- вернёт "Gecko" --&gt;
 </pre>
 
 <h2 id="Notes">Примечание</h2>
 
-<p>В браузерах на основе Gecko  <code>product</code> соответствует части полной строки агента пользователя которая идёт первой после платформы. В пользовательском агенте Netscape 6.1, к примеру, <code>product</code> это "Gecko" а полная строка пользовательского агента будет: <code>Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1</code></p>
+<p>В браузерах на основе Gecko  <code>product</code> соответствует части полной строки агента пользователя которая идёт первой после платформы. В пользовательском агенте Netscape 6.1, к примеру, <code>product</code> это "Gecko" а полная строка пользовательского агента будет: <code>Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1</code></p>
 
-<p>В браузере на основе WebKit <code>product </code>вернёт "<code>Gecko</code>", хотя часть полной строки пользовательского агента непосредственно после после платформы на самом деле следующая: <code>(KHTML, like Gecko)</code>.</p>
+<p>В браузере на основе WebKit <code>product </code>вернёт "<code>Gecko</code>", хотя часть полной строки пользовательского агента непосредственно после после платформы на самом деле следующая: <code>(KHTML, like Gecko)</code>.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

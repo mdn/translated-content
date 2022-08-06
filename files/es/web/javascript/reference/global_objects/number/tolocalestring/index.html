@@ -24,7 +24,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toLocaleString
 
 <p>Los argumentos <code>locales</code> y <code>options</code> personalizan el comportamiento de la funcion y permite especificar el lenguaje cuyo formato deberá ser utilizado. En implementaciones, que ignoran los argumentos <code>locales</code> y <code>options</code> la localización utilizada y la forma del texto retornado es enteramente dependiente de la implementación.</p>
 
-<div>Mira el  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat">constructor Intl.NumberFormat()</a> para ver más detalles sobre los parámetros y como se utilizan.</div>
+<div>Mira el  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat">constructor Intl.NumberFormat()</a> para ver más detalles sobre los parámetros y como se utilizan.</div>
 
 
 
@@ -52,11 +52,11 @@ console.log(number.toLocaleString()); // Muestra "3,500" si se está utilizando 
 <p>Los parámetros <code>locales</code> y <code>options</code> no son soportados aún por todos los navegadores. Para verificar el soporte en ES5.1 y posteriores implementaciones, se puede utilizar el hecho que los tags inválidos en la localización son rechazados con una excepción {{jsxref("Global_Objects/RangeError", "RangeError")}}:</p>
 
 <pre class="brush: js notranslate">function toLocaleStringSupportsLocales() {
-  var number = 0;
-  try {
-    number.toLocaleString('i');
-  } catch (e) {
-    return e.name === 'RangeError';
+  var number = 0;
+  try {
+    number.toLocaleString('i');
+  } catch (e) {
+    return e.name === 'RangeError';
   }
   return false;
 }
@@ -103,13 +103,13 @@ console.log(number.toLocaleString(['ban', 'id']));
 
 <h3 id="Utilizando_options">Utilizando <code>options</code></h3>
 
-<p>El resultado proveido por  <code>toLocaleString</code> puede ser personalizado utilizando el parámetro <code>options</code> :</p>
+<p>El resultado proveido por  <code>toLocaleString</code> puede ser personalizado utilizando el parámetro <code>options</code> :</p>
 
 <pre class="brush: js notranslate">var number = 123456.789;
 
 // solicitar un formato de moneda
 console.log(number.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // en Japones yen no utiliza una moneda menor
 console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))

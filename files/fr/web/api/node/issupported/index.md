@@ -8,13 +8,15 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/isSupported
 ---
-{{APIRef("DOM")}}{{obsolete_header}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 La méthode **`Node.isSupported()`** renvoie une marque  {{domxref("Boolean","booléenne")}} contenant le résultat du test par lequel est vérifié si une implémentation DOM prend en charge une fonctionnalité spécifique et si celle-ci est supportée par un noeud spécifique.
 
 ### Syntaxe
 
-    boolValue = element.isSupported(feature, version)
+```js
+boolValue = element.isSupported(feature, version)
+```
 
 ### Paramètres
 
@@ -37,8 +39,6 @@ La méthode **`Node.isSupported()`** renvoie une marque  {{domxref("Boolean","bo
 ```
 
 ## Spécifications
-
-
 
 | Spécification                                                                                                        | Statut                           | Commentaire                                            |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |

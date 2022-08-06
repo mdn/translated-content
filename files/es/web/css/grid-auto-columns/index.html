@@ -9,13 +9,13 @@ tags:
   - Referencia
 translation_of: Web/CSS/grid-auto-columns
 ---
-<p>La propiedad de css <strong><code>grid-auto-columns</code></strong>   especifíca el tamaño de una columna de cuadrícula creada implícitamente {{glossary("grid tracks", "track")}}.</p>
+<p>La propiedad de css <strong><code>grid-auto-columns</code></strong>   especifíca el tamaño de una columna de cuadrícula creada implícitamente {{glossary("grid tracks", "track")}}.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}</div>
 
-<p class="hidden">La version original interactiva de este artículo se guarda en un repositorio GitHub . If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
+<p class="hidden">La version original interactiva de este artículo se guarda en un repositorio GitHub . If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
 
-<p>Si un item grid se posiciona dentro de una columna que no tenga un tamaño explícito para  {{cssxref("grid-template-columns")}}, implícito{{glossary("grid", "grid")}}las pistan se crean para sostenerlo. Esto puede suceder posicionándose explícitamente en una columna que está fuera de rango, o mediante el algoritmo de auto colocación creando columnas adicionales.</p>
+<p>Si un item grid se posiciona dentro de una columna que no tenga un tamaño explícito para  {{cssxref("grid-template-columns")}}, implícito{{glossary("grid", "grid")}}las pistan se crean para sostenerlo. Esto puede suceder posicionándose explícitamente en una columna que está fuera de rango, o mediante el algoritmo de auto colocación creando columnas adicionales.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -69,8 +69,8 @@ grid-auto-columns: unset;
  <dt><code>&lt;percentage&gt;</code></dt>
  <dd>Es un valor no negativo {{cssxref("percentage", "&lt;percentage&gt;")}} en relación con el tamaño del bloque del contenedor de la grilla. Si el tamaño de bloque del contenedor de cuadrícula es indefinido, el valor porcentual se trata como automático.</dd>
  <dt><code>&lt;flex&gt;</code></dt>
- <dd>Es una dimensión -valor- no negativa con la unidad <code>fr</code> especificando el 'factor flex' del espacio entre dos celdas. Si el espacio entre dos celdas está designado como <code>&lt;flex&gt;</code> tomará una porción del espacio remanente entre celdas en proporción a su 'factor flex' - o flex factor <code>fr</code>-.</dd>
- <dd>Si aparece en una función <code>minmax()</code> implica un mínimo automático (ejemplo: <code>minmax(auto, &lt;flex&gt;)</code>).</dd>
+ <dd>Es una dimensión -valor- no negativa con la unidad <code>fr</code> especificando el 'factor flex' del espacio entre dos celdas. Si el espacio entre dos celdas está designado como <code>&lt;flex&gt;</code> tomará una porción del espacio remanente entre celdas en proporción a su 'factor flex' - o flex factor <code>fr</code>-.</dd>
+ <dd>Si aparece en una función <code>minmax()</code> implica un mínimo automático (ejemplo: <code>minmax(auto, &lt;flex&gt;)</code>).</dd>
  <dt><code>max-content</code></dt>
  <dd>Es una keyword o palabra clave que representa el contenido máximo de los items que ocupan el espacio de la grid o cuadrilla.</dd>
  <dt><code>min-content</code></dt>
@@ -78,11 +78,11 @@ grid-auto-columns: unset;
  <dt><code>minmax(min, max)</code></dt>
  <dd>Es una notación funcional (una función) que define un rango de tamaño mayor que o igual a <em>min</em> y menor que o igual a <em>max</em>. Si <em>max</em> es menor que <em>min</em>, entonces <em>max</em> será ignorado y la función será tratada como un <em>min</em>. Si establecemos un valor máximo como <code>&lt;flex&gt;</code>, se define el 'factor flex' del espacio entre las celdas del grid. Si establecemos el valor mínimo como <code>&lt;flex&gt;</code>, se tratará como cero, o contenido mínimo si el contenedor de la grid/cuadrilla tiene la restricción de valor mínimo (min-content).</dd>
  <dt><code>fit-content(<em>argument</em>)</code></dt>
- <dd>Representa la fórmula <code>min(max-content, max(auto, <var>argument</var>))</code>, que se calcula similar a <code>auto</code> (por ejemplo: <code>minmax(auto, max-content)</code>), excepto que el <em>track size</em> o espacio entre celdas es mayor que el auto mínimo.</dd>
+ <dd>Representa la fórmula <code>min(max-content, max(auto, <var>argument</var>))</code>, que se calcula similar a <code>auto</code> (por ejemplo: <code>minmax(auto, max-content)</code>), excepto que el <em>track size</em> o espacio entre celdas es mayor que el auto mínimo.</dd>
  <dt><code>auto</code></dt>
- <dd>Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.</dd>
+ <dd>Es una palabra reservada -o keyword- que es idéntica a contenido máximo si es un máximo. Como mínimo representa el máximo valor mínimo aceptado (según lo especificado por{{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la cuadrícula que ocupan el espacio de la cuadrícula.</dd>
  <dd>
- <p class="note">Note: Los valores de tamaño <code>auto</code>  (y solo los <code>auto</code>) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}} .</p>
+ <p class="note">Note: Los valores de tamaño <code>auto</code>  (y solo los <code>auto</code>) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}} .</p>
  </dd>
 </dl>
 
@@ -95,12 +95,12 @@ grid-auto-columns: unset;
 <h3 id="Contenido_HTML">Contenido HTML</h3>
 
 <pre class="brush: html notranslate">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
+  &lt;div id="item1"&gt;&lt;/div&gt;
+  &lt;div id="item2"&gt;&lt;/div&gt;
+  &lt;div id="item3"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<h3 id="Contenido_CSS">Contenido CSS </h3>
+<h3 id="Contenido_CSS">Contenido CSS </h3>
 
 <pre class="brush: css; highlight[6] notranslate">#grid {
   height: 100px;
@@ -157,7 +157,7 @@ grid-auto-columns: unset;
 <section id="Quick_links">
 <ol>
  <li><a href="/en-US/docs/Web/CSS"><strong>CSS</strong></a></li>
- <li><strong><a href="/en-US/docs/Web/CSS/Reference">R</a>eferencia a  CSS</strong></li>
+ <li><strong><a href="/en-US/docs/Web/CSS/Reference">R</a>eferencia a  CSS</strong></li>
  <li><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
  <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
   <ol>

@@ -54,45 +54,45 @@ JSON 文字列はそれ自身をファイルとして格納することもでき
 
 ```json
 {
-  "squadName": "Super hero squad",
-  "homeTown": "Metro City",
-  "formed": 2016,
-  "secretBase": "Super tower",
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
   "active": true,
-  "members": [
-    {
-      "name": "Molecule Man",
-      "age": 29,
-      "secretIdentity": "Dan Jukes",
-      "powers": [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
-    },
-    {
-      "name": "Madame Uppercut",
-      "age": 39,
-      "secretIdentity": "Jane Wilson",
-      "powers": [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
-    },
-    {
-      "name": "Eternal Flame",
-      "age": 1000000,
-      "secretIdentity": "Unknown",
-      "powers": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
-      ]
-    }
-  ]
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
 }
 ```
 
@@ -109,11 +109,11 @@ superHeroes['active']
 superHeroes['members'][1]['powers'][2]
 ```
 
-1.  まず、変数名 `superHeroes` を指定します。
-2.  その中の `members` プロパティへアクセスしたいので、 `["members"]` と指定します。
-3.  `members` にはオブジェクトの配列が格納されています. ここでは、配列内の 2 番目のオブジェクトへアクセスするので、 `[1]` を指定します。
-4.  そのオブジェクト内で、 `powers` プロパティへアクセスするため,  `["powers"]` と指定します。
-5.  `powers` プロパティは選択したヒーローの能力を含んだ配列となっており、その中の 3 番目が欲しいので、 `[2]` と記述します。
+1. まず、変数名 `superHeroes` を指定します。
+2. その中の `members` プロパティへアクセスしたいので、 `["members"]` と指定します。
+3. `members` にはオブジェクトの配列が格納されています. ここでは、配列内の 2 番目のオブジェクトへアクセスするので、 `[1]` を指定します。
+4. そのオブジェクト内で、 `powers` プロパティへアクセスするため,  `["powers"]` と指定します。
+5. `powers` プロパティは選択したヒーローの能力を含んだ配列となっており、その中の 3 番目が欲しいので、 `[2]` と記述します。
 
 > **Note:** 上記の JSON は [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) で参照することができます（ページ内の[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)を参照してください）。ページを読み込んで見て、ブラウザーのコンソールで変数内のデータにアクセスしてみてください。
 
@@ -134,15 +134,15 @@ superHeroes['members'][1]['powers'][2]
     ]
   },
   {
-    "name": "Madame Uppercut",
-    "age": 39,
-    "secretIdentity": "Jane Wilson",
-    "powers": [
-      "Million tonne punch",
-      "Damage resistance",
-      "Superhuman reflexes"
-    ]
-  }
+    "name": "Madame Uppercut",
+    "age": 39,
+    "secretIdentity": "Jane Wilson",
+    "powers": [
+      "Million tonne punch",
+      "Damage resistance",
+      "Superhuman reflexes"
+    ]
+  }
 ]
 ```
 
@@ -189,19 +189,19 @@ const section = document.querySelector('section');
 
 JSON を取得するには、{{domxref("XMLHttpRequest")}} (しばしば **XHR** と呼ばれる) という API を使用します。これは非常に便利な JavaScript オブジェクトで、JavaScript を使用してサーバーからリソース (例：画像、テキスト、JSON、さらには HTML スニペットなど) を取得するネットワークリクエストを行うことができます。つまりページ全体を再読み込みせずに、小さな部分のコンテンツを更新することができます。これにより、よりレスポンシブなウェブページを作成できますが、それをもっと詳細に教えるのはこの記事の範囲を超えています。
 
-1.  まず、取得したい JSON がある URL を変数へ代入します。次のコードを JavaScript の最後の行へ追加してください。
+1. まず、取得したい JSON がある URL を変数へ代入します。次のコードを JavaScript の最後の行へ追加してください。
 
     ```js
     let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     ```
 
-2.  HTTP リクエストを作成するのに、 `XMLHttpRequest` コンストラクターに `new` キーワードを付けて使用することで、新しいリクエストインスタンスを作成する必要があります。先ほどのコードの下に、次のコードを追加してください。
+2. HTTP リクエストを作成するのに、 `XMLHttpRequest` コンストラクターに `new` キーワードを付けて使用することで、新しいリクエストインスタンスを作成する必要があります。先ほどのコードの下に、次のコードを追加してください。
 
     ```js
     let request = new XMLHttpRequest();
     ```
 
-3.  新しいリクエストを開始するには、 [`open()`](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを使います。 次のコードを追加してください。
+3. 新しいリクエストを開始するには、 [`open()`](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを使います。 次のコードを追加してください。
 
     ```js
     request.open('GET', requestURL);
@@ -212,14 +212,14 @@ JSON を取得するには、{{domxref("XMLHttpRequest")}} (しばしば **XHR**
     - リクエストを開始する際に HTTP のメソッドを決める必要があります。今回のケースでは、単純にデータを取得するだけですので [`GET`](/ja/docs/Web/HTTP/Methods/GET) が良いでしょう。
     - リクエストを送る先の URL。今回は JSON ファイルを置いた URL です。
 
-4.  次に、以下の 2 行のコードを追加してください。XHR オブジェクトがサーバーから返されるデータを判断できるように [`responseType`](/ja/docs/Web/API/XMLHttpRequest/responseType) に JSON を指定します。この場合、ブラウザー側で JavaScript オブジェクトへ変換してくれます。それから、 [`send()`](/ja/docs/Web/API/XMLHttpRequest/send) メソッドでリクエストを送信します。
+4. 次に、以下の 2 行のコードを追加してください。XHR オブジェクトがサーバーから返されるデータを判断できるように [`responseType`](/ja/docs/Web/API/XMLHttpRequest/responseType) に JSON を指定します。この場合、ブラウザー側で JavaScript オブジェクトへ変換してくれます。それから、 [`send()`](/ja/docs/Web/API/XMLHttpRequest/send) メソッドでリクエストを送信します。
 
     ```js
     request.responseType = 'json';
     request.send();
     ```
 
-5.  最後に、サーバーからのレスポンスを待ち、それを処理するコードを用意するので、以下のコードをこれまでのコードの下に追加してください。
+5. 最後に、サーバーからのレスポンスを待ち、それを処理するコードを用意するので、以下のコードをこれまでのコードの下に追加してください。
 
     ```js
     request.onload = function() {
@@ -294,12 +294,12 @@ function showHeroes(obj) {
 
 次に、[for ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop)を使って配列のそれぞれのオブジェクトを反復処理します。それぞれの次のようなことを行います。
 
-1.  新しい要素をいくつか作成します。`<article>` 1 つ、 `<h2>` 1 つ、 `<p>` 3 つ、`<ul>` 1 つです。
-2.  `<h2>` の中身を現在のヒーローの名前 (`name`) にします。
-3.  3 つの段落の中身を、それぞれの `secretIdentity`、 `age`、リストにある情報を紹介していくために「超能力 ("Superpowers:")」で始まる行とします。
-4.  `powers` プロパティを `superPowers` という新しい定数に保存します。この定数は今のヒーローの超能力のリストを持つ配列です。
-5.  別の `for` ループを使用して、今のヒーローの超能力を反復処理します。それぞれに対して `<li>` 要素を作成し、中に超能力を入れ、 `listItem` に `<ul>` 要素（`myList`）を `appendChild()` で追加します。
-6.  最後に、 `<h2>`、`<p>`、`<ul>` を `<article>` (`myArticle`) の中に追加してから、その `<article>` を `<section>` の中に追加します。これらを追加する順序は重要で、これが HTML の中で表示される順序になります。
+1. 新しい要素をいくつか作成します。`<article>` 1 つ、 `<h2>` 1 つ、 `<p>` 3 つ、`<ul>` 1 つです。
+2. `<h2>` の中身を現在のヒーローの名前 (`name`) にします。
+3. 3 つの段落の中身を、それぞれの `secretIdentity`、 `age`、リストにある情報を紹介していくために「超能力 ("Superpowers:")」で始まる行とします。
+4. `powers` プロパティを `superPowers` という新しい定数に保存します。この定数は今のヒーローの超能力のリストを持つ配列です。
+5. 別の `for` ループを使用して、今のヒーローの超能力を反復処理します。それぞれに対して `<li>` 要素を作成し、中に超能力を入れ、 `listItem` に `<ul>` 要素（`myList`）を `appendChild()` で追加します。
+6. 最後に、 `<h2>`、`<p>`、`<ul>` を `<article>` (`myArticle`) の中に追加してから、その `<article>` を `<section>` の中に追加します。これらを追加する順序は重要で、これが HTML の中で表示される順序になります。
 
 > **Note:**: 試してみるための例が上手く取得できなかった場合は、 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) ソースコードを参照してみてください（こちらで[ライブ実行](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)もできます）。
 

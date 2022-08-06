@@ -87,10 +87,10 @@ ball.draw();
 <p><span>Без какого-либо граничного коллизионного тестирования наш мяч быстро выбегает из холста.</span> <span> Нам нужно проверить, не находятся ли <code>x</code> и <code>y</code> положения шара вне размеров холста и не инвертируют направление векторов скорости.</span> <span> Для этого мы добавим следующие проверки в метод <code>draw</code> :</span></p>
 
 <pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
-  ball.vy = -ball.vy;
+  ball.vy = -ball.vy;
 }
 if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
-  ball.vx = -ball.vx;
+  ball.vx = -ball.vx;
 }</pre>
 
 <h3 id="Первое_демо"><span>Первое демо</span></h3>
@@ -220,7 +220,7 @@ ball.draw();</pre>
 
 <h2 id="Скользящий_эффект">Скользящий эффект</h2>
 
-<p>До сих пор мы использовали метод {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}, когда очищали предыдущий кадр. Если заменить этот метод на {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} с полу-прозрачным стилем, можно легко создать эффект скольжения.</p>
+<p>До сих пор мы использовали метод {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}, когда очищали предыдущий кадр. Если заменить этот метод на {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} с полу-прозрачным стилем, можно легко создать эффект скольжения.</p>
 
 <pre class="brush: js">ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
 ctx.fillRect(0, 0, canvas.width, canvas.height);</pre>
@@ -364,7 +364,7 @@ ball.draw();
 
 <h2 id="Breakout(арканоид)">Breakout(арканоид)</h2>
 
-<p>В этой короткой главе описаны некоторые приёмы создания продвинутой анимации.  Как насчёт того, что бы добавить доску, кирпичи и превратить это демо в игру Breakout(в Росси более известный клон этой игры - арканоид)? Посетите <a href="/en-US/docs/Games">Game development</a> чтобы узнать больше об играх.</p>
+<p>В этой короткой главе описаны некоторые приёмы создания продвинутой анимации.  Как насчёт того, что бы добавить доску, кирпичи и превратить это демо в игру Breakout(в Росси более известный клон этой игры - арканоид)? Посетите <a href="/en-US/docs/Games">Game development</a> чтобы узнать больше об играх.</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

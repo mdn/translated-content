@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 
 ### POSITIVE_INFINITY の使用
 
-以下の例では、変数 `bigNumber` に最大値よりも大きな値が代入されています。{{jsxref("Statements/if...else", "if")}} ステートメントが実行されるとき、`bigNumber` は `Infinity` の値を持つので、処理が継続する前に `bigNumber` により扱いやすい値がセットされます。
+以下の例では、変数 `bigNumber` に最大値よりも大きな値が代入されています。{{jsxref("Statements/if...else", "if")}} ステートメントが実行されるとき、`bigNumber` は `Infinity` の値を持つので、処理が継続する前に `bigNumber` により扱いやすい値がセットされます。
 
 ```js
 var bigNumber = Number.MAX_VALUE * 2;

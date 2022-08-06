@@ -40,7 +40,7 @@ browser-compat: javascript.builtins.Object.create
 
 <h3 id="Object.create()를_사용한_고전적인_상속방법"><code>Object.create()</code>를 사용한 고전적인 상속방법</h3>
 
-<p>아래는 고전적인 상속방법으로 사용된 <code>Object.create()</code> 사용 예입니다. 이는 단일 상속 용으로, JavaScript가 지원하는 전부입니다.</p>
+<p>아래는 고전적인 상속방법으로 사용된 <code>Object.create()</code> 사용 예입니다. 이는 단일 상속 용으로, JavaScript가 지원하는 전부입니다.</p>
 
 <pre class="brush: js">// Shape - 상위클래스
 function Shape() {
@@ -157,9 +157,9 @@ o2 = Object.create({}, {
 
 <h2 id="폴리필">폴리필</h2>
 
-<p>이 폴리필에서는 새 개체에 대한 프로토타입이 선택되었지만 두번째 인수가 없이 개체를 생성하는 사례를 보여줍니다.</p>
+<p>이 폴리필에서는 새 개체에 대한 프로토타입이 선택되었지만 두번째 인수가 없이 개체를 생성하는 사례를 보여줍니다.</p>
 
-<p><code>[[Prototype]]</code>에 <code>null</code> 을 설정하는 것이 실제 ES5 <code>Object.create</code>에서는 지원되지만, ECMAScript 5 보다 낮은 버전에서는 상속에 제한이 있기 때문에 이 폴리필에서는 지원할 수 없음에 주의하세요.</p>
+<p><code>[[Prototype]]</code>에 <code>null</code> 을 설정하는 것이 실제 ES5 <code>Object.create</code>에서는 지원되지만, ECMAScript 5 보다 낮은 버전에서는 상속에 제한이 있기 때문에 이 폴리필에서는 지원할 수 없음에 주의하세요.</p>
 
 <pre class="brush: js">if (typeof Object.create != 'function') {
   Object.create = (function(undefined) {
@@ -171,13 +171,13 @@ o2 = Object.create({}, {
       Temp.prototype = prototype || {};
       if (propertiesObject !== undefined) {
         Object.defineProperties(Temp.prototype, propertiesObject);
-      }
+      }
       var result = new Temp();
       Temp.prototype = null;
-      // Object.create(null)인 경우 모방
-      if(prototype === null) {
-         result.__proto__ = null;
-      }
+      // Object.create(null)인 경우 모방
+      if(prototype === null) {
+         result.__proto__ = null;
+      }
       return result;
     };
   })();

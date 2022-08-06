@@ -3,29 +3,29 @@ title: Conceitos básicos de Fetch
 slug: Web/API/Fetch_API/Basic_concepts
 translation_of: Web/API/Fetch_API/Basic_concepts
 ---
-<p>{{DefaultAPISidebar("Fetch API")}}{{draft}}</p>
+<p>{{DefaultAPISidebar("Fetch API")}}</p>
 
 <div class="summary">
-<p>A <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> fornece uma interface para buscar recursos (inclusive pela rede). Parecerá familiar para alguém que já tenha usado {{domxref("XMLHttpRequest")}}, mas ela fornece um conjunto de recursos mais poderoso e flexível . Este artigo expõe alguns conceitos básicos da API Fetch.</p>
+<p>A <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> fornece uma interface para buscar recursos (inclusive pela rede). Parecerá familiar para alguém que já tenha usado {{domxref("XMLHttpRequest")}}, mas ela fornece um conjunto de recursos mais poderoso e flexível . Este artigo expõe alguns conceitos básicos da API Fetch.</p>
 </div>
 
 <div class="note">
-<p>Este artigo será incrementado ao longo do tempo. Se você achar um conceito em Fetch que parece precisar de uma explicação melhor, informe alguém em <a href="https://discourse.mozilla-community.org/c/mdn">fórum de discussãMDN</a>, or <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> (#mdn room.)</p>
+<p>Este artigo será incrementado ao longo do tempo. Se você achar um conceito em Fetch que parece precisar de uma explicação melhor, informe alguém em <a href="https://discourse.mozilla-community.org/c/mdn">fórum de discussãMDN</a>, or <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> (#mdn room.)</p>
 </div>
 
 <h2 id="Em_poucas_palavras">Em poucas palavras</h2>
 
-<p>O coração do Fetch são as abstrações da Interface do HTTP {{domxref("Request")}}, {{domxref("Response")}}, {{domxref("Headers")}}, e {{domxref("Body")}} payloads, juntamente com {{domxref("GlobalFetch.fetch","global fetch")}} método para iniciar requisições de recursos assíncronos. Como os componentes principais do HTTP são abstraidos como objetos de JavaScript, torna-se fácil APIs fazer uso das funcionalidades.</p>
+<p>O coração do Fetch são as abstrações da Interface do HTTP {{domxref("Request")}}, {{domxref("Response")}}, {{domxref("Headers")}}, e {{domxref("Body")}} payloads, juntamente com {{domxref("GlobalFetch.fetch","global fetch")}} método para iniciar requisições de recursos assíncronos. Como os componentes principais do HTTP são abstraidos como objetos de JavaScript, torna-se fácil APIs fazer uso das funcionalidades.</p>
 
-<p><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a> é um exemplo de uma API que faz um grande uso de Fecth.</p>
+<p><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a> é um exemplo de uma API que faz um grande uso de Fecth.</p>
 
-<p>Fetch leva a assincronicidade um passo além. A API é completamente baseada em {{jsxref("Promise")}}.</p>
+<p>Fetch leva a assincronicidade um passo além. A API é completamente baseada em {{jsxref("Promise")}}.</p>
 
 <h2 id="Guard">Guard</h2>
 
-<p>Guard é uma novidade de objetos {{domxref("Headers")}}, podendo assumir os valores de <code>immutable</code>, <code>request</code>, <code>request-no-cors</code>, <code>response</code>, ou <code>none</code>, dependendo de onde o cabeçalho é utilizado.</p>
+<p>Guard é uma novidade de objetos {{domxref("Headers")}}, podendo assumir os valores de <code>immutable</code>, <code>request</code>, <code>request-no-cors</code>, <code>response</code>, ou <code>none</code>, dependendo de onde o cabeçalho é utilizado.</p>
 
-<p>Quando um novo objeto {{domxref("Headers")}} é criado usando o {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}}, seu guard é configurado como <code>none</code> (o padrão). Quando um objeto {{domxref("Request")}} ou {{domxref("Response")}} é criado, tem um objeto {{domxref("Headers")}}  associado cujo guard é resumido a seguir:</p>
+<p>Quando um novo objeto {{domxref("Headers")}} é criado usando o {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}}, seu guard é configurado como <code>none</code> (o padrão). Quando um objeto {{domxref("Request")}} ou {{domxref("Response")}} é criado, tem um objeto {{domxref("Headers")}}  associado cujo guard é resumido a seguir:</p>
 
 <table class="standard-table">
  <thead>
@@ -42,7 +42,7 @@ translation_of: Web/API/Fetch_API/Basic_concepts
    <td><code>request</code></td>
   </tr>
   <tr>
-   <td>{{domxref("Request.Request","Request()")}} com {{domxref("Request.mode","mode")}} de <code>no-cors</code></td>
+   <td>{{domxref("Request.Request","Request()")}} com {{domxref("Request.mode","mode")}} de <code>no-cors</code></td>
    <td><code>request-no-cors</code></td>
   </tr>
   <tr>
@@ -57,10 +57,10 @@ translation_of: Web/API/Fetch_API/Basic_concepts
  </tbody>
 </table>
 
-<p>Um cabeçalho guard afeta os métodos {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, e {{domxref("Headers.append","append()")}} os quais mudam o conteúdo do cabeçalho. Um<code>TypeError</code> é lançado se você tentar modificar um objeto {{domxref("Headers")}} objeto cujo "guard" é <code>immutable</code>. De qualquer maneira, a operação vai funcionar se</p>
+<p>Um cabeçalho guard afeta os métodos {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, e {{domxref("Headers.append","append()")}} os quais mudam o conteúdo do cabeçalho. Um<code>TypeError</code> é lançado se você tentar modificar um objeto {{domxref("Headers")}} objeto cujo "guard" é <code>immutable</code>. De qualquer maneira, a operação vai funcionar se</p>
 
 <ul>
- <li>guard for um <code title="">request</code> e o <var>name</var> de cabeçalho não for {{Glossary("forbidden header name")}} .</li>
- <li>guard for <code title="">request-no-cors</code> e os <var>name</var>/<var>value</var> de cabeçalho for {{Glossary("simple header")}} .</li>
- <li>guard for <code title="">response</code> e o <var>name</var> de cabeçalho não for {{Glossary("forbidden response header name")}} .</li>
+ <li>guard for um <code title="">request</code> e o <var>name</var> de cabeçalho não for {{Glossary("forbidden header name")}} .</li>
+ <li>guard for <code title="">request-no-cors</code> e os <var>name</var>/<var>value</var> de cabeçalho for {{Glossary("simple header")}} .</li>
+ <li>guard for <code title="">response</code> e o <var>name</var> de cabeçalho não for {{Glossary("forbidden response header name")}} .</li>
 </ul>

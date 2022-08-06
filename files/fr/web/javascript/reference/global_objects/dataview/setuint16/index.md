@@ -19,7 +19,9 @@ La méthode **`setUint16()`** permet d'enregister un entier non-signé sur 16 bi
 
 ## Syntaxe
 
-    dataview.setUint16(positionOctet, valeur [, littleEndian])
+```js
+dataview.setUint16(positionOctet, valeur [, littleEndian])
+```
 
 ### Paramètres
 

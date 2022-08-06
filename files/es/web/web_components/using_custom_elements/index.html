@@ -12,15 +12,15 @@ translation_of: Web/Web_Components/Using_custom_elements
 ---
 <div>{{DefaultAPISidebar("Web Components")}}</div>
 
-<p class="summary">Una de las características claves del estándar de Componentes Web es la capacidad de crear elementos personalizados que encapsulan tu funcionalidad en una página HTML, en vez de tener que hacerlo con una larga lista de elementos anidados que juntos proveen una funcionalidad o característica personalizada en una página. Este artículo presenta el uso del API de Elementos Personalizados.</p>
+<p class="summary">Una de las características claves del estándar de Componentes Web es la capacidad de crear elementos personalizados que encapsulan tu funcionalidad en una página HTML, en vez de tener que hacerlo con una larga lista de elementos anidados que juntos proveen una funcionalidad o característica personalizada en una página. Este artículo presenta el uso del API de Elementos Personalizados.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Los Elementos Personalizados funcionan por defecto en Firefox, Chrome, y Edge (76). Opera y Safari solo adminten Elementos  Personalizados autónomos (que extienden HTMLElement).</p>
+<p><strong>Nota</strong>: Los Elementos Personalizados funcionan por defecto en Firefox, Chrome, y Edge (76). Opera y Safari solo adminten Elementos  Personalizados autónomos (que extienden HTMLElement).</p>
 </div>
 
 <h2 id="Vista_de_alto_nivel">Vista de alto nivel</h2>
 
-<p>El controlador de los elementos personalizados en un documento web es el objeto  {{domxref("CustomElementRegistry")}}  — este objeto te permite registrar un elemento personalizado en la página, devolver información de qué elementos personalizados se han registrado, etc.</p>
+<p>El controlador de los elementos personalizados en un documento web es el objeto  {{domxref("CustomElementRegistry")}}  — este objeto te permite registrar un elemento personalizado en la página, devolver información de qué elementos personalizados se han registrado, etc.</p>
 
 <p>Para registrar un elemento personalizado en la página, debes usar el método {{domxref("CustomElementRegistry.define()")}} . Éste toma los siguientes argumentos:</p>
 
@@ -51,13 +51,13 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 <p>Esto es solo un ejemplo sencillo, pero aquí se pueden hacer más cosas. Dentro de la clase podemos definir callbacks de ciclo de vida, que se ejecutan en momentos específicos del ciclo de vida del elemento. Por ejemplo, <code>connectedCallback</code> se invoca cada vez que el elemento se añade a un documento, mientras que <code>attributeChangedCallback</code> se invoca cuando uno de los atributos del elemento se ha añadido, quitado o cambiado.</p>
 
-<p>Aprenderás más sobre estos callbacks en la sección {{anch("Using the lifecycle callbacks")}} más abajo.</p>
+<p>Aprenderás más sobre estos callbacks en la sección <a href="#using_the_lifecycle_callbacks">Using the lifecycle callbacks</a> más abajo.</p>
 
 <p>Hay dos tipos de elementos personalizados :</p>
 
 <ul>
  <li><strong>Elementos personalizados autónomos</strong> — estos no heredan de elementos estándar HTML. Se usan estos elementos en una página escribiéndolos literalmente como un elemento HTML nuevo. Por ejemplo <code>&lt;popup-info&gt;</code>, o <code>document.createElement("popup-info")</code>.</li>
- <li><strong>Elementos preconstruidos</strong> <strong>personalizados</strong> heredan de elementos HTML básicos. Para crear un elemento de este tipo, tienes que especificar qué elemento extiende (como se verá en los ejemplos de abajo), y se usan escribiendo el nombre del elemento básico, pero añadiendo un atributo (o propiedad) {{htmlattrxref("is")}}  y dándole como valor el nombre del elemento personalizado que se ha desarrollado. Por ejemplo <code>&lt;p is="word-count"&gt;</code>, o <code>document.createElement("p", { is: "word-count" })</code>.</li>
+ <li><strong>Elementos preconstruidos</strong> <strong>personalizados</strong> heredan de elementos HTML básicos. Para crear un elemento de este tipo, tienes que especificar qué elemento extiende (como se verá en los ejemplos de abajo), y se usan escribiendo el nombre del elemento básico, pero añadiendo un atributo (o propiedad) {{htmlattrxref("is")}}  y dándole como valor el nombre del elemento personalizado que se ha desarrollado. Por ejemplo <code>&lt;p is="word-count"&gt;</code>, o <code>document.createElement("p", { is: "word-count" })</code>.</li>
 </ul>
 
 <h2 id="Trabajando_mediante_algunos_ejemplos_sencillos">Trabajando mediante algunos ejemplos sencillos</h2>
@@ -125,7 +125,7 @@ shadow.appendChild(wrapper);
 wrapper.appendChild(icon);
 wrapper.appendChild(info);</pre>
 
-<p>Finalmente, registraremos nuestro elemento en el <code>CustomElementRegistry</code> usando el método <code>define()</code> que mencionamos anteriormente  — en los parámetros especificamos el nombre del elemento, y el nombre de la clase que define su funcionalidad::</p>
+<p>Finalmente, registraremos nuestro elemento en el <code>CustomElementRegistry</code> usando el método <code>define()</code> que mencionamos anteriormente  — en los parámetros especificamos el nombre del elemento, y el nombre de la clase que define su funcionalidad::</p>
 
 <pre class="brush: js notranslate">customElements.define('popup-info', PopUpInfo);</pre>
 
@@ -140,7 +140,7 @@ wrapper.appendChild(info);</pre>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Nota</strong>: Recuerda que para que los elementos personalizados funcionen, el script que los registra tiene que cargarse después de que el DOM lo interprete.  Esto puede hacerse incluyendo un elemento <code>&lt;script&gt;</code> al final del  <code>&lt;body&gt;</code>, o poniendo el atributo <code>defer</code> en tu elemento <code>&lt;script&gt;</code>.</p>
+<p><strong>Nota</strong>: Recuerda que para que los elementos personalizados funcionen, el script que los registra tiene que cargarse después de que el DOM lo interprete.  Esto puede hacerse incluyendo un elemento <code>&lt;script&gt;</code> al final del  <code>&lt;body&gt;</code>, o poniendo el atributo <code>defer</code> en tu elemento <code>&lt;script&gt;</code>.</p>
 </div>
 
 <h3 id="Estilos_internos_vs._externos">Estilos internos vs. externos</h3>
@@ -157,7 +157,7 @@ linkElem.setAttribute('href', 'style.css');
 // Añadimos el elemento creado al shadow dom
 shadow.appendChild(linkElem);</pre>
 
-<p>Nótese que los elementos {{htmlelement("link")}} no bloquean el pintado de shadow root, por lo que podría verse un flash o contenido sin estilo (FOUC)  mientras se carga la hoja de estilos.</p>
+<p>Nótese que los elementos {{htmlelement("link")}} no bloquean el pintado de shadow root, por lo que podría verse un flash o contenido sin estilo (FOUC)  mientras se carga la hoja de estilos.</p>
 
 <p>Muchos navegadores modernos implementan una optimización para etiquetas {{htmlelement("style")}} clonadas de un nodo común o que tienen texto idéntico, que les permite compartir una única hoja de estilo por detrás. Con esta optimización, el rendimiento de estilos externos e internos debería ser parecido.</p>
 
@@ -192,10 +192,10 @@ shadow.appendChild(linkElem);</pre>
 
 &lt;/ul&gt;</pre>
 
-<p>Usas el elemento <code>&lt;ul&gt;</code> como siempre, pero especificas el nombre del elemento personalizado mediante un atributo  <code>is</code> .</p>
+<p>Usas el elemento <code>&lt;ul&gt;</code> como siempre, pero especificas el nombre del elemento personalizado mediante un atributo  <code>is</code> .</p>
 
 <div class="note">
-<p><strong>Nota</strong>: De nuevo, puedes ver el código <a href="https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js">fuente JavaScript completo </a> aquí.</p>
+<p><strong>Nota</strong>: De nuevo, puedes ver el código <a href="https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js">fuente JavaScript completo </a> aquí.</p>
 </div>
 
 <h2 id="Usando_callbacks_de_ciclo_de_vida">Usando callbacks de ciclo de vida</h2>
@@ -214,7 +214,7 @@ shadow.appendChild(linkElem);</pre>
  <li><code>attributeChangedCallback</code>: Se invoca cada vez que los atributos del elemento se añaden, quitan o cambian. Deben especificarse previamente en el método estático <code>observedAttributes</code> los atributos que queremos que nos sean notificados.</li>
 </ul>
 
-<p>Echemos un vistazo a un ejemplo de todo esto.  El código de abajo se ha tomado del ejemplo <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a>  (ver el <a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks/">ejemplo en vivo</a>).  Se trata de un ejemplo trivial que simplemente genera un cuadrado coloreado de un tamaño fijo en la página. El elemento personalizado es algo como esto:</p>
+<p>Echemos un vistazo a un ejemplo de todo esto.  El código de abajo se ha tomado del ejemplo <a href="https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks">life-cycle-callbacks</a>  (ver el <a href="https://mdn.github.io/web-components-examples/life-cycle-callbacks/">ejemplo en vivo</a>).  Se trata de un ejemplo trivial que simplemente genera un cuadrado coloreado de un tamaño fijo en la página. El elemento personalizado es algo como esto:</p>
 
 <pre class="brush: html notranslate">&lt;custom-square l="100" c="red"&gt;&lt;/custom-square&gt;</pre>
 
@@ -227,17 +227,17 @@ var style = document.createElement('style');
 shadow.appendChild(style);
 shadow.appendChild(div);</pre>
 
-<p>La función clave en este ejemplo es  <code>updateStyle()</code> — esta toma un elemento, obtiene su shadow root, busca su elemento <code>&lt;style&gt;</code>, y añade al estilo {{cssxref("width")}}, {{cssxref("height")}}, y {{cssxref("background-color")}}.</p>
+<p>La función clave en este ejemplo es  <code>updateStyle()</code> — esta toma un elemento, obtiene su shadow root, busca su elemento <code>&lt;style&gt;</code>, y añade al estilo {{cssxref("width")}}, {{cssxref("height")}}, y {{cssxref("background-color")}}.</p>
 
 <pre class="brush: js notranslate">function updateStyle(elem) {
-  const shadow = elem.shadowRoot;
-  shadow.querySelector('style').textContent = `
-    div {
-      width: ${elem.getAttribute('l')}px;
-      height: ${elem.getAttribute('l')}px;
-      background-color: ${elem.getAttribute('c')};
-    }
-  `;
+  const shadow = elem.shadowRoot;
+  shadow.querySelector('style').textContent = `
+    div {
+      width: ${elem.getAttribute('l')}px;
+      height: ${elem.getAttribute('l')}px;
+      background-color: ${elem.getAttribute('c')};
+    }
+  `;
 }</pre>
 
 <p>Las actualizaciones se manejan mediande los callbacks que se incluyen en la definición de la clase. El método <code>connectedCallback()</code> se ejecuta cada vez que el elemento se añade al DOM — en este instante ejecutamos la función <code>updateStyle()</code> para asegurarnos que el cuadrado se pinta tal y como se definió en sus atributos:</p>
@@ -257,21 +257,21 @@ adoptedCallback() {
   console.log('Custom square element moved to new page.');
 }</pre>
 
-<p>El callback <code>attributeChangedCallback()</code> se ejecuta cuando los atributos cambian de alguna forma. Como puedes ver en sus propiedades, es posible actuar sobre atributos individuales, teniendo en cuenta su nombre, y sus valores anterior y nuevo.  Sinembargo en este ejemplo, simplemente ejecutamos de nuevo la función <code>updateStyle()</code> para asegurarnos de que el cuadrado tiene el estilo adecuado a sus nuevos valores:</p>
+<p>El callback <code>attributeChangedCallback()</code> se ejecuta cuando los atributos cambian de alguna forma. Como puedes ver en sus propiedades, es posible actuar sobre atributos individuales, teniendo en cuenta su nombre, y sus valores anterior y nuevo.  Sinembargo en este ejemplo, simplemente ejecutamos de nuevo la función <code>updateStyle()</code> para asegurarnos de que el cuadrado tiene el estilo adecuado a sus nuevos valores:</p>
 
 <pre class="brush: js notranslate">attributeChangedCallback(name, oldValue, newValue) {
   console.log('Custom square element attributes changed.');
   updateStyle(this);
 }</pre>
 
-<p>Nótese que el callback <code>attributeChangedCallback()</code> se dispara cuando un atributo cambia y está observándose el atributo. Esto se hace mediante el método <code>static get observedAttributes()</code> dentro de la clase  - este debería devolver un array que contiene los nombres de los atributos que se deben observar:</p>
+<p>Nótese que el callback <code>attributeChangedCallback()</code> se dispara cuando un atributo cambia y está observándose el atributo. Esto se hace mediante el método <code>static get observedAttributes()</code> dentro de la clase  - este debería devolver un array que contiene los nombres de los atributos que se deben observar:</p>
 
 <pre class="brush: js notranslate">static get observedAttributes() { return ['c', 'l']; }</pre>
 
 <p>Este código se coloca en la parte de arriba del constructor en nuestro ejemplo.</p>
 
 <div class="note">
-<p><strong>Nota</strong>: Busca el <a href="https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js">código JavaScript completo </a>aquí.</p>
+<p><strong>Nota</strong>: Busca el <a href="https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js">código JavaScript completo </a>aquí.</p>
 </div>
 
 <h2 id="Polyfills_vs._clases">Polyfills vs. clases</h2>
@@ -284,21 +284,21 @@ adoptedCallback() {
   constructor(...args) {
     const self = super(...args);
     // self functionality written in here
-    // self.addEventListener(...)
-    // return the right context
+    // self.addEventListener(...)
+    // return the right context
     return self;
   }
 }</pre>
 
-<p>Si no necesitar realizar ninguna operación en el constructor, simplemente omítelo, ya que se preservará su comportamiento nativo  (ver a continuación).</p>
+<p>Si no necesitar realizar ninguna operación en el constructor, simplemente omítelo, ya que se preservará su comportamiento nativo  (ver a continuación).</p>
 
 <pre class="brush: js notranslate"> constructor(...args) { return super(...args); }
 </pre>
 
 <h2 id="Transpiladores_vs._clases">Transpiladores vs. clases</h2>
 
-<p>Nótese que las clases ES2015 no pueden transpilarse con Babel 6 o TypeScript para navegadores antiguos. Puedes usar Babel 7 o el plugin  <a href="https://www.npmjs.com/package/babel-plugin-transform-builtin-classes">babel-plugin-transform-builtin-classes</a> para Babel 6, y especificar ES2015 como destino (target) en TypeScript en vez de legacy.</p>
+<p>Nótese que las clases ES2015 no pueden transpilarse con Babel 6 o TypeScript para navegadores antiguos. Puedes usar Babel 7 o el plugin  <a href="https://www.npmjs.com/package/babel-plugin-transform-builtin-classes">babel-plugin-transform-builtin-classes</a> para Babel 6, y especificar ES2015 como destino (target) en TypeScript en vez de legacy.</p>
 
 <h2 id="Librerías">Librerías</h2>
 
-<p>Existen varias librerías que se han construido sobre Web Components con la intención de incrementar el nivel de abstracción cuando se crean elementos personalizados. Algunas de estas librerías son  <a href="https://github.com/devpunks/snuggsi" rel="nofollow">snuggsi ツ</a>, <a href="https://x-tag.github.io/" rel="nofollow">X-Tag</a>, <a href="http://slimjs.com/" rel="nofollow">Slim.js</a>, <a href="https://lit-element.polymer-project.org/">LitElement</a>, <a href="https://www.htmlelements.com/">Smart</a>, y <a href="https://stenciljs.com">Stencil</a>.</p>
+<p>Existen varias librerías que se han construido sobre Web Components con la intención de incrementar el nivel de abstracción cuando se crean elementos personalizados. Algunas de estas librerías son  <a href="https://github.com/devpunks/snuggsi" rel="nofollow">snuggsi ツ</a>, <a href="https://x-tag.github.io/" rel="nofollow">X-Tag</a>, <a href="http://slimjs.com/" rel="nofollow">Slim.js</a>, <a href="https://lit-element.polymer-project.org/">LitElement</a>, <a href="https://www.htmlelements.com/">Smart</a>, y <a href="https://stenciljs.com">Stencil</a>.</p>

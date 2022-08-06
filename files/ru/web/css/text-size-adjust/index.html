@@ -7,13 +7,13 @@ translation_of: Web/CSS/text-size-adjust
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
-<p>Свойство <strong><code>text-size-adjust</code></strong> контролирует алгоритм увеличения текста, используемый на некоторых смартфонах и планшетах. Другие браузеры будут игнорировать это свойство.</p>
+<p>Свойство <strong><code>text-size-adjust</code></strong> контролирует алгоритм увеличения текста, используемый на некоторых смартфонах и планшетах. Другие браузеры будут игнорировать это свойство.</p>
 
-<p>Так как это свойство нестандартное, нужно использовать префиксы: <code>-moz-text-size-adjust</code>, <code>-webkit-text-size-adjust</code>, и <code>-ms-text-size-adjust</code>.</p>
+<p>Так как это свойство нестандартное, нужно использовать префиксы: <code>-moz-text-size-adjust</code>, <code>-webkit-text-size-adjust</code>, и <code>-ms-text-size-adjust</code>.</p>
 
-<p>Поскольку при разработке многих сайтов не подразумевался их просмотр на мобильных устройствах, то мобильные браузеры отличаются от браузеров для настольных компьютеров способом вывода страницы на экран. Для размещения страниц они используют не ширину экрана устройства, а {{glossary("viewport")}}, который значительно шире, обычно 800 или 1000 пикселей. Чтобы вернуть соответствие слишком широкой страницы истинному размеру устройства, они или показывают лишь часть того, что на самом деле визуализировано, или же уменьшают размер viewport до размеров устройства.</p>
+<p>Поскольку при разработке многих сайтов не подразумевался их просмотр на мобильных устройствах, то мобильные браузеры отличаются от браузеров для настольных компьютеров способом вывода страницы на экран. Для размещения страниц они используют не ширину экрана устройства, а {{glossary("viewport")}}, который значительно шире, обычно 800 или 1000 пикселей. Чтобы вернуть соответствие слишком широкой страницы истинному размеру устройства, они или показывают лишь часть того, что на самом деле визуализировано, или же уменьшают размер viewport до размеров устройства.</p>
 
-<p>Так как текст, который был уменьшен для того, чтобы уместиться на мобильном экране, может стать очень маленьким, многие мобильные браузеры применяют алгоритм увеличения текста для того, чтобы масштабировать текст и сделать его более удобным для чтения. Когда элемент, содержащий текст, использует 100% ширины экрана, алгоритм увеличивает размер его текста, но без изменения макета. Свойство <code>text-size-adjust</code>  позволяет веб-разработчикам отменить или изменить это поведение, так как веб-страницы, созданные с учётом вывода на маленькие экраны, не нуждаются в нём.</p>
+<p>Так как текст, который был уменьшен для того, чтобы уместиться на мобильном экране, может стать очень маленьким, многие мобильные браузеры применяют алгоритм увеличения текста для того, чтобы масштабировать текст и сделать его более удобным для чтения. Когда элемент, содержащий текст, использует 100% ширины экрана, алгоритм увеличивает размер его текста, но без изменения макета. Свойство <code>text-size-adjust</code>  позволяет веб-разработчикам отменить или изменить это поведение, так как веб-страницы, созданные с учётом вывода на маленькие экраны, не нуждаются в нём.</p>
 
 <p>This approach has been used as numerous web sites are not able to cope with small screens and are not usable when using the classical layout algorithm. This technique has drawbacks: the text is so tiny that it is unreadable without zooming. Even so, the user experience is better with the classical approach, which often leads to put secondary content at the top of the smartphone display, effectively pushing the main content of the page outside the viewport.</p>
 
@@ -77,7 +77,7 @@ text-size-adjust: unset;
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a class="link-https" href="https://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html">Документация</a> от Apple.</li>
- <li><a class="external" href="http://dbaron.org/log/20111126-font-inflation">Описание поведения</a> Gecko от L. David Baron.</li>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff462082(v=vs.105).aspx">Документация</a> от Microsoft.</li>
+ <li><a class="link-https" href="https://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html">Документация</a> от Apple.</li>
+ <li><a class="external" href="http://dbaron.org/log/20111126-font-inflation">Описание поведения</a> Gecko от L. David Baron.</li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff462082(v=vs.105).aspx">Документация</a> от Microsoft.</li>
 </ul>

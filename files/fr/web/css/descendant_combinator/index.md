@@ -25,7 +25,9 @@ Techniquement, le combinateur de descendance est représenté par un ou plusieur
 
 ## Syntaxe
 
-    selecteur1 selecteur2 { /* déclarations CSS */ }
+```css
+selecteur1 selecteur2 { /* déclarations CSS */ }
+```
 
 ## Exemples
 

@@ -9,7 +9,7 @@ original_slug: Web/API/EventListener
 <p>Интерфейс <code>EventListener</code> представляет собой объект, который может обработать событие, отправленное объектом {{domxref ("EventTarget")}}.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Из-за необходимости совместимости с унаследованным контентом, <code>EventListener</code> принимает функцию или объект с методом  <code>handleEvent()</code>. Это показано в <a href="#Example">примере</a> ниже.</p>
+<p><strong>Note:</strong> Из-за необходимости совместимости с унаследованным контентом, <code>EventListener</code> принимает функцию или объект с методом  <code>handleEvent()</code>. Это показано в <a href="#Example">примере</a> ниже.</p>
 </div>
 
 <h2 id="Свойства">Свойства</h2>
@@ -41,12 +41,12 @@ original_slug: Web/API/EventListener
 
 <dl>
  <dt><code>event</code></dt>
- <dd>Событие DOM {{ domxref("Event") }} для которого регистрируется обработчик.</dd>
+ <dd>Событие DOM {{ domxref("Event") }} для которого регистрируется обработчик.</dd>
 </dl>
 
 <h3 id="Remarks">Примечания</h3>
 
-<p>Поскольку у интерфейса отмечен флаг <code><span class="nowiki">[function]</span></code>, все объекты JavaScript <a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Function">Function</a> автоматически реализуют этот интерфейс. Вызов метода {{ manch("handleEvent") }} на такой реализации автоматически вызовет эту функцию.</p>
+<p>Поскольку у интерфейса отмечен флаг <code><span class="nowiki">[function]</span></code>, все объекты JavaScript <a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Function">Function</a> автоматически реализуют этот интерфейс. Вызов метода <a href="#handleevent">handleEvent</a> на такой реализации автоматически вызовет эту функцию.</p>
 
 
 

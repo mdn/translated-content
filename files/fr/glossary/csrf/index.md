@@ -13,6 +13,6 @@ original_slug: Glossaire/CSRF
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Cross-site request forgery")}} sur Wikipédia
+- [<i lang="en">Cross-site request forgery</i>](https://fr.wikipedia.org/wiki/Cross-site_request_forgery) sur Wikipédia
 - [Mesures de prévention](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>) (en)
 - [Tutoriel sur la sécurité, sur MDN](/fr/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)

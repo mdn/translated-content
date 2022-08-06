@@ -87,8 +87,8 @@ const context = myPics.getContext('2d');
 
 // mousedown, mousemove, mouseup にイベントリスナーを追加
 myPics.addEventListener('mousedown', e => {
-  x = e.offsetX;
-  y = e.offsetY;
+  x = e.offsetX;
+  y = e.offsetY;
   isDrawing = true;
 });
 

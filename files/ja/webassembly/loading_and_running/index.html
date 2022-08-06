@@ -15,17 +15,17 @@ translation_of: WebAssembly/Loading_and_running
 
 <h2 id="What_are_the_options">どんな方法があるの?</h2>
 
-<p>WebAssemblyは <code>&lt;script type='module'&gt;</code> または ES2015 の  <code>import</code> 文とまだ統合されていないため、インポートを使用してブラウザでモジュールをフェッチする組み込みの方法はありません。</p>
+<p>WebAssemblyは <code>&lt;script type='module'&gt;</code> または ES2015 の  <code>import</code> 文とまだ統合されていないため、インポートを使用してブラウザでモジュールをフェッチする組み込みの方法はありません。</p>
 
 <p>以前の {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} メソッドでは、生のバイトをフェッチした後 WebAssembly モジュールのバイナリを含む {{domxref("ArrayBuffer")}} を作成し、コンパイル/インスタンス化する必要があります。これは文字列(JavaScript ソースコード) をバイトの配列バッファ (WebAssembly ソースコード)で置き換えることを除いて、<code>new Function(string)</code> に似ています。</p>
 
-<p>新しい {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}}  メソッドは、より効率的です。ネットワークからの生のバイトストリームに対して直接アクションを実行し、 {{domxref("ArrayBuffer")}} ステップの必要性がなくなりました。</p>
+<p>新しい {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}}  メソッドは、より効率的です。ネットワークからの生のバイトストリームに対して直接アクションを実行し、 {{domxref("ArrayBuffer")}} ステップの必要性がなくなりました。</p>
 
 <p>では、どのようにバイト列を配列バッファに読み込んでコンパイルするのでしょうか? 次の章で説明します。</p>
 
 <h2 id="Using_Fetch">Fetchを使用する</h2>
 
-<p><a href="/ja/docs/Web/API/Fetch_API">Fetch</a> はネットワークリソースを取得するための便利でモダンな API です。</p>
+<p><a href="/ja/docs/Web/API/Fetch_API">Fetch</a> はネットワークリソースを取得するための便利でモダンな API です。</p>
 
 <p>wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用することです。このメソッドは最初の引数として <code>fetch()</code> を呼び出すことができ、1つのステップでフェッチ、モジュールをインスタンス化し、サーバからストリームされる生のバイトコードにアクセスします。</p>
 
@@ -63,7 +63,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <h3 id="Running_your_WebAssembly_code">WebAssembly コードを実行する</h3>
 
-<p>JavaScript 内で WebAssembly インスタンスが 有効になったら {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} プロパティを通してエクスポートされた機能を使い始める事ができます。コードは以下のようになるでしょう:</p>
+<p>JavaScript 内で WebAssembly インスタンスが 有効になったら {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} プロパティを通してエクスポートされた機能を使い始める事ができます。コードは以下のようになるでしょう:</p>
 
 <pre class="brush: js">WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 .then(obj =&gt; {
@@ -79,18 +79,18 @@ translation_of: WebAssembly/Loading_and_running
 })</pre>
 
 <div class="note">
-<p><strong>注</strong>: WebAssembly モジュールからのエクスポートの仕組みの詳細については <a href="/ja/docs/WebAssembly/Using_the_JavaScript_API">WebAssembly JavaScript API の使用</a> と <a href="/ja/docs/WebAssembly/Understanding_the_text_format">WebAssemblyテキストフォーマットを理解する</a> を参照してください。</p>
+<p><strong>注</strong>: WebAssembly モジュールからのエクスポートの仕組みの詳細については <a href="/ja/docs/WebAssembly/Using_the_JavaScript_API">WebAssembly JavaScript API の使用</a> と <a href="/ja/docs/WebAssembly/Understanding_the_text_format">WebAssemblyテキストフォーマットを理解する</a> を参照してください。</p>
 </div>
 
 <h2 id="Using_XMLHttpRequest">XMLHttpRequest を使用する</h2>
 
-<p><code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> は Fetch よりやや古いですが、引き続き型付き配列を取得するために適切に使用することができます。繰り返しますが、モジュール名は <code>simple.wasm</code> とします:</p>
+<p><code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> は Fetch よりやや古いですが、引き続き型付き配列を取得するために適切に使用することができます。繰り返しますが、モジュール名は <code>simple.wasm</code> とします:</p>
 
 <ol>
- <li>{{domxref("XMLHttpRequest()")}} インスタンスを生成して、{{domxref("XMLHttpRequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを <code>GET</code> に設定し、フェッチするためのパスを宣言します。</li>
- <li>キーは {{domxref("XMLHttpRequest.responseType","responseType")}} を使用してレスポンスタイプを <code>'arraybuffer'</code> にすることです。</li>
+ <li>{{domxref("XMLHttpRequest()")}} インスタンスを生成して、{{domxref("XMLHttpRequest.open","open()")}} メソッドでリクエストをオープン、リクエストメソッドを <code>GET</code> に設定し、フェッチするためのパスを宣言します。</li>
+ <li>キーは {{domxref("XMLHttpRequest.responseType","responseType")}} を使用してレスポンスタイプを <code>'arraybuffer'</code> にすることです。</li>
  <li>次に {{domxref("XMLHttpRequest.send()")}} を使用してリクエストします。</li>
- <li>そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequest.onload", "onload")}} イベントハンドラから関数を実行します — この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetchで行ったように {{jsxref("WebAssembly.instantiate()")}} メソッドに渡します。</li>
+ <li>そのあと、ダウンロードが終了したときに {{domxref("XMLHttpRequest.onload", "onload")}} イベントハンドラから関数を実行します — この関数内で {{domxref("XMLHttpRequest.response", "response")}} プロパティから array buffer を取得し、Fetchで行ったように {{jsxref("WebAssembly.instantiate()")}} メソッドに渡します。</li>
 </ol>
 
 <p>最終的なコードは以下のようになります:</p>
@@ -108,5 +108,5 @@ request.onload = function() {
 };</pre>
 
 <div class="note">
-<p><strong>注</strong>: 動作例は <a href="https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html">xhr-wasm.html</a> を参照してください。</p>
+<p><strong>注</strong>: 動作例は <a href="https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html">xhr-wasm.html</a> を参照してください。</p>
 </div>

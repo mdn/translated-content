@@ -42,57 +42,59 @@ eval(code)        // 古いエンジンでは SyntaxError が発生する
 
 有効な JSON の構文は、[ABNF](https://ja.wikipedia.org/wiki/ABNF) で表現された以下の文法で公式に定義されています。これは [IETF の JSON 標準 (RFC)](https://datatracker.ietf.org/doc/html/rfc8259) からコピーしたものです。
 
-    JSON-text = object / array
-    begin-array     = ws %x5B ws  ; [ left square bracket
-    begin-object    = ws %x7B ws  ; { left curly bracket
-    end-array       = ws %x5D ws  ; ] right square bracket
-    end-object      = ws %x7D ws  ; } right curly bracket
-    name-separator  = ws %x3A ws  ; : colon
-    value-separator = ws %x2C ws  ; , comma
-    ws = *(
-         %x20 /              ; Space
-         %x09 /              ; Horizontal tab
-         %x0A /              ; Line feed or New line
-         %x0D                ; Carriage return
-         )
-    value = false / null / true / object / array / number / string
-    false = %x66.61.6c.73.65   ; false
-    null  = %x6e.75.6c.6c      ; null
-    true  = %x74.72.75.65      ; true
-    object = begin-object [ member *( value-separator member ) ]
-             end-object
-    member = string name-separator value
-    array = begin-array [ value *( value-separator value ) ] end-array
-    number = [ minus ] int [ frac ] [ exp ]
-    decimal-point = %x2E       ; .
-    digit1-9 = %x31-39         ; 1-9
-    e = %x65 / %x45            ; e E
-    exp = e [ minus / plus ] 1*DIGIT
-    frac = decimal-point 1*DIGIT
-    int = zero / ( digit1-9 *DIGIT )
-    minus = %x2D               ; -
-    plus = %x2B                ; +
-    zero = %x30                ; 0
-    string = quotation-mark *char quotation-mark
-    char = unescaped /
-        escape (
-            %x22 /          ; "    quotation mark  U+0022
-            %x5C /          ; \    reverse solidus U+005C
-            %x2F /          ; /    solidus         U+002F
-            %x62 /          ; b    backspace       U+0008
-            %x66 /          ; f    form feed       U+000C
-            %x6E /          ; n    line feed       U+000A
-            %x72 /          ; r    carriage return U+000D
-            %x74 /          ; t    tab             U+0009
-            %x75 4HEXDIG )  ; uXXXX                U+XXXX
-    escape = %x5C              ; \
-    quotation-mark = %x22      ; "
-    unescaped = %x20-21 / %x23-5B / %x5D-10FFFF
+```
+JSON-text = object / array
+begin-array     = ws %x5B ws  ; [ left square bracket
+begin-object    = ws %x7B ws  ; { left curly bracket
+end-array       = ws %x5D ws  ; ] right square bracket
+end-object      = ws %x7D ws  ; } right curly bracket
+name-separator  = ws %x3A ws  ; : colon
+value-separator = ws %x2C ws  ; , comma
+ws = *(
+     %x20 /              ; Space
+     %x09 /              ; Horizontal tab
+     %x0A /              ; Line feed or New line
+     %x0D                ; Carriage return
+     )
+value = false / null / true / object / array / number / string
+false = %x66.61.6c.73.65   ; false
+null  = %x6e.75.6c.6c      ; null
+true  = %x74.72.75.65      ; true
+object = begin-object [ member *( value-separator member ) ]
+         end-object
+member = string name-separator value
+array = begin-array [ value *( value-separator value ) ] end-array
+number = [ minus ] int [ frac ] [ exp ]
+decimal-point = %x2E       ; .
+digit1-9 = %x31-39         ; 1-9
+e = %x65 / %x45            ; e E
+exp = e [ minus / plus ] 1*DIGIT
+frac = decimal-point 1*DIGIT
+int = zero / ( digit1-9 *DIGIT )
+minus = %x2D               ; -
+plus = %x2B                ; +
+zero = %x30                ; 0
+string = quotation-mark *char quotation-mark
+char = unescaped /
+    escape (
+        %x22 /          ; "    quotation mark  U+0022
+        %x5C /          ; \    reverse solidus U+005C
+        %x2F /          ; /    solidus         U+002F
+        %x62 /          ; b    backspace       U+0008
+        %x66 /          ; f    form feed       U+000C
+        %x6E /          ; n    line feed       U+000A
+        %x72 /          ; r    carriage return U+000D
+        %x74 /          ; t    tab             U+0009
+        %x75 4HEXDIG )  ; uXXXX                U+XXXX
+escape = %x5C              ; \
+quotation-mark = %x22      ; "
+unescaped = %x20-21 / %x23-5B / %x5D-10FFFF
 
-    HEXDIG = DIGIT / %x41-46 / %x61-66   ; 0-9, A-F, or a-f
-           ; HEXDIG equivalent to HEXDIG rule in [RFC5234]
-    DIGIT = %x30-39            ; 0-9
-          ; DIGIT equivalent to DIGIT rule in [RFC5234]
+HEXDIG = DIGIT / %x41-46 / %x61-66   ; 0-9, A-F, or a-f
+       ; HEXDIG equivalent to HEXDIG rule in [RFC5234]
+DIGIT = %x30-39            ; 0-9
+      ; DIGIT equivalent to DIGIT rule in [RFC5234]
+```
 
 重要でない{{glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` (数値に空白を含んではいけません) や `JSONString` (対応する文字であると解釈されるか、エラーが発生します) の内部を除きます。ホワイトスペースとして有効な文字はタブ文字 ([U+0009](https://unicode-table.com/en/0009/))、キャリッジリターン ([U+000D](https://unicode-table.com/en/000D/))、ラインフィード ([U+000A](https://unicode-table.com/en/000A/))、空白 ([U+0020](https://unicode-table.com/en/0020/)) のみです。
 
@@ -109,17 +111,17 @@ eval(code)        // 古いエンジンでは SyntaxError が発生する
 
 ```json
 {
-  "browsers": {
-    "firefox": {
-      "name": "Firefox",
-      "pref_url": "about:config",
-      "releases": {
-        "1": {
-          "release_date": "2004-11-09",
-          "status": "retired",
-          "engine": "Gecko",
-          "engine_version": "1.7"
-        }
+  "browsers": {
+    "firefox": {
+      "name": "Firefox",
+      "pref_url": "about:config",
+      "releases": {
+        "1": {
+          "release_date": "2004-11-09",
+          "status": "retired",
+          "engine": "Gecko",
+          "engine_version": "1.7"
+        }
       }
     }
   }

@@ -13,9 +13,9 @@ translation_of: Web/API/Selection
 ---
 <div>{{ ApiRef("DOM") }}{{SeeCompatTable}}</div>
 
-<div>A <code><strong>Selection</strong></code> object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or modification, call {{domxref("window.getSelection()")}}.</div>
+<div>A <code><strong>Selection</strong></code> object represents the range of text selected by the user or the current position of the caret. To obtain a Selection object for examination or modification, call {{domxref("window.getSelection()")}}.</div>
 
-<div> </div>
+<div> </div>
 
 <h2 id="Properties">Свойства</h2>
 
@@ -95,7 +95,7 @@ var range  = selObj.getRangeAt(0);</pre>
 
 <h3 id="Selection_and_input_focus">Selection and input focus</h3>
 
-<p>Selection and input focus (indicated by {{domxref("Document.activeElement")}}) have a complex relation, that depends on the browser. In cross-browser compatible code it's better to handle them separately.</p>
+<p>Selection and input focus (indicated by {{domxref("Document.activeElement")}}) have a complex relation, that depends on the browser. In cross-browser compatible code it's better to handle them separately.</p>
 
 <p>Safari and Chrome (unlike Firefox) historically focus the element containing selection when modifying the selection programmatically, but this might change in the future (see <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383">W3C bug 14383</a> and {{webkitbug("38696")}}).</p>
 
@@ -149,7 +149,7 @@ var range  = selObj.getRangeAt(0);</pre>
 <h2 id="Gecko_notes">Gecko notes</h2>
 
 <ul>
- <li>Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in {{interface("nsISelectionPrivate")}}.</li>
+ <li>Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in <code>nsISelectionPrivate</code>.</li>
  <li>Mozilla source code: {{source("dom/webidl/Selection.webidl")}}</li>
  <li>{{obsolete_inline("gecko29")}} {{domxref("Selection.selectionLanguageChange()")}} used to be exposed to the web content until Firefox 29</li>
 </ul>

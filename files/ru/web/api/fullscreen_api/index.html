@@ -11,7 +11,7 @@ original_slug: DOM/Using_fullscreen_mode
 <p>See the article <a href="/en-US/docs/Web/API/Fullscreen_API/Guide">Guide to the Fullscreen API</a> for details on how to use the API.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> Support for this API varies somewhat across browsers, with many requiring vendor prefixes and/or not implementing the latest specification. See the {{anch("Browser compatibility")}} section below for details on support for this API. You may wish to consider using a library such as <a href="https://github.com/rafrex/fscreen">Fscreen</a> for vendor agnostic access to the Fullscreen API.</p>
+<p><strong>Note:</strong> Support for this API varies somewhat across browsers, with many requiring vendor prefixes and/or not implementing the latest specification. See the <a href="#browser_compatibility">Browser compatibility</a> section below for details on support for this API. You may wish to consider using a library such as <a href="https://github.com/rafrex/fscreen">Fscreen</a> for vendor agnostic access to the Fullscreen API.</p>
 </div>
 
 <h2 id="Interfaces">Interfaces</h2>
@@ -76,7 +76,7 @@ original_slug: DOM/Using_fullscreen_mode
 <h3 id="Obsolete_properties">Obsolete properties</h3>
 
 <dl>
- <dt>{{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}</dt>
+ <dt>{{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}</dt>
  <dd>A Boolean value which is <code>true</code> if the document has an element currently being displayed in full-screen mode; otherwise, this returns <code>false</code>.
  <div class="note"><strong>Note:</strong> Use the {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} property on the {{DOMxRef("Document")}} or {{DOMxRef("ShadowRoot")}} instead; if it's not <code>null</code>, then it's an {{DOMxRef("Element")}} currently being displayed in full-screen mode.</div>
  </dd>
@@ -125,9 +125,9 @@ original_slug: DOM/Using_fullscreen_mode
 <p>When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.</p>
 
 <pre class="brush: js">document.addEventListener("keypress", function(e) {
-  if (e.keyCode === 13) {
-    toggleFullScreen();
-  }
+  if (e.keyCode === 13) {
+    toggleFullScreen();
+  }
 }, false);
 </pre>
 

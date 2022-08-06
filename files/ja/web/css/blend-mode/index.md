@@ -381,22 +381,22 @@ translation_of: Web/CSS/blend-mode
 <div></div>
 <p>混合モードを選択してください。</p>
 <select>
-  <option selected>normal</option>
-  <option>multiply</option>
-  <option>screen</option>
-  <option>overlay</option>
-  <option>darken</option>
-  <option>lighten</option>
-  <option>color-dodge</option>
-  <option>color-burn</option>
-  <option>hard-light</option>
-  <option>soft-light</option>
-  <option>difference</option>
-  <option>exclusion</option>
-  <option>hue</option>
-  <option>saturation</option>
-  <option>color</option>
-  <option>luminosity</option>
+  <option selected>normal</option>
+  <option>multiply</option>
+  <option>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
 </select>
 ```
 
@@ -404,10 +404,10 @@ translation_of: Web/CSS/blend-mode
 
 ```css
 div {
-  width: 300px;
-  height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
-  linear-gradient(to bottom, blue, orange);
+  width: 300px;
+  height: 300px;
+  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
+  linear-gradient(to bottom, blue, orange);
 }
 ```
 

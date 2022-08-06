@@ -30,7 +30,7 @@ similar). Uma promessa {{domxref("fetch()")}} _não_ rejeita erros HTTP (`404`, 
 
 O método `fetch()` é controlado pela diretiva `connect-src` da [Content Security Policy](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) em vez da diretiva dos recursos que está recuperando.
 
-> **Note:** Os parâmetros do método `fetch()` são idênticos 
+> **Note:** Os parâmetros do método `fetch()` são idênticos
 > aos do construtor {{domxref("Request.Request","Request()")}}.
 
 ## Sintaxe
@@ -84,7 +84,7 @@ const fetchResponsePromise = fetch(resource [, init])
             > **Note:** As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
 
     - `cache`
-      - : Uma string indicando como a requisição vai interagir como o [cache HTTP](/pt-BR/docs/Web/HTTP/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
+      - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
     - `redirect`
 
       - : Como lidar com uma resposta `redirect`:

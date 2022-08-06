@@ -13,7 +13,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
  <tbody>
   <tr>
    <th scope="row">Пререквизиты:</th>
-   <td>Знакомство с основами <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>; идея высокого уровня <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">кросс-браузерного тестирования</a></td>
+   <td>Знакомство с основами <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, и <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>; идея высокого уровня <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">кросс-браузерного тестирования</a></td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -82,7 +82,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.</p>
 
 <div class="note">
-<p><strong>Note</strong>: HTML errors don't tend to show up so easily in dev tools, as the browser will try to correct badly-formed markup automatically; the W3C validator is the best way to get HTML errors — see {{anch("Validation")}} above.</p>
+<p><strong>Note</strong>: HTML errors don't tend to show up so easily in dev tools, as the browser will try to correct badly-formed markup automatically; the W3C validator is the best way to get HTML errors — see <a href="#validation">Validation</a> above.</p>
 </div>
 
 <p>As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:</p>
@@ -99,7 +99,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 <p>This is a common problem, especially when you need to support old browsers (such as old IE versions) or you are using features that are implemented using CSS prefixes. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across most browsers you'll want to support; more problems are uncovered when you start wanting to use newer features such as <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, or <a href="/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery">HTML5 video/audio</a>, or even more nascent, <a href="/en-US/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout">CSS Grids</a> or <a href="/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text">-webkit-background-clip: text</a>.</p>
 
-<p>Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See {{anch("Finding help")}} below.</p>
+<p>Once you've identified a list of potential problem technologies you will be using, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See <a href="#finding_help">Finding help</a> below.</p>
 
 <h4 id="HTML_fallback_behaviour">HTML fallback behaviour</h4>
 
@@ -108,7 +108,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 <p>Unrecognised HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to, for example setting <code>display: block;</code> on all of the new semantic elements (such as {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), but only in old versions of IE that don't recognise them (so, IE 8 and lower). This way new browsers can just use the code as normal, but older IE versions will be able to style these elements too.</p>
 
 <div class="note">
-<p><strong>Note</strong>: See {{anch("IE conditional comments")}} for the best way to do this.</p>
+<p><strong>Note</strong>: See <a href="#ie_conditional_comments">IE conditional comments</a> for the best way to do this.</p>
 </div>
 
 <p>More complex elements like HTML <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/audio">&lt;audio&gt;</a></code>, and <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.</p>
@@ -182,7 +182,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
         margin: 0 auto;
       }</pre>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: html">&lt;form&gt;
       &lt;div&gt;
@@ -294,7 +294,7 @@ button:active {
 
 <ol>
  <li>To try this example, make a local copy of <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html">selectivizr-example-start.html</a>. If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with <code>p:first-child</code>, which won't work in old versions of IE.</li>
- <li>Now download <a href="http://mootools.net/">MooTools</a> and <a href="http://selectivizr.com/">Selectivizr</a>, and save them in the same directory as your sample HTML.</li>
+ <li>Now download <a href="http://mootools.net/">MooTools</a> and <a href="http://selectivizr.com/">Selectivizr</a>, and save them in the same directory as your sample HTML.</li>
  <li>Put the following code into the head of your HTML document, just before the opening <code>&lt;style&gt;</code> tag:
   <pre class="brush: html">&lt;script type="text/javascript" src="MooTools-Core-1.6.0.js"&gt;&lt;/script&gt;
     &lt;!--[if (gte IE 6)&amp;(lte IE 8)]&gt;
@@ -365,7 +365,7 @@ test.style.webkitTransform = 'rotate(90deg)'</pre>
 -webkit-transform: rotate(90deg);
 transform: rotate(90deg);</pre>
 
-<p>This ensures that all browsers that support any of the above forms of the property can make the feature work. It is worth putting the non-prefixed version last, because that will be the most up-to-date version, which you'll want browsers to use if possible. If for example a browser implements both the <code>-webkit-</code> version and the non-prefixed version,  it will first apply the <code>-webkit-</code> version, then override it with the non-prefixed version. You want it to happen this way round, not the other way round.</p>
+<p>This ensures that all browsers that support any of the above forms of the property can make the feature work. It is worth putting the non-prefixed version last, because that will be the most up-to-date version, which you'll want browsers to use if possible. If for example a browser implements both the <code>-webkit-</code> version and the non-prefixed version,  it will first apply the <code>-webkit-</code> version, then override it with the non-prefixed version. You want it to happen this way round, not the other way round.</p>
 
 <p>Of course, doing this for lots of different CSS rules can get really tedious. It is better to use an automation tool to do it for you. And such tools exist:</p>
 
@@ -413,7 +413,7 @@ transform: rotate(90deg);</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>:  When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> for more details.</p>
+<p><strong>Note</strong>:  When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See <a href="http://www.otsukare.info/2016/10/05/debugging-css" rel="bookmark" title="Permalink to Debug your CSS with outline visualizations.">Debug your CSS with outline visualizations</a> for more details.</p>
 </div>
 
 <h4 id="Support_for_new_layout_features">Support for new layout features</h4>
@@ -469,7 +469,7 @@ transform: rotate(90deg);</pre>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="In_this_module">In this module</h2>
 
@@ -484,4 +484,4 @@ transform: rotate(90deg);</pre>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li>
 </ul>
 
-<p> </p>
+<p> </p>

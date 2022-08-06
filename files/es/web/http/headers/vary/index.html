@@ -5,9 +5,9 @@ translation_of: Web/HTTP/Headers/Vary
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>El encabezado de respuesta <strong><code>Vary</code></strong> HTTP determina como hacer coincidir los encabezados de las solicitudes futuras para decidir si se puede utilizar una respuesta almacenada en caché en lugar de solicitar una nueva desde el servidor de origen. Esto es usado por el servidor para indicar cuales encabezados usa cuando selecciona una representación de recursos en un algoritmo <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> .</p>
+<p>El encabezado de respuesta <strong><code>Vary</code></strong> HTTP determina como hacer coincidir los encabezados de las solicitudes futuras para decidir si se puede utilizar una respuesta almacenada en caché en lugar de solicitar una nueva desde el servidor de origen. Esto es usado por el servidor para indicar cuales encabezados usa cuando selecciona una representación de recursos en un algoritmo <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a> .</p>
 
-<p>El encabezado <code>Vary</code> se debe establecer en una respuesta  {{HTTPStatus("304")}} <code>Not Modified</code> exactamente igual que habría sido fijado en una respuesta equivalente {{HTTPStatus("200")}} <code>OK</code>.</p>
+<p>El encabezado <code>Vary</code> se debe establecer en una respuesta  {{HTTPStatus("304")}} <code>Not Modified</code> exactamente igual que habría sido fijado en una respuesta equivalente {{HTTPStatus("200")}} <code>OK</code>.</p>
 
 <table class="properties">
  <tbody>
@@ -32,7 +32,7 @@ Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
 
 <dl>
  <dt>*</dt>
- <dd>Cada solicitud para una URL debe ser tratada como unica e inaccesible . Una de las mejores formas de indicar esto es {{HTTPHeader("Cache-Control")}}<code>: private</code>, la cual hace mas claro leer y  señalar que el objeto no debe ser almacenado nunca.</dd>
+ <dd>Cada solicitud para una URL debe ser tratada como unica e inaccesible . Una de las mejores formas de indicar esto es {{HTTPHeader("Cache-Control")}}<code>: private</code>, la cual hace mas claro leer y  señalar que el objeto no debe ser almacenado nunca.</dd>
  <dt>&lt;header-name&gt;</dt>
  <dd>Una lista de nombres de encabezados separados por coma para tener en cuenta al decidir si se puede utilizar o no una respuesta cache.</dd>
 </dl>
@@ -41,7 +41,7 @@ Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
 
 <h3 id="Servicio_Dinámico">Servicio Dinámico</h3>
 
-<p>Cuando usamos el encabezado <code>Vary: User-Agent</code> , los servidores de almacenamiento en cache deben considerar al agente de usuario al decidir si desea publicar la pagína desde la memoria cache. Por ejemplo, si estas sirviendo contenido diferente a usuarios moviles, puede ayudarle a evitar que la memoria cache puede servir erróneamente una version de escritorio de su sitio a usuarios móviles. Esto puede ayudar a Googley otros motoress de busqueda para descubrir la version de una pagina web, y ademas permitir que intenten <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a>.</p>
+<p>Cuando usamos el encabezado <code>Vary: User-Agent</code> , los servidores de almacenamiento en cache deben considerar al agente de usuario al decidir si desea publicar la págína desde la memoria cache. Por ejemplo, si está sirviendo contenido diferente a usuarios móviles, puede ayudarle a evitar que la memoria cache pueda servir erróneamente una versión de escritorio de su sitio a usuarios móviles. Esto puede ayudar a Google y otros motores de búsqueda para descubrir la versión de una página web, y además permitir que intenten <a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a>.</p>
 
 <pre>Vary: User-Agent</pre>
 
@@ -75,5 +75,5 @@ Vary: &lt;header-name&gt;, &lt;header-name&gt;, ...
 <ul>
  <li>{{HTTPHeader("Cache-Control")}}</li>
  <li>{{HTTPHeader("User-Agent")}}</li>
- <li><a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">Mejores practicas para usar el encabezado Vary – fastly.com</a></li>
+ <li><a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header">Mejores practicas para usar el encabezado Vary – fastly.com</a></li>
 </ul>

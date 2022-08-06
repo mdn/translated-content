@@ -1,0 +1,60 @@
+---
+title: Date.prototype.toSource()
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
+tags:
+  - Date
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+translation_of: Web/JavaScript/Reference/Global_Objects/Date/toSource
+original_slug: Web/JavaScript/Reference/Global_Objects/Date/toSource
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<div>Die <strong><code>toSource()</code></strong> Methode gibt eine String Repräsentation des Quelltextes des Objektes zurück.</div>
+
+<div> </div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><var>dateObj</var>.toSource()
+Date.toSource()</pre>
+
+<h3 id="Rückgabewert">Rückgabewert</h3>
+
+<p>Ein String, der den Quelltext des gegebenen {{jsxref("Date")}} Objekt repräsentiert.</p>
+
+<h2 id="Beschreibung">Beschreibung</h2>
+
+<p>Die <code>toSource()</code> Methode gibt die folgenden Werte zurück:</p>
+
+<ul>
+ <li>Für das eingebaute {{jsxref("Date")}} Objekt, git die <code>toSource()</code> Methode den folgenden String zurück, der bedeutet, dass der Quelltext nicht verfügbar ist:
+
+  <pre class="brush: js">function Date() {
+    [native code]
+}
+</pre>
+ </li>
+</ul>
+
+<ul>
+ <li>Für Instanzen von {{jsxref("Date")}} gibt die <code>toSource()</code> Methode eine String Repräsentation des Quelltextes zurück.</li>
+</ul>
+
+<p>Diese Methode wird intern von JavaScript aufgerufen und wird nicht explizit im Quelltext eingesetzt.</p>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<p>Kein Standard. Implementiert in JavaScript 1.3.</p>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<p>{{Compat("javascript.builtins.Date.toSource")}}</p>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

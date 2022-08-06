@@ -24,7 +24,7 @@ Dans le contexte du cache, TTL (en tant qu'entier non signé de 32 bits) fait pa
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Time_to_Live", "Time to Live")}} sur Wikipedia
+- [<i lang="en">Time to Live</i>](https://fr.wikipedia.org/wiki/Time_to_Live) sur Wikipédia
 
 ### Références techniques
 

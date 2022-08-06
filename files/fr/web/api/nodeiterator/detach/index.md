@@ -10,7 +10,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeIterator/detach
 ---
-{{APIRef("DOM")}}{{obsolete_header}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 La méthode **`NodeIterator.detach()`** est une non opération, conservée seulement pour la rétro-compatibilité.
 
@@ -18,19 +18,23 @@ Initialement, elle détachait {{domxref("NodeIterator")}} de l'ensemble sur lequ
 
 ## Syntaxe
 
-    nodeIterator.detach();
+```js
+nodeIterator.detach();
+```
 
 ## Exemple
 
-    var nodeIterator = document.createNodeIterator(
-        document.body,
-        NodeFilter.SHOW_ELEMENT,
-        { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-        false
-    );
-    nodeIterator.detach(); // détache l'itérateur
+```js
+var nodeIterator = document.createNodeIterator(
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
+    false
+);
+nodeIterator.detach(); // détache l'itérateur
 
-    nodeIterator.nextNode(); // lance une exception INVALID_STATE_ERR
+nodeIterator.nextNode(); // lance une exception INVALID_STATE_ERR
+```
 
 ## Spécifications
 

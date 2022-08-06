@@ -27,7 +27,7 @@ translation_of: Web/API/Console
  <dt>{{domxref("console.error()", "console.exception(object[, object...])")}}</dt>
  <dd>Um atalho para <code>error();</code></dd>
  <dt>{{domxref("console.group()", "console.group(object[, object...])")}}</dt>
- <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize <code>groupEnd()</code>. Consulte <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
+ <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize <code>groupEnd()</code>. Consulte <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
  <dt>{{domxref("console.groupCollapsed()", "console.groupCollapsed(object[, object...])")}}</dt>
  <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de <code>group()</code>, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize <code>groupEnd().</code> Consulte <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
  <dt>{{domxref("console.groupEnd()")}}</dt>
@@ -42,14 +42,14 @@ translation_of: Web/API/Console
  <dd>Interrompe o profiler. Você pode ver o profile resultante no <a href="/en-US/docs/Tools/Profiler">JavaScript profiler</a>.</dd>
 </dl>
 
-<p> </p>
+<p> </p>
 
 <dl>
  <dt>{{domxref("Console.table()")}}</dt>
- <dd>Exibe dados, como objeto e array, como uma tabela.</dd>
+ <dd>Exibe dados, como objeto e array, como uma tabela.</dd>
 </dl>
 
-<p> </p>
+<p> </p>
 
 <dl>
  <dt>{{domxref("console.time()", "console.time(label)")}}</dt>
@@ -69,7 +69,7 @@ translation_of: Web/API/Console
 
 <p>A utilização mais frequente do console é realizar o log de texto e de outros dados. Há quatro categorias de output que podem ser geradas, utilizando os métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}} e o {{domxref("console.error()")}}. Cada um destes resultam em outputs que possuem estilos diferentes no log, e você pode utilizar os controles de filtragem fornecidos pelo navegador para ver apenas os outputs que lhe interessam.</p>
 
-<p>Há duas maneiros da utilizar cada um dos métodos de outuput. Você pode simplemente passar uma lista dos objetos cuja representação em string será concatenadas em uma string e então realizar o output  para o console, ou você pode passar uma string contendo zero ou mais substituições de strings seguidas por uma lista de objetos para serem utilizados na substituição.</p>
+<p>Há duas maneiros da utilizar cada um dos métodos de outuput. Você pode simplemente passar uma lista dos objetos cuja representação em string será concatenadas em uma string e então realizar o output  para o console, ou você pode passar uma string contendo zero ou mais substituições de strings seguidas por uma lista de objetos para serem utilizados na substituição.</p>
 
 <h4 id="Output_de_um_único_objeto">Output de um único objeto</h4>
 
@@ -93,7 +93,7 @@ console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto
 
 <p>O output será algo assim:</p>
 
-<pre>[09:28:22.711] Meu primeiro carro era um Fusca. O objeto é:  ({str:"Algum texto", id:5})
+<pre>[09:28:22.711] Meu primeiro carro era um Fusca. O objeto é:  ({str:"Algum texto", id:5})
 </pre>
 
 <h4 id="Uso_de_substituição_de_string">Uso de substituição de string</h4>
@@ -128,7 +128,7 @@ console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto
 <p>Cada um destes puxam o próximo argumento na lista de parâmetros após a string fornecida inicialmente. Por exemplo:</p>
 
 <pre>for (var i=0; i&lt;5; i++) {
-  console.log("Olá, %s. Você me chamou pela %dª vez.", "João", i+1);
+  console.log("Olá, %s. Você me chamou pela %dª vez.", "João", i+1);
 }
 </pre>
 
@@ -149,7 +149,7 @@ console.info("Meu primeiro carro era um ", carro, ". O objeto é: ", algumObjeto
 
 <div><img alt="" src="https://mdn.mozillademos.org/files/7739/console-style.png" style="display: block; height: 52px; margin-left: auto; margin-right: auto; width: 293px;"></div>
 
-<div>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</div>
+<h3>Usando grupos no console</h3>
 
 <p>You can use nested groups to help organize your output by visually combining related material. To create a new nested block, call <code>console.group()</code>. The <code>console.groupCollapsed()</code> method is similar, but creates the new block collapsed, requiring the use of a disclosure button to open it for reading.</p>
 
@@ -175,7 +175,7 @@ console.debug("Back to the outer level");
 
 <p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
 
-<div>{{h3_gecko_minversion("Timers", "10.0")}}</div>
+<h3>Temporizadores</h3>
 
 <p>In order to calculate the duration of a specific operation, Gecko 10 introduced the support of timers in the <code>console</code> object. To start a timer, call the <code>console.time</code><code>()</code> method, giving it a name as only parameter. To stop the timer, and to get the elapsed time in miliseconds, just call the <code>console.timeEnd()</code> method, again passing the timer's name as the parameter. Up to 10,000 timers can run simultaneously on a given page.</p>
 
@@ -201,10 +201,10 @@ console.timeEnd("answer time");
 <pre>foo();
 
 function foo() {
-  function bar() {
-    console.trace();
-  }
-  bar();
+  function bar() {
+    console.trace();
+  }
+  bar();
 }
 </pre>
 
@@ -232,7 +232,7 @@ function foo() {
 
 <h3 id="Other_implementations">Other implementations</h3>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><a href="https://developers.google.com/chrome-developer-tools/docs/console-api">Google Chrome DevTools</a>;</li>

@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Operators/Greater_than
 ---
 {{jsSidebar("Operators")}}
 
-大なり演算子 (`>`) は、左辺のオペランドが右辺のオペランドより大きい場合は `true` を返し、それ以外の場合は `false` を返します。
+大なり演算子 (`>`) は、左辺のオペランドが右辺のオペランドより大きい場合は `true` を返し、それ以外の場合は `false` を返します。
 
 {{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}
 

@@ -9,7 +9,9 @@ La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajo
 
 ## Syntaxe
 
-    void ctx.arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire);
+```js
+void ctx.arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire);
+```
 
 ### Paramètres
 

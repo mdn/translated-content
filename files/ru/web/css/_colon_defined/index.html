@@ -5,7 +5,7 @@ translation_of: 'Web/CSS/:defined'
 ---
 <div>{{ CSSRef }}</div>
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдокласс</a> <strong><code>:defined</code></strong> находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательские элементы</a> (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).</span></p>
+<p><span class="seoSummary"><a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдокласс</a> <strong><code>:defined</code></strong> находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательские элементы</a> (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).</span></p>
 
 <pre class="brush: css no-line-numbers">/* Находит любой элемент, который был определён */
 :defined {
@@ -24,7 +24,7 @@ simple-custom:defined {
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Этот пример включает скрипт, определяющий <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательский элемент</a> <code>&lt;simple-custom&gt;</code>:</p>
+<p>Этот пример включает скрипт, определяющий <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательский элемент</a> <code>&lt;simple-custom&gt;</code>:</p>
 
 <pre class="brush: js">customElements.define('simple-custom',
   class extends HTMLElement {
@@ -39,7 +39,7 @@ simple-custom:defined {
   }
 })</pre>
 
-<p>Затем мы используем короткий HTML код с элементом <code>&lt;simple-custom&gt;</code> и стандартным элементом {{htmlelement("p")}}:</p>
+<p>Затем мы используем короткий HTML код с элементом <code>&lt;simple-custom&gt;</code> и стандартным элементом {{htmlelement("p")}}:</p>
 
 <pre class="brush: html">&lt;simple-custom text="Текст пользовательского элемента"&gt;&lt;/simple-custom&gt;
 
@@ -73,7 +73,7 @@ simple-custom:defined {
   text-decoration: underline;
 }</pre>
 
-<p>Это полезно, если у вас есть сложный пользовательский элемент, который требует какое-то время для загрузки — возможно, вы захотите спрятать его до определения, чтобы на странице не появились искажения или не стилизованные элементы.</p>
+<p>Это полезно, если у вас есть сложный пользовательский элемент, который требует какое-то время для загрузки — возможно, вы захотите спрятать его до определения, чтобы на странице не появились искажения или не стилизованные элементы.</p>
 
 <h3 id="результат">результат</h3>
 

@@ -18,7 +18,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
 
 <p>The <code>ServiceWorkerGlobalScope</code> interface of the <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a> represents the global execution context of a service worker.</p>
 
-<p>Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.</p>
+<p>Developers should keep in mind that the ServiceWorker state is not persisted across the termination/restart cycle, so each event handler should assume it's being invoked with a bare, default global state.</p>
 
 <p>Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as {{domxref("ServiceWorkerGlobalScope.onfetch")}} or {{domxref("ServiceWorkerGlobalScope.onmessage")}}.</p>
 
@@ -67,7 +67,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope
  <dd>Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).<br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}} property.</dd>
  <dt><code>sync</code></dt>
- <dd>Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available. <br>
+ <dd>Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available. <br>
  Also available via the {{domxref("ServiceWorkerGlobalScope.onsync")}} property.</dd>
 </dl>
 

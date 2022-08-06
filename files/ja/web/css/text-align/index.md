@@ -46,9 +46,9 @@ text-align: unset;
 
 `text-align` プロパティは、以下の方法のうちの一つで指定されます。
 
- - キーワード値 `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`, `match-parent` のいずれかを使用。
- - `<string>` 値のみを使用、この場合は他の値の既定値が `right` になります。
- - キーワード値または [`<string>`](#string) 値の使用。
+- キーワード値 `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`, `match-parent` のいずれかを使用。
+- `<string>` 値のみを使用、この場合は他の値の既定値が `right` になります。
+- キーワード値または [`<string>`](#string) 値の使用。
 
 ### 値
 

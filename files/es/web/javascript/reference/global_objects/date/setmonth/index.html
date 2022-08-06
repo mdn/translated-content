@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setMonth
 ---
 <div>{{JSRef}}</div>
 
-<div>El método <strong><code>setMonth()</code></strong> establece el mes para una fecha específica de acuerdo con el año establecido actualmente.</div>
+<div>El método <strong><code>setMonth()</code></strong> establece el mes para una fecha específica de acuerdo con el año establecido actualmente.</div>
 
 <div>{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}</div>
 
@@ -33,15 +33,15 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setMonth
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Si no especificas el parámetro <code>dayValue</code>, el valor retornado del metodo {{jsxref("Date.prototype.getDate()", "getDate()")}} es usado.</p>
+<p>Si no especificas el parámetro <code>dayValue</code>, el valor retornado del metodo {{jsxref("Date.prototype.getDate()", "getDate()")}} es usado.</p>
 
-<p>Si un parámetro especificado esta fuera del rango esperado, <code>setMonth()</code> intenta actualizar la información de la fecha en el objeto {{jsxref("Date")}} en consecuencia. Por ejemplo, si usted usa 15 para <code>monthValue</code>, usa 12 para incrementar el año en 1, y los 3 restantes para calcular el mes.</p>
+<p>Si un parámetro especificado esta fuera del rango esperado, <code>setMonth()</code> intenta actualizar la información de la fecha en el objeto {{jsxref("Date")}} en consecuencia. Por ejemplo, si usted usa 15 para <code>monthValue</code>, usa 12 para incrementar el año en 1, y los 3 restantes para calcular el mes.</p>
 
 <p>El día actual del mes tendrá un impacto en el comportamiento de este método. Conceptualmente agregará el número de días dados por el día actual del mes al primer día del nuevo mes especificado como parámetro, para devolver la nueva fecha. Por ejemplo, si el valor actual es el 31 de agosto de 2016, llamar a setMonth con un valor de 1 devolverá el 2 de marzo de 2016. Esto se debe a que en febrero de 2016 tuvo 29 días.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_setMonth">Usando <code>setMonth()</code></h3>
+<h3 id="Usando_setMonth">Usando <code>setMonth()</code></h3>
 
 <pre class="brush: js">var theBigDay = new Date();
 theBigDay.setMonth(6);

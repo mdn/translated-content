@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/a
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML <code>&lt;a&gt;</code> 元素</strong>（或称锚元素）可以通过<a href="#href">它的 <code>href</code> 属性</a>创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。</span><code>&lt;a&gt;</code> 中的内容<strong>应该</strong>应该指明链接的意图。如果存在<span class="seoSummary"><a href="#href"> <code>href</code> 属性</a></span>，当 <code>&lt;a&gt;</code> 元素聚焦时按下回车键就会激活它。</p>
+<p><strong>HTML <code>&lt;a&gt;</code> 元素</strong>（或称锚元素）可以通过<a href="#href">它的 <code>href</code> 属性</a>创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。<code>&lt;a&gt;</code> 中的内容<strong>应该</strong>应该指明链接的意图。如果存在<a href="#href"> <code>href</code> 属性</a>，当 <code>&lt;a&gt;</code> 元素聚焦时按下回车键就会激活它。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/a.html")}}</div>
 
@@ -21,7 +21,7 @@ translation_of: Web/HTML/Element/a
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><dfn><a href="/en-US/docs/HTML/Content_categories" title="HTML/Content_categories">内容分类</a></dfn></th>
+   <th scope="row"><dfn><a href="/en-US/docs/HTML/Content_categories">内容分类</a></dfn></th>
    <td>流内容、文字内容、交互内容、可触摸内容。</td>
   </tr>
   <tr>
@@ -52,7 +52,7 @@ translation_of: Web/HTML/Element/a
 <p>该元素的属性包含<a href="/zh-CN/docs/HTML/Global_attributes">全局属性</a>。</p>
 
 <dl>
- <dt>{{htmlattrdef("download")}} {{HTMLVersionInline(5)}}</dt>
+ <dt>{{htmlattrdef("download")}}</dt>
  <dd>此属性指示浏览器下载 URL 而不是导航到它，因此将提示用户将其保存为本地文件。如果属性有一个值，那么此值将在下载保存过程中作为预填充的文件名（如果用户需要，仍然可以更改文件名）。此属性对允许的值没有限制，但是 <code>/</code> 和 <code>\</code> 会被转换为下划线。大多数文件系统限制了文件名中的标点符号，故此，浏览器将相应地调整建议的文件名。
  <div class="note"><strong>注意：</strong>
  <ul>
@@ -65,13 +65,13 @@ translation_of: Web/HTML/Element/a
  </dd>
  <dt>{{htmlattrdef("href")}}</dt>
  <dd>包含超链接指向的 URL 或 URL 片段。</dd>
- <dd>URL 片段是哈希标记（#）前面的名称，哈希标记指定当前文档中的内部目标位置（HTML 元素的 ID）。URL 不限于基于 Web（HTTP）的文档，也可以使用浏览器支持的任何协议。例如，在大多数浏览器中正常工作的<a class="external external-icon" href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>、ftp:和 mailto：。
+ <dd>URL 片段是哈希标记（#）前面的名称，哈希标记指定当前文档中的内部目标位置（HTML 元素的 ID）。URL 不限于基于 Web（HTTP）的文档，也可以使用浏览器支持的任何协议。例如，在大多数浏览器中正常工作的<a href="https://en.wikipedia.org/wiki/File_URI_scheme"><code>file:</code></a>、ftp:和 mailto：。
  <div class="note">
- <p><strong>注意：</strong> 可以使用 <code>href="#top"</code> 或者 <code>href="#"</code> 链接返回到页面顶部。<a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid">这种行为是 HTML5 的特性</a>。</p>
+ <p><strong>注意：</strong> 可以使用 <code>href="#top"</code> 或者 <code>href="#"</code> 链接返回到页面顶部。<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid">这种行为是 HTML5 的特性</a>。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("hreflang")}}</dt>
- <dd>该属性用于指定链接文档的人类语言。其仅提供建议，并没有内置的功能。hreflang 允许的值取决于 HTML5 <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>。</dd>
+ <dd>该属性用于指定链接文档的人类语言。其仅提供建议，并没有内置的功能。hreflang 允许的值取决于 HTML5 <a href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a>。</dd>
  <dt>{{htmlattrdef("ping")}}</dt>
  <dd>包含一个以空格分隔的 url 列表，当跟随超链接时，将由浏览器 (在后台) 发送带有正文 PING 的 POST 请求。通常用于跟踪。</dd>
  <dd>
@@ -117,26 +117,26 @@ translation_of: Web/HTML/Element/a
  <dt>
  <h3 id="过时的">过时的</h3>
  </dt>
- <dt>{{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>此属性定义链接资源的字符编码。该值是一个空格- 和/或逗号分隔的<a class="external" href="http://tools.ietf.org/html/rfc2045" style="color: rgb(102, 153, 204); text-decoration: none; padding-right: 16px; background-color: rgb(255, 255, 255); font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', Lucida, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal;">RFC 2045</a>中定义的字符集列表。默认值是 ISO-8859-1。
+ <dt>{{htmlattrdef("charset")}} {{Deprecated_Inline}}</dt>
+ <dd>此属性定义链接资源的字符编码。该值是一个空格- 和/或逗号分隔的<a href="http://tools.ietf.org/html/rfc2045">RFC 2045</a>中定义的字符集列表。默认值是 ISO-8859-1。
  <div class="note">
  <p><strong>使用说明：</strong>在 HTML5 中该属性已作废，不应使用。 为了实现其效果，使用 HTTP content - type header 的链接资源。</p>
  </div>
  </dd>
- <dt>{{htmlattrdef("coords")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("coords")}} {{Deprecated_Inline}}</dt>
  <dd>对于使用对象的形状，此属性使用逗号分隔的数字列表来定义对象在页面上的坐标。</dd>
- <dt>{{htmlattrdef("name")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("name")}} {{Deprecated_Inline}}</dt>
  <dd>该属性在页面中定义锚点的目标位置时是必须的。 <strong>name</strong> 的值类似于 ID 核心属性值，该属性值在文档中是唯一的且由数字字母标示符所组成的。在 HTML 4.01 规范中，<strong>id</strong> 和 <strong>name</strong> 都可以使用 &lt;a&gt; 元素，只要他们有相同的值。
  <div class="note">
- <p><strong>使用说明：</strong> 该属性在 HTML5 中是过时的，使用 <a href="/zh-CN/docs/HTML/Global_attributes#attr-id" title="HTML/Global attributes#id">全局属性 <strong>id</strong></a> 来代替。</p>
+ <p><strong>使用说明：</strong> 该属性在 HTML5 中是过时的，使用 <a href="/zh-CN/docs/HTML/Global_attributes#attr-id">全局属性 <strong>id</strong></a> 来代替。</p>
  </div>
  </dd>
- <dt>{{htmlattrdef("rev")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("rev")}} {{Deprecated_Inline}}</dt>
  <dd>该属性用于指定当前文档与被链接文档的关系。用于 &lt;a&gt; 标签的可选属性 rel 和 rev 分别表示源文档与目标文档之间正式的关系和方向。rel 属性指定从源文档到目标文档的关系，而 rev 属性则指定从目标文档到源文档的关系。这两种属性可以在 &lt;a&gt; 标签中同时使用。对于网页编者来说，这个属性很有用，可以通过它来查看外链的来源。</dd>
 </dl>
 
 <dl>
- <dt>{{htmlattrdef("shape")}} {{HTMLVersionInline(4)}} only, {{obsoleteGeneric("inline","HTML5")}}</dt>
+ <dt>{{htmlattrdef("shape")}} {{Deprecated_Inline}}</dt>
  <dd>此属性用于定义一个可选的超链接相关的一个数字来创建图像映射区域，该属性的值是圆，默认情况下，多边形，矩形。 所述的<strong>coords</strong> 属性的格式取决于形状的值。对于圆，该值的 x，y，r 其中 x 和 y 为圆心像素坐标，r 是像素值半径。对于矩形，该<strong>coords</strong> 属性应该是 x，y，w，h。x，y 值定义的矩形的左上角的位置，而 w 和 h 分别定义宽度和高度。多边形形状的值需要 x1，y1，x2，y2，......值来定义 coords。每对 x，y 定义多边形的一个点，连续点由直线接合和，最后一个点连接到第一个点。默认为形状的值需要将整个封闭区域，典型的图像，可以使用。
  <div class="note"><strong>说明：</strong>建议使用 <a href="/zh-CN/docs/Web/HTML/Element/img#attr-usemap">使用 map 属性</a>在 {{HTMLElement("img")}} 元素和相关的{{HTMLElement("map")}}元素中来定义热点而不是用形状属性。</div>
  </dd>
@@ -152,9 +152,9 @@ External Link
 &lt;/a&gt;
 </pre>
 
-<h4 id="Result" name="Result">结果</h4>
+<h4 id="Result">结果</h4>
 
-<p><a class="external" href="http://www.mozilla.com/">外部链接</a></p>
+<p><a href="http://www.mozilla.com/">外部链接</a></p>
 
 <h3 id="链接到本页的某个部分">链接到本页的某个部分</h3>
 
@@ -246,7 +246,7 @@ document.body.appendChild(link);</pre>
   </tr>
   <tr>
    <th>Chrome ≥39<br>
-    (<a href="https://code.google.com/p/chromium/issues/detail?id=388666" title="Issue 388666: Focus anchor (A) elements on mousedown">Chromium bug 388666</a>)</th>
+    (<a href="https://code.google.com/p/chromium/issues/detail?id=388666">Chromium bug 388666</a>)</th>
    <td style="background-color: LawnGreen;">是</td>
    <td style="background-color: LawnGreen;">是</td>
   </tr>
@@ -289,39 +289,9 @@ document.body.appendChild(link);</pre>
  </tbody>
 </table>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}</td>
-   <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Added the <code>referrer </code>attribute.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'text-level-semantics.html#the-a-element', '&lt;a&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-a-element', '&lt;a&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/links.html#h-12.2', '&lt;a&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -332,5 +302,5 @@ document.body.appendChild(link);</pre>
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>其它传递<a href="/zh-CN/docs/HTML/Text_level_semantics_conveying_elements" title="HTML/Text level semantics conveying elements">文本级语义</a>的元素：{{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.</li>
+ <li>其它传递<a href="/zh-CN/docs/HTML/Text_level_semantics_conveying_elements">文本级语义</a>的元素：{{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.</li>
 </ul>

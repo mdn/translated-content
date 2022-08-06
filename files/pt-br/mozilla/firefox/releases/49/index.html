@@ -6,7 +6,7 @@ translation_of: Mozilla/Firefox/Releases/49
 <div>{{FirefoxSidebar}}</div><p style="margin-bottom: 0cm; line-height: 100%;"><a href="https://www.mozilla.org/firefox/developer/" style="float: right; margin-bottom: 20px; padding: 10px; text-align: center; border-radius: 4px; display: inline-block; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">Para testar estes novos recursos do Firefox,<br>
  Instale Firefox Developer Edition</a> Firefox 49 foi lançado em 20 de Setembro de 2016. Este artigo faz uma lista das principais alterações não só para desenvolvedores web, mas também desenvolvedores Firefox e Gecko e de extensões.</p>
 
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <h2 id="Mudanças_para_desenvolvedores_web">Mudanças para desenvolvedores web</h2>
 
@@ -16,22 +16,22 @@ translation_of: Mozilla/Firefox/Releases/49
  <li>Erros de JavaScript registrados no console <a href="https://hacks.mozilla.org/2016/06/helping-web-developers-with-javascript-errors/">Agora com um link [Leia Mais]</a> para ajuda complementar na depuração ({{bug("1179876")}}).</li>
  <li>CSS <span class="short_text" id="result_box" lang="pt"><span>autocompletar</span></span>: mostra mais sugestões para o autocompletar<br>
   ({{bug("1260419")}}).</li>
- <li>O inspector de animação agora <a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#Further_information_about_animation_compositing">fornece informações do desempenho da animação </a> nas ferramentas de desenvolvimento ({{bug("1254408")}}).</li>
+ <li>O inspector de animação agora <a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#Further_information_about_animation_compositing">fornece informações do desempenho da animação </a> nas ferramentas de desenvolvimento ({{bug("1254408")}}).</li>
  <li>O <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_context_menu">menu de contexto do Inspector</a> foi reorganizado <span id="result_box" lang="pt"><span>ser mais claro e fácil de usar</span></span> ({{bug("1211613")}}).</li>
- <li>O Inspector agora suporta sintaxe para valores de cores em  <code>#RRGGBBAA</code> e <code>#RGBA</code> ({{bug("1271191")}}).</li>
- <li>As ferramentas de desvenvolvedor deixa de exibir marcas de fechamento automático (tal como {{HTMLElement("br")}} e {{HTMLElement("img")}} <span id="result_box" lang="pt"><span>como se eles tivessem uma tag de fechamento em páginas HTML</span></span> ; o comportamento é inalteravel para páginas XHTML ({{bug("820926")}}).</li>
+ <li>O Inspector agora suporta sintaxe para valores de cores em  <code>#RRGGBBAA</code> e <code>#RGBA</code> ({{bug("1271191")}}).</li>
+ <li>As ferramentas de desvenvolvedor deixa de exibir marcas de fechamento automático (tal como {{HTMLElement("br")}} e {{HTMLElement("img")}} <span id="result_box" lang="pt"><span>como se eles tivessem uma tag de fechamento em páginas HTML</span></span> ; o comportamento é inalteravel para páginas XHTML ({{bug("820926")}}).</li>
  <li>Melhorias na acessibilidade!
   <ul>
    <li>A caixa de ferramenta faz um trabalho melhor em assegurar que o foco no teclado seja mais visível ({{bug(1242851)}}).</li>
-   <li><span id="result_box" lang="pt"><span>Foram adicionados rótulos de acessibilidade a controles não marcados</span></span>  ({{bug(1242715)}}).</li>
+   <li><span id="result_box" lang="pt"><span>Foram adicionados rótulos de acessibilidade a controles não marcados</span></span>  ({{bug(1242715)}}).</li>
    <li><span id="result_box" lang="pt"><span>Adicionada semântica de exibição de árvore adequada e navegação de teclado para a exibição de marcação do Inspetor</span></span> ({{bug(1242694)}}).</li>
   </ul>
  </li>
- <li>O <a href="/en-US/docs/Tools/Network_Monitor">Monitor de Rede</a> agora mostra uma coluna de Causa, onde fornece e indica o que causa de cada  requerimento de rede específico ({{bug(1134073)}}).</li>
+ <li>O <a href="/en-US/docs/Tools/Network_Monitor">Monitor de Rede</a> agora mostra uma coluna de Causa, onde fornece e indica o que causa de cada  requerimento de rede específico ({{bug(1134073)}}).</li>
  <li>Na <em>about:debugging</em> página de extesões, o botão de recarregar é o único abilitado para extensões temporárias. Será desabilitado para todas as outras extensões ({{bug(1273184)}}).</li>
- <li>Na página Workers em<em> about:debbuging</em>, uma mensagem de alerta será exibida na seção Service Workers se o <a href="https://developer.mozilla.org/en-US/docs/Tools/about:debugging#Service_workers_not_compatible">service workers for incompatíveil </a> com as configurações atuais do navegador ({{bug(1266415)}}).</li>
- <li><em>about:debugging</em> agora existe uma <a href="/en-US/docs/Tools/about:debugging#Tabs">nova página de Tabs</a> disponível, quer fornece uma lista completa de todas abas abertas debugaveis na instancia do  Firefox ({{bug(1266128)}}).</li>
- <li>A opção <em>Desabilitar Cache</em> na <a href="/en-US/docs/Tools/Settings#Advanced_settings">Caixa de ferramentas  de configurações avançadas</a> foi renomeada para Desabilitar HTTP Cache, para clarear que isso afeta o cache do HTTP, e não <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>/o <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API</a> (bug(1253018)).</li>
+ <li>Na página Workers em<em> about:debbuging</em>, uma mensagem de alerta será exibida na seção Service Workers se o <a href="https://developer.mozilla.org/en-US/docs/Tools/about:debugging#Service_workers_not_compatible">service workers for incompatíveil </a> com as configurações atuais do navegador ({{bug(1266415)}}).</li>
+ <li><em>about:debugging</em> agora existe uma <a href="/en-US/docs/Tools/about:debugging#Tabs">nova página de Tabs</a> disponível, quer fornece uma lista completa de todas abas abertas debugaveis na instancia do  Firefox ({{bug(1266128)}}).</li>
+ <li>A opção <em>Desabilitar Cache</em> na <a href="/en-US/docs/Tools/Settings#Advanced_settings">Caixa de ferramentas  de configurações avançadas</a> foi renomeada para Desabilitar HTTP Cache, para clarear que isso afeta o cache do HTTP, e não <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>/o <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API</a> (bug(1253018)).</li>
  <li>O <a href="/en-US/docs/Tools/Storage_Inspector#IndexedDB">Inspector de armazenamento agora permite IndexedDB databases ser deletado</a> através de seu próprio menu ({{bug("1205123")}}), e mostrará uma mensagem de alerta se a IndexedDB poder ser deletada por alguma rasão (Se ainda existir conexão ativa, por exemplo) ({{bug(1268460)}}).</li>
 </ul>
 
@@ -39,7 +39,7 @@ translation_of: Mozilla/Firefox/Releases/49
 
 <ul>
  <li>Adicionado suporte para estes elementros: {{HTMLElement("details")}} e {{HTMLElement("summary")}} ({{bug(1226455)}}).</li>
- <li>O {{htmlattrxref("pattern", "input")}} atribuido para {{HTMLElement("input")}} agora usa o parâmetro <code>'u'</code> no  JavaScript base {{jsxref("RegExp")}} ({{bug(1227906)}}).</li>
+ <li>O {{htmlattrxref("pattern", "input")}} atribuido para {{HTMLElement("input")}} agora usa o parâmetro <code>'u'</code> no  JavaScript base {{jsxref("RegExp")}} ({{bug(1227906)}}).</li>
  <li>Para corresponder a uma mudança específica, de um valor inválido {{htmlattrxref("kind", "track")}} atributo do elemento {{HTMLElement('track')}} é agora tratado como <code>"metadata"</code> ao invés de<code>"subtitles"</code> ({{bug(1269712)}}).</li>
  <li><span id="result_box" lang="pt"><span>O atributo </span></span> {{htmlattrxref("sandbox", "iframe")}} <span lang="pt"><span> do elemento </span></span> {{HTMLElement("iframe")}} <span lang="pt"><span> agora suporta os valores 'allow-popups-to-escape-sandbox' e 'allow-modals'</span></span> ({{bug(1190641)}}).</li>
  <li>Suporte para atributos microdata e a Microdata API foram removidas ({{bug(909633)}}).</li>
@@ -56,21 +56,21 @@ translation_of: Mozilla/Firefox/Releases/49
  <li>Adicionado suporte a cores específicas como o canal alpha usando 4- e 8-digitos CSS hex <a href="/en-US/docs/Web/CSS/color_value">cor</a> de valores (#RRGGBBAA e #RGBA) ({{bug("567283")}}).</li>
  <li>A pseudo-class {{cssxref(":dir()")}} foi desprezado ({{bug(859301)}}).</li>
  <li>Em nossa implementação experimental (ainda não ativa por padrão) de {{cssxref("clip-path")}}, podemos agora interpolar entre valores {{cssxref("&lt;basic-shape&gt;")}} ({{bug(1110460)}}).</li>
- <li>Adicionado a <a href="/en-US/docs/Web/CSS/length#q"><code>unidade de comprimento q</code> </a> ({{bug(1274526)}}).</li>
+ <li>Adicionado a <a href="/en-US/docs/Web/CSS/length#q"><code>unidade de comprimento q</code> </a> ({{bug(1274526)}}).</li>
  <li>A propiedade {{cssxref("text-align-last")}} foi desprezada ({{bug(1039541)}}).</li>
- <li>Adicionado suporte para {{cssxref("overflow-wrap")}}, substituindo  {{cssxref("word-wrap")}} que ainda é suportado como nome alternativo ({{bug(955857)}}).</li>
+ <li>Adicionado suporte para {{cssxref("overflow-wrap")}}, substituindo  {{cssxref("word-wrap")}} que ainda é suportado como nome alternativo ({{bug(955857)}}).</li>
  <li>Nossa experiencia com a implementação do <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grids</a> foi melhorado:
   <ul>
    <li>implementado {{cssxref("&lt;percentage&gt;")}} para as propriedades {{cssxref("grid-gap")}}, {{cssxref("grid-row-gap")}}, e {{cssxref("grid-column-gap")}} ({{bug(1266268)}}).</li>
-   <li>Implementado suporte a layout grid layout para {{cssxref("align")}}, {{cssxref("justify-self")}}<code>:baseline</code> e <code>last-baseline</code> (aka "baseline self-alignment") ({{bug(1221525)}}).</li>
+   <li>Implementado suporte a layout grid layout para {{cssxref("align")}}, {{cssxref("justify-self")}}<code>:baseline</code> e <code>last-baseline</code> (aka "baseline self-alignment") ({{bug(1221525)}}).</li>
    <li>Implementado alinhamento de conteúdo baseline de item em grid ({{bug(1256429)}}).</li>
   </ul>
  </li>
  <li>Nosso experimeto implementação de <a href="/en-US/docs/Web/CSS/CSS_Masks">CSS Masks</a> foi melhorado:
   <ul>
-   <li>A propiedade {{cssxref("mask-origin")}} agora usa <code>border-box</code> ao invés de <code>padding-box</code> como valor inicial, para  <span class="short_text" id="result_box" lang="pt"><span>coincidir com a especificação</span></span> ({{bug(1258286)}}).</li>
-   <li>A propriedade {{cssxref("mask-repeat")}} suporta os seguintes volumes:  <code>space</code> e <code>round</code> values ({{bug(1258626)}}).</li>
-   <li>Corrigido o problema que impedia o atributo {{cssxref("mask-position")}}  de ser animado ({{bug(1273804)}}).</li>
+   <li>A propiedade {{cssxref("mask-origin")}} agora usa <code>border-box</code> ao invés de <code>padding-box</code> como valor inicial, para  <span class="short_text" id="result_box" lang="pt"><span>coincidir com a especificação</span></span> ({{bug(1258286)}}).</li>
+   <li>A propriedade {{cssxref("mask-repeat")}} suporta os seguintes volumes:  <code>space</code> e <code>round</code> values ({{bug(1258626)}}).</li>
+   <li>Corrigido o problema que impedia o atributo {{cssxref("mask-position")}}  de ser animado ({{bug(1273804)}}).</li>
   </ul>
  </li>
  <li>O controle de preferências {{cssxref("text-emphasis")}} foi removido, assim o suporte para esta propiedade não pode ser mais desabilitado ({{bug(1229609)}}).</li>
@@ -79,7 +79,7 @@ translation_of: Mozilla/Firefox/Releases/49
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li>As armadilhas para  ES2015 (ES6) {{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "getPrototypeOf()")}} e {{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} foram implementadas ({{bug(888969)}}).</li>
+ <li>As armadilhas para  ES2015 (ES6) {{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "getPrototypeOf()")}} e {{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} foram implementadas ({{bug(888969)}}).</li>
  <li>O metodos ES2015 (ES6) {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}, {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}, {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}, e {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}, e {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter foram implementados ({{bug(887016)}}).</li>
  <li>A versão obsoleta, <code>sem padrão nos argumentos de flags</code> do <code>String.prototype.</code>{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} foi remivida ({{bug(1108382)}}).</li>
  <li>O comportamento do metodo {{jsxref("Date.parse()")}} quando analisam 2-digit years foi modificado para mais <span class="short_text" id="result_box" lang="pt"><span>interoperável</span></span> com o navegador Google Chrome ({{bug(1265136)}}).</li>
@@ -92,16 +92,16 @@ translation_of: Mozilla/Firefox/Releases/49
 <ul>
  <li>O metodo {{domxref("DOMTokenList.supports()")}} foi adicionado ({{bug(1257849)}}).</li>
  <li>O metodo {{domxref("DOMTokenList.replace()")}} foi adicionado ({{bug(1224186)}}).</li>
- <li>O caractere principal <code>'?'</code> agora é ignorado no parâmetro do construtor  {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}}  ({{bug(1268361)}}).</li>
- <li>O valor retornado por {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement.origin")}}, e {{domxref("HTMLAreaElement.origin")}} para URL usando o <code>blob:</code> o esquema não está mais  incorreto <code>null</code> mas em vez disso, a origem da URL formado pela remorção da tag <code>blob:</code> ({{bug(1270451)}}).</li>
- <li>No modo de pre-renderização, a propriedade  {{domxref('Document.visibilityState')}} agora retorna <code>'prerender'</code> ({{bug(1069772)}}).</li>
+ <li>O caractere principal <code>'?'</code> agora é ignorado no parâmetro do construtor  {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}}  ({{bug(1268361)}}).</li>
+ <li>O valor retornado por {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement.origin")}}, e {{domxref("HTMLAreaElement.origin")}} para URL usando o <code>blob:</code> o esquema não está mais  incorreto <code>null</code> mas em vez disso, a origem da URL formado pela remorção da tag <code>blob:</code> ({{bug(1270451)}}).</li>
+ <li>No modo de pre-renderização, a propriedade  {{domxref('Document.visibilityState')}} agora retorna <code>'prerender'</code> ({{bug(1069772)}}).</li>
  <li>A propriedade {{domxref("Window.isSecureContext")}} foi implantada ({{bug(1162772)}}).</li>
  <li>Os metodos DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("ParentNode.append()")}} e {{domxref("ParentNode.prepend()")}} foram implementados ({{bug(911477)}}).</li>
  <li>O metodo {{domxref("TouchList.identifiedTouch()")}} foi removido ({{bug(1188539)}}).</li>
  <li>Por padrão, a característica <code>scrollbars</code> {{domxref("Window")}} é habilitado quando chamado {{domxref("Window.open()")}}. Anteriormente, quanto era altamente recomendado ativar ele, pois não era padrão ({{bug(1257887)}}).</li>
  <li>Adicionado o <em>metodo experimental</em> e <em>non-standard</em> do metodo {{domxref("HTMLMediaElement.seekToNextFrame()")}}, que permite bucar quadro a quadro no conteúdo do vídeo ({{bug(1235301)}}). Equanto você é incentivado a expertimentar, dessar forma você nos ajuda a entender o quão útil ele é, <em>não use ele em produção de código!</em></li>
  <li>A propriedade {{domxref("HTMLLabelElement.form")}} agora retorna a forma com que o controle de label's foi assiciado, se houver um controle (e se esse controle for associado ao formulário). Anteriormente, labels eram diretamente associados com formulários usando essa propriedade ({{bug(1268852)}}).</li>
- <li>Suporte ao paramtro third de {{domxref("EventTarget.addEventListener()")}}, ou um {{jsxref("Boolean")}} ou a {{interface("EventListenerOptions")}} foi adicionado ({{bug(1266164)}} and {{bug(1266066)}}).</li>
+ <li>Suporte ao paramtro third de {{domxref("EventTarget.addEventListener()")}}, ou um {{jsxref("Boolean")}} ou a <code>EventListenerOptions</code> foi adicionado ({{bug(1266164)}} and {{bug(1266066)}}).</li>
  <li>O volume do audio relativo a {{domxref("KeyboardEvent.key")}} foram renomeados. <code>"VolumeDown"</code> é agora <code>"AudioVolumeDown"</code>, <code>"VolumeUp"</code> é agora <code>"AudioVolumeUp"</code>, e <code>"VolumeMute"</code> e agora <code>"AudioVolumeMute".</code> Isso trás Firefox p<em><span style="font-style: normal;">ara alinhamento com os últimos rascunhos de especificações de UI Events</span></em> ({{bug(1272578)}}). Veja {{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} para uma lista completa de possibilidades de códigos.</li>
  <li>Os códigos ateriormente referidos a <code>"MozHomeScreen"</code>, <code>"MozCameraFocusAdjust"</code>, e <code>"MozPhoneCall"</code> agora tem nomes oficiais na especificação UI Events: <code>"GoHome"</code>, <code>"CameraFocus"</code>, e <code>"Call"</code>. Firefox 49 foi atualizado para utilizar os novos nomes ({{bug(1272599)}}). Veja {{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} para uma lista completa de possilidades de códigos</li>
  <li>O valor dos códigos <code>"Separator"</code> e <code>"MediaSkip"</code> foram removidos, por serem desatualizados e não utilizados ({{bug(1232919)}}).</li>
@@ -157,15 +157,15 @@ translation_of: Mozilla/Firefox/Releases/49
 <h4 id="Streams_de_mídia">Streams de mídia</h4>
 
 <ul>
- <li>Antigamente, era possível chamar {{domxref("MediaDevices.getUserMedia()")}} como requerimento ambos áudio e vídeo <span id="result_box" lang="pt"><span>para ter sucesso nos casos em que o usuário tem apenas um dos dois tipos de hardware disponíveis</span></span> . Isso foi fixado ({{bug(802326)}}).</li>
- <li>Nas versões anteriores do Firefox, era possível chamar por {{domxref("MediaDevices.getUserMedia()")}} que solicita tando audio quanto vídeo <span id="result_box" lang="pt"><span>para ter êxito mesmo que o usuário tenha negado acesso a um, mas não a ambos os dispositivos de correspondência</span></span>. Isso foi fixado ({{bug(802326)}}). Isso envolve pequenas alterações na interface de usuários, para remover a opção para escolher "sem áudio" ou "Sem vídeo" quando o usuário é solicitado para as permissões.</li>
+ <li>Antigamente, era possível chamar {{domxref("MediaDevices.getUserMedia()")}} como requerimento ambos áudio e vídeo <span id="result_box" lang="pt"><span>para ter sucesso nos casos em que o usuário tem apenas um dos dois tipos de hardware disponíveis</span></span> . Isso foi fixado ({{bug(802326)}}).</li>
+ <li>Nas versões anteriores do Firefox, era possível chamar por {{domxref("MediaDevices.getUserMedia()")}} que solicita tando audio quanto vídeo <span id="result_box" lang="pt"><span>para ter êxito mesmo que o usuário tenha negado acesso a um, mas não a ambos os dispositivos de correspondência</span></span>. Isso foi fixado ({{bug(802326)}}). Isso envolve pequenas alterações na interface de usuários, para remover a opção para escolher "sem áudio" ou "Sem vídeo" quando o usuário é solicitado para as permissões.</li>
  <li>O metodo {{domxref("MediaStream.getTrackById()")}} foi implantado ({{bug(1208390)}}).</li>
 </ul>
 
 <h4 id="WebRTC">WebRTC</h4>
 
 <ul>
- <li>O metodo {{domxref("RTCPeerConnection.addTrack()")}} foi atualizado para permitir tracks <span id="result_box" lang="pt"><span>sue não são componentes dos </span></span> stream <span lang="pt"><span> especificados a serem adicionados à conexão</span></span>. Ao invés, os streams são usados para agrupar tracks na extremidade receptora da conexão ({{bug(1271669)}}).</li>
+ <li>O metodo {{domxref("RTCPeerConnection.addTrack()")}} foi atualizado para permitir tracks <span id="result_box" lang="pt"><span>sue não são componentes dos </span></span> stream <span lang="pt"><span> especificados a serem adicionados à conexão</span></span>. Ao invés, os streams são usados para agrupar tracks na extremidade receptora da conexão ({{bug(1271669)}}).</li>
 </ul>
 
 <h4 id="Novas_APIs">Novas APIs</h4>
@@ -179,7 +179,7 @@ translation_of: Mozilla/Firefox/Releases/49
 <ul>
  <li>{{domxref("XMLHttpRequest.getResponseHeader()")}} e {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} r<span class="short_text" id="result_box" lang="pt"><span>etornar cabeçalhos vazios caso a preferência </span></span><code>network.http.keep_empty_response_headers_as_empty_string</code> esta configurado para <code>true</code> ({{bug(669259)}}).</li>
  <li>O Firefox OS-apenas <a href="/en-US/docs/Archive/Firefox_OS/API/Data_Store_API">API Banco de Dados</a> foi removida ({{bug(1261009)}}).</li>
- <li>A <a href="/en-US/docs/Web/API/Fullscreen_API">API de Tela Cheia</a> manipulador de eventos {{domxref("Document.onfullscreenchange")}} e {{domxref("Document.onfullscreenerror")}} foram removidos de  {{domxref("Element")}} como nunca foram usados la; <span id="result_box" lang="pt"><span>As versões de prefixo desses manipuladores de eventos foram mantidas lá para fins de compatibilidade</span></span>, Contudo ({{bug(1270386)}}). Observe que ele não é ativado por padrão, mas está atrás da preferência  <code>full-screen-api.unprefix.enabled</code> ({{bug(1268749)}}).</li>
+ <li>A <a href="/en-US/docs/Web/API/Fullscreen_API">API de Tela Cheia</a> manipulador de eventos {{domxref("Document.onfullscreenchange")}} e {{domxref("Document.onfullscreenerror")}} foram removidos de  {{domxref("Element")}} como nunca foram usados la; <span id="result_box" lang="pt"><span>As versões de prefixo desses manipuladores de eventos foram mantidas lá para fins de compatibilidade</span></span>, Contudo ({{bug(1270386)}}). Observe que ele não é ativado por padrão, mas está atrás da preferência  <code>full-screen-api.unprefix.enabled</code> ({{bug(1268749)}}).</li>
  <li>A propriedade obsoleta {{domxref("Document.mozFullScreen")}} não foi pré-fixada {{domxref("Document.fullscreen")}} {{bug(1269157)}}}. Perceba que ela não é ativa por padrão nas preferencias the <code>full-screen-api.unprefix.enabled</code> ({{bug(1268749)}}).</li>
  <li>A propriedade leitor {{domxref("Document.fullscreenElement")}} e {{domxref("Document.fullscreenEnabled")}} deixa de lançar exceção se hover tentativa de alterar o seu valor; ao invés disso, o novo valor é ignorado e a função setter é uma no-op ({{bug(1269798)}}).</li>
  <li>Qualquer tipode de dado pode ser agora recuperado da área de tranferência usada {{domxref("DataTransfer.getData()")}}: anteriormente, apenas alguns tipos de dados do tipo MIME eram suportados {{bug(860857)}}.</li>
@@ -190,8 +190,8 @@ translation_of: Mozilla/Firefox/Releases/49
  <li>O evento {{event("install")}}, e o {{domxref("Window.oninstall")}} manipulador de evento, são agora suportado por <a href="/en-US/docs/Web/Manifest">Web Manifests</a> ({{bug(1265279)}}).</li>
  <li>Quando usar o metodo {{domxref("AudioContext.createPeriodicWave()")}} de <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, você pode específicar <span id="result_box" lang="pt"><span>se a onda periódica resultante deve ser normalizada incluindo um objeto de dicionário como o terceiro parâmetro, que inclui um único parâmetro</span></span> — <code>{disableNormalization: true}</code> ({{bug(1265405)}}).</li>
  <li>Na APIWebVTT, {{domxref("VTTCue.positionAlign")}} retorna corretamente um <code>PositionAlignSetting</code> enum conforme a especificação; anteriormente ele retornava um <code>AlignSetting</code> enum ({{bug(1276129)}}).</li>
- <li>A parte de síntese de fala da API Web Speech agora é habilitado por padrão em todos os navegadores desktop ({{bug(1268633)}}).</li>
- <li>O contrutor de <a href="/en-US/docs/Web/API/Web_Animations_API">API Web Animations </a>{{domxref("Animation.Animation()", "Animation()")}} agora aceita null na timeline ({{bug(1096776)}}).</li>
+ <li>A parte de síntese de fala da API Web Speech agora é habilitado por padrão em todos os navegadores desktop ({{bug(1268633)}}).</li>
+ <li>O contrutor de <a href="/en-US/docs/Web/API/Web_Animations_API">API Web Animations </a>{{domxref("Animation.Animation()", "Animation()")}} agora aceita null na timeline ({{bug(1096776)}}).</li>
 </ul>
 
 <h3 id="MathML">MathML</h3>
@@ -201,7 +201,7 @@ translation_of: Mozilla/Firefox/Releases/49
 <h3 id="SVG">SVG</h3>
 
 <ul>
- <li>Removido o suporte por ser considerador obsoleto os seguintes elementos: {{SVGElement('altGlyph')}}, {{SVGElement('altGlyphDef')}} e {{SVGElement('altGlyphItem')}}  ({{bug(1260032)}}).</li>
+ <li>Removido o suporte por ser considerador obsoleto os seguintes elementos: {{SVGElement('altGlyph')}}, {{SVGElement('altGlyphDef')}} e {{SVGElement('altGlyphItem')}}  ({{bug(1260032)}}).</li>
 </ul>
 
 <h3 id="AudioVideo">Audio/Video</h3>
@@ -231,7 +231,7 @@ translation_of: Mozilla/Firefox/Releases/49
 <p>A fim de melhorar a compatilidade com o conteúdo existente, Firefox agora aceita algumas propriedades e atributos do webkit.</p>
 
 <ul>
- <li>    <span id="result_box" lang="pt"><span>As propriedades a seguir também trabalham com prefixo</span></span> -webkit:
+ <li>    <span id="result_box" lang="pt"><span>As propriedades a seguir também trabalham com prefixo</span></span> -webkit:
 
   <ul>
    <li>{{cssxref("-webkit-align-items")}}</li>
@@ -304,7 +304,7 @@ translation_of: Mozilla/Firefox/Releases/49
    <li><code>-webkit-inline-flex</code> to <code>-moz-inline-flex</code></li>
   </ul>
  </li>
- <li> As seguintes propriedades são suportadas ( <span id="result_box" lang="pt"><span>E não mapeia para qualquer equivalente não predefinido</span></span>):
+ <li> As seguintes propriedades são suportadas ( <span id="result_box" lang="pt"><span>E não mapeia para qualquer equivalente não predefinido</span></span>):
   <ul>
    <li>{{cssxref("-webkit-text-fill-color")}}</li>
    <li>{{cssxref("-webkit-text-stroke-color")}}</li>
@@ -328,13 +328,13 @@ translation_of: Mozilla/Firefox/Releases/49
 
 <ul>
  <li>Suporte a {{WebExtAPIRef("history")}} foi adicionado. Isso fornece acesso a histórico do navegador, com metodos disponíveis para pesquisar no histórico, obtendo informações sobre páginas visitanas anteriormente, e adicionando e removendo entradas no históricos.</li>
- <li>Adicionado o metodo {{WebExtAPIRef("tabs.removeCSS()")}} para aba API. Esse metodo permite remover o CSS que foi anteriormente injetado por chamada  {{WebExtAPIRef("tabs.insertCSS()")}}.</li>
+ <li>Adicionado o metodo {{WebExtAPIRef("tabs.removeCSS()")}} para aba API. Esse metodo permite remover o CSS que foi anteriormente injetado por chamada  {{WebExtAPIRef("tabs.insertCSS()")}}.</li>
 </ul>
 
 <h3 id="Interfaces">Interfaces</h3>
 
 <ul>
- <li>No {{domxref("EventTarget.addEventListener()")}}, o valor <code>mozSystemGroup</code>,  ativa apenas com o código rodando no XBL ou no Firefox's chrome, e um {{jsxref("Boolean")}} que indica se o ouvinte foi adicionado ao grupo do sistema. ({{bug(1274520)}})</li>
+ <li>No {{domxref("EventTarget.addEventListener()")}}, o valor <code>mozSystemGroup</code>,  ativa apenas com o código rodando no XBL ou no Firefox's chrome, e um {{jsxref("Boolean")}} que indica se o ouvinte foi adicionado ao grupo do sistema. ({{bug(1274520)}})</li>
 </ul>
 
 <h3 id="Outros">Outros</h3>

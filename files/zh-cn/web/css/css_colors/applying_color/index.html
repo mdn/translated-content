@@ -11,7 +11,7 @@ original_slug: Web/HTML/Applying_color
 ---
 <div>{{HTMLRef}}</div>
 
-<p>色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。<span class="seoSummary">借助 <a href="/en-US/docs/Web/CSS">CSS</a>，有很多方法可以为 <a href="/en-US/docs/Web/HTML">HTML</a> <a href="/en-US/docs/Web/HTML/Element">元素</a> 添加颜色，以创建所需的外观。本文是一篇入门文章，介绍了 CSS 颜色在 HTML 中的各种使用方法。</span></p>
+<p>色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 <a href="/en-US/docs/Web/CSS">CSS</a>，有很多方法可以为 <a href="/en-US/docs/Web/HTML">HTML</a> <a href="/en-US/docs/Web/HTML/Element">元素</a> 添加颜色，以创建所需的外观。本文是一篇入门文章，介绍了 CSS 颜色在 HTML 中的各种使用方法。</p>
 
 <p>幸运的是，在 HTML 中添加颜色非常容易，而且几乎可以加在任何地方。</p>
 
@@ -141,7 +141,7 @@ original_slug: Web/HTML/Applying_color
 
 <h3 id="HSL_函数表示法">HSL 函数表示法</h3>
 
-<p>Designers and artists often prefer to work using the {{interwiki("wikipedia", "HSL and HSV", "HSL")}} (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The <code>hsl()</code> CSS function is very similar to the <code>rgb()</code> function in usage otherwise.</p>
+<p>Designers and artists often prefer to work using the <a href="https://zh.wikipedia.org/wiki/HSL_and_HSV">HSL</a> (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The <code>hsl()</code> CSS function is very similar to the <code>rgb()</code> function in usage otherwise.</p>
 
 <div style="padding-bottom: 20px;">
 <figure style="width: 500px;"><img alt="HSL color cylinder" src="https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png" style="height: 375px; width: 500px;">
@@ -326,7 +326,7 @@ th {
 
 <h2 id="让用户选择颜色">让用户选择颜色</h2>
 
-<p>There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using <code>"color"</code> as the value of its {{htmlattrxref("type", "input")}} attribute.</p>
+<p>There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own <a href="https://zh.wikipedia.org/wiki/color_picker">color picker</a>, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using <code>"color"</code> as the value of its {{htmlattrxref("type", "input")}} attribute.</p>
 
 <p>The <code>&lt;input&gt;</code> element represents a color only in the <a href="#十六进制颜色码">hexadecimal string notation</a> covered above.</p>
 
@@ -394,7 +394,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <h4 id="基本色">基本色</h4>
 
-<p>The first step is to choose your <strong>base color</strong>. This is the color that in some way defines your website or the subject matter of the site. Just as we associate green with the beverage {{interwiki("wikipedia", "Mountain Dew")}} and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:</p>
+<p>The first step is to choose your <strong>base color</strong>. This is the color that in some way defines your website or the subject matter of the site. Just as we associate green with the beverage <a href="https://zh.wikipedia.org/wiki/Mountain_Dew">Mountain Dew</a> and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:</p>
 
 <ul>
  <li>A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.</li>
@@ -433,7 +433,7 @@ colorPicker.addEventListener("change", function(event) {
 <dl>
  <dt><a href="https://www.khanacademy.org/partner-content/pixar/color">Color Science</a> (<a href="https://www.khanacademy.org/">Khan Academy</a> in association with <a href="https://www.pixar.com/">Pixar</a>)</dt>
  <dd>An online course which introduces concepts such as what color is, how it's percieved, and how to use colors to express ideas. Presented by Pixar artists and designers.</dd>
- <dt>{{interwiki("wikipedia", "Color theory")}} on Wikipedia</dt>
+ <dt><a href="https://zh.wikipedia.org/wiki/Color_theory">Color theory</a> on Wikipedia</dt>
  <dd>Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color sleection process, but is still full of useful information.</dd>
 </dl>
 
@@ -441,7 +441,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <p>There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.</p>
 
-<p>You should do at least basic research into {{interwiki("wikipedia", "color blindness")}}. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.</p>
+<p>You should do at least basic research into <a href="https://zh.wikipedia.org/wiki/color_blindness">color blindness</a>. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.</p>
 
 <div class="note">
 <p>The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.</p>
@@ -463,23 +463,23 @@ colorPicker.addEventListener("change", function(event) {
 
 <p>Having selected our base color, we need to build out our palette. We decide to use <a href="http://www.paletton.com/">Paletton</a> to come up with the other colors we need. Upon opening Paletton, we see:</p>
 
-<p><img alt="Right after loading Paletton." src="https://mdn.mozillademos.org/files/15451/paletton1.png" style="height: 361px; width: 600px;"></p>
+<p><img alt="Right after loading Paletton." src="paletton1.png"></p>
 
 <p>Next, we enter our color's hex code (<code>D79C7A</code>) into the "Base RGB" box at the bottom-left corner of the tool:</p>
 
-<p><img alt="After entering base color" src="https://mdn.mozillademos.org/files/15453/paletton2.png" style="height: 361px; width: 600px;"></p>
+<p><img alt="After entering base color" src="paletton2.png"></p>
 
 <p>We now see a monochromatic palette based on the color we picked from the Mars photo. If you need a lot of related colors for some reason, those are likely to be good ones. But what we really want is an accent color. Something that will pop along side the base color. To find that, we click the "add complementary" toggle underneath the menu that lets you select the palette type (currently "Monochromatic"). Paletton computes an appropriate accent color; clicking on the accent color down in the bottom-right corner tells us that this color is <code>#508D7C</code>.</p>
 
-<p><img alt="Now with complementary colors included." src="https://mdn.mozillademos.org/files/15455/paletton3.png" style="height: 361px; width: 600px;"></p>
+<p><img alt="Now with complementary colors included." src="paletton3.png"></p>
 
 <p>If you're unhappy with the color that's proposed to you, you can change the color scheme, to see if you find something you like better. For example, if we don't like the proposed greenish-blue color, we can click the Triad color scheme icon, which presents us with the following:</p>
 
-<p><img alt="Triad color scheme selected" src="https://mdn.mozillademos.org/files/15457/paletton4.png" style="height: 361px; width: 600px;"></p>
+<p><img alt="Triad color scheme selected" src="paletton4.png"></p>
 
 <p>That greyish blue in the top-right looks pretty good. Clicking on it, we find that it's <code>#556E8D</code>. That would be used as the accent color, to be used sparingly to make things stand out, such as in headlines or in the highlighting of tabs or other indicators on the site:</p>
 
-<p><img alt="Triad color scheme selected" src="https://mdn.mozillademos.org/files/15459/paletton-color-detail.png" style="height: 370px; width: 526px;"></p>
+<p><img alt="Triad color scheme selected" src="paletton-color-detail.png"></p>
 
 <p>Now we have our base color and our accent. On top of that, we have a few complementary shades of each, just in case we need them for gradients and the like. The colors can then be exported in a number of formats so you can make use of them.</p>
 

@@ -22,7 +22,7 @@ SyntaxError: Illegal 'use strict' directive in function with non-simple paramete
 
 <h2 id="무엇이_잘못_되었을까요">무엇이 잘못 되었을까요?</h2>
 
-<p> <code>"use strict"</code> 지시문은 다음 매개변수 중 한 개가 있는 함수의 맨 위에 작성됩니다:</p>
+<p> <code>"use strict"</code> 지시문은 다음 매개변수 중 한 개가 있는 함수의 맨 위에 작성됩니다:</p>
 
 <ul>
  <li>{{jsxref("Functions/Default_parameters", "Default parameters", "", 1)}}</li>
@@ -30,13 +30,13 @@ SyntaxError: Illegal 'use strict' directive in function with non-simple paramete
  <li>{{jsxref("Operators/Destructuring_assignment", "Destructuring parameters", "", 1)}}</li>
 </ul>
 
-<p><code>"use strict"</code> 지시문은 ECMAScript 동작에 따라 이러한 함수의 맨 위에 허용되지 않습니다.</p>
+<p><code>"use strict"</code> 지시문은 ECMAScript 동작에 따라 이러한 함수의 맨 위에 허용되지 않습니다.</p>
 
 <h2 id="Examples">Examples</h2>
 
 <h3 id="기능_명세서">기능 명세서</h3>
 
-<p>다음은 함수 <code>sum</code> 에는 기본 매개 변수 <code>a=1</code> 및 <code>b=2</code>가 있는 경우입니다:</p>
+<p>다음은 함수 <code>sum</code> 에는 기본 매개 변수 <code>a=1</code> 및 <code>b=2</code>가 있는 경우입니다:</p>
 
 <pre class="brush: js example-bad">function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
@@ -45,7 +45,7 @@ SyntaxError: Illegal 'use strict' directive in function with non-simple paramete
 }
 </pre>
 
-<p>함수가 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> 모드에 있어야 하고 전체 스크립트 또는 포함된 함수가 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>에 있어도 괜찮으면 함수 외부에서 <code>"use strict"</code> 지시문을 이동할 수 있습니다:</p>
+<p>함수가 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> 모드에 있어야 하고 전체 스크립트 또는 포함된 함수가 <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>에 있어도 괜찮으면 함수 외부에서 <code>"use strict"</code> 지시문을 이동할 수 있습니다:</p>
 
 <pre class="brush: js example-good">'use strict';
 function sum(a = 1, b = 2) {
@@ -76,7 +76,7 @@ function sum(a = 1, b = 2) {
 
 <h3 id="화살표_함수">화살표 함수</h3>
 
-<p>화살표 함수가 <code>this</code>에 접근해야 하는 경우에는,  둘러싼 함수로 화살표 함수를 사용할 수 있습니다:</p>
+<p>화살표 함수가 <code>this</code>에 접근해야 하는 경우에는,  둘러싼 함수로 화살표 함수를 사용할 수 있습니다:</p>
 
 <pre class="brush: js example-bad">var callback = (...args) =&gt; {
   // SyntaxError: "use strict" not allowed in function with rest parameter

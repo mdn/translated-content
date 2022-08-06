@@ -14,4 +14,4 @@ Un pseudo-code (également appelé LDA pour Langage de Description d'Algorithmes
 
 ### **Culture générale**
 
-- {{interwiki("wikipedia","Pseudo-code")}} sur Wikipédia.
+- [Pseudo-code](https://fr.wikipedia.org/wiki/Pseudo-code) sur Wikipédia.

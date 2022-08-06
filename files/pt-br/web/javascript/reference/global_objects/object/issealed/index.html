@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>Object.isSealed()</strong></code> determina se um objeto está selado.</p>
+<p>O método <code><strong>Object.isSealed()</strong></code> determina se um objeto está selado.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-issealed.html")}}</div>
 
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Retorna <code>true</code> se o objeto está selado, senão <code>false</code>. Um objeto está selado se ele for "não {{jsxref("Object.isExtensible", "extensible", "", 1)}}" e se todas as suas propriedades estão como "não configuráveis" e assim sendo "não removíveis" (mas não necessariamente "não escrevíveis").</p>
+<p>Retorna <code>true</code> se o objeto está selado, senão <code>false</code>. Um objeto está selado se ele for "não {{jsxref("Object.isExtensible", "extensible", "", 1)}}" e se todas as suas propriedades estão como "não configuráveis" e assim sendo "não removíveis" (mas não necessariamente "não escrevíveis").</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -50,7 +50,7 @@ Object.isSealed(hasProp); // === false
 // Mas torne-os todos "não configuráveis"
 // e o objeto se tornará selado.
 Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+  configurable: false
 });
 Object.isSealed(hasProp); // === true
 
@@ -79,7 +79,7 @@ Object.isFrozen(s3); // === true
 
 <h2 id="Notas">Notas</h2>
 
-<p>No ES5, se o argumento para esse método não é um objeto (um primitivo), então ele irá causar um {{jsxref("TypeError")}}. No ES2015, um argumento que não seja objeto irá ser tratado como se fosse um objeto selado qualquer, simplesmente retornando <code>true</code>.</p>
+<p>No ES5, se o argumento para esse método não é um objeto (um primitivo), então ele irá causar um {{jsxref("TypeError")}}. No ES2015, um argumento que não seja objeto irá ser tratado como se fosse um objeto selado qualquer, simplesmente retornando <code>true</code>.</p>
 
 <pre class="brush: js">Object.isSealed(1);
 // TypeError: 1 is not an object (ES5 code)
@@ -105,12 +105,12 @@ Object.isSealed(1);
   <tr>
    <td>{{SpecName('ES6', '#sec-object.issealed', 'Object.isSealed')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

@@ -24,7 +24,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 
 <p><span class="seoSummary">Tener puntuación puede hacer el juego más interesante — puedes intentar batir tu mejor puntuación, a la de tus amigos. En este artículo añadiremos un sistema de puntuación al juego.</span></p>
 
-<p>Usaremos una variable separada para almacenar la puntuación y el método  <code>text()</code> de Phaser para mostrarla en la pantalla.</p>
+<p>Usaremos una variable separada para almacenar la puntuación y el método  <code>text()</code> de Phaser para mostrarla en la pantalla.</p>
 
 <h2 id="Nuevas_variables">Nuevas variables</h2>
 
@@ -54,7 +54,7 @@ var score = 0;
 
 <h2 id="Actualizar_el_juego_cuando_los_ladrillos_se_han_destruido">Actualizar el juego cuando los ladrillos se han destruido</h2>
 
-<p>Incrementaremos el número de puntos cada vez que la pelota golpee en un ladrillo y actualizaremos el <code>scoreText</code> para mostrar la puntuación actual. Esto, lo podremos hacer usando el método <code>setText()</code>  — añade las dos siguientes líneas a la función<code> ballHitBrick()</code>:</p>
+<p>Incrementaremos el número de puntos cada vez que la pelota golpee en un ladrillo y actualizaremos el <code>scoreText</code> para mostrar la puntuación actual. Esto, lo podremos hacer usando el método <code>setText()</code>  — añade las dos siguientes líneas a la función<code> ballHitBrick()</code>:</p>
 
 <pre class="brush: js">function ballHitBrick(ball, brick) {
     brick.kill();
@@ -73,6 +73,6 @@ var score = 0;
 
 <h2 id="Próximos_pasos">Próximos pasos</h2>
 
-<p>Ya tenemos un sistema de puntuación, pero para qué sirve jugar y mantener la puntuación si no se puede ganar.  Veremos cómo podemos añadir la victoria, permitiendonos así ganar el juego.</p>
+<p>Ya tenemos un sistema de puntuación, pero para qué sirve jugar y mantener la puntuación si no se puede ganar.  Veremos cómo podemos añadir la victoria, permitiendonos así ganar el juego.</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}</p>

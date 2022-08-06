@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Errors/Var_hides_argument
 ---
 {{jsSidebar("Errors")}}
 
-JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)固有の例外 "variable redeclares argument" は、関数の引数で使用された名前が、関数の本体で [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の代入を使用して再宣言された場合に発生します。
+JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)固有の例外 "variable redeclares argument" は、関数の引数で使用された名前が、関数の本体で [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の代入を使用して再宣言された場合に発生します。
 
 ## エラーメッセージ
 

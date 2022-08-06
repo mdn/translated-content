@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLDialogElement
 ---
 <div>{{APIRef("HTML DOM")}}{{SeeCompatTable}}</div>
 
-<p><strong><code>HTMLDialogElement</code></strong> - интерфейс взаимодействия, предоставляющий методы для управления {{HTMLElement("dialog")}} элементами. Он наследует свойства и методы от {{domxref("HTMLElement")}}.</p>
+<p><strong><code>HTMLDialogElement</code></strong> - интерфейс взаимодействия, предоставляющий методы для управления {{HTMLElement("dialog")}} элементами. Он наследует свойства и методы от {{domxref("HTMLElement")}}.</p>
 
 <p>{{InheritanceDiagram(600, 80)}}</p>
 
@@ -20,9 +20,9 @@ translation_of: Web/API/HTMLDialogElement
 
 <dl>
  <dt>{{domxref("HTMLDialogElement.open")}}</dt>
- <dd>{{domxref("Boolean")}} отражает HTML атрибут элемента {{htmlattrxref("open", "dialog")}}, указывающий на то, доступно ли диалоговое окно для воздействия.</dd>
+ <dd>{{domxref("Boolean")}} отражает HTML атрибут элемента {{htmlattrxref("open", "dialog")}}, указывающий на то, доступно ли диалоговое окно для воздействия.</dd>
  <dt>{{domxref("HTMLDialogElement.returnValue")}}</dt>
- <dd>{{domxref("DOMString")}} устанавливает или возвращает передаваемое диалоговому окну значение.</dd>
+ <dd>{{domxref("DOMString")}} устанавливает или возвращает передаваемое диалоговому окну значение.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -31,16 +31,16 @@ translation_of: Web/API/HTMLDialogElement
 
 <dl>
  <dt>{{domxref("HTMLDialogElement.close()")}}</dt>
- <dd>Закрывает диалоговое окно. Опциональный {{domxref("DOMString")}} может быть передан как аргумент, обновляющий <code>returnValue</code> диалогового окна.</dd>
+ <dd>Закрывает диалоговое окно. Опциональный {{domxref("DOMString")}} может быть передан как аргумент, обновляющий <code>returnValue</code> диалогового окна.</dd>
  <dt>{{domxref("HTMLDialogElement.show()")}}</dt>
- <dd>Показывает диалоговое окно modelessly, т.е. остаётся возможность взаимодействовать с контентом вне диалогового окна.</dd>
+ <dd>Показывает диалоговое окно modelessly, т.е. остаётся возможность взаимодействовать с контентом вне диалогового окна.</dd>
  <dt>{{domxref("HTMLDialogElement.showModal()")}}</dt>
- <dd>Показывает диалог как модальное окно поверх любых других диалоговых окон, которые также могут существовать в данный момент. Взаимодействие с контентом вне диалогового окна заблокировано.</dd>
+ <dd>Показывает диалог как модальное окно поверх любых других диалоговых окон, которые также могут существовать в данный момент. Взаимодействие с контентом вне диалогового окна заблокировано.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Примеры ниже показывают простую кнопку, которая при нажатии открывает {{htmlelement("dialog")}}, содержащий элемент {{htmlelement("form")}}, используя  метод {{domxref("HTMLDialogElement.showModal()")}}. Вы можете нажать кнопку <em>Отмены, </em>чтобы закрыть диалоговое окно (используя функцию {{domxref("HTMLDialogElement.close()")}}), или принять форму, использую кнопку <em>Принятия</em>.</p>
+<p>Примеры ниже показывают простую кнопку, которая при нажатии открывает {{htmlelement("dialog")}}, содержащий элемент {{htmlelement("form")}}, используя  метод {{domxref("HTMLDialogElement.showModal()")}}. Вы можете нажать кнопку <em>Отмены, </em>чтобы закрыть диалоговое окно (используя функцию {{domxref("HTMLDialogElement.close()")}}), или принять форму, использую кнопку <em>Принятия</em>.</p>
 
 <pre class="brush: html">  &lt;!-- Simple pop-up dialog box, containing a form --&gt;
   &lt;dialog id="favDialog"&gt;

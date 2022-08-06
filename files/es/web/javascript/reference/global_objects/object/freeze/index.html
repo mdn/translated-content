@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/freeze
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>Object.freeze()</strong></code> <em>congela</em> un objeto, es decir: impide que se le agreguen nuevas propiedades; impide que se puedan eliminar las propiedades ya existentes; impide que dichas propiedades, o su capacidad de enumeración, configuración, o escritura, puedan ser modificadas; impide también que se pueda modificar su prototipo. El método devuelve el objeto recibido.</p>
+<p>El método <code><strong>Object.freeze()</strong></code> <em>congela</em> un objeto, es decir: impide que se le agreguen nuevas propiedades; impide que se puedan eliminar las propiedades ya existentes; impide que dichas propiedades, o su capacidad de enumeración, configuración, o escritura, puedan ser modificadas; impide también que se pueda modificar su prototipo. El método devuelve el objeto recibido.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-freeze.html")}}</div>
 
@@ -29,9 +29,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/freeze
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Nada puede ser agregado o removido de las propiedades establecidas de un objeto <em>congelado</em>. Cualquier intento de hacerlo fallará, ya sea de manera silenciosa o <em>arrojando una excepción </em>{{jsxref("TypeError")}} (más comunmente, pero no exclusivamente, en {{jsxref("Strict_mode", "strict mode", "", 1)}}).</p>
+<p>Nada puede ser agregado o removido de las propiedades establecidas de un objeto <em>congelado</em>. Cualquier intento de hacerlo fallará, ya sea de manera silenciosa o <em>arrojando una excepción </em>{{jsxref("TypeError")}} (más comunmente, pero no exclusivamente, en {{jsxref("Strict_mode", "strict mode", "", 1)}}).</p>
 
-<p>Los valores no pueden ser cambiados por propiedades de datos. Propiedades de acceso (<em>getters</em> y <em>setters</em>) funcionan igual (y aún dan la ilusión de que estas cambiando el valor). Note que los valores que son objetos aún pueden ser modificados, a menos que esten <em>congelados</em> tambien.</p>
+<p>Los valores no pueden ser cambiados por propiedades de datos. Propiedades de acceso (<em>getters</em> y <em>setters</em>) funcionan igual (y aún dan la ilusión de que estas cambiando el valor). Note que los valores que son objetos aún pueden ser modificados, a menos que esten <em>congelados</em> tambien.</p>
 
 <p>La función retorna el mismo objeto pasado en ella, no crea una copia <em>congelada</em></p>
 
@@ -97,20 +97,20 @@ obj1.internal.a // 'aValue'
 // Para hacerlo, usamos esta función.
 function deepFreeze(obj) {
 
-  // Recuperamos el nombre de las propiedades en obj
-  var propNames = Object.getOwnPropertyNames(obj);
+  // Recuperamos el nombre de las propiedades en obj
+  var propNames = Object.getOwnPropertyNames(obj);
 
-  // Congelamos las propiedades antes de congelar a obj
-  propNames.forEach(function(name) {
-    var prop = obj[name];
+  // Congelamos las propiedades antes de congelar a obj
+  propNames.forEach(function(name) {
+    var prop = obj[name];
 
-    // Si la propiedad es un objeto, llamaremos a deepFreezze para que congele las propiedades de ese objeto
-    if (typeof prop == 'object' &amp;&amp; prop !== null &amp;&amp; !Object.isFrozen(prop))
-      deepFreeze(prop);
-  });
+    // Si la propiedad es un objeto, llamaremos a deepFreezze para que congele las propiedades de ese objeto
+    if (typeof prop == 'object' &amp;&amp; prop !== null &amp;&amp; !Object.isFrozen(prop))
+      deepFreeze(prop);
+  });
 
-  // congelamos a obj
-  return Object.freeze(obj);
+  // congelamos a obj
+  return Object.freeze(obj);
 }
 
 obj2 = {
@@ -124,7 +124,7 @@ obj2.internal.a; // undefined
 
 <h2 id="Notas">Notas</h2>
 
-<p>En ES5, si el argumento pasado a este método no es un objeto (un primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un argumento no-objeto será tratado como si fuera un objeto <em>congelado</em> cualquiera, simplemente lo regresa.</p>
+<p>En ES5, si el argumento pasado a este método no es un objeto (un primitivo), entonces causará un {{jsxref("TypeError")}}. En ES6, un argumento no-objeto será tratado como si fuera un objeto <em>congelado</em> cualquiera, simplemente lo regresa.</p>
 
 <pre class="brush: js">&gt; Object.freeze(1)
 TypeError: 1 is not an object // Código ES5
@@ -150,12 +150,12 @@ TypeError: 1 is not an object // Código ES5
   <tr>
    <td>{{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

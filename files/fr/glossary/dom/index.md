@@ -14,12 +14,12 @@ Le DOM est l'une des [API](/fr/docs/Glossary/API) les plus utilisées sur le [We
 
 À l'origine, DOM n'était pas standardisé. Il ne l'a été que lorsque les navigateurs ont commencé à implémenter [JavaScript](/fr/docs/Glossary/JavaScript). Le DOM qui découle de cette période initiale est parfois appelé DOM 0. À l'heure actuelle, le W3C édicte les spécifications de la norme DOM
 
-1.  [Document Object Model (DOM)](https://fr.wikipedia.org/wiki/Document_Object_Model) sur Wikipedia
-2.  [La documentation du DOM sur MDN](/fr/docs/Web/API/Document_Object_Model)
-3.  [Les références du DOM](https://dom.spec.whatwg.org/)
-4.  [Glossaire](/fr/docs/Glossary)
+1. [<i lang="en">Document Object Model</i> (DOM)](https://fr.wikipedia.org/wiki/Document_Object_Model) sur Wikipédia
+2. [La documentation du DOM sur MDN](/fr/docs/Web/API/Document_Object_Model)
+3. [Les références du DOM](https://dom.spec.whatwg.org/)
+4. [Glossaire](/fr/docs/Glossary)
 
-    1.  [API](/fr/docs/Glossary/API)
-    2.  [HTML](/fr/docs/Glossary/HTML)
-    3.  [XML](/fr/docs/Glossary/XML)
-    4.  [World Wide Web](/fr/docs/Glossary/World_Wide_Web)
+    1. [API](/fr/docs/Glossary/API)
+    2. [HTML](/fr/docs/Glossary/HTML)
+    3. [XML](/fr/docs/Glossary/XML)
+    4. [World Wide Web](/fr/docs/Glossary/World_Wide_Web)

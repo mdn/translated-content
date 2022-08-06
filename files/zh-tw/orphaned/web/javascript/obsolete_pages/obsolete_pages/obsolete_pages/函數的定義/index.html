@@ -30,7 +30,7 @@ var y=mycar.make;     // 仍然返回 Honda
 </pre> <p><code>myFunc</code> 函數只會在變數 <code>num</code> 等於 0 時被定義。如果 <code>num</code> 不等於 0，函數就不會被定義，且任何企圖執行這個函數的嘗試都將會失敗。</p> <h4 id="函數的表達式" name="函數的表達式">函數的表達式</h4> <p>函數也可以在表達式裡來作定義。這稱為<strong>函數表達式</strong>。一般這類函數都是<em>無名的</em>，他沒有名稱也沒關係。例如，函數 <code>square</code> 可以定義成︰</p> <pre class="eval">var square = function(number) {return number * number};
 </pre> <p>當要傳遞函數作為參數給另一個函數時，這個作法會很方便。以下範例示範了 map 函數的定義，然後呼叫端使用無名函數作為第一個參數︰</p> <pre class="eval">function map(f,a) {
   var result=new Array;
-  for (var i = 0; i != a.length; i++)
+  for (var i = 0; i != a.length; i++)
     result[i] = f(a[i]);
   return result;
 }

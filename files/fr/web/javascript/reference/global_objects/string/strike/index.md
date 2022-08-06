@@ -18,7 +18,9 @@ La méthode **`strike()`** permet de créer un élément HTML {{HTMLElement("str
 
 ## Syntaxe
 
-    str.strike()
+```js
+str.strike()
+```
 
 ### Valeur de retour
 

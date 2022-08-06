@@ -13,7 +13,7 @@ Une Valeur **{{Glossary("primitive")}}** affectée automatiquement aux **{{Gloss
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Valeur#Sciences_exactes","Valeur")}} sur Wikipedia
+- [Article en anglais sur les valeurs indéfinies](https://en.wikipedia.org/wiki/Undefined_value) sur Wikipédia
 
 ### Référence technique
 

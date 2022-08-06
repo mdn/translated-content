@@ -51,7 +51,7 @@ for (const value of iterable) {
 <pre class="brush:js notranslate">const iterable = [10, 20, 30];
 
 for (let value of iterable) {
-  value += 1;
+  value += 1;
   console.log(value);
 }
 // 11
@@ -245,9 +245,9 @@ for (const i in iterable) {
 }
 
 for (const i in iterable) {
-  if (iterable.hasOwnProperty(i)) {
-    console.log(i); // logs 0, 1, 2, "foo"
-  }
+  if (iterable.hasOwnProperty(i)) {
+    console.log(i); // logs 0, 1, 2, "foo"
+  }
 }
 
 for (const i of iterable) {
@@ -274,7 +274,7 @@ iterable.foo = 'hello';</pre>
 <pre class="brush: js notranslate">for (const i in iterable) {
   if (iterable.hasOwnProperty(i)) {
     console.log(i); // 0, 1, 2, "foo" と出力
-  }
+  }
 }</pre>
 
 <p>このループは最初のものと似ていますが、{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} を使用して見つかった列挙可能なプロパティがオブジェクト自身のものであるか、すなわち継承したものでないかどうかをチェックしています。オブジェクト自身のプロパティである場合は、ログ出力します。<code>0</code>, <code>1</code>, <code>2</code>, <code>foo</code> は自身のプロパティである (<strong>継承されたものではない</strong>) ため出力されます。<code>arrCustom</code> と <code>objCustom</code> は<strong>継承されたものである</strong>ために出力されません。</p>

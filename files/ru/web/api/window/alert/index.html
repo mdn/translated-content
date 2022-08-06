@@ -5,7 +5,7 @@ translation_of: Web/API/Window/alert
 ---
 <p>{{ APIRef }}</p>
 
-<p>Метод <strong><code>Window.alert()</code></strong> показывает диалоговое окно с опциональным (необязательным) сообщением и кнопкой OK.</p>
+<p>Метод <strong><code>Window.alert()</code></strong> показывает диалоговое окно с опциональным (необязательным) сообщением и кнопкой OK.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -31,13 +31,13 @@ translation_of: Web/API/Window/alert
 
 <h2 id="Notes">Примечания</h2>
 
-<p>Этот диалог следует использовать для сообщений, которые не требуют никакого ответа от пользователя, кроме подтверждения самого сообщения.</p>
+<p>Этот диалог следует использовать для сообщений, которые не требуют никакого ответа от пользователя, кроме подтверждения самого сообщения.</p>
 
-<p>Окна сообщений - модальные, они препятствуют получению пользователем доступа к другим частям страницы до тех пор, пока окно не будет закрыто. По этой причине, вам не следует злоупотреблять этой функцией.</p>
+<p>Окна сообщений - модальные, они препятствуют получению пользователем доступа к другим частям страницы до тех пор, пока окно не будет закрыто. По этой причине, вам не следует злоупотреблять этой функцией.</p>
 
-<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.confirm</span> Пользователи<a href="/en-US/Chrome" title="Chrome"> Mozilla Chrome</a> (например, расширения для Firefox) должны использовать метод {{interface("nsIPromptService")}}.</p>
+<p><span class="comment">The following text is shared between this article, DOM:window.prompt and DOM:window.confirm</span> Пользователи<a href="/en-US/Chrome" title="Chrome"> Mozilla Chrome</a> (например, расширения для Firefox) должны использовать метод <code>nsIPromptService</code>.</p>
 
-<p>Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован в {{htmlelement("iframe")}} пока атрибут sandbox не установлен в значение <code>allow-modal</code>.</p>
+<p>Начиная с Chrome {{CompatChrome(46.0)}} этот метод заблокирован в {{htmlelement("iframe")}} пока атрибут sandbox не установлен в значение <code>allow-modal</code>.</p>
 
 <p>{{gecko_minversion_inline("23.0")}} Аргумент является опциональным и необязательным согласно спецификации.</p>
 
@@ -54,13 +54,13 @@ translation_of: Web/API/Window/alert
    <td>{{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td>
-    <p> </p>
+    <p> </p>
    </td>
   </tr>
  </tbody>
 </table>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
@@ -69,7 +69,7 @@ translation_of: Web/API/Window/alert
 <h2 id="See_also">Смотрите также</h2>
 
 <ul>
+ <li>Элемент {{HTMLElement("dialog")}}</li>
  <li>{{domxref("window.confirm","confirm")}}</li>
  <li>{{domxref("window.prompt","prompt")}}</li>
- <li>Для информации о <a href="/en-US/docs/Chrome" title="/en-US/docs/Chrome">Mozilla Chrome</a> смотрите {{ifmethod("nsIPromptService","alert")}} и {{ifmethod("nsIPromptService","alertCheck")}}</li>
 </ul>

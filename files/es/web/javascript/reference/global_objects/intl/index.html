@@ -30,31 +30,31 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl
 
 <h2 id="Identificación_de_variantes_de_lenguaje_y_negociación">Identificación de variantes de lenguaje y negociación</h2>
 
-<p>Los constructores de internacionalización, así como otros metodos de constructores sensibles al lenguaje (listados bajo {{anch("See_also", "Ver más")}}) siguen un mismo patrón para identificar variantes de lenguaje y determinar aquella a utilizar: todos aceptan los argumentos <code>locales</code> y <code>options</code>, y negocian las variantes requeridas contra aquellas que soportan utilizando un algoritmo especificado en la propiedad <code>options.localeMatcher</code>.</p>
+<p>Los constructores de internacionalización, así como otros metodos de constructores sensibles al lenguaje (listados bajo <a href="#see_also">Ver más</a>) siguen un mismo patrón para identificar variantes de lenguaje y determinar aquella a utilizar: todos aceptan los argumentos <code>locales</code> y <code>options</code>, y negocian las variantes requeridas contra aquellas que soportan utilizando un algoritmo especificado en la propiedad <code>options.localeMatcher</code>.</p>
 
 <h3 id="locales"><code>locales</code></h3>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">El argumento </span></font>locales</code> debe ser tanto una cadena que contenga una  <a href="http://tools.ietf.org/html/rfc5646">Etiqueta de Idioma BCP 47</a>, o una matriz de etiquetas de dicho idioma. Si el argumento <code>locales</code> no es provisto o es indefinido, será usado la localicacion predeterminada.</p>
+<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">El argumento </span></font>locales</code> debe ser tanto una cadena que contenga una  <a href="http://tools.ietf.org/html/rfc5646">Etiqueta de Idioma BCP 47</a>, o una matriz de etiquetas de dicho idioma. Si el argumento <code>locales</code> no es provisto o es indefinido, será usado la localicacion predeterminada.</p>
 
-<p>Una etiqueta de idioma BCP 47 define un idioma y minimamente contiene un código primario de idioma. En estos la forma mas comun puede contener, : un código de idioma, un código del sistema de escritura, y un código de país o región, todo separado por guiones. Mientras la etiqueta no es case sensitive, es recomendable usar un titulo para el código del sistema de escritura, mayúsculas para el país y región y minúsculas para todo lo demás.</p>
+<p>Una etiqueta de idioma BCP 47 define un idioma y minimamente contiene un código primario de idioma. En estos la forma mas comun puede contener, : un código de idioma, un código del sistema de escritura, y un código de país o región, todo separado por guiones. Mientras la etiqueta no es case sensitive, es recomendable usar un titulo para el código del sistema de escritura, mayúsculas para el país y región y minúsculas para todo lo demás.</p>
 
 <p>Ejemplos:</p>
 
 <ul>
  <li><code>"hi"</code>: Hindi (idioma principal).</li>
  <li><code>"de-AT"</code>: Alemán usado en Austria (idioma principal con código del país).</li>
- <li><code>"zh-Hans-CN"</code>: Escritura China en caracteres simplificados como se usa en China (idioma principal con código de escritura y código del país).</li>
+ <li><code>"zh-Hans-CN"</code>: Escritura China en caracteres simplificados como se usa en China (idioma principal con código de escritura y código del país).</li>
 </ul>
 
 <p>Las subetiquetas que identifican idiomas, scripts, países (regiones), y (raramente utilizadas) variantes en las etiquetas de idiomas BCP 47 pueden ser encontradas en el <a href="http://www.iana.org/assignments/language-subtag-registry">Registro de subetiquetas de idioma de la IANA</a>.</p>
 
-<p>BCP 47 permite también extensiones. Las funciones de internacionalización de JavaScript utilizan la extensión <code>"u"</code> (Unicode), misma que puede emplearse para requerir personalizacioón de los objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, o {{jsxref("DateTimeFormat")}}. A continuación algunos ejemplos:</p>
+<p>BCP 47 permite también extensiones. Las funciones de internacionalización de JavaScript utilizan la extensión <code>"u"</code> (Unicode), misma que puede emplearse para requerir personalizacioón de los objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, o {{jsxref("DateTimeFormat")}}. A continuación algunos ejemplos:</p>
 
 <ul>
  <li><code>"de-DE-u-co-phonebk"</code>: Utiliza la variante de guía telefónica del orden de clasificación alemán, que expande las vocales con umlaut a pares de caracteres: ä → ae, ö → oe, ü → ue.</li>
- <li><code>"th-TH-u-nu-thai"</code>: Utiliza dígitos tailandeses (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) para formatear números.</li>
+ <li><code>"th-TH-u-nu-thai"</code>: Utiliza dígitos tailandeses (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) para formatear números.</li>
  <li><code>"ja-JP-u-ca-japanese"</code>: Use the Japanese calendar in date and time formatting, so that 2013 is expressed as the year 25 of the Heisei period, or 平成25.</li>
- <li><code>"en-GB-u-ca-islamic"</code>: use British English with the Islamic (Hijri) calendar, where the Gregorian date 14 October, 2017 is the Hijri date 24 Muharram, 1439.</li>
+ <li><code>"en-GB-u-ca-islamic"</code>: use British English with the Islamic (Hijri) calendar, where the Gregorian date 14 October, 2017 is the Hijri date 24 Muharram, 1439.</li>
 </ul>
 
 <h3 id="Locale_negotiation">Locale negotiation</h3>

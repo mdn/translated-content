@@ -10,7 +10,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 
 <div>{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}</div>
 
-<p class="summary"><font>Исходя из предыдущей статьи, иногда создание сложных элементов UI, которые включают в себя несемантичный HTML и динамически обновляемый с помощью JavaScript контент, может быть затруднено. </font><font>WAI-ARIA - это технология, которая может помочь в решении таких проблем, добавляя дополнительную разметку, которую браузеры и вспомогательные технологии могут распознавать и использовать, чтобы пользователи знали, что происходит. В этой статье</font><font> мы покажем, как использовать эту технологию на базовом уровне для улучшения доступности.</font></p>
+<p class="summary"><font>Исходя из предыдущей статьи, иногда создание сложных элементов UI, которые включают в себя несемантичный HTML и динамически обновляемый с помощью JavaScript контент, может быть затруднено. </font><font>WAI-ARIA - это технология, которая может помочь в решении таких проблем, добавляя дополнительную разметку, которую браузеры и вспомогательные технологии могут распознавать и использовать, чтобы пользователи знали, что происходит. В этой статье</font><font> мы покажем, как использовать эту технологию на базовом уровне для улучшения доступности.</font></p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -31,22 +31,22 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 
 <h3 id="Новый_набор_проблем">Новый набор проблем</h3>
 
-<p>С тех пор как веб-приложения стали более сложными и динамичными, появились новые специальные возможности и проблемы.</p>
+<p>С тех пор как веб-приложения стали более сложными и динамичными, появились новые специальные возможности и проблемы.</p>
 
-<p><font><font>Например, HTML5 ввёл ряд семантических элементов, </font><font>чтобы определить общую разметку страниц ( </font></font><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/nav" title="HTML-элемент &lt;nav> определяет отдельную секцию документа, назначение которой обозначение ссылок навигации (как внутри текущего документа, так и ведущих на другую страницу). В качестве примера такой секции можно привести меню, якорные ссылки."><code>&lt;nav&gt;</code></a><font><font>, </font></font><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/footer" title="HTML-элемент  &lt;footer> представляет нижний колонтитул (футер, подвал) для своего ближайшего элемента секционного контента или секционного корня. Футер обычно содержит информацию об авторе секции, информацию об авторском праве или ссылки на связанные документы."><code>&lt;footer&gt;</code></a><font><font>и т.д.). До того как </font><font>они были доступны, разработчики просто использовали </font></font><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/div" title='Элемент разделения контента HTML (&lt;div>) является базовым контейнером для элементов основного потока ( flow content ). Он не влияет на контент или формат пока не стилизован, используя CSS. Являясь "чистым" контейнером, элемент &lt;div> по своему существу не представляет ничего. Между тем, он используется для группировки контента, что позволяет легко его стилизовать, используя '><code>&lt;div&gt;</code></a><font><font> с идентификаторами или классами, например </font></font><code>&lt;div class="nav"&gt;</code><font><font>, но это создавало проблемы, так как не было никакого простого способа найти определённый раздел страницы программным способом.</font></font></p>
+<p><font><font>Например, HTML5 ввёл ряд семантических элементов, </font><font>чтобы определить общую разметку страниц ( </font></font><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/nav" title="HTML-элемент &lt;nav> определяет отдельную секцию документа, назначение которой обозначение ссылок навигации (как внутри текущего документа, так и ведущих на другую страницу). В качестве примера такой секции можно привести меню, якорные ссылки."><code>&lt;nav&gt;</code></a><font><font>, </font></font><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/footer" title="HTML-элемент  &lt;footer> представляет нижний колонтитул (футер, подвал) для своего ближайшего элемента секционного контента или секционного корня. Футер обычно содержит информацию об авторе секции, информацию об авторском праве или ссылки на связанные документы."><code>&lt;footer&gt;</code></a><font><font>и т.д.). До того как </font><font>они были доступны, разработчики просто использовали </font></font><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/div" title='Элемент разделения контента HTML (&lt;div>) является базовым контейнером для элементов основного потока ( flow content ). Он не влияет на контент или формат пока не стилизован, используя CSS. Являясь "чистым" контейнером, элемент &lt;div> по своему существу не представляет ничего. Между тем, он используется для группировки контента, что позволяет легко его стилизовать, используя '><code>&lt;div&gt;</code></a><font><font> с идентификаторами или классами, например </font></font><code>&lt;div class="nav"&gt;</code><font><font>, но это создавало проблемы, так как не было никакого простого способа найти определённый раздел страницы программным способом.</font></font></p>
 
-<p>Первоначальным решением было добавить одну или несколько скрытых ссылок вверху страницы для ссылки на навигацию (или на что-то ещё), например:</p>
+<p>Первоначальным решением было добавить одну или несколько скрытых ссылок вверху страницы для ссылки на навигацию (или на что-то ещё), например:</p>
 
 <pre class="brush: html">&lt;a href="#hidden" class="hidden"&gt;Skip to navigation&lt;/a&gt;</pre>
 
 <p>Но это все ещё не очень точно, и может использоваться только тогда, когда программа чтения с экрана читает сверху страницы.</p>
 
-<p>В качестве другого примера, в приложения стали использовать сложные элементы управления, такие как поля выбора даты, ползунки для выбора значений и т.д. HTML5 предоставляет специальные типы ввода для отображения таких элементов управления:</p>
+<p>В качестве другого примера, в приложения стали использовать сложные элементы управления, такие как поля выбора даты, ползунки для выбора значений и т.д. HTML5 предоставляет специальные типы ввода для отображения таких элементов управления:</p>
 
 <pre class="brush: html">&lt;input type="date"&gt;
 &lt;input type="range"&gt;</pre>
 
-<p><font><font>Они не очень хорошо поддерживаются в разных браузерах, и их очень сложно стилизовать, что делает их не очень полезными для интеграции с дизайном сайтов. </font><font>В результате разработчики нередко используют библиотеки JavaScript, которые генерируют такие элементы управления, как последовательность вложенных </font></font><a href="/ru/docs/Web/HTML/Element/div" title="Элемент разделения контента HTML (&lt;div>) является универсальным контейнером для потокового контента. Он не влияет на контент или макет до тех пор, пока не будет стилизован с помощью CSS."><code>&lt;div&gt;</code></a><font><font>элементов или ячеек таблиц с именами классов, которые затем стилизуются с помощью CSS и управляют с помощью JavaScript.</font></font></p>
+<p><font><font>Они не очень хорошо поддерживаются в разных браузерах, и их очень сложно стилизовать, что делает их не очень полезными для интеграции с дизайном сайтов. </font><font>В результате разработчики нередко используют библиотеки JavaScript, которые генерируют такие элементы управления, как последовательность вложенных </font></font><a href="/ru/docs/Web/HTML/Element/div" title="Элемент разделения контента HTML (&lt;div>) является универсальным контейнером для потокового контента. Он не влияет на контент или макет до тех пор, пока не будет стилизован с помощью CSS."><code>&lt;div&gt;</code></a><font><font>элементов или ячеек таблиц с именами классов, которые затем стилизуются с помощью CSS и управляют с помощью JavaScript.</font></font></p>
 
 <p>The problem here is that visually they work, but screenreaders can't make any sense of what they are at all, and their users just get told that they can see a jumble of elements with no semantics to describe what they mean.</p>
 
@@ -56,7 +56,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 
 <ul>
  <li><strong>Roles</strong> — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. <code>role="navigation"</code> ({{htmlelement("nav")}}) or <code>role="complementary"</code> ({{htmlelement("aside")}}), but there are also others that describe different pages structures, such as <code>role="banner"</code>, <code>role="search"</code>, <code>role="tabgroup"</code>, <code>role="tab"</code>, etc., which are commonly found in UIs.</li>
- <li><strong>Properties</strong> — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, <code>aria-required="true"</code> specifies that a form input needs to be filled in to be valid, whereas <code>aria-labelledby="label"</code> allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using <code>&lt;label for="input"&gt;</code>. As an example, you could use <code>aria-labelledby</code> to specify that a key description contained in a {{htmlelement("div")}} is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the <code>alt</code> attribute. You can see an example of this at <a href="/en-US/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives">Text alternatives</a>.</li>
+ <li><strong>Properties</strong> — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, <code>aria-required="true"</code> specifies that a form input needs to be filled in to be valid, whereas <code>aria-labelledby="label"</code> allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using <code>&lt;label for="input"&gt;</code>. As an example, you could use <code>aria-labelledby</code> to specify that a key description contained in a {{htmlelement("div")}} is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the <code>alt</code> attribute. You can see an example of this at <a href="/en-US/docs/Learn/Accessibility/HTML?document_saved=true#Text_alternatives">Text alternatives</a>.</li>
  <li><strong>States</strong> — Special properties that define the current conditions of elements, such as <code>aria-disabled="true"</code>, which specifies to a screenreader that a form input is currently disabled. States differ from properties in that properties don't change throughout the lifecycle of an app, whereas states can change, generally programmatically via JavaScript.</li>
 </ul>
 
@@ -99,7 +99,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 <ol>
  <li><strong>Signposts/Landmarks</strong>: ARIA's <code>role</code> attribute values can act as landmarks that either replicate the semantics of HTML5 elements (e.g. {{htmlelement("nav")}}), or go beyond HTML5 semantics to provide signposts to different functional areas, e.g <code>search</code>, <code>tabgroup</code>, <code>tab</code>, <code>listbox</code>, etc.</li>
  <li><strong>Dynamic content updates</strong>: Screenreaders tend to have difficulty with reporting constantly changing content; with ARIA we can use <code>aria-live</code> to inform screenreader users when an area of content is updated, e.g. via <a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, or <a href="/en-US/docs/Web/API/Document_Object_Model">DOM APIs</a>.</li>
- <li><strong>Enhancing keyboard accessibility</strong>: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using <code>tabindex</code>).</li>
+ <li><strong>Enhancing keyboard accessibility</strong>: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using <code>tabindex</code>).</li>
  <li><strong>Accessibility of non-semantic controls</strong>: When a series of nested <code>&lt;div&gt;</code>s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screenreader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like <code>button</code>, <code>listbox</code>, or <code>tabgroup</code>, and properties like <code>aria-required</code> or <code>aria-posinset</code> to provide further clues as to functionality.</li>
 </ol>
 
@@ -187,7 +187,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 
 <p>Beyond this, the site is more likely to be accessible to users of older browsers such as IE8; it is worth including ARIA roles for that purpose. And if for some reason your site is built using just <code>&lt;div&gt;</code>s, you should definitely include the ARIA roles to provide these much needed semantics!</p>
 
-<p>The improved semantics of the search form have shown what is made possible when ARIA goes beyond the semantics available in HTML5. You'll see a lot more about these semantics and the power of ARIA properties/attributes below, especially in the {{anch("Accessibility of non-semantic controls")}} section. For now though, let's look at how ARIA can help with dynamic content updates.</p>
+<p>The improved semantics of the search form have shown what is made possible when ARIA goes beyond the semantics available in HTML5. You'll see a lot more about these semantics and the power of ARIA properties/attributes below, especially in the <a href="#accessibility_of_non-semantic_controls">Accessibility of non-semantic controls</a> section. For now though, let's look at how ARIA can help with dynamic content updates.</p>
 
 <h3 id="Dynamic_content_updates">Dynamic content updates</h3>
 
@@ -252,7 +252,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 
 <ul>
  <li><code>tabindex="0"</code> — as indicated above, this value allows elements that are not normally tabbable to become tabbable. This is the most useful value of <code>tabindex</code>.</li>
- <li><code>tabindex="-1"</code> — this allows not normally tabbable elements to receive focus programmatically, e.g. via JavaScript, or as the target of links. </li>
+ <li><code>tabindex="-1"</code> — this allows not normally tabbable elements to receive focus programmatically, e.g. via JavaScript, or as the target of links. </li>
 </ul>
 
 <p>We discussed this in more detail and showed a typical implementation back in our HTML accessibility article — see <a href="/en-US/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>.</p>
@@ -283,7 +283,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
  <li>First of all, add a paragraph just above the opening <code>&lt;form&gt;</code> tag, like the one below, and mark both the form <code>&lt;label&gt;</code>s with an asterisk. This is normally how we mark required fields for sighted users.
   <pre class="brush: html">&lt;p&gt;Fields marked with an asterisk (*) are required.&lt;/p&gt;</pre>
  </li>
- <li>This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-required">aria-required</a></code> attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the <code>&lt;input&gt;</code> elements like so:
+ <li>This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-required">aria-required</a></code> attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the <code>&lt;input&gt;</code> elements like so:
   <pre class="brush: html">&lt;input type="text" name="name" id="name" aria-required="true"&gt;
 
 &lt;input type="number" name="age" id="age" aria-required="true"&gt;</pre>
@@ -298,7 +298,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 <p><strong>Note</strong>: You can see the finished example live at <a href="http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html">form-validation-updated.html</a>.</p>
 </div>
 
-<p>WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> property to provide a label where we don't want the label to be visible to sighted users (see the {{anch("Signposts/Landmarks")}} section, above). There are some other labelling techniques that use other properties such as <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> if you want to designate a non-<code>&lt;label&gt;</code> element as a label or label multiple form inputs with the same label, and <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>, if you want to associate other information with a form input and have it read out as well. See <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a><span class="subtitle"> for more details.</span></p>
+<p>WAI-ARIA also enables some advanced form labelling techniques, beyond the classic {{htmlelement("label")}} element. We already talked about using the <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-label">aria-label</a></code> property to provide a label where we don't want the label to be visible to sighted users (see the <a href="#signposts/landmarks">Signposts/Landmarks</a> section, above). There are some other labelling techniques that use other properties such as <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby">aria-labelledby</a></code> if you want to designate a non-<code>&lt;label&gt;</code> element as a label or label multiple form inputs with the same label, and <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-describedby">aria-describedby</a></code>, if you want to associate other information with a form input and have it read out as well. See <a href="http://webaim.org/techniques/forms/advanced">WebAIM's Advanced Form Labeling article</a><span class="subtitle"> for more details.</span></p>
 
 <p><span class="subtitle">There are many other useful properties and states too, for indicating the status of form elements. For example, <code><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-disabled">aria-disabled</a>="true"</code> can be used to indicate that a form field is disabled. Many browsers will just skip past disabled form fields, and they won't even be read out by screenreaders, but in some cases they will be perceived, so it is a good idea to include this attribute to let the screenreader know that a disabled input is in fact disabled.</span></p>
 
@@ -326,7 +326,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 
 <h4 id="Describing_non-semantic_buttons_as_buttons">Describing non-semantic buttons as buttons</h4>
 
-<p>A few times in this course already, we've mentioned the native accessibilty of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a> in the HTML accessibility article, and {{anch("Enhancing keyboard accessibility")}}, above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using <code>tabindex</code> and a bit of JavaScript.</p>
+<p>A few times in this course already, we've mentioned the native accessibilty of (and the accessibility issues behind using other elements to fake) buttons, links, or form elements (see <a href="/en-US/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a> in the HTML accessibility article, and <a href="#enhancing_keyboard_accessibility">Enhancing keyboard accessibility</a>, above). Basically, you can add keyboard accessibility back in without too much trouble in many cases, using <code>tabindex</code> and a bit of JavaScript.</p>
 
 <p>But what about screenreaders? They still won't see the elements as buttons. If we test our <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html">fake-div-buttons.html</a> example in a screenreader, our fake buttons will be reported using phrases like "Click me!, group", which is obviously confusing.</p>
 
@@ -351,9 +351,9 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 <p>To improve things, we've created a new version of the example called <a href="https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-tabbed-info-box.html">aria-tabbed-info-box.html</a> (<a href="http://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html">see it running live</a>). We've updated the structure of the tabbed interface like so:</p>
 
 <pre class="brush: html">&lt;ul role="tablist"&gt;
-  &lt;li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0"&gt;Tab 1&lt;/li&gt;
-  &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0"&gt;Tab 2&lt;/li&gt;
-  &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0"&gt;Tab 3&lt;/li&gt;
+  &lt;li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0"&gt;Tab 1&lt;/li&gt;
+  &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0"&gt;Tab 2&lt;/li&gt;
+  &lt;li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0"&gt;Tab 3&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="panels"&gt;
   &lt;article class="active-panel" role="tabpanel" aria-hidden="false"&gt;
@@ -385,7 +385,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 <p>In our tests, this new structure did serve to improve things overall. The tabs are now recognised as tabs (e.g. "tab" is spoken by the screenreader), the selected tab is indicated by "selected" being read out with the tab name, and the screenreader also tells you which tab number you are currently on. In addition, because of the <code>aria-hidden</code> settings (only the non-hidden tab ever has <code>aria-hidden="false"</code> set), the non-hidden content is the only one you can navigate down to, meaning the selected content is easier to find.</p>
 
 <div class="note">
-<p><strong>Note</strong>: If there is anything you explicitly don't want screen readers to read out, you can give them the <code>aria-hidden="true"</code>  attribute.</p>
+<p><strong>Note</strong>: If there is anything you explicitly don't want screen readers to read out, you can give them the <code>aria-hidden="true"</code>  attribute.</p>
 </div>
 
 <h2 id="Summary">Summary</h2>

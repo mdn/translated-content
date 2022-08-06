@@ -27,7 +27,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <p><br>
  <img alt="" src="https://mdn.mozillademos.org/files/13669/webextension-anatomy.png" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
 
-<p><span>Для получения подробной информации см. справочную страницу </span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></p>
+<p><span>Для получения подробной информации см. справочную страницу </span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></p>
 
 <p><span>Помимо ссылок, указанных в манифесте, расширение может включать дополнительные</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages">веб-страницы расширения</a><span> с поддерживающимися файлами.</span></p>
 
@@ -97,13 +97,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <ul>
  <li><font color="#0b0116"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Боковая панель (sidebar</a></font>) - это панель, отображаемая в окне браузера с левой стороны, рядом с веб-страницей</li>
- <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Всплывающие окна (popup</a>) - диалоговое окно, отображаемое по клику на <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">кнопке</a> на <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">панели инструментов</a> или в адресной строке</li>
- <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Страница настроек</a> открывается, когда пользователь обращается к настройкам расширения на странице менеджера расширений.</li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Всплывающие окна (popup</a>) - диалоговое окно, отображаемое по клику на <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">кнопке</a> на <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">панели инструментов</a> или в адресной строке</li>
+ <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Страница настроек</a> открывается, когда пользователь обращается к настройкам расширения на странице менеджера расширений.</li>
 </ul>
 
 <p>Для каждого из этих компонентов вы создаёте HTML файл и помещаете специальную информацию в <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>. HTML файл может в себя включать CSS и JavaScript файлы, как и любая web-страница.</p>
 
-<p>Всё это типы <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">веб-страниц расширения</a>, и, в отличие от нормальных веб-страниц, ваш JavaScript может использовать все привелегии WebExtension APIs, как и ваши фоновые скрипты. Они даже могут получить доступ к переменным в фоновой странице, используя {{WebExtAPIRef("runtime.getBackgroundPage()")}}.</p>
+<p>Всё это типы <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">веб-страниц расширения</a>, и, в отличие от нормальных веб-страниц, ваш JavaScript может использовать все привелегии WebExtension APIs, как и ваши фоновые скрипты. Они даже могут получить доступ к переменным в фоновой странице, используя {{WebExtAPIRef("runtime.getBackgroundPage()")}}.</p>
 
 <h2 id="Веб-страницы_расширения">Веб-страницы расширения</h2>
 
@@ -121,7 +121,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>Встраиваемые скрипты имеют доступ и могут манипулировать DOM, как и обычные скрипты, загруженные веб-страницей.</p>
 
-<p>В отличие от обычных скриптов, они могут:</p>
+<p>В отличие от обычных скриптов, они могут:</p>
 
 <ul>
  <li>Осуществлять XHR запросы.</li>
@@ -131,18 +131,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>Встраиваемые скрипты не могут напрямую взаимодействовать с обычными скриптами на странице, но они могут обмениваться сообщениями с помощью стандартного <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage()</a></code> API.</p>
 
-<p>Обычно, когда мы говорим о встраиваемых скриптах, мы отсылаемся к JavaScript, но вы так же можете внедрить CSS в веб-страницы, используя этот же механизм.</p>
+<p>Обычно, когда мы говорим о встраиваемых скриптах, мы отсылаемся к JavaScript, но вы так же можете внедрить CSS в веб-страницы, используя этот же механизм.</p>
 
 <p>Подробнее см. <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>.</p>
 
 <h2 id="Веб-доступные_ресурсы"><span class="tlid-translation translation"><span title="">Веб-доступные ресурсы</span></span></h2>
 
-<p><span class="tlid-translation translation"><span title="">Веб-доступные ресурсы</span></span> - это ресурсы вроде изображений, HTML, CSS и JavaScript, которые вы включаете в расширение и хотите сделать доступными для встраиваемых скриптов и оригинальных скриптов веб-страницы. Такие ресурсы могут быть доступны скриптам через специальную URI схему.</p>
+<p><span class="tlid-translation translation"><span title="">Веб-доступные ресурсы</span></span> - это ресурсы вроде изображений, HTML, CSS и JavaScript, которые вы включаете в расширение и хотите сделать доступными для встраиваемых скриптов и оригинальных скриптов веб-страницы. Такие ресурсы могут быть доступны скриптам через специальную URI схему.</p>
 
 <p>Например, если встраиваемый скрипт хочет добавить какие-либо изображения в веб-страницу, вы можете включить эти изображения в расширение и сделать их веб-доступными. Тогда встраиваемый скрипт может создать и добавить <code><a href="/en-US/docs/Web/HTML/Element/img">img</a></code> тэги, которые будут ссылаться на эти изображения через <code>src</code> атрибут.</p>
 
 <p>Подробнее см. <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a> секцию manifest.json.</p>
 
-<p> </p>
+<p> </p>
 
-<p> </p>
+<p> </p>

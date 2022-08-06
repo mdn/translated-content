@@ -18,7 +18,9 @@ La méthode **`getMinutes()`** renvoie les minutes pour la date renseignée d'ap
 
 ## Syntaxe
 
-    dateObj.getMinutes()
+```js
+dateObj.getMinutes()
+```
 
 ### Valeur de retour
 

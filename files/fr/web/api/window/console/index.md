@@ -16,7 +16,9 @@ La propriété **`Window.console`** en lecture seule retourne une référence à
 
 ## Syntaxe
 
-    var consoleObj = window.console;
+```js
+var consoleObj = window.console;
+```
 
 ## Exemples
 

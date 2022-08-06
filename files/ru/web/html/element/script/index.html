@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/script
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">HTML Элемент<strong> <code>&lt;script&gt;</code> </strong></span> используется для встраивания или подключения исполняемого JavaScript кода. Элемент <code>&lt;script&gt;</code> также может использоваться с другими языками, такими как <a href="/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL">GLSL</a> от <a href="/ru/docs/Web/API/WebGL_API">WebGL</a>.</p>
+<p><span class="seoSummary">HTML Элемент<strong> <code>&lt;script&gt;</code> </strong></span> используется для встраивания или подключения исполняемого JavaScript кода. Элемент <code>&lt;script&gt;</code> также может использоваться с другими языками, такими как <a href="/en-US/docs/Web/API/WebGL_API/By_example/Hello_GLSL">GLSL</a> от <a href="/ru/docs/Web/API/WebGL_API">WebGL</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -17,7 +17,7 @@ translation_of: Web/HTML/Element/script
   </tr>
   <tr>
    <th scope="row">Разрешённый контент</th>
-   <td>Динамический скрипт, используя атрибут <code>text/javascript</code>.</td>
+   <td>Динамический скрипт, используя атрибут <code>text/javascript</code>.</td>
   </tr>
   <tr>
    <th scope="row">Пропуск тегов</th>
@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/script
   <tr>
    <th scope="row">Разрешённые родительские элементы</th>
    <td>
-    <p>Любые элементы в которых разрешены <a href="/ru/docs/Web/Guide/HTML/Content_categories#Метаданные">метаданные</a> или <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a></p>
+    <p>Любые элементы в которых разрешены <a href="/ru/docs/Web/Guide/HTML/Content_categories#Метаданные">метаданные</a> или <a href="/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content">фразовый контент</a></p>
    </td>
   </tr>
   <tr>
@@ -42,41 +42,41 @@ translation_of: Web/HTML/Element/script
 
 <h2 id="Атрибуты">Атрибуты</h2>
 
-<p>Этот элемент включает <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
+<p>Этот элемент включает <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Общие_атрибуты">глобальные атрибуты</a>.</p>
 
 <dl>
  <dt>{{htmlattrdef("async")}}{{HTMLVersionInline(5)}}</dt>
- <dd>Это логический атрибут, указывающий браузеру, если возможно, загружать скрипт, указанный в атрибуте <code>{{htmlattrdef("src")}}</code>, асинхронно.</dd>
+ <dd>Это логический атрибут, указывающий браузеру, если возможно, загружать скрипт, указанный в атрибуте <code>{{htmlattrdef("src")}}</code>, асинхронно.</dd>
 </dl>
 
 <div class="warning">
-<p>Атрибут <code>{{htmlattrdef("async")}}</code> не будет оказывать никакого эффекта, если атрибут <code>{{htmlattrdef("src")}}</code> отсутствует.</p>
+<p>Атрибут <code>{{htmlattrdef("async")}}</code> не будет оказывать никакого эффекта, если атрибут <code>{{htmlattrdef("src")}}</code> отсутствует.</p>
 </div>
 
 <dl>
  <dd>
- <p>Обычно браузеры загружают <code>&lt;script&gt;</code> синхронно, (т.е. <code>async="false"</code>) во время разбора документа.</p>
+ <p>Обычно браузеры загружают <code>&lt;script&gt;</code> синхронно, (т.е. <code>async="false"</code>) во время разбора документа.</p>
  </dd>
  <dd>
- <p>Динамически вставленный <code>&lt;script&gt;</code> (используя, например, <code>document.createElement</code>) по умолчанию загружаются браузером асинхронно, поэтому для включения синхронной загрузки (т.е. когда скрипты загружаются в порядке их вставки) укажите <code>async="false"</code>.</p>
+ <p>Динамически вставленный <code>&lt;script&gt;</code> (используя, например, <code>document.createElement</code>) по умолчанию загружаются браузером асинхронно, поэтому для включения синхронной загрузки (т.е. когда скрипты загружаются в порядке их вставки) укажите <code>async="false"</code>.</p>
  </dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>Обычные элементы тега <code>script</code> передают мало информации в {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} для скриптов, которые не проходят проверку <a href="/en-US/docs/HTTP_access_control">CORS</a>. Чтобы разрешить ведение журнала ошибок сайта, которые используют отдельный домен для статических файлов (например, изображение, видео-файл, CSS-стили или Javascript-код), используйте атрибут <code>{{htmlattrdef("crossorigin")}}</code>. Посмотрите статью «<a href="/ru/docs/Web/HTML/CORS_settings_attributes">настройки атрибутов CORS</a>» для более наглядного объяснения его допустимых аргументов.</dd>
+ <dd>Обычные элементы тега <code>script</code> передают мало информации в {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} для скриптов, которые не проходят проверку <a href="/en-US/docs/HTTP_access_control">CORS</a>. Чтобы разрешить ведение журнала ошибок сайта, которые используют отдельный домен для статических файлов (например, изображение, видео-файл, CSS-стили или Javascript-код), используйте атрибут <code>{{htmlattrdef("crossorigin")}}</code>. Посмотрите статью «<a href="/ru/docs/Web/HTML/CORS_settings_attributes">настройки атрибутов CORS</a>» для более наглядного объяснения его допустимых аргументов.</dd>
 </dl>
 
 <dl>
  <dt>{{htmlattrdef("defer")}}</dt>
- <dd>Это логический атрибут, указывающий браузеру, что скрипт должен выполняться после разбора документа, но до события {{event("DOMContentLoaded")}}.</dd>
- <dd>Скрипты с атрибутом <code>{{htmlattrdef("defer")}}</code> будут предотвращать запуск события {{event("DOMContentLoaded")}} до тех пор, пока скрипт не загрузится полностью и не завершится его инициализация.</dd>
+ <dd>Это логический атрибут, указывающий браузеру, что скрипт должен выполняться после разбора документа, но до события {{event("DOMContentLoaded")}}.</dd>
+ <dd>Скрипты с атрибутом <code>{{htmlattrdef("defer")}}</code> будут предотвращать запуск события {{event("DOMContentLoaded")}} до тех пор, пока скрипт не загрузится полностью и не завершится его инициализация.</dd>
 </dl>
 
 <div class="warning">
-<p>Атрибут <code>{{htmlattrdef("defer")}}</code> не будет оказывать никакого эффекта, если атрибут <code>{{htmlattrdef("src")}}</code> отсутствует.</p>
+<p>Атрибут <code>{{htmlattrdef("defer")}}</code> не будет оказывать никакого эффекта, если атрибут <code>{{htmlattrdef("src")}}</code> отсутствует.</p>
 </div>
 
 <dl>
  <dd>Чтобы достигнуть такого же эффекта для динамически вставленных скриптов используйте <code>async=false.</code></dd>
- <dd>Скрипты с атрибутом <code>{{htmlattrdef("defer")}}</code> будут выполняться в том порядке, в котором они появились при разборе документа.</dd>
+ <dd>Скрипты с атрибутом <code>{{htmlattrdef("defer")}}</code> будут выполняться в том порядке, в котором они появились при разборе документа.</dd>
 </dl>
 
 <dl>
@@ -94,7 +94,7 @@ translation_of: Web/HTML/Element/script
 </dl>
 
 <div class="warning">
-<p>Если у элемента <code>script</code> будет указан атрибут <code>{{htmlattrdef("src")}}</code>, то он не должен иметь встроенный скрипт между тегами.</p>
+<p>Если у элемента <code>script</code> будет указан атрибут <code>{{htmlattrdef("src")}}</code>, то он не должен иметь встроенный скрипт между тегами.</p>
 </div>
 
 <dl>
@@ -127,7 +127,7 @@ translation_of: Web/HTML/Element/script
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>Элемент <code>&lt;script&gt;</code> без указания атрибутов {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} или <code>type="module"</code>, а также встроенный скрипт, загружается и выполняется сразу, до того как браузер продолжит разбор документа.</p>
+<p>Элемент <code>&lt;script&gt;</code> без указания атрибутов {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} или <code>type="module"</code>, а также встроенный скрипт, загружается и выполняется сразу, до того как браузер продолжит разбор документа.</p>
 
 <p>Для обработки скрипт должен иметь тип данных <code>text/javascript</code>, но браузеры снисходительны и блокируют обработку только в том случае, если скрипт представляет данные одного из типов: изображение (<code>image/*</code>); видео (<code>video/*</code>); аудио (<code>audio/*</code>); или <code>text/csv</code>. Если скрипт заблокирован, элементу отправляется событие {{event("error")}}, если не было отправлено событие {{event("load")}}.</p>
 
@@ -135,7 +135,7 @@ translation_of: Web/HTML/Element/script
 
 <h3 id="Основное_использование">Основное использование</h3>
 
-<p>Эти примеры показывают как импортировать скрипт используя элемент <code>&lt;script&gt;</code> в HTML4 и HTML5.</p>
+<p>Эти примеры показывают как импортировать скрипт используя элемент <code>&lt;script&gt;</code> в HTML4 и HTML5.</p>
 
 <pre class="brush: html">&lt;!-- HTML4 --&gt;
 &lt;script type="text/javascript" src="javascript.js"&gt;&lt;/script&gt;
@@ -146,7 +146,7 @@ translation_of: Web/HTML/Element/script
 
 <h3 id="Module_fallback">Module fallback</h3>
 
-<p>Браузеры, поддерживающие использование значения <code>module</code> для атрибута <code>type</code>, игнорируют любые скрипты с атрибутом <code>nomodule</code>. Это разрешает использовать модульные скрипты, и в тот же самый момент позволяет использовать <code>nomodule-</code>скрипты для браузеров без поддержки модульных скриптов.</p>
+<p>Браузеры, поддерживающие использование значения <code>module</code> для атрибута <code>type</code>, игнорируют любые скрипты с атрибутом <code>nomodule</code>. Это разрешает использовать модульные скрипты, и в тот же самый момент позволяет использовать <code>nomodule-</code>скрипты для браузеров без поддержки модульных скриптов.</p>
 
 <pre class="brush: html">&lt;script type="module" src="main.mjs"&gt;&lt;/script&gt;
 &lt;script nomodule src="fallback.js"&gt;&lt;/script&gt;</pre>
@@ -176,5 +176,5 @@ translation_of: Web/HTML/Element/script
 <ul>
  <li>{{domxref("document.currentScript")}}</li>
  <li><a href="https://pie.gd/test/script-link-events/">Ryan Grove's &lt;script&gt; and &lt;link&gt; node event compatibility chart</a></li>
- <li><a href="/en-US/docs/Games/Techniques/Async_scripts">Асинхронные скрипты для asm.js</a></li>
+ <li><a href="/en-US/docs/Games/Techniques/Async_scripts">Асинхронные скрипты для asm.js</a></li>
 </ul>

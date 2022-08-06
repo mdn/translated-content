@@ -17,7 +17,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissões
    <td>Não</td>
   </tr>
   <tr>
-   <th scope="row">Examplo</th>
+   <th scope="row">Exemplo</th>
    <td>
     <pre class="brush: json no-line-numbers">
 "permissions": [
@@ -29,7 +29,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissões
  </tbody>
 </table>
 
-<p>Use a chave <code>permissions</code> para solicitar privilégios especiais para sua extensão. Esta chave é um array de strings, onde cada string é uma solicitação para uma permissão.</p>
+<p>Use a chave <code>permissions</code> para solicitar privilégios especiais para sua extensão. Esta chave é um array de strings, onde cada string é uma solicitação para uma permissão.</p>
 
 <p>Se você solicitar permissões usando esta chave, o navegador poderá informar ao usuário que a extensão a ser instalada está solicitando certos privilégios, e perguntar se aceita ou não conceder esses privilégios. O navegador também poderá permitir que o usuário inspecione os privilégios de uma extensão depois que essa for instalada.</p>
 
@@ -113,7 +113,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissões
 <p>Na maioria dos casos, a permissão apenas concede acesso à API, com as seguintes exceções:</p>
 
 <ul>
- <li> <code>tabs</code> dá acesso a <a href="/en-US/Add-ons/WebExtensions/API/tabs">partes privilagiadas da API <code>tabs</code></a>: <code>Tab.url</code>, <code>Tab.title</code> e <code>Tab.faviconUrl</code>. No Firefox, você também precisa <code>tabs</code> se quiser incluir <code>url</code> no parâmetro <code>queryInfo</code> para  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code>. O resto ad API <code>tabs</code> pode ser usado sem solicitar nenhuma permissão.</li>
+ <li> <code>tabs</code> dá acesso a <a href="/en-US/Add-ons/WebExtensions/API/tabs">partes privilagiadas da API <code>tabs</code></a>: <code>Tab.url</code>, <code>Tab.title</code> e <code>Tab.faviconUrl</code>. No Firefox, você também precisa <code>tabs</code> se quiser incluir <code>url</code> no parâmetro <code>queryInfo</code> para  <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query()</a></code>. O resto ad API <code>tabs</code> pode ser usado sem solicitar nenhuma permissão.</li>
  <li><code>webRequestBlocking</code> permite usar o argumento "blocking", assim você pode <a href="/en-US/Add-ons/WebExtensions/API/WebRequest">modificar e cancelar requisições</a>.</li>
  <li><code>downloads.open</code> permite usar a API {{WebExtAPIRef("downloads.open()")}}.</li>
  <li><code>tabHide</code> permite usar a API {{WebExtAPIRef("tabs.hide()")}}.</li>
@@ -138,7 +138,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissões
  <li>acesso a essas partes privilegiadas da API <em>tabs</em> na aba atual: <code>Tab.url</code>, <code>Tab.title</code> e <code>Tab.faviconUrl</code>.</li>
 </ul>
 
-<p>A intenção desta permissão é permitir que extensões executem um caso de uso comum, sem ter que lhes dar permissões poderosas demais. Muitas extensões querem "fazer alguma coisa com a página atual quando o usuário pede". Por exemplo, considere uma extensão que queira executar um script na página atual quando o usuário clicar em uma ação do navegador. Se a permissão  <code>activeTab</code> não existisse, a extensão precisaria pedir a permissão de servidor <code>&lt;all_urls&gt;</code>. Mas isso daria à extensão mais poder que o necessário: ela poderia executar scripts em qualquer aba e quando quisesse, em vez de apenas na aba atual e somente em resposta a uma ação do usuário.</p>
+<p>A intenção desta permissão é permitir que extensões executem um caso de uso comum, sem ter que lhes dar permissões poderosas demais. Muitas extensões querem "fazer alguma coisa com a página atual quando o usuário pede". Por exemplo, considere uma extensão que queira executar um script na página atual quando o usuário clicar em uma ação do navegador. Se a permissão  <code>activeTab</code> não existisse, a extensão precisaria pedir a permissão de servidor <code>&lt;all_urls&gt;</code>. Mas isso daria à extensão mais poder que o necessário: ela poderia executar scripts em qualquer aba e quando quisesse, em vez de apenas na aba atual e somente em resposta a uma ação do usuário.</p>
 
 <p>Note que você só pode ter acesso à aba ou dado que estava ali, quando a interação do usuário ocorreu (por exemplo, um clique do mouse). Quando a aba ativa muda para outra página, por exemplo devido a concluir o carregamento ou algum outro evento, a permissão não lhe concede mais acesso à aba.</p>
 
@@ -161,10 +161,10 @@ original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissões
 
 <ul>
  <li>permite que extensões exceder qualquer quota imposta pela API {{WebExtAPIRef("storage.local")}}</li>
- <li>no Firefox, permite que extensões criem um <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics">banco de dados IndexedDB "persistente"</a>, sem que o navegador peça ao usuário permissão no momento em que o banco de dados é criado.</li>
+ <li>no Firefox, permite que extensões criem um <a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics">banco de dados IndexedDB "persistente"</a>, sem que o navegador peça ao usuário permissão no momento em que o banco de dados é criado.</li>
 </ul>
 
-<h2 id="Examplos">Examplos</h2>
+<h2 id="Exemplos">Exemplos</h2>
 
 <pre class="brush: json no-line-numbers"> "permissions": ["*://developer.mozilla.org/*"]</pre>
 

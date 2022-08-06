@@ -507,7 +507,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code> 
+        <code><a href="/ja/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code>
         {{experimental_inline}}
       </td>
       <td>
@@ -847,7 +847,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
       </td>
       <td>{{ HTMLElement("html") }}</td>
       <td>
-        この文書のキャッシュマニフェストの URL を指定します。 
+        この文書のキャッシュマニフェストの URL を指定します。
         <div class="note">
           <p>
             <strong>注:</strong> この属性は廃止されており、代わりに <a href="/ja/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a> を使用してください。
@@ -1416,10 +1416,12 @@ IDL 属性は符号なし long、URL、論理値など[他の型を反映する]
 
 HTML5 では、論理属性に許されている値の制約を定義しています。属性が存在する場合は、値は空文字列 (属性の値が割り当てられないことがあります) または属性の正式名に ASCII で大文字・小文字まで一致する値のどちらかで、前後にホワイトスペースを含んではいけません。以下の例は論理属性をマークアップする正しい方法です。
 
-    <div itemscope> This is valid HTML but invalid XML. </div>
-    <div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
-    <div itemscope=""> This is valid HTML and also valid XML. </div>
-    <div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```html
+<div itemscope> This is valid HTML but invalid XML. </div>
+<div itemscope=itemscope> This is also valid HTML but invalid XML. </div>
+<div itemscope=""> This is valid HTML and also valid XML. </div>
+<div itemscope="itemscope"> This is also valid HTML and XML, but perhaps a bit verbose. </div>
+```
 
 明確にするために、 "`true`" および "`false`" という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が **true** であると解釈されます。
 

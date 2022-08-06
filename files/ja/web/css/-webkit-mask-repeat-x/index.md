@@ -77,7 +77,7 @@ translation_of: Web/CSS/-webkit-mask-repeat-x
 ```css
 .examplethree {
   -webkit-mask-image: url('mask1.png'), url('mask2.png');
-  -webkit-mask-repeat-x: repeat, space;
+  -webkit-mask-repeat-x: repeat, space;
 }
 ```
 

@@ -6,7 +6,7 @@ browser-compat: javascript.builtins.Generator.return
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>return()</strong></code> 메소드는 제공된 값을 반환하고 Generator를 종료시킨다.</p>
+<p><code><strong>return()</strong></code> 메소드는 제공된 값을 반환하고 Generator를 종료시킨다.</p>
 
 <h2 id="문법">문법</h2>
 
@@ -25,7 +25,7 @@ browser-compat: javascript.builtins.Generator.return
 
 <h2 id="예시">예시</h2>
 
-<h3 id="return()_사용"><code>return()</code> 사용</h3>
+<h3 id="return()_사용"><code>return()</code> 사용</h3>
 
 <p>아래의 예시는 간단한 Generator와 <code>return</code> 메소드를 보여준다.</p>
 
@@ -44,7 +44,7 @@ g.next();        // { value: undefined, done: true }
 
 <h2 id="참고사항">참고사항:</h2>
 
-<p>만약 <code>done</code>이 <code>true</code>이면 반환되는 객체의 <code>value</code> 프로퍼티의 값은 <code>undefined</code>이다. (<code>return</code>(값)은 <code>next</code>()와 동일)</p>
+<p>만약 <code>done</code>이 <code>true</code>이면 반환되는 객체의 <code>value</code> 프로퍼티의 값은 <code>undefined</code>이다. (<code>return</code>(값)은 <code>next</code>()와 동일)</p>
 
 <pre>function* gen() {yield 1;}
 var g = gen();

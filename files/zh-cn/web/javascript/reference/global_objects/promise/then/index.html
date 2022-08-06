@@ -34,9 +34,9 @@ p.then(value =&gt; {
 
 <dl>
  <dt><code>onFulfilled</code> {{optional_inline}}</dt>
- <dd>当 Promise 变成接受状态（fulfilled）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即接受的最终结果（the fulfillment  value）。如果该参数不是函数，则会在内部被替换为 <code>(x) =&gt; x</code>，即原样返回 promise 最终结果的函数</dd>
+ <dd>当 Promise 变成接受状态（fulfilled）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即接受的最终结果（the fulfillment  value）。如果该参数不是函数，则会在内部被替换为 <code>(x) =&gt; x</code>，即原样返回 promise 最终结果的函数</dd>
  <dt><code>onRejected</code> {{optional_inline}}</dt>
- <dd>当 Promise 变成拒绝状态（rejected）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即拒绝的原因（<code>rejection reason</code>）。  如果该参数不是函数，则会在内部被替换为一个 "Thrower" 函数 (it throws an error it received as argument)。</dd>
+ <dd>当 Promise 变成拒绝状态（rejected）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即拒绝的原因（<code>rejection reason</code>）。  如果该参数不是函数，则会在内部被替换为一个 "Thrower" 函数 (it throws an error it received as argument)。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -47,8 +47,8 @@ p.then(value =&gt; {
  <li>返回了一个值，那么 <code>then</code> 返回的 Promise 将会成为接受状态，并且将返回的值作为接受状态的回调函数的参数值。</li>
  <li>没有返回任何值，那么 <code>then</code> 返回的 Promise 将会成为接受状态，并且该接受状态的回调函数的参数值为 <code>undefined</code>。</li>
  <li>抛出一个错误，那么 <code>then</code> 返回的 Promise 将会成为拒绝状态，并且将抛出的错误作为拒绝状态的回调函数的参数值。</li>
- <li>返回一个已经是接受状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为接受状态，并且将那个 Promise 的接受状态的回调函数的参数值作为该被返回的Promise的接受状态回调函数的参数值。</li>
- <li>返回一个已经是拒绝状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为拒绝状态，并且将那个 Promise 的拒绝状态的回调函数的参数值作为该被返回的Promise的拒绝状态回调函数的参数值。</li>
+ <li>返回一个已经是接受状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为接受状态，并且将那个 Promise 的接受状态的回调函数的参数值作为该被返回的 Promise 的接受状态回调函数的参数值。</li>
+ <li>返回一个已经是拒绝状态的 Promise，那么 <code>then</code> 返回的 Promise 也会成为拒绝状态，并且将那个 Promise 的拒绝状态的回调函数的参数值作为该被返回的 Promise 的拒绝状态回调函数的参数值。</li>
  <li>返回一个未定状态（<code>pending</code>）的 Promise，那么 <code>then</code> 返回 Promise 的状态也是未定的，并且它的终态与那个 Promise 的终态相同；同时，它变为终态时调用的回调函数参数与那个 Promise 变为终态时的回调函数的参数是相同的。</li>
 </ul>
 
@@ -78,7 +78,7 @@ setTimeout(() =&gt; {
 
 <h2 id="描述">描述</h2>
 
-<p>由于 <code>then</code> 和 {{jsxref("Promise.prototype.catch()")}} 方法都会返回 promise，它们可以被<a href="/zh-CN/docs/Web/JavaScript/Guide/Using_promises#Chaining">链式调用</a>——这同时也是一种被称为<strong>复合</strong>（ <em>composition） </em>的操作。</p>
+<p>由于 <code>then</code> 和 {{jsxref("Promise.prototype.catch()")}} 方法都会返回 promise，它们可以被<a href="/zh-CN/docs/Web/JavaScript/Guide/Using_promises#Chaining">链式调用</a>——这同时也是一种被称为<strong>复合</strong>（ <em>composition） </em>的操作。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -99,7 +99,7 @@ p1.then(value =&gt; {
 
 <h3 id="链式调用">链式调用</h3>
 
-<p><code>then</code> 方法返回一个 <code>Promise</code> 对象，其允许方法链。</p>
+<p><code>then</code> 方法返回一个 <code>Promise</code> 对象，其允许方法链。</p>
 
 <p>你可以传递一个匿名函数给 <code>then</code>，并且，如果它返回一个 <code>Promise</code>，一个等价的 <code>Promise</code> 将暴露给后续的方法链。下面的代码片段使用 <code>setTimout</code> 函数来模拟异步代码操作。</p>
 
@@ -114,7 +114,7 @@ p1.then(value =&gt; {
     });
   })
   // 2. 接收 "foobar", 放入一个异步函数中处理该字符串
-  // 并将其打印到控制台中, 但是不将处理后的字符串返回到下一个。
+  // 并将其打印到控制台中，但是不将处理后的字符串返回到下一个。
   .then(function(string) {
     setTimeout(function() {
       string += 'baz';
@@ -130,7 +130,7 @@ p1.then(value =&gt; {
                 "surprising");
 
     // 注意 `string` 这时不会存在 'baz'。
-    // 因为这是发生在我们通过setTimeout模拟的异步函数中。
+    // 因为这是发生在我们通过 setTimeout 模拟的异步函数中。
     console.log(string);
   });
 
@@ -157,7 +157,7 @@ p2.then(function(value) {
 });
 </pre>
 
-<p>如果函数抛出错误或返回一个拒绝的Promise，则 <code>then</code> 将返回一个拒绝的Promise。</p>
+<p>如果函数抛出错误或返回一个拒绝的 Promise，则 <code>then</code> 将返回一个拒绝的 Promise。</p>
 
 <pre class="brush: js">Promise.resolve()
   .then(() =&gt; {
@@ -194,7 +194,7 @@ p2.then(function(value) {
 
 <pre class="brush: js">function fetch_current_data() {
   // fetch() API 返回了一个 Promise.
-  // 这个函数提供了类似的API，
+  // 这个函数提供了类似的 API，
   // 这个函数除了实现 Promise，它还能够完成更多的工作。
   return fetch('current-data.json').then(response =&gt; {
     if (response.headers.get('content-type') != 'application/json') {
@@ -245,7 +245,7 @@ p3.then(function(v) {
 });
 </pre>
 
-<h3 id="基于_promise_的_domxrefwindow.setImmediate_polyfill">基于 promise 的 {{domxref("window.setImmediate")}} polyfill</h3>
+<h3 id="基于_promise_的_domxrefwindow.setImmediate_polyfill">基于 promise 的 {{domxref("window.setImmediate")}} polyfill</h3>
 
 <p>Using a {{jsxref("Function.prototype.bind()")}} <code>Reflect.apply</code> ({{jsxref("Reflect.apply()")}}) method to create a (non-cancellable) setImmediate-style function.</p>
 
@@ -268,29 +268,11 @@ p3.then(function(v) {
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>ECMA 标准中的首次定义。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{Compat("javascript.builtins.Promise.then")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 

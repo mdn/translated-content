@@ -8,9 +8,9 @@ original_slug: Web/JavaScript/Referencia/Operadores/this
 
 <h2 id="Introducción">Introducción</h2>
 
-<p>La palabra clave <strong><code>this</code></strong> de una función se comporta un poco diferente en Javascript en comparación con otros lenguajes. Además tiene algunas diferencias entre el <a href="/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto" title="en-US/docs/JavaScript/Strict mode">modo estricto</a> y el modo no estricto.</p>
+<p>La palabra clave <strong><code>this</code></strong> de una función se comporta un poco diferente en Javascript en comparación con otros lenguajes. Además tiene algunas diferencias entre el <a href="/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto" title="en-US/docs/JavaScript/Strict mode">modo estricto</a> y el modo no estricto.</p>
 
-<p>En general, el valor de <code>this</code> está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. ES5 introdujo el método {{jsxref("Function.bind()", "bind()")}} para <a href="#Funciones_enlazadas" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/Special/this#Bound_functions">establecer el valor de la función <code>this</code> independientemente de como es llamada</a>, y ES2015 introdujo las <a href="/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions">funciones flecha</a> que no proporcionan su propio "binding" de <code>this</code> (se mantiene el valor de <code>this</code> del contexto léxico que envuelve a la función)</p>
+<p>En general, el valor de <code>this</code> está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. ES5 introdujo el método {{jsxref("Function.bind()", "bind()")}} para <a href="#Funciones_enlazadas" title="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/Special/this#Bound_functions">establecer el valor de la función <code>this</code> independientemente de como es llamada</a>, y ES2015 introdujo las <a href="/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions">funciones flecha</a> que no proporcionan su propio "binding" de <code>this</code> (se mantiene el valor de <code>this</code> del contexto léxico que envuelve a la función)</p>
 
 <p>{{EmbedInteractiveExample("pages/js/expressions-this.html")}}</p>
 
@@ -24,7 +24,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/this
 
 <h2 id="Contexto_global">Contexto global</h2>
 
-<p>En el contexto de ejecución global (fuera de cualquier función), <strong><code>this</code></strong> se refiere al objeto global, ya sea en modo estricto o no.</p>
+<p>En el contexto de ejecución global (fuera de cualquier función), <strong><code>this</code></strong> se refiere al objeto global, ya sea en modo estricto o no.</p>
 
 <pre class="brush:js">console.log(this.document === document); // true
 
@@ -36,12 +36,12 @@ console.log(window.a); // 37
 </pre>
 
 <div class="blockIndicator note">
-<p><font><font>Nota: Puedes obtener el objeto global usando la propieda global <code>globalThis</code>, no importa el contexto donde se ejecute esta propiedad, siempre hará referencia al objeto global. </font></font></p>
+<p><font><font>Nota: Puedes obtener el objeto global usando la propieda global <code>globalThis</code>, no importa el contexto donde se ejecute esta propiedad, siempre hará referencia al objeto global. </font></font></p>
 </div>
 
 <h2 id="Contexto_de_la_función">Contexto de la función</h2>
 
-<p><span class="hps" style="line-height: 1.5;">Dentro de una</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">función</span><span style="line-height: 1.5;">, </span><span class="hps" style="line-height: 1.5;">el valor de this</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">depende de cómo</span><span style="line-height: 1.5;"> la función es l</span><span class="hps" style="line-height: 1.5;">lamada</span><span id="result_box" lang="es" style="line-height: 1.5;">.</span></p>
+<p><span class="hps" style="line-height: 1.5;">Dentro de una</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">función</span><span style="line-height: 1.5;">, </span><span class="hps" style="line-height: 1.5;">el valor de this</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">depende de cómo</span><span style="line-height: 1.5;"> la función es l</span><span class="hps" style="line-height: 1.5;">lamada</span><span id="result_box" lang="es" style="line-height: 1.5;">.</span></p>
 
 <h3 id="Llamada_simple">Llamada simple</h3>
 
@@ -52,7 +52,7 @@ console.log(window.a); // 37
 f1() === window; // objeto global
 </pre>
 
-<div><span class="hps" style="line-height: 1.5;">En</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">este caso</span><span style="line-height: 1.5;">,</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">el valor de <strong>this</strong></span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">no está establecido</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">la llamada</span><span style="line-height: 1.5;">.</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">Dado que el código</span><span style="line-height: 1.5;"> </span><span class="alt-edited hps" style="line-height: 1.5;">no está</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">en modo estricto</span><span style="line-height: 1.5;">, </span><span class="hps" style="line-height: 1.5;">el valor de this</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">debe ser siempre</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">un objeto</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por lo que</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por defecto es el</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">objeto global</span><span style="line-height: 1.5;">.</span></div>
+<div><span class="hps" style="line-height: 1.5;">En</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">este caso</span><span style="line-height: 1.5;">,</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">el valor de <strong>this</strong></span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">no está establecido</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">la llamada</span><span style="line-height: 1.5;">.</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">Dado que el código</span><span style="line-height: 1.5;"> </span><span class="alt-edited hps" style="line-height: 1.5;">no está</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">en modo estricto</span><span style="line-height: 1.5;">, </span><span class="hps" style="line-height: 1.5;">el valor de this</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">debe ser siempre</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">un objeto</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por lo que</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">por defecto es el</span><span style="line-height: 1.5;"> </span><span class="hps" style="line-height: 1.5;">objeto global</span><span style="line-height: 1.5;">.</span></div>
 
 
 
@@ -65,7 +65,7 @@ f1() === window; // objeto global
 f2() === undefined;</pre>
 </div>
 
-<div><span style="line-height: 1.5;">En modo estricto, el valor de <strong>this</strong> se mantiene en lo que está establecida al entrar en el contexto de ejecución. Si no está definido, permanece undefined. También se puede ajustar a cualquier valor, tales como <strong>null</strong> o <strong>42</strong> o "<strong>Yo no soy this</strong>".</span></div>
+<div><span style="line-height: 1.5;">En modo estricto, el valor de <strong>this</strong> se mantiene en lo que está establecida al entrar en el contexto de ejecución. Si no está definido, permanece undefined. También se puede ajustar a cualquier valor, tales como <strong>null</strong> o <strong>42</strong> o "<strong>Yo no soy this</strong>".</span></div>
 
 
 
@@ -89,7 +89,7 @@ f2() === undefined;</pre>
 console.log(o.f()); // logs 37
 </pre>
 
-<p>Note que el comportamiento no es del todo afectado por cómo o dónde la función fue definida. En el ejemplo anterior, nosotros definimos la función en línea como el elemento <code>f</code> durante la definición de <code>o</code>.  Sin embargo, podriamos haber definido con la misma facilidad la primera función y luego  adjuntarlo a <code>o.f</code>. Hacerlo da como resultado el mismo comportamiento.</p>
+<p>Note que el comportamiento no es del todo afectado por cómo o dónde la función fue definida. En el ejemplo anterior, nosotros definimos la función en línea como el elemento <code>f</code> durante la definición de <code>o</code>.  Sin embargo, podriamos haber definido con la misma facilidad la primera función y luego  adjuntarlo a <code>o.f</code>. Hacerlo da como resultado el mismo comportamiento.</p>
 
 <pre class="brush:js">var o = {prop: 37};
 
@@ -112,7 +112,7 @@ console.log(o.b.g()); // logs 42
 
 <h4 id="..._en_la_cadena_de_prototipo">... en la cadena de prototipo</h4>
 
-<p>El mismo concepto es válido para los métodos definidos en alguna parte de la cadena de prototipo del objeto. Si el método esta sobre una cadena de prototipo del objeto, <code>this</code> se referirá al objeto donde está el método de donde fue llamado. Como si ese método estuviera dentro del objeto. </p>
+<p>El mismo concepto es válido para los métodos definidos en alguna parte de la cadena de prototipo del objeto. Si el método esta sobre una cadena de prototipo del objeto, <code>this</code> se referirá al objeto donde está el método de donde fue llamado. Como si ese método estuviera dentro del objeto. </p>
 
 <pre class="brush:js">var o = {f:function(){ return this.a + this.b; }};
 var p = Object.create(o);
@@ -186,7 +186,7 @@ console.log(o.a); // logs 38
 
 <h3 id="call_y_apply"><code>call</code> y <code>apply</code></h3>
 
-<p>Cuando una función usa la plabra clave <code>this</code> en su cuerpo, su valor puede ser enlazado a un objeto particular durante la ejecución del método {{jsxref("Function.call()", "call()")}} or {{jsxref("Function.apply()", "apply()")}} que todas las funciones hereden de  <code>Function.prototype</code>.</p>
+<p>Cuando una función usa la plabra clave <code>this</code> en su cuerpo, su valor puede ser enlazado a un objeto particular durante la ejecución del método {{jsxref("Function.call()", "call()")}} or {{jsxref("Function.apply()", "apply()")}} que todas las funciones hereden de  <code>Function.prototype</code>.</p>
 
 <pre class="brush:js">function add(c, d){
   return this.a + this.b + c + d;

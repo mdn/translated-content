@@ -16,7 +16,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключен
 <p>{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}</p>
 
 <div class="summary">
-<p>Это 10-й и заключительный шаг в <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код, как он должен выглядеть, после завершения этого урока в <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html">Gamedev-Canvas-workshop/lesson10.html</a>.</p>
+<p>Это 10-й и заключительный шаг в <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код, как он должен выглядеть, после завершения этого урока в <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html">Gamedev-Canvas-workshop/lesson10.html</a>.</p>
 </div>
 
 <p><span class="seoSummary">В любой игре, которую мы пишем, всегда есть место для улучшений. Например, мы можем предложить игроку несколько жизней. Они могут сделать несколько ошибок и всё равно закончить игру. Мы также можем улучшить отрисовку кода.</span></p>
@@ -35,7 +35,7 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключен
     ctx.fillText("Lives: "+lives, canvas.width-65, 20);
 }</pre>
 
-<p>Вместо того, чтобы немедленно закончить игру, мы уменьшим количество жизней, пока они больше не будут доступны. Мы также можем сбросить позиции мяча и биты, когда игрок начинает игру со следующей жизнью. Итак, в функции <code>draw()</code> замените следующие три строки:</p>
+<p>Вместо того, чтобы немедленно закончить игру, мы уменьшим количество жизней, пока они больше не будут доступны. Мы также можем сбросить позиции мяча и биты, когда игрок начинает игру со следующей жизнью. Итак, в функции <code>draw()</code> замените следующие три строки:</p>
 
 <pre class="brush: js">alert("GAME OVER");
 document.location.reload();
@@ -56,7 +56,7 @@ else {
     paddleX = (canvas.width-paddleWidth)/2;
 }</pre>
 
-<p>Теперь, когда мяч попадает в нижний край экрана, мы вычитаем одну жизнь из переменной <code>lives</code>. Если жизней не осталось, игра проиграна, если осталось ещё несколько жизней, то положение мяча и биты сбрасываются вместе с движением мяча.</p>
+<p>Теперь, когда мяч попадает в нижний край экрана, мы вычитаем одну жизнь из переменной <code>lives</code>. Если жизней не осталось, игра проиграна, если осталось ещё несколько жизней, то положение мяча и биты сбрасываются вместе с движением мяча.</p>
 
 <h3 id="Визуализация_дисплея_жизней">Визуализация дисплея жизней</h3>
 
@@ -67,7 +67,7 @@ else {
 
 <h2 id="Улучшение_рендеринга_с_requestAnimationFrame">Улучшение рендеринга с requestAnimationFrame()</h2>
 
-<p>Теперь давайте работать над чем-то, что не связано с игровой механикой, но с тем, как она рендерится. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} поможет браузеру рендерить игру лучше, чем фиксированная частота кадров, которую в настоящее время мы реализовали, используя {{domxref("windowTimers.setInterval()", "setInterval()")}}. Замените следующую строку:</p>
+<p>Теперь давайте работать над чем-то, что не связано с игровой механикой, но с тем, как она рендерится. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} поможет браузеру рендерить игру лучше, чем фиксированная частота кадров, которую в настоящее время мы реализовали, используя {{domxref("windowTimers.setInterval()", "setInterval()")}}. Замените следующую строку:</p>
 
 <pre class="brush: js">setInterval(draw, 10);</pre>
 
@@ -97,7 +97,7 @@ else {
 
 <h2 id="Игра_закончена_-_на_данный_момент!">Игра закончена - на данный момент!</h2>
 
-<p>Вы закончили все уроки — поздравляем! К этому моменту вы должны знать основы манипулирования canvas и логику простых 2D-игр. Сейчас самое время изучить некоторые фреймворки и продолжить разработку игр. Вы можете проверить аналог этой серии, <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_breakout_game_Phaser">2D breakout game using Phaser</a> или <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation">Cyber Orb built in Phaser</a> учебник. Вы также можете просмотреть раздел <a href="https://developer.mozilla.org/en/docs/Games">Games section on MDN</a> для вдохновения и  увеличения знаний.</p>
+<p>Вы закончили все уроки — поздравляем! К этому моменту вы должны знать основы манипулирования canvas и логику простых 2D-игр. Сейчас самое время изучить некоторые фреймворки и продолжить разработку игр. Вы можете проверить аналог этой серии, <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_breakout_game_Phaser">2D breakout game using Phaser</a> или <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation">Cyber Orb built in Phaser</a> учебник. Вы также можете просмотреть раздел <a href="https://developer.mozilla.org/en/docs/Games">Games section on MDN</a> для вдохновения и  увеличения знаний.</p>
 
 <p>Вы также можете вернуться на <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">this tutorial series' index page</a> учебника. Получайте удовольствие от написания кода!</p>
 

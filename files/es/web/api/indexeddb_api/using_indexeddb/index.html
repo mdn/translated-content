@@ -14,21 +14,21 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 ---
 <div class="summary">
-<p>IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones pueden trabajar tanto en línea como fuera de línea.</p>
+<p>IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones pueden trabajar tanto en línea como fuera de línea.</p>
 </div>
 
 <h2 id="Acerca_de_este_documento">Acerca de este documento</h2>
 
-<p>Este tutorial es una guía sobre el uso de la API asíncrona de IndexedDB. Si no está familiarizado con IndexedDB, por favor consulte primero <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" style="line-height: 1.5;" title="en/IndexedDB/Basic Concepts Behind IndexedDB">Conceptos Básicos Acerca de IndexedDB</a><span style="line-height: 1.5;">.</span></p>
+<p>Este tutorial es una guía sobre el uso de la API asíncrona de IndexedDB. Si no está familiarizado con IndexedDB, por favor consulte primero <a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" style="line-height: 1.5;" title="en/IndexedDB/Basic Concepts Behind IndexedDB">Conceptos Básicos Acerca de IndexedDB</a><span style="line-height: 1.5;">.</span></p>
 
-<p>Para la documentación de referencia sobre la API de IndexedDB, vea el artículo <a href="/es/docs/IndexedDB" style="line-height: 1.5;" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB</a><span style="line-height: 1.5;"> y sus subpaginas, que documentan los tipos de objetos usados por IndexedDB, así como los métodos síncronos y asíncronos. </span></p>
+<p>Para la documentación de referencia sobre la API de IndexedDB, vea el artículo <a href="/es/docs/IndexedDB" style="line-height: 1.5;" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB</a><span style="line-height: 1.5;"> y sus subpaginas, que documentan los tipos de objetos usados por IndexedDB, así como los métodos síncronos y asíncronos. </span></p>
 
 <h2 id="pattern" name="pattern">Patrones Básicos</h2>
 
-<p>El patrón básico que indexedDB propone es:</p>
+<p>El patrón básico que indexedDB propone es:</p>
 
 <ol>
- <li>Abrir una base de datos.</li>
+ <li>Abrir una base de datos.</li>
  <li>Crear un objeto de almacenamiento en la base de datos.</li>
  <li>Iniciar una transacción y hacer una petición para hacer alguna operación de la base de datos, tal como añadir o recuperar datos.</li>
  <li>
@@ -43,11 +43,11 @@ original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 
 <h2 id="open" name="open">Creando y estructurando el almacenamiento</h2>
 
-<p>Como las especificaciones están todavía elaborandose, las implementaciones actuales de indexedDB dependen de los navegadores. H<span id="result_box" lang="es"><span class="hps">asta que la</span> <span class="hps">especificación</span> <span class="hps">se haya consolidado, l</span></span>os proveedores de navegadores pueden tener diferentes implementaciones de los estandares de indexedDB<span id="result_box" lang="es"><span>.</span></span> Una vez se alcance el consenso en el estandar, los proveedores implementarán la API sin prefijos. En algunas implementaciones ya fueron removidos los prefijos: Internet Explorer 10, Firefox 16, Chrome 24. Cuando utilizan un prefijo, los navegadores basados en gecko usan el prefijo <code>moz</code> , mientras que los navegadores basados en WebKit usan el prefijo <code>webkit</code>.</p>
+<p>Como las especificaciones están todavía elaborandose, las implementaciones actuales de indexedDB dependen de los navegadores. H<span id="result_box" lang="es"><span class="hps">asta que la</span> <span class="hps">especificación</span> <span class="hps">se haya consolidado, l</span></span>os proveedores de navegadores pueden tener diferentes implementaciones de los estandares de indexedDB<span id="result_box" lang="es"><span>.</span></span> Una vez se alcance el consenso en el estandar, los proveedores implementarán la API sin prefijos. En algunas implementaciones ya fueron removidos los prefijos: Internet Explorer 10, Firefox 16, Chrome 24. Cuando utilizan un prefijo, los navegadores basados en gecko usan el prefijo <code>moz</code> , mientras que los navegadores basados en WebKit usan el prefijo <code>webkit</code>.</p>
 
 <h3 id="Usando_una_versión_experimental_de_IndexedDB">Usando una versión experimental de IndexedDB</h3>
 
-<p>En caso que usted quiera probar su código en navegadores que todavía usen un prefijo, puede usar el siguiente codigo:  </p>
+<p>En caso que usted quiera probar su código en navegadores que todavía usen un prefijo, puede usar el siguiente codigo:  </p>
 
 <pre class="brush: js">// En la siguiente línea, puede incluir prefijos de implementación que quiera probar.
 window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
@@ -57,7 +57,7 @@ window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || 
 window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // (Mozilla nunca ha prefijado estos objetos, por lo tanto no necesitamos window.mozIDB*)</pre>
 
-<p>Hay que tener cuidado con las implementaciones que usan un prefijo ya que puede ser inestables, incompletas, o usen una versión antigua de la especificación. En producción se recomienda usar el código sin prefijos. Es preferible no tener soporte para un navegador a decir que lo tiene y fallar en ello :</p>
+<p>Hay que tener cuidado con las implementaciones que usan un prefijo ya que puede ser inestables, incompletas, o usen una versión antigua de la especificación. En producción se recomienda usar el código sin prefijos. Es preferible no tener soporte para un navegador a decir que lo tiene y fallar en ello :</p>
 
 <pre class="brush: js">if (!window.indexedDB) {
     window.alert("Su navegador no soporta una versión estable de indexedDB. Tal y como las características no serán validas");
@@ -72,14 +72,14 @@ window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.ms
 var request = window.indexedDB.open("MyTestDatabase", 3);
 </pre>
 
-<p>¿Lo has visto? Abrir una base de datos es igual que cualquier otra operación — solo tienes que "solicitarla" (request).</p>
+<p>¿Lo has visto? Abrir una base de datos es igual que cualquier otra operación — solo tienes que "solicitarla" (request).</p>
 
-<p>La solicitud de apertura no abre la base de datos o inicia la transacción de inmediato. La llamada a la función <code>open()</code> retornan unos objetos <code><a href="/en-US/docs/IndexedDB/IDBOpenDBRequest" title="/en-US/docs/IndexedDB/IDBOpenDBRequest">IDBOpenDBRequest</a>,</code> cuyo resultado, correcto o erróneo, se maneja en un evento.  Alguna otra función asincrónica en indexedDB hace lo mismo - Devolver un objeto <a href="/en-US/docs/IndexedDB/IDBRequest" title="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> que disparará un evento con el resultado o el error. El resultado para la función de abrir es una instancia de un <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase" title="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a>.</code></p>
+<p>La solicitud de apertura no abre la base de datos o inicia la transacción de inmediato. La llamada a la función <code>open()</code> retornan unos objetos <code><a href="/en-US/docs/IndexedDB/IDBOpenDBRequest" title="/en-US/docs/IndexedDB/IDBOpenDBRequest">IDBOpenDBRequest</a>,</code> cuyo resultado, correcto o erróneo, se maneja en un evento.  Alguna otra función asincrónica en indexedDB hace lo mismo - Devolver un objeto <a href="/en-US/docs/IndexedDB/IDBRequest" title="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> que disparará un evento con el resultado o el error. El resultado para la función de abrir es una instancia de un <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase" title="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a>.</code></p>
 
-<p>El segundo parámetro para el método open es la versión de la base de datos. La versión de la base de datos determina el esquema - El almacen de objectos en la base de datos y su estructura. Si la base de datos no existe, es creada y se dispara un evento <code>onupgradeneeded</code> de inmediato, permitiéndote proveer una actualización de la estructura e índices en la función que capture dicho evento. Se verá más adelante en  <a href="#Updating_the_version_of_the_database">Actualizando la versión de la base de datos</a>. </p>
+<p>El segundo parámetro para el método open es la versión de la base de datos. La versión de la base de datos determina el esquema - El almacen de objectos en la base de datos y su estructura. Si la base de datos no existe, es creada y se dispara un evento <code>onupgradeneeded</code> de inmediato, permitiéndote proveer una actualización de la estructura e índices en la función que capture dicho evento. Se verá más adelante en  <a href="#Updating_the_version_of_the_database">Actualizando la versión de la base de datos</a>. </p>
 
 <div class="warning">
-<p><strong>Importante</strong>: El número de versión es un <code>unsigned long</code>. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento <code>upgradeneeded </code>no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:</p>
+<p><strong>Importante</strong>: El número de versión es un <code>unsigned long</code>. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento <code>upgradeneeded </code>no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:</p>
 
 <pre class="brush: js">var request = indexedDB.open("MyTestDatabase", 2.4); // Esto no se hace, la versión será redondeada a 2</pre>
 </div>
@@ -97,9 +97,9 @@ request.onsuccess = function(event) {
 
 <p>¿Cuál de las dos funciones, onSuccess () o onerror (), se vuelve a llamar? Si todo tiene éxito, un evento de éxito (es decir, un evento DOM cuya propiedad tipo se establece en el "éxito") se dispara con la solicitud como su objetivo. Una vez que se dispara, la función onSuccess () a petición se activa con el evento de éxito como argumento. De lo contrario, si había algún problema, un evento de error (es decir, un evento DOM cuyo tipo de propiedad se establece en "error") se dispara a petición. Esto desencadena la función onerror () con el evento de error como argumento.</p>
 
-<p>La API IndexedDB está diseñada para minimizar la necesidad de control de errores, por lo que no es probable que veamos muchos eventos de error (al menos, no una vez que estás acostumbrado a la API). En el caso de la apertura de una base de datos, sin embargo, hay algunas condiciones comunes que generan eventos de error. El problema más común se produce cuando el usuario ha decidido no dar, a su aplicación web, el permiso para crear una base de datos. Uno de los principales objetivos de diseño de IndexedDB es permitir que grandes cantidades de datos se almacenen para su uso sin conexión a internet. (Para obtener más información sobre la cantidad de almacenamiento que puede tener para cada navegador, consulte <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API#Storage_limits">Límites de almacenamiento</a>.)  </p>
+<p>La API IndexedDB está diseñada para minimizar la necesidad de control de errores, por lo que no es probable que veamos muchos eventos de error (al menos, no una vez que estás acostumbrado a la API). En el caso de la apertura de una base de datos, sin embargo, hay algunas condiciones comunes que generan eventos de error. El problema más común se produce cuando el usuario ha decidido no dar, a su aplicación web, el permiso para crear una base de datos. Uno de los principales objetivos de diseño de IndexedDB es permitir que grandes cantidades de datos se almacenen para su uso sin conexión a internet. (Para obtener más información sobre la cantidad de almacenamiento que puede tener para cada navegador, consulte <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API#Storage_limits">Límites de almacenamiento</a>.)  </p>
 
-<p>Obviamente, los navegadores no permitirán que alguna red de publicidad o sitio web malicioso pueda contaminar su ordenador, por ello los navegadores utilizan un diálogo para indicar al usuario la primera vez que cualquier aplicación web determinada intente abrir una IndexedDB para el almacenamiento. El usuario puede optar por permitir o denegar el acceso. Además, el almacenamiento IndexedDB en los modos de privacidad navegadores sólo dura en memoria hasta que la sesión de incógnito haya sido cerrada (modo de navegación privada para el modo de Firefox e Incognito para Chrome, pero en Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=781982">no está implementado</a> a partir de noviembre 2015 por lo que no puede utilizar IndexedDB en Firefox navegación privada en absoluto).</p>
+<p>Obviamente, los navegadores no permitirán que alguna red de publicidad o sitio web malicioso pueda contaminar su ordenador, por ello los navegadores utilizan un diálogo para indicar al usuario la primera vez que cualquier aplicación web determinada intente abrir una IndexedDB para el almacenamiento. El usuario puede optar por permitir o denegar el acceso. Además, el almacenamiento IndexedDB en los modos de privacidad navegadores sólo dura en memoria hasta que la sesión de incógnito haya sido cerrada (modo de navegación privada para el modo de Firefox e Incognito para Chrome, pero en Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=781982">no está implementado</a> a partir de noviembre 2015 por lo que no puede utilizar IndexedDB en Firefox navegación privada en absoluto).</p>
 
 <p>Ahora, asumiendo que el usuario acepta su solicitud para crear una base de datos, y que ha recibido un evento de éxito para activar la devolución de llamada de éxito; ¿Que sigue? La solicitud aquí se generó con una llamada a indexedDB.open (), por lo request.result es una instancia de IDBDatabase, y que sin duda quieren ahorrar para más adelante. Su código podría ser algo como esto:</p>
 
@@ -115,7 +115,7 @@ request.onsuccess = function(event) {
 
 <h4 id="Manejando_errores">Manejando errores</h4>
 
-<p>Como se mencionó anteriormente, los eventos de error de burbujas. Eventos de error se dirigen a la solicitud que generó el error, entonces el evento se propaga a la operación, y finalmente con el objeto de base de datos. Si desea evitar la adición de controladores de errores a cada solicitud, en su lugar puede añadir un solo controlador de errores en el objeto de base de datos, así:</p>
+<p>Como se mencionó anteriormente, los eventos de error de burbujas. Eventos de error se dirigen a la solicitud que generó el error, entonces el evento se propaga a la operación, y finalmente con el objeto de base de datos. Si desea evitar la adición de controladores de errores a cada solicitud, en su lugar puede añadir un solo controlador de errores en el objeto de base de datos, así:</p>
 
 <pre class="brush: js">db.onerror = function(event) {
   // Generic error handler for all errors targeted at this database's
@@ -128,7 +128,7 @@ request.onsuccess = function(event) {
 
 <h3 id="Creación_o_actualización_de_la_versión_de_la_base_de_datos">Creación o actualización de la versión de la base de datos</h3>
 
-<p>Cuando se crea una nueva base de datos o se aumenta el número de versión de una base de datos existente (mediante la especificación de un número de versión más alto de lo que hizo antes, en {{anch ("Cómo abrir una base de datos")}}), el evento onupgradeneeded se activará y un objeto <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> será pasado a cualquier controlador de eventos <code>onversionchange</code> establecido en <code>request.result</code> (es decir, db en el ejemplo). En el controlador para el evento <code>upgradeneeded</code>, se debe crear los almacenes de objetos necesarios para esta versión de la base de datos:</p>
+<p>Cuando se crea una nueva base de datos o se aumenta el número de versión de una base de datos existente (mediante la especificación de un número de versión más alto de lo que hizo antes, en <a href="#cómo_abrir_una_base_de_datos">Cómo abrir una base de datos</a>), el evento onupgradeneeded se activará y un objeto <a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> será pasado a cualquier controlador de eventos <code>onversionchange</code> establecido en <code>request.result</code> (es decir, db en el ejemplo). En el controlador para el evento <code>upgradeneeded</code>, se debe crear los almacenes de objetos necesarios para esta versión de la base de datos:</p>
 
 <pre class="brush:js;">// Este evento solamente está implementado en navegadores recientes
 request.onupgradeneeded = function(event) {
@@ -140,15 +140,15 @@ request.onupgradeneeded = function(event) {
 
 <p>En este caso, la base de datos ya tendrá los almacenes de objetos de la versión anterior de la base de datos, por lo que no tiene que crear estos almacenes de objetos de nuevo. Sólo es necesario crear nuevos almacenes de objetos, o eliminar las tiendas de objetos de la versión anterior que ya no son necesarios. Si necesita cambiar un almacén de objetos existentes (por ejemplo, para cambiar la ruta de acceso clave <code>keyPath</code>), entonces se debe eliminar el antiguo almacén de objetos y crear de nuevo con las nuevas opciones. (Tenga en cuenta que esto borrará la información en el almacén de objetos Si usted necesita guardar esa información, usted debe leerlo y guardarlo en otro lugar antes de actualizar la base de datos.)</p>
 
-<p>Tratar de crear un almacén de objetos con un nombre que ya existe (o tratando de eliminar un almacén de objetos con un nombre que no existe) lanzará un error.</p>
+<p>Tratar de crear un almacén de objetos con un nombre que ya existe (o tratando de eliminar un almacén de objetos con un nombre que no existe) lanzará un error.</p>
 
-<p>Si el evento <code>onupgradeneeded</code> retorna éxito, entonces se activará el manejador <code>onsuccess</code> de la solicitud de base de datos abierta.</p>
+<p>Si el evento <code>onupgradeneeded</code> retorna éxito, entonces se activará el manejador <code>onsuccess</code> de la solicitud de base de datos abierta.</p>
 
-<p>Blink / Webkit soportan la versión actual de la especificación, tal como fue liberado en Chrome 23+ y Opera 17+ ; IE10+ también lo soporta. Implementaciones mas viejas o distintas no implementan la versión actual de la especificación, y por lo tanto no son compatibles todavía con el <code>indexedDB.open (nombre, versión).onupgradeneeded</code> . Para obtener más información sobre cómo actualizar la versión de la base de datos en Webkit/Blink mas viejos, consulte el artículo de referencia <a href="/es/docs/Web/API/IDBDatabase" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase</a>.</p>
+<p>Blink / Webkit soportan la versión actual de la especificación, tal como fue liberado en Chrome 23+ y Opera 17+ ; IE10+ también lo soporta. Implementaciones mas viejas o distintas no implementan la versión actual de la especificación, y por lo tanto no son compatibles todavía con el <code>indexedDB.open (nombre, versión).onupgradeneeded</code> . Para obtener más información sobre cómo actualizar la versión de la base de datos en Webkit/Blink mas viejos, consulte el artículo de referencia <a href="/es/docs/Web/API/IDBDatabase" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase</a>.</p>
 
 <h3 id="Estructuración_de_la_base_de_datos">Estructuración de la base de datos</h3>
 
-<p>Ahora para estructurar la base de datos. IndexedDB usa almacenes de datos (object stores) en lugar de tablas, y una base de datos puede contener cualquier número de almacenes. Cuando un valor es almacenado, se le asocia con una clave. Existen diversas maneras en que una clave pude ser indicada dependiendo de si el almacén usa una <a href="https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath">ruta de clave</a> o <a href="https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator">generador</a>.</p>
+<p>Ahora para estructurar la base de datos. IndexedDB usa almacenes de datos (object stores) en lugar de tablas, y una base de datos puede contener cualquier número de almacenes. Cuando un valor es almacenado, se le asocia con una clave. Existen diversas maneras en que una clave pude ser indicada dependiendo de si el almacén usa una <a href="https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath">ruta de clave</a> o <a href="https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator">generador</a>.</p>
 
 <p>La siguiente table muetra las distintas formas en que las claves pueden ser indicadas:</p>
 
@@ -199,7 +199,7 @@ const customerData = [
 ];
 </pre>
 
-<p>Ahora, creemos una IndexedDB para almacenar los datos:</p>
+<p>Ahora, creemos una IndexedDB para almacenar los datos:</p>
 
 <pre class="brush: js">const dbName = "the_name";
 
@@ -235,19 +235,19 @@ request.onupgradeneeded = function(event) {
 };
 </pre>
 
-<p>Como se indicó previamente, <code>onupgradeneeded</code> es el único lugar donde se puede alterar la estructura de la base de datos. En el, se puede crear y borrar almacenes de objetos y construir y remover índices.</p>
+<p>Como se indicó previamente, <code>onupgradeneeded</code> es el único lugar donde se puede alterar la estructura de la base de datos. En el, se puede crear y borrar almacenes de objetos y construir y remover índices.</p>
 
-<div>Los almacenes de datos son creados con una llamada a  <code>createObjectStore()</code>. El método toma como parámetros el nombre del almacén y un objeto.  A pesar de que el segundo parámetro es opcional, es muy importante, porque permite definir propiedades opcionales importantes y refinar el tipo de almacén que se desea crear. En este caso, se pregunta por un almacén llamado "customers" y se define la clave, que es la propiedad que indica que un objeto en el almacén es único. La propiedad en este ejemplo es "ssn" (Social Security Number) ya que los números de seguridad social está garantizado que sea único. "ssn" debe estar presente en cada objeto que se guarda al almacén.</div>
+<div>Los almacenes de datos son creados con una llamada a  <code>createObjectStore()</code>. El método toma como parámetros el nombre del almacén y un objeto.  A pesar de que el segundo parámetro es opcional, es muy importante, porque permite definir propiedades opcionales importantes y refinar el tipo de almacén que se desea crear. En este caso, se pregunta por un almacén llamado "customers" y se define la clave, que es la propiedad que indica que un objeto en el almacén es único. La propiedad en este ejemplo es "ssn" (Social Security Number) ya que los números de seguridad social está garantizado que sea único. "ssn" debe estar presente en cada objeto que se guarda al almacén.</div>
 
-<p>También se solicitó crear un índice llamado "name" que se fija en la propiedad <code>name </code>de los objetos almacenados. Así como con <code>createObjectStore()</code>, <code>createIndex()</code> toma un objeto opcional <code>options</code> que refina el tipo de índice que se desea crear. Agregar objetos que no tengan una propiedad <code>name</code> funcionará, pero los objetos no aparecerán en el índice "name"</p>
+<p>También se solicitó crear un índice llamado "name" que se fija en la propiedad <code>name </code>de los objetos almacenados. Así como con <code>createObjectStore()</code>, <code>createIndex()</code> toma un objeto opcional <code>options</code> que refina el tipo de índice que se desea crear. Agregar objetos que no tengan una propiedad <code>name</code> funcionará, pero los objetos no aparecerán en el índice "name"</p>
 
-<div>Ahora se pueden obtener los clientes almacenados usando su <code>ssn</code> directamente del almacen, o usando su nombre a través del índice. Para aprender como hacer esto, vea la sección <a href="#El_uso_de_un_índice">El uso de un índice</a></div>
+<div>Ahora se pueden obtener los clientes almacenados usando su <code>ssn</code> directamente del almacen, o usando su nombre a través del índice. Para aprender como hacer esto, vea la sección <a href="#El_uso_de_un_índice">El uso de un índice</a></div>
 
 <h3 id="El_uso_de_un_generador_de_claves">El uso de un generador de claves</h3>
 
-<p>Indicar la bandera <code>autoIncrement </code> cuando se crea el almacén habilitará el generador de claves para dicho almacén. Por defecto esta bandera no está marcada.</p>
+<p>Indicar la bandera <code>autoIncrement </code> cuando se crea el almacén habilitará el generador de claves para dicho almacén. Por defecto esta bandera no está marcada.</p>
 
-<p>Con el generador de claves, la clave será generada automáticamente a medida que se agreguen valores al almacén. El número actual de un generador de claves siempre se establece en 1 cuando se creal el almacén por primera vez. Básicamente la nueva clave autogenerada es incrementada en 1 basada en la llave anterior. El numero actual para un generador de claves nunca disminuye, salvo como resultado de operaciones de base de datos  que sean revertidos, por ejemplo, cuando la transacción de base de datos es abortada. Por lo tanto borrar un registro o incluso borrar todos los registros de un almacén nunca afecta al generador de claves</p>
+<p>Con el generador de claves, la clave será generada automáticamente a medida que se agreguen valores al almacén. El número actual de un generador de claves siempre se establece en 1 cuando se creal el almacén por primera vez. Básicamente la nueva clave autogenerada es incrementada en 1 basada en la llave anterior. El numero actual para un generador de claves nunca disminuye, salvo como resultado de operaciones de base de datos  que sean revertidos, por ejemplo, cuando la transacción de base de datos es abortada. Por lo tanto borrar un registro o incluso borrar todos los registros de un almacén nunca afecta al generador de claves</p>
 
 <p>Se puede crear otro almacén de objetos con generador de claves como se muestra abajo:</p>
 
@@ -256,18 +256,18 @@ var request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = function (event) {
 
-    var db = event.target.result;
+    var db = event.target.result;
 
-    // Create another object store called "names" with the autoIncrement flag set as true.
-    var objStore = db.createObjectStore("names", { autoIncrement : true });
+    // Create another object store called "names" with the autoIncrement flag set as true.
+    var objStore = db.createObjectStore("names", { autoIncrement : true });
 
-    // Because the "names" object store has the key generator, the key for the name value is generated automatically.
-    // The added records would be like:
-    // key : 1 =&gt; value : "Bill"
-    // key : 2 =&gt; value : "Donna"
-    for (var i in customerData) {
-        objStore.add(customerData[i].name);
-    }
+    // Because the "names" object store has the key generator, the key for the name value is generated automatically.
+    // The added records would be like:
+    // key : 1 =&gt; value : "Bill"
+    // key : 2 =&gt; value : "Donna"
+    for (var i in customerData) {
+        objStore.add(customerData[i].name);
+    }
 }</pre>
 
 <p>Para más detalles acerca del generador de claves, por favor ver <a href="http://www.w3.org/TR/IndexedDB/#key-generator-concept">"W3C Key Generators"</a>.</p>
@@ -298,9 +298,9 @@ request.onupgradeneeded = function (event) {
 
 <p>The <code>transaction()</code> function takes two arguments (though one is optional) and returns a transaction object. The first argument is a list of object stores that the transaction will span. You can pass an empty array if you want the transaction to span all object stores, but don't do it because the spec says an empty array should generate an InvalidAccessError. If you don't specify anything for the second argument, you get a read-only transaction. Since you want to write to it here you need to pass the <code>"readwrite"</code> flag.</p>
 
-<p>Now that you have a transaction you need to understand its lifetime. Transactions are tied very closely to the event loop. If you make a transaction and return to the event loop without using it then the transaction will become inactive. The only way to keep the transaction active is to make a request on it. When the request is finished you'll get a DOM event and, assuming that the request succeeded, you'll have another opportunity to extend the transaction during that callback. If you return to the event loop without extending the transaction then it will become inactive, and so on. As long as there are pending requests the transaction remains active. Transaction lifetimes are really very simple but it might take a little time to get used to. A few more examples will help, too. If you start seeing <code>TRANSACTION_INACTIVE_ERR</code> error codes then you've messed something up.</p>
+<p>Now that you have a transaction you need to understand its lifetime. Transactions are tied very closely to the event loop. If you make a transaction and return to the event loop without using it then the transaction will become inactive. The only way to keep the transaction active is to make a request on it. When the request is finished you'll get a DOM event and, assuming that the request succeeded, you'll have another opportunity to extend the transaction during that callback. If you return to the event loop without extending the transaction then it will become inactive, and so on. As long as there are pending requests the transaction remains active. Transaction lifetimes are really very simple but it might take a little time to get used to. A few more examples will help, too. If you start seeing <code>TRANSACTION_INACTIVE_ERR</code> error codes then you've messed something up.</p>
 
-<p>Transactions can receive DOM events of three different types: <code>error</code>, <code>abort</code>, and <code>complete</code>. We've talked about the way that <code>error</code> events bubble, so a transaction receives error events from any requests that are generated from it. A more subtle point here is that the default behavior of an error is to abort the transaction in which it occurred. Unless you handle the error by first calling <code>preventDefault()</code> on the error event then doing something else, the entire transaction is rolled back. This design forces you to think about and handle errors, but you can always add a catchall error handler to the database if fine-grained error handling is too cumbersome. If you don't handle an error event or if you call <code>abort()</code> on the transaction, then the transaction is rolled back and an <code>abort</code> event is fired on the transaction. Otherwise, after all pending requests have completed, you'll get a <code>complete</code> event. If you're doing lots of database operations, then tracking the transaction rather than individual requests can certainly aid your sanity.</p>
+<p>Transactions can receive DOM events of three different types: <code>error</code>, <code>abort</code>, and <code>complete</code>. We've talked about the way that <code>error</code> events bubble, so a transaction receives error events from any requests that are generated from it. A more subtle point here is that the default behavior of an error is to abort the transaction in which it occurred. Unless you handle the error by first calling <code>preventDefault()</code> on the error event then doing something else, the entire transaction is rolled back. This design forces you to think about and handle errors, but you can always add a catchall error handler to the database if fine-grained error handling is too cumbersome. If you don't handle an error event or if you call <code>abort()</code> on the transaction, then the transaction is rolled back and an <code>abort</code> event is fired on the transaction. Otherwise, after all pending requests have completed, you'll get a <code>complete</code> event. If you're doing lots of database operations, then tracking the transaction rather than individual requests can certainly aid your sanity.</p>
 
 <p>Now that you have a transaction, you'll need to get the object store from it. Transactions only let you have an object store that you specified when creating the transaction. Then you can add all the data you need.</p>
 
@@ -321,7 +321,7 @@ for (var i in customerData) {
   };
 }</pre>
 
-<p>The <code>result</code> of a request generated from a call to <code>add()</code> is the key of the value that was added. So in this case, it should equal the <code>ssn</code> property of the object that was added, since the object store uses the <code>ssn</code> property for the key path. Note that the <code>add()</code> function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the <code>put()</code> function, as shown below in the {{ anch("Updating an entry in the database") }} section.</p>
+<p>The <code>result</code> of a request generated from a call to <code>add()</code> is the key of the value that was added. So in this case, it should equal the <code>ssn</code> property of the object that was added, since the object store uses the <code>ssn</code> property for the key path. Note that the <code>add()</code> function requires that no object already be in the database with the same key. If you're trying to modify an existing entry, or you don't care if one exists already, you can use the <code>put()</code> function, as shown below in the <a href="#updating_an_entry_in_the_database">Updating an entry in the database</a> section.</p>
 
 <h3 id="Extracción_de_datos_de_la_base_de_datos">Extracción de datos de la base de datos</h3>
 
@@ -336,7 +336,7 @@ request.onsuccess = function(event) {
 
 <h3 id="Obtener_datos_de_la_base_de_datos">Obtener datos de la base de datos</h3>
 
-<p>Now that the database has some info in it, you can retrieve it in several ways. First, the simple <code>get()</code>. You need to provide the key to retrieve the value, like so:</p>
+<p>Now that the database has some info in it, you can retrieve it in several ways. First, the simple <code>get()</code>. You need to provide the key to retrieve the value, like so:</p>
 
 <pre class="brush: js">var transaction = db.transaction(["customers"]);
 var objectStore = transaction.objectStore("customers");
@@ -387,13 +387,13 @@ request.onsuccess = function(event) {
   data.age = 42;
 
   // Put this updated object back into the database.
-  var requestUpdate = objectStore.put(data);
-   requestUpdate.onerror = function(event) {
-     // Do something with the error
-   };
-   requestUpdate.onsuccess = function(event) {
-     // Success - the data is updated!
-   };
+  var requestUpdate = objectStore.put(data);
+   requestUpdate.onerror = function(event) {
+     // Do something with the error
+   };
+   requestUpdate.onsuccess = function(event) {
+     // Success - the data is updated!
+   };
 };</pre>
 
 <p>So here we're creating an <code>objectStore</code> and requesting a customer record out of it, identified by its ssn value (<code>444-44-4444</code>). We then put the result of that request in a variable (<code>data</code>), update the <code>age</code> property of this object, then create a second request (<code>requestUpdate</code>) to put the customer record back into the <code>objectStore</code>, overwriting the previous value.</p>
@@ -448,7 +448,7 @@ objectStore.openCursor().onsuccess = function(event) {
 
 <h3 id="El_uso_de_un_índice">El uso de un índice</h3>
 
-<p>Storing customer data using the SSN as a key is logical since the SSN uniquely identifies an individual. (Whether this is a good idea for privacy is a different question, and outside the scope of this article.) If you need to look up a customer by name, however, you'll need to iterate over every SSN in the database until you find the right one. Searching in this fashion would be very slow, so instead you can use an index.</p>
+<p>Storing customer data using the SSN as a key is logical since the SSN uniquely identifies an individual. (Whether this is a good idea for privacy is a different question, and outside the scope of this article.) If you need to look up a customer by name, however, you'll need to iterate over every SSN in the database until you find the right one. Searching in this fashion would be very slow, so instead you can use an index.</p>
 
 <pre class="brush: js">var index = objectStore.index("name");
 index.get("Donna").onsuccess = function(event) {
@@ -464,7 +464,7 @@ index.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
-    alert("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
+    alert("Name: " + cursor.key + ", SSN: " + cursor.value.ssn + ", email: " + cursor.value.email);
     cursor.continue();
   }
 };
@@ -528,7 +528,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>Since the "name" index isn't unique, there might be multiple entries where <code>name</code> is the same. Note that such a situation cannot occur with object stores since the key must always be unique. If you wish to filter out duplicates during cursor iteration over indexes, you can pass <code>nextunique</code> (or <code>prevunique</code> if you're going backwards) as the direction parameter. When <code>nextunique</code> or <code>prevunique</code> is used, the entry with the lowest key is always the one returned.</p>
+<p>Since the "name" index isn't unique, there might be multiple entries where <code>name</code> is the same. Note that such a situation cannot occur with object stores since the key must always be unique. If you wish to filter out duplicates during cursor iteration over indexes, you can pass <code>nextunique</code> (or <code>prevunique</code> if you're going backwards) as the direction parameter. When <code>nextunique</code> or <code>prevunique</code> is used, the entry with the lowest key is always the one returned.</p>
 
 <pre class="brush: js">index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
   var cursor = event.target.result;
@@ -568,7 +568,7 @@ function useDatabase(db) {
   // Make sure to add a handler to be notified if another page requests a version
   // change. We must close the database. This allows the other page to upgrade the database.
   // If you don't do this then the upgrade won't happen until the user closes the tab.
-  db.onversionchange = function(event) {
+  db.onversionchange = function(event) {
     db.close();
     alert("A new version of this page is ready. Please reload!");
   };
@@ -581,13 +581,13 @@ function useDatabase(db) {
 
 <p>IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.</p>
 
-<p>It's important to note that IndexedDB doesn't work for content loaded into a frame from another site (either {{ HTMLElement("frame") }} or {{ HTMLElement("iframe") }}. This is a security and privacy measure and can be considered analogous the blocking of third-party cookies. For more details, see {{ bug(595307) }}.</p>
+<p>It's important to note that IndexedDB doesn't work for content loaded into a frame from another site (either {{ HTMLElement("frame") }} or {{ HTMLElement("iframe") }}. This is a security and privacy measure and can be considered analogous the blocking of third-party cookies. For more details, see {{ bug(595307) }}.</p>
 
 <h2 id="Warning_About_Browser_Shutdown">Warning About Browser Shutdown</h2>
 
 <p>When the browser shuts down (e.g., when the user selects Exit or clicks the Close button), any pending IndexedDB transactions are (silently) aborted — they will not complete, and they will not trigger the error handler. Since the user can exit the browser at any time, this means that you cannot rely upon any particular transaction to complete or to know that it did not complete. There are several implications of this behavior.</p>
 
-<p>First, you should take care to always leave your database in a consistent state at the end of every transaction. For example, suppose that you are using IndexedDB to store a list of items that you allow the user to edit. You save the list after the edit by clearing the object store and then writing out the new list. If you clear the object store in one transaction and write the new list in another transaction, there is a danger that the browser will close after the clear but before the write, leaving you with an empty database. To avoid this, you should combine the clear and the write into a single transaction. </p>
+<p>First, you should take care to always leave your database in a consistent state at the end of every transaction. For example, suppose that you are using IndexedDB to store a list of items that you allow the user to edit. You save the list after the edit by clearing the object store and then writing out the new list. If you clear the object store in one transaction and write the new list in another transaction, there is a danger that the browser will close after the clear but before the write, leaving you with an empty database. To avoid this, you should combine the clear and the write into a single transaction. </p>
 
 <p>Second, you should never tie database transactions to unload events. If the unload event is triggered by the browser closing, any transactions created in the unload event handler will never complete. An intuitive approach to maintaining some information across browser sessions is to read it from the database when the browser (or a particular page) is opened, update it as the user interacts with the browser, and then save it to the database when the browser (or page) closes. However, this will not work. The database transactions will be created in the unload event handler, but because they are asynchronous they will be aborted before they can execute.</p>
 
@@ -599,676 +599,676 @@ function useDatabase(db) {
 
 <pre class="brush: html">&lt;script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"&gt;&lt;/script&gt;
 
-    &lt;h1&gt;IndexedDB Demo: storing blobs, e-publication example&lt;/h1&gt;
-    &lt;div class="note"&gt;
-      &lt;p&gt;
-        Works and tested with:
-      &lt;/p&gt;
-      &lt;div id="compat"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;h1&gt;IndexedDB Demo: storing blobs, e-publication example&lt;/h1&gt;
+    &lt;div class="note"&gt;
+      &lt;p&gt;
+        Works and tested with:
+      &lt;/p&gt;
+      &lt;div id="compat"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
 
-    &lt;div id="msg"&gt;
-    &lt;/div&gt;
+    &lt;div id="msg"&gt;
+    &lt;/div&gt;
 
-    &lt;form id="register-form"&gt;
-      &lt;table&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-title" class="required"&gt;
-                Title:
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="pub-title" name="pub-title" /&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-biblioid" class="required"&gt;
-                Bibliographic ID:&lt;br/&gt;
-                &lt;span class="note"&gt;(ISBN, ISSN, etc.)&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="pub-biblioid" name="pub-biblioid"/&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-year"&gt;
-                Year:
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="number" id="pub-year" name="pub-year" /&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-file"&gt;
-                File image:
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="file" id="pub-file"/&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-file-url"&gt;
-                Online-file image URL:&lt;br/&gt;
-                &lt;span class="note"&gt;(same origin URL)&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="pub-file-url" name="pub-file-url"/&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
+    &lt;form id="register-form"&gt;
+      &lt;table&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;label for="pub-title" class="required"&gt;
+                Title:
+              &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;input type="text" id="pub-title" name="pub-title" /&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;label for="pub-biblioid" class="required"&gt;
+                Bibliographic ID:&lt;br/&gt;
+                &lt;span class="note"&gt;(ISBN, ISSN, etc.)&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;input type="text" id="pub-biblioid" name="pub-biblioid"/&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;label for="pub-year"&gt;
+                Year:
+              &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;input type="number" id="pub-year" name="pub-year" /&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;label for="pub-file"&gt;
+                File image:
+              &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;input type="file" id="pub-file"/&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;label for="pub-file-url"&gt;
+                Online-file image URL:&lt;br/&gt;
+                &lt;span class="note"&gt;(same origin URL)&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;input type="text" id="pub-file-url" name="pub-file-url"/&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
 
-      &lt;div class="button-pane"&gt;
-        &lt;input type="button" id="add-button" value="Add Publication" /&gt;
-        &lt;input type="reset" id="register-form-reset"/&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
+      &lt;div class="button-pane"&gt;
+        &lt;input type="button" id="add-button" value="Add Publication" /&gt;
+        &lt;input type="reset" id="register-form-reset"/&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
 
-    &lt;form id="delete-form"&gt;
-      &lt;table&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="pub-biblioid-to-delete"&gt;
-                Bibliographic ID:&lt;br/&gt;
-                &lt;span class="note"&gt;(ISBN, ISSN, etc.)&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="pub-biblioid-to-delete"
-                     name="pub-biblioid-to-delete" /&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;
-              &lt;label for="key-to-delete"&gt;
-                Key:&lt;br/&gt;
-                &lt;span class="note"&gt;(for example 1, 2, 3, etc.)&lt;/span&gt;
-              &lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td&gt;
-              &lt;input type="text" id="key-to-delete"
-                     name="key-to-delete" /&gt;
-            &lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-      &lt;div class="button-pane"&gt;
-        &lt;input type="button" id="delete-button" value="Delete Publication" /&gt;
-        &lt;input type="button" id="clear-store-button"
-               value="Clear the whole store" class="destructive" /&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
+    &lt;form id="delete-form"&gt;
+      &lt;table&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;label for="pub-biblioid-to-delete"&gt;
+                Bibliographic ID:&lt;br/&gt;
+                &lt;span class="note"&gt;(ISBN, ISSN, etc.)&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;input type="text" id="pub-biblioid-to-delete"
+                     name="pub-biblioid-to-delete" /&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;label for="key-to-delete"&gt;
+                Key:&lt;br/&gt;
+                &lt;span class="note"&gt;(for example 1, 2, 3, etc.)&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;input type="text" id="key-to-delete"
+                     name="key-to-delete" /&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class="button-pane"&gt;
+        &lt;input type="button" id="delete-button" value="Delete Publication" /&gt;
+        &lt;input type="button" id="clear-store-button"
+               value="Clear the whole store" class="destructive" /&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
 
-    &lt;form id="search-form"&gt;
-      &lt;div class="button-pane"&gt;
-        &lt;input type="button" id="search-list-button"
-               value="List database content" /&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
+    &lt;form id="search-form"&gt;
+      &lt;div class="button-pane"&gt;
+        &lt;input type="button" id="search-list-button"
+               value="List database content" /&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
 
-    &lt;div&gt;
-      &lt;div id="pub-msg"&gt;
-      &lt;/div&gt;
-      &lt;div id="pub-viewer"&gt;
-      &lt;/div&gt;
-      &lt;ul id="pub-list"&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;div id="pub-msg"&gt;
+      &lt;/div&gt;
+      &lt;div id="pub-viewer"&gt;
+      &lt;/div&gt;
+      &lt;ul id="pub-list"&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
 </pre>
 
 <h3 id="CSS_Content">CSS Content</h3>
 
 <pre class="brush: css">body {
-  font-size: 0.8em;
-  font-family: Sans-Serif;
+  font-size: 0.8em;
+  font-family: Sans-Serif;
 }
 
 form {
-  background-color: #cccccc;
-  border-radius: 0.3em;
-  display: inline-block;
-  margin-bottom: 0.5em;
-  padding: 1em;
+  background-color: #cccccc;
+  border-radius: 0.3em;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  padding: 1em;
 }
 
 table {
-  border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 input {
-  padding: 0.3em;
-  border-color: #cccccc;
-  border-radius: 0.3em;
+  padding: 0.3em;
+  border-color: #cccccc;
+  border-radius: 0.3em;
 }
 
 .required:after {
-  content: "*";
-  color: red;
+  content: "*";
+  color: red;
 }
 
 .button-pane {
-  margin-top: 1em;
+  margin-top: 1em;
 }
 
 #pub-viewer {
-  float: right;
-  width: 48%;
-  height: 20em;
-  border: solid #d092ff 0.1em;
+  float: right;
+  width: 48%;
+  height: 20em;
+  border: solid #d092ff 0.1em;
 }
 #pub-viewer iframe {
-  width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #pub-list {
-  width: 46%;
-  background-color: #eeeeee;
-  border-radius: 0.3em;
+  width: 46%;
+  background-color: #eeeeee;
+  border-radius: 0.3em;
 }
 #pub-list li {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
 }
 
 #msg {
-  margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .action-success {
-  padding: 0.5em;
-  color: #00d21e;
-  background-color: #eeeeee;
-  border-radius: 0.2em;
+  padding: 0.5em;
+  color: #00d21e;
+  background-color: #eeeeee;
+  border-radius: 0.2em;
 }
 
 .action-failure {
-  padding: 0.5em;
-  color: #ff1408;
-  background-color: #eeeeee;
-  border-radius: 0.2em;
+  padding: 0.5em;
+  color: #ff1408;
+  background-color: #eeeeee;
+  border-radius: 0.2em;
 }
 
 .note {
-  font-size: smaller;
+  font-size: smaller;
 }
 
 .destructive {
-  background-color: orange;
+  background-color: orange;
 }
 .destructive:hover {
-  background-color: #ff8000;
+  background-color: #ff8000;
 }
 .destructive:active {
-  background-color: red;
+  background-color: red;
 }
 </pre>
 
-<p> </p>
+<p> </p>
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
 <pre class="brush: js">(function () {
-  var COMPAT_ENVS = [
-    ['Firefox', "&gt;= 16.0"],
-    ['Google Chrome',
-     "&gt;= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support"]
-  ];
-  var compat = $('#compat');
-  compat.empty();
-  compat.append('&lt;ul id="compat-list"&gt;&lt;/ul&gt;');
-  COMPAT_ENVS.forEach(function(val, idx, array) {
-    $('#compat-list').append('&lt;li&gt;' + val[0] + ': ' + val[1] + '&lt;/li&gt;');
-  });
+  var COMPAT_ENVS = [
+    ['Firefox', "&gt;= 16.0"],
+    ['Google Chrome',
+     "&gt;= 24.0 (you may need to get Google Chrome Canary), NO Blob storage support"]
+  ];
+  var compat = $('#compat');
+  compat.empty();
+  compat.append('&lt;ul id="compat-list"&gt;&lt;/ul&gt;');
+  COMPAT_ENVS.forEach(function(val, idx, array) {
+    $('#compat-list').append('&lt;li&gt;' + val[0] + ': ' + val[1] + '&lt;/li&gt;');
+  });
 
-  const DB_NAME = 'mdn-demo-indexeddb-epublications';
-  const DB_VERSION = 1; // Use a long long for this value (don't use a float)
-  const DB_STORE_NAME = 'publications';
+  const DB_NAME = 'mdn-demo-indexeddb-epublications';
+  const DB_VERSION = 1; // Use a long long for this value (don't use a float)
+  const DB_STORE_NAME = 'publications';
 
-  var db;
+  var db;
 
-  // Used to keep track of which view is displayed to avoid uselessly reloading it
-  var current_view_pub_key;
+  // Used to keep track of which view is displayed to avoid uselessly reloading it
+  var current_view_pub_key;
 
-  function openDb() {
-    console.log("openDb ...");
-    var req = indexedDB.open(DB_NAME, DB_VERSION);
-    req.onsuccess = function (evt) {
-      // Better use "this" than "req" to get the result to avoid problems with
-      // garbage collection.
-      // db = req.result;
-      db = this.result;
-      console.log("openDb DONE");
-    };
-    req.onerror = function (evt) {
-      console.error("openDb:", evt.target.errorCode);
-    };
+  function openDb() {
+    console.log("openDb ...");
+    var req = indexedDB.open(DB_NAME, DB_VERSION);
+    req.onsuccess = function (evt) {
+      // Better use "this" than "req" to get the result to avoid problems with
+      // garbage collection.
+      // db = req.result;
+      db = this.result;
+      console.log("openDb DONE");
+    };
+    req.onerror = function (evt) {
+      console.error("openDb:", evt.target.errorCode);
+    };
 
-    req.onupgradeneeded = function (evt) {
-      console.log("openDb.onupgradeneeded");
-      var store = evt.currentTarget.result.createObjectStore(
-        DB_STORE_NAME, { keyPath: 'id', autoIncrement: true });
+    req.onupgradeneeded = function (evt) {
+      console.log("openDb.onupgradeneeded");
+      var store = evt.currentTarget.result.createObjectStore(
+        DB_STORE_NAME, { keyPath: 'id', autoIncrement: true });
 
-      store.createIndex('biblioid', 'biblioid', { unique: true });
-      store.createIndex('title', 'title', { unique: false });
-      store.createIndex('year', 'year', { unique: false });
-    };
-  }
+      store.createIndex('biblioid', 'biblioid', { unique: true });
+      store.createIndex('title', 'title', { unique: false });
+      store.createIndex('year', 'year', { unique: false });
+    };
+  }
 
-  /**
-   * @param {string} store_name
-   * @param {string} mode either "readonly" or "readwrite"
-   */
-  function getObjectStore(store_name, mode) {
-    var tx = db.transaction(store_name, mode);
-    return tx.objectStore(store_name);
-  }
+  /**
+   * @param {string} store_name
+   * @param {string} mode either "readonly" or "readwrite"
+   */
+  function getObjectStore(store_name, mode) {
+    var tx = db.transaction(store_name, mode);
+    return tx.objectStore(store_name);
+  }
 
-  function clearObjectStore(store_name) {
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
-    var req = store.clear();
-    req.onsuccess = function(evt) {
-      displayActionSuccess("Store cleared");
-      displayPubList(store);
-    };
-    req.onerror = function (evt) {
-      console.error("clearObjectStore:", evt.target.errorCode);
-      displayActionFailure(this.error);
-    };
-  }
+  function clearObjectStore(store_name) {
+    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var req = store.clear();
+    req.onsuccess = function(evt) {
+      displayActionSuccess("Store cleared");
+      displayPubList(store);
+    };
+    req.onerror = function (evt) {
+      console.error("clearObjectStore:", evt.target.errorCode);
+      displayActionFailure(this.error);
+    };
+  }
 
-  function getBlob(key, store, success_callback) {
-    var req = store.get(key);
-    req.onsuccess = function(evt) {
-      var value = evt.target.result;
-      if (value)
-        success_callback(value.blob);
-    };
-  }
+  function getBlob(key, store, success_callback) {
+    var req = store.get(key);
+    req.onsuccess = function(evt) {
+      var value = evt.target.result;
+      if (value)
+        success_callback(value.blob);
+    };
+  }
 
-  /**
-   * @param {IDBObjectStore=} store
-   */
-  function displayPubList(store) {
-    console.log("displayPubList");
+  /**
+   * @param {IDBObjectStore=} store
+   */
+  function displayPubList(store) {
+    console.log("displayPubList");
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readonly');
+    if (typeof store == 'undefined')
+      store = getObjectStore(DB_STORE_NAME, 'readonly');
 
-    var pub_msg = $('#pub-msg');
-    pub_msg.empty();
-    var pub_list = $('#pub-list');
-    pub_list.empty();
-    // Resetting the iframe so that it doesn't display previous content
-    newViewerFrame();
+    var pub_msg = $('#pub-msg');
+    pub_msg.empty();
+    var pub_list = $('#pub-list');
+    pub_list.empty();
+    // Resetting the iframe so that it doesn't display previous content
+    newViewerFrame();
 
-    var req;
-    req = store.count();
-    // Requests are executed in the order in which they were made against the
-    // transaction, and their results are returned in the same order.
-    // Thus the count text below will be displayed before the actual pub list
-    // (not that it is algorithmically important in this case).
-    req.onsuccess = function(evt) {
-      pub_msg.append('&lt;p&gt;There are &lt;strong&gt;' + evt.target.result +
-                     '&lt;/strong&gt; record(s) in the object store.&lt;/p&gt;');
-    };
-    req.onerror = function(evt) {
-      console.error("add error", this.error);
-      displayActionFailure(this.error);
-    };
+    var req;
+    req = store.count();
+    // Requests are executed in the order in which they were made against the
+    // transaction, and their results are returned in the same order.
+    // Thus the count text below will be displayed before the actual pub list
+    // (not that it is algorithmically important in this case).
+    req.onsuccess = function(evt) {
+      pub_msg.append('&lt;p&gt;There are &lt;strong&gt;' + evt.target.result +
+                     '&lt;/strong&gt; record(s) in the object store.&lt;/p&gt;');
+    };
+    req.onerror = function(evt) {
+      console.error("add error", this.error);
+      displayActionFailure(this.error);
+    };
 
-    var i = 0;
-    req = store.openCursor();
-    req.onsuccess = function(evt) {
-      var cursor = evt.target.result;
+    var i = 0;
+    req = store.openCursor();
+    req.onsuccess = function(evt) {
+      var cursor = evt.target.result;
 
-      // If the cursor is pointing at something, ask for the data
-      if (cursor) {
-        console.log("displayPubList cursor:", cursor);
-        req = store.get(cursor.key);
-        req.onsuccess = function (evt) {
-          var value = evt.target.result;
-          var list_item = $('&lt;li&gt;' +
-                            '[' + cursor.key + '] ' +
-                            '(biblioid: ' + value.biblioid + ') ' +
-                            value.title +
-                            '&lt;/li&gt;');
-          if (value.year != null)
-            list_item.append(' - ' + value.year);
+      // If the cursor is pointing at something, ask for the data
+      if (cursor) {
+        console.log("displayPubList cursor:", cursor);
+        req = store.get(cursor.key);
+        req.onsuccess = function (evt) {
+          var value = evt.target.result;
+          var list_item = $('&lt;li&gt;' +
+                            '[' + cursor.key + '] ' +
+                            '(biblioid: ' + value.biblioid + ') ' +
+                            value.title +
+                            '&lt;/li&gt;');
+          if (value.year != null)
+            list_item.append(' - ' + value.year);
 
-          if (value.hasOwnProperty('blob') &amp;&amp;
-              typeof value.blob != 'undefined') {
-            var link = $('&lt;a href="' + cursor.key + '"&gt;File&lt;/a&gt;');
+          if (value.hasOwnProperty('blob') &amp;&amp;
+              typeof value.blob != 'undefined') {
+            var link = $('&lt;a href="' + cursor.key + '"&gt;File&lt;/a&gt;');
             link.on('click', function() { return false; });
-            link.on('mouseenter', function(evt) {
-                      setInViewer(evt.target.getAttribute('href')); });
-            list_item.append(' / ');
-            list_item.append(link);
-          } else {
-            list_item.append(" / No attached file");
-          }
-          pub_list.append(list_item);
-        };
+            link.on('mouseenter', function(evt) {
+                      setInViewer(evt.target.getAttribute('href')); });
+            list_item.append(' / ');
+            list_item.append(link);
+          } else {
+            list_item.append(" / No attached file");
+          }
+          pub_list.append(list_item);
+        };
 
-        // Move on to the next object in store
-        cursor.continue();
+        // Move on to the next object in store
+        cursor.continue();
 
-        // This counter serves only to create distinct ids
-        i++;
-      } else {
-        console.log("No more entries");
-      }
-    };
-  }
+        // This counter serves only to create distinct ids
+        i++;
+      } else {
+        console.log("No more entries");
+      }
+    };
+  }
 
-  function newViewerFrame() {
-    var viewer = $('#pub-viewer');
-    viewer.empty();
-    var iframe = $('&lt;iframe /&gt;');
-    viewer.append(iframe);
-    return iframe;
-  }
+  function newViewerFrame() {
+    var viewer = $('#pub-viewer');
+    viewer.empty();
+    var iframe = $('&lt;iframe /&gt;');
+    viewer.append(iframe);
+    return iframe;
+  }
 
-  function setInViewer(key) {
-    console.log("setInViewer:", arguments);
-    key = Number(key);
-    if (key == current_view_pub_key)
-      return;
+  function setInViewer(key) {
+    console.log("setInViewer:", arguments);
+    key = Number(key);
+    if (key == current_view_pub_key)
+      return;
 
-    current_view_pub_key = key;
+    current_view_pub_key = key;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readonly');
-    getBlob(key, store, function(blob) {
-      console.log("setInViewer blob:", blob);
-      var iframe = newViewerFrame();
+    var store = getObjectStore(DB_STORE_NAME, 'readonly');
+    getBlob(key, store, function(blob) {
+      console.log("setInViewer blob:", blob);
+      var iframe = newViewerFrame();
 
-      // It is not possible to set a direct link to the
-      // blob to provide a mean to directly download it.
-      if (blob.type == 'text/html') {
-        var reader = new FileReader();
-        reader.onload = (function(evt) {
-          var html = evt.target.result;
-          iframe.load(function() {
-            $(this).contents().find('html').html(html);
-          });
-        });
-        reader.readAsText(blob);
-      } else if (blob.type.indexOf('image/') == 0) {
-        iframe.load(function() {
-          var img_id = 'image-' + key;
-          var img = $('&lt;img id="' + img_id + '"/&gt;');
-          $(this).contents().find('body').html(img);
-          var obj_url = window.URL.createObjectURL(blob);
-          $(this).contents().find('#' + img_id).attr('src', obj_url);
-          window.URL.revokeObjectURL(obj_url);
-        });
-      } else if (blob.type == 'application/pdf') {
-        $('*').css('cursor', 'wait');
-        var obj_url = window.URL.createObjectURL(blob);
-        iframe.load(function() {
-          $('*').css('cursor', 'auto');
-        });
-        iframe.attr('src', obj_url);
-        window.URL.revokeObjectURL(obj_url);
-      } else {
-        iframe.load(function() {
-          $(this).contents().find('body').html("No view available");
-        });
-      }
+      // It is not possible to set a direct link to the
+      // blob to provide a mean to directly download it.
+      if (blob.type == 'text/html') {
+        var reader = new FileReader();
+        reader.onload = (function(evt) {
+          var html = evt.target.result;
+          iframe.load(function() {
+            $(this).contents().find('html').html(html);
+          });
+        });
+        reader.readAsText(blob);
+      } else if (blob.type.indexOf('image/') == 0) {
+        iframe.load(function() {
+          var img_id = 'image-' + key;
+          var img = $('&lt;img id="' + img_id + '"/&gt;');
+          $(this).contents().find('body').html(img);
+          var obj_url = window.URL.createObjectURL(blob);
+          $(this).contents().find('#' + img_id).attr('src', obj_url);
+          window.URL.revokeObjectURL(obj_url);
+        });
+      } else if (blob.type == 'application/pdf') {
+        $('*').css('cursor', 'wait');
+        var obj_url = window.URL.createObjectURL(blob);
+        iframe.load(function() {
+          $('*').css('cursor', 'auto');
+        });
+        iframe.attr('src', obj_url);
+        window.URL.revokeObjectURL(obj_url);
+      } else {
+        iframe.load(function() {
+          $(this).contents().find('body').html("No view available");
+        });
+      }
 
-    });
-  }
+    });
+  }
 
-  /**
-   * @param {string} biblioid
-   * @param {string} title
-   * @param {number} year
-   * @param {string} url the URL of the image to download and store in the local
-   *   IndexedDB database. The resource behind this URL is subjected to the
-   *   "Same origin policy", thus for this method to work, the URL must come from
-   *   the same origin as the web site/app this code is deployed on.
-   */
-  function addPublicationFromUrl(biblioid, title, year, url) {
-    console.log("addPublicationFromUrl:", arguments);
+  /**
+   * @param {string} biblioid
+   * @param {string} title
+   * @param {number} year
+   * @param {string} url the URL of the image to download and store in the local
+   *   IndexedDB database. The resource behind this URL is subjected to the
+   *   "Same origin policy", thus for this method to work, the URL must come from
+   *   the same origin as the web site/app this code is deployed on.
+   */
+  function addPublicationFromUrl(biblioid, title, year, url) {
+    console.log("addPublicationFromUrl:", arguments);
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    // Setting the wanted responseType to "blob"
-    // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
-    xhr.responseType = 'blob';
-    xhr.onload = function (evt) {
-                           if (xhr.status == 200) {
-                             console.log("Blob retrieved");
-                             var blob = xhr.response;
-                             console.log("Blob:", blob);
-                             addPublication(biblioid, title, year, blob);
-                           } else {
-                             console.error("addPublicationFromUrl error:",
-                                           xhr.responseText, xhr.status);
-                           }
-                         };
-    xhr.send();
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    // Setting the wanted responseType to "blob"
+    // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
+    xhr.responseType = 'blob';
+    xhr.onload = function (evt) {
+                           if (xhr.status == 200) {
+                             console.log("Blob retrieved");
+                             var blob = xhr.response;
+                             console.log("Blob:", blob);
+                             addPublication(biblioid, title, year, blob);
+                           } else {
+                             console.error("addPublicationFromUrl error:",
+                                           xhr.responseText, xhr.status);
+                           }
+                         };
+    xhr.send();
 
-    // We can't use jQuery here because as of jQuery 1.8.3 the new "blob"
-    // responseType is not handled.
-    // http://bugs.jquery.com/ticket/11461
-    // http://bugs.jquery.com/ticket/7248
-    // $.ajax({
-    //   url: url,
-    //   type: 'GET',
-    //   xhrFields: { responseType: 'blob' },
-    //   success: function(data, textStatus, jqXHR) {
-    //     console.log("Blob retrieved");
-    //     console.log("Blob:", data);
-    //     // addPublication(biblioid, title, year, data);
-    //   },
-    //   error: function(jqXHR, textStatus, errorThrown) {
-    //     console.error(errorThrown);
-    //     displayActionFailure("Error during blob retrieval");
-    //   }
-    // });
-  }
+    // We can't use jQuery here because as of jQuery 1.8.3 the new "blob"
+    // responseType is not handled.
+    // http://bugs.jquery.com/ticket/11461
+    // http://bugs.jquery.com/ticket/7248
+    // $.ajax({
+    //   url: url,
+    //   type: 'GET',
+    //   xhrFields: { responseType: 'blob' },
+    //   success: function(data, textStatus, jqXHR) {
+    //     console.log("Blob retrieved");
+    //     console.log("Blob:", data);
+    //     // addPublication(biblioid, title, year, data);
+    //   },
+    //   error: function(jqXHR, textStatus, errorThrown) {
+    //     console.error(errorThrown);
+    //     displayActionFailure("Error during blob retrieval");
+    //   }
+    // });
+  }
 
-  /**
-   * @param {string} biblioid
-   * @param {string} title
-   * @param {number} year
-   * @param {Blob=} blob
-   */
-  function addPublication(biblioid, title, year, blob) {
-    console.log("addPublication arguments:", arguments);
-    var obj = { biblioid: biblioid, title: title, year: year };
-    if (typeof blob != 'undefined')
-      obj.blob = blob;
+  /**
+   * @param {string} biblioid
+   * @param {string} title
+   * @param {number} year
+   * @param {Blob=} blob
+   */
+  function addPublication(biblioid, title, year, blob) {
+    console.log("addPublication arguments:", arguments);
+    var obj = { biblioid: biblioid, title: title, year: year };
+    if (typeof blob != 'undefined')
+      obj.blob = blob;
 
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
-    var req;
-    try {
-      req = store.add(obj);
-    } catch (e) {
-      if (e.name == 'DataCloneError')
-        displayActionFailure("This engine doesn't know how to clone a Blob, " +
-                             "use Firefox");
-      throw e;
-    }
-    req.onsuccess = function (evt) {
-      console.log("Insertion in DB successful");
-      displayActionSuccess();
-      displayPubList(store);
-    };
-    req.onerror = function() {
-      console.error("addPublication error", this.error);
-      displayActionFailure(this.error);
-    };
-  }
+    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var req;
+    try {
+      req = store.add(obj);
+    } catch (e) {
+      if (e.name == 'DataCloneError')
+        displayActionFailure("This engine doesn't know how to clone a Blob, " +
+                             "use Firefox");
+      throw e;
+    }
+    req.onsuccess = function (evt) {
+      console.log("Insertion in DB successful");
+      displayActionSuccess();
+      displayPubList(store);
+    };
+    req.onerror = function() {
+      console.error("addPublication error", this.error);
+      displayActionFailure(this.error);
+    };
+  }
 
-  /**
-   * @param {string} biblioid
-   */
-  function deletePublicationFromBib(biblioid) {
-    console.log("deletePublication:", arguments);
-    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
-    var req = store.index('biblioid');
-    req.get(biblioid).onsuccess = function(evt) {
-      if (typeof evt.target.result == 'undefined') {
-        displayActionFailure("No matching record found");
-        return;
-      }
-      deletePublication(evt.target.result.id, store);
-    };
-    req.onerror = function (evt) {
-      console.error("deletePublicationFromBib:", evt.target.errorCode);
-    };
-  }
+  /**
+   * @param {string} biblioid
+   */
+  function deletePublicationFromBib(biblioid) {
+    console.log("deletePublication:", arguments);
+    var store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    var req = store.index('biblioid');
+    req.get(biblioid).onsuccess = function(evt) {
+      if (typeof evt.target.result == 'undefined') {
+        displayActionFailure("No matching record found");
+        return;
+      }
+      deletePublication(evt.target.result.id, store);
+    };
+    req.onerror = function (evt) {
+      console.error("deletePublicationFromBib:", evt.target.errorCode);
+    };
+  }
 
-  /**
-   * @param {number} key
-   * @param {IDBObjectStore=} store
-   */
-  function deletePublication(key, store) {
-    console.log("deletePublication:", arguments);
+  /**
+   * @param {number} key
+   * @param {IDBObjectStore=} store
+   */
+  function deletePublication(key, store) {
+    console.log("deletePublication:", arguments);
 
-    if (typeof store == 'undefined')
-      store = getObjectStore(DB_STORE_NAME, 'readwrite');
+    if (typeof store == 'undefined')
+      store = getObjectStore(DB_STORE_NAME, 'readwrite');
 
-    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
-    // the result of the Object Store Deletion Operation algorithm is
-    // undefined, so it's not possible to know if some records were actually
-    // deleted by looking at the request result.
-    var req = store.get(key);
-    req.onsuccess = function(evt) {
-      var record = evt.target.result;
-      console.log("record:", record);
-      if (typeof record == 'undefined') {
-        displayActionFailure("No matching record found");
-        return;
-      }
-      // Warning: The exact same key used for creation needs to be passed for
-      // the deletion. If the key was a Number for creation, then it needs to
-      // be a Number for deletion.
-      req = store.delete(key);
-      req.onsuccess = function(evt) {
-        console.log("evt:", evt);
-        console.log("evt.target:", evt.target);
-        console.log("evt.target.result:", evt.target.result);
-        console.log("delete successful");
-        displayActionSuccess("Deletion successful");
-        displayPubList(store);
-      };
-      req.onerror = function (evt) {
-        console.error("deletePublication:", evt.target.errorCode);
-      };
-    };
-    req.onerror = function (evt) {
-      console.error("deletePublication:", evt.target.errorCode);
-      };
-  }
+    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
+    // the result of the Object Store Deletion Operation algorithm is
+    // undefined, so it's not possible to know if some records were actually
+    // deleted by looking at the request result.
+    var req = store.get(key);
+    req.onsuccess = function(evt) {
+      var record = evt.target.result;
+      console.log("record:", record);
+      if (typeof record == 'undefined') {
+        displayActionFailure("No matching record found");
+        return;
+      }
+      // Warning: The exact same key used for creation needs to be passed for
+      // the deletion. If the key was a Number for creation, then it needs to
+      // be a Number for deletion.
+      req = store.delete(key);
+      req.onsuccess = function(evt) {
+        console.log("evt:", evt);
+        console.log("evt.target:", evt.target);
+        console.log("evt.target.result:", evt.target.result);
+        console.log("delete successful");
+        displayActionSuccess("Deletion successful");
+        displayPubList(store);
+      };
+      req.onerror = function (evt) {
+        console.error("deletePublication:", evt.target.errorCode);
+      };
+    };
+    req.onerror = function (evt) {
+      console.error("deletePublication:", evt.target.errorCode);
+      };
+  }
 
-  function displayActionSuccess(msg) {
-    msg = typeof msg != 'undefined' ? "Success: " + msg : "Success";
-    $('#msg').html('&lt;span class="action-success"&gt;' + msg + '&lt;/span&gt;');
-  }
-  function displayActionFailure(msg) {
-    msg = typeof msg != 'undefined' ? "Failure: " + msg : "Failure";
-    $('#msg').html('&lt;span class="action-failure"&gt;' + msg + '&lt;/span&gt;');
-  }
-  function resetActionStatus() {
-    console.log("resetActionStatus ...");
-    $('#msg').empty();
-    console.log("resetActionStatus DONE");
-  }
+  function displayActionSuccess(msg) {
+    msg = typeof msg != 'undefined' ? "Success: " + msg : "Success";
+    $('#msg').html('&lt;span class="action-success"&gt;' + msg + '&lt;/span&gt;');
+  }
+  function displayActionFailure(msg) {
+    msg = typeof msg != 'undefined' ? "Failure: " + msg : "Failure";
+    $('#msg').html('&lt;span class="action-failure"&gt;' + msg + '&lt;/span&gt;');
+  }
+  function resetActionStatus() {
+    console.log("resetActionStatus ...");
+    $('#msg').empty();
+    console.log("resetActionStatus DONE");
+  }
 
-  function addEventListeners() {
-    console.log("addEventListeners");
+  function addEventListeners() {
+    console.log("addEventListeners");
 
-    $('#register-form-reset').click(function(evt) {
-      resetActionStatus();
-    });
+    $('#register-form-reset').click(function(evt) {
+      resetActionStatus();
+    });
 
-    $('#add-button').click(function(evt) {
-      console.log("add ...");
-      var title = $('#pub-title').val();
-      var biblioid = $('#pub-biblioid').val();
-      if (!title || !biblioid) {
-        displayActionFailure("Required field(s) missing");
-        return;
-      }
-      var year = $('#pub-year').val();
-      if (year != '') {
-        // Better use Number.isInteger if the engine has EcmaScript 6
-        if (isNaN(year))  {
-          displayActionFailure("Invalid year");
-          return;
-        }
-        year = Number(year);
-      } else {
-        year = null;
-      }
+    $('#add-button').click(function(evt) {
+      console.log("add ...");
+      var title = $('#pub-title').val();
+      var biblioid = $('#pub-biblioid').val();
+      if (!title || !biblioid) {
+        displayActionFailure("Required field(s) missing");
+        return;
+      }
+      var year = $('#pub-year').val();
+      if (year != '') {
+        // Better use Number.isInteger if the engine has EcmaScript 6
+        if (isNaN(year))  {
+          displayActionFailure("Invalid year");
+          return;
+        }
+        year = Number(year);
+      } else {
+        year = null;
+      }
 
-      var file_input = $('#pub-file');
-      var selected_file = file_input.get(0).files[0];
-      console.log("selected_file:", selected_file);
-      // Keeping a reference on how to reset the file input in the UI once we
-      // have its value, but instead of doing that we rather use a "reset" type
-      // input in the HTML form.
-      //file_input.val(null);
-      var file_url = $('#pub-file-url').val();
-      if (selected_file) {
-        addPublication(biblioid, title, year, selected_file);
-      } else if (file_url) {
-        addPublicationFromUrl(biblioid, title, year, file_url);
-      } else {
-        addPublication(biblioid, title, year);
-      }
+      var file_input = $('#pub-file');
+      var selected_file = file_input.get(0).files[0];
+      console.log("selected_file:", selected_file);
+      // Keeping a reference on how to reset the file input in the UI once we
+      // have its value, but instead of doing that we rather use a "reset" type
+      // input in the HTML form.
+      //file_input.val(null);
+      var file_url = $('#pub-file-url').val();
+      if (selected_file) {
+        addPublication(biblioid, title, year, selected_file);
+      } else if (file_url) {
+        addPublicationFromUrl(biblioid, title, year, file_url);
+      } else {
+        addPublication(biblioid, title, year);
+      }
 
-    });
+    });
 
-    $('#delete-button').click(function(evt) {
-      console.log("delete ...");
-      var biblioid = $('#pub-biblioid-to-delete').val();
-      var key = $('#key-to-delete').val();
+    $('#delete-button').click(function(evt) {
+      console.log("delete ...");
+      var biblioid = $('#pub-biblioid-to-delete').val();
+      var key = $('#key-to-delete').val();
 
-      if (biblioid != '') {
-        deletePublicationFromBib(biblioid);
-      } else if (key != '') {
-        // Better use Number.isInteger if the engine has EcmaScript 6
-        if (key == '' || isNaN(key))  {
-          displayActionFailure("Invalid key");
-          return;
-        }
-        key = Number(key);
-        deletePublication(key);
-      }
-    });
+      if (biblioid != '') {
+        deletePublicationFromBib(biblioid);
+      } else if (key != '') {
+        // Better use Number.isInteger if the engine has EcmaScript 6
+        if (key == '' || isNaN(key))  {
+          displayActionFailure("Invalid key");
+          return;
+        }
+        key = Number(key);
+        deletePublication(key);
+      }
+    });
 
-    $('#clear-store-button').click(function(evt) {
-      clearObjectStore();
-    });
+    $('#clear-store-button').click(function(evt) {
+      clearObjectStore();
+    });
 
-    var search_button = $('#search-list-button');
-    search_button.click(function(evt) {
-      displayPubList();
-    });
+    var search_button = $('#search-list-button');
+    search_button.click(function(evt) {
+      displayPubList();
+    });
 
-  }
+  }
 
-  openDb();
-  addEventListeners();
+  openDb();
+  addEventListeners();
 
 })(); // Immediately-Invoked Function Expression (IIFE)
 </pre>
@@ -1284,7 +1284,7 @@ input {
 <p>Reference</p>
 
 <ul>
- <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
+ <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
  <li><a class="external" href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
  <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
 </ul>
@@ -1292,14 +1292,14 @@ input {
 <p>Tutorials</p>
 
 <ul>
- <li><a class="external" href="http://www.html5rocks.com/tutorials/indexeddb/todo/">A simple TODO list using HTML5 IndexedDB</a><span class="external">. {{Note("This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed <code>setVersion()</code> method.") }}</span></li>
+ <li><a class="external" href="http://www.html5rocks.com/tutorials/indexeddb/todo/">A simple TODO list using HTML5 IndexedDB</a><span class="external">. {{Note("This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed <code>setVersion()</code> method.") }}</span></li>
  <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
 </ul>
 
 <p>Related articles</p>
 
 <ul>
- <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a class="external" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <p>Firefox</p>

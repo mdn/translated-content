@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Guide/정규식/Assertions
 ---
 <p>{{jsSidebar("JavaScript Guide")}}</p>
 
-<p>Assertions에는 행이나 단어의 시작 · 끝을 나타내는 경계와 (앞, 뒤 읽고 조건식을 포함한) 어떤 식 으로든 매치가 가능한 것을 나타내는 다른 패턴이 포함됩니다.</p>
+<p>Assertions에는 행이나 단어의 시작 · 끝을 나타내는 경계와 (앞, 뒤 읽고 조건식을 포함한) 어떤 식 으로든 매치가 가능한 것을 나타내는 다른 패턴이 포함됩니다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}</div>
 
@@ -46,10 +46,10 @@ original_slug: Web/JavaScript/Guide/정규식/Assertions
     <p>Examples:</p>
 
     <ul>
-     <li><code>/\bm/</code> matches the "m" in "moon".</li>
-     <li><code>/oo\b/</code> does not match the "oo" in "moon", because "oo" is followed by "n" which is a word character.</li>
-     <li><code>/oon\b/</code> matches the "oon" in "moon", because "oon" is the end of the string, thus not followed by a word character.</li>
-     <li><code>/\w\b\w/</code> will never match anything, because a word character can never be followed by both a non-word and a word character.</li>
+     <li><code>/\bm/</code> matches the "m" in "moon".</li>
+     <li><code>/oo\b/</code> does not match the "oo" in "moon", because "oo" is followed by "n" which is a word character.</li>
+     <li><code>/oon\b/</code> matches the "oon" in "moon", because "oon" is the end of the string, thus not followed by a word character.</li>
+     <li><code>/\w\b\w/</code> will never match anything, because a word character can never be followed by both a non-word and a word character.</li>
     </ul>
 
     <p>To match a backspace character (<code>[\b]</code>), see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Character Classes</a>.</p>
@@ -58,7 +58,7 @@ original_slug: Web/JavaScript/Guide/정규식/Assertions
   <tr>
    <td><code>\B</code></td>
    <td>
-    <p>Matches a non-word boundary. This is a position where the previous and next character are of the same type: Either both must be words, or both must be non-words, for example between two letters or between two spaces. The beginning and end of a string are considered non-words. Same as the matched word boundary, the matched non-word boundary is also not included in the match. For example, <code>/\Bon/</code> matches "on" in "at noon", and <code>/ye\B/</code> matches "ye" in "possibly yesterday".</p>
+    <p>Matches a non-word boundary. This is a position where the previous and next character are of the same type: Either both must be words, or both must be non-words, for example between two letters or between two spaces. The beginning and end of a string are considered non-words. Same as the matched word boundary, the matched non-word boundary is also not included in the match. For example, <code>/\Bon/</code> matches "on" in "at noon", and <code>/ye\B/</code> matches "ye" in "possibly yesterday".</p>
    </td>
   </tr>
  </tbody>
@@ -81,26 +81,26 @@ original_slug: Web/JavaScript/Guide/정규식/Assertions
   <tr>
    <td><code>x(?=y)</code></td>
    <td>
-    <p><strong>Lookahead assertion: </strong>Matches "x" only if "x" is followed by "y". For example, /<code>Jack(?=Sprat)/</code> matches "Jack" only if it is followed by "Sprat".<br>
+    <p><strong>Lookahead assertion: </strong>Matches "x" only if "x" is followed by "y". For example, /<code>Jack(?=Sprat)/</code> matches "Jack" only if it is followed by "Sprat".<br>
      <code>/Jack(?=Sprat|Frost)/</code> matches "Jack" only if it is followed by "Sprat" or "Frost". However, neither "Sprat" nor "Frost" is part of the match results.</p>
    </td>
   </tr>
   <tr>
    <td><code>x(?!y)</code></td>
    <td>
-    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x" is not followed by "y". For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
+    <p><strong>Negative lookahead assertion: </strong>Matches "x" only if "x" is not followed by "y". For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;=y)x</code></td>
    <td>
-    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code> matches "Sprat" only if it is preceded by "Jack". <code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
+    <p><strong>Lookbehind assertion: </strong>Matches "x" only if "x" is preceded by "y". For example, <code>/(?&lt;=Jack)Sprat/</code> matches "Sprat" only if it is preceded by "Jack". <code>/(?&lt;=Jack|Tom)Sprat/</code> matches "Sprat" only if it is preceded by "Jack" or "Tom". However, neither "Jack" nor "Tom" is part of the match results.</p>
    </td>
   </tr>
   <tr>
    <td><code>(?&lt;!y)x</code></td>
    <td>
-    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code> matches a number only if it is not preceded by a minus sign. <code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
+    <p><strong>Negative lookbehind assertion: </strong>Matches "x" only if "x" is not preceded by "y". For example, <code>/(?&lt;!-)\d+/</code> matches a number only if it is not preceded by a minus sign. <code>/(?&lt;!-)\d+/.exec('3')</code> matches "3". <code>/(?&lt;!-)\d+/.exec('-3')</code>  match is not found because the number is preceded by the minus sign.</p>
    </td>
   </tr>
  </tbody>
@@ -131,9 +131,9 @@ fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
 console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 </pre>
 
-<h3 id="Matching_the_beginning_of_an_input_using_a_control_character">Matching the beginning of an input using a ^ control character</h3>
+<h3 id="Matching_the_beginning_of_an_input_using_a_control_character">Matching the beginning of an input using a ^ control character</h3>
 
-<p>입력 시작시 일치를 위해 <code>^</code>를 사용하십시오. 이 예에서는 <code>/^A/</code> regex로 'A'로 시작하는 결과를 얻습니다. 여기서 <code>^</code>는 한 가지 역할 만합니다. 적절한 결과를 보기위해 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">화살표</a> 함수가있는 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">필터</a> 메소드를 사용합니다.</p>
+<p>입력 시작시 일치를 위해 <code>^</code>를 사용하십시오. 이 예에서는 <code>/^A/</code> regex로 'A'로 시작하는 결과를 얻습니다. 여기서 <code>^</code>는 한 가지 역할 만합니다. 적절한 결과를 보기위해 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">화살표</a> 함수가있는 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">필터</a> 메소드를 사용합니다.</p>
 
 <pre class="brush: js">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
@@ -144,7 +144,7 @@ let fruitsStartsWithA = fruits.filter(fruit =&gt; /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 </pre>
 
-<p>두 번째 예제에서 <code>^</code>는 두 가지 모두에 사용됩니다 : 입력의 일치 시작점, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">그룹</a>에서 사용될 때 부정 또는 보완 문자 세트.</p>
+<p>두 번째 예제에서 <code>^</code>는 두 가지 모두에 사용됩니다 : 입력의 일치 시작점, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">그룹</a>에서 사용될 때 부정 또는 보완 문자 세트.</p>
 
 <pre class="brush: js">let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
@@ -181,14 +181,14 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 
 <h3 id="Basic_negative_lookahead_assertion">Basic negative lookahead assertion</h3>
 
-<p>For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
+<p>For example, <code>/\d+(?!\.)/</code> matches a number only if it is not followed by a decimal point. <code>/\d+(?!\.)/.exec('3.141')</code> matches "141" but not "3.</p>
 
 <pre class="brush: js">console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 </pre>
 
-<h3 id="Different_meaning_of_!_combination_usage_in_Assertions_and_Ranges">Different meaning of '?!' combination usage in Assertions and  Ranges </h3>
+<h3 id="Different_meaning_of_!_combination_usage_in_Assertions_and_Ranges">Different meaning of '?!' combination usage in Assertions and  Ranges </h3>
 
-<p>Different meaning of <code>?!</code> combination usage in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a> <code>/x(?!y)/ </code>and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Ranges</a> <code>[^?!]</code>.</p>
+<p>Different meaning of <code>?!</code> combination usage in <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">Assertions</a> <code>/x(?!y)/ </code>and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">Ranges</a> <code>[^?!]</code>.</p>
 
 <pre class="brush: js">let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
 

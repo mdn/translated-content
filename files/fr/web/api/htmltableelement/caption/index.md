@@ -13,13 +13,17 @@ translation_of: Web/API/HTMLTableElement/caption
 
 ### Syntaxe
 
-    string = table.caption
+```js
+string = table.caption
+```
 
 ### Exemple
 
-    if (table.caption) {
-      // On peut alors faire quelque chose avec la légende du tableau
-    }
+```js
+if (table.caption) {
+  // On peut alors faire quelque chose avec la légende du tableau
+}
+```
 
 ### Notes
 

@@ -12,9 +12,11 @@ L'élément `<xsl:with-param>` définit la valeur d'un paramètre à passer à u
 
 ### Syntaxe
 
-    <xsl:with-param name=NOM select=EXPRESSION>
-    	MODÈLE
-    </xsl:with-param>
+```xml
+<xsl:with-param name=NOM select=EXPRESSION>
+  MODÈLE
+</xsl:with-param>
+```
 
 ### Attribut obligatoire
 

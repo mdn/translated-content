@@ -27,6 +27,7 @@ O exemplo acima é de uma {{glossary("synchronous")}} callback, uma vez que é e
 Note, no entanto, que callbacks são normalmente utilizados para continuar a execução do código após uma operação {{glossary("asynchronous")}} ser terminada — essas são chamadas asynchronous callbacks. Um bom exemplo são as funções callback executadas dentro de um bloco [`.then()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) encadeado ao final de uma promessa após essa promessa ser cumprida ou rejeitada. Essa estrutura é usada em muitas APIs da web modernas, como a {{domxref("fetch","fetch()")}}.
 
 ## Aprenda mais
+
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Callback", "Callback")}} no Wikipedia
+- {{interwiki("wikipedia", "Callback", "Callback")}} no Wikipedia

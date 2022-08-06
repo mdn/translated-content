@@ -3,9 +3,9 @@ title: font-language-override
 slug: Web/CSS/font-language-override
 tags:
   - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
+  - CSS Fonts
+  - CSS Property
+  - Reference
   - font-language-override
   - l10n
   - recipe:css-property
@@ -25,9 +25,10 @@ font-language-override: "ENG";  /* 英語の字形 */
 font-language-override: "TRK";  /* トルコ語の字形 */
 
 /* グローバル値 */
-font-language-override: initial;
 font-language-override: inherit;
+font-language-override: initial;
 font-language-override: revert;
+font-language-override: revert-layer;
 font-language-override: unset;
 ```
 
@@ -44,7 +45,7 @@ font-language-override: unset;
 - `normal`
   - : `lang` 属性で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。
 - {{cssxref("string")}}
-  - : 文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は [OpenType language system](https://www.microsoft.com/typography/otspec/languagetags.htm) にある言語タグと一致している必要があります。例えば、 "ENG" は英語で、 "KOR" は韓国語です。
+  - : 文字列で指定された言語で適切なフォントの字形を使用するよう、ブラウザーに指示します。値は [OpenType language system](https://docs.microsoft.com/en-us/typography/opentype/spec/languagetags) にある言語タグと一致している必要があります。例えば、 "ENG" は英語で、 "KOR" は韓国語です。
 
 ## 公式定義
 
@@ -56,7 +57,7 @@ font-language-override: unset;
 
 ## 例
 
-<h3 id="Using_Danish_glyphs">デンマーク語の文字の使用</h3>
+### デンマーク語の文字の使用
 
 #### HTML
 
@@ -69,17 +70,17 @@ font-language-override: unset;
 
 ```css
 p.para1 {
-  font-language-override: normal;
+  font-language-override: normal;
 }
 
 p.para2 {
-  font-language-override: "DAN";
+  font-language-override: "DAN";
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Using_Danish_glyphs', '600', '', '', 'Web/CSS/font-language-override') }}
+{{ EmbedLiveSample('Using Danish glyphs') }}
 
 ## 仕様書
 
