@@ -140,7 +140,7 @@ yarn global add @vue/cli
 
 ### App.vue
 
-打开 `App.vue` 文件，可以看到由 `<template>`、`<script>` 和 `<style>`三部分组成，分别包含了组件的模板、脚本和样式相关的内容。所有的单文件组件都是这种类似的基本结构。
+打开 `App.vue` 文件，可以看到由 `<template>`、`<script>` 和 `<style>` 三部分组成，分别包含了组件的模板、脚本和样式相关的内容。所有的单文件组件都是这种类似的基本结构。
 
 `<template>` 包含了所有的标记结构和组件的展示逻辑。template 可以包含任何合法的 HTML，以及一些我们接下来要讲的 Vue 特定的语法。
 
@@ -172,7 +172,7 @@ export default {
 
 Vue CLI 带有内置的开发服务器。这样一来，您就可以在本地运行您的应用程序，这样就可以轻松对其进行测试，而无需自己配置服务器。CLI 会以 npm 脚本的形式将 `serve` 命令添加到项目的 `package.json` 文件中，因此您可以轻松地运行它。
 
-在您的终端中，尝试运行 `npm run serve`（或者如果希望使用 yarn，则运行 `yarn serve` ）。您的终端应输出类似以下内容：
+在您的终端中，尝试运行 `npm run serve`（或者如果希望使用 yarn，则运行 `yarn serve` ）。你的终端应输出类似以下内容：
 
 ```
 INFO  Starting development server...
@@ -188,7 +188,7 @@ INFO  Starting development server...
   To create a production build, run npm run build.
 ```
 
-如果在浏览器新选项卡打开“本地”地址（如上所述，该地址应类似于`http://localhost:8080`，但可能会因设置而异），您应该会看到您的应用。现在，它应该包含欢迎消息，Vue 文档的链接，使用 CLI 初始化应用程序时添加的插件的链接，以及指向 Vue 社区和生态系统的其他有用链接。
+如果在浏览器新选项卡打开“本地”地址（如上所述，该地址应类似于 `http://localhost:8080`，但可能会因设置而异），你应该会看到你的应用。现在，它应该包含欢迎消息、Vue 文档的链接、使用 CLI 初始化应用程序时添加的插件的链接，以及指向 Vue 社区和生态系统的其他有用链接。
 
 ![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
 
@@ -257,7 +257,7 @@ components: {
   - [组件化我们的 React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [React 交互性：Events 和 state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - [React 交互性：Editing、filtering 和条件渲染](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 可访问性](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - [React 无障碍](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
   - [React 资源](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
