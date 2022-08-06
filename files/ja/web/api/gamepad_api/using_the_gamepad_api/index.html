@@ -18,7 +18,7 @@ original_slug: Web/Guide/API/Gamepad
 
 <h2 id="conntecting" name="conntecting">ゲームパッドの接続</h2>
 
-<p>新しいゲームパッドが接続された時、アクティブなページは {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを受け取ります。ページ読み込み時にゲームパッドがすでに接続されている場合、ゲームパッドのボタンを押すなどの操作をした時に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントがアクティブなページに対して発生します。</p>
+<p>新しいゲームパッドが接続された時、アクティブなページは {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントを受け取ります。ページ読み込み時にゲームパッドがすでに接続されている場合、ゲームパッドのボタンを押すなどの操作をした時に {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} イベントがアクティブなページに対して発生します。</p>
 
 <div class="blockIndicator geckoVersionNote">
 <p>Firefox では、ページが見える状態でかつユーザーによるゲームパッドの操作を受け付けたときにのみ、ゲームパッドが利用可能になります。これによって、ユーザーを特定する Fingerprinting に利用されることを防止しています。一度一つのコントローラーが操作されれば、他のコントローラーも自動で接続され利用可能になります。</p>
@@ -27,21 +27,21 @@ original_slug: Web/Guide/API/Gamepad
 <p>以下のようにして {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} を使用します:</p>
 
 <pre class="brush: js; notranslate">window.addEventListener("gamepadconnected", function(e) {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index, e.gamepad.id,
-    e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index, e.gamepad.id,
+    e.gamepad.buttons.length, e.gamepad.axes.length);
 });
 </pre>
 
-<p>ゲームパッドはそれぞれ固有の ID を <code>gamepad</code> プロパティの中に持っています。</p>
+<p>ゲームパッドはそれぞれ固有の ID を <code>gamepad</code> プロパティの中に持っています。</p>
 
 <h2 id="disconnecting" name="disconnecting">ゲームパッドの切断</h2>
 
 <p>ゲームパッドが切断されると、ゲームパッドが以前に受信したデータ(例: {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} )があると、2番目のイベント(例: {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} )がフォーカスされたウィンドウにディスパッチします:</p>
 
 <pre class="brush: js notranslate">window.addEventListener("gamepaddisconnected", function(e) {
-  console.log("Gamepad disconnected from index %d: %s",
-    e.gamepad.index, e.gamepad.id);
+  console.log("Gamepad disconnected from index %d: %s",
+    e.gamepad.index, e.gamepad.id);
 });</pre>
 
 <p>ゲームパッドの {{domxref("Gamepad.index", "index")}} というプロパティは同じタイプの複数のコントローラーが使用されている場合であっても、システムに接続されたデバイスごとにユニークになります。 <code>Index</code> プロパティもまた {{ domxref("Navigator.getGamepads()") }} として戻される {{jsxref("Array")}} の index として機能します。</p>
@@ -49,22 +49,22 @@ original_slug: Web/Guide/API/Gamepad
 <pre class="brush: js notranslate">var gamepads = {};
 
 function gamepadHandler(event, connecting) {
-  var gamepad = event.gamepad;
+  var gamepad = event.gamepad;
   // Note:
   // gamepad === navigator.getGamepads()[gamepad.index]
 
-  if (connecting) {
-    gamepads[gamepad.index] = gamepad;
-  } else {
-    delete gamepads[gamepad.index];
-  }
+  if (connecting) {
+    gamepads[gamepad.index] = gamepad;
+  } else {
+    delete gamepads[gamepad.index];
+  }
 }
 
 window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true); }, false);
 window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, false); }, false);
 </pre>
 
-<p>この前の例ではイベントが完了した後に <code>gamepad</code> プロパティがどのように保持できるかを示しています - 後でデバイスの状態照会のために使用する技術となります。</p>
+<p>この前の例ではイベントが完了した後に <code>gamepad</code> プロパティがどのように保持できるかを示しています - 後でデバイスの状態照会のために使用する技術となります。</p>
 
 <h2 id="querying" name="querying">Gamepad オブジェクトの問い合わせ</h2>
 

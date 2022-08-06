@@ -55,7 +55,7 @@ class TestProcessor extends AudioWorkletProcessor {
     console.log(currentTime)
   }
   // process 메서드는 필수적입니다 - 아무 소리도 나지 않는데,
-  // outputs에 값을 넣지 않았기 때문입니다
+  // outputs에 값을 넣지 않았기 때문입니다
   process (inputs, outputs, parameters) {
     return true
   }

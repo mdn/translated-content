@@ -28,7 +28,7 @@ void ctx.stroke(path);
 ### 引数
 
 - `path`
-  - : 描画する {{domxref("Path2D")}} パス。
+  - : 描画する {{domxref("Path2D")}} パス。
 
 ## 例
 

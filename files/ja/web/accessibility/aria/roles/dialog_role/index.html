@@ -6,7 +6,7 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 ---
-<p><span class="seoSummary">ダイアログ (<code><a href="https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog">dialog</a></code>) ロールは、ウェブアプリケーションやウェブページの残りの部分からコンテンツや UI を分離する HTML ベースのアプリケーションのダイアログやウィンドウをマークアップするために使用します。 ダイアログは通常、オーバーレイを使用して残りのページコンテンツの上に配置されます。 ダイアログはノンモーダル (ダイアログ外のコンテンツともやりとり可能) またはモーダル (ダイアログ内のコンテンツのみとやりとり可能) のいずれかになります。</span></p>
+<p><span class="seoSummary">ダイアログ (<code><a href="https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog">dialog</a></code>) ロールは、ウェブアプリケーションやウェブページの残りの部分からコンテンツや UI を分離する HTML ベースのアプリケーションのダイアログやウィンドウをマークアップするために使用します。 ダイアログは通常、オーバーレイを使用して残りのページコンテンツの上に配置されます。 ダイアログはノンモーダル (ダイアログ外のコンテンツともやりとり可能) またはモーダル (ダイアログ内のコンテンツのみとやりとり可能) のいずれかになります。</span></p>
 
 <pre class="brush: html">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
   &lt;h2 <strong>id="dialog1Title"</strong>&gt;あなたの個人情報が更新されました&lt;/h2&gt;
@@ -32,22 +32,22 @@ translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 <p>ダイアログにすでに表示されているタイトルバーがある場合、そのバーの中のテキストを使用してダイアログ自体にラベルを付けることができます。 これを達成する最善の方法は、<code>role="dialog"</code> 要素に <code>aria-labelledby</code> 属性を使用することです。 さらに、ダイアログがダイアログタイトル以外に追加の説明テキストを含んでいる場合、このテキストは <code>aria-describedby</code> 属性を使用してダイアログに関連付けることができます。 このアプローチは、次のコードスニペットに示されています。</p>
 
 <pre class="brush: html">&lt;div <strong>role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"</strong>&gt;
-  &lt;h2 <strong>id="dialog1Title"</strong>&gt;あなたの個人情報が更新されました&lt;/h2&gt;
-  &lt;p <strong>id="dialog1Desc"</strong>&gt;情報は、ユーザーアカウントのセクションでいつでも変更できます。&lt;/p&gt;
-  &lt;button&gt;閉じる&lt;/button&gt;
+  &lt;h2 <strong>id="dialog1Title"</strong>&gt;あなたの個人情報が更新されました&lt;/h2&gt;
+  &lt;p <strong>id="dialog1Desc"</strong>&gt;情報は、ユーザーアカウントのセクションでいつでも変更できます。&lt;/p&gt;
+  &lt;button&gt;閉じる&lt;/button&gt;
 &lt;/div&gt;</pre>
 
-<p> </p>
+<p> </p>
 
 <div class="note">なお、非仮想モードで動作するスクリーンリーダーが認識するために、ダイアログのタイトルと説明のテキストがフォーカス可能である必要はありません。 ARIA のダイアログロールとラベル付けの手法を組み合わせることで、スクリーンリーダーは、フォーカスがダイアログに移動したときにダイアログの情報をアナウンスするべきです。</div>
 
-<p> </p>
+<p> </p>
 
 <h3 id="Required_JavaScript_features" name="Required_JavaScript_features">必要な JavaScript 機能</h3>
 
-<p> </p>
+<p> </p>
 
-<h4 id="Focus_management" name="Focus_management">フォーカス管理 </h4>
+<h4 id="Focus_management" name="Focus_management">フォーカス管理 </h4>
 
 <p>ダイアログには、キーボードフォーカスをどのように管理するべきかについて、次のような特有の要件があります。</p>
 
@@ -85,30 +85,30 @@ translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 
 <h4 id="A_dialog_containing_a_form" name="A_dialog_containing_a_form">フォームを含むダイアログ</h4>
 
-<pre class="brush: html"> &lt;div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
-   &lt;h2 id="dialog1Title"&gt;加入申込書&lt;/h2&gt;
-   &lt;p id="dialog1Desc"&gt;私たちは、この情報を第三者と共有することはありません。&lt;/p&gt;
-   &lt;form&gt;
-     &lt;p&gt;
-       &lt;label for="firstName"&gt;名&lt;/label&gt;
-       &lt;input id="firstName" type="text" /&gt;
-     &lt;/p&gt;
-     &lt;p&gt;
-       &lt;label for="lastName"&gt;姓&lt;/label&gt;
-       &lt;input id="lastName" type="text"/&gt;
-     &lt;/p&gt;
-     &lt;p&gt;
-       &lt;label for="interests"&gt;興味&lt;/label&gt;
-       &lt;textarea id="interests"&gt;&lt;/textarea&gt;
-     &lt;/p&gt;
-     &lt;p&gt;
-       &lt;input type="checkbox" id="autoLogin"/&gt;
-       &lt;label for="autoLogin"&gt;自動ログイン？&lt;/label&gt;
-     &lt;/p&gt;
-     &lt;p&gt;
-         &lt;input type="submit" value="情報を保存する"/&gt;
-     &lt;/p&gt;
-   &lt;/form&gt;
+<pre class="brush: html"> &lt;div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc"&gt;
+   &lt;h2 id="dialog1Title"&gt;加入申込書&lt;/h2&gt;
+   &lt;p id="dialog1Desc"&gt;私たちは、この情報を第三者と共有することはありません。&lt;/p&gt;
+   &lt;form&gt;
+     &lt;p&gt;
+       &lt;label for="firstName"&gt;名&lt;/label&gt;
+       &lt;input id="firstName" type="text" /&gt;
+     &lt;/p&gt;
+     &lt;p&gt;
+       &lt;label for="lastName"&gt;姓&lt;/label&gt;
+       &lt;input id="lastName" type="text"/&gt;
+     &lt;/p&gt;
+     &lt;p&gt;
+       &lt;label for="interests"&gt;興味&lt;/label&gt;
+       &lt;textarea id="interests"&gt;&lt;/textarea&gt;
+     &lt;/p&gt;
+     &lt;p&gt;
+       &lt;input type="checkbox" id="autoLogin"/&gt;
+       &lt;label for="autoLogin"&gt;自動ログイン？&lt;/label&gt;
+     &lt;/p&gt;
+     &lt;p&gt;
+         &lt;input type="submit" value="情報を保存する"/&gt;
+     &lt;/p&gt;
+   &lt;/form&gt;
  &lt;/div&gt;</pre>
 
 <h4 id="Working_Examples" name="Working_Examples">動作する例</h4>

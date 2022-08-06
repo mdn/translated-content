@@ -40,4 +40,4 @@ En ajoutant la variable "immutableString" avec une valeur de chaîne, les évén
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Objet_immuable")}} sur Wikipédia
+- [Objet immuable](https://fr.wikipedia.org/wiki/Objet_immuable) sur Wikipédia

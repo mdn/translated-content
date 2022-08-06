@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 <div>{{JSRef}}</div>
 
-<p>O símbolo conhecido <code><strong>Symbol.iterator</strong></code> especifíca o iterador padrão para um objeto. Usado por <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>.</p>
+<p>O símbolo conhecido <code><strong>Symbol.iterator</strong></code> especifíca o iterador padrão para um objeto. Usado por <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><code>for...of</code></a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}</div>
 
@@ -13,9 +13,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Sempre que um objeto precisa ser iterado (como um começo de um <code>for..of</code> loop), o método <code>@@iterator</code> é chamado sem argumentos, e o <strong>iterador</strong> retornado é usado para obter os valores para serem iterados.</p>
+<p>Sempre que um objeto precisa ser iterado (como um começo de um <code>for..of</code> loop), o método <code>@@iterator</code> é chamado sem argumentos, e o <strong>iterador</strong> retornado é usado para obter os valores para serem iterados.</p>
 
-<p>Alguns tipos built-in tem um comportamento padrão de iteração, enquanto outros tipos (assim como {{jsxref("Object")}}) não tem. O tipo built-in com um método <code>@@iterator</code> são:</p>
+<p>Alguns tipos built-in tem um comportamento padrão de iteração, enquanto outros tipos (assim como {{jsxref("Object")}}) não tem. O tipo built-in com um método <code>@@iterator</code> são:</p>
 
 <ul>
  <li>{{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}</li>
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
  <li>{{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}</li>
 </ul>
 
-<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a> para mais informação.</p>
+<p>Veja também <a href="/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">Iteration protocols</a> para mais informação.</p>
 
 <p>{{js_property_attributes(0,0,0)}}</p>
 
@@ -44,7 +44,7 @@ myIterable[Symbol.iterator] = function* () {
 [...myIterable] // [1, 2, 3]
 </pre>
 
-<p>Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">computed property</a>:</p>
+<p>Ou iteráveis podem ser definidos diretamente dentro de uma classe ou um objeto usando  <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">computed property</a>:</p>
 
 <pre class="brush: js notranslate">class Foo {
   *[Symbol.iterator] () {
@@ -67,7 +67,7 @@ const someObj = {
 
 <h3 id="Iteráveis_​​não_bem_formados">Iteráveis ​​não bem formados</h3>
 
-<p>Se um método <code>@@iterator</code> não retornar um objeto iterador, então é um iterável não bem formado. Usando dessa forma é resultará em uma excessão de tempo ou comportamentos com erros:</p>
+<p>Se um método <code>@@iterator</code> não retornar um objeto iterador, então é um iterável não bem formado. Usando dessa forma é resultará em uma excessão de tempo ou comportamentos com erros:</p>
 
 <pre class="brush: js notranslate">var nonWellFormedIterable = {}
 nonWellFormedIterable[Symbol.iterator] = () =&gt; 1

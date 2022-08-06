@@ -15,7 +15,7 @@ translation_of: Glossary/TURN
 
 ### 通用知识
 
-- {{Interwiki("wikipedia", "TURN")}} 在 Wikipedia
+- [TURN](https://zh.wikipedia.org/wiki/TURN) 在 Wikipedia
 - [WebRTC 协议](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
 
 ### 技术参考

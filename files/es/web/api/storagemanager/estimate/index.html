@@ -17,7 +17,7 @@ translation_of: Web/API/StorageManager/estimate
 ---
 <p>{{securecontext_header}}{{APIRef("Storage")}}</p>
 
-<p>El método <strong><code>estimate()</code></strong> de la interfaz {{domxref("StorageManager")}} solicita al Gestor de Almacenamiento la información de cuota y uso para el origen actual. Este método opera de forma asíncrona, por lo que devuelve una {{jsxref("Promise")}} que se resuelve una vez que la información esté disponible. La función que controla el cumplimiento de la promesa recibe un {{domxref("StorageEstimate")}} como entrada con la informción de uso y cuota.</p>
+<p>El método <strong><code>estimate()</code></strong> de la interfaz {{domxref("StorageManager")}} solicita al Gestor de Almacenamiento la información de cuota y uso para el origen actual. Este método opera de forma asíncrona, por lo que devuelve una {{jsxref("Promise")}} que se resuelve una vez que la información esté disponible. La función que controla el cumplimiento de la promesa recibe un {{domxref("StorageEstimate")}} como entrada con la informción de uso y cuota.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
@@ -29,13 +29,13 @@ translation_of: Web/API/StorageManager/estimate
 
 <h3 id="Valor_devuelto">Valor devuelto</h3>
 
-<p>Una {{jsxref('Promise')}} que se resuelve como un objeto que se ajusta al diccionario {{domxref('StorageEstimate')}}. Este diccionario contiene estimaciones sobre la cantidad de espacio disponible para el origen o aplicación (en {{domxref("StorageEstimate.quota")}}, así como la cantidad que se usa en ese momento (in {{domxref("StorageEstimate.usage")}}). Estos no son números exactos; entre la compresión, la deduplicación y la ofuscación por razones de seguridad, no serán precisos.</p>
+<p>Una {{jsxref('Promise')}} que se resuelve como un objeto que se ajusta al diccionario {{domxref('StorageEstimate')}}. Este diccionario contiene estimaciones sobre la cantidad de espacio disponible para el origen o aplicación (en {{domxref("StorageEstimate.quota")}}, así como la cantidad que se usa en ese momento (in {{domxref("StorageEstimate.usage")}}). Estos no son números exactos; entre la compresión, la deduplicación y la ofuscación por razones de seguridad, no serán precisos.</p>
 
 <p>Es posible que la <code>quota</code> varíe de una aplicación a otra en función de factores como la frecuencia con la que el usuario la visita, los datos de popularidad del sitio, etc.</p>
 
 <h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
 
-<p>En este ejemplo, obtenemos las estimaciones de uso y presentamos el porcentaje de la capacidad de almacenamiento utilizada actualmente al usuario.</p>
+<p>En este ejemplo, obtenemos las estimaciones de uso y presentamos el porcentaje de la capacidad de almacenamiento utilizada actualmente al usuario.</p>
 
 <h3 id="HTML">HTML</h3>
 

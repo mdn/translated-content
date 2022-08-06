@@ -9,11 +9,11 @@ translation_of: Web/HTML/Element/picture
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;picture&gt;</code> </strong> служит контейнером для одного или более элементов {{HTMLElement("source")}} и одного элемента {{HTMLElement("img")}} для обеспечения оптимальной версии изображения для различных размеров экрана.</span> Браузер рассмотрит каждый из дочерних элементов  <code>&lt;source&gt;</code> и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов <code>&lt;source&gt;</code> найдено не будет, то будет выбран файл, указанный  атрибутом  {{htmlattrxref("src", "img")}} элемента <code>&lt;img&gt;</code> . Затем выбранное изображение отображается в пространстве, занятом элементом <code>&lt;img&gt;</code>. </p>
+<p><span class="seoSummary"><strong>HTML-элемент <code>&lt;picture&gt;</code> </strong> служит контейнером для одного или более элементов {{HTMLElement("source")}} и одного элемента {{HTMLElement("img")}} для обеспечения оптимальной версии изображения для различных размеров экрана.</span> Браузер рассмотрит каждый из дочерних элементов  <code>&lt;source&gt;</code> и выберет один, соответствующий лучшему совпадению; если совпадений среди элементов <code>&lt;source&gt;</code> найдено не будет, то будет выбран файл, указанный  атрибутом  {{htmlattrxref("src", "img")}} элемента <code>&lt;img&gt;</code> . Затем выбранное изображение отображается в пространстве, занятом элементом <code>&lt;img&gt;</code>. </p>
 
-<p>Чтобы выбрать оптимальное изображение, {{Glossary("user agent")}}  анализирует атрибуты {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, и {{htmlattrxref("type", "source")}} элемента <code>&lt;source&gt;</code> и выбирает совместимое изображение, которое наилучшим образом соответствует текущему макету страницы, характеристикам устройства отображения и т. д.</p>
+<p>Чтобы выбрать оптимальное изображение, {{Glossary("user agent")}}  анализирует атрибуты {{htmlattrxref("srcset", "source")}}, {{htmlattrxref("media", "source")}}, и {{htmlattrxref("type", "source")}} элемента <code>&lt;source&gt;</code> и выбирает совместимое изображение, которое наилучшим образом соответствует текущему макету страницы, характеристикам устройства отображения и т. д.</p>
 
-<p>Элемент <code>&lt;picture&gt;</code> часто используют для того, чтобы обеспечить HiDPI (Retina)-версию изображений для дисплеев с высоким разрешением, а также для добавления других форматов изображений, не поддерживаемых всеми браузерами.</p>
+<p>Элемент <code>&lt;picture&gt;</code> часто используют для того, чтобы обеспечить HiDPI (Retina)-версию изображений для дисплеев с высоким разрешением, а также для добавления других форматов изображений, не поддерживаемых всеми браузерами.</p>
 
 <table class="properties">
  <tbody>
@@ -22,7 +22,7 @@ translation_of: Web/HTML/Element/picture
    <td><a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">Потоковый контент</a>, фразовый контент, встроенный контент</td>
   </tr>
   <tr>
-   <th scope="row">Разрешённый контент </th>
+   <th scope="row">Разрешённый контент </th>
    <td>Ноль или более элементов {{HTMLElement("source")}}, затем один элемент {{HTMLElement("img")}}, при необходимости смешанный с элементами поддержки сценариев.</td>
   </tr>
   <tr>
@@ -47,15 +47,15 @@ translation_of: Web/HTML/Element/picture
 
 <h2 id="Атрибуты">Атрибуты</h2>
 
-<p>Этот элемент содержит только <a href="/en-US/docs/Web/HTML/Global_attributes">универсальные атрибуты</a>.</p>
+<p>Этот элемент содержит только <a href="/en-US/docs/Web/HTML/Global_attributes">универсальные атрибуты</a>.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Эти примеры демонстрируют влияние различных атрибутов элемента {{HTMLElement("source")}} на выбор изображения, которое будет отображаться при их использовании внутри тега <code>&lt;picture&gt;</code>.</p>
+<p>Эти примеры демонстрируют влияние различных атрибутов элемента {{HTMLElement("source")}} на выбор изображения, которое будет отображаться при их использовании внутри тега <code>&lt;picture&gt;</code>.</p>
 
 <h3 id="Атрибут_media">Атрибут <code>media</code></h3>
 
-<p>Атрибут <code>media</code> позволяет определить медиавыражение, которое веб-браузер будет анализировать для выбора элемента {{HTMLElement("source")}}. Если медиавыражение определяется как ложное <code>(false)</code>, то элемент {{HTMLElement("source")}} пропускается.</p>
+<p>Атрибут <code>media</code> позволяет определить медиавыражение, которое веб-браузер будет анализировать для выбора элемента {{HTMLElement("source")}}. Если медиавыражение определяется как ложное <code>(false)</code>, то элемент {{HTMLElement("source")}} пропускается.</p>
 
 <pre class="brush: html">&lt;picture&gt;
  &lt;source srcset="mdn-logo-wide.png" media="(min-width: 600px)"&gt;
@@ -63,9 +63,9 @@ translation_of: Web/HTML/Element/picture
 &lt;/picture&gt;
 </pre>
 
-<h3 id="Атрибут_type">Атрибут <code>type</code></h3>
+<h3 id="Атрибут_type">Атрибут <code>type</code></h3>
 
-<p>Атрибут <code>type</code> позволяет вам обозначить MIME-тип данных, указанных в атрибуте <code>srcset</code> элемента {{HTMLElement("source")}}. Если браузер не поддерживает данный тип, то элемент  {{ HTMLElement("source")}} опускается.</p>
+<p>Атрибут <code>type</code> позволяет вам обозначить MIME-тип данных, указанных в атрибуте <code>srcset</code> элемента {{HTMLElement("source")}}. Если браузер не поддерживает данный тип, то элемент  {{ HTMLElement("source")}} опускается.</p>
 
 <pre class="brush: html">​&lt;picture&gt;
  &lt;source srcset="mdn-logo.svg" type="image/svg+xml"&gt;
@@ -86,7 +86,7 @@ translation_of: Web/HTML/Element/picture
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li>Элемент {{HTMLElement("img")}} </li>
+ <li>Элемент {{HTMLElement("img")}} </li>
  <li>Элемент {{HTMLElement("source")}}</li>
  <li>Позиционирование и определение размера изображения в рамках: {{cssxref("object-position")}} и {{cssxref("object-fit")}}</li>
 </ul>

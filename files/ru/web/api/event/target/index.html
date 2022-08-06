@@ -7,7 +7,7 @@ translation_of: Web/API/Event/target
 ---
 <p>{{ApiRef("DOM")}}</p>
 
-<p>Свойство <code><strong>target</strong></code> интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.</p>
+<p>Свойство <code><strong>target</strong></code> интерфейса {{domxref ("Event")}} является ссылкой на объект, который был инициатором события. Он отличается от {{domxref ("Event.currentTarget")}}, если обработчик события вызывается во время всплытия (bubbling) или захвата события.</p>
 
 <p id="Синтаксис">Синтаксис</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/Event/target
 
 <h2 id="Пример">Пример</h2>
 
-<p>Свойство <code>event.target</code> может быть использовано для реализации <strong>делегирования событий</strong>.</p>
+<p>Свойство <code>event.target</code> может быть использовано для реализации <strong>делегирования событий</strong>.</p>
 
 <pre>// Создадим список
 var ul = document.createElement('ul');
@@ -32,7 +32,7 @@ ul.appendChild(li2);
 
 function hide(e){
   // e.target ссылается на кликнутый &lt;li&gt; элемент
-  // Он отличается от e.currentTarget который будет ссылаться на родительский &lt;ul&gt; в этом контексте
+  // Он отличается от e.currentTarget который будет ссылаться на родительский &lt;ul&gt; в этом контексте
   e.target.style.visibility = 'hidden';
 }
 
@@ -50,7 +50,7 @@ ul.addEventListener('click', hide, false);</pre>
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо <code>target</code> свойства, но по смыслу оно идентично <code>event.target</code>.</p>
+<p>В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо <code>target</code> свойства, но по смыслу оно идентично <code>event.target</code>.</p>
 
 <pre class="brush: js">function hide(e) {
   // Поддержка IE 6-8

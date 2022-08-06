@@ -15,7 +15,7 @@ translation_of: Glossary/Null
 
 ### 一般知识
 
-- 维基百科{{Interwiki("wikipedia", "空指针")}}
+- 维基百科[空指针](https://zh.wikipedia.org/wiki/空指针)
 
 ### 技术参考
 

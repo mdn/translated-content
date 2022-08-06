@@ -49,21 +49,21 @@ let foo = 5;
 
 // プリミティブ値を変更する関数を定義
 function addTwo(num) {
-   num += 2;
+   num += 2;
 }
 // 同じことをしようとする第二の関数
 function addTwo_v2(foo) {
-   foo += 2;
+   foo += 2;
 }
 
 // 最初の関数を、プリミティブ値を引数として呼び出す
 addTwo(foo);
 // 現在のプリミティブ値を取得
-console.log(foo);   // 5
+console.log(foo);   // 5
 
 // 第二の関数を呼び出してみる...
 addTwo_v2(foo);
-console.log(foo);   // 5
+console.log(foo);   // 5
 </pre>
 
 <p><code>5</code> ではなく <code>7</code> になると思いませんでしたか？そう思った場合は、このコードがどのように実行されるかを見てください。</p>

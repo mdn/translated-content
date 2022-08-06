@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>Array.of()</strong></code> cria um nova instância de <code>Array</code> com um número variável de argumentos, independentemente do número ou do tipo dos argumentos.</p>
+<p>O método <code><strong>Array.of()</strong></code> cria um nova instância de <code>Array</code> com um número variável de argumentos, independentemente do número ou do tipo dos argumentos.</p>
 
-<p>A diferença entre o <code><strong>Array.of()</strong></code> e o construtor de <code><strong>Array</strong></code> é no tratamento dos argumentos inteiros: <code><strong>Array.of(7)</strong></code> cria um array com um único elemento, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">7</span></font>, enquanto <code><strong>Array(7)</strong></code> cria um array vazio de propriedade <code>length</code> igual a <code>7</code> (<strong>Nota</strong>: isso quer dizer um array com <code>7</code> espaços vazios, e não com valores do tipo {{jsxref("undefined")}}).</p>
+<p>A diferença entre o <code><strong>Array.of()</strong></code> e o construtor de <code><strong>Array</strong></code> é no tratamento dos argumentos inteiros: <code><strong>Array.of(7)</strong></code> cria um array com um único elemento, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">7</span></font>, enquanto <code><strong>Array(7)</strong></code> cria um array vazio de propriedade <code>length</code> igual a <code>7</code> (<strong>Nota</strong>: isso quer dizer um array com <code>7</code> espaços vazios, e não com valores do tipo {{jsxref("undefined")}}).</p>
 
 <pre>Array.of(7);       // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
@@ -33,12 +33,12 @@ Array(1, 2, 3);    // [1, 2, 3]
  <dt>
  <h3 id="Valor_de_retorno">Valor de retorno</h3>
  </dt>
- <dd>Uma nova instância de {{jsxref("Array")}}. </dd>
+ <dd>Uma nova instância de {{jsxref("Array")}}. </dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>Esta função é parte do padrão ECMAScript 6 (ou ECMAScript 2015).</p>
+<p>Esta função é parte do padrão ECMAScript 6 (ou ECMAScript 2015).</p>
 
 <p>Para maiores informações veja:</p>
 
@@ -62,11 +62,11 @@ Array.of(undefined); // [undefined]
 <pre class="brush: js">if (!Array.of) {
   Array.of = function() {
     return Array.prototype.slice.call(arguments);
-    // Or
+    // Or
     let vals = [];
-    for(let prop in arguments){
+    for(let prop in arguments){
         vals.push(arguments[prop]);
-    }
+    }
     return vals;
   };
 }

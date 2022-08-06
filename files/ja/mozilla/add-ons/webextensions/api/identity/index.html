@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/identity
  <li><a href="https://developer.github.com/v3/oauth/">https://developer.github.com/v3/oauth/</a></li>
 </ul>
 
-<p>identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提供します。この関数は、必要に応じて、サービスのユーザー認証を行い、また、拡張機能にデータへのアクセスを認可するかどうかをユーザーに確認します。処理が完了すると、プロバイダーによって、アクセストークンか認可コードのどちらかが取得されます。</p>
+<p>identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提供します。この関数は、必要に応じて、サービスのユーザー認証を行い、また、拡張機能にデータへのアクセスを認可するかどうかをユーザーに確認します。処理が完了すると、プロバイダーによって、アクセストークンか認可コードのどちらかが取得されます。</p>
 
 <p>そして、OAuth2 フローを実施して取得した検証済みアクセストークンを、HTTP リクエスト内で使用することで、拡張機能はユーザーから認可された範囲でデータにアクセスできるようになります。</p>
 
@@ -33,7 +33,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 
 <h3 id="Getting_the_redirect_URL" name="Getting_the_redirect_URL">リダイレクトURL を取得する</h3>
 
-<p><a href="https://www.oauth.com/oauth2-servers/redirect-uris/">リダイレクト URL </a>は、アクセストークンまたは認可コードを拡張機能に配布するための {{WebExtAPIRef("identity.launchWebAuthFlow()")}} のエンドポイントを意味します。</p>
+<p><a href="https://www.oauth.com/oauth2-servers/redirect-uris/">リダイレクト URL </a>は、アクセストークンまたは認可コードを拡張機能に配布するための {{WebExtAPIRef("identity.launchWebAuthFlow()")}} のエンドポイントを意味します。</p>
 
 <p>{{WebExtAPIRef("identity.getRedirectURL()")}}を呼び出すことでリダイレクトURL を取得できます。この関数は、アドオン ID からリダイレクト URL を生成するため、使用したい場合、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> キーを使用してアドオン ID を明示的に設定する必要があるでしょう (設定しない場合、アドオンを<a href="/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">一時的にインストール</a>するたびに、異なるリダイレクト URL を取得することになります)。</p>
 

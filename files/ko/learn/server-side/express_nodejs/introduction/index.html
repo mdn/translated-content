@@ -7,8 +7,8 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <div>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">첫번째 Express 수업에서는 Node, Express를 알아보고, Express 웹 프레임워크 제작의 전반에 대해 배우게 됩니다.<br>
- 우선 주요 특징들에 대한 틀을 정리한 후 Express 어플리케이션을 구성하는 주요 구성요소들을 살펴볼 것입니다. (테스트할 개발환경은 아직이겠지만요)</p>
+<p class="summary">첫번째 Express 수업에서는 Node, Express를 알아보고, Express 웹 프레임워크 제작의 전반에 대해 배우게 됩니다.<br>
+ 우선 주요 특징들에 대한 틀을 정리한 후 Express 어플리케이션을 구성하는 주요 구성요소들을 살펴볼 것입니다. (테스트할 개발환경은 아직이겠지만요)</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -25,24 +25,24 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <h2 id="Express와_Node란">Express와 Node란?</h2>
 
-<p><a href="https://nodejs.org/">Node</a> (또는 더 공식적으로는 Node.js) 는 오픈소스, 크로스 플랫폼이며, 개발자가 모든 종류의 서버 사이드 도구들과 어플리케이션을 <a href="/en-US/docs/Glossary/JavaScript">JavaScript</a>로 만들수 있도록 해주는 런타임 환경이다.런타임은 브라우져 영역 밖에서도 사용할수 있도록 의도했다.(예를들면 서버 OS 또는 컴퓨터에서 직접적으로 실행되는). 이와 같이,  이 환경에서 특정 브라우져에서의 자바스트립트 API들을 제외시키고 ,  HTTP 와 파일 시스템 라이브러리들을 포함하여 더 많은 전형적인 OS API들을 추가했다.</p>
+<p><a href="https://nodejs.org/">Node</a> (또는 더 공식적으로는 Node.js) 는 오픈소스, 크로스 플랫폼이며, 개발자가 모든 종류의 서버 사이드 도구들과 어플리케이션을 <a href="/en-US/docs/Glossary/JavaScript">JavaScript</a>로 만들수 있도록 해주는 런타임 환경이다.런타임은 브라우져 영역 밖에서도 사용할수 있도록 의도했다.(예를들면 서버 OS 또는 컴퓨터에서 직접적으로 실행되는). 이와 같이,  이 환경에서 특정 브라우져에서의 자바스트립트 API들을 제외시키고 ,  HTTP 와 파일 시스템 라이브러리들을 포함하여 더 많은 전형적인 OS API들을 추가했다.</p>
 
 <p>웹 서버 관점에서 노드는 많은 장점들을 가진다:</p>
 
 <ul>
- <li>훌륭한 퍼포먼스! Node는 단위시간당 처리량과 어플리케이션에서 확장성을 최적화 시키고, 많은 공통적인 웹 개발 문제들을 맞먹는다.(예를들면  실시간 웹 어플리케이션들)</li>
+ <li>훌륭한 퍼포먼스! Node는 단위시간당 처리량과 어플리케이션에서 확장성을 최적화 시키고, 많은 공통적인 웹 개발 문제들을 맞먹는다.(예를들면  실시간 웹 어플리케이션들)</li>
  <li>코드는 순수한 자바스크립트로 작성된다, 이는 당신이 각각 브라우져와 웹 서버 코드를 작성할때 언어들 사이에 "context shift" 를 다루는 시간을 적게 할수 있을을 의미한다.</li>
  <li>자바스크립트는 비교적 새로운 프로그래밍 언어이고 또다른 전통적인 웹서버 언어들과 비교할때 언어적 설계에서 향상의 이득을 가진다. 많은 다른 새롭거나 인기있는 언어들은 자바스크립트로 컴파일하거나 변환한다 그래서 또한 당신은 커피스크립트, 클로져스크립트, 스칼라, 라이브 스크립트 등등을 사용할 수 있다.</li>
  <li>노드 패키지 매니저(NPM)는 수천만개의 재사용가능한 패키지에 접근할 수 있도록 한다. 이것은 최고의 의존성 해결과 또한 수많은 빌드 툴체인이 자동화되도록 한다.</li>
- <li>이것은 마이크로소프트 윈도우, OS X, 룩스, 솔라리스, FreeBSD, OpenBSD, WebOS, 그리고 NonStop OS 등에서 돌아가는 버전과 같이 포터플하다.  더군다나, 이것은 특정한 인프라구조를 지원하고  Node 사이트 호스팅을 위한 문서를 제공하는 많은 웹 호스팅 공급자들에 의해서 잘 지원되고 있다.</li>
- <li>도움을 주고자 하는 수많은 사람들이 존재하는 아주 활발한 개발 생태계와 커뮤니티를 지니고 있다.</li>
+ <li>이것은 마이크로소프트 윈도우, OS X, 룩스, 솔라리스, FreeBSD, OpenBSD, WebOS, 그리고 NonStop OS 등에서 돌아가는 버전과 같이 포터플하다.  더군다나, 이것은 특정한 인프라구조를 지원하고  Node 사이트 호스팅을 위한 문서를 제공하는 많은 웹 호스팅 공급자들에 의해서 잘 지원되고 있다.</li>
+ <li>도움을 주고자 하는 수많은 사람들이 존재하는 아주 활발한 개발 생태계와 커뮤니티를 지니고 있다.</li>
 </ul>
 
 <h3 id="Hello_Node.js">Hello Node.js</h3>
 
 <p>아래 코드처럼 Node에 HTTP 모듈을 사용하여 모든 요청에 응답이 가능한 간단한 웹 서버를 쉽게 생성할 수 있습니다.</p>
 
-<p>이렇게하면 웹 서버가 만들어지고 URL <code>http://127.0.0.1:8000/</code> 에 있는 모든 종류의 HTTP 요청에 수신하게 됩니다. 요청이 하나 들어왔을 때, "Hello World" 텍스트 응답을 보내도록 하겠습니다.</p>
+<p>이렇게하면 웹 서버가 만들어지고 URL <code>http://127.0.0.1:8000/</code> 에 있는 모든 종류의 HTTP 요청에 수신하게 됩니다. 요청이 하나 들어왔을 때, "Hello World" 텍스트 응답을 보내도록 하겠습니다.</p>
 
 <ol>
  <li>터미널을 연다. (윈도우에서는, 커맨드라인 유틸리티)<br>
@@ -78,18 +78,18 @@ console.log('Server running at http://127.0.0.1:8000/')</pre>
 
 <p>이제, 웹브라우저를 열어 다음 주소로 이동한다. <code>http://localhost:8000</code> 곧바로 좌상단에 "<strong>Hello World</strong>" 문구가 있고, 나머지 영역은 비어있는 웹페이지를 볼 수 있다.</p>
 
-<p>Node 자체가 다른 일반적인 웹 개발 기능을 지원하지 않습니다. 만약 다른 HTTP 패턴 (예 : <code>GET</code>, <code>POST</code>, <code>DELETE</code> 등)에 대한 특정 처리를 추가하려면 서로 다른 URL 경로("routes")를 사용하여 요청을 개별적으로 처리, 정적 파일을 제공, 템플릿을 사용하여 동적으로 응답을 생성할 수 있으며, 코드를 직접 작성할 필요가가 생기게 됩니다. 또는 기본적인 것들을 직접 구현하는 작업을 피하고 웹 프레임 워크를 사용할 수 있습니다! </p>
+<p>Node 자체가 다른 일반적인 웹 개발 기능을 지원하지 않습니다. 만약 다른 HTTP 패턴 (예 : <code>GET</code>, <code>POST</code>, <code>DELETE</code> 등)에 대한 특정 처리를 추가하려면 서로 다른 URL 경로("routes")를 사용하여 요청을 개별적으로 처리, 정적 파일을 제공, 템플릿을 사용하여 동적으로 응답을 생성할 수 있으며, 코드를 직접 작성할 필요가가 생기게 됩니다. 또는 기본적인 것들을 직접 구현하는 작업을 피하고 웹 프레임 워크를 사용할 수 있습니다! </p>
 
-<p><a href="https://expressjs.com/">Express</a> 는 가장 인기있는 Node 웹 프레임 워크 이며, 다른 많은 인기있는 <a href="https://expressjs.com/en/resources/frameworks.html">Node web frameworks</a>의 기본 라이브러리 입니다. Express는 다음과 같은 메커니즘을 제공합니다:</p>
+<p><a href="https://expressjs.com/">Express</a> 는 가장 인기있는 Node 웹 프레임 워크 이며, 다른 많은 인기있는 <a href="https://expressjs.com/en/resources/frameworks.html">Node web frameworks</a>의 기본 라이브러리 입니다. Express는 다음과 같은 메커니즘을 제공합니다:</p>
 
 <ul>
  <li>HTTP 통신 요청(Request; GET, POST, DELETE 등)에 대한 핸들러를 만든다.</li>
- <li>템플릿에 데이터를 넣어 응답(response)을 만들기 위해 view의 렌더링 엔진과 결합(integrate)한다. </li>
- <li>접속을 위한 포트나 응답 렌더링을 위한 템플릿 위치같은 공통 웹 어플리케이션 세팅을 한다. </li>
+ <li>템플릿에 데이터를 넣어 응답(response)을 만들기 위해 view의 렌더링 엔진과 결합(integrate)한다. </li>
+ <li>접속을 위한 포트나 응답 렌더링을 위한 템플릿 위치같은 공통 웹 어플리케이션 세팅을 한다. </li>
  <li>핸들링 파이프라인(reqest handling pipeline) 중 필요한 곳에 추가적인 미들웨어 처리 요청을 추가한다.</li>
 </ul>
 
-<p><em>Express</em> 자체는 꽤나 최소한의 기능만 탑재하지만 개발자들이 거의 모든 웹 개발의 문제를 다루는 호환성있는 미들웨어 패키지를 만들어왔습니다. 쿠키, 세션, 사용자 로그인, URL 파라미터, <code>POST</code> 데이터, 보안 헤더와 그외 많은 것들에 대한 라이브러리들이 있습니다. 여러분은 <a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a>에서 Express 팀이 유지보수하는 미들웨어 패키지 리스트를 확인할 수 있습니다. (유명한 서드파티 패키지들을 포함).</p>
+<p><em>Express</em> 자체는 꽤나 최소한의 기능만 탑재하지만 개발자들이 거의 모든 웹 개발의 문제를 다루는 호환성있는 미들웨어 패키지를 만들어왔습니다. 쿠키, 세션, 사용자 로그인, URL 파라미터, <code>POST</code> 데이터, 보안 헤더와 그외 많은 것들에 대한 라이브러리들이 있습니다. 여러분은 <a href="http://expressjs.com/en/resources/middleware.html">Express Middleware</a>에서 Express 팀이 유지보수하는 미들웨어 패키지 리스트를 확인할 수 있습니다. (유명한 서드파티 패키지들을 포함).</p>
 
 <div class="note">
 <p><strong>Note:</strong> This flexibility is a double edged sword. There are middleware packages to address almost any problem or requirement, but working out the right packages to use can sometimes be a challenge. There is also no "right way" to structure an application, and many examples you might find on the Internet are not optimal, or only show a small part of what you need to do in order to develop a web application.</p>
@@ -97,13 +97,13 @@ console.log('Server running at http://127.0.0.1:8000/')</pre>
 
 <h2 id="유래">유래</h2>
 
-<p>노드(Node)는 2009년 리눅스 한정으로 배포 되었다. NPM은 2010년에 배포되었고, 네이티브 윈도우즈(Windows)는 2012년부터 지원하기 시작하였다. 현재 배포중인 최신 LTS 버전은 Node v8.9.3이 있고, 가장 최신 버전은 Node 9 이다. 이것은 유구한 역사를 짧게 적어본 것으로 더 알고 싶다면 <a href="https://ko.wikipedia.org/wiki/Node.js">위키페디아</a>를 참조하면 된다.</p>
+<p>노드(Node)는 2009년 리눅스 한정으로 배포 되었다. NPM은 2010년에 배포되었고, 네이티브 윈도우즈(Windows)는 2012년부터 지원하기 시작하였다. 현재 배포중인 최신 LTS 버전은 Node v8.9.3이 있고, 가장 최신 버전은 Node 9 이다. 이것은 유구한 역사를 짧게 적어본 것으로 더 알고 싶다면 <a href="https://ko.wikipedia.org/wiki/Node.js">위키페디아</a>를 참조하면 된다.</p>
 
-<p>Express는 2010년 11월 처음 배포되었고 현재는 4.16 버전이 되었다. 현재 배포 버전과의 변경사항을 알고 싶다면 <a href="https://expressjs.com/en/changelog/4x.html">changelog</a> 를 확인하면 된다. 그리고 더 자세한 역사와 릴리즈 노트는 <a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a> 를 참조하면 된다.</p>
+<p>Express는 2010년 11월 처음 배포되었고 현재는 4.16 버전이 되었다. 현재 배포 버전과의 변경사항을 알고 싶다면 <a href="https://expressjs.com/en/changelog/4x.html">changelog</a> 를 확인하면 된다. 그리고 더 자세한 역사와 릴리즈 노트는 <a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a> 를 참조하면 된다.</p>
 
 <h2 id="어떻게_NodeExpress가_유명해졌을까">어떻게 Node/Express가 유명해졌을까?</h2>
 
-<p>유명한 웹 프레임워크 쓴다는 것은 아주 중요합니다. 바로 해당 기술에 대한 지속가능성, 문서화, 추가 라이브러리, 그리고 기술 지원 자원에 대한 지표가 되기 때문입니다. </p>
+<p>유명한 웹 프레임워크 쓴다는 것은 아주 중요합니다. 바로 해당 기술에 대한 지속가능성, 문서화, 추가 라이브러리, 그리고 기술 지원 자원에 대한 지표가 되기 때문입니다. </p>
 
 <p>There isn't any readily-available and definitive measurement of the popularity of server-side frameworks (although sites like <a href="http://hotframeworks.com/">Hot Frameworks</a> attempt to assess popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Node and Express are "popular enough" to avoid the problems of unpopular platforms. Are they continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Express?</p>
 
@@ -206,7 +206,7 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 <pre class="brush: js notranslate">console.log('First');
 console.log('Second');</pre>
 
-<p>반면 비동기 API는 API가 작업을 시작하고, 즉시 반환(작업이 완료되기 전에)합니다. 작업이 완료되면 API는 추가적인 작업 수행을 위한 일부 매커니즘을 사용합니다. 예를 들어 아래의 코드는  "Second, First"를 출력합니다. 그   이유는 <code>setTimeout()</code> 메서드가 먼저 호출되고 즉시 반환되더라도, 작업이 몇 초 동안 완료되지 않기 때문입니다.</p>
+<p>반면 비동기 API는 API가 작업을 시작하고, 즉시 반환(작업이 완료되기 전에)합니다. 작업이 완료되면 API는 추가적인 작업 수행을 위한 일부 매커니즘을 사용합니다. 예를 들어 아래의 코드는  "Second, First"를 출력합니다. 그   이유는 <code>setTimeout()</code> 메서드가 먼저 호출되고 즉시 반환되더라도, 작업이 몇 초 동안 완료되지 않기 때문입니다.</p>
 
 <pre class="brush: js notranslate">setTimeout(function() {
    console.log('First');
@@ -214,18 +214,18 @@ console.log('Second');</pre>
 console.log('Second');
 </pre>
 
-<p>Node는 싱글 스레드 이벤트 기반 환경이기 때문에 non-blocking 비동기 API는 브라우저보다 Node에서 훨씬 더 중요합니다.</p>
+<p>Node는 싱글 스레드 이벤트 기반 환경이기 때문에 non-blocking 비동기 API는 브라우저보다 Node에서 훨씬 더 중요합니다.</p>
 
 <p>'싱글 스레드'는 서버에 모든 요청이 별도의 프로세스로 생성되지 않고 동일한 스레드에서 실행되는 것을 의미합니다. 이 모델은 속도와 서버 리소스 측면에서 아주 효율적이지만, 만약 특정 함수가 완료되는데에 오랜 시간이 걸리는 동기 메서드를 호출하는 함수가 있다면 현재 요청 뿐만 아니라 웹 어플리케이션에서 다른 요청이 처리되는 것도 차단합니다.</p>
 
 <p>비동기 API가 완료되었음을 어플리케이션에 알리는 방법은 여러가지가 있습니다. 가장 일반적인 방법은 비동기 API를 호출시 작업이 완료되면 다시 호출되는 콜백함수를 이용하는 것이며, 위의 예제에서 사용된 방식입니다.</p>
 
 <div class="note">
-<p><strong>Tip:</strong> 순서대로 수행해야하는 종속적인 비동기 작업들이 있을 경우, 콜백을 사용하는 것은 꽤 복잡할 수 있습니다. 중첩된 여러 단계의 콜백이 생성되기 때문입니다. 이 문제는 흔히 'callback hell'이라고 일컬어집니다. 이 문제는 good coding practices(<a href="http://callbackhell.com/">http://callbackhell.com/</a> 참고), <a href="https://www.npmjs.com/package/async">async</a>와 같은 모듈의 사용, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>와 같은 ES6 기능을 사용함으로써 개선될 수 있습니다.</p>
+<p><strong>Tip:</strong> 순서대로 수행해야하는 종속적인 비동기 작업들이 있을 경우, 콜백을 사용하는 것은 꽤 복잡할 수 있습니다. 중첩된 여러 단계의 콜백이 생성되기 때문입니다. 이 문제는 흔히 'callback hell'이라고 일컬어집니다. 이 문제는 good coding practices(<a href="http://callbackhell.com/">http://callbackhell.com/</a> 참고), <a href="https://www.npmjs.com/package/async">async</a>와 같은 모듈의 사용, <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>와 같은 ES6 기능을 사용함으로써 개선될 수 있습니다.</p>
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> Node와 Express의 일반적인 규칙은 error-first callbacks을 사용하는 것입니다. 이 규칙에서 콜백 함수의 첫번 째 값은 에러값이고, 다음 인자에는 성공 데이터가 포함됩니다. 이 방법에 대한 좋은 설명은 이 블로그에서 확인할 수 있습니다.:: <a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/ ">The Node.js Way - Understanding Error-First Callbacks</a> (fredkschott.com).</p>
+<p><strong>Note:</strong> Node와 Express의 일반적인 규칙은 error-first callbacks을 사용하는 것입니다. 이 규칙에서 콜백 함수의 첫번 째 값은 에러값이고, 다음 인자에는 성공 데이터가 포함됩니다. 이 방법에 대한 좋은 설명은 이 블로그에서 확인할 수 있습니다.:: <a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/ ">The Node.js Way - Understanding Error-First Callbacks</a> (fredkschott.com).</p>
 </div>
 
 <h3 id="라우트_핸들러의_사용">라우트 핸들러의 사용</h3>
@@ -288,20 +288,20 @@ app.use('/wiki', wiki)</pre>
 
 <h3 id="미들웨어의_사용">미들웨어의 사용</h3>
 
-<p>미들웨어는 정적 파일 제공에서 오류 처리, HTTP 응답 압축에 이르기까지 Express 앱에서 광범위하게 사용됩니다. 라우트 함수는 <font><font>HTTP 클라이언트에 일부 응답을 반환하여 HTTP 요청-응답주기를 종료하는 반면, 미들웨어 함수는 </font></font><em><font><font>일반적으로</font></font></em><font><font> 요청 또는 응답에 대해 일부 작업을 수행 한 다음 "스택"(이는 미들웨어 혹은 라우트 핸들러일 수 있습니다.)에서 다음 함수를 호출합니다.  미들웨어가 호출되는 순서는 앱 개발자에게 달려있습니다.</font></font></p>
+<p>미들웨어는 정적 파일 제공에서 오류 처리, HTTP 응답 압축에 이르기까지 Express 앱에서 광범위하게 사용됩니다. 라우트 함수는 <font><font>HTTP 클라이언트에 일부 응답을 반환하여 HTTP 요청-응답주기를 종료하는 반면, 미들웨어 함수는 </font></font><em><font><font>일반적으로</font></font></em><font><font> 요청 또는 응답에 대해 일부 작업을 수행 한 다음 "스택"(이는 미들웨어 혹은 라우트 핸들러일 수 있습니다.)에서 다음 함수를 호출합니다.  미들웨어가 호출되는 순서는 앱 개발자에게 달려있습니다.</font></font></p>
 
 <div class="note">
-<p><strong>Note:</strong> <font><font>미들웨어는 모든 작업을 수행하고, 코드를 실행하고, 요청 및 응답 객체를 변경할 수 </font></font><em><font><font>있으며, 요청-응답주기를 종료</font></font></em><font><font> 할 </font><em><font>수도</font></em><font> 있습니다. 만약 주기가 종료되지 않으면, 다음 미들웨어 함수의 제어를 위해 <code>next()</code>를 호출해야합니다.( 혹은 요청이 중단된 상태로 유지될 것입니다.)</font></font></p>
+<p><strong>Note:</strong> <font><font>미들웨어는 모든 작업을 수행하고, 코드를 실행하고, 요청 및 응답 객체를 변경할 수 </font></font><em><font><font>있으며, 요청-응답주기를 종료</font></font></em><font><font> 할 </font><em><font>수도</font></em><font> 있습니다. 만약 주기가 종료되지 않으면, 다음 미들웨어 함수의 제어를 위해 <code>next()</code>를 호출해야합니다.( 혹은 요청이 중단된 상태로 유지될 것입니다.)</font></font></p>
 </div>
 
-<p><font><font>대부분의 앱은 </font><font>쿠키, 세션, 사용자 인증,<code> POST</code>요청 </font><font>및 JSON 데이터 접근</font><font> </font><font>, logging 등과 </font><font>같은 일반적인 웹 개발 작업을 단순화하기 위해<em>서드파티</em></font></font><font><font> 미들웨어를 사용합니다 </font><font><a href="http://expressjs.com/en/resources/middleware.html" rel="noopener">. Express 팀에서 관리하는 미들웨어 패키지 목록을</a><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"> </span></font></font></font><font><font>이 곳에서 찾을 수 있습니다 </font><font>( 다른 인기있는 서드파티 패키지도 포함). </font><font>다른 Express 패키지는 NPM 패키지 관리자에서 사용할 수 있습니다.</font></font></p>
+<p><font><font>대부분의 앱은 </font><font>쿠키, 세션, 사용자 인증,<code> POST</code>요청 </font><font>및 JSON 데이터 접근</font><font> </font><font>, logging 등과 </font><font>같은 일반적인 웹 개발 작업을 단순화하기 위해<em>서드파티</em></font></font><font><font> 미들웨어를 사용합니다 </font><font><a href="http://expressjs.com/en/resources/middleware.html" rel="noopener">. Express 팀에서 관리하는 미들웨어 패키지 목록을</a><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"> </span></font></font></font><font><font>이 곳에서 찾을 수 있습니다 </font><font>( 다른 인기있는 서드파티 패키지도 포함). </font><font>다른 Express 패키지는 NPM 패키지 관리자에서 사용할 수 있습니다.</font></font></p>
 
-<p><font><font>서드파티 미들웨어를 사용하려면 먼저 NPM을 사용하여 앱에 설치해야합니다. </font><font>예를 들어 </font></font><a href="http://expressjs.com/en/resources/middleware/morgan.html" rel="noopener"><font><font>morgan</font></font></a><font><font> HTTP 요청 logger 미들웨어 </font><font>를 설치하려면 다음과 </font><font>같이 진행합니다.</font></font></p>
+<p><font><font>서드파티 미들웨어를 사용하려면 먼저 NPM을 사용하여 앱에 설치해야합니다. </font><font>예를 들어 </font></font><a href="http://expressjs.com/en/resources/middleware/morgan.html" rel="noopener"><font><font>morgan</font></font></a><font><font> HTTP 요청 logger 미들웨어 </font><font>를 설치하려면 다음과 </font><font>같이 진행합니다.</font></font></p>
 
 <pre class="brush: bash notranslate"><code>$ npm install morgan
 </code></pre>
 
-<p>그런 다음 <em>Express application object에 </em>use()를 호출해서 스택에 이 미들웨어를 추가합니다.</p>
+<p>그런 다음 <em>Express application object에 </em>use()를 호출해서 스택에 이 미들웨어를 추가합니다.</p>
 
 <pre class="brush: js notranslate">var express = require('express');
 <strong>var logger = require('morgan');</strong>
@@ -310,22 +310,22 @@ var app = express();
 ...</pre>
 
 <div class="note">
-<p><strong>Note:</strong> <font>미들웨어 및 라우팅 함수는 선언된 순서대로 호출됩니다. </font><font>일부 미들웨어의 경우 순서가 중요합니다 (예를 들어 세션 미들웨어가 쿠키 미들웨어에 의존하는 경우, 쿠키 핸들러를 먼저 추가해야합니다). 거의 항상 라우트를 설정하기 전에 미들웨어가 호출되거나,  미들웨어로 인해 추가된 기능에 라우트 핸들러가  접근할 수 없습니다.</font></p>
+<p><strong>Note:</strong> <font>미들웨어 및 라우팅 함수는 선언된 순서대로 호출됩니다. </font><font>일부 미들웨어의 경우 순서가 중요합니다 (예를 들어 세션 미들웨어가 쿠키 미들웨어에 의존하는 경우, 쿠키 핸들러를 먼저 추가해야합니다). 거의 항상 라우트를 설정하기 전에 미들웨어가 호출되거나,  미들웨어로 인해 추가된 기능에 라우트 핸들러가  접근할 수 없습니다.</font></p>
 </div>
 
-<p><font><font>당신은 자신만의 미들웨어 함수를 작성할 수 있으며, 그렇게 해야 할 가능성이 높습니다 (에러 처리 코드를 생성하는 경우에만 해당). 미들웨어 함수와 라우트 핸들러 콜백 </font><font>의 </font></font><strong><font><font>유일한</font></font></strong><font><font> 차이점은 미들웨어 함수에 세 번째 인자로 미들웨어 함수가 </font></font><font><font>요청 주기를 완료하지 않을 때 호출되는 <code>next</code>가 있다는 것입니다. (미들웨어 함수가 호출 될 때 여기에는 반드시 호출되는 <em>next</em></font></font><font><font> 함수가 포함됩니다.).</font></font></p>
+<p><font><font>당신은 자신만의 미들웨어 함수를 작성할 수 있으며, 그렇게 해야 할 가능성이 높습니다 (에러 처리 코드를 생성하는 경우에만 해당). 미들웨어 함수와 라우트 핸들러 콜백 </font><font>의 </font></font><strong><font><font>유일한</font></font></strong><font><font> 차이점은 미들웨어 함수에 세 번째 인자로 미들웨어 함수가 </font></font><font><font>요청 주기를 완료하지 않을 때 호출되는 <code>next</code>가 있다는 것입니다. (미들웨어 함수가 호출 될 때 여기에는 반드시 호출되는 <em>next</em></font></font><font><font> 함수가 포함됩니다.).</font></font></p>
 
-<p><font><font>당신이 모든 응답 혹은  특정 HTTP 동사(</font></font><code>GET</code><font><font>, </font></font><code>POST</code> 등)에 미들웨어를 적용할지 여부에 따라<code>app.use()</code><font><font>또는 </font></font><code>app.add()</code>와 함께<font><font> 프로세싱 체인에 미들웨어 기능을 추가 할 수 있습니다. 두 경우 모두 라우트를 동일하게 지정하지만 </font></font><strong><font><font>app.use ()</font></font></strong><font><font> 호출시 라우트는 선택 사항 </font><font>입니다.</font></font></p>
+<p><font><font>당신이 모든 응답 혹은  특정 HTTP 동사(</font></font><code>GET</code><font><font>, </font></font><code>POST</code> 등)에 미들웨어를 적용할지 여부에 따라<code>app.use()</code><font><font>또는 </font></font><code>app.add()</code>와 함께<font><font> 프로세싱 체인에 미들웨어 기능을 추가 할 수 있습니다. 두 경우 모두 라우트를 동일하게 지정하지만 </font></font><strong><font><font>app.use ()</font></font></strong><font><font> 호출시 라우트는 선택 사항 </font><font>입니다.</font></font></p>
 
-<p><font><font>아래의  예제는 두 가지 방법을 사용하고, 경로를 사용하거나 사용하지 않고 미들웨어 기능을 추가하는 방법을 보여줍니다.</font></font></p>
+<p><font><font>아래의  예제는 두 가지 방법을 사용하고, 경로를 사용하거나 사용하지 않고 미들웨어 기능을 추가하는 방법을 보여줍니다.</font></font></p>
 
 <pre class="brush: js notranslate">var express = require('express')
 var app = express()
 
 // An example middleware function
 var a_middleware_function = function(req, res, <em>next</em>) {
-  //... perform some operations
-  next(); //Call next() so Express will call the next middleware function in the chain.
+  //... perform some operations
+  next(); //Call next() so Express will call the next middleware function in the chain.
 }
 
 // Function added with use() for all routes and verbs
@@ -340,10 +340,10 @@ app.get('/', a_middleware_function )
 app.listen(3000)</pre>
 
 <div class="note">
-<p><strong>JavaScript Tip:</strong> <font>위에서 우리는 미들웨어 함수를 별도로 선언 한 다음 그것을 콜백으로 설정합니다. </font><font>이전 라우트 핸들러 함수에서는 우리는 콜백 함수가 사용될 때 선언했습니다. </font><font>JavaScript에서는 두 방법 모두 유효합니다.</font></p>
+<p><strong>JavaScript Tip:</strong> <font>위에서 우리는 미들웨어 함수를 별도로 선언 한 다음 그것을 콜백으로 설정합니다. </font><font>이전 라우트 핸들러 함수에서는 우리는 콜백 함수가 사용될 때 선언했습니다. </font><font>JavaScript에서는 두 방법 모두 유효합니다.</font></p>
 </div>
 
-<p><font><font>Express 공식 문서에는 </font><font>Express 미들웨어 </font></font><a href="https://expressjs.com/en/guide/using-middleware.html" rel="noopener"><font><font>사용</font></font></a><font><font> 및 </font></font><a href="http://expressjs.com/en/guide/writing-middleware.html" rel="noopener"><font><font>작성</font></font></a><font><font> 에 대한 훨씬 더 우수한 자료들이 </font><font>있습니다.</font></font></p>
+<p><font><font>Express 공식 문서에는 </font><font>Express 미들웨어 </font></font><a href="https://expressjs.com/en/guide/using-middleware.html" rel="noopener"><font><font>사용</font></font></a><font><font> 및 </font></font><a href="http://expressjs.com/en/guide/writing-middleware.html" rel="noopener"><font><font>작성</font></font></a><font><font> 에 대한 훨씬 더 우수한 자료들이 </font><font>있습니다.</font></font></p>
 
 <h3 id="저장된_파일을_서버화하기">저장된 파일을 서버화하기</h3>
 

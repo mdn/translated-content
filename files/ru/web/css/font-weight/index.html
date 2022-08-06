@@ -10,7 +10,7 @@ translation_of: Web/CSS/font-weight
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/ru/docs/Web/CSS" title="CSS">CSS</a> свойство <strong><code>font-weight</code></strong> устанавливает начертание шрифта. Некоторые шрифты доступны только в нормальном или полужирном начертании.</p>
+<p><a href="/ru/docs/Web/CSS" title="CSS">CSS</a> свойство <strong><code>font-weight</code></strong> устанавливает начертание шрифта. Некоторые шрифты доступны только в нормальном или полужирном начертании.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/font-weight.html")}}</div>
 
@@ -49,22 +49,22 @@ font-weight: unset;
  <dt><code>bold</code></dt>
  <dd>Полужирное начертание. То же, что и <code>700</code>.</dd>
  <dt><code>lighter</code></dt>
- <dd>Изменяет начертание относительно насыщенности родительского элемента (сверхтонкое начертание).</dd>
+ <dd>Изменяет начертание относительно насыщенности родительского элемента (сверхтонкое начертание).</dd>
  <dt><code>bolder</code></dt>
  <dd>Изменяет начертание относительно насыщенности родителя элемента (сверхжирное начертание).</dd>
  <dt><code>100</code>, <code>200</code>, <code>300</code>, <code>400</code>, <code>500</code>, <code>600</code>, <code>700</code>, <code>800</code>, <code>900</code></dt>
  <dd>Цифровые значения насыщенности шрифтов, которые позволяют задавать больше, чем нормальное и полужирное начертание.</dd>
 </dl>
 
-<h3 id="Недоступность_заданного_значения">Недоступность заданного значения</h3>
+<h3 id="Недоступность_заданного_значения">Недоступность заданного значения</h3>
 
 <p>Если заданное цифровое значение насыщенности недоступно, для определения толщины отображаемого шрифта используется следующий алгоритм:</p>
 
 <ul>
- <li>Если задано значение выше <code>500</code>, будет использовано первое доступное более жирное начертание (если такого не окажется, то первое доступное более светлое).</li>
- <li>Если задано значение менее <code>400</code>, будет использовано первое доступное более светлое начертание (если такого не окажется, то первое доступное более жирное).</li>
- <li>Если задано значение <code>400</code>, будет применено <code>500</code>. Если <code>500</code> недоступно, то будет использован алгоритм для подбора значений менее <code>400</code>.</li>
- <li>Если задано значение <code>500</code>, будет применено <code>400</code>. Если <code>400</code> недоступно, то будет использован алгоритм для подбора значений менее <code>400</code>.</li>
+ <li>Если задано значение выше <code>500</code>, будет использовано первое доступное более жирное начертание (если такого не окажется, то первое доступное более светлое).</li>
+ <li>Если задано значение менее <code>400</code>, будет использовано первое доступное более светлое начертание (если такого не окажется, то первое доступное более жирное).</li>
+ <li>Если задано значение <code>400</code>, будет применено <code>500</code>. Если <code>500</code> недоступно, то будет использован алгоритм для подбора значений менее <code>400</code>.</li>
+ <li>Если задано значение <code>500</code>, будет применено <code>400</code>. Если <code>400</code> недоступно, то будет использован алгоритм для подбора значений менее <code>400</code>.</li>
 </ul>
 
 <p><span id="result_box" lang="ru"><span class="hps">Это означает, что</span> <span class="hps">для шрифтов</span><span>, которые предоставляют</span> <span class="hps">только</span> <span class="hps">normal и</span> bold<span class="hps"> начертания,</span> <span class="hps">100-500</span> <span class="hps">normal</span><span>,</span> <span class="hps">и</span> <span class="hps">600-900</span> bold<span class="hps">.</span></span></p>
@@ -144,23 +144,23 @@ font-weight: unset;
  <tbody>
   <tr>
    <td><code>100</code></td>
-   <td>Тонкий (Волосяной) Thin (Hairline)</td>
+   <td>Тонкий (Волосяной) Thin (Hairline)</td>
   </tr>
   <tr>
    <td><code>200</code></td>
-   <td>Дополнительный светлый (Сверхсветлый) Extra Light (Ultra Light)</td>
+   <td>Дополнительный светлый (Сверхсветлый) Extra Light (Ultra Light)</td>
   </tr>
   <tr>
    <td><code>300</code></td>
-   <td>Светлый Light</td>
+   <td>Светлый Light</td>
   </tr>
   <tr>
    <td><code>400</code></td>
-   <td>Нормальный Normal</td>
+   <td>Нормальный Normal</td>
   </tr>
   <tr>
    <td><code>500</code></td>
-   <td>Средний Medium</td>
+   <td>Средний Medium</td>
   </tr>
   <tr>
    <td><code>600</code></td>
@@ -168,22 +168,22 @@ font-weight: unset;
   </tr>
   <tr>
    <td><code>700</code></td>
-   <td>Жирный Bold</td>
+   <td>Жирный Bold</td>
   </tr>
   <tr>
    <td><code>800</code></td>
-   <td>Дополнительный жирный (Сверхжирный) Extra Bold (Ultra Bold)</td>
+   <td>Дополнительный жирный (Сверхжирный) Extra Bold (Ultra Bold)</td>
   </tr>
   <tr>
    <td><code>900</code></td>
-   <td>Чёрный (Густой) Black (Heavy)</td>
+   <td>Чёрный (Густой) Black (Heavy)</td>
   </tr>
  </tbody>
 </table>
 
 <h3 id="Интерполяция">Интерполяция</h3>
 
-<p>Значения <code>font-weight</code> интерполируются  с помощью дискретных шагов (кратные 100). <span id="result_box" lang="ru"><span class="hps">Интерполяция</span> <span class="hps">происходит в действительном пространстве чисел</span> <span class="hps">и превращается</span> <span class="hps">в целое число путём</span> <span class="hps">округления до</span> <span class="hps">ближайшего числа, кратного</span> <span class="hps">100,</span> <span class="hps">со значениями</span> <span class="alt-edited hps">посредине между</span> <span class="alt-edited hps">кратными 100</span> <span class="alt-edited hps">округлёнными</span> <span class="alt-edited hps">в сторону</span> <span class="hps">положительной бесконечности</span><span>.</span></span></p>
+<p>Значения <code>font-weight</code> интерполируются  с помощью дискретных шагов (кратные 100). <span id="result_box" lang="ru"><span class="hps">Интерполяция</span> <span class="hps">происходит в действительном пространстве чисел</span> <span class="hps">и превращается</span> <span class="hps">в целое число путём</span> <span class="hps">округления до</span> <span class="hps">ближайшего числа, кратного</span> <span class="hps">100,</span> <span class="hps">со значениями</span> <span class="alt-edited hps">посредине между</span> <span class="alt-edited hps">кратными 100</span> <span class="alt-edited hps">округлёнными</span> <span class="alt-edited hps">в сторону</span> <span class="hps">положительной бесконечности</span><span>.</span></span></p>
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
 

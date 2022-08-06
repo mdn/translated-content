@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tanh
 ---
 <div>{{JSRef}}</div>
 
-<p>La funcion <strong><code>Math.tanh()</code></strong> devuelve la hyperbolica tangente de un numero, esto es </p>
+<p>La funcion <strong><code>Math.tanh()</code></strong> devuelve la hyperbolica tangente de un numero, esto es </p>
 
 <p><math display="block"><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math></p>
 
@@ -34,11 +34,11 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tanh
 
 <h2 id="Descripcion">Descripcion</h2>
 
-<p>Porque <code>tanh()</code> es un metodo estatico de <code>Math</code>, siempre se usa como <code>Math.tanh()</code>, en lugar de ser un metodo de <code>Math</code> objeto que creas (<code>Math</code> no es un constructor).</p>
+<p>Porque <code>tanh()</code> es un metodo estatico de <code>Math</code>, siempre se usa como <code>Math.tanh()</code>, en lugar de ser un metodo de <code>Math</code> objeto que creas (<code>Math</code> no es un constructor).</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_Math.tanh()">Usando <code>Math.tanh()</code></h3>
+<h3 id="Usando_Math.tanh()">Usando <code>Math.tanh()</code></h3>
 
 <pre class="brush: js">Math.tanh(0);        // 0
 Math.tanh(Infinity); // 1
@@ -50,8 +50,8 @@ Math.tanh(1);        // 0.7615941559557649
 <p>Esto puede ser emulado con ayuda de {{jsxref("Math.exp()")}} funcion:</p>
 
 <pre class="brush: js">Math.tanh = Math.tanh || function(x){
-    var a = Math.exp(+x), b = Math.exp(-x);
-    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
+    var a = Math.exp(+x), b = Math.exp(-x);
+    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
 </pre>
 
@@ -74,7 +74,7 @@ Math.tanh(1);        // 0.7615941559557649
   <tr>
    <td>{{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -85,7 +85,7 @@ Math.tanh(1);        // 0.7615941559557649
 
 <p>{{Compat("javascript.builtins.Math.tanh")}}</p>
 
-<h2 id="sect1"> </h2>
+<h2 id="sect1"> </h2>
 
 <ul>
  <li>{{jsxref("Math.acosh()")}}</li>

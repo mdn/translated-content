@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 
 <p>ブックマークのインポートが開始した際に発火します。</p>
 
-<p>ブックマークをインポートしている間、{{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} が何度も発火する場合があります。<code>onCreated</code> に紐づけるリスナ関数の処理が重い場合には、<code>onImportBegan</code> と {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}} をリッスンし、<code>onImportEnded</code>  が発火するまでは <code>onCreated</code> を無視してください。他のイベントは通常通り処理できます。</p>
+<p>ブックマークをインポートしている間、{{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} が何度も発火する場合があります。<code>onCreated</code> に紐づけるリスナ関数の処理が重い場合には、<code>onImportBegan</code> と {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}} をリッスンし、<code>onImportEnded</code>  が発火するまでは <code>onCreated</code> を無視してください。他のイベントは通常通り処理できます。</p>
 
 <h2 id="構文">構文</h2>
 

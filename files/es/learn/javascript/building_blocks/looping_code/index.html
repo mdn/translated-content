@@ -25,19 +25,19 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 
 <h2 id="Mantente_en_el_Bucle">Mantente en el Bucle</h2>
 
-<p>Bucles, bucles, bucles. Además de ser conocidos como un cereal de desayuno popular, montañas rusas y producción músical, también son un concepto muy importante en programación. Los bucles de programación están relacionados con todo lo referente a hacer una misma cosa una y otra vez — que se denomina como <strong>iteración </strong>en el idioma de programación.</p>
+<p>Bucles, bucles, bucles. Además de ser conocidos como un cereal de desayuno popular, montañas rusas y producción músical, también son un concepto muy importante en programación. Los bucles de programación están relacionados con todo lo referente a hacer una misma cosa una y otra vez — que se denomina como <strong>iteración </strong>en el idioma de programación.</p>
 
 <p>Consideremos el caso de un agricultor que se asegura de tener suficiente comida para alimentar a su familia durante la semana. Podría usar el siguiente bucle para lograr esto:</p>
 
 <p><br>
  <img alt="" src="https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png" style="display: block; margin: 0 auto;"></p>
 
-<p>Un bucle cuenta con una o más de las siguientes características:</p>
+<p>Un bucle cuenta con una o más de las siguientes características:</p>
 
 <ul>
- <li> Un <strong>contador,</strong> que se inicia con un determinado valor — este será el valor del punto inicial del bucle ("Inicio: No tengo comida",mirar arriba).</li>
- <li>Una <strong>condicion de salida</strong>, que será el criterio bajo el cual, el bucle se romperá — normalmente un contador que alcanza un determinado valor. Aquí se ilustra como "¿Tengo suficiente comida?", arriba. Digamos que son necesarias 10 porciones de comida para alimentar a su familia.</li>
- <li>Un <strong>iterador, </strong>que generalmente incrementa el valor del contador en una cantidad pequeña a cada paso del bucle, hasta que alcanza la condición de salida. No hemos ilustrado esto de manera explícita arriba, pero podríamos pensar que el granjero está recolectando 2 porciones de comida cada hora. Después de cada hora, la cantidad de comida recolectada se incrementa en dos, y comprueba si tiene suficiente comida. Si alcanza los 10 puntos (la condición de salida), puede parar la recolecta e irse para casa.</li>
+ <li> Un <strong>contador,</strong> que se inicia con un determinado valor — este será el valor del punto inicial del bucle ("Inicio: No tengo comida",mirar arriba).</li>
+ <li>Una <strong>condicion de salida</strong>, que será el criterio bajo el cual, el bucle se romperá — normalmente un contador que alcanza un determinado valor. Aquí se ilustra como "¿Tengo suficiente comida?", arriba. Digamos que son necesarias 10 porciones de comida para alimentar a su familia.</li>
+ <li>Un <strong>iterador, </strong>que generalmente incrementa el valor del contador en una cantidad pequeña a cada paso del bucle, hasta que alcanza la condición de salida. No hemos ilustrado esto de manera explícita arriba, pero podríamos pensar que el granjero está recolectando 2 porciones de comida cada hora. Después de cada hora, la cantidad de comida recolectada se incrementa en dos, y comprueba si tiene suficiente comida. Si alcanza los 10 puntos (la condición de salida), puede parar la recolecta e irse para casa.</li>
 </ul>
 
 <p>En {{glossary("pseudocódigo")}},esto se vería como sigue:</p>
@@ -52,7 +52,7 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
   }
 }</pre>
 
-<p>Así que la cantidad necesaria de comida se establece en 10, y la cantidad incial del granjero en 0. En cada iteración del bucle comprobamos si la cantidad de comida del granjero es mayor o igual a la cantidad que necesita. Si lo es, podemos salir del bucle. Si no, el granjero se pasará una hora más recogiendo dos porciones de comida, y el bucle arrancará de nuevo.</p>
+<p>Así que la cantidad necesaria de comida se establece en 10, y la cantidad incial del granjero en 0. En cada iteración del bucle comprobamos si la cantidad de comida del granjero es mayor o igual a la cantidad que necesita. Si lo es, podemos salir del bucle. Si no, el granjero se pasará una hora más recogiendo dos porciones de comida, y el bucle arrancará de nuevo.</p>
 
 <h3 id="¿Por_qué_molestarse">¿Por qué molestarse?</h3>
 
@@ -143,7 +143,7 @@ original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
   ctx.fill();
 }</pre>
 
-<p>Debes quedarte con la idea básica.  — utilizamos un bucle para ejecutar 100 iteracciones de este código, cada una de las cuales dibuja un círculo en una posición aleatoria de la página. La cantidad de código necesario sería el mismo si dibujáramos 100, 1000, o 10,000 círculos. Solo necesitamos cambiar un número.</p>
+<p>Debes quedarte con la idea básica.  — utilizamos un bucle para ejecutar 100 iteracciones de este código, cada una de las cuales dibuja un círculo en una posición aleatoria de la página. La cantidad de código necesario sería el mismo si dibujáramos 100, 1000, o 10,000 círculos. Solo necesitamos cambiar un número.</p>
 
 <p>Si no usáramos un bucle aquí, tendríamos que repetir el siguiente código por cada círculo que quisiéramos dibujar:</p>
 
@@ -234,10 +234,10 @@ para.textContent = info;</pre>
 
 <ol>
  <li>El iterador, <code>i</code>, inicia en <code>0</code> (<code>var i = 0</code>).</li>
- <li>Se le ha dicho que debe ejecutarse hasta que no sea menor que la longitud del arreglo <code>cats</code>. Esto es importante  - la condición de salida muestra la condicion bajo la cual el bucle seguirá iterando. Así, en este caso, mientras <code>i &lt; cats.length</code> sea verdadero, el bucle seguirá ejecutándose.</li>
+ <li>Se le ha dicho que debe ejecutarse hasta que no sea menor que la longitud del arreglo <code>cats</code>. Esto es importante  - la condición de salida muestra la condicion bajo la cual el bucle seguirá iterando. Así, en este caso, mientras <code>i &lt; cats.length</code> sea verdadero, el bucle seguirá ejecutándose.</li>
  <li>Dentro del bucle, concatenamos el elemento del bucle actual (<code>cats[i]</code> es <code>cats[lo que sea i en ese momento]</code>) junto con una coma y un espacio, al final de la variable <code>info</code>. Así:
   <ol>
-   <li>Durante la primera ejecución,  <code>i = 0</code>, así <code>cats[0] + ', '</code> se concatenará con la información ("Bill, ").</li>
+   <li>Durante la primera ejecución,  <code>i = 0</code>, así <code>cats[0] + ', '</code> se concatenará con la información ("Bill, ").</li>
    <li>Durante la segunda ejecución, <code>i = 1</code>, así <code>cats[1] + ', '</code> agregará el siguiente nombre ("Jeff, ").</li>
    <li>Y así sucesivamente. Después de cada vez que se ejecute el bucle, se incrementará en 1 el valod de i (<code>i++</code>), entonces el proceso comenzará de nuevo.</li>
   </ol>
@@ -250,7 +250,7 @@ para.textContent = info;</pre>
 </div>
 
 <div class="note">
-<p><strong>Nota</strong>: Un error común con la condición de salida es utilizar el comparador "igual a" (<code>===</code>) en vez de "menor o igual a" (<code>&lt;=</code>). Si queremos que nuestro bucle se ejecute hasta que  <code>i = 5</code>, la condición de salida debería ser <code>i &lt;= cats.length</code>. Si la declaramos <code>i === cats.length</code>, el bucle no debería ejecutarse , porque <code>i</code> no es igual a <code>5</code> en la primera iteración del bucle, por lo que debería detenerse inmediatamente.</p>
+<p><strong>Nota</strong>: Un error común con la condición de salida es utilizar el comparador "igual a" (<code>===</code>) en vez de "menor o igual a" (<code>&lt;=</code>). Si queremos que nuestro bucle se ejecute hasta que  <code>i = 5</code>, la condición de salida debería ser <code>i &lt;= cats.length</code>. Si la declaramos <code>i === cats.length</code>, el bucle no debería ejecutarse , porque <code>i</code> no es igual a <code>5</code> en la primera iteración del bucle, por lo que debería detenerse inmediatamente.</p>
 </div>
 
 <p>Un pequeño problema que se presenta es que la frase de salida final no está muy bien formada:</p>
@@ -283,7 +283,7 @@ para.textContent = info;</pre>
 
 <p>Ocurre lo mismo con los bucles - una declaración <code>break</code> saldrá inmediatamente del bucle y hará que el navegador siga con el código que sigue después.</p>
 
-<p>Digamos que queremos buscar a través de un arreglo de contactos y números telefónicos y retornar sólo el número que queríamos encontrar. primero, un simple HTML -  un {{htmlelement("input")}} de texto que nos permita ingresar un nombre para buscar, un elemento {{htmlelement("button")}} para enviar la búsqueda, y un elemento {{htmlelement("p")}} para mostrar el resultado:</p>
+<p>Digamos que queremos buscar a través de un arreglo de contactos y números telefónicos y retornar sólo el número que queríamos encontrar. primero, un simple HTML -  un {{htmlelement("input")}} de texto que nos permita ingresar un nombre para buscar, un elemento {{htmlelement("button")}} para enviar la búsqueda, y un elemento {{htmlelement("p")}} para mostrar el resultado:</p>
 
 <pre class="brush: html notranslate">&lt;label for="search"&gt;Search by contact name: &lt;/label&gt;
 &lt;input id="search" type="text"&gt;
@@ -291,7 +291,7 @@ para.textContent = info;</pre>
 
 &lt;p&gt;&lt;/p&gt;</pre>
 
-<p>Ahora en el JavaScript:</p>
+<p>Ahora en el JavaScript:</p>
 
 <pre class="brush: js notranslate">var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
 var para = document.querySelector('p');
@@ -703,7 +703,7 @@ textarea.onkeyup = function(){
 <p>Specifically, we want you to:</p>
 
 <ul>
- <li>Write a loop that will iterate from 0 to the length of the <code>people</code> array. You'll need to start with an initializer of  <code>var i = 0;</code>, but what exit condition do you need?</li>
+ <li>Write a loop that will iterate from 0 to the length of the <code>people</code> array. You'll need to start with an initializer of  <code>var i = 0;</code>, but what exit condition do you need?</li>
  <li>During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
   <ul>
    <li>If it is, concatenate the array item to the end of the <code>refused</code> paragraph's <code>textContent</code>, followed by a comma and a space.</li>
@@ -730,7 +730,7 @@ textarea.onkeyup = function(){
 <pre class="brush: html notranslate">&lt;h2&gt;Live output&lt;/h2&gt;
 &lt;div class="output" style="height: 100px;overflow: auto;"&gt;
   &lt;p class="admitted"&gt;Admit: &lt;/p&gt;
-  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
+  &lt;p class="refused"&gt;Refuse: &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h2&gt;Editable code&lt;/h2&gt;

@@ -10,4 +10,4 @@ original_slug: Glossaire/PDF
 
 ### Connaissances générales
 
-- {{Interwiki("wikipedia", "Portable Document Format", "PDF")}} sur Wikipédia
+- [PDF](https://fr.wikipedia.org/wiki/Portable_Document_Format) sur Wikipédia

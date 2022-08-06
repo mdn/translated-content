@@ -15,4 +15,4 @@ translation_of: Glossary/XPath
 ### 基本信息
 
 - [Official website](https://www.w3.org/standards/techs/xpath#w3c_all)
-- 维基百科上的{{Interwiki("wikipedia", "XPath")}}
+- 维基百科上的[XPath](https://zh.wikipedia.org/wiki/XPath)

@@ -11,7 +11,7 @@ browser-compat: css.properties.background-blend-mode
 ---
 {{CSSRef()}}
 
-[CSS-свойство](/ru/docs/Web/CSS) **`background-blend-mode`** описывает то, как фоновое изображение элемента должно накладываться на фоны других элементов.
+[CSS-свойство](/ru/docs/Web/CSS) **`background-blend-mode`** описывает то, как фоновое изображение элемента должно накладываться на фоны других элементов.
 
 {{EmbedInteractiveExample("pages/css/background-blend-mode.html")}}
 
@@ -52,10 +52,10 @@ background-blend-mode: unset;
 
 ```css
 .item {
-    width: 300px;
-    height: 300px;
-    background: url('image1.png'),url('image2.png');
-    background-blend-mode: screen;
+    width: 300px;
+    height: 300px;
+    background: url('image1.png'),url('image2.png');
+    background-blend-mode: screen;
 }
 ```
 

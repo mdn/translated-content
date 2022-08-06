@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>El operador de comparacion  (<code>==</code>) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (<code>===</code>), es que este convierte y compara operandos que son de diferentes tipos.</p>
+<p>El operador de comparacion  (<code>==</code>) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (<code>===</code>), es que este convierte y compara operandos que son de diferentes tipos.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}</div>
 
@@ -30,7 +30,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
 <ul>
  <li>Si los operandos ambos son objetos, devuelve <code>true </code>solo si ambos operandos hacen referencia al mismo objeto.</li>
  <li>Si un operando es <code>null</code>y el otro <code>undefined</code>, devuelve verdadero(<code>true</code>).</li>
- <li>Si los operandos son de diferente tipos, intenta convertirlos al mismo tipo antes de comparar:
+ <li>Si los operandos son de diferente tipos, intenta convertirlos al mismo tipo antes de comparar:
   <ul>
    <li>Al comparar un número con una cadena, convierte la cadena en un valor numérico.</li>
    <li>Si uno de los operandos es booleano, convierte el operando booleano en 1 si es verdadero y en 0 en el caso de falso.</li>
@@ -46,7 +46,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/Comparacion
  </li>
 </ul>
 
-<p>La diferencia más notable entre este operador y el operador de igualdad estricta (<code>===</code>) es que el operador de igualdad estricta no realiza la conversión de tipos. </p>
+<p>La diferencia más notable entre este operador y el operador de igualdad estricta (<code>===</code>) es que el operador de igualdad estricta no realiza la conversión de tipos. </p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -79,9 +79,9 @@ const object2 = {"key": "value"};
 object1 == object2 // false
 object2 == object2 // true</pre>
 
-<h3 id="Comparar_String_y_objetos_String">Comparar String y objetos String</h3>
+<h3 id="Comparar_String_y_objetos_String">Comparar String y objetos String</h3>
 
-<p>Tenga en cuenta que las cadenas construidas con <code>new String() </code>son objetos. Si compara uno de estos con un String literal, el objeto String se convertirá en un <code>String</code> literal y se comparará el contenido. Sin embargo, si ambos operandos son objetos de tipo String, entonces se comparan como objetos y deben hacer referencia al mismo objeto para que la comparación sea exitosa:</p>
+<p>Tenga en cuenta que las cadenas construidas con <code>new String() </code>son objetos. Si compara uno de estos con un String literal, el objeto String se convertirá en un <code>String</code> literal y se comparará el contenido. Sin embargo, si ambos operandos son objetos de tipo String, entonces se comparan como objetos y deben hacer referencia al mismo objeto para que la comparación sea exitosa:</p>
 
 <pre class="brush: js notranslate">const string1 = "Hola";
 const string2 = String("Hola");

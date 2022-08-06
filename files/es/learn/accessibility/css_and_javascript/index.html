@@ -271,16 +271,16 @@ function validate(e) {
 <p>Para cada entrada sin un valor completado cuando se envía el formulario, creamos un elemento de lista con un enlace y lo insertamos en <code>errorList</code>.</p>
 
 <pre class="brush: js notranslate">function createLink(testItem) {
-  const listItem = document.createElement('li');
-  const anchor = document.createElement('a');
+  const listItem = document.createElement('li');
+  const anchor = document.createElement('a');
 
-  anchor.textContent = 'El campo ' + testItem.input.name + ' está vacío. Entra tu ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
-    testItem.input.focus();
-  };
-  listItem.appendChild(anchor);
-  errorList.appendChild(listItem);
+  anchor.textContent = 'El campo ' + testItem.input.name + ' está vacío. Entra tu ' + testItem.input.name + '.';
+  anchor.href = '#' + testItem.input.name;
+  anchor.onclick = function() {
+    testItem.input.focus();
+  };
+  listItem.appendChild(anchor);
+  errorList.appendChild(listItem);
 }</pre>
 
 <p>Cada enlace tiene un doble propósito: te dice cuál es el error, y además puedes hacer clic en él / activarlo para ir directamente al elemento de entrada en cuestión y corregir la entrada.</p>

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong><font face="Open Sans, arial, sans-serif">Конструктор </font>Async</strong></code><strong><code>Function</code> </strong>создаёт новый объект {{jsxref("Statements/async_function", "async function")}}. В JavaScript любая асинхронная функция фактически является объектом AsyncFunction.</p>
+<p><code><strong><font face="Open Sans, arial, sans-serif">Конструктор </font>Async</strong></code><strong><code>Function</code> </strong>создаёт новый объект {{jsxref("Statements/async_function", "async function")}}. В JavaScript любая асинхронная функция фактически является объектом AsyncFunction.</p>
 
 <p>Обратите внимание, что AsyncFunction не является глобальным объектом. Её можно получить, выполнив следующий код.</p>
 
@@ -20,22 +20,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
- <dd>Имена, используемые функцией как формальные имена аргументов. Каждое имя должно быть строкой, которая соответствует действительному идентификатору JavaScript или списку таких строк, разделённых запятой; например, "<code>x</code>", "<code>theValue</code>", или "<code>a,b</code>". </dd>
+ <dd>Имена, используемые функцией как формальные имена аргументов. Каждое имя должно быть строкой, которая соответствует действительному идентификатору JavaScript или списку таких строк, разделённых запятой; например, "<code>x</code>", "<code>theValue</code>", или "<code>a,b</code>". </dd>
  <dt><code>functionBody</code></dt>
- <dd>Строка, содержащая в себе определение функции в исходном коде JavaScript .</dd>
+ <dd>Строка, содержащая в себе определение функции в исходном коде JavaScript .</dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Объекты {{jsxref("Statements/async_function", "async function")}}, созданные с помощью AsyncFunction constructor  будут распарсены в момент, когда функция создаётся. Это менее эффективно, чем объявлять асинхронную функцию с помощью {{jsxref("Statements/async_function", "async function expression")}} и вызывать её внутри вашего кода, поскольку такие функции анализируются с остальной частью кода.</p>
+<p>Объекты {{jsxref("Statements/async_function", "async function")}}, созданные с помощью AsyncFunction constructor  будут распарсены в момент, когда функция создаётся. Это менее эффективно, чем объявлять асинхронную функцию с помощью {{jsxref("Statements/async_function", "async function expression")}} и вызывать её внутри вашего кода, поскольку такие функции анализируются с остальной частью кода.</p>
 
 <p>Все аргументы, переданные функции, рассматриваются как имена идентификаторов параметров в создаваемой функции в том порядке, в котором они передаются.</p>
 
 <div class="note">
-<p><strong>Обратите внимание:</strong> объекты {{jsxref("Statements/async_function", "async functions")}} созданные с помощью AsyncFunction constructor , не создают замыкания на создающие их контексты; Они всегда создаются в глобальной области видимости. При их запуске они смогут получить доступ только к своим локальным переменным и к глобальным переменным, но не имеют доступа к тем областям видимости, в которых был вызван AsyncFunction constructor. Это отличается от использования {{jsxref("Global_Objects/eval", "eval")}} с кодом для async function. </p>
+<p><strong>Обратите внимание:</strong> объекты {{jsxref("Statements/async_function", "async functions")}} созданные с помощью AsyncFunction constructor , не создают замыкания на создающие их контексты; Они всегда создаются в глобальной области видимости. При их запуске они смогут получить доступ только к своим локальным переменным и к глобальным переменным, но не имеют доступа к тем областям видимости, в которых был вызван AsyncFunction constructor. Это отличается от использования {{jsxref("Global_Objects/eval", "eval")}} с кодом для async function. </p>
 </div>
 
-<p>Вызов AsyncFunction constructor как функции (без использования оператора new ) имеет тот же эффект, что и вызов его как конструктора.</p>
+<p>Вызов AsyncFunction constructor как функции (без использования оператора new ) имеет тот же эффект, что и вызов его как конструктора.</p>
 
 <h2 id="Свойства">Свойства</h2>
 
@@ -54,11 +54,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 
 <h2 id="Экземпляры_AsyncFunction"><code>Экземпляры AsyncFunction</code></h2>
 
-<p>Экземпляры <code>AsyncFunction</code> наследуют методы и свойства от {{jsxref("AsyncFunction.prototype")}}. Как и для всех конструкторов, вы можете изменить объект-прототип конструктора, чтобы внести изменения во все экземпляры <code>AsyncFunction</code>.</p>
+<p>Экземпляры <code>AsyncFunction</code> наследуют методы и свойства от {{jsxref("AsyncFunction.prototype")}}. Как и для всех конструкторов, вы можете изменить объект-прототип конструктора, чтобы внести изменения во все экземпляры <code>AsyncFunction</code>.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Создание_async_function_с_помощью_AsyncFunction_constructor">Создание async function с помощью <code>AsyncFunction</code> constructor</h3>
+<h3 id="Создание_async_function_с_помощью_AsyncFunction_constructor">Создание async function с помощью <code>AsyncFunction</code> constructor</h3>
 
 <pre class="brush: js">function resolveAfter2Seconds(x) {
   return new Promise(resolve =&gt; {

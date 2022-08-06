@@ -16,7 +16,7 @@ original_slug: Glossary/编译
 
 ### 基础知识
 
-- {{Interwiki("wikipedia", "Compiler")}} on Wikipedia
+- [Compiler](https://zh.wikipedia.org/wiki/Compiler) on Wikipedia
 - The [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
 
 ### 学习资料

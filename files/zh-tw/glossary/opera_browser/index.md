@@ -15,5 +15,5 @@ translation_of: Glossary/Opera_Browser
 
 ### 一般知識
 
-- 維基百科上的 {{Interwiki("wikipedia", "Opera Browser")}} 條目
-- [Opera ](http://www.opera.com/)瀏覽器官方網站
+- 維基百科上的 [Opera Browser](https://zh.wikipedia.org/wiki/Opera_Browser) 條目
+- [Opera ](http://www.opera.com/)瀏覽器官方網站

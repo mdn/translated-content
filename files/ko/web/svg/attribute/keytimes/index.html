@@ -5,13 +5,13 @@ translation_of: Web/SVG/Attribute/keyTimes
 ---
 <p>« <a href="/en-US/docs/Web/SVG/Attribute" title="en-US/docs/Web/SVG/Attribute">SVG Attribute reference home</a></p>
 
-<p><code>keyTimes</code> 속성은 애니메이션의 pacing을 제어하는 데 사용되는 세미콜론으로 구분 된 시간 값 목록입니다. 목록의 각 시간은 {{ SVGAttr("values") }} 속성 목록의 값에 해당하며 애니메이션에서 값이 사용되는 시기를 정의합니다. <code>keyTimes</code> 목록의 각 시간 값은 0과 1 사이의 부동 소수점 값으로 지정되며 애니메이션 요소의 지속 시간에 대한 비례 오프셋을 나타냅니다. </p>
+<p><code>keyTimes</code> 속성은 애니메이션의 pacing을 제어하는 데 사용되는 세미콜론으로 구분 된 시간 값 목록입니다. 목록의 각 시간은 {{ SVGAttr("values") }} 속성 목록의 값에 해당하며 애니메이션에서 값이 사용되는 시기를 정의합니다. <code>keyTimes</code> 목록의 각 시간 값은 0과 1 사이의 부동 소수점 값으로 지정되며 애니메이션 요소의 지속 시간에 대한 비례 오프셋을 나타냅니다. </p>
 
-<p>만약 <code>keyTimes</code> 목록이 지정될 경우,  {{ SVGAttr("values") }} 목록에서와 같이 <code>keyTimes</code> 목록에 있는 값과 정확하게 일치해야합니다.</p>
+<p>만약 <code>keyTimes</code> 목록이 지정될 경우,  {{ SVGAttr("values") }} 목록에서와 같이 <code>keyTimes</code> 목록에 있는 값과 정확하게 일치해야합니다.</p>
 
 <p>각 연속적인 시간 값은 이전 시간 값보다 크거나 같아야 합니다.</p>
 
-<p><code>keyTimes</code> 목록의 semantics는 interpolation 모드에 따라 다릅니다.</p>
+<p><code>keyTimes</code> 목록의 semantics는 interpolation 모드에 따라 다릅니다.</p>
 
 <ul>
  <li>For linear and spline animation, the first time value in the list must be 0, and the last time value in the list must be 1. The key time associated with each value defines when the value is set; values are interpolated between the key times.</li>

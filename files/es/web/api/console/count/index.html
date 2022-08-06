@@ -9,9 +9,9 @@ translation_of: Web/API/Console/count
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>Si la <code>etiqueta</code> es colocada, esta funcion muestra el numeros de veces que <code>count()</code> ha sido utilizada con la misma etiqueta.</p>
+<p>Si la <code>etiqueta</code> es colocada, esta funcion muestra el numeros de veces que <code>count()</code> ha sido utilizada con la misma etiqueta.</p>
 
-<p>Si la <code>etiqueta</code> es omitida, la funcion registra el numero de veces  que  <code>count()</code> fue llamada en esta línea en particular.</p>
+<p>Si la <code>etiqueta</code> es omitida, la funcion registra el numero de veces  que  <code>count()</code> fue llamada en esta línea en particular.</p>
 
 <p>Por ejemplo, en este código:</p>
 
@@ -39,7 +39,7 @@ console.count();</pre>
 
 <p>Note que al final de la linea de la salida: La llamada separada <code>count()</code> en la linea 11 es tratada como un evento independiente.</p>
 
-<p>Si pasamos la variable <code>user</code> como <code>etiqueta</code>  en la primera llamada a <code>count()</code>  y  la cadena "alice" en la segunda llamada:</p>
+<p>Si pasamos la variable <code>user</code> como <code>etiqueta</code>  en la primera llamada a <code>count()</code>  y  la cadena "alice" en la segunda llamada:</p>
 
 <pre class="brush: js">var user = "";
 
@@ -62,7 +62,7 @@ console.count("alice");</pre>
 "alice: 2"
 "alice: 3"</pre>
 
-<p>Ahora tenemos diferentes contadores según el valor de la <code>etiqueta</code>.  Al coincidir la etiqueta "alice" en la línea 11 con el valor de <code>user</code> dos veces, no se considera un evento independiente.</p>
+<p>Ahora tenemos diferentes contadores según el valor de la <code>etiqueta</code>.  Al coincidir la etiqueta "alice" en la línea 11 con el valor de <code>user</code> dos veces, no se considera un evento independiente.</p>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 

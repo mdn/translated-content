@@ -17,4 +17,4 @@ Les pare-feu peuvent être un simple composant logiciel ou se présenter sous la
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Pare-feu (informatique)")}} sur Wikipédia
+- [Pare-feu (informatique)](https://fr.wikipedia.org/wiki/Pare-feu_(informatique)) sur Wikipédia

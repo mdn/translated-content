@@ -126,9 +126,9 @@ translation_of: Web/Media/Formats/Image_types
 
 <h3 id="APNG_Animated_Portable_Network_Graphics"><a id="APNG" name="APNG">APNG</a> (Animated Portable Network Graphics)</h3>
 
-<p>APNG is a file format first introduced by Mozilla which extends the <a href="#png_portable_network_graphics">PNG</a> standard to add support for animated images. Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of {{interwiki("wikipedia", "color depth", "color depths")}}, whereas animated GIF supports only 8-bit {{interwiki("wikipedia", "indexed color")}}.</p>
+<p>APNG is a file format first introduced by Mozilla which extends the <a href="#png_portable_network_graphics">PNG</a> standard to add support for animated images. Conceptually similar to the animated GIF format which has been in use for decades, APNG is more capable in that it supports a variety of <a href="https://zh.wikipedia.org/wiki/color_depth">color depths</a>, whereas animated GIF supports only 8-bit <a href="https://zh.wikipedia.org/wiki/indexed_color">indexed color</a>.</p>
 
-<p>APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity {{interwiki("wikipedia", "throbber", "throbbers")}}, and other animated sequences. For example, APNG is <a href="https://developer.apple.com/stickers/">one of the formats supported when creating animated stickers</a> for Apple's iMessage application (and the Messages application on iOS). They're also commonly used for the animated portions of web browsers' user interfaces.</p>
+<p>APNG is ideal for basic animations that do not need to synchronize to other activities or to a sound track, such as progress indicators, activity <a href="https://zh.wikipedia.org/wiki/throbber">throbbers</a>, and other animated sequences. For example, APNG is <a href="https://developer.apple.com/stickers/">one of the formats supported when creating animated stickers</a> for Apple's iMessage application (and the Messages application on iOS). They're also commonly used for the animated portions of web browsers' user interfaces.</p>
 
 <table class="standard-table">
  <tbody>
@@ -294,9 +294,9 @@ translation_of: Web/Media/Formats/Image_types
 
 <h3 id="GIF_Graphics_Interchange_Format"><a id="GIF" name="GIF">GIF</a> (Graphics Interchange Format)</h3>
 
-<p>In 1987, the CompuServe online service provider introduced the <strong>{{interwiki("wikipedia", "GIF")}}</strong> (<strong>Graphics Interchange Format</strong>) image file format to provide a compressed graphics format that all members of their service would be able to use. GIF uses the {{interwiki("wikipedia", "Lempel-Ziv-Welch")}} (LZW) algorithm to losslessly compress 8-bit indexed color graphics. GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with <a href="#xbm_x_window_system_bitmap_file">XBM</a>.</p>
+<p>In 1987, the CompuServe online service provider introduced the <strong><a href="https://zh.wikipedia.org/wiki/GIF">GIF</a></strong> (<strong>Graphics Interchange Format</strong>) image file format to provide a compressed graphics format that all members of their service would be able to use. GIF uses the <a href="https://zh.wikipedia.org/wiki/Lempel-Ziv-Welch">Lempel-Ziv-Welch</a> (LZW) algorithm to losslessly compress 8-bit indexed color graphics. GIF was one of the first two graphics formats supported by {{Glossary("HTML")}}, along with <a href="#xbm_x_window_system_bitmap_file">XBM</a>.</p>
 
-<p>Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries). To simulate more than 255 or 256 colors, {{interwiki("wikipedia", "dithering")}} is generally used. It is <a href="https://gif.ski/">technically possible</a> to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.</p>
+<p>Each pixel in a GIF is represented by a single 8-bit value serving as an index into a palette of 24-bit colors (8 bits each of red, green, and blue). The length of a color table is always a power of 2 (that is, each palette has 2, 4, 8, 16, 32, 64, or 256 entries). To simulate more than 255 or 256 colors, <a href="https://zh.wikipedia.org/wiki/dithering">dithering</a> is generally used. It is <a href="https://gif.ski/">technically possible</a> to tile multiple image blocks, each with its own color palette, to create truecolor images, but in practice this is rarely done.</p>
 
 <p>Pixels are opaque, unless a specific color index is designated as transparent, in which case pixels colored that value are entirely transparent.</p>
 
@@ -304,7 +304,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <p>GIF has been extremely popular for decades, due to its simplicity and compatibility. Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.</p>
 
-<p>Another popular feature of GIF is support for {{interwiki("wikipedia", "Interlacing_(bitmaps)", "interlacing")}}, where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality. This is particularly useful when network connections are slow.</p>
+<p>Another popular feature of GIF is support for <a href="https://zh.wikipedia.org/wiki/Interlacing_(bitmaps)">interlacing</a>, where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality. This is particularly useful when network connections are slow.</p>
 
 <p>GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering. Typically, modern content should use <a href="#png_portable_network_graphics">PNG</a> for lossless <em>and</em> indexed still images, and should consider using <a href="#apng_animated_portable_network_graphics">APNG</a> for lossless animation sequences.</p>
 
@@ -573,7 +573,7 @@ translation_of: Web/Media/Formats/Image_types
   </tr>
   <tr>
    <th scope="row">压缩</th>
-   <td>Lossy; based on the {{interwiki("wikipedia", "discrete cosine transform")}}</td>
+   <td>Lossy; based on the <a href="https://zh.wikipedia.org/wiki/discrete_cosine_transform">discrete cosine transform</a></td>
   </tr>
   <tr>
    <th scope="row">授权</th>
@@ -727,7 +727,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <h3 id="SVG_Scalable_Vector_Graphics"><a id="SVG" name="SVG">SVG</a> (Scalable Vector Graphics)</h3>
 
-<p>SVG is an <a href="/zh-CN/docs/Glossary/XML">XML</a>-based {{interwiki("wikipedia", "vector graphics")}} format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth. SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size. As such, SVG is popular for user interface elements in modern Web design.</p>
+<p>SVG is an <a href="/zh-CN/docs/Glossary/XML">XML</a>-based <a href="https://zh.wikipedia.org/wiki/vector_graphics">vector graphics</a> format that specifies the contents of an image as a set of drawing commands that create shapes, lines, apply colors, filters, and so forth. SVG files are ideal for diagrams, icons, and other images which can be accurately drawn at any size. As such, SVG is popular for user interface elements in modern Web design.</p>
 
 <p>SVG files are text files containing source code that, when interpreted, draws the desired image. For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:</p>
 
@@ -819,7 +819,7 @@ translation_of: Web/Media/Formats/Image_types
 
 <h3 id="TIFF_Tagged_Image_File_Format"><a id="TIFF" name="TIFF">TIFF</a> (Tagged Image File Format)</h3>
 
-<p>{{interwiki("wikipedia", "TIFF")}} is a raster graphics file format which was created to store scanned photos, although it can be any kind of image. It is a somewhat "heavy" format, in that TIFF files have a tendency to be larger than images in other formats. This is because of the metadata often included, as well as the fact that most TIFF images are either uncompressed or use compression algorithms that still leave fairly large files after compression.</p>
+<p><a href="https://zh.wikipedia.org/wiki/TIFF">TIFF</a> is a raster graphics file format which was created to store scanned photos, although it can be any kind of image. It is a somewhat "heavy" format, in that TIFF files have a tendency to be larger than images in other formats. This is because of the metadata often included, as well as the fact that most TIFF images are either uncompressed or use compression algorithms that still leave fairly large files after compression.</p>
 
 <p>TIFF supports a variety of compression methods, but the most commonly used are the CCITT Group 4 (and, for older fax systems, Group 3) compression systems used for by fax software, as well as LZW and lossy JPEG compression.</p>
 

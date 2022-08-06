@@ -25,7 +25,7 @@ translation_of: Web/API/Web_Authentication_API
 <p>In order to understand how the create() and get() methods fit into the bigger picture, it is important to understand that they sit between two components that are outside the browser:</p>
 
 <ol>
- <li><strong>Server</strong> - the Web Authentication API is intended to register new credentials on a server (also referred to as a service or a <a href="https://en.wikipedia.org/wiki/Relying_party">relying party</a>) and later use those same credentials on that same server to authenticate a user.</li>
+ <li><strong>Server</strong> - the Web Authentication API is intended to register new credentials on a server (also referred to as a service or a <a href="https://en.wikipedia.org/wiki/Relying_party">relying party</a>) and later use those same credentials on that same server to authenticate a user.</li>
  <li><strong>Authenticator</strong> - the credentials are created and stored in a device called an authenticator. This is a new concept in authentication: when authenticating using passwords, the password is stored in a user's brain and no other device is needed; when authenticating using web authentication, the password is replaced with a key pair that is stored in an authenticator. The authenticator may be embedded into an operating system, such as Windows Hello, or may be a physical token, such as a USB or Bluetooth Security Key.</li>
 </ol>
 
@@ -82,18 +82,18 @@ translation_of: Web/API/Web_Authentication_API
 <h2 id="Интерфейсы">Интерфейсы</h2>
 
 <dl>
- <dt>{{domxref("Credential")}} {{experimental_inline}}</dt>
- <dd>Provides information about an entity as a prerequisite to a trust decision.</dd>
+ <dt>{{domxref("Credential")}} {{experimental_inline}}</dt>
+ <dd>Provides information about an entity as a prerequisite to a trust decision.</dd>
  <dt>{{domxref("CredentialsContainer")}}</dt>
- <dd>Exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}. The Web Authentication specification adds a <code>publicKey</code> member to the {{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}} methods to either create a new public key pair or get an authentication for a key pair, repsectively.</dd>
+ <dd>Exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}. The Web Authentication specification adds a <code>publicKey</code> member to the {{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}} methods to either create a new public key pair or get an authentication for a key pair, repsectively.</dd>
  <dt>{{domxref("PublicKeyCredential")}}</dt>
- <dd>Provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password.</dd>
+ <dd>Provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password.</dd>
  <dt>{{domxref("AuthenticatorResponse")}}</dt>
- <dd>The base interface for {{domxref("AuthenticatorAttestationResponse")}} and {{domxref("AuthenticatorAssertionResponse")}}, which provide a cryptographic root of trust for a key pair. Returned by {{domxref('CredentialsContainer.create()')}} and {{domxref('CredentialsContainer.get()')}}, respectively, the child interfaces include information from the browser such as the challenge origin. Either may be returned from {{domxref("PublicKeyCredential.response")}}.</dd>
+ <dd>The base interface for {{domxref("AuthenticatorAttestationResponse")}} and {{domxref("AuthenticatorAssertionResponse")}}, which provide a cryptographic root of trust for a key pair. Returned by {{domxref('CredentialsContainer.create()')}} and {{domxref('CredentialsContainer.get()')}}, respectively, the child interfaces include information from the browser such as the challenge origin. Either may be returned from {{domxref("PublicKeyCredential.response")}}.</dd>
  <dt>{{domxref("AuthenticatorAttestationResponse")}}</dt>
- <dd>Returned by {{domxref('CredentialsContainer.create()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides a cryptographic root of trust for the new key pair that has been generated.</dd>
+ <dd>Returned by {{domxref('CredentialsContainer.create()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides a cryptographic root of trust for the new key pair that has been generated.</dd>
  <dt>{{domxref("AuthenticatorAssertionResponse")}}</dt>
- <dd>Returned by {{domxref('CredentialsContainer.get()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.</dd>
+ <dd>Returned by {{domxref('CredentialsContainer.get()')}} when a {{domxref('PublicKeyCredential')}} is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.</dd>
 </dl>
 
 <h2 id="Опции">Опции</h2>
@@ -108,7 +108,7 @@ translation_of: Web/API/Web_Authentication_API
 <h2 id="Примеры">Примеры</h2>
 
 <div class="blockIndicator warning">
-<p> В целях безопасности вызовы Web Authentication API ({{domxref('CredentialsContainer.create','create()')}} и {{domxref('CredentialsContainer.get','get()')}}) отменяются, если браузер теряет фокус до завершения вызова.</p>
+<p> В целях безопасности вызовы Web Authentication API ({{domxref('CredentialsContainer.create','create()')}} и {{domxref('CredentialsContainer.get','get()')}}) отменяются, если браузер теряет фокус до завершения вызова.</p>
 </div>
 
 <pre class="brush: js">// sample arguments for registration

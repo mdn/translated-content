@@ -5,20 +5,20 @@ translation_of: Web/API/Element/mouseenter_event
 ---
 <div>{{APIRef}}</div>
 
-<p>O evento <code>mouseenter</code> é disparado quando um dispositivo de apontamento (geralmente um mouse) se move sobre um elemento (para dentro do mesmo).</p>
+<p>O evento <code>mouseenter</code> é disparado quando um dispositivo de apontamento (geralmente um mouse) se move sobre um elemento (para dentro do mesmo).</p>
 
-<p>Similar ao {{event('mouseover')}}, ele se diferencia no fato de que não ocorre a fase <a href="/en-US/docs/Web/API/Event/bubbles">bubble</a> e não é disparado quando o cursor / apontador mover-se do espaço físico de um de seus descendentes para o seu próprio espaço físico.</p>
+<p>Similar ao {{event('mouseover')}}, ele se diferencia no fato de que não ocorre a fase <a href="/en-US/docs/Web/API/Event/bubbles">bubble</a> e não é disparado quando o cursor / apontador mover-se do espaço físico de um de seus descendentes para o seu próprio espaço físico.</p>
 
 <div style="-moz-column-width: 455px; -webkit-column-width: 455px; column-width: 455px; border: solid 1px; padding: 5px; margin-bottom: 10px;">
 <div style="text-align: center;"><img alt="mouseenter.png" class="default internal" src="/@api/deki/files/5908/=mouseenter.png"></div>
-Um evento <code>mouseenter</code> é enviado para cada elemento da hierarquia ao entrar neles. Aqui 4 eventos são enviados aos quatro elementos da hierarquia quando o cursor / apontador chega no Text.
+Um evento <code>mouseenter</code> é enviado para cada elemento da hierarquia ao entrar neles. Aqui 4 eventos são enviados aos quatro elementos da hierarquia quando o cursor / apontador chega no Text.
 
 <div style="text-align: center;"><img alt="mouseover.png" class="default internal" src="/@api/deki/files/5909/=mouseover.png"></div>
-Um único evento <code>mouseover</code> é enviado ao elemento de maior profundidade na árvore DOM, a partir do qual ocorre a fase bubble e o mesmo percorre subindo na hierarquia dos elementos  até que seja cancelado por um <em>handler</em> ou alcance a raíz da árvore.</div>
+Um único evento <code>mouseover</code> é enviado ao elemento de maior profundidade na árvore DOM, a partir do qual ocorre a fase bubble e o mesmo percorre subindo na hierarquia dos elementos  até que seja cancelado por um <em>handler</em> ou alcance a raíz da árvore.</div>
 
-<p>De acordo com a profundidade da hierarquia, a quantidade de eventos <code>mouseenter</code> disparados pode se tornar muito grande e causar problemas de performance significativos. Nestes casos é melhor escutar por eventos mouseover.</p>
+<p>De acordo com a profundidade da hierarquia, a quantidade de eventos <code>mouseenter</code> disparados pode se tornar muito grande e causar problemas de performance significativos. Nestes casos é melhor escutar por eventos mouseover.</p>
 
-<p>Combinado ao comportamento do seu evento simétrico, <code>mouseleave</code>, o evento DOM <code>mouseenter</code> age de modo bastante similar à pseudo-classe CSS {{cssxref(':hover')}}.</p>
+<p>Combinado ao comportamento do seu evento simétrico, <code>mouseleave</code>, o evento DOM <code>mouseenter</code> age de modo bastante similar à pseudo-classe CSS {{cssxref(':hover')}}.</p>
 
 <h2 id="Informações_Gerais">Informações Gerais</h2>
 

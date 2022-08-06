@@ -26,8 +26,8 @@ IE/Edge (≤15) 版の仕様には、`-ms` という接頭辞がついており�
 - {{cssxref("grid-template-rows")}} は `-ms-grid-rows`
 - {{cssxref("grid-row-start")}} は `-ms-grid-row`
 - {{cssxref("grid-column-start")}} は `-ms-grid-column`
-- {{cssxref("align-self")}} は `-ms-grid-row-align`
-- {{cssxref("justify-self")}} は `-ms-grid-column-align`
+- {{cssxref("align-self")}} は `-ms-grid-row-align`
+- {{cssxref("justify-self")}} は `-ms-grid-column-align`
 
 IE 版では、`-ms-grid-column-span` と `-ms-grid-row-span` の新しい仕様では必要のない追加のプロパティがあります。このバージョンには、自動配置機能や、グリッドのテンプレート領域は含まれていません。 IE10 から Edge 15 までは、`-ms` プロパティを使って、簡単なグリッドレイアウトを実装することができます。これらのプロパティはベンダーの接頭辞であるため、接頭辞なしの最新の仕様に対応しているブラウザーには影響しません。
 
@@ -327,20 +327,20 @@ img {
 <div class="wrapper">
     <ul>
         <li class="card">
-            <h2>One</h2>
+            <h2>One</h2>
             <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
+        </li>
         <li class="card">
-            <h2>Two</h2>
+            <h2>Two</h2>
             <p>CSS グリッドを使って古い方法を上書きできます。</p>
             <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card">
-            <h2>Three</h2>
+        </li>
+        <li class="card">
+            <h2>Three</h2>
             <p>CSS グリッドを使って古い方法を上書きできます。</p>
-        </li>
-        <li class="card">
-            <h2>Four</h2>
+        </li>
+        <li class="card">
+            <h2>Four</h2>
             <p>CSS グリッドを使って古い方法を上書きできます。</p>
         </li>
         <li class="card">

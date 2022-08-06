@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 
 <h2 id="Summary">Сводка</h2>
 
-<p><strong style="line-height: 1.5;">Символ (анг. Symbol)</strong><span style="line-height: 1.5;"> — это уникальный и неизменяемый тип данных, который может быть использован как идентификатор для свойств объектов. </span><em>Символьный объект (анг. symbol object) </em>— это объект-обёртка (англ. wrapper) для <span style="line-height: 1.5;">{{Glossary("Primitive", "примитивного")}} символьного типа.</span></p>
+<p><strong style="line-height: 1.5;">Символ (анг. Symbol)</strong><span style="line-height: 1.5;"> — это уникальный и неизменяемый тип данных, который может быть использован как идентификатор для свойств объектов. </span><em>Символьный объект (анг. symbol object) </em>— это объект-обёртка (англ. wrapper) для <span style="line-height: 1.5;">{{Glossary("Primitive", "примитивного")}} символьного типа.</span></p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -28,14 +28,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 
 <h2 id="Description">Описание</h2>
 
-<p>Чтобы создать новый символьный примитив, достаточно написать <code>Symbol()</code>, указав по желанию строку в качестве описания этого символа:</p>
+<p>Чтобы создать новый символьный примитив, достаточно написать <code>Symbol()</code>, указав по желанию строку в качестве описания этого символа:</p>
 
 <pre class="brush: js">var sym1 = Symbol();
 var sym2 = Symbol("foo");
 var sym3 = Symbol("foo");
 </pre>
 
-<p>Код выше создаёт три новых символа. Заметьте, что <code>Symbol("foo")</code> не выполняет приведение (англ. coercion) строки "foo" к символу. Это выражение создаёт каждый раз новый символ:</p>
+<p>Код выше создаёт три новых символа. Заметьте, что <code>Symbol("foo")</code> не выполняет приведение (англ. coercion) строки "foo" к символу. Это выражение создаёт каждый раз новый символ:</p>
 
 <pre class="brush: js">Symbol("foo") === Symbol("foo"); // false</pre>
 
@@ -43,7 +43,7 @@ var sym3 = Symbol("foo");
 
 <pre class="brush: js">var sym = new Symbol(); // TypeError</pre>
 
-<p>Это удерживает разработчиков от создания явного объекта-обёртки <code>Symbol </code>вместо нового символьного значения. Создание явных объектов-обёрток для примитивных типов доступно (например, <code>new Boolean</code>, <code>new String</code>, <code>new Number</code>).</p>
+<p>Это удерживает разработчиков от создания явного объекта-обёртки <code>Symbol </code>вместо нового символьного значения. Создание явных объектов-обёрток для примитивных типов доступно (например, <code>new Boolean</code>, <code>new String</code>, <code>new Number</code>).</p>
 
 <p>Если вам действительно необходимо обернуть символ в объект, вы можете использовать функцию <code>Object()</code>:</p>
 
@@ -55,7 +55,7 @@ typeof symObj;  // "object"
 
 <h3 id="Разделяемые_символы_в_глобальном_символьном_реестре">Разделяемые символы в глобальном символьном реестре</h3>
 
-<p>Приведённый выше синтаксис, использующий функцию <code>Symbol(),</code> не создаст глобальный символ, который был бы доступен в любом месте вашего кода. Для создания символов, доступных во всех файлах и в окружении (глобальной области), используйте методы {{jsxref("Symbol.for()")}} и {{jsxref("Symbol.keyFor()")}}, чтобы задать или получить символ из глобального символьного реестра.</p>
+<p>Приведённый выше синтаксис, использующий функцию <code>Symbol(),</code> не создаст глобальный символ, который был бы доступен в любом месте вашего кода. Для создания символов, доступных во всех файлах и в окружении (глобальной области), используйте методы {{jsxref("Symbol.for()")}} и {{jsxref("Symbol.keyFor()")}}, чтобы задать или получить символ из глобального символьного реестра.</p>
 
 <h3 id="Поиск_символьных_свойств_у_объектов">Поиск символьных свойств у объектов</h3>
 
@@ -67,7 +67,7 @@ typeof symObj;  // "object"
  <dt><code>Symbol.length</code></dt>
  <dd>Содержит длину, всегда равную 0 (нулю).</dd>
  <dt>{{jsxref("Symbol.prototype")}}</dt>
- <dd>Содержит прототип конструктора <code>Symbol</code>.</dd>
+ <dd>Содержит прототип конструктора <code>Symbol</code>.</dd>
 </dl>
 
 <h3 id="Известные_символы">Известные символы</h3>
@@ -84,13 +84,13 @@ typeof symObj;  // "object"
  <h4 id="Символы_регулярных_выражений">Символы регулярных выражений</h4>
  </dt>
  <dt>{{jsxref("Symbol.match")}}</dt>
- <dd>Метод для сопоставления объекта со строкой, также используемый для определения возможности объекта выступать в качестве регулярного выражения. Используется функцией {{jsxref("String.prototype.match()")}}.</dd>
+ <dd>Метод для сопоставления объекта со строкой, также используемый для определения возможности объекта выступать в качестве регулярного выражения. Используется функцией {{jsxref("String.prototype.match()")}}.</dd>
  <dt>{{jsxref("Symbol.replace")}}</dt>
- <dd>Метод, заменяющий совпавшие подстроки в строке. Используется функцией {{jsxref("String.prototype.replace()")}}.</dd>
+ <dd>Метод, заменяющий совпавшие подстроки в строке. Используется функцией {{jsxref("String.prototype.replace()")}}.</dd>
  <dt>{{jsxref("Symbol.search")}}</dt>
- <dd>Метод, возвращающий индекс вхождения подстроки, соответствующей регулярному выражению. Используется функцией {{jsxref("String.prototype.search()")}}.</dd>
+ <dd>Метод, возвращающий индекс вхождения подстроки, соответствующей регулярному выражению. Используется функцией {{jsxref("String.prototype.search()")}}.</dd>
  <dt>{{jsxref("Symbol.split")}}</dt>
- <dd>Метод, разбивающий строку на части в местах, соответствующих регулярному выражению. Используется функцией {{jsxref("String.prototype.split()")}}. </dd>
+ <dd>Метод, разбивающий строку на части в местах, соответствующих регулярному выражению. Используется функцией {{jsxref("String.prototype.split()")}}. </dd>
  <dt>
  <h4 id="Другие_символы">Другие символы</h4>
  </dt>
@@ -117,7 +117,7 @@ typeof symObj;  // "object"
  <dd>Получает по разделяемому символу его ключ из глобального реестра символов.</dd>
 </dl>
 
-<h2 id="Boolean_instances"><code><span style="font-family: open sans,sans-serif; font-size: 2.14285714285714rem;">Прототип </span>Symbol</code></h2>
+<h2 id="Boolean_instances"><code><span style="font-family: open sans,sans-serif; font-size: 2.14285714285714rem;">Прототип </span>Symbol</code></h2>
 
 <p>Все символы наследуют от {{jsxref("Symbol.prototype")}}.</p>
 
@@ -145,13 +145,13 @@ typeof Symbol.iterator === 'symbol'
 <p>Следующее необходимо помнить при преобразовании типа символов.</p>
 
 <ul>
- <li>При попытке конвертировать символ в число, будет брошено исключение {{jsxref("TypeError")}} (напр., <code>+sym</code> или <code>sym | 0</code>).</li>
- <li>Результатом нестрогого сравнения, <code>Object(sym) == sym</code>, будет <code>true.</code></li>
+ <li>При попытке конвертировать символ в число, будет брошено исключение {{jsxref("TypeError")}} (напр., <code>+sym</code> или <code>sym | 0</code>).</li>
+ <li>Результатом нестрогого сравнения, <code>Object(sym) == sym</code>, будет <code>true.</code></li>
  <li><code>Symbol("foo") + "bar" </code>бросает исключение {{jsxref("TypeError")}} (невозможно преобразовать символ в строку). Это удерживает разработчика от, к примеру, случайного создания строгого поля у объекта из символа.</li>
- <li>Более  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"безопасный" вызов <code>String(sym)</code></a> работает с символами как вызов {{jsxref("Symbol.prototype.toString()")}}. Заметьте, что в то же время <code>new String(sym)</code> бросит исключение.</li>
+ <li>Более  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"безопасный" вызов <code>String(sym)</code></a> работает с символами как вызов {{jsxref("Symbol.prototype.toString()")}}. Заметьте, что в то же время <code>new String(sym)</code> бросит исключение.</li>
 </ul>
 
-<h3 id="Символы_и_конструкция_for...in">Символы и конструкция <code>for...in</code></h3>
+<h3 id="Символы_и_конструкция_for...in">Символы и конструкция <code>for...in</code></h3>
 
 <p>Символы не перечисляются при итерации {{jsxref("Statements/for...in","for...in")}}. В дополнение к этому, {{jsxref("Object.getOwnPropertyNames()")}} не вернёт символьные свойства объекта. Тем не менее, их можно получить с помощью {{jsxref("Object.getOwnPropertySymbols()")}}.</p>
 
@@ -166,9 +166,9 @@ for (var i in obj) {
    console.log(i); // выведет "c" и "d"
 }</pre>
 
-<h3 id="Символы_и_JSON.stringify">Символы и <code>JSON.stringify()</code></h3>
+<h3 id="Символы_и_JSON.stringify">Символы и <code>JSON.stringify()</code></h3>
 
-<p><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">JSON.stringify()</span> игнорирует свойства с ключами <code>Symbol</code>:</p>
+<p><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">JSON.stringify()</span> игнорирует свойства с ключами <code>Symbol</code>:</p>
 
 <pre class="brush: js">JSON.stringify({[Symbol("foo")]: "foo"});
 // '{}'</pre>
@@ -198,6 +198,6 @@ obj[Object(sym)];    // снова 1
 <ul>
  <li><a href="/ru/docs/Glossary/Symbol">Глоссарий: Символьный тип данных</a></li>
  <li>{{jsxref("Operators/typeof", "typeof")}}</li>
- <li><a href="/ru/docs/Web/JavaScript/Data_structures">Типы и структуры данных JavaScript</a></li>
+ <li><a href="/ru/docs/Web/JavaScript/Data_structures">Типы и структуры данных JavaScript</a></li>
  <li><a href="https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/">"ES6 In Depth: Symbols" on hacks.mozilla.org</a></li>
 </ul>

@@ -16,4 +16,4 @@ original_slug: Glossary/抽象编程
 
 ### 基础知识
 
-- 维基百科相应条目{{interwiki("wikipedia", "Abstraction (computer science)", "Abstraction")}}
+- 维基百科相应条目[Abstraction](https://zh.wikipedia.org/wiki/Abstraction_(computer_science))

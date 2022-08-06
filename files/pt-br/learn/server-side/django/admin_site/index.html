@@ -22,7 +22,7 @@ translation_of: Learn/Server-side/Django/Admin_site
  <tbody>
   <tr>
    <th scope="row">Pré-requisitos:</th>
-   <td>Primeiro complete: <a href="/en-US/docs/Learn/Server-side/Django/Models">Tutorial Django Parte 3: Usando modelos</a>.</td>
+   <td>Primeiro complete: <a href="/en-US/docs/Learn/Server-side/Django/Models">Tutorial Django Parte 3: Usando modelos</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -48,7 +48,7 @@ translation_of: Learn/Server-side/Django/Admin_site
 # Register your models here.
 </pre>
 
-<p>Registre os modelos copiando o seguinte texto na parte inferior do arquivo. Este código simplesmente importa os modelos e, em seguida, chama <code>admin.site.register</code> para registrar cada um deles.</p>
+<p>Registre os modelos copiando o seguinte texto na parte inferior do arquivo. Este código simplesmente importa os modelos e, em seguida, chama <code>admin.site.register</code> para registrar cada um deles.</p>
 
 <pre class="brush: python notranslate">from catalog.models import Author, Genre, Book, BookInstance
 
@@ -64,7 +64,7 @@ admin.site.register(BookInstance)
 
 <h2 id="Criando_um_super_usuário">Criando um super usuário</h2>
 
-<p>Para fazer login no site de administração, precisamos de uma conta de usuário com o status da equipe ativado. Para visualizar e criar registros, também precisamos que esse usuário tenha permissões para gerenciar todos os nossos objetos. Você pode criar uma conta "superusuário" que tenha acesso total ao site e todas as permissões necessárias usando <strong>manage.py</strong>.</p>
+<p>Para fazer login no site de administração, precisamos de uma conta de usuário com o status da equipe ativado. Para visualizar e criar registros, também precisamos que esse usuário tenha permissões para gerenciar todos os nossos objetos. Você pode criar uma conta "superusuário" que tenha acesso total ao site e todas as permissões necessárias usando <strong>manage.py</strong>.</p>
 
 <p>Chame o seguinte comando, no mesmo diretório que manage.py, para criar o superusuário. Você será solicitado a digitar um nome de usuário, endereço de e-mail e senha forte.</p>
 
@@ -79,7 +79,7 @@ admin.site.register(BookInstance)
 
 <h2 id="Fazendo_o_login_e_usando_o_site">Fazendo o login e usando o site</h2>
 
-<p>Para fazer login no site, abra o URL /<em>admin</em> (e.g. <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin</a>) e insira suas novas credenciais de usuário e senha de superusuário (você será redirecionado para a página de login e, em seguida, de volta para o URL /<em>admin </em>depois de inserir seus detalhes).</p>
+<p>Para fazer login no site, abra o URL /<em>admin</em> (e.g. <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin</a>) e insira suas novas credenciais de usuário e senha de superusuário (você será redirecionado para a página de login e, em seguida, de volta para o URL /<em>admin </em>depois de inserir seus detalhes).</p>
 
 <p>Esta parte do site exibe todos os nossos modelos, agrupados por aplicativo instalado. Você pode clicar no nome de um modelo para ir a uma tela que lista todos os seus registros associados e clicar nos registros para editá-los. Você também pode clicar diretamente no link Adicionar ao lado de cada modelo para começar a criar um registro desse tipo.</p>
 
@@ -95,33 +95,33 @@ admin.site.register(BookInstance)
 <p>Observação: neste ponto, gostaríamos que você passasse algum tempo adicionando alguns livros, autores e gêneros (por exemplo, Fantasia) à sua inscrição. Certifique-se de que cada autor e gênero inclua alguns livros diferentes (isso tornará suas visualizações de lista e detalhes mais interessantes quando forem implementadas posteriormente na série de artigos).</p>
 </div>
 
-<p>Quando terminar de adicionar livros, clique no link <strong>Home</strong> no marcador superior para ser levado de volta à página principal do administrador. Então clique no link <strong>Books </strong> para exibir a lista atual de livros (ou em um dos outros links para ver outras listas de modelos). Agora que você adicionou alguns livros, a lista pode ser semelhante à captura de tela abaixo. O título de cada livro é exibido; este é o valor retornado no modelo do livro pelo método <code>__str__()</code> que especificamos no último artigo.</p>
+<p>Quando terminar de adicionar livros, clique no link <strong>Home</strong> no marcador superior para ser levado de volta à página principal do administrador. Então clique no link <strong>Books </strong> para exibir a lista atual de livros (ou em um dos outros links para ver outras listas de modelos). Agora que você adicionou alguns livros, a lista pode ser semelhante à captura de tela abaixo. O título de cada livro é exibido; este é o valor retornado no modelo do livro pelo método <code>__str__()</code> que especificamos no último artigo.</p>
 
 <p><img alt="Admin Site - List of book objects" src="https://mdn.mozillademos.org/files/13935/admin_book_list.png" style="border-style: solid; border-width: 1px; display: block; height: 407px; margin: 0px auto; width: 1000px;"></p>
 
-<p>Nessa lista, você pode excluir livros marcando a caixa de seleção ao lado do livro que não deseja, selecionando a ação excluir ... na lista suspensa Ação e pressionando o botão Ir. Você também pode adicionar novos livros pressionando o botão <strong>ADD BOOK</strong>. </p>
+<p>Nessa lista, você pode excluir livros marcando a caixa de seleção ao lado do livro que não deseja, selecionando a ação excluir ... na lista suspensa Ação e pressionando o botão Ir. Você também pode adicionar novos livros pressionando o botão <strong>ADD BOOK</strong>. </p>
 
-<p>Você pode editar um livro selecionando seu nome no link. A página de edição de um livro, mostrada abaixo, é quase idêntica à página "Adicionar". As principais diferenças são o título da página (Change book) e a adição de botões <strong>Delete</strong>, <strong>HISTORY</strong> e <strong>VIEW ON SITE</strong> (este último botão aparece porque definimos o método <code>get_absolute_url()</code> em nosso modelo).</p>
+<p>Você pode editar um livro selecionando seu nome no link. A página de edição de um livro, mostrada abaixo, é quase idêntica à página "Adicionar". As principais diferenças são o título da página (Change book) e a adição de botões <strong>Delete</strong>, <strong>HISTORY</strong> e <strong>VIEW ON SITE</strong> (este último botão aparece porque definimos o método <code>get_absolute_url()</code> em nosso modelo).</p>
 
 <p><img alt="Admin Site - Book Edit" src="https://mdn.mozillademos.org/files/13977/admin_book_modify.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
 
-<p>Agora navegue de volta para o <strong>Home</strong> page (usando o link Home, a trilha de navegação) e, em seguida, <strong>Author</strong> e listas de <strong>Genre</strong> — você já deve ter criado a partir de quando adicionou os novos livros, mas fique à vontade para adicionar um pouco mais.</p>
+<p>Agora navegue de volta para o <strong>Home</strong> page (usando o link Home, a trilha de navegação) e, em seguida, <strong>Author</strong> e listas de <strong>Genre</strong> — você já deve ter criado a partir de quando adicionou os novos livros, mas fique à vontade para adicionar um pouco mais.</p>
 
-<p>O que você não terá é qualquer instância do livro, porque elas não são criadas a partir de livros (embora você possa criar <code>Book</code> a partir de <code>BookInstance</code> — esta é a natureza da <code>ForeignKey</code> field). Navegue de volta para a<em> Página inicial</em> e pressione o botão <em>Adicionar</em> associado para exibir a tela <em>Adicionar instância</em> do livro abaixo. Observe o ID grande e globalmente exclusivo, que pode ser usado para identificar separadamente uma única cópia de um livro na biblioteca.</p>
+<p>O que você não terá é qualquer instância do livro, porque elas não são criadas a partir de livros (embora você possa criar <code>Book</code> a partir de <code>BookInstance</code> — esta é a natureza da <code>ForeignKey</code> field). Navegue de volta para a<em> Página inicial</em> e pressione o botão <em>Adicionar</em> associado para exibir a tela <em>Adicionar instância</em> do livro abaixo. Observe o ID grande e globalmente exclusivo, que pode ser usado para identificar separadamente uma única cópia de um livro na biblioteca.</p>
 
 <p><img alt="Admin Site - BookInstance Add" src="https://mdn.mozillademos.org/files/13981/admin_bookinstance_add.png" style="border-style: solid; border-width: 1px; display: block; height: 514px; margin: 0px auto; width: 863px;"></p>
 
 <p>Crie vários desses registros para cada um de seus livros. Defina o status como <em>Disponível</em> para pelo menos alguns registros e <em>Em empréstimo</em> para outros. Se o status <strong>não </strong>for <em>Disponível</em>, defina também uma <em>data de vencimento</em> futura.</p>
 
-<p>É isso aí! Agora você aprendeu como configurar e usar o site de administração. Você também criou registros para <code>Book</code>, <code>BookInstance</code>, <code>Genre</code>, e <code>Author</code> que poderemos usar assim que criarmos nossas próprias visualizações e modelos.</p>
+<p>É isso aí! Agora você aprendeu como configurar e usar o site de administração. Você também criou registros para <code>Book</code>, <code>BookInstance</code>, <code>Genre</code>, e <code>Author</code> que poderemos usar assim que criarmos nossas próprias visualizações e modelos.</p>
 
 <h2 id="Configuração_Avançada">Configuração Avançada</h2>
 
 <p>O Django faz um bom trabalho ao criar um site de administração básico usando as informações dos modelos registrados:</p>
 
 <ul>
- <li>Cada modelo possui uma lista de registros individuais, identificados pela string criada com o método <code>__str__()</code> do modelo, e vinculado a visualizações de views/forms para edição. Por padrão, essa exibição tem um menu de ação na parte superior que você pode usar para executar operações de exclusão em massa nos registros.</li>
- <li>Os formulários de registro de detalhes do modelo para edição e adição de registros contêm todos os campos do modelo, dispostos verticalmente em sua ordem de declaração.  </li>
+ <li>Cada modelo possui uma lista de registros individuais, identificados pela string criada com o método <code>__str__()</code> do modelo, e vinculado a visualizações de views/forms para edição. Por padrão, essa exibição tem um menu de ação na parte superior que você pode usar para executar operações de exclusão em massa nos registros.</li>
+ <li>Os formulários de registro de detalhes do modelo para edição e adição de registros contêm todos os campos do modelo, dispostos verticalmente em sua ordem de declaração.  </li>
 </ul>
 
 <p>Você pode personalizar ainda mais a interface para torná-la ainda mais fácil de usar. Algumas das coisas que você pode fazer são:</p>
@@ -144,17 +144,17 @@ admin.site.register(BookInstance)
 
 <p>In this section we're going to look at a few changes that will improve the interface for our <em>LocalLibrary</em>, including adding more information to <code>Book</code> and <code>Author</code> model lists, and improving the layout of their edit views. We won't change the <code>Language</code> and <code>Genre</code> model presentation because they only have one field each, so there is no real benefit in doing so!</p>
 
-<p>You can find a complete reference of all the admin site customisation choices in <a href="https://docs.djangoproject.com/en/2.0/ref/contrib/admin/">The Django Admin site</a> (Django Docs).</p>
+<p>You can find a complete reference of all the admin site customisation choices in <a href="https://docs.djangoproject.com/en/2.0/ref/contrib/admin/">The Django Admin site</a> (Django Docs).</p>
 
-<h3 id="Registrando_uma_classe_ModelAdmin">Registrando uma classe ModelAdmin</h3>
+<h3 id="Registrando_uma_classe_ModelAdmin">Registrando uma classe ModelAdmin</h3>
 
 <p>Para alterar como um modelo é exibido na interface de administração, você define uma classe ModelAdmin (que descreve o layout) e registra-o no modelo.</p>
 
-<p>Vamos começar com o <code>Author</code> model. Abra <strong>admin.py</strong> no aplicativo de catálogo (/locallibrary/catalog/admin.py). Comente o seu registro original (prefixo com um #) para o <code>Author</code> model:</p>
+<p>Vamos começar com o <code>Author</code> model. Abra <strong>admin.py</strong> no aplicativo de catálogo (/locallibrary/catalog/admin.py). Comente o seu registro original (prefixo com um #) para o <code>Author</code> model:</p>
 
 <pre class="brush: js notranslate"># admin.site.register(Author)</pre>
 
-<p>Agora adicione um novo <code>AuthorAdmin</code> e registre como mostrado abaixo.</p>
+<p>Agora adicione um novo <code>AuthorAdmin</code> e registre como mostrado abaixo.</p>
 
 <pre class="brush: python notranslate"># Define the admin class
 class AuthorAdmin(admin.ModelAdmin):
@@ -198,13 +198,13 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p><img alt="Admin Site - Improved Author List" src="https://mdn.mozillademos.org/files/14023/admin_improved_author_list.png" style="border-style: solid; border-width: 1px; display: block; height: 302px; margin: 0px auto; width: 941px;"></p>
 
-<p>Para o nosso <code>Book</code> model nós vamos adicionalmente exibir o <code>author</code> e <code>genre</code>. O <code>author</code> é uma variável <code>ForeignKey</code> (um-para-um) relacionamento, e assim será representado pelo valor <code>__str__()</code> para o registro associado. Substitua o <code>BookAdmin</code> class com a versão abaixo.</p>
+<p>Para o nosso <code>Book</code> model nós vamos adicionalmente exibir o <code>author</code> e <code>genre</code>. O <code>author</code> é uma variável <code>ForeignKey</code> (um-para-um) relacionamento, e assim será representado pelo valor <code>__str__()</code> para o registro associado. Substitua o <code>BookAdmin</code> class com a versão abaixo.</p>
 
 <pre class="brush: python notranslate">class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre')
 </pre>
 
-<p>Infelizmente não podemos especificar diretamente a variável  <font face="Consolas, Liberation Mono, Courier, monospace">genre </font>na <code>list_display</code> porque é um <code>ManyToManyField</code>(O Django evita isso porque há um grande "custo" de acesso ao banco de dados ao fazer isso). Em vez disso, vamos definir uma função <code>display_genre</code> para obter as informações como uma string (esta é a função que chamamos acima; vamos defini-lo abaixo).</p>
+<p>Infelizmente não podemos especificar diretamente a variável  <font face="Consolas, Liberation Mono, Courier, monospace">genre </font>na <code>list_display</code> porque é um <code>ManyToManyField</code>(O Django evita isso porque há um grande "custo" de acesso ao banco de dados ao fazer isso). Em vez disso, vamos definir uma função <code>display_genre</code> para obter as informações como uma string (esta é a função que chamamos acima; vamos defini-lo abaixo).</p>
 
 <div class="note">
 <p>Nota: Obtendo o <code>genre</code> pode não ser uma boa ideia aqui, por causa do "custo" da operação do banco de dados. Estamos mostrando como as funções de chamada em seus modelos podem ser muito úteis por outros motivos - por exemplo, para adicionar um link <em>Apagar </em>ao lado de cada item da lista.</p>
@@ -212,7 +212,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Adicione o seguinte código ao seu <code>Book</code> model (<strong>models.py</strong>). Isso cria uma string a partir dos três primeiros valores da variavel <code>genre</code> (se existirem) e cria um <code>short_description</code> que pode ser usado no site administrativo para esse método.</p>
 
-<pre class="brush: python notranslate">    def display_genre(self):
+<pre class="brush: python notranslate">    def display_genre(self):
         """Create a string for the Genre. This is required to display genre in Admin."""
         return ', '.join(genre.name for genre in self.genre.all()[:3])
 
@@ -231,7 +231,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <h3 id="Adicionando_list_filters">Adicionando list filters</h3>
 
-<p>Uma vez que você tenha muitos itens em uma lista, pode ser útil filtrar quais itens são exibidos. Isso é feito listando os campos no atributo <code>list_filter</code>. Substitua sua atual <code style="font-style: normal; font-weight: normal;">BookInstanceAdmin</code> class com o fragmento de código abaixo.</p>
+<p>Uma vez que você tenha muitos itens em uma lista, pode ser útil filtrar quais itens são exibidos. Isso é feito listando os campos no atributo <code>list_filter</code>. Substitua sua atual <code style="font-style: normal; font-weight: normal;">BookInstanceAdmin</code> class com o fragmento de código abaixo.</p>
 
 <pre class="brush: python notranslate">class BookInstanceAdmin(admin.ModelAdmin):
 <strong>    list_filter = ('status', 'due_back')</strong>
@@ -251,7 +251,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <h4 id="Controlando_quais_campos_são_exibidos">Controlando quais campos são exibidos</h4>
 
-<p>Atualize seu <code>AuthorAdmin</code> class para adicionar a linha <code>fields</code>, como mostrado abaixo (em negrito):</p>
+<p>Atualize seu <code>AuthorAdmin</code> class para adicionar a linha <code>fields</code>, como mostrado abaixo (em negrito):</p>
 
 <pre class="brush: python notranslate">class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
@@ -272,7 +272,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Você pode adicionar "seções" para agrupar informações de modelo relacionadas dentro do formulário detalhado, usando o atributo <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets">fieldsets</a>.</p>
 
-<p>Na <code>BookInstance</code> model temos informações relacionadas ao que o livro é (i.e. <code>name</code>, <code>imprint</code>, e <code>id</code>) e quando estará disponível (<code>status</code>, <code>due_back</code>). Podemos adicionar estes em diferentes seções, adicionando o texto em negrito para o nosso <code>BookInstanceAdmin</code> class. </p>
+<p>Na <code>BookInstance</code> model temos informações relacionadas ao que o livro é (i.e. <code>name</code>, <code>imprint</code>, e <code>id</code>) e quando estará disponível (<code>status</code>, <code>due_back</code>). Podemos adicionar estes em diferentes seções, adicionando o texto em negrito para o nosso <code>BookInstanceAdmin</code> class. </p>
 
 <pre class="brush: python notranslate">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
@@ -297,18 +297,18 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Às vezes, pode fazer sentido adicionar registros associados ao mesmo tempo. Por exemplo, pode fazer sentido ter as informações do livro e as informações sobre as cópias específicas que você tem na mesma página de detalhes.</p>
 
-<p>Você pode fazer isso declarando <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, do tipo <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizonal layout) or <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (layout vertical, assim como o layout do modelo padrão). Você pode adicionar ao <code>BookInstance</code> informações inline para o nosso <code>Book</code> detalhe, adicionando as linhas abaixo em negrito perto do seu <code>BookAdmin</code>:</p>
+<p>Você pode fazer isso declarando <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, do tipo <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (horizonal layout) or <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (layout vertical, assim como o layout do modelo padrão). Você pode adicionar ao <code>BookInstance</code> informações inline para o nosso <code>Book</code> detalhe, adicionando as linhas abaixo em negrito perto do seu <code>BookAdmin</code>:</p>
 
 <pre class="brush: python notranslate"><strong>class BooksInstanceInline(admin.TabularInline):
-    model = BookInstance</strong>
+    model = BookInstance</strong>
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'display_genre')
-<strong>    inlines = [BooksInstanceInline]</strong>
+    list_display = ('title', 'author', 'display_genre')
+<strong>    inlines = [BooksInstanceInline]</strong>
 </pre>
 
-<p>Agora navegue até uma view pala um <code>Book</code> no seu site - na parte inferior, você verá as instâncias do livro relacionadas a este livro (imediatamente abaixo dos campos de gênero do livro):</p>
+<p>Agora navegue até uma view pala um <code>Book</code> no seu site - na parte inferior, você verá as instâncias do livro relacionadas a este livro (imediatamente abaixo dos campos de gênero do livro):</p>
 
 <p><img alt="Admin Site - Book with Inlines" src="https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png" style="border-style: solid; border-width: 1px; display: block; height: 889px; margin: 0px auto; width: 937px;"></p>
 
@@ -323,8 +323,8 @@ class BookAdmin(admin.ModelAdmin):
 <p>Aprendemos muito nesta seção, então agora é hora de você tentar algumas coisas.</p>
 
 <ol>
- <li>Para a <em>listview</em> <code>BookInstance</code>, adicione o código para exibir o livro, o status, a data de devolução e o id (em vez do texto padrão <code>__str__()</code>).</li>
- <li>Adicione uma listagem <em>inline</em> de itens <code>Book</code> para a lista detalhada de <code>Author</code> usando a mesma abordagem que fizemos para  <code>Book</code>/<code>BookInstance</code>.</li>
+ <li>Para a <em>listview</em> <code>BookInstance</code>, adicione o código para exibir o livro, o status, a data de devolução e o id (em vez do texto padrão <code>__str__()</code>).</li>
+ <li>Adicione uma listagem <em>inline</em> de itens <code>Book</code> para a lista detalhada de <code>Author</code> usando a mesma abordagem que fizemos para  <code>Book</code>/<code>BookInstance</code>.</li>
 </ol>
 
 <ul>
@@ -332,13 +332,13 @@ class BookAdmin(admin.ModelAdmin):
 
 <h2 id="Resumo">Resumo</h2>
 
-<p>É isso aí! Agora você aprendeu como configurar o site de administração na sua forma simples e aprimorada, como criar um superusuário, como navegar no site de administração e visualizar, excluir e atualizar registros. Ao longo do caminho você criou um monte de Livros, Instâncias de livros, Gêneros e Autores que poderemos listar e exibir assim que criarmos nossas próprias <em>views</em> e <em>templates</em>.</p>
+<p>É isso aí! Agora você aprendeu como configurar o site de administração na sua forma simples e aprimorada, como criar um superusuário, como navegar no site de administração e visualizar, excluir e atualizar registros. Ao longo do caminho você criou um monte de Livros, Instâncias de livros, Gêneros e Autores que poderemos listar e exibir assim que criarmos nossas próprias <em>views</em> e <em>templates</em>.</p>
 
-<h2 id="Leitura_adicional">Leitura adicional</h2>
+<h2 id="Leitura_adicional">Leitura adicional</h2>
 
 <ul>
- <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial02/#introducing-the-django-admin">Escrevendo seu primeiro app Django, parte 2: Apresentando o Django Admin</a>  (Django docs)</li>
- <li><a href="https://docs.djangoproject.com/en/2.0/ref/contrib/admin/">O Django Admin site</a> (Django Docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/intro/tutorial02/#introducing-the-django-admin">Escrevendo seu primeiro app Django, parte 2: Apresentando o Django Admin</a>  (Django docs)</li>
+ <li><a href="https://docs.djangoproject.com/en/2.0/ref/contrib/admin/">O Django Admin site</a> (Django Docs)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</p>
@@ -350,14 +350,14 @@ class BookAdmin(admin.ModelAdmin):
  <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Configurando um ambiente de desenvolvimento Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial Django: Website de uma biblioteca local</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Tutorial Django Parte 2: Criando o escopo do website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Parte 3: Utilizando models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Parte 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Parte 5: Criando nossa página principal</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Parte 6: Lista genérica e detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Parte 7: Framework de Sessões</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Parte 8: Autenticação de Usuário e permissões</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Parte 9: Trabalhando com formulários</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Parte 10: Testando uma aplicação web Django</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Parte 3: Utilizando models</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Parte 4: Django admin site</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Parte 5: Criando nossa página principal</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Parte 6: Lista genérica e detail views</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Parte 7: Framework de Sessões</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Parte 8: Autenticação de Usuário e permissões</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Parte 9: Trabalhando com formulários</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial </a><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Parte 10: Testando uma aplicação web Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial Django Parte 11: Implantando Django em produção</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Segurança de aplicações Django</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>

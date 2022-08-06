@@ -76,9 +76,9 @@ Content-Length: 100
 
 ### レスポンス
 
-成功レスポンスは [2xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3) ステータスコードで示されます。
+成功レスポンスは [2xx](https://datatracker.ietf.org/doc/html/rfc7231#section-6.3) ステータスコードで示されます。
 
-この例の場合、本文が含まれていないため {{HTTPStatus("204")}} コードで成功レスポンスが示されます。もし {{HTTPStatus("200")}} コードであれば本文が含まる可能性があります。
+この例の場合、本文が含まれていないため {{HTTPStatus("204")}} コードで成功レスポンスが示されます。もし {{HTTPStatus("200")}} コードであれば本文が含まる可能性があります。
 
 ```
 HTTP/1.1 204 No Content

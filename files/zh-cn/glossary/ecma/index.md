@@ -13,5 +13,5 @@ translation_of: Glossary/ECMA
 
 ## 了解更多
 
-- Wikipedia 页面 {{interwiki("wikipedia", "Ecma_International", "Ecma International")}}
+- Wikipedia 页面 [Ecma International](https://zh.wikipedia.org/wiki/Ecma_International)
 - [The Ecma International web site](https://www.ecma-international.org/)

@@ -7,34 +7,34 @@ translation_of: Learn/Server-side/Django/web_application_security
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">사용자의 데이터를 보호하는 것은 모든 웹사이트 개발에서 중요한 부분입니다. 우리는 이전의 강의 <a href="https://developer.mozilla.org/en-US/docs/Web/Security">Web security</a> 에서 자주 나타나는 보안 위협에 대해 알아봤습니다. — 이번 강의에서는 장고의 내장 보안 기능이 이런 위험에 어떻게 대처하는지 실제 예시들을 통해 살펴보겠습니다. </p>
+<p class="summary">사용자의 데이터를 보호하는 것은 모든 웹사이트 개발에서 중요한 부분입니다. 우리는 이전의 강의 <a href="https://developer.mozilla.org/en-US/docs/Web/Security">Web security</a> 에서 자주 나타나는 보안 위협에 대해 알아봤습니다. — 이번 강의에서는 장고의 내장 보안 기능이 이런 위험에 어떻게 대처하는지 실제 예시들을 통해 살펴보겠습니다. </p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">이 문서를 보기 전에: </th>
-   <td>서버사이드 개발에 대한 "<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a>" 부분을 읽고 오세요. MDN 장고 튜토리얼에서 적어도 <a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a> 까지는 모두 알고있어야 합니다. </td>
+   <th scope="row">이 문서를 보기 전에: </th>
+   <td>서버사이드 개발에 대한 "<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a>" 부분을 읽고 오세요. MDN 장고 튜토리얼에서 적어도 <a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a> 까지는 모두 알고있어야 합니다. </td>
   </tr>
   <tr>
-   <th scope="row">목적: </th>
-   <td>장고 웹사이트의 보안을 위해 해야 하는 (하지 말아야 하는) 것들에 대해 이해해 봅시다. </td>
+   <th scope="row">목적: </th>
+   <td>장고 웹사이트의 보안을 위해 해야 하는 (하지 말아야 하는) 것들에 대해 이해해 봅시다. </td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="개요">개요</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/Security">Website security</a> 문서는 서버사이드 설계에서 웹사이트 보안이란 무엇을 이야기하는건지, 또한 개발자가 막아내야 하는 몇가지 대표적인 위협에 대해 소개합니다. 이 문서에서 중요한 내용중의 하나는 바로 웹 애플리케이션이 브라우저에서 전송된 데이터를 신뢰하는 경우에는 거의 모든 종류의 공격이 가능하다는 것입니다. </p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Security">Website security</a> 문서는 서버사이드 설계에서 웹사이트 보안이란 무엇을 이야기하는건지, 또한 개발자가 막아내야 하는 몇가지 대표적인 위협에 대해 소개합니다. 이 문서에서 중요한 내용중의 하나는 바로 웹 애플리케이션이 브라우저에서 전송된 데이터를 신뢰하는 경우에는 거의 모든 종류의 공격이 가능하다는 것입니다. </p>
 
 <div class="warning">
-<p><strong>Important:</strong> 웹사이트 보안에 대해 당신이 배울 수 있는 가장 중요한 점 한가지는 <strong>브라우저의 데이터를 절대로 믿지 말라는 것</strong> 입니다. 이건 URL 파라미터의 <code>GET</code> request 데이터, <code>POST </code>데이터, HTTP 헤더와 쿠키, 사용자가 업로드한 파일들...기타등등을 포함합니다. 언제나 전송받는 모든 데이터를 의심하고 체크하십시오. 언제나 최악을 가정하십시오.</p>
+<p><strong>Important:</strong> 웹사이트 보안에 대해 당신이 배울 수 있는 가장 중요한 점 한가지는 <strong>브라우저의 데이터를 절대로 믿지 말라는 것</strong> 입니다. 이건 URL 파라미터의 <code>GET</code> request 데이터, <code>POST </code>데이터, HTTP 헤더와 쿠키, 사용자가 업로드한 파일들...기타등등을 포함합니다. 언제나 전송받는 모든 데이터를 의심하고 체크하십시오. 언제나 최악을 가정하십시오.</p>
 </div>
 
-<p>Django 사용자들에게 좋은 소식은 대부분의 일반적인 위협들은 프레임워크에 의해 차단된다는 것입니다! <a href="https://docs.djangoproject.com/en/2.0/topics/security/">Security in Django</a> 문서는 Django의 보안 개요와 Django 기반의 웹사이트를 어떻게 지킬 수 있는지에 대해 설명하고 있습니다.</p>
+<p>Django 사용자들에게 좋은 소식은 대부분의 일반적인 위협들은 프레임워크에 의해 차단된다는 것입니다! <a href="https://docs.djangoproject.com/en/2.0/topics/security/">Security in Django</a> 문서는 Django의 보안 개요와 Django 기반의 웹사이트를 어떻게 지킬 수 있는지에 대해 설명하고 있습니다.</p>
 
 <h2 id="Common_threatsprotections">Common threats/protections</h2>
 
-<p>Django 문서를 여기로 복사해오기보다, 이 문서에서 우리는 Django <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 튜토리얼에 있는 Django의 몇가지 보안 형태를 묘사해보도록 하겠습니다.</p>
+<p>Django 문서를 여기로 복사해오기보다, 이 문서에서 우리는 Django <a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> 튜토리얼에 있는 Django의 몇가지 보안 형태를 묘사해보도록 하겠습니다.</p>
 
 <h3 id="Cross_site_scripting_XSS">Cross site scripting (XSS)</h3>
 

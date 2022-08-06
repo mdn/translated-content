@@ -12,7 +12,7 @@ translation_of: Web/HTML/Element/video
 <h2 id="Контекст_Использования">Контекст Использования</h2>
 
 <ul>
- <li>Допустимое содержимое. Если элемент имеет атрибут {{htmlattrxref("src", "video")}}: 0 или более элементов {{HTMLElement("track")}}, за которым следует прозрачный контент, который не содержит элементов мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}<br>
+ <li>Допустимое содержимое. Если элемент имеет атрибут {{htmlattrxref("src", "video")}}: 0 или более элементов {{HTMLElement("track")}}, за которым следует прозрачный контент, который не содержит элементов мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}<br>
   Иначе: 0 или более элементов {{HTMLElement("source")}}, за которыми следует 0 или более элементов {{HTMLElement("track")}}, затем прозрачным содержимым, которое не содержит элементы мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}.</li>
 </ul>
 
@@ -43,48 +43,48 @@ translation_of: Web/HTML/Element/video
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">видео</span> <span class="hps">начнёт воспроизводится </span></span><span lang="ru"><span class="hps">автоматически</span><span class="hps">, как только</span> <span class="hps">это будет возможно сделать без</span> <span class="hps">остановки</span><span>, чтобы закончить</span> <span class="hps">загрузку данных</span><span>.</span></span></dd>
+ <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">видео</span> <span class="hps">начнёт воспроизводится </span></span><span lang="ru"><span class="hps">автоматически</span><span class="hps">, как только</span> <span class="hps">это будет возможно сделать без</span> <span class="hps">остановки</span><span>, чтобы закончить</span> <span class="hps">загрузку данных</span><span>.</span></span></dd>
  <dt>{{htmlattrdef("autobuffer")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Логический атрибут; если указано, видео автоматически начнёт буферизацию, даже если оно не настроено на автоматический запуск. Используйте этот атрибут только тогда, когда очень вероятно, что пользователь будет смотреть видео. Видео буферизуется до тех пор, пока не заполнится кеш мультимедиа.
- <div class="note"><strong>Примечание:</strong> несмотря на то, что в ранних версиях HTML5 атрибут <code>autobuffer</code> присутствовал, в последующих выпусках он был удалён. Также он был удалён из Gecko 2.0 и других браузеров, а в некоторых никогда не реализовывался. Спецификация определяет новый перечислимый атрибут <code>preload</code>, вместо <code>autobuffer</code> с другим синтаксисом. {{bug(548523)}}</div>
+ <dd>Логический атрибут; если указано, видео автоматически начнёт буферизацию, даже если оно не настроено на автоматический запуск. Используйте этот атрибут только тогда, когда очень вероятно, что пользователь будет смотреть видео. Видео буферизуется до тех пор, пока не заполнится кеш мультимедиа.
+ <div class="note"><strong>Примечание:</strong> несмотря на то, что в ранних версиях HTML5 атрибут <code>autobuffer</code> присутствовал, в последующих выпусках он был удалён. Также он был удалён из Gecko 2.0 и других браузеров, а в некоторых никогда не реализовывался. Спецификация определяет новый перечислимый атрибут <code>preload</code>, вместо <code>autobuffer</code> с другим синтаксисом. {{bug(548523)}}</div>
  </dd>
  <dt>{{htmlattrdef("buffered")}}</dt>
- <dd>Атрибут для определения временных диапазонов буферизованных носителей. Этот атрибут содержит объект {{domxref("TimeRanges")}}.</dd>
+ <dd>Атрибут для определения временных диапазонов буферизованных носителей. Этот атрибут содержит объект {{domxref("TimeRanges")}}.</dd>
  <dt>{{htmlattrdef("controls")}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Если этот атрибут</span> <span class="hps">присутствует</span><span>, тогда браузер</span> отобразит <span class="hps">элементы</span> <span class="hps">управления</span><span>, чтобы позволить</span> <span class="hps">пользователю управлять</span> <span class="hps">воспроизведением видео</span><span>, регулировать громкость</span><span class="hps">,</span> осуществлять перемотку, <span>а также</span></span><span lang="ru"> ставить на паузу и <span class="hps">возобновление воспроизведение</span><span>.</span></span></dd>
+ <dd><span id="result_box" lang="ru"><span class="hps">Если этот атрибут</span> <span class="hps">присутствует</span><span>, тогда браузер</span> отобразит <span class="hps">элементы</span> <span class="hps">управления</span><span>, чтобы позволить</span> <span class="hps">пользователю управлять</span> <span class="hps">воспроизведением видео</span><span>, регулировать громкость</span><span class="hps">,</span> осуществлять перемотку, <span>а также</span></span><span lang="ru"> ставить на паузу и <span class="hps">возобновление воспроизведение</span><span>.</span></span></dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
  <dd>This enumerated attribute indicates whether to use CORS to fetch the related image. <a href="/en-US/docs/CORS_Enabled_Image">CORS-enabled resources</a> can be reused in the {{HTMLElement("canvas")}} element without being <em>tainted</em>. The allowed values are:
  <dl>
   <dt>anonymous</dt>
-  <dd>Sends a  cross-origin request without a credential. In other words, it sends the <code style="font-size: 15px; background-color: rgb(245, 246, 245);">Origin:</code><span style="background-color: #f5f6f5;"> HTTP header without a </span>cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the <code style="font-size: 15px;">Access-Control-Allow-Origin:</code> HTTP header), the image will be <em>tainted</em>, and its usage restricted.</dd>
+  <dd>Sends a  cross-origin request without a credential. In other words, it sends the <code style="font-size: 15px; background-color: rgb(245, 246, 245);">Origin:</code><span style="background-color: #f5f6f5;"> HTTP header without a </span>cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the <code style="font-size: 15px;">Access-Control-Allow-Origin:</code> HTTP header), the image will be <em>tainted</em>, and its usage restricted.</dd>
   <dt>use-credentials</dt>
-  <dd><span style="background-color: #f5f6f5;">Sends a  cross-origin request with a credential. </span><span style="background-color: #f5f6f5;">In other words, it sends the </span><code style="font-size: 15px; background-color: rgb(245, 246, 245);">Origin:</code><span style="background-color: #f5f6f5;"> HTTP header with </span>a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through <code style="font-size: 15px;">Access-Control-Allow-Credentials:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
+  <dd><span style="background-color: #f5f6f5;">Sends a  cross-origin request with a credential. </span><span style="background-color: #f5f6f5;">In other words, it sends the </span><code style="font-size: 15px; background-color: rgb(245, 246, 245);">Origin:</code><span style="background-color: #f5f6f5;"> HTTP header with </span>a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through <code style="font-size: 15px;">Access-Control-Allow-Credentials:</code> HTTP header), the image will be <em>tainted</em> and its usage restricted.</dd>
  </dl>
  When not present, the resource is fetched without a CORS request (i.e. without sending the <code>Origin:</code> HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword <strong>anonymous</strong> was used. See <a href="/en-US/docs/HTML/CORS_settings_attributes">CORS settings attributes</a> for additional information.</dd>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Высота</span> <span class="hps">области отображения</span> <span class="hps">видео</span> <span class="hps">в</span> <span class="hps">пикселях</span><span>.</span></span></dd>
+ <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Высота</span> <span class="hps">области отображения</span> <span class="hps">видео</span> <span class="hps">в</span> <span class="hps">пикселях</span><span>.</span></span></dd>
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">по окончанию проигрывания,</span> <span class="hps">видео</span> <span class="hps">автоматически</span> начнёт воспроизведение с начала<span class="hps">.</span></span></dd>
  <dt>{{htmlattrdef("muted")}}</dt>
  <dd>Логический атрибут, который определяет значение по умолчания для аудио дорожки, содержащуюся в видео. <span id="result_box" lang="ru"><span class="hps">Если атрибут указан</span></span>, то аудио дорожка <span id="result_box" lang="ru"><span class="hps">воспроизводиться </span></span>не будет. З<span id="result_box" lang="ru"><span class="hps">начение</span> <span class="hps">атрибута по умолчанию</span> <span class="hps">- "ложь"</span><span>,</span> и это<span class="hps"> означает, что</span> <span class="hps">звук будет</span> <span class="hps">воспроизводиться, когда</span> <span class="hps">видео воспроизводится</span><span>.</span></span></dd>
  <dt>{{htmlattrdef("played")}}</dt>
- <dd>Атрибут {{domxref("TimeRanges")}}, указывающий все диапазоны воспроизводимого видео.</dd>
+ <dd>Атрибут {{domxref("TimeRanges")}}, указывающий все диапазоны воспроизводимого видео.</dd>
  <dt>{{htmlattrdef("preload")}}</dt>
  <dd>Этот перечислимый атрибут предназначен для того, чтобы дать подсказку браузеру о том, что, по мнению автора, приведёт к лучшему пользовательскому опыту. Он может иметь одно из следующих значений:
  <ul>
   <li><code>none</code>: указывает, что видео не должно быть предварительно загружено.</li>
   <li><code>metadata</code>: указывает, что предварительно загружаются метаданные видео (например, длина).</li>
   <li><code>auto</code>: указывает, что весь видеофайл может быть загружен, даже если пользователь не должен его использовать.</li>
-  <li><em>пустая строка</em>: синоним значения <code>auto</code>.</li>
+  <li><em>пустая строка</em>: синоним значения <code>auto</code>.</li>
  </ul>
 
- <p>Если не задано, значение атрибута определяется браузером по умолчанию (то есть, каждый браузер имеет по умолчанию значение данного атрибута). Спецификация рекомендует использовать <code>metadata</code>.</p>
+ <p>Если не задано, значение атрибута определяется браузером по умолчанию (то есть, каждый браузер имеет по умолчанию значение данного атрибута). Спецификация рекомендует использовать <code>metadata</code>.</p>
 
  <div class="note"><strong>Usage notes:</strong>
 
  <ul>
-  <li>The <code>autoplay</code> attribute has precedence over <code>preload</code>. If <code>autoplay</code> is specified, the browser would obviously need to start downloading the video for playback.</li>
-  <li>The <span style="background-color: #f5f6f5;">specification does not force the </span>browser to follow the value of this attribute; it is a mere hint.</li>
+  <li>The <code>autoplay</code> attribute has precedence over <code>preload</code>. If <code>autoplay</code> is specified, the browser would obviously need to start downloading the video for playback.</li>
+  <li>The <span style="background-color: #f5f6f5;">specification does not force the </span>browser to follow the value of this attribute; it is a mere hint.</li>
  </ul>
  </div>
  </dd>
@@ -93,7 +93,7 @@ translation_of: Web/HTML/Element/video
  <dt>{{htmlattrdef("src")}}</dt>
  <dd>The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Ширина</span> <span class="hps">области отображения</span> <span class="hps">видео</span> <span class="hps">в</span> <span class="hps">пикселях</span><span>.</span></span></dd>
+ <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Ширина</span> <span class="hps">области отображения</span> <span class="hps">видео</span> <span class="hps">в</span> <span class="hps">пикселях</span><span>.</span></span></dd>
 </dl>
 
 <h2 id="События">События</h2>
@@ -135,7 +135,7 @@ translation_of: Web/HTML/Element/video
 
 <p>If the MIME type for the video is not set correctly on the server, the video may not show or show a gray box containing an X (if JavaScript is enabled).</p>
 
-<p>If you use <span style="background-color: #f5f6f5;">Apache Web Server</span><span style="background-color: #f5f6f5;"> to </span>serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. <span style="background-color: #f5f6f5;"> The </span><span style="background-color: #f5f6f5;">most common video file type extensions are </span><span style="background-color: #f5f6f5;">".ogm</span><span style="background-color: #f5f6f5;">",</span><span style="background-color: #f5f6f5;"> ".ogv", or ".ogg"</span><span style="background-color: #f5f6f5;">. </span>To do this, edit the "mime.types" file in "/etc/apache" or use the "AddType" configuration directive in httpd.conf.</p>
+<p>If you use <span style="background-color: #f5f6f5;">Apache Web Server</span><span style="background-color: #f5f6f5;"> to </span>serve Ogg Theora videos, you can fix this problem by adding the video file type extensions to "video/ogg" MIME type. <span style="background-color: #f5f6f5;"> The </span><span style="background-color: #f5f6f5;">most common video file type extensions are </span><span style="background-color: #f5f6f5;">".ogm</span><span style="background-color: #f5f6f5;">",</span><span style="background-color: #f5f6f5;"> ".ogv", or ".ogg"</span><span style="background-color: #f5f6f5;">. </span>To do this, edit the "mime.types" file in "/etc/apache" or use the "AddType" configuration directive in httpd.conf.</p>
 
 <pre class="eval">AddType video/ogg .ogm
 AddType video/ogg .ogv

@@ -37,7 +37,7 @@ var defaultReference = new Default();
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Constructeur (programmation)", "Constructeur")}} sur Wikipédia
+- [Constructeur](https://fr.wikipedia.org/wiki/Constructeur_(programmation)) sur Wikipédia
 
 ### Référence technique
 

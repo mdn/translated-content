@@ -11,7 +11,7 @@ translation_of: Glossary/MIME_type
 
 ### 基础知识
 
-- {{interwiki("wikipedia", "Internet media type", "Internet media type")}} on Wikipedia
+- [Internet media type](https://zh.wikipedia.org/wiki/Internet_media_type) on Wikipedia
 
 ### 技术参考
 

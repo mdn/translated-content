@@ -184,7 +184,7 @@ input:valid {
  <li><code>ab?c</code>— <code>a</code> と、その次にひとつだけ <code>b</code> があるかないかと、その次の <code>c</code> の並びに一致する ( <code>ac</code> または <code>abc</code>)</li>
  <li><code>ab*c</code>— <code>a</code> と、その次に任意の数の <code>b</code> が続き、その次に <code>c</code> のある並びに一致する。( <code>ac</code> , <code>abc</code>, <code>abbbbbc</code>, 等)</li>
  <li><code>a|b</code> — 一文字の <code>a</code> または <code>b</code> に一致する</li>
- <li><code>abc|xyz</code> —  <code>abc</code> の並びまたは <code>xyz</code> の並びに一致する。これは <code>abcxyz</code> や <code>a</code> や <code>y</code> などには一致しない。</li>
+ <li><code>abc|xyz</code> —  <code>abc</code> の並びまたは <code>xyz</code> の並びに一致する。これは <code>abcxyz</code> や <code>a</code> や <code>y</code> などには一致しない。</li>
 </ul>
 
 <p>正規表現には多くの組合せがあるので例はここまでとする。完全な一覧や多くの例は、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>ドキュメントを参照してください。</p>
@@ -220,7 +220,7 @@ input:valid {
 <p>もし {{HTMLElement("input")}} の空ではない値が正規表現パターンに一致しなかった場合、この <code>input</code> は {{cssxref(':invalid')}} 疑似クラスに一致します。</p>
 
 <div class="blockIndicator note">
-<p><strong>メモ:</strong> {{HTMLElement("input")}} 要素の型によっては、検証のために <a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性が必要ないことがあります。例えば <code>email</code> 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 <a href="/ja/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。</p>
+<p><strong>メモ:</strong> {{HTMLElement("input")}} 要素の型によっては、検証のために <a href="/ja/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a> 属性が必要ないことがあります。例えば <code>email</code> 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 <a href="/ja/docs/Web/HTML/Attributes/multiple"><code>multiple</code></a> 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。</p>
 </div>
 
 <div class="blockIndicator note">
@@ -380,7 +380,7 @@ input:focus:invalid {
 
 <h3 id="The_HTML5_constraint_validation_API" name="The_HTML5_constraint_validation_API">HTML5 の制約検証 API</h3>
 
-<p>多くのブラウザーが <a href="/ja/docs/Web/API/Constraint_validation">制約検証API</a>  に対応しています。この API は各フォーム要素で使用できる一連のメソッドやプロパティで構成されています。</p>
+<p>多くのブラウザーが <a href="/ja/docs/Web/API/Constraint_validation">制約検証API</a>  に対応しています。この API は各フォーム要素で使用できる一連のメソッドやプロパティで構成されています。</p>
 
 <ul>
  <li><code><a href="/ja/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></code> (<code><a href="/ja/docs/Web/HTML/Element/button">&lt;button&gt;</a></code> 要素を表現)</li>
@@ -424,8 +424,8 @@ input:focus:invalid {
 <p>これらの自動のメッセージには、2 つの欠点があります。</p>
 
 <ul>
- <li>    CSS でメッセージの表示方法を変更するための標準的な方法がありません。</li>
- <li>    メッセージはブラウザーのロケールに依存しており、ある言語のページでエラーメッセージが別の言語で表示されることがあり、これは下記の Firefox スクリーンショットで見ることができます。</li>
+ <li>    CSS でメッセージの表示方法を変更するための標準的な方法がありません。</li>
+ <li>    メッセージはブラウザーのロケールに依存しており、ある言語のページでエラーメッセージが別の言語で表示されることがあり、これは下記の Firefox スクリーンショットで見ることができます。</li>
 </ul>
 
 <p><img alt="Example of an error message with Firefox in French on an English page" src="/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></p>
@@ -566,10 +566,10 @@ email.addEventListener("input", function (event) {
     // エラーメッセージを取り除きます。
     error.textContent = ""; // メッセージの内容物をリセットします
     error.className = "error"; // メッセージの表示状態をリセットします
-  } else {
-    // If there is still an error, show the correct error
-    showError();
-  }
+  } else {
+    // If there is still an error, show the correct error
+    showError();
+  }
 });
 
 form.addEventListener("submit", function (event) {

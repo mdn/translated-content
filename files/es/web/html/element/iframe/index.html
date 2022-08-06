@@ -16,14 +16,14 @@ original_slug: Web/HTML/Elemento/iframe
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="seoSummary">El <strong>elemento HTML <code>&lt;iframe&gt;</code></strong> (de inline frame) representa un {{Glossary("contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.</p>
+<p class="seoSummary">El <strong>elemento HTML <code>&lt;iframe&gt;</code></strong> (de inline frame) representa un {{Glossary("contexto de navegación")}} anidado, el cual permite incrustrar otra página HTML en la página actual.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}</div>
 
-<p>Cada elemento <code>&lt;iframe&gt;</code> tiene su propio <a href="/es/docs/Web/API/History">historial de sesión</a> y su propio objeto <a href="/es/docs/Web/API/Document">Documento</a>. El contexto de navegación que incluye el contenido implícito se llama <em>contexto de navegación principal</em>. El contexto de navegación de nivel superior (que no tiene padre) es típicamente la ventana del navegador, representado por el objeto {{domxref("Window")}}.</p>
+<p>Cada elemento <code>&lt;iframe&gt;</code> tiene su propio <a href="/es/docs/Web/API/History">historial de sesión</a> y su propio objeto <a href="/es/docs/Web/API/Document">Documento</a>. El contexto de navegación que incluye el contenido implícito se llama <em>contexto de navegación principal</em>. El contexto de navegación de nivel superior (que no tiene padre) es típicamente la ventana del navegador, representado por el objeto {{domxref("Window")}}.</p>
 
 <div class="blockIndicator warning">
-<p>Debido a que cada contexto de navegación es un entorno de documento completo, cada <code>&lt;iframe&gt;</code> en una página requiere más memoria y otros recursos informáticos. Aunque teóricamente puede utilizar tantos <code>&lt;iframe&gt;</code> como desee, compruebe si hay problemas de rendimiento.</p>
+<p>Debido a que cada contexto de navegación es un entorno de documento completo, cada <code>&lt;iframe&gt;</code> en una página requiere más memoria y otros recursos informáticos. Aunque teóricamente puede utilizar tantos <code>&lt;iframe&gt;</code> como desee, compruebe si hay problemas de rendimiento.</p>
 </div>
 
 <table class="properties">
@@ -49,7 +49,7 @@ original_slug: Web/HTML/Elemento/iframe
    <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("img")}}</td>
   </tr>
   <tr>
-   <th scope="row">Interfaz DOM </th>
+   <th scope="row">Interfaz DOM </th>
    <td>{{domxref("HTMLIFrameElement")}}</td>
   </tr>
  </tbody>
@@ -60,36 +60,36 @@ original_slug: Web/HTML/Elemento/iframe
 <p>Este elemento admite <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales</a>.</p>
 
 <ul>
- <li>En el atributo <code>target</code> de los elementos {{HTMLElement("a")}}, {{HTMLElement("from")}} y {{HTMLElement("base")}}.</li>
- <li>En el atributo <code>formtarget</code> de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}</li>
+ <li>En el atributo <code>target</code> de los elementos {{HTMLElement("a")}}, {{HTMLElement("from")}} y {{HTMLElement("base")}}.</li>
+ <li>En el atributo <code>formtarget</code> de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}</li>
  <li>En el parámetro <code>windowName</code> en el método {{domxref("Window.open()","window.open()")}}.</li>
 </ul>
 
 <dl>
  <dt>{{htmlattrdef("allow")}}</dt>
- <dd>Especifíca una <a href="/en-US/docs/Web/HTTP/Feature_Policy">política de características</a> para el <code>&lt;iframe&gt;</code>. Vea el articulo <a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a> para detalles en temas de seguridad y como <code>&lt;iframe&gt;</code> funciona con las Politicas de Herramientas para mantener los sistemas seguros.</dd>
+ <dd>Especifíca una <a href="/en-US/docs/Web/HTTP/Feature_Policy">política de características</a> para el <code>&lt;iframe&gt;</code>. Vea el articulo <a href="/en-US/docs/Web/Privacy">Privacy, permissions, and information security</a> para detalles en temas de seguridad y como <code>&lt;iframe&gt;</code> funciona con las Politicas de Herramientas para mantener los sistemas seguros.</dd>
  <dt>{{htmlattrdef("allowfullscreen")}}</dt>
- <dd>Definido como <code>true</code> si el <code>&lt;iframe&gt;</code> puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.</dd>
+ <dd>Definido como <code>true</code> si el <code>&lt;iframe&gt;</code> puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.</dd>
  <dd>
  <div class="blockIndicator note">
- <p>Se considera un atributo heredado y se redefine como <code>allow="fullscreen"</code>.</p>
+ <p>Se considera un atributo heredado y se redefine como <code>allow="fullscreen"</code>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("allowpaymentrequest")}}</dt>
- <dd>Definido como <code>true</code> si se debe permitir que un <code>&lt;iframe&gt;</code> de origen cruzado pueda invocar el <a href="/en-US/docs/Web/API/Payment_Request_API">API de solicitud de pago</a>. </dd>
+ <dd>Definido como <code>true</code> si se debe permitir que un <code>&lt;iframe&gt;</code> de origen cruzado pueda invocar el <a href="/en-US/docs/Web/API/Payment_Request_API">API de solicitud de pago</a>. </dd>
  <dd>
  <div class="blockIndicator note">
- <p>Se considera un atributo heredado y se redefine como <code>allow="payment"</code>.</p>
+ <p>Se considera un atributo heredado y se redefine como <code>allow="payment"</code>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("csp")}} {{experimental_inline}}</dt>
- <dd>Una <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Politica de Seguridad del Contenido</a> aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.</dd>
+ <dd>Una <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Politica de Seguridad del Contenido</a> aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.</dd>
  <dt>{{ htmlattrdef("height") }}</dt>
  <dd>Indica la altura del frame {{ HTMLVersionInline(5) }}en píxeles CSS, o {{ HTMLVersionInline(4.01) }} en píxeles o como un porcentaje.</dd>
  <dt id="name-attribute">{{htmlattrdef("importance")}} {{experimental_inline}}</dt>
- <dd>La prioridad de descarga en el recurso para el atributo <code>src</code> del <code>&lt;iframe&gt;</code>. Valores permitidos:
+ <dd>La prioridad de descarga en el recurso para el atributo <code>src</code> del <code>&lt;iframe&gt;</code>. Valores permitidos:
  <ul>
-  <li><code>auto</code>: (default) Sin preferencia. El buscador utiliza sus propias heurísticas para decidir la prioridad del recurso.</li>
+  <li><code>auto</code>: (default) Sin preferencia. El buscador utiliza sus propias heurísticas para decidir la prioridad del recurso.</li>
   <li><code>high</code>: El recurso debe ser descargado antes que otros recursos de baja-prioridad de los recursos de la página.</li>
   <li><code>low</code>: El recurso debe ser descargado después de otros recursos de alta-prioridad de los recursos de la página.</li>
  </ul>
@@ -106,16 +106,16 @@ original_slug: Web/HTML/Elemento/iframe
  </ul>
  </dd>
  <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
- <dd>Indicates which <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the frame's resource:
+ <dd>Indicates which <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer">referrer</a> to send when fetching the frame's resource:
  <ul>
   <li><code>no-referrer</code>: The {{HTTPHeader("Referer")}} header will not be sent.</li>
-  <li><code>no-referrer-when-downgrade</code> (default): The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).</li>
-  <li><code>origin</code>: The sent referrer will be limited to the origin of the referring page: its <a href="https://developer.mozilla.org/en-US/docs/Archive/Mozilla/URIScheme">scheme</a>, {{Glossary("host")}}, and {{Glossary("port")}}.</li>
+  <li><code>no-referrer-when-downgrade</code> (default): The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).</li>
+  <li><code>origin</code>: The sent referrer will be limited to the origin of the referring page: its <a href="https://developer.mozilla.org/en-US/docs/Archive/Mozilla/URIScheme">scheme</a>, {{Glossary("host")}}, and {{Glossary("port")}}.</li>
   <li><code>origin-when-cross-origin</code>: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.</li>
   <li><code>same-origin</code>: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.</li>
   <li><code>strict-origin</code>: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).</li>
   <li><code>strict-origin-when-cross-origin</code>: Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).</li>
-  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">password</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
+  <li><code>unsafe-url</code>: The referrer will include the origin <em>and</em> the path (but not the <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hash">fragment</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/password">password</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/username">username</a>). <strong>This value is unsafe</strong>, because it leaks origins and paths from TLS-protected resources to insecure origins.</li>
  </ul>
  </dd>
  <dd>
@@ -126,16 +126,16 @@ original_slug: Web/HTML/Elemento/iframe
  <dd>Applies extra restrictions to the content in the frame. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
  <ul>
   <li><code>allow-forms</code>: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.</li>
-  <li><code>allow-modals</code>: Lets the resource <a href="https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag">open modal windows</a>.</li>
-  <li><code>allow-orientation-lock</code>: Lets the resource <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation">lock the screen orientation</a>.</li>
-  <li><code>allow-pointer-lock</code>: Lets the resource use the <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock API</a>.</li>
-  <li><code>allow-popups</code>: Allows popups (such as <code>window.open()</code>, <code>target="_blank"</code>, or <code>showModalDialog()</code>). If this keyword is not used, the popup will silently fail to open.</li>
+  <li><code>allow-modals</code>: Lets the resource <a href="https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag">open modal windows</a>.</li>
+  <li><code>allow-orientation-lock</code>: Lets the resource <a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation">lock the screen orientation</a>.</li>
+  <li><code>allow-pointer-lock</code>: Lets the resource use the <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Pointer_Lock">Pointer Lock API</a>.</li>
+  <li><code>allow-popups</code>: Allows popups (such as <code>window.open()</code>, <code>target="_blank"</code>, or <code>showModalDialog()</code>). If this keyword is not used, the popup will silently fail to open.</li>
   <li><code>allow-popups-to-escape-sandbox</code>: Lets the sandboxed document open new windows without those windows inheriting the sandboxing. For example, this can safely sandbox an advertisement without forcing the same restrictions upon the page the ad links to.</li>
-  <li><code>allow-presentation</code>: Lets the resource start a <a href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest">presentation session</a>.</li>
+  <li><code>allow-presentation</code>: Lets the resource start a <a href="https://developer.mozilla.org/en-US/docs/Web/API/PresentationRequest">presentation session</a>.</li>
   <li><code>allow-same-origin</code>: If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}}.</li>
   <li><code>allow-scripts</code>: Lets the resource run scripts (but not create popup windows).</li>
-  <li><code>allow-storage-access-by-user-activation</code> {{experimental_inline}}: Lets the resource request access to the parent's storage capabilities with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a>.</li>
-  <li><code>allow-top-navigation</code>: Lets the resource navigate the top-level browsing context (the one named <code>_top</code>).</li>
+  <li><code>allow-storage-access-by-user-activation</code> {{experimental_inline}}: Lets the resource request access to the parent's storage capabilities with the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API">Storage Access API</a>.</li>
+  <li><code>allow-top-navigation</code>: Lets the resource navigate the top-level browsing context (the one named <code>_top</code>).</li>
   <li><code>allow-top-navigation-by-user-activation</code>: Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.</li>
  </ul>
 
@@ -148,14 +148,14 @@ original_slug: Web/HTML/Elemento/iframe
  </ul>
  </div>
  </dd>
- <dt>{{ htmlattrdef("seamless") }} </dt>
- <dd>This Boolean attribute indicates that the browser should render the inline frame in a way that makes it appear to be part of the containing document, for example by applying CSS styles that apply to the <code>&lt;iframe&gt;</code> to the contained document before styles specified in that document, and by opening links in the contained documents in the parent browsing context (unless another setting prevents this).</dd>
+ <dt>{{ htmlattrdef("seamless") }} </dt>
+ <dd>This Boolean attribute indicates that the browser should render the inline frame in a way that makes it appear to be part of the containing document, for example by applying CSS styles that apply to the <code>&lt;iframe&gt;</code> to the contained document before styles specified in that document, and by opening links in the contained documents in the parent browsing context (unless another setting prevents this).</dd>
  <dt>{{ htmlattrdef("src") }}</dt>
- <dd>The URL of the page to embed.</dd>
- <dt>{{ htmlattrdef("srcdoc") }} </dt>
+ <dd>The URL of the page to embed.</dd>
+ <dt>{{ htmlattrdef("srcdoc") }} </dt>
  <dd>The content of the page that the embedded context is to contain.</dd>
  <dt>{{ htmlattrdef("width") }}</dt>
- <dd>Indicates the width of the frame {{ HTMLVersionInline(5) }} in CSS pixels, or {{ HTMLVersionInline(4.01) }} in pixels or as a percentage.</dd>
+ <dd>Indicates the width of the frame {{ HTMLVersionInline(5) }} in CSS pixels, or {{ HTMLVersionInline(4.01) }} in pixels or as a percentage.</dd>
 </dl>
 
 <h3 id="Atributos_obsoletos">Atributos obsoletos</h3>
@@ -165,18 +165,18 @@ original_slug: Web/HTML/Elemento/iframe
 <dl>
  <dt>{{htmlattrdef("align")}} {{deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
  <dd><span id="result_box" lang="es"><span class="hps">La alineación</span> <span class="hps">de este elemento</span> <span class="hps">con respecto al</span> <span class="hps">contexto que lo rodea.</span></span></dd>
- <dt>{{ htmlattrdef("frameborder") }} {{ obsolete_inline("html5")}} </dt>
+ <dt>{{ htmlattrdef("frameborder") }} {{ obsolete_inline("html5")}} </dt>
  <dd>El valor 1 (por defecto) indica al navegador establecer una frontera entre este marco y todo otro marco. <span class="long_text" id="result_box" lang="es"><span class="gt-trans-draggable hps">El valor 0</span> <span class="gt-trans-draggable hps">indica</span> <span class="gt-trans-draggable hps">que el navegador no</span> establece<span class="gt-trans-draggable hps"> una</span> <span class="gt-trans-draggable hps">frontera</span> <span class="gt-trans-draggable hps">entre este marco y</span> <span class="gt-trans-draggable hps">otros marcos.</span></span></dd>
- <dt>{{ htmlattrdef("longdesc") }} {{ obsolete_inline("html5")}} </dt>
+ <dt>{{ htmlattrdef("longdesc") }} {{ obsolete_inline("html5")}} </dt>
  <dd>Una URI de una descripción larga del marco. Debido al mal uso generalizado, esto no es útil para navegadores no visuales.</dd>
- <dt>{{ htmlattrdef("marginheight") }} {{ obsolete_inline("html5") }} </dt>
+ <dt>{{ htmlattrdef("marginheight") }} {{ obsolete_inline("html5") }} </dt>
  <dd>La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes superior e inferior.</dd>
- <dt>{{ htmlattrdef("marginwidth") }} {{ obsolete_inline("html5") }} </dt>
+ <dt>{{ htmlattrdef("marginwidth") }} {{ obsolete_inline("html5") }} </dt>
  <dd>La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes izquierdo y derecho.</dd>
- <dt>{{ htmlattrdef("scrolling") }} {{ obsolete_inline("html5") }} </dt>
+ <dt>{{ htmlattrdef("scrolling") }} {{ obsolete_inline("html5") }} </dt>
  <dd>Indica cuándo el navegador debe proporcionar una barra de desplazamiento para el marco:
  <ul>
-  <li><code>auto</code>: Sólo cuando el contenido del marco es mayor que sus dimensiones.</li>
+  <li><code>auto</code>: Sólo cuando el contenido del marco es mayor que sus dimensiones.</li>
   <li><code>yes</code>: Muestra siempre una barra de desplazamiento.</li>
   <li><code>no</code>: No muestr la barra de desplazamiento nunca.</li>
  </ul>
@@ -191,8 +191,8 @@ original_slug: Web/HTML/Elemento/iframe
  <div class="blockIndicator note">
  <p>See {{bug(1318532)}} for exposing this to WebExtensions in Firefox.</p>
  </div>
- Makes the <code>&lt;iframe&gt;</code> act like a top-level browser window. See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API">Browser API</a> for details.<br>
- <strong>Available only to <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
+ Makes the <code>&lt;iframe&gt;</code> act like a top-level browser window. See <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API">Browser API</a> for details.<br>
+ <strong>Available only to <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
  <dt>{{ htmlattrdef("mozallowfullscreen") }} {{ non-standard_inline() }}</dt>
  <dd>In Gecko 9.0 or later, this attribute can be set to <code>true</code> if the frame is allowed to be placed into full screen mode by calling its {{ domxref("element.mozRequestFullScreen()") }} method. If this isn't set, the element can't be placed into full screen mode.</dd>
  <dt>{{ htmlattrdef("webkitallowfullscreen") }} {{ non-standard_inline() }}</dt>
@@ -207,15 +207,15 @@ original_slug: Web/HTML/Elemento/iframe
 
 <p>Inline frames, like {{HTMLElement("frame")}} elements, are included in the {{domxref("window.frames")}} pseudo-array.</p>
 
-<p>With the DOM {{domxref("HTMLIFrameElement")}} object, scripts can access the {{domxref("window")}} object of the framed resource via the {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}} property. The {{domxref("HTMLIFrameElement.contentDocument", "contentDocument")}} property refers to the <code>document</code> inside the <code>&lt;iframe&gt;</code>, same as <code>contentWindow.document</code>.</p>
+<p>With the DOM {{domxref("HTMLIFrameElement")}} object, scripts can access the {{domxref("window")}} object of the framed resource via the {{domxref("HTMLIFrameElement.contentWindow", "contentWindow")}} property. The {{domxref("HTMLIFrameElement.contentDocument", "contentDocument")}} property refers to the <code>document</code> inside the <code>&lt;iframe&gt;</code>, same as <code>contentWindow.document</code>.</p>
 
 <p>From the inside of a frame, a script can get a reference to its parent window with {{domxref("window.parent")}}.</p>
 
-<p>Script access to a frame's content is subject to the {{Glossary("same-origin policy")}}. Scripts cannot access most properties in other <code>window</code> objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent. Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.</p>
+<p>Script access to a frame's content is subject to the {{Glossary("same-origin policy")}}. Scripts cannot access most properties in other <code>window</code> objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent. Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Example1" name="Example1">Un &lt;iframe&gt; simple</h3>
+<h3 id="Example1" name="Example1">Un &lt;iframe&gt; simple</h3>
 
 <p>Un <code>&lt;iframe&gt;</code> en acción. Después de crear el marco, cuando el usuario hace clic en un botón, su título se muestra en una alerta.</p>
 
@@ -260,7 +260,7 @@ original_slug: Web/HTML/Elemento/iframe
   <tr>
    <td>{{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}}</td>
    <td>{{Spec2('Referrer Policy')}}</td>
-   <td>Added the <code>referrerpolicy</code> attribute.</td>
+   <td>Added the <code>referrerpolicy</code> attribute.</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-iframe-element', '&lt;iframe&gt;')}}</td>
@@ -280,12 +280,12 @@ original_slug: Web/HTML/Elemento/iframe
   <tr>
    <td>{{SpecName('Screen Orientation')}}</td>
    <td>{{Spec2('Screen Orientation')}}</td>
-   <td>Adds <code>allow-orientation-lock</code> to the <code>sandbox</code> attribute.</td>
+   <td>Adds <code>allow-orientation-lock</code> to the <code>sandbox</code> attribute.</td>
   </tr>
   <tr>
    <td>{{SpecName('Presentation','#sandboxing-and-the-allow-presentation-keyword','allow-presentation')}}</td>
    <td>{{Spec2('Presentation')}}</td>
-   <td>Adds <code>allow-presentation</code> to the <code>sandbox</code> attribute</td>
+   <td>Adds <code>allow-presentation</code> to the <code>sandbox</code> attribute</td>
   </tr>
  </tbody>
 </table>
@@ -293,7 +293,7 @@ original_slug: Web/HTML/Elemento/iframe
 <h2 id="Notes">Notes</h2>
 
 <div class="geckoVersionNote">
-<p>Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{ cssxref("border-radius") }}.</p>
+<p>Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, rendering of inline frames correctly respects the borders of their containing element when they're rounded using {{ cssxref("border-radius") }}.</p>
 </div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

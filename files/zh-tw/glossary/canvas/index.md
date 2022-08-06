@@ -12,7 +12,7 @@ translation_of: Glossary/Canvas
 
 ### 常規知識
 
-- {{Interwiki("wikipedia", "Canvas element", "Canvas")}} 維基百科
+- [Canvas](https://zh.wikipedia.org/wiki/Canvas_element) 維基百科
 
 ### 學習資源
 

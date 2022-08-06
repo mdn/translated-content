@@ -17,4 +17,4 @@ HTTP 是基于文本的 (所有的通信都以纯文本的形式进行) 以及�
 ## 补充知识
 
 - 在 MDN 上的 [HTTP](/zh-CN/docs/Web/HTTP)
-- 在维基百科上的 {{interwiki("wikipedia", "超文本传输协议", "HTTP")}}
+- 在维基百科上的 [HTTP](https://zh.wikipedia.org/wiki/超文本传输协议)

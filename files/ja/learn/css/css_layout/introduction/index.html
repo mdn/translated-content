@@ -90,11 +90,11 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <h2 id="The_display_property" name="The_display_property">display プロパティ</h2>
 
-<p>CSS でページレイアウトを実現するための主な方法は、<code>display</code> プロパティのすべての値です。 このプロパティにより、デフォルトの表示方法を変更することができます。 通常フローに属するすべての要素には <code>display</code> の値が設定されており、この値によって要素のデフォルトのふるまいが決まります。 例えば、英語の文書内で{{htmlelement("p", "段落")}}が上から下へ表示されるのは、<code>display: block</code> でスタイルが設定されているためです。 段落内のテキストの周囲にリンクを作成しても、そのリンクは残りのテキストとインラインのままで、改行しません。 これは、{{htmlelement("a")}} 要素がデフォルトで <code>display: inline</code> であるためです。</p>
+<p>CSS でページレイアウトを実現するための主な方法は、<code>display</code> プロパティのすべての値です。 このプロパティにより、デフォルトの表示方法を変更することができます。 通常フローに属するすべての要素には <code>display</code> の値が設定されており、この値によって要素のデフォルトのふるまいが決まります。 例えば、英語の文書内で{{htmlelement("p", "段落")}}が上から下へ表示されるのは、<code>display: block</code> でスタイルが設定されているためです。 段落内のテキストの周囲にリンクを作成しても、そのリンクは残りのテキストとインラインのままで、改行しません。 これは、{{htmlelement("a")}} 要素がデフォルトで <code>display: inline</code> であるためです。</p>
 
-<p>このような display のデフォルトのふるまいは変更できます。 例えば、{{htmlelement("li")}} 要素はデフォルトで <code>display: block</code> です。 つまり、英語の文書ではリスト項目は上下に表示されます。 <code>display</code> の値を <code>inline</code> に変更した場合、単語が文中で行うように、それらは互いに隣接して表示されます。 任意の要素に対して <code>display</code> の値を変更できるということは、どのように見えるかについて心配することなく、<ruby>意味論的<rp>(</rp><rt>semantic</rt><rp>)</rp></ruby>な視点で HTML 要素を選択できるということです。 見た目はあなたが変えることができるものです。</p>
+<p>このような display のデフォルトのふるまいは変更できます。 例えば、{{htmlelement("li")}} 要素はデフォルトで <code>display: block</code> です。 つまり、英語の文書ではリスト項目は上下に表示されます。 <code>display</code> の値を <code>inline</code> に変更した場合、単語が文中で行うように、それらは互いに隣接して表示されます。 任意の要素に対して <code>display</code> の値を変更できるということは、どのように見えるかについて心配することなく、<ruby>意味論的<rp>(</rp><rt>semantic</rt><rp>)</rp></ruby>な視点で HTML 要素を選択できるということです。 見た目はあなたが変えることができるものです。</p>
 
-<p>ひとつの項目を <code>block</code> から <code>inline</code> に、またはその逆に切り替えてデフォルトの表示方法を変更することに加えて、より大きい単位で作用するいくつかのレイアウト手法を <code>display</code> の値を通じて使い始めることができます。 ただし、これらを使用するときは、通常、追加のプロパティを指定する必要があります。 要素のレイアウトを検討する目的において最も重要な値は <code>display: flex</code> と <code>display: grid</code> の2つです。</p>
+<p>ひとつの項目を <code>block</code> から <code>inline</code> に、またはその逆に切り替えてデフォルトの表示方法を変更することに加えて、より大きい単位で作用するいくつかのレイアウト手法を <code>display</code> の値を通じて使い始めることができます。 ただし、これらを使用するときは、通常、追加のプロパティを指定する必要があります。 要素のレイアウトを検討する目的において最も重要な値は <code>display: flex</code> と <code>display: grid</code> の2つです。</p>
 
 <h2 id="Flexbox" name="Flexbox">フレックスボックス</h2>
 
@@ -135,7 +135,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>フレックスコンテナに適用できる上記のプロパティに加えて、フレックス項目に適用できるプロパティがあります。 これらのプロパティは、とりわけ、項目のたわみ方を変えることができ、利用可能なスペースに収まるように項目を拡大および縮小することを可能にします。</p>
 
-<p>この単純な例として、すべての子項目に <code>1</code> の値の {{cssxref("flex")}} プロパティを追加できます。 これにより、末尾にスペースを残すのではなく、すべての項目が拡大してコンテナがいっぱいになります。 より多くのスペースがあるならば、項目はより広くなり、スペースが少ないと狭くなります。 さらに、マークアップに別の要素を追加すると、項目はすべてスペースを空けるために小さくなります — サイズに関係なく、同じ大きさのスペースを占めるようにサイズが調整されます。</p>
+<p>この単純な例として、すべての子項目に <code>1</code> の値の {{cssxref("flex")}} プロパティを追加できます。 これにより、末尾にスペースを残すのではなく、すべての項目が拡大してコンテナがいっぱいになります。 より多くのスペースがあるならば、項目はより広くなり、スペースが少ないと狭くなります。 さらに、マークアップに別の要素を追加すると、項目はすべてスペースを空けるために小さくなります — サイズに関係なく、同じ大きさのスペースを占めるようにサイズが調整されます。</p>
 
 <div id="Flex_2">
 <div class="hidden">
@@ -277,9 +277,9 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 <p>{{cssxref("float")}} プロパティには次の4つの可能な値があります。</p>
 
 <ul>
- <li><code>left</code> — 要素を左に浮かべる。</li>
- <li><code>right</code> — 要素を右に浮かべる。</li>
- <li><code>none</code> — まったく浮動しないことを指定する。 これがデフォルト値です。</li>
+ <li><code>left</code> — 要素を左に浮かべる。</li>
+ <li><code>right</code> — 要素を右に浮かべる。</li>
+ <li><code>none</code> — まったく浮動しないことを指定する。 これがデフォルト値です。</li>
  <li><code>inherit</code> — <code>float</code> プロパティの値がこの要素の親要素から継承されるべきであることを指定します。</li>
 </ul>
 
@@ -608,7 +608,7 @@ p {
 
 <p>今、私たちの例のための CSS。 {{cssxref("display")}} プロパティの使用方法を除いて、ほとんどの CSS はかなり普通のものです。 {{htmlelement("form")}}、{{htmlelement("div")}}、{{htmlelement("label")}} と {{htmlelement("input")}} は、それぞれ表、表の行、表のセルのように表示されるように指示しています — 基本的に、それらは HTML 表のマークアップのようにふるまい、デフォルトでラベルと入力がうまく並ぶようにします。 あとは、サイズやマージンなどを少し追加するだけで、すべてが少し見栄えよくなります。</p>
 
-<p>あなたは、キャプションの段落に  <code>display：table-caption;</code> が与えられていることに気付くでしょう — これは表の {{htmlelement("caption")}} のようにふるまいます — そして <code>caption-side: bottom;</code> により、マークアップがソースの <code>&lt;input&gt;</code> 要素の前にある場合でも、スタイル設定の目的でキャプションが表の下部に表示されるようにします。 これにより、かなりの柔軟性が得られます。</p>
+<p>あなたは、キャプションの段落に  <code>display：table-caption;</code> が与えられていることに気付くでしょう — これは表の {{htmlelement("caption")}} のようにふるまいます — そして <code>caption-side: bottom;</code> により、マークアップがソースの <code>&lt;input&gt;</code> 要素の前にある場合でも、スタイル設定の目的でキャプションが表の下部に表示されるようにします。 これにより、かなりの柔軟性が得られます。</p>
 
 <pre class="brush: css">html {
   font-family: sans-serif;

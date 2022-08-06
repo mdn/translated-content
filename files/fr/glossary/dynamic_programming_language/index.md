@@ -17,4 +17,4 @@ Ceci est opposé aux langages de programmation dits statiques, dans lesquels de 
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Langage_de_programmation_dynamique","Langage de programmation dynamique")}} sur Wikipedia
+- [Langage de programmation dynamique](https://fr.wikipedia.org/wiki/Langage_de_programmation_dynamique) sur Wikipédia

@@ -9,14 +9,14 @@ translation_of: Web/HTTP/Methods/POST
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><strong>HTTP-метод <code>POST</code></strong> предназначен для отправки данных на сервер. Тип тела запроса указывается в заголовке {{HTTPHeader("Content-Type")}}.</p>
+<p><strong>HTTP-метод <code>POST</code></strong> предназначен для отправки данных на сервер. Тип тела запроса указывается в заголовке {{HTTPHeader("Content-Type")}}.</p>
 
-<p>Разница между {{HTTPMethod("PUT")}} и <code>POST</code> состоит в том, что <code>PUT</code> является идемпотентным: повторное его применение даёт тот же результат, что и при первом применении (то есть у метода нет <em>побочных эффектов</em>), тогда как повторный вызов одного и того же метода <code>POST</code> может иметь такие эффекты, как например, оформление одного и того же заказа несколько раз.</p>
+<p>Разница между {{HTTPMethod("PUT")}} и <code>POST</code> состоит в том, что <code>PUT</code> является идемпотентным: повторное его применение даёт тот же результат, что и при первом применении (то есть у метода нет <em>побочных эффектов</em>), тогда как повторный вызов одного и того же метода <code>POST</code> может иметь такие эффекты, как например, оформление одного и того же заказа несколько раз.</p>
 
 <p><span id="result_box" lang="ru"><span title="A POST request is typically sent via an HTML form and results in a change on the server.">Запрос <code>POST</code> обычно отправляется через форму HTML и приводит к изменению на сервере. </span><span title="In this case, the content type is selected by putting the adequate string in the enctype attribute of the &lt;form> element or the formenctype attribute of the &lt;input> or &lt;button> elements:">В этом случае тип содержимого выбирается путём размещения соответствующей строки в атрибуте {{htmlattrxref ("enctype", "form")}} элемента {{HTMLElement ("form")}} или {{htmlattrxref ("formenctype", "input")}} атрибута элементов {{HTMLElement ("input")}} или {{HTMLElement ("button")}}:</span></span></p>
 
 <ul>
- <li><span title="application/x-www-form-urlencoded: the values are encoded in key-value tuples separated by '&amp;', with a '=' between the key and the value."><code>application/x-www-form-urlencoded</code>: значения кодируются в кортежах с ключом, разделённых символом <code>'&amp;'</code>, с <code>'='</code> между ключом и значением. </span><span title="Non-alphanumeric characters are percent encoded: this is the reason why this type is not suitable to use with binary data (use multipart/form-data instead)">Не буквенно-цифровые символы - {{glossary ("percent encoded")}}: это причина, по которой этот тип не подходит для использования с двоичными данными (вместо этого используйте <code>multipart/form-data</code>)</span></li>
+ <li><span title="application/x-www-form-urlencoded: the values are encoded in key-value tuples separated by '&amp;', with a '=' between the key and the value."><code>application/x-www-form-urlencoded</code>: значения кодируются в кортежах с ключом, разделённых символом <code>'&amp;'</code>, с <code>'='</code> между ключом и значением. </span><span title="Non-alphanumeric characters are percent encoded: this is the reason why this type is not suitable to use with binary data (use multipart/form-data instead)">Не буквенно-цифровые символы - {{glossary ("percent encoded")}}: это причина, по которой этот тип не подходит для использования с двоичными данными (вместо этого используйте <code>multipart/form-data</code>)</span></li>
  <li><code><span title="multipart/form-data">multipart/form-data</span></code>: каждое значение посылается как блок данных ("body part"), с заданными пользовательским клиентом разделителем ("boundary"), разделяющим каждую часть. Эти ключи даются в заголовки <code>Content-Disposition</code> каждой части</li>
  <li><code><span title="text/plain">text/plain</span></code></li>
 </ul>
@@ -54,7 +54,7 @@ translation_of: Web/HTTP/Methods/POST
    <td>Только если включена информация о свежести сообщения</td>
   </tr>
   <tr>
-   <th scope="row">Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a></th>
+   <th scope="row">Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a></th>
    <td>Да</td>
   </tr>
  </tbody>
@@ -75,7 +75,7 @@ Content-Length: 13
 
 say=Hi&amp;to=Mom</pre>
 
-<p>Форма запроса, используя <code>multipart/form-data</code> content type:</p>
+<p>Форма запроса, используя <code>multipart/form-data</code> content type:</p>
 
 <pre>POST /test.html HTTP/1.1
 Host: example.org

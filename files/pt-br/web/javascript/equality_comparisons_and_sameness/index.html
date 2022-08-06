@@ -51,21 +51,21 @@ console.log(obj === undefined); // false
 
 <h2 id="Igualdade_ampla_usando">Igualdade ampla usando ==</h2>
 
-<p>Igualdade ampla compara dois valores para a igualdade, <em>após</em> converter ambos os valores para um tipo comum.   Após as conversões (um ou ambos os lados podem sofrer conversões), a comparação de igualdade final é realizada exatamente como <code>===</code> executa.  Igualdade ampla é <em>simétrica</em>: <code>A == B</code> sempre tem semântica idêntica à <code>B == A</code> para quaisquer valores de <code>A</code> e <code>B</code>. </p>
+<p>Igualdade ampla compara dois valores para a igualdade, <em>após</em> converter ambos os valores para um tipo comum.   Após as conversões (um ou ambos os lados podem sofrer conversões), a comparação de igualdade final é realizada exatamente como <code>===</code> executa.  Igualdade ampla é <em>simétrica</em>: <code>A == B</code> sempre tem semântica idêntica à <code>B == A</code> para quaisquer valores de <code>A</code> e <code>B</code>. </p>
 
 <p>A comparação de igualdade é realizado da seguinte forma para os operandos dos vários tipos:</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="row"><code> </code></th>
+   <th scope="row"><code> </code></th>
    <th colspan="7" scope="col" style="text-align: center;"><code>Operand B</code></th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <th scope="row"><code> </code></th>
-   <td><code> </code></td>
+   <th scope="row"><code> </code></th>
+   <td><code> </code></td>
    <td style="text-align: center;">Undefined</td>
    <td style="text-align: center;">Null</td>
    <td style="text-align: center;">Number</td>
@@ -135,7 +135,7 @@ console.log(obj === undefined); // false
 
 <p>Na tabela acima, <code>ToNumber(A)</code> tenta converter seu argumento para um número antes de comparação. Seu comportamento é equivalente a <code>+A</code> (o operador + unário). <code>ToPrimitive(A)</code> tenta converter seu argumento de objeto para um valor primitivo, tentando invocar sequências diferentes de <code>A.toString</code> e<code> A.valueOf</code> métodos em <code>A</code>.</p>
 
-<p>Tradicionalmente, e de acordo com ECMAScript, todos os objetos são amplamente desiguais a <code>undefined</code> e <code>null</code>. Mas a maioria dos navegadores permitem uma classe muito limitada de objetos (especificamente, o objeto <code>document.all</code> para qualquer página), em alguns contextos, para agir como se eles <em>emulassem</em> o valor <code>undefined</code>. Igualdade ampla é um desses contexto. Portanto, o método <code>IsFalsy(A)</code> é avaliada como verdadeira se, e somente se, A for um objeto que <em> emula</em> <code>undefined</code>. Em todos os outros casos, um objeto não é amplamente igual a <code>undefined</code> ou <code>null</code>.</p>
+<p>Tradicionalmente, e de acordo com ECMAScript, todos os objetos são amplamente desiguais a <code>undefined</code> e <code>null</code>. Mas a maioria dos navegadores permitem uma classe muito limitada de objetos (especificamente, o objeto <code>document.all</code> para qualquer página), em alguns contextos, para agir como se eles <em>emulassem</em> o valor <code>undefined</code>. Igualdade ampla é um desses contexto. Portanto, o método <code>IsFalsy(A)</code> é avaliada como verdadeira se, e somente se, A for um objeto que <em> emula</em> <code>undefined</code>. Em todos os outros casos, um objeto não é amplamente igual a <code>undefined</code> ou <code>null</code>.</p>
 
 <pre class="brush: js"><code>
 var num = 0;
@@ -173,7 +173,7 @@ function attemptMutation(v)
 }
 </code></code></pre>
 
-<p><code><code><code>Object.defineProperty</code> </code></code>irá disparar uma exceção ao tentar alterar uma propriedade imutável que realmente iria alterá-lo, mas ele não faz nada se nenhuma mudança real for solicitada.  Se <code>v</code> for <code>-0</code>, nenhuma mudança foi solicitada, e nenhum erro será disparado.   Mas se <code>v</code> for <code>+0</code>, <code>Number.NEGATIVE_ZERO</code> não teria mais o seu valor imutável.   Internamente, quando uma propriedade imutável é redefinida, o valor recém-especificado é comparado com o valor atual usando a igualdade de mesmo valor.</p>
+<p><code><code><code>Object.defineProperty</code> </code></code>irá disparar uma exceção ao tentar alterar uma propriedade imutável que realmente iria alterá-lo, mas ele não faz nada se nenhuma mudança real for solicitada.  Se <code>v</code> for <code>-0</code>, nenhuma mudança foi solicitada, e nenhum erro será disparado.   Mas se <code>v</code> for <code>+0</code>, <code>Number.NEGATIVE_ZERO</code> não teria mais o seu valor imutável.   Internamente, quando uma propriedade imutável é redefinida, o valor recém-especificado é comparado com o valor atual usando a igualdade de mesmo valor.</p>
 
 <p>Igualdade de mesmo valor é fornecida pelo método <code><a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is" title="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a>.</code></p>
 

@@ -7,4 +7,4 @@ translation_of: Glossary/Crawler
 
 ## 深入理解
 
-- 維基百科的 {{Interwiki("wikipedia", "網路爬蟲")}}
+- 維基百科的 [網路爬蟲](https://zh.wikipedia.org/wiki/網路爬蟲)

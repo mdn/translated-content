@@ -14,4 +14,4 @@ translation_of: Glossary/Viewport
 
 ### 常规知识
 
-- {{Interwiki("wikipedia", "Viewport")}} 维基百科
+- [Viewport](https://zh.wikipedia.org/wiki/Viewport) 维基百科

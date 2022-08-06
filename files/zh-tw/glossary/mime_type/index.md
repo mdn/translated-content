@@ -16,7 +16,7 @@ translation_of: Glossary/MIME_type
 
 ### 基礎知識
 
-- 維基百科上的 {{interwiki("wikipedia", "Internet media type", "Internet media type")}}
+- 維基百科上的 [Internet media type](https://zh.wikipedia.org/wiki/Internet_media_type)
 
 ### 技術參考
 

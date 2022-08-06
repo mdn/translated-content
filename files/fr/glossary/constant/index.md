@@ -16,4 +16,4 @@ Comme les variables, certaines constantes sont désignées par des identificateu
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Constante")}} sur Wikipédia
+- [Constante](https://fr.wikipedia.org/wiki/Constante_(programmation_informatique)) sur Wikipédia

@@ -58,7 +58,7 @@ Object.isSealed(hasProp); // === false
 // そこですべてのプロパティを設定変更不可にすると、
 // オブジェクトは封印状態になります
 Object.defineProperty(hasProp, 'fee', {
-  configurable: false
+  configurable: false
 });
 Object.isSealed(hasProp); // === true
 

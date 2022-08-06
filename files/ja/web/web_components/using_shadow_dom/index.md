@@ -147,7 +147,7 @@ icon.appendChild(img);
 
 ### シャドウ DOM のスタイル付け
 
-<p class="brush: js">そのあと、 {{htmlelement("style")}} 要素を作り CSS でスタイルを付けます。</p>
+<p class="brush: js">そのあと、 {{htmlelement("style")}} 要素を作り CSS でスタイルを付けます。</p>
 
 ```js
 // CSS を生成してシャドウ DOM に適用
