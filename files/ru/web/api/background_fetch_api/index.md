@@ -48,10 +48,9 @@ if (!('BackgroundFetchManager' in self)) {
 }
 ```
 
-Using Background Fetch requires a registered service worker. Then call `backgroundFetch.fetch()` to perform a fetch. This
-returns a promise that resolves with a {{domxref("BackgroundFetchRegistration")}}.
+Использование Background Fetch требует зарегистрированного сервис-воркера. Затем вызов `backgroundFetch.fetch()` инициирует запрос. Этот вызов возвращает промис, который разрешается с {{domxref("BackgroundFetchRegistration")}}.
 
-A background fetch may fetch a number of files. In our example the fetch requests an MP3 and a JPEG. This enables a package of files that the user sees as one item (for example a podcast and artwork) to be downloaded at once.
+Background Fetch может запрашивать несколько файлов. В нашем примере происходит запрос MP3 и JPEG файлов. Это позволяет скачать сразу пакет файлов, которые пользователь видит как один элемент (например, подкаст и обложку).
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
@@ -73,17 +72,17 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 });
 ```
 
-You can find a demo application which implements Background Fetch [here](https://glitch.com/edit/#!/bgfetch-http203?path=public%2Fclient.js%3A191%3A45).
+Вы можете найти демонстрационное приложение, которое реализует Background Fetch [здесь](https://glitch.com/edit/#!/bgfetch-http203?path=public%2Fclient.js%3A191%3A45).
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
-## Browser compatibility
+## Браузерная совместимость
 
 {{Compat}}
 
-## See also
+## Смотри также
 
 - [Introducing Background Fetch](https://developer.chrome.com/blog/background-fetch/)
 - [Background Fetch - HTTP 203](https://www.youtube.com/watch?v=cElAoxhQz6w)
