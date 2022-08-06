@@ -1,5 +1,5 @@
 ---
-title: O projeto MDN
+title: O projeto MDN Web Docs
 slug: MDN
 tags:
   - Landing
