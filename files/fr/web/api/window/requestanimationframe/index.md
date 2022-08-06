@@ -17,7 +17,7 @@ Cette méthode doit être appelée dès que le code est prêt à rafraîchir l'a
 
 La fonction de rappel reçoit un seul argument, une valeur [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp), qui indique le temps actuel (exprimé en nombre de millisecondes écoulées depuis [l'origine temporelle](/fr/docs/Web/API/DOMHighResTimeStamp#lorigine_temporelle)). Lorsque plusieurs fonctions de rappel sont mises en attente et que `requestAnimationFrame()` commence à se déclencher pour une image donnée, chaque fonction reçoit le même horodatage, même si du temps s'est écoulé pendant le calcul de la fonction de rappel précédente (dans l'exemple ci-après, on anime uniquement l'image lorsque l'horodatage change, c'est-à-dire à la première fonction de rappel). Cette valeur temporelle est un nombre décimal, exprimant une valeur en millisecondes, avec une précision minimale de 1ms (1000 µs).
 
-> **Attention :** Assurez vous de toujours utiliser le premier argument (ou une autre méthode pour obtenir le temps courant=) afin de calculer la progression nécessaire de l'animation pour une <i lang="en">frame</i>. Sinon, l'animation s'exécutera plus rapidement sur les écrans avec une fréquence de rafraîchissement plus élevée. Voyez l'exemple ci-après pour une technique permettant de faire ce calcul.
+> **Attention :** Assurez-vous de toujours utiliser le premier argument (ou une autre méthode pour obtenir le temps courant) afin de calculer la progression nécessaire de l'animation pour une <i lang="en">frame</i>. Sinon, l'animation s'exécutera plus rapidement sur les écrans avec une fréquence de rafraîchissement plus élevée. Voyez l'exemple ci-après pour une technique permettant de faire ce calcul.
 
 ## Syntaxe
 
@@ -36,12 +36,12 @@ Une valeur entière de type `long` qui est un identifiant unique pour la requêt
 
 ## Exemple
 
-Dans cet exemple, un élément est animé pour 2 secondes (2000 milliseconds). L'élément se déplace à une vitesse de 0.1px/ms vers la droite. Sa position relative (en pixels CSS) peut donc être calculée en fonction du temps écoulé entre le début de l'animation (en millisecondes) et `0.1 * ecoule`. La position finale de l'élément est située 200px (`0.1 * 2000`) à droite de sa position initiale.
+Dans cet exemple, un élément est animé pour 2 secondes (2000 millisecondes). L'élément se déplace à une vitesse de 0.1px/ms vers la droite. Sa position relative (en pixels CSS) peut donc être calculée en fonction du temps écoulé entre le début de l'animation (en millisecondes) et `0.1 * ecoule`. La position finale de l'élément est située 200px (`0.1 * 2000`) à droite de sa position initiale.
 
 ```js
 const element = document.getElementById('un-élément-à-animer');
 let debut, tempsPrecedent;
-let fini = false
+let fini = false;
 
 function iteration(chrono) {
   if (debut === undefined) {
