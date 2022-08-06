@@ -117,7 +117,7 @@ function flatStack(input) {
     }
   }
   // On inverse le résultat pour revenir
-  // à l 'ordre de l'entrée
+  // à l'ordre de l'entrée
   return res.reverse();
 }
 
