@@ -45,7 +45,7 @@ mode 的初始值是在使用 `mediasource.addsourcebuffer()` 创建 `sourcebuff
 
 ## 示例
 
-在此片段中，如果当前 `sourceBuffer` mode 的值为 `'segments'`，则将更改为 `'sequence'`，从而将播放顺序更改为媒体片段的附加顺序。
+在此片段中，如果当前 `sourceBuffer` mode 的值为 `'segments'`，则将其更改为 `'sequence'`，从而将播放顺序更改为媒体片段的附加顺序。
 
 ```js
 const curMode = sourceBuffer.mode;
