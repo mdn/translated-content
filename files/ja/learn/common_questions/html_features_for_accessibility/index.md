@@ -1,5 +1,5 @@
 ---
-title: アクセシビリティをよくする HTML の機能にはどんなものがある？
+title: アクセシビリティを推進する HTML の機能とは？
 slug: Learn/Common_questions/HTML_features_for_accessibility
 tags:
   - Accessibility
@@ -10,45 +10,54 @@ tags:
 translation_of: Learn/Common_questions/HTML_features_for_accessibility
 ---
 
-<p class="summary">以下のコンテンツは、さまざまな障害を持つ人々にとってウェブページをよりアクセシブルにするために使用できる HTML の特定の機能について説明しています。</p>
 
-<h2 id="Tabbing" name="Tabbing">タブ移動</h2>
+以下のコンテンツは、さまざまな障害を持つ人々にとってウェブページのアクセシビリティをより高めるために使用できる HTML の特定の機能について説明しています。
 
-<p>ポインティングデバイスを使用しない、または使用できないユーザーは、リンクを <kbd>Tab</kbd> で移動できます。なので、リンクは論理的なタブ移動の順序になっている必要があります。<code>tabindex</code> 属性を使用すると、この順序を定義できます。HTML が線形である場合(そうあるべきなのですが)、論理的なタブ移動の順序は自動的に正しい位置に配置されるはずです。</p>
+## タブ移動
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="here.html" tabindex="1"&gt;Here&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="there.html" tabindex="3"&gt;There&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="anywhere.html" tabindex="2"&gt;Anywhere&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+ポインティングデバイスを使用しない、または使用できないユーザーは、リンク間を <kbd>Tab</kbd> で移動できます。ですから、リンクは論理的なタブ移動の順序になっている必要があります。 `tabindex` 属性を使用すると、この順序を定義することができます。 HTML が線形である場合（そうあるべきなのですが）、論理的なタブ移動の順序は自動的に正しい位置に配置されるはずです。
 
-<p>この例（これは純粋にデモンストレーションとして使用されています - こうはしないでください）では、タブは "Here" から "Anywhere" 、"There" の順にジャンプします。</p>
+```html
+<ul>
+  <li><a href="here.html" tabindex="1">Here</a></li>
+  <li><a href="there.html" tabindex="3">There</a></li>
+  <li><a href="anywhere.html" tabindex="2">Anywhere</a></li>
+</ul>
+```
 
-<h2 id="Link_Titles" name="Link_Titles">リンクタイトル</h2>
+この例では（これは純粋にデモンストレーションとして使用されています - こうはしないでください）、タブは "Here" から "Anywhere" 、"There" の順にジャンプします。
 
-<p>自己記述的ではないリンクがある場合、またはリンク先がより詳細に説明されていることでメリットが得られる場合は、<code>title</code> 属性を使用してリンクに情報を追加できます。</p>
+## リンクタイトル
 
-<pre class="brush: html">&lt;p&gt;I'm really bad at writing link text. &lt;a href="inept.html" title="Why I'm rubbish at writing link text: An explanation and an apology."&gt;Click here&lt;/a&gt; to find out more.&lt;/p&gt;</pre>
+自己説明的でないリンクがある場合や、リンク先をより詳細に説明をすることで好ましいことがある場合、`title`属性を使用してリンクに情報を追加することができます。
 
-<h2 id="Access_Keys" name="Access_Keys">アクセスキー</h2>
+```html
+<p>I'm really bad at writing link text. <a href="inept.html" title="Why I'm rubbish at writing link text: An explanation and an apology.">Click here</a> to find out more.</p>
+```
 
-<p><em>アクセスキー</em>を使用すると、<em>キーボードショートカット</em>をリンクに割り当てることができ、ナビゲーションが簡単になります。通常、ユーザーが <kbd>Alt</kbd> キーまたは <kbd>Ctrl</kbd> キーを押しながらアクセスキーを押すとフォーカスが移動します。正確なキーの組み合わせはプラットフォームによって変わります。</p>
+## アクセスキー
 
-<pre class="brush: html">&lt;a href="somepage.html" accesskey="s"&gt;Some page&lt;/a&gt;</pre>
+**アクセスキー**を使用すると、**キーボードショートカット**をリンクに割り当てることができ、ナビゲーションが簡単になります。通常、ユーザーが <kbd>Alt</kbd> キーまたは <kbd>Ctrl</kbd> キーを押しながらアクセスキーを押すとフォーカスが移動します。正確なキーの組み合わせはプラットフォームによって変わります。
 
-<h2 id="Skip_Links" name="Skip_Links">スキップリンク</h2>
+```html
+<a href="somepage.html" accesskey="s">Some page</a>
+```
 
-<p>タブ移動を補助するために、ユーザーがあなたのウェブページの大きな塊を飛び越えることを可能にするリンクを提供することができます。たとえば、ユーザーが多すぎるナビゲーションリンクを飛び越えて、すべてのリンクを巡回するのではなくページのメインコンテンツを読むことができるようにしたい場合があります。</p>
+## スキップリンク
 
-<pre class="brush: html">&lt;header&gt;
-  &lt;h1&gt;The Heading&lt;/h1&gt;
-  &lt;a href="#content"&gt;Skip to content&lt;/a&gt;
-&lt;/header&gt;
+タブ移動を補助するために、ユーザーがあなたのウェブページの大きな塊を飛び越えることを可能にするリンクを提供することができます。たとえば、ユーザーが多すぎるナビゲーションリンクを飛び越えて、すべてのリンクを巡回するのではなくページのメインコンテンツを読むことができるようにしたい場合があります。
 
-&lt;nav&gt;
-  &lt;!-- navigation stuff --&gt;
-&lt;/nav&gt;
+```html
+<header>
+  <h1>The Heading</h1>
+  <a href="#content">コンテンツまでスキップ</a>
+</header>
 
-&lt;section id="content"&gt;
-  &lt;!--your content --&gt;
-&lt;/section&gt;</pre>
+<nav>
+  <!-- navigation stuff -->
+</nav>
+
+<section id="content">
+  <!--your content -->
+</section>
+```
