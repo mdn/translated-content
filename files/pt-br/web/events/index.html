@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/Events
 ---
-<p><span class="seoSummary">Eventos Dom (Dom Events) são utilizados para notificar o código de novidades durante a navegação do usuário. Cada evento é representado por um objeto que é baseado na interface {{domxref("Event")}}, e pode ter campos customizados adicionados e/ou funções usadas para obter informações adicionais sobre o que aconteceu. Eventos podem representar desde interações básicas do usuário (cliques, rolagem da página...) até notificações automáticas de novidades no DOM. </span></p>
+<p><span class="seoSummary">Eventos Dom (Dom Events) são utilizados para notificar o código de novidades durante a navegação do usuário. Cada evento é representado por um objeto que é baseado na interface {{domxref("Event")}}, e pode ter campos customizados adicionados e/ou funções usadas para obter informações adicionais sobre o que aconteceu. Eventos podem representar desde interações básicas do usuário (cliques, rolagem da página...) até notificações automáticas de novidades no DOM. </span></p>
 
 <p>Esse artigo apresenta uma lista de eventos que podem ser enviados; alguns são padrões definidos em especificações oficiais, enquanto outros são eventos utilizados internamente por navegadores específicos; por exemplo, eventos específicos da Mozilla são organizados de modo que plugins e complementos podem usá-los para interagir com o navegador.</p>
 
@@ -53,7 +53,7 @@ translation_of: Web/Events
  </tbody>
 </table>
 
-<h3 id="Rede">Rede </h3>
+<h3 id="Rede">Rede </h3>
 
 <table>
  <thead>
@@ -86,11 +86,11 @@ translation_of: Web/Events
  <tbody>
   <tr>
    <td>{{Event("focus")}}</td>
-   <td>O elemento recebeu o foco (<code>False </code>para Bubbles)</td>
+   <td>O elemento recebeu o foco (<code>False </code>para Bubbles)</td>
   </tr>
   <tr>
    <td>{{Event("blur")}}</td>
-   <td>O elemento perdeu o foco (<code>False </code>para Bubbles)</td>
+   <td>O elemento perdeu o foco (<code>False </code>para Bubbles)</td>
   </tr>
  </tbody>
 </table>
@@ -200,7 +200,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{Event("transitionrun")}}</td>
-   <td>A transição CSS começou (antes de qualquer delay).</td>
+   <td>A transição CSS começou (antes de qualquer delay).</td>
   </tr>
  </tbody>
 </table>
@@ -378,7 +378,7 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{Event("click")}}</td>
-   <td>Um botão, ou dispositivo apontador (QUALQUER, mas em breve será apenas primário) foi clicado e solto.</td>
+   <td>Um botão, ou dispositivo apontador (QUALQUER, mas em breve será apenas primário) foi clicado e solto.</td>
   </tr>
   <tr>
    <td>{{Event("contextmenu")}}</td>
@@ -390,15 +390,15 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{Event("mousedown")}}</td>
-   <td>O mouse, ou dispositivo apontador está pressionando um elemento</td>
+   <td>O mouse, ou dispositivo apontador está pressionando um elemento</td>
   </tr>
   <tr>
    <td>{{Event("mouseenter")}}</td>
-   <td>O mouse, ou dispositivo apontador está acima de um elemento que tem um listener ativo</td>
+   <td>O mouse, ou dispositivo apontador está acima de um elemento que tem um listener ativo</td>
   </tr>
   <tr>
    <td>{{Event("mouseleave")}}</td>
-   <td>O mouse, ou dispositivo apontador foi removido do elemento com um listener</td>
+   <td>O mouse, ou dispositivo apontador foi removido do elemento com um listener</td>
   </tr>
   <tr>
    <td>{{Event("mousemove")}}</td>
@@ -506,11 +506,11 @@ translation_of: Web/Events
   </tr>
   <tr>
    <td>{{Event("durationchange")}}</td>
-   <td>O atributo <code>duration</code> foi atualizado.</td>
+   <td>O atributo <code>duration</code> foi atualizado.</td>
   </tr>
   <tr>
    <td>{{Event("emptied")}}</td>
-   <td>Ausencia de conteúdo. Por exemplo, este evento é enviado se a mídia foi carregada (ou parcialmente) e o método <code><a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal">load()</a></code> foi chamado para recarregar o conteúdo.</td>
+   <td>Ausencia de conteúdo. Por exemplo, este evento é enviado se a mídia foi carregada (ou parcialmente) e o método <code><a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal">load()</a></code> foi chamado para recarregar o conteúdo.</td>
   </tr>
   <tr>
    <td>{{Event("ended")}}</td>
@@ -665,7 +665,7 @@ translation_of: Web/Events
  <tbody>
   <tr>
    <td><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event">abort</a></code></td>
-   <td>Uma requisição ao DOM foi cancelada, utilizando  {{DOMxRef("AbortController.abort()")}}.</td>
+   <td>Uma requisição ao DOM foi cancelada, utilizando  {{DOMxRef("AbortController.abort()")}}.</td>
   </tr>
  </tbody>
 </table>
@@ -676,7 +676,7 @@ translation_of: Web/Events
 
 <h2 id="Eventos_padrão">Eventos padrão</h2>
 
-<p>Esses eventos estão definidos nas especificações oficiais da Web, e são comum à todos o browsers. Cada evento é listado junto com a interface que representa o objeto enviado aos destinatários do evento (para que você possa encontrar informações sobre quais dados são fornecidos com cada evento), bem como um link para a especificação ou especificações que definem o evento.</p>
+<p>Esses eventos estão definidos nas especificações oficiais da Web, e são comum à todos o browsers. Cada evento é listado junto com a interface que representa o objeto enviado aos destinatários do evento (para que você possa encontrar informações sobre quais dados são fornecidos com cada evento), bem como um link para a especificação ou especificações que definem o evento.</p>
 
 <table class="standard-table" style="width: 100%;">
  <tbody>
@@ -1044,7 +1044,7 @@ translation_of: Web/Events
    <td>{{event("emptied")}}</td>
    <td>{{domxref("Event")}}</td>
    <td style="white-space: nowrap;"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-emptied">HTML5 media</a></td>
-   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> method is called to reload it.</td>
+   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> method is called to reload it.</td>
   </tr>
   <tr>
    <td>{{event("ended")}}</td>
@@ -2509,7 +2509,7 @@ translation_of: Web/Events
 
 <h3 id="Database_events">Database events</h3>
 
-<p><code><a href="/en-US/docs/Web/Reference/Events/abort_indexedDB">abort</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/complete_indexedDB">complete</a></code>, {{event("error")}} (<a href="/en-US/docs/Web/Reference/Events/error">link</a>), <code><a href="/en-US/docs/Web/Reference/Events/success_indexedDB">success</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></p>
+<p><code><a href="/en-US/docs/Web/Reference/Events/abort_indexedDB">abort</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/blocked_indexedDB">blocked</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/complete_indexedDB">complete</a></code>, {{event("error")}} (<a href="/en-US/docs/Web/Reference/Events/error">link</a>), <code><a href="/en-US/docs/Web/Reference/Events/success_indexedDB">success</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB">upgradeneeded</a></code>, <code><a href="/en-US/docs/Web/Reference/Events/versionchange_indexedDB">versionchange</a></code></p>
 
 <h3 id="Document_events">Document events</h3>
 
@@ -2537,7 +2537,7 @@ translation_of: Web/Events
 
 <h3 id="Frame_events">Frame events</h3>
 
-<p>{{event("mozbrowserclose")}}, {{event("mozbrowsercontextmenu")}}, {{event("mozbrowsererror")}}, {{event("mozbrowsericonchange")}}, {{event("mozbrowserlocationchange")}}, {{event("mozbrowserloadend")}}, {{event("mozbrowserloadstart")}}, {{event("mozbrowseropenwindow")}}, {{event("mozbrowsersecuritychange")}}, {{event("mozbrowsershowmodalprompt")}} (<a href="/en-US/docs/Web/Reference/Events/mozbrowsershowmodalprompt">link</a>), {{event("mozbrowsertitlechange")}}, <a href="/en-US/docs/Web/Reference/Events/DOMFrameContentLoaded">DOMFrameContentLoaded</a></p>
+<p>{{event("mozbrowserclose")}}, {{event("mozbrowsercontextmenu")}}, {{event("mozbrowsererror")}}, {{event("mozbrowsericonchange")}}, {{event("mozbrowserlocationchange")}}, {{event("mozbrowserloadend")}}, {{event("mozbrowserloadstart")}}, {{event("mozbrowseropenwindow")}}, {{event("mozbrowsersecuritychange")}}, {{event("mozbrowsershowmodalprompt")}} (<a href="/en-US/docs/Web/Reference/Events/mozbrowsershowmodalprompt">link</a>), {{event("mozbrowsertitlechange")}}, <a href="/en-US/docs/Web/Reference/Events/DOMFrameContentLoaded">DOMFrameContentLoaded</a></p>
 
 <h3 id="Input_device_events">Input device events</h3>
 

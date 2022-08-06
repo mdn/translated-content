@@ -5,7 +5,7 @@ translation_of: Web/CSS/line-height
 ---
 <div>{{CSSRef}}</div>
 
-<p>Свойство <a href="https://developer.mozilla.org/ru/docs/Web/css">CSS</a> <strong><code>line-height</code></strong> устанавливает величину пространства между строками, например в тексте. В блочных элементах оно указывает минимальную высоту блоков строк внутри элемента. В <a href="https://developer.mozilla.org/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82">незамещаемых</a> внутристрочных элементах —указывает высоту, которая используется для вычисления высоты блоков строк.</p>
+<p>Свойство <a href="https://developer.mozilla.org/ru/docs/Web/css">CSS</a> <strong><code>line-height</code></strong> устанавливает величину пространства между строками, например в тексте. В блочных элементах оно указывает минимальную высоту блоков строк внутри элемента. В <a href="https://developer.mozilla.org/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82">незамещаемых</a> внутристрочных элементах —указывает высоту, которая используется для вычисления высоты блоков строк.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/line-height.html")}}</div>
 
@@ -36,24 +36,24 @@ line-height: unset;
 
 <p dir="rtl"></p>
 
-<p>Свойство <code>line-height</code> задаётся с помощью:</p>
+<p>Свойство <code>line-height</code> задаётся с помощью:</p>
 
 <ul>
  <li><code><a href="#&lt;number>">&lt;числа&gt;</a></code></li>
  <li><code><a href="#&lt;length>">&lt;величины&gt;</a></code></li>
  <li><code><a href="#&lt;percentage>">&lt;процентного соотношения&gt;</a></code></li>
- <li>ключевого слова <code><a href="#normal">normal</a></code>.</li>
+ <li>ключевого слова <code><a href="#normal">normal</a></code>.</li>
 </ul>
 
 <h3 id="Значения">Значения</h3>
 
 <dl>
  <dt><code><a id="normal" name="normal">normal</a></code></dt>
- <dd>Зависит от пользовательского браузера. Компьютерные браузеры (включая Firefox) используют значение по умолчанию приблизительно <strong><code>1.2</code></strong>, в зависимости от элементов <code>font-family</code>.</dd>
+ <dd>Зависит от пользовательского браузера. Компьютерные браузеры (включая Firefox) используют значение по умолчанию приблизительно <strong><code>1.2</code></strong>, в зависимости от элементов <code>font-family</code>.</dd>
  <dt><code><a id="&lt;number>" name="&lt;number>">&lt;число&gt;</a> (без именования)</code></dt>
  <dd>Значением <code>line-height</code> будет результат умножения указанного числа (без именования) на размер шрифта элементов. Указанное число, по сути, множитель. В большинстве случаев <strong>это предпочтительный способ</strong> указания значения <code>line-height</code>, потому что позволяет избежать непредвиденных результатов при наследовании.</dd>
  <dt><code><a id="&lt;length>" name="&lt;length>">&lt;величина&gt;</a></code></dt>
- <dd>Указанная {{cssxref("&lt;величина&gt;")}} используется при вычислении высоты блока строки. Значение, заданное в  единицах <strong>em</strong> может привести к непредвидимым результатам (смотри пример ниже).</dd>
+ <dd>Указанная {{cssxref("&lt;величина&gt;")}} используется при вычислении высоты блока строки. Значение, заданное в  единицах <strong>em</strong> может привести к непредвидимым результатам (смотри пример ниже).</dd>
  <dt><code><a id="&lt;percentage>" name="&lt;percentage>">&lt;процентное соотношение&gt;</a></code></dt>
  <dd>Относительно размера шрифта самого элемента.</dd>
  <dd>Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. <strong>Percentage</strong> values may produce unexpected results (see the second example below).</dd>

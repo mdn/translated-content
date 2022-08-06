@@ -13,7 +13,7 @@ translation_of: Web/API/FormData/has
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p>O método <code><strong>has()</strong></code> da interface {{domxref("FormData")}} retorna um booleano declarando se o objeto <code>FormData</code> contém uma certa chave.</p>
+<p>O método <code><strong>has()</strong></code> da interface {{domxref("FormData")}} retorna um booleano declarando se o objeto <code>FormData</code> contém uma certa chave.</p>
 
 <div class="note">
 <p><strong>Note</strong>: This method is available in <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
@@ -36,11 +36,11 @@ translation_of: Web/API/FormData/has
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<p>A linha a seguir cria um objeto <code>FormData</code> vazio:</p>
+<p>A linha a seguir cria um objeto <code>FormData</code> vazio:</p>
 
 <pre class="brush: js">var formData = new FormData();</pre>
 
-<p>O trecho a seguir mostra os resultados de testar a existência de <code>username</code> no objeto <code>FormData</code>, antes e depois de acrescentar um valor de <code>username</code> no objeto usando {{domxref("FormData.append")}}:</p>
+<p>O trecho a seguir mostra os resultados de testar a existência de <code>username</code> no objeto <code>FormData</code>, antes e depois de acrescentar um valor de <code>username</code> no objeto usando {{domxref("FormData.append")}}:</p>
 
 <pre class="brush: js">formData.has('username'); // Retorna false
 formData.append('username', 'Chris');

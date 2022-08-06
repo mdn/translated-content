@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Memory_Management
 ---
 <div>{{JsSidebar("Advanced")}}</div>
 
-<p>C 언어같은 저수준 언어에서는 메모리 관리를 위해 <a href="https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html">malloc()</a> 과 <a href="https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions">free()</a>를 사용합니다. 반면, 자바스크립트는 객체가 생성되었을 때 자동으로 메모리를 할당하고 더 이상 필요하지 않을 때 자동으로 해제합니다(<em>가비지 컬렉션</em>). 이러한 자동 메모리 관리는 잠재적 혼란의 원인이기도 한데, 개발자가 메모리 관리에 대해 고민할 필요가 없다는 잘못된 인상을 줄 수 있기 때문입니다.</p>
+<p>C 언어같은 저수준 언어에서는 메모리 관리를 위해 <a href="https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html">malloc()</a> 과 <a href="https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions">free()</a>를 사용합니다. 반면, 자바스크립트는 객체가 생성되었을 때 자동으로 메모리를 할당하고 더 이상 필요하지 않을 때 자동으로 해제합니다(<em>가비지 컬렉션</em>). 이러한 자동 메모리 관리는 잠재적 혼란의 원인이기도 한데, 개발자가 메모리 관리에 대해 고민할 필요가 없다는 잘못된 인상을 줄 수 있기 때문입니다.</p>
 
 <h2 id="Memory_life_cycle">메모리 생존주기</h2>
 
@@ -17,13 +17,13 @@ translation_of: Web/JavaScript/Memory_Management
  <li>더 이상 필요하지 않으면 해제합니다.</li>
 </ol>
 
-<p>두 번째 부분은 모든 언어에서 명시적으로 사용됩니다. 그러나 첫 번째 부분과 마지막 부분은 저수준 언어에서는 명시적이며, 자바스크립트와 같은 대부분의 고수준 언어에서는 암묵적으로 작동합니다.</p>
+<p>두 번째 부분은 모든 언어에서 명시적으로 사용됩니다. 그러나 첫 번째 부분과 마지막 부분은 저수준 언어에서는 명시적이며, 자바스크립트와 같은 대부분의 고수준 언어에서는 암묵적으로 작동합니다.</p>
 
 <h3 id="Allocation_in_JavaScript">자바스크립트에서 메모리 할당</h3>
 
 <h4 id="Value_initialization">값 초기화</h4>
 
-<p>프로그래머를 할당 문제로 괴롭히지 않기 위해서, 자바스크립트는 값을 선언할 때 자동으로 메모리를 할당합니다.</p>
+<p>프로그래머를 할당 문제로 괴롭히지 않기 위해서, 자바스크립트는 값을 선언할 때 자동으로 메모리를 할당합니다.</p>
 
 <pre class="brush: js">var n = 123; // 정수를 담기 위한 메모리 할당
 var s = 'azerty'; // 문자열을 담기 위한 메모리 할당
@@ -48,14 +48,14 @@ someElement.addEventListener('click', function(){
 
 <h4 id="Allocation_via_function_calls">함수 호출을 통한 할당</h4>
 
-<p>함수 호출의 결과 메모리 할당이 일어나기도 합니다.</p>
+<p>함수 호출의 결과 메모리 할당이 일어나기도 합니다.</p>
 
 <pre class="brush: js">var d = new Date(); // Date 개체를 위해 메모리를 할당
 
 var e = document.createElement('div'); // DOM 엘리먼트를 위해 메모리를 할당
 </pre>
 
-<p>메소드가 새로운 값이나 오브젝트를 할당하기도 합니다.</p>
+<p>메소드가 새로운 값이나 오브젝트를 할당하기도 합니다.</p>
 
 <pre class="brush: js">var s = 'azerty';
 var s2 = s.substr(0, 3); // s2는 새로운 문자열
@@ -76,9 +76,9 @@ var a3 = a.concat(a2);
 
 <p>이 단계에서 대부분의 문제가 발생합니다. "할당된 메모리가 더 이상 필요없을 때"를 알아내기가 어렵기 때문입니다.</p>
 
-<p>저수준 언어에서는 메모리가 필요없어질 때를 개발자가 직접 결정하고 해제하는 방식을 사용합니다.</p>
+<p>저수준 언어에서는 메모리가 필요없어질 때를 개발자가 직접 결정하고 해제하는 방식을 사용합니다.</p>
 
-<p>자바스크립트와 같은 고수준 언어들은 "<a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">가비지 콜렉션</a>(GC)"이라는 자동 메모리 관리 방법을 사용합니다. 가비지 콜렉터의 목적은 메모리 할당을 추적하고 할당된 메모리 블록이 더 이상 필요하지 않게 되었는지를 판단하여 회수하는 것입니다. 이러한 자동 메모리 관리 프로세스가 궁극의 방법은 아닙니다. 왜냐하면 어떤 메모리가 여전히 필요한지 아닌지를 판단하는 것은 <a class="external" href="http://en.wikipedia.org/wiki/Decidability_%28logic%29">비결정적</a> 문제이기 때문입니다.</p>
+<p>자바스크립트와 같은 고수준 언어들은 "<a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">가비지 콜렉션</a>(GC)"이라는 자동 메모리 관리 방법을 사용합니다. 가비지 콜렉터의 목적은 메모리 할당을 추적하고 할당된 메모리 블록이 더 이상 필요하지 않게 되었는지를 판단하여 회수하는 것입니다. 이러한 자동 메모리 관리 프로세스가 궁극의 방법은 아닙니다. 왜냐하면 어떤 메모리가 여전히 필요한지 아닌지를 판단하는 것은 <a class="external" href="http://en.wikipedia.org/wiki/Decidability_%28logic%29">비결정적</a> 문제이기 때문입니다.</p>
 
 <h2 id="Garbage_collection">가비지 콜렉션</h2>
 
@@ -86,13 +86,13 @@ var a3 = a.concat(a2);
 
 <h3 id="References">참조</h3>
 
-<p>가비지 콜렉션 알고리즘의 핵심 개념은 <em>참조</em>입니다. A라는 메모리를 통해 (명시적이든 암시적이든) B라는 메모리에 접근할 수 있다면 "B는 A에 참조된다" 라고 합니다. 예를 들어 모든 자바스크립트 오브젝트는 <a href="/en/JavaScript/Guide/Inheritance_and_the_prototype_chain" title="en/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a> 을 암시적으로 참조하고 그 오브젝트의 속성을 명시적으로 참조합니다.</p>
+<p>가비지 콜렉션 알고리즘의 핵심 개념은 <em>참조</em>입니다. A라는 메모리를 통해 (명시적이든 암시적이든) B라는 메모리에 접근할 수 있다면 "B는 A에 참조된다" 라고 합니다. 예를 들어 모든 자바스크립트 오브젝트는 <a href="/en/JavaScript/Guide/Inheritance_and_the_prototype_chain" title="en/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a> 을 암시적으로 참조하고 그 오브젝트의 속성을 명시적으로 참조합니다.</p>
 
 <p>이 컨텍스트에서 "오브젝트"의 개념은 일반 JavaScript 오브젝트와 함수 범위(또는 정적 어휘 범위)를 포함하여 더 넓게 확장됩니다.</p>
 
 <h3 id="Reference-counting_garbage_collection">참조-세기(Reference-counting) 가비지 콜렉션</h3>
 
-<p>참조-세기 알고리즘은 가장 소박한 알고리즘입니다. 이 알고리즘은 "더 이상 필요없는 오브젝트"를 "어떤 다른 오브젝트도 참조하지 않는 오브젝트"라고 정의합니다. 이 오브젝트를 "가비지"라 부르며, 이를 참조하는 다른 오브젝트가 하나도 없는 경우, 수집이 가능합니다.</p>
+<p>참조-세기 알고리즘은 가장 소박한 알고리즘입니다. 이 알고리즘은 "더 이상 필요없는 오브젝트"를 "어떤 다른 오브젝트도 참조하지 않는 오브젝트"라고 정의합니다. 이 오브젝트를 "가비지"라 부르며, 이를 참조하는 다른 오브젝트가 하나도 없는 경우, 수집이 가능합니다.</p>
 
 <h4 id="Example">예제</h4>
 
@@ -127,7 +127,7 @@ z = null;       // 'z' 변수에 다른 값을 할당했습니다.
 
 <h4 id="Limitation_Circular_references">한계: 순환 참조</h4>
 
-<p>순환 참조를 다루는 일에는 한계가 있습니다. 다음 예제에서는 두 객체가 서로 참조하는 속성으로 생성되어 순환 구조를 생성합니다. 함수 호출이 완료되면 이 두 객체는 스코프를 벗어나게 될 것이며, 그 시점에서 두 객체는 불필요해지므로 할당된 메모리는 회수되어야 합니다. 그러나 두 객체가 서로를 참조하고 있으므로, 참조-세기 알고리즘은 둘 다 가비지 컬렉션의 대상으로 표시하지 않습니다. 이러한 순환 참조는 메모리 누수의 흔한 원인입니다.</p>
+<p>순환 참조를 다루는 일에는 한계가 있습니다. 다음 예제에서는 두 객체가 서로 참조하는 속성으로 생성되어 순환 구조를 생성합니다. 함수 호출이 완료되면 이 두 객체는 스코프를 벗어나게 될 것이며, 그 시점에서 두 객체는 불필요해지므로 할당된 메모리는 회수되어야 합니다. 그러나 두 객체가 서로를 참조하고 있으므로, 참조-세기 알고리즘은 둘 다 가비지 컬렉션의 대상으로 표시하지 않습니다. 이러한 순환 참조는 메모리 누수의 흔한 원인입니다.</p>
 
 <pre class="brush: js">function f() {
   var x = {};
@@ -172,9 +172,9 @@ window.onload = function() {
 
 <p>두 번째 예제에서도 마찬가지입니다. div 변수와 이벤트 핸들러가 roots로 부터 닿을 수 없으면 순환 참조가 일어났음에도 불구하고 가비지 콜렉션이 일어납니다. (역자2: div 선언을 블럭안에다 넣어야 됩니다.(테스트는 못 해봤습니다.))</p>
 
-<h4 id="Limitation_Releasing_memory_manually">한계: 수동 메모리 해제.</h4>
+<h4 id="Limitation_Releasing_memory_manually">한계: 수동 메모리 해제.</h4>
 
-<p>어떤 메모리를 언제 해제할지에 대해 수동으로 결정하는 것이 편리할 때가 있습니다. 그리고 수동으로 객체의 메모리를 해제하려면, 객체 메모리에 도달할 수 없도록 명시하는 기능이 있어야 합니다.</p>
+<p>어떤 메모리를 언제 해제할지에 대해 수동으로 결정하는 것이 편리할 때가 있습니다. 그리고 수동으로 객체의 메모리를 해제하려면, 객체 메모리에 도달할 수 없도록 명시하는 기능이 있어야 합니다.</p>
  
 <p>2019년 현재의 JavaScript에서는 명시적으로 또는 프로그래밍 방식으로 가비지 컬렉션을 작동할 수 없습니다.</p>
 

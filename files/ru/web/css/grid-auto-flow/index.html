@@ -24,11 +24,11 @@ grid-auto-flow: initial;
 grid-auto-flow: unset;
 </pre>
 
-<p>Свойство можно использовать в двух вариантах:</p>
+<p>Свойство можно использовать в двух вариантах:</p>
 
 <ul>
- <li>с одним ключевым значением: <code>row</code>, <code>column</code>, или <code>dense</code>.</li>
- <li>с двумя значениями: <code>row dense</code> или <code>column dense</code>.</li>
+ <li>с одним ключевым значением: <code>row</code>, <code>column</code>, или <code>dense</code>.</li>
+ <li>с двумя значениями: <code>row dense</code> или <code>column dense</code>.</li>
 </ul>
 
 <h3 id="Значения">Значения</h3>
@@ -37,7 +37,7 @@ grid-auto-flow: unset;
  <dt><code>row</code></dt>
  <dd>Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждую строку и добавляя новые строки по мере необходимости. Это значение используется по умолчанию.</dd>
  <dt><code>column</code></dt>
- <dd>Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждый столбец и добавляя новые столбцы по мере необходимости.</dd>
+ <dd>Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждый столбец и добавляя новые столбцы по мере необходимости.</dd>
  <dt><code>dense</code></dt>
  <dd>Ключевое слово, указывающее заполнять элементами свободное пространство сетки. Это может привести к нарушению порядка, т.к. элементы будут выстраиваться не в соответствии со своим расположением, а в соответствии с размером.</dd>
  <dd><br>
@@ -53,15 +53,15 @@ grid-auto-flow: unset;
 <h3 id="HTML_Content">HTML Content</h3>
 
 <pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-  &lt;div id="item4"&gt;&lt;/div&gt;
-  &lt;div id="item5"&gt;&lt;/div&gt;
+  &lt;div id="item1"&gt;&lt;/div&gt;
+  &lt;div id="item2"&gt;&lt;/div&gt;
+  &lt;div id="item3"&gt;&lt;/div&gt;
+  &lt;div id="item4"&gt;&lt;/div&gt;
+  &lt;div id="item5"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;select id="direction" onchange="changeGridAutoFlow()"&gt;
-  &lt;option value="column"&gt;column&lt;/option&gt;
-  &lt;option value="row"&gt;row&lt;/option&gt;
+  &lt;option value="column"&gt;column&lt;/option&gt;
+  &lt;option value="row"&gt;row&lt;/option&gt;
 &lt;/select&gt;
 &lt;input id="dense" type="checkbox" onchange="changeGridAutoFlow()"&gt;
 &lt;label for="dense"&gt;dense&lt;/label&gt;

@@ -19,28 +19,28 @@ translation_of: Web/API/Window/navigator
 <pre class="brush: js">var sBrowser, sUsrAg = navigator.userAgent;
 
 if(sUsrAg.indexOf("Chrome") &gt; -1) {
-    sBrowser = "Google Chrome";
+    sBrowser = "Google Chrome";
 } else if (sUsrAg.indexOf("Safari") &gt; -1) {
-    sBrowser = "Apple Safari";
+    sBrowser = "Apple Safari";
 } else if (sUsrAg.indexOf("Opera") &gt; -1) {
-    sBrowser = "Opera";
+    sBrowser = "Opera";
 } else if (sUsrAg.indexOf("Firefox") &gt; -1) {
-    sBrowser = "Mozilla Firefox";
+    sBrowser = "Mozilla Firefox";
 } else if (sUsrAg.indexOf("MSIE") &gt; -1) {
-    sBrowser = "Microsoft Internet Explorer";
+    sBrowser = "Microsoft Internet Explorer";
 }
 
 alert("Você está utilizando: " + sBrowser);</pre>
 <h3 id="Exemplo_2_Detecta_o_navegador_e_retorna_um_índice">Exemplo #2: Detecta o navegador e retorna um índice</h3>
 <pre class="brush: js">function getBrowserId () {
 
-    var
-        aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
-        sUsrAg = navigator.userAgent, nIdx = aKeys.length - 1;
+    var
+        aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
+        sUsrAg = navigator.userAgent, nIdx = aKeys.length - 1;
 
-    for (nIdx; nIdx &gt; -1 &amp;&amp; sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
+    for (nIdx; nIdx &gt; -1 &amp;&amp; sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
 
-    return nIdx
+    return nIdx
 
 }
 

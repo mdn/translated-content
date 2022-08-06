@@ -47,9 +47,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ## 静的メソッド
 
 - {{jsxref("WebAssembly.instantiate()")}}
-  - : WebAssembly コードをコンパイル、インスタンス化するための主要な API で、 `Module` と、その最初の `Instance` を返します。
+  - : WebAssembly コードをコンパイル、インスタンス化するための主要な API で、 `Module` と、その最初の `Instance` を返します。
 - {{jsxref("WebAssembly.instantiateStreaming()")}}
-  - : ソースのストリームから直接 WebAssembly モジュールをコンパイル、インスタンス化し、 `Module` と、その最初の `Instance` を返します。
+  - : ソースのストリームから直接 WebAssembly モジュールをコンパイル、インスタンス化し、 `Module` と、その最初の `Instance` を返します。
 - {{jsxref("WebAssembly.compile()")}}
   - : {{jsxref("WebAssembly.Module")}} を用いて WebAssembly バイナリコードからコンパイルします。インスタンス化は別ステップとして分離されます。
 - {{jsxref("WebAssembly.compileStreaming()")}}

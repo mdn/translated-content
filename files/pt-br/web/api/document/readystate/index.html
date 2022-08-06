@@ -26,7 +26,7 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="Valores">Valores</h3>
 
-<p>O <code>readyState</code> de um documento pode ser um dos seguintes:</p>
+<p>O <code>readyState</code> de um documento pode ser um dos seguintes:</p>
 
 <dl>
  <dt><code>loading</code></dt>
@@ -60,25 +60,25 @@ translation_of: Web/API/Document/readyState
     break;
 }</code></pre>
 
-<h3 id="readystatechange_como_uma_alternativa_para_DOMContentLoaded_evento">readystatechange como uma alternativa para DOMContentLoaded evento</h3>
+<h3 id="readystatechange_como_uma_alternativa_para_DOMContentLoaded_evento">readystatechange como uma alternativa para DOMContentLoaded evento</h3>
 
-<pre><code>// </code>alternativa para DOMContentLoaded evento<code>
+<pre><code>// </code>alternativa para DOMContentLoaded evento<code>
 document.onreadystatechange = function () {
   if (document.readyState === 'interactive') {
     initApplication();
   }
 }</code></pre>
 
-<h3 id="readystatechange_como_uma_alternativa_para_load_evento">readystatechange como uma alternativa para load evento</h3>
+<h3 id="readystatechange_como_uma_alternativa_para_load_evento">readystatechange como uma alternativa para load evento</h3>
 
-<pre><code>// </code>ternativa para load evento<code>
+<pre><code>// </code>ternativa para load evento<code>
 document.onreadystatechange = function () {
   if (document.readyState === 'complete') {
     initApplication();
   }
 }</code></pre>
 
-<h3 id="readystatechange_como_ouvinte_de_evento_para_inserir_ou_modificar_o_DOM_antes_de_DOMContentLoaded">readystatechange como ouvinte de evento para inserir ou modificar o DOM antes de DOMContentLoaded</h3>
+<h3 id="readystatechange_como_ouvinte_de_evento_para_inserir_ou_modificar_o_DOM_antes_de_DOMContentLoaded">readystatechange como ouvinte de evento para inserir ou modificar o DOM antes de DOMContentLoaded</h3>
 
 <pre><code>document.addEventListener('readystatechange', event =&gt; {
   if (event.target.readyState === 'interactive') {

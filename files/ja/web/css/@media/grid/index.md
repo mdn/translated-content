@@ -34,29 +34,29 @@ translation_of: Web/CSS/@media/grid
 
 ```css
 :not(.unknown) {
-  color: lightgray;
+  color: lightgray;
 }
 
 @media (grid: 0) {
   .unknown {
-    color: lightgray;
-  }
+    color: lightgray;
+  }
 
-  .bitmap {
-    color: red;
+  .bitmap {
+    color: red;
     text-transform: uppercase;
   }
 }
 
 @media (grid: 1) {
-  .unknown {
-    color: lightgray;
-  }
+  .unknown {
+    color: lightgray;
+  }
 
-  .grid {
-    color: black;
+  .grid {
+    color: black;
     text-transform: uppercase;
-  }
+  }
 }
 ```
 

@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}</div>
 
-<p >루프는 어떤 것을 반복적으로 시행할때 빠르고 간편한 방법을 제공합니다. <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>의 이 항목은 JavaScript 에서 사용이 가능한 서로 다른 여러가지 반복문을 소개합니다.</p>
+<p >루프는 어떤 것을 반복적으로 시행할때 빠르고 간편한 방법을 제공합니다. <a href="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>의 이 항목은 JavaScript 에서 사용이 가능한 서로 다른 여러가지 반복문을 소개합니다.</p>
 
-<p>반복문을 게임의 컴퓨터화된 버전이라고 생각해 보세요. 누군가에게 한 방향으로 X만큼 가게 시키고 다른 방향으로 Y만큼 더 가게 한다고 생각해 보십시오. 예를들어, "동쪽으로 5만큼 가세요"는 다음과 같이 반복문으로 표현 될 수 있습니다.</p>
+<p>반복문을 게임의 컴퓨터화된 버전이라고 생각해 보세요. 누군가에게 한 방향으로 X만큼 가게 시키고 다른 방향으로 Y만큼 더 가게 한다고 생각해 보십시오. 예를들어, "동쪽으로 5만큼 가세요"는 다음과 같이 반복문으로 표현 될 수 있습니다.</p>
 
 <pre class="brush: js">var step;
 for (step = 0; step &lt; 5; step++) {
@@ -16,7 +16,7 @@ for (step = 0; step &lt; 5; step++) {
 }
 </pre>
 
-<p>반복문은 매우 다양한 종류가 있습니다. 하지만 반복문이 기본적으로 하는일은 모두 같습니다. 반복문은 한 동작을 여러 번 반복합니다. (사실 0회 반복하는 것도 가능합니다.) 다양한 반복문 메커니즘은 다양한 방법으로 반복문의 시작점과 끝나는 점을 정할 수 있습니다.</p>
+<p>반복문은 매우 다양한 종류가 있습니다. 하지만 반복문이 기본적으로 하는일은 모두 같습니다. 반복문은 한 동작을 여러 번 반복합니다. (사실 0회 반복하는 것도 가능합니다.) 다양한 반복문 메커니즘은 다양한 방법으로 반복문의 시작점과 끝나는 점을 정할 수 있습니다.</p>
 
 <p>자바스크립트가 지원하는 반복문은 다음과 같습니다:</p>
 
@@ -42,7 +42,7 @@ for (step = 0; step &lt; 5; step++) {
 <p>for문이 실행될 때, 다음과 같이 실행됩니다.:</p>
 
 <ol>
- <li>초기화 구문인 초기문이 존재한다면 초기문이 실행됩니다. 이 표현은 보통 1이나 반복문 카운터로 초기 설정이 됩니다. 그러나 복잡한 구문으로 표현 될 때도 있습니다. 또한 변수로 선언 되기도 합니다.</li>
+ <li>초기화 구문인 초기문이 존재한다면 초기문이 실행됩니다. 이 표현은 보통 1이나 반복문 카운터로 초기 설정이 됩니다. 그러나 복잡한 구문으로 표현 될 때도 있습니다. 또한 변수로 선언 되기도 합니다.</li>
  <li>조건문은 조건을 검사합니다. 만약 조건문이 참이라면, 그 반복문은 실행됩니다. 만약 조건문이 거짓이라면, 그 for문은 종결됩니다. 만약 그 조건문이 생략된다면, 그 조건문은 참으로 추정됩니다.</li>
  <li>문장이 실행됩니다. 많은 문장을 실행할 경우엔, { } 를 써서 문장들을 묶어 줍니다.</li>
  <li>갱신 구문인 증감문이 존재한다면 실행되고 2번째 단계로 돌아갑니다.</li>
@@ -50,21 +50,21 @@ for (step = 0; step &lt; 5; step++) {
 
 <h3 id="예시"><strong>예시</strong></h3>
 
-<p>다음 함수는 스크롤링 목록(다중 선택을 허용하는 요소 {{HTMLElement("select")}}). 에서 선택된 옵션들을 세는 for문 입니다. 이 for문은 변수 i 를 선언하고 0으로 초기화 시킵니다. 이것은 i 가  &lt;select&gt; 요소 안의 옵션 수가 i 보다 작은지 확인 합니다. 다음의 if문을 수행하고 각 루프를 빠져나간 뒤 i 를 1 증가시킵니다.</p>
+<p>다음 함수는 스크롤링 목록(다중 선택을 허용하는 요소 {{HTMLElement("select")}}). 에서 선택된 옵션들을 세는 for문 입니다. 이 for문은 변수 i 를 선언하고 0으로 초기화 시킵니다. 이것은 i 가  &lt;select&gt; 요소 안의 옵션 수가 i 보다 작은지 확인 합니다. 다음의 if문을 수행하고 각 루프를 빠져나간 뒤 i 를 1 증가시킵니다.</p>
 
 <pre class="brush: html">&lt;form name="selectForm"&gt;
-  &lt;p&gt;
-    &lt;label for="musicTypes"&gt;Choose some music types, then click the button below:&lt;/label&gt;
-    &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
-      &lt;option selected="selected"&gt;R&amp;B&lt;/option&gt;
-      &lt;option&gt;Jazz&lt;/option&gt;
-      &lt;option&gt;Blues&lt;/option&gt;
-      &lt;option&gt;New Age&lt;/option&gt;
-      &lt;option&gt;Classical&lt;/option&gt;
-      &lt;option&gt;Opera&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/p&gt;
-  &lt;p&gt;&lt;input id="btn" type="button" value="How many are selected?" /&gt;&lt;/p&gt;
+  &lt;p&gt;
+    &lt;label for="musicTypes"&gt;Choose some music types, then click the button below:&lt;/label&gt;
+    &lt;select id="musicTypes" name="musicTypes" multiple="multiple"&gt;
+      &lt;option selected="selected"&gt;R&amp;B&lt;/option&gt;
+      &lt;option&gt;Jazz&lt;/option&gt;
+      &lt;option&gt;Blues&lt;/option&gt;
+      &lt;option&gt;New Age&lt;/option&gt;
+      &lt;option&gt;Classical&lt;/option&gt;
+      &lt;option&gt;Opera&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/p&gt;
+  &lt;p&gt;&lt;input id="btn" type="button" value="How many are selected?" /&gt;&lt;/p&gt;
 &lt;/form&gt;
 
 &lt;script&gt;
@@ -144,7 +144,7 @@ while (n &lt; 3) {
 
 <h3 id="예시_2_2"><strong>예시 2</strong></h3>
 
-<p>조건문은 항상 거짓이 될지라도 무한 루프는 피해야 합니다. 그렇지 않으면 그 반복문은 영원히 끝나지 않을 것입니다. 아래의 while 문은 조건문이 절대 거짓이 될 수 없으므로 영원히 반복될 것입니다.</p>
+<p>조건문은 항상 거짓이 될지라도 무한 루프는 피해야 합니다. 그렇지 않으면 그 반복문은 영원히 끝나지 않을 것입니다. 아래의 while 문은 조건문이 절대 거짓이 될 수 없으므로 영원히 반복될 것입니다.</p>
 
 <pre class="brush: js">// 다음과 같은 코드는 피하세요.
 while (true) {
@@ -174,11 +174,11 @@ while (theMark == true) {
 
 <h2 id="break_문"><code>break</code> 문</h2>
 
-<p>break문은 반복문, switch문, 레이블 문과 결합한 문장을 빠져나올  때 사용합니다.</p>
+<p>break문은 반복문, switch문, 레이블 문과 결합한 문장을 빠져나올  때 사용합니다.</p>
 
 <ul>
- <li>레이블 없이 break문을 쓸 때: 가장 가까운 <code>while</code>, <code>do-while</code>, <code>for</code>, 또는 <code>switch</code>문을 종료하고 다음 명령어로 넘어갑니다.</li>
- <li>레이블 문을 쓸 때: 특정 레이블 문에서 끝납니다.</li>
+ <li>레이블 없이 break문을 쓸 때: 가장 가까운 <code>while</code>, <code>do-while</code>, <code>for</code>, 또는 <code>switch</code>문을 종료하고 다음 명령어로 넘어갑니다.</li>
+ <li>레이블 문을 쓸 때: 특정 레이블 문에서 끝납니다.</li>
 </ul>
 
 <p>break문의 문법은 다음과 같습니다.</p>
@@ -190,7 +190,7 @@ while (theMark == true) {
 
 <p>break문의 첫번째 형식은 가장 안쪽의 반복문이나 switch문을 빠져나옵니다. 두번째 형식는 특정한 레이블 문을 빠져나옵니다.</p>
 
-<h3 id="예시_1_2"><strong>예시</strong> <strong>1</strong></h3>
+<h3 id="예시_1_2"><strong>예시</strong> <strong>1</strong></h3>
 
 <p>다음 예</p>
 
@@ -222,10 +222,10 @@ labelCancelLoops: while (true) {
 
 <h2 id="continue_문">continue 문</h2>
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a></code> 문은 while, do-while, for, 레이블 문을 다시 시작하기 위해 사용될 수 있습니다.</p>
+<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/continue">continue</a></code> 문은 while, do-while, for, 레이블 문을 다시 시작하기 위해 사용될 수 있습니다.</p>
 
 <ul>
- <li>레이블없이 continue를 사용하는 경우, 그것은 가장 안쪽의 while, do-while, for 문을 둘러싼 현재 반복을 종료하고, 다음 반복으로 루프의 실행을 계속합니다. break문과 달리, continue 문은 전체 루프의 실행을 종료하지 않습니다. while 루프에서 그것은 다시 조건으로 이동합니다. for 루프에서 그것은 증가 표현으로 이동합니다.</li>
+ <li>레이블없이 continue를 사용하는 경우, 그것은 가장 안쪽의 while, do-while, for 문을 둘러싼 현재 반복을 종료하고, 다음 반복으로 루프의 실행을 계속합니다. break문과 달리, continue 문은 전체 루프의 실행을 종료하지 않습니다. while 루프에서 그것은 다시 조건으로 이동합니다. for 루프에서 그것은 증가 표현으로 이동합니다.</li>
  <li>레이블과 함께 continue를 사용하는 경우, continue는 그 레이블로 식별되는 루프 문에 적용됩니다.</li>
 </ul>
 
@@ -276,7 +276,7 @@ while (i &lt; 5) {
 
 <h2 id="for...in_문"><code>for...in</code> 문</h2>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a>  문은 객체의 열거 속성을 통해 지정된 변수를 반복합니다. 각각의 고유한 속성에 대해, JavaScript는 지정된 문을 실행합니다. for...in 문은 다음과 같습니다:</p>
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a>  문은 객체의 열거 속성을 통해 지정된 변수를 반복합니다. 각각의 고유한 속성에 대해, JavaScript는 지정된 문을 실행합니다. for...in 문은 다음과 같습니다:</p>
 
 <pre class="syntaxbox">for (variable in object) {
   statements
@@ -309,7 +309,7 @@ car.model = Mustang
 
 <h2 id="for...of_문"><code>for...of</code> 문</h2>
 
-<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">반복 가능한 객체</a>({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">인수</a> 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.</p>
+<p><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of">for...of</a></code> 문은 각각의 고유한 특성의 값을 실행할 명령과 함께 사용자 지정 반복 후크를 호출하여, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">반복 가능한 객체</a>({{jsxref("배열")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments">인수</a> 객체 등을 포함)를 통해 반복하는 루프를 만듭니다.</p>
 
 <pre class="syntaxbox">for (<em>variable</em> of <em>object</em>) {
   <em>statement

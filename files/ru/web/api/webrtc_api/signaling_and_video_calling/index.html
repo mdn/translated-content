@@ -5,11 +5,11 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 <div>{{WebRTCSidebar}}</div>
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> позволяет обмениваться медиаданными между двумя устройствами напрямую (peer-to-peer) в режиме реального времени. Соединение устанавливается путём обнаружения и согласования, называемым <strong>сигнализацией (signaling)</strong>. Эта статья объясняет, как сделать двусторонний видеозвонок.</span></p>
+<p><span class="seoSummary"><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> позволяет обмениваться медиаданными между двумя устройствами напрямую (peer-to-peer) в режиме реального времени. Соединение устанавливается путём обнаружения и согласования, называемым <strong>сигнализацией (signaling)</strong>. Эта статья объясняет, как сделать двусторонний видеозвонок.</span></p>
 
-<p><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> это технология прямого обмена аудио-, видео- и другими данными в режиме реального времени с одним ключевым условием. Процесс обнаружения и согласования медиаформатов должен происходить так чтобы два устройства, подключённые к разным сетям, могли локализовать друг друга, <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_a_connection">как обсуждалось здесь</a>. Этот процесс назван <span class="seoSummary"><strong>сигнализацией </strong></span>и подразумевает, что оба устройства подключаются к третьему, обоюдно согласованному серверу. Через третью сторону устройства определяют адреса друг друга и обмениваются согласующими сообщениями.</p>
+<p><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> это технология прямого обмена аудио-, видео- и другими данными в режиме реального времени с одним ключевым условием. Процесс обнаружения и согласования медиаформатов должен происходить так чтобы два устройства, подключённые к разным сетям, могли локализовать друг друга, <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_a_connection">как обсуждалось здесь</a>. Этот процесс назван <span class="seoSummary"><strong>сигнализацией </strong></span>и подразумевает, что оба устройства подключаются к третьему, обоюдно согласованному серверу. Через третью сторону устройства определяют адреса друг друга и обмениваются согласующими сообщениями.</p>
 
-<p>В этой статье мы будем дорабатывать  <a class="external external-icon" href="https://webrtc-from-chat.glitch.me/" rel="noopener">WebSocket-чат</a>, созданный для нашей документации к WebSocket, — добавим к нему двусторонний видеозвонок между двумя пользователями. Вы можете <a href="https://webrtc-from-chat.glitch.me/">использовать этот пример на Glitch</a> или <a href="https://glitch.com/edit/#!/remix/webrtc-from-chat">клонировать его</a>, чтобы поэкспериментировать самим. <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat">Весь проект</a> можно посмотреть на GitHub.</p>
+<p>В этой статье мы будем дорабатывать  <a class="external external-icon" href="https://webrtc-from-chat.glitch.me/" rel="noopener">WebSocket-чат</a>, созданный для нашей документации к WebSocket, — добавим к нему двусторонний видеозвонок между двумя пользователями. Вы можете <a href="https://webrtc-from-chat.glitch.me/">использовать этот пример на Glitch</a> или <a href="https://glitch.com/edit/#!/remix/webrtc-from-chat">клонировать его</a>, чтобы поэкспериментировать самим. <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat">Весь проект</a> можно посмотреть на GitHub.</p>
 
 <div class="note">
 <p><strong>Note:</strong> If you try out the example on Glitch, please note that any changes made to the code will immediately reset any connections. In addition, there is a short timeout period; the Glitch instance is for quick experiments and testing only.</p>
@@ -17,15 +17,15 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 
 <h2 id="Сервер_сигнализации">Сервер сигнализации</h2>
 
-<p>Для установление WebRTC-соединения между двумя устройствами необходим <strong>сервер сигнализации</strong>, чтобы определить, как соединять эти устройства через Интернет. Сервер сигнализации выступает посредником между пирами, позволяя им найти адреса друг друга и установить соединение, и предельно минимизирует риск утечки информации, которая может оказаться личной. Как создать такой сервер и как устроен процесс сигнализации?</p>
+<p>Для установление WebRTC-соединения между двумя устройствами необходим <strong>сервер сигнализации</strong>, чтобы определить, как соединять эти устройства через Интернет. Сервер сигнализации выступает посредником между пирами, позволяя им найти адреса друг друга и установить соединение, и предельно минимизирует риск утечки информации, которая может оказаться личной. Как создать такой сервер и как устроен процесс сигнализации?</p>
 
-<p>Во-первых, нужен сам сервер сигнализации. Спецификация WebRTC не определяет, какой транспорт используется для передачи сигнальной информации. Можете использовать какой вам нравится, от <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a> до {{domxref("XMLHttpRequest")}} и почтовых голубей, чтобы передать сигнальную информацию между пирами.</p>
+<p>Во-первых, нужен сам сервер сигнализации. Спецификация WebRTC не определяет, какой транспорт используется для передачи сигнальной информации. Можете использовать какой вам нравится, от <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket</a> до {{domxref("XMLHttpRequest")}} и почтовых голубей, чтобы передать сигнальную информацию между пирами.</p>
 
-<p>Важно, что серверу не нужно понимать или интерпретировать сигнальные данные. Хотя они в формате {{Glossary("SDP")}}, это не имеет особого значения: содержание сообщений, проходящих через сигнальный сервер - по сути, чёрный ящик. Значение имеет лишь то, что когда подсистема {{Glossary("ICE")}} даёт команду передать данные другому пиру, вы просто это делаете, а уже пир знает, как получить эту информацию и доставить её на свою подсистему ICE. Все что нужно - передавать сообщения туда и обратно. Содержание совершенно не важно для сигнального сервера.</p>
+<p>Важно, что серверу не нужно понимать или интерпретировать сигнальные данные. Хотя они в формате {{Glossary("SDP")}}, это не имеет особого значения: содержание сообщений, проходящих через сигнальный сервер - по сути, чёрный ящик. Значение имеет лишь то, что когда подсистема {{Glossary("ICE")}} даёт команду передать данные другому пиру, вы просто это делаете, а уже пир знает, как получить эту информацию и доставить её на свою подсистему ICE. Все что нужно - передавать сообщения туда и обратно. Содержание совершенно не важно для сигнального сервера.</p>
 
 <h3 id="Подготовка_сервера_чата_к_сигнализации">Подготовка сервера чата к сигнализации</h3>
 
-<p>Наш <a href="https://github.com/mdn/samples-server/tree/master/s/websocket-chat">сервер чата</a> использует <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a> для отправки информации как {{Glossary("JSON")}}  между каждым клиентом и сервером. Сервер поддерживает несколько типов сообщений для нескольких задач : регистрация нового пользователя, установки имён пользователей, отправка сообщений чата.</p>
+<p>Наш <a href="https://github.com/mdn/samples-server/tree/master/s/websocket-chat">сервер чата</a> использует <a href="/en-US/docs/Web/API/WebSocket_API">WebSocket API</a> для отправки информации как {{Glossary("JSON")}}  между каждым клиентом и сервером. Сервер поддерживает несколько типов сообщений для нескольких задач : регистрация нового пользователя, установки имён пользователей, отправка сообщений чата.</p>
 
 <p>Для того, что бы сервер мог поддерживать функциональность сигнализации и согласование соединения, нам нужно обновить код. Нам нужно направлять сообщения одному конкретному пользователю вместо того, чтобы транслировать их всем подключённым пользователям, а также обеспечить передачу и доставку неизвестных типов сообщений, при этом серверу не нужно будет знать, что это такое. Это позволит нам посылать сигнальные сообщения, используя один и тот же сервер, вместо того, чтобы использовать отдельный сервер.</p>
 
@@ -316,12 +316,12 @@ function invite(evt) {
   });
 
   myPeerConnection.onicecandidate = handleICECandidateEvent;
-  myPeerConnection.ontrack = handleTrackEvent;
-  myPeerConnection.onnegotiationneeded = handleNegotiationNeededEvent;
-  myPeerConnection.onremovetrack = handleRemoveTrackEvent;
-  myPeerConnection.oniceconnectionstatechange = handleICEConnectionStateChangeEvent;
-  myPeerConnection.onicegatheringstatechange = handleICEGatheringStateChangeEvent;
-  myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
+  myPeerConnection.ontrack = handleTrackEvent;
+  myPeerConnection.onnegotiationneeded = handleNegotiationNeededEvent;
+  myPeerConnection.onremovetrack = handleRemoveTrackEvent;
+  myPeerConnection.oniceconnectionstatechange = handleICEConnectionStateChangeEvent;
+  myPeerConnection.onicegatheringstatechange = handleICEGatheringStateChangeEvent;
+  myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
 }
 </pre>
 
@@ -356,7 +356,7 @@ function invite(evt) {
 
 <h4 id="Starting_negotiation">Starting negotiation</h4>
 
-<p>Once the caller has created its  {{domxref("RTCPeerConnection")}}, created a media stream, and added its tracks to the connection as shown in <a href="#starting_a_call">Starting a call</a>, the browser will deliver a {{event("negotiationneeded")}} event to the {{domxref("RTCPeerConnection")}} to indicate that it's ready to begin negotiation with the other peer. Here's our code for handling the {{event("negotiationneeded")}} event:</p>
+<p>Once the caller has created its  {{domxref("RTCPeerConnection")}}, created a media stream, and added its tracks to the connection as shown in <a href="#starting_a_call">Starting a call</a>, the browser will deliver a {{event("negotiationneeded")}} event to the {{domxref("RTCPeerConnection")}} to indicate that it's ready to begin negotiation with the other peer. Here's our code for handling the {{event("negotiationneeded")}} event:</p>
 
 <pre class="brush: js">function handleNegotiationNeededEvent() {
   myPeerConnection.createOffer().then(function(offer) {
@@ -456,7 +456,7 @@ function invite(evt) {
 
 <h5 id="Sending_ICE_candidates">Sending ICE candidates</h5>
 
-<p>The ICE negotiation process involves each peer sending candidates to the other, repeatedly, until it runs out of potential ways it can support the <code>RTCPeerConnection</code>'s media transport needs. Since ICE doesn't know about your signaling server, your code handles transmission of each candidate in your handler for the {{event("icecandidate")}} event.</p>
+<p>The ICE negotiation process involves each peer sending candidates to the other, repeatedly, until it runs out of potential ways it can support the <code>RTCPeerConnection</code>'s media transport needs. Since ICE doesn't know about your signaling server, your code handles transmission of each candidate in your handler for the {{event("icecandidate")}} event.</p>
 
 <p>Your {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} handler receives an event whose <code>candidate</code> property is the SDP describing the candidate (or is <code>null</code> to indicate that the ICE layer has run out of potential configurations to suggest). The contents of <code>candidate</code> are what you need to transmit using your signaling server. Here's our example's implementation:</p>
 
@@ -512,7 +512,7 @@ function invite(evt) {
 
 <h5 id="Receiving_new_streams">Receiving new streams</h5>
 
-<p>When new tracks are added to the <code>RTCPeerConnection</code>— either by calling its {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method or because of renegotiation of the stream's format—a {{event("track")}} event is set to the <code>RTCPeerConnection</code> for each track added to the connection. Making use of newly added media requires implementing a handler for the <code>track</code> event. A common need is to attach the incoming media to an appropriate HTML element. In our example, we add the track's stream to the {{HTMLElement("video")}} element that displays the incoming video:</p>
+<p>When new tracks are added to the <code>RTCPeerConnection</code>— either by calling its {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method or because of renegotiation of the stream's format—a {{event("track")}} event is set to the <code>RTCPeerConnection</code> for each track added to the connection. Making use of newly added media requires implementing a handler for the <code>track</code> event. A common need is to attach the incoming media to an appropriate HTML element. In our example, we add the track's stream to the {{HTMLElement("video")}} element that displays the incoming video:</p>
 
 <pre class="brush: js">function handleTrackEvent(event) {
   document.getElementById("received_video").srcObject = event.streams[0];
@@ -542,7 +542,7 @@ function invite(evt) {
 
 <h4 id="Ending_the_call">Ending the call</h4>
 
-<p>There are many reasons why calls may end. A call might have completed, with one or both sides having hung up. Perhaps a network failure has occurred, or one user might have quit their browser, or had a system crash. In any case, all good things must come to an end.</p>
+<p>There are many reasons why calls may end. A call might have completed, with one or both sides having hung up. Perhaps a network failure has occurred, or one user might have quit their browser, or had a system crash. In any case, all good things must come to an end.</p>
 
 <h5 id="Hanging_up">Hanging up</h5>
 

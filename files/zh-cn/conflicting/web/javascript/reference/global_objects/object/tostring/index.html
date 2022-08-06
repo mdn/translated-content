@@ -28,7 +28,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
 <p><code>toSource()</code>方法返回以下值：</p>
 
 <ul>
- <li>对于内置的{{jsxref("Object")}} 对象，<code>toSource</code>返回了下面的字符串，表示源码没法获取：</li>
+ <li>对于内置的{{jsxref("Object")}} 对象，<code>toSource</code>返回了下面的字符串，表示源码没法获取：</li>
 </ul>
 
 <pre class="brush: js">function Object() {
@@ -36,7 +36,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
 }</pre>
 
 <ul>
- <li>对于 {{jsxref("Object")}} 的实例，<code>toSource()</code> 会返回该实例源代码的字符串表示。</li>
+ <li>对于 {{jsxref("Object")}} 的实例，<code>toSource()</code> 会返回该实例源代码的字符串表示。</li>
 </ul>
 
 <p>在调试时，你可以通过 <code>toSource()</code> 来查看一个对象的内容。</p>
@@ -60,16 +60,16 @@ alert(new Person("Joe").toSource()); // ---&gt; new Person("Joe")</pre>
 <p>每个 JavaScript 核心类型都有它自己的 <code>toSource()</code> 方法。这些对象是：</p>
 
 <ul>
- <li>{{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Array")}} object.</li>
- <li>{{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Boolean")}} object.</li>
- <li>{{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Date")}} object.</li>
- <li>{{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Function")}} object.</li>
- <li>{{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Number")}} object.</li>
- <li>{{jsxref("RegExp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("RegExp")}} object.</li>
- <li>{{jsxref("SIMD.toSource()", "SIMD.%type%.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("SIMD")}} objects.</li>
- <li>{{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("String")}} object.</li>
- <li>{{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Symbol")}} object.</li>
- <li><code>Math.toSource()</code> — Returns the String "Math".</li>
+ <li>{{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Array")}} object.</li>
+ <li>{{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Boolean")}} object.</li>
+ <li>{{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Date")}} object.</li>
+ <li>{{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Function")}} object.</li>
+ <li>{{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Number")}} object.</li>
+ <li>{{jsxref("RegExp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("RegExp")}} object.</li>
+ <li>{{jsxref("SIMD.toSource()", "SIMD.%type%.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("SIMD")}} objects.</li>
+ <li>{{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("String")}} object.</li>
+ <li>{{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Symbol")}} object.</li>
+ <li><code>Math.toSource()</code> — Returns the String "Math".</li>
 </ul>
 
 <h3 id="循环引用限制">循环引用限制</h3>

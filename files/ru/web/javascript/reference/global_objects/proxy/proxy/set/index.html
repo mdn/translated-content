@@ -37,7 +37,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
  <dd><span id="result_box" lang="ru"><span>Значение, устанавливаемое в свойство </span></span><code>property</code><span lang="ru"><span>.</span></span></dd>
  <dt><code>receiver</code></dt>
  <dd><span id="result_box" lang="ru"><span>Объект, которому первоначально было присвоено задание.</span> <span>Обычно это сам прокси.</span> <span>Но обработчик </span></span><code>set()</code><span lang="ru"><span> также может быть вызван косвенно, через цепочку прототипов или различными другими способами.</span><br>
-      <span>Например, предположим, что скрипт выполняет </span></span><code><var>obj</var>.name = "jen"</code><span lang="ru"><span>, при этом </span></span><code><var>obj</var></code><span lang="ru"><span> не является прокси и не имеет собственного свойства </span></span><code>.name</code><span lang="ru"><span>, но имеет прокси в цепочке прототипов.</span> Б<span>удет вызван обработчик прокси </span></span><code>set()</code><span lang="ru"><span> , а </span></span><code><var>obj</var></code><span lang="ru"><span> будет передан в качестве получателя.</span></span></dd>
+      <span>Например, предположим, что скрипт выполняет </span></span><code><var>obj</var>.name = "jen"</code><span lang="ru"><span>, при этом </span></span><code><var>obj</var></code><span lang="ru"><span> не является прокси и не имеет собственного свойства </span></span><code>.name</code><span lang="ru"><span>, но имеет прокси в цепочке прототипов.</span> Б<span>удет вызван обработчик прокси </span></span><code>set()</code><span lang="ru"><span> , а </span></span><code><var>obj</var></code><span lang="ru"><span> будет передан в качестве получателя.</span></span></dd>
  <dd></dd>
 </dl>
 
@@ -83,18 +83,18 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 <p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Следующий код перехватывает установку значения свойству</span></span></span><span lang="ru"><span>.</span></span></p>
 
 <pre class="brush: js">var p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
-    target[prop] = value
-    console.log('property set: ' + prop + ' = ' + value)
-    return true
-  }
+  set: function(target, prop, value, receiver) {
+    target[prop] = value
+    console.log('property set: ' + prop + ' = ' + value)
+    return true
+  }
 })
 
-console.log('a' in p)  // false
+console.log('a' in p)  // false
 
-p.a = 10               // "property set: a = 10"
-console.log('a' in p)  // true
-console.log(p.a)       // 10
+p.a = 10               // "property set: a = 10"
+console.log('a' in p)  // true
+console.log(p.a)       // 10
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

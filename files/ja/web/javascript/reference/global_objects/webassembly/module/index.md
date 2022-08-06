@@ -39,7 +39,7 @@ var worker = new Worker("wasm_worker.js");
 
 WebAssembly.compileStreaming(fetch('simple.wasm'))
 .then(mod =>
-  worker.postMessage(mod)
+  worker.postMessage(mod)
 );
 ```
 

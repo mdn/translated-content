@@ -5,9 +5,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>A API <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> {{WebExtAPIRef("bookmarks")}} permite uma extensão interagir e manipular o sistema de favoritos do navegador. Você pode pode usá-lo para favoritar páginas, obter favoritos existentes e, editar, remover ou organizar os favoritos.</p>
+<p>A API <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> {{WebExtAPIRef("bookmarks")}} permite uma extensão interagir e manipular o sistema de favoritos do navegador. Você pode pode usá-lo para favoritar páginas, obter favoritos existentes e, editar, remover ou organizar os favoritos.</p>
 
-<p>Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> em seu arquivo <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> .</p>
+<p>Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> em seu arquivo <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> .</p>
 
 <h2 id="Tipos">Tipos</h2>
 
@@ -57,7 +57,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
  <dt>{{WebExtAPIRef("bookmarks.onRemoved")}}</dt>
  <dd>Disparado quando um favorito ou uma pasta é removido. Quando uma pasta é removida recursivamente, uma simples notificação é disparada para o diretório, e nenhum para seu conteúdo.</dd>
  <dt>{{WebExtAPIRef("bookmarks.onChanged")}}</dt>
- <dd>Disparado quando um favorito ou pasta é modificado. Atualmente, somente mudanças no <code>title</code> e <code>url</code> o disparam.</dd>
+ <dd>Disparado quando um favorito ou pasta é modificado. Atualmente, somente mudanças no <code>title</code> e <code>url</code> o disparam.</dd>
  <dt>{{WebExtAPIRef("bookmarks.onMoved")}}</dt>
  <dd>Disparado quando um favorito ou pasta é movido para uma pasta pai diferente ou para um novo local dentro deste pasta.</dd>
  <dt>{{WebExtAPIRef("bookmarks.onChildrenReordered")}}</dt>
@@ -73,18 +73,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 <p>{{Compat("webextensions.api.bookmarks")}}</p>
 
 <div class="hidden note">
-<p>A sessão "Chrome incompatibilities" está incluso no <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> usando a macro <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a>.</p>
+<p>A sessão "Chrome incompatibilities" está incluso no <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> usando a macro <a href="/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a>.</p>
 
-<p>Se precisar atualizar este conteúdo, edite <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, então recarregue a página para ver suas alterações.</p>
+<p>Se precisar atualizar este conteúdo, edite <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, então recarregue a página para ver suas alterações.</p>
 </div>
 
 <p>{{WebExtExamples("h2")}}</p>
 
 <div class="note"><strong>Agradecimentos</strong>
 
-<p>Esta API é baseada na API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a> . Esta documentação é derivada do <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> no código do Chromium.</p>
+<p>Esta API é baseada na API Chromium <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a> . Esta documentação é derivada do <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> no código do Chromium.</p>
 
-<p>Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e aqui estão sob a Creative Commons Attribution 3.0 United States License.</p>
+<p>Os dados de compatibilidade do Microsoft Edge são fornecidos pela Microsoft Corporation e aqui estão sob a Creative Commons Attribution 3.0 United States License.</p>
 </div>
 
 <div class="hidden">

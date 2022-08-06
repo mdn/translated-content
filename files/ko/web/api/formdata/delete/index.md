@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/delete
 ---
 {{APIRef("XMLHttpRequest")}}
 
-{{domxref("FormData")}} 인터페이스의 **`delete()`** 메서드는 `FormData` 객체에서 key와 그 값에 해당하는 것을 지웁니다.
+{{domxref("FormData")}} 인터페이스의 **`delete()`** 메서드는 `FormData` 객체에서 key와 그 값에 해당하는 것을 지웁니다.
 
 > **참고:** 이 메서드는 [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
@@ -28,7 +28,7 @@ Void.
 
 ## Example
 
-다음 코드를 따라 빈 `FormData` 객체를 만들고, form의 key/value 쌍을 미리 채웁니다:
+다음 코드를 따라 빈 `FormData` 객체를 만들고, form의 key/value 쌍을 미리 채웁니다:
 
 ```js
 var formData = new FormData(myForm);

@@ -20,7 +20,7 @@ CSP は完全な後方互換性を保って設計されています (ただし�
 
 CSP を有効にするには、ウェブサーバーから {{HTTPHeader("Content-Security-Policy")}} HTTP ヘッダーを返すように設定する必要があります (`X-Content-Security-Policy` ヘッダーに関する記述が時々ありますが、これは古いバージョンのものであり、今日このヘッダーを指定する必要はありません)。
 
-他にも、 {{HTMLElement("meta")}} 要素を用いてポリシーを指定することも可能です。 例えば: 
+他にも、 {{HTMLElement("meta")}} 要素を用いてポリシーを指定することも可能です。 例えば: 
 
 ```html
 <meta http-equiv="Content-Security-Policy"

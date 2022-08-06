@@ -18,13 +18,13 @@ translation_of: Learn/Server-side/Django/Admin_site
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">Ahora que hemos creado modelos para el sitio web de la <a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website">BibliotecaLocal</a>, usaremos el sitio de administración de Django para añadir algunos datos de libros "reales". Primero mostraremos cómo registrar los modelos en el sitio de administración y luego te mostraremos cómo iniciar sesión y crear algunos datos. Al final del artículo mostraremos algunas formas en las que puedes mejorar más adelante la presentación del sitio de Administración.</p>
+<p class="summary">Ahora que hemos creado modelos para el sitio web de la <a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website">BibliotecaLocal</a>, usaremos el sitio de administración de Django para añadir algunos datos de libros "reales". Primero mostraremos cómo registrar los modelos en el sitio de administración y luego te mostraremos cómo iniciar sesión y crear algunos datos. Al final del artículo mostraremos algunas formas en las que puedes mejorar más adelante la presentación del sitio de Administración.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Pre-requisitos:</th>
-   <td>Primero completa: <a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models">Tutorial Django Parte 3: Uso de modelos</a>.</td>
+   <td>Primero completa: <a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models">Tutorial Django Parte 3: Uso de modelos</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objetivo:</th>
@@ -37,22 +37,22 @@ translation_of: Learn/Server-side/Django/Admin_site
 
 <h2 id="Introducción">Introducción</h2>
 
-<p>La <em>aplicación</em> de administración de Django puede usar tus modelos para construir automáticamente un área dentro del sitio que puedes usar para crear, consultar, actualizar y borrar registros. Esto puede ahorrarte mucho tiempo de desarrollo, haciendo muy fácil probar tus modelos y darte una idea de si tus datos son correctos. La aplicación de administración también puede ser útil para manejar datos en producción, dependiendo del estilo del sitio web. Desde el proyecto Django solo se recomienda para gestión de datos internos (por ejemplo, solo para uso de administradores o personas internas de tu organización), ya que como enfoque centrado en el modelo no es necesariamente la mejor interfaz posible para todos los usuarios, exponiendo una gran cantidad de detalles innecesarios de los modelos.</p>
+<p>La <em>aplicación</em> de administración de Django puede usar tus modelos para construir automáticamente un área dentro del sitio que puedes usar para crear, consultar, actualizar y borrar registros. Esto puede ahorrarte mucho tiempo de desarrollo, haciendo muy fácil probar tus modelos y darte una idea de si tus datos son correctos. La aplicación de administración también puede ser útil para manejar datos en producción, dependiendo del estilo del sitio web. Desde el proyecto Django solo se recomienda para gestión de datos internos (por ejemplo, solo para uso de administradores o personas internas de tu organización), ya que como enfoque centrado en el modelo no es necesariamente la mejor interfaz posible para todos los usuarios, exponiendo una gran cantidad de detalles innecesarios de los modelos.</p>
 
-<p>Toda la configuración requerida para incluir la aplicación admin en tu sitio Web fue hecha automaticamente cuando  <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">creaste el esqueleto del proyecto</a> (para información sobre dependencias reales necesarias, vea los <a href="https://docs.djangoproject.com/en/1.10/ref/contrib/admin/">documentos de Django aquí</a>). Como resultado, todo lo que  <strong>debes</strong> hacer para agregar tus modelos a la aplicación admin  es  <em>registrarlos.</em> Al final de este artículo entregaremos una breve demostración sobre como puedes configurar aún más el área de administración para mejorar la visualización de nuestros modelos de datos.</p>
+<p>Toda la configuración requerida para incluir la aplicación admin en tu sitio Web fue hecha automaticamente cuando  <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">creaste el esqueleto del proyecto</a> (para información sobre dependencias reales necesarias, vea los <a href="https://docs.djangoproject.com/en/1.10/ref/contrib/admin/">documentos de Django aquí</a>). Como resultado, todo lo que  <strong>debes</strong> hacer para agregar tus modelos a la aplicación admin  es  <em>registrarlos.</em> Al final de este artículo entregaremos una breve demostración sobre como puedes configurar aún más el área de administración para mejorar la visualización de nuestros modelos de datos.</p>
 
 <p>Después de registrar los modelos te mostraremos como crear un nuevo "administrador", iniciar sesión en el sitio, y crear algunos libros, autores, instancias de libros, y géneros. Esto será útil para probar las vistas y plantillas que empezaremos a crear en el siguiente tutorial.</p>
 
-<h2 id="Registrando_los_modelos">Registrando los modelos </h2>
+<h2 id="Registrando_los_modelos">Registrando los modelos </h2>
 
-<p>Primero,  abre <strong>admin.py</strong> en la aplicación catálogo (<strong>/locallibrary/catalog/admin.py</strong>). Actualmente se ve como esto — notar que ya importa <code>django.contrib.admin</code>:</p>
+<p>Primero,  abre <strong>admin.py</strong> en la aplicación catálogo (<strong>/locallibrary/catalog/admin.py</strong>). Actualmente se ve como esto — notar que ya importa <code>django.contrib.admin</code>:</p>
 
 <pre class="brush: python">from django.contrib import admin
 
 # Register your models here.
 </pre>
 
-<p>Registra los modelos copiando el texto siguiente al final del archivo. Este simple código esta importando los modelos y después llama a  <code>admin.site.register</code> para registrar a cada uno de ellos.</p>
+<p>Registra los modelos copiando el texto siguiente al final del archivo. Este simple código esta importando los modelos y después llama a  <code>admin.site.register</code> para registrar a cada uno de ellos.</p>
 
 <pre class="brush: python">from .models import Author, Genre, Book, BookInstance
 
@@ -64,13 +64,13 @@ admin.site.register(BookInstance)
 
 <div class="note"><strong>Nota</strong>: Si tu aceptaste el desafío de crear un modelo que represente el Lenguaje natural de un libro (<a href="/en-US/docs/Learn/Server-side/Django/Models">ver el artículo tutorial de modelos</a>), importalo y registralo también!</div>
 
-<p>Esta es la forma más simple de registrar un modelo, o modelos, con el sitio. El sitio de administración es altamente personalizable,  y hablaremos más sobre otras formas de registrar tus modelos más abajo.</p>
+<p>Esta es la forma más simple de registrar un modelo, o modelos, con el sitio. El sitio de administración es altamente personalizable,  y hablaremos más sobre otras formas de registrar tus modelos más abajo.</p>
 
 <h2 id="Creando_un_administrador">Creando un administrador</h2>
 
-<p>Para iniciar sesión en el sitio de administración, necesitamos una cuenta de usuario con estado de <em>Personal</em> habilitado. Para ver y crear registros tambien necesitamos que este usuario tenga permisos para administrar todos nuestros objetos. Puedes crear una cuenta  "administrador" que tenga acceso total al sitio y a todos los permisios necesarios usando <strong>manage.py</strong>.</p>
+<p>Para iniciar sesión en el sitio de administración, necesitamos una cuenta de usuario con estado de <em>Personal</em> habilitado. Para ver y crear registros tambien necesitamos que este usuario tenga permisos para administrar todos nuestros objetos. Puedes crear una cuenta  "administrador" que tenga acceso total al sitio y a todos los permisios necesarios usando <strong>manage.py</strong>.</p>
 
-<p>Usa el siguiente comando, en el mismo directorio de <strong>manage.py</strong>, para crear al administrador. Deberás ingresar un nombre de usuario, dirección email, y una  contraseña <em>fuerte</em>.</p>
+<p>Usa el siguiente comando, en el mismo directorio de <strong>manage.py</strong>, para crear al administrador. Deberás ingresar un nombre de usuario, dirección email, y una  contraseña <em>fuerte</em>.</p>
 
 <pre class="brush: bash">python3 manage.py createsuperuser
 </pre>
@@ -83,15 +83,15 @@ admin.site.register(BookInstance)
 
 <h2 id="Iniciar_sesión_y_usar_el_sitio">Iniciar sesión y usar el sitio</h2>
 
-<p>Para iniciar sesión en el sitio, ve a la URL <em>/admin</em> (e.j. <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin</a>) e ingresa tus credenciales de id usuario y contraseña de administrador (serás redirigido a la página <em>login</em>, y entonces volverás a la URL de <em>/admin</em> después de haber ingresado tus datos).</p>
+<p>Para iniciar sesión en el sitio, ve a la URL <em>/admin</em> (e.j. <a href="http://127.0.0.1:8000/admin/">http://127.0.0.1:8000/admin</a>) e ingresa tus credenciales de id usuario y contraseña de administrador (serás redirigido a la página <em>login</em>, y entonces volverás a la URL de <em>/admin</em> después de haber ingresado tus datos).</p>
 
 <p>Esta parte del sitio muestra todos tus modelos, agrupados por aplicación instalada. Puedes hacer click en un nombre de modelo para ir a una pantalla que lista todos los registros asociados, y además puedes hacer click sobre esos registros para editarlos. También puedes hacer click directamente sobre el vínculo <strong>Añadir</strong> a continuación de cada modelo para comenzar a crear un registro de ese tipo.</p>
 
 <p><img alt="Admin Site - Home page" src="https://mdn.mozillademos.org/files/13975/admin_home.png" style="display: block; height: 634px; margin: 0px auto; width: 998px;"></p>
 
-<p>Haz click  sobre el vínculo <strong>Añadir</strong> a la derecha de <em>Books</em> para crear un nuevo libro, esto mostrará un diálogo parecido al de abajo). Nota como los títulos de cada campo, el tipo de widget usado, y el <code>help_text</code> (si existe) corresponde con el valor que especificaste en el modelo. </p>
+<p>Haz click  sobre el vínculo <strong>Añadir</strong> a la derecha de <em>Books</em> para crear un nuevo libro, esto mostrará un diálogo parecido al de abajo). Nota como los títulos de cada campo, el tipo de widget usado, y el <code>help_text</code> (si existe) corresponde con el valor que especificaste en el modelo. </p>
 
-<p>Ingresa valores para los campos. Puede crear nuevos autores o géneros presionandoel botón <strong>+</strong> a continuación del campo respectivo ( o seleccionar un valor existente de las listas si ya las tenías creadas). Cuando termines puedes presionar  <strong>Grabar</strong>, <strong>Grabar y añadir otro</strong>, o <strong>Grabar y continuar editando</strong> para guardar el registro.</p>
+<p>Ingresa valores para los campos. Puede crear nuevos autores o géneros presionandoel botón <strong>+</strong> a continuación del campo respectivo ( o seleccionar un valor existente de las listas si ya las tenías creadas). Cuando termines puedes presionar  <strong>Grabar</strong>, <strong>Grabar y añadir otro</strong>, o <strong>Grabar y continuar editando</strong> para guardar el registro.</p>
 
 <p><img alt="Admin Site - Book Add" src="https://mdn.mozillademos.org/files/13979/admin_book_add.png" style="border-style: solid; border-width: 1px; display: block; height: 780px; margin: 0px auto; width: 841px;"></p>
 
@@ -125,7 +125,7 @@ admin.site.register(BookInstance)
 
 <ul>
  <li>Cada modelo tiene una lista de registros individuales, identificados por la cadena creada por el método <code>__str__()</code> del modelo, y enlazados a vistas/formularios de detalle para edición. Por defecto, esta vista de lista tiene un menú de acción en la parte superior que puedes usar para realizar operaciones de eliminación masiva de los registros.</li>
- <li>Los formularios de detalle de registro del modelo para edición y adición de registros contienen todos los campos del modelo, organizados verticalmente en su orden de declaración. </li>
+ <li>Los formularios de detalle de registro del modelo para edición y adición de registros contienen todos los campos del modelo, organizados verticalmente en su orden de declaración. </li>
 </ul>
 
 <p>Posteriormente puedes personalizar la interfaz para hacerla incluso más fácil de usar. Algunas de las cosas que puedes hacer son:</p>
@@ -133,7 +133,7 @@ admin.site.register(BookInstance)
 <ul>
  <li>Vistas de lista:
   <ul>
-   <li>Añadir campos e información adicional desplegada para cada registro. </li>
+   <li>Añadir campos e información adicional desplegada para cada registro. </li>
    <li>Añadir filtros para seleccionar qué registros se listan, basados en fechas u otros tipos de valores (ej. estado de préstamo del libro).</li>
    <li>Añadir opciones adicionales al menú <em>Action </em>en las vistas de lista y elegir en qué lugar del formulario se despliega este menú.</li>
   </ul>
@@ -148,7 +148,7 @@ admin.site.register(BookInstance)
 
 <p>En esta sección observaremos unos cuantos cambios que mejorarán la interfaz de nuestra <em>LocalLibrary</em>, incluyendo la adición de más información a las listas de los modelos <code>Book</code> y <code>Author</code>, y mejorando el diseño de sus vistas de edición. No cambiaremos la presentación de los modelos <code>Language</code> y <code>Genre</code> debido a que solo tienen un campo cada uno, ¡por lo que no hay ningún beneficio real de hacerlo!</p>
 
-<p>Puedes encontrar una referencia completa de todas las opciones de personalización del sitio de administración en <a href="https://docs.djangoproject.com/en/1.10/ref/contrib/admin/">The Django Admin site</a> (Django Docs).</p>
+<p>Puedes encontrar una referencia completa de todas las opciones de personalización del sitio de administración en <a href="https://docs.djangoproject.com/en/1.10/ref/contrib/admin/">The Django Admin site</a> (Django Docs).</p>
 
 <h3 id="Registrar_una_clase_ModelAdmin">Registrar una clase ModelAdmin</h3>
 
@@ -217,7 +217,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Añade el siguiente código en tu modelo <code>Book</code> (<strong>models.py</strong>). Esto crea una cadena con los tres primeros valores del campo <code>genre</code> (si existen) y crea una <code>short_description</code> (descripción corta) que puede ser usada en el sitio de administración por este método.</p>
 
-<pre class="brush: python">    def display_genre(self):
+<pre class="brush: python">    def display_genre(self):
         """
         Creates a string for the Genre. This is required to display genre in Admin.
         """
@@ -306,12 +306,12 @@ class BookInstanceAdmin(admin.ModelAdmin):
 <p>Puedes hacerlo declarando <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines">inlines</a>, de tipo <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline">TabularInline</a> (diseño horizontal) o <a href="https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.StackedInline">StackedInline</a> (diseño vertical, tal como el diseño de modelo por defecto). Puedes añadir la información de <code>BookInstance</code> dentro de nuestro detalle de <code>Book</code> añadiendo las líneas de abajo en negrita cerca de tu <code>BookAdmin</code>:</p>
 
 <pre class="brush: python"><strong>class BooksInstanceInline(admin.TabularInline):
-    model = BookInstance</strong>
+    model = BookInstance</strong>
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'display_genre')
-<strong>    inlines = [BooksInstanceInline]</strong>
+    list_display = ('title', 'author', 'display_genre')
+<strong>    inlines = [BooksInstanceInline]</strong>
 </pre>
 
 <p>Prueba recargando tu aplicación y observando la vista para un libro -- ahora deberías ver al final las instancias relacionadas a este libro (inmediatamente debajo de los campos de género del libro):</p>
@@ -349,7 +349,7 @@ class BookAdmin(admin.ModelAdmin):
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="En_este_módulo">En este módulo</h2>
 

@@ -5,7 +5,7 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 ---
 <div>{{DefaultAPISidebar("Web Components")}}</div>
 
-<p class="summary">Un aspecto importante de los componentes Web es la encapsulación — ser capaz de mantener la estructura de marcado, estilo, y comportamiento oculto y separado de otro código en la página para que las diferentes partes no entre en conflicto, y el código pueda permanecer limpio y agradable. El API de DOM Shadow es un parte clave para esto, proporcionando una forma de enlazar un DOM oculto y separado a un elemento. Este artículo cubre los aspectos básicos para utilizar Shadow DOM.</p>
+<p class="summary">Un aspecto importante de los componentes Web es la encapsulación — ser capaz de mantener la estructura de marcado, estilo, y comportamiento oculto y separado de otro código en la página para que las diferentes partes no entre en conflicto, y el código pueda permanecer limpio y agradable. El API de DOM Shadow es un parte clave para esto, proporcionando una forma de enlazar un DOM oculto y separado a un elemento. Este artículo cubre los aspectos básicos para utilizar Shadow DOM.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Shadow DOM es soportado por defecto en Firefox (63 en adelante), Chrome, Opera, y Safari. Edge también está trabajando en una implemetanción.</p>
@@ -13,7 +13,7 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 
 <h2 id="Vista_de_alto_nivel">Vista de alto nivel</h2>
 
-<p>Este artículo asume que usted está familiarizado con el concepto de <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM (Document Object Model)</a> — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:</p>
+<p>Este artículo asume que usted está familiarizado con el concepto de <a href="/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM (Document Object Model)</a> — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:</p>
 
 <pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -33,7 +33,7 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14559/dom-screenshot.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p><em>Shadow</em> DOM permite adjuntar arboles DOM ocultos a elementos en el arbol DOM regular — este arbol shadow DOM comienza con un elemento <strong>shadow root,</strong> debajo del cual se puede adjuntar cualquier elemento que desee, de la misma manera que el DOM normal.</p>
+<p><em>Shadow</em> DOM permite adjuntar arboles DOM ocultos a elementos en el arbol DOM regular — este arbol shadow DOM comienza con un elemento <strong>shadow root,</strong> debajo del cual se puede adjuntar cualquier elemento que desee, de la misma manera que el DOM normal.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15788/shadow-dom.png" style="height: 543px; width: 1138px;"></p>
 
@@ -42,22 +42,22 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 <ul>
  <li><strong>Shadow host</strong>: El nodo regular del DOM al que es atado el shadow DOM.</li>
  <li><strong>Shadow tree</strong>: El arbol DOM dentro del shadow DOM.</li>
- <li><strong>Shadow boundary</strong>: El punto en el que el shadow DOM termina y el DOM regular comienza.</li>
+ <li><strong>Shadow boundary</strong>: El punto en el que el shadow DOM termina y el DOM regular comienza.</li>
  <li><strong>Shadow root</strong>: El nodo raiz del arbol Shadow.</li>
 </ul>
 
-<p>Puede manipular los nodos del 'shadow DOM' de la misma manera que los nodos del arbol DOM regular. Por ejemplo, agregando hijos o estableciendo atributos, dando estilo a nodos individuales utilizando element.style.foo, o agregando estilo a todo el árbol de 'shadow DOM' dentro del elemento &lt;style&gt;. La diferencia es que nada del código dentro de un 'shadow DOM' puede afectar a nada fuera de él, lo que permite una encapsulación práctica.</p>
+<p>Puede manipular los nodos del 'shadow DOM' de la misma manera que los nodos del arbol DOM regular. Por ejemplo, agregando hijos o estableciendo atributos, dando estilo a nodos individuales utilizando element.style.foo, o agregando estilo a todo el árbol de 'shadow DOM' dentro del elemento &lt;style&gt;. La diferencia es que nada del código dentro de un 'shadow DOM' puede afectar a nada fuera de él, lo que permite una encapsulación práctica.</p>
 
 <p>Cabe destacar que el shadow DOM no es algo nuevo — los exploradores lo han usado por un largo tiempo para encapsular la estructura interna de un elemento. Piensa por ejemplo en un elemento {{htmlelement("video")}}, con los controles predeterminados del explorador a la vista. Todo lo que ves en el DOM es el elemento <code>&lt;video&gt;</code>, pero este contiene una serie de botones y otros controles dentro de su shadow DOM. Las especificaciones del shadow DOM fueron hechas para que seas capaz de manipular el shadow DOM de tus elementos personalizados.</p>
 
 <h2 id="Uso_básico">Uso básico</h2>
 
-<p>Puede adjuntar un 'shadow root' a cualquier elemento utilizando el método {{domxref ("Element.attachShadow ()")}}. Éste toma como parámetro un objeto que contiene una propiedad — modo — con dos posibles valores: 'open' o 'closed'.</p>
+<p>Puede adjuntar un 'shadow root' a cualquier elemento utilizando el método {{domxref ("Element.attachShadow ()")}}. Éste toma como parámetro un objeto que contiene una propiedad — modo — con dos posibles valores: 'open' o 'closed'.</p>
 
 <pre class="brush: js notranslate">let shadow = elementRef.attachShadow({mode: 'open'});
 let shadow = elementRef.attachShadow({mode: 'closed'});</pre>
 
-<p><code>open</code> siginifica que puede acceder al shadow DOM usando JavaScript en el contexto principal de la página. Por ejemplo, usando la propiedad {{domxref("Element.shadowRoot")}}:</p>
+<p><code>open</code> siginifica que puede acceder al shadow DOM usando JavaScript en el contexto principal de la página. Por ejemplo, usando la propiedad {{domxref("Element.shadowRoot")}}:</p>
 
 <pre class="brush: js notranslate">let myShadowDom = myCustomElem.shadowRoot;</pre>
 

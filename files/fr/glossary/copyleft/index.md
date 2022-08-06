@@ -15,4 +15,4 @@ Copyleft est un terme, faisant généralement référence à une licence, utilis
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Copyleft")}} sur Wikipédia
+- [Copyleft](https://fr.wikipedia.org/wiki/Copyleft) sur Wikipédia

@@ -5,11 +5,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>Веб расширения разработаны с поддержкой совместимости с расширениями Chrome и Оперы на сколько это возможно. Расширения, написанные для этих браузеров, должны работать в Firefox с минимальными изменениями.</p>
+<p>Веб расширения разработаны с поддержкой совместимости с расширениями Chrome и Оперы на сколько это возможно. Расширения, написанные для этих браузеров, должны работать в Firefox с минимальными изменениями.</p>
 
-<p>Всё же, Firefox на данный момент имеет поддержку только для ограниченного набора функций и API, поддержуемых в Chrome и Опере. Мы работаем над добавлением большей поддержки, но много функций пока ещё не поддерживаются и некоторые из них никогда не будут поддерживаться.</p>
+<p>Всё же, Firefox на данный момент имеет поддержку только для ограниченного набора функций и API, поддержуемых в Chrome и Опере. Мы работаем над добавлением большей поддержки, но много функций пока ещё не поддерживаются и некоторые из них никогда не будут поддерживаться.</p>
 
-<p>Эта статья перечисляет все функции и API, которые полностью поддерживаются в <span style="line-height: 1.5;">Firefox Developer Edition (на данный момент Firefox 47). Там где функция поддерживается частично, мы указали на проблемные места.</span></p>
+<p>Эта статья перечисляет все функции и API, которые полностью поддерживаются в <span style="line-height: 1.5;">Firefox Developer Edition (на данный момент Firefox 47). Там где функция поддерживается частично, мы указали на проблемные места.</span></p>
 
 <div class="note">
 <p>You should assume that features and APIs not listed here at all are not yet supported.</p>
@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 
 <h2 id="manifest.json_функция">manifest.json функция</h2>
 
-<h3 id="Полностью_поддерживаемые_ключи">Полностью поддерживаемые ключи:</h3>
+<h3 id="Полностью_поддерживаемые_ключи">Полностью поддерживаемые ключи:</h3>
 
 <ul>
  <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/applications">applications</a></code></li>
@@ -32,11 +32,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
  <li><code><a href="/en-US/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code></li>
 </ul>
 
-<h3 id="Частично_поддерживаемые_ключи">Частично поддерживаемые ключи:</h3>
+<h3 id="Частично_поддерживаемые_ключи">Частично поддерживаемые ключи:</h3>
 
 <h4 id="background">background</h4>
 
-<p>Firefox не поддерживает <code>"устойчивое"</code> свойство. Фоновые скрипты остаются загруженными всё время.</p>
+<p>Firefox не поддерживает <code>"устойчивое"</code> свойство. Фоновые скрипты остаются загруженными всё время.</p>
 
 <h4 id="commands">commands</h4>
 
@@ -45,7 +45,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 <ul>
  <li>Media keys как сокращение</li>
  <li><code>global</code></li>
- <li>специальную команду <code>_execute_browser_action</code></li>
+ <li>специальную команду <code>_execute_browser_action</code></li>
 </ul>
 
 <h4 id="content_scripts">content_scripts</h4>

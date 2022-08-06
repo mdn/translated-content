@@ -10,15 +10,15 @@ l10n:
 ---
 {{APIRef("Console API")}}
 
-El objeto **`console`** provee acceso a la consola de depuración de los navegadores (p. ej. la [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) en Firefox). Los detalles de como funciona varían de navegador en navegador, pero hay un conjunto de características que _de facto_ son proporcionadas generalmente.
+El objeto **`console`** provee acceso a la consola de depuración de los navegadores (p. ej. la [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) en Firefox). Los detalles de como funciona varían de navegador en navegador, pero hay un conjunto de características que _de facto_ son proporcionadas generalmente.
 
-El objeto `console` puede ser accedido desde cualquier objeto global. {{domxref("Window")}} en el ámbito de navegación y {{domxref("WorkerGlobalScope")}} como variantes específicas de `workers` a través de la propiedad `console`. Está expuesto como {{domxref("Window.console")}}, y puede ser referenciado como `console`. Por ejemplo:
+El objeto `console` puede ser accedido desde cualquier objeto global. {{domxref("Window")}} en el ámbito de navegación y {{domxref("WorkerGlobalScope")}} como variantes específicas de `workers` a través de la propiedad `console`. Está expuesto como {{domxref("Window.console")}}, y puede ser referenciado como `console`. Por ejemplo:
 
 ```js
 console.log("Falló al abrir el enlace especificado")
 ```
 
-Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
+Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
 
 {{AvailableInWorkers}}
 
@@ -29,7 +29,7 @@ Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `con
 - {{domxref("console.clear()")}}
   - : Limpia la consola.
 - {{domxref("console.count()")}}
-  - : Registra el número de veces que esta línea ha sido llamada con la etiqueta dada.
+  - : Registra el número de veces que esta línea ha sido llamada con la etiqueta dada.
 - {{domxref("console.countReset()")}}
   - : Reinicia el valor del contador para la etiqueta dada.
 - {{domxref("console.debug()")}}
@@ -37,15 +37,15 @@ Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `con
 - {{domxref("console.dir()")}}
   - : Muestra un listado interactivo de las propiedades de un objeto JavaScript específico. Este listado permite usar triángulos de lista desplegables para examinar el contenido de objetos hijo.
 - {{domxref("console.dirxml()")}}
-  - : Muestra una representación en forma de árbol de un elemento XML/HTML si es posible o la vista del objeto JavaScript si no es posible.
+  - : Muestra una representación en forma de árbol de un elemento XML/HTML si es posible o la vista del objeto JavaScript si no es posible.
 - {{domxref("console.error()")}}
-  - : Muestra un mensaje de error. Se pueden utilizar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
+  - : Muestra un mensaje de error. Se pueden utilizar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
 - `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : Un alias para `error()`.
 - {{domxref("console.group()")}}
-  - : Crea un nuevo [grupo](#usando_grupos_en_la_consola), indentando todos los mensajes subsecuentes en un nuevo nivel. Para retroceder un nivel, se utiliza `groupEnd()`.
+  - : Crea un nuevo [grupo](#usando_grupos_en_la_consola), indentando todos los mensajes subsecuentes en un nuevo nivel. Para retroceder un nivel, se utiliza `groupEnd()`.
 - {{domxref("console.groupCollapsed()")}}
-  - : Crea un nuevo [grupo](#usando_grupos_en_la_consola), indentando todos los mensajes subsecuentes en un nuevo nivel. A diferencia de `group()`, inicia con la línea de grupo colapsada, requiriendo el uso de un botón de apertura para expandir el grupo. Para retroceder un nivel, se utiliza `groupEnd()`.
+  - : Crea un nuevo [grupo](#usando_grupos_en_la_consola), indentando todos los mensajes subsecuentes en un nuevo nivel. A diferencia de `group()`, inicia con la línea de grupo colapsada, requiriendo el uso de un botón de apertura para expandir el grupo. Para retroceder un nivel, se utiliza `groupEnd()`.
 - {{domxref("console.groupEnd()")}}
   - : Finaliza el [grupo](#usando_grupos_en_la_consola) actual.
 - {{domxref("console.info()")}}
@@ -76,13 +76,13 @@ Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `con
 
 ### Enviar texto a la consola
 
-La característica mas utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
+La característica mas utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
 
-Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o mas sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
+Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o mas sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
 
-#### Mostrando un solo objeto
+#### Mostrando un solo objeto
 
-La manera mas simple de utilizar los métodos de registro es mostrar un solo objeto:
+La manera mas simple de utilizar los métodos de registro es mostrar un solo objeto:
 
 ```js
 var someObject = { str: "Algún texto", id: 5 };
@@ -97,7 +97,7 @@ La salida se verá parecido a esto:
 
 #### Mostrando múltiples objetos
 
-También se pueden mostrar múltiples objetos listándolos y luego llamando el método de registro, de esta forma:
+También se pueden mostrar múltiples objetos listándolos y luego llamando el método de registro, de esta forma:
 
 ```js
 const car = "Dodge Charger";
@@ -105,7 +105,7 @@ const someObject = { str: "Algún texto", id: 5 };
 console.info("Mi primer automóvil fue un ", car, ". El objeto es:", someObject);
 ```
 
-La salida se verá parecido a esto:
+La salida se verá parecido a esto:
 
 ```bash
 [09:28:22.711] Mi primer automóvil fue un Dodge Charger . El objeto es:: ({str:"Some text", id:5})
@@ -134,7 +134,7 @@ for (let i=0; i<5; i++) {
 }
 ```
 
-La salida se verá parecido a esto:
+La salida se verá parecido a esto:
 
 ```bash
 [13:14:13.481] Hola, Bob. Me has llamado 1 veces.
@@ -146,7 +146,7 @@ La salida se verá parecido a esto:
 
 #### Estilizando la salida de la consola
 
-Puedes usar la directiva `%c` para aplicar un estilo CSS a la salida de la consola:
+Puedes usar la directiva `%c` para aplicar un estilo CSS a la salida de la consola:
 
 ```js
 console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
@@ -187,7 +187,7 @@ Las propiedadas utilizables junto con la directiva `%c` son las siguientes (al m
 
 ### Usando grupos en la consola
 
-Puedes usar grupos anidados para ayudar a organizar la salida visualmente combinando material relacionado. Para crear un nuevo bloque anidado, haz una llamada a `console.group()`. El método `console.groupCollapsed()` es similar, pero crea el nuevo bloque colapsado, requiriendo el uso de un "botón de mostrar" para abrirlo y leerlo.
+Puedes usar grupos anidados para ayudar a organizar la salida visualmente combinando material relacionado. Para crear un nuevo bloque anidado, haz una llamada a `console.group()`. El método `console.groupCollapsed()` es similar, pero crea el nuevo bloque colapsado, requiriendo el uso de un "botón de mostrar" para abrirlo y leerlo.
 
 Para salir del grupo actual, ejecuta `console.groupEnd()`. Por ejemplo, dado el siguiente código:
 
@@ -210,7 +210,7 @@ La salida se verá así:
 
 ### Temporizadores
 
-Puedes inicializar un temporizador para calcular la duración de una operación específica. Para iniciar uno, llama al método `console.time()`, pasándole como único parámetro un nombre. Para detener un temporizador, y obtener el tiempo transcurrido en milisegundos, solo llama al método `console.timeEnd()`, nuevamente pasándole el nombre del contador como parámetro. Se pueden ejecutar hasta 10 000 temporizadores simultáneamente en una página.
+Puedes inicializar un temporizador para calcular la duración de una operación específica. Para iniciar uno, llama al método `console.time()`, pasándole como único parámetro un nombre. Para detener un temporizador, y obtener el tiempo transcurrido en milisegundos, solo llama al método `console.timeEnd()`, nuevamente pasándole el nombre del contador como parámetro. Se pueden ejecutar hasta 10 000 temporizadores simultáneamente en una página.
 
 Por ejemplo, dado este código:
 
@@ -229,12 +229,12 @@ Registrará el tiempo necesitado por el usuario para descartar el cuadro de aler
 Nótese que el nombre del temporizador es mostrado tanto cuando el temporizador es iniciado como cuando es detenido.
 
 
-> **Nota:** Es importante saber que si estas usando esto para registrar el tiempo del trafico de red, el temporizador reportará el tiempo total para la transacción, mientras que el tiempo listado en el panel de conexiones o panel de red es solo la cantidad de tiempo requerida para obtener la cabecera.
+> **Nota:** Es importante saber que si estas usando esto para registrar el tiempo del trafico de red, el temporizador reportará el tiempo total para la transacción, mientras que el tiempo listado en el panel de conexiones o panel de red es solo la cantidad de tiempo requerida para obtener la cabecera.
 > Si en cambio tienes el registro de cuerpo (`response body logging`) habilitado, el tiempo listado para la respuesta de la cabecera y el cuerpo combinados debiera coincidir con lo que ves en la salida de la consola.
 
 ### Trazas de pila
 
-El objeto consola tambien soporta la salida de una traza de pila; esto te mostrará  la ruta de llamadas tomadas hasta alcanzar el punto de tu llamada {{domxref("console.trace()")}}. Dado un código como el siguiente:
+El objeto consola tambien soporta la salida de una traza de pila; esto te mostrará  la ruta de llamadas tomadas hasta alcanzar el punto de tu llamada {{domxref("console.trace()")}}. Dado un código como el siguiente:
 
 ```js
 function foo() {

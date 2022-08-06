@@ -24,7 +24,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS の動作概念（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
+   <td>基本的なコンピューターリテラシー、<a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、<a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS の動作概念（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -42,7 +42,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 </div>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>:  CSS の値は&lt;&gt;括弧で示すことが多く、CSS のプロパティによって違います(例えば{{cssxref("color")}} プロパティや <a href="/ja/docs/Web/CSS/color_value">&lt;color&gt;</a> データタイプがあります)。CSS のデータタイプ型と HTML の要素は違いますので、混乱しないでください。両方とも&lt;&gt;括弧を使います　— しかしそれらを使用するコンテキストは全く異なります。</p>
+<p><strong>注</strong>:  CSS の値は&lt;&gt;括弧で示すことが多く、CSS のプロパティによって違います(例えば{{cssxref("color")}} プロパティや <a href="/ja/docs/Web/CSS/color_value">&lt;color&gt;</a> データタイプがあります)。CSS のデータタイプ型と HTML の要素は違いますので、混乱しないでください。両方とも&lt;&gt;括弧を使います　— しかしそれらを使用するコンテキストは全く異なります。</p>
 </div>
 
 <p>次の例では、キーワードを使用して章立ての色を設定し、かつ背景色を <code>rgb()</code> 関数を使って指定します。:</p>
@@ -138,7 +138,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
   <tr>
    <td><code>px</code></td>
    <td>Pixels ピクセル</td>
-   <td>1px =  1in の 1/96</td>
+   <td>1px =  1in の 1/96</td>
   </tr>
  </tbody>
 </table>
@@ -208,7 +208,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/length.html", '100%', 820)}}</p>
 
-<h4 id="ems_and_rems" name="ems_and_rems">em と rem</h4>
+<h4 id="ems_and_rems" name="ems_and_rems">em と rem</h4>
 
 <p><code>em</code> と <code>rem</code> は開発者がボックスやテキストまですべてのサイズを変更するときによく遭遇する相対的な長さの単位です。これらがどのように動作するか、どのように違いがあるかを理解しましょう。特に<a href="/ja/docs/Learn/CSS/Styling_text">スタイルテキスト</a> や <a href="/ja/docs/Learn/CSS/CSS_layout">CSS レイアウト</a>のようなより複雑なテーマを扱うようになったときに価値があります。以下の例は、デモを提供しています。</p>
 
@@ -224,7 +224,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <div title="ただし、CSSで&lt;html> font-sizeを変更すると、その他のすべて（remサイズとemサイズの両方のテキスト）が相対的に変更されることがわかります。"></div>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}} </p>
 
 <h3 id="Percentages" name="Percentages">Percentages(パーセント)</h3>
 
@@ -236,11 +236,11 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p><strong>ラップするボックスの幅またはパーセントの値を変更してその影響を確認してください。</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}} </p>
 
 <p>次の例はフォントサイズをパーセントで指定しています。それぞれの <code>&lt;li&gt;</code> は 80% の <code>font-size</code> です。そのため、ネストしたリストはその親のサイズを継承するため、徐々にフォントサイズが小さくなっています。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
 
 <p>注意: 多くの値には length(長さ) と percentage(パーセント)の両方を受け付けますが、中には length しか受け付けないものもあります。どのような値が受け付けられるかを確認するには、MDN プロパティリファレンスページを参照してください。許可される値が <code><a href="/ja/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code> の場合は length と percentage の両方を使用できます。しかし許可される値が <code>&lt;length&gt;</code> の場合、percentage は使用できません。</p>
 
@@ -250,7 +250,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p><strong>この下の例を見てください。<code>opacity</code> を <code>0</code> から <code>1</code> までの間の数に変えて、この箱とそのコンテンツがどのよう表示されるかを確認してください。</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: CSS で値として数を使用する場合、その値を引用符で囲んではなりません。</p>
@@ -272,13 +272,13 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p><strong>下の練習で別のカラーキーワードを試して、それがどのように作用するのか確認してください。</strong></p>
 
-<h3 id="Hexadecimal_RGB_values" name="Hexadecimal_RGB_values">16進数 RGB</h3>
+<h3 id="Hexadecimal_RGB_values" name="Hexadecimal_RGB_values">16進数 RGB</h3>
 
 <p>次のカラーの値の種類は、あたながよく遭遇する 16進数を使うものです。それぞれの 16進数の値には、ハッシュ記号(#) に続いて、6 個の 16進数の数が続きます。この数には、0 から f までの 16 個の文字を使用します。(ここで f は 15 に相当) — つまり <code>0123456789abcdef</code> を使用します。この値の二文字はそれぞれ赤、緑、青のカラーチャンネルの値を表しています。そのため、16 x 16 = 256 つまり、それぞれのチャンネルに 256通りの値を指定できます。</p>
 
 <p>これらの値は少し複雑で、わかりにくいものです。しかし、16進数はキーワードより多くの用途で使用されます。あなたのカラースキームで表す、好きな色を 16進数で表現できるのです。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}} </p>
 
 <p><strong>もう一度、値を変更させてどのように色が変化するか確認しましょう。</strong></p>
 
@@ -288,9 +288,9 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>最後の表記を書き直して、RGB で表現してみましょう。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}} </p>
 
-<p>また、RGBA カラー方式もあります。これは、RGB カラー方式とまったく同じ方法で、RGB で表すすべての値を使用できます。しかし、RGBA は 4 つのパラメータをとり、4番目のパラメータは色のアルファチャンネル、つまり色の不透明度(または透明度)を表します。この 4番目のパラメータの値が  <code>0</code> のとき完全な透明を表し、<code>1</code> のとき完全な不透明を表します。その間の値を指定してさまざまなレベルの透明度を指定できます。</p>
+<p>また、RGBA カラー方式もあります。これは、RGB カラー方式とまったく同じ方法で、RGB で表すすべての値を使用できます。しかし、RGBA は 4 つのパラメータをとり、4番目のパラメータは色のアルファチャンネル、つまり色の不透明度(または透明度)を表します。この 4番目のパラメータの値が  <code>0</code> のとき完全な透明を表し、<code>1</code> のとき完全な不透明を表します。その間の値を指定してさまざまなレベルの透明度を指定できます。</p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: 色でアルファチャンネルを設定することと、より前に学んだ、{{cssxref("opacity")}} プロパティで設定することの違いに注意しましょう。opacity プロパティで設定した場合、その要素と要素内のすべてが透明になります。一方、RGBA カラーを指定した場合、透明になるのはそのカラーだけです。</p>
@@ -318,11 +318,11 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>RGB の例を HSL の色に更新すると次のようになります:</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}} </p>
 
 <p>RGB に RGBA があるように、HSL には同様な HSLA があり、アルファチャンネルの指定が同様にできます。デモとして RGBA の例を HSLA 色を使うようにしたものは次の通りです。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}} </p>
 
 <p>プロジェクトでどの色の値を使っても良いです。たいていのプロジェクトではカラーパレットを決めてから、この色（と決定した色指定の方法）を、プロジェクト全体を通して使います。色モデルを混用することもできますが、一貫させるために通常はプロジェクト全体で同じものを使うのがベストです!</p>
 
@@ -332,7 +332,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>下記の例では画像とグラデーションを CSS <code>background-image</code> プロパティに使っています。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: <code>&lt;image&gt;</code> がとり得る他の値もありますが、それは新しくてブラウザーサポートが貧弱です。それについて知りたい場合、MDN の <code><a href="/ja/docs/Web/CSS/image">&lt;image&gt;</a></code> データタイプのページを確認してください。</p>
@@ -340,13 +340,13 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <h2 id="Position" name="Position">位置</h2>
 
-<p><code><a href="/ja/docs/Web/CSS/position_value">&lt;position&gt;</a></code> データタイプは 2次元座標を表しており、背景画像のような項目 (<code><a href="/ja/docs/Web/CSS/background-position">background-position</a></code> にて)の位置を決めるのに使われます。これは <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>,  <code>center</code> のようなキーワードを取って、ボックスの上や左の隅からオフセットさせる長さの値とともに、2次元のボックスの特定の境界にアイテムを揃えます。</p>
+<p><code><a href="/ja/docs/Web/CSS/position_value">&lt;position&gt;</a></code> データタイプは 2次元座標を表しており、背景画像のような項目 (<code><a href="/ja/docs/Web/CSS/background-position">background-position</a></code> にて)の位置を決めるのに使われます。これは <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>,  <code>center</code> のようなキーワードを取って、ボックスの上や左の隅からオフセットさせる長さの値とともに、2次元のボックスの特定の境界にアイテムを揃えます。</p>
 
 <p>典型的な位置の値は 2 つの値を持ち — 最初は水平位置を、2 つ目は垂直位置をセットします。1 つの軸だけの値を指定する場合、もう 1 つはデフォルトで <code>center</code> となります。</p>
 
 <p>次の例では、背景画像をキーワードを使ってコンテナの右端の上から 40px の位置に配置しています。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}} </p>
 
 <p><strong>この値でいろいろ遊んでみて、画像がどう移動するか見てください。</strong></p>
 
@@ -356,7 +356,7 @@ translation_of: Learn/CSS/Building_blocks/Values_and_units
 
 <p>CSS で文字列が使われる場所もあります、例えば、<a href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#before%E3%81%8A%E3%82%88%E3%81%B3_after%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E7%94%9F%E6%88%90">生成されたコンテンツを指定するとき</a>です。この場合、値は文字列を示すようクォートで囲まれます。下記の例ではクォートで囲まれていない color キーワードと生成されたコンテンツ文字列を一緒に使っています。</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
 
 <h2 id="Functions" name="Functions">関数</h2>
 

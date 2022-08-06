@@ -15,7 +15,7 @@ original_slug: Glossaire/SOAP
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "SOAP")}} sur Wikipédia
+- [SOAP](https://fr.wikipedia.org/wiki/SOAP) sur Wikipédia
 - [SOAP dans les navigateurs basés sur Gecko](/fr/docs/SOAP_dans_les_navigateurs_Gecko)
 
 ### Référence technique

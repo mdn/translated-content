@@ -16,4 +16,4 @@ Cette étape de négociation se produit après une {{glossary('DNS', 'recherche 
 
 - [Transport Layer Security (TLS) protocol](/fr/docs/Web/Security/Transport_Layer_Security)
 - {{Glossary("HTTPS")}}
-- {{Interwiki("wikipedia", "Transport Layer Security")}} on Wikipedia
+- [<i lang="en">Transport Layer Security</i>](https://fr.wikipedia.org/wiki/Transport_Layer_Security) sur Wikipédia

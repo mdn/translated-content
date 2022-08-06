@@ -7,11 +7,11 @@ translation_of: Web/CSS/transition-delay
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>La propiedad <a href="/en/CSS" style="line-height: inherit;" title="CSS">CSS</a> <code style="font-size: 14px; line-height: inherit;">transition-delay</code><span style="line-height: inherit;"> especifica la cantidad de tiempo a esperar entre un cambio pedido hacia una propiedad y el comienzo de un efecto de transicion (</span><a href="/en/CSS/CSS_transitions" style="line-height: inherit;" title="en/CSS/CSS transitions">transition effect</a><span style="line-height: inherit;">).</span></p>
+<p>La propiedad <a href="/en/CSS" style="line-height: inherit;" title="CSS">CSS</a> <code style="font-size: 14px; line-height: inherit;">transition-delay</code><span style="line-height: inherit;"> especifica la cantidad de tiempo a esperar entre un cambio pedido hacia una propiedad y el comienzo de un efecto de transicion (</span><a href="/en/CSS/CSS_transitions" style="line-height: inherit;" title="en/CSS/CSS transitions">transition effect</a><span style="line-height: inherit;">).</span></p>
 
-<p>Un valor de <code>0s</code>, o <code>0ms</code>, indica que la propiedad comenzará a animar la transición inmediatamente cuando el valor cambie; valores positivos retrasaran el comienzo del efecto de transicion por el numero de segundos correspondiente. Valores negativos causaran que la transicion comience inmediatamente, pero causando que el efecto de la transicion pareciera que empiece por la mitad de la animacion.</p>
+<p>Un valor de <code>0s</code>, o <code>0ms</code>, indica que la propiedad comenzará a animar la transición inmediatamente cuando el valor cambie; valores positivos retrasaran el comienzo del efecto de transicion por el numero de segundos correspondiente. Valores negativos causaran que la transicion comience inmediatamente, pero causando que el efecto de la transicion pareciera que empiece por la mitad de la animacion.</p>
 
-<p>Puedes especificar multiples retrasos ("delays"); cada retraso se aplicará a la propiedad correspondiente especificada por la propiedad <span style="line-height: inherit;">{{ cssxref("transition-property") }}, que actua como una lista maestra. Si hay menos delays especificados que en la lista maestra, valores perdidos son puestos en el valor inicial (0s).</span></p>
+<p>Puedes especificar multiples retrasos ("delays"); cada retraso se aplicará a la propiedad correspondiente especificada por la propiedad <span style="line-height: inherit;">{{ cssxref("transition-property") }}, que actua como una lista maestra. Si hay menos delays especificados que en la lista maestra, valores perdidos son puestos en el valor inicial (0s).</span></p>
 
 <p><span style="line-height: inherit;">You may specify multiple delays; each delay will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a master list. If there are fewer delays specified than in the master list, missing values are set to the initial value (</span><code style="font-size: 14px; line-height: inherit;">0s</code><span style="line-height: inherit;">). If there are more delays, the list is simply truncated to the right size. In both case the CSS declaration stays valid.</span></p>
 
@@ -321,7 +321,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
   <tr>
    <td>{{ SpecName('CSS3 Transitions', '#transition-delay', 'transition-delay') }}</td>
    <td>{{ Spec2('CSS3 Transitions') }}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

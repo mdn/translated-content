@@ -14,10 +14,10 @@ translation_of: Mozilla/Firefox/Releases/8
 <h3 id="HTML">HTML</h3>
 
 <ul>
- <li><a href="/ja/docs/Web/API/HTMLImageElement" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>HTMLImageElement</code></a> に <code>crossOrigin</code> プロパティが追加され、また <a href="/ja/docs/Web/HTML/Element/img" title="HTML の &lt;img> 要素は、文書に画像を埋め込みます。これは置換要素です。"><code>&lt;img&gt;</code></a> 要素に <code><a href="/ja/docs/Web/HTML/Element/img#attr-crossorigin">crossorigin</a></code> 属性が追加されました。(参考: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=664299" title="FIXED: Add crossorigin attribute">バグ 664299</a>)</li>
- <li><a href="/ja/docs/Web/API/HTMLSelectElement#add()" title=""><code>HTMLSelectElement.add()</code></a> メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=666200" title="FIXED: support select.add(element, long before)">バグ 666200</a>)</li>
+ <li><a href="/ja/docs/Web/API/HTMLImageElement" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>HTMLImageElement</code></a> に <code>crossOrigin</code> プロパティが追加され、また <a href="/ja/docs/Web/HTML/Element/img" title="HTML の &lt;img> 要素は、文書に画像を埋め込みます。これは置換要素です。"><code>&lt;img&gt;</code></a> 要素に <code><a href="/ja/docs/Web/HTML/Element/img#attr-crossorigin">crossorigin</a></code> 属性が追加されました。(参考: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=664299" title="FIXED: Add crossorigin attribute">バグ 664299</a>)</li>
+ <li><a href="/ja/docs/Web/API/HTMLSelectElement#add()" title=""><code>HTMLSelectElement.add()</code></a> メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=666200" title="FIXED: support select.add(element, long before)">バグ 666200</a>)</li>
  <li><code>HTMLIsIndexElement</code> コンストラクタが削除されました。Firefox 4 以前から、どの要素もこのインターフェースをインプリメントしていませんでした。</li>
- <li>HTML5 のコンテキストメニュー機能 (contextmenu 属性) がサポートされました。この機能によって、要素固有のメニュー項目をネイティブのコンテキストメニューに追加できます。(この機能は HTML5 仕様の変更を待っている関係で、現時点では試験実装という扱いです。参考: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=617528" title='FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)'>バグ 617528</a>)</li>
+ <li>HTML5 のコンテキストメニュー機能 (contextmenu 属性) がサポートされました。この機能によって、要素固有のメニュー項目をネイティブのコンテキストメニューに追加できます。(この機能は HTML5 仕様の変更を待っている関係で、現時点では試験実装という扱いです。参考: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=617528" title='FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)'>バグ 617528</a>)</li>
  <li>すべての要素に <a href="/ja/docs/HTML/Global_attributes#attr-accesskeylabel" title="https://developer.mozilla.org/ja/HTML/Global_attributes#attr-accesskeylabel"><code>accesskeylabel</code></a> 属性がサポートされました。</li>
  <li><a href="/ja/docs/Web/HTML/Element/input" title="HTML の &lt;input> 要素は、ユーザーからデータを受け取るための、ウェブベースのフォーム用の対話的なコントロールを作成するために使用します。"><code>&lt;input&gt;</code></a> と <a href="/ja/docs/Web/HTML/Element/textarea" title="HTML の &lt;textarea> 要素は、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。"><code>&lt;textarea&gt;</code></a> に <code>selectionDirection</code> アトリビュートが追加されました。また、<code>setSelectionRange()</code> メソッドが選択方向を指定できるようになりました。</li>
  <li><code>tabindex</code> 属性でフォーカス可能になった要素にフォーカスしたとき、ほとんどの要素でフォーカスリングが描画されるようになりました。</li>
@@ -27,7 +27,7 @@ translation_of: Mozilla/Firefox/Releases/8
 
 <ul>
  <li><a href="/ja/docs/Web/API/Element/insertAdjacentHTML" title="insertAdjacentHTML() は、第二引数で指定するテキストを HTML または XML としてパースし、その結果であるノードを DOM ツリー内の指定された位置（第一引数で指定）に挿入します。これは挿入先の要素を再度パースするものではないため、既存の要素や要素内部の破壊を伴いません。余分なシリアル化のステップを回避できる分、 innerHTML への代入による直接的な操作よりもはるかに高速な動作となります。"><code>insertAdjacentHTML</code></a> メソッドが実装されました。</li>
- <li><a href="/ja/docs/Web/API/BlobBuilder" title="BlobBuilder インターフェースは、Blob オブジェクトを構築する簡単な方法を提供します。単に BlobBuilder を作成し、 append() メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら getBlob() メソッドを呼んで、あなたがビルダに送り込んだデータの Blob を取得してください。"><code>BlobBuilder</code></a> に <code>getFile()</code> メソッドが追加されました。このメソッドは blob の内容をファイルとして返します。</li>
+ <li><a href="/ja/docs/Web/API/BlobBuilder" title="BlobBuilder インターフェースは、Blob オブジェクトを構築する簡単な方法を提供します。単に BlobBuilder を作成し、 append() メソッドを使ってデータのチャンクを付け足していってください。blobの生成が完了したら getBlob() メソッドを呼んで、あなたがビルダに送り込んだデータの Blob を取得してください。"><code>BlobBuilder</code></a> に <code>getFile()</code> メソッドが追加されました。このメソッドは blob の内容をファイルとして返します。</li>
  <li>入れ子になった <a href="/ja/docs/Web/HTML/Element/label" title="HTML の &lt;label> 要素は、ユーザーインターフェイスの項目のキャプションを表します。"><code>&lt;label&gt;</code></a> のイベントハンドリングが修正されました。</li>
  <li>ウィンドウ間での <a href="/ja/docs/Web/API/Window/postMessage" title="window.postMessage が呼び出された場合、実行されなければならない保留中のスクリプトが完了した後に MessageEvent が対象ウィンドウにディスパッチされます。（例えば、window.postMessage がイベントハンドラから呼ばれた場合のまだ実行されていない残りのイベントハンドラや、以前に設定された保留中のタイムアウト、など）。 MessageEvent には message という型、window.postMessage に与えられる第一引数の文字列の値に設定される data プロパティ、 window.postMessage が呼び出されたとき、window.postMessage を呼び出しているウィンドウ内のメインドキュメントの生成元に対応する origin プロパティ、window.postMessage を呼び出したウィンドウである source プロパティがあります。（他のイベントの標準プロパティがそれらの期待される値で存在します）"><code>window.postMessage()</code></a> に <a href="/ja/docs/Web/API/File" title="File インターフェイスは、ファイルについての情報を提供したり、ウェブページ内の JavaScript でその内容にアクセスできるようにしたりします。"><code>File</code></a> と <a href="/ja/docs/Web/API/FileList" title='この型のオブジェクトは、 &amp;lt;input> 要素の files プロパティによって返されます；これによって、 &amp;lt;input type="file"> 要素で選択されたファイルのリストにアクセスできます。 また、drag and drop API を使用しているとき、Web コンテンツにドロップされたファイルのリストにアクセスするためにも使用されます；この使用方法の詳細は DataTransfer オブジェクトを見てください。'><code>FileList</code></a> が使えるようになりました。</li>
  <li><a href="/ja/docs/Web/API/Element/contenteditable" title="この項目についての文書はまだ書かれていません。書いてみませんか？"><code>element.contenteditable</code></a> な領域において、見出しで改行した際、もしくはリスト編集モードから2回開業して抜け出す際、段落が挿入されるようになりました。(これまでは<a href="/ja/docs/Web/HTML/Element/br" title="HTML の &lt;br> 要素 は、文中に改行（キャリッジリターン）を生成します。詩や住所など、行の分割が重要な場合に有用です。"><code>&lt;br&gt;</code></a>でしたが、これからは<a href="/ja/docs/Web/HTML/Element/p" title="HTML の &lt;p> 要素は、テキストの段落を表します。"><code>&lt;p&gt;</code></a>が挿入されます。)</li>
@@ -57,7 +57,7 @@ translation_of: Mozilla/Firefox/Releases/8
  <li><a href="/ja/docs/Web/CSS/hyphens" title="CSS の hyphens プロパティは、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、文字列中に手動で指定された位置でハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。"><code>hyphens</code></a> 利用時のハイフネーション規則がより多くの言語でサポートされました。</li>
  <li><a href="/ja/docs/Web/CSS/background-size" title="CSS の background-size プロパティは、要素の背景画像の寸法を設定します。画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。"><code>background-size</code></a> の処理が仕様により従ったものになりました。</li>
  <li>これまで Quriks モードでの <a href="/ja/docs/Web/CSS/text-decoration" title="CSS の text-decoration プロパティは、テキストの装飾的な線の表示を設定します。これは text-decoration-line, text-decoration-color, text-decoration-style の一括指定です。"><code>text-decoration</code></a> は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。Firefox 8 からは、標準モードにより近い表示になります。</li>
- <li>要素の水平方向への配置がより仕様に沿った実装になりました。この件に関するドキュメントを準備中ですが、今は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=682780" title="jig.com looks different in aurora vs. firefox">バグ 682780</a> のコメント 23 をお読みください。</li>
+ <li>要素の水平方向への配置がより仕様に沿った実装になりました。この件に関するドキュメントを準備中ですが、今は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=682780" title="jig.com looks different in aurora vs. firefox">バグ 682780</a> のコメント 23 をお読みください。</li>
  <li><a href="/ja/docs/CSS/Scaling_of_SVG_backgrounds" title="CSS/Scaling_of_SVG_backgrounds">SVG 画像の拡大縮小</a> が背景画像においても適切に処理されるようになりました。</li>
 </ul>
 
@@ -79,7 +79,7 @@ translation_of: Mozilla/Firefox/Releases/8
  <li>WebSocket コンストラクタがひとつのプロトコル文字列だけではなく、プロトコルの配列もサポートするようになりました。</li>
  <li>SSL と 非 SSL の混在が WebSocket で認められなくなりました。</li>
  <li>WebSocket の接続エラーが <code>onerror</code> ハンドラをトリガーするようになりました。</li>
- <li><a href="/ja/docs/WebSockets" title="WebSockets">WebSocket</a> API が最新版の仕様に追従しました。(参考: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674890" title="FIXED: Update WebSocket API to latest draft - send() should return void">バグ 674890</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674527" title="FIXED: Update WebSocket API to latest draft - array of protocols in ctor">バグ 674527</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674716" title="FIXED: Update WebSocket API to latest draft - close codes and reasons">バグ 674716</a>)</li>
+ <li><a href="/ja/docs/WebSockets" title="WebSockets">WebSocket</a> API が最新版の仕様に追従しました。(参考: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674890" title="FIXED: Update WebSocket API to latest draft - send() should return void">バグ 674890</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674527" title="FIXED: Update WebSocket API to latest draft - array of protocols in ctor">バグ 674527</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=674716" title="FIXED: Update WebSocket API to latest draft - close codes and reasons">バグ 674716</a>)</li>
  <li>WebSocket の deflate-stream 拡張が無効にされました。この拡張は非推奨とされており、またいくつかの Web サイトとの互換性を損ねていました。</li>
 </ul>
 
@@ -125,7 +125,7 @@ translation_of: Mozilla/Firefox/Releases/8
 
 <h3 id="Workers">Workers</h3>
 
-<p>ChromeWorkers から XPCOM オブジェクトにアクセスできなくなりました。XPConnect は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649537" title="FIXED: Workers: Make one OS thread and JS runtime per worker, and lose XPConnect">バグ 649537</a> によりワーカーコンテキストで無効にされています。</p>
+<p>ChromeWorkers から XPCOM オブジェクトにアクセスできなくなりました。XPConnect は <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=649537" title="FIXED: Workers: Make one OS thread and JS runtime per worker, and lose XPConnect">バグ 649537</a> によりワーカーコンテキストで無効にされています。</p>
 
 <h3 id="XUL">XUL</h3>
 

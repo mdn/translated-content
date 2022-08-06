@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLScriptElement
 
 <p><span class="seoSummary">HTML-элементы {{HTMLElement("script")}} предоставляют <strong><code>HTMLScriptElement</code></strong> интерфейс, который предоставляет специальные свойства и методы для манипулирования поведением и выполнением <code>&lt;script&gt;</code> элементов (за пределами унаследованного {{domxref("HTMLElement")}} интерфейса).</span></p>
 
-<p>JavaScript файлы должны обслуживаться с  <code>application/javascript</code> <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (<code>image/*</code>), типом видео (<code>video/*</code>), типом аудио (<code>audio/*</code>), или <code>text/csv</code>. Если скрипт заблокирован, его элемент получает событие {{event("error")}}; в противном случае, он получает событие {{event("success")}}.</p>
+<p>JavaScript файлы должны обслуживаться с  <code>application/javascript</code> <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (<code>image/*</code>), типом видео (<code>video/*</code>), типом аудио (<code>audio/*</code>), или <code>text/csv</code>. Если скрипт заблокирован, его элемент получает событие {{event("error")}}; в противном случае, он получает событие {{event("success")}}.</p>
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
@@ -60,7 +60,7 @@ translation_of: Web/API/HTMLScriptElement
 
     <p>Атрибут <code>defer</code> может быть указан с атрибутом <code>async</code>, тогда устаревшие браузеры, которые поддерживают только <code>defer</code> (но не <code>async</code>) откатятся к поведению <code>defer</code> взамен дефолтного поведения блокировки.</p>
 
-    <div class="note"><strong>Примечание:</strong> Точные детали обработки для этих атрибутов комплексны, включая множество различных аспектов HTML, и разбросаны по всей спецификации. <a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script">Эти алгоритмы</a> описывают основную идею, но они основаны на правилах синтаксического анализа для {{HTMLElement("script")}} <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag">открывающих</a> и <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag">закрывающих</a> тэгах в HTML, <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag">во внешнем контенте</a>, и в<a href="http://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML"> XML</a>; правиле для метода  <a href="/en-US/docs/DOM/document.write"><code>document.write()</code></a>; обработке <a href="http://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting">сценариев</a>; и так далее.</div>
+    <div class="note"><strong>Примечание:</strong> Точные детали обработки для этих атрибутов комплексны, включая множество различных аспектов HTML, и разбросаны по всей спецификации. <a href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script">Эти алгоритмы</a> описывают основную идею, но они основаны на правилах синтаксического анализа для {{HTMLElement("script")}} <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag">открывающих</a> и <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag">закрывающих</a> тэгах в HTML, <a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag">во внешнем контенте</a>, и в<a href="http://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML"> XML</a>; правиле для метода  <a href="/en-US/docs/DOM/document.write"><code>document.write()</code></a>; обработке <a href="http://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting">сценариев</a>; и так далее.</div>
    </td>
   </tr>
   <tr>
@@ -76,7 +76,7 @@ translation_of: Web/API/HTMLScriptElement
    <td><code id="text_property">text</code></td>
    <td>{{domxref("DOMString")}}</td>
    <td>
-    <p>IDL атрибут <code>text</code> объединяет и возвращает содержимое всех <a href="/en-US/docs/DOM/Text"><code>Text</code> нод</a> внутри элемента {{HTMLElement("script")}} (игнорируя другие ноды, такие как комментарии) в древовидном порядке. При установке, он  действует также, как и IDL атрибут <a href="/en-US/docs/DOM/Node.textContent"><code>textContent</code></a>.</p>
+    <p>IDL атрибут <code>text</code> объединяет и возвращает содержимое всех <a href="/en-US/docs/DOM/Text"><code>Text</code> нод</a> внутри элемента {{HTMLElement("script")}} (игнорируя другие ноды, такие как комментарии) в древовидном порядке. При установке, он  действует также, как и IDL атрибут <a href="/en-US/docs/DOM/Node.textContent"><code>textContent</code></a>.</p>
 
     <div class="note"><strong>Примечание:</strong> При вставке с использованием метода <a href="/en-US/docs/DOM/document.write"><code>document.write()</code></a>, элементы {{HTMLElement("script")}} выполняются (обычно синхронно), когда при вставке используются <a href="/en-US/docs/DOM/element.innerHTML"><code>innerHTML</code></a> или <a href="/en-US/docs/DOM/element.outerHTML"><code>outerHTML</code></a>, они вообще не выполняются.</div>
    </td>
@@ -105,28 +105,28 @@ translation_of: Web/API/HTMLScriptElement
 <p>Давайте создадим функцию. которая импортирует новый скрипт в документ, создавая ноду {{HTMLElement("script")}} <em>непосредственно перед</em> {{HTMLElement("script")}}, в котором размещается следующий код (через {{domxref("document.currentScript")}}). Эти скрипты будут выполняться <strong>асинхронно</strong>. Для получения подробной информации смотрите свойства <a href="#defer_property"><code>defer</code></a> и <a href="#async_property"><code>async</code></a>.</p>
 
 <pre class="brush: js">function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
 }
 
 function prefixScript(url, onloadFunction) {
-  var newScript = document.createElement("script");
-  newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
-  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
+  var newScript = document.createElement("script");
+  newScript.onerror = loadError;
+  if (onloadFunction) { newScript.onload = onloadFunction; }
+  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
   newScript.src = url;
 }</pre>
 
 <p>Следующая функция, вместо добавления новых скриптов непосредственно перед элементом {{domxref("document.currentScript")}}, добавляет их как потомков тега {{HTMLElement("head")}}.</p>
 
 <pre class="brush: js">function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
 }
 
 function affixScriptToHead(url, onloadFunction) {
-  var newScript = document.createElement("script");
-  newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
-  document.head.appendChild(newScript);
+  var newScript = document.createElement("script");
+  newScript.onerror = loadError;
+  if (onloadFunction) { newScript.onload = onloadFunction; }
+  document.head.appendChild(newScript);
   newScript.src = url;
 }
 </pre>

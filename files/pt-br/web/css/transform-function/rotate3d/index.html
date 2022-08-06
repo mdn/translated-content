@@ -10,15 +10,15 @@ original_slug: Web/CSS/transform-function/rotate3d()
 ---
 <div>{{CSSRef}}</div>
 
-<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>rotate3d()</code></strong> define uma transformação que gira um elemento em torno de um eixo fixo no espaço 3D, sem deformá-lo. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.</p>
+<p>A função <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>rotate3d()</code></strong> define uma transformação que gira um elemento em torno de um eixo fixo no espaço 3D, sem deformá-lo. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.</p>
 
-<p>No espaço 3D, rotações têm três graus de liberdade que, juntos, descrevem um único eixo de rotação. O eixo de rotação é definido por um vetor [x, y, z] e passado pela origem (como definido pela propriedade {{ cssxref("transform-origin") }}). Se, como especificado, o vetor não for <em>normalizado</em> (isto é, se a soma dos quadrados das suas três coordenadas não for 1), o {{glossary("user agent")}} irá normalizá-lo internamente. Um vetor não-normalizável, como o vetor nulo [0, 0, 0], fará com que a rotação seja ignorada, mas sem invalidar toda a propriedade CSS.</p>
+<p>No espaço 3D, rotações têm três graus de liberdade que, juntos, descrevem um único eixo de rotação. O eixo de rotação é definido por um vetor [x, y, z] e passado pela origem (como definido pela propriedade {{ cssxref("transform-origin") }}). Se, como especificado, o vetor não for <em>normalizado</em> (isto é, se a soma dos quadrados das suas três coordenadas não for 1), o {{glossary("user agent")}} irá normalizá-lo internamente. Um vetor não-normalizável, como o vetor nulo [0, 0, 0], fará com que a rotação seja ignorada, mas sem invalidar toda a propriedade CSS.</p>
 
-<div class="note"><strong>Nota:</strong> Diferente de rotações no plano 2D, a composição de rotações 3D normalmente não é comutativa. Em outras palavras, a ordem na qual as rotações são aplicadas impacta o resultado.</div>
+<div class="note"><strong>Nota:</strong> Diferente de rotações no plano 2D, a composição de rotações 3D normalmente não é comutativa. Em outras palavras, a ordem na qual as rotações são aplicadas impacta o resultado.</div>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
-<p>A quantidade de rotação criada por <code>rotate3d()</code> é especificada por três {{cssxref("&lt;number&gt;")}} e um {{cssxref("&lt;angle&gt;")}}. Os <code>&lt;number&gt;</code> representam as coordenadas x, y e z do vetor, denotando o eixo de rotação. O <code>&lt;angle&gt;</code> representa o ângulo de rotação; se positivo, o movimento será no sentido horário; se negativo, será no sentido anti-horário.</p>
+<p>A quantidade de rotação criada por <code>rotate3d()</code> é especificada por três {{cssxref("&lt;number&gt;")}} e um {{cssxref("&lt;angle&gt;")}}. Os <code>&lt;number&gt;</code> representam as coordenadas x, y e z do vetor, denotando o eixo de rotação. O <code>&lt;angle&gt;</code> representa o ângulo de rotação; se positivo, o movimento será no sentido horário; se negativo, será no sentido anti-horário.</p>
 
 <pre class="syntaxbox notranslate">rotate3d(<em>x</em>, <em>y</em>, <em>z</em>, <em>a</em>)
 </pre>
@@ -27,13 +27,13 @@ original_slug: Web/CSS/transform-function/rotate3d()
 
 <dl>
  <dt><code>x</code></dt>
- <dd>É um {{cssxref("&lt;number&gt;")}} descrevendo a coordenada x do vetor denotando o eixo de rotação que pode ser entre 0 e 1.</dd>
+ <dd>É um {{cssxref("&lt;number&gt;")}} descrevendo a coordenada x do vetor denotando o eixo de rotação que pode ser entre 0 e 1.</dd>
  <dt><code>y</code></dt>
- <dd>É um {{cssxref("&lt;number&gt;")}} descrevendo a coordenada y do vetor denotando o eixo de rotação que pode ser entre 0 e 1.</dd>
+ <dd>É um {{cssxref("&lt;number&gt;")}} descrevendo a coordenada y do vetor denotando o eixo de rotação que pode ser entre 0 e 1.</dd>
  <dt><code>z</code></dt>
- <dd>É um {{cssxref("&lt;number&gt;")}} descrevendo a coordenada z do vetor denotando o eixo de rotação que pode ser entre 0 e 1.</dd>
+ <dd>É um {{cssxref("&lt;number&gt;")}} descrevendo a coordenada z do vetor denotando o eixo de rotação que pode ser entre 0 e 1.</dd>
  <dt><code>a</code></dt>
- <dd>É um {{ cssxref("&lt;angle&gt;") }} representando o ângulo de rotação. Um ângulo positivo denota uma rotação no sentido horário, e um negativo no sentido anti-horário.</dd>
+ <dd>É um {{ cssxref("&lt;angle&gt;") }} representando o ângulo de rotação. Um ângulo positivo denota uma rotação no sentido horário, e um negativo no sentido anti-horário.</dd>
 </dl>
 
 <table class="standard-table">
@@ -118,7 +118,7 @@ div {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>Veja o tipo de dado <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de compatibilidade.</p>
+<p>Veja o tipo de dado <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> para informações de compatibilidade.</p>
 
 <h2 id="Ver_também">Ver também</h2>
 

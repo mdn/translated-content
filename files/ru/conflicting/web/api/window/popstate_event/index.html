@@ -6,12 +6,12 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
 <div>{{APIRef}}</div>
 
-<p>Свойство <code>onpopstate</code> миксина {{domxref("WindowEventHandlers")}} является {{event("Event_handlers", "event handler")}} для обработки событий <code>popstate</code> для "window".</p>
+<p>Свойство <code>onpopstate</code> миксина {{domxref("WindowEventHandlers")}} является {{event("Event_handlers", "event handler")}} для обработки событий <code>popstate</code> для "window".</p>
 
-<p>Событие <code style="font-style: normal;">popstate</code> отсылается объекту window каждый раз, когда активная запись истории меняется с одной на другую для одного и того же документа. Если запись истории, ставшая активной, была создана вызовом <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;"><code>history.pushState()</code> </span>или изменена с помощью <code style="font-style: normal;">history.replaceState()</code>, свойство <code style="font-style: normal;">state</code> события <code style="font-style: normal;">popstate</code> содержит копию объекта состояния этой записи истории.</p>
+<p>Событие <code style="font-style: normal;">popstate</code> отсылается объекту window каждый раз, когда активная запись истории меняется с одной на другую для одного и того же документа. Если запись истории, ставшая активной, была создана вызовом <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;"><code>history.pushState()</code> </span>или изменена с помощью <code style="font-style: normal;">history.replaceState()</code>, свойство <code style="font-style: normal;">state</code> события <code style="font-style: normal;">popstate</code> содержит копию объекта состояния этой записи истории.</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание:</strong>, просто вызов <code>history.pushState()</code> или <code>history.replaceState()</code> не вызовет событие <code>popstate</code>. Событие <code>popstate</code> срабатывает только тогда, когда происходят какие то действия в браузере, такие как нажатие кнопки "назад" (или вызов <code>history.back()</code> из JavaScript). Это событие срабатывает только когда пользователь переходит между двумя записями истории одного и того же документа.</p>
+<p><strong>Примечание:</strong>, просто вызов <code>history.pushState()</code> или <code>history.replaceState()</code> не вызовет событие <code>popstate</code>. Событие <code>popstate</code> срабатывает только тогда, когда происходят какие то действия в браузере, такие как нажатие кнопки "назад" (или вызов <code>history.back()</code> из JavaScript). Это событие срабатывает только когда пользователь переходит между двумя записями истории одного и того же документа.</p>
 </div>
 
 <h2 id="Syntax">Синтаксис</h2>
@@ -20,12 +20,12 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
 </pre>
 
 <ul>
- <li><code>funcRef</code> – функция обработчик.</li>
+ <li><code>funcRef</code> – функция обработчик.</li>
 </ul>
 
 <h2 id="The_popstate_event">Примеры</h2>
 
-<p>В качестве примера, страница <code>http://example.com/example.html</code>, исполняя нижеследующий код, сгенерирует всплывающие сообщения, как показано в комментариях:</p>
+<p>В качестве примера, страница <code>http://example.com/example.html</code>, исполняя нижеследующий код, сгенерирует всплывающие сообщения, как показано в комментариях:</p>
 
 <pre class="brush:js">window.onpopstate = function(event) {
   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
@@ -39,7 +39,7 @@ history.back(); // alerts "location: http://example.com/example.html, state: nul
 history.go(2);  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}
 </pre>
 
-<p>Обратите внимание, что даже несмотря на то, что первоначальная запись истории (для <code>http://example.com/example.html</code>) не имеет объекта события, связанного с ней, событие <code>popstate</code> всё равно произойдёт, когда мы активируем эту запись после второго вызова <code>history.back()</code>.</p>
+<p>Обратите внимание, что даже несмотря на то, что первоначальная запись истории (для <code>http://example.com/example.html</code>) не имеет объекта события, связанного с ней, событие <code>popstate</code> всё равно произойдёт, когда мы активируем эту запись после второго вызова <code>history.back()</code>.</p>
 
 <h2 id="Specification">Спецификация</h2>
 

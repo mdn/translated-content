@@ -5,13 +5,13 @@ translation_of: Web/HTML/Element/input/number
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}} элементы типа <strong><code>number</code></strong> используются для того, чтобы дать возможность пользователю ввести число. У них есть встроенная валидация, запрещающая вводить нечисловые значения.</span> Браузер может предоставить возможность увеличить или уменьшить значение специальными стрелками, используя мышь или просто двигая пальцем по экрану.</p>
+<p><span class="seoSummary">{{HTMLElement("input")}} элементы типа <strong><code>number</code></strong> используются для того, чтобы дать возможность пользователю ввести число. У них есть встроенная валидация, запрещающая вводить нечисловые значения.</span> Браузер может предоставить возможность увеличить или уменьшить значение специальными стрелками, используя мышь или просто двигая пальцем по экрану.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}</div>
 
 
 
-<p>В браузерах, которые не поддерживают тип <code>number</code>, тип <code>number</code> приводится к <code>text</code>.</p>
+<p>В браузерах, которые не поддерживают тип <code>number</code>, тип <code>number</code> приводится к <code>text</code>.</p>
 
 <table class="properties">
  <tbody>
@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/input/number
 
 <h2 id="Value">Value</h2>
 
-<p>{{jsxref("Number")}}, представляющий значение введённого числа. Вы можете установить значение по умолчанию, вставив значение в атрибут {{htmlattrxref("value", "input")}}, например:</p>
+<p>{{jsxref("Number")}}, представляющий значение введённого числа. Вы можете установить значение по умолчанию, вставив значение в атрибут {{htmlattrxref("value", "input")}}, например:</p>
 
 <pre class="brush: html">&lt;input id="number" type="number" value="42"&gt;</pre>
 
@@ -100,23 +100,23 @@ translation_of: Web/HTML/Element/input/number
 <h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
 
 <div id="step-include">
-<p>Атрибут <code>step</code> – это число, которое определяет точность, с которой задаётся значение, или специальное значение <code>any</code>, описанное ниже. Только значения, кратные шагу (<code><a href="#min">min</a></code>, если задано, иначе {{htmlattrxref("value", "input")}}, или подходящее стандартное значение, если ни одно из двух не задано) будут корректными.</p>
+<p>Атрибут <code>step</code> – это число, которое определяет точность, с которой задаётся значение, или специальное значение <code>any</code>, описанное ниже. Только значения, кратные шагу (<code><a href="#min">min</a></code>, если задано, иначе {{htmlattrxref("value", "input")}}, или подходящее стандартное значение, если ни одно из двух не задано) будут корректными.</p>
 
-<p>Строковое значение <code>any</code> означает, что никакое значение шага не задано и допустимо любое значение (в пределах других ограничений, таких как <code><a href="#min">min</a></code> и <code><a href="#max">max</a></code>).</p>
+<p>Строковое значение <code>any</code> означает, что никакое значение шага не задано и допустимо любое значение (в пределах других ограничений, таких как <code><a href="#min">min</a></code> и <code><a href="#max">max</a></code>).</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> Когда значение, введённое пользователем, не подходит под заданное значение шага, {{Glossary("user agent")}} может округлить его до ближайшего допустимого значения с приоритетом в большую сторону в том случае, если значение находится ровно посередине шага.</p>
+<p><strong>Примечание:</strong> Когда значение, введённое пользователем, не подходит под заданное значение шага, {{Glossary("user agent")}} может округлить его до ближайшего допустимого значения с приоритетом в большую сторону в том случае, если значение находится ровно посередине шага.</p>
 </div>
 </div>
 
-<p>Стандартное значение шага для поля ввода <code>number</code> – это <code>1</code>, что позволяет вводить только целые числа, <em>если</em> только не задать значение шага нецелым числом.</p>
+<p>Стандартное значение шага для поля ввода <code>number</code> – это <code>1</code>, что позволяет вводить только целые числа, <em>если</em> только не задать значение шага нецелым числом.</p>
 
 <h2 id="Using_number_inputs">Using number inputs</h2>
 
-<p><code>&lt;input type="number"&gt;</code> elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper <code>type</code> value, <code>number</code>, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.</p>
+<p><code>&lt;input type="number"&gt;</code> elements can help simplify your work when building the user interface and logic for entering numbers into a form. When you create a number input with the proper <code>type</code> value, <code>number</code>, you get automatic validation that the entered text is a number, and usually a set of up and down buttons to step the value up and down.</p>
 
 <div class="warning">
-<p><strong>Important</strong>: Bear in mind that logically you should not be able to enter characters inside a number of input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.</p>
+<p><strong>Important</strong>: Bear in mind that logically you should not be able to enter characters inside a number of input other than numbers. There seems to be some disagreement about this among browsers; see {{bug(1398528)}}.</p>
 </div>
 
 <div class="note">
@@ -144,7 +144,7 @@ translation_of: Web/HTML/Element/input/number
 
 <h3 id="Placeholders">Placeholders</h3>
 
-<p>Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where <strong>placeholders</strong> come in. A placeholder is a value most commonly used to provide a hint as to the format the input should take <code>value</code>. It is displayed inside the edit box when the element's <code>value</code> is <code>""</code>. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.</p>
+<p>Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where <strong>placeholders</strong> come in. A placeholder is a value most commonly used to provide a hint as to the format the input should take <code>value</code>. It is displayed inside the edit box when the element's <code>value</code> is <code>""</code>. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.</p>
 
 <p>Here, we have an <code>number</code> input with the placeholder <code>"Multiple of 10"</code>. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.</p>
 

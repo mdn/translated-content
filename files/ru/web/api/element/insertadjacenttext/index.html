@@ -15,7 +15,7 @@ translation_of: Web/API/Element/insertAdjacentText
 
 <dl>
  <dt><code>position</code></dt>
- <dd>{{domxref("DOMString")}} позиция для вставки текста относительно элемента  <code>element</code>; должна быть указана в следующем виде:
+ <dd>{{domxref("DOMString")}} позиция для вставки текста относительно элемента  <code>element</code>; должна быть указана в следующем виде:
  <ul>
   <li><code style="color: red;">'beforebegin'</code>: Перед самим <code>element</code>.</li>
   <li><code style="color: green;">'afterbegin'</code>: Внутри самого <code>element</code>, перед первым child.</li>
@@ -58,7 +58,7 @@ foo
 <code style="font-weight: bold;">&lt;/p&gt;</code>
 &lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
 
-<div class="note"><strong>Примечание:</strong> значения <code>beforebegin</code> и <code>afterend</code> работают только если targetElement находится в DOM-дереве и имеет родительский элемент.</div>
+<div class="note"><strong>Примечание:</strong> значения <code>beforebegin</code> и <code>afterend</code> работают только если targetElement находится в DOM-дереве и имеет родительский элемент.</div>
 
 <h2 id="Example">Пример</h2>
 
@@ -70,7 +70,7 @@ afterBtn.addEventListener('click', function() {
   para.insertAdjacentText('beforeend',textInput.value);
 });</pre>
 
-<p>Посмотрите пример <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> на GitHub (исходный код <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source code</a>.)  Вы можете ввести любой текст в поле формы, а затем нажать кнопки <em>Insert before</em> (вставить до) и <em>Insert after</em> (вставить после) для размещения этого текста до или после существующего абзаца, используя <code>insertAdjacentText()</code>. Обратите внимание, что существующий текстовой узел не изменился, а произошло добавление новых текстовых узлов.</p>
+<p>Посмотрите пример <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html">insertAdjacentText.html</a> на GitHub (исходный код <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html">source code</a>.)  Вы можете ввести любой текст в поле формы, а затем нажать кнопки <em>Insert before</em> (вставить до) и <em>Insert after</em> (вставить после) для размещения этого текста до или после существующего абзаца, используя <code>insertAdjacentText()</code>. Обратите внимание, что существующий текстовой узел не изменился, а произошло добавление новых текстовых узлов.</p>
 
 <h2 id="Полифил">Полифил</h2>
 
@@ -78,13 +78,13 @@ afterBtn.addEventListener('click', function() {
 
 <pre>if (!Element.prototype.insertAdjacentText)
   Element.prototype.insertAdjacentText = function(type, txt){
-    this.insertAdjacentHTML(
+    this.insertAdjacentHTML(
       type,
       (txt+'') // convert to string
-        .replace(/&amp;/g, '&amp;amp;') // embed ampersand symbols
-        .replace(/&lt;/g, '&amp;lt;') // embed greater than symbols
-    )
-  }
+        .replace(/&amp;/g, '&amp;amp;') // embed ampersand symbols
+        .replace(/&lt;/g, '&amp;lt;') // embed greater than symbols
+    )
+  }
 </pre>
 
 <h2 id="Specification">Спецификация</h2>

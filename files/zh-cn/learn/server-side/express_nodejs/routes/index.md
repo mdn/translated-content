@@ -141,7 +141,7 @@ router.post('/about', (req, res) => {
 
 - `?`：问号之前的一个字符只能出现零次或一次。例如，路由路径 `'/ab?cd'` 路径匹配端点 `acd` 或 `abcd`。
 - `+`：加号之前的一个字符至少出现一次。例如，路径路径 `'/ab+cd'` 匹配端点 `abcd`、`abbcd`、`abbbcd`，等。
-- `*`：星号可以替换为任意字符串。例如，路由路径 `'ab\*cd'` 匹配端点 `abcd`、`abXcd`、`abSOMErandomTEXTcd`，等。
+- `*`：星号可以替换为任意字符串。例如，路由路径 `'/ab*cd'` 匹配端点 `abcd`、`abXcd`、`abSOMErandomTEXTcd`，等。
 - `()`：将一个字符串视为一体以执行 `?`、`+`、`*` 操作。例如。 `'/ab(cd)?e'` 将对 `(cd)` 进行匹配，将匹配到 `abe` 和 `abcde`。
 
 路由路径也可以是 JavaScript [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。例如，下面的路由路径将匹配 `catfish` 和 `dogfish`，但不会匹配 `catflap`、`catfishhead` 等。注意，正则表达式路径不再用引号 `"..."` 括起来，而是正则表达式语法 `/.../`。
@@ -170,7 +170,7 @@ app.get('/users/:userId/books/:bookId', (req, res) => {
 
 路由参数名必须由“单词字符”（/`[A-Za-z0-9_]`/）组成。
 
-> **备注：** URL `/book/create` 会匹配 `/book/:bookId` 这样的路由（将提取值为'`create`' 的 '`bookId`'）。第一个与传入 URL 相匹配的路由会被使用，因此 `/book/create` 的路由处理器必须定义在\* \*`/book/:bookId` 路由之前，才能妥善处理。
+> **备注：** URL `/book/create` 会匹配 `/book/:bookId` 这样的路由（将提取值为'`create`' 的 '`bookId`'）。第一个与传入 URL 相匹配的路由会被使用，因此 `/book/create` 的路由处理器必须定义在 `/book/:bookId` 路由之前，才能妥善处理。
 
 以上就是使用路由所有的预备知识。Express 文档中还能找到更多信息：[基础路由](http://expressjs.com/en/starter/basic-routing.html) 和 [路由指南](http://expressjs.com/en/guide/routing.html)。以下是 LocalLibrary 路由和控制器的设置过程。
 
@@ -180,10 +180,10 @@ app.get('/users/:userId/books/:bookId', (req, res) => {
 
 - `catalog/`：主页。
 - `catalog/<objects>/`：模型（藏书、藏书副本、藏书种类、作者）的完整列表（例如 /`catalog/books/`、/`catalog/genres/` 等）
-- `catalog/<object>/<id>`_：具有_ `_id`\* \*字段值的特定模型的详细信息页面（例如 `/catalog/book/584493c1f4887f06c0e67d37`）。
+- `catalog/<object>/<id>`_：具有_ `_id` 字段值的特定模型的详细信息页面（例如 `/catalog/book/584493c1f4887f06c0e67d37`）。
 - `catalog/<object>/create`：添加新模型的表单（例如 `/catalog/book/create`）。
-- `catalog/<object>/<id>/update`：更新具有 `_id`\* \*字段值的特定模型的表单（例如 `/catalog/book/584493c1f4887f06c0e67d37/update`）。
-- `catalog/<object>/<id>/delete`：删除具有 `_id`\* \*字段值的特定模型的表单（例如 `/catalog/book/584493c1f4887f06c0e67d37/delete`）。
+- `catalog/<object>/<id>/update`：更新具有 `_id` 字段值的特定模型的表单（例如 `/catalog/book/584493c1f4887f06c0e67d37/update`）。
+- `catalog/<object>/<id>/delete`：删除具有 `_id` 字段值的特定模型的表单（例如 `/catalog/book/584493c1f4887f06c0e67d37/delete`）。
 
 首页和列表页面没有包含任何额外信息。因此它们返回的结果只取决于模型类型和数据库内容，获取信息的查询操作是恒定不变的（类似地，创建对象的代码也没有较大改动）。
 
@@ -276,7 +276,7 @@ exports.index = (req, res) => { res.send('未实现：站点首页'); };
 
 > **备注：** 可到 GitHub 下载完整的 [catalog.js](https://raw.githubusercontent.com/roy-tian/mdn-examples/master/server/express-locallibrary-tutorial/routes/catalog.js)。
 
-**/routes/\*\***catalog.js\*\* 中有以下代码：
+**/routes/catalog.js** 中有以下代码：
 
 ```js
 const express = require('express');
