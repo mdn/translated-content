@@ -12,7 +12,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
     <tr>
       <th scope="row">前提条件：</th>
       <td>
-        <p>熟悉核心的 HTML, CSS 和 JavaScript 语言，了解终端/命令行。</p>
+        <p>熟悉核心的 HTML、CSS 和 JavaScript 语言，了解终端/命令行。</p>
         <p>
           Vue 组件设计成为由管理应用数据的 JavaScript 对象和映射到底层 DOM
           结构的 html 模板语法组成的混合体。安装和使用的一些更高级的功能
@@ -40,7 +40,7 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 
 在学习本教程的过程中，您可能希望在其他选项卡中打开[Vue 指南](https://cn.vuejs.org/v2/guide/index.html)和[API 文档](https://cn.vuejs.org/v2/api/index.html)，这样，如果您想了解更多信息，可以参考它们。
 
-要想对 Vue 和许多其他框架进行比较 (但可能存在偏差)，请参阅 Vue 文档：[与其他框架的比较](https://cn.vuejs.org/v2/guide/comparison.html)。
+要想对 Vue 和许多其他框架进行比较 (但可能存在偏差)，请参阅 [Vue 文档：与其他框架的比较](https://cn.vuejs.org/v2/guide/comparison.html)。
 
 ## 安装 Vue
 
@@ -85,13 +85,13 @@ yarn global add @vue/cli
 
 为了探索 Vue 中各种各样的特征，我们将建立一个简单的任务清单应用。我们将会使用 Vue 脚手架工具去创建一个新的应用框架并在上面搭建我们的应用。请按照以下步骤：
 
-1.  在终端，用 cd 命令进入你想要创建示例的文件夹，然后执行 `vue create moz-todo-vue`。
+1.  在终端，用 `cd` 命令进入你想要创建示例的文件夹，然后执行 `vue create moz-todo-vue`。
 
 2.  使用方向键然后按下键盘上的 <kbd>Enter</kbd>，选择 "Manually select features（手动选择功能）" 选项。
 
 3.  你会看到的第一个菜单允许你选择你想要包含在你的项目中的功能。确保 "Babel" 和 "Linter / Formatter" 这两项是被选中的。如果它们没有被选中，使用方向键切换，用空格键选中它们，一旦它们被选中，按下 <kbd>Enter</kbd>，继续进行。
 
-4.  接下来你要为 linter / formatter 选择一个配置。切换选中"Eslint with error prevention only"然后再次按下 <kbd>Enter</kbd>。这样辅助我们捕获常见的并且不自以为是的错误。
+4.  接下来你要为 linter / formatter 选择一个配置。切换选中"Eslint with error prevention only"然后再次按下 <kbd>Enter</kbd>。这样可以辅助我们捕获常见的并且不自以为是的错误。
 
 5.  然后你会被询问需要那种自动化的 lint，选择 "Lint on save"，这样我们在项目中保存文件的时候就会自动检查错误。按下 <kbd>Enter</kbd> 继续。
 
@@ -264,8 +264,8 @@ components: {
 
   - [开始使用 Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
   - [Ember 应用结构和组件化](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember 交互性：Events, classes and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember 交互性：Footer functionality, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - [Ember 交互性：Events, classes 和 state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - [Ember 交互性：Footer functionality 和条件渲染](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
   - [Ember 路由](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
   - [Ember 资源和疑问解答](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
 
