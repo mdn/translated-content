@@ -439,7 +439,6 @@
 /es/docs/Games/Publishing_games/Monetización_de_los_juegos	/es/docs/Games/Publishing_games/Game_monetization
 /es/docs/Games/Tutorials/2D_breakout_game_Phaser/Botones	/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons
 /es/docs/Games/Tutorials/2D_breakout_game_Phaser/Rebotar_en_las_paredes	/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
-/es/docs/Games/Workflows	/es/docs/Games/Tutorials
 /es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro	/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 /es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls	/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 /es/docs/Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques	/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
