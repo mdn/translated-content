@@ -56,13 +56,13 @@ if (result) {
 
 <h2 id="Полифил">Полифил</h2>
 
-<p>Следующий полифил добавит метод replace в класс <code>DOMTokenList</code>.  Следующий код будет работать только с <strong>IE10-11</strong>. Чтобы использовать с более ранними версиями IE, обратитесь к полифилу по {{domxref("element.classList#Polyfill")}}</p>
+<p>Следующий полифил добавит метод replace в класс <code>DOMTokenList</code>.  Следующий код будет работать только с <strong>IE10-11</strong>. Чтобы использовать с более ранними версиями IE, обратитесь к полифилу по {{domxref("element.classList#Polyfill")}}</p>
 
 <pre class="brush: js"><code>DOMTokenList.prototype.replace = function (a, b) {
     if (this.contains(a)) {
-        this.add(b);
+        this.add(b);
         this.remove(a);
-        return true;
+        return true;
     }
     return false;
 }</code></pre>

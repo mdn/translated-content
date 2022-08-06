@@ -57,9 +57,9 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 

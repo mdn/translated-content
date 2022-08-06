@@ -3,9 +3,9 @@ title: Базовый шаблон LocalLibrary
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
-<p>Теперь, чтобы мы понимали как расширить шаблон с помощью Pug, давайте создадим базовый шаблон для проекта. У него будет боковая панель (sidebar)) со ссылками на страницы, которые мы надеемся создать на протяжении учебника (например, для отображения и создания книг, жанров, автор и т. д.) и основная область контента, которую мы переопределим на каждой из отдельных страниц.</p>
+<p>Теперь, чтобы мы понимали как расширить шаблон с помощью Pug, давайте создадим базовый шаблон для проекта. У него будет боковая панель (sidebar)) со ссылками на страницы, которые мы надеемся создать на протяжении учебника (например, для отображения и создания книг, жанров, автор и т. д.) и основная область контента, которую мы переопределим на каждой из отдельных страниц.</p>
 
-<p>Откройте файл <strong>/views/layout.pug </strong>и замените его содержимое следующим.</p>
+<p>Откройте файл <strong>/views/layout.pug </strong>и замените его содержимое следующим.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">doctype html
 html(lang='en')
@@ -47,11 +47,11 @@ html(lang='en')
         div(class='col-sm-10')
           block content</code></pre>
 
-<p>Шаблон использует (и включает) JavaScript и CSS из  <a class="external external-icon" href="http://getbootstrap.com/" rel="noopener">Bootstrap</a> , что позволяет улучшить макет и представление HTML-страницы. Применение Bootstrap или другого клиентского фреймворка - быстрый способ создать привлекательную, хорошо масштабируемую страницу. Кроме того, это позволяет получить представление страницы, не вдаваясь в детали - мы можем уделить все внимание коду на стороне сервера!</p>
+<p>Шаблон использует (и включает) JavaScript и CSS из  <a class="external external-icon" href="http://getbootstrap.com/" rel="noopener">Bootstrap</a> , что позволяет улучшить макет и представление HTML-страницы. Применение Bootstrap или другого клиентского фреймворка - быстрый способ создать привлекательную, хорошо масштабируемую страницу. Кроме того, это позволяет получить представление страницы, не вдаваясь в детали - мы можем уделить все внимание коду на стороне сервера!</p>
 
-<p>Макет представляется достаточно очевидным, если вы уже прочли статью Основы шаблонов (<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer">Template primer</a>) выше. Обратите внимание на использование <code>block content</code> в качестве места для  размещения контента отдельных страниц.</p>
+<p>Макет представляется достаточно очевидным, если вы уже прочли статью Основы шаблонов (<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#Template_primer">Template primer</a>) выше. Обратите внимание на использование <code>block content</code> в качестве места для  размещения контента отдельных страниц.</p>
 
-<p>Базовый шаблон также ссылается на локальный файл стилей (<strong>style.css</strong>), что обеспечивает дополнительное управление внешним видом. Откройте <strong>/public/stylesheets/style.css</strong> и замените его содержимое таким текстом:</p>
+<p>Базовый шаблон также ссылается на локальный файл стилей (<strong>style.css</strong>), что обеспечивает дополнительное управление внешним видом. Откройте <strong>/public/stylesheets/style.css</strong> и замените его содержимое таким текстом:</p>
 
 <pre class="brush: css line-numbers  language-css"><code class="language-css"><span class="selector token"><span class="class token">.sidebar-nav</span> </span><span class="punctuation token">{</span>
     <span class="property token">margin-top</span><span class="punctuation token">:</span> <span class="number token">20</span>px<span class="punctuation token">;</span>

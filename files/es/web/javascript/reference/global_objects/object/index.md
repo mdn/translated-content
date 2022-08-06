@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object
 ---
 {{JSRef}}
 
-La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilizando el constructor {{jsxref("Object/Object", "Object()")}} o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilizando el constructor {{jsxref("Object/Object", "Object()")}} o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Descripción
 

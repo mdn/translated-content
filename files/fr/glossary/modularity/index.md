@@ -11,4 +11,4 @@ Le terme Modularité se réfère au degré qu'ont les composants d'un système �
 
 ## Pour approfondir
 
-- {{Interwiki("wikipedia","Programmation modulaire","Modularité")}} sur Wikipédia
+- [Programmation modulaire](https://fr.wikipedia.org/wiki/Programmation_modulaire) sur Wikipédia

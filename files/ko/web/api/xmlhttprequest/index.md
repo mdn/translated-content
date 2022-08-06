@@ -17,7 +17,7 @@ translation_of: Web/API/XMLHttpRequest
 
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
-`XMLHttpRequest` (XHR) 객체는 서버와 상호작용할 때 사용합니다. XHR을 사용하면 페이지의 새로고침 없이도 URL에서 데이터를 가져올 수 있습니다. 이를 활용하면 사용자의 작업을 방해하지 않고 페이지의 일부를 업데이트할 수 있습니다.
+`XMLHttpRequest` (XHR) 객체는 서버와 상호작용할 때 사용합니다. XHR을 사용하면 페이지의 새로고침 없이도 URL에서 데이터를 가져올 수 있습니다. 이를 활용하면 사용자의 작업을 방해하지 않고 페이지의 일부를 업데이트할 수 있습니다.
 
 `XMLHttpRequest`는 [AJAX](/ko/docs/Web/Guide/AJAX) 프로그래밍에 많이 사용됩니다.
 
@@ -79,7 +79,7 @@ translation_of: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.abort()")}}
   - : 이미 요청을 전송한 경우, 그 요청을 중단합니다.
 - {{domxref("XMLHttpRequest.getAllResponseHeaders()")}}
-  - : 모든 응답 헤더를 {{Glossary("CRLF")}}로 구분해서 하나의 문자열로 반환합니다. 응답을 받지 못한 경우 `null`을 반환합니다.
+  - : 모든 응답 헤더를 {{Glossary("CRLF")}}로 구분해서 하나의 문자열로 반환합니다. 응답을 받지 못한 경우 `null`을 반환합니다.
 - {{domxref("XMLHttpRequest.getResponseHeader()")}}
   - : 지정한 헤더의 텍스트를 담은 문자열을 반환합니다. 응답을 받지 못했거나, 지정한 헤더가 응답에 존재하지 않으면 `null`을 반환합니다.
 - {{domxref("XMLHttpRequest.open()")}}

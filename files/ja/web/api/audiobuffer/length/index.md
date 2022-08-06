@@ -31,7 +31,7 @@ var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
   // バッファーにホワイトノイズを書き込む
-  // 単なる -1.0 から 1.0 の間の乱数の値である
+  // 単なる -1.0 から 1.0 の間の乱数の値である
   for (var channel = 0; channel < channels; channel++) {
     // 実際のデータの配列を得る
     var nowBuffering = myArrayBuffer.getChannelData(channel);

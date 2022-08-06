@@ -14,7 +14,7 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <div>{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}</div>
 
-<p class="summary">Este tutorial extiende nuestro sitio web de la <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style="font-size: 1.25rem;">BibliotecaLocal</a><span style="font-size: 1.25rem;">, añadiendo páginas de listas y detalles de libros y autores. Aquí aprenderemos sobre vistas genéricas basadas en clases, y mostraremos cómo éstas pueden reducir la cantidad de código que tienes que escribir para casos de uso común. También entraremos en el manejo de URL en gran detalle, mostrando cómo realizar un emparejamiento de patrones básico</span><span style="font-size: 1.25rem;">.</span></p>
+<p class="summary">Este tutorial extiende nuestro sitio web de la <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website" style="font-size: 1.25rem;">BibliotecaLocal</a><span style="font-size: 1.25rem;">, añadiendo páginas de listas y detalles de libros y autores. Aquí aprenderemos sobre vistas genéricas basadas en clases, y mostraremos cómo éstas pueden reducir la cantidad de código que tienes que escribir para casos de uso común. También entraremos en el manejo de URL en gran detalle, mostrando cómo realizar un emparejamiento de patrones básico</span><span style="font-size: 1.25rem;">.</span></p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -43,7 +43,7 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <h2 id="Página_de_lista_de_libros">Página de lista de libros</h2>
 
-<p>La página de lista de libros desplegará una lista con todos los registros de libros disponibles en la página, a la cual se accede usando la URL:  <code>catalog/books/</code>. La página desplegará un título y un autor para cada registro, siendo el título un hipervículo a la página de detalle de libro relacionada. La página tendrá la misma estructura y navegación que todas las demás páginas en el sitio, y por tanto podemos extender la plantilla base (<strong>base_generic.html</strong>) que creamos en el tutorial anterior.</p>
+<p>La página de lista de libros desplegará una lista con todos los registros de libros disponibles en la página, a la cual se accede usando la URL:  <code>catalog/books/</code>. La página desplegará un título y un autor para cada registro, siendo el título un hipervículo a la página de detalle de libro relacionada. La página tendrá la misma estructura y navegación que todas las demás páginas en el sitio, y por tanto podemos extender la plantilla base (<strong>base_generic.html</strong>) que creamos en el tutorial anterior.</p>
 
 <h3 id="Mapeo_URL">Mapeo URL</h3>
 
@@ -51,7 +51,7 @@ translation_of: Learn/Server-side/Django/Generic_views
 
 <pre class="brush: python">urlpatterns = [
     url(r'^$', views.index, name='index'),
-<strong>    url(r'^books/$', views.BookListView.as_view(), name='books'),</strong>
+<strong>    url(r'^books/$', views.BookListView.as_view(), name='books'),</strong>
 ]</pre>
 
 <p>Esta expresión regular coincide con URLs iguales a <code>books/</code> (<code>^</code> es un marcador de inicio de cadena y <code>$</code> es un marcador de fin de cadena). Como se discutió en el tutorial anterior, la URL debió previamente haber coincidido con <code>/catalog</code>, de modo que la vista será llamada en realidad para la URL: <code>/catalog/books/</code>.</p>
@@ -91,28 +91,28 @@ class BookListView(generic.ListView):
 
 <p>Por ejemplo, podemos sobreescribir el método <code>get_queryset()</code> para cambiar la lista de registros devueltos. Esto es más flexible que simplemente ajustar el atributo <code>queryset</code> como lo hicimos en el fragmento de código anterior (aunque en este caso no existe un beneficio real):</p>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: python">class BookListView(generic.ListView):
     model = Book
 
-    def get_queryset(self):
-        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+    def get_queryset(self):
+        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>Podríamos también sobreescribir <code>get_context_data()</code> con el objeto de pasar variables de contexto adicionales a la plantilla (ej. la lista de libros se pasa por defecto). El fragmento de abajo muestra cómo añadir una variable llamada "some_data" al contexto (la misma estaría entonces disponible como una variable de plantilla).</p>
 
 <pre class="brush: python">class BookListView(generic.ListView):
     model = Book
 
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get a context
-        context = super(BookListView, self).get_context_data(**kwargs)
-        # Get the blog from id and add it to the context
-        context['some_data'] = 'This is just some data'
-        return context</pre>
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
+        context = super(BookListView, self).get_context_data(**kwargs)
+        # Get the blog from id and add it to the context
+        context['some_data'] = 'This is just some data'
+        return context</pre>
 
 <p>Cuando se hace esto es importante seguir este patrón:</p>
 
@@ -135,21 +135,21 @@ class BookListView(generic.ListView):
 <pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
-    &lt;h1&gt;Book List&lt;/h1&gt;
+    &lt;h1&gt;Book List&lt;/h1&gt;
 
-    <strong>{% if book_list %}</strong>
-    &lt;ul&gt;
+    <strong>{% if book_list %}</strong>
+    &lt;ul&gt;
 
-      {% for book in book_list %}
-      &lt;li&gt;
-        &lt;a href="\{{ book.get_absolute_url }}"&gt;\{{ book.title }}&lt;/a&gt; (\{{book.author}})
-      &lt;/li&gt;
-      {% endfor %}
+      {% for book in book_list %}
+      &lt;li&gt;
+        &lt;a href="\{{ book.get_absolute_url }}"&gt;\{{ book.title }}&lt;/a&gt; (\{{book.author}})
+      &lt;/li&gt;
+      {% endfor %}
 
-    &lt;/ul&gt;
-    <strong>{% else %}</strong>
-      &lt;p&gt;There are no books in the library.&lt;/p&gt;
-    <strong>{% endif %} </strong>
+    &lt;/ul&gt;
+    <strong>{% else %}</strong>
+      &lt;p&gt;There are no books in the library.&lt;/p&gt;
+    <strong>{% endif %} </strong>
 {% endblock %}</pre>
 
 <p>La vista envía el contexto (lista de libros) por defecto como <code>object_list</code> y <code>book_list</code> (son áliases, cualquiera de ellos funcionará).</p>
@@ -207,7 +207,7 @@ class BookListView(generic.ListView):
 
 <h2 id="Página_de_detalle_de_libros">Página de detalle de libros</h2>
 
-<p>La página de detalle de libro desplegará información sobre un libro específico, a la que se accede usando la URL <code>catalog/book/<em>&lt;id&gt;</em></code> (donde <code>&lt;id&gt;</code> es la clave primaria para el libro). Además de los campos en el modelo <code>Book</code> (autor, resumen, ISBN, idioma, y género), listaremos también los detalles de las copias disponibles (<code>BookInstances</code>) incluyendo su estado, fecha de devolución esperada, edición e id. Esto permitirá a nuestros lectores no solo saber sobre el libro en sí, sino también confirmar si está disponible o cuándo lo estará.</p>
+<p>La página de detalle de libro desplegará información sobre un libro específico, a la que se accede usando la URL <code>catalog/book/<em>&lt;id&gt;</em></code> (donde <code>&lt;id&gt;</code> es la clave primaria para el libro). Además de los campos en el modelo <code>Book</code> (autor, resumen, ISBN, idioma, y género), listaremos también los detalles de las copias disponibles (<code>BookInstances</code>) incluyendo su estado, fecha de devolución esperada, edición e id. Esto permitirá a nuestros lectores no solo saber sobre el libro en sí, sino también confirmar si está disponible o cuándo lo estará.</p>
 
 <h3 id="Mapeo_URL_2">Mapeo URL</h3>
 
@@ -215,8 +215,8 @@ class BookListView(generic.ListView):
 
 <pre class="brush: python">urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^books/$', views.BookListView.as_view(), name='books'),
-<strong>    url(r'^book/(?P&lt;pk&gt;\d+)$', views.BookDetailView.as_view(), name='book-detail'),</strong>
+    url(r'^books/$', views.BookListView.as_view(), name='books'),
+<strong>    url(r'^book/(?P&lt;pk&gt;\d+)$', views.BookDetailView.as_view(), name='book-detail'),</strong>
 ]</pre>
 
 <p>A diferencia de nuestros mapeadores anteriores, en este caso estamos usando nuestra expresión regular (RE) para comparar frente a un "patrón" real en lugar de una simple cadena. Lo que hace esta RE en particular es coincidir con cualquier URL que empiece por <code>book/</code>, seguido de uno o más <em>dígitos</em> (números) antes del marcador de fin de línea. Mientras se realiza la comparación, se "capturan" los dígitos y son enviados a la función de vista como un parámetro llamado <code>pk</code>.</p>
@@ -282,7 +282,7 @@ class BookListView(generic.ListView):
   <tr>
    <td>( )</td>
    <td>
-    <p>Captura la parte del patrón dentro de los paréntesis. Todos los valores capturados serán enviados a la vista como parámetros sin nombre (si se captura múltiples patrones, los parámetros asociados serán enviados en el  órden en que fueron declaradas las capturas).</p>
+    <p>Captura la parte del patrón dentro de los paréntesis. Todos los valores capturados serán enviados a la vista como parámetros sin nombre (si se captura múltiples patrones, los parámetros asociados serán enviados en el  órden en que fueron declaradas las capturas).</p>
    </td>
   </tr>
   <tr>
@@ -292,7 +292,7 @@ class BookListView(generic.ListView):
    </td>
   </tr>
   <tr>
-   <td>[  ]</td>
+   <td>[  ]</td>
    <td>
     <p>Concide con un caracter del conjunto. Por ejemplo, [abc] coincidirá con 'a' o 'b' o 'c'. [-\w] coincidrá con el caracter '-' o con cualquier letra.</p>
    </td>
@@ -317,7 +317,7 @@ class BookListView(generic.ListView):
    <td>
     <p>Esta es la RE usada en nuestro mapeador url. Concide con una cadena que tiene <code>book/</code> al inicio de la línea (<strong>^book/</strong>), luego tiene uno o más dígitos (<code>\d+</code>), y luego termina (sin ningún caracter que no sea un dígito antes del marcador de fin de línea).</p>
 
-    <p>También captura todos los dígitos <strong>(?P&lt;pk&gt;\d+)</strong> y los envía a la vista como un parámetro llamado 'pk'. <strong>¡Los valores capturados siempre se envían como cadena!</strong></p>
+    <p>También captura todos los dígitos <strong>(?P&lt;pk&gt;\d+)</strong> y los envía a la vista como un parámetro llamado 'pk'. <strong>¡Los valores capturados siempre se envían como cadena!</strong></p>
 
     <p>Por ejemplo, esto coincidiría con <code>book/1234</code>, y enviaría una variable <code>pk='1234'</code> a la vista.</p>
    </td>
@@ -363,7 +363,7 @@ url(r'^/anotherurl/$', views.my_reused_view, {'my_template_name': 'another_path'
 <p>Abre <strong>catalog/views.py</strong> y copia el siguiente código al final del archivo:</p>
 
 <pre class="brush: python">class BookDetailView(generic.DetailView):
-    model = Book</pre>
+    model = Book</pre>
 
 <p>¡Eso es todo! Lo único que necesitas hacer ahora es crear una plantilla llamada <strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>, y la vista enviará la información en la base de datos para el registro del libro específico, extraído por el mapeador URL. Dentro de la plantilla puedes acceder a la lista de libros mediante la variable de plantilla llamada <code>object</code> o <code>book</code> (esto es, genéricamente, "<em><code>el_nombre_del_modelo</code></em>").</p>
 
@@ -381,7 +381,7 @@ url(r'^/anotherurl/$', views.my_reused_view, {'my_template_name': 'another_path'
     except Book.DoesNotExist:
         raise Http404("Book does not exist")
 
-    #book_id=get_object_or_404(Book, pk=pk)
+    #book_id=get_object_or_404(Book, pk=pk)
 
     return render(
         request,
@@ -527,7 +527,7 @@ Y por último, pero no menos importante, deberías ordenar por un atributo/colum
 
 <p>Ahora que la información está paginada, necesitamos añadir soporte a la plantilla para desplazarse a través del conjunto de resultados. Como podríamos querer hacer lo mismo en todas las vistas de lista, lo haremos de una forma en la que puede ser añadida a la plantilla base.</p>
 
-<p>Abre <strong>/locallibrary/catalog/templates/<em>base_generic.html </em></strong>y copia el siguiente bloque <code>pagination</code> debajo de nuestro bloque <code>content</code> (resaltado abajo en negrita). El código primero revisa si la paginación está habilitada en la página actual. Si lo está, añade enlaces <code>next</code> y <code>previous</code> apropiados (y el número de la página actual).</p>
+<p>Abre <strong>/locallibrary/catalog/templates/<em>base_generic.html </em></strong>y copia el siguiente bloque <code>pagination</code> debajo de nuestro bloque <code>content</code> (resaltado abajo en negrita). El código primero revisa si la paginación está habilitada en la página actual. Si lo está, añade enlaces <code>next</code> y <code>previous</code> apropiados (y el número de la página actual).</p>
 
 <pre class="brush: python"><strong>{% block content %}{% endblock %}</strong>
 
@@ -551,7 +551,7 @@ Y por último, pero no menos importante, deberías ordenar por un atributo/colum
 
 <p><code>page_obj</code> es un objeto <a href="https://docs.djangoproject.com/en/1.10/topics/pagination/#paginator-objects">Paginator</a> que existirá si se usa la paginación en la página actual. Te permite obtener toda la información sobre la página actual, páginas anteriores, cuántas páginas hay, etc.</p>
 
-<p>Usamos <code>\{{ request.path }}</code> para obtener la URL de la página actual para crear a su vez los enlaces de paginación. Esto es útil, porque es independiente del objeto que estamos paginando.</p>
+<p>Usamos <code>\{{ request.path }}</code> para obtener la URL de la página actual para crear a su vez los enlaces de paginación. Esto es útil, porque es independiente del objeto que estamos paginando.</p>
 
 <p>¡Eso es todo!</p>
 
@@ -568,8 +568,8 @@ Y por último, pero no menos importante, deberías ordenar por un atributo/colum
 <p>El reto en este artículo es crear las vistas de lista y detalle para autores, que se requieren para completar el proyecto. Estas deberían estar disponibles en las siguientes URLs:</p>
 
 <ul>
- <li><code>catalog/authors/</code> — La lista de todos los autores.</li>
- <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— La vista de detalle para el autor específico con un valor en el campo de clave primaria de <em><code>&lt;id&gt;</code></em></li>
+ <li><code>catalog/authors/</code> — La lista de todos los autores.</li>
+ <li><code>catalog/author/<em>&lt;id&gt;</em></code><em> </em>— La vista de detalle para el autor específico con un valor en el campo de clave primaria de <em><code>&lt;id&gt;</code></em></li>
 </ul>
 
 <p>El código requerido para los mapeadores URL y las vistas debería ser virtualmente idéntico a las vistas de lista y detalle para <code>Book</code> que creamos arriba. Las plantillas serán diferentes, pero tendrán un comportamiento similar.</p>
@@ -579,7 +579,7 @@ Y por último, pero no menos importante, deberías ordenar por un atributo/colum
 
 <ul>
  <li>Una vez que has creado el mapeador URL para la página de lista de autores, necesitarás también actualizar el enlace <strong>All authors</strong> en la plantilla base. Sigue el <a href="#Update_the_base_template">mismo proceso</a> que hicimos cuando actualizamos el enlace <strong>All books</strong>.</li>
- <li>Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la <a href="#Creating_the_Detail_View_template">plantilla de vista de detalle de libros </a>(<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.</li>
+ <li>Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la <a href="#Creating_the_Detail_View_template">plantilla de vista de detalle de libros </a>(<strong>/locallibrary/catalog/templates/catalog/book_detail.html</strong>) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.</li>
 </ul>
 
 <pre class="brush: html">&lt;p&gt;&lt;strong&gt;Author:&lt;/strong&gt; &lt;a href="<strong>{% url 'author-detail' book.author.pk %}</strong>"&gt;\{{ book.author }}&lt;/a&gt;&lt;/p&gt; </pre>
@@ -617,7 +617,7 @@ Y por último, pero no menos importante, deberías ordenar por un atributo/colum
 
 <p>{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}</p>
 
-<p> </p>
+<p> </p>
 
 <h2 id="En_este_módulo">En este módulo</h2>
 

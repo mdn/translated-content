@@ -3422,6 +3422,8 @@
 /ja/docs/Web/API/MediaStreamTrack/onmute	/ja/docs/conflicting/Web/API/MediaStreamTrack/mute_event
 /ja/docs/Web/API/MediaStreamTrack/onoverconstrained	/ja/docs/Web/API/MediaStreamTrack/overconstrained_event
 /ja/docs/Web/API/MediaStreamTrack/onunmute	/ja/docs/conflicting/Web/API/MediaStreamTrack/unmute_event
+/ja/docs/Web/API/Media_Streams_API	/ja/docs/Web/API/Media_Capture_and_Streams_API
+/ja/docs/Web/API/Media_Streams_API/Constraints	/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints
 /ja/docs/Web/API/MessagePort/onmessage	/ja/docs/Web/API/MessagePort/message_event
 /ja/docs/Web/API/MessagePort/onmessageerror	/ja/docs/Web/API/MessagePort/messageerror_event
 /ja/docs/Web/API/MouseEvent/region	/ja/docs/conflicting/Web/API/MouseEvent

@@ -9,7 +9,7 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
 
 <p>Легко запутаться в том, какую цель (target) следует изучить при написании обработчика событий. В этой статье разъяснено использование свойств target.</p>
 
-<p>Существуют 5 целей для рассмотрения:</p>
+<p>Существуют 5 целей для рассмотрения:</p>
 
 <table class="standard-table">
  <tbody>
@@ -62,65 +62,65 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
 <pre>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-    &lt;title&gt;Comparison of Event Targets&lt;/title&gt;
-    &lt;style&gt;
-        table {
-            border-collapse: collapse;
-            height: 150px;
-            width: 100%;
-        }
-        td {
-            border: 1px solid #ccc;
-            font-weight: bold;
-            padding: 5px;
-            min-height: 30px;
-        }
-        .standard {
-            background-color: #99ff99;
-        }
-        .non-standard {
-            background-color: #902D37;
-        }
-    &lt;/style&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;title&gt;Comparison of Event Targets&lt;/title&gt;
+    &lt;style&gt;
+        table {
+            border-collapse: collapse;
+            height: 150px;
+            width: 100%;
+        }
+        td {
+            border: 1px solid #ccc;
+            font-weight: bold;
+            padding: 5px;
+            min-height: 30px;
+        }
+        .standard {
+            background-color: #99ff99;
+        }
+        .non-standard {
+            background-color: #902D37;
+        }
+    &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;td class="standard"&gt;Изначальная цель, отправляющая событие &lt;small&gt;event.target&lt;/small&gt;&lt;/td&gt;
-            &lt;td class="standard"&gt;Цель, кто обрабатывает события &lt;small&gt;event.currentTarget&lt;/small&gt;&lt;/td&gt;
-            &lt;td class="standard"&gt;Идентифицировать другой элемент (если он есть), участвующий в событии &lt;small&gt;event.relatedTarget&lt;/small&gt;&lt;/td&gt;
-            &lt;td class="non-standard"&gt;Если по какой-то причине произошло перенацеливание события &lt;small&gt;event.explicitOriginalTarget&lt;/small&gt; содержит цель перед перенацеливанием (никогда не содержит анонимных целей)&lt;/td&gt;
-            &lt;td class="non-standard"&gt;Если по какой-то причине произошло перенацеливание события &lt;small&gt;event.originalTarget&lt;/small&gt; содержит цель перед перенацеливанием (может содержать анонимные цели)&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tr&gt;
-        &lt;td id="target"&gt;&lt;/td&gt;
-        &lt;td id="currentTarget"&gt;&lt;/td&gt;
-        &lt;td id="relatedTarget"&gt;&lt;/td&gt;
-        &lt;td id="explicitOriginalTarget"&gt;&lt;/td&gt;
-        &lt;td id="originalTarget"&gt;&lt;/td&gt;
-    &lt;/tr&gt;
+    &lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;td class="standard"&gt;Изначальная цель, отправляющая событие &lt;small&gt;event.target&lt;/small&gt;&lt;/td&gt;
+            &lt;td class="standard"&gt;Цель, кто обрабатывает события &lt;small&gt;event.currentTarget&lt;/small&gt;&lt;/td&gt;
+            &lt;td class="standard"&gt;Идентифицировать другой элемент (если он есть), участвующий в событии &lt;small&gt;event.relatedTarget&lt;/small&gt;&lt;/td&gt;
+            &lt;td class="non-standard"&gt;Если по какой-то причине произошло перенацеливание события &lt;small&gt;event.explicitOriginalTarget&lt;/small&gt; содержит цель перед перенацеливанием (никогда не содержит анонимных целей)&lt;/td&gt;
+            &lt;td class="non-standard"&gt;Если по какой-то причине произошло перенацеливание события &lt;small&gt;event.originalTarget&lt;/small&gt; содержит цель перед перенацеливанием (может содержать анонимные цели)&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tr&gt;
+        &lt;td id="target"&gt;&lt;/td&gt;
+        &lt;td id="currentTarget"&gt;&lt;/td&gt;
+        &lt;td id="relatedTarget"&gt;&lt;/td&gt;
+        &lt;td id="explicitOriginalTarget"&gt;&lt;/td&gt;
+        &lt;td id="originalTarget"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
 &lt;/table&gt;
 &lt;p&gt;Нажав на текст, вы увидите разницу между explicitOriginalTarget, originalTarget и target&lt;/p&gt;
 &lt;script&gt;
-    function handleClicks(e) {
-        document.getElementById('target').innerHTML = e.target;
-        document.getElementById('currentTarget').innerHTML = e.currentTarget;
-        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-        document.getElementById('explicitOriginalTarget').innerHTML = e.explicitOriginalTarget;
-        document.getElementById('originalTarget').innerHTML = e.originalTarget;
-    }
+    function handleClicks(e) {
+        document.getElementById('target').innerHTML = e.target;
+        document.getElementById('currentTarget').innerHTML = e.currentTarget;
+        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
+        document.getElementById('explicitOriginalTarget').innerHTML = e.explicitOriginalTarget;
+        document.getElementById('originalTarget').innerHTML = e.originalTarget;
+    }
 
-    function handleMouseover(e) {
-        document.getElementById('target').innerHTML = e.target;
-        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-    }
+    function handleMouseover(e) {
+        document.getElementById('target').innerHTML = e.target;
+        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
+    }
 
-    document.addEventListener('click', handleClicks, false);
-    document.addEventListener('mouseover', handleMouseover, false);
+    document.addEventListener('click', handleClicks, false);
+    document.addEventListener('mouseover', handleMouseover, false);
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
@@ -161,4 +161,4 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
 &lt;/hbox&gt;
 </pre>
 
-<p> </p>
+<p> </p>

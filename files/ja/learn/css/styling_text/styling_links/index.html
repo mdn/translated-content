@@ -242,7 +242,7 @@ a:active {
   &lt;h2&gt;Output&lt;/h2&gt;
   &lt;div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"&gt;&lt;/div&gt;
   &lt;div class="controls"&gt;
-    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
+    &lt;input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;"&gt;
     &lt;input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -266,9 +266,9 @@ function drawOutput() {
 }
 
 reset.addEventListener("click", function() {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
 solution.addEventListener("click", function() {
@@ -343,7 +343,7 @@ a[href*="http"] {
 
 <p>最後に、背景画像を表示するスペースを確保するためにリンクに {{cssxref("padding-right")}} を設定しているので、テキストと重なっていません。</p>
 
-<p>最後の一言 — どのように外部リンクだけを選択したのでしょうか？ あなたが<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">HTML リンク</a>を適切に記述しているのなら、外部リンクには絶対 URL のみを使用しているはずです — 自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用するほうが効率的です。 したがって、テキスト  "http" は（2番目と3番目のリンクのように）外部リンクにのみ現れ、これを<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">属性セレクタ</a>で選択できます。 <code>a[href*="http"]</code> は {{htmlelement("a")}} 要素を選択しますが、"http" を含む値を持つ {{htmlattrxref("href","a")}} 属性がある場合に限ります。</p>
+<p>最後の一言 — どのように外部リンクだけを選択したのでしょうか？ あなたが<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">HTML リンク</a>を適切に記述しているのなら、外部リンクには絶対 URL のみを使用しているはずです — 自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用するほうが効率的です。 したがって、テキスト  "http" は（2番目と3番目のリンクのように）外部リンクにのみ現れ、これを<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">属性セレクタ</a>で選択できます。 <code>a[href*="http"]</code> は {{htmlelement("a")}} 要素を選択しますが、"http" を含む値を持つ {{htmlattrxref("href","a")}} 属性がある場合に限ります。</p>
 
 <p>それでは、これで全部です — 上の能動的学習セクションを再検討して、この新しいテクニックを試してみてください！</p>
 
@@ -380,18 +380,18 @@ li {
 }
 
 a {
-  outline: none;
+  outline: none;
   text-decoration: none;
-  display: inline-block;
-  width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
+  display: inline-block;
+  width: 19.5%;
+  margin-right: 0.625%;
+  text-align: center;
+  line-height: 3;
+  color: black;
 }
 
 li:last-child a {
-  margin-right: 0;
+  margin-right: 0;
 }
 
 a:link, a:visited, a:focus {

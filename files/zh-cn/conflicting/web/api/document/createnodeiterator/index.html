@@ -6,7 +6,7 @@ original_slug: Web/API/NodeFilter/acceptNode
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>NodeFilter.acceptNode()</code></strong> 方法会返回一个无符号短整型，用于表明给出的 {{domxref("Node")}} 是否要被 {{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 的迭代算法所接受。该方法应由 <code>NodeFilter 的使用者重写。可返回的值有</code>:</p>
+<p><strong><code>NodeFilter.acceptNode()</code></strong> 方法会返回一个无符号短整型，用于表明给出的 {{domxref("Node")}} 是否要被 {{ domxref("NodeIterator") }} 或 {{ domxref("TreeWalker") }} 的迭代算法所接受。该方法应由 <code>NodeFilter 的使用者重写。可返回的值有</code>:</p>
 
 <table class="standard-table">
  <tbody>
@@ -29,9 +29,9 @@ original_slug: Web/API/NodeFilter/acceptNode
  </tbody>
 </table>
 
-<p>该函数如需要TreeWalker访问节点则需返回 <code>NodeFilter.FILTER_ACCEPT，<font face="Open Sans, arial, sans-serif">如果需要忽略节点及其子节点则需返回</font></code><code>NodeFilter.FILTER_REJECT，除此之外还可以返回</code> <code>NodeFilter.FILTER_SKIP。</code></p>
+<p>该函数如需要TreeWalker访问节点则需返回 <code>NodeFilter.FILTER_ACCEPT，<font face="Open Sans, arial, sans-serif">如果需要忽略节点及其子节点则需返回</font></code><code>NodeFilter.FILTER_REJECT，除此之外还可以返回</code> <code>NodeFilter.FILTER_SKIP。</code></p>
 
-<p>浏览器没有提供该方法的对象实现。如果用户需要，应实现一个包含<code>acceptNode()方法的对象，用于</code> {{domxref("TreeWalker")}} 或 {{domxref("NodeIterator")}} 对象使用。</p>
+<p>浏览器没有提供该方法的对象实现。如果用户需要，应实现一个包含<code>acceptNode()方法的对象，用于</code> {{domxref("TreeWalker")}} 或 {{domxref("NodeIterator")}} 对象使用。</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -107,5 +107,5 @@ while ((node = iterator.nextNode())) {
 </ul>
 
 <dl>
- <dt> </dt>
+ <dt> </dt>
 </dl>

@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/push
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <code><strong>push()</strong></code> añade uno o más elementos al final de un array y devuelve la nueva longitud del array.</p>
+<p>El método <code><strong>push()</strong></code> añade uno o más elementos al final de un array y devuelve la nueva longitud del array.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-push.html")}}</div>
 
@@ -70,7 +70,7 @@ console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 
 <h3 id="Using_an_object_in_an_array-like_fashion">Using an object in an array-like fashion</h3>
 
-<p>Como se menciona anteriormente, <code>push</code> es intencionadamente genérico, y podemos usar eso a nuestro favor. <code>Array.prototype.push</code> puede funcionar bien con un objeto, como muestra este ejemplo. Ten en cuenta que no se crea un array para almacenar una colección de objetos. En su lugar, almacenamos la colección en el propio objeto y se utiliza el método <code>call</code> sobre <code>Array.prototype.push</code> para hacer creer al método que estamos tratando a un array, y simplemente funciona, gracias a la forma en que JavaScript nos permite establecer el contexto de la ejecución.</p>
+<p>Como se menciona anteriormente, <code>push</code> es intencionadamente genérico, y podemos usar eso a nuestro favor. <code>Array.prototype.push</code> puede funcionar bien con un objeto, como muestra este ejemplo. Ten en cuenta que no se crea un array para almacenar una colección de objetos. En su lugar, almacenamos la colección en el propio objeto y se utiliza el método <code>call</code> sobre <code>Array.prototype.push</code> para hacer creer al método que estamos tratando a un array, y simplemente funciona, gracias a la forma en que JavaScript nos permite establecer el contexto de la ejecución.</p>
 
 <pre class="brush: js">var obj = {
     length: 0,
@@ -89,7 +89,7 @@ console.log(obj.length);
 // → 2
 </pre>
 
-<p>Tenga en cuenta que aunque <code>obj</code> no es un array, el método <code>push</code> ha incrementado satisfactoriamente la propiedad <code>length</code> de <code>obj</code> tal y como si se tratara de un array.</p>
+<p>Tenga en cuenta que aunque <code>obj</code> no es un array, el método <code>push</code> ha incrementado satisfactoriamente la propiedad <code>length</code> de <code>obj</code> tal y como si se tratara de un array.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -108,17 +108,17 @@ console.log(obj.length);
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.4.4.7', 'Array.prototype.push')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-array.prototype.push', 'Array.prototype.push')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-array.prototype.push', 'Array.prototype.push')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

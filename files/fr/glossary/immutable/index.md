@@ -18,4 +18,4 @@ Un objet peut être immuable pour diverses raisons, par exemple :
 
 ### Culture générale
 
-- {{interwiki("wikipedia", "Objet immuable", "Immuable")}} sur Wikipédia
+- [Immuable](https://fr.wikipedia.org/wiki/Objet_immuable) sur Wikipédia

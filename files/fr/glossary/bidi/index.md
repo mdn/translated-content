@@ -15,7 +15,7 @@ original_slug: Glossaire/BiDi
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Texte bidirectionnel")}} sur Wikipédia
+- [Texte bidirectionnel](https://fr.wikipedia.org/wiki/Texte_bidirectionnel) sur Wikipédia
 
 ### Référence technique
 

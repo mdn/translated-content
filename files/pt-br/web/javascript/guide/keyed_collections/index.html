@@ -32,7 +32,7 @@ sayings.delete("dog");
 sayings.has("dog"); // false
 
 for (var [key, value] of sayings) {
-  console.log(key + " goes " + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -55,14 +55,14 @@ sayings.size; // 0
 <p>Estes dois tipos podem ajudar você a decidir se usa um <code>Map</code> ou um <code>Object</code>:</p>
 
 <ul>
- <li>Use mapas sobre objetos quando as chaves forem desconhecidas até a execução,  e quando todas as chaves são do mesmo tipo e todos valores são do mesmo tipo.</li>
+ <li>Use mapas sobre objetos quando as chaves forem desconhecidas até a execução,  e quando todas as chaves são do mesmo tipo e todos valores são do mesmo tipo.</li>
  <li>Use mapas caso haja a necessidade de armazenar valores primitivos como chaves, porque objetos tratam cada chave como uma string ou um valor numérico, valor booleano ou qualquer outro valor primitivo.</li>
  <li>Use objetos quando há uma lógica que opera em elementos individuais.</li>
 </ul>
 
 <h3 id="Objeto_WeakMap"><code>Objeto WeakMap</code></h3>
 
-<p>O objeto {{jsxref("WeakMap")}} é uma coleção de pares de chave/valor em que as <strong>chaves são somente objetos</strong> e seus valores podem ser valores arbitrários. As referências do objeto nas chaves são <em>fracamente</em> mantidas, isso significa que eles são alvo da garbage collection (coleta de lixo) se não houver nenhuma outra referência para o objeto. A API <code>WeakMap</code> é a mesma API do <code>Map</code>.</p>
+<p>O objeto {{jsxref("WeakMap")}} é uma coleção de pares de chave/valor em que as <strong>chaves são somente objetos</strong> e seus valores podem ser valores arbitrários. As referências do objeto nas chaves são <em>fracamente</em> mantidas, isso significa que eles são alvo da garbage collection (coleta de lixo) se não houver nenhuma outra referência para o objeto. A API <code>WeakMap</code> é a mesma API do <code>Map</code>.</p>
 
 <p>Uma diferença para objetos <code>Map</code> é que chaves <code>WeakMap</code> não são enumeráveis (isto é, não há um método que dê a você uma lista de chaves). Se eles fossem, a lista dependeria do estado da coleta de lixo, introduzindo um não-determinismo.</p>
 
@@ -91,7 +91,7 @@ module.exports = Public;
 
 <h3 id="Objeto_Set"><code>Objeto Set</code></h3>
 
-<p>Objetos {{jsxref("Set")}} são coleções de valores. Você pode iterar seus elementos em ordem de inserção. Um valor em um <code>Set</code> só pode ocorrer uma vez;  ele é único em uma coleção <code>Set</code>.</p>
+<p>Objetos {{jsxref("Set")}} são coleções de valores. Você pode iterar seus elementos em ordem de inserção. Um valor em um <code>Set</code> só pode ocorrer uma vez;  ele é único em uma coleção <code>Set</code>.</p>
 
 <p>O código a seguir mostra algumas operações básicas com um <code>Set</code>. Veja também a página de referência {{jsxref("Set")}} para mais exemplos e a API completa.</p>
 
@@ -138,7 +138,7 @@ mySet2 = new Set([1,2,3,4]);
 
 <ul>
  <li>Em contraste com <code>Sets</code>, <code>WeakSets</code> são <strong>apenas coleções de objetos</strong> e não de valores arbritários de qualquer tipo.</li>
- <li>O <code>WeakSet</code> é <em>fraco</em>: Referências para objetos são fracamente realizadas na coleção. Se não há outra referência para um objeto armazenado no <code>WeakSet</code>, eles podem ser coletados pelo coletor de lixo.  Isso significa também que não há uma lista de objetos correntes armazenados na coleção. <code>WeakSets</code> não são enumeráveis.</li>
+ <li>O <code>WeakSet</code> é <em>fraco</em>: Referências para objetos são fracamente realizadas na coleção. Se não há outra referência para um objeto armazenado no <code>WeakSet</code>, eles podem ser coletados pelo coletor de lixo.  Isso significa também que não há uma lista de objetos correntes armazenados na coleção. <code>WeakSets</code> não são enumeráveis.</li>
 </ul>
 
 <p>Os casos de uso do objeto <code>WeakSet</code> são limitados. Eles não vão desperdiçar memória para ser seguro o uso de elementos DOM como chaves e marcá-los para propósitos de controle, por exemplo.</p>

@@ -44,4 +44,4 @@ Le plus souvent, l'authentification se produit seulement au début d'une session
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "Hijacking")}} sur Wikipedia
+- [<i lang="en">Hijacking</i>](https://fr.wikipedia.org/wiki/Hijacking) sur Wikipédia

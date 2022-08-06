@@ -117,13 +117,13 @@ console.log(square.area); // 100
 ```js
 class Polygon {
   constructor(...sides) {
-    this.sides = sides;
+    this.sides = sides;
   }
   // Method
   *getSides() {
     for(const side of this.sides){
       yield side;
-    }
+    }
   }
 }
 
@@ -143,7 +143,7 @@ class Point {
     this.y = y;
   }
 
-  static displayName = "Point";
+  static displayName = "Point";
   static distance(a, b) {
     const dx = a.x - b.x;
     const dy = a.y - b.y;

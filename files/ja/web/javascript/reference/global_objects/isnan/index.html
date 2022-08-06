@@ -50,8 +50,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 <p><code>isNaN</code> のポリフィルは以下のようになります (このポリフィルは <code>NaN</code> が自分自身と常に等しくならないという特徴を利用しています)。</p>
 
 <pre class="brush: js">const isNaN = function(value) {
-    const n = Number(value);
-    return n !== n;
+    const n = Number(value);
+    return n !== n;
 };</pre>
 
 <h2 id="Examples">例</h2>
@@ -68,7 +68,7 @@ isNaN(37);        // false
 isNaN('37');      // false: "37" は非数でない数値 37 に変換される
 isNaN('37.37');   // false: "37.37" は非数でない数値 37.37 に変換される
 isNaN("37,5");    // true
-isNaN('123ABC');  // true:  parseInt("123ABC") の結果は 123、しかし Number("123ABC") の結果は NaN
+isNaN('123ABC');  // true:  parseInt("123ABC") の結果は 123、しかし Number("123ABC") の結果は NaN
 isNaN('');        // false: 空文字列は非数でない 0 に変換される
 isNaN(' ');       // false: 半角スペースからなる文字列は非数でない 0 に変換される
 

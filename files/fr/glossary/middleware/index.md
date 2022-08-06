@@ -15,4 +15,4 @@ Dans les frameworks d'application web côté serveur, le terme est souvent plus 
 
 ### Culture générale
 
-- {{Interwiki("wikipedia","Middleware")}} sur Wikipedia
+- [<i lang="en">Middleware</i>](https://fr.wikipedia.org/wiki/Middleware) sur Wikipédia

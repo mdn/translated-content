@@ -12,23 +12,23 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
 <ul>
  <li>색상 대비는 반드시 WCAG 2.0 AA 레벨 요건을 준수해야 한다:
   <ul>
-   <li>일반적인 크기의 텍스트(18pt 보다 작거나 14pt 볼드체)는 4.5:1</li>
-   <li>큰 크기의 텍스트(적어도 18pt 보다 크거나 14pt 볼드체)는 3 :1</li>
+   <li>일반적인 크기의 텍스트(18pt 보다 작거나 14pt 볼드체)는 4.5:1</li>
+   <li>큰 크기의 텍스트(적어도 18pt 보다 크거나 14pt 볼드체)는 3 :1</li>
   </ul>
  </li>
  <li>색상을 통해 전달되는 정보는 반드시 다른 수단으로도 제공되어야 한다(링크 등에 대한 밑줄 텍스트).</li>
 </ul>
 
-<h2 id="가시성">  가시성</h2>
+<h2 id="가시성">  가시성</h2>
 
 <ul>
- <li>opacity:0, z-index 깊이 조정 및 화면 밖 배치와 같은 콘텐츠 숨기기 기법은 단순히 가시성을 처리하기 위해서만 사용되어서는 안 된다.</li>
+ <li>opacity:0, z-index 깊이 조정 및 화면 밖 배치와 같은 콘텐츠 숨기기 기법은 단순히 가시성을 처리하기 위해서만 사용되어서는 안 된다.</li>
  <li>
   <p>현재 가시화된 화면 이외의 모든 것은 반드시 진정으로 보이지 않아야 한다(특히 여러 개의 카드가 있는 단일 페이지 앱에 관련됨).</p>
 
   <ul>
-   <li><code>hidden</code> 속성 또는 <code>visibility</code> 또는 <code>display</code> 스타일 속성값을 <strong>이용</strong>해야 한다.</li>
-   <li>불가피한 경우를 제외 하고 <code>aria-hidden</code> <strong>속성을 사용해서는 안된다.</strong></li>
+   <li><code>hidden</code> 속성 또는 <code>visibility</code> 또는 <code>display</code> 스타일 속성값을 <strong>이용</strong>해야 한다.</li>
+   <li>불가피한 경우를 제외 하고 <code>aria-hidden</code> <strong>속성을 사용해서는 안된다.</strong></li>
   </ul>
  </li>
 </ul>
@@ -44,7 +44,7 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
     <p>링크, 버튼 및 양식 필드와 같은 표준 control들는 기본적으로 초점을 맞출 수 있다.</p>
    </li>
    <li>
-    <p>비표준 control들은 반드시 버튼, 링크 또는 체크박스와 같은 적절한  <a href="http://www.w3.org/TR/wai-aria/roles">ARIA Role</a>  역할이 할당되어야 한다.</p>
+    <p>비표준 control들은 반드시 버튼, 링크 또는 체크박스와 같은 적절한  <a href="http://www.w3.org/TR/wai-aria/roles">ARIA Role</a>  역할이 할당되어야 한다.</p>
    </li>
   </ul>
 
@@ -59,26 +59,26 @@ translation_of: Web/Accessibility/Mobile_accessibility_checklist
   <p>앱 내 모든 엄격하지 않은 현재 텍스트 요소에 대해 동일한 의미의 텍스트가 제공되어야 한다.</p>
 
   <ul>
-   <li><em>alt 와</em> <em>title 속성은 적절하게 사용되어야 한다.</em>  ( 스티브 폴크너의 <a href="http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a> 위한 좋은 가이드 보기.)</li>
-   <li>위 속성을 사용하기 어려운 경우  <code>aria-label</code>, <code>aria-labelledby</code>, or <code>aria-describedby 등과 같은 </code><a href="http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header">ARIA Properties</a> 를 사용하세요</li>
+   <li><em>alt 와</em> <em>title 속성은 적절하게 사용되어야 한다.</em>  ( 스티브 폴크너의 <a href="http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute</a> 위한 좋은 가이드 보기.)</li>
+   <li>위 속성을 사용하기 어려운 경우  <code>aria-label</code>, <code>aria-labelledby</code>, or <code>aria-describedby 등과 같은 </code><a href="http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header">ARIA Properties</a> 를 사용하세요</li>
   </ul>
  </li>
- <li>텍스트 이미지 사용은 가급적 자제 해야 한다.</li>
- <li>모든  form 콘트롤 요소는 스크린 리더 사용자를 위해 lable 요소를 가져야 한다. </li>
+ <li>텍스트 이미지 사용은 가급적 자제 해야 한다.</li>
+ <li>모든  form 콘트롤 요소는 스크린 리더 사용자를 위해 lable 요소를 가져야 한다. </li>
 </ul>
 
 <h2 id="처리_상태">처리 상태</h2>
 
 <ul>
  <li>
-  <p>라디오 버튼 및 체크박스와 같은 표준 제어장치는 운영체제가 취급한다. 그러나 다른 사용자 정의 제어의 경우, <code>aria-checked</code>, <code>aria-disabled</code>, <code>aria-selected</code>, <code>aria-expanded</code>, and <code>aria-pressed</code>과 같은 <a href="http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header">ARIA States</a>를 통해 상태 변경이 제공되어야 한다.</p>
+  <p>라디오 버튼 및 체크박스와 같은 표준 제어장치는 운영체제가 취급한다. 그러나 다른 사용자 정의 제어의 경우, <code>aria-checked</code>, <code>aria-disabled</code>, <code>aria-selected</code>, <code>aria-expanded</code>, and <code>aria-pressed</code>과 같은 <a href="http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header">ARIA States</a>를 통해 상태 변경이 제공되어야 한다.</p>
  </li>
 </ul>
 
 <h2 id="방향">방향</h2>
 
 <ul>
- <li>콘텐츠는 특수한 경우를 제외하고 가로 또는 세로 방향등 단일 방향으로 제한해서는 안된다. <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">WCAG 2.1: Orientation</a>
+ <li>콘텐츠는 특수한 경우를 제외하고 가로 또는 세로 방향등 단일 방향으로 제한해서는 안된다. <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">WCAG 2.1: Orientation</a>
 
   <ul>
    <li>특수한 경우는 피아노 앱이나 은행 수표 앱 같은 경우가 있다.</li>

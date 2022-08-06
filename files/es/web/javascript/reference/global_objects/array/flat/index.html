@@ -73,7 +73,7 @@ arr1.reduce((acc, val) =&gt; acc.concat(val), []);// [1, 2, 3, 4]
 const flatSingle = arr =&gt; [].concat(...arr);
 </pre>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">//para permitir el aplanamiento a nivel profundo use recursión con reduce y concat
 var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
@@ -84,7 +84,7 @@ function flattenDeep(arr1) {
 flattenDeep(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 </pre>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">//aplanamiento profundo no recursivo usando un stack
 var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
@@ -106,7 +106,7 @@ function flatten(input) {
 }
 flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]</pre>
 
-<p> </p>
+<p> </p>
 
 <pre class="brush: js">//Aplanamiento profundo recursivo
 function flatten(array) {
@@ -120,7 +120,7 @@ function flatten(array) {
   return flattend;
 }</pre>
 
-<p> </p>
+<p> </p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
@@ -152,7 +152,7 @@ function flatten(array) {
   <tr>
    <td><a href="https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat"><code>Array.prototype.flat</code> proposal</a></td>
    <td>Finalizado (4)</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

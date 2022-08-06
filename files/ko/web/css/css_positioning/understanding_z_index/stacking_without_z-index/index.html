@@ -8,21 +8,21 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z
 <p>만약 모든 엘리먼트들에 z-index가 지정되지 않았을 경우에는 엘리먼트들이 다음 순서로 아래에서부터 위로 쌓인다.</p>
 <ol>
   <li>뿌리 엘리먼트의 배경과 테두리</li>
-  <li>자식 엘리먼트들은 HTML에서 등장하는 순서대로 </li>
-  <li>position이 지정된 자식 엘리먼트들은 HTML에서 등장하는 순서대로 </li>
+  <li>자식 엘리먼트들은 HTML에서 등장하는 순서대로 </li>
+  <li>position이 지정된 자식 엘리먼트들은 HTML에서 등장하는 순서대로 </li>
 </ol>
-<p>다음 예제에는 위의 쌓임 규칙을 설명하기 위한 적당한 크기의 엘리먼트들이 준비되어있다. </p>
+<p>다음 예제에는 위의 쌓임 규칙을 설명하기 위한 적당한 크기의 엘리먼트들이 준비되어있다. </p>
 <div class="note">
   <p><strong>노트:</strong></p>
   <ul>
-    <li>주어진 동일한 엘리먼트들의 그룹은 모두 z-index가 설정되지 않았다. DIV #1 부터 DIV #4 까지는 position 속성이 설정되었다. 엘리먼트의 position속성 값과는 상관 없이 HTML 계층 구조대로 쌓임을 알 수 있다. </li>
+    <li>주어진 동일한 엘리먼트들의 그룹은 모두 z-index가 설정되지 않았다. DIV #1 부터 DIV #4 까지는 position 속성이 설정되었다. 엘리먼트의 position속성 값과는 상관 없이 HTML 계층 구조대로 쌓임을 알 수 있다. </li>
     <li>
-      <p>position 속성이 지정되지 않은 블록(DIV #5)은 항상 position이 지정된 엘리먼트 이전에 렌더링 된다. 따라서 position이 지정된 엘리먼트 아래에 보인다. 설령 HTML 문서상에서 먼저 나오더라도 position이 지정되지 않은 엘리먼트는 지정된 엘리먼트보다 아래에 보인다. </p>
+      <p>position 속성이 지정되지 않은 블록(DIV #5)은 항상 position이 지정된 엘리먼트 이전에 렌더링 된다. 따라서 position이 지정된 엘리먼트 아래에 보인다. 설령 HTML 문서상에서 먼저 나오더라도 position이 지정되지 않은 엘리먼트는 지정된 엘리먼트보다 아래에 보인다. </p>
     </li>
   </ul>
 </div>
 <p><img alt="understanding_zindex_01.png" class="internal default" src="/@api/deki/files/910/=understanding_zindex_01.png"></p>
-<p> </p>
+<p> </p>
 <h3 id="Example" name="Example">예제</h3>
 <pre class="brush: html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
@@ -126,14 +126,14 @@ span.bold { font-weight: bold; }
 </pre>
 <h3 id="See_also">See also</h3>
 <ul>
-  <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float" title="en/CSS/Understanding_z-index/Stacking_and_float">Stacking and float</a> : How floating elements are handled</li>
-  <li><a href="/en/CSS/Understanding_z-index/Adding_z-index" title="en/CSS/Understanding_z-index/Adding_z-index">Adding z-index</a> : Using z-index to change default stacking</li>
-  <li><a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">The stacking context</a> : Notes on the stacking context</li>
-  <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_1" title="en/CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
-  <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_2" title="en/CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
-  <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3" title="en/CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level<span id="cke_bm_94E" class="hidden"> </span></li>
+  <li><a href="/en/CSS/Understanding_z-index/Stacking_and_float" title="en/CSS/Understanding_z-index/Stacking_and_float">Stacking and float</a> : How floating elements are handled</li>
+  <li><a href="/en/CSS/Understanding_z-index/Adding_z-index" title="en/CSS/Understanding_z-index/Adding_z-index">Adding z-index</a> : Using z-index to change default stacking</li>
+  <li><a href="/en/CSS/Understanding_z-index/The_stacking_context" title="en/CSS/Understanding_z-index/The_stacking_context">The stacking context</a> : Notes on the stacking context</li>
+  <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_1" title="en/CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
+  <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_2" title="en/CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
+  <li><a href="/en/CSS/Understanding_z-index/Stacking_context_example_3" title="en/CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level<span id="cke_bm_94E" class="hidden"> </span></li>
 </ul>
-<p> </p>
+<p> </p>
 <div class="originaldocinfo">
   <h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
   <ul>

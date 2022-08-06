@@ -13,4 +13,4 @@ original_slug: Glossaire/IPv6
 
 ### Connaissances générales
 
-- {{interwiki("wikipedia", "IPv6", "IPv6")}} sur Wikipedia
+- [IPv6](https://fr.wikipedia.org/wiki/IPv6) sur Wikipédia

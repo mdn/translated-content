@@ -12,10 +12,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 <div>{{JSRef}}</div>
 
 <div class="warning">
-<p>Esta característica está descontinuada em favor de definindo getters usando a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">sintaxe de inicialização de objeto </a>ou a API {{jsxref("Object.defineProperty()")}}. Enquanto esta característica é amplamente implementada, ela está somente descrita na <a href="https://tc39.github.io/ecma262/#sec-additional-ecmascript-features-for-web-browsers">especificação ECMAScript </a> por causa do uso legado. Este método não deveria ser usado desde que exista existam melhores alternativas.</p>
+<p>Esta característica está descontinuada em favor de definindo getters usando a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">sintaxe de inicialização de objeto </a>ou a API {{jsxref("Object.defineProperty()")}}. Enquanto esta característica é amplamente implementada, ela está somente descrita na <a href="https://tc39.github.io/ecma262/#sec-additional-ecmascript-features-for-web-browsers">especificação ECMAScript </a> por causa do uso legado. Este método não deveria ser usado desde que exista existam melhores alternativas.</p>
 </div>
 
-<p>O método <code><strong>__defineGetter__</strong></code> conecta uma propriedade do objeto à uma função para ser chamada quando isso é consultado.</p>
+<p>O método <code><strong>__defineGetter__</strong></code> conecta uma propriedade do objeto à uma função para ser chamada quando isso é consultado.</p>
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -25,9 +25,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 
 <dl>
  <dt><code>prop</code></dt>
- <dd>Uma string contendo o nome da propriedade para conectar a função dada.</dd>
+ <dd>Uma string contendo o nome da propriedade para conectar a função dada.</dd>
  <dt><code>func</code></dt>
- <dd>Uma função para ser ligada a uma consulta da propriedade especificada.</dd>
+ <dd>Uma função para ser ligada a uma consulta da propriedade especificada.</dd>
 </dl>
 
 <h3 id="Valor_de_Retorno">Valor de Retorno</h3>
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 
 <h2 id="Descrição">Descrição</h2>
 
-<p>O <code>__defineGetter__</code> permite um {{jsxref("Operators/get", "getter", "", 1)}} ser definido sobre um objeto preexistente.</p>
+<p>O <code>__defineGetter__</code> permite um {{jsxref("Operators/get", "getter", "", 1)}} ser definido sobre um objeto preexistente.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -96,7 +96,7 @@ console.log(o.gimmeFive); // 5
  <li>{{jsxref("Object.defineProperty()")}}</li>
  <li>{{jsxref("Object.prototype.__lookupGetter__()")}}</li>
  <li>{{jsxref("Object.prototype.__lookupSetter__()")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Guia JS: Definindo Getters e Setters</a></li>
- <li><a href="https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">[Blog Post] Depreciação de __defineGetter__ e __defineSetter__</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Guia JS: Definindo Getters e Setters</a></li>
+ <li><a href="https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">[Blog Post] Depreciação de __defineGetter__ e __defineSetter__</a></li>
  <li>{{bug(647423)}}</li>
 </ul>

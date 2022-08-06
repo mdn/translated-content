@@ -16,7 +16,7 @@ Une instruction, ou un ensemble d'instructions, est démarrée si une condition 
 
 ### **Culture générale**
 
-- {{interwiki("wikipedia", "Système_de_gestion_d'exceptions#Le_syst.C3.A8me_de_conditions_de_Common_Lisp", "Condition")}} sur Wikipédia
+- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le#Alternatives) sur Wikipédia
 
 ### Référence technique
 

@@ -34,11 +34,11 @@ translation_of: Web/SVG/Content_type
 <dl>
  <dt>&lt;anything&gt;</dt>
  <dd>
- <p>O tipo básico &lt;anything&gt; é uma sequência de zero ou mais caracteres. Especificamente:</p>
+ <p>O tipo básico &lt;anything&gt; é uma sequência de zero ou mais caracteres. Especificamente:</p>
 
  <pre>anything ::= Char*</pre>
 
- <p>onde <a href="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">Char</a> é a produção de um caractere, como definido no XML 1.0 , seção 2.2).</p>
+ <p>onde <a href="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">Char</a> é a produção de um caractere, como definido no XML 1.0 , seção 2.2).</p>
  </dd>
 </dl>
 
@@ -149,7 +149,7 @@ hexdigit ::= [0-9A-Fa-f]
 
 <dl>
  <dt>&lt;FuncIRI&gt;</dt>
- <dd>Notação funcional para uma referência, a sintaxe para esta referência é a mesma que {{cssxref("uri", "CSS URI")}}</dd>
+ <dd>Notação funcional para uma referência, a sintaxe para esta referência é a mesma que {{cssxref("uri", "CSS URI")}}</dd>
 </dl>
 
 <h2 id="ICCColor">ICCColor</h2>
@@ -258,16 +258,16 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;list-of-<var>T</var>s&gt;</dt>
  <dd>
- <p>(Quando <var>T</var> é algum tipo.) Uma lista constituida por uma sequência de valores separados. A não ser que esteja descrito explicitamente de maneira diferente, as listas de atributos XML dentro do SVG podem ser separados por vírgula ou por espaços em branco.</p>
+ <p>(Quando <var>T</var> é algum tipo.) Uma lista constituida por uma sequência de valores separados. A não ser que esteja descrito explicitamente de maneira diferente, as listas de atributos XML dentro do SVG podem ser separados por vírgula ou por espaços em branco.</p>
 
  <p>O espaço em branco nas listas é definido como um ou mais dos seguintes caracteres consecutivos: "espaço" (U + 0020), "tab" (U + 0009), "line feed" (U + 000A), "retorno" (U + 000D) e "form-feed" (U + 000C).</p>
 
- <p>Abaixo tem um modelo para uma gramática EBNF descrevendo a sintaxe da &lt;list-of-<var>T</var>s&gt;:</p>
+ <p>Abaixo tem um modelo para uma gramática EBNF descrevendo a sintaxe da &lt;list-of-<var>T</var>s&gt;:</p>
 
  <pre>list-of-<var>T</var>s ::= <var>T</var>
                | <var>T</var>, list-of-<var>T</var>s</pre>
 
- <p>Dentro do DOM do SVG, os tipo de valores da &lt;list-of-<var>T</var>s&gt; são representados por uma interface específica para o tipo particular T. Por exemplo, uma &lt;list-of-lengths&gt; é representada no DOM do SVG utilizando um objeto {{domxref ("SVGLengthList")}} ou {{domxref ("SVGAnimatedLengthList")}}.</p>
+ <p>Dentro do DOM do SVG, os tipo de valores da &lt;list-of-<var>T</var>s&gt; são representados por uma interface específica para o tipo particular T. Por exemplo, uma &lt;list-of-lengths&gt; é representada no DOM do SVG utilizando um objeto {{domxref ("SVGLengthList")}} ou {{domxref ("SVGAnimatedLengthList")}}.</p>
  </dd>
 </dl>
 
@@ -321,7 +321,7 @@ hexdigit ::= [0-9A-Fa-f]
 
 <dl>
  <dt>&lt;opacity-value&gt;</dt>
- <dd>A opacidade da cor ou do conteúdo do objeto atual é preenchida através de um <a href="/en-US/docs/SVG/Content_type#Number" title="SVG/Content_type#Number">&lt;number&gt;</a>. Quaisquer valores fora da faixa de 0.0 (totalmente transparente) a 1.0 (totalmente opaco) será ajustada para este intervalo.</dd>
+ <dd>A opacidade da cor ou do conteúdo do objeto atual é preenchida através de um <a href="/en-US/docs/SVG/Content_type#Number" title="SVG/Content_type#Number">&lt;number&gt;</a>. Quaisquer valores fora da faixa de 0.0 (totalmente transparente) a 1.0 (totalmente opaco) será ajustada para este intervalo.</dd>
 </dl>
 
 <h2 id="Paint">Paint</h2>
@@ -357,7 +357,7 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;time&gt;</dt>
  <dd>
- <p>O valor de tempo é um &lt;number&gt; imediatamente seguida por um indentificador de unidade de tempo. Os indicadores de unidade de tempo são:</p>
+ <p>O valor de tempo é um &lt;number&gt; imediatamente seguida por um indentificador de unidade de tempo. Os indicadores de unidade de tempo são:</p>
 
  <ul>
   <li><span class="attr-value">ms: </span>milisegundos</li>

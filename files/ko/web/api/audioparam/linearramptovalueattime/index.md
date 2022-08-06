@@ -30,7 +30,7 @@ var AudioParam = AudioParam.linearRampToValueAtTime(value, endTime)
 
 ### 반환
 
-이 `AudioParam` 객체에 대한 참조. 몇몇 브라우저에서 이 인터페이스의 오래된 구현은 void를 반환합니다.
+이 `AudioParam` 객체에 대한 참조. 몇몇 브라우저에서 이 인터페이스의 오래된 구현은 void를 반환합니다.
 
 ## 예제
 

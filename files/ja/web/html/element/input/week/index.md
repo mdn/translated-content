@@ -342,9 +342,9 @@ fallbackLabel.style.display = 'none';
 var test = document.createElement('input');
 
 try {
-  test.type = 'week';
+  test.type = 'week';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.description);
 }
 
 // もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する

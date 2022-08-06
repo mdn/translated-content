@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.parseFloat
 ---
 {{jsSidebar("Objects")}}
 
-**`parseFloat()`** 함수는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다.
+**`parseFloat()`** 함수는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
 
@@ -24,7 +24,7 @@ parseFloat(string)
 - `string`
   - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 공백은 무시합니다.
 
-### 반환 값
+### 반환 값
 
 주어진 문자열에서 파싱한 부동소수점 실수입니다.
 
@@ -32,7 +32,7 @@ parseFloat(string)
 
 ## 설명
 
-`parseFloat`은 전역 객체의 함수 속성입니다.
+`parseFloat`은 전역 객체의 함수 속성입니다.
 
 - `parseFloat`이 양의 부호(`+`), 음의 부호(`-` U+002D HYPHEN-MINUS), 숫자(`0`-`9`), 소수점(`.`), 지수(`e`, `E`) 외의 다른 글자를 발견할 경우 해당 문자 이전까지의 문자만 사용해 파싱하며 문제의 문자와 그 이후는 모두 무시합니다.
 - 소수점이 두 개 이상 존재할 경우 두 번째 소수점 역시 위와 같이 무시됩니다.
@@ -43,7 +43,7 @@ parseFloat(string)
 
 더 엄격한 파싱이 필요하면, 유효하지 않은 문자가 어디에나 존재할 시 {{jsxref("NaN")}}을 반환하는 {{jsxref("Number", "Number(value)")}}를 고려하세요.
 
-`parseFloat`은 {{jsxref("Object.toString", "toString")}}이나 {{jsxref("Object.valueOf", "valueOf")}} 메서드를 구현한 객체도 파싱할 수 있습니다. 이 때의 결과는 객체의 `toString()`, `valueOf()`의 반환 값을 `parseFloat`에 전달한 것과 동일합니다.
+`parseFloat`은 {{jsxref("Object.toString", "toString")}}이나 {{jsxref("Object.valueOf", "valueOf")}} 메서드를 구현한 객체도 파싱할 수 있습니다. 이 때의 결과는 객체의 `toString()`, `valueOf()`의 반환 값을 `parseFloat`에 전달한 것과 동일합니다.
 
 ## 예제
 

@@ -185,9 +185,9 @@ WebAssembly のバリデーションルールはスタックが正確に一致�
 
 ```js
 WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj => {
-    console.log(obj.instance.exports.add(1, 2));  // "3"
-  });
+  .then(obj => {
+    console.log(obj.instance.exports.add(1, 2));  // "3"
+  });
 ```
 
 > **Note:** この例は GitHub の[add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)) にあります。関数のインスタンス化についての詳細は {{JSxRef("WebAssembly.instantiateStreaming()")}} も合わせて参照してください。
@@ -224,9 +224,9 @@ WebAssembly.instantiateStreaming(fetch('add.wasm'))
 
 ```js
 WebAssembly.instantiateStreaming(fetch('call.wasm'))
- .then(obj => {
-    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
-  });
+ .then(obj => {
+    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
+  });
 ```
 
 ### JavaScript から関数をインポートする
@@ -261,9 +261,9 @@ var importObject = {
 };
 
 WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj => {
-    obj.instance.exports.logIt();
-  });
+  .then(obj => {
+    obj.instance.exports.logIt();
+  });
 ```
 
 > **Note:** この例は GitHub の [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html))を参照してください。
@@ -356,9 +356,9 @@ var memory = new WebAssembly.Memory({initial:1});
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
 WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj => {
-    obj.instance.exports.writeHi();
-  });
+  .then(obj => {
+    obj.instance.exports.writeHi();
+  });
 ```
 
 > **Note:** 完全なソースは GitHub の [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)) を参照してください。
@@ -444,7 +444,7 @@ function() {
 
 より高級な、JavaScript のような表現力の高い言語では、関数を含む配列 (あるいはオブジェクトかもしれません) で同じことができることが想像できますよね。擬似コードだとこれは `tbl[i]()` のようになります。
 
-型チェックの話に戻ります。WebAssembly は型チェックされていて、 `funcref`  は「任意の関数シグネチャ」を意味するので、呼び出し先の (推定される) シグネチャを指定する必要があります。そのため、 `$return_i32` 型を指定することで、プログラムに関数が `i32` を返すはずだと知らせます。もし呼び出し先のシグネチャが一致しない (代わりに `f32` が返されるような) 場合は {{JSxRef("WebAssembly.RuntimeError")}} 例外が発生します。
+型チェックの話に戻ります。WebAssembly は型チェックされていて、 `funcref`  は「任意の関数シグネチャ」を意味するので、呼び出し先の (推定される) シグネチャを指定する必要があります。そのため、 `$return_i32` 型を指定することで、プログラムに関数が `i32` を返すはずだと知らせます。もし呼び出し先のシグネチャが一致しない (代わりに `f32` が返されるような) 場合は {{JSxRef("WebAssembly.RuntimeError")}} 例外が発生します。
 
 さて、呼び出しを行うときにどのようにテーブルに `call_indirect` をリンクさせているのでしょうか? 答えは、現在モジュールインスタンスごとに1つのテーブルしか許容されないため、`call_indirect` はそれを暗黙的に呼び出します。将来的に複数のテーブルを持てるようになったとき、以下の行のように、何らかのテーブル識別子を指定する必要があるでしょう。
 
@@ -473,11 +473,11 @@ call_indirect $my_spicy_table (type $i32_to_void)
 
 ```js
 WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj => {
-    console.log(obj.instance.exports.callByIndex(0)); // returns 42
-    console.log(obj.instance.exports.callByIndex(1)); // returns 13
-    console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
-  });
+  .then(obj => {
+    console.log(obj.instance.exports.callByIndex(0)); // returns 42
+    console.log(obj.instance.exports.callByIndex(1)); // returns 13
+    console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
+  });
 ```
 
 > **Note:** 例は GitHub の [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)) を参照してください。
@@ -549,10 +549,10 @@ var importObj = {
 };
 
 Promise.all([
-  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
-  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
+  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
+  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
 ]).then(function(results) {
-  console.log(results[1].instance.exports.doIt());  // prints 42
+  console.log(results[1].instance.exports.doIt());  // prints 42
 });
 ```
 

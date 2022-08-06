@@ -3,7 +3,7 @@ title: 繼承
 slug: orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/繼承
 original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/繼承
 ---
-<p> </p>
+<p> </p>
 
 <h3 id="繼承" name="繼承">繼承</h3>
 
@@ -20,8 +20,8 @@ original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/繼�
 
 A.prototype =
 {
-  varA : null,
-  doSomething : function()
+  varA : null,
+  doSomething : function()
   {
      ...
   }
@@ -35,8 +35,8 @@ function B(a, b)
 
 B.prototype =
 {
-  varB : null,
-  doSomething : function() // 覆寫
+  varB : null,
+  doSomething : function() // 覆寫
   {
      A.prototype.doSomething.apply(this, arguments); // 呼叫親類型
      ...
@@ -77,17 +77,17 @@ b.doSomething();
 <p><code>__proto__</code> 是以<em>遞歸</em>的方式來看待的，也就是 <code>a1.doSomething</code>、<code>a1.__proto__.doSomething</code>、<code>a1.__proto__.__proto__.doSomething</code> 等等，直到找到或不存在 <code>__proto__ <span style="font-family: Verdana,Tahoma,sans-serif;">為止。</span></code></p>
 
 <p>所以，發生了什麼︰當你呼叫<br>
- <code>  var o = new Foo()</code><br>
+ <code>  var o = new Foo()</code><br>
  JS 實際上只是這樣做<br>
- <code>  var o = new Object();<br>
-   o.__proto__ = Foo.prototype;<br>
-   o.Foo();</code> （諸如此類）<br>
+ <code>  var o = new Object();<br>
+   o.__proto__ = Foo.prototype;<br>
+   o.Foo();</code> （諸如此類）<br>
  <br>
  以及當你隨後這樣做<br>
- <code>  o.someProp</code><br>
+ <code>  o.someProp</code><br>
  他會檢查 <code>o</code> 是否有屬性 <code>someProp</code>，如果沒有就檢查 <code>o.__proto__.someProp</code>，如果沒有就檢查 <code>o.__proto__.__proto__.someProp</code> 依此類推。這個最後的步驟就是 extend() 函數運作的原因。</p>
 
-<p> </p>
+<p> </p>
 
 <p>注意，<code>__proto__</code> 只能在 Mozilla 的 JS 引撉中存取。其他引撉的也有相同的運作，但不能存取 <code>__proto__</code>。參閱以下內容來補救。</p>
 

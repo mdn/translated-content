@@ -12,10 +12,10 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
 ---
 <p>{{JSRef}}</p>
 
-<p>El método <code><strong>Object.setPrototypeOf()</strong></code> establece el prototipo (p.e., la propiedad interna <code>[[Prototype]]</code>) de un objeto especificado a otro objeto o sino establece {{jsxref("null")}}.</p>
+<p>El método <code><strong>Object.setPrototypeOf()</strong></code> establece el prototipo (p.e., la propiedad interna <code>[[Prototype]]</code>) de un objeto especificado a otro objeto o sino establece {{jsxref("null")}}.</p>
 
 <div class="warning">
-<p><strong>Adverdencia:</strong> Cambiar la propiedad <code>[[Prototype]]</code> de un objeto, debido a la naturaleza de la optimización del acceso a propiedades de los motores modernos de JavaScript, es una operación bastante lenta, en todo <strong><em>todo</em></strong> navegador y motor de JavaScript. Los efectos sobre el rendimiento al alterar la herencia son sutiles y vastos., y no están limitados a simplemente el tiempo gastado en la sentencia <code>obj.__proto___ = ...</code>,  but may extend to <strong><em>any</em></strong> code that has access to <strong><em>any</em></strong> object whose <code>[[Prototype]]</code> has been altered. If you care about performance you should avoid setting the <code>[[Prototype]]</code> of an object. Instead, create a new object with the desired <code>[[Prototype]]</code> using {{jsxref("Object.create()")}}.</p>
+<p><strong>Adverdencia:</strong> Cambiar la propiedad <code>[[Prototype]]</code> de un objeto, debido a la naturaleza de la optimización del acceso a propiedades de los motores modernos de JavaScript, es una operación bastante lenta, en todo <strong><em>todo</em></strong> navegador y motor de JavaScript. Los efectos sobre el rendimiento al alterar la herencia son sutiles y vastos., y no están limitados a simplemente el tiempo gastado en la sentencia <code>obj.__proto___ = ...</code>,  but may extend to <strong><em>any</em></strong> code that has access to <strong><em>any</em></strong> object whose <code>[[Prototype]]</code> has been altered. If you care about performance you should avoid setting the <code>[[Prototype]]</code> of an object. Instead, create a new object with the desired <code>[[Prototype]]</code> using {{jsxref("Object.create()")}}.</p>
 </div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
@@ -28,14 +28,14 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
  <dt><code>obj</code></dt>
  <dd>El objeto al que se ha de establecer el prototipo.</dd>
  <dt><code>prototype</code></dt>
- <dd>El nuevo prototipo del objeto, (un objeto o {{jsxref("null")}}).</dd>
+ <dd>El nuevo prototipo del objeto, (un objeto o {{jsxref("null")}}).</dd>
 </dl>
 
 <h2 id="Descripción">Descripción</h2>
 
-<p>Arroja una excepción del tipo {{jsxref("TypeError")}} si el objeto cuyo <code>[[Prototype]]</code> se va a modificar no es extensible de acuerdo con {{jsxref("Object.isExtensible()")}}. No hace nada si el parametro <code>prototype</code> no es un objeto o {{jsxref("null")}} (p.e., número, cadena, booleano, o {{jsxref("undefined")}}). De cualquier otra forma, este método cambia la propiedad <code>[[Prototype]]</code> del <code>obj</code> al valor nuevo.</p>
+<p>Arroja una excepción del tipo {{jsxref("TypeError")}} si el objeto cuyo <code>[[Prototype]]</code> se va a modificar no es extensible de acuerdo con {{jsxref("Object.isExtensible()")}}. No hace nada si el parametro <code>prototype</code> no es un objeto o {{jsxref("null")}} (p.e., número, cadena, booleano, o {{jsxref("undefined")}}). De cualquier otra forma, este método cambia la propiedad <code>[[Prototype]]</code> del <code>obj</code> al valor nuevo.</p>
 
-<p><code>Object.setPrototypeOf()</code> está en el último borrador del estandar ECMAScript6. Es considerado generalmente la manera adecuada de establecer el prototipo de un objeto, contra la propiedad más controversial {{jsxref("Object.prototype.__proto__")}}.</p>
+<p><code>Object.setPrototypeOf()</code> está en el último borrador del estandar ECMAScript6. Es considerado generalmente la manera adecuada de establecer el prototipo de un objeto, contra la propiedad más controversial {{jsxref("Object.prototype.__proto__")}}.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
@@ -44,7 +44,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>Utilizando la vieja propiedad {{jsxref("Object.prototype.__proto__")}}, podemos definir facilmente <code>Object.setPrototypeOf</code> si aún no está disponible:</p>
+<p>Utilizando la vieja propiedad {{jsxref("Object.prototype.__proto__")}}, podemos definir facilmente <code>Object.setPrototypeOf</code> si aún no está disponible:</p>
 
 <pre class="brush: js">// Solo funciona en Chrome y FirefoxOnly works in Chrome y FireFox, no funciona en IE:
 Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
@@ -55,7 +55,7 @@ Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
 
 <h2 id="Agregando_cadenas_de_prototipo">Agregando cadenas de prototipo</h2>
 
-<p>Una combinación de <code>Object.getPrototypeOf()</code> y {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite agregar una nueva cadena de prototipos al nuevo  prototipo del objeto.</p>
+<p>Una combinación de <code>Object.getPrototypeOf()</code> y {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite agregar una nueva cadena de prototipos al nuevo  prototipo del objeto.</p>
 
 <pre class="brush: js">/**
 *** Object.appendChain(@object, @prototype)
@@ -186,5 +186,5 @@ george(); // 'Hello guys!!'
  <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
  <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
  <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object.prototype.__proto__")}} </li>
+ <li>{{jsxref("Object.prototype.__proto__")}} </li>
 </ul>

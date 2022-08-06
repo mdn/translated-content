@@ -1647,6 +1647,8 @@
 /es/docs/Web/API/IDBObjectStore.add	/es/docs/Web/API/IDBObjectStore/add
 /es/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /es/docs/Web/API/KeyboardEvent/which	/es/docs/Web/API/UIEvent/which
+/es/docs/Web/API/Media_Streams_API	/es/docs/Web/API/Media_Capture_and_Streams_API
+/es/docs/Web/API/Media_Streams_API/Taking_still_photos	/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /es/docs/Web/API/Navigator.getUserMedia	/es/docs/Web/API/Navigator/getUserMedia
 /es/docs/Web/API/NavigatorConcurrentHardware	/es/docs/orphaned/Web/API/NavigatorConcurrentHardware
 /es/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/es/docs/orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
@@ -1673,7 +1675,7 @@
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-/es/docs/Web/API/WebRTC_API/Taking_still_photos	/es/docs/Web/API/Media_Streams_API/Taking_still_photos
+/es/docs/Web/API/WebRTC_API/Taking_still_photos	/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /es/docs/Web/API/WebSocket/onerror	/es/docs/Web/API/WebSocket/error_event
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /es/docs/Web/API/WebSockets_API/Escribiendo_servidores_con_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
@@ -2701,9 +2703,9 @@
 /es/docs/WebAPI/Using_geolocation	/es/docs/Web/API/Geolocation_API
 /es/docs/WebGL	/es/docs/Web/API/WebGL_API
 /es/docs/WebRTC/Introduction	/es/docs/Web/API/WebRTC_API/Session_lifetime
-/es/docs/WebRTC/MediaStream_API	/es/docs/Web/API/Media_Streams_API
+/es/docs/WebRTC/MediaStream_API	/es/docs/Web/API/Media_Capture_and_Streams_API
 /es/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
-/es/docs/WebRTC/Taking_webcam_photos	/es/docs/Web/API/Media_Streams_API/Taking_still_photos
+/es/docs/WebRTC/Taking_webcam_photos	/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /es/docs/WebSockets-840092-dup	/es/docs/Web/API/WebSockets_API
 /es/docs/WebSockets-840092-dup/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /es/docs/WebSockets-840092-dup/Escribiendo_servidores_con_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_servers

@@ -85,14 +85,14 @@ function getData() {
 // wire up buttons to stop and play audio
 
 play.onclick = function() {
-  getData();
-  source.start(0);
-  play.setAttribute('disabled', 'disabled');
+  getData();
+  source.start(0);
+  play.setAttribute('disabled', 'disabled');
 }
 
 stop.onclick = function() {
-  source.stop(0);
-  play.removeAttribute('disabled');
+  source.stop(0);
+  play.removeAttribute('disabled');
 }
 
 
@@ -133,7 +133,7 @@ pre.innerHTML = myScript.innerHTML;</pre>
   <tr>
    <td>{{SpecName('Web Audio API', '#widl-AudioContext-decodeAudioData-Promise-AudioBuffer--ArrayBuffer-audioData-DecodeSuccessCallback-successCallback-DecodeErrorCallback-errorCallback', 'decodeAudioData()')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

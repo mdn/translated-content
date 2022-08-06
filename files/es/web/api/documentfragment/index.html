@@ -5,41 +5,41 @@ translation_of: Web/API/DocumentFragment
 ---
 <div>{{ APIRef("DOM") }}</div>
 
-<p>La interfaz <span class="seoSummary"><strong><code>DocumentFragment</code></strong></span> representa un objeto de documento mínimo que no tiene padre. Se utiliza como una versión ligera de <span class="seoSummary">{{domxref("Document")}}</span> que almacena un segmento de una estructura de documento compuesta de nodos como un documento estándar. La gran diferencia se debe al hecho de que el fragmento de documento no forma parte de la estructura de árbol del documento activo. Los cambios realizados en el fragmento no afectan el documento  (incluso en {{Glossary("reflow")}})  ni inciden en el rendimiento cuando se realizan cambios. {{InheritanceDiagram}}</p>
+<p>La interfaz <span class="seoSummary"><strong><code>DocumentFragment</code></strong></span> representa un objeto de documento mínimo que no tiene padre. Se utiliza como una versión ligera de <span class="seoSummary">{{domxref("Document")}}</span> que almacena un segmento de una estructura de documento compuesta de nodos como un documento estándar. La gran diferencia se debe al hecho de que el fragmento de documento no forma parte de la estructura de árbol del documento activo. Los cambios realizados en el fragmento no afectan el documento  (incluso en {{Glossary("reflow")}})  ni inciden en el rendimiento cuando se realizan cambios. {{InheritanceDiagram}}</p>
 
 <h2 id="Constructor">Constructor</h2>
 
 <dl>
  <dt>{{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }}</dt>
- <dd>Crea y devuelve un nuevo objeto <code>DocumentFragment</code>.</dd>
+ <dd>Crea y devuelve un nuevo objeto <code>DocumentFragment</code>.</dd>
 </dl>
 
 <h2 id="Propiedades">Propiedades</h2>
 
-<p>Esta interfaz no tiene propiedades específicas<em>, </em>pero hereda las de su padre<em>, {{domxref("Node")}}, </em>e implementa los de la interfaz <em>{{domxref("ParentNode")}}.</em></p>
+<p>Esta interfaz no tiene propiedades específicas<em>, </em>pero hereda las de su padre<em>, {{domxref("Node")}}, </em>e implementa los de la interfaz <em>{{domxref("ParentNode")}}.</em></p>
 
 <dl>
  <dt>{{ domxref("ParentNode.children") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Devuelve un {{domxref("HTMLCollection")}} que contiene los objetos de tipo {{domxref("Element")}} que son elementos secundarios del objeto <code>DocumentFragment</code>.</dd>
+ <dd>Devuelve un {{domxref("HTMLCollection")}} que contiene los objetos de tipo {{domxref("Element")}} que son elementos secundarios del objeto <code>DocumentFragment</code>.</dd>
  <dt>{{ domxref("ParentNode.firstElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Devuelve el {{domxref("Element")}} que es el primer hijo del objeto <code>DocumentFragment</code>, o <code>null</code> si no hay ninguno.</dd>
+ <dd>Devuelve el {{domxref("Element")}} que es el primer hijo del objeto <code>DocumentFragment</code>, o <code>null</code> si no hay ninguno.</dd>
  <dt>{{ domxref("ParentNode.lastElementChild") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Devuelve el {{domxref("Element")}} que es el último hijo del objeto <code>DocumentFragment</code>, o <code>null</code> si no hay ninguno.</dd>
+ <dd>Devuelve el {{domxref("Element")}} que es el último hijo del objeto <code>DocumentFragment</code>, o <code>null</code> si no hay ninguno.</dd>
  <dt>{{ domxref("ParentNode.childElementCount") }} {{readonlyInline}}{{experimental_inline}}</dt>
- <dd>Devuelve un <code>unsigned long</code> que indica cantidad de elementos secundarios que tiene el objeto <code>DocumentFragment</code>.</dd>
+ <dd>Devuelve un <code>unsigned long</code> que indica cantidad de elementos secundarios que tiene el objeto <code>DocumentFragment</code>.</dd>
 </dl>
 
 <h2 id="Métodos">Métodos</h2>
 
-<p><em>Esta interfaz hereda los métodos de su padre</em>, <em>{{domxref("Node")}}<em>, e implementa los de la interfaz {{domxref("ParentNode")}}</em>.</em></p>
+<p><em>Esta interfaz hereda los métodos de su padre</em>, <em>{{domxref("Node")}}<em>, e implementa los de la interfaz {{domxref("ParentNode")}}</em>.</em></p>
 
 <dl>
  <dt>{{domxref("DocumentFragment.querySelector()")}}</dt>
- <dd>Devuelve el primer nodo {{domxref("Element")}} dentro de <code>DocumentFragment</code>, en el orden del documento, que coincide con los selectores especificados.</dd>
+ <dd>Devuelve el primer nodo {{domxref("Element")}} dentro de <code>DocumentFragment</code>, en el orden del documento, que coincide con los selectores especificados.</dd>
  <dt>{{domxref("DocumentFragment.querySelectorAll()")}}</dt>
- <dd>Devuelve un {{domxref("NodeList")}} de todos los nodos {{domxref("Element")}} dentro de <code>DocumentFragment</code> que coincide con los selectores especificados.</dd>
+ <dd>Devuelve un {{domxref("NodeList")}} de todos los nodos {{domxref("Element")}} dentro de <code>DocumentFragment</code> que coincide con los selectores especificados.</dd>
  <dt>{{domxref("DocumentFragment.getElementById()")}}</dt>
- <dd>Devuelve el primer nodo{{domxref("Element")}} dentro de <code style="font-size: 14px;">DocumentFragment</code>, en el orden del documento, que coincide con el <strong>ID</strong> especificado. funcionalmente equivale a {{domxref("Document.getElementById()")}}.</dd>
+ <dd>Devuelve el primer nodo{{domxref("Element")}} dentro de <code style="font-size: 14px;">DocumentFragment</code>, en el orden del documento, que coincide con el <strong>ID</strong> especificado. funcionalmente equivale a {{domxref("Document.getElementById()")}}.</dd>
 </dl>
 
 <h2 id="Notas_de_uso">Notas de uso</h2>
@@ -65,9 +65,9 @@ var fruits = ['Apple', 'Orange', 'Banana', 'Melon']
 var fragment = new DocumentFragment()
 
 fruits.forEach(function (fruit) {
-  var li = document.createElement('li')
-  li.innerHTML = fruit
-  fragment.appendChild(li)
+  var li = document.createElement('li')
+  li.innerHTML = fruit
+  fragment.appendChild(li)
 })
 
 list.appendChild(fragment)

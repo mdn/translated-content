@@ -13,7 +13,7 @@ translation_of: Web/API/Animation/playbackRate
 ---
 <p>{{APIRef("Web Animations")}}{{SeeCompatTable}}</p>
 
-<p>La propiedad <code><strong>Animation</strong></code><strong><code>.playbackRate</code></strong> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve o  establece la velocidad de reproducción de la animación.</p>
+<p>La propiedad <code><strong>Animation</strong></code><strong><code>.playbackRate</code></strong> de la <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> devuelve o  establece la velocidad de reproducción de la animación.</p>
 
 <p>Las animaciones tienen un <strong>playback rate</strong> que proporciona un factor de escala para el cambio de velocidad de la animación {{domxref("DocumentTimeline", "timeline")}} valores del estado actual de la linea de tiempo de la animación. La velocidad de reproducción inicial es <code>1</code>.</p>
 
@@ -29,12 +29,12 @@ translation_of: Web/API/Animation/playbackRate
 <p><span id="result_box" lang="es"><span>Toma un número que puede ser 0, negativo o positivo.</span> <span>Los valores negativos invierten la animación.</span> <span>El valor es un factor de escala, por lo que, por ejemplo, un valor de 2 duplicaría la velocidad de reproducción.</span></span></p>
 
 <div class="note">
-<p>si establecemos el <code>playbackRate</code> a <code>0</code> pausa la animación de manera efectiva (sin embargo, su {{domxref("Animation.playstate", "playstate")}} no se convierte necesariamente en  <code>paused</code>).</p>
+<p>si establecemos el <code>playbackRate</code> a <code>0</code> pausa la animación de manera efectiva (sin embargo, su {{domxref("Animation.playstate", "playstate")}} no se convierte necesariamente en  <code>paused</code>).</p>
 </div>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia  (<code>aliceChange</code>) se invierta para reducirse:</p>
+<p>En el ejemplo <a href="http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010">Growing/Shrinking Alice Game</a> , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia  (<code>aliceChange</code>) se invierta para reducirse:</p>
 
 <pre class="brush: js">var shrinkAlice = function() {
   aliceChange.playbackRate = -1;
@@ -58,7 +58,7 @@ cake.addEventListener("mousedown", growAlice, false);
 cake.addEventListener("touchstart", growAlice, false);
 </pre>
 
-<p>En otro ejemplo,  <a href="http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010">Red Queen's Race Game</a>, Alicia y La Reina Roja están ralentizandose constantemente:</p>
+<p>En otro ejemplo,  <a href="http://codepen.io/rachelnabors/pen/PNGGaV?editors=0010">Red Queen's Race Game</a>, Alicia y La Reina Roja están ralentizandose constantemente:</p>
 
 <pre class="brush: js">setInterval( function() {
 
@@ -93,7 +93,7 @@ document.addEventListener("touchstart", goFaster);
   <tr>
    <td>{{SpecName('Web Animations', '#dom-animation-playbackrate', 'Animation.playbackRate')}}</td>
    <td>{{Spec2("Web Animations")}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>

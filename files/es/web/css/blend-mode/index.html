@@ -13,7 +13,7 @@ translation_of: Web/CSS/blend-mode
 
 <h2 id="Resumen">Resumen</h2>
 
-<p>El tipo <strong><code>&lt;blend-mode&gt;</code></strong> es una coleccion de palabras clave que describen modos de mezcla.</p>
+<p>El tipo <strong><code>&lt;blend-mode&gt;</code></strong> es una coleccion de palabras clave que describen modos de mezcla.</p>
 
 <p>Un modo de mezcla (blend mode) es un método para calcular el color final de un píxel cuando hay dos capas superpuestas. Cada modo de mezcla toma el valor del color de primer plano y el de fondo (color superior y color inferior, respectivamente), realiza su cálculo y devuelve el valor de color. La capa final visible es el resultado de realizar el cálculo del modo de mezcla en cada pixel sobrepuesto entre las capas mezcladas.</p>
 
@@ -32,11 +32,11 @@ translation_of: Web/CSS/blend-mode
  <div id="normal">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: normal;
+    background-blend-mode: normal;
 }</pre>
  </div>
 
@@ -51,11 +51,11 @@ translation_of: Web/CSS/blend-mode
  <div id="multiply">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: multiply;
+    background-blend-mode: multiply;
 }</pre>
  </div>
 
@@ -70,27 +70,27 @@ translation_of: Web/CSS/blend-mode
  <div id="screen">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: screen;
+    background-blend-mode: screen;
 }</pre>
  </div>
 
  <p>{{ EmbedLiveSample('screen', "300", "300") }}</p>
  </dd>
  <dt><code>overlay</code></dt>
- <dd>El color final es el resultado de <code>multiply</code> si el color inferior es más oscuro, o <code>screen</code> si el color inferior es más claro.<br>
- Este modo de mezcla es equivalente a <code>hard-light</code>, pero si las capas son intercambiadas.
+ <dd>El color final es el resultado de <code>multiply</code> si el color inferior es más oscuro, o <code>screen</code> si el color inferior es más claro.<br>
+ Este modo de mezcla es equivalente a <code>hard-light</code>, pero si las capas son intercambiadas.
  <div id="overlay">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: overlay;
+    background-blend-mode: overlay;
 }</pre>
  </div>
 
@@ -103,11 +103,11 @@ translation_of: Web/CSS/blend-mode
  <div id="darken">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: darken;
+    background-blend-mode: darken;
 }</pre>
  </div>
 
@@ -120,11 +120,11 @@ translation_of: Web/CSS/blend-mode
  <div id="lighten">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: lighten;
+    background-blend-mode: lighten;
 }</pre>
  </div>
 
@@ -134,16 +134,16 @@ translation_of: Web/CSS/blend-mode
  <dd>
  <p>El color final es el resultado de dividir el color inferior por el inverso del color superior.<br>
   Un fondo negro no produce cambio alguno. Un color de primer plano con el color invertido del fondo produce un color completamente iluminado.<br>
-  Este modo de mezcla es similar a <code>screen</code>, pero basta con que el color de primer plano sea tan claro como el inverso del color de fondo para alcanzar un color completamente iluminado.</p>
+  Este modo de mezcla es similar a <code>screen</code>, pero basta con que el color de primer plano sea tan claro como el inverso del color de fondo para alcanzar un color completamente iluminado.</p>
 
  <div id="color-dodge">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: color-dodge;
+    background-blend-mode: color-dodge;
 }</pre>
  </div>
 
@@ -158,11 +158,11 @@ translation_of: Web/CSS/blend-mode
  <div id="color-burn">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: color-burn;
+    background-blend-mode: color-burn;
 }</pre>
  </div>
 
@@ -170,18 +170,18 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code>hard-light</code></dt>
  <dd>
- <p>El color final es el resultado de <code>multiply</code> si el color superior es más oscuro, o <code>screen</code> si el color superior es más oscuro.<br>
-  Este modo de mezcla es equivalente a <code>overlay</code>, pero con las capas intercambiadas.<br>
-  El efecto es similar a encender un foco con mucha <em>intensidad</em> en el fondo.</p>
+ <p>El color final es el resultado de <code>multiply</code> si el color superior es más oscuro, o <code>screen</code> si el color superior es más oscuro.<br>
+  Este modo de mezcla es equivalente a <code>overlay</code>, pero con las capas intercambiadas.<br>
+  El efecto es similar a encender un foco con mucha <em>intensidad</em> en el fondo.</p>
 
  <div id="hard-light">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: hard-light;
+    background-blend-mode: hard-light;
 }</pre>
  </div>
 
@@ -191,16 +191,16 @@ translation_of: Web/CSS/blend-mode
  <dd>
  <p>El color final es similar a <code>hard-light</code>, pero más suave.<br>
   Este modo de mezcla se comporta similar a <code>hard-light</code>.<br>
-  El efecto es similar a encender un foco <em>difuso</em> en el fondo<em><code>.</code></em></p>
+  El efecto es similar a encender un foco <em>difuso</em> en el fondo<em><code>.</code></em></p>
 
  <div id="soft-light">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: soft-light;
+    background-blend-mode: soft-light;
 }</pre>
  </div>
 
@@ -214,11 +214,11 @@ translation_of: Web/CSS/blend-mode
  <div id="difference">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: difference;
+    background-blend-mode: difference;
 }</pre>
  </div>
 
@@ -226,17 +226,17 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code>exclusion</code></dt>
  <dd>
- <p>El color final es similar a <code>difference,</code> pero con menor contraste.<br>
-  Así como con <code>difference</code>,  una capa negra no produce efecto alguno, mientras una capa blanca invierte el color de la otra capa.</p>
+ <p>El color final es similar a <code>difference,</code> pero con menor contraste.<br>
+  Así como con <code>difference</code>,  una capa negra no produce efecto alguno, mientras una capa blanca invierte el color de la otra capa.</p>
 
  <div id="exclusion">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: exclusion;
+    background-blend-mode: exclusion;
 }</pre>
  </div>
 
@@ -244,16 +244,16 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code>hue</code></dt>
  <dd>
- <p>El color final tiene el <em>matiz</em> del color superior, mientras usa la <em>saturación</em> y <em>luminosidad</em> del color inferior.</p>
+ <p>El color final tiene el <em>matiz</em> del color superior, mientras usa la <em>saturación</em> y <em>luminosidad</em> del color inferior.</p>
 
  <div id="hue">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: hue;
+    background-blend-mode: hue;
 }</pre>
  </div>
 
@@ -261,17 +261,17 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code>saturation</code></dt>
  <dd>
- <p>El color final tiene la <em>saturación</em> del color superior, mientras usa el <em>matiz</em> y <em>luminosidad</em> del color inferior.<br>
+ <p>El color final tiene la <em>saturación</em> del color superior, mientras usa el <em>matiz</em> y <em>luminosidad</em> del color inferior.<br>
   Un fondo gris puro, que no tenga saturación, no producirá efecto alguno.</p>
 
  <div id="saturation">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: saturation;
+    background-blend-mode: saturation;
 }</pre>
  </div>
 
@@ -279,17 +279,17 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code>color</code></dt>
  <dd>
- <p>El color final tiene el <em><em>matiz</em></em> y <em><em>saturación</em></em> del color superior, mientras usa la <em>luminosidad</em> del color inferior.<br>
+ <p>El color final tiene el <em><em>matiz</em></em> y <em><em>saturación</em></em> del color superior, mientras usa la <em>luminosidad</em> del color inferior.<br>
   El efecto preserva los niveles de grid y puede ser usado para colorear el primer plano.</p>
 
  <div id="color">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: color;
+    background-blend-mode: color;
 }</pre>
  </div>
 
@@ -297,17 +297,17 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code>luminosity</code></dt>
  <dd>
- <p>El color final tiene la <em>luminosidad</em> del color superior, mientras usa el <em>matiz</em> y <em>saturación</em> del color inferior.<br>
+ <p>El color final tiene la <em>luminosidad</em> del color superior, mientras usa el <em>matiz</em> y <em>saturación</em> del color inferior.<br>
   Este modo de mezcla es equivalente a <code>color</code>, pero con las capas intercambiadas.</p>
 
  <div id="luminosity">
 
  <pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
+    width: 300px;
+    height: 300px;
+    background: url('https://mdn.mozillademos.org/files/8543/br.png'),
                 url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: luminosity;
+    background-blend-mode: luminosity;
 }</pre>
  </div>
 
@@ -317,7 +317,7 @@ translation_of: Web/CSS/blend-mode
 
 <h2 id="Interpolación_de_modos_de_mezcla">Interpolación de modos de mezcla</h2>
 
-<div> </div>
+<div> </div>
 
 <p>Los cambios entre modos de mezcla no son interpolados. Cualquier cambio ocurrirá abruptamente.</p>
 
@@ -349,5 +349,5 @@ translation_of: Web/CSS/blend-mode
 <ul>
  <li>Propiedades que usan valores de este tipo: {{cssxref("background-blend-mode")}} y {{cssxref("mix-blend-mode")}}</li>
  <li><a href="http://en.wikipedia.org/wiki/Blend_modes">Blend modes</a></li>
- <li>Índice de <a href="/en-US/docs/CSS/CSS_Reference" title="CSS Reference">Referencia CSS</a></li>
+ <li>Índice de <a href="/en-US/docs/CSS/CSS_Reference" title="CSS Reference">Referencia CSS</a></li>
 </ul>

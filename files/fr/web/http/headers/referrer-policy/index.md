@@ -238,7 +238,7 @@ Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'
 
 ## Voir aussi
 
-- {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
+- [Référent](https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rent_(informatique)) sur Wikipédia
 - En utilisant [Fetch](/en-US/docs/Web/API/Fetch_API) : {{domxref("Request.referrerPolicy")}}
 - La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)

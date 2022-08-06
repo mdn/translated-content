@@ -8,10 +8,10 @@ translation_of: Web/API/KeyboardEvent/metaKey
 ---
 <p>{{APIRef("DOM Events")}}</p>
 
-<p>La propiedad <strong><code>KeyboardEvent.metaKey</code></strong>  es de solo lectura y regresa un valor {{jsxref("Boolean")}} que indica si la tecla <kbd>Meta</kbd> estaba presionada (true) o no (false) cuando el evento ocurrio.</p>
+<p>La propiedad <strong><code>KeyboardEvent.metaKey</code></strong>  es de solo lectura y regresa un valor {{jsxref("Boolean")}} que indica si la tecla <kbd>Meta</kbd> estaba presionada (true) o no (false) cuando el evento ocurrio.</p>
 
 <div class="note">
-<p><strong>Nota:</strong> En teclados Macintosh es la tecla comando (<kbd>⌘</kbd>). En teclados Windows la tecla es lla tecla window (<kbd>⊞</kbd>).</p>
+<p><strong>Nota:</strong> En teclados Macintosh es la tecla comando (<kbd>⌘</kbd>). En teclados Windows la tecla es lla tecla window (<kbd>⊞</kbd>).</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -48,12 +48,12 @@ translation_of: Web/API/KeyboardEvent/metaKey
 
 <pre class="brush: js">function ismetaKey(e){
  var el=document.getElementById("example");//Toma el control del div example
- var mK=e.metaKey;//Obtiene el valor de metaKey y lo almacena
+ var mK=e.metaKey;//Obtiene el valor de metaKey y lo almacena
  el.innerHTML="¡Presiona la tecla meta y dame click!&lt;/br&gt;metaKey:"+mK;//Muestra el valor de metaKey
 }
 </pre>
 
-<p> </p>
+<p> </p>
 
 <p>{{ EmbedLiveSample('metaKey') }}</p>
 

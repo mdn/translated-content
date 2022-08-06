@@ -13,10 +13,10 @@ original_slug: Web/HTML/Elemento/content
 ---
 <p>{{Deprecated_header}}</p>
 
-<p>El elemento <a href="/en-US/docs/Web/HTML">HTML</a> <code>&lt;content&gt; es usado dentro de un </code> <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> como un {{glossary("insertion point")}} . No está pensado para ser usado en HTML ordinario . Es usado con <a href="/en-US/docs/Web/Web_Components">Web Components</a>.</p>
+<p>El elemento <a href="/en-US/docs/Web/HTML">HTML</a> <code>&lt;content&gt; es usado dentro de un </code> <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> como un {{glossary("insertion point")}} . No está pensado para ser usado en HTML ordinario . Es usado con <a href="/en-US/docs/Web/Web_Components">Web Components</a>.</p>
 
 <div class="note">
-<p><strong>Nota: </strong>Aunque está presente en un draft inicial de las especificaciones e implementado en varios exploradores , este elemento ha sido removido en versiones posteriores a la especificación .</p>
+<p><strong>Nota: </strong>Aunque está presente en un draft inicial de las especificaciones e implementado en varios exploradores , este elemento ha sido removido en versiones posteriores a la especificación .</p>
 </div>
 
 <table class="properties">
@@ -58,28 +58,28 @@ original_slug: Web/HTML/Elemento/content
 <p>Aquí hay un ejemplo simple del uso del elemento &lt;content&gt; . Es un archivo HTML con todo lo necesario en el .</p>
 
 <div class="note">
-<p><strong>Nota: </strong>Para que este código funcione , el explorador en el que se muestre debe de soportar Web Components . Ver <a href="/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox">Enabling Web Components in Firefox</a> .</p>
+<p><strong>Nota: </strong>Para que este código funcione , el explorador en el que se muestre debe de soportar Web Components . Ver <a href="/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox">Enabling Web Components in Firefox</a> .</p>
 </div>
 
 <pre class="brush: html">&lt;html&gt;
   &lt;head&gt;&lt;/head&gt;
   &lt;body&gt;
-  &lt;!-- The original content accessed by &lt;content&gt; --&gt;
-  &lt;div&gt;
-    &lt;h4&gt;My Content Heading&lt;/h4&gt;
-    &lt;p&gt;My content text&lt;/p&gt;
-  &lt;/div&gt;
+  &lt;!-- The original content accessed by &lt;content&gt; --&gt;
+  &lt;div&gt;
+    &lt;h4&gt;My Content Heading&lt;/h4&gt;
+    &lt;p&gt;My content text&lt;/p&gt;
+  &lt;/div&gt;
 
-  &lt;script&gt;
-  // Get the &lt;div&gt; above.
-  var myContent = document.querySelector('div');
-  // Create a shadow DOM on the &lt;div&gt;
-  var shadowroot = myContent.createShadowRoot();
-  // Insert into the shadow DOM a new heading and
-  // part of the original content: the &lt;p&gt; tag.
-  shadowroot.innerHTML =
-   '&lt;h2&gt;Inserted Heading&lt;/h2&gt; &lt;content select="p"&gt;&lt;/content&gt;';
-  &lt;/script&gt;
+  &lt;script&gt;
+  // Get the &lt;div&gt; above.
+  var myContent = document.querySelector('div');
+  // Create a shadow DOM on the &lt;div&gt;
+  var shadowroot = myContent.createShadowRoot();
+  // Insert into the shadow DOM a new heading and
+  // part of the original content: the &lt;p&gt; tag.
+  shadowroot.innerHTML =
+   '&lt;h2&gt;Inserted Heading&lt;/h2&gt; &lt;content select="p"&gt;&lt;/content&gt;';
+  &lt;/script&gt;
 
   &lt;/body&gt;
 &lt;/html&gt;
@@ -101,7 +101,7 @@ original_slug: Web/HTML/Elemento/content
   <tr>
    <td>{{SpecName('Shadow DOM', "#the-content-element", "content")}}</td>
    <td>{{Spec2('Shadow DOM')}}</td>
-   <td> </td>
+   <td> </td>
   </tr>
  </tbody>
 </table>
@@ -114,7 +114,7 @@ original_slug: Web/HTML/Elemento/content
 
 <ul>
  <li><a href="/en-US/docs/Web/Web_Components">Web Components</a></li>
- <li>{{HTMLElement("shadow")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}</li>
+ <li>{{HTMLElement("shadow")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}</li>
 </ul>
 
 <div>{{HTMLRef}}</div>

@@ -11,7 +11,7 @@ translation_of: 'Web/CSS/:nth-child'
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс</a>  <strong><code>:nth-child()</code></strong> находит один или более элементов, основываясь на их позиции среди группы соседних элементов.</p>
+<p><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс</a>  <strong><code>:nth-child()</code></strong> находит один или более элементов, основываясь на их позиции среди группы соседних элементов.</p>
 
 <pre class="brush: css no-line-numbers">/* Выбирает каждый четвёртый элемент
    среди любой группы соседних элементов */
@@ -22,13 +22,13 @@ translation_of: 'Web/CSS/:nth-child'
 
 <h2 id="Syntax">Синтаксис</h2>
 
-<p>Псевдокласс <code>nth-child</code> указывается с единственным аргументом, описывающим паттерн для выбирания элементов.</p>
+<p>Псевдокласс <code>nth-child</code> указывается с единственным аргументом, описывающим паттерн для выбирания элементов.</p>
 
 <h3 id="Ключевые_слова">Ключевые слова</h3>
 
 <dl>
  <dt><code>odd</code></dt>
- <dd>Описывает элементы среди группы соседних с нечётными номерами 1, 3, 5, и т. д.</dd>
+ <dd>Описывает элементы среди группы соседних с нечётными номерами 1, 3, 5, и т. д.</dd>
  <dt><code>even</code></dt>
  <dd>Описывает элементы среди группы соседних с чётными номерами 2, 4, 6, и т. д.</dd>
 </dl>
@@ -37,7 +37,7 @@ translation_of: 'Web/CSS/:nth-child'
 
 <dl>
  <dt><code>&lt;An+B&gt;</code></dt>
- <dd>Описывает элементы среди группы соседних с номерами, соответствующими паттерну <code>An+B</code> (для каждого целого числа n &gt;= 0). Нумерация элементов начинается с единицы. Значения <code>A</code> и <code>B</code> должны быть {{cssxref("&lt;integer&gt;")}}s.</dd>
+ <dd>Описывает элементы среди группы соседних с номерами, соответствующими паттерну <code>An+B</code> (для каждого целого числа n &gt;= 0). Нумерация элементов начинается с единицы. Значения <code>A</code> и <code>B</code> должны быть {{cssxref("&lt;integer&gt;")}}s.</dd>
 </dl>
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
@@ -49,7 +49,7 @@ translation_of: 'Web/CSS/:nth-child'
 <h3 id="Example_selectors">Примеры селекторов</h3>
 
 <dl>
- <dt><code>tr:nth-child(odd)</code> или <code>tr:nth-child(2n+1)</code></dt>
+ <dt><code>tr:nth-child(odd)</code> или <code>tr:nth-child(2n+1)</code></dt>
  <dd>Описывает нечётные строки HTML таблицы: 1, 3, 5, и т. д.</dd>
  <dt><code>tr:nth-child(even)</code> or <code>tr:nth-child(2n)</code></dt>
  <dd>Описывает чётные строки HTML таблицы: 2, 4, 6, и т. д.</dd>
@@ -62,9 +62,9 @@ translation_of: 'Web/CSS/:nth-child'
  <dt><code>:nth-child(-n+3)</code></dt>
  <dd>Описывает первые три элемента среди группы соседних элементов.</dd>
  <dt><code>p:nth-child(n)</code></dt>
- <dd>Описывает каждый элемент<code>&lt;p&gt;</code> среди группы соседних элементов. Эквивалентно простому селектору <code>p</code>.</dd>
- <dt><code>p:nth-child(1)</code> или <code>p:nth-child(0n+1)</code></dt>
- <dd>Описывает каждый элемент <code>&lt;p&gt;</code>, являющийся первым среди группы соседних элементов. Эквивалентно селектору {{cssxref(":first-child")}}.</dd>
+ <dd>Описывает каждый элемент<code>&lt;p&gt;</code> среди группы соседних элементов. Эквивалентно простому селектору <code>p</code>.</dd>
+ <dt><code>p:nth-child(1)</code> или <code>p:nth-child(0n+1)</code></dt>
+ <dd>Описывает каждый элемент <code>&lt;p&gt;</code>, являющийся первым среди группы соседних элементов. Эквивалентно селектору {{cssxref(":first-child")}}.</dd>
 </dl>
 
 <h3 id="Подробный_пример">Подробный пример</h3>

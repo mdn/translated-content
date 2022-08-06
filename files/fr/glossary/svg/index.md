@@ -22,7 +22,7 @@ SVG étant un [format d'image vectorielle](http://fr.wikipedia.org/wiki/Image_ve
 
 ### Culture générale
 
-- {{Interwiki("wikipedia", "SVG")}} sur Wikipédia
+- [SVG](https://fr.wikipedia.org/wiki/Scalable_Vector_Graphics) sur Wikipédia
 
 ### Apprendre le SVG
 

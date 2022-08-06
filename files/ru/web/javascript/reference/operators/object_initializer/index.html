@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
 <div>{{JsSidebar("Операторы")}}</div>
 
-<p>Объекты могут быть инициализированы с помощью <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>new Object()</code></a>,<code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a> </code>или <em>литеральной</em> (<em>инициирующей</em>) нотации. Инициализатор объекта это разделённый запятыми список ноль или более пар имён свойств и ассоциируемых с ними значений, заключённых в фигурные скобки (<code>{}</code>).</p>
+<p>Объекты могут быть инициализированы с помощью <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>new Object()</code></a>,<code> <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a> </code>или <em>литеральной</em> (<em>инициирующей</em>) нотации. Инициализатор объекта это разделённый запятыми список ноль или более пар имён свойств и ассоциируемых с ними значений, заключённых в фигурные скобки (<code>{}</code>).</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -22,7 +22,7 @@ var o = {
 };
 </pre>
 
-<h3 id="Новая_нотация_в_ECMAScript_2015">Новая нотация в ECMAScript 2015</h3>
+<h3 id="Новая_нотация_в_ECMAScript_2015">Новая нотация в ECMAScript 2015</h3>
 
 <p>Пожалуйста, просмотрите таблицу поддержки этих нотаций. В неподдерживаемом окружении, эти нотации приведут к синтаксической ошибке.</p>
 
@@ -44,15 +44,15 @@ var o = {
 
 <h2 id="Описание">Описание</h2>
 
-<p>Инициализатор объекта это выражение, которое описывает инициализацию {{jsxref("Object")}}. Объекты состоят из <em>свойств</em>, которые используются для описания объекта. Значения свойств объектов могут содержать как {{Glossary("примитивные")}} типы данных, так и другие объекты.</p>
+<p>Инициализатор объекта это выражение, которое описывает инициализацию {{jsxref("Object")}}. Объекты состоят из <em>свойств</em>, которые используются для описания объекта. Значения свойств объектов могут содержать как {{Glossary("примитивные")}} типы данных, так и другие объекты.</p>
 
 <h3 id="Создание_объектов">Создание объектов</h3>
 
-<p>Пустой объект без свойств может быть создан следующим образом:</p>
+<p>Пустой объект без свойств может быть создан следующим образом:</p>
 
 <pre class="brush: js">var object = {};</pre>
 
-<p>Однако, преимущество <em>литеральной</em> или <em>инициирующей</em> нотации это возможность быстро создавать объекты со свойствами внутри фигурных скобок. Создаётся простой список пар <code>ключ: значение</code>, разделённых запятой. Следующий код создаёт объект с тремя парами значений и ключи это <code>"foo"</code>, <code>"age"</code> и <code>"baz"</code>. Значения этих ключей строка <code>"bar"</code>, число <code>42</code> и другой объект.</p>
+<p>Однако, преимущество <em>литеральной</em> или <em>инициирующей</em> нотации это возможность быстро создавать объекты со свойствами внутри фигурных скобок. Создаётся простой список пар <code>ключ: значение</code>, разделённых запятой. Следующий код создаёт объект с тремя парами значений и ключи это <code>"foo"</code>, <code>"age"</code> и <code>"baz"</code>. Значения этих ключей строка <code>"bar"</code>, число <code>42</code> и другой объект.</p>
 
 <pre class="brush: js">var object = {
   foo: 'bar',
@@ -62,7 +62,7 @@ var o = {
 
 <h3 id="Доступность_свойств">Доступность свойств</h3>
 
-<p>После того, как создали объект, вы, вероятно, захотите прочитать или изменить его. Свойства объектов могут быть получены при помощи точечной нотации или квадратных скобок. Смотрите <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a> для детальной информации.</p>
+<p>После того, как создали объект, вы, вероятно, захотите прочитать или изменить его. Свойства объектов могут быть получены при помощи точечной нотации или квадратных скобок. Смотрите <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessors</a> для детальной информации.</p>
 
 <pre class="brush: js">object.foo; // "bar"
 object['age']; // 42
@@ -72,7 +72,7 @@ object.foo = 'baz';
 
 <h3 id="Определение_свойств">Определение свойств</h3>
 
-<p>Мы уже рассмотрели, как объявить свойства, используя синтаксис инициализации. Зачастую, в коде появляются свойства, которые вы захотите поместить в объект. Вы увидите следующий код:</p>
+<p>Мы уже рассмотрели, как объявить свойства, используя синтаксис инициализации. Зачастую, в коде появляются свойства, которые вы захотите поместить в объект. Вы увидите следующий код:</p>
 
 <pre class="brush: js">var a = 'foo',
     b = 42,
@@ -84,7 +84,7 @@ var o = {
   c: c
 };</pre>
 
-<p>С ECMAScript 2015 появилась короткая нотация, способная достичь того же:</p>
+<p>С ECMAScript 2015 появилась короткая нотация, способная достичь того же:</p>
 
 <pre class="brush: js">var a = 'foo',
     b = 42,
@@ -105,7 +105,7 @@ console.log((o.a === {a}.a)); // true
 console.log(a); // {x: 2}
 </pre>
 
-<p>В строгом режиме ECMAScript 5, повторение имён свойств будет воспринято как {{jsxref("SyntaxError")}}.  С введением вычисляемых имён свойств и появлением возможности создавать дубликаты во время выполнения кода, ECMAScript 2015 убрал это ограничение.</p>
+<p>В строгом режиме ECMAScript 5, повторение имён свойств будет воспринято как {{jsxref("SyntaxError")}}.  С введением вычисляемых имён свойств и появлением возможности создавать дубликаты во время выполнения кода, ECMAScript 2015 убрал это ограничение.</p>
 
 <pre class="brush: js">function haveES2015DuplicatePropertySemantics() {
   'use strict';
@@ -122,7 +122,7 @@ console.log(a); // {x: 2}
 
 <h3 id="Описание_методов">Описание методов</h3>
 
-<p>Свойство объекта также может ссылаться на <a href="/en-US/docs/Web/JavaScript/Reference/Functions">function</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> или <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>.</p>
+<p>Свойство объекта также может ссылаться на <a href="/en-US/docs/Web/JavaScript/Reference/Functions">function</a>, <a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a> или <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a>.</p>
 
 <pre class="brush: js">var o = {
   <var>property: function </var>([<var>parameters</var>]) {},
@@ -130,7 +130,7 @@ console.log(a); // {x: 2}
   set <var>property</var>(<var>value</var>) {}
 };</pre>
 
-<p>В ECMAScript 2015, доступна короткая нотация, поэтому слово "function" более не обязательно.</p>
+<p>В ECMAScript 2015, доступна короткая нотация, поэтому слово "function" более не обязательно.</p>
 
 <pre class="brush: js">// Сокращение имён методов (ES2015)
 var o = {
@@ -138,7 +138,7 @@ var o = {
   *<var>generator</var>() {}
 };</pre>
 
-<p>В ECMAScript 2015 есть способ кратко объявить свойства, чьими значениями являются генераторы функций:</p>
+<p>В ECMAScript 2015 есть способ кратко объявить свойства, чьими значениями являются генераторы функций:</p>
 
 <pre class="brush: js">var o = {
   *<var>generator</var>() {
@@ -146,7 +146,7 @@ var o = {
   }
 };</pre>
 
-<p>Что эквивалентно следующей ES5-подобной нотации (но отметьте, что  ECMAScript 5 не содержит генераторов):</p>
+<p>Что эквивалентно следующей ES5-подобной нотации (но отметьте, что  ECMAScript 5 не содержит генераторов):</p>
 
 <pre class="brush: js">var o = {
   generator<var>: function* </var>() {
@@ -154,11 +154,11 @@ var o = {
   }
 };</pre>
 
-<p>Для большей информации и примеров смотри <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>.</p>
+<p>Для большей информации и примеров смотри <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions">method definitions</a>.</p>
 
 <h3 id="Вычисляемые_имена_свойств">Вычисляемые имена свойств</h3>
 
-<p>Начиная с ECMAScript 2015, синтаксис объявления объектов также поддерживает вычисляемые имена свойств. Это позволяет добавлять в скобки <code>[] </code>выражение, которое будет вычислено, как имя свойства. Это похоже на скобочную нотацию синтаксиса <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessor</a>, которую вы, вероятно, уже использовали, чтобы прочитать и задать свойство. Теперь можно использовать аналогичный способ с литеральными объектами:</p>
+<p>Начиная с ECMAScript 2015, синтаксис объявления объектов также поддерживает вычисляемые имена свойств. Это позволяет добавлять в скобки <code>[] </code>выражение, которое будет вычислено, как имя свойства. Это похоже на скобочную нотацию синтаксиса <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors">property accessor</a>, которую вы, вероятно, уже использовали, чтобы прочитать и задать свойство. Теперь можно использовать аналогичный способ с литеральными объектами:</p>
 
 <pre class="brush: js">// Вычисляемое имя свойства (ES2015)
 var i = 0;
@@ -182,9 +182,9 @@ console.log(config); // {size: 12, mobileSize: 4}</pre>
 
 <h3 id="Spread-свойства">Spread-свойства</h3>
 
-<p><a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread свойство ECMAScript</a> предлагает (stage 3) добавлять <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread</a> свойства в литеральную нотацию. Оно копирует собственные перечисляемые свойства из представленного объекта в новый.</p>
+<p><a href="https://github.com/tc39/proposal-object-rest-spread">Rest/Spread свойство ECMAScript</a> предлагает (stage 3) добавлять <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread</a> свойства в литеральную нотацию. Оно копирует собственные перечисляемые свойства из представленного объекта в новый.</p>
 
-<p>Поверхностное копирование (исключая prototype) или слияние объектов теперь возможно с помощью более короткого синтаксиса, чем  {{jsxref("Object.assign()")}}.</p>
+<p>Поверхностное копирование (исключая prototype) или слияние объектов теперь возможно с помощью более короткого синтаксиса, чем  {{jsxref("Object.assign()")}}.</p>
 
 <pre class="brush: js">var obj1 = { foo: 'bar', x: 42 };
 var obj2 = { foo: 'baz', y: 13 };
@@ -195,11 +195,11 @@ var clonedObj = { ...obj1 };
 var mergedObj = { ...obj1, ...obj2 };
 // Объект { foo: "baz", x: 42, y: 13 }</pre>
 
-<p>Заметьте, что {{jsxref("Object.assign()")}} вызывает <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a>, тогда как оператор spread нет.</p>
+<p>Заметьте, что {{jsxref("Object.assign()")}} вызывает <a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a>, тогда как оператор spread нет.</p>
 
 <h3 id="Изменение_Prototype">Изменение Prototype</h3>
 
-<p>Объявление свойства в виде <code>__proto__: value</code> или <code>"__proto__": value</code> не создаст свойства с именем <code>__proto__</code>.  Вместо этого, если предоставляемое значение объект или <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, оно заменит <code>[[Prototype]]</code> создаваемого объекта на это значение.  (Если значение не объект или null, объект не изменится.)</p>
+<p>Объявление свойства в виде <code>__proto__: value</code> или <code>"__proto__": value</code> не создаст свойства с именем <code>__proto__</code>.  Вместо этого, если предоставляемое значение объект или <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, оно заменит <code>[[Prototype]]</code> создаваемого объекта на это значение.  (Если значение не объект или null, объект не изменится.)</p>
 
 <pre class="brush: js">var obj1 = {};
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
@@ -218,7 +218,7 @@ assert(!obj4.hasOwnProperty('__proto__'));
 
 <p>Только одно изменение prototype разрешено через литеральное объявление объекта: несколько изменений prototype вызовут синтаксическую ошибку.</p>
 
-<p>Объявление свойства не через "двоеточие" не изменит значения prototype: это описание будет выглядеть идентично такому же объявлению свойства с использованием любого другого имени.</p>
+<p>Объявление свойства не через "двоеточие" не изменит значения prototype: это описание будет выглядеть идентично такому же объявлению свойства с использованием любого другого имени.</p>
 
 <pre class="brush: js">var __proto__ = 'variable';
 
@@ -236,14 +236,14 @@ assert(obj3.__proto__ === 17);
 
 <h2 id="Литеральная_нотация_vs_JSON">Литеральная нотация vs JSON</h2>
 
-<p>Литеральная нотация не то же самое, что и  <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation (<a href="/en-US/docs/Glossary/JSON">JSON</a>). Хотя они и выглядят аналогично, существует разница между ними:</p>
+<p>Литеральная нотация не то же самое, что и  <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation (<a href="/en-US/docs/Glossary/JSON">JSON</a>). Хотя они и выглядят аналогично, существует разница между ними:</p>
 
 <ul>
- <li>JSON позволяет объявление свойств <em>только</em> с помощью синтаксиса <code>"property": value</code>.  Имя свойства должно быть заключено в двойные кавычки и объявление не может быть сокращено.</li>
- <li>В JSON значения могут быть только строками, числами, массивами, <code>true</code>, <code>false</code>, <code>null</code> или другими (JSON) объектами.</li>
- <li>Значения-функции (смотри "Методы" выше) не могут быть присвоены свойствам в JSON.</li>
- <li>Объект вида {{jsxref("Date")}} будет строкой после {{jsxref("JSON.parse()")}}.</li>
- <li>{{jsxref("JSON.parse()")}} отклонит вычисляемые имена свойств и вернёт ошибку.</li>
+ <li>JSON позволяет объявление свойств <em>только</em> с помощью синтаксиса <code>"property": value</code>.  Имя свойства должно быть заключено в двойные кавычки и объявление не может быть сокращено.</li>
+ <li>В JSON значения могут быть только строками, числами, массивами, <code>true</code>, <code>false</code>, <code>null</code> или другими (JSON) объектами.</li>
+ <li>Значения-функции (смотри "Методы" выше) не могут быть присвоены свойствам в JSON.</li>
+ <li>Объект вида {{jsxref("Date")}} будет строкой после {{jsxref("JSON.parse()")}}.</li>
+ <li>{{jsxref("JSON.parse()")}} отклонит вычисляемые имена свойств и вернёт ошибку.</li>
 </ul>
 
 <h2 id="Спецификации">Спецификации</h2>

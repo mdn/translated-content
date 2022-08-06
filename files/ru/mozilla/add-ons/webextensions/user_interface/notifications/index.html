@@ -17,11 +17,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 
 <h2 id="Управление_уведомлениями">Управление уведомлениями</h2>
 
-<p>Управление уведомлениями происходит программным путём с помощью  {{WebExtAPIRef("notifications")}} API. Для использования этого API вы должны иметь <code>notifications</code> полномочия в manifest.json:</p>
+<p>Управление уведомлениями происходит программным путём с помощью  {{WebExtAPIRef("notifications")}} API. Для использования этого API вы должны иметь <code>notifications</code> полномочия в manifest.json:</p>
 
 <pre class="brush: json"><span class="pl-s"><span class="pl-pds">"</span>permissions<span class="pl-pds">"</span></span>: [<span class="pl-s"><span class="pl-pds">"</span>notifications<span class="pl-pds">"</span></span>]</pre>
 
-<p>После этого вы можете использовать {{WebExtAPIRef("notifications.create")}} для создания ваших уведомлений, как, например, в нижеприведённом коде, взятом из  <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n:</a></p>
+<p>После этого вы можете использовать {{WebExtAPIRef("notifications.create")}} для создания ваших уведомлений, как, например, в нижеприведённом коде, взятом из  <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n:</a></p>
 
 <pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);

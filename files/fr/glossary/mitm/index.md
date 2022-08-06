@@ -21,5 +21,5 @@ Dans le courrier physique et la communication en ligne, il est difficile de se d
 ## En apprendre plus
 
 - Article OWASP : [Man-in-the-middle attack](https://www.owasp.org/index.php/Man-in-the-middle_attack) (en)
-- Wikipedia : [Attaque de l'homme du milieu](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)
+- Wikipédia : [Attaque de l'homme du milieu](https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu)
 - L'en-tête {{HTTPHeader("Public-Key-Pins")}} ({{Glossary("HPKP")}}) peut significativement réduire le risque d'attaque MitM en demandant aux navigateurs d'exiger des certificats valides (liste blanche) pour toute connexion ultérieure à ce site.

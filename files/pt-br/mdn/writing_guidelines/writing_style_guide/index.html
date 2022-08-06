@@ -8,9 +8,9 @@ original_slug: MDN/Guidelines/Writing_style_guide
 
 <p><span class="seoSummary">Em um esforço para apresentar a documentação de maneira organizada, padronizada e fácil de ler a guia de estilo MDN Web Docs descreve como o texto deve ser organizado, escrito, formatado, e assim por diante.</span> Estas sao orientações mais do que regras estritas. Nos estamos mais interessados em conteúdo do que em formatação, então não se sinta obrigado a aprender a guia de estilo antes de contribuir. Não fique chateado/a ou surpreso/a caso algum/a voluntário/a trabalhador/a edite o seu trabalho de acordo com esta guia.</p>
 
-<p>Se você esta procurando por coisas específicas sobre como determinado tipo de página deve ser estruturado, veja a <a href="/en-US/docs/MDN/Contribute/Content/Layout">página sobre guia de layout MDN</a>.</p>
+<p>Se você esta procurando por coisas específicas sobre como determinado tipo de página deve ser estruturado, veja a <a href="/en-US/docs/MDN/Contribute/Content/Layout">página sobre guia de layout MDN</a>.</p>
 
-<p>Os aspetos relacionado a linguagem desta guia aplicam-se principalmente a documentação em Inglês. Outras idiomas devem ter (e são bem-vindos a criar) seu próprio guia de estilo. Estes devem ser publicados como sub-páginas da página do time de localização.</p>
+<p>Os aspetos relacionado a linguagem desta guia aplicam-se principalmente a documentação em Inglês. Outras idiomas devem ter (e são bem-vindos a criar) seu próprio guia de estilo. Estes devem ser publicados como sub-páginas da página do time de localização.</p>
 
 <p>Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a <a href="http://www.mozilla.org/en-US/styleguide/">guia de estilo Única Mozilla</a>.</p>
 
@@ -56,7 +56,7 @@ original_slug: MDN/Guidelines/Writing_style_guide
 
 <h3 id="Orientações_gerais_do_conteúdo_do_artigo">Orientações gerais do conteúdo do artigo</h3>
 
-<p>Quando estiver escrevendo qualquer documento é importante conhecer o quanto falar. Se ficar divagando muito o artigo fica tedioso de ler e ninguém ira usa-lo. Escolher a quantidade certa a falar sobre o assunto é muito importante por diversas razões. Entre essas razões: assegurar que o leitor encontre a informação que eles precisam, prover suficiente material de qualidade para os engines de pesquisa poderem analizar e classificar o artigo de maneira adequada. Iremos discutir ao respeito disso aqui. Para aprender um pouco mais sobre como fazer as páginas são classificadas pelos engines de pesquisa, vejam o artigo <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_for_SEO">Como escrever SEO para MDN</a>.</p>
+<p>Quando estiver escrevendo qualquer documento é importante conhecer o quanto falar. Se ficar divagando muito o artigo fica tedioso de ler e ninguém ira usa-lo. Escolher a quantidade certa a falar sobre o assunto é muito importante por diversas razões. Entre essas razões: assegurar que o leitor encontre a informação que eles precisam, prover suficiente material de qualidade para os engines de pesquisa poderem analizar e classificar o artigo de maneira adequada. Iremos discutir ao respeito disso aqui. Para aprender um pouco mais sobre como fazer as páginas são classificadas pelos engines de pesquisa, vejam o artigo <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_for_SEO">Como escrever SEO para MDN</a>.</p>
 
 <div class="hidden">
 <pre class="notranslate">Daqui para baixo.</pre>
@@ -64,7 +64,7 @@ original_slug: MDN/Guidelines/Writing_style_guide
 
 <h3 id="Sections.2C_Paragraphs.2C_Newlines" name="Sections.2C_Paragraphs.2C_Newlines">Seções, parágrafos e novas linhas</h3>
 
-<p>Use os níveis de cabeçalho em ordem decrescente na hierarquia: {{HTMLElement("h2")}} depois {{HTMLElement("h3")}} depois {{HTMLElement("h4")}}, sem pular níveis. {{HTMLElement("h2")}} é o maior nível permitido, pois {{HTMLElement("h1")}} está reservado para o título da página. Se perceber que precisará de mais de 3 ou 4 níveis de cabeçalho, considere fragmentar seu artigo em artigos menores, ou colocando uma landing page, linkando estes com o {{TemplateLink("Next")}}, {{TemplateLink("Previous")}}, e {{TemplateLink("PreviousNext")}} macros.</p>
+<p>Use os níveis de cabeçalho em ordem decrescente na hierarquia: {{HTMLElement("h2")}} depois {{HTMLElement("h3")}} depois {{HTMLElement("h4")}}, sem pular níveis. {{HTMLElement("h2")}} é o maior nível permitido, pois {{HTMLElement("h1")}} está reservado para o título da página. Se perceber que precisará de mais de 3 ou 4 níveis de cabeçalho, considere fragmentar seu artigo em artigos menores, ou colocando uma landing page, linkando estes com o {{TemplateLink("Next")}}, {{TemplateLink("Previous")}}, e {{TemplateLink("PreviousNext")}} macros.</p>
 
 <p>O Enter (ou Return) do seu teclado inicia um novo parágrafo. Para inserir uma nova linha sem espaço, faça Shift + Enter.</p>
 
@@ -115,7 +115,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
 
 <p>Use the "Code" button (labeled with two angle brackets "&lt;&gt;") to apply inline code-style formatting to function names, variable names, and method names (this uses the {{HTMLElement("code")}} element). For example, "the <code class="js plain">frenchText()</code> function".</p>
 
-<p>Method names should be followed by a pair of parentheses: <code>doSomethingUseful()</code>. This helps to differentiate methods from other code terms.</p>
+<p>Method names should be followed by a pair of parentheses: <code>doSomethingUseful()</code>. This helps to differentiate methods from other code terms.</p>
 
 <h4 id="Syntax_highlighting">Syntax highlighting</h4>
 
@@ -142,7 +142,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <dt>Attribute definitions</dt>
  <dd>Use the {{TemplateLink("htmlattrdef")}} macro (e.g., <span class="nowiki">\{{htmlattrdef("type")}}</span>) for the definition term, so that it can be linked to from other pages, then use the {{TemplateLink("htmlattrxref")}} macro (e.g., <span class="nowiki">\{{htmlattrxref("attr","element")}}</span>) to reference attribute definitions.</dd>
  <dt>Attribute values</dt>
- <dd>Use "Code (inline)" style, and do not use quotation marks around strings, unless needed by the syntax of a code sample. E.g.: When the <strong>type</strong> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ...</dd>
+ <dd>Use "Code (inline)" style, and do not use quotation marks around strings, unless needed by the syntax of a code sample. E.g.: When the <strong>type</strong> attribute of an <code>&lt;input&gt;</code> element is set to <code>email</code> or <code>tel</code> ...</dd>
  <dt>Labeling attributes</dt>
  <dd>Use labels like {{HTMLVersionInline(5)}} thoughtfully. For example, use them next to the bold attribute name but not for every occurrence in your body text.</dd>
 </dl>
@@ -512,7 +512,7 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>The left column should be a list of articles, with an <code>&lt;h2&gt;</code> header at the top of the left column explaining that it's a list of articles about the topic (for example "Documentation and tutorials about foo"); this header should use the CSS class "Documentation". Below that is a <code>&lt;dl&gt;</code> list of articles with each article's link in a <code>&lt;dt&gt;</code> block and a brief one-or-two sentence summary of the article in the corresponding <code>&lt;dd&gt;</code> block.</p>
+<p>The left column should be a list of articles, with an <code>&lt;h2&gt;</code> header at the top of the left column explaining that it's a list of articles about the topic (for example "Documentation and tutorials about foo"); this header should use the CSS class "Documentation". Below that is a <code>&lt;dl&gt;</code> list of articles with each article's link in a <code>&lt;dt&gt;</code> block and a brief one-or-two sentence summary of the article in the corresponding <code>&lt;dd&gt;</code> block.</p>
 
 <p>The right column should contain one or more of the following sections, in order:</p>
 
@@ -568,5 +568,5 @@ var toolkitProfileService = Components.classes["@mozilla.org/toolkit/profile-ser
  <li><a href="http://www.wsu.edu/~brians/errors/">Common Errors in English</a></li>
  <li><a href="http://www-personal.umich.edu/~jlawler/aue.html">English Grammar FAQ</a> (alt.usage.english)</li>
  <li><a href="http://www.angryflower.com/bobsqu.gif">Bob's quick guide to the apostrophe, you idiots</a> (funny)</li>
- <li><a href="http://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2">Merriam-Webster's Concise Dictionary of English Usage</a> (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.</li>
+ <li><a href="http://www.amazon.com/Merriam-Websters-Concise-Dictionary-English-Usage/dp/B004L2KNI2">Merriam-Webster's Concise Dictionary of English Usage</a> (Amazon link): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage.</li>
 </ul>

@@ -103,15 +103,15 @@ top および bottom のマージンは、 {{HTMLElement("span")}} または {{H
 
 ```css
 .center {
-  margin: auto;
-  background: lime;
-  width: 66%;
+  margin: auto;
+  background: lime;
+  width: 66%;
 }
 
 .outside {
-  margin: 3rem 0 0 -3rem;
-  background: cyan;
-  width: 66%;
+  margin: 3rem 0 0 -3rem;
+  background: cyan;
+  width: 66%;
 }
 ```
 

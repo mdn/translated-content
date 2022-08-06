@@ -186,16 +186,16 @@ Ball.prototype.update = function() {
 }
 ```
 
-Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du `canvas`. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc, par exemple, si la balle se déplaçait vers le haut (`velY` positif) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (`velY` négatif).
+Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du `canvas`. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc, par exemple, si la balle se déplaçait vers le haut (`velY` positif) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (`velY` négatif).
 
 Dans les quatre cas, nous vérifions&nbsp;:
 
 - Si la coordonnée `x` est plus grande que la largeur du `canvas` (la balle est en train de sortir du côté droit).
 - Si la coordonnée `x` est plus petite que `0` (la balle est en train de sortir du côté gauche).
 - Si la coordonnée `y` est plus grande que la hauteur du `canvas` (la balle est en train de sortir par le bas).
-- Si la coordonnée `y` est plus petite que `0` (la balle est en train de sortir par le haut).
+- Si la coordonnée `y` est plus petite que `0` (la balle est en train de sortir par le haut).
 
-Dans chaque cas, nous incluons la taille (`size`) de la balle dans les calculs parce que les coordonnées `x`/`y` sont situées au centre de la balle, mais nous voulons que le pourtour de la balle rebondisse sur le rebord — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
+Dans chaque cas, nous incluons la taille (`size`) de la balle dans les calculs parce que les coordonnées `x`/`y` sont situées au centre de la balle, mais nous voulons que le pourtour de la balle rebondisse sur le rebord — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
 
 Les deux dernières lignes ajoutent la valeur `velX` à la coordonnée `x` et la valeur `velY` à la coordonnée `y` — la balle est en effet mise en mouvement chaque fois que cette méthode est invoquée.
 

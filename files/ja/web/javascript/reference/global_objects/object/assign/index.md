@@ -240,7 +240,7 @@ function completeAssign(target, ...sources) {
       return descriptors;
     }, {});
 
-    // 既定では、 Object.assign は列挙可能なシンボルもコピーする
+    // 既定では、 Object.assign は列挙可能なシンボルもコピーする
     Object.getOwnPropertySymbols(source).forEach(sym => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {

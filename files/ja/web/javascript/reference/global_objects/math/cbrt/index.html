@@ -43,10 +43,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 
 <pre class="brush: js notranslate">if (!Math.cbrt) {
   Math.cbrt = (function(pow) {
-    return function cbrt(x){
-      // ensure negative numbers remain negative:
+    return function cbrt(x){
+      // ensure negative numbers remain negative:
       return x &lt; 0 ? -pow(-x, 1/3) : pow(x, 1/3);
-    };
+    };
   })(Math.pow); // localize Math.pow to increase efficiency
 }
 </pre>

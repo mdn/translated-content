@@ -12,11 +12,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <code><strong>flat()</strong></code> возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.</p>
+<p>Метод <code><strong>flat()</strong></code> возвращает новый массив, в котором все элементы вложенных подмассивов были рекурсивно "подняты" на указанный уровень depth.</p>
 
 <p class="hidden">\{{EmbedInteractiveExample("pages/js/array-flatten.html")}}</p>
 
-<p class="hidden">Исходный код этого интерактивного примера находится на гитхабе. Если вы желаете внести свой вклад в проект интерактивных примеров, пожалуйста, склонируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и пришлите нам пулреквест.</p>
+<p class="hidden">Исходный код этого интерактивного примера находится на гитхабе. Если вы желаете внести свой вклад в проект интерактивных примеров, пожалуйста, склонируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и пришлите нам пулреквест.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -26,7 +26,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 <dl>
  <dt><code>depth</code> {{optional_inline}}</dt>
- <dd>На сколько уровней вложенности уменьшается мерность исходного массива. По умолчанию 1.</dd>
+ <dd>На сколько уровней вложенности уменьшается мерность исходного массива. По умолчанию 1.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -55,7 +55,7 @@ arr4.flat(Infinity);
 
 <h3 id="Упрощение_и_дырки_в_массивах">Упрощение и "дырки" в массивах</h3>
 
-<p>Метод flat удаляет пустые слоты из массива:</p>
+<p>Метод flat удаляет пустые слоты из массива:</p>
 
 <pre class="brush: js">var arr4 = [1, 2, , 4, 5];
 arr4.flat();
@@ -64,7 +64,7 @@ arr4.flat();
 
 <h2 id="Альтернативы">Альтернативы</h2>
 
-<h3 id="reduce_и_concat"><code>reduce</code> и <code>concat</code></h3>
+<h3 id="reduce_и_concat"><code>reduce</code> и <code>concat</code></h3>
 
 <pre class="brush: js">var arr1 = [1, 2, [3, 4]];
 arr1.flat();
@@ -122,7 +122,7 @@ function flatten(array) {
 </pre>
 
 <div class="hidden">
-<p>Пожалуйста, не добавляйте полифилы в эту статью: <a href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a></p>
+<p>Пожалуйста, не добавляйте полифилы в эту статью: <a href="https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500">https://discourse.mozilla.org/t/mdn-rfc-001-mdn-wiki-pages-shouldnt-be-a-distributor-of-polyfills/24500</a></p>
 </div>
 
 <h2 id="Спецификации">Спецификации</h2>

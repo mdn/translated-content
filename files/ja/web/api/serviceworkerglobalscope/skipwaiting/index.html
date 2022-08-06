@@ -18,7 +18,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope/skipWaiting
 <h2 id="構文">構文</h2>
 
 <pre class="brush: js">ServiceWorkerGlobalScope.skipWaiting().then(function() {
-  //Do something
+  //Do something
 });</pre>
 
 <h3 id="戻り値">戻り値</h3>
@@ -33,7 +33,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope/skipWaiting
   event.waitUntil(self.skipWaiting());
 });
 self.addEventListener('activate', function(event) {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(self.clients.claim());
 });
 </pre>
 

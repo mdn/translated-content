@@ -57,7 +57,7 @@ from django.http import HttpResponse
 def index(request):
     # Get an HttpRequest (request)
     # perform operations using information from the request.
-    # Return HttpResponse
+    # Return HttpResponse
     return HttpResponse('Output string to return')
 </pre>
 
@@ -107,20 +107,20 @@ def hello():
 from django.db import models
 
 class Team(models.Model):
-    team_name = models.CharField(max_length=40)
+    team_name = models.CharField(max_length=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11, 'Under 11s'),
-        ...  #list our other teams
-    )
-    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
+    TEAM_LEVELS = (
+        ('U09', 'Under 09s'),
+        ('U10', 'Under 10s'),
+        ('U11, 'Under 11s'),
+        ...  #list our other teams
+    )
+    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 </pre>
 
 <p>Django モデルはデータベースを検索するための簡単なクエリ API を提供します。これは、異なる基準 (正確、大文字と小文字を区別しない、より大きいなど) を使用して一度に多数のフィールドに対して一致させることができ、複雑なステートメント (たとえば、"Fr" で始まるチーム名、または "al" で終わるチーム名を持つ U11 チームの検索を指定できます) をサポートすることができます。</p>
 
-<p>2番目のコードスニペットは、すべての U09 チームを表示するための表示機能 (リソースハンドラー) を示しています。この場合、<code>team_level</code> フィールドのテキストが 'U09' であるすべてのレコード (この基準が、2つの下線で区切られたフィールド名と一致タイプを持つ引数、つまり <strong>team_level__exact</strong> として <code>filter()</code> 関数に渡されることに注意してください) をフィルタリングしたいと指定します。</p>
+<p>2番目のコードスニペットは、すべての U09 チームを表示するための表示機能 (リソースハンドラー) を示しています。この場合、<code>team_level</code> フィールドのテキストが 'U09' であるすべてのレコード (この基準が、2つの下線で区切られたフィールド名と一致タイプを持つ引数、つまり <strong>team_level__exact</strong> として <code>filter()</code> 関数に渡されることに注意してください) をフィルタリングしたいと指定します。</p>
 
 <pre class="brush: python">#best/views.py
 
@@ -128,9 +128,9 @@ from django.shortcuts import render
 from .models import Team
 
 def youngest(request):
-    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
-    context = {'youngest_teams': list_teams}
-    return render(request, 'best/index.html', context)
+    <strong>list_teams = Team.objects.filter(team_level__exact="U09")</strong>
+    context = {'youngest_teams': list_teams}
+    return render(request, 'best/index.html', context)
 </pre>
 
 <dl>
@@ -157,13 +157,13 @@ def youngest(request):
 &lt;body&gt;
 
  {% if youngest_teams %}
-    &lt;ul&gt;
-    {% for team in youngest_teams %}
-        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
-    {% endfor %}
-    &lt;/ul&gt;
+    &lt;ul&gt;
+    {% for team in youngest_teams %}
+        &lt;li&gt;\{\{ team.team_name \}\}&lt;/li&gt;
+    {% endfor %}
+    &lt;/ul&gt;
 {% else %}
-    &lt;p&gt;利用できるチームがありません。&lt;/p&gt;
+    &lt;p&gt;利用できるチームがありません。&lt;/p&gt;
 {% endif %}
 
 &lt;/body&gt;
@@ -198,7 +198,7 @@ def youngest(request):
 <p>プログラミングの完全な初心者であるならば、おそらく「学びやすさ」に基づいてフレームワークを選ぶでしょう。言語自体の「使いやすさ」に加えて、高品質のドキュメント/チュートリアル、および新しいユーザーを支援する活発なコミュニティが最も貴重なリソースです。コースの後半で例を書くために <a href="https://www.djangoproject.com/">Django</a> (Python) と <a href="http://expressjs.com/">Express</a> (Node/JavaScript) を選択しました。これは主にそれらが習得が容易で優れたサポートがあるためです。</p>
 
 <div class="note">
-<p><strong>メモ</strong>: <a href="https://www.djangoproject.com/">Django</a> (Python) と <a href="http://expressjs.com/">Express</a> (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。</p>
+<p><strong>メモ</strong>: <a href="https://www.djangoproject.com/">Django</a> (Python) と <a href="http://expressjs.com/">Express</a> (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。</p>
 
 <ol>
  <li>メインサイトに移動する (上記のリンク先)
@@ -304,7 +304,7 @@ def youngest(request):
 
 <h3 id="Spring_Boot_Java">Spring Boot (Java)</h3>
 
-<p><a href="https://spring.io/projects/spring-boot">Spring Boot</a> は、<a href="http://spring.io/">Spring</a> が提供している数多くのプロジェクトのうちの 1 つです。<a href="https://www.java.com">Java</a> を使用してサーバーサイドのウェブ開発を行う良い出発点です。</p>
+<p><a href="https://spring.io/projects/spring-boot">Spring Boot</a> は、<a href="http://spring.io/">Spring</a> が提供している数多くのプロジェクトのうちの 1 つです。<a href="https://www.java.com">Java</a> を使用してサーバーサイドのウェブ開発を行う良い出発点です。</p>
 
 <p><a href="https://www.java.com">Java</a> をベースとした唯一のフレームワークではないことは間違いありませんが、スタンドアローンのプロダクショングレードの Spring ベースのアプリケーションを簡単に実行することができます。これは Spring プラットフォームと他社製ライブラリーの見解に基づいた見方ですが、最小限の手間と設定で始めることができます。</p>
 

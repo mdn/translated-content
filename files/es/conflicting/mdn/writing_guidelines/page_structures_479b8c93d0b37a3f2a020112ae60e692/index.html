@@ -23,13 +23,13 @@ original_slug: MDN/Structures/Live_samples
  <li>Si el ID pertenece a un header, el grupo incluye todos los bloques de código que estén bajo el header y antes del siguiente header en el mismo nivel. Ten en cuenta que se usan todos los códigos de bloque bajo sub-headers del header especificado; si este no es el efecto que deseas, mejor usa un ID de un bloque de contenido.</li>
 </ul>
 
-<p>La macro usa un URL especial para extraer el código de ejemplo: <code>http://<em>url-de-la-pagina</em>$ejemplos/<em>grupo-id</em></code>, donde grupo-id es el ID del header o del bloque de contenido donde se localiza el código. El frame resultante (o página) es sandboxed (entorno de pruebas), seguro, y  técnicamente puede hacer cualquier cosa que funcione en la Web. Por supuesto, desde el punto de vista práctico, el código debe contribuir al tema de la página que lo contiene; cosas al azar ejecutándose en MDN serán removidas por la comunidad de editores.</p>
+<p>La macro usa un URL especial para extraer el código de ejemplo: <code>http://<em>url-de-la-pagina</em>$ejemplos/<em>grupo-id</em></code>, donde grupo-id es el ID del header o del bloque de contenido donde se localiza el código. El frame resultante (o página) es sandboxed (entorno de pruebas), seguro, y  técnicamente puede hacer cualquier cosa que funcione en la Web. Por supuesto, desde el punto de vista práctico, el código debe contribuir al tema de la página que lo contiene; cosas al azar ejecutándose en MDN serán removidas por la comunidad de editores.</p>
 
 <div class="note">
 <p><strong>Nota:</strong> <strong>Debes</strong> usar el macro para presentar el output del ejemplo ejecutable. El editor de MDN quitará cualquier uso directo del elemento <code>&lt;iframe&gt;</code> por motivos de seguridad.</p>
 </div>
 
-<p>Cada bloque {{HTMLElement("pre")}} que contiene código para el ejemplo tiene una clase que indica si es código HTML, CSS, o JavaScript; estas son "brush: html", "brush: css", y "brush: js". Las clases deben estar en los bloques de código correspondientes para que el wiki pueda usarlos correctamente; afortunadamente, son agregadas automáticamente cuando usas  la herramienta Syntax Highlighter de la barra de herramientas del editor.</p>
+<p>Cada bloque {{HTMLElement("pre")}} que contiene código para el ejemplo tiene una clase que indica si es código HTML, CSS, o JavaScript; estas son "brush: html", "brush: css", y "brush: js". Las clases deben estar en los bloques de código correspondientes para que el wiki pueda usarlos correctamente; afortunadamente, son agregadas automáticamente cuando usas  la herramienta Syntax Highlighter de la barra de herramientas del editor.</p>
 
 <p>El sistema de ejemplos ejecutables tiene muchas opciones disponibles, trataremos de ponerlas en terminos simples analizándolas de a poco.</p>
 
@@ -106,7 +106,7 @@ original_slug: MDN/Structures/Live_samples
 <p>Una vez que el código está en su lugar y propiamente configurado para identificar cada bloque de lenguaje, necesitas insertar la macro que crea el frame.</p>
 
 <ol>
- <li>Haz clic en el botón <strong>Insert Live Code Sample iFrame</strong> en la barra de herramientas; luce así: <img alt="" src="https://mdn.mozillademos.org/files/5383/insert-live-sample-btn.png" style="height: 18px; width: 19px;">. Esto abre un cuadro de diálogo para configurar el frame de tu ejemplo ejecutable:                         <img alt="" src="https://mdn.mozillademos.org/files/5385/sample-finder.png" style="height: 358px; width: 405px;"></li>
+ <li>Haz clic en el botón <strong>Insert Live Code Sample iFrame</strong> en la barra de herramientas; luce así: <img alt="" src="https://mdn.mozillademos.org/files/5383/insert-live-sample-btn.png" style="height: 18px; width: 19px;">. Esto abre un cuadro de diálogo para configurar el frame de tu ejemplo ejecutable:                         <img alt="" src="https://mdn.mozillademos.org/files/5385/sample-finder.png" style="height: 358px; width: 405px;"></li>
  <li>Bajo <strong>Document</strong>, ingresa el título del artículo que contiene el ejemplo que deseas desplegar. Por default, es el artículo que estás editando, pero puedes escoger un artículo en otra parte de MDN. Esto hace posible reusar ejemplos en múltiples páginas si es necesario. (Si escribes un texto nuevo en este campo, aparecerá un menú de coincidencias parciales; selecciona el título de la página que desees.)</li>
  <li>En el menú <strong>Sections in Document</strong>, selecciona la sección en el artículo que contiene los bloques de código del ejemplo que quieres desplegar.</li>
  <li>Haz clic en el botón <strong>OK</strong> para generar e insertar la macro que crea el frame del ejemplo. La macro luce algo así:<br>

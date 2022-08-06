@@ -38,7 +38,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 - `isDefault`
   - : `boolean`. `true` si le moteur de recherche est le moteur par défaut. Un seul moteur de recherche peut être le moteur par défaut à un moment donné.
 - `alias`{{optional_inline}}
-  - : `string`. Si un moteur de recherche a un alias, l'utilisateur peut effectuer une recherche avec un moteur de recherche particulier en entrant l'alias dans la barre d'adresse avant le terme de recherche. Par exemple, si le moteur Wikipedia a un alias "wk", l'utilisateur peut rechercher des pandas dans Wikipedia en entrant "wk pandas" dans la barre d'adresse. L'alias est parfois aussi appelé "mot-clé".
+  - : `string`. Si un moteur de recherche a un alias, l'utilisateur peut effectuer une recherche avec un moteur de recherche particulier en entrant l'alias dans la barre d'adresse avant le terme de recherche. Par exemple, si le moteur Wikipédia a un alias "wk", l'utilisateur peut rechercher des pandas dans Wikipédia en entrant "wk pandas" dans la barre d'adresse. L'alias est parfois aussi appelé "mot-clé".
 - `favIconUrl`{{optional_inline}}
   - : `string`. L'icône du moteur de recherche, comme une donnée : URL.
 

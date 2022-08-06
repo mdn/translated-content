@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 <pre class="brush: js">myNumberType.prototype.valueOf = function() { return customPrimitiveValue; };</pre>
 
-<p>Начиная с этого места в вашем коде, в любое время, когда объект типа <code>myNumberType</code> будет использоваться в контексте, где он должен быть представлен примитивным значением, JavaScript будет автоматически вызывать  функцию, определённую в этом коде.</p>
+<p>Начиная с этого места в вашем коде, в любое время, когда объект типа <code>myNumberType</code> будет использоваться в контексте, где он должен быть представлен примитивным значением, JavaScript будет автоматически вызывать  функцию, определённую в этом коде.</p>
 
 <p>Метод объекта <code>valueOf</code> обычно вызывается движком JavaScript, но вы можете вызвать его и самостоятельно, как показано ниже:</p>
 

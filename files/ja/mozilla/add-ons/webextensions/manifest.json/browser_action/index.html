@@ -32,13 +32,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
   "default_title": "Whereami?",
   "default_popup": "popup/geo.html",
   "theme_icons": [{
-    "light": "icons/geo-16-light.png",
-    "dark": "icons/geo-16.png",
-    "size": 16
+    "light": "icons/geo-16-light.png",
+    "dark": "icons/geo-16.png",
+    "size": 16
   }, {
-    "light": "icons/geo-32-light.png",
-    "dark": "icons/geo-32.png",
-    "size": 32
+    "light": "icons/geo-32-light.png",
+    "dark": "icons/geo-32.png",
+    "size": 32
   }]
 }</pre>
    </td>
@@ -195,7 +195,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 <p>In Firefox:</p>
 
 <ul>
- <li>The default height and width for icons in the toolbar is 16 * <code><a href="/ja/docs/Web/API/Window/devicePixelRatio">window.devicePixelRatio</a></code>.</li>
+ <li>The default height and width for icons in the toolbar is 16 * <code><a href="/ja/docs/Web/API/Window/devicePixelRatio">window.devicePixelRatio</a></code>.</li>
  <li>The default height and width for icons in the menu panel is 32 * <code><a href="/ja/docs/Web/API/Window/devicePixelRatio">window.devicePixelRatio</a></code>.</li>
 </ul>
 
@@ -220,7 +220,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 
 <p>A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:</p>
 
-<p class="brush: js no-line-numbers"> browser.browseAction.onClicked.addListener(handleClick);</p>
+<p class="brush: js no-line-numbers"> browser.browseAction.onClicked.addListener(handleClick);</p>
 
 <pre class="brush: json notranslate">"browser_action": {
   "default_icon": {

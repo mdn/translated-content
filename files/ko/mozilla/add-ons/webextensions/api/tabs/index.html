@@ -33,14 +33,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <li>to use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}} you must have the <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for the tab</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <ul>
  <li><code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>에 접근하려면 "tabs" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">권한</a>을 가져야 한다. 파이어폭스에서 이 말은 URL로 {{WebExtAPIRef("tabs.query", "query")}} 하는데도 "tabs"가 필요하다는 뜻이다.</li>
  <li>{{WebExtAPIRef("tabs.executeScript()")}}나 {{WebExtAPIRef("tabs.insertCSS()")}}를 사용하려면 탭에 대한 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host 권한</a>을 가져야 한다.</li>
 </ul>
 
-<p> </p>
+<p> </p>
 
 <p>또는 이런 권한을 일시적으로 얻는 방법도 있다. 현재 활성 탭이거나 명시적인 사용자 동작의 응답이라면 <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">"activeTab" 권한</a>을 요청하면 된다.</p>
 
@@ -64,7 +64,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
  <dt>{{WebExtAPIRef("tabs.ZoomSettingsScope")}}</dt>
  <dd>Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.</dd>
  <dt>{{WebExtAPIRef("tabs.ZoomSettings")}}</dt>
- <dd>Defines zoom settings {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.</dd>
+ <dd>Defines zoom settings {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>

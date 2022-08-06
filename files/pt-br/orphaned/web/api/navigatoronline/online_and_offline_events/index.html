@@ -42,7 +42,7 @@ original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 <ul>
  <li>usando <code><a href="/en/DOM/element.addEventListener" title="en/DOM/element.addEventListener">addEventListener</a></code> em <code>window</code>, <code>document</code>, ou <code>document.body</code></li>
  <li>configurando propriedades <code>.ononline</code> ou <code>.onoffline</code> em <code>document</code> ou <code>document.body</code> para um objeto <code>Function</code> em JavaScript. (<strong>Obs.:</strong> <code>window.ononline</code> ou <code>window.onoffline</code> não funcionarão por questões de compatibilidade.)</li>
- <li>especificando atributos <code>ononline="..."</code> or <code>onoffline="..."</code>  na tag <code>&lt;body&gt;</code> do HTML.</li>
+ <li>especificando atributos <code>ononline="..."</code> or <code>onoffline="..."</code>  na tag <code>&lt;body&gt;</code> do HTML.</li>
 </ul>
 
 <h3 id="Example" name="Example">Example</h3>
@@ -55,7 +55,7 @@ original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
    &lt;script&gt;
      function updateOnlineStatus(msg) {
        var status = document.getElementById("status");
-       var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
+       var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
        status.setAttribute("class", condition);
        var state = document.getElementById("state");
        state.innerHTML = condition;
